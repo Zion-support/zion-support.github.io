@@ -2,11 +2,11 @@ import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 const fetchJson = async (url: string, opts?: RequestInit) => {
   const res = await fetch(url, {
-    ...opts;
-    headers: { 'Content-Type': 'application/json', ...(opts?.headers || {}) };
+    ...opts,
+    headers: { 'Content-Type': 'application/json', ...(opts?.headers || {}) },
   }),
   if (!res.ok) throw new Error(await res.text()),
-  return res.json()};
+  return res.json()},
 type Thread = {
   id: string,
   categoryId: string,
@@ -23,7 +23,7 @@ type Thread = {
   isLocked: boolean,
   isFeatured: boolean,
   createdAt: string,
-  updatedAt: string};
+  updatedAt: string},
 type Reply = {
   id: string,
   threadId: string,
@@ -34,10 +34,10 @@ type Reply = {
   body: string,
   votes: number,
   createdAt: string,
-  updatedAt: string};
+  updatedAt: string},
 export default function ThreadDetailPage() {
   const router = useRouter(),
-  const { id } = router.query as { id: string };
+  const { id } = router.query as { id: string },
   const [thread, setThread] = useState<Thread | null>(null),
   const [replies, setReplies] = useState<Reply[]>([]),
   const [loading, setLoading] = useState(false),
@@ -51,83 +51,73 @@ export default function ThreadDetailPage() {
         setReplies(d.replies)}),
       .finally(() => setLoading(false))}, [id]),
   const topLevelReplies = useMemo(
-    () => replies.filter(r => !r.parentReplyId);
+    () => replies.filter(r => !r.parentReplyId),
     [replies]),
   const childRepliesMap = useMemo(() => {
-    const m: Record<string Reply[]> = {};
+    const m: Record<string Reply[]> = {},
     replies.forEach(r => {
       if (!r.parentReplyId) return,
       (m[r.parentReplyId] ||= []).push(r)}),
     return m}, [replies]),
   const vote = async (
-    type: 'thread' | 'reply';
-    targetId: string;
+    type: 'thread' | 'reply',
+    targetId: string,
     direction: 1 | -1) => {
     await fetchJson('/api/community/vote', {
-      method: 'POST';
-      body: JSON.stringify({ type, id: targetId, direction });
+      method: 'POST',
+      body: JSON.stringify({ type, id: targetId, direction }),
       headers: {
-        'x-user-id': 'demo-user';
-        'x-user-name': 'Demo User';
-        'x-user-role': 'Talent';
-      };
+        'x-user-id': 'demo-userx-user-name': 'Demo Userx-user-role': 'Talent'
+      },
     }),
     const d = await fetchJson(`/api/community/thread/${id}`),
     setThread(d.thread),
-    setReplies(d.replies)};
+    setReplies(d.replies)},
   const submitReply = async (parentReplyId?: string) => {
     if (!replyBody.trim()) return,
     await fetchJson(`/api/community/thread/${id}/reply`, {
-      method: 'POST';
-      body: JSON.stringify({ body: replyBody.trim(), parentReplyId });
+      method: 'POST',
+      body: JSON.stringify({ body: replyBody.trim(), parentReplyId }),
       headers: {
-        'x-user-id': 'demo-user';
-        'x-user-name': 'Demo User';
-        'x-user-role': 'Talent';
-      };
+        'x-user-id': 'demo-userx-user-name': 'Demo Userx-user-role': 'Talent'
+      },
     }),
     setReplyBody(''),
     const d = await fetchJson(`/api/community/thread/${id}`),
     setThread(d.thread),
-    setReplies(d.replies)};
+    setReplies(d.replies)},
   const markAnswered = async (answered: boolean) => {
     await fetchJson(`/api/community/thread/${id}/answer`, {
-      method: 'POST';
-      body: JSON.stringify({ answered });
+      method: 'POST',
+      body: JSON.stringify({ answered }),
       headers: {
-        'x-user-id': 'demo-user';
-        'x-user-name': 'Demo User';
-        'x-user-role': 'Moderator';
-      };
+        'x-user-id': 'demo-userx-user-name': 'Demo Userx-user-role': 'Moderator'
+      },
     }),
     const d = await fetchJson(`/api/community/thread/${id}`),
     setThread(d.thread),
-    setReplies(d.replies)};
+    setReplies(d.replies)},
   const adminUpdate = async (
     updates: Partial<Pick<Thread 'isPinned' | 'isLocked' | 'isFeatured'>>) => {
     await fetchJson(`/api/community/thread/${id}/admin`, {
-      method: 'POST';
-      body: JSON.stringify(updates);
+      method: 'POST',
+      body: JSON.stringify(updates),
       headers: {
-        'x-user-id': 'admin';
-        'x-user-name': 'Admin';
-        'x-user-role': 'Admin';
-      };
+        'x-user-id': 'adminx-user-name': 'Adminx-user-role': 'Admin'
+      },
     }),
     const d = await fetchJson(`/api/community/thread/${id}`),
     setThread(d.thread),
-    setReplies(d.replies)};
+    setReplies(d.replies)},
   const report = async (targetType: 'thread' | 'reply', targetId: string) => {
     await fetchJson('/api/community/report', {
-      method: 'POST';
-      body: JSON.stringify({ targetType, targetId, reason: 'Abusive' });
+      method: 'POST',
+      body: JSON.stringify({ targetType, targetId, reason: 'Abusive' }),
       headers: {
-        'x-user-id': 'demo-user';
-        'x-user-name': 'Demo User';
-        'x-user-role': 'Talent';
-      };
+        'x-user-id': 'demo-userx-user-name': 'Demo Userx-user-role': 'Talent'
+      },
     }),
-    alert('Reported. Thanks for keeping the community safe.')};
+    alert('Reported. Thanks for keeping the community safe.')},
   if (loading || !thread),
     return (
       <EnhancedLayout>,

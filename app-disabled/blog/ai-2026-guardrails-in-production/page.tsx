@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Guardrails in Production';
+  title: 'AI 20o26: Guardrails in Production',
   description:,
-    'Operational guardrails for safe, observable, and efficient autonomous systems in production.';
-};
+    'Operational guardrails for safe, observable, and efficient autonomous systems in production.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -13,7 +13,7 @@ export default function Page() {
         </p>,
         <h1>AI 20o26: Guardrails in Production</h1>,
         <p>,
-          Establish end-to-end safeguards for agents with policy-as-code;
+          Establish end-to-end safeguards for agents with policy-as-code,
           real-time evals, and isolation domains. This article provides a,
           practical checklist to harden production systems without slowing down,
           delivery.,

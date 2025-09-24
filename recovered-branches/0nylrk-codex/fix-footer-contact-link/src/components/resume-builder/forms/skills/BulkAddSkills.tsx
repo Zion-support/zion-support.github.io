@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
@@ -21,7 +21,7 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
     setError(null),
     try {
       const enhancedContent = await enhanceContent(
-        bulkSkills;
+        bulkSkills,
         'skill-categorization'),
       if (enhancedContent) {
         try {
@@ -32,8 +32,8 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
             if (Array.isArray(skillsList)) {
               for (const skillName of skillsList as string[]) {
                 await addSkill(resumeId{
-                  name: skillName;
-                  category: category;
+                  name: skillName,
+                  category: category,
                   proficiency: 3})}
             }
           }
@@ -46,7 +46,7 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
       }
     } catch (err: any) {
       setError(err.message || 'Failed to categorize skills')}
-  };
+  },
   return (
     <div className="bg-muted/40 p-6 rounded-lg">,
       <h3 className="text-md font-medium mb-4">Bulk Add & AI Categorization</h3>,
@@ -74,4 +74,4 @@ export const BulkAddSkills = ({ resumeIdonSuccess }: BulkAddSkillsProps) => {
         </p>,
         {error && <Alert variant="destructive"><AlertDescription>{error}</AlertDescription></Alert>}
       </div>,
-    </div>)};
+    </div>)},

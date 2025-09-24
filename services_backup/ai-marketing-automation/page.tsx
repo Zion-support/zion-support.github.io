@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata ={
-  title: 'AI-Powered Marketing Automation Platform | Zion Tech Group';
-  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 60% with smart marketing insights.';
-  keywords: 'AI marketing automation, personalized campaigns, predictive analytics, lead scoring, email marketing, social media automation'};
+  title: 'AI-Powered Marketing Automation Platform | Zion Tech Group',
+  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 60% with smart marketing insights.',
+  keywords: 'AI marketing automation, personalized campaigns, predictive analytics, lead scoring, email marketing, social media automation'},
 export default function AIMarketingAutomationPage() {
   return (
     <div className="space-y-16">,
@@ -43,9 +43,9 @@ export default function AIMarketingAutomationPage() {
             title="AI-Powered Personalization",
             description="Machine learning algorithms analyze customer behavior to deliver highly personalized content, offers, and experiences.",
             benefits={[
-              "Real-time personalization";
-              "Behavioral analysis";
-              "Dynamic content";
+              "Real-time personalization",
+              "Behavioral analysis",
+              "Dynamic content",
               "Cross-channel consistency"]}
            />,
           <FeatureCard
@@ -53,9 +53,9 @@ export default function AIMarketingAutomationPage() {
             title="Smart Email Campaigns",
             description="AI optimizes email timing, subject lines, content, and send frequency for maximum engagement and conversion.",
             benefits={[
-              "Optimal send timing";
-              "Subject line optimization";
-              "Content personalization";
+              "Optimal send timing",
+              "Subject line optimization",
+              "Content personalization",
               "A/B testing automation"]}
            />,
           <FeatureCard
@@ -63,9 +63,9 @@ export default function AIMarketingAutomationPage() {
             title="Social Media Automation",
             description="Intelligent social media management with AI-generated content, optimal posting times, and engagement optimization.",
             benefits={[
-              "Content generation";
-              "Optimal posting times";
-              "Engagement optimization";
+              "Content generation",
+              "Optimal posting times",
+              "Engagement optimization",
               "Multi-platform management"]}
            />,
           <FeatureCard
@@ -73,9 +73,9 @@ export default function AIMarketingAutomationPage() {
             title="Advanced Lead Scoring",
             description="AI analyzes lead behavior, demographics, and engagement to score and prioritize leads for maximum conversion.",
             benefits={[
-              "Behavioral scoring";
-              "Predictive analytics";
-              "Lead prioritization";
+              "Behavioral scoring",
+              "Predictive analytics",
+              "Lead prioritization",
               "Conversion optimization"]}
            />,
           <FeatureCard
@@ -83,9 +83,9 @@ export default function AIMarketingAutomationPage() {
             title="Predictive Analytics",
             description="Advanced analytics predict customer lifetime value, churn risk, and optimal marketing spend allocation.",
             benefits={[
-              "Lifetime value prediction";
-              "Churn prevention";
-              "Budget optimization";
+              "Lifetime value prediction",
+              "Churn prevention",
+              "Budget optimization",
               "ROI forecasting"]}
            />,
           <FeatureCard
@@ -93,9 +93,9 @@ export default function AIMarketingAutomationPage() {
             title="Chatbot & AI Assistants",
             description="Intelligent chatbots handle customer inquiries, qualify leads, and provide personalized recommendations 24/7.",
             benefits={[
-              "24/7 availability";
-              "Lead qualification";
-              "Personalized responses";
+              "24/7 availability",
+              "Lead qualification",
+              "Personalized responses",
               "Multi-language support"]}
            />,
         </div>,
@@ -115,11 +115,11 @@ export default function AIMarketingAutomationPage() {
             period="per month",
             description="Perfect for small businesses and startups",
             features={[
-              "Up to 10,0o00 contacts";
-              "Basic AI personalization";
-              "Email automation";
-              "Social media scheduling";
-              "Basic analytics";
+              "Up to 10,0o00 contacts",
+              "Basic AI personalization",
+              "Email automation",
+              "Social media scheduling",
+              "Basic analytics",
               "Email support"]}
             popular={false}
            />,
@@ -129,12 +129,12 @@ export default function AIMarketingAutomationPage() {
             period="per month",
             description="Most popular for growing businesses",
             features={[
-              "Up to 50,0o00 contacts";
-              "Advanced AI features";
-              "Multi-channel campaigns";
-              "Lead scoring";
-              "Priority support";
-              "API access";
+              "Up to 50,0o00 contacts",
+              "Advanced AI features",
+              "Multi-channel campaigns",
+              "Lead scoring",
+              "Priority support",
+              "API access",
               "Advanced analytics"]}
             popular={true}
            />,
@@ -144,12 +144,12 @@ export default function AIMarketingAutomationPage() {
             period="per month",
             description="For large organizations",
             features={[
-              "Unlimited contacts";
-              "All AI features";
-              "Custom AI models";
-              "White-label options";
-              "Dedicated support";
-              "Custom integrations";
+              "Unlimited contacts",
+              "All AI features",
+              "Custom AI models",
+              "White-label options",
+              "Dedicated support",
+              "Custom integrations",
               "SLA guarantee"]}
             popular={false}
            />,
@@ -197,17 +197,17 @@ export default function AIMarketingAutomationPage() {
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
           {[
-            { name: "React", icon: "⚛️", description: "Frontend framework" };
-            { name: "Node.js", icon: "🟢", description: "Backend runtime" };
-            { name: "PostgreSQL", icon: "🐘", description: "Primary database" };
-            { name: "Redis", icon: "🔴", description: "Caching layer" };
-            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" };
-            { name: "AWS", icon: "☁️", description: "Cloud platform" };
-            { name: "Docker", icon: "🐳", description: "Containerization" };
-            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" };
-            { name: "SendGrid", icon: "📧", description: "Email delivery" };
-            { name: "HubSpot", icon: "🔗", description: "CRM integration" };
-            { name: "MongoDB", icon: "🍃", description: "Document store" };
+            { name: "React", icon: "⚛️", description: "Frontend framework" },
+            { name: "Node.js", icon: "🟢", description: "Backend runtime" },
+            { name: "PostgreSQL", icon: "🐘", description: "Primary database" },
+            { name: "Redis", icon: "🔴", description: "Caching layer" },
+            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" },
+            { name: "AWS", icon: "☁️", description: "Cloud platform" },
+            { name: "Docker", icon: "🐳", description: "Containerization" },
+            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
+            { name: "SendGrid", icon: "📧", description: "Email delivery" },
+            { name: "HubSpot", icon: "🔗", description: "CRM integration" },
+            { name: "MongoDB", icon: "🍃", description: "Document store" },
             { name: "Grafana", icon: "📊", description: "Monitoring" }
           ].map((tech, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,
@@ -251,9 +251,9 @@ function FeatureCard({ icon, title, description, benefits }: {
     <div className="p-6 bg-white rounded-lg shadow-md border border-gray-20o0 hover: shadow-lg transition-shadow">,
       <div className="text-4xl mb-4">{icon}</div>,
 export const metadata ={
-  title: 'AI Marketing Automation Platform | Zion Tech Group';
-  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 65% with smart marketing AI.';
-  keywords: 'AI marketing automation, personalized marketing, campaign optimization, lead nurturing, marketing analytics, customer segmentation'};
+  title: 'AI Marketing Automation Platform | Zion Tech Group',
+  description: 'Intelligent marketing automation with AI-driven personalization, predictive analytics, and automated campaign optimization. Increase conversion rates by 65% with smart marketing AI.',
+  keywords: 'AI marketing automation, personalized marketing, campaign optimization, lead nurturing, marketing analytics, customer segmentation'},
 interface FeatureCardProps {
   icon: string,
   title: string,
@@ -285,11 +285,11 @@ function PricingCard({ name, price, period, description, features, popular }: {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'} shadow-lg`}>,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
+  name,
+  price,
+  period,
+  description,
+  features,
   popular = false}: {
   name: string,
   price: string,
@@ -368,7 +368,7 @@ export default function AIMarketingAutomationPage() {
           AI Marketing Automation Platform,
         </h1>,
         <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
-          Revolutionize your marketing with AI-powered automation that personalizes every customer interaction;
+          Revolutionize your marketing with AI-powered automation that personalizes every customer interaction,
           optimizes campaigns in real-time, and increases conversion rates by 65% with intelligent insights.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -398,10 +398,10 @@ export default function AIMarketingAutomationPage() {
             title="AI Customer Segmentation",
             description="Automatically segment customers based on behavior, preferences, and predicted lifetime value using machine learning.",
             benefits={[
-              "Behavioral segmentation";
-              "Predictive modeling";
-              "Dynamic segments";
-              "Custom criteria";
+              "Behavioral segmentation",
+              "Predictive modeling",
+              "Dynamic segments",
+              "Custom criteria",
               "Real-time updates"]}
            />,
           <FeatureCard
@@ -409,10 +409,10 @@ export default function AIMarketingAutomationPage() {
             title="Smart Email Campaigns",
             description="AI-powered email marketing with personalized content, optimal send times, and automated A/B testing.",
             benefits={[
-              "Personalized content";
-              "Send time optimization";
-              "Subject line testing";
-              "Content optimization";
+              "Personalized content",
+              "Send time optimization",
+              "Subject line testing",
+              "Content optimization",
               "Performance tracking"]}
            />,
           <FeatureCard
@@ -420,10 +420,10 @@ export default function AIMarketingAutomationPage() {
             title="Automated Lead Nurturing",
             description="Intelligent lead nurturing sequences that adapt based on customer behavior and engagement patterns.",
             benefits={[
-              "Behavioral triggers";
-              "Multi-channel nurturing";
-              "Content personalization";
-              "Lead scoring";
+              "Behavioral triggers",
+              "Multi-channel nurturing",
+              "Content personalization",
+              "Lead scoring",
               "Conversion optimization"]}
            />,
           <FeatureCard
@@ -431,10 +431,10 @@ export default function AIMarketingAutomationPage() {
             title="Predictive Analytics",
             description="Advanced analytics that predict customer behavior, campaign performance, and optimal marketing strategies.",
             benefits={[
-              "Behavior prediction";
-              "Campaign forecasting";
-              "ROI optimization";
-              "Trend analysis";
+              "Behavior prediction",
+              "Campaign forecasting",
+              "ROI optimization",
+              "Trend analysis",
               "Performance insights"]}
            />,
           <FeatureCard
@@ -442,10 +442,10 @@ export default function AIMarketingAutomationPage() {
             title="AI Content Generation",
             description="Automated content creation for ads, emails, and social media with brand voice consistency and optimization.",
             benefits={[
-              "Content automation";
-              "Brand voice training";
-              "Multi-format generation";
-              "SEO optimization";
+              "Content automation",
+              "Brand voice training",
+              "Multi-format generation",
+              "SEO optimization",
               "Performance testing"]}
            />,
           <FeatureCard
@@ -453,10 +453,10 @@ export default function AIMarketingAutomationPage() {
             title="Cross-Channel Orchestration",
             description="Seamlessly coordinate marketing campaigns across email, social media, SMS, and web channels.",
             benefits={[
-              "Multi-channel campaigns";
-              "Unified customer journey";
-              "Channel optimization";
-              "Message consistency";
+              "Multi-channel campaigns",
+              "Unified customer journey",
+              "Channel optimization",
+              "Message consistency",
               "Performance tracking"]}
            />,
         </div>,
@@ -575,11 +575,11 @@ export default function AIMarketingAutomationPage() {
             period="month",
             description="Perfect for small businesses and startups",
             features={[
-              "Up to 5,0o00 contacts";
-              "Basic AI automation";
-              "Email marketing";
-              "Social media posting";
-              "Basic analytics";
+              "Up to 5,0o00 contacts",
+              "Basic AI automation",
+              "Email marketing",
+              "Social media posting",
+              "Basic analytics",
               "Email support"]}
            />,
           <PricingTier
@@ -588,12 +588,12 @@ export default function AIMarketingAutomationPage() {
             period="month",
             description="Most popular for growing businesses",
             features={[
-              "Up to 25,0o00 contacts";
-              "Advanced AI features";
-              "Multi-channel campaigns";
-              "Predictive analytics";
-              "A/B testing";
-              "Priority support";
+              "Up to 25,0o00 contacts",
+              "Advanced AI features",
+              "Multi-channel campaigns",
+              "Predictive analytics",
+              "A/B testing",
+              "Priority support",
               "API access"]}
             popular={true}
            />,
@@ -603,12 +603,12 @@ export default function AIMarketingAutomationPage() {
             period="month",
             description="For large organizations with complex needs",
             features={[
-              "Unlimited contacts";
-              "Custom AI models";
-              "White-label options";
-              "Dedicated support";
-              "Advanced integrations";
-              "Custom development";
+              "Unlimited contacts",
+              "Custom AI models",
+              "White-label options",
+              "Dedicated support",
+              "Advanced integrations",
+              "Custom development",
               "On-premise deployment"]}
            />,
         </div>,
@@ -623,17 +623,17 @@ export default function AIMarketingAutomationPage() {
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
           {[
-            { name: "HubSpot", icon: "🟠" };
-            { name: "Salesforce", icon: "☁️" };
-            { name: "Mailchimp", icon: "📬" };
-            { name: "Facebook Ads", icon: "📘" };
-            { name: "Google Ads", icon: "🔍" };
-            { name: "LinkedIn", icon: "💼" };
-            { name: "Twitter", icon: "🐦" };
-            { name: "Instagram", icon: "📷" };
-            { name: "Shopify", icon: "🛍️" };
-            { name: "WooCommerce", icon: "🛒" };
-            { name: "Zapier", icon: "⚡" };
+            { name: "HubSpot", icon: "🟠" },
+            { name: "Salesforce", icon: "☁️" },
+            { name: "Mailchimp", icon: "📬" },
+            { name: "Facebook Ads", icon: "📘" },
+            { name: "Google Ads", icon: "🔍" },
+            { name: "LinkedIn", icon: "💼" },
+            { name: "Twitter", icon: "🐦" },
+            { name: "Instagram", icon: "📷" },
+            { name: "Shopify", icon: "🛍️" },
+            { name: "WooCommerce", icon: "🛒" },
+            { name: "Zapier", icon: "⚡" },
             { name: "Webhooks", icon: "🔗" }
           ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,

@@ -4,11 +4,11 @@ export type AgendaItem = {
   track: 'AI' | 'DAO' | 'Talent' | 'Global',
   title: string,
   speaker?: string,
-  replay?: { provider: 'youtube' | 'ipfs', idOrCid: string };
-};
+  replay?: { provider: 'youtube' | 'ipfs', idOrCid: string },
+},
 export default function AgendaTimeline({
-  items;
-  activeTrack;
+  items,
+  activeTrack,
 }: {
   items: AgendaItem[],
   activeTrack: 'All' | 'AI' | 'DAO' | 'Talent' | 'Global'}) {

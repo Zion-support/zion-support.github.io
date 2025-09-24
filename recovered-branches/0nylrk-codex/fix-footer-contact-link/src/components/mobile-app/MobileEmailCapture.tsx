@@ -20,7 +20,7 @@ export const MobileEmailCapture: React.FC = () => {
         setIsSuccess(false)}5000)} catch (error) {
       console.error("Error subscribing: "error)} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">,
       <div className="container mx-auto px-4">,
@@ -52,4 +52,4 @@ export const MobileEmailCapture: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

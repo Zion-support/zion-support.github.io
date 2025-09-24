@@ -11,10 +11,10 @@ import {
   Rocket,
   Star,
   TrendingUp,
-  Users;
-  ChevronRight;
-  ExternalLink;
-  Clock;
+  Users,
+  ChevronRight,
+  ExternalLink,
+  Clock,
   Award} from 'lucide-react',
 const NewContentShowcase20o26 = () => {
   const [activeTabsetActiveTab] = useState('ai-breakthroughs'),
@@ -23,134 +23,134 @@ const NewContentShowcase20o26 = () => {
     setIsVisible(true)}[]),
   const contentCategories ={
     'ai-breakthroughs': {
-      title: 'AI Breakthroughs 20o26';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
-      bgColor: 'bg-purple-50';
-      borderColor: 'border-purple-20o0'};
+      title: 'AI Breakthroughs 20o26',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-20o0'},
     'quantum-computing': {
-      title: 'Quantum Computing Revolution';
-      icon: Zap;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      bgColor: 'bg-blue-50';
-      borderColor: 'border-blue-20o0'};
+      title: 'Quantum Computing Revolution',
+      icon: Zap,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-20o0'},
     'sustainability': {
-      title: 'Green Tech & Sustainability';
-      icon: Globe;
-      color: 'from-green-50o0 to-emerald-50o0';
-      bgColor: 'bg-green-50';
-      borderColor: 'border-green-20o0'};
+      title: 'Green Tech & Sustainability',
+      icon: Globe,
+      color: 'from-green-50o0 to-emerald-50o0',
+      bgColor: 'bg-green-50',
+      borderColor: 'border-green-20o0'},
     'automation': {
-      title: 'Advanced Automation';
-      icon: Rocket;
-      color: 'from-orange-50o0 to-red-50o0';
-      bgColor: 'bg-orange-50';
+      title: 'Advanced Automation',
+      icon: Rocket,
+      color: 'from-orange-50o0 to-red-50o0',
+      bgColor: 'bg-orange-50',
       borderColor: 'border-orange-20o0'}
-  };
+  },
   const featuredContent ={
     'ai-breakthroughs': [
       {
-        title: 'Multimodal AI Revolution: Beyond Text and Images';
-        description: 'Explore how AI systems are integrating visionaudioand text processing to create more intelligent and context-aware applications.';
-        readTime: '12 min read';
-        category: 'AI Research';
-        featured: true;
-        href: '/ai-20o26-multimodal-revolution';
-        stats: { views: '2.3'k', 'likes: '187' }
-      };
+        title: 'Multimodal AI Revolution: Beyond Text and Images',
+        description: 'Explore how AI systems are integrating visionaudioand text processing to create more intelligent and context-aware applications.',
+        readTime: '12 min read',
+        category: 'AI Research',
+        featured: true,
+        href: '/ai-20o26-multimodal-revolution',
+        stats: { views: '2.3'klikes: '187' }
+      },
       {
-        title: 'Neural Architecture Search: Automating AI Design';
-        description: 'Discover how automated neural architecture search is revolutionizing AI model development and optimization.';
-        readTime: '8 min read';
-        category: 'AI Engineering';
-        featured: false;
-        href: '/ai-20o26-neural-architecture-search';
-        stats: { views: '1.8'k', 'likes: '142' }
-      };
+        title: 'Neural Architecture Search: Automating AI Design',
+        description: 'Discover how automated neural architecture search is revolutionizing AI model development and optimization.',
+        readTime: '8 min read',
+        category: 'AI Engineering',
+        featured: false,
+        href: '/ai-20o26-neural-architecture-search',
+        stats: { views: '1.8'klikes: '142' }
+      },
       {
-        title: 'AI Consciousness: The Next Frontier';
-        description: 'Dive deep into the philosophical and technical aspects of AI consciousness and self-awareness.';
-        readTime: '15 min read';
-        category: 'AI Philosophy';
-        featured: true;
-        href: '/ai-20o26-consciousness-frontier';
-        stats: { views: '3.1'k', 'likes: '256' }
+        title: 'AI Consciousness: The Next Frontier',
+        description: 'Dive deep into the philosophical and technical aspects of AI consciousness and self-awareness.',
+        readTime: '15 min read',
+        category: 'AI Philosophy',
+        featured: true,
+        href: '/ai-20o26-consciousness-frontier',
+        stats: { views: '3.1'klikes: '256' }
       }
-    ];
+    ],
     'quantum-computing': [
       {
-        title: 'Quantum AI: The Future of Computing';
-        description: 'Learn how quantum computing is revolutionizing AI algorithms and problem-solving capabilities.';
-        readTime: '10 min read';
-        category: 'Quantum AI';
-        featured: true;
-        href: '/quantum-ai-20o26-future';
-        stats: { views: '1.9'k', 'likes: '134' }
-      };
+        title: 'Quantum AI: The Future of Computing',
+        description: 'Learn how quantum computing is revolutionizing AI algorithms and problem-solving capabilities.',
+        readTime: '10 min read',
+        category: 'Quantum AI',
+        featured: true,
+        href: '/quantum-ai-20o26-future',
+        stats: { views: '1.9'klikes: '134' }
+      },
       {
-        title: 'Quantum Machine Learning Algorithms';
-        description: 'Explore the latest quantum machine learning algorithms and their practical applications.';
-        readTime: '14 min read';
-        category: 'Quantum ML';
-        featured: false;
-        href: '/quantum-ml-algorithms-20o26';
-        stats: { views: '1.2'k', 'likes: '98' }
+        title: 'Quantum Machine Learning Algorithms',
+        description: 'Explore the latest quantum machine learning algorithms and their practical applications.',
+        readTime: '14 min read',
+        category: 'Quantum ML',
+        featured: false,
+        href: '/quantum-ml-algorithms-20o26',
+        stats: { views: '1.2'klikes: '98' }
       }
-    ];
+    ],
     'sustainability': [
       {
-        title: 'Green AI: Sustainable Technology Solutions';
-        description: 'Discover how AI is being used to create more sustainable and environmentally friendly technologies.';
-        readTime: '9 min read';
-        category: 'Green Tech';
-        featured: true;
-        href: '/green-ai-sustainability-20o26';
-        stats: { views: '2.1'k', 'likes: '178' }
-      };
+        title: 'Green AI: Sustainable Technology Solutions',
+        description: 'Discover how AI is being used to create more sustainable and environmentally friendly technologies.',
+        readTime: '9 min read',
+        category: 'Green Tech',
+        featured: true,
+        href: '/green-ai-sustainability-20o26',
+        stats: { views: '2.1'klikes: '178' }
+      },
       {
-        title: 'Carbon-Neutral AI Infrastructure';
-        description: 'Learn about building carbon-neutral AI infrastructure and sustainable computing practices.';
-        readTime: '11 min read';
-        category: 'Sustainability';
-        featured: false;
-        href: '/carbon-neutral-ai-infrastructure';
-        stats: { views: '1.5'k', 'likes: '123' }
+        title: 'Carbon-Neutral AI Infrastructure',
+        description: 'Learn about building carbon-neutral AI infrastructure and sustainable computing practices.',
+        readTime: '11 min read',
+        category: 'Sustainability',
+        featured: false,
+        href: '/carbon-neutral-ai-infrastructure',
+        stats: { views: '1.5'klikes: '123' }
       }
-    ];
+    ],
     'automation': [
       {
-        title: 'Autonomous Business Operations 20o26';
-        description: 'Explore how businesses are implementing fully autonomous operations using advanced AI and robotics.';
-        readTime: '13 min read';
-        category: 'Business Automation';
-        featured: true;
-        href: '/autonomous-business-ops-20o26';
-        stats: { views: '2.7'k', 'likes: '20o1' }
-      };
+        title: 'Autonomous Business Operations 20o26',
+        description: 'Explore how businesses are implementing fully autonomous operations using advanced AI and robotics.',
+        readTime: '13 min read',
+        category: 'Business Automation',
+        featured: true,
+        href: '/autonomous-business-ops-20o26',
+        stats: { views: '2.7'klikes: '20o1' }
+      },
       {
-        title: 'Intelligent Process Automation';
-        description: 'Master the art of intelligent process automation with cutting-edge AI technologies.';
-        readTime: '7 min read';
-        category: 'Process Automation';
-        featured: false;
-        href: '/intelligent-process-automation-20o26';
-        stats: { views: '1.6'k', 'likes: '145' }
+        title: 'Intelligent Process Automation',
+        description: 'Master the art of intelligent process automation with cutting-edge AI technologies.',
+        readTime: '7 min read',
+        category: 'Process Automation',
+        featured: false,
+        href: '/intelligent-process-automation-20o26',
+        stats: { views: '1.6'klikes: '145' }
       }
-    ]};
+    ]},
   const containerVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  };
+  },
   return (
     <motion.section,
       className="py-20 bg-gradient-to-br from-gray-50 to-white",
@@ -272,5 +272,5 @@ const NewContentShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>)};
-export default NewContentShowcase20o26;
+    </motion.section>)},
+export default NewContentShowcase20o26,

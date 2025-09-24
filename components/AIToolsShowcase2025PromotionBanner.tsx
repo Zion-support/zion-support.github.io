@@ -9,8 +9,8 @@ import {
   Sparkles,
   Code,
   BarChart3,
-  Shield;
-  X;
+  Shield,
+  X,
   Play} from 'lucide-react',
 export default function AIToolsShowcase20o25PromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false),

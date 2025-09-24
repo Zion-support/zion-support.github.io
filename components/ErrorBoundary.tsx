@@ -12,11 +12,11 @@ interface State {
 export class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
@@ -94,5 +94,5 @@ export function useErrorHandler() {
     if (error) {
       throw error}
   }, [error]),
-  return { captureError, resetError };
+  return { captureError, resetError },
 }

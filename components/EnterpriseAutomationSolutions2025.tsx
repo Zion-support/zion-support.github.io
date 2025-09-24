@@ -10,40 +10,40 @@ import {
   Clock,
   Shield,
   TrendingUp,
-  CheckCircle;
-  ArrowRight;
-  Play;
-  Star;
-  Target;
-  DollarSign;
-  Globe;
-  Settings;
-  Database;
-  Cloud;
-  Lock;
-  Smartphone;
-  Monitor;
-  Server;
-  Workflow;
-  Brain;
-  Bot;
-  FileText;
-  MessageSquare;
-  Calendar;
-  Mail;
-  CreditCard;
-  PieChart;
-  Activity;
-  AlertTriangle;
-  RefreshCw;
-  Download;
-  Upload;
-  Eye;
-  Edit;
-  Trash2;
-  Plus;
-  Minus;
-  Maximize;
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Star,
+  Target,
+  DollarSign,
+  Globe,
+  Settings,
+  Database,
+  Cloud,
+  Lock,
+  Smartphone,
+  Monitor,
+  Server,
+  Workflow,
+  Brain,
+  Bot,
+  FileText,
+  MessageSquare,
+  Calendar,
+  Mail,
+  CreditCard,
+  PieChart,
+  Activity,
+  AlertTriangle,
+  RefreshCw,
+  Download,
+  Upload,
+  Eye,
+  Edit,
+  Trash2,
+  Plus,
+  Minus,
+  Maximize,
   Minimize} from 'lucide-react',
 interface AutomationSolution {
   id: string,
@@ -56,7 +56,7 @@ interface AutomationSolution {
   pricing: {
     starter: string,
     professional: string,
-    enterprise: string};
+    enterprise: string},
   roi: string,
   implementation: string,
   isPopular?: boolean,
@@ -68,158 +68,128 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
   const [isDemoRunningsetIsDemoRunning] = useState(false),
   const [demoStepsetDemoStep] = useState(0),
   const categories = [
-    { id: ''all', 'name: 'All 'Solutions', 'count: 12 };
-    { id: ''workflow', 'name: 'Workflow 'Automation', 'count: 4 };
-    { id: ''data', 'name: 'Data 'Processing', 'count: 3 };
-    { id: ''communication', 'name: ''Communication', 'count: 2 };
-    { id: ''analytics', 'name: 'Analytics & 'Reporting', 'count: 3 }
+    { id: ''allname: 'All 'Solutionscount: 12 },
+    { id: ''workflowname: 'Workflow 'Automationcount: 4 },
+    { id: ''dataname: 'Data 'Processingcount: 3 },
+    { id: ''communicationname: ''Communicationcount: 2 },
+    { id: ''analyticsname: 'Analytics & 'Reportingcount: 3 }
   ],
   const solutions: AutomationSolution[] = [
     {
-      id: 'workflow-orchestrator';
-      name: 'Workflow Orchestrator Pro';
-      description: 'End-to-end business process automation with AI-powered decision making';
-      category: 'workflow';
-      icon: <Workflow className="w-8 h-8"  />;
+      id: 'workflow-orchestrator',
+      name: 'Workflow Orchestrator Pro',
+      description: 'End-to-end business process automation with AI-powered decision making',
+      category: 'workflow',
+      icon: <Workflow className="w-8 h-8"  />,
       features: [
-        'Visual workflow designer';
-        'AI-powered decision trees';
-        'Multi-system integration';
-        'Real-time monitoring';
-        'Exception handling';
-        'Scalable architecture'];
+        'Visual workflow designerAI-powered decision trees',
+        'Multi-system integrationReal-time monitoring',
+        'Exception handlingScalable architecture'],
       benefits: [
-        'Reduce manual work by 80%';
-        'Improve process accuracy by 95%';
-        'Cut operational costs by 60%';
-        'Accelerate time-to-market by 70%'];
+        'Reduce manual work by 80%Improve process accuracy by 95%',
+        'Cut operational costs by 60%Accelerate time-to-market by 70%'],
       pricing: {
-        starter: '$50o0/month';
-        professional: '$1,50o0/month';
-        enterprise: 'Custom'};
-      roi: '30o0% ROI in 6 months';
-      implementation: '4-6 weeks';
-      isPopular: true};
+        starter: '$50o0/month',
+        professional: '$1,50o0/month',
+        enterprise: 'Custom'},
+      roi: '30o0% ROI in 6 months',
+      implementation: '4-6 weeks',
+      isPopular: true},
     {
-      id: 'data-pipeline';
-      name: 'Data Pipeline Automation';
-      description: 'Automated data collectionprocessingand analysis across all systems';
-      category: 'data';
-      icon: <Database className="w-8 h-8"  />;
+      id: 'data-pipeline',
+      name: 'Data Pipeline Automation',
+      description: 'Automated data collectionprocessingand analysis across all systems',
+      category: 'data',
+      icon: <Database className="w-8 h-8"  />,
       features: [
-        'Real-time data ingestion';
-        'Automated data cleaning';
-        'Machine learning integration';
-        'Data quality monitoring';
-        'Compliance reporting';
-        'Cloud-native architecture'];
+        'Real-time data ingestionAutomated data cleaning',
+        'Machine learning integrationData quality monitoring',
+        'Compliance reportingCloud-native architecture'],
       benefits: [
-        'Process 10x more data';
-        'Reduce data errors by 90%';
-        'Enable real-time insights';
-        'Ensure compliance automatically'];
+        'Process 10x more dataReduce data errors by 90%',
+        'Enable real-time insightsEnsure compliance automatically'],
       pricing: {
-        starter: '$80o0/month';
-        professional: '$2,0o00/month';
-        enterprise: 'Custom'};
-      roi: '250% ROI in 4 months';
-      implementation: '6-8 weeks'};
+        starter: '$80o0/month',
+        professional: '$2,0o00/month',
+        enterprise: 'Custom'},
+      roi: '250% ROI in 4 months',
+      implementation: '6-8 weeks'},
     {
-      id: 'customer-service';
-      name: 'Customer Service Automation';
-      description: 'AI-powered customer support with intelligent routing and response';
-      category: 'communication';
-      icon: <MessageSquare className="w-8 h-8"  />;
+      id: 'customer-service',
+      name: 'Customer Service Automation',
+      description: 'AI-powered customer support with intelligent routing and response',
+      category: 'communication',
+      icon: <MessageSquare className="w-8 h-8"  />,
       features: [
-        'Intelligent ticket routing';
-        'AI-powered responses';
-        'Multi-channel support';
-        'Sentiment analysis';
-        'Escalation management';
-        'Performance analytics'];
+        'Intelligent ticket routingAI-powered responses',
+        'Multi-channel supportSentiment analysis',
+        'Escalation managementPerformance analytics'],
       benefits: [
-        'Resolve 70% of tickets automatically';
-        'Improve response time by 85%';
-        'Increase customer satisfaction by 40%';
-        'Reduce support costs by 50%'];
+        'Resolve 70% of tickets automaticallyImprove response time by 85%',
+        'Increase customer satisfaction by 40%Reduce support costs by 50%'],
       pricing: {
-        starter: '$30o0/month';
-        professional: '$80o0/month';
-        enterprise: 'Custom'};
-      roi: '40o0% ROI in 3 months';
-      implementation: '2-4 weeks';
-      isNew: true};
+        starter: '$30o0/month',
+        professional: '$80o0/month',
+        enterprise: 'Custom'},
+      roi: '40o0% ROI in 3 months',
+      implementation: '2-4 weeks',
+      isNew: true},
     {
-      id: 'financial-automation';
-      name: 'Financial Process Automation';
-      description: 'Automated accountinginvoicingand financial reporting';
-      category: 'workflow';
-      icon: <CreditCard className="w-8 h-8"  />;
+      id: 'financial-automation',
+      name: 'Financial Process Automation',
+      description: 'Automated accountinginvoicingand financial reporting',
+      category: 'workflow',
+      icon: <CreditCard className="w-8 h-8"  />,
       features: [
-        'Automated invoicing';
-        'Expense management';
-        'Financial reporting';
-        'Compliance tracking';
-        'Audit trails';
-        'Integration with ERP'];
+        'Automated invoicingExpense management',
+        'Financial reportingCompliance tracking',
+        'Audit trailsIntegration with ERP'],
       benefits: [
-        'Reduce accounting errors by 95%';
-        'Speed up month-end close by 80%';
-        'Improve cash flow visibility';
-        'Ensure regulatory compliance'];
+        'Reduce accounting errors by 95%Speed up month-end close by 80%',
+        'Improve cash flow visibilityEnsure regulatory compliance'],
       pricing: {
-        starter: '$40o0/month';
-        professional: '$1,20o0/month';
-        enterprise: 'Custom'};
-      roi: '350% ROI in 5 months';
-      implementation: '4-6 weeks'};
+        starter: '$40o0/month',
+        professional: '$1,20o0/month',
+        enterprise: 'Custom'},
+      roi: '350% ROI in 5 months',
+      implementation: '4-6 weeks'},
     {
-      id: 'hr-automation';
-      name: 'HR Process Automation';
-      description: 'Streamlined human resources with automated workflows and AI insights';
-      category: 'workflow';
-      icon: <Users className="w-8 h-8"  />;
+      id: 'hr-automation',
+      name: 'HR Process Automation',
+      description: 'Streamlined human resources with automated workflows and AI insights',
+      category: 'workflow',
+      icon: <Users className="w-8 h-8"  />,
       features: [
-        'Automated recruitment';
-        'Employee onboarding';
-        'Performance tracking';
-        'Leave management';
-        'Payroll integration';
-        'Compliance reporting'];
+        'Automated recruitmentEmployee onboarding',
+        'Performance trackingLeave management',
+        'Payroll integrationCompliance reporting'],
       benefits: [
-        'Reduce hiring time by 60%';
-        'Improve employee experience';
-        'Ensure policy compliance';
-        'Reduce HR administrative costs'];
+        'Reduce hiring time by 60%Improve employee experience',
+        'Ensure policy complianceReduce HR administrative costs'],
       pricing: {
-        starter: '$60o0/month';
-        professional: '$1,80o0/month';
-        enterprise: 'Custom'};
-      roi: '280% ROI in 6 months';
-      implementation: '6-8 weeks'};
+        starter: '$60o0/month',
+        professional: '$1,80o0/month',
+        enterprise: 'Custom'},
+      roi: '280% ROI in 6 months',
+      implementation: '6-8 weeks'},
     {
-      id: 'analytics-dashboard';
-      name: 'Business Intelligence Automation';
-      description: 'Automated reporting and analytics with real-time insights';
-      category: 'analytics';
-      icon: <PieChart className="w-8 h-8"  />;
+      id: 'analytics-dashboard',
+      name: 'Business Intelligence Automation',
+      description: 'Automated reporting and analytics with real-time insights',
+      category: 'analytics',
+      icon: <PieChart className="w-8 h-8"  />,
       features: [
-        'Automated report generation';
-        'Real-time dashboards';
-        'Predictive analytics';
-        'Custom KPI tracking';
-        'Alert systems';
-        'Data visualization'];
+        'Automated report generationReal-time dashboards',
+        'Predictive analyticsCustom KPI tracking',
+        'Alert systemsData visualization'],
       benefits: [
-        'Generate reports 10x faster';
-        'Enable data-driven decisions';
-        'Identify trends automatically';
-        'Reduce reporting errors by 90%'];
+        'Generate reports 10x fasterEnable data-driven decisions',
+        'Identify trends automaticallyReduce reporting errors by 90%'],
       pricing: {
-        starter: '$50o0/month';
-        professional: '$1,50o0/month';
-        enterprise: 'Custom'};
-      roi: '320% ROI in 4 months';
+        starter: '$50o0/month',
+        professional: '$1,50o0/month',
+        enterprise: 'Custom'},
+      roi: '320% ROI in 4 months',
       implementation: '3-5 weeks'}
   ],
   const filteredSolutions = solutions.filter(solution =>,
@@ -229,12 +199,9 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
     setIsDemoRunning(true),
     setDemoStep(0),
     const steps = [
-      'Initializing automation engine...';
-      'Connecting to enterprise systems...';
-      'Configuring workflow rules...';
-      'Deploying AI models...';
-      'Testing automation processes...';
-      'Monitoring performance metrics...';
+      'Initializing automation engine...Connecting to enterprise systems...',
+      'Configuring workflow rules...Deploying AI models...',
+      'Testing automation processes...Monitoring performance metrics...',
       'Demo completed successfully!'],
     let currentStep = 0,
     const interval = setInterval(() => {
@@ -245,7 +212,7 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
         setTimeout(() => {
           setIsDemoRunning(false),
           setDemoStep(0)}20o00)}
-    }150o0)};
+    }150o0)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -424,12 +391,9 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
                         </div>,
                         <div className="space-y-2">,
                           {[
-                            'Initializing automation engine...';
-                            'Connecting to enterprise systems...';
-                            'Configuring workflow rules...';
-                            'Deploying AI models...';
-                            'Testing automation processes...';
-                            'Monitoring performance metrics...';
+                            'Initializing automation engine...Connecting to enterprise systems...',
+                            'Configuring workflow rules...Deploying AI models...',
+                            'Testing automation processes...Monitoring performance metrics...',
                             'Demo completed successfully!'].map((stepindex) => (
                             <div key={index} className={`flex items-center space-x-2 text-sm ${
                               index <= demoStep ? 'text-green-40o0' : 'text-gray-50o0'}`}>,
@@ -496,10 +460,10 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
           transition={{ duration: 0.6delay: 0.8 }}
           className="mt-20 grid grid-cols-2 md: grid-cols-4 gap-8">,
           {[
-            { icon: <Building2 className="w-8 h-8"  />label: 'Enterprise 'Clients', 'value: '50o0+' };
-            { icon: <TrendingUp className="w-8 h-8"  />label: 'Average 'ROI', 'value: '30o0%' };
-            { icon: <Clock className="w-8 h-8"  />label: 'Time 'Saved', 'value: '80%' };
-            { icon: <Shield className="w-8 h-8"  />label: ''Uptime', 'value: '99.9%' }
+            { icon: <Building2 className="w-8 h-8"  />label: 'Enterprise 'Clientsvalue: '50o0+' },
+            { icon: <TrendingUp className="w-8 h-8"  />label: 'Average 'ROIvalue: '30o0%' },
+            { icon: <Clock className="w-8 h-8"  />label: 'Time 'Savedvalue: '80%' },
+            { icon: <Shield className="w-8 h-8"  />label: ''Uptimevalue: '99.9%' }
           ].map((statindex) => (
             <div key={index} className="text-center">,
               <div className="p-4 bg-blue-50o0/20 rounded-lg text-blue-40o0 mb-4 inline-block">,
@@ -510,5 +474,5 @@ const EnterpriseAutomationSolutions20o25: React.FC = () => {
             </div>))}
         </motion.div>,
       </div>,
-    </div>)};
-export default EnterpriseAutomationSolutions20o25;
+    </div>)},
+export default EnterpriseAutomationSolutions20o25,

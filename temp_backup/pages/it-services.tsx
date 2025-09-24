@@ -1,165 +1,140 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Code;
-  Cloud;
-  Shield;
-  Settings;
-  Database;
-  Server;
-  Users;
-  Globe;
-  Zap;
-  CheckCircle;
-  ArrowRight;
-  Search;
-  Filter;
+  Code,
+  Cloud,
+  Shield,
+  Settings,
+  Database,
+  Server,
+  Users,
+  Globe,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
 } from 'lucide-react',
 const itServices = [
   {
-    id: 1;
-    title: 'Cloud Infrastructure Setup';
+    id: 1,
+    title: 'Cloud Infrastructure Setup',
     description:,
-      'Complete cloud infrastructure setup and migration services for AWS, Azure, and Google Cloud.';
-    icon: Cloud;
+      'Complete cloud infrastructure setup and migration services for AWS, Azure, and Google Cloud.',
+    icon: Cloud,
     features: [
-      'Cloud Migration';
-      'Infrastructure as Code';
-      'Auto-scaling';
-      'Monitoring & Alerting';
-    ];
-    pricing: '$2,999 - $9,999/month';
-    category: 'Cloud & Infrastructure';
-    benefits: ['99.9% Uptime', 'Cost Optimization', 'Scalability', 'Security'];
-    popular: true;
-  };
+      'Cloud MigrationInfrastructure as Code',
+      'Auto-scalingMonitoring & Alerting',
+    ],
+    pricing: '$2,999 - $9,999/month',
+    category: 'Cloud & Infrastructure',
+    benefits: ['99.9% UptimeCost Optimization', 'ScalabilitySecurity'],
+    popular: true
+  },
   {
-    id: 2;
-    title: 'Cybersecurity Solutions';
+    id: 2,
+    title: 'Cybersecurity Solutions',
     description:,
-      'Comprehensive cybersecurity services including threat detection, vulnerability assessment, and compliance.';
-    icon: Shield;
+      'Comprehensive cybersecurity services including threat detection, vulnerability assessment, and compliance.',
+    icon: Shield,
     features: [
-      'Threat Detection';
-      'Vulnerability Assessment';
-      'Compliance';
-      'Security Training';
-    ];
-    pricing: '$1,999 - $7,999/month';
-    category: 'Security';
+      'Threat DetectionVulnerability Assessment',
+      'ComplianceSecurity Training',
+    ],
+    pricing: '$1,999 - $7,999/month',
+    category: 'Security',
     benefits: [
-      '24/7 Monitoring';
-      'Threat Prevention';
-      'Compliance';
-      'Incident Response';
-    ];
-    popular: true;
-  };
+      '24/7 MonitoringThreat Prevention',
+      'ComplianceIncident Response',
+    ],
+    popular: true
+  },
   {
-    id: 3;
-    title: 'IT Support & Helpdesk';
+    id: 3,
+    title: 'IT Support & Helpdesk',
     description:,
-      '24/7 IT support and helpdesk services to keep your business running smoothly.';
-    icon: Users;
+      '24/7 IT support and helpdesk services to keep your business running smoothly.',
+    icon: Users,
     features: [
-      '24/7 Support';
-      'Remote Assistance';
-      'Hardware Support';
-      'Software Support';
-    ];
-    pricing: '$99 - $299/user/month';
-    category: 'Support';
+      '24/7 SupportRemote Assistance',
+      'Hardware SupportSoftware Support',
+    ],
+    pricing: '$99 - $299/user/month',
+    category: 'Support',
     benefits: [
-      'Fast Response';
-      'Expert Support';
-      'Proactive Monitoring';
-      'Documentation';
-    ];
-    popular: false;
-  };
+      'Fast ResponseExpert Support',
+      'Proactive MonitoringDocumentation',
+    ],
+    popular: false
+  },
   {
-    id: 4;
-    title: 'Database Management';
+    id: 4,
+    title: 'Database Management',
     description:,
-      'Professional database administration, optimization, and maintenance services.';
-    icon: Database;
+      'Professional database administration, optimization, and maintenance services.',
+    icon: Database,
     features: [
-      'Database Design';
-      'Performance Tuning';
-      'Backup & Recovery';
-      'Security';
-    ];
-    pricing: '$1,499 - $4,999/month';
-    category: 'Database';
+      'Database DesignPerformance Tuning',
+      'Backup & RecoverySecurity',
+    ],
+    pricing: '$1,499 - $4,999/month',
+    category: 'Database',
     benefits: [
-      'High Performance';
-      'Data Security';
-      'Automated Backups';
-      'Monitoring';
-    ];
-    popular: false;
-  };
+      'High PerformanceData Security',
+      'Automated BackupsMonitoring',
+    ],
+    popular: false
+  },
   {
-    id: 5;
-    title: 'Network Infrastructure';
+    id: 5,
+    title: 'Network Infrastructure',
     description:,
-      'Complete network design, implementation, and maintenance services.';
-    icon: Server;
+      'Complete network design, implementation, and maintenance services.',
+    icon: Server,
     features: [
-      'Network Design';
-      'Implementation';
-      'Monitoring';
-      'Troubleshooting';
-    ];
-    pricing: '$2,499 - $8,999/month';
-    category: 'Networking';
+      'Network DesignImplementation',
+      'MonitoringTroubleshooting',
+    ],
+    pricing: '$2,499 - $8,999/month',
+    category: 'Networking',
     benefits: [
-      'Reliable Connectivity';
-      'Security';
-      'Performance';
-      'Scalability';
-    ];
-    popular: false;
-  };
+      'Reliable ConnectivitySecurity',
+      'PerformanceScalability',
+    ],
+    popular: false
+  },
   {
-    id: 6;
-    title: 'IT Service Management';
+    id: 6,
+    title: 'IT Service Management',
     description:,
-      'ITSM implementation and management using industry best practices and tools.';
-    icon: Settings;
+      'ITSM implementation and management using industry best practices and tools.',
+    icon: Settings,
     features: [
-      'Service Desk';
-      'Change Management';
-      'Incident Management';
-      'Problem Management';
-    ];
-    pricing: '$3,999 - $14,999/month';
-    category: 'ITSM';
+      'Service DeskChange Management',
+      'Incident ManagementProblem Management',
+    ],
+    pricing: '$3,999 - $14,999/month',
+    category: 'ITSM',
     benefits: [
-      'Process Standardization';
-      'Better Visibility';
-      'Cost Optimization';
-      'Service Quality';
-    ];
-    popular: false;
-  };
+      'Process StandardizationBetter Visibility',
+      'Cost OptimizationService Quality',
+    ],
+    popular: false
+  },
 ],
 const categories = [
-  'All';
-  'Cloud & Infrastructure';
-  'Security';
-  'Support';
-  'Database';
-  'Networking';
-  'ITSM';
+  'AllCloud & Infrastructure',
+  'SecuritySupport',
+  'DatabaseNetworking',
+  'ITSM',
 ],
 const stats = [
-  { number: '500+', label: 'Projects Completed' };
-  { number: '50+', label: 'Happy Clients' };
-  { number: '99.9%', label: 'Uptime Guarantee' };
-  { number: '24/7', label: 'Support Available' };
+  { number: '500+', label: 'Projects Completed' },
+  { number: '50+', label: 'Happy Clients' },
+  { number: '99.9%', label: 'Uptime Guarantee' },
+  { number: '24/7', label: 'Support Available' },
 ],
 export default function ITServicesPage() {
   const [selectedCategory, setSelectedCategory] = React.useState('All'),

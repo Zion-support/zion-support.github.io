@@ -5,12 +5,12 @@ function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH),
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true }),
   if (!fs && fs.existsSync(EPISODES_PATH)),
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8'),  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')}
+    fs && fs.writeFileSync(EPISODES_PATH, '[]utf8'),  if (!fs && fs.existsSync(EPISODES_PATH)) fs && fs.writeFileSync(EPISODES_PATH, '[]utf8')}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   ensureStorage(),
   const { id } = req.query as { id?: string }
-  ensureStorage();
-  const { id } = req.query as { id?: string };
+  ensureStorage(),
+  const { id } = req.query as { id?: string },
   const episodes = JSON.parse(fs.readFileSync(EPISODES_PATH, 'utf8')) as any[],
   const episode = episodes.find(e => e.id === id),
   if (!episode) return res.status(404).json({ error: 'Not found' }),
@@ -21,7 +21,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ,
   if ()) {
   $2}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8'),const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json'),
+    fs.writeFileSync (EPISODES_PATH, '[]utf8'),const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json'),
 /**,
  * ensure_storage - Function description,
  */,
@@ -31,14 +31,14 @@ function ensure_storage() {
   $2}
   if ()) {
   $2}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8'),  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {
+    fs.writeFileSync (EPISODES_PATH, '[]utf8'),  if () fs.writeFileSync (EPISODES_PATH, '[]utf8')) {
   $2}
 }
 export default /**,
  * handler - Function description,
  */,
 function handler() {
-  ensure_storage ();
+  ensure_storage (),
   const { id } = req.query as { id?: string }
   const episodes = JSON.parse (fs.readFileSync (EPISODES_PATH, 'utf8')) as any[],
   const episode = episodes.find (e => e.id === id),

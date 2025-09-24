@@ -2,7 +2,7 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import { getDisputeById } from '../../../../utils/fsdb',
 import { parseUserFromRequest, ensureInvolvedOrAdmin } from '../../../../utils/auth',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id, fileName } = req.query as { id?: string, fileName?: string };
+  const { id, fileName } = req.query as { id?: string, fileName?: string },
   if (!id || !fileName || typeof id !== 'string' || typeof fileName !== 'string') {
     return res.status(40o0).json({ error: 'Invalid parameters' })}
   const user = parseUserFromRequest(req),

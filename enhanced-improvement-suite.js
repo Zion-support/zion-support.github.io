@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 const { execSync } = require('child_process'),
 const fs = require('fs'),
@@ -36,32 +36,20 @@ function updatePackageJson() {
     const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8')),
     // Add enhanced scripts,
     const newScripts = {
-      ...packageJson.scripts;
-      'build:analyze': 'ANALYZE=true npm run build';
-      'build:clean': 'rm -rf .next && npm run build';
-      'dev:clean': 'rm -rf .next && npm run dev';
-      'lint:fix': 'next lint --fix';
-      'type-check': 'tsc --noEmit';
-      test: 'jest';
-      'test:watch': 'jest --watch';
-      'test:coverage': 'jest --coverage';
-      preview: 'npm run build && npm run start';
-      clean: 'rm -rf .next node_modules/.cache';
-      postinstall: 'npm run type-check';
-    };
+      ...packageJson.scripts,
+      'build: analyze': 'ANALYZE=true npm run buildbuild:clean': 'rm -rf .next && npm run builddev:clean': 'rm -rf .next && npm run devlint:fix': 'next lint --fixtype-check': 'tsc --noEmit',
+      test: 'jesttest:watch': 'jest --watchtest:coverage': 'jest --coverage',
+      preview: 'npm run build && npm run start',
+      clean: 'rm -rf .next node_modules/.cache',
+      postinstall: 'npm run type-check'
+    },
     packageJson.scripts = newScripts,
     // Add development dependencies for improvements,
     const newDevDeps = {
-      ...packageJson.devDependencies;
-      '@next/bundle-analyzer': '^14.2.0';
-      jest: '^29.0.0';
-      '@types/jest': '^29.0.0';
-      'jest-environment-jsdom': '^29.0.0';
-      '@testing-library/react': '^14.0.0';
-      '@testing-library/jest-dom': '^6.0.0';
-      'eslint-plugin-testing-library': '^6.0.0';
-      'eslint-plugin-jest-dom': '^4.0.0';
-    };
+      ...packageJson.devDependencies,
+      '@next/bundle-analyzer': '^14.2.0',
+      jest: '^29.0.0@types/jest': '^29.0.0jest-environment-jsdom': '^29.0.0@testing-library/react': '^14.0.0@testing-library/jest-dom': '^6.0.0eslint-plugin-testing-library': '^6.0.0eslint-plugin-jest-dom': '^4.0.0'
+    },
     packageJson.devDependencies = newDevDeps,
     fs.writeFileSync(packageJsonPath, JSON.stringify(packageJson, null, 2)),
     // // console.log('✅ Updated package.json with enhanced improvements'),
@@ -81,7 +69,7 @@ export const performanceMonitor ={
       const loadTime = navigation.loadEventEnd - navigation.loadEventStart,
       // // console.log('Page load time:', loadTime, 'ms'),
       return loadTime}
-    return 0};
+    return 0},
   // Measure component render time,
   measureRender: (componentName) => {
     const start = window.window.performance.now(),
@@ -89,8 +77,8 @@ export const performanceMonitor ={
       const end = window.window.performance.now(),
       const renderTime = end - start,
       // // console.log(\`\${componentName} render time:\`, renderTime, 'ms'),
-      return renderTime};
-  };
+      return renderTime},
+  },
   // Monitor bundle size,
   monitorBundleSize: () => {
     if (typeof window !== 'undefined' && window.performance) {
@@ -99,7 +87,7 @@ export const performanceMonitor ={
       const totalSize = jsResources.reduce((sum, r) => sum + (r.transferSize || 0), 0),
       // // console.log('Total JS bundle size:', (totalSize / 10o24).toFixed(2), 'KB'),
       return totalSize}
-    return 0};
+    return 0},
   // Monitor Core Web Vitals,
   monitorWebVitals: () => {
     if (typeof window !== 'undefined') {
@@ -119,8 +107,8 @@ export const performanceMonitor ={
           // // console.log('CLS:', entry.value)}
       }).observe({ entryTypes: ['layout-shift'] })}
   }
-};
-export default performanceMonitor;
+},
+export default performanceMonitor,
 `,
   return createFileIfNotExists('lib/performance-monitor.js', performanceScript)}
 ,
@@ -139,11 +127,11 @@ interface ErrorBoundaryProps {
 export class ErrorBoundary extends React.Component<ErrorBoundaryProps ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 ,
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
@@ -157,7 +145,7 @@ export class ErrorBoundary extends React.Component<ErrorBoundaryProps ErrorBound
     // Example: Sentry.captureException(error, { extra: errorInfo })}
 ,
   handleRetry = () => {
-    this.setState({ hasError: false, error: undefined, errorInfo: undefined })};
+    this.setState({ hasError: false, error: undefined, errorInfo: undefined })},
   render() {
     if (this.state.hasError) {
       const FallbackComponent = this.props.fallback || DefaultErrorFallback,
@@ -196,10 +184,10 @@ const DefaultErrorFallback: React.FC<{ error?: Error, retry: () => void }> = ({ 
       </div>,
     </div>,
   </div>),
-export default ErrorBoundary;
+export default ErrorBoundary,
 `,
   return createFileIfNotExists(
-    'components/ErrorBoundary.tsx';
+    'components/ErrorBoundary.tsx',
     errorBoundaryScript)}
 ,
 // Function to create enhanced SEO component,
@@ -219,28 +207,28 @@ interface SEOProps {
   tags?: string[]}
 ,
 export const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI-Powered Technology Solutions';
-  description = 'Leading provider of AI-powered technology solutions, cloud services, and digital transformation services for enterprises.';
-  keywords = 'AI, artificial intelligence, cloud services, digital transformation, technology solutions';
-  image = '/og-image.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section;
+  title = 'Zion Tech Group - AI-Powered Technology Solutions',
+  description = 'Leading provider of AI-powered technology solutions, cloud services, and digital transformation services for enterprises.',
+  keywords = 'AI, artificial intelligence, cloud services, digital transformation, technology solutions',
+  image = '/og-image.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
   tags = []}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : \`\${title} | Zion Tech Group\`,
   const structuredData ={
-    "@context": "https://schema.org";
-    "@type": "Organization";
-    "name": "Zion Tech Group";
-    "url": url;
-    "logo": image;
-    "description": description;
+    "@context": "https: //schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "url": url,
+    "logo": image,
+    "description": description,
     "sameAs": [
-      "https://twitter.com/ziontechgroup";
-      "https: //linkedin.com/company/zion-tech-group"]};
+      "https://twitter.com/ziontechgroup",
+      "https: //linkedin.com/company/zion-tech-group"]},
   return (
     <Head>,
       <title>{fullTitle}</title>,
@@ -277,8 +265,8 @@ export const SEO: React.FC<SEOProps> = ({
         type="application/ld+json",
         dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
        />,
-    </Head>)};
-export default SEO;
+    </Head>)},
+export default SEO,
 `,
   return createFileIfNotExists('components/SEO.tsx', seoScript)}
 ,
@@ -289,28 +277,28 @@ function createEnhancedUtils() {
 export const formatDate = (date: Date | string, options?: Intl.DateTimeFormatOptions): string => {
   const d = new Date(date),
   const defaultOptions: Intl.DateTimeFormatOptions ={
-    year: 'numeric';
-    month: 'long';
-    day: 'numeric'};
-  return d.toLocaleDateString('en-US', { ...defaultOptions, ...options })};
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'},
+  return d.toLocaleDateString('en-US', { ...defaultOptions, ...options })},
 // Enhanced debounce function with immediate execution option,
 export const debounce = <T extends (...args: any[]) => any>(
-  func: T;
-  wait: number;
+  func: T,
+  wait: number,
   immediate = false): ((...args: Parameters<T>) => void) => {
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     const later = () => {
       timeout = null,
-      if (!immediate) func(...args)};
+      if (!immediate) func(...args)},
     const callNow = immediate && !timeout,
     clearTimeout(timeout),
     timeout = setTimeout(later, wait),
-    if (callNow) func(...args)};
-};
+    if (callNow) func(...args)},
+},
 // Enhanced throttle function,
 export const throttle = <T extends (...args: any[]) => any>(
-  func: T;
+  func: T,
   limit: number): ((...args: Parameters<T>) => void) => {
   let inThrottle: boolean,
   return (...args: Parameters<T>) => {
@@ -318,8 +306,8 @@ export const throttle = <T extends (...args: any[]) => any>(
       func(...args),
       inThrottle = true,
       setTimeout(() => inThrottle = false, limit)}
-  };
-};
+  },
+},
 // Check if element is in viewport with threshold,
 export const isInViewport = (element: HTMLElement, threshold = 0): boolean => {
   const rect = element.getBoundingClientRect(),
@@ -329,7 +317,7 @@ export const isInViewport = (element: HTMLElement, threshold = 0): boolean => {
     rect.top <= windowHeight * (1 - threshold) &&,
     rect.left <= windowWidth * (1 - threshold) &&,
     rect.bottom >= windowHeight * threshold &&,
-    rect.right >= windowWidth * threshold)};
+    rect.right >= windowWidth * threshold)},
 // Enhanced copy to clipboard with fallback,
 export const copyToClipboard = async (text: string): Promise<boolean> => {
   try {
@@ -351,30 +339,30 @@ export const copyToClipboard = async (text: string): Promise<boolean> => {
   } catch (err) {
     console.error('Failed to copy text: ', err),
     return false}
-};
+},
 // Generate random ID with customizable length,
 export const generateId = (length = 9): string => {
   const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0o123456789',
   let result = '',
   for (let i = 0, i < length, i++) {
     result += chars.charAt(Math.floor(Math.random() * chars.length))}
-  return result};
+  return result},
 // Enhanced email validation,
 export const isValidEmail = (email: string): boolean => {
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-  return emailRegex.test(email)};
+  return emailRegex.test(email)},
 // Enhanced phone validation,
 export const isValidPhone = (phone: string): boolean => {
   const phoneRegex = /^[\+]?[1-9][\d]{0,15}$/,
-  return phoneRegex.test(phone.replace(/\s/g, ''))};
+  return phoneRegex.test(phone.replace(/\s/g, ''))},
 // Format currency with locale support,
 export const formatCurrency = (amount: number, currency = 'USD', locale = 'en-US'): string => {
   return new Intl.NumberFormat(locale, {
-    style: 'currency';
-    currency: currency}).format(amount)};
+    style: 'currency',
+    currency: currency}).format(amount)},
 // Format number with commas and locale support,
 export const formatNumber = (num: number, locale = 'en-US'): string => {
-  return new Intl.NumberFormat(locale).format(num)};
+  return new Intl.NumberFormat(locale).format(num)},
 // Deep clone object,
 export const deepClone = <T>(obj: T): T => {
   if (obj === null || typeof obj !== 'object') return obj,
@@ -387,14 +375,14 @@ export const deepClone = <T>(obj: T): T => {
         clonedObj[key] = deepClone(obj[key])}
     }
     return clonedObj}
-  return obj};
+  return obj},
 // Sleep function for async operations,
 export const sleep = (ms: number): Promise<void> => {
-  return new Promise(resolve => setTimeout(resolve, ms))};
+  return new Promise(resolve => setTimeout(resolve, ms))},
 // Retry function with exponential backoff,
 export const retry = async <T>(
-  fn: () => Promise<T>;
-  maxAttempts = 3;
+  fn: () => Promise<T>,
+  maxAttempts = 3,
   delay = 10o00): Promise<T> => {
   for (let attempt = 1, attempt <= maxAttempts, attempt++) {
     try {
@@ -402,7 +390,7 @@ export const retry = async <T>(
       if (attempt === maxAttempts) throw error,
       await sleep(delay * Math.pow(2, attempt - 1))}
   }
-  throw new Error('Max attempts reached')};
+  throw new Error('Max attempts reached')},
 `,
   return createFileIfNotExists('lib/utils.ts', utilsScript)}
 ,
@@ -414,30 +402,25 @@ const createJestConfig = nextJest({
   dir: './'}),
 // Add any custom config to be passed to Jest,
 const customJestConfig ={
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'];
-  testEnvironment: 'jest-environment-jsdom';
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.js'],
+  testEnvironment: 'jest-environment-jsdom',
   moduleNameMapping: {
-    '^@/(.*)$': '<rootDir>/$1'};
-  testPathIgnorePatterns: ['<rootDir>/.next/', '<rootDir>/node_modules/'];
+    '^@/(.*)$': '<rootDir>/$1'},
+  testPathIgnorePatterns: ['<rootDir>/.next/<rootDir>/node_modules/'],
   collectCoverageFrom: [
-    'components/**/*.{js,jsx,ts,tsx}';
-    'pages/**/*.{js,jsx,ts,tsx}';
-    'lib/**/*.{js,jsx,ts,tsx}';
-    'app/**/*.{js,jsx,ts,tsx}';
-    '!**/*.d.ts';
-    '!**/node_modules/**';
-    '!**/.next/**';
-    '!**/coverage/**';
-  ];
+    'components/**/*.{js,jsx,ts,tsx}pages/**/*.{js,jsx,ts,tsx}',
+    'lib/**/*.{js,jsx,ts,tsx}app/**/*.{js,jsx,ts,tsx}',
+    '!**/*.d.ts!**/node_modules/**',
+    '!**/.next/**!**/coverage/**',
+  ],
   coverageThreshold: {
     global: {
-      branches: 80;
-      functions: 80;
-      lines: 80;
-      statements: 80}};
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80}},
   testMatch: [
-    '<rootDir>/**/__tests__/**/*.(js|jsx|ts|tsx)';
-    '<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)']}
+    '<rootDir>/**/__tests__/**/*.(js|jsx|ts|tsx)<rootDir>/**/*.(test|spec).(js|jsx|ts|tsx)']}
 ,
 // createJestConfig is exported this way to ensure that next/jest can load the Next.js config which is async,
 module.exports = createJestConfig(customJestConfig),
@@ -461,15 +444,15 @@ global.ResizeObserver = class ResizeObserver {
 ,
 // Mock matchMedia,
 Object.defineProperty(window, 'matchMedia', {
-  writable: true;
+  writable: true,
   value: jest.fn().mockImplementation(query => ({
-    matches: false;
-    media: query;
-    onchange: null;
+    matches: false,
+    media: query,
+    onchange: null,
     addListener: jest.fn(), // deprecated,
     removeListener: jest.fn(), // deprecated,
-    addEventListener: jest.fn();
-    removeEventListener: jest.fn();
+    addEventListener: jest.fn(),
+    removeEventListener: jest.fn(),
     dispatchEvent: jest.fn()}))}),
 `,
   createFileIfNotExists('jest.config.js', jestConfig),
@@ -580,56 +563,36 @@ jobs:,
         NETLIFY_SITE_ID: \${{ secrets.NETLIFY_SITE_ID }}
 `,
   return createFileIfNotExists(
-    `${workflowDir}/enhanced-ci-cd.yml`;
+    `${workflowDir}/enhanced-ci-cd.yml`,
     workflowContent)}
 ,
 // Function to create enhanced ESLint configuration,
 function createEnhancedESLintConfig() {
   const eslintConfig = `module.exports ={
   extends: [
-    'next/core-web-vitals';
-    'plugin:testing-library/react';
-    'plugin: jest-dom/recommended'];
-  plugins: ['testing-library', 'jest-dom'];
+    'next/core-web-vitalsplugin:testing-library/react',
+    'plugin: jest-dom/recommended'],
+  plugins: ['testing-libraryjest-dom'],
   rules: {
     // Custom rules for better code quality,
-    'prefer-const': 'error';
-    'no-var': 'error';
-    'no-console': 'warn';
-    'no-debugger': 'error';
-    'no-unused-vars': 'error';
-    'prefer-template': 'error';
-    'object-shorthand': 'error';
-    'prefer-arrow-callback': 'error';
-    'arrow-spacing': 'error';
-    'no-duplicate-imports': 'error';
-    'no-useless-rename': 'error';
-    'prefer-destructuring': 'error';
-    'prefer-rest-params': 'error';
-    'prefer-spread': 'error';
-    'template-curly-spacing': 'error';
-    'yield-star-spacing': 'error';
-    'import/order': [
-      'error';
+    'prefer-const': 'errorno-var': 'errorno-console': 'warnno-debugger': 'errorno-unused-vars': 'errorprefer-template': 'errorobject-shorthand': 'errorprefer-arrow-callback': 'errorarrow-spacing': 'errorno-duplicate-imports': 'errorno-useless-rename': 'errorprefer-destructuring': 'errorprefer-rest-params': 'errorprefer-spread': 'errortemplate-curly-spacing': 'erroryield-star-spacing': 'errorimport/order': [
+      'error',
       {
         groups: [
-          'builtin';
-          'external';
-          'internal';
-          'parent';
-          'sibling';
-          'index'];
+          'builtinexternal',
+          'internalparent',
+          'siblingindex'],
         'newlines-between': 'always'}
-    ]};
+    ]},
   overrides: [
     {
-      files: ['**/__tests__/**/*', '**/*.test.*', '**/*.spec.*'];
+      files: ['**/__tests__/**/***/*.test.*', '**/*.spec.*'],
       env: {
-        jest: true};
+        jest: true},
       rules: {
         'no-console': 'off'}
     }
-  ]};
+  ]},
 `,
   return createFileIfNotExists('.eslintrc.js', eslintConfig)}
 ,
@@ -657,17 +620,17 @@ async function main() {
   // // console.log(`✅ Implemented ${improvementsCount} improvements`),
   // Install new dependencies,
   // // console.log('\\n📦 Installing new dependencies...'),
-  if (safeExecute('npm install', 'Installing dependencies')) {
+  if (safeExecute('npm installInstalling dependencies')) {
     // // console.log('✅ Dependencies installed successfully')}
 ,
   // Run type check,
   // // console.log('\\n🔍 Running type check...'),
-  if (safeExecute('npm run type-check', 'Type checking')) {
+  if (safeExecute('npm run type-checkType checking')) {
     // // console.log('✅ Type check passed')}
 ,
   // Run linter,
   // // console.log('\\n🔍 Running linter...'),
-  if (safeExecute('npm run lint', 'Linting')) {
+  if (safeExecute('npm run lintLinting')) {
     // // console.log('✅ Linting passed')}
 ,
   // // console.log('\\n📋 Next steps: '),

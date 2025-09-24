@@ -1,12 +1,12 @@
 import { Helmet } from 'react-helmet-async',
 export function SEO({
-  title;
-  description;
-  keywords;
-  image;
-  canonical;
-  ogImage;
-  url;
+  title,
+  description,
+  keywords,
+  image,
+  canonical,
+  ogImage,
+  url,
 }) {
   const siteName = 'Zion Tech Group',
   const fullTitle = `${title} | ${siteName}`,

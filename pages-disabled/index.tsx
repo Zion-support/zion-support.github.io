@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Cpu, ShieldCheck, Clock, Bot } from 'lucide-react',
@@ -90,87 +90,87 @@ export default function HomePage() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false),
   const [activeSection, setActiveSection] = React.useState('hero'),
   const heroStats = [
-    { value: '20o0+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-40o0', icon: <Cpu className="w-6 h-6"  /> };
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-40o0', icon: <ShieldCheck className="w-6 h-6"  /> };
-    { value: '21', label: 'Day Free Trials', color: 'text-blue-40o0', icon: <Clock className="w-6 h-6"  /> };
-    { value: '24/7', label: 'AI Support', color: 'text-green-40o0', icon: <Bot className="w-6 h-6"  /> };
-    { value: '$50B+', label: 'Market Value', color: 'text-yellow-40o0', icon: <DollarSign className="w-6 h-6"  /> };
-    { value: '30o0%+', label: 'Average ROI', color: 'text-purple-40o0', icon: <TrendingUp className="w-6 h-6"  /> };
+    { value: '20o0+', label: 'Revolutionary Micro SaaS Services', color: 'text-cyan-40o0', icon: <Cpu className="w-6 h-6"  /> },
+    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-40o0', icon: <ShieldCheck className="w-6 h-6"  /> },
+    { value: '21', label: 'Day Free Trials', color: 'text-blue-40o0', icon: <Clock className="w-6 h-6"  /> },
+    { value: '24/7', label: 'AI Support', color: 'text-green-40o0', icon: <Bot className="w-6 h-6"  /> },
+    { value: '$50B+', label: 'Market Value', color: 'text-yellow-40o0', icon: <DollarSign className="w-6 h-6"  /> },
+    { value: '30o0%+', label: 'Average ROI', color: 'text-purple-40o0', icon: <TrendingUp className="w-6 h-6"  /> },
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all services for comprehensive showcase,
   const allServices = [
-    ...enhancedRealMicroSaasServices;
-    ...innovativeMicroSaasServices;
-    ...innovativeMicroSaasServicesV3;
-    ...extraServices;
-    ...additionalEnhancedServices;
-    ...innovativeAIServices;
-    ...quantumSpaceServices;
-    ...quantumAIServices20o25;
-    ...enterpriseITServices;
-    ...nextGenerationAIServices;
-    ...emergingTechnologyServices;
-    ...emergingTechServices20o25;
-    ...comprehensiveITSolutions;
-    ...realMarketServices;
-    ...serviceExpansions20o25;
-    ...verifiedRealServices20o25Batch2;
-    ...realOperationalServices;
-    ...newOperationalServices20o25;
-    ...innovative20o25Services;
-    ...revolutionary20o25Services;
-    ...nextGenInnovations20o25;
-    ...futuristic20o28Services;
-    ...emergingTech20o28Services;
-    ...cuttingEdgeInnovations20o29;
-    ...innovative20o26Services;
-    ...emergingTech20o26Services;
-    ...enterpriseIT20o26Services;
-    ...innovative20o26MicroSaasServices;
-    ...emergingTech20o26ServicesNew;
-    ...enterpriseIT20o26ServicesNew;
-    ...innovative20o26MicroSaasServicesV2;
-    ...emergingTech20o26ServicesV2;
-    ...enterpriseIT20o26ServicesV2;
-    ...revolutionary20o26Innovations;
-    ...nextGenAI20o26Services;
-    ...aiAutonomousServices20o26;
-    ...quantumSpaceTechServices20o26;
-    ...metaverseDigitalRealityServices20o26;
-    ...innovative20o26AIServicesV3;
-    ...emergingTech20o26ServicesV3;
-    ...enterpriseIT20o26ServicesV3;
-    ...ultimate20o26Services;
-    ...cuttingEdge20o27Innovations;
-    ...practicalMicroSaas20o27;
-    ...revolutionary20o26MicroSaasServices;
-    ...revolutionary20o26ITServices;
-    ...revolutionary20o26AIServices;
-    ...revolutionary20o27Services;
-    ...emergingTech20o27Services;
-    ...revolutionary20o27AIServices;
-    ...revolutionary20o27ITServices;
-    ...revolutionary20o27MicroSaasServices;
-    ...cuttingEdge20o28MicroSaas;
-    ...practicalBusinessSolutions20o28;
-    ...futuristic20o28Services;
-    ...emergingTech20o28Services;
-    ...cuttingEdgeInnovations20o29;
-    ...futuristicAIServices20o29;
-    ...emergingTech20o29Services;
-    ...enterpriseIT20o29Services;
-    ...innovativeMicroSaasServices20o29;
-    ...innovative20o29MicroSaasServices;
-    ...futuristicInnovations20o30;
-    ...aiAutonomousEcosystem20o30;
-    ...enterpriseITBreakthroughs20o30;
-    ...innovativeMicroSaas20o30;
-    ...emergingTech20o29Services;
+    ...enhancedRealMicroSaasServices,
+    ...innovativeMicroSaasServices,
+    ...innovativeMicroSaasServicesV3,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...quantumAIServices20o25,
+    ...enterpriseITServices,
+    ...nextGenerationAIServices,
+    ...emergingTechnologyServices,
+    ...emergingTechServices20o25,
+    ...comprehensiveITSolutions,
+    ...realMarketServices,
+    ...serviceExpansions20o25,
+    ...verifiedRealServices20o25Batch2,
+    ...realOperationalServices,
+    ...newOperationalServices20o25,
+    ...innovative20o25Services,
+    ...revolutionary20o25Services,
+    ...nextGenInnovations20o25,
+    ...futuristic20o28Services,
+    ...emergingTech20o28Services,
+    ...cuttingEdgeInnovations20o29,
+    ...innovative20o26Services,
+    ...emergingTech20o26Services,
+    ...enterpriseIT20o26Services,
+    ...innovative20o26MicroSaasServices,
+    ...emergingTech20o26ServicesNew,
+    ...enterpriseIT20o26ServicesNew,
+    ...innovative20o26MicroSaasServicesV2,
+    ...emergingTech20o26ServicesV2,
+    ...enterpriseIT20o26ServicesV2,
+    ...revolutionary20o26Innovations,
+    ...nextGenAI20o26Services,
+    ...aiAutonomousServices20o26,
+    ...quantumSpaceTechServices20o26,
+    ...metaverseDigitalRealityServices20o26,
+    ...innovative20o26AIServicesV3,
+    ...emergingTech20o26ServicesV3,
+    ...enterpriseIT20o26ServicesV3,
+    ...ultimate20o26Services,
+    ...cuttingEdge20o27Innovations,
+    ...practicalMicroSaas20o27,
+    ...revolutionary20o26MicroSaasServices,
+    ...revolutionary20o26ITServices,
+    ...revolutionary20o26AIServices,
+    ...revolutionary20o27Services,
+    ...emergingTech20o27Services,
+    ...revolutionary20o27AIServices,
+    ...revolutionary20o27ITServices,
+    ...revolutionary20o27MicroSaasServices,
+    ...cuttingEdge20o28MicroSaas,
+    ...practicalBusinessSolutions20o28,
+    ...futuristic20o28Services,
+    ...emergingTech20o28Services,
+    ...cuttingEdgeInnovations20o29,
+    ...futuristicAIServices20o29,
+    ...emergingTech20o29Services,
+    ...enterpriseIT20o29Services,
+    ...innovativeMicroSaasServices20o29,
+    ...innovative20o29MicroSaasServices,
+    ...futuristicInnovations20o30,
+    ...aiAutonomousEcosystem20o30,
+    ...enterpriseITBreakthroughs20o30,
+    ...innovativeMicroSaas20o30,
+    ...emergingTech20o29Services,
     ...enterpriseIT20o29Services],
   // Get unique services by ID to avoid duplicates,
   const uniqueServices = allServices.filter((service, index, self) =>,
@@ -215,28 +215,28 @@ export default function HomePage() {
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "description": "Leading provider of revolutionary 20o29 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Leading provider of revolutionary 20o29 technology services including AI consciousness, quantum computing, space mining, and advanced biotechnology",
+              "url": "https: //ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
               "contactPoint": {
-                "@type": "ContactPoint";
-                "telephone": "+1-30o2-464-0950";
-                "contactType": "customer service";
-                "email": "kleber@ziontechgroup.com"};
+                "@type": "ContactPoint",
+                "telephone": "+1-30o2-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"},
               "address": {
-                "@type": "PostalAddress";
-                "streetAddress": "364 E Main St STE 10o08";
-                "addressLocality": "Middletown";
-                "addressRegion": "DE";
-                "postalCode": "19709";
-                "addressCountry": "US"};
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 10o08",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"},
               "sameAs": [
-                "https: //github.com/Zion-Holdings"];
-              "foundingDate": "20o20";
-              "numberOfEmployees": "50+";
+                "https: //github.com/Zion-Holdings"],
+              "foundingDate": "20o20",
+              "numberOfEmployees": "50+",
               "industry": "Technology Services"})}}
          />,
       </Head>,
@@ -359,36 +359,36 @@ export default function HomePage() {
               </span>,
             </h2>,
             <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-              We're not just another technology company. We're the architects of tomorrow;
+              We're not just another technology company. We're the architects of tomorrow,
               building solutions that will define the next decade of innovation.,
             </p>,
           </motion.div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {[
               {
-                icon: Rocket;
-                title: 'Cutting-Edge Innovation';
-                description: 'We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.';
-                color: 'from-purple-50o0 to-pink-50o0'};
+                icon: Rocket,
+                title: 'Cutting-Edge Innovation',
+                description: 'We stay ahead of the curve, constantly researching and implementing the latest technological breakthroughs.',
+                color: 'from-purple-50o0 to-pink-50o0'},
               {
-                icon: Brain;
-                title: 'AI-First Approach';
-                description: 'Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.';
-                color: 'from-blue-50o0 to-cyan-50o0'};
+                icon: Brain,
+                title: 'AI-First Approach',
+                description: 'Every solution we create is built with artificial intelligence at its core, ensuring maximum efficiency and intelligence.',
+                color: 'from-blue-50o0 to-cyan-50o0'},
               {
-                icon: Atom;
-                title: 'Quantum-Ready Solutions';
-                description: 'Our services are designed to leverage quantum computing capabilities as they become commercially available.';
-                color: 'from-green-50o0 to-emerald-50o0'};
+                icon: Atom,
+                title: 'Quantum-Ready Solutions',
+                description: 'Our services are designed to leverage quantum computing capabilities as they become commercially available.',
+                color: 'from-green-50o0 to-emerald-50o0'},
               {
-                icon: Shield;
-                title: 'Unbreakable Security';
-                description: 'Quantum internet protocol suite with unbreakable encryption and quantum network security.';
-                color: 'from-indigo-50o0 to-blue-50o0'};
+                icon: Shield,
+                title: 'Unbreakable Security',
+                description: 'Quantum internet protocol suite with unbreakable encryption and quantum network security.',
+                color: 'from-indigo-50o0 to-blue-50o0'},
               {
-                icon: Zap;
-                title: 'Future-Ready Solutions';
-                description: 'Cutting-edge technology services designed for the challenges and opportunities of 20o29 and beyond.';
+                icon: Zap,
+                title: 'Future-Ready Solutions',
+                description: 'Cutting-edge technology services designed for the challenges and opportunities of 20o29 and beyond.',
                 color: 'from-yellow-50o0 to-orange-50o0'}
             ].map((feature, index) => (
               <motion.div,

@@ -1,14 +1,14 @@
 import React, { useState } from 'react',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
 const governanceOptions = [
-  { value: 'admin', label: 'Admin' };
-  { value: 'token-weighted', label: 'Token-weighted vote' };
-  { value: 'delegate', label: 'Delegate model' };
+  { value: 'admin', label: 'Admin' },
+  { value: 'token-weighted', label: 'Token-weighted vote' },
+  { value: 'delegate', label: 'Delegate model' },
 ],
 const fundingOptions = [
-  { value: 'zion-treasury', label: 'ZION$ treasury' };
-  { value: 'partner-subsidies', label: 'Partner subsidies' };
-  { value: 'member-dues', label: 'Member dues' };
+  { value: 'zion-treasury', label: 'ZION$ treasury' },
+  { value: 'partner-subsidies', label: 'Partner subsidies' },
+  { value: 'member-dues', label: 'Member dues' },
 ],
 export default function NationBuilderPage() {
   const [name, setName] = useState(''),
@@ -34,14 +34,14 @@ export default function NationBuilderPage() {
     setAiDraft(''),
     try {
       const res = await fetch('/api/ai/constitution-draft', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name;
-          governanceStyle;
-          fundingModel;
-          operatorPrompt;
-        });
+          name,
+          governanceStyle,
+          fundingModel,
+          operatorPrompt
+        }),
       }),
       const data = await res.json(),
       if (data?.constitutionDraft) setAiDraft(data.constitutionDraft)} catch (e: any) {
@@ -55,16 +55,16 @@ export default function NationBuilderPage() {
     setSuccessSlug(''),
     try {
       const res = await fetch('/api/nations', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name;
-          flagDataUrl;
-          constitution;
-          governanceStyle;
-          fundingModel;
-          currency;
-        });
+          name,
+          flagDataUrl,
+          constitution,
+          governanceStyle,
+          fundingModel,
+          currency
+        }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed'),

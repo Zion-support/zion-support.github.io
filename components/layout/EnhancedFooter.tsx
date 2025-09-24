@@ -1,96 +1,96 @@
 import {
-  ArrowUp;
-  Award;
-  Cloud;
-  Facebook;
-  Github;
-  Globe;
-  Heart;
-  Instagram;
-  Linkedin;
-  Mail;
-  MapPin;
-  Phone;
-  Shield;
-  Twitter;
-  Zap;
+  ArrowUp,
+  Award,
+  Cloud,
+  Facebook,
+  Github,
+  Globe,
+  Heart,
+  Instagram,
+  Linkedin,
+  Mail,
+  MapPin,
+  Phone,
+  Shield,
+  Twitter,
+  Zap,
 } from 'lucide-react',
 import Link from 'next/link',
-import React from 'react';
+import React from 'react',
 const footerNavigation = {
   services: {
-    title: 'Services';
+    title: 'Services',
     items: [
-      { name: 'AI Solutions', href: '/services/ai-solutions' };
-      { name: 'Cloud & DevOps', href: '/services/cloud' };
-      { name: 'Cybersecurity', href: '/services/cybersecurity' };
-      { name: 'Data & Analytics', href: '/services/data' };
-      { name: 'Micro SaaS', href: '/services/micro-saas' };
-      { name: 'Digital Transformation', href: '/services/transformation' };
-    ];
-  };
+      { name: 'AI Solutions', href: '/services/ai-solutions' },
+      { name: 'Cloud & DevOps', href: '/services/cloud' },
+      { name: 'Cybersecurity', href: '/services/cybersecurity' },
+      { name: 'Data & Analytics', href: '/services/data' },
+      { name: 'Micro SaaS', href: '/services/micro-saas' },
+      { name: 'Digital Transformation', href: '/services/transformation' },
+    ],
+  },
   solutions: {
-    title: 'Solutions';
+    title: 'Solutions',
     items: [
-      { name: 'Enterprise', href: '/solutions/enterprise' };
-      { name: 'SMB', href: '/solutions/smb' };
-      { name: 'Startup', href: '/solutions/startup' };
-      { name: 'Government', href: '/solutions/government' };
-      { name: 'Healthcare', href: '/solutions/healthcare' };
-      { name: 'Financial Services', href: '/solutions/financial' };
-    ];
-  };
+      { name: 'Enterprise', href: '/solutions/enterprise' },
+      { name: 'SMB', href: '/solutions/smb' },
+      { name: 'Startup', href: '/solutions/startup' },
+      { name: 'Government', href: '/solutions/government' },
+      { name: 'Healthcare', href: '/solutions/healthcare' },
+      { name: 'Financial Services', href: '/solutions/financial' },
+    ],
+  },
   company: {
-    title: 'Company';
+    title: 'Company',
     items: [
-      { name: 'About Us', href: '/about' };
-      { name: 'Partners', href: '/partners' };
-      { name: 'Careers', href: '/careers' };
-      { name: 'Blog', href: '/blog' };
-      { name: 'News', href: '/news' };
-      { name: 'Case Studies', href: '/case-studies' };
-    ];
-  };
+      { name: 'About Us', href: '/about' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'News', href: '/news' },
+      { name: 'Case Studies', href: '/case-studies' },
+    ],
+  },
   support: {
-    title: 'Support & Resources';
+    title: 'Support & Resources',
     items: [
-      { name: 'Help Center', href: '/help' };
-      { name: 'Contact Support', href: '/contact' };
-      { name: 'Documentation', href: '/docs' };
-      { name: 'API Reference', href: '/api' };
-      { name: 'Terms of Service', href: '/terms' };
-      { name: 'Privacy Policy', href: '/privacy' };
-    ];
-  };
-};
+      { name: 'Help Center', href: '/help' },
+      { name: 'Contact Support', href: '/contact' },
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' },
+      { name: 'Terms of Service', href: '/terms' },
+      { name: 'Privacy Policy', href: '/privacy' },
+    ],
+  },
+},
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter };
+  { name: 'Twitter', href: 'https://twitter.com/ZionTechGroup', icon: Twitter },
   {
-    name: 'LinkedIn';
-    href: 'https://www.linkedin.com/company/zion-tech-group/';
-    icon: Linkedin;
-  };
+    name: 'LinkedIn',
+    href: 'https://www.linkedin.com/company/zion-tech-group/',
+    icon: Linkedin
+  },
   {
-    name: 'Facebook';
-    href: 'https://www.facebook.com/ziontechgroup';
-    icon: Facebook;
-  };
+    name: 'Facebook',
+    href: 'https://www.facebook.com/ziontechgroup',
+    icon: Facebook
+  },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com/ziontechgroup';
-    icon: Instagram;
-  };
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram
+  },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
 ],
 const quickLinks = [
-  { name: 'Request Quote', href: '/request-quote', icon: Zap };
-  { name: 'Security', href: '/security', icon: Shield };
-  { name: 'Compliance', href: '/compliance', icon: Award };
-  { name: 'Status', href: '/status', icon: Cloud };
+  { name: 'Request Quote', href: '/request-quote', icon: Zap },
+  { name: 'Security', href: '/security', icon: Shield },
+  { name: 'Compliance', href: '/compliance', icon: Award },
+  { name: 'Status', href: '/status', icon: Cloud },
 ],
 const EnhancedFooter: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className='bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-dark border-t border-zion-blue-light pt-16 pb-8 relative overflow-hidden'>,
       {/* Background decorative elements */}
@@ -120,7 +120,7 @@ const EnhancedFooter: React.FC = () => {
               </div>,
             </div>,
             <p className='text-zion-slate-light mb-6 max-w-sm leading-relaxed'>,
-              Leading provider of AI autonomous systems, cloud-native platforms;
+              Leading provider of AI autonomous systems, cloud-native platforms,
               and zero-trust cybersecurity solutions that drive measurable,
               business outcomes.,
             </p>,
@@ -185,7 +185,7 @@ const EnhancedFooter: React.FC = () => {
                 className='flex items-center gap-3 p-4 bg-white/5 rounded-lg hover: bg-white/10 transition-all duration-300 group'>,
                 <div className='w-10 h-10 bg-gradient-to-r from-zion-cyan to-zion-purple rounded-lg flex items-center justify-center'>,
                   {React.createElement(link.icon, {
-                    className: 'w-5 h-5 text-white';
+                    className: 'w-5 h-5 text-white'
                   })}
                 </div>,
                 <div>,
@@ -272,5 +272,5 @@ const EnhancedFooter: React.FC = () => {
         aria-label='Scroll to top'>,
         <ArrowUp className='w-5 h-5' />,
       </button>,
-    </footer>)};
-export default EnhancedFooter;
+    </footer>)},
+export default EnhancedFooter,

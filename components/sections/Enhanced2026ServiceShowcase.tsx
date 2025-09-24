@@ -1,14 +1,16 @@
-import React from 'react';
+import React from 'react',
 import {
 import { motion } from 'framer-motion',
 import { innovative2026AIServices } from '../../data/innovative-2026-ai-services',
 import { innovative2026ITInfrastructureServices } from '../../data/innovative-2026-it-infrastructure',
-import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas',import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
+import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas',
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
 import { innovative2026MicroSaasServices } from '../../data/innovative-2026-micro-saas',
 import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
 import { innovative2026AIServices } from '../../data / innovative - 2026 - ai - services',
 import { innovative2026ITInfrastructureServices } from '../../data / innovative - 2026 - it - infrastructure',
-import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas',import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
+import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas',
+import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Globe, Rocket } from 'lucide-react',
 import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 - micro - saas',
   ArrowRight,
   Star,
@@ -18,14 +20,14 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
   Brain,
   Globe,
   Rocket,
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Brain;
-  Globe;
-  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+  Rocket,
 } from 'lucide-react',
   const containerVariants = {
     hidden: { opacity: 0 }
@@ -35,10 +37,10 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
         staggerChildren: 0.2,
         delayChildren: 0.1}
     }}
-        staggerChildren: 0.2;
-        delayChildren: 0.1;
-      };
-    }};
+        staggerChildren: 0.2,
+        delayChildren: 0.1
+      },
+    }},
   const itemVariants = {
     hidden: {
       opacity: 0,
@@ -59,77 +61,77 @@ import { innovative2026MicroSaasServices } from '../../data / innovative - 2026 
       transition: {
         duration: 0.6,
         ease: 'easeOut' as const}
-    }};        ease: "easeOut" as const}
+    }},        ease: "easeOut" as const}
     }
   }
 ,
 export default function Enhanced2026ServiceShowcase() {
   const containerVariants = {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Brain;
-  Globe;
-  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Globe,
+  Rocket,
 } from 'lucide-react',
   const container_variants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         duration: 0.3,
         ease: 'easeOut' as const}
-    }};        ease: "easeOut" as const}
+    }},        ease: "easeOut" as const}
     }
   }
 ,
   const item_variants = {
     hidden: {
-      opacity: 0;
-      coordinate_y: 50;
+      opacity: 0,
+      coordinate_y: 50,
       scale: 0.9}
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
-      scale: 1;
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0 && 0.2;
-        delayChildren: 0 && 0.1;
-      };
-    }};
+        staggerChildren: 0 && 0.2,
+        delayChildren: 0 && 0.1
+      },
+    }},
   const itemVariants = {
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0 && 0.9;
-    };
+      opacity: 0,
+      y: 50,
+      scale: 0 && 0.9
+    },
     visible: {      opacity: 1,        delayChildren: 0 && 0.1}
     }
-  };
+  },
   const itemVariants = {
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0 && 0.9};
+      opacity: 0,
+      y: 50,
+      scale: 0 && 0.9},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0 && 0.6;
-        ease: 'easeOut' as const;
-      };
-    }};        ease: "easeOut" as const}
+        duration: 0 && 0.6,
+        ease: 'easeOut' as const
+      },
+    }},        ease: "easeOut" as const}
     }
-  };
+  },
       variants={itemVariants}
       whileHover='hover',
       className='group relative'>,
@@ -166,20 +168,20 @@ export default function Enhanced2026ServiceShowcase() {
       <motion.div,
         variants={cardVariants}
         className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-slate-900/80 via-slate-800/80 to-slate-900/80 backdrop-blur-xl border border-slate-700/50 hover: border-slate-600/50 transition-all duration-300">,
-        ease: 'ease_out' as const;
-      };
+        ease: 'ease_out' as const
+      },
     }}        ease: "ease_out" as const}
     }
   }
 ,
   const card_variants = {
     hover: {
-      coordinate_y: -10;
-      scale: 1.02;
+      coordinate_y: -10,
+      scale: 1.02,
       transition: {
-        duration: 0.3;
-        ease: 'ease_out' as const;
-      };
+        duration: 0.3,
+        ease: 'ease_out' as const
+      },
     }}        ease: "ease_out" as const}
     }
   }
@@ -436,14 +438,14 @@ export default function Enhanced2026ServiceShowcase() {
         {/* Hover glow effect */}
         <div className='absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300' />      </motion && motion.div>        <div className="absolute inset-0 rounded-2xl bg-gradient-to-r from-cyan-500/10 via-purple-500/10 to-pink-500/10 opacity-0 group-hover: opacity-100 transition-opacity duration-300" />,
       </motion && motion.div>,
-    </motion && motion.div>);
+    </motion && motion.div>),
   return (
     <section className="py-20 relative overflow-hidden">,
       {/* Background effects */}
       <div className="absolute inset-0 bg-gradient-to-b from-transparent via-slate-900/20 to-slate-900/40" />,
       <div className="container mx-auto px-4 relative z-10">,
       </motion.div>,
-    </motion.div>);
+    </motion.div>),
   return (
     <section className="py-20 relative overflow-hidden">,
       {/* Background effects */}

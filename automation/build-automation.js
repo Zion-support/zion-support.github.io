@@ -11,7 +11,7 @@ class BuildAutomation {
     this.buildSuccesses = 0,
     this.optimizationsApplied = 0,
     this.monitoring = false,
-    this.logFile = path.join(this.projectRoot, 'logs', 'build-automation.log'),
+    this.logFile = path.join(this.projectRoot, 'logsbuild-automation.log'),
     // Ensure logs directory exists,
     this.ensureLogsDirectory(),
     // Initialize automation,
@@ -77,22 +77,22 @@ class BuildAutomation {
 ,
       // Run build,
       execSync('npm run build', {
-        cwd: this.projectRoot;
-        stdio: 'pipe';
+        cwd: this.projectRoot,
+        stdio: 'pipe',
         timeout: 30o0000 // 5 minutes}),
       const buildTime = Date.now() - startTime,
       this.log(`Build successful in ${buildTime}ms`),
       return {
-        success: true;
-        buildTime;
-        timestamp: new Date().toISOString()};
+        success: true,
+        buildTime,
+        timestamp: new Date().toISOString()},
 } catch (error) {
       const errorOutput = error.stderr || error.stdout || error.message,
       this.log(`Build failed: ${errorOutput}`, 'ERROR'),
       return {
-        success: false;
-        errors: this.parseBuildErrors(errorOutput);
-        timestamp: new Date().toISOString()};
+        success: false,
+        errors: this.parseBuildErrors(errorOutput),
+        timestamp: new Date().toISOString()},
     }
   }
 ,
@@ -159,7 +159,7 @@ class BuildAutomation {
       const fixScript = path.join(this.projectRoot, 'fix_all_nextjs_imports.js'),
       if (fs.existsSync(fixScript)) {
         execSync(`node ${fixScript}`, {
-          cwd: this.projectRoot;
+          cwd: this.projectRoot,
           stdio: 'inherit'})} else {
         // Run inline fix,
         await this.runInlineNextJSFix()}
@@ -171,14 +171,14 @@ class BuildAutomation {
     this.log('Running inline Next.js import fixes...'),
     const replacements = [
       {
-        pattern: /import\s+Link\s+from\s+['"]next\/link['"],?/g;
-        replacement: 'import { Link } from \'react-router-dom\','};
+        pattern: /import\s+Link\s+from\s+['"]next\/link['"],?/g,
+        replacement: 'import { Link } from \'react-router-dom\},
       {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+['"]next\/router['"],?/g;
-        replacement: 'import { useNavigate } from \'react-router-dom\','};
+        pattern: /import\s+{\s*useRouter\s*}\s+from\s+['"]next\/router['"],?/g,
+        replacement: 'import { useNavigate } from \'react-router-dom\},
       {
-        pattern: /import\s+Head\s+from\s+['"]next\/head['"],?/g;
-        replacement: 'import { Helmet } from \'react-helmet-async\','}
+        pattern: /import\s+Head\s+from\s+['"]next\/head['"],?/g,
+        replacement: 'import { Helmet } from \'react-helmet-async\}
     ],
     const files = this.findSourceFiles(),
     let fixedCount = 0,
@@ -209,7 +209,7 @@ class BuildAutomation {
       if (!fs.existsSync(path.join(this.projectRoot, 'node_modules'))) {
         this.log('Installing dependencies...'),
         execSync('npm install', {
-          cwd: this.projectRoot;
+          cwd: this.projectRoot,
           stdio: 'inherit'})}
 ,
       // Check for missing packages,
@@ -224,9 +224,9 @@ class BuildAutomation {
       }
 ,
       if (missingDeps.length > 0) {
-        this.log(`Installing missing dependencies: ${missingDeps.join(', ')}`),
+        this.log(`Installing missing dependencies: ${missingDeps.join()}`),
         execSync(`npm install ${missingDeps.join(' ')}`, {
-          cwd: this.projectRoot;
+          cwd: this.projectRoot,
           stdio: 'inherit'})}
 } catch (error) {
       throw new Error(`Module resolution fix failed: ${error.message}`)}
@@ -237,12 +237,12 @@ class BuildAutomation {
     try {
       // Try to auto-fix with TypeScript compiler,
       execSync('npx tsc --noEmit --skipLibCheck', {
-        cwd: this.projectRoot;
+        cwd: this.projectRoot,
         stdio: 'pipe'}),
       this.log('TypeScript compilation successful')} catch (error) {
       this.log(`TypeScript compilation failed: ${error.message}`, 'WARN'),
       // Create a report for manual resolution,
-      const reportPath = path.join(this.projectRoot, 'logs', 'typescript-issues-report.txt'),
+      const reportPath = path.join(this.projectRoot, 'logstypescript-issues-report.txt'),
       const reportContent = `TypeScript Issues Report - ${new Date().toISOString()}\n\n${error.message}\n\nThese issues require manual attention.`,
       fs.writeFileSync(reportPath, reportContent),
       this.log(`TypeScript issues report saved to: ${reportPath}`)}
@@ -272,44 +272,44 @@ class BuildAutomation {
 import react from '@vitejs/plugin-react',
 import { resolve } from 'path',
 export default defineConfig({
-  plugins: [react()];
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src');
-      '@components': resolve(__dirname, 'src/components');
-      '@pages': resolve(__dirname, 'src/pages');
-      '@layout': resolve(__dirname, 'src/layout');
-      '@utils': resolve(__dirname, 'src/utils');
-      '@hooks': resolve(__dirname, 'src/hooks');
-      '@types': resolve(__dirname, 'src/types');
-      '@assets': resolve(__dirname, 'src/assets');
-      '@styles': resolve(__dirname, 'src/styles');
-      '@data': resolve(__dirname, 'src/data');
-      '@services': resolve(__dirname, 'src/services');
-      '@context': resolve(__dirname, 'src/context');
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
       '@constants': resolve(__dirname, 'src/constants')}
-  };
+  },
   build: {
-    target: 'esnext';
-    minify: 'terser';
-    sourcemap: false;
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'];
-          'router-vendor': ['react-router-dom'];
-          'ui-vendor': ['framer-motion', 'lucide-react'];
-          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'];
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']}
+          'react-vendor': ['reactreact-dom'],
+          'router-vendor': ['react-router-dom'],
+          'ui-vendor': ['framer-motionlucide-react'],
+          'utils-vendor': ['date-fnsclsx', 'tailwind-merge'],
+          'form-vendor': ['react-hook-form@hookform/resolvers', 'zod']}
       }
     }
-  };
+  },
   server: {
-    port: 30o00;
-    host: true;
-    open: true};
+    port: 30o00,
+    host: true,
+    open: true},
   preview: {
-    port: 4173;
+    port: 4173,
     host: true}
 })`}
 ,
@@ -337,23 +337,23 @@ export default defineConfig({
     return `/** @type {import('tailwindcss').Config} */,
 export default {
   content: [
-    "./index.html";
-    "./src/**/*.{js,ts,jsx,tsx}";
-  ];
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
+  ],
   theme: {
-    extend: {}};
+    extend: {}},
   plugins: []}`}
 ,
   generateDefaultPostCSSConfig() {
     return `export default {
   plugins: {
-    tailwindcss: {};
+    tailwindcss: {},
     autoprefixer: {}}}`}
 ,
   async createBuildFailureReport(errors, fixes) {
     this.log('Creating build failure report...'),
     try {
-      const reportPath = path.join(this.projectRoot, 'logs', 'build-failure-report.txt'),
+      const reportPath = path.join(this.projectRoot, 'logsbuild-failure-report.txt'),
       const reportContent = `Build Failure Report - ${new Date().toISOString()}\n\nErrors: \n${errors.join('\n')}\n\nFixes Applied: \n${fixes.length > 0 ? fixes.join('\n') : 'None'}\n\nManual intervention required.`,
       fs.writeFileSync(reportPath, reportContent),
       this.log(`Build failure report saved to: ${reportPath}`)} catch (error) {
@@ -427,7 +427,7 @@ export default {
   async cleanupBuildArtifacts() {
     this.log('Cleaning up build artifacts...'),
     try {
-      const buildDirs = ['dist', 'build', '.vite'],
+      const buildDirs = ['distbuild', '.vite'],
       for (const dir of buildDirs) {
         const dirPath = path.join(this.projectRoot, dir),
         if (fs.existsSync(dirPath)) {
@@ -453,20 +453,20 @@ export default {
   async generateBuildMetrics() {
     this.log('Generating build metrics...'),
     try {
-      const metricsPath = path.join(this.projectRoot, 'logs', 'build-metrics.json'),
+      const metricsPath = path.join(this.projectRoot, 'logsbuild-metrics.json'),
       const metrics ={
-        timestamp: new Date().toISOString();
-        buildSuccesses: this.buildSuccesses;
-        buildFailures: this.buildFailures;
-        optimizationsApplied: this.optimizationsApplied;
-        successRate: this.buildSuccesses / (this.buildSuccesses + this.buildFailures) * 10o0};
+        timestamp: new Date().toISOString(),
+        buildSuccesses: this.buildSuccesses,
+        buildFailures: this.buildFailures,
+        optimizationsApplied: this.optimizationsApplied,
+        successRate: this.buildSuccesses / (this.buildSuccesses + this.buildFailures) * 10o0},
       fs.writeFileSync(metricsPath, JSON.stringify(metrics, null, 2)),
       this.log('Build metrics generated')} catch (error) {
       this.log(`Build metrics generation failed: ${error.message}`, 'WARN')}
   }
 ,
   findSourceFiles() {
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'],
+    const extensions = ['.ts.tsx', '.js.jsx'],
     const files = [],
     function traverse(dir) {
       const items = fs.readdirSync(dir),
@@ -474,7 +474,7 @@ export default {
         const fullPath = path.join(dir, item),
         const stat = fs.statSync(fullPath),
         if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          if (!['node_modules.git', 'distbuild', '.next'].includes(item)) {
             traverse(fullPath)}
         } else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath)}
@@ -486,11 +486,11 @@ export default {
 ,
   getStats() {
     return {
-      buildSuccesses: this.buildSuccesses;
-      buildFailures: this.buildFailures;
-      optimizationsApplied: this.optimizationsApplied;
-      monitoring: this.monitoring;
-      uptime: process.uptime()};
+      buildSuccesses: this.buildSuccesses,
+      buildFailures: this.buildFailures,
+      optimizationsApplied: this.optimizationsApplied,
+      monitoring: this.monitoring,
+      uptime: process.uptime()},
   }
 ,
   async stop() {

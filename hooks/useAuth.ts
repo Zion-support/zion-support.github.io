@@ -11,9 +11,9 @@ interface AuthState {
 ,
 export function useAuth() {
   const [authState, setAuthState] = useState<AuthState>({
-    user: null;
-    loading: true;
-    isAuthenticated: false;
+    user: null,
+    loading: true,
+    isAuthenticated: false
   }),
   useEffect(() => {
     // Check for existing auth token,
@@ -21,45 +21,45 @@ export function useAuth() {
     if (token) {
       // In a real app, you'd validate the token with your backend,
       setAuthState({
-        user: { id: '1', email: 'user@example.com' };
-        loading: false;
-        isAuthenticated: true;
+        user: { id: '1', email: 'user@example.com' },
+        loading: false,
+        isAuthenticated: true
       })} else {
       setAuthState({
-        user: null;
-        loading: false;
-        isAuthenticated: false;
+        user: null,
+        loading: false,
+        isAuthenticated: false
       })}
   }, []),
   const login = async (email: string) => {
     setAuthState(prev => ({ ...prev, loading: true })),
     try {
       // In a real app, you'd make an API call here,
-      const mockUser = { id: '1', email };
-      localStorage.setItem('authToken', 'mock-token'),
+      const mockUser = { id: '1', email },
+      localStorage.setItem('authTokenmock-token'),
       setAuthState({
-        user: mockUser;
-        loading: false;
-        isAuthenticated: true;
+        user: mockUser,
+        loading: false,
+        isAuthenticated: true
       }),
-      return { success: true };
+      return { success: true },
     } catch {
       setAuthState(prev => ({ ...prev, loading: false })),
-      return { success: false, error: 'Login failed' };
+      return { success: false, error: 'Login failed' },
     }
-  };
+  },
   const logout = () => {
     localStorage.removeItem('authToken'),
     setAuthState({
-      user: null;
-      loading: false;
-      isAuthenticated: false;
-    })};
+      user: null,
+      loading: false,
+      isAuthenticated: false
+    })},
   return {
-    ...authState;
-    login;
-    logout;
-  };
+    ...authState,
+    login,
+    logout,
+  },
 }
 // useAuth hook module,
-export {};
+export {},

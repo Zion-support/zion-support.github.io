@@ -4,11 +4,11 @@ import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 export default function DemoPage() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,
       <Head>,

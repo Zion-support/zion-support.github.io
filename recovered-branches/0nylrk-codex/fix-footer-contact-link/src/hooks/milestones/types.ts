@@ -31,6 +31,6 @@ export interface MilestoneActivity {
   created_at: string,
   created_by_profile?: {
     display_name: string,
-    avatar_url?: string};
+    avatar_url?: string},
 }
 ,

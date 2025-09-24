@@ -2,153 +2,153 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Clock;
-  Users;
-  Award;
-  Zap;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Clock,
+  Users,
+  Award,
+  Zap,
 } from 'lucide-react',
 const AI20o25RevolutionaryContentShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'ultimate-business-transformation';
-      title: 'AI 20o25: The Ultimate Business Transformation Revolution';
-      type: 'blog';
-      category: 'transformation';
-      url: '/blog/ai-20o25-ultimate-business-transformation-revolution';
+      id: 'ultimate-business-transformation',
+      title: 'AI 20o25: The Ultimate Business Transformation Revolution',
+      type: 'blog',
+      category: 'transformation',
+      url: '/blog/ai-20o25-ultimate-business-transformation-revolution',
       description:,
-        'Complete guide to achieving 50o0%+ ROI with AI transformation in 20o25';
+        'Complete guide to achieving 50o0%+ ROI with AI transformation in 20o25',
       metrics: {
-        roi: '50o0%+';
-        savings: '$2.8B';
-        efficiency: '78%';
-        satisfaction: '98%';
-      };
-      badge: 'NEW';
-      readingTime: '15 min read';
-      featured: true;
-      tags: ['AI Transformation', 'ROI', 'Enterprise', '20o25'];
-    };
+        roi: '50o0%+',
+        savings: '$2.8B',
+        efficiency: '78%',
+        satisfaction: '98%'
+      },
+      badge: 'NEW',
+      readingTime: '15 min read',
+      featured: true,
+      tags: ['AI TransformationROI', 'Enterprise20o25'],
+    },
     {
-      id: '10o00-percent-roi-success';
-      title: 'AI Transformation: 1,0o00% ROI Success Story';
-      type: 'case-study';
-      category: 'success-story';
-      url: '/case-studies/ai-transformation-10o00-percent-roi-success-story';
+      id: '10o00-percent-roi-success',
+      title: 'AI Transformation: 1,0o00% ROI Success Story',
+      type: 'case-study',
+      category: 'success-story',
+      url: '/case-studies/ai-transformation-10o00-percent-roi-success-story',
       description:,
-        'How a $2.8B Fortune 50o0 company achieved unprecedented returns in 18 months';
+        'How a $2.8B Fortune 50o0 company achieved unprecedented returns in 18 months',
       metrics: {
-        roi: '1,0o00%';
-        savings: '$280M';
-        timeline: '18 months';
-        revenue: '$1.2B';
-      };
-      badge: 'FEATURED';
-      readingTime: '12 min read';
-      featured: true;
-      tags: ['Case Study', 'Fortune 50o0', 'ROI', 'Success'];
-    };
+        roi: '1,0o00%',
+        savings: '$280M',
+        timeline: '18 months',
+        revenue: '$1.2B'
+      },
+      badge: 'FEATURED',
+      readingTime: '12 min read',
+      featured: true,
+      tags: ['Case StudyFortune 50o0', 'ROISuccess'],
+    },
     {
-      id: 'implementation-master-guide';
-      title: 'AI 20o25 Implementation Master Guide';
-      type: 'resource';
-      category: 'guide';
-      url: '/resources/ai-20o25-implementation-master-guide-ultimate-success';
+      id: 'implementation-master-guide',
+      title: 'AI 20o25 Implementation Master Guide',
+      type: 'resource',
+      category: 'guide',
+      url: '/resources/ai-20o25-implementation-master-guide-ultimate-success',
       description:,
-        'Complete roadmap to AI transformation success with proven frameworks';
+        'Complete roadmap to AI transformation success with proven frameworks',
       metrics: {
-        success: '94%';
-        roi: '340%';
-        timeline: '18 months';
-        projects: '50o0+';
-      };
-      badge: 'ULTIMATE';
-      readingTime: '25 min read';
-      featured: true;
-      tags: ['Implementation', 'Guide', 'Framework', 'Success'];
-    };
+        success: '94%',
+        roi: '340%',
+        timeline: '18 months',
+        projects: '50o0+'
+      },
+      badge: 'ULTIMATE',
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['ImplementationGuide', 'FrameworkSuccess'],
+    },
     {
-      id: 'generative-ai-revolution';
-      title: 'AI 20o25: The Generative AI Enterprise Revolution';
-      type: 'blog';
-      category: 'technology';
-      url: '/blog/ai-20o25-generative-ai-enterprise-revolution';
-      description: '$2.3T market transformation through generative AI adoption';
+      id: 'generative-ai-revolution',
+      title: 'AI 20o25: The Generative AI Enterprise Revolution',
+      type: 'blog',
+      category: 'technology',
+      url: '/blog/ai-20o25-generative-ai-enterprise-revolution',
+      description: '$2.3T market transformation through generative AI adoption',
       metrics: {
-        roi: '340%';
-        savings: '$180M';
-        accuracy: '99.7%';
-        satisfaction: '98%';
-      };
-      badge: 'HOT';
-      readingTime: '12 min read';
-      featured: false;
-      tags: ['Generative AI', 'Enterprise', 'ROI', '20o25'];
-    };
+        roi: '340%',
+        savings: '$180M',
+        accuracy: '99.7%',
+        satisfaction: '98%'
+      },
+      badge: 'HOT',
+      readingTime: '12 min read',
+      featured: false,
+      tags: ['Generative AIEnterprise', 'ROI20o25'],
+    },
     {
-      id: 'mlops-breakthrough';
-      title: 'AI 20o25: MLOps Breakthrough - 99.9% Model Reliability';
-      type: 'blog';
-      category: 'technology';
-      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough';
-      description: '67% faster deployment with 99.9% model reliability';
+      id: 'mlops-breakthrough',
+      title: 'AI 20o25: MLOps Breakthrough - 99.9% Model Reliability',
+      type: 'blog',
+      category: 'technology',
+      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough',
+      description: '67% faster deployment with 99.9% model reliability',
       metrics: {
-        reliability: '99.9%';
-        deployment: '67%';
-        savings: '$2.1B';
-        efficiency: '89%';
-      };
-      badge: 'BREAKTHROUGH';
-      readingTime: '10 min read';
-      featured: false;
-      tags: ['MLOps', 'Machine Learning', 'DevOps', 'Reliability'];
-    };
+        reliability: '99.9%',
+        deployment: '67%',
+        savings: '$2.1B',
+        efficiency: '89%'
+      },
+      badge: 'BREAKTHROUGH',
+      readingTime: '10 min read',
+      featured: false,
+      tags: ['MLOpsMachine Learning', 'DevOpsReliability'],
+    },
     {
-      id: 'retail-transformation';
-      title: 'Retail AI Transformation: $50o0M Company Achieves 280% ROI';
-      type: 'case-study';
-      category: 'success-story';
-      url: '/case-studies/retail-ai-transformation-20o25-ultimate-success';
-      description: 'AI-powered operations transformation in retail industry';
+      id: 'retail-transformation',
+      title: 'Retail AI Transformation: $50o0M Company Achieves 280% ROI',
+      type: 'case-study',
+      category: 'success-story',
+      url: '/case-studies/retail-ai-transformation-20o25-ultimate-success',
+      description: 'AI-powered operations transformation in retail industry',
       metrics: {
-        roi: '280%';
-        savings: '$45M';
-        satisfaction: '99.2%';
-        efficiency: '78%';
-      };
-      badge: 'SUCCESS';
-      readingTime: '8 min read';
-      featured: false;
-      tags: ['Retail', 'Transformation', 'ROI', 'Success'];
-    };
+        roi: '280%',
+        savings: '$45M',
+        satisfaction: '99.2%',
+        efficiency: '78%'
+      },
+      badge: 'SUCCESS',
+      readingTime: '8 min read',
+      featured: false,
+      tags: ['RetailTransformation', 'ROISuccess'],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'transformation';
-      label: 'Transformation';
+      id: 'transformation',
+      label: 'Transformation',
       count: contentItems.filter(item => item.category === 'transformation'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'success-story';
-      label: 'Success Stories';
+      id: 'success-story',
+      label: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-story'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'guide';
-      label: 'Guides';
-      count: contentItems.filter(item => item.category === 'guide').length;
-    };
+      id: 'guide',
+      label: 'Guides',
+      count: contentItems.filter(item => item.category === 'guide').length
+    },
     {
-      id: 'technology';
-      label: 'Technology';
-      count: contentItems.filter(item => item.category === 'technology').length;
-    };
+      id: 'technology',
+      label: 'Technology',
+      count: contentItems.filter(item => item.category === 'technology').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -164,7 +164,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
         return <ArrowRight className='w-4 h-4' />,
       default:,
         return <Star className='w-4 h-4' />}
-  };
+  },
   const getBadgeColor = (badge: string) => {
     switch (badge) {
       case 'NEW':,
@@ -181,7 +181,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
         return 'bg-gradient-to-r from-green-50o0 to-teal-60o0',
       default:,
         return 'bg-gradient-to-r from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <div className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -269,7 +269,7 @@ const AI20o25RevolutionaryContentShowcase = () => {
                     {getTypeIcon(item.type)}
                   </div>,
                   <span className='text-sm font-medium text-gray-60o0 capitalize'>,
-                    {item.type.replace('-', ' ')}
+                    {item.type.replace('- ')}
                   </span>,
                 </div>,
                 {/* Title */}
@@ -340,5 +340,5 @@ const AI20o25RevolutionaryContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25RevolutionaryContentShowcase;
+    </div>)},
+export default AI20o25RevolutionaryContentShowcase,

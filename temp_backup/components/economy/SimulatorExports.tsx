@@ -3,10 +3,10 @@ import html2canvas from 'html2canvas',
 import jsPDF from 'jspdf',
 export type SimulatorExportsProps = {
   points: SimulationPoint[],
-  containerId: string, // DOM id for snapshot};
+  containerId: string, // DOM id for snapshot},
 export default function SimulatorExports({
-  points;
-  containerId;
+  points,
+  containerId,
 }: SimulatorExportsProps) {
   const download = (filename: string, content: string, mime: string) => {
     const blob = new Blob([content], { type: mime }),
@@ -15,13 +15,13 @@ export default function SimulatorExports({
     a.href = url,
     a.download = filename,
     a.click(),
-    URL.revokeObjectURL(url)};
+    URL.revokeObjectURL(url)},
   const onExportCsv = () =>,
     download('zion-simulation.csv', toCsv(points), 'text/csv'),
   const onExportJson = () =>,
     download(
-      'zion-simulation.json';
-      JSON.stringify(points, null, 2);
+      'zion-simulation.json',
+      JSON.stringify(points, null, 2),
       'application/json'),
   const onExportPdf = async () => {
     const container = document.getElementById(containerId),
@@ -29,21 +29,21 @@ export default function SimulatorExports({
     const canvas = await html2canvas(container, { backgroundColor: '#ffffff' }),
     const imgData = canvas.toDataURL('image/png'),
     const pdf = new jsPDF({
-      orientation: 'landscape';
-      unit: 'pt';
-      format: 'a4';
+      orientation: 'landscape',
+      unit: 'pt',
+      format: 'a4'
     }),
     const pageWidth = pdf.internal.pageSize.getWidth(),
     const pageHeight = pdf.internal.pageSize.getHeight(),
     const ratio = Math.min(
-      pageWidth / canvas.width;
+      pageWidth / canvas.width,
       pageHeight / canvas.height),
     const imgWidth = canvas.width * ratio,
     const imgHeight = canvas.height * ratio,
     const x = (pageWidth - imgWidth) / 2,
     const y = (pageHeight - imgHeight) / 2,
     pdf.addImage(imgData, 'PNG', x, y, imgWidth, imgHeight),
-    pdf.save('zion-simulation.pdf')};
+    pdf.save('zion-simulation.pdf')},
   const onSnapshotPng = async () => {
     const container = document.getElementById(containerId),
     if (!container) return,
@@ -52,7 +52,7 @@ export default function SimulatorExports({
     const a = document.createElement('a'),
     a.href = url,
     a.download = 'zion-simulation.png',
-    a.click()};
+    a.click()},
   return (
     <div className='flex flex-wrap gap-3'>,
       <button

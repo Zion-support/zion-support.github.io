@@ -1,19 +1,19 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  TagIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  TagIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Future Trends Revolutionary Breakthrough - Complete Guide to 1,20o0% ROI';
+    'AI 20o25: The Future Trends Revolutionary Breakthrough - Complete Guide to 1,20o0% ROI',
   description:,
-    'Discover the revolutionary AI trends that are delivering 1,20o0% ROI and transforming industries. Complete guide to AI 20o25 future trends and implementation strategies.';
+    'Discover the revolutionary AI trends that are delivering 1,20o0% ROI and transforming industries. Complete guide to AI 20o25 future trends and implementation strategies.',
   keywords:,
-    'AI trends 20o25, future predictions, ROI, revolutionary breakthrough, AI implementation, quantum AI, neural interfaces, synthetic intelligence';
-};
+    'AI trends 20o25, future predictions, ROI, revolutionary breakthrough, AI implementation, quantum AI, neural interfaces, synthetic intelligence',
+},
 export default function AI20o25FutureTrendsPage() {
   return (
     <div className='min-h-screen bg-white'>,

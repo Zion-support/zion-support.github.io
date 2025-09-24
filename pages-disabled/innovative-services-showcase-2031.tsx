@@ -1,35 +1,35 @@
 import React from 'react.ts',
 import { Helmet } from 'react-helmet-async.ts',
 import {
-  innovativeMicroSaasServices20o31;
-  innovativeITInfrastructureServices20o31;
-  innovativeAIServices20o31;
+  innovativeMicroSaasServices20o31,
+  innovativeITInfrastructureServices20o31,
+  innovativeAIServices20o31,
 } from '../src/data/innovativeServices20o31',
-  Brain;
-  Cloud;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Phone;
-  Mail;
-  Globe;
-  MapPin;
-  ArrowRight;
-  Rocket;
-  Target;
-  Award;
-  Clock;
+  Brain,
+  Cloud,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Phone,
+  Mail,
+  Globe,
+  MapPin,
+  ArrowRight,
+  Rocket,
+  Target,
+  Award,
+  Clock,
 } from 'lucide-react.ts',
 const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {
   const scrollToContact = () => {
     document,
       .getElementById('contact-section'),
-      ?.scrollIntoView({ behavior: 'smooth' })};
+      ?.scrollIntoView({ behavior: 'smooth' })},
   return (
     <>,
       <Head>,
         <title>,
-          Innovative Services 20o31 - Zion Tech Group | Cutting-Edge Micro SAAS;
+          Innovative Services 20o31 - Zion Tech Group | Cutting-Edge Micro SAAS,
           IT & AI Solutions,
         </title>,
         <meta
@@ -507,5 +507,5 @@ const InnovativeServicesShowcase20o31: React.FC = (): JSX.Element => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default InnovativeServicesShowcase20o31;
+    </>)},
+export default InnovativeServicesShowcase20o31,

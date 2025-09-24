@@ -2,7 +2,7 @@
 /**,
  * Comprehensive Automation Runner,
  *,
- * Runs all automation tasks in sequence with intelligent scheduling;
+ * Runs all automation tasks in sequence with intelligent scheduling,
  * error handling, and reporting.,
  */,
 const fs = require('fs'),
@@ -10,25 +10,22 @@ const path = require('path'),
 const { spawn, execSync } = require('child_process'),
 // Simple logger,
 const logger ={
-  info: (msg) => // // console.log(`[INFO] ${new Date().toISOString()} ${msg}`);
-  error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`);
-  warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`);
-  success: (msg) => // // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)};
+  info: (msg) => // // console.log(`[INFO] ${new Date().toISOString()} ${msg}`),
+  error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`),
+  warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`),
+  success: (msg) => // // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)},
 class AutomationRunner {
   constructor(config ={}) {
     this.config ={
       tasks: [
-        'SecurityScanner';
-        'CodeQualityEnforcer';
-        'PerformanceOptimizer';
-        'DependencyUpdater';
-        'StaleCleaner';
-        'AIEnhancer'];
-      parallel: false;
-      retryAttempts: 3;
-      retryDelay: 50o00;
+        'SecurityScannerCodeQualityEnforcer',
+        'PerformanceOptimizerDependencyUpdater',
+        'StaleCleanerAIEnhancer'],
+      parallel: false,
+      retryAttempts: 3,
+      retryDelay: 50o00,
       timeout: 30o0000, // 5 minutes per task,
-      ...config};
+      ...config},
     this.results = new Map(),
     this.startTime = null,
     this.endTime = null}
@@ -100,7 +97,7 @@ class AutomationRunner {
         return result} catch (error) {
         logger.error(`❌ Task ${taskName} failed:`, error.message),
         this.results.set(taskName, { success: false, error: error.message }),
-        return { success: false, error: error.message };
+        return { success: false, error: error.message },
       }
     }),
     await Promise.all(promises)}
@@ -114,7 +111,7 @@ class AutomationRunner {
       const timeout = setTimeout(() => {
         reject(new Error(`Task ${taskName} timed out after ${this.config.timeout}ms`))}, this.config.timeout),
       const taskProcess = spawn('node', [taskPath, '--run'], {
-        stdio: 'pipe';
+        stdio: 'pipe',
         env: { ...process.env, NODE_ENV: 'production' }
       }),
       let stdout = '',
@@ -127,10 +124,10 @@ class AutomationRunner {
         clearTimeout(timeout),
         if (code === 0) {
           resolve({
-            success: true;
-            stdout;
-            stderr;
-            exitCode: code;
+            success: true,
+            stdout,
+            stderr,
+            exitCode: code,
             duration: Date.now() - this.startTime})} else {
           reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`))}
       }),
@@ -141,22 +138,22 @@ class AutomationRunner {
   async generateReport() {
     logger.info('📊 Generating comprehensive report...'),
     const report ={
-      timestamp: new Date().toISOString();
-      duration: this.endTime - this.startTime;
+      timestamp: new Date().toISOString(),
+      duration: this.endTime - this.startTime,
       summary: {
-        totalTasks: this.config.tasks.length;
-        successfulTasks: this.getSuccessCount();
-        failedTasks: this.getFailedCount();
-        successRate: (this.getSuccessCount() / this.config.tasks.length) * 10o0};
-      tasks: Object.fromEntries(this.results);
-      recommendations: this.generateRecommendations()};
+        totalTasks: this.config.tasks.length,
+        successfulTasks: this.getSuccessCount(),
+        failedTasks: this.getFailedCount(),
+        successRate: (this.getSuccessCount() / this.config.tasks.length) * 10o0},
+      tasks: Object.fromEntries(this.results),
+      recommendations: this.generateRecommendations()},
     // Save report,
     const reportPath = path.join(process.cwd(), 'automation-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     // Save detailed logs,
     const logsPath = path.join(process.cwd(), 'automation-logs.json'),
     fs.writeFileSync(logsPath, JSON.stringify({
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       results: Object.fromEntries(this.results)}, null, 2)),
     logger.info(`📄 Report saved to ${reportPath}`),
     logger.info(`📄 Logs saved to ${logsPath}`),
@@ -175,7 +172,7 @@ class AutomationRunner {
       .filter(([name, result]) => !result.success),
       .map(([name]) => name),
     if (failedTasks.length > 0) {
-      recommendations.push(`Review and fix failed tasks: ${failedTasks.join(', ')}`)}
+      recommendations.push(`Review and fix failed tasks: ${failedTasks.join()}`)}
 ,
     if (this.getSuccessCount() === 0) {
       recommendations.push('All tasks failed - check system configuration and dependencies')}
@@ -231,13 +228,13 @@ Available Tasks: ,
     process.exit(0)}
 ,
   // Parse arguments,
-  const config ={};
+  const config ={},
   if (args.includes('--parallel') || args.includes('-p')) {
     config.parallel = true}
 ,
   const tasksIndex = args.findIndex(arg => arg === '--tasks'),
   if (tasksIndex !== -1 && args[tasksIndex + 1]) {
-    config.tasks = args[tasksIndex + 1].split(',')}
+    config.tasks = args[tasksIndex + 1].split()}
 ,
   const timeoutIndex = args.findIndex(arg => arg === '--timeout'),
   if (timeoutIndex !== -1 && args[timeoutIndex + 1]) {

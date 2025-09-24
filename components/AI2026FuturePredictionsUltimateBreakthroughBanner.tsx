@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { ArrowRight, Brain, Zap, Target, TrendingUp } from 'lucide-react',
 const AI20o26FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
@@ -163,7 +163,7 @@ const AI20o26FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
           <div className='text-sm opacity-80 max-w-2xl mx-auto'>,
             <p className='mb-2'>,
               <strong>'Don', 't get left behind.</strong> The AI revolution of,
-              20o26 is inevitable. Organizations that prepare now will thrive;
+              20o26 is inevitable. Organizations that prepare now will thrive,
               while those that delay will find themselves obsolete.,
             </p>,
             <p>,
@@ -173,5 +173,5 @@ const AI20o26FuturePredictionsUltimateBreakthroughBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26FuturePredictionsUltimateBreakthroughBanner;
+    </section>)},
+export default AI20o26FuturePredictionsUltimateBreakthroughBanner,

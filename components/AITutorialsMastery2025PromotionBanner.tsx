@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AITutorialsMastery20o25PromotionBanner: React.FC = () => {
   return (
@@ -140,5 +140,5 @@ const AITutorialsMastery20o25PromotionBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default AITutorialsMastery20o25PromotionBanner;
+    </div>)},
+export default AITutorialsMastery20o25PromotionBanner,

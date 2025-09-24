@@ -8,25 +8,25 @@ const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {
   // Content slides for rotation,
   const slides = [
     {
-      title: "AI 20o25: The Autonomous Business Operations Revolution";
-      subtitle: "$5.2T Market Transformation";
-      metrics: "750% ROI • $8.5M Savings • 95% Efficiency";
-      description: "Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.";
-      cta: "Explore Autonomous Operations";
-      link: "/blog/ai-20o25-autonomous-business-operations-revolution"};
+      title: "AI 20o25: The Autonomous Business Operations Revolution",
+      subtitle: "$5.2T Market Transformation",
+      metrics: "750% ROI • $8.5M Savings • 95% Efficiency",
+      description: "Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.",
+      cta: "Explore Autonomous Operations",
+      link: "/blog/ai-20o25-autonomous-business-operations-revolution"},
     {
-      title: "Fortune 10o0 Success Story";
-      subtitle: "$12.8B Annual Savings Achieved";
-      metrics: "890% ROI • 156% Efficiency • 99.97% Uptime";
-      description: "See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations.";
-      cta: "Read Success Story";
-      link: "/case-studies/fortune-10o0-autonomous-operations-890-roi-success"};
+      title: "Fortune 10o0 Success Story",
+      subtitle: "$12.8B Annual Savings Achieved",
+      metrics: "890% ROI • 156% Efficiency • 99.97% Uptime",
+      description: "See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations.",
+      cta: "Read Success Story",
+      link: "/case-studies/fortune-10o0-autonomous-operations-890-roi-success"},
     {
-      title: "Implementation Master Guide";
-      subtitle: "From Strategy to 890% ROI";
-      metrics: "35 Min Read • 98% Success Rate • 1.4 Month Payback";
-      description: "Complete roadmap for implementing autonomous operations with proven strategies and frameworks.";
-      cta: "Get Implementation Guide";
+      title: "Implementation Master Guide",
+      subtitle: "From Strategy to 890% ROI",
+      metrics: "35 Min Read • 98% Success Rate • 1.4 Month Payback",
+      description: "Complete roadmap for implementing autonomous operations with proven strategies and frameworks.",
+      cta: "Get Implementation Guide",
       link: "/resources/autonomous-operations-implementation-guide-20o25"}
   ],
   // Auto-rotate slides every 5 seconds,
@@ -42,7 +42,7 @@ const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {
   }[]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('autonomous-ops-banner-'dismissed', 'true')};
+    localStorage.setItem('autonomous-ops-banner-'dismissedtrue')},
   if (!isVisible) return null,
   const currentSlideData = slides[currentSlide],
   return (
@@ -146,5 +146,5 @@ const AI20o25AutonomousOperationsRevolutionBanner: React.FC = () => {
           style={{ width: `${((currentSlide + 1) / slides.length) * 10o0}%` }}
          />,
       </div>,
-    </div>)};
-export default AI20o25AutonomousOperationsRevolutionBanner;
+    </div>)},
+export default AI20o25AutonomousOperationsRevolutionBanner,

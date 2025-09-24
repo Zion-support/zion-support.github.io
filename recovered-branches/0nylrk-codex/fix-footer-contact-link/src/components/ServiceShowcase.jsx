@@ -1,9 +1,9 @@
 import {
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from './ui/card',
 import { Badge } from './ui/badge',
 import { Button } from './ui/button',
@@ -21,7 +21,7 @@ export function ServiceShowcase({ services }) {
         return <Users className='h-5 w-5' />,
       default: ,
         return <Star className='h-5 w-5' />}
-  };
+  },
   const getCategoryColor = category => {
     switch (category) {
       case 'AI Services':,
@@ -34,7 +34,7 @@ export function ServiceShowcase({ services }) {
         return 'from-green-50o0 to-emerald-50o0',
       default: ,
         return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   return (
     <div className='py-12 bg-gradient-to-br from-zinc-90o0 via-zinc-80o0 to-zinc-90o0'>,
       <div className='container mx-auto px-4'>,

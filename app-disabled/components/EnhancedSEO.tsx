@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface EnhancedSEOProps {
   title: string,
@@ -16,19 +16,19 @@ interface EnhancedSEOProps {
   canonical?: string}
 ,
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title;
-  description;
-  keywords;
-  url;
-  image = 'https://zion.app/images/zion-tech-group-og.jpg';
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section;
-  tags = [];
-  noindex = false;
-  canonical;
+  title,
+  description,
+  keywords,
+  url,
+  image = 'https://zion.app/images/zion-tech-group-og.jpg',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
+  tags = [],
+  noindex = false,
+  canonical
 }) => {
   const fullUrl = `https: //zion.app${url}`,
   const canonicalUrl = canonical || fullUrl,
@@ -88,39 +88,37 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': type === 'article' ? 'Article' : 'WebPage';
-            headline: title;
-            description: description;
-            url: fullUrl;
-            image: image;
+            '@context': 'https://schema.org@type': type === 'article' ? 'Article' : 'WebPage',
+            headline: title,
+            description: description,
+            url: fullUrl,
+            image: image,
             author: {
-              '@type': 'Organization';
-              name: author;
-              url: 'https://zion.app';
-            };
+              '@type': 'Organization',
+              name: author,
+              url: 'https://zion.app'
+            },
             publisher: {
-              '@type': 'Organization';
-              name: 'Zion Tech Group';
+              '@type': 'Organization',
+              name: 'Zion Tech Group',
               logo: {
-                '@type': 'ImageObject';
-                url: 'https://zion.app/images/zion-tech-group-logo.png';
-              };
-            };
-            datePublished: publishedTime;
-            dateModified: modifiedTime || publishedTime;
+                '@type': 'ImageObject',
+                url: 'https://zion.app/images/zion-tech-group-logo.png'
+              },
+            },
+            datePublished: publishedTime,
+            dateModified: modifiedTime || publishedTime,
             mainEntityOfPage: {
-              '@type': 'WebPage';
-              '@id': fullUrl;
-            };
-            keywords: keywords.split(',').map(k => k.trim());
+              '@type': 'WebPage@id': fullUrl
+            },
+            keywords: keywords.split(',').map(k => k.trim()),
             about: {
-              '@type': 'Thing';
-              name: 'AI Technology Solutions';
+              '@type': 'Thing',
+              name: 'AI Technology Solutions',
               description:,
-                'Artificial Intelligence, Cloud Computing, and Digital Transformation Services';
-            };
-          });
+                'Artificial Intelligence, Cloud Computing, and Digital Transformation Services',
+            },
+          }),
         }}
       />,
       {/* Additional Performance Hints */}
@@ -152,5 +150,5 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         href='/favicon-16x16.png',
       />,
       <link rel='manifest' href='/site.webmanifest' />,
-    </Head>)};
-export default EnhancedSEO;
+    </Head>)},
+export default EnhancedSEO,

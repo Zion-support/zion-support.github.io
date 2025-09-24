@@ -7,13 +7,13 @@ function api(path, method = GET, data) {
   return new Promise((resolve, reject) => {
     const payload = data ? JSON.stringify(data) : null,
     const req = https.request({
-      hostname: api.github.com;
-      path: `/repos/${owner}/${repo}${path}`;
-      method;
+      hostname: api.github.com,
+      path: `/repos/${owner}/${repo}${path}`,
+      method,
       headers: {
-        User-Agent: merge-script;
-        Authorization: `token ${token}`;
-        Accept: application/vnd.github+json;
+        User-Agent: merge-script,
+        Authorization: `token ${token}`,
+        Accept: application/vnd.github+json,
         ...(payload ? { Content-Type: application/json, Content-Length: Buffer.byteLength(payload) } : {})}
     }, res => {
       let body = ,

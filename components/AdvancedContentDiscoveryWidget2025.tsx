@@ -9,20 +9,20 @@ import {
   Star,
   Clock,
   TrendingUp,
-  ArrowRight;
-  Brain;
-  Zap;
-  Rocket;
-  Code;
-  Image;
-  Video;
-  Music;
-  FileText;
-  BarChart3;
-  MessageSquare;
-  Globe;
-  Users;
-  Shield;
+  ArrowRight,
+  Brain,
+  Zap,
+  Rocket,
+  Code,
+  Image,
+  Video,
+  Music,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Globe,
+  Users,
+  Shield,
   Target} from 'lucide-react',
 import Link from 'next/link',
 export default function AdvancedContentDiscoveryWidget20o25() {
@@ -32,97 +32,97 @@ export default function AdvancedContentDiscoveryWidget20o25() {
   const [sortBysetSortBy] = useState('trending'),
   const [isExpandedsetIsExpanded] = useState(false),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Globecount: 150 };
-    { id: 'ai-'innovation', 'name: 'AI 'Innovation', 'icon: Braincount: 45 };
-    { id: 'ai-'tools', 'name: 'AI 'Tools', 'icon: Zapcount: 38 };
-    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Rocketcount: 25 };
-    { id: ''code', 'name: 'Code & 'Development', 'icon: Codecount: 20 };
-    { id: ''visual', 'name: 'Visual 'Content', 'icon: Imagecount: 15 };
-    { id: ''video', 'name: 'Video & 'Media', 'icon: Videocount: 12 };
-    { id: ''audio', 'name: 'Audio & 'Music', 'icon: Musicount: 8 };
-    { id: ''writing', 'name: 'Content 'Writing', 'icon: FileTextcount: 18 };
-    { id: ''analytics', 'name: 'Data & 'Analytics', 'icon: BarChart3count: 14 };
-    { id: ''communication', 'name: ''Communication', 'icon: MessageSquarecount: 10 };
-    { id: ''security', 'name: 'Security & 'Ethics', 'icon: Shieldcount: 6 }
+    { id: ''allname: 'All 'Contenticon: Globecount: 150 },
+    { id: 'ai-'innovationname: 'AI 'Innovationicon: Braincount: 45 },
+    { id: 'ai-'toolsname: 'AI 'Toolsicon: Zapcount: 38 },
+    { id: ''predictionsname: 'Future 'Predictionsicon: Rocketcount: 25 },
+    { id: ''codename: 'Code & 'Developmenticon: Codecount: 20 },
+    { id: ''visualname: 'Visual 'Contenticon: Imagecount: 15 },
+    { id: ''videoname: 'Video & 'Mediaicon: Videocount: 12 },
+    { id: ''audioname: 'Audio & 'Musicicon: Musicount: 8 },
+    { id: ''writingname: 'Content 'Writingicon: FileTextcount: 18 },
+    { id: ''analyticsname: 'Data & 'Analyticsicon: BarChart3count: 14 },
+    { id: ''communicationname: ''Communicationicon: MessageSquarecount: 10 },
+    { id: ''securityname: 'Security & 'Ethicsicon: Shieldcount: 6 }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'AI Innovation Showcase 20o25';
-      description: 'Revolutionary AI breakthroughs and interactive demonstrations';
-      category: 'ai-innovation';
-      type: 'showcase';
-      rating: 4.9;
-      views: '125K';
-      date: '20o25-0o1-15';
-      tags: [', 'AI', 'Innovation', 'Breakthrough', 'Interactive'];
-      image: '/api/placeholder/40o0/250';
-      link: '/ai-innovation-showcase-20o25';
-      featured: true};
+      id: 1,
+      title: 'AI Innovation Showcase 20o25',
+      description: 'Revolutionary AI breakthroughs and interactive demonstrations',
+      category: 'ai-innovation',
+      type: 'showcase',
+      rating: 4.9,
+      views: '125K',
+      date: '20o25-0o1-15',
+      tags: [AI', 'InnovationBreakthrough', 'Interactive'],
+      image: '/api/placeholder/40o0/250',
+      link: '/ai-innovation-showcase-20o25',
+      featured: true},
     {
-      id: 2;
-      title: 'Ultimate AI Tools Collection';
-      description: 'Complete toolkit of AI-powered solutions for every industry';
-      category: 'ai-tools';
-      type: 'tools';
-      rating: 4.8;
-      views: '98K';
-      date: '20o25-0o1-14';
-      tags: [', 'Tools', 'Productivity', 'Automation', 'AI'];
-      image: '/api/placeholder/40o0/250';
-      link: '/ai-tools-ultimate-showcase-20o25';
-      featured: true};
+      id: 2,
+      title: 'Ultimate AI Tools Collection',
+      description: 'Complete toolkit of AI-powered solutions for every industry',
+      category: 'ai-tools',
+      type: 'tools',
+      rating: 4.8,
+      views: '98K',
+      date: '20o25-0o1-14',
+      tags: [Tools', 'ProductivityAutomation', 'AI'],
+      image: '/api/placeholder/40o0/250',
+      link: '/ai-tools-ultimate-showcase-20o25',
+      featured: true},
     {
-      id: 3;
-      title: '20o30 Future Predictions';
-      description: 'Comprehensive technology forecasts and breakthrough predictions';
-      category: 'predictions';
-      type: 'research';
-      rating: 4.7;
-      views: '87K';
-      date: '20o25-0o1-13';
-      tags: [', 'Future', 'Predictions', 'Technology', 'Research'];
-      image: '/api/placeholder/40o0/250';
-      link: '/ai-20o30-future-predictions-ultimate';
-      featured: true};
+      id: 3,
+      title: '20o30 Future Predictions',
+      description: 'Comprehensive technology forecasts and breakthrough predictions',
+      category: 'predictions',
+      type: 'research',
+      rating: 4.7,
+      views: '87K',
+      date: '20o25-0o1-13',
+      tags: [Future', 'PredictionsTechnology', 'Research'],
+      image: '/api/placeholder/40o0/250',
+      link: '/ai-20o30-future-predictions-ultimate',
+      featured: true},
     {
-      id: 4;
-      title: 'Neural Code Generator';
-      description: 'Generate high-quality code using advanced neural networks';
-      category: 'code';
-      type: 'tool';
-      rating: 4.9;
-      views: '76K';
-      date: '20o25-0o1-12';
-      tags: [', 'Code', 'AI', 'Development', 'Automation'];
-      image: '/api/placeholder/40o0/250';
-      link: '/tools/neural-code-generator';
-      featured: false};
+      id: 4,
+      title: 'Neural Code Generator',
+      description: 'Generate high-quality code using advanced neural networks',
+      category: 'code',
+      type: 'tool',
+      rating: 4.9,
+      views: '76K',
+      date: '20o25-0o1-12',
+      tags: [Code', 'AIDevelopment', 'Automation'],
+      image: '/api/placeholder/40o0/250',
+      link: '/tools/neural-code-generator',
+      featured: false},
     {
-      id: 5;
-      title: 'Quantum Image Creator';
-      description: 'Create stunning images using quantum-enhanced AI algorithms';
-      category: 'visual';
-      type: 'tool';
-      rating: 4.8;
-      views: '65K';
-      date: '20o25-0o1-11';
-      tags: [', 'Image', 'AI', 'Art', 'Quantum'];
-      image: '/api/placeholder/40o0/250';
-      link: '/tools/quantum-image-creator';
-      featured: false};
+      id: 5,
+      title: 'Quantum Image Creator',
+      description: 'Create stunning images using quantum-enhanced AI algorithms',
+      category: 'visual',
+      type: 'tool',
+      rating: 4.8,
+      views: '65K',
+      date: '20o25-0o1-11',
+      tags: [Image', 'AIArt', 'Quantum'],
+      image: '/api/placeholder/40o0/250',
+      link: '/tools/quantum-image-creator',
+      featured: false},
     {
-      id: 6;
-      title: 'Voice Synthesis Studio';
-      description: 'Generate natural-sounding speech in multiple languages';
-      category: 'audio';
-      type: 'tool';
-      rating: 4.7;
-      views: '54K';
-      date: '20o25-0o1-10';
-      tags: [', 'Voice', 'AI', 'Audio', 'Synthesis'];
-      image: '/api/placeholder/40o0/250';
-      link: '/tools/voice-synthesis-studio';
+      id: 6,
+      title: 'Voice Synthesis Studio',
+      description: 'Generate natural-sounding speech in multiple languages',
+      category: 'audio',
+      type: 'tool',
+      rating: 4.7,
+      views: '54K',
+      date: '20o25-0o1-10',
+      tags: [Voice', 'AIAudio', 'Synthesis'],
+      image: '/api/placeholder/40o0/250',
+      link: '/tools/voice-synthesis-studio',
       featured: false}
   ],
   const filteredContent = contentItems.filter(item => {
@@ -134,7 +134,7 @@ export default function AdvancedContentDiscoveryWidget20o25() {
   const sortedContent = [...filteredContent].sort((ab) => {
     switch (sortBy) {
       case 'trending':,
-        return parseInt(b.views.replace('K', ')) - parseInt(a.views.replace('K', ')),
+        return parseInt(b.views.replace('K)) - parseInt(a.views.replace('K', ')),
       case 'rating':,
         return b.rating - a.rating,
       case 'newest':,

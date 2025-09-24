@@ -1,17 +1,17 @@
 import Link from 'next/link',
 const routes = [
-  { name: 'Home', href: '/' };
-  { name: 'Solutions', href: '/solutions' };
-  { name: 'Services', href: '/services' };
-  { name: 'Pricing', href: '/pricing' };
-  { name: 'About', href: '/about' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'Blog', href: '/blog' };
-  { name: 'Contact', href: '/contact' };
-  { name: 'Docs', href: '/docs' };
-  { name: 'Privacy', href: '/privacy' };
-  { name: 'Terms', href: '/terms' };
-  { name: 'Cookies', href: '/cookies' };
+  { name: 'Home', href: '/' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Services', href: '/services' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'About', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
+  { name: 'Docs', href: '/docs' },
+  { name: 'Privacy', href: '/privacy' },
+  { name: 'Terms', href: '/terms' },
+  { name: 'Cookies', href: '/cookies' },
 ],
 export default function SitemapPage() {
   return (

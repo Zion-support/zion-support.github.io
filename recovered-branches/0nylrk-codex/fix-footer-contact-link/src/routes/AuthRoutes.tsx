@@ -38,5 +38,5 @@ const AuthRoutes = () => {
             <ServiceOnboarding />,
           </ProtectedRoute>}
       />,
-    </Routes>)};
-export default AuthRoutes;
+    </Routes>)},
+export default AuthRoutes,

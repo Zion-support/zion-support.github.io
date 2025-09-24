@@ -1,15 +1,15 @@
 
 ,
-import React from 'react';
+import React from 'react',
 import { FileText  } from 'lucide-react',
 import { ResumeOption  } from '../resume-selector/types',
 import { ResumePreviewCard  } from './ResumePreviewCard',
 import { Resume } from '@/types/resume',
 interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[];
-  selectedResume: ResumeOption | null;
-  handleResumeSelect: (resumeId: string) => void;
-  handleDownloadResume: () => void;
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
   isLoading: boolean}
 ,
 export function SelectResumeSection({
@@ -17,16 +17,16 @@ export function SelectResumeSection({
   selectedResume,
   handleResumeSelect,
   handleDownloadResume,
-import React from 'react';;
-import { FileText } from 'lucide-react';
-import { ResumeOption } from '../resume-selector/types';
-import { ResumePreviewCard } from './ResumePreviewCard';
-import { Resume } from '@/types/resume';
+import React from 'react',
+import { FileText } from 'lucide-react',
+import { ResumeOption } from '../resume-selector/types',
+import { ResumePreviewCard } from './ResumePreviewCard',
+import { Resume } from '@/types/resume',
 interface SelectResumeSectionProps {
-  resumeOptions: ResumeOption[];
-  selectedResume: ResumeOption | null;
-  handleResumeSelect: (resumeId: string) => void;
-  handleDownloadResume: () => void;
+  resumeOptions: ResumeOption[],
+  selectedResume: ResumeOption | null,
+  handleResumeSelect: (resumeId: string) => void,
+  handleDownloadResume: () => void,
   isLoading: boolean}
 ,
   resumeOptions: ResumeOption[],
@@ -35,10 +35,10 @@ interface SelectResumeSectionProps {
   handleDownloadResume: () => void,
   isLoading: boolean}
 export function SelectResumeSection({
-  resumeOptions;
-  selectedResume;
-  handleResumeSelect;
-  handleDownloadResume;
+  resumeOptions,
+  selectedResume,
+  handleResumeSelect,
+  handleDownloadResume,
   isLoading}: SelectResumeSectionProps) {
   return (
     <div className="space-y-2">,
@@ -72,10 +72,10 @@ export function SelectResumeSection({
 ,
 import {Resume} from '@/types / resume',
 interface SelectResumeSectionProps {
-  resume_options: ResumeOption[];
-  selected_resume: ResumeOption | null;
-  handleResumeSelect: (resume_id: string) => void;
-  handleDownloadResume: () => void;
+  resume_options: ResumeOption[],
+  selected_resume: ResumeOption | null,
+  handleResumeSelect: (resume_id: string) => void,
+  handleDownloadResume: () => void,
   is_loading: boolean}
 export /**,
  * SelectResumeSection - Function description,

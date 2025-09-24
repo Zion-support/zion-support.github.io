@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
-  title: 'AI 20o26: Enterprise Multimodal Agents Blueprint';
+  title: 'AI 20o26: Enterprise Multimodal Agents Blueprint',
   description:,
-    'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.';
+    'Blueprint for building enterprise-grade multimodal AI agents that combine text, vision, speech, and structured data for autonomous operations.',
   keywords: [
-    'enterprise AI agents';
-    'multimodal AI';
-    'AI blueprint';
-    'vision-language models';
-    'speech AI';
-    'enterprise automation';
-  ];
-};
+    'enterprise AI agentsmultimodal AI',
+    'AI blueprintvision-language models',
+    'speech AIenterprise automation',
+  ]
+},
 export default function EnterpriseMultimodalAgentsBlueprint20o26() {
   return (
     <ErrorBoundary>,
@@ -123,7 +120,7 @@ export default function EnterpriseMultimodalAgentsBlueprint20o26() {
                 Build Your Multimodal Agent Program,
               </h3>,
               <p className='text-lg mb-6 opacity-90'>,
-                Accelerate delivery with proven blueprints, reference stacks;
+                Accelerate delivery with proven blueprints, reference stacks,
                 and enterprise readiness checklists.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

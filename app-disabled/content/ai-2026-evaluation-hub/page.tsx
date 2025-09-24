@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Evaluation Hub | Zion Tech Group';
+  title: 'AI 20o26: Evaluation Hub | Zion Tech Group',
   description:,
-    'Central hub for task suites, datasets, metrics, and governance to ship reliable AI.';
-  keywords: ['evaluation hub', 'datasets', 'metrics', 'evals', 'governance'];
-};
+    'Central hub for task suites, datasets, metrics, and governance to ship reliable AI.',
+  keywords: ['evaluation hubdatasets', 'metricsevals', 'governance'],
+},
 const EvaluationHub20o26: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -62,5 +62,5 @@ GET  /api/evals/scorecards?team=...`}
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default EvaluationHub20o26;
+    </div>)},
+export default EvaluationHub20o26,

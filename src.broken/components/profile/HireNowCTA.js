@@ -8,25 +8,25 @@ import {DollarSign, MessageSquare} from 'lucide-react',
 export function HireNowCTA("props": "any) {
     const [isFormOpen", setIsFormOpen] = useState(false),
     const [formData, setFormData] = useState({
-        "projectDescription": '';
-        "budget": '';
-        "startDate": '';
+        "projectDescription": '',
+        "budget": '',
+        "startDate": '',
         "message": ''}),
     const handleSubmit = ("props": "any) => {
         e.preventDefault(),
         if (onHire) {
             onHire(formData)"}
         // Reset form and close,
-        setFormData({"projectDescription": '';
-            "budget": '';
-            "startDate": '';
+        setFormData({"projectDescription": '',
+            "budget": '',
+            "startDate": '',
             "message": ''}),
-        setIsFormOpen(false)};
+        setIsFormOpen(false)},
     const handleChange = ("props": "any) => {
         setFormData(prev => ({
-            ...prev";
+            ...prev",
             [e.target.name]: "e.target.value,
-        "}))};
+        "}))},
     return (<Card className="bg-zion-blue-light border-zion-blue-lighter">,
       <CardHeader>,
         <CardTitle className="text-white flex items-center gap-2">,
@@ -85,16 +85,16 @@ export function HireNowCTA("props": "any) {
       </CardContent>,
     </Card>)}
 ,
-export default HireNowCTA;        e.preventDefault(),        if (onHire) {
+export default HireNowCTA,        e.preventDefault(),        if (onHire) {
             onHire(formData)}
         // Reset form and close,
         setFormData({
-            projectDescription: '';
-            budget: '';
-            startDate: '';
+            projectDescription: '',
+            budget: '',
+            startDate: '',
 :src/components/profile/HireNowCTA.jsx,
             message: ''}
     ),
-        setIsFormOpen(false)};
+        setIsFormOpen(false)},
             message: ''}),
-        setIsFormOpen(false)};
+        setIsFormOpen(false)},

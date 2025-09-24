@@ -20,7 +20,7 @@ export default async function handler(
     `- Title: ${title |'Software Engineer'}\n` +,
     `- Level: ${level |'Mid'}\n` +,
     `- Location: ${location |'Remote'}\n` +,
-    `- Key skills: ${(skills |[]).join(', ')}\n` +,
+    `- Key skills: ${(skills |[]).join()}\n` +,
     `- Responsibilities: ${(responsibilities |[]).join(', ')}\n` +,
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`,
   const text = await generateText(
@@ -44,11 +44,11 @@ export default async function handler(
     `- Title: ${title || 'Software Engineer'}\n` +,
     `- Level: ${level || 'Mid'}\n` +,
     `- Location: ${location || 'Remote'}\n` +,
-    `- Key skills: ${(skills || []).join (', ')}\n` +,
+    `- Key skills: ${(skills || []).join ()}\n` +,
     `- Responsibilities: ${(responsibilities || []).join (', ')}\n` +,
     `Include sections: About the role, Responsibilities, Requirements, Nice to Have, Compensation, Benefits, EEO statement.`,
   const text = await generate_text (
-    prompt;
+    prompt,
     'You are an expert technical recruiter and compensation analyst.'),
   return res.status (200).json ({ job_description: text }),    `- Title: ${title || 'Software Engineer'}\n` +,
     `- Level: ${level || 'Mid'}\n` +,

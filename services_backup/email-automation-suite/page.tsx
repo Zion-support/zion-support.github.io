@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Email Automation Suite | Zion Tech Group';
+  title: 'Email Automation Suite | Zion Tech Group',
   description:,
-    'Advanced email marketing automation platform. Create, send, and track personalized email campaigns with AI-powered optimization.';
-};
+    'Advanced email marketing automation platform. Create, send, and track personalized email campaigns with AI-powered optimization.',
+},
 export default function EmailAutomationSuitePage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function EmailAutomationSuitePage() {
         <FeatureCard
           title='Campaign Management',
           details={[
-            'Drag-and-drop email builder';
-            'Template library';
-            'A/B testing tools';
-            'Send time optimization';
-            'Multi-channel campaigns';
+            'Drag-and-drop email builderTemplate library',
+            'A/B testing toolsSend time optimization',
+            'Multi-channel campaigns',
           ]}
         />,
         <FeatureCard
           title='AI Automation',
           details={[
-            'Behavioral trigger automation';
-            'Personalization engine';
-            'Content optimization';
-            'Send frequency optimization';
-            'Predictive analytics';
+            'Behavioral trigger automationPersonalization engine',
+            'Content optimizationSend frequency optimization',
+            'Predictive analytics',
           ]}
         />,
         <FeatureCard
           title='Analytics & Insights',
           details={[
-            'Real-time campaign tracking';
-            'Advanced segmentation';
-            'ROI analysis';
-            'Customer journey mapping';
-            'Performance recommendations';
+            'Real-time campaign trackingAdvanced segmentation',
+            'ROI analysisCustomer journey mapping',
+            'Performance recommendations',
           ]}
         />,
       </div>,
@@ -96,22 +90,18 @@ function PricingSection() {
           name='Starter',
           price='$29/mo',
           features={[
-            'Up to 5,0o00 subscribers';
-            '10,0o00 emails/month';
-            'Basic automation';
-            'Email support';
-            'Standard templates';
+            'Up to 5,0o00 subscribers10,0o00 emails/month',
+            'Basic automationEmail support',
+            'Standard templates',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$99/mo',
           features={[
-            'Up to 25,0o00 subscribers';
-            '10o0,0o00 emails/month';
-            'Advanced automation';
-            'Priority support';
-            'AI-powered optimization';
+            'Up to 25,0o00 subscribers10o0,0o00 emails/month',
+            'Advanced automationPriority support',
+            'AI-powered optimization',
           ]}
           featured={true}
         />,
@@ -119,21 +109,19 @@ function PricingSection() {
           name='Enterprise',
           price='$299/mo',
           features={[
-            'Unlimited subscribers';
-            'Unlimited emails';
-            'Custom automation workflows';
-            'White-label solution';
-            'Dedicated account manager';
+            'Unlimited subscribersUnlimited emails',
+            'Custom automation workflowsWhite-label solution',
+            'Dedicated account manager',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

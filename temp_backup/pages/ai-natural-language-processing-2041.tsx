@@ -1,15 +1,15 @@
 import Layout from '../components/layout/Layout',
 import {
-  MessageSquare;
-  Sparkles;
-  Zap;
-  Target;
-  Brain;
-  Clock;
-  CheckCircle;
-  Languages;
-  FileText;
-  Users;
+  MessageSquare,
+  Sparkles,
+  Zap,
+  Target,
+  Brain,
+  Clock,
+  CheckCircle,
+  Languages,
+  FileText,
+  Users,
 } from 'lucide-react',
 export default function AINaturalLanguageProcessing20o41() {
   return (
@@ -62,47 +62,47 @@ export default function AINaturalLanguageProcessing20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Contextual Understanding';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Contextual Understanding',
                   description:,
-                    'AI systems that understand context, nuance, and meaning in human language with human-like comprehension.';
-                  color: 'from-pink-50o0 to-rose-50o0';
-                };
+                    'AI systems that understand context, nuance, and meaning in human language with human-like comprehension.',
+                  color: 'from-pink-50o0 to-rose-50o0'
+                },
                 {
-                  icon: <Languages className='w-8 h-8' />;
-                  title: 'Multi-language Support';
+                  icon: <Languages className='w-8 h-8' />,
+                  title: 'Multi-language Support',
                   description:,
-                    'Advanced language processing across hundreds of languages with cultural context awareness.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Advanced language processing across hundreds of languages with cultural context awareness.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <MessageSquare className='w-8 h-8' />;
-                  title: 'Conversational AI';
+                  icon: <MessageSquare className='w-8 h-8' />,
+                  title: 'Conversational AI',
                   description:,
-                    'Natural, human-like conversations that adapt to context and user preferences.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Natural, human-like conversations that adapt to context and user preferences.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <FileText className='w-8 h-8' />;
-                  title: 'Document Intelligence';
+                  icon: <FileText className='w-8 h-8' />,
+                  title: 'Document Intelligence',
                   description:,
-                    'Deep understanding and analysis of complex documents, contracts, and written content.';
-                  color: 'from-purple-50o0 to-indigo-50o0';
-                };
+                    'Deep understanding and analysis of complex documents, contracts, and written content.',
+                  color: 'from-purple-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Processing';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Processing',
                   description:,
-                    'Instant language processing and response generation with minimal latency.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Instant language processing and response generation with minimal latency.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Users className='w-8 h-8' />;
-                  title: 'Personalized Interactions';
+                  icon: <Users className='w-8 h-8' />,
+                  title: 'Personalized Interactions',
                   description:,
-                    'AI that learns individual communication styles and adapts responses accordingly.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'AI that learns individual communication styles and adapts responses accordingly.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -137,42 +137,42 @@ export default function AINaturalLanguageProcessing20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Text Analysis';
+                  name: 'Text Analysis',
                   description:,
-                    'Sentiment analysis, entity recognition, and text classification';
-                };
+                    'Sentiment analysis, entity recognition, and text classification',
+                },
                 {
-                  name: 'Language Generation';
+                  name: 'Language Generation',
                   description:,
-                    'Human-like text generation and content creation';
-                };
+                    'Human-like text generation and content creation',
+                },
                 {
-                  name: 'Translation';
+                  name: 'Translation',
                   description:,
-                    'Accurate multi-language translation with context preservation';
-                };
+                    'Accurate multi-language translation with context preservation',
+                },
                 {
-                  name: 'Summarization';
-                  description: 'Intelligent document and text summarization';
-                };
+                  name: 'Summarization',
+                  description: 'Intelligent document and text summarization'
+                },
                 {
-                  name: 'Question Answering';
+                  name: 'Question Answering',
                   description:,
-                    'Context-aware question answering from documents';
-                };
+                    'Context-aware question answering from documents',
+                },
                 {
-                  name: 'Named Entity Recognition';
+                  name: 'Named Entity Recognition',
                   description:,
-                    'Identification of people, places, and organizations';
-                };
+                    'Identification of people, places, and organizations',
+                },
                 {
-                  name: 'Part-of-Speech Tagging';
-                  description: 'Grammatical analysis and language structure';
-                };
+                  name: 'Part-of-Speech Tagging',
+                  description: 'Grammatical analysis and language structure'
+                },
                 {
-                  name: 'Topic Modeling';
-                  description: 'Automatic topic discovery and categorization';
-                };
+                  name: 'Topic Modeling',
+                  description: 'Automatic topic discovery and categorization'
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -202,55 +202,50 @@ export default function AINaturalLanguageProcessing20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Text Input';
+                  phase: 'Text Input',
                   description:,
-                    'AI receives and preprocesses text input from various sources and formats';
+                    'AI receives and preprocesses text input from various sources and formats',
                   features: [
-                    'Text preprocessing';
-                    'Format normalization';
-                    'Quality assessment';
-                  ];
-                };
+                    'Text preprocessingFormat normalization',
+                    'Quality assessment',
+                  ]
+                },
                 {
-                  phase: 'Language Detection';
+                  phase: 'Language Detection',
                   description:,
-                    'Automatic detection of language and dialect for appropriate processing';
+                    'Automatic detection of language and dialect for appropriate processing',
                   features: [
-                    'Language identification';
-                    'Dialect recognition';
-                    'Script detection';
-                  ];
-                };
+                    'Language identificationDialect recognition',
+                    'Script detection',
+                  ]
+                },
                 {
-                  phase: 'Tokenization';
+                  phase: 'Tokenization',
                   description:,
-                    'Breaking down text into meaningful units for analysis and processing';
+                    'Breaking down text into meaningful units for analysis and processing',
                   features: [
-                    'Word segmentation';
-                    'Sentence splitting';
-                    'Subword tokenization';
-                  ];
-                };
+                    'Word segmentationSentence splitting',
+                    'Subword tokenization',
+                  ]
+                },
                 {
-                  phase: 'Semantic Analysis';
+                  phase: 'Semantic Analysis',
                   description:,
-                    'Deep understanding of meaning, context, and relationships in text';
+                    'Deep understanding of meaning, context, and relationships in text',
                   features: [
-                    'Context analysis';
-                    'Semantic parsing';
-                    'Relationship extraction';
-                  ];
-                };
+                    'Context analysisSemantic parsing',
+                    'Relationship extraction',
+                  ]
+                },
                 {
-                  phase: 'Response Generation';
+                  phase: 'Response Generation',
                   description:,
-                    'Intelligent generation of human-like responses and content';
+                    'Intelligent generation of human-like responses and content',
                   features: [
-                    'Context-aware generation';
-                    'Style adaptation';
-                    'Quality assurance';
-                  ];
-                };
+                    'Context-aware generationStyle adaptation',
+                    'Quality assurance',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -296,41 +291,41 @@ export default function AINaturalLanguageProcessing20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Transformer Models';
+                  category: 'Transformer Models',
                   description:,
-                    'Advanced transformer architectures including BERT, GPT, T5, and RoBERTa for language understanding.';
-                  models: ['BERT', 'GPT-4', 'T5', 'RoBERTa', 'DeBERTa'];
-                };
+                    'Advanced transformer architectures including BERT, GPT, T5, and RoBERTa for language understanding.',
+                  models: ['BERTGPT-4', 'T5RoBERTa', 'DeBERTa'],
+                },
                 {
-                  category: 'Multilingual Models';
+                  category: 'Multilingual Models',
                   description:,
-                    'Models trained on multiple languages for cross-lingual understanding and translation.';
-                  models: ['mBERT', 'XLM-R', 'mT5', 'mBART', 'NLLB'];
-                };
+                    'Models trained on multiple languages for cross-lingual understanding and translation.',
+                  models: ['mBERTXLM-R', 'mT5mBART', 'NLLB'],
+                },
                 {
-                  category: 'Domain-Specific Models';
+                  category: 'Domain-Specific Models',
                   description:,
-                    'Specialized models for specific domains like medical, legal, and technical content.';
-                  models: ['BioBERT', 'Legal-BERT', 'SciBERT', 'ClinicalBERT'];
-                };
+                    'Specialized models for specific domains like medical, legal, and technical content.',
+                  models: ['BioBERTLegal-BERT', 'SciBERTClinicalBERT'],
+                },
                 {
-                  category: 'Conversational AI';
+                  category: 'Conversational AI',
                   description:,
-                    'Models designed for natural conversation and dialogue systems.';
-                  models: ['DialoGPT', 'BlenderBot', 'LaMDA', 'ChatGPT'];
-                };
+                    'Models designed for natural conversation and dialogue systems.',
+                  models: ['DialoGPTBlenderBot', 'LaMDAChatGPT'],
+                },
                 {
-                  category: 'Summarization Models';
+                  category: 'Summarization Models',
                   description:,
-                    'Specialized models for text summarization and content extraction.';
-                  models: ['BART', 'PEGASUS', 'T5', 'Longformer'];
-                };
+                    'Specialized models for text summarization and content extraction.',
+                  models: ['BARTPEGASUS', 'T5Longformer'],
+                },
                 {
-                  category: 'Translation Models';
+                  category: 'Translation Models',
                   description:,
-                    'Advanced models for machine translation across multiple languages.';
-                  models: ['mBART', 'NLLB', 'Marian', 'OPUS-MT'];
-                };
+                    'Advanced models for machine translation across multiple languages.',
+                  models: ['mBARTNLLB', 'MarianOPUS-MT'],
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -367,65 +362,59 @@ export default function AINaturalLanguageProcessing20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Customer Service';
+                  industry: 'Customer Service',
                   description:,
-                    'Intelligent chatbots and virtual assistants that provide human-like customer support.';
+                    'Intelligent chatbots and virtual assistants that provide human-like customer support.',
                   applications: [
-                    'Chatbots';
-                    'Virtual assistants';
-                    'Customer support';
-                  ];
-                };
+                    'ChatbotsVirtual assistants',
+                    'Customer support',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Medical document analysis, patient communication, and clinical decision support.';
+                    'Medical document analysis, patient communication, and clinical decision support.',
                   applications: [
-                    'Medical transcription';
-                    'Patient communication';
-                    'Clinical documentation';
-                  ];
-                };
+                    'Medical transcriptionPatient communication',
+                    'Clinical documentation',
+                  ]
+                },
                 {
-                  industry: 'Legal';
+                  industry: 'Legal',
                   description:,
-                    'Contract analysis, legal research, and document review with AI-powered NLP.';
+                    'Contract analysis, legal research, and document review with AI-powered NLP.',
                   applications: [
-                    'Contract analysis';
-                    'Legal research';
-                    'Document review';
-                  ];
-                };
+                    'Contract analysisLegal research',
+                    'Document review',
+                  ]
+                },
                 {
-                  industry: 'Education';
+                  industry: 'Education',
                   description:,
-                    'Intelligent tutoring, content generation, and language learning assistance.';
+                    'Intelligent tutoring, content generation, and language learning assistance.',
                   applications: [
-                    'Intelligent tutoring';
-                    'Content generation';
-                    'Language learning';
-                  ];
-                };
+                    'Intelligent tutoringContent generation',
+                    'Language learning',
+                  ]
+                },
                 {
-                  industry: 'Marketing';
+                  industry: 'Marketing',
                   description:,
-                    'Content creation, sentiment analysis, and personalized communication.';
+                    'Content creation, sentiment analysis, and personalized communication.',
                   applications: [
-                    'Content creation';
-                    'Sentiment analysis';
-                    'Personalization';
-                  ];
-                };
+                    'Content creationSentiment analysis',
+                    'Personalization',
+                  ]
+                },
                 {
-                  industry: 'Finance';
+                  industry: 'Finance',
                   description:,
-                    'Financial document analysis, risk assessment, and regulatory compliance.';
+                    'Financial document analysis, risk assessment, and regulatory compliance.',
                   applications: [
-                    'Document analysis';
-                    'Risk assessment';
-                    'Compliance';
-                  ];
-                };
+                    'Document analysisRisk assessment',
+                    'Compliance',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -462,33 +451,33 @@ export default function AINaturalLanguageProcessing20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Improved Communication';
+                  title: 'Improved Communication',
                   description:,
-                    'Enhance customer interactions and internal communication with intelligent language processing.';
-                  icon: <MessageSquare className='w-8 h-8' />;
-                  color: 'from-pink-50o0 to-rose-50o0';
-                };
+                    'Enhance customer interactions and internal communication with intelligent language processing.',
+                  icon: <MessageSquare className='w-8 h-8' />,
+                  color: 'from-pink-50o0 to-rose-50o0'
+                },
                 {
-                  title: 'Content Automation';
+                  title: 'Content Automation',
                   description:,
-                    'Automate content creation, translation, and analysis to save time and improve quality.';
-                  icon: <FileText className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Automate content creation, translation, and analysis to save time and improve quality.',
+                  icon: <FileText className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Global Reach';
+                  title: 'Global Reach',
                   description:,
-                    'Break language barriers and reach global audiences with multi-language support.';
-                  icon: <Languages className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Break language barriers and reach global audiences with multi-language support.',
+                  icon: <Languages className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Cost Efficiency';
+                  title: 'Cost Efficiency',
                   description:,
-                    'Reduce manual language processing costs while improving accuracy and consistency.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-indigo-50o0';
-                };
+                    'Reduce manual language processing costs while improving accuracy and consistency.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-indigo-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

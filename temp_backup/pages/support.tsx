@@ -1,7 +1,7 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
-import React from 'react';
+import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
         {/* Support Categories */}
@@ -383,125 +383,125 @@ import SEO from '../components/SEO',
           <motion.div,
             initial={{ opacity: 0, y: 30 }}
 =======,
-  HelpCircle, MessageCircle, Phone, Mail, Clock;
-  BookOpen, Video, FileText, Search, Filter;
-  CheckCircle, ArrowRight, Brain, Atom, Rocket;
+  HelpCircle, MessageCircle, Phone, Mail, Clock,
+  BookOpen, Video, FileText, Search, Filter,
+  CheckCircle, ArrowRight, Brain, Atom, Rocket,
   Shield, Zap, Users, Star, TrendingUp, Code} from 'lucide-react',
 export default function Support() {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const supportCategories = [
     {
-      id: 'ai-services';
-      name: 'AI Services';
-      icon: <Brain className="w-8 h-8 text-cyan-400" />;
-      description: 'Support for AI consciousness and autonomous systems';
-      articles: 25};
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: <Brain className="w-8 h-8 text-cyan-400" />,
+      description: 'Support for AI consciousness and autonomous systems',
+      articles: 25},
     {
-      id: 'quantum-solutions';
-      name: 'Quantum Solutions';
-      icon: <Atom className="w-8 h-8 text-purple-400" />;
-      description: 'Help with quantum computing and cryptography';
-      articles: 18};
+      id: 'quantum-solutions',
+      name: 'Quantum Solutions',
+      icon: <Atom className="w-8 h-8 text-purple-400" />,
+      description: 'Help with quantum computing and cryptography',
+      articles: 18},
     {
-      id: 'autonomous-systems';
-      name: 'Autonomous Systems';
-      icon: <Rocket className="w-8 h-8 text-green-400" />;
-      description: 'Support for self-managing business operations';
-      articles: 32};
+      id: 'autonomous-systems',
+      name: 'Autonomous Systems',
+      icon: <Rocket className="w-8 h-8 text-green-400" />,
+      description: 'Support for self-managing business operations',
+      articles: 32},
     {
-      id: 'enterprise-it';
-      name: 'Enterprise IT';
-      icon: <Shield className="w-8 h-8 text-blue-400" />;
-      description: 'Infrastructure and security support';
-      articles: 28};
+      id: 'enterprise-it',
+      name: 'Enterprise IT',
+      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      description: 'Infrastructure and security support',
+      articles: 28},
     {
-      id: 'billing';
-      name: 'Billing & Account';
-      icon: <Zap className="w-8 h-8 text-yellow-400" />;
-      description: 'Payment, invoices, and account management';
-      articles: 15};
+      id: 'billing',
+      name: 'Billing & Account',
+      icon: <Zap className="w-8 h-8 text-yellow-400" />,
+      description: 'Payment, invoices, and account management',
+      articles: 15},
     {
-      id: 'technical';
-      name: 'Technical Issues';
-      icon: <Code className="w-8 h-8 text-orange-400" />;
-      description: 'Bug reports and technical troubleshooting';
+      id: 'technical',
+      name: 'Technical Issues',
+      icon: <Code className="w-8 h-8 text-orange-400" />,
+      description: 'Bug reports and technical troubleshooting',
       articles: 42}
   ],
   const quickActions = [
     {
-      title: 'Live Chat';
-      description: 'Get instant help from our support team';
-      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />;
-      action: 'Start Chat';
-      color: 'from-cyan-500 to-blue-600';
-      available: true};
+      title: 'Live Chat',
+      description: 'Get instant help from our support team',
+      icon: <MessageCircle className="w-8 h-8 text-cyan-400" />,
+      action: 'Start Chat',
+      color: 'from-cyan-500 to-blue-600',
+      available: true},
     {
-      title: 'Phone Support';
-      description: 'Speak directly with our experts';
-      icon: <Phone className="w-8 h-8 text-green-400" />;
-      action: 'Call Now';
-      color: 'from-green-500 to-emerald-600';
-      available: true};
+      title: 'Phone Support',
+      description: 'Speak directly with our experts',
+      icon: <Phone className="w-8 h-8 text-green-400" />,
+      action: 'Call Now',
+      color: 'from-green-500 to-emerald-600',
+      available: true},
     {
-      title: 'Email Support';
-      description: 'Send us a detailed message';
-      icon: <Mail className="w-8 h-8 text-purple-400" />;
-      action: 'Send Email';
-      color: 'from-purple-500 to-pink-600';
-      available: true};
+      title: 'Email Support',
+      description: 'Send us a detailed message',
+      icon: <Mail className="w-8 h-8 text-purple-400" />,
+      action: 'Send Email',
+      color: 'from-purple-500 to-pink-600',
+      available: true},
     {
-      title: 'Video Call';
-      description: 'Screen share and visual assistance';
-      icon: <Video className="w-8 h-8 text-orange-400" />;
-      action: 'Schedule Call';
-      color: 'from-orange-500 to-red-600';
+      title: 'Video Call',
+      description: 'Screen share and visual assistance',
+      icon: <Video className="w-8 h-8 text-orange-400" />,
+      action: 'Schedule Call',
+      color: 'from-orange-500 to-red-600',
       available: true}
   ],
   const popularArticles = [
     {
-      title: 'Getting Started with AI Consciousness Platform';
-      category: 'AI Services';
-      readTime: '5 min read';
-      views: '2.4k';
-      helpful: '98%'};
+      title: 'Getting Started with AI Consciousness Platform',
+      category: 'AI Services',
+      readTime: '5 min read',
+      views: '2.4k',
+      helpful: '98%'},
     {
-      title: 'Setting Up Quantum-Secure Infrastructure';
-      category: 'Quantum Solutions';
-      readTime: '8 min read';
-      views: '1.8k';
-      helpful: '95%'};
+      title: 'Setting Up Quantum-Secure Infrastructure',
+      category: 'Quantum Solutions',
+      readTime: '8 min read',
+      views: '1.8k',
+      helpful: '95%'},
     {
-      title: 'Troubleshooting Autonomous System Errors';
-      category: 'Autonomous Systems';
-      readTime: '6 min read';
-      views: '3.1k';
-      helpful: '92%'};
+      title: 'Troubleshooting Autonomous System Errors',
+      category: 'Autonomous Systems',
+      readTime: '6 min read',
+      views: '3.1k',
+      helpful: '92%'},
     {
-      title: 'API Integration Best Practices';
-      category: 'Technical Issues';
-      readTime: '7 min read';
-      views: '4.2k';
-      helpful: '96%'};
+      title: 'API Integration Best Practices',
+      category: 'Technical Issues',
+      readTime: '7 min read',
+      views: '4.2k',
+      helpful: '96%'},
     {
-      title: 'Understanding Your Invoice and Billing';
-      category: 'Billing & Account';
-      readTime: '3 min read';
-      views: '1.5k';
+      title: 'Understanding Your Invoice and Billing',
+      category: 'Billing & Account',
+      readTime: '3 min read',
+      views: '1.5k',
       helpful: '89%'}
   ],
   const supportHours = [
     {
-      day: 'Monday - Friday';
-      hours: '9:00 AM - 8:00 PM EST';
-      status: 'Available'};
+      day: 'Monday - Friday',
+      hours: '9:00 AM - 8:00 PM EST',
+      status: 'Available'},
     {
-      day: 'Saturday';
-      hours: '10:00 AM - 6:00 PM EST';
-      status: 'Available'};
+      day: 'Saturday',
+      hours: '10:00 AM - 6:00 PM EST',
+      status: 'Available'},
     {
-      day: 'Sunday';
-      hours: '12:00 PM - 6:00 PM EST';
+      day: 'Sunday',
+      hours: '12:00 PM - 6:00 PM EST',
       status: 'Limited'}
   ],
   const filteredCategories = selectedCategory === 'all',
@@ -522,7 +522,7 @@ export default function Support() {
               How Can We Help?,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-300 mb-8 leading-relaxed">,
-              Get the support you need for our AI consciousness, quantum computing;
+              Get the support you need for our AI consciousness, quantum computing,
               and autonomous systems. Our expert team is here to help 24/7.,
             </p>,
             {/* Search Bar */}
@@ -561,126 +561,118 @@ export default function Support() {
           <motion.div,
             initial={{ opacity: 0, y: 20 }}
 =======,
-  Headphones;
-  MessageCircle;
-  BookOpen;
-  Video;
-  Users;
-  Clock;
-  CheckCircle;
-  AlertCircle;
-  Phone;
-  Mail;
-  Globe;
-  FileText;
-  Play;
-  Star;
-  Zap;
-  Shield;
+  Headphones,
+  MessageCircle,
+  BookOpen,
+  Video,
+  Users,
+  Clock,
+  CheckCircle,
+  AlertCircle,
+  Phone,
+  Mail,
+  Globe,
+  FileText,
+  Play,
+  Star,
+  Zap,
+  Shield,
   Rocket} from 'lucide-react',
 const supportCategories = [
   {
-    title: 'Technical Support';
-    icon: <Headphones className="w-8 h-8 text-cyan-400" />;
-    description: 'Get help with our platforms and services';
+    title: 'Technical Support',
+    icon: <Headphones className="w-8 h-8 text-cyan-400" />,
+    description: 'Get help with our platforms and services',
     items: [
-      'Platform troubleshooting';
-      'API integration support';
-      'Performance optimization';
-      'Security configuration';
-      'Deployment assistance'];
-    color: 'from-cyan-500/20 to-blue-500/20';
-    borderColor: 'border-cyan-400/30'};
+      'Platform troubleshootingAPI integration support',
+      'Performance optimizationSecurity configuration',
+      'Deployment assistance'],
+    color: 'from-cyan-500/20 to-blue-500/20',
+    borderColor: 'border-cyan-400/30'},
   {
-    title: 'Documentation';
-    icon: <BookOpen className="w-8 h-8 text-purple-400" />;
-    description: 'Comprehensive guides and references';
+    title: 'Documentation',
+    icon: <BookOpen className="w-8 h-8 text-purple-400" />,
+    description: 'Comprehensive guides and references',
     items: [
-      'Getting started guides';
-      'API documentation';
-      'Best practices';
-      'Troubleshooting guides';
-      'Video tutorials'];
-    color: 'from-purple-500/20 to-pink-500/20';
-    borderColor: 'border-purple-400/30'};
+      'Getting started guidesAPI documentation',
+      'Best practicesTroubleshooting guides',
+      'Video tutorials'],
+    color: 'from-purple-500/20 to-pink-500/20',
+    borderColor: 'border-purple-400/30'},
   {
-    title: 'Training & Onboarding';
-    icon: <Video className="w-8 h-8 text-emerald-400" />;
-    description: 'Learn to use our platforms effectively';
+    title: 'Training & Onboarding',
+    icon: <Video className="w-8 h-8 text-emerald-400" />,
+    description: 'Learn to use our platforms effectively',
     items: [
-      'Live training sessions';
-      'On-demand courses';
-      'Certification programs';
-      'Custom workshops';
-      'Team onboarding'];
-    color: 'from-emerald-500/20 to-teal-500/20';
-    borderColor: 'border-emerald-400/30'};
+      'Live training sessionsOn-demand courses',
+      'Certification programsCustom workshops',
+      'Team onboarding'],
+    color: 'from-emerald-500/20 to-teal-500/20',
+    borderColor: 'border-emerald-400/30'},
   {
-    title: 'Community Support';
-    icon: <Users className="w-8 h-8 text-orange-400" />;
-    description: 'Connect with other users and experts';
+    title: 'Community Support',
+    icon: <Users className="w-8 h-8 text-orange-400" />,
+    description: 'Connect with other users and experts',
     items: [
-      'User forums';
-      'Knowledge sharing';
-      'Peer support';
-      'Expert Q&A';
-      'Success stories'];
-    color: 'from-orange-500/20 to-red-500/20';
+      'User forumsKnowledge sharing',
+      'Peer supportExpert Q&A',
+      'Success stories'],
+    color: 'from-orange-500/20 to-red-500/20',
     borderColor: 'border-orange-400/30'}
 ],
 const supportChannels = [
   {
-    name: 'Live Chat';
-    icon: <MessageCircle className="w-6 h-6" />;
-    description: 'Instant support during business hours';
-    availability: '24/7';
-    responseTime: '< 5 minutes';
-    color: 'text-green-400';
-    bgColor: 'bg-green-500/20';
-    borderColor: 'border-green-400/30'};
+    name: 'Live Chat',
+    icon: <MessageCircle className="w-6 h-6" />,
+    description: 'Instant support during business hours',
+    availability: '24/7',
+    responseTime: '< 5 minutes',
+    color: 'text-green-400',
+    bgColor: 'bg-green-500/20',
+    borderColor: 'border-green-400/30'},
   {
-    name: 'Email Support';
-    icon: <Mail className="w-6 h-6" />;
-    description: 'Detailed technical assistance';
-    availability: '24/7';
-    responseTime: '< 4 hours';
-    color: 'text-blue-400';
-    bgColor: 'bg-blue-500/20';
-    borderColor: 'border-blue-400/30'};
+    name: 'Email Support',
+    icon: <Mail className="w-6 h-6" />,
+    description: 'Detailed technical assistance',
+    availability: '24/7',
+    responseTime: '< 4 hours',
+    color: 'text-blue-400',
+    bgColor: 'bg-blue-500/20',
+    borderColor: 'border-blue-400/30'},
   {
-    name: 'Phone Support';
-    icon: <Phone className="w-6 h-6" />;
-    description: 'Direct conversation with experts';
-    availability: '9 AM - 6 PM EST';
-    responseTime: 'Immediate';
-    color: 'text-purple-400';
-    bgColor: 'bg-purple-500/20';
-    borderColor: 'border-purple-400/30'};
+    name: 'Phone Support',
+    icon: <Phone className="w-6 h-6" />,
+    description: 'Direct conversation with experts',
+    availability: '9 AM - 6 PM EST',
+    responseTime: 'Immediate',
+    color: 'text-purple-400',
+    bgColor: 'bg-purple-500/20',
+    borderColor: 'border-purple-400/30'},
   {
-    name: 'Ticket System';
-    icon: <FileText className="w-6 h-6" />;
-    description: 'Track and manage support requests';
-    availability: '24/7';
-    responseTime: '< 2 hours';
-    color: 'text-orange-400';
-    bgColor: 'bg-orange-500/20';
+    name: 'Ticket System',
+    icon: <FileText className="w-6 h-6" />,
+    description: 'Track and manage support requests',
+    availability: '24/7',
+    responseTime: '< 2 hours',
+    color: 'text-orange-400',
+    bgColor: 'bg-orange-500/20',
     borderColor: 'border-orange-400/30'}
 ],
 const faqItems = [
   {
-    question: 'How do I get started with Zion Tech Group services?';
-    answer: 'Getting started is easy! Simply contact our team through any of our support channels, and we\'ll schedule a consultation to understand your needs and recommend the best solutions for your business.'};
+    question: 'How do I get started with Zion Tech Group services?',
+    answer: 'Getting started is easy! Simply contact our team through any of our support channels, and we\'ll schedule a consultation to understand your needs and recommend the best solutions for your business.'},
   {
-    question: 'What kind of technical support do you provide?';
-    answer: 'We provide comprehensive technical support including platform troubleshooting, API integration assistance, performance optimization, security configuration, and deployment support. Our team of experts is available 24/7.'};
+    question: 'What kind of technical support do you provide?',
+    answer: 'We provide comprehensive technical support including platform troubleshooting, API integration assistance, performance optimization, security configuration, and deployment support. Our team of experts is available 24/7.'},
   {
-    question: 'Do you offer training for your platforms?';
-    answer: 'Yes! We offer live training sessions, on-demand courses, certification programs, and custom workshops. We also provide team onboarding to ensure your team can use our platforms effectively.'};
+    question: 'Do you offer training for your platforms?',
+    answer: 'Yes! We offer live training sessions, on-demand courses, certification programs, and custom workshops. We also provide team onboarding to ensure your team can use our platforms effectively.'},
   {
-    question: 'How quickly do you respond to support requests?';
-    answer: 'We pride ourselves on fast response times. Live chat responses are typically under 5 minutes, email support within 4 hours, and our ticket system responds within 2 hours. Phone support is immediate during business hours.'};
+    question: 'How quickly do you respond to support requests?',
+    answer: 'We pride ourselves on fast response times. Live chat responses are typically under 5 minutes, email support within 4 hours, and our ticket system responds within 2 hours. Phone support is immediate during business hours.'},
   {
-    question: 'Is there a community where I can connect with other users?';
+    question: 'Is there a community where I can connect with other users?',
     answer: 'Absolutely! We have active user forums, knowledge sharing platforms, peer support groups, and expert Q&A sessions. Our community is a great place to learn from other users and share experiences.'}
 ],
 export default function Support() {
@@ -913,22 +905,22 @@ export default function Support() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
             {[
               {
-                question: "What is AI Consciousness Evolution?";
-                answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."};
+                question: "What is AI Consciousness Evolution?",
+                answer: "AI Consciousness Evolution is our revolutionary platform that creates truly conscious, self-aware, and emotionally intelligent AI systems that transcend traditional artificial intelligence."},
               {
-                question: "How does Quantum Neural Ecosystem work?";
-                answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."};
+                question: "How does Quantum Neural Ecosystem work?",
+                answer: "Our Quantum Neural Ecosystem combines quantum computing with neural networks to solve previously impossible problems, leveraging quantum superposition and entanglement for exponential computational power."},
               {
-                question: "What makes Space Resource Intelligence unique?";
-                answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."};
+                question: "What makes Space Resource Intelligence unique?",
+                answer: "Our space technology uses AI-powered autonomous exploration to discover and extract extraterrestrial resources, enabling sustainable space colonization and resource utilization."},
               {
-                question: "How secure is your Quantum Cybersecurity platform?";
-                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."};
+                question: "How secure is your Quantum Cybersecurity platform?",
+                answer: "Our quantum cybersecurity provides unbreakable encryption using quantum key distribution and quantum-resistant algorithms that future-proof your security beyond current technological limitations."},
               {
-                question: "Can I integrate your AI with my existing systems?";
-                answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."};
+                question: "Can I integrate your AI with my existing systems?",
+                answer: "Yes! We provide comprehensive integration support, APIs, and custom development services to seamlessly integrate our revolutionary AI solutions with your existing infrastructure."},
               {
-                question: "What support do you offer for enterprise deployments?";
+                question: "What support do you offer for enterprise deployments?",
                 answer: "We provide dedicated enterprise support including 24/7 technical assistance, custom training programs, and dedicated account managers for large-scale deployments."}
             ].map((faq, index) => (
               <div key={index} className="p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/10">,
@@ -1121,8 +1113,8 @@ export default function Support() {
         </div>,
       </section>,
     </div>,
-=======)};
-export default Support;
+=======)},
+export default Support,
           </div>,
         </section>,
         {/* Contact Support */}
@@ -1165,6 +1157,6 @@ export default Support;
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default SupportPage;
+    </Layout>)},
+export default SupportPage,
 =======}}))))

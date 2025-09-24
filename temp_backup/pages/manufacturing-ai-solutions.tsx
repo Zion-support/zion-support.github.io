@@ -3,41 +3,41 @@ import { Settings, Brain, Shield, Users, Zap, Target, Star, ArrowRight, Activity
 import SEO from '../components/SEO',
 const manufacturingServices = [
   {
-    title: 'AI Predictive Maintenance';
-    description: 'Intelligent systems that predict equipment failures and optimize maintenance schedules';
-    icon: <Brain className="w-8 h-8 text-cyan-40o0"  />;
-    href: '/ai-predictive-maintenance-platform';
-    features: ['Equipment Monitoring', 'Failure Prediction', 'Maintenance Optimization']};
+    title: 'AI Predictive Maintenance',
+    description: 'Intelligent systems that predict equipment failures and optimize maintenance schedules',
+    icon: <Brain className="w-8 h-8 text-cyan-40o0"  />,
+    href: '/ai-predictive-maintenance-platform',
+    features: ['Equipment MonitoringFailure Prediction', 'Maintenance Optimization']},
   {
-    title: 'Smart Factory Automation';
-    description: 'AI-powered automation systems for intelligent manufacturing processes';
-    icon: <Factory className="w-8 h-8 text-blue-40o0"  />;
-    href: '/smart-factory-automation';
-    features: ['Process Automation', 'Quality Control', 'Production Optimization']};
+    title: 'Smart Factory Automation',
+    description: 'AI-powered automation systems for intelligent manufacturing processes',
+    icon: <Factory className="w-8 h-8 text-blue-40o0"  />,
+    href: '/smart-factory-automation',
+    features: ['Process AutomationQuality Control', 'Production Optimization']},
   {
-    title: 'Supply Chain Intelligence';
-    description: 'AI-driven supply chain optimization and demand forecasting';
-    icon: <BarChart3 className="w-8 h-8 text-green-40o0"  />;
-    href: '/supply-chain-intelligence';
-    features: ['Demand Forecasting', 'Inventory Optimization', 'Supplier Management']};
+    title: 'Supply Chain Intelligence',
+    description: 'AI-driven supply chain optimization and demand forecasting',
+    icon: <BarChart3 className="w-8 h-8 text-green-40o0"  />,
+    href: '/supply-chain-intelligence',
+    features: ['Demand ForecastingInventory Optimization', 'Supplier Management']},
   {
-    title: 'Quality Assurance AI';
-    description: 'Advanced quality control systems using computer vision and AI';
-    icon: <Target className="w-8 h-8 text-purple-40o0"  />;
-    href: '/quality-assurance-ai';
-    features: ['Visual Inspection', 'Defect Detection', 'Quality Analytics']};
+    title: 'Quality Assurance AI',
+    description: 'Advanced quality control systems using computer vision and AI',
+    icon: <Target className="w-8 h-8 text-purple-40o0"  />,
+    href: '/quality-assurance-ai',
+    features: ['Visual InspectionDefect Detection', 'Quality Analytics']},
   {
-    title: 'Manufacturing Analytics';
-    description: 'Comprehensive analytics platform for manufacturing insights and optimization';
-    icon: <Activity className="w-8 h-8 text-yellow-40o0"  />;
-    href: '/manufacturing-analytics-platform';
-    features: ['Performance Analytics', 'Efficiency Metrics', 'Real-time Monitoring']};
+    title: 'Manufacturing Analytics',
+    description: 'Comprehensive analytics platform for manufacturing insights and optimization',
+    icon: <Activity className="w-8 h-8 text-yellow-40o0"  />,
+    href: '/manufacturing-analytics-platform',
+    features: ['Performance AnalyticsEfficiency Metrics', 'Real-time Monitoring']},
   {
-    title: 'IoT Manufacturing Platform';
-    description: 'Connected devices and sensors for intelligent manufacturing operations';
-    icon: <Cog className="w-8 h-8 text-orange-40o0"  />;
-    href: '/iot-manufacturing-platform';
-    features: ['Sensor Integration', 'Data Collection', 'Remote Monitoring']}
+    title: 'IoT Manufacturing Platform',
+    description: 'Connected devices and sensors for intelligent manufacturing operations',
+    icon: <Cog className="w-8 h-8 text-orange-40o0"  />,
+    href: '/iot-manufacturing-platform',
+    features: ['Sensor IntegrationData Collection', 'Remote Monitoring']}
 ],
 export default function ManufacturingAISolutions() {
   return (
@@ -146,20 +146,20 @@ export default function ManufacturingAISolutions() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
                 {
-                  title: 'Predictive Maintenance';
-                  description: 'AI-powered equipment failure prediction';
-                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />};
+                  title: 'Predictive Maintenance',
+                  description: 'AI-powered equipment failure prediction',
+                  icon: <Brain className="w-12 h-12 text-cyan-40o0"  />},
                 {
-                  title: 'Smart Automation';
-                  description: 'Intelligent manufacturing process automation';
-                  icon: <Factory className="w-12 h-12 text-blue-40o0"  />};
+                  title: 'Smart Automation',
+                  description: 'Intelligent manufacturing process automation',
+                  icon: <Factory className="w-12 h-12 text-blue-40o0"  />},
                 {
-                  title: 'Quality Control';
-                  description: 'Advanced AI quality assurance systems';
-                  icon: <Target className="w-12 h-12 text-purple-40o0"  />};
+                  title: 'Quality Control',
+                  description: 'Advanced AI quality assurance systems',
+                  icon: <Target className="w-12 h-12 text-purple-40o0"  />},
                 {
-                  title: 'IoT Integration';
-                  description: 'Connected manufacturing ecosystem';
+                  title: 'IoT Integration',
+                  description: 'Connected manufacturing ecosystem',
                   icon: <Cog className="w-12 h-12 text-orange-40o0"  />}
               ].map((innovation, index) => (
                 <motion.div,

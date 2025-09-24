@@ -3,63 +3,63 @@ import React, { useState, useEffect } from 'react',
 SearchTrendingUpUsersClockStarTargetBarChart3Zap,
 const AdvancedContentOptimizer = () => {
   const [contentMetricsetContentMetrics] = useState({
-    engagement: 0;
-    readability: 0;
-    seoScore: 0;
+    engagement: 0,
+    readability: 0,
+    seoScore: 0,
     conversionRate: 0}),
   const [optimizationsetOptimizations] = useState([
     {
-      id: 'headline-optimization';
-      name: 'Headline Optimization';
-      description: 'Craft compelling headlines that drive engagement';
-      impact: 'High';
-      status: 'active';
-      icon: Target;
+      id: 'headline-optimization',
+      name: 'Headline Optimization',
+      description: 'Craft compelling headlines that drive engagement',
+      impact: 'High',
+      status: 'active',
+      icon: Target,
       metrics: { before: 2.1after: 4.7unit: 'CTR%' }
-    };
+    },
     {
-      id: 'content-structure';
-      name: 'Content Structure';
-      description: 'Optimize content hierarchy and readability';
-      impact: 'High';
-      status: 'active';
-      icon: BarChart3;
+      id: 'content-structure',
+      name: 'Content Structure',
+      description: 'Optimize content hierarchy and readability',
+      impact: 'High',
+      status: 'active',
+      icon: BarChart3,
       metrics: { before: 6.2after: 8.9unit: 'Readability' }
-    };
+    },
     {
-      id: 'keyword-optimization';
-      name: 'Keyword Optimization';
-      description: 'Strategic keyword placement and density';
-      impact: 'Medium';
-      status: 'active';
-      icon: Search;
+      id: 'keyword-optimization',
+      name: 'Keyword Optimization',
+      description: 'Strategic keyword placement and density',
+      impact: 'Medium',
+      status: 'active',
+      icon: Search,
       metrics: { before: 65after: 89unit: 'SEO Score' }
-    };
+    },
     {
-      id: 'visual-optimization';
-      name: 'Visual Optimization';
-      description: 'Optimize images and visual elements';
-      impact: 'Medium';
-      status: 'active';
-      icon: Zap;
+      id: 'visual-optimization',
+      name: 'Visual Optimization',
+      description: 'Optimize images and visual elements',
+      impact: 'Medium',
+      status: 'active',
+      icon: Zap,
       metrics: { before: 3.2after: 4.8unit: 'Engagement' }
-    };
+    },
     {
-      id: 'conversion-optimization';
-      name: 'Conversion Optimization';
-      description: 'Optimize for user actions and conversions';
-      impact: 'High';
-      status: 'active';
-      icon: TrendingUp;
+      id: 'conversion-optimization',
+      name: 'Conversion Optimization',
+      description: 'Optimize for user actions and conversions',
+      impact: 'High',
+      status: 'active',
+      icon: TrendingUp,
       metrics: { before: 2.3after: 5.1unit: 'Conversion%' }
-    };
+    },
     {
-      id: 'user-experience';
-      name: 'User Experience';
-      description: 'Enhance overall user experience and flow';
-      impact: 'High';
-      status: 'active';
-      icon: Users;
+      id: 'user-experience',
+      name: 'User Experience',
+      description: 'Enhance overall user experience and flow',
+      impact: 'High',
+      status: 'active',
+      icon: Users,
       metrics: { before: 7.1after: 9.2unit: 'UX Score' }
     }
   ]),
@@ -67,10 +67,10 @@ const AdvancedContentOptimizer = () => {
     // Simulate content metrics collection,
     const collectMetrics = () => {
       setContentMetrics({
-        engagement: 87;
-        readability: 92;
-        seoScore: 89;
-        conversionRate: 5.1})};
+        engagement: 87,
+        readability: 92,
+        seoScore: 89,
+        conversionRate: 5.1})},
     collectMetrics()}[]),
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-blue-90o0 py-16">,
@@ -185,5 +185,5 @@ const AdvancedContentOptimizer = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedContentOptimizer;
+    </div>)},
+export default AdvancedContentOptimizer,

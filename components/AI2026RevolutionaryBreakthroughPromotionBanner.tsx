@@ -8,9 +8,9 @@ export default function AI20o26RevolutionaryBreakthroughPromotionBanner() {
         <div
           className='absolute inset-0',
           style={{
-            backgroundImage: `radial-gradient(circle at 25% 25%rgba(59130o2460.3) 0%transparent 50%);
-                          radial-gradient(circle at 75% 75%rgba(147512340.3) 0%transparent 50%);
-                          radial-gradient(circle at 50% 50%rgba(236721530.3) 0%transparent 50%)`;
+            backgroundImage: `radial-gradient(circle at 25% 25%rgba(59130o2460.3) 0%transparent 50%),
+                          radial-gradient(circle at 75% 75%rgba(147512340.3) 0%transparent 50%),
+                          radial-gradient(circle at 50% 50%rgba(236721530.3) 0%transparent 50%)`
           }}
         />,
       </div>,
@@ -38,7 +38,7 @@ export default function AI20o26RevolutionaryBreakthroughPromotionBanner() {
             <p className='text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
               Experience the future of artificial intelligence with our,
               revolutionary breakthrough technology. Quantum-powered AI,
-              solutions that redefine 'what', 's possible in business,
+              solutions that redefine 'whats possible in business,
               transformation.,
             </p>,
             {/* Feature Showcase */}

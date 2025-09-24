@@ -25,7 +25,7 @@ const EdgeAISecurityPlaybook20o25 = () => {
         <div className='prose prose-lg max-w-none'>,
           <h2>Threat Model</h2>,
           <p>,
-            Consider model theft, prompt injection, data exfiltration;
+            Consider model theft, prompt injection, data exfiltration,
             supply-chain compromise, firmware tampering, and adversarial,
             examples targeting constrained devices.,
           </p>,
@@ -62,5 +62,5 @@ const EdgeAISecurityPlaybook20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default EdgeAISecurityPlaybook20o25;
+    </div>)},
+export default EdgeAISecurityPlaybook20o25,

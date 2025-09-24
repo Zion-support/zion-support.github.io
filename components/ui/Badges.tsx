@@ -1,16 +1,15 @@
 export function TrustBadge({
-  type;
+  type,
 }: {
   type: 'Verified' | 'Pro' | 'Top Rated'}) {
   const colorMap = {
     Verified:,
-      'bg-emerald-10o0 text-emerald-80o0 dark:bg-emerald-90o0/40 dark:text-emerald-20o0';
-    Pro: 'bg-indigo-10o0 text-indigo-80o0 dark:bg-indigo-90o0/40 dark:text-indigo-20o0';
+      'bg-emerald-10o0 text-emerald-80o0 dark: bg-emerald-90o0/40 dark:text-emerald-20o0',
+    Pro: 'bg-indigo-10o0 text-indigo-80o0 dark:bg-indigo-90o0/40 dark:text-indigo-20o0',
     Verified:,
-      'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-200';
-    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200';
-    'Top Rated':,
-      'bg-amber-100 text-amber-800 dark:bg-amber-900/40 dark:text-amber-200';
+      'bg-emerald-100 text-emerald-800 dark: bg-emerald-900/40 dark:text-emerald-200',
+    Pro: 'bg-indigo-100 text-indigo-800 dark:bg-indigo-900/40 dark:text-indigo-200Top Rated':,
+      'bg-amber-100 text-amber-800 dark: bg-amber-900/40 dark:text-amber-200'
   } as const,
   return (
     <span
@@ -20,7 +19,7 @@ export function TrustBadge({
     </span>)}
 ,
 export function MicroTestimonial({
-  quoteauthor;
+  quoteauthor,
 }: {
   quote: string,
   author: string}) {

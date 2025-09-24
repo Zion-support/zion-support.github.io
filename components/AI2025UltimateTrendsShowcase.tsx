@@ -11,32 +11,32 @@ const AI20o25UltimateTrendsShowcase = () => {
     return () => clearInterval(interval)}, []),
   const trends = [
     {
-      title: "Neural Superintelligence Breakthrough";
-      description: "Revolutionary AI systems achieving human-level consciousness and beyond";
-      impact: "2,40o0% ROI";
-      icon: "🧠";
-      color: "from-purple-60o0 to-indigo-60o0";
-      features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"]};
+      title: "Neural Superintelligence Breakthrough",
+      description: "Revolutionary AI systems achieving human-level consciousness and beyond",
+      impact: "2,40o0% ROI",
+      icon: "🧠",
+      color: "from-purple-60o0 to-indigo-60o0",
+      features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"]},
     {
-      title: "Quantum-Neural Fusion";
-      description: "Merging quantum computing with neural networks for unprecedented processing power";
-      impact: "5,0o00% ROI";
-      icon: "⚛️";
-      color: "from-blue-60o0 to-cyan-60o0";
-      features: ["Quantum AI", "Neural Processing", "Advanced Computing"]};
+      title: "Quantum-Neural Fusion",
+      description: "Merging quantum computing with neural networks for unprecedented processing power",
+      impact: "5,0o00% ROI",
+      icon: "⚛️",
+      color: "from-blue-60o0 to-cyan-60o0",
+      features: ["Quantum AI", "Neural Processing", "Advanced Computing"]},
     {
-      title: "Autonomous Business Ecosystems";
-      description: "Self-managing business systems that operate independently with minimal human intervention";
-      impact: "8,0o00% ROI";
-      icon: "🤖";
-      color: "from-green-60o0 to-emerald-60o0";
-      features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"]};
+      title: "Autonomous Business Ecosystems",
+      description: "Self-managing business systems that operate independently with minimal human intervention",
+      impact: "8,0o00% ROI",
+      icon: "🤖",
+      color: "from-green-60o0 to-emerald-60o0",
+      features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"]},
     {
-      title: "Synthetic Intelligence Revolution";
-      description: "AI systems that can create, modify, and improve themselves autonomously";
-      impact: "10,0o00% ROI";
-      icon: "🔬";
-      color: "from-orange-60o0 to-red-60o0";
+      title: "Synthetic Intelligence Revolution",
+      description: "AI systems that can create, modify, and improve themselves autonomously",
+      impact: "10,0o00% ROI",
+      icon: "🔬",
+      color: "from-orange-60o0 to-red-60o0",
       features: ["Self-Improving AI", "Synthetic Intelligence", "Evolutionary Computing"]}
   ],
   return (
@@ -154,5 +154,5 @@ const AI20o25UltimateTrendsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateTrendsShowcase;
+    </div>)},
+export default AI20o25UltimateTrendsShowcase,

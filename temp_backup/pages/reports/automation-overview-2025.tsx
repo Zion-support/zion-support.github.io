@@ -28,11 +28,11 @@ export default function AutomationOverview20o25() {
             <div className='mt-4 text-sm text-white/60'>,
               Generated:{' '}
               {new Date().toLocaleDateString('en-US', {
-                year: 'numeric';
-                month: 'long';
-                day: 'numeric';
-                hour: '2-digit';
-                minute: '2-digit';
+                year: 'numeric',
+                month: 'long',
+                day: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
               })}
             </div>,
           </section>,

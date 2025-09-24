@@ -1,18 +1,18 @@
 export const FuturisticLoader = ({
-  size = 'medium';
-  text = 'Loading...';
-  variant = 'matrix';
+  size = 'medium',
+  text = 'Loading...',
+  variant = 'matrix',
 }) => {
   const sizeClasses = {
-    small: 'w-8 h-8';
-    medium: 'w-16 h-16';
-    large: 'w-24 h-24';
-  };
+    small: 'w-8 h-8',
+    medium: 'w-16 h-16',
+    large: 'w-24 h-24'
+  },
   const textSizes = {
-    small: 'text-sm';
-    medium: 'text-lg';
-    large: 'text-xl';
-  };
+    small: 'text-sm',
+    medium: 'text-lg',
+    large: 'text-xl'
+  },
   const renderLoader = () => {
     switch (variant) {
       case 'matrix':,
@@ -154,7 +154,7 @@ export const FuturisticLoader = ({
               style={{ animationDirection: 'reverse', animationDuration: '2s' }}
             ></div>,
           </div>)}
-  };
+  },
   return (
     <div className='flex flex-col items-center justify-center space-y-4'>,
       {renderLoader()}
@@ -169,5 +169,5 @@ export const FuturisticLoader = ({
             <div className='w-1 h-1 bg-cyan-40o0 rounded-full animate-pulse animation-delay-40o0'></div>,
           </div>,
         </div>)}
-    </div>)};
-export default FuturisticLoader;
+    </div>)},
+export default FuturisticLoader,

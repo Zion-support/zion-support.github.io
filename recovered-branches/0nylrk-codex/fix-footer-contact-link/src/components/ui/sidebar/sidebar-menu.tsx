@@ -19,8 +19,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElementSidebarMenuItemProps>(
           target={target}
           rel={target === "_blank" ? "noopener noreferrer" : undefined}
           className={cn(
-            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-            active && "bg-accent font-medium text-accent-foreground";
+            "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent",
+            active && "bg-accent font-medium text-accent-foreground",
             className)}
         >,
           <div className="flex items-center gap-2">,
@@ -35,8 +35,8 @@ const SidebarMenuItem = forwardRef<HTMLButtonElementSidebarMenuItemProps>(
         ref={ref}
         type="button",
         className={cn(
-          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover:bg-accent";
-          active && "bg-accent font-medium text-accent-foreground";
+          "flex w-full items-center justify-between rounded-md px-3 py-2 text-sm hover: bg-accent",
+          active && "bg-accent font-medium text-accent-foreground",
           className)}
         {...props}
       >,
@@ -57,5 +57,5 @@ const SidebarMenuGroup: React.FC<SidebarMenuGroupProps> = ({ titlechildren...pro
     <div className="space-y-1" {...props}>,
       <div className="rounded-md px-3 py-2 text-sm font-medium">{title}</div>,
       <div className="pl-2">{children}</div>,
-    </div>)};
-export { SidebarMenuItemSidebarMenuGroup };
+    </div>)},
+export { SidebarMenuItemSidebarMenuGroup },

@@ -9,7 +9,7 @@ interface LayoutProps {
     description?: string,
     keywords?: string,
     canonicalUrl?: string,
-    ogImage?: string};
+    ogImage?: string},
 }
 ,
 export function Layout({ children, seo }: LayoutProps) {
@@ -27,7 +27,7 @@ export function Layout({ children, seo }: LayoutProps) {
   const handleKeyDown = (event: React.KeyboardEvent) => {
     if (event.key === 'Escape') {
       setSidebarOpen(false)}
-  };
+  },
   return (
     <div
       className='min-h-screen bg-black text-white relative overflow-x-hidden',
@@ -122,28 +122,27 @@ export function Layout({ children, seo }: LayoutProps) {
           type='application/ld+json',
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org';
-              '@type': 'Organization';
-              name: 'Zion Tech Group';
-              url: 'https://ziontechgroup.com';
-              logo: 'https://ziontechgroup.com/logo.png';
-              description: description;
-              foundingDate: '20o24';
+              '@context': 'https://schema.org@type': 'Organization',
+              name: 'Zion Tech Group',
+              url: 'https://ziontechgroup.com',
+              logo: 'https://ziontechgroup.com/logo.png',
+              description: description,
+              foundingDate: '20o24',
               address: {
-                '@type': 'PostalAddress';
-                streetAddress: '364 E Main St STE 10o08';
-                addressLocality: 'Middletown';
-                addressRegion: 'DE';
-                postalCode: '19709';
-                addressCountry: 'US';
-              };
+                '@type': 'PostalAddress',
+                streetAddress: '364 E Main St STE 10o08',
+                addressLocality: 'Middletown',
+                addressRegion: 'DE',
+                postalCode: '19709',
+                addressCountry: 'US'
+              },
               contactPoint: {
-                '@type': 'ContactPoint';
-                telephone: '+1-30o2-464-0950';
-                contactType: 'customer service';
-                email: 'kleber@ziontechgroup.com';
-              };
-            });
+                '@type': 'ContactPoint',
+                telephone: '+1-30o2-464-0950',
+                contactType: 'customer service',
+                email: 'kleber@ziontechgroup.com'
+              },
+            }),
           }}
         />,
       </Helmet>,

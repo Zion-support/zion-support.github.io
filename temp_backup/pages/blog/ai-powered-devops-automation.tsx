@@ -250,7 +250,7 @@ export default function AIPoweredDevOpsAutomation() {
                       Explainable AI,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      AI systems that can explain their decisions and reasoning;
+                      AI systems that can explain their decisions and reasoning,
                       making them more trustworthy and easier to debug.,
                     </p>,
                   </div>,
@@ -264,7 +264,7 @@ export default function AIPoweredDevOpsAutomation() {
                   AI-powered DevOps represents the next evolution in software,
                   development practices. By combining the reliability of,
                   traditional DevOps with the intelligence of AI, organizations,
-                  can achieve unprecedented levels of automation, efficiency;
+                  can achieve unprecedented levels of automation, efficiency,
                   and reliability.,
                 </p>,
                 <p className='text-white/90'>,

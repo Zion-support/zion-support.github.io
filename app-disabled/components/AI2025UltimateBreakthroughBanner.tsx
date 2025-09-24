@@ -61,7 +61,7 @@ export default function AI20o25UltimateBreakthroughBanner() {
             <div className='text-5xl mb-6'>🎯</div>,
             <h3 className='text-2xl font-bold mb-4'>Predictive Mastery</h3>,
             <p className='text-gray-20o0 mb-6 leading-relaxed'>,
-              Advanced predictive capabilities that anticipate market changes;
+              Advanced predictive capabilities that anticipate market changes,
               customer needs, and operational challenges before they occur.,
             </p>,
             <div className='text-3xl font-bold text-blue-40o0'>95%</div>,

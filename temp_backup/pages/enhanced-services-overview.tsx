@@ -3,11 +3,11 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap;
-  DollarSign, Shield, Mail, MapPin, Rocket, Brain;
-  Sparkles, Atom, Target, Microscope, Search, Filter;
-  ExternalLink, Users, Clock, BarChart3, Award, Globe;
-  Cpu, Database, Lock, MessageSquare, BarChart, ShoppingCart;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
+  DollarSign, Shield, Mail, MapPin, Rocket, Brain,
+  Sparkles, Atom, Target, Microscope, Search, Filter,
+  ExternalLink, Users, Clock, BarChart3, Award, Globe,
+  Cpu, Database, Lock, MessageSquare, BarChart, ShoppingCart,
   UserCheck, FileText, Palette, Camera, Video, Music} from 'lucide-react',
 import Button from '../components/ui/Button',
 import UltraFuturisticBackground20o35 from '../components/ui/UltraFuturisticBackground20o35',
@@ -17,221 +17,181 @@ export default function EnhancedServicesOverview() {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchQuery, setSearchQuery] = useState(''),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const serviceCategories = [
     {
-      id: 'ai-services';
-      name: 'Artificial Intelligence';
-      description: 'Revolutionary AI solutions including consciousness platforms, emotional intelligence, and autonomous business systems.';
-      icon: Brain;
-      color: 'from-violet-50o0 to-purple-60o0';
+      id: 'ai-services',
+      name: 'Artificial Intelligence',
+      description: 'Revolutionary AI solutions including consciousness platforms, emotional intelligence, and autonomous business systems.',
+      icon: Brain,
+      color: 'from-violet-50o0 to-purple-60o0',
       services: [
-        'AI Consciousness Evolution Platform';
-        'AI Emotional Intelligence Platform';
-        'AI Autonomous Business Manager';
-        'AI Creativity Orchestrator';
-        'AI Content Generation & Optimization';
-        'AI Sales Automation';
-        'AI HR Recruitment';
-        'AI Legal Contract Analysis'];
-      pricing: { starting: '$1,499', range: '$1,499 - $9,999' };
-      benefits: ['30o0% ROI improvement', '80% time savings', 'Enhanced decision making'];
-      href: '/ai-services';
-      featured: true};
+        'AI Consciousness Evolution PlatformAI Emotional Intelligence Platform',
+        'AI Autonomous Business ManagerAI Creativity Orchestrator',
+        'AI Content Generation & OptimizationAI Sales Automation',
+        'AI HR RecruitmentAI Legal Contract Analysis'],
+      pricing: { starting: '$1,499', range: '$1,499 - $9,999' },
+      benefits: ['30o0% ROI improvement80% time savings', 'Enhanced decision making'],
+      href: '/ai-services',
+      featured: true},
     {
-      id: 'quantum-services';
-      name: 'Quantum Computing';
-      description: 'Cutting-edge quantum computing solutions for security, finance, and emerging technology applications.';
-      icon: Atom;
-      color: 'from-indigo-50o0 to-blue-60o0';
+      id: 'quantum-services',
+      name: 'Quantum Computing',
+      description: 'Cutting-edge quantum computing solutions for security, finance, and emerging technology applications.',
+      icon: Atom,
+      color: 'from-indigo-50o0 to-blue-60o0',
       services: [
-        'Quantum Internet Security Gateway';
-        'Quantum Financial Trading Platform';
-        'Quantum AI Brain-Computer Interface';
-        'Quantum Blockchain Infrastructure';
-        'Quantum Cybersecurity Solutions';
-        'Quantum Energy Optimization';
-        'Quantum Logistics Platform';
-        'Quantum Metaverse Development'];
-      pricing: { starting: '$2,999', range: '$2,999 - $19,999' };
-      benefits: ['Unbreakable security', 'Exponential performance', 'Future-proof technology'];
-      href: '/quantum-services';
-      featured: true};
+        'Quantum Internet Security GatewayQuantum Financial Trading Platform',
+        'Quantum AI Brain-Computer InterfaceQuantum Blockchain Infrastructure',
+        'Quantum Cybersecurity SolutionsQuantum Energy Optimization',
+        'Quantum Logistics PlatformQuantum Metaverse Development'],
+      pricing: { starting: '$2,999', range: '$2,999 - $19,999' },
+      benefits: ['Unbreakable securityExponential performance', 'Future-proof technology'],
+      href: '/quantum-services',
+      featured: true},
     {
-      id: 'space-technology';
-      name: 'Space Technology';
-      description: 'Advanced space technology solutions including mining automation, satellite systems, and space infrastructure.';
-      icon: Rocket;
-      color: 'from-teal-50o0 to-emerald-60o0';
+      id: 'space-technology',
+      name: 'Space Technology',
+      description: 'Advanced space technology solutions including mining automation, satellite systems, and space infrastructure.',
+      icon: Rocket,
+      color: 'from-teal-50o0 to-emerald-60o0',
       services: [
-        'Space Mining Automation Platform';
-        'Satellite Constellation Management';
-        'Space Debris Tracking System';
-        'Space Tourism Platform';
-        'Space Resource Analytics';
-        'Space Weather Monitoring';
-        'Space Communication Networks';
-        'Space Manufacturing Systems'];
-      pricing: { starting: '$4,999', range: '$4,999 - $49,999' };
-      benefits: ['Access to space resources', 'Global connectivity', 'Innovation leadership'];
-      href: '/space-technology';
-      featured: true};
+        'Space Mining Automation PlatformSatellite Constellation Management',
+        'Space Debris Tracking SystemSpace Tourism Platform',
+        'Space Resource AnalyticsSpace Weather Monitoring',
+        'Space Communication NetworksSpace Manufacturing Systems'],
+      pricing: { starting: '$4,999', range: '$4,999 - $49,999' },
+      benefits: ['Access to space resourcesGlobal connectivity', 'Innovation leadership'],
+      href: '/space-technology',
+      featured: true},
     {
-      id: 'enterprise-it';
-      name: 'Enterprise IT Solutions';
-      description: 'Comprehensive enterprise IT solutions including infrastructure, security, and operations automation.';
-      icon: Cpu;
-      color: 'from-blue-50o0 to-cyan-60o0';
+      id: 'enterprise-it',
+      name: 'Enterprise IT Solutions',
+      description: 'Comprehensive enterprise IT solutions including infrastructure, security, and operations automation.',
+      icon: Cpu,
+      color: 'from-blue-50o0 to-cyan-60o0',
       services: [
-        'Autonomous DevOps Platform';
-        'Zero Trust Network Architecture';
-        'Edge Computing Orchestration';
-        'AI IT Operations Center';
-        'Cloud Infrastructure Management';
-        'Data Center Automation';
-        'Network Security Monitoring';
-        'IT Asset Management'];
-      pricing: { starting: '$1,999', range: '$1,999 - $29,999' };
-      benefits: ['Operational efficiency', 'Cost reduction', 'Security enhancement'];
-      href: '/enterprise-it';
-      featured: true};
+        'Autonomous DevOps PlatformZero Trust Network Architecture',
+        'Edge Computing OrchestrationAI IT Operations Center',
+        'Cloud Infrastructure ManagementData Center Automation',
+        'Network Security MonitoringIT Asset Management'],
+      pricing: { starting: '$1,999', range: '$1,999 - $29,999' },
+      benefits: ['Operational efficiencyCost reduction', 'Security enhancement'],
+      href: '/enterprise-it',
+      featured: true},
     {
-      id: 'micro-saas';
-      name: 'Micro SAAS Solutions';
-      description: 'Market-ready micro SAAS services for business automation, marketing, and operational efficiency.';
-      icon: Target;
-      color: 'from-green-50o0 to-yellow-60o0';
+      id: 'micro-saas',
+      name: 'Micro SAAS Solutions',
+      description: 'Market-ready micro SAAS services for business automation, marketing, and operational efficiency.',
+      icon: Target,
+      color: 'from-green-50o0 to-yellow-60o0',
       services: [
-        'AI Content Calendar Pro';
-        'Smart Invoice Automation';
-        'Customer Success Automation';
-        'AI Sales Pipeline Optimizer';
-        'HR Automation Suite';
-        'E-commerce Automation Platform';
-        'Project Management AI';
-        'Data Analytics Automation'];
-      pricing: { starting: '$19', range: '$19 - $499' };
-      benefits: ['Quick implementation', 'Affordable pricing', 'Immediate ROI'];
-      href: '/enhanced-micro-saas-showcase';
-      featured: true};
+        'AI Content Calendar ProSmart Invoice Automation',
+        'Customer Success AutomationAI Sales Pipeline Optimizer',
+        'HR Automation SuiteE-commerce Automation Platform',
+        'Project Management AIData Analytics Automation'],
+      pricing: { starting: '$19', range: '$19 - $499' },
+      benefits: ['Quick implementationAffordable pricing', 'Immediate ROI'],
+      href: '/enhanced-micro-saas-showcase',
+      featured: true},
     {
-      id: 'cybersecurity';
-      name: 'Cybersecurity';
-      description: 'Advanced cybersecurity solutions including threat detection, incident response, and security automation.';
-      icon: Shield;
-      color: 'from-red-50o0 to-pink-60o0';
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      description: 'Advanced cybersecurity solutions including threat detection, incident response, and security automation.',
+      icon: Shield,
+      color: 'from-red-50o0 to-pink-60o0',
       services: [
-        'AI Threat Detection System';
-        'Incident Response Automation';
-        'Vulnerability Assessment Platform';
-        'Security Awareness Training';
-        'Compliance Monitoring System';
-        'Penetration Testing Automation';
-        'Security Operations Center';
-        'Risk Assessment AI'];
-      pricing: { starting: '$79', range: '$79 - $999' };
-      benefits: ['Threat prevention', 'Compliance assurance', 'Risk mitigation'];
-      href: '/security';
-      featured: false};
+        'AI Threat Detection SystemIncident Response Automation',
+        'Vulnerability Assessment PlatformSecurity Awareness Training',
+        'Compliance Monitoring SystemPenetration Testing Automation',
+        'Security Operations CenterRisk Assessment AI'],
+      pricing: { starting: '$79', range: '$79 - $999' },
+      benefits: ['Threat preventionCompliance assurance', 'Risk mitigation'],
+      href: '/security',
+      featured: false},
     {
-      id: 'data-analytics';
-      name: 'Data Analytics';
-      description: 'Comprehensive data analytics solutions including collection, processing, and visualization automation.';
-      icon: BarChart3;
-      color: 'from-orange-50o0 to-red-60o0';
+      id: 'data-analytics',
+      name: 'Data Analytics',
+      description: 'Comprehensive data analytics solutions including collection, processing, and visualization automation.',
+      icon: BarChart3,
+      color: 'from-orange-50o0 to-red-60o0',
       services: [
-        'Data Pipeline Automation';
-        'Real-time Analytics Dashboard';
-        'Predictive Analytics Platform';
-        'Data Quality Monitoring';
-        'Business Intelligence Suite';
-        'Data Visualization Tools';
-        'Machine Learning Pipeline';
-        'Data Governance Platform'];
-      pricing: { starting: '$49', range: '$49 - $799' };
-      benefits: ['Data-driven decisions', 'Operational insights', 'Performance optimization'];
-      href: '/ai-data-analytics';
-      featured: false};
+        'Data Pipeline AutomationReal-time Analytics Dashboard',
+        'Predictive Analytics PlatformData Quality Monitoring',
+        'Business Intelligence SuiteData Visualization Tools',
+        'Machine Learning PipelineData Governance Platform'],
+      pricing: { starting: '$49', range: '$49 - $799' },
+      benefits: ['Data-driven decisionsOperational insights', 'Performance optimization'],
+      href: '/ai-data-analytics',
+      featured: false},
     {
-      id: 'content-creation';
-      name: 'Content Creation';
-      description: 'AI-powered content creation and management solutions for marketing and communication.';
-      icon: FileText;
-      color: 'from-pink-50o0 to-rose-60o0';
+      id: 'content-creation',
+      name: 'Content Creation',
+      description: 'AI-powered content creation and management solutions for marketing and communication.',
+      icon: FileText,
+      color: 'from-pink-50o0 to-rose-60o0',
       services: [
-        'AI Content Generator';
-        'Video Editing AI Platform';
-        'Social Media Automation';
-        'Content Calendar Management';
-        'SEO Optimization Tools';
-        'Multimedia Content Creation';
-        'Content Performance Analytics';
-        'Brand Voice AI'];
-      pricing: { starting: '$29', range: '$29 - $399' };
-      benefits: ['Content quality improvement', 'Time savings', 'Engagement increase'];
-      href: '/ai-content-generator';
-      featured: false};
+        'AI Content GeneratorVideo Editing AI Platform',
+        'Social Media AutomationContent Calendar Management',
+        'SEO Optimization ToolsMultimedia Content Creation',
+        'Content Performance AnalyticsBrand Voice AI'],
+      pricing: { starting: '$29', range: '$29 - $399' },
+      benefits: ['Content quality improvementTime savings', 'Engagement increase'],
+      href: '/ai-content-generator',
+      featured: false},
     {
-      id: 'automation';
-      name: 'Business Automation';
-      description: 'Comprehensive business process automation solutions for operational efficiency.';
-      icon: Zap;
-      color: 'from-yellow-50o0 to-orange-60o0';
+      id: 'automation',
+      name: 'Business Automation',
+      description: 'Comprehensive business process automation solutions for operational efficiency.',
+      icon: Zap,
+      color: 'from-yellow-50o0 to-orange-60o0',
       services: [
-        'Workflow Automation Platform';
-        'Process Mining Tools';
-        'RPA Implementation';
-        'Business Process Optimization';
-        'Automation Consulting';
-        'Integration Services';
-        'Performance Monitoring';
-        'Automation Strategy'];
-      pricing: { starting: '$99', range: '$99 - $1,999' };
-      benefits: ['Process efficiency', 'Cost reduction', 'Error elimination'];
-      href: '/automation';
-      featured: false};
+        'Workflow Automation PlatformProcess Mining Tools',
+        'RPA ImplementationBusiness Process Optimization',
+        'Automation ConsultingIntegration Services',
+        'Performance MonitoringAutomation Strategy'],
+      pricing: { starting: '$99', range: '$99 - $1,999' },
+      benefits: ['Process efficiencyCost reduction', 'Error elimination'],
+      href: '/automation',
+      featured: false},
     {
-      id: 'research-development';
-      name: 'Research & Development';
-      description: 'Cutting-edge R&D services including emerging technology research and innovation consulting.';
-      icon: Microscope;
-      color: 'from-purple-50o0 to-indigo-60o0';
+      id: 'research-development',
+      name: 'Research & Development',
+      description: 'Cutting-edge R&D services including emerging technology research and innovation consulting.',
+      icon: Microscope,
+      color: 'from-purple-50o0 to-indigo-60o0',
       services: [
-        'Emerging Technology Research';
-        'Innovation Strategy Consulting';
-        'Prototype Development';
-        'Technology Assessment';
-        'Patent Research';
-        'Market Analysis';
-        'Technology Transfer';
-        'Innovation Workshops'];
-      pricing: { starting: '$199', range: '$199 - $2,999' };
-      benefits: ['Innovation leadership', 'Competitive advantage', 'Future readiness'];
-      href: '/emerging-tech';
+        'Emerging Technology ResearchInnovation Strategy Consulting',
+        'Prototype DevelopmentTechnology Assessment',
+        'Patent ResearchMarket Analysis',
+        'Technology TransferInnovation Workshops'],
+      pricing: { starting: '$199', range: '$199 - $2,999' },
+      benefits: ['Innovation leadershipCompetitive advantage', 'Future readiness'],
+      href: '/emerging-tech',
       featured: false}
   ],
   const filteredCategories = serviceCategories.filter(category =>,
     selectedCategory === 'all' || category.id === selectedCategory),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 0.6}
     }
-  };
+  },
   return (
     <>,
       <Head>,
@@ -288,7 +248,7 @@ export default function EnhancedServicesOverview() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
               className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-12 leading-relaxed">,
-              From revolutionary AI consciousness platforms to cutting-edge quantum computing solutions;
+              From revolutionary AI consciousness platforms to cutting-edge quantum computing solutions,
               discover our comprehensive range of technology services designed to transform businesses and advance humanity.,
             </motion.p>,
             {/* Stats */}

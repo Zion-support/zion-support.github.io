@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
   import { Plugin } from 'vite',
 interface ImportMetaEnv {
   readonly VITE_APP_TITLE: string,
@@ -36,8 +36,8 @@ declare var process: {
   env: {
     [key: string]: string | undefined,
     NODE_ENV: 'development' | 'production' | 'test',
-    PORT?: string};
-};
+    PORT?: string},
+},
 // Badge component type fixes,
 declare module '@/components/ui/badge' {
   export interface BadgeProps {

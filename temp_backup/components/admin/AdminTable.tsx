@@ -2,47 +2,47 @@ import React, { useEffect, useMemo, useState } from 'react',
 import { AdminType, ADMIN_TYPES } from '../../utils/admin/types',
 import { deleteItem, listItems, updateItem } from '../../utils/admin/client',
 const TYPE_COLUMNS: Record<,
-  AdminType;
+  AdminType,
   { key: string, label: string, editable?: boolean }[]> = {
   users: [
-    { key: 'name', label: 'Name' };
-    { key: 'email', label: 'Email' };
-    { key: 'role', label: 'Role', editable: true };
-    { key: 'status', label: 'Status', editable: true };
-  ];
+    { key: 'name', label: 'Name' },
+    { key: 'email', label: 'Email' },
+    { key: 'role', label: 'Role', editable: true },
+    { key: 'status', label: 'Status', editable: true },
+  ],
   cvs: [
-    { key: 'title', label: 'Title' };
-    { key: 'skills', label: 'Skills' };
-    { key: 'status', label: 'Status', editable: true };
-  ];
+    { key: 'title', label: 'Title' },
+    { key: 'skills', label: 'Skills' },
+    { key: 'status', label: 'Status', editable: true },
+  ],
   projects: [
-    { key: 'title', label: 'Title' };
-    { key: 'client', label: 'Client' };
-    { key: 'budget_usd', label: 'Budget' };
-    { key: 'status', label: 'Status', editable: true };
-  ];
+    { key: 'title', label: 'Title' },
+    { key: 'client', label: 'Client' },
+    { key: 'budget_usd', label: 'Budget' },
+    { key: 'status', label: 'Status', editable: true },
+  ],
   services: [
-    { key: 'title', label: 'Title' };
-    { key: 'category', label: 'Category' };
-    { key: 'price_usd', label: 'Price' };
-    { key: 'status', label: 'Status', editable: true };
-  ];
+    { key: 'title', label: 'Title' },
+    { key: 'category', label: 'Category' },
+    { key: 'price_usd', label: 'Price' },
+    { key: 'status', label: 'Status', editable: true },
+  ],
   job_posts: [
-    { key: 'title', label: 'Title' };
-    { key: 'company', label: 'Company' };
-    { key: 'location', label: 'Location' };
-    { key: 'employment_type', label: 'Type' };
-    { key: 'status', label: 'Status', editable: true };
-  ];
+    { key: 'title', label: 'Title' },
+    { key: 'company', label: 'Company' },
+    { key: 'location', label: 'Location' },
+    { key: 'employment_type', label: 'Type' },
+    { key: 'status', label: 'Status', editable: true },
+  ],
   equipment: [
-    { key: 'name', label: 'Name' };
-    { key: 'category', label: 'Category' };
-    { key: 'daily_rate_usd', label: 'Daily Rate' };
-    { key: 'status', label: 'Status', editable: true };
-  ];
-};
+    { key: 'name', label: 'Name' },
+    { key: 'category', label: 'Category' },
+    { key: 'daily_rate_usd', label: 'Daily Rate' },
+    { key: 'status', label: 'Status', editable: true },
+  ],
+},
 function formatCell(value: any) {
-  if (Array.isArray(value)) return value.join(', '),
+  if (Array.isArray(value)) return value.join(),
   if (typeof value === 'boolean') return value ? 'Yes' : 'No',
   return value ?? ''}
 ,
@@ -63,17 +63,17 @@ export default function AdminTable() {
   async function load() {
     setLoading(true),
     try {
-      const filters: Record<string any> = {};
+      const filters: Record<string any> = {},
       if (statusFilter) filters.status = statusFilter,
       if (roleFilter && type === 'users') filters.role = roleFilter,
       if (verifiedOnly) filters.verified = true,
       const data = await listItems(type, {
-        search;
-        sort;
-        order;
-        page;
-        pageSize;
-        filters;
+        search,
+        sort,
+        order,
+        page,
+        pageSize,
+        filters,
       }),
       setRows(data.items),
       setTotal(data.total)} finally {
@@ -82,15 +82,15 @@ export default function AdminTable() {
 ,
   useEffect(() => {
     load(), /* eslint-disable-next-line */}, [
-    type;
-    search;
-    sort;
-    order;
-    page;
-    pageSize;
-    statusFilter;
-    roleFilter;
-    verifiedOnly;
+    type,
+    search,
+    sort,
+    order,
+    page,
+    pageSize,
+    statusFilter,
+    roleFilter,
+    verifiedOnly,
   ]),
   async function onToggleVerified(r: any) {
     await updateItem(type, r.id, { verified: !r.verified }),
@@ -107,17 +107,17 @@ export default function AdminTable() {
 ,
   async function onExportCsv() {
     const csv = await listItems(type, {
-      search;
-      sort;
-      order;
-      page;
-      pageSize;
+      search,
+      sort,
+      order,
+      page,
+      pageSize,
       filters: {
-        ...(statusFilter && { status: statusFilter });
-        ...(roleFilter && { role: roleFilter });
-        ...(verifiedOnly && { verified: true });
-      };
-      format: 'csv';
+        ...(statusFilter && { status: statusFilter }),
+        ...(roleFilter && { role: roleFilter }),
+        ...(verifiedOnly && { verified: true }),
+      },
+      format: 'csv'
     }),
     const blob = new Blob([csv as string], { type: 'text/csv,charset=utf-8,' }),
     const url = URL.createObjectURL(blob),

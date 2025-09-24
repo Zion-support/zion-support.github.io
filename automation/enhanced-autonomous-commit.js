@@ -7,7 +7,7 @@ class EnhancedAutonomousCommit {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'autonomous-commit.log'),
+    this.logFile = path.join(__dirname, 'logsautonomous-commit.log'),
     this.ensureLogDirectory()}
 ,
   loadConfig() {
@@ -15,12 +15,12 @@ class EnhancedAutonomousCommit {
     if (fs.existsSync(configPath)) {
       return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
     return {
-      maxCommitSize: 50;
-      commitMessageTemplate: 'fix: {description}';
-      branch: 'main';
-      autoPush: true;
-      enableLogging: true;
-      autoFixEnabled: true};
+      maxCommitSize: 50,
+      commitMessageTemplate: 'fix: {description}',
+      branch: 'main',
+      autoPush: true,
+      enableLogging: true,
+      autoFixEnabled: true},
   }
 ,
   ensureLogDirectory() {
@@ -69,11 +69,11 @@ class EnhancedAutonomousCommit {
     const fileTypes = this.analyzeFileTypes(files),
     const description = this.generateDescription(fileTypes),
     return this.config.commitMessageTemplate.replace(
-      '{description}';
+      '{description}',
       description)}
 ,
   analyzeFileTypes(files) {
-    const types ={};
+    const types ={},
     files.forEach((file) => {
       const ext = path.extname(file),
       types[ext] = (types[ext] || 0) + 1}),
@@ -90,7 +90,7 @@ class EnhancedAutonomousCommit {
         descriptions.push(
           `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`)}
     }
-    return descriptions.join(', ')}
+    return descriptions.join()}
 ,
   async commit(message) {
     try {
@@ -141,7 +141,7 @@ class EnhancedAutonomousCommit {
     // Commit,
     const committed = await this.commit(message),
     if (!committed) {
-      this.log('Failed to commit changes', 'error'),
+      this.log('Failed to commit changeserror'),
       return}
 ,
     // Push if enabled,

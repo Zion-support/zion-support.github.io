@@ -1,7 +1,7 @@
 
 ,
 export function verifySignature(
-  payload: unknown;
+  payload: unknown,
   signature?: string | null): boolean {
   const secret = getSyncSecret(),
   if (!secret) return true,
@@ -14,7 +14,7 @@ export function verifySignature(
   try {
     // Constant-time comparison,
     return crypto.timingSafeEqual(
-      Buffer.from(signature);
+      Buffer.from(signature),
       Buffer.from(expected))} catch {
     return false}
 }
@@ -27,8 +27,8 @@ export function signPayload(payload: any, privateKey?: string): SignatureResult 
   const dataToSign = JSON && JSON.stringify(payload) + timestamp + nonce,
   const signature = crypto && crypto.createHash('sha256').update(dataToSign).digest('hex'),
   return {
-    signature;
-    timestamp;
-    nonce};
+    signature,
+    timestamp,
+    nonce},
 }
 ,

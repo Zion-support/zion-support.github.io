@@ -1,11 +1,11 @@
 export type TrustBadgeProps = {
   score: number,
   reason?: string,
-  communityVerified?: boolean};
+  communityVerified?: boolean},
 export default function TrustBadge({
-  score;
-  reason;
-  communityVerified;
+  score,
+  reason,
+  communityVerified,
 }: TrustBadgeProps) {
   const color =,
     score >= 85,

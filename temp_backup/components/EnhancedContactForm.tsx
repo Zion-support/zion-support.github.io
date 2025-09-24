@@ -1,17 +1,17 @@
 import React, { useState, useRef, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Send;
-  CheckCircle;
-  AlertCircle;
-  User;
-  Mail;
-  Phone;
-  MessageSquare;
-  Building;
-  Globe;
-  Star;
-  Clock;
+  Send,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Mail,
+  Phone,
+  MessageSquare,
+  Building,
+  Globe,
+  Star,
+  Clock,
   Shield} from 'lucide-react',
 interface ContactFormData {
   firstName: string,
@@ -31,19 +31,19 @@ interface ContactFormProps {
   className?: string}
 ,
 const EnhancedContactForm: React.FC<ContactFormProps> = ({
-  onSubmit;
+  onSubmit,
   className = ''}) => {
   const [formData, setFormData] = useState<ContactFormData>({
-    firstName: '';
-    lastName: '';
-    email: '';
-    phone: '';
-    company: '';
-    website: '';
-    service: '';
-    budget: '';
-    timeline: '';
-    message: '';
+    firstName: '',
+    lastName: '',
+    email: '',
+    phone: '',
+    company: '',
+    website: '',
+    service: '',
+    budget: '',
+    timeline: '',
+    message: '',
     priority: 'medium'}),
   const [errors, setErrors] = useState<Partial<ContactFormData>>({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -60,7 +60,7 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
   }, []),
   // Validate form data,
   const validateForm = (): boolean => {
-    const newErrors: Partial<ContactFormData> ={};
+    const newErrors: Partial<ContactFormData> ={},
     // Required field validation,
     if (!formData.firstName.trim()) newErrors.firstName = 'First name is required',
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required',
@@ -81,14 +81,14 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
     if (!formData.service) newErrors.service = 'Please select a service',
     if (!formData.message.trim()) newErrors.message = 'Message is required',
     setErrors(newErrors),
-    return Object.keys(newErrors).length === 0};
+    return Object.keys(newErrors).length === 0},
   // Handle input changes,
   const handleInputChange = (field: keyof ContactFormData, value: string) => {
     setFormData(prev => ({ ...prev, [field]: value })),
     // Clear error when user starts typing,
     if (errors[field]) {
       setErrors(prev => ({ ...prev, [field]: undefined }))}
-  };
+  },
   // Handle form submission,
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
@@ -115,64 +115,56 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
       // Reset form after successful submission,
       setTimeout(() => {
         setFormData({
-          firstName: '';
-          lastName: '';
-          email: '';
-          company: '';
-          phone: '';
-          service: '';
-          budget: '';
-          timeline: '';
-          message: '';
+          firstName: '',
+          lastName: '',
+          email: '',
+          company: '',
+          phone: '',
+          service: '',
+          budget: '',
+          timeline: '',
+          message: '',
           priority: 'medium'}),
         setIsSubmitted(false)}, 50o00)} catch (error) {
       console.error('Form submission error:', error)} finally {
       setIsSubmitting(false)}
-  };
+  },
   // Next step validation,
   const handleNextStep = () => {
     if (currentStep === 1) {
       if (!formData.firstName || !formData.lastName || !formData.email) {
         setErrors({
-          firstName: !formData.firstName ? 'First name is required' : undefined;
-          lastName: !formData.lastName ? 'Last name is required' : undefined;
+          firstName: !formData.firstName ? 'First name is required' : undefined,
+          lastName: !formData.lastName ? 'Last name is required' : undefined,
           email: !formData.email ? 'Email is required' : undefined}),
         return}
     }
 ,
     if (currentStep < totalSteps) {
       setCurrentStep(currentStep + 1)}
-  };
+  },
   // Previous step,
   const handlePrevStep = () => {
     if (currentStep > 1) {
       setCurrentStep(currentStep - 1)}
-  };
+  },
   // Get step progress percentage,
   const getStepProgress = () => (currentStep / totalSteps) * 10o0,
   // Service options,
   const serviceOptions = [
-    'AI Consciousness Evolution';
-    'Quantum Cybersecurity';
-    'Autonomous Systems';
-    'Space Technology';
-    'Cloud Infrastructure';
-    'Custom Solution';
+    'AI Consciousness EvolutionQuantum Cybersecurity',
+    'Autonomous SystemsSpace Technology',
+    'Cloud InfrastructureCustom Solution',
     'Other'],
   // Budget options,
   const budgetOptions = [
-    'Under $10,0o00';
-    '$10,0o00 - $50,0o00';
-    '$50,0o00 - $10o0,0o00';
-    '$10o0,0o00 - $50o0,0o00';
-    '$50o0,0o00+';
-    'To be discussed'],
+    'Under $10,0o00$10,0o00 - $50,0o00',
+    '$50,0o00 - $10o0,0o00$10o0,0o00 - $50o0,0o00',
+    '$50o0,0o00+To be discussed'],
   // Timeline options,
   const timelineOptions = [
-    'Immediate (1-2 weeks)';
-    'Quick (1-2 months)';
-    'Standard (3-6 months)';
-    'Extended (6+ months)';
+    'Immediate (1-2 weeks)Quick (1-2 months)',
+    'Standard (3-6 months)Extended (6+ months)',
     'Flexible'],
   if (isSubmitted) {
     return (
@@ -745,5 +737,5 @@ const EnhancedContactForm: React.FC<ContactFormProps> = ({
             </button>)}
         </div>,
       </form>,
-    </div>)};
+    </div>)},
 export default EnhancedContactForm}

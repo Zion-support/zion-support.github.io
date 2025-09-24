@@ -4,26 +4,26 @@ export default function SimpleService175553827808250uzm7om8() {
   const [selectedPlan, setSelectedPlan] = useState(0),
   const serviceData ={
     features: [
-      "Strategic Consulting";
-      "Technology Assessment";
-      "Digital Transformation";
-      "Process Optimization";
-      "Change Management";
-      "Performance Monitoring"];
+      "Strategic Consulting",
+      "Technology Assessment",
+      "Digital Transformation",
+      "Process Optimization",
+      "Change Management",
+      "Performance Monitoring"],
     pricing: [
       {
-        plan: "Starter";
-        price: "$1,499/month";
-        features: ["Basic Consultation", "Standard Support", "Monthly Reports"]};
+        plan: "Starter",
+        price: "$1,499/month",
+        features: ["Basic Consultation", "Standard Support", "Monthly Reports"]},
       {
-        plan: "Professional";
-        price: "$3,499/month";
-        features: ["Advanced Consulting", "Priority Support", "Weekly Reports"]};
+        plan: "Professional",
+        price: "$3,499/month",
+        features: ["Advanced Consulting", "Priority Support", "Weekly Reports"]},
       {
-        plan: "Enterprise";
-        price: "$6,999/month";
+        plan: "Enterprise",
+        price: "$6,999/month",
         features: ["Full Consulting Suite", "Dedicated Support", "Real-time Analytics"]}
-    ]};
+    ]},
   return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,

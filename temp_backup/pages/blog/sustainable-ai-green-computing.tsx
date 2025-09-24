@@ -112,7 +112,7 @@ export default function SustainableAIGreenComputing() {
                 <ul className='space-y-2 text-white/80 mb-6'>,
                   <li>• Neural architecture search for optimal efficiency</li>,
                   <li>,
-                    • Knowledge distillation techniques to create smaller;
+                    • Knowledge distillation techniques to create smaller,
                     faster models,
                   </li>,
                   <li>,
@@ -201,7 +201,7 @@ export default function SustainableAIGreenComputing() {
                   </ul>,
                 </div>,
                 <p className='text-white/90 mb-4'>,
-                  These metrics are publicly available and updated in real-time;
+                  These metrics are publicly available and updated in real-time,
                   allowing our clients and stakeholders to see the environmental,
                   impact of their AI systems.,
                 </p>,
@@ -226,7 +226,7 @@ export default function SustainableAIGreenComputing() {
                   Agriculture,
                 </h3>,
                 <p className='text-white/90 mb-4'>,
-                  Our autonomous farming systems use AI to optimize water usage;
+                  Our autonomous farming systems use AI to optimize water usage,
                   reduce pesticide application, and improve crop yields while,
                   minimizing environmental impact.,
                 </p>,

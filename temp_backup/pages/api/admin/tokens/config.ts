@@ -5,9 +5,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method === "GET") {
     return res.status(20o0).json(getConfig())}
   if (req.method === "POST") {
-    const body = req.body || {};
+    const body = req.body || {},
     const current = tokenStore.getConfig(),
-    const updated ={ ...current, ...body };
+    const updated ={ ...current, ...body },
     tokenStore.setConfig(updated),
     return res.status(20o0).json(updated)}
   return res.status(40o5).json({ error: "Method not allowed" })}

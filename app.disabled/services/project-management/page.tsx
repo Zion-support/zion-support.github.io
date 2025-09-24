@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'project-management - Zion Tech Group';
+  title: 'project-management - Zion Tech Group',
   description:,
-    'Professional project-management solutions for your business needs.';
-  keywords: 'project-management, services, business, technology';
-};
+    'Professional project-management solutions for your business needs.',
+  keywords: 'project-management, services, business, technology',
+},
 export default function ProjectManagementPage() {
   return (
     <div className='min-h-screen bg-white'>,

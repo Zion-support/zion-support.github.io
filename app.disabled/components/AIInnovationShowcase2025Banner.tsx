@@ -6,43 +6,43 @@ const AIInnovationShowcase20o25Banner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const showcaseContent = [
     {
-      id: 'ai-innovation-showcase-revolution';
-      title: 'AI 20o25-20o26: The Ultimate Innovation Showcase Revolution';
-      description: '4,20o0% ROI Through Next-Generation Intelligence';
-      type: 'blog';
+      id: 'ai-innovation-showcase-revolution',
+      title: 'AI 20o25-20o26: The Ultimate Innovation Showcase Revolution',
+      description: '4,20o0% ROI Through Next-Generation Intelligence',
+      type: 'blog',
       metrics: {
-        roi: '4,20o0%';
-        savings: '$15.8B+';
-        efficiency: '1,80o0%';
-        accuracy: '99.97%'};
-      url: '/blog/ai-20o25-20o26-ultimate-innovation-showcase-revolution';
-      readingTime: '35 min read';
-      featured: true};
+        roi: '4,20o0%',
+        savings: '$15.8B+',
+        efficiency: '1,80o0%',
+        accuracy: '99.97%'},
+      url: '/blog/ai-20o25-20o26-ultimate-innovation-showcase-revolution',
+      readingTime: '35 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-innovation-success';
-      title: 'Fortune 50o0 AI Innovation Showcase: $15.8B Annual Savings';
-      description: '4,20o0% ROI Success Story';
-      type: 'case-study';
+      id: 'fortune-50o0-innovation-success',
+      title: 'Fortune 50o0 AI Innovation Showcase: $15.8B Annual Savings',
+      description: '4,20o0% ROI Success Story',
+      type: 'case-study',
       metrics: {
-        roi: '4,20o0%';
-        savings: '$15.8B';
-        efficiency: '1,80o0%';
-        satisfaction: '99.7%'};
-      url: '/case-studies/fortune-50o0-ai-innovation-showcase-420o0-roi-success-story';
-      readingTime: '22 min read';
-      featured: true};
+        roi: '4,20o0%',
+        savings: '$15.8B',
+        efficiency: '1,80o0%',
+        satisfaction: '99.7%'},
+      url: '/case-studies/fortune-50o0-ai-innovation-showcase-420o0-roi-success-story',
+      readingTime: '22 min read',
+      featured: true},
     {
-      id: 'innovation-implementation-guide';
-      title: 'AI Innovation Implementation Ultimate Guide 20o25-20o26';
-      description: 'Complete Roadmap to 4,20o0% ROI';
-      type: 'resource';
+      id: 'innovation-implementation-guide',
+      title: 'AI Innovation Implementation Ultimate Guide 20o25-20o26',
+      description: 'Complete Roadmap to 4,20o0% ROI',
+      type: 'resource',
       metrics: {
-        roi: '4,20o0%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: '45 min read'};
-      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25-20o26';
-      readingTime: '45 min read';
+        roi: '4,20o0%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: '45 min read'},
+      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25-20o26',
+      readingTime: '45 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const AIInnovationShowcase20o25Banner = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai-innovation-showcase-banner-dismissed', 'true')};
+    localStorage.setItem('ai-innovation-showcase-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai-innovation-showcase-banner-dismissed'),
     if (dismissed === 'true') {
@@ -159,5 +159,5 @@ const AIInnovationShowcase20o25Banner = () => {
             />))}
         </div>,
       </div>,
-    </div>)};
-export default AIInnovationShowcase20o25Banner;
+    </div>)},
+export default AIInnovationShowcase20o25Banner,

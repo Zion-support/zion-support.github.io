@@ -5,8 +5,8 @@ import Layout from '../components/layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   SearchFilterGrid3X3List,
-  StarUsersTrendingUpZapBrainAtomShieldRocketPaletteBookOpenTruckDollarSignSettings;
-  ArrowRightChevronDownCheckCircleClockAwardTargetGlobeSparklesCpuLockCloudBarChart3;
+  StarUsersTrendingUpZapBrainAtomShieldRocketPaletteBookOpenTruckDollarSignSettings,
+  ArrowRightChevronDownCheckCircleClockAwardTargetGlobeSparklesCpuLockCloudBarChart3,
   EyeHeartLightbulbPalette as PaletteIconCodeDatabaseShield as ShieldIconGlobe as GlobeIconZap as ZapIconTarget as Target} from 'lucide-react',
 // Import service data,
 import { innovativeRealMicroSaasServices2025 } from '../data/2025-innovative-real-micro-saas-services',
@@ -32,41 +32,41 @@ interface Service {
 ,
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices2025.map(service => ({
-    ...service;
-    category: 'Micro SAAS';
-    icon: <Rocket className="w-6 h-6" />}));
+    ...service,
+    category: 'Micro SAAS',
+    icon: <Rocket className="w-6 h-6" />})),
   ...innovativeAIServicesEnhanced2025.map(service => ({
-    ...service;
-    category: 'AI & Consciousness';
-    icon: <Brain className="w-6 h-6" />}));
+    ...service,
+    category: 'AI & Consciousness',
+    icon: <Brain className="w-6 h-6" />})),
   ...innovativeITServicesEnhanced2025.map(service => ({
-    ...service;
-    category: 'Enterprise IT';
-    icon: <Shield className="w-6 h-6" />}));
+    ...service,
+    category: 'Enterprise IT',
+    icon: <Shield className="w-6 h-6" />})),
   ...emergingTechServicesEnhanced2025.map(service => ({
-    ...service;
-    category: 'Quantum & Emerging Tech';
+    ...service,
+    category: 'Quantum & Emerging Tech',
     icon: <Atom className="w-6 h-6" />}))],
 const categories = [
-  { name: 'All 'Services', 'icon: <Globe className="w-5 h-5" />count: allServices.length };
-  { name: 'Micro 'SAAS', 'icon: <Rocket className="w-5 h-5" />count: innovativeRealMicroSaasServices2025.length };
-  { name: 'AI & 'Consciousness', 'icon: <Brain className="w-5 h-5" />count: innovativeAIServicesEnhanced2025.length };
-  { name: 'Enterprise 'IT', 'icon: <Shield className="w-5 h-5" />count: innovativeITServicesEnhanced2025.length };
-  { name: 'Quantum & Emerging 'Tech', 'icon: <Atom className="w-5 h-5" />count: emergingTechServicesEnhanced2025.length }
+  { name: 'All 'Servicesicon: <Globe className="w-5 h-5" />count: allServices.length },
+  { name: 'Micro 'SAASicon: <Rocket className="w-5 h-5" />count: innovativeRealMicroSaasServices2025.length },
+  { name: 'AI & 'Consciousnessicon: <Brain className="w-5 h-5" />count: innovativeAIServicesEnhanced2025.length },
+  { name: 'Enterprise 'ITicon: <Shield className="w-5 h-5" />count: innovativeITServicesEnhanced2025.length },
+  { name: 'Quantum & Emerging 'Techicon: <Atom className="w-5 h-5" />count: emergingTechServicesEnhanced2025.length }
 ],
 const priceRanges = [
-  { label: 'All 'Prices', 'value: 'all' };
-  { label: 'Under $50/'month', 'value: 'under-50' };
-  { label: '$50 - $200/'month', 'value: '50-200' };
-  { label: '$200 - $500/'month', 'value: '200-500' };
-  { label: 'Over $500/'month', 'value: 'over-500' }
+  { label: 'All 'Pricesvalue: 'all' },
+  { label: 'Under $50/'monthvalue: 'under-50' },
+  { label: '$50 - $200/'monthvalue: '50-200' },
+  { label: '$200 - $500/'monthvalue: '200-500' },
+  { label: 'Over $500/'monthvalue: 'over-500' }
 ],
 const sortOptions = [
-  { label: 'Most 'Popular', 'value: 'popular' };
-  { label: 'Highest 'Rated', 'value: 'rating' };
-  { label: ''Newest', 'value: 'newest' };
-  { label: 'Price: Low to 'High', 'value: 'price-low' };
-  { label: 'Price: High to 'Low', 'value: 'price-high' }
+  { label: 'Most 'Popularvalue: 'popular' },
+  { label: 'Highest 'Ratedvalue: 'rating' },
+  { label: ''Newestvalue: 'newest' },
+  { label: 'Price: Low to 'Highvalue: 'price-low' },
+  { label: 'Price: High to 'Lowvalue: 'price-high' }
 ],
 export default function ComprehensiveServicesShowcase2025() {
   const [searchTermsetSearchTerm] = useState(''),
@@ -91,7 +91,7 @@ export default function ComprehensiveServicesShowcase2025() {
     // Filter by price range,
     if (selectedPriceRange !== 'all') {
       filtered = filtered.filter(service => {
-        const price = parseFloat(service.price.replace(/[^0-9.]/g', ')),
+        const price = parseFloat(service.price.replace(/[^0-9.]/g)),
         switch (selectedPriceRange) {
           case 'under-50': return price < 50,
           case '50-200': return price >= 50 && price <= 200,
@@ -110,9 +110,9 @@ export default function ComprehensiveServicesShowcase2025() {
         case 'newest':,
           return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
         case 'price-low':,
-          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', ')),
+          return parseFloat(a.price.replace(/[^0-9.]/g)) - parseFloat(b.price.replace(/[^0-9.]/g', ')),
         case 'price-high':,
-          return parseFloat(b.price.replace(/[^0-9.]/g', ')) - parseFloat(a.price.replace(/[^0-9.]/g', ')),
+          return parseFloat(b.price.replace(/[^0-9.]/g)) - parseFloat(a.price.replace(/[^0-9.]/g', ')),
         default: ,
           return 0}
     }),
@@ -124,7 +124,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Enterprise IT': return 'from-green-500 to-emerald-500',
       case 'Quantum & Emerging Tech': return 'from-orange-500 to-red-500',
       default: return 'from-gray-500 to-slate-500'}
-  };
+  },
   return (
     <Layout>,
       <Head>,
@@ -166,7 +166,7 @@ export default function ComprehensiveServicesShowcase2025() {
       case 'Enterprise IT': return <Shield className="w-5 h-5" />,
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5" />,
       default: return <Globe className="w-5 h-5" />}
-  };
+  },
   return (
     <Layout>,
       <Head>,
@@ -188,15 +188,15 @@ export default function ComprehensiveServicesShowcase2025() {
               key={i}
               className="absolute w-2 h-2 bg-cyan-400 rounded-full opacity-20",
               animate={{
-                x: [0100];
-                y: [0-100];
+                x: [0100],
+                y: [0-100],
                 opacity: [0.20.80.2]}}
               transition={{
-                duration: 10 + i * 2;
-                repeat: Infinity;
+                duration: 10 + i * 2,
+                repeat: Infinity,
                 delay: i * 0.5}}
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`}}
             />))}
         </div>,
@@ -219,10 +219,10 @@ export default function ComprehensiveServicesShowcase2025() {
             {/* Stats */}
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">,
               {[
-                { label: 'Total 'Services', 'value: allServices.lengthicon: <Globe className="w-8 h-8" /> };
-                { label: 'AI 'Solutions', 'value: innovativeAIServicesEnhanced2025.lengthicon: <Brain className="w-8 h-8" /> };
-                { label: 'IT 'Services', 'value: innovativeITServicesEnhanced2025.lengthicon: <Shield className="w-8 h-8" /> };
-                { label: 'Emerging 'Tech', 'value: emergingTechServicesEnhanced2025.lengthicon: <Atom className="w-8 h-8" /> }
+                { label: 'Total 'Servicesvalue: allServices.lengthicon: <Globe className="w-8 h-8" /> },
+                { label: 'AI 'Solutionsvalue: innovativeAIServicesEnhanced2025.lengthicon: <Brain className="w-8 h-8" /> },
+                { label: 'IT 'Servicesvalue: innovativeITServicesEnhanced2025.lengthicon: <Shield className="w-8 h-8" /> },
+                { label: 'Emerging 'Techvalue: emergingTechServicesEnhanced2025.lengthicon: <Atom className="w-8 h-8" /> }
               ].map((statindex) => (
                 <motion.div,
                   key={stat.label}
@@ -500,7 +500,7 @@ export default function ComprehensiveServicesShowcase2025() {
             </div>,
             <h3 className="text-2xl font-bold text-white mb-2">No services found</h3>,
             <p className="text-gray-400 mb-6">,
-              Try adjusting your search terms or filters to find what 'you', 're looking for.,
+              Try adjusting your search terms or filters to find what 'youre looking for.,
             </p>,
             <button
               onClick={() => {

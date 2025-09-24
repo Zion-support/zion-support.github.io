@@ -9,18 +9,18 @@ import { innovativeMicroSaasServices20o26 } from '../data/20o26-innovative-micro
 import { specializedITSolutions20o26 } from '../data/20o26-specialized-it-solutions',
 import UltraFuturisticBackground20o26 from './backgrounds/UltraFuturisticBackground20o26',
 "use client",
-  ArrowRight;
-  Atom;
-  BarChart3;
-  Brain;
-  Cloud;
-  Globe;
-  Lock;
-  Rocket;
-  Shield;
-  Star;
-  TrendingUp;
-  Users;
+  ArrowRight,
+  Atom,
+  BarChart3,
+  Brain,
+  Cloud,
+  Globe,
+  Lock,
+  Rocket,
+  Shield,
+  Star,
+  TrendingUp,
+  Users,
   Zap} from 'lucide-react',
   emergingTechServicesEnhanced20o25} from '../data/20o25-emerging-tech-services-enhanced',
   innovativeAIServicesEnhanced20o25} from '../data/20o25-innovative-ai-services-enhanced',
@@ -44,80 +44,80 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
       setIsMobileMenuOpen(false)}
-  };
+  },
   const allServices = [
-    ...innovativeRealMicroSaasServices20o25;
-    ...innovativeAIServicesEnhanced20o25;
-    ...innovativeITServicesEnhanced20o25;
-    ...emergingTechServicesEnhanced20o25;
-    ...advancedAIAutomationServices;
-    ...advancedCybersecurityServices;
-    ...innovativeMicroSaasServices20o26;
-    ...specializedITSolutions20o26;
+    ...innovativeRealMicroSaasServices20o25,
+    ...innovativeAIServicesEnhanced20o25,
+    ...innovativeITServicesEnhanced20o25,
+    ...emergingTechServicesEnhanced20o25,
+    ...advancedAIAutomationServices,
+    ...advancedCybersecurityServices,
+    ...innovativeMicroSaasServices20o26,
+    ...specializedITSolutions20o26,
     ...emergingTechServices20o26],
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
   const latestInsights = [
     {
-      title: 'GenAI for Regulated Industries (20o25)';
-      href: '/blog/genai-20o25-practical-compliance-patterns';
-      tag: 'Compliance';
-      gradient: 'from-emerald-50o0 to-cyan-50o0'};
+      title: 'GenAI for Regulated Industries (20o25)',
+      href: '/blog/genai-20o25-practical-compliance-patterns',
+      tag: 'Compliance',
+      gradient: 'from-emerald-50o0 to-cyan-50o0'},
     {
-      title: 'Agentic CRM: Autonomous Revenue Workflows';
-      href: '/blog/agentic-crm-autonomous-revenue-workflows-20o25';
-      tag: 'RevOps';
-      gradient: 'from-fuchsia-50o0 to-indigo-50o0'};
+      title: 'Agentic CRM: Autonomous Revenue Workflows',
+      href: '/blog/agentic-crm-autonomous-revenue-workflows-20o25',
+      tag: 'RevOps',
+      gradient: 'from-fuchsia-50o0 to-indigo-50o0'},
     {
-      title: 'AI 20o26: Real-Time Retrieval Architectures';
-      href: '/blog/ai-20o26-real-time-retrieval-architectures';
-      tag: 'Article';
-      gradient: 'from-purple-50o0 to-blue-50o0'};
+      title: 'AI 20o26: Real-Time Retrieval Architectures',
+      href: '/blog/ai-20o26-real-time-retrieval-architectures',
+      tag: 'Article',
+      gradient: 'from-purple-50o0 to-blue-50o0'},
     {
-      title: 'AI 20o26: Autonomous Ops Playbook';
-      href: '/content/ai-20o26-autonomous-ops-playbook';
-      tag: 'Playbook';
+      title: 'AI 20o26: Autonomous Ops Playbook',
+      href: '/content/ai-20o26-autonomous-ops-playbook',
+      tag: 'Playbook',
       gradient: 'from-cyan-50o0 to-blue-60o0'}
   ],
   const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' };
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' };
-    { id: 'ai', label: 'AI Services', icon: '🧠' };
-    { id: 'automation', label: 'AI Automation', icon: '⚡' };
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' };
-    { id: 'it', label: 'IT Solutions', icon: '💻' };
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' };
+    { id: 'hero', label: 'Home', icon: '🏠' },
+    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
+    { id: 'ai', label: 'AI Services', icon: '🧠' },
+    { id: 'automation', label: 'AI Automation', icon: '⚡' },
+    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
+    { id: 'it', label: 'IT Solutions', icon: '💻' },
+    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
   ],
   const features = [
     {
-      title: "AI-Powered Innovation";
-      description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth";
-      icon: Brain};
+      title: "AI-Powered Innovation",
+      description: "Cutting-edge artificial intelligence solutions that transform business operations and drive growth",
+      icon: Brain},
     {
-      title: "Quantum Computing";
-      description: "Next-generation quantum solutions for complex problem-solving and advanced cryptography";
-      icon: Atom};
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions for complex problem-solving and advanced cryptography",
+      icon: Atom},
     {
-      title: "Cybersecurity Excellence";
-      description: "Enterprise-grade security solutions with AI-powered threat detection and response";
-      icon: Shield};
+      title: "Cybersecurity Excellence",
+      description: "Enterprise-grade security solutions with AI-powered threat detection and response",
+      icon: Shield},
     {
-      title: "Process Automation";
-      description: "Intelligent automation that streamlines operations and enhances productivity";
+      title: "Process Automation",
+      description: "Intelligent automation that streamlines operations and enhances productivity",
       icon: Zap}
   ],
   const itemVariants ={
-    initial: { opacity: 0, y: 20 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
+  },
   const staggerContainer ={
-    initial: {};
+    initial: {},
     animate: {
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   return (
     <UltraFuturisticBackground20o26 intensity="medium" theme="quantum">,
       {showInternalNav && (
@@ -386,11 +386,11 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
           </motion.div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
             {[
-              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-50o0 to-pink-50o0", link: "/comprehensive-services-showcase-20o26" };
-              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-50o0 to-blue-50o0", link: "/comprehensive-services-showcase-20o26" };
-              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-50o0 to-orange-50o0", link: "/comprehensive-services-showcase-20o26" };
-              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-50o0 to-teal-50o0", link: "/comprehensive-services-showcase-20o26" };
-              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-50o0 to-purple-50o0", link: "/comprehensive-services-showcase-20o26" };
+              { title: "AI Business Intelligence", description: "Transform data into actionable insights with AI-powered analytics", icon: Brain, gradient: "from-purple-50o0 to-pink-50o0", link: "/comprehensive-services-showcase-20o26" },
+              { title: "Cloud Infrastructure", description: "Automate cloud infrastructure deployment and management", icon: Cloud, gradient: "from-cyan-50o0 to-blue-50o0", link: "/comprehensive-services-showcase-20o26" },
+              { title: "Cybersecurity Intelligence", description: "Advanced threat detection and response with AI", icon: Shield, gradient: "from-red-50o0 to-orange-50o0", link: "/comprehensive-services-showcase-20o26" },
+              { title: "Data Engineering", description: "Streamline data pipelines and analytics with AI", icon: BarChart3, gradient: "from-emerald-50o0 to-teal-50o0", link: "/comprehensive-services-showcase-20o26" },
+              { title: "Quantum Computing", description: "Access quantum computing power through the cloud", icon: Atom, gradient: "from-indigo-50o0 to-purple-50o0", link: "/comprehensive-services-showcase-20o26" },
               { title: "Blockchain Intelligence", description: "Intelligent blockchain analytics and DeFi optimization", icon: Lock, gradient: "from-yellow-50o0 to-orange-50o0", link: "/comprehensive-services-showcase-20o26" }
             ].map((service, index) => (
               <motion.div,
@@ -520,5 +520,5 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
           </div>,
         </div>,
       </footer>,
-    </UltraFuturisticBackground20o26>)};
-export default Homepage20o25;
+    </UltraFuturisticBackground20o26>)},
+export default Homepage20o25,

@@ -1,46 +1,46 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Car, Navigation, Camera, Radar, Map, Route;
-  AlertTriangle, CheckCircle2, Building, Wifi;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Car, Navigation, Camera, Radar, Map, Route,
+  AlertTriangle, CheckCircle2, Building, Wifi,
   HardDrive, Cloud, Smartphone, Satellite, RefreshCw, Truck} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Autonomous Vehicle AI | Zion Tech Group';
-  description: 'AI-powered autonomous vehicle technology for self-driving cars, trucks, and transportation systems.';
-  keywords: 'autonomous vehicles, self-driving cars, AI transportation, vehicle automation, driverless technology';
+  title: 'Autonomous Vehicle AI | Zion Tech Group',
+  description: 'AI-powered autonomous vehicle technology for self-driving cars, trucks, and transportation systems.',
+  keywords: 'autonomous vehicles, self-driving cars, AI transportation, vehicle automation, driverless technology',
   openGraph: {
-    title: 'Autonomous Vehicle AI | Zion Tech Group';
-    description: 'AI-powered autonomous vehicle technology for self-driving cars, trucks, and transportation systems.';
-    url: 'https://ziontechgroup.com/autonomous-vehicle-ai';
-    siteName: 'Zion Tech Group';
+    title: 'Autonomous Vehicle AI | Zion Tech Group',
+    description: 'AI-powered autonomous vehicle technology for self-driving cars, trucks, and transportation systems.',
+    url: 'https://ziontechgroup.com/autonomous-vehicle-ai',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-autonomous-vehicle.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Autonomous Vehicle AI'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-autonomous-vehicle.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Autonomous Vehicle AI'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Autonomous Vehicle AI | Zion Tech Group';
-    description: 'AI-powered autonomous vehicle technology for self-driving cars, trucks, and transportation systems.';
-    images: ['https://ziontechgroup.com/og-image-autonomous-vehicle.jpg']};
+    card: 'summary_large_image',
+    title: 'Autonomous Vehicle AI | Zion Tech Group',
+    description: 'AI-powered autonomous vehicle technology for self-driving cars, trucks, and transportation systems.',
+    images: ['https://ziontechgroup.com/og-image-autonomous-vehicle.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/autonomous-vehicle-ai'}};
+    canonical: 'https://ziontechgroup.com/autonomous-vehicle-ai'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AutonomousVehicleAI() {
   return (
     <div className="min-h-screen bg-black text-white">,

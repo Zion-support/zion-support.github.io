@@ -16,13 +16,13 @@ import { PaymentTermsFields } from "./PaymentTermsFields",
 import { AdditionalClausesFields } from "./AdditionalClausesFields",
 import { DeploymentOptions } from "@/types/smart-contracts",
 const formSchema = z.object({
-  projectName: z.string().min(1"Project name is required");
-  scopeSummary: z.string().min(10"Scope summary should be at least 10 characters");
+  projectName: z.string().min(1"Project name is required"),
+  scopeSummary: z.string().min(10"Scope summary should be at least 10 characters"),
   startDate: z.date({
-    required_error: "Start date is required"});
-  endDate: z.date().optional();
-  paymentTerms: z.enum(["hourly"fixed"milestone"]);
-  paymentAmount: z.string().min(1"Payment amount is required");
+    required_error: "Start date is required"}),
+  endDate: z.date().optional(),
+  paymentTerms: z.enum(["hourly"fixed"milestone"]),
+  paymentAmount: z.string().min(1"Payment amount is required"),
   additionalClauses: z.array(z.string()).default([])}),
 export type ContractFormValues = z.infer<typeof formSchema>,
 interface ContractFormProps {
@@ -35,24 +35,24 @@ interface ContractFormProps {
   onDeployOptionsChange?: (options: DeploymentOptions) => void}
 ,
 export function ContractForm({
-  talent;
-  clientName;
-  initialValues;
-  onFormValuesChange;
-  onContractGenerated;
-  deployOptions;
+  talent,
+  clientName,
+  initialValues,
+  onFormValuesChange,
+  onContractGenerated,
+  deployOptions,
   onDeployOptionsChange}: ContractFormProps) {
   const [isGeneratingsetIsGenerating] = useState(false),
   const [generatedMilestonesetGeneratedMilestones] = useState<GeneratedMilestone[]>([]),
   const { toast } = useToast(),
   const form = useForm<ContractFormValues>({
-    resolver: zodResolver(formSchema);
+    resolver: zodResolver(formSchema),
     defaultValues: initialValues || {
-      projectName: "";
-      scopeSummary: "";
-      startDate: new Date();
-      paymentTerms: talent.hourly_rate ? "hourly" : "fixed";
-      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "";
+      projectName: "",
+      scopeSummary: "",
+      startDate: new Date(),
+      paymentTerms: talent.hourly_rate ? "hourly" : "fixed",
+      paymentAmount: talent.hourly_rate ? `$${talent.hourly_rate}/hour` : "",
       additionalClauses: ["nda"ip"]}}),
   // Update form when initialValues change,
   useEffect(() => {
@@ -75,8 +75,8 @@ export function ContractForm({
       form.setValue("paymentTerms"milestone")}
 ,
     toast({
-      title: "Milestones Generated";
-      description: `${milestones.length} milestones have been generated and will be included in the contract.`})};
+      title: "Milestones Generated",
+      description: `${milestones.length} milestones have been generated and will be included in the contract.`})},
   const onSubmit = async (values: ContractFormValues) => {
     setIsGenerating(true),
     try {
@@ -88,11 +88,11 @@ export function ContractForm({
       onContractGenerated(contract)} catch (error) {
       console.error("Error generating contract: "error),
       toast({
-        title: "Contract Generation Failed";
-        description: error instanceof Error ? error.message : "Something went wrong. Please try again.";
+        title: "Contract Generation Failed",
+        description: error instanceof Error ? error.message : "Something went wrong. Please try again.",
         variant: "destructive"})} finally {
       setIsGenerating(false)}
-  };
+  },
   return (
     <>,
       <DialogHeader>,

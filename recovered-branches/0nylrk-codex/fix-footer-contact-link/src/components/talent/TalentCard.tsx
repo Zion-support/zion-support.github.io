@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Button } from "@/components/ui/button",
 import { Card } from "@/components/ui/card",
@@ -14,11 +14,11 @@ export interface TalentCardProps {
   isAuthenticated: boolean}
 ,
 export function TalentCard({
-  talent;
-  onViewProfile;
-  onRequestHire;
-  isSaved;
-  onToggleSave;
+  talent,
+  onViewProfile,
+  onRequestHire,
+  isSaved,
+  onToggleSave,
   isAuthenticated}: TalentCardProps) {
   const navigate = useNavigate(),
   const handleViewProfile = () => {
@@ -27,19 +27,19 @@ export function TalentCard({
     // Also call the onViewProfile callback if provided,
     if (onViewProfile) {
       onViewProfile(talent.id)}
-  };
+  },
   const handleRequestHire = (e: React.MouseEvent) => {
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestHire) {
       onRequestHire(talent)}
-  };
+  },
   const handleToggleSave = (e: React.MouseEvent) => {
     e.preventDefault(),
     e.stopPropagation(),
     if (onToggleSave) {
       onToggleSave(talent.id!isSaved)}
-  };
+  },
   // Extract skills - limit to 5 for display,
   const skills = talent.skills?.slice(05) || [],
   return (

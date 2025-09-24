@@ -10,28 +10,28 @@ import {
   Search,
   Image,
   FileText,
-  Video;
-  Mic;
-  Camera;
-  Database;
-  Cpu;
-  Network;
-  Shield;
-  Globe;
-  Smartphone;
-  Monitor;
-  Server;
-  Cloud;
-  ArrowRight;
-  Play;
-  Download;
-  Star;
-  CheckCircle;
-  Sparkles;
-  Rocket;
-  TrendingUp;
-  Users;
-  Target;
+  Video,
+  Mic,
+  Camera,
+  Database,
+  Cpu,
+  Network,
+  Shield,
+  Globe,
+  Smartphone,
+  Monitor,
+  Server,
+  Cloud,
+  ArrowRight,
+  Play,
+  Download,
+  Star,
+  CheckCircle,
+  Sparkles,
+  Rocket,
+  TrendingUp,
+  Users,
+  Target,
   Award} from 'lucide-react',
 const AIToolsUltimateShowcase20o26 = () => {
   const [activeCategorysetActiveCategory] = useState('productivity'),
@@ -41,270 +41,270 @@ const AIToolsUltimateShowcase20o26 = () => {
     setIsVisible(true)}[]),
   const categories ={
     productivity: {
-      title: 'Productivity Tools';
-      description: 'Boost efficiency with AI-powered productivity solutions';
-      color: 'from-blue-50o0 to-cyan-50o0';
-      icon: Zap};
+      title: 'Productivity Tools',
+      description: 'Boost efficiency with AI-powered productivity solutions',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      icon: Zap},
     development: {
-      title: 'Development Tools';
-      description: 'Accelerate coding with intelligent development assistants';
-      color: 'from-green-50o0 to-emerald-50o0';
-      icon: Code};
+      title: 'Development Tools',
+      description: 'Accelerate coding with intelligent development assistants',
+      color: 'from-green-50o0 to-emerald-50o0',
+      icon: Code},
     analytics: {
-      title: 'Analytics & Insights';
-      description: 'Unlock data insights with advanced AI analytics';
-      color: 'from-purple-50o0 to-pink-50o0';
-      icon: BarChart3};
+      title: 'Analytics & Insights',
+      description: 'Unlock data insights with advanced AI analytics',
+      color: 'from-purple-50o0 to-pink-50o0',
+      icon: BarChart3},
     multimedia: {
-      title: 'Multimedia AI';
-      description: 'Create and process multimedia content with AI';
-      color: 'from-orange-50o0 to-red-50o0';
-      icon: Image};
+      title: 'Multimedia AI',
+      description: 'Create and process multimedia content with AI',
+      color: 'from-orange-50o0 to-red-50o0',
+      icon: Image},
     security: {
-      title: 'Security Tools';
-      description: 'Protect your digital assets with AI security';
-      color: 'from-red-50o0 to-rose-50o0';
-      icon: Shield};
+      title: 'Security Tools',
+      description: 'Protect your digital assets with AI security',
+      color: 'from-red-50o0 to-rose-50o0',
+      icon: Shield},
     communication: {
-      title: 'Communication';
-      description: 'Enhance communication with AI-powered tools';
-      color: 'from-indigo-50o0 to-blue-50o0';
+      title: 'Communication',
+      description: 'Enhance communication with AI-powered tools',
+      color: 'from-indigo-50o0 to-blue-50o0',
       icon: Globe}
-  };
+  },
   const tools ={
     productivity: [
       {
-        name: 'AI Task Manager';
-        description: 'Intelligent task prioritization and scheduling';
-        icon: Target;
-        features: ['Auto-'prioritization', 'Smart 'scheduling', 'Progress tracking'];
-        rating: 4.9;
-        users: '50K+';
-        price: 'Free';
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'AI Task Manager',
+        description: 'Intelligent task prioritization and scheduling',
+        icon: Target,
+        features: ['Auto-'prioritizationSmart 'scheduling', 'Progress tracking'],
+        rating: 4.9,
+        users: '50K+',
+        price: 'Free',
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        name: 'Smart Document Processor';
-        description: 'Extract and organize information from any document';
-        icon: FileText;
-        features: ['OCR 'processing', 'Data 'extraction', 'Auto-categorization'];
-        rating: 4.8;
-        users: '25K+';
-        price: '$29/mo';
-        color: 'from-green-50o0 to-emerald-50o0'};
+        name: 'Smart Document Processor',
+        description: 'Extract and organize information from any document',
+        icon: FileText,
+        features: ['OCR 'processingData 'extraction', 'Auto-categorization'],
+        rating: 4.8,
+        users: '25K+',
+        price: '$29/mo',
+        color: 'from-green-50o0 to-emerald-50o0'},
       {
-        name: 'AI Meeting Assistant';
-        description: 'Transcribesummarizeand action items from meetings';
-        icon: Mic;
-        features: ['Live 'transcription', 'Auto-'summaries', 'Action items'];
-        rating: 4.9;
-        users: '75K+';
-        price: '$49/mo';
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'AI Meeting Assistant',
+        description: 'Transcribesummarizeand action items from meetings',
+        icon: Mic,
+        features: ['Live 'transcriptionAuto-'summaries', 'Action items'],
+        rating: 4.9,
+        users: '75K+',
+        price: '$49/mo',
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'Intelligent Email Manager';
-        description: 'Smart email organization and response suggestions';
-        icon: Globe;
-        features: ['Auto-'categorization', 'Smart 'replies', 'Priority inbox'];
-        rating: 4.7;
-        users: '10o0K+';
-        price: '$19/mo';
+        name: 'Intelligent Email Manager',
+        description: 'Smart email organization and response suggestions',
+        icon: Globe,
+        features: ['Auto-'categorizationSmart 'replies', 'Priority inbox'],
+        rating: 4.7,
+        users: '10o0K+',
+        price: '$19/mo',
         color: 'from-orange-50o0 to-red-50o0'}
-    ];
+    ],
     development: [
       {
-        name: 'AI Code Generator';
-        description: 'Generate code from natural language descriptions';
-        icon: Code;
-        features: ['Multi-'language', 'Code 'review', 'Auto-testing'];
-        rating: 4.9;
-        users: '20o0K+';
-        price: 'Free';
-        color: 'from-green-50o0 to-emerald-50o0'};
+        name: 'AI Code Generator',
+        description: 'Generate code from natural language descriptions',
+        icon: Code,
+        features: ['Multi-'languageCode 'review', 'Auto-testing'],
+        rating: 4.9,
+        users: '20o0K+',
+        price: 'Free',
+        color: 'from-green-50o0 to-emerald-50o0'},
       {
-        name: 'Smart Debugger';
-        description: 'AI-powered debugging and error resolution';
-        icon: Cpu;
-        features: ['Error 'detection', 'Fix 'suggestions', 'Performance analysis'];
-        rating: 4.8;
-        users: '150K+';
-        price: '$39/mo';
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'Smart Debugger',
+        description: 'AI-powered debugging and error resolution',
+        icon: Cpu,
+        features: ['Error 'detectionFix 'suggestions', 'Performance analysis'],
+        rating: 4.8,
+        users: '150K+',
+        price: '$39/mo',
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        name: 'API Documentation Generator';
-        description: 'Automatically generate comprehensive API docs';
-        icon: Database;
-        features: ['Auto-'generation', 'Interactive 'docs', 'Version control'];
-        rating: 4.7;
-        users: '80K+';
-        price: '$25/mo';
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'API Documentation Generator',
+        description: 'Automatically generate comprehensive API docs',
+        icon: Database,
+        features: ['Auto-'generationInteractive 'docs', 'Version control'],
+        rating: 4.7,
+        users: '80K+',
+        price: '$25/mo',
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'Code Quality Analyzer';
-        description: 'Analyze and improve code quality with AI insights';
-        icon: BarChart3;
-        features: ['Quality 'metrics', 'Refactoring 'suggestions', 'Best practices'];
-        rating: 4.8;
-        users: '120K+';
-        price: '$35/mo';
+        name: 'Code Quality Analyzer',
+        description: 'Analyze and improve code quality with AI insights',
+        icon: BarChart3,
+        features: ['Quality 'metricsRefactoring 'suggestions', 'Best practices'],
+        rating: 4.8,
+        users: '120K+',
+        price: '$35/mo',
         color: 'from-orange-50o0 to-red-50o0'}
-    ];
+    ],
     analytics: [
       {
-        name: 'Predictive Analytics Engine';
-        description: 'Forecast trends and outcomes with machine learning';
-        icon: TrendingUp;
-        features: ['Predictive 'modeling', 'Trend 'analysis', 'Risk assessment'];
-        rating: 4.9;
-        users: '60K+';
-        price: '$99/mo';
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'Predictive Analytics Engine',
+        description: 'Forecast trends and outcomes with machine learning',
+        icon: TrendingUp,
+        features: ['Predictive 'modelingTrend 'analysis', 'Risk assessment'],
+        rating: 4.9,
+        users: '60K+',
+        price: '$99/mo',
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'Business Intelligence AI';
-        description: 'Transform data into actionable business insights';
-        icon: BarChart3;
-        features: ['Data 'visualization', 'Custom 'dashboards', 'Real-time alerts'];
-        rating: 4.8;
-        users: '90K+';
-        price: '$79/mo';
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'Business Intelligence AI',
+        description: 'Transform data into actionable business insights',
+        icon: BarChart3,
+        features: ['Data 'visualizationCustom 'dashboards', 'Real-time alerts'],
+        rating: 4.8,
+        users: '90K+',
+        price: '$79/mo',
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        name: 'Customer Behavior Analyzer';
-        description: 'Understand customer patterns and preferences';
-        icon: Users;
-        features: ['Behavior 'tracking', 'Segmentation'Personalization'];
-        rating: 4.7;
-        users: '45K+';
-        price: '$59/mo';
-        color: 'from-green-50o0 to-emerald-50o0'};
+        name: 'Customer Behavior Analyzer',
+        description: 'Understand customer patterns and preferences',
+        icon: Users,
+        features: ['Behavior 'trackingSegmentation'Personalization'],
+        rating: 4.7,
+        users: '45K+',
+        price: '$59/mo',
+        color: 'from-green-50o0 to-emerald-50o0'},
       {
-        name: 'ROI Calculator Pro';
-        description: 'Calculate and optimize return on investment';
-        icon: Target;
-        features: ['ROI 'modeling', 'Cost 'analysis', 'Optimization tips'];
-        rating: 4.9;
-        users: '30K+';
-        price: '$49/mo';
+        name: 'ROI Calculator Pro',
+        description: 'Calculate and optimize return on investment',
+        icon: Target,
+        features: ['ROI 'modelingCost 'analysis', 'Optimization tips'],
+        rating: 4.9,
+        users: '30K+',
+        price: '$49/mo',
         color: 'from-orange-50o0 to-red-50o0'}
-    ];
+    ],
     multimedia: [
       {
-        name: 'AI Image Generator';
-        description: 'Create stunning images from text descriptions';
-        icon: Image;
-        features: ['Text-to-'image', 'Style 'transfer', 'High resolution'];
-        rating: 4.9;
-        users: '50o0K+';
-        price: '$19/mo';
-        color: 'from-orange-50o0 to-red-50o0'};
+        name: 'AI Image Generator',
+        description: 'Create stunning images from text descriptions',
+        icon: Image,
+        features: ['Text-to-'imageStyle 'transfer', 'High resolution'],
+        rating: 4.9,
+        users: '50o0K+',
+        price: '$19/mo',
+        color: 'from-orange-50o0 to-red-50o0'},
       {
-        name: 'Video Content Creator';
-        description: 'Generate professional videos with AI';
-        icon: Video;
-        features: ['Auto-'editing', 'Voice 'synthesis', 'Multiple formats'];
-        rating: 4.8;
-        users: '20o0K+';
-        price: '$39/mo';
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'Video Content Creator',
+        description: 'Generate professional videos with AI',
+        icon: Video,
+        features: ['Auto-'editingVoice 'synthesis', 'Multiple formats'],
+        rating: 4.8,
+        users: '20o0K+',
+        price: '$39/mo',
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'Audio Processing Suite';
-        description: 'Enhance and process audio with AI technology';
-        icon: Mic;
-        features: ['Noise 'reduction', 'Voice 'enhancement', 'Auto-transcription'];
-        rating: 4.7;
-        users: '150K+';
-        price: '$29/mo';
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'Audio Processing Suite',
+        description: 'Enhance and process audio with AI technology',
+        icon: Mic,
+        features: ['Noise 'reductionVoice 'enhancement', 'Auto-transcription'],
+        rating: 4.7,
+        users: '150K+',
+        price: '$29/mo',
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        name: '3D Model Generator';
-        description: 'Create 3D models from 2D images or text';
-        icon: Camera;
-        features: ['2D to 3'D', 'Text to 3'D', 'Model optimization'];
-        rating: 4.8;
-        users: '80K+';
-        price: '$49/mo';
+        name: '3D Model Generator',
+        description: 'Create 3D models from 2D images or text',
+        icon: Camera,
+        features: ['2D to 3'DText to 3'D', 'Model optimization'],
+        rating: 4.8,
+        users: '80K+',
+        price: '$49/mo',
         color: 'from-green-50o0 to-emerald-50o0'}
-    ];
+    ],
     security: [
       {
-        name: 'AI Threat Detector';
-        description: 'Advanced threat detection and prevention';
-        icon: Shield;
-        features: ['Real-time 'monitoring', 'Threat 'analysis', 'Auto-response'];
-        rating: 4.9;
-        users: '10o0K+';
-        price: '$99/mo';
-        color: 'from-red-50o0 to-rose-50o0'};
+        name: 'AI Threat Detector',
+        description: 'Advanced threat detection and prevention',
+        icon: Shield,
+        features: ['Real-time 'monitoringThreat 'analysis', 'Auto-response'],
+        rating: 4.9,
+        users: '10o0K+',
+        price: '$99/mo',
+        color: 'from-red-50o0 to-rose-50o0'},
       {
-        name: 'Password Security Manager';
-        description: 'AI-powered password generation and management';
-        icon: Lock;
-        features: ['Smart 'generation', 'Breach 'monitoring', 'Auto-updates'];
-        rating: 4.8;
-        users: '20o0K+';
-        price: '$15/mo';
-        color: 'from-orange-50o0 to-red-50o0'};
+        name: 'Password Security Manager',
+        description: 'AI-powered password generation and management',
+        icon: Lock,
+        features: ['Smart 'generationBreach 'monitoring', 'Auto-updates'],
+        rating: 4.8,
+        users: '20o0K+',
+        price: '$15/mo',
+        color: 'from-orange-50o0 to-red-50o0'},
       {
-        name: 'Network Security Scanner';
-        description: 'Comprehensive network vulnerability assessment';
-        icon: Network;
-        features: ['Vulnerability 'scanning', 'Risk 'assessment', 'Compliance check'];
-        rating: 4.7;
-        users: '75K+';
-        price: '$79/mo';
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'Network Security Scanner',
+        description: 'Comprehensive network vulnerability assessment',
+        icon: Network,
+        features: ['Vulnerability 'scanningRisk 'assessment', 'Compliance check'],
+        rating: 4.7,
+        users: '75K+',
+        price: '$79/mo',
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'Data Privacy Guardian';
-        description: 'Protect sensitive data with AI privacy controls';
-        icon: Database;
-        features: ['Data 'classification', 'Privacy 'monitoring', 'Compliance tracking'];
-        rating: 4.8;
-        users: '60K+';
-        price: '$59/mo';
+        name: 'Data Privacy Guardian',
+        description: 'Protect sensitive data with AI privacy controls',
+        icon: Database,
+        features: ['Data 'classificationPrivacy 'monitoring', 'Compliance tracking'],
+        rating: 4.8,
+        users: '60K+',
+        price: '$59/mo',
         color: 'from-blue-50o0 to-cyan-50o0'}
-    ];
+    ],
     communication: [
       {
-        name: 'AI Translation Hub';
-        description: 'Real-time translation for 10o0+ languages';
-        icon: Globe;
-        features: ['10o0+ 'languages', 'Real-time 'translation', 'Context awareness'];
-        rating: 4.9;
-        users: '30o0K+';
-        price: 'Free';
-        color: 'from-indigo-50o0 to-blue-50o0'};
+        name: 'AI Translation Hub',
+        description: 'Real-time translation for 10o0+ languages',
+        icon: Globe,
+        features: ['10o0+ 'languagesReal-time 'translation', 'Context awareness'],
+        rating: 4.9,
+        users: '30o0K+',
+        price: 'Free',
+        color: 'from-indigo-50o0 to-blue-50o0'},
       {
-        name: 'Smart Chat Assistant';
-        description: 'Intelligent chatbot for customer support';
-        icon: Users;
-        features: ['Natural 'conversations', 'Multi-'channel', 'Learning capability'];
-        rating: 4.8;
-        users: '150K+';
-        price: '$29/mo';
-        color: 'from-green-50o0 to-emerald-50o0'};
+        name: 'Smart Chat Assistant',
+        description: 'Intelligent chatbot for customer support',
+        icon: Users,
+        features: ['Natural 'conversationsMulti-'channel', 'Learning capability'],
+        rating: 4.8,
+        users: '150K+',
+        price: '$29/mo',
+        color: 'from-green-50o0 to-emerald-50o0'},
       {
-        name: 'Voice Command Center';
-        description: 'Control applications with natural voice commands';
-        icon: Mic;
-        features: ['Voice 'recognition', 'Command 'execution', 'Custom commands'];
-        rating: 4.7;
-        users: '120K+';
-        price: '$25/mo';
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'Voice Command Center',
+        description: 'Control applications with natural voice commands',
+        icon: Mic,
+        features: ['Voice 'recognitionCommand 'execution', 'Custom commands'],
+        rating: 4.7,
+        users: '120K+',
+        price: '$25/mo',
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'AI Writing Assistant';
-        description: 'Enhance writing with AI-powered suggestions';
-        icon: FileText;
-        features: ['Grammar 'check', 'Style 'suggestions', 'Content generation'];
-        rating: 4.8;
-        users: '250K+';
-        price: '$19/mo';
+        name: 'AI Writing Assistant',
+        description: 'Enhance writing with AI-powered suggestions',
+        icon: FileText,
+        features: ['Grammar 'checkStyle 'suggestions', 'Content generation'],
+        rating: 4.8,
+        users: '250K+',
+        price: '$19/mo',
         color: 'from-orange-50o0 to-red-50o0'}
-    ]};
+    ]},
   const stats = [
-    { value: '1M+'label: 'Active 'Users', 'icon: Users };
-    { value: '50+'label: 'AI 'Tools', 'icon: Brain };
-    { value: '99.9%'label: ''Uptime', 'icon: Server };
-    { value: '4.8/5'label: ''Rating', 'icon: Star }
+    { value: '1M+'label: 'Active 'Usersicon: Users },
+    { value: '50+'label: 'AI 'Toolsicon: Brain },
+    { value: '99.9%'label: ''Uptimeicon: Server },
+    { value: '4.8/5'label: ''Ratingicon: Star }
   ],
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0">,
@@ -503,5 +503,5 @@ const AIToolsUltimateShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AIToolsUltimateShowcase20o26;
+    </div>)},
+export default AIToolsUltimateShowcase20o26,

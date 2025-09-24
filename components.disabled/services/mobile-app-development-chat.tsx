@@ -13,5 +13,5 @@ const MobileAppDevelopmentChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default MobileAppDevelopmentChat;
+    </div>)},
+export default MobileAppDevelopmentChat,

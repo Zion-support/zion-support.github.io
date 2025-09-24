@@ -12,4 +12,4 @@ function DisputeDetailPage() {
         <DisputeDetail />,
       </>,
     </ProtectedRoute>)}
-export default DisputeDetailPage;
+export default DisputeDetailPage,

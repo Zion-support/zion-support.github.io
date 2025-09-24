@@ -2,252 +2,252 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Users;
-  Clock;
-  Award;
-  Zap;
-  ArrowRight;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Clock,
+  Award,
+  Zap,
+  ArrowRight,
 } from 'lucide-react',
 const RevolutionaryContent20o25Showcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentCategories = [
-    { id: 'all', label: 'All Content', count: 12 };
-    { id: 'blog', label: 'Blog Posts', count: 4 };
-    { id: 'case-study', label: 'Case Studies', count: 4 };
-    { id: 'resource', label: 'Resources', count: 4 };
+    { id: 'all', label: 'All Content', count: 12 },
+    { id: 'blog', label: 'Blog Posts', count: 4 },
+    { id: 'case-study', label: 'Case Studies', count: 4 },
+    { id: 'resource', label: 'Resources', count: 4 },
   ],
   const featuredContent = [
     {
-      id: 'data-revolution';
-      title: 'AI 20o25: The Enterprise Data Revolution';
+      id: 'data-revolution',
+      title: 'AI 20o25: The Enterprise Data Revolution',
       description:,
-        'Ultimate Guide to 40o0% ROI through AI-powered data transformation with real-world case studies and implementation frameworks.';
-      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide';
-      type: 'blog';
-      category: 'Blog Post';
-      readingTime: '18 min read';
+        'Ultimate Guide to 40o0% ROI through AI-powered data transformation with real-world case studies and implementation frameworks.',
+      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide',
+      type: 'blog',
+      category: 'Blog Post',
+      readingTime: '18 min read',
       metrics: {
-        roi: '40o0%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        speed: '1,20o0%';
-      };
-      badge: 'NEW';
-      badgeColor: 'bg-red-50o0';
-      featured: true;
-    };
+        roi: '40o0%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        speed: '1,20o0%',
+      },
+      badge: 'NEW',
+      badgeColor: 'bg-red-50o0',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Transformation Success';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Transformation Success',
       description:,
-        '$2.8B Annual Savings in 8 Months - Complete case study of one of the most successful enterprise AI transformations ever documented.';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success';
-      type: 'case-study';
-      category: 'Case Study';
-      readingTime: '22 min read';
+        '$2.8B Annual Savings in 8 Months - Complete case study of one of the most successful enterprise AI transformations ever documented.',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success',
+      type: 'case-study',
+      category: 'Case Study',
+      readingTime: '22 min read',
       metrics: {
-        roi: '567%';
-        savings: '$2.8B';
-        efficiency: '78%';
-        timeline: '8 months';
-      };
-      badge: 'FEATURED';
-      badgeColor: 'bg-blue-50o0';
-      featured: true;
-    };
+        roi: '567%',
+        savings: '$2.8B',
+        efficiency: '78%',
+        timeline: '8 months'
+      },
+      badge: 'FEATURED',
+      badgeColor: 'bg-blue-50o0',
+      featured: true
+    },
     {
-      id: 'master-guide';
-      title: 'AI Transformation Master Guide 20o25';
+      id: 'master-guide',
+      title: 'AI Transformation Master Guide 20o25',
       description:,
-        'From Strategy to 50o0% ROI - Ultimate Edition. Complete guide based on 50o0+ enterprise implementations with proven frameworks.';
-      url: '/resources/ai-transformation-master-guide-20o25-ultimate';
-      type: 'resource';
-      category: 'Master Guide';
-      readingTime: '35 min read';
+        'From Strategy to 50o0% ROI - Ultimate Edition. Complete guide based on 50o0+ enterprise implementations with proven frameworks.',
+      url: '/resources/ai-transformation-master-guide-20o25-ultimate',
+      type: 'resource',
+      category: 'Master Guide',
+      readingTime: '35 min read',
       metrics: {
-        roi: '50o0%';
-        success: '94%';
-        savings: '$2.8M';
-        timeline: '18 months';
-      };
-      badge: 'ULTIMATE';
-      badgeColor: 'bg-purple-50o0';
-      featured: true;
-    };
+        roi: '50o0%',
+        success: '94%',
+        savings: '$2.8M',
+        timeline: '18 months'
+      },
+      badge: 'ULTIMATE',
+      badgeColor: 'bg-purple-50o0',
+      featured: true
+    },
     {
-      id: 'generative-ai-revolution';
-      title: 'AI 20o25: The Generative AI Enterprise Revolution';
+      id: 'generative-ai-revolution',
+      title: 'AI 20o25: The Generative AI Enterprise Revolution',
       description:,
-        '$2.3T Market Transformation - How Fortune 50o0 companies are achieving 340% ROI through generative AI implementation.';
-      url: '/blog/ai-20o25-generative-ai-enterprise-revolution';
-      type: 'blog';
-      category: 'Blog Post';
-      readingTime: '15 min read';
+        '$2.3T Market Transformation - How Fortune 50o0 companies are achieving 340% ROI through generative AI implementation.',
+      url: '/blog/ai-20o25-generative-ai-enterprise-revolution',
+      type: 'blog',
+      category: 'Blog Post',
+      readingTime: '15 min read',
       metrics: {
-        roi: '340%';
-        savings: '$180M';
-        accuracy: '99.7%';
-        satisfaction: '98%';
-      };
-      badge: 'HOT';
-      badgeColor: 'bg-orange-50o0';
-      featured: false;
-    };
+        roi: '340%',
+        savings: '$180M',
+        accuracy: '99.7%',
+        satisfaction: '98%'
+      },
+      badge: 'HOT',
+      badgeColor: 'bg-orange-50o0',
+      featured: false
+    },
     {
-      id: 'mlops-breakthrough';
-      title: 'AI 20o25: MLOps Breakthrough';
+      id: 'mlops-breakthrough',
+      title: 'AI 20o25: MLOps Breakthrough',
       description:,
-        '99.9% Model Reliability with 67% Faster Deployment - Complete guide to MLOps implementation for enterprise success.';
-      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough';
-      type: 'blog';
-      category: 'Blog Post';
-      readingTime: '12 min read';
+        '99.9% Model Reliability with 67% Faster Deployment - Complete guide to MLOps implementation for enterprise success.',
+      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough',
+      type: 'blog',
+      category: 'Blog Post',
+      readingTime: '12 min read',
       metrics: {
-        reliability: '99.9%';
-        deployment: '67%';
-        savings: '$2.1B';
-        efficiency: '89%';
-      };
-      badge: 'BREAKTHROUGH';
-      badgeColor: 'bg-green-50o0';
-      featured: false;
-    };
+        reliability: '99.9%',
+        deployment: '67%',
+        savings: '$2.1B',
+        efficiency: '89%'
+      },
+      badge: 'BREAKTHROUGH',
+      badgeColor: 'bg-green-50o0',
+      featured: false
+    },
     {
-      id: 'retail-transformation';
-      title: 'Retail AI Transformation 20o25';
+      id: 'retail-transformation',
+      title: 'Retail AI Transformation 20o25',
       description:,
-        '$50o0M Company Achieves 280% ROI with AI-Powered Operations - Complete success story with implementation details.';
-      url: '/case-studies/retail-ai-transformation-20o25-ultimate-success';
-      type: 'case-study';
-      category: 'Case Study';
-      readingTime: '20 min read';
+        '$50o0M Company Achieves 280% ROI with AI-Powered Operations - Complete success story with implementation details.',
+      url: '/case-studies/retail-ai-transformation-20o25-ultimate-success',
+      type: 'case-study',
+      category: 'Case Study',
+      readingTime: '20 min read',
       metrics: {
-        roi: '280%';
-        savings: '$45M';
-        satisfaction: '99.2%';
-        efficiency: '78%';
-      };
-      badge: 'SUCCESS';
-      badgeColor: 'bg-indigo-50o0';
-      featured: false;
-    };
+        roi: '280%',
+        savings: '$45M',
+        satisfaction: '99.2%',
+        efficiency: '78%'
+      },
+      badge: 'SUCCESS',
+      badgeColor: 'bg-indigo-50o0',
+      featured: false
+    },
     {
-      id: 'ai-implementation-guide';
-      title: 'AI 20o25 Implementation Master Guide';
+      id: 'ai-implementation-guide',
+      title: 'AI 20o25 Implementation Master Guide',
       description:,
-        'From Strategy to 50o0% ROI in 12 Months - Comprehensive implementation guide with step-by-step frameworks.';
-      url: '/resources/ai-20o25-implementation-master-guide';
-      type: 'resource';
-      category: 'Implementation Guide';
-      readingTime: '25 min read';
+        'From Strategy to 50o0% ROI in 12 Months - Comprehensive implementation guide with step-by-step frameworks.',
+      url: '/resources/ai-20o25-implementation-master-guide',
+      type: 'resource',
+      category: 'Implementation Guide',
+      readingTime: '25 min read',
       metrics: {
-        roi: '50o0%';
-        timeline: '12 months';
-        success: '94%';
-        savings: '$2.8B';
-      };
-      badge: 'GUIDE';
-      badgeColor: 'bg-pink-50o0';
-      featured: false;
-    };
+        roi: '50o0%',
+        timeline: '12 months',
+        success: '94%',
+        savings: '$2.8B'
+      },
+      badge: 'GUIDE',
+      badgeColor: 'bg-pink-50o0',
+      featured: false
+    },
     {
-      id: 'cybersecurity-revolution';
-      title: 'AI 20o25: The Cybersecurity Revolution';
+      id: 'cybersecurity-revolution',
+      title: 'AI 20o25: The Cybersecurity Revolution',
       description:,
-        'Protecting Enterprises with 95% Threat Reduction - Complete guide to AI-powered cybersecurity implementation.';
-      url: '/blog/ai-20o25-cybersecurity-revolution';
-      type: 'blog';
-      category: 'Blog Post';
-      readingTime: '14 min read';
+        'Protecting Enterprises with 95% Threat Reduction - Complete guide to AI-powered cybersecurity implementation.',
+      url: '/blog/ai-20o25-cybersecurity-revolution',
+      type: 'blog',
+      category: 'Blog Post',
+      readingTime: '14 min read',
       metrics: {
-        threat_reduction: '95%';
-        savings: '$2.3M';
-        response: '67%';
-        false_positives: '89%';
-      };
-      badge: 'SECURITY';
-      badgeColor: 'bg-red-60o0';
-      featured: false;
-    };
+        threat_reduction: '95%',
+        savings: '$2.3M',
+        response: '67%',
+        false_positives: '89%'
+      },
+      badge: 'SECURITY',
+      badgeColor: 'bg-red-60o0',
+      featured: false
+    },
     {
-      id: 'healthcare-transformation';
-      title: 'Healthcare AI Transformation 20o25';
+      id: 'healthcare-transformation',
+      title: 'Healthcare AI Transformation 20o25',
       description:,
-        '$2.1B Health System Achieves 99.8% Patient Safety - Complete case study of healthcare AI implementation.';
-      url: '/case-studies/healthcare-ai-transformation-20o25';
-      type: 'case-study';
-      category: 'Case Study';
-      readingTime: '18 min read';
+        '$2.1B Health System Achieves 99.8% Patient Safety - Complete case study of healthcare AI implementation.',
+      url: '/case-studies/healthcare-ai-transformation-20o25',
+      type: 'case-study',
+      category: 'Case Study',
+      readingTime: '18 min read',
       metrics: {
-        savings: '$180M';
-        accuracy: '99.8%';
-        satisfaction: '94%';
-        safety: '99.8%';
-      };
-      badge: 'HEALTHCARE';
-      badgeColor: 'bg-teal-50o0';
-      featured: false;
-    };
+        savings: '$180M',
+        accuracy: '99.8%',
+        satisfaction: '94%',
+        safety: '99.8%'
+      },
+      badge: 'HEALTHCARE',
+      badgeColor: 'bg-teal-50o0',
+      featured: false
+    },
     {
-      id: 'enterprise-automation';
-      title: 'AI 20o25: The Enterprise Automation Revolution';
+      id: 'enterprise-automation',
+      title: 'AI 20o25: The Enterprise Automation Revolution',
       description:,
-        '50o0% ROI through intelligent automation - Complete guide to enterprise automation implementation.';
-      url: '/blog/ai-20o25-enterprise-automation-revolution';
-      type: 'blog';
-      category: 'Blog Post';
-      readingTime: '16 min read';
+        '50o0% ROI through intelligent automation - Complete guide to enterprise automation implementation.',
+      url: '/blog/ai-20o25-enterprise-automation-revolution',
+      type: 'blog',
+      category: 'Blog Post',
+      readingTime: '16 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '$20o0M';
-        satisfaction: '99.8%';
-        time: '12 months';
-      };
-      badge: 'AUTOMATION';
-      badgeColor: 'bg-yellow-50o0';
-      featured: false;
-    };
+        roi: '50o0%',
+        savings: '$20o0M',
+        satisfaction: '99.8%',
+        time: '12 months'
+      },
+      badge: 'AUTOMATION',
+      badgeColor: 'bg-yellow-50o0',
+      featured: false
+    },
     {
-      id: 'ai-transformation-success';
-      title: 'AI Transformation Success: 50o0% ROI';
+      id: 'ai-transformation-success',
+      title: 'AI Transformation Success: 50o0% ROI',
       description:,
-        '$2B Company Achieves 50o0% ROI - Complete success story with implementation roadmap and lessons learned.';
-      url: '/case-studies/ai-transformation-50o0-roi-success-story';
-      type: 'case-study';
-      category: 'Case Study';
-      readingTime: '19 min read';
+        '$2B Company Achieves 50o0% ROI - Complete success story with implementation roadmap and lessons learned.',
+      url: '/case-studies/ai-transformation-50o0-roi-success-story',
+      type: 'case-study',
+      category: 'Case Study',
+      readingTime: '19 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '$20o0M';
-        satisfaction: '99.8%';
-        time: '12 months';
-      };
-      badge: 'SUCCESS';
-      badgeColor: 'bg-emerald-50o0';
-      featured: false;
-    };
+        roi: '50o0%',
+        savings: '$20o0M',
+        satisfaction: '99.8%',
+        time: '12 months'
+      },
+      badge: 'SUCCESS',
+      badgeColor: 'bg-emerald-50o0',
+      featured: false
+    },
     {
-      id: 'ai-automation-guide';
-      title: 'AI Automation Implementation Guide 20o25';
+      id: 'ai-automation-guide',
+      title: 'AI Automation Implementation Guide 20o25',
       description:,
-        'From Strategy to 50o0% ROI - Complete implementation guide with best practices and frameworks.';
-      url: '/resources/ai-automation-implementation-guide-20o25';
-      type: 'resource';
-      category: 'Implementation Guide';
-      readingTime: '22 min read';
+        'From Strategy to 50o0% ROI - Complete implementation guide with best practices and frameworks.',
+      url: '/resources/ai-automation-implementation-guide-20o25',
+      type: 'resource',
+      category: 'Implementation Guide',
+      readingTime: '22 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '60%';
-        satisfaction: '98%';
-        time: '6-12 months';
-      };
-      badge: 'IMPLEMENTATION';
-      badgeColor: 'bg-violet-50o0';
-      featured: false;
-    };
+        roi: '50o0%',
+        savings: '60%',
+        satisfaction: '98%',
+        time: '6-12 months'
+      },
+      badge: 'IMPLEMENTATION',
+      badgeColor: 'bg-violet-50o0',
+      featured: false
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -430,5 +430,5 @@ const RevolutionaryContent20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o25Showcase;
+    </section>)},
+export default RevolutionaryContent20o25Showcase,

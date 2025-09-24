@@ -4,7 +4,7 @@ import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   ArrowRightBrainShieldRocketCpuDatabaseAtomTargetStar,
-  SparklesZapUsersAwardClockCheckCircleGlobeCodeServer;
+  SparklesZapUsersAwardClockCheckCircleGlobeCodeServer,
   ChevronRightExternalLinkTrendingUpBarChart3CloudNetwork} from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
@@ -22,72 +22,72 @@ export default function HomePage() {
     return () => clearInterval(interval)}[]),
   const features = [
     {
-      icon: Brain;
-      title: "AI Autonomous Ecosystem";
-      description: "Revolutionary autonomous AI solutions that adapt and evolve";
-      color: "from-purple-500 to-pink-500"};
+      icon: Brain,
+      title: "AI Autonomous Ecosystem",
+      description: "Revolutionary autonomous AI solutions that adapt and evolve",
+      color: "from-purple-500 to-pink-500"},
     {
-      icon: Atom;
-      title: "Quantum AI Neural Networks";
-      description: "Quantum-powered AI with advanced consciousness capabilities";
-      color: "from-blue-500 to-cyan-500"};
+      icon: Atom,
+      title: "Quantum AI Neural Networks",
+      description: "Quantum-powered AI with advanced consciousness capabilities",
+      color: "from-blue-500 to-cyan-500"},
     {
-      icon: Shield;
-      title: "Quantum Cybersecurity";
-      description: "Quantum-resistant security with AI-powered threat detection";
-      color: "from-red-500 to-orange-500"};
+      icon: Shield,
+      title: "Quantum Cybersecurity",
+      description: "Quantum-resistant security with AI-powered threat detection",
+      color: "from-red-500 to-orange-500"},
     {
-      icon: Rocket;
-      title: "Space Resource Intelligence";
-      description: "AI-powered space resource discovery and optimization";
-      color: "from-indigo-500 to-purple-500"};
+      icon: Rocket,
+      title: "Space Resource Intelligence",
+      description: "AI-powered space resource discovery and optimization",
+      color: "from-indigo-500 to-purple-500"},
     {
-      icon: Cpu;
-      title: "Autonomous DevOps";
-      description: "AI-powered DevOps optimization and automation";
-      color: "from-emerald-500 to-teal-500"};
+      icon: Cpu,
+      title: "Autonomous DevOps",
+      description: "AI-powered DevOps optimization and automation",
+      color: "from-emerald-500 to-teal-500"},
     {
-      icon: Database;
-      title: "Edge Computing Orchestration";
-      description: "Advanced edge computing optimization platform";
+      icon: Database,
+      title: "Edge Computing Orchestration",
+      description: "Advanced edge computing optimization platform",
       color: "from-yellow-500 to-orange-500"}
   ],
   const services = [
     {
-      title: "AI & Machine Learning";
-      description: "Custom AI solutionsneural networksand autonomous systems";
-      icon: Brain;
-      color: "from-purple-500 to-pink-500"};
+      title: "AI & Machine Learning",
+      description: "Custom AI solutionsneural networksand autonomous systems",
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"},
     {
-      title: "Quantum Computing";
-      description: "Quantum algorithmscryptographyand quantum AI integration";
-      icon: Atom;
-      color: "from-blue-500 to-cyan-500"};
+      title: "Quantum Computing",
+      description: "Quantum algorithmscryptographyand quantum AI integration",
+      icon: Atom,
+      color: "from-blue-500 to-cyan-500"},
     {
-      title: "Cybersecurity";
-      description: "Advanced threat detectionquantum-resistant encryption";
-      icon: Shield;
-      color: "from-red-500 to-orange-500"};
+      title: "Cybersecurity",
+      description: "Advanced threat detectionquantum-resistant encryption",
+      icon: Shield,
+      color: "from-red-500 to-orange-500"},
     {
-      title: "Cloud Infrastructure";
-      description: "Scalable cloud solutionsedge computingand DevOps";
-      icon: Cloud;
-      color: "from-emerald-500 to-teal-500"};
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutionsedge computingand DevOps",
+      icon: Cloud,
+      color: "from-emerald-500 to-teal-500"},
     {
-      title: "Data Analytics";
-      description: "Big data processingpredictive analyticsand insights";
-      icon: BarChart3;
-      color: "from-indigo-500 to-purple-500"};
+      title: "Data Analytics",
+      description: "Big data processingpredictive analyticsand insights",
+      icon: BarChart3,
+      color: "from-indigo-500 to-purple-500"},
     {
-      title: "Digital Transformation";
-      description: "End-to-end digital transformation and modernization";
-      icon: Rocket;
+      title: "Digital Transformation",
+      description: "End-to-end digital transformation and modernization",
+      icon: Rocket,
       color: "from-yellow-500 to-orange-500"}
   ],
   const stats = [
-    { number: "500+"label: "Projects Delivered"icon: CheckCircle };
-    { number: "50+"label: "Enterprise Clients"icon: Users };
-    { number: "99.9%"label: "Uptime Guarantee"icon: Shield };
+    { number: "500+"label: "Projects Delivered"icon: CheckCircle },
+    { number: "50+"label: "Enterprise Clients"icon: Users },
+    { number: "99.9%"label: "Uptime Guarantee"icon: Shield },
     { number: "24/7"label: "Support Available"icon: Clock }
   ],
   return (

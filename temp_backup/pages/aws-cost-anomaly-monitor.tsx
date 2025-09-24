@@ -20,15 +20,13 @@ export default function AwsCostAnomalyMonitorPage() {
             AWS Cost Anomaly Monitor,
           </h1>,
           <p className='text-slate-30o0'>,
-            Continuous anomaly detection with budget guardrails, Slack alerts;
+            Continuous anomaly detection with budget guardrails, Slack alerts,
             root-cause hints, and savings recommendations.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'Anomaly detection & budgets';
-              'Slack triage workflows';
-              'Service/tag breakdowns';
-              'Monthly savings report';
+              'Anomaly detection & budgetsSlack triage workflows',
+              'Service/tag breakdownsMonthly savings report',
             ].map(f => (
               <div
                 key={f}

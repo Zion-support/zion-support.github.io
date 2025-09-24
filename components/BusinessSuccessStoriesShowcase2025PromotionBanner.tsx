@@ -8,11 +8,11 @@ import {
   TrendingUp,
   Users,
   DollarSign,
-  Sparkles;
-  X;
-  Play;
-  ExternalLink;
-  CheckCircle;
+  Sparkles,
+  X,
+  Play,
+  ExternalLink,
+  CheckCircle,
   Award} from 'lucide-react',
 const BusinessSuccessStoriesShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -21,7 +21,7 @@ const BusinessSuccessStoriesShowcase20o25PromotionBanner = () => {
     const timer = setTimeout(() => setIsVisible(true)150o0),
     return () => clearTimeout(timer)}[]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   if (isDismissed) return null,
   return (
     <AnimatePresence>,
@@ -156,5 +156,5 @@ const BusinessSuccessStoriesShowcase20o25PromotionBanner = () => {
           {/* Animated Border */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-40o0 via-green-40o0 to-teal-40o0 animate-pulse"  />,
         </motion.div>)}
-    </AnimatePresence>)};
-export default BusinessSuccessStoriesShowcase20o25PromotionBanner;
+    </AnimatePresence>)},
+export default BusinessSuccessStoriesShowcase20o25PromotionBanner,

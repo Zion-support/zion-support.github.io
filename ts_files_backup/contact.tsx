@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
@@ -13,8 +13,8 @@ import { enterpriseITInnovations2029 } from '../data/2029-enterprise-it-innovati
 import { innovativeMicroSaas2029 } from '../data/2029-innovative-micro-saas',
 =======,
 =======,
-  Phone, Mail, MapPin, Globe, Clock, Users;
-  MessageSquare, Send, CheckCircle, Star;
+  Phone, Mail, MapPin, Globe, Clock, Users,
+  MessageSquare, Send, CheckCircle, Star,
   Rocket, Brain, Atom, Shield, Zap,
 =======,
 "use client",
@@ -25,31 +25,31 @@ export default function Page(){return null}
 // Import service data for showcase,
 export default function ContactPage() {
   const [formDatasetFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''}),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [submitSuccessetSubmitSuccess] = useState(false),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-    hours: '24/7 Support Available';
-    timezone: 'Eastern Time (ET)'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    hours: '24/7 Support Available',
+    timezone: 'Eastern Time (ET)'},
   // Get popular services for showcase,
   const popularServices = [
-    ...innovativeAIServices2029.filter(s => s.popular);
-    ...quantumSpaceInnovations2029.filter(s => s.popular);
-    ...enterpriseITInnovations2029.filter(s => s.popular);
+    ...innovativeAIServices2029.filter(s => s.popular),
+    ...quantumSpaceInnovations2029.filter(s => s.popular),
+    ...enterpriseITInnovations2029.filter(s => s.popular),
     ...innovativeMicroSaas2029.filter(s => s.popular)].slice(06),
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData;
-      [e.target.name]: e.target.value})};
+      ...formData,
+      [e.target.name]: e.target.value})},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -61,19 +61,19 @@ export default function ContactPage() {
     setTimeout(() => {
       setSubmitSuccess(false),
       setFormData({
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
-        message: ''})}3000)};
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: ''})}3000)},
   const stats = [
-    { value: '500+'label: 'Micro SaaS 'Services', 'icon: <Zap className="w-6 h-6" />color: 'text-cyan-400' };
-    { value: '99.99%'label: 'Uptime 'Guarantee', 'icon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' };
-    { value: '30'label: 'Day Free 'Trials', 'icon: <Star className="w-6 h-6" />color: 'text-blue-400' };
-    { value: '24/7'label: 'AI 'Support', 'icon: <Brain className="w-6 h-6" />color: 'text-green-400' };
-    { value: '$1B+'label: 'Market 'Value', 'icon: <DollarSign className="w-6 h-6" />color: 'text-yellow-400' };
-    { value: '2500%+'label: 'Average 'ROI', 'icon: <TrendingUp className="w-6 h-6" />color: 'text-purple-400' }
+    { value: '500+'label: 'Micro SaaS 'Servicesicon: <Zap className="w-6 h-6" />color: 'text-cyan-400' },
+    { value: '99.99%'label: 'Uptime 'Guaranteeicon: <Shield className="w-6 h-6" />color: 'text-fuchsia-400' },
+    { value: '30'label: 'Day Free 'Trialsicon: <Star className="w-6 h-6" />color: 'text-blue-400' },
+    { value: '24/7'label: 'AI 'Supporticon: <Brain className="w-6 h-6" />color: 'text-green-400' },
+    { value: '$1B+'label: 'Market 'Valueicon: <DollarSign className="w-6 h-6" />color: 'text-yellow-400' },
+    { value: '2500%+'label: 'Average 'ROIicon: <TrendingUp className="w-6 h-6" />color: 'text-purple-400' }
   ],
   return (
     <div className="min-h-screen bg-black text-white overflow-hidden">,
@@ -97,7 +97,7 @@ export default function ContactPage() {
             transition={{ duration: 0.8 }}
             className="mb-8">,
             <h1 className="text-5xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-500 to-pink-500 bg-clip-text text-transparent mb-6">,
-              'Let', 's Transform Your Business,
+              'Lets Transform Your Business,
             </h1>,
             <p className="text-xl md: text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
               Ready to leverage the power of AIquantum computingand cutting-edge technology?,
@@ -264,7 +264,7 @@ export default function ContactPage() {
                   Start Your Transformation Journey,
                 </h2>,
                 <p className="text-xl text-gray-300">,
-                  Tell us about your project and 'we', 'll connect you with the perfect revolutionary technology solution,
+                  Tell us about your project and 'well connect you with the perfect revolutionary technology solution,
                 </p>,
               </div>,
               <div className="bg-gradient-to-br from-gray-900/50 to-gray-800/50 backdrop-blur-xl rounded-3xl p-8 border border-cyan-500/20">,
@@ -470,7 +470,7 @@ export default function ContactPage() {
                 <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent"> Zion Tech Group?</span>,
               </h2>,
               <p className="text-xl text-gray-300 mb-12">,
-                'We', 're not just another technology company - 'we', 're your partners in building the future,
+                'We', 're not just another technology company - 'were your partners in building the future,
               </p>,
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
                 <div className="text-center">,

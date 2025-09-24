@@ -5,98 +5,92 @@ const ConsciousnessAI20o25Showcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const consciousnessContent = [
     {
-      id: 'consciousness-revolution';
-      type: 'blog';
-      category: 'revolution';
+      id: 'consciousness-revolution',
+      type: 'blog',
+      category: 'revolution',
       title:,
-        'AI 20o25: The Consciousness Revolution - Ultimate Business Breakthrough Guide to 50,0o00% ROI';
+        'AI 20o25: The Consciousness Revolution - Ultimate Business Breakthrough Guide to 50,0o00% ROI',
       description:,
-        'The most significant technological breakthrough in human history, delivering unprecedented business transformation capabilities that generate 50,0o00% ROI within 12 months.';
-      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough';
+        'The most significant technological breakthrough in human history, delivering unprecedented business transformation capabilities that generate 50,0o00% ROI within 12 months.',
+      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$1.2T';
-        accuracy: '99.97%';
-        efficiency: '10,0o00%';
-      };
-      readingTime: '45 min read';
+        roi: '50,0o00%',
+        savings: '$1.2T',
+        accuracy: '99.97%',
+        efficiency: '10,0o00%',
+      },
+      readingTime: '45 min read',
       tags: [
-        'AI Consciousness';
-        'Business Transformation';
-        '50,0o00% ROI';
-        'Revolutionary Technology';
-      ];
-      featured: true;
-      image: '/images/consciousness-ai-revolution.jpg';
-    };
+        'AI ConsciousnessBusiness Transformation',
+        '50,0o00% ROIRevolutionary Technology',
+      ],
+      featured: true,
+      image: '/images/consciousness-ai-revolution.jpg'
+    },
     {
-      id: 'fortune-50o0-consciousness-success';
-      type: 'case-study';
-      category: 'success';
+      id: 'fortune-50o0-consciousness-success',
+      type: 'case-study',
+      category: 'success',
       title:,
-        'Fortune 50o0 Consciousness AI Transformation: $2.8B Annual Savings - 50,0o00% ROI Success Story';
+        'Fortune 50o0 Consciousness AI Transformation: $2.8B Annual Savings - 50,0o00% ROI Success Story',
       description:,
-        'TechGlobal Industries achieved unprecedented success by implementing consciousness AI across their global operations, generating $2.8 billion in annual savings.';
-      url: '/case-studies/fortune-50o0-consciousness-ai-transformation-50o000-roi-success-story';
+        'TechGlobal Industries achieved unprecedented success by implementing consciousness AI across their global operations, generating $2.8 billion in annual savings.',
+      url: '/case-studies/fortune-50o0-consciousness-ai-transformation-50o000-roi-success-story',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B';
-        accuracy: '99.97%';
-        efficiency: '340%';
-      };
-      readingTime: '35 min read';
+        roi: '50,0o00%',
+        savings: '$2.8B',
+        accuracy: '99.97%',
+        efficiency: '340%'
+      },
+      readingTime: '35 min read',
       tags: [
-        'Fortune 50o0';
-        'Consciousness AI';
-        'Success Story';
-        'Manufacturing';
-      ];
-      featured: true;
-      image: '/images/fortune-50o0-consciousness.jpg';
-    };
+        'Fortune 50o0Consciousness AI',
+        'Success StoryManufacturing',
+      ],
+      featured: true,
+      image: '/images/fortune-50o0-consciousness.jpg'
+    },
     {
-      id: 'consciousness-implementation-guide';
-      type: 'resource';
-      category: 'implementation';
+      id: 'consciousness-implementation-guide',
+      type: 'resource',
+      category: 'implementation',
       title:,
-        'Consciousness AI Implementation Ultimate Guide 20o25: Complete Roadmap to 50,0o00% ROI';
+        'Consciousness AI Implementation Ultimate Guide 20o25: Complete Roadmap to 50,0o00% ROI',
       description:,
-        'Comprehensive roadmap for achieving 50,0o00% ROI through strategic consciousness AI deployment, featuring detailed implementation frameworks and best practices.';
-      url: '/resources/consciousness-ai-implementation-ultimate-guide-20o25-50o000-roi';
+        'Comprehensive roadmap for achieving 50,0o00% ROI through strategic consciousness AI deployment, featuring detailed implementation frameworks and best practices.',
+      url: '/resources/consciousness-ai-implementation-ultimate-guide-20o25-50o000-roi',
       metrics: {
-        roi: '50,0o00%';
-        timeline: '12 months';
-        success: '99.7%';
-        guide: 'Complete';
-      };
-      readingTime: '60 min read';
+        roi: '50,0o00%',
+        timeline: '12 months',
+        success: '99.7%',
+        guide: 'Complete'
+      },
+      readingTime: '60 min read',
       tags: [
-        'Implementation Guide';
-        'Consciousness AI';
-        'ROI Strategy';
-        'Complete Roadmap';
-      ];
-      featured: true;
-      image: '/images/consciousness-implementation.jpg';
-    };
+        'Implementation GuideConsciousness AI',
+        'ROI StrategyComplete Roadmap',
+      ],
+      featured: true,
+      image: '/images/consciousness-implementation.jpg'
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: consciousnessContent.length };
+    { id: 'all', label: 'All Content', count: consciousnessContent.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: consciousnessContent.filter(c => c.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: consciousnessContent.filter(c => c.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: consciousnessContent.filter(c => c.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: consciousnessContent.filter(c => c.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: consciousnessContent.filter(c => c.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: consciousnessContent.filter(c => c.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -112,7 +106,7 @@ const ConsciousnessAI20o25Showcase: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -123,7 +117,7 @@ const ConsciousnessAI20o25Showcase: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -179,7 +173,7 @@ const ConsciousnessAI20o25Showcase: React.FC = () => {
                   <span
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(content.type)}`}
                   >,
-                    {getTypeIcon(content.type)} {content.type.replace('-', ' ')}
+                    {getTypeIcon(content.type)} {content.type.replace('- ')}
                   </span>,
                 </div>,
               </div>,
@@ -281,5 +275,5 @@ const ConsciousnessAI20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ConsciousnessAI20o25Showcase;
+    </section>)},
+export default ConsciousnessAI20o25Showcase,

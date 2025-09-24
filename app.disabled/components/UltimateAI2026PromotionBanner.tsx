@@ -94,5 +94,5 @@ const UltimateAI20o26PromotionBanner = () => {
       <div className='absolute top-1/3 right-1/4 w-1 h-1 bg-blue-30o0/60 rounded-full animate-bounce delay-50o0'></div>,
       <div className='absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-purple-30o0/60 rounded-full animate-bounce delay-10o00'></div>,
       <div className='absolute bottom-1/3 right-1/3 w-2 h-2 bg-indigo-30o0/60 rounded-full animate-bounce delay-150o0'></div>,
-    </section>)};
-export default UltimateAI20o26PromotionBanner;
+    </section>)},
+export default UltimateAI20o26PromotionBanner,

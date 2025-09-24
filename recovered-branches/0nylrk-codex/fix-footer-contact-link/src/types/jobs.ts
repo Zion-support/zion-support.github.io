@@ -58,7 +58,7 @@ export interface JobMatch {
     skills: string[],
     location?: string,
     category?: string,
-    company_name?: string};
+    company_name?: string},
 }
 ,
 export interface ResumeAttachment {
@@ -95,7 +95,7 @@ export interface JobApplication {
     professional_title: string,
     profile_picture_url?: string,
     bio: string,
-    skills: string[]};
+    skills: string[]},
   resume?: ResumeAttachment,
   // New fields for resume scoring,
   match_score?: number,
@@ -104,14 +104,14 @@ export interface JobApplication {
     skills_match?: {
       score: number,
       matching: string[],
-      missing: string[]};
+      missing: string[]},
     experience_match?: {
       score: number,
-      analysis: string};
+      analysis: string},
     education_match?: {
       score: number,
-      analysis: string};
-  };
+      analysis: string},
+  },
   match_suggestion?: string,
   scored_at?: string,
   notes?: string, // New field for client notes}

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Multimodal Agents in the Enterprise (20o25) | Zion Tech Group';
+  title: 'Multimodal Agents in the Enterprise (20o25) | Zion Tech Group',
   description:,
-    'Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.';
-};
+    'Design and deploy agents that see, hear, and act to deliver measurable outcomes across the enterprise.',
+},
 export default function MultimodalAgentsEnterprise20o25Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

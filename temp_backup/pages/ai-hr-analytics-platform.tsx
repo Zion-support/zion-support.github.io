@@ -1,85 +1,75 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Users;
-  BarChart3;
-  TrendingUp;
-  Shield;
-  Zap;
-  Target;
-  CheckCircle;
-  Star;
-  Globe;
-  Lock;
-  Smartphone;
-  Monitor;
-  Award;
-  MessageCircle;
-  Briefcase;
+  Users,
+  BarChart3,
+  TrendingUp,
+  Shield,
+  Zap,
+  Target,
+  CheckCircle,
+  Star,
+  Globe,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,
+  Briefcase,
 } from 'lucide-react',
 export default function AIHRAnalyticsPlatform() {
   const features = [
     {
-      icon: <Users className='w-6 h-6' />;
-      title: 'Employee Performance Analytics';
+      icon: <Users className='w-6 h-6' />,
+      title: 'Employee Performance Analytics',
       description:,
-        'Comprehensive performance tracking and analytics with AI-powered insights and recommendations.';
-    };
+        'Comprehensive performance tracking and analytics with AI-powered insights and recommendations.',
+    },
     {
-      icon: <BarChart3 className='w-6 h-6' />;
-      title: 'Predictive HR Analytics';
+      icon: <BarChart3 className='w-6 h-6' />,
+      title: 'Predictive HR Analytics',
       description:,
-        'Forecast employee turnover, identify retention risks, and predict hiring needs with AI models.';
-    };
+        'Forecast employee turnover, identify retention risks, and predict hiring needs with AI models.',
+    },
     {
-      icon: <TrendingUp className='w-6 h-6' />;
-      title: 'Talent Acquisition Insights';
+      icon: <TrendingUp className='w-6 h-6' />,
+      title: 'Talent Acquisition Insights',
       description:,
-        'Data-driven insights for recruitment optimization, candidate matching, and hiring success rates.';
-    };
+        'Data-driven insights for recruitment optimization, candidate matching, and hiring success rates.',
+    },
     {
-      icon: <Zap className='w-6 h-6' />;
-      title: 'Employee Engagement Monitoring';
+      icon: <Zap className='w-6 h-6' />,
+      title: 'Employee Engagement Monitoring',
       description:,
-        'Real-time monitoring of employee satisfaction, engagement levels, and workplace sentiment.';
-    };
+        'Real-time monitoring of employee satisfaction, engagement levels, and workplace sentiment.',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Compliance & Risk Management';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Compliance & Risk Management',
       description:,
-        'Automated compliance monitoring, risk assessment, and regulatory reporting for HR operations.';
-    };
+        'Automated compliance monitoring, risk assessment, and regulatory reporting for HR operations.',
+    },
     {
-      icon: <Target className='w-6 h-6' />;
-      title: 'Strategic Workforce Planning';
+      icon: <Target className='w-6 h-6' />,
+      title: 'Strategic Workforce Planning',
       description:,
-        'AI-powered workforce planning with skills gap analysis and succession planning insights.';
-    };
+        'AI-powered workforce planning with skills gap analysis and succession planning insights.',
+    },
   ],
   const benefits = [
-    'Reduce employee turnover by 30%';
-    'Improve hiring success rates by 45%';
-    'Increase employee engagement by 40%';
-    'Reduce time-to-hire by 50%';
-    'Optimize workforce planning by 60%';
-    'Improve retention prediction accuracy by 80%';
-    'Reduce HR operational costs by 35%';
-    'Enhance decision-making with data-driven insights';
+    'Reduce employee turnover by 30%Improve hiring success rates by 45%',
+    'Increase employee engagement by 40%Reduce time-to-hire by 50%',
+    'Optimize workforce planning by 60%Improve retention prediction accuracy by 80%',
+    'Reduce HR operational costs by 35%Enhance decision-making with data-driven insights',
   ],
   const useCases = [
-    'Performance Management';
-    'Talent Acquisition';
-    'Employee Retention';
-    'Workforce Planning';
-    'Skills Gap Analysis';
-    'Succession Planning';
-    'Employee Engagement';
-    'Compliance Monitoring';
-    'Risk Assessment';
-    'Training & Development';
-    'Compensation Analysis';
-    'Diversity & Inclusion';
+    'Performance ManagementTalent Acquisition',
+    'Employee RetentionWorkforce Planning',
+    'Skills Gap AnalysisSuccession Planning',
+    'Employee EngagementCompliance Monitoring',
+    'Risk AssessmentTraining & Development',
+    'Compensation AnalysisDiversity & Inclusion',
   ],
   return (
     <>,

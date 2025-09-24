@@ -8,15 +8,15 @@ import {
   DollarSign,
   Clock,
   Target,
-  Award;
-  ArrowRight;
-  Play;
-  Download;
-  Share2;
-  Star;
-  CheckCircle;
-  ExternalLink;
-  BarChart3;
+  Award,
+  ArrowRight,
+  Play,
+  Download,
+  Share2,
+  Star,
+  CheckCircle,
+  ExternalLink,
+  BarChart3,
   Zap} from 'lucide-react',
 const RevolutionaryCaseStudiesShowcase20o27 = () => {
   const [activeCasetActiveCase] = useState(0),
@@ -25,135 +25,127 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
     setIsVisible(true)}[]),
   const caseStudies = [
     {
-      id: 'techcorp-transformation';
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      challenge: 'Legacy system modernization and AI integration';
-      solution: 'Complete digital transformation with AI-powered automation';
+      id: 'techcorp-transformation',
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      challenge: 'Legacy system modernization and AI integration',
+      solution: 'Complete digital transformation with AI-powered automation',
       results: {
-        revenue: '+340%';
-        efficiency: '+280%';
-        costReduction: '-65%';
-        timeToMarket: '-75%'};
-      duration: '18 months';
-      teamSize: '150+ experts';
-      technologies: ['AI/'ML', 'Cloud 'Migration', 'Microservices'DevOps'];
-      description: 'Transformed a traditional enterprise into an AI-first organizationresulting in unprecedented growth and efficiency gains.';
+        revenue: '+340%',
+        efficiency: '+280%',
+        costReduction: '-65%',
+        timeToMarket: '-75%'},
+      duration: '18 months',
+      teamSize: '150+ experts',
+      technologies: ['AI/'MLCloud 'Migration', 'Microservices'DevOps'],
+      description: 'Transformed a traditional enterprise into an AI-first organizationresulting in unprecedented growth and efficiency gains.',
       highlights: [
-        'Implemented 50+ AI models across all business functions';
-        'Migrated 20o0+ legacy applications to cloud-native architecture';
-        'Achieved 99.9% system uptime with automated monitoring';
-        'Reduced manual processes by 85% through intelligent automation'];
+        'Implemented 50+ AI models across all business functionsMigrated 20o0+ legacy applications to cloud-native architecture',
+        'Achieved 99.9% system uptime with automated monitoringReduced manual processes by 85% through intelligent automation'],
       testimonial: {
-        quote: "This transformation exceeded our wildest expectations. 'We', 've become a completely different company.";
-        author: "Sarah Chen";
-        position: "CTOTechCorp Global";
-        avatar: "/api/placeholder/60/60"};
+        quote: "This transformation exceeded our wildest expectations. 'Weve become a completely different company.",
+        author: "Sarah Chen",
+        position: "CTOTechCorp Global",
+        avatar: "/api/placeholder/60/60"},
       metrics: [
-        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUpcolor: 'text-green-50o0' };
-        { label: 'Efficiency 'Gain', 'value: '+280%'icon: Zapcolor: 'text-blue-50o0' };
-        { label: 'Cost 'Reduction', 'value: '-65%'icon: DollarSigncolor: 'text-red-50o0' };
-        { label: 'Time to 'Market', 'value: '-75%'icon: Clockcolor: 'text-purple-50o0' }
-      ]};
+        { label: 'Revenue 'Growthvalue: '+340%'icon: TrendingUpcolor: 'text-green-50o0' },
+        { label: 'Efficiency 'Gainvalue: '+280%'icon: Zapcolor: 'text-blue-50o0' },
+        { label: 'Cost 'Reductionvalue: '-65%'icon: DollarSigncolor: 'text-red-50o0' },
+        { label: 'Time to 'Marketvalue: '-75%'icon: Clockcolor: 'text-purple-50o0' }
+      ]},
     {
-      id: 'healthcare-ai';
-      company: 'MediTech Solutions';
-      industry: 'Healthcare';
-      challenge: 'Patient diagnosis accuracy and treatment optimization';
-      solution: 'AI-powered diagnostic system with predictive analytics';
+      id: 'healthcare-ai',
+      company: 'MediTech Solutions',
+      industry: 'Healthcare',
+      challenge: 'Patient diagnosis accuracy and treatment optimization',
+      solution: 'AI-powered diagnostic system with predictive analytics',
       results: {
-        accuracy: '+95%';
-        diagnosisTime: '-80%';
-        patientOutcomes: '+60%';
-        costSavings: '-45%'};
-      duration: '12 months';
-      teamSize: '80+ experts';
-      technologies: ['Computer 'Vision', 'NLP'Predictive 'Analytics', 'IoT'];
-      description: 'Revolutionized healthcare delivery through AI-powered diagnostics and personalized treatment recommendations.';
+        accuracy: '+95%',
+        diagnosisTime: '-80%',
+        patientOutcomes: '+60%',
+        costSavings: '-45%'},
+      duration: '12 months',
+      teamSize: '80+ experts',
+      technologies: ['Computer 'VisionNLP'Predictive 'AnalyticsIoT'],
+      description: 'Revolutionized healthcare delivery through AI-powered diagnostics and personalized treatment recommendations.',
       highlights: [
-        'Achieved 95% accuracy in early disease detection';
-        'Reduced diagnosis time from weeks to hours';
-        'Improved patient outcomes by 60%';
-        'Saved $50M+ in healthcare costs annually'];
+        'Achieved 95% accuracy in early disease detectionReduced diagnosis time from weeks to hours',
+        'Improved patient outcomes by 60%Saved $50M+ in healthcare costs annually'],
       testimonial: {
-        quote: "The AI system has transformed how we approach patient care. 'It', 's like having a superhuman diagnostician on every team.";
-        author: "Dr. Michael Rodriguez";
-        position: "Chief Medical OfficerMediTech Solutions";
-        avatar: "/api/placeholder/60/60"};
+        quote: "The AI system has transformed how we approach patient care. 'Its like having a superhuman diagnostician on every team.",
+        author: "Dr. Michael Rodriguez",
+        position: "Chief Medical OfficerMediTech Solutions",
+        avatar: "/api/placeholder/60/60"},
       metrics: [
-        { label: 'Diagnosis 'Accuracy', 'value: '+95%'icon: Targetcolor: 'text-green-50o0' };
-        { label: 'Diagnosis 'Time', 'value: '-80%'icon: Clockcolor: 'text-blue-50o0' };
-        { label: 'Patient 'Outcomes', 'value: '+60%'icon: Userscolor: 'text-purple-50o0' };
-        { label: 'Cost 'Savings', 'value: '-45%'icon: DollarSigncolor: 'text-red-50o0' }
-      ]};
+        { label: 'Diagnosis 'Accuracyvalue: '+95%'icon: Targetcolor: 'text-green-50o0' },
+        { label: 'Diagnosis 'Timevalue: '-80%'icon: Clockcolor: 'text-blue-50o0' },
+        { label: 'Patient 'Outcomesvalue: '+60%'icon: Userscolor: 'text-purple-50o0' },
+        { label: 'Cost 'Savingsvalue: '-45%'icon: DollarSigncolor: 'text-red-50o0' }
+      ]},
     {
-      id: 'fintech-innovation';
-      company: 'FinanceFlow Inc.';
-      industry: 'Financial Services';
-      challenge: 'Fraud detection and risk management at scale';
-      solution: 'Real-time AI fraud detection with quantum-enhanced security';
+      id: 'fintech-innovation',
+      company: 'FinanceFlow Inc.',
+      industry: 'Financial Services',
+      challenge: 'Fraud detection and risk management at scale',
+      solution: 'Real-time AI fraud detection with quantum-enhanced security',
       results: {
-        fraudDetection: '+99.7%';
-        falsePositives: '-90%';
-        processingSpeed: '+50o0%';
-        customerSatisfaction: '+85%'};
-      duration: '15 months';
-      teamSize: '120+ experts';
-      technologies: ['Quantum 'Computing', 'Machine 'Learning', 'Blockchain'Real-time Analytics'];
-      description: 'Built the world\'s most advanced fraud detection system using quantum computing and AI.';
+        fraudDetection: '+99.7%',
+        falsePositives: '-90%',
+        processingSpeed: '+50o0%',
+        customerSatisfaction: '+85%'},
+      duration: '15 months',
+      teamSize: '120+ experts',
+      technologies: ['Quantum 'ComputingMachine 'Learning', 'Blockchain'Real-time Analytics'],
+      description: 'Built the world\'s most advanced fraud detection system using quantum computing and AI.',
       highlights: [
-        'Detected 99.7% of fraudulent transactions in real-time';
-        'Reduced false positives by 90%';
-        'Processed 10M+ transactions per second';
-        'Achieved 99.99% system reliability'];
+        'Detected 99.7% of fraudulent transactions in real-timeReduced false positives by 90%',
+        'Processed 10M+ transactions per secondAchieved 99.99% system reliability'],
       testimonial: {
-        quote: "'We', 've set a new standard for financial security. Our customers trust us with their most sensitive data.";
-        author: "Jennifer Liu";
-        position: "CEOFinanceFlow Inc.";
-        avatar: "/api/placeholder/60/60"};
+        quote: "'Weve set a new standard for financial security. Our customers trust us with their most sensitive data.",
+        author: "Jennifer Liu",
+        position: "CEOFinanceFlow Inc.",
+        avatar: "/api/placeholder/60/60"},
       metrics: [
-        { label: 'Fraud 'Detection', 'value: '+99.7%'icon: Shieldcolor: 'text-green-50o0' };
-        { label: 'False 'Positives', 'value: '-90%'icon: Targetcolor: 'text-blue-50o0' };
-        { label: 'Processing 'Speed', 'value: '+50o0%'icon: Zapcolor: 'text-purple-50o0' };
-        { label: 'Customer 'Satisfaction', 'value: '+85%'icon: Userscolor: 'text-orange-50o0' }
-      ]};
+        { label: 'Fraud 'Detectionvalue: '+99.7%'icon: Shieldcolor: 'text-green-50o0' },
+        { label: 'False 'Positivesvalue: '-90%'icon: Targetcolor: 'text-blue-50o0' },
+        { label: 'Processing 'Speedvalue: '+50o0%'icon: Zapcolor: 'text-purple-50o0' },
+        { label: 'Customer 'Satisfactionvalue: '+85%'icon: Userscolor: 'text-orange-50o0' }
+      ]},
     {
-      id: 'manufacturing-ai';
-      company: 'AutoManufacturing Co.';
-      industry: 'Manufacturing';
-      challenge: 'Production optimization and predictive maintenance';
-      solution: 'AI-driven smart manufacturing with IoT integration';
+      id: 'manufacturing-ai',
+      company: 'AutoManufacturing Co.',
+      industry: 'Manufacturing',
+      challenge: 'Production optimization and predictive maintenance',
+      solution: 'AI-driven smart manufacturing with IoT integration',
       results: {
-        productivity: '+20o0%';
-        downtime: '-85%';
-        quality: '+95%';
-        energyEfficiency: '+40%'};
-      duration: '24 months';
-      teamSize: '20o0+ experts';
-      technologies: [', 'IoT', 'Computer 'Vision', 'Predictive 'Maintenance', 'Robotics'];
-      description: 'Transformed traditional manufacturing into a smartAI-powered production facility.';
+        productivity: '+20o0%',
+        downtime: '-85%',
+        quality: '+95%',
+        energyEfficiency: '+40%'},
+      duration: '24 months',
+      teamSize: '20o0+ experts',
+      technologies: [IoT', 'Computer 'VisionPredictive 'Maintenance', 'Robotics'],
+      description: 'Transformed traditional manufacturing into a smartAI-powered production facility.',
       highlights: [
-        'Increased productivity by 20o0% through intelligent automation';
-        'Reduced unplanned downtime by 85%';
-        'Achieved 95% quality improvement';
-        'Reduced energy consumption by 40%'];
+        'Increased productivity by 20o0% through intelligent automationReduced unplanned downtime by 85%',
+        'Achieved 95% quality improvementReduced energy consumption by 40%'],
       testimonial: {
-        quote: "'We', 've created the factory of the future. Every process is optimizedevery decision is data-driven.";
-        author: "Robert Kim";
-        position: "VP of OperationsAutoManufacturing Co.";
-        avatar: "/api/placeholder/60/60"};
+        quote: "'Weve created the factory of the future. Every process is optimizedevery decision is data-driven.",
+        author: "Robert Kim",
+        position: "VP of OperationsAutoManufacturing Co.",
+        avatar: "/api/placeholder/60/60"},
       metrics: [
-        { label: ''Productivity', 'value: '+20o0%'icon: TrendingUpcolor: 'text-green-50o0' };
-        { label: 'Downtime 'Reduction', 'value: '-85%'icon: Clockcolor: 'text-blue-50o0' };
-        { label: 'Quality 'Improvement', 'value: '+95%'icon: Awardcolor: 'text-purple-50o0' };
-        { label: 'Energy 'Efficiency', 'value: '+40%'icon: Zapcolor: 'text-orange-50o0' }
+        { label: ''Productivityvalue: '+20o0%'icon: TrendingUpcolor: 'text-green-50o0' },
+        { label: 'Downtime 'Reductionvalue: '-85%'icon: Clockcolor: 'text-blue-50o0' },
+        { label: 'Quality 'Improvementvalue: '+95%'icon: Awardcolor: 'text-purple-50o0' },
+        { label: 'Energy 'Efficiencyvalue: '+40%'icon: Zapcolor: 'text-orange-50o0' }
       ]}
   ],
   const overallStats = [
-    { label: 'Projects 'Completed', 'value: '50o0+'icon: CheckCircle };
-    { label: 'Client 'Satisfaction', 'value: '99.2%'icon: Star };
-    { label: 'Average 'ROI', 'value: '340%'icon: TrendingUp };
-    { label: 'Years 'Experience', 'value: '15+'icon: Award }
+    { label: 'Projects 'Completedvalue: '50o0+'icon: CheckCircle },
+    { label: 'Client 'Satisfactionvalue: '99.2%'icon: Star },
+    { label: 'Average 'ROIvalue: '340%'icon: TrendingUp },
+    { label: 'Years 'Experiencevalue: '15+'icon: Award }
   ],
   if (!isVisible) return null,
   return (
@@ -335,5 +327,5 @@ const RevolutionaryCaseStudiesShowcase20o27 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default RevolutionaryCaseStudiesShowcase20o27;
+    </section>)},
+export default RevolutionaryCaseStudiesShowcase20o27,

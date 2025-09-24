@@ -1,22 +1,22 @@
-import React from 'react';
+import React from 'react',
 import Card from '../ui/Card',
 import Button from '../ui/Button',
 import { MicroSaasService } from '../../data/micro-saas-services',
 import {
-  ExternalLink;
-  Star;
-  Zap;
-  TrendingUp;
-  Users;
-  Globe;
-  Shield;
-  ArrowRight;
-  Check;
-  Clock;
-  DollarSign;
-  Target;
-  Code;
-  Link;
+  ExternalLink,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Globe,
+  Shield,
+  ArrowRight,
+  Check,
+  Clock,
+  DollarSign,
+  Target,
+  Code,
+  Link,
 } from 'lucide-react',
 interface ServiceDetailProps {
   service: MicroSaasService}
@@ -24,36 +24,36 @@ interface ServiceDetailProps {
 const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'Content & Marketing': <Zap className='w-6 h-6' />;
-      'Analytics & Business Intelligence': <TrendingUp className='w-6 h-6' />;
-      'Customer Support': <Users className='w-6 h-6' />;
-      'SEO & Marketing': <Globe className='w-6 h-6' />;
-      'Project Management': <Users className='w-6 h-6' />;
-      'Email Marketing': <Zap className='w-6 h-6' />;
-      'Social Media': <Globe className='w-6 h-6' />;
-      'E-commerce & Inventory': <TrendingUp className='w-6 h-6' />;
-      'Human Resources': <Users className='w-6 h-6' />;
-      'Finance & Accounting': <TrendingUp className='w-6 h-6' />;
-      'Design & Creative': <Star className='w-6 h-6' />;
-      'Video & Media': <Star className='w-6 h-6' />;
-      'Legal & Compliance': <Shield className='w-6 h-6' />;
-    };
-    return iconMap[category] || <Zap className='w-6 h-6' />};
+      'Content & Marketing': <Zap className='w-6 h-6' />,
+      'Analytics & Business Intelligence': <TrendingUp className='w-6 h-6' />,
+      'Customer Support': <Users className='w-6 h-6' />,
+      'SEO & Marketing': <Globe className='w-6 h-6' />,
+      'Project Management': <Users className='w-6 h-6' />,
+      'Email Marketing': <Zap className='w-6 h-6' />,
+      'Social Media': <Globe className='w-6 h-6' />,
+      'E-commerce & Inventory': <TrendingUp className='w-6 h-6' />,
+      'Human Resources': <Users className='w-6 h-6' />,
+      'Finance & Accounting': <TrendingUp className='w-6 h-6' />,
+      'Design & Creative': <Star className='w-6 h-6' />,
+      'Video & Media': <Star className='w-6 h-6' />,
+      'Legal & Compliance': <Shield className='w-6 h-6' />,
+    },
+    return iconMap[category] || <Zap className='w-6 h-6' />},
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       active: {
-        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20';
-        text: 'Active';
-      };
+        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20',
+        text: 'Active'
+      },
       beta: {
-        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20';
-        text: 'Beta';
-      };
+        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20',
+        text: 'Beta'
+      },
       'coming-soon': {
-        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20';
-        text: 'Coming Soon';
-      };
-    };
+        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20',
+        text: 'Coming Soon'
+      },
+    },
     const config =,
       statusConfig[status as keyof typeof statusConfig] || statusConfig.active,
     return (
@@ -61,7 +61,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
         className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium border ${config.color}`}
       >,
         {config.text}
-      </span>)};
+      </span>)},
   return (
     <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
       {/* Service Header */}
@@ -284,7 +284,7 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
               <div>,
                 <div className='text-gray-40o0 text-sm'>Competitors</div>,
                 <div className='text-white font-medium'>,
-                  {service.competitors.join(', ')}
+                  {service.competitors.join()}
                 </div>,
               </div>,
             </div>,
@@ -345,5 +345,5 @@ const ServiceDetail: React.FC<ServiceDetailProps> = ({ service }) => {
           </Card>,
         </div>,
       </div>,
-    </div>)};
-export default ServiceDetail;
+    </div>)},
+export default ServiceDetail,

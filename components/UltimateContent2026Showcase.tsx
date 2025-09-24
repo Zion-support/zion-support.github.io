@@ -2,65 +2,65 @@ import Link from 'next/link',
 const UltimateContent20o26Showcase = () => {
   const contentItems = [
     {
-      id: 1;
-      title: 'AI 20o26 Revolutionary Breakthrough';
+      id: 1,
+      title: 'AI 20o26 Revolutionary Breakthrough',
       description:,
-        'Discover the most advanced AI technologies that will reshape our world in 20o26';
-      image: '🧠';
-      category: 'Artificial Intelligence';
-      readTime: '15 min read';
-      featured: true;
-    };
+        'Discover the most advanced AI technologies that will reshape our world in 20o26',
+      image: '🧠',
+      category: 'Artificial Intelligence',
+      readTime: '15 min read',
+      featured: true
+    },
     {
-      id: 2;
-      title: 'Quantum Computing Supremacy';
+      id: 2,
+      title: 'Quantum Computing Supremacy',
       description:,
-        'Explore how quantum processors are solving impossible problems in seconds';
-      image: '⚛️';
-      category: 'Quantum Computing';
-      readTime: '12 min read';
-      featured: true;
-    };
+        'Explore how quantum processors are solving impossible problems in seconds',
+      image: '⚛️',
+      category: 'Quantum Computing',
+      readTime: '12 min read',
+      featured: true
+    },
     {
-      id: 3;
-      title: 'Neural Interface Revolution';
+      id: 3,
+      title: 'Neural Interface Revolution',
       description:,
-        'Direct mind-machine communication that changes everything we know about interfaces';
-      image: '🔗';
-      category: 'Neural Interfaces';
-      readTime: '18 min read';
-      featured: false;
-    };
+        'Direct mind-machine communication that changes everything we know about interfaces',
+      image: '🔗',
+      category: 'Neural Interfaces',
+      readTime: '18 min read',
+      featured: false
+    },
     {
-      id: 4;
-      title: 'Synthetic Intelligence Evolution';
+      id: 4,
+      title: 'Synthetic Intelligence Evolution',
       description:,
-        'Next-generation AI that surpasses human intelligence while maintaining ethical alignment';
-      image: '🤖';
-      category: 'Synthetic Intelligence';
-      readTime: '20 min read';
-      featured: true;
-    };
+        'Next-generation AI that surpasses human intelligence while maintaining ethical alignment',
+      image: '🤖',
+      category: 'Synthetic Intelligence',
+      readTime: '20 min read',
+      featured: true
+    },
     {
-      id: 5;
-      title: 'Autonomous Business Ecosystems';
+      id: 5,
+      title: 'Autonomous Business Ecosystems',
       description:,
-        'Self-managing business systems that operate independently with perfect efficiency';
-      image: '🏢';
-      category: 'Business Automation';
-      readTime: '14 min read';
-      featured: false;
-    };
+        'Self-managing business systems that operate independently with perfect efficiency',
+      image: '🏢',
+      category: 'Business Automation',
+      readTime: '14 min read',
+      featured: false
+    },
     {
-      id: 6;
-      title: 'Quantum-Neural Fusion';
+      id: 6,
+      title: 'Quantum-Neural Fusion',
       description:,
-        'The ultimate combination of quantum computing and neural networks';
-      image: '⚡';
-      category: 'Hybrid Technologies';
-      readTime: '25 min read';
-      featured: true;
-    };
+        'The ultimate combination of quantum computing and neural networks',
+      image: '⚡',
+      category: 'Hybrid Technologies',
+      readTime: '25 min read',
+      featured: true
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -199,5 +199,5 @@ const UltimateContent20o26Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContent20o26Showcase;
+    </section>)},
+export default UltimateContent20o26Showcase,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Customer Insights | Zion Tech Group';
+  title: 'AI Customer Insights | Zion Tech Group',
   description:,
-    'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.';
-};
+    'Transform customer data into actionable insights with AI-powered analytics. Understand customer behavior, preferences, and trends.',
+},
 export default function AICustomerInsightsPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function AICustomerInsightsPage() {
               period='per month',
               description='Perfect for small businesses getting started with customer analytics',
               features={[
-                'Up to 10,0o00 customer records';
-                'Basic behavioral analysis';
-                'Standard segmentation';
-                'Email support';
-                'Monthly reports';
+                'Up to 10,0o00 customer recordsBasic behavioral analysis',
+                'Standard segmentationEmail support',
+                'Monthly reports',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function AICustomerInsightsPage() {
               period='per month',
               description='Ideal for growing businesses with complex customer data',
               features={[
-                'Up to 10o0,0o00 customer records';
-                'Advanced AI analytics';
-                'Predictive modeling';
-                'Real-time insights';
-                'Priority support';
-                'Custom dashboards';
+                'Up to 10o0,0o00 customer recordsAdvanced AI analytics',
+                'Predictive modelingReal-time insights',
+                'Priority supportCustom dashboards',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function AICustomerInsightsPage() {
               period='per month',
               description='For large organizations with extensive customer data needs',
               features={[
-                'Unlimited customer records';
-                'Custom AI models';
-                'Advanced predictive analytics';
-                'Dedicated support';
-                'Custom integrations';
-                'On-premise deployment';
+                'Unlimited customer recordsCustom AI models',
+                'Advanced predictive analyticsDedicated support',
+                'Custom integrationsOn-premise deployment',
               ]}
               popular={false}
             />,
@@ -255,9 +247,9 @@ export default function AICustomerInsightsPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -272,12 +264,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   plan: string,
   price: string,
@@ -309,9 +301,9 @@ function PricingCard({
     </div>)}
 ,
 function StepCard({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,

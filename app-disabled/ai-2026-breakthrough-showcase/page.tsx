@@ -1,17 +1,14 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26 Breakthrough Showcase - Revolutionary Technology Solutions';
+  title: 'AI 20o26 Breakthrough Showcase - Revolutionary Technology Solutions',
   description:,
-    'Discover the most advanced AI breakthroughs of 20o26. Quantum-neural fusion, autonomous systems, and revolutionary enterprise solutions with proven ROI.';
+    'Discover the most advanced AI breakthroughs of 20o26. Quantum-neural fusion, autonomous systems, and revolutionary enterprise solutions with proven ROI.',
   keywords: [
-    'AI 20o26';
-    'Breakthrough Technology';
-    'Quantum AI';
-    'Neural Networks';
-    'Enterprise AI';
-    'ROI Calculator';
-  ];
-};
+    'AI 20o26Breakthrough Technology',
+    'Quantum AINeural Networks',
+    'Enterprise AIROI Calculator',
+  ]
+},
 export default function AI20o26BreakthroughShowcase() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-10o0'>,

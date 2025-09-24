@@ -1,44 +1,41 @@
 import Head from 'next/head',
 import {
-  BarChart3;
-  TrendingUp;
-  PieChart;
-  Activity;
-  ArrowRight;
-  Check;
-  Eye;
+  BarChart3,
+  TrendingUp,
+  PieChart,
+  Activity,
+  ArrowRight,
+  Check,
+  Eye,
 } from 'lucide-react',
 import { Button } from '../components/ui/Button',
 export default function AnalyticsPage() {
   const features = [
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />;
-      title: 'Real-time Dashboards';
-      description: 'Live monitoring and visualization of your key metrics';
-    };
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+      title: 'Real-time Dashboards',
+      description: 'Live monitoring and visualization of your key metrics'
+    },
     {
-      icon: <TrendingUp className='w-8 h-8 text-white' />;
-      title: 'Predictive Analytics';
-      description: 'AI-powered forecasting and trend analysis';
-    };
+      icon: <TrendingUp className='w-8 h-8 text-white' />,
+      title: 'Predictive Analytics',
+      description: 'AI-powered forecasting and trend analysis'
+    },
     {
-      icon: <PieChart className='w-8 h-8 text-white' />;
-      title: 'Custom Reports';
-      description: 'Build and schedule personalized reports';
-    };
+      icon: <PieChart className='w-8 h-8 text-white' />,
+      title: 'Custom Reports',
+      description: 'Build and schedule personalized reports'
+    },
     {
-      icon: <Activity className='w-8 h-8 text-white' />;
-      title: 'Performance Monitoring';
-      description: 'Track system performance and user behavior';
-    };
+      icon: <Activity className='w-8 h-8 text-white' />,
+      title: 'Performance Monitoring',
+      description: 'Track system performance and user behavior'
+    },
   ],
   const benefits = [
-    'Make data-driven decisions';
-    'Identify growth opportunities';
-    'Optimize user experience';
-    'Monitor system health';
-    'Track business metrics';
-    'Generate actionable insights';
+    'Make data-driven decisionsIdentify growth opportunities',
+    'Optimize user experienceMonitor system health',
+    'Track business metricsGenerate actionable insights',
   ],
   return (
     <>,
@@ -67,7 +64,7 @@ export default function AnalyticsPage() {
               Analytics Platform,
             </h1>,
             <p className='text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto mb-12 leading-relaxed'>,
-              Comprehensive analytics platform with real-time insights;
+              Comprehensive analytics platform with real-time insights,
               predictive analytics, and custom reporting capabilities.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-6 justify-center'>,

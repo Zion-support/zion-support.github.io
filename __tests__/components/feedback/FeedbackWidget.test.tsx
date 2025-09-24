@@ -1,4 +1,7 @@
-import React from react',import { render, screen } from @testing-library/react',import userEvent from @testing-library/user-event',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import { useRouter } from next/router',import { FeedbackProvider } from @/context/FeedbackContext',import { FeedbackWidget } from @/components/feedback/FeedbackWidget',jest.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: null }) }));
+import React from react',
+import { render, screen } from @testing-library/react',import userEvent from @testing-library/user-event',
+import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import { useRouter } from next/router',
+import { FeedbackProvider } from @/context/FeedbackContext',import { FeedbackWidget } from @/components/feedback/FeedbackWidget',jest.mock('@/hooks/useAuth', () => ({ useAuth: () => ({ user: null }) })),
 function TestRoutes() {
   const router = useRouter(),
   return (

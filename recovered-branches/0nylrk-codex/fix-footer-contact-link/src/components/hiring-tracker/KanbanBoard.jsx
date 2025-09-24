@@ -9,30 +9,30 @@ import { useIsMobile } from '@/hooks/use-mobile',
 // Define the kanban board columns based on application statuses,
 const COLUMNS = [
   {
-    id: 'new';
-    title: 'Applied';
-    description: 'New applications';
-  };
+    id: 'new',
+    title: 'Applied',
+    description: 'New applications'
+  },
   {
-    id: 'shortlisted';
-    title: 'Shortlisted';
-    description: 'Candidates selected for review';
-  };
+    id: 'shortlisted',
+    title: 'Shortlisted',
+    description: 'Candidates selected for review'
+  },
   {
-    id: 'interview';
-    title: 'Interview';
-    description: 'Scheduled for interview';
-  };
+    id: 'interview',
+    title: 'Interview',
+    description: 'Scheduled for interview'
+  },
   {
-    id: 'hired';
-    title: 'Hired';
-    description: 'Successful candidates';
-  };
+    id: 'hired',
+    title: 'Hired',
+    description: 'Successful candidates'
+  },
   {
-    id: 'rejected';
-    title: 'Rejected';
-    description: 'Not moving forward';
-  };
+    id: 'rejected',
+    title: 'Rejected',
+    description: 'Not moving forward'
+  },
 ],
 export function KanbanBoard({ jobId }) {
   const { applications, isLoading, updateApplicationStatus } =,
@@ -68,24 +68,24 @@ export function KanbanBoard({ jobId }) {
     const [removed] = sourceColumn.splice(source.index, 1),
     destColumn.splice(destination.index, 0, { ...removed, status: newStatus }),
     setColumns({
-      ...columns;
-      [source.droppableId]: sourceColumn;
-      [destination.droppableId]: destColumn;
+      ...columns,
+      [source.droppableId]: sourceColumn,
+      [destination.droppableId]: destColumn,
     }),
     // Update status in the database,
     try {
       await updateApplicationStatus(draggableId, newStatus),
       toast({
-        title: 'Status updated';
-        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`;
+        title: 'Status updated',
+        description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`,
       })} catch (error) {
       // Revert the UI changes if the database update fails,
       toast({
-        title: 'Failed to update status';
-        description: 'Please try again';
-        variant: 'destructive';
+        title: 'Failed to update status',
+        description: 'Please try again',
+        variant: 'destructive'
       })}
-  };
+  },
   if (isLoading) {
     return (
       <div

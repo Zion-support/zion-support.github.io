@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'cloud-services - Zion Tech Group';
-  description: 'Professional cloud-services solutions for your business needs.';
-  keywords: 'cloud-services, services, business, technology';
-};
+  title: 'cloud-services - Zion Tech Group',
+  description: 'Professional cloud-services solutions for your business needs.',
+  keywords: 'cloud-services, services, business, technology',
+},
 export default function CloudServicesPage() {
   return (
     <div className='min-h-screen bg-white'>,

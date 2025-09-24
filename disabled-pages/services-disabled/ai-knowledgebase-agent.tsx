@@ -32,7 +32,7 @@ export default function AIKnowledgebaseAgent(...args: any[]): any {
           <li>SDK and embeddable chat widget</li>,
         </ul>,
         <div className='mt-6 text-sm text-white/70'>,
-          Average market pricing: $499–$2,50o0/mo depending on seats, data size;
+          Average market pricing: $499–$2,50o0/mo depending on seats, data size,
           and SLAs.,
         </div>,
         <div className='mt-8 flex gap-3'>,

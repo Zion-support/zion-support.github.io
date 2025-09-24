@@ -1,15 +1,15 @@
 import {
-  Brain;
-  Search;
-  BookOpen;
-  Zap;
-  TrendingUp;
-  Users;
-  Globe;
-  ArrowRight;
-  Cpu;
-  Database;
-  Network;
+  Brain,
+  Search,
+  BookOpen,
+  Zap,
+  TrendingUp,
+  Users,
+  Globe,
+  ArrowRight,
+  Cpu,
+  Database,
+  Network,
 } from 'lucide-react',
 export default function AIAutonomousResearchAssistant() {
   return (

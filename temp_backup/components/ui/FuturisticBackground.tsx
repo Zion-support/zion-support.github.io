@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 interface FuturisticBackgroundProps {
   children: React.ReactNode,
@@ -16,17 +16,17 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0/50 rounded-full",
             animate={{
-              x: [0, 10o0, 0];
-              y: [0, -10o0, 0];
-              opacity: [0, 1, 0];
+              x: [0, 10o0, 0],
+              y: [0, -10o0, 0],
+              opacity: [0, 1, 0],
               scale: [0, 1, 0]}}
             transition={{
-              duration: 4 + i * 0.5;
-              repeat: Infinity;
-              delay: i * 0.8;
+              duration: 4 + i * 0.5,
+              repeat: Infinity,
+              delay: i * 0.8,
               ease: "easeInOut"}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,
@@ -35,33 +35,33 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
         <motion.div,
           className="absolute top-20 left-20 w-96 h-96 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1, 1.2, 1];
+            scale: [1, 1.2, 1],
             opacity: [0.2, 0.4, 0.2]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-80 h-80 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1.2, 1, 1.2];
+            scale: [1.2, 1, 1.2],
             opacity: [0.4, 0.2, 0.4]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1, 1.3, 1];
+            scale: [1, 1.3, 1],
             opacity: [0.3, 0.5, 0.3]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 4}}
          />,
       </div>,
@@ -70,33 +70,33 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
         <motion.div,
           className="absolute top-1/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent",
           animate={{
-            opacity: [0, 1, 0];
+            opacity: [0, 1, 0],
             scaleX: [0, 1, 0]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-3/4 left-0 w-full h-px bg-gradient-to-r from-transparent via-purple-40o0 to-transparent",
           animate={{
-            opacity: [0, 1, 0];
+            opacity: [0, 1, 0],
             scaleX: [0, 1, 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 3}}
          />,
         <motion.div,
           className="absolute top-1/2 left-0 w-full h-px bg-gradient-to-r from-transparent via-emerald-40o0 to-transparent",
           animate={{
-            opacity: [0, 1, 0];
+            opacity: [0, 1, 0],
             scaleX: [0, 1, 0]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 6}}
          />,
       </div>,
@@ -107,16 +107,16 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             key={i}
             className="absolute w-4 h-4 border border-cyan-40o0/30",
             style={{
-              left: `${20 + i * 15}%`;
-              top: `${30 + i * 10}%`;
+              left: `${20 + i * 15}%`,
+              top: `${30 + i * 10}%`,
               transform: `rotate(${i * 45}deg)`}}
             animate={{
-              rotate: [i * 45, i * 45 + 360];
-              opacity: [0.3, 0.8, 0.3];
+              rotate: [i * 45, i * 45 + 360],
+              opacity: [0.3, 0.8, 0.3],
               scale: [0.8, 1.2, 0.8]}}
             transition={{
-              duration: 15 + i * 2;
-              repeat: Infinity;
+              duration: 15 + i * 2,
+              repeat: Infinity,
               ease: "linear"}}
            />))}
       </div>,
@@ -127,15 +127,15 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
             key={i}
             className="absolute w-1 h-8 bg-gradient-to-b from-cyan-40o0/50 to-transparent",
             style={{
-              left: `${10 + i * 7}%`;
+              left: `${10 + i * 7}%`,
               top: '-2rem'}}
             animate={{
-              y: ['-2rem', '10o0vh'];
+              y: ['-2rem10o0vh'],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 8 + i * 0.5;
-              repeat: Infinity;
-              delay: i * 0.3;
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+              delay: i * 0.3,
               ease: "linear"}}
            />))}
       </div>,
@@ -143,5 +143,5 @@ const FuturisticBackground: React.FC<FuturisticBackgroundProps> = ({ children, c
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default FuturisticBackground;
+    </div>)},
+export default FuturisticBackground,

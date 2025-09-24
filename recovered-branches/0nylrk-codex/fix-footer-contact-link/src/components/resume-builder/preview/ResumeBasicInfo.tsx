@@ -3,7 +3,7 @@ interface ResumeBasicInfoSectionProps {
   basicInfo: ResumeBasicInfo}
 ,
 export function ResumeBasicInfoSection({
-  basicInfo;
+  basicInfo,
 }: ResumeBasicInfoSectionProps) {
   return (
     <div className='space-y-2 border-b pb-4 mb-6'>,

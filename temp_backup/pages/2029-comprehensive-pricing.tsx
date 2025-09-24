@@ -3,8 +3,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain;
-  Atom, Rocket, Target, Microscope, DollarSign, Phone;
+  CheckCircle, Star, Zap, Shield, Globe, Cpu, Brain,
+  Atom, Rocket, Target, Microscope, DollarSign, Phone,
   Mail, MapPin, ArrowRight, TrendingUp, Users, Briefcase} from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
@@ -13,21 +13,21 @@ import { aiAutonomousEcosystemServices20o29 } from '../data/20o29-ai-autonomous-
 import { emergingTechBreakthroughServices20o29 } from '../data/20o29-emerging-tech-breakthroughs',
 import { practicalBusinessSolutionServices20o29 } from '../data/20o29-practical-business-solutions',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function ComprehensivePricing20o29() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState('monthly'),
   const allServices = [
-    ...aiAutonomousEcosystemServices20o29;
-    ...emergingTechBreakthroughServices20o29;
+    ...aiAutonomousEcosystemServices20o29,
+    ...emergingTechBreakthroughServices20o29,
     ...practicalBusinessSolutionServices20o29],
   const categories = [
-    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length };
-    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices20o29.length };
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices20o29.length };
+    { id: 'all', name: 'All Services', icon: Briefcase, count: allServices.length },
+    { id: 'ai-autonomous', name: 'AI Autonomous', icon: Brain, count: aiAutonomousEcosystemServices20o29.length },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: Atom, count: emergingTechBreakthroughServices20o29.length },
     { id: 'business-solutions', name: 'Business Solutions', icon: Target, count: practicalBusinessSolutionServices20o29.length }
   ],
   const filteredServices = selectedCategory === 'all',
@@ -40,13 +40,13 @@ export default function ComprehensivePricing20o29() {
         return true}),
   const getPrice = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
-    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)};
+    return billingCycle === 'monthly' ? numericPrice : Math.round(numericPrice * 0.8)},
   const getBillingText = (price: string) => {
     const numericPrice = parseInt(price.replace(/[^0-9]/g, '')),
     if (billingCycle === 'monthly') {
       return `$${numericPrice.toLocaleString()}/month`} else {
       return `$${Math.round(numericPrice * 0.8).toLocaleString()}/month (billed annually)`}
-  };
+  },
   return (
     <div className="min-h-screen bg-black text-white relative">,
       <FuturisticAnimatedBackground20o29  />,

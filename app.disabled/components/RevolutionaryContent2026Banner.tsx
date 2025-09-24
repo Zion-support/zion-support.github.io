@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function RevolutionaryContent2026Banner() {
   return null}
 import Link from 'next/link',
@@ -60,5 +60,5 @@ const RevolutionaryContent20o26Banner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o26Banner;
+    </section>)},
+export default RevolutionaryContent20o26Banner,

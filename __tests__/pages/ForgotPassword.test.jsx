@@ -1,5 +1,7 @@
-import React from react',import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import ForgotPassword from ../../src/pages/ForgotPassword', // Adjust path as necessary'// Mock the auth service,
-// jest.mock('../../src/services/auth', () => ({'//   forgotPassword: jest.fn();
+import React from react',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',
+import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import ForgotPassword from ../../src/pages/ForgotPassword', // Adjust path as necessary'// Mock the auth service,
+// jest.mock('../../src/services/auth', () => ({'//   forgotPassword: jest.fn(),
 // })),
 describe('ForgotPassword Page', () => {'  beforeEach(() => {
     // Reset mocks before each test,

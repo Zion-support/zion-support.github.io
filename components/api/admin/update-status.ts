@@ -9,18 +9,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Unauthorized' }),
     return}
 ,
-  const body = req && req.body || {};
-  const dataDir = path && path.join(process && process.cwd(), 'data', 'admin'),
+  const body = req && req.body || {},
+  const dataDir = path && path.join(process && process.cwd(), 'dataadmin'),
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true }),
   const statusPath = path && path.join(dataDir, 'agents-status && status.json'),
   const existing = fs && fs.existsSync(statusPath),
     ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')),
-    : { agents: [] };
+    : { agents: [] },
   const merged = {
-    ...existing;
-    ...body;
-    updatedAt: new Date().toISOString();
-  };
+    ...existing,
+    ...body,
+    updatedAt: new Date().toISOString()
+  },
   fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2)),
   res && res.status(200).json({ ok: true }),export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') {
@@ -30,15 +30,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Unauthorized' }),
     return}
 ,
-  const body = req && req.body || {};
+  const body = req && req.body || {},
   const dataDir = path && path.join(process && process.cwd(), 'dataadmin'),
   if (!fs && fs.existsSync(dataDir)) fs && fs.mkdirSync(dataDir, { recursive: true }),
   const statusPath = path && path.join(dataDir, 'agents-status && status.json'),
-  const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] };
+  const existing = fs && fs.existsSync(statusPath) ? JSON && JSON.parse(fs && fs.readFileSync(statusPath, 'utf8')) : { agents: [] },
   const merged = {
     ...existing,
     ...body,
-    updatedAt: new Date().toISOString()};
+    updatedAt: new Date().toISOString()},
   fs && fs.writeFileSync(statusPath, JSON && JSON.stringify(merged, null, 2)),
   res && res.status(200).json({ ok: true })}
 ,
@@ -52,7 +52,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res.status (401).json ({ error: 'Unauthorized' }),
     return}
   const body = req.body || {}
-  const data_dir = path.join (process.cwd (), 'data', 'admin'),
+  const data_dir = path.join (process.cwd (), 'dataadmin'),
   if () fs.mkdir_sync (data_dir, { recursive: true })) {
   $2}
   const status_path = path.join (data_dir, 'agents - status.json'),
@@ -61,9 +61,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     : { agents: [] }
 ,
   const merged = {
-    ...existing;
-    ...body;
-    updated_at: new Date ().toISOString ();
+    ...existing,
+    ...body,
+    updated_at: new Date ().toISOString ()
   }
   fs.writeFileSync (status_path, JSON.stringify (merged, null, 2)),
   res.status (200).json ({ ok: true }),export default /**,

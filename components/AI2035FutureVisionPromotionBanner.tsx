@@ -4,8 +4,8 @@ import {
   Zap,
   Globe,
   Rocket,
-  ArrowRight;
-  Star;
+  ArrowRight,
+  Star,
   Sparkles} from 'lucide-react',
 export default function AI20o35FutureVisionPromotionBanner() {
   return (

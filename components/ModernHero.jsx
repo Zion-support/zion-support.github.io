@@ -9,15 +9,15 @@ const ModernHero = () => {
   useEffect(() => {
     setIsVisible(true)}, []),
   const stats = [
-    { number: 500, suffix: '+', label: 'Projects Completed' };
-    { number: 50, suffix: '+', label: 'Happy Clients' };
-    { number: 99, suffix: '%', label: 'Success Rate' };
+    { number: 500, suffix: '+', label: 'Projects Completed' },
+    { number: 50, suffix: '+', label: 'Happy Clients' },
+    { number: 99, suffix: '%', label: 'Success Rate' },
     { number: 24, suffix: '/7', label: 'Support' }
   ],
   const features = [
-    { icon: '🚀', title: 'Fast Delivery', description: 'Rapid prototyping and deployment' };
-    { icon: '🔒', title: 'Secure', description: 'Enterprise-grade security' };
-    { icon: '⚡', title: 'Scalable', description: 'Grows with your business' };
+    { icon: '🚀', title: 'Fast Delivery', description: 'Rapid prototyping and deployment' },
+    { icon: '🔒', title: 'Secure', description: 'Enterprise-grade security' },
+    { icon: '⚡', title: 'Scalable', description: 'Grows with your business' },
     { icon: '🎯', title: 'Focused', description: 'Tailored solutions' }
   ],
   return (
@@ -28,15 +28,14 @@ const ModernHero = () => {
           className="absolute inset-0",
           animate={{
             background: [
-              'linear-gradient(45deg, #3b82f6, #8b5cf6)';
-              'linear-gradient(45deg, #8b5cf6, #06b6d4)';
+              'linear-gradient(45deg, #3b82f6, #8b5cf6)linear-gradient(45deg, #8b5cf6, #06b6d4)',
               'linear-gradient(45deg, #06b6d4, #3b82f6)']}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "linear"}}
           style={{
-            opacity: 0.1;
+            opacity: 0.1,
             backgroundSize: '400% 400%'}}
         />,
       </div>,
@@ -47,15 +46,15 @@ const ModernHero = () => {
             key={i}
             className="absolute w-2 h-2 bg-blue-400 rounded-full",
             animate={{
-              x: [0, 100, 0];
-              y: [0, -100, 0];
+              x: [0, 100, 0],
+              y: [0, -100, 0],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 3 + i;
-              repeat: Infinity;
+              duration: 3 + i,
+              repeat: Infinity,
               delay: i * 0.5}}
             style={{
-              left: `${20 + i * 15}%`;
+              left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`}}
           />))}
       </div>,
@@ -71,7 +70,7 @@ const ModernHero = () => {
               Transform Your,
               <br />,
               <TypewriterEffect
-                words={['Business', 'Ideas', 'Future']}
+                words={['BusinessIdeas', 'Future']}
                 className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600",
               />,
             </h1>,
@@ -83,7 +82,7 @@ const ModernHero = () => {
             animate={isVisible ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >,
-            Leading provider of AI-powered solutions, enterprise IT services;
+            Leading provider of AI-powered solutions, enterprise IT services,
             and innovative micro SaaS platforms that drive digital transformation.,
           </motion.p>,
           {/* CTA Buttons */}
@@ -149,5 +148,5 @@ const ModernHero = () => {
           </motion.div>,
         </div>,
       </div>,
-    </section>)};
-export default ModernHero;
+    </section>)},
+export default ModernHero,

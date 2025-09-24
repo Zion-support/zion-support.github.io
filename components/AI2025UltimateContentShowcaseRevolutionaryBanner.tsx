@@ -4,41 +4,41 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  SparklesIcon;
-  RocketLaunchIcon;
-  ChartBarIcon;
-  CheckCircleIcon;
-  ArrowRightIcon;
-  StarIcon;
-  FireIcon;
+  SparklesIcon,
+  RocketLaunchIcon,
+  ChartBarIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  StarIcon,
+  FireIcon,
   BoltIcon} from '@heroicons/react/24/outline',
 const AI20o25UltimateContentShowcaseRevolutionaryBanner = () => {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
   const features = [
     {
-      icon: <SparklesIcon className="w-8 h-8"  />;
-      title: "Revolutionary Content Generation";
-      description: "50o000% ROI with neural content architecture";
-      metric: "50o000%";
-      metricLabel: "ROI Increase"};
+      icon: <SparklesIcon className="w-8 h-8"  />,
+      title: "Revolutionary Content Generation",
+      description: "50o000% ROI with neural content architecture",
+      metric: "50o000%",
+      metricLabel: "ROI Increase"},
     {
-      icon: <BoltIcon className="w-8 h-8"  />;
-      title: "Quantum-Enhanced Processing";
-      description: "10o00x faster content generation";
-      metric: "10o00x";
-      metricLabel: "Speed Boost"};
+      icon: <BoltIcon className="w-8 h-8"  />,
+      title: "Quantum-Enhanced Processing",
+      description: "10o00x faster content generation",
+      metric: "10o00x",
+      metricLabel: "Speed Boost"},
     {
-      icon: <ChartBarIcon className="w-8 h-8"  />;
-      title: "Enterprise Intelligence";
-      description: "98% accuracy with autonomous optimization";
-      metric: "98%";
-      metricLabel: "Accuracy Rate"};
+      icon: <ChartBarIcon className="w-8 h-8"  />,
+      title: "Enterprise Intelligence",
+      description: "98% accuracy with autonomous optimization",
+      metric: "98%",
+      metricLabel: "Accuracy Rate"},
     {
-      icon: <FireIcon className="w-8 h-8"  />;
-      title: "Revolutionary Breakthrough";
-      description: "Transform your content strategy today";
-      metric: "340%";
+      icon: <FireIcon className="w-8 h-8"  />,
+      title: "Revolutionary Breakthrough",
+      description: "Transform your content strategy today",
+      metric: "340%",
       metricLabel: "Efficiency Gain"}
   ],
   useEffect(() => {
@@ -47,23 +47,23 @@ const AI20o25UltimateContentShowcaseRevolutionaryBanner = () => {
       setCurrentFeature((prev) => (prev + 1) % features.length)}, 40o00),
     return () => clearInterval(interval)}, []),
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   return (
     <AnimatePresence>,
       {isVisible && (
@@ -222,5 +222,5 @@ const AI20o25UltimateContentShowcaseRevolutionaryBanner = () => {
           <div className="absolute top-40 right-20 w-3 h-3 bg-blue-40o0 rounded-full animate-pulse"  />,
           <div className="absolute bottom-32 left-1/4 w-2 h-2 bg-purple-40o0 rounded-full animate-bounce"  />,
         </motion.section>)}
-    </AnimatePresence>)};
-export default AI20o25UltimateContentShowcaseRevolutionaryBanner;
+    </AnimatePresence>)},
+export default AI20o25UltimateContentShowcaseRevolutionaryBanner,

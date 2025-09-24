@@ -1,47 +1,47 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Sparkles;
-  Rocket;
-  Brain;
-  Atom;
-  Zap;
-  Star;
+  ArrowRight,
+  Sparkles,
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Star,
 } from 'lucide-react',
 import Button from '../ui/Button',
 const UltraFuturisticHero20o30: React.FC = () => {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const features = [
     {
-      icon: Brain;
-      title: 'AI Consciousness';
-      description: 'Develop genuine AI consciousness and self-awareness';
-      color: 'from-violet-50o0 to-purple-60o0';
-    };
+      icon: Brain,
+      title: 'AI Consciousness',
+      description: 'Develop genuine AI consciousness and self-awareness',
+      color: 'from-violet-50o0 to-purple-60o0'
+    },
     {
-      icon: Atom;
-      title: 'Quantum Computing';
-      description: 'Unbreakable quantum encryption and computing';
-      color: 'from-indigo-50o0 to-blue-60o0';
-    };
+      icon: Atom,
+      title: 'Quantum Computing',
+      description: 'Unbreakable quantum encryption and computing',
+      color: 'from-indigo-50o0 to-blue-60o0'
+    },
     {
-      icon: Rocket;
-      title: 'Space Technology';
-      description: 'Automated asteroid mining and space exploration';
-      color: 'from-cyan-50o0 to-teal-60o0';
-    };
+      icon: Rocket,
+      title: 'Space Technology',
+      description: 'Automated asteroid mining and space exploration',
+      color: 'from-cyan-50o0 to-teal-60o0'
+    },
     {
-      icon: Zap;
-      title: 'Emerging Tech';
-      description: 'Cutting-edge biotechnology and DNA computing';
-      color: 'from-pink-50o0 to-rose-60o0';
-    };
+      icon: Zap,
+      title: 'Emerging Tech',
+      description: 'Cutting-edge biotechnology and DNA computing',
+      color: 'from-pink-50o0 to-rose-60o0'
+    },
   ],
   return (
     <section className='relative py-32 px-4 sm: px-6 lg:px-8 overflow-hidden'>,
@@ -53,10 +53,10 @@ const UltraFuturisticHero20o30: React.FC = () => {
             className='absolute inset-0',
             style={{
               backgroundImage: `,
-              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+              linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-            `;
-              backgroundSize: '50px 50px';
+            `,
+              backgroundSize: '50px 50px'
             }}
           />,
         </div>,
@@ -64,37 +64,37 @@ const UltraFuturisticHero20o30: React.FC = () => {
         <motion.div,
           className='absolute top-20 left-20 w-4 h-4 bg-cyan-40o0 rounded-full blur-sm',
           animate={{
-            scale: [1, 1.5, 1];
-            opacity: [0.5, 1, 0.5];
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 4;
-            repeat: Infinity;
-            ease: 'easeInOut';
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         />,
         <motion.div,
           className='absolute top-40 right-32 w-6 h-6 bg-purple-40o0 rounded-full blur-sm',
           animate={{
-            scale: [1, 2, 1];
-            opacity: [0.3, 0.8, 0.3];
+            scale: [1, 2, 1],
+            opacity: [0.3, 0.8, 0.3],
           }}
           transition={{
-            duration: 6;
-            repeat: Infinity;
-            ease: 'easeInOut';
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         />,
         <motion.div,
           className='absolute bottom-40 left-1/3 w-3 h-3 bg-pink-40o0 rounded-full blur-sm',
           animate={{
-            scale: [1, 1.8, 1];
-            opacity: [0.4, 0.9, 0.4];
+            scale: [1, 1.8, 1],
+            opacity: [0.4, 0.9, 0.4],
           }}
           transition={{
-            duration: 5;
-            repeat: Infinity;
-            ease: 'easeInOut';
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         />,
       </div>,
@@ -215,25 +215,25 @@ const UltraFuturisticHero20o30: React.FC = () => {
           <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
             {[
               {
-                number: '50o0+';
-                label: 'Innovative Services';
-                color: 'from-cyan-40o0 to-blue-40o0';
-              };
+                number: '50o0+',
+                label: 'Innovative Services',
+                color: 'from-cyan-40o0 to-blue-40o0'
+              },
               {
-                number: '50+';
-                label: 'Technology Patents';
-                color: 'from-purple-40o0 to-pink-40o0';
-              };
+                number: '50+',
+                label: 'Technology Patents',
+                color: 'from-purple-40o0 to-pink-40o0'
+              },
               {
-                number: '10o00+';
-                label: 'Happy Customers';
-                color: 'from-pink-40o0 to-rose-40o0';
-              };
+                number: '10o00+',
+                label: 'Happy Customers',
+                color: 'from-pink-40o0 to-rose-40o0'
+              },
               {
-                number: '20o30';
-                label: 'Future Ready';
-                color: 'from-cyan-40o0 to-purple-40o0';
-              };
+                number: '20o30',
+                label: 'Future Ready',
+                color: 'from-cyan-40o0 to-purple-40o0'
+              },
             ].map((stat, index) => (
               <motion.div,
                 key={stat.label}
@@ -251,5 +251,5 @@ const UltraFuturisticHero20o30: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default UltraFuturisticHero20o30;
+    </section>)},
+export default UltraFuturisticHero20o30,

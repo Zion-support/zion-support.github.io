@@ -56,7 +56,7 @@ const RevolutionaryAI20o26Banner = () => {
             </h3>,
             <p className='text-gray-20o0'>,
               Quantum-enhanced neural networksautonomous AI systemsand,
-              predictive intelligence 'that', 's changing everything.,
+              predictive intelligence 'thats changing everything.,
             </p>,
           </div>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 hover: bg-opacity-20 transition-all duration-30o0'>,
@@ -158,5 +158,5 @@ const RevolutionaryAI20o26Banner = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryAI20o26Banner;
+    </section>)},
+export default RevolutionaryAI20o26Banner,

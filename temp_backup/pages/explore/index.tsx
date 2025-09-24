@@ -7,125 +7,123 @@ export default function ExploreIndex() {
   // AUTO-GENERATED: EXPLORE_PROMOS,
   const promos = [
     {
-      href: '/reports/innovations/insight-20o25-08-13T21-30';
-      title: 'Innovation Insight — 20o25-08-13 21-30';
-      desc: 'New autonomous content';
-    };
+      href: '/reports/innovations/insight-20o25-08-13T21-30',
+      title: 'Innovation Insight — 20o25-08-13 21-30',
+      desc: 'New autonomous content'
+    },
     {
-      href: '/reports/updates/update-20o25-08-13T21-30';
-      title: 'Autonomous Update — 20o25-08-13 21-30';
-      desc: 'New autonomous content';
-    };
+      href: '/reports/updates/update-20o25-08-13T21-30',
+      title: 'Autonomous Update — 20o25-08-13 21-30',
+      desc: 'New autonomous content'
+    },
   ],
   const features: Array<{ title: string, desc: string }> = [
     {
-      title: 'Autonomous Agents';
-      desc: 'Self‑improving systems that build and run new automations.';
-    };
+      title: 'Autonomous Agents',
+      desc: 'Self‑improving systems that build and run new automations.'
+    },
     {
-      title: 'Direct Repo Sync';
-      desc: 'Edits are committed and pushed to main safely.';
-    };
+      title: 'Direct Repo Sync',
+      desc: 'Edits are committed and pushed to main safely.'
+    },
     {
-      title: 'Zero‑Ops Cloud';
-      desc: 'Fully managed execution with layered guardrails.';
-    };
+      title: 'Zero‑Ops Cloud',
+      desc: 'Fully managed execution with layered guardrails.'
+    },
     {
-      title: 'Observability';
-      desc: 'Dashboards, reports, and health checks across the site.';
-    };
+      title: 'Observability',
+      desc: 'Dashboards, reports, and health checks across the site.',
+    },
     {
-      title: 'Scalable Factories';
-      desc: 'Domain‑specific content and automation factories on demand.';
-    };
+      title: 'Scalable Factories',
+      desc: 'Domain‑specific content and automation factories on demand.'
+    },
     {
-      title: 'A11y & SEO';
-      desc: 'Continuous improvements to accessibility and search.';
-    };
+      title: 'A11y & SEO',
+      desc: 'Continuous improvements to accessibility and search.'
+    },
   ],
   const benefits: string[] = [
-    '24/7 progress without manual intervention';
-    'Faster delivery with incremental, safe edits';
-    'Lower maintenance via automated checks';
-    'Higher quality from continuous auditing';
+    '24/7 progress without manual interventionFaster delivery with incremental, safe edits',
+    'Lower maintenance via automated checksHigher quality from continuous auditing',
   ],
   const servicesDir: Array<{ href: string, title: string, desc: string }> = [
     {
-      href: '/services/ai-seo-auditor';
-      title: 'AI SEO Auditor';
-      desc: 'Automate SEO improvements';
-    };
+      href: '/services/ai-seo-auditor',
+      title: 'AI SEO Auditor',
+      desc: 'Automate SEO improvements'
+    },
     {
-      href: '/services/customer-support-chatbot';
-      title: 'Customer Support Chatbot';
-      desc: 'Reduce response time';
-    };
+      href: '/services/customer-support-chatbot',
+      title: 'Customer Support Chatbot',
+      desc: 'Reduce response time'
+    },
     {
-      href: '/services/landing-page-generator';
-      title: 'Landing Page Generator';
-      desc: 'Launch pages instantly';
-    };
+      href: '/services/landing-page-generator',
+      title: 'Landing Page Generator',
+      desc: 'Launch pages instantly'
+    },
     {
-      href: '/services/price-intelligence-service';
-      title: 'Price Intelligence';
-      desc: 'Market‑aware pricing';
-    };
+      href: '/services/price-intelligence-service',
+      title: 'Price Intelligence',
+      desc: 'Market‑aware pricing'
+    },
   ],
   const keyPages: Array<{ href: string, title: string, desc: string }> = [
     {
-      href: '/automation';
-      title: 'Automation Hub';
-      desc: 'Live agents, runners, and schedulers';
-    };
+      href: '/automation',
+      title: 'Automation Hub',
+      desc: 'Live agents, runners, and schedulers',
+    },
     {
-      href: '/main/front';
-      title: 'Front Systems';
-      desc: 'Futuristic product showcase';
-    };
+      href: '/main/front',
+      title: 'Front Systems',
+      desc: 'Futuristic product showcase'
+    },
     {
-      href: '/reports';
-      title: 'Reports Index';
-      desc: 'SEO, AI Trends, Roadmap, and more';
-    };
+      href: '/reports',
+      title: 'Reports Index',
+      desc: 'SEO, AI Trends, Roadmap, and more',
+    },
     {
-      href: '/newsroom';
-      title: 'Newsroom';
-      desc: 'Curated updates by autonomous agents';
-    };
+      href: '/newsroom',
+      title: 'Newsroom',
+      desc: 'Curated updates by autonomous agents'
+    },
     {
-      href: '/site-health';
-      title: 'Site Health';
-      desc: 'A11y, links, images, diagnostics';
-    };
-    { href: '/search', title: 'Search', desc: 'Find content across the site' };
-    { href: '/sitemap.xml', title: 'Sitemap', desc: 'Full index of pages' };
+      href: '/site-health',
+      title: 'Site Health',
+      desc: 'A11y, links, images, diagnostics',
+    },
+    { href: '/search', title: 'Search', desc: 'Find content across the site' },
+    { href: '/sitemap.xml', title: 'Sitemap', desc: 'Full index of pages' },
     {
-      href: 'https://github.com/Zion-Holdings/zion.app';
-      title: 'GitHub';
-      desc: 'Repository and actions';
-    };
+      href: 'https://github.com/Zion-Holdings/zion.app',
+      title: 'GitHub',
+      desc: 'Repository and actions'
+    },
   ],
   const contentHubs: Array<{ href: string, title: string, desc: string }> = [
     {
-      href: '/reports/ai-trends';
-      title: 'AI Trends Radar';
-      desc: 'Signals that inspire automations';
-    };
+      href: '/reports/ai-trends',
+      title: 'AI Trends Radar',
+      desc: 'Signals that inspire automations'
+    },
     {
-      href: '/reports/ai-lab';
-      title: 'AI Lab';
-      desc: 'Research, experiments, and results';
-    };
+      href: '/reports/ai-lab',
+      title: 'AI Lab',
+      desc: 'Research, experiments, and results',
+    },
     {
-      href: '/reports/innovations';
-      title: 'Innovations';
-      desc: 'Insights, guides, and patterns';
-    };
+      href: '/reports/innovations',
+      title: 'Innovations',
+      desc: 'Insights, guides, and patterns',
+    },
     {
-      href: '/newsroom';
-      title: 'Autonomous Updates';
-      desc: 'Freshly published content';
-    };
+      href: '/newsroom',
+      title: 'Autonomous Updates',
+      desc: 'Freshly published content'
+    },
   ],
   return (
     <div>,

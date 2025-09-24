@@ -2,9 +2,9 @@ type Manifesto = {
   title: string,
   videoProvider: 'youtube' | 'ipfs',
   videoIdOrCid: string,
-  text: string};
+  text: string},
 export default function WelcomeManifesto({
-  manifesto;
+  manifesto,
 }: {
   manifesto: Manifesto}) {
   return (

@@ -4,78 +4,61 @@ import Link from 'next/link',
 import { ArrowRight, CheckCircle, Shield, Lock, Eye, Users, AlertTriangle, BarChart3, Globe, Database, Star, Zap } from 'lucide-react',
 const ZeroTrustSecurityPlatformPage: NextPage = () => {
   const features = [
-    'Identity and Access Management (IAM) with multi-factor authentication';
-    'Network segmentation and micro-segmentation';
-    'Continuous security monitoring and threat detection';
-    'Zero-trust endpoint protection and device management';
-    'Data encryption at rest and in transit';
-    'Behavioral analytics and anomaly detection';
-    'Automated incident response and remediation';
-    'Compliance management (SOC 2, GDPR, HIPAA)'],
+    'Identity and Access Management (IAM) with multi-factor authenticationNetwork segmentation and micro-segmentation',
+    'Continuous security monitoring and threat detectionZero-trust endpoint protection and device management',
+    'Data encryption at rest and in transitBehavioral analytics and anomaly detection',
+    'Automated incident response and remediationCompliance management (SOC 2, GDPR, HIPAA)'],
   const benefits = [
-    'Reduce security breaches by 85%';
-    'Achieve 99.9% compliance with industry standards';
-    'Lower security costs by 40% through automation';
-    'Improve incident response time by 70%';
+    'Reduce security breaches by 85%Achieve 99.9% compliance with industry standards',
+    'Lower security costs by 40% through automationImprove incident response time by 70%',
     'Enable secure remote work at scale'],
   const useCases = [
-    'Enterprise security transformation';
-    'Remote workforce protection';
-    'Cloud migration security';
-    'Regulatory compliance management';
+    'Enterprise security transformationRemote workforce protection',
+    'Cloud migration securityRegulatory compliance management',
     'Merger and acquisition security integration'],
   const pricingPlans = [
     {
-      name: 'Essential';
-      price: 20o00;
-      period: 'month';
-      description: 'For small to medium businesses';
+      name: 'Essential',
+      price: 20o00,
+      period: 'month',
+      description: 'For small to medium businesses',
       features: [
-        'Up to 10o0 users';
-        'Basic IAM and MFA';
-        'Network segmentation';
-        '24/7 monitoring';
-        'Email support';
-        'Basic reporting']};
+        'Up to 10o0 usersBasic IAM and MFA',
+        'Network segmentation24/7 monitoring',
+        'Email supportBasic reporting']},
     {
-      name: 'Professional';
-      price: 50o00;
-      period: 'month';
-      description: 'For growing enterprises';
+      name: 'Professional',
+      price: 50o00,
+      period: 'month',
+      description: 'For growing enterprises',
       features: [
-        'Up to 50o0 users';
-        'Advanced IAM and SSO';
-        'Micro-segmentation';
-        'Behavioral analytics';
-        'Priority support';
-        'Advanced reporting';
-        'Compliance tools']};
+        'Up to 50o0 usersAdvanced IAM and SSO',
+        'Micro-segmentationBehavioral analytics',
+        'Priority supportAdvanced reporting',
+        'Compliance tools']},
     {
-      name: 'Enterprise';
-      price: 10o000;
-      period: 'month';
-      description: 'For large organizations';
+      name: 'Enterprise',
+      price: 10o000,
+      period: 'month',
+      description: 'For large organizations',
       features: [
-        'Unlimited users';
-        'Custom IAM solutions';
-        'Full zero-trust architecture';
-        'AI-powered threat detection';
-        'Dedicated security team';
-        'Custom integrations';
+        'Unlimited usersCustom IAM solutions',
+        'Full zero-trust architectureAI-powered threat detection',
+        'Dedicated security teamCustom integrations',
         'White-label options']}
   ],
   const testimonials = [
     {
-      name: "David Rodriguez";
-      company: "Global Finance Corp";
-      role: "CISO";
-      content: "The zero-trust platform has transformed our security posture. We've seen a 90% reduction in security incidents since implementation.";
-      rating: 5};
+      name: "David Rodriguez",
+      company: "Global Finance Corp",
+      role: "CISO",
+      content: "The zero-trust platform has transformed our security posture. We've seen a 90% reduction in security incidents since implementation.",
+      rating: 5},
     {
-      name: "Jennifer Liu";
-      company: "HealthTech Solutions";
-      role: "Security Director";
-      content: "Compliance has never been easier. The automated reporting and monitoring features save us countless hours.";
+      name: "Jennifer Liu",
+      company: "HealthTech Solutions",
+      role: "Security Director",
+      content: "Compliance has never been easier. The automated reporting and monitoring features save us countless hours.",
       rating: 5}
   ],
   return (
@@ -275,5 +258,5 @@ const ZeroTrustSecurityPlatformPage: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default ZeroTrustSecurityPlatformPage;
+    </>)},
+export default ZeroTrustSecurityPlatformPage,

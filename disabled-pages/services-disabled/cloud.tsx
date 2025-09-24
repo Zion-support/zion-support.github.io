@@ -3,82 +3,77 @@ import Navigation from '../../src/components/Navigation',
 import Footer from '../../src/components/Footer',
 import SEOHead from '../../src/components/SEOHead',
 import {
-  Cloud;
-  Server;
-  Database;
-  Zap;
-  Shield;
-  Users;
-  Globe;
-  CheckCircle;
-  Award;
-  Phone;
-  Mail;
+  Cloud,
+  Server,
+  Database,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  CheckCircle,
+  Award,
+  Phone,
+  Mail,
 } from 'lucide-react',
 const CloudServices = () => {
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Service';
-    name: 'Cloud Services';
+    '@context': 'https: //schema.org@type': 'Service',
+    name: 'Cloud Services',
     description:,
-      'Comprehensive cloud infrastructure and migration services for modern businesses';
+      'Comprehensive cloud infrastructure and migration services for modern businesses',
     provider: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
-      url: 'https://ziontechgroup.com';
-    };
-  };
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com'
+    },
+  },
   const services = [
     {
-      title: 'Cloud Migration';
+      title: 'Cloud Migration',
       description:,
-        'Seamless migration to cloud platforms with minimal downtime';
-      icon: Cloud;
+        'Seamless migration to cloud platforms with minimal downtime',
+      icon: Cloud,
       features: [
-        'AWS Migration';
-        'Azure Migration';
-        'Google Cloud Migration';
-        'Hybrid Cloud Setup';
-      ];
-    };
+        'AWS MigrationAzure Migration',
+        'Google Cloud MigrationHybrid Cloud Setup',
+      ]
+    },
     {
-      title: 'Infrastructure as Code';
-      description: 'Automated infrastructure deployment and management';
-      icon: Server;
-      features: ['Terraform', 'CloudFormation', 'Ansible', 'Kubernetes'];
-    };
+      title: 'Infrastructure as Code',
+      description: 'Automated infrastructure deployment and management',
+      icon: Server,
+      features: ['TerraformCloudFormation', 'AnsibleKubernetes'],
+    },
     {
-      title: 'Cloud Security';
-      description: 'Comprehensive security solutions for cloud environments';
-      icon: Shield;
+      title: 'Cloud Security',
+      description: 'Comprehensive security solutions for cloud environments',
+      icon: Shield,
       features: [
-        'Identity Management';
-        'Data Encryption';
-        'Network Security';
-        'Compliance';
-      ];
-    };
+        'Identity ManagementData Encryption',
+        'Network SecurityCompliance',
+      ]
+    },
     {
-      title: 'DevOps & CI/CD';
-      description: 'Automated development and deployment pipelines';
-      icon: Zap;
-      features: ['Jenkins', 'GitLab CI', 'Docker', 'Monitoring'];
-    };
+      title: 'DevOps & CI/CD',
+      description: 'Automated development and deployment pipelines',
+      icon: Zap,
+      features: ['JenkinsGitLab CI', 'DockerMonitoring'],
+    },
   ],
   const cloudProviders = [
     {
-      name: 'Amazon Web Services';
-      description: 'Leading cloud platform with comprehensive services';
-    };
+      name: 'Amazon Web Services',
+      description: 'Leading cloud platform with comprehensive services'
+    },
     {
-      name: 'Microsoft Azure';
-      description: 'Enterprise-grade cloud solutions';
-    };
+      name: 'Microsoft Azure',
+      description: 'Enterprise-grade cloud solutions'
+    },
     {
-      name: 'Google Cloud Platform';
-      description: 'Advanced analytics and AI capabilities';
-    };
-    { name: 'IBM Cloud', description: 'Hybrid cloud and enterprise solutions' };
+      name: 'Google Cloud Platform',
+      description: 'Advanced analytics and AI capabilities'
+    },
+    { name: 'IBM Cloud', description: 'Hybrid cloud and enterprise solutions' },
   ],
   return (
     <>,
@@ -263,5 +258,5 @@ const CloudServices = () => {
         </section>,
       </main>,
       <Footer />,
-    </>)};
-export default CloudServices;
+    </>)},
+export default CloudServices,

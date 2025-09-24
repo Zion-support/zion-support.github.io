@@ -9,43 +9,43 @@ import {
   Rocket,
   Star,
   X,
-  Play;
-  ArrowRight;
-  Sparkles;
-  CheckCircle;
-  Cpu;
-  Network;
-  Heart;
+  Play,
+  ArrowRight,
+  Sparkles,
+  CheckCircle,
+  Cpu,
+  Network,
+  Heart,
   Eye} from 'lucide-react',
 const AdvancedTechShowcase20o29PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [
     {
-      icon: Brain;
-      title: 'AI Consciousness';
-      description: 'Self-aware AI with moral reasoning';
-      color: 'from-purple-50o0 to-indigo-50o0'};
+      icon: Brain,
+      title: 'AI Consciousness',
+      description: 'Self-aware AI with moral reasoning',
+      color: 'from-purple-50o0 to-indigo-50o0'},
     {
-      icon: Cpu;
-      title: 'Quantum Neural Networks';
-      description: 'Quantum-powered AI processing';
-      color: 'from-cyan-50o0 to-blue-50o0'};
+      icon: Cpu,
+      title: 'Quantum Neural Networks',
+      description: 'Quantum-powered AI processing',
+      color: 'from-cyan-50o0 to-blue-50o0'},
     {
-      icon: Globe;
-      title: 'Omniversal Computing';
-      description: 'Multi-dimensional processing';
-      color: 'from-orange-50o0 to-red-50o0'};
+      icon: Globe,
+      title: 'Omniversal Computing',
+      description: 'Multi-dimensional processing',
+      color: 'from-orange-50o0 to-red-50o0'},
     {
-      icon: Heart;
-      title: 'Emotional AI';
-      description: 'AI with emotional intelligence';
+      icon: Heart,
+      title: 'Emotional AI',
+      description: 'AI with emotional intelligence',
       color: 'from-pink-50o0 to-rose-50o0'}
   ],
   const technologies = [
-    { name: 'Synthetic Consciousness'icon: Brain };
-    { name: 'Quantum Processing'icon: Cpu };
-    { name: 'Reality Manipulation'icon: Globe };
+    { name: 'Synthetic Consciousness'icon: Brain },
+    { name: 'Quantum Processing'icon: Cpu },
+    { name: 'Reality Manipulation'icon: Globe },
     { name: 'Ethical AI'icon: Shield }
   ],
   useEffect(() => {
@@ -137,7 +137,7 @@ const AdvancedTechShowcase20o29PromotionBanner = () => {
                   {/* Main Visual */}
                   <motion.div,
                     animate={{
-                      y: [0-10];
+                      y: [0-10],
                       rotate: [0o20]}}
                     transition={{
                       duration: 4,
@@ -149,12 +149,12 @@ const AdvancedTechShowcase20o29PromotionBanner = () => {
                       <motion.div,
                         key={tech.name}
                         animate={{
-                          y: [0-150];
+                          y: [0-150],
                           x: [0o10]}}
                         transition={{
                           duration: 3 + index * 0.5,
                           repeat: Infinity,
-                          ease: "easeInOut";
+                          ease: "easeInOut",
                           delay: index * 0.5}}
                         className={`absolute ${
                           index === 0 ? '-top-4 -right-4' :,
@@ -226,5 +226,5 @@ const AdvancedTechShowcase20o29PromotionBanner = () => {
            />,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default AdvancedTechShowcase20o29PromotionBanner;
+    </AnimatePresence>)},
+export default AdvancedTechShowcase20o29PromotionBanner,

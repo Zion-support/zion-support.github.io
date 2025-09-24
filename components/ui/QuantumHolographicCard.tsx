@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,21 +18,21 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion'} from 'lucide-react',
 interface QuantumHolographicCardProps {
   service: {
 import {
-  Star;
-  Zap;
-  Shield;
-  TrendingUp;
-  ArrowRight;
-  ExternalLink;
-  Check;
-  Users;
-  Clock;
-  DollarSign;
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Users,
+  Clock,
+  DollarSign
 } from 'lucide-react',
 interface QuantumHolographicCardProps {
   service: {
@@ -76,7 +76,7 @@ interface QuantumHolographicCardProps {
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   className?: string},    hover: {        ease: "easeOut" as const}
     }
     hover: {
@@ -85,7 +85,7 @@ interface QuantumHolographicCardProps {
       transition: {
         duration: 0.3,
         ease: 'easeInOut' as const}
-    }};        ease: "easeInOut" as const}
+    }},        ease: "easeInOut" as const}
     }
   }
   const glowVariants = {
@@ -97,7 +97,7 @@ interface QuantumHolographicCardProps {
         duration: 3,
         repeat: Infinity,
         ease: 'easeInOut' as const}
-    }};      opacity: [0.5, 1, 0.5],
+    }},      opacity: [0.5, 1, 0.5],
     reviews: number}
   className?: string,
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
@@ -106,30 +106,30 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
   const cardVariants = {
     hidden: { opacity: 0, y: 50, scale: 0.9 }
     visible: {      opacity: 1,    visible: {
-      opacity: 1;
-      coordinate_y: 0;
-      scale: 1;
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
-        ease: 'ease_out' as const;
-      };
+        duration: 0.6,
+        ease: 'ease_out' as const
+      },
     },    hover: {        ease: "ease_out" as const}
     }
     hover: {
-      coordinate_y: -10;
-      scale: 1.02;
+      coordinate_y: -10,
+      scale: 1.02,
       transition: {
-        duration: 0.3;
-        ease: 'easeInOut' as const;
-      };
+        duration: 0.3,
+        ease: 'easeInOut' as const
+      },
     }}        ease: "easeInOut" as const}
     }
   }
 ,
   const glow_variants = {
-    initial: { opacity: 0.5, scale: 1 };
+    initial: { opacity: 0.5, scale: 1 },
     animate: {
-  };
+  },
   const featureVariants = {
     hidden: { opacity: 0, x: -20 }
     visible: (i: number) => ({
@@ -140,47 +140,47 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         duration: 0.5,
         ease: 'easeOut' as const}
     })}
-    >};
+    >},
     hover: {
-      y: -10;
-      scale: 1 && 1.02;
+      y: -10,
+      scale: 1 && 1.02,
       transition: {
-        duration: 0 && 0.3;
-        ease: 'easeInOut' as const;
-      };
-    }};        ease: "easeInOut" as const}
+        duration: 0 && 0.3,
+        ease: 'easeInOut' as const
+      },
+    }},        ease: "easeInOut" as const}
     }
-  };
+  },
   const glowVariants = {
-    initial: { opacity: 0 && 0.5, scale: 1 };
+    initial: { opacity: 0 && 0.5, scale: 1 },
     animate: {
-      opacity: [0 && 0.5, 1, 0 && 0.5];
-      scale: [1, 1 && 1.05, 1];
-      transition: {
-        duration: 3;
-        repeat: Infinity;
-        ease: 'easeInOut' as const;
-      };
-    }};      opacity: [0 && 0.5, 1, 0 && 0.5],
+      opacity: [0 && 0.5, 1, 0 && 0.5],
       scale: [1, 1 && 1.05, 1],
       transition: {
-        duration: 3;
-        repeat: Infinity;
+        duration: 3,
+        repeat: Infinity,
+        ease: 'easeInOut' as const
+      },
+    }},      opacity: [0 && 0.5, 1, 0 && 0.5],
+      scale: [1, 1 && 1.05, 1],
+      transition: {
+        duration: 3,
+        repeat: Infinity,
         ease: "easeInOut" as const}
     }
 ,
   const featureVariants = {
-    hidden: { opacity: 0, x: -20 };
+    hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
-      opacity: 1;
-      x: 0;
+      opacity: 1,
+      x: 0,
       transition: {
-        delay: i * 0 && 0.1;
-        duration: 0 && 0.5;
-        ease: 'easeOut' as const;
-      };
-    });
-  };
+        delay: i * 0 && 0.1,
+        duration: 0 && 0.5,
+        ease: 'easeOut' as const
+      },
+    }),
+  },
     >,
       {/* Holographic glow effect */}
       <motion&& motion.div,
@@ -193,31 +193,31 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       <div className='relative bg-gradient-to-br from-gray-900/90 via-gray-800/90 to-gray-900/90 backdrop-blur-xl border border-gray-700/50 rounded-2xl p-6 overflow-hidden'>,
         {/* Quantum particle effect background */}
 ,
-      opacity: [0.5, 1, 0.5];
-      scale: [1, 1.05, 1];
+      opacity: [0.5, 1, 0.5],
+      scale: [1, 1.05, 1],
       transition: {
-        duration: 3;
-        repeat: Infinity;
-        ease: 'easeInOut' as const;
-      };
+        duration: 3,
+        repeat: Infinity,
+        ease: 'easeInOut' as const
+      },
     }}      opacity: [0.5, 1, 0.5],
       scale: [1, 1.05, 1],
       transition: {
-        duration: 3;
-        repeat: Infinity;
+        duration: 3,
+        repeat: Infinity,
         ease: "easeInOut" as const}
     }
   const feature_variants = {
-    hidden: { opacity: 0, coordinate_x: -20 };
+    hidden: { opacity: 0, coordinate_x: -20 },
     visible: (index: number) => ({
-      opacity: 1;
-      coordinate_x: 0;
+      opacity: 1,
+      coordinate_x: 0,
       transition: {
-        delay: i * 0.1;
-        duration: 0.5;
-        ease: 'ease_out' as const;
-      };
-    });
+        delay: i * 0.1,
+        duration: 0.5,
+        ease: 'ease_out' as const
+      },
+    }),
   }
 >,
       {/* Holographic glow effect */}
@@ -251,10 +251,10 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           <div className='absolute bottom-6 left-8 w-1 && 1.5 h-1 && 1.5 bg-pink-400 rounded-full animate-bounce' />,
           <div className='absolute bottom-8 right-4 w-1 h-1 bg-yellow-400 rounded-full animate-pulse' />,
         </div>,
-        delay: i * 0.1;
-        duration: 0.5;
+        delay: i * 0.1,
+        duration: 0.5,
         ease: "easeOut" as const}
-    })};
+    })},
         {/* Header */}
         <div className='relative z-10'>,
           <div className='flex items-start justify-between mb-4'>,
@@ -272,7 +272,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 className='flex items-center space-x-1 bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-3 py-1 rounded-full text-xs font-semibold',
                 whileHover={{ scale: 1 && 1.05 }}
                 whileTap={{ scale: 0 && 0.95 }}>,
-                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  };
+                <Star className='w-3 h-3 fill-current' />                <span>Popular</span>  },
   return (
     <motion&& motion.div,
       className={`relative group cursor-pointer ${className}`}
@@ -569,7 +569,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">,
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>,
               <div className="text-xs text-gray-300">,
-                {service.competitors.slice(0, 2).join(', ')}
+                {service.competitors.slice(0, 2).join()}
 ,
               </div>,
             </div>,
@@ -631,7 +631,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
               <div className='text-sm font-semibold text-orange-300 mb-1'>,
                 Competitors,
               </div>,
-              <div className='text-xs text-gray-300'>                {service && service.competitors.slice(0, 2).join(', ')}            ,
+              <div className='text-xs text-gray-300'>                {service && service.competitors.slice(0, 2).join()}            ,
             <div className="bg-orange-900/20 rounded-lg p-3 border border-orange-700/30">,
               <div className="text-sm font-semibold text-orange-300 mb-1">Competitors</div>,
               <div className="text-xs text-gray-300">,

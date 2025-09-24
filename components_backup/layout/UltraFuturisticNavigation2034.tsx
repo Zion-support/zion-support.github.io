@@ -2,366 +2,366 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;
-  HeartIcon;
-  RocketIcon;
-  ShieldIcon as ShieldIcon2;
-  TargetIcon;
-  MicroscopeIcon;
-  StarIcon;
-  ArrowRight;
-  Infinity;
-  Crown;
-  Gem;
-  Sparkles as SparklesIcon2;
-  BarChart;
-  PieChart;
-  LineChart;
-  Activity;
-  Settings;
-  HelpCircle;
-  FileText;
-  Calendar;
-  CreditCard;
-  ShoppingCart;
-  Gift;
-  Award;
-  Zap as ZapIcon2;
-  Target as TargetIcon2;
-  Handshake;
-  Linkedin;
-  Github;
-  Twitter;
-  Youtube;
-  Instagram;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,
+  HeartIcon,
+  RocketIcon,
+  ShieldIcon as ShieldIcon2,
+  TargetIcon,
+  MicroscopeIcon,
+  StarIcon,
+  ArrowRight,
+  Infinity,
+  Crown,
+  Gem,
+  Sparkles as SparklesIcon2,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  Settings,
+  HelpCircle,
+  FileText,
+  Calendar,
+  CreditCard,
+  ShoppingCart,
+  Gift,
+  Award,
+  Zap as ZapIcon2,
+  Target as TargetIcon2,
+  Handshake,
+  Linkedin,
+  Github,
+  Twitter,
+  Youtube,
+  Instagram,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const mainNavigation = [
   {
-    name: 'Home';
-    href: '/';
-    icon: Home;
-    description: 'Welcome to Zion Tech Group';
-  };
+    name: 'Home',
+    href: '/',
+    icon: Home,
+    description: 'Welcome to Zion Tech Group'
+  },
   {
-    name: 'Services';
-    href: '/services';
-    icon: Briefcase;
-    description: 'Explore our comprehensive service offerings';
-  };
+    name: 'Services',
+    href: '/services',
+    icon: Briefcase,
+    description: 'Explore our comprehensive service offerings'
+  },
   {
-    name: '20o24 Services';
-    href: '/services-20o24';
-    icon: Sparkles;
-    description: 'Latest revolutionary services for 20o24';
-  };
+    name: '20o24 Services',
+    href: '/services-20o24',
+    icon: Sparkles,
+    description: 'Latest revolutionary services for 20o24'
+  },
   {
-    name: 'Solutions';
-    href: '/solutions';
-    icon: Target;
-    description: 'Industry-specific solutions and use cases';
-  };
+    name: 'Solutions',
+    href: '/solutions',
+    icon: Target,
+    description: 'Industry-specific solutions and use cases'
+  },
   {
-    name: 'Pricing';
-    href: '/pricing-20o33';
-    icon: DollarSign;
-    description: 'Transparent pricing for all our services';
-  };
+    name: 'Pricing',
+    href: '/pricing-20o33',
+    icon: DollarSign,
+    description: 'Transparent pricing for all our services'
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: BookOpen;
-    description: 'Documentation, guides, and learning materials';
-  };
+    name: 'Resources',
+    href: '/resources',
+    icon: BookOpen,
+    description: 'Documentation, guides, and learning materials',
+  },
   {
-    name: 'Case Studies';
-    href: '/case-studies';
-    icon: FileText;
-    description: 'Success stories from our customers';
-  };
+    name: 'Case Studies',
+    href: '/case-studies',
+    icon: FileText,
+    description: 'Success stories from our customers'
+  },
   {
-    name: 'Blog';
-    href: '/blog';
-    icon: MessageCircle;
-    description: 'Latest insights and industry trends';
-  };
+    name: 'Blog',
+    href: '/blog',
+    icon: MessageCircle,
+    description: 'Latest insights and industry trends'
+  },
   {
-    name: 'About';
-    href: '/about';
-    icon: Users;
-    description: 'Learn about our company and mission';
-  };
+    name: 'About',
+    href: '/about',
+    icon: Users,
+    description: 'Learn about our company and mission'
+  },
   {
-    name: 'Careers';
-    href: '/careers';
-    icon: Briefcase;
-    description: 'Join our innovative team';
-  };
+    name: 'Careers',
+    href: '/careers',
+    icon: Briefcase,
+    description: 'Join our innovative team'
+  },
   {
-    name: 'Contact';
-    href: '/contact';
-    icon: MessageCircle;
-    description: 'Get in touch with our experts';
-  };
+    name: 'Contact',
+    href: '/contact',
+    icon: MessageCircle,
+    description: 'Get in touch with our experts'
+  },
 ],
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI Services';
-    icon: BrainIcon;
-    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
-    description: 'Next-generation AI consciousness and creativity';
+    title: '🧠 Revolutionary AI Services',
+    icon: BrainIcon,
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
+    description: 'Next-generation AI consciousness and creativity',
     services: [
       {
-        name: 'AI Business Intelligence Pro';
-        href: '/ai-business-intelligence-pro';
-        description: 'Transform data into actionable insights';
-        price: '$299/month';
-      };
+        name: 'AI Business Intelligence Pro',
+        href: '/ai-business-intelligence-pro',
+        description: 'Transform data into actionable insights',
+        price: '$299/month'
+      },
       {
-        name: 'AI Customer Success Automation';
-        href: '/ai-customer-success-automation';
-        description: 'Automate customer success workflows';
-        price: '$199/month';
-      };
+        name: 'AI Customer Success Automation',
+        href: '/ai-customer-success-automation',
+        description: 'Automate customer success workflows',
+        price: '$199/month'
+      },
       {
-        name: 'AI Email Marketing Automation';
-        href: '/ai-email-marketing-automation';
-        description: 'Intelligent email campaigns';
-        price: '$79/month';
-      };
+        name: 'AI Email Marketing Automation',
+        href: '/ai-email-marketing-automation',
+        description: 'Intelligent email campaigns',
+        price: '$79/month'
+      },
       {
-        name: 'AI Social Media Manager';
-        href: '/ai-social-media-manager';
-        description: 'Automate social media management';
-        price: '$89/month';
-      };
-    ];
-  };
+        name: 'AI Social Media Manager',
+        href: '/ai-social-media-manager',
+        description: 'Automate social media management',
+        price: '$89/month'
+      },
+    ],
+  },
   {
-    title: '⚛️ Quantum & Emerging Tech';
-    icon: AtomIcon;
-    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
-    description: 'Quantum computing and beyond';
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: AtomIcon,
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
+    description: 'Quantum computing and beyond',
     services: [
       {
-        name: 'Quantum-Secure Communication';
-        href: '/quantum-secure-communication';
-        description: 'Future-proof encryption';
-        price: '$599/month';
-      };
+        name: 'Quantum-Secure Communication',
+        href: '/quantum-secure-communication',
+        description: 'Future-proof encryption',
+        price: '$599/month'
+      },
       {
-        name: 'Quantum-Secure Database Platform';
-        href: '/quantum-secure-database-platform';
-        description: 'Quantum-resistant database security';
-        price: '$899/month';
-      };
+        name: 'Quantum-Secure Database Platform',
+        href: '/quantum-secure-database-platform',
+        description: 'Quantum-resistant database security',
+        price: '$899/month'
+      },
       {
-        name: 'Blockchain Supply Chain Transparency';
-        href: '/blockchain-supply-chain-transparency';
-        description: 'End-to-end traceability';
-        price: '$399/month';
-      };
-    ];
-  };
+        name: 'Blockchain Supply Chain Transparency',
+        href: '/blockchain-supply-chain-transparency',
+        description: 'End-to-end traceability',
+        price: '$399/month'
+      },
+    ],
+  },
   {
-    title: '🏙️ Enterprise IT Solutions';
-    icon: CpuIcon;
-    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
-    description: 'Autonomous enterprise infrastructure';
+    title: '🏙️ Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    description: 'Autonomous enterprise infrastructure',
     services: [
       {
-        name: 'Autonomous DevOps Platform';
-        href: '/autonomous-devops-platform';
-        description: 'Self-healing infrastructure';
-        price: '$799/month';
-      };
+        name: 'Autonomous DevOps Platform',
+        href: '/autonomous-devops-platform',
+        description: 'Self-healing infrastructure',
+        price: '$799/month'
+      },
       {
-        name: 'Zero Trust Network Architecture';
-        href: '/zero-trust-network-architecture';
-        description: 'Never trust, always verify';
-        price: '$599/month';
-      };
+        name: 'Zero Trust Network Architecture',
+        href: '/zero-trust-network-architecture',
+        description: 'Never trust, always verify',
+        price: '$599/month'
+      },
       {
-        name: 'Edge Computing Orchestration';
-        href: '/edge-computing-orchestration';
-        description: 'Distributed edge computing';
-        price: '$449/month';
-      };
+        name: 'Edge Computing Orchestration',
+        href: '/edge-computing-orchestration',
+        description: 'Distributed edge computing',
+        price: '$449/month'
+      },
       {
-        name: 'AI-Powered IT Operations Center';
-        href: '/ai-powered-it-operations-center';
-        description: 'Intelligent IT operations';
-        price: '$699/month';
-      };
-    ];
-  };
+        name: 'AI-Powered IT Operations Center',
+        href: '/ai-powered-it-operations-center',
+        description: 'Intelligent IT operations',
+        price: '$699/month'
+      },
+    ],
+  },
   {
-    title: '🔌 API & Development Tools';
-    icon: Code;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0';
-    description: 'Developer experience and API management';
+    title: '🔌 API & Development Tools',
+    icon: Code,
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
+    description: 'Developer experience and API management',
     services: [
       {
-        name: 'AI-Powered API Management';
-        href: '/ai-powered-api-management';
-        description: 'Intelligent API lifecycle management';
-        price: '$349/month';
-      };
+        name: 'AI-Powered API Management',
+        href: '/ai-powered-api-management',
+        description: 'Intelligent API lifecycle management',
+        price: '$349/month'
+      },
       {
-        name: 'AI-Powered Project Management Pro';
-        href: '/ai-project-management-pro';
-        description: 'Intelligent project planning';
-        price: '$179/month';
-      };
+        name: 'AI-Powered Project Management Pro',
+        href: '/ai-project-management-pro',
+        description: 'Intelligent project planning',
+        price: '$179/month'
+      },
       {
-        name: 'AI-Powered Customer Support Automation';
-        href: '/ai-customer-support-automation';
-        description: '24/7 intelligent support';
-        price: '$129/month';
-      };
-    ];
-  };
+        name: 'AI-Powered Customer Support Automation',
+        href: '/ai-customer-support-automation',
+        description: '24/7 intelligent support',
+        price: '$129/month'
+      },
+    ],
+  },
   {
-    title: '💰 Business & Analytics';
-    icon: BarChart;
-    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0';
-    description: 'Business intelligence and optimization';
+    title: '💰 Business & Analytics',
+    icon: BarChart,
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
+    description: 'Business intelligence and optimization',
     services: [
       {
-        name: 'AI-Powered SEO Automation Pro';
-        href: '/ai-seo-automation-pro';
-        description: 'Automate SEO with AI';
-        price: '$149/month';
-      };
+        name: 'AI-Powered SEO Automation Pro',
+        href: '/ai-seo-automation-pro',
+        description: 'Automate SEO with AI',
+        price: '$149/month'
+      },
       {
-        name: 'Intelligent Cloud Cost Optimization';
-        href: '/intelligent-cloud-cost-optimization';
-        description: 'Reduce cloud costs by 40%';
-        price: '$199/month';
-      };
-    ];
-  };
+        name: 'Intelligent Cloud Cost Optimization',
+        href: '/intelligent-cloud-cost-optimization',
+        description: 'Reduce cloud costs by 40%',
+        price: '$199/month'
+      },
+    ],
+  },
   {
-    title: '🔒 Security & Compliance';
-    icon: ShieldIcon;
-    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0';
-    description: 'Advanced security and compliance solutions';
+    title: '🔒 Security & Compliance',
+    icon: ShieldIcon,
+    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
+    description: 'Advanced security and compliance solutions',
     services: [
       {
-        name: 'AI-Powered Network Security';
-        href: '/ai-powered-network-security';
-        description: 'Intelligent threat detection';
-        price: '$549/month';
-      };
-    ];
-  };
+        name: 'AI-Powered Network Security',
+        href: '/ai-powered-network-security',
+        description: 'Intelligent threat detection',
+        price: '$549/month'
+      },
+    ],
+  },
 ],
 const quickLinks = [
-  { name: 'Documentation', href: '/docs', icon: FileText };
-  { name: 'API Reference', href: '/api', icon: Code };
-  { name: 'Support Center', href: '/support', icon: HelpCircle };
-  { name: 'Status Page', href: '/status', icon: Activity };
-  { name: 'Security', href: '/security', icon: Shield };
-  { name: 'Privacy', href: '/privacy', icon: Lock };
-  { name: 'Terms', href: '/terms', icon: FileText };
-  { name: 'Partners', href: '/partners', icon: Handshake };
+  { name: 'Documentation', href: '/docs', icon: FileText },
+  { name: 'API Reference', href: '/api', icon: Code },
+  { name: 'Support Center', href: '/support', icon: HelpCircle },
+  { name: 'Status Page', href: '/status', icon: Activity },
+  { name: 'Security', href: '/security', icon: Shield },
+  { name: 'Privacy', href: '/privacy', icon: Lock },
+  { name: 'Terms', href: '/terms', icon: FileText },
+  { name: 'Partners', href: '/partners', icon: Handshake },
 ],
 const socialLinks = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com/company/ziontechgroup';
-    icon: Linkedin;
-  };
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github };
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin
+  },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
   {
-    name: 'YouTube';
-    href: 'https://youtube.com/@ziontechgroup';
-    icon: Youtube;
-  };
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: Youtube
+  },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com/ziontechgroup';
-    icon: Instagram;
-  };
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram
+  },
 ],
 const UltraFuturisticNavigation20o34: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -370,11 +370,11 @@ const UltraFuturisticNavigation20o34: React.FC = () => {
   const toggleMenu = () => setIsOpen(!isOpen),
   const closeMenu = () => setIsOpen(false),
   const handleDropdownToggle = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     // Implement search functionality,
-    // // console.log('Searching for:', searchQuery)};
+    // // console.log('Searching for:', searchQuery)},
   return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/20'>,
       {/* Top contact bar */}
@@ -613,5 +613,5 @@ const UltraFuturisticNavigation20o34: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraFuturisticNavigation20o34;
+    </nav>)},
+export default UltraFuturisticNavigation20o34,

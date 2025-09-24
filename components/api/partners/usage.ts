@@ -4,14 +4,14 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import {
   authenticateRequest,
   calculateUsageSummary,
-  authenticateRequest;
-  calculateUsageSummary;
+  authenticateRequest,
+  calculateUsageSummary,
 } from '../../../utils/api/partnerAuth',
 export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse) {
   if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET'),
+    res.setHeader('AllowGET'),
     return res.status(405).json({ error: 'Method Not Allowed' })}
   const auth = await authenticateRequest(req),
   if (!auth) {

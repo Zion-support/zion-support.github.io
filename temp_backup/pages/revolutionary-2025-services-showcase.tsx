@@ -2,19 +2,19 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Star;
-  Mail;
-  Phone;
-  MapPin;
-  Sparkles;
-  Brain;
-  Cpu;
-  Zap;
-  Grid;
-  List;
-  ExternalLink;
-  Rocket;
-  BookOpen;
+  Star,
+  Mail,
+  Phone,
+  MapPin,
+  Sparkles,
+  Brain,
+  Cpu,
+  Zap,
+  Grid,
+  List,
+  ExternalLink,
+  Rocket,
+  BookOpen,
 } from 'lucide-react',
 import { Button } from '../components/ui/Button',
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
@@ -28,43 +28,43 @@ export default function Revolutionary2025ServicesShowcase() {
   const [sortBy, setSortBy] = useState<,
     'price' | 'rating' | 'popularity' | 'newest'>('popularity'),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
-    ...revolutionaryAI2025Services;
-    ...revolutionaryITInfrastructure2025Services;
-    ...revolutionary2025MicroSaasServices;
+    ...revolutionaryAI2025Services,
+    ...revolutionaryITInfrastructure2025Services,
+    ...revolutionary2025MicroSaasServices,
   ],
   // Service categories,
   const serviceCategories = [
     {
-      id: 'all';
-      name: 'All Services';
-      icon: Sparkles;
-      count: allRevolutionaryServices.length;
-    };
+      id: 'all',
+      name: 'All Services',
+      icon: Sparkles,
+      count: allRevolutionaryServices.length
+    },
     {
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      count: revolutionaryAI2025Services.length;
-    };
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      count: revolutionaryAI2025Services.length
+    },
     {
-      id: 'infrastructure';
-      name: 'IT Infrastructure';
-      icon: Cpu;
-      count: revolutionaryITInfrastructure2025Services.length;
-    };
+      id: 'infrastructure',
+      name: 'IT Infrastructure',
+      icon: Cpu,
+      count: revolutionaryITInfrastructure2025Services.length
+    },
     {
-      id: 'saas';
-      name: 'Micro SaaS';
-      icon: Zap;
-      count: revolutionary2025MicroSaasServices.length;
-    };
+      id: 'saas',
+      name: 'Micro SaaS',
+      icon: Zap,
+      count: revolutionary2025MicroSaasServices.length
+    },
   ],
   // Filter services based on selected category,
   const filteredServices =,
@@ -88,8 +88,8 @@ export default function Revolutionary2025ServicesShowcase() {
     switch (sortBy) {
       case 'price':,
         return (
-          parseInt(a.price.replace('$', '').replace(',', '')) -,
-          parseInt(b.price.replace('$', '').replace(',', ''))),
+          parseInt(a.price.replace('$', '').replace(, '')) -,
+          parseInt(b.price.replace('$', '').replace(, ''))),
       case 'rating':,
         return b.rating - a.rating,
       case 'popularity':,
@@ -102,18 +102,18 @@ export default function Revolutionary2025ServicesShowcase() {
   }),
   // Statistics,
   const stats = {
-    totalServices: allRevolutionaryServices.length;
+    totalServices: allRevolutionaryServices.length,
     totalCustomers: allRevolutionaryServices.reduce(
-      (sum, service) => sum + service.customers;
-      0);
+      (sum, service) => sum + service.customers,
+      0),
     averageRating: (
       allRevolutionaryServices.reduce(
-        (sum, service) => sum + service.rating;
-        0) / allRevolutionaryServices.length).toFixed(1);
+        (sum, service) => sum + service.rating,
+        0) / allRevolutionaryServices.length).toFixed(1),
     totalRevenue: allRevolutionaryServices.reduce((sum, service) => {
-      const price = parseInt(service.price.replace('$', '').replace(',', '')),
-      return sum + price * service.customers}, 0);
-  };
+      const price = parseInt(service.price.replace('$', '').replace(, '')),
+      return sum + price * service.customers}, 0),
+  },
   return (
     <Layout>,
       <UltraQuantumHolographicBackground intensity={2.0}>,
@@ -163,7 +163,7 @@ export default function Revolutionary2025ServicesShowcase() {
                   Revolutionary 2025 Services,
                 </h1>,
                 <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
-                  Experience the future of technology with our cutting-edge AI;
+                  Experience the future of technology with our cutting-edge AI,
                   quantum computing, and IT infrastructure services. Transform,
                   your business with solutions that were once only science,
                   fiction.,

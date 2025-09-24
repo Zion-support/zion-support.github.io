@@ -5,7 +5,7 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckStarUsersTrendingUpDollarSignClock,
-  ShieldZapRocketBrainAtomGlobeTarget;
+  ShieldZapRocketBrainAtomGlobeTarget,
   ArrowRightPhoneMailMapPinExternalLink} from 'lucide-react',
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
@@ -21,10 +21,10 @@ export default function PricingPage() {
   const [selectedPriceRangesetSelectedPriceRange] = useState('All'),
   // Combine all services,
   const allServices = [
-    ...enhancedRealMicroSaasServices;
-    ...innovativeAIServices2029;
-    ...quantumSpaceInnovations2029;
-    ...enterpriseITInnovations2029;
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices2029,
+    ...quantumSpaceInnovations2029,
+    ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029],
   // Get unique services by ID,
   const uniqueServices = allServices.filter((serviceindexself) =>,
@@ -34,11 +34,11 @@ export default function PricingPage() {
     Array.isArray(s.category) ? s.category[0] : s.category)))],
   // Price ranges,
   const priceRanges = [
-    { id: ''All', 'name: 'All 'Prices', 'range: 'All' };
-    { id: 'Under $1'K', 'name: 'Under $1K/'month', 'range: 'Under $1K' };
-    { id: '$1K - $5'K', 'name: '$1K - $5K/'month', 'range: '$1K - $5K' };
-    { id: '$5K - $20'K', 'name: '$5K - $20K/'month', 'range: '$5K - $20K' };
-    { id: '$20K+'name: '$20K+/'month', 'range: '$20K+' }
+    { id: ''Allname: 'All 'Pricesrange: 'All' },
+    { id: 'Under $1'Kname: 'Under $1K/'monthrange: 'Under $1K' },
+    { id: '$1K - $5'Kname: '$1K - $5K/'monthrange: '$1K - $5K' },
+    { id: '$5K - $20'Kname: '$5K - $20K/'monthrange: '$5K - $20K' },
+    { id: '$20K+'name: '$20K+/'monthrange: '$20K+' }
   ],
   // Filter services,
   const filteredServices = uniqueServices.filter(service => {
@@ -46,7 +46,7 @@ export default function PricingPage() {
                            (Array.isArray(service.category) ?,
                              service.category.includes(selectedCategory) :,
                              service.category === selectedCategory),
-    const price = parseFloat(service.price.replace(/[^0-9.]/g', ')),
+    const price = parseFloat(service.price.replace(/[^0-9.]/g)),
     const matchesPrice = selectedPriceRange === 'All' ||,
                         (selectedPriceRange === 'Under $1K' && price < 1000) ||,
                         (selectedPriceRange === '$1K - $5K' && price >= 1000 && price < 5000) ||,
@@ -54,10 +54,10 @@ export default function PricingPage() {
                         (selectedPriceRange === '$20K+' && price >= 20000),
     return matchesCategory && matchesPrice}),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Group services by category for better organization,
   const servicesByCategory = filteredServices.reduce((acc, service) => {
     const category = Array.isArray(service.category) ? service.category[0] : service.category,
@@ -67,35 +67,30 @@ export default function PricingPage() {
     return acc}{} as Record<stringtypeof filteredServices>),
   const faqs = [
     {
-      question: 'Can I change my plan at any time?';
-      answer: 'Yesyou can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'};
+      question: 'Can I change my plan at any time?',
+      answer: 'Yesyou can upgrade or downgrade your plan at any time. Changes take effect immediately and are prorated.'},
     {
-      question: 'Is there a free trial available?';
-      answer: 'Yesall our services offer a 14-day free trial with full access to all features. No credit card required.'};
+      question: 'Is there a free trial available?',
+      answer: 'Yesall our services offer a 14-day free trial with full access to all features. No credit card required.'},
     {
-      question: 'What payment methods do you accept?';
-      answer: 'We accept all major credit cardsPayPaland bank transfers for annual plans. Enterprise customers can be invoiced.'};
+      question: 'What payment methods do you accept?',
+      answer: 'We accept all major credit cardsPayPaland bank transfers for annual plans. Enterprise customers can be invoiced.'},
     {
-      question: 'Do you offer volume discounts?';
-      answer: 'Yeswe offer volume discounts for teams and organizations. Contact our sales team for custom pricing.'};
+      question: 'Do you offer volume discounts?',
+      answer: 'Yeswe offer volume discounts for teams and organizations. Contact our sales team for custom pricing.'},
     {
-      question: 'Can I cancel my subscription?';
-      answer: 'Yesyou can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'};
+      question: 'Can I cancel my subscription?',
+      answer: 'Yesyou can cancel your subscription at any time. You\'ll continue to have access until the end of your billing period.'},
     {
-      question: 'Is there a setup fee?';
+      question: 'Is there a setup fee?',
       answer: 'No setup fees for any of our plans. You can start using our services immediately after signing up.'}
   ],
   const categories = [
-    'All';
-    'Content & Marketing';
-    'Development & DevOps';
-    'Sales & CRM';
-    'Legal & Compliance';
-    'Human Resources';
-    'Analytics & Data';
-    'Finance & Accounting';
-    'Project Management';
-    'Customer Experience';
+    'AllContent & Marketing',
+    'Development & DevOpsSales & CRM',
+    'Legal & ComplianceHuman Resources',
+    'Analytics & DataFinance & Accounting',
+    'Project ManagementCustomer Experience',
     'Security & Compliance'],
   const filteredServices = selectedCategory === 'All',
     ? microSaasServices,

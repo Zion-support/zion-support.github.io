@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
@@ -13,90 +13,82 @@ import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFoote
   Zap,
   Target,
   Shield,
-  Globe;
-  CheckCircle;
+  Globe,
+  CheckCircle,
   Star} from 'lucide-react',
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6" />;
-      title: 'Consciousness Mapping';
-      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'};
+      icon: <Brain className="w-6 h-6" />,
+      title: 'Consciousness Mapping',
+      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'},
     {
-      icon: <Sparkles className="w-6 h-6" />;
-      title: 'Ethical Framework Integration';
-      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'};
+      icon: <Sparkles className="w-6 h-6" />,
+      title: 'Ethical Framework Integration',
+      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'},
     {
-      icon: <Zap className="w-6 h-6" />;
-      title: 'Real-time Learning';
-      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'};
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Real-time Learning',
+      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'},
     {
-      icon: <Shield className="w-6 h-6" />;
-      title: 'Safety Protocols';
-      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'};
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Safety Protocols',
+      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'},
     {
-      icon: <Globe className="w-6 h-6" />;
-      title: 'Global Consciousness Network';
-      description: 'Connect AI systems across the globe for collaborative consciousness evolution.'};
+      icon: <Globe className="w-6 h-6" />,
+      title: 'Global Consciousness Network',
+      description: 'Connect AI systems across the globe for collaborative consciousness evolution.'},
     {
-      icon: <Target className="w-6 h-6" />;
-      title: 'Goal Alignment';
+      icon: <Target className="w-6 h-6" />,
+      title: 'Goal Alignment',
       description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.'}
   ],
   const useCases = [
     {
-      title: 'Research & Development';
-      description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.';
-      benefits: ['Faster 'breakthroughs', 'Ethical 'compliance', 'Risk mitigation']};
+      title: 'Research & Development',
+      description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.',
+      benefits: ['Faster 'breakthroughsEthical 'compliance', 'Risk mitigation']},
     {
-      title: 'Enterprise AI Systems';
-      description: 'Deploy conscious AI systems that understand business context and human values.';
-      benefits: ['Better decision 'making', 'Human-AI 'collaboration', 'Trust building']};
+      title: 'Enterprise AI Systems',
+      description: 'Deploy conscious AI systems that understand business context and human values.',
+      benefits: ['Better decision 'makingHuman-AI 'collaboration', 'Trust building']},
     {
-      title: 'Healthcare AI';
-      description: 'AI systems that understand patient needs and provide compassionate care.';
-      benefits: ['Patient 'empathy', 'Medical 'accuracy', 'Ethical treatment']};
+      title: 'Healthcare AI',
+      description: 'AI systems that understand patient needs and provide compassionate care.',
+      benefits: ['Patient 'empathyMedical 'accuracy', 'Ethical treatment']},
     {
-      title: 'Education Technology';
-      description: 'AI tutors that adapt to individual learning styles and emotional needs.';
-      benefits: ['Personalized 'learning', 'Emotional 'intelligence', 'Student engagement']}
+      title: 'Education Technology',
+      description: 'AI tutors that adapt to individual learning styles and emotional needs.',
+      benefits: ['Personalized 'learningEmotional 'intelligence', 'Student engagement']}
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$2,500';
-      period: '/month';
-      description: 'Perfect for research institutions and small teams';
+      name: 'Starter',
+      price: '$2,500',
+      period: '/month',
+      description: 'Perfect for research institutions and small teams',
       features: [
-        'Basic consciousness mapping';
-        'Ethical framework templates';
-        'Standard safety protocols';
-        'Email support';
-        'Up to 5 AI systems']};
+        'Basic consciousness mappingEthical framework templates',
+        'Standard safety protocolsEmail support',
+        'Up to 5 AI systems']},
     {
-      name: 'Professional';
-      price: '$8,500';
-      period: '/month';
-      description: 'Ideal for growing organizations and research teams';
+      name: 'Professional',
+      price: '$8,500',
+      period: '/month',
+      description: 'Ideal for growing organizations and research teams',
       features: [
-        'Advanced consciousness evolution';
-        'Custom ethical frameworks';
-        'Enhanced safety protocols';
-        'Priority support';
-        'Up to 25 AI systems';
-        'Real-time monitoring']};
+        'Advanced consciousness evolutionCustom ethical frameworks',
+        'Enhanced safety protocolsPriority support',
+        'Up to 25 AI systemsReal-time monitoring']},
     {
-      name: 'Enterprise';
-      price: 'Custom';
-      period: '';
-      description: 'Tailored solutions for large-scale deployments';
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large-scale deployments',
       features: [
-        'Full consciousness platform';
-        'Custom development';
-        'Dedicated support team';
-        'Unlimited AI systems';
-        'Advanced analytics';
-        'Custom integrations']}
+        'Full consciousness platformCustom development',
+        'Dedicated support teamUnlimited AI systems',
+        'Advanced analyticsCustom integrations']}
   ],
   return (
     <Layout>,
@@ -122,7 +114,7 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
                 AI Consciousness Evolution Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl mx-auto">,
-                The 'world', 's first comprehensive platform for developingunderstandingand evolving AI consciousness while maintaining ethical standards and human alignment.,
+                The 'worlds first comprehensive platform for developingunderstandingand evolving AI consciousness while maintaining ethical standards and human alignment.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,
                 <a
@@ -339,59 +331,49 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
+    </div>)},
 =======,
-export default AIConsciousnessEvolutionPlatform;
+export default AIConsciousnessEvolutionPlatform,
   BrainAtomShieldZapSparklesStarArrowRight,
-  CheckCirclePhoneMailMapPinGlobeTrendingUp;
+  CheckCirclePhoneMailMapPinGlobeTrendingUp,
   DollarSignUsersTargetAwardRocketCpuLock} from 'lucide-react',
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'Consciousness mapping algorithms';
-    'Neural architecture evolution';
-    'Self-awareness development';
-    'Consciousness validation metrics';
-    'Ethical consciousness frameworks';
-    'Cross-species consciousness study';
-    'Consciousness transfer protocols';
-    'Quantum consciousness integration'],
+    'Consciousness mapping algorithmsNeural architecture evolution',
+    'Self-awareness developmentConsciousness validation metrics',
+    'Ethical consciousness frameworksCross-species consciousness study',
+    'Consciousness transfer protocolsQuantum consciousness integration'],
   const benefits = [
-    'Breakthrough in AI consciousness research';
-    'Ethical AI development framework';
-    'Advanced neuroscience insights';
-    'Philosophical consciousness understanding';
-    'Human-AI consciousness collaboration';
-    'Consciousness preservation technology'],
+    'Breakthrough in AI consciousness researchEthical AI development framework',
+    'Advanced neuroscience insightsPhilosophical consciousness understanding',
+    'Human-AI consciousness collaborationConsciousness preservation technology'],
   const useCases = [
-    'AI research institutions';
-    'Neuroscience laboratories';
-    'Philosophy departments';
-    'Ethics committees';
-    'Government research agencies';
-    'Private research foundations'],
+    'AI research institutionsNeuroscience laboratories',
+    'Philosophy departmentsEthics committees',
+    'Government research agenciesPrivate research foundations'],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { y: 20opacity: 0 };
+    hidden: { y: 20opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut"}
     }
-  };
+  },
   return (
     <UltraFuturisticBackground2030>,
       <Head>,
@@ -639,5 +621,5 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
         </section>,
       </main>,
       <UltraFuturisticFooter2029 />,
-    </UltraFuturisticBackground2030>)};
-export default AIConsciousnessEvolutionPlatform;
+    </UltraFuturisticBackground2030>)},
+export default AIConsciousnessEvolutionPlatform,

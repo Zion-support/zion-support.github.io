@@ -1,8 +1,8 @@
 
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { ProfileProject } from "@/types/profile";
-import { AspectRatio } from "@/components/ui/aspect-ratio";
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { ProfileProject } from "@/types/profile",
+import { AspectRatio } from "@/components/ui/aspect-ratio",
 import { FileText } from 'lucide-react',
 interface ProfileProjectsProps {
   projects: ProfileProject[]}
@@ -44,7 +44,7 @@ export function ProfileProjects({ projects } ProfileProjectsProps) {
             </CardContent>,
           </Card>))}
       </div>,
-    </div>);}
+    </div>),}
  import {
   {
   {

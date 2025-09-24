@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 import { PortfolioProject } from '../../utils/types/resume',
 export type PortfolioCardProps = {
   project: PortfolioProject,
   onEdit: (project: PortfolioProject) => void,
-  onDelete: (id: string) => void};
+  onDelete: (id: string) => void},
 export default function PortfolioCard({
-  project;
-  onEdit;
-  onDelete;
+  project,
+  onEdit,
+  onDelete,
 }: PortfolioCardProps) {
   return (
     <div className='group relative rounded-lg border border-gray-20o0 dark: border-gray-80o0 p-4 bg-white/60 dark:bg-gray-90o0/40 hover:shadow-lg transition-shadow'>,

@@ -1,31 +1,31 @@
-import React from 'react';
+import React from 'react',
 import { BrainClockAwardZap } from 'lucide-react',
 import { CardContentCardHeaderCardTitleCardDescription } from '@/components/ui/card',
 const features = [
   {
-    icon: <Brain className='h-10 w-10 text-zion-cyan' />;
-    title: 'AI Talent Matching';
+    icon: <Brain className='h-10 w-10 text-zion-cyan' />,
+    title: 'AI Talent Matching',
     description:,
-      'Our AI algorithm matches you with the perfect talent or job based on your skills and requirements.';
-  };
+      'Our AI algorithm matches you with the perfect talent or job based on your skills and requirements.',
+  },
   {
-    icon: <Clock className='h-10 w-10 text-zion-cyan' />;
-    title: '1-Click Hiring';
+    icon: <Clock className='h-10 w-10 text-zion-cyan' />,
+    title: '1-Click Hiring',
     description:,
-      'Streamlined hiring process that lets you connect with talent instantly with just one click.';
-  };
+      'Streamlined hiring process that lets you connect with talent instantly with just one click.',
+  },
   {
-    icon: <Award className='h-10 w-10 text-zion-cyan' />;
-    title: 'Resume Builder';
+    icon: <Award className='h-10 w-10 text-zion-cyan' />,
+    title: 'Resume Builder',
     description:,
-      'Create professionalAI-enhanced resumes that highlight your skills and increase your chances of getting hired.';
-  };
+      'Create professionalAI-enhanced resumes that highlight your skills and increase your chances of getting hired.',
+  },
   {
-    icon: <Zap className='h-10 w-10 text-zion-cyan' />;
-    title: 'Real-time Notifications';
+    icon: <Zap className='h-10 w-10 text-zion-cyan' />,
+    title: 'Real-time Notifications',
     description:,
-      'Get instant alerts about new job opportunitiesmessagesand hiring requests.';
-  };
+      'Get instant alerts about new job opportunitiesmessagesand hiring requests.',
+  },
 ],
 export const AppFeatures: React.FC = () => {
   return (
@@ -57,4 +57,4 @@ export const AppFeatures: React.FC = () => {
             </Card>))}
         </div>,
       </div>,
-    </section>)};
+    </section>)},

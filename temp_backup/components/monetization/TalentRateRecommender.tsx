@@ -6,7 +6,7 @@ export type TalentRateRecommenderProps = {
   skills: string[],
   yearsExperience: number,
   location: string,
-  onApplySuggestion?: (hourly: number, min: number, max: number) => void};
+  onApplySuggestion?: (hourly: number, min: number, max: number) => void},
 export default function TalentRateRecommender(
   props: TalentRateRecommenderProps) {
   const [loading, setLoading] = useState(false),
@@ -22,18 +22,18 @@ export default function TalentRateRecommender(
     setError(null),
     try {
       const res = await axios.post('/api/pricing/talent', {
-        skills: props.skills;
-        yearsExperience: props.yearsExperience;
-        location: props.location;
+        skills: props.skills,
+        yearsExperience: props.yearsExperience,
+        location: props.location
       }),
       const s = res.data?.suggestion,
       if (s) {
         setSuggestion({
-          hourlyRate: s.hourlyRate;
-          min: s.min;
-          max: s.max;
-          confidence: s.confidence;
-          rationale: s.rationale;
+          hourlyRate: s.hourlyRate,
+          min: s.min,
+          max: s.max,
+          confidence: s.confidence,
+          rationale: s.rationale
         })}
     } catch (e) {
       setError('Could not get suggestion')} finally {
@@ -42,9 +42,9 @@ export default function TalentRateRecommender(
 ,
   function formatUSD(n: number) {
     return n.toLocaleString('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      maximumFractionDigits: 0;
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0
     })}
 ,
   const rangeText = suggestion,
@@ -68,8 +68,8 @@ export default function TalentRateRecommender(
           rationale={suggestion.rationale}
           onApply={() =>,
             props.onApplySuggestion?.(
-              suggestion.hourlyRate;
-              suggestion.min;
+              suggestion.hourlyRate,
+              suggestion.min,
               suggestion.max)}
         />)}
     </div>)}

@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import {
-  Atom;
-  Zap;
-  Target;
-  Network;
-  Globe;
-  Users;
-  Brain;
-  TrendingUp;
+  Atom,
+  Zap,
+  Target,
+  Network,
+  Globe,
+  Users,
+  Brain,
+  TrendingUp,
 } from 'lucide-react',
 const QuantumSimulationPlatformPage: React.FC = () => {
   return (
@@ -245,7 +245,7 @@ const QuantumSimulationPlatformPage: React.FC = () => {
                     Material Design,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Design of new materials with specific electronic, magnetic;
+                    Design of new materials with specific electronic, magnetic,
                     and optical properties.,
                   </p>,
                 </div>,
@@ -526,5 +526,5 @@ const QuantumSimulationPlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default QuantumSimulationPlatformPage;
+    </>)},
+export default QuantumSimulationPlatformPage,

@@ -1,10 +1,9 @@
 import { serve } from 'https: //deno.land/std@0.168.0/http/server.ts',
 import 'https://deno.land/x/xhr@0.1.0/mod.ts',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 interface Milestone {
   title: string,
   description: string,
@@ -24,16 +23,16 @@ serve(async req => {
 ,
     // Parse request body,
     const {
-      talentName;
-      clientName;
-      projectName;
-      scopeSummary;
-      startDate;
-      endDate;
-      paymentTerms;
-      paymentAmount;
-      additionalClauses;
-      milestones;
+      talentName,
+      clientName,
+      projectName,
+      scopeSummary,
+      startDate,
+      endDate,
+      paymentTerms,
+      paymentAmount,
+      additionalClauses,
+      milestones,
     } = await req.json(),
     // Create the contract prompt for OpenAI,
     let prompt = `,
@@ -83,26 +82,26 @@ serve(async req => {
     `,
     // Call OpenAI API,
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-        Authorization: `Bearer ${apiKey}`;
-      };
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
       body: JSON.stringify({
-        model: 'gpt-4o';
+        model: 'gpt-4o',
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content:,
-              'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.';
-          };
+              'You are a legal expert specializing in drafting professional freelance contracts. Generate a clear, comprehensive contract based on the provided details.',
+          },
           {
-            role: 'user';
-            content: prompt;
-          };
-        ];
-        temperature: 0.7;
-      });
+            role: 'user',
+            content: prompt
+          },
+        ],
+        temperature: 0.7
+      }),
     }),
     const data = await response.json(),
     if (!response.ok) {
@@ -111,22 +110,22 @@ serve(async req => {
     const contract = data.choices[0].message.content.trim(),
     return new Response(
       JSON.stringify({
-        success: true;
-        contract;
-      });
+        success: true,
+        contract
+      }),
       {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )} catch (error) {
     console.error('Error generating contract:', error),
     return new Response(
       JSON.stringify({
-        success: false;
-        error: error.message || 'Failed to generate contract';
-      });
+        success: false,
+        error: error.message || 'Failed to generate contract'
+      }),
       {
-        status: 500;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )}
 }),

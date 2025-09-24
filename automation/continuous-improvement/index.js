@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -34,25 +34,25 @@ const CONFIG ={
     PERFORMANCE: 15 * 60 * 10o00,  // 15 minutes,
     SECURITY: 60 * 60 * 10o00,     // 1 hour,
     USER_EXPERIENCE: 45 * 60 * 10o00, // 45 minutes,
-    DEPENDENCIES: 24 * 60 * 60 * 10o00, // 24 hours};
+    DEPENDENCIES: 24 * 60 * 60 * 10o00, // 24 hours},
   // Thresholds for triggering improvements,
   THRESHOLDS: {
     PERFORMANCE_SCORE: 80, // Lighthouse score threshold,
     SECURITY_VULNERABILITIES: 0, // Max allowed vulnerabilities,
     CODE_COVERAGE: 70, // Minimum test coverage percentage,
     BUNDLE_SIZE_INCREASE: 10, // Max bundle size increase in KB,
-    ERROR_RATE: 0.0o1, // Max error rate (1%)};
+    ERROR_RATE: 0.0o1, // Max error rate (1%)},
   // Cursor AI integration,
   CURSOR: {
-    API_ENDPOINT: process.env.CURSOR_API_ENDPOINT || https://api.cursor.sh';
-    API_KEY: process.env.CURSOR_API_KEY;
-    WORKSPACE_ID: process.env.CURSOR_WORKSPACE_ID};
+    API_ENDPOINT: process.env.CURSOR_API_ENDPOINT || https://api.cursor.sh',
+    API_KEY: process.env.CURSOR_API_KEY,
+    WORKSPACE_ID: process.env.CURSOR_WORKSPACE_ID},
   // Monitoring endpoints,
   MONITORING: {
-    LIGHTHOUSE_URL: process.env.LIGHTHOUSE_URL || http://localhost:30o00';
-    ERROR_TRACKING_URL: process.env.ERROR_TRACKING_URL;
+    LIGHTHOUSE_URL: process.env.LIGHTHOUSE_URL || http://localhost:30o00',
+    ERROR_TRACKING_URL: process.env.ERROR_TRACKING_URL,
     ANALYTICS_URL: process.env.ANALYTICS_URL}
-};
+},
 class ContinuousImprovementSystem {
   constructor() {
     this.isRunning = false,
@@ -78,7 +78,7 @@ class ContinuousImprovementSystem {
    */,
   validateConfig() {
     const requiredEnvVars = [
-      CURSOR_API_KEY';
+      CURSOR_API_KEY',
       CURSOR_WORKSPACE_ID],
     const missing = requiredEnvVars.filter(varName => !process.env[varName]),
     if (missing.length > 0) {
@@ -92,28 +92,28 @@ class ContinuousImprovementSystem {
   async setupMonitoring() {
     // Code quality monitoring,
     this.monitors.set('codeQuality', {
-      interval: CONFIG.INTERVALS.CODE_QUALITY;
-      lastRun: 0;
+      interval: CONFIG.INTERVALS.CODE_QUALITY,
+      lastRun: 0,
       handler: () => this.monitorCodeQuality()}),
     // Performance monitoring,
     this.monitors.set('performance', {
-      interval: CONFIG.INTERVALS.PERFORMANCE;
-      lastRun: 0;
+      interval: CONFIG.INTERVALS.PERFORMANCE,
+      lastRun: 0,
       handler: () => this.monitorPerformance()}),
     // Security monitoring,
     this.monitors.set('security', {
-      interval: CONFIG.INTERVALS.SECURITY;
-      lastRun: 0;
+      interval: CONFIG.INTERVALS.SECURITY,
+      lastRun: 0,
       handler: () => this.monitorSecurity()}),
     // User experience monitoring,
     this.monitors.set('userExperience', {
-      interval: CONFIG.INTERVALS.USER_EXPERIENCE;
-      lastRun: 0;
+      interval: CONFIG.INTERVALS.USER_EXPERIENCE,
+      lastRun: 0,
       handler: () => this.monitorUserExperience()}),
     // Dependencies monitoring,
     this.monitors.set('dependencies', {
-      interval: CONFIG.INTERVALS.DEPENDENCIES;
-      lastRun: 0;
+      interval: CONFIG.INTERVALS.DEPENDENCIES,
+      lastRun: 0,
       handler: () => this.monitorDependencies()})}
 ,
   /**,
@@ -231,7 +231,7 @@ const timeoutId = setTimeout(loop,                                              
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
-// Store timeoutId for cleanup if needed, // Check every minute};
+// Store timeoutId for cleanup if needed, // Check every minute},
     loop()}
 ,
   /**,
@@ -248,11 +248,11 @@ const timeoutId = setTimeout(loop,                                              
       const needsImprovement = lintResults.errors > 0 || coverageResults.coverage < CONFIG.THRESHOLDS.CODE_COVERAGE,
       if (needsImprovement) {
         await this.queueImprovement('codeQuality', {
-          type: 'codeQuality';
-          severity: 'medium';
+          type: 'codeQuality',
+          severity: 'medium',
           data: {
-            lintErrors: lintResults.errors;
-            coverage: coverageResults.coverage;
+            lintErrors: lintResults.errors,
+            coverage: coverageResults.coverage,
             targetCoverage: CONFIG.THRESHOLDS.CODE_COVERAGE}
         })}
 ,
@@ -276,12 +276,12 @@ const timeoutId = setTimeout(loop,                                              
       const needsImprovement = lighthouseResults.performance < CONFIG.THRESHOLDS.PERFORMANCE_SCORE,
       if (needsImprovement) {
         await this.queueImprovement('performance', {
-          type: 'performance';
-          severity: 'high';
+          type: 'performance',
+          severity: 'high',
           data: {
-            lighthouseScore: lighthouseResults.performance;
-            webVitals;
-            bundleSize;
+            lighthouseScore: lighthouseResults.performance,
+            webVitals,
+            bundleSize,
             targetScore: CONFIG.THRESHOLDS.PERFORMANCE_SCORE}
         })}
 ,
@@ -303,11 +303,11 @@ const timeoutId = setTimeout(loop,                                              
       const needsImprovement = securityAudit.issues > 0 || vulnerabilities.count > CONFIG.THRESHOLDS.SECURITY_VULNERABILITIES,
       if (needsImprovement) {
         await this.queueImprovement('security', {
-          type: 'security';
-          severity: 'critical';
+          type: 'security',
+          severity: 'critical',
           data: {
-            securityIssues: securityAudit.issues;
-            vulnerabilities: vulnerabilities.count;
+            securityIssues: securityAudit.issues,
+            vulnerabilities: vulnerabilities.count,
             targetVulnerabilities: CONFIG.THRESHOLDS.SECURITY_VULNERABILITIES}
         })}
 ,
@@ -331,12 +331,12 @@ const timeoutId = setTimeout(loop,                                              
       const needsImprovement = errorRate > CONFIG.THRESHOLDS.ERROR_RATE,
       if (needsImprovement) {
         await this.queueImprovement('userExperience', {
-          type: 'userExperience';
-          severity: 'medium';
+          type: 'userExperience',
+          severity: 'medium',
           data: {
-            accessibility;
-            seo;
-            errorRate;
+            accessibility,
+            seo,
+            errorRate,
             targetErrorRate: CONFIG.THRESHOLDS.ERROR_RATE}
         })}
 ,
@@ -358,10 +358,10 @@ const timeoutId = setTimeout(loop,                                              
       const needsImprovement = outdated.length > 0 || vulnerabilities.length > 0,
       if (needsImprovement) {
         await this.queueImprovement('dependencies', {
-          type: 'dependencies';
-          severity: 'low';
+          type: 'dependencies',
+          severity: 'low',
           data: {
-            outdated;
+            outdated,
             vulnerabilities}
         })}
 ,
@@ -441,39 +441,39 @@ const timeoutId = setTimeout(loop,                                              
 ,
   // Monitoring helper methods (stubs for now),
   async runLinting() {
-    return { errors: 0, warnings: 0 };
+    return { errors: 0, warnings: 0 },
   }
 ,
   async runTestCoverage() {
-    return { coverage: 85 };
+    return { coverage: 85 },
   }
 ,
   async runLighthouseAudit() {
-    return { performance: 85, accessibility: 90, bestPractices: 95, seo: 88 };
+    return { performance: 85, accessibility: 90, bestPractices: 95, seo: 88 },
   }
 ,
   async checkBundleSize() {
-    return { size: 450, increase: 0 };
+    return { size: 450, increase: 0 },
   }
 ,
   async checkWebVitals() {
-    return { lcp: 2.5, fid: 0.1, cls: 0.1 };
+    return { lcp: 2.5, fid: 0.1, cls: 0.1 },
   }
 ,
   async runSecurityAudit() {
-    return { issues: 0 };
+    return { issues: 0 },
   }
 ,
   async checkVulnerabilities() {
-    return { count: 0 };
+    return { count: 0 },
   }
 ,
   async checkAccessibility() {
-    return { score: 90 };
+    return { score: 90 },
   }
 ,
   async checkSEO() {
-    return { score: 85 };
+    return { score: 85 },
   }
 ,
   async checkErrorRate() {

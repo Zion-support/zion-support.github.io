@@ -49,7 +49,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
         else {
             const newMessages = valueOrFn instanceof Function ? valueOrFn(loggedInMessages) : valueOrFn,
             setLoggedInMessages(newMessages)}
-    };
+    },
     const debouncedApiCallParams = useDebounce(pendingApiCallParams, 30o00),
     useEffect(() => {
         if (debouncedApiCallParams) {
@@ -58,37 +58,37 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
     useEffect(() => {
         scrollToBottom()}, [currentMessages]), // currentMessages will correctly refer to either guest or logged-in state,
     const scrollToBottom = () => {
-        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+        messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
     const handleSendMessage = async (messageContent) => {
         if (!messageContent.trim()),
             return,
         if (!isGuest) { // Logged-in user,
             const newMessage ={
-                id: Date.now().toString();
-                role: 'user';
-                message: messageContent;
-                timestamp: new Date()};
+                id: Date.now().toString(),
+                role: 'user',
+                message: messageContent,
+                timestamp: new Date()},
             setCurrentMessages((prev) => [...prev, newMessage]),
             setPendingApiCallParams({ message: messageContent, conversationId })}
         else { // Guest user,
             setGuestMessage(messageContent),
             setShowGuestModal(true)}
-    };
+    },
     const handleModalSendConfirm = () => {
         if (!guestMessage),
             return,
         const newMessage ={
-            id: Date.now().toString();
-            role: 'user';
-            message: guestMessage;
-            timestamp: new Date()};
+            id: Date.now().toString(),
+            role: 'user',
+            message: guestMessage,
+            timestamp: new Date()},
         setCurrentMessages((prev) => [...prev, newMessage]), // This will now use the guest-aware setCurrentMessages,
         setPendingApiCallParams({ message: guestMessage, conversationId }),
         setShowGuestModal(false),
-        setGuestMessage(null)};
+        setGuestMessage(null)},
     const handleModalCancel = () => {
         setShowGuestModal(false),
-        setGuestMessage(null)};
+        setGuestMessage(null)},
     useEffect(() => {
         if (!showGuestModal),
             return,
@@ -96,12 +96,12 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (e.key === 'Escape') {
                 e.preventDefault(),
                 handleModalCancel()}
-        };
+        },
         const removeTrap = guestModalRef.current ? focusManagement.trapFocus(guestModalRef.current) : undefined,
         document.addEventListener('keydown', handleKey),
         return () => {
             document.removeEventListener('keydown', handleKey),
-            removeTrap && removeTrap()};
+            removeTrap && removeTrap()},
     }, [showGuestModal]),
     useEffect(() => {
         if (!isOpen),
@@ -110,7 +110,7 @@ export function ChatAssistant({ isOpen, onClose, recipient, conversationId, init
             if (e.key === 'Escape') {
                 e.preventDefault(),
                 onClose()}
-        };
+        },
         document.addEventListener('keydown', handleKeyDown),
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, onClose]),
     if (!isOpen),

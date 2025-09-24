@@ -11,7 +11,7 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     satisfaction?: string,
-    efficiency?: string};
+    efficiency?: string},
   readingTime?: string}
 ,
 const NewContent20o25IntelligenceBanner: React.FC = () => {
@@ -20,48 +20,48 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true),
   const contentItems: ContentItem[] = [
     {
-      id: 'enterprise-intelligence-revolution';
-      title: 'AI 20o25: The Enterprise Intelligence Revolution - Ultimate Guide to 750% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-intelligence-revolution-ultimate-guide';
+      id: 'enterprise-intelligence-revolution',
+      title: 'AI 20o25: The Enterprise Intelligence Revolution - Ultimate Guide to 750% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-intelligence-revolution-ultimate-guide',
       metrics: {
-        roi: '750%';
-        savings: '$4.2M';
-        satisfaction: '99.7%';
-        efficiency: '340%'};
-      readingTime: '28 min read'};
+        roi: '750%',
+        savings: '$4.2M',
+        satisfaction: '99.7%',
+        efficiency: '340%'},
+      readingTime: '28 min read'},
     {
-      id: 'enterprise-intelligence-success';
-      title: '$3.2B Company Achieves 750% ROI with AI-Powered Intelligence Systems';
-      type: 'case-study';
-      url: '/case-studies/ai-20o25-enterprise-intelligence-750-roi-success-story';
+      id: 'enterprise-intelligence-success',
+      title: '$3.2B Company Achieves 750% ROI with AI-Powered Intelligence Systems',
+      type: 'case-study',
+      url: '/case-studies/ai-20o25-enterprise-intelligence-750-roi-success-story',
       metrics: {
-        roi: '750%';
-        savings: '$240M';
-        satisfaction: '99.8%';
-        efficiency: '67%'};
-      readingTime: '22 min read'};
+        roi: '750%',
+        savings: '$240M',
+        satisfaction: '99.8%',
+        efficiency: '67%'},
+      readingTime: '22 min read'},
     {
-      id: 'customer-experience-revolution';
-      title: 'AI 20o25: The Customer Experience Revolution - Ultimate Guide to 650% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-customer-experience-revolution-ultimate-guide';
+      id: 'customer-experience-revolution',
+      title: 'AI 20o25: The Customer Experience Revolution - Ultimate Guide to 650% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-customer-experience-revolution-ultimate-guide',
       metrics: {
-        roi: '650%';
-        savings: '$4.2M';
-        satisfaction: '99%';
-        efficiency: '89%'};
-      readingTime: '32 min read'};
+        roi: '650%',
+        savings: '$4.2M',
+        satisfaction: '99%',
+        efficiency: '89%'},
+      readingTime: '32 min read'},
     {
-      id: 'customer-experience-implementation';
-      title: 'AI 20o25 Customer Experience Implementation Master Guide: From Strategy to 650% ROI';
-      type: 'resource';
-      url: '/resources/ai-20o25-customer-experience-implementation-master-guide';
+      id: 'customer-experience-implementation',
+      title: 'AI 20o25 Customer Experience Implementation Master Guide: From Strategy to 650% ROI',
+      type: 'resource',
+      url: '/resources/ai-20o25-customer-experience-implementation-master-guide',
       metrics: {
-        roi: '650%';
-        savings: '$3.2M';
-        satisfaction: '99%';
-        efficiency: '89%'};
+        roi: '650%',
+        savings: '$3.2M',
+        satisfaction: '99%',
+        efficiency: '89%'},
       readingTime: '45 min read'}
   ],
   useEffect(() => {
@@ -78,32 +78,32 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
     return () => clearInterval(interval)}, [isAutoPlaying, contentItems.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('intelligence-banner-dismissed', 'true')};
+    localStorage.setItem('intelligence-banner-dismissedtrue')},
   const handlePrevious = () => {
     setCurrentIndex((prevIndex) =>,
       prevIndex === 0 ? contentItems.length - 1 : prevIndex - 1),
-    setIsAutoPlaying(false)};
+    setIsAutoPlaying(false)},
   const handleNext = () => {
     setCurrentIndex((prevIndex =>,
       prevIndex === contentItems.length - 1 ? 0 : prevIndex + 1)),
-    setIsAutoPlaying(false)};
+    setIsAutoPlaying(false)},
   const handleDotClick = (index: number) => {
     setCurrentIndex(index),
-    setIsAutoPlaying(false)};
+    setIsAutoPlaying(false)},
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return <TrendingUp className="w-4 h-4"  />,
       case 'case-study': return <Users className="w-4 h-4"  />,
       case 'resource': return <ArrowRight className="w-4 h-4"  />,
       default: return <Zap className="w-4 h-4"  />}
-  };
+  },
   if (!isVisible) return null,
   const currentItem = contentItems[currentIndex],
   return (
@@ -121,7 +121,7 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
             <div className="flex items-center space-x-3 mb-2">,
               <div className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getTypeColor(currentItem.type)}`}>,
                 {getTypeIcon(currentItem.type)}
-                <span className="ml-1 capitalize">{currentItem.type.replace('-', ' ')}</span>,
+                <span className="ml-1 capitalize">{currentItem.type.replace('- ')}</span>,
               </div>,
               <div className="flex items-center space-x-1 text-sm text-gray-60o0">,
                 <Zap className="w-4 h-4 text-yellow-50o0"  />,
@@ -196,5 +196,5 @@ const NewContent20o25IntelligenceBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25IntelligenceBanner;
+    </div>)},
+export default NewContent20o25IntelligenceBanner,

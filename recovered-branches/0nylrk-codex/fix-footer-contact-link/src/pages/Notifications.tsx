@@ -12,27 +12,27 @@ import {Skeleton} from "@/components/ui/skeleton",
 import {SEO} from "@/components/SEO",
 import {useNavigate} from "react-router-dom",
 import {cn} from "@/lib/utils",
-import React, { useState } from 'react';
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { useNotifications } from "@/context/notifications/NotificationContext";
+import React, { useState } from 'react',
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { useNotifications } from "@/context/notifications/NotificationContext",
 import {
-import { formatDistanceToNow } from "date-fns";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs";
-import { Badge } from "@/components/ui/badge";
-import { Skeleton } from "@/components/ui/skeleton";
-import { SEO } from "@/components/SEO";
-import { useNavigate } from "react-router-dom";
-import { cn } from "@/lib/utils";
+import { formatDistanceToNow } from "date-fns",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsList, TabsTrigger, TabsContent } from "@/components/ui/tabs",
+import { Badge } from "@/components/ui/badge",
+import { Skeleton } from "@/components/ui/skeleton",
+import { SEO } from "@/components/SEO",
+import { useNavigate } from "react-router-dom",
+import { cn } from "@/lib/utils",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -45,41 +45,41 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-  NotificationType;
-  NotificationContextType} from "@/context/notifications";
-  Bell, Check, Trash2, ChevronRight, CheckCircle;
-  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings} from "lucide-react";
+  NotificationType,
+  NotificationContextType} from "@/context/notifications",
+  Bell, Check, Trash2, ChevronRight, CheckCircle,
+  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings} from "lucide-react",
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':,
-      return <MessageCircle className={cn(className, "text-blue-500")} />;
+      return <MessageCircle className={cn(className, "text-blue-500")} />,
     case 'quote_request':,
-      return <Briefcase className={cn(className, "text-purple-500")} />;
+      return <Briefcase className={cn(className, "text-purple-500")} />,
     case 'booking_confirmation':,
-      return <CheckCircle className={cn(className, "text-green-500")} />;
+      return <CheckCircle className={cn(className, "text-green-500")} />,
     case 'hire_request':,
-      return <UserCheck className={cn(className, "text-zion-purple")} />;
+      return <UserCheck className={cn(className, "text-zion-purple")} />,
     case 'onboarding':,
-      return <Settings className={cn(className, "text-zion-cyan")} />;
+      return <Settings className={cn(className, "text-zion-cyan")} />,
     case 'system':,
-      return <AlertCircle className={cn(className, "text-yellow-500")} />;
+      return <AlertCircle className={cn(className, "text-yellow-500")} />,
     default:,
       return <Bell className={cn(className, "text-gray-500")} />}
 }
-};
+},
 const getNotificationTypeBadge = (type: NotificationType) => {
   switch (type) {
     case 'message':,
-      return <Badge className="bg-blue-500">Message</Badge>;
+      return <Badge className="bg-blue-500">Message</Badge>,
     case 'quote_request':,
-      return <Badge className="bg-purple-500">Quote Request</Badge>;
+      return <Badge className="bg-purple-500">Quote Request</Badge>,
     case 'booking_confirmation':,
-      return <Badge className="bg-green-500">Booking</Badge>;
+      return <Badge className="bg-green-500">Booking</Badge>,
     case 'hire_request':,
-      return <Badge className="bg-zion-purple">Hire Request</Badge>;
+      return <Badge className="bg-zion-purple">Hire Request</Badge>,
     case 'onboarding':,
-      return <Badge className="bg-zion-cyan">Onboarding</Badge>;
+      return <Badge className="bg-zion-cyan">Onboarding</Badge>,
     case 'system':,
       return <Badge className="bg-yellow-500">System</Badge>,
     default: ,
@@ -99,7 +99,7 @@ const getNotificationTypeBadge = (type: NotificationType) =>: any {
     case 'onboarding':,
       return <Badge className="bg - zion - cyan">Onboarding</Badge>,
     case 'system':,
-      return <Badge className="bg - yellow - 500">System</Badge>;
+      return <Badge className="bg - yellow - 500">System</Badge>,
     default: ,
       return <Badge variant="outline">Notification</Badge>}
 }
@@ -120,40 +120,40 @@ const NotificationCard: React.FC<{
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id),
-  NotificationType;
-  NotificationContextType} from "@/context/notifications";
-  Bell, Check, Trash2, ChevronRight, CheckCircle;
-  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings} from "lucide-react";
+  NotificationType,
+  NotificationContextType} from "@/context/notifications",
+  Bell, Check, Trash2, ChevronRight, CheckCircle,
+  AlertCircle, MessageCircle, Briefcase, UserCheck, Settings} from "lucide-react",
 const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-5") => {
   switch (type) {
     case 'message':,
-      return <MessageCircle className={cn(className, "text-blue-500")} />;
+      return <MessageCircle className={cn(className, "text-blue-500")} />,
     case 'quote_request':,
-      return <Briefcase className={cn(className, "text-purple-500")} />;
+      return <Briefcase className={cn(className, "text-purple-500")} />,
     case 'booking_confirmation':,
-      return <CheckCircle className={cn(className, "text-green-500")} />;
+      return <CheckCircle className={cn(className, "text-green-500")} />,
     case 'hire_request':,
-      return <UserCheck className={cn(className, "text-zion-purple")} />;
+      return <UserCheck className={cn(className, "text-zion-purple")} />,
     case 'onboarding':,
-      return <Settings className={cn(className, "text-zion-cyan")} />;
+      return <Settings className={cn(className, "text-zion-cyan")} />,
     case 'system':,
-      return <AlertCircle className={cn(className, "text-yellow-500")} />;
+      return <AlertCircle className={cn(className, "text-yellow-500")} />,
     default:,
       return <Bell className={cn(className, "text-gray-500")} />}
 ,
     case 'system':,
-      return <Badge className="bg-yellow-500">System</Badge>;
+      return <Badge className="bg-yellow-500">System</Badge>,
     default: ,
       return <Badge variant="outline">Notification</Badge>}
-};
+},
   const handleAction = () => {
     if (!notification.read) {
       onMarkAsRead(notification.id)}
     if (notification.action_url) {
       navigate(notification.action_url)}
-};
-  };
-  };
+},
+  },
+  },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
   return (
     <divclassName={cn(
@@ -213,13 +213,13 @@ const getNotificationIcon = (type: NotificationType, className: string = "h-5 w-
         </div>,
       </div>,
     </div>)}
-};
+},
 export default function NotificationsPage() {
   const {
     filteredNotifications,
     unreadCount,
     action_text?: string}
-  onMarkAsRead: (id: string) => Promise < void>;
+  onMarkAsRead: (id: string) => Promise < void>,
   on_dismiss: (id: string) => Promise < void>}> = ({ notification, onMarkAsRead, on_dismiss }) => {
   const navigate = use_navigate (),
   const handle_action = () =>: any {
@@ -304,14 +304,14 @@ function NotificationsPage() {
     loading,
     filter,
   const {
-    filteredNotifications;
-    unreadCount;
-    markAsRead;
-    markAllAsRead;
-    dismissNotification;
-    loading;
-    filter;
-    setFilter} = useNotifications() as NotificationContextType} = useNotifications() as NotificationContextType;
+    filteredNotifications,
+    unreadCount,
+    markAsRead,
+    markAllAsRead,
+    dismissNotification,
+    loading,
+    filter,
+    setFilter} = useNotifications() as NotificationContextType} = useNotifications() as NotificationContextType,
   return (
     <>,
       <SEO

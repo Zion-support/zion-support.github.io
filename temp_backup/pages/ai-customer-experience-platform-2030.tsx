@@ -1,79 +1,76 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Users;
-  MessageCircle;
-  BarChart3;
-  Zap;
-  Shield;
-  Globe;
-  Phone;
-  Mail;
-  MapPin;
+  Users,
+  MessageCircle,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 import UltraFuturisticBackground20o30 from '../components/ui/UltraFuturisticBackground20o30',
 import UltraFuturisticNavigation20o30 from '../components/layout/UltraFuturisticNavigation20o30',
 import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFooter20o30',
 // Service data,
 const serviceData = {
-  name: 'AI Customer Experience Platform 20o30';
-  description: 'AI-powered customer experience management platform';
-  price: '$199/month';
+  name: 'AI Customer Experience Platform 20o30',
+  description: 'AI-powered customer experience management platform',
+  price: '$199/month',
   features: [
     {
-      title: 'AI-Powered Customer Insights';
+      title: 'AI-Powered Customer Insights',
       description:,
-        'Real-time analysis of customer behavior, sentiment, and preferences using advanced machine learning algorithms.';
-      icon: BarChart3;
-    };
+        'Real-time analysis of customer behavior, sentiment, and preferences using advanced machine learning algorithms.',
+      icon: BarChart3
+    },
     {
-      title: 'Intelligent Customer Journey Mapping';
+      title: 'Intelligent Customer Journey Mapping',
       description:,
-        'Automatically map and optimize customer touchpoints across all channels and devices.';
-      icon: Globe;
-    };
+        'Automatically map and optimize customer touchpoints across all channels and devices.',
+      icon: Globe
+    },
     {
-      title: 'Predictive Customer Behavior Analytics';
+      title: 'Predictive Customer Behavior Analytics',
       description:,
-        'Forecast customer needs and behaviors to proactively address issues and opportunities.';
-      icon: Zap;
-    };
+        'Forecast customer needs and behaviors to proactively address issues and opportunities.',
+      icon: Zap
+    },
     {
-      title: 'Multi-Channel Communication Hub';
+      title: 'Multi-Channel Communication Hub',
       description:,
-        'Unified platform for managing customer interactions across email, chat, social media, and phone.';
-      icon: MessageCircle;
-    };
+        'Unified platform for managing customer interactions across email, chat, social media, and phone.',
+      icon: MessageCircle
+    },
     {
-      title: 'AI-Powered Personalization Engine';
+      title: 'AI-Powered Personalization Engine',
       description:,
-        'Dynamic content and experience personalization based on real-time customer data and AI insights.';
-      icon: Users;
-    };
+        'Dynamic content and experience personalization based on real-time customer data and AI insights.',
+      icon: Users
+    },
     {
-      title: 'Advanced Customer Security & Privacy';
+      title: 'Advanced Customer Security & Privacy',
       description:,
-        'Enterprise-grade security with GDPR compliance and customer data protection.';
-      icon: Shield;
-    };
-  ];
+        'Enterprise-grade security with GDPR compliance and customer data protection.',
+      icon: Shield
+    },
+  ],
   marketPosition:,
-    'Leading AI-powered customer experience platform for enterprises seeking to revolutionize customer engagement through intelligent automation and predictive analytics.';
+    'Leading AI-powered customer experience platform for enterprises seeking to revolutionize customer engagement through intelligent automation and predictive analytics.',
   useCases: [
-    'E-commerce customer journey optimization';
-    'Banking and financial services customer experience';
-    'Healthcare patient engagement and satisfaction';
-    'Retail customer loyalty and retention';
-    'SaaS customer success and onboarding';
-    'Telecommunications customer support';
-  ];
-  roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction, retention, and lifetime value.';
+    'E-commerce customer journey optimizationBanking and financial services customer experience',
+    'Healthcare patient engagement and satisfactionRetail customer loyalty and retention',
+    'SaaS customer success and onboardingTelecommunications customer support',
+  ],
+  roi: 'Average customer sees 350% ROI within 8 months through improved customer satisfaction, retention, and lifetime value.',
   contactInfo: {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-  };
-};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
+  },
+},
 export default function AICustomerExperiencePlatform20o30() {
   const { features, marketPosition, useCases, roi, contactInfo } = serviceData,
   return (
@@ -135,7 +132,7 @@ export default function AICustomerExperiencePlatform20o30() {
                   </span>,
                 </h1>,
                 <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-                  Revolutionize customer engagement with AI-powered insights;
+                  Revolutionize customer engagement with AI-powered insights,
                   predictive analytics, and intelligent automation. Create,
                   exceptional customer experiences that drive loyalty and,
                   growth.,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { futuristicAIServices20o32 } from '../../data/20o32-futuristic-ai-services',
 import { quantumEmergingTechServices20o32 } from '../../data/20o32-quantum-emerging-tech-services',
@@ -9,11 +9,11 @@ import { researchDevelopmentServices20o32 } from '../../data/20o32-research-deve
 import { Phone, Mail, MapPin } from 'lucide-react',
 const UltraFuturisticServiceShowcase20o32: React.FC = () => {
   const allServices = [
-    ...futuristicAIServices20o32;
-    ...quantumEmergingTechServices20o32;
-    ...enterpriseITServices20o32;
-    ...spaceMetaverseTechServices20o32;
-    ...innovativeMicroSaasServices20o32;
+    ...futuristicAIServices20o32,
+    ...quantumEmergingTechServices20o32,
+    ...enterpriseITServices20o32,
+    ...spaceMetaverseTechServices20o32,
+    ...innovativeMicroSaasServices20o32,
     ...researchDevelopmentServices20o32],
   const popularServices = allServices.filter(service => service.popular).slice(0, 6),
   return (
@@ -31,7 +31,7 @@ const UltraFuturisticServiceShowcase20o32: React.FC = () => {
             <span className="text-neon-pink">Services</span>,
           </h2>,
           <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-            Experience the future with our cutting-edge AI consciousness, quantum computing;
+            Experience the future with our cutting-edge AI consciousness, quantum computing,
             space mining, and neuromorphic computing solutions,
           </p>,
         </motion.div>,
@@ -118,11 +118,11 @@ const UltraFuturisticServiceShowcase20o32: React.FC = () => {
           </h3>,
           <div className="grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4">,
             {[
-              { name: 'AI Consciousness', icon: '🧠', count: futuristicAIServices20o32.length };
-              { name: 'Quantum Tech', icon: '⚛️', count: quantumEmergingTechServices20o32.length };
-              { name: 'Enterprise IT', icon: '⚙️', count: enterpriseITServices20o32.length };
-              { name: 'Space & Metaverse', icon: '🚀', count: spaceMetaverseTechServices20o32.length };
-              { name: 'Micro SAAS', icon: '🎯', count: innovativeMicroSaasServices20o32.length };
+              { name: 'AI Consciousness', icon: '🧠', count: futuristicAIServices20o32.length },
+              { name: 'Quantum Tech', icon: '⚛️', count: quantumEmergingTechServices20o32.length },
+              { name: 'Enterprise IT', icon: '⚙️', count: enterpriseITServices20o32.length },
+              { name: 'Space & Metaverse', icon: '🚀', count: spaceMetaverseTechServices20o32.length },
+              { name: 'Micro SAAS', icon: '🎯', count: innovativeMicroSaasServices20o32.length },
               { name: 'R&D Services', icon: '🔬', count: researchDevelopmentServices20o32.length }
             ].map((category, index) => (
               <motion.div,
@@ -170,5 +170,5 @@ const UltraFuturisticServiceShowcase20o32: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default UltraFuturisticServiceShowcase20o32;
+    </section>)},
+export default UltraFuturisticServiceShowcase20o32,

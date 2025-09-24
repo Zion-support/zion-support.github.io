@@ -16,20 +16,20 @@ export default function ComprehensivePricingPage() {
   const [viewModesetViewMode] = useState<'grid' | 'list'>('grid'),
   const allServices = [...revolutionaryMicroSaasServices...enhancedMicroSaasServices],
   const priceRanges = [
-    { value: ''All', 'label: 'All Prices' };
-    { value: '0-100'label: '$0 - $100' };
-    { value: '101-500'label: '$101 - $500' };
-    { value: '501-1000'label: '$501 - $1,000' };
-    { value: '1001-2500'label: '$1,001 - $2,500' };
-    { value: '2501-5000'label: '$2,501 - $5,000' };
+    { value: ''Alllabel: 'All Prices' },
+    { value: '0-100'label: '$0 - $100' },
+    { value: '101-500'label: '$101 - $500' },
+    { value: '501-1000'label: '$501 - $1,000' },
+    { value: '1001-2500'label: '$1,001 - $2,500' },
+    { value: '2501-5000'label: '$2,501 - $5,000' },
     { value: '5001+'label: '$5,001+' }
   ],
   const sortOptions = [
-    { value: ''price', 'label: 'Price Low-High' };
-    { value: ''name', 'label: 'Name A-Z' };
-    { value: ''popularity', 'label: 'Most Popular' };
-    { value: ''category', 'label: 'Category' };
-    { value: ''roi', 'label: 'Highest ROI' }
+    { value: ''pricelabel: 'Price Low-High' },
+    { value: ''namelabel: 'Name A-Z' },
+    { value: ''popularitylabel: 'Most Popular' },
+    { value: ''categorylabel: 'Category' },
+    { value: ''roilabel: 'Highest ROI' }
   ],
   // Filter and sort services,
   let filteredServices = allServices,
@@ -41,7 +41,7 @@ export default function ComprehensivePricingPage() {
   if (priceRange !== 'All') {
     const [minmax] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
     filteredServices = filteredServices.filter(service => {
-      const price = parseFloat(service.price.replace('$', ').replace(',', ')),
+      const price = parseFloat(service.price.replace('$).replace(',', ')),
       return price >= min && (max === Infinity || price <= max)})}
 ,
   // Search filter,
@@ -56,7 +56,7 @@ export default function ComprehensivePricingPage() {
   filteredServices.sort((ab) => {
     switch (sortBy) {
       case 'price':,
-        return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', ')),
+        return parseFloat(a.price.replace('$).replace(',', ')) - parseFloat(b.price.replace('$).replace(',', ')),
       case 'popularity':,
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':,
@@ -69,98 +69,90 @@ export default function ComprehensivePricingPage() {
         return a.name.localeCompare(b.name)}
   }),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Pricing tiers,
   const pricingTiers = [
     {
-      name: 'Starter';
-      price: '$49';
-      period: '/month';
-      description: 'Perfect for small businesses and startups';
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small businesses and startups',
       features: [
-        'Basic service access';
-        'Email support';
-        'Standard features';
-        'Community forum access';
-        'Basic analytics'];
-      icon: <Star className="w-6 h-6" />;
-      color: 'from-blue-500 to-cyan-600';
-      popular: false};
+        'Basic service accessEmail support',
+        'Standard featuresCommunity forum access',
+        'Basic analytics'],
+      icon: <Star className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-600',
+      popular: false},
     {
-      name: 'Professional';
-      price: '$199';
-      period: '/month';
-      description: 'Ideal for growing businesses and teams';
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses and teams',
       features: [
-        'Advanced service access';
-        'Priority support';
-        'Advanced features';
-        'API access';
-        'Advanced analytics';
-        'Custom integrations'];
-      icon: <Gem className="w-6 h-6" />;
-      color: 'from-purple-500 to-pink-600';
-      popular: true};
+        'Advanced service accessPriority support',
+        'Advanced featuresAPI access',
+        'Advanced analyticsCustom integrations'],
+      icon: <Gem className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-600',
+      popular: true},
     {
-      name: 'Enterprise';
-      price: '$499';
-      period: '/month';
-      description: 'For large organizations and enterprises';
+      name: 'Enterprise',
+      price: '$499',
+      period: '/month',
+      description: 'For large organizations and enterprises',
       features: [
-        'Full service access';
-        '24/7 dedicated support';
-        'All features';
-        'Custom development';
-        'Enterprise analytics';
-        'White-label options';
-        'SLA guarantees'];
-      icon: <Crown className="w-6 h-6" />;
-      color: 'from-yellow-500 to-orange-600';
+        'Full service access24/7 dedicated support',
+        'All featuresCustom development',
+        'Enterprise analyticsWhite-label options',
+        'SLA guarantees'],
+      icon: <Crown className="w-6 h-6" />,
+      color: 'from-yellow-500 to-orange-600',
       popular: false}
   ],
   // Market statistics,
   const marketStats = [
     {
-      metric: '$15.2B';
-      label: 'Total Market Size';
-      description: 'Combined market value of all services';
-      icon: <ChartBar className="w-6 h-6" />};
+      metric: '$15.2B',
+      label: 'Total Market Size',
+      description: 'Combined market value of all services',
+      icon: <ChartBar className="w-6 h-6" />},
     {
-      metric: '400+';
-      label: 'Services Available';
-      description: 'Comprehensive micro SaaS portfolio';
-      icon: <Database className="w-6 h-6" />};
+      metric: '400+',
+      label: 'Services Available',
+      description: 'Comprehensive micro SaaS portfolio',
+      icon: <Database className="w-6 h-6" />},
     {
-      metric: '99.99%';
-      label: 'Uptime Guarantee';
-      description: 'Enterprise-grade reliability';
-      icon: <Shield className="w-6 h-6" />};
+      metric: '99.99%',
+      label: 'Uptime Guarantee',
+      description: 'Enterprise-grade reliability',
+      icon: <Shield className="w-6 h-6" />},
     {
-      metric: '2000%+';
-      label: 'Average ROI';
-      description: 'Proven business value';
+      metric: '2000%+',
+      label: 'Average ROI',
+      description: 'Proven business value',
       icon: <TrendingUp className="w-6 h-6" />}
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { y: 20opacity: 0 };
+    hidden: { y: 20opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <UltraFuturisticBackground variant="holographic" intensity="high">,
       <div className="min-h-screen">,
@@ -326,7 +318,7 @@ export default function ComprehensivePricingPage() {
                                              <Button
                          variant={tier.popular ? 'futuristic' : 'primary'} ,
                          size="md",
-                         onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                         onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                          className="w-full">,
                         Get Started,
                         <ArrowRight className="ml-2 w-4 h-4" />,
@@ -441,7 +433,7 @@ export default function ComprehensivePricingPage() {
                                                      <Button
                              variant="primary",
                              size="sm",
-                             onClick={() => window.open(service.'link', '_blank')}
+                             onClick={() => window.open(service.'link_blank')}
                              className="w-full">,
                              Learn More,
                              <ExternalLink className="ml-2 w-4 h-4" />,
@@ -449,7 +441,7 @@ export default function ComprehensivePricingPage() {
                            <Button
                              variant="futuristic",
                              size="sm",
-                             onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                             onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                              className="w-full">,
                              Get Pricing,
                              <DollarSign className="ml-2 w-4 h-4" />,
@@ -494,7 +486,7 @@ export default function ComprehensivePricingPage() {
                                                          <Button
                                variant="primary",
                                size="sm",
-                               onClick={() => window.open(service.'link', '_blank')}
+                               onClick={() => window.open(service.'link_blank')}
                              >,
                                Learn More,
                                <ExternalLink className="ml-2 w-4 h-4" />,
@@ -502,7 +494,7 @@ export default function ComprehensivePricingPage() {
                              <Button
                                variant="futuristic",
                                size="sm",
-                               onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                               onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                              >,
                                Get Pricing,
                                <DollarSign className="ml-2 w-4 h-4" />,
@@ -555,7 +547,7 @@ export default function ComprehensivePricingPage() {
                 <Button
                   variant="primary",
                   size="lg",
-                  onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                 >,
                   Contact Sales,
                   <Mail className="ml-2 w-5 h-5" />,
@@ -563,7 +555,7 @@ export default function ComprehensivePricingPage() {
                 <Button
                   variant="futuristic",
                   size="lg",
-                  onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                 >,
                   Schedule Demo,
                   <Calendar className="ml-2 w-5 h-5" />,

@@ -9,38 +9,38 @@ import {
   Bookmark,
   Share2,
   Download,
-  Eye;
-  Clock;
-  User;
-  Tag;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Database;
-  Globe;
-  Lock;
-  CheckCircle;
-  Play;
-  FileText;
-  Video;
-  Image;
-  Code;
-  BarChart3;
-  Lightbulb;
-  Rocket;
-  Shield;
-  Award;
-  Users;
-  Calendar;
-  MessageCircle;
-  Heart;
-  ThumbsUp;
-  BookOpen;
-  GraduationCap;
-  Briefcase;
+  Eye,
+  Clock,
+  User,
+  Tag,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Database,
+  Globe,
+  Lock,
+  CheckCircle,
+  Play,
+  FileText,
+  Video,
+  Image,
+  Code,
+  BarChart3,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Award,
+  Users,
+  Calendar,
+  MessageCircle,
+  Heart,
+  ThumbsUp,
+  BookOpen,
+  GraduationCap,
+  Briefcase,
   X} from 'lucide-react',
 const UltimateContentHub20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -54,45 +54,45 @@ const UltimateContentHub20o26PromotionBanner = () => {
       setActivePreview((prev) => (prev + 1) % 3)}30o00),
     return () => clearInterval(interval)}[]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   if (isDismissed) return null,
   const contentPreviews = [
     {
-      title: 'Revolutionary AI Breakthroughs 20o26';
-      type: 'article';
-      author: 'Dr. Sarah Chen';
-      views: '15.4K';
-      likes: 892;
-      tags: [', 'AI', 'Machine 'Learning', 'Innovation']};
+      title: 'Revolutionary AI Breakthroughs 20o26',
+      type: 'article',
+      author: 'Dr. Sarah Chen',
+      views: '15.4K',
+      likes: 892,
+      tags: [AI', 'Machine 'LearningInnovation']},
     {
-      title: 'Quantum Computing: The Future is Now';
-      type: 'video';
-      author: 'Prof. Michael Rodriguez';
-      views: '8.9K';
-      likes: 567;
-      tags: ['Quantum 'Computing', 'Physics'Technology']};
+      title: 'Quantum Computing: The Future is Now',
+      type: 'video',
+      author: 'Prof. Michael Rodriguez',
+      views: '8.9K',
+      likes: 567,
+      tags: ['Quantum 'ComputingPhysics'Technology']},
     {
-      title: 'Smart Automation Implementation Guide';
-      type: 'tutorial';
-      author: 'Alex Thompson';
-      views: '6.8K';
-      likes: 423;
-      tags: [', 'Automation', 'Implementation'Guide']}
+      title: 'Smart Automation Implementation Guide',
+      type: 'tutorial',
+      author: 'Alex Thompson',
+      views: '6.8K',
+      likes: 423,
+      tags: [Automation', 'Implementation'Guide']}
   ],
   const contentTypes = [
-    { icon: FileTextlabel: ''Articles', 'count: '456'color: 'text-blue-40o0' };
-    { icon: Videolabel: ''Videos', 'count: '234'color: 'text-red-40o0' };
-    { icon: GraduationCaplabel: ''Tutorials', 'count: '189'color: 'text-green-40o0' };
-    { icon: Briefcaselabel: 'Case 'Studies', 'count: '156'color: 'text-purple-40o0' };
-    { icon: BookOpenlabel: ''Whitepapers', 'count: '98'color: 'text-orange-40o0' };
-    { icon: Calendarlabel: ''Webinars', 'count: '67'color: 'text-pink-40o0' }
+    { icon: FileTextlabel: ''Articlescount: '456'color: 'text-blue-40o0' },
+    { icon: Videolabel: ''Videoscount: '234'color: 'text-red-40o0' },
+    { icon: GraduationCaplabel: ''Tutorialscount: '189'color: 'text-green-40o0' },
+    { icon: Briefcaselabel: 'Case 'Studiescount: '156'color: 'text-purple-40o0' },
+    { icon: BookOpenlabel: ''Whitepaperscount: '98'color: 'text-orange-40o0' },
+    { icon: Calendarlabel: ''Webinarscount: '67'color: 'text-pink-40o0' }
   ],
   const getTypeIcon = (type) => {
     const typeMap ={
-      article: FileText;
-      video: Video;
-      tutorial: GraduationCap};
-    return typeMap[type] || FileText};
+      article: FileText,
+      video: Video,
+      tutorial: GraduationCap},
+    return typeMap[type] || FileText},
   return (
     <AnimatePresence>,
       {isVisible && (
@@ -298,5 +298,5 @@ const UltimateContentHub20o26PromotionBanner = () => {
             <X className="w-5 h-5"  />,
           </button>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default UltimateContentHub20o26PromotionBanner;
+    </AnimatePresence>)},
+export default UltimateContentHub20o26PromotionBanner,

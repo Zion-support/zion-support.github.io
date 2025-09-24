@@ -2,15 +2,15 @@ import { cn } from '@/lib/utils',
 import { Badge } from '@/components/ui/badge',
 import { Link } from 'react-router-dom',
 export function ListingCard({
-  id;
-  title;
-  description;
-  images;
-  category;
-  tags;
-  author;
-  className;
-  profileType = 'service';
+  id,
+  title,
+  description,
+  images,
+  category,
+  tags,
+  author,
+  className,
+  profileType = 'service',
 }) {
   // Generate a profile ID based on the listing data,
   // In a real app, this would be a proper ID from the database,
@@ -21,7 +21,7 @@ export function ListingCard({
       href={`/profile/${profileId}`}
       tabIndex={0}
       className={cn(
-        'flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-30o0 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple';
+        'flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-30o0 group cursor-pointer focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zion-purple',
         className)}
     >,
       {images && images.length > 0 && (

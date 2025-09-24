@@ -103,22 +103,22 @@ export default function MainFrontIndex() {
               </div>,
               <div className="grid grid-cols-2 gap-3 text-sm">,
                 {[
-                  ['Home','/'];
-                  ['Command','#command-center'];
-                  ['Features','#features'];
-                  ['Map','#feature-map'];
-                  ['Suites','#suites'];
-                  ['Capabilities','#capabilities'];
-                  ['Use Cases','#use-cases'];
-                  ['Pillars','#pillars'];
-                  ['Benefits','#benefits'];
-                  ['Templates','#templates'];
-                  ['Demos','#demos'];
-                  ['Highlights','#highlights'];
-                  ['Cases','#cases'];
-                  ['Reports','#reports'];
-                  ['Docs','#roadmap'];
-                  ['Automations','/automation'];
+                  ['Home/'],
+                  ['Command#command-center'],
+                  ['Features#features'],
+                  ['Map#feature-map'],
+                  ['Suites#suites'],
+                  ['Capabilities#capabilities'],
+                  ['Use Cases#use-cases'],
+                  ['Pillars#pillars'],
+                  ['Benefits#benefits'],
+                  ['Templates#templates'],
+                  ['Demos#demos'],
+                  ['Highlights#highlights'],
+                  ['Cases#cases'],
+                  ['Reports#reports'],
+                  ['Docs#roadmap'],
+                  ['Automations/automation'],
                 ].map(([label, href]) => (
                   (href as string).startsWith('#') ? (
                     <a key={label as string} href={href as string} onClick={() => setMobileOpen(false)} className="rounded-lg border border-white/10 bg-white/5 px-3 py-2 hover: bg-white/10">{label as string}</a>) : (
@@ -182,10 +182,10 @@ export default function MainFrontIndex() {
             {/* Live metrics strip */}
             <div className="mt-10 grid grid-cols-2 gap-3 sm: grid-cols-4">,
               {[
-                ['24/7', 'Autonomous'];
-                ['Main', 'Direct Sync'];
-                ['0 Ops', 'Cloud‑Native'];
-                ['Safety', 'Guardrails'];
+                ['24/7Autonomous'],
+                ['MainDirect Sync'],
+                ['0 OpsCloud‑Native'],
+                ['SafetyGuardrails'],
               ].map(([k,v]) => (
                 <div key={k} className="glow-card rounded-xl border border-white/10 bg-white/5 px-4 py-3 text-left">,
                   <div className="text-lg font-bold text-white">{k}</div>,
@@ -199,14 +199,10 @@ export default function MainFrontIndex() {
               <div className="marquee">,
                 <div className="marquee__track">,
                   {[
-                    'Autonomous Agents';
-                    'Repo Sync to Main';
-                    'Zero‑Ops Cloud';
-                    'Safety Guardrails';
-                    'A11y + Performance';
-                    'Observability';
-                    'SEO Automation';
-                    'Design Evolution';
+                    'Autonomous AgentsRepo Sync to Main',
+                    'Zero‑Ops CloudSafety Guardrails',
+                    'A11y + PerformanceObservability',
+                    'SEO AutomationDesign Evolution',
                   ].flatMap((label) => [label, label]).map((label, idx) => (
                     <span key={`${label}-${idx}`} className="mx-3 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1 text-xs text-white/80 backdrop-blur">,
                       <span className="h-1.5 w-1.5 rounded-full bg-cyan-40o0"  /> {label}
@@ -217,11 +213,11 @@ export default function MainFrontIndex() {
             {/* Quick Links */}
             <div className="mx-auto mt-8 flex max-w-3xl flex-wrap justify-center gap-2">,
               {[
-                ['Automation Hub', '/automation'];
-                ['SEO Audit', '/reports/seo'];
-                ['AI Trends', '/reports/ai-trends'];
-                ['Newsroom', '/newsroom'];
-                ['Site Health', '/site-health'];
+                ['Automation Hub/automation'],
+                ['SEO Audit/reports/seo'],
+                ['AI Trends/reports/ai-trends'],
+                ['Newsroom/newsroom'],
+                ['Site Health/site-health'],
               ].map(([label, href]) => (
                 <Link key={label as string} href={href as string}>,
                   <a className="rounded-full border border-white/15 bg-white/5 px-3 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">{label as string}</a>,
@@ -306,21 +302,21 @@ export default function MainFrontIndex() {
         <aside className="fixed left-4 top-1/2 z-30 -translate-y-1/2 block">,
           <nav aria-label="Quick section navigation" className="space-y-2">,
             {[
-              ['#command-center', 'Command'];
-              ['#feature-map', 'Map'];
-              ['#engines', 'Engines'];
-              ['#suites', 'Suites'];
-              ['#capabilities', 'Capabilities'];
-              ['#use-cases', 'Use Cases'];
-              ['#pillars', 'Pillars'];
-              ['#benefits', 'Benefits'];
-              ['#templates', 'Templates'];
-              ['#demos', 'Demos'];
-              ['#highlights', 'Highlights'];
-              ['#cases', 'Cases'];
-              ['#reports', 'Reports'];
-              ['#guardrails', 'Guardrails'];
-              ['#roadmap', 'Docs'];
+              ['#command-centerCommand'],
+              ['#feature-mapMap'],
+              ['#enginesEngines'],
+              ['#suitesSuites'],
+              ['#capabilitiesCapabilities'],
+              ['#use-casesUse Cases'],
+              ['#pillarsPillars'],
+              ['#benefitsBenefits'],
+              ['#templatesTemplates'],
+              ['#demosDemos'],
+              ['#highlightsHighlights'],
+              ['#casesCases'],
+              ['#reportsReports'],
+              ['#guardrailsGuardrails'],
+              ['#roadmapDocs'],
             ].map(([href, label]) => (
               <a key={href} href={href} className="block rounded-full border border-white/10 bg-white/5 px-3 py-1 text-xs text-white/75 backdrop-blur-md hover: border-cyan-40o0/40 hover:text-white">,
                 {label}
@@ -475,8 +471,8 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Autonomous Cloud Runners</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { title: 'Automation Guardian (10m)', desc: 'Monitors and auto-heals automations, commits fixes safely.', href: '/.netlify/functions/automation-guardian-runner' };
-              { title: 'Components Docs Runner (30m)', desc: 'Regenerates components/docs indexes and README, then pushes.', href: '/.netlify/functions/components-docs-runner' };
+              { title: 'Automation Guardian (10m)', desc: 'Monitors and auto-heals automations, commits fixes safely.', href: '/.netlify/functions/automation-guardian-runner' },
+              { title: 'Components Docs Runner (30m)', desc: 'Regenerates components/docs indexes and README, then pushes.', href: '/.netlify/functions/components-docs-runner' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0"  />,
@@ -491,13 +487,13 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Command Center</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { title: 'Automation Hub', desc: 'Runbooks, factories, and live autonomous agents.', href: '/automation' };
-              { title: 'Site Health', desc: 'A11y, performance, and link‑health dashboards.', href: '/site-health' };
-              { title: 'SEO Audit', desc: 'Continuous on‑site SEO scans with proposed diffs.', href: '/reports/seo' };
-              { title: 'AI Trends', desc: 'Intelligence signals from the AI/cloud ecosystem.', href: '/reports/ai-trends' };
-              { title: 'Newsroom', desc: 'Curated updates and product evolution highlights.', href: '/newsroom' };
-              { title: 'Cloud Automations', desc: 'Netlify scheduled functions powering jobs 24/7.', href: '/automation' };
-              { title: 'Docs', desc: 'Technical notes and guides for the platform.', href: '/reports/seo', external: true };
+              { title: 'Automation Hub', desc: 'Runbooks, factories, and live autonomous agents.', href: '/automation' },
+              { title: 'Site Health', desc: 'A11y, performance, and link‑health dashboards.', href: '/site-health' },
+              { title: 'SEO Audit', desc: 'Continuous on‑site SEO scans with proposed diffs.', href: '/reports/seo' },
+              { title: 'AI Trends', desc: 'Intelligence signals from the AI/cloud ecosystem.', href: '/reports/ai-trends' },
+              { title: 'Newsroom', desc: 'Curated updates and product evolution highlights.', href: '/newsroom' },
+              { title: 'Cloud Automations', desc: 'Netlify scheduled functions powering jobs 24/7.', href: '/automation' },
+              { title: 'Docs', desc: 'Technical notes and guides for the platform.', href: '/reports/seo', external: true },
               { title: 'AI Changelog', desc: 'Summarized autonomous changes and highlights.', href: '/newsroom', external: true }
             ].map((card) => (
               <article key={card.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 holo tilt-on-hover">,
@@ -522,17 +518,17 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Zero‑ops scheduled functions power background tasks that improve the site and ship small, safe diffs to main.</p>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { label: 'Autonomous Cloud Brain (1m)', desc: 'Selectively triggers and syncs key pipelines every minute.', href: '/.netlify/functions/autonomous-cloud-brain' };
-              { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' };
-              { label: 'Autonomous Meta Orchestrator', desc: 'Intelligently triggers cloud functions and syncs to main every minute.', href: '/.netlify/functions/autonomous-meta-orchestrator' };
-              { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' };
-              { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' };
-              { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' };
-              { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' };
-              { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals, writes public report.', href: '/.netlify/functions/seo-audit-runner' };
-              { label: 'AI Trends Radar', desc: 'Builds AI trends report from curated sources.', href: '/.netlify/functions/ai-trends-radar-runner' };
-              { label: 'Dependency Auto‑Upgrade', desc: 'Safely bumps deps and verifies a clean build.', href: '/.netlify/functions/deps-auto-upgrade-runner' };
-              { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations, syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' };
+              { label: 'Autonomous Cloud Brain (1m)', desc: 'Selectively triggers and syncs key pipelines every minute.', href: '/.netlify/functions/autonomous-cloud-brain' },
+              { label: 'Homepage Advertiser', desc: 'Curates and updates the home explore section.', href: '/.netlify/functions/homepage_advertiser' },
+              { label: 'Autonomous Meta Orchestrator', desc: 'Intelligently triggers cloud functions and syncs to main every minute.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
+              { label: 'Cloud Orchestrator', desc: 'Runs fast improvement cycle and git sync.', href: '/.netlify/functions/cloud_orchestrator' },
+              { label: 'Autonomous Meta Orchestrator (1m)', desc: 'Curates and triggers critical cloud functions, then syncs.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
+              { label: 'Cloud Trigger Hub (2m)', desc: 'Triggers most functions concurrently, then rebuilds/stamps.', href: '/.netlify/functions/cloud-trigger-hub' },
+              { label: 'Sitemap Runner', desc: 'Keeps sitemap fresh for SEO visibility.', href: '/.netlify/functions/sitemap_runner' },
+              { label: 'SEO Audit Runner', desc: 'Analyzes meta and content signals, writes public report.', href: '/.netlify/functions/seo-audit-runner' },
+              { label: 'AI Trends Radar', desc: 'Builds AI trends report from curated sources.', href: '/.netlify/functions/ai-trends-radar-runner' },
+              { label: 'Dependency Auto‑Upgrade', desc: 'Safely bumps deps and verifies a clean build.', href: '/.netlify/functions/deps-auto-upgrade-runner' },
+              { label: 'Autonomous Meta Orchestrator', desc: 'Invents and triggers cloud automations, syncs changes.', href: '/.netlify/functions/autonomous-meta-orchestrator' },
               { label: 'Trigger All & Commit', desc: 'Invokes all functions and triggers a build or commit.', href: '/.netlify/functions/trigger-all-and-commit' }
             ].map((f) => (
               <a key={f.label} href={f.href} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover">,
@@ -572,12 +568,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A quick tour of the most impactful capabilities — each card links to a deep dive.</p>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { Icon: Rocket, title: 'Automation Hub', desc: 'Factories, agents, and live workflows', href: '/automation' };
-              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuous on‑site SEO improvements', href: '/reports/seo' };
-              { Icon: Gauge, title: 'Site Health', desc: 'A11y, performance, and link integrity', href: '/site-health' };
-              { Icon: Globe, title: 'AI Trends Radar', desc: 'Signals that inspire new automations', href: '/reports/ai-trends' };
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Safe, incremental diffs shipped continuously', href: '/automation' };
-              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth quality gates', href: '/site-health' };
+              { Icon: Rocket, title: 'Automation Hub', desc: 'Factories, agents, and live workflows', href: '/automation' },
+              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuous on‑site SEO improvements', href: '/reports/seo' },
+              { Icon: Gauge, title: 'Site Health', desc: 'A11y, performance, and link integrity', href: '/site-health' },
+              { Icon: Globe, title: 'AI Trends Radar', desc: 'Signals that inspire new automations', href: '/reports/ai-trends' },
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Safe, incremental diffs shipped continuously', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth quality gates', href: '/site-health' },
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover holo">,
@@ -621,12 +617,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Choose an outcome and jump to the relevant systems that make it happen.</p>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { label: 'Grow organic traffic', desc: 'On‑site SEO improvements, better metadata, richer links', href: '/reports/seo' };
-              { label: 'Improve UX quality', desc: 'A11y fixes, performance gains, resilient links', href: '/site-health' };
-              { label: 'Reduce engineering toil', desc: 'Automated upgrades, refactors, and maintenance', href: '/automation' };
-              { label: 'Ship faster with confidence', desc: 'Small safe diffs synced to main', href: '/automation' };
-              { label: 'Stay compliant & accessible', desc: 'Policy guardrails and WCAG checks', href: '/site-health' };
-              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' };
+              { label: 'Grow organic traffic', desc: 'On‑site SEO improvements, better metadata, richer links', href: '/reports/seo' },
+              { label: 'Improve UX quality', desc: 'A11y fixes, performance gains, resilient links', href: '/site-health' },
+              { label: 'Reduce engineering toil', desc: 'Automated upgrades, refactors, and maintenance', href: '/automation' },
+              { label: 'Ship faster with confidence', desc: 'Small safe diffs synced to main', href: '/automation' },
+              { label: 'Stay compliant & accessible', desc: 'Policy guardrails and WCAG checks', href: '/site-health' },
+              { label: 'Learn from market signals', desc: 'AI + cloud trends to guide strategy', href: '/reports/ai-trends' },
             ].map((b) => (
               <Link key={b.label} href={b.href}>,
                 <a className="group flex items-start gap-3 rounded-2xl border border-white/10 bg-white/5 p-5 backdrop-blur-xl hover: border-fuchsia-40o0/30">,
@@ -647,15 +643,15 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Automation Suites</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { title: 'Quick Fixes', desc: 'Build rescue, sitemap/robots, security remediation', href: '/automation' };
-              { title: 'Deep Maintenance', desc: 'Orchestrated smoke tests and link checks', href: '/automation' };
-              { title: 'Marketing & SEO', desc: 'Content factories and on‑site optimizations', href: '/automation' };
-              { title: 'Content Curation', desc: 'Homepage promos generated continuously', href: '/automation' };
-              { title: 'Dependency Upgrades', desc: 'Minor/patch bumps with safe auto‑merge', href: '/automation' };
-              { title: 'Live Workflows', desc: 'Observe pipelines running 24/7', href: '/site-health', external: true };
-              { title: 'Site Health', desc: 'A11y, performance, link checks dashboards', href: '/site-health' };
-              { title: 'AI SEO Auditor', desc: 'Continuous on‑site audits with safe proposed diffs', href: '/reports/seo' };
-              { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' };
+              { title: 'Quick Fixes', desc: 'Build rescue, sitemap/robots, security remediation', href: '/automation' },
+              { title: 'Deep Maintenance', desc: 'Orchestrated smoke tests and link checks', href: '/automation' },
+              { title: 'Marketing & SEO', desc: 'Content factories and on‑site optimizations', href: '/automation' },
+              { title: 'Content Curation', desc: 'Homepage promos generated continuously', href: '/automation' },
+              { title: 'Dependency Upgrades', desc: 'Minor/patch bumps with safe auto‑merge', href: '/automation' },
+              { title: 'Live Workflows', desc: 'Observe pipelines running 24/7', href: '/site-health', external: true },
+              { title: 'Site Health', desc: 'A11y, performance, link checks dashboards', href: '/site-health' },
+              { title: 'AI SEO Auditor', desc: 'Continuous on‑site audits with safe proposed diffs', href: '/reports/seo' },
+              { title: 'AI Trends Radar', desc: 'Signal scanning to inspire new factories', href: '/reports/ai-trends' },
             ].map((suite) => (
               <article key={suite.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0"  />,
@@ -678,9 +674,9 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Superpowers</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-3">,
             {[
-              { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' };
-              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' };
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' };
+              { Icon: Rocket, title: 'Generative Factories', desc: 'Spins up domain‑specific automation factories that build for you.' },
+              { Icon: ShieldCheck, title: 'Safety by Design', desc: 'Layered validations — type checks, builds, a11y, links, and more.' },
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Small, reviewable edits committed and pushed continuously.' },
             ].map(({ Icon, title, desc }) => (
               <article key={title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0"  />,
@@ -740,37 +736,37 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Features</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-2 lg:grid-cols-3">,
             {[
-              { Icon: Zap, title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.', href: '/automation' };
-              { Icon: GitBranch, title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.', href: '/automation' };
-              { Icon: Cpu, title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.', href: '/automation' };
-              { Icon: ShieldCheck, title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.', href: '/site-health' };
-              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, reports, and cloud automation artifacts.', href: '/site-health' };
-              { Icon: Layers, title: 'Composable Systems', desc: 'Chain multiple factories into higher‑order workflows.', href: '/automation' };
-              { Icon: Activity, title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements.', href: '/reports/seo' };
-              { Icon: Globe, title: 'AI Trends Radar', desc: 'Tracks AI and cloud signals to inspire new automations.', href: '/reports/ai-trends' };
-              { Icon: Search, title: 'Deep Indexing', desc: 'Content and code search powering smart linking and PRs.', href: '/newsroom' };
-              { Icon: BarChart3, title: 'Live Dashboards', desc: 'Real‑time quality and impact metrics at a glance.', href: '/site-health' };
-              { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' };
-              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI research integrated into product improvements.', href: '/reports/ai-trends' };
-              { Icon: ShieldCheck, title: 'Security Scans', desc: 'Audit dependencies and surface risks with reports.', href: '/site-health' };
-              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'Summarized changes and AI notes published continuously.', href: '/newsroom' };
-              { Icon: Rocket, title: 'OG Image Maker', desc: 'Auto‑generates rich Open Graph images for content.', href: '/newsroom' };
-              { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits applied before shipping.', href: '/site-health' };
-              { Icon: Layers, title: 'Factories Library', desc: 'Reusable building blocks for new automations.', href: '/automation' };
-              { Icon: Gauge, title: 'Site Health API', desc: 'Programmatic access to health signals and artifacts.', href: '/site-health' };
-              { Icon: Search, title: 'Link Integrity', desc: 'Broken links detected and fixed before shipping.', href: '/site-health' };
-              { Icon: Palette, title: 'Design System Evolution', desc: 'Consistent, modern UI upgrades across the app.', href: '/newsroom' };
-              { Icon: BarChart3, title: 'Analytics Exports', desc: 'Download artifacts and reports for deeper analysis.', href: '/reports/seo' };
-              { Icon: Search, title: 'Automated PR Reviews', desc: 'Bots review diffs for quality, style, and policy.', href: '/automation' };
-              { Icon: Gauge, title: 'Asset Optimizer', desc: 'Compresses images and scripts for faster pages.', href: '/site-health' };
-              { Icon: Layers, title: 'i18n Readiness', desc: 'Prepares content and routes for localization.', href: '/newsroom' };
-              { Icon: Globe, title: 'Sitemap & Robots', desc: 'Maintains search‑friendly routing metadata.', href: '/site-health' };
-              { Icon: Palette, title: 'Design Tokens', desc: 'Automates consistent theming and spacing.', href: '/newsroom' };
-              { Icon: LineChart, title: 'Experiment Telemetry', desc: 'Measures impact across experiments and releases.', href: '/reports/seo' };
-              { Icon: Activity, title: 'Automated Dependencies', desc: 'Minor/patch upgrades proposed and merged safely.', href: '/automation' };
-              { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' };
-              { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' };
-              { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' };
+              { Icon: Zap, title: 'Self‑Improving', desc: 'Agents continuously analyze, invent, and evolve automations.', href: '/automation' },
+              { Icon: GitBranch, title: 'Repo Sync', desc: 'Changes are committed and pushed automatically to main.', href: '/automation' },
+              { Icon: Cpu, title: 'Zero Ops', desc: 'Runs fully in the cloud—no servers or manual intervention.', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Safety‑First', desc: 'Conservative edits with logs, reports, and guardrails.', href: '/site-health' },
+              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, reports, and cloud automation artifacts.', href: '/site-health' },
+              { Icon: Layers, title: 'Composable Systems', desc: 'Chain multiple factories into higher‑order workflows.', href: '/automation' },
+              { Icon: Activity, title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements.', href: '/reports/seo' },
+              { Icon: Globe, title: 'AI Trends Radar', desc: 'Tracks AI and cloud signals to inspire new automations.', href: '/reports/ai-trends' },
+              { Icon: Search, title: 'Deep Indexing', desc: 'Content and code search powering smart linking and PRs.', href: '/newsroom' },
+              { Icon: BarChart3, title: 'Live Dashboards', desc: 'Real‑time quality and impact metrics at a glance.', href: '/site-health' },
+              { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' },
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI research integrated into product improvements.', href: '/reports/ai-trends' },
+              { Icon: ShieldCheck, title: 'Security Scans', desc: 'Audit dependencies and surface risks with reports.', href: '/site-health' },
+              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'Summarized changes and AI notes published continuously.', href: '/newsroom' },
+              { Icon: Rocket, title: 'OG Image Maker', desc: 'Auto‑generates rich Open Graph images for content.', href: '/newsroom' },
+              { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits applied before shipping.', href: '/site-health' },
+              { Icon: Layers, title: 'Factories Library', desc: 'Reusable building blocks for new automations.', href: '/automation' },
+              { Icon: Gauge, title: 'Site Health API', desc: 'Programmatic access to health signals and artifacts.', href: '/site-health' },
+              { Icon: Search, title: 'Link Integrity', desc: 'Broken links detected and fixed before shipping.', href: '/site-health' },
+              { Icon: Palette, title: 'Design System Evolution', desc: 'Consistent, modern UI upgrades across the app.', href: '/newsroom' },
+              { Icon: BarChart3, title: 'Analytics Exports', desc: 'Download artifacts and reports for deeper analysis.', href: '/reports/seo' },
+              { Icon: Search, title: 'Automated PR Reviews', desc: 'Bots review diffs for quality, style, and policy.', href: '/automation' },
+              { Icon: Gauge, title: 'Asset Optimizer', desc: 'Compresses images and scripts for faster pages.', href: '/site-health' },
+              { Icon: Layers, title: 'i18n Readiness', desc: 'Prepares content and routes for localization.', href: '/newsroom' },
+              { Icon: Globe, title: 'Sitemap & Robots', desc: 'Maintains search‑friendly routing metadata.', href: '/site-health' },
+              { Icon: Palette, title: 'Design Tokens', desc: 'Automates consistent theming and spacing.', href: '/newsroom' },
+              { Icon: LineChart, title: 'Experiment Telemetry', desc: 'Measures impact across experiments and releases.', href: '/reports/seo' },
+              { Icon: Activity, title: 'Automated Dependencies', desc: 'Minor/patch upgrades proposed and merged safely.', href: '/automation' },
+              { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' },
+              { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' },
+              { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' },
               { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' }
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>,
@@ -803,14 +799,14 @@ export default function MainFrontIndex() {
             <div className="marquee">,
               <div className="marquee__track">,
                 {[
-                  { label: 'Accessibility fixes', href: '/site-health' };
-                  { label: 'Performance boosts', href: '/site-health' };
-                  { label: 'SEO improvements', href: '/reports/seo' };
-                  { label: 'Safer main merges', href: '/automation' };
-                  { label: 'Cleaner codebase', href: '/automation' };
-                  { label: 'Better content curation', href: '/newsroom' };
-                  { label: 'Operational visibility', href: '/site-health' };
-                  { label: 'Experiment velocity', href: '/automation' };
+                  { label: 'Accessibility fixes', href: '/site-health' },
+                  { label: 'Performance boosts', href: '/site-health' },
+                  { label: 'SEO improvements', href: '/reports/seo' },
+                  { label: 'Safer main merges', href: '/automation' },
+                  { label: 'Cleaner codebase', href: '/automation' },
+                  { label: 'Better content curation', href: '/newsroom' },
+                  { label: 'Operational visibility', href: '/site-health' },
+                  { label: 'Experiment velocity', href: '/automation' },
                 ],
                   .flatMap((item) => [item, item]),
                   .map((item, idx) => (
@@ -837,18 +833,18 @@ export default function MainFrontIndex() {
           </p>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              { label: 'Automation Hub', desc: 'Live agents & workflows', href: '/automation' };
-              { label: 'Repo Sync to Main', desc: 'Safe, incremental edits', href: '/automation' };
-              { label: 'Zero‑Ops Cloud', desc: 'Fully managed execution', href: '/automation' };
-              { label: 'Safety Guardrails', desc: 'Defense‑in‑depth checks', href: '/site-health' };
-              { label: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' };
-              { label: 'Composable Systems', desc: 'Higher‑order workflows', href: '/automation' };
-              { label: 'AI SEO Auditor', desc: 'On‑site improvements', href: '/reports/seo' };
-              { label: 'AI Trends Radar', desc: 'Intelligence signals', href: '/reports/ai-trends' };
-              { label: 'Deep Indexing', desc: 'Smart linking & PRs', href: '/newsroom' };
-              { label: 'Live Dashboards', desc: 'Impact at a glance', href: '/site-health' };
-              { label: 'Health Monitors', desc: 'A11y, perf, links', href: '/site-health' };
-              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true };
+              { label: 'Automation Hub', desc: 'Live agents & workflows', href: '/automation' },
+              { label: 'Repo Sync to Main', desc: 'Safe, incremental edits', href: '/automation' },
+              { label: 'Zero‑Ops Cloud', desc: 'Fully managed execution', href: '/automation' },
+              { label: 'Safety Guardrails', desc: 'Defense‑in‑depth checks', href: '/site-health' },
+              { label: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' },
+              { label: 'Composable Systems', desc: 'Higher‑order workflows', href: '/automation' },
+              { label: 'AI SEO Auditor', desc: 'On‑site improvements', href: '/reports/seo' },
+              { label: 'AI Trends Radar', desc: 'Intelligence signals', href: '/reports/ai-trends' },
+              { label: 'Deep Indexing', desc: 'Smart linking & PRs', href: '/newsroom' },
+              { label: 'Live Dashboards', desc: 'Impact at a glance', href: '/site-health' },
+              { label: 'Health Monitors', desc: 'A11y, perf, links', href: '/site-health' },
+              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true },
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover">,
@@ -898,15 +894,15 @@ export default function MainFrontIndex() {
            <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Platform Modules</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { Icon: Rocket, title: 'Autonomous Factories', desc: 'Composable, domain‑specific automation factories.', href: '/automation' };
-              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth validations and policy enforcement.', href: '/site-health' };
-              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, artifacts, and live CI telemetry.', href: '/site-health' };
-              { Icon: Activity, title: 'SEO Ops', desc: 'Continuous audits and safe, suggested diffs.', href: '/reports/seo' };
-              { Icon: Globe, title: 'AI Intelligence', desc: 'Trends radar to guide new automation ideas.', href: '/reports/ai-trends' };
-              { Icon: Layers, title: 'Workflow Composer', desc: 'Chain factories into higher‑order systems.', href: '/automation' };
-              { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' };
-              { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' };
-              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' };
+              { Icon: Rocket, title: 'Autonomous Factories', desc: 'Composable, domain‑specific automation factories.', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Guardrails', desc: 'Defense‑in‑depth validations and policy enforcement.', href: '/site-health' },
+              { Icon: Gauge, title: 'Observability', desc: 'Dashboards, artifacts, and live CI telemetry.', href: '/site-health' },
+              { Icon: Activity, title: 'SEO Ops', desc: 'Continuous audits and safe, suggested diffs.', href: '/reports/seo' },
+              { Icon: Globe, title: 'AI Intelligence', desc: 'Trends radar to guide new automation ideas.', href: '/reports/ai-trends' },
+              { Icon: Layers, title: 'Workflow Composer', desc: 'Chain factories into higher‑order systems.', href: '/automation' },
+              { Icon: GitBranch, title: 'Main Sync Engine', desc: 'Small, reviewable edits merged continuously.', href: '/automation' },
+              { Icon: Cpu, title: 'Zero‑Ops Runtime', desc: 'Cloud‑native execution with no servers to manage.', href: '/automation' },
+              { Icon: BarChart3, title: 'Impact Analytics', desc: 'Track outcomes and ROI from automations.', href: '/site-health' },
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover neon-ring">,
@@ -932,21 +928,21 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A denser, at-a-glance atlas of what Zion ships autonomously. Every tile links to the live hub, report, or docs.</p>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              { label: 'Automation Hub', desc: 'Factories, agents, workflows', href: '/automation' };
-              { label: 'Main Sync Engine', desc: 'Safe diffs to main', href: '/automation' };
-              { label: 'Zero‑Ops Cloud', desc: 'Run in the cloud, no servers', href: '/automation' };
-              { label: 'Guardrails', desc: 'Policy + safety gates', href: '/site-health' };
-              { label: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' };
-              { label: 'AI SEO Auditor', desc: 'Continuous on‑site SEO', href: '/reports/seo' };
-              { label: 'AI Trends Radar', desc: 'Signals powering strategy', href: '/reports/ai-trends' };
-              { label: 'Content Curation', desc: 'Promos and deep links', href: '/newsroom' };
-              { label: 'Factories Library', desc: 'Composable building blocks', href: '/automation' };
-              { label: 'Impact Dashboards', desc: 'Artifacts and telemetry', href: '/site-health' };
-              { label: 'Link Integrity', desc: 'Broken links defender', href: '/site-health' };
-              { label: 'Design Evolution', desc: 'Futuristic UI upgrades', href: '/newsroom' };
-              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true };
-              { label: 'AI Changelog', desc: 'Summarized updates', href: '/newsroom', external: true };
-                             { label: 'Cloud Automations', desc: 'Netlify scheduled functions', href: '/automation' };
+              { label: 'Automation Hub', desc: 'Factories, agents, workflows', href: '/automation' },
+              { label: 'Main Sync Engine', desc: 'Safe diffs to main', href: '/automation' },
+              { label: 'Zero‑Ops Cloud', desc: 'Run in the cloud, no servers', href: '/automation' },
+              { label: 'Guardrails', desc: 'Policy + safety gates', href: '/site-health' },
+              { label: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' },
+              { label: 'AI SEO Auditor', desc: 'Continuous on‑site SEO', href: '/reports/seo' },
+              { label: 'AI Trends Radar', desc: 'Signals powering strategy', href: '/reports/ai-trends' },
+              { label: 'Content Curation', desc: 'Promos and deep links', href: '/newsroom' },
+              { label: 'Factories Library', desc: 'Composable building blocks', href: '/automation' },
+              { label: 'Impact Dashboards', desc: 'Artifacts and telemetry', href: '/site-health' },
+              { label: 'Link Integrity', desc: 'Broken links defender', href: '/site-health' },
+              { label: 'Design Evolution', desc: 'Futuristic UI upgrades', href: '/newsroom' },
+              { label: 'Docs & Guides', desc: 'Technical notes', href: '/reports/seo', external: true },
+              { label: 'AI Changelog', desc: 'Summarized updates', href: '/newsroom', external: true },
+                             { label: 'Cloud Automations', desc: 'Netlify scheduled functions', href: '/automation' },
                { label: 'Roadmap & Issues', desc: "What's next", href: '//issues', external: true }
             ].map((item) => (
               item.external ? (
@@ -977,15 +973,15 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">A broader tour of autonomous capabilities. Each card links to the relevant hub, report, or live workflow.</p>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'AI-authored CHANGELOG with continuous updates.', href: '/newsroom', external: true };
-              { Icon: Rocket, title: 'Content Curation', desc: 'Homepage promos and deep links generated on the fly.', href: '/newsroom' };
-              { Icon: Search, title: 'Deep Site Index', desc: 'Smarter internal linking and content discovery.', href: '/newsroom' };
-              { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits before changes ship.', href: '/site-health' };
-              { Icon: BarChart3, title: 'Impact Dashboards', desc: 'Real-time visibility into outcomes and ROI.', href: '/site-health' };
-              { Icon: Layers, title: 'Factories Library', desc: 'Composable building blocks for new automations.', href: '/automation' };
-              { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' };
-              { Icon: Cpu, title: 'Zero-Ops Runtime', desc: 'Fully managed cloud execution with no servers.', href: '/automation' };
-              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' };
+              { Icon: GitBranch, title: 'Automated Changelogs', desc: 'AI-authored CHANGELOG with continuous updates.', href: '/newsroom', external: true },
+              { Icon: Rocket, title: 'Content Curation', desc: 'Homepage promos and deep links generated on the fly.', href: '/newsroom' },
+              { Icon: Search, title: 'Deep Site Index', desc: 'Smarter internal linking and content discovery.', href: '/newsroom' },
+              { Icon: ShieldCheck, title: 'Policy & Compliance', desc: 'Safety rails and audits before changes ship.', href: '/site-health' },
+              { Icon: BarChart3, title: 'Impact Dashboards', desc: 'Real-time visibility into outcomes and ROI.', href: '/site-health' },
+              { Icon: Layers, title: 'Factories Library', desc: 'Composable building blocks for new automations.', href: '/automation' },
+              { Icon: Activity, title: 'Health Monitors', desc: 'A11y, links, and performance monitored 24/7.', href: '/site-health' },
+              { Icon: Cpu, title: 'Zero-Ops Runtime', desc: 'Fully managed cloud execution with no servers.', href: '/automation' },
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking fueling new ideas.', href: '/reports/ai-trends' },
             ].map(({ Icon, title, desc, href, external }) => (
               external ? (
                 <a key={title} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover neon-ring">,
@@ -1015,14 +1011,14 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Jump directly to the systems that deliver each capability.</p>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              ['SEO Automation', 'On-site scans and safe diffs to improve visibility', '/reports/seo'];
-              ['Site Health', 'A11y, performance, and resilient links at a glance', '/site-health'];
-              ['Automation Hub', 'Factories and live autonomous workflows', '/automation'];
-              ['AI Trends Radar', 'Signals inspiring new factories and experiments', '/reports/ai-trends'];
-              ['Newsroom', 'Curated updates and product evolution highlights', '/newsroom'];
-              ['Live Pipelines', 'Observe CI pipelines, logs, and artifacts', '/site-health'];
-              ['Documentation', 'Technical notes, guides, and changelog', '/reports/seo'];
-              ['AI Changelog', 'Summarized autonomous changes and highlights', '/newsroom'];
+              ['SEO AutomationOn-site scans and safe diffs to improve visibility', '/reports/seo'],
+              ['Site HealthA11y, performance, and resilient links at a glance', '/site-health'],
+              ['Automation HubFactories and live autonomous workflows', '/automation'],
+              ['AI Trends RadarSignals inspiring new factories and experiments', '/reports/ai-trends'],
+              ['NewsroomCurated updates and product evolution highlights', '/newsroom'],
+              ['Live PipelinesObserve CI pipelines, logs, and artifacts', '/site-health'],
+              ['DocumentationTechnical notes, guides, and changelog', '/reports/seo'],
+              ['AI ChangelogSummarized autonomous changes and highlights', '/newsroom'],
             ].map(([label, desc, href]) => (
               (href as string).startsWith('http') ? (
                 <a key={label as string} href={href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 backdrop-blur-xl hover: border-fuchsia-40o0/30">,
@@ -1052,12 +1048,12 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Use Cases</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-2 lg:grid-cols-3">,
             {[
-              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' };
-              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' };
-              { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' };
-              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' };
-              { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' };
-              { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' };
+              { title: 'AI SEO Auditor', desc: 'Continuously scans pages and proposes SEO improvements with safe diffs.' },
+              { title: 'Design Beautifier', desc: 'Upgrades UI components with modern, cohesive visual language.' },
+              { title: 'Content Curator', desc: 'Surfaces and promotes high‑value content with links and metadata.' },
+              { title: 'Performance Tuner', desc: 'Optimizes bundles, images, and scripts for faster loads.' },
+              { title: 'A11y Guardian', desc: 'Catches and fixes accessibility issues before they ship.' },
+              { title: 'Growth Experiments', desc: 'Spins up micro‑experiments and measures impact automatically.' },
             ].map((u) => (
               <article key={u.title} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-fuchsia-40o0/30">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-violet-40o0/10 to-cyan-40o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0"  />,
@@ -1077,12 +1073,12 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Live Impact</h2>,
           <div className="mt-6 grid grid-cols-2 gap-4 md: grid-cols-3 lg:grid-cols-6">,
             {[
-              { label: 'Workflows', value: '1,20o0+', href: '/site-health', external: true };
-              { label: 'Commits Synced', value: '80o0+', href: '/automation' };
-              { label: 'Automated Edits', value: '3,50o0+', href: '/automation' };
-              { label: 'Uptime', value: '99.95%', href: '/site-health' };
-              { label: 'A11y Checks', value: '20k+', href: '/site-health' };
-              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' };
+              { label: 'Workflows', value: '1,20o0+', href: '/site-health', external: true },
+              { label: 'Commits Synced', value: '80o0+', href: '/automation' },
+              { label: 'Automated Edits', value: '3,50o0+', href: '/automation' },
+              { label: 'Uptime', value: '99.95%', href: '/site-health' },
+              { label: 'A11y Checks', value: '20k+', href: '/site-health' },
+              { label: 'SEO Fixes', value: '4.2k+', href: '/reports/seo' },
             ].map((item) => (
               item.external ? (
                 <a key={item.label} href={item.href as string} target="_blank" rel="noopener" className="rounded-2xl border border-white/10 bg-white/5 p-5 text-center backdrop-blur hover: border-cyan-40o0/30">,
@@ -1108,20 +1104,20 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Capabilities</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 md: grid-cols-3">,
             {[
-              { Icon: Palette, title: 'Design Evolution', desc: 'Autonomously beautifies UI with consistent, futuristic patterns.', href: '/newsroom' };
-              { Icon: BarChart3, title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.', href: '/site-health' };
-              { Icon: LineChart, title: 'Content & SEO', desc: 'Curates content, updates promos, and tunes metadata for reach.', href: '/reports/seo' };
-              { Icon: Layers, title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.', href: '/automation' };
-              { Icon: Gauge, title: 'Observability & Reports', desc: 'Artifacts, dashboards, and live logs for every automation.', href: '/site-health' };
-              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking to spark new factory ideas.', href: '/reports/ai-trends' };
-              { Icon: GitBranch, title: 'Repo Sync to Main', desc: 'Small, safe diffs merged continuously for momentum.', href: '/automation' };
-              { Icon: ShieldCheck, title: 'Guardrails & Policy', desc: 'Organization‑wide safety rules enforced automatically.', href: '/site-health' };
-              { Icon: Cpu, title: 'Zero‑Ops Cloud', desc: 'Fully managed cloud execution with no servers to babysit.', href: '/automation' };
-              { Icon: Activity, title: 'Automated Dependencies', desc: 'Minor/patch upgrades proposed and merged safely.', href: '/automation' };
-              { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' };
-              { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' };
-              { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' };
-              { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' };
+              { Icon: Palette, title: 'Design Evolution', desc: 'Autonomously beautifies UI with consistent, futuristic patterns.', href: '/newsroom' },
+              { Icon: BarChart3, title: 'Performance & A11y', desc: 'Optimizes bundles, assets, and accessibility with continuous checks.', href: '/site-health' },
+              { Icon: LineChart, title: 'Content & SEO', desc: 'Curates content, updates promos, and tunes metadata for reach.', href: '/reports/seo' },
+              { Icon: Layers, title: 'Code Quality & Refactors', desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.', href: '/automation' },
+              { Icon: Gauge, title: 'Observability & Reports', desc: 'Artifacts, dashboards, and live logs for every automation.', href: '/site-health' },
+              { Icon: Globe, title: 'Intelligence Signals', desc: 'AI + cloud trend tracking to spark new factory ideas.', href: '/reports/ai-trends' },
+              { Icon: GitBranch, title: 'Repo Sync to Main', desc: 'Small, safe diffs merged continuously for momentum.', href: '/automation' },
+              { Icon: ShieldCheck, title: 'Guardrails & Policy', desc: 'Organization‑wide safety rules enforced automatically.', href: '/site-health' },
+              { Icon: Cpu, title: 'Zero‑Ops Cloud', desc: 'Fully managed cloud execution with no servers to babysit.', href: '/automation' },
+              { Icon: Activity, title: 'Automated Dependencies', desc: 'Minor/patch upgrades proposed and merged safely.', href: '/automation' },
+              { Icon: Search, title: 'Broken Link Defender', desc: 'Continuously scans and fixes link integrity issues.', href: '/site-health' },
+              { Icon: LineChart, title: 'Experimentation', desc: 'Automate A/B setups and monitor telemetry automatically.', href: '/automation' },
+              { Icon: Palette, title: 'Design Tokens & Theming', desc: 'Enforce consistent theming, spacing, and motion.', href: '/newsroom' },
+              { Icon: Gauge, title: 'Image Pipeline', desc: 'Optimize and transform media assets automatically.', href: '/site-health' },
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>,
                 <a className="relative block overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30">,
@@ -1145,9 +1141,9 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Why Zion</h2>,
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 md: grid-cols-3">,
             {[
-              ['🚀', 'Speed', 'Continuous delivery to main with safe, incremental changes.'];
-              ['🛡️', 'Safety', 'Conservative edits and guardrails keep production stable.'];
-              ['📈', 'Scale', 'Automatically generates new factories as your needs grow.'];
+              ['🚀Speed', 'Continuous delivery to main with safe, incremental changes.'],
+              ['🛡️Safety', 'Conservative edits and guardrails keep production stable.'],
+              ['📈Scale', 'Automatically generates new factories as your needs grow.'],
             ].map(([icon, title, desc]) => (
               <div key={title as string} className="rounded-2xl border border-white/10 bg-white/5 p-6 backdrop-blur">,
                 <div className="text-2xl">{icon as string}</div>,
@@ -1168,10 +1164,10 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Four pillars that guide every autonomous change — jump into the systems behind each.</p>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              { Icon: ShieldCheck, title: 'Security & Safety', desc: 'Guardrails, policy, and quality gates.', href: '/site-health' };
-              { Icon: Rocket, title: 'Speed & Momentum', desc: 'Small diffs shipped continuously.', href: '/automation' };
-              { Icon: Gauge, title: 'Quality & Reliability', desc: 'A11y, performance, and link integrity.', href: '/site-health' };
-              { Icon: Layers, title: 'Scale & Composability', desc: 'Factories chained into higher‑order workflows.', href: '/automation' };
+              { Icon: ShieldCheck, title: 'Security & Safety', desc: 'Guardrails, policy, and quality gates.', href: '/site-health' },
+              { Icon: Rocket, title: 'Speed & Momentum', desc: 'Small diffs shipped continuously.', href: '/automation' },
+              { Icon: Gauge, title: 'Quality & Reliability', desc: 'A11y, performance, and link integrity.', href: '/site-health' },
+              { Icon: Layers, title: 'Scale & Composability', desc: 'Factories chained into higher‑order workflows.', href: '/automation' },
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover holo">,
@@ -1201,14 +1197,14 @@ export default function MainFrontIndex() {
             <div className="marquee">,
               <div className="marquee__track">,
                 {[
-                  { label: '24/7 autonomous progress', href: '/automation' };
-                  { label: 'Main branch delivery', href: '/automation' };
-                  { label: 'A11y & performance wins', href: '/site-health' };
-                  { label: 'Continuous SEO gains', href: '/reports/seo' };
-                  { label: 'Transparent artifacts', href: '/site-health' };
-                  { label: 'Guardrails & policy', href: '/site-health' };
-                  { label: 'Faster iteration loops', href: '/newsroom' };
-                  { label: 'Lower operational toil', href: '/automation' };
+                  { label: '24/7 autonomous progress', href: '/automation' },
+                  { label: 'Main branch delivery', href: '/automation' },
+                  { label: 'A11y & performance wins', href: '/site-health' },
+                  { label: 'Continuous SEO gains', href: '/reports/seo' },
+                  { label: 'Transparent artifacts', href: '/site-health' },
+                  { label: 'Guardrails & policy', href: '/site-health' },
+                  { label: 'Faster iteration loops', href: '/newsroom' },
+                  { label: 'Lower operational toil', href: '/automation' },
                 ].flatMap((i) => [i, i]).map((i, idx) => (
                   <Link key={`${i.label}-${idx}`} href={i.href}>,
                     <a className="mx-3 my-2 inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-4 py-1.5 text-xs text-white/80 backdrop-blur hover: bg-white/10">,
@@ -1220,27 +1216,17 @@ export default function MainFrontIndex() {
           </div>,
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md: grid-cols-2">,
             {[
-              '24/7 progress without human intervention';
-              'Rapid feedback loop with safe, incremental edits';
-              'Continuous delivery directly to main branch';
-              'Fewer regressions via layered checks and reports';
-              'Higher velocity with automated maintenance';
-              'Reduced costs via zero‑ops and automated QA';
-              'Consistent design language and UX quality';
-              'Transparent artifacts and live workflow logs';
-              'Faster experiment velocity with measurable impact';
-              'Improved search visibility via continuous SEO';
-              'Happier users thanks to performance & a11y wins';
-              'Lower operational risk through guardrails';
-              'Improved discoverability via deep indexing and SEO';
-              'Happier engineers with less toil and more creation';
-              'Confident shipping through automated guardrails';
-              'Predictable quality gates and SLOs upheld automatically';
-              'Auditability for compliance with full traceability';
-              'Happier teams: less toil, more product value';
-              'Automated dependency upgrades and security scans';
-              'Clear analytics and downloadable artifacts for every run';
-              'Composable factories accelerate new initiatives';
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branchFewer regressions via layered checks and reports',
+              'Higher velocity with automated maintenanceReduced costs via zero‑ops and automated QA',
+              'Consistent design language and UX qualityTransparent artifacts and live workflow logs',
+              'Faster experiment velocity with measurable impactImproved search visibility via continuous SEO',
+              'Happier users thanks to performance & a11y winsLower operational risk through guardrails',
+              'Improved discoverability via deep indexing and SEOHappier engineers with less toil and more creation',
+              'Confident shipping through automated guardrailsPredictable quality gates and SLOs upheld automatically',
+              'Auditability for compliance with full traceabilityHappier teams: less toil, more product value',
+              'Automated dependency upgrades and security scansClear analytics and downloadable artifacts for every run',
+              'Composable factories accelerate new initiatives',
             ].map((b) => (
               <div key={b} className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md">,
                 <span className="mt-1 inline-block h-2.5 w-2.5 rounded-full bg-emerald-40o0 shadow-[0_0_12px_rgba(52,211,153,0.9)]"  />,
@@ -1259,12 +1245,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">See where each benefit shows up in the product.</p>,
           <div className="mx-auto mt-6 max-w-5xl grid grid-cols-1 gap-4 sm: grid-cols-2 md:grid-cols-3">,
             {[
-              { label: '24/7 progress', desc: 'Agents keep shipping while you sleep', href: '/automation' };
-              { label: 'Rapid feedback loop', desc: 'Tight iteration cycles on UX & code', href: '/newsroom' };
-              { label: 'Main branch delivery', desc: 'Small, safe diffs merged continuously', href: '/site-health', external: true };
-              { label: 'Fewer regressions', desc: 'Layered checks catch issues early', href: '/site-health' };
-              { label: 'Increased reach', desc: 'Continuous SEO improvements', href: '/reports/seo' };
-              { label: 'Strategic insights', desc: 'AI + cloud trend tracking', href: '/reports/ai-trends' };
+              { label: '24/7 progress', desc: 'Agents keep shipping while you sleep', href: '/automation' },
+              { label: 'Rapid feedback loop', desc: 'Tight iteration cycles on UX & code', href: '/newsroom' },
+              { label: 'Main branch delivery', desc: 'Small, safe diffs merged continuously', href: '/site-health', external: true },
+              { label: 'Fewer regressions', desc: 'Layered checks catch issues early', href: '/site-health' },
+              { label: 'Increased reach', desc: 'Continuous SEO improvements', href: '/reports/seo' },
+              { label: 'Strategic insights', desc: 'AI + cloud trend tracking', href: '/reports/ai-trends' },
             ].map((b) => (
               b.external ? (
                 <a key={b.label} href={b.href as string} target="_blank" rel="noopener" className="group flex items-start gap-3 rounded-xl border border-white/10 bg-white/5 p-4 backdrop-blur-md hover: border-cyan-40o0/30">,
@@ -1284,10 +1270,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Tailored Value by Team</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              { title: 'Developers', desc: 'Code quality, refactors, upgrades, reliability', href: '/automation' };
-              { title: 'Product', desc: 'Faster UX improvements, experiments, insights', href: '/newsroom' };
-              { title: 'Marketing', desc: 'SEO automation, content curation, reach', href: '/reports/seo' };
-              { title: 'Operations', desc: 'A11y, performance, and link‑health dashboards', href: '/site-health' };
+              { title: 'Developers', desc: 'Code quality, refactors, upgrades, reliability', href: '/automation' },
+              { title: 'Product', desc: 'Faster UX improvements, experiments, insights', href: '/newsroom' },
+              { title: 'Marketing', desc: 'SEO automation, content curation, reach', href: '/reports/seo' },
+              { title: 'Operations', desc: 'A11y, performance, and link‑health dashboards', href: '/site-health' },
             ].map((card) => (
               <Link key={card.title} href={card.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30">,
@@ -1358,10 +1344,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quality Gates & Guardrails</h2>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              { title: 'Accessibility', desc: 'Automated checks and fixes for WCAG compliance.', href: '/site-health' };
-              { title: 'Link Integrity', desc: 'Broken links detected before release.', href: '/site-health' };
-              { title: 'Performance', desc: 'Budgets enforced and improved continuously.', href: '/site-health' };
-              { title: 'Safe Diffs', desc: 'Conservative, reviewable changes synced to main.', href: '/automation' };
+              { title: 'Accessibility', desc: 'Automated checks and fixes for WCAG compliance.', href: '/site-health' },
+              { title: 'Link Integrity', desc: 'Broken links detected before release.', href: '/site-health' },
+              { title: 'Performance', desc: 'Budgets enforced and improved continuously.', href: '/site-health' },
+              { title: 'Safe Diffs', desc: 'Conservative, reviewable changes synced to main.', href: '/automation' },
             ].map((g) => (
               <Link key={g.title} href={g.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-fuchsia-40o0/30">,
@@ -1382,7 +1368,7 @@ export default function MainFrontIndex() {
           <div className="rounded-2xl border border-white/10 bg-white/5 p-6 text-center backdrop-blur-md">,
             <p className="text-white/70">Powered by modern cloud and AI tooling</p>,
             <div className="mt-4 flex flex-wrap items-center justify-center gap-6">,
-              {['Next.js','TypeScript','Tailwind','Framer Motion','Supabase','Netlify'].map((t) => (
+              {['Next.jsTypeScript','TailwindFramer Motion','SupabaseNetlify'].map((t) => (
                 <span key={t} className="rounded-lg border border-white/10 bg-white/5 px-3 py-1 text-sm text-white/80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.0o6)] glow-pulse">,
                   {t}
                 </span>))}
@@ -1394,10 +1380,10 @@ export default function MainFrontIndex() {
           <h2 className="text-center text-2xl font-bold tracking-wide text-white/90">Quick Start</h2>,
           <div className="mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-4 md: grid-cols-4">,
             {[
-              ['Explore', 'Browse live automations', '/automation'];
-              ['Audit', 'Check site health', '/site-health'];
-              ['Optimize', 'Run the SEO auditor', '/reports/seo'];
-              ['Learn', 'Follow AI trends', '/reports/ai-trends'];
+              ['ExploreBrowse live automations', '/automation'],
+              ['AuditCheck site health', '/site-health'],
+              ['OptimizeRun the SEO auditor', '/reports/seo'],
+              ['LearnFollow AI trends', '/reports/ai-trends'],
             ].map(([title, desc, href]) => (
               <Link key={title as string} href={href as string}>,
                 <a className="rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-5 text-left backdrop-blur-xl hover: border-cyan-40o0/30">,
@@ -1584,12 +1570,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Meet the autonomous agents powering your outcomes. Each card links to a live system.</p>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuously improves on‑site SEO with safe diffs.', href: '/reports/seo' };
-              { Icon: Link2, title: 'Link Healer', desc: 'Finds and fixes broken links with dashboards.', href: '/site-health' };
-              { Icon: Palette, title: 'Design Beautifier', desc: 'Evolves UI with cohesive, futuristic patterns.', href: '/newsroom' };
-              { Icon: Gauge, title: 'Performance Tuner', desc: 'Optimizes bundles and runtime for speed.', href: '/site-health' };
-              { Icon: Layers, title: 'Factory Composer', desc: 'Chains automations into higher‑order workflows.', href: '/automation' };
-              { Icon: GitBranch, title: 'Main Sync', desc: 'Ships small, safe diffs to main continuously.', href: '/automation' };
+              { Icon: Search, title: 'AI SEO Auditor', desc: 'Continuously improves on‑site SEO with safe diffs.', href: '/reports/seo' },
+              { Icon: Link2, title: 'Link Healer', desc: 'Finds and fixes broken links with dashboards.', href: '/site-health' },
+              { Icon: Palette, title: 'Design Beautifier', desc: 'Evolves UI with cohesive, futuristic patterns.', href: '/newsroom' },
+              { Icon: Gauge, title: 'Performance Tuner', desc: 'Optimizes bundles and runtime for speed.', href: '/site-health' },
+              { Icon: Layers, title: 'Factory Composer', desc: 'Chains automations into higher‑order workflows.', href: '/automation' },
+              { Icon: GitBranch, title: 'Main Sync', desc: 'Ships small, safe diffs to main continuously.', href: '/automation' },
             ].map(({ Icon, title, desc, href }) => (
               <Link key={title} href={href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover holo">,
@@ -1616,18 +1602,18 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore a broader catalog of Zion capabilities. Each tile links to a live hub, report, or workflow.</p>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">,
             {[
-              { title: 'Autonomous Agents', desc: 'Self‑improving cloud workers', href: '/automation' };
-              { title: 'Repo Sync to Main', desc: 'Safe, continuous delivery', href: '/automation' };
-              { title: 'AI SEO Auditor', desc: 'On‑site improvements daily', href: '/reports/seo' };
-              { title: 'AI Trends Radar', desc: 'Signals for new factories', href: '/reports/ai-trends' };
-              { title: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' };
-              { title: 'Guardrails', desc: 'Defense‑in‑depth quality', href: '/site-health' };
-              { title: 'Design Evolution', desc: 'Cohesive futuristic UI', href: '/newsroom' };
-              { title: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' };
-              { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' };
-              { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' };
-              { title: 'Factory Composer', desc: 'Higher‑order workflows', href: '/automation' };
-              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true };
+              { title: 'Autonomous Agents', desc: 'Self‑improving cloud workers', href: '/automation' },
+              { title: 'Repo Sync to Main', desc: 'Safe, continuous delivery', href: '/automation' },
+              { title: 'AI SEO Auditor', desc: 'On‑site improvements daily', href: '/reports/seo' },
+              { title: 'AI Trends Radar', desc: 'Signals for new factories', href: '/reports/ai-trends' },
+              { title: 'Site Health', desc: 'A11y, performance, links', href: '/site-health' },
+              { title: 'Guardrails', desc: 'Defense‑in‑depth quality', href: '/site-health' },
+              { title: 'Design Evolution', desc: 'Cohesive futuristic UI', href: '/newsroom' },
+              { title: 'Observability', desc: 'Dashboards & artifacts', href: '/site-health' },
+              { title: 'Analytics', desc: 'Outcomes & insights', href: '/site-health' },
+              { title: 'Link Integrity', desc: 'Broken link healing', href: '/site-health' },
+              { title: 'Factory Composer', desc: 'Higher‑order workflows', href: '/automation' },
+              { title: 'Docs & Changelog', desc: 'Technical notes & AI log', href: '/reports/seo', external: true },
             ].map((item) => (
               item.external ? (
                 <a key={item.title} href={item.href as string} target="_blank" rel="noopener" className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover holo">,
@@ -1658,12 +1644,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Outcome‑focused advantages with direct links to the systems that deliver them.</p>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { label: '24/7 Progress', desc: 'Always‑on autonomous delivery', href: '/automation' };
-              { label: 'Safe Incremental Diffs', desc: 'Small, reviewable changes', href: '/automation' };
-              { label: 'Zero‑Ops Cloud‑Native', desc: 'No servers to babysit', href: '/automation' };
-              { label: 'Layered Quality Checks', desc: 'Guardrails & audits', href: '/site-health' };
-              { label: 'Faster Iteration Loops', desc: 'Shorten idea‑to‑impact', href: '/newsroom' };
-              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' };
+              { label: '24/7 Progress', desc: 'Always‑on autonomous delivery', href: '/automation' },
+              { label: 'Safe Incremental Diffs', desc: 'Small, reviewable changes', href: '/automation' },
+              { label: 'Zero‑Ops Cloud‑Native', desc: 'No servers to babysit', href: '/automation' },
+              { label: 'Layered Quality Checks', desc: 'Guardrails & audits', href: '/site-health' },
+              { label: 'Faster Iteration Loops', desc: 'Shorten idea‑to‑impact', href: '/newsroom' },
+              { label: 'SEO Visibility Gains', desc: 'Continuous improvements', href: '/reports/seo' },
             ].map((b) => (
               <Link key={b.label} href={b.href}>,
                 <a className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover">,
@@ -1709,12 +1695,12 @@ export default function MainFrontIndex() {
           <p className="mx-auto mt-2 max-w-3xl text-center text-sm text-white/70">Explore deep links across the app that showcase our capabilities and benefits.</p>,
           <div className="mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3">,
             {[
-              { title: 'SEO Audit', desc: 'Continuous on‑site improvements and artifacts.', href: '/reports/seo' };
-              { title: 'AI Trends', desc: 'Signals that inspire new automation factories.', href: '/reports/ai-trends' };
-              { title: 'Site Health', desc: 'A11y, performance and link integrity.', href: '/site-health' };
-              { title: 'Automation Hub', desc: 'Factories, agents and live workflows.', href: '/automation' };
-              { title: 'Newsroom', desc: 'Autonomous updates and product evolution.', href: '/newsroom' };
-              { title: 'Front Systems Hub', desc: 'Futuristic templates, effects and layouts.', href: '/main/front' };
+              { title: 'SEO Audit', desc: 'Continuous on‑site improvements and artifacts.', href: '/reports/seo' },
+              { title: 'AI Trends', desc: 'Signals that inspire new automation factories.', href: '/reports/ai-trends' },
+              { title: 'Site Health', desc: 'A11y, performance and link integrity.', href: '/site-health' },
+              { title: 'Automation Hub', desc: 'Factories, agents and live workflows.', href: '/automation' },
+              { title: 'Newsroom', desc: 'Autonomous updates and product evolution.', href: '/newsroom' },
+              { title: 'Front Systems Hub', desc: 'Futuristic templates, effects and layouts.', href: '/main/front' },
             ].map((card) => (
               <a key={card.title} href={card.href} className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30 tilt-on-hover holo">,
                 <div className="pointer-events-none absolute -inset-px -z-10 bg-gradient-to-r from-fuchsia-50o0/0 via-cyan-40o0/10 to-fuchsia-50o0/0 opacity-0 blur-2xl transition-opacity group-hover:opacity-10o0"  />,
@@ -1733,10 +1719,10 @@ export default function MainFrontIndex() {
           <h2 className="text-2xl font-bold tracking-wide text-white/90 text-center">New Intelligent Automations</h2>,
           <div className="mt-6 grid grid-cols-1 gap-4 sm: grid-cols-2 lg:grid-cols-4">,
             {[
-              { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' };
-              { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' };
-              { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' };
-              { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' };
+              { title: 'SEO Audit Runner', href: '/.netlify/functions/seo-audit-runner' },
+              { title: 'AI Trends Radar', href: '/.netlify/functions/ai-trends-radar-runner' },
+              { title: 'Front Index Directory Builder', href: '/.netlify/functions/front-index-directory-builder' },
+              { title: 'Revenue Ideas Promoter', href: '/.netlify/functions/revenue-ideas-promoter' },
             ].map((tool) => (
               <a key={tool.title} href={tool.href} className="rounded-xl border border-white/10 bg-white/5 p-4 text-sm text-white/80 hover: border-cyan-40o0/30 hover:text-white transition-colors">,
                 <div className="text-base font-semibold text-white">{tool.title}</div>,

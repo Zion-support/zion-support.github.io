@@ -1,10 +1,10 @@
 import React, { useMemo, useState } from 'react',
 export type CertificateViewProps = {
   completedCount: number,
-  totalCount: number};
+  totalCount: number},
 export default function CertificateView({
-  completedCount;
-  totalCount;
+  completedCount,
+  totalCount,
 }: CertificateViewProps) {
   const [name, setName] = useState(''),
   const isReady = completedCount >= totalCount && totalCount > 0,

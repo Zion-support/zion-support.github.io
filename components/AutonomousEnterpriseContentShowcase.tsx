@@ -15,87 +15,87 @@ interface ContentItem {
     roi: string,
     savings: string,
     accuracy: string,
-    efficiency: string};
+    efficiency: string},
 }
 ,
 const AutonomousEnterpriseContentShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const contentItems: ContentItem[] = [
     {
-      id: 'autonomous-enterprise-future';
+      id: 'autonomous-enterprise-future',
       title:,
-        'AI 20o25: The Future of Autonomous Enterprise Systems - 40,0o00% ROI Revolution';
-      type: 'blog';
-      url: '/blog/ai-20o25-future-of-autonomous-enterprise-systems';
-      roi: '40,0o00%';
-      savings: '$750B+';
-      readingTime: '35 min read';
-      featured: true;
+        'AI 20o25: The Future of Autonomous Enterprise Systems - 40,0o00% ROI Revolution',
+      type: 'blog',
+      url: '/blog/ai-20o25-future-of-autonomous-enterprise-systems',
+      roi: '40,0o00%',
+      savings: '$750B+',
+      readingTime: '35 min read',
+      featured: true,
       description:,
-        'Comprehensive guide to the autonomous enterprise revolution, featuring breakthrough technologies and unprecedented ROI opportunities.';
+        'Comprehensive guide to the autonomous enterprise revolution, featuring breakthrough technologies and unprecedented ROI opportunities.',
       metrics: {
-        roi: '40,0o00%';
-        savings: '$750B+';
-        accuracy: '99.97%';
-        efficiency: '2,50o0%';
-      };
-    };
+        roi: '40,0o00%',
+        savings: '$750B+',
+        accuracy: '99.97%',
+        efficiency: '2,50o0%',
+      },
+    },
     {
-      id: 'fortune-50o0-autonomous-success';
+      id: 'fortune-50o0-autonomous-success',
       title:,
-        'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-enterprise-40o000-roi-success';
-      roi: '40,0o00%';
-      savings: '$750B';
-      readingTime: '25 min read';
-      featured: true;
+        'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-enterprise-40o000-roi-success',
+      roi: '40,0o00%',
+      savings: '$750B',
+      readingTime: '25 min read',
+      featured: true,
       description:,
-        "Detailed case study of TechGlobal Industries' remarkable transformation to fully autonomous operations and market domination.";
+        "Detailed case study of TechGlobal Industries' remarkable transformation to fully autonomous operations and market domination.",
       metrics: {
-        roi: '40,0o00%';
-        savings: '$750B';
-        accuracy: '99.97%';
-        efficiency: '2,50o0%';
-      };
-    };
+        roi: '40,0o00%',
+        savings: '$750B',
+        accuracy: '99.97%',
+        efficiency: '2,50o0%',
+      },
+    },
     {
-      id: 'autonomous-enterprise-implementation-guide';
+      id: 'autonomous-enterprise-implementation-guide',
       title:,
-        'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI';
-      type: 'resource';
-      url: '/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi';
-      roi: '40,0o00%';
-      savings: '$750B+';
-      readingTime: '60 min read';
-      featured: true;
+        'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI',
+      type: 'resource',
+      url: '/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi',
+      roi: '40,0o00%',
+      savings: '$750B+',
+      readingTime: '60 min read',
+      featured: true,
       description:,
-        'Complete implementation roadmap with detailed steps, methodologies, and proven strategies for achieving unprecedented ROI.';
+        'Complete implementation roadmap with detailed steps, methodologies, and proven strategies for achieving unprecedented ROI.',
       metrics: {
-        roi: '40,0o00%';
-        savings: '$750B+';
-        accuracy: '99.97%';
-        efficiency: '2,50o0%';
-      };
-    };
+        roi: '40,0o00%',
+        savings: '$750B+',
+        accuracy: '99.97%',
+        efficiency: '2,50o0%',
+      },
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Implementation Guides';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Implementation Guides',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     selectedCategory === 'all',
@@ -111,7 +111,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -122,7 +122,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
         return 'Implementation Guide',
       default:,
         return 'Content'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -133,7 +133,7 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -350,5 +350,5 @@ const AutonomousEnterpriseContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousEnterpriseContentShowcase;
+    </section>)},
+export default AutonomousEnterpriseContentShowcase,

@@ -3,33 +3,29 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide';
+    'AI 20o25: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide',
   description:,
-    'Discover how generative AI is revolutionizing enterprise operations in 20o25. Complete guide to implementation, ROI, and transformative business outcomes.';
+    'Discover how generative AI is revolutionizing enterprise operations in 20o25. Complete guide to implementation, ROI, and transformative business outcomes.',
   keywords: [
-    'Generative AI';
-    'Enterprise AI';
-    'Business Transformation';
-    'AI Automation';
-    '20o25 Trends';
-  ];
+    'Generative AIEnterprise AI',
+    'Business TransformationAI Automation',
+    '20o25 Trends',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide';
+      'AI 20o25: Generative AI Enterprise Revolution - The Ultimate Breakthrough Guide',
     description:,
-      'Discover how generative AI is revolutionizing enterprise operations in 20o25. Complete guide to implementation, ROI, and transformative business outcomes.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how generative AI is revolutionizing enterprise operations in 20o25. Complete guide to implementation, ROI, and transformative business outcomes.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Generative AI';
-      'Enterprise AI';
-      'Business Transformation';
-      'AI Automation';
-      '20o25 Trends';
-    ];
-  };
-};
+      'Generative AIEnterprise AI',
+      'Business TransformationAI Automation',
+      '20o25 Trends',
+    ]
+  },
+},
 export default function GenerativeAIRevolutionPage() {
   return (
     <div>,
@@ -78,10 +74,10 @@ export default function GenerativeAIRevolutionPage() {
                 Revolutionary Enterprise Transformation,
               </h2>,
               <p className='text-xl text-gray-60o0 mb-8'>,
-                The year 20o25 marks a pivotal moment in enterprise technology;
+                The year 20o25 marks a pivotal moment in enterprise technology,
                 where generative AI has transcended from experimental technology,
                 to the cornerstone of business transformation. Organizations,
-                worldwide are experiencing unprecedented productivity gains;
+                worldwide are experiencing unprecedented productivity gains,
                 cost reductions, and innovation acceleration through strategic,
                 generative AI implementation.,
               </p>,

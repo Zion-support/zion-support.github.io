@@ -1,37 +1,37 @@
 import { cn } from '@/lib/utils',
 export function Skeleton({
-  className;
-  width;
-  height;
-  rounded = 'md';
-  animated = true;
+  className,
+  width,
+  height,
+  rounded = 'md',
+  animated = true,
 }) {
   const roundedClasses = {
-    none: '';
-    sm: 'rounded-sm';
-    md: 'rounded-md';
-    lg: 'rounded-lg';
-    full: 'rounded-full';
-  };
+    none: '',
+    sm: 'rounded-sm',
+    md: 'rounded-md',
+    lg: 'rounded-lg',
+    full: 'rounded-full'
+  },
   return (
     <div
       className={cn(
-        'bg-muted';
-        roundedClasses[rounded];
-        animated && 'animate-pulse';
+        'bg-muted',
+        roundedClasses[rounded],
+        animated && 'animate-pulse',
         className)}
       style={{
-        width: width;
-        height: height;
+        width: width,
+        height: height
       }}
     />)}
 export function CardSkeleton({
-  className;
-  showImage = true;
-  showTitle = true;
-  showDescription = true;
-  showActions = true;
-  lines = 2;
+  className,
+  showImage = true,
+  showTitle = true,
+  showDescription = true,
+  showActions = true,
+  lines = 2,
 }) {
   return (
     <div className={cn('space-y-4', className)}>,
@@ -57,12 +57,12 @@ export function CardSkeleton({
       </div>,
     </div>)}
 export function ListSkeleton({
-  className;
-  items = 3;
-  showAvatar = true;
-  showTitle = true;
-  showSubtitle = true;
-  showDescription = true;
+  className,
+  items = 3,
+  showAvatar = true,
+  showTitle = true,
+  showSubtitle = true,
+  showDescription = true,
 }) {
   return (
     <div className={cn('space-y-4', className)}>,
@@ -85,10 +85,10 @@ export function ListSkeleton({
         </div>))}
     </div>)}
 export function TableSkeleton({
-  className;
-  rows = 5;
-  columns = 4;
-  showHeader = true;
+  className,
+  rows = 5,
+  columns = 4,
+  showHeader = true,
 }) {
   return (
     <div className={cn('space-y-3', className)}>,
@@ -110,20 +110,20 @@ export function TableSkeleton({
       </div>,
     </div>)}
 export function GridSkeleton({
-  className;
-  items = 6;
-  columns = 3;
-  gap = 4;
-  showImage = true;
-  showTitle = true;
-  showDescription = true;
+  className,
+  items = 6,
+  columns = 3,
+  gap = 4,
+  showImage = true,
+  showTitle = true,
+  showDescription = true,
 }) {
   return (
     <div
       className={cn('grid gap-4', className)}
       style={{
-        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`;
-        gap: `${gap * 0.25}rem`;
+        gridTemplateColumns: `repeat(${columns}, minmax(0, 1fr))`,
+        gap: `${gap * 0.25}rem`,
       }}
     >,
       {Array.from({ length: items }).map((_, i) => (
@@ -137,11 +137,11 @@ export function GridSkeleton({
         />))}
     </div>)}
 export function HeroSkeleton({
-  className;
-  showImage = true;
-  showTitle = true;
-  showDescription = true;
-  showActions = true;
+  className,
+  showImage = true,
+  showTitle = true,
+  showDescription = true,
+  showActions = true,
 }) {
   return (
     <div

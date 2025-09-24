@@ -1,114 +1,114 @@
-import React from 'react';
+import React from 'react',
 import dynamic from 'next/dynamic',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  Lock;
-  Eye;
-  AlertTriangle;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Globe;
-  Settings;
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Globe,
+  Settings,
   Users} from 'lucide-react',
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false }),
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false }),
 const CybersecurityPage: React.FC = () => {
   const services = [
     {
-      id: 1;
-      title: "Security Assessment";
-      description: "Comprehensive security evaluation to identify vulnerabilities and risks in your systems.";
+      id: 1,
+      title: "Security Assessment",
+      description: "Comprehensive security evaluation to identify vulnerabilities and risks in your systems.",
       features: [
-        "Vulnerability scanning";
-        "Penetration testing";
-        "Security audit";
-        "Risk assessment";
-        "Compliance review"];
-      pricing: "Starting at $2,50o0";
-      delivery: "1-3 weeks";
-      category: "Assessment";
-      icon: <Shield className="w-8 h-8"   />};
+        "Vulnerability scanning",
+        "Penetration testing",
+        "Security audit",
+        "Risk assessment",
+        "Compliance review"],
+      pricing: "Starting at $2,50o0",
+      delivery: "1-3 weeks",
+      category: "Assessment",
+      icon: <Shield className="w-8 h-8"   />},
     {
-      id: 2;
-      title: "Data Protection";
-      description: "Advanced data encryption and protection solutions to secure your sensitive information.";
+      id: 2,
+      title: "Data Protection",
+      description: "Advanced data encryption and protection solutions to secure your sensitive information.",
       features: [
-        "Data encryption";
-        "Access control";
-        "Data backup";
-        "Privacy compliance";
-        "Data loss prevention"];
-      pricing: "Starting at $3,0o00";
-      delivery: "2-4 weeks";
-      category: "Protection";
-      icon: <Lock className="w-8 h-8"   />};
+        "Data encryption",
+        "Access control",
+        "Data backup",
+        "Privacy compliance",
+        "Data loss prevention"],
+      pricing: "Starting at $3,0o00",
+      delivery: "2-4 weeks",
+      category: "Protection",
+      icon: <Lock className="w-8 h-8"   />},
     {
-      id: 3;
-      title: "Threat Monitoring";
-      description: "24/7 security monitoring and threat detection to protect your systems in real-time.";
+      id: 3,
+      title: "Threat Monitoring",
+      description: "24/7 security monitoring and threat detection to protect your systems in real-time.",
       features: [
-        "Real-time monitoring";
-        "Threat detection";
-        "Incident alerting";
-        "Security analytics";
-        "Response automation"];
-      pricing: "Starting at $1,50o0/month";
-      delivery: "Ongoing";
-      category: "Monitoring";
-      icon: <Eye className="w-8 h-8"   />};
+        "Real-time monitoring",
+        "Threat detection",
+        "Incident alerting",
+        "Security analytics",
+        "Response automation"],
+      pricing: "Starting at $1,50o0/month",
+      delivery: "Ongoing",
+      category: "Monitoring",
+      icon: <Eye className="w-8 h-8"   />},
     {
-      id: 4;
-      title: "Incident Response";
-      description: "Rapid response and recovery services to minimize damage from security incidents.";
+      id: 4,
+      title: "Incident Response",
+      description: "Rapid response and recovery services to minimize damage from security incidents.",
       features: [
-        "Incident analysis";
-        "Containment strategies";
-        "Recovery planning";
-        "Forensic investigation";
-        "Post-incident review"];
-      pricing: "Starting at $5,0o00";
-      delivery: "Immediate";
-      category: "Response";
-      icon: <AlertTriangle className="w-8 h-8"   />};
+        "Incident analysis",
+        "Containment strategies",
+        "Recovery planning",
+        "Forensic investigation",
+        "Post-incident review"],
+      pricing: "Starting at $5,0o00",
+      delivery: "Immediate",
+      category: "Response",
+      icon: <AlertTriangle className="w-8 h-8"   />},
     {
-      id: 5;
-      title: "Compliance Management";
-      description: "Ensure compliance with industry standards and regulations for data security.";
+      id: 5,
+      title: "Compliance Management",
+      description: "Ensure compliance with industry standards and regulations for data security.",
       features: [
-        "Compliance assessment";
-        "Policy development";
-        "Training programs";
-        "Audit support";
-        "Documentation"];
-      pricing: "Starting at $4,0o00";
-      delivery: "2-6 weeks";
-      category: "Compliance";
-      icon: <Settings className="w-8 h-8"   />};
+        "Compliance assessment",
+        "Policy development",
+        "Training programs",
+        "Audit support",
+        "Documentation"],
+      pricing: "Starting at $4,0o00",
+      delivery: "2-6 weeks",
+      category: "Compliance",
+      icon: <Settings className="w-8 h-8"   />},
     {
-      id: 6;
-      title: "Security Training";
-      description: "Comprehensive security awareness training for your team to prevent security breaches.";
+      id: 6,
+      title: "Security Training",
+      description: "Comprehensive security awareness training for your team to prevent security breaches.",
       features: [
-        "Security awareness";
-        "Phishing simulation";
-        "Best practices training";
-        "Incident reporting";
-        "Regular updates"];
-      pricing: "Starting at $1,0o00";
-      delivery: "1-2 weeks";
-      category: "Training";
+        "Security awareness",
+        "Phishing simulation",
+        "Best practices training",
+        "Incident reporting",
+        "Regular updates"],
+      pricing: "Starting at $1,0o00",
+      delivery: "1-2 weeks",
+      category: "Training",
       icon: <Users className="w-8 h-8"   />}
   ],
   const complianceStandards = [
-    { name: "SOC 2", description: "Service Organization Control 2" };
-    { name: "ISO 270o01", description: "Information Security Management" };
-    { name: "HIPAA", description: "Health Insurance Portability" };
-    { name: "PCI DSS", description: "Payment Card Industry" };
-    { name: "GDPR", description: "General Data Protection Regulation" };
+    { name: "SOC 2", description: "Service Organization Control 2" },
+    { name: "ISO 270o01", description: "Information Security Management" },
+    { name: "HIPAA", description: "Health Insurance Portability" },
+    { name: "PCI DSS", description: "Payment Card Industry" },
+    { name: "GDPR", description: "General Data Protection Regulation" },
     { name: "NIST", description: "National Institute of Standards" }
   ],
   return (
@@ -291,4 +291,4 @@ const CybersecurityPage: React.FC = () => {
       </PageTransition>,
     </>)}
 ,
-export default CybersecurityPage;
+export default CybersecurityPage,

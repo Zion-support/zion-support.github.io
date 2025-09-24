@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { Layout } from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Users, Brain, Zap, CheckCircle, ArrowRight;
+  Users, Brain, Zap, CheckCircle, ArrowRight,
   Target, Calendar, BarChart3, Heart, Shield} from 'lucide-react',
 const AIAutonomousHRPlatform: React.FC = () => {
   return (
@@ -32,7 +32,7 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 Autonomous HR Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
-                Revolutionary AI that manages recruitment, employee development, performance optimization;
+                Revolutionary AI that manages recruitment, employee development, performance optimization,
                 and workforce planning autonomously while fostering human potential.,
               </p>,
             </motion.div>,
@@ -73,28 +73,28 @@ const AIAutonomousHRPlatform: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-8 h-8 text-orange-40o0"  />;
-                  title: "Intelligent Recruitment";
-                  description: "AI sources, screens, and interviews candidates autonomously, identifying the best talent matches"};
+                  icon: <Brain className="w-8 h-8 text-orange-40o0"  />,
+                  title: "Intelligent Recruitment",
+                  description: "AI sources, screens, and interviews candidates autonomously, identifying the best talent matches"},
                 {
-                  icon: <Target className="w-8 h-8 text-red-40o0"  />;
-                  title: "Performance Optimization";
-                  description: "Continuous performance monitoring and personalized development recommendations for each employee"};
+                  icon: <Target className="w-8 h-8 text-red-40o0"  />,
+                  title: "Performance Optimization",
+                  description: "Continuous performance monitoring and personalized development recommendations for each employee"},
                 {
-                  icon: <Calendar className="w-8 h-8 text-pink-40o0"  />;
-                  title: "Workforce Planning";
-                  description: "Predictive analytics for workforce needs, skills gaps, and organizational restructuring"};
+                  icon: <Calendar className="w-8 h-8 text-pink-40o0"  />,
+                  title: "Workforce Planning",
+                  description: "Predictive analytics for workforce needs, skills gaps, and organizational restructuring"},
                 {
-                  icon: <BarChart3 className="w-8 h-8 text-purple-40o0"  />;
-                  title: "Employee Analytics";
-                  description: "Deep insights into employee satisfaction, engagement, and productivity patterns"};
+                  icon: <BarChart3 className="w-8 h-8 text-purple-40o0"  />,
+                  title: "Employee Analytics",
+                  description: "Deep insights into employee satisfaction, engagement, and productivity patterns"},
                 {
-                  icon: <Heart className="w-8 h-8 text-rose-40o0"  />;
-                  title: "Well-being Management";
-                  description: "AI monitors employee well-being and proactively suggests interventions and support"};
+                  icon: <Heart className="w-8 h-8 text-rose-40o0"  />,
+                  title: "Well-being Management",
+                  description: "AI monitors employee well-being and proactively suggests interventions and support"},
                 {
-                  icon: <Shield className="w-8 h-8 text-amber-40o0"  />;
-                  title: "Compliance Automation";
+                  icon: <Shield className="w-8 h-8 text-amber-40o0"  />,
+                  title: "Compliance Automation",
                   description: "Automated compliance monitoring, reporting, and policy enforcement across all HR processes"}
               ].map((feature, index) => (
                 <motion.div,
@@ -134,14 +134,10 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">Core HR Functions</h3>,
                 <div className="grid grid-cols-1 gap-4">,
                   {[
-                    'Talent acquisition and recruitment';
-                    'Employee onboarding and orientation';
-                    'Performance management and reviews';
-                    'Learning and development planning';
-                    'Compensation and benefits management';
-                    'Time and attendance tracking';
-                    'Employee relations and engagement';
-                    'Succession planning and career paths'].map((function_item, index) => (
+                    'Talent acquisition and recruitmentEmployee onboarding and orientation',
+                    'Performance management and reviewsLearning and development planning',
+                    'Compensation and benefits managementTime and attendance tracking',
+                    'Employee relations and engagementSuccession planning and career paths'].map((function_item, index) => (
                     <div key={index} className="flex items-center gap-2">,
                       <CheckCircle className="w-4 h-4 text-green-40o0"  />,
                       <span className="text-gray-30o0">{function_item}</span>,
@@ -152,14 +148,10 @@ const AIAutonomousHRPlatform: React.FC = () => {
                 <h3 className="text-2xl font-bold text-white mb-4">AI Capabilities</h3>,
                 <div className="space-y-4">,
                   {[
-                    'Resume parsing and candidate scoring';
-                    'Interview scheduling and video analysis';
-                    'Skills gap analysis and training recommendations';
-                    'Employee sentiment analysis from communications';
-                    'Predictive turnover and retention modeling';
-                    'Personalized career development paths';
-                    'Automated policy compliance monitoring';
-                    'Real-time workplace culture assessment'].map((capability, index) => (
+                    'Resume parsing and candidate scoringInterview scheduling and video analysis',
+                    'Skills gap analysis and training recommendationsEmployee sentiment analysis from communications',
+                    'Predictive turnover and retention modelingPersonalized career development paths',
+                    'Automated policy compliance monitoringReal-time workplace culture assessment'].map((capability, index) => (
                     <div key={index} className="flex items-start gap-3">,
                       <Zap className="w-5 h-5 text-orange-40o0 mt-0.5"  />,
                       <span className="text-gray-30o0">{capability}</span>,
@@ -188,20 +180,20 @@ const AIAutonomousHRPlatform: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
                 {
-                  step: "1";
-                  title: "Job Analysis";
-                  description: "AI analyzes role requirements and creates optimized job descriptions and candidate profiles"};
+                  step: "1",
+                  title: "Job Analysis",
+                  description: "AI analyzes role requirements and creates optimized job descriptions and candidate profiles"},
                 {
-                  step: "2";
-                  title: "Candidate Sourcing";
-                  description: "Autonomous sourcing from multiple platforms, databases, and professional networks"};
+                  step: "2",
+                  title: "Candidate Sourcing",
+                  description: "Autonomous sourcing from multiple platforms, databases, and professional networks"},
                 {
-                  step: "3";
-                  title: "Screening & Assessment";
-                  description: "AI conducts initial interviews, skills assessments, and cultural fit evaluations"};
+                  step: "3",
+                  title: "Screening & Assessment",
+                  description: "AI conducts initial interviews, skills assessments, and cultural fit evaluations"},
                 {
-                  step: "4";
-                  title: "Selection & Onboarding";
+                  step: "4",
+                  title: "Selection & Onboarding",
                   description: "Final candidate selection, offer negotiation, and automated onboarding process"}
               ].map((step, index) => (
                 <motion.div,
@@ -239,20 +231,20 @@ const AIAutonomousHRPlatform: React.FC = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
                 {
-                  metric: "75%";
-                  label: "Faster Hiring";
-                  description: "Reduction in time-to-hire through AI automation"};
+                  metric: "75%",
+                  label: "Faster Hiring",
+                  description: "Reduction in time-to-hire through AI automation"},
                 {
-                  metric: "90%";
-                  label: "Better Candidate Quality";
-                  description: "Improvement in candidate-role fit accuracy"};
+                  metric: "90%",
+                  label: "Better Candidate Quality",
+                  description: "Improvement in candidate-role fit accuracy"},
                 {
-                  metric: "85%";
-                  label: "Employee Retention";
-                  description: "Higher retention rates through predictive analytics"};
+                  metric: "85%",
+                  label: "Employee Retention",
+                  description: "Higher retention rates through predictive analytics"},
                 {
-                  metric: "60%";
-                  label: "HR Cost Reduction";
+                  metric: "60%",
+                  label: "HR Cost Reduction",
                   description: "Lower HR operational costs through automation"}
               ].map((stat, index) => (
                 <motion.div,
@@ -290,40 +282,40 @@ const AIAutonomousHRPlatform: React.FC = () => {
             <div className="grid md:grid-cols-3 gap-8">,
               {[
                 {
-                  title: "Startup";
-                  price: "$299";
-                  period: "month";
-                  description: "Perfect for small teams";
+                  title: "Startup",
+                  price: "$299",
+                  period: "month",
+                  description: "Perfect for small teams",
                   features: [
-                    "Up to 50 employees";
-                    "Basic recruitment automation";
-                    "Performance tracking";
-                    "Standard analytics";
-                    "Email support"]};
+                    "Up to 50 employees",
+                    "Basic recruitment automation",
+                    "Performance tracking",
+                    "Standard analytics",
+                    "Email support"]},
                 {
-                  title: "Growth";
-                  price: "$899";
-                  period: "month";
-                  description: "Ideal for scaling companies";
+                  title: "Growth",
+                  price: "$899",
+                  period: "month",
+                  description: "Ideal for scaling companies",
                   features: [
-                    "Up to 50o0 employees";
-                    "Advanced AI recruitment";
-                    "Employee development planning";
-                    "Predictive analytics";
-                    "Priority support";
-                    "Custom integrations"];
-                  popular: true};
+                    "Up to 50o0 employees",
+                    "Advanced AI recruitment",
+                    "Employee development planning",
+                    "Predictive analytics",
+                    "Priority support",
+                    "Custom integrations"],
+                  popular: true},
                 {
-                  title: "Enterprise";
-                  price: "$2,999";
-                  period: "month";
-                  description: "For large organizations";
+                  title: "Enterprise",
+                  price: "$2,999",
+                  period: "month",
+                  description: "For large organizations",
                   features: [
-                    "Unlimited employees";
-                    "Custom AI model training";
-                    "Advanced workforce planning";
-                    "White-label solutions";
-                    "24/7 dedicated support";
+                    "Unlimited employees",
+                    "Custom AI model training",
+                    "Advanced workforce planning",
+                    "White-label solutions",
+                    "24/7 dedicated support",
                     "On-premise deployment"]}
               ].map((plan, index) => (
                 <motion.div,
@@ -388,10 +380,10 @@ const AIAutonomousHRPlatform: React.FC = () => {
             </motion.div>,
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
-                'Workday', 'BambooHR', 'ADP', 'SAP SuccessFactors';
-                'Oracle HCM', 'Cornerstone OnDemand', 'Greenhouse', 'Lever';
-                'LinkedIn Talent', 'Indeed', 'ZipRecruiter', 'Glassdoor';
-                'Slack', 'Microsoft Teams', 'Google Workspace', 'Office 365'].map((integration, index) => (
+                'WorkdayBambooHR', 'ADPSAP SuccessFactors',
+                'Oracle HCMCornerstone OnDemand', 'GreenhouseLever',
+                'LinkedIn TalentIndeed', 'ZipRecruiterGlassdoor',
+                'SlackMicrosoft Teams', 'Google WorkspaceOffice 365'].map((integration, index) => (
                 <motion.div,
                   key={index}
                   initial={{ opacity: 0, y: 20 }}
@@ -435,5 +427,5 @@ const AIAutonomousHRPlatform: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default AIAutonomousHRPlatform;
+    </Layout>)},
+export default AIAutonomousHRPlatform,

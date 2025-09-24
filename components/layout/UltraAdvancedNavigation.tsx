@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -48,36 +48,38 @@ import {
   Cloud,
   Lock,
   Code} from 'lucide-react',
-import Link from 'next/link',import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Brain;
-  Rocket;
-  Dna;
-  Globe;
-  Shield;
-  Wifi;
-  Package;
-  Bot;
-  Car;
-  Building2;
-  DollarSign;
-  Monitor;
-  Users;
-  Cpu;
-  Zap;
-  Atom;
-  Database;
-  Cloud;
-  Lock;
-  Code;
+import Link from 'next/link',
+import {
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Rocket,
+  Dna,
+  Globe,
+  Shield,
+  Wifi,
+  Package,
+  Bot,
+  Car,
+  Building2,
+  DollarSign,
+  Monitor,
+  Users,
+  Cpu,
+  Zap,
+  Atom,
+  Database,
+  Cloud,
+  Lock,
+  Code,
 } from 'lucide-react',
-import Link from 'next/link',import {
+import Link from 'next/link',
+import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Brain, Rocket, Dna, Globe, Shield, Wifi, Package,
   Bot, Car, Building2, DollarSign, Monitor, Users,
@@ -86,14 +88,14 @@ import Link from 'next/link',
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigationItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: null};
+      name: 'Home',
+      href: '/',
+      icon: null},
     {
       name: 'AI Services',
       href: '#',
@@ -116,20 +118,20 @@ import Link from 'next / link',
     return () => window.removeEventListener ('scroll', handle_scroll),
   const navigation_items = [
     {
-      name: 'Home';
-      href: '/';
-      icon: null;
+      name: 'Home',
+      href: '/',
+      icon: null
     },    {      icon: null}
     {
-      name: 'AI Services';
-      href: '#';
-      icon: Brain;
-      description: 'Cutting - edge AI solutions';
+      name: 'AI Services',
+      href: '#',
+      icon: Brain,
+      description: 'Cutting - edge AI solutions',
       dropdown: [
         {
-          name: 'AI Agent Orchestrator';
-          href: '/ai - agents';
-          icon: Bot;
+          name: 'AI Agent Orchestrator',
+          href: '/ai - agents',
+          icon: Bot,
       description: 'Benchmarks & vendor references'}
     {
       name: 'About',
@@ -144,8 +146,8 @@ import Link from 'next / link',
       href: '/market-pricing',
       icon: DollarSign,
       description: 'Benchmarks & vendor references'},    {
-      name: 'About';
-      href: '/about';
+      name: 'About',
+      href: '/about',
       icon: null}
 ,
     {
@@ -153,234 +155,234 @@ import Link from 'next / link',
       href: '/contact',
       icon: null}
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: null;
+      name: 'Contact',
+      href: '/contact',
+      icon: null
     }],      icon: null}
   ],
   const contactInfo = {
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 50)};
+      setIsScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 50)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
   const navigationItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: null;
-    },    {      icon: null};
+      name: 'Home',
+      href: '/',
+      icon: null
+    },    {      icon: null},
     {
-      name: 'AI Services';
-      href: '#';
-      icon: Brain;
-      description: 'Cutting-edge AI solutions';
+      name: 'AI Services',
+      href: '#',
+      icon: Brain,
+      description: 'Cutting-edge AI solutions',
       dropdown: [
         {
-          name: 'AI Agent Orchestrator';
-          href: '/ai-agents';
-          icon: Bot;
-          description: 'Multi-agent workflow automation';
-          price: '$2,999/month';
-        },        {          price: '$2,999/month'};
+          name: 'AI Agent Orchestrator',
+          href: '/ai-agents',
+          icon: Bot,
+          description: 'Multi-agent workflow automation',
+          price: '$2,999/month',
+        },        {          price: '$2,999/month'},
         {
-          name: 'AI Cybersecurity';
-          href: '/security';
-          icon: Shield;
-          description: 'AI-powered threat detection';
-          price: '$4,999/month';
-        },        {          price: '$4,999/month'};
+          name: 'AI Cybersecurity',
+          href: '/security',
+          icon: Shield,
+          description: 'AI-powered threat detection',
+          price: '$4,999/month',
+        },        {          price: '$4,999/month'},
         {
-          name: 'AI Healthcare Analytics';
-          href: '/ai-data-analytics';
-          icon: Dna;
-          description: 'Patient outcome prediction';
-          price: '$3,999/month';
-        },        {          price: '$3,999/month'};
+          name: 'AI Healthcare Analytics',
+          href: '/ai-data-analytics',
+          icon: Dna,
+          description: 'Patient outcome prediction',
+          price: '$3,999/month',
+        },        {          price: '$3,999/month'},
         {
-          name: 'AI Supply Chain';
-          href: '/quantum-logistics';
-          icon: Package;
-          description: 'End-to-end optimization';
-          price: '$2,499/month';
-        },        {          price: '$2,499/month'};
+          name: 'AI Supply Chain',
+          href: '/quantum-logistics',
+          icon: Package,
+          description: 'End-to-end optimization',
+          price: '$2,499/month',
+        },        {          price: '$2,499/month'},
         {
-          name: 'AI Financial Risk';
-          href: '/ai-financial-risk';
-          icon: DollarSign;
-          description: 'Advanced risk management';
-          price: '$5,999/month';
-        };
-      ];
+          name: 'AI Financial Risk',
+          href: '/ai-financial-risk',
+          icon: DollarSign,
+          description: 'Advanced risk management',
+          price: '$5,999/month',
+        },
+      ],
     },    {          price: '$5,999/month'}
-      ]};
-      name: 'Quantum Computing';
-      href: '#';
-      icon: Atom;
-      description: 'Quantum-powered solutions';
+      ]},
+      name: 'Quantum Computing',
+      href: '#',
+      icon: Atom,
+      description: 'Quantum-powered solutions',
       dropdown: [
         {
-          name: 'Quantum AI Supercomputer';
-          href: '/quantum-ai-cognitive';
-          icon: Cpu;
-          description: 'Enterprise quantum computing';
-          price: '$15,999/month';
-        },        {          price: '$15,999/month'};
+          name: 'Quantum AI Supercomputer',
+          href: '/quantum-ai-cognitive',
+          icon: Cpu,
+          description: 'Enterprise quantum computing',
+          price: '$15,999/month',
+        },        {          price: '$15,999/month'},
         {
-          name: 'Quantum Internet Security';
-          href: '/quantum-internet-security-platform';
-          icon: Lock;
-          description: 'Future-proof encryption';
-          price: '$8,999/month';
-        },        {          price: '$8,999/month'};
+          name: 'Quantum Internet Security',
+          href: '/quantum-internet-security-platform',
+          icon: Lock,
+          description: 'Future-proof encryption',
+          price: '$8,999/month',
+        },        {          price: '$8,999/month'},
         {
-          name: 'Quantum Drug Discovery';
-          href: '/biotech-ai';
-          icon: Dna;
-          description: 'Accelerated drug development';
-          price: '$12,999/month';
-        },        {          price: '$12,999/month'};
+          name: 'Quantum Drug Discovery',
+          href: '/biotech-ai',
+          icon: Dna,
+          description: 'Accelerated drug development',
+          price: '$12,999/month',
+        },        {          price: '$12,999/month'},
         {
-          name: 'Quantum Financial Trading';
-          href: '/quantum-financial-trading';
-          icon: DollarSign;
-          description: 'Nanosecond precision trading';
-          price: '$19,999/month';
-        },        {          price: '$19,999/month'};
+          name: 'Quantum Financial Trading',
+          href: '/quantum-financial-trading',
+          icon: DollarSign,
+          description: 'Nanosecond precision trading',
+          price: '$19,999/month',
+        },        {          price: '$19,999/month'},
         {
-          name: 'Quantum IoT Platform';
-          href: '/quantum-iot';
-          icon: Wifi;
-          description: 'Quantum-secured IoT';
-          price: '$4,999/month';
-        };
-      ];
+          name: 'Quantum IoT Platform',
+          href: '/quantum-iot',
+          icon: Wifi,
+          description: 'Quantum-secured IoT',
+          price: '$4,999/month',
+        },
+      ],
     },    {          price: '$4,999/month'}
-      ]};
-      name: 'Space Technology';
-      href: '#';
-      icon: Rocket;
-      description: 'Space mission management';
+      ]},
+      name: 'Space Technology',
+      href: '#',
+      icon: Rocket,
+      description: 'Space mission management',
       dropdown: [
         {
-          name: 'Space Mission Control';
-          href: '/space-technology';
-          icon: Rocket;
-          description: 'Complete mission management';
-          price: '$25,999/month';
-        },        {          price: '$25,999/month'};
+          name: 'Space Mission Control',
+          href: '/space-technology',
+          icon: Rocket,
+          description: 'Complete mission management',
+          price: '$25,999/month',
+        },        {          price: '$25,999/month'},
         {
-          name: 'Space Debris Cleanup';
-          href: '/space-technology';
-          icon: Package;
-          description: 'AI-powered debris removal';
-          price: '$35,999/month';
-        };
-      ];
+          name: 'Space Debris Cleanup',
+          href: '/space-technology',
+          icon: Package,
+          description: 'AI-powered debris removal',
+          price: '$35,999/month',
+        },
+      ],
     },    {          price: '$35,999/month'}
-      ]};
-      name: 'Enterprise IT';
-      href: '#';
-      icon: Building2;
-      description: 'Enterprise solutions';
+      ]},
+      name: 'Enterprise IT',
+      href: '#',
+      icon: Building2,
+      description: 'Enterprise solutions',
       dropdown: [
         {
-          name: 'Cloud Migration';
-          href: '/cloud-platform';
-          icon: Cloud;
-          description: 'Zero-downtime migration';
-          price: '$8,999/month';
-        },        {          price: '$8,999/month'};
+          name: 'Cloud Migration',
+          href: '/cloud-platform',
+          icon: Cloud,
+          description: 'Zero-downtime migration',
+          price: '$8,999/month',
+        },        {          price: '$8,999/month'},
         {
-          name: 'DevOps Automation';
-          href: '/automation';
-          icon: Code;
-          description: 'AI-powered automation';
-          price: '$5,999/month';
-        },        {          price: '$5,999/month'};
+          name: 'DevOps Automation',
+          href: '/automation',
+          icon: Code,
+          description: 'AI-powered automation',
+          price: '$5,999/month',
+        },        {          price: '$5,999/month'},
         {
-          name: 'Data Analytics';
-          href: '/ai-data-analytics';
-          icon: Database;
-          description: 'AI-powered insights';
-          price: '$6,999/month';
-        },        {          price: '$6,999/month'};
+          name: 'Data Analytics',
+          href: '/ai-data-analytics',
+          icon: Database,
+          description: 'AI-powered insights',
+          price: '$6,999/month',
+        },        {          price: '$6,999/month'},
         {
-          name: 'Security Operations';
-          href: '/security';
-          icon: Shield;
-          description: '24/7 security monitoring';
-          price: '$12,999/month';
-        },        {          price: '$12,999/month'};
+          name: 'Security Operations',
+          href: '/security',
+          icon: Shield,
+          description: '24/7 security monitoring',
+          price: '$12,999/month',
+        },        {          price: '$12,999/month'},
         {
-          name: 'API Management';
-          href: '/api-observability';
-          icon: Code;
-          description: 'Complete lifecycle management';
-          price: '$4,999/month';
-        },        {          price: '$4,999/month'};
+          name: 'API Management',
+          href: '/api-observability',
+          icon: Code,
+          description: 'Complete lifecycle management',
+          price: '$4,999/month',
+        },        {          price: '$4,999/month'},
         {
-          name: 'Digital Transformation';
-          href: '/solutions';
-          icon: Zap;
-          description: 'AI-powered transformation';
-          price: '$15,999/month';
-        },        {          price: '$15,999/month'};
+          name: 'Digital Transformation',
+          href: '/solutions',
+          icon: Zap,
+          description: 'AI-powered transformation',
+          price: '$15,999/month',
+        },        {          price: '$15,999/month'},
         {
-          name: 'IoT Management';
-          href: '/it-asset-discovery-agent';
-          icon: Wifi;
-          description: 'AI-powered device management';
-          price: '$7,999/month';
-        };
-      ];
+          name: 'IoT Management',
+          href: '/it-asset-discovery-agent',
+          icon: Wifi,
+          description: 'AI-powered device management',
+          price: '$7,999/month',
+        },
+      ],
     },    {
-      name: 'Micro SaaS';
-      href: '/services';
-      icon: Monitor;
-      description: '300+ micro SaaS services';
+      name: 'Micro SaaS',
+      href: '/services',
+      icon: Monitor,
+      description: '300+ micro SaaS services'
     },    {
-      name: 'Market Pricing';
-      href: '/market-pricing';
-      icon: DollarSign;
-      description: 'Benchmarks & vendor references';
-    };
+      name: 'Market Pricing',
+      href: '/market-pricing',
+      icon: DollarSign,
+      description: 'Benchmarks & vendor references'
+    },
     {
-      name: 'About';
+      name: 'About',
       href: '/about',          price: '$7,999/month'}
-      ]};
-      name: 'Micro SaaS';
-      href: '/services';
-      icon: Monitor;
-      description: '300+ micro SaaS services';
-    },      description: '300+ micro SaaS services'};
+      ]},
+      name: 'Micro SaaS',
+      href: '/services',
+      icon: Monitor,
+      description: '300+ micro SaaS services'
+    },      description: '300+ micro SaaS services'},
     {
-      name: 'Market Pricing';
-      href: '/market-pricing';
-      icon: DollarSign;
-      description: 'Benchmarks & vendor references';
+      name: 'Market Pricing',
+      href: '/market-pricing',
+      icon: DollarSign,
+      description: 'Benchmarks & vendor references'
     },    {
-      name: 'About';
-      href: '/about';
-      icon: null};
+      name: 'About',
+      href: '/about',
+      icon: null},
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: null;
-    };
+      name: 'Contact',
+      href: '/contact',
+      icon: null
+    },
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: null;
+      name: 'Contact',
+      href: '/contact',
+      icon: null
     }],      icon: null}
   ],
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
+},
     >,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
         <div className='flex justify-between items-center h-20'>          {/* Logo */}  return (
@@ -449,9 +451,9 @@ import Link from 'next / link',
             {navigationItems.map((item, index) => (
               <div key={item.name} className="relative group">,
   const contact_info = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'
   }
 >,
       <div className='max - w-7xl mx - auto px - 4 sm: px - 6 lg:px - 8'>,
@@ -860,6 +862,6 @@ className="block py-2 text-gray-400 hover: text-white transition-colors duration
           </motion && motion.div>)}
       </AnimatePresence>,
     </nav>)}
-};
-export default UltraAdvancedNavigation)};
+},
+export default UltraAdvancedNavigation)},
 ))))))))))))))))))

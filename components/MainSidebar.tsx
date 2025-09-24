@@ -1,35 +1,35 @@
 import {
-  BarChart3;
-  BookOpen;
-  Brain;
-  Briefcase;
-  Building;
-  Building2;
-  CheckCircle;
-  ChevronDown;
-  ChevronRight;
-  Cloud;
-  Code;
-  Database;
-  DollarSign;
-  FileText;
-  Heart;
-  HelpCircle;
-  Home;
-  Linkedin;
-  Mail;
-  MapPin;
-  Newspaper;
-  Phone;
-  Quote;
-  Rocket;
-  Search;
-  Shield;
-  Store;
-  Target;
-  Twitter;
-  Users;
-  Zap;
+  BarChart3,
+  BookOpen,
+  Brain,
+  Briefcase,
+  Building,
+  Building2,
+  CheckCircle,
+  ChevronDown,
+  ChevronRight,
+  Cloud,
+  Code,
+  Database,
+  DollarSign,
+  FileText,
+  Heart,
+  HelpCircle,
+  Home,
+  Linkedin,
+  Mail,
+  MapPin,
+  Newspaper,
+  Phone,
+  Quote,
+  Rocket,
+  Search,
+  Shield,
+  Store,
+  Target,
+  Twitter,
+  Users,
+  Zap,
 } from 'lucide-react',
 import React, { useState } from 'react',
 import { Link, useLocation } from 'react-router-dom',
@@ -44,234 +44,234 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
     setExpandedSections(prev =>,
       prev.includes(section),
         ? prev.filter(s => s !== section),
-        : [...prev, section])};
+        : [...prev, section])},
   const isActive = (path: string) => location.pathname === path,
   const navigation = {
     main: [
-      { name: 'Home', href: '/', icon: Home };
-      { name: 'About', href: '/about', icon: Building };
-      { name: 'Services', href: '/services', icon: Briefcase };
-      { name: 'Solutions', href: '/solutions', icon: Target };
-      { name: 'Partners', href: '/partners', icon: Users };
-      { name: 'Careers', href: '/careers', icon: Briefcase };
-      { name: 'Blog', href: '/blog', icon: Newspaper };
-      { name: 'Contact', href: '/contact', icon: Phone };
-    ];
+      { name: 'Home', href: '/', icon: Home },
+      { name: 'About', href: '/about', icon: Building },
+      { name: 'Services', href: '/services', icon: Briefcase },
+      { name: 'Solutions', href: '/solutions', icon: Target },
+      { name: 'Partners', href: '/partners', icon: Users },
+      { name: 'Careers', href: '/careers', icon: Briefcase },
+      { name: 'Blog', href: '/blog', icon: Newspaper },
+      { name: 'Contact', href: '/contact', icon: Phone },
+    ],
     services: [
       {
-        name: 'AI Solutions';
-        href: '/services/ai-solutions';
-        icon: Brain;
-        description: 'Autonomous AI systems';
-      };
+        name: 'AI Solutions',
+        href: '/services/ai-solutions',
+        icon: Brain,
+        description: 'Autonomous AI systems'
+      },
       {
-        name: 'Cloud & DevOps';
-        href: '/services/cloud';
-        icon: Cloud;
-        description: 'Infrastructure & automation';
-      };
+        name: 'Cloud & DevOps',
+        href: '/services/cloud',
+        icon: Cloud,
+        description: 'Infrastructure & automation'
+      },
       {
-        name: 'Cybersecurity';
-        href: '/services/cybersecurity';
-        icon: Shield;
-        description: 'Zero-trust security';
-      };
+        name: 'Cybersecurity',
+        href: '/services/cybersecurity',
+        icon: Shield,
+        description: 'Zero-trust security'
+      },
       {
-        name: 'Data & Analytics';
-        href: '/services/data';
-        icon: Database;
-        description: 'Data pipelines & ML ops';
-      };
+        name: 'Data & Analytics',
+        href: '/services/data',
+        icon: Database,
+        description: 'Data pipelines & ML ops'
+      },
       {
-        name: 'Micro SaaS';
-        href: '/services/micro-saas';
-        icon: Store;
-        description: 'Rapid product development';
-      };
+        name: 'Micro SaaS',
+        href: '/services/micro-saas',
+        icon: Store,
+        description: 'Rapid product development'
+      },
       {
-        name: 'Digital Transformation';
-        href: '/services/transformation';
-        icon: Rocket;
-        description: 'Business modernization';
-      };
-    ];
+        name: 'Digital Transformation',
+        href: '/services/transformation',
+        icon: Rocket,
+        description: 'Business modernization'
+      },
+    ],
     solutions: [
       {
-        name: 'Enterprise';
-        href: '/solutions/enterprise';
-        icon: Building2;
-        description: 'Large-scale implementations';
-      };
+        name: 'Enterprise',
+        href: '/solutions/enterprise',
+        icon: Building2,
+        description: 'Large-scale implementations'
+      },
       {
-        name: 'SMB';
-        href: '/solutions/smb';
-        icon: Store;
-        description: 'Small business focused';
-      };
+        name: 'SMB',
+        href: '/solutions/smb',
+        icon: Store,
+        description: 'Small business focused'
+      },
       {
-        name: 'Startup';
-        href: '/solutions/startup';
-        icon: Rocket;
-        description: 'Growth acceleration';
-      };
+        name: 'Startup',
+        href: '/solutions/startup',
+        icon: Rocket,
+        description: 'Growth acceleration'
+      },
       {
-        name: 'Government';
-        href: '/solutions/government';
-        icon: Building;
-        description: 'Public sector expertise';
-      };
+        name: 'Government',
+        href: '/solutions/government',
+        icon: Building,
+        description: 'Public sector expertise'
+      },
       {
-        name: 'Healthcare';
-        href: '/solutions/healthcare';
-        icon: Heart;
-        description: 'Health tech solutions';
-      };
+        name: 'Healthcare',
+        href: '/solutions/healthcare',
+        icon: Heart,
+        description: 'Health tech solutions'
+      },
       {
-        name: 'Financial Services';
-        href: '/solutions/financial';
-        icon: DollarSign;
-        description: 'Fintech & compliance';
-      };
-    ];
+        name: 'Financial Services',
+        href: '/solutions/financial',
+        icon: DollarSign,
+        description: 'Fintech & compliance'
+      },
+    ],
     resources: [
       {
-        name: 'Documentation';
-        href: '/docs';
-        icon: FileText;
-        description: 'Technical guides';
-      };
+        name: 'Documentation',
+        href: '/docs',
+        icon: FileText,
+        description: 'Technical guides'
+      },
       {
-        name: 'API Reference';
-        href: '/api';
-        icon: Code;
-        description: 'Developer resources';
-      };
+        name: 'API Reference',
+        href: '/api',
+        icon: Code,
+        description: 'Developer resources'
+      },
       {
-        name: 'Case Studies';
-        href: '/case-studies';
-        icon: BarChart3;
-        description: 'Success stories';
-      };
+        name: 'Case Studies',
+        href: '/case-studies',
+        icon: BarChart3,
+        description: 'Success stories'
+      },
       {
-        name: 'Help Center';
-        href: '/help';
-        icon: HelpCircle;
-        description: 'Support & FAQs';
-      };
+        name: 'Help Center',
+        href: '/help',
+        icon: HelpCircle,
+        description: 'Support & FAQs'
+      },
       {
-        name: 'Status';
-        href: '/status';
-        icon: CheckCircle;
-        description: 'System status';
-      };
+        name: 'Status',
+        href: '/status',
+        icon: CheckCircle,
+        description: 'System status'
+      },
       {
-        name: 'Pricing';
-        href: '/pricing';
-        icon: DollarSign;
-        description: 'Service pricing';
-      };
-    ];
+        name: 'Pricing',
+        href: '/pricing',
+        icon: DollarSign,
+        description: 'Service pricing'
+      },
+    ],
     company: [
       {
-        name: 'About Us';
-        href: '/about';
-        icon: Building;
-        description: 'Our story & mission';
-      };
+        name: 'About Us',
+        href: '/about',
+        icon: Building,
+        description: 'Our story & mission'
+      },
       {
-        name: 'Team';
-        href: '/team';
-        icon: Users;
-        description: 'Meet our experts';
-      };
+        name: 'Team',
+        href: '/team',
+        icon: Users,
+        description: 'Meet our experts'
+      },
       {
-        name: 'Partners';
-        href: '/partners';
-        icon: Users;
-        description: 'Strategic partnerships';
-      };
+        name: 'Partners',
+        href: '/partners',
+        icon: Users,
+        description: 'Strategic partnerships'
+      },
       {
-        name: 'Careers';
-        href: '/careers';
-        icon: Briefcase;
-        description: 'Join our team';
-      };
+        name: 'Careers',
+        href: '/careers',
+        icon: Briefcase,
+        description: 'Join our team'
+      },
       {
-        name: 'News';
-        href: '/news';
-        icon: Newspaper;
-        description: 'Company updates';
-      };
+        name: 'News',
+        href: '/news',
+        icon: Newspaper,
+        description: 'Company updates'
+      },
       {
-        name: 'Press';
-        href: '/press';
-        icon: Quote;
-        description: 'Media resources';
-      };
-    ];
-  };
+        name: 'Press',
+        href: '/press',
+        icon: Quote,
+        description: 'Media resources'
+      },
+    ],
+  },
   const quickActions = [
     {
-      name: 'Request Quote';
-      href: '/request-quote';
-      icon: Quote;
-      color: 'from-cyan-50o0 to-blue-60o0';
-    };
+      name: 'Request Quote',
+      href: '/request-quote',
+      icon: Quote,
+      color: 'from-cyan-50o0 to-blue-60o0'
+    },
     {
-      name: 'Get Support';
-      href: '/contact';
-      icon: HelpCircle;
-      color: 'from-green-50o0 to-emerald-60o0';
-    };
+      name: 'Get Support',
+      href: '/contact',
+      icon: HelpCircle,
+      color: 'from-green-50o0 to-emerald-60o0'
+    },
     {
-      name: 'View Status';
-      href: '/status';
-      icon: CheckCircle;
-      color: 'from-yellow-50o0 to-orange-60o0';
-    };
+      name: 'View Status',
+      href: '/status',
+      icon: CheckCircle,
+      color: 'from-yellow-50o0 to-orange-60o0'
+    },
     {
-      name: 'Documentation';
-      href: '/docs';
-      icon: BookOpen;
-      color: 'from-purple-50o0 to-pink-60o0';
-    };
+      name: 'Documentation',
+      href: '/docs',
+      icon: BookOpen,
+      color: 'from-purple-50o0 to-pink-60o0'
+    },
   ],
   const contactInfo = [
-    { icon: Phone, text: '+1 (30o2) 464-0950', href: 'tel:+130o24640950' };
+    { icon: Phone, text: '+1 (30o2) 464-0950', href: 'tel:+130o24640950' },
     {
-      icon: Mail;
-      text: 'kleber@ziontechgroup.com';
-      href: 'mailto:kleber@ziontechgroup.com';
-    };
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'
+    },
     {
-      icon: MapPin;
-      text: 'Middletown, DE 19709';
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709';
-    };
+      icon: MapPin,
+      text: 'Middletown, DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709'
+    },
   ],
   const socialLinks = [
     {
-      name: 'LinkedIn';
-      href: 'https://www.linkedin.com/company/zion-tech-group/';
-      icon: Linkedin;
-      color: 'text-blue-50o0';
-    };
+      name: 'LinkedIn',
+      href: 'https://www.linkedin.com/company/zion-tech-group/',
+      icon: Linkedin,
+      color: 'text-blue-50o0'
+    },
     {
-      name: 'Twitter';
-      href: 'https://twitter.com/ZionTechGroup';
-      icon: Twitter;
-      color: 'text-blue-40o0';
-    };
+      name: 'Twitter',
+      href: 'https://twitter.com/ZionTechGroup',
+      icon: Twitter,
+      color: 'text-blue-40o0'
+    },
     {
-      name: 'GitHub';
-      href: 'https://github.com/ziontechgroup';
-      icon: Code;
-      color: 'text-gray-40o0';
-    };
+      name: 'GitHub',
+      href: 'https://github.com/ziontechgroup',
+      icon: Code,
+      color: 'text-gray-40o0'
+    },
   ],
   const renderNavSection = (
-    title: string;
-    items: any[];
+    title: string,
+    items: any[],
     sectionKey: string) => (
     <div key={sectionKey} className='mb-6'>,
       <button
@@ -297,7 +297,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                   : 'text-gray-40o0 hover: text-white hover:bg-white/5'}`}
             >,
               {React.createElement(item.icon, {
-                className: 'w-4 h-4 flex-shrink-0';
+                className: 'w-4 h-4 flex-shrink-0'
               })}
               <div className='flex-1 min-w-0'>,
                 <div className='font-medium'>{item.name}</div>,
@@ -364,7 +364,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     className={`w-8 h-8 bg-gradient-to-r ${action.color} rounded-lg flex items-center justify-center group-hover: scale-110 transition-transform duration-20o0`}
                   >,
                     {React.createElement(action.icon, {
-                      className: 'w-4 h-4 text-white';
+                      className: 'w-4 h-4 text-white'
                     })}
                   </div>,
                   <span className='text-xs text-white text-center'>,
@@ -386,7 +386,7 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
                     : 'text-gray-30o0 hover: text-white hover:bg-white/5'}`}
               >,
                 {React.createElement(item.icon, {
-                  className: 'w-4 h-4 flex-shrink-0';
+                  className: 'w-4 h-4 flex-shrink-0'
                 })}
                 <span className='font-medium'>{item.name}</span>,
               </Link>))}
@@ -439,5 +439,5 @@ const MainSidebar: React.FC<SidebarProps> = ({ isOpen, onClose }) => {
           </div>,
         </div>,
       </div>,
-    </>)};
-export default MainSidebar;
+    </>)},
+export default MainSidebar,

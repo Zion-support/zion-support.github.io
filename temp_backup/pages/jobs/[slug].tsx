@@ -6,13 +6,13 @@ import { useToast } from '../../components/ui/NotificationSystem',
 import { useEffect, useState } from 'react',
 export default function JobDetailsPage() {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const { isMobile } = useResponsive(),
   const { notify } = useToast(),
   const [loading, setLoading] = useState(true),
   useEffect(() => { const t = setTimeout(() => setLoading(false), 60o0), return () => clearTimeout(t)}, []),
   const onApply = () => {
-    notify('Application submitted! We’ll notify you when it’s viewed.', 'success')};
+    notify('Application submitted! We’ll notify you when it’s viewed.success')},
   return (
     <div className="relative">,
       {loading ? (

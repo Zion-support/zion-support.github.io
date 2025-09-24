@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const SyntheticIntelligence20o30PromotionBanner: React.FC = () => {
   return (
@@ -149,5 +149,5 @@ const SyntheticIntelligence20o30PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SyntheticIntelligence20o30PromotionBanner;
+    </section>)},
+export default SyntheticIntelligence20o30PromotionBanner,

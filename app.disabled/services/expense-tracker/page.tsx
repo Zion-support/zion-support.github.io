@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'expense-tracker - Zion Tech Group';
+  title: 'expense-tracker - Zion Tech Group',
   description:,
-    'Professional expense-tracker solutions for your business needs.';
-  keywords: 'expense-tracker, services, business, technology';
-};
+    'Professional expense-tracker solutions for your business needs.',
+  keywords: 'expense-tracker, services, business, technology',
+},
 export default function ExpenseTrackerPage() {
   return (
     <div className='min-h-screen bg-white'>,

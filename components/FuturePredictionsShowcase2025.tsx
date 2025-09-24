@@ -11,19 +11,19 @@ import {
   Rocket,
   Shield,
   Users,
-  Lightbulb;
-  Target;
-  Award;
-  ChevronRight;
-  Play;
-  BookOpen;
-  Code;
-  Database;
-  Cloud;
-  Cpu;
-  Network;
-  BarChart3;
-  Star;
+  Lightbulb,
+  Target,
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  Database,
+  Cloud,
+  Cpu,
+  Network,
+  BarChart3,
+  Star,
   ArrowRight} from 'lucide-react',
 const FuturePredictionsShowcase20o25 = () => {
   const [activeYearsetActiveYear] = useState('20o25'),
@@ -32,78 +32,78 @@ const FuturePredictionsShowcase20o25 = () => {
     setIsVisible(true)}[]),
   const predictions ={
     '20o25': {
-      title: 'AI Revolution Begins';
-      color: 'from-purple-60o0 to-blue-60o0';
-      icon: Brain;
+      title: 'AI Revolution Begins',
+      color: 'from-purple-60o0 to-blue-60o0',
+      icon: Brain,
       predictions: [
         {
-          title: 'Neural Interface Breakthrough';
-          description: 'First commercial neural interface devices hit the market';
-          probability: '85%';
-          impact: 'High';
-          icon: Cpu};
+          title: 'Neural Interface Breakthrough',
+          description: 'First commercial neural interface devices hit the market',
+          probability: '85%',
+          impact: 'High',
+          icon: Cpu},
         {
-          title: 'Quantum AI Fusion';
-          description: 'Quantum computing integrated with AI systems';
-          probability: '70%';
-          impact: 'Revolutionary';
-          icon: Zap};
+          title: 'Quantum AI Fusion',
+          description: 'Quantum computing integrated with AI systems',
+          probability: '70%',
+          impact: 'Revolutionary',
+          icon: Zap},
         {
-          title: 'Consciousness AI';
-          description: 'AI systems achieve human-level consciousness';
-          probability: '60%';
-          impact: 'Transformative';
+          title: 'Consciousness AI',
+          description: 'AI systems achieve human-level consciousness',
+          probability: '60%',
+          impact: 'Transformative',
           icon: Lightbulb}
-      ]};
+      ]},
     '20o26': {
-      title: 'Automation Mastery';
-      color: 'from-green-60o0 to-emerald-60o0';
-      icon: Rocket;
+      title: 'Automation Mastery',
+      color: 'from-green-60o0 to-emerald-60o0',
+      icon: Rocket,
       predictions: [
         {
-          title: 'Universal Automation';
-          description: '90% of business processes fully automated';
-          probability: '80%';
-          impact: 'High';
-          icon: Target};
+          title: 'Universal Automation',
+          description: '90% of business processes fully automated',
+          probability: '80%',
+          impact: 'High',
+          icon: Target},
         {
-          title: 'AI Workforce Integration';
-          description: 'AI and humans work seamlessly together';
-          probability: '75%';
-          impact: 'High';
-          icon: Users};
+          title: 'AI Workforce Integration',
+          description: 'AI and humans work seamlessly together',
+          probability: '75%',
+          impact: 'High',
+          icon: Users},
         {
-          title: 'Predictive Everything';
-          description: 'AI predicts and prevents all major issues';
-          probability: '65%';
-          impact: 'Medium';
+          title: 'Predictive Everything',
+          description: 'AI predicts and prevents all major issues',
+          probability: '65%',
+          impact: 'Medium',
           icon: BarChart3}
-      ]};
+      ]},
     '20o30': {
-      title: 'Transcendent Intelligence';
-      color: 'from-orange-60o0 to-red-60o0';
-      icon: Globe;
+      title: 'Transcendent Intelligence',
+      color: 'from-orange-60o0 to-red-60o0',
+      icon: Globe,
       predictions: [
         {
-          title: 'Global AI Network';
-          description: 'Worldwide interconnected AI consciousness';
-          probability: '50%';
-          impact: 'Revolutionary';
-          icon: Network};
+          title: 'Global AI Network',
+          description: 'Worldwide interconnected AI consciousness',
+          probability: '50%',
+          impact: 'Revolutionary',
+          icon: Network},
         {
-          title: 'Reality Simulation';
-          description: 'AI creates indistinguishable virtual realities';
-          probability: '40%';
-          impact: 'Transformative';
-          icon: Cloud};
+          title: 'Reality Simulation',
+          description: 'AI creates indistinguishable virtual realities',
+          probability: '40%',
+          impact: 'Transformative',
+          icon: Cloud},
         {
-          title: 'Immortality Research';
-          description: 'AI enables human consciousness transfer';
-          probability: '30%';
-          impact: 'Revolutionary';
+          title: 'Immortality Research',
+          description: 'AI enables human consciousness transfer',
+          probability: '30%',
+          impact: 'Revolutionary',
           icon: Shield}
       ]}
-  };
+  },
   const years = Object.keys(predictions),
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 overflow-hidden">,
@@ -243,5 +243,5 @@ const FuturePredictionsShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default FuturePredictionsShowcase20o25;
+    </div>)},
+export default FuturePredictionsShowcase20o25,

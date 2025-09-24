@@ -10,21 +10,21 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
     if (type === "range" && !formData.budget.maxAmount) {
       updateFormData({
         budget: {
-          ...formData.budget;
-          type;
+          ...formData.budget,
+          type,
           maxAmount: formData.budget.amount + 5000}
       })} else {
       updateFormData({
         budget: {
-          ...formData.budget;
+          ...formData.budget,
           type}
       })}
-  };
+  },
   const formatCurrency = (value: number) => {
     return new Intl.NumberFormat('en-US'{
-      style: 'currency';
-      currency: 'USD';
-      maximumFractionDigits: 0}).format(value)};
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0}).format(value)},
   return (
     <div className="space-y-6">,
       <div>,
@@ -118,7 +118,7 @@ export function BudgetStep({ formDataupdateFormData }: BudgetStepProps) {
                     updateFormData({
                       budget: {
                         ...formData.budget,
-                        amount: newAmount;
+                        amount: newAmount,
                         maxAmount: newAmount >= maxAmount ? newAmount + 5000 : maxAmount}
                     })}}
                   className="py-4",

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 const NewContent20o25AutomationRevolutionBanner: React.FC = () => {
@@ -149,5 +149,5 @@ const NewContent20o25AutomationRevolutionBanner: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>)};
-export default NewContent20o25AutomationRevolutionBanner;
+    </motion.section>)},
+export default NewContent20o25AutomationRevolutionBanner,

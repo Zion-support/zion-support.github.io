@@ -12,16 +12,16 @@ export default function RequestsPanel() {
   const [selectedQuote, setSelectedQuote] = useState(null),
   const [showDetails, setShowDetails] = useState(false),
   const {
-    quotes;
-    unreadCount;
-    isLoading;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter;
-    markAsViewed;
-    markAsResponded;
-    toggleArchive;
+    quotes,
+    unreadCount,
+    isLoading,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    markAsViewed,
+    markAsResponded,
+    toggleArchive,
   } = useTalentQuotes(),
   const handleViewDetails = quote => {
     setSelectedQuote(quote),
@@ -29,7 +29,7 @@ export default function RequestsPanel() {
     // If status is new, mark as viewed,
     if (quote.status === 'new') {
       markAsViewed(quote.id)}
-  };
+  },
   // Filter quotes by archive status,
   const activeQuotes = quotes.filter(q => !q.is_archived),
   const archivedQuotes = quotes.filter(q => q.is_archived),

@@ -18,16 +18,12 @@ export default function FiveGPrivateNetworkPage() {
         implementationWeeks='8-12 weeks',
         roiNote='Lower downtime and higher throughput deliver 3-5x ROI',
         features={[
-          'SIM/eSIM provisioning and policy control';
-          'QoS profiles and network slicing for critical workloads';
-          'MEC compute integration and edge routing';
-          'Zero-trust 5G security and device attestation';
-          'RF planning and interference mitigation';
-          'Real-time monitoring and packet capture';
-          'Integrations with PLC/SCADA and OT networks';
-          'SLA dashboards and multi-site federation';
+          'SIM/eSIM provisioning and policy controlQoS profiles and network slicing for critical workloads',
+          'MEC compute integration and edge routingZero-trust 5G security and device attestation',
+          'RF planning and interference mitigationReal-time monitoring and packet capture',
+          'Integrations with PLC/SCADA and OT networksSLA dashboards and multi-site federation',
         ]}
-        industries={['Manufacturing', 'Healthcare', 'Logistics', 'Energy']}
+        industries={['ManufacturingHealthcare', 'LogisticsEnergy']}
       />,
     </>)}
 ,

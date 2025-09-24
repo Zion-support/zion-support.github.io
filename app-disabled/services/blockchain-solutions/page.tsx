@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'blockchain-solutions - Zion Tech Group';
+  title: 'blockchain-solutions - Zion Tech Group',
   description:,
-    'Professional blockchain-solutions solutions for your business needs.';
-  keywords: 'blockchain-solutions, services, business, technology';
-};
+    'Professional blockchain-solutions solutions for your business needs.',
+  keywords: 'blockchain-solutions, services, business, technology',
+},
 export default function BlockchainSolutionsPage() {
   return (
     <div className='min-h-screen bg-white'>,

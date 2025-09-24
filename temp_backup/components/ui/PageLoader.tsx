@@ -8,9 +8,9 @@ interface PageLoaderProps {
   onLoadingComplete?: () => void}
 ,
 const PageLoader: React.FC<PageLoaderProps> = ({
-  isLoading = true;
-  loadingText = 'Loading Zion Tech Group...';
-  minDisplayTime = 10o00;
+  isLoading = true,
+  loadingText = 'Loading Zion Tech Group...',
+  minDisplayTime = 10o00,
   onLoadingComplete}) => {
   const [showLoader, setShowLoader] = useState(true),
   const [progress, setProgress] = useState(0),
@@ -114,25 +114,25 @@ const PageLoader: React.FC<PageLoaderProps> = ({
             <motion.div,
               className="absolute top-20 left-10 w-72 h-72 bg-gradient-to-r from-cyan-50o0/10 to-blue-60o0/10 rounded-full blur-3xl",
               animate={{
-                scale: [1, 1.2, 1];
+                scale: [1, 1.2, 1],
                 opacity: [0.1, 0.2, 0.1]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
+                duration: 4,
+                repeat: Infinity,
                 ease: 'easeInOut'}}
              />,
             <motion.div,
               className="absolute bottom-20 right-10 w-96 h-96 bg-gradient-to-r from-purple-50o0/10 to-pink-60o0/10 rounded-full blur-3xl",
               animate={{
-                scale: [1.2, 1, 1.2];
+                scale: [1.2, 1, 1.2],
                 opacity: [0.1, 0.2, 0.1]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
-                ease: 'easeInOut';
+                duration: 4,
+                repeat: Infinity,
+                ease: 'easeInOut',
                 delay: 2}}
              />,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default PageLoader;
+    </AnimatePresence>)},
+export default PageLoader,

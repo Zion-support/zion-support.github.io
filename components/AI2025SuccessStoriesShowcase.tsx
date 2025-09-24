@@ -8,14 +8,14 @@ import {
   DollarSign,
   Clock,
   CheckCircle,
-  ArrowRight;
-  Star;
-  Award;
-  Target;
-  Zap;
-  BarChart3;
-  Globe;
-  Shield;
+  ArrowRight,
+  Star,
+  Award,
+  Target,
+  Zap,
+  BarChart3,
+  Globe,
+  Shield,
   Lightbulb} from 'lucide-react',
 const AI20o25SuccessStoriesShowcase = () => {
   const [activeStorysetActiveStory] = useState(0),
@@ -27,74 +27,74 @@ const AI20o25SuccessStoriesShowcase = () => {
     return () => clearInterval(interval)}[]),
   const successStories = [
     {
-      id: 1;
-      company: "TechCorp Solutions";
-      industry: "Manufacturing";
-      challenge: "Manual quality control processes causing 15% defect rate";
-      solution: "AI-powered computer vision for real-time quality inspection";
+      id: 1,
+      company: "TechCorp Solutions",
+      industry: "Manufacturing",
+      challenge: "Manual quality control processes causing 15% defect rate",
+      solution: "AI-powered computer vision for real-time quality inspection",
       results: {
-        efficiency: "+20o0%";
-        cost: "-60%";
-        quality: "99.2%";
-        time: "-75%"};
-      icon: Target;
-      color: "from-blue-50o0 to-cyan-50o0";
-      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%."};
+        efficiency: "+20o0%",
+        cost: "-60%",
+        quality: "99.2%",
+        time: "-75%"},
+      icon: Target,
+      color: "from-blue-50o0 to-cyan-50o0",
+      testimonial: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%."},
     {
-      id: 2;
-      company: "FinanceFlow Inc";
-      industry: "Financial Services";
-      challenge: "Manual fraud detection missing 8% of fraudulent transactions";
-      solution: "Machine learning algorithms for real-time fraud detection";
+      id: 2,
+      company: "FinanceFlow Inc",
+      industry: "Financial Services",
+      challenge: "Manual fraud detection missing 8% of fraudulent transactions",
+      solution: "Machine learning algorithms for real-time fraud detection",
       results: {
-        efficiency: "+150%";
-        cost: "-45%";
-        quality: "99.8%";
-        time: "-80%"};
-      icon: Shield;
-      color: "from-green-50o0 to-emerald-50o0";
-      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses."};
+        efficiency: "+150%",
+        cost: "-45%",
+        quality: "99.8%",
+        time: "-80%"},
+      icon: Shield,
+      color: "from-green-50o0 to-emerald-50o0",
+      testimonial: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses."},
     {
-      id: 3;
-      company: "HealthTech Partners";
-      industry: "Healthcare";
-      challenge: "Manual patient data analysis taking 40 hours per week";
-      solution: "AI-powered medical image analysis and patient data processing";
+      id: 3,
+      company: "HealthTech Partners",
+      industry: "Healthcare",
+      challenge: "Manual patient data analysis taking 40 hours per week",
+      solution: "AI-powered medical image analysis and patient data processing",
       results: {
-        efficiency: "+30o0%";
-        cost: "-70%";
-        quality: "98.5%";
-        time: "-85%"};
-      icon: Lightbulb;
-      color: "from-purple-50o0 to-pink-50o0";
-      testimonial: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery."};
+        efficiency: "+30o0%",
+        cost: "-70%",
+        quality: "98.5%",
+        time: "-85%"},
+      icon: Lightbulb,
+      color: "from-purple-50o0 to-pink-50o0",
+      testimonial: "AI helps us diagnose patients faster and more accurately. 'Its revolutionizing healthcare delivery."},
     {
-      id: 4;
-      company: "RetailMax";
-      industry: "E-commerce";
-      challenge: "Poor customer service response times and low satisfaction";
-      solution: "AI chatbot and recommendation engine for personalized shopping";
+      id: 4,
+      company: "RetailMax",
+      industry: "E-commerce",
+      challenge: "Poor customer service response times and low satisfaction",
+      solution: "AI chatbot and recommendation engine for personalized shopping",
       results: {
-        efficiency: "+180%";
-        cost: "-50%";
-        quality: "95%";
-        time: "-90%"};
-      icon: Users;
-      color: "from-orange-50o0 to-red-50o0";
+        efficiency: "+180%",
+        cost: "-50%",
+        quality: "95%",
+        time: "-90%"},
+      icon: Users,
+      color: "from-orange-50o0 to-red-50o0",
       testimonial: "Customer satisfaction increased by 95% and our support costs dropped by 50%. Amazing results!"}
   ],
   const metrics = [
-    { icon: TrendingUplabel: "Average ROI"value: "340%" };
-    { icon: Clocklabel: "Time Saved"value: "75%" };
-    { icon: DollarSignlabel: "Cost Reduction"value: "55%" };
+    { icon: TrendingUplabel: "Average ROI"value: "340%" },
+    { icon: Clocklabel: "Time Saved"value: "75%" },
+    { icon: DollarSignlabel: "Cost Reduction"value: "55%" },
     { icon: CheckCirclelabel: "Success Rate"value: "98%" }
   ],
   const industries = [
-    { name: "Manufacturing"count: "150+"icon: Target };
-    { name: "Healthcare"count: "120+"icon: Lightbulb };
-    { name: "Finance"count: "20o0+"icon: Shield };
-    { name: "Retail"count: "180+"icon: Users };
-    { name: "Education"count: "90+"icon: Award };
+    { name: "Manufacturing"count: "150+"icon: Target },
+    { name: "Healthcare"count: "120+"icon: Lightbulb },
+    { name: "Finance"count: "20o0+"icon: Shield },
+    { name: "Retail"count: "180+"icon: Users },
+    { name: "Education"count: "90+"icon: Award },
     { name: "Logistics"count: "110+"icon: Globe }
   ],
   return (
@@ -275,5 +275,5 @@ const AI20o25SuccessStoriesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default AI20o25SuccessStoriesShowcase;
+    </section>)},
+export default AI20o25SuccessStoriesShowcase,

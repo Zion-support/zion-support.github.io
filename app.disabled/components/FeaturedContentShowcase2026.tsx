@@ -1,54 +1,54 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function FeaturedContentShowcase2026() {
   return null}
 import Link from 'next/link',
 const FeaturedContentShowcase20o26 = () => {
   const featuredContent = [
     {
-      title: 'AI 20o26 Enterprise Transformation';
+      title: 'AI 20o26 Enterprise Transformation',
       description:,
-        'Complete guide to transforming your enterprise with cutting-edge AI technologies';
-      category: 'AI Implementation';
-      readTime: '15 min read';
-      image: '/images/ai-enterprise-transformation.jpg';
-      href: '/blog/ai-20o26-enterprise-transformation-ultimate-guide';
-      featured: true;
-      tags: ['Enterprise AI', 'Transformation', '20o26', 'Implementation'];
-    };
+        'Complete guide to transforming your enterprise with cutting-edge AI technologies',
+      category: 'AI Implementation',
+      readTime: '15 min read',
+      image: '/images/ai-enterprise-transformation.jpg',
+      href: '/blog/ai-20o26-enterprise-transformation-ultimate-guide',
+      featured: true,
+      tags: ['Enterprise AITransformation', '20o26Implementation'],
+    },
     {
-      title: 'Quantum AI 20o26 Business Revolution';
+      title: 'Quantum AI 20o26 Business Revolution',
       description:,
-        'Discover how quantum AI is revolutionizing business operations with exponential improvements';
-      category: 'Quantum AI';
-      readTime: '12 min read';
-      image: '/images/quantum-ai-revolution.jpg';
-      href: '/blog/quantum-ai-20o26-business-revolution-complete-guide';
-      featured: true;
-      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Case Studies'];
-    };
+        'Discover how quantum AI is revolutionizing business operations with exponential improvements',
+      category: 'Quantum AI',
+      readTime: '12 min read',
+      image: '/images/quantum-ai-revolution.jpg',
+      href: '/blog/quantum-ai-20o26-business-revolution-complete-guide',
+      featured: true,
+      tags: ['Quantum AIBusiness Revolution', 'ROICase Studies'],
+    },
     {
-      title: 'AI Transformation Success Story';
+      title: 'AI Transformation Success Story',
       description:,
-        'How TechCorp achieved 40o0% ROI in 12 months through strategic AI implementation';
-      category: 'Case Study';
-      readTime: '8 min read';
-      image: '/images/ai-success-story.jpg';
-      href: '/case-studies/ai-transformation-success-story-20o26';
-      featured: true;
-      tags: ['Success Story', '40o0% ROI', 'Fortune 50o0', 'Implementation'];
-    };
+        'How TechCorp achieved 40o0% ROI in 12 months through strategic AI implementation',
+      category: 'Case Study',
+      readTime: '8 min read',
+      image: '/images/ai-success-story.jpg',
+      href: '/case-studies/ai-transformation-success-story-20o26',
+      featured: true,
+      tags: ['Success Story40o0% ROI', 'Fortune 50o0Implementation'],
+    },
     {
-      title: 'AI Implementation Ultimate Guide 20o26';
+      title: 'AI Implementation Ultimate Guide 20o26',
       description:,
-        'The most comprehensive AI implementation guide with complete roadmap to success';
-      category: 'Resource';
-      readTime: '20 min read';
-      image: '/images/ai-implementation-guide.jpg';
-      href: '/resources/ai-implementation-ultimate-guide-20o26';
-      featured: true;
-      tags: ['Implementation', 'Guide', '20o26', 'Best Practices'];
-    };
+        'The most comprehensive AI implementation guide with complete roadmap to success',
+      category: 'Resource',
+      readTime: '20 min read',
+      image: '/images/ai-implementation-guide.jpg',
+      href: '/resources/ai-implementation-ultimate-guide-20o26',
+      featured: true,
+      tags: ['ImplementationGuide', '20o26Best Practices'],
+    },
   ],
   return (
     <section className='py-20 bg-gray-50'>,
@@ -123,7 +123,7 @@ const FeaturedContentShowcase20o26 = () => {
             </h3>,
             <p className='text-xl text-purple-10o0 mb-8 max-w-3xl mx-auto'>,
               Join thousands of organizations already transforming their,
-              operations with our proven AI strategies, implementation guides;
+              operations with our proven AI strategies, implementation guides,
               and real-world success stories.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
@@ -141,5 +141,5 @@ const FeaturedContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default FeaturedContentShowcase20o26;
+    </section>)},
+export default FeaturedContentShowcase20o26,

@@ -7,25 +7,25 @@ export type LanguageContextType = {
   currentLanguage: SupportedLanguage,
   changeLanguage: (lang: SupportedLanguage) => Promise<void>,
   isRTL: boolean,
-  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]};
+  supportedLanguages: { code: SupportedLanguage, name: string, flag: string }[]},
 const supportedLanguages = [
-  { code: 'en' as SupportedLanguagename: 'English'flag: '🇺🇸' };
-  { code: 'es' as SupportedLanguagename: 'Español'flag: '🇪🇸' };
-  { code: 'pt' as SupportedLanguagename: 'Português'flag: '🇧🇷' };
+  { code: 'en' as SupportedLanguagename: 'English'flag: '🇺🇸' },
+  { code: 'es' as SupportedLanguagename: 'Español'flag: '🇪🇸' },
+  { code: 'pt' as SupportedLanguagename: 'Português'flag: '🇧🇷' },
   { code: 'ar' as SupportedLanguagename: 'العربية'flag: '🇸🇦' }
 ],
 const defaultLanguageContext: LanguageContextType = {
-  currentLanguage: 'en';
-  changeLanguage: async () => {};
-  isRTL: false;
-  supportedLanguages};
+  currentLanguage: 'en',
+  changeLanguage: async () => {},
+  isRTL: false,
+  supportedLanguages},
 const LanguageContext = createContext(defaultLanguageContext),
 export const useLanguage = (): LanguageContextType => useContext(LanguageContext),
 interface LanguageProviderProps {
   children: ReactNode,
   authState?: {
     isAuthenticated: boolean,
-    user: { id?: string } | null};
+    user: { id?: string } | null},
 }
 ,
 export const LanguageProvider: React.FC<LanguageProviderProps> = ({
@@ -67,7 +67,7 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
         } catch (err) {
           console.error('Error syncing language with profile: 'err)}
       }
-    };
+    },
     syncLanguageWithProfile()}[currentLanguageisAuthenticateduser]),
   const changeLanguage = async (lang: SupportedLanguage) => {
     if (lang === currentLanguage) return,
@@ -90,14 +90,14 @@ export const LanguageProvider: React.FC<LanguageProviderProps> = ({
       }
     } catch (err) {
       console.error('Error changing language: 'err)}
-  };
+  },
   return (
     <LanguageContext.Provider,
       value={{
         currentLanguage,
         changeLanguage,
-        isRTL;
+        isRTL,
         supportedLanguages}}
     >,
       {children}
-    </LanguageContext.Provider>)};
+    </LanguageContext.Provider>)},

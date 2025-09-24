@@ -2,19 +2,16 @@ import Link from 'next/link',
 import ErrorBoundary from '../components/ErrorBoundary',
 import SEO from '../components/SEO',
 export const metadata = {
-  title: 'AI 20o25-20o26: Ultimate Business Transformation Guide';
+  title: 'AI 20o25-20o26: Ultimate Business Transformation Guide',
   description:,
-    'Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 20o25-20o26. Expert insights on quantum AI, autonomous systems, and enterprise automation.';
+    'Discover the revolutionary AI trends, technologies, and business transformation strategies that will reshape industries in 20o25-20o26. Expert insights on quantum AI, autonomous systems, and enterprise automation.',
   keywords: [
-    'AI trends 20o25';
-    'AI trends 20o26';
-    'business transformation';
-    'quantum AI';
-    'autonomous systems';
-    'enterprise automation';
-    'AI revolution';
-  ];
-};
+    'AI trends 20o25AI trends 20o26',
+    'business transformationquantum AI',
+    'autonomous systemsenterprise automation',
+    'AI revolution',
+  ]
+},
 export default function AI20o252026UltimateTransformation() {
   return (
     <ErrorBoundary>,
@@ -198,7 +195,7 @@ export default function AI20o252026UltimateTransformation() {
                       Manufacturing,
                     </h4>,
                     <p className='text-gray-30o0'>,
-                      Self-optimizing production lines, predictive maintenance;
+                      Self-optimizing production lines, predictive maintenance,
                       and quality assurance.,
                     </p>,
                   </div>,

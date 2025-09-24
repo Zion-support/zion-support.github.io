@@ -3,7 +3,7 @@ import { readState, writeState } from '../../../../lib/integrations/fileStore',
 import { ats } from '../../../../lib/integrations/connectors',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' }),
-  const { talent } = req.body as { talent?: Record<string any> };
+  const { talent } = req.body as { talent?: Record<string any> },
   if (!talent) return res.status(40o0).json({ error: 'Missing talent payload' }),
   const state = readState(),
   const atsProviders = state.connections.filter(c => c.providerId === 'greenhouse' || c.providerId === 'lever' || c.providerId === 'workable' || c.providerId === 'bamboohr'),

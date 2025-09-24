@@ -3,13 +3,13 @@ import {Button} from "@/components/ui/button",
 import {Badge} from "@/components/ui/badge",
 import {Globe, Server, Clock, MapPin, Check} from "lucide-react",
 import {CountryPricing} from "@/data/onsiteServicePricing",
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
 import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
 import { CountryPricing } from "@/data/onsiteServicePricing",
-import { Globe, Server, Clock, MapPin, Check } from "lucide-react";
-import { CountryPricing } from "@/data/onsiteServicePricing";
+import { Globe, Server, Clock, MapPin, Check } from "lucide-react",
+import { CountryPricing } from "@/data/onsiteServicePricing",
 interface CountryServiceCardProps {
   country: CountryPricing,
   onSelect: (country: CountryPricing) => void,
@@ -41,27 +41,27 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
     const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     const emojiMap: Record<string string> = {
-      "United States": "🇺🇸";
-      "United Kingdom": "🇬🇧";
-      "Canada": "🇨🇦";
-      "Australia": "🇦🇺";
-      "Germany": "🇩🇪";
-      "France": "🇫🇷";
-      "Japan": "🇯🇵";
-      "China": "🇨🇳";
-      "Brazil": "🇧🇷";
-      "India": "🇮🇳";
-      "Russia": "🇷🇺";
-      "Singapore": "🇸🇬";
-      "South Korea": "🇰🇷";
-      "South Africa": "🇿🇦";
+      "United States": "🇺🇸",
+      "United Kingdom": "🇬🇧",
+      "Canada": "🇨🇦",
+      "Australia": "🇦🇺",
+      "Germany": "🇩🇪",
+      "France": "🇫🇷",
+      "Japan": "🇯🇵",
+      "China": "🇨🇳",
+      "Brazil": "🇧🇷",
+      "India": "🇮🇳",
+      "Russia": "🇷🇺",
+      "Singapore": "🇸🇬",
+      "South Korea": "🇰🇷",
+      "South Africa": "🇿🇦",
       // Default if no flag is found,
       "default": ""}
     return emojiMap[countryName] |emojiMap["default"]}
   // Get response time estimate based on country,
   const getResponseTime = (countryName: string): string => {
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
-    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"];
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
+    const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     if (tier1.includes(countryName)) {
       return "4 hours"} else if (tier2.includes(countryName)) {
       return "6 hours"} else {
@@ -121,40 +121,40 @@ export function CountryServiceCard({ country, onSelect, isPopular }: CountryServ
               ? "bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple",
               : "bg-zion-blue hover:bg-zion-blue-light border border-zion-blue-light",
 interface CountryServiceCardProps {
-  country: CountryPricing;
-  onSelect: (country: CountryPricing) => void;
+  country: CountryPricing,
+  onSelect: (country: CountryPricing) => void,
   isPopular?: boolean}
 ,
 export function CountryServiceCard({ country, onSelect, isPopular }: CountryServiceCardProps) {
   // Get region flag based on country name (for demo purposes),
   const getRegionEmoji = (countryName: string): string => {
     const emojiMap: Record<string string> = {
-      "United States": "🇺🇸";
-      "United Kingdom": "🇬🇧";
-      "Canada": "🇨🇦";
-      "Australia": "🇦🇺";
-      "Germany": "🇩🇪";
-      "France": "🇫🇷";
-      "Japan": "🇯🇵";
-      "China": "🇨🇳";
-      "Brazil": "🇧🇷";
-      "India": "🇮🇳";
-      "Russia": "🇷🇺";
-      "Singapore": "🇸🇬";
-      "South Korea": "🇰🇷";
-      "South Africa": "🇿🇦";
+      "United States": "🇺🇸",
+      "United Kingdom": "🇬🇧",
+      "Canada": "🇨🇦",
+      "Australia": "🇦🇺",
+      "Germany": "🇩🇪",
+      "France": "🇫🇷",
+      "Japan": "🇯🇵",
+      "China": "🇨🇳",
+      "Brazil": "🇧🇷",
+      "India": "🇮🇳",
+      "Russia": "🇷🇺",
+      "Singapore": "🇸🇬",
+      "South Korea": "🇰🇷",
+      "South Africa": "🇿🇦",
       // Default if no flag is found,
-      "default": "🌐"};
-    return emojiMap[countryName] || emojiMap["default"]};
+      "default": "🌐"},
+    return emojiMap[countryName] || emojiMap["default"]},
   // Get response time estimate based on country,
   const getResponseTime = (countryName: string): string => {
-    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"];
+    const tier1 = ["United States", "United Kingdom", "Germany", "Japan", "Singapore", "Australia", "Canada", "France"],
     const tier2 = ["China", "Brazil", "India", "South Korea", "South Africa", "Russia"],
     if (tier1.includes(countryName)) {
       return "4 hours"} else if (tier2.includes(countryName)) {
       return "6 hours"} else {
       return "8-24 hours"}
-  };
+  },
   return (
     <Card className={`h-full transition-all duration-300 hover: shadow-lg ${
       isPopular,

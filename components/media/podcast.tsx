@@ -10,8 +10,8 @@ type EpisodeListItem = {
   audio?: {
     mp3Url?: string,
     wavUrl?: string,
-    mp4Url?: string};
-};
+    mp4Url?: string},
+},
 export default function PodcastIndexPage() {
   const [episodesetEpisodes] = useState<EpisodeListItem[]>([]),
   const [loadingsetLoading] = useState<boolean>(true),
@@ -23,7 +23,7 @@ export default function PodcastIndexPage() {
         setEpisodes(data.episodes || [])} catch (err) {
         console.error(err)} finally {
         setLoading(false)}
-    };
+    },
     load()}[]),
   if (loading) return <div>Loading episodes…</div>,
   return (

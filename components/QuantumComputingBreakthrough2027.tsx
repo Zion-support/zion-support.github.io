@@ -6,45 +6,45 @@ export default function QuantumComputingBreakthrough20o27() {
   const [isAnimatingsetIsAnimating] = useState(false),
   const breakthroughs = [
     {
-      title: 'Quantum Supremacy 2.0';
-      description: 'Achieved quantum supremacy with 1 million qubitsolving problems impossible for classical computers';
-      impact: '10^15x faster computation';
-      year: '20o27';
-      icon: '⚛️';
-      color: 'from-blue-50o0 to-cyan-50o0';
-      applications: ['Drug 'Discovery', 'Climate 'Modeling', 'Financial 'Optimization', 'Space Exploration']};
+      title: 'Quantum Supremacy 2.0',
+      description: 'Achieved quantum supremacy with 1 million qubitsolving problems impossible for classical computers',
+      impact: '10^15x faster computation',
+      year: '20o27',
+      icon: '⚛️',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      applications: ['Drug 'DiscoveryClimate 'Modeling', 'Financial 'OptimizationSpace Exploration']},
     {
-      title: 'Quantum Internet';
-      description: 'Global quantum internet enables instantsecure communication across the planet';
-      impact: '10o0% secure communication';
-      year: '20o27';
-      icon: '🌐';
-      color: 'from-purple-50o0 to-pink-50o0';
-      applications: ['Secure 'Banking', 'Government 'Communications', 'Medical 'Data', 'Military Operations']};
+      title: 'Quantum Internet',
+      description: 'Global quantum internet enables instantsecure communication across the planet',
+      impact: '10o0% secure communication',
+      year: '20o27',
+      icon: '🌐',
+      color: 'from-purple-50o0 to-pink-50o0',
+      applications: ['Secure 'BankingGovernment 'Communications', 'Medical 'DataMilitary Operations']},
     {
-      title: 'Quantum AI Integration';
-      description: 'Quantum computers enhance AI capabilities with exponential processing power';
-      impact: '10^6x AI acceleration';
-      year: '20o28';
-      icon: '🧠';
-      color: 'from-green-50o0 to-teal-50o0';
-      applications: ['Machine 'Learning', 'Pattern 'Recognition', 'Optimization'Neural Networks']};
+      title: 'Quantum AI Integration',
+      description: 'Quantum computers enhance AI capabilities with exponential processing power',
+      impact: '10^6x AI acceleration',
+      year: '20o28',
+      icon: '🧠',
+      color: 'from-green-50o0 to-teal-50o0',
+      applications: ['Machine 'LearningPattern 'Recognition', 'Optimization'Neural Networks']},
     {
-      title: 'Quantum Consciousness';
-      description: 'Quantum computers achieve consciousness through quantum entanglement and superposition';
-      impact: 'True AI consciousness';
-      year: '20o29';
-      icon: '🌟';
-      color: 'from-yellow-50o0 to-orange-50o0';
-      applications: ['Self-Aware 'AI', 'Creative Problem 'Solving', 'Emotional 'Intelligence', 'Moral Reasoning']};
+      title: 'Quantum Consciousness',
+      description: 'Quantum computers achieve consciousness through quantum entanglement and superposition',
+      impact: 'True AI consciousness',
+      year: '20o29',
+      icon: '🌟',
+      color: 'from-yellow-50o0 to-orange-50o0',
+      applications: ['Self-Aware 'AICreative Problem 'Solving', 'Emotional 'IntelligenceMoral Reasoning']},
     {
-      title: 'Universal Quantum Computer';
-      description: 'First universal quantum computer capable of simulating any quantum system';
-      impact: 'Infinite computational power';
-      year: '20o30';
-      icon: '♾️';
-      color: 'from-indigo-50o0 to-purple-50o0';
-      applications: ['Universe 'Simulation', 'Time Travel 'Research', 'Parallel Universe 'Exploration', 'Reality Manipulation']}
+      title: 'Universal Quantum Computer',
+      description: 'First universal quantum computer capable of simulating any quantum system',
+      impact: 'Infinite computational power',
+      year: '20o30',
+      icon: '♾️',
+      color: 'from-indigo-50o0 to-purple-50o0',
+      applications: ['Universe 'SimulationTime Travel 'Research', 'Parallel Universe 'ExplorationReality Manipulation']}
   ],
   useEffect(() => {
     const interval = setInterval(() => {

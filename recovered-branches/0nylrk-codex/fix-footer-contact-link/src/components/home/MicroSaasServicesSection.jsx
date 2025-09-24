@@ -1,13 +1,13 @@
 import { Link } from 'react-router-dom',
 import {
-  Zap;
-  Star;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp;
-  Shield;
-  Code;
-  Users;
+  Zap,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Shield,
+  Code,
+  Users,
 } from 'lucide-react',
 import { getFeaturedMicroSaasServices } from '@/data/microSaasServices',
 import { Button } from '@/components/ui/button',

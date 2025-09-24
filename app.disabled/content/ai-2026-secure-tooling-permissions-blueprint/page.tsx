@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Secure Tooling & Permissions Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Secure Tooling & Permissions Blueprint | Zion Tech Group',
   description:,
-    'Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.';
-};
+    'Design a secure tool-access model for autonomous agents with least-privilege IAM, approvals, and runtime enforcement.',
+},
 export default function SecureToolingPermissionsBlueprint20o26() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -23,7 +23,7 @@ export default function SecureToolingPermissionsBlueprint20o26() {
             AI 20o26: Secure Tooling & Permissions Blueprint,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            A reference architecture for safe tool invocation by agents;
+            A reference architecture for safe tool invocation by agents,
             including permissions, approvals, and runtime guardrails.,
           </p>,
         </header>,

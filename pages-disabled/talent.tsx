@@ -1,66 +1,66 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { Users, MapPin, Clock, ArrowRight, CheckCircle, Star, Award } from 'lucide-react',
 export default function Talent() {
   const openPositions = [
     {
-      id: 1;
-      title: "Senior AI/ML Engineer";
-      department: "Engineering";
-      location: "San Francisco, CA";
-      type: "Full-time";
-      experience: "5+ years";
-      description: "Lead the development of cutting-edge AI solutions and machine learning models."};
+      id: 1,
+      title: "Senior AI/ML Engineer",
+      department: "Engineering",
+      location: "San Francisco, CA",
+      type: "Full-time",
+      experience: "5+ years",
+      description: "Lead the development of cutting-edge AI solutions and machine learning models."},
     {
-      id: 2;
-      title: "Cloud Solutions Architect";
-      department: "Engineering";
-      location: "Remote";
-      type: "Full-time";
-      experience: "7+ years";
-      description: "Design and implement scalable cloud architectures for enterprise clients."};
+      id: 2,
+      title: "Cloud Solutions Architect",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      experience: "7+ years",
+      description: "Design and implement scalable cloud architectures for enterprise clients."},
     {
-      id: 3;
-      title: "Full Stack Developer";
-      department: "Engineering";
-      location: "San Francisco, CA";
-      type: "Full-time";
-      experience: "3+ years";
-      description: "Build modern web applications using React, Node.js, and cloud technologies."};
+      id: 3,
+      title: "Full Stack Developer",
+      department: "Engineering",
+      location: "San Francisco, CA",
+      type: "Full-time",
+      experience: "3+ years",
+      description: "Build modern web applications using React, Node.js, and cloud technologies."},
     {
-      id: 4;
-      title: "DevOps Engineer";
-      department: "Engineering";
-      location: "Remote";
-      type: "Full-time";
-      experience: "4+ years";
-      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."};
+      id: 4,
+      title: "DevOps Engineer",
+      department: "Engineering",
+      location: "Remote",
+      type: "Full-time",
+      experience: "4+ years",
+      description: "Manage infrastructure, CI/CD pipelines, and ensure system reliability."},
     {
-      id: 5;
-      title: "Business Development Manager";
-      department: "Sales";
-      location: "San Francisco, CA";
-      type: "Full-time";
-      experience: "5+ years";
-      description: "Drive growth by building relationships with enterprise clients and partners."};
+      id: 5,
+      title: "Business Development Manager",
+      department: "Sales",
+      location: "San Francisco, CA",
+      type: "Full-time",
+      experience: "5+ years",
+      description: "Drive growth by building relationships with enterprise clients and partners."},
     {
-      id: 6;
-      title: "UX/UI Designer";
-      department: "Design";
-      location: "Remote";
-      type: "Full-time";
-      experience: "3+ years";
+      id: 6,
+      title: "UX/UI Designer",
+      department: "Design",
+      location: "Remote",
+      type: "Full-time",
+      experience: "3+ years",
       description: "Create intuitive and beautiful user experiences for our digital products."}
   ],
   const benefits = [
-    "Competitive salary and equity";
-    "Comprehensive health insurance";
-    "Flexible work arrangements";
-    "Professional development budget";
-    "Latest technology and tools";
-    "Team building events";
-    "Unlimited PTO";
+    "Competitive salary and equity",
+    "Comprehensive health insurance",
+    "Flexible work arrangements",
+    "Professional development budget",
+    "Latest technology and tools",
+    "Team building events",
+    "Unlimited PTO",
     "40o1(k) matching"],
   return (
     <>,

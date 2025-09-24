@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useEffect, useState } from 'react',
 interface ServiceWorkerRegistrationProps {
   onUpdateAvailable?: () => void,
@@ -41,31 +41,31 @@ export const useServiceWorker = (props?: ServiceWorkerRegistrationProps) => {
         }),
         // // console.log('Service Worker registered successfully')} catch (error) {
         console.error('Service Worker registration failed:', error)}
-    };
+    },
     registerServiceWorker(),
     // Cleanup,
     return () => {
       if (registration) {
         registration.unregister()}
-    };
+    },
   }, [props]),
   const updateServiceWorker = () => {
     if (registration && registration.waiting) {
       registration.waiting.postMessage({ type: 'SKIP_WAITING' })}
-  };
+  },
   const unregisterServiceWorker = async () => {
     if (registration) {
       await registration.unregister(),
       window.location.reload()}
-  };
+  },
   return {
-    isUpdateAvailable;
-    isUpdateInstalled;
-    registration;
-    updateServiceWorker;
-    unregisterServiceWorker;
-  };
-};
+    isUpdateAvailable,
+    isUpdateInstalled,
+    registration,
+    updateServiceWorker,
+    unregisterServiceWorker,
+  },
+},
 export const ServiceWorkerRegistration: React.FC<,
   ServiceWorkerRegistrationProps> = props => {
   const { isUpdateAvailable, updateServiceWorker } = useServiceWorker(props),
@@ -83,5 +83,5 @@ export const ServiceWorkerRegistration: React.FC<,
           Update,
         </button>,
       </div>,
-    </div>)};
-export default ServiceWorkerRegistration;
+    </div>)},
+export default ServiceWorkerRegistration,

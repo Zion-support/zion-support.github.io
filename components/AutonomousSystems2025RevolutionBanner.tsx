@@ -132,7 +132,7 @@ export default function AutonomousSystems20o25RevolutionBanner() {
               Ready for Autonomous Transformation?,
             </h3>,
             <p className='text-lg opacity-90 mb-6 max-w-2xl mx-auto'>,
-              'Don', 't get left behind in the autonomous revolution. Start your,
+              'Dont get left behind in the autonomous revolution. Start your,
               journey to Level 5 business autonomy with Zion Tech 'Group', 's,
               expert guidance and cutting-edge solutions.,
             </p>,

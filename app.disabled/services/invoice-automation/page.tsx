@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'invoice-automation - Zion Tech Group';
+  title: 'invoice-automation - Zion Tech Group',
   description:,
-    'Professional invoice-automation solutions for your business needs.';
-  keywords: 'invoice-automation, services, business, technology';
-};
+    'Professional invoice-automation solutions for your business needs.',
+  keywords: 'invoice-automation, services, business, technology',
+},
 export default function InvoiceAutomationPage() {
   return (
     <div className='min-h-screen bg-white'>,

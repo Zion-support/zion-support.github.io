@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react',
 export type StepperProps = {
   steps: string[],
-  current: number};
+  current: number},
 export default function Stepper({ steps, current }: StepperProps) {
   return (
     <ol className='flex items-center gap-4 overflow-x-auto py-2'>,

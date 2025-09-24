@@ -1,4 +1,4 @@
-import { Resume } from "@/types/resume";
+import { Resume } from "@/types/resume",
   id: string,
   title: string,
   type: 'ai_resume' | 'custom_upload',
@@ -7,14 +7,14 @@ import { Resume } from "@/types/resume";
 ,
 export interface ResumeSelectorProps {
 export interface ResumeOption {
-  id: string;
-  title: string;
-  type: 'ai_resume' | 'custom_upload';
-  resume?: Resume;
+  id: string,
+  title: string,
+  type: 'ai_resume' | 'custom_upload',
+  resume?: Resume,
   file?: File,
 export interface ResumeOption {
-  id: string;
-  title: string;
+  id: string,
+  title: string,
   type: 'ai_resume' | 'custom_upload',
   resume?: Resume,
   file?: File}

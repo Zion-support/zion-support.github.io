@@ -4,26 +4,26 @@ export default function SimpleService17555366324887c6l7htn7() {
   const [selectedPlan, setSelectedPlan] = useState(0),
   const serviceData ={
     features: [
-      "AI-Powered Automation";
-      "Machine Learning Solutions";
-      "Data Analytics & Insights";
-      "Custom AI Development";
-      "24/7 Support & Maintenance";
-      "Scalable Infrastructure"];
+      "AI-Powered Automation",
+      "Machine Learning Solutions",
+      "Data Analytics & Insights",
+      "Custom AI Development",
+      "24/7 Support & Maintenance",
+      "Scalable Infrastructure"],
     pricing: [
       {
-        plan: "Starter";
-        price: "$999/month";
-        features: ["Basic AI Integration", "Standard Support", "Monthly Reports"]};
+        plan: "Starter",
+        price: "$999/month",
+        features: ["Basic AI Integration", "Standard Support", "Monthly Reports"]},
       {
-        plan: "Professional";
-        price: "$2,499/month";
-        features: ["Advanced AI Features", "Priority Support", "Weekly Reports", "Custom Training"]};
+        plan: "Professional",
+        price: "$2,499/month",
+        features: ["Advanced AI Features", "Priority Support", "Weekly Reports", "Custom Training"]},
       {
-        plan: "Enterprise";
-        price: "$4,999/month";
+        plan: "Enterprise",
+        price: "$4,999/month",
         features: ["Full AI Suite", "Dedicated Support", "Real-time Monitoring", "Custom Development"]}
-    ]};
+    ]},
   return (
     <div className="min-h-screen bg-slate-950 text-white">,
       <Head>,

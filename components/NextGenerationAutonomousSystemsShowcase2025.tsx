@@ -5,103 +5,93 @@ const NextGenerationAutonomousSystemsShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const content = [
     {
-      id: 'next-gen-autonomous-systems-blog';
+      id: 'next-gen-autonomous-systems-blog',
       title:,
-        'AI 20o25: Next-Generation Autonomous Systems Revolutionary Breakthrough';
-      subtitle: 'Ultimate Guide to 18,0o00% ROI';
+        'AI 20o25: Next-Generation Autonomous Systems Revolutionary Breakthrough',
+      subtitle: 'Ultimate Guide to 18,0o00% ROI',
       description:,
-        'Discover how next-generation autonomous systems are revolutionizing enterprise operations with unprecedented 18,0o00% ROI and $20o0B+ in savings across Fortune 50o0 companies.';
-      type: 'blog';
-      url: '/blog/ai-20o25-next-generation-autonomous-systems-revolutionary-breakthrough';
+        'Discover how next-generation autonomous systems are revolutionizing enterprise operations with unprecedented 18,0o00% ROI and $20o0B+ in savings across Fortune 50o0 companies.',
+      type: 'blog',
+      url: '/blog/ai-20o25-next-generation-autonomous-systems-revolutionary-breakthrough',
       metrics: {
-        roi: '18,0o00%';
-        savings: '$20o0B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.97%';
-      };
-      readingTime: '35 min read';
-      featured: true;
+        roi: '18,0o00%',
+        savings: '$20o0B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.97%'
+      },
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Autonomous Systems';
-        'Next-Generation AI';
-        'ROI';
-        'Fortune 50o0';
-        '20o25';
-        'Revolutionary Breakthrough';
-        '18,0o00% ROI';
-      ];
-    };
+        'AI RevolutionAutonomous Systems',
+        'Next-Generation AIROI',
+        'Fortune 50o020o25',
+        'Revolutionary Breakthrough18,0o00% ROI',
+      ],
+    },
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 Next-Generation Autonomous Systems Success Story';
-      subtitle: '$20o0B Annual Savings - 18,0o00% ROI';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 Next-Generation Autonomous Systems Success Story',
+      subtitle: '$20o0B Annual Savings - 18,0o00% ROI',
       description:,
-        'Discover how a Fortune 50o0 manufacturing giant achieved unprecedented 18,0o00% ROI and $20o0B in annual savings through next-generation autonomous systems implementation.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-next-generation-autonomous-systems-180o00-roi-success-story';
+        'Discover how a Fortune 50o0 manufacturing giant achieved unprecedented 18,0o00% ROI and $20o0B in annual savings through next-generation autonomous systems implementation.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-next-generation-autonomous-systems-180o00-roi-success-story',
       metrics: {
-        roi: '18,0o00%';
-        savings: '$20o0B';
-        efficiency: '2,40o0%';
-        quality: '99.97%';
-      };
-      readingTime: '25 min read';
-      featured: true;
+        roi: '18,0o00%',
+        savings: '$20o0B',
+        efficiency: '2,40o0%',
+        quality: '99.97%'
+      },
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Next-Generation Autonomous Systems';
-        '18,0o00% ROI';
-        'Success Story';
-        'Manufacturing';
-        'Revolutionary Breakthrough';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'Next-Generation Autonomous Systems18,0o00% ROI',
+        'Success StoryManufacturing',
+        'Revolutionary Breakthrough',
+      ],
+    },
     {
-      id: 'implementation-guide';
-      title: 'Next-Generation Autonomous Systems Implementation Guide 20o25';
-      subtitle: 'Complete Roadmap to 18,0o00% ROI';
+      id: 'implementation-guide',
+      title: 'Next-Generation Autonomous Systems Implementation Guide 20o25',
+      subtitle: 'Complete Roadmap to 18,0o00% ROI',
       description:,
-        'Complete implementation guide for next-generation autonomous systems that have delivered 18,0o00% ROI and $20o0B+ in savings for Fortune 50o0 companies.';
-      type: 'resource';
-      url: '/resources/next-generation-autonomous-systems-implementation-guide-20o25';
+        'Complete implementation guide for next-generation autonomous systems that have delivered 18,0o00% ROI and $20o0B+ in savings for Fortune 50o0 companies.',
+      type: 'resource',
+      url: '/resources/next-generation-autonomous-systems-implementation-guide-20o25',
       metrics: {
-        roi: '18,0o00%';
-        savings: '$20o0B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.97%';
-      };
-      readingTime: '45 min read';
-      featured: true;
+        roi: '18,0o00%',
+        savings: '$20o0B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.97%'
+      },
+      readingTime: '45 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Next-Generation Autonomous Systems';
-        'ROI';
-        'Strategy';
-        'Framework';
-        '20o25';
-        '18,0o00% ROI';
-      ];
-    };
+        'Implementation GuideNext-Generation Autonomous Systems',
+        'ROIStrategy',
+        'Framework20o25',
+        '18,0o00% ROI',
+      ],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -117,7 +107,7 @@ const NextGenerationAutonomousSystemsShowcase20o25 = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -128,7 +118,7 @@ const NextGenerationAutonomousSystemsShowcase20o25 = () => {
         return 'from-purple-50o0 to-purple-60o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -216,7 +206,7 @@ const NextGenerationAutonomousSystemsShowcase20o25 = () => {
                   <div className='flex items-center space-x-3'>,
                     <span className='text-2xl'>{getTypeIcon(item.type)}</span>,
                     <span className='text-sm font-medium uppercase tracking-wide'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -340,5 +330,5 @@ const NextGenerationAutonomousSystemsShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NextGenerationAutonomousSystemsShowcase20o25;
+    </section>)},
+export default NextGenerationAutonomousSystemsShowcase20o25,

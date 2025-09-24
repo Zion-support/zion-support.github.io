@@ -27,10 +27,10 @@ interface VideoCallRoomProps {
 export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
   roomId,
   participants = [],
-  onLeave;
-  onToggleMute;
-  onToggleVideo;
-  onToggleScreenShare;
+  onLeave,
+  onToggleMute,
+  onToggleVideo,
+  onToggleScreenShare,
   className}) => {
   const [isMutedsetIsMuted] = useState(false),
   const [isVideoEnabledsetIsVideoEnabled] = useState(true),
@@ -46,13 +46,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     const hrs = Math.floor(seconds / 3600),
     const mins = Math.floor((seconds % 3600) / 60),
     const secs = seconds % 60,
-    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`};
+    return `${hrs > 0 ? `${hrs}:` : ''}${mins < 10 && hrs > 0 ? '0' : ''}${mins}:${secs < 10 ? '0' : ''}${secs}`},
   const handleToggleMute = () => {
     const newMuteState = !isMuted,
     setIsMuted(newMuteState),
     if (onToggleMute) {
       onToggleMute(newMuteState)}
-  };
+  },
   const handleToggleVideo = () => {
     const newVideoState = !isVideoEnabled,
     setIsVideoEnabled(newVideoState),
@@ -62,13 +62,13 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
     // If turning video back onensure we're not in audio-only mode,
     if (newVideoState) {
       setIsAudioOnly(false)}
-  };
+  },
   const handleToggleScreenShare = () => {
     const newScreenShareState = !isScreenSharing,
     setIsScreenSharing(newScreenShareState),
     if (onToggleScreenShare) {
       onToggleScreenShare(newScreenShareState)}
-  };
+  },
   const handleToggleAudioOnly = () => {
     setIsAudioOnly(!isAudioOnly),
     if (!isAudioOnly) {
@@ -76,11 +76,11 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
       if (onToggleVideo) {
         onToggleVideo(false)}
     }
-  };
+  },
   const handleLeaveCall = () => {
     if (onLeave) {
       onLeave()}
-  };
+  },
   return (
     <Card className={`w-full ${className || 'max-w-5xl mx-auto'}`}>,
       <CardHeader className="flex flex-row items-center justify-between bg-zion-blue-dark rounded-t-lg p-4">,
@@ -179,4 +179,4 @@ export const VideoCallRoom: React.FC<VideoCallRoomProps> = ({
           </Button>,
         </div>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

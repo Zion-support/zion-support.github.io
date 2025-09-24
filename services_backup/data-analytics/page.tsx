@@ -1,6 +1,6 @@
 export const metadata ={
-  title: 'Data Analytics Solutions | Zion Tech Group';
-  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'};
+  title: 'Data Analytics Solutions | Zion Tech Group',
+  description: 'Advanced data analytics solutions including business intelligence, data visualization, predictive analytics, and data engineering. Turn data into actionable insights.'},
 export default function DataAnalyticsPage() {
   return (
     <div className="animate-fade-in">,
@@ -191,11 +191,11 @@ function Pricing() {
           price="$8k–$20k",
           duration="3–6 weeks",
           features={[
-            "Data quality assessment";
-            "Analytics opportunity identification";
-            "Technology stack recommendations";
-            "ROI analysis and business case";
-            "Implementation roadmap";
+            "Data quality assessment",
+            "Analytics opportunity identification",
+            "Technology stack recommendations",
+            "ROI analysis and business case",
+            "Implementation roadmap",
             "Pilot project design"]} ,
          />,
         <Plan
@@ -203,11 +203,11 @@ function Pricing() {
           price="$25k–$10o0k",
           duration="10–20 weeks",
           features={[
-            "End-to-end analytics solution";
-            "Data pipeline development";
-            "Dashboard and visualization creation";
-            "Machine learning model development";
-            "Testing and validation";
+            "End-to-end analytics solution",
+            "Data pipeline development",
+            "Dashboard and visualization creation",
+            "Machine learning model development",
+            "Testing and validation",
             "User training and documentation"]} ,
          />,
         <Plan
@@ -215,11 +215,11 @@ function Pricing() {
           price="$5k+/mo",
           duration="Ongoing",
           features={[
-            "Continuous data monitoring";
-            "Model maintenance and updates";
-            "Performance optimization";
-            "Regular reporting and insights";
-            "Data quality management";
+            "Continuous data monitoring",
+            "Model maintenance and updates",
+            "Performance optimization",
+            "Regular reporting and insights",
+            "Data quality management",
             "Scalability and growth support"]} ,
          />,
       </div>,

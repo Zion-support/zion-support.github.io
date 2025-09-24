@@ -16,41 +16,41 @@ interface AssessmentResults {
 ,
 export default function QuantumAIReadinessAssessment() {
   const [formData, setFormData] = useState({
-    organizationSize: 'medium';
-    industry: 'technology';
-    currentAIMaturity: 3;
-    quantumAwareness: 2;
-    dataComplexity: 3;
-    computationalNeeds: 3;
-    budget: 'moderate';
-    timeline: '12-18';
-    technicalCapabilities: 3;
-    leadershipCommitment: 3;
-    changeManagement: 3;
+    organizationSize: 'medium',
+    industry: 'technology',
+    currentAIMaturity: 3,
+    quantumAwareness: 2,
+    dataComplexity: 3,
+    computationalNeeds: 3,
+    budget: 'moderate',
+    timeline: '12-18',
+    technicalCapabilities: 3,
+    leadershipCommitment: 3,
+    changeManagement: 3,
     riskTolerance: 3}),
   const [results, setResults] = useState<AssessmentResults | null>(null),
   const [isCalculating, setIsCalculating] = useState(false),
   const organizationSizes = {
-    startup: { name: 'Startup (1-50)', multiplier: 0.6 };
-    small: { name: 'Small (51-200)', multiplier: 0.8 };
-    medium: { name: 'Medium (201-1000)', multiplier: 1.0 };
-    large: { name: 'Large (1001-5000)', multiplier: 1.3 };
+    startup: { name: 'Startup (1-50)', multiplier: 0.6 },
+    small: { name: 'Small (51-200)', multiplier: 0.8 },
+    medium: { name: 'Medium (201-1000)', multiplier: 1.0 },
+    large: { name: 'Large (1001-5000)', multiplier: 1.3 },
     enterprise: { name: 'Enterprise (5000+)', multiplier: 1.6 }
-  };
+  },
   const industries = {
-    technology: { name: 'Technology', quantumPotential: 1.4 };
-    financial: { name: 'Financial Services', quantumPotential: 1.2 };
-    healthcare: { name: 'Healthcare', quantumPotential: 1.0 };
-    manufacturing: { name: 'Manufacturing', quantumPotential: 1.1 };
-    energy: { name: 'Energy', quantumPotential: 1.3 };
+    technology: { name: 'Technology', quantumPotential: 1.4 },
+    financial: { name: 'Financial Services', quantumPotential: 1.2 },
+    healthcare: { name: 'Healthcare', quantumPotential: 1.0 },
+    manufacturing: { name: 'Manufacturing', quantumPotential: 1.1 },
+    energy: { name: 'Energy', quantumPotential: 1.3 },
     aerospace: { name: 'Aerospace', quantumPotential: 1.5 }
-  };
+  },
   const budgetLevels = {
-    limited: { name: 'Limited ($100K - $1M)', base: 500000 };
-    moderate: { name: 'Moderate ($1M - $10M)', base: 5000000 };
-    substantial: { name: 'Substantial ($10M - $50M)', base: 30000000 };
+    limited: { name: 'Limited ($100K - $1M)', base: 500000 },
+    moderate: { name: 'Moderate ($1M - $10M)', base: 5000000 },
+    substantial: { name: 'Substantial ($10M - $50M)', base: 30000000 },
     unlimited: { name: 'Unlimited ($50M+)', base: 100000000 }
-  };
+  },
   const calculateReadiness = () => {
     setIsCalculating(true),
     setTimeout(() => {
@@ -76,14 +76,14 @@ export default function QuantumAIReadinessAssessment() {
       const estimatedInvestment = budget.base * orgSize.multiplier * industry.quantumPotential,
       const expectedROI = calculateExpectedROI(overallScore, industry.quantumPotential),
       setResults({
-        overallScore;
-        readinessLevel;
-        recommendations;
-        implementationRoadmap;
-        estimatedInvestment;
-        expectedROI;
+        overallScore,
+        readinessLevel,
+        recommendations,
+        implementationRoadmap,
+        estimatedInvestment,
+        expectedROI,
         timeline: formData.timeline}),
-      setIsCalculating(false)}, 2000)};
+      setIsCalculating(false)}, 2000)},
   const generateRecommendations = (score: number, data: any) => {
     const recommendations = [],
     if (data.currentAIMaturity < 3) {
@@ -108,110 +108,94 @@ export default function QuantumAIReadinessAssessment() {
       recommendations.push('Proceed with quantum AI pilot program'),
       recommendations.push('Establish quantum computing partnerships')}
 ,
-    return recommendations};
+    return recommendations},
   const createImplementationRoadmap = (level: string, data: any) => {
     const roadmaps = {
       'Early Stage': [
         {
-          phase: 'Foundation Building';
-          duration: '6-12 months';
+          phase: 'Foundation Building',
+          duration: '6-12 months',
           keyActivities: [
-            'AI maturity assessment and improvement';
-            'Quantum computing education programs';
-            'Technical team development';
-            'Data quality enhancement']};
+            'AI maturity assessment and improvementQuantum computing education programs',
+            'Technical team developmentData quality enhancement']},
         {
-          phase: 'Pilot Planning';
-          duration: '3-6 months';
+          phase: 'Pilot Planning',
+          duration: '3-6 months',
           keyActivities: [
-            'Pilot project identification';
-            'Technology partner selection';
-            'Budget allocation and approval';
-            'Stakeholder engagement']}
-      ];
+            'Pilot project identificationTechnology partner selection',
+            'Budget allocation and approvalStakeholder engagement']}
+      ],
       'Developing': [
         {
-          phase: 'Capability Development';
-          duration: '3-6 months';
+          phase: 'Capability Development',
+          duration: '3-6 months',
           keyActivities: [
-            'Quantum computing training';
-            'Technical infrastructure planning';
-            'Pilot project design';
-            'Partnership establishment']};
+            'Quantum computing trainingTechnical infrastructure planning',
+            'Pilot project designPartnership establishment']},
         {
-          phase: 'Pilot Implementation';
-          duration: '6-12 months';
+          phase: 'Pilot Implementation',
+          duration: '6-12 months',
           keyActivities: [
-            'Limited quantum AI deployment';
-            'Performance monitoring';
-            'Team training and support';
-            'Results analysis']}
-      ];
+            'Limited quantum AI deploymentPerformance monitoring',
+            'Team training and supportResults analysis']}
+      ],
       'Near Ready': [
         {
-          phase: 'Pilot Execution';
-          duration: '3-6 months';
+          phase: 'Pilot Execution',
+          duration: '3-6 months',
           keyActivities: [
-            'Quantum AI pilot deployment';
-            'Performance optimization';
-            'Stakeholder training';
-            'Success metrics tracking']};
+            'Quantum AI pilot deploymentPerformance optimization',
+            'Stakeholder trainingSuccess metrics tracking']},
         {
-          phase: 'Scaling Preparation';
-          duration: '6-12 months';
+          phase: 'Scaling Preparation',
+          duration: '6-12 months',
           keyActivities: [
-            'Pilot results analysis';
-            'Scaling strategy development';
-            'Infrastructure expansion';
-            'Change management rollout']}
-      ];
+            'Pilot results analysisScaling strategy development',
+            'Infrastructure expansionChange management rollout']}
+      ],
       'Quantum Ready': [
         {
-          phase: 'Full Implementation';
-          duration: '6-12 months';
+          phase: 'Full Implementation',
+          duration: '6-12 months',
           keyActivities: [
-            'Enterprise-wide quantum AI deployment';
-            'Advanced capability development';
-            'Continuous optimization';
-            'Competitive advantage realization']};
+            'Enterprise-wide quantum AI deploymentAdvanced capability development',
+            'Continuous optimizationCompetitive advantage realization']},
         {
-          phase: 'Innovation Leadership';
-          duration: 'Ongoing';
+          phase: 'Innovation Leadership',
+          duration: 'Ongoing',
           keyActivities: [
-            'Advanced quantum applications';
-            'Industry leadership positioning';
-            'Continuous innovation';
-            'Market expansion']}
-      ]};
-    return roadmaps[level as keyof typeof roadmaps] || roadmaps['Early Stage']};
+            'Advanced quantum applicationsIndustry leadership positioning',
+            'Continuous innovationMarket expansion']}
+      ]},
+    return roadmaps[level as keyof typeof roadmaps] || roadmaps['Early Stage']},
   const calculateExpectedROI = (score: number, quantumPotential: number) => {
     const baseROI = 200, // Base ROI percentage,
     const scoreMultiplier = score / 100,
     const potentialMultiplier = quantumPotential,
-    return Math.round(baseROI * scoreMultiplier * potentialMultiplier)};
+    return Math.round(baseROI * scoreMultiplier * potentialMultiplier)},
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0;
-    }).format(amount)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
+    }).format(amount)},
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-600',
     if (score >= 60) return 'text-blue-600',
     if (score >= 40) return 'text-yellow-600',
-    return 'text-red-600'};
+    return 'text-red-600'},
   const getReadinessColor = (level: string) => {
     switch (level) {
       case 'Quantum Ready': return 'bg-green-100 text-green-800',
       case 'Near Ready': return 'bg-blue-100 text-blue-800',
       case 'Developing': return 'bg-yellow-100 text-yellow-800',
       default: return 'bg-red-100 text-red-800'}
-  };
+  },
   return (
     <div className="min-h-screen bg-gray-50 py-12">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,

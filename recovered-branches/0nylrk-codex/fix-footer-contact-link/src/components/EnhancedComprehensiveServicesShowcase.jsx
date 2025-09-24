@@ -7,15 +7,15 @@ const EnhancedComprehensiveServicesShowcase = () => {
   const [selectedService, setSelectedService] = useState(null),
   const allServices = [
     ...advancedInnovativeServicesExpansionV3.map(service => ({
-      ...service;
-      type: 'Advanced AI & Innovation';
-      displayPrice: service.price;
-    }));
+      ...service,
+      type: 'Advanced AI & Innovation',
+      displayPrice: service.price
+    })),
     ...specializedEnterpriseSolutions20o25.map(service => ({
-      ...service;
-      type: 'Specialized Enterprise';
-      displayPrice: service.price;
-    }));
+      ...service,
+      type: 'Specialized Enterprise',
+      displayPrice: service.price
+    })),
   ],
   const filteredServices = allServices.filter(service => {
     const matchesCategory =,
@@ -26,22 +26,22 @@ const EnhancedComprehensiveServicesShowcase = () => {
       service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch}),
   const categories = [
-    { id: 'all', name: 'All Services', count: allServices.length };
+    { id: 'all', name: 'All Services', count: allServices.length },
     {
-      id: 'Advanced AI & Innovation';
-      name: 'Advanced AI & Innovation';
-      count: advancedInnovativeServicesExpansionV3.length;
-    };
+      id: 'Advanced AI & Innovation',
+      name: 'Advanced AI & Innovation',
+      count: advancedInnovativeServicesExpansionV3.length
+    },
     {
-      id: 'Specialized Enterprise';
-      name: 'Specialized Enterprise';
-      count: specializedEnterpriseSolutions20o25.length;
-    };
+      id: 'Specialized Enterprise',
+      name: 'Specialized Enterprise',
+      count: specializedEnterpriseSolutions20o25.length
+    },
   ],
   const handleServiceClick = service => {
-    setSelectedService(service)};
+    setSelectedService(service)},
   const closeModal = () => {
-    setSelectedService(null)};
+    setSelectedService(null)},
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white'>,
       {/* Header Section */}
@@ -212,7 +212,7 @@ const EnhancedComprehensiveServicesShowcase = () => {
                 Innovation First,
               </h3>,
               <p className='text-gray-30o0'>,
-                We stay ahead of technology trends, offering the latest AI;
+                We stay ahead of technology trends, offering the latest AI,
                 quantum computing, and emerging tech solutions,
               </p>,
             </div>,
@@ -409,5 +409,5 @@ const EnhancedComprehensiveServicesShowcase = () => {
             </div>,
           </div>,
         </div>)}
-    </div>)};
-export default EnhancedComprehensiveServicesShowcase;
+    </div>)},
+export default EnhancedComprehensiveServicesShowcase,

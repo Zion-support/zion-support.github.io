@@ -51,5 +51,5 @@ const RevolutionaryAI20o25BreakthroughBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryAI20o25BreakthroughBanner;
+    </div>)},
+export default RevolutionaryAI20o25BreakthroughBanner,

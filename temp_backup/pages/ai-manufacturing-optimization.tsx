@@ -9,11 +9,11 @@ export default function AiManufacturingOptimization() {
 			implementationWeeks="8-12 weeks",
 			roiNote="Manufacturers report 50o0% ROI via reduced downtime and improved throughput",
 			features={[
-				"AI predictive maintenance";
-				"Production process optimization";
-				"Quality control automation";
-				"Energy consumption optimization";
-				"Supply chain and logistics insights";
+				"AI predictive maintenance",
+				"Production process optimization",
+				"Quality control automation",
+				"Energy consumption optimization",
+				"Supply chain and logistics insights",
 				"Factory analytics dashboards]}
 			]}
 			industries={["Manufacturing", "Industrial", "Automotive", "Electronics"]}

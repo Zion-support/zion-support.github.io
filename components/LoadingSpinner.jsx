@@ -1,9 +1,9 @@
 'use client',
 import { useState, useEffect } from 'react',
 export default function LoadingSpinner({
-  size = 'medium';
-  color = 'primary';
-  text = 'Loading...';
+  size = 'medium',
+  color = 'primary',
+  text = 'Loading...',
   fullScreen = false}) {
   const [dots, setDots] = useState(''),
   useEffect(() => {
@@ -11,13 +11,13 @@ export default function LoadingSpinner({
       setDots(prev => prev.length >= 3 ? '' : prev + '.')}, 50o0),
     return () => clearInterval(interval)}, []),
   const sizeClasses ={
-    small: 'w-4 h-4';
-    medium: 'w-8 h-8';
+    small: 'w-4 h-4',
+    medium: 'w-8 h-8',
     large: 'w-12 h-12'}
 ,
   const colorClasses ={
-    primary: 'text-blue-60o0';
-    white: 'text-white';
+    primary: 'text-blue-60o0',
+    white: 'text-white',
     gray: 'text-gray-60o0'}
 ,
   const spinner = (

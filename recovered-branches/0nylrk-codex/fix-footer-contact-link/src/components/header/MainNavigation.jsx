@@ -3,13 +3,13 @@ import { Link } from 'react-router-dom',
 import { cn } from '@/lib/utils',
 import { NavLink } from 'react-router-dom',
 import {
-  ChevronDown;
-  Zap;
-  Brain;
-  Shield;
-  Users;
-  HardDrive;
-  TrendingUp;
+  ChevronDown,
+  Zap,
+  Brain,
+  Shield,
+  Users,
+  HardDrive,
+  TrendingUp,
 } from 'lucide-react',
 export function MainNavigation({ className }) {
   const [isServicesOpen, setIsServicesOpen] = useState(false),
@@ -20,7 +20,7 @@ export function MainNavigation({ className }) {
         to='/',
         className={({ isActive }) =>,
           cn(
-            'text-sm font-medium transition-colors hover:text-primary';
+            'text-sm font-medium transition-colors hover: text-primary',
             isActive ? 'text-zion-cyan' : 'text-muted-foreground')}
       >,
         Home,
@@ -266,9 +266,8 @@ export function MainNavigation({ className }) {
         to='/signup',
         className={({ isActive }) =>,
           cn(
-            'text-sm font-medium transition-colors hover:text-primary';
-            isActive ? 'text-zion-cyan' : 'text-muted-foreground';
-            'bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-30o0 hover:-translate-y-1')}
+            'text-sm font-medium transition-colors hover: text-primary',
+            isActive ? 'text-zion-cyan' : 'text-muted-foregroundbg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white px-6 py-2 rounded-lg shadow-lg shadow-zion-purple/25 hover:shadow-xl hover:shadow-zion-purple/40 transition-all duration-30o0 hover:-translate-y-1')}
       >,
         Get Started,
       </NavLink>,

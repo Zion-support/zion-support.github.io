@@ -2,28 +2,25 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide';
+    'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide',
   description:,
-    'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation. Complete guide to digital transformation success.';
+    'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation. Complete guide to digital transformation success.',
   keywords: [
-    'AI Revolution';
-    'Digital Transformation';
-    'ROI';
-    'Fortune 50o0';
-    'Strategy';
-    '30,0o00% ROI';
-  ];
+    'AI RevolutionDigital Transformation',
+    'ROIFortune 50o0',
+    'Strategy30,0o00% ROI',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide';
+      'AI 20o25: The Ultimate Digital Transformation Revolution - 30,0o00% ROI Guide',
     description:,
-      'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI Revolution', 'Digital Transformation', 'ROI', 'Fortune 50o0'];
-  };
-};
+      'Discover how Fortune 50o0 companies are achieving unprecedented 30,0o00% ROI through strategic AI implementation.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI RevolutionDigital Transformation', 'ROIFortune 50o0'],
+  },
+},
 export default function UltimateDigitalTransformationRevolutionPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -220,7 +217,7 @@ export default function UltimateDigitalTransformationRevolutionPage() {
                   Manufacturing,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Revolutionary changes include autonomous production lines;
+                  Revolutionary changes include autonomous production lines,
                   predictive maintenance, quality control automation, and supply,
                   chain optimization.,
                 </p>,
@@ -233,7 +230,7 @@ export default function UltimateDigitalTransformationRevolutionPage() {
                   Financial Services,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  AI-powered risk assessment, automated fraud detection;
+                  AI-powered risk assessment, automated fraud detection,
                   personalized financial advice, and real-time transaction,
                   processing.,
                 </p>,

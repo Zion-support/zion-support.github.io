@@ -4,9 +4,9 @@ import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
   SearchFilterStarCheckCircleArrowRight,
-  BrainAtomShieldRocketTargetMicroscope;
-  PhoneMailMapPinTrendingUpUsersAward;
-  ZapGlobeCpuDatabaseLockCloud;
+  BrainAtomShieldRocketTargetMicroscope,
+  PhoneMailMapPinTrendingUpUsersAward,
+  ZapGlobeCpuDatabaseLockCloud,
   StethoscopeGraduationCapLeafTruck} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 // Import all the new 2025 innovative service data,
@@ -21,91 +21,91 @@ import { innovativeAIServices2025 } from '../data/2025-innovative-ai-services',
 import { innovativeITServices2025 } from '../data/2025-innovative-it-services',
 import { emergingTechServices2025 } from '../data/2025-emerging-tech-services',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    id: 'financial-technology';
-    title: '💰 Financial Technology';
-    description: 'Innovative fintechDeFiand financial services';
-    icon: TrendingUp;
-    color: 'from-green-500 to-emerald-500';
-    services: [...innovativeFinancialServices2025];
-    gradient: 'from-green-500/20 to-emerald-500/20';
-    badge: 'New'};
+    id: 'financial-technology',
+    title: '💰 Financial Technology',
+    description: 'Innovative fintechDeFiand financial services',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+    services: [...innovativeFinancialServices2025],
+    gradient: 'from-green-500/20 to-emerald-500/20',
+    badge: 'New'},
   {
-    id: 'healthcare-biotech';
-    title: '🏥 Healthcare & Biotech';
-    description: 'AI-powered healthcare and biotechnology solutions';
-    icon: Stethoscope;
-    color: 'from-blue-500 to-indigo-500';
-    services: [...innovativeHealthcareServices2025];
-    gradient: 'from-blue-500/20 to-indigo-500/20';
-    badge: 'Hot'};
+    id: 'healthcare-biotech',
+    title: '🏥 Healthcare & Biotech',
+    description: 'AI-powered healthcare and biotechnology solutions',
+    icon: Stethoscope,
+    color: 'from-blue-500 to-indigo-500',
+    services: [...innovativeHealthcareServices2025],
+    gradient: 'from-blue-500/20 to-indigo-500/20',
+    badge: 'Hot'},
   {
-    id: 'education-technology';
-    title: '🎓 Education Technology';
-    description: 'AI-powered learning and educational innovation';
-    icon: GraduationCap;
-    color: 'from-purple-500 to-pink-500';
-    services: [...innovativeEducationServices2025];
-    gradient: 'from-purple-500/20 to-pink-500/20';
-    badge: 'Innovative'};
+    id: 'education-technology',
+    title: '🎓 Education Technology',
+    description: 'AI-powered learning and educational innovation',
+    icon: GraduationCap,
+    color: 'from-purple-500 to-pink-500',
+    services: [...innovativeEducationServices2025],
+    gradient: 'from-purple-500/20 to-pink-500/20',
+    badge: 'Innovative'},
   {
-    id: 'sustainability-green-tech';
-    title: '🌱 Sustainability & Green Tech';
-    description: 'Environmental technology and sustainability solutions';
-    icon: Leaf;
-    color: 'from-emerald-500 to-teal-500';
-    services: [...innovativeSustainabilityServices2025];
-    gradient: 'from-emerald-500/20 to-teal-500/20';
-    badge: 'Eco-Friendly'};
+    id: 'sustainability-green-tech',
+    title: '🌱 Sustainability & Green Tech',
+    description: 'Environmental technology and sustainability solutions',
+    icon: Leaf,
+    color: 'from-emerald-500 to-teal-500',
+    services: [...innovativeSustainabilityServices2025],
+    gradient: 'from-emerald-500/20 to-teal-500/20',
+    badge: 'Eco-Friendly'},
   {
-    id: 'logistics-supply-chain';
-    title: '🚚 Logistics & Supply Chain';
-    description: 'Autonomous logistics and supply chain optimization';
-    icon: Truck;
-    color: 'from-orange-500 to-red-500';
-    services: [...innovativeLogisticsServices2025];
-    gradient: 'from-orange-500/20 to-red-500/20';
-    badge: 'Autonomous'};
+    id: 'logistics-supply-chain',
+    title: '🚚 Logistics & Supply Chain',
+    description: 'Autonomous logistics and supply chain optimization',
+    icon: Truck,
+    color: 'from-orange-500 to-red-500',
+    services: [...innovativeLogisticsServices2025],
+    gradient: 'from-orange-500/20 to-red-500/20',
+    badge: 'Autonomous'},
   {
-    id: 'ai-consciousness';
-    title: '🧠 AI & Consciousness';
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms';
-    icon: Brain;
-    color: 'from-violet-500 to-purple-500';
-    services: [...innovativeAIServices2025];
-    gradient: 'from-violet-500/20 to-indigo-500/20';
-    badge: 'Revolutionary'};
+    id: 'ai-consciousness',
+    title: '🧠 AI & Consciousness',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: [...innovativeAIServices2025],
+    gradient: 'from-violet-500/20 to-indigo-500/20',
+    badge: 'Revolutionary'},
   {
-    id: 'quantum-emerging';
-    title: '⚛️ Quantum & Emerging Tech';
-    description: 'Quantum computingDNA computingand beyond';
-    icon: Atom;
-    color: 'from-indigo-500 to-blue-500';
-    services: [...emergingTechServices2025];
-    gradient: 'from-indigo-500/20 to-cyan-500/20';
-    badge: 'Quantum'};
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computingDNA computingand beyond',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-500',
+    services: [...emergingTechServices2025],
+    gradient: 'from-indigo-500/20 to-cyan-500/20',
+    badge: 'Quantum'},
   {
-    id: 'enterprise-it';
-    title: '🏙️ Enterprise IT';
-    description: 'Autonomous operations and zero-trust security';
-    icon: Shield;
-    color: 'from-blue-500 to-cyan-500';
-    services: [...innovativeITServices2025];
-    gradient: 'from-blue-500/20 to-teal-500/20';
-    badge: 'Enterprise'};
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-500',
+    services: [...innovativeITServices2025],
+    gradient: 'from-blue-500/20 to-teal-500/20',
+    badge: 'Enterprise'},
   {
-    id: 'micro-saas';
-    title: '🎯 Micro SAAS';
-    description: 'Innovative solutions for every business need';
-    icon: Target;
-    color: 'from-teal-500 to-green-500';
-    services: [...realMicroSaasServices2025];
-    gradient: 'from-teal-500/20 to-green-500/20';
+    id: 'micro-saas',
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from-teal-500 to-green-500',
+    services: [...realMicroSaasServices2025],
+    gradient: 'from-teal-500/20 to-green-500/20',
     badge: 'Popular'}
 ],
 export default function InnovativeServicesShowcase2025() {
@@ -115,7 +115,7 @@ export default function InnovativeServicesShowcase2025() {
   const filteredServices = serviceCategories.flatMap(category =>,
     category.services.filter(service =>,
       (selectedCategory === 'all' || category.id === selectedCategory) &&,
-      (searchTerm === ', ' ||,
+      (searchTerm ===  ||,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.category.toLowerCase().includes(searchTerm.toLowerCase())))),

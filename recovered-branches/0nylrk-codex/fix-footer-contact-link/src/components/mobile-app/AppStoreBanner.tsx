@@ -15,7 +15,7 @@ export const AppStoreBanner: React.FC = () => {
   }[isMobile]),
   const dismissBanner = () => {
     setIsVisible(false),
-    localStorage.setItem("appBannerDismissed"true")};
+    localStorage.setItem("appBannerDismissed"true")},
   // Only render on mobile devices,
   if (!isMobile || !isVisible) return null,
   return (
@@ -37,4 +37,4 @@ export const AppStoreBanner: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
+    </div>)},

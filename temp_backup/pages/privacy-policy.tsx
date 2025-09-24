@@ -1,23 +1,23 @@
 import Layout from '../components/layout/Layout',
 import {
-  Brain;
-  Sparkles;
-  Zap;
-  Target;
-  Users;
-  Award;
-  Clock;
-  CheckCircle;
-  Shield;
-  Globe;
-  Lock;
-  TrendingUp;
-  Building;
-  Star;
-  Eye;
-  Database;
-  Network;
-  Server;
+  Brain,
+  Sparkles,
+  Zap,
+  Target,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Shield,
+  Globe,
+  Lock,
+  TrendingUp,
+  Building,
+  Star,
+  Eye,
+  Database,
+  Network,
+  Server,
 } from 'lucide-react',
 export default function PrivacyPolicy() {
   return (
@@ -41,7 +41,7 @@ export default function PrivacyPolicy() {
               </h1>,
               <p className='text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8'>,
                 We are committed to protecting your privacy and ensuring the,
-                security of your personal information. Learn how we collect;
+                security of your personal information. Learn how we collect,
                 use, and protect your data.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -71,26 +71,26 @@ export default function PrivacyPolicy() {
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Shield className='w-12 h-12' />;
-                  title: 'Data Security';
+                  icon: <Shield className='w-12 h-12' />,
+                  title: 'Data Security',
                   description:,
-                    'We implement industry-leading security measures to protect your data from unauthorized access, disclosure, or misuse.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'We implement industry-leading security measures to protect your data from unauthorized access, disclosure, or misuse.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Eye className='w-12 h-12' />;
-                  title: 'Transparency';
+                  icon: <Eye className='w-12 h-12' />,
+                  title: 'Transparency',
                   description:,
-                    'We are transparent about what data we collect, how we use it, and who we share it with.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'We are transparent about what data we collect, how we use it, and who we share it with.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Lock className='w-12 h-12' />;
-                  title: 'User Control';
+                  icon: <Lock className='w-12 h-12' />,
+                  title: 'User Control',
                   description:,
-                    'You have full control over your data, including the right to access, modify, or delete your information.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'You have full control over your data, including the right to access, modify, or delete your information.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
               ].map((principle, index) => (
                 <div
                   key={index}
@@ -123,27 +123,23 @@ export default function PrivacyPolicy() {
             <div className='grid grid-cols-1 lg:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Information You Provide';
+                  title: 'Information You Provide',
                   data: [
-                    'Name and contact information';
-                    'Company and job title';
-                    'Service preferences';
-                    'Communication history';
-                  ];
-                  purpose: 'To provide personalized services and support';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Name and contact informationCompany and job title',
+                    'Service preferencesCommunication history',
+                  ],
+                  purpose: 'To provide personalized services and support',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  title: 'Automatically Collected Data';
+                  title: 'Automatically Collected Data',
                   data: [
-                    'Device and browser information';
-                    'Usage patterns and analytics';
-                    'IP address and location';
-                    'Cookies and similar technologies';
-                  ];
-                  purpose: 'To improve our services and user experience';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Device and browser informationUsage patterns and analytics',
+                    'IP address and locationCookies and similar technologies',
+                  ],
+                  purpose: 'To improve our services and user experience',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -190,47 +186,47 @@ export default function PrivacyPolicy() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Server className='w-12 h-12' />;
-                  title: 'Service Delivery';
+                  icon: <Server className='w-12 h-12' />,
+                  title: 'Service Delivery',
                   description:,
-                    'Provide and maintain our AI consciousness, quantum computing, and autonomous systems services.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Provide and maintain our AI consciousness, quantum computing, and autonomous systems services.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Network className='w-12 h-12' />;
-                  title: 'Communication';
+                  icon: <Network className='w-12 h-12' />,
+                  title: 'Communication',
                   description:,
-                    'Send important updates, support responses, and service notifications.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Send important updates, support responses, and service notifications.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Database className='w-12 h-12' />;
-                  title: 'Service Improvement';
+                  icon: <Database className='w-12 h-12' />,
+                  title: 'Service Improvement',
                   description:,
-                    'Analyze usage patterns to improve our services and develop new features.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Analyze usage patterns to improve our services and develop new features.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Shield className='w-12 h-12' />;
-                  title: 'Security & Compliance';
+                  icon: <Shield className='w-12 h-12' />,
+                  title: 'Security & Compliance',
                   description:,
-                    'Ensure the security of our services and comply with legal obligations.';
-                  color: 'from-orange-50o0 to-red-50o0';
-                };
+                    'Ensure the security of our services and comply with legal obligations.',
+                  color: 'from-orange-50o0 to-red-50o0'
+                },
                 {
-                  icon: <Users className='w-12 h-12' />;
-                  title: 'Customer Support';
+                  icon: <Users className='w-12 h-12' />,
+                  title: 'Customer Support',
                   description:,
-                    'Provide personalized support and resolve technical issues.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Provide personalized support and resolve technical issues.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <TrendingUp className='w-12 h-12' />;
-                  title: 'Business Operations';
+                  icon: <TrendingUp className='w-12 h-12' />,
+                  title: 'Business Operations',
                   description:,
-                    'Manage our business operations and improve customer relationships.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Manage our business operations and improve customer relationships.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((usage, index) => (
                 <div
                   key={index}
@@ -268,25 +264,25 @@ export default function PrivacyPolicy() {
                 <div className='space-y-6'>,
                   {[
                     {
-                      title: 'Encryption';
+                      title: 'Encryption',
                       description:,
-                        'All data is encrypted in transit and at rest using industry-standard encryption protocols.';
-                    };
+                        'All data is encrypted in transit and at rest using industry-standard encryption protocols.',
+                    },
                     {
-                      title: 'Access Controls';
+                      title: 'Access Controls',
                       description:,
-                        'Strict access controls ensure only authorized personnel can access your data.';
-                    };
+                        'Strict access controls ensure only authorized personnel can access your data.',
+                    },
                     {
-                      title: 'Regular Audits';
+                      title: 'Regular Audits',
                       description:,
-                        'We conduct regular security audits and penetration testing to identify and fix vulnerabilities.';
-                    };
+                        'We conduct regular security audits and penetration testing to identify and fix vulnerabilities.',
+                    },
                     {
-                      title: 'Compliance';
+                      title: 'Compliance',
                       description:,
-                        'We maintain compliance with industry standards and regulations including GDPR, CCPA, and SOC 2.';
-                    };
+                        'We maintain compliance with industry standards and regulations including GDPR, CCPA, and SOC 2.',
+                    },
                   ].map((measure, index) => (
                     <div key={index} className='flex items-start gap-4'>,
                       <div className='w-3 h-3 bg-blue-50o0 rounded-full mt-2 flex-shrink-0'></div>,
@@ -322,47 +318,47 @@ export default function PrivacyPolicy() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Eye className='w-12 h-12' />;
-                  title: 'Right to Access';
+                  icon: <Eye className='w-12 h-12' />,
+                  title: 'Right to Access',
                   description:,
-                    'Request a copy of all personal data we hold about you.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Request a copy of all personal data we hold about you.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <CheckCircle className='w-12 h-12' />;
-                  title: 'Right to Rectification';
+                  icon: <CheckCircle className='w-12 h-12' />,
+                  title: 'Right to Rectification',
                   description:,
-                    'Request correction of inaccurate or incomplete personal data.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Request correction of inaccurate or incomplete personal data.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Lock className='w-12 h-12' />;
-                  title: 'Right to Erasure';
+                  icon: <Lock className='w-12 h-12' />,
+                  title: 'Right to Erasure',
                   description:,
-                    'Request deletion of your personal data under certain circumstances.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Request deletion of your personal data under certain circumstances.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Network className='w-12 h-12' />;
-                  title: 'Right to Portability';
+                  icon: <Network className='w-12 h-12' />,
+                  title: 'Right to Portability',
                   description:,
-                    'Receive your data in a structured, machine-readable format.';
-                  color: 'from-orange-50o0 to-red-50o0';
-                };
+                    'Receive your data in a structured, machine-readable format.',
+                  color: 'from-orange-50o0 to-red-50o0'
+                },
                 {
-                  icon: <Shield className='w-12 h-12' />;
-                  title: 'Right to Restriction';
+                  icon: <Shield className='w-12 h-12' />,
+                  title: 'Right to Restriction',
                   description:,
-                    'Request limitation of processing under certain circumstances.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Request limitation of processing under certain circumstances.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Users className='w-12 h-12' />;
-                  title: 'Right to Object';
+                  icon: <Users className='w-12 h-12' />,
+                  title: 'Right to Object',
                   description:,
-                    'Object to processing of your data for specific purposes.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Object to processing of your data for specific purposes.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((right, index) => (
                 <div
                   key={index}

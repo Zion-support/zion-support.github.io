@@ -1,20 +1,20 @@
-import React from 'react';
-import { useState } from 'react';
-import { useRouter } from 'next/router';
+import React from 'react',
+import { useState } from 'react',
+import { useRouter } from 'next/router',
 export default function AdminLoginPage() {
-  const router = useRouter();
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
-  const [error, setError] = useState<string | null>(null);
-  const [loading, setLoading] = useState(false);
+  const router = useRouter(),
+  const [username, setUsername] = useState(''),
+  const [password, setPassword] = useState(''),
+  const [error, setError] = useState<string | null>(null),
+  const [loading, setLoading] = useState(false),
   async function onSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
+    e.preventDefault(),
+    setLoading(true),
+    setError(null),
     try {
       const res = await fetch('/api/admin/login', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ username, password })}),
       if (!res.ok) throw new Error('Invalid credentials'),
       router.push('/admin')} catch (err: any) {

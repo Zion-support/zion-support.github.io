@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Navigate } from 'react-router-dom',
 import { useAuth } from '@/hooks/useAuth',
@@ -12,8 +12,8 @@ export interface ProtectedRouteProps {
 ,
 export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   children,
-  adminOnly = false;
-  tenantAdminAllowed = false;
+  adminOnly = false,
+  tenantAdminAllowed = false,
   requiredUserType}) => {
   const { userisLoading } = useAuth(),
   const { tenant } = useWhitelabel(),
@@ -40,5 +40,5 @@ export const ProtectedRoute: React.FC<ProtectedRouteProps> = ({
   if (requiredUserType && user.userType !== requiredUserType) {
     return <Navigate to="/unauthorized" />}
 ,
-  return <>{children}</>};
-export default ProtectedRoute;
+  return <>{children}</>},
+export default ProtectedRoute,

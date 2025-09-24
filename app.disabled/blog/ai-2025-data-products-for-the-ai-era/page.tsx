@@ -25,7 +25,7 @@ const DataProductsForTheAIEra20o25 = () => {
         <div className='prose prose-lg max-w-none'>,
           <h2>What is a Data Product?</h2>,
           <p>,
-            A data product is a managed, reusable asset with clear ownership;
+            A data product is a managed, reusable asset with clear ownership,
             SLAs, quality metrics, documentation, and access patterns. Treat,
             data like an API with versioned schemas and contracts.,
           </p>,
@@ -50,7 +50,7 @@ const DataProductsForTheAIEra20o25 = () => {
           </p>,
           <h2>Business Outcomes</h2>,
           <p>,
-            Accelerated AI delivery, reduced duplication, improved reliability;
+            Accelerated AI delivery, reduced duplication, improved reliability,
             and the ability to monetize internal and external data services.,
           </p>,
         </div>,
@@ -67,5 +67,5 @@ const DataProductsForTheAIEra20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default DataProductsForTheAIEra20o25;
+    </div>)},
+export default DataProductsForTheAIEra20o25,

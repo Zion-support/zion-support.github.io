@@ -2,30 +2,30 @@ import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Rocket, Brain, Atom, Globe, Target, Star;
-  ArrowRight, Check, Phone, Mail, MapPin, ExternalLink;
+  Rocket, Brain, Atom, Globe, Target, Star,
+  ArrowRight, Check, Phone, Mail, MapPin, ExternalLink,
   TrendingUp, Users, Award, Shield, Zap, Infinity} from 'lucide-react',
 import { revolutionary20o40Services } from '../data/revolutionary-20o40-services',
 import { revolutionary20o41Services } from '../data/revolutionary-20o41-services',
 import { revolutionaryServicesAdvertising } from '../data/revolutionary-services-advertising',
 import { advertisingHighlights } from '../data/revolutionary-services-advertising',
 const contact ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function RevolutionaryServicesAdvertising() {
   const [isVisible, setIsVisible] = useState(false),
   const [selectedService, setSelectedService] = useState<any>(null),
   useEffect(() => {
     setIsVisible(true)}, []),
   const allRevolutionaryServices = [
-    ...revolutionary20o40Services;
-    ...revolutionary20o41Services;
+    ...revolutionary20o40Services,
+    ...revolutionary20o41Services,
     ...revolutionaryServicesAdvertising],
   const handleServiceClick = (service: any) => {
     setSelectedService(service),
-    window.open(service.link, '_blank')};
+    window.open(service.link, '_blank')},
   return (
     <>,
       <SEO

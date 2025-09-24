@@ -4,7 +4,7 @@ import { X } from 'lucide-react',
 type ChatMessage ={
   role: 'user' | 'assistant' | 'system',
   content: string,
-  timestamp?: number};
+  timestamp?: number},
 function generateSessionId(): string {
   return Math.random().toString(36).slice(2) + Date.now().toString(36)}
 ,
@@ -18,7 +18,7 @@ export default function ChatWidget() {
   const [isLoadingsetIsLoading] = useState(false),
   const [failedIntentsetFailedIntents] = useState(0),
   const [showEscalationsetShowEscalation] = useState(false),
-  const sessionIdRef = useRef<string>(', '),
+  const sessionIdRef = useRef<string>(),
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
   useEffect(() => {
     sessionIdRef.current = generateSessionId()}, []),
@@ -26,31 +26,31 @@ export default function ChatWidget() {
     if (!isOpen && messages.length === 0) {
       setMessages([
         {
-          role: 'assistant';
-          content: 'Hi! How can I help you?';
-          timestamp: Date.now()};
+          role: 'assistant',
+          content: 'Hi! How can I help you?',
+          timestamp: Date.now()},
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.currentreasontag: 'escalate' })}),
-        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() };
+        { role: 'assistant', content: 'Hi! How can I help you?', timestamp: Date.now() },
       ])}
   }, [isOpen, messages.length]),
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]),
   const quickReplies = useMemo(
-    () => ['How do I hire?', 'How do I get matched?', 'Billing help'];
+    () => ['How do I hire?How do I get matched?', 'Billing help'],
     []),
   async function logEvent(eventType: string, payload: unknown) {
     try {
       await fetch('/api/support/session', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          sessionId: sessionIdRef.current;
-          eventType;
+          sessionId: sessionIdRef.current,
+          eventType,
           payload})})} catch {
       // no-op}
   }
@@ -58,8 +58,8 @@ export default function ChatWidget() {
   async function escalateSupport(reason: string) {
     try {
       await fetch('/api/support/escalate', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ sessionId: sessionIdRef.current, reason, tag: 'escalate' })}),
       setShowEscalation(true)} catch {
       // no-op}
@@ -69,29 +69,29 @@ export default function ChatWidget() {
     const text = (messageText ?? input).trim(),
     if (!text) return,
     const newUserMessage: ChatMessage ={
-      role: 'user';
-      content: text;
-      timestamp: Date.now()};
+      role: 'user',
+      content: text,
+      timestamp: Date.now()},
     setMessages(prev => [...prev, newUserMessage]),
     setInput(''),
     setIsLoading(true),
     await logEvent('message/user', { content: text }),
     try {
       const res = await fetch('/api/support/chat', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          sessionId: sessionIdRef.current;
+          sessionId: sessionIdRef.current,
           messages: [...messages, newUserMessage].map(({ role, content }) => ({ role, content }))})}),
       const data = await res.json(),
       if (data?.assistantMessage) {
         const assistantMessage: ChatMessage ={
-          role: 'assistant';
-          content: data.assistantMessage;
-          timestamp: Date.now()};
+          role: 'assistant',
+          content: data.assistantMessage,
+          timestamp: Date.now()},
         setMessages(prev => [...prev, assistantMessage]),
         await logEvent('message/assistant', {
-          content: assistantMessage.content;
+          content: assistantMessage.content,
           meta: data.meta})}
 ,
       if (data?.meta?.intentMatched === false) {
@@ -107,11 +107,11 @@ export default function ChatWidget() {
         setFailedIntents(0)}
     } catch {
       setMessages(prev => [
-        ...prev;
+        ...prev,
         {
-          role: 'assistant';
-          content: 'Sorry, something went wrong. Please try again or contact support.';
-          timestamp: Date.now()};
+          role: 'assistant',
+          content: 'Sorry, something went wrong. Please try again or contact support.',
+          timestamp: Date.now()},
       ])} finally {
       setIsLoading(false)}
   }

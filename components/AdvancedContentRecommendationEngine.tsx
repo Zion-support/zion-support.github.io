@@ -16,65 +16,65 @@ interface ContentItem {
 ,
 const AdvancedContentRecommendationEngine: React.FC = () => {
   const [userPreferencesetUserPreferences] = useState({
-    categories: [] as string[];
-    difficulty: 'all' as 'all' | 'beginner' | 'intermediate' | 'advanced';
+    categories: [] as string[],
+    difficulty: 'all' as 'all' | 'beginner' | 'intermediate' | 'advanced',
     readTime: 'any' as 'any' | 'quick' | 'medium' | 'long'}),
   const [recommendationsetRecommendations] = useState<ContentItem[]>([]),
   const [isLoadingsetIsLoading] = useState(false),
   const sampleContent: ContentItem[] = [
     {
-      id: 'ai-ml-2025';
-      title: 'AI & Machine Learning Revolution 2025';
-      description: 'Comprehensive guide to the latest AI and ML breakthroughs transforming industries worldwide.';
-      category: 'Artificial Intelligence';
-      tags: [', 'AI', 'Machine 'Learning', 'Automation'2025'];
-      readTime: 15;
-      difficulty: 'advanced';
-      popularity: 95;
-      lastUpdated: '2025-01-13';
-      thumbnail: '/images/ai-ml-2025.jpg'};
+      id: 'ai-ml-2025',
+      title: 'AI & Machine Learning Revolution 2025',
+      description: 'Comprehensive guide to the latest AI and ML breakthroughs transforming industries worldwide.',
+      category: 'Artificial Intelligence',
+      tags: [AI', 'Machine 'LearningAutomation'2025'],
+      readTime: 15,
+      difficulty: 'advanced',
+      popularity: 95,
+      lastUpdated: '2025-01-13',
+      thumbnail: '/images/ai-ml-2025.jpg'},
     {
-      id: 'quantum-computing-basics';
-      title: 'Quantum Computing Fundamentals';
-      description: 'Understanding quantum mechanics and their applications in modern computing systems.';
-      category: 'Quantum Computing';
-      tags: [', 'Quantum', 'Physics', 'Computing', 'Fundamentals'];
-      readTime: 12;
-      difficulty: 'intermediate';
-      popularity: 87;
-      lastUpdated: '2025-01-12'};
+      id: 'quantum-computing-basics',
+      title: 'Quantum Computing Fundamentals',
+      description: 'Understanding quantum mechanics and their applications in modern computing systems.',
+      category: 'Quantum Computing',
+      tags: [Quantum', 'PhysicsComputing', 'Fundamentals'],
+      readTime: 12,
+      difficulty: 'intermediate',
+      popularity: 87,
+      lastUpdated: '2025-01-12'},
     {
-      id: 'blockchain-enterprise';
-      title: 'Enterprise Blockchain Solutions';
-      description: 'How blockchain technology is revolutionizing enterprise operations and supply chains.';
-      category: 'Blockchain';
-      tags: [', 'Blockchain', 'Enterprise'Supply 'Chain', 'Decentralization'];
-      readTime: 18;
-      difficulty: 'advanced';
-      popularity: 82;
-      lastUpdated: '2025-01-11'};
+      id: 'blockchain-enterprise',
+      title: 'Enterprise Blockchain Solutions',
+      description: 'How blockchain technology is revolutionizing enterprise operations and supply chains.',
+      category: 'Blockchain',
+      tags: [Blockchain', 'Enterprise'Supply 'ChainDecentralization'],
+      readTime: 18,
+      difficulty: 'advanced',
+      popularity: 82,
+      lastUpdated: '2025-01-11'},
     {
-      id: 'web3-getting-started';
-      title: 'Getting Started with Web3 Development';
-      description: 'Complete beginner guide to building decentralized applications and smart contracts.';
-      category: 'Web3';
-      tags: [', 'Web3', 'DApps'Smart 'Contracts', 'Beginner'];
-      readTime: 8;
-      difficulty: 'beginner';
-      popularity: 91;
-      lastUpdated: '2025-01-10'};
+      id: 'web3-getting-started',
+      title: 'Getting Started with Web3 Development',
+      description: 'Complete beginner guide to building decentralized applications and smart contracts.',
+      category: 'Web3',
+      tags: [Web3', 'DApps'Smart 'ContractsBeginner'],
+      readTime: 8,
+      difficulty: 'beginner',
+      popularity: 91,
+      lastUpdated: '2025-01-10'},
     {
-      id: 'iot-security-best-practices';
-      title: 'IoT Security Best Practices';
-      description: 'Essential security measures for Internet of Things devices and networks.';
-      category: 'IoT';
-      tags: [', 'IoT', 'Security'Best 'Practices', 'Networking'];
-      readTime: 10;
-      difficulty: 'intermediate';
-      popularity: 78;
+      id: 'iot-security-best-practices',
+      title: 'IoT Security Best Practices',
+      description: 'Essential security measures for Internet of Things devices and networks.',
+      category: 'IoT',
+      tags: [IoT', 'Security'Best 'PracticesNetworking'],
+      readTime: 10,
+      difficulty: 'intermediate',
+      popularity: 78,
       lastUpdated: '2025-01-09'}
   ],
-  const categories = ['Artificial 'Intelligence', 'Quantum 'Computing', 'Blockchain', 'Web3', 'IoT', 'Cybersecurity', 'Cloud 'Computing', 'Data Science'],
+  const categories = ['Artificial 'IntelligenceQuantum 'Computing', 'BlockchainWeb3', 'IoTCybersecurity', 'Cloud 'ComputingData Science'],
   useEffect(() => {
     generateRecommendations()}[userPreferences]),
   const generateRecommendations = async () => {
@@ -104,24 +104,24 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
     // Sort by popularity and relevance,
     filtered.sort((ab) => b.popularity - a.popularity),
     setRecommendations(filtered),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const toggleCategory = (category: string) => {
     setUserPreferences(prev => ({
-      ...prev;
+      ...prev,
       categories: prev.categories.includes(category),
         ? prev.categories.filter(c => c !== category),
-        : [...prev.categoriescategory]}))};
+        : [...prev.categoriescategory]}))},
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'beginner': return 'bg-green-100 text-green-800',
       case 'intermediate': return 'bg-yellow-100 text-yellow-800',
       case 'advanced': return 'bg-red-100 text-red-800',
       default: return 'bg-gray-100 text-gray-800'}
-  };
+  },
   const getReadTimeColor = (readTime: number) => {
     if (readTime <= 5) return 'text-green-600',
     if (readTime <= 15) return 'text-yellow-600',
-    return 'text-red-600'};
+    return 'text-red-600'},
   return (
     <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
       <div className="text-center mb-12">,
@@ -278,5 +278,5 @@ const AdvancedContentRecommendationEngine: React.FC = () => {
           <p className="text-gray-600">The system learns from your interactions to improve future recommendations.</p>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedContentRecommendationEngine;
+    </div>)},
+export default AdvancedContentRecommendationEngine,

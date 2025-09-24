@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react',
 import { ethers } from 'ethers',
 export function Wallet({
-  onProvider;
+  onProvider,
 }: {
   onProvider: (p: ethers.providers.Web3Provider | null) => void}) {
   const [account, setAccount] = useState<string>(''),

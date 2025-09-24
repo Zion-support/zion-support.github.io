@@ -13,29 +13,29 @@ import {ServiceDetailsSection} from "@/components/services/PageSections/ServiceD
 import {ServiceProcessSteps} from "@/components/services/PageSections/ServiceProcessSteps",
 import {ServiceIncludes} from "@/components/services/PageSections/ServiceIncludes",
 import {EnterpriseCallToAction} from "@/components/services/PageSections/EnterpriseCallToAction",
-import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes";
-import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction";
-import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { ITServicePricingTable } from "@/components/services/ITServicePricingTable";
-import { GlobalServiceSection } from "@/components/GlobalServiceSection";
-import { QuoteFormSection } from "@/components/QuoteFormSection";
-import { TrustedBySection } from "@/components/TrustedBySection";
-import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
-import { PageHero } from "@/components/services/PageSections/PageHero";
-import { CountryTabs } from "@/components/services/PageSections/CountryTabs";
-import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection";
-import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps";
+import { ServiceIncludes } from "@/components/services/PageSections/ServiceIncludes",
+import { EnterpriseCallToAction } from "@/components/services/PageSections/EnterpriseCallToAction",
+import { useState, useEffect } from "react",
+import { useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { ITServicePricingTable } from "@/components/services/ITServicePricingTable",
+import { GlobalServiceSection } from "@/components/GlobalServiceSection",
+import { QuoteFormSection } from "@/components/QuoteFormSection",
+import { TrustedBySection } from "@/components/TrustedBySection",
+import { CountryPricing, onsiteServicePricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
+import { PageHero } from "@/components/services/PageSections/PageHero",
+import { CountryTabs } from "@/components/services/PageSections/CountryTabs",
+import { ServiceDetailsSection } from "@/components/services/PageSections/ServiceDetailsSection",
+import { ServiceProcessSteps } from "@/components/services/PageSections/ServiceProcessSteps",
 export default function ITOnsiteServicesPage() {
   const success = searchParams.get("success"),
 export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
+  const [searchParams] = useSearchParams(),
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
   const [searchQuery, setSearchQuery] = useState(""),
   // Check for success parameter in URL,
-  const success = searchParams.get("success");
+  const success = searchParams.get("success"),
 >>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   // Show success toast if redirected from successful payment,
   useEffect(() => {
@@ -45,9 +45,9 @@ export default function ITOnsiteServicesPage() {
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})}
 }, [success]),
   // Popular countries for the featured cards,
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"]}, [success]);
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"]}, [success]),
   // Popular countries for the featured cards,
-  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"];
+  const popularCountries = ["United States", "United Kingdom", "Canada", "Germany", "Japan", "Singapore"],
   // Filter countries based on search query,
   const filteredCountries = onsiteServicePricing,
     .filter(country =>,
@@ -60,33 +60,33 @@ export default function ITOnsiteServicesPage() {
       if (!aIsPopular && bIsPopular) return 1,
       // Then sort alphabetically,
       return a.country.localeCompare(b.country)}),
-      const aIsPopular = popularCountries.includes(a.country);
-      const bIsPopular = popularCountries.includes(b.country);
-      if (aIsPopular && !bIsPopular) return -1;
-      if (!aIsPopular && bIsPopular) return 1;
+      const aIsPopular = popularCountries.includes(a.country),
+      const bIsPopular = popularCountries.includes(b.country),
+      if (aIsPopular && !bIsPopular) return -1,
+      if (!aIsPopular && bIsPopular) return 1,
       // Then sort alphabetically,
-      return a.country.localeCompare(b.country)});
+      return a.country.localeCompare(b.country)}),
   const handleCountrySelect = (country: CountryPricing) => {
     setSelectedCountry(country),
     // Scroll to the service details section,
     setTimeout(() => {
       document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)}
-};
+},
   return (
     <AppLayout>,
       <section className="py-16 bg-zion-blue">,
         <div className="container mx-auto px-4 sm: px-6 lg:px-8">,
 export default function ITOnsiteServicesPage() {
-  const [searchParams] = useSearchParams();
-  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null);
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchParams] = useSearchParams(),
+  const [selectedCountry, setSelectedCountry] = useState<CountryPricing | null>(null),
+  const [searchQuery, setSearchQuery] = useState(""),
   // Check for success parameter in URL,
   const success = searchParams && searchParams.get("success"),
   // Show success toast if redirected from successful payment,
   useEffect(() => {
     if (success === "true") {
       toast({
-        title: "Payment Successful";
+        title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})}
   }, [success]),
   // Popular countries for the featured cards,
@@ -104,10 +104,10 @@ export default function ITOnsiteServicesPage() {
       // Then sort alphabetically,
       return a && a.country.localeCompare(b && b.country)}),
   const handleCountrySelect = (country: CountryPricing) => {
-    setSelectedCountry(country);
+    setSelectedCountry(country),
     // Scroll to the service details section,
     setTimeout(() => {
-      document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)};
+      document && document.getElementById('service-details')?.scrollIntoView({ behavior: 'smooth' })}, 100)},
   return (
     <AppLayout>,
       <section className="py-16 bg-zion-blue">,
@@ -159,7 +159,7 @@ export default function ITOnsiteServicesPage() {
 }
 ,
       toast ({
-        title: "Payment Successful";
+        title: "Payment Successful",
         description: "Your IT onsite service request has been received. Our team will contact you shortly."})}
   }, [success]),
   // Popular countries for the featured cards,
@@ -181,7 +181,7 @@ if (return 1) {
       // Then sort alphabetically,
       return a.country.locale_compare (b.country)}),
   const handleCountrySelect = (country: CountryPricing) =>: any {
-    setSelectedCountry (country);
+    setSelectedCountry (country),
     // Scroll to the service details section,
     set_timeout (() => {
       document.getElementById ('service - details')?.scrollIntoView ({ behavior: 'smooth' })}, 100)}

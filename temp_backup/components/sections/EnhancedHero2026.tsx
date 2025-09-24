@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Phone, Mail, MapPin, Rocket, Brain, Zap, Shield, Globe, Cpu } from 'lucide-react',
 import { cuttingEdgeInnovationServices } from '../../data/20o26-cutting-edge-innovations',
@@ -7,47 +7,47 @@ import { specializedSolutions20o26 } from '../../data/20o26-specialized-solution
 const EnhancedHero20o26: React.FC = () => {
   // Get the most popular services for hero showcase,
   const heroServices = [
-    ...cuttingEdgeInnovationServices;
-    ...enterpriseSolutions20o26;
+    ...cuttingEdgeInnovationServices,
+    ...enterpriseSolutions20o26,
     ...specializedSolutions20o26].filter(service => service.popular).slice(0, 4),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30, scale: 0.9 };
+    hidden: { opacity: 0, y: 30, scale: 0.9 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const getIconComponent = (icon: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } ={
-      '🧠⚛️': Brain;
-      '🧠☁️': Cpu;
-      '🧬💻': Cpu;
-      '🛰️⚛️': Globe;
-      '🛰️🚨': Shield;
-      '🔒⚛️': Shield;
-      '🤖🧠': Zap;
-      '🌐🥽': Globe;
-      '🌐⚡': Cpu;
-      '😊🧠': Brain;
-      '🎨✍️🎵': Star;
-      '🔒🛡️': Shield;
-      '🧬🔬': Cpu;
-      '🛰️📡': Globe;
-      '🚨🔍': Shield;
-      '🧠💙': Brain};
-    return iconMap[icon] || Star};
+      '🧠⚛️': Brain,
+      '🧠☁️': Cpu,
+      '🧬💻': Cpu,
+      '🛰️⚛️': Globe,
+      '🛰️🚨': Shield,
+      '🔒⚛️': Shield,
+      '🤖🧠': Zap,
+      '🌐🥽': Globe,
+      '🌐⚡': Cpu,
+      '😊🧠': Brain,
+      '🎨✍️🎵': Star,
+      '🔒🛡️': Shield,
+      '🧬🔬': Cpu,
+      '🛰️📡': Globe,
+      '🚨🔍': Shield,
+      '🧠💙': Brain},
+    return iconMap[icon] || Star},
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Enhanced Background Effects */}
@@ -61,14 +61,14 @@ const EnhancedHero20o26: React.FC = () => {
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-30",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0, -20, 0];
+              y: [0, -20, 0],
               opacity: [0.3, 0.6, 0.3]}}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
               delay: Math.random() * 2}}
            />))}
       </div>,
@@ -180,7 +180,7 @@ const EnhancedHero20o26: React.FC = () => {
                     className="group relative",
                     variants={itemVariants}
                     whileHover={{
-                      y: -10;
+                      y: -10,
                       transition: { duration: 0.3 }
                     }}
                   >,
@@ -240,5 +240,5 @@ const EnhancedHero20o26: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedHero20o26;
+    </section>)},
+export default EnhancedHero20o26,

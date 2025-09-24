@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'AI Content Revolution: 50o00% ROI Success Story - Zion Tech Group';
+  title: 'AI Content Revolution: 50o00% ROI Success Story - Zion Tech Group',
   description:,
-    'Discover how a Fortune 50o0 company achieved 50o00% ROI through our AI content revolution strategy. Real results, proven methodology.';
+    'Discover how a Fortune 50o0 company achieved 50o00% ROI through our AI content revolution strategy. Real results, proven methodology.',
   keywords: [
-    'AI content success';
-    '50o00% ROI';
-    'content automation';
-    'Fortune 50o0';
-    'AI transformation';
-  ];
-};
+    'AI content success50o00% ROI',
+    'content automationFortune 50o0',
+    'AI transformation',
+  ]
+},
 export default function AI20o25ContentRevolution50o00ROISuccess() {
   return (
     <div className='min-h-screen bg-white'>,

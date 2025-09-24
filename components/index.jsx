@@ -7,36 +7,36 @@ export default function HomePage() {
   useEffect(() => {
     setIsClient(true)}, []),
   const stats = [
-    { number: '50o0+', label: 'Projects Completed' };
-    { number: '99.9%', label: 'Uptime Guarantee' };
-    { number: '50+', label: 'Expert Team Members' };
-    { number: '24/7', label: 'Support Available' };
+    { number: '50o0+', label: 'Projects Completed' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '50+', label: 'Expert Team Members' },
+    { number: '24/7', label: 'Support Available' },
   ],
   const features = [
     {
-      icon: '🤖';
-      title: 'AI-Powered Solutions';
+      icon: '🤖',
+      title: 'AI-Powered Solutions',
       description:,
-        'Leverage cutting-edge artificial intelligence to automate processes and gain insights.';
-    };
+        'Leverage cutting-edge artificial intelligence to automate processes and gain insights.',
+    },
     {
-      icon: '☁️';
-      title: 'Cloud Infrastructure';
+      icon: '☁️',
+      title: 'Cloud Infrastructure',
       description:,
-        'Scalable and secure cloud solutions that grow with your business needs.';
-    };
+        'Scalable and secure cloud solutions that grow with your business needs.',
+    },
     {
-      icon: '🔒';
-      title: 'Cybersecurity';
+      icon: '🔒',
+      title: 'Cybersecurity',
       description:,
-        'Comprehensive security solutions to protect your digital assets and data.';
-    };
+        'Comprehensive security solutions to protect your digital assets and data.',
+    },
     {
-      icon: '📊';
-      title: 'Data Analytics';
+      icon: '📊',
+      title: 'Data Analytics',
       description:,
-        'Transform your data into actionable insights with advanced analytics tools.';
-    };
+        'Transform your data into actionable insights with advanced analytics tools.',
+    },
   ],
   return (
     <>,

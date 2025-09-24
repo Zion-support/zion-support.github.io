@@ -8,5 +8,5 @@ const ErrorRoutes = () => {
       {/* Error Routes */}
       <Route path='/unauthorized' element={<Unauthorized />} />,
       <Route path='*' element={<NotFound />} />,
-    </Routes>)};
-export default ErrorRoutes;
+    </Routes>)},
+export default ErrorRoutes,

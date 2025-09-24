@@ -5,118 +5,118 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'predictive-analytics-revolution';
+      id: 'predictive-analytics-revolution',
       title:,
-        'AI 20o25: The Predictive Analytics Revolution - Ultimate Guide to 750% ROI';
+        'AI 20o25: The Predictive Analytics Revolution - Ultimate Guide to 750% ROI',
       description:,
-        'Discover how Fortune 50o0 companies are achieving 750% ROI with AI-powered predictive analytics. Complete implementation guide with real-world case studies and proven strategies.';
-      url: '/blog/ai-20o25-predictive-analytics-revolution-ultimate-guide';
-      type: 'Blog Post';
-      category: 'blog';
+        'Discover how Fortune 50o0 companies are achieving 750% ROI with AI-powered predictive analytics. Complete implementation guide with real-world case studies and proven strategies.',
+      url: '/blog/ai-20o25-predictive-analytics-revolution-ultimate-guide',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
-        roi: '750%';
-        savings: '$4.2M';
-        accuracy: '94%';
-        success: '89%';
-      };
-      readingTime: '22 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '750%',
+        savings: '$4.2M',
+        accuracy: '94%',
+        success: '89%'
+      },
+      readingTime: '22 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'fortune-50o0-predictive-success';
+      id: 'fortune-50o0-predictive-success',
       title:,
-        'Fortune 50o0 Predictive Analytics Success: $4.2B Company Achieves 750% ROI';
+        'Fortune 50o0 Predictive Analytics Success: $4.2B Company Achieves 750% ROI',
       description:,
-        'Discover how a Fortune 50o0 manufacturing company achieved 750% ROI and $67M annual savings through AI-powered predictive analytics implementation.';
-      url: '/case-studies/ai-20o25-predictive-analytics-fortune-50o0-success-750-roi';
-      type: 'Case Study';
-      category: 'case-study';
+        'Discover how a Fortune 50o0 manufacturing company achieved 750% ROI and $67M annual savings through AI-powered predictive analytics implementation.',
+      url: '/case-studies/ai-20o25-predictive-analytics-fortune-50o0-success-750-roi',
+      type: 'Case Study',
+      category: 'case-study',
       metrics: {
-        roi: '750%';
-        savings: '$67M';
-        accuracy: '97%';
-        efficiency: '156%';
-      };
-      readingTime: '15 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '750%',
+        savings: '$67M',
+        accuracy: '97%',
+        efficiency: '156%'
+      },
+      readingTime: '15 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'predictive-analytics-implementation-guide';
+      id: 'predictive-analytics-implementation-guide',
       title:,
-        'AI 20o25 Predictive Analytics Implementation Master Guide: From Strategy to 750% ROI';
+        'AI 20o25 Predictive Analytics Implementation Master Guide: From Strategy to 750% ROI',
       description:,
-        'Complete implementation guide for AI-powered predictive analytics. Achieve 750% ROI with proven strategies, frameworks, and best practices from 50o0+ successful implementations.';
-      url: '/resources/ai-20o25-predictive-analytics-implementation-master-guide';
-      type: 'Resource';
-      category: 'resource';
+        'Complete implementation guide for AI-powered predictive analytics. Achieve 750% ROI with proven strategies, frameworks, and best practices from 50o0+ successful implementations.',
+      url: '/resources/ai-20o25-predictive-analytics-implementation-master-guide',
+      type: 'Resource',
+      category: 'resource',
       metrics: {
-        roi: '750%';
-        success: '89%';
-        payback: '4.2 months';
-        implementations: '50o0+';
-      };
-      readingTime: '28 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '750%',
+        success: '89%',
+        payback: '4.2 months',
+        implementations: '50o0+'
+      },
+      readingTime: '28 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'edge-computing-revolution';
+      id: 'edge-computing-revolution',
       title:,
-        'AI 20o25: The Edge Computing Revolution - Ultimate Guide to 450% ROI';
+        'AI 20o25: The Edge Computing Revolution - Ultimate Guide to 450% ROI',
       description:,
-        'Discover how edge computing is transforming business operations with 450% ROI, 67% latency reduction, and 89% cost savings. Complete implementation guide with real-world case studies.';
-      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide';
-      type: 'Blog Post';
-      category: 'blog';
+        'Discover how edge computing is transforming business operations with 450% ROI, 67% latency reduction, and 89% cost savings. Complete implementation guide with real-world case studies.',
+      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
-        roi: '450%';
-        latency: '67%';
-        savings: '$2.3M';
-        uptime: '99.7%';
-      };
-      readingTime: '18 min read';
-      isNew: true;
-      featured: false;
-    };
+        roi: '450%',
+        latency: '67%',
+        savings: '$2.3M',
+        uptime: '99.7%'
+      },
+      readingTime: '18 min read',
+      isNew: true,
+      featured: false
+    },
     {
-      id: 'autonomous-systems-revolution';
+      id: 'autonomous-systems-revolution',
       title:,
-        'AI 20o25 Autonomous Systems Revolution: $1.8B Company Achieves 90o0% ROI';
+        'AI 20o25 Autonomous Systems Revolution: $1.8B Company Achieves 90o0% ROI',
       description:,
-        'Discover how a Fortune 50o0 company achieved 90o0% ROI and $750M savings through AI-powered autonomous systems implementation.';
-      url: '/case-studies/ai-20o25-autonomous-systems-revolution-success-story';
-      type: 'Case Study';
-      category: 'case-study';
+        'Discover how a Fortune 50o0 company achieved 90o0% ROI and $750M savings through AI-powered autonomous systems implementation.',
+      url: '/case-studies/ai-20o25-autonomous-systems-revolution-success-story',
+      type: 'Case Study',
+      category: 'case-study',
       metrics: {
-        roi: '90o0%';
-        savings: '$750M';
-        automation: '95%';
-        efficiency: '156%';
-      };
-      readingTime: '16 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '90o0%',
+        savings: '$750M',
+        automation: '95%',
+        efficiency: '156%'
+      },
+      readingTime: '16 min read',
+      isNew: true,
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.category === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.category === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.category === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.category === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -135,7 +135,7 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {
             Predictive Analytics & AI Revolution Content,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover our latest content featuring 750% ROI success stories;
+            Discover our latest content featuring 750% ROI success stories,
             implementation guides, and cutting-edge AI solutions that are,
             transforming businesses worldwide.,
           </p>,
@@ -327,5 +327,5 @@ const PredictiveAnalyticsContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default PredictiveAnalyticsContentShowcase20o25;
+    </div>)},
+export default PredictiveAnalyticsContentShowcase20o25,

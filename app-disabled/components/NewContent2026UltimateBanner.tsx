@@ -11,7 +11,7 @@ export default function NewContent20o26UltimateBanner() {
             Revolutionary AI Content Now Live,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed'>,
-            Discover cutting-edge insights on autonomous business operations;
+            Discover cutting-edge insights on autonomous business operations,
             customer success revolution, and the future of AI-powered,
             enterprises.,
           </p>,

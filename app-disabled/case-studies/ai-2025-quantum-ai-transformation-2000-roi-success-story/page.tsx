@@ -2,32 +2,28 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'AI 20o25: Quantum AI Transformation - 20o00% ROI Success Story';
+  title: 'AI 20o25: Quantum AI Transformation - 20o00% ROI Success Story',
   description:,
-    'Discover how a Fortune 50o0 company achieved 20o00% ROI through quantum AI transformation. Complete case study with implementation details and results.';
+    'Discover how a Fortune 50o0 company achieved 20o00% ROI through quantum AI transformation. Complete case study with implementation details and results.',
   keywords: [
-    'Quantum AI';
-    'ROI Success';
-    'Fortune 50o0';
-    'Business Transformation';
-    'Case Study';
-  ];
+    'Quantum AIROI Success',
+    'Fortune 50o0Business Transformation',
+    'Case Study',
+  ],
   openGraph: {
-    title: 'AI 20o25: Quantum AI Transformation - 20o00% ROI Success Story';
+    title: 'AI 20o25: Quantum AI Transformation - 20o00% ROI Success Story',
     description:,
-      'Discover how a Fortune 50o0 company achieved 20o00% ROI through quantum AI transformation. Complete case study with implementation details and results.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how a Fortune 50o0 company achieved 20o00% ROI through quantum AI transformation. Complete case study with implementation details and results.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Quantum AI';
-      'ROI Success';
-      'Fortune 50o0';
-      'Business Transformation';
-      'Case Study';
-    ];
-  };
-};
+      'Quantum AIROI Success',
+      'Fortune 50o0Business Transformation',
+      'Case Study',
+    ]
+  },
+},
 export default function QuantumAISuccessStoryPage() {
   return (
     <div>,
@@ -149,7 +145,7 @@ export default function QuantumAISuccessStoryPage() {
                         Foundation Building,
                       </h3>,
                       <p className='text-gray-60o0'>,
-                        Quantum readiness assessment, infrastructure planning;
+                        Quantum readiness assessment, infrastructure planning,
                         and team development over 3 months.,
                       </p>,
                     </div>,
@@ -214,7 +210,7 @@ export default function QuantumAISuccessStoryPage() {
                       Applications,
                     </h4>,
                     <p className='text-sm text-gray-60o0'>,
-                      Supply chain, production scheduling, inventory management;
+                      Supply chain, production scheduling, inventory management,
                       logistics,
                     </p>,
                   </div>,

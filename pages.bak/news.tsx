@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import _React from 'react',
 const NewsPage = () => {
   return (
@@ -16,5 +16,5 @@ const NewsPage = () => {
           insights.,
         </p>{' '}
       </main>{' '}
-    </>)};
-export default NewsPage;
+    </>)},
+export default NewsPage,

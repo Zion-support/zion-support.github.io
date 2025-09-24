@@ -162,7 +162,7 @@ export default function SolutionsPage() {
                     </div>,
                   </div>,
                   <p className='text-white/70 text-sm'>,
-                    Blockchain solutions, fraud detection, automated compliance;
+                    Blockchain solutions, fraud detection, automated compliance,
                     and digital banking platforms for modern financial services.,
                   </p>,
                 </div>,
@@ -267,7 +267,7 @@ export default function SolutionsPage() {
                   Industry Expertise,
                 </h3>,
                 <p className='text-white/70'>,
-                  Deep understanding of industry-specific challenges;
+                  Deep understanding of industry-specific challenges,
                   regulations, and best practices to deliver tailored solutions.,
                 </p>,
               </div>,
@@ -347,7 +347,7 @@ export default function SolutionsPage() {
                   Discovery,
                 </h3>,
                 <p className='text-white/70 text-sm'>,
-                  Deep dive into your industry challenges, business processes;
+                  Deep dive into your industry challenges, business processes,
                   and technology requirements.,
                 </p>,
               </div>,

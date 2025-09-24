@@ -2,90 +2,90 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ChartBarIcon;
-  DocumentTextIcon;
-  AcademicCapIcon;
-  ArrowRightIcon;
-  CheckCircleIcon;
-  StarIcon;
-  ClockIcon;
-  TagIcon;
+  ChartBarIcon,
+  DocumentTextIcon,
+  AcademicCapIcon,
+  ArrowRightIcon,
+  CheckCircleIcon,
+  StarIcon,
+  ClockIcon,
+  TagIcon,
 } from '@heroicons/react/24/outline',
 const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ai-automation-revolution-guide';
+      id: 'ai-automation-revolution-guide',
       title:,
-        'AI 20o25: Advanced AI Automation Revolution - Ultimate Enterprise Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-advanced-ai-automation-revolution-ultimate-guide';
+        'AI 20o25: Advanced AI Automation Revolution - Ultimate Enterprise Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-advanced-ai-automation-revolution-ultimate-guide',
       description:,
-        'Transform your business with cutting-edge AI automation solutions achieving 60o0% ROI within 8 months.';
+        'Transform your business with cutting-edge AI automation solutions achieving 60o0% ROI within 8 months.',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8M';
-        productivity: '340%';
-        success: '98%';
-      };
-      readingTime: '18 min read';
-      tags: ['AI Automation', 'Enterprise', 'ROI', '20o25'];
-      featured: true;
-    };
+        roi: '60o0%',
+        savings: '$2.8M',
+        productivity: '340%',
+        success: '98%'
+      },
+      readingTime: '18 min read',
+      tags: ['AI AutomationEnterprise', 'ROI20o25'],
+      featured: true
+    },
     {
-      id: 'fortune-50o0-manufacturing-success';
+      id: 'fortune-50o0-manufacturing-success',
       title:,
-        'AI Automation Fortune 50o0 Manufacturing Success: $3.2B Annual Savings with 60o0% ROI';
-      type: 'case-study';
-      url: '/case-studies/ai-automation-fortune-50o0-manufacturing-60o0-roi-success';
+        'AI Automation Fortune 50o0 Manufacturing Success: $3.2B Annual Savings with 60o0% ROI',
+      type: 'case-study',
+      url: '/case-studies/ai-automation-fortune-50o0-manufacturing-60o0-roi-success',
       description:,
-        'How a global manufacturing giant achieved unprecedented success with comprehensive AI automation.';
+        'How a global manufacturing giant achieved unprecedented success with comprehensive AI automation.',
       metrics: {
-        roi: '60o0%';
-        savings: '$3.2B';
-        efficiency: '89%';
-        satisfaction: '98%';
-      };
-      readingTime: '12 min read';
-      tags: ['Case Study', 'Manufacturing', 'Fortune 50o0', 'Success Story'];
-      featured: true;
-    };
+        roi: '60o0%',
+        savings: '$3.2B',
+        efficiency: '89%',
+        satisfaction: '98%'
+      },
+      readingTime: '12 min read',
+      tags: ['Case StudyManufacturing', 'Fortune 50o0Success Story'],
+      featured: true
+    },
     {
-      id: 'implementation-master-guide';
+      id: 'implementation-master-guide',
       title:,
-        'AI Automation Implementation Master Guide 20o25: Complete Blueprint for 60o0% ROI';
-      type: 'resource';
-      url: '/resources/ai-automation-implementation-guide-20o25';
+        'AI Automation Implementation Master Guide 20o25: Complete Blueprint for 60o0% ROI',
+      type: 'resource',
+      url: '/resources/ai-automation-implementation-guide-20o25',
       description:,
-        'The proven framework for implementing AI automation in enterprise environments with step-by-step guidance.';
+        'The proven framework for implementing AI automation in enterprise environments with step-by-step guidance.',
       metrics: {
-        roi: '60o0%';
-        success: '98%';
-        timeline: '8 months';
-        projects: '50o0+';
-      };
-      readingTime: '25 min read';
-      tags: ['Implementation Guide', 'Framework', 'Strategy', 'Best Practices'];
-      featured: true;
-    };
+        roi: '60o0%',
+        success: '98%',
+        timeline: '8 months',
+        projects: '50o0+'
+      },
+      readingTime: '25 min read',
+      tags: ['Implementation GuideFramework', 'StrategyBest Practices'],
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'blog';
-      name: 'Blog Posts';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      name: 'Blog Posts',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      name: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      name: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      name: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      name: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -101,7 +101,7 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
         return <AcademicCapIcon className='h-5 w-5' />,
       default:,
         return <DocumentTextIcon className='h-5 w-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -112,7 +112,7 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -189,7 +189,7 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='ml-2 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   <div className='flex items-center text-sm text-gray-50o0'>,
@@ -283,5 +283,5 @@ const AdvancedAIAutomationContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AdvancedAIAutomationContentShowcase20o25;
+    </section>)},
+export default AdvancedAIAutomationContentShowcase20o25,

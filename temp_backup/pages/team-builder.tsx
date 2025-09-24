@@ -5,17 +5,17 @@ import { logTeamBuilderEvent } from '../components/monetization/AnalyticsEvents'
 export type TeamRoleRecommendation ={
   role: string,
   description: string,
-  hourlyRangeUsd: { min: number, max: number };
+  hourlyRangeUsd: { min: number, max: number },
   estimatedWeeklyHours: number,
   quantity: number,
   preferredLocations?: string[],
-  requiredSkills?: string[]};
+  requiredSkills?: string[]},
 export type TeamRecommendationResponse ={
   team: TeamRoleRecommendation[],
   assumptions: string[],
   weeklyBurnUsd: number,
-  estimatedProjectTotalUsd: number};
-const defaultTechAreas = ['Frontend', 'Backend', 'Fullstack', 'AI/ML', 'Data', 'DevOps', 'Security', 'Mobile', 'Design', 'PM'],
+  estimatedProjectTotalUsd: number},
+const defaultTechAreas = ['FrontendBackend', 'FullstackAI/ML', 'DataDevOps', 'SecurityMobile', 'DesignPM'],
 const currency = (n: number) => `$${n.toLocaleString(undefined, { maximumFractionDigits: 0 })}`,
 function matchTalentForRole(role: TeamRoleRecommendation, filters: { verifiedOnly: boolean, region?: string }) {
   const skills = new Set((role.requiredSkills || []).map(s => s.toLowerCase())),
@@ -33,20 +33,20 @@ const VisualBudgetBar = ({ value, max }: { value: number, max: number }) => {
   return (
     <div className="w-full h-3 bg-gray-20o0 dark: bg-gray-80o0 rounded">,
       <div className={`h-3 ${color} rounded`} style={{ width: `${pct}%` }}  />,
-    </div>)};
+    </div>)},
 const TeamBuilderPage: NextPage = () => {
   const [projectName, setProjectName] = useState(''),
   const [goals, setGoals] = useState(''),
   const [timeline, setTimeline] = useState('Q4 pilot, GA in Q1'),
   const [budget, setBudget] = useState<number | ''>(''),
-  const [techAreas, setTechAreas] = useState<string[]>(['Fullstack', 'AI/ML', 'DevOps']),
+  const [techAreas, setTechAreas] = useState<string[]>(['FullstackAI/ML', 'DevOps']),
   const [lockBudget, setLockBudget] = useState(false),
   const [lockTimeline, setLockTimeline] = useState(false),
   const [filters, setFilters] = useState<{ verifiedOnly: boolean, region?: string }>({ verifiedOnly: false }),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const [recommendation, setRecommendation] = useState<TeamRecommendationResponse | null>(null),
-  const techAreasString = techAreas.join(', '),
+  const techAreasString = techAreas.join(),
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setLoading(true),
@@ -54,8 +54,8 @@ const TeamBuilderPage: NextPage = () => {
     setRecommendation(null),
     try {
       const resp = await fetch('/api/generate-team', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ projectName, goals, timeline, budget, techAreas, lockBudget, lockTimeline })}),
       if (!resp.ok) throw new Error(`Request failed: ${resp.status}`),
       const data: TeamRecommendationResponse = await resp.json(),
@@ -63,14 +63,14 @@ const TeamBuilderPage: NextPage = () => {
       logTeamBuilderEvent({ type: 'team_generated', weeklyBurnUsd: data.weeklyBurnUsd, budget: typeof budget === 'number' ? budget : Number(budget), roles: data.team.map(r => ({ role: r.role, quantity: r.quantity })) })} catch (err: any) {
       setError(err?.message || 'Failed to generate team')} finally {
       setLoading(false)}
-  };
+  },
   const computeWeeksFromTimeline = (t?: string) => {
     if (!t) return 12,
     const w = t.match(/(\d+)\s*(week|weeks)/i),
     if (w) return Number(w[1]),
     const q = t.match(/Q(\d)/i),
     if (q) return 12,
-    return 12};
+    return 12},
   const computeWeeklyBurn = (team: TeamRoleRecommendation[]) =>,
     team.reduce((sum, r) => sum + (((r.hourlyRangeUsd.min + r.hourlyRangeUsd.max) / 2) * r.estimatedWeeklyHours * r.quantity), 0),
   const weeks = computeWeeksFromTimeline(timeline),
@@ -85,10 +85,10 @@ const TeamBuilderPage: NextPage = () => {
     if (!recommendation) return [] as { role: TeamRoleRecommendation, talent: TalentProfile[] }[],
     return recommendation.team.map((r) => ({ role: r, talent: matchTalentForRole(r, filters) }))}, [recommendation, filters]),
   const updateTechArea = (area: string) => {
-    setTechAreas((prev) => prev.includes(area) ? prev.filter(a => a !== area) : [...prev, area])};
+    setTechAreas((prev) => prev.includes(area) ? prev.filter(a => a !== area) : [...prev, area])},
   const inviteToTeam = (talent: TalentProfile, role: string) => {
     alert(`Invited ${talent.name} for role: ${role}`),
-    logTeamBuilderEvent({ type: 'invite_sent', role, talentSlug: talent.slug })};
+    logTeamBuilderEvent({ type: 'invite_sent', role, talentSlug: talent.slug })},
   // Inline role editing,
   const changeQuantity = (index: number, delta: number) => {
     setRecommendation((prev) => {
@@ -98,34 +98,34 @@ const TeamBuilderPage: NextPage = () => {
         .filter(r => r.quantity > 0),
       if (delta < 0 && before.quantity + delta <= 0) {
         logTeamBuilderEvent({ type: 'role_removed', role: before.role })}
-      return { ...prev, team };
-    })};
+      return { ...prev, team },
+    })},
   const removeRole = (index: number) => {
     setRecommendation((prev) => {
       if (!prev) return prev,
       const removed = prev.team[index],
       const team = prev.team.filter((_, i) => i !== index),
       logTeamBuilderEvent({ type: 'role_removed', role: removed.role }),
-      return { ...prev, team };
-    })};
+      return { ...prev, team },
+    })},
   const [newRole, setNewRole] = useState<{ role: string, description: string, min: number | '', max: number | '', hours: number | '', qty: number | '' }>({ role: '', description: '', min: '', max: '', hours: '', qty: '' }),
   const addNewRole = () => {
     if (!recommendation) return,
     const min = Number(newRole.min), max = Number(newRole.max), hours = Number(newRole.hours), qty = Number(newRole.qty),
     if (!newRole.role || isNaN(min) || isNaN(max) || isNaN(hours) || isNaN(qty)) return,
     setRecommendation((prev) => prev ? ({
-      ...prev;
+      ...prev,
       team: [
-        ...prev.team;
+        ...prev.team,
         {
-          role: newRole.role;
-          description: newRole.description || 'Custom role';
-          hourlyRangeUsd: { min, max };
-          estimatedWeeklyHours: hours;
+          role: newRole.role,
+          description: newRole.description || 'Custom role',
+          hourlyRangeUsd: { min, max },
+          estimatedWeeklyHours: hours,
           quantity: qty}
       ]}) : prev),
     logTeamBuilderEvent({ type: 'role_added', role: newRole.role }),
-    setNewRole({ role: '', description: '', min: '', max: '', hours: '', qty: '' })};
+    setNewRole({ role: '', description: '', min: '', max: '', hours: '', qty: '' })},
   return (
     <div className="space-y-8">,
       <div>,
@@ -306,5 +306,5 @@ const TeamBuilderPage: NextPage = () => {
       <div className="opacity-70 text-xs">,
         Admin Insights coming soon: track most-requested roles and flag high-budget builds for concierge onboarding.,
       </div>,
-    </div>)};
-export default TeamBuilderPage;
+    </div>)},
+export default TeamBuilderPage,

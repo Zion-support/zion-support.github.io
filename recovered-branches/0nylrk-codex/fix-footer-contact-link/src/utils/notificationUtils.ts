@@ -10,14 +10,14 @@ type NotificationType =,
  * Creates a notification for a user and optionally sends an email notification,
  */,
 export async function createNotification({
-  userId;
-  title;
-  message;
-  type;
-  relatedId = null;
-  sendEmail = false;
-  actionUrl = null;
-  actionText = null;
+  userId,
+  title,
+  message,
+  type,
+  relatedId = null,
+  sendEmail = false,
+  actionUrl = null,
+  actionText = null,
 }: {
   userId: string,
   title: string,
@@ -32,24 +32,24 @@ export async function createNotification({
   try {
     // Call the create_notification database function,
     const { data, error } = await supabase.rpc('create_notification', {
-      _user_id: userId;
-      _title: title;
-      _message: message;
-      _type: type;
-      _related_id: relatedId;
+      _user_id: userId,
+      _title: title,
+      _message: message,
+      _type: type,
+      _related_id: relatedId
     }),
     if (error) throw error,
     // If sendEmail is true, call the edge function to send an email,
     if (sendEmail && data) {
       const notificationId = data,
       await supabase.functions.invoke('send-notification-email', {
-        body: { user_id: userId, notification_id: notificationId };
+        body: { user_id: userId, notification_id: notificationId },
       })}
 ,
-    return { success: true, notificationId: data };
+    return { success: true, notificationId: data },
   } catch (error) {
     console.error('Error creating notification:', error),
-    return { success: false, error };
+    return { success: false, error },
   }
 }
 ,
@@ -57,13 +57,13 @@ export async function createNotification({
  * Creates a hire request notification for admin and talent,
  */,
 export async function createHireRequestNotifications({
-  talentId;
-  adminId;
-  requesterName;
-  requesterEmail;
-  projectType;
-  projectSummary;
-  hireRequestId;
+  talentId,
+  adminId,
+  requesterName,
+  requesterEmail,
+  projectType,
+  projectSummary,
+  hireRequestId,
 }: {
   talentId: string,
   adminId?: string,
@@ -76,47 +76,47 @@ export async function createHireRequestNotifications({
   const summaryText = projectSummary ? `: "${projectSummary}"` : '',
   // Create notification for talent,
   const talentNotification = await createNotification({
-    userId: talentId;
-    title: `New Hire Request from ${requesterName}`;
-    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`;
-    type: 'hire_request';
-    relatedId: hireRequestId;
-    sendEmail: true;
-    actionUrl: '/dashboard';
-    actionText: 'View Request';
+    userId: talentId,
+    title: `New Hire Request from ${requesterName}`,
+    message: `${requesterName} (${requesterEmail}) wants to hire you for a ${projectInfo}${summaryText}`,
+    type: 'hire_request',
+    relatedId: hireRequestId,
+    sendEmail: true,
+    actionUrl: '/dashboard',
+    actionText: 'View Request'
   }),
   // Create notification for admin if admin ID is provided,
   if (adminId) {
     const adminNotification = await createNotification({
-      userId: adminId;
-      title: `New Hire Request for Talent`;
-      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`;
-      type: 'hire_request';
-      relatedId: hireRequestId;
-      sendEmail: true;
-      actionUrl: '/admin/hire-requests';
-      actionText: 'Review Request';
+      userId: adminId,
+      title: `New Hire Request for Talent`,
+      message: `${requesterName} (${requesterEmail}) wants to hire talent for a ${projectInfo}${summaryText}`,
+      type: 'hire_request',
+      relatedId: hireRequestId,
+      sendEmail: true,
+      actionUrl: '/admin/hire-requests',
+      actionText: 'Review Request'
     }),
     return {
-      success: talentNotification.success && adminNotification.success;
-      talentNotification;
-      adminNotification;
-    };
+      success: talentNotification.success && adminNotification.success,
+      talentNotification,
+      adminNotification
+    },
   }
 ,
   return {
-    success: talentNotification.success;
-    talentNotification;
-  };
+    success: talentNotification.success,
+    talentNotification
+  },
 }
 ,
 /**,
  * Creates an onboarding notification for a user,
  */,
 export async function createOnboardingNotification({
-  userId;
-  missingMilestone;
-  userRole;
+  userId,
+  missingMilestone,
+  userRole,
 }: {
   userId: string,
   missingMilestone: string,
@@ -169,25 +169,25 @@ export async function createOnboardingNotification({
   }
 ,
   return createNotification({
-    userId;
-    title;
-    message;
-    type: 'onboarding';
-    sendEmail: false;
-    actionUrl;
-    actionText;
+    userId,
+    title,
+    message,
+    type: 'onboarding',
+    sendEmail: false,
+    actionUrl,
+    actionText
   })}
 ,
 /**,
  * Creates a system notification for a user,
  */,
 export async function createSystemNotification({
-  userId;
-  title;
-  message;
-  actionUrl = null;
-  actionText = null;
-  sendEmail = false;
+  userId,
+  title,
+  message,
+  actionUrl = null,
+  actionText = null,
+  sendEmail = false,
 }: {
   userId: string,
   title: string,
@@ -196,13 +196,13 @@ export async function createSystemNotification({
   actionText?: string | null,
   sendEmail?: boolean}) {
   return createNotification({
-    userId;
-    title;
-    message;
-    type: 'system';
-    sendEmail;
-    actionUrl;
-    actionText;
+    userId,
+    title,
+    message,
+    type: 'system',
+    sendEmail,
+    actionUrl,
+    actionText
   })}
 ,
 /**,
@@ -210,46 +210,43 @@ export async function createSystemNotification({
  */,
 export async function createTestNotification(userId: string) {
   const types: NotificationType[] = [
-    'message';
-    'quote_request';
-    'booking_confirmation';
-    'hire_request';
-    'onboarding';
-    'system';
+    'messagequote_request',
+    'booking_confirmationhire_request',
+    'onboardingsystem'
   ],
   const randomType = types[Math.floor(Math.random() * types.length)],
   const titles = {
-    message: 'New Message Received';
-    quote_request: 'Quote Request Submitted';
-    booking_confirmation: 'Booking Confirmed';
-    hire_request: 'New Hire Request';
-    onboarding: 'Complete Your Profile';
-    system: 'System Update';
-  };
+    message: 'New Message Received',
+    quote_request: 'Quote Request Submitted',
+    booking_confirmation: 'Booking Confirmed',
+    hire_request: 'New Hire Request',
+    onboarding: 'Complete Your Profile',
+    system: 'System Update'
+  },
   const messages = {
-    message: 'You have received a new message from a potential client.';
-    quote_request: 'A client has submitted a quote request for your services.';
-    booking_confirmation: 'Your booking has been confirmed and scheduled.';
+    message: 'You have received a new message from a potential client.',
+    quote_request: 'A client has submitted a quote request for your services.',
+    booking_confirmation: 'Your booking has been confirmed and scheduled.',
     hire_request:,
-      'A client wants to hire you for a project. Check your dashboard for details.';
-    onboarding: 'Complete your profile to get more visibility and job matches.';
-    system: 'Our platform has been updated with new features. Check them out!';
-  };
+      'A client wants to hire you for a project. Check your dashboard for details.',
+    onboarding: 'Complete your profile to get more visibility and job matches.',
+    system: 'Our platform has been updated with new features. Check them out!'
+  },
   const actions = {
-    message: { url: '/messages', text: 'View Messages' };
-    quote_request: { url: '/quotes', text: 'View Quote' };
-    booking_confirmation: { url: '/bookings', text: 'View Booking' };
-    hire_request: { url: '/dashboard', text: 'View Request' };
-    onboarding: { url: '/profile', text: 'Complete Profile' };
-    system: { url: '/dashboard', text: 'Learn More' };
-  };
+    message: { url: '/messages', text: 'View Messages' },
+    quote_request: { url: '/quotes', text: 'View Quote' },
+    booking_confirmation: { url: '/bookings', text: 'View Booking' },
+    hire_request: { url: '/dashboard', text: 'View Request' },
+    onboarding: { url: '/profile', text: 'Complete Profile' },
+    system: { url: '/dashboard', text: 'Learn More' },
+  },
   return createNotification({
-    userId;
-    title: titles[randomType];
-    message: messages[randomType];
-    type: randomType;
-    sendEmail: true;
-    actionUrl: actions[randomType].url;
-    actionText: actions[randomType].text;
+    userId,
+    title: titles[randomType],
+    message: messages[randomType],
+    type: randomType,
+    sendEmail: true,
+    actionUrl: actions[randomType].url,
+    actionText: actions[randomType].text
   })}
 ,

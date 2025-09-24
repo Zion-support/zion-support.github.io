@@ -3,8 +3,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle;
-  ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle,
+  ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, Phone, Mail, MapPin, Eye, Heart, Target, Award} from 'lucide-react',
 import { innovative20o26MicroSaasServicesV4 } from '../data/innovative-20o26-micro-saas-v4',
 import { emergingTech20o26ServicesV4 } from '../data/emerging-tech-20o26-services-v4',
@@ -19,15 +19,15 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
   const [sortBy, setSortBy] = useState<string>('name'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all new services,
   const allServices = [
-    ...innovative20o26MicroSaasServicesV4;
-    ...emergingTech20o26ServicesV4;
-    ...enterpriseIT20o26ServicesV4;
+    ...innovative20o26MicroSaasServicesV4,
+    ...emergingTech20o26ServicesV4,
+    ...enterpriseIT20o26ServicesV4,
     ...innovative20o26AIServicesV4],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
@@ -63,25 +63,25 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
     service.category?.includes('Brain-Computer') ||,
     service.category?.includes('Space Technology')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🤖', count: aiCount };
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount };
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🤖', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $50o0', range: 'Under $50o0' };
-    { id: 'medium', name: '$50o0 - $2,0o00', range: '$50o0 - $2,0o00' };
-    { id: 'high', name: '$2,0o00+', range: '$2,0o00+' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $50o0', range: 'Under $50o0' },
+    { id: 'medium', name: '$50o0 - $2,0o00', range: '$50o0 - $2,0o00' },
+    { id: 'high', name: '$2,0o00+', range: '$2,0o00+' },
     { id: 'custom', name: 'Custom Pricing', range: 'Custom' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name', icon: '🔤' };
-    { id: 'price', name: 'Price', icon: '💰' };
-    { id: 'popularity', name: 'Popularity', icon: '⭐' };
-    { id: 'rating', name: 'Rating', icon: '🏆' };
+    { id: 'name', name: 'Name', icon: '🔤' },
+    { id: 'price', name: 'Price', icon: '💰' },
+    { id: 'popularity', name: 'Popularity', icon: '⭐' },
+    { id: 'rating', name: 'Rating', icon: '🏆' },
     { id: 'newest', name: 'Newest', icon: '🆕' }
   ],
   // Filter and sort services,
@@ -151,22 +151,22 @@ export default function Revolutionary20o26ServicesShowcaseV4() {
 ,
     return filtered}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <>,
       <Head>,

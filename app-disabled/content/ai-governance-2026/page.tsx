@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Governance 20o26: Policy, Risk, and Compliance Framework';
+  title: 'AI Governance 20o26: Policy, Risk, and Compliance Framework',
   description:,
-    'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.';
-};
+    'Practical AI governance playbook: policies, controls, assurance, and continuous monitoring for safe and compliant AI at scale.',
+},
 export default function AIGovernance20o26Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -23,7 +23,7 @@ export default function AIGovernance20o26Page() {
           <article className='prose prose-lg max-w-none'>,
             <h2>Why AI Governance Now</h2>,
             <p>,
-              With rapid adoption of foundation models and autonomous agents;
+              With rapid adoption of foundation models and autonomous agents,
               organizations must institute policy, control, and assurance,
               mechanisms that keep pace with innovation. This guide outlines a,
               pragmatic approach to governance that accelerates delivery while,

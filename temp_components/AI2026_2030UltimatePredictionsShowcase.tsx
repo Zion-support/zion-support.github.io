@@ -9,92 +9,86 @@ import {
   Database,
   Shield,
   Rocket,
-  Star;
-  TrendingUp;
-  Users;
-  Lightbulb;
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Calendar;
-  BarChart3;
-  Network;
+  Star,
+  TrendingUp,
+  Users,
+  Lightbulb,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Calendar,
+  BarChart3,
+  Network,
   Atom} from 'lucide-react',
 const AI20o26_20o30UltimatePredictionsShowcase = () => {
   const [activeTabsetActiveTab] = useState('overview'),
   const [currentPredictionsetCurrentPrediction] = useState(0),
   const predictions = [
     {
-      year: '20o26';
-      title: 'Neural Interface Revolution';
-      description: 'Direct brain-computer interfaces become commercially viablenabling thought-controlled computing and enhanced cognitive capabilities.';
-      impact: 'Transform human-computer interaction forever';
-      technologies: ['Neural Implants'Brain-Computer Interfaces'Cognitive Enhancement'];
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0'};
+      year: '20o26',
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer interfaces become commercially viablenabling thought-controlled computing and enhanced cognitive capabilities.',
+      impact: 'Transform human-computer interaction forever',
+      technologies: ['Neural Implants'Brain-Computer Interfaces'Cognitive Enhancement'],
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      year: '20o27';
-      title: 'Quantum AI Fusion';
-      description: 'Quantum computing and AI merge to create unprecedented problem-solving capabilitiesrevolutionizing cryptography and optimization.';
-      impact: 'Solve previously impossible computational challenges';
-      technologies: ['Quantum AI'Quantum Machine Learning'Quantum Optimization'];
-      icon: Atom;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      year: '20o27',
+      title: 'Quantum AI Fusion',
+      description: 'Quantum computing and AI merge to create unprecedented problem-solving capabilitiesrevolutionizing cryptography and optimization.',
+      impact: 'Solve previously impossible computational challenges',
+      technologies: ['Quantum AI'Quantum Machine Learning'Quantum Optimization'],
+      icon: Atom,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      year: '20o28';
-      title: 'Autonomous Everything';
-      description: 'AI systems achieve full autonomy across industriesfrom self-managing cities to completely automated supply chains.';
-      impact: 'Eliminate human intervention in routine operations';
-      technologies: ['Autonomous Systems'Self-Managing Infrastructure'AI Governance'];
-      icon: Cpu;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      year: '20o28',
+      title: 'Autonomous Everything',
+      description: 'AI systems achieve full autonomy across industriesfrom self-managing cities to completely automated supply chains.',
+      impact: 'Eliminate human intervention in routine operations',
+      technologies: ['Autonomous Systems'Self-Managing Infrastructure'AI Governance'],
+      icon: Cpu,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      year: '20o29';
-      title: 'Emotional AI Mastery';
-      description: 'AI achieves true emotional intelligenceunderstanding and responding to human emotions with unprecedented accuracy.';
-      impact: 'Revolutionize human-AI relationships and therapy';
-      technologies: ['Emotional AI'Empathetic Computing'AI Therapy'];
-      icon: Users;
-      color: 'from-orange-50o0 to-red-50o0'};
+      year: '20o29',
+      title: 'Emotional AI Mastery',
+      description: 'AI achieves true emotional intelligenceunderstanding and responding to human emotions with unprecedented accuracy.',
+      impact: 'Revolutionize human-AI relationships and therapy',
+      technologies: ['Emotional AI'Empathetic Computing'AI Therapy'],
+      icon: Users,
+      color: 'from-orange-50o0 to-red-50o0'},
     {
-      year: '20o30';
-      title: 'Consciousness Integration';
-      description: 'AI systems develop forms of consciousnessleading to new ethical frameworks and collaborative human-AI societies.';
-      impact: 'Redefine what it means to be conscious and intelligent';
-      technologies: ['Artificial Consciousness'AI Rights'Human-AI Collaboration'];
-      icon: Lightbulb;
+      year: '20o30',
+      title: 'Consciousness Integration',
+      description: 'AI systems develop forms of consciousnessleading to new ethical frameworks and collaborative human-AI societies.',
+      impact: 'Redefine what it means to be conscious and intelligent',
+      technologies: ['Artificial Consciousness'AI Rights'Human-AI Collaboration'],
+      icon: Lightbulb,
       color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const keyTrends = [
     {
-      category: 'Technology';
+      category: 'Technology',
       trends: [
-        'Neural interfaces become mainstream';
-        'Quantum AI solves complex problems';
-        'Autonomous systems manage entire cities';
-        'AI achieves emotional intelligence';
-        'Consciousness becomes programmable']};
+        'Neural interfaces become mainstreamQuantum AI solves complex problems',
+        'Autonomous systems manage entire citiesAI achieves emotional intelligence',
+        'Consciousness becomes programmable']},
     {
-      category: 'Business';
+      category: 'Business',
       trends: [
-        'Complete automation of routine tasks';
-        'AI-driven decision making at scale';
-        'New business models emerge';
-        'Human-AI collaboration becomes standard';
-        'Ethical AI becomes competitive advantage']};
+        'Complete automation of routine tasksAI-driven decision making at scale',
+        'New business models emergeHuman-AI collaboration becomes standard',
+        'Ethical AI becomes competitive advantage']},
     {
-      category: 'Society';
+      category: 'Society',
       trends: [
-        'Universal basic income becomes necessary';
-        'Education system completely transforms';
-        'New forms of human-AI relationships';
-        'Consciousness rights become legal issue';
+        'Universal basic income becomes necessaryEducation system completely transforms',
+        'New forms of human-AI relationshipsConsciousness rights become legal issue',
         'Post-scarcity economy emerges']}
   ],
   const stats = [
-    { label: 'AI Adoption Rate'value: '95%'icon: TrendingUp };
-    { label: 'Job Transformation'value: '80%'icon: Users };
-    { label: 'Productivity Increase'value: '30o0%'icon: BarChart3 };
+    { label: 'AI Adoption Rate'value: '95%'icon: TrendingUp },
+    { label: 'Job Transformation'value: '80%'icon: Users },
+    { label: 'Productivity Increase'value: '30o0%'icon: BarChart3 },
     { label: 'New Industries'value: '50+'icon: Network }
   ],
   useEffect(() => {
@@ -261,5 +255,5 @@ const AI20o26_20o30UltimatePredictionsShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AI20o26_20o30UltimatePredictionsShowcase;
+    </div>)},
+export default AI20o26_20o30UltimatePredictionsShowcase,

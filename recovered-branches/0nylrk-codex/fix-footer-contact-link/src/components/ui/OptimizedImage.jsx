@@ -16,20 +16,20 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 setIsInView(true),
                 observerRef.current?.disconnect()}
         }, {
-            rootMargin: '50px';
+            rootMargin: '50px',
             threshold: 0.1}),
         observerRef.current.observe(imgRef.current),
         return () => {
             if (observerRef.current) {
                 observerRef.current.disconnect()}
-        };
+        },
     }, [priority]),
     const handleLoad = () => {
         setIsLoaded(true),
-        onLoad?.()};
+        onLoad?.()},
     const handleError = () => {
         setHasError(true),
-        onError?.()};
+        onError?.()},
     const getAspectRatioClass = () => {
         if (typeof aspectRatio === 'number') {
             return `aspect-[${aspectRatio}]`}
@@ -40,7 +40,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 return 'aspect-video',
             default: ,
                 return ''}
-    };
+    },
     const getObjectFitClass = () => {
         switch (objectFit) {
             case 'cover':,
@@ -55,7 +55,7 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
                 return 'object-scale-down',
             default: ,
                 return 'object-cover'}
-    };
+    },
     // Generate responsive image sources,
     const generateSrcSet = (imageSrc) => {
         if (!imageSrc.includes('http')),
@@ -69,12 +69,12 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
             params.set('w', w.toString()),
             params.set('q', quality.toString()),
             return `${baseUrl}?${params.toString()} ${w}w`}),
-            .join(', '),
-        return srcSet};
+            .join(),
+        return srcSet},
     const currentSrc = hasError ? fallback : (isInView ? src : placeholder),
     const srcSet = generateSrcSet(currentSrc),
     return (<div className={cn('relative overflow-hidden', getAspectRatioClass(), className)} style={{
-            width: width ? `${width}px` : 'auto';
+            width: width ? `${width}px` : 'auto',
             height: height ? `${height}px` : 'auto'}}>,
       <AnimatePresence mode="wait">,
         {!isLoaded && (<motion.div key="placeholder" className="absolute inset-0 bg-zion-slate-light/20 animate-pulse" initial={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: 0.2 }} />)}
@@ -99,10 +99,10 @@ export function OptimizedImage({ src, alt, width, height, className, placeholder
 // Avatar image component,
 export function AvatarImage({ src, alt, size = 'md', className, ...props }) {
     const sizeClasses ={
-        sm: 'w-8 h-8';
-        md: 'w-10 h-10';
-        lg: 'w-12 h-12';
-        xl: 'w-16 h-16'};
+        sm: 'w-8 h-8',
+        md: 'w-10 h-10',
+        lg: 'w-12 h-12',
+        xl: 'w-16 h-16'},
     return (<OptimizedImage src={src} alt={alt} aspectRatio="square" objectFit="cover" className={cn(sizeClasses[size], 'rounded-full', className)} {...props} />)}
 // Hero image component,
 export function HeroImage({ src, alt, className, ...props }) {

@@ -10,4 +10,4 @@ export const lazyLoadImages = () => {
         img.classList.remove('lazy'),
         observer.unobserve(img)}
     })}),
-  images.forEach(img => imageObserver.observe(img))};
+  images.forEach(img => imageObserver.observe(img))},

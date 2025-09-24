@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -19,7 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 'use client',
-import React from 'react';
+import React from 'react',
 import Link from 'next / link',
 import { motion } from 'framer-motion',
 import {
@@ -31,14 +31,15 @@ import {
   BarChart3,
   ArrowRight,
   Zap} from 'lucide-react',import {
-  Brain;
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
-  BarChart3;
-  ArrowRight;
-  Zap;} from 'lucide-react',import {
+  Brain,
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
+  BarChart3,
+  ArrowRight,
+  Zap,} from 'lucide-react',
+import {
   Brain,
   Cloud,
   RefreshCw,
@@ -47,19 +48,19 @@ import {
   BarChart3,
   ArrowRight,
   Zap} from 'lucide-react',
-  Brain;
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
-  BarChart3;
-  ArrowRight;
+  Brain,
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
+  BarChart3,
+  ArrowRight,
   Zap} from 'lucide-react',import {
   Brain,
-  Cloud;
-  RefreshCw;
-  Wifi;
-  Shield;
+  Cloud,
+  RefreshCw,
+  Wifi,
+  Shield,
   BarChart3,
   ArrowRight,
   Zap,
@@ -71,10 +72,8 @@ const ServicesSection: React.FC = () => {
       description:,
         'Custom AI solutions and machine learning models tailored to your business needs.',
       features: [
-        'Machine Learning Models',
-        'Natural Language Processing',
-        'Computer Vision',
-        'Predictive Analytics'],
+        'Machine Learning ModelsNatural Language Processing',
+        'Computer VisionPredictive Analytics'],
       color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development',      color: 'from-blue-500 to-cyan-500',
       href: '/services/ai-development'}
@@ -98,10 +97,8 @@ const ServicesSection: React.FC = () => {
       description:,
         'Scalable cloud solutions and infrastructure design for modern applications.',
       features: [
-        'AWS/Azure/GCP',
-        'Microservices',
-        'Serverless Architecture',
-        'DevOps Automation'],
+        'AWS/Azure/GCPMicroservices',
+        'Serverless ArchitectureDevOps Automation'],
       color: 'from-purple-500 to-pink-500',
       href: '/services/cloud-architecture'}
     {
@@ -110,39 +107,33 @@ const ServicesSection: React.FC = () => {
       description:,
         'End-to-end digital transformation services to modernize your business.',
       features: [
-        'Process Automation',
-        'Legacy System Migration',
-        'Change Management',
-        'Digital Strategy'],
+        'Process AutomationLegacy System Migration',
+        'Change ManagementDigital Strategy'],
       color: 'from-green-500 to-emerald-500',
       href: '/services/digital-transformation'},    {
-      icon: Wifi;
-      title: 'IoT Platforms';
+      icon: Wifi,
+      title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',      href: '/services / digital - transformation'}
 ,
     {
-      icon: Wifi;
-      title: 'IoT Platforms';
-      description: 'Connected device solutions and IoT platform development.';
-    };
+      icon: Wifi,
+      title: 'IoT Platforms',
+      description: 'Connected device solutions and IoT platform development.'
+    },
       features: [
-        'Sensor Networks';
-        'Real - time Monitoring';
-        'Data Analytics';
-        'Edge Computing';
-      ];
-      color: 'from - orange - 500 to - red - 500';
-      href: '/services / iot - platforms',      color: 'from - orange - 500 to - red - 500';
+        'Sensor NetworksReal - time Monitoring',
+        'Data AnalyticsEdge Computing',
+      ],
+      color: 'from - orange - 500 to - red - 500',
+      href: '/services / iot - platforms',      color: 'from - orange - 500 to - red - 500',
       href: '/services / iot - platforms'}
     {
       icon: Wifi,
       title: 'IoT Platforms',
       description: 'Connected device solutions and IoT platform development.',
       features: [
-        'Sensor Networks',
-        'Real-time Monitoring',
-        'Data Analytics',
-        'Edge Computing'],
+        'Sensor NetworksReal-time Monitoring',
+        'Data AnalyticsEdge Computing'],
       color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms',      color: 'from-orange-500 to-red-500',
       href: '/services/iot-platforms'}
@@ -159,10 +150,8 @@ const ServicesSection: React.FC = () => {
       description:,
         'Decentralized technology platforms and smart contract development.',
       features: [
-        'Smart Contracts',
-        'DeFi Applications',
-        'NFT Platforms',
-        'Supply Chain Solutions'],
+        'Smart ContractsDeFi Applications',
+        'NFT PlatformsSupply Chain Solutions'],
       color: 'from-indigo-500 to-purple-500',
       href: '/services/blockchain-solutions'},    {
       icon: BarChart3,
@@ -173,10 +162,8 @@ const ServicesSection: React.FC = () => {
       title: 'Data Analytics',
       description: 'Advanced analytics and business intelligence solutions.',
       features: [
-        'Big Data Processing',
-        'Real-time Dashboards',
-        'Predictive Modeling',
-        'Data Visualization'],
+        'Big Data ProcessingReal-time Dashboards',
+        'Predictive ModelingData Visualization'],
       color: 'from-teal-500 to-blue-500',
       href: '/services/data-analytics'}],      features: ['Big Data ProcessingReal-time DashboardsPredictive ModelingData Visualization'],
       color: 'from-teal-500 to-blue-500',
@@ -192,15 +179,15 @@ const ServicesSection: React.FC = () => {
     hidden: { opacity: 0, y: 20 }
     visible: { opacity: 1, y: 0 }
   }
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },        staggerChildren: 0.1}
     }
-    visible: { opacity: 1, y: 0 };
-  };
+    visible: { opacity: 1, y: 0 },
+  },
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
   return (
     <section className='py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden'>,
       {/* Background Elements */}
@@ -208,10 +195,10 @@ const ServicesSection: React.FC = () => {
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />,
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />,
       </div>,
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  },
         {/* Section Header */}
 ,
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
   return (
     <section className="py-20 bg-gradient-to-b from-gray-900 to-black relative overflow-hidden">,
       {/* Background Elements */}
@@ -223,11 +210,11 @@ const ServicesSection: React.FC = () => {
       <div className="relative container mx-auto px-4">,
         {/* Section Header */}
 ,
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
         {/* Section Header */}
 ,
         <motion.div,
@@ -238,25 +225,25 @@ const ServicesSection: React.FC = () => {
           className='text-center mb-16'        >          className="text-center mb-16",
           className='text-center mb-16'        >>,
           <motion.div,
-        stagger_children: 0.1;
-      };
+        stagger_children: 0.1
+      },
     }}
 ,
   const card_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 };
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1,
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
   const cardVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
       <div className='absolute inset-0'>,
         <div className='absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_30%_20%,rgba(59,130,246,0.1),transparent_50%)]' />,
         <div className='absolute top-0 right-0 w-full h-full bg-[radial-gradient(circle_at_70%_80%,rgba(147,51,234,0.1),transparent_50%)]' />,
       </div>,
-      <div className='relative container mx-auto px-4'>        {/* Section Header */}  };
+      <div className='relative container mx-auto px-4'>        {/* Section Header */}  },
         {/* Section Header */}
 ,
   return (
@@ -299,7 +286,7 @@ const ServicesSection: React.FC = () => {
             </span>,
           </h2>,
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>,
-            We deliver cutting-edge technology solutions that drive innovation;
+            We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.          </p>,
             efficiency, and growth for businesses across all industries.          </p>,
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">,
@@ -317,7 +304,7 @@ const ServicesSection: React.FC = () => {
             </span>,
           </h2>,
           <p className='text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed'>,
-            We deliver cutting-edge technology solutions that drive innovation;
+            We deliver cutting-edge technology solutions that drive innovation,
             efficiency, and growth for businesses across all industries.          </p>          ,
           <p className="text-xl text-gray-300 max-w-3xl mx-auto leading-relaxed">,
             We deliver cutting-edge technology solutions that drive innovation, efficiency, and growth ,
@@ -454,6 +441,6 @@ const ServicesSection: React.FC = () => {
         </motion && motion.div>,
       </div>,
     </section>)}
-};
-export default ServicesSection)};
+},
+export default ServicesSection)},
 )

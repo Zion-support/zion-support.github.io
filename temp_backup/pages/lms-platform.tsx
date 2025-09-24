@@ -9,21 +9,15 @@ export default function LmsPlatform() {
       implementationWeeks='1-3 weeks',
       roiNote='Cut ramp-up time by 30–50% and improve compliance rates',
       features={[
-        'Course builder with templates and SCORM support';
-        'Adaptive learning paths and skill matrices';
-        'Quizzes, assignments, and certifications';
-        'Video, docs, and interactive content';
-        'SSO and HRIS/CRM integrations';
-        'Learner analytics and progress dashboards';
-        'Mobile-first experience';
-        'Gamification and microlearning';
+        'Course builder with templates and SCORM supportAdaptive learning paths and skill matrices',
+        'Quizzes, assignments, and certificationsVideo, docs, and interactive content',
+        'SSO and HRIS/CRM integrationsLearner analytics and progress dashboards',
+        'Mobile-first experienceGamification and microlearning',
       ]}
       industries={[
-        'Enterprises';
-        'SMBs';
-        'Healthcare';
-        'Financial Services';
-        'Education';
+        'EnterprisesSMBs',
+        'HealthcareFinancial Services',
+        'Education',
       ]}
       canonical='https: //ziontechgroup.com/lms-platform',
     />)}

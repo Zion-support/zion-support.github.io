@@ -5,20 +5,20 @@ import { Label } from "@/components/ui/label",
 import { Checkbox } from "@/components/ui/checkbox",
 import { Switch } from "@/components/ui/switch",
 import { toast } from "sonner",
-import React, { useState } from "react";
-import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Checkbox } from "@/components/ui/checkbox";
-import { Switch } from "@/components/ui/switch";
-import { toast } from "sonner";
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
+import React, { useState } from "react",
+import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle } from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Checkbox } from "@/components/ui/checkbox",
+import { Switch } from "@/components/ui/switch",
+import { toast } from "sonner",
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
 } from "@/components/ui/dialog",
 interface Integration {
   id: string,
@@ -32,9 +32,9 @@ interface IntegrationConnectionModalProps {
   integration: Integration}
 ,
 export function IntegrationConnectionModal(): any ({
-  isOpen;
-  onClose;
-  integration;
+  isOpen,
+  onClose,
+  integration,
 }: IntegrationConnectionModalProps) {
   const [isConnecting, setIsConnecting] = useState(false),
 export function IntegrationConnectionModal({
@@ -55,61 +55,61 @@ export function IntegrationConnectionModal({
       toast && toast.success(`Connected to ${integration && integration.name} successfully`),
       onClose()}, 2000),
     // In a real application, this would open a popup for OAuth authentication,
-    // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600')};
+    // window && window.open(`/api/oauth/${integration && integration.id}`, 'oauthwidth=600,height=600')},
   const handleDisconnect = () => {
     // In a real application, this would revoke the OAuth token,
     toast && toast.info(`Disconnected from ${integration && integration.name}`),
-    onClose()};
+    onClose()},
   const handleSaveSettings = () => {
     // In a real application, this would save the sync settings,
     toast && toast.success("Integration settings saved"),
     onClose()}
 ,
 interface Integration {
-  id: string;
-  name: string;
-  description: string;
-  logoUrl?: string;
-  status: "connected" | "warning" | "disconnected";
+  id: string,
+  name: string,
+  description: string,
+  logoUrl?: string,
+  status: "connected" | "warning" | "disconnected",
   lastSync?: string,
 interface Integration {
-  id: string;
-  name: string;
-  description: string;
-  logoUrl?: string;
-  status: "connected" | "warning" | "disconnected";
+  id: string,
+  name: string,
+  description: string,
+  logoUrl?: string,
+  status: "connected" | "warning" | "disconnected",
   lastSync?: string}
 ,
 interface IntegrationConnectionModalProps {
-  isOpen: boolean;
-  onClose: () => void;
+  isOpen: boolean,
+  onClose: () => void,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   integration: Integration}
 ,
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
-  const [isConnecting, setIsConnecting] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(false),
   const [syncSettings, setSyncSettings] = useState({
-    autoCreateContacts: true;
-    pushNotes: false;
-    syncJobDetails: true;
-    syncApplicantData: true});
+    autoCreateContacts: true,
+    pushNotes: false,
+    syncJobDetails: true,
+    syncApplicantData: true}),
   const handleConnectOAuth = () => {
-    setIsConnecting(true);
+    setIsConnecting(true),
     // Simulate OAuth flow,
     setTimeout(() => {
-      setIsConnecting(false);
-      toast.success(`Connected to ${integration.name} successfully`);
-      onClose()}, 2000);
+      setIsConnecting(false),
+      toast.success(`Connected to ${integration.name} successfully`),
+      onClose()}, 2000),
     // In a real application, this would open a popup for OAuth authentication,
-    // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')};
+    // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')},
   const handleDisconnect = () => {
     // In a real application, this would revoke the OAuth token,
-    toast.info(`Disconnected from ${integration.name}`);
-    onClose()};
+    toast.info(`Disconnected from ${integration.name}`),
+    onClose()},
   const handleSaveSettings = () => {
     // In a real application, this would save the sync settings,
-    toast.success("Integration settings saved");
-    onClose()};
+    toast.success("Integration settings saved"),
+    onClose()},
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>,
       <DialogContent className="sm: max-w-md">,
@@ -237,8 +237,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     checked={syncSettings && syncSettings.autoCreateContacts}
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
-                        ...syncSettings;
-                        autoCreateContacts: checked as boolean;
+                        ...syncSettings,
+                        autoCreateContacts: checked as boolean
                       })}
                   />,
                   <Label htmlFor="autoCreateContacts">,
@@ -251,8 +251,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     checked={syncSettings && syncSettings.pushNotes}
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
-                        ...syncSettings;
-                        pushNotes: checked as boolean;
+                        ...syncSettings,
+                        pushNotes: checked as boolean
                       })}
                   />,
                   <Label htmlFor="pushNotes">Push notes and comments</Label>,
@@ -263,8 +263,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     checked={syncSettings && syncSettings.syncJobDetails}
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
-                        ...syncSettings;
-                        syncJobDetails: checked as boolean;
+                        ...syncSettings,
+                        syncJobDetails: checked as boolean
                       })}
                   />,
                   <Label htmlFor="syncJobDetails">Sync job details</Label>,
@@ -275,8 +275,8 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
                     checked={syncSettings && syncSettings.syncApplicantData}
                     onCheckedChange={(checked) =>,
                       setSyncSettings({
-                        ...syncSettings;
-                        syncApplicantData: checked as boolean;
+                        ...syncSettings,
+                        syncApplicantData: checked as boolean
                       })}
                   />,
                   <Label htmlFor="syncApplicantData">Sync applicant data</Label>,
@@ -336,29 +336,29 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
     </Dialog>)}
 ,
 export function IntegrationConnectionModal({ isOpen, onClose, integration }: IntegrationConnectionModalProps) {
-  const [isConnecting, setIsConnecting] = useState(false);
+  const [isConnecting, setIsConnecting] = useState(false),
   const [syncSettings, setSyncSettings] = useState({
-    autoCreateContacts: true;
-    pushNotes: false;
-    syncJobDetails: true;
-    syncApplicantData: true});
+    autoCreateContacts: true,
+    pushNotes: false,
+    syncJobDetails: true,
+    syncApplicantData: true}),
   const handleConnectOAuth = () => {
-    setIsConnecting(true);
+    setIsConnecting(true),
     // Simulate OAuth flow,
     setTimeout(() => {
-      setIsConnecting(false);
-      toast.success(`Connected to ${integration.name} successfully`);
-      onClose()}, 2000);
+      setIsConnecting(false),
+      toast.success(`Connected to ${integration.name} successfully`),
+      onClose()}, 2000),
     // In a real application, this would open a popup for OAuth authentication,
-    // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')};
+    // window.open(`/api/oauth/${integration.id}`, 'oauthwidth=600,height=600')},
   const handleDisconnect = () => {
     // In a real application, this would revoke the OAuth token,
-    toast.info(`Disconnected from ${integration.name}`);
-    onClose()};
+    toast.info(`Disconnected from ${integration.name}`),
+    onClose()},
   const handleSaveSettings = () => {
     // In a real application, this would save the sync settings,
     toast.success("Integration settings saved"),
-    onClose()};
+    onClose()},
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>,
       <DialogContent className="sm: max-w-md">,
@@ -446,7 +446,7 @@ export function IntegrationConnectionModal({ isOpen, onClose, integration }: Int
           <>,
             <div className="space-y-4 py-4">,
               <p className="text-sm">,
-                Connect your {integration && integration.name} account to sync job contacts;
+                Connect your {integration && integration.name} account to sync job contacts,
                 applicants, and more. You'll be redirected to {integration && integration.name}{" "}
                 to authorize this connection.,
               </p>,
@@ -481,10 +481,10 @@ export /**,
 function IntegrationConnectionModal() {
   const [is_connecting, setIsConnecting] = useState (false),
   const [sync_settings, setSyncSettings] = useState ({
-    autoCreateContacts: true;
-    push_notes: false;
-    syncJobDetails: true;
-    syncApplicantData: true;
+    autoCreateContacts: true,
+    push_notes: false,
+    syncJobDetails: true,
+    syncApplicantData: true
   }),
   const handleConnectOAuth = () =>: any {
     setIsConnecting (true),
@@ -539,8 +539,8 @@ function IntegrationConnectionModal() {
                     checked={sync_settings.autoCreateContacts}
                     onCheckedChange={(checked) =>,
                       setSyncSettings ({
-                        ...sync_settings;
-                        autoCreateContacts: checked as boolean;
+                        ...sync_settings,
+                        autoCreateContacts: checked as boolean
                       })}
                   />,
                   <Label html_for="autoCreateContacts">,
@@ -553,8 +553,8 @@ function IntegrationConnectionModal() {
                     checked={sync_settings.push_notes}
                     onCheckedChange={(checked) =>,
                       setSyncSettings ({
-                        ...sync_settings;
-                        push_notes: checked as boolean;
+                        ...sync_settings,
+                        push_notes: checked as boolean
                       })}
                   />,
                   <Label html_for="push_notes">Push notes and comments</Label>,
@@ -565,8 +565,8 @@ function IntegrationConnectionModal() {
                     checked={sync_settings.syncJobDetails}
                     onCheckedChange={(checked) =>,
                       setSyncSettings ({
-                        ...sync_settings;
-                        syncJobDetails: checked as boolean;
+                        ...sync_settings,
+                        syncJobDetails: checked as boolean
                       })}
                   />,
                   <Label html_for="syncJobDetails">Sync job details</Label>,
@@ -577,8 +577,8 @@ function IntegrationConnectionModal() {
                     checked={sync_settings.syncApplicantData}
                     onCheckedChange={(checked) =>,
                       setSyncSettings ({
-                        ...sync_settings;
-                        syncApplicantData: checked as boolean;
+                        ...sync_settings,
+                        syncApplicantData: checked as boolean
                       })}
                   />,
                   <Label html_for="syncApplicantData">Sync applicant data</Label>,
@@ -609,7 +609,7 @@ function IntegrationConnectionModal() {
           <>,
             <div className="space - y-4 py - 4">,
               <p className="text - sm">,
-                Connect your {integration.name} account to sync job contacts;
+                Connect your {integration.name} account to sync job contacts,
                 applicants, and more. You'll be redirected to {integration.name}{" "}
                 to authorize this connection.,
               </p>,

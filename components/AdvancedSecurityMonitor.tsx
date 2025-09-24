@@ -45,150 +45,150 @@ const AdvancedSecurityMonitor: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve1000)),
     const mockEvents: SecurityEvent[] = [
       {
-        id: '1';
-        type: 'threat';
-        severity: 'high';
-        title: 'Suspicious Login Attempts Detected';
-        description: 'Multiple failed login attempts from IP 192.168.1.100 targeting admin accounts';
-        timestamp: new Date(Date.now() - 5 * 60 * 1000);
-        source: 'Firewall';
-        status: 'investigating';
-        affectedSystems: ['Web 'Server', 'Admin Portal']};
+        id: '1',
+        type: 'threat',
+        severity: 'high',
+        title: 'Suspicious Login Attempts Detected',
+        description: 'Multiple failed login attempts from IP 192.168.1.100 targeting admin accounts',
+        timestamp: new Date(Date.now() - 5 * 60 * 1000),
+        source: 'Firewall',
+        status: 'investigating',
+        affectedSystems: ['Web 'ServerAdmin Portal']},
       {
-        id: '2';
-        type: 'vulnerability';
-        severity: 'medium';
-        title: 'Outdated SSL Certificate';
-        description: 'SSL certificate for api.example.com expires in 7 days';
-        timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000);
-        source: 'Certificate Monitor';
-        status: 'active';
-        affectedSystems: ['API 'Gateway', 'Load Balancer']};
+        id: '2',
+        type: 'vulnerability',
+        severity: 'medium',
+        title: 'Outdated SSL Certificate',
+        description: 'SSL certificate for api.example.com expires in 7 days',
+        timestamp: new Date(Date.now() - 2 * 60 * 60 * 1000),
+        source: 'Certificate Monitor',
+        status: 'active',
+        affectedSystems: ['API 'GatewayLoad Balancer']},
       {
-        id: '3';
-        type: 'compliance';
-        severity: 'low';
-        title: 'GDPR Data Processing Audit';
-        description: 'Quarterly GDPR compliance audit completed with minor recommendations';
-        timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000);
-        source: 'Compliance System';
-        status: 'resolved';
-        affectedSystems: [', 'Database', 'User Management']};
+        id: '3',
+        type: 'compliance',
+        severity: 'low',
+        title: 'GDPR Data Processing Audit',
+        description: 'Quarterly GDPR compliance audit completed with minor recommendations',
+        timestamp: new Date(Date.now() - 24 * 60 * 60 * 1000),
+        source: 'Compliance System',
+        status: 'resolved',
+        affectedSystems: [Database', 'User Management']},
       {
-        id: '4';
-        type: 'access';
-        severity: 'critical';
-        title: 'Unauthorized Database Access';
-        description: 'Unusual database queries detected from service account with elevated privileges';
-        timestamp: new Date(Date.now() - 30 * 60 * 1000);
-        source: 'Database Monitor';
-        status: 'investigating';
-        affectedSystems: ['Primary 'Database', 'Backup System']};
+        id: '4',
+        type: 'access',
+        severity: 'critical',
+        title: 'Unauthorized Database Access',
+        description: 'Unusual database queries detected from service account with elevated privileges',
+        timestamp: new Date(Date.now() - 30 * 60 * 1000),
+        source: 'Database Monitor',
+        status: 'investigating',
+        affectedSystems: ['Primary 'DatabaseBackup System']},
       {
-        id: '5';
-        type: 'threat';
-        severity: 'medium';
-        title: 'Malware Scan Alert';
-        description: 'Potential malware detected in uploaded files during security scan';
-        timestamp: new Date(Date.now() - 45 * 60 * 1000);
-        source: 'Antivirus Scanner';
-        status: 'resolved';
-        affectedSystems: ['File 'Storage', 'Upload Service']}
+        id: '5',
+        type: 'threat',
+        severity: 'medium',
+        title: 'Malware Scan Alert',
+        description: 'Potential malware detected in uploaded files during security scan',
+        timestamp: new Date(Date.now() - 45 * 60 * 1000),
+        source: 'Antivirus Scanner',
+        status: 'resolved',
+        affectedSystems: ['File 'StorageUpload Service']}
     ],
     const mockMetrics: SecurityMetric[] = [
       {
-        id: 'threats-blocked';
-        name: 'Threats Blocked (24h)';
-        value: 1247;
-        unit: '';
-        trend: 'down';
-        status: 'secure';
-        lastUpdated: new Date()};
+        id: 'threats-blocked',
+        name: 'Threats Blocked (24h)',
+        value: 1247,
+        unit: '',
+        trend: 'down',
+        status: 'secure',
+        lastUpdated: new Date()},
       {
-        id: 'vulnerabilities';
-        name: 'Active Vulnerabilities';
-        value: 3;
-        unit: '';
-        trend: 'down';
-        status: 'warning';
-        lastUpdated: new Date()};
+        id: 'vulnerabilities',
+        name: 'Active Vulnerabilities',
+        value: 3,
+        unit: '',
+        trend: 'down',
+        status: 'warning',
+        lastUpdated: new Date()},
       {
-        id: 'security-score';
-        name: 'Security Score';
-        value: 92;
-        unit: '/100';
-        trend: 'up';
-        status: 'secure';
-        lastUpdated: new Date()};
+        id: 'security-score',
+        name: 'Security Score',
+        value: 92,
+        unit: '/100',
+        trend: 'up',
+        status: 'secure',
+        lastUpdated: new Date()},
       {
-        id: 'compliance-score';
-        name: 'Compliance Score';
-        value: 87;
-        unit: '/100';
-        trend: 'up';
-        status: 'secure';
-        lastUpdated: new Date()};
+        id: 'compliance-score',
+        name: 'Compliance Score',
+        value: 87,
+        unit: '/100',
+        trend: 'up',
+        status: 'secure',
+        lastUpdated: new Date()},
       {
-        id: 'incident-response';
-        name: 'Avg Response Time';
-        value: 15;
-        unit: 'min';
-        trend: 'down';
-        status: 'secure';
-        lastUpdated: new Date()};
+        id: 'incident-response',
+        name: 'Avg Response Time',
+        value: 15,
+        unit: 'min',
+        trend: 'down',
+        status: 'secure',
+        lastUpdated: new Date()},
       {
-        id: 'data-breaches';
-        name: 'Data Breaches (30d)';
-        value: 0;
-        unit: '';
-        trend: 'stable';
-        status: 'secure';
+        id: 'data-breaches',
+        name: 'Data Breaches (30d)',
+        value: 0,
+        unit: '',
+        trend: 'stable',
+        status: 'secure',
         lastUpdated: new Date()}
     ],
     const mockCompliance: ComplianceStatus[] = [
       {
-        framework: 'GDPR';
-        status: 'compliant';
-        score: 95;
-        lastAudit: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-        issues: 0};
+        framework: 'GDPR',
+        status: 'compliant',
+        score: 95,
+        lastAudit: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+        issues: 0},
       {
-        framework: 'SOC 2 Type II';
-        status: 'compliant';
-        score: 92;
-        lastAudit: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-        issues: 2};
+        framework: 'SOC 2 Type II',
+        status: 'compliant',
+        score: 92,
+        lastAudit: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+        issues: 2},
       {
-        framework: 'ISO 27001';
-        status: 'partial';
-        score: 78;
-        lastAudit: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000);
-        issues: 5};
+        framework: 'ISO 27001',
+        status: 'partial',
+        score: 78,
+        lastAudit: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
+        issues: 5},
       {
-        framework: 'PCI DSS';
-        status: 'compliant';
-        score: 88;
-        lastAudit: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000);
+        framework: 'PCI DSS',
+        status: 'compliant',
+        score: 88,
+        lastAudit: new Date(Date.now() - 90 * 24 * 60 * 60 * 1000),
         issues: 1}
     ],
     setEvents(mockEvents),
     setMetrics(mockMetrics),
     setCompliance(mockCompliance),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const generateNewEvent = () => {
-    const eventTypes: SecurityEvent['type'][] = [', 'threat', 'vulnerability', 'breach', 'compliance'access'],
-    const severities: SecurityEvent['severity'][] = [', 'critical', 'high', 'medium', 'low'],
+    const eventTypes: SecurityEvent['type'][] = [threat', 'vulnerabilitybreach', 'compliance'access'],
+    const severities: SecurityEvent['severity'][] = [critical', 'highmedium', 'low'],
     const newEvent: SecurityEvent = {
-      id: Date.now().toString();
-      type: eventTypes[Math.floor(Math.random() * eventTypes.length)];
-      severity: severities[Math.floor(Math.random() * severities.length)];
-      title: `Security Event ${Math.floor(Math.random() * 1000)}`;
-      description: 'Automated security monitoring detected potential security event';
-      timestamp: new Date();
-      source: 'Security Scanner';
-      status: 'active';
-      affectedSystems: ['System 'A', 'System B']};
-    setEvents(prev => [newEvent...prev.slice(09)])};
+      id: Date.now().toString(),
+      type: eventTypes[Math.floor(Math.random() * eventTypes.length)],
+      severity: severities[Math.floor(Math.random() * severities.length)],
+      title: `Security Event ${Math.floor(Math.random() * 1000)}`,
+      description: 'Automated security monitoring detected potential security event',
+      timestamp: new Date(),
+      source: 'Security Scanner',
+      status: 'active',
+      affectedSystems: ['System 'ASystem B']},
+    setEvents(prev => [newEvent...prev.slice(09)])},
   const getSeverityColor = (severity: string) => {
     switch (severity) {
       case 'critical': return 'text-red-600 bg-red-100 border-red-200',
@@ -196,7 +196,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
       case 'medium': return 'text-yellow-600 bg-yellow-100 border-yellow-200',
       case 'low': return 'text-blue-600 bg-blue-100 border-blue-200',
       default: return 'text-gray-600 bg-gray-100 border-gray-200'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'threat': return '🚨',
@@ -205,28 +205,28 @@ const AdvancedSecurityMonitor: React.FC = () => {
       case 'compliance': return '📋',
       case 'access': return '🔑',
       default: return '⚠️'}
-  };
+  },
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'secure': return 'text-green-600 bg-green-100',
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getComplianceStatusColor = (status: string) => {
     switch (status) {
       case 'compliant': return 'text-green-600 bg-green-100',
       case 'partial': return 'text-yellow-600 bg-yellow-100',
       case 'non_compliant': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60)),
     if (diffInMinutes < 1) return 'Just now',
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`,
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,
-    return `${Math.floor(diffInMinutes / 1440)}d ago`};
+    return `${Math.floor(diffInMinutes / 1440)}d ago`},
   const filteredEvents = filter === 'all',
     ? events,
     : events.filter(event => event.severity === filter),
@@ -304,7 +304,7 @@ const AdvancedSecurityMonitor: React.FC = () => {
             <div className="flex items-center justify-between mb-6">,
               <h3 className="text-2xl font-bold text-gray-900">🚨 Security Events</h3>,
               <div className="flex space-x-2">,
-                {([', 'all', 'critical', 'high', 'medium'low'] as const).map((level) => (
+                {([all', 'criticalhigh', 'medium'low'] as const).map((level) => (
                   <button
                     key={level}
                     onClick={() => setFilter(level)}
@@ -409,5 +409,5 @@ const AdvancedSecurityMonitor: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedSecurityMonitor;
+    </div>)},
+export default AdvancedSecurityMonitor,

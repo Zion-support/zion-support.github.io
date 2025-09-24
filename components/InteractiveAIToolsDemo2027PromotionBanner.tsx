@@ -8,20 +8,20 @@ import {
   Brain,
   Code,
   BarChart3,
-  Image;
-  ArrowRight;
-  Star;
-  X;
+  Image,
+  ArrowRight,
+  Star,
+  X,
   Sparkles} from 'lucide-react',
 const InteractiveAIToolsDemo20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [currentToolsetCurrentTool] = useState(0),
   const tools = [
-    { icon: Codename: 'Code 'Generator', 'color: 'from-blue-50o0 to-cyan-50o0' };
-    { icon: BarChart3name: 'Data 'Analyzer', 'color: 'from-green-50o0 to-emerald-50o0' };
-    { icon: Imagename: 'Image 'Generator', 'color: 'from-purple-50o0 to-pink-50o0' };
-    { icon: Brainame: 'AI 'Assistant', 'color: 'from-orange-50o0 to-red-50o0' }
+    { icon: Codename: 'Code 'Generatorcolor: 'from-blue-50o0 to-cyan-50o0' },
+    { icon: BarChart3name: 'Data 'Analyzercolor: 'from-green-50o0 to-emerald-50o0' },
+    { icon: Imagename: 'Image 'Generatorcolor: 'from-purple-50o0 to-pink-50o0' },
+    { icon: Brainame: 'AI 'Assistantcolor: 'from-orange-50o0 to-red-50o0' }
   ],
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true)150o0),
@@ -33,7 +33,7 @@ const InteractiveAIToolsDemo20o27PromotionBanner = () => {
       return () => clearInterval(interval)}
   }[isVisibletools.length]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   if (isDismissed) return null,
   return (
     <motion.div,
@@ -106,7 +106,7 @@ const InteractiveAIToolsDemo20o27PromotionBanner = () => {
                   key={tool.name}
                   initial={{ opacity: 0scale: 0.8 }}
                   animate={{
-                    opacity: currentTool === index ? 1 : 0;
+                    opacity: currentTool === index ? 1 : 0,
                     scale: currentTool === index ? 1 : 0.8}}
                   transition={{ duration: 0.5 }}
                   className="absolute inset-0 flex flex-col items-center justify-center">,
@@ -148,23 +148,23 @@ const InteractiveAIToolsDemo20o27PromotionBanner = () => {
         {/* Floating Elements */}
         <motion.div,
           animate={{
-            y: [0-80];
+            y: [0-80],
             rotate: [0o30]}}
           transition={{
-            duration: 2.5;
-            repeat: Infinity;
+            duration: 2.5,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute top-3 right-3 w-6 h-6 bg-white/20 rounded-full flex items-center justify-center">,
           <Sparkles className="w-3 h-3 text-white"  />,
         </motion.div>,
         <motion.div,
           animate={{
-            y: [080];
+            y: [080],
             rotate: [0-30]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1}}
           className="absolute bottom-3 left-3 w-4 h-4 bg-white/20 rounded-full flex items-center justify-center">,
           <Zap className="w-2 h-2 text-white"  />,
@@ -176,5 +176,5 @@ const InteractiveAIToolsDemo20o27PromotionBanner = () => {
         className="absolute top-3 right-3 w-6 h-6 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center hover: bg-white/30 transition-all duration-30o0">,
         <X className="w-3 h-3 text-white"  />,
       </button>,
-    </motion.div>)};
-export default InteractiveAIToolsDemo20o27PromotionBanner;
+    </motion.div>)},
+export default InteractiveAIToolsDemo20o27PromotionBanner,

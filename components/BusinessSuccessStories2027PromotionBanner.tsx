@@ -8,17 +8,17 @@ import {
   Award,
   DollarSign,
   Clock,
-  Target;
-  ArrowRight;
-  X;
-  ChevronRight;
-  Star;
-  Quote;
-  BarChart3;
-  Zap;
-  Brain;
-  Rocket;
-  CheckCircle;
+  Target,
+  ArrowRight,
+  X,
+  ChevronRight,
+  Star,
+  Quote,
+  BarChart3,
+  Zap,
+  Brain,
+  Rocket,
+  CheckCircle,
   Play} from 'lucide-react',
 const BusinessSuccessStories20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -28,36 +28,34 @@ const BusinessSuccessStories20o27PromotionBanner = () => {
     setIsVisible(true)}[]),
   const stories = [
     {
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      logo: 'TC';
-      color: 'from-blue-50o0 to-purple-50o0';
-      roi: '850%';
-      savings: '$2.3M'};
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: 'TC',
+      color: 'from-blue-50o0 to-purple-50o0',
+      roi: '850%',
+      savings: '$2.3M'},
     {
-      company: 'InnovateLabs';
-      industry: 'R&D';
-      logo: 'IL';
-      color: 'from-green-50o0 to-teal-50o0';
-      roi: '720%';
-      savings: '$1.8M'};
+      company: 'InnovateLabs',
+      industry: 'R&D',
+      logo: 'IL',
+      color: 'from-green-50o0 to-teal-50o0',
+      roi: '720%',
+      savings: '$1.8M'},
     {
-      company: 'FutureTech Industries';
-      industry: 'Manufacturing';
-      logo: 'FT';
-      color: 'from-orange-50o0 to-red-50o0';
-      roi: '920%';
+      company: 'FutureTech Industries',
+      industry: 'Manufacturing',
+      logo: 'FT',
+      color: 'from-orange-50o0 to-red-50o0',
+      roi: '920%',
       savings: '$3.1M'}
   ],
   const features = [
-    'Real Success Stories';
-    'Proven ROI Results';
-    'Industry Leaders';
-    'Detailed Case Studies'],
+    'Real Success StoriesProven ROI Results',
+    'Industry LeadersDetailed Case Studies'],
   const stats = [
-    { value: '850%'label: 'Avg ROI' };
-    { value: '$2.4'M', 'label: 'Avg Savings' };
-    { value: '99.8%'label: 'Success Rate' };
+    { value: '850%'label: 'Avg ROI' },
+    { value: '$2.4'Mlabel: 'Avg Savings' },
+    { value: '99.8%'label: 'Success Rate' },
     { value: '15k+'label: 'Hours Saved' }
   ],
   useEffect(() => {
@@ -80,10 +78,8 @@ const BusinessSuccessStories20o27PromotionBanner = () => {
               className="absolute inset-0 opacity-30",
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
+                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)'
                 ]}}
               transition={{ duration: 8repeat: Infinity }}
              />,
@@ -192,5 +188,5 @@ const BusinessSuccessStories20o27PromotionBanner = () => {
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-purple-60o0 animate-pulse"  />,
         </motion.div>)}
-    </AnimatePresence>)};
-export default BusinessSuccessStories20o27PromotionBanner;
+    </AnimatePresence>)},
+export default BusinessSuccessStories20o27PromotionBanner,

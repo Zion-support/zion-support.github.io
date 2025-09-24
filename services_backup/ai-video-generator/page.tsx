@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Video Generator | Zion Tech Group';
+  title: 'AI Video Generator | Zion Tech Group',
   description:,
-    'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.';
-};
+    'Create professional videos with AI. Generate marketing videos, explainer content, and social media videos automatically.',
+},
 export default function AIVideoGeneratorPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function AIVideoGeneratorPage() {
         <FeatureCard
           title='Video Creation',
           details={[
-            'Text-to-video generation';
-            'Image-to-video conversion';
-            'Script-based video creation';
-            'Multiple video formats';
-            'HD/4K quality output';
+            'Text-to-video generationImage-to-video conversion',
+            'Script-based video creationMultiple video formats',
+            'HD/4K quality output',
           ]}
         />,
         <FeatureCard
           title='AI Features',
           details={[
-            'Voice synthesis (20+ languages)';
-            'Automatic scene generation';
-            'Smart transitions & effects';
-            'Background music generation';
-            'Subtitle generation';
+            'Voice synthesis (20+ languages)Automatic scene generation',
+            'Smart transitions & effectsBackground music generation',
+            'Subtitle generation',
           ]}
         />,
         <FeatureCard
           title='Templates & Customization',
           details={[
-            'Professional templates';
-            'Brand customization';
-            'Logo integration';
-            'Color scheme matching';
-            'Custom animations';
+            'Professional templatesBrand customization',
+            'Logo integrationColor scheme matching',
+            'Custom animations',
           ]}
         />,
       </div>,
@@ -97,22 +91,18 @@ function PricingSection() {
           name='Starter',
           price='$39/mo',
           features={[
-            '10 videos/month (up to 2 min each)';
-            'Basic templates';
-            'Standard quality (1080p)';
-            'Email support';
-            'Basic customization';
+            '10 videos/month (up to 2 min each)Basic templates',
+            'Standard quality (1080p)Email support',
+            'Basic customization',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$129/mo',
           features={[
-            '50 videos/month (up to 5 min each)';
-            'Premium templates';
-            '4K quality output';
-            'Priority support';
-            'Advanced customization & branding';
+            '50 videos/month (up to 5 min each)Premium templates',
+            '4K quality outputPriority support',
+            'Advanced customization & branding',
           ]}
           featured={true}
         />,
@@ -120,21 +110,19 @@ function PricingSection() {
           name='Enterprise',
           price='$399/mo',
           features={[
-            'Unlimited videos';
-            'Custom template creation';
-            'White-label solution';
-            'Dedicated support';
-            'API access & integrations';
+            'Unlimited videosCustom template creation',
+            'White-label solutionDedicated support',
+            'API access & integrations',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

@@ -16,13 +16,13 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     const "metrics": PerformanceMetrics = req.body,
     // Log the performance metrics (in production, you might want to send this to analytics),
     // // console.log('Performance "Metrics": ', {
-      "lcp": metrics.lcp;
-      "fid": metrics.fid;
-      "cls": metrics.cls;
-      "fcp": metrics.fcp;
-      "ttfb": metrics.ttfb;
-      "timestamp": metrics.timestamp;
-      "url": metrics.url;
+      "lcp": metrics.lcp,
+      "fid": metrics.fid,
+      "cls": metrics.cls,
+      "fcp": metrics.fcp,
+      "ttfb": metrics.ttfb,
+      "timestamp": metrics.timestamp,
+      "url": metrics.url,
       "userAgent": metrics.userAgent}),
     // In a real application, you "would": // 1. Send to analytics service (Google Analytics, Mixpanel, etc.),
     // 2. Store in database for performance monitoring,

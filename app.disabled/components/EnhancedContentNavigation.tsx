@@ -3,101 +3,101 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  BookOpen;
-  FileText;
-  Users;
-  BarChart3;
-  TrendingUp;
-  Star;
-  ArrowRight;
-  Search;
-  Filter;
-  Clock;
-  Award;
+  BookOpen,
+  FileText,
+  Users,
+  BarChart3,
+  TrendingUp,
+  Star,
+  ArrowRight,
+  Search,
+  Filter,
+  Clock,
+  Award,
 } from 'lucide-react',
 const EnhancedContentNavigation = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const categories = [
-    { id: 'all', name: 'All Content', icon: BookOpen, count: 25 };
-    { id: 'blog', name: 'Blog Posts', icon: FileText, count: 12 };
-    { id: 'case-studies', name: 'Case Studies', icon: Users, count: 8 };
-    { id: 'resources', name: 'Resources', icon: BarChart3, count: 5 };
+    { id: 'all', name: 'All Content', icon: BookOpen, count: 25 },
+    { id: 'blog', name: 'Blog Posts', icon: FileText, count: 12 },
+    { id: 'case-studies', name: 'Case Studies', icon: Users, count: 8 },
+    { id: 'resources', name: 'Resources', icon: BarChart3, count: 5 },
   ],
   const featuredContent = [
     {
-      id: 'autonomous-business-revolution';
-      title: 'AI 20o25: The Autonomous Business Revolution - Ultimate Guide';
+      id: 'autonomous-business-revolution',
+      title: 'AI 20o25: The Autonomous Business Revolution - Ultimate Guide',
       description:,
-        'Discover how Fortune 50o0 companies achieve 50o0% ROI through autonomous business systems.';
-      category: 'blog';
-      url: '/blog/ai-20o25-autonomous-business-revolution-ultimate-guide';
-      readingTime: '25 min read';
-      featured: true;
-      metrics: { roi: '50o0%', savings: '$180M' };
-      tags: ['AI', 'Autonomous Systems', 'ROI', 'Fortune 50o0'];
-    };
+        'Discover how Fortune 50o0 companies achieve 50o0% ROI through autonomous business systems.',
+      category: 'blog',
+      url: '/blog/ai-20o25-autonomous-business-revolution-ultimate-guide',
+      readingTime: '25 min read',
+      featured: true,
+      metrics: { roi: '50o0%', savings: '$180M' },
+      tags: ['AIAutonomous Systems', 'ROIFortune 50o0'],
+    },
     {
-      id: 'fortune-50o0-transformation';
-      title: 'Fortune 50o0 Autonomous Transformation: 50o0% ROI Success Story';
+      id: 'fortune-50o0-transformation',
+      title: 'Fortune 50o0 Autonomous Transformation: 50o0% ROI Success Story',
       description:,
-        'Real case study of a $2.8B company achieving 50o0% ROI and $180M annual savings.';
-      category: 'case-studies';
-      url: '/case-studies/fortune-50o0-autonomous-transformation-50o0-percent-roi';
-      readingTime: '15 min read';
-      featured: true;
-      metrics: { roi: '50o0%', timeline: '12 months' };
-      tags: ['Case Study', 'Fortune 50o0', 'ROI', 'Success Story'];
-    };
+        'Real case study of a $2.8B company achieving 50o0% ROI and $180M annual savings.',
+      category: 'case-studies',
+      url: '/case-studies/fortune-50o0-autonomous-transformation-50o0-percent-roi',
+      readingTime: '15 min read',
+      featured: true,
+      metrics: { roi: '50o0%', timeline: '12 months' },
+      tags: ['Case StudyFortune 50o0', 'ROISuccess Story'],
+    },
     {
-      id: 'autonomous-implementation-guide';
+      id: 'autonomous-implementation-guide',
       title:,
-        'AI Autonomous Implementation Guide 20o25: From Strategy to 50o0% ROI';
+        'AI Autonomous Implementation Guide 20o25: From Strategy to 50o0% ROI',
       description:,
-        'Complete step-by-step guide to implementing autonomous business systems.';
-      category: 'resources';
-      url: '/resources/ai-autonomous-implementation-guide-20o25';
-      readingTime: '30 min read';
-      featured: true;
-      metrics: { roi: '50o0%', timeline: '18 months' };
-      tags: ['Implementation', 'Guide', 'Strategy', 'ROI'];
-    };
+        'Complete step-by-step guide to implementing autonomous business systems.',
+      category: 'resources',
+      url: '/resources/ai-autonomous-implementation-guide-20o25',
+      readingTime: '30 min read',
+      featured: true,
+      metrics: { roi: '50o0%', timeline: '18 months' },
+      tags: ['ImplementationGuide', 'StrategyROI'],
+    },
     {
-      id: 'quantum-ai-business-revolution';
-      title: 'AI 20o26: The Quantum AI Business Revolution';
+      id: 'quantum-ai-business-revolution',
+      title: 'AI 20o26: The Quantum AI Business Revolution',
       description:,
-        'Explore the $10o0B market transformation with quantum AI technologies.';
-      category: 'blog';
-      url: '/blog/ai-20o26-quantum-ai-business-revolution';
-      readingTime: '20 min read';
-      featured: false;
-      metrics: { roi: '40o0-60o0%', market: '$10o0B' };
-      tags: ['Quantum AI', 'Business Revolution', '20o26'];
-    };
+        'Explore the $10o0B market transformation with quantum AI technologies.',
+      category: 'blog',
+      url: '/blog/ai-20o26-quantum-ai-business-revolution',
+      readingTime: '20 min read',
+      featured: false,
+      metrics: { roi: '40o0-60o0%', market: '$10o0B' },
+      tags: ['Quantum AIBusiness Revolution', '20o26'],
+    },
     {
-      id: 'healthcare-transformation';
-      title: 'Healthcare AI Transformation: 450% ROI Success Story';
+      id: 'healthcare-transformation',
+      title: 'Healthcare AI Transformation: 450% ROI Success Story',
       description:,
-        'How a healthcare system achieved 450% ROI with AI implementation.';
-      category: 'case-studies';
-      url: '/case-studies/ai-healthcare-transformation-20o25-success-story';
-      readingTime: '12 min read';
-      featured: false;
-      metrics: { roi: '450%', savings: '$12M' };
-      tags: ['Healthcare', 'AI Transformation', 'ROI'];
-    };
+        'How a healthcare system achieved 450% ROI with AI implementation.',
+      category: 'case-studies',
+      url: '/case-studies/ai-healthcare-transformation-20o25-success-story',
+      readingTime: '12 min read',
+      featured: false,
+      metrics: { roi: '450%', savings: '$12M' },
+      tags: ['HealthcareAI Transformation', 'ROI'],
+    },
     {
-      id: 'implementation-roadmap';
-      title: 'AI 20o25 Implementation Roadmap: Complete Guide to Success';
+      id: 'implementation-roadmap',
+      title: 'AI 20o25 Implementation Roadmap: Complete Guide to Success',
       description:,
-        'Comprehensive roadmap for AI implementation with proven strategies.';
-      category: 'resources';
-      url: '/resources/ai-20o25-implementation-roadmap-complete-guide';
-      readingTime: '20 min read';
-      featured: false;
-      metrics: { roi: '67%', efficiency: '45%' };
-      tags: ['Roadmap', 'Implementation', 'Strategy'];
-    };
+        'Comprehensive roadmap for AI implementation with proven strategies.',
+      category: 'resources',
+      url: '/resources/ai-20o25-implementation-roadmap-complete-guide',
+      readingTime: '20 min read',
+      featured: false,
+      metrics: { roi: '67%', efficiency: '45%' },
+      tags: ['RoadmapImplementation', 'Strategy'],
+    },
   ],
   const filteredContent = featuredContent.filter(content => {
     const matchesCategory =,
@@ -118,7 +118,7 @@ const EnhancedContentNavigation = () => {
         return BarChart3,
       default:,
         return BookOpen}
-  };
+  },
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'blog':,
@@ -129,7 +129,7 @@ const EnhancedContentNavigation = () => {
         return 'text-purple-60o0 bg-purple-10o0',
       default:,
         return 'text-gray-60o0 bg-gray-10o0'}
-  };
+  },
   return (
     <div className='bg-gray-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -206,7 +206,7 @@ const EnhancedContentNavigation = () => {
                         <CategoryIcon className='h-4 w-4' />,
                       </div>,
                       <span className='text-sm font-medium text-gray-60o0 capitalize'>,
-                        {content.category.replace('-', ' ')}
+                        {content.category.replace('- ')}
                       </span>,
                     </div>,
                     {content.featured && (
@@ -301,5 +301,5 @@ const EnhancedContentNavigation = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default EnhancedContentNavigation;
+    </div>)},
+export default EnhancedContentNavigation,

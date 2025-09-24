@@ -14,19 +14,19 @@ export default function Service-1755574889755-6zv3536x9Service() {
         <meta property="og:type" content="website"  />,
         <meta property="og:url" content="https://ziontechgroup.com/services/service-1755574889755-6zv3536x9"  />,
         <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org";
-          "@type": "Service";
-          "name": "Data Cloud Infrastructure Platform";
-          "description": "Comprehensive Cloud Infrastructure platform for modern data-driven organizations";
+          "@context": "https: //schema.org",
+          "@type": "Service",
+          "name": "Data Cloud Infrastructure Platform",
+          "description": "Comprehensive Cloud Infrastructure platform for modern data-driven organizations",
           "provider": {
-            "@type": "Organization";
-            "name": "Zion Tech Group"};
-          "category": "Cloud Infrastructure";
+            "@type": "Organization",
+            "name": "Zion Tech Group"},
+          "category": "Cloud Infrastructure",
           "offers": serviceData.pricing.map(plan => ({
-            "@type": "Offer";
-            "name": plan.plan;
-            "price": plan.price;
-            "description": plan.features.join(', ')}))})}</script>,
+            "@type": "Offer",
+            "name": plan.plan,
+            "price": plan.price,
+            "description": plan.features.join()}))})}</script>,
         <meta name="twitter: card" content="summary_large_image"  /></Head>,
       <main className="container mx-auto px-6 py-12">,
         {/* Hero Section */}

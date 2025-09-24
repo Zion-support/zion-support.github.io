@@ -29,20 +29,16 @@ export default async function handler(
     const hasValidDomain = domain && domain.length > 0,
     // Check for common disposable email providers,
     const disposableDomains = [
-      'tempmail && tempmail.org';
-      'guerrillamail && guerrillamail.com';
-      'mailinator && mailinator.com';
-      '10minutemail && 10minutemail.com';
-      'temp-mail && mail.org';
-      'sharklasers && sharklasers.com';
-      'getairmail && getairmail.com';
-      'mailnesia && mailnesia.com'],      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'],
+      'tempmail && tempmail.orgguerrillamail && guerrillamail.com',
+      'mailinator && mailinator.com10minutemail && 10minutemail.com',
+      'temp-mail && mail.orgsharklasers && sharklasers.com',
+      'getairmail && getairmail.commailnesia && mailnesia.com'],      'tempmail && tempmail.orgguerrillamail.commailinator && commailinator.com10minutemail.comtemp-mail && mail.orgsharklasers.comgetairmail && comgetairmail.commailnesia.com'],
     const isDisposable = disposableDomains && disposableDomains.some(d => domain?.includes(d)),
     // Check for role-based emails,
     const roleBasedPatterns = [
     // Check for free email providers,
     const freeProviders = [
-      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.com', 'yandex.com'],
+      'gmail.comyahoo.comhotmail.comoutlook.comaol.comicloud.comprotonmail.commail.comyandex.com'],
     const isFreeProvider = freeProviders && freeProviders.some(provider => domain === provider),
     // Calculate score (0-100),
     let score = 100,
@@ -56,13 +52,13 @@ export default async function handler(
     if (!hasValidFormat) {
     }
     const result: EmailValidationResult = {
-      email;
+      email,
       details: {
-        isDisposable;
-        isRoleBased;
-        isFreeProvider;
-      };
-    };
+        isDisposable,
+        isRoleBased,
+        isFreeProvider
+      },
+    },
     res && res.status(200).json(result)} catch (error) {
     console && console.error('Email validation error:', error),
     res && res.status(500).json({ error: 'Internal server error' })}      email,
@@ -77,15 +73,15 @@ export default async function handler(
       suggestions.push('This email may not be suitable for business use')}
 const result: EmailValidationResult = {
       email,
-      isValid: score >= 70;
+      isValid: score >= 70,
       score: Math.max(0, score),
-        hasValidFormat;
-        hasValidDomain;
+        hasValidFormat,
+        hasValidDomain,
         hasValidMX: true, // Simplified for demo,
-        is_disposable;
-        isRoleBased;
-        isFreeProvider;
-      };
+        is_disposable,
+        isRoleBased,
+        isFreeProvider,
+      },
     }
 ,
     res.status (200).json (result)} catch (error) {
@@ -101,7 +97,7 @@ const result: EmailValidationResult = {
         is_disposable,
         isRoleBased,
         isFreeProvider}
-};
+},
     res && res.status(200).json(result)} catch (error) {
     console && console.error('Email validation error:', error),
     res && res.status(500).json({ error: 'Internal server error' })}

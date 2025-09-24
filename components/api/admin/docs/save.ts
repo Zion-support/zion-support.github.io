@@ -4,7 +4,7 @@ import path from 'path',
   if (req.method !== 'POST') {
     return res.status(405).json({ error: 'Method Not Allowed' }),
 =======,
-const DOCS_DIR = path.join(process.cwd(), 'data', 'docs'),
+const DOCS_DIR = path.join(process.cwd(), 'datadocs'),
 const CONTENT_PATH = path.join(DOCS_DIR, 'content.json'),
 const VERSIONS_DIR = path.join(DOCS_DIR, 'versions'),
 function ensureDir(dir: string) {

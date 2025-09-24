@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useEffectuseStateuseRefReactNode } from "react",
 import { cn } from "@/lib/utils",
@@ -11,10 +11,10 @@ interface LazyLoadProps {
   className?: string}
 ,
 export function LazyLoad({
-  height = "200px";
-  width = "100%";
-  children;
-  loadingComponent;
+  height = "200px",
+  width = "100%",
+  children,
+  loadingComponent,
   className}: LazyLoadProps) {
   const [isVisiblesetIsVisible] = useState(false),
   const [isLoadedsetIsLoaded] = useState(false),
@@ -25,7 +25,7 @@ export function LazyLoad({
         if (entries[0].isIntersecting) {
           setIsVisible(true),
           observer.disconnect()}
-      };
+      },
       {
         rootMargin: "200px"// Start loading when element is within 200px of viewport,
         threshold: 0.1}
@@ -36,7 +36,7 @@ export function LazyLoad({
     return () => {
       if (containerRef.current) {
         observer.unobserve(containerRef.current)}
-    };
+    },
   }[]),
   useEffect(() => {
     if (isVisible) {
@@ -54,7 +54,7 @@ export function LazyLoad({
     <div
       ref={containerRef}
       className={cn("transition-opacity duration-500",
-        isLoaded ? "opacity-100" : "opacity-0";
+        isLoaded ? "opacity-100" : "opacity-0",
         className)}
     >,
       {isVisible ? (

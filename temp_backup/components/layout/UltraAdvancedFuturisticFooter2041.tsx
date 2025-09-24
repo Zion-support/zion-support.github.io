@@ -11,124 +11,124 @@ interface FooterLink {
 ,
 const footerSections = [
   {
-    title: 'Featured Revolutionary Services 20o41';
-    description: 'Our most innovative and cutting-edge solutions';
-    icon: <Star className="w-5 h-5 text-yellow-40o0"  />;
-    color: 'from-yellow-50o0 to-orange-50o0';
+    title: 'Featured Revolutionary Services 20o41',
+    description: 'Our most innovative and cutting-edge solutions',
+    icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
+    color: 'from-yellow-50o0 to-orange-50o0',
     links: [
-      { name: 'Quantum AI Consciousness Platform', href: '/quantum-ai-consciousness-platform', featured: true, price: '$2,999/month', rating: 4.9 };
-      { name: 'Space Resource Intelligence Platform', href: '/space-resource-intelligence-platform', featured: true, price: '$1,999/month', rating: 4.8 };
-      { name: 'Autonomous Business Intelligence 20o40', href: '/autonomous-business-intelligence-20o40', featured: true, price: '$1,499/month', rating: 4.9 };
-      { name: 'Quantum Cybersecurity Future 20o40', href: '/quantum-cybersecurity-future-20o40', featured: true, price: '$899/month', rating: 4.8 };
-      { name: 'Brain-Computer Interface 20o40', href: '/brain-computer-interface-20o40', featured: true, price: '$3,999/month', rating: 4.9 };
-      { name: 'AI Autonomous Research 20o41', href: '/ai-autonomous-research-20o41', featured: true, price: '$2,499/month', rating: 4.9 };
-      { name: 'Quantum Internet Security 20o41', href: '/quantum-internet-security-20o41', price: '$1,799/month', rating: 4.8 };
-      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41', price: '$599/month', rating: 4.9 };
-      { name: 'AI Sales Intelligence 20o41', href: '/ai-sales-intelligence-20o41', price: '$799/month', rating: 4.8 };
+      { name: 'Quantum AI Consciousness Platform', href: '/quantum-ai-consciousness-platform', featured: true, price: '$2,999/month', rating: 4.9 },
+      { name: 'Space Resource Intelligence Platform', href: '/space-resource-intelligence-platform', featured: true, price: '$1,999/month', rating: 4.8 },
+      { name: 'Autonomous Business Intelligence 20o40', href: '/autonomous-business-intelligence-20o40', featured: true, price: '$1,499/month', rating: 4.9 },
+      { name: 'Quantum Cybersecurity Future 20o40', href: '/quantum-cybersecurity-future-20o40', featured: true, price: '$899/month', rating: 4.8 },
+      { name: 'Brain-Computer Interface 20o40', href: '/brain-computer-interface-20o40', featured: true, price: '$3,999/month', rating: 4.9 },
+      { name: 'AI Autonomous Research 20o41', href: '/ai-autonomous-research-20o41', featured: true, price: '$2,499/month', rating: 4.9 },
+      { name: 'Quantum Internet Security 20o41', href: '/quantum-internet-security-20o41', price: '$1,799/month', rating: 4.8 },
+      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41', price: '$599/month', rating: 4.9 },
+      { name: 'AI Sales Intelligence 20o41', href: '/ai-sales-intelligence-20o41', price: '$799/month', rating: 4.8 },
       { name: 'Quantum Cloud Infrastructure 20o41', href: '/quantum-cloud-infrastructure-20o41', price: '$1,299/month', rating: 4.9 }
-    ] as FooterLink[]};
+    ] as FooterLink[]},
   {
-    title: 'AI & Consciousness';
-    description: 'Revolutionary AI consciousness platforms';
-    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI consciousness platforms',
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     links: [
-      { name: 'Quantum AI Consciousness Platform', href: '/quantum-ai-consciousness-platform', price: '$2,999/month', rating: 4.9 };
-      { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager', price: '$399/month', rating: 4.8 };
-      { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform', price: '$299/month', rating: 4.7 };
-      { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine', price: '$199/month', rating: 4.8 };
-      { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework', price: '$599/month', rating: 4.9 };
-      { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant', price: '$799/month', rating: 4.8 };
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', price: '$149/month', rating: 4.7 };
+      { name: 'Quantum AI Consciousness Platform', href: '/quantum-ai-consciousness-platform', price: '$2,999/month', rating: 4.9 },
+      { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager', price: '$399/month', rating: 4.8 },
+      { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform', price: '$299/month', rating: 4.7 },
+      { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine', price: '$199/month', rating: 4.8 },
+      { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework', price: '$599/month', rating: 4.9 },
+      { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant', price: '$799/month', rating: 4.8 },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', price: '$149/month', rating: 4.7 },
       { name: 'Autonomous Business Intelligence 20o40', href: '/autonomous-business-intelligence-20o40', price: '$1,499/month', rating: 4.9 }
-    ] as FooterLink[]};
+    ] as FooterLink[]},
   {
-    title: 'Quantum & Space Technology';
-    description: 'Breakthrough quantum and space technologies';
-    icon: <Atom className="w-5 h-5 text-blue-40o0"  />;
-    color: 'from-blue-50o0 to-cyan-50o0';
+    title: 'Quantum & Space Technology',
+    description: 'Breakthrough quantum and space technologies',
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
     links: [
-      { name: 'Quantum Neural Ecosystem 20o40', href: '/quantum-neural-ecosystem-20o40', price: '$1,999/month', rating: 4.9 };
-      { name: 'Space Resource Intelligence Platform', href: '/space-resource-intelligence-platform', price: '$1,999/month', rating: 4.8 };
-      { name: 'Quantum Cybersecurity Future 20o40', href: '/quantum-cybersecurity-future-20o40', price: '$899/month', rating: 4.8 };
-      { name: 'Brain-Computer Interface 20o40', href: '/brain-computer-interface-20o40', price: '$3,999/month', rating: 4.9 };
-      { name: 'Quantum Internet Security 20o41', href: '/quantum-internet-security-20o41', price: '$1,799/month', rating: 4.8 };
-      { name: 'Quantum Cloud Infrastructure 20o41', href: '/quantum-cloud-infrastructure-20o41', price: '$1,299/month', rating: 4.9 };
-      { name: 'Space Mining Operations', href: '/space-mining-operations', price: '$2,499/month', rating: 4.7 };
+      { name: 'Quantum Neural Ecosystem 20o40', href: '/quantum-neural-ecosystem-20o40', price: '$1,999/month', rating: 4.9 },
+      { name: 'Space Resource Intelligence Platform', href: '/space-resource-intelligence-platform', price: '$1,999/month', rating: 4.8 },
+      { name: 'Quantum Cybersecurity Future 20o40', href: '/quantum-cybersecurity-future-20o40', price: '$899/month', rating: 4.8 },
+      { name: 'Brain-Computer Interface 20o40', href: '/brain-computer-interface-20o40', price: '$3,999/month', rating: 4.9 },
+      { name: 'Quantum Internet Security 20o41', href: '/quantum-internet-security-20o41', price: '$1,799/month', rating: 4.8 },
+      { name: 'Quantum Cloud Infrastructure 20o41', href: '/quantum-cloud-infrastructure-20o41', price: '$1,299/month', rating: 4.9 },
+      { name: 'Space Mining Operations', href: '/space-mining-operations', price: '$2,499/month', rating: 4.7 },
       { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', price: '$1,799/month', rating: 4.8 }
-    ] as FooterLink[]};
+    ] as FooterLink[]},
   {
-    title: 'Business Solutions';
-    description: 'Enterprise-grade business solutions';
-    icon: <Building className="w-5 h-5 text-green-40o0"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
+    title: 'Business Solutions',
+    description: 'Enterprise-grade business solutions',
+    icon: <Building className="w-5 h-5 text-green-40o0"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
     links: [
-      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41', price: '$599/month', rating: 4.9 };
-      { name: 'AI Sales Intelligence 20o41', href: '/ai-sales-intelligence-20o41', price: '$799/month', rating: 4.8 };
-      { name: 'Enterprise Process Automation', href: '/enterprise-process-automation', price: '$899/month', rating: 4.7 };
-      { name: 'Digital Transformation Consulting', href: '/digital-transformation-consulting', price: '$1,299/month', rating: 4.8 };
-      { name: 'Cloud Infrastructure Solutions', href: '/cloud-infrastructure-solutions', price: '$699/month', rating: 4.8 };
-      { name: 'Cybersecurity Services', href: '/cybersecurity-services', price: '$799/month', rating: 4.9 };
-      { name: 'Data Analytics Platform', href: '/data-analytics-platform', price: '$499/month', rating: 4.7 };
+      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41', price: '$599/month', rating: 4.9 },
+      { name: 'AI Sales Intelligence 20o41', href: '/ai-sales-intelligence-20o41', price: '$799/month', rating: 4.8 },
+      { name: 'Enterprise Process Automation', href: '/enterprise-process-automation', price: '$899/month', rating: 4.7 },
+      { name: 'Digital Transformation Consulting', href: '/digital-transformation-consulting', price: '$1,299/month', rating: 4.8 },
+      { name: 'Cloud Infrastructure Solutions', href: '/cloud-infrastructure-solutions', price: '$699/month', rating: 4.8 },
+      { name: 'Cybersecurity Services', href: '/cybersecurity-services', price: '$799/month', rating: 4.9 },
+      { name: 'Data Analytics Platform', href: '/data-analytics-platform', price: '$499/month', rating: 4.7 },
       { name: 'API Management Suite', href: '/api-management-suite', price: '$399/month', rating: 4.8 }
-    ] as FooterLink[]};
+    ] as FooterLink[]},
   {
-    title: 'Research & Development';
-    description: 'Cutting-edge research and development';
-    icon: <FlaskConical className="w-5 h-5 text-orange-40o0"  />;
-    color: 'from-orange-50o0 to-red-50o0';
+    title: 'Research & Development',
+    description: 'Cutting-edge research and development',
+    icon: <FlaskConical className="w-5 h-5 text-orange-40o0"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     links: [
-      { name: 'AI Autonomous Research 20o41', href: '/ai-autonomous-research-20o41', price: '$2,499/month', rating: 4.9 };
-      { name: 'Space Technology Research', href: '/space-technology-research', price: '$2,199/month', rating: 4.7 };
-      { name: 'Biotechnology Innovation', href: '/biotechnology-innovation', price: '$1,599/month', rating: 4.8 };
-      { name: 'Quantum Computing Research', href: '/quantum-computing-research', price: '$1,899/month', rating: 4.8 };
-      { name: 'AI Ethics Research', href: '/ai-ethics-research', price: '$999/month', rating: 4.9 };
-      { name: 'Neural Network Research', href: '/neural-network-research', price: '$1,299/month', rating: 4.7 };
-      { name: 'Space Exploration Research', href: '/space-exploration-research', price: '$2,799/month', rating: 4.8 };
+      { name: 'AI Autonomous Research 20o41', href: '/ai-autonomous-research-20o41', price: '$2,499/month', rating: 4.9 },
+      { name: 'Space Technology Research', href: '/space-technology-research', price: '$2,199/month', rating: 4.7 },
+      { name: 'Biotechnology Innovation', href: '/biotechnology-innovation', price: '$1,599/month', rating: 4.8 },
+      { name: 'Quantum Computing Research', href: '/quantum-computing-research', price: '$1,899/month', rating: 4.8 },
+      { name: 'AI Ethics Research', href: '/ai-ethics-research', price: '$999/month', rating: 4.9 },
+      { name: 'Neural Network Research', href: '/neural-network-research', price: '$1,299/month', rating: 4.7 },
+      { name: 'Space Exploration Research', href: '/space-exploration-research', price: '$2,799/month', rating: 4.8 },
       { name: 'Consciousness Studies', href: '/consciousness-studies', price: '$1,999/month', rating: 4.9 }
-    ] as FooterLink[]};
+    ] as FooterLink[]},
   {
-    title: 'Company & Resources';
-    description: 'About Zion Tech Group and resources';
-    icon: <Target className="w-5 h-5 text-purple-40o0"  />;
-    color: 'from-orange-50o0 to-red-50o0';
+    title: 'Company & Resources',
+    description: 'About Zion Tech Group and resources',
+    icon: <Target className="w-5 h-5 text-purple-40o0"  />,
+    color: 'from-orange-50o0 to-red-50o0',
     links: [
-      { name: 'About Us', href: '/about' };
-      { name: 'Our Team', href: '/team' };
-      { name: 'Careers', href: '/careers' };
-      { name: 'News & Updates', href: '/news' };
-      { name: 'Contact Us', href: '/contact' };
-      { name: 'Privacy Policy', href: '/privacy' };
-      { name: 'Terms of Service', href: '/terms' };
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'News & Updates', href: '/news' },
+      { name: 'Contact Us', href: '/contact' },
+      { name: 'Privacy Policy', href: '/privacy' },
+      { name: 'Terms of Service', href: '/terms' },
       { name: 'Support', href: '/support' }
     ] as FooterLink[]}
 ],
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-  hours: 'Mon-Fri: 9AM-6PM EST';
-  rating: '4.9/5 (50o0+ Reviews)';
-  founded: '20o20';
-  employees: '50+';
-  countries: '25+';
-  customers: '10o00+'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+  hours: 'Mon-Fri: 9AM-6PM EST',
+  rating: '4.9/5 (50o0+ Reviews)',
+  founded: '20o20',
+  employees: '50+',
+  countries: '25+',
+  customers: '10o00+'},
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  />, color: 'hover:text-blue-40o0' };
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  />, color: 'hover:text-blue-60o0' };
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  />, color: 'hover:text-red-50o0' };
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  />, color: 'hover:text-blue-40o0' },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  />, color: 'hover:text-blue-60o0' },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  />, color: 'hover:text-red-50o0' },
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: <Github className="w-5 h-5"  />, color: 'hover:text-gray-40o0' }
 ],
 const quickActions = [
-  { name: 'Get Quote', href: '/contact', icon: <MessageCircle className="w-4 h-4"  />, color: 'from-cyan-50o0 to-blue-60o0' };
-  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4"  />, color: 'from-purple-50o0 to-pink-60o0' };
-  { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4"  />, color: 'from-green-50o0 to-emerald-60o0' };
+  { name: 'Get Quote', href: '/contact', icon: <MessageCircle className="w-4 h-4"  />, color: 'from-cyan-50o0 to-blue-60o0' },
+  { name: 'Book Demo', href: '/demo', icon: <Calendar className="w-4 h-4"  />, color: 'from-purple-50o0 to-pink-60o0' },
+  { name: 'Live Chat', href: '/support', icon: <MessageCircle className="w-4 h-4"  />, color: 'from-green-50o0 to-emerald-60o0' },
   { name: 'Technical Support', href: '/support', icon: <Monitor className="w-4 h-4"  />, color: 'from-orange-50o0 to-red-60o0' }
 ],
 export default function UltraAdvancedFuturisticFooter20o41() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className="relative bg-black/90 border-t border-cyan-50o0/30 overflow-hidden">,
       {/* Background Effects */}
@@ -140,8 +140,8 @@ export default function UltraAdvancedFuturisticFooter20o41() {
             key={i}
             className="absolute w-px h-32 bg-gradient-to-b from-cyan-40o0/0 via-cyan-40o0/50 to-cyan-40o0/0",
             style={{
-              left: `${(i * 7) % 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
+              left: `${(i * 7) % 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
               transform: `rotate(${Math.random() * 360}deg)`}}
            />))}
       </div>,

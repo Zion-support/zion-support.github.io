@@ -17,7 +17,7 @@ function safeSessionStorage() {
   } catch (error) {
     safeConsoleError('SessionStorage not available:', error)}
   return null}
-export { safeConsoleError, safeLocalStorage, safeSessionStorage };
+export { safeConsoleError, safeLocalStorage, safeSessionStorage },
 function safeConsoleError(message, error) {
   const env = globalThis.process?.env?.NODE_ENV ?? 'production',
   if (env === 'development') {
@@ -37,7 +37,7 @@ function safeSessionStorage() {
   } catch (error) {
     safeConsoleError('SessionStorage not "available": ', error)}
   return null}
-export { safeConsoleError, safeLocalStorage, safeSessionStorage };
+export { safeConsoleError, safeLocalStorage, safeSessionStorage },
 function safeConsoleError(message, error) {
   const env = globalThis.process?.env?.NODE_ENV ?? 'production',
   if (env === 'development') {
@@ -57,4 +57,4 @@ function safeSessionStorage() {
   } catch (error) {
     safeConsoleError('SessionStorage not available:', error)}
   return null}
-export { safeConsoleError, safeLocalStorage, safeSessionStorage };
+export { safeConsoleError, safeLocalStorage, safeSessionStorage },

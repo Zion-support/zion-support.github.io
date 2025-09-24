@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import i18n from 'i18next',
 import { initReactI18next } from 'react-i18next',
 import LanguageDetector from 'i18next-browser-languagedetector',
@@ -13,27 +13,27 @@ i18n,
   .init({
     resources: {
       en: {
-        translation: enTranslation;
-      };
+        translation: enTranslation
+      },
       es: {
-        translation: esTranslation;
-      };
+        translation: esTranslation
+      },
       pt: {
-        translation: ptTranslation;
-      };
+        translation: ptTranslation
+      },
       ar: {
-        translation: arTranslation;
-      };
-    };
+        translation: arTranslation
+      },
+    },
     fallbackLng: 'en', // Default language,
-    debug: process.env.NODE_ENV === 'development';
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
-      escapeValue: false, // React already escapes by default};
+      escapeValue: false, // React already escapes by default},
     detection: {
-      order: ['localStorage', 'navigator'];
-      lookupLocalStorage: 'zion_language';
-      caches: ['localStorage'];
-    };
+      order: ['localStoragenavigator'],
+      lookupLocalStorage: 'zion_language',
+      caches: ['localStorage']
+    },
   }),
 // For RTL language support,
 document.documentElement.dir = i18n.dir(),
@@ -44,4 +44,4 @@ i18n.on('languageChanged', lng => {
   localStorage.setItem('zion_language', lng),
   // If user is authenticated, save language preference to profile,
   // This will be implemented in the LanguageContext}),
-export default i18n;
+export default i18n,

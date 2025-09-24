@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 const AI20o26ImplementationMasterFrameworkBanner: React.FC = () => {
@@ -144,5 +144,5 @@ const AI20o26ImplementationMasterFrameworkBanner: React.FC = () => {
       <div className="absolute top-16 right-16 w-4 h-4 bg-cyan-40o0 rounded-full animate-bounce opacity-60"></div>,
       <div className="absolute top-32 left-16 w-3 h-3 bg-green-40o0 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.7s' }}></div>,
       <div className="absolute bottom-40 right-32 w-5 h-5 bg-teal-40o0 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1.4s' }}></div>,
-    </motion.section>)};
-export default AI20o26ImplementationMasterFrameworkBanner;
+    </motion.section>)},
+export default AI20o26ImplementationMasterFrameworkBanner,

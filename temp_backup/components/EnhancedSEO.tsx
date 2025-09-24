@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Search, TrendingUp, BarChart3, Target, Eye;
-  Globe, Smartphone, Monitor, Zap, CheckCircle;
+  Search, TrendingUp, BarChart3, Target, Eye,
+  Globe, Smartphone, Monitor, Zap, CheckCircle,
   AlertTriangle, Info, ExternalLink} from 'lucide-react',
 interface SEOData {
   title: string,
@@ -31,11 +31,11 @@ interface SEOIssue {
 ,
 const EnhancedSEO: React.FC = () => {
   const [seoData, setSeoData] = useState<SEOData>({
-    title: 'Zion Tech Group - Revolutionary Technology Solutions';
-    description: 'Experience cutting-edge AI, quantum computing, and autonomous solutions that transform businesses worldwide. From micro SAAS to enterprise infrastructure.';
-    keywords: ['AI', 'technology', 'quantum computing', 'automation', 'business solutions'];
-    ogImage: '/og-image.jpg';
-    canonical: 'https://ziontechgroup.com';
+    title: 'Zion Tech Group - Revolutionary Technology Solutions',
+    description: 'Experience cutting-edge AI, quantum computing, and autonomous solutions that transform businesses worldwide. From micro SAAS to enterprise infrastructure.',
+    keywords: ['AItechnology', 'quantum computingautomation', 'business solutions'],
+    ogImage: '/og-image.jpg',
+    canonical: 'https://ziontechgroup.com',
     structuredData: {}
   }),
   const [metrics, setMetrics] = useState<SEOMetrics | null>(null),
@@ -44,60 +44,60 @@ const EnhancedSEO: React.FC = () => {
   // Generate structured data,
   const generateStructuredData = useCallback(() => {
     const organizationSchema ={
-      "@context": "https://schema.org";
-      "@type": "Organization";
-      "name": "Zion Tech Group";
-      "url": "https://ziontechgroup.com";
-      "logo": "https://ziontechgroup.com/logo.png";
-      "description": "Revolutionary technology solutions provider specializing in AI, quantum computing, and autonomous systems.";
+      "@context": "https: //schema.org",
+      "@type": "Organization",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
+      "logo": "https://ziontechgroup.com/logo.png",
+      "description": "Revolutionary technology solutions provider specializing in AI, quantum computing, and autonomous systems.",
       "address": {
-        "@type": "PostalAddress";
-        "streetAddress": "364 E Main St STE 10o08";
-        "addressLocality": "Middletown";
-        "addressRegion": "DE";
-        "postalCode": "19709";
-        "addressCountry": "US"};
+        "@type": "PostalAddress",
+        "streetAddress": "364 E Main St STE 10o08",
+        "addressLocality": "Middletown",
+        "addressRegion": "DE",
+        "postalCode": "19709",
+        "addressCountry": "US"},
       "contactPoint": {
-        "@type": "ContactPoint";
-        "telephone": "+1-30o2-464-0950";
-        "contactType": "customer service";
-        "email": "kleber@ziontechgroup.com"};
+        "@type": "ContactPoint",
+        "telephone": "+1-30o2-464-0950",
+        "contactType": "customer service",
+        "email": "kleber@ziontechgroup.com"},
       "sameAs": [
-        "https://github.com/Zion-Holdings";
-        "https: //linkedin.com/company/zion-tech-group"];
+        "https: //github.com/Zion-Holdings",
+        "https: //linkedin.com/company/zion-tech-group"],
       "hasOfferCatalog": {
-        "@type": "OfferCatalog";
-        "name": "Technology Services";
+        "@type": "OfferCatalog",
+        "name": "Technology Services",
         "itemListElement": [
           {
-            "@type": "Offer";
+            "@type": "Offer",
             "itemOffered": {
-              "@type": "Service";
-              "name": "AI Business Process Automation";
+              "@type": "Service",
+              "name": "AI Business Process Automation",
               "description": "Intelligent automation for complex business processes"}
-          };
+          },
           {
-            "@type": "Offer";
+            "@type": "Offer",
             "itemOffered": {
-              "@type": "Service";
-              "name": "Cloud Infrastructure & DevOps";
+              "@type": "Service",
+              "name": "Cloud Infrastructure & DevOps",
               "description": "Complete cloud infrastructure management with automation"}
           }
         ]}
-    };
+    },
     const websiteSchema ={
-      "@context": "https://schema.org";
-      "@type": "WebSite";
-      "name": "Zion Tech Group";
-      "url": "https://ziontechgroup.com";
+      "@context": "https: //schema.org",
+      "@type": "WebSite",
+      "name": "Zion Tech Group",
+      "url": "https://ziontechgroup.com",
       "potentialAction": {
-        "@type": "SearchAction";
-        "target": "https: //ziontechgroup.com/search?q={search_term_string}";
+        "@type": "SearchAction",
+        "target": "https: //ziontechgroup.com/search?q={search_term_string}",
         "query-input": "required name=search_term_string"}
-    };
+    },
     return {
-      organization: organizationSchema;
-      website: websiteSchema};
+      organization: organizationSchema,
+      website: websiteSchema},
   }, []),
   // Analyze SEO metrics,
   const analyzeSEO = useCallback(async () => {
@@ -106,55 +106,55 @@ const EnhancedSEO: React.FC = () => {
     // Analyze title,
     if (seoData.title.length < 30) {
       newIssues.push({
-        id: 'title-short';
-        type: 'warning';
-        message: 'Title is too short';
-        impact: 'medium';
-        fix: 'Title should be between 30-60 characters';
+        id: 'title-short',
+        type: 'warning',
+        message: 'Title is too short',
+        impact: 'medium',
+        fix: 'Title should be between 30-60 characters',
         category: 'meta'})} else if (seoData.title.length > 60) {
       newIssues.push({
-        id: 'title-long';
-        type: 'warning';
-        message: 'Title is too long';
-        impact: 'medium';
-        fix: 'Title should be between 30-60 characters';
+        id: 'title-long',
+        type: 'warning',
+        message: 'Title is too long',
+        impact: 'medium',
+        fix: 'Title should be between 30-60 characters',
         category: 'meta'})}
 ,
     // Analyze description,
     if (seoData.description.length < 120) {
       newIssues.push({
-        id: 'description-short';
-        type: 'warning';
-        message: 'Description is too short';
-        impact: 'medium';
-        fix: 'Description should be between 120-160 characters';
+        id: 'description-short',
+        type: 'warning',
+        message: 'Description is too short',
+        impact: 'medium',
+        fix: 'Description should be between 120-160 characters',
         category: 'meta'})} else if (seoData.description.length > 160) {
       newIssues.push({
-        id: 'description-long';
-        type: 'warning';
-        message: 'Description is too long';
-        impact: 'medium';
-        fix: 'Description should be between 120-160 characters';
+        id: 'description-long',
+        type: 'warning',
+        message: 'Description is too long',
+        impact: 'medium',
+        fix: 'Description should be between 120-160 characters',
         category: 'meta'})}
 ,
     // Check for missing keywords,
     if (seoData.keywords.length < 3) {
       newIssues.push({
-        id: 'keywords-few';
-        type: 'warning';
-        message: 'Too few keywords';
-        impact: 'low';
-        fix: 'Include 3-5 relevant keywords';
+        id: 'keywords-few',
+        type: 'warning',
+        message: 'Too few keywords',
+        impact: 'low',
+        fix: 'Include 3-5 relevant keywords',
         category: 'meta'})}
 ,
     // Check for missing OG image,
     if (!seoData.ogImage) {
       newIssues.push({
-        id: 'og-image-missing';
-        type: 'error';
-        message: 'Open Graph image missing';
-        impact: 'high';
-        fix: 'Add an OG image for social media sharing';
+        id: 'og-image-missing',
+        type: 'error',
+        message: 'Open Graph image missing',
+        impact: 'high',
+        fix: 'Add an OG image for social media sharing',
         category: 'meta'})}
 ,
     // Calculate metrics,
@@ -170,11 +170,11 @@ const EnhancedSEO: React.FC = () => {
       (imageOptimization / 5) +,
       (mobileOptimization / 5)),
     setMetrics({
-      titleLength;
-      descriptionLength;
-      keywordDensity;
-      imageOptimization;
-      mobileOptimization;
+      titleLength,
+      descriptionLength,
+      keywordDensity,
+      imageOptimization,
+      mobileOptimization,
       overallScore}),
     setIssues(newIssues),
     setIsAnalyzing(false)}, [seoData]),
@@ -185,12 +185,12 @@ const EnhancedSEO: React.FC = () => {
   const generateMetaTags = useCallback(() => {
     const structuredData = generateStructuredData(),
     return {
-      title: seoData.title;
-      description: seoData.description;
-      keywords: seoData.keywords.join(', ');
-      ogImage: seoData.ogImage;
-      canonical: seoData.canonical;
-      structuredData};
+      title: seoData.title,
+      description: seoData.description,
+      keywords: seoData.keywords.join(),
+      ogImage: seoData.ogImage,
+      canonical: seoData.canonical,
+      structuredData},
   }, [seoData, generateStructuredData]),
   useEffect(() => {
     analyzeSEO()}, [analyzeSEO]),
@@ -370,5 +370,5 @@ const EnhancedSEO: React.FC = () => {
           </div>,
         </div>,
       </motion.div>,
-    </>)};
-export default EnhancedSEO;
+    </>)},
+export default EnhancedSEO,

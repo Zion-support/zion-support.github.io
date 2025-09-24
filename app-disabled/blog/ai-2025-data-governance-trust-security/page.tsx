@@ -2,24 +2,18 @@ import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o25: Data Governance, Trust, and Security - Enterprise Guide | Zion Tech Group';
+    'AI 20o25: Data Governance, Trust, and Security - Enterprise Guide | Zion Tech Group',
   description:,
-    'A practical 20o25 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale.';
+    'A practical 20o25 guide to AI data governance across privacy, security, lineage, access control, and compliance for trustworthy AI at scale.',
   keywords: [
-    'ai data governance';
-    'data trust';
-    'ai security';
-    'privacy by design';
-    'rbac';
-    'abac';
-    'lineage';
-    'observability';
-    'compliance';
-    'soc2';
-    'iso270o01';
-    'hipaa';
-  ];
-};
+    'ai data governancedata trust',
+    'ai securityprivacy by design',
+    'rbacabac',
+    'lineageobservability',
+    'compliancesoc2',
+    'iso270o01hipaa',
+  ]
+},
 const DataGovernanceTrustSecurity20o25Page = () => {
   return (
     <div className='min-h-screen bg-gray-50'>,
@@ -137,5 +131,5 @@ const DataGovernanceTrustSecurity20o25Page = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default DataGovernanceTrustSecurity20o25Page;
+    </div>)},
+export default DataGovernanceTrustSecurity20o25Page,

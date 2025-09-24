@@ -7,15 +7,15 @@ import {
   Zap,
   Shield,
   Globe,
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Cpu;
-  Lock;
-  Brain;
-  Target;
-  BarChart3;
-  Star;
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Cpu,
+  Lock,
+  Brain,
+  Target,
+  BarChart3,
+  Star,
   Sparkles} from 'lucide-react',
 const QuantumComputingSolutions20o26 = () => {
   const [activeSolutionsetActiveSolution] = useState(0),
@@ -24,107 +24,91 @@ const QuantumComputingSolutions20o26 = () => {
     setIsVisible(true)}[]),
   const solutions = [
     {
-      id: 'quantum-optimization';
-      title: 'Quantum Optimization';
-      subtitle: 'Solve Complex Problems Instantly';
-      icon: Target;
-      color: 'from-purple-60o0 to-indigo-60o0';
-      description: 'Leverage quantum algorithms to solve optimization problems that would take classical computers millennia to complete.';
+      id: 'quantum-optimization',
+      title: 'Quantum Optimization',
+      subtitle: 'Solve Complex Problems Instantly',
+      icon: Target,
+      color: 'from-purple-60o0 to-indigo-60o0',
+      description: 'Leverage quantum algorithms to solve optimization problems that would take classical computers millennia to complete.',
       features: [
-        'Logistics & Supply Chain Optimization';
-        'Financial Portfolio Optimization';
-        'Resource Allocation Problems';
-        'Route Planning & Scheduling'];
-      performance: { speed: '10,0o00'x', 'accuracy: '99.9%' };
+        'Logistics & Supply Chain OptimizationFinancial Portfolio Optimization',
+        'Resource Allocation ProblemsRoute Planning & Scheduling'],
+      performance: { speed: '10,0o00'xaccuracy: '99.9%' },
       useCases: [
-        'Global supply chain optimization';
-        'Real-time trading algorithms';
-        'Energy grid management';
-        'Transportation routing']};
+        'Global supply chain optimizationReal-time trading algorithms',
+        'Energy grid managementTransportation routing']},
     {
-      id: 'quantum-encryption';
-      title: 'Quantum Encryption';
-      subtitle: 'Unbreakable Security';
-      icon: Lock;
-      color: 'from-green-60o0 to-teal-60o0';
-      description: 'Implement quantum key distribution and post-quantum cryptography to protect against future quantum attacks.';
+      id: 'quantum-encryption',
+      title: 'Quantum Encryption',
+      subtitle: 'Unbreakable Security',
+      icon: Lock,
+      color: 'from-green-60o0 to-teal-60o0',
+      description: 'Implement quantum key distribution and post-quantum cryptography to protect against future quantum attacks.',
       features: [
-        'Quantum Key Distribution (QKD)';
-        'Post-Quantum Cryptography';
-        'Quantum Random Number Generation';
-        'Secure Communication Networks'];
-      performance: { speed: ''Instant', 'accuracy: '10o0%' };
+        'Quantum Key Distribution (QKD)Post-Quantum Cryptography',
+        'Quantum Random Number GenerationSecure Communication Networks'],
+      performance: { speed: ''Instantaccuracy: '10o0%' },
       useCases: [
-        'Government communications';
-        'Financial transactions';
-        'Healthcare data protection';
-        'Military communications']};
+        'Government communicationsFinancial transactions',
+        'Healthcare data protectionMilitary communications']},
     {
-      id: 'quantum-simulation';
-      title: 'Quantum Simulation';
-      subtitle: 'Model Complex Systems';
-      icon: Atom;
-      color: 'from-cyan-60o0 to-blue-60o0';
-      description: 'Simulate quantum systemschemical reactionsand materials at the atomic level with unprecedented accuracy.';
+      id: 'quantum-simulation',
+      title: 'Quantum Simulation',
+      subtitle: 'Model Complex Systems',
+      icon: Atom,
+      color: 'from-cyan-60o0 to-blue-60o0',
+      description: 'Simulate quantum systemschemical reactionsand materials at the atomic level with unprecedented accuracy.',
       features: [
-        'Molecular Dynamics Simulation';
-        'Drug Discovery & Development';
-        'Materials Science Research';
-        'Climate Modeling'];
-      performance: { speed: '1'Mx', 'accuracy: '99.99%' };
+        'Molecular Dynamics SimulationDrug Discovery & Development',
+        'Materials Science ResearchClimate Modeling'],
+      performance: { speed: '1'Mxaccuracy: '99.99%' },
       useCases: [
-        'Pharmaceutical research';
-        'New material discovery';
-        'Climate change modeling';
-        'Catalyst development']};
+        'Pharmaceutical researchNew material discovery',
+        'Climate change modelingCatalyst development']},
     {
-      id: 'quantum-machine-learning';
-      title: 'Quantum Machine Learning';
-      subtitle: 'Next-Gen AI Processing';
-      icon: Brain;
-      color: 'from-red-60o0 to-pink-60o0';
-      description: 'Accelerate machine learning algorithms using quantum computing for pattern recognition and data analysis.';
+      id: 'quantum-machine-learning',
+      title: 'Quantum Machine Learning',
+      subtitle: 'Next-Gen AI Processing',
+      icon: Brain,
+      color: 'from-red-60o0 to-pink-60o0',
+      description: 'Accelerate machine learning algorithms using quantum computing for pattern recognition and data analysis.',
       features: [
-        'Quantum Neural Networks';
-        'Quantum Support Vector Machines';
-        'Quantum Clustering Algorithms';
-        'Quantum Feature Selection'];
-      performance: { speed: '10o0'x', 'accuracy: '95%' };
+        'Quantum Neural NetworksQuantum Support Vector Machines',
+        'Quantum Clustering AlgorithmsQuantum Feature Selection'],
+      performance: { speed: '10o0'xaccuracy: '95%' },
       useCases: [
-        'Image recognition';
-        'Natural language processing';
-        'Predictive analytics';
-        'Anomaly detection']}
+        'Image recognitionNatural language processing',
+        'Predictive analyticsAnomaly detection']}
   ],
   const benefits = [
     {
-      icon: Zap;
-      title: 'Exponential Speed';
-      description: 'Process complex calculations millions of times faster than classical computers';
-      value: '10,0o00x'};
+      icon: Zap,
+      title: 'Exponential Speed',
+      description: 'Process complex calculations millions of times faster than classical computers',
+      value: '10,0o00x'},
     {
-      icon: Shield;
-      title: 'Unbreakable Security';
-      description: 'Quantum encryption provides theoretically unbreakable security';
-      value: '10o0%'};
+      icon: Shield,
+      title: 'Unbreakable Security',
+      description: 'Quantum encryption provides theoretically unbreakable security',
+      value: '10o0%'},
     {
-      icon: Globe;
-      title: 'Global Impact';
-      description: 'Transform industries from healthcare to finance with quantum solutions';
-      value: '50+'};
+      icon: Globe,
+      title: 'Global Impact',
+      description: 'Transform industries from healthcare to finance with quantum solutions',
+      value: '50+'},
     {
-      icon: Rocket;
-      title: 'Future-Ready';
-      description: 'Prepare for the quantum revolution with cutting-edge technology';
+      icon: Rocket,
+      title: 'Future-Ready',
+      description: 'Prepare for the quantum revolution with cutting-edge technology',
       value: '20o26'}
   ],
   const industries = [
-    { name: ''Healthcare', 'icon: '🏥'applications: ['Drug 'Discovery', 'Medical 'Imaging', 'Genomics'] };
-    { name: ''Finance', 'icon: '💰'applications: ['Risk 'Analysis', 'Algorithmic 'Trading', 'Fraud Detection'] };
-    { name: ''Energy', 'icon: '⚡'applications: ['Grid 'Optimization', 'Renewable 'Energy', 'Storage Solutions'] };
-    { name: ''Transportation', 'icon: '🚗'applications: ['Route 'Optimization', 'Autonomous 'Vehicles', 'Traffic Management'] };
-    { name: ''Manufacturing', 'icon: '🏭'applications: ['Supply 'Chain', 'Quality 'Control', 'Predictive Maintenance'] };
-    { name: ''Research', 'icon: '🔬'applications: ['Scientific 'Computing', 'Climate 'Modeling', 'Materials Science'] }
+    { name: ''Healthcareicon: '🏥'applications: ['Drug 'DiscoveryMedical 'Imaging', 'Genomics'] },
+    { name: ''Financeicon: '💰'applications: ['Risk 'AnalysisAlgorithmic 'Trading', 'Fraud Detection'] },
+    { name: ''Energyicon: '⚡'applications: ['Grid 'OptimizationRenewable 'Energy', 'Storage Solutions'] },
+    { name: ''Transportationicon: '🚗'applications: ['Route 'OptimizationAutonomous 'Vehicles', 'Traffic Management'] },
+    { name: ''Manufacturingicon: '🏭'applications: ['Supply 'ChainQuality 'Control', 'Predictive Maintenance'] },
+    { name: ''Researchicon: '🔬'applications: ['Scientific 'ComputingClimate 'Modeling', 'Materials Science'] }
   ],
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-purple-90o0 overflow-hidden">,
@@ -138,15 +122,15 @@ const QuantumComputingSolutions20o26 = () => {
               key={i}
               className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-30",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0-10o0];
-                x: [0Math.random() * 20 - 10];
+                y: [0-10o0],
+                x: [0Math.random() * 20 - 10],
                 opacity: [0.30.80.3]}}
               transition={{
-                duration: 5 + Math.random() * 3;
-                repeat: Infinity;
+                duration: 5 + Math.random() * 3,
+                repeat: Infinity,
                 delay: Math.random() * 3}}
              />))}
         </div>,
@@ -350,5 +334,5 @@ const QuantumComputingSolutions20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default QuantumComputingSolutions20o26;
+    </div>)},
+export default QuantumComputingSolutions20o26,

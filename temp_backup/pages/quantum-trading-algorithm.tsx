@@ -1,41 +1,39 @@
-import React from 'react';;
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import {
-  TrendingUp, Brain, Shield, Zap, Target;
-  BarChart3, Cpu, Globe, Users, Award;
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+  TrendingUp, Brain, Shield, Zap, Target,
+  BarChart3, Cpu, Globe, Users, Award,
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const features = [
-  'Quantum-enhanced market prediction algorithmsReal-time market data processing';
-  'AI-powered risk assessmentMulti-asset portfolio optimization';
-  'Regulatory compliance automationBacktesting and simulation engine';
-  'Custom strategy builderPerformance analytics dashboard'];
+  'Quantum-enhanced market prediction algorithmsReal-time market data processingAI-powered risk assessmentMulti-asset portfolio optimization',
+  'Regulatory compliance automationBacktesting and simulation engineCustom strategy builderPerformance analytics dashboard'],
 const pricingPlans = [
   {
-    name: 'Starter';
-    price: 199;
-    period: 'month';
-    features: ['Basic algorithms5 asset classes', 'Daily rebalancingStandard support'];
-    popular: false};
+    name: 'Starter',
+    price: 199,
+    period: 'month',
+    features: ['Basic algorithms5 asset classesDaily rebalancingStandard support'],
+    popular: false},
   {
-    name: 'Professional';
-    price: 499;
-    period: 'month';
-    features: ['Advanced algorithmsAll asset classes', 'Real-time rebalancingCustom strategies', 'Priority support'];
-    popular: true};
+    name: 'Professional',
+    price: 499,
+    period: 'month',
+    features: ['Advanced algorithmsAll asset classesReal-time rebalancingCustom strategies', 'Priority support'],
+    popular: true},
   {
-    name: 'Enterprise';
-    price: 1299;
-    period: 'month';
-    features: ['Quantum algorithmsWhite-label solution', 'API accessDedicated support', 'Custom integrations'];
+    name: 'Enterprise',
+    price: 1299,
+    period: 'month',
+    features: ['Quantum algorithmsWhite-label solutionAPI accessDedicated support', 'Custom integrations'],
     popular: false}
-];
+],
 export default function QuantumTradingAlgorithm() {
   return (
     <Layout>,

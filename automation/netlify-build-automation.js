@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -24,20 +24,20 @@ class NetlifyBuildAutomation {
     this.monitor = new NetlifyBuildMonitor(),
     this.fixer = new NetlifyErrorFixer(),
     this.config ={
-      autoFix: true;
-      autoCommit: true;
-      autoDeploy: true;
-      maxRetries: 3;
+      autoFix: true,
+      autoCommit: true,
+      autoDeploy: true,
+      maxRetries: 3,
       retryDelay: 60o000, // 1 minute,
-      logFile: path.join(__dirname, 'netlify-automation.log');
-      statusFile: path.join(__dirname, 'netlify-automation-status.json')};
+      logFile: path.join(__dirname, 'netlify-automation.log'),
+      statusFile: path.join(__dirname, 'netlify-automation-status.json')},
     this.status ={
-      isRunning: false;
-      lastBuild: null;
-      buildHistory: [];
-      fixesApplied: [];
-      errors: [];
-      startTime: null};
+      isRunning: false,
+      lastBuild: null,
+      buildHistory: [],
+      fixesApplied: [],
+      errors: [],
+      startTime: null},
   }
 ,
   log(message, level = 'info') {
@@ -60,9 +60,9 @@ class NetlifyBuildAutomation {
   async handleBuildError(error) {
     this.log(`Build error detected: ${error.type} - ${error.message}`),
     this.status.errors.push({
-      timestamp: new Date().toISOString();
-      type: error.type;
-      message: error.message;
+      timestamp: new Date().toISOString(),
+      type: error.type,
+      message: error.message,
       buildId: error.buildId}),
     if (this.config.autoFix) {
       await this.autoFixError(error)}
@@ -72,9 +72,9 @@ class NetlifyBuildAutomation {
   async handleBuildSuccess(build) {
     this.log(`Build successful: ${build.id}`),
     this.status.lastBuild ={
-      id: build.id;
-      timestamp: new Date().toISOString();
-      state: 'success'};
+      id: build.id,
+      timestamp: new Date().toISOString(),
+      state: 'success'},
     this.status.buildHistory.unshift(this.status.lastBuild),
     // Keep only last 20 builds,
     if (this.status.buildHistory.length > 20) {
@@ -93,10 +93,10 @@ class NetlifyBuildAutomation {
           this.log(
             `Successfully fixed ${error.type} on attempt ${retries + 1}`),
           this.status.fixesApplied.push({
-            timestamp: new Date().toISOString();
-            errorType: error.type;
-            buildId: error.buildId;
-            attempt: retries + 1;
+            timestamp: new Date().toISOString(),
+            errorType: error.type,
+            buildId: error.buildId,
+            attempt: retries + 1,
             success: true}),
           if (this.config.autoCommit) {
             await this.commitFixes()}
@@ -241,7 +241,7 @@ const timeoutId = setTimeout(resolve,                                           
         }
       } catch (fixError) {
         this.log(
-          `Error during fix attempt ${retries + 1}: ${fixError.message}`;
+          `Error during fix attempt ${retries + 1}: ${fixError.message}`,
           'error'),
         retries++,
         if (retries < this.config.maxRetries) {
@@ -379,13 +379,13 @@ const timeoutId = setTimeout(resolve,                                           
 ,
     if (!success) {
       this.log(
-        `Failed to fix ${error.type} after ${this.config.maxRetries} attempts`;
+        `Failed to fix ${error.type} after ${this.config.maxRetries} attempts`,
         'error'),
       this.status.fixesApplied.push({
-        timestamp: new Date().toISOString();
-        errorType: error.type;
-        buildId: error.buildId;
-        attempt: retries;
+        timestamp: new Date().toISOString(),
+        errorType: error.type,
+        buildId: error.buildId,
+        attempt: retries,
         success: false})}
   }
 ,
@@ -409,7 +409,7 @@ const timeoutId = setTimeout(resolve,                                           
       if (build) {
         this.log(`New build triggered: ${build.id}`),
         return build} else {
-        this.log('Failed to trigger new build', 'error'),
+        this.log('Failed to trigger new builderror'),
         return null}
     } catch (error) {
       this.log(`Error triggering new build: ${error.message}`, 'error'),
@@ -419,10 +419,10 @@ const timeoutId = setTimeout(resolve,                                           
   async runPreBuildChecks() {
     this.log('Running pre-build checks...'),
     const checks = [
-      this.checkDependencies();
-      this.checkTypeScript();
-      this.checkESLint();
-      this.checkNextJS();
+      this.checkDependencies(),
+      this.checkTypeScript(),
+      this.checkESLint(),
+      this.checkNextJS(),
       this.checkEnvironment()],
     const results = await Promise.allSettled(checks),
     const issues = results.filter(
@@ -436,7 +436,7 @@ const timeoutId = setTimeout(resolve,                                           
   async checkDependencies() {
     try {
       return true} catch (error) {
-      this.log('Dependency vulnerabilities found', 'warn'),
+      this.log('Dependency vulnerabilities foundwarn'),
       return false}
   }
 ,
@@ -444,7 +444,7 @@ const timeoutId = setTimeout(resolve,                                           
     try {
       execSync('npx tsc --noEmit', { stdio: 'pipe' }),
       return true} catch (error) {
-      this.log('TypeScript errors found', 'warn'),
+      this.log('TypeScript errors foundwarn'),
       return false}
   }
 ,
@@ -452,7 +452,7 @@ const timeoutId = setTimeout(resolve,                                           
     try {
       execSync('npm run lint', { stdio: 'pipe' }),
       return true} catch (error) {
-      this.log('ESLint errors found', 'warn'),
+      this.log('ESLint errors foundwarn'),
       return false}
   }
 ,
@@ -465,14 +465,13 @@ const timeoutId = setTimeout(resolve,                                           
           return true}
       }
       return false} catch (error) {
-      this.log('Next.js cache issues found', 'warn'),
+      this.log('Next.js cache issues foundwarn'),
       return false}
   }
 ,
   async checkEnvironment() {
     const requiredVars = [
-      'NEXT_PUBLIC_SUPABASE_URL';
-      'NEXT_PUBLIC_SUPABASE_ANON_KEY'],
+      'NEXT_PUBLIC_SUPABASE_URLNEXT_PUBLIC_SUPABASE_ANON_KEY'],
     const missing = requiredVars.filter((varName) => !process.env[varName]),
     if (missing.length > 0) {
       this.log(`Missing environment variables: ${missing.join(', ')}`, 'warn'),
@@ -482,31 +481,31 @@ const timeoutId = setTimeout(resolve,                                           
 ,
   async generateReport() {
     const report ={
-      timestamp: new Date().toISOString();
-      status: this.status;
-      config: this.config;
+      timestamp: new Date().toISOString(),
+      status: this.status,
+      config: this.config,
       summary: {
-        totalBuilds: this.status.buildHistory.length;
+        totalBuilds: this.status.buildHistory.length,
         successfulBuilds: this.status.buildHistory.filter(
-          (b) => b.state === 'success').length;
+          (b) => b.state === 'success').length,
         failedBuilds: this.status.buildHistory.filter(
-          (b) => b.state === 'error').length;
-        totalFixes: this.status.fixesApplied.length;
+          (b) => b.state === 'error').length,
+        totalFixes: this.status.fixesApplied.length,
         successfulFixes: this.status.fixesApplied.filter((f) => f.success),
-          .length;
+          .length,
         uptime: this.status.startTime,
           ? Date.now() - new Date(this.status.startTime).getTime(),
           : 0}
-    };
+    },
     fs.writeFileSync(
-      path.join(__dirname, 'netlify-automation-report.json');
+      path.join(__dirname, 'netlify-automation-report.json'),
       JSON.stringify(report, null, 2)),
     return report}
 ,
   saveStatus() {
     try {
       fs.writeFileSync(
-        this.config.statusFile;
+        this.config.statusFile,
         JSON.stringify(this.status, null, 2))} catch (error) {
       this.log(`Error saving status: ${error.message}`, 'error')}
   }

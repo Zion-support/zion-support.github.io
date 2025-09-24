@@ -128,7 +128,7 @@ export function ServicesShowcase() {
               Ready to Transform Your Business?,
             </h3>,
             <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">,
-              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth;
+              Join thousands of businesses already leveraging our micro SAAS services to accelerate growth,
               improve efficiency, and stay ahead of the competition.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

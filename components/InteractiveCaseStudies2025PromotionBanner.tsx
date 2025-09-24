@@ -7,10 +7,10 @@ import {
   Users,
   Award,
   ArrowRight,
-  X;
-  Play;
-  Star;
-  Target;
+  X,
+  Play,
+  Star,
+  Target,
   Zap} from 'lucide-react',
 export default function InteractiveCaseStudies20o25PromotionBanner() {
   const [isVisiblesetIsVisible] = useState(false),

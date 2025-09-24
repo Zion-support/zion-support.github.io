@@ -10,30 +10,30 @@ import {
   Zap,
   Brain,
   Cpu,
-  Database;
-  Cloud;
-  Smartphone;
-  Laptop;
-  Server;
-  Network;
-  Shield;
-  Target;
-  TrendingUp;
-  Users;
-  Globe;
-  Code;
-  Atom;
-  Rocket;
-  Star;
-  CheckCircle;
-  AlertCircle;
-  Info;
-  ArrowRight;
-  Download;
-  Share2;
-  Heart;
-  MessageCircle;
-  BookOpen;
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  Network,
+  Shield,
+  Target,
+  TrendingUp,
+  Users,
+  Globe,
+  Code,
+  Atom,
+  Rocket,
+  Star,
+  CheckCircle,
+  AlertCircle,
+  Info,
+  ArrowRight,
+  Download,
+  Share2,
+  Heart,
+  MessageCircle,
+  BookOpen,
   Lightbulb} from 'lucide-react',
 const InteractiveTechDemo20o25 = () => {
   const [activeDemosetActiveDemo] = useState('ai-consciousness'),
@@ -55,81 +55,81 @@ const InteractiveTechDemo20o25 = () => {
     return () => clearInterval(interval)}[isPlaying]),
   const demos ={
     'ai-consciousness': {
-      title: 'AI Consciousness Evolution';
-      description: 'Experience the breakthrough in synthetic consciousness with real-time neural pattern analysis';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
+      title: 'AI Consciousness Evolution',
+      description: 'Experience the breakthrough in synthetic consciousness with real-time neural pattern analysis',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0',
       features: [
-        { name: 'Neural Pattern 'Recognition', 'value: 99.7unit: '%' };
-        { name: 'Consciousness 'Index', 'value: 8.9unit: '/10' };
-        { name: 'Learning 'Rate', 'value: 0.95unit: 'α' };
-        { name: 'Memory 'Retention', 'value: 99.9unit: '%' }
-      ];
-      visualization: 'neural-network'};
+        { name: 'Neural Pattern 'Recognitionvalue: 99.7unit: '%' },
+        { name: 'Consciousness 'Indexvalue: 8.9unit: '/10' },
+        { name: 'Learning 'Ratevalue: 0.95unit: 'α' },
+        { name: 'Memory 'Retentionvalue: 99.9unit: '%' }
+      ],
+      visualization: 'neural-network'},
     'quantum-computing': {
-      title: 'Quantum Neural Fusion';
-      description: 'Witness the integration of quantum computing with neural networks for unprecedented processing power';
-      icon: Atom;
-      color: 'from-indigo-50o0 to-purple-50o0';
+      title: 'Quantum Neural Fusion',
+      description: 'Witness the integration of quantum computing with neural networks for unprecedented processing power',
+      icon: Atom,
+      color: 'from-indigo-50o0 to-purple-50o0',
       features: [
-        { name: 'Qubit 'Coherence', 'value: 99.8unit: '%' };
-        { name: 'Processing 'Speed', 'value: 10o00unit: 'x' };
-        { name: 'Error 'Rate', 'value: 0.0o01unit: '%' };
-        { name: 'Quantum 'Volume', 'value: 64unit: 'QV' }
-      ];
-      visualization: 'quantum-circuit'};
+        { name: 'Qubit 'Coherencevalue: 99.8unit: '%' },
+        { name: 'Processing 'Speedvalue: 10o00unit: 'x' },
+        { name: 'Error 'Ratevalue: 0.0o01unit: '%' },
+        { name: 'Quantum 'Volumevalue: 64unit: 'QV' }
+      ],
+      visualization: 'quantum-circuit'},
     'neural-interface': {
-      title: 'Brain-Computer Interface';
-      description: 'Direct neural communication enabling thought-controlled computing with 99.9% accuracy';
-      icon: Cpu;
-      color: 'from-green-50o0 to-teal-50o0';
+      title: 'Brain-Computer Interface',
+      description: 'Direct neural communication enabling thought-controlled computing with 99.9% accuracy',
+      icon: Cpu,
+      color: 'from-green-50o0 to-teal-50o0',
       features: [
-        { name: 'Signal 'Accuracy', 'value: 99.9unit: '%' };
-        { name: 'Response 'Time', 'value: 12unit: 'ms' };
-        { name: ''Bandwidth', 'value: 1.2unit: 'Gbps' };
-        { name: 'Neural 'Channels', 'value: 10o24unit: 'ch' }
-      ];
-      visualization: 'neural-signals'};
+        { name: 'Signal 'Accuracyvalue: 99.9unit: '%' },
+        { name: 'Response 'Timevalue: 12unit: 'ms' },
+        { name: ''Bandwidthvalue: 1.2unit: 'Gbps' },
+        { name: 'Neural 'Channelsvalue: 10o24unit: 'ch' }
+      ],
+      visualization: 'neural-signals'},
     'edge-ai': {
-      title: 'Edge AI Processing';
-      description: 'Distributed AI processing at the edge for real-time decision making and ultra-low latency';
-      icon: Network;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      title: 'Edge AI Processing',
+      description: 'Distributed AI processing at the edge for real-time decision making and ultra-low latency',
+      icon: Network,
+      color: 'from-blue-50o0 to-cyan-50o0',
       features: [
-        { name: 'Latency 'Reduction', 'value: 95unit: '%' };
-        { name: 'Processing 'Nodes', 'value: 10o000unit: '+' };
-        { name: 'Data 'Throughput', 'value: 50unit: 'TB/s' };
-        { name: 'Energy 'Efficiency', 'value: 85unit: '%' }
-      ];
+        { name: 'Latency 'Reductionvalue: 95unit: '%' },
+        { name: 'Processing 'Nodesvalue: 10o000unit: '+' },
+        { name: 'Data 'Throughputvalue: 50unit: 'TB/s' },
+        { name: 'Energy 'Efficiencyvalue: 85unit: '%' }
+      ],
       visualization: 'edge-network'}
-  };
+  },
   const currentDemo = demos[activeDemo],
   const handlePlayPause = () => {
     setIsPlaying(!isPlaying),
     if (progress >= 10o0) {
       setProgress(0)}
-  };
+  },
   const handleReset = () => {
     setIsPlaying(false),
-    setProgress(0)};
+    setProgress(0)},
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut"}
     }
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -213,11 +213,11 @@ const InteractiveTechDemo20o25 = () => {
                         <motion.div,
                           key={i}
                           animate={{
-                            scale: isPlaying ? [1.21] : 1;
+                            scale: isPlaying ? [1.21] : 1,
                             opacity: isPlaying ? [0.510.5] : 0.7}}
                           transition={{
-                            duration: 2;
-                            repeat: isPlaying ? Infinity : 0;
+                            duration: 2,
+                            repeat: isPlaying ? Infinity : 0,
                             delay: i * 0.1}}
                           className="w-8 h-8 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0",
                          />))}
@@ -231,15 +231,15 @@ const InteractiveTechDemo20o25 = () => {
                         <motion.div,
                           key={i}
                           animate={{
-                            rotate: isPlaying ? 360 : 0;
+                            rotate: isPlaying ? 360 : 0,
                             scale: isPlaying ? [1.1] : 1}}
                           transition={{
-                            duration: 3;
-                            repeat: isPlaying ? Infinity : 0;
+                            duration: 3,
+                            repeat: isPlaying ? Infinity : 0,
                             delay: i * 0.2}}
                           className="absolute w-16 h-16 border-2 border-indigo-40o0 rounded-full",
                           style={{
-                            left: `${Math.cos(i * Math.PI / 4) * 60}px`;
+                            left: `${Math.cos(i * Math.PI / 4) * 60}px`,
                             top: `${Math.sin(i * Math.PI / 4) * 60}px`}}
                          />))}
                     </div>,
@@ -252,15 +252,15 @@ const InteractiveTechDemo20o25 = () => {
                         <motion.div,
                           key={i}
                           animate={{
-                            scaleY: isPlaying ? [121] : 1;
+                            scaleY: isPlaying ? [121] : 1,
                             opacity: isPlaying ? [0.510.5] : 0.7}}
                           transition={{
-                            duration: 1.5;
-                            repeat: isPlaying ? Infinity : 0;
+                            duration: 1.5,
+                            repeat: isPlaying ? Infinity : 0,
                             delay: i * 0.2}}
                           className="absolute w-1 bg-gradient-to-t from-green-50o0 to-teal-50o0 rounded-full",
                           style={{
-                            left: `${20 + i * 20}%`;
+                            left: `${20 + i * 20}%`,
                             height: '10o0%'}}
                          />))}
                     </div>,
@@ -273,11 +273,11 @@ const InteractiveTechDemo20o25 = () => {
                         <motion.div,
                           key={i}
                           animate={{
-                            scale: isPlaying ? [1.31] : 1;
+                            scale: isPlaying ? [1.31] : 1,
                             opacity: isPlaying ? [0.610.6] : 0.8}}
                           transition={{
-                            duration: 2;
-                            repeat: isPlaying ? Infinity : 0;
+                            duration: 2,
+                            repeat: isPlaying ? Infinity : 0,
                             delay: i * 0.1}}
                           className="w-6 h-6 rounded-full bg-gradient-to-r from-blue-50o0 to-cyan-50o0",
                          />))}
@@ -396,5 +396,5 @@ const InteractiveTechDemo20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default InteractiveTechDemo20o25;
+    </div>)},
+export default InteractiveTechDemo20o25,

@@ -6,7 +6,7 @@ export type StatusProps ={
   txHash?: string,
   startedAt?: number,
   arrived?: boolean,
-  arrivalSeconds?: number};
+  arrivalSeconds?: number},
 export default function StatusTracker({ from, to, txHash, startedAt, arrived, arrivalSeconds }: StatusProps) {
   const [elapsed, setElapsed] = useState<number>(0),
   useEffect(() => {

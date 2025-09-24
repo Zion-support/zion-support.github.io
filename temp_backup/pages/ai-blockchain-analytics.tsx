@@ -1,12 +1,12 @@
 import Head from 'next/head',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Star;
-  Link as LinkIcon;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Star,
+  Link as LinkIcon,
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { Button } from '../components/ui/Button',

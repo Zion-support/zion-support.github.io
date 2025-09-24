@@ -40,7 +40,7 @@ const UltimateContentShowcase20o25Banner = () => {
             </div>,
             <h3 className='text-2xl font-bold mb-4'>AI Revolution</h3>,
             <p className='text-sm opacity-90 mb-6'>,
-              Latest breakthroughs in artificial intelligence, machine learning;
+              Latest breakthroughs in artificial intelligence, machine learning,
               and neural networks.,
             </p>,
             <div className='text-yellow-30o0 font-semibold text-sm'>,
@@ -170,5 +170,5 @@ const UltimateContentShowcase20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentShowcase20o25Banner;
+    </section>)},
+export default UltimateContentShowcase20o25Banner,

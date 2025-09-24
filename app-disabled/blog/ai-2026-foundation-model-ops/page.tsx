@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Foundation Model Ops';
+  title: 'AI 20o26: Foundation Model Ops',
   description:,
-    'Operational patterns for safe, observable, and efficient foundation model deployments at scale.';
-};
+    'Operational patterns for safe, observable, and efficient foundation model deployments at scale.',
+},
 export default function FoundationModelOpsPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -22,7 +22,7 @@ export default function FoundationModelOpsPage() {
         <p>,
           This playbook covers day-2 operations for foundation models: rollout,
           strategies, eval-gated changes, observability signals, incident,
-          response, and cost controls. Use it as a reference to design reliable;
+          response, and cost controls. Use it as a reference to design reliable,
           compliant, and efficient FM platforms.,
         </p>,
         <h2>What you will learn</h2>,

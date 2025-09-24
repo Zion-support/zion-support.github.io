@@ -11,7 +11,7 @@ interface ContentItem {
   featured: boolean,
   metrics?: {
     roi?: string,
-    savings?: string};
+    savings?: string},
   tags: string[],
   url: string}
 ,
@@ -22,35 +22,35 @@ interface ContentManagerProps {
   category?: string}
 ,
 const ContentManager: React.FC<ContentManagerProps> = ({
-  showFilters = true;
-  showMetrics = true;
-  maxItems = 12;
-  category = 'all';
+  showFilters = true,
+  showMetrics = true,
+  maxItems = 12,
+  category = 'all'
 }) => {
   const [activeCategory, setActiveCategory] = useState(category),
   const [searchTerm, setSearchTerm] = useState(''),
   const content: ContentItem[] = [
     {
-      id: 'ai-innovation-breakthrough';
-      title: 'AI 20o25: The Ultimate Innovation Breakthrough';
+      id: 'ai-innovation-breakthrough',
+      title: 'AI 20o25: The Ultimate Innovation Breakthrough',
       description:,
-        'Complete Guide to 5,0o00% ROI Through Revolutionary AI Technologies';
-      type: 'blog';
-      category: 'innovation';
-      readingTime: '30 min read';
-      featured: true;
-      metrics: { roi: '5,0o00%', savings: '$12.8B+' };
-      tags: ['AI Innovation', 'ROI', 'Breakthrough', 'Revolutionary'];
-      url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide';
-    };
+        'Complete Guide to 5,0o00% ROI Through Revolutionary AI Technologies',
+      type: 'blog',
+      category: 'innovation',
+      readingTime: '30 min read',
+      featured: true,
+      metrics: { roi: '5,0o00%', savings: '$12.8B+' },
+      tags: ['AI InnovationROI', 'BreakthroughRevolutionary'],
+      url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide'
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'innovation';
-      name: 'AI Innovation';
-      count: content.filter(i => i.category === 'innovation').length;
-    };
+      id: 'innovation',
+      name: 'AI Innovation',
+      count: content.filter(i => i.category === 'innovation').length
+    },
   ],
   const filteredContent = content,
     .filter(item => {
@@ -136,5 +136,5 @@ const ContentManager: React.FC<ContentManagerProps> = ({
             </Link>,
           </div>))}
       </div>,
-    </div>)};
-export default ContentManager;
+    </div>)},
+export default ContentManager,

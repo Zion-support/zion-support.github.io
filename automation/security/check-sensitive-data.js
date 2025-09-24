@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -19,12 +19,10 @@ const path = require('path'),
 const { execSync } = require('child_process'),
 class SecurityChecker {
     constructor() {
-        this.projectRoot = process.cwd()];
+        this.projectRoot = process.cwd()],
             allowedDomains: [
-                'localhost';
-                '127.0.0.1';
-                'netlify.app';
-                'vercel.app']};
+                'localhost127.0.0.1',
+                'netlify.appvercel.app']},
     }
 ,
     ensureLogDirectory() {
@@ -47,7 +45,7 @@ class SecurityChecker {
         try {
             this.log('Running npm audit...'),
             const auditResult = execSync('npm audit --audit-level=moderate --json', {
-                encoding: 'utf8';
+                encoding: 'utf8',
                 stdio: 'pipe'}),
             const audit = JSON.parse(auditResult),
             if (audit.metadata.vulnerabilities.total > 0) {
@@ -77,7 +75,7 @@ class SecurityChecker {
                     } else if (stat.isFile()) {
                         // Check file extensions,
                         const ext = path.extname(file).toLowerCase(),
-                        if (['.js', '.ts', '.tsx', '.jsx', '.json', '.env', '.md', '.txt'].includes(ext)) {
+                        if (['.js.ts', '.tsx.jsx', '.json.env', '.md.txt'].includes(ext)) {
                             try {
                                 const content = fs.readFileSync(filePath, 'utf8'),
                                 for (const pattern of sensitivePatterns) {
@@ -85,8 +83,8 @@ class SecurityChecker {
                                     const matches = content.match(regex),
                                     if (matches) {
                                         foundSensitive.push({
-                                            file: filePath;
-                                            pattern: pattern;
+                                            file: filePath,
+                                            pattern: pattern,
                                             matches: matches.length})}
                                 }
                             } catch (error) {
@@ -94,7 +92,7 @@ class SecurityChecker {
                         }
                     }
                 }
-            };
+            },
             walkDir(this.projectRoot),
             if (foundSensitive.length > 0) {
                 this.log(`⚠️  Found ${foundSensitive.length} potential sensitive data instances`, 'warn'),
@@ -112,7 +110,7 @@ class SecurityChecker {
     async checkEnvironmentVariables() {
         try {
             this.log('Checking environment variables...'),
-            const envFiles = ['.env', '.env.local', '.env.development', '.env.production'],
+            const envFiles = ['.env.env.local', '.env.development.env.production'],
             const foundEnvVars = [],
             for (const envFile of envFiles) {
                 const envPath = path.join(this.projectRoot, envFile),
@@ -125,7 +123,7 @@ class SecurityChecker {
                             const [key] = trimmed.split('='),
                             if (key) {
                                 foundEnvVars.push({
-                                    file: envFile;
+                                    file: envFile,
                                     key: key})}
                         }
                     }
@@ -133,7 +131,7 @@ class SecurityChecker {
             }
 ,
             // Check for sensitive environment variables,
-            const sensitiveKeys = ['PASSWORD', 'SECRET', 'KEY', 'TOKEN', 'API_KEY', 'PRIVATE_KEY'],
+            const sensitiveKeys = ['PASSWORDSECRET', 'KEYTOKEN', 'API_KEYPRIVATE_KEY'],
             const sensitiveFound = foundEnvVars.filter(env =>,
                 sensitiveKeys.some(key => env.key.toUpperCase().includes(key))),
             if (sensitiveFound.length > 0) {
@@ -153,17 +151,16 @@ class SecurityChecker {
             this.log('Checking dependencies for security issues...'),
             const packageJsonPath = path.join(this.projectRoot, 'package.json'),
             if (!fs.existsSync(packageJsonPath)) {
-                this.log('No package.json found', 'warn'),
+                this.log('No package.json foundwarn'),
                 return true}
 ,
             const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8')),
             const allDeps ={
-                ...packageJson.dependencies;
-                ...packageJson.devDependencies};
+                ...packageJson.dependencies,
+                ...packageJson.devDependencies},
             // Check for known vulnerable packages,
             const vulnerablePackages = [
-                'lodash';
-                'moment';
+                'lodashmoment',
                 'jquery'],
             const foundVulnerable = Object.keys(allDeps).filter(dep =>,
                 vulnerablePackages.includes(dep)),
@@ -183,13 +180,13 @@ class SecurityChecker {
         try {
             this.log('Generating security report...'),
             const report ={
-                timestamp: new Date().toISOString();
-                npmAudit: await this.checkNpmAudit();
-                sensitiveData: await this.checkSensitiveData();
-                environmentVariables: await this.checkEnvironmentVariables();
-                dependencies: await this.checkDependencies();
-                auditLevel: this.config.auditLevel;
-                recommendations: []};
+                timestamp: new Date().toISOString(),
+                npmAudit: await this.checkNpmAudit(),
+                sensitiveData: await this.checkSensitiveData(),
+                environmentVariables: await this.checkEnvironmentVariables(),
+                dependencies: await this.checkDependencies(),
+                auditLevel: this.config.auditLevel,
+                recommendations: []},
             // Generate recommendations,
             if (!report.npmAudit) {
                 report.recommendations.push('Run npm audit fix to resolve security vulnerabilities')}
@@ -200,7 +197,7 @@ class SecurityChecker {
             if (!report.dependencies) {
                 report.recommendations.push('Update vulnerable dependencies')}
 ,
-            const reportPath = path.join(__dirname, '..', 'reports', `security-${Date.now()}.json`),
+            const reportPath = path.join(__dirname, '..reports', `security-${Date.now()}.json`),
             fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
             this.log(`Security report generated: ${reportPath}`),
             return report} catch (error) {
@@ -217,15 +214,15 @@ class SecurityChecker {
             if (allChecksPassed) {
                 this.log('✅ All security checks passed!'),
                 return true} else {
-                this.log('⚠️  Some security checks failed', 'warn'),
+                this.log('⚠️  Some security checks failedwarn'),
                 if (report.recommendations.length > 0) {
-                    this.log('💡 Recommendations:', 'warn'),
+                    this.log('💡 Recommendations:warn'),
                     report.recommendations.forEach(rec => {
                         this.log(`  - ${rec}`, 'warn')})}
 ,
                 return false}
         } else {
-            this.log('❌ Security check failed', 'error'),
+            this.log('❌ Security check failederror'),
             return false}
     }
 ,

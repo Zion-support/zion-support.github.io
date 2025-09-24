@@ -1,21 +1,22 @@
 import {motion} from 'framer-motion',
 import Link from 'next / link',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  Star;
-  ArrowRight;
-  Play;
-  CheckCircle;
-  Phone;
-  Mail;
-  MapPin;} from 'lucide-react',import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  Star,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,} from 'lucide-react',
+import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, Star, ArrowRight, Play, CheckCircle,
   Phone, Mail, MapPin,
@@ -50,160 +51,160 @@ const heroStats = [
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
 ],
 const featuredServices = [
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  Star;
-  ArrowRight;
-  Play;
-  CheckCircle;
-  Phone;
-  Mail;
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  Star,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Phone,
+  Mail,
   MapPin} from 'lucide-react',import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, Star, ArrowRight, Play, CheckCircle,
   Phone, Mail, MapPin,
 const contact_info = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 }
 ,
 const hero_stats = [
   {
-    number: '1000+';
-    label: 'Innovative Services';
-    icon: Sparkles;
-    color: 'from - cyan - 400 to - blue - 400';
-  };
+    number: '1000+',
+    label: 'Innovative Services',
+    icon: Sparkles,
+    color: 'from - cyan - 400 to - blue - 400'
+  },
   {
-    number: '24 / 7';
-    label: 'Expert Support';
-    icon: Shield;
-    color: 'from - purple - 400 to - pink - 400';
-  };
+    number: '24 / 7',
+    label: 'Expert Support',
+    icon: Shield,
+    color: 'from - purple - 400 to - pink - 400'
+  },
   {
-    number: '1000%';
-    label: 'Average ROI';
-    icon: Star;
-    color: 'from - yellow - 400 to - orange - 400';
-  };
+    number: '1000%',
+    label: 'Average ROI',
+    icon: Star,
+    color: 'from - yellow - 400 to - orange - 400'
+  },
   {
-    number: '99.9%';
-    label: 'Uptime Guarantee';
-    icon: CheckCircle;
-    color: 'from - green - 400 to - emerald - 400';
-  }],  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from - cyan - 400 to - blue - 400' };
-  { number: '24 / 7', label: 'Expert Support', icon: Shield, color: 'from - purple - 400 to - pink - 400' };
-  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from - yellow - 400 to - orange - 400' };
+    number: '99.9%',
+    label: 'Uptime Guarantee',
+    icon: CheckCircle,
+    color: 'from - green - 400 to - emerald - 400'
+  }],  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from - cyan - 400 to - blue - 400' },
+  { number: '24 / 7', label: 'Expert Support', icon: Shield, color: 'from - purple - 400 to - pink - 400' },
+  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from - yellow - 400 to - orange - 400' },
   { number: '99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from - green - 400 to - emerald - 400' }
 const featured_services = [
   {
-    name: 'AI Consciousness Evolution';
-    description: 'Develop genuine AI consciousness';
-    price: '$19, 999 / month';
-    icon: Brain;
-    color: 'from - violet - 600 to - purple - 600';
-    href: '/ai - consciousness - evolution - platform';
+    name: 'AI Consciousness Evolution',
+    description: 'Develop genuine AI consciousness',
+    price: '$19, 999 / month',
+    icon: Brain,
+    color: 'from - violet - 600 to - purple - 600',
+    href: '/ai - consciousness - evolution - platform'
   },  {    href: '/ai - consciousness - evolution - platform'}
 ,
   {
-    name: 'Space Mining Automation';
-    description: 'Automated asteroid mining';
-    price: '$45, 999 / month';
-    icon: Rocket;
-    color: 'from - teal - 600 to - emerald - 600';
-    href: '/space - mining - automation - platform';
+    name: 'Space Mining Automation',
+    description: 'Automated asteroid mining',
+    price: '$45, 999 / month',
+    icon: Rocket,
+    color: 'from - teal - 600 to - emerald - 600',
+    href: '/space - mining - automation - platform'
   },  {    href: '/space - mining - automation - platform'}
 ,
   {
-    name: 'Quantum Internet Security';
-    description: 'Unbreakable encryption';
-    price: '$15, 999 / month';
-    icon: Shield;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  Star;
-  ArrowRight;
-  Play;
-  CheckCircle;
-  Phone;
-  Mail;
-  MapPin;} from 'lucide-react',import {
+    name: 'Quantum Internet Security',
+    description: 'Unbreakable encryption',
+    price: '$15, 999 / month',
+    icon: Shield,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  Star,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin} from 'lucide-react',import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, Star, ArrowRight, Play, CheckCircle,
   Phone, Mail, MapPin,
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'
+},
 const heroStats = [
   {
-    number: '1000+';
-    label: 'Innovative Services';
-    icon: Sparkles;
-    color: 'from-cyan-400 to-blue-400';
-  };
+    number: '1000+',
+    label: 'Innovative Services',
+    icon: Sparkles,
+    color: 'from-cyan-400 to-blue-400'
+  },
   {
-    number: '24/7';
-    label: 'Expert Support';
-    icon: Shield;
-    color: 'from-purple-400 to-pink-400';
-  };
+    number: '24/7',
+    label: 'Expert Support',
+    icon: Shield,
+    color: 'from-purple-400 to-pink-400'
+  },
   {
-    number: '1000%';
-    label: 'Average ROI';
-    icon: Star;
-    color: 'from-yellow-400 to-orange-400';
-  };
+    number: '1000%',
+    label: 'Average ROI',
+    icon: Star,
+    color: 'from-yellow-400 to-orange-400'
+  },
   {
-    number: '99 && 99.9%';
-    label: 'Uptime Guarantee';
-    icon: CheckCircle;
-    color: 'from-green-400 to-emerald-400';
-  }],  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' };
-  { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' };
-  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' };
+    number: '99 && 99.9%',
+    label: 'Uptime Guarantee',
+    icon: CheckCircle,
+    color: 'from-green-400 to-emerald-400'
+  }],  { number: '1000+', label: 'Innovative Services', icon: Sparkles, color: 'from-cyan-400 to-blue-400' },
+  { number: '24/7', label: 'Expert Support', icon: Shield, color: 'from-purple-400 to-pink-400' },
+  { number: '1000%', label: 'Average ROI', icon: Star, color: 'from-yellow-400 to-orange-400' },
   { number: '99 && 99.9%', label: 'Uptime Guarantee', icon: CheckCircle, color: 'from-green-400 to-emerald-400' }
 ,
 const featuredServices = [
   {
-    name: 'AI Consciousness Evolution';
-    description: 'Develop genuine AI consciousness';
-    price: '$19,999/month';
-    icon: Brain;
-    color: 'from-violet-600 to-purple-600';
-    href: '/ai-consciousness-evolution-platform';
-  },  {    href: '/ai-consciousness-evolution-platform'};
+    name: 'AI Consciousness Evolution',
+    description: 'Develop genuine AI consciousness',
+    price: '$19,999/month',
+    icon: Brain,
+    color: 'from-violet-600 to-purple-600',
+    href: '/ai-consciousness-evolution-platform'
+  },  {    href: '/ai-consciousness-evolution-platform'},
   {
-    name: 'Space Mining Automation';
-    description: 'Automated asteroid mining';
-    price: '$45,999/month';
-    icon: Rocket;
-    color: 'from-teal-600 to-emerald-600';
-    href: '/space-mining-automation-platform';
-  },  {    href: '/space-mining-automation-platform'};
+    name: 'Space Mining Automation',
+    description: 'Automated asteroid mining',
+    price: '$45,999/month',
+    icon: Rocket,
+    color: 'from-teal-600 to-emerald-600',
+    href: '/space-mining-automation-platform'
+  },  {    href: '/space-mining-automation-platform'},
   {
-    name: 'Quantum Internet Security';
-    description: 'Unbreakable encryption';
-    price: '$15,999/month';
-    icon: Shield;
-    color: 'from-indigo-600 to-blue-600';
-    href: '/quantum-internet-security-gateway';
+    name: 'Quantum Internet Security',
+    description: 'Unbreakable encryption',
+    price: '$15,999/month',
+    icon: Shield,
+    color: 'from-indigo-600 to-blue-600',
+    href: '/quantum-internet-security-gateway'
   }],
 export default function UltraFuturisticHero2032() {
   return (
@@ -217,8 +218,8 @@ export default function UltraFuturisticHero2032() {
         <div className='absolute inset-0'>,
           {[...Array(50)].map((_, i) => (
             <motion&& motion.div,
-    color: 'from - indigo - 600 to - blue - 600';
-    href: '/quantum - internet - security - gateway';
+    color: 'from - indigo - 600 to - blue - 600',
+    href: '/quantum - internet - security - gateway'
   }],
 export default /**,
  * UltraFuturisticHero2032 - Function description,
@@ -255,14 +256,14 @@ function UltraFuturisticHero2032() {
               key={i}
               className="absolute w-1 h-1 bg-cyan-400 rounded-full opacity-30",
               style={{
-                left: `${Math.random() * 100}%`;
+                left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`}}
               animate={{
                 y: [0, -20, 0],
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
 ))}
         </div>,
@@ -272,16 +273,16 @@ function UltraFuturisticHero2032() {
         <div className="absolute bottom-20 right-10 w-96 h-96 bg-cyan-500/10 rounded-full blur-3xl animate-pulse" />,
         <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-gradient-to-r from-purple-500/5 via-cyan-500/5 to-pink-500/5 rounded-full blur-3xl animate-spin-slow" />,
       </div>,
-                left: `${Math && Math.random() * 100}%`;
-                top: `${Math && Math.random() * 100}%`;
+                left: `${Math && Math.random() * 100}%`,
+                top: `${Math && Math.random() * 100}%`,
               }}              animate={{
-                y: [0, -20, 0];
-                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3];
+                y: [0, -20, 0],
+                opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
               }}
               transition={{
-                duration: 3 + Math && Math.random() * 2;
-                repeat: Infinity;
-                delay: Math && Math.random() * 2;
+                duration: 3 + Math && Math.random() * 2,
+                repeat: Infinity,
+                delay: Math && Math.random() * 2
               }}            />                delay: Math && Math.random() * 2}}
             />))}
         </div>,
@@ -369,16 +370,16 @@ function UltraFuturisticHero2032() {
           className='grid grid-cols-2 md:grid-cols-4 gap-6 mb-16'        >>,
           {heroStats.map((stat, index) => (
             <motion.div,
-                left: `${Math.random () * 100}%`;
-                top: `${Math.random () * 100}%`;
+                left: `${Math.random () * 100}%`,
+                top: `${Math.random () * 100}%`,
               }}              animate={{
-                coordinate_y: [0, -20, 0];
-                opacity: [0.3, 0.8, 0.3];
+                coordinate_y: [0, -20, 0],
+                opacity: [0.3, 0.8, 0.3],
               }}
               transition={{
-                duration: 3 + Math.random () * 2;
-                repeat: Infinity;
-                delay: Math.random () * 2;
+                duration: 3 + Math.random () * 2,
+                repeat: Infinity,
+                delay: Math.random () * 2
               }}            />                delay: Math.random () * 2}}
             />))}
         </div>,

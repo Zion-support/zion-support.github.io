@@ -14,27 +14,27 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
     return () => clearInterval(interval)}[]),
   const announcements = [
     {
-      title: "AI 20o25 Breakthrough Achieved";
-      description: "Revolutionary AI technology delivering 5,0o00% ROI increase";
-      icon: Zap;
-      color: "from-purple-50o0 to-blue-50o0";
-      urgency: "Just Announced"};
+      title: "AI 20o25 Breakthrough Achieved",
+      description: "Revolutionary AI technology delivering 5,0o00% ROI increase",
+      icon: Zap,
+      color: "from-purple-50o0 to-blue-50o0",
+      urgency: "Just Announced"},
     {
-      title: "Quantum Supremacy Unlocked";
-      description: "Error-corrected quantum computers now available";
-      icon: TrendingUp;
-      color: "from-blue-50o0 to-cyan-50o0";
-      urgency: "Breaking News"};
+      title: "Quantum Supremacy Unlocked",
+      description: "Error-corrected quantum computers now available",
+      icon: TrendingUp,
+      color: "from-blue-50o0 to-cyan-50o0",
+      urgency: "Breaking News"},
     {
-      title: "Global Implementation Success";
-      description: "10M+ users transformed across 150+ countries";
-      icon: Users;
-      color: "from-green-50o0 to-emerald-50o0";
+      title: "Global Implementation Success",
+      description: "10M+ users transformed across 150+ countries",
+      icon: Users,
+      color: "from-green-50o0 to-emerald-50o0",
       urgency: "Worldwide Impact"}
   ],
   const stats = [
-    { icon: Awardvalue: "99.9%"label: "Success Rate" };
-    { icon: Globevalue: "150+"label: "Countries" };
+    { icon: Awardvalue: "99.9%"label: "Success Rate" },
+    { icon: Globevalue: "150+"label: "Countries" },
     { icon: Usersvalue: "10M+"label: "Users" }
   ],
   return (
@@ -146,5 +146,5 @@ const RevolutionaryTechAnnouncementBanner: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </motion.div>)};
-export default RevolutionaryTechAnnouncementBanner;
+    </motion.div>)},
+export default RevolutionaryTechAnnouncementBanner,

@@ -7,12 +7,12 @@ interface TestimonialCardProps {
   rating?: number}
 ,
 export default function TestimonialCard({
-  quote;
-  author;
-  position;
-  company;
-  avatar;
-  rating = 5;
+  quote,
+  author,
+  position,
+  company,
+  avatar,
+  rating = 5,
 }: TestimonialCardProps) {
   return (
     <div className='bg-white p-8 rounded-xl shadow-lg'>,

@@ -6,7 +6,7 @@ interface SaveTalentButtonProps {
   isSaved: boolean}
 ,
 export function SaveTalentButton({
-  talentIdonSaveisSaved;
+  talentIdonSaveisSaved,
 }: SaveTalentButtonProps) {
   return (
     <Button

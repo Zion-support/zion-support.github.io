@@ -7,15 +7,15 @@ import {
   Code,
   BarChart3,
   Network,
-  Shield;
+  Shield,
   ArrowRight,
   Star,
-  Zap;
-  X;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Award;
+  Zap,
+  X,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Award,
   Brain} from 'lucide-react',
 const InteractiveAIToolsDemo20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -29,20 +29,18 @@ const InteractiveAIToolsDemo20o26PromotionBanner = () => {
       setCurrentTool(prev => (prev + 1) % 4)}30o00),
     return () => clearInterval(interval)}[]),
   const tools = [
-    { icon: Codename: 'AI Code 'Review', 'color: 'text-blue-40o0' };
-    { icon: BarChart3name: 'Data 'Analytics', 'color: 'text-green-40o0' };
-    { icon: Networkname: ''Infrastructure', 'color: 'text-purple-40o0' };
-    { icon: Shieldname: 'Security 'Scan', 'color: 'text-red-40o0' }
+    { icon: Codename: 'AI Code 'Reviewcolor: 'text-blue-40o0' },
+    { icon: BarChart3name: 'Data 'Analyticscolor: 'text-green-40o0' },
+    { icon: Networkname: ''Infrastructurecolor: 'text-purple-40o0' },
+    { icon: Shieldname: 'Security 'Scancolor: 'text-red-40o0' }
   ],
   const features = [
-    'Interactive Live Demos';
-    'Real-time Performance Metrics';
-    'Hands-on Experience';
-    'Instant Results'],
+    'Interactive Live DemosReal-time Performance Metrics',
+    'Hands-on ExperienceInstant Results'],
   const stats = [
-    { label: '95%'value: 'Efficiency' };
-    { label: '98%'value: 'Accuracy' };
-    { label: '3'x', 'value: 'Faster' }
+    { label: '95%'value: 'Efficiency' },
+    { label: '98%'value: 'Accuracy' },
+    { label: '3'xvalue: 'Faster' }
   ],
   if (!isVisible || isDismissed) return null,
   return (
@@ -65,15 +63,15 @@ const InteractiveAIToolsDemo20o26PromotionBanner = () => {
               key={i}
               className="absolute w-1 h-1 bg-white rounded-full opacity-30",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0-30];
-                opacity: [0.30.80.3];
+                y: [0-30],
+                opacity: [0.30.80.3],
                 scale: [1.51]}}
               transition={{
-                duration: 4 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
@@ -203,5 +201,5 @@ const InteractiveAIToolsDemo20o26PromotionBanner = () => {
           transition={{ duration: 4repeat: Infinity }}
          />,
       </motion.div>,
-    </AnimatePresence>)};
-export default InteractiveAIToolsDemo20o26PromotionBanner;
+    </AnimatePresence>)},
+export default InteractiveAIToolsDemo20o26PromotionBanner,

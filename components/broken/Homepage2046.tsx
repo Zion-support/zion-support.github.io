@@ -4,9 +4,9 @@ import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket,
-  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart;
+  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
   PhoneMailMapPinSearchGridListSparklesTargetBarChart3,
-  LightbulbCodeServerNetworkShieldCheckBrainCircuitAtomSatellite;
+  LightbulbCodeServerNetworkShieldCheckBrainCircuitAtomSatellite,
   EyeClockDollarSignCheckCircleArrowUpRight} from 'lucide-react',
 import Link from 'next/link',
 // Import our new innovative services,
@@ -23,16 +23,16 @@ const QuantumLoadingFallback = () => (
           key={i}
           className="absolute w-1 h-1 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full",
           animate={{
-            x: [0Math.random() * 1200];
-            y: [0Math.random() * 800];
-            opacity: [010];
+            x: [0Math.random() * 1200],
+            y: [0Math.random() * 800],
+            opacity: [010],
             scale: [010]}}
           transition={{
-            duration: Math.random() * 4 + 3;
-            repeat: Infinity;
+            duration: Math.random() * 4 + 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
           style={{
-            left: Math.random() * 100 + '%';
+            left: Math.random() * 100 + '%',
             top: Math.random() * 100 + '%'}}
         />))}
     </div>,
@@ -45,15 +45,15 @@ const QuantumLoadingFallback = () => (
       <div className="relative">,
         <motion.div,
           animate={{
-            rotate: 360;
-            scale: [1.21];
+            rotate: 360,
+            scale: [1.21],
             boxShadow: [
-              "0 0 20px rgba(6182120.5)";
-              "0 0 40px rgba(16852470.8)";
+              "0 0 20px rgba(6182120.5)",
+              "0 0 40px rgba(16852470.8)",
               "0 0 20px rgba(6182120.5)"]}}
           transition={{
-            rotate: { duration: 3repeat: Infinityease: "linear" };
-            scale: { duration: 2repeat: Infinityease: "easeInOut" };
+            rotate: { duration: 3repeat: Infinityease: "linear" },
+            scale: { duration: 2repeat: Infinityease: "easeInOut" },
             boxShadow: { duration: 2repeat: Infinityease: "easeInOut" }
           }}
           className="w-32 h-32 mx-auto mb-8">,
@@ -102,7 +102,7 @@ const Homepage2046: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)}
-          })};
+          })},
         { threshold: 0.3 }
       ),
       const sections = document.querySelectorAll('section[id]'),
@@ -113,8 +113,8 @@ const Homepage2046: React.FC = () => {
     return <QuantumLoadingFallback />}
 ,
   const allServices = [
-    ...innovative2046AIServices;
-    ...innovative2046ITServices;
+    ...innovative2046AIServices,
+    ...innovative2046ITServices,
     ...innovative2046MicroSAASServices],
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
@@ -135,15 +135,15 @@ const Homepage2046: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-gradient-to-r from-cyan-400 to-purple-500 rounded-full opacity-30",
               animate={{
-                x: [0Math.random() * 100 - 50];
-                y: [0Math.random() * 100 - 50];
+                x: [0Math.random() * 100 - 50],
+                y: [0Math.random() * 100 - 50],
                 opacity: [0.30.80.3]}}
               transition={{
-                duration: Math.random() * 10 + 10;
-                repeat: Infinity;
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
                 ease: "easeInOut"}}
               style={{
-                left: Math.random() * 100 + '%';
+                left: Math.random() * 100 + '%',
                 top: Math.random() * 100 + '%'}}
             />))}
         </div>,
@@ -397,5 +397,5 @@ const Homepage2046: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default Homepage2046;
+    </Layout>)},
+export default Homepage2046,

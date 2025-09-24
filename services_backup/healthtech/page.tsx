@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'HealthTech Solutions | Zion Tech Group';
+  title: 'HealthTech Solutions | Zion Tech Group',
   description:,
-    'Complete healthcare technology solutions including EHR systems, telemedicine platforms, medical AI, and HIPAA-compliant healthcare applications.';
-};
+    'Complete healthcare technology solutions including EHR systems, telemedicine platforms, medical AI, and HIPAA-compliant healthcare applications.',
+},
 export default function HealthTechPage() {
   return (
     <div className='min-h-screen bg-gray-50 py-12'>,
@@ -12,7 +12,7 @@ export default function HealthTechPage() {
             HealthTech Solutions,
           </h1>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Complete healthcare technology solutions including EHR systems;
+            Complete healthcare technology solutions including EHR systems,
             telemedicine platforms, medical AI, and HIPAA-compliant healthcare,
             applications.,
           </p>,
@@ -24,12 +24,9 @@ export default function HealthTechPage() {
             icon='📋',
             description='Comprehensive EHR systems and patient data management',
             services={[
-              'Patient records management';
-              'Clinical documentation';
-              'Interoperability standards';
-              'Data migration';
-              'Custom workflows';
-              'Integration APIs';
+              'Patient records managementClinical documentation',
+              'Interoperability standardsData migration',
+              'Custom workflowsIntegration APIs',
             ]}
             pricing='$75,0o00 - $40o0,0o00',
             marketSize='$28B',
@@ -39,12 +36,9 @@ export default function HealthTechPage() {
             icon='📹',
             description='Complete telemedicine and virtual care solutions',
             services={[
-              'Video consultations';
-              'Remote monitoring';
-              'Appointment scheduling';
-              'Prescription management';
-              'Patient portals';
-              'Mobile applications';
+              'Video consultationsRemote monitoring',
+              'Appointment schedulingPrescription management',
+              'Patient portalsMobile applications',
             ]}
             pricing='$50,0o00 - $250,0o00',
             marketSize='$185B',
@@ -54,12 +48,9 @@ export default function HealthTechPage() {
             icon='🧠',
             description='AI-powered medical diagnostics and decision support',
             services={[
-              'Medical image analysis';
-              'Diagnostic algorithms';
-              'Clinical decision support';
-              'Predictive analytics';
-              'Drug discovery';
-              'Treatment recommendations';
+              'Medical image analysisDiagnostic algorithms',
+              'Clinical decision supportPredictive analytics',
+              'Drug discoveryTreatment recommendations',
             ]}
             pricing='$10o0,0o00 - $50o0,0o00',
             marketSize='$45B',
@@ -69,12 +60,9 @@ export default function HealthTechPage() {
             icon='📊',
             description='Healthcare data analytics and business intelligence',
             services={[
-              'Population health analytics';
-              'Clinical outcomes analysis';
-              'Cost optimization';
-              'Quality metrics';
-              'Predictive modeling';
-              'Real-time dashboards';
+              'Population health analyticsClinical outcomes analysis',
+              'Cost optimizationQuality metrics',
+              'Predictive modelingReal-time dashboards',
             ]}
             pricing='$60,0o00 - $30o0,0o00',
             marketSize='$12B',
@@ -84,12 +72,9 @@ export default function HealthTechPage() {
             icon='👥',
             description='Patient portal and engagement solutions',
             services={[
-              'Patient portals';
-              'Mobile health apps';
-              'Wearable integration';
-              'Health education';
-              'Appointment management';
-              'Communication tools';
+              'Patient portalsMobile health apps',
+              'Wearable integrationHealth education',
+              'Appointment managementCommunication tools',
             ]}
             pricing='$40,0o00 - $20o0,0o00',
             marketSize='$8B',
@@ -99,12 +84,9 @@ export default function HealthTechPage() {
             icon='🔬',
             description='Medical device integration and IoT solutions',
             services={[
-              'Device connectivity';
-              'Data collection';
-              'Real-time monitoring';
-              'Alert systems';
-              'Integration APIs';
-              'Compliance management';
+              'Device connectivityData collection',
+              'Real-time monitoringAlert systems',
+              'Integration APIsCompliance management',
             ]}
             pricing='$80,0o00 - $40o0,0o00',
             marketSize='$15B',
@@ -116,12 +98,9 @@ export default function HealthTechPage() {
             title='Pharmacy Management System',
             description='Complete pharmacy management and prescription solutions',
             features={[
-              'Inventory management';
-              'Prescription processing';
-              'Insurance verification';
-              'Patient counseling';
-              'Drug interaction checks';
-              'Compliance reporting';
+              'Inventory managementPrescription processing',
+              'Insurance verificationPatient counseling',
+              'Drug interaction checksCompliance reporting',
             ]}
             pricing='$45,0o00 - $225,0o00',
             icon='💊',
@@ -130,12 +109,9 @@ export default function HealthTechPage() {
             title='Healthcare CRM & Marketing',
             description='Healthcare customer relationship management and marketing',
             features={[
-              'Patient relationship management';
-              'Marketing automation';
-              'Lead generation';
-              'Appointment reminders';
-              'Patient surveys';
-              'Analytics dashboard';
+              'Patient relationship managementMarketing automation',
+              'Lead generationAppointment reminders',
+              'Patient surveysAnalytics dashboard',
             ]}
             pricing='$35,0o00 - $175,0o00',
             icon='📈',
@@ -144,12 +120,9 @@ export default function HealthTechPage() {
             title='Mental Health Platform',
             description='Digital mental health and wellness solutions',
             features={[
-              'Therapy sessions';
-              'Mood tracking';
-              'Meditation apps';
-              'Crisis intervention';
-              'Peer support';
-              'Progress monitoring';
+              'Therapy sessionsMood tracking',
+              'Meditation appsCrisis intervention',
+              'Peer supportProgress monitoring',
             ]}
             pricing='$55,0o00 - $275,0o00',
             icon='🧘',
@@ -158,12 +131,9 @@ export default function HealthTechPage() {
             title='Clinical Trial Management',
             description='Clinical trial management and research platforms',
             features={[
-              'Trial design';
-              'Patient recruitment';
-              'Data collection';
-              'Compliance tracking';
-              'Reporting tools';
-              'Integration APIs';
+              'Trial designPatient recruitment',
+              'Data collectionCompliance tracking',
+              'Reporting toolsIntegration APIs',
             ]}
             pricing='$90,0o00 - $450,0o00',
             icon='🔬',
@@ -172,12 +142,9 @@ export default function HealthTechPage() {
             title='Healthcare Billing & Revenue Cycle',
             description='Healthcare billing and revenue cycle management',
             features={[
-              'Claims processing';
-              'Insurance verification';
-              'Payment processing';
-              'Denial management';
-              'Financial reporting';
-              'Compliance tracking';
+              'Claims processingInsurance verification',
+              'Payment processingDenial management',
+              'Financial reportingCompliance tracking',
             ]}
             pricing='$65,0o00 - $325,0o00',
             icon='💰',
@@ -186,12 +153,9 @@ export default function HealthTechPage() {
             title='Wearable Health Integration',
             description='Wearable device integration and health monitoring',
             features={[
-              'Device connectivity';
-              'Health data collection';
-              'Real-time monitoring';
-              'Alert systems';
-              'Data visualization';
-              'Integration APIs';
+              'Device connectivityHealth data collection',
+              'Real-time monitoringAlert systems',
+              'Data visualizationIntegration APIs',
             ]}
             pricing='$45,0o00 - $225,0o00',
             icon='⌚',
@@ -259,12 +223,12 @@ export default function HealthTechPage() {
     </div>)}
 ,
 function HealthTechCategory({
-  title;
-  icon;
-  description;
-  services;
-  pricing;
-  marketSize;
+  title,
+  icon,
+  description,
+  services,
+  pricing,
+  marketSize,
 }: {
   title: string,
   icon: string,
@@ -294,11 +258,11 @@ function HealthTechCategory({
     </div>)}
 ,
 function HealthTechService({
-  title;
-  description;
-  features;
-  pricing;
-  icon;
+  title,
+  description,
+  features,
+  pricing,
+  icon,
 }: {
   title: string,
   description: string,

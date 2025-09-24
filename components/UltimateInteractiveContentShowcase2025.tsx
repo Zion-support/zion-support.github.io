@@ -8,56 +8,48 @@ const UltimateInteractiveContentShowcase20o25: React.FC = () => {
     setIsVisible(true)}[]),
   const contentSections = [
     {
-      id: 'ai-solutions';
-      title: 'AI-Powered Solutions';
-      icon: '🤖';
-      description: 'Revolutionary AI technologies transforming business operations';
+      id: 'ai-solutions',
+      title: 'AI-Powered Solutions',
+      icon: '🤖',
+      description: 'Revolutionary AI technologies transforming business operations',
       features: [
-        'Advanced Machine Learning Models';
-        'Natural Language Processing';
-        'Computer Vision Solutions';
-        'Predictive Analytics';
-        'Automated Decision Making'];
-      cta: 'Explore AI Solutions';
-      link: '/ai-solutions'};
+        'Advanced Machine Learning ModelsNatural Language Processing',
+        'Computer Vision SolutionsPredictive Analytics',
+        'Automated Decision Making'],
+      cta: 'Explore AI Solutions',
+      link: '/ai-solutions'},
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing';
-      icon: '⚛️';
-      description: 'Next-generation computing power for complex problem solving';
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      icon: '⚛️',
+      description: 'Next-generation computing power for complex problem solving',
       features: [
-        'Quantum Algorithm Development';
-        'Quantum Machine Learning';
-        'Cryptography Solutions';
-        'Optimization Problems';
-        'Quantum Simulation'];
-      cta: 'Discover Quantum Power';
-      link: '/quantum-computing'};
+        'Quantum Algorithm DevelopmentQuantum Machine Learning',
+        'Cryptography SolutionsOptimization Problems',
+        'Quantum Simulation'],
+      cta: 'Discover Quantum Power',
+      link: '/quantum-computing'},
     {
-      id: 'neural-interfaces';
-      title: 'Neural Interfaces';
-      icon: '🧠';
-      description: 'Direct brain-computer interaction technologies';
+      id: 'neural-interfaces',
+      title: 'Neural Interfaces',
+      icon: '🧠',
+      description: 'Direct brain-computer interaction technologies',
       features: [
-        'Brain-Computer Interfaces';
-        'Neural Signal Processing';
-        'Cognitive Enhancement';
-        'Thought-to-Text Systems';
-        'Mind-Controlled Devices'];
-      cta: 'Experience the Future';
-      link: '/neural-interfaces'};
+        'Brain-Computer InterfacesNeural Signal Processing',
+        'Cognitive EnhancementThought-to-Text Systems',
+        'Mind-Controlled Devices'],
+      cta: 'Experience the Future',
+      link: '/neural-interfaces'},
     {
-      id: 'automation';
-      title: 'Smart Automation';
-      icon: '⚙️';
-      description: 'Intelligent automation systems for enterprise efficiency';
+      id: 'automation',
+      title: 'Smart Automation',
+      icon: '⚙️',
+      description: 'Intelligent automation systems for enterprise efficiency',
       features: [
-        'Process Automation';
-        'Workflow Optimization';
-        'Intelligent Document Processing';
-        'Robotic Process Automation';
-        'Smart Decision Systems'];
-      cta: 'Automate Your Business';
+        'Process AutomationWorkflow Optimization',
+        'Intelligent Document ProcessingRobotic Process Automation',
+        'Smart Decision Systems'],
+      cta: 'Automate Your Business',
       link: '/automation-solutions'}
   ],
   const activeContent = contentSections.find(section => section.id === activeTab),
@@ -180,5 +172,5 @@ const UltimateInteractiveContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateInteractiveContentShowcase20o25;
+    </div>)},
+export default UltimateInteractiveContentShowcase20o25,

@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react',
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 export function CurrentSubscription() {
   // Mock subscription data,
   const subscription = {
-    plan: 'Business';
-    status: 'active';
-    billingCycle: 'Annual';
-    startDate: 'May 12025';
-    nextBillingDate: 'May 12026';
-    amount: '$1,999.00';
+    plan: 'Business',
+    status: 'active',
+    billingCycle: 'Annual',
+    startDate: 'May 12025',
+    nextBillingDate: 'May 12026',
+    amount: '$1,999.00',
     teamSeats: {
-      used: 32;
-      total: 50;
-    };
-  };
+      used: 32,
+      total: 50
+    },
+  },
   return (
     <Card>,
       <CardHeader>,

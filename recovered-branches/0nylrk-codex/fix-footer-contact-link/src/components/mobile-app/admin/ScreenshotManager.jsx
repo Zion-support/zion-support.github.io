@@ -10,7 +10,7 @@ export const ScreenshotManager = ({ platform }) => {
   const handleFileSelect = e => {
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))}
-  };
+  },
   const addScreenshots = files => {
     // Filter for image files only,
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
@@ -26,15 +26,15 @@ export const ScreenshotManager = ({ platform }) => {
       return}
     const filesToAdd = imageFiles.slice(0, availableSlots),
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(2, 9);
-      url: URL.createObjectURL(file);
-      file;
+      id: Math.random().toString(36).substring(2, 9),
+      url: URL.createObjectURL(file),
+      file
     })),
     setScreenshots(prev => [...prev, ...newScreenshots]),
     if (filesToAdd.length < imageFiles.length) {
       toast.warning(
         `Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)}
-  };
+  },
   const removeScreenshot = id => {
     setScreenshots(prev => {
       const filtered = prev.filter(screenshot => screenshot.id !== id),
@@ -42,18 +42,18 @@ export const ScreenshotManager = ({ platform }) => {
       const removed = prev.find(screenshot => screenshot.id === id),
       if (removed) {
         URL.revokeObjectURL(removed.url)}
-      return filtered})};
+      return filtered})},
   const handleDragOver = e => {
     e.preventDefault(),
-    setIsDragging(true)};
+    setIsDragging(true)},
   const handleDragLeave = () => {
-    setIsDragging(false)};
+    setIsDragging(false)},
   const handleDrop = e => {
     e.preventDefault(),
     setIsDragging(false),
     if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files))}
-  };
+  },
   return (
     <Card className='bg-zion-blue border-zion-purple/30'>,
       <CardHeader>,
@@ -109,4 +109,4 @@ export const ScreenshotManager = ({ platform }) => {
             </div>))}
         </div>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

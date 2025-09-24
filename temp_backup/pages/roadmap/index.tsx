@@ -36,17 +36,17 @@ export default function RoadmapPage() {
     window.localStorage.setItem('zion_user_role', role)}, [role]),
   async function handleUpvote(feature: Feature) {
     await fetch('/api/roadmap/upvote', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ featureId: feature.id, voterId: userId, role });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ featureId: feature.id, voterId: userId, role }),
     }),
     load()}
 ,
   async function handleFollow(feature: Feature) {
     await fetch('/api/roadmap/follow', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ featureId: feature.id, followerId: userId });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ featureId: feature.id, followerId: userId }),
     }),
     load()}
 ,

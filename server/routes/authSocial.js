@@ -1,4 +1,4 @@
-const express = require('express'),const passport = require('passport'),const jwt = require('jsonwebtoken'),const GoogleStrategy = require('passport-google-oauth20').Strategy,const FacebookStrategy = require('passport-facebook').Strategy,const TwitterStrategy = require('passport-twitter').Strategy,const LinkedInStrategy = require('passport-linkedin-oauth2').Strategy;
+const express = require('express'),const passport = require('passport'),const jwt = require('jsonwebtoken'),const GoogleStrategy = require('passport-google-oauth20').Strategy,const FacebookStrategy = require('passport-facebook').Strategy,const TwitterStrategy = require('passport-twitter').Strategy,const LinkedInStrategy = require('passport-linkedin-oauth2').Strategy,
 const router = express.Router(),
 const JWT_SECRET = process.env.JWT_SECRET || changeme',
 // Serialize user into minimal payload for JWT,
@@ -7,25 +7,25 @@ passport.deserializeUser((obj, done) => done(null, obj)),
 // Google,
 passport.use(new GoogleStrategy(
   {
-    clientID: process.env.GOOGLE_CLIENT_ID ||, clientSecret: process.env.GOOGLE_CLIENT_SECRET ||, callbackURL: /auth/google/callback''  };
+    clientID: process.env.GOOGLE_CLIENT_ID ||, clientSecret: process.env.GOOGLE_CLIENT_SECRET ||, callbackURL: /auth/google/callback''  },
   (accessToken, refreshToken, profile, done) => {
     return done(null, { id: profile.id, provider: 'google', profile })})),
 // Facebook,
 passport.use(new FacebookStrategy(
   {
-    clientID: process.env.FACEBOOK_CLIENT_ID ||, clientSecret: process.env.FACEBOOK_CLIENT_SECRET ||, callbackURL: /auth/facebook/callback',    profileFields: ['id', emails', name']  };
+    clientID: process.env.FACEBOOK_CLIENT_ID ||, clientSecret: process.env.FACEBOOK_CLIENT_SECRET ||, callbackURL: /auth/facebook/callback',    profileFields: ['id', emails', name']  },
   (accessToken, refreshToken, profile, done) => {
     return done(null, { id: profile.id, provider: 'facebook', profile })})),
 // Twitter (X),
 passport.use(new TwitterStrategy(
   {
-    consumerKey: process.env.TWITTER_CLIENT_ID ||, consumerSecret: process.env.TWITTER_CLIENT_SECRET ||, callbackURL: /auth/twitter/callback',    includeEmail: true};
+    consumerKey: process.env.TWITTER_CLIENT_ID ||, consumerSecret: process.env.TWITTER_CLIENT_SECRET ||, callbackURL: /auth/twitter/callback',    includeEmail: true},
   (token, tokenSecret, profile, done) => {
     return done(null, { id: profile.id, provider: 'twitter', profile })})),
 // LinkedIn,
 passport.use(new LinkedInStrategy(
   {
-    clientID: process.env.LINKEDIN_CLIENT_ID ||, clientSecret: process.env.LINKEDIN_CLIENT_SECRET ||, callbackURL: /auth/linkedin/callback',    scope: ['r_liteprofile', r_emailaddress']  };
+    clientID: process.env.LINKEDIN_CLIENT_ID ||, clientSecret: process.env.LINKEDIN_CLIENT_SECRET ||, callbackURL: /auth/linkedin/callback',    scope: ['r_liteprofile', r_emailaddress']  },
   (accessToken, refreshToken, profile, done) => {
     return done(null, { id: profile.id, provider: 'linkedin', profile })})),
 function sendToken(req, res) {

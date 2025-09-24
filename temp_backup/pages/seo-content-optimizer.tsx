@@ -9,16 +9,12 @@ export default function SeoContentOptimizer() {
       implementationWeeks='2-7 days',
       roiNote='Increase organic traffic by 20–60% within 3 months',
       features={[
-        'Topic and keyword coverage scoring';
-        'Headings, schema, and internal link suggestions';
-        'Readability and semantic analysis';
-        'Competitor gap analysis';
-        'Publishing CMS plugins';
-        'Change tracking and impact analytics';
-        'Internationalization hints';
-        'Integrations: GA4, GSC, CMS';
+        'Topic and keyword coverage scoringHeadings, schema, and internal link suggestions',
+        'Readability and semantic analysisCompetitor gap analysis',
+        'Publishing CMS pluginsChange tracking and impact analytics',
+        'Internationalization hintsIntegrations: GA4, GSC, CMS',
       ]}
-      industries={['B2B SaaS', 'Content Publishers', 'E-commerce', 'Agencies']}
+      industries={['B2B SaaSContent Publishers', 'E-commerceAgencies']}
       canonical='https: //ziontechgroup.com/seo-content-optimizer',
     />)}
 ,

@@ -1,7 +1,7 @@
 const express = require('express'),
 const {
-  receiveSyncUpdate;
-  getSyncState;
+  receiveSyncUpdate,
+  getSyncState,
 } = require('../controllers/syncController'),
 const router = express.Router(),
 // Fetch current sync state,

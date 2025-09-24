@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -22,9 +22,9 @@ class ImprovedWatchdog {
     this.processes = new Map(),
     this.config ={
       checkInterval: 30o000, // 30 seconds,
-      maxRestarts: 5;
+      maxRestarts: 5,
       restartDelay: 50o00, // 5 seconds,
-      logFile: path.join(__dirname, 'watchdog.log')};
+      logFile: path.join(__dirname, 'watchdog.log')},
     this.isRunning = false,
     this.checkInterval = null}
 ,
@@ -47,8 +47,8 @@ class ImprovedWatchdog {
         for (const [name, info] of Object.entries(data)) {
           if (this.isProcessRunning(info.pid)) {
             this.processes.set(name, {
-              ...info;
-              restarts: 0;
+              ...info,
+              restarts: 0,
               lastCheck: Date.now()}),
             logger.info(`📋 Loaded existing process: ${name} (PID: ${info.pid})`)}
         }
@@ -67,20 +67,20 @@ class ImprovedWatchdog {
   async startProcess(name, command, args = [], options ={}) {
     logger.info(`🚀 Starting process: ${name}`),
     const processInfo ={
-      name;
-      command;
-      args;
-      options;
-      pid: null;
-      startTime: Date.now();
-      restarts: 0;
-      lastCheck: Date.now();
-      status: starting};
+      name,
+      command,
+      args,
+      options,
+      pid: null,
+      startTime: Date.now(),
+      restarts: 0,
+      lastCheck: Date.now(),
+      status: starting},
     try {
       const child = spawn(command, args, {
-        cwd: __dirname;
-        stdio: ['pipe', pipe', pipe'];
-        env: { ...process.env, ...options.env };
+        cwd: __dirname,
+        stdio: ['pipe', pipe', pipe'],
+        env: { ...process.env, ...options.env },
         ...options}),
       processInfo.pid = child.pid,
       processInfo.status = running',
@@ -343,13 +343,13 @@ const timeoutId = setTimeout(async () => {
 ,
   saveProcessInfo() {
     const pidFile = path.join(__dirname, .watchdog.pid'),
-    const data ={};
+    const data ={},
     for (const [name, processInfo] of this.processes) {
       data[name] ={
-        pid: processInfo.pid;
-        command: processInfo.command;
-        args: processInfo.args;
-        startTime: processInfo.startTime};
+        pid: processInfo.pid,
+        command: processInfo.command,
+        args: processInfo.args,
+        startTime: processInfo.startTime},
     }
 ,
     fs.writeFileSync(pidFile, JSON.stringify(data, null, 2))}
@@ -362,14 +362,14 @@ const timeoutId = setTimeout(async () => {
     fs.appendFileSync(this.config.logFile, logMessage + \n')}
 ,
   getStatus() {
-    const status ={};
+    const status ={},
     for (const [name, processInfo] of this.processes) {
       status[name] ={
-        pid: processInfo.pid;
-        status: processInfo.status;
-        restarts: processInfo.restarts;
-        uptime: Date.now() - processInfo.startTime;
-        lastCheck: processInfo.lastCheck};
+        pid: processInfo.pid,
+        status: processInfo.status,
+        restarts: processInfo.restarts,
+        uptime: Date.now() - processInfo.startTime,
+        lastCheck: processInfo.lastCheck},
     }
     return status}
 ,

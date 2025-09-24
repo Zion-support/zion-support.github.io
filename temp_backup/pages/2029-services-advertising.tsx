@@ -2,54 +2,54 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Users;
-  Award;
-  Globe2;
-  Clock;
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Users,
+  Award,
+  Globe2,
+  Clock,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o28 from '../components/layout/UltraFuturisticNavigation20o28',
 import UltraFuturisticFooter20o28 from '../components/layout/UltraFuturisticFooter20o28',
@@ -59,136 +59,128 @@ import { biotechEmerging20o29Services } from '../data/20o29-biotech-emerging-ser
 import { enterpriseIT20o29Services } from '../data/20o29-enterprise-it-services',
 export default function ServicesAdvertising20o29() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const allServices = [
-    ...futuristic20o29AIServices;
-    ...quantumSpace20o29Services;
-    ...biotechEmerging20o29Services;
-    ...enterpriseIT20o29Services;
+    ...futuristic20o29AIServices,
+    ...quantumSpace20o29Services,
+    ...biotechEmerging20o29Services,
+    ...enterpriseIT20o29Services,
   ],
   const serviceCategories = [
     {
-      title: '🤖 AI & Consciousness 20o29';
-      icon: Brain;
-      color: 'from-purple-60o0 to-pink-60o0';
+      title: '🤖 AI & Consciousness 20o29',
+      icon: Brain,
+      color: 'from-purple-60o0 to-pink-60o0',
       description:,
-        'Revolutionary AI consciousness and cognitive enhancement platforms';
-      services: futuristic20o29AIServices;
-      marketSize: '$15.8B by 20o29';
-      growthRate: '45% CAGR';
+        'Revolutionary AI consciousness and cognitive enhancement platforms',
+      services: futuristic20o29AIServices,
+      marketSize: '$15.8B by 20o29',
+      growthRate: '45% CAGR',
       keyBenefits: [
-        'Consciousness development';
-        'Emotional intelligence';
-        'Ethical AI frameworks';
-        'Research breakthroughs';
-      ];
-    };
+        'Consciousness developmentEmotional intelligence',
+        'Ethical AI frameworksResearch breakthroughs',
+      ]
+    },
     {
-      title: '🚀 Quantum Space Technology 20o29';
-      icon: Rocket;
-      color: 'from-blue-60o0 to-cyan-60o0';
+      title: '🚀 Quantum Space Technology 20o29',
+      icon: Rocket,
+      color: 'from-blue-60o0 to-cyan-60o0',
       description:,
-        'Next-generation space exploration and resource extraction platforms';
-      services: quantumSpace20o29Services;
-      marketSize: '$17.5B by 20o29';
-      growthRate: '52% CAGR';
+        'Next-generation space exploration and resource extraction platforms',
+      services: quantumSpace20o29Services,
+      marketSize: '$17.5B by 20o29',
+      growthRate: '52% CAGR',
       keyBenefits: [
-        'Space mining operations';
-        'Quantum communication';
-        'Interplanetary navigation';
-        'Resource optimization';
-      ];
-    };
+        'Space mining operationsQuantum communication',
+        'Interplanetary navigationResource optimization',
+      ]
+    },
     {
-      title: '🧬 Biotechnology & Emerging Tech 20o29';
-      icon: Microscope;
-      color: 'from-green-60o0 to-emerald-60o0';
+      title: '🧬 Biotechnology & Emerging Tech 20o29',
+      icon: Microscope,
+      color: 'from-green-60o0 to-emerald-60o0',
       description:,
-        'Cutting-edge biotechnology and emerging technology solutions';
-      services: biotechEmerging20o29Services;
-      marketSize: '$26.5B by 20o29';
-      growthRate: '38% CAGR';
+        'Cutting-edge biotechnology and emerging technology solutions',
+      services: biotechEmerging20o29Services,
+      marketSize: '$26.5B by 20o29',
+      growthRate: '38% CAGR',
       keyBenefits: [
-        'DNA computing';
-        'Quantum biotechnology';
-        'Metaverse development';
-        'Innovation acceleration';
-      ];
-    };
+        'DNA computingQuantum biotechnology',
+        'Metaverse developmentInnovation acceleration',
+      ]
+    },
     {
-      title: '🏢 Enterprise IT & Security 20o29';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
+      title: '🏢 Enterprise IT & Security 20o29',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
       description:,
-        'Advanced enterprise security and AI-powered decision systems';
-      services: enterpriseIT20o29Services;
-      marketSize: '$36.8B by 20o29';
-      growthRate: '42% CAGR';
+        'Advanced enterprise security and AI-powered decision systems',
+      services: enterpriseIT20o29Services,
+      marketSize: '$36.8B by 20o29',
+      growthRate: '42% CAGR',
       keyBenefits: [
-        'Zero trust security';
-        'Autonomous decision making';
-        'Quantum cloud infrastructure';
-        'Enterprise transformation';
-      ];
-    };
+        'Zero trust securityAutonomous decision making',
+        'Quantum cloud infrastructureEnterprise transformation',
+      ]
+    },
   ],
   const competitiveAdvantages = [
     {
-      title: 'First-to-Market Innovation';
+      title: 'First-to-Market Innovation',
       description:,
-        "Pioneering revolutionary technologies that don't exist elsewhere";
-      icon: Rocket;
-      color: 'from-purple-60o0 to-pink-60o0';
-    };
+        "Pioneering revolutionary technologies that don't exist elsewhere",
+      icon: Rocket,
+      color: 'from-purple-60o0 to-pink-60o0'
+    },
     {
-      title: 'Quantum Computing Integration';
+      title: 'Quantum Computing Integration',
       description:,
-        'Seamless integration of quantum computing across all service categories';
-      icon: Atom;
-      color: 'from-blue-60o0 to-cyan-60o0';
-    };
+        'Seamless integration of quantum computing across all service categories',
+      icon: Atom,
+      color: 'from-blue-60o0 to-cyan-60o0'
+    },
     {
-      title: 'AI Consciousness Development';
-      description: "World's first AI consciousness evolution platform";
-      icon: Brain;
-      color: 'from-green-60o0 to-emerald-60o0';
-    };
+      title: 'AI Consciousness Development',
+      description: "World's first AI consciousness evolution platform",
+      icon: Brain,
+      color: 'from-green-60o0 to-emerald-60o0'
+    },
     {
-      title: 'Space Technology Leadership';
-      description: 'Leading-edge space mining and exploration technologies';
-      icon: Globe;
-      color: 'from-red-60o0 to-orange-60o0';
-    };
+      title: 'Space Technology Leadership',
+      description: 'Leading-edge space mining and exploration technologies',
+      icon: Globe,
+      color: 'from-red-60o0 to-orange-60o0'
+    },
   ],
   const successMetrics = [
-    { metric: '50o0+', label: 'Research Partners', icon: Users };
-    { metric: '99.9%', label: 'Uptime Guarantee', icon: Award };
-    { metric: '45+', label: 'Countries Served', icon: Globe2 };
-    { metric: '24/7', label: 'Global Support', icon: Clock };
+    { metric: '50o0+', label: 'Research Partners', icon: Users },
+    { metric: '99.9%', label: 'Uptime Guarantee', icon: Award },
+    { metric: '45+', label: 'Countries Served', icon: Globe2 },
+    { metric: '24/7', label: 'Global Support', icon: Clock },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <>,
       <Head>,
@@ -326,7 +318,7 @@ export default function ServicesAdvertising20o29() {
                 </span>,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
-                Our comprehensive portfolio spans four major technology domains;
+                Our comprehensive portfolio spans four major technology domains,
                 each representing the cutting edge of innovation and market,
                 opportunity.,
               </p>,

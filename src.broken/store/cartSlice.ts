@@ -10,16 +10,16 @@ const loadState = (): CartItem[] => {
   try {
     return JSON.parse(stored) as CartItem[]} catch {
     return []}
-};
+},
 const initialState: CartState = {
-  items: loadState();
-};
+  items: loadState()
+},
 const cartSlice = createSlice({
-  name: 'cart';
-  initialState;
+  name: 'cart',
+  initialState,
   reducers: {
     addItem: (
-      state;
+      state,
       action: PayloadAction<{
         id: string,
         title: string,
@@ -29,27 +29,27 @@ const cartSlice = createSlice({
       if (existing) {
         existing.quantity += 1} else {
         state.items.push({
-          id: action.payload.id;
-          name: action.payload.title;
-          price: action.payload.price;
-          quantity: 1;
-          image: action.payload.image;
+          id: action.payload.id,
+          name: action.payload.title,
+          price: action.payload.price,
+          quantity: 1,
+          image: action.payload.image
         })}
-    };
+    },
     removeItem: (state, action: PayloadAction<string>) => {
-      state.items = state.items.filter(i => i.id !== action.payload)};
+      state.items = state.items.filter(i => i.id !== action.payload)},
     updateQuantity: (
-      state;
+      state,
       action: PayloadAction<{ id: string, quantity: number }>) => {
       const item = state.items.find(i => i.id === action.payload.id),
       if (item) {
         item.quantity = action.payload.quantity}
-    };
+    },
     setItems: (state, action: PayloadAction<CartItem[]>) => {
-      state.items = action.payload};
+      state.items = action.payload},
     clear: state => {
-      state.items = []};
-  };
+      state.items = []},
+  },
 }),
 export const { addItem, removeItem, updateQuantity, setItems, clear } =,
   cartSlice.actions,

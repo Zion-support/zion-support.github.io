@@ -6,40 +6,40 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const postHumanContent = [
     {
-      id: 'post-human-operations';
-      title: 'AI 20o25: Post-Human Business Operations';
-      description: 'Revolution - Ultimate Guide to 75,0o00% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-post-human-business-operations-revolution';
+      id: 'post-human-operations',
+      title: 'AI 20o25: Post-Human Business Operations',
+      description: 'Revolution - Ultimate Guide to 75,0o00% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-post-human-business-operations-revolution',
       metrics: {
-        roi: '75,0o00%';
-        savings: '$1.8T';
-        autonomy: '99%';
-        intelligence: '10o00x'};
-      badge: 'REVOLUTIONARY'};
+        roi: '75,0o00%',
+        savings: '$1.8T',
+        autonomy: '99%',
+        intelligence: '10o00x'},
+      badge: 'REVOLUTIONARY'},
     {
-      id: 'transcendent-ai';
-      title: 'Transcendent AI Business Systems';
-      description: 'Operations Beyond Human Capability';
-      type: 'blog';
-      url: '/blog/ai-20o25-post-human-business-operations-revolution';
+      id: 'transcendent-ai',
+      title: 'Transcendent AI Business Systems',
+      description: 'Operations Beyond Human Capability',
+      type: 'blog',
+      url: '/blog/ai-20o25-post-human-business-operations-revolution',
       metrics: {
-        roi: '75,0o00%';
-        efficiency: '99.99%';
-        innovation: '10,0o00x';
-        autonomy: '99%'};
-      badge: 'TRANSCENDENT'};
+        roi: '75,0o00%',
+        efficiency: '99.99%',
+        innovation: '10,0o00x',
+        autonomy: '99%'},
+      badge: 'TRANSCENDENT'},
     {
-      id: 'autonomous-ecosystem';
-      title: 'Autonomous Business Ecosystem';
-      description: 'Complete Business Autonomy Achievement';
-      type: 'blog';
-      url: '/blog/ai-20o25-post-human-business-operations-revolution';
+      id: 'autonomous-ecosystem',
+      title: 'Autonomous Business Ecosystem',
+      description: 'Complete Business Autonomy Achievement',
+      type: 'blog',
+      url: '/blog/ai-20o25-post-human-business-operations-revolution',
       metrics: {
-        roi: '75,0o00%';
-        autonomy: '99%';
-        value: 'Exponential';
-        future: 'Creating'};
+        roi: '75,0o00%',
+        autonomy: '99%',
+        value: 'Exponential',
+        future: 'Creating'},
       badge: 'AUTONOMOUS'}
   ],
   useEffect(() => {
@@ -48,7 +48,7 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('post-human-banner-dismissed', 'true')};
+    localStorage.setItem('post-human-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('post-human-banner-dismissed'),
     if (dismissed === 'true') {
@@ -197,5 +197,5 @@ const PostHumanBusinessOperationsPromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default PostHumanBusinessOperationsPromotionBanner;
+    </div>)},
+export default PostHumanBusinessOperationsPromotionBanner,

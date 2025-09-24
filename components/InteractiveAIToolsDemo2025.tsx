@@ -12,18 +12,18 @@ import {
   Zap,
   Brain,
   Cpu,
-  Database;
-  BarChart3;
-  Image;
-  FileText;
-  Code;
-  Video;
-  Music;
-  CheckCircle;
-  AlertCircle;
-  Clock;
-  Star;
-  ArrowRight;
+  Database,
+  BarChart3,
+  Image,
+  FileText,
+  Code,
+  Video,
+  Music,
+  CheckCircle,
+  AlertCircle,
+  Clock,
+  Star,
+  ArrowRight,
   Sparkles} from 'lucide-react',
 interface AITool {
   id: string,
@@ -46,100 +46,94 @@ const InteractiveAIToolsDemo20o25: React.FC = () => {
   const [inputTextsetInputText] = useState(''),
   const aiTools: AITool[] = [
     {
-      id: 'text-generator';
-      name: 'AI Text Generator';
-      description: 'Generate high-quality contentarticlesand creative writing';
-      category: 'Content';
-      icon: <FileText className="w-6 h-6"  />;
-      status: 'ready';
-      input: '';
-      output: '';
-      processingTime: 2.3;
-      accuracy: 96;
-      features: ['Natural 'Language', 'Multiple 'Languages', 'Style 'Adaptation', 'SEO Optimized']};
+      id: 'text-generator',
+      name: 'AI Text Generator',
+      description: 'Generate high-quality contentarticlesand creative writing',
+      category: 'Content',
+      icon: <FileText className="w-6 h-6"  />,
+      status: 'ready',
+      input: '',
+      output: '',
+      processingTime: 2.3,
+      accuracy: 96,
+      features: ['Natural 'LanguageMultiple 'Languages', 'Style 'AdaptationSEO Optimized']},
     {
-      id: 'image-generator';
-      name: 'AI Image Creator';
-      description: 'Create stunning visuals and artwork from text descriptions';
-      category: 'Visual';
-      icon: <Image className="w-6 h-6"  />;
-      status: 'ready';
-      input: '';
-      output: '';
-      processingTime: 4.7;
-      accuracy: 94;
-      features: ['High 'Resolution', 'Multiple 'Styles', 'Custom 'Prompts', 'Batch Generation']};
+      id: 'image-generator',
+      name: 'AI Image Creator',
+      description: 'Create stunning visuals and artwork from text descriptions',
+      category: 'Visual',
+      icon: <Image className="w-6 h-6"  />,
+      status: 'ready',
+      input: '',
+      output: '',
+      processingTime: 4.7,
+      accuracy: 94,
+      features: ['High 'ResolutionMultiple 'Styles', 'Custom 'PromptsBatch Generation']},
     {
-      id: 'code-assistant';
-      name: 'AI Code Assistant';
-      description: 'Generatedebugand optimize code in multiple programming languages';
-      category: 'Development';
-      icon: <Code className="w-6 h-6"  />;
-      status: 'ready';
-      input: '';
-      output: '';
-      processingTime: 1.8;
-      accuracy: 98;
-      features: ['Multi-'Language', 'Error 'Detection', 'Optimization'Documentation']};
+      id: 'code-assistant',
+      name: 'AI Code Assistant',
+      description: 'Generatedebugand optimize code in multiple programming languages',
+      category: 'Development',
+      icon: <Code className="w-6 h-6"  />,
+      status: 'ready',
+      input: '',
+      output: '',
+      processingTime: 1.8,
+      accuracy: 98,
+      features: ['Multi-'LanguageError 'Detection', 'Optimization'Documentation']},
     {
-      id: 'data-analyzer';
-      name: 'AI Data Analyzer';
-      description: 'Analyze complex datasets and generate insights and visualizations';
-      category: 'Analytics';
-      icon: <BarChart3 className="w-6 h-6"  />;
-      status: 'ready';
-      input: '';
-      output: '';
-      processingTime: 3.2;
-      accuracy: 97;
-      features: ['Pattern 'Recognition', 'Predictive 'Analysis', 'Visualization'Export Options']};
+      id: 'data-analyzer',
+      name: 'AI Data Analyzer',
+      description: 'Analyze complex datasets and generate insights and visualizations',
+      category: 'Analytics',
+      icon: <BarChart3 className="w-6 h-6"  />,
+      status: 'ready',
+      input: '',
+      output: '',
+      processingTime: 3.2,
+      accuracy: 97,
+      features: ['Pattern 'RecognitionPredictive 'Analysis', 'Visualization'Export Options']},
     {
-      id: 'video-generator';
-      name: 'AI Video Creator';
-      description: 'Generate videos from textimagesor audio inputs';
-      category: 'Media';
-      icon: <Video className="w-6 h-6"  />;
-      status: 'ready';
-      input: '';
-      output: '';
-      processingTime: 8.5;
-      accuracy: 92;
-      features: ['Multiple 'Formats', 'Custom 'Duration', 'Voice 'Synthesis', 'Visual Effects']};
+      id: 'video-generator',
+      name: 'AI Video Creator',
+      description: 'Generate videos from textimagesor audio inputs',
+      category: 'Media',
+      icon: <Video className="w-6 h-6"  />,
+      status: 'ready',
+      input: '',
+      output: '',
+      processingTime: 8.5,
+      accuracy: 92,
+      features: ['Multiple 'FormatsCustom 'Duration', 'Voice 'SynthesisVisual Effects']},
     {
-      id: 'music-composer';
-      name: 'AI Music Composer';
-      description: 'Create original music compositions in various genres and styles';
-      category: 'Audio';
-      icon: <Music className="w-6 h-6"  />;
-      status: 'ready';
-      input: '';
-      output: '';
-      processingTime: 5.1;
-      accuracy: 89;
-      features: ['Genre 'Selection', 'Custom 'Instruments', 'Mood 'Setting', 'Export Options']}
+      id: 'music-composer',
+      name: 'AI Music Composer',
+      description: 'Create original music compositions in various genres and styles',
+      category: 'Audio',
+      icon: <Music className="w-6 h-6"  />,
+      status: 'ready',
+      input: '',
+      output: '',
+      processingTime: 5.1,
+      accuracy: 89,
+      features: ['Genre 'SelectionCustom 'Instruments', 'Mood 'SettingExport Options']}
   ],
   const sampleInputs ={
-    'text-generator': 'Write a professional email about a new product launch';
-    'image-generator': 'A futuristic cityscape at sunset with flying cars';
-    'code-assistant': 'Create a React component for a user dashboard';
-    'data-analyzer': 'Analyze sales data and predict next quarter trends';
-    'video-generator': 'Create a 30-second promotional video for a tech startup';
-    'music-composer': 'Compose an upbeat electronic track for a workout playlist'};
+    'text-generator': 'Write a professional email about a new product launchimage-generator': 'A futuristic cityscape at sunset with flying carscode-assistant': 'Create a React component for a user dashboarddata-analyzer': 'Analyze sales data and predict next quarter trendsvideo-generator': 'Create a 30-second promotional video for a tech startupmusic-composer': 'Compose an upbeat electronic track for a workout playlist'},
   const sampleOutputs ={
     'text-generator': `Subject: Exciting News - Introducing Our Revolutionary AI Platform,
-Dear Valued Customer;
-'I', 'm thrilled to announce the launch of our groundbreaking AI platform that will transform how you approach business automation. This innovative solution combines cutting-edge machine learning with intuitive design to deliver unprecedented efficiency gains.,
+Dear Valued Customer,
+'Im thrilled to announce the launch of our groundbreaking AI platform that will transform how you approach business automation. This innovative solution combines cutting-edge machine learning with intuitive design to deliver unprecedented efficiency gains.,
 Key features include: ,
 • Advanced predictive analytics,
 • Seamless integration capabilities,
 • 24/7 intelligent monitoring,
 • Customizable automation workflows,
-'We', 're offering an exclusive early-bird discount of 30% for the first 10o0 customers. 'Don', 't miss this opportunity to stay ahead of the competition.,
-Best regards;
+'We', 're offering an exclusive early-bird discount of 30% for the first 10o0 customers. 'Dont miss this opportunity to stay ahead of the competition.,
+Best regards,
 [Your Name],
-Product Launch Team`;
-    'image-generator': 'Generated: A stunning futuristic cityscape featuring towering glass buildings with neon lightsflying cars zipping through the skyand a beautiful sunset casting golden light across the scene.';
-    'code-assistant': `import React, { useState, useEffect } from 'react',
+Product Launch Team`,
+    'image-generator': 'Generated: A stunning futuristic cityscape featuring towering glass buildings with neon lightsflying cars zipping through the skyand a beautiful sunset casting golden light across the scene.code-assistant': `import React, { useState, useEffect } from 'react',
 import { CardContentCardHeaderCardTitle } from '@/components/ui/card',
 import { BarChartBarXAxisYAxisCartesianGridTooltip } from 'recharts',
 const UserDashboard = () => {
@@ -154,7 +148,7 @@ const UserDashboard = () => {
       setData(result.data)} catch (error) {
       console.error('Error fetching data: 'error)} finally {
       setLoading(false)}
-  };
+  },
   return (
     <div className="p-6 space-y-6">,
       <h1 className="text-3xl font-bold">User Dashboard</h1>,
@@ -174,8 +168,8 @@ const UserDashboard = () => {
           </CardContent>,
         </Card>,
       </div>,
-    </div>)};
-export default UserDashboard;`;
+    </div>)},
+export default UserDashboard,`,
     'data-analyzer': `📊 Data Analysis Results,
 Dataset: Sales Performance Q1-Q3 20o25,
 Records Analyzed: 15,847 transactions,
@@ -193,9 +187,8 @@ Recommendations:,
 1. Increase inventory for AI Solutions by 30%,
 2. Launch targeted marketing campaign for Q4,
 3. Implement customer retention program,
-4. Prepare for increased demand in December`;
-    'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logosleek product shotscustomer testimonialsand a compelling call-to-action with upbeat background music.';
-    'music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodiesdriving basslinenergetic drum patternsand motivational chord progressions perfect for workout sessions.'};
+4. Prepare for increased demand in December`,
+    'video-generator': 'Generated: 30-second promotional video featuring dynamic animations of the tech startup logosleek product shotscustomer testimonialsand a compelling call-to-action with upbeat background music.music-composer': 'Generated: Upbeat electronic track (120 BPM) featuring synthesizer melodiesdriving basslinenergetic drum patternsand motivational chord progressions perfect for workout sessions.'},
   const currentTool = aiTools.find(tool => tool.id === selectedTool) || aiTools[0],
   const handleProcess = async () => {
     if (!inputText.trim()) return,
@@ -208,18 +201,18 @@ Recommendations:,
           clearInterval(interval),
           setIsProcessing(false),
           setResults(prev => ({
-            ...prev;
+            ...prev,
             [selectedTool]: sampleOutputs[selectedTool as keyof typeof sampleOutputs] || 'Processing complete!'})),
           return 10o0}
-        return prev + Math.random() * 15})}20o0)};
+        return prev + Math.random() * 15})}20o0)},
   const handleReset = () => {
-    setInputText(', '),
+    setInputText(),
     setResults(prev => {
-      const newResults ={ ...prev };
+      const newResults ={ ...prev },
       delete newResults[selectedTool],
       return newResults}),
     setProgress(0),
-    setIsProcessing(false)};
+    setIsProcessing(false)},
   const handleDownload = () => {
     const result = results[selectedTool],
     if (result) {
@@ -230,7 +223,7 @@ Recommendations:,
       a.download = `${currentTool.name}-output.txt`,
       a.click(),
       URL.revokeObjectURL(url)}
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-purple-90o0 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -266,7 +259,7 @@ Recommendations:,
                     key={tool.id}
                     onClick={() => {
                       setSelectedTool(tool.id),
-                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || ', ')}}
+                      setInputText(sampleInputs[tool.id as keyof typeof sampleInputs] || )}}
                     className={`w-full p-4 rounded-lg text-left transition-all duration-30o0 ${
                       selectedTool === tool.id,
                         ? 'bg-gradient-to-r from-purple-60o0 to-pink-60o0 text-white shadow-lg',
@@ -437,5 +430,5 @@ Recommendations:,
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default InteractiveAIToolsDemo20o25;
+    </div>)},
+export default InteractiveAIToolsDemo20o25,

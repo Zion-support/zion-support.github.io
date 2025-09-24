@@ -5,15 +5,14 @@ export default function PerformanceOptimizer20o26() {
     // Preload critical resources,
     const preloadCriticalResources = () => {
       const criticalImages = [
-        '/images/ai-20o25-hero.jpg';
-        '/images/quantum-computing-breakthrough.jpg';
+        '/images/ai-20o25-hero.jpg/images/quantum-computing-breakthrough.jpg',
         '/images/neural-interface-revolution.jpg'],
       criticalImages.forEach(src => {
         const link = document.createElement('link'),
         link.rel = 'preload',
         link.as = 'image',
         link.href = src,
-        document.head.appendChild(link)})};
+        document.head.appendChild(link)})},
     // Optimize images,
     const optimizeImages = () => {
       const images = document.querySelectorAll('img'),
@@ -22,12 +21,12 @@ export default function PerformanceOptimizer20o26() {
           img.loading = 'lazy'}
         if (!img.decoding) {
           img.decoding = 'async'}
-      })};
+      })},
     // Defer non-critical JavaScript,
     const deferNonCriticalJS = () => {
       const scripts = document.querySelectorAll('script[data-defer]'),
       scripts.forEach(script => {
-        (script as HTMLScriptElement).defer = true})};
+        (script as HTMLScriptElement).defer = true})},
     // Initialize optimizations,
     preloadCriticalResources(),
     optimizeImages(),
@@ -42,10 +41,10 @@ export default function PerformanceOptimizer20o26() {
             const fidEntry = entry as PerformanceEventTiming,
             // // console.log('FID: 'fidEntry.processingStart - fidEntry.startTime)}
         })}),
-      observer.observe({ entryTypes: ['largest-contentful-'paint', 'first-input'] })}
+      observer.observe({ entryTypes: ['largest-contentful-'paintfirst-input'] })}
 ,
     // Cleanup,
     return () => {
-      // Cleanup if needed};
+      // Cleanup if needed},
   }[]),
   return null}

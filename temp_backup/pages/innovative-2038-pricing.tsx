@@ -2,25 +2,25 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  TrendingUp;
-  Zap;
-  Users;
-  Award;
-  Brain;
-  Atom;
-  Shield;
-  Target;
-  Rocket;
-  Building;
-  Cpu;
-  Globe;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Grid;
+  Check,
+  Star,
+  TrendingUp,
+  Zap,
+  Users,
+  Award,
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Rocket,
+  Building,
+  Cpu,
+  Globe,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Grid,
 } from 'lucide-react',
 // Import our innovative 20o38 services,
 import { innovative20o38MicroSaasExpansions } from '../data/innovative-20o38-micro-saas-expansions',
@@ -28,60 +28,60 @@ import { innovative20o38ITServicesExpansions } from '../data/innovative-20o38-it
 import { innovative20o38AIServicesExpansions } from '../data/innovative-20o38-ai-services-expansions',
 // Contact information,
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 // Create service categories for pricing,
 const serviceCategories = [
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS Solutions';
-    icon: <Target className='w-8 h-8' />;
-    color: 'from-orange-50o0 to-red-50o0';
-    description: 'Innovative business solutions and automation';
-    services: innovative20o38MicroSaasExpansions;
-  };
+    id: 'micro-saas',
+    name: 'Micro SAAS Solutions',
+    icon: <Target className='w-8 h-8' />,
+    color: 'from-orange-50o0 to-red-50o0',
+    description: 'Innovative business solutions and automation',
+    services: innovative20o38MicroSaasExpansions
+  },
   {
-    id: 'it-services';
-    name: 'IT Infrastructure';
-    icon: <Building className='w-8 h-8' />;
-    color: 'from-blue-50o0 to-purple-50o0';
-    description: 'Advanced IT solutions and infrastructure';
-    services: innovative20o38ITServicesExpansions;
-  };
+    id: 'it-services',
+    name: 'IT Infrastructure',
+    icon: <Building className='w-8 h-8' />,
+    color: 'from-blue-50o0 to-purple-50o0',
+    description: 'Advanced IT solutions and infrastructure',
+    services: innovative20o38ITServicesExpansions
+  },
   {
-    id: 'ai-services';
-    name: 'AI & Consciousness';
-    icon: <Brain className='w-8 h-8' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    description: 'Revolutionary AI and consciousness technology';
-    services: innovative20o38AIServicesExpansions;
-  };
+    id: 'ai-services',
+    name: 'AI & Consciousness',
+    icon: <Brain className='w-8 h-8' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    description: 'Revolutionary AI and consciousness technology',
+    services: innovative20o38AIServicesExpansions
+  },
 ],
 export default function Innovative20o38Pricing() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState('monthly'),
   const allServices = [
-    ...innovative20o38MicroSaasExpansions;
-    ...innovative20o38ITServicesExpansions;
-    ...innovative20o38AIServicesExpansions;
+    ...innovative20o38MicroSaasExpansions,
+    ...innovative20o38ITServicesExpansions,
+    ...innovative20o38AIServicesExpansions,
   ],
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allServices,
     const category = serviceCategories.find(cat => cat.id === selectedCategory),
-    return category ? category.services : allServices};
+    return category ? category.services : allServices},
   const getPrice = (service: any) => {
     return billingCycle === 'monthly',
       ? service.price.monthly,
-      : service.price.yearly};
+      : service.price.yearly},
   const getSavings = (service: any) => {
     if (billingCycle === 'yearly') {
       const monthlyTotal = service.price.monthly * 12,
       const yearlyPrice = service.price.yearly,
       return monthlyTotal - yearlyPrice}
-    return 0};
+    return 0},
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO

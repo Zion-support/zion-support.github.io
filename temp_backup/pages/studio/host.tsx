@@ -3,7 +3,7 @@ import React{ useState } from 'react',
 type PersonaConfig ={
   voice: 'Visionary' | 'Grounded' | 'Technical',
   language: string,
-  cloneStyleText?: string};
+  cloneStyleText?: string},
 export default function StudioHostPage() {
   const [personasetPersona] = useState<PersonaConfig>({ voice: 'Visionary'language: 'English' }),
   const [inviteeNamesetInviteeName] = useState(''),
@@ -18,29 +18,29 @@ export default function StudioHostPage() {
     setGenerating(true),
     try {
       const res = await fetch('/api/podcast/generate'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ personainvitee: { name: inviteeNamebio: inviteeBio }topicoperatorPrompt })}),
       const data = await res.json(),
       setEpisode(data.episode)} catch (e) {
       console.error(e),
       alert('Failed to generate episode')} finally {
       setGenerating(false)}
-  };
+  },
   const handleSynthesize = async () => {
     if (!episode?.id) return,
     setSynthesizing(true),
     try {
       const res = await fetch('/api/podcast/synthesize'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ episodeId: episode.idpersona })}),
       const data = await res.json(),
       setEpisode(data.episode)} catch (e) {
       console.error(e),
       alert('Failed to synthesize audio')} finally {
       setSynthesizing(false)}
-  };
+  },
   const handlePublishRss = async () => {
     if (!episode?.id) return,
     setPublishing(true),
@@ -51,7 +51,7 @@ export default function StudioHostPage() {
       console.error(e),
       alert('Failed to update RSS')} finally {
       setPublishing(false)}
-  };
+  },
   return (
     <div className="space-y-8">,
       <h1 className="text-3xl font-bold">Podcast Studio Host</h1>,

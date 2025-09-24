@@ -16,7 +16,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
   const [expandedsetExpanded] = useState(false),
   const handleDownloadResume = () => {
     // This would typically download the resume file,
-    toast.info("Resume download functionality will be implemented soon")};
+    toast.info("Resume download functionality will be implemented soon")},
   const renderActionButtons = () => {
     switch (application.status) {
       case "shortlisted":,
@@ -41,7 +41,7 @@ export function ApplicationCard({ application }: ApplicationCardProps) {
           </Button>),
       default:,
         return null}
-  };
+  },
   return (
     <Card className="overflow-hidden">,
       <CardHeader className="pb-3">,

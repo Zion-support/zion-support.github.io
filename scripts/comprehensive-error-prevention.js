@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 class ComprehensiveErrorPrevention {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'logs', 'error-prevention.log'),
+    this.logFile = path.join(process.cwd(), 'logserror-prevention.log'),
     this.fixedCount = 0,
     this.errorCount = 0,
     this.lastRun = null}
@@ -23,16 +23,11 @@ class ComprehensiveErrorPrevention {
     try {
       this.log('Cleaning corrupted files...'),
       const corruptedDirs = [
-        'pages.disabled';
-        'pages.disabled_auto';
-        'pages_backup';
-        'backup-pages';
-        'src.disabled';
-        'src.corrupted';
-        'src.broken';
-        'solutions.disabled';
-        'scripts.disabled';
-        'automation_backup';
+        'pages.disabledpages.disabled_auto',
+        'pages_backupbackup-pages',
+        'src.disabledsrc.corrupted',
+        'src.brokensolutions.disabled',
+        'scripts.disabledautomation_backup',
         'data_backup'],
       for (const dir of corruptedDirs) {
         const dirPath = path.join(process.cwd(), dir),
@@ -51,8 +46,8 @@ class ComprehensiveErrorPrevention {
     try {
       this.log('Running lint fix...'),
       const result = execSync('npm run lint:fix', {
-        encoding: 'utf8';
-        cwd: process.cwd();
+        encoding: 'utf8',
+        cwd: process.cwd(),
         stdio: 'pipe'}),
       this.fixedCount++,
       this.log('Lint fix completed successfully.')} catch (error) {
@@ -64,8 +59,8 @@ class ComprehensiveErrorPrevention {
     try {
       this.log('Running build...'),
       const result = execSync('npm run build', {
-        encoding: 'utf8';
-        cwd: process.cwd();
+        encoding: 'utf8',
+        cwd: process.cwd(),
         stdio: 'pipe'}),
       this.fixedCount++,
       this.log('Build completed successfully.')} catch (error) {
@@ -77,8 +72,8 @@ class ComprehensiveErrorPrevention {
     try {
       this.log('Checking TypeScript...'),
       const result = execSync('npx tsc --noEmit', {
-        encoding: 'utf8';
-        cwd: process.cwd();
+        encoding: 'utf8',
+        cwd: process.cwd(),
         stdio: 'pipe'}),
       this.fixedCount++,
       this.log('TypeScript check passed.')} catch (error) {

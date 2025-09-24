@@ -1,23 +1,23 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
-  ChevronDown;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Shield;
-  Rocket;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  Eye;
-  Timer;
-  Sparkles;
-  Filter;
-  Search;
+  ChevronDown,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  Eye,
+  Timer,
+  Sparkles,
+  Filter,
+  Search,
 } from 'lucide-react',
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',
 import { CuttingEdgeInnovation20o29 } from '../../data/20o29-cutting-edge-innovations',
@@ -51,7 +51,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -99,13 +99,13 @@ type AnyService =,
         mobile: string,
         email: string,
         address: string,
-        website: string};
+        website: string},
       realImplementation: boolean,
       implementationDetails: string,
       launchDate: string,
       customers: number,
       rating: number,
-      reviews: number};
+      reviews: number},
 interface UltraFuturistic20o29ServiceShowcaseProps {
   services: AnyService[],
   title?: string,
@@ -113,63 +113,40 @@ interface UltraFuturistic20o29ServiceShowcaseProps {
   maxServices?: number}
 ,
 const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-60o0 to-pink-60o0';
-  'Quantum & Neuroscience': 'from-indigo-60o0 to-purple-60o0';
-  'Space Colonization': 'from-red-60o0 to-orange-60o0';
-  'Space Mining': 'from-yellow-60o0 to-orange-60o0';
-  'Space Architecture': 'from-green-60o0 to-teal-60o0';
-  'Space Energy': 'from-yellow-50o0 to-orange-50o0';
-  'AI & Business': 'from-blue-60o0 to-cyan-60o0';
-  'Quantum & Time': 'from-green-60o0 to-emerald-60o0';
-  'AI & Augmented Reality': 'from-orange-60o0 to-red-60o0';
-  'AI & Emotional Intelligence': 'from-pink-60o0 to-rose-60o0';
-  'AI & Transportation': 'from-blue-60o0 to-indigo-60o0';
-  'AI & Creative Content': 'from-purple-60o0 to-pink-60o0';
-  'AI & Healthcare': 'from-green-60o0 to-emerald-60o0';
-  'AI & Finance': 'from-yellow-60o0 to-orange-60o0';
-  'Cybersecurity & Quantum': 'from-indigo-60o0 to-purple-60o0';
-  'Blockchain & Identity': 'from-green-60o0 to-teal-60o0';
-  'AI & Cybersecurity': 'from-red-60o0 to-pink-60o0';
-  'Blockchain & Supply Chain': 'from-blue-60o0 to-cyan-60o0';
-  'DeFi & AI': 'from-yellow-50o0 to-orange-50o0';
-  'IoT & Smart Cities': 'from-blue-60o0 to-cyan-60o0';
-  'IoT & Industrial': 'from-gray-60o0 to-blue-60o0';
-  'IoT & Environment': 'from-green-60o0 to-emerald-60o0';
-  'Edge Computing & AI': 'from-yellow-60o0 to-orange-60o0';
-  'IoT & Security': 'from-red-60o0 to-pink-60o0';
-};
+  'AI & Consciousness': 'from-purple-60o0 to-pink-60o0Quantum & Neuroscience': 'from-indigo-60o0 to-purple-60o0Space Colonization': 'from-red-60o0 to-orange-60o0Space Mining': 'from-yellow-60o0 to-orange-60o0Space Architecture': 'from-green-60o0 to-teal-60o0Space Energy': 'from-yellow-50o0 to-orange-50o0AI & Business': 'from-blue-60o0 to-cyan-60o0Quantum & Time': 'from-green-60o0 to-emerald-60o0AI & Augmented Reality': 'from-orange-60o0 to-red-60o0AI & Emotional Intelligence': 'from-pink-60o0 to-rose-60o0AI & Transportation': 'from-blue-60o0 to-indigo-60o0AI & Creative Content': 'from-purple-60o0 to-pink-60o0AI & Healthcare': 'from-green-60o0 to-emerald-60o0AI & Finance': 'from-yellow-60o0 to-orange-60o0Cybersecurity & Quantum': 'from-indigo-60o0 to-purple-60o0Blockchain & Identity': 'from-green-60o0 to-teal-60o0AI & Cybersecurity': 'from-red-60o0 to-pink-60o0Blockchain & Supply Chain': 'from-blue-60o0 to-cyan-60o0DeFi & AI': 'from-yellow-50o0 to-orange-50o0IoT & Smart Cities': 'from-blue-60o0 to-cyan-60o0IoT & Industrial': 'from-gray-60o0 to-blue-60o0IoT & Environment': 'from-green-60o0 to-emerald-60o0Edge Computing & AI': 'from-yellow-60o0 to-orange-60o0IoT & Security': 'from-red-60o0 to-pink-60o0',
+},
 const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-  'AI & Emotional Intelligence': Brain;
-  'AI & Transportation': Globe;
-  'AI & Creative Content': Sparkles;
-  'AI & Healthcare': Shield;
-  'AI & Finance': TrendingUp;
-  'Cybersecurity & Quantum': Lock;
-  'Blockchain & Identity': Shield;
-  'AI & Cybersecurity': Shield;
-  'Blockchain & Supply Chain': Database;
-  'DeFi & AI': TrendingUp;
-  'IoT & Smart Cities': Globe;
-  'IoT & Industrial': Database;
-  'IoT & Environment': Globe;
-  'Edge Computing & AI': Cpu;
-  'IoT & Security': Lock;
-};
+  'AI & Consciousness': Brain,
+  'Quantum & Neuroscience': Cpu,
+  'Space Colonization': Rocket,
+  'Space Mining': Zap,
+  'Space Architecture': Globe,
+  'Space Energy': Sparkles,
+  'AI & Business': Database,
+  'Quantum & Time': Timer,
+  'AI & Augmented Reality': Eye,
+  'AI & Emotional Intelligence': Brain,
+  'AI & Transportation': Globe,
+  'AI & Creative Content': Sparkles,
+  'AI & Healthcare': Shield,
+  'AI & Finance': TrendingUp,
+  'Cybersecurity & Quantum': Lock,
+  'Blockchain & Identity': Shield,
+  'AI & Cybersecurity': Shield,
+  'Blockchain & Supply Chain': Database,
+  'DeFi & AI': TrendingUp,
+  'IoT & Smart Cities': Globe,
+  'IoT & Industrial': Database,
+  'IoT & Environment': Globe,
+  'Edge Computing & AI': Cpu,
+  'IoT & Security': Lock,
+},
 const UltraFuturistic20o29ServiceShowcase: React.FC<,
   UltraFuturistic20o29ServiceShowcaseProps> = ({
-  services;
-  title = '20o29 Ultra-Futuristic Innovations';
-  subtitle = 'Experience the future of technology with our revolutionary services';
-  maxServices = 20;
+  services,
+  title = '20o29 Ultra-Futuristic Innovations',
+  subtitle = 'Experience the future of technology with our revolutionary services',
+  maxServices = 20,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<,
@@ -178,8 +155,8 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
   const [showFilters, setShowFilters] = useState<boolean>(false),
   // Get unique categories,
   const categories = [
-    'all';
-    ...Array.from(new Set(services.map(service => service.category)));
+    'all',
+    ...Array.from(new Set(services.map(service => service.category))),
   ],
   // Filter and sort services,
   const filteredServices = services,
@@ -198,11 +175,11 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
           const aLevel = (a as any).innovationLevel || 'Advanced',
           const bLevel = (b as any).innovationLevel || 'Advanced',
           const innovationOrder = {
-            Revolutionary: 4;
-            Breakthrough: 3;
-            Advanced: 2;
-            Emerging: 1;
-          };
+            Revolutionary: 4,
+            Breakthrough: 3,
+            Advanced: 2,
+            Emerging: 1
+          },
           const aLevel = (a as any).innovationLevel || 'Advanced',
           const bLevel = (b as any).innovationLevel || 'Advanced',
           return (
@@ -220,24 +197,24 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
     }),
     .slice(0, maxServices),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <section className='py-20 bg-black/50 relative overflow-hidden'>,
       {/* Enhanced Background Effects */}
@@ -354,10 +331,8 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
                   </label>,
                   <div className='space-y-2'>,
                     {[
-                      'Revolutionary';
-                      'Breakthrough';
-                      'Advanced';
-                      'Emerging';
+                      'RevolutionaryBreakthrough',
+                      'AdvancedEmerging',
                     ].map(level => (
                       <label key={level} className='flex items-center'>,
                         <input
@@ -393,12 +368,9 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
                   </label>,
                   <div className='space-y-2'>,
                     {[
-                      'AI';
-                      'Quantum';
-                      'Blockchain';
-                      'IoT';
-                      'Edge Computing';
-                      'Cybersecurity';
+                      'AIQuantum',
+                      'BlockchainIoT',
+                      'Edge ComputingCybersecurity',
                     ].map(tech => (
                       <label key={tech} className='flex items-center'>,
                         <input
@@ -457,33 +429,33 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
           <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
             {[
               {
-                label: 'Revolutionary Services';
+                label: 'Revolutionary Services',
                 value: services.filter(
-                  s => (s as any).innovationLevel === 'Revolutionary').length;
-                icon: Rocket;
-                color: 'from-purple-50o0 to-pink-50o0';
-              };
+                  s => (s as any).innovationLevel === 'Revolutionary').length,
+                icon: Rocket,
+                color: 'from-purple-50o0 to-pink-50o0'
+              },
               {
-                label: 'Patent Pending';
+                label: 'Patent Pending',
                 value: services.filter(
-                  s => (s as any).patentStatus === 'Patent Pending').length;
-                icon: Shield;
-                color: 'from-blue-50o0 to-cyan-50o0';
-              };
+                  s => (s as any).patentStatus === 'Patent Pending').length,
+                icon: Shield,
+                color: 'from-blue-50o0 to-cyan-50o0'
+              },
               {
-                label: 'Total Customers';
-                value: services.reduce((sum, s) => sum + s.customers, 0);
-                icon: Star;
-                color: 'from-yellow-50o0 to-orange-50o0';
-              };
+                label: 'Total Customers',
+                value: services.reduce((sum, s) => sum + s.customers, 0),
+                icon: Star,
+                color: 'from-yellow-50o0 to-orange-50o0'
+              },
               {
-                label: 'Average Rating';
+                label: 'Average Rating',
                 value: (
                   services.reduce((sum, s) => sum + s.rating, 0) /,
-                  services.length).toFixed(1);
-                icon: TrendingUp;
-                color: 'from-green-50o0 to-teal-50o0';
-              };
+                  services.length).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-50o0 to-teal-50o0'
+              },
             ].map((stat, index) => (
               <motion.div,
                 key={index}
@@ -504,5 +476,5 @@ const UltraFuturistic20o29ServiceShowcase: React.FC<,
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default UltraFuturistic20o29ServiceShowcase;
+    </section>)},
+export default UltraFuturistic20o29ServiceShowcase,

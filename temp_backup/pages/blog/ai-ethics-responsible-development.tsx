@@ -104,7 +104,7 @@ export default function AIEthicsResponsibleDevelopment() {
                       Long-term Success,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      Ethical AI systems are more likely to be adopted, trusted;
+                      Ethical AI systems are more likely to be adopted, trusted,
                       and successful in the long run.,
                     </p>,
                   </div>,
@@ -239,10 +239,10 @@ export default function AIEthicsResponsibleDevelopment() {
     // Test for individual fairness,
     const individualFairness = this.calculateIndividualFairness(results, testData),
     return {
-      demographicParity;
-      equalizedOdds;
-      individualFairness;
-      recommendations: this.generateRecommendations(results)};
+      demographicParity,
+      equalizedOdds,
+      individualFairness,
+      recommendations: this.generateRecommendations(results)},
   }
 }`}
                     </pre>,
@@ -657,7 +657,7 @@ export default function AIEthicsResponsibleDevelopment() {
               </h3>,
               <p className='text-white/80 mb-4'>,
                 Get expert guidance on implementing ethical AI principles in,
-                your organization. Our team of specialists can help you design;
+                your organization. Our team of specialists can help you design,
                 build, and deploy AI systems that are fair, transparent, and,
                 trustworthy.,
               </p>,

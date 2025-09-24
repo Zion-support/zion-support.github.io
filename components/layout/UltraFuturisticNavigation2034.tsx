@@ -1,5 +1,5 @@
 "use client",
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -110,111 +110,111 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;
-  HeartIcon;
-  RocketIcon;
-  ShieldIcon as ShieldIcon2;
-  TargetIcon;
-  MicroscopeIcon;
-  StarIcon;
-  ArrowRight;
-  Infinity;
-  Crown;
-  Gem;
-  Sparkles as SparklesIcon2;
-  ShoppingCart;
-  UserCheck;
-  FileText;
-  BarChart;
-  PaletteIcon;
-  VideoIcon;
-  LockIcon as LockIcon2;
-  GlobeIcon as GlobeIcon2;
-  CpuIcon as CpuIcon2;
-  Handshake;
-  LifeBuoy;
-  Activity;
-  Linkedin;
-  Twitter;
-  Facebook;
-  Instagram;
-  Youtube;
-  Github;} from 'lucide-react',import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,
+  HeartIcon,
+  RocketIcon,
+  ShieldIcon as ShieldIcon2,
+  TargetIcon,
+  MicroscopeIcon,
+  StarIcon,
+  ArrowRight,
+  Infinity,
+  Crown,
+  Gem,
+  Sparkles as SparklesIcon2,
+  ShoppingCart,
+  UserCheck,
+  FileText,
+  BarChart,
+  PaletteIcon,
+  VideoIcon,
+  LockIcon as LockIcon2,
+  GlobeIcon as GlobeIcon2,
+  CpuIcon as CpuIcon2,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,} from 'lucide-react',import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
@@ -225,8 +225,8 @@ import {
   Network, Server, HardDrive, Monitor,
   Laptop, Watch, Headphones, Speaker, Mic,
   Keyboard, Mouse, CpuIcon, DatabaseIcon,
-  Laptop, Watch, Headphones, Speaker, Mic;
-  Keyboard, Mouse, CpuIcon, DatabaseIcon;
+  Laptop, Watch, Headphones, Speaker, Mic,
+  Keyboard, Mouse, CpuIcon, DatabaseIcon,
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
   HeartIcon, RocketIcon, ShieldIcon as ShieldIcon2,
@@ -236,29 +236,29 @@ import {
   PaletteIcon, VideoIcon, LockIcon as LockIcon2,
   GlobeIcon as GlobeIcon2, CpuIcon as CpuIcon2,
   Handshake, LifeBuoy, Activity,
-    title: '⚛️ Quantum & Emerging Tech';
-    icon: AtomIcon;
-    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600';
-    description: 'Quantum computing and beyond';
+    title: '⚛️ Quantum & Emerging Tech',
+    icon: AtomIcon,
+    color: 'from - indigo - 600 via - blue - 600 to - cyan - 600',
+    description: 'Quantum computing and beyond',
     services: [
       {
-        name: 'Quantum Machine Learning';
-        href: '/quantum - machine - learning - platform';
-        description: 'Harness quantum computing for ML';
-        price: '$1, 999 / month';
-      };
+        name: 'Quantum Machine Learning',
+        href: '/quantum - machine - learning - platform',
+        description: 'Harness quantum computing for ML',
+        price: '$1, 999 / month',
+      },
       {
-        name: 'Blockchain AI Platform';
-        href: '/blockchain - ai - platform';
-        description: 'Decentralized AI for the future';
-        price: '$899 / month';
-      };
+        name: 'Blockchain AI Platform',
+        href: '/blockchain - ai - platform',
+        description: 'Decentralized AI for the future',
+        price: '$899 / month'
+      },
       {
-        name: 'Edge AI Computing';
-        href: '/edge - ai - computing - platform';
-        description: 'AI at the edge for real - time processing';
-        price: '$599 / month';
-      };
+        name: 'Edge AI Computing',
+        href: '/edge - ai - computing - platform',
+        description: 'AI at the edge for real - time processing',
+        price: '$599 / month'
+      },
       {
         name: 'AI Drug Discovery Platform',
         href: '/ai-drug-discovery-platform',
@@ -419,130 +419,130 @@ import {
       { name: 'Metaverse AI Development', href: '/metaverse-ai-development-platform', description: 'Build immersive virtual worlds', price: '$2,999/month' }
       { name: 'Holographic Event Platform', href: '/holographic-event-platform', description: 'Immersive holographic experiences', price: '$2,999/month' }
     ]}
-        name: 'Holographic Event Platform';
-        href: '/holographic-event-platform';
-        description: 'Immersive holographic experiences';
-        price: '$2,999/month';
-      };
-    ];
+        name: 'Holographic Event Platform',
+        href: '/holographic-event-platform',
+        description: 'Immersive holographic experiences',
+        price: '$2,999/month',
+      },
+    ],
   },  {      { name: 'Quantum Machine Learning', href: '/quantum - machine - learning - platform', description: 'Harness quantum computing for ML', price: '$1, 999 / month' }
-      { name: 'Blockchain AI Platform', href: '/blockchain - ai - platform', description: 'Decentralized AI for the future', price: '$899 / month' };
-      { name: 'Edge AI Computing', href: '/edge - ai - computing - platform', description: 'AI at the edge for real - time processing', price: '$599 / month' };
+      { name: 'Blockchain AI Platform', href: '/blockchain - ai - platform', description: 'Decentralized AI for the future', price: '$899 / month' },
+      { name: 'Edge AI Computing', href: '/edge - ai - computing - platform', description: 'AI at the edge for real - time processing', price: '$599 / month' },
       { name: 'AI Climate Modeling', href: '/ai - climate - modeling - platform', description: 'Predict climate change with AI', price: '$1, 299 / month' }
     ]}
 ,
-    title: '🏙️ Enterprise IT Solutions';
-    icon: CpuIcon;
-    color: 'from - blue - 600 via - cyan - 600 to - teal - 600';
-    description: 'Autonomous enterprise infrastructure';
+    title: '🏙️ Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from - blue - 600 via - cyan - 600 to - teal - 600',
+    description: 'Autonomous enterprise infrastructure',
     services: [
       {
-        name: 'API Security & Monitoring';
-        href: '/api - security - monitoring - suite';
-        description: 'Protect and monitor your APIs';
-        price: '$399 / month';
-      };
+        name: 'API Security & Monitoring',
+        href: '/api - security - monitoring - suite',
+        description: 'Protect and monitor your APIs',
+        price: '$399 / month'
+      },
       {
-        name: 'Customer Success Automation';
-        href: '/customer - success - automation';
-        description: 'Automate customer success workflows';
-        price: '$199 / month';
-      };
+        name: 'Customer Success Automation',
+        href: '/customer - success - automation',
+        description: 'Automate customer success workflows',
+        price: '$199 / month'
+      },
       {
-        name: 'HR Automation Suite';
-        href: '/hr - automation - suite';
-        description: 'Streamline HR processes with AI';
-        price: '$179 / month';
-      };
+        name: 'HR Automation Suite',
+        href: '/hr - automation - suite',
+        description: 'Streamline HR processes with AI',
+        price: '$179 / month'
+      },
       {
-        name: 'Project Management AI';
-        href: '/project - management - ai - platform';
-        description: 'AI - powered project management';
-        price: '$199 / month';
-      };
-    ];
-  },  {      { name: 'API Security & Monitoring', href: '/api - security - monitoring - suite', description: 'Protect and monitor your APIs', price: '$399 / month' };
-      { name: 'Customer Success Automation', href: '/customer - success - automation', description: 'Automate customer success workflows', price: '$199 / month' };
-      { name: 'HR Automation Suite', href: '/hr - automation - suite', description: 'Streamline HR processes with AI', price: '$179 / month' };
+        name: 'Project Management AI',
+        href: '/project - management - ai - platform',
+        description: 'AI - powered project management',
+        price: '$199 / month'
+      },
+    ],
+  },  {      { name: 'API Security & Monitoring', href: '/api - security - monitoring - suite', description: 'Protect and monitor your APIs', price: '$399 / month' },
+      { name: 'Customer Success Automation', href: '/customer - success - automation', description: 'Automate customer success workflows', price: '$199 / month' },
+      { name: 'HR Automation Suite', href: '/hr - automation - suite', description: 'Streamline HR processes with AI', price: '$179 / month' },
       { name: 'Project Management AI', href: '/project - management - ai - platform', description: 'AI - powered project management', price: '$199 / month' }
     ]}
 ,
-    title: '🛒 Business Automation';
-    icon: ShoppingCart;
-    color: 'from - teal - 600 via - emerald - 600 to - green - 600';
-    description: 'Streamline business operations';
+    title: '🛒 Business Automation',
+    icon: ShoppingCart,
+    color: 'from - teal - 600 via - emerald - 600 to - green - 600',
+    description: 'Streamline business operations',
     services: [
       {
-        name: 'E - commerce Automation';
-        href: '/ecommerce - automation - platform';
-        description: 'Automate your entire e - commerce operation';
-        price: '$249 / month';
-      };
+        name: 'E - commerce Automation',
+        href: '/ecommerce - automation - platform',
+        description: 'Automate your entire e - commerce operation',
+        price: '$249 / month'
+      },
       {
-        name: 'Marketing Automation Suite';
-        href: '/marketing - automation - suite';
-        description: 'Automate your entire marketing operation';
-        price: '$279 / month';
-      };
+        name: 'Marketing Automation Suite',
+        href: '/marketing - automation - suite',
+        description: 'Automate your entire marketing operation',
+        price: '$279 / month'
+      },
       {
-        name: 'Financial Analytics Platform';
-        href: '/financial - analytics - platform';
-        description: 'Real - time financial insights';
-        price: '$349 / month';
-      };
+        name: 'Financial Analytics Platform',
+        href: '/financial - analytics - platform',
+        description: 'Real - time financial insights',
+        price: '$349 / month'
+      },
       {
-        name: 'Legal Document Automation';
-        href: '/legal - document - automation';
-        description: 'Automate legal document creation';
-        price: '$399 / month';
-      };
-    ];
-  },  {      { name: 'E - commerce Automation', href: '/ecommerce - automation - platform', description: 'Automate your entire e - commerce operation', price: '$249 / month' };
-      { name: 'Marketing Automation Suite', href: '/marketing - automation - suite', description: 'Automate your entire marketing operation', price: '$279 / month' };
-      { name: 'Financial Analytics Platform', href: '/financial - analytics - platform', description: 'Real - time financial insights', price: '$349 / month' };
+        name: 'Legal Document Automation',
+        href: '/legal - document - automation',
+        description: 'Automate legal document creation',
+        price: '$399 / month'
+      },
+    ],
+  },  {      { name: 'E - commerce Automation', href: '/ecommerce - automation - platform', description: 'Automate your entire e - commerce operation', price: '$249 / month' },
+      { name: 'Marketing Automation Suite', href: '/marketing - automation - suite', description: 'Automate your entire marketing operation', price: '$279 / month' },
+      { name: 'Financial Analytics Platform', href: '/financial - analytics - platform', description: 'Real - time financial insights', price: '$349 / month' },
       { name: 'Legal Document Automation', href: '/legal - document - automation', description: 'Automate legal document creation', price: '$399 / month' }
     ]}
 ,
-    title: '🤖 Robotics & Automation';
-    icon: RocketIcon;
-    color: 'from - green - 600 via - yellow - 600 to - orange - 600';
-    description: 'Intelligent automation solutions';
+    title: '🤖 Robotics & Automation',
+    icon: RocketIcon,
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
+    description: 'Intelligent automation solutions',
     services: [
       {
-        name: 'Autonomous Robotics Platform';
-        href: '/autonomous - robotics - platform';
-        description: 'Build and deploy intelligent robots';
-        price: '$2, 499 / month';
-      };
+        name: 'Autonomous Robotics Platform',
+        href: '/autonomous - robotics - platform',
+        description: 'Build and deploy intelligent robots',
+        price: '$2, 499 / month',
+      },
       {
-        name: 'AI Content Generator Elite';
-        href: '/ai - content - generator - elite';
-        description: 'Professional AI content creation';
-        price: '$49 / month';
-      };
+        name: 'AI Content Generator Elite',
+        href: '/ai - content - generator - elite',
+        description: 'Professional AI content creation',
+        price: '$49 / month'
+      },
       {
-        name: 'AI Guardrails Suite';
-        href: '/ai - guardrails - suite';
-        description: 'Policy and safety for LLM apps';
-        price: '$199 / month';
-      };
+        name: 'AI Guardrails Suite',
+        href: '/ai - guardrails - suite',
+        description: 'Policy and safety for LLM apps',
+        price: '$199 / month'
+      },
       {
-        name: 'AI Business Intelligence';
-        href: '/ai - business - intelligence - suite';
-        description: 'Intelligent business insights';
-        price: '$299 / month';
-      };
-    ];
+        name: 'AI Business Intelligence',
+        href: '/ai - business - intelligence - suite',
+        description: 'Intelligent business insights',
+        price: '$299 / month'
+      },
+    ],
   },  {      { name: 'Autonomous Robotics Platform', href: '/autonomous - robotics - platform', description: 'Build and deploy intelligent robots', price: '$2, 499 / month' }
-      { name: 'AI Content Generator Elite', href: '/ai - content - generator - elite', description: 'Professional AI content creation', price: '$49 / month' };
-      { name: 'AI Guardrails Suite', href: '/ai - guardrails - suite', description: 'Policy and safety for LLM apps', price: '$199 / month' };
+      { name: 'AI Content Generator Elite', href: '/ai - content - generator - elite', description: 'Professional AI content creation', price: '$49 / month' },
+      { name: 'AI Guardrails Suite', href: '/ai - guardrails - suite', description: 'Policy and safety for LLM apps', price: '$199 / month' },
       { name: 'AI Business Intelligence', href: '/ai - business - intelligence - suite', description: 'Intelligent business insights', price: '$299 / month' }
     ]}
 ,
-    title: '🔬 Research & Development';
-    icon: MicroscopeIcon;
-    color: 'from - orange - 600 via - red - 600 to - pink - 600';
-    description: 'Breakthrough research solutions';
+    title: '🔬 Research & Development',
+    icon: MicroscopeIcon,
+    color: 'from - orange - 600 via - red - 600 to - pink - 600',
+    description: 'Breakthrough research solutions',
 const quickLinks = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -556,51 +556,51 @@ const quickLinks = [
 const quickLinks = [
     services: [
       {
-        name: 'Quantum DNA Computing';
-        href: '/quantum - dna - computing - platform';
-        description: 'DNA - based quantum computation';
-        price: '$35, 999 / month';
-      };
+        name: 'Quantum DNA Computing',
+        href: '/quantum - dna - computing - platform',
+        description: 'DNA - based quantum computation',
+        price: '$35, 999 / month',
+      },
       {
-        name: 'Space Mining Automation';
-        href: '/space - mining - automation - platform';
-        description: 'Automated asteroid mining';
-        price: '$45, 999 / month';
-      };
+        name: 'Space Mining Automation',
+        href: '/space - mining - automation - platform',
+        description: 'Automated asteroid mining',
+        price: '$45, 999 / month',
+      },
       {
-        name: 'Metaverse AI Development';
-        href: '/metaverse - ai - development - platform';
-        description: 'Build immersive virtual worlds';
-        price: '$2, 999 / month';
-      };
+        name: 'Metaverse AI Development',
+        href: '/metaverse - ai - development - platform',
+        description: 'Build immersive virtual worlds',
+        price: '$2, 999 / month',
+      },
       {
-        name: 'Holographic Event Platform';
-        href: '/holographic - event - platform';
-        description: 'Immersive holographic experiences';
-        price: '$2, 999 / month';
-      };
-    ];
+        name: 'Holographic Event Platform',
+        href: '/holographic - event - platform',
+        description: 'Immersive holographic experiences',
+        price: '$2, 999 / month',
+      },
+    ],
   }],      { name: 'Quantum DNA Computing', href: '/quantum - dna - computing - platform', description: 'DNA - based quantum computation', price: '$35, 999 / month' }
       { name: 'Space Mining Automation', href: '/space - mining - automation - platform', description: 'Automated asteroid mining', price: '$45, 999 / month' }
       { name: 'Metaverse AI Development', href: '/metaverse - ai - development - platform', description: 'Build immersive virtual worlds', price: '$2, 999 / month' }
       { name: 'Holographic Event Platform', href: '/holographic - event - platform', description: 'Immersive holographic experiences', price: '$2, 999 / month' }
     ]}
 const quick_links = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Target };
-  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Case Studies', href: '/case - studies', icon: FileText };
-  { name: 'Blog', href: '/blog', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }],  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
 const company_links = [
-  { name: 'About Us', href: '/about', icon: Users };
-  { name: 'Careers', href: '/careers', icon: Briefcase };
-  { name: 'News', href: '/news', icon: FileText };
-  { name: 'Partners', href: '/partners', icon: Handshake };
-  { name: 'Support', href: '/support', icon: LifeBuoy };
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Careers', href: '/careers', icon: Briefcase },
+  { name: 'News', href: '/news', icon: FileText },
+  { name: 'Partners', href: '/partners', icon: Handshake },
+  { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ],
 const socialLinks = [
@@ -620,14 +620,10 @@ const socialLinks = [
   { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter }
 ],
 const certifications = [
-  'ISO 27001 Certified',
-  'SOC 2 Type II Compliant',
-  'GDPR Compliant',
-  'HIPAA Compliant',
-  'PCI DSS Level 1',
-  'FedRAMP Authorized',
-  'Quantum Security Certified',
-  'AI Ethics Compliant']],
+  'ISO 27001 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
+  'Quantum Security CertifiedAI Ethics Compliant']],
 const socialLinks = [
   { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin }
   { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github }
@@ -644,7 +640,7 @@ export default function UltraFuturisticNavigation2034() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
@@ -652,56 +648,52 @@ export default function UltraFuturisticNavigation2034() {
   const closeDropdown = () => {
     setActiveDropdown(null),
 const quickLinks = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Target };
-  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Case Studies', href: '/case-studies', icon: FileText };
-  { name: 'Blog', href: '/blog', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing-2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case-studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }],  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
 const companyLinks = [
-  { name: 'About Us', href: '/about', icon: Users };
-  { name: 'Careers', href: '/careers', icon: Briefcase };
-  { name: 'News', href: '/news', icon: FileText };
-  { name: 'Partners', href: '/partners', icon: Handshake };
-  { name: 'Support', href: '/support', icon: LifeBuoy };
-  { name: 'Status', href: '/status', icon: Activity };
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Careers', href: '/careers', icon: Briefcase },
+  { name: 'News', href: '/news', icon: FileText },
+  { name: 'Partners', href: '/partners', icon: Handshake },
+  { name: 'Support', href: '/support', icon: LifeBuoy },
+  { name: 'Status', href: '/status', icon: Activity },
 ],
 const socialLinks = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin && linkedin.com/company/ziontechgroup';
-    icon: Linkedin;
-  };
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github };
+    name: 'LinkedIn',
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup',
+    icon: Linkedin
+  },
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },
   {
-    name: 'Instagram';
-    href: 'https://instagram && instagram.com/ziontechgroup';
-    icon: Instagram;
-  };
+    name: 'Instagram',
+    href: 'https://instagram && instagram.com/ziontechgroup',
+    icon: Instagram
+  },
   {
-    name: 'YouTube';
-    href: 'https://youtube && youtube.com/@ziontechgroup';
-    icon: Youtube;
-  };
-  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter };
+    name: 'YouTube',
+    href: 'https://youtube && youtube.com/@ziontechgroup',
+    icon: Youtube
+  },
+  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },
 ],
 const certifications = [
-  'ISO 27001 Certified';
-  'SOC 2 Type II Compliant';
-  'GDPR Compliant';
-  'HIPAA Compliant';
-  'PCI DSS Level 1';
-  'FedRAMP Authorized';
-  'Quantum Security Certified';
-  'AI Ethics Compliant']],
+  'ISO 27001 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
+  'Quantum Security CertifiedAI Ethics Compliant']],
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin };
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github };
-  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram };
-  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube };
+  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },
+  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },
+  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ],
 const certifications = [
@@ -712,19 +704,19 @@ export default function UltraFuturisticNavigation2034() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 50)};
+      setIsScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const closeDropdown = () => {
-    setActiveDropdown(null)};    };
+    setActiveDropdown(null)},    },
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const closeDropdown = () => {
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   return (
     <>,
       {/* Top Contact Bar */}
@@ -907,37 +899,33 @@ export default function UltraFuturisticNavigation2034() {
                             <Link
 const social_links = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com / company / ziontechgroup';
-    icon: Linkedin;
-  };
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com / company / ziontechgroup',
+    icon: Linkedin
+  },
+  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com / ziontechgroup';
-    icon: Instagram;
-  };
+    name: 'Instagram',
+    href: 'https://instagram.com / ziontechgroup',
+    icon: Instagram
+  },
   {
-    name: 'YouTube';
-    href: 'https://youtube.com/@ziontechgroup';
-    icon: Youtube;
-  };
-  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter };
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: Youtube
+  },
+  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter },
 ],
 const certifications = [
-  'ISO 27001 Certified';
-  'SOC 2 Type II Compliant';
-  'GDPR Compliant';
-  'HIPAA Compliant';
-  'PCI DSS Level 1';
-  'FedRAMP Authorized';
-  'Quantum Security Certified';
-  'AI Ethics Compliant']],
+  'ISO 27001 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
+  'Quantum Security CertifiedAI Ethics Compliant']],
 const social_links = [
-  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin };
-  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github };
-  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram };
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube };
+  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: Linkedin },
+  { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: Github },
+  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: Instagram },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: Twitter }
 ],
 const certifications = [

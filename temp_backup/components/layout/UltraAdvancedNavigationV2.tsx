@@ -2,96 +2,96 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin;
-  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp;
-  Globe, Database, Cloud, Lock, Palette, Target;
-  Layers, Sparkles, Atom, Microscope, Satellite;
+  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
+  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
+  Globe, Database, Cloud, Lock, Palette, Target,
+  Layers, Sparkles, Atom, Microscope, Satellite,
   Car, Factory, Leaf, Heart, Building2, Gauge} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: 'AI & Machine Learning';
-    icon: Brain;
-    description: 'Cutting-edge AI solutions for modern businesses';
+    title: 'AI & Machine Learning',
+    icon: Brain,
+    description: 'Cutting-edge AI solutions for modern businesses',
     services: [
-      { name: 'AI Business Intelligence Elite', href: '/ai-business-intelligence-elite', description: 'Transform data into actionable insights with AI', price: '$299/month', popular: true };
-      { name: 'AI Legal Document Automation', href: '/ai-legal-document-automation', description: 'Automate legal document creation and review', price: '$199/month', popular: true };
-      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Revolutionary AI-powered medical diagnostics', price: '$799/month', popular: true };
-      { name: 'AI Metaverse Development', href: '/ai-metaverse-development-platform', description: 'Create immersive metaverse experiences with AI', price: '$499/month', popular: false };
+      { name: 'AI Business Intelligence Elite', href: '/ai-business-intelligence-elite', description: 'Transform data into actionable insights with AI', price: '$299/month', popular: true },
+      { name: 'AI Legal Document Automation', href: '/ai-legal-document-automation', description: 'Automate legal document creation and review', price: '$199/month', popular: true },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics', description: 'Revolutionary AI-powered medical diagnostics', price: '$799/month', popular: true },
+      { name: 'AI Metaverse Development', href: '/ai-metaverse-development-platform', description: 'Create immersive metaverse experiences with AI', price: '$499/month', popular: false },
       { name: 'AI Content Generator Elite', href: '/ai-content-generator-elite', description: 'Professional AI-powered content creation at scale', price: '$49/month', popular: true }
-    ]};
+    ]},
   {
-    title: 'Quantum Computing';
-    icon: Atom;
-    description: 'Next-generation quantum solutions for the future';
+    title: 'Quantum Computing',
+    icon: Atom,
+    description: 'Next-generation quantum solutions for the future',
     services: [
-      { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication', description: 'Unbreakable encryption for the quantum era', price: '$599/month', popular: true };
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum computing for financial market advantage', price: '$999/month', popular: true };
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Next-generation internet security with quantum technology', price: '$699/month', popular: false };
+      { name: 'Quantum-Secure Communication', href: '/quantum-secure-communication', description: 'Unbreakable encryption for the quantum era', price: '$599/month', popular: true },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum computing for financial market advantage', price: '$999/month', popular: true },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Next-generation internet security with quantum technology', price: '$699/month', popular: false },
       { name: 'Quantum Space Mining', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration and mining', price: '$1,299/month', popular: false }
-    ]};
+    ]},
   {
-    title: 'Emerging Technologies';
-    icon: Sparkles;
-    description: 'Breakthrough technologies shaping tomorrow';
+    title: 'Emerging Technologies',
+    icon: Sparkles,
+    description: 'Breakthrough technologies shaping tomorrow',
     services: [
-      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$1,499/month', popular: false };
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$2,999/month', popular: false };
-      { name: 'Photonic Computing', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$1,999/month', popular: false };
+      { name: 'Neuromorphic Computing', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$1,499/month', popular: false },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$2,999/month', popular: false },
+      { name: 'Photonic Computing', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$1,999/month', popular: false },
       { name: 'Holographic Display', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$699/month', popular: true }
-    ]};
+    ]},
   {
-    title: 'Autonomous Systems';
-    icon: Target;
-    description: 'Self-managing systems for modern operations';
+    title: 'Autonomous Systems',
+    icon: Target,
+    description: 'Self-managing systems for modern operations',
     services: [
-      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization', description: 'AI-powered supply chain management and optimization', price: '$399/month', popular: true };
-      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'AI-powered manufacturing automation and optimization', price: '$599/month', popular: true };
-      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Coordinated multi-robot systems for complex tasks', price: '$899/month', popular: false };
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'AI-powered autonomous vehicle management and optimization', price: '$799/month', popular: true };
-      { name: 'Autonomous Energy Management', href: '/autonomous-energy-management', description: 'AI-powered energy optimization and management', price: '$499/month', popular: true };
-      { name: 'Autonomous Agriculture', href: '/autonomous-agriculture-platform', description: 'AI-powered agricultural automation and optimization', price: '$399/month', popular: true };
+      { name: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-optimization', description: 'AI-powered supply chain management and optimization', price: '$399/month', popular: true },
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai', description: 'AI-powered manufacturing automation and optimization', price: '$599/month', popular: true },
+      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Coordinated multi-robot systems for complex tasks', price: '$899/month', popular: false },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform', description: 'AI-powered autonomous vehicle management and optimization', price: '$799/month', popular: true },
+      { name: 'Autonomous Energy Management', href: '/autonomous-energy-management', description: 'AI-powered energy optimization and management', price: '$499/month', popular: true },
+      { name: 'Autonomous Agriculture', href: '/autonomous-agriculture-platform', description: 'AI-powered agricultural automation and optimization', price: '$399/month', popular: true },
       { name: 'Autonomous Healthcare', href: '/autonomous-healthcare-platform', description: 'AI-powered healthcare automation and patient care', price: '$899/month', popular: true }
-    ]};
+    ]},
   {
-    title: 'Space Technology';
-    icon: Satellite;
-    description: 'Cutting-edge space exploration and technology';
+    title: 'Space Technology',
+    icon: Satellite,
+    description: 'Cutting-edge space exploration and technology',
     services: [
-      { name: 'Space Technology AI Platform', href: '/space-technology-ai-platform', description: 'AI-powered space technology and satellite management', price: '$699/month', popular: false };
+      { name: 'Space Technology AI Platform', href: '/space-technology-ai-platform', description: 'AI-powered space technology and satellite management', price: '$699/month', popular: false },
       { name: 'Quantum Space Mining', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration and mining', price: '$1,299/month', popular: false }
-    ]};
+    ]},
   {
-    title: 'Enterprise IT';
-    icon: Shield;
-    description: 'Enterprise-grade IT solutions and infrastructure';
+    title: 'Enterprise IT',
+    icon: Shield,
+    description: 'Enterprise-grade IT solutions and infrastructure',
     services: [
-      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture', description: 'Advanced network security', price: 'Custom pricing', popular: false };
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: 'Custom pricing', popular: false };
-      { name: '5G Private Networks', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: 'Custom pricing', popular: false };
+      { name: 'Zero Trust Architecture', href: '/zero-trust-network-architecture', description: 'Advanced network security', price: 'Custom pricing', popular: false },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: 'Custom pricing', popular: false },
+      { name: '5G Private Networks', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: 'Custom pricing', popular: false },
       { name: 'Blockchain Infrastructure', href: '/blockchain-infrastructure-platform', description: 'Secure blockchain solutions', price: 'Custom pricing', popular: false }
-    ]};
+    ]},
   {
-    title: 'Innovative SaaS';
-    icon: Zap;
-    description: 'Revolutionary software-as-a-service solutions';
+    title: 'Innovative SaaS',
+    icon: Zap,
+    description: 'Revolutionary software-as-a-service solutions',
     services: [
-      { name: 'AI Autonomous Business', href: '/ai-autonomous-business-platform', description: 'Run your business with AI', price: 'Custom pricing', popular: false };
-      { name: 'AI Creative Studio', href: '/ai-creative-studio-platform', description: 'Unlimited AI-powered creativity', price: 'Custom pricing', popular: false };
-      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion', description: 'Personalized healthcare AI', price: 'Custom pricing', popular: false };
+      { name: 'AI Autonomous Business', href: '/ai-autonomous-business-platform', description: 'Run your business with AI', price: 'Custom pricing', popular: false },
+      { name: 'AI Creative Studio', href: '/ai-creative-studio-platform', description: 'Unlimited AI-powered creativity', price: 'Custom pricing', popular: false },
+      { name: 'AI Healthcare Companion', href: '/ai-healthcare-companion', description: 'Personalized healthcare AI', price: 'Custom pricing', popular: false },
       { name: 'Quantum Logistics Platform', href: '/quantum-logistics-platform', description: 'Optimize supply chains with quantum', price: 'Custom pricing', popular: false }
     ]}
 ],
 const companyLinks = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'News', href: '/news' };
-  { name: 'Case Studies', href: '/case-studies' };
-  { name: 'Blog', href: '/blog' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
 ],
 export default function UltraAdvancedNavigationV2() {
@@ -100,13 +100,13 @@ export default function UltraAdvancedNavigationV2() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const closeDropdown = () => {
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled,

@@ -2,24 +2,24 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Brain;
-  Atom;
-  Rocket;
-  Target;
-  Server;
-  Building;
-  Shield;
-  Globe;
-  Zap;
-  TrendingUp;
-  Users;
-  Award;
+  Check,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Server,
+  Building,
+  Shield,
+  Globe,
+  Zap,
+  TrendingUp,
+  Users,
+  Award,
 } from 'lucide-react',
 // Import all our new services,
 import { advancedAIAutomationPlatforms20o25 } from '../data/20o25-advanced-ai-automation-platforms',
@@ -27,11 +27,11 @@ import { innovativeITInfrastructureSolutions20o25 } from '../data/20o25-innovati
 import { specializedMicroSaasSolutions20o25 } from '../data/20o25-specialized-micro-saas-solutions',
 import { emergingTechnologyServices20o25 } from '../data/20o25-emerging-technology-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const ServiceCard = ({ service, index }: { service: any, index: number }) => (
   <motion.div,
     initial={{ opacity: 0, y: 20 }}
@@ -40,7 +40,7 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => (
     className={`relative overflow-hidden rounded-2xl p-6 shadow-xl transition-all duration-30o0 hover: scale-10o5 ${
       service.popular ? 'ring-2 ring-blue-50o0' : ''}`}
     style={{
-      background: `linear-gradient(135deg, ${service.color})`;
+      background: `linear-gradient(135deg, ${service.color})`,
     }}
   >,
     {service.popular && (
@@ -80,7 +80,7 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => (
       <div className='mb-4'>,
         <h4 className='font-semibold mb-2'>Target Audience: </h4>,
         <div className='text-sm opacity-75'>,
-          {service.targetAudience.slice(0, 3).join(', ')}
+          {service.targetAudience.slice(0, 3).join()}
         </div>,
       </div>,
       <div className='mb-4'>,
@@ -99,10 +99,10 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => (
     </div>,
   </motion.div>),
 const ServiceCategory = ({
-  title;
-  services;
-  icon: Icon;
-  color;
+  title,
+  services,
+  icon: Icon,
+  color
 }: {
   title: string,
   services: any[],
@@ -221,13 +221,10 @@ export default function UltimateServicesShowcase20o25() {
         title='20o25 Ultimate Services Showcase - Zion Tech Group',
         description='Discover our comprehensive portfolio of innovative AI, IT, and micro SAAS services. Transform your business with cutting-edge technology solutions.',
         keywords={[
-          'AI services';
-          'IT solutions';
-          'micro SAAS';
-          'quantum computing';
-          'blockchain';
-          'robotics';
-          'Zion Tech Group';
+          'AI servicesIT solutions',
+          'micro SAASquantum computing',
+          'blockchainrobotics',
+          'Zion Tech Group',
         ]}
       />,
       {/* Hero Section */}

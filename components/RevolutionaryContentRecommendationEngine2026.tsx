@@ -10,18 +10,18 @@ import {
   Star,
   BookOpen,
   Video,
-  FileText;
-  Users;
-  Heart;
-  Bookmark;
-  Share2;
-  Play;
-  ArrowRight;
-  Filter;
-  Search;
-  Zap;
-  Target;
-  Award;
+  FileText,
+  Users,
+  Heart,
+  Bookmark,
+  Share2,
+  Play,
+  ArrowRight,
+  Filter,
+  Search,
+  Zap,
+  Target,
+  Award,
   ChevronRight} from 'lucide-react',
 interface ContentItem {
   id: string,
@@ -57,122 +57,122 @@ const RevolutionaryContentRecommendationEngine20o26 = () => {
       await new Promise(resolve => setTimeout(resolve10o00)),
       const mockContent: ContentItem[] = [
         {
-          id: 1;
-          title: 'AI 20o26: The Complete Guide to Neural Networks';
-          description: 'Master the fundamentals of neural networks and deep learning with this comprehensive guide.';
-          type: 'tutorial';
-          category: 'ai-fundamentals';
-          difficulty: 'intermediate';
-          duration: '45 min';
-          rating: 4.9;
-          views: 1250o0;
-          likes: 892;
-          tags: [', 'AI', 'Neural 'Networks', 'Deep 'Learning', 'Tutorial'];
-          thumbnail: '/api/placeholder/40o0/250';
-          author: 'Dr. Sarah Chen';
-          publishedAt: '20o24-0o1-15';
-          featured: true;
-          trending: true;
-          aiRecommended: true;
-          relevanceScore: 95};
+          id: 1,
+          title: 'AI 20o26: The Complete Guide to Neural Networks',
+          description: 'Master the fundamentals of neural networks and deep learning with this comprehensive guide.',
+          type: 'tutorial',
+          category: 'ai-fundamentals',
+          difficulty: 'intermediate',
+          duration: '45 min',
+          rating: 4.9,
+          views: 1250o0,
+          likes: 892,
+          tags: [AI', 'Neural 'NetworksDeep 'Learning', 'Tutorial'],
+          thumbnail: '/api/placeholder/40o0/250',
+          author: 'Dr. Sarah Chen',
+          publishedAt: '20o24-0o1-15',
+          featured: true,
+          trending: true,
+          aiRecommended: true,
+          relevanceScore: 95},
         {
-          id: 2;
-          title: 'Quantum Computing Revolution: A Business Case Study';
-          description: 'How TechCorp achieved 30o0% efficiency gains using quantum computing solutions.';
-          type: 'case-study';
-          category: 'quantum-computing';
-          difficulty: 'advanced';
-          duration: '20 min';
-          rating: 4.8;
-          views: 890o0;
-          likes: 654;
-          tags: ['Quantum 'Computing', 'Case 'Study', 'Business'ROI'];
-          thumbnail: '/api/placeholder/40o0/250';
-          author: 'Michael Rodriguez';
-          publishedAt: '20o24-0o1-12';
-          featured: false;
-          trending: true;
-          aiRecommended: true;
-          relevanceScore: 88};
+          id: 2,
+          title: 'Quantum Computing Revolution: A Business Case Study',
+          description: 'How TechCorp achieved 30o0% efficiency gains using quantum computing solutions.',
+          type: 'case-study',
+          category: 'quantum-computing',
+          difficulty: 'advanced',
+          duration: '20 min',
+          rating: 4.8,
+          views: 890o0,
+          likes: 654,
+          tags: ['Quantum 'ComputingCase 'Study', 'Business'ROI'],
+          thumbnail: '/api/placeholder/40o0/250',
+          author: 'Michael Rodriguez',
+          publishedAt: '20o24-0o1-12',
+          featured: false,
+          trending: true,
+          aiRecommended: true,
+          relevanceScore: 88},
         {
-          id: 3;
-          title: 'Building Autonomous Systems: A Step-by-Step Guide';
-          description: 'Learn how to create intelligent autonomous systems that can make decisions independently.';
-          type: 'tutorial';
-          category: 'automation';
-          difficulty: 'advanced';
-          duration: '60 min';
-          rating: 4.7;
-          views: 1560o0;
-          likes: 120o3;
-          tags: [', 'Automation', 'AI'Autonomous 'Systems', 'Tutorial'];
-          thumbnail: '/api/placeholder/40o0/250';
-          author: 'AI Research Team';
-          publishedAt: '20o24-0o1-10';
-          featured: true;
-          trending: false;
-          aiRecommended: false;
-          relevanceScore: 82};
+          id: 3,
+          title: 'Building Autonomous Systems: A Step-by-Step Guide',
+          description: 'Learn how to create intelligent autonomous systems that can make decisions independently.',
+          type: 'tutorial',
+          category: 'automation',
+          difficulty: 'advanced',
+          duration: '60 min',
+          rating: 4.7,
+          views: 1560o0,
+          likes: 120o3,
+          tags: [Automation', 'AI'Autonomous 'SystemsTutorial'],
+          thumbnail: '/api/placeholder/40o0/250',
+          author: 'AI Research Team',
+          publishedAt: '20o24-0o1-10',
+          featured: true,
+          trending: false,
+          aiRecommended: false,
+          relevanceScore: 82},
         {
-          id: 4;
-          title: 'The Future of Machine Learning: 20o26 Predictions';
-          description: 'Expert predictions on the future of machine learning and its impact on businesses.';
-          type: 'article';
-          category: 'ai-predictions';
-          difficulty: 'intermediate';
-          duration: '15 min';
-          rating: 4.6;
-          views: 980o0;
-          likes: 567;
-          tags: ['Machine 'Learning', 'Predictions', 'Future', 'AI'];
-          thumbnail: '/api/placeholder/40o0/250';
-          author: 'Dr. Emily Watson';
-          publishedAt: '20o24-0o1-08';
-          featured: false;
-          trending: true;
-          aiRecommended: true;
-          relevanceScore: 91};
+          id: 4,
+          title: 'The Future of Machine Learning: 20o26 Predictions',
+          description: 'Expert predictions on the future of machine learning and its impact on businesses.',
+          type: 'article',
+          category: 'ai-predictions',
+          difficulty: 'intermediate',
+          duration: '15 min',
+          rating: 4.6,
+          views: 980o0,
+          likes: 567,
+          tags: ['Machine 'LearningPredictions', 'FutureAI'],
+          thumbnail: '/api/placeholder/40o0/250',
+          author: 'Dr. Emily Watson',
+          publishedAt: '20o24-0o1-08',
+          featured: false,
+          trending: true,
+          aiRecommended: true,
+          relevanceScore: 91},
         {
-          id: 5;
-          title: 'Data Science Best Practices for 20o26';
-          description: 'Essential data science practices and tools for modern businesses.';
-          type: 'whitepaper';
-          category: 'data-science';
-          difficulty: 'intermediate';
-          duration: '30 min';
-          rating: 4.5;
-          views: 720o0;
-          likes: 423;
-          tags: ['Data 'Science', 'Best 'Practices', 'Tools'Business'];
-          thumbnail: '/api/placeholder/40o0/250';
-          author: 'Data Science Institute';
-          publishedAt: '20o24-0o1-0o5';
-          featured: false;
-          trending: false;
-          aiRecommended: false;
+          id: 5,
+          title: 'Data Science Best Practices for 20o26',
+          description: 'Essential data science practices and tools for modern businesses.',
+          type: 'whitepaper',
+          category: 'data-science',
+          difficulty: 'intermediate',
+          duration: '30 min',
+          rating: 4.5,
+          views: 720o0,
+          likes: 423,
+          tags: ['Data 'ScienceBest 'Practices', 'Tools'Business'],
+          thumbnail: '/api/placeholder/40o0/250',
+          author: 'Data Science Institute',
+          publishedAt: '20o24-0o1-0o5',
+          featured: false,
+          trending: false,
+          aiRecommended: false,
           relevanceScore: 76}
       ],
       setContentItems(mockContent),
-      setIsLoading(false)};
+      setIsLoading(false)},
     loadContent()}[]),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: BookOpencolor: 'from-blue-50o0 to-cyan-50o0' };
-    { id: 'ai-'fundamentals', 'name: 'AI 'Fundamentals', 'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-green-50o0 to-emerald-50o0' };
-    { id: ''automation', 'name: ''Automation', 'icon: Targetcolor: 'from-orange-50o0 to-red-50o0' };
-    { id: 'ai-'predictions', 'name: 'AI 'Predictions', 'icon: TrendingUpcolor: 'from-indigo-50o0 to-purple-50o0' };
-    { id: 'data-'science', 'name: 'Data 'Science', 'icon: BookOpencolor: 'from-teal-50o0 to-cyan-50o0' }
+    { id: ''allname: 'All 'Contenticon: BookOpencolor: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'ai-'fundamentalsname: 'AI 'Fundamentalsicon: Braincolor: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'quantum-'computingname: 'Quantum 'Computingicon: Zapcolor: 'from-green-50o0 to-emerald-50o0' },
+    { id: ''automationname: ''Automationicon: Targetcolor: 'from-orange-50o0 to-red-50o0' },
+    { id: 'ai-'predictionsname: 'AI 'Predictionsicon: TrendingUpcolor: 'from-indigo-50o0 to-purple-50o0' },
+    { id: 'data-'sciencename: 'Data 'Scienceicon: BookOpencolor: 'from-teal-50o0 to-cyan-50o0' }
   ],
   const difficulties = [
-    { id: ''all', 'name: 'All Levels' };
-    { id: ''beginner', 'name: 'Beginner' };
-    { id: ''intermediate', 'name: 'Intermediate' };
-    { id: ''advanced', 'name: 'Advanced' }
+    { id: ''allname: 'All Levels' },
+    { id: ''beginnername: 'Beginner' },
+    { id: ''intermediatename: 'Intermediate' },
+    { id: ''advancedname: 'Advanced' }
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     const matchesDifficulty = selectedDifficulty === 'all' || item.difficulty === selectedDifficulty,
-    const matchesSearch = searchQuery === ', ' ||,
+    const matchesSearch = searchQuery ===  ||,
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       item.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       item.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -187,13 +187,13 @@ const RevolutionaryContentRecommendationEngine20o26 = () => {
     if (newFavorites.has(id)) {
       newFavorites.delete(id)} else {
       newFavorites.add(id)}
-    setFavorites(newFavorites)};
+    setFavorites(newFavorites)},
   const toggleBookmark = (id: number) => {
     const newBookmarks = new Set(bookmarks),
     if (newBookmarks.has(id)) {
       newBookmarks.delete(id)} else {
       newBookmarks.add(id)}
-    setBookmarks(newBookmarks)};
+    setBookmarks(newBookmarks)},
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'article': return <FileText className="w-4 h-4"  />,
@@ -202,14 +202,14 @@ const RevolutionaryContentRecommendationEngine20o26 = () => {
       case 'case-study': return <Award className="w-4 h-4"  />,
       case 'whitepaper': return <FileText className="w-4 h-4"  />,
       default: return <BookOpen className="w-4 h-4"  />}
-  };
+  },
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty) {
       case 'beginner': return 'text-green-40o0 bg-green-50o0/20',
       case 'intermediate': return 'text-yellow-40o0 bg-yellow-50o0/20',
       case 'advanced': return 'text-red-40o0 bg-red-50o0/20',
       default: return 'text-gray-40o0 bg-gray-50o0/20'}
-  };
+  },
   if (isLoading) {
     return (
       <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white p-6 rounded-2xl border border-white/10">,
@@ -374,5 +374,5 @@ const RevolutionaryContentRecommendationEngine20o26 = () => {
           <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>,
           <p className="text-gray-40o0">Try adjusting your search or filter criteria</p>,
         </motion.div>)}
-    </div>)};
-export default RevolutionaryContentRecommendationEngine20o26;
+    </div>)},
+export default RevolutionaryContentRecommendationEngine20o26,

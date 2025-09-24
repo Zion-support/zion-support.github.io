@@ -2,38 +2,38 @@ import Link from 'next/link',
 export default function FeaturedContentShowcase20o26() {
   const featuredContent = [
     {
-      title: 'AI 20o25 Ultimate Breakthrough Revolution';
+      title: 'AI 20o25 Ultimate Breakthrough Revolution',
       description:,
-        'Discover the revolutionary AI breakthroughs of 20o25 that are delivering 10,0o00% ROI to enterprises worldwide.';
-      href: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'AI 20o25';
-      badge: 'BREAKTHROUGH';
-      metrics: '10,0o00% ROI';
-      icon: '🚀';
-      gradient: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Discover the revolutionary AI breakthroughs of 20o25 that are delivering 10,0o00% ROI to enterprises worldwide.',
+      href: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'AI 20o25',
+      badge: 'BREAKTHROUGH',
+      metrics: '10,0o00% ROI',
+      icon: '🚀',
+      gradient: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'AI 20o26 Ultimate Predictions Breakthrough';
+      title: 'AI 20o26 Ultimate Predictions Breakthrough',
       description:,
-        'Exclusive AI 20o26 predictions and breakthrough technologies that will revolutionize business.';
-      href: '/ai-20o26-ultimate-predictions-breakthrough';
-      category: 'AI 20o26';
-      badge: 'PREDICTIONS';
-      metrics: '50,0o00% ROI';
-      icon: '🔮';
-      gradient: 'from-indigo-50o0 to-purple-50o0';
-    };
+        'Exclusive AI 20o26 predictions and breakthrough technologies that will revolutionize business.',
+      href: '/ai-20o26-ultimate-predictions-breakthrough',
+      category: 'AI 20o26',
+      badge: 'PREDICTIONS',
+      metrics: '50,0o00% ROI',
+      icon: '🔮',
+      gradient: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      title: 'Enterprise Transformation: 50,0o00% ROI';
+      title: 'Enterprise Transformation: 50,0o00% ROI',
       description:,
-        'How a Fortune 50o0 company achieved 50,0o00% ROI through our AI 20o26 transformation strategies.';
-      href: '/case-studies/ai-20o26-enterprise-transformation-50o000-roi';
-      category: 'Case Study';
-      badge: 'SUCCESS STORY';
-      metrics: '$2.5B Value';
-      icon: '🏆';
-      gradient: 'from-green-50o0 to-emerald-50o0';
-    };
+        'How a Fortune 50o0 company achieved 50,0o00% ROI through our AI 20o26 transformation strategies.',
+      href: '/case-studies/ai-20o26-enterprise-transformation-50o000-roi',
+      category: 'Case Study',
+      badge: 'SUCCESS STORY',
+      metrics: '$2.5B Value',
+      icon: '🏆',
+      gradient: 'from-green-50o0 to-emerald-50o0'
+    },
   ],
   return (
     <section className='py-20 px-4 bg-gradient-to-br from-gray-50 to-blue-50'>,

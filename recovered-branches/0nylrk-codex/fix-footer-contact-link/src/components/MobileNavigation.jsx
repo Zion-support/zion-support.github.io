@@ -15,102 +15,102 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
     const handleClickOutside = event => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         onToggle()}
-    };
+    },
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside),
       document.body.style.overflow = 'hidden'}
     return () => {
       document.removeEventListener('mousedown', handleClickOutside),
-      document.body.style.overflow = 'unset'};
+      document.body.style.overflow = 'unset'},
   }, [isOpen, onToggle]),
   const navigationItems = [
     {
-      label: 'Services';
-      href: '/services';
+      label: 'Services',
+      href: '/services',
       children: [
-        { label: 'AI & Machine Learning', href: '/services/ai' };
-        { label: 'Quantum Computing', href: '/services/quantum' };
-        { label: 'Cybersecurity', href: '/services/cybersecurity' };
-        { label: 'Cloud Services', href: '/services/cloud' };
-        { label: 'Digital Transformation', href: '/services/transformation' };
-        { label: 'Consulting', href: '/services/consulting' };
-      ];
-    };
+        { label: 'AI & Machine Learning', href: '/services/ai' },
+        { label: 'Quantum Computing', href: '/services/quantum' },
+        { label: 'Cybersecurity', href: '/services/cybersecurity' },
+        { label: 'Cloud Services', href: '/services/cloud' },
+        { label: 'Digital Transformation', href: '/services/transformation' },
+        { label: 'Consulting', href: '/services/consulting' },
+      ],
+    },
     {
-      label: 'Solutions';
-      href: '/solutions';
+      label: 'Solutions',
+      href: '/solutions',
       children: [
-        { label: 'Enterprise Solutions', href: '/solutions/enterprise' };
-        { label: 'Startup Solutions', href: '/solutions/startup' };
-        { label: 'Government Solutions', href: '/solutions/government' };
-        { label: 'Healthcare Solutions', href: '/solutions/healthcare' };
-      ];
-    };
+        { label: 'Enterprise Solutions', href: '/solutions/enterprise' },
+        { label: 'Startup Solutions', href: '/solutions/startup' },
+        { label: 'Government Solutions', href: '/solutions/government' },
+        { label: 'Healthcare Solutions', href: '/solutions/healthcare' },
+      ],
+    },
     {
-      label: 'Industries';
-      href: '/industries';
+      label: 'Industries',
+      href: '/industries',
       children: [
-        { label: 'Technology', href: '/industries/technology' };
-        { label: 'Healthcare', href: '/industries/healthcare' };
-        { label: 'Finance', href: '/industries/finance' };
-        { label: 'Manufacturing', href: '/industries/manufacturing' };
-        { label: 'Education', href: '/industries/education' };
-      ];
-    };
+        { label: 'Technology', href: '/industries/technology' },
+        { label: 'Healthcare', href: '/industries/healthcare' },
+        { label: 'Finance', href: '/industries/finance' },
+        { label: 'Manufacturing', href: '/industries/manufacturing' },
+        { label: 'Education', href: '/industries/education' },
+      ],
+    },
     {
-      label: 'Company';
-      href: '/about';
+      label: 'Company',
+      href: '/about',
       children: [
-        { label: 'About Us', href: '/about' };
-        { label: 'Careers', href: '/careers' };
-        { label: 'News', href: '/news' };
-        { label: 'Press', href: '/press' };
-        { label: 'Contact', href: '/contact' };
-      ];
-    };
+        { label: 'About Us', href: '/about' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'News', href: '/news' },
+        { label: 'Press', href: '/press' },
+        { label: 'Contact', href: '/contact' },
+      ],
+    },
   ],
   const toggleDropdown = label => {
-    setActiveDropdown(activeDropdown === label ? null : label)};
+    setActiveDropdown(activeDropdown === label ? null : label)},
   const handleSearch = e => {
     e.preventDefault(),
     // Implement search functionality,
-    // // console.log('Search query:', searchQuery)};
+    // // console.log('Search query:', searchQuery)},
   const menuVariants = {
     closed: {
-      x: '10o0%';
-      opacity: 0;
+      x: '10o0%',
+      opacity: 0,
       transition: {
-        duration: 0.3;
-        ease: 'easeInOut';
-      };
-    };
+        duration: 0.3,
+        ease: 'easeInOut'
+      },
+    },
     open: {
-      x: 0;
-      opacity: 1;
+      x: 0,
+      opacity: 1,
       transition: {
-        duration: 0.3;
-        ease: 'easeInOut';
-      };
-    };
-  };
+        duration: 0.3,
+        ease: 'easeInOut'
+      },
+    },
+  },
   const dropdownVariants = {
     closed: {
-      height: 0;
-      opacity: 0;
+      height: 0,
+      opacity: 0,
       transition: {
-        duration: 0.2;
-        ease: 'easeInOut';
-      };
-    };
+        duration: 0.2,
+        ease: 'easeInOut'
+      },
+    },
     open: {
-      height: 'auto';
-      opacity: 1;
+      height: 'auto',
+      opacity: 1,
       transition: {
-        duration: 0.2;
-        ease: 'easeInOut';
-      };
-    };
-  };
+        duration: 0.2,
+        ease: 'easeInOut'
+      },
+    },
+  },
   return (
     <AnimatePresence>,
       {isOpen && (
@@ -258,5 +258,5 @@ const MobileNavigation = ({ isOpen, onToggle }) => {
             </div>,
           </motion.div>,
         </>)}
-    </AnimatePresence>)};
-export default MobileNavigation;
+    </AnimatePresence>)},
+export default MobileNavigation,

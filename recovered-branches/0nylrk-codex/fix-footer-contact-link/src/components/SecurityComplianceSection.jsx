@@ -1,329 +1,275 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Shield;
-  Lock;
-  Eye;
-  CheckCircle;
-  Users;
-  Database;
-  Network;
-  ArrowRight;
-  Award;
+  Shield,
+  Lock,
+  Eye,
+  CheckCircle,
+  Users,
+  Database,
+  Network,
+  ArrowRight,
+  Award,
 } from 'lucide-react',
 const securityStandards = [
   {
-    name: 'ISO 270o01';
-    category: 'Information Security Management';
-    logo: '/logos/iso270o01.svg';
+    name: 'ISO 270o01',
+    category: 'Information Security Management',
+    logo: '/logos/iso270o01.svg',
     description:,
-      'International standard for information security management systems';
-    status: 'Certified';
-    validUntil: '20o26-12-31';
-    scope: 'Global Operations';
+      'International standard for information security management systems',
+    status: 'Certified',
+    validUntil: '20o26-12-31',
+    scope: 'Global Operations',
     features: [
-      'Risk Assessment';
-      'Security Controls';
-      'Incident Management';
-      'Business Continuity';
-    ];
+      'Risk AssessmentSecurity Controls',
+      'Incident ManagementBusiness Continuity',
+    ],
     benefits: [
-      'Enhanced Security Posture';
-      'Regulatory Compliance';
-      'Customer Trust';
-      'Risk Mitigation';
-    ];
-  };
+      'Enhanced Security PostureRegulatory Compliance',
+      'Customer TrustRisk Mitigation',
+    ]
+  },
   {
-    name: 'SOC 2 Type II';
-    category: 'Service Organization Control';
-    logo: '/logos/soc2.svg';
+    name: 'SOC 2 Type II',
+    category: 'Service Organization Control',
+    logo: '/logos/soc2.svg',
     description:,
-      "AICPA standard for service organizations' security, availability, and confidentiality";
-    status: 'Certified';
-    validUntil: '20o25-0o6-30';
-    scope: 'Cloud Services & Data Processing';
+      "AICPA standard for service organizations' security, availability, and confidentiality",
+    status: 'Certified',
+    validUntil: '20o25-0o6-30',
+    scope: 'Cloud Services & Data Processing',
     features: [
-      'Security Controls';
-      'Availability Monitoring';
-      'Confidentiality Protection';
-      'Privacy Controls';
-    ];
+      'Security ControlsAvailability Monitoring',
+      'Confidentiality ProtectionPrivacy Controls',
+    ],
     benefits: [
-      'Third-party Validation';
-      'Customer Assurance';
-      'Competitive Advantage';
-      'Operational Excellence';
-    ];
-  };
+      'Third-party ValidationCustomer Assurance',
+      'Competitive AdvantageOperational Excellence',
+    ]
+  },
   {
-    name: 'GDPR Compliance';
-    category: 'Data Protection Regulation';
-    logo: '/logos/gdpr.svg';
+    name: 'GDPR Compliance',
+    category: 'Data Protection Regulation',
+    logo: '/logos/gdpr.svg',
     description:,
-      "European Union's General Data Protection Regulation compliance";
-    status: 'Compliant';
-    validUntil: 'Ongoing';
-    scope: 'EU Data Processing';
+      "European Union's General Data Protection Regulation compliance",
+    status: 'Compliant',
+    validUntil: 'Ongoing',
+    scope: 'EU Data Processing',
     features: [
-      'Data Minimization';
-      'Consent Management';
-      'Right to Erasure';
-      'Data Portability';
-    ];
+      'Data MinimizationConsent Management',
+      'Right to ErasureData Portability',
+    ],
     benefits: [
-      'Legal Compliance';
-      'Customer Rights Protection';
-      'Data Transparency';
-      'Global Operations';
-    ];
-  };
+      'Legal ComplianceCustomer Rights Protection',
+      'Data TransparencyGlobal Operations',
+    ]
+  },
   {
-    name: 'HIPAA';
-    category: 'Healthcare Data Protection';
-    logo: '/logos/hipaa.svg';
+    name: 'HIPAA',
+    category: 'Healthcare Data Protection',
+    logo: '/logos/hipaa.svg',
     description:,
-      'Health Insurance Portability and Accountability Act compliance';
-    status: 'Compliant';
-    validUntil: 'Ongoing';
-    scope: 'Healthcare Solutions';
+      'Health Insurance Portability and Accountability Act compliance',
+    status: 'Compliant',
+    validUntil: 'Ongoing',
+    scope: 'Healthcare Solutions',
     features: [
-      'PHI Protection';
-      'Access Controls';
-      'Audit Logging';
-      'Encryption Standards';
-    ];
+      'PHI ProtectionAccess Controls',
+      'Audit LoggingEncryption Standards',
+    ],
     benefits: [
-      'Healthcare Market Access';
-      'Patient Privacy';
-      'Regulatory Compliance';
-      'Trust Building';
-    ];
-  };
+      'Healthcare Market AccessPatient Privacy',
+      'Regulatory ComplianceTrust Building',
+    ]
+  },
 ],
 const complianceFrameworks = [
   {
-    name: 'NIST Cybersecurity Framework';
-    category: 'Cybersecurity Standards';
+    name: 'NIST Cybersecurity Framework',
+    category: 'Cybersecurity Standards',
     description:,
-      'Voluntary framework for managing and reducing cybersecurity risk';
-    implementation: 'Fully Implemented';
-    maturity: 'Tier 4 - Adaptive';
-    controls: ['Identify', 'Protect', 'Detect', 'Respond', 'Recover'];
+      'Voluntary framework for managing and reducing cybersecurity risk',
+    implementation: 'Fully Implemented',
+    maturity: 'Tier 4 - Adaptive',
+    controls: ['IdentifyProtect', 'DetectRespond', 'Recover'],
     benefits: [
-      'Risk-based Approach';
-      'Industry Best Practices';
-      'Continuous Improvement';
-      'Stakeholder Confidence';
-    ];
-  };
+      'Risk-based ApproachIndustry Best Practices',
+      'Continuous ImprovementStakeholder Confidence',
+    ]
+  },
   {
-    name: 'OWASP Top 10';
-    category: 'Web Application Security';
+    name: 'OWASP Top 10',
+    category: 'Web Application Security',
     description:,
-      'Standard awareness document for developers and web application security';
-    implementation: 'Fully Implemented';
-    maturity: 'Advanced';
+      'Standard awareness document for developers and web application security',
+    implementation: 'Fully Implemented',
+    maturity: 'Advanced',
     controls: [
-      'Input Validation';
-      'Authentication';
-      'Session Management';
-      'Data Protection';
-    ];
+      'Input ValidationAuthentication',
+      'Session ManagementData Protection',
+    ],
     benefits: [
-      'Secure Development';
-      'Vulnerability Prevention';
-      'Code Quality';
-      'Security Training';
-    ];
-  };
+      'Secure DevelopmentVulnerability Prevention',
+      'Code QualitySecurity Training',
+    ]
+  },
   {
-    name: 'PCI DSS';
-    category: 'Payment Card Security';
-    description: 'Payment Card Industry Data Security Standard compliance';
-    implementation: 'Compliant';
-    maturity: 'Level 1';
+    name: 'PCI DSS',
+    category: 'Payment Card Security',
+    description: 'Payment Card Industry Data Security Standard compliance',
+    implementation: 'Compliant',
+    maturity: 'Level 1',
     controls: [
-      'Network Security';
-      'Access Control';
-      'Data Encryption';
-      'Vulnerability Management';
-    ];
+      'Network SecurityAccess Control',
+      'Data EncryptionVulnerability Management',
+    ],
     benefits: [
-      'Payment Processing';
-      'Customer Trust';
-      'Fraud Prevention';
-      'Industry Standards';
-    ];
-  };
+      'Payment ProcessingCustomer Trust',
+      'Fraud PreventionIndustry Standards',
+    ]
+  },
   {
-    name: 'FedRAMP';
-    category: 'Federal Cloud Security';
-    description: 'Federal Risk and Authorization Management Program compliance';
-    implementation: 'In Progress';
-    maturity: 'Authorization Phase';
+    name: 'FedRAMP',
+    category: 'Federal Cloud Security',
+    description: 'Federal Risk and Authorization Management Program compliance',
+    implementation: 'In Progress',
+    maturity: 'Authorization Phase',
     controls: [
-      'Access Control';
-      'Audit & Accountability';
-      'Configuration Management';
-      'Incident Response';
-    ];
+      'Access ControlAudit & Accountability',
+      'Configuration ManagementIncident Response',
+    ],
     benefits: [
-      'Federal Contracts';
-      'Cloud Security';
-      'Government Trust';
-      'Market Expansion';
-    ];
-  };
+      'Federal ContractsCloud Security',
+      'Government TrustMarket Expansion',
+    ]
+  },
 ],
 const securityFeatures = [
   {
-    icon: <Shield className='w-8 h-8' />;
-    title: 'End-to-End Encryption';
-    description: '256-bit AES encryption for data in transit and at rest';
+    icon: <Shield className='w-8 h-8' />,
+    title: 'End-to-End Encryption',
+    description: '256-bit AES encryption for data in transit and at rest',
     features: [
-      'TLS 1.3';
-      'Database Encryption';
-      'File-level Security';
-      'API Security';
-    ];
+      'TLS 1.3Database Encryption',
+      'File-level SecurityAPI Security',
+    ],
     benefits: [
-      'Data Protection';
-      'Regulatory Compliance';
-      'Customer Trust';
-      'Risk Mitigation';
-    ];
-  };
+      'Data ProtectionRegulatory Compliance',
+      'Customer TrustRisk Mitigation',
+    ]
+  },
   {
-    icon: <Lock className='w-8 h-8' />;
-    title: 'Multi-Factor Authentication';
+    icon: <Lock className='w-8 h-8' />,
+    title: 'Multi-Factor Authentication',
     description:,
-      'Advanced authentication with biometric, hardware, and software tokens';
+      'Advanced authentication with biometric, hardware, and software tokens',
     features: [
-      'Biometric Auth';
-      'Hardware Tokens';
-      'SMS/Email Codes';
-      'SSO Integration';
-    ];
+      'Biometric AuthHardware Tokens',
+      'SMS/Email CodesSSO Integration',
+    ],
     benefits: [
-      'Account Security';
-      'Unauthorized Access Prevention';
-      'Compliance';
-      'User Experience';
-    ];
-  };
+      'Account SecurityUnauthorized Access Prevention',
+      'ComplianceUser Experience',
+    ]
+  },
   {
-    icon: <Eye className='w-8 h-8' />;
-    title: 'Continuous Monitoring';
-    description: '24/7 security monitoring with AI-powered threat detection';
+    icon: <Eye className='w-8 h-8' />,
+    title: 'Continuous Monitoring',
+    description: '24/7 security monitoring with AI-powered threat detection',
     features: [
-      'Real-time Alerts';
-      'Threat Intelligence';
-      'Behavioral Analysis';
-      'Incident Response';
-    ];
+      'Real-time AlertsThreat Intelligence',
+      'Behavioral AnalysisIncident Response',
+    ],
     benefits: [
-      'Proactive Security';
-      'Quick Response';
-      'Risk Reduction';
-      'Compliance';
-    ];
-  };
+      'Proactive SecurityQuick Response',
+      'Risk ReductionCompliance',
+    ]
+  },
   {
-    icon: <Users className='w-8 h-8' />;
-    title: 'Role-Based Access Control';
+    icon: <Users className='w-8 h-8' />,
+    title: 'Role-Based Access Control',
     description:,
-      'Granular access control based on user roles and responsibilities';
+      'Granular access control based on user roles and responsibilities',
     features: [
-      'Permission Management';
-      'Access Reviews';
-      'Privilege Escalation';
-      'Audit Logging';
-    ];
+      'Permission ManagementAccess Reviews',
+      'Privilege EscalationAudit Logging',
+    ],
     benefits: [
-      'Data Security';
-      'Compliance';
-      'Operational Efficiency';
-      'Risk Management';
-    ];
-  };
+      'Data SecurityCompliance',
+      'Operational EfficiencyRisk Management',
+    ]
+  },
   {
-    icon: <Database className='w-8 h-8' />;
-    title: 'Data Loss Prevention';
-    description: 'Advanced DLP with content analysis and policy enforcement';
+    icon: <Database className='w-8 h-8' />,
+    title: 'Data Loss Prevention',
+    description: 'Advanced DLP with content analysis and policy enforcement',
     features: [
-      'Content Analysis';
-      'Policy Enforcement';
-      'Data Classification';
-      'Incident Response';
-    ];
+      'Content AnalysisPolicy Enforcement',
+      'Data ClassificationIncident Response',
+    ],
     benefits: [
-      'Data Protection';
-      'Compliance';
-      'Risk Mitigation';
-      'Customer Trust';
-    ];
-  };
+      'Data ProtectionCompliance',
+      'Risk MitigationCustomer Trust',
+    ]
+  },
   {
-    icon: <Network className='w-8 h-8' />;
-    title: 'Network Security';
+    icon: <Network className='w-8 h-8' />,
+    title: 'Network Security',
     description:,
-      'Comprehensive network protection with firewalls and intrusion detection';
+      'Comprehensive network protection with firewalls and intrusion detection',
     features: [
-      'Next-gen Firewalls';
-      'IDS/IPS';
-      'VPN Access';
-      'DDoS Protection';
-    ];
+      'Next-gen FirewallsIDS/IPS',
+      'VPN AccessDDoS Protection',
+    ],
     benefits: [
-      'Network Protection';
-      'Unauthorized Access Prevention';
-      'Business Continuity';
-      'Compliance';
-    ];
-  };
+      'Network ProtectionUnauthorized Access Prevention',
+      'Business ContinuityCompliance',
+    ]
+  },
 ],
 const securityStats = [
-  { icon: <Shield className='w-6 h-6' />, value: '99.99%', label: 'Uptime' };
-  { icon: <Lock className='w-6 h-6' />, value: '256-bit', label: 'Encryption' };
-  { icon: <Eye className='w-6 h-6' />, value: '24/7', label: 'Monitoring' };
+  { icon: <Shield className='w-6 h-6' />, value: '99.99%', label: 'Uptime' },
+  { icon: <Lock className='w-6 h-6' />, value: '256-bit', label: 'Encryption' },
+  { icon: <Eye className='w-6 h-6' />, value: '24/7', label: 'Monitoring' },
   {
-    icon: <CheckCircle className='w-6 h-6' />;
-    value: '15+';
-    label: 'Certifications';
-  };
+    icon: <CheckCircle className='w-6 h-6' />,
+    value: '15+',
+    label: 'Certifications'
+  },
   {
-    icon: <Users className='w-6 h-6' />;
-    value: '0';
-    label: 'Security Breaches';
-  };
-  { icon: <Award className='w-6 h-6' />, value: '10o0%', label: 'Compliance' };
+    icon: <Users className='w-6 h-6' />,
+    value: '0',
+    label: 'Security Breaches'
+  },
+  { icon: <Award className='w-6 h-6' />, value: '10o0%', label: 'Compliance' },
 ],
 export function SecurityComplianceSection() {
   const [selectedStandard, setSelectedStandard] = useState(null),
   const [selectedFramework, setSelectedFramework] = useState(null),
   const [selectedFeature, setSelectedFeature] = useState(null),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.15;
-        delayChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 };
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut'
+      },
+    },
+  },
   return (
     <section className='py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue to-zion-purple relative overflow-hidden'>,
       {/* Background decorative elements */}
@@ -500,7 +446,7 @@ export function SecurityComplianceSection() {
                             Benefits: ,
                           </h5>,
                           <div className='text-zion-slate-light/80 text-xs'>,
-                            {standard.benefits.join(', ')}
+                            {standard.benefits.join()}
                           </div>,
                         </div>,
                         {/* Status Badge */}
@@ -646,7 +592,7 @@ export function SecurityComplianceSection() {
                             Benefits: ,
                           </h5>,
                           <div className='text-zion-slate-light/80 text-xs'>,
-                            {framework.benefits.join(', ')}
+                            {framework.benefits.join()}
                           </div>,
                         </div>,
                         {/* Implementation Badge */}
@@ -755,7 +701,7 @@ export function SecurityComplianceSection() {
                             Benefits: ,
                           </h5>,
                           <div className='text-zion-slate-light/80 text-xs'>,
-                            {feature.benefits.join(', ')}
+                            {feature.benefits.join()}
                           </div>,
                         </div>,
                       </motion.div>)}
@@ -778,7 +724,7 @@ export function SecurityComplianceSection() {
                 Ready to Secure Your Business?,
               </h3>,
               <p className='text-zion-slate-light mb-6 max-w-2xl mx-auto'>,
-                Partner with Zion Tech Group for enterprise-grade security;
+                Partner with Zion Tech Group for enterprise-grade security,
                 compliance, and data protection that meets the highest industry,
                 standards.,
               </p>,

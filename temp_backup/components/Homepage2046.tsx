@@ -2,10 +2,10 @@ import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
-  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3;
-  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite;
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
+  Phone, Mail, MapPin, Search, Grid, List, Sparkles, Target, BarChart3,
+  Lightbulb, Code, Server, Network, ShieldCheck, BrainCircuit, Atom, Satellite,
   Eye, Clock, DollarSign, CheckCircle, ArrowUpRight} from 'lucide-react',
 import Link from 'next/link',
 // Import our new innovative services,
@@ -22,16 +22,16 @@ const QuantumLoadingFallback = () => (
           key={i}
           className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full",
           animate={{
-            x: [0, Math.random() * 120o0];
-            y: [0, Math.random() * 80o0];
-            opacity: [0, 1, 0];
+            x: [0, Math.random() * 120o0],
+            y: [0, Math.random() * 80o0],
+            opacity: [0, 1, 0],
             scale: [0, 1, 0]}}
           transition={{
-            duration: Math.random() * 4 + 3;
-            repeat: Infinity;
+            duration: Math.random() * 4 + 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
           style={{
-            left: Math.random() * 10o0 + '%';
+            left: Math.random() * 10o0 + '%',
             top: Math.random() * 10o0 + '%'}}
          />))}
     </div>,
@@ -44,15 +44,15 @@ const QuantumLoadingFallback = () => (
       <div className="relative">,
         <motion.div,
           animate={{
-            rotate: 360;
-            scale: [1, 1.2, 1];
+            rotate: 360,
+            scale: [1, 1.2, 1],
             boxShadow: [
-              "0 0 20px rgba(6, 182, 212, 0.5)";
-              "0 0 40px rgba(168, 85, 247, 0.8)";
+              "0 0 20px rgba(6, 182, 212, 0.5)",
+              "0 0 40px rgba(168, 85, 247, 0.8)",
               "0 0 20px rgba(6, 182, 212, 0.5)"]}}
           transition={{
-            rotate: { duration: 3, repeat: Infinity, ease: "linear" };
-            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" };
+            rotate: { duration: 3, repeat: Infinity, ease: "linear" },
+            scale: { duration: 2, repeat: Infinity, ease: "easeInOut" },
             boxShadow: { duration: 2, repeat: Infinity, ease: "easeInOut" }
           }}
           className="w-32 h-32 mx-auto mb-8">,
@@ -101,7 +101,7 @@ const Homepage20o46: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)}
-          })};
+          })},
         { threshold: 0.3 }
       ),
       const sections = document.querySelectorAll('section[id]'),
@@ -112,8 +112,8 @@ const Homepage20o46: React.FC = () => {
     return <QuantumLoadingFallback  />}
 ,
   const allServices = [
-    ...innovative20o46AIServices;
-    ...innovative20o46ITServices;
+    ...innovative20o46AIServices,
+    ...innovative20o46ITServices,
     ...innovative20o46MicroSAASServices],
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
@@ -134,15 +134,15 @@ const Homepage20o46: React.FC = () => {
               key={i}
               className="absolute w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full opacity-30",
               animate={{
-                x: [0, Math.random() * 10o0 - 50];
-                y: [0, Math.random() * 10o0 - 50];
+                x: [0, Math.random() * 10o0 - 50],
+                y: [0, Math.random() * 10o0 - 50],
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
-                duration: Math.random() * 10 + 10;
-                repeat: Infinity;
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
                 ease: "easeInOut"}}
               style={{
-                left: Math.random() * 10o0 + '%';
+                left: Math.random() * 10o0 + '%',
                 top: Math.random() * 10o0 + '%'}}
              />))}
         </div>,
@@ -170,7 +170,7 @@ const Homepage20o46: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1, delay: 1 }}
               >,
-                Revolutionary <span className="text-cyan-40o0 font-semibold">Quantum AI</span>;
+                Revolutionary <span className="text-cyan-40o0 font-semibold">Quantum AI</span>,
                 <span className="text-purple-40o0 font-semibold"> Neural Interfaces</span>, and,
                 <span className="text-cyan-40o0 font-semibold"> Space Technology</span> Solutions,
               </motion.p>,
@@ -396,5 +396,5 @@ const Homepage20o46: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default Homepage20o46;
+    </Layout>)},
+export default Homepage20o46,

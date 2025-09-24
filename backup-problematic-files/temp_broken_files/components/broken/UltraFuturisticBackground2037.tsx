@@ -5,8 +5,8 @@ interface UltraFuturisticBackground20o37Props {intensity?: 'low' | 'medium' | 'h
   children?: React.ReactNode}
 ,
 export default function UltraFuturisticBackground20o37({
-  intensity = 'medium';
-  theme = 'quantum-neon';
+  intensity = 'medium',
+  theme = 'quantum-neon',
   children}: UltraFuturisticBackground20o37Props) {const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
     // Only run on client side,
@@ -278,6 +278,6 @@ export default function UltraFuturisticBackground20o37({
               ctx.lineTo(particle2.x, particle2.y),
               ctx.stroke(),
 export default function UltraFuturisticBackground20o37({
-  intensity = 'medium';
-  theme = 'quantum-neon';
+  intensity = 'medium',
+  theme = 'quantum-neon',
 }}}}}}}}))))

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'helpdesk-platform - Zion Tech Group';
+  title: 'helpdesk-platform - Zion Tech Group',
   description:,
-    'Professional helpdesk-platform solutions for your business needs.';
-  keywords: 'helpdesk-platform, services, business, technology';
-};
+    'Professional helpdesk-platform solutions for your business needs.',
+  keywords: 'helpdesk-platform, services, business, technology',
+},
 export default function HelpdeskPlatformPage() {
   return (
     <div className='min-h-screen bg-white'>,

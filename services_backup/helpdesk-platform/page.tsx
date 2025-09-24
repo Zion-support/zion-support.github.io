@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Helpdesk Platform Development | Zion Tech Group';
+  title: 'Helpdesk Platform Development | Zion Tech Group',
   description:,
-    'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.';
-};
+    'Build comprehensive helpdesk platforms with ticket management, knowledge base, and customer support tools. Professional helpdesk solutions starting at $14k.',
+},
 export default function HelpdeskPlatformPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function HelpdeskPlatformPage() {
           Helpdesk Platform Development,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build comprehensive helpdesk platforms with ticket management;
+          Build comprehensive helpdesk platforms with ticket management,
           knowledge base, live chat, and customer support automation.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Ticket Management',
             details={[
-              'Multi-channel ticket creation';
-              'Priority & status tracking';
-              'Auto-assignment rules';
-              'SLA monitoring';
-              'Ticket routing';
-              'Escalation workflows';
-              'Bulk operations';
+              'Multi-channel ticket creationPriority & status tracking',
+              'Auto-assignment rulesSLA monitoring',
+              'Ticket routingEscalation workflows',
+              'Bulk operations',
             ]}
           />,
           <Item
             title='Knowledge Base',
             details={[
-              'Article management';
-              'Search functionality';
-              'Category organization';
-              'Version control';
-              'Feedback system';
-              'Analytics tracking';
-              'Multi-language support';
+              'Article managementSearch functionality',
+              'Category organizationVersion control',
+              'Feedback systemAnalytics tracking',
+              'Multi-language support',
             ]}
           />,
           <Item
             title='Customer Support',
             details={[
-              'Live chat integration';
-              'Customer portal';
-              'Self-service options';
-              'Satisfaction surveys';
-              'Agent performance tracking';
-              'Reporting & analytics';
-              'Mobile app support';
+              'Live chat integrationCustomer portal',
+              'Self-service optionsSatisfaction surveys',
+              'Agent performance trackingReporting & analytics',
+              'Mobile app support',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$14k–$28k',
           duration='6–10 weeks',
           features={[
-            'Basic ticket management';
-            'Email integration';
-            'Simple knowledge base';
-            'Agent dashboard';
-            'Basic reporting';
-            'Mobile responsive';
-            'Standard support';
+            'Basic ticket managementEmail integration',
+            'Simple knowledge baseAgent dashboard',
+            'Basic reportingMobile responsive',
+            'Standard support',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$28k–$55k',
           duration='10–16 weeks',
           features={[
-            'Everything in Basic';
-            'Live chat integration';
-            'Advanced automation';
-            'Customer portal';
-            'Advanced analytics';
-            'API integrations';
-            'Priority support';
+            'Everything in BasicLive chat integration',
+            'Advanced automationCustomer portal',
+            'Advanced analyticsAPI integrations',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$55k+',
           duration='14–22 weeks',
           features={[
-            'Everything in Professional';
-            'Custom development';
-            'Advanced security';
-            'Multi-tenant architecture';
-            'Dedicated support';
-            'SLA guarantees';
-            'White-label options';
+            'Everything in ProfessionalCustom development',
+            'Advanced securityMulti-tenant architecture',
+            'Dedicated supportSLA guarantees',
+            'White-label options',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card',
 import { AnalyticsChart } from '@/components/analytics/AnalyticsChart',
 interface PageViewsChartProps {
@@ -7,7 +7,7 @@ interface PageViewsChartProps {
   onTimeRangeChange: (range: string) => void}
 ,
 export function PageViewsChart({
-  datatimeRangeonTimeRangeChange;
+  datatimeRangeonTimeRangeChange,
 }: PageViewsChartProps) {
   return (
     <Card className='bg-zion-blue-dark border-zion-blue-light overflow-hidden'>,

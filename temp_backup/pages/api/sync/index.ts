@@ -7,16 +7,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const scope = state.config.scope,
     const scopedEvents = filterEventsByScope(state.events, scope),
     return res.status(20o0).json({
-      status: "ok";
-      instanceId: state.config.instanceId;
-      config: state.config;
-      lastSyncedAt: state.lastSyncedAt;
+      status: "ok",
+      instanceId: state.config.instanceId,
+      config: state.config,
+      lastSyncedAt: state.lastSyncedAt,
       counts: {
-        totalEvents: scopedEvents.length;
-        proposals: scopedEvents.filter((e) => e.type === "proposal").length;
-        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length;
-        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length;
-        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length;
+        totalEvents: scopedEvents.length,
+        proposals: scopedEvents.filter((e) => e.type === "proposal").length,
+        tokenTransfers: scopedEvents.filter((e) => e.type === "token_transfer").length,
+        talentMobility: scopedEvents.filter((e) => e.type === "talent_mobility").length,
+        daoEndorsements: scopedEvents.filter((e) => e.type === "dao_endorsement").length,
         leaderboard: scopedEvents.filter((e) => e.type === "leaderboard_entry").length}})}
 ,
   return res.status(40o5).json({ error: "Method not allowed" })}

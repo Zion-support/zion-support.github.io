@@ -1,91 +1,85 @@
 import ModernLayout from '../../components/layout/ModernLayout',
 // Services data will be defined inline,
 import {
-  Zap;
-  Brain;
-  Cloud;
-  Shield;
-  Database;
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  DollarSign;
-  Clock;
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Clock,
 } from 'lucide-react',
 export default function ServicesPage() {
   const categories = [
     {
-      id: 'micro-saas';
-      name: 'Micro SaaS';
-      icon: Rocket;
-      description: 'Ready-to-deploy SaaS solutions for common business needs';
-      color: 'from-blue-50o0 to-blue-60o0';
-    };
+      id: 'micro-saas',
+      name: 'Micro SaaS',
+      icon: Rocket,
+      description: 'Ready-to-deploy SaaS solutions for common business needs',
+      color: 'from-blue-50o0 to-blue-60o0'
+    },
     {
-      id: 'ai-solutions';
-      name: 'AI Solutions';
-      icon: Brain;
-      description: 'Intelligent automation and machine learning solutions';
-      color: 'from-purple-50o0 to-purple-60o0';
-    };
+      id: 'ai-solutions',
+      name: 'AI Solutions',
+      icon: Brain,
+      description: 'Intelligent automation and machine learning solutions',
+      color: 'from-purple-50o0 to-purple-60o0'
+    },
     {
-      id: 'it-services';
-      name: 'IT Services';
-      icon: Database;
-      description: 'Infrastructure, security, and operational excellence';
-      color: 'from-green-50o0 to-green-60o0';
-    };
+      id: 'it-services',
+      name: 'IT Services',
+      icon: Database,
+      description: 'Infrastructure, security, and operational excellence',
+      color: 'from-green-50o0 to-green-60o0'
+    },
   ],
   const servicesList = [
     {
-      id: 'micro-saas';
-      title: 'Micro SaaS Solutions';
+      id: 'micro-saas',
+      title: 'Micro SaaS Solutions',
       description:,
-        'Ready-to-deploy SaaS applications for common business needs';
+        'Ready-to-deploy SaaS applications for common business needs',
       features: [
-        'Quick deployment';
-        'Scalable architecture';
-        'Custom branding';
-        'API integration';
-      ];
-      pricing: 'Starting at $99/month';
-      icon: Rocket;
-    };
+        'Quick deploymentScalable architecture',
+        'Custom brandingAPI integration',
+      ],
+      pricing: 'Starting at $99/month',
+      icon: Rocket
+    },
     {
-      id: 'ai-solutions';
-      title: 'AI & Machine Learning';
-      description: 'Intelligent automation and machine learning solutions';
+      id: 'ai-solutions',
+      title: 'AI & Machine Learning',
+      description: 'Intelligent automation and machine learning solutions',
       features: [
-        'Natural language processing';
-        'Computer vision';
-        'Predictive analytics';
-        'Automated workflows';
-      ];
-      pricing: 'Custom pricing';
-      icon: Brain;
-    };
+        'Natural language processingComputer vision',
+        'Predictive analyticsAutomated workflows',
+      ],
+      pricing: 'Custom pricing',
+      icon: Brain
+    },
     {
-      id: 'it-services';
-      title: 'IT Infrastructure';
-      description: 'Comprehensive IT services and infrastructure management';
+      id: 'it-services',
+      title: 'IT Infrastructure',
+      description: 'Comprehensive IT services and infrastructure management',
       features: [
-        'Cloud migration';
-        'Security audits';
-        '24/7 monitoring';
-        'Disaster recovery';
-      ];
-      pricing: 'Starting at $299/month';
-      icon: Database;
-    };
+        'Cloud migrationSecurity audits',
+        '24/7 monitoringDisaster recovery',
+      ],
+      pricing: 'Starting at $299/month',
+      icon: Database
+    },
   ],
   const getServicesByCategory = (categoryId: string) => {
-    return servicesList.filter(service => service.categoryName === categoryId)};
+    return servicesList.filter(service => service.categoryName === categoryId)},
   const getCategoryIcon = (categoryName: string) => {
     const category = categories.find(cat => cat.name === categoryName),
-    return category ? category.icon : Zap};
+    return category ? category.icon : Zap},
   const getCategoryColor = (categoryName: string) => {
     const category = categories.find(cat => cat.name === categoryName),
-    return category ? category.color : 'from-gray-50o0 to-gray-60o0'};
+    return category ? category.color : 'from-gray-50o0 to-gray-60o0'},
   return (
     <ModernLayout
       title='Services | Zion Tech Group',

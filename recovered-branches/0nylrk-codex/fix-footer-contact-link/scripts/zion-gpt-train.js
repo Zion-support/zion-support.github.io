@@ -4,8 +4,8 @@ import { createReadStream } from 'fs',
 import FormData from 'form-data',
 import fetch from 'node-fetch',
 const {
-  SUPABASE_URL;
-  SUPABASE_SERVICE_ROLE_KEY;
+  SUPABASE_URL,
+  SUPABASE_SERVICE_ROLE_KEY,
   OPENAI_API_KEY} = process.env,
 if (!SUPABASE_URL || !SUPABASE_SERVICE_ROLE_KEY || !OPENAI_API_KEY) {
   console.error('Missing env vars: SUPABASE_URL, SUPABASE_SERVICE_ROLE_KEY, OPENAI_API_KEY'),
@@ -17,9 +17,9 @@ async function fetchData() {
   const resumes = await supabase.from('resumes').select('summary, skills'),
   const supportLogs = await supabase.from('support_logs').select('question, answer'),
   return {
-    jobs: jobPosts.data || [];
-    resumes: resumes.data || [];
-    logs: supportLogs.data || []};
+    jobs: jobPosts.data || [],
+    resumes: resumes.data || [],
+    logs: supportLogs.data || []},
 }
 ,
 function stripPii(text) {
@@ -37,17 +37,17 @@ function buildTrainingPairs(records) {
   const pairs = [],
   for (const job of records.jobs) {
     pairs.push({
-      prompt: `Create a job description titled "${stripPii(job.title)}"`;
+      prompt: `Create a job description titled "${stripPii(job.title)}"`,
       completion: stripPii(job.description)})}
 ,
   for (const resume of records.resumes) {
     pairs.push({
-      prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`;
+      prompt: `Summarize the candidate with skills: ${stripPii(resume.skills)}`,
       completion: stripPii(resume.summary)})}
 ,
   for (const log of records.logs) {
     pairs.push({
-      prompt: stripPii(log.question);
+      prompt: stripPii(log.question),
       completion: stripPii(log.answer)})}
 ,
   return pairs}
@@ -58,23 +58,23 @@ async function saveJsonl(pairs, filePath) {
 ,
 async function createFineTune(filePath) {
   const formData = new FormData(),
-  formData.append('purpose', 'fine-tune'),
+  formData.append('purposefine-tune'),
   formData.append('file', createReadStream(filePath), path.basename(filePath)),
   const uploadRes = await fetch('https://api.openai.com/v1/files', {
-    method: 'POST';
+    method: 'POST',
     headers: {
-      Authorization: `Bearer ${OPENAI_API_KEY}`;
-      ...formData.getHeaders()};
+      Authorization: `Bearer ${OPENAI_API_KEY}`,
+      ...formData.getHeaders()},
     body: formData}),
   const uploaded = await uploadRes.json(),
   // NOTE: additional parameters may be required depending on OpenAI API changes,
   const jobRes = await fetch('https://api.openai.com/v1/fine_tuning/jobs', {
-    method: 'POST';
+    method: 'POST',
     headers: {
-      'Content-Type': 'application/json';
-      Authorization: `Bearer ${OPENAI_API_KEY}`};
+      'Content-Type': 'application/json',
+      Authorization: `Bearer ${OPENAI_API_KEY}`},
     body: JSON.stringify({
-      training_file: uploaded.id;
+      training_file: uploaded.id,
       model: 'gpt-3.5-turbo'})}),
   const job = await jobRes.json(),
   // // console.log('Fine-tune job created:', job.id)}

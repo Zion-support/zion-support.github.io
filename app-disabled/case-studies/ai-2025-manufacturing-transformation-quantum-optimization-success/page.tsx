@@ -1,46 +1,42 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  User;
-  Clock;
-  TrendingUp;
-  DollarSign;
-  Zap;
-  CheckCircle;
-  Award;
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  TrendingUp,
+  DollarSign,
+  Zap,
+  CheckCircle,
+  Award,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings';
+    'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',
   description:,
-    'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.';
+    'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.',
   keywords: [
-    'Manufacturing';
-    'Quantum AI';
-    'Optimization';
-    'ROI Success';
-    'AI 20o25';
-  ];
+    'ManufacturingQuantum AI',
+    'OptimizationROI Success',
+    'AI 20o25',
+  ],
   openGraph: {
     title:,
-      'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings';
+      'AI 20o25 Manufacturing Transformation: Quantum Optimization Delivers $150M Annual Savings',
     description:,
-      'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how a Fortune 50o0 manufacturing company achieved $150M in annual savings through quantum-powered AI optimization, revolutionizing their production processes and supply chain operations.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Manufacturing';
-      'Quantum AI';
-      'Optimization';
-      'ROI Success';
-      'AI 20o25';
-    ];
-  };
-};
+      'ManufacturingQuantum AI',
+      'OptimizationROI Success',
+      'AI 20o25',
+    ]
+  },
+},
 export default function ManufacturingTransformationPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -83,11 +79,9 @@ export default function ManufacturingTransformationPage() {
           </p>,
           <div className='flex flex-wrap gap-2'>,
             {[
-              'Manufacturing';
-              'Quantum AI';
-              'Optimization';
-              'ROI Success';
-              'AI 20o25';
+              'ManufacturingQuantum AI',
+              'OptimizationROI Success',
+              'AI 20o25',
             ].map(tag => (
               <span
                 key={tag}

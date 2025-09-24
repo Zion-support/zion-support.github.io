@@ -27,10 +27,10 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             setCurrentPriceFilter([0, max])}
     }, [allListings]),
     const [currentPriceFilter, setCurrentPriceFilter] = useState([
-        0;
+        0,
         initialPrice.max]),
     const handleSliderChange = (values) => {
-        setCurrentPriceFilter([values[0], values[1]])};
+        setCurrentPriceFilter([values[0], values[1]])},
     const filteredListings = allListings.filter(listing => {
         const matchesSearch = !searchQuery ||,
             listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -57,19 +57,19 @@ export function DynamicListingPage({ title, description, categorySlug, listings:
             setIsLoading(false),
             if (listing) {
                 toast({
-                    title: "Quote Requested";
+                    title: "Quote Requested",
                     description: `Your quote request for ${listing.title} has been sent.`}),
                 navigate("/request-quote", {
                     state: {
-                        serviceType: categorySlug;
+                        serviceType: categorySlug,
                         specificItem: {
-                            id: listing.id;
-                            title: listing.title;
-                            category: listing.category;
+                            id: listing.id,
+                            title: listing.title,
+                            category: listing.category,
                             image: listing.images?.[0]}
                     }
                 })}
-        }, 50o0)};
+        }, 50o0)},
     return (<div className="min-h-screen bg-zion-blue py-12 px-4">,
       <div className="container mx-auto">,
         <div className="text-center mb-12">,

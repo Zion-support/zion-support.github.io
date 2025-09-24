@@ -7,79 +7,79 @@ const AI20o25_20o26TechnologyShowcase = () => {
   const [activeTabsetActiveTab] = useState('ai'),
   const technologies ={
     ai: {
-      title: "Artificial Intelligence";
-      description: "Revolutionary AI solutions transforming industries worldwide";
-      icon: <Brain className="w-12 h-12 text-blue-60o0"  />;
+      title: "Artificial Intelligence",
+      description: "Revolutionary AI solutions transforming industries worldwide",
+      icon: <Brain className="w-12 h-12 text-blue-60o0"  />,
       features: [
-        "Neural Network Optimization";
-        "Machine Learning Automation";
-        "Natural Language Processing";
-        "Computer Vision Systems";
-        "Predictive Analytics";
-        "Intelligent Automation"];
+        "Neural Network Optimization",
+        "Machine Learning Automation",
+        "Natural Language Processing",
+        "Computer Vision Systems",
+        "Predictive Analytics",
+        "Intelligent Automation"],
       stats: [
-        { label: "AI Models Deployed"value: "50o0+" };
-        { label: "Accuracy Rate"value: "99.9%" };
-        { label: "Processing Speed"value: "10o00x" };
+        { label: "AI Models Deployed"value: "50o0+" },
+        { label: "Accuracy Rate"value: "99.9%" },
+        { label: "Processing Speed"value: "10o00x" },
         { label: "Cost Reduction"value: "60%" }
-      ]};
+      ]},
     quantum: {
-      title: "Quantum Computing";
-      description: "Next-generation quantum solutions for complex problem solving";
-      icon: <Cpu className="w-12 h-12 text-purple-60o0"  />;
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions for complex problem solving",
+      icon: <Cpu className="w-12 h-12 text-purple-60o0"  />,
       features: [
-        "Quantum Algorithm Development";
-        "Quantum Machine Learning";
-        "Cryptographic Security";
-        "Optimization Problems";
-        "Simulation Capabilities";
-        "Quantum Networking"];
+        "Quantum Algorithm Development",
+        "Quantum Machine Learning",
+        "Cryptographic Security",
+        "Optimization Problems",
+        "Simulation Capabilities",
+        "Quantum Networking"],
       stats: [
-        { label: "Qubits Processed"value: "10o00+" };
-        { label: "Speed Improvement"value: "10o000x" };
-        { label: "Problems Solved"value: "10o0+" };
+        { label: "Qubits Processed"value: "10o00+" },
+        { label: "Speed Improvement"value: "10o000x" },
+        { label: "Problems Solved"value: "10o0+" },
         { label: "Research Papers"value: "50+" }
-      ]};
+      ]},
     automation: {
-      title: "Intelligent Automation";
-      description: "Smart automation systems that adapt and learn continuously";
-      icon: <Zap className="w-12 h-12 text-green-60o0"  />;
+      title: "Intelligent Automation",
+      description: "Smart automation systems that adapt and learn continuously",
+      icon: <Zap className="w-12 h-12 text-green-60o0"  />,
       features: [
-        "Process Automation";
-        "Workflow Optimization";
-        "Smart Scheduling";
-        "Resource Management";
-        "Quality Control";
-        "Predictive Maintenance"];
+        "Process Automation",
+        "Workflow Optimization",
+        "Smart Scheduling",
+        "Resource Management",
+        "Quality Control",
+        "Predictive Maintenance"],
       stats: [
-        { label: "Processes Automated"value: "10o00+" };
-        { label: "Efficiency Gain"value: "30o0%" };
-        { label: "Error Reduction"value: "95%" };
+        { label: "Processes Automated"value: "10o00+" },
+        { label: "Efficiency Gain"value: "30o0%" },
+        { label: "Error Reduction"value: "95%" },
         { label: "Time Saved"value: "80%" }
-      ]};
+      ]},
     cloud: {
-      title: "Cloud Infrastructure";
-      description: "Scalablesecureand intelligent cloud solutions";
-      icon: <Globe className="w-12 h-12 text-orange-60o0"  />;
+      title: "Cloud Infrastructure",
+      description: "Scalablesecureand intelligent cloud solutions",
+      icon: <Globe className="w-12 h-12 text-orange-60o0"  />,
       features: [
-        "Multi-Cloud Architecture";
-        "Edge Computing";
-        "Serverless Functions";
-        "Container Orchestration";
-        "Auto-Scaling";
-        "Global Distribution"];
+        "Multi-Cloud Architecture",
+        "Edge Computing",
+        "Serverless Functions",
+        "Container Orchestration",
+        "Auto-Scaling",
+        "Global Distribution"],
       stats: [
-        { label: "Global Regions"value: "50+" };
-        { label: "Uptime"value: "99.99%" };
-        { label: "Data Centers"value: "20o0+" };
+        { label: "Global Regions"value: "50+" },
+        { label: "Uptime"value: "99.99%" },
+        { label: "Data Centers"value: "20o0+" },
         { label: "Peak Performance"value: "10o0%" }
       ]}
-  };
+  },
   const tabs = [
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: <Brain className="w-5 h-5"  /> };
-    { id: ''quantum', 'name: ''Quantum', 'icon: <Cpu className="w-5 h-5"  /> };
-    { id: ''automation', 'name: ''Automation', 'icon: <Zap className="w-5 h-5"  /> };
-    { id: ''cloud', 'name: ''Cloud', 'icon: <Globe className="w-5 h-5"  /> }
+    { id: ''ainame: 'AI & 'MLicon: <Brain className="w-5 h-5"  /> },
+    { id: ''quantumname: ''Quantumicon: <Cpu className="w-5 h-5"  /> },
+    { id: ''automationname: ''Automationicon: <Zap className="w-5 h-5"  /> },
+    { id: ''cloudname: ''Cloudicon: <Globe className="w-5 h-5"  /> }
   ],
   const currentTech = technologies[activeTab as keyof typeof technologies],
   return (
@@ -207,5 +207,5 @@ const AI20o25_20o26TechnologyShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25_20o26TechnologyShowcase;
+    </section>)},
+export default AI20o25_20o26TechnologyShowcase,

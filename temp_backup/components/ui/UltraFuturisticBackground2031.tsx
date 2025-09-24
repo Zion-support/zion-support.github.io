@@ -21,12 +21,12 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
     // Create particles,
     for (let i = 0, i < 10o0, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        size: Math.random() * 3 + 1;
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`,
         opacity: Math.random() * 0.5 + 0.3})}
 ,
     const animate = () => {
@@ -57,15 +57,15 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
               ctx.stroke()}
           }
         })}),
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       cancelAnimationFrame(animationId),
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, []),
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">,
@@ -85,36 +85,36 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
         className="fixed top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rounded-lg pointer-events-none",
         style={{ zIndex: 2 }}
         animate={{
-          rotate: [0, 360];
-          scale: [1, 1.2, 1];
+          rotate: [0, 360],
+          scale: [1, 1.2, 1],
           opacity: [0.3, 0.6, 0.3]}}
         transition={{
-          duration: 8;
-          repeat: Infinity;
+          duration: 8,
+          repeat: Infinity,
           ease: "linear"}}
        />,
       <motion.div,
         className="fixed top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full pointer-events-none",
         style={{ zIndex: 2 }}
         animate={{
-          rotate: [360, 0];
-          scale: [1, 1.3, 1];
+          rotate: [360, 0],
+          scale: [1, 1.3, 1],
           opacity: [0.4, 0.7, 0.4]}}
         transition={{
-          duration: 6;
-          repeat: Infinity;
+          duration: 6,
+          repeat: Infinity,
           ease: "linear"}}
        />,
       <motion.div,
         className="fixed bottom-32 left-32 w-40 h-40 border border-green-40o0/30 pointer-events-none",
         style={{ zIndex: 2, clipPath: 'polygon(50% 0%, 0% 10o0%, 10o0% 10o0%)' }}
         animate={{
-          rotate: [0, 360];
-          scale: [1, 1.1, 1];
+          rotate: [0, 360],
+          scale: [1, 1.1, 1],
           opacity: [0.2, 0.5, 0.2]}}
         transition={{
-          duration: 10;
-          repeat: Infinity;
+          duration: 10,
+          repeat: Infinity,
           ease: "linear"}}
        />,
       {/* Neon Glow Effects */}
@@ -134,8 +134,8 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
           animate={{
             opacity: [0, 1, 0]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
@@ -143,9 +143,9 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
           animate={{
             opacity: [0, 1, 0]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1}}
          />,
         <motion.div,
@@ -153,9 +153,9 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
           animate={{
             opacity: [0, 1, 0]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 3,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
         <motion.div,
@@ -163,9 +163,9 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
           animate={{
             opacity: [0, 1, 0]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 3}}
          />,
       </div>,
@@ -176,15 +176,15 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
             key={i}
             className="absolute text-xs text-cyan-40o0/40 font-mono",
             style={{
-              left: `${20 + i * 15}%`;
+              left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`}}
             animate={{
-              y: [0, -20, 0];
+              y: [0, -20, 0],
               opacity: [0.3, 0.8, 0.3]}}
             transition={{
-              duration: 4 + i;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 4 + i,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 0.5}}
           >,
             {`0x${Math.random().toString(16).substr(2, 8).toUpperCase()}`}
@@ -197,19 +197,19 @@ const UltraFuturisticBackground20o31: React.FC<{ children: React.ReactNode }> = 
             key={i}
             className="absolute w-2 h-2 bg-yellow-40o0 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              scale: [0, 1, 0];
-              opacity: [0, 1, 0];
-              x: [0, (Math.random() - 0.5) * 10o0];
+              scale: [0, 1, 0],
+              opacity: [0, 1, 0],
+              x: [0, (Math.random() - 0.5) * 10o0],
               y: [0, (Math.random() - 0.5) * 10o0]}}
             transition={{
-              duration: 2 + Math.random() * 3;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 2 + Math.random() * 3,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: Math.random() * 2}}
            />))}
       </div>,
-    </div>)};
-export default UltraFuturisticBackground20o31;
+    </div>)},
+export default UltraFuturisticBackground20o31,

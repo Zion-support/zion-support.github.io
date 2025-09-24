@@ -1,15 +1,15 @@
 import Layout from '../components/layout/Layout',
 import {
-  Eye;
-  Sparkles;
-  Zap;
-  Target;
-  Camera;
-  Clock;
-  CheckCircle;
-  Image;
-  Video;
-  Search;
+  Eye,
+  Sparkles,
+  Zap,
+  Target,
+  Camera,
+  Clock,
+  CheckCircle,
+  Image,
+  Video,
+  Search,
 } from 'lucide-react',
 export default function AIComputerVision20o41() {
   return (
@@ -63,47 +63,47 @@ export default function AIComputerVision20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Eye className='w-8 h-8' />;
-                  title: 'Advanced Object Detection';
+                  icon: <Eye className='w-8 h-8' />,
+                  title: 'Advanced Object Detection',
                   description:,
-                    'AI systems that identify and locate objects in images and video with pixel-perfect accuracy.';
-                  color: 'from-violet-50o0 to-purple-50o0';
-                };
+                    'AI systems that identify and locate objects in images and video with pixel-perfect accuracy.',
+                  color: 'from-violet-50o0 to-purple-50o0'
+                },
                 {
-                  icon: <Image className='w-8 h-8' />;
-                  title: 'Image Recognition';
+                  icon: <Image className='w-8 h-8' />,
+                  title: 'Image Recognition',
                   description:,
-                    'Deep understanding of image content, context, and meaning with human-like comprehension.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Deep understanding of image content, context, and meaning with human-like comprehension.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Video className='w-8 h-8' />;
-                  title: 'Video Analysis';
+                  icon: <Video className='w-8 h-8' />,
+                  title: 'Video Analysis',
                   description:,
-                    'Real-time video processing and analysis for motion detection and activity recognition.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Real-time video processing and analysis for motion detection and activity recognition.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Search className='w-8 h-8' />;
-                  title: 'Visual Search';
+                  icon: <Search className='w-8 h-8' />,
+                  title: 'Visual Search',
                   description:,
-                    'Find similar images and objects across massive visual databases instantly.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Find similar images and objects across massive visual databases instantly.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Processing';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Processing',
                   description:,
-                    'Instant visual analysis and response with minimal latency for live applications.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Instant visual analysis and response with minimal latency for live applications.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Facial Recognition';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Facial Recognition',
                   description:,
-                    'Advanced facial analysis and recognition with emotion and expression understanding.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Advanced facial analysis and recognition with emotion and expression understanding.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -138,38 +138,38 @@ export default function AIComputerVision20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Object Detection';
+                  name: 'Object Detection',
                   description:,
-                    'Identify and locate objects in images and video';
-                };
+                    'Identify and locate objects in images and video',
+                },
                 {
-                  name: 'Image Classification';
-                  description: 'Categorize images into predefined classes';
-                };
+                  name: 'Image Classification',
+                  description: 'Categorize images into predefined classes'
+                },
                 {
-                  name: 'Semantic Segmentation';
-                  description: 'Pixel-level understanding of image content';
-                };
+                  name: 'Semantic Segmentation',
+                  description: 'Pixel-level understanding of image content'
+                },
                 {
-                  name: 'Instance Segmentation';
-                  description: 'Individual object instance identification';
-                };
+                  name: 'Instance Segmentation',
+                  description: 'Individual object instance identification'
+                },
                 {
-                  name: 'Facial Recognition';
-                  description: 'Identify and analyze human faces';
-                };
+                  name: 'Facial Recognition',
+                  description: 'Identify and analyze human faces'
+                },
                 {
-                  name: 'Optical Character Recognition';
-                  description: 'Extract text from images and documents';
-                };
+                  name: 'Optical Character Recognition',
+                  description: 'Extract text from images and documents'
+                },
                 {
-                  name: 'Motion Detection';
-                  description: 'Detect and track movement in video';
-                };
+                  name: 'Motion Detection',
+                  description: 'Detect and track movement in video'
+                },
                 {
-                  name: 'Image Generation';
-                  description: 'Create and modify images with AI';
-                };
+                  name: 'Image Generation',
+                  description: 'Create and modify images with AI'
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -199,55 +199,50 @@ export default function AIComputerVision20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Image Input';
+                  phase: 'Image Input',
                   description:,
-                    'AI receives and preprocesses images and video from various sources and formats';
+                    'AI receives and preprocesses images and video from various sources and formats',
                   features: [
-                    'Image preprocessing';
-                    'Format normalization';
-                    'Quality enhancement';
-                  ];
-                };
+                    'Image preprocessingFormat normalization',
+                    'Quality enhancement',
+                  ]
+                },
                 {
-                  phase: 'Feature Extraction';
+                  phase: 'Feature Extraction',
                   description:,
-                    'Advanced algorithms extract meaningful features and patterns from visual data';
+                    'Advanced algorithms extract meaningful features and patterns from visual data',
                   features: [
-                    'Feature detection';
-                    'Pattern recognition';
-                    'Edge detection';
-                  ];
-                };
+                    'Feature detectionPattern recognition',
+                    'Edge detection',
+                  ]
+                },
                 {
-                  phase: 'Object Recognition';
+                  phase: 'Object Recognition',
                   description:,
-                    'AI identifies and classifies objects, people, and scenes in images';
+                    'AI identifies and classifies objects, people, and scenes in images',
                   features: [
-                    'Object detection';
-                    'Classification';
-                    'Localization';
-                  ];
-                };
+                    'Object detectionClassification',
+                    'Localization',
+                  ]
+                },
                 {
-                  phase: 'Context Understanding';
+                  phase: 'Context Understanding',
                   description:,
-                    'Deep understanding of visual context, relationships, and meaning';
+                    'Deep understanding of visual context, relationships, and meaning',
                   features: [
-                    'Scene analysis';
-                    'Context interpretation';
-                    'Relationship mapping';
-                  ];
-                };
+                    'Scene analysisContext interpretation',
+                    'Relationship mapping',
+                  ]
+                },
                 {
-                  phase: 'Response Generation';
+                  phase: 'Response Generation',
                   description:,
-                    'Intelligent generation of insights, annotations, and actions based on visual analysis';
+                    'Intelligent generation of insights, annotations, and actions based on visual analysis',
                   features: [
-                    'Insight generation';
-                    'Action recommendations';
-                    'Visual feedback';
-                  ];
-                };
+                    'Insight generationAction recommendations',
+                    'Visual feedback',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -293,65 +288,57 @@ export default function AIComputerVision20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Object Detection';
+                  category: 'Object Detection',
                   description:,
-                    'Models for detecting and localizing objects in images and video with high accuracy.';
+                    'Models for detecting and localizing objects in images and video with high accuracy.',
                   models: [
-                    'YOLO';
-                    'Faster R-CNN';
-                    'SSD';
-                    'RetinaNet';
-                    'EfficientDet';
-                  ];
-                };
+                    'YOLOFaster R-CNN',
+                    'SSDRetinaNet',
+                    'EfficientDet',
+                  ]
+                },
                 {
-                  category: 'Image Classification';
+                  category: 'Image Classification',
                   description:,
-                    'Models for categorizing images into predefined classes and categories.';
+                    'Models for categorizing images into predefined classes and categories.',
                   models: [
-                    'ResNet';
-                    'EfficientNet';
-                    'Vision Transformer';
-                    'ConvNeXt';
-                    'Swin Transformer';
-                  ];
-                };
+                    'ResNetEfficientNet',
+                    'Vision TransformerConvNeXt',
+                    'Swin Transformer',
+                  ]
+                },
                 {
-                  category: 'Semantic Segmentation';
+                  category: 'Semantic Segmentation',
                   description:,
-                    'Models for pixel-level understanding and segmentation of image content.';
-                  models: ['U-Net', 'DeepLab', 'PSPNet', 'SegNet', 'FCN'];
-                };
+                    'Models for pixel-level understanding and segmentation of image content.',
+                  models: ['U-NetDeepLab', 'PSPNetSegNet', 'FCN'],
+                },
                 {
-                  category: 'Facial Recognition';
+                  category: 'Facial Recognition',
                   description:,
-                    'Specialized models for face detection, recognition, and analysis.';
+                    'Specialized models for face detection, recognition, and analysis.',
                   models: [
-                    'FaceNet';
-                    'DeepFace';
-                    'ArcFace';
-                    'RetinaFace';
-                    'BlazeFace';
-                  ];
-                };
+                    'FaceNetDeepFace',
+                    'ArcFaceRetinaFace',
+                    'BlazeFace',
+                  ]
+                },
                 {
-                  category: 'Video Analysis';
+                  category: 'Video Analysis',
                   description:,
-                    'Models designed for understanding temporal information in video sequences.';
-                  models: ['3D ResNet', 'I3D', 'SlowFast', 'X3D', 'Video Swin'];
-                };
+                    'Models designed for understanding temporal information in video sequences.',
+                  models: ['3D ResNetI3D', 'SlowFastX3D', 'Video Swin'],
+                },
                 {
-                  category: 'Image Generation';
+                  category: 'Image Generation',
                   description:,
-                    'Models for creating, modifying, and manipulating images with AI.';
+                    'Models for creating, modifying, and manipulating images with AI.',
                   models: [
-                    'GANs';
-                    'VAEs';
-                    'Diffusion Models';
-                    'StyleGAN';
-                    'DALL-E';
-                  ];
-                };
+                    'GANsVAEs',
+                    'Diffusion ModelsStyleGAN',
+                    'DALL-E',
+                  ]
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -388,65 +375,59 @@ export default function AIComputerVision20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'Quality control, defect detection, and production monitoring with AI-powered vision systems.';
+                    'Quality control, defect detection, and production monitoring with AI-powered vision systems.',
                   applications: [
-                    'Quality inspection';
-                    'Defect detection';
-                    'Production monitoring';
-                  ];
-                };
+                    'Quality inspectionDefect detection',
+                    'Production monitoring',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Medical imaging analysis, diagnosis assistance, and patient monitoring with computer vision.';
+                    'Medical imaging analysis, diagnosis assistance, and patient monitoring with computer vision.',
                   applications: [
-                    'Medical imaging';
-                    'Diagnosis support';
-                    'Patient monitoring';
-                  ];
-                };
+                    'Medical imagingDiagnosis support',
+                    'Patient monitoring',
+                  ]
+                },
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'Inventory management, customer analytics, and security with intelligent vision systems.';
+                    'Inventory management, customer analytics, and security with intelligent vision systems.',
                   applications: [
-                    'Inventory tracking';
-                    'Customer analytics';
-                    'Security monitoring';
-                  ];
-                };
+                    'Inventory trackingCustomer analytics',
+                    'Security monitoring',
+                  ]
+                },
                 {
-                  industry: 'Transportation';
+                  industry: 'Transportation',
                   description:,
-                    'Autonomous vehicles, traffic monitoring, and safety systems with computer vision.';
+                    'Autonomous vehicles, traffic monitoring, and safety systems with computer vision.',
                   applications: [
-                    'Autonomous driving';
-                    'Traffic analysis';
-                    'Safety systems';
-                  ];
-                };
+                    'Autonomous drivingTraffic analysis',
+                    'Safety systems',
+                  ]
+                },
                 {
-                  industry: 'Security';
+                  industry: 'Security',
                   description:,
-                    'Surveillance, access control, and threat detection with AI-powered vision.';
+                    'Surveillance, access control, and threat detection with AI-powered vision.',
                   applications: [
-                    'Surveillance';
-                    'Access control';
-                    'Threat detection';
-                  ];
-                };
+                    'SurveillanceAccess control',
+                    'Threat detection',
+                  ]
+                },
                 {
-                  industry: 'Agriculture';
+                  industry: 'Agriculture',
                   description:,
-                    'Crop monitoring, disease detection, and yield optimization with computer vision.';
+                    'Crop monitoring, disease detection, and yield optimization with computer vision.',
                   applications: [
-                    'Crop monitoring';
-                    'Disease detection';
-                    'Yield optimization';
-                  ];
-                };
+                    'Crop monitoringDisease detection',
+                    'Yield optimization',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -483,33 +464,33 @@ export default function AIComputerVision20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Automated Inspection';
+                  title: 'Automated Inspection',
                   description:,
-                    'Automate quality control and inspection processes with AI-powered visual analysis.';
-                  icon: <Eye className='w-8 h-8' />;
-                  color: 'from-violet-50o0 to-purple-50o0';
-                };
+                    'Automate quality control and inspection processes with AI-powered visual analysis.',
+                  icon: <Eye className='w-8 h-8' />,
+                  color: 'from-violet-50o0 to-purple-50o0'
+                },
                 {
-                  title: 'Enhanced Security';
+                  title: 'Enhanced Security',
                   description:,
-                    'Improve security and surveillance with intelligent threat detection and monitoring.';
-                  icon: <Camera className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Improve security and surveillance with intelligent threat detection and monitoring.',
+                  icon: <Camera className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Cost Reduction';
+                  title: 'Cost Reduction',
                   description:,
-                    'Reduce manual inspection costs while improving accuracy and consistency.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Reduce manual inspection costs while improving accuracy and consistency.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: '24/7 Monitoring';
+                  title: '24/7 Monitoring',
                   description:,
-                    'Enable round-the-clock visual monitoring and analysis without human intervention.';
-                  icon: <Clock className='w-8 h-8' />;
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Enable round-the-clock visual monitoring and analysis without human intervention.',
+                  icon: <Clock className='w-8 h-8' />,
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

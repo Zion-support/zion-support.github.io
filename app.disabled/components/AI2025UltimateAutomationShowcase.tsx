@@ -5,77 +5,77 @@ const AI20o25UltimateAutomationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-automation-revolution';
-      type: 'blog';
+      id: 'ultimate-automation-revolution',
+      type: 'blog',
       title:,
-        'AI 20o25: The Ultimate Automation Revolution - 5,0o00% ROI Breakthrough Guide';
+        'AI 20o25: The Ultimate Automation Revolution - 5,0o00% ROI Breakthrough Guide',
       description:,
-        "Transform your business with revolutionary AI automation that's reshaping industries. Proven 5,0o00% ROI across Fortune 50o0 implementations.";
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o00-roi-breakthrough';
-      category: 'blog';
+        "Transform your business with revolutionary AI automation that's reshaping industries. Proven 5,0o00% ROI across Fortune 50o0 implementations.",
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o00-roi-breakthrough',
+      category: 'blog',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.2B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.7%';
-      };
-      readingTime: '25 min read';
-      featured: true;
-    };
+        roi: '5,0o00%',
+        savings: '$15.2B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.7%'
+      },
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success-story';
-      type: 'case-study';
+      id: 'fortune-50o0-success-story',
+      type: 'case-study',
       title:,
-        'Fortune 50o0 AI Automation Success: $15.2B Annual Savings - 5,0o00% ROI Success Story';
+        'Fortune 50o0 AI Automation Success: $15.2B Annual Savings - 5,0o00% ROI Success Story',
       description:,
-        'How a global manufacturing leader achieved 5,0o00% ROI and $15.2B in annual savings through comprehensive AI automation implementation.';
-      url: '/case-studies/fortune-50o0-ai-automation-50o00-roi-success-story';
-      category: 'case-study';
+        'How a global manufacturing leader achieved 5,0o00% ROI and $15.2B in annual savings through comprehensive AI automation implementation.',
+      url: '/case-studies/fortune-50o0-ai-automation-50o00-roi-success-story',
+      category: 'case-study',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.2B';
-        timeline: '18 months';
-        success: '99.7%';
-      };
-      readingTime: '22 min read';
-      featured: true;
-    };
+        roi: '5,0o00%',
+        savings: '$15.2B',
+        timeline: '18 months',
+        success: '99.7%'
+      },
+      readingTime: '22 min read',
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      type: 'resource';
+      id: 'implementation-guide',
+      type: 'resource',
       title:,
-        'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 5,0o00% ROI';
+        'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 5,0o00% ROI',
       description:,
-        'The definitive guide to transforming your business with revolutionary AI automation. Everything you need to achieve 5,0o00% ROI in 18 months.';
-      url: '/resources/ai-automation-implementation-ultimate-guide-20o25';
-      category: 'resource';
+        'The definitive guide to transforming your business with revolutionary AI automation. Everything you need to achieve 5,0o00% ROI in 18 months.',
+      url: '/resources/ai-automation-implementation-ultimate-guide-20o25',
+      category: 'resource',
       metrics: {
-        roi: '5,0o00%';
-        success: '99.7%';
-        payback: '3.2 months';
-        efficiency: '20o0-40o0%';
-      };
-      readingTime: '35 min read';
-      featured: true;
-    };
+        roi: '5,0o00%',
+        success: '99.7%',
+        payback: '3.2 months',
+        efficiency: '20o0-40o0%'
+      },
+      readingTime: '35 min read',
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.category === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.category === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.category === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.category === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -91,7 +91,7 @@ const AI20o25UltimateAutomationShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -102,7 +102,7 @@ const AI20o25UltimateAutomationShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -149,7 +149,7 @@ const AI20o25UltimateAutomationShowcase = () => {
                     className={`inline-flex items-center px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(item.category)}`}
                   >,
                     <span className='mr-2'>{getTypeIcon(item.category)}</span>,
-                    {item.category.replace('-', ' ').toUpperCase()}
+                    {item.category.replace('- ').toUpperCase()}
                   </div>,
                   {item.featured && (
                     <div className='bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black px-3 py-1 rounded-full text-sm font-bold'>,
@@ -178,7 +178,7 @@ const AI20o25UltimateAutomationShowcase = () => {
                         {value}
                       </div>,
                       <div className='text-xs text-gray-60o0 capitalize'>,
-                        {key.replace('_', ' ')}
+                        {key.replace('_ ')}
                       </div>,
                     </div>))}
                 </div>,
@@ -258,5 +258,5 @@ const AI20o25UltimateAutomationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25UltimateAutomationShowcase;
+    </section>)},
+export default AI20o25UltimateAutomationShowcase,

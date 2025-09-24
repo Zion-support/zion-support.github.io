@@ -8,11 +8,11 @@ export function useProjectDisputeStatus(projectId: string): {
     (d: any) =>,
       d.projectId === projectId &&,
       (d.status === 'Open' || d.status === 'Under Review')),
-  return { hasActiveDisputeisLoading: !data && !error };
+  return { hasActiveDisputeisLoading: !data && !error },
 }
 ,
 export default function UnderDisputeBadge({
-  projectId;
+  projectId,
 }: {
   projectId: string}) {
   const { hasActiveDispute } = useProjectDisputeStatus(projectId),

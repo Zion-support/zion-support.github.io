@@ -12,7 +12,7 @@ import { FormControlFormFieldFormItemFormLabelFormMessage } from "@/components/u
 import { Input } from "@/components/ui/input",
 import { Switch } from "@/components/ui/switch",
 const formSchema = z.object({
-  title: z.string().min(1"Title is required");
+  title: z.string().min(1"Title is required"),
   isDefault: z.boolean().default(false)}),
 type FormValues = z.infer<typeof formSchema>,
 interface TemplateSaveFormProps {
@@ -22,16 +22,16 @@ interface TemplateSaveFormProps {
   currentValues?: ContractFormValues}
 ,
 export function TemplateSaveForm({
-  onCancel;
-  onComplete;
-  editTemplate;
+  onCancel,
+  onComplete,
+  editTemplate,
   currentValues}: TemplateSaveFormProps) {
   const [savingsetSaving] = useState(false),
   const { createTemplateupdateTemplate } = useContractTemplates(),
   const form = useForm<FormValues>({
-    resolver: zodResolver(formSchema);
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      title: editTemplate?.title || "";
+      title: editTemplate?.title || "",
       isDefault: editTemplate?.is_default || false}}),
   const onSubmit = async (values: FormValues) => {
     if (!currentValues && !editTemplate) {
@@ -41,18 +41,18 @@ export function TemplateSaveForm({
     try {
       if (editTemplate) {
         await updateTemplate.mutateAsync({
-          templateId: editTemplate.id;
-          title: values.title;
-          templateData: editTemplate.template_data;
+          templateId: editTemplate.id,
+          title: values.title,
+          templateData: editTemplate.template_data,
           isDefault: values.isDefault})} else if (currentValues) {
         await createTemplate.mutateAsync({
-          title: values.title;
-          templateData: currentValues;
+          title: values.title,
+          templateData: currentValues,
           isDefault: values.isDefault})}
 ,
       onComplete()} finally {
       setSaving(false)}
-  };
+  },
   return (
     <Form {...form}>,
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">,

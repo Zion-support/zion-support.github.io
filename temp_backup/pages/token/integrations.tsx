@@ -14,18 +14,18 @@ export default function TokenIntegrationsPage() {
   const [depinsSyncingsetDepinsSyncing] = useState(false),
   async function syncDepin() {
     if (!account) {
-      await connect();
+      await connect(),
       return}
-    setDepinsSyncing(true);
-    const acts = await fetchDepinActivities(account);
-    const r = calculateRewards(acts);
-    setRewards(r);
+    setDepinsSyncing(true),
+    const acts = await fetchDepinActivities(account),
+    const r = calculateRewards(acts),
+    setRewards(r),
     setDepinsSyncing(false)}
 ,
   async function runOperator() {
     const res = await fetch('/api/operator/suggest-chain'{
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ regionstakeUsd: stake })}),
     const data = await res.json(),
     setSuggestion(data)}

@@ -1,105 +1,100 @@
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  TrendingUp;
-  Clock;
-  Users;
-  DollarSign;
-  Target;
-  CheckCircle;
-  Star;
+  ArrowLeft,
+  TrendingUp,
+  Clock,
+  Users,
+  DollarSign,
+  Target,
+  CheckCircle,
+  Star,
 } from 'lucide-react',
 export const metadata = {
-  title: 'Fortune 50o0 AI Transformation Case Study | Zion Tech Group';
+  title: 'Fortune 50o0 AI Transformation Case Study | Zion Tech Group',
   description:,
-    'How we helped a Fortune 50o0 company achieve 340% ROI increase through comprehensive AI transformation and automation.';
+    'How we helped a Fortune 50o0 company achieve 340% ROI increase through comprehensive AI transformation and automation.',
   keywords: [
-    'case study';
-    'AI transformation';
-    'Fortune 50o0';
-    'enterprise AI';
-    'ROI';
-    'automation';
-  ];
-};
+    'case studyAI transformation',
+    'Fortune 50o0enterprise AI',
+    'ROIautomation',
+  ]
+},
 export default function Fortune50o0AITransformation() {
   const results = [
     {
-      icon: TrendingUp;
-      value: '340%';
-      label: 'ROI Increase';
-      description: 'Measured over 18 months';
-    };
+      icon: TrendingUp,
+      value: '340%',
+      label: 'ROI Increase',
+      description: 'Measured over 18 months'
+    },
     {
-      icon: Clock;
-      value: '65%';
-      label: 'Time Savings';
-      description: 'Process automation efficiency';
-    };
+      icon: Clock,
+      value: '65%',
+      label: 'Time Savings',
+      description: 'Process automation efficiency'
+    },
     {
-      icon: Users;
-      value: '40%';
-      label: 'Cost Reduction';
-      description: 'Operational expenses';
-    };
+      icon: Users,
+      value: '40%',
+      label: 'Cost Reduction',
+      description: 'Operational expenses'
+    },
     {
-      icon: Target;
-      value: '99.9%';
-      label: 'Accuracy Rate';
-      description: 'AI decision accuracy';
-    };
+      icon: Target,
+      value: '99.9%',
+      label: 'Accuracy Rate',
+      description: 'AI decision accuracy'
+    },
   ],
   const challenges = [
-    'Manual processes consuming 60% of workforce time';
-    'Data silos preventing real-time insights';
-    'High operational costs and inefficiencies';
-    'Limited scalability for growth';
-    'Compliance and regulatory requirements';
+    'Manual processes consuming 60% of workforce timeData silos preventing real-time insights',
+    'High operational costs and inefficienciesLimited scalability for growth',
+    'Compliance and regulatory requirements',
   ],
   const solutions = [
     {
-      title: 'AI-Powered Process Automation';
+      title: 'AI-Powered Process Automation',
       description:,
-        'Implemented intelligent automation for 85% of routine tasks';
-      impact: '65% reduction in manual work';
-    };
+        'Implemented intelligent automation for 85% of routine tasks',
+      impact: '65% reduction in manual work'
+    },
     {
-      title: 'Unified Data Platform';
-      description: 'Created centralized data lake with real-time analytics';
-      impact: '90% faster decision making';
-    };
+      title: 'Unified Data Platform',
+      description: 'Created centralized data lake with real-time analytics',
+      impact: '90% faster decision making'
+    },
     {
-      title: 'Predictive Analytics Engine';
-      description: 'Deployed ML models for demand forecasting and optimization';
-      impact: '25% improvement in resource allocation';
-    };
+      title: 'Predictive Analytics Engine',
+      description: 'Deployed ML models for demand forecasting and optimization',
+      impact: '25% improvement in resource allocation'
+    },
     {
-      title: 'Intelligent Customer Service';
-      description: 'Launched AI chatbot handling 80% of customer inquiries';
-      impact: '50% reduction in support costs';
-    };
+      title: 'Intelligent Customer Service',
+      description: 'Launched AI chatbot handling 80% of customer inquiries',
+      impact: '50% reduction in support costs'
+    },
   ],
   const timeline = [
     {
-      phase: 'Discovery & Planning';
-      duration: '4 weeks';
-      description: 'Comprehensive assessment and strategy development';
-    };
+      phase: 'Discovery & Planning',
+      duration: '4 weeks',
+      description: 'Comprehensive assessment and strategy development'
+    },
     {
-      phase: 'Pilot Implementation';
-      duration: '8 weeks';
-      description: 'Proof of concept in select departments';
-    };
+      phase: 'Pilot Implementation',
+      duration: '8 weeks',
+      description: 'Proof of concept in select departments'
+    },
     {
-      phase: 'Full Deployment';
-      duration: '12 weeks';
-      description: 'Organization-wide rollout and integration';
-    };
+      phase: 'Full Deployment',
+      duration: '12 weeks',
+      description: 'Organization-wide rollout and integration'
+    },
     {
-      phase: 'Optimization';
-      duration: 'Ongoing';
-      description: 'Continuous improvement and scaling';
-    };
+      phase: 'Optimization',
+      duration: 'Ongoing',
+      description: 'Continuous improvement and scaling'
+    },
   ],
   return (
     <div className='min-h-screen bg-white'>,
@@ -201,7 +196,7 @@ export default function Fortune50o0AITransformation() {
             </h2>,
             <p className='text-lg text-gray-70o0 mb-6 leading-relaxed'>,
               We implemented a comprehensive AI transformation strategy that,
-              addressed their core challenges through intelligent automation;
+              addressed their core challenges through intelligent automation,
               data unification, and predictive analytics capabilities.,
             </p>,
             <div className='space-y-4'>,
@@ -254,14 +249,10 @@ export default function Fortune50o0AITransformation() {
           </h2>,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>,
             {[
-              'Machine Learning';
-              'Natural Language Processing';
-              'Computer Vision';
-              'Predictive Analytics';
-              'Cloud Computing';
-              'Data Engineering';
-              'API Integration';
-              'Security & Compliance';
+              'Machine LearningNatural Language Processing',
+              'Computer VisionPredictive Analytics',
+              'Cloud ComputingData Engineering',
+              'API IntegrationSecurity & Compliance',
             ].map((tech, index) => (
               <div
                 key={index}

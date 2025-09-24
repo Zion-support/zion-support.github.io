@@ -1,88 +1,85 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 export default function EventsPage() {
   const upcomingEvents = [
     {
-      id: 1;
-      title: 'AI Automation Summit 2025';
-      date: '2025-02-15';
-      time: '9:00 AM - 5:00 PM';
-      location: 'Virtual Event';
-      type: 'Conference';
+      id: 1,
+      title: 'AI Automation Summit 2025',
+      date: '2025-02-15',
+      time: '9:00 AM - 5:00 PM',
+      location: 'Virtual Event',
+      type: 'Conference',
       description:,
-        'Join industry leaders for a comprehensive exploration of AI automation trends, best practices, and future developments.';
-      speakers: ['Dr. Sarah Chen', 'Marcus Rodriguez', 'Dr. Emily Watson'];
-      image: '🎯';
-    };
+        'Join industry leaders for a comprehensive exploration of AI automation trends, best practices, and future developments.',
+      speakers: ['Dr. Sarah ChenMarcus Rodriguez', 'Dr. Emily Watson'],
+      image: '🎯'
+    },
     {
-      id: 2;
-      title: 'DevOps Automation Workshop';
-      date: '2025-02-22';
-      time: '2:00 PM - 6:00 PM';
-      location: 'San Francisco, CA';
-      type: 'Workshop';
+      id: 2,
+      title: 'DevOps Automation Workshop',
+      date: '2025-02-22',
+      time: '2:00 PM - 6:00 PM',
+      location: 'San Francisco, CA',
+      type: 'Workshop',
       description:,
-        'Hands-on workshop covering CI/CD automation, infrastructure as code, and deployment strategies.';
-      speakers: ['Alex Thompson', 'Lisa Park'];
-      image: '⚡';
-    };
+        'Hands-on workshop covering CI/CD automation, infrastructure as code, and deployment strategies.',
+      speakers: ['Alex ThompsonLisa Park'],
+      image: '⚡'
+    },
     {
-      id: 3;
-      title: 'Machine Learning in Production';
-      date: '2025-03-01';
-      time: '10:00 AM - 12:00 PM';
-      location: 'Virtual Webinar';
-      type: 'Webinar';
+      id: 3,
+      title: 'Machine Learning in Production',
+      date: '2025-03-01',
+      time: '10:00 AM - 12:00 PM',
+      location: 'Virtual Webinar',
+      type: 'Webinar',
       description:,
-        'Learn how to deploy and maintain ML models in production environments with real-world examples.';
-      speakers: ['Dr. James Wilson'];
-      image: '🧠';
-    };
+        'Learn how to deploy and maintain ML models in production environments with real-world examples.',
+      speakers: ['Dr. James Wilson'],
+      image: '🧠'
+    },
     {
-      id: 4;
-      title: 'Cloud Infrastructure Automation';
-      date: '2025-03-08';
-      time: '1:00 PM - 3:00 PM';
-      location: 'New York, NY';
-      type: 'Seminar';
+      id: 4,
+      title: 'Cloud Infrastructure Automation',
+      date: '2025-03-08',
+      time: '1:00 PM - 3:00 PM',
+      location: 'New York, NY',
+      type: 'Seminar',
       description:,
-        'Explore advanced cloud automation techniques and tools for scalable infrastructure management.';
-      speakers: ['Rachel Green', 'David Kim'];
-      image: '☁️';
-    };
+        'Explore advanced cloud automation techniques and tools for scalable infrastructure management.',
+      speakers: ['Rachel GreenDavid Kim'],
+      image: '☁️'
+    },
     {
-      id: 5;
-      title: 'AI Ethics & Responsible Development';
-      date: '2025-03-15';
-      time: '11:00 AM - 1:00 PM';
-      location: 'Virtual Panel';
-      type: 'Panel Discussion';
+      id: 5,
+      title: 'AI Ethics & Responsible Development',
+      date: '2025-03-15',
+      time: '11:00 AM - 1:00 PM',
+      location: 'Virtual Panel',
+      type: 'Panel Discussion',
       description:,
-        'Critical discussion on ethical AI development and responsible technology practices.';
-      speakers: ['Prof. Maria Garcia', 'Dr. Robert Chen', 'Sarah Johnson'];
-      image: '⚖️';
-    };
+        'Critical discussion on ethical AI development and responsible technology practices.',
+      speakers: ['Prof. Maria GarciaDr. Robert Chen', 'Sarah Johnson'],
+      image: '⚖️'
+    },
     {
-      id: 6;
-      title: 'Future of Autonomous Systems';
-      date: '2025-03-22';
-      time: '3:00 PM - 5:00 PM';
-      location: 'Austin, TX';
-      type: 'Meetup';
+      id: 6,
+      title: 'Future of Autonomous Systems',
+      date: '2025-03-22',
+      time: '3:00 PM - 5:00 PM',
+      location: 'Austin, TX',
+      type: 'Meetup',
       description:,
-        'Local meetup discussing the evolution of autonomous systems and their impact on various industries.';
-      speakers: ['Mike Davis', 'Jennifer Lee'];
-      image: '🤖';
-    };
+        'Local meetup discussing the evolution of autonomous systems and their impact on various industries.',
+      speakers: ['Mike DavisJennifer Lee'],
+      image: '🤖'
+    },
   ],
   const eventTypes = [
-    'All';
-    'Conference';
-    'Workshop';
-    'Webinar';
-    'Seminar';
-    'Panel Discussion';
-    'Meetup';
+    'AllConference',
+    'WorkshopWebinar',
+    'SeminarPanel Discussion',
+    'Meetup',
   ],
   return (
     <>,
@@ -106,7 +103,7 @@ export default function EventsPage() {
               Upcoming Events,
             </h1>,
             <p className='text-xl text-white/80 max-w-3xl mx-auto'>,
-              Join us at conferences, workshops, and events focused on AI;
+              Join us at conferences, workshops, and events focused on AI,
               automation, and the future of technology,
             </p>,
           </section>,
@@ -170,7 +167,7 @@ export default function EventsPage() {
                         </div>,
                         <div className='flex items-center gap-2'>,
                           <span>🎤</span>,
-                          <span>{event.speakers.join(', ')}</span>,
+                          <span>{event.speakers.join()}</span>,
                         </div>,
                       </div>,
                       <button className='w-full mt-4 px-4 py-2 bg-gradient-to-r from-cyan-400 to-fuchsia-400 text-white font-semibold rounded-lg hover: from-cyan-500 hover:to-fuchsia-500 transition-all duration-200'>,

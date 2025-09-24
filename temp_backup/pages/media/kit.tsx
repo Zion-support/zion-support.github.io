@@ -2,14 +2,14 @@ import { useCallback, useMemo, useState } from 'react',
 import Head from 'next/head',
 import DatePicker from 'react-datepicker',
 import type {
-  MediaBundle;
-  MediaAsset;
-  PressReleaseType;
+  MediaBundle,
+  MediaAsset,
+  PressReleaseType,
 } from '../../utils/mediaKit',
 import {
-  getDefaultAssets;
-  buildPressRelease;
-  buildTimeline;
+  getDefaultAssets,
+  buildPressRelease,
+  buildTimeline,
 } from '../../utils/mediaKit',
 const KitPage = () => {
   const [bundle, setBundle] = useState<MediaBundle>('general'),
@@ -20,7 +20,7 @@ const KitPage = () => {
   const [timeline, setTimeline] = useState<{ label: string, date: string }[]>(
     []),
   const assets: MediaAsset[] = useMemo(
-    () => getDefaultAssets(bundle);
+    () => getDefaultAssets(bundle),
     [bundle]),
   const onGenerateTimeline = useCallback(() => {
     setTimeline(buildTimeline(startDate))}, [startDate]),
@@ -39,15 +39,15 @@ const KitPage = () => {
     // Add press releases,
     const nowStr = new Date().toISOString().substring(0, 10),
     const prSeed = buildPressRelease('seed-round', {
-      companyName;
-      date: nowStr;
-      raiseAmount;
+      companyName,
+      date: nowStr,
+      raiseAmount
     }),
     const prLaunch = buildPressRelease('launch', { companyName, date: nowStr }),
     const prToken = buildPressRelease('token-sale', {
-      companyName;
-      date: nowStr;
-      tokenName;
+      companyName,
+      date: nowStr,
+      tokenName
     }),
     zip.file('press-releases/seed-round.md', prSeed),
     zip.file('press-releases/launch.md', prLaunch),
@@ -66,7 +66,7 @@ const KitPage = () => {
     const page = pdfDoc.addPage([612, 792]),
     const font = await pdfDoc.embedFont(StandardFonts.Helvetica),
     const drawText = (text: string, x: number, y: number, size = 12) => {
-      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })};
+      page.drawText(text, { x, y, size, font, color: rgb(0, 0, 0) })},
     let y = 760,
     drawText('Zion Media Kit', 50, y, 18),
     y -= 24,
@@ -96,17 +96,17 @@ const KitPage = () => {
     link.click(),
     URL.revokeObjectURL(url)}, [assets, bundle, timeline]),
   const PressReleaseCard = ({
-    type;
-    title;
+    type,
+    title,
   }: {
     type: PressReleaseType,
     title: string}) => {
     const nowStr = new Date().toISOString().substring(0, 10),
     const text = buildPressRelease(type, {
-      companyName;
-      date: nowStr;
-      raiseAmount;
-      tokenName;
+      companyName,
+      date: nowStr,
+      raiseAmount,
+      tokenName
     }),
     const onCopy = () => navigator.clipboard.writeText(text),
     return (
@@ -123,7 +123,7 @@ const KitPage = () => {
         <pre className='whitespace-pre-wrap text-xs bg-gray-50 p-3 rounded max-h-60 overflow-auto'>,
           {text}
         </pre>,
-      </div>)};
+      </div>)},
   return (
     <div>,
       <Head>,
@@ -153,7 +153,7 @@ const KitPage = () => {
           <div className='p-4 border rounded-lg'>,
             <h3 className='font-semibold mb-2'>Bundle</h3>,
             <div className='flex gap-2'>,
-              {(['general', 'web3', 'institutional'] as MediaBundle[]).map(
+              {(['generalweb3', 'institutional'] as MediaBundle[]).map(
                 b => (
                   <button
                     key={b}
@@ -239,5 +239,5 @@ const KitPage = () => {
           </div>,
         </section>,
       </div>,
-    </div>)};
-export default KitPage;
+    </div>)},
+export default KitPage,

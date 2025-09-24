@@ -12,36 +12,36 @@ interface AIMatchingResultsProps {
 ,
 const mockMatches: MatchResultItem[] = [
   {
-    id: '1';
-    title: 'AI-Powered Analytics Dashboard';
-    description: 'Advanced analytics dashboard with AI-driven insights and real-time data visualization.';
-    category: 'AI Tools';
-    price: 299;
-    rating: 4.8;
-    imageUrl: '/images/analytics-dashboard.jpg';
-    tags: ['AI', 'Analytics', 'Dashboard', 'Real-time'];
-    matchScore: 95;
+    id: '1',
+    title: 'AI-Powered Analytics Dashboard',
+    description: 'Advanced analytics dashboard with AI-driven insights and real-time data visualization.',
+    category: 'AI Tools',
+    price: 299,
+    rating: 4.8,
+    imageUrl: '/images/analytics-dashboard.jpg',
+    tags: ['AIAnalytics', 'DashboardReal-time'],
+    matchScore: 95,
     provider: {
-      name: 'Tech Solutions Inc.';
-      avatar: '/avatars/tech-solutions.jpg';
-      verified: true};
-    createdAt: '20o24-0o1-15T10:0o0:0o0Z';
-    updatedAt: '20o24-0o1-20T14:30:0o0Z'};
+      name: 'Tech Solutions Inc.',
+      avatar: '/avatars/tech-solutions.jpg',
+      verified: true},
+    createdAt: '20o24-0o1-15T10:0o0:0o0Z',
+    updatedAt: '20o24-0o1-20T14:30:0o0Z'},
   {
-    id: '2';
-    title: 'Cloud Migration Service';
-    description: 'Complete cloud migration service with zero downtime and comprehensive support.';
-    category: 'Cloud Services';
-    price: 150o0;
-    rating: 4.9;
-    imageUrl: '/images/cloud-migration.jpg';
-    tags: ['Cloud', 'Migration', 'AWS', 'Azure'];
-    matchScore: 92;
+    id: '2',
+    title: 'Cloud Migration Service',
+    description: 'Complete cloud migration service with zero downtime and comprehensive support.',
+    category: 'Cloud Services',
+    price: 150o0,
+    rating: 4.9,
+    imageUrl: '/images/cloud-migration.jpg',
+    tags: ['CloudMigration', 'AWSAzure'],
+    matchScore: 92,
     provider: {
-      name: 'Cloud Experts LLC';
-      avatar: '/avatars/cloud-experts.jpg';
-      verified: true};
-    createdAt: '20o24-0o1-10T09:0o0:0o0Z';
+      name: 'Cloud Experts LLC',
+      avatar: '/avatars/cloud-experts.jpg',
+      verified: true},
+    createdAt: '20o24-0o1-10T09:0o0:0o0Z',
     updatedAt: '20o24-0o1-18T16:45:0o0Z'}
 ],
 const getCategoryIcon = (category: string) => {
@@ -54,20 +54,20 @@ const getCategoryIcon = (category: string) => {
       return <BriefcaseIcon className="h-6 w-6"  />,
     default:,
       return <User className="h-6 w-6"  />}
-};
+},
 export function AIMatchingResults({ serviceType }: AIMatchingResultsProps) {
   const [isLoading, setIsLoading] = useState(false),
   const [matches, setMatches] = useState<MatchResultItem[]>(mockMatches),
   const tabs = [
-    { value: 'all', label: 'All Matches', count: matches.length };
-    { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length };
-    { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length };
+    { value: 'all', label: 'All Matches', count: matches.length },
+    { value: 'ai', label: 'AI Tools', count: matches.filter(m => m.category === 'AI Tools').length },
+    { value: 'cloud', label: 'Cloud Services', count: matches.filter(m => m.category === 'Cloud Services').length },
     { value: 'security', label: 'Security', count: matches.filter(m => m.category === 'Security').length }
   ],
   const filteredMatches = (tabValue: string) => {
     if (tabValue === 'all') return matches,
     return matches.filter(match =>,
-      match.category.toLowerCase().includes(tabValue.toLowerCase()))};
+      match.category.toLowerCase().includes(tabValue.toLowerCase()))},
   return (
     <div className="space-y-6">,
       <div className="text-center">,

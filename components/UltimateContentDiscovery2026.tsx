@@ -4,77 +4,77 @@ import Link from 'next/link',
 const UltimateContentDiscovery20o26 = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: '🌟' };
-    { id: ''quantum', 'name: 'Quantum 'AI', 'icon: '⚡' };
-    { id: ''neural', 'name: 'Neural 'Interfaces', 'icon: '🧠' };
-    { id: ''autonomous', 'name: 'Autonomous 'Systems', 'icon: '🤖' };
-    { id: ''analytics', 'name: ''Analytics', 'icon: '📊' };
-    { id: ''edge', 'name: 'Edge 'Computing', 'icon: '💻' }
+    { id: ''allname: 'All 'Contenticon: '🌟' },
+    { id: ''quantumname: 'Quantum 'AIicon: '⚡' },
+    { id: ''neuralname: 'Neural 'Interfacesicon: '🧠' },
+    { id: ''autonomousname: 'Autonomous 'Systemsicon: '🤖' },
+    { id: ''analyticsname: ''Analyticsicon: '📊' },
+    { id: ''edgename: 'Edge 'Computingicon: '💻' }
   ],
   const contentItems = [
     {
-      title: "Quantum AI Breakthrough 20o26";
-      description: "Revolutionary quantum computing integration with artificial intelligence for unprecedented problem-solving capabilities.";
-      category: "quantum";
-      href: "/quantum-ai-20o26-breakthrough";
-      featured: true;
-      image: "🧠⚡";
-      readTime: "8 min read"};
+      title: "Quantum AI Breakthrough 20o26",
+      description: "Revolutionary quantum computing integration with artificial intelligence for unprecedented problem-solving capabilities.",
+      category: "quantum",
+      href: "/quantum-ai-20o26-breakthrough",
+      featured: true,
+      image: "🧠⚡",
+      readTime: "8 min read"},
     {
-      title: "Neural Interface Revolution";
-      description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognitive abilities.";
-      category: "neural";
-      href: "/neural-interface-revolution-20o26";
-      featured: true;
-      image: "🔗🧠";
-      readTime: "12 min read"};
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognitive abilities.",
+      category: "neural",
+      href: "/neural-interface-revolution-20o26",
+      featured: true,
+      image: "🔗🧠",
+      readTime: "12 min read"},
     {
-      title: "Autonomous Business Systems";
-      description: "Self-managing AI systems that handle complex business operations with minimal human intervention.";
-      category: "autonomous";
-      href: "/autonomous-business-systems-20o26";
-      featured: false;
-      image: "🏢🤖";
-      readTime: "10 min read"};
+      title: "Autonomous Business Systems",
+      description: "Self-managing AI systems that handle complex business operations with minimal human intervention.",
+      category: "autonomous",
+      href: "/autonomous-business-systems-20o26",
+      featured: false,
+      image: "🏢🤖",
+      readTime: "10 min read"},
     {
-      title: "Advanced Predictive Analytics";
-      description: "Next-generation analytics powered by quantum algorithms for accurate future predictions.";
-      category: "analytics";
-      href: "/advanced-predictive-analytics-20o26";
-      featured: true;
-      image: "📊🔮";
-      readTime: "6 min read"};
+      title: "Advanced Predictive Analytics",
+      description: "Next-generation analytics powered by quantum algorithms for accurate future predictions.",
+      category: "analytics",
+      href: "/advanced-predictive-analytics-20o26",
+      featured: true,
+      image: "📊🔮",
+      readTime: "6 min read"},
     {
-      title: "Edge Computing Revolution";
-      description: "Ultra-fast edge computing solutions that bring AI processing closer to data sources.";
-      category: "edge";
-      href: "/edge-computing-revolution-20o26";
-      featured: false;
-      image: "⚡💻";
-      readTime: "7 min read"};
+      title: "Edge Computing Revolution",
+      description: "Ultra-fast edge computing solutions that bring AI processing closer to data sources.",
+      category: "edge",
+      href: "/edge-computing-revolution-20o26",
+      featured: false,
+      image: "⚡💻",
+      readTime: "7 min read"},
     {
-      title: "Synthetic Intelligence Networks";
-      description: "Distributed AI networks that create emergent intelligence beyond individual system capabilities.";
-      category: "quantum";
-      href: "/synthetic-intelligence-20o26";
-      featured: true;
-      image: "🌐🧠";
-      readTime: "15 min read"};
+      title: "Synthetic Intelligence Networks",
+      description: "Distributed AI networks that create emergent intelligence beyond individual system capabilities.",
+      category: "quantum",
+      href: "/synthetic-intelligence-20o26",
+      featured: true,
+      image: "🌐🧠",
+      readTime: "15 min read"},
     {
-      title: "Quantum Neural Processing";
-      description: "Combining quantum computing with neural networks for exponential processing power and learning capabilities.";
-      category: "quantum";
-      href: "/quantum-neural-processing-20o26";
-      featured: false;
-      image: "🧠⚡";
-      readTime: "9 min read"};
+      title: "Quantum Neural Processing",
+      description: "Combining quantum computing with neural networks for exponential processing power and learning capabilities.",
+      category: "quantum",
+      href: "/quantum-neural-processing-20o26",
+      featured: false,
+      image: "🧠⚡",
+      readTime: "9 min read"},
     {
-      title: "Autonomous AI Agents";
-      description: "Self-directed AI agents that can independently complete complex tasks and make strategic decisions.";
-      category: "autonomous";
-      href: "/autonomous-ai-agents-20o26";
-      featured: false;
-      image: "🤖🎯";
+      title: "Autonomous AI Agents",
+      description: "Self-directed AI agents that can independently complete complex tasks and make strategic decisions.",
+      category: "autonomous",
+      href: "/autonomous-ai-agents-20o26",
+      featured: false,
+      image: "🤖🎯",
       readTime: "11 min read"}
   ],
   const filteredContent = activeCategory === 'all',
@@ -161,5 +161,5 @@ const UltimateContentDiscovery20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentDiscovery20o26;
+    </section>)},
+export default UltimateContentDiscovery20o26,

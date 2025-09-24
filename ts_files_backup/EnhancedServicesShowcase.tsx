@@ -28,90 +28,70 @@ const EnhancedServicesShowcase: React.FC = () => {
   const [searchTermsetSearchTerm] = useState(''),
   const services: Service[] = [
     {
-      id: 'ai';
-      title: 'AI & Machine Learning';
-      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.';
-      icon: <Brain className="w-8 h-8 text-white" />;
-      gradient: 'from-purple-500 to-pink-500';
+      id: 'ai',
+      title: 'AI & Machine Learning',
+      description: 'Transform your business with cutting-edge artificial intelligence and machine learning solutions.',
+      icon: <Brain className="w-8 h-8 text-white" />,
+      gradient: 'from-purple-500 to-pink-500',
       features: [
-        'Custom AI model development';
-        'Natural language processing';
-        'Computer vision solutions';
-        'Predictive analytics';
-        'AI strategy consulting';
-        'Model optimization & deployment'];
+        'Custom AI model developmentNatural language processing',
+        'Computer vision solutionsPredictive analytics',
+        'AI strategy consultingModel optimization & deployment'],
       benefits: [
-        'Automated decision making';
-        'Enhanced customer experience';
-        'Improved operational efficiency';
-        'Data-driven insights'];
-      technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'Hugging 'Face', 'AWS SageMaker'];
-      href: '/services/ai'};
+        'Automated decision makingEnhanced customer experience',
+        'Improved operational efficiencyData-driven insights'],
+      technologies: [', 'TensorFlowPyTorch', 'OpenAIHugging 'Face', 'AWS SageMaker'],
+      href: '/services/ai'},
     {
-      id: 'cloud';
-      title: 'Cloud Infrastructure';
-      description: 'Scalablesecureand reliable cloud solutions tailored to your business needs.';
-      icon: <Cloud className="w-8 h-8 text-white" />;
-      gradient: 'from-blue-500 to-cyan-500';
+      id: 'cloud',
+      title: 'Cloud Infrastructure',
+      description: 'Scalablesecureand reliable cloud solutions tailored to your business needs.',
+      icon: <Cloud className="w-8 h-8 text-white" />,
+      gradient: 'from-blue-500 to-cyan-500',
       features: [
-        'Multi-cloud architecture design';
-        'Container orchestration';
-        'Serverless computing';
-        'Database migration';
-        'Disaster recovery planning';
-        'Cost optimization'];
+        'Multi-cloud architecture designContainer orchestration',
+        'Serverless computingDatabase migration',
+        'Disaster recovery planningCost optimization'],
       benefits: [
-        '99.9% uptime guarantee';
-        'Scalable infrastructure';
-        'Reduced operational costs';
-        'Enhanced security'];
-      technologies: [', 'AWS', 'Azure'Google 'Cloud', 'Kubernetes'Docker'];
-      href: '/services/cloud'};
+        '99.9% uptime guaranteeScalable infrastructure',
+        'Reduced operational costsEnhanced security'],
+      technologies: [', 'AWSAzure'Google 'CloudKubernetes'Docker'],
+      href: '/services/cloud'},
     {
-      id: 'security';
-      title: 'Cybersecurity';
-      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.';
-      icon: <Shield className="w-8 h-8 text-white" />;
-      gradient: 'from-red-500 to-orange-500';
+      id: 'security',
+      title: 'Cybersecurity',
+      description: 'Comprehensive security solutions to protect your digital assets and ensure compliance.',
+      icon: <Shield className="w-8 h-8 text-white" />,
+      gradient: 'from-red-500 to-orange-500',
       features: [
-        'Security assessment & auditing';
-        'Penetration testing';
-        'Incident response planning';
-        'Compliance management';
-        'Security training';
-        'Threat monitoring'];
+        'Security assessment & auditingPenetration testing',
+        'Incident response planningCompliance management',
+        'Security trainingThreat monitoring'],
       benefits: [
-        'Enterprise-grade protection';
-        'Regulatory compliance';
-        '24/7 threat monitoring';
-        'Reduced security risks'];
-      technologies: [', 'SIEM', 'SOAR', 'EDR', 'XDR'Zero Trust'];
-      href: '/services/security'};
+        'Enterprise-grade protectionRegulatory compliance',
+        '24/7 threat monitoringReduced security risks'],
+      technologies: [', 'SIEMSOAR', 'EDRXDR'Zero Trust'],
+      href: '/services/security'},
     {
-      id: 'quantum';
-      title: 'Quantum Computing';
-      description: 'Next-generation quantum solutions for complex computational challenges and optimization.';
-      icon: <Zap className="w-8 h-8 text-white" />;
-      gradient: 'from-indigo-500 to-purple-500';
+      id: 'quantum',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex computational challenges and optimization.',
+      icon: <Zap className="w-8 h-8 text-white" />,
+      gradient: 'from-indigo-500 to-purple-500',
       features: [
-        'Quantum algorithm development';
-        'Quantum machine learning';
-        'Optimization problems';
-        'Cryptography solutions';
-        'Quantum simulation';
-        'Research & development'];
+        'Quantum algorithm developmentQuantum machine learning',
+        'Optimization problemsCryptography solutions',
+        'Quantum simulationResearch & development'],
       benefits: [
-        'Exponential speed improvements';
-        'Complex problem solving';
-        'Future-ready technology';
-        'Competitive advantage'];
-      technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'IBM 'Quantum', 'Google Quantum'];
+        'Exponential speed improvementsComplex problem solving',
+        'Future-ready technologyCompetitive advantage'],
+      technologies: [', 'QiskitCirq', 'PennyLaneIBM 'Quantum', 'Google Quantum'],
       href: '/services/quantum'}
   ],
   const stats = [
-    { number: '500+'label: 'Projects Delivered' };
-    { number: '99.9%'label: 'Uptime Guarantee' };
-    { number: '50+'label: 'Expert Engineers' };
+    { number: '500+'label: 'Projects Delivered' },
+    { number: '99.9%'label: 'Uptime Guarantee' },
+    { number: '50+'label: 'Expert Engineers' },
     { number: '24/7'label: 'Support Available' }
   ],
   return (
@@ -309,5 +289,5 @@ const EnhancedServicesShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedServicesShowcase;
+    </section>)},
+export default EnhancedServicesShowcase,

@@ -6,29 +6,29 @@ import {
   Building2,
   TrendingUp,
   DollarSign,
-  Users;
+  Users,
   ArrowRight,
-  X;
-  CheckCircle;
-  Zap;
-  BarChart3;
-  Shield;
-  Award;
+  X,
+  CheckCircle,
+  Zap,
+  BarChart3,
+  Shield,
+  Award,
   Clock} from 'lucide-react',
 const BusinessSolutionsShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [currentMetricsetCurrentMetric] = useState(0),
   const metrics = [
-    { label: ''ROI', 'value: '30o0%'icon: TrendingUpcolor: 'text-green-50o0' };
-    { label: 'Cost 'Savings', 'value: '$2.5B+'icon: DollarSigncolor: 'text-blue-50o0' };
-    { label: ''Companies', 'value: '10K+'icon: Building2color: 'text-purple-50o0' };
-    { label: ''Satisfaction', 'value: '98%'icon: Awardcolor: 'text-yellow-50o0' }
+    { label: ''ROIvalue: '30o0%'icon: TrendingUpcolor: 'text-green-50o0' },
+    { label: 'Cost 'Savingsvalue: '$2.5B+'icon: DollarSigncolor: 'text-blue-50o0' },
+    { label: ''Companiesvalue: '10K+'icon: Building2color: 'text-purple-50o0' },
+    { label: ''Satisfactionvalue: '98%'icon: Awardcolor: 'text-yellow-50o0' }
   ],
   const solutions = [
-    { name: ''Automation', 'icon: Zapcolor: 'from-blue-50o0 to-cyan-50o0' };
-    { name: ''Analytics', 'icon: BarChart3color: 'from-purple-50o0 to-pink-50o0' };
-    { name: ''Security', 'icon: Shieldcolor: 'from-green-50o0 to-emerald-50o0' }
+    { name: ''Automationicon: Zapcolor: 'from-blue-50o0 to-cyan-50o0' },
+    { name: ''Analyticsicon: BarChart3color: 'from-purple-50o0 to-pink-50o0' },
+    { name: ''Securityicon: Shieldcolor: 'from-green-50o0 to-emerald-50o0' }
   ],
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true)30o00),
@@ -40,50 +40,50 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
       return () => clearInterval(interval)}
   }[isVisiblemetrics.length]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   const containerVariants ={
     hidden: {
       opacity: 0,
-      y: -10o0;
-      scale: 0.9};
+      y: -10o0,
+      scale: 0.9},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        type: "spring";
-        stiffness: 10o0;
-        damping: 15;
+        type: "spring",
+        stiffness: 10o0,
+        damping: 15,
         duration: 0.8}
-    };
+    },
     exit: {
-      opacity: 0;
-      y: -10o0;
-      scale: 0.9;
+      opacity: 0,
+      y: -10o0,
+      scale: 0.9,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   const textVariants ={
-    hidden: { opacity: 0x: -20 };
+    hidden: { opacity: 0x: -20 },
     visible: {
-      opacity: 1;
-      x: 0;
+      opacity: 1,
+      x: 0,
       transition: {
-        delay: 0.3;
+        delay: 0.3,
         duration: 0.6}
     }
-  };
+  },
   const buttonVariants ={
-    hidden: { opacity: 0scale: 0.8 };
+    hidden: { opacity: 0scale: 0.8 },
     visible: {
-      opacity: 1;
-      scale: 1;
+      opacity: 1,
+      scale: 1,
       transition: {
-        delay: 0.6;
+        delay: 0.6,
         duration: 0.4}
     }
-  };
+  },
   if (isDismissed) return null,
   return (
     <AnimatePresence>,
@@ -105,7 +105,7 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
                   <motion.div,
                     className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center",
                     animate={{
-                      rotate: [0o360];
+                      rotate: [0o360],
                       scale: [1.1]}}
                     transition={{
                       duration: 4,
@@ -222,36 +222,36 @@ const BusinessSolutionsShowcase20o25PromotionBanner = () => {
             <motion.div,
               className="absolute -top-4 -left-4 w-24 h-24 bg-white/10 rounded-full",
               animate={{
-                scale: [1.21];
+                scale: [1.21],
                 opacity: [0.30.60.3]}}
               transition={{
-                duration: 3;
-                repeat: Infinity;
+                duration: 3,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute -bottom-4 -right-4 w-32 h-32 bg-white/5 rounded-full",
               animate={{
-                scale: [1.31];
+                scale: [1.31],
                 opacity: [0.20.40.2]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: 1}}
              />,
             <motion.div,
               className="absolute top-1/2 left-1/2 w-16 h-16 bg-white/8 rounded-full",
               animate={{
-                scale: [1.51];
+                scale: [1.51],
                 opacity: [0.10.30.1]}}
               transition={{
-                duration: 2.5;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: 0.5}}
              />,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default BusinessSolutionsShowcase20o25PromotionBanner;
+    </AnimatePresence>)},
+export default BusinessSolutionsShowcase20o25PromotionBanner,

@@ -1,11 +1,11 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 const InteractiveCard = ({
-  children;
-  className = '';
-  hoverScale = 1.05;
-  hoverShadow = 'lg';
-  onClick;
+  children,
+  className = '',
+  hoverScale = 1.05,
+  hoverShadow = 'lg',
+  onClick,
   disabled = false}) => {
   const [isHovered, setIsHovered] = useState(false),
   return (
@@ -16,11 +16,11 @@ const InteractiveCard = ({
         ${className}
       `}
       whileHover={!disabled ? {
-        scale: hoverScale;
+        scale: hoverScale,
         transition: { duration: 0.2 }
       } : {}}
       whileTap={!disabled ? {
-        scale: 0.98;
+        scale: 0.98,
         transition: { duration: 0.1 }
       } : {}}
       onHoverStart={() => !disabled && setIsHovered(true)}
@@ -48,5 +48,5 @@ const InteractiveCard = ({
           borderColor: isHovered ? '#3b82f6' : 'transparent'}}
         transition={{ duration: 0.3 }}
       />,
-    </motion.div>)};
-export default InteractiveCard;
+    </motion.div>)},
+export default InteractiveCard,

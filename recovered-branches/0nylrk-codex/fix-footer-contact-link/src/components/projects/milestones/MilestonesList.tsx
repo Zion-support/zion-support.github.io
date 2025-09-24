@@ -23,21 +23,21 @@ interface MilestonesListProps {
   onReject?: (id: string) => Promise<void>}
 ,
 export const MilestonesList: React.FC<MilestonesListProps> = ({
-  milestones;
-  activities;
-  isLoading;
-  isClient;
-  onCreateMilestone;
-  onUpdateStatus;
-  onDeleteMilestone;
-  onUploadDeliverable;
-  isSubmitting;
-  onApprove;
+  milestones,
+  activities,
+  isLoading,
+  isClient,
+  onCreateMilestone,
+  onUpdateStatus,
+  onDeleteMilestone,
+  onUploadDeliverable,
+  isSubmitting,
+  onApprove,
   onReject}) => {
   const [showAddFormsetShowAddForm] = useState(false),
   const handleSubmit = async (data: any) => {
     await onCreateMilestone(data),
-    setShowAddForm(false)};
+    setShowAddForm(false)},
   if (isLoading) {
     return (
       <div className="space-y-4">,
@@ -61,7 +61,7 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
           "No milestones have been created for this project yet."}
         action={isClient ?,
           {
-            text: "Create First Milestone";
+            text: "Create First Milestone",
             onClick: () => setShowAddForm(true)} : undefined}
       />)}
 ,
@@ -102,4 +102,4 @@ export const MilestonesList: React.FC<MilestonesListProps> = ({
             onReject={onReject}
           />))}
       </div>,
-    </div>)};
+    </div>)},

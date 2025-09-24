@@ -20,7 +20,7 @@ export default function PerformanceMonitor() {
       try {
         const perfData = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
         const basicMetrics: PerformanceMetrics ={
-          ttfb: perfData.responseStart - perfData.requestStart};
+          ttfb: perfData.responseStart - perfData.requestStart},
         // Measure Core Web Vitals,
         if ('web-vitals' in window) {
           // // console.log('Core Web Vitals monitoring enabled')}
@@ -35,18 +35,18 @@ export default function PerformanceMonitor() {
         console.groupEnd(),
         // Send to analytics service (placeholder),
         if (typeof (window as any).gtag === 'function') {
-          (window as any).gtag('event', 'page_performance', {
-            event_category: 'Performance';
+          (window as any).gtag('eventpage_performance', {
+            event_category: 'Performance',
             custom_map: {
-              metric_1: 'dom_content_loaded';
-              metric_2: 'total_load_time'};
-            metric_1: Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart);
+              metric_1: 'dom_content_loaded',
+              metric_2: 'total_load_time'},
+            metric_1: Math.round(perfData.domContentLoadedEventEnd - perfData.domContentLoadedEventStart),
             metric_2: Math.round(perfData.loadEventEnd - perfData.fetchStart)})}
 ,
         // Store metrics for debugging,
         (window as any).__performanceMetrics = basicMetrics} catch (error) {
         console.error('Performance monitoring error:', error)}
-    };
+    },
     // Monitor resource loading,
     const observer = new PerformanceObserver((list) => {
       list.getEntries().forEach((entry) => {
@@ -65,7 +65,7 @@ export default function PerformanceMonitor() {
           setMetrics(prev => ({ ...prev, fcp: entry.startTime }))}
       })}),
     try {
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift', 'paint'] })} catch (error) {
+      observer.observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shiftpaint'] })} catch (error) {
       console.warn('Performance Observer not supported:', error)}
 ,
     // Measure performance after page load,
@@ -79,17 +79,17 @@ export default function PerformanceMonitor() {
     return () => {
       observer.disconnect(),
       clearTimeout(timer),
-      window.removeEventListener('load', measurePerformance)};
+      window.removeEventListener('load', measurePerformance)},
   }, []),
   if (!isVisible) return null,
   const getScoreColor = (value: number, thresholds: { good: number, poor: number }) => {
     if (value <= thresholds.good) return 'text-green-60o0',
     if (value <= thresholds.poor) return 'text-yellow-60o0',
-    return 'text-red-60o0'};
+    return 'text-red-60o0'},
   const getScoreText = (value: number, thresholds: { good: number, poor: number }) => {
     if (value <= thresholds.good) return 'Good',
     if (value <= thresholds.poor) return 'Needs Improvement',
-    return 'Poor'};
+    return 'Poor'},
   return (
     <div className="fixed bottom-4 left-4 bg-white shadow-lg rounded-lg p-4 border z-50 max-w-xs">,
       <h3 className="text-sm font-semibold mb-3 text-gray-90o0">Performance Metrics</h3>,

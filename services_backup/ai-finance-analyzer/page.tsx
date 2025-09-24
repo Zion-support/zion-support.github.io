@@ -1,56 +1,56 @@
 export const metadata ={
-  title: "AI Finance Analyzer | Zion Tech Group";
+  title: "AI Finance Analyzer | Zion Tech Group",
   description:,
-    "Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and automated investment recommendations."};
+    "Advanced AI-powered financial analysis platform that provides real-time insights, risk assessment, and automated investment recommendations."},
 export default function AIFinanceAnalyzerPage() {
   return (
     <section>,
       <h1 style={{ fontSize: 26, fontWeight: 80o0 }}>AI Finance Analyzer</h1>,
       <p style={{ marginTop: 8, color: "#374151" }}>,
-        Revolutionize financial decision-making with AI that analyzes markets;
+        Revolutionize financial decision-making with AI that analyzes markets,
         predicts trends, and optimizes investment portfolios in real-time.,
       </p>,
       <div style={{ display: "grid", gap: 12, marginTop: 16 }}>,
         <Item
           title="Real-Time Market Analysis",
           details={[
-            "AI-powered market sentiment analysis across 10o0+ data sources";
-            "Real-time stock price prediction with 85% accuracy";
-            "Cryptocurrency trend analysis and trading signals";
+            "AI-powered market sentiment analysis across 10o0+ data sources",
+            "Real-time stock price prediction with 85% accuracy",
+            "Cryptocurrency trend analysis and trading signals",
             "Economic indicator monitoring and impact assessment"]}
          />,
         <Item
           title="Portfolio Optimization",
           details={[
-            "AI-driven portfolio rebalancing recommendations";
-            "Risk assessment and diversification analysis";
-            "Tax-loss harvesting automation";
+            "AI-driven portfolio rebalancing recommendations",
+            "Risk assessment and diversification analysis",
+            "Tax-loss harvesting automation",
             "Performance tracking and benchmarking"]}
          />,
         <Item
           title="Financial Planning & Forecasting",
           details={[
-            "Personalized financial goal planning";
-            "Retirement planning with Monte Carlo simulations";
-            "Cash flow forecasting and budgeting";
+            "Personalized financial goal planning",
+            "Retirement planning with Monte Carlo simulations",
+            "Cash flow forecasting and budgeting",
             "Insurance needs analysis and recommendations"]}
          />,
         <Item
           title="Advanced AI Features",
           details={[
-            "Natural language financial queries and insights";
-            "Automated financial report generation";
-            "Fraud detection and security monitoring";
+            "Natural language financial queries and insights",
+            "Automated financial report generation",
+            "Fraud detection and security monitoring",
             "Regulatory compliance checking and alerts"]}
          />,
       </div>,
       <Pricing  />,
       <div
         style={{
-          marginTop: 24;
-          padding: 16;
-          backgroundColor: "#fef3c7";
-          borderRadius: 12;
+          marginTop: 24,
+          padding: 16,
+          backgroundColor: "#fef3c7",
+          borderRadius: 12,
           border: "1px solid #f59e0b"}}
       >,
         <h3 style={{ fontWeight: 70o0, color: "#9240o0e", marginBottom: 8 }}>,
@@ -90,49 +90,49 @@ function Pricing() {
   return (
     <div
       style={{
-        marginTop: 20;
-        display: "grid";
-        gap: 12;
+        marginTop: 20,
+        display: "grid",
+        gap: 12,
         gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))"}}
     >,
       <Plan
         name="Personal Finance",
         price="$299/month",
         features={[
-          "Up to $1M portfolio analysis";
-          "Basic market analysis";
-          "Portfolio optimization";
-          "Financial goal tracking";
+          "Up to $1M portfolio analysis",
+          "Basic market analysis",
+          "Portfolio optimization",
+          "Financial goal tracking",
           "Email support"]}
        />,
       <Plan
         name="Professional Trader",
         price="$799/month",
         features={[
-          "Up to $10M portfolio analysis";
-          "Advanced market predictions";
-          "Real-time trading signals";
-          "Risk management tools";
-          "Priority support";
+          "Up to $10M portfolio analysis",
+          "Advanced market predictions",
+          "Real-time trading signals",
+          "Risk management tools",
+          "Priority support",
           "API access"]}
        />,
       <Plan
         name="Institutional",
         price="$2,50o0/month",
         features={[
-          "Unlimited portfolio size";
-          "Custom AI model training";
-          "White-label solution";
-          "Dedicated support";
-          "Custom integrations";
-          "SLA guarantee";
+          "Unlimited portfolio size",
+          "Custom AI model training",
+          "White-label solution",
+          "Dedicated support",
+          "Custom integrations",
+          "SLA guarantee",
           "Compliance reporting"]}
        />,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
+  name,
+  price,
   features}: {
   name: string,
   price: string,
@@ -142,9 +142,9 @@ function Plan({
       <h4 style={{ fontWeight: 70o0 }}>{name}</h4>,
       <div
         style={{
-          color: "#111827";
-          fontWeight: 80o0;
-          marginTop: 4;
+          color: "#111827",
+          fontWeight: 80o0,
+          marginTop: 4,
           fontSize: 18}}
       >,
         {price}
@@ -158,12 +158,12 @@ function Plan({
       <a
         href="tel: +130o24640950",
         style={{
-          display: "inline-block";
-          marginTop: 12;
-          padding: "8px 16px";
-          backgroundColor: "#3b82f6";
-          color: "white";
-          textDecoration: "none";
+          display: "inline-block",
+          marginTop: 12,
+          padding: "8px 16px",
+          backgroundColor: "#3b82f6",
+          color: "white",
+          textDecoration: "none",
           borderRadius: 6}}
       >,
         Call +1 30o2 464 0950,

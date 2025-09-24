@@ -8,245 +8,245 @@ import {
   Cpu,
   Globe,
   Zap,
-  Heart;
-  Calendar;
-  Clock;
+  Heart,
+  Calendar,
+  Clock,
   ArrowRight,
   Star,
-  Sparkles;
-  TrendingUp;
-  Award;
-  Target;
-  CheckCircle;
-  Play;
-  Settings;
-  BarChart3;
-  Lightbulb;
-  Users;
-  Shield;
-  Database;
-  Cloud;
-  Activity;
-  PieChart;
-  LineChart;
-  BarChart;
-  TrendingDown;
-  RefreshCw;
-  Download;
-  Upload;
-  Share2;
-  ThumbsUp;
-  MessageCircle;
-  Bookmark;
-  Flag;
-  AlertTriangle;
-  Info;
-  HelpCircle;
-  Search;
-  Filter;
-  SortAsc;
-  SortDesc;
-  Grid;
-  List;
-  MapPin;
-  Phone;
-  Mail;
-  ExternalLink;
-  Maximize;
-  Minimize;
-  X;
-  Plus;
-  Minus;
-  Edit;
-  Trash2;
-  Copy;
-  Save;
-  Folder;
-  File;
-  FolderOpen;
-  Archive;
-  Inbox;
-  Send;
-  Receive;
-  Sync;
-  WifiOff;
-  Battery;
-  Signal;
-  Volume2;
-  VolumeX;
-  Camera;
-  Mic;
-  MicOff;
-  Headphones;
-  Speaker;
-  Monitor;
-  Tablet;
-  Watch;
-  Gamepad2;
-  Controller;
-  Joystick;
-  Mouse;
-  Keyboard;
-  Printer;
-  Scanner;
-  HardDrive;
-  Disc;
-  Usb;
-  Bluetooth;
-  Wifi2;
-  Router;
-  Modem;
-  Switch;
-  Hub;
-  Cable;
-  Plug;
-  Power;
-  BatteryCharging;
-  BatteryLow;
-  BatteryFull;
-  BatteryEmpty;
-  ZapOff;
-  Zap2;
-  Flashlight;
-  FlashlightOff;
-  Sun;
-  Moon;
-  Sunrise;
-  Sunset;
-  CloudRain;
-  CloudSnow;
-  CloudLightning;
-  CloudDrizzle;
-  CloudHail;
-  CloudFog;
-  Wind;
-  Thermometer;
-  Droplets;
-  Umbrella;
-  Snowflake;
-  Flame;
-  Snow;
-  Tornado;
-  Hurricane;
-  Earthquake;
-  Volcano;
-  Mountain;
-  Trees;
-  Leaf;
-  Flower;
-  Seedling;
-  Sprout;
-  Cherry;
-  Apple;
-  Banana;
-  Carrot;
-  Corn;
-  Grape;
-  Lemon;
-  Orange;
-  Peach;
-  Pear;
-  Pineapple;
-  Strawberry;
-  Watermelon;
-  Avocado;
-  Broccoli;
-  Cabbage;
-  Cucumber;
-  Eggplant;
-  Garlic;
-  Ginger;
-  Kiwi;
-  Mango;
-  Mushroom;
-  Onion;
-  Pepper;
-  Potato;
-  Tomato;
-  Wheat;
-  Rice;
-  Bread;
-  Croissant;
-  Bagel;
-  Pretzel;
-  Cookie;
-  Cake;
-  Cupcake;
-  Donut;
-  Lollipop;
-  Candy;
-  Chocolate;
-  IceCream;
-  Pizza;
-  Hamburger;
-  HotDog;
-  Sandwich;
-  Taco;
-  Burrito;
-  Salad;
-  Soup;
-  Steak;
-  Chicken;
-  Fish;
-  Shrimp;
-  Lobster;
-  Crab;
-  Octopus;
-  Squid;
-  Snail;
-  Bee;
-  Butterfly;
-  Bug;
-  Spider;
-  Ant;
-  Ladybug;
-  Dragonfly;
-  Firefly;
-  Mosquito;
-  Fly;
-  Beetle;
-  Grasshopper;
-  Cricket;
-  Mantis;
-  Wasp;
-  Hornet;
-  Bumblebee;
-  Honeybee;
-  Wasp2;
-  Hornet2;
-  Bumblebee2;
-  Honeybee2;
-  Wasp3;
-  Hornet3;
-  Bumblebee3;
-  Honeybee3;
-  Wasp4;
-  Hornet4;
-  Bumblebee4;
-  Honeybee4;
-  Wasp5;
-  Hornet5;
-  Bumblebee5;
-  Honeybee5;
-  Wasp6;
-  Hornet6;
-  Bumblebee6;
-  Honeybee6;
-  Wasp7;
-  Hornet7;
-  Bumblebee7;
-  Honeybee7;
-  Wasp8;
-  Hornet8;
-  Bumblebee8;
-  Honeybee8;
-  Wasp9;
-  Hornet9;
-  Bumblebee9;
-  Honeybee9;
-  Wasp10;
-  Hornet10;
-  Bumblebee10;
+  Sparkles,
+  TrendingUp,
+  Award,
+  Target,
+  CheckCircle,
+  Play,
+  Settings,
+  BarChart3,
+  Lightbulb,
+  Users,
+  Shield,
+  Database,
+  Cloud,
+  Activity,
+  PieChart,
+  LineChart,
+  BarChart,
+  TrendingDown,
+  RefreshCw,
+  Download,
+  Upload,
+  Share2,
+  ThumbsUp,
+  MessageCircle,
+  Bookmark,
+  Flag,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Grid,
+  List,
+  MapPin,
+  Phone,
+  Mail,
+  ExternalLink,
+  Maximize,
+  Minimize,
+  X,
+  Plus,
+  Minus,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  Folder,
+  File,
+  FolderOpen,
+  Archive,
+  Inbox,
+  Send,
+  Receive,
+  Sync,
+  WifiOff,
+  Battery,
+  Signal,
+  Volume2,
+  VolumeX,
+  Camera,
+  Mic,
+  MicOff,
+  Headphones,
+  Speaker,
+  Monitor,
+  Tablet,
+  Watch,
+  Gamepad2,
+  Controller,
+  Joystick,
+  Mouse,
+  Keyboard,
+  Printer,
+  Scanner,
+  HardDrive,
+  Disc,
+  Usb,
+  Bluetooth,
+  Wifi2,
+  Router,
+  Modem,
+  Switch,
+  Hub,
+  Cable,
+  Plug,
+  Power,
+  BatteryCharging,
+  BatteryLow,
+  BatteryFull,
+  BatteryEmpty,
+  ZapOff,
+  Zap2,
+  Flashlight,
+  FlashlightOff,
+  Sun,
+  Moon,
+  Sunrise,
+  Sunset,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
+  CloudDrizzle,
+  CloudHail,
+  CloudFog,
+  Wind,
+  Thermometer,
+  Droplets,
+  Umbrella,
+  Snowflake,
+  Flame,
+  Snow,
+  Tornado,
+  Hurricane,
+  Earthquake,
+  Volcano,
+  Mountain,
+  Trees,
+  Leaf,
+  Flower,
+  Seedling,
+  Sprout,
+  Cherry,
+  Apple,
+  Banana,
+  Carrot,
+  Corn,
+  Grape,
+  Lemon,
+  Orange,
+  Peach,
+  Pear,
+  Pineapple,
+  Strawberry,
+  Watermelon,
+  Avocado,
+  Broccoli,
+  Cabbage,
+  Cucumber,
+  Eggplant,
+  Garlic,
+  Ginger,
+  Kiwi,
+  Mango,
+  Mushroom,
+  Onion,
+  Pepper,
+  Potato,
+  Tomato,
+  Wheat,
+  Rice,
+  Bread,
+  Croissant,
+  Bagel,
+  Pretzel,
+  Cookie,
+  Cake,
+  Cupcake,
+  Donut,
+  Lollipop,
+  Candy,
+  Chocolate,
+  IceCream,
+  Pizza,
+  Hamburger,
+  HotDog,
+  Sandwich,
+  Taco,
+  Burrito,
+  Salad,
+  Soup,
+  Steak,
+  Chicken,
+  Fish,
+  Shrimp,
+  Lobster,
+  Crab,
+  Octopus,
+  Squid,
+  Snail,
+  Bee,
+  Butterfly,
+  Bug,
+  Spider,
+  Ant,
+  Ladybug,
+  Dragonfly,
+  Firefly,
+  Mosquito,
+  Fly,
+  Beetle,
+  Grasshopper,
+  Cricket,
+  Mantis,
+  Wasp,
+  Hornet,
+  Bumblebee,
+  Honeybee,
+  Wasp2,
+  Hornet2,
+  Bumblebee2,
+  Honeybee2,
+  Wasp3,
+  Hornet3,
+  Bumblebee3,
+  Honeybee3,
+  Wasp4,
+  Hornet4,
+  Bumblebee4,
+  Honeybee4,
+  Wasp5,
+  Hornet5,
+  Bumblebee5,
+  Honeybee5,
+  Wasp6,
+  Hornet6,
+  Bumblebee6,
+  Honeybee6,
+  Wasp7,
+  Hornet7,
+  Bumblebee7,
+  Honeybee7,
+  Wasp8,
+  Hornet8,
+  Bumblebee8,
+  Honeybee8,
+  Wasp9,
+  Hornet9,
+  Bumblebee9,
+  Honeybee9,
+  Wasp10,
+  Hornet10,
+  Bumblebee10,
   Honeybee10} from 'lucide-react',
 const FutureTechPredictions20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -258,24 +258,21 @@ const FutureTechPredictions20o25PromotionBanner = () => {
       setCurrentPrediction((prev) => (prev + 1) % predictions.length)}40o00),
     return () => clearInterval(interval)}[]),
   const predictions = [
-    'AI Consciousness Breakthrough';
-    'Quantum Computing Revolution';
-    'Neural Interface Integration';
-    'Autonomous Everything';
-    'Digital Immortality';
-    'Singularity Arrival'],
+    'AI Consciousness BreakthroughQuantum Computing Revolution',
+    'Neural Interface IntegrationAutonomous Everything',
+    'Digital ImmortalitySingularity Arrival'],
   const years = ['20o25'20o26'20o27'20o28'20o29'20o30'],
   const stats = [
-    { label: ''Predictions', 'value: '50+' };
-    { label: ''Accuracy', 'value: '85%' };
-    { label: 'Years 'Covered', 'value: '6' };
-    { label: ''Technologies', 'value: '25+' }
+    { label: ''Predictionsvalue: '50+' },
+    { label: ''Accuracyvalue: '85%' },
+    { label: 'Years 'Coveredvalue: '6' },
+    { label: ''Technologiesvalue: '25+' }
   ],
   const technologies = [
-    { name: 'AI 'Consciousness', 'progress: 85color: 'from-purple-50o0 to-pink-50o0' };
-    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-50o0 to-cyan-50o0' };
-    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-50o0 to-emerald-50o0' };
-    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-50o0 to-rose-50o0' }
+    { name: 'AI 'Consciousnessprogress: 85color: 'from-purple-50o0 to-pink-50o0' },
+    { name: 'Quantum 'Computingprogress: 65color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: 'Neural 'Interfacesprogress: 45color: 'from-green-50o0 to-emerald-50o0' },
+    { name: 'Digital 'Immortalityprogress: 25color: 'from-pink-50o0 to-rose-50o0' }
   ],
   return (
     <div className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 py-16 overflow-hidden">,
@@ -437,10 +434,10 @@ const FutureTechPredictions20o25PromotionBanner = () => {
           transition={{ duration: 0.8delay: 1.4 }}
           className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8">,
           {[
-            { icon: TrendingUplabel: ''Accuracy', 'value: '85%' };
-            { icon: Awardlabel: ''Predictions', 'value: '50+' };
-            { icon: Rocketlabel: ''Years', 'value: '6' };
-            { icon: Starlabel: ''Technologies', 'value: '25+' }
+            { icon: TrendingUplabel: ''Accuracyvalue: '85%' },
+            { icon: Awardlabel: ''Predictionsvalue: '50+' },
+            { icon: Rocketlabel: ''Yearsvalue: '6' },
+            { icon: Starlabel: ''Technologiesvalue: '25+' }
           ].map((itemindex) => (
             <motion.div,
               key={item.label}
@@ -456,5 +453,5 @@ const FutureTechPredictions20o25PromotionBanner = () => {
             </motion.div>))}
         </motion.div>,
       </div>,
-    </div>)};
-export default FutureTechPredictions20o25PromotionBanner;
+    </div>)},
+export default FutureTechPredictions20o25PromotionBanner,

@@ -21,7 +21,7 @@ export const parseSearchQuery = (query: string) => {
     filters && filters.keywords = keywords}
 ,
   // Extract skills (simple heuristic),
-  const skillKeywords = ['javascript', 'react', 'node', 'python', 'java', 'typescript', 'vue', 'angular', 'php', 'ruby', 'go', 'rust', 'swift', 'kotlin', 'c++', 'c#', 'html', 'css', 'sql', 'mongodb', 'postgresql', 'mysql', 'redis', 'docker', 'kubernetes', 'aws', 'azure', 'gcp', 'git', 'github', 'gitlab', 'jenkins', 'ci/cd', 'devops', 'frontend', 'backend', 'fullstack', 'mobile', 'ios', 'android', 'web', 'api', 'rest', 'graphql', 'microservices', 'blockchain', 'ai', 'ml', 'data', 'analytics', 'design', 'ui', 'ux', 'figma', 'sketch', 'adobe', 'photoshop', 'illustrator'],
+  const skillKeywords = ['javascriptreact', 'nodepython', 'javatypescript', 'vueangular', 'phpruby', 'gorust', 'swiftkotlin', 'c++c#', 'htmlcss', 'sqlmongodb', 'postgresqlmysql', 'redisdocker', 'kubernetesaws', 'azuregcp', 'gitgithub', 'gitlabjenkins', 'ci/cddevops', 'frontendbackend', 'fullstackmobile', 'iosandroid', 'webapi', 'restgraphql', 'microservicesblockchain', 'aiml', 'dataanalytics', 'designui', 'uxfigma', 'sketchadobe', 'photoshopillustrator'],
   for (const word of words) {
     if (skillKeywords && skillKeywords.includes(word)) {
       skills && skills.push(word)}
@@ -31,22 +31,22 @@ export const parseSearchQuery = (query: string) => {
     filters && filters.skills = skills}
 ,
   return filters,
-    keywords: [];
-    skills: [];
-    location: null;
-    type: null};
-};
+    keywords: [],
+    skills: [],
+    location: null,
+    type: null},
+},
 export const searchAll = (parsed: any, access: any) => {
   // Add search functionality here,
   return {
-    all: [];
-    talent: [];
-    jobs: [];
-    projects: []};
-};
+    all: [],
+    talent: [],
+    jobs: [],
+    projects: []},
+},
 export const suggestDidYouMean = (query: string) => {
   // Add did you mean functionality here,
   return null}
-};
+},
 }
 >>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

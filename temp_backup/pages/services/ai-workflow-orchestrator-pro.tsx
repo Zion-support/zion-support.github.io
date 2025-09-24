@@ -1,20 +1,20 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  Users;
-  Zap;
-  Shield;
-  TrendingUp;
-  ArrowRight;
-  Play;
-  Clock;
-  Award;
-  Globe;
-  Cpu;
-  Brain;
+  Check,
+  Star,
+  Users,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  Play,
+  Clock,
+  Award,
+  Globe,
+  Cpu,
+  Brain,
 } from 'lucide-react',
 export default function AIWorkflowOrchestratorPro() {
   return (
@@ -62,48 +62,48 @@ export default function AIWorkflowOrchestratorPro() {
               Revolutionary AI-Powered Features,
             </h2>,
             <p className='text-xl text-blue-20o0 max-w-3xl mx-auto'>,
-              Transform your workflows with cutting-edge AI that learns, adapts;
+              Transform your workflows with cutting-edge AI that learns, adapts,
               and optimizes in real-time,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                icon: <Brain className='w-8 h-8' />;
-                title: 'AI-Powered Workflow Optimization';
+                icon: <Brain className='w-8 h-8' />,
+                title: 'AI-Powered Workflow Optimization',
                 description:,
-                  'Machine learning algorithms continuously analyze and optimize your workflows for maximum efficiency';
-              };
+                  'Machine learning algorithms continuously analyze and optimize your workflows for maximum efficiency',
+              },
               {
-                icon: <TrendingUp className='w-8 h-8' />;
-                title: 'Predictive Bottleneck Detection';
+                icon: <TrendingUp className='w-8 h-8' />,
+                title: 'Predictive Bottleneck Detection',
                 description:,
-                  'Identify potential workflow bottlenecks before they impact your operations';
-              };
+                  'Identify potential workflow bottlenecks before they impact your operations',
+              },
               {
-                icon: <Zap className='w-8 h-8' />;
-                title: 'Dynamic Workflow Adaptation';
+                icon: <Zap className='w-8 h-8' />,
+                title: 'Dynamic Workflow Adaptation',
                 description:,
-                  'Automatically adjust workflows based on real-time performance data and business rules';
-              };
+                  'Automatically adjust workflows based on real-time performance data and business rules',
+              },
               {
-                icon: <Globe className='w-8 h-8' />;
-                title: 'Real-Time Performance Analytics';
+                icon: <Globe className='w-8 h-8' />,
+                title: 'Real-Time Performance Analytics',
                 description:,
-                  'Comprehensive dashboards showing workflow performance, efficiency metrics, and optimization opportunities';
-              };
+                  'Comprehensive dashboards showing workflow performance, efficiency metrics, and optimization opportunities',
+              },
               {
-                icon: <Cpu className='w-8 h-8' />;
-                title: 'Intelligent Resource Allocation';
+                icon: <Cpu className='w-8 h-8' />,
+                title: 'Intelligent Resource Allocation',
                 description:,
-                  'AI automatically assigns resources based on workload, priority, and availability';
-              };
+                  'AI automatically assigns resources based on workload, priority, and availability',
+              },
               {
-                icon: <Shield className='w-8 h-8' />;
-                title: 'Advanced Error Handling';
+                icon: <Shield className='w-8 h-8' />,
+                title: 'Advanced Error Handling',
                 description:,
-                  'Smart error detection and recovery with automated fallback mechanisms';
-              };
+                  'Smart error detection and recovery with automated fallback mechanisms',
+              },
             ].map((feature, index) => (
               <motion.div,
                 key={index}
@@ -144,12 +144,9 @@ export default function AIWorkflowOrchestratorPro() {
             >,
               <div className='space-y-6'>,
                 {[
-                  'Increase operational efficiency by 40-60%';
-                  'Reduce process bottlenecks by 70%';
-                  'Automate complex decision-making processes';
-                  'Real-time workflow optimization and adaptation';
-                  'Predictive analytics for proactive management';
-                  'Seamless integration with existing systems';
+                  'Increase operational efficiency by 40-60%Reduce process bottlenecks by 70%',
+                  'Automate complex decision-making processesReal-time workflow optimization and adaptation',
+                  'Predictive analytics for proactive managementSeamless integration with existing systems',
                 ].map((benefit, index) => (
                   <div key={index} className='flex items-start space-x-3'>,
                     <Check className='w-6 h-6 text-green-40o0 mt-1 flex-shrink-0' />,
@@ -216,20 +213,20 @@ export default function AIWorkflowOrchestratorPro() {
               Built with Cutting-Edge Technology,
             </h2>,
             <p className='text-xl text-blue-20o0 max-w-3xl mx-auto'>,
-              Enterprise-grade technology stack ensuring reliability;
+              Enterprise-grade technology stack ensuring reliability,
               scalability, and performance,
             </p>,
           </motion.div>,
           <div className='grid grid-cols-2 md: grid-cols-4 gap-8'>,
             {[
-              { name: 'Python', description: 'Core AI/ML engine' };
-              { name: 'TensorFlow', description: 'Machine learning framework' };
-              { name: 'Apache Airflow', description: 'Workflow orchestration' };
-              { name: 'Redis', description: 'High-performance caching' };
-              { name: 'PostgreSQL', description: 'Reliable data storage' };
-              { name: 'React', description: 'Modern user interface' };
-              { name: 'Node.js', description: 'Scalable backend' };
-              { name: 'Docker', description: 'Containerized deployment' };
+              { name: 'Python', description: 'Core AI/ML engine' },
+              { name: 'TensorFlow', description: 'Machine learning framework' },
+              { name: 'Apache Airflow', description: 'Workflow orchestration' },
+              { name: 'Redis', description: 'High-performance caching' },
+              { name: 'PostgreSQL', description: 'Reliable data storage' },
+              { name: 'React', description: 'Modern user interface' },
+              { name: 'Node.js', description: 'Scalable backend' },
+              { name: 'Docker', description: 'Containerized deployment' },
             ].map((tech, index) => (
               <motion.div,
                 key={index}
@@ -283,14 +280,10 @@ export default function AIWorkflowOrchestratorPro() {
                   </h4>,
                   <ul className='space-y-3'>,
                     {[
-                      'Unlimited workflow automation';
-                      'AI-powered optimization';
-                      'Real-time analytics dashboard';
-                      'Advanced error handling';
-                      'Multi-tenant support';
-                      'API access';
-                      '24/7 support';
-                      'Regular updates and improvements';
+                      'Unlimited workflow automationAI-powered optimization',
+                      'Real-time analytics dashboardAdvanced error handling',
+                      'Multi-tenant supportAPI access',
+                      '24/7 supportRegular updates and improvements',
                     ].map((feature, index) => (
                       <li key={index} className='flex items-center space-x-3'>,
                         <Check className='w-5 h-5 text-green-40o0 flex-shrink-0' />,
@@ -304,14 +297,10 @@ export default function AIWorkflowOrchestratorPro() {
                   </h4>,
                   <ul className='space-y-3'>,
                     {[
-                      '21-day free trial';
-                      'Setup in 3-5 days';
-                      'Training and onboarding';
-                      'Custom integrations';
-                      'Performance optimization';
-                      'Scalability planning';
-                      'Compliance support';
-                      'Dedicated success manager';
+                      '21-day free trialSetup in 3-5 days',
+                      'Training and onboardingCustom integrations',
+                      'Performance optimizationScalability planning',
+                      'Compliance supportDedicated success manager',
                     ].map((benefit, index) => (
                       <li key={index} className='flex items-center space-x-3'>,
                         <Check className='w-5 h-5 text-green-40o0 flex-shrink-0' />,

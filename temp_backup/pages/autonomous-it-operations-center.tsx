@@ -9,14 +9,11 @@ export default function AutonomousITOperationsCenter() {
       implementationWeeks='Implementation: 4-8 weeks',
       roiNote='50-80% reduction in incident handling time',
       features={[
-        'Anomaly detection and correlation';
-        'Automated runbooks and remediation';
-        'Change risk analysis and approvals';
-        'SLOs, error budgets, and guardrails';
-        'Incident insights and postmortems';
-        'Integrations: Datadog, New Relic, Splunk, PagerDuty';
+        'Anomaly detection and correlationAutomated runbooks and remediation',
+        'Change risk analysis and approvalsSLOs, error budgets, and guardrails',
+        'Incident insights and postmortemsIntegrations: Datadog, New Relic, Splunk, PagerDuty',
       ]}
-      industries={['Enterprise IT', 'SaaS', 'Telecom', 'Finance']}
+      industries={['Enterprise ITSaaS', 'TelecomFinance']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/autonomous-it-operations-center',
     />)}

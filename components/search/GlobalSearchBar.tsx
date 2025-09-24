@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 "use client",
 import { useEffectuseMemouseRefuseState } from 'react',
 import { useRouter } from 'next/router',
@@ -20,15 +20,15 @@ export default function GlobalSearchBar() {
         const j = await r.json(),
         setSuggestions(j.suggestions || []),
         setOpen(true)} catch {}
-    };
+    },
     const id = setTimeout(run150),
     return () => clearTimeout(id)}[query]),
   const onSubmit = (e?: React.FormEvent) => {
     e?.preventDefault(),
     if (!query.trim()) return,
-    fetch('/api/telemetry/search'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ q: query }) }).catch(() => {}),
+    fetch('/api/telemetry/search'{ method: ''POSTheaders: { 'Content-Type': 'application/json' }body: JSON.stringify({ q: query }) }).catch(() => {}),
     router.push(`/search?q=${encodeURIComponent(query)}`),
-    setOpen(false)};
+    setOpen(false)},
   const startVoice = () => {
     if (typeof window === 'undefined') return,
     const Speech: any = (window as any).SpeechRecognition || (window as any).webkitSpeechRecognition,
@@ -36,9 +36,9 @@ export default function GlobalSearchBar() {
     const rec = new Speech(),
     rec.lang = 'en-US',
     rec.onresult = (e: any) => {
-      const transcript = e.results?.[0]?.[0]?.transcript || ', ',
-      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))};
-    rec.start()};
+      const transcript = e.results?.[0]?.[0]?.transcript || ,
+      if (transcript) setQuery((q) => (q ? q + ' ' + transcript : transcript))},
+    rec.start()},
   return (
     <form onSubmit={onSubmit} className="relative w-full max-w-lg" role="search">,
       <input

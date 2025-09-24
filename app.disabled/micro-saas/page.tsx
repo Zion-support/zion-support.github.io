@@ -2,23 +2,21 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'Micro SaaS Solutions - Zion Tech Group';
+  title: 'Micro SaaS Solutions - Zion Tech Group',
   description:,
-    'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.';
+    'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',
   keywords: [
-    'micro saas';
-    'custom software';
-    'business solutions';
-    'scalable applications';
-  ];
+    'micro saascustom software',
+    'business solutionsscalable applications',
+  ],
   openGraph: {
-    title: 'Micro SaaS Solutions - Zion Tech Group';
+    title: 'Micro SaaS Solutions - Zion Tech Group',
     description:,
-      'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.';
-    type: 'website';
-    url: '/micro-saas';
-  };
-};
+      'Custom micro SaaS applications that solve specific business challenges with modern, scalable solutions.',
+    type: 'website',
+    url: '/micro-saas'
+  },
+},
 export default function MicroSaaS() {
   return (
     <div className='min-h-screen bg-white'>,

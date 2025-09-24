@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Autonomous Vehicles Revolution 20o25 - Zion Tech Group';
+  title: 'Autonomous Vehicles Revolution 20o25 - Zion Tech Group',
   description:,
-    'Explore the revolutionary advances in autonomous vehicle technology in 20o25. Discover how AI is transforming transportation, safety, and mobility across industries.';
+    'Explore the revolutionary advances in autonomous vehicle technology in 20o25. Discover how AI is transforming transportation, safety, and mobility across industries.',
   keywords: [
-    'autonomous vehicles';
-    'self-driving';
-    'AI 20o25';
-    'transportation';
-    'automotive AI';
-  ];
-};
+    'autonomous vehiclesself-driving',
+    'AI 20o25transportation',
+    'automotive AI',
+  ]
+},
 export default function AutonomousVehiclesRevolution20o25Page() {
   return (
     <div>,
@@ -121,7 +119,7 @@ export default function AutonomousVehiclesRevolution20o25Page() {
                   Safety Systems,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Multi-layer safety systems with fail-safe mechanisms;
+                  Multi-layer safety systems with fail-safe mechanisms,
                   emergency protocols, and human override capabilities.,
                 </p>,
               </div>,

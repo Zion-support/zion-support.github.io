@@ -2,107 +2,90 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  CheckCircle;
-  Mail;
-  Zap;
-  Users;
-  Shield;
-  TrendingUp;
-  BarChart3;
-  Clock;
-  Star;
-  Brain;
-  Target;
+  ArrowRight,
+  CheckCircle,
+  Mail,
+  Zap,
+  Users,
+  Shield,
+  TrendingUp,
+  BarChart3,
+  Clock,
+  Star,
+  Brain,
+  Target,
 } from 'lucide-react',
 const AIAutomatedEmailFollowupPage: NextPage = () => {
   const features = [
-    'AI-powered email sequence optimization';
-    'Personalized content generation based on recipient behavior';
-    'Optimal timing predictions using machine learning';
-    'Multi-channel follow-up automation (email, SMS, LinkedIn)';
-    'Advanced A/B testing for subject lines and content';
-    'Lead scoring and qualification automation';
-    'CRM integration with Salesforce, HubSpot, Pipedrive';
-    'Real-time performance analytics and insights';
+    'AI-powered email sequence optimizationPersonalized content generation based on recipient behavior',
+    'Optimal timing predictions using machine learningMulti-channel follow-up automation (email, SMS, LinkedIn)',
+    'Advanced A/B testing for subject lines and contentLead scoring and qualification automation',
+    'CRM integration with Salesforce, HubSpot, PipedriveReal-time performance analytics and insights',
   ],
   const benefits = [
-    'Increase email open rates by 60%';
-    'Boost conversion rates by 45%';
-    'Reduce manual follow-up time by 80%';
-    'Improve lead nurturing efficiency';
-    'Scale personalized outreach campaigns';
+    'Increase email open rates by 60%Boost conversion rates by 45%',
+    'Reduce manual follow-up time by 80%Improve lead nurturing efficiency',
+    'Scale personalized outreach campaigns',
   ],
   const useCases = [
-    'Sales prospecting and lead nurturing';
-    'Customer onboarding sequences';
-    'Abandoned cart recovery';
-    'Event follow-up campaigns';
-    'Customer retention programs';
+    'Sales prospecting and lead nurturingCustomer onboarding sequences',
+    'Abandoned cart recoveryEvent follow-up campaigns',
+    'Customer retention programs',
   ],
   const pricingPlans = [
     {
-      name: 'Starter';
-      price: 49;
-      period: 'month';
-      description: 'Perfect for small teams';
+      name: 'Starter',
+      price: 49,
+      period: 'month',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 5,0o00 emails/month';
-        '3 email sequences';
-        'Basic AI personalization';
-        'Email support';
-        'Standard templates';
-        'Basic analytics';
-      ];
-    };
+        'Up to 5,0o00 emails/month3 email sequences',
+        'Basic AI personalizationEmail support',
+        'Standard templatesBasic analytics',
+      ],
+    },
     {
-      name: 'Professional';
-      price: 149;
-      period: 'month';
-      description: 'Ideal for growing businesses';
+      name: 'Professional',
+      price: 149,
+      period: 'month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 25,0o00 emails/month';
-        'Unlimited email sequences';
-        'Advanced AI personalization';
-        'A/B testing';
-        'CRM integrations';
-        'Priority support';
-        'Advanced analytics';
-      ];
-    };
+        'Up to 25,0o00 emails/monthUnlimited email sequences',
+        'Advanced AI personalizationA/B testing',
+        'CRM integrationsPriority support',
+        'Advanced analytics',
+      ],
+    },
     {
-      name: 'Enterprise';
-      price: 399;
-      period: 'month';
-      description: 'For large organizations';
+      name: 'Enterprise',
+      price: 399,
+      period: 'month',
+      description: 'For large organizations',
       features: [
-        'Unlimited emails';
-        'Custom AI models';
-        'Multi-channel automation';
-        'White-label options';
-        'Dedicated account manager';
-        'Custom integrations';
-        'Advanced reporting';
-      ];
-    };
+        'Unlimited emailsCustom AI models',
+        'Multi-channel automationWhite-label options',
+        'Dedicated account managerCustom integrations',
+        'Advanced reporting',
+      ]
+    },
   ],
   const testimonials = [
     {
-      name: 'Sarah Johnson';
-      company: 'TechStart Inc.';
-      role: 'Sales Director';
+      name: 'Sarah Johnson',
+      company: 'TechStart Inc.',
+      role: 'Sales Director',
       content:,
-        'Our email conversion rates increased by 45% within the first month. The AI timing predictions are incredibly accurate.';
-      rating: 5;
-    };
+        'Our email conversion rates increased by 45% within the first month. The AI timing predictions are incredibly accurate.',
+      rating: 5
+    },
     {
-      name: 'Michael Chen';
-      company: 'GrowthCo';
-      role: 'Marketing Manager';
+      name: 'Michael Chen',
+      company: 'GrowthCo',
+      role: 'Marketing Manager',
       content:,
-        'The personalized content generation saves us hours every week. Highly recommend for any sales team.';
-      rating: 5;
-    };
+        'The personalized content generation saves us hours every week. Highly recommend for any sales team.',
+      rating: 5
+    },
   ],
   return (
     <>,
@@ -135,7 +118,7 @@ const AIAutomatedEmailFollowupPage: NextPage = () => {
                 AI Automated Email Follow-up,
               </h1>,
               <p className='text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto'>,
-                Transform your email campaigns with AI-powered personalization;
+                Transform your email campaigns with AI-powered personalization,
                 optimal timing predictions, and intelligent automation that,
                 boosts conversions by 60%.,
               </p>,
@@ -349,5 +332,5 @@ const AIAutomatedEmailFollowupPage: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default AIAutomatedEmailFollowupPage;
+    </>)},
+export default AIAutomatedEmailFollowupPage,

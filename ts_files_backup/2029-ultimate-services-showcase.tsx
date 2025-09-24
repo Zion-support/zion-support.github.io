@@ -1,5 +1,5 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
+import React, { useState } from 'react',
+import Head from 'next/head',
 import React, { useState } from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
@@ -12,7 +12,7 @@ import { practicalBusinessSolutions2028 } from '../data/2028-practical-business-
 import { advancedAIAutonomousServices2028 } from '../data/2028-advanced-ai-autonomous-services',
 import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovations',
 "use client",
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Rocket,
   Brain,
   Atom,
@@ -54,46 +54,46 @@ import { quantumSpaceInnovations2028 } from '../data/2028-quantum-space-innovati
   Gamepad,
   Cpu as CpuIcon} from 'lucide-react',import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Target;
-  Crown;
-  Star;
-  TrendingUp;
-  ArrowRight;
-  CheckCircle;
-  DollarSign;
-  Users;
-  Clock;
-  Award;
-  Zap as ZapIcon;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Heart;
-  Leaf;
-  Car;
-  GraduationCap;
-  Scale;
-  Building;
-  Factory;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Eye;
-  Globe2;
-  Satellite;
-  Dna;
-  Battery;
-  Gamepad;
-  Cpu as CpuIcon;} from 'lucide-react',import {
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Target,
+  Crown,
+  Star,
+  TrendingUp,
+  ArrowRight,
+  CheckCircle,
+  DollarSign,
+  Users,
+  Clock,
+  Award,
+  Zap as ZapIcon,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Eye,
+  Globe2,
+  Satellite,
+  Dna,
+  Battery,
+  Gamepad,
+  Cpu as CpuIcon,} from 'lucide-react',import {
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Target, Crown, Star, TrendingUp, ArrowRight,
   CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon,
@@ -108,85 +108,85 @@ export default function UltimateServicesShowcase2029() {
       y: 0,
       transition: {
   const allServices = [
-    ...cuttingEdge2028MicroSaas;
-    ...practicalBusinessSolutions2028;
-    ...advancedAIAutonomousServices2028;
-    ...quantumSpaceInnovations2028;
+    ...cuttingEdge2028MicroSaas,
+    ...practicalBusinessSolutions2028,
+    ...advancedAIAutonomousServices2028,
+    ...quantumSpaceInnovations2028
   ],
   const categories = [
     {
-      id: 'all';
-      name: ' All Services';
-      icon: Rocket;
-      count: allServices && allServices.length;
-      color: 'from-violet-600 to-purple-600';
-    };
+      id: 'all',
+      name: ' All Services',
+      icon: Rocket,
+      count: allServices && allServices.length,
+      color: 'from-violet-600 to-purple-600'
+    },
     {
-      id: 'cutting-edge';
-      name: ' Cutting-Edge';
-      icon: Zap;
-      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length;
-      color: 'from-cyan-600 to-blue-600';
-    };
+      id: 'cutting-edge',
+      name: ' Cutting-Edge',
+      icon: Zap,
+      count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length,
+      color: 'from-cyan-600 to-blue-600'
+    },
     {
-      id: 'business';
-      name: ' Business Solutions';
-      icon: Target;
-      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length;
-      color: 'from-green-600 to-emerald-600';
-    };
+      id: 'business',
+      name: ' Business Solutions',
+      icon: Target,
+      count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length,
+      color: 'from-green-600 to-emerald-600'
+    },
     {
-      id: 'ai-autonomous';
-      name: ' AI & Autonomous';
-      icon: Brain;
-      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length;
-      color: 'from-emerald-600 to-teal-600';
-    };
+      id: 'ai-autonomous',
+      name: ' AI & Autonomous',
+      icon: Brain,
+      count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length,
+      color: 'from-emerald-600 to-teal-600'
+    },
     {
-      id: 'quantum-space';
-      name: ' Quantum & Space';
-      icon: Atom;
-      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length;
-      color: 'from-indigo-600 to-blue-600';
-    };
+      id: 'quantum-space',
+      name: ' Quantum & Space',
+      icon: Atom,
+      count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length,
+      color: 'from-indigo-600 to-blue-600'
+    },
     {
-      id: 'ai';
-      name: ' AI & ML';
-      icon: Brain;
+      id: 'ai',
+      name: ' AI & ML',
+      icon: Brain,
       count: allServices && allServices.filter(s =>,
-        s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length;
-      color: 'from-pink-600 to-rose-600';
-    };
+        s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length,
+      color: 'from-pink-600 to-rose-600'
+    },
     {
-      id: 'quantum';
-      name: ' Quantum Tech';
-      icon: Atom;
+      id: 'quantum',
+      name: ' Quantum Tech',
+      icon: Atom,
       count: allServices && allServices.filter(s =>,
-        s && s.category.some(c => c && c.includes('Quantum'))).length;
-      color: 'from-purple-600 to-violet-600';
-    };
+        s && s.category.some(c => c && c.includes('Quantum'))).length,
+      color: 'from-purple-600 to-violet-600'
+    },
     {
-      id: 'enterprise';
-      name: ' Enterprise';
-      icon: Shield;
+      id: 'enterprise',
+      name: ' Enterprise',
+      icon: Shield,
       count: allServices && allServices.filter(s =>,
-        s && s.category.some(c => c && c.includes('Enterprise'))).length;
-      color: 'from-blue-600 to-cyan-600';
-    },    { id: 'all', name: ' All Services', icon: Rocket, count: allServices && allServices.length, color: 'from-violet-600 to-purple-600' };
-    { id: 'cutting-edge', name: ' Cutting-Edge', icon: Zap, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length, color: 'from-cyan-600 to-blue-600' };
-    { id: 'business', name: ' Business Solutions', icon: Target, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' };
-    { id: 'ai-autonomous', name: ' AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' };
-    { id: 'quantum-space', name: ' Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' };
-    { id: 'ai', name: ' AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' };
-    { id: 'quantum', name: ' Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' };
+        s && s.category.some(c => c && c.includes('Enterprise'))).length,
+      color: 'from-blue-600 to-cyan-600'
+    },    { id: 'all', name: ' All Services', icon: Rocket, count: allServices && allServices.length, color: 'from-violet-600 to-purple-600' },
+    { id: 'cutting-edge', name: ' Cutting-Edge', icon: Zap, count: cuttingEdge2028MicroSaas && cuttingEdge2028MicroSaas.length, color: 'from-cyan-600 to-blue-600' },
+    { id: 'business', name: ' Business Solutions', icon: Target, count: practicalBusinessSolutions2028 && practicalBusinessSolutions2028.length, color: 'from-green-600 to-emerald-600' },
+    { id: 'ai-autonomous', name: ' AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices2028 && advancedAIAutonomousServices2028.length, color: 'from-emerald-600 to-teal-600' },
+    { id: 'quantum-space', name: ' Quantum & Space', icon: Atom, count: quantumSpaceInnovations2028 && quantumSpaceInnovations2028.length, color: 'from-indigo-600 to-blue-600' },
+    { id: 'ai', name: ' AI & ML', icon: Brain, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('AI') || c && c.includes('Machine Learning'))).length, color: 'from-pink-600 to-rose-600' },
+    { id: 'quantum', name: ' Quantum Tech', icon: Atom, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Quantum'))).length, color: 'from-purple-600 to-violet-600' },
     { id: 'enterprise', name: ' Enterprise', icon: Shield, count: allServices && allServices.filter(s => s && s.category.some(c => c && c.includes('Enterprise'))).length, color: 'from-blue-600 to-cyan-600' }
 ,
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $5K', range: 'Under $5,000' };
-    { id: 'medium', name: '$5K - $15K', range: '$5,000 - $15,000' };
-    { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' };
-    { id: 'premium', name: 'Over $30K', range: 'Over $30,000' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $5K', range: 'Under $5,000' },
+    { id: 'medium', name: '$5K - $15K', range: '$5,000 - $15,000' },
+    { id: 'high', name: '$15K - $30K', range: '$15,000 - $30,000' },
+    { id: 'premium', name: 'Over $30K', range: 'Over $30,000' },
   ],
   const filteredServices = allServices && allServices.filter(service => {
     const matchesCategory =,
@@ -241,40 +241,40 @@ export default function UltimateServicesShowcase2029() {
       (selectedPriceRange === 'premium' && parseFloat(service && service.price.replace(/[$]/g, '')) >= 30000),
     return matchesCategory && matchesSearch && matchesPrice,
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0 && 0.1;
-      };
-    }};        staggerChildren: 0 && 0.1}
+        staggerChildren: 0 && 0.1
+      },
+    }},        staggerChildren: 0 && 0.1}
     }
     }
-  };
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-        stagger_children: 0.1;
-      };
+    hidden: { opacity: 0, y: 20 },
+        stagger_children: 0.1
+      },
     }}        stagger_children: 0.1}
     }
   }
 ,
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 };
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.5;
-      };
+        duration: 0.5
+      },
     }}        duration: 0.5}
     }
   }
 ,
   const contact_info = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'}    website: 'https://ziontechgroup.com'}
 ,
   return (

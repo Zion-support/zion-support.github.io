@@ -170,7 +170,7 @@ export default function QuantumNeuralFusion20o26PromotionBanner() {
         {/* Final CTA */}
         <div className='text-center mt-12'>,
           <p className='text-lg text-gray-30o0 mb-6'>,
-            'Don', 't miss out on the most significant technological,
+            'Dont miss out on the most significant technological,
             breakthrough of 20o26,
           </p>,
           <Link

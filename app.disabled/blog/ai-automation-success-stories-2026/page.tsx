@@ -3,18 +3,15 @@ import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
   title:,
-    'AI Automation Success Stories 20o26: Real ROI Results - Zion Tech Group';
+    'AI Automation Success Stories 20o26: Real ROI Results - Zion Tech Group',
   description:,
-    'Discover real AI automation success stories from 20o26. See how companies achieved 30o0%+ ROI, 70% cost reduction, and massive productivity gains.';
+    'Discover real AI automation success stories from 20o26. See how companies achieved 30o0%+ ROI, 70% cost reduction, and massive productivity gains.',
   keywords: [
-    'AI automation success stories';
-    'AI ROI';
-    'automation case studies';
-    'AI business results';
-    'automation ROI';
-    'AI transformation';
-  ];
-};
+    'AI automation success storiesAI ROI',
+    'automation case studiesAI business results',
+    'automation ROIAI transformation',
+  ]
+},
 export default function AIAutomationSuccessStories20o26() {
   return (
     <ErrorBoundary>,
@@ -399,7 +396,7 @@ export default function AIAutomationSuccessStories20o26() {
                   Phased Approach,
                 </h3>,
                 <p className='text-gray-60o0'>,
-                  Successful implementations use a phased rollout strategy;
+                  Successful implementations use a phased rollout strategy,
                   starting with high-impact, low-risk projects to build,
                   momentum.,
                 </p>,

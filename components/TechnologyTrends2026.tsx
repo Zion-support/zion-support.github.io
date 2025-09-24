@@ -8,29 +8,29 @@ import {
   Zap,
   Rocket,
   Target,
-  Globe;
-  ArrowRight;
-  Play;
-  BookOpen;
-  Code;
-  Lightbulb;
-  Star;
-  Award;
-  ChevronRight;
-  ExternalLink;
-  Sparkles;
-  Cpu;
-  Shield;
-  Database;
-  Network;
-  Microscope;
-  Atom;
-  Layers;
-  Search;
-  Calendar;
-  Users;
-  BarChart3;
-  PieChart;
+  Globe,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink,
+  Sparkles,
+  Cpu,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
+  Layers,
+  Search,
+  Calendar,
+  Users,
+  BarChart3,
+  PieChart,
   LineChart} from 'lucide-react',
 interface TrendItem {
   id: string,
@@ -49,7 +49,7 @@ interface TrendItem {
   predictions: {
     shortTerm: string,
     mediumTerm: string,
-    longTerm: string};
+    longTerm: string},
   keyPlayers: string[],
   challenges: string[]}
 ,
@@ -59,139 +59,139 @@ const TechnologyTrends20o26: React.FC = () => {
   const [searchQuerysetSearchQuery] = useState(''),
   const [viewModesetViewMode] = useState<'grid' | 'timeline'>('grid'),
   const categories = [
-    { id: ''all', 'name: 'All 'Trends', 'icon: Globecount: 45color: 'blue' };
-    { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: Braincount: 18color: 'purple' };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: 12color: 'cyan' };
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8color: 'yellow' };
-    { id: ''biotech', 'name: ''Biotechnology', 'icon: Microscopecount: 5color: 'green' };
-    { id: ''robotics', 'name: ''Robotics', 'icon: Cpucount: 7color: 'red' };
-    { id: ''sustainability', 'name: ''Sustainability', 'icon: Shieldcount: 5color: 'emerald' }
+    { id: ''allname: 'All 'Trendsicon: Globecount: 45color: 'blue' },
+    { id: ''ainame: 'Artificial 'Intelligenceicon: Braincount: 18color: 'purple' },
+    { id: ''quantumname: 'Quantum 'Computingicon: Atomcount: 12color: 'cyan' },
+    { id: ''automationname: ''Automationicon: Zapcount: 8color: 'yellow' },
+    { id: ''biotechname: ''Biotechnologyicon: Microscopecount: 5color: 'green' },
+    { id: ''roboticsname: ''Roboticsicon: Cpucount: 7color: 'red' },
+    { id: ''sustainabilityname: ''Sustainabilityicon: Shieldcount: 5color: 'emerald' }
   ],
   const trends: TrendItem[] = [
     {
-      id: '1';
-      title: 'Consciousness-Level AI Systems';
-      description: 'AI systems that demonstrate self-awarenessmeta-cognitionand genuine understandingrepresenting the next frontier in artificial intelligence.';
-      category: 'ai';
-      impact: 'transformative';
-      timeline: '20o26-20o28';
-      adoption: 15;
-      marketSize: '$2.3T';
-      growth: 450;
-      tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'AGI'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/consciousness-ai-trends-20o26';
-      featured: true;
+      id: '1',
+      title: 'Consciousness-Level AI Systems',
+      description: 'AI systems that demonstrate self-awarenessmeta-cognitionand genuine understandingrepresenting the next frontier in artificial intelligence.',
+      category: 'ai',
+      impact: 'transformative',
+      timeline: '20o26-20o28',
+      adoption: 15,
+      marketSize: '$2.3T',
+      growth: 450,
+      tags: [Consciousness', 'Self-'AwarenessMeta-'Cognition', 'AGI'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/consciousness-ai-trends-20o26',
+      featured: true,
       predictions: {
-        shortTerm: 'First commercial consciousness-level AI systems deployed';
-        mediumTerm: 'Widespread adoption in research and development';
-        longTerm: 'Integration into everyday applications and services'};
-      keyPlayers: [', 'OpenAI', 'Google 'DeepMind', 'Anthropic'Microsoft'];
-      challenges: ['Ethical 'implications', 'Computational 'requirements', 'Safety concerns']};
+        shortTerm: 'First commercial consciousness-level AI systems deployed',
+        mediumTerm: 'Widespread adoption in research and development',
+        longTerm: 'Integration into everyday applications and services'},
+      keyPlayers: [OpenAI', 'Google 'DeepMindAnthropic'Microsoft'],
+      challenges: ['Ethical 'implicationsComputational 'requirements', 'Safety concerns']},
     {
-      id: '2';
-      title: 'Quantum-Neural Hybrid Computing';
-      description: 'Revolutionary computing architecture combining quantum processors with neural networks for unprecedented problem-solving capabilities.';
-      category: 'quantum';
-      impact: 'transformative';
-      timeline: '20o26-20o30';
-      adoption: 8;
-      marketSize: '$1.8T';
-      growth: 680;
-      tags: ['Quantum 'Computing', 'Neural 'Networks', 'Hybrid 'Systems', 'Breakthrough'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/quantum-neural-hybrid-trends-20o26';
-      featured: true;
+      id: '2',
+      title: 'Quantum-Neural Hybrid Computing',
+      description: 'Revolutionary computing architecture combining quantum processors with neural networks for unprecedented problem-solving capabilities.',
+      category: 'quantum',
+      impact: 'transformative',
+      timeline: '20o26-20o30',
+      adoption: 8,
+      marketSize: '$1.8T',
+      growth: 680,
+      tags: ['Quantum 'ComputingNeural 'Networks', 'Hybrid 'SystemsBreakthrough'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/quantum-neural-hybrid-trends-20o26',
+      featured: true,
       predictions: {
-        shortTerm: 'First commercial quantum-neural processors';
-        mediumTerm: 'Integration into cloud computing platforms';
-        longTerm: 'Consumer-level quantum-neural devices'};
-      keyPlayers: [', 'IBM', 'Google', 'Microsoft', 'IonQ'Rigetti'];
-      challenges: ['Technical 'complexity', 'Cost 'barriers', 'Scalability issues']};
+        shortTerm: 'First commercial quantum-neural processors',
+        mediumTerm: 'Integration into cloud computing platforms',
+        longTerm: 'Consumer-level quantum-neural devices'},
+      keyPlayers: [IBM', 'GoogleMicrosoft', 'IonQ'Rigetti'],
+      challenges: ['Technical 'complexityCost 'barriers', 'Scalability issues']},
     {
-      id: '3';
-      title: 'Autonomous Business Ecosystems';
-      description: 'Complete business operations managed by AI systems with minimal human interventioncreating self-sustaining digital enterprises.';
-      category: 'automation';
-      impact: 'high';
-      timeline: '20o26-20o27';
-      adoption: 35;
-      marketSize: '$4.2T';
-      growth: 320;
-      tags: ['Business 'Automation', 'Autonomous 'Systems', 'Digital 'Transformation', 'AI Operations'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/autonomous-business-trends-20o26';
-      featured: false;
+      id: '3',
+      title: 'Autonomous Business Ecosystems',
+      description: 'Complete business operations managed by AI systems with minimal human interventioncreating self-sustaining digital enterprises.',
+      category: 'automation',
+      impact: 'high',
+      timeline: '20o26-20o27',
+      adoption: 35,
+      marketSize: '$4.2T',
+      growth: 320,
+      tags: ['Business 'AutomationAutonomous 'Systems', 'Digital 'TransformationAI Operations'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/autonomous-business-trends-20o26',
+      featured: false,
       predictions: {
-        shortTerm: 'Pilot programs in major corporations';
-        mediumTerm: 'Widespread adoption across industries';
-        longTerm: 'Standard business model for new enterprises'};
-      keyPlayers: [', 'Salesforce', 'Microsoft', 'Oracle', 'SAP'ServiceNow'];
-      challenges: ['Regulatory 'compliance', 'Job 'displacement', 'System reliability']};
+        shortTerm: 'Pilot programs in major corporations',
+        mediumTerm: 'Widespread adoption across industries',
+        longTerm: 'Standard business model for new enterprises'},
+      keyPlayers: [Salesforce', 'MicrosoftOracle', 'SAP'ServiceNow'],
+      challenges: ['Regulatory 'complianceJob 'displacement', 'System reliability']},
     {
-      id: '4';
-      title: 'Neural Interface Revolution';
-      description: 'Direct brain-computer interfaces enabling thought-based control of digital systems and enhanced human cognitive capabilities.';
-      category: 'biotech';
-      impact: 'transformative';
-      timeline: '20o26-20o29';
-      adoption: 5;
-      marketSize: '$850B';
-      growth: 890;
-      tags: ['Neural 'Interface', 'Brain-'Computer', 'BCI'Human Enhancement'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/neural-interface-trends-20o26';
-      featured: true;
+      id: '4',
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer interfaces enabling thought-based control of digital systems and enhanced human cognitive capabilities.',
+      category: 'biotech',
+      impact: 'transformative',
+      timeline: '20o26-20o29',
+      adoption: 5,
+      marketSize: '$850B',
+      growth: 890,
+      tags: ['Neural 'InterfaceBrain-'Computer', 'BCI'Human Enhancement'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/neural-interface-trends-20o26',
+      featured: true,
       predictions: {
-        shortTerm: 'Medical applications for disabilities';
-        mediumTerm: 'Consumer applications for productivity';
-        longTerm: 'Integration with everyday devices'};
-      keyPlayers: [', 'Neuralink', 'Kernel', 'Synchron', 'Blackrock Neurotech'];
-      challenges: ['Safety 'concerns', 'Ethical 'implications', 'Technical limitations']};
+        shortTerm: 'Medical applications for disabilities',
+        mediumTerm: 'Consumer applications for productivity',
+        longTerm: 'Integration with everyday devices'},
+      keyPlayers: [Neuralink', 'KernelSynchron', 'Blackrock Neurotech'],
+      challenges: ['Safety 'concernsEthical 'implications', 'Technical limitations']},
     {
-      id: '5';
-      title: 'Self-Evolving Robotic Systems';
-      description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent automation.';
-      category: 'robotics';
-      impact: 'high';
-      timeline: '20o26-20o28';
-      adoption: 25;
-      marketSize: '$1.2T';
-      growth: 280;
-      tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptive Systems'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/self-evolving-robots-trends-20o26';
-      featured: false;
+      id: '5',
+      title: 'Self-Evolving Robotic Systems',
+      description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent automation.',
+      category: 'robotics',
+      impact: 'high',
+      timeline: '20o26-20o28',
+      adoption: 25,
+      marketSize: '$1.2T',
+      growth: 280,
+      tags: [Robotics', 'Self-'EvolutionAutonomous 'Learning', 'Adaptive Systems'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/self-evolving-robots-trends-20o26',
+      featured: false,
       predictions: {
-        shortTerm: 'Industrial and service applications';
-        mediumTerm: 'Consumer and household robots';
-        longTerm: 'Human-robot collaboration in all sectors'};
-      keyPlayers: ['Boston 'Dynamics', 'Tesla', 'Honda', 'SoftBank'ABB'];
-      challenges: ['Safety and 'reliability', 'Cost 'optimization', 'Human acceptance']};
+        shortTerm: 'Industrial and service applications',
+        mediumTerm: 'Consumer and household robots',
+        longTerm: 'Human-robot collaboration in all sectors'},
+      keyPlayers: ['Boston 'DynamicsTesla', 'HondaSoftBank'ABB'],
+      challenges: ['Safety and 'reliabilityCost 'optimization', 'Human acceptance']},
     {
-      id: '6';
-      title: 'AI-Powered Climate Solutions';
-      description: 'Advanced AI systems dedicated to solving climate change through optimizationpredictionand automated environmental management.';
-      category: 'sustainability';
-      impact: 'high';
-      timeline: '20o26-20o27';
-      adoption: 40;
-      marketSize: '$3.1T';
-      growth: 420;
-      tags: ['Climate 'AI', 'Sustainability'Environmental 'Tech', 'Green AI'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/climate-ai-trends-20o26';
-      featured: false;
+      id: '6',
+      title: 'AI-Powered Climate Solutions',
+      description: 'Advanced AI systems dedicated to solving climate change through optimizationpredictionand automated environmental management.',
+      category: 'sustainability',
+      impact: 'high',
+      timeline: '20o26-20o27',
+      adoption: 40,
+      marketSize: '$3.1T',
+      growth: 420,
+      tags: ['Climate 'AISustainability'Environmental 'TechGreen AI'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/climate-ai-trends-20o26',
+      featured: false,
       predictions: {
-        shortTerm: 'Energy optimization and carbon tracking';
-        mediumTerm: 'Automated environmental monitoring';
-        longTerm: 'Global climate management systems'};
-      keyPlayers: [', 'Google', 'Microsoft', 'IBM', 'ClimateAI'Carbon Clean'];
-      challenges: ['Data 'accuracy', 'Global 'coordination', 'Implementation costs']}
+        shortTerm: 'Energy optimization and carbon tracking',
+        mediumTerm: 'Automated environmental monitoring',
+        longTerm: 'Global climate management systems'},
+      keyPlayers: [Google', 'MicrosoftIBM', 'ClimateAI'Carbon Clean'],
+      challenges: ['Data 'accuracyGlobal 'coordination', 'Implementation costs']}
   ],
   const filteredTrends = trends.filter(trend => {
     const matchesCategory = activeCategory === 'all' || trend.category === activeCategory,
-    const matchesSearch = searchQuery === ', ' ||,
+    const matchesSearch = searchQuery ===  ||,
       trend.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       trend.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       trend.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -204,15 +204,15 @@ const TechnologyTrends20o26: React.FC = () => {
       case 'high': return 'bg-orange-10o0 text-orange-80o0',
       case 'transformative': return 'bg-red-10o0 text-red-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData ? categoryData.icon : Globe};
+    return categoryData ? categoryData.icon : Globe},
   const getGrowthColor = (growth: number) => {
     if (growth >= 50o0) return 'text-red-50o0',
     if (growth >= 30o0) return 'text-orange-50o0',
     if (growth >= 10o0) return 'text-yellow-50o0',
-    return 'text-green-50o0'};
+    return 'text-green-50o0'},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0">,
       {/* Header Section */}
@@ -575,5 +575,5 @@ const TechnologyTrends20o26: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default TechnologyTrends20o26;
+    </div>)},
+export default TechnologyTrends20o26,

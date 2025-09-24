@@ -7,42 +7,28 @@ import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigatio
 import { motion } from 'framer-motion',
 export default function AIConsciousnessSimulatorPro() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'Multi-dimensional consciousness modeling';
-    'Emotional intelligence simulation';
-    'Self-awareness algorithms';
-    'Memory formation and retention';
-    'Learning from experience';
-    'Ethical decision making';
-    'Personality development';
-    'Consciousness transfer protocols';
-    'Real-time consciousness monitoring';
-    'Multi-agent consciousness networks'],
+    'Multi-dimensional consciousness modelingEmotional intelligence simulation',
+    'Self-awareness algorithmsMemory formation and retention',
+    'Learning from experienceEthical decision making',
+    'Personality developmentConsciousness transfer protocols',
+    'Real-time consciousness monitoringMulti-agent consciousness networks'],
   const useCases = [
-    'AI consciousness research';
-    'Gaming NPC development';
-    'Robotic consciousness';
-    'Psychological studies';
-    'Ethical AI training';
-    'Virtual reality'],
+    'AI consciousness researchGaming NPC development',
+    'Robotic consciousnessPsychological studies',
+    'Ethical AI trainingVirtual reality'],
   const technology = [
-    'Advanced Neural Networks';
-    'Consciousness Algorithms';
-    'Python';
-    'TensorFlow';
-    'Quantum Computing';
-    'Blockchain'],
+    'Advanced Neural NetworksConsciousness Algorithms',
+    'PythonTensorFlow',
+    'Quantum ComputingBlockchain'],
   const integrations = [
-    'OpenAI';
-    'Anthropic';
-    'Google AI';
-    'Microsoft Azure';
-    'AWS SageMaker';
-    'Research platforms'],
+    'OpenAIAnthropic',
+    'Google AIMicrosoft Azure',
+    'AWS SageMakerResearch platforms'],
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",

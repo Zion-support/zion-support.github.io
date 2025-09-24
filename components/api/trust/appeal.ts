@@ -19,17 +19,17 @@ function handler() {
   // Check condition,
 if ( {) {
   $2}
-    res.set_header ('Allow', 'POST'),
+    res.set_header ('AllowPOST'),
     return res.status (405).json ({ error: 'Method not allowed' })}
   const { user_id, message, contact_email } = req.body || {}
   if (
     return res.status (400).json ({ error: 'Missing user_id or message' })) {
   $2}
   const appeal: TrustAppeal = {
-    user_id;
-    message;
-    contact_email;
-    created_at: new Date ().toISOString ();
+    user_id,
+    message,
+    contact_email,
+    created_at: new Date ().toISOString ()
   }
 ,
   try {

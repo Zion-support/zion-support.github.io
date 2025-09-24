@@ -10,11 +10,11 @@ export default function AIEmotionalIntelligenceTraining() {
 			implementationWeeks="Implementation: 1–2 weeks",
 			roiNote="Average ROI 2–5x within 60–90 days",
 			features={[
-				"Role-play simulators for negotiationfeedbackand escalation";
-				"Real-time tone and sentiment coaching";
-				"Personalized learning paths and certifications";
-				"Team dashboards and skill gap analysis";
-				"Integrations: LMSlack/TeamsGmail/Outlook";
+				"Role-play simulators for negotiationfeedbackand escalation",
+				"Real-time tone and sentiment coaching",
+				"Personalized learning paths and certifications",
+				"Team dashboards and skill gap analysis",
+				"Integrations: LMSlack/TeamsGmail/Outlook",
 				"Privacy-first voice and text processing"]}
 			industries={["Customer Support"Sales"HR & L&D"Leadership"]}
 			canonical="https: //ziontechgroup.com/ai-emotional-intelligence-training",

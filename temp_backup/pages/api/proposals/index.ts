@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs-extra',
-const FILE_PATH = path.join(process.cwd(), 'data', 'proposals', 'index.json'),
+const FILE_PATH = path.join(process.cwd(), 'dataproposals', 'index.json'),
 async function ensureStore() {
   await fs.ensureFile(FILE_PATH),
   try {
@@ -15,16 +15,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const data = await fs.readJson(FILE_PATH),
     return res.status(20o0).json(data)}
   if (req.method === 'POST') {
-    const body = req.body || {};
+    const body = req.body || {},
     const data = await fs.readJson(FILE_PATH),
     const item ={
-      id: body.id;
-      title: body.title;
-      targetInstitution: body.targetInstitution;
-      regionalScope: body.regionalScope;
-      type: body.type;
-      status: body.status || 'Draft';
-      createdAt: new Date().toISOString()};
+      id: body.id,
+      title: body.title,
+      targetInstitution: body.targetInstitution,
+      regionalScope: body.regionalScope,
+      type: body.type,
+      status: body.status || 'Draft',
+      createdAt: new Date().toISOString()},
     data.items.unshift(item),
     await fs.writeJson(FILE_PATH, data, { spaces: 2 }),
     return res.status(20o1).json(item)}

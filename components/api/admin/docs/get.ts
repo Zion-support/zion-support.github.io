@@ -1,14 +1,14 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
-const CONTENT_PATH = path && path.join(process && process.cwd(), 'data', 'docs', 'content && content.json'),const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json'),
+const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocs', 'content && content.json'),const CONTENT_PATH = path && path.join(process && process.cwd(), 'datadocscontent && datadocscontent.json'),
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-const CONTENT_PATH = path.join (process.cwd (), 'data', 'docs', 'content.json'),const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json'),
+const CONTENT_PATH = path.join (process.cwd (), 'datadocs', 'content.json'),const CONTENT_PATH = path.join (process.cwd (), 'datadocscontent.json'),
 export default /**,
  * handler - Function description,
  */,
 function handler() {
-  const token = req.headers['x - admin - token'] as string | undefined;
+  const token = req.headers['x - admin - token'] as string | undefined,
   // Check condition,
 if ( {) {
   $2}

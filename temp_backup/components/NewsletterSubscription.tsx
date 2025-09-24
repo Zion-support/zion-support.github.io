@@ -8,7 +8,7 @@ const NewsletterSubscription: React.FC = () => {
   const [error, setError] = useState(''),
   const validateEmail = (email: string) => {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
-    return emailRegex.test(email)};
+    return emailRegex.test(email)},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setError(''),
@@ -30,19 +30,19 @@ const NewsletterSubscription: React.FC = () => {
       setEmail('')} catch {
       setError('Something went wrong. Please try again.')} finally {
       setIsLoading(false)}
-  };
+  },
   const benefits = [
     {
-      icon: Zap;
-      title: 'Latest Tech Insights';
-      description: 'Stay ahead with cutting-edge technology trends and innovations'};
+      icon: Zap,
+      title: 'Latest Tech Insights',
+      description: 'Stay ahead with cutting-edge technology trends and innovations'},
     {
-      icon: Shield;
-      title: 'Exclusive Content';
-      description: 'Access to premium research papers and industry reports'};
+      icon: Shield,
+      title: 'Exclusive Content',
+      description: 'Access to premium research papers and industry reports'},
     {
-      icon: Users;
-      title: 'Community Access';
+      icon: Users,
+      title: 'Community Access',
       description: 'Join our network of tech leaders and innovators'}
   ],
   if (isSubscribed) {
@@ -185,5 +185,5 @@ const NewsletterSubscription: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </section>)};
-export default NewsletterSubscription;
+    </section>)},
+export default NewsletterSubscription,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Cloud Security Audit | Zion Tech Group';
+  title: 'Cloud Security Audit | Zion Tech Group',
   description:,
-    'Comprehensive cloud security assessment and compliance auditing. Protect your infrastructure with expert security analysis.';
-};
+    'Comprehensive cloud security assessment and compliance auditing. Protect your infrastructure with expert security analysis.',
+},
 export default function CloudSecurityAuditPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function CloudSecurityAuditPage() {
               period='one-time',
               description='Essential security assessment for small to medium businesses',
               features={[
-                'Single cloud environment audit';
-                'Basic vulnerability scanning';
-                'Security configuration review';
-                'Written report with recommendations';
-                '30-day follow-up support';
+                'Single cloud environment auditBasic vulnerability scanning',
+                'Security configuration reviewWritten report with recommendations',
+                '30-day follow-up support',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function CloudSecurityAuditPage() {
               period='one-time',
               description='Full security assessment with compliance focus',
               features={[
-                'Multi-cloud environment audit';
-                'Advanced vulnerability assessment';
-                'Compliance gap analysis';
-                'Penetration testing';
-                'Detailed remediation plan';
-                '90-day follow-up support';
+                'Multi-cloud environment auditAdvanced vulnerability assessment',
+                'Compliance gap analysisPenetration testing',
+                'Detailed remediation plan90-day follow-up support',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function CloudSecurityAuditPage() {
               period='one-time',
               description='Complete security program for large organizations',
               features={[
-                'Full infrastructure assessment';
-                'Custom compliance framework';
-                'Red team exercises';
-                'Security program development';
-                'Ongoing monitoring setup';
-                '6-month support included';
+                'Full infrastructure assessmentCustom compliance framework',
+                'Red team exercisesSecurity program development',
+                'Ongoing monitoring setup6-month support included',
               ]}
               popular={false}
             />,
@@ -273,9 +265,9 @@ export default function CloudSecurityAuditPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -290,12 +282,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   plan: string,
   price: string,
@@ -327,9 +319,9 @@ function PricingCard({
     </div>)}
 ,
 function StepCard({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,

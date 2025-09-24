@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'social-media-management - Zion Tech Group';
+  title: 'social-media-management - Zion Tech Group',
   description:,
-    'Professional social-media-management solutions for your business needs.';
-  keywords: 'social-media-management, services, business, technology';
-};
+    'Professional social-media-management solutions for your business needs.',
+  keywords: 'social-media-management, services, business, technology',
+},
 export default function SocialMediaManagementPage() {
   return (
     <div className='min-h-screen bg-white'>,

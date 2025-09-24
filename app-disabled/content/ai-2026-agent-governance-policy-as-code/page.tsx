@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Governance Policy-as-Code | Zion Tech Group';
+  title: 'AI 20o26: Agent Governance Policy-as-Code | Zion Tech Group',
   description:,
-    'Implement agent governance as code: controls, attestations, and automated enforcement.';
-};
+    'Implement agent governance as code: controls, attestations, and automated enforcement.',
+},
 const AgentGovernancePolicyAsCode20o26 = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -30,7 +30,7 @@ const AgentGovernancePolicyAsCode20o26 = () => {
         <div className='prose prose-lg max-w-none'>,
           <h2>Control Library</h2>,
           <p>,
-            Define reusable control primitives for access, data handling;
+            Define reusable control primitives for access, data handling,
             actions, and escalation.,
           </p>,
           <h2>Attestations</h2>,
@@ -57,5 +57,5 @@ const AgentGovernancePolicyAsCode20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgentGovernancePolicyAsCode20o26;
+    </div>)},
+export default AgentGovernancePolicyAsCode20o26,

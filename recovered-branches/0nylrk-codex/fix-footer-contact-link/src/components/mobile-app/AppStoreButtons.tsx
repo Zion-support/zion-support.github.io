@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react",
 import { AppleGithubIcon } from "lucide-react",
 import { cn } from "@/lib/utils",
 interface AppStoreButtonsProps {
@@ -11,22 +11,22 @@ interface AppStoreButtonsProps {
 ,
 export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
   className,
-  appStoreUrl = "#";
-  googlePlayUrl = "#";
-  onAppStoreClick;
+  appStoreUrl = "#",
+  googlePlayUrl = "#",
+  onAppStoreClick,
   onGooglePlayClick}) => {
   const handleAppStoreClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!appStoreUrl || appStoreUrl === "#") {
       e.preventDefault(),
       // // console.log("App Store download clicked"),
       onAppStoreClick?.()}
-  };
+  },
   const handleGooglePlayClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
     if (!googlePlayUrl || googlePlayUrl === "#") {
       e.preventDefault(),
       // // console.log("Google Play download clicked"),
       onGooglePlayClick?.()}
-  };
+  },
   return (
     <div className={cn("flex flex-col sm: flex-row gap-4"className)}>,
       <a
@@ -61,4 +61,4 @@ export const AppStoreButtons: React.FC<AppStoreButtonsProps> = ({
           <div className="text-xl font-semibold">Google Play</div>,
         </div>,
       </a>,
-    </div>)};
+    </div>)},

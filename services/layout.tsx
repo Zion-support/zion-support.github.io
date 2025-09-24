@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -19,7 +19,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 export default function ServicesLayout(): any ({
-  children;
+  children,
 }: {
   children: React && React.ReactNode}) {
 }

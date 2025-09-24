@@ -1,17 +1,17 @@
 export function SocialShareSection() {
   const socialPlatforms = [
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' };
+    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com/ziontechgroup' },
     {
-      name: 'LinkedIn';
-      icon: '💼';
-      url: 'https://linkedin.com/company/ziontechgroup';
-    };
-    { name: 'Facebook', icon: '📘', url: 'https://facebook.com/ziontechgroup' };
+      name: 'LinkedIn',
+      icon: '💼',
+      url: 'https://linkedin.com/company/ziontechgroup'
+    },
+    { name: 'Facebook', icon: '📘', url: 'https://facebook.com/ziontechgroup' },
     {
-      name: 'Instagram';
-      icon: '📷';
-      url: 'https://instagram.com/ziontechgroup';
-    };
+      name: 'Instagram',
+      icon: '📷',
+      url: 'https://instagram.com/ziontechgroup'
+    },
   ],
   return (
     <section className='py-16 bg-white/5'>,

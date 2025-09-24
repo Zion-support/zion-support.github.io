@@ -1,20 +1,20 @@
 import { Button } from "@/components/ui/button",
 import { ShieldAlert } from "lucide-react",
-import React from "react";;
-import { Button } from "@/components/ui/button";
-import { ShieldAlert } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { ShieldAlert } from "lucide-react",
+import { Button } from "@/components/ui/button",
 interface EmptyFraudStateProps {
   has_filters: boolean,
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
   hasFilters,
   onResetFilters,
 interface EmptyFraudStateProps {
-  hasFilters: boolean;
+  hasFilters: boolean,
   onResetFilters: () => void}
 ,
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters;
+  hasFilters,
   onResetFilters}) => {
   return (
     <div className="text-center py-12">,
@@ -34,15 +34,15 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
     </div>),
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>,
 interface EmptyFraudStateProps {
-  hasFilters: boolean;
+  hasFilters: boolean,
   onResetFilters: () => void}
 export const EmptyFraudState: React.FC < EmptyFraudStateProps> = ({
-  has_filters;
-  onResetFilters;
+  has_filters,
+  onResetFilters
 }) => {
 export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
-  hasFilters;
-  onResetFilters;
+  hasFilters,
+  onResetFilters
 }) => {
   return (
     <div className="text - center py - 12">,
@@ -55,5 +55,5 @@ export const EmptyFraudState: React.FC<EmptyFraudStateProps> = ({
       </p>,
       {hasFilters && (
         <Button variant="outline" onClick={onResetFilters}>Clear Filters</Button>)}
-    </div>)};
+    </div>)},
 }}}

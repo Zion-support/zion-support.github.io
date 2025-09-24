@@ -21,12 +21,12 @@ export function ConversationDetailView() {
   useEffect(() => {
     scrollToBottom()}, [activeMessages]),
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
   const handleSendMessage = async e => {
     e.preventDefault(),
     if (!messageText.trim() || !activeConversation) return,
     await sendMessage(activeConversation.id, messageText),
-    setMessageText('')};
+    setMessageText('')},
   if (!activeConversation) {
     return (
       <div className='flex-1 flex flex-col items-center justify-center p-8'>,
@@ -47,8 +47,8 @@ export function ConversationDetailView() {
     if (existingGroup) {
       existingGroup.messages.push(message)} else {
       groupedMessages.push({
-        date: messageDate;
-        messages: [message];
+        date: messageDate,
+        messages: [message]
       })}
   }),
   const hasContextData =,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface EnhancedSEOProps {
   title?: string,
@@ -17,25 +17,23 @@ interface EnhancedSEOProps {
   nofollow?: boolean}
 ,
 const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
-  title = 'AI 20o26 Revolutionary Breakthrough Technologies | Zion Tech Group';
-  description = 'Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems. Get 10,0o00% ROI with our AI 20o26 Implementation Master Framework.';
-  keywords = 'AI 20o26, artificial intelligence, quantum computing, neural networks, synthetic intelligence, consciousness AI, business automation, ROI calculator, AI implementation, breakthrough technologies';
-  image = '/images/ai-20o26-revolutionary-breakthrough-technologies.jpg';
-  url = 'https://zion.app';
-  type = 'website';
-  author = 'Zion Tech Group';
-  publishedTime;
-  modifiedTime;
-  section = 'Technology';
+  title = 'AI 20o26 Revolutionary Breakthrough Technologies | Zion Tech Group',
+  description = 'Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems. Get 10,0o00% ROI with our AI 20o26 Implementation Master Framework.',
+  keywords = 'AI 20o26, artificial intelligence, quantum computing, neural networks, synthetic intelligence, consciousness AI, business automation, ROI calculator, AI implementation, breakthrough technologies',
+  image = '/images/ai-20o26-revolutionary-breakthrough-technologies.jpg',
+  url = 'https: //zion.app',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section = 'Technology',
   tags = [
-    'AI';
-    'Artificial Intelligence';
-    'Quantum Computing';
-    'Business Automation';
-  ];
-  canonical;
-  noindex = false;
-  nofollow = false;
+    'AIArtificial Intelligence',
+    'Quantum ComputingBusiness Automation',
+  ],
+  canonical,
+  noindex = false,
+  nofollow = false
 }) => {
   const fullTitle = title.includes('Zion'),
     ? title,
@@ -46,79 +44,73 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
   const fullUrl = url.startsWith('http') ? url : `https: //zion.app${url}`,
   const canonicalUrl = canonical || fullUrl,
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'TechArticle';
-    headline: title;
-    description: description;
-    image: fullImageUrl;
+    '@context': 'https: //schema.org@type': 'TechArticle',
+    headline: title,
+    description: description,
+    image: fullImageUrl,
     author: {
-      '@type': 'Organization';
-      name: author;
-      url: 'https://zion.app';
-    };
+      '@type': 'Organization',
+      name: author,
+      url: 'https://zion.app'
+    },
     publisher: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
       logo: {
-        '@type': 'ImageObject';
-        url: 'https://zion.app/images/zion-tech-group-logo.png';
-      };
-    };
-    datePublished: publishedTime || new Date().toISOString();
-    dateModified: modifiedTime || new Date().toISOString();
+        '@type': 'ImageObject',
+        url: 'https://zion.app/images/zion-tech-group-logo.png'
+      },
+    },
+    datePublished: publishedTime || new Date().toISOString(),
+    dateModified: modifiedTime || new Date().toISOString(),
     mainEntityOfPage: {
-      '@type': 'WebPage';
-      '@id': fullUrl;
-    };
-    keywords: keywords;
+      '@type': 'WebPage@id': fullUrl
+    },
+    keywords: keywords,
     about: [
       {
-        '@type': 'Thing';
-        name: 'Artificial Intelligence';
-      };
+        '@type': 'Thing',
+        name: 'Artificial Intelligence'
+      },
       {
-        '@type': 'Thing';
-        name: 'Quantum Computing';
-      };
+        '@type': 'Thing',
+        name: 'Quantum Computing'
+      },
       {
-        '@type': 'Thing';
-        name: 'Business Automation';
-      };
-    ];
+        '@type': 'Thing',
+        name: 'Business Automation'
+      },
+    ],
     mentions: tags.map(tag => ({
-      '@type': 'Thing';
-      name: tag;
-    }));
-  };
+      '@type': 'Thing',
+      name: tag
+    })),
+  },
   const organizationStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: 'https://zion.app';
-    logo: 'https://zion.app/images/zion-tech-group-logo.png';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://zion.app',
+    logo: 'https://zion.app/images/zion-tech-group-logo.png',
     description:,
-      'Leading provider of AI transformation solutions and breakthrough technologies';
+      'Leading provider of AI transformation solutions and breakthrough technologies',
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group';
-      'https://twitter.com/ziontechgroup';
-    ];
+      'https://linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup',
+    ],
     contactPoint: {
-      '@type': 'ContactPoint';
-      contactType: 'Customer Service';
-      email: 'info@zion.app';
-    };
-  };
+      '@type': 'ContactPoint',
+      contactType: 'Customer Service',
+      email: 'info@zion.app'
+    },
+  },
   const websiteStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'WebSite';
-    name: 'Zion Tech Group';
-    url: 'https://zion.app';
+    '@context': 'https: //schema.org@type': 'WebSite',
+    name: 'Zion Tech Group',
+    url: 'https://zion.app',
     potentialAction: {
-      '@type': 'SearchAction';
-      target: 'https://zion.app/search?q={search_term_string}';
-      'query-input': 'required name=search_term_string';
-    };
-  };
+      '@type': 'SearchAction',
+      target: 'https://zion.app/search?q={search_term_string}query-input': 'required name=search_term_string',
+    },
+  },
   return (
     <Head>,
       {/* Basic Meta Tags */}
@@ -173,13 +165,13 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationStructuredData);
+          __html: JSON.stringify(organizationStructuredData)
         }}
       />,
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(websiteStructuredData);
+          __html: JSON.stringify(websiteStructuredData)
         }}
       />,
       {/* Performance hints */}
@@ -210,5 +202,5 @@ const EnhancedSEO: React.FC<EnhancedSEOProps> = ({
         href='/favicon-16x16.png',
       />,
       <link rel='manifest' href='/site.webmanifest' />,
-    </Head>)};
-export default EnhancedSEO;
+    </Head>)},
+export default EnhancedSEO,

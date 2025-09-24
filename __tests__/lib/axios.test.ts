@@ -1,7 +1,8 @@
-import axios from axios',import fetchMock from jest-fetch-mock',import { safeStorage } from @/utils/safeStorage',
+import axios from axios',
+import fetchMock from jest-fetch-mock',import { safeStorage } from @/utils/safeStorage',
 jest.mock('@/utils/safeStorage', () => ({'  safeStorage: {
-    getItem: jest.fn();
-    setItem: jest.fn();
+    getItem: jest.fn(),
+    setItem: jest.fn(),
     removeItem: jest.fn()}
 })),
 describe('custom axios auth token handling', () => {'  beforeEach(() => {

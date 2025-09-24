@@ -2,12 +2,12 @@ import fs from 'fs-extra',
 import { createClient } from '@supabase/supabase-js',
 import { v4 as uuidv4 } from 'uuid',
 import {
-  AdminActionRecord;
-  FraudEvent;
-  ListFilters;
-  MonthlyReport;
-  MonitoredSource;
-  PrivacySettings;
+  AdminActionRecord,
+  FraudEvent,
+  ListFilters,
+  MonthlyReport,
+  MonitoredSource,
+  PrivacySettings,
   StoredFraudRecord} from './types',
 const dataDir = path.resolve(process.cwd(), 'data/fraud'),
 const eventsPath = path.join(dataDir, 'events.jsonl'),
@@ -56,12 +56,12 @@ export class FraudStore {
 ,
   async recordAction(action: Omit<AdminActionRecord 'id' | 'createdAt'> & { id?: string, createdAt?: string }): Promise<AdminActionRecord> {
     const withId: AdminActionRecord ={
-      id: action.id ?? uuidv4();
-      fraudId: action.fraudId;
-      action: action.action;
-      adminId: action.adminId ?? null;
-      reason: action.reason ?? null;
-      createdAt: action.createdAt ?? new Date().toISOString()};
+      id: action.id ?? uuidv4(),
+      fraudId: action.fraudId,
+      action: action.action,
+      adminId: action.adminId ?? null,
+      reason: action.reason ?? null,
+      createdAt: action.createdAt ?? new Date().toISOString()},
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin(),
       await supabase.from('fraud_actions').insert([withId as any]),
@@ -124,7 +124,7 @@ export class FraudStore {
       const supabase = getSupabaseAdmin(),
       const { data } = await supabase.from('privacy_settings').select('*').eq('userId', userId).limit(1),
       if (data && data[0]) return data[0] as any as PrivacySettings,
-      return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now };
+      return { userId, monitoringContentAnalysisOptOut: false, updatedAt: now },
     }
 ,
     ensureFiles(),
@@ -134,7 +134,7 @@ export class FraudStore {
     )}
 ,
   async setPrivacySettings(userId: string, monitoringContentAnalysisOptOut: boolean): Promise<PrivacySettings> {
-    const updated: PrivacySettings ={ userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() };
+    const updated: PrivacySettings ={ userId, monitoringContentAnalysisOptOut, updatedAt: new Date().toISOString() },
     if (isSupabaseConfigured()) {
       const supabase = getSupabaseAdmin(),
       await supabase.from('privacy_settings').upsert(updated as any, { onConflict: 'userId' }),
@@ -167,20 +167,20 @@ export class FraudStore {
         return ts >= start.getTime() && ts < end.getTime()})}
 ,
     const totals ={
-      all: events.length;
-      safe: events.filter((e) => e.gpt?.label === 'SAFE').length;
-      suspicious: events.filter((e) => e.gpt?.label === 'SUSPICIOUS').length;
-      dangerous: events.filter((e) => e.gpt?.label === 'DANGEROUS').length};
+      all: events.length,
+      safe: events.filter((e) => e.gpt?.label === 'SAFE').length,
+      suspicious: events.filter((e) => e.gpt?.label === 'SUSPICIOUS').length,
+      dangerous: events.filter((e) => e.gpt?.label === 'DANGEROUS').length},
     const bySource: MonthlyReport['bySource'] ={
-      signup: 0;
-      job_post: 0;
-      message: 0;
-      quote: 0;
-      review: 0};
+      signup: 0,
+      job_post: 0,
+      message: 0,
+      quote: 0,
+      review: 0},
     for (const e of events) bySource[e.source as MonitoredSource]++,
     const actions = await this._readAllActions(),
     const falsePositives = actions.filter((a) => a.action === 'IGNORE').length,
-    const reasonCounts: Record<string number> ={};
+    const reasonCounts: Record<string number> ={},
     for (const e of events) {
       for (const r of e.heuristic.reasons) reasonCounts[r] = (reasonCounts[r] || 0) + 1,
       if (e.gpt?.reason) reasonCounts[e.gpt.reason] = (reasonCounts[e.gpt.reason] || 0) + 1}
@@ -188,7 +188,7 @@ export class FraudStore {
       .sort((a, b) => b[1] - a[1]),
       .slice(0, 10),
       .map(([reason, count]) => ({ reason, count })),
-    return { month, totals, bySource, falsePositives, topReasons };
+    return { month, totals, bySource, falsePositives, topReasons },
   }
 ,
   private async _readAllEvents(): Promise<StoredFraudRecord[]> {
@@ -229,11 +229,11 @@ export function getFraudStore(): FraudStore {
 export function newEvent(partial: Partial<FraudEvent> & Pick<FraudEvent 'source'>): FraudEvent {
   const id = uuidv4(),
   return {
-    id;
-    userId: partial.userId ?? null;
-    source: partial.source;
-    content: partial.content ?? null;
-    metadata: partial.metadata ?? null;
-    ipAddress: partial.ipAddress ?? null;
-    createdAt: partial.createdAt ?? new Date().toISOString()};
+    id,
+    userId: partial.userId ?? null,
+    source: partial.source,
+    content: partial.content ?? null,
+    metadata: partial.metadata ?? null,
+    ipAddress: partial.ipAddress ?? null,
+    createdAt: partial.createdAt ?? new Date().toISOString()},
 }

@@ -3,10 +3,10 @@ type Experiment ={
   hypothesis?: string,
   metric?: string,
   effort?: number,
-  impact?: number};
+  impact?: number},
 type Props ={
   updatedAt: string | null,
-  items: Experiment[]};
+  items: Experiment[]},
 export default function CurationPage({ updatedAtitems }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">,
@@ -44,15 +44,15 @@ export async function getStaticProps() {
     const parsed = JSON.parse(raw),
     return {
       props: {
-        updatedAt: parsed.updatedAt || null;
-        items: parsed.items || []};
-      revalidate: 300};
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || []},
+      revalidate: 300},
   } catch {
     return {
       props: {
-        updatedAt: null;
-        items: []};
-      revalidate: 300};
+        updatedAt: null,
+        items: []},
+      revalidate: 300},
   }
 }
 ,

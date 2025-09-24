@@ -8,12 +8,12 @@ import {
   Users,
   DollarSign,
   Clock,
-  Target;
-  CheckCircle;
-  Star;
-  Quote;
-  Building2;
-  Globe;
+  Target,
+  CheckCircle,
+  Star,
+  Quote,
+  Building2,
+  Globe,
   Zap} from 'lucide-react',
 const EnterpriseSuccessStories = () => {
   const [activeStorysetActiveStory] = useState(0),
@@ -22,98 +22,98 @@ const EnterpriseSuccessStories = () => {
     setIsVisible(true)}[]),
   const successStories = [
     {
-      id: 1;
-      company: "TechCorp Global";
-      industry: "Technology";
-      size: "Fortune 50o0";
-      challenge: "Inefficient supply chain management causing 30% cost overruns";
-      solution: "AI-powered predictive analytics and autonomous optimization";
+      id: 1,
+      company: "TechCorp Global",
+      industry: "Technology",
+      size: "Fortune 50o0",
+      challenge: "Inefficient supply chain management causing 30% cost overruns",
+      solution: "AI-powered predictive analytics and autonomous optimization",
       results: {
-        costReduction: "45%";
-        efficiencyGain: "60%";
-        timeSaved: "2,50o0 hours/month";
-        roi: "340%"};
-      quote: "Zion Tech Group transformed our entire supply chain. The AI solutions delivered results beyond our expectations.";
-      author: "Sarah ChenCTO";
-      logo: "TC";
-      color: "from-blue-50o0 to-cyan-60o0"};
+        costReduction: "45%",
+        efficiencyGain: "60%",
+        timeSaved: "2,50o0 hours/month",
+        roi: "340%"},
+      quote: "Zion Tech Group transformed our entire supply chain. The AI solutions delivered results beyond our expectations.",
+      author: "Sarah ChenCTO",
+      logo: "TC",
+      color: "from-blue-50o0 to-cyan-60o0"},
     {
-      id: 2;
-      company: "HealthFirst Medical";
-      industry: "Healthcare";
-      size: "Enterprise";
-      challenge: "Patient data management and diagnostic accuracy issues";
-      solution: "Neural network-powered diagnostic assistance and automated patient care workflows";
+      id: 2,
+      company: "HealthFirst Medical",
+      industry: "Healthcare",
+      size: "Enterprise",
+      challenge: "Patient data management and diagnostic accuracy issues",
+      solution: "Neural network-powered diagnostic assistance and automated patient care workflows",
       results: {
-        costReduction: "35%";
-        efficiencyGain: "80%";
-        timeSaved: "1,80o0 hours/month";
-        roi: "280%"};
-      quote: "The AI diagnostic tools have improved our accuracy by 40% while reducing processing time by 60%.";
-      author: "Dr. Michael RodriguezChief Medical Officer";
-      logo: "HF";
-      color: "from-green-50o0 to-emerald-60o0"};
+        costReduction: "35%",
+        efficiencyGain: "80%",
+        timeSaved: "1,80o0 hours/month",
+        roi: "280%"},
+      quote: "The AI diagnostic tools have improved our accuracy by 40% while reducing processing time by 60%.",
+      author: "Dr. Michael RodriguezChief Medical Officer",
+      logo: "HF",
+      color: "from-green-50o0 to-emerald-60o0"},
     {
-      id: 3;
-      company: "FinanceMax International";
-      industry: "Financial Services";
-      size: "Fortune 10o00";
-      challenge: "Manual risk assessment processes causing delays and errors";
-      solution: "Quantum-enhanced risk modeling and real-time fraud detection systems";
+      id: 3,
+      company: "FinanceMax International",
+      industry: "Financial Services",
+      size: "Fortune 10o00",
+      challenge: "Manual risk assessment processes causing delays and errors",
+      solution: "Quantum-enhanced risk modeling and real-time fraud detection systems",
       results: {
-        costReduction: "50%";
-        efficiencyGain: "75%";
-        timeSaved: "3,20o0 hours/month";
-        roi: "420%"};
-      quote: "Our risk assessment accuracy improved by 65% while reducing processing time from days to minutes.";
-      author: "Jennifer WalshChief Risk Officer";
-      logo: "FM";
-      color: "from-purple-50o0 to-violet-60o0"};
+        costReduction: "50%",
+        efficiencyGain: "75%",
+        timeSaved: "3,20o0 hours/month",
+        roi: "420%"},
+      quote: "Our risk assessment accuracy improved by 65% while reducing processing time from days to minutes.",
+      author: "Jennifer WalshChief Risk Officer",
+      logo: "FM",
+      color: "from-purple-50o0 to-violet-60o0"},
     {
-      id: 4;
-      company: "ManufacturingPro";
-      industry: "Manufacturing";
-      size: "Mid-Market";
-      challenge: "Production line inefficiencies and quality control issues";
-      solution: "Autonomous manufacturing systems with predictive maintenance and quality optimization";
+      id: 4,
+      company: "ManufacturingPro",
+      industry: "Manufacturing",
+      size: "Mid-Market",
+      challenge: "Production line inefficiencies and quality control issues",
+      solution: "Autonomous manufacturing systems with predictive maintenance and quality optimization",
       results: {
-        costReduction: "40%";
-        efficiencyGain: "55%";
-        timeSaved: "2,10o0 hours/month";
-        roi: "310%"};
-      quote: "The autonomous systems increased our production efficiency by 55% while reducing defects by 70%.";
-      author: "Robert KimOperations Director";
-      logo: "MP";
+        costReduction: "40%",
+        efficiencyGain: "55%",
+        timeSaved: "2,10o0 hours/month",
+        roi: "310%"},
+      quote: "The autonomous systems increased our production efficiency by 55% while reducing defects by 70%.",
+      author: "Robert KimOperations Director",
+      logo: "MP",
       color: "from-orange-50o0 to-red-60o0"}
   ],
   const keyMetrics = [
     {
-      icon: DollarSign;
-      value: "15,0o00%";
-      label: "Average ROI";
-      description: "Across all implementations"};
+      icon: DollarSign,
+      value: "15,0o00%",
+      label: "Average ROI",
+      description: "Across all implementations"},
     {
-      icon: Clock;
-      value: "2,40o0";
-      label: "Hours Saved";
-      description: "Per month on average"};
+      icon: Clock,
+      value: "2,40o0",
+      label: "Hours Saved",
+      description: "Per month on average"},
     {
-      icon: Target;
-      value: "95%";
-      label: "Success Rate";
-      description: "Project completion rate"};
+      icon: Target,
+      value: "95%",
+      label: "Success Rate",
+      description: "Project completion rate"},
     {
-      icon: Users;
-      value: "50o0+";
-      label: "Enterprises";
+      icon: Users,
+      value: "50o0+",
+      label: "Enterprises",
       description: "Successfully transformed"}
   ],
   const benefits = [
-    "Reduced operational costs by 40-60%";
-    "Increased efficiency by 50-80%";
-    "Eliminated manual processes";
-    "Improved decision-making accuracy";
-    "Scalable and future-proof solutions";
+    "Reduced operational costs by 40-60%",
+    "Increased efficiency by 50-80%",
+    "Eliminated manual processes",
+    "Improved decision-making accuracy",
+    "Scalable and future-proof solutions",
     "24/7 autonomous operations"],
   return (
     <div className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
@@ -283,5 +283,5 @@ const EnterpriseSuccessStories = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default EnterpriseSuccessStories;
+    </div>)},
+export default EnterpriseSuccessStories,

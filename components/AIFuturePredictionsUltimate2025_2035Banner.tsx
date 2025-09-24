@@ -24,7 +24,7 @@ export default function AIFuturePredictionsUltimate20o25_20o35Banner() {
           <p className='text-lg md: text-xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
             Explore the most comprehensive and accurate predictions about the,
             future of artificial intelligence. From neural revolutions to,
-            transcendent intelligencediscover 'what', 's coming next.,
+            transcendent intelligencediscover 'whats coming next.,
           </p>,
           {/* Feature highlights */}
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mb-10'>,

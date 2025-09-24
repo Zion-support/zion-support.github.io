@@ -1,5 +1,5 @@
 import { MobileApp } from './MobileApp',
-export { MobileApp };
+export { MobileApp },
 // Export all mobile components for potential reuse in other projects,
 export * from './components/common/BottomNavigation',
 export * from './components/common/MobileHeader',

@@ -4,73 +4,70 @@ import Footer from '../../components/Footer',
 import SEOHead from '../../components/SEOHead',
 import ErrorBoundary from '../../components/ErrorBoundary',
 import {
-  Database;
-  Server;
-  Shield;
-  Zap;
-  Users;
-  BarChart3;
-  Cloud;
-  CheckCircle;
-  ArrowRight;
-  Globe;
-  Lock;
-  TrendingUp;
-  Cpu;
-  HardDrive;
+  Database,
+  Server,
+  Shield,
+  Zap,
+  Users,
+  BarChart3,
+  Cloud,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Lock,
+  TrendingUp,
+  Cpu,
+  HardDrive,
   Network} from 'lucide-react',
 export default function DatabaseSolutions() {
   const features = [
     {
-      icon: Database;
-      title: 'Database Design & Architecture';
-      description: 'Custom database solutions designed for optimal performance and scalability'};
+      icon: Database,
+      title: 'Database Design & Architecture',
+      description: 'Custom database solutions designed for optimal performance and scalability'},
     {
-      icon: Server;
-      title: 'Database Administration';
-      description: '24/7 monitoring, maintenance, and optimization of your database systems'};
+      icon: Server,
+      title: 'Database Administration',
+      description: '24/7 monitoring, maintenance, and optimization of your database systems'},
     {
-      icon: Shield;
-      title: 'Data Security & Backup';
-      description: 'Enterprise-grade security with automated backup and disaster recovery'};
+      icon: Shield,
+      title: 'Data Security & Backup',
+      description: 'Enterprise-grade security with automated backup and disaster recovery'},
     {
-      icon: Zap;
-      title: 'Performance Optimization';
-      description: 'Advanced tuning and optimization for maximum database performance'};
+      icon: Zap,
+      title: 'Performance Optimization',
+      description: 'Advanced tuning and optimization for maximum database performance'},
     {
-      icon: Cloud;
-      title: 'Cloud Database Migration';
-      description: 'Seamless migration to cloud-based database solutions'};
+      icon: Cloud,
+      title: 'Cloud Database Migration',
+      description: 'Seamless migration to cloud-based database solutions'},
     {
-      icon: BarChart3;
-      title: 'Data Analytics & Reporting';
+      icon: BarChart3,
+      title: 'Data Analytics & Reporting',
       description: 'Transform your data into actionable insights with advanced analytics'}
   ],
   const databaseTypes = [
     {
-      name: 'SQL Databases';
-      description: 'MySQL, PostgreSQL, SQL Server, Oracle';
-      icon: Database};
+      name: 'SQL Databases',
+      description: 'MySQL, PostgreSQL, SQL Server, Oracle',
+      icon: Database},
     {
-      name: 'NoSQL Databases';
-      description: 'MongoDB, Cassandra, Redis, DynamoDB';
-      icon: HardDrive};
+      name: 'NoSQL Databases',
+      description: 'MongoDB, Cassandra, Redis, DynamoDB',
+      icon: HardDrive},
     {
-      name: 'Cloud Databases';
-      description: 'AWS RDS, Azure SQL, Google Cloud SQL';
-      icon: Cloud};
+      name: 'Cloud Databases',
+      description: 'AWS RDS, Azure SQL, Google Cloud SQL',
+      icon: Cloud},
     {
-      name: 'In-Memory Databases';
-      description: 'Redis, Memcached, Hazelcast';
+      name: 'In-Memory Databases',
+      description: 'Redis, Memcached, Hazelcast',
       icon: Cpu}
   ],
   const benefits = [
-    'Improved data performance and query optimization';
-    'Enhanced data security and compliance';
-    'Reduced operational costs and maintenance';
-    'Scalable architecture for business growth';
-    '24/7 monitoring and support';
-    'Automated backup and disaster recovery'],
+    'Improved data performance and query optimizationEnhanced data security and compliance',
+    'Reduced operational costs and maintenanceScalable architecture for business growth',
+    '24/7 monitoring and supportAutomated backup and disaster recovery'],
   return (
     <ErrorBoundary>,
       <SEOHead
@@ -176,7 +173,7 @@ export default function DatabaseSolutions() {
                 Why Choose Our Database Solutions?,
               </h2>,
               <p className="text-xl text-gray-30o0 mb-8">,
-                Our expert team delivers database solutions that improve performance;
+                Our expert team delivers database solutions that improve performance,
                 enhance security, and reduce operational costs.,
               </p>,
               <div className="space-y-4">,

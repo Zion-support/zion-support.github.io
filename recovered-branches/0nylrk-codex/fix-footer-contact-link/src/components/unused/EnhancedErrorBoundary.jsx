@@ -1,29 +1,29 @@
 import React, { Component } from 'react',
 import { motion } from 'framer-motion',
 import {
-  ExclamationTriangleIcon;
-  ArrowPathIcon;
-  HomeIcon;
-  DocumentTextIcon;
-  BugAntIcon;
+  ExclamationTriangleIcon,
+  ArrowPathIcon,
+  HomeIcon,
+  DocumentTextIcon,
+  BugAntIcon,
 } from '@heroicons/react/24/outline',
 class EnhancedErrorBoundary extends Component {
   constructor(props) {
     super(props),
     this.state = {
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: null;
-      showStackTrace: false;
-    };
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false
+    },
   }
   static getDerivedStateFromError(error) {
     return {
-      hasError: true;
-      error;
-      errorId: this.generateErrorId();
-    };
+      hasError: true,
+      error,
+      errorId: this.generateErrorId()
+    },
   }
   componentDidCatch(error, errorInfo) {
     this.setState({ errorInfo }),
@@ -40,23 +40,23 @@ class EnhancedErrorBoundary extends Component {
     // In a real application, you would send this to your error reporting service,
     // For example: Sentry, LogRocket, Bugsnag, etc.,
     const errorReport = {
-      id: this.state.errorId;
-      timestamp: new Date().toISOString();
+      id: this.state.errorId,
+      timestamp: new Date().toISOString(),
       error: {
-        name: error.name;
-        message: error.message;
-        stack: error.stack;
-      };
+        name: error.name,
+        message: error.message,
+        stack: error.stack
+      },
       errorInfo: {
-        componentStack: errorInfo.componentStack;
-      };
-      userAgent: navigator.userAgent;
-      url: window.location.href;
+        componentStack: errorInfo.componentStack
+      },
+      userAgent: navigator.userAgent,
+      url: window.location.href,
       viewport: {
-        width: window.innerWidth;
-        height: window.innerHeight;
-      };
-    };
+        width: window.innerWidth,
+        height: window.innerHeight
+      },
+    },
     // Log to console for development,
     if (process.env.NODE_ENV === 'development') {
       console.group('Error Report'),
@@ -67,14 +67,14 @@ class EnhancedErrorBoundary extends Component {
     // Example: Sentry.captureException(error, { extra: errorReport })}
   handleRetry = () => {
     this.setState({
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: null;
-      showStackTrace: false;
-    })};
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: null,
+      showStackTrace: false
+    })},
   handleGoHome = () => {
-    window.location.href = '/'};
+    window.location.href = '/'},
   handleReportIssue = () => {
     const error = this.state.error,
     const errorInfo = this.state.errorInfo,
@@ -107,9 +107,9 @@ ${errorInfo.componentStack}
       `.trim(),
       const issueUrl = `https: //github.com/ziontechgroup/zion-website/issues/new?title=Error: ${encodeURIComponent(error.message)}&body=${encodeURIComponent(issueBody)}`,
       window.open(issueUrl, '_blank')}
-  };
+  },
   toggleStackTrace = () => {
-    this.setState(prev => ({ showStackTrace: !prev.showStackTrace }))};
+    this.setState(prev => ({ showStackTrace: !prev.showStackTrace }))},
   render() {
     if (this.state.hasError) {
       // Custom fallback UI,
@@ -234,4 +234,4 @@ ${errorInfo.componentStack}
         </div>)}
     return this.props.children}
 }
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary,

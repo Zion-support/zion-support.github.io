@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-analytics-platform - Zion Tech Group';
+  title: 'ai-analytics-platform - Zion Tech Group',
   description:,
-    'Professional ai-analytics-platform solutions for your business needs.';
-  keywords: 'ai-analytics-platform, services, business, technology';
-};
+    'Professional ai-analytics-platform solutions for your business needs.',
+  keywords: 'ai-analytics-platform, services, business, technology',
+},
 export default function AiAnalyticsPlatformPage() {
   return (
     <div className='min-h-screen bg-white'>,

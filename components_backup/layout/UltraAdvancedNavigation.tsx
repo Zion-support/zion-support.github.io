@@ -2,126 +2,126 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin;
-  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp;
-  Globe, Database, Cloud, Lock, Palette, Target;
+  Menu, X, ChevronDown, Rocket, Phone, Mail, MapPin,
+  Brain, Cpu, Shield, Zap, Star, Users, TrendingUp,
+  Globe, Database, Cloud, Lock, Palette, Target,
   Layers, Sparkles, Atom, Microscope, Satellite} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: 'Revolutionary 20o26 AI';
-    icon: Brain;
+    title: 'Revolutionary 20o26 AI',
+    icon: Brain,
     services: [
-      { name: 'AI Consciousness Simulator Pro', href: '/ai-consciousness-simulator-pro', description: 'Simulate human-like consciousness in AI systems', price: '$4,999/month' };
-      { name: 'Quantum AI Hybrid Computing', href: '/quantum-ai-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$7,999/month' };
-      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$2,999/month' };
-      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$5,999/month' };
+      { name: 'AI Consciousness Simulator Pro', href: '/ai-consciousness-simulator-pro', description: 'Simulate human-like consciousness in AI systems', price: '$4,999/month' },
+      { name: 'Quantum AI Hybrid Computing', href: '/quantum-ai-hybrid-computing', description: 'Hybrid AI-Quantum computing for complex problem solving', price: '$7,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform', description: 'Unified AI platform for text, image, audio, and video processing', price: '$2,999/month' },
+      { name: 'AI Autonomous Decision Engine', href: '/ai-autonomous-decision-engine', description: 'AI system that makes complex decisions autonomously', price: '$5,999/month' },
       { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Advanced AI with human-like emotional understanding', price: '$3,999/month' }
-    ]};
+    ]},
   {
-    title: 'Revolutionary 20o26 IT';
-    icon: Cpu;
+    title: 'Revolutionary 20o26 IT',
+    icon: Cpu,
     services: [
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$12,999/month' };
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$15,999/month' };
-      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$9,999/month' };
-      { name: 'Holographic Computing Platform', href: '/holographic-computing-platform', description: '3D holographic computing and visualization', price: '$6,999/month' };
+      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$12,999/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$15,999/month' },
+      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$9,999/month' },
+      { name: 'Holographic Computing Platform', href: '/holographic-computing-platform', description: '3D holographic computing and visualization', price: '$6,999/month' },
       { name: 'Quantum Internet Platform', href: '/quantum-internet-platform', description: 'Ultra-secure quantum communication network', price: '$8,999/month' }
-    ]};
+    ]},
   {
-    title: 'Revolutionary 20o26 Micro SaaS';
-    icon: Zap;
+    title: 'Revolutionary 20o26 Micro SaaS',
+    icon: Zap,
     services: [
-      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights with AI', price: '$299/month' };
-      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Automate customer support with intelligent AI agents', price: '$199/month' };
-      { name: 'AI Marketing Automation Suite', href: '/ai-marketing-automation-suite', description: 'Intelligent marketing automation powered by AI', price: '$399/month' };
-      { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'Boost sales performance with AI-powered insights', price: '$249/month' };
+      { name: 'AI Business Intelligence Pro', href: '/ai-business-intelligence-pro', description: 'Transform data into actionable insights with AI', price: '$299/month' },
+      { name: 'AI Customer Service Automation', href: '/ai-customer-service-automation', description: 'Automate customer support with intelligent AI agents', price: '$199/month' },
+      { name: 'AI Marketing Automation Suite', href: '/ai-marketing-automation-suite', description: 'Intelligent marketing automation powered by AI', price: '$399/month' },
+      { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform', description: 'Boost sales performance with AI-powered insights', price: '$249/month' },
       { name: 'AI HR Recruitment Automation', href: '/ai-hr-recruitment-automation', description: 'Streamline hiring with intelligent AI automation', price: '$179/month' }
-    ]};
+    ]},
   {
-    title: 'Quantum Computing';
-    icon: Atom;
+    title: 'Quantum Computing',
+    icon: Atom,
     services: [
-      { name: 'Quantum-Secure Financial Trading', href: '/quantum-secure-financial-trading', description: 'Unbreakable quantum encryption for trading', price: '$2,999/month' };
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Unbreakable quantum encryption for internet', price: '$1,999/month' };
-      { name: 'Quantum Space Mining Platform', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration', price: '$8,999/month' };
+      { name: 'Quantum-Secure Financial Trading', href: '/quantum-secure-financial-trading', description: 'Unbreakable quantum encryption for trading', price: '$2,999/month' },
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform', description: 'Unbreakable quantum encryption for internet', price: '$1,999/month' },
+      { name: 'Quantum Space Mining Platform', href: '/quantum-space-mining-platform', description: 'Revolutionary space resource exploration', price: '$8,999/month' },
       { name: 'Quantum Blockchain Infrastructure', href: '/quantum-blockchain-infrastructure', description: 'Quantum-secure blockchain for finance', price: '$1,799/month' }
-    ]};
+    ]},
   {
-    title: 'Emerging Technologies';
-    icon: Rocket;
+    title: 'Emerging Technologies',
+    icon: Rocket,
     services: [
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$12,999/month' };
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$25,999/month' };
-      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$18,999/month' };
+      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing for next-generation AI', price: '$12,999/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing for complex problem solving', price: '$25,999/month' },
+      { name: 'Photonic Computing Platform', href: '/photonic-computing-platform', description: 'Light-speed computing with photonic processors', price: '$18,999/month' },
       { name: 'Holographic Display Platform', href: '/holographic-display-platform', description: 'Next-generation 3D holographic visualization', price: '$6,999/month' }
-    ]};
+    ]},
   {
-    title: 'Enterprise IT & Security';
-    icon: Shield;
+    title: 'Enterprise IT & Security',
+    icon: Shield,
     services: [
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify security', price: '$15,999/month' };
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: '$8,999/month' };
-      { name: '5G Private Network Solutions', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: '$12,999/month' };
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify security', price: '$15,999/month' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed computing management', price: '$8,999/month' },
+      { name: '5G Private Network Solutions', href: '/5g-private-network-solutions', description: 'High-speed private networks', price: '$12,999/month' },
       { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform', description: 'Intelligent automation for development', price: '$4,999/month' }
-    ]};
+    ]},
   {
-    title: 'Autonomous Systems';
-    icon: Target;
+    title: 'Autonomous Systems',
+    icon: Target,
     services: [
-      { name: 'AI Autonomous Supply Chain', href: '/ai-autonomous-supply-chain', description: 'Fully autonomous supply chain optimization', price: '$3,299/month' };
-      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Coordinated multi-robot systems', price: '$9,999/month' };
-      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform', description: 'AI-powered autonomous vehicle control', price: '$11,999/month' };
+      { name: 'AI Autonomous Supply Chain', href: '/ai-autonomous-supply-chain', description: 'Fully autonomous supply chain optimization', price: '$3,299/month' },
+      { name: 'Swarm Robotics Platform', href: '/swarm-robotics-platform', description: 'Coordinated multi-robot systems', price: '$9,999/month' },
+      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform', description: 'AI-powered autonomous vehicle control', price: '$11,999/month' },
       { name: 'Quantum Internet Platform', href: '/quantum-internet-platform', description: 'Next-generation quantum communication', price: '$5,999/month' }
-    ]};
+    ]},
   {
-    title: 'Cloud & Infrastructure';
-    icon: Cloud;
+    title: 'Cloud & Infrastructure',
+    icon: Cloud,
     services: [
-      { name: 'Cloud Migration & Optimization', href: '/cloud-migration-optimization', description: 'Seamless cloud migration with optimization', price: '$9,999/month' };
-      { name: 'Data Center Modernization', href: '/data-center-modernization', description: 'Transform legacy data centers', price: '$18,999/month' };
-      { name: 'API Management & Security', href: '/api-management-security', description: 'Comprehensive API management', price: '$3,999/month' };
+      { name: 'Cloud Migration & Optimization', href: '/cloud-migration-optimization', description: 'Seamless cloud migration with optimization', price: '$9,999/month' },
+      { name: 'Data Center Modernization', href: '/data-center-modernization', description: 'Transform legacy data centers', price: '$18,999/month' },
+      { name: 'API Management & Security', href: '/api-management-security', description: 'Comprehensive API management', price: '$3,999/month' },
       { name: 'Identity & Access Management', href: '/identity-access-management', description: 'Comprehensive identity management', price: '$5,999/month' }
     ]}
 ],
 const companyLinks = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Revolutionary 20o26', href: '/revolutionary-20o26-services' };
-  { name: '20o26 Services', href: '/20o26-services-showcase' };
-  { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase' };
-  { name: 'Innovative Micro SAAS', href: '/micro-saas' };
-  { name: 'All Services', href: '/services' };
-  { name: 'Market Pricing', href: '/market-pricing-20o26' };
-  { name: 'News', href: '/news' };
-  { name: 'Case Studies', href: '/case-studies' };
-  { name: 'Blog', href: '/blog' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Revolutionary 20o26', href: '/revolutionary-20o26-services' },
+  { name: '20o26 Services', href: '/20o26-services-showcase' },
+  { name: 'Enterprise Solutions', href: '/enterprise-solutions-showcase' },
+  { name: 'Innovative Micro SAAS', href: '/micro-saas' },
+  { name: 'All Services', href: '/services' },
+  { name: 'Market Pricing', href: '/market-pricing-20o26' },
+  { name: 'News', href: '/news' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
   { name: 'Resources', href: '/resources' }
 ],
 	const navigationItems: Array<{ name: string, href: string, icon?: React.ComponentType<any>, description?: string }>,
 		= [
-			{ name: 'Home', href: '/' };
-			{ name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' };
-			{ name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' };
-			{ name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' };
-			{ name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' };
-			{ name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits, pricing refs' };
-			{ name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' };
+			{ name: 'Home', href: '/' },
+			{ name: 'AI', href: '/ai-services', icon: Brain, description: 'AI & ML services' },
+			{ name: 'Quantum', href: '/quantum-cloud-infrastructure', icon: Atom, description: 'Quantum & space' },
+			{ name: 'Enterprise IT', href: '/it-services', icon: Building2, description: 'Cloud, DevOps, Security' },
+			{ name: 'Services', href: '/services', icon: Monitor, description: 'Directory of services' },
+			{ name: 'Services Advertising', href: '/services-advertising', description: 'Features, benefits, pricing refs' },
+			{ name: 'Market Pricing', href: '/market-pricing', icon: DollarSign, description: 'Vendor references' },
 			{ name: 'Contact', href: '/contact' }
 		],
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const closeMenu = () => {
     setIsOpen(false),
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${
       isScrolled,

@@ -1,15 +1,15 @@
 import Layout from '../components/layout/Layout',
 import {
-  Brain;
-  Sparkles;
-  Zap;
-  Target;
-  Cpu;
-  Clock;
-  CheckCircle;
-  TrendingUp;
-  Code;
-  Network;
+  Brain,
+  Sparkles,
+  Zap,
+  Target,
+  Cpu,
+  Clock,
+  CheckCircle,
+  TrendingUp,
+  Code,
+  Network,
 } from 'lucide-react',
 export default function AIMachineLearning20o41() {
   return (
@@ -62,47 +62,47 @@ export default function AIMachineLearning20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Neural Evolution';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Neural Evolution',
                   description:,
-                    'Self-evolving neural networks that continuously improve and adapt to new data and challenges.';
-                  color: 'from-emerald-50o0 to-teal-50o0';
-                };
+                    'Self-evolving neural networks that continuously improve and adapt to new data and challenges.',
+                  color: 'from-emerald-50o0 to-teal-50o0'
+                },
                 {
-                  icon: <Network className='w-8 h-8' />;
-                  title: 'Deep Learning';
+                  icon: <Network className='w-8 h-8' />,
+                  title: 'Deep Learning',
                   description:,
-                    'Advanced deep learning architectures that process complex patterns and relationships in data.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Advanced deep learning architectures that process complex patterns and relationships in data.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <TrendingUp className='w-8 h-8' />;
-                  title: 'Transfer Learning';
+                  icon: <TrendingUp className='w-8 h-8' />,
+                  title: 'Transfer Learning',
                   description:,
-                    'Intelligent knowledge transfer between models and domains for faster learning and adaptation.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Intelligent knowledge transfer between models and domains for faster learning and adaptation.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Cpu className='w-8 h-8' />;
-                  title: 'Edge Computing';
+                  icon: <Cpu className='w-8 h-8' />,
+                  title: 'Edge Computing',
                   description:,
-                    'ML models optimized for edge devices with real-time processing and minimal latency.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'ML models optimized for edge devices with real-time processing and minimal latency.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'AutoML';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'AutoML',
                   description:,
-                    'Automated machine learning that builds, trains, and optimizes models without human intervention.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Automated machine learning that builds, trains, and optimizes models without human intervention.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Code className='w-8 h-8' />;
-                  title: 'Explainable AI';
+                  icon: <Code className='w-8 h-8' />,
+                  title: 'Explainable AI',
                   description:,
-                    'Transparent ML models that provide clear explanations for their decisions and predictions.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Transparent ML models that provide clear explanations for their decisions and predictions.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -137,43 +137,43 @@ export default function AIMachineLearning20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Supervised Learning';
+                  name: 'Supervised Learning',
                   description:,
-                    'Classification and regression with labeled training data';
-                };
+                    'Classification and regression with labeled training data',
+                },
                 {
-                  name: 'Unsupervised Learning';
+                  name: 'Unsupervised Learning',
                   description:,
-                    'Pattern discovery and clustering without labels';
-                };
+                    'Pattern discovery and clustering without labels',
+                },
                 {
-                  name: 'Reinforcement Learning';
+                  name: 'Reinforcement Learning',
                   description:,
-                    'Learning through interaction and reward systems';
-                };
+                    'Learning through interaction and reward systems',
+                },
                 {
-                  name: 'Semi-supervised Learning';
-                  description: 'Learning with limited labeled data';
-                };
+                  name: 'Semi-supervised Learning',
+                  description: 'Learning with limited labeled data'
+                },
                 {
-                  name: 'Federated Learning';
-                  description: 'Distributed learning across multiple devices';
-                };
+                  name: 'Federated Learning',
+                  description: 'Distributed learning across multiple devices'
+                },
                 {
-                  name: 'Meta Learning';
+                  name: 'Meta Learning',
                   description:,
-                    'Learning to learn and adapt quickly to new tasks';
-                };
+                    'Learning to learn and adapt quickly to new tasks',
+                },
                 {
-                  name: 'Active Learning';
+                  name: 'Active Learning',
                   description:,
-                    'Intelligent data selection for optimal learning';
-                };
+                    'Intelligent data selection for optimal learning',
+                },
                 {
-                  name: 'Ensemble Methods';
+                  name: 'Ensemble Methods',
                   description:,
-                    'Combining multiple models for better performance';
-                };
+                    'Combining multiple models for better performance',
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -203,55 +203,50 @@ export default function AIMachineLearning20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Problem Definition';
+                  phase: 'Problem Definition',
                   description:,
-                    'AI analyzes business problems and determines the best ML approach and objectives';
+                    'AI analyzes business problems and determines the best ML approach and objectives',
                   features: [
-                    'Problem analysis';
-                    'Objective setting';
-                    'Success metrics';
-                  ];
-                };
+                    'Problem analysisObjective setting',
+                    'Success metrics',
+                  ]
+                },
                 {
-                  phase: 'Data Preparation';
+                  phase: 'Data Preparation',
                   description:,
-                    'Intelligent data collection, cleaning, and preparation for optimal model training';
+                    'Intelligent data collection, cleaning, and preparation for optimal model training',
                   features: [
-                    'Data collection';
-                    'Data cleaning';
-                    'Feature engineering';
-                  ];
-                };
+                    'Data collectionData cleaning',
+                    'Feature engineering',
+                  ]
+                },
                 {
-                  phase: 'Model Selection';
+                  phase: 'Model Selection',
                   description:,
-                    'AI automatically selects the best algorithms and architectures for the specific problem';
+                    'AI automatically selects the best algorithms and architectures for the specific problem',
                   features: [
-                    'Algorithm selection';
-                    'Architecture design';
-                    'Hyperparameter tuning';
-                  ];
-                };
+                    'Algorithm selectionArchitecture design',
+                    'Hyperparameter tuning',
+                  ]
+                },
                 {
-                  phase: 'Training & Validation';
+                  phase: 'Training & Validation',
                   description:,
-                    'Advanced training with cross-validation and performance optimization';
+                    'Advanced training with cross-validation and performance optimization',
                   features: [
-                    'Model training';
-                    'Cross-validation';
-                    'Performance optimization';
-                  ];
-                };
+                    'Model trainingCross-validation',
+                    'Performance optimization',
+                  ]
+                },
                 {
-                  phase: 'Deployment & Monitoring';
+                  phase: 'Deployment & Monitoring',
                   description:,
-                    'Seamless deployment with continuous monitoring and model updates';
+                    'Seamless deployment with continuous monitoring and model updates',
                   features: [
-                    'Model deployment';
-                    'Performance monitoring';
-                    'Continuous learning';
-                  ];
-                };
+                    'Model deploymentPerformance monitoring',
+                    'Continuous learning',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -297,61 +292,53 @@ export default function AIMachineLearning20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Neural Networks';
+                  category: 'Neural Networks',
                   description:,
-                    'Deep learning models including CNNs, RNNs, Transformers, and GANs for complex pattern recognition.';
+                    'Deep learning models including CNNs, RNNs, Transformers, and GANs for complex pattern recognition.',
                   models: [
-                    'Convolutional Neural Networks';
-                    'Recurrent Neural Networks';
-                    'Transformers';
-                    'Generative Adversarial Networks';
-                  ];
-                };
+                    'Convolutional Neural NetworksRecurrent Neural Networks',
+                    'TransformersGenerative Adversarial Networks',
+                  ]
+                },
                 {
-                  category: 'Traditional ML';
+                  category: 'Traditional ML',
                   description:,
-                    'Classical machine learning algorithms optimized with modern techniques and AI enhancements.';
+                    'Classical machine learning algorithms optimized with modern techniques and AI enhancements.',
                   models: [
-                    'Random Forests';
-                    'Support Vector Machines';
-                    'Gradient Boosting';
-                    'K-means Clustering';
-                  ];
-                };
+                    'Random ForestsSupport Vector Machines',
+                    'Gradient BoostingK-means Clustering',
+                  ]
+                },
                 {
-                  category: 'Natural Language Processing';
+                  category: 'Natural Language Processing',
                   description:,
-                    'Advanced NLP models for text understanding, generation, and language processing tasks.';
-                  models: ['BERT', 'GPT', 'T5', 'RoBERTa'];
-                };
+                    'Advanced NLP models for text understanding, generation, and language processing tasks.',
+                  models: ['BERTGPT', 'T5RoBERTa'],
+                },
                 {
-                  category: 'Computer Vision';
+                  category: 'Computer Vision',
                   description:,
-                    'Specialized models for image recognition, object detection, and visual understanding.';
+                    'Specialized models for image recognition, object detection, and visual understanding.',
                   models: [
-                    'ResNet';
-                    'YOLO';
-                    'EfficientNet';
-                    'Vision Transformers';
-                  ];
-                };
+                    'ResNetYOLO',
+                    'EfficientNetVision Transformers',
+                  ]
+                },
                 {
-                  category: 'Time Series';
+                  category: 'Time Series',
                   description:,
-                    'Models designed for temporal data analysis, forecasting, and sequence prediction.';
-                  models: ['LSTM', 'GRU', 'Temporal Fusion', 'Prophet'];
-                };
+                    'Models designed for temporal data analysis, forecasting, and sequence prediction.',
+                  models: ['LSTMGRU', 'Temporal FusionProphet'],
+                },
                 {
-                  category: 'Reinforcement Learning';
+                  category: 'Reinforcement Learning',
                   description:,
-                    'Models that learn through interaction and optimize decision-making processes.';
+                    'Models that learn through interaction and optimize decision-making processes.',
                   models: [
-                    'Q-Learning';
-                    'Policy Gradients';
-                    'Actor-Critic';
-                    'Deep Q-Networks';
-                  ];
-                };
+                    'Q-LearningPolicy Gradients',
+                    'Actor-CriticDeep Q-Networks',
+                  ]
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -388,65 +375,59 @@ export default function AIMachineLearning20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Medical diagnosis, drug discovery, and personalized treatment with AI-powered ML models.';
+                    'Medical diagnosis, drug discovery, and personalized treatment with AI-powered ML models.',
                   applications: [
-                    'Medical imaging';
-                    'Drug discovery';
-                    'Patient monitoring';
-                  ];
-                };
+                    'Medical imagingDrug discovery',
+                    'Patient monitoring',
+                  ]
+                },
                 {
-                  industry: 'Finance';
+                  industry: 'Finance',
                   description:,
-                    'Risk assessment, fraud detection, and algorithmic trading with intelligent ML systems.';
+                    'Risk assessment, fraud detection, and algorithmic trading with intelligent ML systems.',
                   applications: [
-                    'Risk modeling';
-                    'Fraud detection';
-                    'Algorithmic trading';
-                  ];
-                };
+                    'Risk modelingFraud detection',
+                    'Algorithmic trading',
+                  ]
+                },
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'Predictive maintenance, quality control, and supply chain optimization with ML.';
+                    'Predictive maintenance, quality control, and supply chain optimization with ML.',
                   applications: [
-                    'Predictive maintenance';
-                    'Quality control';
-                    'Supply optimization';
-                  ];
-                };
+                    'Predictive maintenanceQuality control',
+                    'Supply optimization',
+                  ]
+                },
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'Customer behavior analysis, demand forecasting, and personalized recommendations.';
+                    'Customer behavior analysis, demand forecasting, and personalized recommendations.',
                   applications: [
-                    'Customer insights';
-                    'Demand forecasting';
-                    'Personalization';
-                  ];
-                };
+                    'Customer insightsDemand forecasting',
+                    'Personalization',
+                  ]
+                },
                 {
-                  industry: 'Transportation';
+                  industry: 'Transportation',
                   description:,
-                    'Autonomous vehicles, route optimization, and traffic prediction with ML.';
+                    'Autonomous vehicles, route optimization, and traffic prediction with ML.',
                   applications: [
-                    'Autonomous driving';
-                    'Route optimization';
-                    'Traffic prediction';
-                  ];
-                };
+                    'Autonomous drivingRoute optimization',
+                    'Traffic prediction',
+                  ]
+                },
                 {
-                  industry: 'Energy';
+                  industry: 'Energy',
                   description:,
-                    'Grid optimization, renewable energy forecasting, and demand prediction.';
+                    'Grid optimization, renewable energy forecasting, and demand prediction.',
                   applications: [
-                    'Grid optimization';
-                    'Energy forecasting';
-                    'Demand prediction';
-                  ];
-                };
+                    'Grid optimizationEnergy forecasting',
+                    'Demand prediction',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -483,33 +464,33 @@ export default function AIMachineLearning20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Intelligent Automation';
+                  title: 'Intelligent Automation',
                   description:,
-                    'Automate complex tasks and processes with AI-powered machine learning systems.';
-                  icon: <Brain className='w-8 h-8' />;
-                  color: 'from-emerald-50o0 to-teal-50o0';
-                };
+                    'Automate complex tasks and processes with AI-powered machine learning systems.',
+                  icon: <Brain className='w-8 h-8' />,
+                  color: 'from-emerald-50o0 to-teal-50o0'
+                },
                 {
-                  title: 'Predictive Insights';
+                  title: 'Predictive Insights',
                   description:,
-                    'Gain predictive capabilities that help you anticipate trends and make proactive decisions.';
-                  icon: <TrendingUp className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Gain predictive capabilities that help you anticipate trends and make proactive decisions.',
+                  icon: <TrendingUp className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Cost Optimization';
+                  title: 'Cost Optimization',
                   description:,
-                    'Identify inefficiencies and optimize operations to reduce costs and improve profitability.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Identify inefficiencies and optimize operations to reduce costs and improve profitability.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  title: 'Competitive Advantage';
+                  title: 'Competitive Advantage',
                   description:,
-                    'Stay ahead of the competition with AI-powered insights and intelligent automation.';
-                  icon: <Zap className='w-8 h-8' />;
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Stay ahead of the competition with AI-powered insights and intelligent automation.',
+                  icon: <Zap className='w-8 h-8' />,
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

@@ -1,10 +1,10 @@
 import Link from 'next/link',
 export const metadata = {
   title:,
-    'AI 20o26: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards';
+    'AI 20o26: Agentic Sandbox Patterns — Isolation, Least Privilege, Runtime Guards',
   description:,
-    'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.';
-};
+    'Practical sandboxing patterns for safe agent tool use: isolation domains, time-boxing, scoped credentials, and runtime guardrails.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,

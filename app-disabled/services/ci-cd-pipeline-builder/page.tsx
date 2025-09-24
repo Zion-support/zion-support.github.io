@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ci-cd-pipeline-builder - Zion Tech Group';
+  title: 'ci-cd-pipeline-builder - Zion Tech Group',
   description:,
-    'Professional ci-cd-pipeline-builder solutions for your business needs.';
-  keywords: 'ci-cd-pipeline-builder, services, business, technology';
-};
+    'Professional ci-cd-pipeline-builder solutions for your business needs.',
+  keywords: 'ci-cd-pipeline-builder, services, business, technology',
+},
 export default function CiCdPipelineBuilderPage() {
   return (
     <div className='min-h-screen bg-white'>,

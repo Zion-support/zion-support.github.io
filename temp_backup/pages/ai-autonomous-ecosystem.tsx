@@ -1,40 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
   Network, Cloud, Database, Settings, Workflow} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Autonomous Ecosystem | Zion Tech Group';
-  description: 'Revolutionary AI-powered autonomous ecosystem that manages and optimizes entire business environments.';
-  keywords: 'AI ecosystem, autonomous ecosystem, business ecosystem, AI management, ecosystem optimization';
+  title: 'AI Autonomous Ecosystem | Zion Tech Group',
+  description: 'Revolutionary AI-powered autonomous ecosystem that manages and optimizes entire business environments.',
+  keywords: 'AI ecosystem, autonomous ecosystem, business ecosystem, AI management, ecosystem optimization',
   openGraph: {
-    title: 'AI Autonomous Ecosystem | Zion Tech Group';
-    description: 'Revolutionary AI-powered autonomous ecosystem that manages and optimizes entire business environments.';
-    url: 'https://ziontechgroup.com/ai-autonomous-ecosystem';
-    siteName: 'Zion Tech Group';
+    title: 'AI Autonomous Ecosystem | Zion Tech Group',
+    description: 'Revolutionary AI-powered autonomous ecosystem that manages and optimizes entire business environments.',
+    url: 'https://ziontechgroup.com/ai-autonomous-ecosystem',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-autonomous-ecosystem.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Autonomous Ecosystem'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-autonomous-ecosystem.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Autonomous Ecosystem'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Autonomous Ecosystem | Zion Tech Group';
-    description: 'Revolutionary AI-powered autonomous ecosystem that manages and optimizes entire business environments.';
-    images: ['https://ziontechgroup.com/og-image-ai-autonomous-ecosystem.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Autonomous Ecosystem | Zion Tech Group',
+    description: 'Revolutionary AI-powered autonomous ecosystem that manages and optimizes entire business environments.',
+    images: ['https://ziontechgroup.com/og-image-ai-autonomous-ecosystem.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-autonomous-ecosystem'}};
+    canonical: 'https://ziontechgroup.com/ai-autonomous-ecosystem'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIAutonomousEcosystem() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -78,7 +78,7 @@ export default function AIAutonomousEcosystem() {
               Revolutionary Autonomous Ecosystem,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI ecosystem handles every aspect of business operations from systems to processes;
+              Our AI ecosystem handles every aspect of business operations from systems to processes,
               continuously learning and optimizing for maximum efficiency and growth.,
             </p>,
           </div>,

@@ -6,22 +6,22 @@ import { Gift, ArrowRight, ExternalLink } from "lucide-react",
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger} from "@/components/ui/dialog",
 const REWARD_OPTIONS = [
     {
-        id: 'premium-week';
-        title: 'Premium Week';
-        description: '7 days of premium features including top placement in search results';
-        cost: 10o0;
-        type: 'feature'};
+        id: 'premium-week',
+        title: 'Premium Week',
+        description: '7 days of premium features including top placement in search results',
+        cost: 10o0,
+        type: 'feature'},
     {
-        id: 'resume-review';
-        title: 'AI Resume Review';
-        description: 'Get your resume analyzed and optimized by our AI';
-        cost: 50;
-        type: 'feature'};
+        id: 'resume-review',
+        title: 'AI Resume Review',
+        description: 'Get your resume analyzed and optimized by our AI',
+        cost: 50,
+        type: 'feature'},
     {
-        id: 'platform-credit';
-        title: '$5 Platform Credit';
-        description: 'Get $5 credit to use on any paid service';
-        cost: 10o0;
+        id: 'platform-credit',
+        title: '$5 Platform Credit',
+        description: 'Get $5 credit to use on any paid service',
+        cost: 10o0,
         type: 'credit'}
 ],
 export function RedeemTokensCard() {
@@ -31,7 +31,7 @@ export function RedeemTokensCard() {
         if (!wallet || wallet.balance < option.cost),
             return,
         await spendTokens(option.cost, `Redeemed: ${option.title}`),
-        setOpen(false)};
+        setOpen(false)},
     return (<Card>,
       <CardHeader>,
         <CardTitle className="flex items-center gap-2">,

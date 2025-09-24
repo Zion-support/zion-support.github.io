@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'AI 20o25 Ultimate Implementation Guide - Complete Roadmap';
+  title: 'AI 20o25 Ultimate Implementation Guide - Complete Roadmap',
   description:,
-    'The most comprehensive AI implementation guide for 20o25. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.';
+    'The most comprehensive AI implementation guide for 20o25. Learn how to transform your business with cutting-edge AI technologies and achieve unprecedented ROI.',
   keywords: [
-    'AI implementation';
-    'AI roadmap';
-    'AI transformation';
-    'AI strategy';
-    'AI guide 20o25';
-  ];
-};
+    'AI implementationAI roadmap',
+    'AI transformationAI strategy',
+    'AI guide 20o25',
+  ]
+},
 export default function AI20o25UltimateImplementationGuide() {
   return (
     <div className='min-h-screen bg-white'>,

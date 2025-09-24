@@ -64,22 +64,22 @@ class ComprehensiveSyntaxFixer {
     // Fix common patterns that cause "Expression expected" errors,
     // Fix malformed function declarations,
     content = content.replace(
-      /export\s+default\s+function\s+([^{]+)\s*{/g;
+      /export\s+default\s+function\s+([^{]+)\s*{/g,
       'export default function $1 {'),
     content = content.replace(/function\s+([^{]+)\s*{/g, 'function $1 {'),
     // Fix malformed JSX components,
     content = content.replace(
-      /export\s+default\s+function\s+([^{]+)\s*{/g;
+      /export\s+default\s+function\s+([^{]+)\s*{/g,
       'export default function $1 {'),
     content = content.replace(
-      /const\s+([^{]+)\s*=\s*(\s*)\s*=>\s*{/g;
+      /const\s+([^{]+)\s*=\s*(\s*)\s*=>\s*{/g,
       'const $1 = () => {'),
     // Fix malformed return statements,
     content = content.replace(/return\s*(\s*,/g, 'return ('),
     content = content.replace(/return\s*(\s*<,/g, 'return (<'),
     // Fix malformed JSX elements,
     content = content.replace(/<([^>]+),/g, '<$1'),
-    content = content.replace(/>;/g, '>,'),
+    content = content.replace(/>,/g, '>,'),
     return content}
 ,
   fixMissingBraces(content) {
@@ -99,26 +99,26 @@ class ComprehensiveSyntaxFixer {
     content = content.replace(/,\s*</g, '<'),
     // Fix malformed JSX elements,
     content = content.replace(/<([^>]+),/g, '<$1'),
-    content = content.replace(/>;/g, '>,'),
+    content = content.replace(/>,/g, '>,'),
     // Fix malformed JSX attributes,
     content = content.replace(/=\s*([^>]+),/g, '=$1'),
     return content}
 ,
   fixImportsExports(content) {
     // Fix import statements,
-    content = content.replace(/import\s+([^]+);/g, 'import $1,'),
-    content = content.replace(/from\s+([^]+);/g, 'from $1,'),
+    content = content.replace(/import\s+([^]+),/g, 'import $1,'),
+    content = content.replace(/from\s+([^]+),/g, 'from $1,'),
     // Fix export statements,
     content = content.replace(
-      /export\s+default\s+([^]+);/g;
+      /export\s+default\s+([^]+),/g,
       'export default $1,'),
-    content = content.replace(/export\s+([^]+);/g, 'export $1,'),
+    content = content.replace(/export\s+([^]+),/g, 'export $1,'),
     // Fix missing quotes in imports,
     content = content.replace(
-      /import\s+React\s+from\s+react',/g;
-      "import React from 'react';"),
+      /import\s+React\s+from\s+react',/g,
+      "import React from 'react',"),
     content = content.replace(
-      /import\s+Head\s+from\s+next\/head',/g;
+      /import\s+Head\s+from\s+next\/head',/g,
       "import Head from 'next/head',"),
     return content}
 ,
@@ -126,15 +126,15 @@ class ComprehensiveSyntaxFixer {
     // Fix API route specific issues,
     // Fix malformed handler functions,
     content = content.replace(
-      /export\s+default\s+async\s+function\s+([^{]+)\s*{/g;
+      /export\s+default\s+async\s+function\s+([^{]+)\s*{/g,
       'export default async function $1 {'),
     content = content.replace(
-      /export\s+default\s+function\s+([^{]+)\s*{/g;
+      /export\s+default\s+function\s+([^{]+)\s*{/g,
       'export default function $1 {'),
     // Fix malformed NextApiRequest/NextApiResponse,
     content = content.replace(/req: \s*NextApiRequest,/g, 'req: NextApiRequest'),
     content = content.replace(
-      /res:\s*NextApiResponse,/g;
+      /res:\s*NextApiResponse,/g,
       'res: NextApiResponse'),
     // Fix malformed try-catch blocks,
     content = content.replace(/try\s*{/g, 'try {'),
@@ -150,7 +150,7 @@ class ComprehensiveSyntaxFixer {
         if (stat.isDirectory()) {
           // Skip node_modules and other build directories,
           if (
-            !['node_modules', '.next', 'dist', 'build', '.git'].includes(file)) {
+            !['node_modules.next', 'distbuild', '.git'].includes(file)) {
             await this.fixDirectory(fullPath)}
         } else if (
           file.endsWith('.tsx') ||,
@@ -161,13 +161,13 @@ class ComprehensiveSyntaxFixer {
       }
     } catch (error) {
       this.log(
-        `Error processing directory ${dirPath}: ${error.message}`;
+        `Error processing directory ${dirPath}: ${error.message}`,
         'error')}
   }
 ,
   async fixAll() {
     this.log('🔧 Starting comprehensive syntax fix...'),
-    const directories = ['pages', 'src/pages'],
+    const directories = ['pagessrc/pages'],
     for (const dir of directories) {
       const dirPath = path.join(this.projectRoot, dir),
       if (fs.existsSync(dirPath)) {

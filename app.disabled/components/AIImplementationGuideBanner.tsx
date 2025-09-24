@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AIImplementationGuideBanner: React.FC = () => {
   return (
@@ -80,5 +80,5 @@ const AIImplementationGuideBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AIImplementationGuideBanner;
+    </section>)},
+export default AIImplementationGuideBanner,

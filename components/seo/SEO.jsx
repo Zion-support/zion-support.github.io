@@ -1,12 +1,12 @@
 import Head from 'next/head',
 const SEO = ({
-  title = 'Zion Tech Group — Advanced IT & AI Services';
-  description = 'Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses.';
-  keywords = 'IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation';
-  image = '/og-image.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
-  noindex = false;
+  title = 'Zion Tech Group — Advanced IT & AI Services',
+  description = 'Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses.',
+  keywords = 'IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation',
+  image = '/og-image.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website',
+  noindex = false
 }) => {
   const fullTitle = title.includes('Zion Tech Group'),
     ? title,
@@ -62,25 +62,23 @@ const SEO = ({
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'Organization';
-            name: 'Zion Tech Group';
-            url: 'https://ziontechgroup.com';
-            logo: 'https://ziontechgroup.com/logo.png';
-            description: description;
+            '@context': 'https://schema.org@type': 'Organization',
+            name: 'Zion Tech Group',
+            url: 'https://ziontechgroup.com',
+            logo: 'https://ziontechgroup.com/logo.png',
+            description: description,
             contactPoint: {
-              '@type': 'ContactPoint';
-              telephone: '+1-555-123-4567';
-              contactType: 'customer service';
-              areaServed: 'US';
-              availableLanguage: 'English';
-            };
+              '@type': 'ContactPoint',
+              telephone: '+1-555-123-4567',
+              contactType: 'customer service',
+              areaServed: 'US',
+              availableLanguage: 'English'
+            },
             sameAs: [
-              'https://linkedin.com/company/ziontechgroup';
-              'https://twitter.com/ziontechgroup';
-            ];
-          });
+              'https://linkedin.com/company/ziontechgrouphttps://twitter.com/ziontechgroup',
+            ]
+          }),
         }}
       />,
-    </Head>)};
-export default SEO;
+    </Head>)},
+export default SEO,

@@ -3,38 +3,38 @@ import { CalendarIconClockIconArrowRightIconStarIcon } from '@heroicons/react/24
 export default function NewContentShowcase20o25_20o26() {
   const featuredContent = [
     {
-      title: 'AI 20o25-20o26: Ultimate Enterprise Transformation Revolution';
+      title: 'AI 20o25-20o26: Ultimate Enterprise Transformation Revolution',
       description:,
-        'Discover how AI is revolutionizing enterprise operations with 50o0%+ ROI improvementsautonomous systemsand next-generation business intelligence.';
-      category: 'AI Transformation';
-      readTime: '12 min read';
-      date: '20o25-0o1-15';
-      href: '/blog/ai-20o25-20o26-ultimate-enterprise-transformation-revolution';
-      featured: true;
-      image: '/images/ai-enterprise-transformation-20o25.jpg';
-    };
+        'Discover how AI is revolutionizing enterprise operations with 50o0%+ ROI improvementsautonomous systemsand next-generation business intelligence.',
+      category: 'AI Transformation',
+      readTime: '12 min read',
+      date: '20o25-0o1-15',
+      href: '/blog/ai-20o25-20o26-ultimate-enterprise-transformation-revolution',
+      featured: true,
+      image: '/images/ai-enterprise-transformation-20o25.jpg'
+    },
     {
-      title: 'Quantum AI 20o26: Business Breakthrough Ultimate Guide';
+      title: 'Quantum AI 20o26: Business Breakthrough Ultimate Guide',
       description:,
-        'Explore the revolutionary convergence of quantum computing and AI transforming business operations with unprecedented processing power.';
-      category: 'Quantum AI';
-      readTime: '10 min read';
-      date: '20o25-0o1-15';
-      href: '/blog/quantum-ai-20o26-business-breakthrough-ultimate-guide';
-      featured: true;
-      image: '/images/quantum-ai-business-breakthrough-20o26.jpg';
-    };
+        'Explore the revolutionary convergence of quantum computing and AI transforming business operations with unprecedented processing power.',
+      category: 'Quantum AI',
+      readTime: '10 min read',
+      date: '20o25-0o1-15',
+      href: '/blog/quantum-ai-20o26-business-breakthrough-ultimate-guide',
+      featured: true,
+      image: '/images/quantum-ai-business-breakthrough-20o26.jpg'
+    },
     {
-      title: 'AI 20o25 Enterprise Transformation: 150o0% ROI Success Story';
+      title: 'AI 20o25 Enterprise Transformation: 150o0% ROI Success Story',
       description:,
-        'How a Fortune 50o0 company achieved 150o0% ROI through comprehensive AI transformationreducing costs by 80% and increasing efficiency by 40o0%.';
-      category: 'Case Study';
-      readTime: '8 min read';
-      date: '20o25-0o1-15';
-      href: '/case-studies/ai-20o25-enterprise-transformation-150o0-roi-success-story';
-      featured: true;
-      image: '/images/ai-enterprise-transformation-150o0-roi.jpg';
-    };
+        'How a Fortune 50o0 company achieved 150o0% ROI through comprehensive AI transformationreducing costs by 80% and increasing efficiency by 40o0%.',
+      category: 'Case Study',
+      readTime: '8 min read',
+      date: '20o25-0o1-15',
+      href: '/case-studies/ai-20o25-enterprise-transformation-150o0-roi-success-story',
+      featured: true,
+      image: '/images/ai-enterprise-transformation-150o0-roi.jpg'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-b from-gray-50 to-white'>,

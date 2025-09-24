@@ -1,7 +1,7 @@
 // comment,
 export class authService {}}
 ,
-  async get() {};
+  async get() {},
       const response = await fetch("${this.baseUrl}/auth")}
       return await response.json()}
     } catch (error) {}}
@@ -9,11 +9,11 @@ export class authService {}}
 ,
 // Create and export a singleton instance,
 const authService = new AuthService(),
-export default authService;
-export { API_BASE_URL };
-export { API_BASE_URL };
-export { API_BASE_URL };
-export { API_BASE_URL };
-export { API_BASE_URL };
-export class authService {}} , async get() {}; const response = await fetch("${this.baseUrl}/auth")} return await response.json()} } catch (error) {}} throw error} , const authService = new AuthService(), export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
-export class authService {}} , async get() {}; const response = await fetch("${this.baseUrl}/auth")} return await response.json()} } catch (error) {}} throw error} , const authService = new AuthService(), export default authService; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL }; export { API_BASE_URL };
+export default authService,
+export { API_BASE_URL },
+export { API_BASE_URL },
+export { API_BASE_URL },
+export { API_BASE_URL },
+export { API_BASE_URL },
+export class authService {}} , async get() {}, const response = await fetch("${this.baseUrl}/auth")} return await response.json()} } catch (error) {}} throw error} , const authService = new AuthService(), export default authService, export { API_BASE_URL }, export { API_BASE_URL }, export { API_BASE_URL }, export { API_BASE_URL }, export { API_BASE_URL },
+export class authService {}} , async get() {}, const response = await fetch("${this.baseUrl}/auth")} return await response.json()} } catch (error) {}} throw error} , const authService = new AuthService(), export default authService, export { API_BASE_URL }, export { API_BASE_URL }, export { API_BASE_URL }, export { API_BASE_URL }, export { API_BASE_URL },

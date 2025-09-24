@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Revenue Blueprint';
+  title: 'AI 20o26: Autonomous Revenue Blueprint',
   description:,
-    'Go-to-market agents for pipeline generation, deal acceleration, and post-sale expansion with governance and eval-gated safety.';
-};
+    'Go-to-market agents for pipeline generation, deal acceleration, and post-sale expansion with governance and eval-gated safety.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -12,7 +12,7 @@ export default function Page() {
       </h1>,
       <p className='mt-4 text-gray-70o0'>,
         Deploy outcome-driven go-to-market agents for demand generation, sales,
-        assist, and customer expansion. This blueprint details operating models;
+        assist, and customer expansion. This blueprint details operating models,
         governance, and evaluation harnesses to scale safely.,
       </p>,
       <section className='mt-8 space-y-6'>,
@@ -60,7 +60,7 @@ export default function Page() {
           <ul className='list-disc pl-6 mt-2 text-gray-70o0 space-y-1'>,
             <li>Message compliance checks and tone/style guardrails.</li>,
             <li>,
-              Success metrics: qualified meetings, cycle time, expansion rate;
+              Success metrics: qualified meetings, cycle time, expansion rate,
               and risk incidents.,
             </li>,
             <li>,

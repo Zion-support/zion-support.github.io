@@ -1,33 +1,33 @@
 
-import React from "react";;
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Button } from "@/components/ui/button",
 import { Filter } from 'lucide-react',
-import { SearchFilter } from "./filters/SearchFilter";
-import { SortFilter } from "./filters/SortFilter";
-import { SkillsFilter } from "./filters/SkillsFilter";
-import { AvailabilityFilter } from "./filters/AvailabilityFilter";
-import { RegionFilter } from "./filters/RegionFilter";
-import { ExperienceFilter } from "./filters/ExperienceFilter";
-import { PriceFilter } from "./filters/PriceFilter";
-import { FilterSidebarProps } from "@/types/filters";
+import { SearchFilter } from "./filters/SearchFilter",
+import { SortFilter } from "./filters/SortFilter",
+import { SkillsFilter } from "./filters/SkillsFilter",
+import { AvailabilityFilter } from "./filters/AvailabilityFilter",
+import { RegionFilter } from "./filters/RegionFilter",
+import { ExperienceFilter } from "./filters/ExperienceFilter",
+import { PriceFilter } from "./filters/PriceFilter",
+import { FilterSidebarProps } from "@/types/filters",
 export function FilterSidebar({
-  searchTerm;
-  setSearchTerm;
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
-  expandedSections;
-  toggleSection;
-  sortOption;
-  setSortOption;
-  clearFilters;
+  searchTerm,
+  setSearchTerm,
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
+  expandedSections,
+  toggleSection,
+  sortOption,
+  setSortOption,
+  clearFilters,
   isMobileFilterOpen} FilterSidebarProps) {
   return (
     <>,
@@ -95,7 +95,7 @@ export function FilterSidebar({
           className="w-full bg-zion-purple hover: bg-zion-purple-dark text-white mt-4">,
           Apply Filters,
         </Button>)}
-    </>);}
+    </>),}
  export function FilterSidebar ({
   searchTerm,
 setSearchTerm,

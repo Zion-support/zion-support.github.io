@@ -15,7 +15,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   // Combine all services,
   const allServices = [
-    ...revolutionary20o26MicroSaasV2;
+    ...revolutionary20o26MicroSaasV2,
     ...ultimate20o26AIServicesV2],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
@@ -31,26 +31,26 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
   const healthcareCount = allServices.filter(service =>,
     service.category.some(cat => cat.includes('Healthcare') || cat.includes('Medical'))).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount };
-    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount };
-    { id: 'consciousness', name: 'AI Consciousness', icon: '🌟', count: consciousnessCount };
-    { id: 'robotics', name: 'Robotics', icon: '🤖', count: roboticsCount };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Computing', icon: '⚛️', count: quantumCount },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+    { id: 'consciousness', name: 'AI Consciousness', icon: '🌟', count: consciousnessCount },
+    { id: 'robotics', name: 'Robotics', icon: '🤖', count: roboticsCount },
     { id: 'healthcare', name: 'Healthcare', icon: '🏥', count: healthcareCount }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'budget', name: 'Budget ($0-$999)', range: '0-999' };
-    { id: 'mid', name: 'Mid-Range ($10o00-$2999)', range: '10o00-2999' };
-    { id: 'premium', name: 'Premium ($30o00-$4999)', range: '30o00-4999' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget ($0-$999)', range: '0-999' },
+    { id: 'mid', name: 'Mid-Range ($10o00-$2999)', range: '10o00-2999' },
+    { id: 'premium', name: 'Premium ($30o00-$4999)', range: '30o00-4999' },
     { id: 'enterprise', name: 'Enterprise ($50o00+)', range: '50o00+' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' };
-    { id: 'price-low', name: 'Price Low to High' };
-    { id: 'price-high', name: 'Price High to Low' };
-    { id: 'category', name: 'Category' };
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'category', name: 'Category' },
     { id: 'newest', name: 'Newest First' }
   ],
   // Filter and sort services,
@@ -100,7 +100,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
     if (category.includes('Vehicle')) return <Car className="w-5 h-5"  />,
     if (category.includes('Biotech')) return <TestTube className="w-5 h-5"  />,
     if (category.includes('Climate')) return <Leaf className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />};
+    return <Zap className="w-5 h-5"  />},
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -116,7 +116,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
     if (category.includes('Vehicle')) return 'from-blue-50o0 to-indigo-50o0',
     if (category.includes('Biotech')) return 'from-green-50o0 to-teal-50o0',
     if (category.includes('Climate')) return 'from-emerald-50o0 to-green-50o0',
-    return 'from-gray-50o0 to-blue-50o0'};
+    return 'from-gray-50o0 to-blue-50o0'},
   return (
     <>,
       <Head>,
@@ -144,7 +144,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
                 Revolutionary 20o26 Services,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Experience the future with our cutting-edge micro SAAS services, AI consciousness platforms;
+                Experience the future with our cutting-edge micro SAAS services, AI consciousness platforms,
                 quantum computing solutions, and revolutionary technology innovations,
               </p>,
               <div className="flex flex-wrap justify-center gap-4 mb-8">,
@@ -308,7 +308,7 @@ export default function Revolutionary20o26ServicesShowcaseV2() {
                           <div className="space-y-3 mb-6">,
                             <div className="flex items-center gap-2 text-sm text-gray-40o0">,
                               <Target className="w-4 h-4"  />,
-                              <span>{service.targetMarket.split(',')[0]}...</span>,
+                              <span>{service.targetMarket.split()[0]}...</span>,
                             </div>,
                             <div className="flex items-center gap-2 text-sm text-gray-40o0">,
                               <Zap className="w-4 h-4"  />,

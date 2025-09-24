@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function checkPM2Status() {
@@ -40,34 +40,34 @@ function checkPM2Status() {
         const otherProcesses = processes.filter(p => p.name && !p.name.includes('redundancy')),
         return {
           pm2Status: {
-            totalProcesses: processes.length;
-            redundancyProcesses: redundancyProcesses.length;
-            otherProcesses: otherProcesses.length;
+            totalProcesses: processes.length,
+            redundancyProcesses: redundancyProcesses.length,
+            otherProcesses: otherProcesses.length,
             processes: processes.map(p => ({
-              name: p.name;
-              status: p.pm2_env?.status || 'unknown';
-              uptime: p.pm2_env?.pm_uptime || 0;
-              memory: p.monit?.memory || 0;
-              cpu: p.monit?.cpu || 0}));
+              name: p.name,
+              status: p.pm2_env?.status || 'unknown',
+              uptime: p.pm2_env?.pm_uptime || 0,
+              memory: p.monit?.memory || 0,
+              cpu: p.monit?.cpu || 0})),
             timestamp: nowIso()}
-        };
+        },
       } catch (parseErr) {
         return {
           pm2Status: {
-            error: "Failed to parse PM2 status";
+            error: "Failed to parse PM2 status",
             timestamp: nowIso()}
-        };
+        },
       }
     } else {
       return {
         pm2Status: {
-          error: "PM2 status command failed";
+          error: "PM2 status command failed",
           timestamp: nowIso()}
-      };
+      },
     }
   } catch (err) {
     log(`PM2 status check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -106,14 +106,14 @@ function checkSystemResources() {
 ,
     return {
       systemResources: {
-        memory: memoryInfo;
-        disk: diskInfo;
-        load: loadInfo;
+        memory: memoryInfo,
+        disk: diskInfo,
+        load: loadInfo,
         timestamp: nowIso()}
-    };
+    },
   } catch (err) {
     log(`System resources check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -121,16 +121,16 @@ function checkRedundancyReports() {
   try {
     log("Checking redundancy reports..."),
     const reportFiles = [
-      "marketing-sync-redundancy-report.md";
-      "sync-health-redundancy-report.md";
-      "netlify-functions-redundancy-report.md";
-      "build-monitor-redundancy-report.md";
-      "content-quality-redundancy-report.md";
-      "security-scanner-redundancy-report.md";
-      "performance-monitor-redundancy-report.md";
-      "dependency-monitor-redundancy-report.md";
+      "marketing-sync-redundancy-report.md",
+      "sync-health-redundancy-report.md",
+      "netlify-functions-redundancy-report.md",
+      "build-monitor-redundancy-report.md",
+      "content-quality-redundancy-report.md",
+      "security-scanner-redundancy-report.md",
+      "performance-monitor-redundancy-report.md",
+      "dependency-monitor-redundancy-report.md",
       "seo-monitor-redundancy-report.md"],
-    const reportStatus ={};
+    const reportStatus ={},
     let totalReports = 0,
     let recentReports = 0,
     for (const reportFile of reportFiles) {
@@ -143,27 +143,27 @@ function checkRedundancyReports() {
           recentReports++}
 ,
         reportStatus[reportFile] ={
-          exists: true;
-          age: `${Math.round(ageHours)} hours`;
-          recent: ageHours < 24};
+          exists: true,
+          age: `${Math.round(ageHours)} hours`,
+          recent: ageHours < 24},
       } else {
         reportStatus[reportFile] ={
-          exists: false;
-          age: "N/A";
-          recent: false};
+          exists: false,
+          age: "N/A",
+          recent: false},
       }
     }
 ,
     return {
       redundancyReports: {
-        totalReports;
-        recentReports;
-        reportStatus;
+        totalReports,
+        recentReports,
+        reportStatus,
         timestamp: nowIso()}
-    };
+    },
   } catch (err) {
     log(`Redundancy reports check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -178,34 +178,34 @@ function checkGitStatus() {
     const hasRemote = remote.stdout.includes("origin"),
     return {
       gitStatus: {
-        hasChanges;
-        currentBranch;
-        hasRemote;
-        changesCount: status.stdout.split("\n").filter(line => line.trim()).length;
+        hasChanges,
+        currentBranch,
+        hasRemote,
+        changesCount: status.stdout.split("\n").filter(line => line.trim()).length,
         timestamp: nowIso()}
-    };
+    },
   } catch (err) {
     log(`Git status check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
 function generateHealthReport(pm2Status, systemResources, redundancyReports, gitStatus) {
   const timestamp = nowIso(),
   const report ={
-    timestamp;
-    redundancy: true;
-    source: "pm2-redundancy";
+    timestamp,
+    redundancy: true,
+    source: "pm2-redundancy",
     healthOrchestrator: {
-      pm2Status;
-      systemResources;
-      redundancyReports;
-      gitStatus;
+      pm2Status,
+      systemResources,
+      redundancyReports,
+      gitStatus,
       summary: {
-        overallHealth: "healthy";
+        overallHealth: "healthy",
         issues: []}
     }
-  };
+  },
   // Analyze overall health,
   if (pm2Status.pm2Status?.error) {
     report.healthOrchestrator.summary.issues.push("PM2 status check failed")}
@@ -295,9 +295,9 @@ if (require.main === module) {
   main()}
 ,
 module.exports ={
-  main;
-  checkPM2Status;
-  checkSystemResources;
-  checkRedundancyReports;
-  checkGitStatus;
-  generateHealthReport};
+  main,
+  checkPM2Status,
+  checkSystemResources,
+  checkRedundancyReports,
+  checkGitStatus,
+  generateHealthReport},

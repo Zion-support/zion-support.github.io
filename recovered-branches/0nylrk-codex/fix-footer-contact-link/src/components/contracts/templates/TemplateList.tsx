@@ -5,14 +5,14 @@ import { useContractTemplates } from '@/hooks/useContractTemplates',
 import { CardContent } from '@/components/ui/card',
 import { Separator } from '@/components/ui/separator',
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
 } from '@/components/ui/alert-dialog',
 import { useState } from 'react',
 interface TemplateListProps {
@@ -22,22 +22,22 @@ interface TemplateListProps {
   onEdit: (template: ContractTemplate) => void}
 ,
 export function TemplateList({
-  templates;
-  isLoading;
-  onSelect;
-  onEdit;
+  templates,
+  isLoading,
+  onSelect,
+  onEdit,
 }: TemplateListProps) {
   const [templateToDeletesetTemplateToDelete] = useState<string | null>(null),
   const { deleteTemplatesetDefaultTemplate } = useContractTemplates(),
   const handleDeleteClick = (templateId: string) => {
-    setTemplateToDelete(templateId)};
+    setTemplateToDelete(templateId)},
   const handleDeleteConfirm = async () => {
     if (templateToDelete) {
       await deleteTemplate.mutateAsync(templateToDelete),
       setTemplateToDelete(null)}
-  };
+  },
   const handleSetDefault = async (templateId: string) => {
-    await setDefaultTemplate.mutateAsync(templateId)};
+    await setDefaultTemplate.mutateAsync(templateId)},
   if (isLoading) {
     return (
       <div className='flex justify-center items-center py-8'>,

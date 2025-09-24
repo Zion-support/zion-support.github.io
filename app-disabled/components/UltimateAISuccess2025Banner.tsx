@@ -21,46 +21,46 @@ const UltimateAISuccess20o25Banner = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('ultimate-ai-success-20o25-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-ai-success-20o25-banner-dismissedtrue')},
   const featuredContent = [
     {
-      id: 'advanced-automation-mastery';
-      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide';
-      description: 'Master advanced AI automation with our comprehensive guide. Achieve 1,20o0% ROI, 99.8% efficiency, and transform your business operations.';
-      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide';
-      type: 'Blog Post';
+      id: 'advanced-automation-mastery',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
+      description: 'Master advanced AI automation with our comprehensive guide. Achieve 1,20o0% ROI, 99.8% efficiency, and transform your business operations.',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
+      type: 'Blog Post',
       metrics: {
-        roi: '1,20o0%';
-        efficiency: '99.8%';
-        savings: '$2.8B';
-        satisfaction: '98%'};
-      readingTime: '25 min read';
-      isNew: true};
+        roi: '1,20o0%',
+        efficiency: '99.8%',
+        savings: '$2.8B',
+        satisfaction: '98%'},
+      readingTime: '25 min read',
+      isNew: true},
     {
-      id: 'ai-transformation-120o0-roi';
-      title: 'AI Transformation Success Story: $5B Company Achieves 1,20o0% ROI';
-      description: 'Discover how a Fortune 50o0 company achieved extraordinary results with advanced AI automation, saving $2.8B annually.';
-      url: '/case-studies/ai-transformation-120o0-percent-roi-ultimate-success-story';
-      type: 'Case Study';
+      id: 'ai-transformation-120o0-roi',
+      title: 'AI Transformation Success Story: $5B Company Achieves 1,20o0% ROI',
+      description: 'Discover how a Fortune 50o0 company achieved extraordinary results with advanced AI automation, saving $2.8B annually.',
+      url: '/case-studies/ai-transformation-120o0-percent-roi-ultimate-success-story',
+      type: 'Case Study',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        efficiency: '99.8%'};
-      readingTime: '15 min read';
-      isNew: true};
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        efficiency: '99.8%'},
+      readingTime: '15 min read',
+      isNew: true},
     {
-      id: 'implementation-framework';
-      title: 'AI 20o25 Implementation Ultimate Success Framework';
-      description: 'Complete guide to achieving 1,20o0% ROI with our proven implementation framework. Transform your business with advanced AI.';
-      url: '/resources/ai-20o25-implementation-ultimate-success-framework';
-      type: 'Resource';
+      id: 'implementation-framework',
+      title: 'AI 20o25 Implementation Ultimate Success Framework',
+      description: 'Complete guide to achieving 1,20o0% ROI with our proven implementation framework. Transform your business with advanced AI.',
+      url: '/resources/ai-20o25-implementation-ultimate-success-framework',
+      type: 'Resource',
       metrics: {
-        roi: '1,20o0%';
-        success: '94%';
-        timeline: '18 months';
-        projects: '50o0+'};
-      readingTime: '30 min read';
+        roi: '1,20o0%',
+        success: '94%',
+        timeline: '18 months',
+        projects: '50o0+'},
+      readingTime: '30 min read',
       isNew: true}
   ],
   if (!isVisible || isDismissed) return null,
@@ -133,7 +133,7 @@ const UltimateAISuccess20o25Banner = () => {
                 {Object.entries(currentContent.metrics).map(([key, value]) => (
                   <div key={key} className="text-center">,
                     <div className="text-2xl font-bold text-yellow-40o0">{value}</div>,
-                    <div className="text-sm text-blue-20o0 capitalize">{key.replace('_', ' ')}</div>,
+                    <div className="text-sm text-blue-20o0 capitalize">{key.replace('_ ')}</div>,
                   </div>))}
               </div>,
               <Link
@@ -235,5 +235,5 @@ const UltimateAISuccess20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAISuccess20o25Banner;
+    </div>)},
+export default UltimateAISuccess20o25Banner,

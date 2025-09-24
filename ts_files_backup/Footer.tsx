@@ -1,107 +1,107 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import {
-  Mail;
-  Phone;
-  MapPin;
-  Linkedin;
-  Twitter;
-  Github;
-  Facebook;
-  Instagram;
-  ArrowRight;
-  Brain;
-  Network;
-  Cloud;
-  Shield;
-  Users;
-  Building2;
-  FileText;
-  Rocket;
-  Target;
-  Atom;
-  TrendingUp;
-  Workflow;
-  MessageCircle;
-  DollarSign;
-  Briefcase;
-  ArrowUp;
-  Sparkles;
-  Home;
-  Truck;
-  Factory;
-  Heart;
-  BookOpen;
-  BarChart3;
-  Cpu;
-  Leaf;
-  Satellite;
-  HelpCircle;
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Facebook,
+  Instagram,
+  ArrowRight,
+  Brain,
+  Network,
+  Cloud,
+  Shield,
+  Users,
+  Building2,
+  FileText,
+  Rocket,
+  Target,
+  Atom,
+  TrendingUp,
+  Workflow,
+  MessageCircle,
+  DollarSign,
+  Briefcase,
+  ArrowUp,
+  Sparkles,
+  Home,
+  Truck,
+  Factory,
+  Heart,
+  BookOpen,
+  BarChart3,
+  Cpu,
+  Leaf,
+  Satellite,
+  HelpCircle,
 } from 'lucide-react',
 const Footer: React.FC = () => {
   const services = {
     'AI Solutions': [
       {
-        name: 'AI-Powered Email Responder';
-        href: '/ai-services#ai-email-responder';
-      };
+        name: 'AI-Powered Email Responder',
+        href: '/ai-services#ai-email-responder'
+      },
       {
-        name: 'AI Content Generation';
-        href: '/ai-services#ai-content-generation';
-      };
+        name: 'AI Content Generation',
+        href: '/ai-services#ai-content-generation'
+      },
       {
-        name: 'Computer Vision Solutions';
-        href: '/ai-services#computer-vision';
-      };
-      { name: 'Natural Language Processing', href: '/ai-services#nlp' };
+        name: 'Computer Vision Solutions',
+        href: '/ai-services#computer-vision'
+      },
+      { name: 'Natural Language Processing', href: '/ai-services#nlp' },
       {
-        name: 'Machine Learning Models';
-        href: '/ai-services#machine-learning';
-      };
-      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' };
-    ];
+        name: 'Machine Learning Models',
+        href: '/ai-services#machine-learning'
+      },
+      { name: 'AI Analytics Platform', href: '/ai-services#ai-analytics' },
+    ],
     'IT Services': [
-      { name: 'Cloud Migration', href: '/it-services#cloud-migration' };
-      { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' };
-      { name: 'DevOps Automation', href: '/it-services#devops' };
+      { name: 'Cloud Migration', href: '/it-services#cloud-migration' },
+      { name: 'Cybersecurity Solutions', href: '/it-services#cybersecurity' },
+      { name: 'DevOps Automation', href: '/it-services#devops' },
       {
-        name: 'Infrastructure Management';
-        href: '/it-services#infrastructure';
-      };
-      { name: 'Data Analytics', href: '/it-services#data-analytics' };
-      { name: 'Network Security', href: '/it-services#network-security' };
-    ];
+        name: 'Infrastructure Management',
+        href: '/it-services#infrastructure'
+      },
+      { name: 'Data Analytics', href: '/it-services#data-analytics' },
+      { name: 'Network Security', href: '/it-services#network-security' },
+    ],
     'Micro SAAS': [
-      { name: 'CRM Solutions', href: '/micro-saas#crm' };
-      { name: 'Project Management', href: '/micro-saas#project-management' };
-      { name: 'Email Marketing', href: '/micro-saas#email-marketing' };
-      { name: 'AI Content Tools', href: '/micro-saas#ai-content-tools' };
-      { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' };
-      { name: 'Automation Tools', href: '/micro-saas#automation-tools' };
-    ];
-  };
+      { name: 'CRM Solutions', href: '/micro-saas#crm' },
+      { name: 'Project Management', href: '/micro-saas#project-management' },
+      { name: 'Email Marketing', href: '/micro-saas#email-marketing' },
+      { name: 'AI Content Tools', href: '/micro-saas#ai-content-tools' },
+      { name: 'Analytics Dashboard', href: '/micro-saas#analytics-dashboard' },
+      { name: 'Automation Tools', href: '/micro-saas#automation-tools' },
+    ],
+  },
   const company = [
-    { name: 'About Us', href: '/about' };
-    { name: 'Our Team', href: '/team' };
-    { name: 'Careers', href: '/careers' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Press', href: '/press' };
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Press', href: '/press' },
   ],
   const resources = [
-    { name: 'Documentation', href: '/docs' };
-    { name: 'API Reference', href: '/api-docs' };
-    { name: 'Tutorials', href: '/tutorials' };
-    { name: 'Support', href: '/support' };
-    { name: 'FAQ', href: '/faq' };
-    { name: 'Contact', href: '/contact' };
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api-docs' },
+    { name: 'Tutorials', href: '/tutorials' },
+    { name: 'Support', href: '/support' },
+    { name: 'FAQ', href: '/faq' },
+    { name: 'Contact', href: '/contact' },
   ],
   const socialLinks = [
-    { name: 'LinkedIn', href: '#', icon: Linkedin };
-    { name: 'Twitter', href: '#', icon: Twitter };
-    { name: 'GitHub', href: '#', icon: Github };
-    { name: 'Facebook', href: '#', icon: Facebook };
-    { name: 'Instagram', href: '#', icon: Instagram };
+    { name: 'LinkedIn', href: '#', icon: Linkedin },
+    { name: 'Twitter', href: '#', icon: Twitter },
+    { name: 'GitHub', href: '#', icon: Github },
+    { name: 'Facebook', href: '#', icon: Facebook },
+    { name: 'Instagram', href: '#', icon: Instagram },
   ],
   return (
     <footer className='bg-gray-90o0 text-white'>,
@@ -116,7 +116,7 @@ const Footer: React.FC = () => {
               <span className='text-xl font-bold'>Zion Tech Group</span>,
             </div>,
             <p className='text-gray-30o0 mb-6 max-w-md'>,
-              Leading technology solutions provider delivering innovative AI;
+              Leading technology solutions provider delivering innovative AI,
               IT, and Micro SAAS services to businesses worldwide. Empowering,
               digital transformation and driving innovation.,
             </p>,
@@ -229,5 +229,5 @@ const Footer: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default Footer;
+    </footer>)},
+export default Footer,

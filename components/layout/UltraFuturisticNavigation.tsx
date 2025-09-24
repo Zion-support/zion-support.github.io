@@ -7,10 +7,10 @@ import {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -31,38 +31,38 @@ class ErrorBoundary extends React.Component {
   Brain,
   Atom,
   Shield,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
 } from 'lucide-react',
 interface UltraFuturisticNavigationProps {
   className?: string,
 export default function UltraFuturisticNavigation({
-  className = '';
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
+  className = '',
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
 } from 'lucide-react',
 interface UltraFuturisticNavigationProps {
   className?: string,
 export default function UltraFuturisticNavigation({
-  className = '';
+  className = '',
 }: UltraFuturisticNavigationProps) {  const [isOpen, setIsOpen] = useState(false),
 interface UltraFuturisticNavigationProps {
   className?: string,
@@ -125,16 +125,16 @@ export default function UltraFuturisticNavigation({ className = '' }: UltraFutur
     { name: 'About', href: '/about' }
     { name: 'Contact', href: '/contact' }
     { name: 'Pricing', href: '/pricing' }
-          name: 'View All Services';
-          href: '/services';
-          icon: Rocket;
-          color: 'from-gray-500 to-gray-600';
-        };
-      ];
-    };
-    { name: 'Solutions', href: '/solutions' };
-    { name: 'About', href: '/about' };
-    { name: 'Contact', href: '/contact' };
+          name: 'View All Services',
+          href: '/services',
+          icon: Rocket,
+          color: 'from-gray-500 to-gray-600'
+        },
+      ],
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   const contactInfo = {
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
@@ -150,10 +150,10 @@ export default function UltraFuturisticNavigation(): any ({ className = '' }: Ul
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
         { name: 'View All Services', href: '/services', icon: Rocket, color: 'from-gray-500 to-gray-600' }
-      ]};
-    { name: 'Solutions', href: '/solutions' };
-    { name: 'About', href: '/about' };
-    { name: 'Contact', href: '/contact' };
+      ]},
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
     { name: 'Pricing', href: '/pricing' }
 >,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,

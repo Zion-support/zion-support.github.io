@@ -4,9 +4,9 @@ import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   StarTrendingUpZapBrainRocketShield,
-  DollarSignUsersClockCheckCircleArrowRight;
-  PhoneMailMapPinExternalLinkSearchFilter;
-  GridListChevronDownChevronUpSparkles;
+  DollarSignUsersClockCheckCircleArrowRight,
+  PhoneMailMapPinExternalLinkSearchFilter,
+  GridListChevronDownChevronUpSparkles,
   CrownAwardTargetGlobeCpuDatabase} from 'lucide-react',
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
@@ -25,36 +25,36 @@ export default function EnhancedServicesShowcase() {
   const [viewModesetViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBysetSortBy] = useState<string>('name'),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all services for comprehensive showcase,
   const allServices = [
-    ...nextGenerationAIServices;
-    ...cuttingEdgeITServices;
-    ...innovativeMicroSaasV2Services;
-    ...enhancedRealMicroSaasServices;
-    ...innovativeAIServices;
-    ...quantumSpaceServices;
-    ...enterpriseITServices;
-    ...realMarketServices;
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...realMarketServices,
     ...newVerifiedServicesQ22025],
   const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: '🚀'count: allServices.length };
-    { id: 'next-gen-'ai', 'name: 'ArrowRight-Gen 'AI', 'icon: '🧠'count: nextGenerationAIServices.length };
-    { id: 'cutting-edge-'it', 'name: 'Cutting-Edge 'IT', 'icon: '⚡'count: cuttingEdgeITServices.length };
-    { id: 'innovative-'saas', 'name: 'Innovative 'SaaS', 'icon: '💻'count: innovativeMicroSaasV2Services.length };
-    { id: 'quantum-'space', 'name: 'Quantum & 'Space', 'icon: '⚛️'count: quantumSpaceServices.length };
-    { id: ''enterprise', 'name: 'Enterprise 'IT', 'icon: '🏢'count: enterpriseITServices.length }
+    { id: ''allname: 'All 'Servicesicon: '🚀'count: allServices.length },
+    { id: 'next-gen-'ainame: 'ArrowRight-Gen 'AIicon: '🧠'count: nextGenerationAIServices.length },
+    { id: 'cutting-edge-'itname: 'Cutting-Edge 'ITicon: '⚡'count: cuttingEdgeITServices.length },
+    { id: 'innovative-'saasname: 'Innovative 'SaaSicon: '💻'count: innovativeMicroSaasV2Services.length },
+    { id: 'quantum-'spacename: 'Quantum & 'Spaceicon: '⚛️'count: quantumSpaceServices.length },
+    { id: ''enterprisename: 'Enterprise 'ITicon: '🏢'count: enterpriseITServices.length }
   ],
   const sortOptions = [
-    { id: ''name', 'name: 'Name A-Z' };
-    { id: 'price-'low', 'name: 'Price Low to High' };
-    { id: 'price-'high', 'name: 'Price High to Low' };
-    { id: ''rating', 'name: 'Rating' };
-    { id: ''customers', 'name: 'Customer Count' };
-    { id: ''popularity', 'name: 'Popularity' }
+    { id: ''namename: 'Name A-Z' },
+    { id: 'price-'lowname: 'Price Low to High' },
+    { id: 'price-'highname: 'Price High to Low' },
+    { id: ''ratingname: 'Rating' },
+    { id: ''customersname: 'Customer Count' },
+    { id: ''popularityname: 'Popularity' }
   ],
   // Filter and sort services,
   const filteredServices = React.useMemo(() => {
@@ -76,10 +76,10 @@ export default function EnhancedServicesShowcase() {
         filtered.sort((ab) => a.name.localeCompare(b.name)),
         break,
       case 'price-low':,
-        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g', ')) - parseFloat(b.price.replace(/[$]/g', '))),
+        filtered.sort((ab) => parseFloat(a.price.replace(/[$]/g)) - parseFloat(b.price.replace(/[$]/g', '))),
         break,
       case 'price-high':,
-        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g', ')) - parseFloat(a.price.replace(/[$]/g', '))),
+        filtered.sort((ab) => parseFloat(b.price.replace(/[$]/g)) - parseFloat(a.price.replace(/[$]/g', '))),
         break,
       case 'rating':,
         filtered.sort((ab) => (b.rating || 0) - (a.rating || 0)),
@@ -95,39 +95,39 @@ export default function EnhancedServicesShowcase() {
 ,
     return filtered}[allServiceselectedCategorysearchTermsortBy]),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const featuredServices = [
     {
-      title: '🚀 ArrowRight-Generation AI Services';
-      description: 'Revolutionary AI platforms that push the boundaries of what\'s possible';
-      services: nextGenerationAIServices.slice(03);
-      color: 'from-purple-500 to-pink-600'};
+      title: '🚀 ArrowRight-Generation AI Services',
+      description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
+      services: nextGenerationAIServices.slice(03),
+      color: 'from-purple-500 to-pink-600'},
     {
-      title: '⚡ Cutting-Edge IT Infrastructure';
-      description: 'Advanced infrastructure solutions for the modern enterprise';
-      services: cuttingEdgeITServices.slice(03);
-      color: 'from-blue-500 to-cyan-600'};
+      title: '⚡ Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions for the modern enterprise',
+      services: cuttingEdgeITServices.slice(03),
+      color: 'from-blue-500 to-cyan-600'},
     {
-      title: '💻 Innovative Micro SaaS Solutions';
-      description: 'Creative and practical SaaS tools for every business need';
-      services: innovativeMicroSaasV2Services.slice(03);
+      title: '💻 Innovative Micro SaaS Solutions',
+      description: 'Creative and practical SaaS tools for every business need',
+      services: innovativeMicroSaasV2Services.slice(03),
       color: 'from-green-500 to-emerald-600'}
   ],
   return (
@@ -314,7 +314,7 @@ export default function EnhancedServicesShowcase() {
                 <motion.div,
                   key={service.id}
                   variants={itemVariants}
-                  className={viewMode === 'grid' ? ', ' : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
+                  className={viewMode === 'grid' ?  : 'bg-gray-800/60 border border-gray-700 rounded-2xl p-6'}
                 >,
                   {viewMode === 'grid' ? (
                     <div className="bg-gray-800/60 border border-gray-700 rounded-2xl p-6 hover: border-cyan-500/40 transition-colors h-full">,
@@ -434,7 +434,7 @@ export default function EnhancedServicesShowcase() {
                 <Button
                   href="#",
                   onClick={() => {
-                    setSearchTerm(', '),
+                    setSearchTerm(),
                     setSelectedCategory('all')}}
                   variant="primary">,
                   View All Services,
@@ -500,7 +500,7 @@ const Button = ({
   href,
   variant = 'primary',
   size = 'md',
-  className = ', ',
+  className = ,
   children,
   onClick}: {
   href?: string,
@@ -511,12 +511,12 @@ const Button = ({
   onClick?: () => void}) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-200 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-900',
   const variantClasses = {
-    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500';
-    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'};
+    primary: 'bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white shadow-lg hover:shadow-xl focus:ring-cyan-500',
+    secondary: 'bg-gray-700 hover:bg-gray-600 text-white border border-gray-600 hover:border-gray-500 focus:ring-gray-500'},
   const sizeClasses = {
-    sm: 'px-4 py-2 text-sm';
-    md: 'px-6 py-3 text-base';
-    lg: 'px-8 py-4 text-lg'};
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'},
   const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,
   if (href) {
     return (
@@ -527,5 +527,5 @@ const Button = ({
   return (
     <button onClick={onClick} className={classes}>,
       {children}
-    </button>)};
+    </button>)},
 }}}]]]

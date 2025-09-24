@@ -8,193 +8,181 @@ import {
   Cloud,
   Shield,
   Zap,
-  Star;
-  ExternalLink;
-  CheckCircle;
-  TrendingUp;
-  Cpu;
+  Star,
+  ExternalLink,
+  CheckCircle,
+  TrendingUp,
+  Cpu,
   Globe} from 'lucide-react',
 export default function DeveloperToolsPage() {
   const developerTools = [
     {
-      icon: <Code className="w-8 h-8 text-white" />;
-      title: 'GitHub Copilot';
-      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.';
+      icon: <Code className="w-8 h-8 text-white" />,
+      title: 'GitHub Copilot',
+      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
-        'Intelligent code completion';
-        'Multi-language support';
-        'IDE integration';
-        'Code explanation';
-        'Security vulnerability detection'];
-      pricing: '$10/month';
-      marketPrice: '$10-20/month';
-      website: 'https://github.com/features/copilot';
-      color: 'bg-gradient-to-br from-gray-500 to-black';
-      textColor: 'text-gray-400';
-      gradient: 'from-gray-400 to-black';
-      popular: true;
-      category: 'Code Generation'};
+        'Intelligent code completionMulti-language support',
+        'IDE integrationCode explanation',
+        'Security vulnerability detection'],
+      pricing: '$10/month',
+      marketPrice: '$10-20/month',
+      website: 'https://github.com/features/copilot',
+      color: 'bg-gradient-to-br from-gray-500 to-black',
+      textColor: 'text-gray-400',
+      gradient: 'from-gray-400 to-black',
+      popular: true,
+      category: 'Code Generation'},
     {
-      icon: <GitBranch className="w-8 h-8 text-white" />;
-      title: 'GitHub Pro';
-      description: 'Advanced GitHub features for professional developers including private repositoriesadvanced toolsand priority support.';
+      icon: <GitBranch className="w-8 h-8 text-white" />,
+      title: 'GitHub Pro',
+      description: 'Advanced GitHub features for professional developers including private repositoriesadvanced toolsand priority support.',
       features: [
-        'Unlimited private repositories';
-        'Advanced code review tools';
-        'Priority support';
-        'Advanced insights';
-        'Team management features'];
-      pricing: '$4/month';
-      marketPrice: '$4/month';
-      website: 'https://github.com/pricing';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-      textColor: 'text-green-400';
-      gradient: 'from-green-400 to-emerald-500';
-      popular: true;
-      category: 'Version Control'};
+        'Unlimited private repositoriesAdvanced code review tools',
+        'Priority supportAdvanced insights',
+        'Team management features'],
+      pricing: '$4/month',
+      marketPrice: '$4/month',
+      website: 'https://github.com/pricing',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      textColor: 'text-green-400',
+      gradient: 'from-green-400 to-emerald-500',
+      popular: true,
+      category: 'Version Control'},
     {
-      icon: <Database className="w-8 h-8 text-white" />;
-      title: 'MongoDB Atlas';
-      description: 'Fully managed cloud database service with automatic scalingbackupand monitoring for modern applications.';
+      icon: <Database className="w-8 h-8 text-white" />,
+      title: 'MongoDB Atlas',
+      description: 'Fully managed cloud database service with automatic scalingbackupand monitoring for modern applications.',
       features: [
-        'Fully managed MongoDB';
-        'Auto-scaling & optimization';
-        'Global distribution';
-        'Advanced security';
-        'Real-time analytics'];
-      pricing: '$9/month';
-      marketPrice: '$9-57/month';
-      website: 'https://www.mongodb.com/atlas';
-      color: 'bg-gradient-to-br from-green-500 to-blue-600';
-      textColor: 'text-green-400';
-      gradient: 'from-green-400 to-blue-500';
-      popular: false;
-      category: 'Database'};
+        'Fully managed MongoDBAuto-scaling & optimization',
+        'Global distributionAdvanced security',
+        'Real-time analytics'],
+      pricing: '$9/month',
+      marketPrice: '$9-57/month',
+      website: 'https://www.mongodb.com/atlas',
+      color: 'bg-gradient-to-br from-green-500 to-blue-600',
+      textColor: 'text-green-400',
+      gradient: 'from-green-400 to-blue-500',
+      popular: false,
+      category: 'Database'},
     {
-      icon: <Cloud className="w-8 h-8 text-white" />;
-      title: 'Vercel Pro';
-      description: 'Next.js deployment platform with automatic deploymentspreview deploymentsand advanced analytics.';
+      icon: <Cloud className="w-8 h-8 text-white" />,
+      title: 'Vercel Pro',
+      description: 'Next.js deployment platform with automatic deploymentspreview deploymentsand advanced analytics.',
       features: [
-        'Zero-config deployments';
-        'Preview deployments';
-        'Advanced analytics';
-        'Team collaboration';
-        'Custom domains'];
-      pricing: '$20/month';
-      marketPrice: '$20/month';
-      website: 'https://vercel.com/pricing';
-      color: 'bg-gradient-to-br from-black to-gray-600';
-      textColor: 'text-gray-400';
-      gradient: 'from-black to-gray-500';
-      popular: false;
-      category: 'Deployment'};
+        'Zero-config deploymentsPreview deployments',
+        'Advanced analyticsTeam collaboration',
+        'Custom domains'],
+      pricing: '$20/month',
+      marketPrice: '$20/month',
+      website: 'https://vercel.com/pricing',
+      color: 'bg-gradient-to-br from-black to-gray-600',
+      textColor: 'text-gray-400',
+      gradient: 'from-black to-gray-500',
+      popular: false,
+      category: 'Deployment'},
     {
-      icon: <Shield className="w-8 h-8 text-white" />;
-      title: 'Snyk';
-      description: 'Developer security platform that finds and fixes vulnerabilities in codependenciesand containers.';
+      icon: <Shield className="w-8 h-8 text-white" />,
+      title: 'Snyk',
+      description: 'Developer security platform that finds and fixes vulnerabilities in codependenciesand containers.',
       features: [
-        'Vulnerability scanning';
-        'Dependency monitoring';
-        'Container security';
-        'Infrastructure as Code';
-        'CI/CD integration'];
-      pricing: '$25/month';
-      marketPrice: '$25-100/month';
-      website: 'https://snyk.io/pricing';
-      color: 'bg-gradient-to-br from-red-500 to-pink-600';
-      textColor: 'text-red-400';
-      gradient: 'from-red-400 to-pink-500';
-      popular: false;
-      category: 'Security'};
+        'Vulnerability scanningDependency monitoring',
+        'Container securityInfrastructure as Code',
+        'CI/CD integration'],
+      pricing: '$25/month',
+      marketPrice: '$25-100/month',
+      website: 'https://snyk.io/pricing',
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      textColor: 'text-red-400',
+      gradient: 'from-red-400 to-pink-500',
+      popular: false,
+      category: 'Security'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />;
-      title: 'Postman';
-      description: 'Complete API development platform for buildingtestingand documenting APIs with team collaboration.';
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'Postman',
+      description: 'Complete API development platform for buildingtestingand documenting APIs with team collaboration.',
       features: [
-        'API design & testing';
-        'Team collaboration';
-        'API documentation';
-        'Mock servers';
-        'Monitoring & analytics'];
-      pricing: '$12/month';
-      marketPrice: '$12-99/month';
-      website: 'https://www.postman.com/pricing';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
-      textColor: 'text-orange-400';
-      gradient: 'from-orange-400 to-red-500';
-      popular: false;
+        'API design & testingTeam collaboration',
+        'API documentationMock servers',
+        'Monitoring & analytics'],
+      pricing: '$12/month',
+      marketPrice: '$12-99/month',
+      website: 'https://www.postman.com/pricing',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+      popular: false,
       category: 'API Development'}
   ],
   const devMarketStats = [
     {
-      title: 'Dev Tools Market';
-      value: '$8.2B';
-      growth: '+24% YoY';
-      description: 'Global developer tools market size'};
+      title: 'Dev Tools Market',
+      value: '$8.2B',
+      growth: '+24% YoY',
+      description: 'Global developer tools market size'},
     {
-      title: 'AI Code Tools';
-      value: '$2.1B';
-      growth: '+45% YoY';
-      description: 'AI-powered development tools market'};
+      title: 'AI Code Tools',
+      value: '$2.1B',
+      growth: '+45% YoY',
+      description: 'AI-powered development tools market'},
     {
-      title: 'Cloud Dev Tools';
-      value: '$4.8B';
-      growth: '+32% YoY';
-      description: 'Cloud-based development platforms'};
+      title: 'Cloud Dev Tools',
+      value: '$4.8B',
+      growth: '+32% YoY',
+      description: 'Cloud-based development platforms'},
     {
-      title: 'Dev Productivity';
-      value: '35%';
-      growth: '+18% YoY';
+      title: 'Dev Productivity',
+      value: '35%',
+      growth: '+18% YoY',
       description: 'Average productivity improvement'}
   ],
   const devCategories = [
     {
-      name: 'Code Generation';
-      description: 'AI-powered coding assistants and code completion tools';
-      tools: 1;
-      avgPrice: '$10/month'};
+      name: 'Code Generation',
+      description: 'AI-powered coding assistants and code completion tools',
+      tools: 1,
+      avgPrice: '$10/month'},
     {
-      name: 'Version Control';
-      description: 'Git platforms and collaboration tools for code management';
-      tools: 1;
-      avgPrice: '$4/month'};
+      name: 'Version Control',
+      description: 'Git platforms and collaboration tools for code management',
+      tools: 1,
+      avgPrice: '$4/month'},
     {
-      name: 'Database';
-      description: 'Managed database services and database tools';
-      tools: 1;
-      avgPrice: '$33/month'};
+      name: 'Database',
+      description: 'Managed database services and database tools',
+      tools: 1,
+      avgPrice: '$33/month'},
     {
-      name: 'Deployment';
-      description: 'Platforms for deploying and hosting applications';
-      tools: 1;
-      avgPrice: '$20/month'};
+      name: 'Deployment',
+      description: 'Platforms for deploying and hosting applications',
+      tools: 1,
+      avgPrice: '$20/month'},
     {
-      name: 'Security';
-      description: 'Security scanning and vulnerability detection tools';
-      tools: 1;
-      avgPrice: '$62/month'};
+      name: 'Security',
+      description: 'Security scanning and vulnerability detection tools',
+      tools: 1,
+      avgPrice: '$62/month'},
     {
-      name: 'API Development';
-      description: 'Tools for buildingtestingand managing APIs';
-      tools: 1;
+      name: 'API Development',
+      description: 'Tools for buildingtestingand managing APIs',
+      tools: 1,
       avgPrice: '$55/month'}
   ],
   const devWorkflow = [
     {
-      phase: 'Development';
-      tools: ['GitHub 'Copilot', 'VS 'Code', 'Git'];
-      description: 'Write and manage code with AI assistance'};
+      phase: 'Development',
+      tools: ['GitHub 'CopilotVS 'Code', 'Git'],
+      description: 'Write and manage code with AI assistance'},
     {
-      phase: 'Testing';
-      tools: [', 'Jest', 'Cypress'Postman'];
-      description: 'Test code quality and API functionality'};
+      phase: 'Testing',
+      tools: [Jest', 'Cypress'Postman'],
+      description: 'Test code quality and API functionality'},
     {
-      phase: 'Security';
-      tools: [', 'Snyk', 'GitHub Advanced Security'];
-      description: 'Scan for vulnerabilities and security issues'};
+      phase: 'Security',
+      tools: [Snyk', 'GitHub Advanced Security'],
+      description: 'Scan for vulnerabilities and security issues'},
     {
-      phase: 'Deployment';
-      tools: [', 'Vercel', 'GitHub 'Actions', 'Docker'];
+      phase: 'Deployment',
+      tools: [Vercel', 'GitHub 'ActionsDocker'],
       description: 'Deploy and host applications'}
   ],
   return (

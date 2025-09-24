@@ -1,14 +1,14 @@
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -64,21 +64,21 @@ class AutomationStarter {
       const IntelligentAutomationOrchestrator = require('./intelligent-automation-orchestrator.js'),
       const orchestrator = new IntelligentAutomationOrchestrator({
         autonomous: {
-          enabled: true;
-          selfHealing: true;
-          learning: true;
-          adaptiveScheduling: true};
+          enabled: true,
+          selfHealing: true,
+          learning: true,
+          adaptiveScheduling: true},
         monitoring: {
-          enabled: true;
+          enabled: true,
           interval: 60o000, // 1 minute,
-          healthCheckInterval: 30o0000, // 5 minutes};
+          healthCheckInterval: 30o0000, // 5 minutes},
         reporting: {
-          enabled: true;
-          daily: true;
-          weekly: true;
-          monthly: false};
+          enabled: true,
+          daily: true,
+          weekly: true,
+          monthly: false},
         dashboard: {
-          enabled: true;
+          enabled: true,
           port: 30o01}}),
       await orchestrator.initialize(),
       await orchestrator.start(),
@@ -125,7 +125,7 @@ class AutomationStarter {
     try {
       const CursorAutomation = require('./cursor-automated-communication.js'),
       const cursorAutomation = new CursorAutomation({
-        autoCommit: true;
+        autoCommit: true,
         projectPath: path.resolve('..')}),
       await cursorAutomation.start(),
       this.runningSystems.set('cursorAutomation', cursorAutomation),
@@ -138,17 +138,17 @@ class AutomationStarter {
     try {
       const CursorIntegrationSystem = require('./cursor-integration-system.js'),
       const cursorIntegrationSystem = new CursorIntegrationSystem({
-        enableChatAutomation: true;
-        enableChatMonitor: true;
-        enableTodoQueue: true;
+        enableChatAutomation: true,
+        enableChatMonitor: true,
+        enableTodoQueue: true,
         autoProcessChats: true}),
       await cursorIntegrationSystem.initialize(),
       this.runningSystems.set(
-        'cursorIntegrationSystem';
+        'cursorIntegrationSystem',
         cursorIntegrationSystem),
       // // console.log('✅ Cursor Integration System started')} catch (error) {
       console.error(
-        '❌ Failed to start Cursor Integration System:';
+        '❌ Failed to start Cursor Integration System: ',
         error.message)}
   }
 ,
@@ -173,7 +173,7 @@ class AutomationStarter {
     this.runningSystems.forEach((system, name) => {
       const status = system.getStatus,
         ? system.getStatus(),
-        : { isRunning: true };
+        : { isRunning: true },
       // // console.log(
         `  - ${name}: ${status.isRunning ? '✅ Running' : '❌ Stopped'}`)}),
     logger.info('\n🎯 Automation Dashboard: http://localhost:30o01'),

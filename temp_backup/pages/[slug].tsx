@@ -32,27 +32,27 @@ export default function ServiceFallbackPage() {
   const service = useMemo(() => {
     if (!slug) return undefined,
     const all: any[] = ([] as any[]).concat(
-      enhancedRealMicroSaasServices as any;
-      extraServices as any;
-      additionalEnhancedServices as any;
-      innovativeAIServices as any;
-      quantumSpaceServices as any;
-      enterpriseITServices as any;
-      newRealServices as any;
-      marketReadyServices as any;
-      realMarketServices as any;
-      new20o25Services as any;
-      newRealInnovations as any;
-      emergingTechnologyServices as any;
-      comprehensiveITSolutions as any;
-      marketValidatedServices as any;
-      curatedMarketServices as any;
-      cuttingEdgeITServices as any;
-      nextGenerationAIServices as any;
-      nextGenAIServices as any;
-      industryRealServices as any;
-      professionalServices as any;
-      realEnterpriseServices20o25 as any;
+      enhancedRealMicroSaasServices as any,
+      extraServices as any,
+      additionalEnhancedServices as any,
+      innovativeAIServices as any,
+      quantumSpaceServices as any,
+      enterpriseITServices as any,
+      newRealServices as any,
+      marketReadyServices as any,
+      realMarketServices as any,
+      new20o25Services as any,
+      newRealInnovations as any,
+      emergingTechnologyServices as any,
+      comprehensiveITSolutions as any,
+      marketValidatedServices as any,
+      curatedMarketServices as any,
+      cuttingEdgeITServices as any,
+      nextGenerationAIServices as any,
+      nextGenAIServices as any,
+      industryRealServices as any,
+      professionalServices as any,
+      realEnterpriseServices20o25 as any,
       realImplementationServices20o25 as any),
     const byLink = all.find(s => {
       try {
@@ -71,11 +71,11 @@ export default function ServiceFallbackPage() {
         (s.name || '').toLowerCase().replace(/[^a-z0-9]+/g, '-') === normalized,
       return idMatch || nameMatch})}, [slug]),
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   if (!service) {
     return (
       <UltraFuturisticBackground>,
@@ -142,19 +142,19 @@ export default function ServiceFallbackPage() {
 type Svc = (typeof enhancedRealMicroSaasServices)[number],
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices.concat(
-    extraServices as Svc[];
-    additionalEnhancedServices as Svc[];
-    innovativeAIServices as Svc[];
-    quantumSpaceServices as Svc[];
-    enterpriseITServices as Svc[];
-    newRealServices as Svc[];
-    marketReadyServices as Svc[];
-    nextGenerationAIServices as Svc[];
-    emergingTechnologyServices as Svc[];
-    comprehensiveITSolutions as Svc[];
-    marketValidatedServices as Svc[];
-    newRealInnovations as Svc[];
-    realMarketServices as Svc[];
+    extraServices as Svc[],
+    additionalEnhancedServices as Svc[],
+    innovativeAIServices as Svc[],
+    quantumSpaceServices as Svc[],
+    enterpriseITServices as Svc[],
+    newRealServices as Svc[],
+    marketReadyServices as Svc[],
+    nextGenerationAIServices as Svc[],
+    emergingTechnologyServices as Svc[],
+    comprehensiveITSolutions as Svc[],
+    marketValidatedServices as Svc[],
+    newRealInnovations as Svc[],
+    realMarketServices as Svc[],
     realImplementationServices20o25 as unknown as Svc[])}
 ,
 function normalizeSlug(value: string): string {
@@ -225,12 +225,12 @@ export const getStaticPaths: GetStaticPaths = async () => {
   const filtered = Array.from(candidateSlugs).filter(
     slug => !existingRootPages.has(slug)),
   return {
-    paths: filtered.map(slug => ({ params: { slug } }));
-    fallback: true;
-  };
-};
+    paths: filtered.map(slug => ({ params: { slug } })),
+    fallback: true
+  },
+},
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.,
-  return { props: {} };
-};
+  return { props: {} },
+},
 ]

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'web-application-development - Zion Tech Group';
+  title: 'web-application-development - Zion Tech Group',
   description:,
-    'Professional web-application-development solutions for your business needs.';
-  keywords: 'web-application-development, services, business, technology';
-};
+    'Professional web-application-development solutions for your business needs.',
+  keywords: 'web-application-development, services, business, technology',
+},
 export default function WebApplicationDevelopmentPage() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -2,18 +2,15 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Complete Enterprise Transformation Guide | Zion Tech Group';
+    'AI 20o25: The Complete Enterprise Transformation Guide | Zion Tech Group',
   description:,
-    'Discover how AI is revolutionizing enterprise operations in 20o25. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.';
+    'Discover how AI is revolutionizing enterprise operations in 20o25. Learn about cutting-edge automation, neural interfaces, and quantum computing solutions.',
   keywords: [
-    'AI transformation';
-    'enterprise AI';
-    'neural interfaces';
-    'quantum computing';
-    'business automation';
-    '20o25';
-  ];
-};
+    'AI transformationenterprise AI',
+    'neural interfacesquantum computing',
+    'business automation20o25',
+  ]
+},
 export default function AI20o25EnterpriseTransformationGuide() {
   return (
     <div className='min-h-screen bg-white'>,

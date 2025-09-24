@@ -16,8 +16,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
     const preloadCriticalResources = () => {
       // Preload critical images,
       const criticalImages = [
-        '/images/zion-tech-group-logo.png';
-        '/images/hero-background.jpg';
+        '/images/zion-tech-group-logo.png/images/hero-background.jpg',
         '/images/ai-automation-icon.svg'],
       criticalImages.forEach(src => {
         const link = document.createElement('link'),
@@ -32,7 +31,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
       fontLink.type = 'font/woff2',
       fontLink.href = '/fonts/inter-var.woff2',
       fontLink.crossOrigin = 'anonymous',
-      document.head.appendChild(fontLink)};
+      document.head.appendChild(fontLink)},
     preloadCriticalResources(),
     return () => clearTimeout(timer)}, []),
   useEffect(() => {
@@ -49,7 +48,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
             // // console.log('CLS:', entry.value)}
         }
       }),
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] }),
+      observer.observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shift'] }),
       return () => observer.disconnect()}
   }, []),
   if (!isVisible) {
@@ -70,5 +69,5 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ children })
           <div>Load Time: {loadTime.toFixed(2)}ms</div>,
           <div>Components: {React.Children.count(children)}</div>,
         </div>)}
-    </>)};
-export default PerformanceOptimizer;
+    </>)},
+export default PerformanceOptimizer,

@@ -7,9 +7,9 @@ interface EnhancedFuturisticBackgroundProps {
   className?: string}
 ,
 const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
-  children;
-  intensity = 'medium';
-  colorScheme = 'quantum';
+  children,
+  intensity = 'medium',
+  colorScheme = 'quantum',
   className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | null>(null),
@@ -21,7 +21,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -37,47 +37,47 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       switch (colorScheme) {
         case 'quantum':,
           return {
-            primary: '#0o0ffff';
-            secondary: '#ff0o0ff';
-            accent: '#ffff0o0';
-            background: 'rgba(0, 0, 0, 0.1)'};
+            primary: '#0o0ffff',
+            secondary: '#ff0o0ff',
+            accent: '#ffff0o0',
+            background: 'rgba(0, 0, 0, 0.1)'},
         case 'neural':,
           return {
-            primary: '#ff6b6b';
-            secondary: '#4ecdc4';
-            accent: '#45b7d1';
-            background: 'rgba(255, 10o7, 10o7, 0.1)'};
+            primary: '#ff6b6b',
+            secondary: '#4ecdc4',
+            accent: '#45b7d1',
+            background: 'rgba(255, 10o7, 10o7, 0.1)'},
         case 'cyberpunk':,
           return {
-            primary: '#ff0o06e';
-            secondary: '#8338ec';
-            accent: '#3a86ff';
-            background: 'rgba(255, 0, 110, 0.1)'};
+            primary: '#ff0o06e',
+            secondary: '#8338ec',
+            accent: '#3a86ff',
+            background: 'rgba(255, 0, 110, 0.1)'},
         case 'holographic':,
           return {
-            primary: '#ffd70o0';
-            secondary: '#ff69b4';
-            accent: '#0o0ced1';
-            background: 'rgba(255, 215, 0, 0.1)'};
+            primary: '#ffd70o0',
+            secondary: '#ff69b4',
+            accent: '#0o0ced1',
+            background: 'rgba(255, 215, 0, 0.1)'},
         default: ,
           return {
-            primary: '#0o0ffff';
-            secondary: '#ff0o0ff';
-            accent: '#ffff0o0';
-            background: 'rgba(0, 0, 0, 0.1)'};
+            primary: '#0o0ffff',
+            secondary: '#ff0o0ff',
+            accent: '#ffff0o0',
+            background: 'rgba(0, 0, 0, 0.1)'},
       }
-    };
+    },
     const colors = getColorScheme(),
     const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 120 : 60,
     // Initialize particles,
     for (let i = 0, i < particleCount, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        size: Math.random() * 3 + 1;
-        opacity: Math.random() * 0.8 + 0.2;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
         color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)]})}
 ,
     // Grid system,
@@ -100,7 +100,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
         ctx.stroke()}
-    };
+    },
     // Quantum field fluctuations,
     const createQuantumField = () => {
       if (variant === 'quantum-field') {
@@ -117,7 +117,7 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
           }
         }
       }
-    };
+    },
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Update and draw particles,
@@ -190,12 +190,12 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
         }
         ctx.stroke()}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', resizeCanvas)};
+      window.removeEventListener('resize', resizeCanvas)},
   }, [intensity, colorScheme]),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -221,35 +221,35 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
       <motion.div,
         className="absolute top-20 left-10 w-2 h-2 bg-cyan-40o0 rounded-full opacity-60",
         animate={{
-          y: [0, -20, 0];
+          y: [0, -20, 0],
           opacity: [0.6, 1, 0.6]}}
         transition={{
-          duration: 3;
-          repeat: Infinity;
+          duration: 3,
+          repeat: Infinity,
           ease: "easeInOut"}}
         style={{ zIndex: 2 }}
        />,
       <motion.div,
         className="absolute top-40 right-20 w-3 h-3 bg-purple-40o0 rounded-full opacity-60",
         animate={{
-          y: [0, 15, 0];
+          y: [0, 15, 0],
           opacity: [0.6, 1, 0.6]}}
         transition={{
-          duration: 4;
-          repeat: Infinity;
-          ease: "easeInOut";
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
           delay: 1}}
         style={{ zIndex: 2 }}
        />,
       <motion.div,
         className="absolute bottom-40 left-20 w-2 h-2 bg-pink-40o0 rounded-full opacity-60",
         animate={{
-          y: [0, -10, 0];
+          y: [0, -10, 0],
           opacity: [0.6, 1, 0.6]}}
         transition={{
-          duration: 2.5;
-          repeat: Infinity;
-          ease: "easeInOut";
+          duration: 2.5,
+          repeat: Infinity,
+          ease: "easeInOut",
           delay: 2}}
         style={{ zIndex: 2 }}
        />,
@@ -260,14 +260,14 @@ const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> 
             key={i}
             className="absolute text-green-40o0 text-xs font-mono opacity-20",
             style={{
-              left: `${(i * 5) % 10o0}%`;
+              left: `${(i * 5) % 10o0}%`,
               top: '-20px'}}
             animate={{
-              y: ['-20px', '10o0vh']}}
+              y: ['-20px10o0vh']}}
             transition={{
-              duration: Math.random() * 10 + 10;
-              repeat: Infinity;
-              ease: "linear";
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              ease: "linear",
               delay: Math.random() * 5}}
           >,
             {String.fromCharCode(0x30A0 + Math.random() * 96)}

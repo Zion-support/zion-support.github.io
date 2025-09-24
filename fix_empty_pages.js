@@ -26,8 +26,8 @@ const ${componentName}: NextPage = () => {
         <h1>${componentName}</h1>,
         <p>This page is under construction.</p>,
       </main>,
-    </div>)};
-export default ${componentName};`}
+    </div>)},
+export default ${componentName},`}
 // Function to fix empty files,
 function fixEmptyFiles(dir) {
   const files = fs.readdirSync(dir),

@@ -23,10 +23,10 @@ export default function AI20o25ROICalculator() {
     setTotalReturns(Math.round(totalReturnsAmount))}[currentRevenueimplementationCostimeframe]),
   const formatCurrency = (amount) => {
     return new Intl.NumberFormat('en-US'{
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0}).format(amount)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0}).format(amount)},
   return (
     <div className="py-16 px-4 bg-gradient-to-br from-green-90o0 via-blue-90o0 to-purple-90o0 text-white">,
       <div className="max-w-6xl mx-auto">,

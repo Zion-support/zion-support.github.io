@@ -2,37 +2,37 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  Brain;
-  ArrowRight;
-  Check;
-  Star;
-  TrendingUp;
-  Zap;
-  Globe;
+  Search,
+  Grid,
+  List,
+  Brain,
+  ArrowRight,
+  Check,
+  Star,
+  TrendingUp,
+  Zap,
+  Globe,
 } from 'lucide-react',
 import { cuttingEdgeFuturisticServices } from '../data/20o25-cutting-edge-futuristic-services',
 // Helper function to get service category,
 const getServiceCategory = (service: { category?: string, type?: string }) => {
   if (service.category) return service.category,
   if (service.type) return service.type,
-  return 'Other'};
+  return 'Other'},
 // Helper function to get service features,
 const getServiceFeatures = (service: {
   features?: string[],
   keyFeatures?: string[]}) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
-  return []};
+  return []},
 // Helper function to get service description,
 const getServiceDescription = (service: {
   description?: string,
   tagline?: string}) => {
   if (service.description) return service.description,
   if (service.tagline) return service.tagline,
-  return 'No description available'};
+  return 'No description available'},
 const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('All'),
@@ -41,11 +41,11 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
     'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   // Get unique categories,
   const categories = [
-    'All';
+    'All',
     ...Array.from(
       new Set(
         cuttingEdgeFuturisticServices.map(service =>,
-          getServiceCategory(service))));
+          getServiceCategory(service)))),
   ],
   // Filter and sort services,
   const filteredServices = cuttingEdgeFuturisticServices,
@@ -73,24 +73,24 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0)}
     }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO
@@ -118,7 +118,7 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
               Experience the future of technology with our revolutionary,
-              services that combine quantum computing, autonomous AI;
+              services that combine quantum computing, autonomous AI,
               holographic technology, and neural interfaces to transform your,
               business.,
             </p>,
@@ -415,5 +415,5 @@ const CuttingEdgeFuturisticServicesShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
-export default CuttingEdgeFuturisticServicesShowcase;
+    </div>)},
+export default CuttingEdgeFuturisticServicesShowcase,

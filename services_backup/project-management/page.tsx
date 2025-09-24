@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Project Management Platform | Zion Tech Group';
+  title: 'Project Management Platform | Zion Tech Group',
   description:,
-    'Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.';
-};
+    'Build comprehensive project management tools with task tracking, team collaboration, and reporting. Professional PM solutions starting at $18k.',
+},
 export default function ProjectManagementPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -18,37 +18,28 @@ export default function ProjectManagementPage() {
           <Item
             title='Task Management',
             details={[
-              'Kanban boards';
-              'Gantt charts';
-              'Task dependencies';
-              'Priority management';
-              'Custom workflows';
-              'Recurring tasks';
-              'Task templates';
+              'Kanban boardsGantt charts',
+              'Task dependenciesPriority management',
+              'Custom workflowsRecurring tasks',
+              'Task templates',
             ]}
           />,
           <Item
             title='Team Collaboration',
             details={[
-              'Real-time chat';
-              'File sharing';
-              'Comment threads';
-              'Team calendars';
-              'Video meetings';
-              'Notification system';
-              'Activity feeds';
+              'Real-time chatFile sharing',
+              'Comment threadsTeam calendars',
+              'Video meetingsNotification system',
+              'Activity feeds',
             ]}
           />,
           <Item
             title='Reporting & Analytics',
             details={[
-              'Progress tracking';
-              'Time tracking';
-              'Resource allocation';
-              'Budget management';
-              'Custom dashboards';
-              'Export reports';
-              'Performance metrics';
+              'Progress trackingTime tracking',
+              'Resource allocationBudget management',
+              'Custom dashboardsExport reports',
+              'Performance metrics',
             ]}
           />,
         </div>,
@@ -62,7 +53,7 @@ export default function ProjectManagementPage() {
                 Flexible Workflows,
               </h3>,
               <p className='text-gray-60o0'>,
-                Create custom workflows for different project types - agile;
+                Create custom workflows for different project types - agile,
                 waterfall, or hybrid methodologies.,
               </p>,
             </div>,
@@ -89,7 +80,7 @@ export default function ProjectManagementPage() {
                 Integration Ready,
               </h3>,
               <p className='text-gray-60o0'>,
-                Connect with popular tools like Slack, Google Workspace;
+                Connect with popular tools like Slack, Google Workspace,
                 Microsoft 365, and more via APIs.,
               </p>,
             </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$18k–$35k',
           duration='6–10 weeks',
           features={[
-            'Basic task management';
-            'Team collaboration tools';
-            'Simple reporting';
-            'Mobile app';
-            'Basic integrations';
-            'User management';
-            'Cloud hosting';
+            'Basic task managementTeam collaboration tools',
+            'Simple reportingMobile app',
+            'Basic integrationsUser management',
+            'Cloud hosting',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$35k–$70k',
           duration='8–14 weeks',
           features={[
-            'Everything in Team';
-            'Advanced workflows';
-            'Time tracking';
-            'Resource management';
-            'Client portal';
-            'Advanced analytics';
-            'Custom integrations';
+            'Everything in TeamAdvanced workflows',
+            'Time trackingResource management',
+            'Client portalAdvanced analytics',
+            'Custom integrations',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$70k+',
           duration='12–20 weeks',
           features={[
-            'Everything in Professional';
-            'Custom development';
-            'White-label options';
-            'Advanced security';
-            'Dedicated support';
-            'SLA guarantees';
-            'On-premise deployment';
+            'Everything in ProfessionalCustom development',
+            'White-label optionsAdvanced security',
+            'Dedicated supportSLA guarantees',
+            'On-premise deployment',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

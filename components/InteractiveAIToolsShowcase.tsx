@@ -5,175 +5,159 @@ const InteractiveAIToolsShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const categories = [
-    { id: 'all', name: 'All Tools', icon: '🛠️' };
-    { id: 'automation', name: 'Automation', icon: '🤖' };
-    { id: 'analytics', name: 'Analytics', icon: '📊' };
-    { id: 'content', name: 'Content', icon: '📝' };
-    { id: 'security', name: 'Security', icon: '🔒' };
-    { id: 'productivity', name: 'Productivity', icon: '⚡' };
-    { id: 'integration', name: 'Integration', icon: '🔗' };
+    { id: 'all', name: 'All Tools', icon: '🛠️' },
+    { id: 'automation', name: 'Automation', icon: '🤖' },
+    { id: 'analytics', name: 'Analytics', icon: '📊' },
+    { id: 'content', name: 'Content', icon: '📝' },
+    { id: 'security', name: 'Security', icon: '🔒' },
+    { id: 'productivity', name: 'Productivity', icon: '⚡' },
+    { id: 'integration', name: 'Integration', icon: '🔗' },
   ],
   const aiTools = [
     {
-      id: 1;
-      name: 'AI Content Generator Pro';
+      id: 1,
+      name: 'AI Content Generator Pro',
       description:,
-        'Revolutionary AI-powered content creation tool that generates high-quality, SEO-optimized content at scale.';
-      category: 'content';
-      icon: '📝';
+        'Revolutionary AI-powered content creation tool that generates high-quality, SEO-optimized content at scale.',
+      category: 'content',
+      icon: '📝',
       features: [
-        'SEO Optimization';
-        'Multi-language Support';
-        'Brand Voice Matching';
-        'Plagiarism Detection';
-      ];
-      pricing: 'Starting at $99/month';
-      rating: 4.9;
-      users: '10,0o00+';
-      featured: true;
-      url: '/tools/ai-content-generator-pro';
-      demoUrl: '/demo/ai-content-generator';
-    };
+        'SEO OptimizationMulti-language Support',
+        'Brand Voice MatchingPlagiarism Detection',
+      ],
+      pricing: 'Starting at $99/month',
+      rating: 4.9,
+      users: '10,0o00+',
+      featured: true,
+      url: '/tools/ai-content-generator-pro',
+      demoUrl: '/demo/ai-content-generator'
+    },
     {
-      id: 2;
-      name: 'Intelligent Process Automation';
+      id: 2,
+      name: 'Intelligent Process Automation',
       description:,
-        'Advanced automation platform that streamlines complex business processes with AI-powered decision making.';
-      category: 'automation';
-      icon: '🤖';
+        'Advanced automation platform that streamlines complex business processes with AI-powered decision making.',
+      category: 'automation',
+      icon: '🤖',
       features: [
-        'Workflow Automation';
-        'Decision Intelligence';
-        'Process Optimization';
-        'Real-time Monitoring';
-      ];
-      pricing: 'Starting at $299/month';
-      rating: 4.8;
-      users: '5,0o00+';
-      featured: true;
-      url: '/tools/intelligent-process-automation';
-      demoUrl: '/demo/process-automation';
-    };
+        'Workflow AutomationDecision Intelligence',
+        'Process OptimizationReal-time Monitoring',
+      ],
+      pricing: 'Starting at $299/month',
+      rating: 4.8,
+      users: '5,0o00+',
+      featured: true,
+      url: '/tools/intelligent-process-automation',
+      demoUrl: '/demo/process-automation'
+    },
     {
-      id: 3;
-      name: 'Predictive Analytics Engine';
+      id: 3,
+      name: 'Predictive Analytics Engine',
       description:,
-        'Powerful analytics platform that predicts future trends and behaviors using advanced machine learning.';
-      category: 'analytics';
-      icon: '📊';
+        'Powerful analytics platform that predicts future trends and behaviors using advanced machine learning.',
+      category: 'analytics',
+      icon: '📊',
       features: [
-        'Predictive Modeling';
-        'Real-time Insights';
-        'Custom Dashboards';
-        'API Integration';
-      ];
-      pricing: 'Starting at $199/month';
-      rating: 4.7;
-      users: '8,0o00+';
-      featured: true;
-      url: '/tools/predictive-analytics-engine';
-      demoUrl: '/demo/predictive-analytics';
-    };
+        'Predictive ModelingReal-time Insights',
+        'Custom DashboardsAPI Integration',
+      ],
+      pricing: 'Starting at $199/month',
+      rating: 4.7,
+      users: '8,0o00+',
+      featured: true,
+      url: '/tools/predictive-analytics-engine',
+      demoUrl: '/demo/predictive-analytics'
+    },
     {
-      id: 4;
-      name: 'AI Security Monitor';
+      id: 4,
+      name: 'AI Security Monitor',
       description:,
-        'Comprehensive security solution that uses AI to detect and prevent cyber threats in real-time.';
-      category: 'security';
-      icon: '🔒';
+        'Comprehensive security solution that uses AI to detect and prevent cyber threats in real-time.',
+      category: 'security',
+      icon: '🔒',
       features: [
-        'Threat Detection';
-        'Automated Response';
-        'Compliance Monitoring';
-        'Risk Assessment';
-      ];
-      pricing: 'Starting at $399/month';
-      rating: 4.9;
-      users: '3,0o00+';
-      featured: false;
-      url: '/tools/ai-security-monitor';
-      demoUrl: '/demo/security-monitor';
-    };
+        'Threat DetectionAutomated Response',
+        'Compliance MonitoringRisk Assessment',
+      ],
+      pricing: 'Starting at $399/month',
+      rating: 4.9,
+      users: '3,0o00+',
+      featured: false,
+      url: '/tools/ai-security-monitor',
+      demoUrl: '/demo/security-monitor'
+    },
     {
-      id: 5;
-      name: 'Smart Productivity Suite';
+      id: 5,
+      name: 'Smart Productivity Suite',
       description:,
-        'AI-powered productivity tools that optimize workflows and enhance team collaboration.';
-      category: 'productivity';
-      icon: '⚡';
+        'AI-powered productivity tools that optimize workflows and enhance team collaboration.',
+      category: 'productivity',
+      icon: '⚡',
       features: [
-        'Task Automation';
-        'Smart Scheduling';
-        'Team Collaboration';
-        'Performance Analytics';
-      ];
-      pricing: 'Starting at $149/month';
-      rating: 4.6;
-      users: '12,0o00+';
-      featured: false;
-      url: '/tools/smart-productivity-suite';
-      demoUrl: '/demo/productivity-suite';
-    };
+        'Task AutomationSmart Scheduling',
+        'Team CollaborationPerformance Analytics',
+      ],
+      pricing: 'Starting at $149/month',
+      rating: 4.6,
+      users: '12,0o00+',
+      featured: false,
+      url: '/tools/smart-productivity-suite',
+      demoUrl: '/demo/productivity-suite'
+    },
     {
-      id: 6;
-      name: 'Universal Integration Hub';
+      id: 6,
+      name: 'Universal Integration Hub',
       description:,
-        'Seamlessly connect and integrate all your business applications with AI-powered data synchronization.';
-      category: 'integration';
-      icon: '🔗';
+        'Seamlessly connect and integrate all your business applications with AI-powered data synchronization.',
+      category: 'integration',
+      icon: '🔗',
       features: [
-        'API Management';
-        'Data Synchronization';
-        'Custom Connectors';
-        'Real-time Sync';
-      ];
-      pricing: 'Starting at $179/month';
-      rating: 4.8;
-      users: '6,0o00+';
-      featured: false;
-      url: '/tools/universal-integration-hub';
-      demoUrl: '/demo/integration-hub';
-    };
+        'API ManagementData Synchronization',
+        'Custom ConnectorsReal-time Sync',
+      ],
+      pricing: 'Starting at $179/month',
+      rating: 4.8,
+      users: '6,0o00+',
+      featured: false,
+      url: '/tools/universal-integration-hub',
+      demoUrl: '/demo/integration-hub'
+    },
     {
-      id: 7;
-      name: 'AI Customer Service Bot';
+      id: 7,
+      name: 'AI Customer Service Bot',
       description:,
-        'Intelligent customer service solution that provides 24/7 support with human-like interactions.';
-      category: 'automation';
-      icon: '💬';
+        'Intelligent customer service solution that provides 24/7 support with human-like interactions.',
+      category: 'automation',
+      icon: '💬',
       features: [
-        'Natural Language Processing';
-        'Multi-channel Support';
-        'Sentiment Analysis';
-        'Escalation Management';
-      ];
-      pricing: 'Starting at $249/month';
-      rating: 4.7;
-      users: '7,0o00+';
-      featured: false;
-      url: '/tools/ai-customer-service-bot';
-      demoUrl: '/demo/customer-service-bot';
-    };
+        'Natural Language ProcessingMulti-channel Support',
+        'Sentiment AnalysisEscalation Management',
+      ],
+      pricing: 'Starting at $249/month',
+      rating: 4.7,
+      users: '7,0o00+',
+      featured: false,
+      url: '/tools/ai-customer-service-bot',
+      demoUrl: '/demo/customer-service-bot'
+    },
     {
-      id: 8;
-      name: 'Intelligent Data Processor';
+      id: 8,
+      name: 'Intelligent Data Processor',
       description:,
-        'Advanced data processing tool that cleans, transforms, and analyzes data using AI algorithms.';
-      category: 'analytics';
-      icon: '🔄';
+        'Advanced data processing tool that cleans, transforms, and analyzes data using AI algorithms.',
+      category: 'analytics',
+      icon: '🔄',
       features: [
-        'Data Cleaning';
-        'ETL Processing';
-        'Pattern Recognition';
-        'Automated Insights';
-      ];
-      pricing: 'Starting at $129/month';
-      rating: 4.5;
-      users: '4,0o00+';
-      featured: false;
-      url: '/tools/intelligent-data-processor';
-      demoUrl: '/demo/data-processor';
-    };
+        'Data CleaningETL Processing',
+        'Pattern RecognitionAutomated Insights',
+      ],
+      pricing: 'Starting at $129/month',
+      rating: 4.5,
+      users: '4,0o00+',
+      featured: false,
+      url: '/tools/intelligent-data-processor',
+      demoUrl: '/demo/data-processor'
+    },
   ],
   const filteredTools = aiTools.filter(tool => {
     const categoryMatch =,
@@ -194,7 +178,7 @@ const InteractiveAIToolsShowcase = () => {
           </h2>,
           <p className='text-xl text-gray-60o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Discover our comprehensive suite of AI-powered tools designed to,
-            transform your business operations. From automation to analytics;
+            transform your business operations. From automation to analytics,
             find the perfect solution for your needs.,
           </p>,
         </div>,
@@ -317,7 +301,7 @@ const InteractiveAIToolsShowcase = () => {
             </p>,
             <button
               onClick={() => {
-                setSearchTerm(', '),
+                setSearchTerm(),
                 setSelectedCategory('all')}}
               className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0'>,
               Clear Filters,
@@ -380,5 +364,5 @@ const InteractiveAIToolsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveAIToolsShowcase;
+    </section>)},
+export default InteractiveAIToolsShowcase,

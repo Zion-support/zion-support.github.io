@@ -49,161 +49,161 @@ const EnterpriseDataManagement: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve1000)),
     const mockDataSources: DataSource[] = [
       {
-        id: '1';
-        name: 'Primary Database';
-        type: 'database';
-        status: 'connected';
-        lastSync: new Date(Date.now() - 5 * 60 * 1000);
-        recordCount: 2847592;
-        size: '2.4 TB';
-        health: 'excellent'};
+        id: '1',
+        name: 'Primary Database',
+        type: 'database',
+        status: 'connected',
+        lastSync: new Date(Date.now() - 5 * 60 * 1000),
+        recordCount: 2847592,
+        size: '2.4 TB',
+        health: 'excellent'},
       {
-        id: '2';
-        name: 'Customer API';
-        type: 'api';
-        status: 'connected';
-        lastSync: new Date(Date.now() - 2 * 60 * 1000);
-        recordCount: 892456;
-        size: '156 MB';
-        health: 'good'};
+        id: '2',
+        name: 'Customer API',
+        type: 'api',
+        status: 'connected',
+        lastSync: new Date(Date.now() - 2 * 60 * 1000),
+        recordCount: 892456,
+        size: '156 MB',
+        health: 'good'},
       {
-        id: '3';
-        name: 'Analytics Warehouse';
-        type: 'cloud';
-        status: 'syncing';
-        lastSync: new Date(Date.now() - 15 * 60 * 1000);
-        recordCount: 5678901;
-        size: '8.7 TB';
-        health: 'warning'};
+        id: '3',
+        name: 'Analytics Warehouse',
+        type: 'cloud',
+        status: 'syncing',
+        lastSync: new Date(Date.now() - 15 * 60 * 1000),
+        recordCount: 5678901,
+        size: '8.7 TB',
+        health: 'warning'},
       {
-        id: '4';
-        name: 'File Storage';
-        type: 'file';
-        status: 'connected';
-        lastSync: new Date(Date.now() - 30 * 60 * 1000);
-        recordCount: 234567;
-        size: '45 GB';
-        health: 'good'};
+        id: '4',
+        name: 'File Storage',
+        type: 'file',
+        status: 'connected',
+        lastSync: new Date(Date.now() - 30 * 60 * 1000),
+        recordCount: 234567,
+        size: '45 GB',
+        health: 'good'},
       {
-        id: '5';
-        name: 'Real-time Stream';
-        type: 'stream';
-        status: 'error';
-        lastSync: new Date(Date.now() - 2 * 60 * 60 * 1000);
-        recordCount: 0;
-        size: '0 B';
+        id: '5',
+        name: 'Real-time Stream',
+        type: 'stream',
+        status: 'error',
+        lastSync: new Date(Date.now() - 2 * 60 * 60 * 1000),
+        recordCount: 0,
+        size: '0 B',
         health: 'critical'}
     ],
     const mockPipelines: DataPipeline[] = [
       {
-        id: '1';
-        name: 'Customer Data Sync';
-        status: 'running';
-        source: 'Customer API';
-        destination: 'Primary Database';
-        recordsProcessed: 15420;
-        recordsFailed: 23;
-        startTime: new Date(Date.now() - 45 * 60 * 1000);
-        progress: 78};
+        id: '1',
+        name: 'Customer Data Sync',
+        status: 'running',
+        source: 'Customer API',
+        destination: 'Primary Database',
+        recordsProcessed: 15420,
+        recordsFailed: 23,
+        startTime: new Date(Date.now() - 45 * 60 * 1000),
+        progress: 78},
       {
-        id: '2';
-        name: 'Analytics Processing';
-        status: 'completed';
-        source: 'Primary Database';
-        destination: 'Analytics Warehouse';
-        recordsProcessed: 2847592;
-        recordsFailed: 156;
-        startTime: new Date(Date.now() - 2 * 60 * 60 * 1000);
-        endTime: new Date(Date.now() - 30 * 60 * 1000);
-        progress: 100};
+        id: '2',
+        name: 'Analytics Processing',
+        status: 'completed',
+        source: 'Primary Database',
+        destination: 'Analytics Warehouse',
+        recordsProcessed: 2847592,
+        recordsFailed: 156,
+        startTime: new Date(Date.now() - 2 * 60 * 60 * 1000),
+        endTime: new Date(Date.now() - 30 * 60 * 1000),
+        progress: 100},
       {
-        id: '3';
-        name: 'Backup Pipeline';
-        status: 'failed';
-        source: 'Primary Database';
-        destination: 'Cloud Storage';
-        recordsProcessed: 892456;
-        recordsFailed: 892456;
-        startTime: new Date(Date.now() - 4 * 60 * 60 * 1000);
-        endTime: new Date(Date.now() - 3 * 60 * 60 * 1000);
-        progress: 0};
+        id: '3',
+        name: 'Backup Pipeline',
+        status: 'failed',
+        source: 'Primary Database',
+        destination: 'Cloud Storage',
+        recordsProcessed: 892456,
+        recordsFailed: 892456,
+        startTime: new Date(Date.now() - 4 * 60 * 60 * 1000),
+        endTime: new Date(Date.now() - 3 * 60 * 60 * 1000),
+        progress: 0},
       {
-        id: '4';
-        name: 'Real-time Events';
-        status: 'paused';
-        source: 'Event Stream';
-        destination: 'Event Store';
-        recordsProcessed: 456789;
-        recordsFailed: 12;
-        startTime: new Date(Date.now() - 6 * 60 * 60 * 1000);
+        id: '4',
+        name: 'Real-time Events',
+        status: 'paused',
+        source: 'Event Stream',
+        destination: 'Event Store',
+        recordsProcessed: 456789,
+        recordsFailed: 12,
+        startTime: new Date(Date.now() - 6 * 60 * 60 * 1000),
         progress: 45}
     ],
     const mockQualityMetrics: DataQualityMetric[] = [
       {
-        id: '1';
-        name: 'Data Completeness';
-        value: 97.8;
-        threshold: 95.0;
-        status: 'pass';
-        trend: 'up';
-        lastChecked: new Date(Date.now() - 10 * 60 * 1000)};
+        id: '1',
+        name: 'Data Completeness',
+        value: 97.8,
+        threshold: 95.0,
+        status: 'pass',
+        trend: 'up',
+        lastChecked: new Date(Date.now() - 10 * 60 * 1000)},
       {
-        id: '2';
-        name: 'Data Accuracy';
-        value: 94.2;
-        threshold: 95.0;
-        status: 'warning';
-        trend: 'down';
-        lastChecked: new Date(Date.now() - 15 * 60 * 1000)};
+        id: '2',
+        name: 'Data Accuracy',
+        value: 94.2,
+        threshold: 95.0,
+        status: 'warning',
+        trend: 'down',
+        lastChecked: new Date(Date.now() - 15 * 60 * 1000)},
       {
-        id: '3';
-        name: 'Data Consistency';
-        value: 99.1;
-        threshold: 98.0;
-        status: 'pass';
-        trend: 'stable';
-        lastChecked: new Date(Date.now() - 5 * 60 * 1000)};
+        id: '3',
+        name: 'Data Consistency',
+        value: 99.1,
+        threshold: 98.0,
+        status: 'pass',
+        trend: 'stable',
+        lastChecked: new Date(Date.now() - 5 * 60 * 1000)},
       {
-        id: '4';
-        name: 'Data Freshness';
-        value: 89.7;
-        threshold: 90.0;
-        status: 'warning';
-        trend: 'down';
-        lastChecked: new Date(Date.now() - 20 * 60 * 1000)};
+        id: '4',
+        name: 'Data Freshness',
+        value: 89.7,
+        threshold: 90.0,
+        status: 'warning',
+        trend: 'down',
+        lastChecked: new Date(Date.now() - 20 * 60 * 1000)},
       {
-        id: '5';
-        name: 'Schema Compliance';
-        value: 98.5;
-        threshold: 95.0;
-        status: 'pass';
-        trend: 'up';
+        id: '5',
+        name: 'Schema Compliance',
+        value: 98.5,
+        threshold: 95.0,
+        status: 'pass',
+        trend: 'up',
         lastChecked: new Date(Date.now() - 8 * 60 * 1000)}
     ],
     setDataSources(mockDataSources),
     setPipelines(mockPipelines),
     setQualityMetrics(mockQualityMetrics),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const updateRealTimeData = () => {
     // Update pipeline progress,
     setPipelines(prev => prev.map(pipeline => {
       if (pipeline.status === 'running') {
         const newProgress = Math.min(100pipeline.progress + Math.random() * 5),
         return {
-          ...pipeline;
-          progress: newProgress;
-          recordsProcessed: pipeline.recordsProcessed + Math.floor(Math.random() * 100)};
+          ...pipeline,
+          progress: newProgress,
+          recordsProcessed: pipeline.recordsProcessed + Math.floor(Math.random() * 100)},
       }
       return pipeline})),
     // Update data source sync times,
     setDataSources(prev => prev.map(source => {
       if (source.status === 'syncing') {
         return {
-          ...source;
-          lastSync: new Date();
-          recordCount: source.recordCount + Math.floor(Math.random() * 1000)};
+          ...source,
+          lastSync: new Date(),
+          recordCount: source.recordCount + Math.floor(Math.random() * 1000)},
       }
-      return source}))};
+      return source}))},
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'connected': return 'text-green-600 bg-green-100',
@@ -218,7 +218,7 @@ const EnterpriseDataManagement: React.FC = () => {
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'fail': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getHealthColor = (health: string) => {
     switch (health) {
       case 'excellent': return 'text-green-600 bg-green-100',
@@ -226,7 +226,7 @@ const EnterpriseDataManagement: React.FC = () => {
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'database': return '🗄️',
@@ -235,20 +235,20 @@ const EnterpriseDataManagement: React.FC = () => {
       case 'stream': return '🌊',
       case 'cloud': return '☁️',
       default: return '📊'}
-  };
+  },
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60)),
     if (diffInMinutes < 1) return 'Just now',
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`,
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,
-    return `${Math.floor(diffInMinutes / 1440)}d ago`};
+    return `${Math.floor(diffInMinutes / 1440)}d ago`},
   const formatDuration = (startTime: DatendTime?: Date) => {
     const end = endTime || new Date(),
     const diffInMinutes = Math.floor((end.getTime() - startTime.getTime()) / (1000 * 60)),
     if (diffInMinutes < 60) return `${diffInMinutes}m`,
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ${diffInMinutes % 60}m`,
-    return `${Math.floor(diffInMinutes / 1440)}d ${Math.floor((diffInMinutes % 1440) / 60)}h`};
+    return `${Math.floor(diffInMinutes / 1440)}d ${Math.floor((diffInMinutes % 1440) / 60)}h`},
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -289,10 +289,10 @@ const EnterpriseDataManagement: React.FC = () => {
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">,
         {[
-          { id: ''overview', 'label: ''Overview', 'icon: '📊' };
-          { id: ''sources', 'label: 'Data 'Sources', 'icon: '🗄️' };
-          { id: ''pipelines', 'label: ''Pipelines', 'icon: '🔄' };
-          { id: ''quality', 'label: 'Data 'Quality', 'icon: '✅' }
+          { id: ''overviewlabel: ''Overviewicon: '📊' },
+          { id: ''sourceslabel: 'Data 'Sourcesicon: '🗄️' },
+          { id: ''pipelineslabel: ''Pipelinesicon: '🔄' },
+          { id: ''qualitylabel: 'Data 'Qualityicon: '✅' }
         ].map((tab) => (
           <button
             key={tab.id}
@@ -519,5 +519,5 @@ const EnterpriseDataManagement: React.FC = () => {
               </div>,
             </div>))}
         </div>)}
-    </div>)};
-export default EnterpriseDataManagement;
+    </div>)},
+export default EnterpriseDataManagement,

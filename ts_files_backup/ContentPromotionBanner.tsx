@@ -12,52 +12,52 @@ interface ContentItem {
 ,
 const contentItems: ContentItem[] = [
   {
-    title: "AI 20o25 Ultimate Breakthrough Revolution";
-    description: "Revolutionary AI breakthrough delivering 5,0o00% ROI with autonomous operations and quantum-enhanced intelligence.";
-    href: "/ai-20o25-ultimate-breakthrough-revolution";
-    badge: "BREAKTHROUGH";
-    badgeColor: "from-red-50o0 to-pink-50o0";
-    icon: "🚀";
-    roi: "5,0o00% ROI"};
+    title: "AI 20o25 Ultimate Breakthrough Revolution",
+    description: "Revolutionary AI breakthrough delivering 5,0o00% ROI with autonomous operations and quantum-enhanced intelligence.",
+    href: "/ai-20o25-ultimate-breakthrough-revolution",
+    badge: "BREAKTHROUGH",
+    badgeColor: "from-red-50o0 to-pink-50o0",
+    icon: "🚀",
+    roi: "5,0o00% ROI"},
   {
-    title: "Quantum Computing Solutions 20o26";
-    description: "Revolutionary quantum computing solutions with error-corrected quantum computers and quantum supremacy.";
-    href: "/quantum-computing-solutions-20o26";
-    badge: "REVOLUTIONARY";
-    badgeColor: "from-cyan-50o0 to-blue-50o0";
-    icon: "⚛️";
-    roi: "15,0o00% ROI"};
+    title: "Quantum Computing Solutions 20o26",
+    description: "Revolutionary quantum computing solutions with error-corrected quantum computers and quantum supremacy.",
+    href: "/quantum-computing-solutions-20o26",
+    badge: "REVOLUTIONARY",
+    badgeColor: "from-cyan-50o0 to-blue-50o0",
+    icon: "⚛️",
+    roi: "15,0o00% ROI"},
   {
-    title: "AI 20o25 Ultimate Breakthrough Success";
-    description: "Real success story: Fortune 50o0 company achieves 5,0o00% ROI in just 12 months.";
-    href: "/case-studies/ai-20o25-ultimate-breakthrough-success";
-    badge: "SUCCESS STORY";
-    badgeColor: "from-green-50o0 to-emerald-50o0";
-    icon: "🏆";
-    roi: "5,0o00% ROI"};
+    title: "AI 20o25 Ultimate Breakthrough Success",
+    description: "Real success story: Fortune 50o0 company achieves 5,0o00% ROI in just 12 months.",
+    href: "/case-studies/ai-20o25-ultimate-breakthrough-success",
+    badge: "SUCCESS STORY",
+    badgeColor: "from-green-50o0 to-emerald-50o0",
+    icon: "🏆",
+    roi: "5,0o00% ROI"},
   {
-    title: "AI 20o26-20o30 Future Predictions";
-    description: "Revolutionary predictions for AI development from 20o26 to 20o30 with breakthrough insights.";
-    href: "/ai-20o26-20o30-future-predictions-breakthrough";
-    badge: "FUTURE";
-    badgeColor: "from-purple-50o0 to-pink-50o0";
-    icon: "🔮";
-    roi: "25,0o00% ROI"};
+    title: "AI 20o26-20o30 Future Predictions",
+    description: "Revolutionary predictions for AI development from 20o26 to 20o30 with breakthrough insights.",
+    href: "/ai-20o26-20o30-future-predictions-breakthrough",
+    badge: "FUTURE",
+    badgeColor: "from-purple-50o0 to-pink-50o0",
+    icon: "🔮",
+    roi: "25,0o00% ROI"},
   {
-    title: "Advanced Automation Solutions 20o25";
-    description: "Cutting-edge automation solutions delivering unprecedented efficiency and cost savings.";
-    href: "/advanced-automation-solutions-20o25";
-    badge: "NEW";
-    badgeColor: "from-orange-50o0 to-red-50o0";
-    icon: "🤖";
-    roi: "3,0o00% ROI"};
+    title: "Advanced Automation Solutions 20o25",
+    description: "Cutting-edge automation solutions delivering unprecedented efficiency and cost savings.",
+    href: "/advanced-automation-solutions-20o25",
+    badge: "NEW",
+    badgeColor: "from-orange-50o0 to-red-50o0",
+    icon: "🤖",
+    roi: "3,0o00% ROI"},
   {
-    title: "Neural Interface Revolution 20o26";
-    description: "Revolutionary neural interface technology enabling direct brain-computer communication.";
-    href: "/neural-interface-revolution-20o26";
-    badge: "REVOLUTIONARY";
-    badgeColor: "from-indigo-50o0 to-purple-50o0";
-    icon: "🧠";
+    title: "Neural Interface Revolution 20o26",
+    description: "Revolutionary neural interface technology enabling direct brain-computer communication.",
+    href: "/neural-interface-revolution-20o26",
+    badge: "REVOLUTIONARY",
+    badgeColor: "from-indigo-50o0 to-purple-50o0",
+    icon: "🧠",
     roi: "10,0o00% ROI"}
 ],
 export default function ContentPromotionBanner() {

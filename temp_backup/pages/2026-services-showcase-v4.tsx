@@ -9,15 +9,15 @@ import { enterpriseIT20o26ServicesV4 } from '../data/enterprise-it-20o26-service
 import { innovative20o26AIServicesV4 } from '../data/innovative-20o26-ai-services-v4',
 export default function ServicesShowcase20o26V4() {
   const allServices = [
-    ...innovative20o26MicroSaasServicesV4;
-    ...emergingTech20o26ServicesV4;
-    ...enterpriseIT20o26ServicesV4;
+    ...innovative20o26MicroSaasServicesV4,
+    ...emergingTech20o26ServicesV4,
+    ...enterpriseIT20o26ServicesV4,
     ...innovative20o26AIServicesV4],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraFuturisticBackground20o26>,
       <div className="min-h-screen">,

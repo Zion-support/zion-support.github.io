@@ -1,5 +1,4 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 const NewInteractiveContentShowcase20o25 = () => {
@@ -9,80 +8,80 @@ const NewInteractiveContentShowcase20o25 = () => {
     setIsVisible(true)}, []),
   const contentSections = {
     trends: {
-      title: '🚀 Latest AI Trends 20o25';
+      title: '🚀 Latest AI Trends 20o25',
       description:,
-        'Discover the cutting-edge AI technologies reshaping industries';
+        'Discover the cutting-edge AI technologies reshaping industries',
       items: [
         {
-          title: 'Neural Superintelligence Breakthrough';
+          title: 'Neural Superintelligence Breakthrough',
           description:,
-            'Revolutionary AI systems achieving human-level consciousness';
-          roi: '50,0o00%';
-          category: 'Breakthrough';
-        };
+            'Revolutionary AI systems achieving human-level consciousness',
+          roi: '50,0o00%',
+          category: 'Breakthrough'
+        },
         {
-          title: 'Quantum-Neural Fusion';
-          description: 'Combining quantum computing with neural networks';
-          roi: '25,0o00%';
-          category: 'Revolutionary';
-        };
+          title: 'Quantum-Neural Fusion',
+          description: 'Combining quantum computing with neural networks',
+          roi: '25,0o00%',
+          category: 'Revolutionary'
+        },
         {
-          title: 'Autonomous Business Ecosystems';
-          description: 'Self-managing AI systems for enterprise operations';
-          roi: '15,0o00%';
-          category: 'Transformation';
-        };
-      ];
-    };
+          title: 'Autonomous Business Ecosystems',
+          description: 'Self-managing AI systems for enterprise operations',
+          roi: '15,0o00%',
+          category: 'Transformation'
+        },
+      ],
+    },
     caseStudies: {
-      title: '📊 Success Stories';
-      description: 'Real-world transformations with measurable results';
+      title: '📊 Success Stories',
+      description: 'Real-world transformations with measurable results',
       items: [
         {
-          title: 'Fortune 50o0 Manufacturing Revolution';
-          description: 'Complete automation transformation with 2,50o0% ROI';
-          roi: '2,50o0%';
-          category: 'Manufacturing';
-        };
+          title: 'Fortune 50o0 Manufacturing Revolution',
+          description: 'Complete automation transformation with 2,50o0% ROI',
+          roi: '2,50o0%',
+          category: 'Manufacturing'
+        },
         {
-          title: 'Global Financial Services AI';
-          description: 'AI-powered trading systems generating $50o0M revenue';
-          roi: '1,20o0%';
-          category: 'Finance';
-        };
+          title: 'Global Financial Services AI',
+          description: 'AI-powered trading systems generating $50o0M revenue',
+          roi: '1,20o0%',
+          category: 'Finance'
+        },
         {
-          title: 'Healthcare AI Breakthrough';
-          description: 'Diagnostic accuracy improved by 340%';
-          roi: '850%';
-          category: 'Healthcare';
-        };
-      ];
-    };
+          title: 'Healthcare AI Breakthrough',
+          description: 'Diagnostic accuracy improved by 340%',
+          roi: '850%',
+          category: 'Healthcare'
+        },
+      ],
+    },
     tools: {
-      title: '🛠️ Interactive Tools';
-      description: 'Try our AI-powered calculators and demos';
+      title: '🛠️ Interactive Tools',
+      description: 'Try our AI-powered calculators and demos',
       items: [
         {
-          title: 'ROI Calculator';
-          description: 'Calculate your potential AI transformation ROI';
-          roi: 'Free';
-          category: 'Calculator';
-        };
+          title: 'ROI Calculator',
+          description: 'Calculate your potential AI transformation ROI',
+          roi: 'Free',
+          category: 'Calculator'
+        },
         {
-          title: 'AI Readiness Assessment';
-          description: "Evaluate your 'organization', 's AI readiness";
-          roi: 'Free';
-          category: 'Assessment';
-        };
+          title: 'AI Readiness Assessment',
+          description: "Evaluate your 'organizations AI readiness",
+          roi: 'Free',
+          category: 'Assessment'
+        },
         {
-          title: 'Automation Demo';
-          description: 'Experience AI automation in action';
-          roi: 'Free';
-          category: 'Demo';
-        };
-      ];
-    };
-  };
+          title: 'Automation Demo',
+          description: 'Experience AI automation in action',
+          roi: 'Free',
+          category: 'Demo'
+        },
+      ],
+    },
+  },
   return (
     <div
       className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -189,5 +188,5 @@ const NewInteractiveContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewInteractiveContentShowcase20o25;
+    </div>)},
+export default NewInteractiveContentShowcase20o25,

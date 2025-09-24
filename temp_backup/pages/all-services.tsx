@@ -2,24 +2,24 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Filter;
-  Star;
-  Users;
-  TrendingUp;
-  Zap;
-  Brain;
-  Rocket;
-  Shield;
-  Cpu;
-  Globe;
-  Target;
-  ArrowRight;
-  ExternalLink;
-  Check;
-  Phone;
-  Mail;
-  MapPin;
+  Search,
+  Filter,
+  Star,
+  Users,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Cpu,
+  Globe,
+  Target,
+  ArrowRight,
+  ExternalLink,
+  Check,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 import UltraAdvancedQuantumBackground from '../components/ui/UltraAdvancedQuantumBackground',
 import UltraFuturisticServiceCard from '../components/ui/UltraFuturisticServiceCard',
@@ -33,20 +33,20 @@ export default function AllServicesPage() {
   const [selectedVariant, setSelectedVariant] = useState('all'),
   // Combine all services,
   const allServices = [
-    ...enhancedRealMicroSaasServices;
-    ...innovativeAIServices;
-    ...advancedITServices;
-    ...extraServices;
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices,
+    ...advancedITServices,
+    ...extraServices,
   ],
   // Get unique categories,
   const categories = [
-    'all';
-    ...Array.from(new Set(allServices.map(service => service.category)));
+    'all',
+    ...Array.from(new Set(allServices.map(service => service.category))),
   ],
   // Get unique variants,
   const variants = [
-    'all';
-    ...Array.from(new Set(allServices.map(service => service.variant)));
+    'all',
+    ...Array.from(new Set(allServices.map(service => service.variant))),
   ],
   // Filter services,
   const filteredServices = allServices.filter(service => {
@@ -60,32 +60,32 @@ export default function AllServicesPage() {
       selectedVariant === 'all' || service.variant === selectedVariant,
     return matchesSearch && matchesCategory && matchesVariant}),
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-        delayChildren: 0.2;
-      };
-    };
-  };
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   return (
     <UltraAdvancedQuantumBackground intensity={1.5} variant='quantum'>,
       <div className='min-h-screen'>,

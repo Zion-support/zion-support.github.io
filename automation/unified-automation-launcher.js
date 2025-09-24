@@ -18,7 +18,7 @@ class UnifiedAutomationLauncher {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
     this.processes = new Map(),
-    this.logFile = path.join(__dirname, 'logs', 'unified-automation.log'),
+    this.logFile = path.join(__dirname, 'logsunified-automation.log'),
     this.statusFile = path.join(__dirname, '.unified-automation-status.json'),
     this.ensureDirectories(),
     this.initializeStatus()}
@@ -30,11 +30,11 @@ class UnifiedAutomationLauncher {
 ,
     // Fallback configuration,
     return {
-      gitManager: { enabled: true };
-      intelligentGit: { enabled: true };
-      enhancedGit: { enabled: true };
-      monitoring: { enabled: true };
-      dashboard: { enabled: true, port: 30o01 }};
+      gitManager: { enabled: true },
+      intelligentGit: { enabled: true },
+      enhancedGit: { enabled: true },
+      monitoring: { enabled: true },
+      dashboard: { enabled: true, port: 30o01 }},
   }
 ,
   ensureDirectories() {
@@ -46,12 +46,12 @@ class UnifiedAutomationLauncher {
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
       const initialStatus ={
-        isRunning: false;
-        components: {};
-        startTime: null;
-        lastUpdate: new Date().toISOString();
-        errors: [];
-        performance: {}};
+        isRunning: false,
+        components: {},
+        startTime: null,
+        lastUpdate: new Date().toISOString(),
+        errors: [],
+        performance: {}},
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2))}
   }
 ,
@@ -74,8 +74,8 @@ class UnifiedAutomationLauncher {
       const currentStatus = JSON.parse(
         fs.readFileSync(this.statusFile, 'utf8')),
       currentStatus.components[component] ={
-        ...status;
-        lastUpdate: new Date().toISOString()};
+        ...status,
+        lastUpdate: new Date().toISOString()},
       currentStatus.lastUpdate = new Date().toISOString(),
       fs.writeFileSync(this.statusFile, JSON.stringify(currentStatus, null, 2))} catch (error) {
       this.log(`Error updating status: ${error.message}`, 'warn')}
@@ -89,8 +89,8 @@ class UnifiedAutomationLauncher {
     try {
       this.log(`Starting component: ${name}`),
       const process = spawn('node', [scriptPath, ...args], {
-        cwd: this.projectRoot;
-        stdio: ['pipe', 'pipe', 'pipe'];
+        cwd: this.projectRoot,
+        stdio: ['pipepipe', 'pipe'],
         detached: false}),
       this.processes.set(name, process),
       process.stdout.on('data', (data) => {
@@ -147,26 +147,26 @@ class UnifiedAutomationLauncher {
     const components = [],
     if (this.config.gitManager?.enabled) {
       components.push({
-        name: 'gitManager';
-        script: path.join(__dirname, 'autonomous-git-manager.js');
+        name: 'gitManager',
+        script: path.join(__dirname, 'autonomous-git-manager.js'),
         args: ['watch']})}
 ,
     if (this.config.intelligentGit?.enabled) {
       components.push({
-        name: 'intelligentGit';
-        script: path.join(__dirname, 'intelligent-git-orchestrator.js');
+        name: 'intelligentGit',
+        script: path.join(__dirname, 'intelligent-git-orchestrator.js'),
         args: ['watch']})}
 ,
     if (this.config.enhancedGit?.enabled) {
       components.push({
-        name: 'enhancedGit';
-        script: path.join(__dirname, 'enhanced-git-automation.js');
+        name: 'enhancedGit',
+        script: path.join(__dirname, 'enhanced-git-automation.js'),
         args: ['watch']})}
 ,
     for (const component of components) {
       await this.startComponent(
-        component.name;
-        component.script;
+        component.name,
+        component.script,
         component.args)}
   }
 ,
@@ -174,40 +174,40 @@ class UnifiedAutomationLauncher {
     if (this.config.monitoring?.enabled) {
       // Start performance monitoring,
       await this.startComponent(
-        'performanceMonitor';
-        path.join(__dirname, 'performance', 'monitor.js')),
+        'performanceMonitor',
+        path.join(__dirname, 'performancemonitor.js')),
       // Start health checks,
       await this.startComponent(
-        'healthChecker';
-        path.join(__dirname, 'core', 'health-checker.js'))}
+        'healthChecker',
+        path.join(__dirname, 'corehealth-checker.js'))}
   }
 ,
   async startDashboard() {
     if (this.config.dashboard?.enabled) {
       await this.startComponent(
-        'dashboard';
-        path.join(__dirname, 'dashboard', 'server.js'))}
+        'dashboard',
+        path.join(__dirname, 'dashboardserver.js'))}
   }
 ,
   async startSecurityScanner() {
     if (this.config.security?.enabled) {
       await this.startComponent(
-        'securityScanner';
-        path.join(__dirname, 'security', 'scanner.js'))}
+        'securityScanner',
+        path.join(__dirname, 'securityscanner.js'))}
   }
 ,
   async startCodeQualityEnforcer() {
     if (this.config.tasks?.codeQualityEnforcer?.enabled) {
       await this.startComponent(
-        'codeQuality';
-        path.join(__dirname, 'core', 'code-quality-enforcer.js'))}
+        'codeQuality',
+        path.join(__dirname, 'corecode-quality-enforcer.js'))}
   }
 ,
   async startAll() {
     this.log('🚀 Starting Unified Automation System...'),
     const startTime = new Date(),
     this.updateStatus('system', {
-      status: 'starting';
+      status: 'starting',
       startTime: startTime.toISOString()}),
     try {
       // Start core components,
@@ -217,19 +217,19 @@ class UnifiedAutomationLauncher {
       await this.startSecurityScanner(),
       await this.startCodeQualityEnforcer(),
       this.updateStatus('system', {
-        status: 'running';
-        startTime: startTime.toISOString();
+        status: 'running',
+        startTime: startTime.toISOString(),
         components: Array.from(this.processes.keys())}),
-      this.log('✅ Unified Automation System started successfully!', 'success'),
+      this.log('✅ Unified Automation System started successfully!success'),
       this.log(
         `📊 Dashboard available at: http://localhost:${this.config.dashboard?.port || 30o01}`),
       return true} catch (error) {
       this.log(
-        `❌ Failed to start Unified Automation System: ${error.message}`;
+        `❌ Failed to start Unified Automation System: ${error.message}`,
         'error'),
       this.updateStatus('system', {
-        status: 'error';
-        error: error.message;
+        status: 'error',
+        error: error.message,
         startTime: startTime.toISOString()}),
       return false}
   }
@@ -240,9 +240,9 @@ class UnifiedAutomationLauncher {
       this.stopComponent(name)),
     await Promise.all(stopPromises),
     this.updateStatus('system', {
-      status: 'stopped';
+      status: 'stopped',
       stopTime: new Date().toISOString()}),
-    this.log('✅ Unified Automation System stopped successfully', 'success')}
+    this.log('✅ Unified Automation System stopped successfullysuccess')}
 ,
   async restart() {
     this.log('🔄 Restarting Unified Automation System...'),
@@ -254,9 +254,9 @@ class UnifiedAutomationLauncher {
     try {
       const status = JSON.parse(fs.readFileSync(this.statusFile, 'utf8')),
       return {
-        ...status;
-        runningComponents: Array.from(this.processes.keys());
-        totalComponents: this.processes.size};
+        ...status,
+        runningComponents: Array.from(this.processes.keys()),
+        totalComponents: this.processes.size},
     } catch (error) {
       return null}
   }
@@ -273,7 +273,7 @@ class UnifiedAutomationLauncher {
       const { spawn } = require('child_process'),
       return new Promise((resolve) => {
         const process = spawn('node', [scriptPath, operation], {
-          cwd: this.projectRoot;
+          cwd: this.projectRoot,
           stdio: 'pipe'}),
         process.on('close', (code) => {
           resolve(code === 0)})})}

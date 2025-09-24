@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Users, Zap, Shield, Clock, CheckCircle } from 'lucide-react',
 interface RevolutionaryServiceCardProps {
@@ -33,59 +33,59 @@ interface RevolutionaryServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string};
+      website: string},
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   index: number}
 ,
 const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ service, index }) => {
   const cardVariants ={
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0.9};
+      opacity: 0,
+      y: 50,
+      scale: 0.9},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
-        delay: index * 0.1;
+        duration: 0.6,
+        delay: index * 0.1,
         ease: "easeOut" as const}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
+      y: -10,
+      scale: 1.0o2,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const glowVariants ={
-    initial: { opacity: 0.5, scale: 1 };
+    initial: { opacity: 0.5, scale: 1 },
     animate: {
-      opacity: [0.5, 0.8, 0.5];
-      scale: [1, 1.0o5, 1];
+      opacity: [0.5, 0.8, 0.5],
+      scale: [1, 1.0o5, 1],
       transition: {
-        duration: 3;
-        repeat: Infinity;
+        duration: 3,
+        repeat: Infinity,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const featureVariants ={
-    hidden: { opacity: 0, x: -20 };
+    hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
-      opacity: 1;
-      x: 0;
+      opacity: 1,
+      x: 0,
       transition: {
-        delay: i * 0.1;
-        duration: 0.5;
+        delay: i * 0.1,
+        duration: 0.5,
         ease: "easeOut" as const}
-    })};
+    })},
   return (
     <motion.div,
       variants={cardVariants}
@@ -229,19 +229,19 @@ const RevolutionaryServiceCard: React.FC<RevolutionaryServiceCardProps> = ({ ser
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
               style={{
-                left: `${20 + i * 15}%`;
+                left: `${20 + i * 15}%`,
                 top: `${30 + i * 10}%`}}
               animate={{
-                y: [0, -20, 0];
-                opacity: [0.3, 0.8, 0.3];
+                y: [0, -20, 0],
+                opacity: [0.3, 0.8, 0.3],
                 scale: [1, 1.5, 1]}}
               transition={{
-                duration: 3 + i;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 3 + i,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: i * 0.5}}
              />))}
         </div>,
       </div>,
-    </motion.div>)};
-export default RevolutionaryServiceCard;
+    </motion.div>)},
+export default RevolutionaryServiceCard,

@@ -23,15 +23,14 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
       document.head.appendChild(fontLink),
       // Preload critical images,
       const criticalImages = [
-        '/og-image.jpg';
-        '/favicon.ico';
+        '/og-image.jpg/favicon.ico',
         '/logo.png'],
       criticalImages.forEach(src => {
         const link = document.createElement('link'),
         link.rel = 'preload',
         link.as = 'image',
         link.href = src,
-        document.head.appendChild(link)})};
+        document.head.appendChild(link)})},
           // Implement intersection observer for lazy loading,
       const setupLazyLoading = () => {
         if ('IntersectionObserver' in window) {
@@ -45,18 +44,18 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
                   imageObserver.unobserve(img)}
               }
             })}, {
-            rootMargin: '50px 0px';
+            rootMargin: '50px 0px',
             threshold: 0.0o1}),
           // Observe all lazy images,
           document.querySelectorAll('img[data-src]').forEach((img) => {
             imageObserver.observe(img)})}
-      };
+      },
     // Optimize animations for reduced motion preference,
     const optimizeAnimations = () => {
       const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches,
       if (prefersReducedMotion) {
-        document.documentElement.style.setProperty('--animation-duration', '0.1s'),
-        document.documentElement.style.setProperty('--transition-duration', '0.1s'),
+        document.documentElement.style.setProperty('--animation-duration0.1s'),
+        document.documentElement.style.setProperty('--transition-duration0.1s'),
         // Disable all animations,
         const style = document.createElement('style'),
         style.textContent = `,
@@ -66,7 +65,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
             transition-duration: 0.0o1ms !important}
         `,
         document.head.appendChild(style)}
-    };
+    },
     // Implement resource hints,
     const addResourceHints = () => {
       // DNS prefetch for external domains,
@@ -78,7 +77,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
       const preconnect = document.createElement('link'),
       preconnect.rel = 'preconnect',
       preconnect.href = 'https: //fonts.googleapis.com',
-      document.head.appendChild(preconnect)};
+      document.head.appendChild(preconnect)},
           // Implement service worker for caching,
       const setupServiceWorker = async () => {
         if ('serviceWorker' in navigator) {
@@ -87,7 +86,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
             // Service Worker registered successfully} catch {
             // Service Worker registration failed}
         }
-      };
+      },
     // Initialize all optimizations,
     preloadCriticalResources(),
     setupLazyLoading(),
@@ -96,7 +95,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
     setupServiceWorker(),
     // Cleanup function,
     return () => {
-      // Cleanup any observers or event listeners if needed};
+      // Cleanup any observers or event listeners if needed},
   }, []),
   // Performance monitoring,
   useEffect(() => {
@@ -115,7 +114,7 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
             // // // console.log('CLS:', (entry as any).value)}
         }
       }),
-      observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] }),
+      observer.observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shift'] }),
       return () => observer.disconnect()}
   }, []),
   return (
@@ -127,5 +126,5 @@ const PerformanceEnhancer: React.FC<PerformanceEnhancerProps> = ({ children }) =
       >,
         {children}
       </motion.div>,
-    </div>)};
-export default PerformanceEnhancer;
+    </div>)},
+export default PerformanceEnhancer,

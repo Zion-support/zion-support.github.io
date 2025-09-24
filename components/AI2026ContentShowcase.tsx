@@ -2,104 +2,98 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRightIcon;
-  BookOpenIcon;
-  SparklesIcon;
-  ClockIcon;
-  UserIcon;
-  TagIcon;
+  ArrowRightIcon,
+  BookOpenIcon,
+  SparklesIcon,
+  ClockIcon,
+  UserIcon,
+  TagIcon,
 } from '@heroicons/react/24/outline',
 const AI20o26ContentShowcase = () => {
   const [activeTab, setActiveTab] = useState('all'),
   const contentItems = [
     {
-      id: 1;
-      title: 'AI 20o26: Quantum-Neural Fusion Revolution';
+      id: 1,
+      title: 'AI 20o26: Quantum-Neural Fusion Revolution',
       description:,
-        'Discover how quantum-neural fusion is revolutionizing AI in 20o26, creating unprecedented computational power and intelligence capabilities.';
-      category: 'breakthrough';
-      readTime: '12 min read';
-      author: 'Zion Tech Group';
-      date: '20o26-0o1-15';
+        'Discover how quantum-neural fusion is revolutionizing AI in 20o26, creating unprecedented computational power and intelligence capabilities.',
+      category: 'breakthrough',
+      readTime: '12 min read',
+      author: 'Zion Tech Group',
+      date: '20o26-0o1-15',
       tags: [
-        'quantum-computing';
-        'neural-networks';
-        'AI-20o26';
-        'breakthrough';
-      ];
-      image: '/images/quantum-neural-fusion-20o26.jpg';
-      featured: true;
+        'quantum-computingneural-networks',
+        'AI-20o26breakthrough',
+      ],
+      image: '/images/quantum-neural-fusion-20o26.jpg',
+      featured: true,
       stats: {
-        views: '15.2k';
-        shares: '3.8k';
-        likes: '2.1k';
-      };
-    };
+        views: '15.2k',
+        shares: '3.8k',
+        likes: '2.1k'
+      },
+    },
     {
-      id: 2;
-      title: 'AI 20o26: Autonomous Business Ecosystems';
+      id: 2,
+      title: 'AI 20o26: Autonomous Business Ecosystems',
       description:,
-        'Explore how AI 20o26 is creating fully autonomous business ecosystems that self-manage, self-optimize, and self-evolve without human intervention.';
-      category: 'business';
-      readTime: '15 min read';
-      author: 'Zion Tech Group';
-      date: '20o26-0o1-20';
+        'Explore how AI 20o26 is creating fully autonomous business ecosystems that self-manage, self-optimize, and self-evolve without human intervention.',
+      category: 'business',
+      readTime: '15 min read',
+      author: 'Zion Tech Group',
+      date: '20o26-0o1-20',
       tags: [
-        'autonomous-systems';
-        'business-ecosystems';
-        'AI-20o26';
-        'self-management';
-      ];
-      image: '/images/autonomous-business-ecosystems-20o26.jpg';
-      featured: true;
+        'autonomous-systemsbusiness-ecosystems',
+        'AI-20o26self-management',
+      ],
+      image: '/images/autonomous-business-ecosystems-20o26.jpg',
+      featured: true,
       stats: {
-        views: '12.7k';
-        shares: '2.9k';
-        likes: '1.8k';
-      };
-    };
+        views: '12.7k',
+        shares: '2.9k',
+        likes: '1.8k'
+      },
+    },
     {
-      id: 3;
-      title: 'AI 20o26: Synthetic Intelligence Breakthrough';
+      id: 3,
+      title: 'AI 20o26: Synthetic Intelligence Breakthrough',
       description:,
-        'Explore the revolutionary emergence of Synthetic Intelligence in 20o26 - AI that creates, evolves, and transcends traditional artificial intelligence boundaries.';
-      category: 'revolution';
-      readTime: '18 min read';
-      author: 'Zion Tech Group';
-      date: '20o26-0o1-25';
+        'Explore the revolutionary emergence of Synthetic Intelligence in 20o26 - AI that creates, evolves, and transcends traditional artificial intelligence boundaries.',
+      category: 'revolution',
+      readTime: '18 min read',
+      author: 'Zion Tech Group',
+      date: '20o26-0o1-25',
       tags: [
-        'synthetic-intelligence';
-        'AI-evolution';
-        'consciousness';
-        'AI-20o26';
-      ];
-      image: '/images/synthetic-intelligence-20o26.jpg';
-      featured: true;
+        'synthetic-intelligenceAI-evolution',
+        'consciousnessAI-20o26',
+      ],
+      image: '/images/synthetic-intelligence-20o26.jpg',
+      featured: true,
       stats: {
-        views: '18.9k';
-        shares: '4.2k';
-        likes: '2.7k';
-      };
-    };
+        views: '18.9k',
+        shares: '4.2k',
+        likes: '2.7k'
+      },
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'breakthrough';
-      name: 'Breakthroughs';
+      id: 'breakthrough',
+      name: 'Breakthroughs',
       count: contentItems.filter(item => item.category === 'breakthrough'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'business';
-      name: 'Business';
-      count: contentItems.filter(item => item.category === 'business').length;
-    };
+      id: 'business',
+      name: 'Business',
+      count: contentItems.filter(item => item.category === 'business').length
+    },
     {
-      id: 'revolution';
-      name: 'Revolution';
-      count: contentItems.filter(item => item.category === 'revolution').length;
-    };
+      id: 'revolution',
+      name: 'Revolution',
+      count: contentItems.filter(item => item.category === 'revolution').length
+    },
   ],
   const filteredContent =,
     activeTab === 'all',
@@ -206,7 +200,7 @@ const AI20o26ContentShowcase = () => {
                   href={`/blog/${item.title,
                     .toLowerCase(),
                     .replace(/\s+/g, '-'),
-                    .replace(/[^a-z0-9-]/g, ', ')}`}
+                    .replace(/[^a-z0-9-]/g, )}`}
                   className='inline-flex items-center w-full justify-center bg-gradient-to-r from-purple-60o0 to-blue-60o0 hover: from-purple-70o0 hover:to-blue-70o0 text-white px-6 py-3 rounded-lg font-semibold transition-all duration-30o0 transform hover:scale-10o5'>,
                   Read Article,
                   <ArrowRightIcon className='w-4 h-4 ml-2' />,
@@ -235,5 +229,5 @@ const AI20o26ContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o26ContentShowcase;
+    </div>)},
+export default AI20o26ContentShowcase,

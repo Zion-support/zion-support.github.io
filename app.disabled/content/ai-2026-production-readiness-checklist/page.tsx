@@ -2,10 +2,10 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o26: Production Readiness Checklist for Autonomous Agents | Zion Tech Group';
+    'AI 20o26: Production Readiness Checklist for Autonomous Agents | Zion Tech Group',
   description:,
-    'A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.';
-};
+    'A practical, actionable checklist to prepare autonomous agent systems for reliable, secure, and observable production deployments.',
+},
 export default function ProductionReadinessChecklist20o26() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -24,7 +24,7 @@ export default function ProductionReadinessChecklist20o26() {
             AI 20o26: Production Readiness Checklist for Autonomous Agents,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            A comprehensive go-live checklist spanning reliability, security;
+            A comprehensive go-live checklist spanning reliability, security,
             observability, and governance for enterprise agent systems.,
           </p>,
         </header>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function AnimatedBackground() {
   return (
     <div className='pointer-events-none fixed inset-0 -z-10 overflow-hidden'>,
@@ -47,7 +47,7 @@ function AnimatedBackground() {
         className='absolute -inset-[20%] opacity - 40 blur - 3xl animate-[bgflow_20s_linear_infinite]',
         style={{
           background:,
-            'radial - gradient (600px at 0% 0%, #22d3ee 0%, transparent 60%), radial - gradient (600px at 100% 0%, #a78bfa 0%, transparent 60%), radial - gradient (600px at 0% 100%, #34d399 0%, transparent 60%), radial - gradient (600px at 100% 100%, #f472b6 0%, transparent 60%)';
+            'radial - gradient (600px at 0% 0%, #22d3ee 0%, transparent 60%), radial - gradient (600px at 100% 0%, #a78bfa 0%, transparent 60%), radial - gradient (600px at 0% 100%, #34d399 0%, transparent 60%), radial - gradient (600px at 100% 100%, #f472b6 0%, transparent 60%)',
         }}
       />,
       <style jsx global>{`,
@@ -123,10 +123,10 @@ function AnimatedBackground() {
             linear-gradient(rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(6, 182, 212, 0 && 0.1) 1px, transparent 1px),
           `,
-          backgroundSize: '50px 50px';
+          backgroundSize: '50px 50px'
         }}
       />,
     </div>)}
-export default AnimatedBackground};
-export default AnimatedBackground;
+export default AnimatedBackground},
+export default AnimatedBackground,
 }}}}}}}})))

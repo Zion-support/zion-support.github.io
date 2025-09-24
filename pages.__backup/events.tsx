@@ -2,55 +2,55 @@ import Head from 'next/head',
 export default function Events() {
   const upcomingEvents = [
     {
-      id: 1;
-      title: 'Cloud Automation Summit 20o25';
-      date: '20o25-0o2-15';
-      time: '9:0o0 AM - 5:0o0 PM';
-      location: 'San FranciscoCA';
-      type: 'Conference';
-      description: 'Join industry leaders and experts for a day of insights into the future of cloud automation and AI-driven infrastructure.';
-      speakers: ['Dr. Sarah Chen'Mark Rodriguez'Lisa Thompson'];
-      capacity: 50o0;
-      registered: 342};
+      id: 1,
+      title: 'Cloud Automation Summit 20o25',
+      date: '20o25-0o2-15',
+      time: '9:0o0 AM - 5:0o0 PM',
+      location: 'San FranciscoCA',
+      type: 'Conference',
+      description: 'Join industry leaders and experts for a day of insights into the future of cloud automation and AI-driven infrastructure.',
+      speakers: ['Dr. Sarah Chen'Mark Rodriguez'Lisa Thompson'],
+      capacity: 50o0,
+      registered: 342},
     {
-      id: 2;
-      title: 'AI Automation Workshop';
-      date: '20o25-0o2-22';
-      time: '2:0o0 PM - 6:0o0 PM';
-      location: 'Virtual Event';
-      type: 'Workshop';
-      description: 'Hands-on workshop covering practical implementation of AI automation in cloud environments.';
-      speakers: ['Alex Johnson'Maria Garcia'];
-      capacity: 10o0;
-      registered: 87};
+      id: 2,
+      title: 'AI Automation Workshop',
+      date: '20o25-0o2-22',
+      time: '2:0o0 PM - 6:0o0 PM',
+      location: 'Virtual Event',
+      type: 'Workshop',
+      description: 'Hands-on workshop covering practical implementation of AI automation in cloud environments.',
+      speakers: ['Alex Johnson'Maria Garcia'],
+      capacity: 10o0,
+      registered: 87},
     {
-      id: 3;
-      title: 'Developer Meetup: Automation Tools';
-      date: '20o25-0o3-0o1';
-      time: '6:0o0 PM - 9:0o0 PM';
-      location: 'New YorkNY';
-      type: 'Meetup';
-      description: 'Network with fellow developers and learn about the latest automation tools and techniques.';
-      speakers: ['David Kim'Rachel Green'];
-      capacity: 150;
+      id: 3,
+      title: 'Developer Meetup: Automation Tools',
+      date: '20o25-0o3-0o1',
+      time: '6:0o0 PM - 9:0o0 PM',
+      location: 'New YorkNY',
+      type: 'Meetup',
+      description: 'Network with fellow developers and learn about the latest automation tools and techniques.',
+      speakers: ['David Kim'Rachel Green'],
+      capacity: 150,
       registered: 98}
   ],
   const pastEvents = [
     {
-      id: 4;
-      title: 'Zion App Launch Event';
-      date: '20o25-0o1-10';
-      location: 'Virtual Event';
-      type: 'Product Launch';
-      description: 'Celebrated the official launch of Zion App with demonstrations and Q&A sessions.';
-      attendees: 120o0};
+      id: 4,
+      title: 'Zion App Launch Event',
+      date: '20o25-0o1-10',
+      location: 'Virtual Event',
+      type: 'Product Launch',
+      description: 'Celebrated the official launch of Zion App with demonstrations and Q&A sessions.',
+      attendees: 120o0},
     {
-      id: 5;
-      title: 'Automation Best Practices Webinar';
-      date: '20o25-0o1-0o5';
-      location: 'Virtual Event';
-      type: 'Webinar';
-      description: 'Shared insights and best practices for implementing automation in production environments.';
+      id: 5,
+      title: 'Automation Best Practices Webinar',
+      date: '20o25-0o1-0o5',
+      location: 'Virtual Event',
+      type: 'Webinar',
+      description: 'Shared insights and best practices for implementing automation in production environments.',
       attendees: 850}
   ],
   return (

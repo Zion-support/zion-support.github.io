@@ -1,4 +1,6 @@
-import { render, screen } from @testing-library/react',import userEvent from @testing-library/user-event',import PrimaryNav from @/layout/PrimaryNav',import { Provider } from react-redux',import configureStore from redux-mock-store',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider';
+import { render, screen } from @testing-library/react',import userEvent from @testing-library/user-event',
+import PrimaryNav from @/layout/PrimaryNav',import { Provider } from react-redux',
+import configureStore from redux-mock-store',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',
 const mockStore = configureStore([]),
 function renderWithStore(cartItems: unknown[]) {
   const store = mockStore({ cart: { items: cartItems } }),

@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Executive Guide to Agent Adoption | Zion Tech Group';
+  title: 'AI 20o26: Executive Guide to Agent Adoption | Zion Tech Group',
   description:,
-    'Leadership playbook to adopt autonomous agents with governance, controls, and measurable ROI.';
+    'Leadership playbook to adopt autonomous agents with governance, controls, and measurable ROI.',
   keywords: [
-    'executive guide';
-    'agent adoption';
-    'ai governance';
-    'roi';
-    'controls';
-  ];
-};
+    'executive guideagent adoption',
+    'ai governanceroi',
+    'controls',
+  ]
+},
 const ExecutiveGuideAgentAdoption: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -64,5 +62,5 @@ const ExecutiveGuideAgentAdoption: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default ExecutiveGuideAgentAdoption;
+    </div>)},
+export default ExecutiveGuideAgentAdoption,

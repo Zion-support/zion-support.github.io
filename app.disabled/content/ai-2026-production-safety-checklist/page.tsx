@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Production Safety Checklist';
+  title: 'AI 20o26: Production Safety Checklist',
   description:,
-    'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.';
-};
+    'Practical checklist to ship safer autonomous agents with eval-gated controls and runtime protections.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-6 py-12 prose prose-purple'>,

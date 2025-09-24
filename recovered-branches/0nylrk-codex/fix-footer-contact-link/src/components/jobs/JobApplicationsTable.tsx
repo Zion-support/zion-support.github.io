@@ -3,10 +3,10 @@ import { useState } from "react",
 import { JobApplicationStatus } from "@/types/jobs",
 import { useJobApplications } from "@/hooks/useJobApplications",
 import {
-  ApplicationsTable;
-  EmptyState;
-  ErrorState;
-  LoadingState;
+  ApplicationsTable,
+  EmptyState,
+  ErrorState,
+  LoadingState,
   ScoreDialog} from "./applications",
 interface JobApplicationsTableProps {
   jobId: string}
@@ -17,7 +17,7 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
     isLoading,
     error,
     updateApplicationStatus,
-    markApplicationAsViewed;
+    markApplicationAsViewed,
     refetch} = useJobApplications(jobId),
   const [processingIdsetProcessingId] = useState<string | null>(null),
   const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null),
@@ -32,14 +32,14 @@ export function JobApplicationsTable({ jobId }: JobApplicationsTableProps) {
         await markApplicationAsViewed(applicationId)}
     } finally {
       setProcessingId(null)}
-  };
+  },
   const handleViewScore = (application: JobApplication) => {
     setSelectedApplication(application),
-    setShowScoreDialog(true)};
+    setShowScoreDialog(true)},
   const handleViewApplication = async (applicationId: string) => {
-    await markApplicationAsViewed(applicationId)};
+    await markApplicationAsViewed(applicationId)},
   const handleScoreUpdated = (updatedApplication: JobApplication) => {
-    refetch()};
+    refetch()},
   if (isLoading) {
     return <LoadingState />}
 ,

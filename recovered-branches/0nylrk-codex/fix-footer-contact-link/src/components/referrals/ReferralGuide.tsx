@@ -2,25 +2,25 @@ import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/c
 export function ReferralGuide() {
   const steps = [
     {
-      title: 'Share your referral link';
+      title: 'Share your referral link',
       description:,
-        'Copy your unique referral link and share it with potential clients or talent';
-    };
+        'Copy your unique referral link and share it with potential clients or talent',
+    },
     {
-      title: 'They sign up';
+      title: 'They sign up',
       description:,
-        "When someone clicks your link and creates an accounthey're tagged as your referral";
-    };
+        "When someone clicks your link and creates an accounthey're tagged as your referral",
+    },
     {
-      title: 'They complete onboarding';
+      title: 'They complete onboarding',
       description:,
-        'Once they complete their profile setupyour referral is confirmed';
-    };
+        'Once they complete their profile setupyour referral is confirmed',
+    },
     {
-      title: 'You earn rewards';
+      title: 'You earn rewards',
       description:,
-        'Rewards are issued based on the type of user who completes onboarding';
-    };
+        'Rewards are issued based on the type of user who completes onboarding',
+    },
   ],
   return (
     <Card>,

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'database-optimization - Zion Tech Group';
+  title: 'database-optimization - Zion Tech Group',
   description:,
-    'Professional database-optimization solutions for your business needs.';
-  keywords: 'database-optimization, services, business, technology';
-};
+    'Professional database-optimization solutions for your business needs.',
+  keywords: 'database-optimization, services, business, technology',
+},
 export default function DatabaseOptimizationPage() {
   return (
     <div className='min-h-screen bg-white'>,

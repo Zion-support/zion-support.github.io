@@ -78,7 +78,7 @@ export default function GlobalEnterpriseSuccessBanner() {
           <div className='mt-12 max-w-4xl mx-auto'>,
             <blockquote className='text-xl md: text-2xl text-gray-30o0 italic mb-4'>,
               "The AI 20o25 transformation was the most significant business,
-              decision in our 'company', 's history. We achieved results that,
+              decision in our 'companys history. We achieved results that,
               were previously thought impossible.",
             </blockquote>,
             <div className='text-lg text-green-40o0 font-bold'>,

@@ -2,11 +2,11 @@ import React, { useState, KeyboardEvent } from 'react',
 export type TagInputProps = {
   value: string[],
   onChange: (next: string[]) => void,
-  placeholder?: string};
+  placeholder?: string},
 export default function TagInput({
-  value;
-  onChange;
-  placeholder;
+  value,
+  onChange,
+  placeholder,
 }: TagInputProps) {
   const [input, setInput] = useState(''),
   const addTag = (tag: string) => {
@@ -14,13 +14,13 @@ export default function TagInput({
     if (!cleaned) return,
     if (value.includes(cleaned)) return,
     onChange([...value, cleaned]),
-    setInput('')};
+    setInput('')},
   const onKeyDown = (e: KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter' || e.key === ',') {
+    if (e.key === 'Enter' || e.key === ) {
       e.preventDefault(),
       addTag(input)} else if (e.key === 'Backspace' && input === '' && value.length > 0) {
       onChange(value.slice(0, -1))}
-  };
+  },
   return (
     <div className='border rounded px-2 py-1 flex flex-wrap gap-2 bg-white dark: bg-black'>,
       {value.map(tag => (

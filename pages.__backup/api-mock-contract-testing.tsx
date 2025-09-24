@@ -4,26 +4,24 @@ import Layout from '../components/layout/Layout',
 import ServiceAds from '../components/sections/ServiceAds',
 export default function ApiMockContractTestingPage() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const adItems = [
     {
-      title: '🧪 API Mock & Contract Testing Platform';
-      description: 'Spin up OpenAPI/GraphQL mocks in secondsvalidate breaking changes in CIand gate deployments with contract tests. SDK stubsdata generatorsand snapshot diffs included.';
-      price: 'Starting at $69/month';
+      title: '🧪 API Mock & Contract Testing Platform',
+      description: 'Spin up OpenAPI/GraphQL mocks in secondsvalidate breaking changes in CIand gate deployments with contract tests. SDK stubsdata generatorsand snapshot diffs included.',
+      price: 'Starting at $69/month',
       features: [
-        'OpenAPI/GraphQL import and live mock server';
-        'Contract tests gated in CI (GitHub/GitLab/Bitbucket)';
-        'Dynamic data generators and scenario templates';
-        'Snapshot diffs and changelog with approvals'];
-      link: 'https://ziontechgroup.com/api-mock-contract-testing';
+        'OpenAPI/GraphQL import and live mock serverContract tests gated in CI (GitHub/GitLab/Bitbucket)',
+        'Dynamic data generators and scenario templatesSnapshot diffs and changelog with approvals'],
+      link: 'https://ziontechgroup.com/api-mock-contract-testing',
       contactInfo}
   ],
   const tiers = [
-    { name: 'Starter'price: '$69/month'items: ['1 project'5 mocks'OpenAPI import'CI status checks'] };
-    { name: 'Team'price: '$149/month'items: ['5 projects'Unlimited mocks'Record/replay'Slack alerts'] };
+    { name: 'Starter'price: '$69/month'items: ['1 project'5 mocks'OpenAPI import'CI status checks'] },
+    { name: 'Team'price: '$149/month'items: ['5 projects'Unlimited mocks'Record/replay'Slack alerts'] },
     { name: 'Enterprise'price: 'Custom'items: ['SAML/SSO'RBAC'Private cloud/VPC'Premium support'] }
   ],
   return (

@@ -13,7 +13,7 @@ export default function NewContent20o26UltimateBreakthroughBanner() {
             Revolutionary AI 20o26 Content Now Available,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover cutting-edge insights on autonomous business systems;
+            Discover cutting-edge insights on autonomous business systems,
             quantum machine learning, and enterprise automation breakthroughs,
             that will transform your business in 20o26.,
           </p>,

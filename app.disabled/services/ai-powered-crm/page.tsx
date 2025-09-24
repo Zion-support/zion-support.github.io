@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-powered-crm - Zion Tech Group';
-  description: 'Professional ai-powered-crm solutions for your business needs.';
-  keywords: 'ai-powered-crm, services, business, technology';
-};
+  title: 'ai-powered-crm - Zion Tech Group',
+  description: 'Professional ai-powered-crm solutions for your business needs.',
+  keywords: 'ai-powered-crm, services, business, technology',
+},
 export default function AiPoweredCrmPage() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -9,14 +9,11 @@ export default function FintechSolutions() {
       implementationWeeks='Implementation: 6-10 weeks',
       roiNote='Improve risk detection and lower losses',
       features={[
-        'Fraud detection and AML analytics';
-        'Credit risk and pricing models';
-        'Quantum-ready trading optimization';
-        'Personalized financial planning experiences';
-        'Model governance and auditability';
-        'Integrations: FDX, Plaid, Snowflake, Databricks';
+        'Fraud detection and AML analyticsCredit risk and pricing models',
+        'Quantum-ready trading optimizationPersonalized financial planning experiences',
+        'Model governance and auditabilityIntegrations: FDX, Plaid, Snowflake, Databricks',
       ]}
-      industries={['Banking', 'Payments', 'Wealth', 'Insurance']}
+      industries={['BankingPayments', 'WealthInsurance']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/fintech-solutions',
     />)}

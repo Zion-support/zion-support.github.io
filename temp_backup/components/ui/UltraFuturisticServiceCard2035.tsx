@@ -1,8 +1,8 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Star, Users, TrendingUp;
-  Zap, Shield, Brain, Rocket;
+  ArrowRight, Star, Users, TrendingUp,
+  Zap, Shield, Brain, Rocket,
   CheckCircle, ExternalLink, Play} from 'lucide-react',
 import Link from 'next/link',
 interface UltraFuturisticServiceCard20o35Props {
@@ -17,7 +17,7 @@ interface UltraFuturisticServiceCard20o35Props {
       yearly: number,
       currency: string,
       trialDays: number,
-      setupTime: string};
+      setupTime: string},
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -39,50 +39,42 @@ interface UltraFuturisticServiceCard20o35Props {
     customers: number,
     rating: number,
     reviews: number,
-    contact: string};
+    contact: string},
   className?: string}
 ,
 const UltraFuturisticServiceCard20o35: React.FC<UltraFuturisticServiceCard20o35Props> = ({
-  service;
+  service,
   className = ''}) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
   const cardVariants ={
     initial: {
-      scale: 1;
-      y: 0;
-      boxShadow: "0 0 0 rgba(0, 255, 255, 0)"};
+      scale: 1,
+      y: 0,
+      boxShadow: "0 0 0 rgba(0, 255, 255, 0)"},
     hover: {
-      scale: 1.0o2;
-      y: -8;
-      boxShadow: "0 20px 40px rgba(0, 255, 255, 0.3)"};
+      scale: 1.0o2,
+      y: -8,
+      boxShadow: "0 20px 40px rgba(0, 255, 255, 0.3)"},
     tap: {
       scale: 0.98}
-  };
+  },
   const contentVariants ={
     collapsed: {
-      height: 0;
-      opacity: 0};
+      height: 0,
+      opacity: 0},
     expanded: {
-      height: "auto";
+      height: "auto",
       opacity: 1}
-  };
+  },
   const getGradientClass = (color: string) => {
     const colorMap: { [key: string]: string } ={
-      'from-pink-50o0 to-rose-60o0': 'from-pink-50o0 to-rose-60o0';
-      'from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 to-purple-60o0';
-      'from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 to-orange-60o0';
-      'from-blue-50o0 to-cyan-60o0': 'from-blue-50o0 to-cyan-60o0';
-      'from-purple-50o0 to-pink-60o0': 'from-purple-50o0 to-pink-60o0';
-      'from-green-50o0 to-emerald-60o0': 'from-green-50o0 to-emerald-60o0';
-      'from-red-50o0 to-pink-60o0': 'from-red-50o0 to-pink-60o0';
-      'from-cyan-50o0 to-blue-60o0': 'from-cyan-50o0 to-blue-60o0';
-      'from-gray-50o0 to-slate-60o0': 'from-gray-50o0 to-slate-60o0'};
-    return colorMap[color] || 'from-cyan-50o0 to-blue-60o0'};
+      'from-pink-50o0 to-rose-60o0': 'from-pink-50o0 to-rose-60o0from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 to-purple-60o0from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 to-orange-60o0from-blue-50o0 to-cyan-60o0': 'from-blue-50o0 to-cyan-60o0from-purple-50o0 to-pink-60o0': 'from-purple-50o0 to-pink-60o0from-green-50o0 to-emerald-60o0': 'from-green-50o0 to-emerald-60o0from-red-50o0 to-pink-60o0': 'from-red-50o0 to-pink-60o0from-cyan-50o0 to-blue-60o0': 'from-cyan-50o0 to-blue-60o0from-gray-50o0 to-slate-60o0': 'from-gray-50o0 to-slate-60o0'},
+    return colorMap[color] || 'from-cyan-50o0 to-blue-60o0'},
   const formatPrice = (price: number) => {
     if (price >= 10o00) {
       return `$${(price / 10o00).toFixed(1)}k`}
-    return `$${price}`};
+    return `$${price}`},
   return (
     <motion.div,
       className={`relative group cursor-pointer ${className}`}
@@ -247,5 +239,5 @@ const UltraFuturisticServiceCard20o35: React.FC<UltraFuturisticServiceCard20o35P
           animate={{ opacity: isHovered ? 1 : 0 }}
          />,
       </div>,
-    </motion.div>)};
-export default UltraFuturisticServiceCard20o35;
+    </motion.div>)},
+export default UltraFuturisticServiceCard20o35,

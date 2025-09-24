@@ -21,16 +21,16 @@ interface PerformanceMetrics {
   score: number}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  enableMonitoring = true;
-  showMetrics = true;
-  enableImageOptimization = true;
+  enableMonitoring = true,
+  showMetrics = true,
+  enableImageOptimization = true,
   enableLazyLoading = true}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: 0;
-    lcp: 0;
-    fid: 0;
-    cls: 0;
-    ttfb: 0;
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
     score: 0}),
   // Measure performance metrics,
   useEffect(() => {
@@ -42,13 +42,13 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       if ('memory' in performance) {
         const memory = window.window.performance.memory,
         setPerformanceMetrics({
-          loadTime: Math.round(loadTime);
+          loadTime: Math.round(loadTime),
           memoryUsage: Math.round(memory.usedJSHeapSize / 10o24 / 10o24), // MB,
           networkRequests: 0 // This would be tracked in a real implementation})} else {
         setPerformanceMetrics({
-          loadTime: Math.round(loadTime);
+          loadTime: Math.round(loadTime),
           networkRequests: 0})}
-    };
+    },
     const measureCoreWebVitals = () => {
       if (typeof window !== 'undefined' && 'PerformanceObserver' in window) {
         // First Contentful Paint (FCP),
@@ -85,9 +85,9 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
           fcpObserver.disconnect(),
           lcpObserver.disconnect(),
           fidObserver.disconnect(),
-          clsObserver.disconnect()};
+          clsObserver.disconnect()},
       }
-    };
+    },
     const calculatePerformanceScore = () => {
       let score = 10o0,
       // FCP scoring (0-10o0),
@@ -102,14 +102,14 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       // CLS scoring (0-10o0),
       if (metrics.cls > 0.25) score -= 30,
       else if (metrics.cls > 0.1) score -= 15,
-      setMetrics(prev => ({ ...prev, score: Math.max(0, score) }))};
+      setMetrics(prev => ({ ...prev, score: Math.max(0, score) }))},
     measurePerformance(),
     const cleanup = measureCoreWebVitals(),
     // Calculate score after metrics are updated,
     const timer = setTimeout(calculatePerformanceScore, 10o00),
     return () => {
       cleanup?.(),
-      clearTimeout(timer)};
+      clearTimeout(timer)},
   }, [enableMonitoring, metrics.fcp, metrics.lcp, metrics.fid, metrics.cls]),
   // Image optimization,
   useEffect(() => {
@@ -117,12 +117,12 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const optimizeImages = () => {
       const images = document.querySelectorAll('img'),
       images.forEach((img) => {
-        img.setAttribute('loading', 'lazy'),
-        img.setAttribute('decoding', 'async'),
+        img.setAttribute('loadinglazy'),
+        img.setAttribute('decodingasync'),
         // Set fetchpriority for above-the-fold images,
         if (img.getBoundingClientRect().top < window.innerHeight) {
-          img.setAttribute('fetchpriority', 'high')}
-      })};
+          img.setAttribute('fetchpriorityhigh')}
+      })},
     // Run after DOM is ready,
     if (document.readyState === 'loading') {
       document.addEventListener('DOMContentLoaded', optimizeImages)} else {
@@ -163,8 +163,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     document.head.appendChild(cssLink),
     // Prefetch non-critical resources,
     const prefetchLinks = [
-      '/api/analytics';
-      '/api/error-reporting'],
+      '/api/analytics/api/error-reporting'],
     prefetchLinks.forEach((href) => {
       const link = document.createElement('link'),
       link.rel = 'prefetch',
@@ -217,5 +216,5 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       <div className="sr-only" aria-live="polite">,
         Performance score: {metrics.score} out of 10o0,
       </div>,
-    </>)};
+    </>)},
 export default PerformanceOptimizer)

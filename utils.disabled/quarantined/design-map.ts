@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 export type UIKitKind = 'ios' | 'android' | 'web',
 export interface TokenSet {
@@ -34,24 +34,22 @@ export async function buildTokenSet(fileId: string): Promise<TokenSet> {
     return this.props.children}
 }
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-    };
+    },
   }
   if (kind === 'chakra') {
     return {
       'README && README.md':,
-        '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.';
-      'theme/index && index.ts':,
-        "import { extendTheme } from '@chakra-ui/react', export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}}),";
+        '# Zion OS Chakra UI Kit\n\nTheme tokens and a couple of primitives.theme/index && index.ts':,
+        "import { extendTheme } from '@chakra-ui/react', export default extendTheme({ colors: { neon: { blue: '#00d4ff' }}}),",
       'components/Button && Button.tsx':,
-        'import { Button as CButton } from \'@chakra-ui/react\', export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }';
-    };
+        'import { Button as CButton } from \'@chakra-ui/react\', export function Button(props: any){ return <CButton colorScheme="cyan" {...props} /> }',
+    },
   }
   return {
     'README && README.md':,
-      '# Zion OS React UI Kit\n\nFramework-agnostic React components.';
-    'components/Button && Button.tsx':,
-      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }";
-  };
+      '# Zion OS React UI Kit\n\nFramework-agnostic React components.components/Button && Button.tsx':,
+      "export function Button({ children }: { children: React && React.ReactNode }) { return <button style={{ background: '#00d4ff', color: '#000', borderRadius: 8, padding: '8px 12px' }}>{children}</button> }",
+  },
 export async function fetchLovableTokens(): Promise<Partial<TokenSet> | null> {
   const base = process && process.env.LOVABLE_CMS_URL,
   if (!base) return null,
@@ -88,14 +86,14 @@ export interface FigmaNode {
     x: number,
     y: number,
     width: number,
-    height: number};
+    height: number},
   fills?: Array<{
     type: string,
     color?: {
       r: number,
       g: number,
       b: number,
-      a: number};
+      a: number},
   }>,
   effects?: Array<{
     type: string,
@@ -104,7 +102,7 @@ export interface FigmaNode {
       r: number,
       g: number,
       b: number,
-      a: number};
+      a: number},
   }>,
   characters?: string,
   style?: {
@@ -112,29 +110,29 @@ export interface FigmaNode {
     fontSize?: number,
     fontWeight?: number,
     textAlignHorizontal?: string,
-    textAlignVertical?: string};
+    textAlignVertical?: string},
 }
 ,
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
-  const tokens = await buildTokenSet(fileId)};
-  };
+  const tokens = await buildTokenSet(fileId)},
+  },
 }
 ,
 export async function buildUIKit(fileId: string, kind: UIKitKind): Promise<UIKit> {
   const tokens = await buildTokenSet(fileId),
   return {
-    id;
-    type;
-    name;
-    properties;
-    children: []};
+    id,
+    type,
+    name,
+    properties,
+    children: []},
 }
 ,
-          background_color: tokens.colors.primary;
+          background_color: tokens.colors.primary,
           padding: tokens.spacing.md}
       }
     }
     tokens}
-};
+},
 }
 ,

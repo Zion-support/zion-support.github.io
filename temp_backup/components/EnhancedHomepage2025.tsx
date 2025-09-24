@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Eye, Target, Sparkles} from 'lucide-react',
 import Link from 'next/link',
 // Import our new innovative services,
@@ -45,7 +45,7 @@ const EnhancedHomepage20o25: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)}
-          })};
+          })},
         { threshold: 0.3, rootMargin: '-10o0px' }
       ),
       const sections = document.querySelectorAll('section[id]'),
@@ -53,31 +53,28 @@ const EnhancedHomepage20o25: React.FC = () => {
       return () => observer.disconnect()}
   }, []),
   const fadeInUp ={
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const backgroundVariants ={
-    initial: { opacity: 0, scale: 0.8 };
-    animate: { opacity: 1, scale: 1 };
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
-  };
+  },
   const getColorClasses = (index: number) => {
     const colors = [
-      'from-cyan-40o0 to-blue-50o0';
-      'from-purple-40o0 to-pink-50o0';
-      'from-emerald-40o0 to-teal-50o0';
-      'from-orange-40o0 to-red-50o0';
-      'from-indigo-40o0 to-purple-50o0';
-      'from-yellow-40o0 to-orange-50o0'],
-    return colors[index % colors.length]};
+      'from-cyan-40o0 to-blue-50o0from-purple-40o0 to-pink-50o0',
+      'from-emerald-40o0 to-teal-50o0from-orange-40o0 to-red-50o0',
+      'from-indigo-40o0 to-purple-50o0from-yellow-40o0 to-orange-50o0'],
+    return colors[index % colors.length]},
   // Filter services based on search and category,
   const filteredServices = innovative20o25AdvancedServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -293,28 +290,28 @@ const EnhancedHomepage20o25: React.FC = () => {
               className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: Brain;
-                  title: "AI-First Approach";
-                  description: "Every solution is built with artificial intelligence at its core, ensuring maximum efficiency and innovation"};
+                  icon: Brain,
+                  title: "AI-First Approach",
+                  description: "Every solution is built with artificial intelligence at its core, ensuring maximum efficiency and innovation"},
                 {
-                  icon: Shield;
-                  title: "Enterprise Security";
-                  description: "Bank-grade security protocols and compliance standards protect your business and data"};
+                  icon: Shield,
+                  title: "Enterprise Security",
+                  description: "Bank-grade security protocols and compliance standards protect your business and data"},
                 {
-                  icon: Zap;
-                  title: "Lightning Fast";
-                  description: "Optimized performance and rapid deployment ensure your solutions are always ahead of the curve"};
+                  icon: Zap,
+                  title: "Lightning Fast",
+                  description: "Optimized performance and rapid deployment ensure your solutions are always ahead of the curve"},
                 {
-                  icon: Users;
-                  title: "Expert Team";
-                  description: "Our specialists bring decades of combined experience in cutting-edge technology implementation"};
+                  icon: Users,
+                  title: "Expert Team",
+                  description: "Our specialists bring decades of combined experience in cutting-edge technology implementation"},
                 {
-                  icon: Globe;
-                  title: "Global Reach";
-                  description: "24/7 support and worldwide deployment capabilities to serve your business anywhere"};
+                  icon: Globe,
+                  title: "Global Reach",
+                  description: "24/7 support and worldwide deployment capabilities to serve your business anywhere"},
                 {
-                  icon: Heart;
-                  title: "Customer Success";
+                  icon: Heart,
+                  title: "Customer Success",
                   description: "We're committed to your success with ongoing support, training, and optimization"}
               ].map((feature, index) => (
                 <motion.div,
@@ -365,5 +362,5 @@ const EnhancedHomepage20o25: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default EnhancedHomepage20o25;
+    </Layout>)},
+export default EnhancedHomepage20o25,

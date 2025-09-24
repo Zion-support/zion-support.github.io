@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Evidence-Driven AI Operations';
+  title: 'AI 20o26: Evidence-Driven AI Operations',
   description:,
-    'Operate AI systems with evaluation-first practices: metrics, traces, test suites, and policy-as-code gates for safe scale.';
+    'Operate AI systems with evaluation-first practices: metrics, traces, test suites, and policy-as-code gates for safe scale.',
   keywords: [
-    'AI 20o26';
-    'AI operations';
-    'evaluations';
-    'observability';
-    'policy-as-code';
-    'governance';
-  ];
-};
+    'AI 20o26AI operations',
+    'evaluationsobservability',
+    'policy-as-codegovernance',
+  ]
+},
 export default function EvidenceDrivenAIOperations20o26Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -106,7 +103,7 @@ export default function EvidenceDrivenAIOperations20o26Page() {
               Who Is This For?,
             </h3>,
             <p className='text-gray-70o0'>,
-              Engineering, product, and platform leaders who need predictable;
+              Engineering, product, and platform leaders who need predictable,
               auditable AI at scale.,
             </p>,
           </div>,

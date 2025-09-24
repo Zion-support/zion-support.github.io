@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 interface SafeContentContainerProps {
   children: React.ReactNode,
   className?: string,
@@ -10,9 +10,9 @@ interface SafeContentContainerProps {
  * content of pages that have zoom/scale animations.,
  */,
 export default function SafeContentContainer({
-  children;
-  className = '';
-  as: Component = 'div';
+  children,
+  className = '',
+  as: Component = 'div'
 }: SafeContentContainerProps) {
   return (
     <Component

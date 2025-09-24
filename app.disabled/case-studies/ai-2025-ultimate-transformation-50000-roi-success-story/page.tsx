@@ -1,40 +1,36 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  UserIcon;
-  BuildingOfficeIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
+  BuildingOfficeIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
-  title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story';
+  title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story',
   description:,
-    'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.';
+    'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
   keywords: [
-    'AI Transformation';
-    'Manufacturing';
-    'Fortune 10o0';
-    '50K ROI';
-    'Autonomous Operations';
-  ];
+    'AI TransformationManufacturing',
+    'Fortune 10o050K ROI',
+    'Autonomous Operations',
+  ],
   openGraph: {
-    title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story';
+    title: 'AI 20o25 Ultimate Transformation: 50,0o00% ROI Success Story',
     description:,
-      'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.';
-    type: 'article';
-    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Fortune 10o0 manufacturing conglomerate achieves unprecedented 50,0o00% ROI through comprehensive AI transformation, revolutionizing operations across 47 facilities worldwide.',
+    type: 'article',
+    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI Transformation';
-      'Manufacturing';
-      'Fortune 10o0';
-      '50K ROI';
-      'Autonomous Operations';
-    ];
-  };
-};
+      'AI TransformationManufacturing',
+      'Fortune 10o050K ROI',
+      'Autonomous Operations',
+    ]
+  },
+},
 export default function CaseStudy() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -72,7 +68,7 @@ export default function CaseStudy() {
           </h1>,
           <p className='text-xl md: text-2xl opacity-90 mb-8'>,
             Fortune 10o0 manufacturing conglomerate achieves unprecedented,
-            50,0o00% ROI through comprehensive AI transformation;
+            50,0o00% ROI through comprehensive AI transformation,
             revolutionizing operations across 47 facilities worldwide.,
           </p>,
           <div className='flex flex-wrap gap-3'>,
@@ -541,7 +537,7 @@ export default function CaseStudy() {
             </h3>,
             <ol className='list-decimal list-inside space-y-2 text-gray-70o0'>,
               <li>,
-                <strong>AI Transformation is Possible:</strong> Even large;
+                <strong>AI Transformation is Possible: </strong> Even large,
                 complex organizations can achieve dramatic results,
               </li>,
               <li>,

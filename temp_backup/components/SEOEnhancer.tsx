@@ -18,82 +18,75 @@ interface SEOEnhancerProps {
   noFollow?: boolean}
 ,
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title = 'Zion Tech Group - Revolutionary 20o44 Technology Solutions';
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.';
+  title = 'Zion Tech Group - Revolutionary 20o44 Technology Solutions',
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
   keywords = [
-    'AI consciousness';
-    'quantum computing';
-    'autonomous solutions';
-    'technology consulting';
-    'AI services';
-    'quantum technology';
-    'space technology';
-    'cybersecurity';
-    'business intelligence';
-    'cloud infrastructure';
-  ];
-  image = '/og-image.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
-  author = 'Zion Tech Group';
-  publishedTime;
-  modifiedTime;
-  section;
-  tags = [];
-  structuredData;
-  canonicalUrl;
-  noIndex = false;
-  noFollow = false;
+    'AI consciousnessquantum computing',
+    'autonomous solutionstechnology consulting',
+    'AI servicesquantum technology',
+    'space technologycybersecurity',
+    'business intelligencecloud infrastructure',
+  ],
+  image = '/og-image.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website',
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section,
+  tags = [],
+  structuredData,
+  canonicalUrl,
+  noIndex = false,
+  noFollow = false
 }) => {
   // Default structured data if none provided,
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: 'https://ziontechgroup.com';
-    logo: 'https://ziontechgroup.com/logo.png';
-    description: description;
-    foundingDate: '20o24';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: description,
+    foundingDate: '20o24',
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group';
-      'https://twitter.com/ziontechgroup';
-      'https://github.com/Zion-Holdings';
-    ];
+      'https://linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup',
+      'https://github.com/Zion-Holdings',
+    ],
     contactPoint: {
-      '@type': 'ContactPoint';
-      contactType: 'customer service';
-      availableLanguage: 'English';
-    };
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: 'English'
+    },
     hasOfferCatalog: {
-      '@type': 'OfferCatalog';
-      name: 'Technology Services';
+      '@type': 'OfferCatalog',
+      name: 'Technology Services',
       itemListElement: [
         {
-          '@type': 'Offer';
+          '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service';
-            name: 'AI Consciousness Evolution 20o44';
+            '@type': 'Service',
+            name: 'AI Consciousness Evolution 20o44',
             description:,
-              'Next-generation AI consciousness with emotional intelligence';
-          };
-        };
+              'Next-generation AI consciousness with emotional intelligence',
+          },
+        },
         {
-          '@type': 'Offer';
+          '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service';
-            name: 'Quantum Neural Networks 20o44';
-            description: 'Quantum-powered AI with consciousness integration';
-          };
-        };
-      ];
-    };
-  };
+            '@type': 'Service',
+            name: 'Quantum Neural Networks 20o44',
+            description: 'Quantum-powered AI with consciousness integration'
+          },
+        },
+      ],
+    },
+  },
   const finalStructuredData = structuredData || defaultStructuredData,
   // Generate meta robots content,
   const robotsContent = [],
   if (noIndex) robotsContent.push('noindex'),
   if (noFollow) robotsContent.push('nofollow'),
-  if (robotsContent.length === 0) robotsContent.push('index', 'follow'),
+  if (robotsContent.length === 0) robotsContent.push('indexfollow'),
   // Generate keywords string,
   const keywordsString = keywords.join(', '),
   // Add page-specific tags,
@@ -107,14 +100,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     let metaDescription = document.querySelector('meta[name="description"]'),
     if (!metaDescription) {
       metaDescription = document.createElement('meta'),
-      metaDescription.setAttribute('name', 'description'),
+      metaDescription.setAttribute('namedescription'),
       document.head.appendChild(metaDescription)}
     metaDescription.setAttribute('content', description),
     // Add meta keywords if not present,
     let metaKeywords = document.querySelector('meta[name="keywords"]'),
     if (!metaKeywords) {
       metaKeywords = document.createElement('meta'),
-      metaKeywords.setAttribute('name', 'keywords'),
+      metaKeywords.setAttribute('namekeywords'),
       document.head.appendChild(metaKeywords)}
     metaKeywords.setAttribute('content', keywordsString),
     // Add canonical URL if not present,
@@ -122,7 +115,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       let canonicalLink = document.querySelector('link[rel="canonical"]'),
       if (!canonicalLink) {
         canonicalLink = document.createElement('link'),
-        canonicalLink.setAttribute('rel', 'canonical'),
+        canonicalLink.setAttribute('relcanonical'),
         document.head.appendChild(canonicalLink)}
       canonicalLink.setAttribute('href', canonicalUrl)}
 ,
@@ -131,18 +124,18 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       'script[type="application/ld+json"]'),
     if (!structuredDataScript) {
       structuredDataScript = document.createElement('script'),
-      structuredDataScript.setAttribute('type', 'application/ld+json'),
+      structuredDataScript.setAttribute('typeapplication/ld+json'),
       document.head.appendChild(structuredDataScript)}
     structuredDataScript.textContent = JSON.stringify(finalStructuredData),
     // Add Open Graph meta tags if not present,
     const ogTags = [
-      { property: 'og:title', content: title };
-      { property: 'og:description', content: description };
-      { property: 'og:type', content: type };
-      { property: 'og:url', content: url };
-      { property: 'og:image', content: image };
-      { property: 'og:site_name', content: 'Zion Tech Group' };
-      { property: 'og:locale', content: 'en_US' };
+      { property: 'og:title', content: title },
+      { property: 'og:description', content: description },
+      { property: 'og:type', content: type },
+      { property: 'og:url', content: url },
+      { property: 'og:image', content: image },
+      { property: 'og:site_name', content: 'Zion Tech Group' },
+      { property: 'og:locale', content: 'en_US' },
     ],
     ogTags.forEach(({ property, content }) => {
       let ogTag = document.querySelector(`meta[property="${property}"]`),
@@ -153,11 +146,11 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       ogTag.setAttribute('content', content)}),
     // Add Twitter Card meta tags if not present,
     const twitterTags = [
-      { name: 'twitter:card', content: 'summary_large_image' };
-      { name: 'twitter:title', content: title };
-      { name: 'twitter:description', content: description };
-      { name: 'twitter:image', content: image };
-      { name: 'twitter:site', content: '@ziontechgroup' };
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:title', content: title },
+      { name: 'twitter:description', content: description },
+      { name: 'twitter:image', content: image },
+      { name: 'twitter:site', content: '@ziontechgroup' },
     ],
     twitterTags.forEach(({ name, content }) => {
       let twitterTag = document.querySelector(`meta[name="${name}"]`),
@@ -169,13 +162,13 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
     // Add article-specific meta tags if type is article,
     if (type === 'article' && publishedTime) {
       const articleTags = [
-        { property: 'article:published_time', content: publishedTime };
-        { property: 'article:author', content: author };
+        { property: 'article:published_time', content: publishedTime },
+        { property: 'article:author', content: author },
       ],
       if (modifiedTime) {
         articleTags.push({
-          property: 'article:modified_time';
-          content: modifiedTime;
+          property: 'article:modified_time',
+          content: modifiedTime
         })}
 ,
       if (section) {
@@ -191,19 +184,19 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           document.head.appendChild(articleTag)}
         articleTag.setAttribute('content', content)})}
   }, [
-    title;
-    description;
-    keywordsString;
-    canonicalUrl;
-    finalStructuredData;
-    type;
-    url;
-    image;
-    publishedTime;
-    author;
-    modifiedTime;
-    section;
-    allTags;
+    title,
+    description,
+    keywordsString,
+    canonicalUrl,
+    finalStructuredData,
+    type,
+    url,
+    image,
+    publishedTime,
+    author,
+    modifiedTime,
+    section,
+    allTags,
   ]),
   return (
     <Head>,
@@ -212,7 +205,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name='description' content={description} />,
       <meta name='keywords' content={keywordsString} />,
       <meta name='author' content={author} />,
-      <meta name='robots' content={robotsContent.join(', ')} />,
+      <meta name='robots' content={robotsContent.join()} />,
       {/* Viewport and Mobile Optimization */}
       <meta
         name='viewport',
@@ -245,7 +238,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData);
+          __html: JSON.stringify(finalStructuredData)
         }}
       />,
       {/* Additional SEO Meta Tags */}
@@ -310,5 +303,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
           {allTags.map((tag, index) => (
             <meta key={index} property='article: tag' content={tag} />))}
         </>)}
-    </Head>)};
-export default SEOEnhancer;
+    </Head>)},
+export default SEOEnhancer,

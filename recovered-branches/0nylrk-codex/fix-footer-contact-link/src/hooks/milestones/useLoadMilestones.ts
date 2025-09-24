@@ -25,13 +25,13 @@ export const useLoadMilestones = (projectId?: string) => {
       if (milestonesError) throw milestonesError,
       setMilestones(milestonesData),
       // Fetch activities for each milestone,
-      const activitiesMap: Record<string MilestoneActivity[]> = {};
+      const activitiesMap: Record<string MilestoneActivity[]> = {},
       for (const milestone of milestonesData) {
         const { data: activitiesData, error: activitiesError } = await supabase,
           .from('milestone_activities'),
           .select(
             `,
-            *;
+            *,
             created_by_profile:profiles!user_id(display_name, avatar_url),
           `),
           .eq('milestone_id', milestone.id),
@@ -45,17 +45,17 @@ export const useLoadMilestones = (projectId?: string) => {
       setError('Failed to fetch milestones: ' + err.message),
       toast.error('Failed to fetch milestones')} finally {
       setIsLoading(false)}
-  };
+  },
   // Fetch milestones when component mounts or projectId changes,
   useEffect(() => {
     if (projectId) {
       fetchMilestones()}
   }, [projectId]),
   return {
-    milestones;
-    activities;
-    isLoading;
-    error;
-    refetch: fetchMilestones;
-  };
-};
+    milestones,
+    activities,
+    isLoading,
+    error,
+    refetch: fetchMilestones
+  },
+},

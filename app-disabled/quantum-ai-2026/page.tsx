@@ -1,17 +1,15 @@
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'Quantum AI 20o26 - Revolutionary Computing Technology | Zion Tech Group';
+    'Quantum AI 20o26 - Revolutionary Computing Technology | Zion Tech Group',
   description:,
-    'Experience the future with Quantum AI 20o26. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.';
+    'Experience the future with Quantum AI 20o26. Revolutionary quantum computing combined with artificial intelligence for unprecedented processing power.',
   keywords: [
-    'quantum AI';
-    'quantum computing';
-    'AI 20o26';
-    'quantum neural networks';
-    'quantum machine learning';
-  ];
-};
+    'quantum AIquantum computing',
+    'AI 20o26quantum neural networks',
+    'quantum machine learning',
+  ]
+},
 export default function QuantumAI20o26Page() {
   return (
     <div>,

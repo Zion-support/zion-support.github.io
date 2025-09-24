@@ -1,6 +1,6 @@
 
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -57,58 +57,58 @@ import {
   GlobeIcon,
   CpuIcon} from 'lucide-react',import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield,
-  Rocket;
-  Brain;
-  Atom;
-  Zap;
-  Sparkles;
-  Shield;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Linkedin;
-  Twitter;
-  Facebook;
-  Instagram;
-  Youtube;
-  Github;
-  CheckCircle;
-  Award;
-  Star;
-  Crown;
-  Gem;
-  Infinity;
-  Heart;
-  ShieldCheck;
-  Users;
-  Briefcase;
-  BookOpen;
-  Target;
-  Microscope;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Home;
-  Building;
-  DollarSign;
-  FileText;
-  MessageSquare;
-  MessageCircle;
-  Newspaper;
-  Handshake;
-  LifeBuoy;
-  Activity;
-  ShoppingCart;
-  UserCheck;
-  BarChart;
-  Palette;
-  Video;
-  LockIcon;
-  GlobeIcon;
-  CpuIcon;} from 'lucide-react',import {
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Sparkles,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  CheckCircle,
+  Award,
+  Star,
+  Crown,
+  Gem,
+  Infinity,
+  Heart,
+  ShieldCheck,
+  Users,
+  Briefcase,
+  BookOpen,
+  Target,
+  Microscope,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Home,
+  Building,
+  DollarSign,
+  FileText,
+  MessageSquare,
+  MessageCircle,
+  Newspaper,
+  Handshake,
+  LifeBuoy,
+  Activity,
+  ShoppingCart,
+  UserCheck,
+  BarChart,
+  Palette,
+  Video,
+  LockIcon,
+  GlobeIcon,
+  CpuIcon,} from 'lucide-react',import {
   Rocket, Brain, Atom, Zap, Sparkles, Shield,
   Phone, Mail, MapPin, Globe, ArrowRight,
   Linkedin, Twitter, Facebook, Instagram, Youtube, Github,
@@ -230,13 +230,13 @@ const quickLinks = [
   { name: 'Blog', href: '/blog', icon: MessageSquare }
 ,
   { name: 'Contact', href: '/contact', icon: MessageCircle }],  { name: 'Contact', href: '/contact', icon: MessageCircle }
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Target };
-  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Case Studies', href: '/case - studies', icon: FileText };
-  { name: 'Blog', href: '/blog', icon: MessageSquare };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing - 2034', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: FileText },
+  { name: 'Blog', href: '/blog', icon: MessageSquare },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
 const companyLinks = [
@@ -245,60 +245,56 @@ const companyLinks = [
   { name: 'News', href: '/news', icon: Newspaper }
   { name: 'Partners', href: '/partners', icon: Handshake }
   { name: 'Support', href: '/support', icon: LifeBuoy }
-  { name: 'About Us', href: '/about', icon: Users };
-  { name: 'Careers', href: '/careers', icon: Briefcase };
-  { name: 'News', href: '/news', icon: Newspaper };
-  { name: 'Partners', href: '/partners', icon: Handshake };
-  { name: 'Support', href: '/support', icon: LifeBuoy };
+  { name: 'About Us', href: '/about', icon: Users },
+  { name: 'Careers', href: '/careers', icon: Briefcase },
+  { name: 'News', href: '/news', icon: Newspaper },
+  { name: 'Partners', href: '/partners', icon: Handshake },
+  { name: 'Support', href: '/support', icon: LifeBuoy },
   { name: 'Status', href: '/status', icon: Activity }
 ],
 const socialLinks = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin && linkedin.com/company/ziontechgroup';
-    icon: Linkedin;
-  };
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github };
+    name: 'LinkedIn',
+    href: 'https://linkedin && linkedin.com/company/ziontechgroup',
+    icon: Linkedin
+  },
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },
   {
-    name: 'Instagram';
-    href: 'https://instagram && instagram.com/ziontechgroup';
-    icon: Instagram;
-  };
+    name: 'Instagram',
+    href: 'https://instagram && instagram.com/ziontechgroup',
+    icon: Instagram
+  },
   {
-    name: 'YouTube';
-    href: 'https://youtube && youtube.com/@ziontechgroup';
-    icon: Youtube;
-  };
-  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter };
+    name: 'YouTube',
+    href: 'https://youtube && youtube.com/@ziontechgroup',
+    icon: Youtube
+  },
+  { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter },
 ],
 const certifications = [
-  'ISO 27001 Certified';
-  'SOC 2 Type II Compliant';
-  'GDPR Compliant';
-  'HIPAA Compliant';
-  'PCI DSS Level 1';
-  'FedRAMP Authorized';
-  'Quantum Security Certified';
-  'AI Ethics Compliant']],
+  'ISO 27001 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
+  'Quantum Security CertifiedAI Ethics Compliant']],
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin };
-  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github };
-  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram };
-  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube };
+  { name: 'LinkedIn', href: 'https://linkedin && linkedin.com/company/ziontechgroup', icon: Linkedin },
+  { name: 'GitHub', href: 'https://github && github.com/Zion-Holdings', icon: Github },
+  { name: 'Instagram', href: 'https://instagram && instagram.com/ziontechgroup', icon: Instagram },
+  { name: 'YouTube', href: 'https://youtube && youtube.com/@ziontechgroup', icon: Youtube },
   { name: 'Twitter', href: 'https://twitter && twitter.com/ziontechgroup', icon: Twitter }
 ],
 const certifications = [
   'ISO 27001 CertifiedSOC 2 Type II CompliantGDPR CompliantHIPAA CompliantPCI DSS Level 1FedRAMP AuthorizedQuantum Security CertifiedAI Ethics Compliant'],
 const stats = [
-  { label: 'Happy Customers', value: '50K+', icon: Users };
-  { label: 'Services Delivered', value: '200+', icon: Rocket };
-  { label: 'Countries Served', value: '45+', icon: Globe };
+  { label: 'Happy Customers', value: '50K+', icon: Users },
+  { label: 'Services Delivered', value: '200+', icon: Rocket },
+  { label: 'Countries Served', value: '45+', icon: Globe },
   { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle }],
 export default function UltraFuturisticFooter2034() {
   return (
 export default function UltraFuturisticFooter2034() {
   return (
-    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
+    <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>  { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
 ],
     <footer className='bg-gradient-to-br from-black via-gray-900 to-black text-white relative overflow-hidden'>,
       {/* Animated Background Elements */}
@@ -687,7 +683,7 @@ export default function UltraFuturisticFooter2034() {
         </div>,
       </div>,
     </footer>)}
-import React from "react"; export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
+import React from "react", export default function UltraFuturisticFooter2034() { return ( <footer className="py-8 text-center text-sm text-gray-400">", <span>© {new: Date().getFullYear()} Zion Tech Group</span> </footer> )}
 export default function UltraFuturisticFooter2034() {return (",
 export default function UltraFuturisticFooter2034() {
   return (",

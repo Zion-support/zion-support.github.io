@@ -31,7 +31,7 @@ export default function QuantumFinancialTradingPlatformPage() {
                 Overview,
               </h2>,
               <p className='text-slate-30o0'>,
-                Market prediction models, algorithmic trading, risk management;
+                Market prediction models, algorithmic trading, risk management,
                 and performance analytics with enterprise-grade security and,
                 compliance.,
               </p>,

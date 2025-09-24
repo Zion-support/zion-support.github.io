@@ -1,41 +1,41 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react',
 import { Search } from 'lucide-react',
-import { Input } from '@/components/ui/input';
-import { Button } from '@/components/ui/button';
+import { Input } from '@/components/ui/input',
+import { Button } from '@/components/ui/button',
 import {
-  Pagination;
-  PaginationContent;
-  PaginationItem;
-  PaginationButton;
-  PaginationNext;
-  PaginationPrevious} from '@/components/ui/pagination';
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { CountryServiceCard } from '@/components/services/CountryServiceCard';
-import { CountryPricing } from '@/data/onsiteServicePricing';
+  Pagination,
+  PaginationContent,
+  PaginationItem,
+  PaginationButton,
+  PaginationNext,
+  PaginationPrevious} from '@/components/ui/pagination',
+import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
+import { CountryServiceCard } from '@/components/services/CountryServiceCard',
+import { CountryPricing } from '@/data/onsiteServicePricing',
 interface CountryTabsProps {
-  popularCountries:string[];
-  filteredCountries:CountryPricing[];
-  handleCountrySelect:(country:CountryPricing) => void;
-  onQuote?:(country:CountryPricing) => void;
-  searchQuery:string;
+  popularCountries: string[],
+  filteredCountries:CountryPricing[],
+  handleCountrySelect:(country:CountryPricing) => void,
+  onQuote?:(country:CountryPricing) => void,
+  searchQuery:string,
   setSearchQuery: (query:string) => void}
 ,
 export function CountryTabs({
-  popularCountries;
-  filteredCountries;
-  handleCountrySelect;
-  onQuote;
-  searchQuery;
+  popularCountries,
+  filteredCountries,
+  handleCountrySelect,
+  onQuote,
+  searchQuery,
   setSearchQuery} CountryTabsProps) {
-  const [currentPage, setCurrentPage] = useState(1);
-  const countriesPerPage = 50;
+  const [currentPage, setCurrentPage] = useState(1),
+  const countriesPerPage = 50,
   useEffect(() => {
-    setCurrentPage(1);
-  }, [searchQuery]);
-  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage);
+    setCurrentPage(1),
+  }, [searchQuery]),
+  const totalPages = Math.ceil(filteredCountries.length / countriesPerPage),
   const paginatedCountries = filteredCountries.slice(
-    (currentPage - 1) * countriesPerPage;
-    currentPage * countriesPerPage);
+    (currentPage - 1) * countriesPerPage,
+    currentPage * countriesPerPage),
   return (
     <Tabs defaultValue="featured" className="w-full">,
       <TabsList className="bg-zion-blue-light border border-zion-blue-light w-full max-w-md mx-auto mb-6">,
@@ -99,8 +99,8 @@ export function CountryTabs({
                   <PaginationPrevious
                     href={`?page=${currentPage - 1}`}
                     onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(Math.max(1, currentPage - 1));
+                      e.preventDefault(),
+                      setCurrentPage(Math.max(1, currentPage - 1)),
                     }}
                   />,
                 </PaginationItem>,
@@ -111,8 +111,8 @@ export function CountryTabs({
                         page={page}
                         isActive={page === currentPage}
                         onClick={(e) => {
-                          e.preventDefault();
-                          setCurrentPage(page);
+                          e.preventDefault(),
+                          setCurrentPage(page),
                         }}
                       />,
                     </PaginationItem>))}
@@ -120,8 +120,8 @@ export function CountryTabs({
                   <PaginationNext
                     href={`?page=${currentPage + 1}`}
                     onClick={(e) => {
-                      e.preventDefault();
-                      setCurrentPage(Math.min(totalPages, currentPage + 1));
+                      e.preventDefault(),
+                      setCurrentPage(Math.min(totalPages, currentPage + 1)),
                     }}
                   />,
                 </PaginationItem>,
@@ -129,7 +129,7 @@ export function CountryTabs({
             </Pagination>,
           </div>)}
       </TabsContent>,
-    </Tabs>);}
+    </Tabs>),}
  <TabsTrigger value="featured" className="data-[state=active]:bg-zion-purple" > Featured Countries </TabsTrigger> <TabsTrigger value="all" className="data-[state=active]:bg-zion-purple" > All Countries </TabsTrigger> </TabsList> <TabsContent value="featured" className="mt-0" > <div className="mb-6" > <h2 className="text-2xl font-bold text-white text-center" > Featured Service Locations </h2> <p className="text-zion-slate-light text-center mt-2" > Browse our most popular service destinations </p> </div> .filter ( (country) => popularCountries.includes (country.country) ) .map ( (country) => (<CountryServiceCard key={
   country.country }country={
   country }onSelect={

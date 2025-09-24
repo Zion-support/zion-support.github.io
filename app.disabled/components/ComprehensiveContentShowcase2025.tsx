@@ -4,120 +4,120 @@ import Link from 'next/link',
 const ComprehensiveContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentCategories = [
-    { id: 'all', name: 'All Content', count: 5 };
-    { id: 'blog', name: 'Blog Posts', count: 2 };
-    { id: 'case-study', name: 'Case Studies', count: 2 };
-    { id: 'resource', name: 'Resources', count: 1 };
+    { id: 'all', name: 'All Content', count: 5 },
+    { id: 'blog', name: 'Blog Posts', count: 2 },
+    { id: 'case-study', name: 'Case Studies', count: 2 },
+    { id: 'resource', name: 'Resources', count: 1 },
   ],
   const featuredContent = [
     {
-      id: 'ai-automation-mastery';
-      category: 'blog';
-      type: 'Blog Post';
-      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide';
+      id: 'ai-automation-mastery',
+      category: 'blog',
+      type: 'Blog Post',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
       excerpt:,
-        'Transform your business with cutting-edge AI automation that delivers 50o0%+ ROI across all implementations.';
-      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide';
-      readTime: '25 min read';
+        'Transform your business with cutting-edge AI automation that delivers 50o0%+ ROI across all implementations.',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
+      readTime: '25 min read',
       metrics: {
-        roi: '50o0%+';
-        savings: '$2.8B';
-        satisfaction: '98%';
-        projects: '50o0+';
-      };
-      tags: ['AI Automation', 'Enterprise', 'ROI', 'Success Guide'];
-      featured: true;
-      isNew: true;
-    };
+        roi: '50o0%+',
+        savings: '$2.8B',
+        satisfaction: '98%',
+        projects: '50o0+'
+      },
+      tags: ['AI AutomationEnterprise', 'ROISuccess Guide'],
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'fortune-50o0-success';
-      category: 'case-study';
-      type: 'Case Study';
+      id: 'fortune-50o0-success',
+      category: 'case-study',
+      type: 'Case Study',
       title:,
-        'Fortune 50o0 AI Transformation: $2.8B Annual Savings - Ultimate Success Story';
+        'Fortune 50o0 AI Transformation: $2.8B Annual Savings - Ultimate Success Story',
       excerpt:,
-        'How a global manufacturing giant achieved unprecedented 1,20o0% ROI with comprehensive AI implementation in just 18 months.';
-      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-story';
-      readTime: '20 min read';
+        'How a global manufacturing giant achieved unprecedented 1,20o0% ROI with comprehensive AI implementation in just 18 months.',
+      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-story',
+      readTime: '20 min read',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        revenue: '$1.2B';
-      };
-      tags: ['Fortune 50o0', 'Manufacturing', 'Success Story', '1,20o0% ROI'];
-      featured: true;
-      isNew: true;
-    };
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        revenue: '$1.2B'
+      },
+      tags: ['Fortune 50o0Manufacturing', 'Success Story1,20o0% ROI'],
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'quantum-computing-revolution';
-      category: 'blog';
-      type: 'Blog Post';
-      title: 'AI 20o25: The Quantum Computing Business Revolution';
+      id: 'quantum-computing-revolution',
+      category: 'blog',
+      type: 'Blog Post',
+      title: 'AI 20o25: The Quantum Computing Business Revolution',
       excerpt:,
-        'Discover how Quantum AI is transforming enterprise operations with revolutionary 1,20o0% ROI and $10o0B market opportunity.';
-      url: '/blog/ai-20o25-quantum-computing-business-revolution';
-      readTime: '20 min read';
+        'Discover how Quantum AI is transforming enterprise operations with revolutionary 1,20o0% ROI and $10o0B market opportunity.',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution',
+      readTime: '20 min read',
       metrics: {
-        roi: '1,20o0%';
-        market: '$10o0B';
-        accuracy: '99.97%';
-        speed: '1,20o0x faster';
-      };
-      tags: ['Quantum AI', 'Business Revolution', '$10o0B Market'];
-      featured: true;
-      isNew: true;
-    };
+        roi: '1,20o0%',
+        market: '$10o0B',
+        accuracy: '99.97%',
+        speed: '1,20o0x faster',
+      },
+      tags: ['Quantum AIBusiness Revolution', '$10o0B Market'],
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'healthcare-transformation';
-      category: 'case-study';
-      type: 'Case Study';
+      id: 'healthcare-transformation',
+      category: 'case-study',
+      type: 'Case Study',
       title:,
-        'Healthcare AI Transformation: $180M Annual Savings - Ultimate Success';
+        'Healthcare AI Transformation: $180M Annual Savings - Ultimate Success',
       excerpt:,
-        'Major health system achieves 450% ROI and transforms patient care through comprehensive AI implementation.';
-      url: '/case-studies/healthcare-ai-transformation-ultimate-success-20o25';
-      readTime: '18 min read';
+        'Major health system achieves 450% ROI and transforms patient care through comprehensive AI implementation.',
+      url: '/case-studies/healthcare-ai-transformation-ultimate-success-20o25',
+      readTime: '18 min read',
       metrics: {
-        roi: '450%';
-        savings: '$180M';
-        satisfaction: '94%';
-        errors: '89% reduction';
-      };
-      tags: ['Healthcare', 'Patient Safety', 'Operational Efficiency'];
-      featured: true;
-      isNew: true;
-    };
+        roi: '450%',
+        savings: '$180M',
+        satisfaction: '94%',
+        errors: '89% reduction'
+      },
+      tags: ['HealthcarePatient Safety', 'Operational Efficiency'],
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'implementation-framework';
-      category: 'resource';
-      type: 'Resource';
-      title: 'AI Implementation Framework 20o25';
+      id: 'implementation-framework',
+      category: 'resource',
+      type: 'Resource',
+      title: 'AI Implementation Framework 20o25',
       excerpt:,
-        'Complete guide and proven methodology for achieving 50o0%+ ROI with systematic AI implementation.';
-      url: '/resources/ai-implementation-framework-20o25';
-      readTime: '15 min read';
+        'Complete guide and proven methodology for achieving 50o0%+ ROI with systematic AI implementation.',
+      url: '/resources/ai-implementation-framework-20o25',
+      readTime: '15 min read',
       metrics: {
-        roi: '50o0%+';
-        success: '98%';
-        timeline: '18 months';
-        projects: '50o0+';
-      };
-      tags: ['Implementation', 'Framework', 'Methodology'];
-      featured: true;
-      isNew: true;
-    };
+        roi: '50o0%+',
+        success: '98%',
+        timeline: '18 months',
+        projects: '50o0+'
+      },
+      tags: ['ImplementationFramework', 'Methodology'],
+      featured: true,
+      isNew: true
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
       ? featuredContent,
       : featuredContent.filter(item => item.category === activeCategory),
   const totalMetrics = {
-    totalROI: '50o0%+';
-    totalSavings: '$5.6B+';
-    successRate: '98%';
-    companiesHelped: '50o0+';
-  };
+    totalROI: '50o0%+',
+    totalSavings: '$5.6B+',
+    successRate: '98%',
+    companiesHelped: '50o0+'
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -201,7 +201,7 @@ const ComprehensiveContentShowcase20o25 = () => {
                           {value}
                         </div>,
                         <div className='text-xs text-gray-50o0 capitalize'>,
-                          {key.replace('_', ' ')}
+                          {key.replace('_ ')}
                         </div>,
                       </div>))}
                 </div>,
@@ -298,5 +298,5 @@ const ComprehensiveContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ComprehensiveContentShowcase20o25;
+    </section>)},
+export default ComprehensiveContentShowcase20o25,

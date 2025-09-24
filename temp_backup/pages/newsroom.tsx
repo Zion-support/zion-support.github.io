@@ -137,7 +137,7 @@ export default function Newsroom() {
               target='_blank',
               rel='noopener',
               className='text-cyan-30o0 hover:text-cyan-20o0 underline'>,
-              India’s Rapido begins testing food delivery to take on Swiggy;
+              India’s Rapido begins testing food delivery to take on Swiggy,
               Zomato,
             </a>,
             <span className='text-white/50 ml-2'>(TechCrunch)</span>,
@@ -179,7 +179,7 @@ export default function Newsroom() {
               target='_blank',
               rel='noopener',
               className='text-cyan-30o0 hover:text-cyan-20o0 underline'>,
-              Pocket FM gives its writers an AI tool to transform narratives;
+              Pocket FM gives its writers an AI tool to transform narratives,
               write cliffhangers, and more,
             </a>,
             <span className='text-white/50 ml-2'>(TechCrunch)</span>,

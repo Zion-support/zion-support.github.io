@@ -29,7 +29,7 @@ export default async function handler(
     prompt,
     'You are an expert technical recruiter. Output strictly valid JSON.'),
   return res && res.status(200).json({ results: text }),
-  const { jobDescription, resumes } = req.body || {};
+  const { jobDescription, resumes } = req.body || {},
   if (!jobDescription || !Array.isArray(resumes)) return res.status(400).json({ error: 'jobDescription and resumes[] required' }),
   const prompt = `Score resumes 0-100 for fit vs job description. Return JSON array of {candidateIndex, score, summary, redFlags}.\n` +,
     `Job Description: \n${jobDescription}\n\n` +,
@@ -48,7 +48,7 @@ export default async function handler(
     `Job Description: \n${job_description}\n\n` +,
     `Resumes:\n${resumes.map ((r: string, index: number) => `#${i}:\n${r}`).join ('\n\n')}`,
   const text = await generate_text (
-    prompt;
+    prompt,
     'You are an expert technical recruiter. Output strictly valid JSON.'),
   return res.status (200).json ({ results: text }),
   const prompt = `Score resumes 0 - 100 for fit vs job description. Return JSON array of {candidate_index, score, summary, red_flags}.\n` +,

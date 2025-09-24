@@ -1,208 +1,200 @@
-import React from 'react';;
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import {
-  Code;
-  Database;
-  Globe;
-  Shield;
-  Zap;
-  Bot;
-  BarChart3;
-  Lock;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  ExternalLink;
-  Play;
-  BookOpen;
-  Github;
-  Terminal} from 'lucide-react';
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Zap,
+  Bot,
+  BarChart3,
+  Lock,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  ExternalLink,
+  Play,
+  BookOpen,
+  Github,
+  Terminal} from 'lucide-react',
 export default function ApiToolsPage() {
   const apiTools = [
     {
-      icon: <Code className="w-8 h-8 text-white"  />;
-      title: 'CodeGen API - AI-Powered Code Generation';
-      description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.';
+      icon: <Code className="w-8 h-8 text-white"  />,
+      title: 'CodeGen API - AI-Powered Code Generation',
+      description: 'Generate production-ready code in multiple languages using natural language descriptions and AI.',
       features: [
-        'Support for 20+ programming languagesReal-time code completion and suggestions';
-        'Custom code templates and patternsIntegration with popular IDEs';
-        'Code review and optimization suggestions'];
+        'Support for 20+ programming languagesReal-time code completion and suggestionsCustom code templates and patternsIntegration with popular IDEs',
+        'Code review and optimization suggestions'],
       pricing: {
-        free: '10o0 requests/month';
-        pro: '$49/month';
-        enterprise: 'Custom'};
-      category: 'Development';
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
-      gradient: 'from-blue-40o0 to-cyan-50o0';
-      website: 'https://codegen.api';
-      docs: 'https://docs.codegen.api';
-      github: 'https://github.com/codegen-api';
-      status: 'Live';
-      users: '15,0o00+';
-      rating: 4.8;
-      responseTime: '<10o0ms'};
+        free: '10o0 requests/month',
+        pro: '$49/month',
+        enterprise: 'Custom'},
+      category: 'Development',
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
+      gradient: 'from-blue-40o0 to-cyan-50o0',
+      website: 'https://codegen.api',
+      docs: 'https://docs.codegen.api',
+      github: 'https://github.com/codegen-api',
+      status: 'Live',
+      users: '15,0o00+',
+      rating: 4.8,
+      responseTime: '<10o0ms'},
     {
-      icon: <Database className="w-8 h-8 text-white"  />;
-      title: 'DataSync API - Real-time Data Synchronization';
-      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.';
+      icon: <Database className="w-8 h-8 text-white"  />,
+      title: 'DataSync API - Real-time Data Synchronization',
+      description: 'Seamlessly sync data across multiple databases, applications, and cloud services in real-time.',
       features: [
-        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagation';
-        'Conflict resolution and data validationWebhook support for custom integrations';
-        'Comprehensive audit logging and monitoring'];
+        'Multi-database support (PostgreSQL, MySQL, MongoDB)Real-time change detection and propagationConflict resolution and data validationWebhook support for custom integrations',
+        'Comprehensive audit logging and monitoring'],
       pricing: {
-        free: '1,0o00 syncs/month';
-        pro: '$79/month';
-        enterprise: 'Custom'};
-      category: 'Data';
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
-      gradient: 'from-green-40o0 to-emerald-50o0';
-      website: 'https://datasync.api';
-      docs: 'https://docs.datasync.api';
-      github: 'https://github.com/datasync-api';
-      status: 'Live';
-      users: '8,50o0+';
-      rating: 4.9;
-      responseTime: '<50ms'};
+        free: '1,0o00 syncs/month',
+        pro: '$79/month',
+        enterprise: 'Custom'},
+      category: 'Data',
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
+      gradient: 'from-green-40o0 to-emerald-50o0',
+      website: 'https://datasync.api',
+      docs: 'https://docs.datasync.api',
+      github: 'https://github.com/datasync-api',
+      status: 'Live',
+      users: '8,50o0+',
+      rating: 4.9,
+      responseTime: '<50ms'},
     {
-      icon: <Globe className="w-8 h-8 text-white"  />;
-      title: 'GeoAPI - Advanced Geospatial Services';
-      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.';
+      icon: <Globe className="w-8 h-8 text-white"  />,
+      title: 'GeoAPI - Advanced Geospatial Services',
+      description: 'Comprehensive geolocation, mapping, and spatial analysis APIs for location-based applications.',
       features: [
-        'Global geocoding and reverse geocodingReal-time traffic and routing optimization';
-        'Geofencing and location trackingMap visualization and customization';
-        'Spatial data analysis and clustering'];
+        'Global geocoding and reverse geocodingReal-time traffic and routing optimizationGeofencing and location trackingMap visualization and customization',
+        'Spatial data analysis and clustering'],
       pricing: {
-        free: '10,0o00 requests/month';
-        pro: '$99/month';
-        enterprise: 'Custom'};
-      category: 'Location';
-      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0';
-      gradient: 'from-purple-40o0 to-pink-50o0';
-      website: 'https://geo.api';
-      docs: 'https://docs.geo.api';
-      github: 'https://github.com/geo-api';
-      status: 'Live';
-      users: '12,0o00+';
-      rating: 4.7;
-      responseTime: '<75ms'};
+        free: '10,0o00 requests/month',
+        pro: '$99/month',
+        enterprise: 'Custom'},
+      category: 'Location',
+      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
+      gradient: 'from-purple-40o0 to-pink-50o0',
+      website: 'https://geo.api',
+      docs: 'https://docs.geo.api',
+      github: 'https://github.com/geo-api',
+      status: 'Live',
+      users: '12,0o00+',
+      rating: 4.7,
+      responseTime: '<75ms'},
     {
-      icon: <Shield className="w-8 h-8 text-white"  />;
-      title: 'AuthGuard API - Enterprise Authentication';
-      description: 'Secure, scalable authentication and authorization system with advanced security features.';
+      icon: <Shield className="w-8 h-8 text-white"  />,
+      title: 'AuthGuard API - Enterprise Authentication',
+      description: 'Secure, scalable authentication and authorization system with advanced security features.',
       features: [
-        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect support';
-        'Role-based access control (RBAC)Advanced threat detection and prevention';
-        'Compliance with SOC2, GDPR, and HIPAA'];
+        'Multi-factor authentication (MFA)OAuth 2.0 and OpenID Connect supportRole-based access control (RBAC)Advanced threat detection and prevention',
+        'Compliance with SOC2, GDPR, and HIPAA'],
       pricing: {
-        free: '1,0o00 users/month';
-        pro: '$149/month';
-        enterprise: 'Custom'};
-      category: 'Security';
-      color: 'bg-gradient-to-br from-red-50o0 to-orange-60o0';
-      gradient: 'from-red-40o0 to-orange-50o0';
-      website: 'https://authguard.api';
-      docs: 'https://docs.authguard.api';
-      github: 'https://github.com/authguard-api';
-      status: 'Live';
-      users: '6,80o0+';
-      rating: 4.9;
-      responseTime: '<25ms'};
+        free: '1,0o00 users/month',
+        pro: '$149/month',
+        enterprise: 'Custom'},
+      category: 'Security',
+      color: 'bg-gradient-to-br from-red-50o0 to-orange-60o0',
+      gradient: 'from-red-40o0 to-orange-50o0',
+      website: 'https://authguard.api',
+      docs: 'https://docs.authguard.api',
+      github: 'https://github.com/authguard-api',
+      status: 'Live',
+      users: '6,80o0+',
+      rating: 4.9,
+      responseTime: '<25ms'},
     {
-      icon: <Zap className="w-8 h-8 text-white"  />;
-      title: 'WebhookHub - Intelligent Webhook Management';
-      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.';
+      icon: <Zap className="w-8 h-8 text-white"  />,
+      title: 'WebhookHub - Intelligent Webhook Management',
+      description: 'Reliable webhook delivery, retry logic, and event processing for modern applications.',
       features: [
-        'Guaranteed webhook delivery with retry logicEvent filtering and transformation';
-        'Real-time monitoring and analyticsCustom authentication and security';
-        'Integration with popular platforms'];
+        'Guaranteed webhook delivery with retry logicEvent filtering and transformationReal-time monitoring and analyticsCustom authentication and security',
+        'Integration with popular platforms'],
       pricing: {
-        free: '5,0o00 webhooks/month';
-        pro: '$39/month';
-        enterprise: 'Custom'};
-      category: 'Integration';
-      color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0';
-      gradient: 'from-yellow-40o0 to-orange-50o0';
-      website: 'https://webhookhub.api';
-      docs: 'https://docs.webhookhub.api';
-      github: 'https://github.com/webhookhub-api';
-      status: 'Live';
-      users: '9,20o0+';
-      rating: 4.8;
-      responseTime: '<30ms'};
+        free: '5,0o00 webhooks/month',
+        pro: '$39/month',
+        enterprise: 'Custom'},
+      category: 'Integration',
+      color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0',
+      gradient: 'from-yellow-40o0 to-orange-50o0',
+      website: 'https://webhookhub.api',
+      docs: 'https://docs.webhookhub.api',
+      github: 'https://github.com/webhookhub-api',
+      status: 'Live',
+      users: '9,20o0+',
+      rating: 4.8,
+      responseTime: '<30ms'},
     {
-      icon: <Bot className="w-8 h-8 text-white"  />;
-      title: 'NLP API - Natural Language Processing';
-      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.';
+      icon: <Bot className="w-8 h-8 text-white"  />,
+      title: 'NLP API - Natural Language Processing',
+      description: 'Advanced text analysis, sentiment detection, and language understanding capabilities.',
       features: [
-        'Text classification and categorizationSentiment analysis and emotion detection';
-        'Named entity recognition (NER)Language detection and translation';
-        'Custom model training and fine-tuning'];
+        'Text classification and categorizationSentiment analysis and emotion detectionNamed entity recognition (NER)Language detection and translation',
+        'Custom model training and fine-tuning'],
       pricing: {
-        free: '5,0o00 requests/month';
-        pro: '$69/month';
-        enterprise: 'Custom'};
-      category: 'AI/ML';
-      color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0';
-      gradient: 'from-indigo-40o0 to-purple-50o0';
-      website: 'https://nlp.api';
-      docs: 'https://docs.nlp.api';
-      github: 'https://github.com/nlp-api';
-      status: 'Live';
-      users: '11,50o0+';
-      rating: 4.7;
-      responseTime: '<20o0ms'};
+        free: '5,0o00 requests/month',
+        pro: '$69/month',
+        enterprise: 'Custom'},
+      category: 'AI/ML',
+      color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0',
+      gradient: 'from-indigo-40o0 to-purple-50o0',
+      website: 'https://nlp.api',
+      docs: 'https://docs.nlp.api',
+      github: 'https://github.com/nlp-api',
+      status: 'Live',
+      users: '11,50o0+',
+      rating: 4.7,
+      responseTime: '<20o0ms'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white"  />;
-      title: 'Analytics API - Business Intelligence';
-      description: 'Comprehensive analytics and reporting APIs for data-driven decision making.';
+      icon: <BarChart3 className="w-8 h-8 text-white"  />,
+      title: 'Analytics API - Business Intelligence',
+      description: 'Comprehensive analytics and reporting APIs for data-driven decision making.',
       features: [
-        'Real-time data aggregation and analysisCustom dashboard creation and sharing';
-        'Advanced filtering and segmentationExport capabilities (CSV, JSON, PDF)';
-        'Scheduled reports and alerts'];
+        'Real-time data aggregation and analysisCustom dashboard creation and sharingAdvanced filtering and segmentationExport capabilities (CSV, JSON, PDF)',
+        'Scheduled reports and alerts'],
       pricing: {
-        free: '10,0o00 events/month';
-        pro: '$89/month';
-        enterprise: 'Custom'};
-      category: 'Analytics';
-      color: 'bg-gradient-to-br from-teal-50o0 to-cyan-60o0';
-      gradient: 'from-teal-40o0 to-cyan-50o0';
-      website: 'https://analytics.api';
-      docs: 'https://docs.analytics.api';
-      github: 'https://github.com/analytics-api';
-      status: 'Live';
-      users: '7,80o0+';
-      rating: 4.8;
-      responseTime: '<150ms'};
+        free: '10,0o00 events/month',
+        pro: '$89/month',
+        enterprise: 'Custom'},
+      category: 'Analytics',
+      color: 'bg-gradient-to-br from-teal-50o0 to-cyan-60o0',
+      gradient: 'from-teal-40o0 to-cyan-50o0',
+      website: 'https://analytics.api',
+      docs: 'https://docs.analytics.api',
+      github: 'https://github.com/analytics-api',
+      status: 'Live',
+      users: '7,80o0+',
+      rating: 4.8,
+      responseTime: '<150ms'},
     {
-      icon: <Lock className="w-8 h-8 text-white"  />;
-      title: 'EncryptAPI - Data Encryption Services';
-      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.';
+      icon: <Lock className="w-8 h-8 text-white"  />,
+      title: 'EncryptAPI - Data Encryption Services',
+      description: 'Enterprise-grade encryption, hashing, and cryptographic operations for secure applications.',
       features: [
-        'AES-256 encryption and decryptionSecure key management and rotation';
-        'Digital signatures and certificatesCompliance with FIPS 140-2 standards';
-        'Hardware security module (HSM) support'];
+        'AES-256 encryption and decryptionSecure key management and rotationDigital signatures and certificatesCompliance with FIPS 140-2 standards',
+        'Hardware security module (HSM) support'],
       pricing: {
-        free: '1,0o00 operations/month';
-        pro: '$119/month';
-        enterprise: 'Custom'};
-      category: 'Security';
-      color: 'bg-gradient-to-br from-gray-50o0 to-slate-60o0';
-      gradient: 'from-gray-40o0 to-slate-50o0';
-      website: 'https://encrypt.api';
-      docs: 'https://docs.encrypt.api';
-      github: 'https://github.com/encrypt-api';
-      status: 'Live';
-      users: '4,20o0+';
-      rating: 4.9;
+        free: '1,0o00 operations/month',
+        pro: '$119/month',
+        enterprise: 'Custom'},
+      category: 'Security',
+      color: 'bg-gradient-to-br from-gray-50o0 to-slate-60o0',
+      gradient: 'from-gray-40o0 to-slate-50o0',
+      website: 'https://encrypt.api',
+      docs: 'https://docs.encrypt.api',
+      github: 'https://github.com/encrypt-api',
+      status: 'Live',
+      users: '4,20o0+',
+      rating: 4.9,
       responseTime: '<20ms'}
-  ];
-  const categories = ['AllDevelopment', 'DataLocation', 'SecurityIntegration', 'AI/MLAnalytics'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  ],
+  const categories = ['AllDevelopmentDataLocation', 'SecurityIntegrationAI/MLAnalytics'],
+  const [selectedCategory, setSelectedCategory] = React.useState('All'),
   const filteredTools = selectedCategory === 'All',
     ? apiTools,
-    : apiTools.filter(tool => tool.category === selectedCategory);
+    : apiTools.filter(tool => tool.category === selectedCategory),
   return (
     <>,
       <Head>,

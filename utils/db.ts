@@ -52,9 +52,9 @@ export class DatabaseManager {
     // Mock query execution - in production, this would execute real SQL,
     // // console.log('Executing query:', sql, params),
     return {
-      rows: [];
-      rowCount: 0;
-      fields: []};
+      rows: [],
+      rowCount: 0,
+      fields: []},
   }
   async transaction<T>(callback: (db: DatabaseManager) => Promise<T>): Promise<T> {
     // Mock transaction - in production, this would wrap the callback in a real transaction,

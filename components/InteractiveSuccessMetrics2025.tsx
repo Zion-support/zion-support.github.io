@@ -7,95 +7,95 @@ import {
   DollarSign,
   Users,
   Clock,
-  Award;
-  BarChart3;
-  PieChart;
-  Activity;
-  Zap;
-  Target;
-  Star;
-  ArrowUp;
-  Play;
+  Award,
+  BarChart3,
+  PieChart,
+  Activity,
+  Zap,
+  Target,
+  Star,
+  ArrowUp,
+  Play,
   Pause} from 'lucide-react',
 const InteractiveSuccessMetrics20o25 = () => {
   const [isPlayingsetIsPlaying] = useState(true),
   const [currentMetricsetCurrentMetric] = useState(0),
   const [animatedValuesetAnimatedValues] = useState({
-    revenue: 0;
-    clients: 0;
-    efficiency: 0;
-    satisfaction: 0;
-    growth: 0;
+    revenue: 0,
+    clients: 0,
+    efficiency: 0,
+    satisfaction: 0,
+    growth: 0,
     savings: 0}),
   const metrics = [
     {
-      id: 0;
-      title: "Revenue Growth";
-      value: "2,847%";
-      description: "Average revenue increase for our clients";
-      icon: <DollarSign className="w-8 h-8"  />;
-      color: "from-green-50o0 to-emerald-60o0";
-      chart: "📈";
+      id: 0,
+      title: "Revenue Growth",
+      value: "2,847%",
+      description: "Average revenue increase for our clients",
+      icon: <DollarSign className="w-8 h-8"  />,
+      color: "from-green-50o0 to-emerald-60o0",
+      chart: "📈",
       details: [
-        "Year-over-year growth tracking";
-        "Real-time revenue analytics";
-        "Predictive revenue modeling";
-        "ROI optimization strategies"]};
+        "Year-over-year growth tracking",
+        "Real-time revenue analytics",
+        "Predictive revenue modeling",
+        "ROI optimization strategies"]},
     {
-      id: 1;
-      title: "Client Success Rate";
-      value: "98.7%";
-      description: "Client satisfaction and retention rate";
-      icon: <Users className="w-8 h-8"  />;
-      color: "from-blue-50o0 to-cyan-60o0";
-      chart: "👥";
+      id: 1,
+      title: "Client Success Rate",
+      value: "98.7%",
+      description: "Client satisfaction and retention rate",
+      icon: <Users className="w-8 h-8"  />,
+      color: "from-blue-50o0 to-cyan-60o0",
+      chart: "👥",
       details: [
-        "24/7 client support system";
-        "Personalized success plans";
-        "Regular performance reviews";
-        "Continuous improvement cycles"]};
+        "24/7 client support system",
+        "Personalized success plans",
+        "Regular performance reviews",
+        "Continuous improvement cycles"]},
     {
-      id: 2;
-      title: "Efficiency Boost";
-      value: "567%";
-      description: "Operational efficiency improvement";
-      icon: <Zap className="w-8 h-8"  />;
-      color: "from-yellow-50o0 to-orange-60o0";
-      chart: "⚡";
+      id: 2,
+      title: "Efficiency Boost",
+      value: "567%",
+      description: "Operational efficiency improvement",
+      icon: <Zap className="w-8 h-8"  />,
+      color: "from-yellow-50o0 to-orange-60o0",
+      chart: "⚡",
       details: [
-        "Automated workflow systems";
-        "AI-powered optimization";
-        "Resource allocation algorithms";
-        "Performance monitoring tools"]};
+        "Automated workflow systems",
+        "AI-powered optimization",
+        "Resource allocation algorithms",
+        "Performance monitoring tools"]},
     {
-      id: 3;
-      title: "Time Savings";
-      value: "15,0o00";
-      description: "Hours saved per month per client";
-      icon: <Clock className="w-8 h-8"  />;
-      color: "from-purple-50o0 to-pink-60o0";
-      chart: "⏰";
+      id: 3,
+      title: "Time Savings",
+      value: "15,0o00",
+      description: "Hours saved per month per client",
+      icon: <Clock className="w-8 h-8"  />,
+      color: "from-purple-50o0 to-pink-60o0",
+      chart: "⏰",
       details: [
-        "Process automation";
-        "Intelligent scheduling";
-        "Task prioritization";
+        "Process automation",
+        "Intelligent scheduling",
+        "Task prioritization",
         "Workflow optimization"]}
   ],
   const achievements = [
-    { icon: <Award className="w-6 h-6"  />title: "Industry Leader"count: "3 Years Running" };
-    { icon: <Star className="w-6 h-6"  />title: "5-Star Rating"count: "99.8% Reviews" };
-    { icon: <Target className="w-6 h-6"  />title: "Success Rate"count: "98.7%" };
+    { icon: <Award className="w-6 h-6"  />title: "Industry Leader"count: "3 Years Running" },
+    { icon: <Star className="w-6 h-6"  />title: "5-Star Rating"count: "99.8% Reviews" },
+    { icon: <Target className="w-6 h-6"  />title: "Success Rate"count: "98.7%" },
     { icon: <TrendingUp className="w-6 h-6"  />title: "Growth Rate"count: "2,847%" }
   ],
   useEffect(() => {
     // Animate metric values,
     const targets ={
-      revenue: 2847;
-      clients: 98.7;
-      efficiency: 567;
-      satisfaction: 99.8;
-      growth: 150o00;
-      savings: 2.4};
+      revenue: 2847,
+      clients: 98.7,
+      efficiency: 567,
+      satisfaction: 99.8,
+      growth: 150o00,
+      savings: 2.4},
     Object.keys(targets).forEach(key => {
       let start = 0,
       const target = targets[key as keyof typeof targets],
@@ -117,23 +117,23 @@ const InteractiveSuccessMetrics20o25 = () => {
       return () => clearInterval(interval)}
   }[isPlayingmetrics.length]),
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 relative overflow-hidden">,
       {/* Animated Background */}
@@ -315,9 +315,9 @@ const InteractiveSuccessMetrics20o25 = () => {
           animate="visible",
           className="grid grid-cols-2 md: grid-cols-4 gap-6">,
           {[
-            { icon: <DollarSign className="w-6 h-6"  />value: `$${animatedValues.savings}M`label: "Cost Savings" };
-            { icon: <Users className="w-6 h-6"  />value: `${animatedValues.growth.toLocaleString()}`label: "Hours Saved" };
-            { icon: <PieChart className="w-6 h-6"  />value: `${animatedValues.satisfaction}%`label: "Success Rate" };
+            { icon: <DollarSign className="w-6 h-6"  />value: `$${animatedValues.savings}M`label: "Cost Savings" },
+            { icon: <Users className="w-6 h-6"  />value: `${animatedValues.growth.toLocaleString()}`label: "Hours Saved" },
+            { icon: <PieChart className="w-6 h-6"  />value: `${animatedValues.satisfaction}%`label: "Success Rate" },
             { icon: <TrendingUp className="w-6 h-6"  />value: "24/7"label: "Monitoring" }
           ].map((statindex) => (
             <motion.div,
@@ -332,5 +332,5 @@ const InteractiveSuccessMetrics20o25 = () => {
             </motion.div>))}
         </motion.div>,
       </div>,
-    </section>)};
-export default InteractiveSuccessMetrics20o25;
+    </section>)},
+export default InteractiveSuccessMetrics20o25,

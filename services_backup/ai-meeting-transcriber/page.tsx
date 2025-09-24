@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Meeting Transcriber | Zion Tech Group';
+  title: 'AI Meeting Transcriber | Zion Tech Group',
   description:,
-    'Transform your meetings into actionable insights with AI-powered transcription, summarization, and analysis.';
-};
+    'Transform your meetings into actionable insights with AI-powered transcription, summarization, and analysis.',
+},
 export default function AIMeetingTranscriberPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function AIMeetingTranscriberPage() {
               period='per month',
               description='Perfect for individuals and small teams',
               features={[
-                'Up to 10 hours of transcription';
-                'Basic summarization';
-                'Speaker identification';
-                'Email support';
-                'Standard integrations';
+                'Up to 10 hours of transcriptionBasic summarization',
+                'Speaker identificationEmail support',
+                'Standard integrations',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function AIMeetingTranscriberPage() {
               period='per month',
               description='Ideal for growing teams and regular meetings',
               features={[
-                'Up to 50 hours of transcription';
-                'Advanced AI summarization';
-                'Action item extraction';
-                'Search & analytics';
-                'Priority support';
-                'All integrations';
+                'Up to 50 hours of transcriptionAdvanced AI summarization',
+                'Action item extractionSearch & analytics',
+                'Priority supportAll integrations',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function AIMeetingTranscriberPage() {
               period='per month',
               description='For large organizations with extensive meeting needs',
               features={[
-                'Unlimited transcription';
-                'Custom AI models';
-                'Advanced analytics';
-                'Dedicated support';
-                'Custom integrations';
-                'On-premise deployment';
+                'Unlimited transcriptionCustom AI models',
+                'Advanced analyticsDedicated support',
+                'Custom integrationsOn-premise deployment',
               ]}
               popular={false}
             />,
@@ -222,9 +214,9 @@ export default function AIMeetingTranscriberPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -239,12 +231,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   plan: string,
   price: string,
@@ -276,9 +268,9 @@ function PricingCard({
     </div>)}
 ,
 function StepCard({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,

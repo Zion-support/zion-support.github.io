@@ -19,145 +19,145 @@ interface AssessmentResult {
     technology: number,
     strategy: number,
     people: number,
-    processes: number};
+    processes: number},
   recommendations: string[],
   nextSteps: string[]}
 ,
 const assessmentQuestions: AssessmentQuestion[] = [
   // Technology Readiness,
   {
-    id: 'tech-infrastructure';
-    category: 'technology';
-    question: 'How would you rate your current AI infrastructure and data capabilities?';
+    id: 'tech-infrastructure',
+    category: 'technology',
+    question: 'How would you rate your current AI infrastructure and data capabilities?',
     options: [
-      { value: 1, label: 'Basic', description: 'Limited AI tools, basic data collection' };
-      { value: 2, label: 'Developing', description: 'Some AI tools, structured data systems' };
-      { value: 3, label: 'Advanced', description: 'Comprehensive AI platform, integrated data' };
-      { value: 4, label: 'Cutting-edge', description: 'AI-first architecture, real-time analytics' };
+      { value: 1, label: 'Basic', description: 'Limited AI tools, basic data collection' },
+      { value: 2, label: 'Developing', description: 'Some AI tools, structured data systems' },
+      { value: 3, label: 'Advanced', description: 'Comprehensive AI platform, integrated data' },
+      { value: 4, label: 'Cutting-edge', description: 'AI-first architecture, real-time analytics' },
       { value: 5, label: 'Future-ready', description: 'Quantum-ready, autonomous systems' }
-    ]};
+    ]},
   {
-    id: 'data-quality';
-    category: 'technology';
-    question: 'How would you describe your data quality and governance?';
+    id: 'data-quality',
+    category: 'technology',
+    question: 'How would you describe your data quality and governance?',
     options: [
-      { value: 1, label: 'Poor', description: 'Inconsistent, unreliable data' };
-      { value: 2, label: 'Fair', description: 'Some data issues, basic governance' };
-      { value: 3, label: 'Good', description: 'Quality data, established governance' };
-      { value: 4, label: 'Excellent', description: 'High-quality data, comprehensive governance' };
+      { value: 1, label: 'Poor', description: 'Inconsistent, unreliable data' },
+      { value: 2, label: 'Fair', description: 'Some data issues, basic governance' },
+      { value: 3, label: 'Good', description: 'Quality data, established governance' },
+      { value: 4, label: 'Excellent', description: 'High-quality data, comprehensive governance' },
       { value: 5, label: 'World-class', description: 'Perfect data quality, autonomous governance' }
-    ]};
+    ]},
   {
-    id: 'ai-tools';
-    category: 'technology';
-    question: 'What is your current level of AI tool adoption?';
+    id: 'ai-tools',
+    category: 'technology',
+    question: 'What is your current level of AI tool adoption?',
     options: [
-      { value: 1, label: 'Minimal', description: 'Basic automation tools only' };
-      { value: 2, label: 'Limited', description: 'Some AI tools in specific areas' };
-      { value: 3, label: 'Moderate', description: 'AI tools across multiple functions' };
-      { value: 4, label: 'Extensive', description: 'AI integrated across most operations' };
+      { value: 1, label: 'Minimal', description: 'Basic automation tools only' },
+      { value: 2, label: 'Limited', description: 'Some AI tools in specific areas' },
+      { value: 3, label: 'Moderate', description: 'AI tools across multiple functions' },
+      { value: 4, label: 'Extensive', description: 'AI integrated across most operations' },
       { value: 5, label: 'Comprehensive', description: 'AI-first organization with autonomous systems' }
-    ]};
+    ]},
   // Strategy Readiness,
   {
-    id: 'ai-strategy';
-    category: 'strategy';
-    question: 'How well-defined is your AI strategy and roadmap?';
+    id: 'ai-strategy',
+    category: 'strategy',
+    question: 'How well-defined is your AI strategy and roadmap?',
     options: [
-      { value: 1, label: 'None', description: 'No formal AI strategy' };
-      { value: 2, label: 'Basic', description: 'Informal AI initiatives' };
-      { value: 3, label: 'Developing', description: 'Formal AI strategy in development' };
-      { value: 4, label: 'Mature', description: 'Comprehensive AI strategy with clear roadmap' };
+      { value: 1, label: 'None', description: 'No formal AI strategy' },
+      { value: 2, label: 'Basic', description: 'Informal AI initiatives' },
+      { value: 3, label: 'Developing', description: 'Formal AI strategy in development' },
+      { value: 4, label: 'Mature', description: 'Comprehensive AI strategy with clear roadmap' },
       { value: 5, label: 'Advanced', description: 'AI strategy integrated with business transformation' }
-    ]};
+    ]},
   {
-    id: 'leadership-support';
-    category: 'strategy';
-    question: 'How strong is leadership support for AI initiatives?';
+    id: 'leadership-support',
+    category: 'strategy',
+    question: 'How strong is leadership support for AI initiatives?',
     options: [
-      { value: 1, label: 'Weak', description: 'Limited leadership understanding or support' };
-      { value: 2, label: 'Moderate', description: 'Some leadership interest' };
-      { value: 3, label: 'Good', description: 'Clear leadership support' };
-      { value: 4, label: 'Strong', description: 'Strong leadership championing AI' };
+      { value: 1, label: 'Weak', description: 'Limited leadership understanding or support' },
+      { value: 2, label: 'Moderate', description: 'Some leadership interest' },
+      { value: 3, label: 'Good', description: 'Clear leadership support' },
+      { value: 4, label: 'Strong', description: 'Strong leadership championing AI' },
       { value: 5, label: 'Exceptional', description: 'AI is a top leadership priority with full commitment' }
-    ]};
+    ]},
   {
-    id: 'investment-level';
-    category: 'strategy';
-    question: 'What is your current investment level in AI technologies?';
+    id: 'investment-level',
+    category: 'strategy',
+    question: 'What is your current investment level in AI technologies?',
     options: [
-      { value: 1, label: 'Minimal', description: 'Less than 1% of IT budget' };
-      { value: 2, label: 'Low', description: '1-3% of IT budget' };
-      { value: 3, label: 'Moderate', description: '3-5% of IT budget' };
-      { value: 4, label: 'High', description: '5-10% of IT budget' };
+      { value: 1, label: 'Minimal', description: 'Less than 1% of IT budget' },
+      { value: 2, label: 'Low', description: '1-3% of IT budget' },
+      { value: 3, label: 'Moderate', description: '3-5% of IT budget' },
+      { value: 4, label: 'High', description: '5-10% of IT budget' },
       { value: 5, label: 'Significant', description: 'More than 10% of IT budget' }
-    ]};
+    ]},
   // People Readiness,
   {
-    id: 'ai-skills';
-    category: 'people';
-    question: 'How would you rate your team\'s AI skills and capabilities?';
+    id: 'ai-skills',
+    category: 'people',
+    question: 'How would you rate your team\'s AI skills and capabilities?',
     options: [
-      { value: 1, label: 'Limited', description: 'Very few team members have AI skills' };
-      { value: 2, label: 'Basic', description: 'Some team members have basic AI knowledge' };
-      { value: 3, label: 'Developing', description: 'Growing AI expertise across teams' };
-      { value: 4, label: 'Strong', description: 'Strong AI capabilities across organization' };
+      { value: 1, label: 'Limited', description: 'Very few team members have AI skills' },
+      { value: 2, label: 'Basic', description: 'Some team members have basic AI knowledge' },
+      { value: 3, label: 'Developing', description: 'Growing AI expertise across teams' },
+      { value: 4, label: 'Strong', description: 'Strong AI capabilities across organization' },
       { value: 5, label: 'World-class', description: 'Industry-leading AI talent and expertise' }
-    ]};
+    ]},
   {
-    id: 'change-management';
-    category: 'people';
-    question: 'How prepared is your organization for AI-driven change?';
+    id: 'change-management',
+    category: 'people',
+    question: 'How prepared is your organization for AI-driven change?',
     options: [
-      { value: 1, label: 'Unprepared', description: 'Resistance to change, no change management' };
-      { value: 2, label: 'Basic', description: 'Some change management awareness' };
-      { value: 3, label: 'Developing', description: 'Formal change management processes' };
-      { value: 4, label: 'Mature', description: 'Comprehensive change management strategy' };
+      { value: 1, label: 'Unprepared', description: 'Resistance to change, no change management' },
+      { value: 2, label: 'Basic', description: 'Some change management awareness' },
+      { value: 3, label: 'Developing', description: 'Formal change management processes' },
+      { value: 4, label: 'Mature', description: 'Comprehensive change management strategy' },
       { value: 5, label: 'Advanced', description: 'Change-ready culture with continuous adaptation' }
-    ]};
+    ]},
   {
-    id: 'training-programs';
-    category: 'people';
-    question: 'What is your current level of AI training and development?';
+    id: 'training-programs',
+    category: 'people',
+    question: 'What is your current level of AI training and development?',
     options: [
-      { value: 1, label: 'None', description: 'No formal AI training programs' };
-      { value: 2, label: 'Basic', description: 'Occasional AI training sessions' };
-      { value: 3, label: 'Regular', description: 'Regular AI training and development' };
-      { value: 4, label: 'Comprehensive', description: 'Comprehensive AI upskilling programs' };
+      { value: 1, label: 'None', description: 'No formal AI training programs' },
+      { value: 2, label: 'Basic', description: 'Occasional AI training sessions' },
+      { value: 3, label: 'Regular', description: 'Regular AI training and development' },
+      { value: 4, label: 'Comprehensive', description: 'Comprehensive AI upskilling programs' },
       { value: 5, label: 'Continuous', description: 'Continuous AI learning and development culture' }
-    ]};
+    ]},
   // Process Readiness,
   {
-    id: 'ai-integration';
-    category: 'processes';
-    question: 'How well are AI systems integrated into your business processes?';
+    id: 'ai-integration',
+    category: 'processes',
+    question: 'How well are AI systems integrated into your business processes?',
     options: [
-      { value: 1, label: 'Isolated', description: 'AI systems operate in isolation' };
-      { value: 2, label: 'Limited', description: 'Some AI integration in specific processes' };
-      { value: 3, label: 'Moderate', description: 'AI integrated into key business processes' };
-      { value: 4, label: 'Extensive', description: 'AI deeply integrated across most processes' };
+      { value: 1, label: 'Isolated', description: 'AI systems operate in isolation' },
+      { value: 2, label: 'Limited', description: 'Some AI integration in specific processes' },
+      { value: 3, label: 'Moderate', description: 'AI integrated into key business processes' },
+      { value: 4, label: 'Extensive', description: 'AI deeply integrated across most processes' },
       { value: 5, label: 'Seamless', description: 'AI seamlessly integrated into all processes' }
-    ]};
+    ]},
   {
-    id: 'governance-framework';
-    category: 'processes';
-    question: 'How mature is your AI governance and ethics framework?';
+    id: 'governance-framework',
+    category: 'processes',
+    question: 'How mature is your AI governance and ethics framework?',
     options: [
-      { value: 1, label: 'None', description: 'No AI governance framework' };
-      { value: 2, label: 'Basic', description: 'Basic AI policies and guidelines' };
-      { value: 3, label: 'Developing', description: 'Formal AI governance structure' };
-      { value: 4, label: 'Mature', description: 'Comprehensive AI governance and ethics' };
+      { value: 1, label: 'None', description: 'No AI governance framework' },
+      { value: 2, label: 'Basic', description: 'Basic AI policies and guidelines' },
+      { value: 3, label: 'Developing', description: 'Formal AI governance structure' },
+      { value: 4, label: 'Mature', description: 'Comprehensive AI governance and ethics' },
       { value: 5, label: 'Advanced', description: 'Industry-leading AI governance and ethics' }
-    ]};
+    ]},
   {
-    id: 'performance-measurement';
-    category: 'processes';
-    question: 'How do you measure and monitor AI performance and ROI?';
+    id: 'performance-measurement',
+    category: 'processes',
+    question: 'How do you measure and monitor AI performance and ROI?',
     options: [
-      { value: 1, label: 'Ad-hoc', description: 'No systematic measurement of AI performance' };
-      { value: 2, label: 'Basic', description: 'Basic metrics and reporting' };
-      { value: 3, label: 'Developing', description: 'Formal AI performance measurement' };
-      { value: 4, label: 'Comprehensive', description: 'Comprehensive AI metrics and analytics' };
+      { value: 1, label: 'Ad-hoc', description: 'No systematic measurement of AI performance' },
+      { value: 2, label: 'Basic', description: 'Basic metrics and reporting' },
+      { value: 3, label: 'Developing', description: 'Formal AI performance measurement' },
+      { value: 4, label: 'Comprehensive', description: 'Comprehensive AI metrics and analytics' },
       { value: 5, label: 'Advanced', description: 'Real-time AI performance optimization' }
     ]}
 ],
@@ -167,22 +167,22 @@ export default function AI20o30ReadinessAssessment() {
   const [showResults, setShowResults] = useState(false),
   const [result, setResult] = useState<AssessmentResult | null>(null),
   const handleAnswer = (questionId: string, value: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }))};
+    setAnswers(prev => ({ ...prev, [questionId]: value }))},
   const nextQuestion = () => {
     if (currentQuestion < assessmentQuestions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)} else {
       calculateResults()}
-  };
+  },
   const prevQuestion = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1)}
-  };
+  },
   const calculateResults = () => {
     const categoryScores ={
-      technology: 0;
-      strategy: 0;
-      people: 0;
-      processes: 0};
+      technology: 0,
+      strategy: 0,
+      people: 0,
+      processes: 0},
     let totalScore = 0,
     let questionCount = 0,
     assessmentQuestions.forEach(question => {
@@ -202,11 +202,11 @@ export default function AI20o30ReadinessAssessment() {
     const recommendations = generateRecommendations(categoryScores, overallScore),
     const nextSteps = generateNextSteps(categoryScores, overallScore),
     setResult({
-      overallScore;
-      categoryScores;
-      recommendations;
+      overallScore,
+      categoryScores,
+      recommendations,
       nextSteps}),
-    setShowResults(true)};
+    setShowResults(true)},
   const generateRecommendations = (scores: any, overall: number) => {
     const recommendations = [],
     if (scores.technology < 60) {
@@ -226,7 +226,7 @@ export default function AI20o30ReadinessAssessment() {
       recommendations.push('Consider leading industry AI transformation initiatives'),
       recommendations.push('Explore advanced AI technologies like quantum computing')}
 ,
-    return recommendations};
+    return recommendations},
   const generateNextSteps = (scores: any, overall: number) => {
     const steps = [],
     if (overall < 40) {
@@ -243,22 +243,22 @@ export default function AI20o30ReadinessAssessment() {
       steps.push('Explore cutting-edge AI technologies'),
       steps.push('Share best practices with the industry')}
 ,
-    return steps};
+    return steps},
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-60o0',
     if (score >= 60) return 'text-yellow-60o0',
-    return 'text-red-60o0'};
+    return 'text-red-60o0'},
   const getScoreBadge = (score: number) => {
     if (score >= 80) return 'bg-green-10o0 text-green-80o0',
     if (score >= 60) return 'bg-yellow-10o0 text-yellow-80o0',
-    return 'bg-red-10o0 text-red-80o0'};
+    return 'bg-red-10o0 text-red-80o0'},
   const getReadinessLevel = (score: number) => {
     if (score >= 90) return 'AI Pioneer',
     if (score >= 80) return 'AI Leader',
     if (score >= 70) return 'AI Advanced',
     if (score >= 60) return 'AI Developing',
     if (score >= 40) return 'AI Beginner',
-    return 'AI Starter'};
+    return 'AI Starter'},
   if (showResults && result) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 py-12">,

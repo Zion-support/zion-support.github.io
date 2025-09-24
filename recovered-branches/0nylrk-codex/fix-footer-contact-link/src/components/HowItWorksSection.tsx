@@ -2,29 +2,29 @@ import { GradientHeading } from './GradientHeading',
 import { CheckHandshakeSearchSend } from 'lucide-react',
 const steps = [
   {
-    title: 'Post';
+    title: 'Post',
     description:,
-      'Publish your servicejobor equipment in minutes with our AI-powered form.';
-    icon: Send;
-  };
+      'Publish your servicejobor equipment in minutes with our AI-powered form.',
+    icon: Send
+  },
   {
-    title: 'Match';
+    title: 'Match',
     description:,
-      'Our AI automatically matches your needs with the perfect providers or opportunities.';
-    icon: Search;
-  };
+      'Our AI automatically matches your needs with the perfect providers or opportunities.',
+    icon: Search
+  },
   {
-    title: 'Hire/Buy';
+    title: 'Hire/Buy',
     description:,
-      'Connect directly with matched providers and complete your transaction securely.';
-    icon: Handshake;
-  };
+      'Connect directly with matched providers and complete your transaction securely.',
+    icon: Handshake
+  },
   {
-    title: 'Done';
+    title: 'Done',
     description:,
-      'Enjoy hassle-free delivery and support for your technology solutions.';
-    icon: Check;
-  };
+      'Enjoy hassle-free delivery and support for your technology solutions.',
+    icon: Check
+  },
 ],
 export function HowItWorksSection() {
   return (

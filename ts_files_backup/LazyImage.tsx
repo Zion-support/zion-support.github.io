@@ -33,18 +33,18 @@ export default function LazyImage({
   style,
   onLoad,
   onError}: LazyImageProps) {
-  src;
-  alt;
-  width;
-  height;
-  className = "";
-  priority = false;
-  placeholder = "empty";
-  blurDataURL;
-  sizes;
-  quality = 75;
-  fill = false;
-  style;
-  onLoad;
+  src,
+  alt,
+  width,
+  height,
+  className = "",
+  priority = false,
+  placeholder = "empty",
+  blurDataURL,
+  sizes,
+  quality = 75,
+  fill = false,
+  style,
+  onLoad,
   onError}: LazyImageProps) {
 }}

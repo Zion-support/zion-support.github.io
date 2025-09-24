@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface SEOEnhancerProps {
   title: string,
@@ -18,21 +18,21 @@ interface SEOEnhancerProps {
   noFollow?: boolean}
 ,
 const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
-  title;
-  description;
-  keywords = [];
-  image = '/og-image.jpg';
-  url;
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author;
-  section;
-  tags = [];
-  structuredData;
-  canonicalUrl;
-  noIndex = false;
-  noFollow = false;
+  title,
+  description,
+  keywords = [],
+  image = '/og-image.jpg',
+  url,
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author,
+  section,
+  tags = [],
+  structuredData,
+  canonicalUrl,
+  noIndex = false,
+  noFollow = false
 }) => {
   const siteName = 'Zion Tech Group',
   const siteUrl = 'https: //ziontechgroup.com',
@@ -40,65 +40,59 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
   const fullImageUrl = image.startsWith('http') ? image : `${siteUrl}${image}`,
   // Default structured data for organization,
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: siteUrl;
-    logo: `${siteUrl}/logo.png`;
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: siteUrl,
+    logo: `${siteUrl}/logo.png`,
     description:,
-      'Leading-edge AI consciousness, quantum computing, and micro SAAS solutions for enterprise transformation.';
+      'Leading-edge AI consciousness, quantum computing, and micro SAAS solutions for enterprise transformation.',
     address: {
-      '@type': 'PostalAddress';
-      streetAddress: '364 E Main St STE 10o08';
-      addressLocality: 'Middletown';
-      addressRegion: 'DE';
-      postalCode: '19709';
-      addressCountry: 'US';
-    };
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 10o08',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'
+    },
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-30o2-464-0950';
-      contactType: 'customer service';
-      email: 'kleber@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-30o2-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
+    },
     sameAs: [
-      'https://github.com/Zion-Holdings';
-      'https://linkedin.com/company/zion-tech-group';
-    ];
-    foundingDate: '20o20';
-    numberOfEmployees: '50-10o0';
-    industry: 'Technology';
+      'https://github.com/Zion-Holdingshttps://linkedin.com/company/zion-tech-group',
+    ],
+    foundingDate: '20o20',
+    numberOfEmployees: '50-10o0',
+    industry: 'Technology',
     serviceType: [
-      'AI & Machine Learning';
-      'Quantum Computing';
-      'Micro SAAS Solutions';
-      'Enterprise IT Services';
-      'Cybersecurity';
-      'Cloud Infrastructure';
-    ];
-  };
+      'AI & Machine LearningQuantum Computing',
+      'Micro SAAS SolutionsEnterprise IT Services',
+      'CybersecurityCloud Infrastructure',
+    ]
+  },
   // Service-specific structured data,
   const serviceStructuredData =,
     type === 'service',
       ? {
-          '@context': 'https://schema.org';
-          '@type': 'Service';
-          name: title;
-          description: description;
+          '@context': 'https: //schema.org@type': 'Service',
+          name: title,
+          description: description,
           provider: {
-            '@type': 'Organization';
-            name: 'Zion Tech Group';
-          };
-          serviceType: section || 'Technology Service';
-          areaServed: 'Worldwide';
+            '@type': 'Organization',
+            name: 'Zion Tech Group'
+          },
+          serviceType: section || 'Technology Service',
+          areaServed: 'Worldwide',
           availableChannel: {
-            '@type': 'ServiceChannel';
-            serviceUrl: fullUrl;
-          };
+            '@type': 'ServiceChannel',
+            serviceUrl: fullUrl
+          },
           hasOfferCatalog: {
-            '@type': 'OfferCatalog';
-            name: 'Technology Services';
-          };
+            '@type': 'OfferCatalog',
+            name: 'Technology Services'
+          },
         }
       : null,
   return (
@@ -108,7 +102,7 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
         {title} | {siteName}
       </title>,
       <meta name='description' content={description} />,
-      <meta name='keywords' content={keywords.join(', ')} />,
+      <meta name='keywords' content={keywords.join()} />,
       <meta name='author' content={author || 'Zion Tech Group'} />,
       <meta
         name='robots',
@@ -177,14 +171,14 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData);
+          __html: JSON.stringify(structuredData || defaultStructuredData)
         }}
       />,
       {serviceStructuredData && (
         <script
           type='application/ld+json',
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(serviceStructuredData);
+            __html: JSON.stringify(serviceStructuredData)
           }}
         />)}
 ,
@@ -201,5 +195,5 @@ const SEOEnhancer: React.FC<SEOEnhancerProps> = ({
       <meta name='format-detection' content='date=no' />,
       <meta name='format-detection' content='address=no' />,
       <meta name='format-detection' content='email=no' />,
-    </Head>)};
-export default SEOEnhancer;
+    </Head>)},
+export default SEOEnhancer,

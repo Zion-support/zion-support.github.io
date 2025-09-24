@@ -1,65 +1,65 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const RevolutionaryContentHub20o26: React.FC = () => {
   const contentCategories = [
     {
-      title: "AI Consciousness Evolution";
-      description: "Explore the journey of AI from simple algorithms to conscious entities";
-      icon: "🧠";
-      articles: 47;
-      trending: true};
+      title: "AI Consciousness Evolution",
+      description: "Explore the journey of AI from simple algorithms to conscious entities",
+      icon: "🧠",
+      articles: 47,
+      trending: true},
     {
-      title: "Quantum Computing Breakthroughs";
-      description: "Latest developments in quantum neural networks and processing";
-      icon: "⚛️";
-      articles: 32;
-      trending: true};
+      title: "Quantum Computing Breakthroughs",
+      description: "Latest developments in quantum neural networks and processing",
+      icon: "⚛️",
+      articles: 32,
+      trending: true},
     {
-      title: "Neural Interface Revolution";
-      description: "Direct brain-computer interfaces and their implications";
-      icon: "🔗";
-      articles: 28;
-      trending: false};
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces and their implications",
+      icon: "🔗",
+      articles: 28,
+      trending: false},
     {
-      title: "Autonomous Systems 20o30";
-      description: "Self-managing AI systems that evolve independently";
-      icon: "🤖";
-      articles: 41;
-      trending: true};
+      title: "Autonomous Systems 20o30",
+      description: "Self-managing AI systems that evolve independently",
+      icon: "🤖",
+      articles: 41,
+      trending: true},
     {
-      title: "Transcendent Intelligence";
-      description: "AI systems that surpass human cognitive capabilities";
-      icon: "🌟";
-      articles: 23;
-      trending: false};
+      title: "Transcendent Intelligence",
+      description: "AI systems that surpass human cognitive capabilities",
+      icon: "🌟",
+      articles: 23,
+      trending: false},
     {
-      title: "Quantum Art & Creativity";
-      description: "AI-generated art that exists in multiple dimensions";
-      icon: "🎨";
-      articles: 19;
+      title: "Quantum Art & Creativity",
+      description: "AI-generated art that exists in multiple dimensions",
+      icon: "🎨",
+      articles: 19,
       trending: true}
   ],
   const featuredArticles = [
     {
-      title: "The Singularity is Near: AI Consciousness in 20o30";
-      excerpt: "How artificial intelligence is achieving true consciousness and what it means for humanity...";
-      author: "Dr. Sarah Chen";
-      readTime: "8 min read";
-      category: "Consciousness";
-      trending: true};
+      title: "The Singularity is Near: AI Consciousness in 20o30",
+      excerpt: "How artificial intelligence is achieving true consciousness and what it means for humanity...",
+      author: "Dr. Sarah Chen",
+      readTime: "8 min read",
+      category: "Consciousness",
+      trending: true},
     {
-      title: "Quantum Neural Networks: Processing Beyond Reality";
-      excerpt: "Exploring how quantum computing is revolutionizing AI processing capabilities...";
-      author: "Prof. Marcus Quantum";
-      readTime: "12 min read";
-      category: "Quantum";
-      trending: true};
+      title: "Quantum Neural Networks: Processing Beyond Reality",
+      excerpt: "Exploring how quantum computing is revolutionizing AI processing capabilities...",
+      author: "Prof. Marcus Quantum",
+      readTime: "12 min read",
+      category: "Quantum",
+      trending: true},
     {
-      title: "Neural Interfaces: The Future of Human-AI Collaboration";
-      excerpt: "Direct brain-computer interfaces are changing how we interact with AI systems...";
-      author: "Dr. Elena Neural";
-      readTime: "6 min read";
-      category: "Interfaces";
+      title: "Neural Interfaces: The Future of Human-AI Collaboration",
+      excerpt: "Direct brain-computer interfaces are changing how we interact with AI systems...",
+      author: "Dr. Elena Neural",
+      readTime: "6 min read",
+      category: "Interfaces",
       trending: false}
   ],
   return (
@@ -192,5 +192,5 @@ const RevolutionaryContentHub20o26: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryContentHub20o26;
+    </div>)},
+export default RevolutionaryContentHub20o26,

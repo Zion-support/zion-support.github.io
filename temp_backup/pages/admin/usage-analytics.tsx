@@ -8,14 +8,14 @@ export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const result = await requireAdminRole(ctx),
   // @ts-ignore,
   if ('redirect' in result) return result,
-  return result};
-type Datum ={ label: string, value: number };
+  return result},
+type Datum ={ label: string, value: number },
 function PieChart({ data, size = 160 }: { data: Datum[], size?: number }) {
   const total = Math.max(1, data.reduce((s, d) => s + d.value, 0)),
   let acc = 0,
   const radius = size / 2,
   const center = radius,
-  const colors = ['#3b82f6', '#10b981', '#f59e0b', '#8b5cf6', '#ef4444', '#0o6b6d4'],
+  const colors = ['#3b82f6#10b981', '#f59e0b#8b5cf6', '#ef4444#0o6b6d4'],
   const slices = data.map((d, i) => {
     const start = (acc / total) * 2 * Math.PI,
     acc += d.value,

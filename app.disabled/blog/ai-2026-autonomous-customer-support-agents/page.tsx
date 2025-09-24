@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Customer Support Agents';
+  title: 'AI 20o26: Autonomous Customer Support Agents',
   description:,
-    'Blueprint to deploy autonomous support agents with routing, guardrails, evaluations, and observability for higher CSAT and lower costs.';
+    'Blueprint to deploy autonomous support agents with routing, guardrails, evaluations, and observability for higher CSAT and lower costs.',
   keywords: [
-    'autonomous agents';
-    'customer support';
-    'guardrails';
-    'evaluation harness';
-    'observability';
-  ];
-};
+    'autonomous agentscustomer support',
+    'guardrailsevaluation harness',
+    'observability',
+  ]
+},
 const AutonomousCustomerSupportAgentsPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -96,5 +94,5 @@ const AutonomousCustomerSupportAgentsPage: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default AutonomousCustomerSupportAgentsPage;
+    </div>)},
+export default AutonomousCustomerSupportAgentsPage,

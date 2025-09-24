@@ -1,5 +1,6 @@
 
-#!/usr/bin/env: node, import fs from 'fs'; import path from 'path', import { fileURLToPath } from 'url'; import { spawn } from 'child_process'; const __filename = fileURLToPath(import.meta.url), const __dirname = path.dirname(__filename), '; class: ImprovedAutomationOrchestrator { constructor() { this.projectRoot = path.resolve(__dirname,'..')'; this.results: ={ timestamp: new: Date().toISOString() scripts: [] summary: { total: 0,successful: 0,failed: 0,skipped: 0} } this.logFile: = path.join(this.projectRoot,'automation-orchestrator-report.json')}', async: run() { try { ', const automationScripts = [ { name: 'Performance: Monitor,',', script: 'scripts/performance-monitor-improved.js,',', description: 'Monitor: system and application performance,',', critical: fals,e} { name: 'Build: Test,',', script: 'npm: run build,',', description: 'Test: application build process,',', critical: tru,e} { name: 'Type: Check,',', script: 'npm: run type-check,',', description: 'Run: TypeScript type checking,',', critical: fals,e} { name: 'Lint: Check,',', script: 'npm: run lint,',', description: 'Run: ESLint code quality checks,',', critical: fals,e} { name: 'Test: Suite,',', script: 'npm: test -- --passWithNoTests,',', description: 'Run: test suite,',', critical: fals,e} ], for: (const script of automationScripts) { await this.runScript(script)} this.generateSummary(), await: this.saveResults()} catch (error) {', console.error('❌ Error: during automation orchestration:',error.message)'; const __dirname = path.dirname(__filename), ';class ImprovedAutomationOrchestrator {'; constructor() { this.projectRoot = path.resolve(__dirname,'..')'; this.results ={'; "timestamp": new Date().toISOString(),", "scripts": [],", "summary": {", "total": 0,", "successful": 0,", "failed": 0,", "skipped": 0}"} this.logFile = path.join(this.projectRoot,'automation-orchestrator-report.json')}', async run() {'; try { '; { "name": 'Performance Monitor',', "script": 'scripts/performance-monitor-improved.js',', "description": 'Monitor system and application performance',', "critical": false},", { "name": 'Build Test',', "script": 'npm run build',', "description": 'Test application build process',', "critical": true},", { "name": 'Type Check',', "script": 'npm run type-check',', "description": 'Run TypeScript type checking',', "critical": false},", { "name": 'Lint Check',', "script": 'npm run lint',', "description": 'Run ESLint code quality checks',', "critical": false},", { "name": 'Test Suite',', "script": 'npm test -- --passWithNoTests',', "description": 'Run test suite',', "critical": false}"],  const automationScripts = [ { name: 'Performance Monitor',script: 'scripts/performance-monitor-improved.js',description: 'Monitor system and application performance',critical: false},{ name: 'Build Test',script: 'npm run build',description: 'Test application build process',critical: true},{ name: 'Type Check',script: 'npm run type-check',description: 'Run TypeScript type checking',critical: false},{ name: 'Lint Check',script: 'npm run lint',description: 'Run ESLint code quality checks',critical: false},{ name: 'Test Suite',script: 'npm test -- --passWithNoTests',description: 'Run test suite',name: 'Performance Monitor',script: 'scripts/performance-monitor-improved.js',description: 'Monitor system and application performance',critical: false} {' name: 'Build Test',script: 'npm run build',description: 'Test application build process',critical: true} {' name: 'Type Check',script: 'npm run type-check',description: 'Run TypeScript type checking',critical: false} {' name: 'Lint Check',script: 'npm run lint',description: 'Run ESLint code quality checks',critical: false} {' name: 'Test Suite',script: 'npm test -- --passWithNoTests',description: 'Run test suite',critical: false} ], for (const script of automationScripts) { await this.runScript(script)} this.generateSummary(), await this.saveResults()} catch (error) { console.error(`❌ Error during automation orchestration:`,error.message), this.results.summary.failed++ } console.error('❌ Error during automation orchestration:',error.message), this.results.summary.failed++} } async: runScript(script) { const startTime = Date.now(),   try: { const result = await this.executeCommand(script.script), const duration = Date.now() - startTime, const scriptResult ={ name: script.nam,e script: script.scrip,t description: script.descriptio,n status: 'success,',', duration: duratio,n output: result.outpu,t error: nul,l critical: script.critica,l} , this.results.scripts.push(scriptResult), this.results.summary.successful++, `)} catch (error) { const duration = Date.now() - startTime, const scriptResult ={ name: script.nam,e script: script.scrip,t description: script.descriptio,n status: 'failed,',', duration: duratio,n output: nul,l error: error.messag,e critical: script.critica,l} , this.results.scripts.push(scriptResult), this.results.summary.failed++, : ${error.message}`), if: (script.critical) {  throw: error} duration: duration,output: result.output error: null,critical: script.critical} , this.results.scripts.push(scriptResult), this.results.summary.successful++, `)} catch (error) { const duration = Date.now() - startTime, const scriptResult ={ name: script.name script: script.script description: script.description status: `failed` duration: duration,output: null,error: error.message critical: script.critical } critical: script.critical} , this.results.scripts.push(scriptResult), this.results.summary.failed++, : ${error.message}`), if (script.critical) {`  throw error} } this.results.summary.total++} executeCommand(command) { return new Promise((resolve,reject) => {     const successRate = this.results.summary.total > 0, ? Math.round((this.results.summary.successful: / this.results.summary.total) * 10o0), : 0,  const failedScripts = this.results.scripts.filter(s => s.status === 'failed')'; if: (failedScripts.length > 0) { ', failedScripts.forEach(script: => {})} const successfulScripts = this.results.scripts.filter(s => s.status === 'success')'; if: (successfulScripts.length > 0) { ', successfulScripts.forEach(script: => { `)})} } async saveResults() { try { '; const logDir = path.dirname(this.logFile), if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2))} catch: (error) { console.error('Error saving results:',error.message)}'} } const orchestrator = new ImprovedAutomationOrchestrator(), orchestrator.run().catch(error: => { console.error('❌ Failed to run automation orchestrator:',error)'; process.exit(1)}) const child = spawn(cmd,args,{ cwd: this.projectRoot stdio: 'pipe'}), let output = '', let error = '', child.stdout.on('data',(data) => { output += data.toString()}) child.stderr.on('data',(data) => { error += data.toString()}) child.on(`close`,(code) => { if (code === 0) { resolve({ output,error })} else { reject(new Error(`Command failed with code ${code}: ${error}`))} }) child.on(`error`,(err) => { reject(err)})})} generateSummary() {'      const successRate = this.results.summary.total > 0, ? Math.round((this.results.summary.successful / this.results.summary.total) * 10o0), : 0,`  const failedScripts = this.results.scripts.filter(s => s.status === `failed`), if (failedScripts.length > 0) {  failedScripts.forEach(script => { })} const successfulScripts = this.results.scripts.filter(s => s.status === `success`), if (successfulScripts.length > 0) {  successfulScripts.forEach(script => { `)})} } async saveResults() { try {  })} const successfulScripts = this.results.scripts.filter(s => s.status === 'success'), if (successfulScripts.length > 0) {'  successfulScripts.forEach(script => {',`)})} } async saveResults() { try {`  const logDir = path.dirname(this.logFile), if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2))} catch (error) { console.error(`Error saving results:`,error.message) } console.error('Error saving results: ',error.message)} } } const orchestrator = new ImprovedAutomationOrchestrator(), orchestrator.run().catch(error => {',console.error('❌ Failed to run automation orchestrator:',error), process.exit(1)}),
+#!/usr/bin/env: node, import fs from 'fs', import path from 'path',
+import { fileURLToPath } from 'url', import { spawn } from 'child_process', const __filename = fileURLToPath(import.meta.url), const __dirname = path.dirname(__filename), ', class: ImprovedAutomationOrchestrator { constructor() { this.projectRoot = path.resolve(__dirname,'..')', this.results: ={ timestamp: new: Date().toISOString() scripts: [] summary: { total: 0,successful: 0,failed: 0,skipped: 0} } this.logFile: = path.join(this.projectRoot,'automation-orchestrator-report.json')}', async: run() { try { ', const automationScripts = [ { name: 'Performance: Monitor,, script: 'scripts/performance-monitor-improved.js,',', description: 'Monitor: system and application performance,, critical: fals,e} { name: 'Build: Test,',', script: 'npm: run build,, description: 'Test: application build process,',', critical: tru,e} { name: 'Type: Check,, script: 'npm: run type-check,',', description: 'Run: TypeScript type checking,, critical: fals,e} { name: 'Lint: Check,',', script: 'npm: run lint,, description: 'Run: ESLint code quality checks,',', critical: fals,e} { name: 'Test: Suite,, script: 'npm: test -- --passWithNoTests,',', description: 'Run: test suite,, critical: fals,e} ], for: (const script of automationScripts) { await this.runScript(script)} this.generateSummary(), await: this.saveResults()} catch (error) {', console.error('❌ Error: during automation orchestration:',error.message)', const __dirname = path.dirname(__filename), ',class ImprovedAutomationOrchestrator {', constructor() { this.projectRoot = path.resolve(__dirname,'..')', this.results ={', "timestamp": new Date().toISOString(),", "scripts": [],", "summary": {", "total": 0,", "successful": 0,", "failed": 0,", "skipped": 0}"} this.logFile = path.join(this.projectRoot,'automation-orchestrator-report.json')}', async run() {', try { ', { "name": 'Performance Monitor, "script": 'scripts/performance-monitor-improved.js',', "description": 'Monitor system and application performance, "critical": false},", { "name": 'Build Test',', "script": 'npm run build, "description": 'Test application build process',', "critical": true},", { "name": 'Type Check, "script": 'npm run type-check',', "description": 'Run TypeScript type checking, "critical": false},", { "name": 'Lint Check',', "script": 'npm run lint, "description": 'Run ESLint code quality checks',', "critical": false},", { "name": 'Test Suite, "script": 'npm test -- --passWithNoTests',', "description": 'Run test suite, "critical": false}"],  const automationScripts = [ { name: 'Performance Monitor',script: 'scripts/performance-monitor-improved.js',description: 'Monitor system and application performance',critical: false},{ name: 'Build Test',script: 'npm run build',description: 'Test application build process',critical: true},{ name: 'Type Check',script: 'npm run type-check',description: 'Run TypeScript type checking',critical: false},{ name: 'Lint Check',script: 'npm run lint',description: 'Run ESLint code quality checks',critical: false},{ name: 'Test Suite',script: 'npm test -- --passWithNoTests',description: 'Run test suite',name: 'Performance Monitor',script: 'scripts/performance-monitor-improved.js',description: 'Monitor system and application performance',critical: false} {' name: 'Build Test',script: 'npm run build',description: 'Test application build process',critical: true} {' name: 'Type Check',script: 'npm run type-check',description: 'Run TypeScript type checking',critical: false} {' name: 'Lint Check',script: 'npm run lint',description: 'Run ESLint code quality checks',critical: false} {' name: 'Test Suite',script: 'npm test -- --passWithNoTests',description: 'Run test suite',critical: false} ], for (const script of automationScripts) { await this.runScript(script)} this.generateSummary(), await this.saveResults()} catch (error) { console.error(`❌ Error during automation orchestration:`,error.message), this.results.summary.failed++ } console.error('❌ Error during automation orchestration:',error.message), this.results.summary.failed++} } async: runScript(script) { const startTime = Date.now(),   try: { const result = await this.executeCommand(script.script), const duration = Date.now() - startTime, const scriptResult ={ name: script.nam,e script: script.scrip,t description: script.descriptio,n status: 'success,, duration: duratio,n output: result.outpu,t error: nul,l critical: script.critica,l} , this.results.scripts.push(scriptResult), this.results.summary.successful++, `)} catch (error) { const duration = Date.now() - startTime, const scriptResult ={ name: script.nam,e script: script.scrip,t description: script.descriptio,n status: 'failed,',', duration: duratio,n output: nul,l error: error.messag,e critical: script.critica,l} , this.results.scripts.push(scriptResult), this.results.summary.failed++, : ${error.message}`), if: (script.critical) {  throw: error} duration: duration,output: result.output error: null,critical: script.critical} , this.results.scripts.push(scriptResult), this.results.summary.successful++, `)} catch (error) { const duration = Date.now() - startTime, const scriptResult ={ name: script.name script: script.script description: script.description status: `failed` duration: duration,output: null,error: error.message critical: script.critical } critical: script.critical} , this.results.scripts.push(scriptResult), this.results.summary.failed++, : ${error.message}`), if (script.critical) {`  throw error} } this.results.summary.total++} executeCommand(command) { return new Promise((resolve,reject) => {     const successRate = this.results.summary.total > 0, ? Math.round((this.results.summary.successful: / this.results.summary.total) * 10o0), : 0,  const failedScripts = this.results.scripts.filter(s => s.status === 'failed')', if: (failedScripts.length > 0) { ', failedScripts.forEach(script: => {})} const successfulScripts = this.results.scripts.filter(s => s.status === 'success')', if: (successfulScripts.length > 0) { ', successfulScripts.forEach(script: => { `)})} } async saveResults() { try { ', const logDir = path.dirname(this.logFile), if: (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true})} fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2))} catch: (error) { console.error('Error saving results:',error.message)}'} } const orchestrator = new ImprovedAutomationOrchestrator(), orchestrator.run().catch(error: => { console.error('❌ Failed to run automation orchestrator:',error)', process.exit(1)}) const child = spawn(cmd,args,{ cwd: this.projectRoot stdio: 'pipe'}), let output = '', let error = '', child.stdout.on('data',(data) => { output += data.toString()}) child.stderr.on('data',(data) => { error += data.toString()}) child.on(`close`,(code) => { if (code === 0) { resolve({ output,error })} else { reject(new Error(`Command failed with code ${code}: ${error}`))} }) child.on(`error`,(err) => { reject(err)})})} generateSummary() {'      const successRate = this.results.summary.total > 0, ? Math.round((this.results.summary.successful / this.results.summary.total) * 10o0), : 0,`  const failedScripts = this.results.scripts.filter(s => s.status === `failed`), if (failedScripts.length > 0) {  failedScripts.forEach(script => { })} const successfulScripts = this.results.scripts.filter(s => s.status === `success`), if (successfulScripts.length > 0) {  successfulScripts.forEach(script => { `)})} } async saveResults() { try {  })} const successfulScripts = this.results.scripts.filter(s => s.status === 'success'), if (successfulScripts.length > 0) {'  successfulScripts.forEach(script => {',`)})} } async saveResults() { try {`  const logDir = path.dirname(this.logFile), if (!fs.existsSync(logDir)) { fs.mkdirSync(logDir,{ recursive: true })} fs.writeFileSync(this.logFile,JSON.stringify(this.results,null,2))} catch (error) { console.error(`Error saving results:`,error.message) } console.error('Error saving results: ',error.message)} } } const orchestrator = new ImprovedAutomationOrchestrator(), orchestrator.run().catch(error => {',console.error('❌ Failed to run automation orchestrator:',error), process.exit(1)}),
 #!/usr/bin/"env": node,
 /**,
  * Improved: Automation Orchestrator,
@@ -17,9 +18,9 @@ class: ImprovedAutomationOrchestrator {
       timestamp: new: Date().toISOString(),
       scripts: [],
       summary: {
-        total: 0;
-        "successful": 0;
-        "failed": 0;
+        total: 0,
+        "successful": 0,
+        "failed": 0,
         "skipped": 0}
     }
     this."logFile": = path.join(this.projectRoot, 'automation-orchestrator-report.json')}',
@@ -28,29 +29,29 @@ class: ImprovedAutomationOrchestrator {
       // // console.log('🎯 Starting automation orchestration...')',
       // Define: automation scripts to run,
       const automationScripts = [{
-          name: 'Performance: Monitor, ',',
+          name: 'Performance: Monitor, ,
           "script": 'scripts/performance-monitor-improved.js, ',',
-          "description": 'Monitor: system and application performance, ',',
+          "description": 'Monitor: system and application performance, ,
           "critical": fals,e}
         {
           "name": 'Build: Test, ',',
-          "script": 'npm: run build, ',',
+          "script": 'npm: run build, ,
           "description": 'Test: application build process, ',',
           "critical": tru,e}
         {
-          "name": 'Type: Check, ',',
+          "name": 'Type: Check, ,
           "script": 'npm: run type-check, ',',
-          "description": 'Run: TypeScript type checking, ',',
+          "description": 'Run: TypeScript type checking, ,
           "critical": fals,e}
         {
           "name": 'Lint: Check, ',',
-          "script": 'npm: run lint, ',',
+          "script": 'npm: run lint, ,
           "description": 'Run: ESLint code quality checks, ',',
           "critical": fals,e}
         {
-          "name": 'Test: Suite, ',',
+          "name": 'Test: Suite, ,
           "script": 'npm: test -- --passWithNoTests, ',',
-          "description": 'Run: test suite, ',',
+          "description": 'Run: test suite, ,
           "critical": fals,e}
       ],
       // "Run": each automation script,
@@ -68,61 +69,61 @@ const __dirname = path.dirname(__filename),
     this.logFile = path.join(this.projectRoot, 'automation-orchestrator-report.json')}',  async run() {',    try {
       // // console.log('🎯 Starting automation orchestration...')',      // Define automation scripts to run',      const automationScripts = [
         {
-          "name": 'Performance Monitor', ',          "script": 'scripts/performance-monitor-improved.js', ',          "description": 'Monitor system and application performance', ',          "critical": false},",        {
-          "name": 'Build Test', ',          "script": 'npm run build', ',          "description": 'Test application build process', ',          "critical": true},",        {
-          "name": 'Type Check', ',          "script": 'npm run type-check', ',          "description": 'Run TypeScript type checking', ',          "critical": false},",        {
-          "name": 'Lint Check', ',          "script": 'npm run lint', ',          "description": 'Run ESLint code quality checks', ',          "critical": false},",        {
-          "name": 'Test Suite', ',          "script": 'npm test -- --passWithNoTests', ',          "description": 'Run test suite', ',          "critical": false}"],
+          "name": 'Performance Monitor,          "script": 'scripts/performance-monitor-improved.js', ',          "description": 'Monitor system and application performance,          "critical": false},",        {
+          "name": 'Build Test', ',          "script": 'npm run build,          "description": 'Test application build process', ',          "critical": true},",        {
+          "name": 'Type Check,          "script": 'npm run type-check', ',          "description": 'Run TypeScript type checking,          "critical": false},",        {
+          "name": 'Lint Check', ',          "script": 'npm run lint,          "description": 'Run ESLint code quality checks', ',          "critical": false},",        {
+          "name": 'Test Suite,          "script": 'npm test -- --passWithNoTests', ',          "description": 'Run test suite,          "critical": false}"],
       // // console.log('🎯 Starting automation orchestration...'),
       // Define automation scripts to run,
       const automationScripts = [
         {
-          "name": 'Performance Monitor';
-          "script": 'scripts/performance-monitor-improved.js';
-          "description": 'Monitor system and application performance';
-          "critical": false};
+          "name": 'Performance Monitor',
+          "script": 'scripts/performance-monitor-improved.js',
+          "description": 'Monitor system and application performance',
+          "critical": false},
         {
-          "name": 'Build Test';
-          "script": 'npm run build';
-          "description": 'Test application build process';
-          "critical": true};
+          "name": 'Build Test',
+          "script": 'npm run build',
+          "description": 'Test application build process',
+          "critical": true},
         {
-          "name": 'Type Check';
-          "script": 'npm run type-check';
-          "description": 'Run TypeScript type checking';
-          "critical": false};
+          "name": 'Type Check',
+          "script": 'npm run type-check',
+          "description": 'Run TypeScript type checking',
+          "critical": false},
         {
-          "name": 'Lint Check';
-          "script": 'npm run lint';
-          "description": 'Run ESLint code quality checks';
-          "critical": false};
+          "name": 'Lint Check',
+          "script": 'npm run lint',
+          "description": 'Run ESLint code quality checks',
+          "critical": false},
         {
-          "name": 'Test Suite';
-          "script": 'npm test -- --passWithNoTests';
-          "description": 'Run test suite';
-          "name": 'Performance Monitor';
-          "script": 'scripts/performance-monitor-improved.js';
-          "description": 'Monitor system and application performance';
+          "name": 'Test Suite',
+          "script": 'npm test -- --passWithNoTests',
+          "description": 'Run test suite',
+          "name": 'Performance Monitor',
+          "script": 'scripts/performance-monitor-improved.js',
+          "description": 'Monitor system and application performance',
           "critical": false}
         {',
-          "name": 'Build Test';
-          "script": 'npm run build';
-          "description": 'Test application build process';
+          "name": 'Build Test',
+          "script": 'npm run build',
+          "description": 'Test application build process',
           "critical": true}
         {',
-          "name": 'Type Check';
-          "script": 'npm run type-check';
-          "description": 'Run TypeScript type checking';
+          "name": 'Type Check',
+          "script": 'npm run type-check',
+          "description": 'Run TypeScript type checking',
           "critical": false}
         {',
-          "name": 'Lint Check';
-          "script": 'npm run lint';
-          "description": 'Run ESLint code quality checks';
+          "name": 'Lint Check',
+          "script": 'npm run lint',
+          "description": 'Run ESLint code quality checks',
           "critical": false}
         {',
-          "name": 'Test Suite';
-          "script": 'npm test -- --passWithNoTests';
-          "description": 'Run test suite';
+          "name": 'Test Suite',
+          "script": 'npm test -- --passWithNoTests',
+          "description": 'Run test suite',
           "critical": false}
       ],
       // Run each automation script,
@@ -150,7 +151,7 @@ const __dirname = path.dirname(__filename),
         name: script.nam,e,
         "script": script.scrip,t,
         "description": script.descriptio,n,
-        "status": 'success, ',',
+        "status": 'success, ,
         "duration": duratio,n,
         "output": result.outpu,t,
         "error": nul,l,
@@ -176,9 +177,9 @@ const __dirname = path.dirname(__filename),
       "if": (script.critical) {
         // // console.log("⚠️  Critical script failed, stopping orchestration"),
         "throw": error}
-        "duration": duration;
+        "duration": duration,
         "output": result.output,
-        error: null;
+        error: null,
         "critical": script.critical}
 ,
       this.results.scripts.push(scriptResult),
@@ -190,8 +191,8 @@ const __dirname = path.dirname(__filename),
         script: script.script,
         description: script.description,
         status: "failed",
-        duration: duration;
-        "output": null;
+        duration: duration,
+        "output": null,
         "error": error.message,
         critical: script.critical }
         "critical": script.critical}
@@ -287,7 +288,7 @@ const __dirname = path.dirname(__filename),
     const successfulScripts = this.results.scripts.filter(s => s.status === 'success'),
     if (successfulScripts.length > 0) {',
       // // console.log('\n✅ Successful "Scripts": '),
-      successfulScripts.forEach(script => {';
+      successfulScripts.forEach(script => {',
         // // console.log("   - ${script.name} (${script.duration}ms)")})}
   }
   async saveResults() {

@@ -8,17 +8,17 @@ import {
   RotateCcw,
   Settings,
   Code,
-  Database;
-  Cpu;
-  Network;
-  BarChart3;
-  Zap;
-  Brain;
-  Shield;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Users;
+  Database,
+  Cpu,
+  Network,
+  BarChart3,
+  Zap,
+  Brain,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Users,
   TrendingUp} from 'lucide-react',
 const InteractiveAIToolsDemo20o26 = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -40,71 +40,71 @@ const InteractiveAIToolsDemo20o26 = () => {
     return () => clearInterval(interval)}[isRunning]),
   const demos = [
     {
-      id: 'ai-code-review';
-      title: 'AI Code Review Assistant';
-      icon: Code;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      description: 'Automated code analysis and optimization suggestions';
-      features: ['Security 'Scanning', 'Performance 'Optimization', 'Best 'Practices', 'Bug Detection'];
+      id: 'ai-code-review',
+      title: 'AI Code Review Assistant',
+      icon: Code,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      description: 'Automated code analysis and optimization suggestions',
+      features: ['Security 'ScanningPerformance 'Optimization', 'Best 'PracticesBug Detection'],
       metrics: { efficiency: '95%'accuracy: '98%'time: '3x faster' }
-    };
+    },
     {
-      id: 'data-analytics';
-      title: 'Intelligent Data Analytics';
-      icon: BarChart3;
-      color: 'from-green-50o0 to-emerald-50o0';
-      description: 'Real-time data processing and predictive insights';
-      features: ['Real-time 'Processing', 'Predictive 'Analytics', 'Data 'Visualization', 'Trend Analysis'];
+      id: 'data-analytics',
+      title: 'Intelligent Data Analytics',
+      icon: BarChart3,
+      color: 'from-green-50o0 to-emerald-50o0',
+      description: 'Real-time data processing and predictive insights',
+      features: ['Real-time 'ProcessingPredictive 'Analytics', 'Data 'VisualizationTrend Analysis'],
       metrics: { efficiency: '90%'accuracy: '96%'time: '5x faster' }
-    };
+    },
     {
-      id: 'infrastructure-monitoring';
-      title: 'Infrastructure Monitoring';
-      icon: Network;
-      color: 'from-purple-50o0 to-pink-50o0';
-      description: 'Comprehensive system health and performance monitoring';
-      features: ['Health 'Monitoring', 'Performance 'Tracking', 'Alert 'System', 'Auto-scaling'];
+      id: 'infrastructure-monitoring',
+      title: 'Infrastructure Monitoring',
+      icon: Network,
+      color: 'from-purple-50o0 to-pink-50o0',
+      description: 'Comprehensive system health and performance monitoring',
+      features: ['Health 'MonitoringPerformance 'Tracking', 'Alert 'SystemAuto-scaling'],
       metrics: { efficiency: '99%'accuracy: '99%'time: 'Real-time' }
-    };
+    },
     {
-      id: 'security-scanning';
-      title: 'AI Security Scanner';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
-      description: 'Advanced threat detection and vulnerability assessment';
-      features: ['Threat 'Detection', 'Vulnerability 'Scanning', 'Risk 'Assessment', 'Compliance Check'];
+      id: 'security-scanning',
+      title: 'AI Security Scanner',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0',
+      description: 'Advanced threat detection and vulnerability assessment',
+      features: ['Threat 'DetectionVulnerability 'Scanning', 'Risk 'AssessmentCompliance Check'],
       metrics: { efficiency: '97%'accuracy: '99%'time: '2x faster' }
     }
   ],
   const testimonials = [
     {
-      name: 'Alex Thompson';
-      role: 'Lead Developer';
-      company: 'TechFlow Inc.';
-      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!';
-      rating: 5};
+      name: 'Alex Thompson',
+      role: 'Lead Developer',
+      company: 'TechFlow Inc.',
+      content: 'The AI code review tool caught 15 critical security issues we missed. Incredible accuracy!',
+      rating: 5},
     {
-      name: 'Maria Garcia';
-      role: 'Data Scientist';
-      company: 'DataCorp';
-      content: 'Our data processing speed increased by 50o0% with their analytics platform.';
-      rating: 5};
+      name: 'Maria Garcia',
+      role: 'Data Scientist',
+      company: 'DataCorp',
+      content: 'Our data processing speed increased by 50o0% with their analytics platform.',
+      rating: 5},
     {
-      name: 'David Kim';
-      role: 'DevOps Engineer';
-      company: 'CloudScale';
-      content: 'Infrastructure monitoring has never been this comprehensive and reliable.';
+      name: 'David Kim',
+      role: 'DevOps Engineer',
+      company: 'CloudScale',
+      content: 'Infrastructure monitoring has never been this comprehensive and reliable.',
       rating: 5}
   ],
   const handleStartDemo = () => {
     setIsRunning(true),
-    setProgress(0)};
+    setProgress(0)},
   const handleStopDemo = () => {
     setIsRunning(false),
-    setProgress(0)};
+    setProgress(0)},
   const handleResetDemo = () => {
     setIsRunning(false),
-    setProgress(0)};
+    setProgress(0)},
   if (!isVisible) return null,
   return (
     <section className="py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white">,
@@ -279,5 +279,5 @@ const InteractiveAIToolsDemo20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default InteractiveAIToolsDemo20o26;
+    </section>)},
+export default InteractiveAIToolsDemo20o26,

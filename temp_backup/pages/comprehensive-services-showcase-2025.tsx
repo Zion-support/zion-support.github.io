@@ -3,33 +3,26 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Shield, Award, Zap, Cloud, Target, Search,
   Filter, Grid, List, DollarSign, Users, Clock, Eye, Heart} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { comprehensiveRealServices20o25 } from '../data/20o25-comprehensive-real-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const categories = [
-  'All Services';
-  'AI & Machine Learning';
-  'Customer Success';
-  'Supply Chain';
-  'Financial Planning';
-  'Sales Intelligence';
-  'HR Analytics';
-  'Decision Intelligence';
-  'Content Marketing';
-  'CRM & Customer Intelligence';
+  'All ServicesAI & Machine Learning',
+  'Customer SuccessSupply Chain',
+  'Financial PlanningSales Intelligence',
+  'HR AnalyticsDecision Intelligence',
+  'Content MarketingCRM & Customer Intelligence',
   'Business Intelligence'],
 const pricingRanges = [
-  'All Prices';
-  'Under $30o0';
-  '$30o0 - $50o0';
-  '$50o0 - $80o0';
+  'All PricesUnder $30o0',
+  '$30o0 - $50o0$50o0 - $80o0',
   '$80o0+'],
 export default function ComprehensiveServicesShowcase20o25() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
@@ -81,15 +74,15 @@ export default function ComprehensiveServicesShowcase20o25() {
     if (numPrice < 30o0) return 'Under $30o0',
     if (numPrice <= 50o0) return '$30o0 - $50o0',
     if (numPrice <= 80o0) return '$50o0 - $80o0',
-    return '$80o0+'};
+    return '$80o0+'},
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat =>,
       category.toLowerCase().includes(cat.id.toLowerCase())),
-    return categoryData ? categoryData.icon : Globe};
+    return categoryData ? categoryData.icon : Globe},
   const getCategoryColor = (category: string) => {
     const categoryData = categories.find(cat =>,
       category.toLowerCase().includes(cat.id.toLowerCase())),
-    return categoryData ? categoryData.color : 'from-gray-50o0 to-gray-60o0'};
+    return categoryData ? categoryData.color : 'from-gray-50o0 to-gray-60o0'},
   return (
     <>,
       <Head>,
@@ -127,7 +120,7 @@ export default function ComprehensiveServicesShowcase20o25() {
                 <span className="text-white">Showcase 20o25</span>,
               </h1>,
               <p className="text-xl lg:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8 leading-relaxed">,
-                Discover our portfolio of <span className="text-cyan-40o0 font-semibold">real, innovative micro SAAS services</span>;
+                Discover our portfolio of <span className="text-cyan-40o0 font-semibold">real, innovative micro SAAS services</span>,
                 cutting-edge IT solutions, and revolutionary AI platforms. Transform your business with,
                 <span className="text-blue-40o0 font-semibold"> proven technology</span> that delivers measurable results.,
               </p>,
@@ -473,5 +466,5 @@ export default function ComprehensiveServicesShowcase20o25() {
           </div>,
         </section>,
       </Layout>,
-    </>)};
-export default ComprehensiveServicesShowcase20o25;
+    </>)},
+export default ComprehensiveServicesShowcase20o25,

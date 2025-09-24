@@ -10,16 +10,16 @@ import {
   MessageSquare,
   Image,
   Video,
-  FileText;
-  Sparkles;
-  ArrowRight;
-  Play;
-  CheckCircle;
-  Star;
-  Users;
-  TrendingUp;
-  Shield;
-  Clock;
+  FileText,
+  Sparkles,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Users,
+  TrendingUp,
+  Shield,
+  Clock,
   Target} from 'lucide-react',
 interface AITool {
   id: string,
@@ -42,75 +42,75 @@ const AIToolsInteractiveDemo20o25: React.FC = () => {
   const [isDemoRunningsetIsDemoRunning] = useState(false),
   const [demoProgressetDemoProgress] = useState(0),
   const categories = [
-    { id: ''all', 'name: 'All 'Tools', 'count: 24 };
-    { id: ''content', 'name: 'Content 'Creation', 'count: 8 };
-    { id: ''coding', 'name: 'Code 'Generation', 'count: 6 };
-    { id: ''analytics', 'name: 'Analytics & 'Insights', 'count: 4 };
-    { id: ''communication', 'name: ''Communication', 'count: 3 };
-    { id: ''multimedia', 'name: ''Multimedia', 'count: 3 }
+    { id: ''allname: 'All 'Toolscount: 24 },
+    { id: ''contentname: 'Content 'Creationcount: 8 },
+    { id: ''codingname: 'Code 'Generationcount: 6 },
+    { id: ''analyticsname: 'Analytics & 'Insightscount: 4 },
+    { id: ''communicationname: ''Communicationcount: 3 },
+    { id: ''multimedianame: ''Multimediacount: 3 }
   ],
   const aiTools: AITool[] = [
     {
-      id: 'gpt-5-ultra';
-      name: 'GPT-5 Ultra';
-      description: 'Next-generation language model with advanced reasoning capabilities';
-      category: 'content';
-      icon: <Brain className="w-6 h-6"  />;
-      features: ['Advanced 'reasoning', 'Code 'generation', 'Creative 'writing', 'Data analysis'];
-      pricing: '$20/month';
-      rating: 4.9;
-      users: '2M+';
-      isPopular: true;
-      isNew: true};
+      id: 'gpt-5-ultra',
+      name: 'GPT-5 Ultra',
+      description: 'Next-generation language model with advanced reasoning capabilities',
+      category: 'content',
+      icon: <Brain className="w-6 h-6"  />,
+      features: ['Advanced 'reasoningCode 'generation', 'Creative 'writingData analysis'],
+      pricing: '$20/month',
+      rating: 4.9,
+      users: '2M+',
+      isPopular: true,
+      isNew: true},
     {
-      id: 'code-gen-pro';
-      name: 'CodeGen Pro';
-      description: 'AI-powered code generation and debugging assistant';
-      category: 'coding';
-      icon: <Code className="w-6 h-6"  />;
-      features: ['Multi-language 'support', 'Bug 'detection', 'Code 'optimization', 'Documentation'];
-      pricing: '$15/month';
-      rating: 4.8;
-      users: '50o0K+'};
+      id: 'code-gen-pro',
+      name: 'CodeGen Pro',
+      description: 'AI-powered code generation and debugging assistant',
+      category: 'coding',
+      icon: <Code className="w-6 h-6"  />,
+      features: ['Multi-language 'supportBug 'detection', 'Code 'optimizationDocumentation'],
+      pricing: '$15/month',
+      rating: 4.8,
+      users: '50o0K+'},
     {
-      id: 'analytics-ai';
-      name: 'Analytics AI';
-      description: 'Intelligent data analysis and business insights platform';
-      category: 'analytics';
-      icon: <BarChart3 className="w-6 h-6"  />;
-      features: ['Predictive 'analytics', 'Real-time 'insights', 'Custom 'dashboards', 'Automated reports'];
-      pricing: '$25/month';
-      rating: 4.7;
-      users: '30o0K+'};
+      id: 'analytics-ai',
+      name: 'Analytics AI',
+      description: 'Intelligent data analysis and business insights platform',
+      category: 'analytics',
+      icon: <BarChart3 className="w-6 h-6"  />,
+      features: ['Predictive 'analyticsReal-time 'insights', 'Custom 'dashboardsAutomated reports'],
+      pricing: '$25/month',
+      rating: 4.7,
+      users: '30o0K+'},
     {
-      id: 'chat-assistant';
-      name: 'Smart Chat Assistant';
-      description: 'Advanced conversational AI for customer support and engagement';
-      category: 'communication';
-      icon: <MessageSquare className="w-6 h-6"  />;
-      features: ['Multi-'language', 'Sentiment 'analysis', 'Integration 'APIs', 'Custom training'];
-      pricing: '$10/month';
-      rating: 4.6;
-      users: '1M+'};
+      id: 'chat-assistant',
+      name: 'Smart Chat Assistant',
+      description: 'Advanced conversational AI for customer support and engagement',
+      category: 'communication',
+      icon: <MessageSquare className="w-6 h-6"  />,
+      features: ['Multi-'languageSentiment 'analysis', 'Integration 'APIsCustom training'],
+      pricing: '$10/month',
+      rating: 4.6,
+      users: '1M+'},
     {
-      id: 'image-creator';
-      name: 'Image Creator Pro';
-      description: 'AI-powered image generation and editing tool';
-      category: 'multimedia';
-      icon: <Image className="w-6 h-6"  />;
-      features: ['Text-to-'image', 'Style 'transfer', 'Upscaling'Batch processing'];
-      pricing: '$18/month';
-      rating: 4.8;
-      users: '80o0K+'};
+      id: 'image-creator',
+      name: 'Image Creator Pro',
+      description: 'AI-powered image generation and editing tool',
+      category: 'multimedia',
+      icon: <Image className="w-6 h-6"  />,
+      features: ['Text-to-'imageStyle 'transfer', 'Upscaling'Batch processing'],
+      pricing: '$18/month',
+      rating: 4.8,
+      users: '80o0K+'},
     {
-      id: 'video-editor';
-      name: 'Video Editor AI';
-      description: 'Automated video editing and production platform';
-      category: 'multimedia';
-      icon: <Video className="w-6 h-6"  />;
-      features: ['Auto-'editing', 'Voice 'synthesis', 'Background 'removal', 'Motion graphics'];
-      pricing: '$30/month';
-      rating: 4.5;
+      id: 'video-editor',
+      name: 'Video Editor AI',
+      description: 'Automated video editing and production platform',
+      category: 'multimedia',
+      icon: <Video className="w-6 h-6"  />,
+      features: ['Auto-'editingVoice 'synthesis', 'Background 'removalMotion graphics'],
+      pricing: '$30/month',
+      rating: 4.5,
       users: '20o0K+'}
   ],
   const filteredTools = aiTools.filter(tool => {
@@ -129,7 +129,7 @@ const AIToolsInteractiveDemo20o25: React.FC = () => {
           clearInterval(interval),
           setIsDemoRunning(false),
           return 10o0}
-        return prev + 10})}20o0)};
+        return prev + 10})}20o0)},
   const selectedToolData = aiTools.find(tool => tool.id === selectedTool),
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-20">,
@@ -377,10 +377,10 @@ const AIToolsInteractiveDemo20o25: React.FC = () => {
           transition={{ duration: 0.6delay: 0.8 }}
           className="mt-20 grid grid-cols-2 md: grid-cols-4 gap-8">,
           {[
-            { icon: <Users className="w-8 h-8"  />label: 'Active 'Users', 'value: '5M+' };
-            { icon: <Target className="w-8 h-8"  />label: 'Tools 'Available', 'value: '24+' };
-            { icon: <Shield className="w-8 h-8"  />label: ''Uptime', 'value: '99.9%' };
-            { icon: <Clock className="w-8 h-8"  />label: 'Response 'Time', 'value: '<10o0ms' }
+            { icon: <Users className="w-8 h-8"  />label: 'Active 'Usersvalue: '5M+' },
+            { icon: <Target className="w-8 h-8"  />label: 'Tools 'Availablevalue: '24+' },
+            { icon: <Shield className="w-8 h-8"  />label: ''Uptimevalue: '99.9%' },
+            { icon: <Clock className="w-8 h-8"  />label: 'Response 'Timevalue: '<10o0ms' }
           ].map((statindex) => (
             <div key={index} className="text-center">,
               <div className="p-4 bg-blue-50o0/20 rounded-lg text-blue-40o0 mb-4 inline-block">,
@@ -391,5 +391,5 @@ const AIToolsInteractiveDemo20o25: React.FC = () => {
             </div>))}
         </motion.div>,
       </div>,
-    </div>)};
-export default AIToolsInteractiveDemo20o25;
+    </div>)},
+export default AIToolsInteractiveDemo20o25,

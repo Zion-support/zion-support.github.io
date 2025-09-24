@@ -1,20 +1,20 @@
 
-import React from "react";;
+import React from "react",
 import { BadgeCheck } from 'lucide-react',
-import { TalentCardAvatar } from "./TalentCardAvatar";
-import { TalentCardAvailability } from "./TalentCardAvailability";
+import { TalentCardAvatar } from "./TalentCardAvatar",
+import { TalentCardAvailability } from "./TalentCardAvailability",
 interface TalentCardHeaderProps {
-  fullName:string;
-  professionalTitle:string;
-  profilePicture?:string;
-  availabilityType:string;
+  fullName: string,
+  professionalTitle:string,
+  profilePicture?:string,
+  availabilityType:string,
   yearsExperience: number}
 ,
 export function TalentCardHeader({
-  fullName;
+  fullName,
   professionalTitle,
   profilePicture,
-  availabilityType;
+  availabilityType,
   yearsExperience} TalentCardHeaderProps) {
   return (
     <div className="flex items-start gap-4 mb-4">,
@@ -31,7 +31,7 @@ export function TalentCardHeader({
         </div>,
         <p className="text-zion-cyan text-sm">{professionalTitle}</p>,
       </div>,
-    </div>);}
+    </div>),}
  interface TalentCardHeaderProps {
   fullName: string,
 professionalTitle: string,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { ServiceVariant } from "../types/service-variants",
 export interface EmergingTech20o26ServiceV4 {
   "id": string,
@@ -31,7 +31,7 @@ export interface EmergingTech20o26ServiceV4 {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   "realImplementation": boolean,
   implementationDetails: string,
   launchDate: string,
@@ -39,797 +39,757 @@ export interface EmergingTech20o26ServiceV4 {
   rating: number,
 reviews: number,export const emergingTech20o26ServicesV4: EmergingTech20o26ServiceV4[] = [// Neuromorphic Computing Platform,
   {
-    id:;
-  neuromorphic-computing-platform';
-    "name": 'Neuromorphic Computing Platform;
-    tagline:;
-  Brain-inspired computing for next-generation AI applications';
-    "price": $1,299;
-    "period": '/month;
+    id: ,
+  neuromorphic-computing-platform',
+    "name": 'Neuromorphic Computing Platform,
+    tagline:,
+  Brain-inspired computing for next-generation AI applications',
+    "price": $1,299,
+    "period": '/month,
     "description": 'Revolutionary neuromorphic computing platform that mimics the human brain\'s neural structure, enabling ultra-efficient AI processing, real-time learning, and energy-efficient computing solutions.,
-  ';
+  ',
     features[
       'Brain-inspired neural architecture,
-  ';
-      'Ultra-low power consumption,
-  ';
+  Ultra-low power consumption,
+  ',
       'Real-time learning capabilities,
-  ';
-      'Spiking neural networks,
-  ';
+  Spiking neural networks,
+  ',
       'Adaptive processing,
-  ';
-      'Hardware acceleration,
-  ';
+  Hardware acceleration,
+  ',
       'Edge computing optimization,
-  ';
-      'AI model training,
-  ';
+  AI model training,
+  ',
       'Performance analytics,
-  ';
-      'Custom chip design,
-  '];
-    "popular": false;
-    icon:;
+  Custom chip design,
+  '],
+    "popular": false,
+    icon:,
   🧠,
-  ';
-    "color": 'from-indigo-60o0 to-purple-60o0;
-    textColor:;
+  ',
+    "color": 'from-indigo-60o0 to-purple-60o0,
+    textColor:,
   text-indigo-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/neuromorphic-computing-platform;
-    "marketPosition": 'First commercial neuromorphic computing platform. Competitive advantage: Brain-inspired architecture, ultra-efficiency, and real-time learning.;
+  ',
+    "link": 'https://ziontechgroup.com/neuromorphic-computing-platform,
+    "marketPosition": 'First commercial neuromorphic computing platform. Competitive advantage: Brain-inspired architecture, ultra-efficiency, and real-time learning.,
     "targetAudience": AI research institutions, Technology companies, Government agencies, Healthcare organizations, Automotive companies,
-  ';
-    "trialDays": 7;
-    setupTime:;
+  ',
+    "trialDays": 7,
+    setupTime:,
   1 month,
-  ';
-    "category": 'Neuromorphic Computing;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Neuromorphic Computing,
+    "realService": true,
+    technology[,
   Neuromorphic Chips,
-  ', 'Spiking Neural Networks,
+  Spiking Neural Networks,
   ', 'Python,
-  ', 'C++,
+  C++,
   ', 'CUDA,
-  ', 'AWS,
+  AWS,
   ', 'Custom Hardware,
-  '];
+  '],
     integrations['TensorFlow,
-  ', 'PyTorch,
+  PyTorch,
   ', 'AI frameworks,
-  ', 'IoT devices,
+  IoT devices,
   ', 'Edge computing platforms,
-  '];
+  '],
     useCases['AI acceleration,
-  ', 'Edge computing,
+  Edge computing,
   ', 'Autonomous systems,
-  ', 'Healthcare AI,
+  Healthcare AI,
   ', 'Robotics,
-  '];
-    "roi": Reduce AI processing costs by 80%, improve energy efficiency by 90%, accelerate AI training by 10x;
+  '],
+    "roi": Reduce AI processing costs by 80%, improve energy efficiency by 90%, accelerate AI training by 10x,
     competitors['Intel Loihi,
-  ', 'IBM TrueNorth,
+  IBM TrueNorth,
   ', 'BrainChip,
-  '];
-    "marketSize": '$8B neuromorphic computing market by 20o30;
-    growthRate:;
+  '],
+    "marketSize": '$8B neuromorphic computing market by 20o30,
+    growthRate:,
   150% annual growth,
-  ';
-    "variant": 'quantum-futuristic;
+  ',
+    "variant": 'quantum-futuristic,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Advanced neuromorphic computing platform with brain-inspired architecture and ultra-efficient AI processing.,
-  ';
-    "launchDate": '20o26-0o4-0o1;
-    "customers": 15;
-    "rating": 4.9;
-    "reviews": 12};
+  ',
+    "launchDate": '20o26-0o4-0o1,
+    "customers": 15,
+    "rating": 4.9,
+    "reviews": 12},
   // Quantum Internet Security Gateway,
   {
-    id:;
+    id:,
   quantum-internet-security-gateway,
-  ';
-    "name": 'Quantum Internet Security Gateway;
-    tagline:;
+  ',
+    "name": 'Quantum Internet Security Gateway,
+    tagline:,
   Unbreakable quantum encryption for the future internet,
-  ';
-    "price": '$899;
-    period:;
+  ',
+    "price": '$899,
+    period:,
   /month,
-  ';
+  ',
     "description": Next-generation quantum internet security gateway that provides unbreakable encryption using quantum key distribution, quantum-resistant algorithms, and post-quantum cryptography for ultra-secure communications.,
-  ';
+  ',
     features['Quantum key distribution,
-  ';
-      'Post-quantum cryptography,
-  ';
+  Post-quantum cryptography,
+  ',
       'Quantum-resistant algorithms,
-  ';
-      'Real-time encryption,
-  ';
+  Real-time encryption,
+  ',
       'Quantum random number generation,
-  ';
-      'Secure key management,
-  ';
+  Secure key management,
+  ',
       'Network monitoring,
-  ';
-      'Threat detection,
-  ';
+  Threat detection,
+  ',
       'Compliance reporting,
-  ';
-      'API integration,
-  '];
-    "popular": true;
-    icon:;
+  API integration,
+  '],
+    "popular": true,
+    icon:,
   🔐,
-  ';
-    "color": 'from-green-60o0 to-emerald-60o0;
-    textColor:;
+  ',
+    "color": 'from-green-60o0 to-emerald-60o0,
+    textColor:,
   text-green-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/quantum-internet-security-gateway;
-    "marketPosition": 'First quantum internet security gateway. Competitive advantage: Unbreakable encryption, quantum-resistant algorithms, and future-proof security.;
+  ',
+    "link": 'https://ziontechgroup.com/quantum-internet-security-gateway,
+    "marketPosition": 'First quantum internet security gateway. Competitive advantage: Unbreakable encryption, quantum-resistant algorithms, and future-proof security.,
     "targetAudience": Financial institutions, Government agencies, Healthcare organizations, Defense contractors, Technology companies,
-  ';
-    "trialDays": 14;
-    setupTime:;
+  ',
+    "trialDays": 14,
+    setupTime:,
   2 weeks,
-  ';
-    "category": 'Quantum Cybersecurity;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Quantum Cybersecurity,
+    "realService": true,
+    technology[,
   Quantum Computing,
-  ', 'Quantum Key Distribution,
+  Quantum Key Distribution,
   ', 'Post-Quantum Cryptography,
-  ', 'React,
+  React,
   ', 'Python,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  '];
+  '],
     integrations['Firewalls,
-  ', 'VPNs,
+  VPNs,
   ', 'SD-WAN,
-  ', 'Cloud platforms,
+  Cloud platforms,
   ', 'Security tools,
-  '];
+  '],
     useCases['Secure communications,
-  ', 'Data protection,
+  Data protection,
   ', 'Network security,
-  ', 'Compliance,
+  Compliance,
   ', 'Government security,
-  '];
-    "roi": Eliminate encryption vulnerabilities, ensure future-proof security, reduce security incidents by 99%;
+  '],
+    "roi": Eliminate encryption vulnerabilities, ensure future-proof security, reduce security incidents by 99%,
     competitors['Cisco,
-  ', 'Palo Alto Networks,
+  Palo Alto Networks,
   ', 'Fortinet,
-  '];
-    "marketSize": '$45B cybersecurity market;
-    growthRate:;
+  '],
+    "marketSize": '$45B cybersecurity market,
+    growthRate:,
   60% annual growth,
-  ';
-    "variant": 'quantum-futuristic;
+  ',
+    "variant": 'quantum-futuristic,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Quantum internet security gateway with unbreakable encryption and quantum-resistant algorithms.,
-  ';
-    "launchDate": '20o26-0o3-15;
-    "customers": 45;
-    "rating": 4.8;
-    "reviews": 38};
+  ',
+    "launchDate": '20o26-0o3-15,
+    "customers": 45,
+    "rating": 4.8,
+    "reviews": 38},
   // Synthetic Biology AI Platform,
   {
-    id:;
+    id:,
   synthetic-biology-ai-platform,
-  ';
-    "name": 'Synthetic Biology AI Platform;
-    tagline:;
+  ',
+    "name": 'Synthetic Biology AI Platform,
+    tagline:,
   Design and engineer life with AI-powered synthetic biology,
-  ';
-    "price": $1,599;
-    "period": '/month;
+  ',
+    "price": $1,599,
+    "period": '/month,
     "description": 'Revolutionary synthetic biology platform that combines AI, machine learning, and genetic engineering to design, simulate, and create novel biological systems for healthcare, agriculture, and industrial applications.,
-  ';
+  ',
     features['AI-powered DNA design,
-  ';
-      'Genetic circuit simulation,
-  ';
+  Genetic circuit simulation,
+  ',
       'Protein engineering,
-  ';
-      'Metabolic pathway design,
-  ';
+  Metabolic pathway design,
+  ',
       'CRISPR optimization,
-  ';
-      'Biological modeling,
-  ';
+  Biological modeling,
+  ',
       'Lab automation integration,
-  ';
-      'Safety assessment,
-  ';
+  Safety assessment,
+  ',
       'Regulatory compliance,
-  ';
-      'Expert consultation,
-  '];
-    "popular": false;
-    icon:;
+  Expert consultation,
+  '],
+    "popular": false,
+    icon:,
   🧬,
-  ';
-    "color": 'from-blue-60o0 to-cyan-60o0;
-    textColor:;
+  ',
+    "color": 'from-blue-60o0 to-cyan-60o0,
+    textColor:,
   text-blue-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/synthetic-biology-ai-platform;
-    "marketPosition": 'First AI-powered synthetic biology platform. Competitive advantage: AI-driven design, comprehensive simulation, and lab integration.;
+  ',
+    "link": 'https://ziontechgroup.com/synthetic-biology-ai-platform,
+    "marketPosition": 'First AI-powered synthetic biology platform. Competitive advantage: AI-driven design, comprehensive simulation, and lab integration.,
     "targetAudience": Biotech companies, Pharmaceutical companies, Research institutions, Agricultural companies, Industrial biotech,
-  ';
-    "trialDays": 14;
-    setupTime:;
+  ',
+    "trialDays": 14,
+    setupTime:,
   1 month,
-  ';
-    "category": 'Synthetic Biology;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Synthetic Biology,
+    "realService": true,
+    technology[,
   AI/ML,
-  ', 'Genetic Engineering,
+  Genetic Engineering,
   ', 'CRISPR,
-  ', 'Python,
+  Python,
   ', 'React,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  ', 'Lab Automation,
-  '];
+  Lab Automation,
+  '],
     integrations['Lab equipment,
-  ', 'DNA synthesizers,
+  DNA synthesizers,
   ', 'Sequencing platforms,
-  ', 'Bioinformatics tools,
-  '];
+  Bioinformatics tools,
+  '],
     useCases['Drug discovery,
-  ', 'Agricultural improvement,
+  Agricultural improvement,
   ', 'Industrial enzymes,
-  ', 'Biomaterials,
+  Biomaterials,
   ', 'Biofuels,
-  '];
-    "roi": Accelerate research by 10x, reduce development costs by 70%, increase success rates by 30o0%;
+  '],
+    "roi": Accelerate research by 10x, reduce development costs by 70%, increase success rates by 30o0%,
     competitors['Ginkgo Bioworks,
-  ', 'Twist Bioscience,
+  Twist Bioscience,
   ', 'Benchling,
-  '];
-    "marketSize": '$15B synthetic biology market;
-    growthRate:;
+  '],
+    "marketSize": '$15B synthetic biology market,
+    growthRate:,
   80% annual growth,
-  ';
-    "variant": 'ai-futuristic;
+  ',
+    "variant": 'ai-futuristic,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   AI-powered synthetic biology platform with genetic engineering and lab automation integration.,
-  ';
-    "launchDate": '20o26-0o4-15;
-    "customers": 25;
-    "rating": 4.9;
-    "reviews": 20};
+  ',
+    "launchDate": '20o26-0o4-15,
+    "customers": 25,
+    "rating": 4.9,
+    "reviews": 20},
   // Autonomous Drone Fleet Management,
   {
-    id:;
+    id:,
   autonomous-drone-fleet-management,
-  ';
-    "name": 'Autonomous Drone Fleet Management;
-    tagline:;
+  ',
+    "name": 'Autonomous Drone Fleet Management,
+    tagline:,
   Manage thousands of drones with AI-powered autonomy,
-  ';
-    "price": '$699;
-    period:;
+  ',
+    "price": '$699,
+    period:,
   /month,
-  ';
+  ',
     "description": Advanced autonomous drone fleet management platform that enables businesses to operate large-scale drone operations for delivery, surveillance, agriculture, and infrastructure inspection with zero human intervention.,
-  ';
+  ',
     features['AI-powered flight planning,
-  ';
-      'Autonomous navigation,
-  ';
+  Autonomous navigation,
+  ',
       'Fleet coordination,
-  ';
-      'Real-time monitoring,
-  ';
+  Real-time monitoring,
+  ',
       'Predictive maintenance,
-  ';
-      'Weather optimization,
-  ';
+  Weather optimization,
+  ',
       'Regulatory compliance,
-  ';
-      'Safety protocols,
-  ';
+  Safety protocols,
+  ',
       'Analytics dashboard,
-  ';
-      'API integration,
-  '];
-    "popular": true;
-    icon:;
+  API integration,
+  '],
+    "popular": true,
+    icon:,
   🚁,
-  ';
-    "color": 'from-sky-60o0 to-blue-60o0;
-    textColor:;
+  ',
+    "color": 'from-sky-60o0 to-blue-60o0,
+    textColor:,
   text-sky-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/autonomous-drone-fleet-management;
-    "marketPosition": 'First autonomous drone fleet management platform. Competitive advantage: AI autonomy, fleet coordination, and zero human intervention.;
+  ',
+    "link": 'https://ziontechgroup.com/autonomous-drone-fleet-management,
+    "marketPosition": 'First autonomous drone fleet management platform. Competitive advantage: AI autonomy, fleet coordination, and zero human intervention.,
     "targetAudience": Delivery companies, Agriculture companies, Infrastructure companies, Security firms, Surveying companies,
-  ';
-    "trialDays": 21;
-    setupTime:;
+  ',
+    "trialDays": 21,
+    setupTime:,
   2 weeks,
-  ';
-    "category": 'Autonomous Drones;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Autonomous Drones,
+    "realService": true,
+    technology[,
   Computer Vision,
-  ', 'AI/ML,
+  AI/ML,
   ', 'Autonomous Navigation,
-  ', 'React,
+  React,
   ', 'Python,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  ', 'IoT,
-  '];
+  IoT,
+  '],
     integrations['Drone manufacturers,
-  ', 'Weather APIs,
+  Weather APIs,
   ', 'Mapping services,
-  ', 'Regulatory systems,
-  '];
+  Regulatory systems,
+  '],
     useCases['Autonomous delivery,
-  ', 'Agricultural monitoring,
+  Agricultural monitoring,
   ', 'Infrastructure inspection,
-  ', 'Security surveillance,
+  Security surveillance,
   ', 'Surveying,
-  '];
-    "roi": Reduce operational costs by 60%, increase coverage by 30o0%, eliminate human error;
+  '],
+    "roi": Reduce operational costs by 60%, increase coverage by 30o0%, eliminate human error,
     competitors['DroneDeploy,
-  ', 'PrecisionHawk,
+  PrecisionHawk,
   ', 'AirMap,
-  '];
-    "marketSize": '$50B drone services market;
-    growthRate:;
+  '],
+    "marketSize": '$50B drone services market,
+    growthRate:,
   70% annual growth,
-  ';
-    "variant": 'ai-autonomous;
+  ',
+    "variant": 'ai-autonomous,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Autonomous drone fleet management platform with AI-powered navigation and fleet coordination.,
-  ';
-    "launchDate": '20o26-0o3-0o1;
-    "customers": 80;
-    "rating": 4.7;
-    "reviews": 65};
+  ',
+    "launchDate": '20o26-0o3-0o1,
+    "customers": 80,
+    "rating": 4.7,
+    "reviews": 65},
   // Brain-Computer Interface Development Kit,
   {
-    id:;
+    id:,
   brain-computer-interface-devkit,
-  ';
-    "name": 'Brain-Computer Interface Development Kit;
-    tagline:;
+  ',
+    "name": 'Brain-Computer Interface Development Kit,
+    tagline:,
   Build the future of human-computer interaction,
-  ';
-    "price": $2,499;
-    "period": '/month;
+  ',
+    "price": $2,499,
+    "period": '/month,
     "description": 'Comprehensive brain-computer interface development kit that enables developers and researchers to create applications that read brain signals, control devices with thoughts, and develop next-generation human-computer interfaces.,
-  ';
+  ',
     features['EEG signal processing,
-  ';
-      'Neural pattern recognition,
-  ';
+  Neural pattern recognition,
+  ',
       'Device control interfaces,
-  ';
-      'Real-time brain mapping,
-  ';
+  Real-time brain mapping,
+  ',
       'Machine learning models,
-  ';
-      'API development tools,
-  ';
+  API development tools,
+  ',
       'Hardware integration,
-  ';
-      'Safety protocols,
-  ';
+  Safety protocols,
+  ',
       'Documentation,
-  ';
-      'Expert support,
-  '];
-    "popular": false;
-    icon:;
+  Expert support,
+  '],
+    "popular": false,
+    icon:,
   🧠,
-  ';
-    "color": 'from-purple-60o0 to-pink-60o0;
-    textColor:;
+  ',
+    "color": 'from-purple-60o0 to-pink-60o0,
+    textColor:,
   text-purple-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/brain-computer-interface-devkit;
-    "marketPosition": 'First comprehensive BCI development kit. Competitive advantage: Complete BCI solution, neural processing, and device control.;
+  ',
+    "link": 'https://ziontechgroup.com/brain-computer-interface-devkit,
+    "marketPosition": 'First comprehensive BCI development kit. Competitive advantage: Complete BCI solution, neural processing, and device control.,
     "targetAudience": Research institutions, Technology companies, Healthcare organizations, Gaming companies, Accessibility developers,
-  ';
-    "trialDays": 30;
-    setupTime:;
+  ',
+    "trialDays": 30,
+    setupTime:,
   1 month,
-  ';
-    "category": 'Brain-Computer Interface;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Brain-Computer Interface,
+    "realService": true,
+    technology[,
   EEG Processing,
-  ', 'Neural Networks,
+  Neural Networks,
   ', 'Machine Learning,
-  ', 'Python,
+  Python,
   ', 'React,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  ', 'Hardware,
-  '];
+  Hardware,
+  '],
     integrations['EEG headsets,
-  ', 'Medical devices,
+  Medical devices,
   ', 'Gaming platforms,
-  ', 'Accessibility tools,
-  '];
+  Accessibility tools,
+  '],
     useCases['Medical research,
-  ', 'Gaming interfaces,
+  Gaming interfaces,
   ', 'Accessibility tools,
-  ', 'Prosthetic control,
+  Prosthetic control,
   ', 'Communication aids,
-  '];
-    "roi": Accelerate BCI research by 5x, reduce development costs by 80%, enable new applications;
+  '],
+    "roi": Accelerate BCI research by 5x, reduce development costs by 80%, enable new applications,
     competitors['Neuralink,
-  ', 'Kernel,
+  Kernel,
   ', 'CTRL-labs,
-  '];
-    "marketSize": '$3B BCI market by 20o30;
-    growthRate:;
+  '],
+    "marketSize": '$3B BCI market by 20o30,
+    growthRate:,
   20o0% annual growth,
-  ';
-    "variant": 'ai-futuristic;
+  ',
+    "variant": 'ai-futuristic,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Comprehensive brain-computer interface development kit with neural processing and device control.,
-  ';
-    "launchDate": '20o26-0o5-0o1;
-    "customers": 20;
-    "rating": 4.9;
-    "reviews": 15};
+  ',
+    "launchDate": '20o26-0o5-0o1,
+    "customers": 20,
+    "rating": 4.9,
+    "reviews": 15},
   // Quantum Machine Learning Platform,
   {
-    id:;
+    id:,
   quantum-machine-learning-platform,
-  ';
-    "name": 'Quantum Machine Learning Platform;
-    tagline:;
+  ',
+    "name": 'Quantum Machine Learning Platform,
+    tagline:,
   Unlock quantum advantage in machine learning,
-  ';
-    "price": $1,199;
-    "period": '/month;
+  ',
+    "price": $1,199,
+    "period": '/month,
     "description": 'Advanced quantum machine learning platform that leverages quantum computing to solve complex ML problems, accelerate training, and provide quantum advantage in optimization, classification, and pattern recognition.,
-  ';
+  ',
     features['Quantum algorithms,
-  ';
-      'Hybrid quantum-classical ML,
-  ';
+  Hybrid quantum-classical ML,
+  ',
       'Quantum feature maps,
-  ';
-      'Quantum neural networks,
-  ';
+  Quantum neural networks,
+  ',
       'Optimization solvers,
-  ';
-      'Performance benchmarking,
-  ';
+  Performance benchmarking,
+  ',
       'Model deployment,
-  ';
-      'API access,
-  ';
+  API access,
+  ',
       'Documentation,
-  ';
-      'Expert consultation,
-  '];
-    "popular": true;
-    icon:;
+  Expert consultation,
+  '],
+    "popular": true,
+    icon:,
   ⚛️,
-  ';
-    "color": 'from-cyan-60o0 to-blue-60o0;
-    textColor:;
+  ',
+    "color": 'from-cyan-60o0 to-blue-60o0,
+    textColor:,
   text-cyan-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/quantum-machine-learning-platform;
-    "marketPosition": 'First commercial quantum machine learning platform. Competitive advantage: Quantum algorithms, hybrid ML, and quantum advantage.;
+  ',
+    "link": 'https://ziontechgroup.com/quantum-machine-learning-platform,
+    "marketPosition": 'First commercial quantum machine learning platform. Competitive advantage: Quantum algorithms, hybrid ML, and quantum advantage.,
     "targetAudience": AI companies, Research institutions, Financial services, Pharmaceutical companies, Technology companies,
-  ';
-    "trialDays": 14;
-    setupTime:;
+  ',
+    "trialDays": 14,
+    setupTime:,
   2 weeks,
-  ';
-    "category": 'Quantum Machine Learning;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Quantum Machine Learning,
+    "realService": true,
+    technology[,
   Quantum Computing,
-  ', 'Machine Learning,
+  Machine Learning,
   ', 'Python,
-  ', 'Qiskit,
+  Qiskit,
   ', 'React,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  '];
+  '],
     integrations['TensorFlow,
-  ', 'PyTorch,
+  PyTorch,
   ', 'Scikit-learn,
-  ', 'Quantum hardware,
+  Quantum hardware,
   ', 'Cloud platforms,
-  '];
+  '],
     useCases['Optimization problems,
-  ', 'Pattern recognition,
+  Pattern recognition,
   ', 'Financial modeling,
-  ', 'Drug discovery,
+  Drug discovery,
   ', 'Logistics,
-  '];
-    "roi": Solve previously intractable problems, accelerate ML training by 10o0x, achieve quantum advantage;
+  '],
+    "roi": Solve previously intractable problems, accelerate ML training by 10o0x, achieve quantum advantage,
     competitors['IBM Qiskit,
-  ', 'Google Cirq,
+  Google Cirq,
   ', 'Rigetti,
-  '];
-    "marketSize": '$20B quantum computing market;
-    growthRate:;
+  '],
+    "marketSize": '$20B quantum computing market,
+    growthRate:,
   120% annual growth,
-  ';
-    "variant": 'quantum-futuristic;
+  ',
+    "variant": 'quantum-futuristic,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Advanced quantum machine learning platform with quantum algorithms and hybrid ML capabilities.,
-  ';
-    "launchDate": '20o26-0o4-0o1;
-    "customers": 35;
-    "rating": 4.8;
-    "reviews": 28};
+  ',
+    "launchDate": '20o26-0o4-0o1,
+    "customers": 35,
+    "rating": 4.8,
+    "reviews": 28},
   // Autonomous Vehicle AI Platform,
   {
-    id:;
+    id:,
   autonomous-vehicle-ai-platform-20o26,
-  ';
-    "name": 'Autonomous Vehicle AI Platform 20o26;
-    tagline:;
+  ',
+    "name": 'Autonomous Vehicle AI Platform 20o26,
+    tagline:,
   Next-generation AI for fully autonomous vehicles,
-  ';
-    "price": $1,899;
-    "period": '/month;
+  ',
+    "price": $1,899,
+    "period": '/month,
     "description": 'Revolutionary autonomous vehicle AI platform that provides level 5 autonomy capabilities, advanced perception, decision-making, and safety systems for cars, trucks, drones, and robots.,
-  ';
+  ',
     features['Level 5 autonomy,
-  ';
-      'Advanced perception systems,
-  ';
+  Advanced perception systems,
+  ',
       'Real-time decision making,
-  ';
-      'Safety protocols,
-  ';
+  Safety protocols,
+  ',
       'Predictive maintenance,
-  ';
-      'Fleet management,
-  ';
+  Fleet management,
+  ',
       'Regulatory compliance,
-  ';
-      'Performance analytics,
-  ';
+  Performance analytics,
+  ',
       'OTA updates,
-  ';
-      'Expert support,
-  '];
-    "popular": true;
-    icon:;
+  Expert support,
+  '],
+    "popular": true,
+    icon:,
   🚗,
-  ';
-    "color": 'from-red-60o0 to-orange-60o0;
-    textColor:;
+  ',
+    "color": 'from-red-60o0 to-orange-60o0,
+    textColor:,
   text-red-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/autonomous-vehicle-ai-platform-20o26;
-    "marketPosition": 'First level 5 autonomous vehicle AI platform. Competitive advantage: Full autonomy, advanced safety, and comprehensive AI.;
+  ',
+    "link": 'https://ziontechgroup.com/autonomous-vehicle-ai-platform-20o26,
+    "marketPosition": 'First level 5 autonomous vehicle AI platform. Competitive advantage: Full autonomy, advanced safety, and comprehensive AI.,
     "targetAudience": Automotive companies, Trucking companies, Delivery services, Robotaxi companies, Industrial automation,
-  ';
-    "trialDays": 30;
-    setupTime:;
+  ',
+    "trialDays": 30,
+    setupTime:,
   3 months,
-  ';
-    "category": 'Autonomous Vehicles;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Autonomous Vehicles,
+    "realService": true,
+    technology[,
   Computer Vision,
-  ', 'AI/ML,
+  AI/ML,
   ', 'Autonomous Navigation,
-  ', 'React,
+  React,
   ', 'Python,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  ', 'IoT,
-  '];
+  IoT,
+  '],
     integrations['Vehicle systems,
-  ', 'Sensor arrays,
+  Sensor arrays,
   ', 'Mapping services,
-  ', 'Traffic systems,
-  '];
+  Traffic systems,
+  '],
     useCases['Self-driving cars,
-  ', 'Autonomous trucks,
+  Autonomous trucks,
   ', 'Delivery robots,
-  ', 'Industrial automation,
+  Industrial automation,
   ', 'Mobility services,
-  '];
-    "roi": Eliminate driver costs, improve safety by 99%, increase efficiency by 30o0%;
+  '],
+    "roi": Eliminate driver costs, improve safety by 99%, increase efficiency by 30o0%,
     competitors['Waymo,
-  ', 'Tesla,
+  Tesla,
   ', 'Cruise,
-  '];
-    "marketSize": '$2T autonomous vehicle market by 20o30;
-    growthRate:;
+  '],
+    "marketSize": '$2T autonomous vehicle market by 20o30,
+    growthRate:,
   150% annual growth,
-  ';
-    "variant": 'ai-autonomous;
+  ',
+    "variant": 'ai-autonomous,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Next-generation autonomous vehicle AI platform with level 5 autonomy and advanced safety systems.,
-  ';
-    "launchDate": '20o26-0o6-0o1;
-    "customers": 15;
-    "rating": 4.9;
-    "reviews": 12};
+  ',
+    "launchDate": '20o26-0o6-0o1,
+    "customers": 15,
+    "rating": 4.9,
+    "reviews": 12},
   // Digital Twin Platform for Smart Cities,
   {
-    id:;
+    id:,
   digital-twin-smart-cities,
-  ';
-    "name": 'Digital Twin Platform for Smart Cities;
-    tagline:;
+  ',
+    "name": 'Digital Twin Platform for Smart Cities,
+    tagline:,
   Create living digital replicas of entire cities,
-  ';
-    "price": $1,499;
-    "period": '/month;
+  ',
+    "price": $1,499,
+    "period": '/month,
     "description": 'Comprehensive digital twin platform that creates real-time digital replicas of cities, enabling urban planning, infrastructure monitoring, traffic optimization, and citizen services through AI-powered simulation and analytics.,
-  ';
+  ',
     features['3D city modeling,
-  ';
-      'Real-time data integration,
-  ';
+  Real-time data integration,
+  ',
       'IoT sensor networks,
-  ';
-      'Traffic optimization,
-  ';
+  Traffic optimization,
+  ',
       'Infrastructure monitoring,
-  ';
-      'Citizen services,
-  ';
+  Citizen services,
+  ',
       'Predictive analytics,
-  ';
-      'Urban planning tools,
-  ';
+  Urban planning tools,
+  ',
       'API access,
-  ';
-      'Custom dashboards,
-  '];
-    "popular": false;
-    icon:;
+  Custom dashboards,
+  '],
+    "popular": false,
+    icon:,
   🏙️,
-  ';
-    "color": 'from-gray-60o0 to-slate-60o0;
-    textColor:;
+  ',
+    "color": 'from-gray-60o0 to-slate-60o0,
+    textColor:,
   text-gray-40o0,
-  ';
-    "link": 'https://ziontechgroup.com/digital-twin-smart-cities;
-    "marketPosition": 'First comprehensive smart city digital twin platform. Competitive advantage: Complete city modeling, real-time data, and predictive analytics.;
+  ',
+    "link": 'https://ziontechgroup.com/digital-twin-smart-cities,
+    "marketPosition": 'First comprehensive smart city digital twin platform. Competitive advantage: Complete city modeling, real-time data, and predictive analytics.,
     "targetAudience": City governments, Urban planners, Infrastructure companies, Technology companies, Real estate developers,
-  ';
-    "trialDays": 21;
-    setupTime:;
+  ',
+    "trialDays": 21,
+    setupTime:,
   2 months,
-  ';
-    "category": 'Digital Twin;
-    "realService": true;
-    technology[;
+  ',
+    "category": 'Digital Twin,
+    "realService": true,
+    technology[,
   3D Modeling,
-  ', 'IoT,
+  IoT,
   ', 'AI/ML,
-  ', 'React,
+  React,
   ', 'Python,
-  ', 'PostgreSQL,
+  PostgreSQL,
   ', 'AWS,
-  ', 'GIS,
-  '];
+  GIS,
+  '],
     integrations['IoT sensors,
-  ', 'Traffic systems,
+  Traffic systems,
   ', 'Utility networks,
-  ', 'Government databases,
-  '];
+  Government databases,
+  '],
     useCases['Urban planning,
-  ', 'Traffic management,
+  Traffic management,
   ', 'Infrastructure monitoring,
-  ', 'Citizen services,
+  Citizen services,
   ', 'Emergency response,
-  '];
-    "roi": Reduce infrastructure costs by 30%, improve traffic flow by 40%, enhance citizen satisfaction by 60%;
+  '],
+    "roi": Reduce infrastructure costs by 30%, improve traffic flow by 40%, enhance citizen satisfaction by 60%,
     competitors['Bentley Systems,
-  ', 'Autodesk,
+  Autodesk,
   ', 'Siemens,
-  '];
-    "marketSize": '$30B smart city market;
-    growthRate:;
+  '],
+    "marketSize": '$30B smart city market,
+    growthRate:,
   90% annual growth,
-  ';
-    "variant": 'ai-futuristic;
+  ',
+    "variant": 'ai-futuristic,
     "contactInfo": {
-      mobile:;
+      mobile:,
   +1 30o2 464 0950,
-  ';
-      "email": 'kleber@ziontechgroup.com;
-      address:;
+  ',
+      "email": 'kleber@ziontechgroup.com,
+      address:,
   364 E Main St STE 10o08 Middletown DE 19709,
-  ';
-      "website": 'https: //ziontechgroup.com};
-    "realImplementation": true;
-    implementationDetails:;
+  ',
+      "website": 'https: //ziontechgroup.com},
+    "realImplementation": true,
+    implementationDetails:,
   Comprehensive digital twin platform for smart cities with real-time modeling and predictive analytics.,
-  ';
-    "launchDate": '20o26-0o5-15;
-    "customers": 30;
-    "rating": 4.8;
+  ',
+    "launchDate": '20o26-0o5-15,
+    "customers": 30,
+    "rating": 4.8,
     "reviews": 25]}}
 ,

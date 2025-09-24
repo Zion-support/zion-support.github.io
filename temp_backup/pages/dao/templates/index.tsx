@@ -5,10 +5,10 @@ type Template = {
   code: string,
   title: string,
   category: string,
-  description: string};
+  description: string},
 type ApiResponse = {
   templates: Template[],
-  byCategory: Record<string Template[]>};
+  byCategory: Record<string Template[]>},
 export default function ZgpTemplateLibraryPage() {
   const [data, setData] = useState<ApiResponse | null>(null),
   const [query, setQuery] = useState(''),
@@ -22,7 +22,7 @@ export default function ZgpTemplateLibraryPage() {
     if (!query) return items,
     const q = query.toLowerCase(),
     return items.filter(t =>,
-      (t.title + t.code + t.description).toLowerCase().includes(q))};
+      (t.title + t.code + t.description).toLowerCase().includes(q))},
   const categories = Object.keys(data?.byCategory || {}),
   return (
     <div className='min-h-screen px-6 py-12 max-w-5xl mx-auto'>,

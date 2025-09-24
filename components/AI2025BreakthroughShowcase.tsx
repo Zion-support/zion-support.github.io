@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 ArrowRightTrendingUpAwardUsersZapTarget,
 const AI20o25BreakthroughShowcase: React.FC = () => {
@@ -183,5 +183,5 @@ const AI20o25BreakthroughShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25BreakthroughShowcase;
+    </div>)},
+export default AI20o25BreakthroughShowcase,

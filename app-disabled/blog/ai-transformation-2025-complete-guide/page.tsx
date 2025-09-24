@@ -1,46 +1,41 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  Bookmark;
-  Share2;
-  BookOpen;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Award;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Bookmark,
+  Share2,
+  BookOpen,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Award,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'AI Transformation 20o25: The Complete Guide to Enterprise Success';
+  title: 'AI Transformation 20o25: The Complete Guide to Enterprise Success',
   description:,
-    'Discover the ultimate roadmap for AI transformation in 20o25. Learn proven strategies, implementation frameworks, and real-world success stories that will revolutionize your business.';
+    'Discover the ultimate roadmap for AI transformation in 20o25. Learn proven strategies, implementation frameworks, and real-world success stories that will revolutionize your business.',
   keywords: [
-    'AI Transformation';
-    'Digital Transformation';
-    'Enterprise';
-    'Automation';
-    'Machine Learning';
-    '20o25';
-  ];
+    'AI TransformationDigital Transformation',
+    'EnterpriseAutomation',
+    'Machine Learning20o25',
+  ],
   openGraph: {
-    title: 'AI Transformation 20o25: The Complete Guide to Enterprise Success';
+    title: 'AI Transformation 20o25: The Complete Guide to Enterprise Success',
     description:,
-      'Discover the ultimate roadmap for AI transformation in 20o25. Learn proven strategies, implementation frameworks, and real-world success stories.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover the ultimate roadmap for AI transformation in 20o25. Learn proven strategies, implementation frameworks, and real-world success stories.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI Transformation';
-      'Digital Transformation';
-      'Enterprise';
-      'Automation';
-    ];
-  };
-};
+      'AI TransformationDigital Transformation',
+      'EnterpriseAutomation',
+    ]
+  },
+},
 export default function AITransformation20o25Guide() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -196,7 +191,7 @@ export default function AITransformation20o25Guide() {
                     systems and processes,
                   </li>,
                   <li>,
-                    AI Readiness Evaluation: Assessment of data quality;
+                    AI Readiness Evaluation: Assessment of data quality,
                     infrastructure, and team capabilities,
                   </li>,
                   <li>,
@@ -230,7 +225,7 @@ export default function AITransformation20o25Guide() {
                 </h4>,
                 <ul className='list-disc list-inside text-gray-70o0 space-y-1'>,
                   <li>,
-                    AI Talent Acquisition: Hiring data scientists, ML engineers;
+                    AI Talent Acquisition: Hiring data scientists, ML engineers,
                     and AI strategists,
                   </li>,
                   <li>,
@@ -342,7 +337,7 @@ export default function AITransformation20o25Guide() {
                     Form AI Steering Committee,
                   </h4>,
                   <p className='text-gray-60o0'>,
-                    Include executives, IT leaders, and business stakeholders;
+                    Include executives, IT leaders, and business stakeholders,
                     define AI strategy and governance,
                   </p>,
                 </div>,
@@ -372,7 +367,7 @@ export default function AITransformation20o25Guide() {
           </p>,
           <p className='text-gray-70o0 leading-relaxed mb-8'>,
             The key to success lies in taking a strategic, phased approach that,
-            balances ambition with pragmatism. Start with foundation-building;
+            balances ambition with pragmatism. Start with foundation-building,
             execute successful pilots, and scale systematically across the,
             organization.,
           </p>,
@@ -389,7 +384,7 @@ export default function AITransformation20o25Guide() {
             </h3>,
             <p className='text-lg mb-6 opacity-90'>,
               At Zion Tech Group, we specialize in helping organizations,
-              navigate their AI transformation journey. Our proven frameworks;
+              navigate their AI transformation journey. Our proven frameworks,
               experienced team, and comprehensive approach ensure your AI,
               initiatives deliver measurable results.,
             </p>,

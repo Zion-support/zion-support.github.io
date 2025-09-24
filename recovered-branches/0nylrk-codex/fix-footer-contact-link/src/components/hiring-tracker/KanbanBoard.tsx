@@ -21,24 +21,24 @@ interface DropResult {
 // Define the kanban board columns based on application statuses,
 const COLUMNS = [
   {
-    id: "new";
-    title: "Applied";
-    description: "New applications"};
+    id: "new",
+    title: "Applied",
+    description: "New applications"},
   {
-    id: "shortlisted";
-    title: "Shortlisted";
-    description: "Candidates selected for review"};
+    id: "shortlisted",
+    title: "Shortlisted",
+    description: "Candidates selected for review"},
   {
-    id: "interview";
-    title: "Interview";
-    description: "Scheduled for interview"};
+    id: "interview",
+    title: "Interview",
+    description: "Scheduled for interview"},
   {
-    id: "hired";
-    title: "Hired";
-    description: "Successful candidates"};
+    id: "hired",
+    title: "Hired",
+    description: "Successful candidates"},
   {
-    id: "rejected";
-    title: "Rejected";
+    id: "rejected",
+    title: "Rejected",
     description: "Not moving forward"}],
 interface KanbanBoardProps {
   jobId?: string}
@@ -76,21 +76,21 @@ export function KanbanBoard({ jobId }: KanbanBoardProps) {
     const [removed] = sourceColumn.splice(source.index1),
     destColumn.splice(destination.index0{ ...removedstatus: newStatus }),
     setColumns({
-      ...columns;
-      [source.droppableId]: sourceColumn;
+      ...columns,
+      [source.droppableId]: sourceColumn,
       [destination.droppableId]: destColumn}),
     // Update status in the database,
     try {
       await updateApplicationStatus(draggableIdnewStatus),
       toast({
-        title: "Status updated";
+        title: "Status updated",
         description: `Candidate moved to ${COLUMNS.find(col => col.id === newStatus)?.title}`})} catch (error) {
       // Revert the UI changes if the database update fails,
       toast({
-        title: "Failed to update status";
-        description: "Please try again";
+        title: "Failed to update status",
+        description: "Please try again",
         variant: "destructive"})}
-  };
+  },
   if (isLoading) {
     return (
       <div className={`grid grid-cols-1 ${!isMobile ? 'md: grid-cols-3 lg:grid-cols-5' : ''} gap-4`}>,

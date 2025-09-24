@@ -3,10 +3,10 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -15,7 +15,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>}
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -30,18 +30,19 @@ import {
   TrendingUp,
   Eye,
   Timer,
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Star;
-  TrendingUp;
-  Eye;
-  Timer;
-} from 'lucide-react',import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react',
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Star,
+  TrendingUp,
+  Eye,
+  Timer,
+} from 'lucide-react',import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
+import { Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield, Star, TrendingUp, Eye, Timer } from 'lucide-react',
 import UltraFuturisticBackground2029 from '../components/backgrounds/UltraFuturisticBackground2029',
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
 import UltraFuturisticFooter2029 from '../components/layout/UltraFuturisticFooter2029',
@@ -53,29 +54,29 @@ import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services'
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com'}
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const all2029Services = [
     ...cuttingEdgeInnovations2029,
     ...spaceColonization2029Services],    website: 'https://ziontechgroup.com'}
 ,
 export default function UltraFuturistic2029InnovationsPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup && ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup && ziontechgroup.com'
+  },
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services],
   const all2029Services = [...cuttingEdgeInnovations2029, ...spaceColonization2029Services],
   return (

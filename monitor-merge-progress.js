@@ -10,11 +10,11 @@ function checkProgress() {
       return}
 ,
     // Read the log file,
-    const logContent = fs.readFileSync('merge-all-prs.log', 'utf8'),
+    const logContent = fs.readFileSync('merge-all-prs.logutf8'),
     const lines = logContent.split('\n'),
     // Count different types of operations,
     const totalBranches = (logContent.match(/Found (\d+) branches to process/g) || []).pop()?.match(/(\d+)/)?.[1] || 'Unknown',
-    const processed = (logContent.match(/Progress: (\d+)\/(\d+)/g) || []).pop()?.match(/(\d+)\/(\d+)/) || ['0', '0'],
+    const processed = (logContent.match(/Progress: (\d+)\/(\d+)/g) || []).pop()?.match(/(\d+)\/(\d+)/) || ['00'],
     const merged = (logContent.match(/Successfully merged/g) || []).length,
     const conflictsResolved = (logContent.match(/Resolved conflicts/g) || []).length,
     const failed = (logContent.match(/Failed to merge/g) || []).length,

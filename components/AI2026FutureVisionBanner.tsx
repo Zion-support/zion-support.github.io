@@ -22,7 +22,7 @@ const AI20o26FutureVisionBanner = () => {
           </h1>,
           <p className='text-2xl md:text-3xl mb-10 max-w-5xl mx-auto leading-relaxed text-gray-20o0'>,
             Step into the future with revolutionary AI technologies that will,
-            transform every aspect of human life. Experience 'tomorrow', 's,
+            transform every aspect of human life. Experience 'tomorrows,
             innovations today.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-6 justify-center mb-16'>,
@@ -70,5 +70,5 @@ const AI20o26FutureVisionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26FutureVisionBanner;
+    </section>)},
+export default AI20o26FutureVisionBanner,

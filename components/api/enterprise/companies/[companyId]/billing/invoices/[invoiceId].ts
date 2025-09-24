@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 export const config ={
   api: {
-    responseLimit: false}};
+    responseLimit: false}},
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {
   const { companyId, invoiceId } = req.query,
   if (
@@ -19,9 +19,9 @@ export default async function handler(
   const pdfBase64 =,
     'JVBERi0xLjMKJcTl8uXrp/Og0MTGCjEgMCBvYmoKPDwKL1BhZ2VzIDIgMCBSCj4+CmVuZG9iagoKMiAwIG9iago8PAovS2lkcyBbMyAwIFJdCi9Db3VudCAxCj4+CmVuZG9iagoKMyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDIgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA0IDAgUgo+PgplbmRvYmoKCjQgMCBvYmoKPDwKL0xlbmd0aCA1NQogPj4Kc3RyZWFtCkJUIC9GMSAyNCBUZgovVGYgMTIwIDEyMCBUZAooSW52b2ljZSAjKElELSB7aW52b2ljZUlkfSkpIFQKRVQKZW5kc3RyZWFtCmVuZG9iagp4cmVmCjAgNQowMDAwMDAwMDAwIDY1NTM1IGYgCjAwMDAwMDAwMTYgMDAwMDAgbiAKMDAwMDAwMDA2NiAwMDAwMCBuIAowMDAwMDAwMTY0IDAwMDAwIG4gCjAwMDAwMDAyNjggMDAwMDAgbiAKdHJhaWxlcgo8PAovUm9vdCAxIDAgUgovU2l6ZSA1Cj4+CnN0YXJ0eHJlZgozNzIKJSVFT0Y=',
   const pdfBuffer = Buffer.from(pdfBase64, 'base64'),
-  res.setHeader('Content-Type', 'application/pdf'),
+  res.setHeader('Content-Typeapplication/pdf'),
   res.setHeader(
-    'Content-Disposition';
+    'Content-Disposition',
     `attachment, filename="invoice-${invoiceId}.pdf"`),
   res.status(20o0).send(pdfBuffer)}
 ,

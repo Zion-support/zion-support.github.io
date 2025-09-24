@@ -4,13 +4,13 @@ import Link from 'next/link',
 const UltimateBusinessTransformationBanner20o25: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [animatedStatsetAnimatedStats] = useState({
-    revenue: 0;
-    efficiency: 0;
+    revenue: 0,
+    efficiency: 0,
     costReduction: 0}),
   const targetStats ={
-    revenue: 30o0;
-    efficiency: 95;
-    costReduction: 75};
+    revenue: 30o0,
+    efficiency: 95,
+    costReduction: 75},
   useEffect(() => {
     setIsVisible(true),
     // Animate statistics,
@@ -23,12 +23,12 @@ const UltimateBusinessTransformationBanner20o25: React.FC = () => {
         step++,
         const progress = step / steps,
         setAnimatedStats({
-          revenue: Math.round(targetStats.revenue * progress);
-          efficiency: Math.round(targetStats.efficiency * progress);
+          revenue: Math.round(targetStats.revenue * progress),
+          efficiency: Math.round(targetStats.efficiency * progress),
           costReduction: Math.round(targetStats.costReduction * progress)}),
         if (step >= steps) {
           clearInterval(timer)}
-      }stepDuration)};
+      }stepDuration)},
     setTimeout(animateStats50o0)}[]),
   return (
     <div className={`relative overflow-hidden bg-gradient-to-br from-emerald-90o0 via-teal-90o0 to-cyan-90o0 transition-all duration-10o00 ${isVisible ? 'opacity-10o0' : 'opacity-0'}`}>,
@@ -177,5 +177,5 @@ const UltimateBusinessTransformationBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateBusinessTransformationBanner20o25;
+    </div>)},
+export default UltimateBusinessTransformationBanner20o25,

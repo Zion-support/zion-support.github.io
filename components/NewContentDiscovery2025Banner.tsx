@@ -84,5 +84,5 @@ const NewContentDiscovery20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContentDiscovery20o25Banner;
+    </section>)},
+export default NewContentDiscovery20o25Banner,

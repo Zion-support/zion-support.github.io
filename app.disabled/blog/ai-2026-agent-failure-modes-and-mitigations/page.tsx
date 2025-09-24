@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Failure Modes and Mitigations';
+  title: 'AI 20o26: Agent Failure Modes and Mitigations',
   description:,
-    'Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails.';
+    'Common failure modes for autonomous agents and concrete mitigations using policy-as-code, evals, and guardrails.',
   keywords: [
-    'agent failures';
-    'mitigations';
-    'policy-as-code';
-    'evals';
-    'guardrails';
-  ];
-};
+    'agent failuresmitigations',
+    'policy-as-codeevals',
+    'guardrails',
+  ]
+},
 export default function AgentFailureModesPage() {
   return (
     <main className='min-h-screen bg-white'>,

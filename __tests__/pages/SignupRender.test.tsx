@@ -1,4 +1,6 @@
-import React from react',import { render, screen } from @testing-library/react',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import Signup from @/src/pages/Signup',
+import React from react',
+import { render, screen } from @testing-library/react',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',
+import Signup from @/src/pages/Signup',
 describe('Signup page', () => {'  it('renders all form fields', () => {'    render(
       <MemoryRouterProvider>,
         <Signup  />,

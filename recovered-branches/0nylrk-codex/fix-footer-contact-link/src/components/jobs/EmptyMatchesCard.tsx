@@ -6,7 +6,7 @@ export interface EmptyMatchesCardProps {
   isProcessing: boolean}
 ,
 export function EmptyMatchesCard({
-  onRefreshisProcessing;
+  onRefreshisProcessing,
 }: EmptyMatchesCardProps) {
   return (
     <Card className='p-6 text-center border-dashed border-2 bg-muted/30'>,

@@ -14,52 +14,52 @@ const UltimateContentCarousel20o25 = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      id: 1;
-      title: "AI-Powered Business Automation";
-      subtitle: "Transform Your Operations";
-      description: "Revolutionary AI systems that automate complex business processesreduce costs by 60%and increase productivity by 30o0%.";
-      image: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=80o0&h=60o0&fit=crop";
-      cta: "Start Automation";
-      href: "/automation";
-      stats: { value: "30o0%"label: "Productivity Increase" };
-      features: ["Smart Workflows"Cost Reduction"Real-time Analytics"]};
+      id: 1,
+      title: "AI-Powered Business Automation",
+      subtitle: "Transform Your Operations",
+      description: "Revolutionary AI systems that automate complex business processesreduce costs by 60%and increase productivity by 30o0%.",
+      image: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=80o0&h=60o0&fit=crop",
+      cta: "Start Automation",
+      href: "/automation",
+      stats: { value: "30o0%"label: "Productivity Increase" },
+      features: ["Smart Workflows"Cost Reduction"Real-time Analytics"]},
     {
-      id: 2;
-      title: "Quantum Computing Solutions";
-      subtitle: "Next-Gen Processing Power";
-      description: "Harness the power of quantum computing for complex problem-solvingoptimizationand breakthrough innovations.";
-      image: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=80o0&h=60o0&fit=crop";
-      cta: "Explore Quantum";
-      href: "/quantum";
-      stats: { value: "10x"label: "Processing Speed" };
-      features: ["Quantum Algorithms"Optimization"Breakthrough Innovation"]};
+      id: 2,
+      title: "Quantum Computing Solutions",
+      subtitle: "Next-Gen Processing Power",
+      description: "Harness the power of quantum computing for complex problem-solvingoptimizationand breakthrough innovations.",
+      image: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=80o0&h=60o0&fit=crop",
+      cta: "Explore Quantum",
+      href: "/quantum",
+      stats: { value: "10x"label: "Processing Speed" },
+      features: ["Quantum Algorithms"Optimization"Breakthrough Innovation"]},
     {
-      id: 3;
-      title: "Neural Interface Technology";
-      subtitle: "Direct Brain-Computer Interaction";
-      description: "Revolutionary neural interfaces that enable direct communication between human brain and AI systems.";
-      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80o0&h=60o0&fit=crop";
-      cta: "Experience Neural";
-      href: "/neural";
-      stats: { value: "99.9%"label: "Accuracy Rate" };
-      features: ["Brain-Computer Interface"Real-time Processing"Enhanced Control"]};
+      id: 3,
+      title: "Neural Interface Technology",
+      subtitle: "Direct Brain-Computer Interaction",
+      description: "Revolutionary neural interfaces that enable direct communication between human brain and AI systems.",
+      image: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=80o0&h=60o0&fit=crop",
+      cta: "Experience Neural",
+      href: "/neural",
+      stats: { value: "99.9%"label: "Accuracy Rate" },
+      features: ["Brain-Computer Interface"Real-time Processing"Enhanced Control"]},
     {
-      id: 4;
-      title: "Autonomous Business Systems";
-      subtitle: "Self-Managing AI";
-      description: "AI systems that learnadaptand manage your business operations autonomously with minimal human intervention.";
-      image: "https://images.unsplash.com/photo-148582740o4703-89b55fcc595e?w=80o0&h=60o0&fit=crop";
-      cta: "Go Autonomous";
-      href: "/autonomous";
-      stats: { value: "24/7"label: "Autonomous Operation" };
+      id: 4,
+      title: "Autonomous Business Systems",
+      subtitle: "Self-Managing AI",
+      description: "AI systems that learnadaptand manage your business operations autonomously with minimal human intervention.",
+      image: "https://images.unsplash.com/photo-148582740o4703-89b55fcc595e?w=80o0&h=60o0&fit=crop",
+      cta: "Go Autonomous",
+      href: "/autonomous",
+      stats: { value: "24/7"label: "Autonomous Operation" },
       features: ["Self-Learning"Adaptive Systems"Minimal Intervention"]}
   ],
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % slides.length)};
+    setCurrentSlide((prev) => (prev + 1) % slides.length)},
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)};
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length)},
   const goToSlide = (index: number) => {
-    setCurrentSlide(index)};
+    setCurrentSlide(index)},
   return (
     <motion.section,
       initial={{ opacity: 0, y: 50 }}
@@ -230,5 +230,5 @@ const UltimateContentCarousel20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>)};
-export default UltimateContentCarousel20o25;
+    </motion.section>)},
+export default UltimateContentCarousel20o25,

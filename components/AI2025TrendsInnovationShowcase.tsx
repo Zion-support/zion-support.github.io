@@ -10,14 +10,14 @@ import {
   Shield,
   Users,
   BarChart3,
-  Cpu;
-  Database;
-  Cloud;
-  Smartphone;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Lightbulb;
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Lightbulb,
   Target} from 'lucide-react',
 const AI20o25TrendsInnovationShowcase = () => {
   const [activeTrendsetActiveTrend] = useState(0),
@@ -29,64 +29,64 @@ const AI20o25TrendsInnovationShowcase = () => {
     return () => clearInterval(interval)}[]),
   const trends = [
     {
-      id: 1;
-      title: "Generative AI Revolution";
-      description: "Transform your business with cutting-edge generative AI that creates contentautomates processesand drives innovation.";
-      icon: Brain;
-      stats: "85% efficiency increase";
-      color: "from-purple-50o0 to-pink-50o0";
-      features: ["Content Generation"Process Automation"Creative Solutions"]};
+      id: 1,
+      title: "Generative AI Revolution",
+      description: "Transform your business with cutting-edge generative AI that creates contentautomates processesand drives innovation.",
+      icon: Brain,
+      stats: "85% efficiency increase",
+      color: "from-purple-50o0 to-pink-50o0",
+      features: ["Content Generation"Process Automation"Creative Solutions"]},
     {
-      id: 2;
-      title: "Edge AI Computing";
-      description: "Deploy AI directly on devices for real-time processingreduced latencyand enhanced privacy.";
-      icon: Cpu;
-      stats: "60% faster processing";
-      color: "from-blue-50o0 to-cyan-50o0";
-      features: ["Real-time Processing"Privacy Protection"Reduced Latency"]};
+      id: 2,
+      title: "Edge AI Computing",
+      description: "Deploy AI directly on devices for real-time processingreduced latencyand enhanced privacy.",
+      icon: Cpu,
+      stats: "60% faster processing",
+      color: "from-blue-50o0 to-cyan-50o0",
+      features: ["Real-time Processing"Privacy Protection"Reduced Latency"]},
     {
-      id: 3;
-      title: "AI-Powered Analytics";
-      description: "Unlock insights from your data with advanced AI analytics that predict trends and optimize window.window.performance.";
-      icon: BarChart3;
-      stats: "30o0% better insights";
-      color: "from-green-50o0 to-emerald-50o0";
-      features: ["Predictive Analytics"Trend Analysis"Performance Optimization"]};
+      id: 3,
+      title: "AI-Powered Analytics",
+      description: "Unlock insights from your data with advanced AI analytics that predict trends and optimize window.window.performance.",
+      icon: BarChart3,
+      stats: "30o0% better insights",
+      color: "from-green-50o0 to-emerald-50o0",
+      features: ["Predictive Analytics"Trend Analysis"Performance Optimization"]},
     {
-      id: 4;
-      title: "Quantum AI Integration";
-      description: "Experience the future with quantum-enhanced AI that solves complex problems exponentially faster.";
-      icon: Zap;
-      stats: "10o00x faster computation";
-      color: "from-yellow-50o0 to-orange-50o0";
+      id: 4,
+      title: "Quantum AI Integration",
+      description: "Experience the future with quantum-enhanced AI that solves complex problems exponentially faster.",
+      icon: Zap,
+      stats: "10o00x faster computation",
+      color: "from-yellow-50o0 to-orange-50o0",
       features: ["Quantum Computing"Exponential Speed"Complex Problem Solving"]}
   ],
   const innovations = [
     {
-      title: "Neural Interface Technology";
-      description: "Direct brain-computer interfaces for seamless human-AI interaction";
-      impact: "Revolutionary";
-      category: "Human-AI Integration"};
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces for seamless human-AI interaction",
+      impact: "Revolutionary",
+      category: "Human-AI Integration"},
     {
-      title: "Autonomous Business Systems";
-      description: "Self-managing business processes that adapt and optimize automatically";
-      impact: "Transformative";
-      category: "Business Automation"};
+      title: "Autonomous Business Systems",
+      description: "Self-managing business processes that adapt and optimize automatically",
+      impact: "Transformative",
+      category: "Business Automation"},
     {
-      title: "AI-Powered Cybersecurity";
-      description: "Advanced threat detection and prevention using machine learning";
-      impact: "Critical";
-      category: "Security"};
+      title: "AI-Powered Cybersecurity",
+      description: "Advanced threat detection and prevention using machine learning",
+      impact: "Critical",
+      category: "Security"},
     {
-      title: "Predictive Customer Experience";
-      description: "Anticipate customer needs and deliver personalized experiences";
-      impact: "Game-changing";
+      title: "Predictive Customer Experience",
+      description: "Anticipate customer needs and deliver personalized experiences",
+      impact: "Game-changing",
       category: "Customer Experience"}
   ],
   const benefits = [
-    { icon: TrendingUptext: "Increased Revenue"value: "+150%" };
-    { icon: Userstext: "Customer Satisfaction"value: "95%" };
-    { icon: Shieldtext: "Security Enhancement"value: "99.9%" };
+    { icon: TrendingUptext: "Increased Revenue"value: "+150%" },
+    { icon: Userstext: "Customer Satisfaction"value: "95%" },
+    { icon: Shieldtext: "Security Enhancement"value: "99.9%" },
     { icon: Globetext: "Global Reach"value: "20o0+" }
   ],
   return (
@@ -240,5 +240,5 @@ const AI20o25TrendsInnovationShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default AI20o25TrendsInnovationShowcase;
+    </section>)},
+export default AI20o25TrendsInnovationShowcase,

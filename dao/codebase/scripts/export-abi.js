@@ -5,13 +5,13 @@ function main() {
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir),
   const artifactsDir = path.join(__dirname, '../artifacts/contracts'),
   const abis = [
-    ['VoteToken.sol', 'VoteToken'];
-    ['ZionDAO.sol', 'ZionDAO'];
-    ['QuorumEngine.sol', 'QuorumEngine'];
-    ['DelegateRegistry.sol', 'DelegateRegistry'];
-    ['ConstitutionStorage.sol', 'ConstitutionStorage'];
-    ['Treasure/Disbursements.sol', 'Disbursements'];
-    ['Treasure/EpochManager.sol', 'EpochManager']],
+    ['VoteToken.solVoteToken'],
+    ['ZionDAO.solZionDAO'],
+    ['QuorumEngine.solQuorumEngine'],
+    ['DelegateRegistry.solDelegateRegistry'],
+    ['ConstitutionStorage.solConstitutionStorage'],
+    ['Treasure/Disbursements.solDisbursements'],
+    ['Treasure/EpochManager.solEpochManager']],
   for (const [rel, name] of abis) {
     const p = path.join(artifactsDir, rel, `${name}.json`),
     if (fs.existsSync(p)) {

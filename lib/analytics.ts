@@ -5,44 +5,44 @@ export function trackEvent(
   properties?: Record<string, string | number | boolean>
 ): void {
   if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-    (window as any).gtag('event', eventName, properties ?? {});
+    (window as any).gtag('event', eventName, properties ?? {}),
   }
 }
 
 export function trackPageView(url: string): void {
   if (typeof window !== 'undefined' && typeof (window as any).gtag === 'function') {
-    (window as any).gtag('config', 'GA_MEASUREMENT_ID', { page_path: url });
+    (window as any).gtag('configGA_MEASUREMENT_ID', { page_path: url }),
   }
 }
 
 export function measurePerformance(): null | {
-  loadTime: number;
-  domContentLoaded: number;
-  firstPaint: number;
-  firstContentfulPaint: number;
+  loadTime: number,
+  domContentLoaded: number,
+  firstPaint: number,
+  firstContentfulPaint: number
 } {
   if (typeof window !== 'undefined' && 'performance' in window) {
     const navigation = window.performance.getEntriesByType('navigation')[0] as
       | PerformanceNavigationTiming
-      | undefined;
-    if (!navigation) return null;
+      | undefined,
+    if (!navigation) return null,
     return {
       loadTime: navigation.loadEventEnd - navigation.loadEventStart,
       domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
       firstPaint:
         ((window.performance.getEntriesByName('first-paint')[0] as PerformanceEntry | undefined)?.startTime ?? 0),
       firstContentfulPaint:
-        ((window.performance.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry | undefined)?.startTime ?? 0),
-    };
+        ((window.performance.getEntriesByName('first-contentful-paint')[0] as PerformanceEntry | undefined)?.startTime ?? 0)
+    },
   }
-  return null;
+  return null,
 }
 
 // Web Vitals tracking
 interface WebVitalMetric {
-  name: string;
-  value: number;
-  id: string;
+  name: string,
+  value: number,
+  id: string
 }
 
 export function trackWebVitals(metric: WebVitalMetric): void {
@@ -51,13 +51,13 @@ export function trackWebVitals(metric: WebVitalMetric): void {
       value: Math.round(metric.value),
       event_category: 'Web Vitals',
       event_label: metric.id,
-      non_interaction: true,
-    });
+      non_interaction: true
+    }),
   }
 }
 
 declare global {
   interface Window {
-    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void;
+    gtag?: (command: string, targetId: string, config?: Record<string, unknown>) => void,
   }
 }

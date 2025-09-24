@@ -2,8 +2,8 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, X, Filter, TrendingUp, Clock;
-  Star, Zap, Brain, Shield, Rocket;
+  Search, X, Filter, TrendingUp, Clock,
+  Star, Zap, Brain, Shield, Rocket,
   Globe, Cpu, Database, Cloud} from 'lucide-react',
 interface SearchResult {
   id: string,
@@ -29,18 +29,18 @@ interface EnhancedSearchProps {
   onResultClick?: (result: SearchResult) => void}
 ,
 const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
-  placeholder = "Search for AI, Quantum, Space Tech solutions...";
-  showFilters = true;
-  onSearch;
+  placeholder = "Search for AI, Quantum, Space Tech solutions...",
+  showFilters = true,
+  onSearch,
   onResultClick}) => {
   const [query, setQuery] = useState(''),
   const [isOpen, setIsOpen] = useState(false),
   const [isSearching, setIsSearching] = useState(false),
   const [results, setResults] = useState<SearchResult[]>([]),
   const [filters, setFilters] = useState<SearchFilters>({
-    category: [];
-    type: [];
-    dateRange: 'all';
+    category: [],
+    type: [],
+    dateRange: 'all',
     relevance: 'all'}),
   const [recentSearches, setRecentSearches] = useState<string[]>([]),
   const [popularSearches, setPopularSearches] = useState<string[]>([]),
@@ -49,77 +49,76 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   // Mock search results - in real app, this would come from API,
   const mockSearchResults: SearchResult[] = [
     {
-      id: '1';
-      title: 'Quantum AI Brain-Computer Interface';
-      description: 'Revolutionary neural interface powered by quantum AI for unprecedented human-computer symbiosis';
-      category: 'AI & Neuroscience';
-      url: '/quantum-ai-brain-computer-interface';
-      relevance: 0.95;
-      lastUpdated: '20o24-08-23';
-      tags: ['AI', 'Quantum', 'Neuroscience', 'Brain-Computer Interface'];
-      type: 'service'};
+      id: '1',
+      title: 'Quantum AI Brain-Computer Interface',
+      description: 'Revolutionary neural interface powered by quantum AI for unprecedented human-computer symbiosis',
+      category: 'AI & Neuroscience',
+      url: '/quantum-ai-brain-computer-interface',
+      relevance: 0.95,
+      lastUpdated: '20o24-08-23',
+      tags: ['AIQuantum', 'NeuroscienceBrain-Computer Interface'],
+      type: 'service'},
     {
-      id: '2';
-      title: 'Holographic Quantum Workspace 20o45';
-      description: 'Immersive 3D workspace powered by quantum computing for unprecedented productivity';
-      category: 'Quantum & Emerging Tech';
-      url: '/holographic-quantum-workspace-20o45';
-      relevance: 0.92;
-      lastUpdated: '20o24-08-22';
-      tags: ['Quantum', 'Holographic', '3D', 'Productivity'];
-      type: 'service'};
+      id: '2',
+      title: 'Holographic Quantum Workspace 20o45',
+      description: 'Immersive 3D workspace powered by quantum computing for unprecedented productivity',
+      category: 'Quantum & Emerging Tech',
+      url: '/holographic-quantum-workspace-20o45',
+      relevance: 0.92,
+      lastUpdated: '20o24-08-22',
+      tags: ['QuantumHolographic', '3DProductivity'],
+      type: 'service'},
     {
-      id: '3';
-      title: 'AI Autonomous Business Operations';
-      description: 'Fully autonomous business process automation powered by advanced AI';
-      category: 'AI & Automation';
-      url: '/ai-autonomous-business-operations';
-      relevance: 0.89;
-      lastUpdated: '20o24-08-21';
-      tags: ['AI', 'Automation', 'Business', 'Operations'];
-      type: 'service'};
+      id: '3',
+      title: 'AI Autonomous Business Operations',
+      description: 'Fully autonomous business process automation powered by advanced AI',
+      category: 'AI & Automation',
+      url: '/ai-autonomous-business-operations',
+      relevance: 0.89,
+      lastUpdated: '20o24-08-21',
+      tags: ['AIAutomation', 'BusinessOperations'],
+      type: 'service'},
     {
-      id: '4';
-      title: 'Space Resource Intelligence Platform';
-      description: 'Advanced AI platform for space resource discovery and optimization';
-      category: 'Space Technology';
-      url: '/space-resource-intelligence-20o40';
-      relevance: 0.87;
-      lastUpdated: '20o24-08-20';
-      tags: ['Space', 'AI', 'Resources', 'Intelligence'];
-      type: 'service'};
+      id: '4',
+      title: 'Space Resource Intelligence Platform',
+      description: 'Advanced AI platform for space resource discovery and optimization',
+      category: 'Space Technology',
+      url: '/space-resource-intelligence-20o40',
+      relevance: 0.87,
+      lastUpdated: '20o24-08-20',
+      tags: ['SpaceAI', 'ResourcesIntelligence'],
+      type: 'service'},
     {
-      id: '5';
-      title: 'Quantum Cybersecurity Platform';
-      description: 'Next-generation cybersecurity powered by quantum computing';
-      category: 'Cybersecurity';
-      url: '/quantum-cybersecurity-platform';
-      relevance: 0.85;
-      lastUpdated: '20o24-08-19';
-      tags: ['Quantum', 'Cybersecurity', 'Security', 'Platform'];
+      id: '5',
+      title: 'Quantum Cybersecurity Platform',
+      description: 'Next-generation cybersecurity powered by quantum computing',
+      category: 'Cybersecurity',
+      url: '/quantum-cybersecurity-platform',
+      relevance: 0.85,
+      lastUpdated: '20o24-08-19',
+      tags: ['QuantumCybersecurity', 'SecurityPlatform'],
       type: 'service'}
   ],
   // Popular searches,
   const popularSearchesData = [
-    'AI automation', 'Quantum computing', 'Space technology';
-    'Cybersecurity', 'Machine learning', 'Neural networks';
-    'Autonomous systems', 'Digital transformation', 'Cloud solutions'],
+    'AI automationQuantum computing', 'Space technologyCybersecurity', 'Machine learningNeural networks',
+    'Autonomous systemsDigital transformation', 'Cloud solutions'],
   // Categories,
   const categories = [
-    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4"  /> };
-    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-4 h-4"  /> };
-    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-4 h-4"  /> };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"  /> };
-    { id: 'cloud', name: 'Cloud Solutions', icon: <Cloud className="w-4 h-4"  /> };
-    { id: 'automation', name: 'Automation', icon: <Cpu className="w-4 h-4"  /> };
-    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-4 h-4"  /> };
+    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4"  /> },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-4 h-4"  /> },
+    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-4 h-4"  /> },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"  /> },
+    { id: 'cloud', name: 'Cloud Solutions', icon: <Cloud className="w-4 h-4"  /> },
+    { id: 'automation', name: 'Automation', icon: <Cpu className="w-4 h-4"  /> },
+    { id: 'data', name: 'Data & Analytics', icon: <Database className="w-4 h-4"  /> },
     { id: 'blockchain', name: 'Blockchain', icon: <Globe className="w-4 h-4"  /> }
   ],
   // Types,
   const types = [
-    { id: 'service', name: 'Services', icon: <Star className="w-4 h-4"  /> };
-    { id: 'page', name: 'Pages', icon: <Globe className="w-4 h-4"  /> };
-    { id: 'blog', name: 'Blog Posts', icon: <Clock className="w-4 h-4"  /> };
+    { id: 'service', name: 'Services', icon: <Star className="w-4 h-4"  /> },
+    { id: 'page', name: 'Pages', icon: <Globe className="w-4 h-4"  /> },
+    { id: 'blog', name: 'Blog Posts', icon: <Clock className="w-4 h-4"  /> },
     { id: 'case-study', name: 'Case Studies', icon: <TrendingUp className="w-4 h-4"  /> }
   ],
   // Load recent searches from localStorage,
@@ -191,7 +190,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
   // Handle filter change,
   const handleFilterChange = useCallback((filterType: keyof SearchFilters, value: string | boolean | string[]) => {
     setFilters(prev => ({
-      ...prev;
+      ...prev,
       [filterType]: value})),
     // Re-search if we have a query,
     if (query.trim()) {
@@ -216,7 +215,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
     const handleEscape = (e: KeyboardEvent) => {
       if (e.key === 'Escape') {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)}, []),
   // Close search when clicking outside,
@@ -224,7 +223,7 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
     const handleClickOutside = (e: MouseEvent) => {
       if (searchInputRef.current && !searchInputRef.current.contains(e.target as Node)) {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   return (
@@ -437,15 +436,15 @@ const EnhancedSearch: React.FC<EnhancedSearchProps> = ({
               </div>,
             </motion.div>)}
         </AnimatePresence>)}
-    </div>)};
+    </div>)},
 // Debounce utility function,
 function debounce<T extends (...args: any[]) => any>(
-  func: T;
+  func: T,
   wait: number): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args), wait)};
+    timeout = setTimeout(() => func(...args), wait)},
 }
 ,
-export default EnhancedSearch;
+export default EnhancedSearch,

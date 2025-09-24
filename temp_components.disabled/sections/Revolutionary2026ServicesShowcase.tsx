@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Shield;
-  Globe;
-  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Shield,
+  Globe,
+  Rocket,
 } from 'lucide-react',
 import { revolutionary20o26AIServices } from '../../data/revolutionary-20o26-ai-services',
 import { revolutionary20o26ITServices } from '../../data/revolutionary-20o26-it-services',
@@ -15,46 +15,46 @@ import { revolutionary20o26EmergingTechServices } from '../../data/revolutionary
 import { revolutionary20o26MicroSaasServices } from '../../data/revolutionary-20o26-micro-saas',
 export default function Revolutionary20o26ServicesShowcase() {
   const allRevolutionaryServices = [
-    ...revolutionary20o26AIServices;
-    ...revolutionary20o26ITServices;
-    ...revolutionary20o26EmergingTechServices;
-    ...revolutionary20o26MicroSaasServices;
+    ...revolutionary20o26AIServices,
+    ...revolutionary20o26ITServices,
+    ...revolutionary20o26EmergingTechServices,
+    ...revolutionary20o26MicroSaasServices,
   ],
   const featuredServices = allRevolutionaryServices,
     .filter(service => service.popular),
     .slice(0, 8),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 };
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.5;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.5,
+        ease: 'easeOut'
+      },
+    },
+  },
   const statsVariants = {
-    hidden: { opacity: 0, scale: 0.8 };
+    hidden: { opacity: 0, scale: 0.8 },
     visible: {
-      opacity: 1;
-      scale: 1;
+      opacity: 1,
+      scale: 1,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut'
+      },
+    },
+  },
   return (
     <section className='py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
       {/* Futuristic Background */}
@@ -76,7 +76,7 @@ export default function Revolutionary20o26ServicesShowcase() {
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-            Experience the future with our cutting-edge AI, quantum computing;
+            Experience the future with our cutting-edge AI, quantum computing,
             and emerging technology services designed to transform your business,
           </p>,
           {/* Service Statistics */}

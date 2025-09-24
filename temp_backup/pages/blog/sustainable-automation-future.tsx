@@ -282,7 +282,7 @@ export default function SustainableAutomationFuture() {
                   Challenges and Considerations,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  While sustainable automation offers tremendous potential;
+                  While sustainable automation offers tremendous potential,
                   several challenges must be addressed: ,
                 </p>,
                 <ul className='space-y-2 text-white/80 mb-6'>,

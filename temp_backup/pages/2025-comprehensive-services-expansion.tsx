@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Grid, List, Filter;
-  Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Star, Phone, Mail, MapPin;
+  Search, Grid, List, Filter,
+  Brain, Atom, Shield, Target, Rocket,
+  ArrowRight, Check, Star, Phone, Mail, MapPin,
   Building, Cpu, Zap, Globe, Lock, BarChart3} from 'lucide-react',
 // Import our new service data,
 import { innovativeMicroSaasExpansionV2 } from '../data/20o25-innovative-micro-saas-expansion-v2',
@@ -12,41 +12,41 @@ import { innovativeITInfrastructureExpansion } from '../data/20o25-innovative-it
 import { innovativeAIServicesExpansion } from '../data/20o25-innovative-ai-services-expansion',
 // Create unified services array,
 const allNewServices = [
-  ...innovativeMicroSaasExpansionV2;
-  ...innovativeITInfrastructureExpansion;
+  ...innovativeMicroSaasExpansionV2,
+  ...innovativeITInfrastructureExpansion,
   ...innovativeAIServicesExpansion],
 const categories = [
   {
-    id: 'all';
-    name: 'All New Services';
-    icon: <Grid className="w-6 h-6"  />;
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of new innovative services'};
+    id: 'all',
+    name: 'All New Services',
+    icon: <Grid className="w-6 h-6"  />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of new innovative services'},
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS Solutions';
-    icon: <Target className="w-6 h-6"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Innovative business solutions and automation'};
+    id: 'micro-saas',
+    name: 'Micro SAAS Solutions',
+    icon: <Target className="w-6 h-6"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    description: 'Innovative business solutions and automation'},
   {
-    id: 'it-infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Building className="w-6 h-6"  />;
-    color: 'from-indigo-50o0 to-purple-50o0';
-    description: 'Advanced infrastructure and security solutions'};
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Building className="w-6 h-6"  />,
+    color: 'from-indigo-50o0 to-purple-50o0',
+    description: 'Advanced infrastructure and security solutions'},
   {
-    id: 'ai-services';
-    name: 'AI Services';
-    icon: <Brain className="w-6 h-6"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
+    id: 'ai-services',
+    name: 'AI Services',
+    icon: <Brain className="w-6 h-6"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     description: 'Cutting-edge AI and machine learning services'}
 ],
 const sortOptions = [
-  { value: 'name', label: 'Name A-Z' };
-  { value: 'price-low', label: 'Price: Low to High' };
-  { value: 'price-high', label: 'Price: High to Low' };
-  { value: 'popular', label: 'Most Popular' };
-  { value: 'newest', label: 'Newest First' };
+  { value: 'name', label: 'Name A-Z' },
+  { value: 'price-low', label: 'Price: Low to High' },
+  { value: 'price-high', label: 'Price: High to Low' },
+  { value: 'popular', label: 'Most Popular' },
+  { value: 'newest', label: 'Newest First' },
   { value: 'rating', label: 'Highest Rated' }
 ],
 export default function ComprehensiveServicesExpansion20o25() {
@@ -92,14 +92,14 @@ export default function ComprehensiveServicesExpansion20o25() {
   // Pagination,
   const totalPages = Math.ceil(sortedServices.length / pageSize),
   const paginatedServices = sortedServices.slice(
-    (currentPage - 1) * pageSize;
+    (currentPage - 1) * pageSize,
     currentPage * pageSize),
   const handlePageChange = (page: number) => {
     setCurrentPage(page),
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   const getServiceCategory = (service: any) => {
     if (service.category) return service.category,
-    return 'Other'};
+    return 'Other'},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <SEO
@@ -360,7 +360,7 @@ export default function ComprehensiveServicesExpansion20o25() {
               Ready to Transform Your Business?,
             </h2>,
             <p className="text-xl text-gray-30o0 mb-8">,
-              Join hundreds of businesses already leveraging our innovative services to drive growth;
+              Join hundreds of businesses already leveraging our innovative services to drive growth,
               efficiency, and competitive advantage.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

@@ -4,7 +4,7 @@ import { MessageCircle, Send, Bot, User, X, Minimize2, Maximize2, Loader2, Spark
 import { useAnalytics } from '../hooks/useAnalytics',
 export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI assistant. How can I help you today?", maxMessages = 50, enableSuggestions = true, enableContext = true, responseDelay = 10o00 }) => {
     const { trackEvent } = useAnalytics({
-        enableTracking: true;
+        enableTracking: true,
         enableUserBehaviorTracking: true}),
     const [isOpen, setIsOpen] = useState(false),
     const [isMinimized, setIsMinimized] = useState(false),
@@ -17,12 +17,12 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     useEffect(() => {
         if (isOpen && messages.length === 0) {
             addBotMessage(welcomeMessage, {
-                intent: 'greeting';
-                confidence: 1.0;
+                intent: 'greeting',
+                confidence: 1.0,
                 suggestions: [
-                    "Tell me about your services";
-                    "How can I get a quote?";
-                    "What technologies do you use?";
+                    "Tell me about your services",
+                    "How can I get a quote?",
+                    "What technologies do you use?",
                     "Contact information"]})}
     }, [isOpen, messages.length, welcomeMessage]),
     // Auto-scroll to bottom,
@@ -34,9 +34,9 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // Add message to chat,
     const addMessage = useCallback((message) => {
         const newMessage ={
-            ...message;
-            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-            timestamp: new Date()};
+            ...message,
+            id: `msg_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+            timestamp: new Date()},
         setMessages(prev => {
             const updated = [...prev, newMessage],
             // Keep only the last maxMessages,
@@ -48,13 +48,13 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
     // Add bot message with typing effect,
     const addBotMessage = useCallback((content, metadata) => {
         const message = addMessage({
-            type: 'bot';
-            content;
+            type: 'bot',
+            content,
             metadata}),
         // Track bot response,
         trackChatbotInteraction('bot_response', {
-            messageId: message.id;
-            intent: metadata?.intent;
+            messageId: message.id,
+            intent: metadata?.intent,
             confidence: metadata?.confidence}),
         return message}, [addMessage, trackChatbotInteraction]),
     // Simulate AI processing,
@@ -82,11 +82,11 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             return,
         // Add user message,
         const userMessage = addMessage({
-            type: 'user';
+            type: 'user',
             content: input.trim()}),
         // Track user input,
         trackChatbotInteraction('user_input', {
-            messageId: userMessage.id;
+            messageId: userMessage.id,
             inputLength: input.length}),
         // Clear input,
         setInputValue(''),
@@ -96,21 +96,21 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
             const response = await simulateAIProcessing(input),
             // Add bot response,
             addBotMessage(response, {
-                intent: 'response';
-                confidence: 0.9;
+                intent: 'response',
+                confidence: 0.9,
                 suggestions: [
-                    "Tell me more";
-                    "Get a quote";
-                    "View services";
+                    "Tell me more",
+                    "Get a quote",
+                    "View services",
                     "Contact sales"]}),
             // Track successful interaction,
             trackChatbotInteraction('conversation_success', {
-                userInput: input;
+                userInput: input,
                 responseLength: response.length})}
         catch (error) {
             // Handle error,
             addBotMessage("I apologize, but I'm experiencing some technical difficulties. Please try again or contact our team directly.", {
-                intent: 'error';
+                intent: 'error',
                 confidence: 0.8}),
             trackChatbotInteraction('conversation_error', {
                 error: error instanceof Error ? error.message : 'Unknown error'})}
@@ -238,4 +238,4 @@ export const AIChatbot = ({ welcomeMessage = "Hello! I'm Zion Tech Group's AI as
               </>)}
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
+    </>)},

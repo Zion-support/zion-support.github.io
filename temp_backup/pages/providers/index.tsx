@@ -2,16 +2,16 @@ import Head from 'next/head',
 import { useMemo, useState } from 'react',
 import ProviderCard from '../../components/providers/ProviderCard',
 import ProviderFilters, {
-  ProviderFiltersState;
+  ProviderFiltersState,
 } from '../../components/providers/ProviderFilters',
 import { PROVIDERS, ServiceProvider } from '../../data/providers/providers',
 export default function ProvidersPage() {
   const [filters, setFilters] = useState<ProviderFiltersState>({
-    search: '';
-    category: 'all';
-    minRating: 0;
-    minAiMatch: 0;
-    sortBy: 'relevance';
+    search: '',
+    category: 'all',
+    minRating: 0,
+    minAiMatch: 0,
+    sortBy: 'relevance'
   }),
   const filtered = useMemo(() => {
     let list: ServiceProvider[] = [...PROVIDERS],

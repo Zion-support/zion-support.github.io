@@ -65,32 +65,32 @@ export function useFetchResume() {
         .eq('resume_id', resumeData.id),
       if (certError) throw certError,
       const fullResume: Resume = {
-        id: resumeData.id;
-        user_id: resumeData.user_id;
+        id: resumeData.id,
+        user_id: resumeData.user_id,
         basic_info: {
-          id: resumeData.id;
-          title: resumeData.title;
-          headline: resumeData.headline;
-          summary: resumeData.summary;
-        };
-        work_experience: workData || [];
-        education: educationData || [];
-        skills: skillsData || [];
-        certifications: certData || [];
-        is_active: resumeData.is_active;
-      };
+          id: resumeData.id,
+          title: resumeData.title,
+          headline: resumeData.headline,
+          summary: resumeData.summary
+        },
+        work_experience: workData || [],
+        education: educationData || [],
+        skills: skillsData || [],
+        certifications: certData || [],
+        is_active: resumeData.is_active
+      },
       setResume(fullResume),
       return fullResume} catch (e: any) {
       console.error('Error fetching resume:', e),
       setError(e.message),
       return null} finally {
       setIsLoading(false)}
-  };
+  },
   return {
-    isLoading;
-    error;
-    resume;
-    fetchResume;
-  };
+    isLoading,
+    error,
+    resume,
+    fetchResume,
+  },
 }
 ,

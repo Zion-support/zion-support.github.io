@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'DevOps Automation | Zion Tech Group';
+  title: 'DevOps Automation | Zion Tech Group',
   description:,
-    'Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.';
-};
+    'Streamline your development workflow with comprehensive DevOps automation solutions. CI/CD, infrastructure as code, and monitoring.',
+},
 export default function DevOpsAutomationPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function DevOpsAutomationPage() {
               period='one-time',
               description='Basic DevOps setup for small teams',
               features={[
-                'CI/CD pipeline setup';
-                'Basic monitoring configuration';
-                'Docker containerization';
-                'Documentation and training';
-                '30-day support';
+                'CI/CD pipeline setupBasic monitoring configuration',
+                'Docker containerizationDocumentation and training',
+                '30-day support',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function DevOpsAutomationPage() {
               period='one-time',
               description='Comprehensive DevOps transformation',
               features={[
-                'Full CI/CD implementation';
-                'Infrastructure as Code';
-                'Kubernetes deployment';
-                'Advanced monitoring setup';
-                'Security integration';
-                '90-day support';
+                'Full CI/CD implementationInfrastructure as Code',
+                'Kubernetes deploymentAdvanced monitoring setup',
+                'Security integration90-day support',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function DevOpsAutomationPage() {
               period='one-time',
               description='Complete DevOps platform for large organizations',
               features={[
-                'Multi-environment setup';
-                'Custom tooling development';
-                'Advanced security automation';
-                'Performance optimization';
-                'Team training and mentoring';
-                '6-month support';
+                'Multi-environment setupCustom tooling development',
+                'Advanced security automationPerformance optimization',
+                'Team training and mentoring6-month support',
               ]}
               popular={false}
             />,
@@ -267,9 +259,9 @@ export default function DevOpsAutomationPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -284,12 +276,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   plan: string,
   price: string,
@@ -321,9 +313,9 @@ function PricingCard({
     </div>)}
 ,
 function StepCard({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,

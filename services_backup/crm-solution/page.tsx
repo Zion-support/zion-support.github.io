@@ -1,4 +1,4 @@
-export const metadata = { title: 'CRM Solution | Zion Tech Group' };
+export const metadata = { title: 'CRM Solution | Zion Tech Group' },
 export default function CRMSolutionPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -16,36 +16,27 @@ export default function CRMSolutionPage() {
         <FeatureCard
           title='Lead Management',
           features={[
-            'AI-powered lead scoring & qualification';
-            'Automated lead capture & assignment';
-            'Lead nurturing campaigns';
-            'Pipeline management & forecasting';
-            'Lead source tracking & attribution';
-            'Conversion optimization insights';
+            'AI-powered lead scoring & qualificationAutomated lead capture & assignment',
+            'Lead nurturing campaignsPipeline management & forecasting',
+            'Lead source tracking & attributionConversion optimization insights',
           ]}
           icon='🎯',
         />,
         <FeatureCard
           title='Customer Insights',
           features={[
-            '360-degree customer view';
-            'Behavioral analytics & patterns';
-            'Customer lifetime value prediction';
-            'Churn risk identification';
-            'Personalization recommendations';
-            'Sentiment analysis & feedback';
+            '360-degree customer viewBehavioral analytics & patterns',
+            'Customer lifetime value predictionChurn risk identification',
+            'Personalization recommendationsSentiment analysis & feedback',
           ]}
           icon='👤',
         />,
         <FeatureCard
           title='Sales Automation',
           features={[
-            'Automated follow-up sequences';
-            'Email & SMS campaign management';
-            'Meeting scheduling & reminders';
-            'Quote & proposal generation';
-            'Contract management & e-signatures';
-            'Sales performance analytics';
+            'Automated follow-up sequencesEmail & SMS campaign management',
+            'Meeting scheduling & remindersQuote & proposal generation',
+            'Contract management & e-signaturesSales performance analytics',
           ]}
           icon='🤖',
         />,
@@ -94,9 +85,9 @@ export default function CRMSolutionPage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -126,12 +117,9 @@ function PricingSection() {
           price='$49/mo',
           duration='Up to 5 users',
           features={[
-            'Contact & lead management';
-            'Basic pipeline tracking';
-            'Email integration';
-            'Mobile app access';
-            'Basic reporting';
-            'Email support';
+            'Contact & lead managementBasic pipeline tracking',
+            'Email integrationMobile app access',
+            'Basic reportingEmail support',
           ]}
           popular={false}
         />,
@@ -140,13 +128,10 @@ function PricingSection() {
           price='$99/mo',
           duration='Up to 25 users',
           features={[
-            'Everything in Starter CRM';
-            'AI-powered lead scoring';
-            'Advanced automation';
-            'Custom fields & workflows';
-            'Advanced analytics & reporting';
-            'API access & integrations';
-            'Priority support';
+            'Everything in Starter CRMAI-powered lead scoring',
+            'Advanced automationCustom fields & workflows',
+            'Advanced analytics & reportingAPI access & integrations',
+            'Priority support',
           ]}
           popular={true}
         />,
@@ -155,13 +140,10 @@ function PricingSection() {
           price='$249/mo',
           duration='Unlimited users',
           features={[
-            'Everything in Professional CRM';
-            'Predictive analytics';
-            'Custom AI models';
-            'Advanced security & compliance';
-            'Dedicated account manager';
-            'Custom integrations';
-            '24/7 phone support';
+            'Everything in Professional CRMPredictive analytics',
+            'Custom AI modelsAdvanced security & compliance',
+            'Dedicated account managerCustom integrations',
+            '24/7 phone support',
           ]}
           popular={false}
         />,
@@ -169,11 +151,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

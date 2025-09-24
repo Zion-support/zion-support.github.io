@@ -7,25 +7,25 @@ import {
   FaCloud,
   FaShieldAlt,
   FaChartLine,
-  FaCogs;
-  FaLightbulb;
-  FaGlobe;
-  FaMobile;
-  FaDatabase;
-  FaNetworkWired;
-  FaRobot;
+  FaCogs,
+  FaLightbulb,
+  FaGlobe,
+  FaMobile,
+  FaDatabase,
+  FaNetworkWired,
+  FaRobot,
   FaSearch} from 'react-icons/fa',
   SiNextdotjs,
   SiReact,
   SiTypescript,
-  SiTailwindcss;
-  SiPrisma;
-  SiSupabase;
-  SiVercel;
-  SiDocker;
-  SiKubernetes;
-  SiAws;
-  SiGooglecloud;
+  SiTailwindcss,
+  SiPrisma,
+  SiSupabase,
+  SiVercel,
+  SiDocker,
+  SiKubernetes,
+  SiAws,
+  SiGooglecloud,
   SiMicrosoftazure} from 'react-icons/si',
 interface Service {
   id: string,
@@ -37,7 +37,7 @@ interface Service {
   pricing: {
     starter: number,
     professional: number,
-    enterprise: number};
+    enterprise: number},
   technologies: string[],
   benefits: string[]}
 ,
@@ -50,181 +50,151 @@ interface ServiceCategory {
 ,
 const serviceCategories: ServiceCategory[] = [
   {
-    id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    description: 'Cutting-edge artificial intelligence and machine learning solutions';
-    icon: <FaBrain className="w-8 h-8" />;
-    color: 'from-purple-500 to-pink-500'};
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    description: 'Cutting-edge artificial intelligence and machine learning solutions',
+    icon: <FaBrain className="w-8 h-8" />,
+    color: 'from-purple-500 to-pink-500'},
   {
-    id: 'cloud';
-    name: 'Cloud & DevOps';
-    description: 'Scalable cloud infrastructure and development operations';
-    icon: <FaCloud className="w-8 h-8" />;
-    color: 'from-blue-500 to-cyan-500'};
+    id: 'cloud',
+    name: 'Cloud & DevOps',
+    description: 'Scalable cloud infrastructure and development operations',
+    icon: <FaCloud className="w-8 h-8" />,
+    color: 'from-blue-500 to-cyan-500'},
   {
-    id: 'security';
-    name: 'Cybersecurity';
-    description: 'Advanced security solutions for modern threats';
-    icon: <FaShieldAlt className="w-8 h-8" />;
-    color: 'from-red-500 to-orange-500'};
+    id: 'security',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions for modern threats',
+    icon: <FaShieldAlt className="w-8 h-8" />,
+    color: 'from-red-500 to-orange-500'},
   {
-    id: 'data';
-    name: 'Data & Analytics';
-    description: 'Comprehensive data management and analytics platforms';
-    icon: <FaDatabase className="w-8 h-8" />;
-    color: 'from-green-500 to-emerald-500'};
+    id: 'data',
+    name: 'Data & Analytics',
+    description: 'Comprehensive data management and analytics platforms',
+    icon: <FaDatabase className="w-8 h-8" />,
+    color: 'from-green-500 to-emerald-500'},
   {
-    id: 'iot';
-    name: 'IoT & Edge Computing';
-    description: 'Internet of Things and edge computing solutions';
-    icon: <FaNetworkWired className="w-8 h-8" />;
-    color: 'from-indigo-500 to-purple-500'};
+    id: 'iot',
+    name: 'IoT & Edge Computing',
+    description: 'Internet of Things and edge computing solutions',
+    icon: <FaNetworkWired className="w-8 h-8" />,
+    color: 'from-indigo-500 to-purple-500'},
   {
-    id: 'automation';
-    name: 'Process Automation';
-    description: 'Intelligent automation for business processes';
-    icon: <FaRobot className="w-8 h-8" />;
+    id: 'automation',
+    name: 'Process Automation',
+    description: 'Intelligent automation for business processes',
+    icon: <FaRobot className="w-8 h-8" />,
     color: 'from-yellow-500 to-orange-500'}
 ],
 const services: Service[] = [
   {
-    id: 'ai-automation-suite';
-    title: 'AI-Powered Automation Suite';
-    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization';
-    icon: <FaRobot className="w-6 h-6" />;
-    category: 'automation';
+    id: 'ai-automation-suite',
+    title: 'AI-Powered Automation Suite',
+    description: 'Comprehensive automation platform leveraging artificial intelligence for business process optimization',
+    icon: <FaRobot className="w-6 h-6" />,
+    category: 'automation',
     features: [
-      'Intelligent workflow automation';
-      'Natural language processing';
-      'Predictive analytics';
-      'Real-time decision making';
-      'Custom AI model training';
-      'Multi-platform integration'];
+      'Intelligent workflow automationNatural language processing',
+      'Predictive analyticsReal-time decision making',
+      'Custom AI model trainingMulti-platform integration'],
     pricing: {
-      starter: 299;
-      professional: 799;
-      enterprise: 1999};
-    technologies: [', 'TensorFlow', 'PyTorch', 'OpenAI', 'LangChain', 'React', 'Node.js'];
+      starter: 299,
+      professional: 799,
+      enterprise: 1999},
+    technologies: [', 'TensorFlowPyTorch', 'OpenAILangChain', 'ReactNode.js'],
     benefits: [
-      'Reduce manual tasks by 80%';
-      'Improve accuracy by 95%';
-      '24/7 automated operations';
-      'Scalable AI infrastructure']};
+      'Reduce manual tasks by 80%Improve accuracy by 95%',
+      '24/7 automated operationsScalable AI infrastructure']},
   {
-    id: 'quantum-computing-platform';
-    title: 'Quantum Computing Platform';
-    description: 'Next-generation quantum computing solutions for complex problem solving';
-    icon: <FaBrain className="w-6 h-6" />;
-    category: 'ai-ml';
+    id: 'quantum-computing-platform',
+    title: 'Quantum Computing Platform',
+    description: 'Next-generation quantum computing solutions for complex problem solving',
+    icon: <FaBrain className="w-6 h-6" />,
+    category: 'ai-ml',
     features: [
-      'Quantum algorithm optimization';
-      'Hybrid classical-quantum computing';
-      'Quantum machine learning';
-      'Cryptographic solutions';
-      'Quantum simulation tools';
-      'API access to quantum hardware'];
+      'Quantum algorithm optimizationHybrid classical-quantum computing',
+      'Quantum machine learningCryptographic solutions',
+      'Quantum simulation toolsAPI access to quantum hardware'],
     pricing: {
-      starter: 999;
-      professional: 2499;
-      enterprise: 4999};
-    technologies: [', 'Qiskit', 'Cirq', 'PennyLane', 'Python'C++'CUDA'];
+      starter: 999,
+      professional: 2499,
+      enterprise: 4999},
+    technologies: [', 'QiskitCirq', 'PennyLanePython'C++'CUDA'],
     benefits: [
-      'Solve previously impossible problems';
-      'Exponential speed improvements';
-      'Future-proof technology';
-      'Research and development support']};
+      'Solve previously impossible problemsExponential speed improvements',
+      'Future-proof technologyResearch and development support']},
   {
-    id: 'edge-ai-platform';
-    title: 'Edge AI Computing Platform';
-    description: 'Distributed artificial intelligence at the edge for real-time processing';
-    icon: <FaNetworkWired className="w-6 h-6" />;
-    category: 'iot';
+    id: 'edge-ai-platform',
+    title: 'Edge AI Computing Platform',
+    description: 'Distributed artificial intelligence at the edge for real-time processing',
+    icon: <FaNetworkWired className="w-6 h-6" />,
+    category: 'iot',
     features: [
-      'Edge device optimization';
-      'Real-time AI inference';
-      'Distributed learning';
-      'Low-latency processing';
-      'Offline AI capabilities';
-      'Edge-to-cloud synchronization'];
+      'Edge device optimizationReal-time AI inference',
+      'Distributed learningLow-latency processing',
+      'Offline AI capabilitiesEdge-to-cloud synchronization'],
     pricing: {
-      starter: 199;
-      professional: 599;
-      enterprise: 1499};
-    technologies: ['TensorFlow 'Lite', 'ONNX 'Runtime', 'Edge 'TPU', 'Raspberry 'Pi', 'Arduino'];
+      starter: 199,
+      professional: 599,
+      enterprise: 1499},
+    technologies: ['TensorFlow 'LiteONNX 'Runtime', 'Edge 'TPURaspberry 'Pi', 'Arduino'],
     benefits: [
-      'Reduced latency by 90%';
-      'Lower bandwidth costs';
-      'Enhanced privacy';
-      'Scalable edge deployment']};
+      'Reduced latency by 90%Lower bandwidth costs',
+      'Enhanced privacyScalable edge deployment']},
   {
-    id: 'quantum-cybersecurity';
-    title: 'Quantum Cybersecurity Suite';
-    description: 'Advanced security solutions leveraging quantum-resistant cryptography';
-    icon: <FaShieldAlt className="w-6 h-6" />;
-    category: 'security';
+    id: 'quantum-cybersecurity',
+    title: 'Quantum Cybersecurity Suite',
+    description: 'Advanced security solutions leveraging quantum-resistant cryptography',
+    icon: <FaShieldAlt className="w-6 h-6" />,
+    category: 'security',
     features: [
-      'Post-quantum cryptography';
-      'Quantum key distribution';
-      'Advanced threat detection';
-      'Zero-trust architecture';
-      'Compliance frameworks';
-      'Real-time monitoring'];
+      'Post-quantum cryptographyQuantum key distribution',
+      'Advanced threat detectionZero-trust architecture',
+      'Compliance frameworksReal-time monitoring'],
     pricing: {
-      starter: 399;
-      professional: 999;
-      enterprise: 2499};
-    technologies: ['NIST 'PQC', 'QKD 'protocols', 'Zero 'Trust', 'SIEM'SOAR'];
+      starter: 399,
+      professional: 999,
+      enterprise: 2499},
+    technologies: ['NIST 'PQCQKD 'protocols', 'Zero 'TrustSIEM'SOAR'],
     benefits: [
-      'Future-proof security';
-      'Quantum-resistant encryption';
-      'Comprehensive compliance';
-      'Advanced threat protection']};
+      'Future-proof securityQuantum-resistant encryption',
+      'Comprehensive complianceAdvanced threat protection']},
   {
-    id: 'data-fabric-platform';
-    title: 'Intelligent Data Fabric Platform';
-    description: 'Unified data management and analytics across all sources and formats';
-    icon: <FaDatabase className="w-6 h-6" />;
-    category: 'data';
+    id: 'data-fabric-platform',
+    title: 'Intelligent Data Fabric Platform',
+    description: 'Unified data management and analytics across all sources and formats',
+    icon: <FaDatabase className="w-6 h-6" />,
+    category: 'data',
     features: [
-      'Unified data access';
-      'Real-time analytics';
-      'Data governance';
-      'AI-powered insights';
-      'Multi-cloud support';
-      'Data lineage tracking'];
+      'Unified data accessReal-time analytics',
+      'Data governanceAI-powered insights',
+      'Multi-cloud supportData lineage tracking'],
     pricing: {
-      starter: 299;
-      professional: 799;
-      enterprise: 1999};
-    technologies: ['Apache 'Kafka', 'Apache 'Spark', 'Snowflake', 'Databricks', 'Airflow'];
+      starter: 299,
+      professional: 799,
+      enterprise: 1999},
+    technologies: ['Apache 'KafkaApache 'Spark', 'SnowflakeDatabricks', 'Airflow'],
     benefits: [
-      'Unified data view';
-      'Real-time insights';
-      'Improved data quality';
-      'Reduced integration costs']};
+      'Unified data viewReal-time insights',
+      'Improved data qualityReduced integration costs']},
   {
-    id: 'cloud-native-platform';
-    title: 'Cloud-Native Development Platform';
-    description: 'Modern cloud-native development and deployment platform';
-    icon: <FaCloud className="w-6 h-6" />;
-    category: 'cloud';
+    id: 'cloud-native-platform',
+    title: 'Cloud-Native Development Platform',
+    description: 'Modern cloud-native development and deployment platform',
+    icon: <FaCloud className="w-6 h-6" />,
+    category: 'cloud',
     features: [
-      'Kubernetes orchestration';
-      'Microservices architecture';
-      'CI/CD pipelines';
-      'Auto-scaling';
-      'Multi-cloud deployment';
-      'DevOps automation'];
+      'Kubernetes orchestrationMicroservices architecture',
+      'CI/CD pipelinesAuto-scaling',
+      'Multi-cloud deploymentDevOps automation'],
     pricing: {
-      starter: 199;
-      professional: 599;
-      enterprise: 1499};
-    technologies: [', 'Kubernetes', 'Docker', 'Helm', 'ArgoCD', 'Prometheus', 'Grafana'];
+      starter: 199,
+      professional: 599,
+      enterprise: 1499},
+    technologies: [', 'KubernetesDocker', 'HelmArgoCD', 'PrometheusGrafana'],
     benefits: [
-      'Faster deployment';
-      'Improved scalability';
-      'Better resource utilization';
-      'Enhanced reliability']}
+      'Faster deploymentImproved scalability',
+      'Better resource utilizationEnhanced reliability']}
 ],
 const EnhancedServicesShowcase2025: React.FC = () => {
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
@@ -252,9 +222,9 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           return a.title.localeCompare(b.title)}
     })}[selectedCategorysearchTermsortBy]),
   const handleServiceSelect = (service: Service) => {
-    setSelectedService(service)};
+    setSelectedService(service)},
   const closeModal = () => {
-    setSelectedService(null)};
+    setSelectedService(null)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
       {/* Header */}
@@ -269,7 +239,7 @@ const EnhancedServicesShowcase2025: React.FC = () => {
           </h1>,
           <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
             Discover our cutting-edge technology solutions designed for the future.,
-            From AI-powered automation to quantum 'computingwe', 're building 'tomorrow', 's innovations today.,
+            From AI-powered automation to quantum 'computingwere building 'tomorrow', 's innovations today.,
           </p>,
         </motion.div>,
         {/* Search and Filters */}
@@ -481,5 +451,5 @@ const EnhancedServicesShowcase2025: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default EnhancedServicesShowcase2025;
+    </div>)},
+export default EnhancedServicesShowcase2025,

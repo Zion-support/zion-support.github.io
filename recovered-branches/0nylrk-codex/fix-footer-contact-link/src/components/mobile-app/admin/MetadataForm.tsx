@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { UseFormReturn } from "react-hook-form",
 import { AppMetadataValues } from "./MetadataManager",
@@ -23,11 +23,11 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
         setValue("keywords"[...keywordsvalue]),
         e.currentTarget.value = ""}
     }
-  };
+  },
   const removeKeyword = (keyword: string) => {
     setValue(
-      "keywords";
-      keywords.filter((k) => k !== keyword))};
+      "keywords",
+      keywords.filter((k) => k !== keyword))},
   const maxDescriptionLength = platform === "ios" ? 4000 : 4000,
   const longDescription = watch("longDescription"),
   return (
@@ -134,4 +134,4 @@ export const MetadataForm: React.FC<MetadataFormProps> = ({ form }) => {
           </div>,
         </Form>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

@@ -1,17 +1,17 @@
 import Layout from '../components/layout/Layout',
 import {
-  Eye;
-  Sparkles;
-  Zap;
-  Target;
-  Shield;
-  Clock;
-  CheckCircle;
-  Cpu;
-  Database;
-  Network;
-  Brain;
-  Smartphone;
+  Eye,
+  Sparkles,
+  Zap,
+  Target,
+  Shield,
+  Clock,
+  CheckCircle,
+  Cpu,
+  Database,
+  Network,
+  Brain,
+  Smartphone,
 } from 'lucide-react',
 export default function AIAugmentedReality20o41() {
   return (
@@ -65,47 +65,47 @@ export default function AIAugmentedReality20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Intelligent Overlays';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Intelligent Overlays',
                   description:,
-                    'AI-powered digital overlays that provide context-aware information and insights.';
-                  color: 'from-emerald-50o0 to-teal-50o0';
-                };
+                    'AI-powered digital overlays that provide context-aware information and insights.',
+                  color: 'from-emerald-50o0 to-teal-50o0'
+                },
                 {
-                  icon: <Eye className='w-8 h-8' />;
-                  title: 'Computer Vision';
+                  icon: <Eye className='w-8 h-8' />,
+                  title: 'Computer Vision',
                   description:,
-                    'Advanced visual recognition that understands and interprets the real world.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Advanced visual recognition that understands and interprets the real world.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Smartphone className='w-8 h-8' />;
-                  title: 'Multi-Device Support';
+                  icon: <Smartphone className='w-8 h-8' />,
+                  title: 'Multi-Device Support',
                   description:,
-                    'Seamless AR experiences across smartphones, tablets, and wearable devices.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Seamless AR experiences across smartphones, tablets, and wearable devices.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Processing';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Processing',
                   description:,
-                    'Instant AR rendering and updates based on real-world changes and user context.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Instant AR rendering and updates based on real-world changes and user context.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Context Awareness';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Context Awareness',
                   description:,
-                    'AR systems that understand location, time, and user preferences for relevant content.';
-                  color: 'from-purple-50o0 to-indigo-50o0';
-                };
+                    'AR systems that understand location, time, and user preferences for relevant content.',
+                  color: 'from-purple-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Network className='w-8 h-8' />;
-                  title: 'Collaborative AR';
+                  icon: <Network className='w-8 h-8' />,
+                  title: 'Collaborative AR',
                   description:,
-                    'Shared AR experiences that enable real-time collaboration and interaction.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Shared AR experiences that enable real-time collaboration and interaction.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -140,44 +140,44 @@ export default function AIAugmentedReality20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Object Recognition';
+                  name: 'Object Recognition',
                   description:,
-                    'AI-powered identification of real-world objects and surfaces';
-                };
+                    'AI-powered identification of real-world objects and surfaces',
+                },
                 {
-                  name: 'Spatial Mapping';
+                  name: 'Spatial Mapping',
                   description:,
-                    '3D mapping and understanding of physical environments';
-                };
+                    '3D mapping and understanding of physical environments',
+                },
                 {
-                  name: 'Gesture Control';
+                  name: 'Gesture Control',
                   description:,
-                    'Natural hand and body gesture recognition and control';
-                };
+                    'Natural hand and body gesture recognition and control',
+                },
                 {
-                  name: 'Voice Commands';
+                  name: 'Voice Commands',
                   description:,
-                    'Intelligent voice recognition and natural language processing';
-                };
+                    'Intelligent voice recognition and natural language processing',
+                },
                 {
-                  name: 'Location Services';
+                  name: 'Location Services',
                   description:,
-                    'GPS and indoor positioning for location-aware AR';
-                };
+                    'GPS and indoor positioning for location-aware AR',
+                },
                 {
-                  name: 'Content Creation';
+                  name: 'Content Creation',
                   description:,
-                    'AI-generated AR content and interactive elements';
-                };
+                    'AI-generated AR content and interactive elements',
+                },
                 {
-                  name: 'Performance Optimization';
-                  description: 'Efficient rendering and battery optimization';
-                };
+                  name: 'Performance Optimization',
+                  description: 'Efficient rendering and battery optimization'
+                },
                 {
-                  name: 'Cross-Platform';
+                  name: 'Cross-Platform',
                   description:,
-                    'Unified AR experiences across different devices and platforms';
-                };
+                    'Unified AR experiences across different devices and platforms',
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -207,55 +207,50 @@ export default function AIAugmentedReality20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'World Understanding';
+                  phase: 'World Understanding',
                   description:,
-                    'AI analyzes the real-world environment through camera and sensor data';
+                    'AI analyzes the real-world environment through camera and sensor data',
                   features: [
-                    'Object recognition';
-                    'Spatial mapping';
-                    'Surface detection';
-                  ];
-                };
+                    'Object recognitionSpatial mapping',
+                    'Surface detection',
+                  ]
+                },
                 {
-                  phase: 'Content Generation';
+                  phase: 'Content Generation',
                   description:,
-                    'AI creates relevant digital content and overlays for the environment';
+                    'AI creates relevant digital content and overlays for the environment',
                   features: [
-                    'Context analysis';
-                    'Content creation';
-                    'Information overlay';
-                  ];
-                };
+                    'Context analysisContent creation',
+                    'Information overlay',
+                  ]
+                },
                 {
-                  phase: 'Real-time Rendering';
+                  phase: 'Real-time Rendering',
                   description:,
-                    'Instant AR rendering and updates based on user movement and context';
+                    'Instant AR rendering and updates based on user movement and context',
                   features: [
-                    'Performance optimization';
-                    'Real-time updates';
-                    'Smooth rendering';
-                  ];
-                };
+                    'Performance optimizationReal-time updates',
+                    'Smooth rendering',
+                  ]
+                },
                 {
-                  phase: 'User Interaction';
+                  phase: 'User Interaction',
                   description:,
-                    'Intelligent response to user gestures, voice, and touch interactions';
+                    'Intelligent response to user gestures, voice, and touch interactions',
                   features: [
-                    'Gesture recognition';
-                    'Voice processing';
-                    'Touch interaction';
-                  ];
-                };
+                    'Gesture recognitionVoice processing',
+                    'Touch interaction',
+                  ]
+                },
                 {
-                  phase: 'Continuous Learning';
+                  phase: 'Continuous Learning',
                   description:,
-                    'AR systems that learn and improve based on user behavior and preferences';
+                    'AR systems that learn and improve based on user behavior and preferences',
                   features: [
-                    'Behavior analysis';
-                    'Preference learning';
-                    'Experience optimization';
-                  ];
-                };
+                    'Behavior analysisPreference learning',
+                    'Experience optimization',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -301,77 +296,65 @@ export default function AIAugmentedReality20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Retail & Shopping';
+                  category: 'Retail & Shopping',
                   description:,
-                    'AR-powered shopping experiences with virtual try-ons and product visualization.';
+                    'AR-powered shopping experiences with virtual try-ons and product visualization.',
                   applications: [
-                    'Virtual try-ons';
-                    'Product visualization';
-                    'Interactive catalogs';
-                    'Size fitting';
-                    'Store navigation';
-                  ];
-                };
+                    'Virtual try-onsProduct visualization',
+                    'Interactive catalogsSize fitting',
+                    'Store navigation',
+                  ]
+                },
                 {
-                  category: 'Education & Training';
+                  category: 'Education & Training',
                   description:,
-                    'Interactive learning experiences with AR-enhanced educational content.';
+                    'Interactive learning experiences with AR-enhanced educational content.',
                   applications: [
-                    'Interactive textbooks';
-                    '3D models';
-                    'Virtual labs';
-                    'Field trips';
-                    'Skill training';
-                  ];
-                };
+                    'Interactive textbooks3D models',
+                    'Virtual labsField trips',
+                    'Skill training',
+                  ]
+                },
                 {
-                  category: 'Healthcare';
+                  category: 'Healthcare',
                   description:,
-                    'Medical AR applications for diagnosis, treatment, and training.';
+                    'Medical AR applications for diagnosis, treatment, and training.',
                   applications: [
-                    'Medical imaging';
-                    'Surgical guidance';
-                    'Patient education';
-                    'Training simulation';
-                    'Remote consultation';
-                  ];
-                };
+                    'Medical imagingSurgical guidance',
+                    'Patient educationTraining simulation',
+                    'Remote consultation',
+                  ]
+                },
                 {
-                  category: 'Manufacturing';
+                  category: 'Manufacturing',
                   description:,
-                    'AR-assisted manufacturing and maintenance with real-time guidance.';
+                    'AR-assisted manufacturing and maintenance with real-time guidance.',
                   applications: [
-                    'Assembly guidance';
-                    'Maintenance support';
-                    'Quality inspection';
-                    'Training';
-                    'Remote assistance';
-                  ];
-                };
+                    'Assembly guidanceMaintenance support',
+                    'Quality inspectionTraining',
+                    'Remote assistance',
+                  ]
+                },
                 {
-                  category: 'Navigation & Travel';
+                  category: 'Navigation & Travel',
                   description:,
-                    'AR-enhanced navigation and travel experiences with contextual information.';
+                    'AR-enhanced navigation and travel experiences with contextual information.',
                   applications: [
-                    'Turn-by-turn navigation';
-                    'Point of interest';
-                    'Translation';
-                    'Cultural information';
-                    'Travel planning';
-                  ];
-                };
+                    'Turn-by-turn navigationPoint of interest',
+                    'TranslationCultural information',
+                    'Travel planning',
+                  ]
+                },
                 {
-                  category: 'Entertainment';
+                  category: 'Entertainment',
                   description:,
-                    'Interactive entertainment experiences with AR-enhanced content.';
+                    'Interactive entertainment experiences with AR-enhanced content.',
                   applications: [
-                    'Gaming';
-                    'Interactive stories';
-                    'Live events';
-                    'Social media';
-                    'Creative tools';
-                  ];
-                };
+                    'GamingInteractive stories',
+                    'Live eventsSocial media',
+                    'Creative tools',
+                  ]
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -408,65 +391,59 @@ export default function AIAugmentedReality20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'AR transforms shopping with virtual try-ons, product visualization, and interactive experiences.';
+                    'AR transforms shopping with virtual try-ons, product visualization, and interactive experiences.',
                   benefits: [
-                    'Better engagement';
-                    'Reduced returns';
-                    'Increased sales';
-                  ];
-                };
+                    'Better engagementReduced returns',
+                    'Increased sales',
+                  ]
+                },
                 {
-                  industry: 'Education';
+                  industry: 'Education',
                   description:,
-                    'AR enhances learning with interactive 3D models and immersive educational content.';
+                    'AR enhances learning with interactive 3D models and immersive educational content.',
                   benefits: [
-                    'Better retention';
-                    'Interactive learning';
-                    'Practical application';
-                  ];
-                };
+                    'Better retentionInteractive learning',
+                    'Practical application',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'AR improves medical procedures with real-time guidance and enhanced visualization.';
+                    'AR improves medical procedures with real-time guidance and enhanced visualization.',
                   benefits: [
-                    'Better outcomes';
-                    'Reduced errors';
-                    'Faster procedures';
-                  ];
-                };
+                    'Better outcomesReduced errors',
+                    'Faster procedures',
+                  ]
+                },
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'AR optimizes production with real-time guidance and remote assistance capabilities.';
+                    'AR optimizes production with real-time guidance and remote assistance capabilities.',
                   benefits: [
-                    'Increased efficiency';
-                    'Reduced errors';
-                    'Cost savings';
-                  ];
-                };
+                    'Increased efficiencyReduced errors',
+                    'Cost savings',
+                  ]
+                },
                 {
-                  industry: 'Navigation';
+                  industry: 'Navigation',
                   description:,
-                    'AR enhances navigation with contextual information and intuitive guidance.';
+                    'AR enhances navigation with contextual information and intuitive guidance.',
                   benefits: [
-                    'Better user experience';
-                    'Contextual information';
-                    'Improved safety';
-                  ];
-                };
+                    'Better user experienceContextual information',
+                    'Improved safety',
+                  ]
+                },
                 {
-                  industry: 'Entertainment';
+                  industry: 'Entertainment',
                   description:,
-                    'AR creates immersive entertainment experiences with interactive content and social features.';
+                    'AR creates immersive entertainment experiences with interactive content and social features.',
                   benefits: [
-                    'Better engagement';
-                    'Interactive content';
-                    'Social experiences';
-                  ];
-                };
+                    'Better engagementInteractive content',
+                    'Social experiences',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -507,33 +484,33 @@ export default function AIAugmentedReality20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Enhanced User Experience';
+                  title: 'Enhanced User Experience',
                   description:,
-                    'Create engaging, interactive experiences that blend digital and physical worlds seamlessly.';
-                  icon: <Eye className='w-8 h-8' />;
-                  color: 'from-emerald-50o0 to-teal-50o0';
-                };
+                    'Create engaging, interactive experiences that blend digital and physical worlds seamlessly.',
+                  icon: <Eye className='w-8 h-8' />,
+                  color: 'from-emerald-50o0 to-teal-50o0'
+                },
                 {
-                  title: 'Increased Engagement';
+                  title: 'Increased Engagement',
                   description:,
-                    'Capture user attention with interactive AR content that provides real value and utility.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Capture user attention with interactive AR content that provides real value and utility.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Cost Reduction';
+                  title: 'Cost Reduction',
                   description:,
-                    'Reduce physical prototyping, travel, and training costs through AR solutions.';
-                  icon: <Zap className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Reduce physical prototyping, travel, and training costs through AR solutions.',
+                  icon: <Zap className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Competitive Advantage';
+                  title: 'Competitive Advantage',
                   description:,
-                    'Position your business as a technology leader with cutting-edge AR capabilities.';
-                  icon: <Brain className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-indigo-50o0';
-                };
+                    'Position your business as a technology leader with cutting-edge AR capabilities.',
+                  icon: <Brain className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-indigo-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

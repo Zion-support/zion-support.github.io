@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { RoutesRouteNavigate } from 'react-router-dom',
 import { MobileThemeProvider } from './theme/MobileThemeProvider',
 import { MobileOnboarding } from './pages/MobileOnboarding',

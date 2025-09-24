@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Risk Management Framework';
+  title: 'AI 20o26: Agent Risk Management Framework',
   description:,
-    'A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.';
+    'A practical risk management framework for enterprise AI agents: threats, controls, and runtime safeguards.',
   keywords: [
-    'AI 20o26';
-    'risk management';
-    'agent security';
-    'governance';
-    'controls';
-  ];
-};
+    'AI 20o26risk management',
+    'agent securitygovernance',
+    'controls',
+  ]
+},
 export default function AgentRiskManagementFramework20o26Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -50,7 +48,7 @@ export default function AgentRiskManagementFramework20o26Page() {
                 violations,
               </li>,
               <li>,
-                Responsive Controls: circuit breakers, rollbacks;
+                Responsive Controls: circuit breakers, rollbacks,
                 human-in-the-loop,
               </li>,
               <li>,

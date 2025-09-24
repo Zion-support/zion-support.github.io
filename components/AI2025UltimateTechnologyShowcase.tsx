@@ -11,16 +11,16 @@ import {
   Globe,
   Rocket,
   Database,
-  Cloud;
-  BarChart3;
-  Users;
-  Lock;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Lightbulb;
-  Target;
+  Cloud,
+  BarChart3,
+  Users,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Lightbulb,
+  Target,
   Gauge} from 'lucide-react',
 const AI20o25UltimateTechnologyShowcase = () => {
   const [activeTabsetActiveTab] = useState('ai-automation'),
@@ -29,84 +29,72 @@ const AI20o25UltimateTechnologyShowcase = () => {
     setIsVisible(true)}[]),
   const technologies = [
     {
-      id: 'ai-automation';
-      title: 'AI-Powered Automation';
-      description: 'Revolutionary automation solutions that transform business operations';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
+      id: 'ai-automation',
+      title: 'AI-Powered Automation',
+      description: 'Revolutionary automation solutions that transform business operations',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0',
       features: [
-        'Intelligent Process Automation';
-        'Predictive Analytics';
-        'Natural Language Processing';
-        'Computer Vision Integration';
-        'Autonomous Decision Making';
-        'Real-time Optimization'];
-      stats: { value: '95%'label: 'Efficiency Increase' };
-      link: '/ai-20o25-advanced-automation-solutions'};
+        'Intelligent Process AutomationPredictive Analytics',
+        'Natural Language ProcessingComputer Vision Integration',
+        'Autonomous Decision MakingReal-time Optimization'],
+      stats: { value: '95%'label: 'Efficiency Increase' },
+      link: '/ai-20o25-advanced-automation-solutions'},
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing';
-      description: 'Next-generation quantum solutions for complex problem solving';
-      icon: Cpu;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex problem solving',
+      icon: Cpu,
+      color: 'from-blue-50o0 to-cyan-50o0',
       features: [
-        'Quantum Machine Learning';
-        'Cryptographic Security';
-        'Optimization Algorithms';
-        'Quantum Neural Networks';
-        'Molecular Simulation';
-        'Financial Modeling'];
-      stats: { value: '10o00'x', 'label: 'Processing Speed' };
-      link: '/quantum-computing-20o25'};
+        'Quantum Machine LearningCryptographic Security',
+        'Optimization AlgorithmsQuantum Neural Networks',
+        'Molecular SimulationFinancial Modeling'],
+      stats: { value: '10o00'xlabel: 'Processing Speed' },
+      link: '/quantum-computing-20o25'},
     {
-      id: 'neural-interfaces';
-      title: 'Neural Interface Technology';
-      description: 'Direct brain-computer interfaces for enhanced human capabilities';
-      icon: Zap;
-      color: 'from-green-50o0 to-emerald-50o0';
+      id: 'neural-interfaces',
+      title: 'Neural Interface Technology',
+      description: 'Direct brain-computer interfaces for enhanced human capabilities',
+      icon: Zap,
+      color: 'from-green-50o0 to-emerald-50o0',
       features: [
-        'Brain-Computer Interfaces';
-        'Neural Signal Processing';
-        'Cognitive Enhancement';
-        'Medical Applications';
-        'Augmented Reality Integration';
-        'Thought-Controlled Systems'];
-      stats: { value: '99.9%'label: 'Accuracy Rate' };
-      link: '/neural-interface-revolution-20o26'};
+        'Brain-Computer InterfacesNeural Signal Processing',
+        'Cognitive EnhancementMedical Applications',
+        'Augmented Reality IntegrationThought-Controlled Systems'],
+      stats: { value: '99.9%'label: 'Accuracy Rate' },
+      link: '/neural-interface-revolution-20o26'},
     {
-      id: 'cybersecurity';
-      title: 'Advanced Cybersecurity';
-      description: 'AI-driven security solutions protecting digital assets';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
+      id: 'cybersecurity',
+      title: 'Advanced Cybersecurity',
+      description: 'AI-driven security solutions protecting digital assets',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0',
       features: [
-        'Threat Detection & Prevention';
-        'Behavioral Analysis';
-        'Zero-Trust Architecture';
-        'Encryption Technologies';
-        'Incident Response Automation';
-        'Compliance Management'];
-      stats: { value: '99.99%'label: 'Threat Detection' };
+        'Threat Detection & PreventionBehavioral Analysis',
+        'Zero-Trust ArchitectureEncryption Technologies',
+        'Incident Response AutomationCompliance Management'],
+      stats: { value: '99.99%'label: 'Threat Detection' },
       link: '/advanced-security-solutions'}
   ],
   const successStories = [
     {
-      company: 'TechCorp Global';
-      industry: 'Manufacturing';
-      improvement: '30o0%';
-      description: 'Implemented AI automation reducing production costs by 60%';
-      logo: '🏭'};
+      company: 'TechCorp Global',
+      industry: 'Manufacturing',
+      improvement: '30o0%',
+      description: 'Implemented AI automation reducing production costs by 60%',
+      logo: '🏭'},
     {
-      company: 'FinanceMax';
-      industry: 'Financial Services';
-      improvement: '50o0%';
-      description: 'Quantum computing solutions increased trading algorithm speed';
-      logo: '💼'};
+      company: 'FinanceMax',
+      industry: 'Financial Services',
+      improvement: '50o0%',
+      description: 'Quantum computing solutions increased trading algorithm speed',
+      logo: '💼'},
     {
-      company: 'HealthTech Solutions';
-      industry: 'Healthcare';
-      improvement: '250%';
-      description: 'Neural interface technology improved patient diagnosis accuracy';
+      company: 'HealthTech Solutions',
+      industry: 'Healthcare',
+      improvement: '250%',
+      description: 'Neural interface technology improved patient diagnosis accuracy',
       logo: '🏥'}
   ],
   const currentTech = technologies.find(tech => tech.id === activeTab) || technologies[0],
@@ -264,5 +252,5 @@ const AI20o25UltimateTechnologyShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateTechnologyShowcase;
+    </div>)},
+export default AI20o25UltimateTechnologyShowcase,

@@ -18,11 +18,11 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 opacity-20",
           animate={{
-            rotate: [0, 360];
+            rotate: [0, 360],
             scale: [1, 1.2, 1]}}
           transition={{
-            duration: 20;
-            repeat: Infinity as any;
+            duration: 20,
+            repeat: Infinity as any,
             ease: "linear"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 clip-hexagon"  />,
@@ -30,11 +30,11 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 opacity-15",
           animate={{
-            rotate: [360, 0];
+            rotate: [360, 0],
             scale: [1, 0.8, 1]}}
           transition={{
-            duration: 15;
-            repeat: Infinity as any;
+            duration: 15,
+            repeat: Infinity as any,
             ease: "linear"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 clip-hexagon"  />,
@@ -43,11 +43,11 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         <motion.div,
           className="absolute bottom-32 left-1/4 w-16 h-16 opacity-10",
           animate={{
-            y: [0, -30, 0];
+            y: [0, -30, 0],
             x: [0, 20, 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity as any;
+            duration: 8,
+            repeat: Infinity as any,
             ease: "easeInOut"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-cyan-40o0 to-blue-40o0 rounded-full"  />,
@@ -55,11 +55,11 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         <motion.div,
           className="absolute top-1/3 right-1/4 w-20 h-20 opacity-15",
           animate={{
-            y: [0, 40, 0];
+            y: [0, 40, 0],
             x: [0, -30, 0]}}
           transition={{
-            duration: 12;
-            repeat: Infinity as any;
+            duration: 12,
+            repeat: Infinity as any,
             ease: "easeInOut"}}
         >,
           <div className="w-full h-full bg-gradient-to-r from-purple-40o0 to-pink-40o0 rounded-full"  />,
@@ -81,8 +81,8 @@ const UltraFuturisticBackground20o47: React.FC = () => {
           animate={{
             y: [0, -10o0]}}
           transition={{
-            duration: 30;
-            repeat: Infinity as any;
+            duration: 30,
+            repeat: Infinity as any,
             ease: "linear"}}
         >,
           <div className="flex space-x-8 justify-center">,
@@ -91,12 +91,12 @@ const UltraFuturisticBackground20o47: React.FC = () => {
                 key={i}
                 className="w-1 h-32 bg-gradient-to-b from-cyan-50o0 to-transparent",
                 animate={{
-                  height: [32, 64, 32];
+                  height: [32, 64, 32],
                   opacity: [0.3, 1, 0.3]}}
                 transition={{
-                  duration: 3;
-                  repeat: Infinity as any;
-                  delay: i * 0.1;
+                  duration: 3,
+                  repeat: Infinity as any,
+                  delay: i * 0.1,
                   ease: "easeInOut"}}
                />))}
           </div>,
@@ -114,19 +114,19 @@ const UltraFuturisticBackground20o47: React.FC = () => {
           animate={{
             y: [0, 10o00]}}
           transition={{
-            duration: 8;
-            repeat: Infinity as any;
+            duration: 8,
+            repeat: Infinity as any,
             ease: "linear"}}
          />,
         {/* Pulse Rings */}
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4",
           animate={{
-            scale: [1, 20];
+            scale: [1, 20],
             opacity: [1, 0]}}
           transition={{
-            duration: 4;
-            repeat: Infinity as any;
+            duration: 4,
+            repeat: Infinity as any,
             ease: "easeOut"}}
         >,
           <div className="w-full h-full border-2 border-cyan-40o0 rounded-full"  />,
@@ -134,12 +134,12 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4",
           animate={{
-            scale: [1, 15];
+            scale: [1, 15],
             opacity: [1, 0]}}
           transition={{
-            duration: 4;
-            repeat: Infinity as any;
-            ease: "easeOut";
+            duration: 4,
+            repeat: Infinity as any,
+            ease: "easeOut",
             delay: 1}}
         >,
           <div className="w-full h-full border-2 border-blue-40o0 rounded-full"  />,
@@ -147,12 +147,12 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-4 h-4",
           animate={{
-            scale: [1, 10];
+            scale: [1, 10],
             opacity: [1, 0]}}
           transition={{
-            duration: 4;
-            repeat: Infinity as any;
-            ease: "easeOut";
+            duration: 4,
+            repeat: Infinity as any,
+            ease: "easeOut",
             delay: 2}}
         >,
           <div className="w-full h-full border-2 border-purple-40o0 rounded-full"  />,
@@ -163,5 +163,5 @@ const UltraFuturisticBackground20o47: React.FC = () => {
         .clip-hexagon {
           clip-path: polygon(50% 0%, 10o0% 25%, 10o0% 75%, 50% 10o0%, 0% 75%, 0% 25%)}
       `}</style>,
-    </>)};
-export default UltraFuturisticBackground20o47;
+    </>)},
+export default UltraFuturisticBackground20o47,

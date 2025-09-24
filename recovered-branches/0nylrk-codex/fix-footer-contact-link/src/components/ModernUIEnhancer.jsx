@@ -17,7 +17,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                 setDeviceType('tablet')}
             else {
                 setDeviceType('desktop')}
-        };
+        },
         updateDeviceType(),
         window.addEventListener('resize', updateDeviceType),
         return () => window.removeEventListener('resize', updateDeviceType)}, []),
@@ -42,7 +42,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
                 const isVisible = rect.top < window.innerHeight && rect.bottom > 0,
                 if (isVisible) {
                     element.classList.add('fade-in-visible')}
-            })};
+            })},
         window.addEventListener('scroll', handleScroll),
         return () => window.removeEventListener('scroll', handleScroll)}, [enableScrollEffects]),
     // Theme management,
@@ -57,17 +57,17 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             root.classList.toggle('dark', prefersDark)}
         else {
             root.classList.toggle('dark', theme === 'dark')}
-        localStorage.setItem('theme', theme)};
+        localStorage.setItem('theme', theme)},
     const toggleTheme = () => {
-        const themes = ['light', 'dark', 'auto'],
+        const themes = ['lightdark', 'auto'],
         const currentIndex = themes.indexOf(currentTheme),
         const nextTheme = themes[(currentIndex + 1) % themes.length],
         setCurrentTheme(nextTheme),
-        applyTheme(nextTheme)};
+        applyTheme(nextTheme)},
     const scrollToTop = () => {
         window.scrollTo({
-            top: 0;
-            behavior: 'smooth'})};
+            top: 0,
+            behavior: 'smooth'})},
     // Add CSS animations to the document,
     useEffect(() => {
         if (!enableAnimations),
@@ -178,15 +178,15 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
     `,
         document.head.appendChild(style),
         return () => {
-            document.head.removeChild(style)};
+            document.head.removeChild(style)},
     }, [enableAnimations]),
     // Add intersection observer for scroll animations,
     useEffect(() => {
         if (!enableScrollEffects),
             return,
         const observerOptions ={
-            threshold: 0.1;
-            rootMargin: '0px 0px -50px 0px'};
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'},
         const observer = new IntersectionObserver((entries) => {
             entries.forEach((entry) => {
                 if (entry.isIntersecting) {
@@ -201,7 +201,7 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
             observer.observe(element)}),
         return () => {
             animatedElements.forEach((element) => {
-                observer.unobserve(element)})};
+                observer.unobserve(element)})},
     }, [enableScrollEffects]),
     return (<>,
       {/* Theme Toggle Button */}
@@ -310,13 +310,13 @@ export const ModernUIEnhancer = ({ enableAnimations = true, enableParticles = tr
       {/* Background Particles */}
       {enableParticles && (<div className="fixed inset-0 pointer-events-none z-0">,
           {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-40o0 rounded-full opacity-20" initial={{
-                    x: Math.random() * window.innerWidth;
+                    x: Math.random() * window.innerWidth,
                     y: Math.random() * window.innerHeight}} animate={{
-                    y: [0, -10o0, 0];
+                    y: [0, -10o0, 0],
                     opacity: [0.2, 0.5, 0.2]}} transition={{
-                    duration: Math.random() * 10 + 10;
-                    repeat: Infinity;
+                    duration: Math.random() * 10 + 10,
+                    repeat: Infinity,
                     ease: "linear"}} />))}
         </div>)}
-    </>)};
-export default ModernUIEnhancer;
+    </>)},
+export default ModernUIEnhancer,

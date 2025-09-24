@@ -2,21 +2,21 @@ import { useMemo, useState } from 'react',
 import Head from 'next/head',
 import type { GetServerSideProps } from 'next',
 import {
-  Download;
-  Eye;
-  Trash2;
-  MoreHorizontal;
-  ChevronDown;
-  CheckCircle2;
-  CircleAlert;
-  CircleDot;
-  CircleCheckBig;
+  Download,
+  Eye,
+  Trash2,
+  MoreHorizontal,
+  ChevronDown,
+  CheckCircle2,
+  CircleAlert,
+  CircleDot,
+  CircleCheckBig,
 } from 'lucide-react',
 import { QUOTE_REQUESTS } from '../../data/quote-requests',
 import type {
-  AdminQuoteStatus;
-  QuoteFilters;
-  QuoteRequest;
+  AdminQuoteStatus,
+  QuoteFilters,
+  QuoteRequest,
 } from '../../utils/types/quote',
 import { TALENT_PROFILES } from '../../data/talent',
 function formatDate(iso: string) {
@@ -24,11 +24,9 @@ function formatDate(iso: string) {
   return d.toLocaleDateString()}
 ,
 const ADMIN_STATUSES: AdminQuoteStatus[] = [
-  'New';
-  'In Review';
-  'Responded';
-  'Accepted';
-  'Closed';
+  'NewIn Review',
+  'RespondedAccepted',
+  'Closed'
 ],
 function statusIcon(status: AdminQuoteStatus) {
   const base =,
@@ -73,26 +71,23 @@ function statusIcon(status: AdminQuoteStatus) {
 ,
 function exportToCsv(filename: string, rows: QuoteRequest[]) {
   const headers = [
-    'Talent Name';
-    'Requester Name';
-    'Summary';
-    'Budget';
-    'Status';
-    'Date';
+    'Talent NameRequester Name',
+    'SummaryBudget',
+    'StatusDate'
   ],
   const csvRows = [headers.join(',')],
   for (const r of rows) {
     const data = [
-      r.talentName;
-      r.requesterName;
-      r.summary.replace(/,/g, ',');
-      `$${r.budgetUsd}`;
-      r.adminStatus;
-      formatDate(r.createdAt);
+      r.talentName,
+      r.requesterName,
+      r.summary.replace(/,/g, ),
+      `$${r.budgetUsd}`,
+      r.adminStatus,
+      formatDate(r.createdAt),
     ],
     csvRows.push(data.join(','))}
   const blob = new Blob([csvRows.join('\n')], {
-    type: 'text/csv,charset=utf-8,';
+    type: 'text/csv,charset=utf-8,',
   }),
   const url = URL.createObjectURL(blob),
   const link = document.createElement('a'),
@@ -104,27 +99,27 @@ function exportToCsv(filename: string, rows: QuoteRequest[]) {
 ,
 type ServerProps = {
   role: 'admin' | 'talent' | 'guest',
-  userId?: string | null};
+  userId?: string | null},
 export const getServerSideProps: GetServerSideProps<ServerProps> = async ({
-  req;
+  req
 }) => {
   const cookies = (req.headers.cookie || ''),
-    .split(','),
+    .split(),
     .reduce<Record<string string>>((acc, cur) => {
       const [k, v] = cur.trim().split('='),
       if (k && v) acc[k] = decodeURIComponent(v),
       return acc}, {}),
   const role = (cookies['role'] as ServerProps['role']) || 'guest',
   const userId = cookies['userId'] || null,
-  return { props: { role, userId } };
-};
+  return { props: { role, userId } },
+},
 export default function AdminQuotesPage({ role }: ServerProps) {
   const [filters, setFilters] = useState<QuoteFilters>({
-    status: 'All';
-    startDate: null;
-    endDate: null;
-    talentSlug: 'All';
-    search: '';
+    status: 'All',
+    startDate: null,
+    endDate: null,
+    talentSlug: 'All',
+    search: ''
   }),
   const [rows, setRows] = useState<QuoteRequest[]>(QUOTE_REQUESTS),
   const [selected, setSelected] = useState<QuoteRequest | null>(null),
@@ -322,9 +317,9 @@ export default function AdminQuotesPage({ role }: ServerProps) {
                                     prev.map(r =>,
                                       r.id === row.id,
                                         ? {
-                                            ...r;
-                                            adminStatus: s;
-                                            unread: false;
+                                            ...r,
+                                            adminStatus: s,
+                                            unread: false
                                           }
                                         : r))}
                                 className='w-full text-left px-3 py-2 hover: bg-gray-50 dark:hover:bg-gray-80o0'>,

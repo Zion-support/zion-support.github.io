@@ -80,5 +80,5 @@ export default function NationPublicPage({ nation }: { nation: any }) {
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const slug = ctx.params?.slug as string,
   const nation = getNationBySlug(slug) || null,
-  return { props: { nation } };
-};
+  return { props: { nation } },
+},

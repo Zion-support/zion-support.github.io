@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {
   return (
@@ -31,7 +31,7 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {
           {/* Subheading */}
           <p className='text-xl md: text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Transform your enterprise with quantum-neural intelligence.,
-            Experience 10o00x faster optimization, real-time financial modeling;
+            Experience 10o00x faster optimization, real-time financial modeling,
             and revolutionary business capabilities.,
           </p>,
           {/* Quantum advantages */}
@@ -127,5 +127,5 @@ const QuantumAI20o26BusinessRevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumAI20o26BusinessRevolutionBanner;
+    </section>)},
+export default QuantumAI20o26BusinessRevolutionBanner,

@@ -7,60 +7,60 @@ const NewSuccessStoriesShowcase20o25 = () => {
   const [activeStory, setActiveStory] = useState(0),
   const successStories = [
     {
-      id: 1;
-      company: "Fortune 50o0 Manufacturing";
-      industry: "Manufacturing";
-      challenge: "Manual processes causing 40% efficiency loss";
-      solution: "AI-powered automation and predictive maintenance";
+      id: 1,
+      company: "Fortune 50o0 Manufacturing",
+      industry: "Manufacturing",
+      challenge: "Manual processes causing 40% efficiency loss",
+      solution: "AI-powered automation and predictive maintenance",
       results: {
-        roi: "2,50o0%";
-        efficiency: "+340%";
-        costSavings: "$50M";
-        timeframe: "6 months"};
-      testimonial: "The AI transformation exceeded our wildest expectations. We achieved 2,50o0% ROI in just 6 months.";
-      author: "Sarah Johnson, CTO";
-      logo: "🏭"};
+        roi: "2,50o0%",
+        efficiency: "+340%",
+        costSavings: "$50M",
+        timeframe: "6 months"},
+      testimonial: "The AI transformation exceeded our wildest expectations. We achieved 2,50o0% ROI in just 6 months.",
+      author: "Sarah Johnson, CTO",
+      logo: "🏭"},
     {
-      id: 2;
-      company: "Global Financial Services";
-      industry: "Finance";
-      challenge: "Trading algorithms underperforming market";
-      solution: "Quantum-enhanced AI trading systems";
+      id: 2,
+      company: "Global Financial Services",
+      industry: "Finance",
+      challenge: "Trading algorithms underperforming market",
+      solution: "Quantum-enhanced AI trading systems",
       results: {
-        roi: "1,20o0%";
-        efficiency: "+280%";
-        costSavings: "$50o0M";
-        timeframe: "8 months"};
-      testimonial: "Our AI trading systems now outperform traditional methods by 280%. Revenue increased by $50o0M.";
-      author: "Michael Chen, CEO";
-      logo: "🏦"};
+        roi: "1,20o0%",
+        efficiency: "+280%",
+        costSavings: "$50o0M",
+        timeframe: "8 months"},
+      testimonial: "Our AI trading systems now outperform traditional methods by 280%. Revenue increased by $50o0M.",
+      author: "Michael Chen, CEO",
+      logo: "🏦"},
     {
-      id: 3;
-      company: "Healthcare Network";
-      industry: "Healthcare";
-      challenge: "Diagnostic accuracy below industry standards";
-      solution: "Neural interface diagnostic AI systems";
+      id: 3,
+      company: "Healthcare Network",
+      industry: "Healthcare",
+      challenge: "Diagnostic accuracy below industry standards",
+      solution: "Neural interface diagnostic AI systems",
       results: {
-        roi: "850%";
-        efficiency: "+340%";
-        costSavings: "$25M";
-        timeframe: "4 months"};
-      testimonial: "Diagnostic accuracy improved by 340%. 'We', 're saving lives and reducing costs simultaneously.";
-      author: "Dr. Emily Rodriguez, Chief Medical Officer";
-      logo: "🏥"};
+        roi: "850%",
+        efficiency: "+340%",
+        costSavings: "$25M",
+        timeframe: "4 months"},
+      testimonial: "Diagnostic accuracy improved by 340%. 'Were saving lives and reducing costs simultaneously.",
+      author: "Dr. Emily Rodriguez, Chief Medical Officer",
+      logo: "🏥"},
     {
-      id: 4;
-      company: "Retail Chain";
-      industry: "Retail";
-      challenge: "Inventory management causing 30% waste";
-      solution: "AI-powered supply chain optimization";
+      id: 4,
+      company: "Retail Chain",
+      industry: "Retail",
+      challenge: "Inventory management causing 30% waste",
+      solution: "AI-powered supply chain optimization",
       results: {
-        roi: "1,80o0%";
-        efficiency: "+250%";
-        costSavings: "$75M";
-        timeframe: "5 months"};
-      testimonial: "Inventory waste reduced by 90%. Our supply chain is now perfectly optimized.";
-      author: "David Kim, Operations Director";
+        roi: "1,80o0%",
+        efficiency: "+250%",
+        costSavings: "$75M",
+        timeframe: "5 months"},
+      testimonial: "Inventory waste reduced by 90%. Our supply chain is now perfectly optimized.",
+      author: "David Kim, Operations Director",
       logo: "🛍️"}
   ],
   useEffect(() => {
@@ -206,5 +206,5 @@ const NewSuccessStoriesShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewSuccessStoriesShowcase20o25;
+    </div>)},
+export default NewSuccessStoriesShowcase20o25,

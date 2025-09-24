@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Code Assistant | Zion Tech Group';
+  title: 'AI Code Assistant | Zion Tech Group',
   description:,
-    'Intelligent code generation, debugging, and optimization powered by advanced AI. Boost developer productivity by 30o0% with our AI-powered coding assistant.';
-};
+    'Intelligent code generation, debugging, and optimization powered by advanced AI. Boost developer productivity by 30o0% with our AI-powered coding assistant.',
+},
 export default function AICodeAssistantPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -40,10 +40,8 @@ export default function AICodeAssistantPage() {
             title='Intelligent Code Generation',
             description='Generate production-ready code in any language with context-aware suggestions and best practices.',
             features={[
-              'Multi-language support (Python, JavaScript, Java, C++, Go, Rust)';
-              'Context-aware code completion';
-              'Function and class generation';
-              'API integration code';
+              'Multi-language support (Python, JavaScript, Java, C++, Go, Rust)Context-aware code completion',
+              'Function and class generationAPI integration code',
             ]}
           />,
           <FeatureCard
@@ -51,10 +49,8 @@ export default function AICodeAssistantPage() {
             title='Smart Debugging',
             description='Automatically identify and fix bugs with AI-powered analysis and suggested solutions.',
             features={[
-              'Real-time error detection';
-              'Performance bottleneck identification';
-              'Memory leak detection';
-              'Security vulnerability scanning';
+              'Real-time error detectionPerformance bottleneck identification',
+              'Memory leak detectionSecurity vulnerability scanning',
             ]}
           />,
           <FeatureCard
@@ -62,10 +58,8 @@ export default function AICodeAssistantPage() {
             title='Code Optimization',
             description='Automatically optimize your code for performance, readability, and maintainability.',
             features={[
-              'Performance optimization suggestions';
-              'Code refactoring recommendations';
-              'Best practice enforcement';
-              'Documentation generation';
+              'Performance optimization suggestionsCode refactoring recommendations',
+              'Best practice enforcementDocumentation generation',
             ]}
           />,
           <FeatureCard
@@ -73,10 +67,8 @@ export default function AICodeAssistantPage() {
             title='Learning Assistant',
             description='Learn new technologies and frameworks with personalized AI tutoring and examples.',
             features={[
-              'Interactive coding tutorials';
-              'Technology-specific guidance';
-              'Code explanation and comments';
-              'Learning path recommendations';
+              'Interactive coding tutorialsTechnology-specific guidance',
+              'Code explanation and commentsLearning path recommendations',
             ]}
           />,
           <FeatureCard
@@ -84,10 +76,8 @@ export default function AICodeAssistantPage() {
             title='IDE Integration',
             description='Seamlessly integrate with your favorite development environment and tools.',
             features={[
-              'VS Code extension';
-              'IntelliJ IDEA plugin';
-              'Vim/Neovim support';
-              'Command-line interface';
+              'VS Code extensionIntelliJ IDEA plugin',
+              'Vim/Neovim supportCommand-line interface',
             ]}
           />,
           <FeatureCard
@@ -95,10 +85,8 @@ export default function AICodeAssistantPage() {
             title='Security & Compliance',
             description='Ensure your code meets security standards and compliance requirements.',
             features={[
-              'Security vulnerability scanning';
-              'Compliance checking (SOC2, GDPR, HIPAA)';
-              'Code quality metrics';
-              'Automated testing suggestions';
+              'Security vulnerability scanningCompliance checking (SOC2, GDPR, HIPAA)',
+              'Code quality metricsAutomated testing suggestions',
             ]}
           />,
         </div>,
@@ -115,11 +103,9 @@ export default function AICodeAssistantPage() {
             period='month',
             description='Perfect for individual developers and small teams',
             features={[
-              'Up to 10,0o00 code generations/month';
-              '5 programming languages';
-              'Basic debugging assistance';
-              'Email support';
-              'VS Code integration';
+              'Up to 10,0o00 code generations/month5 programming languages',
+              'Basic debugging assistanceEmail support',
+              'VS Code integration',
             ]}
             popular={false}
           />,
@@ -129,12 +115,9 @@ export default function AICodeAssistantPage() {
             period='month',
             description='Ideal for growing development teams',
             features={[
-              'Up to 50,0o00 code generations/month';
-              'All programming languages';
-              'Advanced debugging & optimization';
-              'Priority support';
-              'All IDE integrations';
-              'Team collaboration features';
+              'Up to 50,0o00 code generations/monthAll programming languages',
+              'Advanced debugging & optimizationPriority support',
+              'All IDE integrationsTeam collaboration features',
             ]}
             popular={true}
           />,
@@ -144,12 +127,9 @@ export default function AICodeAssistantPage() {
             period='month',
             description='For large organizations with advanced needs',
             features={[
-              'Unlimited code generations';
-              'Custom AI model training';
-              'On-premise deployment';
-              '24/7 dedicated support';
-              'Custom integrations';
-              'Security & compliance tools';
+              'Unlimited code generationsCustom AI model training',
+              'On-premise deployment24/7 dedicated support',
+              'Custom integrationsSecurity & compliance tools',
             ]}
             popular={false}
           />,
@@ -232,10 +212,10 @@ export default function AICodeAssistantPage() {
     </div>)}
 ,
 function FeatureCard({
-  icon;
-  title;
-  description;
-  features;
+  icon,
+  title,
+  description,
+  features,
 }: {
   icon: string,
   title: string,
@@ -256,12 +236,12 @@ function FeatureCard({
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

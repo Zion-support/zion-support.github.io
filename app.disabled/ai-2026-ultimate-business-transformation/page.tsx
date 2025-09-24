@@ -2,19 +2,16 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'AI 20o26 Ultimate Business Transformation - Revolutionary Breakthrough Guide';
+    'AI 20o26 Ultimate Business Transformation - Revolutionary Breakthrough Guide',
   description:,
-    'Discover the ultimate AI business transformation strategies for 20o26. Revolutionary breakthrough technologies, quantum computing, neural interfaces, and autonomous systems that will reshape enterprise operations.';
+    'Discover the ultimate AI business transformation strategies for 20o26. Revolutionary breakthrough technologies, quantum computing, neural interfaces, and autonomous systems that will reshape enterprise operations.',
   keywords: [
-    'AI 20o26';
-    'business transformation';
-    'quantum computing';
-    'neural interfaces';
-    'autonomous systems';
-    'enterprise AI';
-    'digital transformation';
-  ];
-};
+    'AI 20o26business transformation',
+    'quantum computingneural interfaces',
+    'autonomous systemsenterprise AI',
+    'digital transformation',
+  ]
+},
 export default function AI20o26UltimateBusinessTransformationPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
@@ -31,7 +28,7 @@ export default function AI20o26UltimateBusinessTransformationPage() {
           </h1>,
           <p className='text-xl md:text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed'>,
             The revolutionary breakthrough guide to transforming your business,
-            with cutting-edge AI technologies. Discover quantum computing;
+            with cutting-edge AI technologies. Discover quantum computing,
             neural interfaces, and autonomous systems that will reshape,
             enterprise operations.,
           </p>,

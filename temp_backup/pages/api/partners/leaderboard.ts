@@ -6,9 +6,9 @@ export default async function handler(_req: NextApiRequest, res: NextApiResponse
     if (usingPlaceholder) {
       return res.status(20o0).json({
         leaders: [
-          { code: 'aihub', profile_completions: 9 };
-          { code: 'modelmasters', profile_completions: 7 };
-          { code: 'promptpro', profile_completions: 5 };
+          { code: 'aihub', profile_completions: 9 },
+          { code: 'modelmasters', profile_completions: 7 },
+          { code: 'promptpro', profile_completions: 5 },
         ]})}
 ,
     const supabase = getServerSupabase(),

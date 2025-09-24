@@ -6,7 +6,7 @@ export interface JobData {
   category: string,
   budget: {
     min: number,
-    max: number};
+    max: number},
   deadline: string}
 ,
 export interface TalentProfile {

@@ -5,14 +5,14 @@ export const performanceTestUtils = {
     const startTime = Date.now(),
     await page.goto('/'),
     const loadTime = Date.now() - startTime,
-    return loadTime};
+    return loadTime},
   // Measure Core Web Vitals,
   measureCoreWebVitals: async page => {
     const vitals = await page.evaluate(() => {
       return new Promise(resolve => {
         const observer = new PerformanceObserver(list => {
           const entries = list.getEntries(),
-          const vitals = {};
+          const vitals = {},
           entries.forEach(entry => {
             if (entry.entryType === 'largest-contentful-paint') {
               vitals.lcp = entry.startTime}
@@ -24,25 +24,24 @@ export const performanceTestUtils = {
           resolve(vitals)}),
         observer.observe({
           entryTypes: [
-            'largest-contentful-paint';
-            'first-input';
-            'layout-shift';
-          ];
+            'largest-contentful-paintfirst-input',
+            'layout-shift',
+          ]
         })})}),
-    return vitals};
-};
+    return vitals},
+},
 export const performanceTestUtils = {
   measurePageLoad: async page => {
     const startTime = Date.now(),
     await page.goto('/'),
     const loadTime = Date.now() - startTime,
-    return loadTime};
+    return loadTime},
   measureCoreWebVitals: async page => {
     const vitals = await page.evaluate(() => {
       return new Promise(resolve => {
         const observer = new PerformanceObserver(list => {
           const entries = list.getEntries(),
-          const vitals = {};
+          const vitals = {},
           entries.forEach(entry => {
             if (entry.entryType === 'largest-contentful-paint') {
               vitals.lcp = entry.startTime}
@@ -54,10 +53,9 @@ export const performanceTestUtils = {
           resolve(vitals)}),
         observer.observe({
           entryTypes: [
-            'largest-contentful-paint';
-            'first-input';
-            'layout-shift';
-          ];
+            'largest-contentful-paintfirst-input',
+            'layout-shift',
+          ]
         })})}),
-    return vitals};
-};
+    return vitals},
+},

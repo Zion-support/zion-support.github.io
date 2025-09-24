@@ -2,14 +2,14 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  TrendingUp;
-  Users;
-  Zap;
-  ArrowRight;
-  Clock;
-  Star;
-  CheckCircle;
-  ArrowRight;
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Clock,
+  Star,
+  CheckCircle,
+  ArrowRight,
 } from 'lucide-react',
 interface ContentItem {
   id: string,
@@ -21,7 +21,7 @@ interface ContentItem {
     savings?: string,
     satisfaction?: string,
     efficiency?: string,
-    accuracy?: string};
+    accuracy?: string},
   readingTime?: string,
   description?: string,
   tags?: string[],
@@ -31,120 +31,112 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all'),
   const contentItems: ContentItem[] = [
     {
-      id: 'enterprise-intelligence-revolution';
+      id: 'enterprise-intelligence-revolution',
       title:,
-        'AI 20o25: The Enterprise Intelligence Revolution - Ultimate Guide to 750% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-intelligence-revolution-ultimate-guide';
+        'AI 20o25: The Enterprise Intelligence Revolution - Ultimate Guide to 750% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-intelligence-revolution-ultimate-guide',
       metrics: {
-        roi: '750%';
-        savings: '$4.2M';
-        satisfaction: '99.7%';
-        efficiency: '340%';
-        accuracy: '99.7%';
-      };
-      readingTime: '28 min read';
+        roi: '750%',
+        savings: '$4.2M',
+        satisfaction: '99.7%',
+        efficiency: '340%',
+        accuracy: '99.7%'
+      },
+      readingTime: '28 min read',
       description:,
-        'Transform your business intelligence with AI-powered systems that deliver unprecedented insights and 750% ROI within 18 months.';
+        'Transform your business intelligence with AI-powered systems that deliver unprecedented insights and 750% ROI within 18 months.',
       tags: [
-        'AI Intelligence';
-        'Enterprise';
-        'ROI';
-        'Business Intelligence';
-        'Predictive Analytics';
-      ];
-      featured: true;
-    };
+        'AI IntelligenceEnterprise',
+        'ROIBusiness Intelligence',
+        'Predictive Analytics',
+      ],
+      featured: true
+    },
     {
-      id: 'enterprise-intelligence-success';
+      id: 'enterprise-intelligence-success',
       title:,
-        '$3.2B Company Achieves 750% ROI with AI-Powered Intelligence Systems';
-      type: 'case-study';
-      url: '/case-studies/ai-20o25-enterprise-intelligence-750-roi-success-story';
+        '$3.2B Company Achieves 750% ROI with AI-Powered Intelligence Systems',
+      type: 'case-study',
+      url: '/case-studies/ai-20o25-enterprise-intelligence-750-roi-success-story',
       metrics: {
-        roi: '750%';
-        savings: '$240M';
-        satisfaction: '99.8%';
-        efficiency: '67%';
-      };
-      readingTime: '22 min read';
+        roi: '750%',
+        savings: '$240M',
+        satisfaction: '99.8%',
+        efficiency: '67%'
+      },
+      readingTime: '22 min read',
       description:,
-        'Real-world success story of a Fortune 50o0 manufacturing company that transformed operations with AI intelligence.';
+        'Real-world success story of a Fortune 50o0 manufacturing company that transformed operations with AI intelligence.',
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Manufacturing';
-        'Success Story';
-        'ROI';
-      ];
-      featured: true;
-    };
+        'Case StudyFortune 50o0',
+        'ManufacturingSuccess Story',
+        'ROI',
+      ],
+      featured: true
+    },
     {
-      id: 'customer-experience-revolution';
+      id: 'customer-experience-revolution',
       title:,
-        'AI 20o25: The Customer Experience Revolution - Ultimate Guide to 650% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-customer-experience-revolution-ultimate-guide';
+        'AI 20o25: The Customer Experience Revolution - Ultimate Guide to 650% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-customer-experience-revolution-ultimate-guide',
       metrics: {
-        roi: '650%';
-        savings: '$4.2M';
-        satisfaction: '99%';
-        efficiency: '89%';
-      };
-      readingTime: '32 min read';
+        roi: '650%',
+        savings: '$4.2M',
+        satisfaction: '99%',
+        efficiency: '89%'
+      },
+      readingTime: '32 min read',
       description:,
-        'Revolutionize customer relationships with AI-powered experience systems that deliver 650% ROI and 99% satisfaction.';
+        'Revolutionize customer relationships with AI-powered experience systems that deliver 650% ROI and 99% satisfaction.',
       tags: [
-        'Customer Experience';
-        'AI Transformation';
-        'ROI';
-        'Personalization';
-        'CX';
-      ];
-      featured: true;
-    };
+        'Customer ExperienceAI Transformation',
+        'ROIPersonalization',
+        'CX',
+      ],
+      featured: true
+    },
     {
-      id: 'customer-experience-implementation';
+      id: 'customer-experience-implementation',
       title:,
-        'AI 20o25 Customer Experience Implementation Master Guide: From Strategy to 650% ROI';
-      type: 'resource';
-      url: '/resources/ai-20o25-customer-experience-implementation-master-guide';
+        'AI 20o25 Customer Experience Implementation Master Guide: From Strategy to 650% ROI',
+      type: 'resource',
+      url: '/resources/ai-20o25-customer-experience-implementation-master-guide',
       metrics: {
-        roi: '650%';
-        savings: '$3.2M';
-        satisfaction: '99%';
-        efficiency: '89%';
-      };
-      readingTime: '45 min read';
+        roi: '650%',
+        savings: '$3.2M',
+        satisfaction: '99%',
+        efficiency: '89%'
+      },
+      readingTime: '45 min read',
       description:,
-        'Complete implementation framework for transforming customer experience with AI, achieving 650% ROI in 15 months.';
+        'Complete implementation framework for transforming customer experience with AI, achieving 650% ROI in 15 months.',
       tags: [
-        'Implementation Guide';
-        'Customer Experience';
-        'AI Strategy';
-        'Master Guide';
-        'ROI';
-      ];
-      featured: false;
-    };
+        'Implementation GuideCustomer Experience',
+        'AI StrategyMaster Guide',
+        'ROI',
+      ],
+      featured: false
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredItems =,
     activeFilter === 'all',
@@ -160,7 +152,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -171,7 +163,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
         return <ArrowRight className='w-4 h-4' />,
       default:,
         return <Zap className='w-4 h-4' />}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -231,7 +223,7 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='ml-2 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.readingTime && (
@@ -392,5 +384,5 @@ const IntelligenceContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default IntelligenceContentShowcase20o25;
+    </section>)},
+export default IntelligenceContentShowcase20o25,

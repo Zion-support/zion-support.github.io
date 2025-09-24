@@ -8,19 +8,19 @@ import {
   Award,
   DollarSign,
   Clock,
-  Target;
-  ChevronLeft;
-  ChevronRight;
-  Play;
-  BarChart3;
-  Zap;
-  Brain;
-  Rocket;
-  Shield;
-  Globe;
-  Star;
-  Quote;
-  ArrowRight;
+  Target,
+  ChevronLeft,
+  ChevronRight,
+  Play,
+  BarChart3,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Globe,
+  Star,
+  Quote,
+  ArrowRight,
   CheckCircle} from 'lucide-react',
 const BusinessSuccessStories20o27 = () => {
   const [currentStorysetCurrentStory] = useState(0),
@@ -30,108 +30,108 @@ const BusinessSuccessStories20o27 = () => {
     setIsVisible(true)}[]),
   const successStories = [
     {
-      id: 1;
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      logo: 'TC';
-      color: 'from-blue-60o0 to-purple-60o0';
-      challenge: 'Manual processes causing 40% efficiency loss';
-      solution: 'Implemented AI-powered automation suite';
+      id: 1,
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: 'TC',
+      color: 'from-blue-60o0 to-purple-60o0',
+      challenge: 'Manual processes causing 40% efficiency loss',
+      solution: 'Implemented AI-powered automation suite',
       results: {
-        efficiency: '+40o0%';
-        costSavings: '$2.3M';
-        timeSaved: '15,0o00 hours';
-        roi: '850%'};
+        efficiency: '+40o0%',
+        costSavings: '$2.3M',
+        timeSaved: '15,0o00 hours',
+        roi: '850%'},
       testimonial: {
-        name: 'Sarah Chen';
-        role: 'CEO';
-        content: 'The transformation has been extraordinary. We\'ve achieved levels of efficiency we never thought possible.';
-        rating: 5};
+        name: 'Sarah Chen',
+        role: 'CEO',
+        content: 'The transformation has been extraordinary. We\'ve achieved levels of efficiency we never thought possible.',
+        rating: 5},
       metrics: [
-        { label: 'Process 'Automation', 'value: '95%'icon: Zap };
-        { label: 'Error 'Reduction', 'value: '98%'icon: Shield };
-        { label: 'Customer 'Satisfaction', 'value: '99.2%'icon: Users };
-        { label: 'Revenue 'Growth', 'value: '+340%'icon: TrendingUp }
-      ];
+        { label: 'Process 'Automationvalue: '95%'icon: Zap },
+        { label: 'Error 'Reductionvalue: '98%'icon: Shield },
+        { label: 'Customer 'Satisfactionvalue: '99.2%'icon: Users },
+        { label: 'Revenue 'Growthvalue: '+340%'icon: TrendingUp }
+      ],
       timeline: [
-        { month: 'Month 1'milestone: 'Initial AI 'Integration', 'status: 'completed' };
-        { month: 'Month 3'milestone: 'First Automation 'Wave', 'status: 'completed' };
-        { month: 'Month 6'milestone: 'Full System 'Deployment', 'status: 'completed' };
-        { month: 'Month 12'milestone: '850% ROI 'Achieved', 'status: 'completed' }
-      ]};
+        { month: 'Month 1'milestone: 'Initial AI 'Integrationstatus: 'completed' },
+        { month: 'Month 3'milestone: 'First Automation 'Wavestatus: 'completed' },
+        { month: 'Month 6'milestone: 'Full System 'Deploymentstatus: 'completed' },
+        { month: 'Month 12'milestone: '850% ROI 'Achievedstatus: 'completed' }
+      ]},
     {
-      id: 2;
-      company: 'InnovateLabs';
-      industry: 'Research & Development';
-      logo: 'IL';
-      color: 'from-green-60o0 to-teal-60o0';
-      challenge: 'Research bottlenecks limiting innovation speed';
-      solution: 'Deployed quantum AI processing for complex analysis';
+      id: 2,
+      company: 'InnovateLabs',
+      industry: 'Research & Development',
+      logo: 'IL',
+      color: 'from-green-60o0 to-teal-60o0',
+      challenge: 'Research bottlenecks limiting innovation speed',
+      solution: 'Deployed quantum AI processing for complex analysis',
       results: {
-        efficiency: '+60o0%';
-        costSavings: '$1.8M';
-        timeSaved: '8,50o0 hours';
-        roi: '720%'};
+        efficiency: '+60o0%',
+        costSavings: '$1.8M',
+        timeSaved: '8,50o0 hours',
+        roi: '720%'},
       testimonial: {
-        name: 'Dr. Michael Rodriguez';
-        role: 'CTO';
-        content: 'Our research capabilities have been revolutionized. We\'re solving problems that used to take months in days.';
-        rating: 5};
+        name: 'Dr. Michael Rodriguez',
+        role: 'CTO',
+        content: 'Our research capabilities have been revolutionized. We\'re solving problems that used to take months in days.',
+        rating: 5},
       metrics: [
-        { label: 'Research 'Speed', 'value: '+60o0%'icon: Brain };
-        { label: 'Data 'Processing', 'value: '10o00x 'faster', 'icon: BarChart3 };
-        { label: 'Breakthrough 'Rate', 'value: '+450%'icon: Rocket };
-        { label: 'Patent 'Applications', 'value: '+280%'icon: Award }
-      ];
+        { label: 'Research 'Speedvalue: '+60o0%'icon: Brain },
+        { label: 'Data 'Processingvalue: '10o00x 'fastericon: BarChart3 },
+        { label: 'Breakthrough 'Ratevalue: '+450%'icon: Rocket },
+        { label: 'Patent 'Applicationsvalue: '+280%'icon: Award }
+      ],
       timeline: [
-        { month: 'Month 1'milestone: 'Quantum AI 'Setup', 'status: 'completed' };
-        { month: 'Month 2'milestone: 'First 'Breakthrough', 'status: 'completed' };
-        { month: 'Month 4'milestone: 'Full 'Integration', 'status: 'completed' };
-        { month: 'Month 8'milestone: '720% ROI 'Achieved', 'status: 'completed' }
-      ]};
+        { month: 'Month 1'milestone: 'Quantum AI 'Setupstatus: 'completed' },
+        { month: 'Month 2'milestone: 'First 'Breakthroughstatus: 'completed' },
+        { month: 'Month 4'milestone: 'Full 'Integrationstatus: 'completed' },
+        { month: 'Month 8'milestone: '720% ROI 'Achievedstatus: 'completed' }
+      ]},
     {
-      id: 3;
-      company: 'FutureTech Industries';
-      industry: 'Manufacturing';
-      logo: 'FT';
-      color: 'from-orange-60o0 to-red-60o0';
-      challenge: 'Production delays and quality control issues';
-      solution: 'Neural interface system for predictive maintenance';
+      id: 3,
+      company: 'FutureTech Industries',
+      industry: 'Manufacturing',
+      logo: 'FT',
+      color: 'from-orange-60o0 to-red-60o0',
+      challenge: 'Production delays and quality control issues',
+      solution: 'Neural interface system for predictive maintenance',
       results: {
-        efficiency: '+350%';
-        costSavings: '$3.1M';
-        timeSaved: '22,0o00 hours';
-        roi: '920%'};
+        efficiency: '+350%',
+        costSavings: '$3.1M',
+        timeSaved: '22,0o00 hours',
+        roi: '920%'},
       testimonial: {
-        name: 'Emily Watson';
-        role: 'Operations Director';
-        content: 'The predictive capabilities are incredible. We\'ve virtually eliminated unplanned downtime.';
-        rating: 5};
+        name: 'Emily Watson',
+        role: 'Operations Director',
+        content: 'The predictive capabilities are incredible. We\'ve virtually eliminated unplanned downtime.',
+        rating: 5},
       metrics: [
-        { label: ''Uptime', 'value: '99.8%'icon: Clock };
-        { label: 'Quality 'Score', 'value: '99.9%'icon: Award };
-        { label: 'Maintenance 'Cost', 'value: '-75%'icon: DollarSign };
-        { label: 'Production 'Output', 'value: '+350%'icon: Target }
-      ];
+        { label: ''Uptimevalue: '99.8%'icon: Clock },
+        { label: 'Quality 'Scorevalue: '99.9%'icon: Award },
+        { label: 'Maintenance 'Costvalue: '-75%'icon: DollarSign },
+        { label: 'Production 'Outputvalue: '+350%'icon: Target }
+      ],
       timeline: [
-        { month: 'Month 1'milestone: 'Neural Interface 'Installation', 'status: 'completed' };
-        { month: 'Month 2'milestone: 'Predictive Model 'Training', 'status: 'completed' };
-        { month: 'Month 4'milestone: 'Full Production 'Integration', 'status: 'completed' };
-        { month: 'Month 10'milestone: '920% ROI 'Achieved', 'status: 'completed' }
+        { month: 'Month 1'milestone: 'Neural Interface 'Installationstatus: 'completed' },
+        { month: 'Month 2'milestone: 'Predictive Model 'Trainingstatus: 'completed' },
+        { month: 'Month 4'milestone: 'Full Production 'Integrationstatus: 'completed' },
+        { month: 'Month 10'milestone: '920% ROI 'Achievedstatus: 'completed' }
       ]}
   ],
   const currentStoryData = successStories[currentStory],
   const nextStory = () => {
-    setCurrentStory((prev) => (prev + 1) % successStories.length)};
+    setCurrentStory((prev) => (prev + 1) % successStories.length)},
   const prevStory = () => {
-    setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length)};
+    setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length)},
   useEffect(() => {
     if (isPlaying) {
       const interval = setInterval(nextStory50o00),
       return () => clearInterval(interval)}
   }[isPlaying]),
   const getStatusIcon = (status) => {
-    return <CheckCircle className="w-4 h-4 text-green-40o0"  />};
+    return <CheckCircle className="w-4 h-4 text-green-40o0"  />},
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">,
       {/* Animated Background */}
@@ -141,10 +141,8 @@ const BusinessSuccessStories20o27 = () => {
           className="absolute top-0 left-0 w-full h-full",
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%rgba(120o11980.2) 0%transparent 50%)';
-              'radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)';
-              'radial-gradient(circle at 40% 80%rgba(120o2192550.2) 0%transparent 50%)';
-              'radial-gradient(circle at 20% 50%rgba(120o11980.2) 0%transparent 50%)';
+              'radial-gradient(circle at 20% 50%rgba(120o11980.2) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.2) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(120o2192550.2) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(120o11980.2) 0%transparent 50%)'
             ]}}
           transition={{ duration: 20repeat: Infinity }}
          />,
@@ -342,5 +340,5 @@ const BusinessSuccessStories20o27 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default BusinessSuccessStories20o27;
+    </div>)},
+export default BusinessSuccessStories20o27,

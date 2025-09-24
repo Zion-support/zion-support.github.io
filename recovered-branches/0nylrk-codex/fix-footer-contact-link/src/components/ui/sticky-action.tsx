@@ -9,9 +9,9 @@ interface StickyActionProps {
   position?: "bottom" | "top"}
 ,
 export function StickyAction({
-  className;
-  children;
-  showAfterScroll = 300;
+  className,
+  children,
+  showAfterScroll = 300,
   position = "bottom"}: StickyActionProps) {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
@@ -19,14 +19,14 @@ export function StickyAction({
       if (window.scrollY > showAfterScroll) {
         setIsVisible(true)} else {
         setIsVisible(false)}
-    };
+    },
     window.addEventListener("scroll"handleScroll),
     return () => {
-      window.removeEventListener("scroll"handleScroll)};
+      window.removeEventListener("scroll"handleScroll)},
   }[showAfterScroll]),
   const positionClasses = {
-    bottom: "bottom-4";
-    top: "top-20"};
+    bottom: "bottom-4",
+    top: "top-20"},
   return (
     <AnimatePresence>,
       {isVisible && (
@@ -36,8 +36,8 @@ export function StickyAction({
           exit={{ opacity: 0y: position === "bottom" ? 20 : -20 }}
           transition={{ duration: 0.2 }}
           className={cn(
-            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4";
-            positionClasses[position];
+            "fixed left-0 right-0 z-50 mx-auto flex justify-center px-4",
+            positionClasses[position],
             className)}
         >,
           <div className="rounded-lg bg-zion-blue-dark border border-zion-blue-light shadow-lg shadow-zion-purple/10 flex items-center">,

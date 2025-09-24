@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Multimodal Agents Enterprise Blueprint | Zion Tech Group',
   description:,
-    'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.';
+    'A practical blueprint to design, deploy, and scale multimodal agents across your enterprise with measurable ROI and governance.',
   keywords: [
-    'multimodal agents';
-    'enterprise ai';
-    'ai agents';
-    'governance';
-    'roi';
-  ];
-};
+    'multimodal agentsenterprise ai',
+    'ai agentsgovernance',
+    'roi',
+  ]
+},
 const MultimodalAgentsBlueprintPage = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -62,5 +60,5 @@ const MultimodalAgentsBlueprintPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default MultimodalAgentsBlueprintPage;
+    </div>)},
+export default MultimodalAgentsBlueprintPage,

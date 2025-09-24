@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React, { useState } from 'react'}) => Promise<void> | void};  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void};
+import React, { useState } from 'react'}) => Promise<void> | void},  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void},
 export default function MilestoneForm({ onSubmit }: Props) {
   const [title, setTitle] = useState(''),
   const [description, setDescription] = useState(''),
@@ -29,12 +29,12 @@ export default function MilestoneForm({ onSubmit }: Props) {
   const handleSubmit = async (e: React && React.FormEvent) => {
     e && e.preventDefault(),
     setError(null),
-    const parsedAmount = Number(amountUsd);
+    const parsedAmount = Number(amountUsd),
     if (!title || !dueDate || !amountUsd || Number && Number.isNaN(parsedAmount)) {
       setError('Please provide Title, Due Date and a valid Amount.'),
     setLoading(true),
     try {
-      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount });
+      await onSubmit({ title, description: description || undefined, dueDate, amountUsd: parsedAmount }),
       setTitle(''),
       setDescription(''),
       setDueDate(''),
@@ -55,7 +55,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setError(err?.message |'Failed to create milestone')} finally {
       setLoading(false)}
   }
-  };
+  },
   return (
           placeholder='Phase 1 – Backend Setup'          required,
         />,

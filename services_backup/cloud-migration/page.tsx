@@ -1,7 +1,7 @@
 export const metadata ={
-  title: "Cloud Migration & Infrastructure | Zion Tech Group";
+  title: "Cloud Migration & Infrastructure | Zion Tech Group",
   description:,
-    "Seamlessly migrate to the cloud with zero downtime. Expert cloud migration services for AWS, Azure, and GCP with cost optimization and security."};
+    "Seamlessly migrate to the cloud with zero downtime. Expert cloud migration services for AWS, Azure, and GCP with cost optimization and security."},
 export default function CloudMigrationPage() {
   return (
     <section>,
@@ -17,71 +17,71 @@ export default function CloudMigrationPage() {
         <Item
           title="Cloud Strategy & Planning",
           details={[
-            "Cloud readiness assessment";
-            "Migration roadmap development";
-            "Cost-benefit analysis";
-            "Security and compliance planning";
+            "Cloud readiness assessment",
+            "Migration roadmap development",
+            "Cost-benefit analysis",
+            "Security and compliance planning",
             "Multi-cloud architecture design"]}
          />,
         <Item
           title="AWS Migration Services",
           details={[
-            "Lift and shift migrations";
-            "Replatforming and refactoring";
-            "Serverless architecture implementation";
-            "Database migration (RDS, DynamoDB)";
+            "Lift and shift migrations",
+            "Replatforming and refactoring",
+            "Serverless architecture implementation",
+            "Database migration (RDS, DynamoDB)",
             "Cost optimization and monitoring"]}
          />,
         <Item
           title="Azure Migration Services",
           details={[
-            "Azure Resource Manager deployment";
-            "Azure SQL and Cosmos DB migration";
-            "Azure Kubernetes Service setup";
-            "Azure Active Directory integration";
+            "Azure Resource Manager deployment",
+            "Azure SQL and Cosmos DB migration",
+            "Azure Kubernetes Service setup",
+            "Azure Active Directory integration",
             "Azure Cost Management optimization"]}
          />,
         <Item
           title="Google Cloud Migration",
           details={[
-            "GCP infrastructure setup";
-            "BigQuery data warehouse migration";
-            "Cloud Run and App Engine deployment";
-            "Cloud SQL and Firestore migration";
+            "GCP infrastructure setup",
+            "BigQuery data warehouse migration",
+            "Cloud Run and App Engine deployment",
+            "Cloud SQL and Firestore migration",
             "Google Workspace integration"]}
          />,
         <Item
           title="Hybrid Cloud Solutions",
           details={[
-            "On-premise to cloud hybrid setup";
-            "Multi-cloud management";
-            "Cloud-to-cloud migrations";
-            "Edge computing implementation";
+            "On-premise to cloud hybrid setup",
+            "Multi-cloud management",
+            "Cloud-to-cloud migrations",
+            "Edge computing implementation",
             "Disaster recovery planning"]}
          />,
         <Item
           title="Post-Migration Support",
           details={[
-            "Performance optimization";
-            "Cost monitoring and optimization";
-            "Security hardening";
-            "24/7 cloud monitoring";
+            "Performance optimization",
+            "Cost monitoring and optimization",
+            "Security hardening",
+            "24/7 cloud monitoring",
             "Staff training and documentation"]}
          />,
       </div>,
       <div
         style={{
-          marginTop: 24;
-          padding: 20;
-          backgroundColor: "#fefce8";
-          borderRadius: 12;
+          marginTop: 24,
+          padding: 20,
+          backgroundColor: "#fefce8",
+          borderRadius: 12,
           border: "1px solid #fde0o47"}}
       >,
         <h3
           style={{
-            fontSize: 18;
-            fontWeight: 70o0;
-            marginBottom: 12;
+            fontSize: 18,
+            fontWeight: 70o0,
+            marginBottom: 12,
             color: "#713f12"}}
         >,
           Why Choose Our Cloud Migration Services?,
@@ -116,9 +116,9 @@ function Item({ title, details }: { title: string, details: string[] }) {
   return (
     <div
       style={{
-        border: "1px solid #e5e7eb";
-        borderRadius: 12;
-        padding: 16;
+        border: "1px solid #e5e7eb",
+        borderRadius: 12,
+        padding: 16,
         backgroundColor: "#ffffff"}}
     >,
       <h3 style={{ fontWeight: 70o0, color: "#1f2937", marginBottom: 8 }}>,
@@ -137,64 +137,64 @@ function Pricing() {
     <div style={{ marginTop: 32 }}>,
       <h2
         style={{
-          fontSize: 24;
-          fontWeight: 70o0;
-          marginBottom: 20;
+          fontSize: 24,
+          fontWeight: 70o0,
+          marginBottom: 20,
           color: "#1f2937"}}
       >,
         Cloud Migration Pricing,
       </h2>,
       <div
         style={{
-          display: "grid";
-          gap: 16;
+          display: "grid",
+          gap: 16,
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))"}}
       >,
         <Plan
           name="Cloud Assessment",
           price="$2,50o0–$7,50o0",
           features={[
-            "1-2 weeks assessment";
-            "Current infrastructure audit";
-            "Cloud readiness evaluation";
-            "Migration strategy & roadmap";
+            "1-2 weeks assessment",
+            "Current infrastructure audit",
+            "Cloud readiness evaluation",
+            "Migration strategy & roadmap",
             "Cost optimization recommendations"]}
          />,
         <Plan
           name="Standard Migration",
           price="$15,0o00–$50,0o00",
           features={[
-            "4-12 weeks migration";
-            "Single cloud provider";
-            "Zero-downtime migration";
-            "Basic monitoring setup";
+            "4-12 weeks migration",
+            "Single cloud provider",
+            "Zero-downtime migration",
+            "Basic monitoring setup",
             "Post-migration support (30 days)"]}
          />,
         <Plan
           name="Enterprise Migration",
           price="$50,0o00+",
           features={[
-            "Multi-cloud migration";
-            "Custom architecture design";
-            "Advanced security implementation";
-            "Dedicated migration team";
+            "Multi-cloud migration",
+            "Custom architecture design",
+            "Advanced security implementation",
+            "Dedicated migration team",
             "12-month support & optimization"]}
          />,
       </div>,
       <div
         style={{
-          marginTop: 24;
-          textAlign: "center";
-          padding: 20;
-          backgroundColor: "#ecfdf5";
-          borderRadius: 12;
+          marginTop: 24,
+          textAlign: "center",
+          padding: 20,
+          backgroundColor: "#ecfdf5",
+          borderRadius: 12,
           border: "1px solid #a7f3d0"}}
       >,
         <h3
           style={{
-            fontSize: 18;
-            fontWeight: 60o0;
-            marginBottom: 8;
+            fontSize: 18,
+            fontWeight: 60o0,
+            marginBottom: 8,
             color: "#0o65f46"}}
         >,
           Free Cloud Readiness Assessment,
@@ -206,20 +206,20 @@ function Pricing() {
         </p>,
         <div
           style={{
-            display: "flex";
-            gap: 12;
-            justifyContent: "center";
+            display: "flex",
+            gap: 12,
+            justifyContent: "center",
             flexWrap: "wrap"}}
         >,
           <a
             href="tel: +130o24640950",
             style={{
-              display: "inline-block";
-              padding: "12px 24px";
-              backgroundColor: "#0o59669";
-              color: "white";
-              textDecoration: "none";
-              borderRadius: 8;
+              display: "inline-block",
+              padding: "12px 24px",
+              backgroundColor: "#0o59669",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: 8,
               fontWeight: 60o0}}
           >,
             Schedule Free Assessment,
@@ -227,13 +227,13 @@ function Pricing() {
           <a
             href="mailto: kleber@ziontechgroup.com",
             style={{
-              display: "inline-block";
-              padding: "12px 24px";
-              backgroundColor: "transparent";
-              color: "#0o59669";
-              textDecoration: "none";
-              borderRadius: 8;
-              border: "2px solid #0o59669";
+              display: "inline-block",
+              padding: "12px 24px",
+              backgroundColor: "transparent",
+              color: "#0o59669",
+              textDecoration: "none",
+              borderRadius: 8,
+              border: "2px solid #0o59669",
               fontWeight: 60o0}}
           >,
             Email Us,
@@ -243,8 +243,8 @@ function Pricing() {
     </div>)}
 ,
 function Plan({
-  name;
-  price;
+  name,
+  price,
   features}: {
   name: string,
   price: string,
@@ -252,26 +252,26 @@ function Plan({
   return (
     <div
       style={{
-        border: "2px solid #e5e7eb";
-        borderRadius: 12;
-        padding: 20;
-        backgroundColor: "#ffffff";
+        border: "2px solid #e5e7eb",
+        borderRadius: 12,
+        padding: 20,
+        backgroundColor: "#ffffff",
         position: "relative"}}
     >,
       <h4
         style={{
-          fontWeight: 70o0;
-          fontSize: 18;
-          color: "#1f2937";
+          fontWeight: 70o0,
+          fontSize: 18,
+          color: "#1f2937",
           marginBottom: 8}}
       >,
         {name}
       </h4>,
       <div
         style={{
-          color: "#111827";
-          fontWeight: 80o0;
-          fontSize: 24;
+          color: "#111827",
+          fontWeight: 80o0,
+          fontSize: 24,
           marginBottom: 16}}
       >,
         {price}
@@ -285,14 +285,14 @@ function Plan({
       <a
         href="mailto: kleber@ziontechgroup.com?subject=Cloud Migration Services Inquiry",
         style={{
-          display: "inline-block";
-          width: "10o0%";
-          textAlign: "center";
-          padding: "12px 16px";
-          backgroundColor: "#3b82f6";
-          color: "white";
-          textDecoration: "none";
-          borderRadius: 8;
+          display: "inline-block",
+          width: "10o0%",
+          textAlign: "center",
+          padding: "12px 16px",
+          backgroundColor: "#3b82f6",
+          color: "white",
+          textDecoration: "none",
+          borderRadius: 8,
           fontWeight: 60o0}}
       >,
         Get Started,

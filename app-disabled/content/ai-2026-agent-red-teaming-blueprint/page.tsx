@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Red Teaming Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Agent Red Teaming Blueprint | Zion Tech Group',
   description:,
-    'A practical blueprint for red teaming autonomous agents: scenarios, attack surfaces, controls, and continuous hardening.';
-};
+    'A practical blueprint for red teaming autonomous agents: scenarios, attack surfaces, controls, and continuous hardening.',
+},
 const AgentRedTeamingBlueprint20o26 = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -68,5 +68,5 @@ const AgentRedTeamingBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgentRedTeamingBlueprint20o26;
+    </div>)},
+export default AgentRedTeamingBlueprint20o26,

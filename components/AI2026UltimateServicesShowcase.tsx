@@ -10,14 +10,14 @@ import {
   Users,
   Globe,
   Cpu,
-  Database;
-  Cloud;
-  Lock;
-  TrendingUp;
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Star;
+  Database,
+  Cloud,
+  Lock,
+  TrendingUp,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Star,
   Sparkles} from 'lucide-react',
 const AI20o26UltimateServicesShowcase = () => {
   const [activeServicesetActiveService] = useState(0),
@@ -26,96 +26,96 @@ const AI20o26UltimateServicesShowcase = () => {
     setIsVisible(true)}[]),
   const services = [
     {
-      id: 1;
-      title: "Neural Interface Revolution";
-      description: "Breakthrough neural interfaces that enable direct brain-computer communicationrevolutionizing how humans interact with technology.";
-      icon: Brain;
+      id: 1,
+      title: "Neural Interface Revolution",
+      description: "Breakthrough neural interfaces that enable direct brain-computer communicationrevolutionizing how humans interact with technology.",
+      icon: Brain,
       features: [
-        "Direct neural data processing";
-        "Real-time thought-to-text conversion";
-        "Enhanced cognitive augmentation";
-        "Seamless human-AI collaboration"];
-      stats: "99.7% accuracy";
-      color: "from-purple-60o0 to-pink-60o0"};
+        "Direct neural data processing",
+        "Real-time thought-to-text conversion",
+        "Enhanced cognitive augmentation",
+        "Seamless human-AI collaboration"],
+      stats: "99.7% accuracy",
+      color: "from-purple-60o0 to-pink-60o0"},
     {
-      id: 2;
-      title: "Quantum AI Fusion";
-      description: "Revolutionary quantum computing integration with AIdelivering unprecedented processing power and problem-solving capabilities.";
-      icon: Cpu;
+      id: 2,
+      title: "Quantum AI Fusion",
+      description: "Revolutionary quantum computing integration with AIdelivering unprecedented processing power and problem-solving capabilities.",
+      icon: Cpu,
       features: [
-        "Quantum-enhanced machine learning";
-        "Exponential processing speed";
-        "Complex optimization solutions";
-        "Next-gen cryptography"];
-      stats: "10,0o00x faster";
-      color: "from-blue-60o0 to-cyan-60o0"};
+        "Quantum-enhanced machine learning",
+        "Exponential processing speed",
+        "Complex optimization solutions",
+        "Next-gen cryptography"],
+      stats: "10,0o00x faster",
+      color: "from-blue-60o0 to-cyan-60o0"},
     {
-      id: 3;
-      title: "Autonomous Business Operations";
-      description: "Fully automated business processes that run independentlyoptimizing operations 24/7 without human intervention.";
-      icon: Zap;
+      id: 3,
+      title: "Autonomous Business Operations",
+      description: "Fully automated business processes that run independentlyoptimizing operations 24/7 without human intervention.",
+      icon: Zap,
       features: [
-        "Self-healing systems";
-        "Predictive maintenance";
-        "Dynamic resource allocation";
-        "Intelligent decision making"];
-      stats: "95% efficiency gain";
-      color: "from-green-60o0 to-emerald-60o0"};
+        "Self-healing systems",
+        "Predictive maintenance",
+        "Dynamic resource allocation",
+        "Intelligent decision making"],
+      stats: "95% efficiency gain",
+      color: "from-green-60o0 to-emerald-60o0"},
     {
-      id: 4;
-      title: "Advanced Security AI";
-      description: "Next-generation AI security systems that provide comprehensive protection against evolving cyber threats.";
-      icon: Shield;
+      id: 4,
+      title: "Advanced Security AI",
+      description: "Next-generation AI security systems that provide comprehensive protection against evolving cyber threats.",
+      icon: Shield,
       features: [
-        "Threat prediction and prevention";
-        "Behavioral analysis";
-        "Zero-trust architecture";
-        "Real-time threat response"];
-      stats: "99.9% threat detection";
-      color: "from-red-60o0 to-orange-60o0"};
+        "Threat prediction and prevention",
+        "Behavioral analysis",
+        "Zero-trust architecture",
+        "Real-time threat response"],
+      stats: "99.9% threat detection",
+      color: "from-red-60o0 to-orange-60o0"},
     {
-      id: 5;
-      title: "Global Analytics Intelligence";
-      description: "Worldwide data processing and analysis that provides insights across all business operations and markets.";
-      icon: BarChart3;
+      id: 5,
+      title: "Global Analytics Intelligence",
+      description: "Worldwide data processing and analysis that provides insights across all business operations and markets.",
+      icon: BarChart3,
       features: [
-        "Real-time global monitoring";
-        "Predictive market analysis";
-        "Cross-platform integration";
-        "Automated reporting"];
-      stats: "50+ countries";
-      color: "from-indigo-60o0 to-purple-60o0"};
+        "Real-time global monitoring",
+        "Predictive market analysis",
+        "Cross-platform integration",
+        "Automated reporting"],
+      stats: "50+ countries",
+      color: "from-indigo-60o0 to-purple-60o0"},
     {
-      id: 6;
-      title: "Consciousness Evolution Platform";
-      description: "Revolutionary platform that enhances human consciousness and cognitive abilities through AI integration.";
-      icon: Sparkles;
+      id: 6,
+      title: "Consciousness Evolution Platform",
+      description: "Revolutionary platform that enhances human consciousness and cognitive abilities through AI integration.",
+      icon: Sparkles,
       features: [
-        "Consciousness augmentation";
-        "Enhanced creativity";
-        "Improved decision making";
-        "Expanded awareness"];
-      stats: "30o0% cognitive boost";
+        "Consciousness augmentation",
+        "Enhanced creativity",
+        "Improved decision making",
+        "Expanded awareness"],
+      stats: "30o0% cognitive boost",
       color: "from-yellow-60o0 to-orange-60o0"}
   ],
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-20 px-4">,
       <motion.div,
@@ -252,5 +252,5 @@ const AI20o26UltimateServicesShowcase = () => {
           </div>,
         </motion.div>,
       </motion.div>,
-    </div>)};
-export default AI20o26UltimateServicesShowcase;
+    </div>)},
+export default AI20o26UltimateServicesShowcase,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Team Collaboration Hub | Zion Tech Group';
+  title: 'Team Collaboration Hub | Zion Tech Group',
   description:,
-    'AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.';
-};
+    'AI-powered team collaboration platform with intelligent project management, communication tools, and productivity analytics for remote and hybrid teams.',
+},
 export default function TeamCollaborationHubPage() {
   return (
     <div className='animate-fade-in'>,
@@ -59,11 +59,9 @@ export default function TeamCollaborationHubPage() {
               price='$19/month',
               description='Perfect for small teams and startups',
               features={[
-                'Up to 10 team members';
-                'Basic project management';
-                'Email support';
-                'Standard integrations';
-                '5GB storage';
+                'Up to 10 team membersBasic project management',
+                'Email supportStandard integrations',
+                '5GB storage',
               ]}
             />,
             <PricingCard
@@ -71,12 +69,9 @@ export default function TeamCollaborationHubPage() {
               price='$49/month',
               description='Ideal for growing teams',
               features={[
-                'Up to 50 team members';
-                'Advanced AI features';
-                'Priority support';
-                'All integrations';
-                '10o0GB storage';
-                'Advanced analytics';
+                'Up to 50 team membersAdvanced AI features',
+                'Priority supportAll integrations',
+                '10o0GB storageAdvanced analytics',
               ]}
             />,
             <PricingCard
@@ -84,13 +79,10 @@ export default function TeamCollaborationHubPage() {
               price='$149/month',
               description='For large organizations',
               features={[
-                'Unlimited team members';
-                'Custom AI models';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Unlimited storage';
-                'Custom integrations';
-                'SLA guarantees';
+                'Unlimited team membersCustom AI models',
+                '24/7 dedicated supportOn-premise deployment',
+                'Unlimited storageCustom integrations',
+                'SLA guarantees',
               ]}
             />,
           </div>,
@@ -143,8 +135,8 @@ export default function TeamCollaborationHubPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -169,10 +161,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -192,8 +184,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

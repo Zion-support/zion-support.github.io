@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Cost Optimization Blueprint';
+  title: 'AI 20o26: Cost Optimization Blueprint',
   description:,
-    'Reduce compute spend for agents with architecture patterns, right-sizing, and eval-driven controls.';
-};
+    'Reduce compute spend for agents with architecture patterns, right-sizing, and eval-driven controls.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-6 py-12 prose prose-purple'>,

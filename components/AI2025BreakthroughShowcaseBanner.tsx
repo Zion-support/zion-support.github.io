@@ -7,46 +7,46 @@ const AI20o25BreakthroughShowcaseBanner = () => {
   const [currentFeaturesetCurrentFeature] = useState(0),
   const breakthroughFeatures = [
     {
-      icon: <Brain className="w-12 h-12 text-blue-60o0"  />;
-      title: "Neural Interface Technology";
-      description: "Direct brain-computer interfaces enabling unprecedented human-AI collaboration";
-      impact: "Revolutionary";
-      stats: "10x Cognitive Enhancement"};
+      icon: <Brain className="w-12 h-12 text-blue-60o0"  />,
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces enabling unprecedented human-AI collaboration",
+      impact: "Revolutionary",
+      stats: "10x Cognitive Enhancement"},
     {
-      icon: <Cpu className="w-12 h-12 text-purple-60o0"  />;
-      title: "Quantum AI Processing";
-      description: "Quantum-powered AI algorithms solving previously impossible computational challenges";
-      impact: "Breakthrough";
-      stats: "10o00x Processing Speed"};
+      icon: <Cpu className="w-12 h-12 text-purple-60o0"  />,
+      title: "Quantum AI Processing",
+      description: "Quantum-powered AI algorithms solving previously impossible computational challenges",
+      impact: "Breakthrough",
+      stats: "10o00x Processing Speed"},
     {
-      icon: <Database className="w-12 h-12 text-green-60o0"  />;
-      title: "Autonomous Data Intelligence";
-      description: "Self-evolving AI systems that continuously learn and optimize without human intervention";
-      impact: "Transformative";
-      stats: "99.9% Accuracy"};
+      icon: <Database className="w-12 h-12 text-green-60o0"  />,
+      title: "Autonomous Data Intelligence",
+      description: "Self-evolving AI systems that continuously learn and optimize without human intervention",
+      impact: "Transformative",
+      stats: "99.9% Accuracy"},
     {
-      icon: <Network className="w-12 h-12 text-orange-60o0"  />;
-      title: "Distributed AI Networks";
-      description: "Decentralized AI networks that collaborate globally for maximum efficiency";
-      impact: "Revolutionary";
-      stats: "Global Scale"};
+      icon: <Network className="w-12 h-12 text-orange-60o0"  />,
+      title: "Distributed AI Networks",
+      description: "Decentralized AI networks that collaborate globally for maximum efficiency",
+      impact: "Revolutionary",
+      stats: "Global Scale"},
     {
-      icon: <Shield className="w-12 h-12 text-red-60o0"  />;
-      title: "AI Security Fortress";
-      description: "Advanced AI-powered security systems that adapt and evolve against threats";
-      impact: "Critical";
-      stats: "Zero Breaches"};
+      icon: <Shield className="w-12 h-12 text-red-60o0"  />,
+      title: "AI Security Fortress",
+      description: "Advanced AI-powered security systems that adapt and evolve against threats",
+      impact: "Critical",
+      stats: "Zero Breaches"},
     {
-      icon: <Zap className="w-12 h-12 text-yellow-60o0"  />;
-      title: "Instant Decision Making";
-      description: "Real-time AI decision engines that process complex scenarios in milliseconds";
-      impact: "Game-Changing";
+      icon: <Zap className="w-12 h-12 text-yellow-60o0"  />,
+      title: "Instant Decision Making",
+      description: "Real-time AI decision engines that process complex scenarios in milliseconds",
+      impact: "Game-Changing",
       stats: "0.0o01s Response Time"}
   ],
   const achievements = [
-    { number: "50o0+"label: "AI Models Deployed" };
-    { number: "99.9%"label: "Uptime Achieved" };
-    { number: "10M+"label: "Decisions Processed" };
+    { number: "50o0+"label: "AI Models Deployed" },
+    { number: "99.9%"label: "Uptime Achieved" },
+    { number: "10M+"label: "Decisions Processed" },
     { number: "150+"label: "Countries Served" }
   ],
   useEffect(() => {
@@ -68,7 +68,7 @@ const AI20o25BreakthroughShowcaseBanner = () => {
             Revolutionary AI Showcase,
           </h2>,
           <p className="text-xl text-gray-30o0 max-w-4xl mx-auto">,
-            Experience the future of artificial intelligence with our groundbreaking 20o25 technology suite 'that', 's reshaping industries worldwide.,
+            Experience the future of artificial intelligence with our groundbreaking 20o25 technology suite 'thats reshaping industries worldwide.,
           </p>,
         </div>,
         {/* Rotating Feature Showcase */}
@@ -125,9 +125,9 @@ const AI20o25BreakthroughShowcaseBanner = () => {
         {/* Technology Stack Preview */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">,
           {[
-            { name: "Machine Learning"icon: <Brain className="w-8 h-8"  />progress: 95 };
-            { name: "Deep Learning"icon: <Cpu className="w-8 h-8"  />progress: 92 };
-            { name: "Neural Networks"icon: <Network className="w-8 h-8"  />progress: 98 };
+            { name: "Machine Learning"icon: <Brain className="w-8 h-8"  />progress: 95 },
+            { name: "Deep Learning"icon: <Cpu className="w-8 h-8"  />progress: 92 },
+            { name: "Neural Networks"icon: <Network className="w-8 h-8"  />progress: 98 },
             { name: "Quantum AI"icon: <Zap className="w-8 h-8"  />progress: 88 }
           ].map((techindex) => (
             <div key={index} className="text-center p-6 bg-white/5 rounded-xl border border-white/10">,
@@ -165,5 +165,5 @@ const AI20o25BreakthroughShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25BreakthroughShowcaseBanner;
+    </section>)},
+export default AI20o25BreakthroughShowcaseBanner,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { FileText, Shield, Users, Globe, Clock, CheckCircle, AlertTriangle, Scale } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import SEOOptimizer from '../components/SEOOptimizer',
@@ -11,51 +11,44 @@ import { Shield, FileText, Scale, Lock, Eye, Users, Globe, AlertTriangle } from 
 import { FileText, Scale, Shield, Clock, CheckCircle, AlertTriangle } from 'lucide-react',
 import SEO from '../components/SEO',
 import Head from 'next/head',
-      title: 'AI Consciousness Services';
+      title: 'AI Consciousness Services',
       terms: [
-        'Services are provided on an "as-is" basis with no warranties';
-        'Users must not attempt to reverse engineer our AI systems';
-        'Data processing follows our privacy policy and data protection standards';
-        'Service availability is subject to maintenance and updates',
-      service: 'AI Consciousness Platform';
-      description: 'Advanced AI systems with consciousness capabilities';
+        'Services are provided on an "as-is" basis with no warrantiesUsers must not attempt to reverse engineer our AI systems',
+        'Data processing follows our privacy policy and data protection standardsService availability is subject to maintenance and updates',
+      service: 'AI Consciousness Platform',
+      description: 'Advanced AI systems with consciousness capabilities',
       restrictions: [
-        'No unauthorized access or reverse engineering';
-        'Compliance with AI safety guidelines';
-        'Proper data handling and privacy protection'];
-      usage: 'Commercial and research applications'};
+        'No unauthorized access or reverse engineeringCompliance with AI safety guidelines',
+        'Proper data handling and privacy protection'],
+      usage: 'Commercial and research applications'},
     {
-      service: 'Quantum Computing Solutions';
-      description: 'Quantum computing infrastructure and algorithms';
+      service: 'Quantum Computing Solutions',
+      description: 'Quantum computing infrastructure and algorithms',
       restrictions: [
-        'No quantum algorithm theft or copying';
-        'Respect for quantum security protocols';
-        'Proper quantum error handling'];
-      usage: 'Scientific research and enterprise applications'};
+        'No quantum algorithm theft or copyingRespect for quantum security protocols',
+        'Proper quantum error handling'],
+      usage: 'Scientific research and enterprise applications'},
     {
-      service: 'Cybersecurity Services';
-      description: 'Advanced security and threat protection';
+      service: 'Cybersecurity Services',
+      description: 'Advanced security and threat protection',
       restrictions: [
-        'No testing against unauthorized systems';
-        'Compliance with security regulations';
-        'Proper incident reporting procedures'];
-      usage: 'Enterprise security and compliance'};
+        'No testing against unauthorized systemsCompliance with security regulations',
+        'Proper incident reporting procedures'],
+      usage: 'Enterprise security and compliance'},
     {
-      service: 'Cloud Infrastructure';
-      description: 'Scalable cloud computing resources';
+      service: 'Cloud Infrastructure',
+      description: 'Scalable cloud computing resources',
       restrictions: [
-        'No resource abuse or unauthorized access';
-        'Compliance with cloud security policies';
-        'Proper cost management and optimization'];
+        'No resource abuse or unauthorized accessCompliance with cloud security policies',
+        'Proper cost management and optimization'],
       usage: 'Business applications and development'}
   ],
   const userObligations = [
     {
-      obligation: 'Legal Compliance';
-      description: 'Use services in accordance with all applicable laws and regulations';
+      obligation: 'Legal Compliance',
+      description: 'Use services in accordance with all applicable laws and regulations',
       examples: [
-        'Data protection and privacy laws';
-        'Export control regulations';
+        'Data protection and privacy lawsExport control regulations',
         'Industry-specific compliance requirements',
 =======,
 =======,
@@ -63,108 +56,89 @@ import Head from 'next/head',
 const TermsPage: React.FC = () => {
   const keyTerms = [
     {
-      icon: Shield;
-      title: 'Service Usage';
-      description: 'Our services are provided for legitimate business and research purposes only.'};
+      icon: Shield,
+      title: 'Service Usage',
+      description: 'Our services are provided for legitimate business and research purposes only.'},
     {
-      icon: Users;
-      title: 'User Responsibilities';
-      description: 'Users must comply with all applicable laws and regulations when using our services.'};
+      icon: Users,
+      title: 'User Responsibilities',
+      description: 'Users must comply with all applicable laws and regulations when using our services.'},
     {
-      icon: Globe;
-      title: 'Global Compliance';
-      description: 'We maintain compliance with international laws and industry standards.'};
+      icon: Globe,
+      title: 'Global Compliance',
+      description: 'We maintain compliance with international laws and industry standards.'},
     {
-      icon: Scale;
-      title: 'Legal Framework';
+      icon: Scale,
+      title: 'Legal Framework',
       description: 'All services are governed by applicable laws and our service agreements.'}
   ],
   const serviceTerms = [
     {
-      ]};
+      ]},
     {
-      title: 'Quantum Technology Services';
+      title: 'Quantum Technology Services',
       terms: [
-        'Quantum computing resources are allocated based on service tier';
-        'Users must comply with export control regulations';
-        'Performance metrics are provided for informational purposes only';
-        'Service interruptions may occur during quantum system calibration']};
+        'Quantum computing resources are allocated based on service tierUsers must comply with export control regulations',
+        'Performance metrics are provided for informational purposes onlyService interruptions may occur during quantum system calibration']},
     {
-      title: 'Cybersecurity Services';
+      title: 'Cybersecurity Services',
       terms: [
-        'Security assessments are conducted according to industry standards';
-        'Vulnerability reports are confidential and must not be shared';
-        'Penetration testing requires written authorization';
-        'Incident response follows our established protocols',
-  FileText, Shield, AlertTriangle, CheckCircle;
+        'Security assessments are conducted according to industry standardsVulnerability reports are confidential and must not be shared',
+        'Penetration testing requires written authorizationIncident response follows our established protocols',
+  FileText, Shield, AlertTriangle, CheckCircle,
   User, Lock, Globe, Scale, Clock, Mail} from 'lucide-react',
 const TermsPage: React.FC = () => {
   const lastUpdated = 'January 17, 2025',
   const termsSections = [
     {
-      title: 'Acceptance of Terms';
-      icon: <CheckCircle className="w-8 h-8" />;
-      color: 'from-cyan-500 to-blue-500';
+      title: 'Acceptance of Terms',
+      icon: <CheckCircle className="w-8 h-8" />,
+      color: 'from-cyan-500 to-blue-500',
       content: [
-        'By accessing or using our services, you agree to be bound by these terms';
-        'If you do not agree to these terms, do not use our services';
-        'We may modify these terms at any time with notice';
-        'Continued use after changes constitutes acceptance of new terms']};
+        'By accessing or using our services, you agree to be bound by these termsIf you do not agree to these terms, do not use our services',
+        'We may modify these terms at any time with noticeContinued use after changes constitutes acceptance of new terms']},
     {
-      title: 'Service Description';
-      icon: <Globe className="w-8 h-8" />;
-      color: 'from-purple-500 to-pink-500';
+      title: 'Service Description',
+      icon: <Globe className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500',
       content: [
-        'AI and machine learning solutions';
-        'Quantum computing services';
-        'IT infrastructure and consulting';
-        'Micro SAAS applications';
-        'Business automation services';
-        'Technical support and maintenance']};
+        'AI and machine learning solutionsQuantum computing services',
+        'IT infrastructure and consultingMicro SAAS applications',
+        'Business automation servicesTechnical support and maintenance']},
     {
-      title: 'User Responsibilities';
-      icon: <User className="w-8 h-8" />;
-      color: 'from-green-500 to-emerald-500';
+      title: 'User Responsibilities',
+      icon: <User className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500',
       content: [
-        'Provide accurate and complete information';
-        'Maintain security of your account credentials';
-        'Comply with applicable laws and regulations';
-        'Use services for lawful purposes only';
-        'Respect intellectual property rights']};
+        'Provide accurate and complete informationMaintain security of your account credentials',
+        'Comply with applicable laws and regulationsUse services for lawful purposes only',
+        'Respect intellectual property rights']},
     {
-      title: 'Intellectual Property';
-      icon: <Lock className="w-8 h-8" />;
-      color: 'from-orange-500 to-red-500';
+      title: 'Intellectual Property',
+      icon: <Lock className="w-8 h-8" />,
+      color: 'from-orange-500 to-red-500',
       content: [
-        'Our services and content are protected by copyright';
-        'You retain rights to your own content';
-        'No transfer of intellectual property rights';
-        'License to use our services as intended';
+        'Our services and content are protected by copyrightYou retain rights to your own content',
+        'No transfer of intellectual property rightsLicense to use our services as intended',
         'Prohibition of reverse engineering',
 =======]}
   ],
   const prohibitedActivities = [
 =======,
-    'Attempting to gain unauthorized access to our systems';
-    'Using services for illegal or harmful purposes';
-    'Violating intellectual property rights';
-    'Interfering with service availability';
-    'Sharing confidential information without authorization';
-    'Attempting to manipulate or exploit our AI systems';
+    'Attempting to gain unauthorized access to our systemsUsing services for illegal or harmful purposes',
+    'Violating intellectual property rightsInterfering with service availability',
+    'Sharing confidential information without authorizationAttempting to manipulate or exploit our AI systems',
     'Using services for cyber attacks or malicious activities'],
   const userObligations = [
-    'Provide accurate and complete information';
-    'Maintain the security of account credentials';
-    'Comply with all applicable laws and regulations';
-    'Respect intellectual property rights';
-    'Report security vulnerabilities responsibly';
-    'Use services only for authorized purposes';
+    'Provide accurate and complete informationMaintain the security of account credentials',
+    'Comply with all applicable laws and regulationsRespect intellectual property rights',
+    'Report security vulnerabilities responsiblyUse services only for authorized purposes',
     'Maintain appropriate data protection measures'],
   return (
     <>,
       <SEO title="Terms of Service | Zion Tech Group" description="Terms of Service for Zion Tech Group - Learn about our service terms and conditions." url="https: //ziontechgroup.com/terms/" />,
-  FileText, Shield, CheckCircle, AlertTriangle;
-  Globe, Calendar, Scale, Users, ArrowRight;
+  FileText, Shield, CheckCircle, AlertTriangle,
+  Globe, Calendar, Scale, Users, ArrowRight,
   BookOpen, Lock, Zap, Building, Brain, Rocket} from 'lucide-react',
 =======,
       {/* Hero Section */}
@@ -180,127 +154,111 @@ const TermsPage: React.FC = () => {
 export default function TermsPage() {
   const termsSections = [
     {
-      icon: <Users className="w-8 h-8" />;
-      title: 'Acceptance of Terms';
-      description: 'By using our services, you agree to these terms and conditions';
-      color: 'from-blue-500 to-cyan-500'};
+      icon: <Users className="w-8 h-8" />,
+      title: 'Acceptance of Terms',
+      description: 'By using our services, you agree to these terms and conditions',
+      color: 'from-blue-500 to-cyan-500'},
     {
-      icon: <Shield className="w-8 h-8" />;
-      title: 'Service Description';
-      description: 'Comprehensive overview of our AI consciousness and quantum computing services';
-      color: 'from-purple-500 to-pink-500'};
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Service Description',
+      description: 'Comprehensive overview of our AI consciousness and quantum computing services',
+      color: 'from-purple-500 to-pink-500'},
     {
-      icon: <Lock className="w-8 h-8" />;
-      title: 'User Obligations';
-      description: 'Your responsibilities when using our services and platforms';
-      color: 'from-green-500 to-emerald-500'};
+      icon: <Lock className="w-8 h-8" />,
+      title: 'User Obligations',
+      description: 'Your responsibilities when using our services and platforms',
+      color: 'from-green-500 to-emerald-500'},
     {
-      icon: <Scale className="w-8 h-8" />;
-      title: 'Legal Terms';
-      description: 'Important legal provisions and dispute resolution procedures';
+      icon: <Scale className="w-8 h-8" />,
+      title: 'Legal Terms',
+      description: 'Important legal provisions and dispute resolution procedures',
       color: 'from-yellow-500 to-orange-500'}
   ],
   const serviceCategories = [
     {
-      category: 'AI Consciousness Services';
-      description: 'Advanced AI systems with consciousness and emotional intelligence capabilities';
-      features: ['Emotional intelligence', 'Self-awareness', 'Decision-making', 'Learning systems'];
-      restrictions: ['No malicious use', 'Compliance with AI ethics', 'Data privacy requirements'];
-      icon: <Brain className="w-6 h-6" />};
+      category: 'AI Consciousness Services',
+      description: 'Advanced AI systems with consciousness and emotional intelligence capabilities',
+      features: ['Emotional intelligenceSelf-awareness', 'Decision-makingLearning systems'],
+      restrictions: ['No malicious useCompliance with AI ethics', 'Data privacy requirements'],
+      icon: <Brain className="w-6 h-6" />},
     {
-      category: 'Quantum Computing Platform';
-      description: 'Quantum computing services for complex computational problems';
-      features: ['Quantum algorithms', 'Hybrid classical-quantum', 'Optimization tools', 'Simulation capabilities'];
-      restrictions: ['No weapon development', 'Export control compliance', 'Security protocols'];
-      icon: <Rocket className="w-6 h-6" />};
+      category: 'Quantum Computing Platform',
+      description: 'Quantum computing services for complex computational problems',
+      features: ['Quantum algorithmsHybrid classical-quantum', 'Optimization toolsSimulation capabilities'],
+      restrictions: ['No weapon developmentExport control compliance', 'Security protocols'],
+      icon: <Rocket className="w-6 h-6" />},
     {
-      category: 'Space Technology Solutions';
-      description: 'Space resource intelligence and exploration technology services';
-      features: ['Resource mapping', 'Celestial analysis', 'Exploration data', 'Intelligence platforms'];
-      restrictions: ['No military applications', 'International space law compliance', 'Environmental protection'];
-      icon: <Globe className="w-6 h-6" />};
+      category: 'Space Technology Solutions',
+      description: 'Space resource intelligence and exploration technology services',
+      features: ['Resource mappingCelestial analysis', 'Exploration dataIntelligence platforms'],
+      restrictions: ['No military applicationsInternational space law compliance', 'Environmental protection'],
+      icon: <Globe className="w-6 h-6" />},
     {
-      category: 'Enterprise Solutions';
-      description: 'Comprehensive enterprise technology and infrastructure services';
-      features: ['IT infrastructure', 'Cloud services', 'Security solutions', 'Consulting services'];
-      restrictions: ['Valid business use', 'Compliance requirements', 'Licensing terms'];
+      category: 'Enterprise Solutions',
+      description: 'Comprehensive enterprise technology and infrastructure services',
+      features: ['IT infrastructureCloud services', 'Security solutionsConsulting services'],
+      restrictions: ['Valid business useCompliance requirements', 'Licensing terms'],
       icon: <Building className="w-6 h-6" />}
   ],
   const userObligations = [
     {
-      obligation: 'Acceptable Use';
-      description: 'Use services only for lawful and authorized purposes';
+      obligation: 'Acceptable Use',
+      description: 'Use services only for lawful and authorized purposes',
       details: [
-        'Comply with all applicable laws and regulations';
-        'Respect intellectual property rights';
-        'Maintain security and confidentiality';
-        'No unauthorized access or interference'];
-      icon: <CheckCircle className="w-6 h-6" />;
-      color: 'from-green-500 to-emerald-500'};
+        'Comply with all applicable laws and regulationsRespect intellectual property rights',
+        'Maintain security and confidentialityNo unauthorized access or interference'],
+      icon: <CheckCircle className="w-6 h-6" />,
+      color: 'from-green-500 to-emerald-500'},
     {
-      obligation: 'Account Security';
-      description: 'Maintain the security of your account and credentials';
+      obligation: 'Account Security',
+      description: 'Maintain the security of your account and credentials',
       details: [
-        'Use strong, unique passwords';
-        'Enable multi-factor authentication';
-        'Report security incidents immediately';
-        'No sharing of account credentials'];
-      icon: <Shield className="w-6 h-6" />;
-      color: 'from-blue-500 to-cyan-500'};
+        'Use strong, unique passwordsEnable multi-factor authentication',
+        'Report security incidents immediatelyNo sharing of account credentials'],
+      icon: <Shield className="w-6 h-6" />,
+      color: 'from-blue-500 to-cyan-500'},
     {
-      obligation: 'Data Compliance';
-      description: 'Ensure compliance with data protection and privacy requirements';
+      obligation: 'Data Compliance',
+      description: 'Ensure compliance with data protection and privacy requirements',
       details: [
-        'Obtain necessary consents';
-        'Implement appropriate safeguards';
-        'Respect user privacy rights';
-        'Report data breaches promptly'];
-      icon: <Lock className="w-6 h-6" />;
-      color: 'from-purple-500 to-pink-500'};
+        'Obtain necessary consentsImplement appropriate safeguards',
+        'Respect user privacy rightsReport data breaches promptly'],
+      icon: <Lock className="w-6 h-6" />,
+      color: 'from-purple-500 to-pink-500'},
     {
-      obligation: 'Payment Obligations';
-      description: 'Timely payment of all fees and charges for services';
+      obligation: 'Payment Obligations',
+      description: 'Timely payment of all fees and charges for services',
       details: [
-        'Pay invoices within specified terms';
-        'Maintain valid payment methods';
-        'Notify of billing disputes';
-        'Comply with pricing agreements'];
-      icon: <Zap className="w-6 h-6" />;
+        'Pay invoices within specified termsMaintain valid payment methods',
+        'Notify of billing disputesComply with pricing agreements'],
+      icon: <Zap className="w-6 h-6" />,
       color: 'from-yellow-500 to-orange-500'}
   ],
   const legalProvisions = [
     {
-      title: 'Intellectual Property';
-      description: 'All services, software, and content remain our exclusive property';
+      title: 'Intellectual Property',
+      description: 'All services, software, and content remain our exclusive property',
       details: [
-        'You retain ownership of your data and content';
-        'We retain rights to our technology and improvements';
-        'No reverse engineering or modification without permission';
-        'Licenses are non-transferable and revocable']};
+        'You retain ownership of your data and contentWe retain rights to our technology and improvements',
+        'No reverse engineering or modification without permissionLicenses are non-transferable and revocable']},
     {
-      title: 'Limitation of Liability';
-      description: 'Our liability is limited to the amount paid for services';
+      title: 'Limitation of Liability',
+      description: 'Our liability is limited to the amount paid for services',
       details: [
-        'No liability for indirect or consequential damages';
-        'Exclusions for force majeure events';
-        'Limitations on warranty claims';
-        'Mutual indemnification obligations']};
+        'No liability for indirect or consequential damagesExclusions for force majeure events',
+        'Limitations on warranty claimsMutual indemnification obligations']},
     {
-      title: 'Termination';
-      description: 'Either party may terminate services with proper notice';
+      title: 'Termination',
+      description: 'Either party may terminate services with proper notice',
       details: [
-        '30 days written notice for standard termination';
-        'Immediate termination for material breaches';
-        'Data return and deletion procedures';
-        'Surviving obligations after termination']};
+        '30 days written notice for standard terminationImmediate termination for material breaches',
+        'Data return and deletion proceduresSurviving obligations after termination']},
     {
-      title: 'Dispute Resolution';
-      description: 'Mandatory arbitration for all disputes';
+      title: 'Dispute Resolution',
+      description: 'Mandatory arbitration for all disputes',
       details: [
-        'Binding arbitration in Delaware';
-        'Governing law is Delaware state law';
-        'Class action waivers';
-        'Appeal rights limited']}
+        'Binding arbitration in DelawareGoverning law is Delaware state law',
+        'Class action waiversAppeal rights limited']}
   ],
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -346,42 +304,42 @@ export default function TermsPage() {
 const Terms: React.FC = () => {
   const sections = [
     {
-      title: 'Acceptance of Terms';
-      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`;
-      icon: <FileText className="w-6 h-6 text-purple-400" />};
+      title: 'Acceptance of Terms',
+      content: `By accessing and using the Zion Tech Group website and services, you accept and agree to be bound by the terms and provision of this agreement. If you do not agree to abide by the above, please do not use this service.`,
+      icon: <FileText className="w-6 h-6 text-purple-400" />},
     {
-      title: 'Use License';
-      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`;
-      icon: <Lock className="w-6 h-6 text-blue-400" />};
+      title: 'Use License',
+      content: `Permission is granted to temporarily download one copy of the materials (information or software) on Zion Tech Group's website for personal, non-commercial transitory viewing only. This is the grant of a license, not a transfer of title, and under this license you may not: modify or copy the materials, use the materials for any commercial purpose or for any public display, attempt to reverse engineer any software contained on Zion Tech Group's website, remove any copyright or other proprietary notations from the materials, or transfer the materials to another person or "mirror" the materials on any other server.`,
+      icon: <Lock className="w-6 h-6 text-blue-400" />},
     {
-      title: 'Service Description';
-      content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`;
-      icon: <Globe className="w-6 h-6 text-green-400" />};
+      title: 'Service Description',
+      content: `Zion Tech Group provides AI consciousness technology, quantum computing solutions, autonomous systems, and related consulting services. We reserve the right to modify, suspend, or discontinue any aspect of our services at any time.`,
+      icon: <Globe className="w-6 h-6 text-green-400" />},
     {
-      title: 'User Responsibilities';
-      content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`;
-      icon: <Users className="w-6 h-6 text-yellow-400" />};
+      title: 'User Responsibilities',
+      content: `Users are responsible for maintaining the confidentiality of their account information and for all activities that occur under their account. Users must not use our services for any illegal or unauthorized purpose, or in any way that violates applicable laws or regulations.`,
+      icon: <Users className="w-6 h-6 text-yellow-400" />},
     {
-      title: 'Privacy and Data Protection';
-      content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`;
-      icon: <Eye className="w-6 h-6 text-cyan-400" />};
+      title: 'Privacy and Data Protection',
+      content: `Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which is incorporated into these Terms by reference. We are committed to protecting your data in accordance with applicable data protection laws.`,
+      icon: <Eye className="w-6 h-6 text-cyan-400" />},
     {
-      title: 'Intellectual Property Rights';
-      content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`;
+      title: 'Intellectual Property Rights',
+      content: `All content on this website, including but not limited to text, graphics, logos, images, software, and other materials, is the property of Zion Tech Group or its licensors and is protected by copyright, trademark, and other intellectual property laws.`,
       icon: <Shield className="w-6 h-6 text-red-400" />}
   ],
   const importantNotices = [
     {
-      title: 'AI Technology Risks';
-      content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.';
-      type: 'warning'};
+      title: 'AI Technology Risks',
+      content: 'Our AI consciousness technology involves experimental and cutting-edge research. Users acknowledge that such technology may carry inherent risks and uncertainties.',
+      type: 'warning'},
     {
-      title: 'Quantum Computing Limitations';
-      content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.';
-      type: 'info'};
+      title: 'Quantum Computing Limitations',
+      content: 'Quantum computing services are subject to current technological limitations and may not be suitable for all applications or use cases.',
+      type: 'info'},
     {
-      title: 'Service Availability';
-      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.';
+      title: 'Service Availability',
+      content: 'We strive to maintain high service availability but cannot guarantee uninterrupted access to our services due to factors beyond our control.',
       type: 'info'}
   ],
   return (
@@ -393,20 +351,20 @@ const Terms: React.FC = () => {
 =======,
 const termsSections = [
   {
-    title: 'Acceptance of Terms';
-    icon: <CheckCircle className="w-6 h-6 text-green-400" />;
-    content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.'};
+    title: 'Acceptance of Terms',
+    icon: <CheckCircle className="w-6 h-6 text-green-400" />,
+    content: 'By accessing and using our services, you accept and agree to be bound by the terms and provision of this agreement.'},
   {
-    title: 'Use License';
-    icon: <Scale className="w-6 h-6 text-blue-400" />;
-    content: 'Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.'};
+    title: 'Use License',
+    icon: <Scale className="w-6 h-6 text-blue-400" />,
+    content: 'Permission is granted to temporarily use our services for personal, non-commercial transitory viewing only.'},
   {
-    title: 'Disclaimer';
-    icon: <AlertTriangle className="w-6 h-6 text-orange-400" />;
-    content: 'The materials on our website are provided on an "as is" basis. We make no warranties, expressed or implied.'};
+    title: 'Disclaimer',
+    icon: <AlertTriangle className="w-6 h-6 text-orange-400" />,
+    content: 'The materials on our website are provided on an "as is" basis. We make no warranties, expressed or implied.'},
   {
-    title: 'Limitations';
-    icon: <Shield className="w-6 h-6 text-purple-400" />;
+    title: 'Limitations',
+    icon: <Shield className="w-6 h-6 text-purple-400" />,
     content: 'In no event shall Zion Tech Group be liable for any damages arising out of the use or inability to use our services.'}
 ],
 export default function Terms() {
@@ -1068,19 +1026,13 @@ export default function Terms() {
                           </li>))}
                       </ul>,
 =======,
-    'Unauthorized access to our systems or networks';
-    'Interference with service operation';
-    'Distribution of malware or harmful code';
-    'Violation of third-party rights';
-    'Attempts to gain unauthorized access';
-    'Use of services for illegal activities'],
+    'Unauthorized access to our systems or networksInterference with service operation',
+    'Distribution of malware or harmful codeViolation of third-party rights',
+    'Attempts to gain unauthorized accessUse of services for illegal activities'],
   const limitations = [
-    'Services provided "as is" without warranties';
-    'No guarantee of uninterrupted service';
-    'Limitation of liability for damages';
-    'No responsibility for third-party content';
-    'Service availability subject to change';
-    'Technical support during business hours only'],
+    'Services provided "as is" without warrantiesNo guarantee of uninterrupted service',
+    'Limitation of liability for damagesNo responsibility for third-party content',
+    'Service availability subject to changeTechnical support during business hours only'],
   return (
     <ErrorBoundary>,
       <SEOOptimizer />,
@@ -1298,7 +1250,7 @@ export default function Terms() {
                     <div>,
                       <h3 className="text-2xl font-bold text-white mb-4">2. Service Description and Availability</h3>,
                       <p className="text-gray-300 mb-4 leading-relaxed">,
-                        Our services include AI and machine learning solutions, quantum computing services;
+                        Our services include AI and machine learning solutions, quantum computing services,
                         IT infrastructure consulting, micro SAAS applications, business automation, and,
                         technical support.,
                       </p>,
@@ -1335,7 +1287,7 @@ export default function Terms() {
                     <div>,
                       <h3 className="text-2xl font-bold text-white mb-4">5. Intellectual Property Rights</h3>,
                       <p className="text-gray-300 mb-4 leading-relaxed">,
-                        Our services, including software, content, and technology, are protected by copyright;
+                        Our services, including software, content, and technology, are protected by copyright,
                         trademark, and other intellectual property laws. You retain rights to your own content.,
                       </p>,
                       <p className="text-gray-300 leading-relaxed">,
@@ -1723,7 +1675,7 @@ export default function Terms() {
                 <h3 className="text-2xl font-bold text-purple-400 mb-4">2. Acceptance of Terms</h3>,
                 <div className="text-gray-300 space-y-4">,
                   <p>,
-                    By accessing, browsing, or using our services, you acknowledge that you have read;
+                    By accessing, browsing, or using our services, you acknowledge that you have read,
                     understood, and agree to be bound by these Terms of Service and our Privacy Policy.,
                   </p>,
                   <p>,
@@ -1801,7 +1753,7 @@ export default function Terms() {
                   </p>,
                   <h4 className="text-lg font-semibold text-white">Disclaimer of Warranties</h4>,
                   <p>,
-                    Our services are provided "as is" and "as available" without warranties of any kind;
+                    Our services are provided "as is" and "as available" without warranties of any kind,
                     either express or implied, including but not limited to warranties of merchantability,
                     or fitness for a particular purpose.,
                   </p>,
@@ -1883,8 +1835,8 @@ export default function Terms() {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default Terms;
+    </Layout>)},
+export default Terms,
 =======,
             </div>,
           </section>,
@@ -1922,8 +1874,8 @@ export default Terms;
           </section>,
         </main>,
       </Layout>,
-    </ErrorBoundary>)};
-export default TermsPage;
+    </ErrorBoundary>)},
+export default TermsPage,
 =======,
   return (
     <>,

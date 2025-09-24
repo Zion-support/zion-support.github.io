@@ -10,14 +10,14 @@ import {
   Zap,
   Brain,
   Rocket,
-  ArrowRight;
-  X;
-  ChevronRight;
-  Award;
-  Users;
-  Clock;
-  TrendingUp;
-  CheckCircle;
+  ArrowRight,
+  X,
+  ChevronRight,
+  Award,
+  Users,
+  Clock,
+  TrendingUp,
+  CheckCircle,
   BarChart3} from 'lucide-react',
 const InteractiveTechDemo20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -27,31 +27,29 @@ const InteractiveTechDemo20o27PromotionBanner = () => {
     setIsVisible(true)}[]),
   const demos = [
     {
-      icon: Brain;
-      title: 'AI Quantum Processing';
-      description: '1.2M ops/sec';
-      color: 'from-purple-50o0 to-blue-50o0'};
+      icon: Brain,
+      title: 'AI Quantum Processing',
+      description: '1.2M ops/sec',
+      color: 'from-purple-50o0 to-blue-50o0'},
     {
-      icon: Zap;
-      title: 'Autonomous Automation';
-      description: '847 tasks automated';
-      color: 'from-green-50o0 to-teal-50o0'};
+      icon: Zap,
+      title: 'Autonomous Automation',
+      description: '847 tasks automated',
+      color: 'from-green-50o0 to-teal-50o0'},
     {
-      icon: Rocket;
-      title: 'Neural Interface';
-      description: '12ms response time';
+      icon: Rocket,
+      title: 'Neural Interface',
+      description: '12ms response time',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const features = [
-    'Real-time Processing';
-    'Interactive Controls';
-    'Live Metrics';
-    'Step-by-step Guide'],
+    'Real-time ProcessingInteractive Controls',
+    'Live MetricsStep-by-step Guide'],
   const stats = [
-    { value: '99.97%'label: 'Accuracy' };
-    { value: '2.3k 'hrs', 'label: 'Time Saved' };
-    { value: '0.0o2%'label: 'Error Rate' };
-    { value: '$1.2'M', 'label: 'Cost Saved' }
+    { value: '99.97%'label: 'Accuracy' },
+    { value: '2.3k 'hrslabel: 'Time Saved' },
+    { value: '0.0o2%'label: 'Error Rate' },
+    { value: '$1.2'Mlabel: 'Cost Saved' }
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -73,10 +71,8 @@ const InteractiveTechDemo20o27PromotionBanner = () => {
               className="absolute inset-0 opacity-30",
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
+                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)'
                 ]}}
               transition={{ duration: 6repeat: Infinity }}
              />,
@@ -185,5 +181,5 @@ const InteractiveTechDemo20o27PromotionBanner = () => {
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-purple-60o0 animate-pulse"  />,
         </motion.div>)}
-    </AnimatePresence>)};
-export default InteractiveTechDemo20o27PromotionBanner;
+    </AnimatePresence>)},
+export default InteractiveTechDemo20o27PromotionBanner,

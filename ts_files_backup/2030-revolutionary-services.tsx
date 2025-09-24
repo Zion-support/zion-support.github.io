@@ -1,18 +1,19 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
 import UltraFuturisticNavigation2030 from '../components/layout/UltraFuturisticNavigation2030',
 import UltraFuturisticFooter2030 from '../components/layout/UltraFuturisticFooter2030',
 import { innovative2030Services } from '../data/2030-innovative-services',
-import { innovative2030Services } from '../data/2030-innovative-services',import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react',
+import { innovative2030Services } from '../data/2030-innovative-services',
+import { ArrowRight, Star, Zap, TrendingUp, Users, Award, Phone, Mail, MapPin } from 'lucide-react',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -21,17 +22,17 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>}
     return this.props.children}
 }
-};
+},
   return (
-  ArrowRight;
-  Star;
-  Zap;
-  TrendingUp;
-  Users;
-  Award;
-  Phone;
-  Mail;
-  MapPin;
+  ArrowRight,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',import UltraFuturisticBackground2030 from '../components/backgrounds/UltraFuturisticBackground2030',
 export default function Revolutionary2030ServicesPage() {
   const contactInfo = {
@@ -40,10 +41,10 @@ export default function Revolutionary2030ServicesPage() {
     address: '364 E Main St STE 1008 Middletown DE 19709',
     website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'}
 ,
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',    website: 'https://ziontechgroup.com'},
   return (
     <UltraFuturisticBackground2030>,
       <Head>,
@@ -143,29 +144,28 @@ export default function Revolutionary2030ServicesPage() {
           type='application / ld + json',
           dangerouslySetInnerHTML={{
             __html: JSON && JSON.stringify({
-              '@context': 'https://schema && schema.org';
+              '@context': 'https://schema && schema.org',
             __html: JSON.stringify ({
-              '@context': 'https://schema.org';
-              '@type': 'Organization';
-              name: 'Zion Tech Group';
+              '@context': 'https://schema.org@type': 'Organization',
+              name: 'Zion Tech Group',
               description:,
-                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing';
-              url: 'https://ziontechgroup.com';
-              logo: 'https://ziontechgroup.com / logo.png';
+                'Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing',
+              url: 'https://ziontechgroup.com',
+              logo: 'https://ziontechgroup.com / logo.png',
               contact_point: {
-                '@type': 'ContactPoint';
-                telephone: '+1 - 302 - 464 - 0950';
-                contact_type: 'customer service';
-                email: 'kleber@ziontechgroup.com';
-              };
+                '@type': 'ContactPoint',
+                telephone: '+1 - 302 - 464 - 0950',
+                contact_type: 'customer service',
+                email: 'kleber@ziontechgroup.com'
+              },
               address: {
-                '@type': 'PostalAddress';
-                street_address: '364 E Main St STE 1008';
-                address_locality: 'Middletown';
-                address_region: 'DE';
-                postal_code: '19709';
-                address_country: 'US';
-              };
+                '@type': 'PostalAddress',
+                street_address: '364 E Main St STE 1008',
+                address_locality: 'Middletown',
+                address_region: 'DE',
+                postal_code: '19709',
+                address_country: 'US'
+              },
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
     <UltraFuturisticBackground2030>,
       <Head>,
@@ -187,7 +187,7 @@ export default function Revolutionary2030ServicesPage() {
         <meta name="twitter:image" content="https://ziontechgroup.com/twitter-image.jpg" />,
 {/* Additional Meta Tags */}
         <meta name="theme-color" content="#8b5cf6" />,
-        <link rel="canonical" href="https: //ziontechgroup.com/2030-revolutionary-services" />};
+        <link rel="canonical" href="https: //ziontechgroup.com/2030-revolutionary-services" />},
   return (
     <UltraFuturisticBackground2030>,
       <Head>,
@@ -247,15 +247,15 @@ export default function Revolutionary2030ServicesPage() {
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https: //schema.org", "@type": "Organization";
+              "@context": "https: //schema.org", "@type": "Organization",
               "name": "Zion Tech Group",
               "description": "Leading provider of revolutionary 2030 technology services including AI consciousness, quantum computing, space mining, and DNA computing",
-              "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png";
+              "url": "https: //ziontechgroup.com", "logo": "https://ziontechgroup.com/logo.png",
               "contactPoint": {
                 "@type": "ContactPoint",
                 "telephone": "+1-302-464-0950",
                 "contactType": "customer service",
-                "email": "kleber@ziontechgroup.com"};
+                "email": "kleber@ziontechgroup.com"},
               "address": {
                 "@type": "PostalAddress",
                 "streetAddress": "364 E Main St STE 1008",

@@ -1,28 +1,28 @@
 import React, { useEffect, useMemo, useState } from 'react',
 import { supabase } from '@/utils/supabase/client',
 import {
-  LineChart;
-  Line;
-  XAxis;
-  YAxis;
-  Tooltip as ReTooltip;
-  Legend;
-  ResponsiveContainer;
-  BarChart;
-  Bar;
-  PieChart;
-  Pie;
+  LineChart,
+  Line,
+  XAxis,
+  YAxis,
+  Tooltip as ReTooltip,
+  Legend,
+  ResponsiveContainer,
+  BarChart,
+  Bar,
+  PieChart,
+  Pie,
   Cell} from 'recharts',
 // Types that loosely match an analytics_events table shape,
 type AnalyticsEvent ={
   created_at: string,
   user_id?: string | null,
-  kind?: string | null, // e.g., 'page_view', 'click', 'conversion', 'listing_created',
+  kind?: string | null, // e.g., 'page_viewclick', 'conversionlisting_created',
   action?: string | null, // alternative to kind for 'view' vs 'click',
   referrer?: string | null,
   source?: string | null, // 'organic' | 'referral' | 'paid' | 'direct' | 'social' | etc,
-  page_type?: string | null, // e.g., 'ai_generated', 'listing',
-  is_conversion?: boolean | null};
+  page_type?: string | null, // e.g., 'ai_generatedlisting',
+  is_conversion?: boolean | null},
 function formatDate(d: Date): string {
   return d.toISOString().slice(0, 10)}
 ,
@@ -34,8 +34,8 @@ function addDays(d: Date, days: number): Date {
 function generateSampleData(days = 30): AnalyticsEvent[] {
   const now = new Date(),
   const start = addDays(now, -days + 1),
-  const sources = ['organic', 'referral', 'paid', 'direct'],
-  const referrers = ['google.com', 'bing.com', 'newsletter.zion.app', 'partner.example.com'],
+  const sources = ['organicreferral', 'paiddirect'],
+  const referrers = ['google.combing.com', 'newsletter.zion.apppartner.example.com'],
   const data: AnalyticsEvent[] = [],
   for (let i = 0, i < days, i++) {
     const day = addDays(start, i),
@@ -45,42 +45,42 @@ function generateSampleData(days = 30): AnalyticsEvent[] {
       const userId = `u_${i}_${u}`,
       // Page view (impression),
       data.push({
-        created_at: dayStr;
-        user_id: userId;
-        kind: 'page_view';
-        action: 'view';
-        referrer: referrers[Math.floor(Math.random() * referrers.length)];
-        source: sources[Math.floor(Math.random() * sources.length)];
-        page_type: Math.random() < 0.4 ? 'ai_generated' : 'standard';
+        created_at: dayStr,
+        user_id: userId,
+        kind: 'page_view',
+        action: 'view',
+        referrer: referrers[Math.floor(Math.random() * referrers.length)],
+        source: sources[Math.floor(Math.random() * sources.length)],
+        page_type: Math.random() < 0.4 ? 'ai_generated' : 'standard',
         is_conversion: false}),
       // Clicks on AI pages,
       if (Math.random() < 0.25) {
         data.push({
-          created_at: dayStr;
-          user_id: userId;
-          kind: 'click';
-          action: 'click';
-          referrer: 'google.com';
-          source: 'organic';
-          page_type: 'ai_generated';
+          created_at: dayStr,
+          user_id: userId,
+          kind: 'click',
+          action: 'click',
+          referrer: 'google.com',
+          source: 'organic',
+          page_type: 'ai_generated',
           is_conversion: false})}
       // Listings created,
       if (Math.random() < 0.1) {
         data.push({
-          created_at: dayStr;
-          user_id: userId;
-          kind: 'listing_created';
-          action: 'create';
-          source: sources[Math.floor(Math.random() * sources.length)];
+          created_at: dayStr,
+          user_id: userId,
+          kind: 'listing_created',
+          action: 'create',
+          source: sources[Math.floor(Math.random() * sources.length)],
           is_conversion: false})}
       // Conversions,
       if (Math.random() < 0.08) {
         data.push({
-          created_at: dayStr;
-          user_id: userId;
-          kind: 'conversion';
-          action: 'convert';
-          source: sources[Math.floor(Math.random() * sources.length)];
+          created_at: dayStr,
+          user_id: userId,
+          kind: 'conversion',
+          action: 'convert',
+          source: sources[Math.floor(Math.random() * sources.length)],
           is_conversion: true})}
     }
   }
@@ -129,7 +129,7 @@ export default function AdminGrowthPage() {
     const referrerCounts = new Map<string number>(),
     let aiImpressions = 0,
     let aiClicks = 0,
-    const trafficCounts: Record<string number> ={ organic: 0, referral: 0, paid: 0, direct: 0, social: 0, other: 0 };
+    const trafficCounts: Record<string number> ={ organic: 0, referral: 0, paid: 0, direct: 0, social: 0, other: 0 },
     for (const ev of events) {
       const day = formatDate(new Date(ev.created_at)),
       const userId = ev.user_id || `anon_${day}`,
@@ -170,31 +170,31 @@ export default function AdminGrowthPage() {
       const d = addDays(start, i),
       const key = formatDate(d),
       series.push({
-        date: key;
-        users: (byDateUsers.get(key)?.size || 0);
-        listings: byDateListings.get(key) || 0;
+        date: key,
+        users: (byDateUsers.get(key)?.size || 0),
+        listings: byDateListings.get(key) || 0,
         conversions: byDateConversions.get(key) || 0})}
 ,
     const sortedReferrers = Array.from(referrerCounts.entries()).sort((a, b) => b[1] - a[1]).slice(0, 10),
     const ctr ={
-      impressions: aiImpressions;
-      clicks: aiClicks;
-      ctrPercent: aiImpressions > 0 ? Math.round((aiClicks / aiImpressions) * 10o00) / 10 : 0};
+      impressions: aiImpressions,
+      clicks: aiClicks,
+      ctrPercent: aiImpressions > 0 ? Math.round((aiClicks / aiImpressions) * 10o00) / 10 : 0},
     const breakdown = [
-      { name: 'Organic', value: trafficCounts.organic };
-      { name: 'Referral', value: trafficCounts.referral };
-      { name: 'Paid', value: trafficCounts.paid };
-      { name: 'Direct', value: trafficCounts.direct };
-      { name: 'Social', value: trafficCounts.social };
-      { name: 'Other', value: trafficCounts.other };
+      { name: 'Organic', value: trafficCounts.organic },
+      { name: 'Referral', value: trafficCounts.referral },
+      { name: 'Paid', value: trafficCounts.paid },
+      { name: 'Direct', value: trafficCounts.direct },
+      { name: 'Social', value: trafficCounts.social },
+      { name: 'Other', value: trafficCounts.other },
     ],
     return {
-      dailySeries: series;
-      topReferrers: sortedReferrers;
-      aiCtr: ctr;
-      trafficBreakdown: breakdown};
+      dailySeries: series,
+      topReferrers: sortedReferrers,
+      aiCtr: ctr,
+      trafficBreakdown: breakdown},
   }, [events]),
-  const pieColors = ['#22c55e', '#0o6b6d4', '#f59e0b', '#64748b', '#ec4899', '#94a3b8'],
+  const pieColors = ['#22c55e#0o6b6d4', '#f59e0b#64748b', '#ec4899#94a3b8'],
   return (
     <div className="mx-auto max-w-6xl p-6 space-y-8">,
       <h1 className="text-2xl font-bold">Growth Analytics</h1>,

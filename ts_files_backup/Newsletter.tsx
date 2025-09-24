@@ -8,7 +8,7 @@ export default function Newsletter() {
     // Here you would typically send the email to your backend,
     // // console.log('Newsletter subscription:', email),
     setIsSubscribed(true),
-    setEmail('')};
+    setEmail('')},
   if (isSubscribed) {
     return (
       <section className='py-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white'>,

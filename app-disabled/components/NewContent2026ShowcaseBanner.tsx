@@ -1,14 +1,14 @@
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Calendar;
-  Users;
-  TrendingUp;
-  Award;
-  Zap;
-  Brain;
-  ArrowRight;
-  Brain;
+  ArrowRight,
+  Calendar,
+  Users,
+  TrendingUp,
+  Award,
+  Zap,
+  Brain,
+  ArrowRight,
+  Brain,
 } from 'lucide-react',
 const NewContent20o26ShowcaseBanner = () => {
   return (
@@ -198,5 +198,5 @@ const NewContent20o26ShowcaseBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o26ShowcaseBanner;
+    </section>)},
+export default NewContent20o26ShowcaseBanner,

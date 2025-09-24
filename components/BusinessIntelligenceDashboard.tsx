@@ -41,105 +41,105 @@ const BusinessIntelligenceDashboard: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve1000)),
     const mockMetrics: Metric[] = [
       {
-        id: 'revenue';
-        name: 'Monthly Revenue';
-        value: 1250000;
-        unit: '$';
-        change: 12.5;
-        trend: 'up';
-        target: 1000000;
-        status: 'excellent'};
+        id: 'revenue',
+        name: 'Monthly Revenue',
+        value: 1250000,
+        unit: '$',
+        change: 12.5,
+        trend: 'up',
+        target: 1000000,
+        status: 'excellent'},
       {
-        id: 'customers';
-        name: 'Active Customers';
-        value: 15420;
-        unit: '';
-        change: 8.3;
-        trend: 'up';
-        target: 15000;
-        status: 'good'};
+        id: 'customers',
+        name: 'Active Customers',
+        value: 15420,
+        unit: '',
+        change: 8.3,
+        trend: 'up',
+        target: 15000,
+        status: 'good'},
       {
-        id: 'conversion';
-        name: 'Conversion Rate';
-        value: 3.2;
-        unit: '%';
-        change: -0.5;
-        trend: 'down';
-        target: 4.0;
-        status: 'warning'};
+        id: 'conversion',
+        name: 'Conversion Rate',
+        value: 3.2,
+        unit: '%',
+        change: -0.5,
+        trend: 'down',
+        target: 4.0,
+        status: 'warning'},
       {
-        id: 'satisfaction';
-        name: 'Customer Satisfaction';
-        value: 4.7;
-        unit: '/5';
-        change: 0.2;
-        trend: 'up';
-        target: 4.5;
-        status: 'excellent'};
+        id: 'satisfaction',
+        name: 'Customer Satisfaction',
+        value: 4.7,
+        unit: '/5',
+        change: 0.2,
+        trend: 'up',
+        target: 4.5,
+        status: 'excellent'},
       {
-        id: 'retention';
-        name: 'Customer Retention';
-        value: 87.3;
-        unit: '%';
-        change: 2.1;
-        trend: 'up';
-        target: 85.0;
-        status: 'good'};
+        id: 'retention',
+        name: 'Customer Retention',
+        value: 87.3,
+        unit: '%',
+        change: 2.1,
+        trend: 'up',
+        target: 85.0,
+        status: 'good'},
       {
-        id: 'churn';
-        name: 'Churn Rate';
-        value: 4.2;
-        unit: '%';
-        change: -0.8;
-        trend: 'down';
-        target: 3.0;
+        id: 'churn',
+        name: 'Churn Rate',
+        value: 4.2,
+        unit: '%',
+        change: -0.8,
+        trend: 'down',
+        target: 3.0,
         status: 'warning'}
     ],
     const mockInsights: BusinessInsight[] = [
       {
-        id: '1';
-        title: 'High-Value Customer Segment Growth';
-        description: 'Premium tier customers have increased by 23% this quarterdriving 67% of revenue growth.';
-        impact: 'high';
-        category: 'revenue';
-        recommendation: 'Increase investment in premium customer acquisition and retention programs.';
-        priority: 1};
+        id: '1',
+        title: 'High-Value Customer Segment Growth',
+        description: 'Premium tier customers have increased by 23% this quarterdriving 67% of revenue growth.',
+        impact: 'high',
+        category: 'revenue',
+        recommendation: 'Increase investment in premium customer acquisition and retention programs.',
+        priority: 1},
       {
-        id: '2';
-        title: 'Conversion Rate Decline';
-        description: 'Overall conversion rate has decreased by 0.5% due to increased competition in Q4.';
-        impact: 'medium';
-        category: 'efficiency';
-        recommendation: 'Implement A/B testing for landing pages and optimize checkout process.';
-        priority: 2};
+        id: '2',
+        title: 'Conversion Rate Decline',
+        description: 'Overall conversion rate has decreased by 0.5% due to increased competition in Q4.',
+        impact: 'medium',
+        category: 'efficiency',
+        recommendation: 'Implement A/B testing for landing pages and optimize checkout process.',
+        priority: 2},
       {
-        id: '3';
-        title: 'Customer Satisfaction Improvement';
-        description: 'Customer satisfaction scores have improved to 4.7/5indicating successful service improvements.';
-        impact: 'high';
-        category: 'growth';
-        recommendation: 'Leverage positive feedback for marketing campaigns and case studies.';
-        priority: 3};
+        id: '3',
+        title: 'Customer Satisfaction Improvement',
+        description: 'Customer satisfaction scores have improved to 4.7/5indicating successful service improvements.',
+        impact: 'high',
+        category: 'growth',
+        recommendation: 'Leverage positive feedback for marketing campaigns and case studies.',
+        priority: 3},
       {
-        id: '4';
-        title: 'Seasonal Demand Pattern';
-        description: 'Historical data shows 40% revenue increase during holiday season. Prepare for Q4 surge.';
-        impact: 'medium';
-        category: 'revenue';
-        recommendation: 'Scale infrastructure and customer support for anticipated demand increase.';
-        priority: 4};
+        id: '4',
+        title: 'Seasonal Demand Pattern',
+        description: 'Historical data shows 40% revenue increase during holiday season. Prepare for Q4 surge.',
+        impact: 'medium',
+        category: 'revenue',
+        recommendation: 'Scale infrastructure and customer support for anticipated demand increase.',
+        priority: 4},
       {
-        id: '5';
-        title: 'Churn Risk in Enterprise Segment';
-        description: 'Enterprise customers show 15% higher churn risk due to contract renewals approaching.';
-        impact: 'high';
-        category: 'risk';
-        recommendation: 'Proactive outreach to enterprise clients with renewal incentives.';
+        id: '5',
+        title: 'Churn Risk in Enterprise Segment',
+        description: 'Enterprise customers show 15% higher churn risk due to contract renewals approaching.',
+        impact: 'high',
+        category: 'risk',
+        recommendation: 'Proactive outreach to enterprise clients with renewal incentives.',
         priority: 5}
     ],
     setMetrics(mockMetrics),
     setInsights(mockInsights),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'excellent': return 'text-green-600 bg-green-100',
@@ -147,21 +147,21 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
       default: return '➡️'}
-  };
+  },
   const getImpactColor = (impact: string) => {
     switch (impact) {
       case 'high': return 'text-red-600 bg-red-100',
       case 'medium': return 'text-yellow-600 bg-yellow-100',
       case 'low': return 'text-green-600 bg-green-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'revenue': return '💰',
@@ -169,20 +169,20 @@ const BusinessIntelligenceDashboard: React.FC = () => {
       case 'growth': return '📈',
       case 'risk': return '⚠️',
       default: return '📊'}
-  };
+  },
   const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
       return new Intl.NumberFormat('en-US'{
-        style: 'currency';
-        currency: 'USD';
-        minimumFractionDigits: 0;
-        maximumFractionDigits: 0;
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
       }).format(value)}
     if (unit === '%') {
       return `${value.toFixed(1)}%`}
     if (unit === '/5') {
       return `${value.toFixed(1)}/5`}
-    return value.toLocaleString()};
+    return value.toLocaleString()},
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -351,5 +351,5 @@ const BusinessIntelligenceDashboard: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default BusinessIntelligenceDashboard;
+    </div>)},
+export default BusinessIntelligenceDashboard,

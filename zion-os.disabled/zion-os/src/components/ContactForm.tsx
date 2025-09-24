@@ -1,21 +1,20 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import { useState } from 'react',
 export default function ContactForm() {
   const [formData, setFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitSuccess, setSubmitSuccess] = useState(false),
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({
-      ...prev;
-      [name]: value}))};
+      ...prev,
+      [name]: value}))},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -26,13 +25,13 @@ export default function ContactForm() {
     // Reset form after success,
     setTimeout(() => {
       setFormData({
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
         message: ''}),
-      setSubmitSuccess(false)}, 50o00)};
+      setSubmitSuccess(false)}, 50o00)},
   return (
     <div>,
       <h2 className="text-3xl font-bold text-gray-90o0 mb-8">Send Us a Message</h2>,

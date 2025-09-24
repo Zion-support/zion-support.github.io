@@ -1,55 +1,55 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
-  Calendar, Clock, Target, Users2, FileText2, PieChart;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
-  TrendingUp, Shield, Globe, Database, Network, User;
-  Shield, Lock, Eye, Fingerprint, CreditCard, Building;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
+  Calendar, Clock, Target, Users2, FileText2, PieChart,
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,
+  TrendingUp, Shield, Globe, Database, Network, User,
+  Shield, Lock, Eye, Fingerprint, CreditCard, Building,
   Users, Globe, Cloud, Smartphone, Activity, Settings} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Quantum Identity Verification | Zion Tech Group';
-  description: 'Revolutionary quantum-powered identity verification platform with AI-driven authentication, biometric security, and unbreakable identity protection.';
-  keywords: 'quantum identity verification, biometric authentication, AI identity verification, quantum security, identity protection, digital identity, quantum authentication';
+  title: 'Quantum Identity Verification | Zion Tech Group',
+  description: 'Revolutionary quantum-powered identity verification platform with AI-driven authentication, biometric security, and unbreakable identity protection.',
+  keywords: 'quantum identity verification, biometric authentication, AI identity verification, quantum security, identity protection, digital identity, quantum authentication',
   openGraph: {
-    title: 'Quantum Identity Verification | Zion Tech Group';
-    description: 'Revolutionary quantum-powered identity verification platform with AI-driven authentication, biometric security, and unbreakable identity protection.';
-    url: 'https://ziontechgroup.com/quantum-identity-verification';
-    siteName: 'Zion Tech Group';
+    title: 'Quantum Identity Verification | Zion Tech Group',
+    description: 'Revolutionary quantum-powered identity verification platform with AI-driven authentication, biometric security, and unbreakable identity protection.',
+    url: 'https://ziontechgroup.com/quantum-identity-verification',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-quantum-identity.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Quantum Identity Verification'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-quantum-identity.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Quantum Identity Verification'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Quantum Identity Verification | Zion Tech Group';
-    description: 'Revolutionary quantum-powered identity verification platform with AI-driven authentication, biometric security, and unbreakable identity protection.';
-    images: ['https://ziontechgroup.com/og-image-quantum-identity.jpg']};
+    card: 'summary_large_image',
+    title: 'Quantum Identity Verification | Zion Tech Group',
+    description: 'Revolutionary quantum-powered identity verification platform with AI-driven authentication, biometric security, and unbreakable identity protection.',
+    images: ['https://ziontechgroup.com/og-image-quantum-identity.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/quantum-identity-verification'}};
+    canonical: 'https://ziontechgroup.com/quantum-identity-verification'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function QuantumIdentityVerification() {
   return (
     <div className="min-h-screen bg-black text-white">,

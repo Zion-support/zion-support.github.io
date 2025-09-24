@@ -7,73 +7,73 @@ const InteractiveContentDiscovery20o26 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [isVisible, setIsVisible] = useState(false),
   const categories = [
-    { id: 'all', name: 'All Content', icon: '🌟' };
-    { id: 'ai-revolution', name: 'AI Revolution', icon: '🤖' };
-    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️' };
-    { id: 'neural-interfaces', name: 'Neural Interfaces', icon: '🧠' };
-    { id: 'automation', name: 'Automation', icon: '⚡' };
+    { id: 'all', name: 'All Content', icon: '🌟' },
+    { id: 'ai-revolution', name: 'AI Revolution', icon: '🤖' },
+    { id: 'quantum-computing', name: 'Quantum Computing', icon: '⚛️' },
+    { id: 'neural-interfaces', name: 'Neural Interfaces', icon: '🧠' },
+    { id: 'automation', name: 'Automation', icon: '⚡' },
     { id: 'analytics', name: 'Analytics', icon: '📊' }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'Neural Superintelligence Framework';
-      description: 'Advanced AI systems with human-level cognitive capabilities';
-      category: 'ai-revolution';
-      tags: ['AI', 'Neural Networks', 'Cognitive Computing'];
-      readTime: '8 min read';
-      difficulty: 'Advanced';
-      rating: 4.9;
-      image: '🧠'};
+      id: 1,
+      title: 'Neural Superintelligence Framework',
+      description: 'Advanced AI systems with human-level cognitive capabilities',
+      category: 'ai-revolution',
+      tags: ['AINeural Networks', 'Cognitive Computing'],
+      readTime: '8 min read',
+      difficulty: 'Advanced',
+      rating: 4.9,
+      image: '🧠'},
     {
-      id: 2;
-      title: 'Quantum-Neural Fusion Technology';
-      description: 'Revolutionary combination of quantum computing and neural networks';
-      category: 'quantum-computing';
-      tags: ['Quantum', 'Neural Networks', 'Fusion'];
-      readTime: '12 min read';
-      difficulty: 'Expert';
-      rating: 4.8;
-      image: '⚛️'};
+      id: 2,
+      title: 'Quantum-Neural Fusion Technology',
+      description: 'Revolutionary combination of quantum computing and neural networks',
+      category: 'quantum-computing',
+      tags: ['QuantumNeural Networks', 'Fusion'],
+      readTime: '12 min read',
+      difficulty: 'Expert',
+      rating: 4.8,
+      image: '⚛️'},
     {
-      id: 3;
-      title: 'Autonomous Business Operations';
-      description: 'Self-managing business systems powered by AI';
-      category: 'automation';
-      tags: ['Automation', 'Business', 'AI'];
-      readTime: '6 min read';
-      difficulty: 'Intermediate';
-      rating: 4.7;
-      image: '🤖'};
+      id: 3,
+      title: 'Autonomous Business Operations',
+      description: 'Self-managing business systems powered by AI',
+      category: 'automation',
+      tags: ['AutomationBusiness', 'AI'],
+      readTime: '6 min read',
+      difficulty: 'Intermediate',
+      rating: 4.7,
+      image: '🤖'},
     {
-      id: 4;
-      title: 'Neural Interface Development';
-      description: 'Direct brain-computer interfaces for enhanced productivity';
-      category: 'neural-interfaces';
-      tags: ['Neural Interface', 'BCI', 'Productivity'];
-      readTime: '10 min read';
-      difficulty: 'Advanced';
-      rating: 4.9;
-      image: '🎯'};
+      id: 4,
+      title: 'Neural Interface Development',
+      description: 'Direct brain-computer interfaces for enhanced productivity',
+      category: 'neural-interfaces',
+      tags: ['Neural InterfaceBCI', 'Productivity'],
+      readTime: '10 min read',
+      difficulty: 'Advanced',
+      rating: 4.9,
+      image: '🎯'},
     {
-      id: 5;
-      title: 'Advanced Analytics Dashboard';
-      description: 'Real-time business intelligence and predictive analytics';
-      category: 'analytics';
-      tags: ['Analytics', 'BI', 'Predictive'];
-      readTime: '5 min read';
-      difficulty: 'Beginner';
-      rating: 4.6;
-      image: '📊'};
+      id: 5,
+      title: 'Advanced Analytics Dashboard',
+      description: 'Real-time business intelligence and predictive analytics',
+      category: 'analytics',
+      tags: ['AnalyticsBI', 'Predictive'],
+      readTime: '5 min read',
+      difficulty: 'Beginner',
+      rating: 4.6,
+      image: '📊'},
     {
-      id: 6;
-      title: 'Quantum Security Protocols';
-      description: 'Unbreakable encryption for enterprise data protection';
-      category: 'quantum-computing';
-      tags: ['Security', 'Quantum', 'Encryption'];
-      readTime: '7 min read';
-      difficulty: 'Advanced';
-      rating: 4.8;
+      id: 6,
+      title: 'Quantum Security Protocols',
+      description: 'Unbreakable encryption for enterprise data protection',
+      category: 'quantum-computing',
+      tags: ['SecurityQuantum', 'Encryption'],
+      readTime: '7 min read',
+      difficulty: 'Advanced',
+      rating: 4.8,
       image: '🔐'}
   ],
   useEffect(() => {
@@ -97,7 +97,7 @@ const InteractiveContentDiscovery20o26 = () => {
             Discover Amazing Content,
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">,
-            Explore our comprehensive library of AI technologies, quantum computing breakthroughs;
+            Explore our comprehensive library of AI technologies, quantum computing breakthroughs,
             and neural interface innovations with our interactive discovery tool.,
           </p>,
         </div>,
@@ -216,5 +216,5 @@ const InteractiveContentDiscovery20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveContentDiscovery20o26;
+    </div>)},
+export default InteractiveContentDiscovery20o26,

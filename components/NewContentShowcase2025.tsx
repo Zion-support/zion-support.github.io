@@ -10,72 +10,72 @@ const NewContentShowcase20o25 = () => {
     return () => clearTimeout(timer)}, []),
   const contentSections ={
     'case-studies': {
-      title: 'Success Stories & Case Studies';
-      description: 'Real-world transformations with measurable ROI';
+      title: 'Success Stories & Case Studies',
+      description: 'Real-world transformations with measurable ROI',
       items: [
         {
-          title: 'Fortune 50o0 Manufacturing: 2,50o0% ROI';
-          description: 'Complete autonomous transformation of production lines';
-          roi: '2,50o0%';
-          industry: 'Manufacturing';
-          link: '/case-studies/fortune-50o0-manufacturing-250o0-roi'};
+          title: 'Fortune 50o0 Manufacturing: 2,50o0% ROI',
+          description: 'Complete autonomous transformation of production lines',
+          roi: '2,50o0%',
+          industry: 'Manufacturing',
+          link: '/case-studies/fortune-50o0-manufacturing-250o0-roi'},
         {
-          title: 'Healthcare Revolution: 1,20o0% ROI';
-          description: 'AI-powered diagnostic platform implementation';
-          roi: '1,20o0%';
-          industry: 'Healthcare';
-          link: '/case-studies/healthcare-revolution-120o0-roi'};
+          title: 'Healthcare Revolution: 1,20o0% ROI',
+          description: 'AI-powered diagnostic platform implementation',
+          roi: '1,20o0%',
+          industry: 'Healthcare',
+          link: '/case-studies/healthcare-revolution-120o0-roi'},
         {
-          title: 'Financial Services: 1,50o0% ROI';
-          description: 'Advanced analytics and fraud detection systems';
-          roi: '1,50o0%';
-          industry: 'Finance';
+          title: 'Financial Services: 1,50o0% ROI',
+          description: 'Advanced analytics and fraud detection systems',
+          roi: '1,50o0%',
+          industry: 'Finance',
           link: '/case-studies/financial-services-150o0-roi'}
-      ]};
+      ]},
     'blog': {
-      title: 'Latest AI Insights & Trends';
-      description: 'Cutting-edge research and industry analysis';
+      title: 'Latest AI Insights & Trends',
+      description: 'Cutting-edge research and industry analysis',
       items: [
         {
-          title: 'AI 20o25: The Ultimate Automation Revolution';
-          description: 'Comprehensive guide to next-generation AI automation';
-          readTime: '8 min read';
-          category: 'Automation';
-          link: '/blog/ai-20o25-ultimate-automation-revolution'};
+          title: 'AI 20o25: The Ultimate Automation Revolution',
+          description: 'Comprehensive guide to next-generation AI automation',
+          readTime: '8 min read',
+          category: 'Automation',
+          link: '/blog/ai-20o25-ultimate-automation-revolution'},
         {
-          title: 'Quantum Computing Business Applications';
-          description: 'How quantum computing is transforming enterprise operations';
-          readTime: '12 min read';
-          category: 'Quantum Computing';
-          link: '/blog/quantum-computing-business-applications'};
+          title: 'Quantum Computing Business Applications',
+          description: 'How quantum computing is transforming enterprise operations',
+          readTime: '12 min read',
+          category: 'Quantum Computing',
+          link: '/blog/quantum-computing-business-applications'},
         {
-          title: 'Neural Interface Revolution 20o25';
-          description: 'The future of human-AI interaction in business';
-          readTime: '10 min read';
-          category: 'Neural Interfaces';
+          title: 'Neural Interface Revolution 20o25',
+          description: 'The future of human-AI interaction in business',
+          readTime: '10 min read',
+          category: 'Neural Interfaces',
           link: '/blog/neural-interface-revolution-20o25'}
-      ]};
+      ]},
     'tools': {
-      title: 'Interactive AI Tools & Calculators';
-      description: 'Hands-on tools to explore AI potential';
+      title: 'Interactive AI Tools & Calculators',
+      description: 'Hands-on tools to explore AI potential',
       items: [
         {
-          title: 'ROI Calculator';
-          description: 'Calculate potential returns from AI implementation';
-          type: 'Calculator';
-          link: '/tools/roi-calculator'};
+          title: 'ROI Calculator',
+          description: 'Calculate potential returns from AI implementation',
+          type: 'Calculator',
+          link: '/tools/roi-calculator'},
         {
-          title: 'AI Readiness Assessment';
-          description: 'Evaluate your organization\'s AI readiness';
-          type: 'Assessment';
-          link: '/tools/ai-readiness-assessment'};
+          title: 'AI Readiness Assessment',
+          description: 'Evaluate your organization\'s AI readiness',
+          type: 'Assessment',
+          link: '/tools/ai-readiness-assessment'},
         {
-          title: 'Automation Opportunity Scanner';
-          description: 'Identify automation opportunities in your processes';
-          type: 'Scanner';
+          title: 'Automation Opportunity Scanner',
+          description: 'Identify automation opportunities in your processes',
+          type: 'Scanner',
           link: '/tools/automation-scanner'}
       ]}
-  };
+  },
   return (
     <div className={`py-16 bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-8'}`}>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -186,5 +186,5 @@ const NewContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContentShowcase20o25;
+    </div>)},
+export default NewContentShowcase20o25,

@@ -39,7 +39,7 @@ export interface LogEntry {
   payload?: Record<string unknown>}
 ,
 import { randomUUID } from 'uuid',
-const dataDir = path.resolve(process.cwd(), 'data', 'zion-brain'),
+const dataDir = path.resolve(process.cwd(), 'datazion-brain'),
 const logsPath = path.join(dataDir, 'logs.json'),
 const statePath = path.join(dataDir, 'state.json'),
 function ensureDataFiles(): void {
@@ -55,42 +55,42 @@ function ensureDataFiles(): void {
 export function detectIntent(text: string): RouterResult {
   const lower = (text || '').toLowerCase(),
   const rules: Array<{ chain: ZionChain, keywords: string[] }> = [
-    { chain: 'resumeBuilder', keywords: ['resume', 'cv', 'curriculum', 'job'] };
+    { chain: 'resumeBuilder', keywords: ['resumecv', 'curriculumjob'] },
     {
-      chain: 'daoExplainer';
-      keywords: ['dao', 'governance token', 'proposal', 'treasury'];
-    };
+      chain: 'daoExplainer',
+      keywords: ['daogovernance token', 'proposaltreasury'],
+    },
     {
-      chain: 'tokenomicsSimulator';
-      keywords: ['tokenomics', 'supply', 'emission', 'vesting', 'circulating'];
-    };
+      chain: 'tokenomicsSimulator',
+      keywords: ['tokenomicssupply', 'emissionvesting', 'circulating'],
+    },
     {
-      chain: 'governanceSummarizer';
-      keywords: ['governance', 'vote', 'snapshot', 'summary', 'forum'];
-    };
+      chain: 'governanceSummarizer',
+      keywords: ['governancevote', 'snapshotsummary', 'forum'],
+    },
     {
-      chain: 'nationAssistant';
-      keywords: ['nation', 'citizen', 'constitution', 'charter', 'policy'];
-    };
+      chain: 'nationAssistant',
+      keywords: ['nationcitizen', 'constitutioncharter', 'policy'],
+    },
   ],
   for (const rule of rules) {
     if (rule.keywords.some(k => lower.includes(k))) {
-      return { intent: rule.chain, confidence: 0.9, notes: 'Keyword match' };
+      return { intent: rule.chain, confidence: 0.9, notes: 'Keyword match' },
     }
   }
   // Fallback simple heuristic,
   return {
-    intent: 'nationAssistant';
-    confidence: 0.5;
-    notes: 'Default fallback';
-  };
+    intent: 'nationAssistant',
+    confidence: 0.5,
+    notes: 'Default fallback'
+  },
 }
 ,
 export async function routeToChain(
-  intent: ZionChain;
+  intent: ZionChain,
   payload: Record<string unknown>): Promise<{ routed: boolean, message: string }> {
   // Placeholder for real chain invocations,
-  return { routed: true, message: `Routed to ${intent}` };
+  return { routed: true, message: `Routed to ${intent}` },
 }
 ,
 export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
@@ -100,27 +100,27 @@ export function evaluateReflexes(metrics: ReflexMetrics): ReflexTrigger[] {
   const triggers: ReflexTrigger[] = [],
   if ((metrics.signupsLastHour ?? 0) > baselineSignups * 1.8) {
     triggers.push({
-      action: 'launchRewardPopup';
-      reason: 'Surge in signups detected';
-      severity: 'medium';
+      action: 'launchRewardPopup',
+      reason: 'Surge in signups detected',
+      severity: 'medium'
     })}
   if ((metrics.disputeFlagsLastHour ?? 0) > baselineDisputes * 2) {
     triggers.push({
-      action: 'escalateSupport';
-      reason: 'Spike in dispute flags';
-      severity: 'high';
+      action: 'escalateSupport',
+      reason: 'Spike in dispute flags',
+      severity: 'high'
     })}
   if ((metrics.zionVelocity ?? baselineVelocity) < baselineVelocity * 0.6) {
     triggers.push({
-      action: 'notifyAdmin';
-      reason: 'Drop in ZION$ velocity';
-      severity: 'high';
+      action: 'notifyAdmin',
+      reason: 'Drop in ZION$ velocity',
+      severity: 'high'
     })}
 ,
   return triggers}
 ,
 export async function optimizePrompt(
-  original: string;
+  original: string,
   userIntent?: string): Promise<{ optimized: string, suggestions: string[] }> {
   const apiKey = process.env.OPENAI_API_KEY,
   const targetInstruction =,
@@ -129,15 +129,14 @@ export async function optimizePrompt(
   if (!apiKey) {
     const tightened = heuristicTighten(original, userIntent),
     return {
-      optimized: tightened;
+      optimized: tightened,
       suggestions: [
-        'Removed vague qualifiers and redundant phrases';
-        'Added explicit constraints and output format';
+        'Removed vague qualifiers and redundant phrasesAdded explicit constraints and output format',
         userIntent,
           ? `Anchored to intent: ${userIntent}`,
-          : 'Added a brief intent anchor';
-      ];
-    };
+          : 'Added a brief intent anchor',
+      ],
+    },
   }
 ,
   try {
@@ -147,29 +146,29 @@ export async function optimizePrompt(
       'You optimize prompts for speed and specificity. Prefer precise constraints, avoid open-ended wording. Reduce token count while improving clarity. Return only the rewritten prompt.',
     const user = `${targetInstruction}\n\nUser intent: ${userIntent || 'unknown'}\n\nPrompt to optimize: \n${original}`,
     const resp = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: system };
-        { role: 'user', content: user };
-      ];
-      temperature: 0.2;
-      max_tokens: 400;
+        { role: 'system', content: system },
+        { role: 'user', content: user },
+      ],
+      temperature: 0.2,
+      max_tokens: 400
     }),
     const optimized =,
       resp.choices?.[0]?.message?.content?.trim() ||,
       heuristicTighten(original, userIntent),
     return {
-      optimized;
-      suggestions: ['Used OpenAI optimization for speed and specificity'];
-    };
+      optimized,
+      suggestions: ['Used OpenAI optimization for speed and specificity']
+    },
   } catch {
     const tightened = heuristicTighten(original, userIntent),
     return {
-      optimized: tightened;
+      optimized: tightened,
       suggestions: [
-        'OpenAI not available at runtime, applied heuristic tightening';
-      ];
-    };
+        'OpenAI not available at runtime, applied heuristic tightening',
+      ],
+    },
   }
 }
 ,
@@ -191,7 +190,7 @@ export function readLogs(): { entries: LogEntry[] } {
   try {
     const raw = fs.readFileSync(logsPath, 'utf8'),
     return JSON.parse(raw)} catch {
-    return { entries: [] };
+    return { entries: [] },
   }
 }
 ,
@@ -200,10 +199,10 @@ export function appendLog(entry: Omit<LogEntry 'id' | 'timestamp'>): void {
   try {
     const current = readLogs(),
     const enriched: LogEntry = {
-      id: randomUUID();
-      timestamp: new Date().toISOString();
-      ...entry;
-    };
+      id: randomUUID(),
+      timestamp: new Date().toISOString(),
+      ...entry
+    },
     current.entries.push(enriched),
     fs.writeFileSync(logsPath, JSON.stringify(current, null, 2))} catch {
     // ignore}

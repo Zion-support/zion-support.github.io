@@ -2,127 +2,127 @@ import React, { useState, useRef, useEffect } from 'react',
 import { Shield, AlertTriangle, CheckCircle, Download, RefreshCw, X, Maximize2, Minimize2, Activity, BarChart3, TrendingUp, Users, Server, FileText, Bug } from 'lucide-react',
 const mockSecurityEvents = [
     {
-        id: '1';
-        type: 'threat';
-        severity: 'critical';
-        title: 'Suspicious Login Attempts Detected';
-        description: 'Multiple failed login attempts from suspicious IP addresses detected across multiple user accounts.';
-        timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z';
-        source: '192.168.1.10o0';
-        status: 'investigating';
-        assignedTo: 'Security Team';
-        priority: 'immediate'};
+        id: '1',
+        type: 'threat',
+        severity: 'critical',
+        title: 'Suspicious Login Attempts Detected',
+        description: 'Multiple failed login attempts from suspicious IP addresses detected across multiple user accounts.',
+        timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z',
+        source: '192.168.1.10o0',
+        status: 'investigating',
+        assignedTo: 'Security Team',
+        priority: 'immediate'},
     {
-        id: '2';
-        type: 'vulnerability';
-        severity: 'high';
-        title: 'Critical Security Patch Required';
-        description: 'High-severity vulnerability detected in production database server. Immediate patching required.';
-        timestamp: '20o24-0o1-15T09:30:0o0.0o00Z';
-        source: 'Database Server';
-        status: 'open';
-        assignedTo: 'DevOps Team';
-        priority: 'high'};
+        id: '2',
+        type: 'vulnerability',
+        severity: 'high',
+        title: 'Critical Security Patch Required',
+        description: 'High-severity vulnerability detected in production database server. Immediate patching required.',
+        timestamp: '20o24-0o1-15T09:30:0o0.0o00Z',
+        source: 'Database Server',
+        status: 'open',
+        assignedTo: 'DevOps Team',
+        priority: 'high'},
     {
-        id: '3';
-        type: 'compliance';
-        severity: 'medium';
-        title: 'SOC 2 Audit Due';
-        description: 'Annual SOC 2 Type II audit is due in 30 days. Several controls need attention.';
-        timestamp: '20o24-0o1-15T08:0o0:0o0.0o00Z';
-        source: 'Compliance Team';
-        status: 'open';
-        assignedTo: 'Compliance Officer';
+        id: '3',
+        type: 'compliance',
+        severity: 'medium',
+        title: 'SOC 2 Audit Due',
+        description: 'Annual SOC 2 Type II audit is due in 30 days. Several controls need attention.',
+        timestamp: '20o24-0o1-15T08:0o0:0o0.0o00Z',
+        source: 'Compliance Team',
+        status: 'open',
+        assignedTo: 'Compliance Officer',
         priority: 'high'}
 ],
 const mockComplianceRequirements = [
     {
-        id: '1';
-        framework: 'SOC2';
-        requirement: 'Access Control Management';
-        status: 'compliant';
-        lastAudit: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z';
-        nextAudit: '20o24-12-31T0o0:0o0:0o0.0o00Z';
-        riskLevel: 'low';
-        description: 'Ensure proper access controls are in place for all systems and applications.';
-        controls: ['Multi-factor authentication', 'Role-based access control', 'Regular access reviews']};
+        id: '1',
+        framework: 'SOC2',
+        requirement: 'Access Control Management',
+        status: 'compliant',
+        lastAudit: '20o24-0o1-0o1T0o0:0o0:0o0.0o00Z',
+        nextAudit: '20o24-12-31T0o0:0o0:0o0.0o00Z',
+        riskLevel: 'low',
+        description: 'Ensure proper access controls are in place for all systems and applications.',
+        controls: ['Multi-factor authenticationRole-based access control', 'Regular access reviews']},
     {
-        id: '2';
-        framework: 'ISO270o01';
-        requirement: 'Information Security Policy';
-        status: 'in_progress';
-        lastAudit: '20o23-12-0o1T0o0:0o0:0o0.0o00Z';
-        nextAudit: '20o24-0o6-0o1T0o0:0o0:0o0.0o00Z';
-        riskLevel: 'medium';
-        description: 'Develop and maintain comprehensive information security policies.';
-        controls: ['Policy documentation', 'Employee training', 'Regular policy reviews']};
+        id: '2',
+        framework: 'ISO270o01',
+        requirement: 'Information Security Policy',
+        status: 'in_progress',
+        lastAudit: '20o23-12-0o1T0o0:0o0:0o0.0o00Z',
+        nextAudit: '20o24-0o6-0o1T0o0:0o0:0o0.0o00Z',
+        riskLevel: 'medium',
+        description: 'Develop and maintain comprehensive information security policies.',
+        controls: ['Policy documentationEmployee training', 'Regular policy reviews']},
     {
-        id: '3';
-        framework: 'GDPR';
-        requirement: 'Data Protection Impact Assessment';
-        status: 'non_compliant';
-        lastAudit: '20o23-11-0o1T0o0:0o0:0o0.0o00Z';
-        nextAudit: '20o24-0o2-0o1T0o0:0o0:0o0.0o00Z';
-        riskLevel: 'high';
-        description: 'Conduct DPIA for all new data processing activities.';
-        controls: ['Risk assessment', 'Mitigation planning', 'Documentation']}
+        id: '3',
+        framework: 'GDPR',
+        requirement: 'Data Protection Impact Assessment',
+        status: 'non_compliant',
+        lastAudit: '20o23-11-0o1T0o0:0o0:0o0.0o00Z',
+        nextAudit: '20o24-0o2-0o1T0o0:0o0:0o0.0o00Z',
+        riskLevel: 'high',
+        description: 'Conduct DPIA for all new data processing activities.',
+        controls: ['Risk assessmentMitigation planning', 'Documentation']}
 ],
 const mockSecurityMetrics = [
     {
-        id: '1';
-        name: 'Security Score';
-        value: 87;
-        target: 90;
-        unit: '%';
-        trend: 'up';
-        change: 2.5;
-        category: 'Overall'};
+        id: '1',
+        name: 'Security Score',
+        value: 87,
+        target: 90,
+        unit: '%',
+        trend: 'up',
+        change: 2.5,
+        category: 'Overall'},
     {
-        id: '2';
-        name: 'Threat Detection Rate';
-        value: 94.2;
-        target: 95;
-        unit: '%';
-        trend: 'up';
-        change: 1.8;
-        category: 'Detection'};
+        id: '2',
+        name: 'Threat Detection Rate',
+        value: 94.2,
+        target: 95,
+        unit: '%',
+        trend: 'up',
+        change: 1.8,
+        category: 'Detection'},
     {
-        id: '3';
-        name: 'Mean Time to Response';
-        value: 15;
-        target: 10;
-        unit: 'minutes';
-        trend: 'down';
-        change: -2.3;
-        category: 'Response'};
+        id: '3',
+        name: 'Mean Time to Response',
+        value: 15,
+        target: 10,
+        unit: 'minutes',
+        trend: 'down',
+        change: -2.3,
+        category: 'Response'},
     {
-        id: '4';
-        name: 'Vulnerability Remediation';
-        value: 78.5;
-        target: 85;
-        unit: '%';
-        trend: 'up';
-        change: 3.2;
+        id: '4',
+        name: 'Vulnerability Remediation',
+        value: 78.5,
+        target: 85,
+        unit: '%',
+        trend: 'up',
+        change: 3.2,
         category: 'Remediation'}
 ],
 const mockThreatIntelligence = [
     {
-        id: '1';
-        threatType: 'Ransomware Campaign';
-        description: 'Active ransomware campaign targeting healthcare organizations in the region.';
-        riskScore: 9.2;
-        affectedSystems: ['Windows Servers', 'File Shares', 'Backup Systems'];
-        mitigationSteps: ['Update endpoint protection', 'Enable advanced threat protection', 'Review backup procedures'];
-        lastSeen: '20o24-0o1-15T09:0o0:0o0.0o00Z';
-        frequency: 15};
+        id: '1',
+        threatType: 'Ransomware Campaign',
+        description: 'Active ransomware campaign targeting healthcare organizations in the region.',
+        riskScore: 9.2,
+        affectedSystems: ['Windows ServersFile Shares', 'Backup Systems'],
+        mitigationSteps: ['Update endpoint protectionEnable advanced threat protection', 'Review backup procedures'],
+        lastSeen: '20o24-0o1-15T09:0o0:0o0.0o00Z',
+        frequency: 15},
     {
-        id: '2';
-        threatType: 'Phishing Attack';
-        description: 'Sophisticated phishing campaign using executive impersonation.';
-        riskScore: 7.8;
-        affectedSystems: ['Email Systems', 'User Workstations'];
-        mitigationSteps: ['Enhanced email filtering', 'User awareness training', 'Multi-factor authentication'];
-        lastSeen: '20o24-0o1-15T08:30:0o0.0o00Z';
+        id: '2',
+        threatType: 'Phishing Attack',
+        description: 'Sophisticated phishing campaign using executive impersonation.',
+        riskScore: 7.8,
+        affectedSystems: ['Email SystemsUser Workstations'],
+        mitigationSteps: ['Enhanced email filteringUser awareness training', 'Multi-factor authentication'],
+        lastSeen: '20o24-0o1-15T08:30:0o0.0o00Z',
         frequency: 8}
 ],
 export function AdvancedSecurityDashboard() {
@@ -140,8 +140,8 @@ export function AdvancedSecurityDashboard() {
     const [threatIntelligence, setThreatIntelligence] = useState(mockThreatIntelligence),
     const [isRefreshing, setIsRefreshing] = useState(false),
     const containerRef = useRef(null),
-    const severities = ['all', 'critical', 'high', 'medium', 'low', 'info'],
-    const frameworks = ['all', 'SOC2', 'ISO270o01', 'GDPR', 'HIPAA', 'PCI-DSS'],
+    const severities = ['allcritical', 'highmedium', 'lowinfo'],
+    const frameworks = ['allSOC2', 'ISO270o01GDPR', 'HIPAAPCI-DSS'],
     const filteredEvents = selectedSeverity === 'all',
         ? securityEvents,
         : securityEvents.filter(event => event.severity === selectedSeverity),
@@ -152,7 +152,7 @@ export function AdvancedSecurityDashboard() {
         setIsRefreshing(true),
         // Simulate API call,
         await new Promise(resolve => setTimeout(resolve, 150o0)),
-        setIsRefreshing(false)};
+        setIsRefreshing(false)},
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30o000), // Refresh every 30 seconds,
@@ -170,7 +170,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-blue-50o0 text-white',
             default: ,
                 return 'bg-gray-50o0 text-white'}
-    };
+    },
     const getStatusColor = (status) => {
         switch (status) {
             case 'compliant':,
@@ -181,7 +181,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
                 return 'bg-gray-10o0 text-gray-70o0 dark:bg-gray-90o0/30 dark:text-gray-30o0'}
-    };
+    },
     const getRiskLevelColor = (riskLevel) => {
         switch (riskLevel) {
             case 'high':,
@@ -190,7 +190,7 @@ export function AdvancedSecurityDashboard() {
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
                 return 'bg-green-10o0 text-green-70o0 dark:bg-green-90o0/30 dark:text-green-30o0'}
-    };
+    },
     const getTrendIcon = (trend) => {
         switch (trend) {
             case 'up':,
@@ -199,7 +199,7 @@ export function AdvancedSecurityDashboard() {
                 return <TrendingUp className="w-4 h-4 text-red-50o0 rotate-180" />,
             default: ,
                 return <Activity className="w-4 h-4 text-gray-50o0" />}
-    };
+    },
     const getEventIcon = (type) => {
         switch (type) {
             case 'threat':,
@@ -212,7 +212,7 @@ export function AdvancedSecurityDashboard() {
                 return <Users className="w-5 h-5 text-purple-50o0" />,
             default: ,
                 return <Server className="w-5 h-5 text-gray-50o0" />}
-    };
+    },
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-red to-zion-orange text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40" title="Open Security Dashboard">,
         <Shield className="w-6 h-6" />,
@@ -286,10 +286,10 @@ export function AdvancedSecurityDashboard() {
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">,
         {[
-            { id: 'overview', label: 'Overview', icon: BarChart3 };
-            { id: 'events', label: 'Security Events', icon: AlertTriangle };
-            { id: 'compliance', label: 'Compliance', icon: CheckCircle };
-            { id: 'threats', label: 'Threat Intel', icon: Shield };
+            { id: 'overview', label: 'Overview', icon: BarChart3 },
+            { id: 'events', label: 'Security Events', icon: AlertTriangle },
+            { id: 'compliance', label: 'Compliance', icon: CheckCircle },
+            { id: 'threats', label: 'Threat Intel', icon: Shield },
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(tab => {
             const Icon = tab.icon,
@@ -359,7 +359,7 @@ export function AdvancedSecurityDashboard() {
                         <p className="text-xs text-zion-slate-light">{req.framework}</p>,
                       </div>,
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>,
-                        {req.status.replace('_', ' ')}
+                        {req.status.replace('_ ')}
                       </span>,
                     </div>))}
                 </div>,
@@ -386,7 +386,7 @@ export function AdvancedSecurityDashboard() {
                     <p className="text-zion-slate-light mb-3">{event.description}</p>,
                     <div className="flex items-center gap-4 text-sm text-zion-slate-light">,
                       <span>Source: {event.source}</span>,
-                      <span>Status: {event.status.replace('_', ' ')}</span>,
+                      <span>Status: {event.status.replace('_ ')}</span>,
                       {event.assignedTo && <span>Assigned: {event.assignedTo}</span>}
                       <span>Time: {new Date(event.timestamp).toLocaleString()}</span>,
                     </div>,
@@ -405,7 +405,7 @@ export function AdvancedSecurityDashboard() {
                     <div className="flex items-center gap-3 mb-2">,
                       <h3 className="font-semibold text-zion-slate">{req.requirement}</h3>,
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getStatusColor(req.status)}`}>,
-                        {req.status.replace('_', ' ')}
+                        {req.status.replace('_ ')}
                       </span>,
                       <span className={`px-2 py-1 rounded-full text-xs font-medium ${getRiskLevelColor(req.riskLevel)}`}>,
                         {req.riskLevel} Risk,

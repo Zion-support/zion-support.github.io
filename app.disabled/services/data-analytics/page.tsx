@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'data-analytics - Zion Tech Group';
-  description: 'Professional data-analytics solutions for your business needs.';
-  keywords: 'data-analytics, services, business, technology';
-};
+  title: 'data-analytics - Zion Tech Group',
+  description: 'Professional data-analytics solutions for your business needs.',
+  keywords: 'data-analytics, services, business, technology',
+},
 export default function DataAnalyticsPage() {
   return (
     <div className='min-h-screen bg-white'>,

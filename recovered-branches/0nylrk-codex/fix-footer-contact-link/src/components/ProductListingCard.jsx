@@ -7,10 +7,10 @@ import { RatingStars } from '@/components/RatingStars',
 import { FavoriteButton } from '@/components/FavoriteButton',
 import Image from 'next/image', // Import next/image,
 export function ProductListingCard({
-  listing;
-  view = 'grid';
-  onRequestQuote;
-  detailBasePath = '/marketplace/listing';
+  listing,
+  view = 'grid',
+  onRequestQuote,
+  detailBasePath = '/marketplace/listing',
 }) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
@@ -22,22 +22,22 @@ export function ProductListingCard({
   const [imageError, setImageError] = useState(false),
   const formatPrice = () => {
     if (listing.price === null) return 'Custom pricing',
-    return `${listing.currency}${listing.price.toLocaleString()}`};
+    return `${listing.currency}${listing.price.toLocaleString()}`},
   const handleImageError = () => {
     if (!imageError) {
       // Prevent infinite loops if placeholder also fails,
       setImageSrc('/placeholder.svg'),
       setImageError(true)}
-  };
+  },
   const handleViewListing = () => {
-    navigate(`${detailBasePath}/${listing.id}`)};
+    navigate(`${detailBasePath}/${listing.id}`)},
   const handleRequestQuote = e => {
     e.preventDefault(),
     e.stopPropagation(),
     if (onRequestQuote) {
       onRequestQuote(listing.id)} else {
       navigate(`/request-quote?listing=${listing.id}`)}
-  };
+  },
   const imageContainerClasses = isGrid ? 'h-48' : 'h-32 w-48',
   return (
     <div

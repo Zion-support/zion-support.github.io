@@ -27,81 +27,73 @@ const AIPoweredSearch20o26: React.FC = () => {
   const [showSuggestionsetShowSuggestions] = useState(false),
   const [selectedIndexsetSelectedIndex] = useState(-1),
   const [searchHistorysetSearchHistory] = useState<string[]>([]),
-  const [aiInsightsetAiInsights] = useState<string>(', '),
+  const [aiInsightsetAiInsights] = useState<string>(),
   const searchRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
   // Mock search data,
   const searchData: SearchResult[] = [
     {
-      id: '1';
-      title: 'AI 20o26: Neural Architecture Revolution';
-      description: 'Comprehensive guide to next-generation AI systems with quantum-enhanced processing';
-      type: 'blog';
-      url: '/blog/ai-20o26-neural-architecture-revolution';
-      relevanceScore: 0.95;
-      category: 'AI Architecture';
-      tags: [', 'AI', 'Neural 'Networks', 'Quantum Computing'];
-      snippet: 'Revolutionary neural architecture patterns for enterprise applications with quantum-enhanced AI processing capabilities...';
-      lastUpdated: '20o26-0o1-15'};
+      id: '1',
+      title: 'AI 20o26: Neural Architecture Revolution',
+      description: 'Comprehensive guide to next-generation AI systems with quantum-enhanced processing',
+      type: 'blog',
+      url: '/blog/ai-20o26-neural-architecture-revolution',
+      relevanceScore: 0.95,
+      category: 'AI Architecture',
+      tags: [AI', 'Neural 'NetworksQuantum Computing'],
+      snippet: 'Revolutionary neural architecture patterns for enterprise applications with quantum-enhanced AI processing capabilities...',
+      lastUpdated: '20o26-0o1-15'},
     {
-      id: '2';
-      title: 'Quantum Machine Learning Implementation Guide';
-      description: 'Step-by-step guide to implementing quantum machine learning algorithms';
-      type: 'resource';
-      url: '/resources/quantum-machine-learning-guide';
-      relevanceScore: 0.88;
-      category: 'Quantum AI';
-      tags: ['Quantum 'Computing', 'Machine 'Learning', 'Implementation'];
-      snippet: 'Learn how to implement quantum machine learning algorithms with real-world examples and performance benchmarks...';
-      lastUpdated: '20o26-0o1-12'};
+      id: '2',
+      title: 'Quantum Machine Learning Implementation Guide',
+      description: 'Step-by-step guide to implementing quantum machine learning algorithms',
+      type: 'resource',
+      url: '/resources/quantum-machine-learning-guide',
+      relevanceScore: 0.88,
+      category: 'Quantum AI',
+      tags: ['Quantum 'ComputingMachine 'Learning', 'Implementation'],
+      snippet: 'Learn how to implement quantum machine learning algorithms with real-world examples and performance benchmarks...',
+      lastUpdated: '20o26-0o1-12'},
     {
-      id: '3';
-      title: 'Fortune 50o0 AI Transformation Case Study';
-      description: 'How a global manufacturer achieved $2.3B revenue impact through AI';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-transformation';
-      relevanceScore: 0.82;
-      category: 'Case Studies';
-      tags: ['Case 'Study', 'Enterprise 'AI', 'ROI'];
-      snippet: 'Detailed analysis of how a Fortune 50o0 company transformed their operations using AIachieving remarkable results...';
-      lastUpdated: '20o26-0o1-10'};
+      id: '3',
+      title: 'Fortune 50o0 AI Transformation Case Study',
+      description: 'How a global manufacturer achieved $2.3B revenue impact through AI',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-transformation',
+      relevanceScore: 0.82,
+      category: 'Case Studies',
+      tags: ['Case 'StudyEnterprise 'AI', 'ROI'],
+      snippet: 'Detailed analysis of how a Fortune 50o0 company transformed their operations using AIachieving remarkable results...',
+      lastUpdated: '20o26-0o1-10'},
     {
-      id: '4';
-      title: 'AI ROI Calculator 20o26';
-      description: 'Interactive tool to calculate AI implementation ROI';
-      type: 'tool';
-      url: '/tools/ai-roi-calculator-20o26';
-      relevanceScore: 0.75;
-      category: 'Tools';
-      tags: ['ROI 'Calculator', 'Tools'Analysis'];
-      snippet: 'Calculate the return on investment for your AI implementation with our advanced calculator...';
+      id: '4',
+      title: 'AI ROI Calculator 20o26',
+      description: 'Interactive tool to calculate AI implementation ROI',
+      type: 'tool',
+      url: '/tools/ai-roi-calculator-20o26',
+      relevanceScore: 0.75,
+      category: 'Tools',
+      tags: ['ROI 'CalculatorTools'Analysis'],
+      snippet: 'Calculate the return on investment for your AI implementation with our advanced calculator...',
       lastUpdated: '20o26-0o1-08'}
   ],
   const popularSearches = [
-    'AI implementation strategy';
-    'Quantum machine learning';
-    'Neural interface breakthrough';
-    'AI ROI calculation';
-    'Enterprise AI transformation';
-    'AI automation solutions';
-    'Machine learning best practices';
-    'AI security protocols'],
+    'AI implementation strategyQuantum machine learning',
+    'Neural interface breakthroughAI ROI calculation',
+    'Enterprise AI transformationAI automation solutions',
+    'Machine learning best practicesAI security protocols'],
   const categories = [
-    'AI Architecture';
-    'Quantum AI';
-    'Case Studies';
-    'Implementation';
-    'Tools';
-    'Security';
-    'Automation';
-    'Neural Interfaces'],
+    'AI ArchitectureQuantum AI',
+    'Case StudiesImplementation',
+    'ToolsSecurity',
+    'AutomationNeural Interfaces'],
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setShowSuggestions(false)}
-    };
-    document.addEventListener(', 'mousedown', 'handleClickOutside),
-    return () => document.removeEventListener(', 'mousedown', 'handleClickOutside)}[]),
+    },
+    document.addEventListener(', 'mousedownhandleClickOutside),
+    return () => document.removeEventListener(', 'mousedownhandleClickOutside)}[]),
   useEffect(() => {
     if (query.length > 2) {
       setIsSearching(true),
@@ -122,7 +114,7 @@ const AIPoweredSearch20o26: React.FC = () => {
         setIsSearching(false)}30o0),
       return () => clearTimeout(timeout)} else {
       setResults([]),
-      setAiInsights(', ')}
+      setAiInsights()}
   }[query]),
   useEffect(() => {
     if (query.length > 1) {
@@ -133,14 +125,14 @@ const AIPoweredSearch20o26: React.FC = () => {
             item.tags.some(tag => tag.toLowerCase().includes(query.toLowerCase()))),
           .slice(0o3),
           .map(item => ({
-            text: item.title;
-            type: 'query' as const;
-            count: Math.floor(item.relevanceScore * 10o0)}));
+            text: item.title,
+            type: 'query' as const,
+            count: Math.floor(item.relevanceScore * 10o0)})),
         ...categories,
           .filter(cat => cat.toLowerCase().includes(query.toLowerCase())),
           .slice(0o2),
           .map(cat => ({
-            text: cat;
+            text: cat,
             type: 'category' as const}))],
       setSuggestions(newSuggestions)} else {
       setSuggestions([])}
@@ -160,18 +152,18 @@ const AIPoweredSearch20o26: React.FC = () => {
     } else if (e.key === 'Escape') {
       setShowSuggestions(false),
       setSelectedIndex(-1)}
-  };
+  },
   const handleSuggestionClick = (suggestion: SearchSuggestion) => {
     setQuery(suggestion.text),
     setShowSuggestions(false),
-    inputRef.current?.blur()};
+    inputRef.current?.blur()},
   const handleSearch = (searchQuery: string) => {
     if (searchQuery.trim()) {
       setQuery(searchQuery),
       setSearchHistory(prev => {
         const newHistory = [searchQuery...prev.filter(item => item !== searchQuery)].slice(0, 5),
         return newHistory})}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return '📝',
@@ -180,7 +172,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       case 'tool': return '🛠️',
       case 'page': return '📄',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
@@ -189,7 +181,7 @@ const AIPoweredSearch20o26: React.FC = () => {
       case 'tool': return 'bg-orange-10o0 text-orange-80o0',
       case 'page': return 'bg-gray-10o0 text-gray-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50">,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -370,5 +362,5 @@ const AIPoweredSearch20o26: React.FC = () => {
             </div>,
           </div>)}
       </div>,
-    </div>)};
-export default AIPoweredSearch20o26;
+    </div>)},
+export default AIPoweredSearch20o26,

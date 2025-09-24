@@ -1,11 +1,10 @@
-import React from 'react';;
-import SEO from '../components/SEO';
-import { Check, ExternalLink } from 'lucide-react';
+import React from 'react',
+import SEO from '../components/SEO',
+import { Check, ExternalLink } from 'lucide-react',
 export default function SecretsRotationAutomationPage() {
 	const features = [
-		'Automated key and secret rotationJIT credentials with expirations';
-		'Policy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)';
-		'Cloud KMS and Vault support'];
+		'Automated key and secret rotationJIT credentials with expirationsPolicy approvals and audit trailsCI/CD integration (GitHub Actions, CircleCI)',
+		'Cloud KMS and Vault support'],
 	return (
 		<>,
 			<SEO title="Secrets Rotation Automation" description="Automate key and secret rotation across cloud and CI/CD with approvals and audit logs."  />,

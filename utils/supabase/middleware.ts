@@ -1,14 +1,14 @@
 import { NextResponse } from 'next/server',
 import type { NextRequest } from 'next/server',
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextResponse } from 'next/server',
+import type { NextRequest } from 'next/server',
 
 export function middleware(request: NextRequest) {const { pathname } = request.nextUrl,
   if (pathname === '/dashboard' |pathname === '/dashboard/') {const role = request.cookies.get('userRole')?.value |'talent',
 export function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl,
   if (pathname === '/dashboard' || pathname === '/dashboard/') {
-    const role = request.cookies.get('userRole')?.value || 'talent';
+    const role = request.cookies.get('userRole')?.value || 'talent',
     const target = role === 'client' ? '/dashboard/client' : '/dashboard/talent',
     return NextResponse.redirect(new URL(target, request.url))} catch (error) {
     console.error("Error:", error),
@@ -29,5 +29,5 @@ export const config = {
   matcher: ['/dashboard / dashboard/']}
 ,
 export const config = {
-  matcher: ['/dashboard/dashboard/']};
+  matcher: ['/dashboard/dashboard/']},
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

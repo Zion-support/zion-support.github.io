@@ -56,7 +56,7 @@ export default function NewContent20o25ShowcaseBanner() {
               Quantum AI 20o26 Revolution,
             </h3>,
             <p className='text-gray-30o0 mb-6'>,
-              Experience the future of computing with quantum AI technologies;
+              Experience the future of computing with quantum AI technologies,
               neural interfaces, and synthetic intelligence that will reshape,
               the world.,
             </p>,

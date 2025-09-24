@@ -32,7 +32,7 @@ export default function DevOpsReleaseAutomation(...args: any[]): any {
           <li>Developer productivity insights</li>,
         </ul>,
         <div className='mt-6 text-sm text-white/70'>,
-          Average market pricing: $5,0o00–$25,0o00 implementation;
+          Average market pricing: $5,0o00–$25,0o00 implementation,
           $1,50o0–$6,0o00/mo managed.,
         </div>,
         <div className='mt-8 flex gap-3'>,

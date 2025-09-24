@@ -1,74 +1,74 @@
 import { useState, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Wallet;
-  Smartphone;
-  Coins;
-  Image;
-  TrendingUp;
-  BarChart3;
-  Plus;
-  Send;
-  Download;
-  Loader2;
+  Wallet,
+  Smartphone,
+  Coins,
+  Image,
+  TrendingUp,
+  BarChart3,
+  Plus,
+  Send,
+  Download,
+  Loader2,
 } from 'lucide-react',
 import { useBlockchainWeb3 } from '../hooks/useBlockchainWeb3',
 import { useAnalytics } from '../hooks/useAnalytics',
 export const BlockchainWeb3Dashboard = ({ className = '' }) => {
   const { trackEvent } = useAnalytics({
-    enableTracking: true;
-    enableUserBehaviorTracking: true;
+    enableTracking: true,
+    enableUserBehaviorTracking: true
   }),
   const [activeTab, setActiveTab] = useState('overview'),
   const [showMintNFT, setShowMintNFT] = useState(false),
   const [showSendTransaction, setShowSendTransaction] = useState(false),
   const {
-    wallet;
-    contracts;
-    nfts;
-    defiPositions;
-    transactions;
-    metrics;
-    isConnecting;
-    isProcessing;
-    connectWallet;
-    disconnectWallet;
-    switchNetwork;
-    addContract;
-    mintNFT;
-    sendTransaction;
-    createDeFiPosition;
+    wallet,
+    contracts,
+    nfts,
+    defiPositions,
+    transactions,
+    metrics,
+    isConnecting,
+    isProcessing,
+    connectWallet,
+    disconnectWallet,
+    switchNetwork,
+    addContract,
+    mintNFT,
+    sendTransaction,
+    createDeFiPosition,
   } = useBlockchainWeb3(),
   const [nftForm, setNftForm] = useState({
-    name: '';
-    description: '';
-    image: '';
+    name: '',
+    description: '',
+    image: ''
   }),
   const [transactionForm, setTransactionForm] = useState({
-    to: '';
-    value: '';
-    data: '';
+    to: '',
+    value: '',
+    data: ''
   }),
   const handleConnectWallet = useCallback(async () => {
     try {
       await connectWallet(),
-      trackEvent('blockchain', 'dashboard', 'wallet_connected')} catch (error) {
+      trackEvent('blockchaindashboard', 'wallet_connected')} catch (error) {
       console.error('Failed to connect wallet:', error)}
   }, [connectWallet, trackEvent]),
   const handleMintNFT = useCallback(async () => {
     if (nftForm.name.trim() && wallet) {
       try {
         const metadata = {
-          name: nftForm.name;
-          description: nftForm.description;
+          name: nftForm.name,
+          description: nftForm.description,
           image: ,
             nftForm.image ||,
-            `https://via.placeholder.com/30o0x30o0/6366f1/ffffff?text=${nftForm.name}`;
-        };
+            `https://via.placeholder.com/30o0x30o0/6366f1/ffffff?text=${nftForm.name}`,
+        },
         await mintNFT(contracts[1]?.address || '', metadata),
         setNftForm({ name: '', description: '', image: '' }),
         setShowMintNFT(false),
-        trackEvent('blockchain', 'dashboard', 'nft_minted')} catch (error) {
+        trackEvent('blockchaindashboard', 'nft_minted')} catch (error) {
         console.error('Failed to mint NFT:', error)}
     }
   }, [nftForm, wallet, contracts, mintNFT, trackEvent]),
@@ -76,12 +76,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
     if (transactionForm.to.trim() && transactionForm.value && wallet) {
       try {
         await sendTransaction(
-          transactionForm.to;
-          transactionForm.value;
+          transactionForm.to,
+          transactionForm.value,
           transactionForm.data || undefined),
         setTransactionForm({ to: '', value: '', data: '' }),
         setShowSendTransaction(false),
-        trackEvent('blockchain', 'dashboard', 'transaction_sent')} catch (error) {
+        trackEvent('blockchaindashboard', 'transaction_sent')} catch (error) {
         console.error('Failed to send transaction:', error)}
     }
   }, [transactionForm, wallet, sendTransaction, trackEvent]),
@@ -95,7 +95,7 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
         return 'text-red-60o0 bg-red-10o0',
       default: ,
         return 'text-gray-60o0 bg-gray-10o0'}
-  };
+  },
   return (
     <div
       className={`bg-white dark: bg-gray-90o0 rounded-lg shadow-lg border border-gray-20o0 dark:border-gray-70o0 ${className}`}
@@ -172,12 +172,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
       {/* Navigation Tabs */}
       <div className='flex border-b border-gray-20o0 dark: border-gray-70o0'>,
         {[
-          { id: 'overview', label: 'Overview', icon: BarChart3 };
-          { id: 'wallet', label: 'Wallet', icon: Wallet };
-          { id: 'contracts', label: 'Contracts', icon: Smartphone };
-          { id: 'nfts', label: 'NFTs', icon: Image };
-          { id: 'defi', label: 'DeFi', icon: TrendingUp };
-          { id: 'transactions', label: 'Transactions', icon: Coins };
+          { id: 'overview', label: 'Overview', icon: BarChart3 },
+          { id: 'wallet', label: 'Wallet', icon: Wallet },
+          { id: 'contracts', label: 'Contracts', icon: Smartphone },
+          { id: 'nfts', label: 'NFTs', icon: Image },
+          { id: 'defi', label: 'DeFi', icon: TrendingUp },
+          { id: 'transactions', label: 'Transactions', icon: Coins },
         ].map(({ id, label, icon: Icon }) => (
           <button
             key={id}
@@ -404,12 +404,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 <button
                   onClick={() =>,
                     addContract({
-                      name: 'New Contract';
-                      address: '0x' + Math.random().toString(36).substr(2, 40);
-                      network: 'ethereum';
-                      abi: [];
-                      functions: ['function1', 'function2'];
-                      events: ['Event1', 'Event2'];
+                      name: 'New Contract',
+                      address: '0x' + Math.random().toString(36).substr(2, 40),
+                      network: 'ethereum',
+                      abi: [],
+                      functions: ['function1function2'],
+                      events: ['Event1Event2'],
                     })}
                   className='px-3 py-2 text-sm font-medium text-white bg-blue-60o0 rounded-lg hover: bg-blue-70o0'>,
                   <Plus className='w-4 h-4 inline mr-2' />,
@@ -557,12 +557,12 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                 <button
                   onClick={() =>,
                     createDeFiPosition({
-                      type: 'staking';
-                      protocol: 'Zion Protocol';
-                      asset: 'ZION';
-                      amount: '10o00';
-                      apy: 12.5;
-                      rewards: '125';
+                      type: 'staking',
+                      protocol: 'Zion Protocol',
+                      asset: 'ZION',
+                      amount: '10o00',
+                      apy: 12.5,
+                      rewards: '125'
                     })}
                   className='px-3 py-2 text-sm font-medium text-white bg-green-60o0 rounded-lg hover: bg-green-70o0'>,
                   <Plus className='w-4 h-4 inline mr-2' />,
@@ -778,8 +778,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     value={nftForm.description}
                     onChange={e =>,
                       setNftForm(prev => ({
-                        ...prev;
-                        description: e.target.value;
+                        ...prev,
+                        description: e.target.value
                       }))}
                     className='w-full px-3 py-2 border border-gray-30o0 dark: border-gray-60o0 rounded-lg bg-white dark:bg-gray-70o0 text-gray-90o0 dark:text-white',
                     placeholder='NFT Description',
@@ -842,8 +842,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     value={transactionForm.to}
                     onChange={e =>,
                       setTransactionForm(prev => ({
-                        ...prev;
-                        to: e.target.value;
+                        ...prev,
+                        to: e.target.value
                       }))}
                     className='w-full px-3 py-2 border border-gray-30o0 dark: border-gray-60o0 rounded-lg bg-white dark:bg-gray-70o0 text-gray-90o0 dark:text-white',
                     placeholder='0x...',
@@ -859,8 +859,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     value={transactionForm.value}
                     onChange={e =>,
                       setTransactionForm(prev => ({
-                        ...prev;
-                        value: e.target.value;
+                        ...prev,
+                        value: e.target.value
                       }))}
                     className='w-full px-3 py-2 border border-gray-30o0 dark: border-gray-60o0 rounded-lg bg-white dark:bg-gray-70o0 text-gray-90o0 dark:text-white',
                     placeholder='0.1',
@@ -874,8 +874,8 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
                     value={transactionForm.data}
                     onChange={e =>,
                       setTransactionForm(prev => ({
-                        ...prev;
-                        data: e.target.value;
+                        ...prev,
+                        data: e.target.value
                       }))}
                     className='w-full px-3 py-2 border border-gray-30o0 dark: border-gray-60o0 rounded-lg bg-white dark:bg-gray-70o0 text-gray-90o0 dark:text-white',
                     placeholder='0x...',
@@ -902,4 +902,4 @@ export const BlockchainWeb3Dashboard = ({ className = '' }) => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
+    </div>)},

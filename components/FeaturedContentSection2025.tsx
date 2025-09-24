@@ -3,47 +3,47 @@ ArrowRightCalendarClockUserTrendingUpStarEyeThumbsUp,
 export default function FeaturedContentSection20o25() {
   const featuredContent = [
     {
-      type: 'blog';
-      title: 'Revolutionary AI Breakthroughs Reshaping 20o25';
+      type: 'blog',
+      title: 'Revolutionary AI Breakthroughs Reshaping 20o25',
       excerpt:,
-        'Discover the most groundbreaking AI innovations that are transforming industries and creating unprecedented opportunities for businesses worldwide.';
-      author: 'AI Research Team';
-      readTime: '12 min read';
-      publishDate: 'January 20o25';
-      views: '15.2k';
-      likes: '892';
-      href: '/blog/ai-20o25-latest-breakthroughs';
-      category: 'AI Innovation';
-      featured: true;
-    };
+        'Discover the most groundbreaking AI innovations that are transforming industries and creating unprecedented opportunities for businesses worldwide.',
+      author: 'AI Research Team',
+      readTime: '12 min read',
+      publishDate: 'January 20o25',
+      views: '15.2k',
+      likes: '892',
+      href: '/blog/ai-20o25-latest-breakthroughs',
+      category: 'AI Innovation',
+      featured: true
+    },
     {
-      type: 'case-study';
-      title: 'Global Tech Giant Achieves 25,0o00% ROI with AI Transformation';
+      type: 'case-study',
+      title: 'Global Tech Giant Achieves 25,0o00% ROI with AI Transformation',
       excerpt:,
-        'How a Fortune 10o0 technology company revolutionized their operations using our advanced AI automation solutions.';
-      author: 'Success Stories Team';
-      readTime: '8 min read';
-      publishDate: 'January 20o25';
-      views: '22.8k';
-      likes: '1.2k';
-      href: '/case-studies/ai-20o25-global-tech-transformation-mega-success';
-      category: 'Success Story';
-      featured: true;
-    };
+        'How a Fortune 10o0 technology company revolutionized their operations using our advanced AI automation solutions.',
+      author: 'Success Stories Team',
+      readTime: '8 min read',
+      publishDate: 'January 20o25',
+      views: '22.8k',
+      likes: '1.2k',
+      href: '/case-studies/ai-20o25-global-tech-transformation-mega-success',
+      category: 'Success Story',
+      featured: true
+    },
     {
-      type: 'tutorial';
-      title: 'Complete AI Implementation Guide: From Zero to Success';
+      type: 'tutorial',
+      title: 'Complete AI Implementation Guide: From Zero to Success',
       excerpt:,
-        'A comprehensivestep-by-step tutorial that will guide you through implementing AI solutions in your organization.';
-      author: 'Implementation Team';
-      readTime: '45 min read';
-      publishDate: 'January 20o25';
-      views: '18.5k';
-      likes: '756';
-      href: '/tutorials/ai-implementation-step-by-step-guide';
-      category: 'Tutorial';
-      featured: true;
-    };
+        'A comprehensivestep-by-step tutorial that will guide you through implementing AI solutions in your organization.',
+      author: 'Implementation Team',
+      readTime: '45 min read',
+      publishDate: 'January 20o25',
+      views: '18.5k',
+      likes: '756',
+      href: '/tutorials/ai-implementation-step-by-step-guide',
+      category: 'Tutorial',
+      featured: true
+    },
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -55,7 +55,7 @@ export default function FeaturedContentSection20o25() {
         return <ArrowRight className='w-5 h-5' />,
       default:,
         return <TrendingUp className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -66,7 +66,7 @@ export default function FeaturedContentSection20o25() {
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <div className='py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50'>,
       <div className='container mx-auto px-4'>,
@@ -222,11 +222,11 @@ export default function FeaturedContentSection20o25() {
         {/* CTA Section */}
         <div className='bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-2xl p-8 text-white text-center'>,
           <h3 className='text-3xl font-bold mb-4'>,
-            'Don', 't Miss Out on the Latest Content,
+            'Dont Miss Out on the Latest Content,
           </h3>,
           <p className='text-xl text-white/90 mb-8 max-w-2xl mx-auto'>,
             Subscribe to our newsletter and get notified about new articlescase,
-            studiesand tutorials as soon as 'they', 're published.,
+            studiesand tutorials as soon as 'theyre published.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4'>,
             <Link

@@ -20,13 +20,13 @@ export interface Dispute {
   resolution_type: ResolutionType,
   project?: {
     title?: string,
-    scope_summary?: string};
+    scope_summary?: string},
   client_profile?: {
     display_name: string,
-    avatar_url?: string};
+    avatar_url?: string},
   talent_profile?: {
     display_name: string,
-    avatar_url?: string};
+    avatar_url?: string},
 }
 ,
 export interface DisputeMessage {
@@ -38,7 +38,7 @@ export interface DisputeMessage {
   is_admin_note: boolean,
   user_profile?: {
     display_name: string,
-    avatar_url?: string};
+    avatar_url?: string},
 }
 ,
 export interface DisputeAttachment {
@@ -61,11 +61,11 @@ export type DisputeReason =,
   | 'contract_terms',
   | 'other',
 export const disputeReasonLabels: Record<DisputeReason string> = {
-  milestone_quality: 'Quality of Deliverable';
-  delayed_delivery: 'Delayed Delivery';
-  scope_change: 'Scope Change Disagreement';
-  communication: 'Communication Issues';
-  payment: 'Payment Dispute';
-  contract_terms: 'Contract Terms Disagreement';
-  other: 'Other Issue';
-};
+  milestone_quality: 'Quality of Deliverable',
+  delayed_delivery: 'Delayed Delivery',
+  scope_change: 'Scope Change Disagreement',
+  communication: 'Communication Issues',
+  payment: 'Payment Dispute',
+  contract_terms: 'Contract Terms Disagreement',
+  other: 'Other Issue'
+},

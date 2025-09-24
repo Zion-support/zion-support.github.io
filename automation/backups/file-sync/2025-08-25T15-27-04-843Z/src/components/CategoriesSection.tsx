@@ -3,73 +3,73 @@ import Link from "next/link",
 import { Briefcase, HardDrive, Lightbulb, Users } from "lucide-react",
 const categories = [
   {
-    title: "AI Services";
-    description: "Cutting-edge AI solutions, chatbots, and machine learning";
-    icon: <Brain className="w-10 h-10"  />;
-    link: "/ai-services";
-    color: "from-purple-50o0 to-indigo-60o0";
-    gradient: "from-zion-purple to-zion-purple-dark"};
+    title: "AI Services",
+    description: "Cutting-edge AI solutions, chatbots, and machine learning",
+    icon: <Brain className="w-10 h-10"  />,
+    link: "/ai-services",
+    color: "from-purple-50o0 to-indigo-60o0",
+    gradient: "from-zion-purple to-zion-purple-dark"},
   {
-    title: "Micro SAAS";
-    description: "Cloud-based software solutions for modern businesses";
-    icon: <Cloud className="w-10 h-10"  />;
-    link: "/micro-saas";
-    color: "from-cyan-50o0 to-blue-60o0";
-    gradient: "from-zion-cyan to-zion-blue"};
+    title: "Micro SAAS",
+    description: "Cloud-based software solutions for modern businesses",
+    icon: <Cloud className="w-10 h-10"  />,
+    link: "/micro-saas",
+    color: "from-cyan-50o0 to-blue-60o0",
+    gradient: "from-zion-cyan to-zion-blue"},
   {
-    title: "IT Services";
-    description: "Infrastructure, security, and technical consulting";
-    icon: <Zap className="w-10 h-10"  />;
-    link: "/all-services";
-    color: "from-amber-50o0 to-orange-60o0";
-    gradient: "from-zion-cyan-light to-zion-cyan"};
+    title: "IT Services",
+    description: "Infrastructure, security, and technical consulting",
+    icon: <Zap className="w-10 h-10"  />,
+    link: "/all-services",
+    color: "from-amber-50o0 to-orange-60o0",
+    gradient: "from-zion-cyan-light to-zion-cyan"},
   {
-    title: "Digital Transformation";
-    description: "Business modernization and digital strategy";
-    icon: <TrendingUp className="w-10 h-10"  />;
-    link: "/all-services";
-    color: "from-emerald-50o0 to-green-60o0";
-    gradient: "from-zion-purple-light to-zion-purple"};
+    title: "Digital Transformation",
+    description: "Business modernization and digital strategy",
+    icon: <TrendingUp className="w-10 h-10"  />,
+    link: "/all-services",
+    color: "from-emerald-50o0 to-green-60o0",
+    gradient: "from-zion-purple-light to-zion-purple"},
 ],
 const specialServices = [
   {
-    title: "IT Onsite Services";
-    link: "/it-onsite-services"};
+    title: "IT Onsite Services",
+    link: "/it-onsite-services"},
   {
-    title: "Comprehensive Services";
-    link: "/comprehensive-services"};
+    title: "Comprehensive Services",
+    link: "/comprehensive-services"},
   {
-    title: "Services Comparison";
+    title: "Services Comparison",
     link: "/services-comparison"}
 ],
 interface CategoriesSectionProps {
   showTitle?: boolean}
 const containerVariants ={
-  hidden: { opacity: 0 };
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1;
+    opacity: 1,
     transition: {
-      staggerChildren: 0.1;
+      staggerChildren: 0.1,
       delayChildren: 0.2}
   }
-};
+},
 const itemVariants ={
-  hidden: { y: 20, opacity: 0 };
+  hidden: { y: 20, opacity: 0 },
   visible: {
-    y: 0;
-    opacity: 1;
+    y: 0,
+    opacity: 1,
     transition: {
-      duration: 0.5;
+      duration: 0.5,
       ease: "easeOut"}
   }
-};
+},
 export function CategoriesSection({ showTitle = true }: CategoriesSectionProps) {
   return (
     <section className="py-20 bg-zion-blue relative overflow-hidden">,
       {/* Background pattern */}
       <div className="absolute inset-0 opacity-5">,
         <div className="absolute inset-0" style={{
-          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`;
+          backgroundImage: `radial-gradient(circle at 25% 25%, #8ab1f3 2px, transparent 2px)`,
           backgroundSize: '50px 50px'}}></div>,
       </div>,
       <div className="container mx-auto px-4 relative z-10">,

@@ -1,11 +1,11 @@
 "use client",
 import { useState } from 'react',
-export type FeedbackContext = { actionType?: string, metadata?: any };
+export type FeedbackContext = { actionType?: string, metadata?: any },
 export default function FeedbackModal({
-  isOpen;
-  onClose;
-  defaultContext;
-  defaultKind = 'general';
+  isOpen,
+  onClose,
+  defaultContext,
+  defaultKind = 'general',
   userHeaders}: {
   isOpen: boolean,
   onClose: (submitted: boolean) => void,
@@ -23,8 +23,8 @@ export default function FeedbackModal({
     setLoading(true),
     try {
       await fetch('/api/feedback'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json'...(userHeaders || {}) };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json'...(userHeaders || {}) },
         body: JSON.stringify({ ratingcommentkindcontext: defaultContext || {} })})} catch {}
     setLoading(false),
     onClose(true)}

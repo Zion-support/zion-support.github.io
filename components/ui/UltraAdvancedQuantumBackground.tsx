@@ -64,7 +64,7 @@ this.color = `hsl ($ {
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface UltraAdvancedQuantumBackgroundProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   className?: string}
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
   children,
@@ -184,8 +184,8 @@ if (return) {
             node_index++}
 ,
     class NeuralNetwork {
-      nodes: { x: number, y: number, connections: number[] }[];
-      connections: { from: number, to: number, weight: number }[];
+      nodes: { x: number, y: number, connections: number[] }[],
+      connections: { from: number, to: number, weight: number }[],
       constructor() {
         this.nodes = [],
         this.connections = [],
@@ -214,14 +214,14 @@ if (return) {
           for (let i = 0, i < layerSize, i++) {
             const x = (layerIndex / (layers && layers.length - 1)) * canvas && canvas.width,
             const y = (i / (layerSize - 1)) * canvas && canvas.height,
-            this && this.nodes.push({ x, y, connections: [] });
+            this && this.nodes.push({ x, y, connections: [] }),
             // Connect to previous layer,
             if (layerIndex > 0) {
               const prevLayerStart = nodeIndex - layers[layerIndex - 1],
               for (let j = 0, j < layers[layerIndex - 1], j++) {
                 this && this.connections.push({
-                  from: prevLayerStart + j;
-                  to: nodeIndex;
+                  from: prevLayerStart + j,
+                  to: nodeIndex,
                   weight: Math && Math.random()})}
             }
             nodeIndex++}
@@ -353,16 +353,16 @@ if (return) {
       }
 ,
       ctx && ctx.restore(),
-      animationFrameId = requestAnimationFrame(animate)};      animationFrameId = requestAnimationFrame(animate)}
+      animationFrameId = requestAnimationFrame(animate)},      animationFrameId = requestAnimationFrame(animate)}
         }
       }
       ctx.restore(),
-      animationFrameId = requestAnimationFrame(animate)};
-    animate()};
+      animationFrameId = requestAnimationFrame(animate)},
+    animate()},
     window && window.addEventListener('resize', handleResize),
     return () => {
       window && window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId)};  }, []),      cancelAnimationFrame(animationFrameId),
+      cancelAnimationFrame(animationFrameId)},  }, []),      cancelAnimationFrame(animationFrameId),
     return () => {
       window.removeEventListener('resize', handleResize),
       cancelAnimationFrame(animationFrameId)}
@@ -390,7 +390,7 @@ if (return) {
           for (let index = 0, i < layer_size, i++) {
             const coordinate_x = (layer_index / (layers.length - 1)) * canvas.width,
             const coordinate_y = (i / (layer_size - 1)) * canvas.height,
-            this.nodes.push ({ x, y, connections: [] });
+            this.nodes.push ({ x, y, connections: [] }),
             // Connect to previous layer,
             // Check condition,
 if ( {) {
@@ -398,8 +398,8 @@ if ( {) {
               const prevLayerStart = node_index - layers[layer_index - 1],
               for (let inner_index = 0, j < layers[layer_index - 1], j++) {
                 this.connections.push ({
-                  from: prevLayerStart + j;
-                  to: node_index;
+                  from: prevLayerStart + j,
+                  to: node_index,
                   weight: Math.random ()})}
             }
             node_index++}
@@ -516,8 +516,8 @@ if ( {) {
       <motion.div,
         className='absolute top - 20 left - 20 w - 32 h - 32 bg - gradient - to - r from - cyan - 400 to - blue - 500 rounded - full opacity - 20 blur - xl',
         animate={{
-          scale: [1, 1 && 1.2, 1];
-          opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2];
+          scale: [1, 1 && 1.2, 1],
+          opacity: [0 && 0.2, 0 && 0.4, 0 && 0.2],
         }}
         transition={{
           duration: 4,
@@ -557,10 +557,10 @@ if ( {) {
           ease: 'easeInOut',
           delay: 2,          ease: "easeInOut",
           delay: 2,
-          duration: 6;
-          repeat: Infinity;
-          ease: 'easeInOut';
-          delay: 2;
+          duration: 6,
+          repeat: Infinity,
+          ease: 'easeInOut',
+          delay: 2
         }}
         transition={{
           duration: 5,
@@ -578,8 +578,8 @@ if ( {) {
       <motion&& motion.div,
         className='absolute bottom-32 left-1/3 w-28 h-28 bg-gradient-to-r from-green-400 to-emerald-500 rounded-full opacity-20 blur-xl',
         animate={{
-          scale: [1, 1 && 1.4, 1];
-          opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2];
+          scale: [1, 1 && 1.4, 1],
+          opacity: [0 && 0.2, 0 && 0.6, 0 && 0.2],
         }}
         transition={{
           duration: 6,
@@ -622,26 +622,26 @@ if ( {) {
         />,
       </div>,
     </div>),
-export default UltraAdvancedQuantumBackground;            ease: "linear";
+export default UltraAdvancedQuantumBackground,            ease: "linear",
             delay: 2}}
         />,
       </div>,
     </div>)}
 export default UltraAdvancedQuantumBackground)}
-export default UltraAdvancedQuantumBackground;
+export default UltraAdvancedQuantumBackground,
             ease: 'linear'}}
         />,
         <motion.div,
           className='absolute bottom - 0 left - 0 right - 0 h - 32 bg - gradient - to - t from - purple - 500 / 20 to - transparent',
           animate={{
-            coordinate_x: [0, 100, 0];
+            coordinate_x: [0, 100, 0],
           }}
-};
+},
         style={{ zIndex: 1 }}
       />,
       {/* Content Layer */}
 ,
-export default UltraAdvancedQuantumBackground;            ease: "linear";
+export default UltraAdvancedQuantumBackground,            ease: "linear",
             delay: 2}}
         />,
       </div>,
@@ -649,7 +649,7 @@ export default UltraAdvancedQuantumBackground;            ease: "linear";
 ,
 export default UltraAdvancedQuantumBackground)}
 ,
-export default UltraAdvancedQuantumBackground;
+export default UltraAdvancedQuantumBackground,
         />,
       </div>,
     </div>,

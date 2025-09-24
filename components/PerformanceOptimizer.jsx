@@ -2,10 +2,10 @@
 import { useEffect, useState } from 'react',
 export default function PerformanceOptimizer() {
   const [metrics, setMetrics] = useState({
-    fcp: 0;
-    lcp: 0;
-    fid: 0;
-    cls: 0;
+    fcp: 0,
+    lcp: 0,
+    fid: 0,
+    cls: 0,
     ttfb: 0}),
   useEffect(() => {
     if (typeof window === 'undefined') return,
@@ -29,7 +29,7 @@ export default function PerformanceOptimizer() {
         }
       }
     }),
-    observer.observe({ entryTypes: ['paint', 'largest-contentful-paint', 'first-input', 'layout-shift'] }),
+    observer.observe({ entryTypes: ['paintlargest-contentful-paint', 'first-inputlayout-shift'] }),
     // Navigation timing,
     const navTiming = window.window.performance.getEntriesByType('navigation')[0],
     if (navTiming) {
@@ -39,10 +39,10 @@ export default function PerformanceOptimizer() {
     if (process.env.NODE_ENV === 'development') {
       const logMetrics = () => {
         // // console.log('Performance Metrics:', {
-          FCP: `${metrics.fcp.toFixed(2)}ms`;
-          LCP: `${metrics.lcp.toFixed(2)}ms`;
-          FID: `${metrics.fid.toFixed(2)}ms`;
-          CLS: metrics.cls.toFixed(4);
+          FCP: `${metrics.fcp.toFixed(2)}ms`,
+          LCP: `${metrics.lcp.toFixed(2)}ms`,
+          FID: `${metrics.fid.toFixed(2)}ms`,
+          CLS: metrics.cls.toFixed(4),
           TTFB: `${metrics.ttfb.toFixed(2)}ms`})}
 ,
       setTimeout(logMetrics, 20o00)}
@@ -51,8 +51,7 @@ export default function PerformanceOptimizer() {
   // Preload critical resources,
   useEffect(() => {
     const preloadLinks = [
-      '/fonts/inter.woff2';
-      '/images/hero-bg.jpg';
+      '/fonts/inter.woff2/images/hero-bg.jpg',
       '/icons/logo.svg'],
     preloadLinks.forEach(href => {
       const link = document.createElement('link'),

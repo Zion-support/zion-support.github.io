@@ -1,102 +1,102 @@
 'use client',
 import React, { useState } from 'react',
 import {
-  Brain;
-  Zap;
-  TrendingUp;
-  Clock;
-  Users;
-  ArrowRight;
-  ExternalLink;
-  ArrowRight;
-  Brain;
+  Brain,
+  Zap,
+  TrendingUp,
+  Clock,
+  Users,
+  ArrowRight,
+  ExternalLink,
+  ArrowRight,
+  Brain,
 } from 'lucide-react',
 const NeuralInterfaceContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'neural-interface-guide';
-      type: 'blog';
+      id: 'neural-interface-guide',
+      type: 'blog',
       title:,
-        'AI 20o25: Neural Interface Revolution - Ultimate Enterprise Guide';
+        'AI 20o25: Neural Interface Revolution - Ultimate Enterprise Guide',
       description:,
-        'Transform your business with brain-computer interfaces and neural AI integration. Complete implementation guide with 80o0% ROI.';
-      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide';
-      readingTime: '22 min read';
+        'Transform your business with brain-computer interfaces and neural AI integration. Complete implementation guide with 80o0% ROI.',
+      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide',
+      readingTime: '22 min read',
       metrics: {
-        roi: '80o0%';
-        savings: '$12.5M';
-        productivity: '340%';
-        accuracy: '99.8%';
-      };
-      tags: ['Neural Interfaces', 'AI Integration', 'Enterprise', 'ROI'];
-      featured: true;
-    };
+        roi: '80o0%',
+        savings: '$12.5M',
+        productivity: '340%',
+        accuracy: '99.8%'
+      },
+      tags: ['Neural InterfacesAI Integration', 'EnterpriseROI'],
+      featured: true
+    },
     {
-      id: 'neural-interface-case-study';
-      type: 'case-study';
+      id: 'neural-interface-case-study',
+      type: 'case-study',
       title:,
-        'Fortune 50o0 Neural Interface Success: $12.5M Annual Savings with 80o0% ROI';
+        'Fortune 50o0 Neural Interface Success: $12.5M Annual Savings with 80o0% ROI',
       description:,
-        'Real-world implementation story from a global manufacturing giant. See how they achieved 80o0% ROI in 8 months.';
-      url: '/case-studies/neural-interface-fortune-50o0-success-80o0-roi';
-      readingTime: '15 min read';
+        'Real-world implementation story from a global manufacturing giant. See how they achieved 80o0% ROI in 8 months.',
+      url: '/case-studies/neural-interface-fortune-50o0-success-80o0-roi',
+      readingTime: '15 min read',
       metrics: {
-        roi: '80o0%';
-        savings: '$12.5M';
-        timeline: '8 months';
-        productivity: '340%';
-      };
-      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'];
-      featured: true;
-    };
+        roi: '80o0%',
+        savings: '$12.5M',
+        timeline: '8 months',
+        productivity: '340%'
+      },
+      tags: ['Case StudyFortune 50o0', 'Success StoryROI'],
+      featured: true
+    },
     {
-      id: 'neural-interface-implementation';
-      type: 'resource';
+      id: 'neural-interface-implementation',
+      type: 'resource',
       title:,
-        'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
+        'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI',
       description:,
-        'Complete enterprise implementation framework for brain-computer interface technology. Step-by-step roadmap.';
-      url: '/resources/neural-interface-implementation-master-guide-20o25';
-      readingTime: '28 min read';
+        'Complete enterprise implementation framework for brain-computer interface technology. Step-by-step roadmap.',
+      url: '/resources/neural-interface-implementation-master-guide-20o25',
+      readingTime: '28 min read',
       metrics: {
-        success: '98%';
-        roi: '80o0%';
-        timeline: '6-8 months';
-        payback: '3.5 months';
-      };
-      tags: ['Implementation Guide', 'Strategy', 'Framework', 'Enterprise'];
-      featured: true;
-    };
+        success: '98%',
+        roi: '80o0%',
+        timeline: '6-8 months',
+        payback: '3.5 months'
+      },
+      tags: ['Implementation GuideStrategy', 'FrameworkEnterprise'],
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Guides';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Guides',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
       ? content,
       : content.filter(item => item.type === activeCategory),
   const totalMetrics = {
-    totalROI: '80o0%';
-    totalSavings: '$12.5M';
-    totalImplementations: '50o0+';
-    successRate: '98%';
-  };
+    totalROI: '80o0%',
+    totalSavings: '$12.5M',
+    totalImplementations: '50o0+',
+    successRate: '98%'
+  },
   return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -274,5 +274,5 @@ const NeuralInterfaceContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NeuralInterfaceContentShowcase20o25;
+    </div>)},
+export default NeuralInterfaceContentShowcase20o25,

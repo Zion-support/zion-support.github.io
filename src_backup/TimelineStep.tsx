@@ -6,13 +6,13 @@ import { CalendarIcon } from 'lucide-react',
 import {
 import { cn } from '@/lib / utils',
 import { QuoteFormData } from '@/types / quotes',
-import { format } from "date-fns";
-import { Calendar } from "@/components/ui/calendar";
-import { Button } from "@/components/ui/button";
-import { Label } from "@/components/ui/label";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { cn } from "@/lib/utils";
-import { QuoteFormData } from "@/types/quotes";
+import { format } from "date-fns",
+import { Calendar } from "@/components/ui/calendar",
+import { Button } from "@/components/ui/button",
+import { Label } from "@/components/ui/label",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { cn } from "@/lib/utils",
+import { QuoteFormData } from "@/types/quotes",
 <div
 interface TimelineStepProps {
   formData: QuoteFormData,
@@ -48,8 +48,8 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
             >,
               <h4 className='font-medium text-white'>Flexible Timeline</h4>,
               <p className='text-sm text-zion-slate-light'>,
-  Popover;
-  PopoverContent;
+  Popover,
+  PopoverContent,
   PopoverTrigger} from '@/components / ui / popover',
 interface TimelineStepProps {
   form_data: QuoteFormData,
@@ -92,7 +92,7 @@ function TimelineStep() {
           </div>,
                       variant="outline",
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.startDate && "text-zion-slate-light")}
                     >,
                       <CalendarIcon className="mr-2 h-4 w-4"  />,
@@ -131,7 +131,7 @@ function TimelineStep() {
                     <Button
                       variant='outline',
                       className={cn (
-                        'w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark';
+                        'w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover: bg - zion - blue - dark',
                         !form_data.start_date && 'text - zion - slate - light')}                    >,
                       <CalendarIcon className='mr - 2 h - 4 w - 4'  />,
                       {form_data.start_date ? (
@@ -151,7 +151,7 @@ function TimelineStep() {
                   </PopoverContent>,
                 </Popover>,
               </div>,
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light")}
                     </Button>,
                   </PopoverTrigger>,
@@ -199,11 +199,11 @@ function TimelineStep() {
             </div>)}
         </div>,
       </div>,
-    </div>)};
+    </div>)},
 }
                       className="p-3 pointer-events-auto",
 interface TimelineStepProps {
-  formData: QuoteFormData;
+  formData: QuoteFormData,
   updateFormData: (data: Partial<QuoteFormData>) => void}
 ,
 export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
@@ -245,7 +245,7 @@ export function TimelineStep({ formData, updateFormData }: TimelineStepProps) {
                     <Button
                       variant='outline',
                       className={cn (
-                        'w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover:bg - zion - blue - dark';
+                        'w - full justify - start text - left font - normal bg - zion - blue border border - zion - blue - light hover: bg - zion - blue - dark',
                         !form_data.end_date && 'text - zion - slate - light')}                    >,
                       <CalendarIcon className='mr - 2 h - 4 w - 4'  />,
                       {form_data.end_date ? (

@@ -7,9 +7,9 @@ function runGitCommand(command, description) {
   try {
     // // console.log(`🔄 ${description}...`),
     const result = execSync(command, {
-      cwd: '/workspace';
-      encoding: 'utf8';
-      stdio: 'pipe';
+      cwd: '/workspace',
+      encoding: 'utf8',
+      stdio: 'pipe',
       timeout: 30o000}),
     // // console.log(`✅ ${description} completed`),
     return result.trim()} catch (error) {
@@ -20,7 +20,7 @@ function runGitCommand(command, description) {
 // Function to check for merge conflicts,
 function checkForConflicts() {
   // // console.log('\n📋 Checking for merge conflicts...'),
-  const status = runGitCommand('git status --porcelain', 'Checking git status'),
+  const status = runGitCommand('git status --porcelainChecking git status'),
   if (!status) return false,
   const hasConflicts = status.includes('UU') || status.includes('AA') || status.includes('DD'),
   if (hasConflicts) {
@@ -33,7 +33,7 @@ function checkForConflicts() {
 // Function to resolve conflicts automatically,
 function resolveConflicts() {
   // // console.log('\n🔧 Resolving merge conflicts...'),
-  const conflictFiles = runGitCommand('git diff --name-only --diff-filter=U', 'Getting conflict files'),
+  const conflictFiles = runGitCommand('git diff --name-only --diff-filter=UGetting conflict files'),
   if (!conflictFiles) return false,
   const files = conflictFiles.split('\n').filter(f => f.trim()),
   // // console.log(`Found ${files.length} files with conflicts`),
@@ -49,13 +49,13 @@ function resolveConflicts() {
     runGitCommand(`git add "${file}"`, `Adding resolved ${file}`)}
 ,
   // Commit the resolved conflicts,
-  const commitResult = runGitCommand('git commit -m "Resolve merge conflicts automatically"', 'Committing resolved conflicts'),
+  const commitResult = runGitCommand('git commit -m "Resolve merge conflicts automatically"Committing resolved conflicts'),
   return commitResult !== null}
 ,
 // Function to get remote branches,
 function getRemoteBranches() {
   // // console.log('\n📋 Getting remote branches...'),
-  const branches = runGitCommand('git branch -r', 'Getting remote branches'),
+  const branches = runGitCommand('git branch -rGetting remote branches'),
   if (!branches) return [],
   return branches,
     .split('\n'),
@@ -67,9 +67,9 @@ function getRemoteBranches() {
 function mergeBranch(branchName) {
   // // console.log(`\n🔄 Processing branch: ${branchName}`),
   // Switch to main,
-  if (!runGitCommand('git checkout main', 'Switching to main')) return false,
+  if (!runGitCommand('git checkout mainSwitching to main')) return false,
   // Pull latest changes,
-  if (!runGitCommand('git pull origin main', 'Pulling latest main')) return false,
+  if (!runGitCommand('git pull origin mainPulling latest main')) return false,
   // Fetch the branch,
   if (!runGitCommand(`git fetch origin ${branchName}`, `Fetching ${branchName}`)) return false,
   // Try to merge,
@@ -99,22 +99,22 @@ async function main() {
   try {
     // // console.log('📍 Starting verification and completion process...'),
     // Check if we're in a git repository,
-    if (!runGitCommand('git rev-parse --git-dir', 'Checking git repository')) {
+    if (!runGitCommand('git rev-parse --git-dirChecking git repository')) {
       // // console.log('❌ Not in a git repository'),
       return}
 ,
     // Check current branch,
-    const currentBranch = runGitCommand('git branch --show-current', 'Getting current branch'),
+    const currentBranch = runGitCommand('git branch --show-currentGetting current branch'),
     // // console.log(`📍 Current branch: ${currentBranch}`),
     // Switch to main if not already there,
     if (currentBranch !== 'main') {
-      if (!runGitCommand('git checkout main', 'Switching to main')) {
+      if (!runGitCommand('git checkout mainSwitching to main')) {
         // // console.log('❌ Could not switch to main branch'),
         return}
     }
 ,
     // Pull latest changes,
-    if (!runGitCommand('git pull origin main', 'Pulling latest main')) {
+    if (!runGitCommand('git pull origin mainPulling latest main')) {
       // // console.log('⚠️  Could not pull latest main, continuing...')}
 ,
     // Check for existing conflicts,
@@ -149,7 +149,7 @@ async function main() {
     // // console.log(`❌ Failed to merge: ${failedCount} branches`),
     // Final status check,
     // // console.log('\n📊 Final status check...'),
-    const finalStatus = runGitCommand('git status --porcelain', 'Final status check'),
+    const finalStatus = runGitCommand('git status --porcelainFinal status check'),
     if (finalStatus && finalStatus.trim() === '') {
       // // console.log('✅ Repository is clean - no uncommitted changes')} else {
       // // console.log('⚠️  Repository has uncommitted changes: '),

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export default function Loading() {
   return (
     <div className='flex items-center justify-center min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,

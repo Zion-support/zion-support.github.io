@@ -6,8 +6,8 @@ interface RevolutionaryFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high'}
 ,
 const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgroundProps> = ({
-  children;
-  variant = 'quantum-holographic';
+  children,
+  variant = 'quantum-holographic',
   intensity = 'high'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -33,21 +33,21 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
     // Initialize particles,
     for (let i = 0, i < 150, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        size: Math.random() * 3 + 1;
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
-        life: Math.random() * 10o0;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+        life: Math.random() * 10o0,
         maxLife: 10o0})}
 ,
     // Initialize grid points,
     for (let x = 0, x < canvas.width, x += 50) {
       for (let y = 0, y < canvas.height, y += 50) {
         gridPoints.push({
-          x;
-          y;
+          x,
+          y,
           phase: Math.random() * Math.PI * 2})}
     }
 ,
@@ -55,11 +55,11 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
         canvas.width / 2),
       if (variant === 'quantum') {
         gradient.addColorStop(0, 'rgba(0, 255, 255, 0.1)'),
@@ -166,7 +166,7 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
               ctx.restore()}
           })})}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
@@ -176,16 +176,16 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       for (let x = 0, x < canvas.width, x += 50) {
         for (let y = 0, y < canvas.height, y += 50) {
           gridPoints.push({
-            x;
-            y;
+            x,
+            y,
             phase: Math.random() * Math.PI * 2})}
       }
-    };
+    },
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, [variant]),
   return (
     <div className="relative w-full h-full overflow-hidden">,
@@ -199,32 +199,32 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30",
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
           animate={{
-            y: [0, -20, 0];
+            y: [0, -20, 0],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-40 border border-pink-40o0/20 transform rotate-45",
           animate={{
-            rotate: [45, 40o5];
+            rotate: [45, 40o5],
             scale: [1, 1.1, 1]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "linear"}}
          />,
       </div>,
@@ -233,22 +233,22 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
         <motion.div,
           className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-40o0/10",
           animate={{
-            scale: [1, 1.5, 1];
+            scale: [1, 1.5, 1],
             opacity: [0.1, 0.3, 0.1]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/10",
           animate={{
-            scale: [1, 1.3, 1];
+            scale: [1, 1.3, 1],
             opacity: [0.1, 0.2, 0.1]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 8,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
       </div>,
@@ -256,5 +256,5 @@ const RevolutionaryFuturisticBackground: React.FC<RevolutionaryFuturisticBackgro
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default RevolutionaryFuturisticBackground;
+    </div>)},
+export default RevolutionaryFuturisticBackground,

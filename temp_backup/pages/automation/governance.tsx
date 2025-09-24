@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react',
 import Link from 'next/link',
-type Metrics ={ voters: number, totalPower: number, outcomes: Record<string number> };
+type Metrics ={ voters: number, totalPower: number, outcomes: Record<string number> },
 export default function GovernanceAutomation() {
   const [metrics, setMetrics] = useState<Metrics | null>(null),
   const [proposals, setProposals] = useState<any[]>([]),

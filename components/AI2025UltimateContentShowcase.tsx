@@ -9,126 +9,126 @@ import {
   TrendingUp,
   Clock,
   Star,
-  ArrowRight;
-  Filter;
-  Search;
-  Calendar;
-  DollarSign;
-  Target;
+  ArrowRight,
+  Filter,
+  Search,
+  Calendar,
+  DollarSign,
+  Target,
   CheckCircle} from 'lucide-react',
 const AI20o25UltimateContentShowcase = () => {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [searchTermsetSearchTerm] = useState(''),
   const content = [
     {
-      id: 'enterprise-automation-mastery';
-      title: 'AI 20o25: Enterprise Automation Mastery - The Ultimate Guide to 50o0% ROI';
-      type: 'blog';
-      category: 'automation';
-      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide';
-      description: 'Transform your business with cutting-edge AI automation strategies that deliver unprecedented returns. Learn the 5-pillar framework used by Fortune 50o0 companies.';
+      id: 'enterprise-automation-mastery',
+      title: 'AI 20o25: Enterprise Automation Mastery - The Ultimate Guide to 50o0% ROI',
+      type: 'blog',
+      category: 'automation',
+      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide',
+      description: 'Transform your business with cutting-edge AI automation strategies that deliver unprecedented returns. Learn the 5-pillar framework used by Fortune 50o0 companies.',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        efficiency: '340%';
-        satisfaction: '98%'};
-      readingTime: '25 min read';
-      featured: true;
-      tags: ['AI 'Automation', 'Enterprise', 'ROI', 'Digital 'Transformation', 'Mastery Guide'];
-      publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group AI Team'};
+        roi: '50o0%',
+        savings: '$2.8B',
+        efficiency: '340%',
+        satisfaction: '98%'},
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['AI 'AutomationEnterprise', 'ROIDigital 'Transformation', 'Mastery Guide'],
+      publishDate: '20o25-0o1-17',
+      author: 'Zion Tech Group AI Team'},
     {
-      id: 'fortune-50o0-transformation';
-      title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
-      type: 'case-study';
-      category: 'transformation';
-      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-20o25';
-      description: 'Real-world case study of how a Fortune 50o0 manufacturing company achieved 650% ROI through comprehensive AI implementation in just 18 months.';
+      id: 'fortune-50o0-transformation',
+      title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation',
+      type: 'case-study',
+      category: 'transformation',
+      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-20o25',
+      description: 'Real-world case study of how a Fortune 50o0 manufacturing company achieved 650% ROI through comprehensive AI implementation in just 18 months.',
       metrics: {
-        roi: '650%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        efficiency: '78%'};
-      readingTime: '22 min read';
-      featured: true;
-      tags: ['Fortune 50o0'AI 'Transformation', 'ROI'Case 'Study', 'Success Story'];
-      publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Research Team'};
+        roi: '650%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        efficiency: '78%'},
+      readingTime: '22 min read',
+      featured: true,
+      tags: ['Fortune 50o0'AI 'TransformationROI'Case 'StudySuccess Story'],
+      publishDate: '20o25-0o1-17',
+      author: 'Zion Tech Group Research Team'},
     {
-      id: 'implementation-roadmap';
-      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
-      type: 'resource';
-      category: 'implementation';
-      url: '/resources/ai-implementation-ultimate-roadmap-20o25';
-      description: 'Complete step-by-step guide to implementing AI solutions that consistently deliver 80o0% ROI. Based on analysis of 50o0+ successful implementations.';
+      id: 'implementation-roadmap',
+      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',
+      type: 'resource',
+      category: 'implementation',
+      url: '/resources/ai-implementation-ultimate-roadmap-20o25',
+      description: 'Complete step-by-step guide to implementing AI solutions that consistently deliver 80o0% ROI. Based on analysis of 50o0+ successful implementations.',
       metrics: {
-        roi: '80o0%';
-        savings: '$173.7M';
-        success: '99%';
-        timeline: '18 months'};
-      readingTime: '35 min read';
-      featured: true;
-      tags: ['AI 'Implementation', 'Strategy', 'ROI', 'Roadmap'Best Practices'];
-      publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Strategy Team'};
+        roi: '80o0%',
+        savings: '$173.7M',
+        success: '99%',
+        timeline: '18 months'},
+      readingTime: '35 min read',
+      featured: true,
+      tags: ['AI 'ImplementationStrategy', 'ROIRoadmap'Best Practices'],
+      publishDate: '20o25-0o1-17',
+      author: 'Zion Tech Group Strategy Team'},
     {
-      id: 'neural-architecture-revolution';
-      title: 'AI 20o25: The Neural Architecture Revolution - Enterprise Breakthrough Guide';
-      type: 'blog';
-      category: 'technology';
-      url: '/blog/ai-20o25-neural-architecture-revolution-enterprise-breakthrough';
-      description: 'Explore the cutting-edge neural architectures that are revolutionizing enterprise AI applications and delivering unprecedented performance gains.';
+      id: 'neural-architecture-revolution',
+      title: 'AI 20o25: The Neural Architecture Revolution - Enterprise Breakthrough Guide',
+      type: 'blog',
+      category: 'technology',
+      url: '/blog/ai-20o25-neural-architecture-revolution-enterprise-breakthrough',
+      description: 'Explore the cutting-edge neural architectures that are revolutionizing enterprise AI applications and delivering unprecedented performance gains.',
       metrics: {
-        roi: '60o0%';
-        accuracy: '99.9%';
-        savings: '$2.8B';
-        efficiency: '156%'};
-      readingTime: '22 min read';
-      featured: false;
-      tags: ['Neural 'Architecture', 'Enterprise 'AI', 'Deep 'Learning', 'ROI'Breakthrough'];
-      publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group AI Research'};
+        roi: '60o0%',
+        accuracy: '99.9%',
+        savings: '$2.8B',
+        efficiency: '156%'},
+      readingTime: '22 min read',
+      featured: false,
+      tags: ['Neural 'ArchitectureEnterprise 'AI', 'Deep 'LearningROI'Breakthrough'],
+      publishDate: '20o25-0o1-17',
+      author: 'Zion Tech Group AI Research'},
     {
-      id: 'autonomous-enterprise-systems';
-      title: 'AI 20o25: The Autonomous Enterprise Systems Revolution - Complete Business Transformation';
-      type: 'blog';
-      category: 'automation';
-      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution';
-      description: 'Discover how autonomous AI systems are transforming enterprise operations and enabling self-managing organizations with minimal human intervention.';
+      id: 'autonomous-enterprise-systems',
+      title: 'AI 20o25: The Autonomous Enterprise Systems Revolution - Complete Business Transformation',
+      type: 'blog',
+      category: 'automation',
+      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution',
+      description: 'Discover how autonomous AI systems are transforming enterprise operations and enabling self-managing organizations with minimal human intervention.',
       metrics: {
-        roi: '70o0%';
-        accuracy: '99.8%';
-        savings: '$2.8B';
-        efficiency: '20o0%'};
-      readingTime: '25 min read';
-      featured: false;
-      tags: ['Autonomous 'Systems', 'Enterprise 'Automation', 'AI 'Revolution', 'ROI'Business Transformation'];
-      publishDate: '20o25-0o1-17';
-      author: 'Zion Tech Group Innovation Team'};
+        roi: '70o0%',
+        accuracy: '99.8%',
+        savings: '$2.8B',
+        efficiency: '20o0%'},
+      readingTime: '25 min read',
+      featured: false,
+      tags: ['Autonomous 'SystemsEnterprise 'Automation', 'AI 'RevolutionROI'Business Transformation'],
+      publishDate: '20o25-0o1-17',
+      author: 'Zion Tech Group Innovation Team'},
     {
-      id: 'manufacturing-transformation-ultimate';
-      title: 'AI 20o25 Manufacturing Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation';
-      type: 'case-study';
-      category: 'transformation';
-      url: '/case-studies/ai-20o25-manufacturing-transformation-ultimate-success';
-      description: 'Detailed case study of how a manufacturing giant achieved 650% ROI through intelligent automationpredictive maintenanceand quality control systems.';
+      id: 'manufacturing-transformation-ultimate',
+      title: 'AI 20o25 Manufacturing Transformation: $3.2B Company Achieves 650% ROI with Intelligent Automation',
+      type: 'case-study',
+      category: 'transformation',
+      url: '/case-studies/ai-20o25-manufacturing-transformation-ultimate-success',
+      description: 'Detailed case study of how a manufacturing giant achieved 650% ROI through intelligent automationpredictive maintenanceand quality control systems.',
       metrics: {
-        roi: '650%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        efficiency: '78%'};
-      readingTime: '18 min read';
-      featured: false;
-      tags: [', 'Manufacturing', 'AI 'Transformation', 'ROI'Case 'Study', 'Intelligent Automation'];
-      publishDate: '20o25-0o1-17';
+        roi: '650%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        efficiency: '78%'},
+      readingTime: '18 min read',
+      featured: false,
+      tags: [Manufacturing', 'AI 'TransformationROI'Case 'StudyIntelligent Automation'],
+      publishDate: '20o25-0o1-17',
       author: 'Zion Tech Group Manufacturing Team'}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: content.length };
-    { id: ''automation', 'name: ''Automation', 'count: content.filter(item => item.category === 'automation').length };
-    { id: ''transformation', 'name: ''Transformation', 'count: content.filter(item => item.category === 'transformation').length };
-    { id: ''implementation', 'name: ''Implementation', 'count: content.filter(item => item.category === 'implementation').length };
-    { id: ''technology', 'name: ''Technology', 'count: content.filter(item => item.category === 'technology').length }
+    { id: ''allname: 'All 'Contentcount: content.length },
+    { id: ''automationname: ''Automationcount: content.filter(item => item.category === 'automation').length },
+    { id: ''transformationname: ''Transformationcount: content.filter(item => item.category === 'transformation').length },
+    { id: ''implementationname: ''Implementationcount: content.filter(item => item.category === 'implementation').length },
+    { id: ''technologyname: ''Technologycount: content.filter(item => item.category === 'technology').length }
   ],
   const filteredContent = content.filter(item => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
@@ -146,7 +146,7 @@ const AI20o25UltimateContentShowcase = () => {
         return <Users className="h-5 w-5"  />,
       default:,
         return <BookOpen className="h-5 w-5"  />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -157,7 +157,7 @@ const AI20o25UltimateContentShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="bg-white py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -324,5 +324,5 @@ const AI20o25UltimateContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateContentShowcase;
+    </div>)},
+export default AI20o25UltimateContentShowcase,

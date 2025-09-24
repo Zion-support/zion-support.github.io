@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface SimpleLayoutProps {
   title: string,
@@ -6,9 +6,9 @@ interface SimpleLayoutProps {
   children: React.ReactNode}
 ,
 export default function SimpleLayout({
-  title;
-  description;
-  children;
+  title,
+  description,
+  children,
 }: SimpleLayoutProps) {
   return (
     <>,

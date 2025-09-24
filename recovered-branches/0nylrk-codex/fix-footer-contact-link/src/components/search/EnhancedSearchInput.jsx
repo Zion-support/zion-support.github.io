@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react',
 import { Search, X, ArrowDown } from 'lucide-react',
 export const EnhancedSearchInput = ({
-  placeholder = 'Search for services, talent, or equipment...';
-  onSearch;
-  suggestions = [];
-  className = '';
+  placeholder = 'Search for services, talent, or equipment...',
+  onSearch,
+  suggestions = [],
+  className = '',
 }) => {
   const [query, setQuery] = useState(''),
   const [showSuggestions, setShowSuggestions] = useState(false),
@@ -30,27 +30,27 @@ export const EnhancedSearchInput = ({
         suggestionsRef.current &&,
         !suggestionsRef.current.contains(event.target)) {
         setShowSuggestions(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const handleInputChange = e => {
-    setQuery(e.target.value)};
+    setQuery(e.target.value)},
   const handleClear = () => {
     setQuery(''),
     setShowSuggestions(false),
-    inputRef.current?.focus()};
+    inputRef.current?.focus()},
   const handleSubmit = e => {
     e.preventDefault(),
     if (query.trim() && onSearch) {
       onSearch(query.trim()),
       setShowSuggestions(false)}
-  };
+  },
   const handleSuggestionClick = suggestion => {
     setQuery(suggestion.title),
     setShowSuggestions(false),
     if (onSearch) {
       onSearch(suggestion.title)}
-  };
+  },
   const handleKeyDown = e => {
     if (!showSuggestions) return,
     switch (e.key) {
@@ -73,7 +73,7 @@ export const EnhancedSearchInput = ({
         setShowSuggestions(false),
         setSelectedIndex(-1),
         break}
-  };
+  },
   return (
     <div className={`relative ${className}`} ref={suggestionsRef}>,
       <form onSubmit={handleSubmit} className='relative'>,
@@ -136,4 +136,4 @@ export const EnhancedSearchInput = ({
               </div>,
             </button>))}
         </div>)}
-    </div>)};
+    </div>)},

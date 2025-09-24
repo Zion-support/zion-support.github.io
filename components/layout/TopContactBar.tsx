@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -20,21 +20,22 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Clock;
-  ChevronDown;
-  ChevronUp;
-  MessageCircle;
-  Calendar;
-  Star;} from 'lucide-react',import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Clock,
+  ChevronDown,
+  ChevronUp,
+  MessageCircle,
+  Calendar,
+  Star} from 'lucide-react',
+import {
   Phone, Mail, MapPin, Globe,
   Clock, ChevronDown, ChevronUp,
   MessageCircle, Calendar, Star,

@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react',
 export type PdfExportButtonProps ={
   targetRef: React.RefObject<HTMLDivElement>,
   fileName?: string,
-  theme?: 'light' | 'dark'};
+  theme?: 'light' | 'dark'},
 export default function PdfExportButton({ targetRefileName = 'resume.pdf' }: PdfExportButtonProps) {
   const onClick = async () => {
     if (!targetRef.current) return,
     const element = targetRef.current,
     const html2pdf = (await import('html2pdf.js')).default,
     const opt = {
-      margin: [1010];
-      filename: fileName;
-      image: { type: ''jpeg', 'quality: 0.98 };
-      html2canvas: { scale: 2useCORS: true };
-      jsPDF: { unit: ''mm', 'format: ''a4', 'orientation: 'portrait' }
+      margin: [1010],
+      filename: fileName,
+      image: { type: ''jpegquality: 0.98 },
+      html2canvas: { scale: 2useCORS: true },
+      jsPDF: { unit: ''mmformat: ''a4orientation: 'portrait' }
     } as any,
-    html2pdf().set(opt).from(element).save()};
+    html2pdf().set(opt).from(element).save()},
   return (
     <button
       onClick={onClick}

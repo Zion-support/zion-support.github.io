@@ -11,7 +11,7 @@ export interface Company {
   theme?: {
     primaryColor: string,
     backgroundColor: string,
-    textColor: string};
+    textColor: string},
   plan: string,
   teamSize: number,
   teamLimit: number,

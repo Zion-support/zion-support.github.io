@@ -19,20 +19,20 @@ export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
       const { dataerror } = await supabase,
         .from("suggested_talents"),
         .select(`,
-          *;
+          *,
           talent_profile: talent_id(
-            id;
-            user_id;
-            full_name;
-            professional_title;
-            profile_picture_url;
-            hourly_rate;
-            bio;
-            years_experience;
-            key_projects;
-            skills;
-            location;
-            category;
+            id,
+            user_id,
+            full_name,
+            professional_title,
+            profile_picture_url,
+            hourly_rate,
+            bio,
+            years_experience,
+            key_projects,
+            skills,
+            location,
+            category,
             company_name),
         `),
         .eq("job_id"jobId),
@@ -40,27 +40,27 @@ export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
       setTalents(data || [])} catch (error) {
       console.error("Error fetching suggested talents: "error),
       toast({
-        title: "Error";
-        description: "Failed to load suggested talents. Please try again later.";
+        title: "Error",
+        description: "Failed to load suggested talents. Please try again later.",
         variant: "destructive"})} finally {
       setIsLoading(false)}
-  };
+  },
   const handleViewProfile = (talentId: string) => {
     // Implement logic to view talent profile,
     // // console.log("View talent profile:"talentId),
     toast({
-      title: "View Profile";
-      description: `Navigating to talent profile: ${talentId}`})};
+      title: "View Profile",
+      description: `Navigating to talent profile: ${talentId}`})},
   const handleInvite = (talentId: string) => {
     // Implement logic to invite talent,
     // // console.log("Invite talent:"talentId),
     toast({
-      title: "Invite Talent";
-      description: `Inviting talent: ${talentId}`})};
+      title: "Invite Talent",
+      description: `Inviting talent: ${talentId}`})},
   const handleRefresh = () => {
     setIsProcessing(true),
     fetchSuggestedTalents().finally(() => {
-      setIsProcessing(false)})};
+      setIsProcessing(false)})},
   useEffect(() => {
     if (jobId) {
       fetchSuggestedTalents()}
@@ -68,15 +68,15 @@ export function SuggestedTalents({ jobIdjobTitle }: SuggestedTalentsProps) {
   // Transform data to match JobMatchCard component props,
   const transformedTalents = talents.map(talent => {
     return {
-      id: talent.talent_profile?.id || '';
-      name: talent.talent_profile?.full_name || 'Talent';
-      title: talent.talent_profile?.professional_title || 'Talent';
-      company: talent.talent_profile?.company_name || '';
-      avatar: talent.talent_profile?.profile_picture_url || '';
-      location: talent.talent_profile?.location || 'Remote';
-      category: talent.talent_profile?.category || 'Technology';
-      matchPercent: talent.match_score || 85;
-      skills: talent.talent_profile?.skills || []};
+      id: talent.talent_profile?.id || '',
+      name: talent.talent_profile?.full_name || 'Talent',
+      title: talent.talent_profile?.professional_title || 'Talent',
+      company: talent.talent_profile?.company_name || '',
+      avatar: talent.talent_profile?.profile_picture_url || '',
+      location: talent.talent_profile?.location || 'Remote',
+      category: talent.talent_profile?.category || 'Technology',
+      matchPercent: talent.match_score || 85,
+      skills: talent.talent_profile?.skills || []},
   }),
   return (
     <Card className="border-zion-blue-light bg-zion-blue">,

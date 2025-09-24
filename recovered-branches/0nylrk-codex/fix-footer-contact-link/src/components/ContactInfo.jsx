@@ -2,20 +2,20 @@ import {
 import { Button } from '../ui/button',
 import { Badge } from '../ui/badge',
 import { Link } from 'react-router-dom',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '../ui/card',
-  Mail;
-  Phone;
-  MapPin;
-  Globe;
-  Clock;
-  MessageSquare;
-  ExternalLink;
-  Star;
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Clock,
+  MessageSquare,
+  ExternalLink,
+  Star,
 } from 'lucide-react',
 export function ContactInfo() {
   return (

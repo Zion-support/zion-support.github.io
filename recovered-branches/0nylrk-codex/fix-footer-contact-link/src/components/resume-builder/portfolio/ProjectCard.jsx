@@ -3,14 +3,14 @@ import { Card, CardContent, CardFooter } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
 } from '@/components/ui/alert-dialog',
 import { Edit, Trash2, Github, Link, FileText } from 'lucide-react',
 export function ProjectCard({ project, onEdit, onDelete }) {
@@ -18,7 +18,7 @@ export function ProjectCard({ project, onEdit, onDelete }) {
   const handleDelete = () => {
     if (project.id) {
       onDelete(project.id)}
-    setDeleteDialogOpen(false)};
+    setDeleteDialogOpen(false)},
   return (
     <Card className='h-full flex flex-col'>,
       <div className='relative h-48 overflow-hidden rounded-t-lg bg-muted'>,

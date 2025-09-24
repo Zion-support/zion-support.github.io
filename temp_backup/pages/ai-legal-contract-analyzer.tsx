@@ -1,84 +1,74 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  FileText;
-  Search;
-  Shield;
-  Zap;
-  Target;
-  TrendingUp;
-  CheckCircle;
-  Star;
-  BarChart3;
-  Lock;
-  Smartphone;
-  Monitor;
-  Award;
-  MessageCircle;
-  Cpu;
+  FileText,
+  Search,
+  Shield,
+  Zap,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  Star,
+  BarChart3,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,
+  Cpu,
 } from 'lucide-react',
 export default function AILegalContractAnalyzer() {
   const features = [
     {
-      icon: <FileText className='w-6 h-6' />;
-      title: 'Intelligent Contract Analysis';
+      icon: <FileText className='w-6 h-6' />,
+      title: 'Intelligent Contract Analysis',
       description:,
-        'AI-powered contract analysis with automated clause identification and risk assessment.';
-    };
+        'AI-powered contract analysis with automated clause identification and risk assessment.',
+    },
     {
-      icon: <Search className='w-6 h-6' />;
-      title: 'Risk Assessment';
+      icon: <Search className='w-6 h-6' />,
+      title: 'Risk Assessment',
       description:,
-        'Comprehensive risk assessment with automated identification of potential legal issues.';
-    };
+        'Comprehensive risk assessment with automated identification of potential legal issues.',
+    },
     {
-      icon: <Target className='w-6 h-6' />;
-      title: 'Contract Review';
+      icon: <Target className='w-6 h-6' />,
+      title: 'Contract Review',
       description:,
-        'Advanced contract review with automated compliance checking and legal validation.';
-    };
+        'Advanced contract review with automated compliance checking and legal validation.',
+    },
     {
-      icon: <Zap className='w-6 h-6' />;
-      title: 'Document Generation';
+      icon: <Zap className='w-6 h-6' />,
+      title: 'Document Generation',
       description:,
-        'AI-powered contract generation with customizable templates and legal compliance.';
-    };
+        'AI-powered contract generation with customizable templates and legal compliance.',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Compliance Monitoring';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Compliance Monitoring',
       description:,
-        'Automated compliance monitoring and regulatory requirement checking.';
-    };
+        'Automated compliance monitoring and regulatory requirement checking.',
+    },
     {
-      icon: <TrendingUp className='w-6 h-6' />;
-      title: 'Contract Analytics';
+      icon: <TrendingUp className='w-6 h-6' />,
+      title: 'Contract Analytics',
       description:,
-        'Comprehensive contract analytics with performance metrics and optimization insights.';
-    };
+        'Comprehensive contract analytics with performance metrics and optimization insights.',
+    },
   ],
   const benefits = [
-    'Reduce review time by 80%';
-    'Improve risk detection by 70%';
-    'Increase compliance by 90%';
-    'Reduce legal costs by 60%';
-    'Accelerate contract processing by 200%';
-    'Enhance legal strategy by 150%';
-    'Scale contract operations';
-    'Future-proof legal practice';
+    'Reduce review time by 80%Improve risk detection by 70%',
+    'Increase compliance by 90%Reduce legal costs by 60%',
+    'Accelerate contract processing by 200%Enhance legal strategy by 150%',
+    'Scale contract operationsFuture-proof legal practice',
   ],
   const useCases = [
-    'Contract Review';
-    'Risk Assessment';
-    'Compliance Checking';
-    'Document Generation';
-    'Legal Validation';
-    'Contract Analytics';
-    'Performance Metrics';
-    'Optimization Insights';
-    'Regulatory Compliance';
-    'Legal Strategy';
-    'Contract Management';
-    'Legal Intelligence';
+    'Contract ReviewRisk Assessment',
+    'Compliance CheckingDocument Generation',
+    'Legal ValidationContract Analytics',
+    'Performance MetricsOptimization Insights',
+    'Regulatory ComplianceLegal Strategy',
+    'Contract ManagementLegal Intelligence',
   ],
   return (
     <>,
@@ -129,7 +119,7 @@ export default function AILegalContractAnalyzer() {
                 AI Legal Contract Analyzer,
               </h1>,
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
-                Transform contract analysis with AI-powered risk assessment;
+                Transform contract analysis with AI-powered risk assessment,
                 compliance checking, and document generation for legal,
                 excellence.,
               </p>,

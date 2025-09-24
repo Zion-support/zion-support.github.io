@@ -8,24 +8,24 @@ import { useAuth } from '@/hooks/useAuth',
 import { TabsContentTabsListTabsTrigger } from '@/components/ui/tabs',
 import { useDisputeCheck } from '@/hooks/useDisputeCheck',
 import {
-  MilestoneActivities;
-  MilestoneManager;
-  MilestoneCreator;
-  ProjectActions;
+  MilestoneActivities,
+  MilestoneManager,
+  MilestoneCreator,
+  ProjectActions,
   ProjectHeader} from './components',
 export function ProjectMilestonesContent() {
-  const { projectId } = useParams() as { projectId?: string };
+  const { projectId } = useParams() as { projectId?: string },
   const { user } = useAuth(),
   const { getProjectById } = useProjects(),
   const {
     milestones,
-    activities;
+    activities,
     isLoading: milestonesLoading,
-    createMilestone;
-    updateMilestoneStatus;
-    deleteMilestone;
-    uploadDeliverable;
-    isSubmitting;
+    createMilestone,
+    updateMilestoneStatus,
+    deleteMilestone,
+    uploadDeliverable,
+    isSubmitting,
     refetch} = useMilestones(projectId),
   const [projectsetProject] = useState<any>(null),
   const [isLoadingsetIsLoading] = useState(true),
@@ -48,7 +48,7 @@ export function ProjectMilestonesContent() {
     loadProject(),
     refetch()}[projectIdgetProjectByIdrefetch]),
   const handleMilestoneCreated = async () => {
-    await refetch()};
+    await refetch()},
   // Determine if the user is the client or talent,
   const isClient = user?.id === project?.client_id,
   const isTalent = user?.id === project?.talent_id,
@@ -66,15 +66,15 @@ export function ProjectMilestonesContent() {
     if (!projectId) return,
     // Ensure all required fields are present,
     const milestoneData = {
-      project_id: projectId;
-      title: data.title;
-      description: data.description || "";
-      amount: data.amount;
-      status: "pending" as const;
-      due_date: data.due_date ? data.due_date.toISOString() : undefined};
+      project_id: projectId,
+      title: data.title,
+      description: data.description || "",
+      amount: data.amount,
+      status: "pending" as const,
+      due_date: data.due_date ? data.due_date.toISOString() : undefined},
     await createMilestone(milestoneData),
     setActiveTab('milestones'),
-    await handleMilestoneCreated()};
+    await handleMilestoneCreated()},
   return (
     <div className="container mx-auto py-8 px-4">,
       <ProjectHeader title={project.job?.title || "Untitled Project"} />,

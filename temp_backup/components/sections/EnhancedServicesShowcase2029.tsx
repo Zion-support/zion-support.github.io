@@ -1,47 +1,47 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Star, Zap, Crown, Gem, Brain;
+  ArrowRight, Star, Zap, Crown, Gem, Brain,
   Atom, Rocket, Globe, Cpu, Database, Shield} from 'lucide-react',
 import { cuttingEdge20o29Services } from '../../data/20o29-cutting-edge-innovations',
 import { emergingTech20o29Services } from '../../data/20o29-emerging-tech-services',
 import { microSaas20o29Services } from '../../data/20o29-micro-saas-innovations',
 export default function EnhancedServicesShowcase20o29() {
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 0.6}
     }
-  };
+  },
   const categories = [
     {
-      title: '🚀 20o29 Cutting-Edge Innovations';
-      icon: Crown;
-      color: 'from-violet-60o0 via-purple-60o0 to-indigo-70o0';
-      services: cuttingEdge20o29Services.slice(0, 4);
-      description: 'Beyond the future of technology'};
+      title: '🚀 20o29 Cutting-Edge Innovations',
+      icon: Crown,
+      color: 'from-violet-60o0 via-purple-60o0 to-indigo-70o0',
+      services: cuttingEdge20o29Services.slice(0, 4),
+      description: 'Beyond the future of technology'},
     {
-      title: '⚡ Emerging Technology Solutions';
-      icon: Zap;
-      color: 'from-blue-60o0 via-cyan-60o0 to-teal-70o0';
-      services: emergingTech20o29Services.slice(0, 4);
-      description: 'Next-generation tech infrastructure'};
+      title: '⚡ Emerging Technology Solutions',
+      icon: Zap,
+      color: 'from-blue-60o0 via-cyan-60o0 to-teal-70o0',
+      services: emergingTech20o29Services.slice(0, 4),
+      description: 'Next-generation tech infrastructure'},
     {
-      title: '💎 Micro SAAS Innovations';
-      icon: Gem;
-      color: 'from-emerald-60o0 via-green-60o0 to-teal-70o0';
-      services: microSaas20o29Services.slice(0, 4);
+      title: '💎 Micro SAAS Innovations',
+      icon: Gem,
+      color: 'from-emerald-60o0 via-green-60o0 to-teal-70o0',
+      services: microSaas20o29Services.slice(0, 4),
       description: 'Practical business solutions'}
   ],
   return (

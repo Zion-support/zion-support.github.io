@@ -17,7 +17,7 @@ export default function UltraFuturisticBackground2036({
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     let animationFrameId: number,
     let particles: Particle[] = [],
     let connections: Connection[] = [],
@@ -31,34 +31,34 @@ export default function UltraFuturisticBackground2036({
       color: string,
       type: 'quantum' | 'neon' | 'energy' | 'data'}> = [],
     const colors = {
-      quantum: ['#00ffff'#0080ff'#8000ff'#ff0080'];
-      neon: ['#00ff00'#ff00ff'#ffff00'#00ffff'];
-      energy: ['#ff6600'#ff0066'#6600ff'#00ff66'];
-      data: ['#00ccff'#cc00ff'#ffcc00'#00ffcc']};
+      quantum: ['#00ffff'#0080ff'#8000ff'#ff0080'],
+      neon: ['#00ff00'#ff00ff'#ffff00'#00ffff'],
+      energy: ['#ff6600'#ff0066'#6600ff'#00ff66'],
+      data: ['#00ccff'#cc00ff'#ffcc00'#00ffcc']},
     const intensityMultiplier = {
-      low: 0.5;
-      medium: 1;
-      high: 1.5};
+      low: 0.5,
+      medium: 1,
+      high: 1.5},
     const variantConfig = {
-      default: { particleCount: 50speed: 1size: 2 };
-      quantum: { particleCount: 80speed: 1.5size: 3 };
-      space: { particleCount: 100speed: 0.8size: 2.5 };
-      ai: { particleCount: 120speed: 2size: 1.5 };
+      default: { particleCount: 50speed: 1size: 2 },
+      quantum: { particleCount: 80speed: 1.5size: 3 },
+      space: { particleCount: 100speed: 0.8size: 2.5 },
+      ai: { particleCount: 120speed: 2size: 1.5 },
       cyber: { particleCount: 90speed: 1.8size: 2.2 }
-    };
+    },
     const config = variantConfig[variant],
     const multiplier = intensityMultiplier[intensity],
     // Initialize particles,
     for (let i = 0, i < config.particleCount * multiplier, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * config.speed * multiplier;
-        vy: (Math.random() - 0.5) * config.speed * multiplier;
-        size: Math.random() * config.size * multiplier;
-        opacity: Math.random() * 0.8 + 0.2;
-        color: colors[variant][Math.floor(Math.random() * colors[variant].length)];
-        type: variant === 'default' ? [', 'quantum', 'neon', 'energy', 'data'][Math.floor(Math.random() * 4)] as any : variant})}
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * config.speed * multiplier,
+        vy: (Math.random() - 0.5) * config.speed * multiplier,
+        size: Math.random() * config.size * multiplier,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: colors[variant][Math.floor(Math.random() * colors[variant].length)],
+        type: variant === 'default' ? [quantum', 'neonenergy', 'data'][Math.floor(Math.random() * 4)] as any : variant})}
 ,
     const animate = () => {
       ctx.clearRect(0canvas.widthcanvas.height),
@@ -90,7 +90,7 @@ export default function UltraFuturisticBackground2036({
         ctx.save(),
         // Create glow effect,
         const glowGradient = ctx.createRadialGradient(
-          particle.xparticle.y0;
+          particle.xparticle.y0,
           particle.xparticle.yparticle.size * 3),
         glowGradient.addColorStop(0`${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2'0')}`),
         glowGradient.addColorStop(0.5`${particle.color}${Math.floor(particle.opacity * 100).toString(16).padStart(2'0')}`),
@@ -131,7 +131,7 @@ export default function UltraFuturisticBackground2036({
       if (variant === 'space') {
         drawSpaceElements(ctxcanvasmultiplier)}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     const drawQuantumShapes = (ctx: CanvasRenderingContext2Dcanvas: HTMLCanvasElementmultiplier: number) => {
       const time = Date.now() * 0.001,
       for (let i = 0, i < 3, i++) {
@@ -158,7 +158,7 @@ export default function UltraFuturisticBackground2036({
         ctx.arc(0size * 0.30Math.PI * 2),
         ctx.fill(),
         ctx.restore()}
-    };
+    },
     const drawDataStreams = (ctx: CanvasRenderingContext2Dcanvas: HTMLCanvasElementmultiplier: number) => {
       const time = Date.now() * 0.001,
       for (let i = 0, i < 5, i++) {
@@ -179,7 +179,7 @@ export default function UltraFuturisticBackground2036({
         ctx.fillStyle = `rgba(02550${0.8 * multiplier})`,
         ctx.fillRect(x - 3streamY - 36),
         ctx.restore()}
-    };
+    },
     const drawSpaceElements = (ctx: CanvasRenderingContext2Dcanvas: HTMLCanvasElementmultiplier: number) => {
       const time = Date.now() * 0.001,
       // Draw stars,
@@ -196,7 +196,7 @@ export default function UltraFuturisticBackground2036({
 ,
       // Draw nebula,
       const nebulaGradient = ctx.createRadialGradient(
-        canvas.width * 0.7canvas.height * 0.30;
+        canvas.width * 0.7canvas.height * 0.30,
         canvas.width * 0.7canvas.height * 0.3200 * multiplier),
       nebulaGradient.addColorStop(0'rgba(25502550.1)'),
       nebulaGradient.addColorStop(0.5'rgba(02550.05)'),
@@ -204,12 +204,12 @@ export default function UltraFuturisticBackground2036({
       ctx.fillStyle = nebulaGradient,
       ctx.beginPath(),
       ctx.arc(canvas.width * 0.7canvas.height * 0.3200 * multiplier0Math.PI * 2),
-      ctx.fill()};
+      ctx.fill()},
     animate(),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener(', 'resize', 'resizeCanvas)};
+      window.removeEventListener(resize', 'resizeCanvas)},
   }[variantintensity]),
   return (
     <div className="fixed inset-0 -z-10 overflow-hidden">,
@@ -232,13 +232,13 @@ export default function UltraFuturisticBackground2036({
                 key={i}
                 className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/30 to-transparent",
                 style={{
-                  left: `${(i + 1) * 12.5}%`;
+                  left: `${(i + 1) * 12.5}%`,
                   transform: 'translateX(-50%)'}}
                 animate={{
                   opacity: [0.30.80.3]}}
                 transition={{
-                  duration: 3;
-                  repeat: Infinity;
+                  duration: 3,
+                  repeat: Infinity,
                   delay: i * 0.5}}
               />))}
           </div>)}
@@ -255,12 +255,12 @@ export default function UltraFuturisticBackground2036({
                 animate={{
                   opacity: [0.20.60.2]}}
                 transition={{
-                  duration: 4;
-                  repeat: Infinity;
+                  duration: 4,
+                  repeat: Infinity,
                   delay: i * 0.8}}
               />))}
           </div>)}
       </div>,
     </div>)}
 ,
-export default UltraFuturisticBackground2036;
+export default UltraFuturisticBackground2036,

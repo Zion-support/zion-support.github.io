@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion',
 import {
-  Atom;
-  Dna;
-  Zap;
-  Target;
-  Users;
-  Globe;
-  ArrowRight;
-  Activity;
+  Atom,
+  Dna,
+  Zap,
+  Target,
+  Users,
+  Globe,
+  ArrowRight,
+  Activity,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function QuantumBioComputing() {
@@ -57,7 +57,7 @@ export default function QuantumBioComputing() {
                 </p>,
                 <p className='text-lg text-gray-30o0 leading-relaxed'>,
                   Our platform enables researchers to tackle previously,
-                  intractable problems in drug discovery, protein folding;
+                  intractable problems in drug discovery, protein folding,
                   genetic analysis, and personalized medicine through,
                   quantum-enhanced algorithms.,
                 </p>,
@@ -97,41 +97,41 @@ export default function QuantumBioComputing() {
             <div className='grid md: grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Atom className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'Quantum Protein Folding';
+                  icon: <Atom className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'Quantum Protein Folding',
                   description:,
-                    'Accurate prediction of protein structures using quantum algorithms and simulations.';
-                };
+                    'Accurate prediction of protein structures using quantum algorithms and simulations.',
+                },
                 {
-                  icon: <Zap className='w-12 h-12 text-blue-40o0' />;
-                  title: 'Drug Discovery';
+                  icon: <Zap className='w-12 h-12 text-blue-40o0' />,
+                  title: 'Drug Discovery',
                   description:,
-                    'Quantum-enhanced molecular docking and drug-target interaction modeling.';
-                };
+                    'Quantum-enhanced molecular docking and drug-target interaction modeling.',
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-purple-40o0' />;
-                  title: 'Genetic Analysis';
+                  icon: <Target className='w-12 h-12 text-purple-40o0' />,
+                  title: 'Genetic Analysis',
                   description:,
-                    'Advanced genomic sequencing and variant calling using quantum algorithms.';
-                };
+                    'Advanced genomic sequencing and variant calling using quantum algorithms.',
+                },
                 {
-                  icon: <Users className='w-12 h-12 text-green-40o0' />;
-                  title: 'Personalized Medicine';
+                  icon: <Users className='w-12 h-12 text-green-40o0' />,
+                  title: 'Personalized Medicine',
                   description:,
-                    'Individualized treatment plans based on quantum biological modeling.';
-                };
+                    'Individualized treatment plans based on quantum biological modeling.',
+                },
                 {
-                  icon: <Globe className='w-12 h-12 text-yellow-40o0' />;
-                  title: 'Biological Networks';
+                  icon: <Globe className='w-12 h-12 text-yellow-40o0' />,
+                  title: 'Biological Networks',
                   description:,
-                    'Complex biological pathway analysis and systems biology modeling.';
-                };
+                    'Complex biological pathway analysis and systems biology modeling.',
+                },
                 {
-                  icon: <Activity className='w-12 h-12 text-pink-40o0' />;
-                  title: 'Real-time Monitoring';
+                  icon: <Activity className='w-12 h-12 text-pink-40o0' />,
+                  title: 'Real-time Monitoring',
                   description:,
-                    'Live biological system monitoring and predictive analytics.';
-                };
+                    'Live biological system monitoring and predictive analytics.',
+                },
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -168,45 +168,41 @@ export default function QuantumBioComputing() {
             <div className='grid md: grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Pharmaceutical Research';
+                  title: 'Pharmaceutical Research',
                   description:,
-                    'Accelerated drug discovery and development through quantum-enhanced molecular modeling.';
+                    'Accelerated drug discovery and development through quantum-enhanced molecular modeling.',
                   benefits: [
-                    'Faster drug discovery';
-                    'Improved efficacy';
-                    'Reduced side effects';
-                  ];
-                };
+                    'Faster drug discoveryImproved efficacy',
+                    'Reduced side effects',
+                  ]
+                },
                 {
-                  title: 'Cancer Research';
+                  title: 'Cancer Research',
                   description:,
-                    'Advanced cancer genomics and personalized treatment strategies.';
+                    'Advanced cancer genomics and personalized treatment strategies.',
                   benefits: [
-                    'Precision medicine';
-                    'Targeted therapies';
-                    'Better outcomes';
-                  ];
-                };
+                    'Precision medicineTargeted therapies',
+                    'Better outcomes',
+                  ]
+                },
                 {
-                  title: 'Genetic Disorders';
+                  title: 'Genetic Disorders',
                   description:,
-                    'Understanding and treating genetic diseases through quantum genetic analysis.';
+                    'Understanding and treating genetic diseases through quantum genetic analysis.',
                   benefits: [
-                    'Early detection';
-                    'Personalized treatment';
-                    'Disease prevention';
-                  ];
-                };
+                    'Early detectionPersonalized treatment',
+                    'Disease prevention',
+                  ]
+                },
                 {
-                  title: 'Aging Research';
+                  title: 'Aging Research',
                   description:,
-                    'Quantum modeling of aging processes and longevity interventions.';
+                    'Quantum modeling of aging processes and longevity interventions.',
                   benefits: [
-                    'Aging mechanisms';
-                    'Longevity research';
-                    'Health optimization';
-                  ];
-                };
+                    'Aging mechanismsLongevity research',
+                    'Health optimization',
+                  ]
+                },
               ].map((app, index) => (
                 <motion.div,
                   key={index}

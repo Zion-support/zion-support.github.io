@@ -86,5 +86,5 @@ const EnterpriseAIFinOpsCostOptimization20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default EnterpriseAIFinOpsCostOptimization20o26;
+    </div>)},
+export default EnterpriseAIFinOpsCostOptimization20o26,

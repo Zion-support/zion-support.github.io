@@ -3,7 +3,7 @@ import Link from 'next/link',
 export default function MobileMenu({ links = [] }) {
   const [isOpen, setIsOpen] = useState(false),
   const toggleMenu = () => {
-    setIsOpen(!isOpen)};
+    setIsOpen(!isOpen)},
   return (
     <>,
       {/* Mobile menu button */}

@@ -7,25 +7,25 @@ const NewContent20o25UltimateContentRevolutionBanner = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const contentItems = [
     {
-      title: "AI 20o25: The Ultimate Content Revolution";
-      description: "25,0o00% ROI Guide - Transform Your Business with Revolutionary AI Content Strategies";
-      url: "/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough";
-      type: "Blog Post";
-      metrics: "25,0o00% ROI";
-      savings: "$50o0B+"};
+      title: "AI 20o25: The Ultimate Content Revolution",
+      description: "25,0o00% ROI Guide - Transform Your Business with Revolutionary AI Content Strategies",
+      url: "/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough",
+      type: "Blog Post",
+      metrics: "25,0o00% ROI",
+      savings: "$50o0B+"},
     {
-      title: "Fortune 50o0 AI Content Revolution Success";
-      description: "$50o0B Annual Savings - 25,0o00% ROI Success Story";
-      url: "/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story";
-      type: "Case Study";
-      metrics: "25,0o00% ROI";
-      savings: "$50o0B"};
+      title: "Fortune 50o0 AI Content Revolution Success",
+      description: "$50o0B Annual Savings - 25,0o00% ROI Success Story",
+      url: "/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story",
+      type: "Case Study",
+      metrics: "25,0o00% ROI",
+      savings: "$50o0B"},
     {
-      title: "AI Content Revolution Implementation Guide";
-      description: "Complete Roadmap to 25,0o00% ROI - Revolutionary Content Strategy";
-      url: "/resources/ai-content-revolution-implementation-guide-20o25";
-      type: "Implementation Guide";
-      metrics: "25,0o00% ROI";
+      title: "AI Content Revolution Implementation Guide",
+      description: "Complete Roadmap to 25,0o00% ROI - Revolutionary Content Strategy",
+      url: "/resources/ai-content-revolution-implementation-guide-20o25",
+      type: "Implementation Guide",
+      metrics: "25,0o00% ROI",
       savings: "$50o0B+"}
   ],
   useEffect(() => {
@@ -39,7 +39,7 @@ const NewContent20o25UltimateContentRevolutionBanner = () => {
   }, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('newContent20o25UltimateContentRevolutionBanner', 'true')};
+    localStorage.setItem('newContent20o25UltimateContentRevolutionBannertrue')},
   if (!isVisible) return null,
   const currentItem = contentItems[currentContent],
   return (
@@ -132,5 +132,5 @@ const NewContent20o25UltimateContentRevolutionBanner = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
         </svg>,
       </button>,
-    </div>)};
-export default NewContent20o25UltimateContentRevolutionBanner;
+    </div>)},
+export default NewContent20o25UltimateContentRevolutionBanner,

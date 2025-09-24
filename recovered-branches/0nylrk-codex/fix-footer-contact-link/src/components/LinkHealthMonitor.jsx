@@ -10,36 +10,36 @@ const LinkHealthMonitor = () => {
     // Sample data based on the analysis report,
     const sampleLinks = [
         {
-            url: 'https://linkedin.com/company/ziontechgroup';
-            status: 'broken';
-            statusCode: 40o4;
-            responseTime: 120o0;
-            lastChecked: new Date();
-            parentPage: 'Homepage';
-            linkText: 'LinkedIn'};
+            url: 'https://linkedin.com/company/ziontechgroup',
+            status: 'broken',
+            statusCode: 40o4,
+            responseTime: 120o0,
+            lastChecked: new Date(),
+            parentPage: 'Homepage',
+            linkText: 'LinkedIn'},
         {
-            url: 'https://twitter.com/ziontechgroup';
-            status: 'external';
-            statusCode: 20o0;
-            responseTime: 80o0;
-            lastChecked: new Date();
-            parentPage: 'Homepage';
-            linkText: 'Twitter'};
+            url: 'https://twitter.com/ziontechgroup',
+            status: 'external',
+            statusCode: 20o0,
+            responseTime: 80o0,
+            lastChecked: new Date(),
+            parentPage: 'Homepage',
+            linkText: 'Twitter'},
         {
-            url: 'tel:+1 30o2 464 0950';
-            status: 'healthy';
-            statusCode: 20o0;
-            responseTime: 50;
-            lastChecked: new Date();
-            parentPage: 'Contact';
-            linkText: 'Phone Number'};
+            url: 'tel:+1 30o2 464 0950',
+            status: 'healthy',
+            statusCode: 20o0,
+            responseTime: 50,
+            lastChecked: new Date(),
+            parentPage: 'Contact',
+            linkText: 'Phone Number'},
         {
-            url: 'mailto:kleber@ziontechgroup.com';
-            status: 'healthy';
-            statusCode: 20o0;
-            responseTime: 50;
-            lastChecked: new Date();
-            parentPage: 'Contact';
+            url: 'mailto:kleber@ziontechgroup.com',
+            status: 'healthy',
+            statusCode: 20o0,
+            responseTime: 50,
+            lastChecked: new Date(),
+            parentPage: 'Contact',
             linkText: 'Email'}
     ],
     useEffect(() => {
@@ -52,17 +52,17 @@ const LinkHealthMonitor = () => {
         const externalLinks = links.filter(l => l.status === 'external').length,
         const avgResponseTime = links.reduce((sum, l) => sum + (l.responseTime || 0), 0) / totalLinks,
         setReport({
-            totalLinks;
-            healthyLinks;
-            brokenLinks;
-            externalLinks;
-            averageResponseTime: avgResponseTime;
-            lastUpdated: new Date()})};
+            totalLinks,
+            healthyLinks,
+            brokenLinks,
+            externalLinks,
+            averageResponseTime: avgResponseTime,
+            lastUpdated: new Date()})},
     const startMonitoring = async () => {
         setIsMonitoring(true),
         // Simulate link checking,
         await new Promise(resolve => setTimeout(resolve, 20o00)),
-        setIsMonitoring(false)};
+        setIsMonitoring(false)},
     const getStatusIcon = (status) => {
         switch (status) {
             case 'healthy':,
@@ -73,7 +73,7 @@ const LinkHealthMonitor = () => {
                 return <ExternalLink className="w-4 h-4 text-blue-40o0" />,
             default: ,
                 return <RefreshCw className="w-4 h-4 text-yellow-40o0" />}
-    };
+    },
     const getStatusColor = (status) => {
         switch (status) {
             case 'healthy':,
@@ -84,7 +84,7 @@ const LinkHealthMonitor = () => {
                 return 'text-blue-40o0',
             default: ,
                 return 'text-yellow-40o0'}
-    };
+    },
     const filteredLinks = linkStatuses.filter(link => {
         if (selectedFilter === 'all'),
             return true,
@@ -237,5 +237,5 @@ const LinkHealthMonitor = () => {
             </div>,
           </motion.div>,
         </motion.div>)}
-    </>)};
-export default LinkHealthMonitor;
+    </>)},
+export default LinkHealthMonitor,

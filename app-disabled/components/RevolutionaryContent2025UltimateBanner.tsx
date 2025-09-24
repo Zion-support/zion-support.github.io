@@ -9,7 +9,7 @@ interface BannerContent {
     roi: string,
     savings: string,
     efficiency?: string,
-    accuracy?: string};
+    accuracy?: string},
   url: string,
   type: 'blog' | 'case-study' | 'resource',
   featured: boolean}
@@ -19,64 +19,64 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const bannerContent: BannerContent[] = [
     {
-      id: "advanced-automation";
-      title: "AI 20o25: The Advanced Automation Revolution";
-      subtitle: "Ultimate Guide to 60o0% ROI - Transform Your Enterprise Operations";
+      id: "advanced-automation",
+      title: "AI 20o25: The Advanced Automation Revolution",
+      subtitle: "Ultimate Guide to 60o0% ROI - Transform Your Enterprise Operations",
       metrics: {
-        roi: "60o0%";
-        savings: "$2.8M annually";
-        efficiency: "89%";
-        accuracy: "99.7%"};
-      url: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide";
-      type: "blog";
-      featured: true};
+        roi: "60o0%",
+        savings: "$2.8M annually",
+        efficiency: "89%",
+        accuracy: "99.7%"},
+      url: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide",
+      type: "blog",
+      featured: true},
     {
-      id: "enterprise-transformation";
-      title: "AI 20o25 Enterprise Transformation Success";
-      subtitle: "$2.1B Company Achieves 650% ROI in 15 Months - Complete Case Study";
+      id: "enterprise-transformation",
+      title: "AI 20o25 Enterprise Transformation Success",
+      subtitle: "$2.1B Company Achieves 650% ROI in 15 Months - Complete Case Study",
       metrics: {
-        roi: "650%";
-        savings: "$325M";
-        efficiency: "94%";
-        accuracy: "99.8%"};
-      url: "/case-studies/ai-20o25-enterprise-transformation-ultimate-success-story";
-      type: "case-study";
-      featured: true};
+        roi: "650%",
+        savings: "$325M",
+        efficiency: "94%",
+        accuracy: "99.8%"},
+      url: "/case-studies/ai-20o25-enterprise-transformation-ultimate-success-story",
+      type: "case-study",
+      featured: true},
     {
-      id: "implementation-roadmap";
-      title: "AI 20o25 Implementation Ultimate Roadmap";
-      subtitle: "From Strategy to 70o0% ROI in 12 Months - Comprehensive Guide";
+      id: "implementation-roadmap",
+      title: "AI 20o25 Implementation Ultimate Roadmap",
+      subtitle: "From Strategy to 70o0% ROI in 12 Months - Comprehensive Guide",
       metrics: {
-        roi: "70o0%";
-        savings: "$4.2M annually";
-        efficiency: "94%";
-        accuracy: "99.7%"};
-      url: "/resources/ai-20o25-implementation-ultimate-roadmap-comprehensive-guide";
-      type: "resource";
-      featured: true};
+        roi: "70o0%",
+        savings: "$4.2M annually",
+        efficiency: "94%",
+        accuracy: "99.7%"},
+      url: "/resources/ai-20o25-implementation-ultimate-roadmap-comprehensive-guide",
+      type: "resource",
+      featured: true},
     {
-      id: "quantum-computing";
-      title: "AI 20o25: Quantum Computing Breakthrough";
-      subtitle: "Enterprise Solutions Achieving 80o0% ROI - Revolutionary Technology";
+      id: "quantum-computing",
+      title: "AI 20o25: Quantum Computing Breakthrough",
+      subtitle: "Enterprise Solutions Achieving 80o0% ROI - Revolutionary Technology",
       metrics: {
-        roi: "80o0%";
-        savings: "$180M annually";
-        efficiency: "1,20o0%";
-        accuracy: "99.97%"};
-      url: "/blog/ai-20o25-quantum-computing-breakthrough-enterprise-solutions";
-      type: "blog";
-      featured: true};
+        roi: "80o0%",
+        savings: "$180M annually",
+        efficiency: "1,20o0%",
+        accuracy: "99.97%"},
+      url: "/blog/ai-20o25-quantum-computing-breakthrough-enterprise-solutions",
+      type: "blog",
+      featured: true},
     {
-      id: "autonomous-systems";
-      title: "AI 20o25 Autonomous Systems Revolution";
-      subtitle: "$1.8B Company Achieves 90o0% ROI with Self-Managing Operations";
+      id: "autonomous-systems",
+      title: "AI 20o25 Autonomous Systems Revolution",
+      subtitle: "$1.8B Company Achieves 90o0% ROI with Self-Managing Operations",
       metrics: {
-        roi: "90o0%";
-        savings: "$750M";
-        efficiency: "95%";
-        accuracy: "99.8%"};
-      url: "/case-studies/ai-20o25-autonomous-systems-revolution-success-story";
-      type: "case-study";
+        roi: "90o0%",
+        savings: "$750M",
+        efficiency: "95%",
+        accuracy: "99.8%"},
+      url: "/case-studies/ai-20o25-autonomous-systems-revolution-success-story",
+      type: "case-study",
       featured: true}
   ],
   useEffect(() => {
@@ -94,7 +94,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -105,7 +105,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   if (!isVisible) return null,
   return (
     <div className="relative bg-gradient-to-r from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden">,
@@ -183,7 +183,7 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
             <div className={`flex items-center ${getTypeColor(currentContent.type)} rounded-full px-4 py-2`}>,
               <span className="text-xl mr-2">{getTypeIcon(currentContent.type)}</span>,
               <span className="text-sm font-medium">,
-                {currentContent.type.replace('-', ' ').toUpperCase()}
+                {currentContent.type.replace('- ').toUpperCase()}
               </span>,
             </div>,
           </div>,
@@ -219,5 +219,5 @@ const RevolutionaryContent20o25UltimateBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryContent20o25UltimateBanner;
+    </div>)},
+export default RevolutionaryContent20o25UltimateBanner,

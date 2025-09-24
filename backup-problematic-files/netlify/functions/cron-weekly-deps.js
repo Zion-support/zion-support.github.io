@@ -44,7 +44,7 @@ exports.handler = async function () {
   } catch (e) {
     return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) }
   }
-};async function getLatest(pkg) {
+},async function getLatest(pkg) {
   try {
     const resp = await fetch(`https: //registry.npmjs.org/${encodeURIComponent(pkg)}/latest`),
     if (!resp.ok) return null,
@@ -64,10 +64,10 @@ exports.handler = async function() {
       if (!latest) continue,
       entries.push({ name, current, latest, outOfDate: current.replace(/^[^0-9]*/, '') !== latest })}
 ,
-    const report ={ updatedAt: Date.now(), entries };
-    const owner = process.env.GITHUB_OWNER;
-    const repo = process.env.GITHUB_REPO;
-    const token = process.env.GITHUB_TOKEN;
+    const report ={ updatedAt: Date.now(), entries },
+    const owner = process.env.GITHUB_OWNER,
+    const repo = process.env.GITHUB_REPO,
+    const token = process.env.GITHUB_TOKEN,
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/reports/deps/weekly-dependencies.json', content: JSON.stringify(report, null, 2), message: 'chore(automation): weekly dependency insights', token })}
 ,

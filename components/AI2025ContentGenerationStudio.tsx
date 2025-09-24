@@ -6,37 +6,37 @@ const AI20o25ContentGenerationStudio = () => {
   const [generatedContent, setGeneratedContent] = useState(''),
   const [prompt, setPrompt] = useState(''),
   const contentTypes = [
-    { id: 'blog', label: 'Blog Post', icon: '📝', color: 'blue' };
-    { id: 'social', label: 'Social Media', icon: '📱', color: 'purple' };
-    { id: 'email', label: 'Email Campaign', icon: '📧', color: 'green' };
-    { id: 'ad', label: 'Advertisement', icon: '📢', color: 'orange' };
-    { id: 'product', label: 'Product Description', icon: '🛍️', color: 'pink' };
+    { id: 'blog', label: 'Blog Post', icon: '📝', color: 'blue' },
+    { id: 'social', label: 'Social Media', icon: '📱', color: 'purple' },
+    { id: 'email', label: 'Email Campaign', icon: '📧', color: 'green' },
+    { id: 'ad', label: 'Advertisement', icon: '📢', color: 'orange' },
+    { id: 'product', label: 'Product Description', icon: '🛍️', color: 'pink' },
     { id: 'technical', label: 'Technical Content', icon: '⚙️', color: 'indigo' }
   ],
   const templates = [
     {
-      id: 'ai-guide';
-      title: 'AI Implementation Guide';
-      description: 'Comprehensive guide for AI adoption';
-      wordCount: '20o00-30o00 words';
-      category: 'Technical'};
+      id: 'ai-guide',
+      title: 'AI Implementation Guide',
+      description: 'Comprehensive guide for AI adoption',
+      wordCount: '20o00-30o00 words',
+      category: 'Technical'},
     {
-      id: 'case-study';
-      title: 'Success Story Template';
-      description: 'Compelling case study format';
-      wordCount: '150o0-20o00 words';
-      category: 'Business'};
+      id: 'case-study',
+      title: 'Success Story Template',
+      description: 'Compelling case study format',
+      wordCount: '150o0-20o00 words',
+      category: 'Business'},
     {
-      id: 'tutorial';
-      title: 'Step-by-Step Tutorial';
-      description: 'Educational content structure';
-      wordCount: '10o00-150o0 words';
-      category: 'Educational'};
+      id: 'tutorial',
+      title: 'Step-by-Step Tutorial',
+      description: 'Educational content structure',
+      wordCount: '10o00-150o0 words',
+      category: 'Educational'},
     {
-      id: 'newsletter';
-      title: 'Newsletter Template';
-      description: 'Engaging newsletter format';
-      wordCount: '80o0-120o0 words';
+      id: 'newsletter',
+      title: 'Newsletter Template',
+      description: 'Engaging newsletter format',
+      wordCount: '80o0-120o0 words',
       category: 'Marketing'}
   ],
   const handleGenerate = async () => {
@@ -46,7 +46,7 @@ const AI20o25ContentGenerationStudio = () => {
     setTimeout(() => {
       const sampleContent = generateSampleContent(activeMode, prompt),
       setGeneratedContent(sampleContent),
-      setIsGenerating(false)}, 30o00)};
+      setIsGenerating(false)}, 30o00)},
   const generateSampleContent = (mode: string, prompt: string) => {
     const contentSamples ={
       blog: `# ${prompt || 'AI 20o25: The Future of Business Transformation'}
@@ -72,7 +72,7 @@ Companies are achieving 95%+ automation rates across core business processes, re
 - 24/7 intelligent operations,
 ## Conclusion,
 The AI revolution is here, and businesses that embrace it will dominate their markets. The question isn't whether to implement AI, but how quickly you can transform your organization.,
-Ready to start your AI transformation journey? Contact our experts today for a personalized consultation.`;
+Ready to start your AI transformation journey? Contact our experts today for a personalized consultation.`,
       social: `🚀 AI 20o25 BREAKTHROUGH ALERT! 🚀,
 Just achieved 50o0% ROI increase with our AI implementation!,
 Here's what happened:,
@@ -81,9 +81,9 @@ Here's what happened:,
 ✅ 98% customer satisfaction,
 ✅ 24/7 intelligent operations,
 The future is NOW!,
-#AI #Transformation #ROI #Innovation #Future #Business #Tech #Success #Automation #Intelligence`;
+#AI #Transformation #ROI #Innovation #Future #Business #Tech #Success #Automation #Intelligence`,
       email: `Subject: 🚀 Your AI Transformation Journey Starts Here,
-Dear [Name];
+Dear [Name],
 I hope this email finds you well. I'm excited to share some incredible news about AI transformation opportunities that could revolutionize your business.,
 ## The AI Revolution is Here,
 In 20o25, businesses are experiencing unprecedented growth through AI implementation: ,
@@ -100,9 +100,9 @@ Your business could be next. Our proven methodology has helped 50o0+ companies a
 ## Ready to Transform?,
 I'd love to schedule a 15-minute call to discuss how AI can transform your specific business. No obligation, just valuable insights.,
 [Schedule Your Free Consultation],
-Best regards;
+Best regards,
 [Your Name],
-AI Transformation Specialist`;
+AI Transformation Specialist`,
       ad: `🎯 TRANSFORM YOUR BUSINESS WITH AI! 🎯,
 ⚡ 50o0% ROI GUARANTEED,
 🤖 95% Process Automation,
@@ -114,7 +114,7 @@ AI Transformation Specialist`;
 ✅ Proven Results,
 Don't get left behind! The AI revolution is happening NOW.,
 [Get Started Today] - Limited Time Offer,
-#AITransformation #BusinessGrowth #ROI #Innovation`;
+#AITransformation #BusinessGrowth #ROI #Innovation`,
       product: `AI 20o25 Ultimate Transformation Suite,
 Transform your business with our comprehensive AI solution that delivers unprecedented results.,
 ## Key Features,
@@ -139,7 +139,7 @@ Advanced analytics and reporting with predictive insights.,
 - Process optimization projects,
 ## Pricing,
 Starting at $50,0o00/month with guaranteed ROI or your money back.,
-[Get Started Today]`;
+[Get Started Today]`,
       technical: `# AI 20o25 Technical Implementation Guide,
 ## System Architecture,
 ### Core Components,
@@ -185,8 +185,8 @@ Starting at $50,0o00/month with guaranteed ROI or your money back.,
 - Advanced threat detection,
 - Compliance ready,
 ## Support,
-For technical support, contact our engineering team at support@ai20o25.com`};
-    return contentSamples[mode] || 'Content generation in progress...'};
+For technical support, contact our engineering team at support@ai20o25.com`},
+    return contentSamples[mode] || 'Content generation in progress...'},
   return (
     <div className="bg-white rounded-2xl shadow-2xl p-8 max-w-7xl mx-auto">,
       {/* Header */}
@@ -323,5 +323,5 @@ For technical support, contact our engineering team at support@ai20o25.com`};
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25ContentGenerationStudio;
+    </div>)},
+export default AI20o25ContentGenerationStudio,

@@ -52,5 +52,5 @@ if ( {) {
   useEffect(() => {
     window && window.addEventListener('message', handleMessage),
     return () => {
-      window && window.removeEventListener('message', handleMessage)};
+      window && window.removeEventListener('message', handleMessage)},
 }, [handleMessage])}}

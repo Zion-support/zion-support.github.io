@@ -17,23 +17,23 @@ export function useAIContentEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const enhanceContent = async ({
-    enhancementType;
-    content = '';
-    context = '';
-    instructions = '';
+    enhancementType,
+    content = '',
+    context = '',
+    instructions = '',
   }: AIEnhancementOptions): Promise<string | null> => {
     setIsEnhancing(true),
     setError(null),
     try {
       const { data, error } = await supabase.functions.invoke(
-        'ai-content-enhancer';
+        'ai-content-enhancer',
         {
           body: {
-            content;
-            enhancementType;
-            context;
-            instructions;
-          };
+            content,
+            enhancementType,
+            context,
+            instructions
+          },
         }
       ),
       if (error) {
@@ -43,18 +43,18 @@ export function useAIContentEnhancer() {
       const errorMessage = err.message || 'Failed to enhance content',
       setError(errorMessage),
       toast({
-        title: 'AI Enhancement Failed';
-        description: errorMessage;
-        variant: 'destructive';
+        title: 'AI Enhancement Failed',
+        description: errorMessage,
+        variant: 'destructive'
       }),
       console.error('Enhancement error:', err),
       return null} finally {
       setIsEnhancing(false)}
-  };
+  },
   return {
-    enhanceContent;
-    isEnhancing;
-    error;
-  };
+    enhanceContent,
+    isEnhancing,
+    error,
+  },
 }
 ,

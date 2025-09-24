@@ -8,23 +8,23 @@ import {
   Filter,
   Grid,
   List,
-  Star;
-  Clock;
-  TrendingUp;
-  BookOpen;
-  Brain;
-  Zap;
-  Cpu;
-  Eye;
-  ChevronDown;
-  X;
-  CheckCircle;
-  Sparkles;
-  Target;
-  Lightbulb;
-  ArrowRight;
-  Play;
-  Users;
+  Star,
+  Clock,
+  TrendingUp,
+  BookOpen,
+  Brain,
+  Zap,
+  Cpu,
+  Eye,
+  ChevronDown,
+  X,
+  CheckCircle,
+  Sparkles,
+  Target,
+  Lightbulb,
+  ArrowRight,
+  Play,
+  Users,
   BarChart3} from 'lucide-react',
 const RevolutionaryContentDiscoveryWidget20o26 = () => {
   const [searchQuerysetSearchQuery] = useState(''),
@@ -35,104 +35,104 @@ const RevolutionaryContentDiscoveryWidget20o26 = () => {
   const [filteredContentsetFilteredContent] = useState([]),
   const [isVisiblesetIsVisible] = useState(false),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Gridcolor: 'from-gray-60o0 to-gray-80o0' };
-    { id: 'ai-'breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: Braincolor: 'from-purple-60o0 to-pink-60o0' };
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-blue-60o0 to-cyan-60o0' };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Cpucolor: 'from-indigo-60o0 to-purple-60o0' };
-    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Eyecolor: 'from-emerald-60o0 to-teal-60o0' };
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencolor: 'from-orange-60o0 to-red-60o0' };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BarChart3color: 'from-green-60o0 to-emerald-60o0' }
+    { id: ''allname: 'All 'Contenticon: Gridcolor: 'from-gray-60o0 to-gray-80o0' },
+    { id: 'ai-'breakthroughsname: 'AI 'Breakthroughsicon: Braincolor: 'from-purple-60o0 to-pink-60o0' },
+    { id: ''automationname: ''Automationicon: Zapcolor: 'from-blue-60o0 to-cyan-60o0' },
+    { id: ''quantumname: 'Quantum 'Computingicon: Cpucolor: 'from-indigo-60o0 to-purple-60o0' },
+    { id: ''predictionsname: 'Future 'Predictionsicon: Eyecolor: 'from-emerald-60o0 to-teal-60o0' },
+    { id: ''tutorialsname: ''Tutorialsicon: BookOpencolor: 'from-orange-60o0 to-red-60o0' },
+    { id: 'case-'studiesname: 'Case 'Studiesicon: BarChart3color: 'from-green-60o0 to-emerald-60o0' }
   ],
   const sortOptions = [
-    { id: ''trending', 'name: ''Trending', 'icon: TrendingUp };
-    { id: ''newest', 'name: ''Newest', 'icon: Clock };
-    { id: ''rating', 'name: 'Highest 'Rated', 'icon: Star };
-    { id: ''popular', 'name: 'Most 'Popular', 'icon: Users }
+    { id: ''trendingname: ''Trendingicon: TrendingUp },
+    { id: ''newestname: ''Newesticon: Clock },
+    { id: ''ratingname: 'Highest 'Ratedicon: Star },
+    { id: ''popularname: 'Most 'Popularicon: Users }
   ],
   const sampleContent = [
     {
-      id: 1;
-      title: 'Quantum-Neural Fusion Technology';
-      description: 'Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.';
-      category: 'ai-breakthroughs';
-      image: '/api/placeholder/40o0/30o0';
-      readTime: '8 min read';
-      difficulty: 'Advanced';
-      rating: 4.9;
-      views: 15420;
-      author: 'Dr. Sarah Chen';
-      publishedAt: '20o26-0o1-15';
-      tags: [', 'AI', 'Quantum 'Computing', 'Neural 'Networks', 'Breakthrough'];
-      featured: true};
+      id: 1,
+      title: 'Quantum-Neural Fusion Technology',
+      description: 'Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.',
+      category: 'ai-breakthroughs',
+      image: '/api/placeholder/40o0/30o0',
+      readTime: '8 min read',
+      difficulty: 'Advanced',
+      rating: 4.9,
+      views: 15420,
+      author: 'Dr. Sarah Chen',
+      publishedAt: '20o26-0o1-15',
+      tags: [AI', 'Quantum 'ComputingNeural 'Networks', 'Breakthrough'],
+      featured: true},
     {
-      id: 2;
-      title: 'Autonomous Business Operations';
-      description: 'Complete business process automation with AI-powered decision making and intelligent optimization.';
-      category: 'automation';
-      image: '/api/placeholder/40o0/30o0';
-      readTime: '12 min read';
-      difficulty: 'Intermediate';
-      rating: 4.7;
-      views: 12850;
-      author: 'Michael Rodriguez';
-      publishedAt: '20o26-0o1-14';
-      tags: [', 'Automation', 'Business', 'AI', 'Process Optimization'];
-      featured: false};
+      id: 2,
+      title: 'Autonomous Business Operations',
+      description: 'Complete business process automation with AI-powered decision making and intelligent optimization.',
+      category: 'automation',
+      image: '/api/placeholder/40o0/30o0',
+      readTime: '12 min read',
+      difficulty: 'Intermediate',
+      rating: 4.7,
+      views: 12850,
+      author: 'Michael Rodriguez',
+      publishedAt: '20o26-0o1-14',
+      tags: [Automation', 'BusinessAI', 'Process Optimization'],
+      featured: false},
     {
-      id: 3;
-      title: 'AI Singularity Timeline 20o30-20o35';
-      description: 'Comprehensive analysis of when and how AI will achieve technological singularity.';
-      category: 'predictions';
-      image: '/api/placeholder/40o0/30o0';
-      readTime: '18 min read';
-      difficulty: 'Expert';
-      rating: 4.8;
-      views: 2210o0;
-      author: 'Prof. Alex Thompson';
-      publishedAt: '20o26-0o1-13';
-      tags: ['AI 'Singularity', 'Future 'Predictions', 'Technology'Analysis'];
-      featured: true};
+      id: 3,
+      title: 'AI Singularity Timeline 20o30-20o35',
+      description: 'Comprehensive analysis of when and how AI will achieve technological singularity.',
+      category: 'predictions',
+      image: '/api/placeholder/40o0/30o0',
+      readTime: '18 min read',
+      difficulty: 'Expert',
+      rating: 4.8,
+      views: 2210o0,
+      author: 'Prof. Alex Thompson',
+      publishedAt: '20o26-0o1-13',
+      tags: ['AI 'SingularityFuture 'Predictions', 'Technology'Analysis'],
+      featured: true},
     {
-      id: 4;
-      title: 'Quantum Machine Learning Algorithms';
-      description: 'Machine learning algorithms optimized for quantum computing systems with exponential speedup.';
-      category: 'quantum';
-      image: '/api/placeholder/40o0/30o0';
-      readTime: '15 min read';
-      difficulty: 'Expert';
-      rating: 4.9;
-      views: 18750;
-      author: 'Dr. Elena Volkov';
-      publishedAt: '20o26-0o1-12';
-      tags: ['Quantum 'Computing', 'Machine 'Learning', 'Algorithms'Performance'];
-      featured: false};
+      id: 4,
+      title: 'Quantum Machine Learning Algorithms',
+      description: 'Machine learning algorithms optimized for quantum computing systems with exponential speedup.',
+      category: 'quantum',
+      image: '/api/placeholder/40o0/30o0',
+      readTime: '15 min read',
+      difficulty: 'Expert',
+      rating: 4.9,
+      views: 18750,
+      author: 'Dr. Elena Volkov',
+      publishedAt: '20o26-0o1-12',
+      tags: ['Quantum 'ComputingMachine 'Learning', 'Algorithms'Performance'],
+      featured: false},
     {
-      id: 5;
-      title: 'Neural Interface Implementation Guide';
-      description: 'Step-by-step guide to implementing direct brain-computer interfaces for enhanced human-AI collaboration.';
-      category: 'tutorials';
-      image: '/api/placeholder/40o0/30o0';
-      readTime: '25 min read';
-      difficulty: 'Advanced';
-      rating: 4.6;
-      views: 9650;
-      author: 'Dr. James Park';
-      publishedAt: '20o26-0o1-11';
-      tags: ['Neural 'Interface', 'Tutorial', 'Implementation', 'BCI'];
-      featured: false};
+      id: 5,
+      title: 'Neural Interface Implementation Guide',
+      description: 'Step-by-step guide to implementing direct brain-computer interfaces for enhanced human-AI collaboration.',
+      category: 'tutorials',
+      image: '/api/placeholder/40o0/30o0',
+      readTime: '25 min read',
+      difficulty: 'Advanced',
+      rating: 4.6,
+      views: 9650,
+      author: 'Dr. James Park',
+      publishedAt: '20o26-0o1-11',
+      tags: ['Neural 'InterfaceTutorial', 'ImplementationBCI'],
+      featured: false},
     {
-      id: 6;
-      title: 'Enterprise AI Transformation Case Study';
-      description: 'How Fortune 50o0 companies achieved 30o0% ROI through comprehensive AI implementation strategies.';
-      category: 'case-studies';
-      image: '/api/placeholder/40o0/30o0';
-      readTime: '20 min read';
-      difficulty: 'Intermediate';
-      rating: 4.8;
-      views: 1420o0;
-      author: 'Lisa Wang';
-      publishedAt: '20o26-0o1-10';
-      tags: ['Case 'Study', 'Enterprise', 'ROI', 'AI Implementation'];
+      id: 6,
+      title: 'Enterprise AI Transformation Case Study',
+      description: 'How Fortune 50o0 companies achieved 30o0% ROI through comprehensive AI implementation strategies.',
+      category: 'case-studies',
+      image: '/api/placeholder/40o0/30o0',
+      readTime: '20 min read',
+      difficulty: 'Intermediate',
+      rating: 4.8,
+      views: 1420o0,
+      author: 'Lisa Wang',
+      publishedAt: '20o26-0o1-10',
+      tags: ['Case 'StudyEnterprise', 'ROIAI Implementation'],
       featured: true}
   ],
   useEffect(() => {
@@ -174,7 +174,7 @@ const RevolutionaryContentDiscoveryWidget20o26 = () => {
       case 'Advanced': return 'bg-orange-10o0 text-orange-80o0',
       case 'Expert': return 'bg-red-10o0 text-red-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   if (!isVisible) return null,
   return (
     <div className="relative bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-20">,
@@ -378,7 +378,7 @@ const RevolutionaryContentDiscoveryWidget20o26 = () => {
             <div className="text-6xl mb-4">🔍</div>,
             <h3 className="text-2xl font-bold text-white mb-2">No content found</h3>,
             <p className="text-gray-30o0 mb-6">,
-              Try adjusting your search terms or filters to find what 'you', 're looking for.,
+              Try adjusting your search terms or filters to find what 'youre looking for.,
             </p>,
             <button
               onClick={() => {
@@ -397,7 +397,7 @@ const RevolutionaryContentDiscoveryWidget20o26 = () => {
           className="text-center mt-16">,
           <div className="bg-gradient-to-r from-purple-60o0/20 to-pink-60o0/20 backdrop-blur-lg rounded-2xl p-8 border border-white/20">,
             <h3 className="text-3xl font-bold text-white mb-4">,
-              'Can', 't Find What 'You', 're Looking For?,
+              'Cant Find What 'You', 're Looking For?,
             </h3>,
             <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">,
               Our AI-powered recommendation engine is constantly learning. Subscribe to get personalized,
@@ -420,5 +420,5 @@ const RevolutionaryContentDiscoveryWidget20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default RevolutionaryContentDiscoveryWidget20o26;
+    </div>)},
+export default RevolutionaryContentDiscoveryWidget20o26,

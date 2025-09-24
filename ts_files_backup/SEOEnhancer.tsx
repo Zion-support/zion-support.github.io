@@ -4,8 +4,8 @@ interface SEOEnhancerProps {
   keywords?: string}
 ,
 export default function SEOEnhancer({
-  title;
-  description;
+  title,
+  description,
   keywords}: SEOEnhancerProps) {
   return (
     <div className="bg-white rounded-lg shadow-lg p-6">,

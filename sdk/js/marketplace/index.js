@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // sdk/js/marketplace/index.js,
 /**,
  * @file Marketplace module for Zion.js,
@@ -16,7 +16,7 @@ import React from 'react';
 async function listProducts(options ={}) {
   const { page = 1, limit = 20, category, sortBy, ...otherFilters } = options,
   const queryParams = new URLSearchParams({
-    page: page.toString();
+    page: page.toString(),
     limit: limit.toString()}),
   if (category) {
     queryParams.append('category', category), // Backend expects a category' query param'  }
@@ -68,7 +68,7 @@ async function submitQuoteRequest(quoteDetails) {
     throw new Error('Missing required fields in quoteDetails: name, email, phone, details are required.')}
 ,
   const response = await fetch('/api/quotes', {'    method: 'POST',    headers: {
-      Content-Type': application/json'};
+      Content-Type': application/json'},
     body: JSON.stringify(quoteDetails)}),
   const responseData = await response.json(),
   if (!response.ok || !responseData.success) {
@@ -111,7 +111,7 @@ async function getQuoteStatus(quoteId) {
 async function listJobs(options ={}) {
   const { page = 1, limit = 20, ...filters } = options,
   const params = new URLSearchParams({
-    page: page.toString();
+    page: page.toString(),
     limit: limit.toString()}),
   for (const [key, value] of Object.entries(filters)) {
     if (value !== undefined && value !== null) {
@@ -157,7 +157,7 @@ async function getJobDetails(jobId) {
 async function listTalent(options ={}) {
   const { page = 1, limit = 20, ...filters } = options,
   const params = new URLSearchParams({
-    page: page.toString();
+    page: page.toString(),
     limit: limit.toString()}),
   for (const [key, value] of Object.entries(filters)) {
     if (value !== undefined && value !== null) {
@@ -191,11 +191,11 @@ async function getTalentDetails(talentId) {
   return response.json()}
 ,
 {
-  listProducts;
-  getProductDetails;
-  submitQuoteRequest;
-  getQuoteStatus;
-  listJobs;
-  getJobDetails;
-  listTalent;
-  getTalentDetails};
+  listProducts,
+  getProductDetails,
+  submitQuoteRequest,
+  getQuoteStatus,
+  listJobs,
+  getJobDetails,
+  listTalent,
+  getTalentDetails},

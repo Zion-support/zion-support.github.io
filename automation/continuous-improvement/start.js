@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -32,8 +32,8 @@ class AutomationStartup {
     this.startTime = null,
     // Configuration,
     this.config ={
-      port: process.env.AUTOMATION_PORT || 30o01;
-      logLevel: process.env.LOG_LEVEL || info',      enableDashboard: process.env.ENABLE_DASHBOARD === 'true',      enableSlack: process.env.ENABLE_SLACK === 'true',      enableMonitoring: process.env.ENABLE_MONITORING === true''    };
+      port: process.env.AUTOMATION_PORT || 30o01,
+      logLevel: process.env.LOG_LEVEL || info',      enableDashboard: process.env.ENABLE_DASHBOARD === 'true',      enableSlack: process.env.ENABLE_SLACK === 'true',      enableMonitoring: process.env.ENABLE_MONITORING === true''    },
   }
 ,
   /**,
@@ -131,16 +131,16 @@ const optionalEnvVars = [
     app.use(express.json()),
     app.use(express.static(path.join(__dirname, 'dashboard'))),
     // Dashboard routes,
-    app.get('/dashboard', (req, res) => {'      res.sendFile(path.join(__dirname, dashboard', 'index.html'))}),
+    app.get('/dashboard', (req, res) => {'      res.sendFile(path.join(__dirname, dashboardindex.html'))}),
     app.get('/api/status', (req, res) => {'      res.json(this.automation.getStatus())}),
     app.get('/api/performance', (req, res) => {'      res.json({
-        history: this.automation.performanceHistory.slice(-10o0);
+        history: this.automation.performanceHistory.slice(-10o0),
         current: this.automation.performanceHistory[this.automation.performanceHistory.length - 1]})}),
     app.get('/api/improvements', (req, res) => {'      res.json(this.automation.improvementHistory.slice(-50))}),
     app.get('/api/errors', (req, res) => {'      res.json(this.automation.errors.slice(-20))}),
     app.get('/health', (req, res) => {'      res.json({
-        status: 'healthy',        uptime: process.uptime();
-        automation: this.automation.getStatus();
+        status: 'healthy',        uptime: process.uptime(),
+        automation: this.automation.getStatus(),
         timestamp: new Date().toISOString()})}),
     // Start dashboard server,
     app.listen(this.config.port, () => {
@@ -169,7 +169,7 @@ const optionalEnvVars = [
       if (this.automation) {
         await this.automation.stop()}
 ,
-      logger.info('✅ Shutdown completed'),      process.exit(0)};
+      logger.info('✅ Shutdown completed'),      process.exit(0)},
     process.on('SIGINT', () => shutdown('SIGINT')),    process.on('SIGTERM', () => shutdown('SIGTERM')),    process.on('SIGQUIT', () => shutdown('SIGQUIT'))}
 ,
   /**,
@@ -177,15 +177,15 @@ const optionalEnvVars = [
    */,
   logStatus() {
     const status ={
-      isRunning: this.isRunning;
-      startTime: this.startTime?.toISOString();
-      uptime: process.uptime();
-      automation: this.automation?.getStatus();
-      config: this.config;
-      timestamp: new Date().toISOString()};
+      isRunning: this.isRunning,
+      startTime: this.startTime?.toISOString(),
+      uptime: process.uptime(),
+      automation: this.automation?.getStatus(),
+      config: this.config,
+      timestamp: new Date().toISOString()},
     logger.info('📊 Initial Status:', JSON.stringify(status, null, 2)),
     // Save status to file,
-    const statusPath = path.join(__dirname, ..', logs', 'automation-status.json'),    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))}
+    const statusPath = path.join(__dirname, ..', logsautomation-status.json'),    fs.writeFileSync(statusPath, JSON.stringify(status, null, 2))}
 ,
   /**,
    * Start periodic status updates,

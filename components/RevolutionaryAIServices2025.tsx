@@ -1,116 +1,116 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 ArrowRightBrainZapShieldGlobeTargetTrendingUp,
 import Link from 'next/link',
 const RevolutionaryAIServices20o25: React.FC = () => {
   const services = [
     {
-      id: 1;
-      title: "AI Consciousness Evolution Platform";
-      description: "Revolutionary AI that achieves self-awareness and autonomous decision-making capabilities";
-      price: "$2,999/month";
-      marketPrice: "$5,0o00-15,0o00/month";
+      id: 1,
+      title: "AI Consciousness Evolution Platform",
+      description: "Revolutionary AI that achieves self-awareness and autonomous decision-making capabilities",
+      price: "$2,999/month",
+      marketPrice: "$5,0o00-15,0o00/month",
       features: [
-        "Neural consciousness simulation";
-        "Autonomous learning algorithms";
-        "Self-modifying code generation";
-        "Emotional intelligence integration"];
+        "Neural consciousness simulation",
+        "Autonomous learning algorithms",
+        "Self-modifying code generation",
+        "Emotional intelligence integration"],
       benefits: [
-        "Achieve true AI autonomy";
-        "Reduce human oversight by 90%";
-        "Increase system adaptability by 30o0%"];
-      icon: Brain;
-      gradient: "from-purple-60o0 to-pink-60o0";
-      category: "AI Consciousness"};
+        "Achieve true AI autonomy",
+        "Reduce human oversight by 90%",
+        "Increase system adaptability by 30o0%"],
+      icon: Brain,
+      gradient: "from-purple-60o0 to-pink-60o0",
+      category: "AI Consciousness"},
     {
-      id: 2;
-      title: "Quantum-Neural Fusion Computing";
-      description: "Breakthrough quantum computing integrated with neural networks for unprecedented processing power";
-      price: "$4,999/month";
-      marketPrice: "$8,0o00-25,0o00/month";
+      id: 2,
+      title: "Quantum-Neural Fusion Computing",
+      description: "Breakthrough quantum computing integrated with neural networks for unprecedented processing power",
+      price: "$4,999/month",
+      marketPrice: "$8,0o00-25,0o00/month",
       features: [
-        "Quantum neural processing";
-        "Exponential computational speed";
-        "Parallel universe calculations";
-        "Quantum error correction"];
+        "Quantum neural processing",
+        "Exponential computational speed",
+        "Parallel universe calculations",
+        "Quantum error correction"],
       benefits: [
-        "Solve problems 10,0o00x faster";
-        "Process infinite data streams";
-        "Achieve quantum supremacy"];
-      icon: Zap;
-      gradient: "from-blue-60o0 to-cyan-60o0";
-      category: "Quantum Computing"};
+        "Solve problems 10,0o00x faster",
+        "Process infinite data streams",
+        "Achieve quantum supremacy"],
+      icon: Zap,
+      gradient: "from-blue-60o0 to-cyan-60o0",
+      category: "Quantum Computing"},
     {
-      id: 3;
-      title: "Autonomous Business Intelligence";
-      description: "Self-evolving AI that continuously optimizes business operations without human intervention";
-      price: "$1,999/month";
-      marketPrice: "$3,50o0-10,0o00/month";
+      id: 3,
+      title: "Autonomous Business Intelligence",
+      description: "Self-evolving AI that continuously optimizes business operations without human intervention",
+      price: "$1,999/month",
+      marketPrice: "$3,50o0-10,0o00/month",
       features: [
-        "Autonomous decision making";
-        "Self-optimizing algorithms";
-        "Predictive business modeling";
-        "Real-time strategy adaptation"];
+        "Autonomous decision making",
+        "Self-optimizing algorithms",
+        "Predictive business modeling",
+        "Real-time strategy adaptation"],
       benefits: [
-        "Increase profitability by 250%";
-        "Reduce operational costs by 60%";
-        "Eliminate human errors completely"];
-      icon: Target;
-      gradient: "from-green-60o0 to-emerald-60o0";
-      category: "Business Intelligence"};
+        "Increase profitability by 250%",
+        "Reduce operational costs by 60%",
+        "Eliminate human errors completely"],
+      icon: Target,
+      gradient: "from-green-60o0 to-emerald-60o0",
+      category: "Business Intelligence"},
     {
-      id: 4;
-      title: "Neural Interface Revolution";
-      description: "Direct brain-computer interface technology for seamless human-AI collaboration";
-      price: "$3,499/month";
-      marketPrice: "$6,0o00-18,0o00/month";
+      id: 4,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interface technology for seamless human-AI collaboration",
+      price: "$3,499/month",
+      marketPrice: "$6,0o00-18,0o00/month",
       features: [
-        "Direct neural connectivity";
-        "Thought-to-action translation";
-        "Enhanced cognitive abilities";
-        "Telepathic communication"];
+        "Direct neural connectivity",
+        "Thought-to-action translation",
+        "Enhanced cognitive abilities",
+        "Telepathic communication"],
       benefits: [
-        "Increase productivity by 50o0%";
-        "Enable superhuman capabilities";
-        "Create seamless AI integration"];
-      icon: Globe;
-      gradient: "from-orange-60o0 to-red-60o0";
-      category: "Neural Interfaces"};
+        "Increase productivity by 50o0%",
+        "Enable superhuman capabilities",
+        "Create seamless AI integration"],
+      icon: Globe,
+      gradient: "from-orange-60o0 to-red-60o0",
+      category: "Neural Interfaces"},
     {
-      id: 5;
-      title: "Predictive Security Matrix";
-      description: "AI-powered security system that predicts and prevents threats before they occur";
-      price: "$2,499/month";
-      marketPrice: "$4,0o00-12,0o00/month";
+      id: 5,
+      title: "Predictive Security Matrix",
+      description: "AI-powered security system that predicts and prevents threats before they occur",
+      price: "$2,499/month",
+      marketPrice: "$4,0o00-12,0o00/month",
       features: [
-        "Threat prediction algorithms";
-        "Autonomous security responses";
-        "Quantum encryption protocols";
-        "Real-time vulnerability assessment"];
+        "Threat prediction algorithms",
+        "Autonomous security responses",
+        "Quantum encryption protocols",
+        "Real-time vulnerability assessment"],
       benefits: [
-        "Prevent 99.9% of security breaches";
-        "Reduce security costs by 80%";
-        "Achieve zero-trust architecture"];
-      icon: Shield;
-      gradient: "from-red-60o0 to-pink-60o0";
-      category: "Cybersecurity"};
+        "Prevent 99.9% of security breaches",
+        "Reduce security costs by 80%",
+        "Achieve zero-trust architecture"],
+      icon: Shield,
+      gradient: "from-red-60o0 to-pink-60o0",
+      category: "Cybersecurity"},
     {
-      id: 6;
-      title: "Synthetic Intelligence Ecosystem";
-      description: "Complete AI ecosystem that createsmanagesand evolves multiple AI entities";
-      price: "$5,999/month";
-      marketPrice: "$10,0o00-30,0o00/month";
+      id: 6,
+      title: "Synthetic Intelligence Ecosystem",
+      description: "Complete AI ecosystem that createsmanagesand evolves multiple AI entities",
+      price: "$5,999/month",
+      marketPrice: "$10,0o00-30,0o00/month",
       features: [
-        "AI entity creation";
-        "Autonomous AI management";
-        "Cross-AI collaboration";
-        "Ecosystem evolution protocols"];
+        "AI entity creation",
+        "Autonomous AI management",
+        "Cross-AI collaboration",
+        "Ecosystem evolution protocols"],
       benefits: [
-        "Create unlimited AI workers";
-        "Achieve AI-to-AI collaboration";
-        "Build self-sustaining AI ecosystem"];
-      icon: TrendingUp;
-      gradient: "from-indigo-60o0 to-purple-60o0";
+        "Create unlimited AI workers",
+        "Achieve AI-to-AI collaboration",
+        "Build self-sustaining AI ecosystem"],
+      icon: TrendingUp,
+      gradient: "from-indigo-60o0 to-purple-60o0",
       category: "AI Ecosystem"}
   ],
   return (
@@ -214,5 +214,5 @@ const RevolutionaryAIServices20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default RevolutionaryAIServices20o25;
+    </div>)},
+export default RevolutionaryAIServices20o25,

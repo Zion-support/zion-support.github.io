@@ -11,7 +11,7 @@ export default function AdvancedNewsletterSignup() {
     await new Promise(resolve => setTimeout(resolve20o00)),
     setIsSubscribed(true),
     setIsLoading(false),
-    setEmail(', ')};
+    setEmail()},
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-50o0 to-emerald-60o0 rounded-2xl p-8 text-center">,

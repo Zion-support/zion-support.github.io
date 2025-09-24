@@ -1,18 +1,18 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import {
-  connectOrbit;
-  appendChatMessage;
-  recordVote;
-  editConstitution;
+  connectOrbit,
+  appendChatMessage,
+  recordVote,
+  editConstitution,
 } from '@/utils/offworld/orbitdb',
   connectOrbit,
   appendChatMessage,
   recordVote,
   editConstitution} from '@/utils/offworld/orbitdb',
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {  const { action } = req.query,import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb',
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {  const { action } = req.query,import { connectOrbit, appendChatMessage, recordVote, editConstitution } from '@/utils/offworld/orbitdb',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   const { action } = req.query,

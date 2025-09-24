@@ -29,7 +29,7 @@ export default function AutomationPage() {
                   Automation Hub,
                 </h1>,
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>,
-                  Discover our autonomous systems that work 24/7 to maintain;
+                  Discover our autonomous systems that work 24/7 to maintain,
                   optimize, and evolve our technology infrastructure.,
                 </p>,
               </header>,

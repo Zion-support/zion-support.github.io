@@ -1,53 +1,53 @@
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Cog;
-  Brain;
-  Rocket;
-  Target;
-  BarChart3;
-  Globe;
-  Shield;
+  Zap,
+  Cog,
+  Brain,
+  Rocket,
+  Target,
+  BarChart3,
+  Globe,
+  Shield,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function ProcessAutomation() {
   const services = [
     {
-      icon: <Zap className='w-12 h-12 text-cyan-40o0' />;
-      title: 'Intelligent Supply Chain';
-      description: 'AI-powered supply chain optimization and automation';
-      href: '/intelligent-supply-chain-optimization';
-    };
+      icon: <Zap className='w-12 h-12 text-cyan-40o0' />,
+      title: 'Intelligent Supply Chain',
+      description: 'AI-powered supply chain optimization and automation',
+      href: '/intelligent-supply-chain-optimization'
+    },
     {
-      icon: <Cog className='w-12 h-12 text-blue-40o0' />;
-      title: 'Workflow Automation';
-      description: 'Intelligent workflow orchestration and process management';
-      href: '/incident-automation-suite';
-    };
+      icon: <Cog className='w-12 h-12 text-blue-40o0' />,
+      title: 'Workflow Automation',
+      description: 'Intelligent workflow orchestration and process management',
+      href: '/incident-automation-suite'
+    },
     {
-      icon: <Brain className='w-12 h-12 text-purple-40o0' />;
-      title: 'AI Content Automation';
-      description: 'Revolutionary AI-powered content generation platform';
-      href: '/intelligent-content-automation-platform';
-    };
+      icon: <Brain className='w-12 h-12 text-purple-40o0' />,
+      title: 'AI Content Automation',
+      description: 'Revolutionary AI-powered content generation platform',
+      href: '/intelligent-content-automation-platform'
+    },
     {
-      icon: <Rocket className='w-12 h-12 text-green-40o0' />;
-      title: 'Business Process Automation';
-      description: 'End-to-end business process automation and optimization';
-      href: '/ai-autonomous-business-operations';
-    };
+      icon: <Rocket className='w-12 h-12 text-green-40o0' />,
+      title: 'Business Process Automation',
+      description: 'End-to-end business process automation and optimization',
+      href: '/ai-autonomous-business-operations'
+    },
     {
-      icon: <Target className='w-12 h-12 text-yellow-40o0' />;
-      title: 'Sales Automation';
-      description: 'AI-powered sales copilot and revenue optimization';
-      href: '/sales-copilot';
-    };
+      icon: <Target className='w-12 h-12 text-yellow-40o0' />,
+      title: 'Sales Automation',
+      description: 'AI-powered sales copilot and revenue optimization',
+      href: '/sales-copilot'
+    },
     {
-      icon: <BarChart3 className='w-12 h-12 text-pink-40o0' />;
-      title: 'HR Analytics Automation';
-      description: 'Intelligent HR analytics and workforce optimization';
-      href: '/intelligent-hr-analytics-platform';
-    };
+      icon: <BarChart3 className='w-12 h-12 text-pink-40o0' />,
+      title: 'HR Analytics Automation',
+      description: 'Intelligent HR analytics and workforce optimization',
+      href: '/intelligent-hr-analytics-platform'
+    },
   ],
   return (
     <Layout>,

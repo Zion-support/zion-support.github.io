@@ -1,22 +1,22 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain;
-  ArrowRight;
-  ExternalLink;
-  CheckCircle;
-  Zap;
-  Star;
-  TrendingUp;
-  Users;
-  Award;
-  Clock;
-  Shield;
-  Rocket;
-  Globe;
-  Cpu;
-  Atom;
-  Target;
+  Brain,
+  ArrowRight,
+  ExternalLink,
+  CheckCircle,
+  Zap,
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Shield,
+  Rocket,
+  Globe,
+  Cpu,
+  Atom,
+  Target,
 } from 'lucide-react',
 interface ServiceFeature {
   name: string,
@@ -70,7 +70,7 @@ const getCategoryIcon = (category: string) => {
     return Cpu,
   if (categoryLower.includes('global') || categoryLower.includes('worldwide')),
     return Globe,
-  return Star};
+  return Star},
 const getPriorityColor = (priority: string) => {
   switch (priority) {
     case 'high':,
@@ -81,7 +81,7 @@ const getPriorityColor = (priority: string) => {
       return 'from-green-50o0 to-teal-50o0',
     default:,
       return 'from-cyan-50o0 to-purple-50o0'}
-};
+},
 const getPriorityLabel = (priority: string) => {
   switch (priority) {
     case 'high':,
@@ -92,27 +92,27 @@ const getPriorityLabel = (priority: string) => {
       return 'Low Priority',
     default:,
       return 'Standard'}
-};
+},
 const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
-  id;
-  name;
-  tagline;
-  description;
-  category;
-  type;
-  pricing;
-  features;
-  benefits;
-  useCases;
-  marketSize;
-  targetAudience;
-  competitiveAdvantage;
-  slug;
-  featured = false;
-  priority = 'medium';
-  technology = [];
-  compliance = [];
-  onCardClick;
+  id,
+  name,
+  tagline,
+  description,
+  category,
+  type,
+  pricing,
+  features,
+  benefits,
+  useCases,
+  marketSize,
+  targetAudience,
+  competitiveAdvantage,
+  slug,
+  featured = false,
+  priority = 'medium',
+  technology = [],
+  compliance = [],
+  onCardClick
 }) => {
   const [isHovered, setIsHovered] = useState(false),
   const [showDetails, setShowDetails] = useState(false),
@@ -122,10 +122,10 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
   const handleCardClick = () => {
     if (onCardClick) {
       onCardClick({ id, name, slug, category, type })}
-  };
+  },
   const handleLearnMore = (e: React.MouseEvent) => {
     e.stopPropagation(),
-    window.location.href = slug};
+    window.location.href = slug},
   return (
     <motion.div,
       layout,
@@ -181,7 +181,7 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
         <div className='grid grid-cols-2 gap-3'>,
           <div className='flex items-center gap-2 text-xs text-white/70'>,
             <Users className='w-3 h-3 text-cyan-40o0' />,
-            <span className='truncate'>{targetAudience.split(',')[0]}</span>,
+            <span className='truncate'>{targetAudience.split()[0]}</span>,
           </div>,
           <div className='flex items-center gap-2 text-xs text-white/70'>,
             <TrendingUp className='w-3 h-3 text-yellow-40o0' />,
@@ -314,5 +314,5 @@ const EnhancedServiceCard: React.FC<ServiceCardProps> = ({
         className='absolute bottom-4 right-4 text-xs text-white/50 hover: text-white transition-colors duration-20o0'>,
         {showDetails ? 'Show Less' : 'Show More'}
       </button>,
-    </motion.div>)};
-export default EnhancedServiceCard;
+    </motion.div>)},
+export default EnhancedServiceCard,

@@ -5,7 +5,7 @@ function ensureStorage() {
   const dir = path && path.dirname(EPISODES_PATH),
   if (!fs && fs.existsSync(dir)) fs && fs.mkdirSync(dir, { recursive: true }),
   if (!fs && fs.existsSync(EPISODES_PATH)),
-    fs && fs.writeFileSync(EPISODES_PATH, '[]', 'utf8'),
+    fs && fs.writeFileSync(EPISODES_PATH, '[]utf8'),
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST'),
     return res && res.status(405).json({ error: 'Method not allowed' }),
@@ -13,7 +13,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
 ,
   const highlights = segments.map((t: string, i: number) => ({
     label: `Highlight ${i + 1}`,
-    start: t;
+    start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
   episode.highlights = highlights,
   episodes[idx] = episode,
@@ -21,9 +21,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   return res.status(200).json({ episode })}
 ,
 const EPISODES_PATH = path.join (
-  process.cwd ();
-  'data';
-  'podcast';
+  process.cwd (),
+  'datapodcast',
   'episodes.json'),
 /**,
  * ensure_storage - Function description,
@@ -34,7 +33,7 @@ function ensure_storage() {
   $2}
   if ()) {
   $2}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8'),const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json'),
+    fs.writeFileSync (EPISODES_PATH, '[]utf8'),const EPISODES_PATH = path.join (process.cwd (), 'datapodcastepisodes.json'),
 /**,
  * ensure_storage - Function description,
  */,
@@ -44,7 +43,7 @@ function ensure_storage() {
   $2}
   if ()) {
   $2}
-    fs.writeFileSync (EPISODES_PATH, '[]', 'utf8'),
+    fs.writeFileSync (EPISODES_PATH, '[]utf8'),
 export default /**,
  * handler - Function description,
  */,
@@ -72,12 +71,12 @@ function handler() {
   const episode = episodes[idx],
   const segments = episode?.time_markers?.segments || [],
   const highlights = segments.map ((t: string, index: number) => ({
-    label: `Highlight ${i + 1}`;
-    start: t;
+    label: `Highlight ${i + 1}`,
+    start: t,
     end: ,
       i + 1 < segments.length,
         ? segments[i + 1],
-        : episode?.time_markers?.closing || '15:00';
+        : episode?.time_markers?.closing || '15: 00'
   })),    label: `Highlight ${i + 1}`,
     start: t,
     end: i + 1 < segments.length ? segments[i + 1] : episode?.time_markers?.closing || '15:00'})),
@@ -85,11 +84,11 @@ function handler() {
   episodes[idx] = episode,
   fs.writeFileSync (EPISODES_PATH, JSON.stringify (episodes, null, 2), 'utf8'),
 return res.status (200).json ({ episode }),  return res.status (200).json ({ episode }),
-    start: t;
-    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'}));
-  episode.highlights = highlights;
-  episodes[idx] = episode;
-  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8');
+    start: t,
+    end: i + 1 < segments.length ? segments[i + 1] : episode?.timeMarkers?.closing || '15:00'})),
+  episode.highlights = highlights,
+  episodes[idx] = episode,
+  fs.writeFileSync(EPISODES_PATH, JSON.stringify(episodes, null, 2), 'utf8'),
   return res.status(200).json({ episode })}
 ,
   return res.status(200).json({ episode }),

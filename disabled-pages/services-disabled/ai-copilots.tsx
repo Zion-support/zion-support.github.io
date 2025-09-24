@@ -1,10 +1,8 @@
 import Link from 'next/link',
 import { Brain, ArrowRight, CheckCircle, DollarSign, Clock } from 'lucide-react',
 export default function AICopilots() {
-  const benefits = ['Accelerate employee productivity by 25-40% with task automation';
-    'Reduce support response times with context-aware assistance';
-    'Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)';
-    'On-prem or VPC deployment options to keep data private';
+  const benefits = ['Accelerate employee productivity by 25-40% with task automationReduce support response times with context-aware assistance',
+    'Integrate securely with your tools (Google, Microsoft 365, Slack, Jira)On-prem or VPC deployment options to keep data private',
   ],
   return (
     <main className="min-h-screen bg-white">,
@@ -31,7 +29,7 @@ export default function AICopilots() {
               <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>2-3 weeks</span></div>,
             </div>,
             <ul className="space-y-2 mb-4">,
-              {['Requirements workshop','Private data ingestion (5 sources)','Prompt + policy design','Secure auth (SSO/Key)'].map((b) => (
+              {['Requirements workshopPrivate data ingestion (5 sources)','Prompt + policy designSecure auth (SSO/Key)'].map((b) => (
                 <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>))}
             </ul>,
             <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Request proposal <ArrowRight className="w-4 h-4 ml-2" /></Link>,
@@ -44,7 +42,7 @@ export default function AICopilots() {
               <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>4-6 weeks</span></div>,
             </div>,
             <ul className="space-y-2 mb-4">,
-              {['RAG with vector DB','Tool integrations (Jira/Slack/GitHub)','Analytics & guardrails','Fine-tuning & evals'].map((b) => (
+              {['RAG with vector DBTool integrations (Jira/Slack/GitHub)','Analytics & guardrailsFine-tuning & evals'].map((b) => (
                 <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>))}
             </ul>,
             <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Talk to an expert <ArrowRight className="w-4 h-4 ml-2" /></Link>,
@@ -57,7 +55,7 @@ export default function AICopilots() {
               <div className="flex items-center gap-2"><Clock className="w-4 h-4"  /><span>6-10 weeks</span></div>,
             </div>,
             <ul className="space-y-2 mb-4">,
-              {['SSO/SAML, audit logging','PII redaction & data residency','SOC2/ISO alignment','HA & on-call SRE'].map((b) => (
+              {['SSO/SAML, audit loggingPII redaction & data residency','SOC2/ISO alignmentHA & on-call SRE'].map((b) => (
                 <li key={b} className="flex items-center text-sm text-gray-70o0"><CheckCircle className="w-4 h-4 text-green-60o0 mr-2"  />{b}</li>))}
             </ul>,
             <Link href="/contact" className="inline-flex items-center text-blue-60o0 font-semibold">Start RFP <ArrowRight className="w-4 h-4 ml-2" /></Link>,

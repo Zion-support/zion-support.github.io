@@ -24,7 +24,7 @@ export async function connectOrbit(
   customIpfsUrl?: string): Promise<OrbitConnections> {
   await lazyLoadDeps(),
   if (!createIpfsClient || !OrbitDB),
-    return { ipfs: null, orbit: null, stores: null };
+    return { ipfs: null, orbit: null, stores: null },
   const ipfsUrl =,
     customIpfsUrl || process.env.IPFS_API || 'http: //127.0.0.1:50o01',
   const ipfs = createIpfsClient({ url: ipfsUrl }),
@@ -33,11 +33,11 @@ export async function connectOrbit(
   const chat = await orbit.feed('zion.chat'),
   const votes = await orbit.eventlog('zion.votes'),
   const constitution = await orbit.docstore('zion.constitution'),
-  return { ipfs, orbit, stores: { chat, votes, constitution } };
+  return { ipfs, orbit, stores: { chat, votes, constitution } },
 }
 ,
 export async function appendChatMessage(
-  stores: OrbitStores;
+  stores: OrbitStores,
   message: { from: string, text: string, ts?: number }
 ) {
   if (!stores?.chat) return false,
@@ -45,7 +45,7 @@ export async function appendChatMessage(
   return true}
 ,
 export async function recordVote(
-  stores: OrbitStores;
+  stores: OrbitStores,
   vote: { proposalId: string, voter: string, choice: string, ts?: number }
 ) {
   if (!stores?.votes) return false,
@@ -53,15 +53,15 @@ export async function recordVote(
   return true}
 ,
 export async function editConstitution(
-  stores: OrbitStores;
+  stores: OrbitStores,
   change: { editor: string, section: string, diff: string, ts?: number }
 ) {
   if (!stores?.constitution) return false,
   const id = `${Date.now()}-${change.section}`,
   await stores.constitution.put({
-    _id: id;
-    ...change;
-    ts: change.ts || Date.now();
+    _id: id,
+    ...change,
+    ts: change.ts || Date.now()
   }),
   return true}
 ,

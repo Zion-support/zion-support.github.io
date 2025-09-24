@@ -11,7 +11,7 @@ interface ContentItem {
   metrics: {
     roi: string,
     savings: string,
-    efficiency: string};
+    efficiency: string},
   readingTime: string,
   featured: boolean}
 ,
@@ -20,40 +20,40 @@ const NeuralInterface20o25PromotionBanner: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const neuralInterfaceContent: ContentItem[] = [
     {
-      id: 'neural-interfaces-business-revolution';
-      title: 'AI 20o25: The Neural Interfaces Business Revolution - Ultimate Enterprise Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-neural-interfaces-business-revolution-ultimate-guide';
-      description: 'Transform your business with brain-computer interface technology achieving 80o0% ROI in 12 months.';
+      id: 'neural-interfaces-business-revolution',
+      title: 'AI 20o25: The Neural Interfaces Business Revolution - Ultimate Enterprise Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-neural-interfaces-business-revolution-ultimate-guide',
+      description: 'Transform your business with brain-computer interface technology achieving 80o0% ROI in 12 months.',
       metrics: {
-        roi: '80o0%';
-        savings: '$50M+';
-        efficiency: '95%'};
-      readingTime: '25 min read';
-      featured: true};
+        roi: '80o0%',
+        savings: '$50M+',
+        efficiency: '95%'},
+      readingTime: '25 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-neural-transformation';
-      title: 'Fortune 50o0 Neural Interface Transformation: 80o0% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-neural-interface-transformation-80o0-roi-success';
-      description: 'How a Global Manufacturing Giant achieved $75M annual savings with neural interface technology.';
+      id: 'fortune-50o0-neural-transformation',
+      title: 'Fortune 50o0 Neural Interface Transformation: 80o0% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-neural-interface-transformation-80o0-roi-success',
+      description: 'How a Global Manufacturing Giant achieved $75M annual savings with neural interface technology.',
       metrics: {
-        roi: '80o0%';
-        savings: '$75M';
-        efficiency: '98%'};
-      readingTime: '18 min read';
-      featured: true};
+        roi: '80o0%',
+        savings: '$75M',
+        efficiency: '98%'},
+      readingTime: '18 min read',
+      featured: true},
     {
-      id: 'neural-interface-implementation-guide';
-      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
-      type: 'resource';
-      url: '/resources/neural-interface-implementation-guide-20o25';
-      description: 'Complete framework for enterprise neural interface deployment with proven 80o0% ROI results.';
+      id: 'neural-interface-implementation-guide',
+      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI',
+      type: 'resource',
+      url: '/resources/neural-interface-implementation-guide-20o25',
+      description: 'Complete framework for enterprise neural interface deployment with proven 80o0% ROI results.',
       metrics: {
-        roi: '80o0%';
-        savings: '$50M+';
-        efficiency: '95%'};
-      readingTime: '30 min read';
+        roi: '80o0%',
+        savings: '$50M+',
+        efficiency: '95%'},
+      readingTime: '30 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -62,7 +62,7 @@ const NeuralInterface20o25PromotionBanner: React.FC = () => {
     return () => clearInterval(interval)}[neuralInterfaceContent.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('neural-interface-banner-'dismissed', 'true')};
+    localStorage.setItem('neural-interface-banner-'dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('neural-interface-banner-dismissed'),
     if (dismissed === 'true') {
@@ -186,5 +186,5 @@ const NeuralInterface20o25PromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NeuralInterface20o25PromotionBanner;
+    </div>)},
+export default NeuralInterface20o25PromotionBanner,

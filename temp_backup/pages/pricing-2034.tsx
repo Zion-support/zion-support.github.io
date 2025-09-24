@@ -2,62 +2,62 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  Zap;
-  Shield;
-  Users;
-  Globe;
-  ArrowRight;
-  ExternalLink;
-  TrendingUp;
-  Clock;
-  Target;
-  Building;
-  Rocket;
-  Award;
-  DollarSign;
-  ChartBar;
-  Lock;
-  Cpu;
-  Database;
-  Cloud;
-  Smartphone;
-  Palette;
-  Search;
-  MessageSquare;
-  FileText;
-  Calendar;
-  CreditCard;
-  BarChart3;
-  Settings;
-  Code;
-  BookOpen;
-  Activity;
-  Crown;
-  Gem;
-  Infinity;
-  Brain;
-  Atom;
-  Microscope;
-  Phone;
-  Mail;
-  MapPin;
-  ShoppingCart;
-  UserCheck;
-  Video;
-  LockIcon;
-  GlobeIcon;
-  CpuIcon;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Clock,
+  Target,
+  Building,
+  Rocket,
+  Award,
+  DollarSign,
+  ChartBar,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Palette,
+  Search,
+  MessageSquare,
+  FileText,
+  Calendar,
+  CreditCard,
+  BarChart3,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Crown,
+  Gem,
+  Infinity,
+  Brain,
+  Atom,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,
+  ShoppingCart,
+  UserCheck,
+  Video,
+  LockIcon,
+  GlobeIcon,
+  CpuIcon,
 } from 'lucide-react',
 import { realMarketServices } from '../data/20o24-real-market-services',
 import { aiEmergingTechServices } from '../data/20o24-ai-emerging-tech-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function Pricing20o34Page() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'),
@@ -65,160 +65,131 @@ export default function Pricing20o34Page() {
   // Enhanced service categories with pricing,
   const serviceCategories = [
     {
-      name: 'Revolutionary AI Services';
-      description: 'AI consciousness evolution and emotional intelligence';
+      name: 'Revolutionary AI Services',
+      description: 'AI consciousness evolution and emotional intelligence',
       services: [
-        'AI Business Intelligence Pro';
-        'AI Video Generation Platform';
-        'AI-Powered Cybersecurity';
-        'AI Drug Discovery Platform';
-      ];
-      avgPrice: '$1,399/month';
-      savings: 'Save 60-80% vs. competitors';
-      icon: Brain;
-      color: 'from-violet-50o0 to-purple-50o0';
-    };
+        'AI Business Intelligence ProAI Video Generation Platform',
+        'AI-Powered CybersecurityAI Drug Discovery Platform',
+      ],
+      avgPrice: '$1,399/month',
+      savings: 'Save 60-80% vs. competitors',
+      icon: Brain,
+      color: 'from-violet-50o0 to-purple-50o0'
+    },
     {
-      name: 'Quantum & Emerging Tech';
-      description: 'Quantum computing and DNA-based solutions';
+      name: 'Quantum & Emerging Tech',
+      description: 'Quantum computing and DNA-based solutions',
       services: [
-        'Quantum Machine Learning';
-        'Blockchain AI Platform';
-        'Edge AI Computing';
-        'AI Climate Modeling';
-      ];
-      avgPrice: '$1,199/month';
-      savings: 'Save 70-85% vs. competitors';
-      icon: Atom;
-      color: 'from-indigo-50o0 to-blue-50o0';
-    };
+        'Quantum Machine LearningBlockchain AI Platform',
+        'Edge AI ComputingAI Climate Modeling',
+      ],
+      avgPrice: '$1,199/month',
+      savings: 'Save 70-85% vs. competitors',
+      icon: Atom,
+      color: 'from-indigo-50o0 to-blue-50o0'
+    },
     {
-      name: 'Enterprise IT Solutions';
-      description: 'Autonomous operations and zero-trust security';
+      name: 'Enterprise IT Solutions',
+      description: 'Autonomous operations and zero-trust security',
       services: [
-        'API Security & Monitoring';
-        'Customer Success Automation';
-        'HR Automation Suite';
-        'Project Management AI';
-      ];
-      avgPrice: '$299/month';
-      savings: 'Save 50-70% vs. competitors';
-      icon: Cpu;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'API Security & MonitoringCustomer Success Automation',
+        'HR Automation SuiteProject Management AI',
+      ],
+      avgPrice: '$299/month',
+      savings: 'Save 50-70% vs. competitors',
+      icon: Cpu,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      name: 'Business Automation';
-      description: 'Streamline business operations';
+      name: 'Business Automation',
+      description: 'Streamline business operations',
       services: [
-        'E-commerce Automation';
-        'Marketing Automation Suite';
-        'Financial Analytics Platform';
-        'Legal Document Automation';
-      ];
-      avgPrice: '$319/month';
-      savings: 'Save 40-60% vs. competitors';
-      icon: ShoppingCart;
-      color: 'from-teal-50o0 to-emerald-50o0';
-    };
+        'E-commerce AutomationMarketing Automation Suite',
+        'Financial Analytics PlatformLegal Document Automation',
+      ],
+      avgPrice: '$319/month',
+      savings: 'Save 40-60% vs. competitors',
+      icon: ShoppingCart,
+      color: 'from-teal-50o0 to-emerald-50o0'
+    },
     {
-      name: 'Robotics & Automation';
-      description: 'Intelligent automation solutions';
+      name: 'Robotics & Automation',
+      description: 'Intelligent automation solutions',
       services: [
-        'Autonomous Robotics Platform';
-        'AI Content Generator Elite';
-        'AI Guardrails Suite';
-        'AI Business Intelligence';
-      ];
-      avgPrice: '$699/month';
-      savings: 'Save 55-75% vs. competitors';
-      icon: Rocket;
-      color: 'from-green-50o0 to-yellow-50o0';
-    };
+        'Autonomous Robotics PlatformAI Content Generator Elite',
+        'AI Guardrails SuiteAI Business Intelligence',
+      ],
+      avgPrice: '$699/month',
+      savings: 'Save 55-75% vs. competitors',
+      icon: Rocket,
+      color: 'from-green-50o0 to-yellow-50o0'
+    },
     {
-      name: 'Research & Development';
-      description: 'Breakthrough technologies and innovations';
+      name: 'Research & Development',
+      description: 'Breakthrough technologies and innovations',
       services: [
-        'Quantum DNA Computing';
-        'Space Mining Automation';
-        'Metaverse AI Development';
-        'Holographic Events';
-      ];
-      avgPrice: '$21,999/month';
-      savings: 'Save 65-80% vs. competitors';
-      icon: Microscope;
-      color: 'from-orange-50o0 to-red-50o0';
-    };
+        'Quantum DNA ComputingSpace Mining Automation',
+        'Metaverse AI DevelopmentHolographic Events',
+      ],
+      avgPrice: '$21,999/month',
+      savings: 'Save 65-80% vs. competitors',
+      icon: Microscope,
+      color: 'from-orange-50o0 to-red-50o0'
+    },
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings,
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for small businesses and startups';
-      price: billingCycle === 'monthly' ? 99 : 79;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billingCycle === 'monthly' ? 99 : 79,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 10o0+ Core Services';
-        'Basic AI Integration';
-        'Standard Support (24/7)';
-        '30-Day Free Trial';
-        'Basic Analytics Dashboard';
-        'Email Support';
-        '99.5% Uptime Guarantee';
-        'Basic Security Features';
-        'API Access (10o00 calls/month)';
-        'Community Support';
-      ];
-      popular: false;
-      color: 'from-gray-50o0 to-gray-60o0';
-    };
+        'Access to 10o0+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeBasic Security Features',
+        'API Access (10o00 calls/month)Community Support',
+      ],
+      popular: false,
+      color: 'from-gray-50o0 to-gray-60o0'
+    },
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses and teams';
-      price: billingCycle === 'monthly' ? 299 : 239;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 299 : 239,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 20o0+ Services';
-        'Advanced AI Features';
-        'Priority Support (4-hour response)';
-        '60-Day Free Trial';
-        'Advanced Analytics & Reporting';
-        'Phone & Email Support';
-        '99.9% Uptime Guarantee';
-        'Advanced Security Features';
-        'API Access (10,0o00 calls/month)';
-        'Dedicated Account Manager';
-        'Custom Integrations';
-        'White-label Solutions';
-      ];
-      popular: true;
-      color: 'from-cyan-50o0 to-blue-50o0';
-    };
+        'Access to 20o0+ ServicesAdvanced AI Features',
+        'Priority Support (4-hour response)60-Day Free Trial',
+        'Advanced Analytics & ReportingPhone & Email Support',
+        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'API Access (10,0o00 calls/month)Dedicated Account Manager',
+        'Custom IntegrationsWhite-label Solutions',
+      ],
+      popular: true,
+      color: 'from-cyan-50o0 to-blue-50o0'
+    },
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: billingCycle === 'monthly' ? 999 : 799;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 999 : 799,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL Services';
-        'Full AI Suite & Custom Models';
-        '24/7 Premium Support';
-        '90-Day Free Trial';
-        'Enterprise Analytics & BI';
-        'Dedicated Support Team';
-        '99.99% Uptime Guarantee';
-        'Enterprise Security & Compliance';
-        'Unlimited API Access';
-        'Custom Development';
-        'On-premise Deployment';
-        'SLA Guarantees';
-        'Training & Certification';
-      ];
-      popular: false;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Access to ALL ServicesFull AI Suite & Custom Models',
+        '24/7 Premium Support90-Day Free Trial',
+        'Enterprise Analytics & BIDedicated Support Team',
+        '99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Unlimited API AccessCustom Development',
+        'On-premise DeploymentSLA Guarantees',
+        'Training & Certification',
+      ],
+      popular: false,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
   ],
   // All services for comprehensive pricing,
   const allServices = [...realMarketServices, ...aiEmergingTechServices],
@@ -323,17 +294,17 @@ export default function Pricing20o34Page() {
               <div className='grid grid-cols-2 md: grid-cols-4 gap-6 max-w-4xl mx-auto'>,
                 {[
                   {
-                    label: 'Total Services';
-                    value: allServices.length.toString();
-                    icon: Rocket;
-                  };
-                  { label: 'Happy Customers', value: '50K+', icon: Users };
-                  { label: 'Success Rate', value: '99.9%', icon: Check };
+                    label: 'Total Services',
+                    value: allServices.length.toString(),
+                    icon: Rocket
+                  },
+                  { label: 'Happy Customers', value: '50K+', icon: Users },
+                  { label: 'Success Rate', value: '99.9%', icon: Check },
                   {
-                    label: 'Global Reach';
-                    value: '45+ Countries';
-                    icon: Globe;
-                  };
+                    label: 'Global Reach',
+                    value: '45+ Countries',
+                    icon: Globe
+                  },
                 ].map((stat, index) => (
                   <motion.div,
                     key={stat.label}

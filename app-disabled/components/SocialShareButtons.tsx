@@ -2,9 +2,9 @@
 type Props = {
   url?: string,
   title?: string,
-  description?: string};
+  description?: string},
 export default function SocialShareButtons({ url, title, description }: Props) {
-  const networks = ['X', 'LinkedIn', 'Facebook'],
+  const networks = ['XLinkedIn', 'Facebook'],
   const shareText = encodeURIComponent(title ?? ''),
   const shareUrl = encodeURIComponent(url ?? ''),
   return (

@@ -37,7 +37,7 @@ export function PreviewHeader({ resumeonBack }: PreviewHeaderProps) {
     // Remove the temporary style element after printing,
     setTimeout(() => {
       document.head.removeChild(style),
-      setIsPrinting(false)}1000)};
+      setIsPrinting(false)}1000)},
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'justify-between'} items-${isMobile ? 'stretch' : 'center'} gap-3`}>,
       <Button

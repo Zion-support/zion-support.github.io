@@ -1,5 +1,5 @@
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -25,26 +25,26 @@ import Link from 'next / link',
   Youtube,
   Github} from 'lucide-react',import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Star;
-  Shield;
-  Brain;
-  DollarSign;
-  Dna;
-  Rocket;
-  Users;
-  Award;
-  Zap;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;} from 'lucide-react',import {
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,} from 'lucide-react',import {
   Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github,
@@ -99,11 +99,11 @@ const contactInfo = {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -187,10 +187,10 @@ class ErrorBoundary extends React.Component {
         href: '/ai-autonomous-patient-care'}
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
       {
-        name: 'AI Autonomous Clinical Trials';
-        href: '/ai-autonomous-clinical-trials';
-      };
-    ];
+        name: 'AI Autonomous Clinical Trials',
+        href: '/ai-autonomous-clinical-trials'
+      },
+    ],
   }]}
 ,
 const serviceCategories = [
@@ -230,34 +230,34 @@ const serviceCategories = [
       { name: 'Quantum Genomic Analysis', href: '/quantum-genomic-analysis' }
       { name: 'AI Autonomous Clinical Trials', href: '/ai-autonomous-clinical-trials' }
     ],
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Star;
-  Shield;
-  Brain;
-  DollarSign;
-  Dna;
-  Rocket;
-  Users;
-  Award;
-  Zap;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Brain,
+  DollarSign,
+  Dna,
+  Rocket,
+  Users,
+  Award,
+  Zap,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
   Github} from 'lucide-react',import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield;
+  Phone, Mail, MapPin, Globe, ArrowRight, Star, Shield,
   Brain, DollarSign, Dna, Rocket, Users, Award, Zap,
   Facebook, Twitter, Linkedin, Instagram, Youtube, Github,
 const contact_info = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 }
 {
   name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics'}
@@ -303,171 +303,171 @@ const contact_info = {
 {
   /* Background Effects */}<div className="absolute inset - 0 overflow - hidden" > <div className="absolute inset - 0 bg-[radial - gradient (circle at 30% 20%, rgba (6, 182, 212, 0.05), transparent 50%) ]" ></div> <div className="absolute inset - 0 bg-[radial - gradient (circle at 70% 80%, rgba (139, 92, 246, 0.05), transparent 50%) ]" ></div> </div> <motion.div initial= {
   {
-    title: 'AI & Automation';
+    title: 'AI & Automation',
     services: [
       {
-        name: 'AI Autonomous Business Processor';
-        href: '/ai - autonomous - business - processor';
-      };
+        name: 'AI Autonomous Business Processor',
+        href: '/ai - autonomous - business - processor'
+      },
       {
-        name: 'AI Predictive Enterprise Analytics';
-        href: '/ai - predictive - enterprise - analytics';
-      };
+        name: 'AI Predictive Enterprise Analytics',
+        href: '/ai - predictive - enterprise - analytics'
+      },
       {
-        name: 'AI Autonomous Customer Success';
-        href: '/ai - autonomous - customer - success';
-      };
+        name: 'AI Autonomous Customer Success',
+        href: '/ai - autonomous - customer - success'
+      },
       {
-        name: 'AI Autonomous Marketing Orchestrator';
-        href: '/ai - autonomous - marketing - orchestrator';
-      };
+        name: 'AI Autonomous Marketing Orchestrator',
+        href: '/ai - autonomous - marketing - orchestrator'
+      },
       {
-        name: 'AI Autonomous Sales Intelligence';
-        href: '/ai - autonomous - sales - intelligence';
-      };
-    ];
-  };
+        name: 'AI Autonomous Sales Intelligence',
+        href: '/ai - autonomous - sales - intelligence'
+      },
+    ],
+  },
   {
-    title: 'Cybersecurity & Quantum';
+    title: 'Cybersecurity & Quantum',
     services: [
       {
-        name: 'Quantum Encryption Platform';
-        href: '/quantum - encryption - platform';
-      };
+        name: 'Quantum Encryption Platform',
+        href: '/quantum - encryption - platform'
+      },
       {
-        name: 'AI Autonomous Threat Hunter';
-        href: '/ai - autonomous - threat - hunter';
-      };
+        name: 'AI Autonomous Threat Hunter',
+        href: '/ai - autonomous - threat - hunter'
+      },
       {
-        name: 'Quantum Zero Trust Security';
-        href: '/quantum - zero - trust - security';
-      };
+        name: 'Quantum Zero Trust Security',
+        href: '/quantum - zero - trust - security'
+      },
       {
-        name: 'AI Autonomous Vulnerability Scanner';
-        href: '/ai - autonomous - vulnerability - scanner';
-      };
+        name: 'AI Autonomous Vulnerability Scanner',
+        href: '/ai - autonomous - vulnerability - scanner'
+      },
       {
-        name: 'Quantum Secure Communication';
-        href: '/quantum - secure - communication';
-      };
-    ];
-  };
+        name: 'Quantum Secure Communication',
+        href: '/quantum - secure - communication'
+      },
+    ],
+  },
   {
-    title: 'Fintech & Blockchain';
+    title: 'Fintech & Blockchain',
     services: [
       {
-        name: 'Quantum Financial Trading Platform';
-        href: '/quantum - financial - trading - platform';
-      };
+        name: 'Quantum Financial Trading Platform',
+        href: '/quantum - financial - trading - platform'
+      },
       {
-        name: 'AI Autonomous Wealth Management';
-        href: '/ai - autonomous - wealth - management';
-      };
+        name: 'AI Autonomous Wealth Management',
+        href: '/ai - autonomous - wealth - management'
+      },
       {
-        name: 'Quantum Blockchain Finance';
-        href: '/quantum - blockchain - finance';
-      };
+        name: 'Quantum Blockchain Finance',
+        href: '/quantum - blockchain - finance'
+      },
       {
-        name: 'AI Autonomous Insurance Platform';
-        href: '/ai - autonomous - insurance - platform';
-      };
+        name: 'AI Autonomous Insurance Platform',
+        href: '/ai - autonomous - insurance - platform'
+      },
       {
-        name: 'Quantum Payment Processing';
-        href: '/quantum - payment - processing';
-      };
-    ];
-  };
+        name: 'Quantum Payment Processing',
+        href: '/quantum - payment - processing'
+      },
+    ],
+  },
   {
-    title: 'Healthcare & Biotech';
+    title: 'Healthcare & Biotech',
     services: [
       {
-        name: 'AI Autonomous Medical Diagnostics';
-        href: '/ai - autonomous - medical - diagnostics';
-      };
+        name: 'AI Autonomous Medical Diagnostics',
+        href: '/ai - autonomous - medical - diagnostics'
+      },
       {
-        name: 'Quantum Drug Discovery Platform';
-        href: '/quantum - drug - discovery - platform';
-      };
+        name: 'Quantum Drug Discovery Platform',
+        href: '/quantum - drug - discovery - platform'
+      },
       {
-        name: 'AI Autonomous Patient Care';
-        href: '/ai - autonomous - patient - care';
-      };
-      { name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' };
+        name: 'AI Autonomous Patient Care',
+        href: '/ai - autonomous - patient - care'
+      },
+      { name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' },
       {
-        name: 'AI Autonomous Clinical Trials';
-        href: '/ai - autonomous - clinical - trials';
-      };
-    ];
+        name: 'AI Autonomous Clinical Trials',
+        href: '/ai - autonomous - clinical - trials'
+      },
+    ],
   }]}
 ,
 const service_categories = [
   {
-    title: 'AI & Automation';
+    title: 'AI & Automation',
     services: [
-      { name: 'AI Autonomous Business Processor', href: '/ai - autonomous - business - processor' };
-      { name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics' };
-      { name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success' };
-      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator' };
+      { name: 'AI Autonomous Business Processor', href: '/ai - autonomous - business - processor' },
+      { name: 'AI Predictive Enterprise Analytics', href: '/ai - predictive - enterprise - analytics' },
+      { name: 'AI Autonomous Customer Success', href: '/ai - autonomous - customer - success' },
+      { name: 'AI Autonomous Marketing Orchestrator', href: '/ai - autonomous - marketing - orchestrator' },
       { name: 'AI Autonomous Sales Intelligence', href: '/ai - autonomous - sales - intelligence' }
     ]}
 ,
   {
-    title: 'Cybersecurity & Quantum';
+    title: 'Cybersecurity & Quantum',
     services: [
-      { name: 'Quantum Encryption Platform', href: '/quantum - encryption - platform' };
-      { name: 'AI Autonomous Threat Hunter', href: '/ai - autonomous - threat - hunter' };
-      { name: 'Quantum Zero Trust Security', href: '/quantum - zero - trust - security' };
-      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai - autonomous - vulnerability - scanner' };
+      { name: 'Quantum Encryption Platform', href: '/quantum - encryption - platform' },
+      { name: 'AI Autonomous Threat Hunter', href: '/ai - autonomous - threat - hunter' },
+      { name: 'Quantum Zero Trust Security', href: '/quantum - zero - trust - security' },
+      { name: 'AI Autonomous Vulnerability Scanner', href: '/ai - autonomous - vulnerability - scanner' },
       { name: 'Quantum Secure Communication', href: '/quantum - secure - communication' }
     ]}
   {
-    title: 'Fintech & Blockchain';
+    title: 'Fintech & Blockchain',
     services: [
-      { name: 'Quantum Financial Trading Platform', href: '/quantum - financial - trading - platform' };
-      { name: 'AI Autonomous Wealth Management', href: '/ai - autonomous - wealth - management' };
-      { name: 'Quantum Blockchain Finance', href: '/quantum - blockchain - finance' };
-      { name: 'AI Autonomous Insurance Platform', href: '/ai - autonomous - insurance - platform' };
+      { name: 'Quantum Financial Trading Platform', href: '/quantum - financial - trading - platform' },
+      { name: 'AI Autonomous Wealth Management', href: '/ai - autonomous - wealth - management' },
+      { name: 'Quantum Blockchain Finance', href: '/quantum - blockchain - finance' },
+      { name: 'AI Autonomous Insurance Platform', href: '/ai - autonomous - insurance - platform' },
       { name: 'Quantum Payment Processing', href: '/quantum - payment - processing' }
     ]}
   {
-    title: 'Healthcare & Biotech';
+    title: 'Healthcare & Biotech',
     services: [
-      { name: 'AI Autonomous Medical Diagnostics', href: '/ai - autonomous - medical - diagnostics' };
-      { name: 'Quantum Drug Discovery Platform', href: '/quantum - drug - discovery - platform' };
-      { name: 'AI Autonomous Patient Care', href: '/ai - autonomous - patient - care' };
-      { name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' };
+      { name: 'AI Autonomous Medical Diagnostics', href: '/ai - autonomous - medical - diagnostics' },
+      { name: 'Quantum Drug Discovery Platform', href: '/quantum - drug - discovery - platform' },
+      { name: 'AI Autonomous Patient Care', href: '/ai - autonomous - patient - care' },
+      { name: 'Quantum Genomic Analysis', href: '/quantum - genomic - analysis' },
       { name: 'AI Autonomous Clinical Trials', href: '/ai - autonomous - clinical - trials' }
     ]}
 ]],
 const companyLinks = [
 const company_links = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Leadership Team', href: '/leadership' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'News & Press', href: '/news' };
-  { name: 'Partners', href: '/partners' };
-  { name: 'Investors', href: '/investors' };
-  { name: 'Contact Us', href: '/contact' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Leadership Team', href: '/leadership' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News & Press', href: '/news' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Investors', href: '/investors' },
+  { name: 'Contact Us', href: '/contact' },
 const resourceLinks = [
   { name: 'Locations', href: '/locations' }],  { name: 'Locations', href: '/locations' }
 ],
 const resource_links = [
-  { name: 'Documentation', href: '/docs' };
-  { name: 'API Reference', href: '/api - documentation' };
-  { name: 'Case Studies', href: '/case - studies' };
-  { name: 'Blog & News', href: '/blog' };
-  { name: 'Support Center', href: '/support' };
-  { name: 'Training & Certification', href: '/training' };
-  { name: 'Community Forum', href: '/community' };
+  { name: 'Documentation', href: '/docs' },
+  { name: 'API Reference', href: '/api - documentation' },
+  { name: 'Case Studies', href: '/case - studies' },
+  { name: 'Blog & News', href: '/blog' },
+  { name: 'Support Center', href: '/support' },
+  { name: 'Training & Certification', href: '/training' },
+  { name: 'Community Forum', href: '/community' },
 const socialLinks = [
   { name: 'Developer Resources', href: '/developer - resources' }],  { name: 'Developer Resources', href: '/developer - resources' }
 ],
 const social_links = [
-  { name: 'Facebook', href: '#', icon: Facebook };
-  { name: 'Twitter', href: '#', icon: Twitter };
-  { name: 'LinkedIn', href: '#', icon: Linkedin };
-  { name: 'Instagram', href: '#', icon: Instagram };
-  { name: 'YouTube', href: '#', icon: Youtube };
+  { name: 'Facebook', href: '#', icon: Facebook },
+  { name: 'Twitter', href: '#', icon: Twitter },
+  { name: 'LinkedIn', href: '#', icon: Linkedin },
+  { name: 'Instagram', href: '#', icon: Instagram },
+  { name: 'YouTube', href: '#', icon: Youtube },
 export default function UltraFuturisticFooter2026() {
   return (
     <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>,
@@ -495,7 +495,7 @@ export default function UltraFuturisticFooter2026() {
           <div className="lg: col-span-2">,
 export default function UltraFuturisticFooter2026() {
   return (
-    <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>  { name: 'GitHub', href: '#', icon: Github };
+    <footer className='relative bg-gradient-to-b from-gray-900 to-black border-t border-gray-800'>  { name: 'GitHub', href: '#', icon: Github },
 ],
 export default function UltraFuturisticFooter2026() {
   return (

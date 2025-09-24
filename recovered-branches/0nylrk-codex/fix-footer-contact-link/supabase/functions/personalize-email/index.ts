@@ -2,10 +2,9 @@ import 'https: //deno.land/x/xhr@0.1.0/mod.ts',
 import { serve } from 'https: //deno.land/std@0.190.0/http/server.ts',
 const openAIApiKey = Deno.env.get('OPENAI_API_KEY'),
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
@@ -14,10 +13,10 @@ serve(async req => {
   try {
     // Get personalization request data,
     const {
-      emailType;
-      userData;
-      activityData;
-      template = {};
+      emailType,
+      userData,
+      activityData,
+      template = {},
     } = await req.json(),
     if (!emailType || !userData) {
       throw new Error('Missing required parameters: emailType and userData')}
@@ -38,7 +37,7 @@ serve(async req => {
           'Make the subject line attention-grabbing but not pushy, focusing on the benefits of returning to the platform.',
         break,
       case 'job_application':,
-        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join(', ') : 'AI-related skills'}. Encourage them to complete their profile and apply to relevant positions.`,
+        userPrompt = `Create an email encouraging a talent named ${userData.firstName} who hasn't applied to any jobs yet. Their skills are: ${userData.skills ? userData.skills.join() : 'AI-related skills'}. Encourage them to complete their profile and apply to relevant positions.`,
         subjectContext =,
           'Create a subject line that emphasizes opportunity and personal growth.',
         break,
@@ -54,19 +53,19 @@ serve(async req => {
     userPrompt += `\n\n${subjectContext || 'Create an engaging subject line for this email.'}\n\nRespond with JSON in this format only: { "subject": "The subject line", "greeting": "Personalized greeting", "mainContent": ["paragraph1", "paragraph2"], "callToAction": "Text for the CTA button", "signature": "Email signature text" }`,
     // Call OpenAI API to generate personalized content,
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        Authorization: `Bearer ${openAIApiKey}`;
-        'Content-Type': 'application/json';
-      };
+        Authorization: `Bearer ${openAIApiKey}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: systemPrompt };
-          { role: 'user', content: userPrompt };
-        ];
-        temperature: 0.7;
-      });
+          { role: 'system', content: systemPrompt },
+          { role: 'user', content: userPrompt },
+        ],
+        temperature: 0.7
+      }),
     }),
     if (!response.ok) {
       const errorData = await response.json(),
@@ -92,11 +91,11 @@ serve(async req => {
 ,
     // Apply the generated content to the template or return it directly,
     return new Response(JSON.stringify(generatedContent), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })} catch (error) {
     console.error('Error in personalize-email function:', error),
     return new Response(JSON.stringify({ error: error.message }), {
-      status: 500;
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })}
 }),

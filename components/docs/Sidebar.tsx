@@ -2,13 +2,13 @@
 ,
   spec: ApiDocsSpec,
 export default function Sidebar(): any ({
-  spec;
-  activeEndpointId;
-  onSelectEndpoint;
-  selectedVersion;
-  onChangeVersion;
-  visibilityFilter;
-  onChangeVisibility;
+  spec,
+  activeEndpointId,
+  onSelectEndpoint,
+  selectedVersion,
+  onChangeVersion,
+  visibilityFilter,
+  onChangeVisibility,
 }: SidebarProps) {
   return (
     <aside className='w-72 shrink-0 h-full overflow-auto border-r border-high-contrast-secondary p-3 space-y-4 bg-high-contrast-secondary'>,
@@ -17,7 +17,7 @@ export default function Sidebar(): any ({
         <div className='text-xs text-high-contrast-muted'>Version</div>,
         <div className='flex gap-2 mt-2 flex-wrap'>,
           {spec && spec.versions.map(v => (
-import React from 'react';
+import React from 'react',
 import { ApiDocsSpec, Visibility } from '../../data/api-docs/types',
 interface SidebarProps {
 import {ApiDocsSpec, Visibility} from '../../data/api-docs/types',
@@ -52,12 +52,12 @@ export default function Sidebar({
               {v}
 ,
 interface SidebarProps {
-  spec: ApiDocsSpec;
+  spec: ApiDocsSpec,
   activeEndpointId?: string,
-  onSelectEndpoint: (endpointId: string) => void;
-  selectedVersion: string;
-  onChangeVersion: (v: string) => void;
-  visibilityFilter: Visibility | 'all';
+  onSelectEndpoint: (endpointId: string) => void,
+  selectedVersion: string,
+  onChangeVersion: (v: string) => void,
+  visibilityFilter: Visibility | 'all',
   onChangeVisibility: (v: Visibility | 'all') => void}
 export default function Sidebar({ spec, activeEndpointId, onSelectEndpoint, selectedVersion, onChangeVersion, visibilityFilter, onChangeVisibility }: SidebarProps) {
   return (

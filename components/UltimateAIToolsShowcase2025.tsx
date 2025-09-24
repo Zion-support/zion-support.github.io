@@ -10,109 +10,109 @@ import {
   Shield,
   Globe,
   Smartphone,
-  Database;
-  Cpu;
-  Network;
-  Bot;
-  Sparkles;
-  ArrowRight;
-  Star;
-  Users;
-  TrendingUp;
-  CheckCircle;
-  Play;
-  Download;
+  Database,
+  Cpu,
+  Network,
+  Bot,
+  Sparkles,
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  Play,
+  Download,
   ExternalLink} from 'lucide-react',
 const UltimateAIToolsShowcase20o25 = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const [hoveredToolsetHoveredTool] = useState(null),
   const [searchQuerysetSearchQuery] = useState(''),
   const categories = [
-    { id: ''all', 'name: 'All 'Tools', 'icon: Sparklescount: 24 };
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 8 };
-    { id: ''analytics', 'name: ''Analytics', 'icon: BarChart3count: 6 };
-    { id: ''development', 'name: ''Development', 'icon: Codecount: 5 };
-    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 3 };
-    { id: ''mobile', 'name: ''Mobile', 'icon: Smartphonecount: 2 }
+    { id: ''allname: 'All 'Toolsicon: Sparklescount: 24 },
+    { id: ''automationname: ''Automationicon: Zapcount: 8 },
+    { id: ''analyticsname: ''Analyticsicon: BarChart3count: 6 },
+    { id: ''developmentname: ''Developmenticon: Codecount: 5 },
+    { id: ''securityname: ''Securityicon: Shieldcount: 3 },
+    { id: ''mobilename: ''Mobileicon: Smartphonecount: 2 }
   ],
   const aiTools = [
     {
-      id: 1;
-      name: 'Neural Code Generator';
-      category: 'development';
-      description: 'AI-powered code generation that understands context and creates production-ready code';
-      features: ['Multi-language 'support', 'Context-aware 'generation', 'Real-time collaboration'];
-      rating: 4.9;
-      users: '12.5K';
-      price: 'Free';
-      image: '/api/placeholder/40o0/30o0';
-      badge: 'Most Popular';
-      demo: true;
-      download: true};
+      id: 1,
+      name: 'Neural Code Generator',
+      category: 'development',
+      description: 'AI-powered code generation that understands context and creates production-ready code',
+      features: ['Multi-language 'supportContext-aware 'generation', 'Real-time collaboration'],
+      rating: 4.9,
+      users: '12.5K',
+      price: 'Free',
+      image: '/api/placeholder/40o0/30o0',
+      badge: 'Most Popular',
+      demo: true,
+      download: true},
     {
-      id: 2;
-      name: 'Smart Analytics Pro';
-      category: 'analytics';
-      description: 'Advanced AI analytics platform with predictive insights and automated reporting';
-      features: ['Predictive 'analytics', 'Automated 'insights', 'Custom dashboards'];
-      rating: 4.8;
-      users: '8.2K';
-      price: '$99/mo';
-      image: '/api/placeholder/40o0/30o0';
-      badge: 'Enterprise';
-      demo: true;
-      download: false};
+      id: 2,
+      name: 'Smart Analytics Pro',
+      category: 'analytics',
+      description: 'Advanced AI analytics platform with predictive insights and automated reporting',
+      features: ['Predictive 'analyticsAutomated 'insights', 'Custom dashboards'],
+      rating: 4.8,
+      users: '8.2K',
+      price: '$99/mo',
+      image: '/api/placeholder/40o0/30o0',
+      badge: 'Enterprise',
+      demo: true,
+      download: false},
     {
-      id: 3;
-      name: 'AutoWorkflow Engine';
-      category: 'automation';
-      description: 'Intelligent workflow automation that learns from your processes and optimizes them';
-      features: ['Process 'learning', 'Smart 'optimization', 'Integration hub'];
-      rating: 4.7;
-      users: '15.3K';
-      price: '$49/mo';
-      image: '/api/placeholder/40o0/30o0';
-      badge: 'Trending';
-      demo: true;
-      download: true};
+      id: 3,
+      name: 'AutoWorkflow Engine',
+      category: 'automation',
+      description: 'Intelligent workflow automation that learns from your processes and optimizes them',
+      features: ['Process 'learningSmart 'optimization', 'Integration hub'],
+      rating: 4.7,
+      users: '15.3K',
+      price: '$49/mo',
+      image: '/api/placeholder/40o0/30o0',
+      badge: 'Trending',
+      demo: true,
+      download: true},
     {
-      id: 4;
-      name: 'Quantum Security Suite';
-      category: 'security';
-      description: 'Next-generation security powered by quantum computing principles';
-      features: ['Quantum 'encryption', 'Threat 'detection', 'Zero-trust architecture'];
-      rating: 4.9;
-      users: '5.1K';
-      price: '$199/mo';
-      image: '/api/placeholder/40o0/30o0';
-      badge: 'Cutting Edge';
-      demo: true;
-      download: false};
+      id: 4,
+      name: 'Quantum Security Suite',
+      category: 'security',
+      description: 'Next-generation security powered by quantum computing principles',
+      features: ['Quantum 'encryptionThreat 'detection', 'Zero-trust architecture'],
+      rating: 4.9,
+      users: '5.1K',
+      price: '$199/mo',
+      image: '/api/placeholder/40o0/30o0',
+      badge: 'Cutting Edge',
+      demo: true,
+      download: false},
     {
-      id: 5;
-      name: 'Mobile AI Assistant';
-      category: 'mobile';
-      description: 'Personal AI assistant that works across all your mobile devices';
-      features: ['Cross-platform 'sync', 'Voice 'commands', 'Smart scheduling'];
-      rating: 4.6;
-      users: '22.7K';
-      price: 'Free';
-      image: '/api/placeholder/40o0/30o0';
-      badge: 'New';
-      demo: true;
-      download: true};
+      id: 5,
+      name: 'Mobile AI Assistant',
+      category: 'mobile',
+      description: 'Personal AI assistant that works across all your mobile devices',
+      features: ['Cross-platform 'syncVoice 'commands', 'Smart scheduling'],
+      rating: 4.6,
+      users: '22.7K',
+      price: 'Free',
+      image: '/api/placeholder/40o0/30o0',
+      badge: 'New',
+      demo: true,
+      download: true},
     {
-      id: 6;
-      name: 'Data Intelligence Hub';
-      category: 'analytics';
-      description: 'Transform raw data into actionable insights with AI-powered analysis';
-      features: ['Real-time 'processing', 'Natural language 'queries', 'Visual insights'];
-      rating: 4.8;
-      users: '9.8K';
-      price: '$79/mo';
-      image: '/api/placeholder/40o0/30o0';
-      badge: 'Popular';
-      demo: true;
+      id: 6,
+      name: 'Data Intelligence Hub',
+      category: 'analytics',
+      description: 'Transform raw data into actionable insights with AI-powered analysis',
+      features: ['Real-time 'processingNatural language 'queries', 'Visual insights'],
+      rating: 4.8,
+      users: '9.8K',
+      price: '$79/mo',
+      image: '/api/placeholder/40o0/30o0',
+      badge: 'Popular',
+      demo: true,
       download: true}
   ],
   const filteredTools = aiTools.filter(tool => {
@@ -121,22 +121,22 @@ const UltimateAIToolsShowcase20o25 = () => {
                          tool.description.toLowerCase().includes(searchQuery.toLowerCase()),
     return matchesCategory && matchesSearch}),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20opacity: 0 };
+    hidden: { y: 20opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <div className="py-20 bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -312,5 +312,5 @@ const UltimateAIToolsShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default UltimateAIToolsShowcase20o25;
+    </div>)},
+export default UltimateAIToolsShowcase20o25,

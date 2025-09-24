@@ -1,17 +1,17 @@
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'AI Transformation ROI Calculator 20o25 | Zion Tech Group';
+  title: 'AI Transformation ROI Calculator 20o25 | Zion Tech Group',
   description:,
-    'Calculate your potential ROI from AI transformation. Get personalized projections based on your industry, company size, and implementation approach.';
+    'Calculate your potential ROI from AI transformation. Get personalized projections based on your industry, company size, and implementation approach.',
   keywords:,
-    'AI ROI calculator, AI transformation ROI, business ROI calculator, AI investment calculator, ROI projections';
+    'AI ROI calculator, AI transformation ROI, business ROI calculator, AI investment calculator, ROI projections',
   openGraph: {
-    title: 'AI Transformation ROI Calculator 20o25';
+    title: 'AI Transformation ROI Calculator 20o25',
     description:,
-      'Calculate your potential ROI from AI transformation with personalized projections.';
-    type: 'website';
-  };
-};
+      'Calculate your potential ROI from AI transformation with personalized projections.',
+    type: 'website'
+  },
+},
 export default function AIROICalculatorPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-emerald-90o0 to-slate-90o0'>,

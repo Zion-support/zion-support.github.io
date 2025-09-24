@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface SEOHeadProps {
   title?: string,
@@ -14,62 +14,56 @@ interface SEOHeadProps {
   tags?: string[]}
 ,
 const SEOHead: React.FC<SEOHeadProps> = ({
-  title = 'Zion Tech Group - Revolutionary AI & Quantum Technology Solutions';
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.';
-  keywords = 'AI, quantum computing, cybersecurity, space technology, autonomous solutions, Zion Tech Group';
-  image = '/images/zion-tech-group-og.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section;
-  tags = [];
+  title = 'Zion Tech Group - Revolutionary AI & Quantum Technology Solutions',
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide.',
+  keywords = 'AI, quantum computing, cybersecurity, space technology, autonomous solutions, Zion Tech Group',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
+  tags = []
 }) => {
   const siteName = 'Zion Tech Group',
   const twitterHandle = '@ziontechgroup',
   // Structured data for better SEO,
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: siteName;
-    url: url;
-    logo: `${url}/images/zion-tech-group-logo.png`;
-    description: description;
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: siteName,
+    url: url,
+    logo: `${url}/images/zion-tech-group-logo.png`,
+    description: description,
     sameAs: [
-      'https://linkedin.com/company/ziontechgroup';
-      'https://twitter.com/ziontechgroup';
-      'https://github.com/ziontechgroup';
-      'https://youtube.com/ziontechgroup';
-    ];
+      'https://linkedin.com/company/ziontechgrouphttps://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgrouphttps://youtube.com/ziontechgroup',
+    ],
     contactPoint: {
-      '@type': 'ContactPoint';
-      contactType: 'customer service';
-      availableLanguage: 'English';
-    };
+      '@type': 'ContactPoint',
+      contactType: 'customer service',
+      availableLanguage: 'English'
+    },
     address: {
-      '@type': 'PostalAddress';
-      addressCountry: 'US';
-    };
-    foundingDate: '20o20';
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
+    foundingDate: '20o20',
     knowsAbout: [
-      'Artificial Intelligence';
-      'Quantum Computing';
-      'Cybersecurity';
-      'Space Technology';
-      'Autonomous Systems';
-      'Cloud Infrastructure';
-    ];
-  };
+      'Artificial IntelligenceQuantum Computing',
+      'CybersecuritySpace Technology',
+      'Autonomous SystemsCloud Infrastructure',
+    ]
+  },
   if (type === 'article') {
     structuredData['@type'] = 'Article',
     structuredData['headline'] = title,
     structuredData['description'] = description,
     if (publishedTime) structuredData['datePublished'] = publishedTime,
     if (modifiedTime) structuredData['dateModified'] = modifiedTime,
-    if (author) structuredData['author'] = { '@type': 'Person', name: author };
+    if (author) structuredData['author'] = { '@type': 'Person', name: author },
     if (section) structuredData['articleSection'] = section,
-    if (tags.length > 0) structuredData['keywords'] = tags.join(', ')}
+    if (tags.length > 0) structuredData['keywords'] = tags.join()}
 ,
   return (
     <Head>,
@@ -122,5 +116,5 @@ const SEOHead: React.FC<SEOHeadProps> = ({
       />,
       <link rel='preconnect' href='https://www.google-analytics.com' />,
       <link rel='preconnect' href='https://www.googletagmanager.com' />,
-    </Head>)};
-export default SEOHead;
+    </Head>)},
+export default SEOHead,

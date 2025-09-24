@@ -3,9 +3,9 @@ import Link from 'next/link',
 ArrowRightStarZapTargetUsersTrendingUpAward,
 const UltimatePromotionBanner20o25 = () => {
   const stats = [
-    { number: "15,0o00+"label: "Businesses Transformed"icon: Users };
-    { number: "95%"label: "Efficiency Increase"icon: TrendingUp };
-    { number: "50o0%"label: "Average ROI"icon: Target };
+    { number: "15,0o00+"label: "Businesses Transformed"icon: Users },
+    { number: "95%"label: "Efficiency Increase"icon: TrendingUp },
+    { number: "50o0%"label: "Average ROI"icon: Target },
     { number: "24/7"label: "AI Support"icon: Zap }
   ],
   return (
@@ -128,5 +128,5 @@ const UltimatePromotionBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimatePromotionBanner20o25;
+    </div>)},
+export default UltimatePromotionBanner20o25,

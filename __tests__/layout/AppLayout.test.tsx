@@ -1,4 +1,6 @@
-import React from react',import { render, screen } from @testing-library/react',import { MemoryRouter, Routes, Route } from react-router-dom',import { AppLayout } from @/layout/AppLayout',import { useAuth } from @/hooks/useAuth',import { useGlobalLoader } from @/context/GlobalLoaderContext',
+import React from react',
+import { render, screen } from @testing-library/react',import { MemoryRouter, Routes, Route } from react-router-dom',import { AppLayout } from @/layout/AppLayout',
+import { useAuth } from @/hooks/useAuth',import { useGlobalLoader } from @/context/GlobalLoaderContext',
 jest.mock('@/hooks/useAuth'),jest.mock('@/context/GlobalLoaderContext'),jest.mock('@/layout/PrimaryNav', () => ({ PrimaryNav: () => <div data-testid="header"  /> })),"jest.mock('@/components/Footer', () => ({ Footer: () => <div data-testid="footer"  /> })),"jest.mock('@/components/EmailVerificationBanner', () => {'  const MockBanner = (props: unknown) => <div data-testid="verify-banner">{props.userEmail}</div>,"  MockBanner.displayName = MockEmailVerificationBanner',  return MockBanner}),
 const mockUseAuth = useAuth as jest.Mock,
 const mockUseGlobalLoader = useGlobalLoader as jest.Mock,

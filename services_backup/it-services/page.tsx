@@ -1,9 +1,9 @@
 
 ,
 export const metadata ={
-  title: 'IT Services | Zion Tech Group';
-  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.';
-  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'};
+  title: 'IT Services | Zion Tech Group',
+  description: 'Comprehensive IT services including cloud migration, DevOps, cybersecurity, infrastructure management, and enterprise solutions for modern businesses.',
+  keywords: 'IT services, cloud migration, DevOps, cybersecurity, infrastructure, enterprise IT, cloud consulting, SRE'},
 export default function ITServicesPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">,
@@ -11,7 +11,7 @@ export default function ITServicesPage() {
         <div className="text-center mb-16">,
           <h1 className="text-4xl font-bold text-gray-90o0 mb-6">IT Services</h1>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            Comprehensive IT services including cloud migration, DevOps, cybersecurity;
+            Comprehensive IT services including cloud migration, DevOps, cybersecurity,
             infrastructure management, and digital transformation. Enterprise-grade solutions for modern businesses.,
           </p>,
         </div>,
@@ -22,11 +22,11 @@ export default function ITServicesPage() {
             icon="☁️",
             description="Scalable cloud solutions and infrastructure management",
             services={[
-              "Cloud migration & strategy";
-              "Multi-cloud architecture";
-              "Container orchestration";
-              "Infrastructure as Code";
-              "Disaster recovery";
+              "Cloud migration & strategy",
+              "Multi-cloud architecture",
+              "Container orchestration",
+              "Infrastructure as Code",
+              "Disaster recovery",
               "Cost optimization"]}
            />,
           <ITServiceCategory
@@ -34,11 +34,11 @@ export default function ITServicesPage() {
             icon="⚙️",
             description="Automation and reliability engineering",
             services={[
-              "CI/CD pipeline setup";
-              "Monitoring & observability";
-              "Incident response";
-              "Performance optimization";
-              "Chaos engineering";
+              "CI/CD pipeline setup",
+              "Monitoring & observability",
+              "Incident response",
+              "Performance optimization",
+              "Chaos engineering",
               "SLA management"]}
            />,
           <ITServiceCategory
@@ -46,11 +46,11 @@ export default function ITServicesPage() {
             icon="🔒",
             description="Comprehensive security solutions and compliance",
             services={[
-              "Security assessment";
-              "Penetration testing";
-              "Zero Trust architecture";
-              "Compliance management";
-              "Incident response";
+              "Security assessment",
+              "Penetration testing",
+              "Zero Trust architecture",
+              "Compliance management",
+              "Incident response",
               "Security training"]}
            />,
         </div>,
@@ -62,11 +62,11 @@ export default function ITServicesPage() {
               title="Cloud Migration & Modernization",
               description="Complete cloud transformation and application modernization",
               features={[
-                "Legacy system migration";
-                "Application refactoring";
-                "Database migration";
-                "Performance optimization";
-                "Cost reduction analysis";
+                "Legacy system migration",
+                "Application refactoring",
+                "Database migration",
+                "Performance optimization",
+                "Cost reduction analysis",
                 "Security compliance"]}
               price="$25k - $10o0k",
               timeline="8-20 weeks",
@@ -77,11 +77,11 @@ export default function ITServicesPage() {
               title="DevOps Transformation",
               description="End-to-end DevOps implementation and culture change",
               features={[
-                "CI/CD pipeline automation";
-                "Infrastructure automation";
-                "Monitoring & alerting";
-                "Team training & coaching";
-                "Process optimization";
+                "CI/CD pipeline automation",
+                "Infrastructure automation",
+                "Monitoring & alerting",
+                "Team training & coaching",
+                "Process optimization",
                 "Tool integration"]}
               price="$15k - $60k",
               timeline="6-16 weeks",
@@ -92,11 +92,11 @@ export default function ITServicesPage() {
               title="Cybersecurity Assessment",
               description="Comprehensive security evaluation and hardening",
               features={[
-                "Vulnerability assessment";
-                "Penetration testing";
-                "Security architecture review";
-                "Compliance audit";
-                "Incident response planning";
+                "Vulnerability assessment",
+                "Penetration testing",
+                "Security architecture review",
+                "Compliance audit",
+                "Incident response planning",
                 "Security training"]}
               price="$10k - $40k",
               timeline="4-12 weeks",
@@ -107,11 +107,11 @@ export default function ITServicesPage() {
               title="Infrastructure Monitoring",
               description="24/7 infrastructure monitoring and management",
               features={[
-                "Real-time monitoring";
-                "Automated alerting";
-                "Performance optimization";
-                "Capacity planning";
-                "Incident response";
+                "Real-time monitoring",
+                "Automated alerting",
+                "Performance optimization",
+                "Capacity planning",
+                "Incident response",
                 "Monthly reporting"]}
               price="$5k - $20k/month",
               timeline="Ongoing",
@@ -122,11 +122,11 @@ export default function ITServicesPage() {
               title="Disaster Recovery & Backup",
               description="Comprehensive backup and disaster recovery solutions",
               features={[
-                "Automated backup systems";
-                "Disaster recovery planning";
-                "RTO/RPO optimization";
-                "Testing & validation";
-                "Documentation & training";
+                "Automated backup systems",
+                "Disaster recovery planning",
+                "RTO/RPO optimization",
+                "Testing & validation",
+                "Documentation & training",
                 "Ongoing maintenance"]}
               price="$8k - $35k",
               timeline="4-10 weeks",
@@ -137,11 +137,11 @@ export default function ITServicesPage() {
               title="Network Security & Firewall",
               description="Advanced network security and firewall management",
               features={[
-                "Firewall configuration";
-                "Network segmentation";
-                "Intrusion detection";
-                "VPN setup";
-                "Security policies";
+                "Firewall configuration",
+                "Network segmentation",
+                "Intrusion detection",
+                "VPN setup",
+                "Security policies",
                 "Ongoing management"]}
               price="$12k - $45k",
               timeline="6-14 weeks",
@@ -152,11 +152,11 @@ export default function ITServicesPage() {
               title="IT Support & Helpdesk",
               description="Professional IT support and helpdesk services",
               features={[
-                "24/7 technical support";
-                "Remote assistance";
-                "Hardware & software support";
-                "User training";
-                "Ticket management";
+                "24/7 technical support",
+                "Remote assistance",
+                "Hardware & software support",
+                "User training",
+                "Ticket management",
                 "SLA guarantees"]}
               price="$3k - $15k/month",
               timeline="Ongoing",
@@ -167,11 +167,11 @@ export default function ITServicesPage() {
               title="Data Center Services",
               description="Data center design, migration, and management",
               features={[
-                "Data center design";
-                "Hardware procurement";
-                "Migration planning";
-                "Power & cooling optimization";
-                "Security implementation";
+                "Data center design",
+                "Hardware procurement",
+                "Migration planning",
+                "Power & cooling optimization",
+                "Security implementation",
                 "Ongoing management"]}
               price="$50k - $20o0k",
               timeline="12-24 weeks",
@@ -182,11 +182,11 @@ export default function ITServicesPage() {
               title="IT Consulting & Strategy",
               description="Strategic IT planning and digital transformation",
               features={[
-                "IT strategy development";
-                "Technology roadmap";
-                "Digital transformation";
-                "Vendor evaluation";
-                "Budget planning";
+                "IT strategy development",
+                "Technology roadmap",
+                "Digital transformation",
+                "Vendor evaluation",
+                "Budget planning",
                 "Implementation guidance"]}
               price="$5k - $25k",
               timeline="2-8 weeks",
@@ -262,11 +262,11 @@ export default function ITServicesPage() {
               price="$4k - $10k",
               duration="2-4 weeks",
               features={[
-                "Infrastructure audit";
-                "Security assessment";
-                "Performance analysis";
-                "Recommendations";
-                "Implementation roadmap";
+                "Infrastructure audit",
+                "Security assessment",
+                "Performance analysis",
+                "Recommendations",
+                "Implementation roadmap",
                 "Cost optimization"]}
               popular={false}
              />,
@@ -275,11 +275,11 @@ export default function ITServicesPage() {
               price="$15k - $50k",
               duration="4-12 weeks",
               features={[
-                "Cloud migration";
-                "DevOps setup";
-                "Security implementation";
-                "Monitoring setup";
-                "Team training";
+                "Cloud migration",
+                "DevOps setup",
+                "Security implementation",
+                "Monitoring setup",
+                "Team training",
                 "Documentation"]}
               popular={true}
              />,
@@ -288,11 +288,11 @@ export default function ITServicesPage() {
               price="$5k+/month",
               duration="Ongoing",
               features={[
-                "24/7 monitoring";
-                "Proactive maintenance";
-                "Incident response";
-                "Security management";
-                "Performance optimization";
+                "24/7 monitoring",
+                "Proactive maintenance",
+                "Incident response",
+                "Security management",
+                "Performance optimization",
                 "Regular reporting"]}
               popular={false}
              />,
@@ -348,11 +348,11 @@ function ITServiceCategory({ title, icon, description, services }: {
           price="$4k–$10k",
           duration="2 weeks",
           features={[
-            "Comprehensive cloud review";
-            "Security audit & assessment";
-            "Performance analysis";
-            "Cost optimization review";
-            "Technology roadmap";
+            "Comprehensive cloud review",
+            "Security audit & assessment",
+            "Performance analysis",
+            "Cost optimization review",
+            "Technology roadmap",
             "Implementation recommendations"]} ,
          />,
         <Plan
@@ -360,11 +360,11 @@ function ITServiceCategory({ title, icon, description, services }: {
           price="$15k–$50k",
           duration="4–8 weeks",
           features={[
-            "Infrastructure as Code setup";
-            "CI/CD pipeline implementation";
-            "Monitoring & observability";
-            "Security hardening";
-            "Performance optimization";
+            "Infrastructure as Code setup",
+            "CI/CD pipeline implementation",
+            "Monitoring & observability",
+            "Security hardening",
+            "Performance optimization",
             "Documentation & training"]} ,
          />,
         <Plan
@@ -372,11 +372,11 @@ function ITServiceCategory({ title, icon, description, services }: {
           price="$5k+/mo",
           duration="Ongoing",
           features={[
-            "24/7 monitoring & on-call";
-            "SLO management & reporting";
-            "Cost optimization";
-            "Security updates & patches";
-            "Performance tuning";
+            "24/7 monitoring & on-call",
+            "SLO management & reporting",
+            "Cost optimization",
+            "Security updates & patches",
+            "Performance tuning",
             "Monthly health reports"]} ,
          />,
       </div>,

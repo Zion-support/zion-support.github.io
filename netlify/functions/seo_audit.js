@@ -2,7 +2,7 @@ function analyzeTsx(content) {
   const hasHead = /<Head[\s>]/.test(content),
   const hasTitle = /<title>[^<]+<\/title>/.test(content),
   const hasMetaDesc = /<meta[^>]+name=["']description["'][^>]*>/i.test(content),
-  return { hasHead, hasTitle, hasMetaDesc };
+  return { hasHead, hasTitle, hasMetaDesc },
 }
 ,
 async function getRepoTree(repo, ref, token) {
@@ -14,7 +14,7 @@ async function getRepoTree(repo, ref, token) {
 ,
 async function getFileContent(repo, path, ref, token) {
   const res = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}?ref=${ref}`, {
-    headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot', 'Accept': 'application/vnd.github.v3.raw' }
+    headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotAccept': 'application/vnd.github.v3.raw' }
   }),
   if (!res.ok) throw new Error(`content fetch failed: ${res.status}`),
   return res.text()}
@@ -25,7 +25,7 @@ exports.handler = async function(event, context) {
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     if (!token) {
-      return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, cannot audit via GitHub API' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, cannot audit via GitHub API' }) },
     }
 ,
     const tree = await getRepoTree(repo, branch, token),
@@ -40,13 +40,13 @@ exports.handler = async function(event, context) {
     }
 ,
     const summary ={
-      generatedAt: new Date().toISOString();
+      generatedAt: new Date().toISOString(),
       totals: {
-        pages: report.length;
-        withHead: report.filter(r => r.hasHead).length;
-        withTitle: report.filter(r => r.hasTitle).length;
-        withMetaDesc: report.filter(r => r.hasMetaDesc).length};
-      issues: report.filter(r => !(r.hasHead && r.hasTitle && r.hasMetaDesc))};
+        pages: report.length,
+        withHead: report.filter(r => r.hasHead).length,
+        withTitle: report.filter(r => r.hasTitle).length,
+        withMetaDesc: report.filter(r => r.hasMetaDesc).length},
+      issues: report.filter(r => !(r.hasHead && r.hasTitle && r.hasMetaDesc))},
     const path = 'data/seo-audit.json',
     const b64 = Buffer.from(JSON.stringify(summary, null, 2), 'utf8').toString('base64'),
     // Fetch existing sha,
@@ -61,20 +61,18 @@ exports.handler = async function(event, context) {
     }
 ,
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT';
+      method: 'PUT',
       headers: {
-        'Authorization': `token ${token}`;
-        'Content-Type': 'application/json';
-        'Accept': 'application/vnd.github+json';
-        'User-Agent': 'zion-autobot'};
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/jsonAccept': 'application/vnd.github+jsonUser-Agent': 'zion-autobot'},
       body: JSON.stringify({ message: 'chore(automation): update seo audit', content: b64, branch, sha })}),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) {
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     }
 ,
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) },
   }
-};
+},

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'devops-automation - Zion Tech Group';
+  title: 'devops-automation - Zion Tech Group',
   description:,
-    'Professional devops-automation solutions for your business needs.';
-  keywords: 'devops-automation, services, business, technology';
-};
+    'Professional devops-automation solutions for your business needs.',
+  keywords: 'devops-automation, services, business, technology',
+},
 export default function DevopsAutomationPage() {
   return (
     <div className='min-h-screen bg-white'>,

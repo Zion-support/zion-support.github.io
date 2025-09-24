@@ -33,79 +33,68 @@ interface UltraAdvancedFuturisticServiceCardV2Props {
       mobile: string,
       email: string,
       address: string,
-      website: string};
+      website: string},
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   index: number}
 ,
 export default function UltraAdvancedFuturisticServiceCardV2({
-  service;
+  service,
   index}: UltraAdvancedFuturisticServiceCardV2Props) {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
   const cardVariants ={
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0.9;
-      rotateX: -15};
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+      rotateX: -15},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
-      rotateX: 0;
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
       transition: {
-        duration: 0.6;
-        delay: index * 0.1;
+        duration: 0.6,
+        delay: index * 0.1,
         ease: [0.25, 0.46, 0.45, 0.94]}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
-      rotateX: 5;
+      y: -10,
+      scale: 1.0o2,
+      rotateX: 5,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut"}
     }
-  };
+  },
   const contentVariants ={
-    collapsed: { height: 0, opacity: 0 };
+    collapsed: { height: 0, opacity: 0 },
     expanded: {
-      height: "auto";
-      opacity: 1;
+      height: "auto",
+      opacity: 1,
       transition: {
-        duration: 0.4;
+        duration: 0.4,
         ease: "easeInOut"}
     }
-  };
+  },
   const featureVariants ={
-    hidden: { opacity: 0, x: -20 };
+    hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
-      opacity: 1;
-      x: 0;
+      opacity: 1,
+      x: 0,
       transition: {
-        delay: i * 0.1;
+        delay: i * 0.1,
         duration: 0.3}
-    })};
+    })},
   const getGradientClass = (color: string) => {
     const gradients: { [key: string]: string } ={
-      'from-blue-50o0 to-indigo-60o0': 'from-blue-50o0 via-indigo-50o0 to-indigo-60o0';
-      'from-purple-50o0 to-violet-60o0': 'from-purple-50o0 via-violet-50o0 to-violet-60o0';
-      'from-green-50o0 to-emerald-60o0': 'from-green-50o0 via-emerald-50o0 to-emerald-60o0';
-      'from-pink-50o0 to-rose-60o0': 'from-pink-50o0 via-rose-50o0 to-rose-60o0';
-      'from-cyan-50o0 to-blue-60o0': 'from-cyan-50o0 via-blue-50o0 to-blue-60o0';
-      'from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 via-orange-50o0 to-orange-60o0';
-      'from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 via-purple-50o0 to-purple-60o0';
-      'from-emerald-50o0 to-teal-60o0': 'from-emerald-50o0 via-teal-50o0 to-teal-60o0';
-      'from-amber-50o0 to-yellow-60o0': 'from-amber-50o0 via-yellow-50o0 to-yellow-60o0';
-      'from-violet-50o0 to-purple-60o0': 'from-violet-50o0 via-purple-50o0 to-purple-60o0';
-      'from-gray-50o0 to-slate-60o0': 'from-gray-50o0 via-slate-50o0 to-slate-60o0';
-      'from-red-50o0 to-pink-60o0': 'from-red-50o0 via-pink-50o0 to-pink-60o0'};
-    return gradients[color] || color};
+      'from-blue-50o0 to-indigo-60o0': 'from-blue-50o0 via-indigo-50o0 to-indigo-60o0from-purple-50o0 to-violet-60o0': 'from-purple-50o0 via-violet-50o0 to-violet-60o0from-green-50o0 to-emerald-60o0': 'from-green-50o0 via-emerald-50o0 to-emerald-60o0from-pink-50o0 to-rose-60o0': 'from-pink-50o0 via-rose-50o0 to-rose-60o0from-cyan-50o0 to-blue-60o0': 'from-cyan-50o0 via-blue-50o0 to-blue-60o0from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 via-orange-50o0 to-orange-60o0from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 via-purple-50o0 to-purple-60o0from-emerald-50o0 to-teal-60o0': 'from-emerald-50o0 via-teal-50o0 to-teal-60o0from-amber-50o0 to-yellow-60o0': 'from-amber-50o0 via-yellow-50o0 to-yellow-60o0from-violet-50o0 to-purple-60o0': 'from-violet-50o0 via-purple-50o0 to-purple-60o0from-gray-50o0 to-slate-60o0': 'from-gray-50o0 via-slate-50o0 to-slate-60o0from-red-50o0 to-pink-60o0': 'from-red-50o0 via-pink-50o0 to-pink-60o0'},
+    return gradients[color] || color},
   return (
     <motion.div,
       variants={cardVariants}
@@ -119,14 +108,14 @@ export default function UltraAdvancedFuturisticServiceCardV2({
       <div
         className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${getGradientClass(service.color)} opacity-0 group-hover: opacity-20 blur-xl transition-all duration-50o0 group-hover:blur-2xl`}
         style={{
-          transform: isHovered ? 'scale(1.1)' : 'scale(1)';
+          transform: isHovered ? 'scale(1.1)' : 'scale(1)',
           filter: isHovered ? 'blur(20px)' : 'blur(40px)'}}
        />,
       {/* Main Card */}
       <motion.div,
         className="relative bg-black/40 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden",
         style={{
-          background: `linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 10o0%)`;
+          background: `linear-gradient(135deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.6) 10o0%)`,
           boxShadow: isHovered,
             ? `0 25px 50px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.1)`,
             : `0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.0o5)`}}
@@ -338,7 +327,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
                 exit={{ opacity: 0, scale: 0 }}
                 className="absolute top-4 left-4 w-2 h-2 bg-blue-40o0 rounded-full",
                 style={{
-                  boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)';
+                  boxShadow: '0 0 20px rgba(59, 130, 246, 0.8)',
                   animation: 'float 3s ease-in-out infinite'}}
                />,
               <motion.div,
@@ -348,7 +337,7 @@ export default function UltraAdvancedFuturisticServiceCardV2({
                 transition={{ delay: 0.2 }}
                 className="absolute bottom-4 right-4 w-3 h-3 bg-purple-40o0 rounded-full",
                 style={{
-                  boxShadow: '0 0 25px rgba(139, 92, 246, 0.8)';
+                  boxShadow: '0 0 25px rgba(139, 92, 246, 0.8)',
                   animation: 'float 3s ease-in-out infinite 1s'}}
                />,
             </>)}

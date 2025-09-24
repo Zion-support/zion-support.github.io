@@ -37,47 +37,47 @@ export function MilestoneAssistant(props: MilestoneAssistantProps) {const [loadi
     <div className="milestone-assistant">,
       <div className="assistant-header" style={{ display: "flex", gap: 12, alignItems: "center" }}>,
         <button onClick={generate} disabled={loading |isDisabled}>,
-import React, { useMemo, useState } from "react";
-import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types";
+import React, { useMemo, useState } from "react",
+import type { MilestoneSuggestionInput, SuggestedMilestoneItem, ProjectType } from "../shared/types",
 export interface MilestoneAssistantProps {
-  scopeOfWork: string;
-  startDateIso: string;
-  endDateIso: string;
-  projectType: ProjectType;
+  scopeOfWork: string,
+  startDateIso: string,
+  endDateIso: string,
+  projectType: ProjectType,
   onAccept?: (milestones: SuggestedMilestoneItem[], autoAdd: boolean) => void}
 export /**,
  * MilestoneAssistant - Function description,
  */,
 function MilestoneAssistant() {
-  const [loading, set_loading] = useState (false);
-  const [error, set_error] = useState < string | null>(null);
-  const [auto_add, setAutoAdd] = useState (true);
-  const [items, set_items] = useState < SuggestedMilestoneItem[]>([]);
-  const [expanded_idx, setExpandedIdx] = useState < number | null>(0);
+  const [loading, set_loading] = useState (false),
+  const [error, set_error] = useState < string | null>(null),
+  const [auto_add, setAutoAdd] = useState (true),
+  const [items, set_items] = useState < SuggestedMilestoneItem[]>([]),
+  const [expanded_idx, setExpandedIdx] = useState < number | null>(0),
   const is_disabled = useMemo (() => {
-    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.project_type}, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.project_type]);
+    return !props.scopeOfWork || !props.startDateIso || !props.endDateIso || !props.project_type}, [props.scopeOfWork, props.startDateIso, props.endDateIso, props.project_type]),
   async /**,
  * generate - Function description,
  */,
 function generate() {
-    set_loading (true);
-    set_error (null);
+    set_loading (true),
+    set_error (null),
     try {
       const payload: MilestoneSuggestionInput = {
-        scopeOfWork: props.scopeOfWork;
-        startDateIso: props.startDateIso;
-        endDateIso: props.endDateIso;
-        project_type: props.project_type};
+        scopeOfWork: props.scopeOfWork,
+        startDateIso: props.startDateIso,
+        endDateIso: props.endDateIso,
+        project_type: props.project_type},
       const res = await fetch ("/api / ai / milestones", {
-        method: "POST";
-        headers: { "Content - Type": "application / json" };
-        body: JSON.stringify (payload)});
+        method: "POST",
+        headers: { "Content - Type": "application / json" },
+        body: JSON.stringify (payload)}),
       // Check condition,
 if ( {) {
   $2}
-        const t = await res.text ();
+        const t = await res.text (),
         throw new Error (t || "Failed to generate")}
-      const data = await res.json ();
+      const data = await res.json (),
       set_items (Array.is_array (data?.milestones) ? data.milestones : []),
       setExpandedIdx (0)} catch (e: any) {
       set_error (e?.message || "Unexpected error")} finally {
@@ -195,5 +195,5 @@ function accept() {
       </div>,
     </div>)}
 ,
-export default MilestoneAssistant;
+export default MilestoneAssistant,
 }})))

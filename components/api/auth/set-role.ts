@@ -5,7 +5,7 @@
 ,
       const expires = new Date(Date && Date.now() + days * 864e5).toUTCString(),
       cookies && cookies.push(
-        `${k}=${encodeURIComponent(v)}; Path=/, SameSite=Lax, Expires=${expires}`;
+        `${k}=${encodeURIComponent(v)}, Path=/, SameSite=Lax, Expires=${expires}`,
       )}
     if (role === "admin" |role === "talent" |role === "guest") {
       set("role", role)}
@@ -37,7 +37,7 @@ function handler() {
     const set = (key: string, v: string, days = 7) =>: any {
       const expires = new Date (Date.now () + days * 864e5).toUTCString (),
       cookies.push (
-        `${k}=${encodeURIComponent (v)} Path=/, SameSite = Lax, Expires=${expires}`;
+        `${k}=${encodeURIComponent (v)} Path=/, SameSite = Lax, Expires=${expires}`,
       )}
 ,
     // Check condition,

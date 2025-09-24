@@ -51,14 +51,14 @@ export function useWallet() {
       prev ? { ...prev, balance: prev.balance + amount } : prev),
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
-        amount;
-        transaction_type: 'earn';
-        reason: reason || null;
-        created_at: new Date().toISOString();
-      };
-      ...prev;
+        id: crypto.randomUUID(),
+        user_id: user.id,
+        amount,
+        transaction_type: 'earn',
+        reason: reason || null,
+        created_at: new Date().toISOString()
+      },
+      ...prev,
     ])}
 ,
   async function spendTokens(amount: number, reason?: string) {
@@ -67,28 +67,28 @@ export function useWallet() {
       prev ? { ...prev, balance: Math.max(0, prev.balance - amount) } : prev),
     setTransactions(prev => [
       {
-        id: crypto.randomUUID();
-        user_id: user.id;
-        amount;
-        transaction_type: 'burn';
-        reason: reason || null;
-        created_at: new Date().toISOString();
-      };
-      ...prev;
+        id: crypto.randomUUID(),
+        user_id: user.id,
+        amount,
+        transaction_type: 'burn',
+        reason: reason || null,
+        created_at: new Date().toISOString()
+      },
+      ...prev,
     ])}
 ,
   useEffect(() => {
     fetchWallet(),
     fetchTransactions()}, [user?.id]),
   return {
-    wallet;
-    transactions;
-    loading;
-    error;
-    fetchWallet;
-    fetchTransactions;
-    earnTokens;
-    spendTokens;
-  };
+    wallet,
+    transactions,
+    loading,
+    error,
+    fetchWallet,
+    fetchTransactions,
+    earnTokens,
+    spendTokens,
+  },
 }
 ,

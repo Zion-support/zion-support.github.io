@@ -5,189 +5,173 @@ const InteractiveServiceShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [hoveredService, setHoveredService] = useState(null),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: 35 };
-    { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 };
-    { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 };
-    { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 };
-    { id: 'security', name: 'Security', icon: '🛡️', count: 6 };
-    { id: 'automation', name: 'Automation', icon: '⚡', count: 3 };
+    { id: 'all', name: 'All Services', icon: '🚀', count: 35 },
+    { id: 'ai', name: 'AI & ML', icon: '🤖', count: 13 },
+    { id: 'quantum', name: 'Quantum', icon: '🔮', count: 5 },
+    { id: 'cloud', name: 'Cloud', icon: '☁️', count: 8 },
+    { id: 'security', name: 'Security', icon: '🛡️', count: 6 },
+    { id: 'automation', name: 'Automation', icon: '⚡', count: 3 },
   ],
   const services = [
     {
-      id: 'ai-strategy';
-      title: 'AI Strategy Consulting';
+      id: 'ai-strategy',
+      title: 'AI Strategy Consulting',
       description:,
-        'Comprehensive AI strategy development and implementation consulting for enterprises';
-      icon: '🤖';
-      price: 'From $2,50o0';
-      category: 'ai';
+        'Comprehensive AI strategy development and implementation consulting for enterprises',
+      icon: '🤖',
+      price: 'From $2,50o0',
+      category: 'ai',
       features: [
-        'Strategic Planning';
-        'Implementation Roadmap';
-        'ROI Analysis';
-        'Team Training';
-      ];
-      isPopular: true;
-      color: 'from-zion-cyan to-zion-blue';
-      href: '/services/ai';
-    };
+        'Strategic PlanningImplementation Roadmap',
+        'ROI AnalysisTeam Training',
+      ],
+      isPopular: true,
+      color: 'from-zion-cyan to-zion-blue',
+      href: '/services/ai'
+    },
     {
-      id: 'quantum-ai';
-      title: 'Quantum AI Fusion Platform';
+      id: 'quantum-ai',
+      title: 'Quantum AI Fusion Platform',
       description:,
-        'Revolutionary platform combining quantum computing with artificial intelligence';
-      icon: '🔮';
-      price: 'From $25,0o00';
-      category: 'quantum';
+        'Revolutionary platform combining quantum computing with artificial intelligence',
+      icon: '🔮',
+      price: 'From $25,0o00',
+      category: 'quantum',
       features: [
-        'Quantum Algorithms';
-        'AI Integration';
-        'Performance Optimization';
-        'Scalable Architecture';
-      ];
-      isNew: true;
-      color: 'from-zion-purple to-zion-cyan';
-      href: '/services/quantum';
-    };
+        'Quantum AlgorithmsAI Integration',
+        'Performance OptimizationScalable Architecture',
+      ],
+      isNew: true,
+      color: 'from-zion-purple to-zion-cyan',
+      href: '/services/quantum'
+    },
     {
-      id: 'neuromorphic';
-      title: 'Neuromorphic Computing Platform';
+      id: 'neuromorphic',
+      title: 'Neuromorphic Computing Platform',
       description:,
-        'Brain-inspired computing architecture for ultra-efficient AI processing';
-      icon: '🧠';
-      price: 'From $35,0o00';
-      category: 'ai';
+        'Brain-inspired computing architecture for ultra-efficient AI processing',
+      icon: '🧠',
+      price: 'From $35,0o00',
+      category: 'ai',
       features: [
-        'Neural Networks';
-        'Efficient Processing';
-        'Scalable Architecture';
-        'Low Power Consumption';
-      ];
-      color: 'from-zion-blue to-zion-cyan';
-      href: '/services/ai';
-    };
+        'Neural NetworksEfficient Processing',
+        'Scalable ArchitectureLow Power Consumption',
+      ],
+      color: 'from-zion-blue to-zion-cyan',
+      href: '/services/ai'
+    },
     {
-      id: 'edge-ai';
-      title: 'Edge AI Orchestration Platform';
+      id: 'edge-ai',
+      title: 'Edge AI Orchestration Platform',
       description:,
-        'Intelligent orchestration of AI workloads across distributed edge computing';
-      icon: '🌐';
-      price: 'From $15,0o00';
-      category: 'cloud';
+        'Intelligent orchestration of AI workloads across distributed edge computing',
+      icon: '🌐',
+      price: 'From $15,0o00',
+      category: 'cloud',
       features: [
-        'Edge Deployment';
-        'Load Balancing';
-        'Real-time Processing';
-        'IoT Integration';
-      ];
-      color: 'from-zion-cyan to-zion-green';
-      href: '/services/cloud';
-    };
+        'Edge DeploymentLoad Balancing',
+        'Real-time ProcessingIoT Integration',
+      ],
+      color: 'from-zion-cyan to-zion-green',
+      href: '/services/cloud'
+    },
     {
-      id: 'federated-learning';
-      title: 'Federated Learning Platform';
+      id: 'federated-learning',
+      title: 'Federated Learning Platform',
       description:,
-        'Privacy-preserving AI training across distributed data sources';
-      icon: '🔒';
-      price: 'From $20,0o00';
-      category: 'security';
+        'Privacy-preserving AI training across distributed data sources',
+      icon: '🔒',
+      price: 'From $20,0o00',
+      category: 'security',
       features: [
-        'Data Privacy';
-        'Distributed Training';
-        'Secure Communication';
-        'Compliance Ready';
-      ];
-      color: 'from-zion-green to-zion-cyan';
-      href: '/services/security';
-    };
+        'Data PrivacyDistributed Training',
+        'Secure CommunicationCompliance Ready',
+      ],
+      color: 'from-zion-green to-zion-cyan',
+      href: '/services/security'
+    },
     {
-      id: 'ai-ethics';
-      title: 'AI Ethics & Governance Platform';
+      id: 'ai-ethics',
+      title: 'AI Ethics & Governance Platform',
       description:,
-        'Comprehensive framework for ethical AI development and governance';
-      icon: '⚖️';
-      price: 'From $18,0o00';
-      category: 'ai';
+        'Comprehensive framework for ethical AI development and governance',
+      icon: '⚖️',
+      price: 'From $18,0o00',
+      category: 'ai',
       features: [
-        'Ethical Guidelines';
-        'Compliance Tools';
-        'Audit Trails';
-        'Risk Assessment';
-      ];
-      color: 'from-zion-yellow to-zion-orange';
-      href: '/services/ai';
-    };
+        'Ethical GuidelinesCompliance Tools',
+        'Audit TrailsRisk Assessment',
+      ],
+      color: 'from-zion-yellow to-zion-orange',
+      href: '/services/ai'
+    },
     {
-      id: 'quantum-security';
-      title: 'Quantum-Safe Security Suite';
+      id: 'quantum-security',
+      title: 'Quantum-Safe Security Suite',
       description:,
-        'Next-generation security solutions resistant to quantum attacks';
-      icon: '🔐';
-      price: 'From $30,0o00';
-      category: 'security';
+        'Next-generation security solutions resistant to quantum attacks',
+      icon: '🔐',
+      price: 'From $30,0o00',
+      category: 'security',
       features: [
-        'Post-Quantum Cryptography';
-        'Quantum Key Distribution';
-        'Threat Detection';
-        'Zero Trust';
-      ];
-      isNew: true;
-      color: 'from-zion-purple to-zion-red';
-      href: '/services/security';
-    };
+        'Post-Quantum CryptographyQuantum Key Distribution',
+        'Threat DetectionZero Trust',
+      ],
+      isNew: true,
+      color: 'from-zion-purple to-zion-red',
+      href: '/services/security'
+    },
     {
-      id: 'cloud-automation';
-      title: 'Cloud Infrastructure Automation';
+      id: 'cloud-automation',
+      title: 'Cloud Infrastructure Automation',
       description:,
-        'Intelligent automation of cloud infrastructure deployment and management';
-      icon: '⚙️';
-      price: 'From $12,0o00';
-      category: 'automation';
+        'Intelligent automation of cloud infrastructure deployment and management',
+      icon: '⚙️',
+      price: 'From $12,0o00',
+      category: 'automation',
       features: [
-        'Infrastructure as Code';
-        'Auto-scaling';
-        'Cost Optimization';
-        'Monitoring';
-      ];
-      color: 'from-zion-orange to-zion-yellow';
-      href: '/services/automation';
-    };
+        'Infrastructure as CodeAuto-scaling',
+        'Cost OptimizationMonitoring',
+      ],
+      color: 'from-zion-orange to-zion-yellow',
+      href: '/services/automation'
+    },
   ],
   const filteredServices =,
     activeCategory === 'all',
       ? services,
       : services.filter(service => service.category === activeCategory),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.5,
+        ease: 'easeOut'
+      },
+    },
+  },
   const categoryVariants = {
-    hidden: { scale: 0.8, opacity: 0 };
+    hidden: { scale: 0.8, opacity: 0 },
     visible: {
-      scale: 1;
-      opacity: 1;
+      scale: 1,
+      opacity: 1,
       transition: {
-        duration: 0.3;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.3,
+        ease: 'easeOut'
+      },
+    },
+  },
   return (
     <section className='py-24 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-blue-light'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -354,5 +338,5 @@ const InteractiveServiceShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default InteractiveServiceShowcase;
+    </section>)},
+export default InteractiveServiceShowcase,

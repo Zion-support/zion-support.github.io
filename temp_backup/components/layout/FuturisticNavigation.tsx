@@ -1,18 +1,18 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Sparkles;
-  Globe;
-  Brain;
-  Factory;
-  FlaskConical;
-  Atom;
-  Rocket;
-  Shield;
-  Zap;
+  Menu,
+  X,
+  ChevronDown,
+  Sparkles,
+  Globe,
+  Brain,
+  Factory,
+  FlaskConical,
+  Atom,
+  Rocket,
+  Shield,
+  Zap,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -23,62 +23,62 @@ interface NavigationItem {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Home';
-    href: '/';
-    icon: <Sparkles className='w-4 h-4' />;
-  };
+    name: 'Home',
+    href: '/',
+    icon: <Sparkles className='w-4 h-4' />
+  },
   {
-    name: 'Services';
-    href: '/services';
-    icon: <Zap className='w-4 h-4' />;
+    name: 'Services',
+    href: '/services',
+    icon: <Zap className='w-4 h-4' />,
     children: [
       {
-        name: 'Quantum Computing';
-        href: '/services?category=Quantum%20Computing';
-        icon: <Atom className='w-4 h-4' />;
-        description: 'Revolutionary quantum AI solutions';
-      };
+        name: 'Quantum Computing',
+        href: '/services?category=Quantum%20Computing',
+        icon: <Atom className='w-4 h-4' />,
+        description: 'Revolutionary quantum AI solutions'
+      },
       {
-        name: 'AI & Machine Learning';
-        href: '/services?category=AI%20%26%20Machine%20Learning';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Advanced AI and cognitive systems';
-      };
+        name: 'AI & Machine Learning',
+        href: '/services?category=AI%20%26%20Machine%20Learning',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Advanced AI and cognitive systems'
+      },
       {
-        name: 'Autonomous Systems';
-        href: '/services?category=Autonomous%20Systems';
-        icon: <Factory className='w-4 h-4' />;
-        description: 'Next-generation robotics and automation';
-      };
+        name: 'Autonomous Systems',
+        href: '/services?category=Autonomous%20Systems',
+        icon: <Factory className='w-4 h-4' />,
+        description: 'Next-generation robotics and automation'
+      },
       {
-        name: 'Healthcare & Biotech';
-        href: '/services?category=Healthcare%20%26%20Biotechnology';
-        icon: <FlaskConical className='w-4 h-4' />;
-        description: 'AI-powered medical research';
-      };
+        name: 'Healthcare & Biotech',
+        href: '/services?category=Healthcare%20%26%20Biotechnology',
+        icon: <FlaskConical className='w-4 h-4' />,
+        description: 'AI-powered medical research'
+      },
       {
-        name: 'Emerging Technologies';
-        href: '/services?category=Emerging%20Technologies';
-        icon: <Rocket className='w-4 h-4' />;
-        description: 'Fusion energy, quantum internet, nanotechnology';
-      };
-    ];
-  };
+        name: 'Emerging Technologies',
+        href: '/services?category=Emerging%20Technologies',
+        icon: <Rocket className='w-4 h-4' />,
+        description: 'Fusion energy, quantum internet, nanotechnology',
+      },
+    ],
+  },
   {
-    name: 'Pricing';
-    href: '/pricing';
-    icon: <Shield className='w-4 h-4' />;
-  };
+    name: 'Pricing',
+    href: '/pricing',
+    icon: <Shield className='w-4 h-4' />
+  },
   {
-    name: 'About';
-    href: '/about';
-    icon: <Globe className='w-4 h-4' />;
-  };
+    name: 'About',
+    href: '/about',
+    icon: <Globe className='w-4 h-4' />
+  },
   {
-    name: 'Contact';
-    href: '/contact';
-    icon: <Zap className='w-4 h-4' />;
-  };
+    name: 'Contact',
+    href: '/contact',
+    icon: <Zap className='w-4 h-4' />
+  },
 ],
 export default function FuturisticNavigation() {
   const [isOpen, setIsOpen] = useState(false),
@@ -87,14 +87,14 @@ export default function FuturisticNavigation() {
   const router = useRouter(),
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 20)};
+      setScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const closeMobileMenu = () => {
     setIsOpen(false),
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${

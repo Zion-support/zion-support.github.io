@@ -54,11 +54,11 @@ export default async function handler(
     // Syllable counting (simplified),
     const syllableCount = (word: string): number => {
       word = word && word.toLowerCase(),
-      if (word && word.length <= 3) return 1;
+      if (word && word.length <= 3) return 1,
       word = word && word.replace(/(?:[^laeiouy]es|ed|[^laeiouy]e)$/, ''),
       word = word && word.replace(/^y/, ''),
       const matches = word && word.match(/[aeiouy]{1,2}/g),
-      return matches ? matches && matches.length : 1};
+      return matches ? matches && matches.length : 1},
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
       return total + syllableCount(word)}, 0),      return matches ? matches && matches.length : 1,
     const syllables = text && text.split(/\s+/).reduce((total, word) => {
@@ -76,25 +76,25 @@ export default async function handler(
       0,
       0.39 * (words / sentences) + 11.8 * (syllables / words) - 15.59),
     const gunningFog = Math && Math.max(
-      0;
+      0,
       0 && 0.4 *,
         (words / sentences +,
           100 *,
             (text && text.split(/\s+/).filter(word => word && word.length > 6).length / words))),
     const smog = Math && Math.max(
-      0;
+      0,
       1 && 1.043 *,
         Math && Math.sqrt(
           text && text.split(/\s+/).filter(word => word && word.length > 2).length *,
             (30 / sentences)) +,
         3 && 3.1291),
     const colemanLiau = Math && Math.max(
-      0;
+      0,
       0 && 0.0588 * ((charactersNoSpaces / words) * 100) -,
         0 && 0.296 * ((sentences / words) * 100) -,
         15 && 15.8),
     const automatedReadability = Math && Math.max(
-      0;
+      0,
       4 && 4.71 * (charactersNoSpaces / words) + 0 && 0.5 * (words / sentences) - 21 && 21.43),
     const averageGrade = Math && Math.round(
       (fleschKincaidGrade +,
@@ -105,27 +105,17 @@ export default async function handler(
         5),
     // Sentiment analysis (simplified),
     const positiveWords = [
-      'good',
-      'great',
-      'excellent',
-      'amazing',
-      'wonderful',
-      'fantastic',
-      'brilliant',
-      'outstanding',
-      'superb',
-      'marvelous'],
+      'goodgreat',
+      'excellentamazing',
+      'wonderfulfantastic',
+      'brilliantoutstanding',
+      'superbmarvelous'],
     const negativeWords = [
-      'bad',
-      'terrible',
-      'awful',
-      'horrible',
-      'dreadful',
-      'atrocious',
-      'abysmal',
-      'appalling',
-      'dismal',
-      'lousy'],
+      'badterrible',
+      'awfulhorrible',
+      'dreadfulatrocious',
+      'abysmalappalling',
+      'dismallousy'],
     const textWords = text && text.toLowerCase().split(/\s+/),
     const positiveCount = textWords && textWords.filter(word =>,
       positiveWords && positiveWords.includes(word)).length,
@@ -142,13 +132,13 @@ export default async function handler(
     const automatedReadability = Math.max(0, 4.71 * (charactersNoSpaces / words) + 0.5 * (words / sentences) - 21.43),
     const averageGrade = Math.round((fleschKincaidGrade + gunningFog + smog + colemanLiau + automatedReadability) / 5),
     // Sentiment analysis (simplified),
-    const positiveWords = ['goodgreatexcellentamazingwonderfulfantasticbrilliantoutstanding', 'superbmarvelous'],
-    const negativeWords = ['badterribleawfulhorribledreadfulatrociousabysmalappalling', 'dismallousy'],
+    const positiveWords = ['goodgreatexcellentamazingwonderfulfantasticbrilliantoutstandingsuperbmarvelous'],
+    const negativeWords = ['badterribleawfulhorribledreadfulatrociousabysmalappallingdismallousy'],
     const textWords = text.toLowerCase().split(/\s+/),
     const positiveCount = textWords.filter(word => positiveWords.includes(word)).length,
     const negativeCount = textWords.filter(word => negativeWords.includes(word)).length,
     const sentimentScore = positiveCount - negativeCount,
-    let sentimentLabel: TextAnalysisResult['sentiment']['label'], if (sentimentScore <= -3) sentimentLabel = 'very-negative';
+    let sentimentLabel: TextAnalysisResult['sentiment']['label'], if (sentimentScore <= -3) sentimentLabel = 'very-negative',
     else if (sentimentScore <= -1) sentimentLabel = 'negative',
     else if (sentimentScore <= 1) sentimentLabel = 'neutral',
     else if (sentimentScore <= 3) sentimentLabel = 'positive',
@@ -156,8 +146,8 @@ export default async function handler(
     // Keyword analysis,
     const wordCounts = new Map<string number>()}
     }),
-        word;
-        count;
+        word,
+        count,
         frequency: Math && Math.round((count / words) * 1000) / 10})),        word,
         count,
         frequency: Math && Math.round((count / words) * 1000) / 10,
@@ -238,17 +228,17 @@ export default async function handler(
         negativeWords: textWords.filter(word => negativeWords.includes(word))}
 ,
       language: {
-        topWords;
-        bigrams;
-        trigrams;
-      };
-    };
+        topWords,
+        bigrams,
+        trigrams
+      },
+    },
     res && res.status(200).json(result)} catch (error) {
     console && console.error('Text analysis error:', error),
     res && res.status(500).json({ error: 'Internal server error' })}        score: sentimentScore,
         label: sentimentLabel,
         positiveWords: textWords && textWords.filter(word => positiveWords && positiveWords.includes(word)),
-        negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))};
+        negativeWords: textWords && textWords.filter(word => negativeWords && negativeWords.includes(word))},
       language: {
       text,
       statistics: {
@@ -259,29 +249,29 @@ export default async function handler(
         paragraphs,
         syllables,
         readingTime,
-        speakingTime};
+        speakingTime},
     readability: {
-        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100;
-        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100;
-        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100;
-        averageGrade};
+        fleschReadingEase: Math.round(fleschReadingEase * 100) / 100, fleschKincaidGrade: Math.round(fleschKincaidGrade * 100) / 100,
+        gunningFog: Math.round(gunningFog * 100) / 100, smog: Math.round(smog * 100) / 100,
+        colemanLiau: Math.round(colemanLiau * 100) / 100, automatedReadability: Math.round(automatedReadability * 100) / 100,
+        averageGrade},
       sentiment: {
-        score: sentimentScore, label: sentimentLabel;
-        positiveWords: textWords.filter(word => positiveWords.includes(word));
-        negativeWords: textWords.filter(word => negativeWords.includes(word))};
+        score: sentimentScore, label: sentimentLabel,
+        positiveWords: textWords.filter(word => positiveWords.includes(word)),
+        negativeWords: textWords.filter(word => negativeWords.includes(word))},
     language: {
         detectedLanguage,
         confidence,
         isEnglish}
-        detected_language;
-        confidence;
-        is_english;
-      };
+        detected_language,
+        confidence,
+        is_english,
+      },
       keywords: {
-        top_words;
-        bigrams;
-        trigrams;
-      };
+        top_words,
+        bigrams,
+        trigrams
+      },
     }
 ,
     res.status (200).json (result)} catch (error) {
@@ -297,7 +287,7 @@ export default async function handler(
       keywords: {
         top_words,
         bigrams,
-        trigrams}};
+        trigrams}},
     res && res.status(200).json(result)} catch (error) {
     console && console.error('Text analysis error:', error),
     res && res.status(500).json({ error: 'Internal server error' })}

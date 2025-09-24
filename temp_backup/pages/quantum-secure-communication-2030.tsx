@@ -1,30 +1,30 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  Lock;
-  Key;
-  Eye;
-  Users;
-  Zap;
-  CheckCircle;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Network;
-  Server;
-  Database;
-  Cpu;
-  Cloud;
-  Target;
-  Activity;
-  Calendar;
-  FileText;
-  Search;
-  Filter;
+  Shield,
+  Lock,
+  Key,
+  Eye,
+  Users,
+  Zap,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Network,
+  Server,
+  Database,
+  Cpu,
+  Cloud,
+  Target,
+  Activity,
+  Calendar,
+  FileText,
+  Search,
+  Filter,
 } from 'lucide-react',
 import Link from 'next/link',
 import UltraFuturisticBackground20o30 from '../components/ui/UltraFuturisticBackground20o30',
@@ -32,45 +32,32 @@ import UltraFuturisticNavigation20o30 from '../components/layout/UltraFuturistic
 import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFooter20o30',
 export default function QuantumSecureCommunication20o30() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const features = [
-    'Quantum key distribution (QKD)';
-    'Post-quantum cryptography algorithms';
-    'End-to-end encryption';
-    'Real-time threat detection';
-    'Multi-channel communication support';
-    'Advanced audit logging';
-    'Compliance reporting tools';
-    'API for custom integrations';
-    'Mobile and desktop applications';
-    '24/7 security monitoring';
+    'Quantum key distribution (QKD)Post-quantum cryptography algorithms',
+    'End-to-end encryptionReal-time threat detection',
+    'Multi-channel communication supportAdvanced audit logging',
+    'Compliance reporting toolsAPI for custom integrations',
+    'Mobile and desktop applications24/7 security monitoring',
   ],
   const useCases = [
-    'Secure messaging';
-    'File sharing';
-    'Video conferencing';
-    'Document collaboration';
-    'Compliance reporting';
-    'Audit trails';
+    'Secure messagingFile sharing',
+    'Video conferencingDocument collaboration',
+    'Compliance reportingAudit trails',
   ],
   const integrations = [
-    'Active Directory';
-    'LDAP';
-    'SAML';
-    'OAuth';
-    'Slack';
-    'Microsoft Teams';
+    'Active DirectoryLDAP',
+    'SAMLOAuth',
+    'SlackMicrosoft Teams',
   ],
   const competitors = [
-    'Signal Enterprise ($15/user/month)';
-    'Wickr Enterprise ($25/user/month)';
-    'Wire (enterprise pricing)';
-    'Threema (enterprise pricing)';
-    'Custom solutions ($10o00+/month)';
+    'Signal Enterprise ($15/user/month)Wickr Enterprise ($25/user/month)',
+    'Wire (enterprise pricing)Threema (enterprise pricing)',
+    'Custom solutions ($10o00+/month)',
   ],
   return (
     <>,
@@ -147,7 +134,7 @@ export default function QuantumSecureCommunication20o30() {
                 <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
                   Next-generation quantum-secure communication platform that,
                   provides unbreakable encryption for enterprise communications.,
-                  Features quantum key distribution, post-quantum cryptography;
+                  Features quantum key distribution, post-quantum cryptography,
                   and advanced threat detection.,
                 </p>,
               </motion.div>,

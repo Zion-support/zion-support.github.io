@@ -2,65 +2,57 @@ import Head from 'next/head',
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  CheckCircle;
-  Shield;
-  Zap;
-  Target;
-  BarChart3;
-  TestTube;
-  AlertTriangle;
-  ArrowRight;
-  Star;
-  Users;
-  Globe;
+  Brain,
+  CheckCircle,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  TestTube,
+  AlertTriangle,
+  ArrowRight,
+  Star,
+  Users,
+  Globe,
 } from 'lucide-react',
 export default function AIEvaluationOrchestrator() {
   const features = [
     {
-      icon: <Brain className='w-6 h-6' />;
-      title: 'Comprehensive Model Testing';
+      icon: <Brain className='w-6 h-6' />,
+      title: 'Comprehensive Model Testing',
       description:,
-        'End-to-end evaluation of AI models across accuracy, bias, safety, and performance metrics';
-    };
+        'End-to-end evaluation of AI models across accuracy, bias, safety, and performance metrics',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Safety & Bias Detection';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Safety & Bias Detection',
       description:,
-        'Advanced algorithms to identify and mitigate harmful outputs and biases in AI systems';
-    };
+        'Advanced algorithms to identify and mitigate harmful outputs and biases in AI systems',
+    },
     {
-      icon: <BarChart3 className='w-6 h-6' />;
-      title: 'Performance Analytics';
+      icon: <BarChart3 className='w-6 h-6' />,
+      title: 'Performance Analytics',
       description:,
-        'Detailed performance metrics and benchmarking against industry standards';
-    };
+        'Detailed performance metrics and benchmarking against industry standards',
+    },
     {
-      icon: <TestTube className='w-6 h-6' />;
-      title: 'Automated Testing';
+      icon: <TestTube className='w-6 h-6' />,
+      title: 'Automated Testing',
       description:,
-        'Continuous integration testing for AI models with automated quality gates';
-    };
+        'Continuous integration testing for AI models with automated quality gates',
+    },
   ],
   const evaluationTypes = [
-    'Accuracy & Reliability Testing';
-    'Bias & Fairness Assessment';
-    'Safety & Harm Prevention';
-    'Performance Benchmarking';
-    'Adversarial Testing';
-    'Robustness Evaluation';
-    'Explainability Analysis';
-    'Compliance Verification';
+    'Accuracy & Reliability TestingBias & Fairness Assessment',
+    'Safety & Harm PreventionPerformance Benchmarking',
+    'Adversarial TestingRobustness Evaluation',
+    'Explainability AnalysisCompliance Verification',
   ],
   const industries = [
-    'Healthcare & Medical AI';
-    'Financial Services';
-    'Legal & Compliance';
-    'Education & Training';
-    'Customer Service';
-    'Content Generation';
-    'Autonomous Systems';
-    'Cybersecurity';
+    'Healthcare & Medical AIFinancial Services',
+    'Legal & ComplianceEducation & Training',
+    'Customer ServiceContent Generation',
+    'Autonomous SystemsCybersecurity',
   ],
   return (
     <Layout>,
@@ -92,7 +84,7 @@ export default function AIEvaluationOrchestrator() {
               </h1>,
               <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8'>,
                 Comprehensive AI model evaluation, testing, and safety,
-                assessment services. Ensure your AI systems are reliable, safe;
+                assessment services. Ensure your AI systems are reliable, safe,
                 and compliant with industry standards.,
               </p>,
               <div className='flex flex-col sm: flex-row items-center justify-center gap-4'>,

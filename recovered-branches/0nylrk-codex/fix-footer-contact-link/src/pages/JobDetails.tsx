@@ -16,21 +16,21 @@ import { useWhitelabel  } from '@/context/WhitelabelContext',
 import {ApplyToJobModal} from '@/components/messaging/job-application',
 import {SEO} from '@/components/SEO',
 import {useWhitelabel} from '@/context/WhitelabelContext',
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { Badge } from '@/components/ui/badge';
-import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons';
-import { formatDistanceToNow } from 'date-fns';
-import { toast } from 'sonner';
-import { useAuth } from '@/hooks/useAuth';
-import useJobDetails from '@/hooks/useJobDetails';
-import { ApplyToJobModal } from '@/components/messaging/job-application';
-import { SEO } from '@/components/SEO';
-import { useWhitelabel } from '@/context/WhitelabelContext';
+import React, { useState, useEffect } from 'react',
+import { useParams, useNavigate } from 'react-router-dom',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { Button } from '@/components/ui/button',
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card',
+import { Badge } from '@/components/ui/badge',
+import { Calendar, Clock, DollarSign, Tag, Users, Briefcase } from '@/components/icons',
+import { formatDistanceToNow } from 'date-fns',
+import { toast } from 'sonner',
+import { useAuth } from '@/hooks/useAuth',
+import useJobDetails from '@/hooks/useJobDetails',
+import { ApplyToJobModal } from '@/components/messaging/job-application',
+import { SEO } from '@/components/SEO',
+import { useWhitelabel } from '@/context/WhitelabelContext',
 import {use_params, use_navigate} from 'react-router-dom',
 import {Header} from '@/components / Header',
 import {Footer} from '@/components / Footer',
@@ -56,19 +56,19 @@ export default function JobDetails() {
   const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped,
-  const { jobId } = useParams() as { jobId?: string };
+  const { jobId } = useParams() as { jobId?: string },
   const { job, isLoading, error } = useJobDetails(jobId),
   const { user, isAuthenticated } = useAuth(),
   const navigate = useNavigate(),
   const { isWhitelabel, brandName } = useWhitelabel(),
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped,
-  const { jobId } = useParams() as { jobId?: string };
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const { jobId } = useParams() as { jobId?: string },
+  const { job, isLoading, error } = useJobDetails(jobId),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+  const { isWhitelabel, brandName } = useWhitelabel(),
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">,
@@ -87,23 +87,23 @@ export default function JobDetails() {
       </>)}
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job");
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+      toast.error("Please log in to apply for this job"),
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
       return}
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
-      toast.error("Only job seekers can apply for jobs");
+      toast.error("Only job seekers can apply for jobs"),
       return}
     setIsApplyModalOpen(true)}
-  };
+  },
   const handleApplySuccess = async (appliedJobId: string) => {
     toast.success("Application submitted successfully!"),
     setIsApplyModalOpen(false)}
-  };
+  },
   const formatBudget = (budget: any) => {
     if (!budget) return "Not specified",
     return `$${budget.min} - $${budget.max}`}
-  const isOwnJob = user?.id === job.client_id};
-  const isOwnJob = user?.id === job.client_id;
+  const isOwnJob = user?.id === job.client_id},
+  const isOwnJob = user?.id === job.client_id,
   return (
     <>,
       <SEO
@@ -150,12 +150,12 @@ export default function JobDetails() {
                       <Badge key={i} variant="secondary">,
 export default function JobDetails() {
   // Cast to specify the expected route param type since useParams may be untyped,
-  const { jobId } = useParams() as { jobId?: string };
-  const { job, isLoading, error } = useJobDetails(jobId);
-  const { user, isAuthenticated } = useAuth();
-  const navigate = useNavigate();
-  const { isWhitelabel, brandName } = useWhitelabel();
-  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false);
+  const { jobId } = useParams() as { jobId?: string },
+  const { job, isLoading, error } = useJobDetails(jobId),
+  const { user, isAuthenticated } = useAuth(),
+  const navigate = useNavigate(),
+  const { isWhitelabel, brandName } = useWhitelabel(),
+  const [isApplyModalOpen, setIsApplyModalOpen] = useState(false),
   if (isLoading) {
     return (
       <div className="flex items-center justify-center min-h-screen">,
@@ -176,21 +176,21 @@ export default function JobDetails() {
 ,
   const handleApply = () => {
     if (!isAuthenticated) {
-      toast.error("Please log in to apply for this job");
-      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`));
+      toast.error("Please log in to apply for this job"),
+      navigate('/login?redirect=' + encodeURIComponent(`/jobs/${jobId}`)),
       return}
 ,
     if (user?.userType !== "jobSeeker" && user?.userType !== "talent") {
       toast && toast.error("Only job seekers can apply for jobs"),
       return}
 ,
-    setIsApplyModalOpen(true)};
+    setIsApplyModalOpen(true)},
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast && toast.success("Application submitted successfully!");
-    setIsApplyModalOpen(false)};
+    toast && toast.success("Application submitted successfully!"),
+    setIsApplyModalOpen(false)},
   const formatBudget = (budget: any) => {
-    if (!budget) return "Not specified";
-    return `$${budget && budget.min} - $${budget && budget.max}`};
+    if (!budget) return "Not specified",
+    return `$${budget && budget.min} - $${budget && budget.max}`},
   const isOwnJob = user?.id === job && job.client_id,
   return (
     <>,
@@ -339,7 +339,7 @@ if ( {) {
     setIsApplyModalOpen (true)}
 ,
   const handleApplySuccess = async (appliedJobId: string) => {
-    toast.success ("Application submitted successfully!");
+    toast.success ("Application submitted successfully!"),
     setIsApplyModalOpen (false)}
 ,
   const format_budget = (budget: any) =>: any {
@@ -445,11 +445,11 @@ if (return "Not specified") {
         </div>,
       </main>,
       <Footer />,
-            id: job && job.id;
-            title: job && job.title;
-            description: job && job.description;
-            company_name: job && job.company_name || "Company";
-            budget: job && job.budget;
+            id: job && job.id,
+            title: job && job.title,
+            description: job && job.description,
+            company_name: job && job.company_name || "Company",
+            budget: job && job.budget,
             client_id: job && job.client_id}}
           isOpen={isApplyModalOpen}
           onClose={() => setIsApplyModalOpen(false)}
@@ -461,11 +461,11 @@ if (return "Not specified") {
       {job && (
         <ApplyToJobModal
           job={{
-            id: job.id;
-            title: job.title;
-            description: job.description;
-            company_name: job.company_name || "Company";
-            budget: job.budget;
+            id: job.id,
+            title: job.title,
+            description: job.description,
+            company_name: job.company_name || "Company",
+            budget: job.budget,
             client_id: job.client_id}}
           is_open={isApplyModalOpen}
           on_close={() => setIsApplyModalOpen (false)}

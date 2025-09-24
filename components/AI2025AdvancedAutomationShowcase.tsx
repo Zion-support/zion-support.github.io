@@ -1,107 +1,102 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  DollarSign;
-  Zap;
-  Target;
-  Clock;
-  Users;
-  Award;
-  CheckCircle;
-  Star;
+  ArrowRight,
+  TrendingUp,
+  DollarSign,
+  Zap,
+  Target,
+  Clock,
+  Users,
+  Award,
+  CheckCircle,
+  Star,
 } from 'lucide-react',
 const AI20o25AdvancedAutomationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ai-20o25-advanced-automation-revolution-ultimate-breakthrough';
+      id: 'ai-20o25-advanced-automation-revolution-ultimate-breakthrough',
       title:,
-        'AI 20o25: The Advanced Automation Revolution - Ultimate Breakthrough Guide';
-      type: 'Blog Post';
-      category: 'blog';
-      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-breakthrough';
+        'AI 20o25: The Advanced Automation Revolution - Ultimate Breakthrough Guide',
+      type: 'Blog Post',
+      category: 'blog',
+      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-breakthrough',
       description:,
-        'Achieve unprecedented ROI with our revolutionary AI automation framework that delivers 2,0o00% ROI within 18 months.';
+        'Achieve unprecedented ROI with our revolutionary AI automation framework that delivers 2,0o00% ROI within 18 months.',
       metrics: {
-        roi: '2,0o00%';
-        savings: '$8.5B+';
-        efficiency: '1,20o0%';
-        accuracy: '99.9%';
-      };
-      readingTime: '30 min read';
-      featured: true;
+        roi: '2,0o00%',
+        savings: '$8.5B+',
+        efficiency: '1,20o0%',
+        accuracy: '99.9%'
+      },
+      readingTime: '30 min read',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Advanced Automation';
-        'ROI';
-        'Fortune 50o0';
-        'Breakthrough';
-      ];
-    };
+        'AI RevolutionAdvanced Automation',
+        'ROIFortune 50o0',
+        'Breakthrough',
+      ]
+    },
     {
-      id: 'fortune-50o0-advanced-automation-20o00-roi-success-story';
-      title: 'Fortune 50o0 Advanced Automation Success: $8.5B Annual Savings';
-      type: 'Case Study';
-      category: 'case-study';
-      url: '/case-studies/fortune-50o0-advanced-automation-20o00-roi-success-story';
+      id: 'fortune-50o0-advanced-automation-20o00-roi-success-story',
+      title: 'Fortune 50o0 Advanced Automation Success: $8.5B Annual Savings',
+      type: 'Case Study',
+      category: 'case-study',
+      url: '/case-studies/fortune-50o0-advanced-automation-20o00-roi-success-story',
       description:,
-        'Real-world success story from a Fortune 50o0 manufacturing giant that achieved 2,0o00% ROI and $8.5B in annual savings.';
+        'Real-world success story from a Fortune 50o0 manufacturing giant that achieved 2,0o00% ROI and $8.5B in annual savings.',
       metrics: {
-        roi: '2,0o00%';
-        savings: '$8.5B';
-        timeline: '18 months';
-        satisfaction: '99.7%';
-      };
-      readingTime: '20 min read';
-      featured: true;
+        roi: '2,0o00%',
+        savings: '$8.5B',
+        timeline: '18 months',
+        satisfaction: '99.7%'
+      },
+      readingTime: '20 min read',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'Success Story';
-        'Manufacturing';
-        'ROI';
-        'Case Study';
-      ];
-    };
+        'Fortune 50o0Success Story',
+        'ManufacturingROI',
+        'Case Study',
+      ]
+    },
     {
-      id: 'ai-20o25-advanced-automation-implementation-ultimate-guide';
-      title: 'AI 20o25 Advanced Automation Implementation Ultimate Guide';
-      type: 'Implementation Guide';
-      category: 'resource';
-      url: '/resources/ai-20o25-advanced-automation-implementation-ultimate-guide';
+      id: 'ai-20o25-advanced-automation-implementation-ultimate-guide',
+      title: 'AI 20o25 Advanced Automation Implementation Ultimate Guide',
+      type: 'Implementation Guide',
+      category: 'resource',
+      url: '/resources/ai-20o25-advanced-automation-implementation-ultimate-guide',
       description:,
-        'Complete roadmap to 2,0o00% ROI in 18 months with comprehensive implementation strategies and best practices.';
+        'Complete roadmap to 2,0o00% ROI in 18 months with comprehensive implementation strategies and best practices.',
       metrics: {
-        roi: '2,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        projects: '50o0+';
-      };
-      readingTime: '45 min read';
-      featured: true;
-      tags: ['Implementation', 'ROI', 'Strategy', 'Framework', 'Guide'];
-    };
+        roi: '2,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        projects: '50o0+'
+      },
+      readingTime: '45 min read',
+      featured: true,
+      tags: ['ImplementationROI', 'StrategyFramework', 'Guide'],
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      name: 'Blog Posts';
-      count: contentItems.filter(item => item.category === 'blog').length;
-    };
+      id: 'blog',
+      name: 'Blog Posts',
+      count: contentItems.filter(item => item.category === 'blog').length
+    },
     {
-      id: 'case-study';
-      name: 'Case Studies';
-      count: contentItems.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      name: 'Case Studies',
+      count: contentItems.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resource';
-      name: 'Resources';
-      count: contentItems.filter(item => item.category === 'resource').length;
-    };
+      id: 'resource',
+      name: 'Resources',
+      count: contentItems.filter(item => item.category === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -117,7 +112,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
         return <Target className='w-5 h-5' />,
       default:,
         return <CheckCircle className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'Blog Post':,
@@ -128,7 +123,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -142,7 +137,7 @@ const AI20o25AdvancedAutomationShowcase = () => {
             AI 20o25 Advanced Automation Revolution,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover the revolutionary AI automation framework 'that', 's,
+            Discover the revolutionary AI automation framework 'thats,
             delivering 2,0o00% ROI to Fortune 50o0 companies worldwide. Get the,
             complete roadmap to transformation.,
           </p>,
@@ -294,5 +289,5 @@ const AI20o25AdvancedAutomationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25AdvancedAutomationShowcase;
+    </section>)},
+export default AI20o25AdvancedAutomationShowcase,

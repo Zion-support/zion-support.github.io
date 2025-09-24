@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 /**,
  * Enhanced Cursor Sync Automation System,
@@ -13,7 +13,7 @@ class EnhancedCursorSyncAutomation {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'enhanced-cursor-sync.log'),
+    this.logFile = path.join(__dirname, 'logsenhanced-cursor-sync.log'),
     this.ensureLogDirectory(),
     this.lastSyncTime = this.getLastSyncTime(),
     this.syncInterval = 60o000, // 1 minute,
@@ -30,60 +30,42 @@ class EnhancedCursorSyncAutomation {
     if (fs.existsSync(configPath)) {
       return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
     return {
-      enabled: true;
-      autoCommit: true;
-      autoPush: true;
-      autoPull: true;
-      branch: 'main';
-      commitMessageTemplate: '🔄 Auto-sync [{computer}] {description}';
-      maxCommitSize: 10o0;
-      enableLogging: true;
-      syncInterval: 60o000;
-      enableConflictResolution: true;
-      enableBackup: true;
-      enableMetrics: true;
-      enableHealthCheck: true;
+      enabled: true,
+      autoCommit: true,
+      autoPush: true,
+      autoPull: true,
+      branch: 'main',
+      commitMessageTemplate: '🔄 Auto-sync [{computer}] {description}',
+      maxCommitSize: 10o0,
+      enableLogging: true,
+      syncInterval: 60o000,
+      enableConflictResolution: true,
+      enableBackup: true,
+      enableMetrics: true,
+      enableHealthCheck: true,
       excludePatterns: [
-        'node_modules/**';
-        '.next/**';
-        'dist/**';
-        'build/**';
-        '.git/**';
-        '*.log';
-        '*.tmp';
-        '*.cache';
-        'coverage/**';
-        'cypress/videos/**';
-        'cypress/screenshots/**';
-        'playwright-report/**';
-        'test-results/**';
-        'temp/**';
-        'backups/**';
-        'logs/**'];
+        'node_modules/**.next/**',
+        'dist/**build/**',
+        '.git/***.log',
+        '*.tmp*.cache',
+        'coverage/**cypress/videos/**',
+        'cypress/screenshots/**playwright-report/**',
+        'test-results/**temp/**',
+        'backups/**logs/**'],
       includePatterns: [
-        'src/**/*';
-        'pages/**/*';
-        'components/**/*';
-        'styles/**/*';
-        'public/**/*';
-        'automation/**/*';
-        '*.json';
-        '*.md';
-        '*.ts';
-        '*.tsx';
-        '*.js';
-        '*.jsx';
-        '*.css';
-        '*.scss';
-        '*.html'];
+        'src/**/*pages/**/*',
+        'components/**/*styles/**/*',
+        'public/**/*automation/**/*',
+        '*.json*.md',
+        '*.ts*.tsx',
+        '*.js*.jsx',
+        '*.css*.scss',
+        '*.html'],
       priorityFiles: [
-        'package.json';
-        'package-lock.json';
-        'yarn.lock';
-        'next.config.js';
-        'tailwind.config.js';
-        'tsconfig.json';
-        'README.md']};
+        'package.jsonpackage-lock.json',
+        'yarn.locknext.config.js',
+        'tailwind.config.jstsconfig.json',
+        'README.md']},
   }
 ,
   getComputerId() {
@@ -113,7 +95,7 @@ class EnhancedCursorSyncAutomation {
   }
 ,
   getLastSyncTime() {
-    const syncTimeFile = path.join(__dirname, 'logs', 'last-sync-time.json'),
+    const syncTimeFile = path.join(__dirname, 'logslast-sync-time.json'),
     if (fs.existsSync(syncTimeFile)) {
       try {
         const data = JSON.parse(fs.readFileSync(syncTimeFile, 'utf8')),
@@ -123,17 +105,17 @@ class EnhancedCursorSyncAutomation {
     return null}
 ,
   updateLastSyncTime() {
-    const syncTimeFile = path.join(__dirname, 'logs', 'last-sync-time.json'),
+    const syncTimeFile = path.join(__dirname, 'logslast-sync-time.json'),
     const data ={
-      lastSync: new Date().toISOString();
-      computerId: this.computerId;
-      branch: this.config.branch};
+      lastSync: new Date().toISOString(),
+      computerId: this.computerId,
+      branch: this.config.branch},
     fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2))}
 ,
   async executeCommand(command, options ={}) {
     return new Promise((resolve, reject) => {
       exec(command, {
-        cwd: this.projectRoot;
+        cwd: this.projectRoot,
         maxBuffer: 10o24 * 10o24 * 10, // 10MB buffer,
         ...options}, (error, stdout, stderr) => {
         if (error) {
@@ -226,7 +208,7 @@ class EnhancedCursorSyncAutomation {
       .replace('{description}', description)}
 ,
   analyzeFileTypes(files) {
-    const fileTypes ={};
+    const fileTypes ={},
     files.forEach(file => {
       const filePath = file.substring(3),
       const ext = path.extname(filePath).toLowerCase(),
@@ -238,26 +220,7 @@ class EnhancedCursorSyncAutomation {
 ,
   getFileType(ext) {
     const typeMap ={
-      '.ts': 'TypeScript';
-      '.tsx': 'React TypeScript';
-      '.js': 'JavaScript';
-      '.jsx': 'React JavaScript';
-      '.css': 'CSS';
-      '.scss': 'SCSS';
-      '.html': 'HTML';
-      '.json': 'JSON';
-      '.md': 'Markdown';
-      '.py': 'Python';
-      '.sh': 'Shell';
-      '.yml': 'YAML';
-      '.yaml': 'YAML';
-      '.xml': 'XML';
-      '.svg': 'SVG';
-      '.png': 'Image';
-      '.jpg': 'Image';
-      '.jpeg': 'Image';
-      '.gif': 'Image';
-      '.ico': 'Icon'};
+      '.ts': 'TypeScript.tsx': 'React TypeScript.js': 'JavaScript.jsx': 'React JavaScript.css': 'CSS.scss': 'SCSS.html': 'HTML.json': 'JSON.md': 'Markdown.py': 'Python.sh': 'Shell.yml': 'YAML.yaml': 'YAML.xml': 'XML.svg': 'SVG.png': 'Image.jpg': 'Image.jpeg': 'Image.gif': 'Image.ico': 'Icon'},
     return typeMap[ext] || 'Other'}
 ,
   generateDescription(fileTypes) {
@@ -270,7 +233,7 @@ class EnhancedCursorSyncAutomation {
       return descriptions[0]} else if (descriptions.length === 2) {
       return `${descriptions[0]} and ${descriptions[1]}`} else {
       const last = descriptions.pop(),
-      return `${descriptions.join(', ')}, and ${last}`}
+      return `${descriptions.join()}, and ${last}`}
   }
 ,
   async commitChanges(message) {
@@ -299,7 +262,7 @@ class EnhancedCursorSyncAutomation {
 ,
   async resolveConflicts() {
     if (this.conflictResolutionAttempts >= this.maxConflictResolutions) {
-      this.log('Maximum conflict resolution attempts reached', 'error'),
+      this.log('Maximum conflict resolution attempts reachederror'),
       return false}
 ,
     this.conflictResolutionAttempts++,
@@ -347,7 +310,7 @@ class EnhancedCursorSyncAutomation {
 ,
   async performSync() {
     if (this.isRunning) {
-      this.log('Sync already in progress, skipping...', 'warn'),
+      this.log('Sync already in progress, skipping...warn'),
       return false}
 ,
     this.isRunning = true,
@@ -373,14 +336,14 @@ class EnhancedCursorSyncAutomation {
         this.log(`Found ${remoteChanges.length} remote changes, pulling first...`),
         const pullSuccess = await this.pullChanges(),
         if (!pullSuccess) {
-          this.log('Failed to pull remote changes', 'error'),
+          this.log('Failed to pull remote changeserror'),
           return false}
       }
 ,
       // Stage changes,
       const stageSuccess = await this.stageChanges(filteredFiles),
       if (!stageSuccess) {
-        this.log('Failed to stage changes', 'error'),
+        this.log('Failed to stage changeserror'),
         return false}
 ,
       // Generate commit message,
@@ -388,13 +351,13 @@ class EnhancedCursorSyncAutomation {
       // Commit changes,
       const commitSuccess = await this.commitChanges(commitMessage),
       if (!commitSuccess) {
-        this.log('Failed to commit changes', 'error'),
+        this.log('Failed to commit changeserror'),
         return false}
 ,
       // Push changes,
       const pushSuccess = await this.pushChanges(),
       if (!pushSuccess) {
-        this.log('Failed to push changes', 'error'),
+        this.log('Failed to push changeserror'),
         return false}
 ,
       const duration = Date.now() - startTime,
@@ -417,22 +380,22 @@ class EnhancedCursorSyncAutomation {
   updateMetrics(success, duration, filesCount) {
     if (!this.config.enableMetrics) return,
     try {
-      const metricsFile = path.join(__dirname, 'metrics', 'enhanced-sync-metrics.json'),
+      const metricsFile = path.join(__dirname, 'metricsenhanced-sync-metrics.json'),
       const metricsDir = path.dirname(metricsFile),
       if (!fs.existsSync(metricsDir)) {
         fs.mkdirSync(metricsDir, { recursive: true })}
 ,
       let metrics ={
-        totalSyncs: 0;
-        successfulSyncs: 0;
-        failedSyncs: 0;
-        totalDuration: 0;
-        averageDuration: 0;
-        totalFiles: 0;
-        lastSync: null;
-        computerStats: {};
+        totalSyncs: 0,
+        successfulSyncs: 0,
+        failedSyncs: 0,
+        totalDuration: 0,
+        averageDuration: 0,
+        totalFiles: 0,
+        lastSync: null,
+        computerStats: {},
         dailyStats: {}
-      };
+      },
       if (fs.existsSync(metricsFile)) {
         metrics = JSON.parse(fs.readFileSync(metricsFile, 'utf8'))}
 ,
@@ -449,10 +412,10 @@ class EnhancedCursorSyncAutomation {
       // Update computer-specific stats,
       if (!metrics.computerStats[this.computerId]) {
         metrics.computerStats[this.computerId] ={
-          totalSyncs: 0;
-          successfulSyncs: 0;
-          failedSyncs: 0;
-          lastSync: null};
+          totalSyncs: 0,
+          successfulSyncs: 0,
+          failedSyncs: 0,
+          lastSync: null},
       }
 ,
       metrics.computerStats[this.computerId].totalSyncs++,
@@ -464,11 +427,11 @@ class EnhancedCursorSyncAutomation {
       const today = new Date().toISOString().split('T')[0],
       if (!metrics.dailyStats[today]) {
         metrics.dailyStats[today] ={
-          syncs: 0;
-          successfulSyncs: 0;
-          failedSyncs: 0;
-          totalFiles: 0;
-          totalDuration: 0};
+          syncs: 0,
+          successfulSyncs: 0,
+          failedSyncs: 0,
+          totalFiles: 0,
+          totalDuration: 0},
       }
 ,
       metrics.dailyStats[today].syncs++,

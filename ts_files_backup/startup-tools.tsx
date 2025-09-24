@@ -1,5 +1,5 @@
 "use client",
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
@@ -11,230 +11,200 @@ import {
   Mail,
   Calendar,
   Shield,
-  Globe;
-  ArrowRight;
-  Star;
-  Check;
-  ExternalLink;
-  TrendingUp;
-  Zap;
-  Target;
-  Lightbulb;
+  Globe,
+  ArrowRight,
+  Star,
+  Check,
+  ExternalLink,
+  TrendingUp,
+  Zap,
+  Target,
+  Lightbulb,
   BookOpen} from 'lucide-react',
 export default function StartupToolsPage() {
   const startupTools = [
     {
-      name: 'HubSpot';
-      description: 'All-in-one inbound marketingsalesand customer service platform designed to help businesses grow better.';
-      category: 'Marketing & Sales';
-      pricing: 'Free - $45/month';
-      rating: 4.7;
-      users: '135K+';
-      icon: <Target className="w-8 h-8 text-orange-400" />;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
+      name: 'HubSpot',
+      description: 'All-in-one inbound marketingsalesand customer service platform designed to help businesses grow better.',
+      category: 'Marketing & Sales',
+      pricing: 'Free - $45/month',
+      rating: 4.7,
+      users: '135K+',
+      icon: <Target className="w-8 h-8 text-orange-400" />,
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        'CRM system';
-        'Email marketing';
-        'Lead generation';
-        'Analytics & reporting';
-        'Marketing automation';
-        'Free tier available'];
-      website: 'https://hubspot.com';
-      useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.';
-      pros: ['Free 'tier', 'All-in-one 'solution', 'Great for 'beginners', 'Excellent support'];
-      cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'];
-      bestFor: 'B2B startupsSaaS companiesmarketing teams'};
+        'CRM systemEmail marketing',
+        'Lead generationAnalytics & reporting',
+        'Marketing automationFree tier available'],
+      website: 'https://hubspot.com',
+      useCase: 'Perfect for startups that want to implement inbound marketing strategies and manage customer relationships effectively.',
+      pros: ['Free 'tierAll-in-one 'solution', 'Great for 'beginnersExcellent support'],
+      cons: ['Can get 'expensiveComplex for small 'teams', 'Limited customization'],
+      bestFor: 'B2B startupsSaaS companiesmarketing teams'},
     {
-      name: 'Mailchimp';
-      description: 'Email marketing platform that helps businesses createsendand track email campaigns with ease.';
-      category: 'Email Marketing';
-      pricing: 'Free - $59/month';
-      rating: 4.5;
-      users: '12M+';
-      icon: <Mail className="w-8 h-8 text-yellow-400" />;
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600';
+      name: 'Mailchimp',
+      description: 'Email marketing platform that helps businesses createsendand track email campaigns with ease.',
+      category: 'Email Marketing',
+      pricing: 'Free - $59/month',
+      rating: 4.5,
+      users: '12M+',
+      icon: <Mail className="w-8 h-8 text-yellow-400" />,
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
       features: [
-        'Email templates';
-        'Automation workflows';
-        'A/B testing';
-        'Analytics & reporting';
-        'Integration ecosystem';
-        'Free tier available'];
-      website: 'https://mailchimp.com';
-      useCase: 'Ideal for startups that need to build email listsnurture leadsand communicate with customers.';
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'];
-      cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'];
-      bestFor: 'E-commercecontent creatorsmall businesses'};
+        'Email templatesAutomation workflows',
+        'A/B testingAnalytics & reporting',
+        'Integration ecosystemFree tier available'],
+      website: 'https://mailchimp.com',
+      useCase: 'Ideal for startups that need to build email listsnurture leadsand communicate with customers.',
+      pros: ['Free 'tierEasy to 'use', 'Good 'templatesAffordable'],
+      cons: ['Limited free 'featuresBasic 'automation', 'Can be expensive'],
+      bestFor: 'E-commercecontent creatorsmall businesses'},
     {
-      name: 'Calendly';
-      description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.';
-      category: 'Productivity';
-      pricing: 'Free - $12/month';
-      rating: 4.8;
-      users: '10M+';
-      icon: <Calendar className="w-8 h-8 text-blue-400" />;
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600';
+      name: 'Calendly',
+      description: 'Scheduling automation platform that eliminates the back-and-forth of scheduling meetings and calls.',
+      category: 'Productivity',
+      pricing: 'Free - $12/month',
+      rating: 4.8,
+      users: '10M+',
+      icon: <Calendar className="w-8 h-8 text-blue-400" />,
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Automated scheduling';
-        'Calendar integration';
-        'Custom booking pages';
-        'Team scheduling';
-        'Analytics & reporting';
-        'Free tier available'];
-      website: 'https://calendly.com';
-      useCase: 'Essential for startups that need to schedule sales callsinvestor meetingsand team collaborations efficiently.';
-      pros: ['Free 'tier', 'Easy 'integration', 'Professional 'appearance', 'Time-saving'];
-      cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'];
-      bestFor: 'Sales teamsconsultantsremote teams'};
+        'Automated schedulingCalendar integration',
+        'Custom booking pagesTeam scheduling',
+        'Analytics & reportingFree tier available'],
+      website: 'https://calendly.com',
+      useCase: 'Essential for startups that need to schedule sales callsinvestor meetingsand team collaborations efficiently.',
+      pros: ['Free 'tierEasy 'integration', 'Professional 'appearanceTime-saving'],
+      cons: ['Limited free 'featuresBasic 'customization', 'Can be expensive'],
+      bestFor: 'Sales teamsconsultantsremote teams'},
     {
-      name: 'Canva';
-      description: 'Graphic design platform that makes it easy to create professional designs without design skills.';
-      category: 'Design';
-      pricing: 'Free - $12.99/month';
-      rating: 4.6;
-      users: '100M+';
-      icon: <Lightbulb className="w-8 h-8 text-blue-400" />;
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
+      name: 'Canva',
+      description: 'Graphic design platform that makes it easy to create professional designs without design skills.',
+      category: 'Design',
+      pricing: 'Free - $12.99/month',
+      rating: 4.6,
+      users: '100M+',
+      icon: <Lightbulb className="w-8 h-8 text-blue-400" />,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Design templates';
-        'Stock photos & icons';
-        'Brand kit';
-        'Team collaboration';
-        'Social media formats';
-        'Free tier available'];
-      website: 'https://canva.com';
-      useCase: 'Perfect for startups that need to create marketing materialsocial media contentand presentations.';
-      pros: ['Free 'tier', 'Easy to 'use', 'Great 'templates', 'Affordable'];
-      cons: ['Limited 'customization', 'Watermark on 'free', 'Basic features'];
-      bestFor: 'Marketing teamscontent creatorsmall businesses'};
+        'Design templatesStock photos & icons',
+        'Brand kitTeam collaboration',
+        'Social media formatsFree tier available'],
+      website: 'https://canva.com',
+      useCase: 'Perfect for startups that need to create marketing materialsocial media contentand presentations.',
+      pros: ['Free 'tierEasy to 'use', 'Great 'templatesAffordable'],
+      cons: ['Limited 'customizationWatermark on 'free', 'Basic features'],
+      bestFor: 'Marketing teamscontent creatorsmall businesses'},
     {
-      name: 'Buffer';
-      description: 'Social media management platform that helps businesses schedule postsanalyze performanceand manage multiple accounts.';
-      category: 'Social Media';
-      pricing: 'Free - $15/month';
-      rating: 4.4;
-      users: '140K+';
-      icon: <Globe className="w-8 h-8 text-green-400" />;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      name: 'Buffer',
+      description: 'Social media management platform that helps businesses schedule postsanalyze performanceand manage multiple accounts.',
+      category: 'Social Media',
+      pricing: 'Free - $15/month',
+      rating: 4.4,
+      users: '140K+',
+      icon: <Globe className="w-8 h-8 text-green-400" />,
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Social media scheduling';
-        'Analytics & reporting';
-        'Team collaboration';
-        'Content calendar';
-        'Multiple platforms';
-        'Free tier available'];
-      website: 'https://buffer.com';
-      useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.';
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'analytics', 'Affordable'];
-      cons: ['Limited free 'features', 'Basic 'scheduling', 'Limited platforms'];
-      bestFor: 'Social media managersmall businessescontent creators'};
+        'Social media schedulingAnalytics & reporting',
+        'Team collaborationContent calendar',
+        'Multiple platformsFree tier available'],
+      website: 'https://buffer.com',
+      useCase: 'Ideal for startups that want to maintain a consistent social media presence and grow their audience.',
+      pros: ['Free 'tierEasy to 'use', 'Good 'analyticsAffordable'],
+      cons: ['Limited free 'featuresBasic 'scheduling', 'Limited platforms'],
+      bestFor: 'Social media managersmall businessescontent creators'},
     {
-      name: 'Notion';
-      description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.';
-      category: 'Productivity';
-      pricing: 'Free - $8/month';
-      rating: 4.7;
-      users: '20M+';
-      icon: <Zap className="w-8 h-8 text-gray-400" />;
-      color: 'bg-gradient-to-br from-gray-500 to-gray-700';
+      name: 'Notion',
+      description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.',
+      category: 'Productivity',
+      pricing: 'Free - $8/month',
+      rating: 4.7,
+      users: '20M+',
+      icon: <Zap className="w-8 h-8 text-gray-400" />,
+      color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docs';
-        'Project management';
-        'Team collaboration';
-        'Database & tables';
-        'Templates library';
-        'API integration'];
-      website: 'https://notion.so';
-      useCase: 'Perfect for startup teams that need a flexible workspace for documentationproject managementand knowledge sharing.';
-      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'];
-      cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'];
-      bestFor: 'Remote teamsproject managersknowledge workers'};
+        'Note-taking & docsProject management',
+        'Team collaborationDatabase & tables',
+        'Templates libraryAPI integration'],
+      website: 'https://notion.so',
+      useCase: 'Perfect for startup teams that need a flexible workspace for documentationproject managementand knowledge sharing.',
+      pros: ['Highly 'flexibleBeautiful 'interface', 'Great 'templatesFree tier'],
+      cons: ['Learning 'curveLimited offline 'access', 'Can be overwhelming'],
+      bestFor: 'Remote teamsproject managersknowledge workers'},
     {
-      name: 'Stripe';
-      description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.';
-      category: 'Payments';
-      pricing: '2.9% + 30¢ per transaction';
-      rating: 4.9;
-      users: '1M+';
-      icon: <DollarSign className="w-8 h-8 text-blue-400" />;
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600';
+      name: 'Stripe',
+      description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.',
+      category: 'Payments',
+      pricing: '2.9% + 30¢ per transaction',
+      rating: 4.9,
+      users: '1M+',
+      icon: <DollarSign className="w-8 h-8 text-blue-400" />,
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methods';
-        'Subscription billing';
-        'Fraud protection';
-        'Compliance tools';
-        'Developer-friendly API';
-        'Analytics dashboard'];
-      website: 'https://stripe.com';
-      useCase: 'Essential for any startup that needs to accept paymentsespecially SaaS companies and e-commerce businesses.';
-      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'];
-      cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'];
-      bestFor: 'SaaS companiese-commerceonline businesses'};
+        'Global payment methodsSubscription billing',
+        'Fraud protectionCompliance tools',
+        'Developer-friendly APIAnalytics dashboard'],
+      website: 'https://stripe.com',
+      useCase: 'Essential for any startup that needs to accept paymentsespecially SaaS companies and e-commerce businesses.',
+      pros: ['Developer-'friendlyGlobal 'reach', 'Excellent 'docsReliable'],
+      cons: ['Higher fees than some 'alternativesComplex for 'beginners', 'Strict requirements'],
+      bestFor: 'SaaS companiese-commerceonline businesses'},
     {
-      name: 'Intercom';
-      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.';
-      category: 'Customer Support';
-      pricing: '$39 - $999/month';
-      rating: 4.6;
-      users: '25K+';
-      icon: <Users className="w-8 h-8 text-green-400" />;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      name: 'Intercom',
+      description: 'Customer messaging platform that helps businesses build better customer relationships through personalized experiences.',
+      category: 'Customer Support',
+      pricing: '$39 - $999/month',
+      rating: 4.6,
+      users: '25K+',
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chat';
-        'Customer messaging';
-        'Help desk';
-        'User onboarding';
-        'Analytics & reporting';
-        'Integration ecosystem'];
-      website: 'https://intercom.com';
-      useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.';
-      pros: ['Great 'UX', 'Powerful 'features', 'Good 'integrations', 'Mobile apps'];
-      cons: [', 'Expensive', 'Complex 'pricing', 'Can be overwhelming'];
-      bestFor: 'SaaS companiesonline businessescustomer support teams'};
+        'Live chatCustomer messaging',
+        'Help deskUser onboarding',
+        'Analytics & reportingIntegration ecosystem'],
+      website: 'https://intercom.com',
+      useCase: 'Perfect for SaaS startups and online businesses that want to provide excellent customer support and user engagement.',
+      pros: ['Great 'UXPowerful 'features', 'Good 'integrationsMobile apps'],
+      cons: [', 'ExpensiveComplex 'pricing', 'Can be overwhelming'],
+      bestFor: 'SaaS companiesonline businessescustomer support teams'},
     {
-      name: 'Mixpanel';
-      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.';
-      category: 'Analytics';
-      pricing: 'Free - $25/month';
-      rating: 4.5;
-      users: '26K+';
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />;
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600';
+      name: 'Mixpanel',
+      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
+      category: 'Analytics',
+      pricing: 'Free - $25/month',
+      rating: 4.5,
+      users: '26K+',
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior tracking';
-        'Funnel analysis';
-        'A/B testing';
-        'Real-time data';
-        'Custom events';
-        'Mobile analytics'];
-      website: 'https://mixpanel.com';
-      useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.';
-      pros: ['Powerful 'analytics', 'Real-time 'data', 'Good 'documentation', 'Flexible'];
-      cons: ['Complex 'setup', 'Expensive at 'scale', 'Steep learning curve'];
-      bestFor: 'Product teamsgrowth hackersdata analysts'};
+        'User behavior trackingFunnel analysis',
+        'A/B testingReal-time data',
+        'Custom eventsMobile analytics'],
+      website: 'https://mixpanel.com',
+      useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.',
+      pros: ['Powerful 'analyticsReal-time 'data', 'Good 'documentationFlexible'],
+      cons: ['Complex 'setupExpensive at 'scale', 'Steep learning curve'],
+      bestFor: 'Product teamsgrowth hackersdata analysts'},
     {
-      name: 'Vercel';
-      description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.';
-      category: 'Development';
-      pricing: 'Free - $20/month';
-      rating: 4.8;
-      users: '100K+';
-      icon: <Rocket className="w-8 h-8 text-black" />;
-      color: 'bg-gradient-to-br from-gray-800 to-black';
+      name: 'Vercel',
+      description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.',
+      category: 'Development',
+      pricing: 'Free - $20/month',
+      rating: 4.8,
+      users: '100K+',
+      icon: <Rocket className="w-8 h-8 text-black" />,
+      color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deployment';
-        'Global CDN';
-        'Automatic scaling';
-        'Git integration';
-        'Preview deployments';
-        'Edge functions'];
-      website: 'https://vercel.com';
-      useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent window.window.performance.';
-      pros: ['Zero 'config', 'Excellent 'performance', 'Great 'DX', 'Free tier'];
-      cons: ['Limited backend 'features', 'Can be expensive for high 'traffic', 'Vendor lock-in'];
+        'Zero-config deploymentGlobal CDN',
+        'Automatic scalingGit integration',
+        'Preview deploymentsEdge functions'],
+      website: 'https://vercel.com',
+      useCase: 'Ideal for startup development teams that want to deploy modern web applications quickly with excellent window.window.performance.',
+      pros: ['Zero 'configExcellent 'performance', 'Great 'DXFree tier'],
+      cons: ['Limited backend 'featuresCan be expensive for high 'traffic', 'Vendor lock-in'],
       bestFor: 'Frontend developerstartup teamsmodern web apps'}
   ],
-  const categories = [', 'All', 'Marketing & 'Sales', 'Email 'Marketing', 'Productivity', 'Design', 'Social 'Media', 'Payments'Customer 'Support', 'Analytics'Development'],
+  const categories = [All', 'Marketing & 'SalesEmail 'Marketing', 'ProductivityDesign', 'Social 'MediaPayments'Customer 'SupportAnalytics'Development'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
   const filteredTools = selectedCategory === 'All',
     ? startupTools,

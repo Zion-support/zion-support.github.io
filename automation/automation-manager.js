@@ -4,16 +4,16 @@ const fs = require('fs').promises,
 const path = require('path'),
 const { execSync } = require('child_process'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-manager' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-manager' },
   transports: [
-    new winston.transports.File({ filename: 'logs/automation-manager.log' });
+    new winston.transports.File({ filename: 'logs/automation-manager.log' }),
     new winston.transports.Console({
-      format: winston.format.simple()});
+      format: winston.format.simple()}),
   ]}),
 /**,
  * Comprehensive Automation Manager,
@@ -84,12 +84,12 @@ class AutomationManager {
     // Fix common syntax patterns,
     const syntaxFixes = [
       {
-        file: 'automation/cursor-automated-communication.js';
-        pattern: /apiEndpoint: config\.apiEndpoint \|\| https:\/\/api\.cursor\.sh'/g;
-        replacement: "apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh'"};
+        file: 'automation/cursor-automated-communication.js',
+        pattern: /apiEndpoint: config\.apiEndpoint \|\| https:\/\/api\.cursor\.sh'/g,
+        replacement: "apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh'"},
       {
-        file: 'automation/core/AutomationTask.js';
-        pattern: /this\.lastStatus = pending',/g;
+        file: 'automation/core/AutomationTask.js',
+        pattern: /this\.lastStatus = pending',/g,
         replacement: "this.lastStatus = 'pending',"}
     ],
     for (const fix of syntaxFixes) {
@@ -166,24 +166,24 @@ class AutomationManager {
 ,
   async generateHealthReport() {
     const report ={
-      timestamp: new Date().toISOString();
-      uptime: Date.now() - this.startTime;
+      timestamp: new Date().toISOString(),
+      uptime: Date.now() - this.startTime,
       systems: {
-        total: this.systems.size;
-        running: Array.from(this.systems.values()).filter(s => s.isRunning).length};
+        total: this.systems.size,
+        running: Array.from(this.systems.values()).filter(s => s.isRunning).length},
       testResults: {
-        total: this.testResults.size;
-        passed: Array.from(this.testResults.values()).filter(r => r.passed).length;
-        failed: Array.from(this.testResults.values()).filter(r => !r.passed).length};
-      fixes: this.fixes;
-      health: await this.getSystemHealth()};
+        total: this.testResults.size,
+        passed: Array.from(this.testResults.values()).filter(r => r.passed).length,
+        failed: Array.from(this.testResults.values()).filter(r => !r.passed).length},
+      fixes: this.fixes,
+      health: await this.getSystemHealth()},
     // Save report,
     const reportPath = path.join(__dirname, 'automation-health-report.json'),
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Health report generated: ${report.systems.running}/${report.systems.total} systems running`)}
 ,
   async getSystemHealth() {
-    const health ={};
+    const health ={},
     // Check if main automation system is running,
     try {
       const response = await fetch('http: //localhost:30o01/health'),
@@ -207,25 +207,25 @@ class AutomationManager {
     logger.info('📝 Creating automation scripts for future use...'),
     const scripts = [
       {
-        name: 'start-automation.sh';
+        name: 'start-automation.sh',
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation-manager.js run,
-`};
+`},
       {
-        name: 'test-automation.sh';
+        name: 'test-automation.sh',
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation/test-all-automations.js,
-`};
+`},
       {
-        name: 'fix-automation.sh';
+        name: 'fix-automation.sh',
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation-manager.js fix,
-`};
+`},
       {
-        name: 'monitor-automation.sh';
+        name: 'monitor-automation.sh',
         content: `#!/bin/bash,
 cd "$(dirname "$0")",
 node automation-manager.js monitor,

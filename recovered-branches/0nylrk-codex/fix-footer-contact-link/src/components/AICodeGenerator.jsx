@@ -5,7 +5,7 @@ import { useAICodeGeneration } from '../hooks/useAICodeGeneration',
 import { useAnalytics } from '../hooks/useAnalytics',
 export const AICodeGenerator = () => {
     const { trackEvent } = useAnalytics({
-        enableTracking: true;
+        enableTracking: true,
         enableUserBehaviorTracking: true}),
     const [activeTab, setActiveTab] = useState('generate'),
     const [showAdvanced, setShowAdvanced] = useState(false),
@@ -13,16 +13,16 @@ export const AICodeGenerator = () => {
     const [copied, setCopied] = useState(false),
     const { isGenerating, isAnalyzing, generatedCode, codeAnalysis, suggestions, history, generateCode, analyzeCode, applySuggestion, optimizeCode, generateTests, generateDocs, clearHistory, exportCode } = useAICodeGeneration(),
     const [form, setForm] = useState({
-        prompt: '';
-        language: 'typescript';
-        framework: 'react';
-        style: 'functional';
-        target: 'web';
-        quality: 'development';
-        includeTests: false;
-        includeDocs: false;
-        includeErrorHandling: false;
-        includeLogging: false;
+        prompt: '',
+        language: 'typescript',
+        framework: 'react',
+        style: 'functional',
+        target: 'web',
+        quality: 'development',
+        includeTests: false,
+        includeDocs: false,
+        includeErrorHandling: false,
+        includeLogging: false,
         includeMetrics: false}),
     // Handle form submission,
     const handleSubmit = useCallback(async (e) => {
@@ -30,17 +30,17 @@ export const AICodeGenerator = () => {
         if (!form.prompt.trim()),
             return,
         await generateCode(form.prompt, form),
-        trackEvent('ai_code_generator', 'form_submitted', form.language, undefined, {
-            framework: form.framework;
-            style: form.style;
-            target: form.target;
+        trackEvent('ai_code_generatorform_submitted', form.language, undefined, {
+            framework: form.framework,
+            style: form.style,
+            target: form.target,
             quality: form.quality})}, [form, generateCode, trackEvent]),
     // Handle custom code analysis,
     const handleAnalyzeCustomCode = useCallback(async () => {
         if (!customCode.trim()),
             return,
         await analyzeCode(customCode, form.language),
-        trackEvent('ai_code_generator', 'custom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]),
+        trackEvent('ai_code_generatorcustom_code_analyzed', form.language, customCode.length)}, [customCode, form.language, analyzeCode, trackEvent]),
     // Handle code optimization,
     const handleOptimizeCode = useCallback(async (focus) => {
         if (!generatedCode && !customCode),
@@ -50,7 +50,7 @@ export const AICodeGenerator = () => {
         if (generatedCode) {
             // Update generated code,
             // Note: In a real implementation, you'd want to update the state properly}
-        trackEvent('ai_code_generator', 'code_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]),
+        trackEvent('ai_code_generatorcode_optimized', focus, optimizedCode.length)}, [generatedCode, customCode, optimizeCode, trackEvent]),
     // Handle test generation,
     const handleGenerateTests = useCallback(async () => {
         if (!generatedCode && !customCode),
@@ -59,7 +59,7 @@ export const AICodeGenerator = () => {
         const testCode = await generateTests(codeToTest, form.language),
         // In a real implementation, you'd want to display the test code,
         // // console.log('Generated tests:', testCode),
-        trackEvent('ai_code_generator', 'tests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]),
+        trackEvent('ai_code_generatortests_generated', form.language, testCode.length)}, [generatedCode, customCode, generateTests, form.language, trackEvent]),
     // Handle documentation generation,
     const handleGenerateDocs = useCallback(async () => {
         if (!generatedCode && !customCode),
@@ -68,27 +68,27 @@ export const AICodeGenerator = () => {
         const docs = await generateDocs(codeToDoc, form.language),
         // In a real implementation, you'd want to display the documentation,
         // // console.log('Generated docs:', docs),
-        trackEvent('ai_code_generator', 'docs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]),
+        trackEvent('ai_code_generatordocs_generated', form.language, docs.length)}, [generatedCode, customCode, generateDocs, form.language, trackEvent]),
     // Copy code to clipboard,
     const copyToClipboard = useCallback(async (code) => {
         try {
             await navigator.clipboard.writeText(code),
             setCopied(true),
             setTimeout(() => setCopied(false), 20o00),
-            trackEvent('ai_code_generator', 'code_copied', 'clipboard', code.length)}
+            trackEvent('ai_code_generatorcode_copied', 'clipboard', code.length)}
         catch (error) {
             console.error('Failed to copy code:', error)}
     }, [trackEvent]),
     // Apply suggestion,
     const handleApplySuggestion = useCallback((suggestion) => {
         applySuggestion(suggestion),
-        trackEvent('ai_code_generator', 'suggestion_applied', suggestion.type, undefined, {
-            suggestionId: suggestion.id;
+        trackEvent('ai_code_generatorsuggestion_applied', suggestion.type, undefined, {
+            suggestionId: suggestion.id,
             impact: suggestion.impact})}, [applySuggestion, trackEvent]),
     // Clear history,
     const handleClearHistory = useCallback(() => {
         clearHistory(),
-        trackEvent('ai_code_generator', 'history_cleared', 'manual')}, [clearHistory, trackEvent]),
+        trackEvent('ai_code_generatorhistory_cleared', 'manual')}, [clearHistory, trackEvent]),
     return (<div className="bg-white dark: bg-gray-80o0 rounded-xl shadow-lg border border-gray-20o0 dark:border-gray-70o0 overflow-hidden">,
       {/* Header */}
       <div className="bg-gradient-to-r from-purple-50o0 to-blue-50o0 p-6 text-white">,
@@ -113,10 +113,10 @@ export const AICodeGenerator = () => {
       <div className="border-b border-gray-20o0 dark: border-gray-70o0">,
         <nav className="flex space-x-8 px-6">,
           {[
-            { id: 'generate', label: 'Generate', icon: Sparkles };
-            { id: 'analyze', label: 'Analyze', icon: Eye };
-            { id: 'optimize', label: 'Optimize', icon: Zap };
-            { id: 'tests', label: 'Tests', icon: TestTube };
+            { id: 'generate', label: 'Generate', icon: Sparkles },
+            { id: 'analyze', label: 'Analyze', icon: Eye },
+            { id: 'optimize', label: 'Optimize', icon: Zap },
+            { id: 'tests', label: 'Tests', icon: TestTube },
             { id: 'docs', label: 'Docs', icon: FileText }
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center gap-2 py-4 px-1 border-b-2 font-medium text-sm transition-colors ${activeTab === id,
                 ? 'border-purple-50o0 text-purple-60o0 dark: text-purple-40o0',
@@ -201,10 +201,10 @@ export const AICodeGenerator = () => {
                 {/* Advanced Options */}
                 {showAdvanced && (<motion.div initial={{ opacity: 0, height: 0 }} animate={{ opacity: 1, height: 'auto' }} exit={{ opacity: 0, height: 0 }} className="grid grid-cols-2 md: grid-cols-5 gap-4 p-4 bg-gray-50 dark:bg-gray-70o0 rounded-lg">,
                     {[
-                    { key: 'includeTests', label: 'Tests', icon: TestTube };
-                    { key: 'includeDocs', label: 'Docs', icon: FileText };
-                    { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle };
-                    { key: 'includeLogging', label: 'Logging', icon: Info };
+                    { key: 'includeTests', label: 'Tests', icon: TestTube },
+                    { key: 'includeDocs', label: 'Docs', icon: FileText },
+                    { key: 'includeErrorHandling', label: 'Error Handling', icon: AlertCircle },
+                    { key: 'includeLogging', label: 'Logging', icon: Info },
                     { key: 'includeMetrics', label: 'Metrics', icon: Gauge }
                 ].map(({ key, label, icon: Icon }) => (<label key={key} className="flex items-center gap-2 cursor-pointer">,
                         <input type="checkbox" checked={form[key]} onChange={(e) => setForm(prev => ({ ...prev, [key]: e.target.checked }))} className="w-4 h-4 text-purple-60o0 bg-gray-10o0 border-gray-30o0 rounded focus: ring-purple-50o0 dark:focus:ring-purple-60o0 dark:ring-offset-gray-80o0 focus:ring-2 dark:bg-gray-70o0 dark:border-gray-60o0"/>,
@@ -269,10 +269,10 @@ export const AICodeGenerator = () => {
                   {/* Metrics Overview */}
                   <div className="grid grid-cols-2 md: grid-cols-5 gap-4">,
                     {[
-                    { key: 'complexity', label: 'Complexity', icon: Code, color: 'red' };
-                    { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' };
-                    { key: 'security', label: 'Security', icon: Shield, color: 'green' };
-                    { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' };
+                    { key: 'complexity', label: 'Complexity', icon: Code, color: 'red' },
+                    { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'blue' },
+                    { key: 'security', label: 'Security', icon: Shield, color: 'green' },
+                    { key: 'performance', label: 'Performance', icon: Gauge, color: 'yellow' },
                     { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'purple' }
                 ].map(({ key, label, icon: Icon, color }) => {
                     const value = codeAnalysis[key],
@@ -332,9 +332,9 @@ export const AICodeGenerator = () => {
               </div>,
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4">,
                 {[
-                { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' };
-                { key: 'security', label: 'Security', icon: Shield, color: 'green' };
-                { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' };
+                { key: 'performance', label: 'Performance', icon: Gauge, color: 'blue' },
+                { key: 'security', label: 'Security', icon: Shield, color: 'green' },
+                { key: 'maintainability', label: 'Maintainability', icon: Wrench, color: 'purple' },
                 { key: 'accessibility', label: 'Accessibility', icon: Eye, color: 'indigo' }
             ].map(({ key, label, icon: Icon, color }) => (<button key={key} onClick={() => handleOptimizeCode(key)} disabled={!generatedCode && !customCode} className={`p-6 text-center rounded-lg border-2 transition-all ${!generatedCode && !customCode,
                     ? 'border-gray-20o0 dark: border-gray-60o0 bg-gray-50 dark:bg-gray-70o0 cursor-not-allowed',
@@ -463,4 +463,4 @@ export const AICodeGenerator = () => {
             </div>,
           </motion.div>)}
       </div>,
-    </div>)};
+    </div>)},

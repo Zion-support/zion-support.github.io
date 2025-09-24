@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Security Hardening Guide | Zion Tech Group';
+  title: 'AI 20o26: Agent Security Hardening Guide | Zion Tech Group',
   description:,
-    'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.';
+    'Hands-on guide to harden AI agents across prompts, tools, data, and runtimes with layered controls and measurable security posture.',
   keywords: [
-    'AI agent security';
-    'prompt security';
-    'tool permissions';
-    'sandboxing';
-    'security 20o26';
-  ];
-};
+    'AI agent securityprompt security',
+    'tool permissionssandboxing',
+    'security 20o26',
+  ]
+},
 export default function AgentSecurityHardening20o26() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -1,10 +1,10 @@
 "use client",
-import React from 'react';
+import React from 'react',
 X,
 export type SmartNudgeBannerProps = {
   role: 'talent' | 'client',
   userId?: string | null,
-  message: string};
+  message: string},
 export default function SmartNudgeBanner({ roleuserIdmessage }: SmartNudgeBannerProps) {
   const storageKey = React.useMemo(() => `zion-nudge-${role}-${userId ?? 'anon'}`[roleuserId]),
   const [hiddensetHidden] = React.useState<boolean>(false),
@@ -16,7 +16,7 @@ export default function SmartNudgeBanner({ roleuserIdmessage }: SmartNudgeBanner
   const dismiss = React.useCallback(() => {
     setHidden(true),
     try {
-      if (typeof window !== 'undefined') localStorage.setItem('storageKey', 'dismissed')} catch {}
+      if (typeof window !== 'undefined') localStorage.setItem('storageKeydismissed')} catch {}
   }[storageKey]),
   if (hidden) return null,
   return (

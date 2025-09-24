@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Real-Time Agent Debugger — Live Traces, Diffs, and Evals';
+  title: 'AI 20o26: Real-Time Agent Debugger — Live Traces, Diffs, and Evals',
   description:,
-    'Debug autonomous agents in production with live traces, prompt/tool diffs, eval IDs, and rollback-ready guardrails.';
-};
+    'Debug autonomous agents in production with live traces, prompt/tool diffs, eval IDs, and rollback-ready guardrails.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -13,7 +13,7 @@ export default function Page() {
             AI 20o26: Real-Time Agent Debugger,
           </h1>,
           <p className='text-gray-60o0 mt-4'>,
-            Live traces, prompt and tool diffing across retries and routes;
+            Live traces, prompt and tool diffing across retries and routes,
             evaluation IDs, and guardrails to safely debug autonomous agents in,
             production.,
           </p>,

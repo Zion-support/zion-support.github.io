@@ -24,12 +24,12 @@ export default function AffiliateDashboard() {
     setMsg(''),
     try {
       const res = await fetch('/api/partners/request-payout', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          code;
-          amount: amount ? Number(amount) : undefined;
-        });
+          code,
+          amount: amount ? Number(amount) : undefined
+        }),
       }),
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed'),
@@ -39,7 +39,7 @@ export default function AffiliateDashboard() {
 ,
   const exportUrl = useMemo(
     () =>,
-      code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#';
+      code ? `/api/partners/export?code=${encodeURIComponent(code)}` : '#',
     [code]),
   if (!code) {
     return (

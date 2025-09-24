@@ -13,11 +13,11 @@ export default function handler("req": NextApiRequest, "res": NextApiResponse) {
     const "errorReport": ErrorReport = req.body,
     // Log the error (in production, you might want to send this to a service like Sentry),
     console.error('Client Error "Report": ', {
-      "error": errorReport.error;
-      "stack": errorReport.stack;
-      "componentStack": errorReport.componentStack;
-      "timestamp": errorReport.timestamp;
-      "userAgent": errorReport.userAgent;
+      "error": errorReport.error,
+      "stack": errorReport.stack,
+      "componentStack": errorReport.componentStack,
+      "timestamp": errorReport.timestamp,
+      "userAgent": errorReport.userAgent,
       "url": errorReport.url}),
     // In a real application, you "would": // 1. Send to error tracking service (Sentry, LogRocket, etc.),
     // 2. Store in database for analysis,

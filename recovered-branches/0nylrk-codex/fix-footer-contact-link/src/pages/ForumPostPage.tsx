@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import {useState} from "react",
 import {useParams, Link} from "react-router-dom",
 import {AppLayout} from "@/layout/AppLayout",
@@ -16,43 +16,43 @@ import {useAuth} from "@/hooks/useAuth",
 import ReplyCard from "@/components/community/ReplyCard",
 import ReplyForm from "@/components/community/ReplyForm",
 import {useToast} from "@/hooks/use-toast",
-import { useState } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react";
-import { formatDistanceToNow, format } from "date-fns";
-import { ForumPost, ForumReply } from "@/types/community";
-import { useAuth } from "@/hooks/useAuth";
-import ReplyCard from "@/components/community/ReplyCard";
+import { useState } from "react",
+import { useParams, Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { ThumbsUp, ThumbsDown, Calendar, Flag, Edit, Trash2, Pin, Lock, CheckCircle } from "lucide-react",
+import { formatDistanceToNow, format } from "date-fns",
+import { ForumPost, ForumReply } from "@/types/community",
+import { useAuth } from "@/hooks/useAuth",
+import ReplyCard from "@/components/community/ReplyCard",
 import { useToast } from "@/hooks/use-toast",
-import ReplyForm from "@/components/community/ReplyForm";
-import { useToast } from "@/hooks/use-toast";
+import ReplyForm from "@/components/community/ReplyForm",
+import { useToast } from "@/hooks/use-toast",
 // Mock data for a forum post,
 // Mock data for a forum post,
 const mockPost: ForumPost = {
-  id: "1";
-  title: "Best practices for AI model fine-tuning";
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
-  authorId: "user1";
-  authorName: "Alex Johnson";
-  authorAvatar: "https://i.pravatar.cc/150?img=3";
-  authorRole: "Verified Talent";
-  categoryId: "ai-tools";
-  tags: ["machine-learning", "fine-tuning", "gpt"];
-  createdAt: "2025-04-01T12:00:00Z";
-  updatedAt: "2025-04-01T12:00:00Z";
-  upvotes: 48;
-  downvotes: 2;
-  replyCount: 4;
-  isAnswered: true;
-  isFeatured: true};
+  id: "1",
+  title: "Best practices for AI model fine-tuning",
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+  authorId: "user1",
+  authorName: "Alex Johnson",
+  authorAvatar: "https://i.pravatar.cc/150?img=3",
+  authorRole: "Verified Talent",
+  categoryId: "ai-tools",
+  tags: ["machine-learning", "fine-tuning", "gpt"],
+  createdAt: "2025-04-01T12:00:00Z",
+  updatedAt: "2025-04-01T12:00:00Z",
+  upvotes: 48,
+  downvotes: 2,
+  replyCount: 4,
+  isAnswered: true,
+  isFeatured: true},
 const mockPost: ForumPost = {
   id: "1",
   title: "Best practices for AI model fine-tuning",
@@ -106,7 +106,7 @@ const mockReplies: ForumReply[] = [
     upvotes: 15,
     downvotes: 0,
     isAnswer: true}
-  };
+  },
   {
     id: "reply2",
     postId: "1",
@@ -129,7 +129,7 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T09:45:00Z",
     upvotes: 15,
     downvotes: 0,
-    isAnswer: true};
+    isAnswer: true},
   {
     id: "reply4",
     postId: "1",
@@ -140,12 +140,12 @@ const mockReplies: ForumReply[] = [
     updatedAt: "2025-04-02T11:20:00Z",
     upvotes: 4,
     downvotes: 0}
-]];
+]],
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript,
   // can't determine the generic type for the helper from React Router.,
   // Cast the result instead to provide the expected shape.,
-  const { postId } = useParams() as { postId?: string };
+  const { postId } = useParams() as { postId?: string },
   const { user } = useAuth(),
   const { toast } = useToast(),
   const [post, setPost] = useState(mockPost),
@@ -160,15 +160,15 @@ export default function ForumPostPage() {
   const isAuthor = user?.id === post?.authorId,
   // Check if user is admin/mod,
   const isAdminOrMod = user?.userType === 'admin' |user?.role === 'admin',
-  const { postId } = useParams() as { postId?: string };
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [post, setPost] = useState(mockPost);
-  const [replies, setReplies] = useState(mockReplies);
+  const { postId } = useParams() as { postId?: string },
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const [post, setPost] = useState(mockPost),
+  const [replies, setReplies] = useState(mockReplies),
   // Check if this is the user's own post,
-  const isAuthor = user?.id === post?.authorId;
+  const isAuthor = user?.id === post?.authorId,
   // Check if user is admin/mod,
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   // For this demo, we'll assume the post is found,
   if (!post) {
     return (
@@ -190,7 +190,7 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded",
       description: "You upvoted this post"})}
-  };
+  },
   const handleDownvote = () => {
     if (!user) {
       toast({
@@ -201,7 +201,7 @@ export default function ForumPostPage() {
     toast({
       title: "Vote recorded",
       description: "You downvoted this post"})}
-  };
+  },
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
@@ -222,22 +222,22 @@ export default function ForumPostPage() {
       downvotes: 0}
     setReplies([...replies, newReply]),
     setPost({ ...post, replyCount: post.replyCount + 1 }),
-      id: `reply${Date.now()}`;
-      postId: post.id;
-      content;
-      authorId: user.id || 'unknown';
-      authorName: user.displayName || 'Anonymous';
-      authorAvatar: user.avatarUrl;
-      createdAt: new Date().toISOString();
-      updatedAt: new Date().toISOString();
-      upvotes: 0;
-      downvotes: 0};
-    setReplies([...replies, newReply]);
-    setPost({ ...post, replyCount: post.replyCount + 1 });
+      id: `reply${Date.now()}`,
+      postId: post.id,
+      content,
+      authorId: user.id || 'unknown',
+      authorName: user.displayName || 'Anonymous',
+      authorAvatar: user.avatarUrl,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      upvotes: 0,
+      downvotes: 0},
+    setReplies([...replies, newReply]),
+    setPost({ ...post, replyCount: post.replyCount + 1 }),
     toast({
       title: "Reply posted",
       description: "Your reply has been added to the discussion"})}
-  };
+  },
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer,
     if (!isAuthor && !isAdminOrMod) {
@@ -248,71 +248,71 @@ export default function ForumPostPage() {
   const handleUpvote = () => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to vote on posts"});
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
       return}
 ,
-    setPost({ ...post, upvotes: post && post.upvotes + 1 });
+    setPost({ ...post, upvotes: post && post.upvotes + 1 }),
     toast({
-      title: "Vote recorded";
-      description: "You upvoted this post"})};
+      title: "Vote recorded",
+      description: "You upvoted this post"})},
   const handleDownvote = () => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to vote on posts"});
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
       return}
 ,
-    setPost({ ...post, downvotes: post && post.downvotes + 1 });
+    setPost({ ...post, downvotes: post && post.downvotes + 1 }),
     toast({
-      title: "Vote recorded";
-      description: "You downvoted this post"})};
+      title: "Vote recorded",
+      description: "You downvoted this post"})},
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to reply"});
+        title: "Authentication required",
+        description: "Please sign in to reply"}),
       return}
 ,
     // Create a new reply,
     const newReply: ForumReply = {
-      id: `reply${Date && Date.now()}`;
-      postId: post && post.id;
+      id: `reply${Date && Date.now()}`,
+      postId: post && post.id,
       content,
-      authorId: user && user.id || 'unknown';
-      authorName: user && user.displayName || 'Anonymous';
-      authorAvatar: user && user.avatarUrl;
-      createdAt: new Date().toISOString();
-      updatedAt: new Date().toISOString();
-      upvotes: 0;
-      downvotes: 0};
+      authorId: user && user.id || 'unknown',
+      authorName: user && user.displayName || 'Anonymous',
+      authorAvatar: user && user.avatarUrl,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      upvotes: 0,
+      downvotes: 0},
     setReplies([...replies, newReply]),
-    setPost({ ...post, replyCount: post && post.replyCount + 1 });
+    setPost({ ...post, replyCount: post && post.replyCount + 1 }),
     toast({
-      title: "Reply posted";
-      description: "Your reply has been added to the discussion"})};
+      title: "Reply posted",
+      description: "Your reply has been added to the discussion"})},
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer,
     if (!isAuthor && !isAdminOrMod) {
       toast({
-        title: "Permission denied";
-        description: "Only the original poster or moderators can mark answers";
+        title: "Permission denied",
+        description: "Only the original poster or moderators can mark answers",
         variant: "destructive"}),
       return}
     // Update the replies,
     const updatedReplies = replies.map(reply => ({
       ...reply,
       isAnswer: reply && reply.id === replyId})),
-      ...reply;
+      ...reply,
       isAnswer: reply.id === replyId})),
     setReplies(updatedReplies),
-    setPost({ ...post, isAnswered: true })}));
-    setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true });
+    setPost({ ...post, isAnswered: true })})),
+    setReplies(updatedReplies),
+    setPost({ ...post, isAnswered: true }),
     toast({
       title: "Answer marked",
       description: "The reply has been marked as the accepted answer"})}
-  };
+  },
   const handleReportPost = () => {
     if (!user) {
       toast({
@@ -324,26 +324,26 @@ export default function ForumPostPage() {
       description: "A moderator will review this content"})}
   const handlePinPost = () => {
     if (!isAdminOrMod) return,
-    setPost({ ...post, isPinned: !post.isPinned })};
+    setPost({ ...post, isPinned: !post.isPinned })},
   const handlePinPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isPinned: !post.isPinned });
+    if (!isAdminOrMod) return,
+    setPost({ ...post, isPinned: !post.isPinned }),
     toast({
       title: post.isPinned ? "Post unpinned" : "Post pinned",
       description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})}
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
-    setPost({ ...post, isLocked: !post.isLocked })};
+    setPost({ ...post, isLocked: !post.isLocked })},
   const handleLockPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isLocked: !post.isLocked });
+    if (!isAdminOrMod) return,
+    setPost({ ...post, isLocked: !post.isLocked }),
     toast({
       title: post.isLocked ? "Post unlocked" : "Post locked",
       description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})}
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")};
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a");
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a")},
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
+  const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   return (
     <AppLayout>,
       <SEO
@@ -377,82 +377,82 @@ export default function ForumPostPage() {
                     <Badge variant="outline" className="mt-1">,
 // Mock data for a forum post,
 const mockPost: ForumPost = {
-  id: "1";
-  title: "Best practices for AI model fine-tuning";
-  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?";
-  authorId: "user1";
-  authorName: "Alex Johnson";
-  authorAvatar: "https://i.pravatar.cc/150?img=3";
-  authorRole: "Verified Talent";
-  categoryId: "ai-tools";
-  tags: ["machine-learning", "fine-tuning", "gpt"];
-  createdAt: "2025-04-01T12:00:00Z";
-  updatedAt: "2025-04-01T12:00:00Z";
-  upvotes: 48;
-  downvotes: 2;
-  replyCount: 4;
-  isAnswered: true;
-  isFeatured: true};
+  id: "1",
+  title: "Best practices for AI model fine-tuning",
+  content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me.\n\nFirst, it's important to carefully prepare your training data. Clean, well-structured data makes a huge difference. I typically spend more time on data preparation than on the actual fine-tuning process.\n\nSecond, for parameter optimization, I've found that learning rate scheduling plays a critical role. Starting with a smaller learning rate and using a warm-up period tends to yield more stable results.\n\nThird, regularization techniques like dropout and weight decay help prevent overfitting, especially when working with smaller datasets.\n\nFinally, evaluating your fine-tuned model requires looking beyond standard metrics. I always test with diverse real-world examples to ensure the model generalizes well.\n\nWhat has been your experience with fine-tuning? Any techniques you've found particularly effective?",
+  authorId: "user1",
+  authorName: "Alex Johnson",
+  authorAvatar: "https://i.pravatar.cc/150?img=3",
+  authorRole: "Verified Talent",
+  categoryId: "ai-tools",
+  tags: ["machine-learning", "fine-tuning", "gpt"],
+  createdAt: "2025-04-01T12:00:00Z",
+  updatedAt: "2025-04-01T12:00:00Z",
+  upvotes: 48,
+  downvotes: 2,
+  replyCount: 4,
+  isAnswered: true,
+  isFeatured: true},
 // Mock data for replies,
 const mockReplies: ForumReply[] = [
   {
-    id: "reply1";
-    postId: "1";
-    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.";
-    authorId: "user2";
-    authorName: "Sarah Chen";
-    authorAvatar: "https://i.pravatar.cc/150?img=5";
-    createdAt: "2025-04-01T14:30:00Z";
-    updatedAt: "2025-04-01T14:30:00Z";
-    upvotes: 12;
-    downvotes: 0};
+    id: "reply1",
+    postId: "1",
+    content: "Great post! I've had similar experiences with data preparation being the key to successful fine-tuning. One thing I'd add is that synthetic data augmentation has been really helpful for me when working with limited training samples.",
+    authorId: "user2",
+    authorName: "Sarah Chen",
+    authorAvatar: "https://i.pravatar.cc/150?img=5",
+    createdAt: "2025-04-01T14:30:00Z",
+    updatedAt: "2025-04-01T14:30:00Z",
+    upvotes: 12,
+    downvotes: 0},
   {
-    id: "reply2";
-    postId: "1";
-    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.window.window.performance.";
-    authorId: "user3";
-    authorName: "Michael Wong";
-    authorRole: "AI Engineer";
-    createdAt: "2025-04-01T16:15:00Z";
-    updatedAt: "2025-04-01T16:15:00Z";
-    upvotes: 8;
-    downvotes: 0};
+    id: "reply2",
+    postId: "1",
+    content: "Have you tried using LoRA or QLoRA for efficient fine-tuning? I've found them to be much more resource-friendly while maintaining good window.window.window.window.window.performance.",
+    authorId: "user3",
+    authorName: "Michael Wong",
+    authorRole: "AI Engineer",
+    createdAt: "2025-04-01T16:15:00Z",
+    updatedAt: "2025-04-01T16:15:00Z",
+    upvotes: 8,
+    downvotes: 0},
   {
-    id: "reply3";
-    postId: "1";
-    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.";
-    authorId: "user4";
-    authorName: "Emma Davis";
-    authorRole: "ML Research Lead";
-    createdAt: "2025-04-02T09:45:00Z";
-    updatedAt: "2025-04-02T09:45:00Z";
-    upvotes: 15;
-    downvotes: 0;
-    isAnswer: true};
+    id: "reply3",
+    postId: "1",
+    content: "A technique that's worked wonders for me is to create a validation set that specifically targets the edge cases and potential biases. This has helped me identify issues early in the fine-tuning process.\n\nAlso, when fine-tuning language models, I've found that carefully crafting your prompts/templates for training can make a huge difference in the quality of the outputs.",
+    authorId: "user4",
+    authorName: "Emma Davis",
+    authorRole: "ML Research Lead",
+    createdAt: "2025-04-02T09:45:00Z",
+    updatedAt: "2025-04-02T09:45:00Z",
+    upvotes: 15,
+    downvotes: 0,
+    isAnswer: true},
   {
-    id: "reply4";
-    postId: "1";
-    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?";
-    authorId: "user5";
-    authorName: "David Lin";
-    createdAt: "2025-04-02T11:20:00Z";
-    updatedAt: "2025-04-02T11:20:00Z";
-    upvotes: 4;
+    id: "reply4",
+    postId: "1",
+    content: "Could you share more details about how you structure your evaluation process? What metrics do you find most useful beyond the standard ones?",
+    authorId: "user5",
+    authorName: "David Lin",
+    createdAt: "2025-04-02T11:20:00Z",
+    updatedAt: "2025-04-02T11:20:00Z",
+    upvotes: 4,
     downvotes: 0}
-];
+],
 export default function ForumPostPage() {
   // Using `useParams` without type arguments avoids issues when TypeScript,
   // can't determine the generic type for the helper from React Router.,
   // Cast the result instead to provide the expected shape.,
-  const { postId } = useParams() as { postId?: string };
-  const { user } = useAuth();
-  const { toast } = useToast();
-  const [post, setPost] = useState(mockPost);
-  const [replies, setReplies] = useState(mockReplies);
+  const { postId } = useParams() as { postId?: string },
+  const { user } = useAuth(),
+  const { toast } = useToast(),
+  const [post, setPost] = useState(mockPost),
+  const [replies, setReplies] = useState(mockReplies),
   // Check if this is the user's own post,
-  const isAuthor = user?.id === post?.authorId;
+  const isAuthor = user?.id === post?.authorId,
   // Check if user is admin/mod,
-  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin';
+  const isAdminOrMod = user?.userType === 'admin' || user?.role === 'admin',
   // For this demo, we'll assume the post is found,
   if (!post) {
     return (
@@ -468,89 +468,89 @@ export default function ForumPostPage() {
   const handleUpvote = () => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to vote on posts"});
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
       return}
 ,
-    setPost({ ...post, upvotes: post.upvotes + 1 });
+    setPost({ ...post, upvotes: post.upvotes + 1 }),
     toast({
-      title: "Vote recorded";
-      description: "You upvoted this post"})};
+      title: "Vote recorded",
+      description: "You upvoted this post"})},
   const handleDownvote = () => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to vote on posts"});
+        title: "Authentication required",
+        description: "Please sign in to vote on posts"}),
       return}
 ,
-    setPost({ ...post, downvotes: post.downvotes + 1 });
+    setPost({ ...post, downvotes: post.downvotes + 1 }),
     toast({
-      title: "Vote recorded";
-      description: "You downvoted this post"})};
+      title: "Vote recorded",
+      description: "You downvoted this post"})},
   const handleSubmitReply = async (content: string) => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to reply"});
+        title: "Authentication required",
+        description: "Please sign in to reply"}),
       return}
 ,
     // Create a new reply,
     const newReply: ForumReply = {
-      id: `reply${Date.now()}`;
-      postId: post.id;
-      content;
-      authorId: user.id || 'unknown';
-      authorName: user.displayName || 'Anonymous';
-      authorAvatar: user.avatarUrl;
-      createdAt: new Date().toISOString();
-      updatedAt: new Date().toISOString();
-      upvotes: 0;
-      downvotes: 0};
-    setReplies([...replies, newReply]);
-    setPost({ ...post, replyCount: post.replyCount + 1 });
+      id: `reply${Date.now()}`,
+      postId: post.id,
+      content,
+      authorId: user.id || 'unknown',
+      authorName: user.displayName || 'Anonymous',
+      authorAvatar: user.avatarUrl,
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      upvotes: 0,
+      downvotes: 0},
+    setReplies([...replies, newReply]),
+    setPost({ ...post, replyCount: post.replyCount + 1 }),
     toast({
-      title: "Reply posted";
-      description: "Your reply has been added to the discussion"})};
+      title: "Reply posted",
+      description: "Your reply has been added to the discussion"})},
   const handleMarkAsAnswer = (replyId: string) => {
     // Only post author or admin can mark an answer,
     if (!isAuthor && !isAdminOrMod) {
       toast({
-        title: "Permission denied";
-        description: "Only the original poster or moderators can mark answers";
-        variant: "destructive"});
+        title: "Permission denied",
+        description: "Only the original poster or moderators can mark answers",
+        variant: "destructive"}),
       return}
 ,
     // Update the replies,
     const updatedReplies = replies.map(reply => ({
-      ...reply;
-      isAnswer: reply.id === replyId}));
-    setReplies(updatedReplies);
-    setPost({ ...post, isAnswered: true });
+      ...reply,
+      isAnswer: reply.id === replyId})),
+    setReplies(updatedReplies),
+    setPost({ ...post, isAnswered: true }),
     toast({
-      title: "Answer marked";
-      description: "The reply has been marked as the accepted answer"})};
+      title: "Answer marked",
+      description: "The reply has been marked as the accepted answer"})},
   const handleReportPost = () => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to report content"});
+        title: "Authentication required",
+        description: "Please sign in to report content"}),
       return}
 ,
     toast({
-      title: "Report submitted";
-      description: "A moderator will review this content"})};
+      title: "Report submitted",
+      description: "A moderator will review this content"})},
   const handlePinPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isPinned: !post.isPinned });
+    if (!isAdminOrMod) return,
+    setPost({ ...post, isPinned: !post.isPinned }),
     toast({
-      title: post.isPinned ? "Post unpinned" : "Post pinned";
-      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})};
+      title: post.isPinned ? "Post unpinned" : "Post pinned",
+      description: post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})},
   const handleLockPost = () => {
-    if (!isAdminOrMod) return;
-    setPost({ ...post, isLocked: !post.isLocked });
+    if (!isAdminOrMod) return,
+    setPost({ ...post, isLocked: !post.isLocked }),
     toast({
-      title: post.isLocked ? "Post unlocked" : "Post locked";
-      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})};
+      title: post.isLocked ? "Post unlocked" : "Post locked",
+      description: post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})},
   const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   const formattedDate = format(new Date(post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   return (
@@ -600,34 +600,34 @@ export default function ForumPostPage() {
               {post.tags.map(tag => (
                 <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover: bg-zion-purple/20">,
     setReplies(updatedReplies),
-    setPost({ ...post, isAnswered: true });
+    setPost({ ...post, isAnswered: true }),
     toast({
-      title: "Answer marked";
-      description: "The reply has been marked as the accepted answer"})};
+      title: "Answer marked",
+      description: "The reply has been marked as the accepted answer"})},
   const handleReportPost = () => {
     if (!user) {
       toast({
-        title: "Authentication required";
-        description: "Please sign in to report content"});
+        title: "Authentication required",
+        description: "Please sign in to report content"}),
       return}
 ,
     toast({
-      title: "Report submitted";
-      description: "A moderator will review this content"})};
+      title: "Report submitted",
+      description: "A moderator will review this content"})},
   const handlePinPost = () => {
     if (!isAdminOrMod) return,
-    setPost({ ...post, isPinned: !post && post.isPinned });
+    setPost({ ...post, isPinned: !post && post.isPinned }),
     toast({
-      title: post && post.isPinned ? "Post unpinned" : "Post pinned";
-      description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})};
+      title: post && post.isPinned ? "Post unpinned" : "Post pinned",
+      description: post && post.isPinned ? "The post has been unpinned" : "The post has been pinned to the top"})},
   const handleLockPost = () => {
     if (!isAdminOrMod) return,
-    setPost({ ...post, isLocked: !post && post.isLocked });
+    setPost({ ...post, isLocked: !post && post.isLocked }),
     toast({
-      title: post && post.isLocked ? "Post unlocked" : "Post locked";
-      description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})};
-  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true });
-  const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a");
+      title: post && post.isLocked ? "Post unlocked" : "Post locked",
+      description: post && post.isLocked ? "Comments are now allowed" : "Comments are now disabled"})},
+  const timeAgo = formatDistanceToNow(new Date(post && post.createdAt), { addSuffix: true }),
+  const formattedDate = format(new Date(post && post.createdAt), "MMMM d, yyyy 'at' h: mm a"),
   return (
     <AppLayout>,
       <SEO

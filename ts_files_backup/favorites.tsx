@@ -12,7 +12,7 @@ function useFavorites() {
       if (raw) setFavorites(JSON.parse(raw))} catch {}
   }[]),
   const remove = (slug: string) => setFavorites((prev) => prev.filter((s) => s !== slug)),
-  return { favoritesremove };
+  return { favoritesremove },
 }
 ,
 export default function FavoritesPage() {

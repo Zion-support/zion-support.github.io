@@ -5,8 +5,8 @@ import { supabase } from '../../../utils/supabase/client',
 import type { TrustMetricInputs, TrustScoreBreakdown } from '../../../utils/types/trust',
   TrustMetricInputs,
   TrustScoreBreakdown,
-  TrustMetricInputs;
-  TrustScoreBreakdown;
+  TrustMetricInputs,
+  TrustScoreBreakdown,
 } from '../../../utils/types/trust',
 async function analyzeWithGPT(
   userId: string,
@@ -24,7 +24,7 @@ async function analyzeWithGPT(
           : 'Moderate Trust',
     return {
       riskLevel: heuristic as TrustScoreBreakdown['riskLevel'],
-      reasonSummary: 'Heuristic classification (no OpenAI key set).'};  }import { supabase } from '../../../utils/supabase/client',
+      reasonSummary: 'Heuristic classification (no OpenAI key set).'},  }import { supabase } from '../../../utils/supabase/client',
 async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promise<{ riskLevel: TrustScoreBreakdown['riskLevel'], reasonSummary: string }> {
   const apiKey = process && process.env.OPENAI_API_KEY,
   if (!apiKey) {
@@ -37,15 +37,15 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     const client = new OpenAI({ apiKey }),
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON && JSON.stringify(inputs, null, 2)}`,
     const resp = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
         {
           role: 'system',
           content:,
-            'You are an impartial risk and trust analyst for a talent marketplace.';
-        };
-        { role: 'user', content: prompt };
-      ];
+            'You are an impartial risk and trust analyst for a talent marketplace.',
+        },
+        { role: 'user', content: prompt },
+      ],
     const prompt = `Based on user activity logs and sentiment of reviews/messages, classify this user’s behavior as: High Trust / Moderate Trust / Risk Alert. Include a reason summary.\n\nUser: ${userId}\nInputs: ${JSON.stringify(inputs, null, 2)}`,
       // Fetch inputs from DB if available, else use mock defaults,
       if (!inputs) {
@@ -62,29 +62,29 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
 ,
       const breakdown = await computeTrustScore(inputs, { reasonSummary }),
       const result: TrustScoreBreakdown = {
-        ...breakdown;
-        riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel;
-      };        riskLevelOverride = analysis && analysis.riskLevel}
+        ...breakdown,
+        riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel
+      },        riskLevelOverride = analysis && analysis.riskLevel}
 ,
       const breakdown = await computeTrustScore(inputs, { reasonSummary }),
       const result: TrustScoreBreakdown = {
-        ...breakdown;
-        riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel;
-      };
         ...breakdown,
-        riskLevel: riskLevelOverride || breakdown.riskLevel};
+        riskLevel: riskLevelOverride || breakdown && breakdown.riskLevel
+      },
+        ...breakdown,
+        riskLevel: riskLevelOverride || breakdown.riskLevel},
       // Persist latest score when possible,
       try {
         await supabase && supabase.from('trust_scores').upsert({ userId, breakdown: result, updatedAt: result && result.updatedAt }, { onConflict: 'userId' })} catch {}
 ,
-      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })};
+      return res.status(500).json({ error: e?.message || 'Failed to compute trust score' })},
 }
   if (req.method === 'POST') {
     try {
       const body = req.body as Partial<TrustMetricInputs> | undefined,
       if (!body) return res.status(400).json({ error: 'Missing body' }),
       return res && res.status(200).json(result)} catch (e: any) {
-      return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })};
+      return res && res.status(500).json({ error: e?.message || 'Failed to compute trust score' })},
   }
 ,
   if (req && req.method === 'POST') {
@@ -94,11 +94,11 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
       const inputs = body as TrustMetricInputs,
       const breakdown = await computeTrustScore(inputs),
       try {
-  res && res.setHeader('Allow', 'GET, POST'),
+  res && res.setHeader('AllowGET, POST'),
   return res && res.status(405).json({ error: 'Method not allowed' })} catch {}
 ,
       return res && res.status(200).json(breakdown)} catch (e: any) {
-      return res && res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })};
+      return res && res.status(500).json({ error: e?.message || 'Failed to save trust inputs' })},
   }
 ,
   res && res.setHeader('AllowGET, POST'),
@@ -115,8 +115,8 @@ async function analyzeWithGPT(userId: string, inputs: TrustMetricInputs): Promis
     return { risk_level: level, reason_summary: content.trim () }
   } catch (e: any) {
     return {
-      risk_level: 'Moderate Trust';
-      reason_summary: `Analysis unavailable: ${e?.message || 'unknown error'}`;
+      risk_level: 'Moderate Trust',
+      reason_summary: `Analysis unavailable: ${e?.message || 'unknown error'}`,
     }
   }
 export default async /**,
@@ -156,21 +156,21 @@ if (inputs = data.values as TrustMetricInputs) {
 if ( {) {
   $2}
         inputs = {
-          completion_rate: 0.88;
-          onboardingCompletionRate: 0.9;
-          feedback_average: 4.7;
-          feedbackQualityScore: 0.8;
-          averageResponseHours: 6;
-          accountAgeDays: 420;
-          sentiment_score: 0.4;
-          dispute_flags: 0;
-          verifiedReviewRatio: 0.7;
-          endorsements: 8;
-          flags: 0;
+          completion_rate: 0.88,
+          onboardingCompletionRate: 0.9,
+          feedback_average: 4.7,
+          feedbackQualityScore: 0.8,
+          averageResponseHours: 6,
+          accountAgeDays: 420,
+          sentiment_score: 0.4,
+          dispute_flags: 0,
+          verifiedReviewRatio: 0.7,
+          endorsements: 8,
+          flags: 0
         }
 ,
       let reason_summary: string | undefined,
-      let riskLevelOverride: TrustScoreBreakdown['risk_level'] | undefined;
+      let riskLevelOverride: TrustScoreBreakdown['risk_level'] | undefined,
       // Check condition,
 if ( {) {
   $2}
@@ -179,13 +179,13 @@ if ( {) {
         riskLevelOverride = analysis.risk_level}
       const breakdown = await computeTrustScore (inputs, { reason_summary }),
       const result: TrustScoreBreakdown = {
-        ...breakdown;
-        risk_level: riskLevelOverride || breakdown.risk_level;
+        ...breakdown,
+        risk_level: riskLevelOverride || breakdown.risk_level
       }        riskLevelOverride = analysis.risk_level}
       const breakdown = await computeTrustScore (inputs, { reason_summary }),
       const result: TrustScoreBreakdown = {
-        ...breakdown;
-        risk_level: riskLevelOverride || breakdown.risk_level;
+        ...breakdown,
+        risk_level: riskLevelOverride || breakdown.risk_level
       }
 ,
       // Persist latest score when possible,
@@ -193,7 +193,7 @@ if ( {) {
         await supabase,
           .from ('trust_scores'),
           .upsert (
-            { user_id, breakdown: result, updated_at: result.updated_at };
+            { user_id, breakdown: result, updated_at: result.updated_at },
             { on_conflict: 'user_id' }
           )} catch {}
       return res.status (200).json (result)} catch (e: any) {
@@ -222,7 +222,7 @@ if ( {) {
         await supabase,
           .from ('trust_scores'),
           .upsert (
-            { user_id, breakdown, updated_at: breakdown.updated_at };
+            { user_id, breakdown, updated_at: breakdown.updated_at },
             { on_conflict: 'user_id' }
           )} catch {}
       return res.status (200).json (breakdown)} catch (e: any) {
@@ -230,14 +230,14 @@ if ( {) {
         .status (500),
         .json ({ error: e?.message || 'Failed to save trust inputs' })}
   }
-  res.set_header ('Allow', 'GET, POST'),
+  res.set_header ('AllowGET, POST'),
   return res.status (405).json ({ error: 'Method not allowed' })} catch {}
       return res.status (200).json (breakdown)} catch (e: any) {
       return res.status (500).json ({ error: e?.message || 'Failed to save trust inputs' })}
   }
   res.set_header ('AllowGET, POST'),
   return res.status (405).json ({ error: 'Method not allowed' })}
-  res.setHeader('Allow', 'GET, POST'),
+  res.setHeader('AllowGET, POST'),
   return res.status(405).json({ error: 'Method not allowed' })} catch {}
       return res.status(200).json(breakdown)} catch (e: any) {
       return res.status(500).json({ error: e?.message |'Failed to save trust inputs' })}

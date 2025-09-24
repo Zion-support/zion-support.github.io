@@ -16,22 +16,22 @@ export interface ExportOptions {
   fontFamily?: FontFamily}
 ,
 const defaultOptions: ExportOptions = {
-  theme: 'light';
-  includePortfolio: true;
-  maxProjects: 2;
-  fontFamily: 'default';
-};
+  theme: 'light',
+  includePortfolio: true,
+  maxProjects: 2,
+  fontFamily: 'default'
+},
 export async function exportResumeToPDF(
-  resume: Resume;
+  resume: Resume,
   options: Partial<ExportOptions> = {}
 ): Promise<Blob> {
-  const mergedOptions: ExportOptions = { ...defaultOptions, ...options };
+  const mergedOptions: ExportOptions = { ...defaultOptions, ...options },
   const { theme, includePortfolio, maxProjects, fontFamily } = mergedOptions,
   // Create new PDF document (A4),
   const doc = new jsPDF({
-    orientation: 'portrait';
-    unit: 'mm';
-    format: 'a4';
+    orientation: 'portrait',
+    unit: 'mm',
+    format: 'a4'
   }),
   // Load custom fonts if specified,
   await loadCustomFonts(doc, fontFamily),
@@ -46,15 +46,15 @@ export async function exportResumeToPDF(
   let currentY = addBasicInfoSection(doc, resume.basic_info, colors),
   currentY = addSkillsSection(doc, resume.skills, colors, currentY),
   currentY = addWorkExperienceSection(
-    doc;
-    resume.work_experience;
-    colors;
+    doc,
+    resume.work_experience,
+    colors,
     currentY),
   currentY = addEducationSection(doc, resume.education, colors, currentY),
   currentY = addCertificationsSection(
-    doc;
-    resume.certifications;
-    colors;
+    doc,
+    resume.certifications,
+    colors,
     currentY),
   // Add portfolio projects if needed,
   if (
@@ -62,10 +62,10 @@ export async function exportResumeToPDF(
     resume.portfolio_projects &&,
     resume.portfolio_projects.length > 0) {
     currentY = addPortfolioSection(
-      doc;
-      resume.portfolio_projects;
-      colors;
-      currentY;
+      doc,
+      resume.portfolio_projects,
+      colors,
+      currentY,
       maxProjects)}
 ,
   return doc.output('blob')}

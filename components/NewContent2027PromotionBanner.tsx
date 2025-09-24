@@ -11,16 +11,16 @@ const NewContent20o27PromotionBanner = () => {
       setCurrentFeature((prev) => (prev + 1) % features.length)}, 30o00),
     return () => clearInterval(interval)}, []),
   const features = [
-    { text: "🚀 Revolutionary AI Technologies", color: "text-purple-40o0" };
-    { text: "⚛️ Quantum Computing Breakthroughs", color: "text-blue-40o0" };
-    { text: "🧠 Neural Interface Innovations", color: "text-pink-40o0" };
-    { text: "🤖 Autonomous Business Systems", color: "text-green-40o0" };
+    { text: "🚀 Revolutionary AI Technologies", color: "text-purple-40o0" },
+    { text: "⚛️ Quantum Computing Breakthroughs", color: "text-blue-40o0" },
+    { text: "🧠 Neural Interface Innovations", color: "text-pink-40o0" },
+    { text: "🤖 Autonomous Business Systems", color: "text-green-40o0" },
     { text: "🌟 Synthetic Intelligence", color: "text-yellow-40o0" }
   ],
   const stats = [
-    { value: "25,0o00%", label: "Maximum ROI" };
-    { value: "50+", label: "New Articles" };
-    { value: "15", label: "Categories" };
+    { value: "25,0o00%", label: "Maximum ROI" },
+    { value: "50+", label: "New Articles" },
+    { value: "15", label: "Categories" },
     { value: "99.9%", label: "Success Rate" }
   ],
   return (
@@ -138,5 +138,5 @@ const NewContent20o27PromotionBanner = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default NewContent20o27PromotionBanner;
+    </div>)},
+export default NewContent20o27PromotionBanner,

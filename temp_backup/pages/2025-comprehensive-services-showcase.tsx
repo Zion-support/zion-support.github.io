@@ -2,8 +2,8 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Brain, Building, Target, Cpu, Shield;
-  Check, Phone, Mail, MapPin;
+  Brain, Building, Target, Cpu, Shield,
+  Check, Phone, Mail, MapPin,
   TrendingUp, Zap, Globe} from 'lucide-react',
 // Import our new service data,
 import { advancedAIMLServices } from '../data/20o25-advanced-ai-ml-services',
@@ -18,35 +18,35 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.price?.monthly) return `$${service.price.monthly}/month`,
   if (typeof service.price === 'string') return service.price,
-  return 'Contact for pricing'};
+  return 'Contact for pricing'},
 // Helper function to get service features,
 const getServiceFeatures = (service: any) => {
-  return service.keyFeatures || service.features || []};
+  return service.keyFeatures || service.features || []},
 // Helper function to get service setup time,
 const getServiceSetupTime = (service: any) => {
   if (service.setupTime) return service.setupTime,
   if (service.pricing?.setupTime) return service.pricing.setupTime,
   if (service.price?.setupTime) return service.price.setupTime,
-  return 'N/A'};
+  return 'N/A'},
 // Helper function to get service trial days,
 const getServiceTrialDays = (service: any) => {
   if (service.trialDays) return service.trialDays,
   if (service.pricing?.trialDays) return service.pricing.trialDays,
   if (service.price?.trialDays) return service.price.trialDays,
-  return 'N/A'};
+  return 'N/A'},
 // All services combined,
 const allServices = [
-  ...advancedAIMLServices;
-  ...advancedCybersecurityServices;
-      ...advancedCloudDevOpsServices20o25;
-  ...industrySpecificSolutions;
+  ...advancedAIMLServices,
+  ...advancedCybersecurityServices,
+      ...advancedCloudDevOpsServices20o25,
+  ...industrySpecificSolutions,
   ...emergingTechnologyServices],
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5"  /> };
-    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5"  /> };
-    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5"  /> };
-    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5"  /> };
-    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5"  /> };
+    { id: 'all', name: 'All Services', icon: <Target className="w-5 h-5"  /> },
+    { id: 'business-intelligence', name: 'Business Intelligence', icon: <TrendingUp className="w-5 h-5"  /> },
+    { id: 'ai-automation', name: 'AI Automation', icon: <Brain className="w-5 h-5"  /> },
+    { id: 'it-infrastructure', name: 'IT Infrastructure', icon: <Building className="w-5 h-5"  /> },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: <Zap className="w-5 h-5"  /> },
     { id: 'ai-services', name: 'AI Services', icon: <Cpu className="w-5 h-5"  /> }
   ],
   const filteredServices = activeTab === 'all',
@@ -465,6 +465,6 @@ const allServices = [
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default ComprehensiveServicesShowcase;
+    </div>)},
+export default ComprehensiveServicesShowcase,
 })

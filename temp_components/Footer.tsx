@@ -1,51 +1,51 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerLinks = {
     company: [
-      { label: 'About Us', href: '/about' };
-      { label: 'Our Team', href: '/about#team' };
-      { label: 'Careers', href: '/careers' };
-      { label: 'Press', href: '/press' };
-    ];
+      { label: 'About Us', href: '/about' },
+      { label: 'Our Team', href: '/about#team' },
+      { label: 'Careers', href: '/careers' },
+      { label: 'Press', href: '/press' },
+    ],
     services: [
-      { label: 'AI & ML', href: '/services#ai' };
-      { label: 'Cloud Solutions', href: '/services#cloud' };
-      { label: 'Cybersecurity', href: '/services#security' };
-      { label: 'Digital Transformation', href: '/services#digital' };
-    ];
+      { label: 'AI & ML', href: '/services#ai' },
+      { label: 'Cloud Solutions', href: '/services#cloud' },
+      { label: 'Cybersecurity', href: '/services#security' },
+      { label: 'Digital Transformation', href: '/services#digital' },
+    ],
     resources: [
-      { label: 'Blog', href: '/blog' };
-      { label: 'Case Studies', href: '/case-studies' };
-      { label: 'Documentation', href: '/docs' };
-      { label: 'API Reference', href: '/api' };
-    ];
+      { label: 'Blog', href: '/blog' },
+      { label: 'Case Studies', href: '/case-studies' },
+      { label: 'Documentation', href: '/docs' },
+      { label: 'API Reference', href: '/api' },
+    ],
     support: [
-      { label: 'Contact Us', href: '/contact' };
-      { label: 'Help Center', href: '/help' };
-      { label: 'Status Page', href: '/status' };
-      { label: 'Support Portal', href: '/support' };
-    ];
-  };
+      { label: 'Contact Us', href: '/contact' },
+      { label: 'Help Center', href: '/help' },
+      { label: 'Status Page', href: '/status' },
+      { label: 'Support Portal', href: '/support' },
+    ],
+  },
   const socialLinks = [
-    { icon: '🐦', label: 'Twitter', href: 'https://twitter.com/ziontechgroup' };
+    { icon: '🐦', label: 'Twitter', href: 'https://twitter.com/ziontechgroup' },
     {
-      icon: '💼';
-      label: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';
-    };
+      icon: '💼',
+      label: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup'
+    },
     {
-      icon: '📘';
-      label: 'Facebook';
-      href: 'https://facebook.com/ziontechgroup';
-    };
+      icon: '📘',
+      label: 'Facebook',
+      href: 'https://facebook.com/ziontechgroup'
+    },
     {
-      icon: '📷';
-      label: 'Instagram';
-      href: 'https://instagram.com/ziontechgroup';
-    };
-    { icon: '📺', label: 'YouTube', href: 'https://youtube.com/ziontechgroup' };
+      icon: '📷',
+      label: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup'
+    },
+    { icon: '📺', label: 'YouTube', href: 'https://youtube.com/ziontechgroup' },
   ],
   return (
     <footer className='relative bg-slate-90o0/50 backdrop-blur-xl border-t border-white/10 overflow-hidden'>,
@@ -171,5 +171,5 @@ const Footer: React.FC = () => {
           style={{ animationDelay: '2s' }}
         ></div>,
       </div>,
-    </footer>)};
-export default Footer;
+    </footer>)},
+export default Footer,

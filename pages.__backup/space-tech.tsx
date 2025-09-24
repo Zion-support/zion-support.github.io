@@ -3,10 +3,8 @@ import Layout from '../components/layout/Layout',
 SatelliteCheckCircleGlobe2,
 export default function SpaceTechPage() {
   const features = [
-    'Mission control dashboards and telemetry pipelines';
-    'Satellite operations playbooks and anomaly response';
-    'Ground station integrations and data delivery SLAs';
-    'Secure communications and zero-trust segmentation';
+    'Mission control dashboards and telemetry pipelinesSatellite operations playbooks and anomaly response',
+    'Ground station integrations and data delivery SLAsSecure communications and zero-trust segmentation',
   ],
   return (
     <Layout>,

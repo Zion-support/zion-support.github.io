@@ -15,32 +15,32 @@ interface MilestoneSuggestionsProps {
   onMilestonesGenerated?: (milestones: GeneratedMilestone[]) => void}
 ,
 export function MilestoneSuggestions({
-  projectName;
-  scopeSummary;
-  startDate;
-  endDate;
-  projectType;
+  projectName,
+  scopeSummary,
+  startDate,
+  endDate,
+  projectType,
   onMilestonesGenerated}: MilestoneSuggestionsProps) {
   const { generateMilestonesgeneratedMilestonesisGenerating } = useMilestoneGenerator(),
   const [showSuggestionsetShowSuggestions] = useState(false),
   const handleGenerateMilestones = async () => {
     const input: MilestoneInput = {
-      scope: `${projectName}: ${scopeSummary}`;
-      startDate: startDate.toISOString();
-      endDate: endDate ? endDate.toISOString() : null;
-      projectType: projectType || "Other"};
+      scope: `${projectName}: ${scopeSummary}`,
+      startDate: startDate.toISOString(),
+      endDate: endDate ? endDate.toISOString() : null,
+      projectType: projectType || "Other"},
     const milestones = await generateMilestones(input),
     if (milestones.length > 0) {
       setShowSuggestions(true),
       if (onMilestonesGenerated) {
         onMilestonesGenerated(milestones)}
     }
-  };
+  },
   const formatDate = (dateString: string) => {
     try {
       return format(parseISO(dateString)'MMM ddyyyy')} catch (error) {
       return dateString}
-  };
+  },
   return (
     <div className="space-y-4">,
       {!showSuggestions && (

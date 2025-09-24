@@ -1,21 +1,21 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  FileText;
-  Zap;
-  Shield;
-  TrendingUp;
-  ArrowRight;
-  Play;
-  Clock;
-  Award;
-  Globe;
-  Cpu;
-  Eye;
-  Users;
+  Check,
+  Star,
+  FileText,
+  Zap,
+  Shield,
+  TrendingUp,
+  ArrowRight,
+  Play,
+  Clock,
+  Award,
+  Globe,
+  Cpu,
+  Eye,
+  Users,
 } from 'lucide-react',
 export default function IntelligentDocumentProcessingSuite() {
   return (
@@ -70,41 +70,41 @@ export default function IntelligentDocumentProcessingSuite() {
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                icon: <FileText className='w-8 h-8' />;
-                title: 'Multi-Format Support';
+                icon: <FileText className='w-8 h-8' />,
+                title: 'Multi-Format Support',
                 description:,
-                  'Process PDFs, images, scanned documents, and more with universal compatibility';
-              };
+                  'Process PDFs, images, scanned documents, and more with universal compatibility',
+              },
               {
-                icon: <Eye className='w-8 h-8' />;
-                title: '99.5% Accuracy';
+                icon: <Eye className='w-8 h-8' />,
+                title: '99.5% Accuracy',
                 description:,
-                  'Industry-leading accuracy in data extraction and document understanding';
-              };
+                  'Industry-leading accuracy in data extraction and document understanding',
+              },
               {
-                icon: <Cpu className='w-8 h-8' />;
-                title: 'Intelligent Classification';
+                icon: <Cpu className='w-8 h-8' />,
+                title: 'Intelligent Classification',
                 description:,
-                  'AI automatically categorizes documents by type, content, and purpose';
-              };
+                  'AI automatically categorizes documents by type, content, and purpose',
+              },
               {
-                icon: <Zap className='w-8 h-8' />;
-                title: 'Custom Field Extraction';
+                icon: <Zap className='w-8 h-8' />,
+                title: 'Custom Field Extraction',
                 description:,
-                  'Train the system to extract specific data fields relevant to your business';
-              };
+                  'Train the system to extract specific data fields relevant to your business',
+              },
               {
-                icon: <Globe className='w-8 h-8' />;
-                title: 'Multi-Language Support';
+                icon: <Globe className='w-8 h-8' />,
+                title: 'Multi-Language Support',
                 description:,
-                  'Process documents in multiple languages with native understanding';
-              };
+                  'Process documents in multiple languages with native understanding',
+              },
               {
-                icon: <Shield className='w-8 h-8' />;
-                title: 'Compliance & Audit';
+                icon: <Shield className='w-8 h-8' />,
+                title: 'Compliance & Audit',
                 description:,
-                  'Complete audit trails and compliance monitoring for regulatory requirements';
-              };
+                  'Complete audit trails and compliance monitoring for regulatory requirements',
+              },
             ].map((feature, index) => (
               <motion.div,
                 key={index}
@@ -145,12 +145,9 @@ export default function IntelligentDocumentProcessingSuite() {
             >,
               <div className='space-y-6'>,
                 {[
-                  'Reduce manual data entry by 90%';
-                  'Process documents 75% faster';
-                  'Eliminate human error in data extraction';
-                  'Scale document processing without adding staff';
-                  'Improve data quality and consistency';
-                  'Enable real-time document insights';
+                  'Reduce manual data entry by 90%Process documents 75% faster',
+                  'Eliminate human error in data extractionScale document processing without adding staff',
+                  'Improve data quality and consistencyEnable real-time document insights',
                 ].map((benefit, index) => (
                   <div key={index} className='flex items-start space-x-3'>,
                     <Check className='w-6 h-6 text-green-40o0 mt-1 flex-shrink-0' />,
@@ -228,47 +225,47 @@ export default function IntelligentDocumentProcessingSuite() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                title: 'Invoice Processing';
+                title: 'Invoice Processing',
                 description:,
-                  'Automatically extract line items, amounts, and vendor information from invoices';
-                icon: '💰';
-                industry: 'Finance & Accounting';
-              };
+                  'Automatically extract line items, amounts, and vendor information from invoices',
+                icon: '💰',
+                industry: 'Finance & Accounting'
+              },
               {
-                title: 'Claims Processing';
+                title: 'Claims Processing',
                 description:,
-                  'Process insurance claims, medical records, and legal documents with high accuracy';
-                icon: '📋';
-                industry: 'Insurance & Healthcare';
-              };
+                  'Process insurance claims, medical records, and legal documents with high accuracy',
+                icon: '📋',
+                industry: 'Insurance & Healthcare'
+              },
               {
-                title: 'Contract Analysis';
+                title: 'Contract Analysis',
                 description:,
-                  'Extract key terms, dates, and obligations from legal contracts and agreements';
-                icon: '⚖️';
-                industry: 'Legal & Compliance';
-              };
+                  'Extract key terms, dates, and obligations from legal contracts and agreements',
+                icon: '⚖️',
+                industry: 'Legal & Compliance'
+              },
               {
-                title: 'Compliance Reporting';
+                title: 'Compliance Reporting',
                 description:,
-                  'Automate regulatory reporting and compliance document processing';
-                icon: '📊';
-                industry: 'Government & Regulated';
-              };
+                  'Automate regulatory reporting and compliance document processing',
+                icon: '📊',
+                industry: 'Government & Regulated'
+              },
               {
-                title: 'Form Processing';
+                title: 'Form Processing',
                 description:,
-                  'Process application forms, surveys, and questionnaires automatically';
-                icon: '📝';
-                industry: 'All Industries';
-              };
+                  'Process application forms, surveys, and questionnaires automatically',
+                icon: '📝',
+                industry: 'All Industries'
+              },
               {
-                title: 'Receipt Management';
+                title: 'Receipt Management',
                 description:,
-                  'Extract expense data from receipts for automated expense reporting';
-                icon: '🧾';
-                industry: 'Business Operations';
-              };
+                  'Extract expense data from receipts for automated expense reporting',
+                icon: '🧾',
+                industry: 'Business Operations'
+              },
             ].map((useCase, index) => (
               <motion.div,
                 key={index}
@@ -306,14 +303,14 @@ export default function IntelligentDocumentProcessingSuite() {
           </motion.div>,
           <div className='grid grid-cols-2 md:grid-cols-4 gap-8'>,
             {[
-              { name: 'TensorFlow', description: 'Deep learning framework' };
-              { name: 'PyTorch', description: 'Neural network engine' };
-              { name: 'OpenCV', description: 'Computer vision processing' };
-              { name: 'Tesseract', description: 'OCR engine' };
-              { name: 'FastAPI', description: 'High-performance API' };
-              { name: 'React', description: 'Modern user interface' };
-              { name: 'PostgreSQL', description: 'Data storage' };
-              { name: 'Redis', description: 'Caching layer' };
+              { name: 'TensorFlow', description: 'Deep learning framework' },
+              { name: 'PyTorch', description: 'Neural network engine' },
+              { name: 'OpenCV', description: 'Computer vision processing' },
+              { name: 'Tesseract', description: 'OCR engine' },
+              { name: 'FastAPI', description: 'High-performance API' },
+              { name: 'React', description: 'Modern user interface' },
+              { name: 'PostgreSQL', description: 'Data storage' },
+              { name: 'Redis', description: 'Caching layer' },
             ].map((tech, index) => (
               <motion.div,
                 key={index}
@@ -367,14 +364,10 @@ export default function IntelligentDocumentProcessingSuite() {
                   </h4>,
                   <ul className='space-y-3'>,
                     {[
-                      'Unlimited document processing';
-                      '99.5% accuracy guarantee';
-                      'Multi-format document support';
-                      'Custom field extraction training';
-                      'Multi-language processing';
-                      'API access and integrations';
-                      'Compliance and audit trails';
-                      '24/7 technical support';
+                      'Unlimited document processing99.5% accuracy guarantee',
+                      'Multi-format document supportCustom field extraction training',
+                      'Multi-language processingAPI access and integrations',
+                      'Compliance and audit trails24/7 technical support',
                     ].map((feature, index) => (
                       <li key={index} className='flex items-center space-x-3'>,
                         <Check className='w-5 h-5 text-green-40o0 flex-shrink-0' />,
@@ -388,14 +381,10 @@ export default function IntelligentDocumentProcessingSuite() {
                   </h4>,
                   <ul className='space-y-3'>,
                     {[
-                      '14-day free trial';
-                      'Setup in 2-3 days';
-                      'Training and onboarding';
-                      'Custom model training';
-                      'Performance optimization';
-                      'Scalability planning';
-                      'Compliance support';
-                      'Dedicated success manager';
+                      '14-day free trialSetup in 2-3 days',
+                      'Training and onboardingCustom model training',
+                      'Performance optimizationScalability planning',
+                      'Compliance supportDedicated success manager',
                     ].map((benefit, index) => (
                       <li key={index} className='flex items-center space-x-3'>,
                         <Check className='w-5 h-5 text-green-40o0 flex-shrink-0' />,

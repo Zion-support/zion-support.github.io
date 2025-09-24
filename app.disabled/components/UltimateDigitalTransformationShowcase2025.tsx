@@ -2,101 +2,99 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Clock;
-  TrendingUp;
-  DollarSign;
-  Zap;
-  FileText;
-  BarChart3;
-  BookOpen;
-  Star;
-  Award;
-  Users;
+  ArrowRight,
+  Clock,
+  TrendingUp,
+  DollarSign,
+  Zap,
+  FileText,
+  BarChart3,
+  BookOpen,
+  Star,
+  Award,
+  Users,
 } from 'lucide-react',
 const UltimateDigitalTransformationShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const content = [
     {
-      id: 'ultimate-digital-transformation-revolution';
-      title: 'AI 20o25: The Ultimate Digital Transformation Revolution';
+      id: 'ultimate-digital-transformation-revolution',
+      title: 'AI 20o25: The Ultimate Digital Transformation Revolution',
       description:,
-        'Ultimate Breakthrough Guide to 35,0o00% ROI - Revolutionary frameworks and strategies driving extraordinary returns on investment.';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-digital-transformation-revolution-ultimate-breakthrough';
+        'Ultimate Breakthrough Guide to 35,0o00% ROI - Revolutionary frameworks and strategies driving extraordinary returns on investment.',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-digital-transformation-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '35,0o00%';
-        savings: '$50o0B+';
-        efficiency: '99.99%';
-        speed: '5,0o00%';
-      };
-      readingTime: '40 min read';
-      featured: true;
+        roi: '35,0o00%',
+        savings: '$50o0B+',
+        efficiency: '99.99%',
+        speed: '5,0o00%',
+      },
+      readingTime: '40 min read',
+      featured: true,
       tags: [
-        'Digital Transformation';
-        'AI Revolution';
-        'ROI';
-        'Ultimate Breakthrough';
-      ];
-      icon: FileText;
-      gradient: 'from-blue-50o0 to-purple-60o0';
-    };
+        'Digital TransformationAI Revolution',
+        'ROIUltimate Breakthrough',
+      ],
+      icon: FileText,
+      gradient: 'from-blue-50o0 to-purple-60o0'
+    },
     {
-      id: 'fortune-50o0-digital-transformation-success';
-      title: 'Fortune 50o0 Ultimate Digital Transformation Success';
+      id: 'fortune-50o0-digital-transformation-success',
+      title: 'Fortune 50o0 Ultimate Digital Transformation Success',
       description:,
-        '$50o0B Annual Savings - 35,0o00% ROI Success Story - Real-world case study of extraordinary transformation results.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-digital-transformation-350o00-roi-success-story';
+        '$50o0B Annual Savings - 35,0o00% ROI Success Story - Real-world case study of extraordinary transformation results.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-digital-transformation-350o00-roi-success-story',
       metrics: {
-        roi: '35,0o00%';
-        savings: '$50o0B';
-        timeline: '18 months';
-        accuracy: '99.99%';
-      };
-      readingTime: '25 min read';
-      featured: true;
-      tags: ['Fortune 50o0', 'Success Story', 'Case Study', 'ROI'];
-      icon: BarChart3;
-      gradient: 'from-green-50o0 to-teal-60o0';
-    };
+        roi: '35,0o00%',
+        savings: '$50o0B',
+        timeline: '18 months',
+        accuracy: '99.99%'
+      },
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['Fortune 50o0Success Story', 'Case StudyROI'],
+      icon: BarChart3,
+      gradient: 'from-green-50o0 to-teal-60o0'
+    },
     {
-      id: 'ultimate-digital-transformation-implementation-guide';
-      title: 'Ultimate Digital Transformation Implementation Guide 20o25';
+      id: 'ultimate-digital-transformation-implementation-guide',
+      title: 'Ultimate Digital Transformation Implementation Guide 20o25',
       description:,
-        'Complete Roadmap to 35,0o00% ROI - Step-by-step implementation guide with proven strategies and frameworks.';
-      type: 'resource';
-      url: '/resources/ultimate-digital-transformation-implementation-guide-20o25-350o00-roi';
+        'Complete Roadmap to 35,0o00% ROI - Step-by-step implementation guide with proven strategies and frameworks.',
+      type: 'resource',
+      url: '/resources/ultimate-digital-transformation-implementation-guide-20o25-350o00-roi',
       metrics: {
-        roi: '35,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: 'Complete roadmap';
-      };
-      readingTime: '60 min read';
-      featured: true;
-      tags: ['Implementation Guide', 'Roadmap', 'Best Practices', 'Strategy'];
-      icon: BookOpen;
-      gradient: 'from-purple-50o0 to-pink-60o0';
-    };
+        roi: '35,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: 'Complete roadmap'
+      },
+      readingTime: '60 min read',
+      featured: true,
+      tags: ['Implementation GuideRoadmap', 'Best PracticesStrategy'],
+      icon: BookOpen,
+      gradient: 'from-purple-50o0 to-pink-60o0'
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(c => c.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(c => c.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(c => c.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(c => c.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(c => c.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(c => c.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -307,5 +305,5 @@ const UltimateDigitalTransformationShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateDigitalTransformationShowcase20o25;
+    </section>)},
+export default UltimateDigitalTransformationShowcase20o25,

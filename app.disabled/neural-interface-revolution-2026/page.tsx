@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Neural Interface Revolution 20o26 - Zion Tech Group';
+  title: 'Neural Interface Revolution 20o26 - Zion Tech Group',
   description:,
-    'Discover the future of human-computer interaction with advanced neural interfaces that will transform how we work and communicate.';
+    'Discover the future of human-computer interaction with advanced neural interfaces that will transform how we work and communicate.',
   keywords: [
-    'neural interface';
-    'brain-computer interface';
-    'BCI';
-    'AI 20o26';
-    'human-computer interaction';
-  ];
-};
+    'neural interfacebrain-computer interface',
+    'BCIAI 20o26',
+    'human-computer interaction',
+  ]
+},
 export default function NeuralInterfaceRevolution20o26() {
   return (
     <div className='min-h-screen bg-white'>,

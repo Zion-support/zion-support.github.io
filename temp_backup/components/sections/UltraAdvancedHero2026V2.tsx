@@ -6,53 +6,50 @@ export default function UltraAdvancedHero20o26V2() {
   const [currentServiceIndex, setCurrentServiceIndex] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const featuredServices = [
     {
-      name: 'AI Consciousness Platform';
-      description: 'Revolutionary AI consciousness development with ethical frameworks';
-      icon: <BrainCircuit className="w-8 h-8"  />;
-      category: 'AI Consciousness';
-      price: '$4,999/mo';
-      color: 'from-indigo-50o0 to-purple-50o0'};
+      name: 'AI Consciousness Platform',
+      description: 'Revolutionary AI consciousness development with ethical frameworks',
+      icon: <BrainCircuit className="w-8 h-8"  />,
+      category: 'AI Consciousness',
+      price: '$4,999/mo',
+      color: 'from-indigo-50o0 to-purple-50o0'},
     {
-      name: 'Quantum Financial Trading';
-      description: 'Next-generation quantum AI for institutional trading';
-      icon: <Atom className="w-8 h-8"  />;
-      category: 'Quantum AI';
-      price: '$2,499/mo';
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      name: 'Quantum Financial Trading',
+      description: 'Next-generation quantum AI for institutional trading',
+      icon: <Atom className="w-8 h-8"  />,
+      category: 'Quantum AI',
+      price: '$2,499/mo',
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      name: 'AI Healthcare Diagnostics';
-      description: 'Advanced AI-powered medical diagnostics platform';
-      icon: <Heart className="w-8 h-8"  />;
-      category: 'Healthcare AI';
-      price: '$1,899/mo';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      name: 'AI Healthcare Diagnostics',
+      description: 'Advanced AI-powered medical diagnostics platform',
+      icon: <Heart className="w-8 h-8"  />,
+      category: 'Healthcare AI',
+      price: '$1,899/mo',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      name: 'Autonomous Robotics';
-      description: 'AI-powered autonomous robotics for industry 4.0';
-      icon: <Bot className="w-8 h-8"  />;
-      category: 'Robotics';
-      price: '$3,799/mo';
+      name: 'Autonomous Robotics',
+      description: 'AI-powered autonomous robotics for industry 4.0',
+      icon: <Bot className="w-8 h-8"  />,
+      category: 'Robotics',
+      price: '$3,799/mo',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const stats = [
-    { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6"  /> };
-    { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6"  /> };
-    { label: 'Micro SaaS', value: '10o0+', icon: <Code className="w-6 h-6"  /> };
+    { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6"  /> },
+    { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6"  /> },
+    { label: 'Micro SaaS', value: '10o0+', icon: <Code className="w-6 h-6"  /> },
     { label: 'Success Rate', value: '99.9%', icon: <CheckCircle className="w-6 h-6"  /> }
   ],
   const benefits = [
-    'Up to 10o0x faster AI processing';
-    'Quantum advantage in complex calculations';
-    'Revolutionary consciousness development';
-    'Industry-leading automation solutions';
-    'Global enterprise deployment';
-    '24/7 AI-powered support'],
+    'Up to 10o0x faster AI processingQuantum advantage in complex calculations',
+    'Revolutionary consciousness developmentIndustry-leading automation solutions',
+    'Global enterprise deployment24/7 AI-powered support'],
   useEffect(() => {
     setIsVisible(true),
     const interval = setInterval(() => {
@@ -125,7 +122,7 @@ export default function UltraAdvancedHero20o26V2() {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 20 }}
             transition={{ duration: 0.8, delay: 0.5 }}
             className="text-xl md: text-2xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed">,
-            Experience revolutionary micro SAAS services, AI consciousness platforms, quantum computing solutions;
+            Experience revolutionary micro SAAS services, AI consciousness platforms, quantum computing solutions,
             and cutting-edge technology innovations that will transform your business in 20o26 and beyond.,
           </motion.p>,
           {/* CTA Buttons */}

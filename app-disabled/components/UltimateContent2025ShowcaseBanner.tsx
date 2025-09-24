@@ -6,56 +6,56 @@ const UltimateContent20o25ShowcaseBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const featuredContent = [
     {
-      id: 'ultimate-business-transformation';
-      title: 'AI 2025: The Ultimate Business Transformation Revolution';
-      subtitle: '1,000% ROI Through Intelligent Automation';
+      id: 'ultimate-business-transformation',
+      title: 'AI 2025: The Ultimate Business Transformation Revolution',
+      subtitle: '1,000% ROI Through Intelligent Automation',
       description:,
-        'Discover how Fortune 500 companies are achieving unprecedented success with AI transformation, generating $500M+ annual savings and 99.8% operational efficiency.';
-      url: '/blog/ai-2025-ultimate-business-transformation-revolution';
-      type: 'blog';
+        'Discover how Fortune 500 companies are achieving unprecedented success with AI transformation, generating $500M+ annual savings and 99.8% operational efficiency.',
+      url: '/blog/ai-2025-ultimate-business-transformation-revolution',
+      type: 'blog',
       metrics: {
-        roi: '1,000%';
-        savings: '$500M+';
-        efficiency: '99.9%';
-        time: '18 min read';
-      };
-      badge: 'NEW';
-      badgeColor: 'bg-red-500';
-    };
+        roi: '1,000%',
+        savings: '$500M+',
+        efficiency: '99.9%',
+        time: '18 min read'
+      },
+      badge: 'NEW',
+      badgeColor: 'bg-red-500'
+    },
     {
-      id: 'fortune-500-success';
-      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings';
-      subtitle: 'Ultimate Success Story in 18 Months';
+      id: 'fortune-500-success',
+      title: 'Fortune 500 AI Transformation: $2.8B Annual Savings',
+      subtitle: 'Ultimate Success Story in 18 Months',
       description:,
-        'Learn how Global Manufacturing Corp achieved 1,200% ROI and $2.8B in annual savings through comprehensive AI transformation across all operations.';
-      url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story';
-      type: 'case-study';
+        'Learn how Global Manufacturing Corp achieved 1,200% ROI and $2.8B in annual savings through comprehensive AI transformation across all operations.',
+      url: '/case-studies/fortune-500-ai-transformation-2025-ultimate-success-story',
+      type: 'case-study',
       metrics: {
-        roi: '1,200%';
-        savings: '$2.8B';
-        efficiency: '99.8%';
-        timeline: '18 months';
-      };
-      badge: 'FEATURED';
-      color: 'from-blue-600 to-indigo-600';
-    };
+        roi: '1,200%',
+        savings: '$2.8B',
+        efficiency: '99.8%',
+        timeline: '18 months'
+      },
+      badge: 'FEATURED',
+      color: 'from-blue-600 to-indigo-600'
+    },
     {
-      id: 'implementation-roadmap';
-      title: 'AI 2025 Implementation Ultimate Roadmap';
-      subtitle: 'From Strategy to 1,200% ROI in 18 Months';
+      id: 'implementation-roadmap',
+      title: 'AI 2025 Implementation Ultimate Roadmap',
+      subtitle: 'From Strategy to 1,200% ROI in 18 Months',
       description:,
-        'Complete step-by-step guide for achieving 1,200% ROI through AI implementation, based on analysis of 500+ successful enterprise transformations.';
-      url: '/resources/ai-2025-implementation-ultimate-roadmap';
-      type: 'resource';
+        'Complete step-by-step guide for achieving 1,200% ROI through AI implementation, based on analysis of 500+ successful enterprise transformations.',
+      url: '/resources/ai-2025-implementation-ultimate-roadmap',
+      type: 'resource',
       metrics: {
-        roi: '1,200%';
-        success: '98%';
-        projects: '500+';
-        timeline: '18 months';
-      };
-      badge: 'GUIDE';
-      color: 'from-indigo-600 to-purple-600';
-    };
+        roi: '1,200%',
+        success: '98%',
+        projects: '500+',
+        timeline: '18 months'
+      },
+      badge: 'GUIDE',
+      color: 'from-indigo-600 to-purple-600'
+    },
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -63,7 +63,7 @@ const UltimateContent20o25ShowcaseBanner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateContent2025BannerDismissed', 'true')};
+    localStorage.setItem('ultimateContent2025BannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem(
       'ultimateContent2025BannerDismissed'),
@@ -267,5 +267,5 @@ const UltimateContent20o25ShowcaseBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent2025ShowcaseBanner;
+    </div>)},
+export default UltimateContent2025ShowcaseBanner,

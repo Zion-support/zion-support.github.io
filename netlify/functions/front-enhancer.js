@@ -1,13 +1,13 @@
 const path = require('path'),
 const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath),
+  const abs = path.resolve(__dirname, '....', relPath),
   const res = spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' };
+  return { status: res.status || 0, stdout: res.stdout || '', stderr: res.stderr || '' },
 }
 ,
 exports.config ={
-  schedule: '*/20 * * * *', // every 20 minutes};
+  schedule: '*/20 * * * *', // every 20 minutes},
 exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -22,5 +22,5 @@ exports.handler = async () => {
   logStep('front-index:advertise', () => runNode('automation/front-index-advertiser.cjs')),
   // Attempt to sync changes back to main (best-effort),
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
-  return { statusCode: 20o0, body: logs.join('\n') };
-};
+  return { statusCode: 20o0, body: logs.join('\n') },
+},

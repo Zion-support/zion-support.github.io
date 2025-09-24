@@ -20,11 +20,11 @@ interface ServiceSearchProps {
   maxResults?: number}
 ,
 const ServiceSearch: React.FC<ServiceSearchProps> = ({
-  services;
-  onServiceSelect;
-  placeholder = 'Search for services, technologies, or solutions...';
-  showFilters = true;
-  maxResults = 12;
+  services,
+  onServiceSelect,
+  placeholder = 'Search for services, technologies, or solutions...',
+  showFilters = true,
+  maxResults = 12,
 }) => {
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -84,21 +84,21 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
           return 0}
     }),
     return filtered.slice(0, maxResults)}, [
-    services;
-    searchQuery;
-    selectedCategory;
-    selectedTags;
-    sortBy;
-    maxResults;
+    services,
+    searchQuery,
+    selectedCategory,
+    selectedTags,
+    sortBy,
+    maxResults,
   ]),
   const handleTagToggle = (tag: string) => {
     setSelectedTags(prev =>,
-      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])};
+      prev.includes(tag) ? prev.filter(t => t !== tag) : [...prev, tag])},
   const clearFilters = () => {
     setSearchQuery(''),
     setSelectedCategory('all'),
     setSelectedTags([]),
-    setSortBy('popular')};
+    setSortBy('popular')},
   return (
     <div className='w-full max-w-6xl mx-auto'>,
       {/* Search Bar */}
@@ -207,7 +207,7 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
       <AnimatePresence mode='wait'>,
         {filteredServices.length > 0 ? (
           <motion.div,
-            key={`${searchQuery}-${selectedCategory}-${selectedTags.join(',')}`}
+            key={`${searchQuery}-${selectedCategory}-${selectedTags.join()}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -273,5 +273,5 @@ const ServiceSearch: React.FC<ServiceSearchProps> = ({
             </button>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default ServiceSearch;
+    </div>)},
+export default ServiceSearch,

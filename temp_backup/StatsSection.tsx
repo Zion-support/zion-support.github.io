@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
   interface Stat {
     number: string,
@@ -43,5 +43,5 @@ import React from 'react';
         </div>,
       </div>,
     </section>) }
-export default StatsSection;
+export default StatsSection,
 '",

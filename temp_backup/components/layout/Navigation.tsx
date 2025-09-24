@@ -3,7 +3,7 @@ import React{ useStateuseEffect } from 'react',
 import { motionAnimatePresence } from 'framer-motion',
 import {
   MenuXHomeBrainCpuRocket,
-  PhoneMailMapPinGlobeChevronDown;
+  PhoneMailMapPinGlobeChevronDown,
   BookOpenFileTextTrendingUpUsers} from 'lucide-react',
 import Link from 'next/link',
 const Navigation: React.FC = () => {
@@ -12,53 +12,53 @@ const Navigation: React.FC = () => {
   const [activeDropdownsetActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll'handleScroll),
     return () => window.removeEventListener('scroll'handleScroll)}[]),
   const navigationItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: Home};
+      name: 'Home',
+      href: '/',
+      icon: Home},
     {
-      name: 'Services';
-      href: '/services';
-      icon: Rocket;
+      name: 'Services',
+      href: '/services',
+      icon: Rocket,
       dropdown: [
-        { name: 'AI Services'href: '/ai-services'icon: Braindescription: 'Revolutionary AI solutions' };
-        { name: 'IT Services'href: '/it-services'icon: Cpudescription: 'Enterprise IT solutions' };
-        { name: 'Micro SaaS'href: '/micro-saas'icon: Rocketdescription: 'Specialized software solutions' };
+        { name: 'AI Services'href: '/ai-services'icon: Braindescription: 'Revolutionary AI solutions' },
+        { name: 'IT Services'href: '/it-services'icon: Cpudescription: 'Enterprise IT solutions' },
+        { name: 'Micro SaaS'href: '/micro-saas'icon: Rocketdescription: 'Specialized software solutions' },
         { name: 'Innovative Showcase'href: '/innovative-services-showcase'icon: Globedescription: 'Cutting-edge technology' }
-      ]};
+      ]},
     {
-      name: 'Resources';
-      href: '/content-showcase';
-      icon: BookOpen;
+      name: 'Resources',
+      href: '/content-showcase',
+      icon: BookOpen,
       dropdown: [
-        { name: 'Content Showcase'href: '/content-showcase'icon: BookOpendescription: 'All our latest content' };
-        { name: 'Blog Posts'href: '/blog'icon: FileTextdescription: 'Latest insights and trends' };
-        { name: 'Case Studies'href: '/case-studies'icon: TrendingUpdescription: 'Success stories and ROI' };
-        { name: 'Resources'href: '/resources'icon: FileTextdescription: 'Guides and whitepapers' };
+        { name: 'Content Showcase'href: '/content-showcase'icon: BookOpendescription: 'All our latest content' },
+        { name: 'Blog Posts'href: '/blog'icon: FileTextdescription: 'Latest insights and trends' },
+        { name: 'Case Studies'href: '/case-studies'icon: TrendingUpdescription: 'Success stories and ROI' },
+        { name: 'Resources'href: '/resources'icon: FileTextdescription: 'Guides and whitepapers' },
         { name: 'Tools'href: '/tools'icon: Cpudescription: 'Calculators and utilities' }
-      ]};
+      ]},
     {
-      name: 'Solutions';
-      href: '/solutions';
-      icon: Cpu};
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Cpu},
     {
-      name: 'About';
-      href: '/about';
-      icon: Globe};
+      name: 'About',
+      href: '/about',
+      icon: Globe},
     {
-      name: 'Contact';
-      href: '/contact';
+      name: 'Contact',
+      href: '/contact',
       icon: Phone}
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <>,
       {/* Navigation Bar */}
@@ -259,5 +259,5 @@ const Navigation: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default Navigation;
+    </>)},
+export default Navigation,

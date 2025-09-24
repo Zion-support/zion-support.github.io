@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react",
 import { HandshakeMessageSquareStar } from "lucide-react",
 import { Button } from "@/components/ui/button",
 import { HireNowCTA } from "./HireNowCTA",
@@ -20,23 +20,23 @@ interface TalentProfileProps {
 ,
 export function TalentProfile({
   profile,
-  onRequestHire;
+  onRequestHire,
   onMessageTalent}: TalentProfileProps) {
   const { isAuthenticated } = useAuth(),
   // Create proper availability object from talent profile,
   const availability: Availability = {
     status: profile.availability_type === 'full_time' ? 'available' :,
-            profile.availability_type === 'part_time' ? 'limited' : 'unavailable';
-    message: `${profile.professional_title} with ${profile.years_experience} years of experience`};
+            profile.availability_type === 'part_time' ? 'limited' : 'unavailable',
+    message: `${profile.professional_title} with ${profile.years_experience} years of experience`},
   // Create proper skills array for ProfileSkills component,
   const skillsArray = profile.skills?.map(skill => ({
-    name: skill;
+    name: skill,
     level: 3 // Default level since we don't have this data})) || [],
   // Create proper projects array for ProfileProjects component,
   const projectsArray = profile.key_projects?.map((proji) => ({
-    id: `project-${i}`;
-    title: proj.title;
-    description: proj.description;
+    id: `project-${i}`,
+    title: proj.title,
+    description: proj.description,
     date: new Date().toISOString() // Default date since we don't have this data})) || [],
   return (
     <div className="container mx-auto px-4 py-8">,

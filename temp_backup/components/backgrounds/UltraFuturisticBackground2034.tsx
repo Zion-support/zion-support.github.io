@@ -6,8 +6,8 @@ interface UltraFuturisticBackground20o34Props {
   theme?: 'quantum' | 'neural' | 'holographic' | 'cyberpunk'}
 ,
 const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Props> = ({
-  children;
-  intensity = 'medium';
+  children,
+  intensity = 'medium',
   theme = 'quantum'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -20,7 +20,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
     canvas.height = window.innerHeight,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', resizeCanvas),
     // Quantum particle system,
     const particles: Array<{
@@ -36,49 +36,49 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
       switch (theme) {
         case 'quantum':,
           return {
-            primary: '#0o0ffff';
-            secondary: '#8b5cf6';
-            accent: '#10b981';
-            background: 'rgba(0, 0, 0, 0.8)'};
+            primary: '#0o0ffff',
+            secondary: '#8b5cf6',
+            accent: '#10b981',
+            background: 'rgba(0, 0, 0, 0.8)'},
         case 'neural':,
           return {
-            primary: '#10b981';
-            secondary: '#3b82f6';
-            accent: '#f59e0b';
-            background: 'rgba(0, 0, 0, 0.85)'};
+            primary: '#10b981',
+            secondary: '#3b82f6',
+            accent: '#f59e0b',
+            background: 'rgba(0, 0, 0, 0.85)'},
         case 'holographic':,
           return {
-            primary: '#ec4899';
-            secondary: '#8b5cf6';
-            accent: '#0o0ffff';
-            background: 'rgba(0, 0, 0, 0.9)'};
+            primary: '#ec4899',
+            secondary: '#8b5cf6',
+            accent: '#0o0ffff',
+            background: 'rgba(0, 0, 0, 0.9)'},
         case 'cyberpunk':,
           return {
-            primary: '#f59e0b';
-            secondary: '#ef4444';
-            accent: '#0o0ffff';
-            background: 'rgba(0, 0, 0, 0.95)'};
+            primary: '#f59e0b',
+            secondary: '#ef4444',
+            accent: '#0o0ffff',
+            background: 'rgba(0, 0, 0, 0.95)'},
         default: ,
           return {
-            primary: '#0o0ffff';
-            secondary: '#8b5cf6';
-            accent: '#10b981';
-            background: 'rgba(0, 0, 0, 0.8)'};
+            primary: '#0o0ffff',
+            secondary: '#8b5cf6',
+            accent: '#10b981',
+            background: 'rgba(0, 0, 0, 0.8)'},
       }
-    };
+    },
     const colors = getThemeColors(),
     const createParticle = () => {
       const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1,
       return {
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * intensityMultiplier;
-        vy: (Math.random() - 0.5) * 2 * intensityMultiplier;
-        size: Math.random() * 3 * intensityMultiplier + 1;
-        color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)];
-        life: Math.random() * 10o0 + 50;
-        maxLife: Math.random() * 10o0 + 50};
-    };
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
+        vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
+        size: Math.random() * 3 * intensityMultiplier + 1,
+        color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)],
+        life: Math.random() * 10o0 + 50,
+        maxLife: Math.random() * 10o0 + 50},
+    },
     // Initialize particles,
     const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 150 : 10o0,
     for (let i = 0, i < particleCount, i++) {
@@ -105,7 +105,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
         // Draw particle with glow effect,
         const alpha = particle.life / particle.maxLife,
         const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0;
+          particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3),
         gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`),
         gradient.addColorStop(0.5, `${particle.color}${Math.floor(alpha * 128).toString(16).padStart(2, '0')}`),
@@ -182,13 +182,13 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           ctx.stroke()}
       }
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [intensity, theme]),
   return (
     <div className="relative min-h-screen w-full overflow-hidden">,
@@ -202,7 +202,7 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
       <div
         className="fixed inset-0 pointer-events-none z-10",
         style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.3) 10o0%)`;
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.3) 10o0%)`,
           zIndex: 10}}
        />,
       {/* Floating geometric shapes */}
@@ -210,45 +210,45 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30",
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
           animate={{
-            y: [0, -20, 0];
-            scale: [1, 1.1, 1];
+            y: [0, -20, 0],
+            scale: [1, 1.1, 1],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/4 w-40 h-40 border border-green-40o0/30 transform rotate-45",
           animate={{
-            rotate: [45, 40o5];
-            scale: [1, 1.3, 1];
+            rotate: [45, 40o5],
+            scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-pink-40o0/30 transform rotate-12",
           animate={{
-            rotate: [12, 372];
-            y: [0, 15, 0];
+            rotate: [12, 372],
+            y: [0, 15, 0],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
@@ -258,13 +258,13 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
           className="absolute inset-0",
           animate={{
             background: [
-              "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)";
-              "radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)";
-              "radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)";
+              "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)",
               "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)"]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
@@ -272,5 +272,5 @@ const UltraFuturisticBackground20o34: React.FC<UltraFuturisticBackground20o34Pro
       <div className="relative z-40" style={{ zIndex: 40 }}>,
         {children}
       </div>,
-    </div>)};
-export default UltraFuturisticBackground20o34;
+    </div>)},
+export default UltraFuturisticBackground20o34,

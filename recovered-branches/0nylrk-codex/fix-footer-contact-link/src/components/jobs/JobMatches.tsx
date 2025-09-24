@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { CardHeaderCardTitleCardDescriptionCardContent } from '@/components/ui/card',
 import { EmptyMatchesCard } from '@/components/jobs/EmptyMatchesCard',
 import { JobMatchCard } from '@/components/jobs/JobMatchCard',

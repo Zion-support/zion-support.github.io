@@ -8,11 +8,11 @@ import { CuttingEdgeInnovation2029 } from '../../data/2029-cutting-edge-innovati
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -40,21 +40,21 @@ class ErrorBoundary extends React.Component {
   Eye,
   Timer,
   Sparkles,
-  ChevronDown;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Shield;
-  Rocket;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  Eye;
-  Timer;
-  Sparkles;
+  ChevronDown,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  Eye,
+  Timer,
+  Sparkles,
 } from 'lucide-react',
 type Service = CuttingEdgeInnovation2029 | any,
 interface UltraFuturistic2029ServiceShowcaseProps {
@@ -64,15 +64,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
   subtitle?: string,
   maxServices?: number,
 const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600',
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600',
-  'Space Colonization': 'from-red-600 to-orange-600',
-  'Space Mining': 'from-yellow-600 to-orange-600',
-  'Space Architecture': 'from-green-600 to-teal-600',
-  'Space Energy': 'from-yellow-500 to-orange-500',
-  'AI & Business': 'from-blue-600 to-cyan-600',
-  'Quantum & Time': 'from-green-600 to-emerald-600',
-  'AI & Augmented Reality': 'from-orange-600 to-red-600'}
+  'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600'}
 const categoryIcons: { [key: string]: any } = {
   'AI & Consciousness': Brain,
   'Quantum & Neuroscience': Cpu,
@@ -90,76 +82,60 @@ const UltraFuturistic2029ServiceShowcase: React.FC<,
   subtitle = 'Experience the future of technology with our revolutionary services',
   maxServices = 12}) => {
 const categoryColors: { [key: string]: string } = {
-  'AI & Consciousness': 'from-purple-600 to-pink-600';
-  'Quantum & Neuroscience': 'from-indigo-600 to-purple-600';
-  'Space Colonization': 'from-red-600 to-orange-600';
-  'Space Mining': 'from-yellow-600 to-orange-600';
-  'Space Architecture': 'from-green-600 to-teal-600';
-  'Space Energy': 'from-yellow-500 to-orange-500';
-  'AI & Business': 'from-blue-600 to-cyan-600';
-  'Quantum & Time': 'from-green-600 to-emerald-600';
-  'AI & Augmented Reality': 'from-orange-600 to-red-600';
-};
+  'AI & Consciousness': 'from-purple-600 to-pink-600Quantum & Neuroscience': 'from-indigo-600 to-purple-600Space Colonization': 'from-red-600 to-orange-600Space Mining': 'from-yellow-600 to-orange-600Space Architecture': 'from-green-600 to-teal-600Space Energy': 'from-yellow-500 to-orange-500AI & Business': 'from-blue-600 to-cyan-600Quantum & Time': 'from-green-600 to-emerald-600AI & Augmented Reality': 'from-orange-600 to-red-600',
+},
 const categoryIcons: { [key: string]: any } = {
-  'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
-};
+  'AI & Consciousness': Brain,
+  'Quantum & Neuroscience': Cpu,
+  'Space Colonization': Rocket,
+  'Space Mining': Zap,
+  'Space Architecture': Globe,
+  'Space Energy': Sparkles,
+  'AI & Business': Database,
+  'Quantum & Time': Timer,
+  'AI & Augmented Reality': Eye,
+},
 const UltraFuturistic2029ServiceShowcase: React.FC<,
   UltraFuturistic2029ServiceShowcaseProps> = ({
-  services;
-  title = '2029 Ultra-Futuristic Innovations';
-  subtitle = 'Experience the future of technology with our revolutionary services';
-  maxServices = 12;
+  services,
+  title = '2029 Ultra-Futuristic Innovations',
+  subtitle = 'Experience the future of technology with our revolutionary services',
+  maxServices = 12,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<'innovation' | 'price' | 'rating'>(
     'innovation'),
   max_services?: number,
 const category_colors: { [key: string]: string } = {
-  'AI & Consciousness': 'from - purple - 600 to - pink - 600';
-  'Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600';
-  'Space Colonization': 'from - red - 600 to - orange - 600';
-  'Space Mining': 'from - yellow - 600 to - orange - 600';
-  'Space Architecture': 'from - green - 600 to - teal - 600';
-  'Space Energy': 'from - yellow - 500 to - orange - 500';
-  'AI & Business': 'from - blue - 600 to - cyan - 600';
-  'Quantum & Time': 'from - green - 600 to - emerald - 600';
-  'AI & Augmented Reality': 'from - orange - 600 to - red - 600';
+  'AI & Consciousness': 'from - purple - 600 to - pink - 600Quantum & Neuroscience': 'from - indigo - 600 to - purple - 600Space Colonization': 'from - red - 600 to - orange - 600Space Mining': 'from - yellow - 600 to - orange - 600Space Architecture': 'from - green - 600 to - teal - 600Space Energy': 'from - yellow - 500 to - orange - 500AI & Business': 'from - blue - 600 to - cyan - 600Quantum & Time': 'from - green - 600 to - emerald - 600AI & Augmented Reality': 'from - orange - 600 to - red - 600',
 }
 ,
 const category_icons: { [key: string]: any } = {
-  'AI & Consciousness': Brain;
-  'Quantum & Neuroscience': Cpu;
-  'Space Colonization': Rocket;
-  'Space Mining': Zap;
-  'Space Architecture': Globe;
-  'Space Energy': Sparkles;
-  'AI & Business': Database;
-  'Quantum & Time': Timer;
-  'AI & Augmented Reality': Eye;
+  'AI & Consciousness': Brain,
+  'Quantum & Neuroscience': Cpu,
+  'Space Colonization': Rocket,
+  'Space Mining': Zap,
+  'Space Architecture': Globe,
+  'Space Energy': Sparkles,
+  'AI & Business': Database,
+  'Quantum & Time': Timer,
+  'AI & Augmented Reality': Eye,
 }
 ,
 const UltraFuturistic2029ServiceShowcase: React.FC<,
   UltraFuturistic2029ServiceShowcaseProps> = ({
-  services;
-  title = '2029 Ultra - Futuristic Innovations';
-  subtitle = 'Experience the future of technology with our revolutionary services';
-  max_services = 12;
+  services,
+  title = '2029 Ultra - Futuristic Innovations',
+  subtitle = 'Experience the future of technology with our revolutionary services',
+  max_services = 12,
 }) => {
   const [selected_category, setSelectedCategory] = useState < string>('all'),
   const [sort_by, setSortBy] = useState<'innovation' | 'price' | 'rating'>(
     'innovation'),
   // Get unique categories,
   const categories = [
-    'all';
-    ...Array.from (new Set (services.map (service => service.category)));
+    'all',
+    ...Array.from (new Set (services.map (service => service.category))),
   ],
   // Filter and sort services,
   const filtered_services = services,
@@ -171,8 +147,8 @@ interface UltraFuturistic2029ServiceShowcaseProps {
   services: Service[],
   // Get unique categories,
   const categories = [
-    'all';
-    ...Array && Array.from(new Set(services && services.map(service => service && service.category)));
+    'all',
+    ...Array && Array.from(new Set(services && services.map(service => service && service.category))),
   ],
   // Filter and sort services,
   const filteredServices = services,
@@ -181,7 +157,7 @@ interface UltraFuturistic2029ServiceShowcaseProps {
         selectedCategory === 'all' || service && service.category === selectedCategory)    .sort((a, b) => {import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',
 type Service = CuttingEdgeInnovation2029 | any,
 interface UltraFuturistic2029ServiceShowcaseProps {
-  services: Service[];
+  services: Service[],
   title?: string,
   subtitle?: string,
   maxServices?: number}
@@ -201,7 +177,7 @@ const category_icons: { [key: string]: any } = {
   'Space Energy': Sparkles,
   'AI & Business': Database,
   'Quantum & Time': Timer,
-  'AI & Augmented Reality': Eye};
+  'AI & Augmented Reality': Eye},
 const UltraFuturistic2029ServiceShowcase: React.FC<UltraFuturistic2029ServiceShowcaseProps> = ({
   'AI & Augmented Reality': Eye}
 ,
@@ -234,7 +210,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           // Default to 'Advanced' if innovationLevel is not available,
           const aLevel = (a as any).innovationLevel || 'Advanced',
           const bLevel = (b as any).innovationLevel || 'Advanced',
-          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 };
+          const innovationOrder = { 'Revolutionary': 4, 'Breakthrough': 3, 'Advanced': 2, 'Emerging': 1 },
           return (innovationOrder[bLevel] || 0) - (innovationOrder[aLevel] || 0),
         case 'price':),
         case 'price':,
@@ -254,9 +230,9 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
     hidden: { opacity: 0 }
     visible: {
       opacity: 1,
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -267,18 +243,18 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         duration: 0.6,
         ease: 'easeOut' as const}
     }
-};
+},
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0 && 0.6;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0 && 0.6,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   return (
     <section className='py-20 relative overflow-hidden'>,
       {/* Background Elements */}
@@ -288,7 +264,7 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
         <div className='absolute bottom-0 left-1/2 w-96 h-96 bg-pink-500/5 rounded-full blur-3xl'></div>,
       </div>,
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  }
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  },
   return (
     <section className="py-20 relative overflow-hidden">,
       {/* Background Elements */}
@@ -512,25 +488,25 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
           <div className='grid grid - cols - 1 md: grid - cols - 4 gap - 8'>,
             {[
               {
-                label: 'Revolutionary Services';
+                label: 'Revolutionary Services',
                 value: services.filter (
-                  string => s.innovation_level === 'Revolutionary').length;
-                icon: Rocket;
-                color: 'from - purple - 500 to - pink - 500';
-              };
+                  string => s.innovation_level === 'Revolutionary').length,
+                icon: Rocket,
+                color: 'from - purple - 500 to - pink - 500'
+              },
               {
-                label: 'Patent Pending';
+                label: 'Patent Pending',
                 value: services.filter (string => s.patent_status === 'Patent Pending'),
-                  .length;
-                icon: Shield;
-                color: 'from - blue - 500 to - cyan - 500';
-              };
+                  .length,
+                icon: Shield,
+                color: 'from - blue - 500 to - cyan - 500'
+              },
               {
-                label: 'Total Customers';
-                value: services.reduce ((sum, s) => sum + s.customers, 0);
-                icon: Star;
-                color: 'from - yellow - 500 to - orange - 500';
-              };
+                label: 'Total Customers',
+                value: services.reduce ((sum, s) => sum + s.customers, 0),
+                icon: Star,
+                color: 'from - yellow - 500 to - orange - 500'
+              },
               {
                 label: 'Average Rating',
                 value: (
@@ -541,12 +517,12 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-                ).toFixed(1);
-                icon: TrendingUp;
-                color: 'from-green-500 to-teal-500';
-              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' };
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' };
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' };
+                ).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-500 to-teal-500'
+              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
 ,
         {/* Innovation Stats */}
@@ -584,47 +560,47 @@ const UltraFuturistic2029ServiceShowcase: React.FC < UltraFuturistic2029ServiceS
               { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' }
               { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' }
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
-).toFixed(1);
-                icon: TrendingUp;
-                color: 'from-green-500 to-teal-500';
-              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' };
-              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' };
-              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' };
+).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-500 to-teal-500'
+              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services.filter(s => s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending', value: services.filter(s => s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers', value: services.reduce((sum, s) => sum + s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services.reduce((sum, s) => sum + s.rating, 0) / services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
 ,
               <motion.div,
           <div className='grid grid-cols-1 md: grid-cols-4 gap-8'>,
             {[
               {
-                label: 'Revolutionary Services';
+                label: 'Revolutionary Services',
                 value: services && services.filter(
-                  s => s && s.innovationLevel === 'Revolutionary').length;
-                icon: Rocket;
-                color: 'from-purple-500 to-pink-500';
-              };
+                  s => s && s.innovationLevel === 'Revolutionary').length,
+                icon: Rocket,
+                color: 'from-purple-500 to-pink-500'
+              },
               {
-                label: 'Patent Pending';
+                label: 'Patent Pending',
                 value: services && services.filter(s => s && s.patentStatus === 'Patent Pending'),
-                  .length;
-                icon: Shield;
-                color: 'from-blue-500 to-cyan-500';
-              };
+                  .length,
+                icon: Shield,
+                color: 'from-blue-500 to-cyan-500'
+              },
               {
-                label: 'Total Customers';
-                value: services && services.reduce((sum, s) => sum + s && s.customers, 0);
-                icon: Star;
-                color: 'from-yellow-500 to-orange-500';
-              };
+                label: 'Total Customers',
+                value: services && services.reduce((sum, s) => sum + s && s.customers, 0),
+                icon: Star,
+                color: 'from-yellow-500 to-orange-500'
+              },
               {
-                label: 'Average Rating';
+                label: 'Average Rating',
                 value: (
                   services && services.reduce((sum, s) => sum + s && s.rating, 0) /,
-                  services && services.length).toFixed(1);
-                icon: TrendingUp;
-                color: 'from-green-500 to-teal-500';
-              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' };
-              { label: 'Patent Pending', value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' };
-              { label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' };
+                  services && services.length).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-500 to-teal-500'
+              }].map((stat, index) => (              { label: 'Revolutionary Services', value: services && services.filter(s => s && s.innovationLevel === 'Revolutionary').length, icon: Rocket, color: 'from-purple-500 to-pink-500' },
+              { label: 'Patent Pending', value: services && services.filter(s => s && s.patentStatus === 'Patent Pending').length, icon: Shield, color: 'from-blue-500 to-cyan-500' },
+              { label: 'Total Customers', value: services && services.reduce((sum, s) => sum + s && s.customers, 0), icon: Star, color: 'from-yellow-500 to-orange-500' },
               { label: 'Average Rating', value: (services && services.reduce((sum, s) => sum + s && s.rating, 0) / services && services.length).toFixed(1), icon: TrendingUp, color: 'from-green-500 to-teal-500' }
               <motion&& motion.div,
                 key={index}

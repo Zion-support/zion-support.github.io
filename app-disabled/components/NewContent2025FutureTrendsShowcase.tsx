@@ -5,137 +5,133 @@ const NewContent20o25FutureTrendsShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ai-20o25-future-trends-revolutionary-breakthrough';
-      title: 'AI 20o25: The Future Trends Revolutionary Breakthrough';
-      type: 'Blog Post';
-      category: 'trends';
-      url: '/blog/ai-20o25-future-trends-revolutionary-breakthrough';
+      id: 'ai-20o25-future-trends-revolutionary-breakthrough',
+      title: 'AI 20o25: The Future Trends Revolutionary Breakthrough',
+      type: 'Blog Post',
+      category: 'trends',
+      url: '/blog/ai-20o25-future-trends-revolutionary-breakthrough',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$15.8B+';
-        efficiency: '89%';
-        accuracy: '99.7%';
-      };
-      readingTime: '25 min read';
+        roi: '1,20o0%',
+        savings: '$15.8B+',
+        efficiency: '89%',
+        accuracy: '99.7%'
+      },
+      readingTime: '25 min read',
       description:,
-        'Complete guide to revolutionary AI trends delivering 1,20o0% ROI';
-      featured: true;
+        'Complete guide to revolutionary AI trends delivering 1,20o0% ROI',
+      featured: true,
       tags: [
-        'AI Trends';
-        'Future Predictions';
-        'ROI';
-        'Revolutionary Breakthrough';
-      ];
-    };
+        'AI TrendsFuture Predictions',
+        'ROIRevolutionary Breakthrough',
+      ]
+    },
     {
-      id: 'ai-20o25-fortune-50o0-transformation-120o0-roi-success-story';
-      title: 'Fortune 50o0 AI Transformation: $15.8B Annual Savings';
-      type: 'Case Study';
-      category: 'case-study';
-      url: '/case-studies/ai-20o25-fortune-50o0-transformation-120o0-roi-success-story';
+      id: 'ai-20o25-fortune-50o0-transformation-120o0-roi-success-story',
+      title: 'Fortune 50o0 AI Transformation: $15.8B Annual Savings',
+      type: 'Case Study',
+      category: 'case-study',
+      url: '/case-studies/ai-20o25-fortune-50o0-transformation-120o0-roi-success-story',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$15.8B';
-        timeline: '18 months';
-        efficiency: '89%';
-      };
-      readingTime: '18 min read';
-      description: 'Ultimate success story of Fortune 50o0 AI transformation';
-      featured: true;
+        roi: '1,20o0%',
+        savings: '$15.8B',
+        timeline: '18 months',
+        efficiency: '89%'
+      },
+      readingTime: '18 min read',
+      description: 'Ultimate success story of Fortune 50o0 AI transformation',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'AI Transformation';
-        'Success Story';
-        'Manufacturing';
-      ];
-    };
+        'Fortune 50o0AI Transformation',
+        'Success StoryManufacturing',
+      ]
+    },
     {
-      id: 'ai-20o25-implementation-ultimate-framework-120o0-roi';
-      title: 'AI 20o25 Implementation Ultimate Framework';
-      type: 'Resource Guide';
-      category: 'resources';
-      url: '/resources/ai-20o25-implementation-ultimate-framework-120o0-roi';
+      id: 'ai-20o25-implementation-ultimate-framework-120o0-roi',
+      title: 'AI 20o25 Implementation Ultimate Framework',
+      type: 'Resource Guide',
+      category: 'resources',
+      url: '/resources/ai-20o25-implementation-ultimate-framework-120o0-roi',
       metrics: {
-        roi: '1,20o0%';
-        success: '94%';
-        timeline: '18 months';
-        projects: '50o0+';
-      };
-      readingTime: '35 min read';
-      description: 'Complete roadmap to achieving 1,20o0% ROI with AI';
-      featured: true;
-      tags: ['Implementation Framework', 'AI Strategy', 'Complete Roadmap'];
-    };
+        roi: '1,20o0%',
+        success: '94%',
+        timeline: '18 months',
+        projects: '50o0+'
+      },
+      readingTime: '35 min read',
+      description: 'Complete roadmap to achieving 1,20o0% ROI with AI',
+      featured: true,
+      tags: ['Implementation FrameworkAI Strategy', 'Complete Roadmap'],
+    },
     {
-      id: 'ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+      id: 'ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
       title:,
-        'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
-      type: 'Blog Post';
-      category: 'trends';
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+        'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+      type: 'Blog Post',
+      category: 'trends',
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$3.2B';
-        efficiency: '95%';
-        satisfaction: '99.2%';
-      };
-      readingTime: '25 min read';
-      description: 'Revolutionary enterprise AI breakthrough guide';
-      featured: false;
-      tags: ['Enterprise AI', 'Revolution', 'Breakthrough', '20o25'];
-    };
+        roi: '1,20o0%',
+        savings: '$3.2B',
+        efficiency: '95%',
+        satisfaction: '99.2%'
+      },
+      readingTime: '25 min read',
+      description: 'Revolutionary enterprise AI breakthrough guide',
+      featured: false,
+      tags: ['Enterprise AIRevolution', 'Breakthrough20o25'],
+    },
     {
-      id: 'fortune-50o0-ai-transformation-20o25-ultimate-success-story';
-      title: 'Fortune 50o0 AI Transformation 20o25: $2.8B Annual Savings';
-      type: 'Case Study';
-      category: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story';
+      id: 'fortune-50o0-ai-transformation-20o25-ultimate-success-story',
+      title: 'Fortune 50o0 AI Transformation 20o25: $2.8B Annual Savings',
+      type: 'Case Study',
+      category: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        efficiency: '156%';
-        satisfaction: '89%';
-      };
-      readingTime: '18 min read';
-      description: 'Ultimate success story of AI transformation';
-      featured: false;
-      tags: ['Fortune 50o0', 'AI Transformation', 'Success Story', '20o25'];
-    };
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        efficiency: '156%',
+        satisfaction: '89%'
+      },
+      readingTime: '18 min read',
+      description: 'Ultimate success story of AI transformation',
+      featured: false,
+      tags: ['Fortune 50o0AI Transformation', 'Success Story20o25'],
+    },
     {
-      id: 'ai-20o25-implementation-ultimate-success-framework';
-      title: 'AI 20o25 Implementation Ultimate Success Framework';
-      type: 'Resource Guide';
-      category: 'resources';
-      url: '/resources/ai-20o25-implementation-ultimate-success-framework';
+      id: 'ai-20o25-implementation-ultimate-success-framework',
+      title: 'AI 20o25 Implementation Ultimate Success Framework',
+      type: 'Resource Guide',
+      category: 'resources',
+      url: '/resources/ai-20o25-implementation-ultimate-success-framework',
       metrics: {
-        roi: '1,20o0%';
-        success: '94%';
-        efficiency: '67%';
-        satisfaction: '89%';
-      };
-      readingTime: '30 min read';
-      description: 'Complete guide to 1,20o0% ROI implementation';
-      featured: false;
-      tags: ['Implementation Framework', 'AI Strategy', 'Success Framework'];
-    };
+        roi: '1,20o0%',
+        success: '94%',
+        efficiency: '67%',
+        satisfaction: '89%'
+      },
+      readingTime: '30 min read',
+      description: 'Complete guide to 1,20o0% ROI implementation',
+      featured: false,
+      tags: ['Implementation FrameworkAI Strategy', 'Success Framework'],
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'trends';
-      label: 'AI Trends';
-      count: contentItems.filter(item => item.category === 'trends').length;
-    };
+      id: 'trends',
+      label: 'AI Trends',
+      count: contentItems.filter(item => item.category === 'trends').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resources';
-      label: 'Resources';
-      count: contentItems.filter(item => item.category === 'resources').length;
-    };
+      id: 'resources',
+      label: 'Resources',
+      count: contentItems.filter(item => item.category === 'resources').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -335,5 +331,5 @@ const NewContent20o25FutureTrendsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25FutureTrendsShowcase;
+    </div>)},
+export default NewContent20o25FutureTrendsShowcase,

@@ -2,19 +2,19 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Star;
-  Check;
-  Mail;
-  Phone;
-  MapPin;
-  Sparkles;
-  Brain;
-  Cpu;
-  Zap;
-  Rocket;
-  Crown;
-  ExternalLink;
-  BookOpen;
+  Star,
+  Check,
+  Mail,
+  Phone,
+  MapPin,
+  Sparkles,
+  Brain,
+  Cpu,
+  Zap,
+  Rocket,
+  Crown,
+  ExternalLink,
+  BookOpen,
 } from 'lucide-react',
 import { Button } from '../components/ui/Button',
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
@@ -27,43 +27,43 @@ export default function Revolutionary2025Pricing() {
     'monthly'),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
-    ...revolutionaryAI2025Services;
-    ...revolutionaryITInfrastructure2025Services;
-    ...revolutionary2025MicroSaasServices;
+    ...revolutionaryAI2025Services,
+    ...revolutionaryITInfrastructure2025Services,
+    ...revolutionary2025MicroSaasServices,
   ],
   // Service categories,
   const serviceCategories = [
     {
-      id: 'all';
-      name: 'All Services';
-      icon: Sparkles;
-      count: allRevolutionaryServices.length;
-    };
+      id: 'all',
+      name: 'All Services',
+      icon: Sparkles,
+      count: allRevolutionaryServices.length
+    },
     {
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      count: revolutionaryAI2025Services.length;
-    };
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      count: revolutionaryAI2025Services.length
+    },
     {
-      id: 'infrastructure';
-      name: 'IT Infrastructure';
-      icon: Cpu;
-      count: revolutionaryITInfrastructure2025Services.length;
-    };
+      id: 'infrastructure',
+      name: 'IT Infrastructure',
+      icon: Cpu,
+      count: revolutionaryITInfrastructure2025Services.length
+    },
     {
-      id: 'saas';
-      name: 'Micro SaaS';
-      icon: Zap;
-      count: revolutionary2025MicroSaasServices.length;
-    };
+      id: 'saas',
+      name: 'Micro SaaS',
+      icon: Zap,
+      count: revolutionary2025MicroSaasServices.length
+    },
   ],
   // Filter services based on selected category,
   const filteredServices =,
@@ -84,94 +84,79 @@ export default function Revolutionary2025Pricing() {
           return true}),
   // Calculate pricing with billing cycle,
   const getPrice = (service: any) => {
-    const basePrice = parseInt(service.price.replace('$', '').replace(',', '')),
+    const basePrice = parseInt(service.price.replace('$', '').replace(, '')),
     if (billingCycle === 'yearly') {
       return Math.floor(basePrice * 0.8), // 20% discount for yearly}
-    return basePrice};
+    return basePrice},
   // Pricing tiers for comparison,
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for small businesses and startups';
-      price: billingCycle === 'monthly' ? 99 : 79;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billingCycle === 'monthly' ? 99 : 79,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 25+ Core Services';
-        'Basic AI Integration';
-        'Standard Support (24/7)';
-        '30-Day Free Trial';
-        'Basic Analytics Dashboard';
-        'Email Support';
-        '99.5% Uptime Guarantee';
-        'Standard Security Features';
-      ];
-      icon: <Sparkles className='w-8 h-8' />;
-      variant: 'quantum' as const;
-      popular: false;
-      cta: 'Start Free Trial';
-      ctaVariant: 'secondary' as const;
-    };
+        'Access to 25+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeStandard Security Features',
+      ],
+      icon: <Sparkles className='w-8 h-8' />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaVariant: 'secondary' as const
+    },
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses and teams';
-      price: billingCycle === 'monthly' ? 299 : 239;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 299 : 239,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ Services';
-        'Advanced AI Integration';
-        'Priority Support (24/7)';
-        '60-Day Free Trial';
-        'Advanced Analytics Dashboard';
-        'Phone & Email Support';
-        '99.9% Uptime Guarantee';
-        'Advanced Security Features';
-        'Custom Integrations';
-        'Performance Monitoring';
-      ];
-      icon: <Rocket className='w-8 h-8' />;
-      variant: 'ai-futuristic' as const;
-      popular: true;
-      cta: 'Start Free Trial';
-      ctaVariant: 'primary' as const;
-    };
+        'Access to 50+ ServicesAdvanced AI Integration',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics DashboardPhone & Email Support',
+        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'Custom IntegrationsPerformance Monitoring',
+      ],
+      icon: <Rocket className='w-8 h-8' />,
+      variant: 'ai-futuristic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaVariant: 'primary' as const
+    },
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: billingCycle === 'monthly' ? 999 : 799;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 999 : 799,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL Services';
-        'Full AI & Quantum Integration';
-        'Dedicated Support Team';
-        '90-Day Free Trial';
-        'Enterprise Analytics Suite';
-        '24/7 Dedicated Support';
-        '99.99% Uptime Guarantee';
-        'Enterprise Security Features';
-        'Custom Development';
-        'White-label Solutions';
-        'API Access';
-        'SLA Guarantees';
-      ];
-      icon: <Crown className='w-8 h-8' />;
-      variant: 'quantum-futuristic' as const;
-      popular: false;
-      cta: 'Contact Sales';
-      ctaVariant: 'primary' as const;
-    };
+        'Access to ALL ServicesFull AI & Quantum Integration',
+        'Dedicated Support Team90-Day Free Trial',
+        'Enterprise Analytics Suite24/7 Dedicated Support',
+        '99.99% Uptime GuaranteeEnterprise Security Features',
+        'Custom DevelopmentWhite-label Solutions',
+        'API AccessSLA Guarantees',
+      ],
+      icon: <Crown className='w-8 h-8' />,
+      variant: 'quantum-futuristic' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      ctaVariant: 'primary' as const
+    },
   ],
   // Market analysis,
   const marketAnalysis = {
-    totalMarketSize: '$150B+';
-    growthRate: '250% annually';
-    customerSatisfaction: '98%';
-    averageROI: '500%';
-    timeToValue: '< 30 days';
-    globalReach: '150+ countries';
-  };
+    totalMarketSize: '$150B+',
+    growthRate: '250% annually',
+    customerSatisfaction: '98%',
+    averageROI: '500%',
+    timeToValue: '< 30 days',
+    globalReach: '150+ countries'
+  },
   return (
     <Layout>,
       <UltraQuantumHolographicBackground intensity={2.0}>,

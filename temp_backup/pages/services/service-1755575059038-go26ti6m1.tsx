@@ -14,19 +14,19 @@ export default function Service-17555750o590o38-go26ti6m1Service() {
         <meta property="og:type" content="website"  />,
         <meta property="og:url" content="https://ziontechgroup.com/services/service-17555750o590o38-go26ti6m1"  />,
         <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org";
-          "@type": "Service";
-          "name": "Data Cybersecurity Platform";
-          "description": "Comprehensive Cybersecurity platform for modern data-driven organizations";
+          "@context": "https: //schema.org",
+          "@type": "Service",
+          "name": "Data Cybersecurity Platform",
+          "description": "Comprehensive Cybersecurity platform for modern data-driven organizations",
           "provider": {
-            "@type": "Organization";
-            "name": "Zion Tech Group"};
-          "category": "Cybersecurity";
+            "@type": "Organization",
+            "name": "Zion Tech Group"},
+          "category": "Cybersecurity",
           "offers": serviceData.pricing.map(plan => ({
-            "@type": "Offer";
-            "name": plan.plan;
-            "price": plan.price;
-            "description": plan.features.join(', ')}))})}</script>,
+            "@type": "Offer",
+            "name": plan.plan,
+            "price": plan.price,
+            "description": plan.features.join()}))})}</script>,
       </Head>,
       <main className="container mx-auto px-6 py-12">,
         {/* Hero Section */}

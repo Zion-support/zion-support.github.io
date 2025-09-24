@@ -10,9 +10,9 @@ const { execSync, spawn } = require('child_process'),
 class DependencyIntelligence {
   constructor() {
     this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs', 'dependency-intelligence.log'),
-    this.dependencyDataFile = path.join(this.projectRoot, 'logs', 'dependency-data.json'),
-    this.vulnerabilityHistoryFile = path.join(this.projectRoot, 'logs', 'vulnerability-history.json'),
+    this.logFile = path.join(this.projectRoot, 'logsdependency-intelligence.log'),
+    this.dependencyDataFile = path.join(this.projectRoot, 'logsdependency-data.json'),
+    this.vulnerabilityHistoryFile = path.join(this.projectRoot, 'logsvulnerability-history.json'),
     this.ensureLogsDirectory(),
     this.loadDependencyData(),
     this.loadVulnerabilityHistory(),
@@ -22,10 +22,10 @@ class DependencyIntelligence {
     this.dependencyAnalysis = process.env.DEPENDENCY_ANALYSIS === 'deep',
     // Safety thresholds,
     this.safetyThresholds ={
-      maxVulnerabilities: 5;
-      maxOutdatedDeps: 10;
-      criticalVulnerabilityThreshold: 0;
-      highVulnerabilityThreshold: 2};
+      maxVulnerabilities: 5,
+      maxOutdatedDeps: 10,
+      criticalVulnerabilityThreshold: 0,
+      highVulnerabilityThreshold: 2},
     // // // // // // // // console.log('🧠 Dependency Intelligence Starting...'),
     this.startIntelligence()}
 ,
@@ -46,18 +46,18 @@ class DependencyIntelligence {
       if (fs.existsSync(this.dependencyDataFile)) {
         this.dependencyData = JSON.parse(fs.readFileSync(this.dependencyDataFile, 'utf8'))} else {
         this.dependencyData ={
-          dependencies: {};
-          vulnerabilities: [];
-          updateHistory: [];
-          lastUpdated: new Date().toISOString()};
+          dependencies: {},
+          vulnerabilities: [],
+          updateHistory: [],
+          lastUpdated: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load dependency data: ${error.message}`, 'ERROR'),
       this.dependencyData ={
-        dependencies: {};
-        vulnerabilities: [];
-        updateHistory: [];
-        lastUpdated: new Date().toISOString()};
+        dependencies: {},
+        vulnerabilities: [],
+        updateHistory: [],
+        lastUpdated: new Date().toISOString()},
     }
   }
 ,
@@ -66,18 +66,18 @@ class DependencyIntelligence {
       if (fs.existsSync(this.vulnerabilityHistoryFile)) {
         this.vulnerabilityHistory = JSON.parse(fs.readFileSync(this.vulnerabilityHistoryFile, 'utf8'))} else {
         this.vulnerabilityHistory ={
-          scans: [];
-          fixes: [];
-          trends: {};
-          lastUpdated: new Date().toISOString()};
+          scans: [],
+          fixes: [],
+          trends: {},
+          lastUpdated: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load vulnerability history: ${error.message}`, 'ERROR'),
       this.vulnerabilityHistory ={
-        scans: [];
-        fixes: [];
-        trends: {};
-        lastUpdated: new Date().toISOString()};
+        scans: [],
+        fixes: [],
+        trends: {},
+        lastUpdated: new Date().toISOString()},
     }
   }
 ,
@@ -99,13 +99,13 @@ class DependencyIntelligence {
     this.log('Performing comprehensive dependency analysis...'),
     try {
       const analysis ={
-        timestamp: new Date().toISOString();
-        outdatedDependencies: await this.checkOutdatedDependencies();
-        securityVulnerabilities: await this.checkSecurityVulnerabilities();
-        circularDependencies: await this.checkCircularDependencies();
-        unusedDependencies: await this.checkUnusedDependencies();
-        dependencyConflicts: await this.checkDependencyConflicts();
-        bundleImpact: await this.analyzeBundleImpact()};
+        timestamp: new Date().toISOString(),
+        outdatedDependencies: await this.checkOutdatedDependencies(),
+        securityVulnerabilities: await this.checkSecurityVulnerabilities(),
+        circularDependencies: await this.checkCircularDependencies(),
+        unusedDependencies: await this.checkUnusedDependencies(),
+        dependencyConflicts: await this.checkDependencyConflicts(),
+        bundleImpact: await this.analyzeBundleImpact()},
       // Calculate dependency health score,
       const healthScore = this.calculateDependencyHealthScore(analysis),
       analysis.healthScore = healthScore,
@@ -133,18 +133,18 @@ class DependencyIntelligence {
     this.log('Checking for outdated dependencies...'),
     try {
       const result = execSync('npm outdated --json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const outdated = JSON.parse(result),
       const dependencies = [],
       for (const [name, info] of Object.entries(outdated)) {
         dependencies.push({
-          name: name;
-          current: info.current;
-          wanted: info.wanted;
-          latest: info.latest;
-          location: info.location;
-          updateType: this.determineUpdateType(info.current, info.latest);
+          name: name,
+          current: info.current,
+          wanted: info.wanted,
+          latest: info.latest,
+          location: info.location,
+          updateType: this.determineUpdateType(info.current, info.latest),
           isSafe: this.isSafeUpdate(info.current, info.latest)})}
 ,
       return dependencies} catch (error) {
@@ -168,19 +168,19 @@ class DependencyIntelligence {
     this.log('Checking for security vulnerabilities...'),
     try {
       const result = execSync('npm audit --json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const audit = JSON.parse(result),
       const vulnerabilities = [],
       if (audit.vulnerabilities) {
         for (const [name, vuln] of Object.entries(audit.vulnerabilities)) {
           vulnerabilities.push({
-            name: name;
-            severity: vuln.severity;
-            title: vuln.title;
-            description: vuln.description;
-            recommendation: vuln.recommendation;
-            via: vuln.via;
+            name: name,
+            severity: vuln.severity,
+            title: vuln.title,
+            description: vuln.description,
+            recommendation: vuln.recommendation,
+            via: vuln.via,
             dependencyOf: vuln.dependencyOf || []})}
       }
 ,
@@ -193,12 +193,12 @@ class DependencyIntelligence {
     this.log('Checking for circular dependencies...'),
     try {
       const result = execSync('npx madge --circular --extensions js,ts,jsx,tsx .', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const circular = result.split('\n').filter(line => line.trim()),
       return circular.map(path => ({
-        path: path;
-        severity: 'MEDIUM';
+        path: path,
+        severity: 'MEDIUM',
         description: 'Circular dependency detected'}))} catch (error) {
       // Madge might fail if no circular dependencies found,
       return []}
@@ -209,16 +209,16 @@ class DependencyIntelligence {
     try {
       // Use depcheck to find unused dependencies,
       const result = execSync('npx depcheck --json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const depcheck = JSON.parse(result),
       const unused = [],
       if (depcheck.dependencies) {
         for (const dep of depcheck.dependencies) {
           unused.push({
-            name: dep;
-            type: 'unused';
-            severity: 'LOW';
+            name: dep,
+            type: 'unused',
+            severity: 'LOW',
             description: 'Unused dependency'})}
       }
 ,
@@ -232,7 +232,7 @@ class DependencyIntelligence {
     try {
       // Check for peer dependency conflicts,
       const result = execSync('npm ls --json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const ls = JSON.parse(result),
       const conflicts = [],
@@ -241,8 +241,8 @@ class DependencyIntelligence {
         for (const problem of ls.problems) {
           if (problem.includes('conflict') || problem.includes('peer')) {
             conflicts.push({
-              description: problem;
-              severity: 'MEDIUM';
+              description: problem,
+              severity: 'MEDIUM',
               type: 'dependency_conflict'})}
         }
       }
@@ -261,13 +261,13 @@ class DependencyIntelligence {
       const bundleSize = await this.getBundleSize(),
       const dependencySizes = await this.getDependencySizes(),
       return {
-        totalSize: bundleSize;
-        dependencySizes: dependencySizes;
-        largestDependencies: this.getLargestDependencies(dependencySizes);
-        optimizationOpportunities: this.identifyOptimizationOpportunities(dependencySizes)};
+        totalSize: bundleSize,
+        dependencySizes: dependencySizes,
+        largestDependencies: this.getLargestDependencies(dependencySizes),
+        optimizationOpportunities: this.identifyOptimizationOpportunities(dependencySizes)},
     } catch (error) {
       this.log(`Bundle impact analysis failed: ${error.message}`, 'ERROR'),
-      return { totalSize: 0, dependencySizes: {}, largestDependencies: [] };
+      return { totalSize: 0, dependencySizes: {}, largestDependencies: [] },
     }
   }
 ,
@@ -275,7 +275,7 @@ class DependencyIntelligence {
     this.log('Building project for bundle analysis...'),
     try {
       execSync('npm run build', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         timeout: 30o0000 // 5 minutes})} catch (error) {
       throw new Error(`Build failed: ${error.message}`)}
   }
@@ -310,9 +310,9 @@ class DependencyIntelligence {
     return files}
 ,
   async getDependencySizes() {
-    // This is a simplified analysis - in a real implementation;
+    // This is a simplified analysis - in a real implementation,
     // you'd use webpack-bundle-analyzer or similar tools,
-    return {};
+    return {},
   }
 ,
   getLargestDependencies(dependencySizes) {
@@ -327,8 +327,8 @@ class DependencyIntelligence {
     for (const [name, size] of Object.entries(dependencySizes)) {
       if (size > 10o0 * 10o24) { // 10o0KB threshold,
         opportunities.push({
-          dependency: name;
-          currentSize: size;
+          dependency: name,
+          currentSize: size,
           suggestion: 'Consider tree-shaking or alternative packages'})}
     }
 ,
@@ -367,25 +367,25 @@ class DependencyIntelligence {
     const criticalVulns = analysis.securityVulnerabilities.filter(v => v.severity === 'critical'),
     if (criticalVulns.length > 0) {
       criticalIssues.push({
-        type: 'CRITICAL_VULNERABILITIES';
-        severity: 'CRITICAL';
-        count: criticalVulns.length;
+        type: 'CRITICAL_VULNERABILITIES',
+        severity: 'CRITICAL',
+        count: criticalVulns.length,
         description: `${criticalVulns.length} critical security vulnerabilities detected`})}
 ,
     // Check for too many outdated dependencies,
     if (analysis.outdatedDependencies.length > this.safetyThresholds.maxOutdatedDeps) {
       criticalIssues.push({
-        type: 'TOO_MANY_OUTDATED';
-        severity: 'HIGH';
-        count: analysis.outdatedDependencies.length;
+        type: 'TOO_MANY_OUTDATED',
+        severity: 'HIGH',
+        count: analysis.outdatedDependencies.length,
         description: `${analysis.outdatedDependencies.length} outdated dependencies (threshold: ${this.safetyThresholds.maxOutdatedDeps})`})}
 ,
     // Check for circular dependencies,
     if (analysis.circularDependencies.length > 0) {
       criticalIssues.push({
-        type: 'CIRCULAR_DEPENDENCIES';
-        severity: 'MEDIUM';
-        count: analysis.circularDependencies.length;
+        type: 'CIRCULAR_DEPENDENCIES',
+        severity: 'MEDIUM',
+        count: analysis.circularDependencies.length,
         description: `${analysis.circularDependencies.length} circular dependencies detected`})}
 ,
     return criticalIssues}
@@ -475,10 +475,10 @@ class DependencyIntelligence {
 ,
   recordUpdate(dependency) {
     this.dependencyData.updateHistory.push({
-      name: dependency.name;
-      from: dependency.current;
-      to: dependency.latest;
-      timestamp: new Date().toISOString();
+      name: dependency.name,
+      from: dependency.current,
+      to: dependency.latest,
+      timestamp: new Date().toISOString(),
       type: dependency.updateType}),
     // Keep only last 10o0 updates,
     if (this.dependencyData.updateHistory.length > 10o0) {
@@ -492,10 +492,10 @@ class DependencyIntelligence {
       const vulnerabilities = await this.checkSecurityVulnerabilities(),
       // Record scan,
       this.vulnerabilityHistory.scans.push({
-        timestamp: new Date().toISOString();
-        vulnerabilities: vulnerabilities;
-        count: vulnerabilities.length;
-        critical: vulnerabilities.filter(v => v.severity === 'critical').length;
+        timestamp: new Date().toISOString(),
+        vulnerabilities: vulnerabilities,
+        count: vulnerabilities.length,
+        critical: vulnerabilities.filter(v => v.severity === 'critical').length,
         high: vulnerabilities.filter(v => v.severity === 'high').length}),
       // Keep only last 50 scans,
       if (this.vulnerabilityHistory.scans.length > 50) {
@@ -513,9 +513,9 @@ class DependencyIntelligence {
     if (this.vulnerabilityHistory.scans.length < 2) return,
     const recentScans = this.vulnerabilityHistory.scans.slice(-10),
     const trends ={
-      totalVulnerabilities: this.calculateTrend(recentScans.map(s => s.count));
-      criticalVulnerabilities: this.calculateTrend(recentScans.map(s => s.critical));
-      highVulnerabilities: this.calculateTrend(recentScans.map(s => s.high))};
+      totalVulnerabilities: this.calculateTrend(recentScans.map(s => s.count)),
+      criticalVulnerabilities: this.calculateTrend(recentScans.map(s => s.critical)),
+      highVulnerabilities: this.calculateTrend(recentScans.map(s => s.high))},
     this.vulnerabilityHistory.trends = trends}
 ,
   calculateTrend(values) {
@@ -547,8 +547,8 @@ class DependencyIntelligence {
 const intelligence = new DependencyIntelligence(),
 // Handle graceful shutdown,
 process.on('SIGINT', () => {
-  intelligence.log('Shutting down Dependency Intelligence...', 'INFO'),
+  intelligence.log('Shutting down Dependency Intelligence...INFO'),
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  intelligence.log('Shutting down Dependency Intelligence...', 'INFO'),
+  intelligence.log('Shutting down Dependency Intelligence...INFO'),
   process.exit(0)}),

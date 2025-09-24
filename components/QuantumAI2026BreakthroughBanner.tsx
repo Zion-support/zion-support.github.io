@@ -109,5 +109,5 @@ const QuantumAI20o26BreakthroughBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumAI20o26BreakthroughBanner;
+    </section>)},
+export default QuantumAI20o26BreakthroughBanner,

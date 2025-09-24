@@ -13,7 +13,7 @@ const UltimateContentShowcase20o26 = () => {
             The Ultimate AI Content Collection 20o26,
           </h2>,
           <p className='text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto'>,
-            Comprehensive resources covering every aspect of AI implementation;
+            Comprehensive resources covering every aspect of AI implementation,
             from strategy to execution, designed to accelerate your,
             transformation journey.,
           </p>,
@@ -39,7 +39,7 @@ const UltimateContentShowcase20o26 = () => {
                   </p>,
                   <p className='text-gray-70o0 mb-4'>,
                     Discover the comprehensive roadmap for enterprise AI,
-                    transformation in 20o25. Learn implementation strategies;
+                    transformation in 20o25. Learn implementation strategies,
                     best practices, and real-world case studies that deliver,
                     340% average ROI.,
                   </p>,
@@ -157,7 +157,7 @@ const UltimateContentShowcase20o26 = () => {
                   </div>,
                 </div>,
                 <p className='text-gray-70o0 text-sm mb-4'>,
-                  Step-by-step implementation guides, technical best practices;
+                  Step-by-step implementation guides, technical best practices,
                   and proven methodologies for successful AI deployment.,
                 </p>,
                 <div className='flex items-center justify-between'>,
@@ -254,5 +254,5 @@ const UltimateContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentShowcase20o26;
+    </section>)},
+export default UltimateContentShowcase20o26,

@@ -13,12 +13,12 @@ interface SuccessStory {
     roi: number,
     efficiency: number,
     costSavings: number,
-    timeReduction: number};
+    timeReduction: number},
   testimonial: {
     quote: string,
     author: string,
     position: string,
-    avatar: string};
+    avatar: string},
   technologies: string[],
   featured: boolean}
 ,
@@ -27,121 +27,121 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
   const [selectedStory, setSelectedStory] = useState<SuccessStory | null>(null),
   const successStories: SuccessStory[] = [
     {
-      id: '1';
-      company: 'TechCorp Global';
-      industry: 'Manufacturing';
-      logo: '/images/techcorp-logo.png';
-      challenge: 'Manual quality control processes were causing 15% defect rates and significant production delays.';
-      solution: 'Implemented AI-powered computer vision system for real-time quality inspection and predictive maintenance.';
+      id: '1',
+      company: 'TechCorp Global',
+      industry: 'Manufacturing',
+      logo: '/images/techcorp-logo.png',
+      challenge: 'Manual quality control processes were causing 15% defect rates and significant production delays.',
+      solution: 'Implemented AI-powered computer vision system for real-time quality inspection and predictive maintenance.',
       results: {
-        roi: 340;
-        efficiency: 45;
-        costSavings: 250o0000;
-        timeReduction: 60};
+        roi: 340,
+        efficiency: 45,
+        costSavings: 250o0000,
+        timeReduction: 60},
       testimonial: {
-        quote: 'The AI implementation transformed our manufacturing process. We achieved 45% efficiency gains and reduced defects by 80%. The ROI was beyond our expectations.';
-        author: 'Sarah Johnson';
-        position: 'VP of Operations';
-        avatar: '/images/sarah-johnson.jpg'};
-      technologies: ['Computer Vision', 'Predictive Analytics', 'IoT Sensors', 'Machine Learning'];
-      featured: true};
+        quote: 'The AI implementation transformed our manufacturing process. We achieved 45% efficiency gains and reduced defects by 80%. The ROI was beyond our expectations.',
+        author: 'Sarah Johnson',
+        position: 'VP of Operations',
+        avatar: '/images/sarah-johnson.jpg'},
+      technologies: ['Computer VisionPredictive Analytics', 'IoT SensorsMachine Learning'],
+      featured: true},
     {
-      id: '2';
-      company: 'FinanceFlow Inc';
-      industry: 'Financial Services';
-      logo: '/images/financeflow-logo.png';
-      challenge: 'Manual loan processing was taking 5-7 days per application, causing customer dissatisfaction and operational bottlenecks.';
-      solution: 'Deployed AI-powered document processing and risk assessment system with automated decision-making capabilities.';
+      id: '2',
+      company: 'FinanceFlow Inc',
+      industry: 'Financial Services',
+      logo: '/images/financeflow-logo.png',
+      challenge: 'Manual loan processing was taking 5-7 days per application, causing customer dissatisfaction and operational bottlenecks.',
+      solution: 'Deployed AI-powered document processing and risk assessment system with automated decision-making capabilities.',
       results: {
-        roi: 280;
-        efficiency: 70;
-        costSavings: 180o0000;
-        timeReduction: 85};
+        roi: 280,
+        efficiency: 70,
+        costSavings: 180o0000,
+        timeReduction: 85},
       testimonial: {
-        quote: 'Our loan processing time went from 5-7 days to under 2 hours. Customer satisfaction increased by 40% and we processed 30o0% more applications.';
-        author: 'Michael Chen';
-        position: 'Chief Technology Officer';
-        avatar: '/images/michael-chen.jpg'};
-      technologies: ['NLP', 'Document Processing', 'Risk Assessment', 'Automated Decisioning'];
-      featured: true};
+        quote: 'Our loan processing time went from 5-7 days to under 2 hours. Customer satisfaction increased by 40% and we processed 30o0% more applications.',
+        author: 'Michael Chen',
+        position: 'Chief Technology Officer',
+        avatar: '/images/michael-chen.jpg'},
+      technologies: ['NLPDocument Processing', 'Risk AssessmentAutomated Decisioning'],
+      featured: true},
     {
-      id: '3';
-      company: 'HealthTech Solutions';
-      industry: 'Healthcare';
-      logo: '/images/healthtech-logo.png';
-      challenge: 'Patient diagnosis accuracy was inconsistent, and radiologists were overwhelmed with imaging workload.';
-      solution: 'Integrated AI-powered medical imaging analysis with clinical decision support system.';
+      id: '3',
+      company: 'HealthTech Solutions',
+      industry: 'Healthcare',
+      logo: '/images/healthtech-logo.png',
+      challenge: 'Patient diagnosis accuracy was inconsistent, and radiologists were overwhelmed with imaging workload.',
+      solution: 'Integrated AI-powered medical imaging analysis with clinical decision support system.',
       results: {
-        roi: 420;
-        efficiency: 55;
-        costSavings: 320o0000;
-        timeReduction: 50};
+        roi: 420,
+        efficiency: 55,
+        costSavings: 320o0000,
+        timeReduction: 50},
       testimonial: {
-        quote: 'The AI system improved our diagnostic accuracy by 35% and reduced reading time by 50%. It\'s been a game-changer for patient care.';
-        author: 'Dr. Emily Rodriguez';
-        position: 'Chief Medical Officer';
-        avatar: '/images/emily-rodriguez.jpg'};
-      technologies: ['Medical Imaging AI', 'Clinical Decision Support', 'Natural Language Processing', 'Predictive Analytics'];
-      featured: false};
+        quote: 'The AI system improved our diagnostic accuracy by 35% and reduced reading time by 50%. It\'s been a game-changer for patient care.',
+        author: 'Dr. Emily Rodriguez',
+        position: 'Chief Medical Officer',
+        avatar: '/images/emily-rodriguez.jpg'},
+      technologies: ['Medical Imaging AIClinical Decision Support', 'Natural Language ProcessingPredictive Analytics'],
+      featured: false},
     {
-      id: '4';
-      company: 'RetailMax';
-      industry: 'Retail';
-      logo: '/images/retailmax-logo.png';
-      challenge: 'Inventory management was inefficient, leading to stockouts and overstock situations affecting revenue.';
-      solution: 'Implemented AI-driven demand forecasting and automated inventory optimization system.';
+      id: '4',
+      company: 'RetailMax',
+      industry: 'Retail',
+      logo: '/images/retailmax-logo.png',
+      challenge: 'Inventory management was inefficient, leading to stockouts and overstock situations affecting revenue.',
+      solution: 'Implemented AI-driven demand forecasting and automated inventory optimization system.',
       results: {
-        roi: 195;
-        efficiency: 40;
-        costSavings: 120o0000;
-        timeReduction: 75};
+        roi: 195,
+        efficiency: 40,
+        costSavings: 120o0000,
+        timeReduction: 75},
       testimonial: {
-        quote: 'Our inventory turnover improved by 40% and stockouts decreased by 90%. The AI system pays for itself every quarter.';
-        author: 'David Kim';
-        position: 'Supply Chain Director';
-        avatar: '/images/david-kim.jpg'};
-      technologies: ['Demand Forecasting', 'Inventory Optimization', 'Machine Learning', 'Real-time Analytics'];
-      featured: false};
+        quote: 'Our inventory turnover improved by 40% and stockouts decreased by 90%. The AI system pays for itself every quarter.',
+        author: 'David Kim',
+        position: 'Supply Chain Director',
+        avatar: '/images/david-kim.jpg'},
+      technologies: ['Demand ForecastingInventory Optimization', 'Machine LearningReal-time Analytics'],
+      featured: false},
     {
-      id: '5';
-      company: 'LogiFlow Systems';
-      industry: 'Logistics';
-      logo: '/images/logiflow-logo.png';
-      challenge: 'Route optimization was manual and inefficient, causing fuel costs and delivery delays.';
-      solution: 'Deployed AI-powered route optimization and fleet management system with real-time tracking.';
+      id: '5',
+      company: 'LogiFlow Systems',
+      industry: 'Logistics',
+      logo: '/images/logiflow-logo.png',
+      challenge: 'Route optimization was manual and inefficient, causing fuel costs and delivery delays.',
+      solution: 'Deployed AI-powered route optimization and fleet management system with real-time tracking.',
       results: {
-        roi: 310;
-        efficiency: 60;
-        costSavings: 210o0000;
-        timeReduction: 45};
+        roi: 310,
+        efficiency: 60,
+        costSavings: 210o0000,
+        timeReduction: 45},
       testimonial: {
-        quote: 'Fuel costs dropped by 25% and delivery times improved by 45%. Our drivers love the optimized routes and customers are happier.';
-        author: 'Lisa Thompson';
-        position: 'Operations Manager';
-        avatar: '/images/lisa-thompson.jpg'};
-      technologies: ['Route Optimization', 'Fleet Management', 'GPS Tracking', 'Predictive Analytics'];
-      featured: false};
+        quote: 'Fuel costs dropped by 25% and delivery times improved by 45%. Our drivers love the optimized routes and customers are happier.',
+        author: 'Lisa Thompson',
+        position: 'Operations Manager',
+        avatar: '/images/lisa-thompson.jpg'},
+      technologies: ['Route OptimizationFleet Management', 'GPS TrackingPredictive Analytics'],
+      featured: false},
     {
-      id: '6';
-      company: 'EduTech Academy';
-      industry: 'Education';
-      logo: '/images/edutech-logo.png';
-      challenge: 'Personalized learning was difficult to scale, and student engagement was declining.';
-      solution: 'Implemented AI-powered adaptive learning platform with personalized content recommendations.';
+      id: '6',
+      company: 'EduTech Academy',
+      industry: 'Education',
+      logo: '/images/edutech-logo.png',
+      challenge: 'Personalized learning was difficult to scale, and student engagement was declining.',
+      solution: 'Implemented AI-powered adaptive learning platform with personalized content recommendations.',
       results: {
-        roi: 180;
-        efficiency: 35;
-        costSavings: 80o0000;
-        timeReduction: 30};
+        roi: 180,
+        efficiency: 35,
+        costSavings: 80o0000,
+        timeReduction: 30},
       testimonial: {
-        quote: 'Student engagement increased by 60% and learning outcomes improved significantly. The AI adapts to each student\'s pace and style.';
-        author: 'Prof. James Wilson';
-        position: 'Academic Director';
-        avatar: '/images/james-wilson.jpg'};
-      technologies: ['Adaptive Learning', 'Personalization Engine', 'Learning Analytics', 'Content Recommendation'];
+        quote: 'Student engagement increased by 60% and learning outcomes improved significantly. The AI adapts to each student\'s pace and style.',
+        author: 'Prof. James Wilson',
+        position: 'Academic Director',
+        avatar: '/images/james-wilson.jpg'},
+      technologies: ['Adaptive LearningPersonalization Engine', 'Learning AnalyticsContent Recommendation'],
       featured: false}
   ],
-  const industries = ['all', 'Manufacturing', 'Financial Services', 'Healthcare', 'Retail', 'Logistics', 'Education'],
+  const industries = ['allManufacturing', 'Financial ServicesHealthcare', 'RetailLogistics', 'Education'],
   const filteredStories = selectedIndustry === 'all',
     ? successStories,
     : successStories.filter(story => story.industry === selectedIndustry),
@@ -384,5 +384,5 @@ const UltimateSuccessStoriesShowcase20o25: React.FC = () => {
             </div>,
           </div>,
         </div>)}
-    </section>)};
-export default UltimateSuccessStoriesShowcase20o25;
+    </section>)},
+export default UltimateSuccessStoriesShowcase20o25,

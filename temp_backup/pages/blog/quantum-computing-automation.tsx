@@ -184,7 +184,7 @@ export default function QuantumComputingAutomation() {
               <h2 className='text-3xl font-bold text-white mb-6'>Conclusion</h2>,
               <p className='text-white/80 mb-8'>,
                 Quantum computing automation represents the next major leap in,
-                computational capability. While we're still in the early stages;
+                computational capability. While we're still in the early stages,
                 the potential is enormous. Organizations that start preparing,
                 now will be best positioned to leverage quantum advantages when,
                 they become available.,

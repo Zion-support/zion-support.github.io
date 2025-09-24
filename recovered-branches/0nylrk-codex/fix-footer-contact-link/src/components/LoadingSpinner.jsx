@@ -1,19 +1,19 @@
 const LoadingSpinner = ({
-  size = 'md';
-  color = 'blue';
-  text;
-  className = '';
+  size = 'md',
+  color = 'blue',
+  text,
+  className = '',
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12';
-  };
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  },
   const colorClasses = {
-    blue: 'text-blue-50o0';
-    white: 'text-white';
-    gray: 'text-gray-50o0';
-  };
+    blue: 'text-blue-50o0',
+    white: 'text-white',
+    gray: 'text-gray-50o0'
+  },
   return (
     <div className={`flex flex-col items-center justify-center ${className}`}>,
       <div
@@ -37,5 +37,5 @@ const LoadingSpinner = ({
       </div>,
       {text && (
         <p className='mt-3 text-sm text-gray-50o0 animate-pulse'>{text}</p>)}
-    </div>)};
-export default LoadingSpinner;
+    </div>)},
+export default LoadingSpinner,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { CardContentCardDescriptionCardFooterCardHeaderCardTitle } from '@/components/ui/card',
 import { Button } from '@/components/ui/button',
 import { CreditCardPlusTrash } from 'lucide-react',
@@ -6,23 +6,23 @@ export function PaymentMethods() {
   // Mock payment methods,
   const paymentMethods = [
     {
-      id: 'pm-1';
-      type: 'credit_card';
-      brand: 'Visa';
-      last4: '4242';
-      expMonth: 12;
-      expYear: 2025;
-      isDefault: true;
-    };
+      id: 'pm-1',
+      type: 'credit_card',
+      brand: 'Visa',
+      last4: '4242',
+      expMonth: 12,
+      expYear: 2025,
+      isDefault: true
+    },
     {
-      id: 'pm-2';
-      type: 'credit_card';
-      brand: 'Mastercard';
-      last4: '8888';
-      expMonth: 4;
-      expYear: 2026;
-      isDefault: false;
-    };
+      id: 'pm-2',
+      type: 'credit_card',
+      brand: 'Mastercard',
+      last4: '8888',
+      expMonth: 4,
+      expYear: 2026,
+      isDefault: false
+    },
   ],
   return (
     <Card>,

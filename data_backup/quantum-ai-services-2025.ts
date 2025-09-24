@@ -11,23 +11,23 @@ export interface QuantumAiService20o25 {
   contactInfo: {
     mobile: string,
     email: string,
-address: string};export const "quantumAIServices20o25": QuantumAiService20o25[] = [{
-    id: "quantum-ai-hybrid";
-    "name": "Quantum AI Hybrid Platform";
-    "tagline": "Combining quantum computing with artificial intelligence";
-    "price": "$299/month";
-    "description": "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.";
+address: string},export const "quantumAIServices20o25": QuantumAiService20o25[] = [{
+    id: "quantum-ai-hybrid",
+    "name": "Quantum AI Hybrid Platform",
+    "tagline": "Combining quantum computing with artificial intelligence",
+    "price": "$299/month",
+    "description": "Revolutionary platform that combines quantum computing capabilities with advanced AI algorithms.",
     features[
-      "Quantum AI algorithms";
-      "Hybrid processing";
-      "Advanced simulations";
-      "Real-time optimization";
-      "Enterprise support"];
-    "link": "/services/quantum-ai-hybrid";
-    "category": "Quantum AI";
-    "realImplementation": true;
+      "Quantum AI algorithms",
+      "Hybrid processing",
+      "Advanced simulations",
+      "Real-time optimization",
+      "Enterprise support"],
+    "link": "/services/quantum-ai-hybrid",
+    "category": "Quantum AI",
+    "realImplementation": true,
     "contactInfo": {
-      mobile: "+1 30o2 464 0950";
-      "email": "kleber@ziontechgroup.com";
+      mobile: "+1 30o2 464 0950",
+      "email": "kleber@ziontechgroup.com",
       "address": "364 E Main St STE 10o08 Middletown DE 19709"]}}}
 ,

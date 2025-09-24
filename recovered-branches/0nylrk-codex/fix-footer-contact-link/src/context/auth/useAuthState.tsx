@@ -9,11 +9,11 @@ export function useAuthState() {
   const [isLoadingsetIsLoading] = useState<boolean>(true),
   const [onboardingStepsetOnboardingStep] = useState<string | null>(null),
   return {
-    user;
-    setUser;
-    isLoading;
-    setIsLoading;
-    onboardingStep;
-    setOnboardingStep};
+    user,
+    setUser,
+    isLoading,
+    setIsLoading,
+    onboardingStep,
+    setOnboardingStep},
 }
 ,

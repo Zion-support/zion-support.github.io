@@ -96,5 +96,5 @@ const AI20o25AutonomousOperationsPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25AutonomousOperationsPromotionBanner;
+    </section>)},
+export default AI20o25AutonomousOperationsPromotionBanner,

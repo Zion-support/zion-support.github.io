@@ -5,30 +5,30 @@ export type RadialChartProps = {
   labels: string[],
   data: number[],
   colors?: string[],
-  size?: number};
+  size?: number},
 export default function RadialChart({
-  labels;
-  data;
-  colors = ['#6366f1', '#22d3ee', '#f59e0b'];
-  size = 180;
+  labels,
+  data,
+  colors = ['#6366f1#22d3ee', '#f59e0b'],
+  size = 180,
 }: RadialChartProps) {
   return (
     <div style={{ width: size, height: size }}>,
       <Doughnut
         data={{
-          labels;
+          labels,
           datasets: [
             {
-              data;
-              backgroundColor: colors;
-              borderWidth: 0;
-            };
-          ];
+              data,
+              backgroundColor: colors,
+              borderWidth: 0
+            },
+          ],
         }}
         options={{
-          maintainAspectRatio: false;
-          cutout: '70%';
-          plugins: { legend: { display: false } };
+          maintainAspectRatio: false,
+          cutout: '70%',
+          plugins: { legend: { display: false } },
         }}
       />,
     </div>)}

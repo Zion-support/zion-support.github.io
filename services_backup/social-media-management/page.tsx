@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Social Media Management Platform | Zion Tech Group';
+  title: 'Social Media Management Platform | Zion Tech Group',
   description:,
-    'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.';
-};
+    'Build comprehensive social media management tools with scheduling, analytics, and content creation. Professional social media solutions starting at $15k.',
+},
 export default function SocialMediaManagementPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function SocialMediaManagementPage() {
           Social Media Management Platform,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build comprehensive social media management tools with scheduling;
+          Build comprehensive social media management tools with scheduling,
           analytics, content creation, and team collaboration.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Content Management',
             details={[
-              'Multi-platform posting';
-              'Content calendar';
-              'Bulk upload & scheduling';
-              'Hashtag research tools';
-              'Content templates';
-              'Media library';
-              'Content approval workflows';
+              'Multi-platform postingContent calendar',
+              'Bulk upload & schedulingHashtag research tools',
+              'Content templatesMedia library',
+              'Content approval workflows',
             ]}
           />,
           <Item
             title='Analytics & Insights',
             details={[
-              'Cross-platform analytics';
-              'Engagement tracking';
-              'ROI measurement';
-              'Audience insights';
-              'Competitor analysis';
-              'Custom reporting';
-              'Real-time monitoring';
+              'Cross-platform analyticsEngagement tracking',
+              'ROI measurementAudience insights',
+              'Competitor analysisCustom reporting',
+              'Real-time monitoring',
             ]}
           />,
           <Item
             title='Team Collaboration',
             details={[
-              'User roles & permissions';
-              'Content approval system';
-              'Team messaging';
-              'Client management';
-              'White-label options';
-              'API access';
-              'Custom integrations';
+              'User roles & permissionsContent approval system',
+              'Team messagingClient management',
+              'White-label optionsAPI access',
+              'Custom integrations',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$15k–$30k',
           duration='6–8 weeks',
           features={[
-            '3 platform connections';
-            'Basic scheduling';
-            'Content calendar';
-            'Simple analytics';
-            'Team management';
-            'Mobile app';
-            'Basic support';
+            '3 platform connectionsBasic scheduling',
+            'Content calendarSimple analytics',
+            'Team managementMobile app',
+            'Basic support',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$30k–$60k',
           duration='8–12 weeks',
           features={[
-            'All major platforms';
-            'Advanced scheduling';
-            'AI content tools';
-            'Comprehensive analytics';
-            'Client management';
-            'White-label options';
-            'Priority support';
+            'All major platformsAdvanced scheduling',
+            'AI content toolsComprehensive analytics',
+            'Client managementWhite-label options',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$60k+',
           duration='10–16 weeks',
           features={[
-            'Everything in Professional';
-            'Custom integrations';
-            'Advanced AI features';
-            'Custom reporting';
-            'Dedicated support';
-            'SLA guarantees';
-            'Custom development';
+            'Everything in ProfessionalCustom integrations',
+            'Advanced AI featuresCustom reporting',
+            'Dedicated supportSLA guarantees',
+            'Custom development',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

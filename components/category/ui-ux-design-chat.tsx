@@ -13,5 +13,5 @@ const UiUxDesignChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default UiUxDesignChat;
+    </div>)},
+export default UiUxDesignChat,

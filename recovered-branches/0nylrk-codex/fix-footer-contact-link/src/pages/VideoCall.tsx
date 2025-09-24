@@ -20,14 +20,14 @@ import {Footer} from '@/components / Footer',
 import {SEO} from '@/components / SEO',
 import {VideoCallRoom} from '@/components / video / VideoCallRoom',
 import {Button} from '@/components / ui / button',
-import { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import { Header } from '@/components/Header';
-import { Footer } from '@/components/Footer';
-import { SEO } from '@/components/SEO';
-import { VideoCallRoom } from '@/components/video/VideoCallRoom';
-import { Button } from '@/components/ui/button';
-import { toast } from 'sonner';
+import { useState, useEffect } from 'react',
+import { useParams, useNavigate } from 'react-router-dom',
+import { Header } from '@/components/Header',
+import { Footer } from '@/components/Footer',
+import { SEO } from '@/components/SEO',
+import { VideoCallRoom } from '@/components/video/VideoCallRoom',
+import { Button } from '@/components/ui/button',
+import { toast } from 'sonner',
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
@@ -42,8 +42,8 @@ function VideoCall() {
   const [is_joining, setIsJoining] = useState (false),
   const [has_joined, setHasJoined] = useState (false),
   const [participants, set_participants] = useState < Array<{
-    id: string;
-    name: string;
+    id: string,
+    name: string,
     avatar?: string,
     is_muted?: boolean,
     isVideoEnabled?: boolean,
@@ -58,22 +58,22 @@ function VideoCall() {
 export default function VideoCall() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
-  const { roomId } = useParams();
-  const navigate = useNavigate();
-  const [isJoining, setIsJoining] = useState(false);
-  const [hasJoined, setHasJoined] = useState(false);
+  const { roomId } = useParams(),
+  const navigate = useNavigate(),
+  const [isJoining, setIsJoining] = useState(false),
+  const [hasJoined, setHasJoined] = useState(false),
   const [participants, setParticipants] = useState<Array<{
-    id: string;
-    name: string;
-    avatar?: string;
-    isMuted?: boolean;
-    isVideoEnabled?: boolean;
-    isScreenSharing?: boolean;
+    id: string,
+    name: string,
+    avatar?: string,
+    isMuted?: boolean,
+    isVideoEnabled?: boolean,
+    isScreenSharing?: boolean,
     isHost?: boolean}>>([
     {
-      id: 'user-1';
-      name: 'You';
-      isVideoEnabled: true;
+      id: 'user-1',
+      name: 'You',
+      isVideoEnabled: true,
       isMuted: false}
 ,
   const handleJoinCall = () => {
@@ -83,24 +83,24 @@ export default function VideoCall() {
       setHasJoined(true),
       setIsJoining(false),
       toast && toast.success("Call joined", {
-        description: `You have joined meeting room ${roomId}`})}, 1500)};
+        description: `You have joined meeting room ${roomId}`})}, 1500)},
   const handleLeaveCall = () => {
     setHasJoined(false),
     toast && toast.info("Call ended", {
       description: "You have left the meeting"}),
   const handleJoinCall = () => {
-    setIsJoining(true);
+    setIsJoining(true),
     // Simulate connection delay,
     setTimeout(() => {
-      setHasJoined(true);
-      setIsJoining(false);
+      setHasJoined(true),
+      setIsJoining(false),
       toast.success("Call joined", {
         description: `You have joined meeting room ${roomId}`})}, 1500)}
-  };
+  },
   const handleLeaveCall = () => {
-    setHasJoined(false);
+    setHasJoined(false),
     toast.info("Call ended", {
-      description: "You have left the meeting"})});
+      description: "You have left the meeting"})}),
     // Navigate back after a short delay,
     setTimeout(() => {
       navigate(-1)}, 1500)}
@@ -116,47 +116,47 @@ export default function VideoCall() {
       setParticipants(prev => [...prev, randomUser]),
       toast(`${randomUser && randomUser.name} joined the call`)}
   }
-  };
+  },
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true };
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
     ],
     const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],
     if (!participants.find(p => p.id === randomUser.id)) {
       setParticipants(prev => [...prev, randomUser]),
       toast(`${randomUser.name} joined the call`)}
-  };
-  ]);
+  },
+  ]),
   const handleJoinCall = () => {
-    setIsJoining(true);
+    setIsJoining(true),
     // Simulate connection delay,
     setTimeout(() => {
-      setHasJoined(true);
-      setIsJoining(false);
+      setHasJoined(true),
+      setIsJoining(false),
       toast.success("Call joined", {
-        description: `You have joined meeting room ${roomId}`})}, 1500)};
+        description: `You have joined meeting room ${roomId}`})}, 1500)},
   const handleLeaveCall = () => {
-    setHasJoined(false);
+    setHasJoined(false),
     toast.info("Call ended", {
-      description: "You have left the meeting"});
+      description: "You have left the meeting"}),
     // Navigate back after a short delay,
     setTimeout(() => {
-      navigate(-1)}, 1500)};
+      navigate(-1)}, 1500)},
   const simulateUserJoining = () => {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
     const mockUsers = [
-      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false };
-      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true };
+      { id: 'user-2', name: 'Alex Chen', isVideoEnabled: true, isMuted: false },
+      { id: 'user-3', name: 'Taylor Kim', isVideoEnabled: false, isMuted: true },
       { id: 'user-4', name: 'Jordan Smith', isVideoEnabled: true, isMuted: false, isScreenSharing: true }
-    ];
-    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)];
+    ],
+    const randomUser = mockUsers[Math.floor(Math.random() * mockUsers.length)],
     if (!participants.find(p => p.id === randomUser.id)) {
       setParticipants(prev => [...prev, randomUser]),
       toast(`${randomUser.name} joined the call`)}
-  };
+  },
   return (
     <>,
       <SEO title={`Video Call - Room ${roomId}`} description="Zion video call" />,
@@ -210,8 +210,8 @@ export default function VideoCall() {
   const simulateUserJoining = () =>: any {
     // This is just for demo purposes - in a real app, this would be handled by the video call service,
     const mock_users = [
-      { id: 'user - 2', name: 'Alex Chen', isVideoEnabled: true, is_muted: false };
-      { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true };
+      { id: 'user - 2', name: 'Alex Chen', isVideoEnabled: true, is_muted: false },
+      { id: 'user - 3', name: 'Taylor Kim', isVideoEnabled: false, is_muted: true },
       { id: 'user - 4', name: 'Jordan Smith', isVideoEnabled: true, is_muted: false, isScreenSharing: true }
     ],
     const random_user = mock_users[Math.floor (Math.random () * mock_users.length)],
@@ -257,8 +257,8 @@ export default function VideoCall() {
       <Footer />,
     </>)}
 ,
-      id: 'user - 1';
-      name: 'You';
-      isVideoEnabled: true;
+      id: 'user - 1',
+      name: 'You',
+      isVideoEnabled: true,
       is_muted: false}
   ])>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

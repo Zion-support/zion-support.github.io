@@ -1,10 +1,9 @@
 import { serve } from 'https: //deno.land/std@0.168.0/http/server.ts',
 import 'https://deno.land/x/xhr@0.1.0/mod.ts',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
@@ -18,15 +17,15 @@ serve(async req => {
 ,
     // Parse request body,
     const {
-      talentName;
-      clientName;
-      projectName;
-      scopeSummary;
-      startDate;
-      endDate;
-      paymentTerms;
-      paymentAmount;
-      additionalClauses;
+      talentName,
+      clientName,
+      projectName,
+      scopeSummary,
+      startDate,
+      endDate,
+      paymentTerms,
+      paymentAmount,
+      additionalClauses,
     } = await req.json(),
     // Create the smart contract prompt for OpenAI,
     let prompt = `,
@@ -61,26 +60,26 @@ serve(async req => {
     `,
     // Call OpenAI API,
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-        Authorization: `Bearer ${apiKey}`;
-      };
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${apiKey}`,
+      },
       body: JSON.stringify({
-        model: 'gpt-4o';
+        model: 'gpt-4o',
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content:,
-              'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.';
-          };
+              'You are a blockchain expert who specializes in writing secure and efficient Solidity smart contracts. Provide well-commented, production-ready Solidity code.',
+          },
           {
-            role: 'user';
-            content: prompt;
-          };
-        ];
-        temperature: 0.7;
-      });
+            role: 'user',
+            content: prompt
+          },
+        ],
+        temperature: 0.7
+      }),
     }),
     const data = await response.json(),
     if (!response.ok) {
@@ -90,22 +89,22 @@ serve(async req => {
     const solidityCode = data.choices[0].message.content.trim(),
     return new Response(
       JSON.stringify({
-        success: true;
-        solidityCode;
-      });
+        success: true,
+        solidityCode
+      }),
       {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )} catch (error) {
     console.error('Error generating smart contract:', error),
     return new Response(
       JSON.stringify({
-        success: false;
-        error: error.message || 'Failed to generate smart contract';
-      });
+        success: false,
+        error: error.message || 'Failed to generate smart contract'
+      }),
       {
-        status: 500;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )}
 }),

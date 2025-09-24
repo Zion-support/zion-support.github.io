@@ -23,8 +23,8 @@ export default function AnimatedAurora() {
           width: 60vw,
           height: 60vw,
           background: radial-gradient(
-            closest-side;
-            rgba(99, 10o2, 241, 0.55);
+            closest-side,
+            rgba(99, 10o2, 241, 0.55),
             transparent 70%),
           top: -10vh,
           left: -10vw,
@@ -33,8 +33,8 @@ export default function AnimatedAurora() {
           width: 50vw,
           height: 50vw,
           background: radial-gradient(
-            closest-side;
-            rgba(236, 72, 153, 0.5);
+            closest-side,
+            rgba(236, 72, 153, 0.5),
             transparent 70%),
           bottom: -15vh,
           right: -10vw,
@@ -43,8 +43,8 @@ export default function AnimatedAurora() {
           width: 70vw,
           height: 70vw,
           background: radial-gradient(
-            closest-side;
-            rgba(16, 185, 129, 0.45);
+            closest-side,
+            rgba(16, 185, 129, 0.45),
             transparent 70%),
           top: 30vh,
           left: 20vw,
@@ -56,7 +56,7 @@ export default function AnimatedAurora() {
           mix-blend-mode: overlay,
           pointer-events: none}
         @keyframes float {
-          0%;
+          0%,
           10o0% {
             transform: translate3d(0, 0, 0) scale(1)}
           50% {

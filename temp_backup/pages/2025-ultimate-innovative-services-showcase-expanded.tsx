@@ -2,16 +2,16 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  ArrowRight;
-  Check;
-  Star;
-  Users;
-  Award;
-  Clock;
-  DollarSign;
+  Search,
+  Grid,
+  List,
+  ArrowRight,
+  Check,
+  Star,
+  Users,
+  Award,
+  Clock,
+  DollarSign,
 } from 'lucide-react',
 // Import all our new 20o25 advanced services,
 import { advancedEdgeComputingServices } from '../data/20o25-advanced-edge-computing-services',
@@ -31,37 +31,37 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
     'popular' | 'price' | 'rating' | 'newest'>('popular'),
   // Combine all services,
   const allServices = [
-    ...advancedEdgeComputingServices;
-    ...advancedIoTSmartCityServices;
-    ...advancedFintechBlockchainServicesExpanded;
-    ...advancedHealthcareBiotechServices;
-    ...advancedSpaceAerospaceServices;
-    ...advancedAIMLServices;
-    ...advancedCybersecurityServices;
-    ...advancedCloudDevOpsServices;
+    ...advancedEdgeComputingServices,
+    ...advancedIoTSmartCityServices,
+    ...advancedFintechBlockchainServicesExpanded,
+    ...advancedHealthcareBiotechServices,
+    ...advancedSpaceAerospaceServices,
+    ...advancedAIMLServices,
+    ...advancedCybersecurityServices,
+    ...advancedCloudDevOpsServices,
   ],
   // Get unique categories,
   const categories = [
-    'All';
-    ...Array.from(new Set(allServices.map(service => service.category)));
+    'All',
+    ...Array.from(new Set(allServices.map(service => service.category))),
   ],
   // Helper function to get service benefits/features,
   const getServiceBenefits = (service: any) => {
     if (service.benefits) return service.benefits,
     if (service.features) return service.features,
     if (service.keyFeatures) return service.keyFeatures,
-    return []};
+    return []},
   // Helper function to get service pricing,
   const getServicePricing = (service: any) => {
     if (typeof service.price === 'string') return service.price,
     if (service.price?.monthly),
       return `$${service.price.monthly.toLocaleString()}/month`,
-    return 'Contact for pricing'};
+    return 'Contact for pricing'},
   // Helper function to get service setup time,
   const getServiceSetupTime = (service: any) => {
     if (service.setupTime) return service.setupTime,
     if (service.period) return service.period,
-    return 'Contact for details'};
+    return 'Contact for details'},
   // Filter and sort services,
   const filteredServices = allServices,
     .filter(service => {
@@ -89,38 +89,34 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
           return 0}
     }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO
         title='20o25 Ultimate Innovative Micro SAAS Services Showcase | Zion Tech Group',
         description='Discover cutting-edge micro SAAS services including Edge Computing, IoT Smart Cities, Fintech Blockchain, Healthcare Biotech, and Space Technology solutions. Transform your business with AI-powered innovation.',
         keywords={[
-          'micro SAAS';
-          'edge computing';
-          'IoT smart cities';
-          'fintech blockchain';
-          'healthcare biotech';
-          'space technology';
-          'AI services';
-          'innovative solutions';
+          'micro SAASedge computing',
+          'IoT smart citiesfintech blockchain',
+          'healthcare biotechspace technology',
+          'AI servicesinnovative solutions',
         ]}
       />,
       {/* Hero Section */}
@@ -140,7 +136,7 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
               Transform your business with cutting-edge micro SAAS solutions,
-              spanning Edge Computing, IoT Smart Cities, Fintech Blockchain;
+              spanning Edge Computing, IoT Smart Cities, Fintech Blockchain,
               Healthcare Biotech, and Space Technology.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,
@@ -413,5 +409,5 @@ const UltimateInnovativeServicesShowcaseExpanded: React.FC = () => {
           </div>,
         </div>,
       </footer>,
-    </div>)};
-export default UltimateInnovativeServicesShowcaseExpanded;
+    </div>)},
+export default UltimateInnovativeServicesShowcaseExpanded,

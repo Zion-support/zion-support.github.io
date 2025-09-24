@@ -1,4 +1,5 @@
-/// <reference types="cypress"  />"import React from react',import { mount } from cypress/react18', // Assuming React 18+'import { WalletProvider, useWallet } from ../../../../../../src/context/WalletContext', // Adjust path as needed'// Corrected import path for appkit mocks,
+/// <reference types="cypress"  />"import React from react',
+import { mount } from cypress/react18', // Assuming React 18+'import { WalletProvider, useWallet } from ../../../../../../src/context/WalletContext', // Adjust path as needed'// Corrected import path for appkit mocks,
 import * as AppKitReact from @reown/appkit/react',
 // Define a simple child component to consume the context,
 const TestComponent = () => {
@@ -9,7 +10,7 @@ const TestComponent = () => {
     <div>,
       <p>Connected: {wallet.isConnected.toString()}</p>,
       <p>Address: {wallet.address || N/A'}</p>      <button onClick={wallet.connectWallet}>Connect</button>,
-    </div>)};
+    </div>)},
 describe('WalletProvider', () => {'  let _mockAppKit: unknown,
   let mockAppKitInstance: unknown,
   beforeEach(() => {
@@ -18,29 +19,29 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown,
       cy.spy(win.console, error').as('consoleError')}),
     // Define the mock appKit object returned by the mocked useAppKit,
     mockAppKit ={
-      open: cy.stub().resolves();
-      close: cy.stub().resolves();
-      disconnect: cy.stub().resolves();
-      getState: cy.stub().returns({ isConnected: false });
-      getAddress: cy.stub().returns(null);
-      getChainId: cy.stub().returns(null);
-      getWalletProvider: cy.stub().returns(null);
-      // subscribeProvider, on, off are intentionally missing};
+      open: cy.stub().resolves(),
+      close: cy.stub().resolves(),
+      disconnect: cy.stub().resolves(),
+      getState: cy.stub().returns({ isConnected: false }),
+      getAddress: cy.stub().returns(null),
+      getChainId: cy.stub().returns(null),
+      getWalletProvider: cy.stub().returns(null),
+      // subscribeProvider, on, off are intentionally missing},
     // Define a similar mock for appKitInstance returned by mocked createAppKit,
-    // This one might need subscribeProvider for initial setup if not careful;
+    // This one might need subscribeProvider for initial setup if not careful,
     // but the goal is to test the useAppKit path primarily.,
     // Let's make it minimal like mockAppKit.'    mockAppKitInstance ={
-      open: cy.stub().resolves();
-      close: cy.stub().resolves();
-      disconnect: cy.stub().resolves();
-      getState: cy.stub().returns({ isConnected: false });
-      getAddress: cy.stub().returns(null);
-      getChainId: cy.stub().returns(null);
-      getWalletProvider: cy.stub().returns(null);
+      open: cy.stub().resolves(),
+      close: cy.stub().resolves(),
+      disconnect: cy.stub().resolves(),
+      getState: cy.stub().returns({ isConnected: false }),
+      getAddress: cy.stub().returns(null),
+      getChainId: cy.stub().returns(null),
+      getWalletProvider: cy.stub().returns(null),
       // subscribeProvider, on, off are intentionally missing,
       // Add a dummy subscribeProvider only if context init absolutely needs it,
       // and we are NOT testing its absence here for appKitInstance.,
-      // For this test, we want to ensure the context handles its absence from *useAppKit*.};
+      // For this test, we want to ensure the context handles its absence from *useAppKit*.},
     // Stubbing ES Module exports directly can be tricky.,
     // Cypress typically requires this to be handled by the test runner's capabilities'    // or bundler configuration (e.g., webpack aliases or Babel plugins).,
     // A common pattern is to stub the module one level up if direct named stubbing is hard.,
@@ -61,7 +62,7 @@ describe('WalletProvider', () => {'  let _mockAppKit: unknown,
     // The `connectWallet` function in `WalletProvider` uses `appKit` from `useAppKit()`.,
     // So, `mockAppKit.open` should be called.,
     cy.wrap(mockAppKit.open).should('be.called'),
-    // Cypress automatically fails if an unhandled exception occurs in the component;
+    // Cypress automatically fails if an unhandled exception occurs in the component,
     // so a passing test here (especially after interaction) implies graceful handling.}),
   // Optional: Add a test case for when appKit is null, if not already covered,
   it('should handle null appKit from useAppKit gracefully', () => {'    // Override the specific stub for this test,

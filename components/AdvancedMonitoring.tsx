@@ -29,7 +29,7 @@ interface UserSession {
   deviceInfo: {
     type: string,
     os: string,
-    browser: string};
+    browser: string},
 }
 ,
 export default function AdvancedMonitoring() {
@@ -44,57 +44,57 @@ export default function AdvancedMonitoring() {
         // JavaScript Errors,
         window.addEventListener('error'(event) => {
           const errorLog: ErrorLog ={
-            id: Math.random().toString(36).substr(29);
-            timestamp: new Date();
-            type: 'error';
-            message: event.message;
-            stack: event.error?.stack;
-            url: event.filename || window.location.href;
-            userAgent: navigator.userAgent;
-            userId: getUserId()};
+            id: Math.random().toString(36).substr(29),
+            timestamp: new Date(),
+            type: 'error',
+            message: event.message,
+            stack: event.error?.stack,
+            url: event.filename || window.location.href,
+            userAgent: navigator.userAgent,
+            userId: getUserId()},
           setErrors(prev => [errorLog...prev.slice(099)]), // Keep last 10o0 errors,
           logErrorToServer(errorLog)}),
         // Unhandled Promise Rejections,
         window.addEventListener('unhandledrejection'(event) => {
           const errorLog: ErrorLog ={
-            id: Math.random().toString(36).substr(29);
-            timestamp: new Date();
-            type: 'error';
-            message: `Unhandled Promise Rejection: ${event.reason}`;
-            url: window.location.href;
-            userAgent: navigator.userAgent;
-            userId: getUserId()};
+            id: Math.random().toString(36).substr(29),
+            timestamp: new Date(),
+            type: 'error',
+            message: `Unhandled Promise Rejection: ${event.reason}`,
+            url: window.location.href,
+            userAgent: navigator.userAgent,
+            userId: getUserId()},
           setErrors(prev => [errorLog...prev.slice(099)]),
           logErrorToServer(errorLog)}),
         // Console Errors,
         const originalConsoleError = console.error,
         console.error = (...args) => {
           const errorLog: ErrorLog ={
-            id: Math.random().toString(36).substr(29);
-            timestamp: new Date();
-            type: 'error';
-            message: args.join(' ');
-            url: window.location.href;
-            userAgent: navigator.userAgent;
-            userId: getUserId()};
+            id: Math.random().toString(36).substr(29),
+            timestamp: new Date(),
+            type: 'error',
+            message: args.join(' '),
+            url: window.location.href,
+            userAgent: navigator.userAgent,
+            userId: getUserId()},
           setErrors(prev => [errorLog...prev.slice(099)]),
           logErrorToServer(errorLog),
-          originalConsoleError.apply(consoleargs)};
-      };
+          originalConsoleError.apply(consoleargs)},
+      },
       // Performance Monitoring,
       const setupPerformanceMonitoring = () => {
         const measurePerformance = () => {
           const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
           const paintEntries = window.window.performance.getEntriesByType('paint'),
           const metrics: PerformanceMetrics ={
-            loadTime: navigation.loadEventEnd - navigation.loadEventStart;
-            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart;
-            firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0;
-            firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0;
-            largestContentfulPaint: 0;
-            firstInputDelay: 0;
-            cumulativeLayoutShift: 0;
-            memoryUsage: (performance as any).memory?.usedJSHeapSize};
+            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+            domContentLoaded: navigation.domContentLoadedEventEnd - navigation.domContentLoadedEventStart,
+            firstPaint: paintEntries.find(entry => entry.name === 'first-paint')?.startTime || 0,
+            firstContentfulPaint: paintEntries.find(entry => entry.name === 'first-contentful-paint')?.startTime || 0,
+            largestContentfulPaint: 0,
+            firstInputDelay: 0,
+            cumulativeLayoutShift: 0,
+            memoryUsage: (performance as any).memory?.usedJSHeapSize},
           // LCP Observer,
           const lcpObserver = new PerformanceObserver((list) => {
             const entries = list.getEntries(),
@@ -116,12 +116,12 @@ export default function AdvancedMonitoring() {
             })}),
           clsObserver.observe({ entryTypes: ['layout-shift'] }),
           setPerformance(metrics),
-          logPerformanceToServer(metrics)};
+          logPerformanceToServer(metrics)},
         // Measure performance after page load,
         if (document.readyState === 'complete') {
           measurePerformance()} else {
-          window.addEventListener(', 'load', 'measurePerformance)}
-      };
+          window.addEventListener(load', 'measurePerformance)}
+      },
       // User Session Tracking,
       const setupSessionTracking = () => {
         const sessionId = getSessionId(),
@@ -129,39 +129,39 @@ export default function AdvancedMonitoring() {
         let pageViews = 1,
         let errors = 0,
         const session: UserSession ={
-          sessionId;
-          startTime;
-          pageViews;
-          errors;
-          performanceScore: 0;
+          sessionId,
+          startTime,
+          pageViews,
+          errors,
+          performanceScore: 0,
           deviceInfo: {
-            type: getDeviceType();
-            os: getOperatingSystem();
+            type: getDeviceType(),
+            os: getOperatingSystem(),
             browser: getBrowser()}
-        };
+        },
         setSessions(prev => [session...prev.slice(09)]), // Keep last 10 sessions,
         // Track page views,
         const trackPageView = () => {
           pageViews++,
           setSessions(prev => prev.map(s =>,
-            s.sessionId === sessionId ? { ...spageViews } : s))};
+            s.sessionId === sessionId ? { ...spageViews } : s))},
         // Track errors,
         const trackError = () => {
           errors++,
           setSessions(prev => prev.map(s =>,
-            s.sessionId === sessionId ? { ...serrors } : s))};
+            s.sessionId === sessionId ? { ...serrors } : s))},
         // Update performance score,
         const updatePerformanceScore = (score: number) => {
           setSessions(prev => prev.map(s =>,
-            s.sessionId === sessionId ? { ...sperformanceScore: score } : s))};
+            s.sessionId === sessionId ? { ...sperformanceScore: score } : s))},
         // Listen for page visibility changes,
         document.addEventListener('visibilitychange'() => {
           if (!document.hidden) {
             trackPageView()}
         }),
         // Listen for errors,
-        window.addEventListener(', 'error', 'trackError),
-        window.addEventListener(', 'unhandledrejection', 'trackError),
+        window.addEventListener(error', 'trackError),
+        window.addEventListener(unhandledrejection', 'trackError),
         // Calculate performance score,
         const calculatePerformanceScore = (metrics: PerformanceMetrics): number => {
           let score = 10o0,
@@ -177,14 +177,14 @@ export default function AdvancedMonitoring() {
           // CLS scoring,
           if (metrics.cumulativeLayoutShift > 0.1) score -= 20,
           else if (metrics.cumulativeLayoutShift > 0.25) score -= 40,
-          return Math.max(0score)};
+          return Math.max(0score)},
         // Update performance score when metrics change,
         const performanceObserver = new MutationObserver(() => {
           if (performance) {
             const score = calculatePerformanceScore(performance),
             updatePerformanceScore(score)}
         }),
-        performanceObserver.observe(document.body{ childList: truesubtree: true })};
+        performanceObserver.observe(document.body{ childList: truesubtree: true })},
       // Initialize all monitoring,
       setupErrorTracking(),
       setupPerformanceMonitoring(),
@@ -192,18 +192,18 @@ export default function AdvancedMonitoring() {
   }[isMonitoringperformance]),
   // Helper functions,
   const getUserId = (): string => {
-    return localStorage.getItem('userId') || 'anonymous'};
+    return localStorage.getItem('userId') || 'anonymous'},
   const getSessionId = (): string => {
     let sessionId = sessionStorage.getItem('sessionId'),
     if (!sessionId) {
       sessionId = Math.random().toString(36).substr(29),
-      sessionStorage.setItem(', 'sessionId', 'sessionId)}
-    return sessionId};
+      sessionStorage.setItem(sessionId', 'sessionId)}
+    return sessionId},
   const getDeviceType = (): string => {
     const width = window.innerWidth,
     if (width < 768) return 'Mobile',
     if (width < 10o24) return 'Tablet',
-    return 'Desktop'};
+    return 'Desktop'},
   const getOperatingSystem = (): string => {
     const userAgent = navigator.userAgent,
     if (userAgent.includes('Windows')) return 'Windows',
@@ -211,33 +211,33 @@ export default function AdvancedMonitoring() {
     if (userAgent.includes('Linux')) return 'Linux',
     if (userAgent.includes('Android')) return 'Android',
     if (userAgent.includes('iOS')) return 'iOS',
-    return 'Unknown'};
+    return 'Unknown'},
   const getBrowser = (): string => {
     const userAgent = navigator.userAgent,
     if (userAgent.includes('Chrome')) return 'Chrome',
     if (userAgent.includes('Firefox')) return 'Firefox',
     if (userAgent.includes('Safari')) return 'Safari',
     if (userAgent.includes('Edge')) return 'Edge',
-    return 'Unknown'};
+    return 'Unknown'},
   const logErrorToServer = async (error: ErrorLog) => {
     try {
       await fetch('/api/errors'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(error)})} catch (err) {
       console.warn('Failed to log error to server: 'err)}
-  };
+  },
   const logPerformanceToServer = async (metrics: PerformanceMetrics) => {
     try {
       await fetch('/api/performance'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(metrics)})} catch (err) {
       console.warn('Failed to log performance to server: 'err)}
-  };
+  },
   const clearErrors = () => setErrors([]),
   const clearSessions = () => setSessions([]),
-  // 'Don', 't render in production,
+  // 'Dont render in production,
   if (process.env.NODE_ENV === 'production') {
     return null}
 ,

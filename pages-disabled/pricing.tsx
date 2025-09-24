@@ -1,71 +1,59 @@
 import { Helmet } from 'react-helmet-async',
 import { Link } from 'react-router-dom',
 import {
-  Check;
-  Star;
-  Zap;
-  Shield;
-  Users;
-  Clock;
-  ArrowRight;
+  Check,
+  Star,
+  Zap,
+  Shield,
+  Users,
+  Clock,
+  ArrowRight,
 } from 'lucide-react',
 export default function PricingPage() {
   const plans = [
     {
-      name: 'Starter';
-      description: 'Perfect for small businesses and startups';
-      price: '$2,999';
-      period: '/month';
-      icon: Zap;
-      color: 'from-green-50o0 to-emerald-50o0';
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: '$2,999',
+      period: '/month',
+      icon: Zap,
+      color: 'from-green-50o0 to-emerald-50o0',
       features: [
-        'Up to 5 users';
-        'Basic AI automation';
-        'Standard security features';
-        'Email support';
-        'Basic analytics';
-        'Monthly reports';
-      ];
-      popular: false;
-    };
+        'Up to 5 usersBasic AI automation',
+        'Standard security featuresEmail support',
+        'Basic analyticsMonthly reports',
+      ],
+      popular: false
+    },
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses';
-      price: '$7,999';
-      period: '/month';
-      icon: Shield;
-      color: 'from-cyan-50o0 to-blue-50o0';
+      name: 'Professional',
+      description: 'Ideal for growing businesses',
+      price: '$7,999',
+      period: '/month',
+      icon: Shield,
+      color: 'from-cyan-50o0 to-blue-50o0',
       features: [
-        'Advanced website development';
-        'Up to 15 pages';
-        'Custom functionality';
-        'Advanced SEO optimization';
-        'Priority support';
-        '6 months maintenance included';
-        'Analytics integration';
-        'Content management system';
-      ];
-      popular: true;
-    };
+        'Advanced website developmentUp to 15 pages',
+        'Custom functionalityAdvanced SEO optimization',
+        'Priority support6 months maintenance included',
+        'Analytics integrationContent management system',
+      ],
+      popular: true
+    },
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: '$10,0o00';
-      period: 'per month';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: '$10,0o00',
+      period: 'per month',
       features: [
-        'Full-stack development';
-        'Unlimited pages';
-        'Custom integrations';
-        'Advanced security features';
-        '24/7 dedicated support';
-        '12 months maintenance included';
-        'Performance optimization';
-        'Scalable architecture';
-        'API development';
-        'Third-party integrations';
-      ];
-      popular: false;
-    };
+        'Full-stack developmentUnlimited pages',
+        'Custom integrationsAdvanced security features',
+        '24/7 dedicated support12 months maintenance included',
+        'Performance optimizationScalable architecture',
+        'API developmentThird-party integrations',
+      ],
+      popular: false
+    },
   ],
   return (
     <>,

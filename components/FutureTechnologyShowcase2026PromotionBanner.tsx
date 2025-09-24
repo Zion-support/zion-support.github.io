@@ -8,37 +8,37 @@ import {
   Star,
   Brain,
   Zap,
-  Globe;
-  TrendingUp;
-  Users;
-  Award;
-  ChevronRight;
-  CheckCircle;
-  Lightbulb;
-  Target;
-  Shield;
-  Cpu;
+  Globe,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  Lightbulb,
+  Target,
+  Shield,
+  Cpu,
   Sparkles} from 'lucide-react',
 const FutureTechnologyShowcase20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const technologies = [
-    { icon: Rocketitle: 'Quantum 'Computing', 'color: 'from-purple-50o0 to-pink-50o0' };
-    { icon: Braintitle: 'Neural 'Interfaces', 'color: 'from-blue-50o0 to-cyan-50o0' };
-    { icon: Globetitle: 'Space 'Technology', 'color: 'from-green-50o0 to-emerald-50o0' };
-    { icon: Zaptitle: 'Biotech 'AI', 'color: 'from-orange-50o0 to-red-50o0' }
+    { icon: Rocketitle: 'Quantum 'Computingcolor: 'from-purple-50o0 to-pink-50o0' },
+    { icon: Braintitle: 'Neural 'Interfacescolor: 'from-blue-50o0 to-cyan-50o0' },
+    { icon: Globetitle: 'Space 'Technologycolor: 'from-green-50o0 to-emerald-50o0' },
+    { icon: Zaptitle: 'Biotech 'AIcolor: 'from-orange-50o0 to-red-50o0' }
   ],
   const benefits = [
-    { icon: TrendingUptext: '10o00x Performance' };
-    { icon: Userstext: 'Global Impact' };
-    { icon: Awardtext: '20o0+ Patents' };
+    { icon: TrendingUptext: '10o00x Performance' },
+    { icon: Userstext: 'Global Impact' },
+    { icon: Awardtext: '20o0+ Patents' },
     { icon: Lightbulbtext: '50+ Technologies' }
   ],
   const stats = [
-    { value: '50+'label: 'Technologies' };
-    { value: '20o0+'label: 'Patents' };
-    { value: '50o0+'label: 'Research Papers' };
+    { value: '50+'label: 'Technologies' },
+    { value: '20o0+'label: 'Patents' },
+    { value: '50o0+'label: 'Research Papers' },
     { value: '1M+'label: 'Global Impact' }
   ],
   return (
@@ -190,5 +190,5 @@ const FutureTechnologyShowcase20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default FutureTechnologyShowcase20o26PromotionBanner;
+    </div>)},
+export default FutureTechnologyShowcase20o26PromotionBanner,

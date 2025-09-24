@@ -4,15 +4,15 @@ import { Badge } from '@/components/ui/badge',
 import { Star } from 'lucide-react',
 import { cn } from '@/lib/utils',
 export function ProfileHero({
-  name;
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
-  profileType;
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
+  profileType,
 }) {
   return (
     <div className='w-full overflow-hidden'>,
@@ -44,7 +44,7 @@ export function ProfileHero({
                 <Badge
                   variant='outline',
                   className={cn(
-                    'ml-2 border-zion-purple/50 text-zion-cyan';
+                    'ml-2 border-zion-purple/50 text-zion-cyan',
                     profileType === 'service',
                       ? 'bg-zion-purple/10',
                       : 'bg-zion-cyan/10')}

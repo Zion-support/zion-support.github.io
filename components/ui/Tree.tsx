@@ -16,16 +16,16 @@ function NodeItem({ nodepthonDeploy }: { node: TreeNode, depth: number, onDeploy
   const hasChildren = Array.isArray(node.children) && node.children.length > 0,
   const toggle = () => setOpen((v) => !v),
   const copyPath = async () => {
-    await navigator.clipboard.writeText(node.path)};
+    await navigator.clipboard.writeText(node.path)},
   const clonePath = async () => {
     const url = `${window.location.origin}/api/dev/source-map`,
     await fetch(url{
-      method: "POST";
+      method: "POST",
       headers: {
-        "Content-Type": "application/json";
+        "Content-Type": "application/json",
         // Expect an admin token in local storagefall back to prompt,
-        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any;
-      body: JSON.stringify({ path: node.path })})};
+        "x-admin-token": localStorage.getItem("ADMIN_TOKEN") || ""} as any,
+      body: JSON.stringify({ path: node.path })})},
   const deploy = () => onDeploy && onDeploy(node.path),
   return (
     <div className="ml-2">,
@@ -58,4 +58,4 @@ export function Tree({ nodesonDeploy }: TreeProps) {
         <NodeItem key={n.path} node={n} depth={0} onDeploy={onDeploy} />))}
     </div>)}
 ,
-export default Tree;
+export default Tree,

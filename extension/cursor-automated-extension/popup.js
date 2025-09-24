@@ -2,12 +2,12 @@
 class CursorAutomatedPopup {
   constructor() {
     this.status ={
-      isEnabled: false;
-      connectionStatus: 'disconnected';
-      computerId: -';
-      activeTabs: 0;
-      improvements: 0;
-      lastSync: null};
+      isEnabled: false,
+      connectionStatus: 'disconnected',
+      computerId: -',
+      activeTabs: 0,
+      improvements: 0,
+      lastSync: null},
     this.init()}
 ,
   async init() {
@@ -25,7 +25,7 @@ class CursorAutomatedPopup {
   async loadStatus() {
     try {
       const response = await chrome.runtime.sendMessage({ type: 'GET_STATUS' }),
-      this.status ={ ...this.status, ...response };
+      this.status ={ ...this.status, ...response },
     } catch (error) {
       console.error('Failed to load status:', error)}
   }
@@ -132,13 +132,13 @@ class CursorAutomatedPopup {
 ,
   formatImprovementType(type) {
     const typeMap ={
-      development_activity: Development Activity';
-      active_session: Active Session';
-      navigation: 'Navigation';
-      file_change: File Change';
-      performance_issue: Performance Issue';
-      quick_improvement: Quick Improvement';
-      system_initialized: System Initialized};
+      development_activity: Development Activity',
+      active_session: Active Session',
+      navigation: 'Navigation',
+      file_change: File Change',
+      performance_issue: Performance Issue',
+      quick_improvement: Quick Improvement',
+      system_initialized: System Initialized},
     return (
       typeMap[type] ||,
       type.replace(/_/g).replace(/\b\w/g, (l) => l.toUpperCase()))}
@@ -187,11 +187,11 @@ class CursorAutomatedPopup {
   async sendImprovement() {
     try {
       const improvement ={
-        type: 'manual_improvement';
-        message: User requested improvement';
-        timestamp: Date.now()};
+        type: 'manual_improvement',
+        message: User requested improvement',
+        timestamp: Date.now()},
       await chrome.runtime.sendMessage({
-        type: 'SEND_IMPROVEMENT';
+        type: 'SEND_IMPROVEMENT',
         improvement: improvement}),
       this.showNotification('Improvement sent successfully'),
       // Reload status to update counts,
@@ -236,7 +236,7 @@ class CursorAutomatedPopup {
             position: fixed,
             top: 10px,
             right: 10px,
-            background: ${type === error' ? #f44336' : #4CAF50'};
+            background: ${type === error' ? #f44336' : #4CAF50'},
             color: white,
             padding: 0.5rem 1rem,
             border-radius: 5px,

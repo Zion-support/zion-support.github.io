@@ -28,7 +28,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -74,7 +74,7 @@ export default function Enhanced20o26ServicesShowcaseV2({ services }: Enhanced20
   // Get category counts,
   const getCategoryCount = (category: string) => {
     if (category === 'all') return services.length,
-    return services.filter(s => s.category.includes(category)).length};
+    return services.filter(s => s.category.includes(category)).length},
   // Get category icon,
   const getCategoryIcon = (category: string) => {
     switch (category.toLowerCase()) {
@@ -96,7 +96,7 @@ export default function Enhanced20o26ServicesShowcaseV2({ services }: Enhanced20
         return <Zap className="w-5 h-5"  />,
       default:,
         return <Rocket className="w-5 h-5"  />}
-  };
+  },
   return (
     <section className="py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden">,
       {/* Background Effects */}

@@ -18,38 +18,35 @@ interface SEOProps {
   alternateUrls?: { lang: string, url: string }[]}
 ,
 const defaultSEO = {
-  title: 'Zion Tech Group - Advanced AI and Technology Solutions';
+  title: 'Zion Tech Group - Advanced AI and Technology Solutions',
   description:,
-    'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.';
+    'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
   keywords: [
-    'AI';
-    'artificial intelligence';
-    'cloud services';
-    'cybersecurity';
-    'technology solutions';
-    'enterprise software';
-    'digital transformation';
-  ];
-  image: '/og-image.jpg';
-  url: 'https://zion.app';
-  type: 'website' as const;
-  author: 'Zion Tech Group';
-};
+    'AIartificial intelligence',
+    'cloud servicescybersecurity',
+    'technology solutionsenterprise software',
+    'digital transformation',
+  ],
+  image: '/og-image.jpg',
+  url: 'https://zion.app',
+  type: 'website' as const,
+  author: 'Zion Tech Group'
+},
 export default function SEOOptimized({
-  title;
-  description;
-  keywords;
-  image;
-  url;
-  type;
-  author;
-  publishedTime;
-  modifiedTime;
-  section;
-  tags;
-  noindex;
-  canonical;
-  alternateUrls;
+  title,
+  description,
+  keywords,
+  image,
+  url,
+  type,
+  author,
+  publishedTime,
+  modifiedTime,
+  section,
+  tags,
+  noindex,
+  canonical,
+  alternateUrls,
 }: SEOProps) {
   const pathname = usePathname(),
   const fullUrl = url || `https: //zion.app${pathname}`,
@@ -61,55 +58,53 @@ export default function SEOOptimized({
   const seoTitle = title ? `${title} | ${defaultSEO.title}` : defaultSEO.title,
   const seoDescription = description || defaultSEO.description,
   const seoKeywords = [
-    ...new Set([...(keywords || []), ...defaultSEO.keywords]);
-  ].join(', '),
+    ...new Set([...(keywords || []), ...defaultSEO.keywords]),
+  ].join(),
   const seoType = type || defaultSEO.type,
   const seoAuthor = author || defaultSEO.author,
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': seoType === 'article' ? 'Article' : 'WebPage';
-    name: seoTitle;
-    description: seoDescription;
-    url: fullUrl;
-    image: fullImage;
+    '@context': 'https: //schema.org@type': seoType === 'article' ? 'Article' : 'WebPage',
+    name: seoTitle,
+    description: seoDescription,
+    url: fullUrl,
+    image: fullImage,
     author: {
-      '@type': 'Organization';
-      name: seoAuthor;
-    };
+      '@type': 'Organization',
+      name: seoAuthor
+    },
     publisher: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
       logo: {
-        '@type': 'ImageObject';
-        url: 'https://zion.app/logo.png';
-      };
-    };
+        '@type': 'ImageObject',
+        url: 'https://zion.app/logo.png'
+      },
+    },
     ...(seoType === 'article' && {
-      headline: title;
-      datePublished: publishedTime;
-      dateModified: modifiedTime;
-      section: section;
-      keywords: seoKeywords;
-    });
-    ...(tags && { keywords: tags.join(', ') });
-  };
+      headline: title,
+      datePublished: publishedTime,
+      dateModified: modifiedTime,
+      section: section,
+      keywords: seoKeywords
+    }),
+    ...(tags && { keywords: tags.join() }),
+  },
   const breadcrumbStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'BreadcrumbList';
+    '@context': 'https: //schema.org@type': 'BreadcrumbList',
     itemListElement: pathname,
       .split('/'),
       .filter(Boolean),
       .map((segment, index) => ({
-        '@type': 'ListItem';
-        position: index + 1;
+        '@type': 'ListItem',
+        position: index + 1,
         name:,
-          segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ');
+          segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' '),
         item: `https://zion.app/${pathname,
           .split('/'),
           .slice(0, index + 2),
-          .join('/')}`;
-      }));
-  };
+          .join('/')}`,
+      })),
+  },
   return (
     <Head>,
       {/* Basic Meta Tags */}
@@ -195,14 +190,14 @@ export default function SEOOptimized({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData);
+          __html: JSON.stringify(structuredData)
         }}
       />,
       {/* Breadcrumb Structured Data */}
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData);
+          __html: JSON.stringify(breadcrumbStructuredData)
         }}
       />,
       {/* Additional SEO Meta Tags */}

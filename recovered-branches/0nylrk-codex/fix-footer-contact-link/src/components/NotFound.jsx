@@ -3,38 +3,38 @@ import { motion } from 'framer-motion',
 import { Home, Search, ArrowRight, AlertTriangle } from 'lucide-react',
 const NotFound = () => {
   const popularPages = [
-    { path: '/', label: 'Home', description: 'Main landing page' };
-    { path: '/services', label: 'Services', description: 'All our services' };
+    { path: '/', label: 'Home', description: 'Main landing page' },
+    { path: '/services', label: 'Services', description: 'All our services' },
     {
-      path: '/about';
-      label: 'About Us';
-      description: 'Learn about Zion Tech Group';
-    };
-    { path: '/contact', label: 'Contact', description: 'Get in touch with us' };
-    { path: '/blog', label: 'Blog', description: 'Latest insights and news' };
-    { path: '/careers', label: 'Careers', description: 'Join our team' };
+      path: '/about',
+      label: 'About Us',
+      description: 'Learn about Zion Tech Group'
+    },
+    { path: '/contact', label: 'Contact', description: 'Get in touch with us' },
+    { path: '/blog', label: 'Blog', description: 'Latest insights and news' },
+    { path: '/careers', label: 'Careers', description: 'Join our team' },
   ],
   const servicePages = [
     {
-      path: '/services/ai';
-      label: 'AI Services';
-      description: 'Artificial Intelligence solutions';
-    };
+      path: '/services/ai',
+      label: 'AI Services',
+      description: 'Artificial Intelligence solutions'
+    },
     {
-      path: '/services/cloud';
-      label: 'Cloud Services';
-      description: 'Cloud infrastructure and DevOps';
-    };
+      path: '/services/cloud',
+      label: 'Cloud Services',
+      description: 'Cloud infrastructure and DevOps'
+    },
     {
-      path: '/services/cybersecurity';
-      label: 'Cybersecurity';
-      description: 'Security and protection';
-    };
+      path: '/services/cybersecurity',
+      label: 'Cybersecurity',
+      description: 'Security and protection'
+    },
     {
-      path: '/services/infrastructure';
-      label: 'IT Infrastructure';
-      description: 'Enterprise IT solutions';
-    };
+      path: '/services/infrastructure',
+      label: 'IT Infrastructure',
+      description: 'Enterprise IT solutions'
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0 flex items-center justify-center px-4'>,
@@ -192,5 +192,5 @@ const NotFound = () => {
           </a>,
         </motion.p>,
       </motion.div>,
-    </div>)};
-export default NotFound;
+    </div>)},
+export default NotFound,

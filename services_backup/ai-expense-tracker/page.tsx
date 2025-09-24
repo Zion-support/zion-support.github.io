@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Expense Tracker | Zion Tech Group';
+  title: 'AI Expense Tracker | Zion Tech Group',
   description:,
-    'Smart expense tracking and financial management powered by AI. Automate receipt processing, categorization, and expense reporting.';
-};
+    'Smart expense tracking and financial management powered by AI. Automate receipt processing, categorization, and expense reporting.',
+},
 export default function AIExpenseTrackerPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function AIExpenseTrackerPage() {
               period='per month',
               description='Perfect for individuals and freelancers',
               features={[
-                'Up to 10o0 receipts per month';
-                'Basic categorization';
-                'Expense reports';
-                'Mobile app access';
-                'Email support';
+                'Up to 10o0 receipts per monthBasic categorization',
+                'Expense reportsMobile app access',
+                'Email support',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function AIExpenseTrackerPage() {
               period='per month',
               description='Ideal for small to medium businesses',
               features={[
-                'Up to 50o0 receipts per month';
-                'Advanced AI categorization';
-                'Team collaboration';
-                'Accounting integrations';
-                'Priority support';
-                'Custom reporting';
+                'Up to 50o0 receipts per monthAdvanced AI categorization',
+                'Team collaborationAccounting integrations',
+                'Priority supportCustom reporting',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function AIExpenseTrackerPage() {
               period='per month',
               description='For large organizations with complex needs',
               features={[
-                'Unlimited receipts';
-                'Custom AI training';
-                'Advanced analytics';
-                'Dedicated support';
-                'Custom integrations';
-                'On-premise deployment';
+                'Unlimited receiptsCustom AI training',
+                'Advanced analyticsDedicated support',
+                'Custom integrationsOn-premise deployment',
               ]}
               popular={false}
             />,
@@ -250,9 +242,9 @@ export default function AIExpenseTrackerPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -267,12 +259,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   plan: string,
   price: string,
@@ -304,9 +296,9 @@ function PricingCard({
     </div>)}
 ,
 function StepCard({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,

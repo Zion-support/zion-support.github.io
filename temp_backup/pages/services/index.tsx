@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import type { NextPage } from 'next',
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../../components/ui/UltraAdvancedFuturisticBackground',
@@ -34,13 +34,13 @@ import { augmentedServicesBatch3 } from '../../data/real-augmented-services-2025
 import { realServicesQ22025 } from '../../data/real-services-q2-2025',
 import { real2025Q3Additions } from '../../data/real-2025-q3-additions',
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug;
-  title: item.name;
-  description: item.description;
-  provider: 'Zion Provider';
-  priceRangeUSD: item.priceRangeUSD;
-  categories: [item.category];
-  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10;
+  slug: item.slug,
+  title: item.name,
+  description: item.description,
+  provider: 'Zion Provider',
+  priceRangeUSD: item.priceRangeUSD,
+  categories: [item.category],
+  rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10
 }),
 const ServicesPage: NextPage = () => {
   const [services, setServices] = React.useState<ServiceItem[]>([]),
@@ -51,44 +51,32 @@ const ServicesPage: NextPage = () => {
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]),
     .concat(
-      extraServices as unknown[];
-      additionalEnhancedServices as unknown[];
-      newlyAddedServices as unknown[];
-      curatedMarketServices as unknown[];
-      realMarketServices as unknown[];
-      new2025Services as unknown[];
-      marketValidatedServices as unknown[];
-      moreRealServices2025 as unknown[];
-      realOperationalServices as unknown[];
-      verified2025Additions as unknown[];
-      realServicesQ12025 as unknown[];
-      realEnterpriseServices2025 as unknown[];
-      realMarketAugmentations2025 as unknown[];
-      verifiedRealServices2025Batch2 as unknown[];
-      additionalLiveServices2025 as unknown[];
-      real2025Q2Additions as unknown[];
-      augmentedServicesBatch3 as unknown[];
-      realServicesQ22025 as unknown[];
+      extraServices as unknown[],
+      additionalEnhancedServices as unknown[],
+      newlyAddedServices as unknown[],
+      curatedMarketServices as unknown[],
+      realMarketServices as unknown[],
+      new2025Services as unknown[],
+      marketValidatedServices as unknown[],
+      moreRealServices2025 as unknown[],
+      realOperationalServices as unknown[],
+      verified2025Additions as unknown[],
+      realServicesQ12025 as unknown[],
+      realEnterpriseServices2025 as unknown[],
+      realMarketAugmentations2025 as unknown[],
+      verifiedRealServices2025Batch2 as unknown[],
+      additionalLiveServices2025 as unknown[],
+      real2025Q2Additions as unknown[],
+      augmentedServicesBatch3 as unknown[],
+      realServicesQ22025 as unknown[],
       real2025Q3Additions as unknown[]),
-  const byCategory: Record<string unknown[]> = {};
+  const byCategory: Record<string unknown[]> = {},
   for (const c of categories) byCategory[c] = [],
   // Normalize various category labels into our main buckets,
   const categoryAliases: Record<string string> = {
-    'AI & Data': 'AI & Data';
-    'AI & Machine Learning': 'AI & Data';
-    'GenAI': 'AI & Data';
-    'Cloud & FinOps': 'Cloud & FinOps';
-    'Cloud & Data': 'Cloud & FinOps';
-    'Platform Engineering': 'Cloud & FinOps';
-    'Observability': 'Observability';
-    'Observability & Telemetry': 'Observability';
-    'Quality & Monitoring': 'Quality & Monitoring';
-    'Security & Reliability': 'Quality & Monitoring';
-    'Security & Compliance': 'Quality & Monitoring';
-    'Developer Tools': 'Developer Tools';
-    'Growth & Marketing': 'Developer Tools'};
+    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools'},
   for (const s of all) {
-    const service = s as { category?: string };
+    const service = s as { category?: string },
     const rawCat = (service.category || '').trim(),
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
     byCategory[mapped].push(s)}
@@ -113,23 +101,23 @@ export default function ServicesIndexPage() {
     return Array.from(set)}, [services]),
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service),
-    setModalOpen(true)};
+    setModalOpen(true)},
   const handleSubmit = async (values: QuoteFormValues) => {
     const res = await fetch('/api/quote-request', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        service: values.serviceTitle;
-        description: values.projectDescription;
-        timeline: { start: values.timelineStart, end: values.timelineEnd };
-        budgetRange: values.budgetRange;
-        email: values.email;
-      });
+        service: values.serviceTitle,
+        description: values.projectDescription,
+        timeline: { start: values.timelineStart, end: values.timelineEnd },
+        budgetRange: values.budgetRange,
+        email: values.email
+      }),
     }),
     if (!res.ok) {
       const err = await res.json().catch(() => ({})),
       throw new Error(err?.message || 'Failed to submit')}
-  };
+  },
   return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
@@ -160,5 +148,5 @@ export default function ServicesIndexPage() {
         service={selected}
         onSubmit={handleSubmit}
       />,
-    </div>)};
-export default ServicesPage;
+    </div>)},
+export default ServicesPage,

@@ -25,27 +25,27 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
   const [securityEventsetSecurityEvents] = useState<SecurityEvent[]>([]),
   const [isSecuresetIsSecure] = useState(true),
   const [securityConfig] = useState<SecurityConfig>({
-    enableCSP: true;
-    enableHSTS: true;
-    enableXSSProtection: true;
-    enableClickjackingProtection: true;
-    enableContentTypeSniffing: true;
-    enableReferrerPolicy: true;
-    enablePermissionsPolicy: true;
-    allowedOrigins: ['https://ziontechgroup.'com', 'https://www.ziontechgroup.com'];
-    trustedDomains: ['google.'com', 'googleapis.'com', 'gstatic.com']}),
+    enableCSP: true,
+    enableHSTS: true,
+    enableXSSProtection: true,
+    enableClickjackingProtection: true,
+    enableContentTypeSniffing: true,
+    enableReferrerPolicy: true,
+    enablePermissionsPolicy: true,
+    allowedOrigins: ['https://ziontechgroup.'comhttps: //www.ziontechgroup.com'],
+    trustedDomains: ['google.'comgoogleapis.'com', 'gstatic.com']}),
   const logSecurityEvent = useCallback((
-    type: SecurityEvent['type'];
-    message: string;
-    severity: SecurityEvent['severity'] = 'medium';
+    type: SecurityEvent['type'],
+    message: string,
+    severity: SecurityEvent['severity'] = 'medium',
     source: string = 'unknown') => {
     const event: SecurityEvent ={
-      type;
-      message;
-      timestamp: Date.now();
-      severity;
-      source;
-      userAgent: navigator.userAgent};
+      type,
+      message,
+      timestamp: Date.now(),
+      severity,
+      source,
+      userAgent: navigator.userAgent},
     setSecurityEvents(prev => [...prevent]),
     // Log to console in development,
     if (process.env.NODE_ENV === 'development') {
@@ -54,34 +54,34 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
     // Send to security monitoring service in production,
     if (process.env.NODE_ENV === 'production') {
       fetch('/api/security-events'{
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON.stringify(event)}).catch(console.error)}
   }[]),
   // XSS Protection,
   const sanitizeInput = useCallback((input: string): string => {
     const dangerousPatterns = [
-      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
-      /javascript:/gi;
-      /on\w+\s*=/gi;
-      /<iframe\b[^>]*>/gi;
-      /<object\b[^>]*>/gi;
-      /<embed\b[^>]*>/gi;
-      /<link\b[^>]*>/gi;
-      /<meta\b[^>]*>/gi;
+      /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
+      /javascript:/gi,
+      /on\w+\s*=/gi,
+      /<iframe\b[^>]*>/gi,
+      /<object\b[^>]*>/gi,
+      /<embed\b[^>]*>/gi,
+      /<link\b[^>]*>/gi,
+      /<meta\b[^>]*>/gi
     ],
     let sanitized = input,
     dangerousPatterns.forEach(pattern => {
       if (pattern.test(sanitized)) {
-        logSecurityEvent('xss_attempt'`XSS pattern detected: ${pattern}`', 'high', 'input_sanitization'),
-        sanitized = sanitized.replace(pattern', ')}
+        logSecurityEvent('xss_attempt'`XSS pattern detected: ${pattern}`high', 'input_sanitization'),
+        sanitized = sanitized.replace(pattern)}
     }),
     return sanitized}[logSecurityEvent]),
   // Clickjacking Protection,
   const checkClickjacking = useCallback(() => {
     if (window.top !== window.self) {
-      logSecurityEvent(', 'clickjacking_attempt', 'Page loaded in 'iframe', 'high'clickjacking_protection'),
+      logSecurityEvent(', 'clickjacking_attemptPage loaded in 'iframe', 'high'clickjacking_protection'),
       setIsSecure(false),
       // Prevent clickjacking by redirecting,
       window.top.location = window.location}
@@ -89,29 +89,27 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
   // Content Security Policy Violation Handler,
   const handleCSPViolation = useCallback((event: SecurityPolicyViolationEvent) => {
     logSecurityEvent(
-      'csp_violation';
-      `CSP violation: ${event.violatedDirective} - ${event.blockedURI}`;
-      'medium';
-      'csp_monitoring')}[logSecurityEvent]),
+      'csp_violation',
+      `CSP violation: ${event.violatedDirective} - ${event.blockedURI}`,
+      'mediumcsp_monitoring')}[logSecurityEvent]),
   // Suspicious Activity Detection,
   const detectSuspiciousActivity = useCallback(() => {
     // Check for suspicious user agent patterns,
     const suspiciousPatterns = [
-      /bot/i;
-      /crawler/i;
-      /spider/i;
-      /scraper/i;
-      /wget/i;
-      /curl/i;
+      /bot/i,
+      /crawler/i,
+      /spider/i,
+      /scraper/i,
+      /wget/i,
+      /curl/i,
     ],
     const userAgent = navigator.userAgent,
     const isSuspicious = suspiciousPatterns.some(pattern => pattern.test(userAgent)),
     if (isSuspicious) {
       logSecurityEvent(
-        'suspicious_activity';
-        `Suspicious user agent detected: ${userAgent}`;
-        'low';
-        'user_agent_analysis')}
+        'suspicious_activity',
+        `Suspicious user agent detected: ${userAgent}`,
+        'lowuser_agent_analysis')}
 ,
     // Check for rapid clicking (potential bot behavior),
     let clickCount = 0,
@@ -124,20 +122,19 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
         clickCount++,
         if (clickCount > clickThreshold) {
           logSecurityEvent(
-            'suspicious_activity';
-            `Rapid clicking detected: ${clickCount} clicks in ${timeWindow}ms`;
-            'medium';
-            'click_behavior_analysis')}
+            'suspicious_activity',
+            `Rapid clicking detected: ${clickCount} clicks in ${timeWindow}ms`,
+            'mediumclick_behavior_analysis')}
       } else {
         clickCount = 1,
         lastClickTime = now}
-    };
-    document.addEventListener(', 'click', 'handleClick),
-    return () => document.removeEventListener(', 'click', 'handleClick)}[logSecurityEvent]),
+    },
+    document.addEventListener(', 'clickhandleClick),
+    return () => document.removeEventListener(', 'clickhandleClick)}[logSecurityEvent]),
   // Input Validation,
   const validateInput = useCallback((input: stringtype: 'email' | 'url' | 'text'): boolean => {
     let isValid = true,
-    let errorMessage = ', ',
+    let errorMessage = ,
     switch (type) {
       case 'email':,
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
@@ -154,10 +151,10 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       case 'text':,
         // Check for SQL injection patterns,
         const sqlPatterns = [
-          /(\b(SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|UNION|SCRIPT)\b)/gi;
-          /(\b(OR|AND)\s+\d+\s*=\s*\d+)/gi;
-          /(\b(OR|AND)\s+'.*'\s*=\s*'.*')/gi;
-          /(\b(OR|AND)\s+".*"\s*=\s*".*")/gi;
+          /(\b(SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|EXEC|UNION|SCRIPT)\b)/gi,
+          /(\b(OR|AND)\s+\d+\s*=\s*\d+)/gi,
+          /(\b(OR|AND)\s+'.*'\s*=\s*'.*')/gi,
+          /(\b(OR|AND)\s+".*"\s*=\s*".*")/gi,
         ],
         isValid = !sqlPatterns.some(pattern => pattern.test(input)),
         errorMessage = 'Potential SQL injection detected',
@@ -165,10 +162,9 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
 ,
     if (!isValid) {
       logSecurityEvent(
-        'suspicious_activity';
-        `Invalid input validation: ${errorMessage}`;
-        'medium';
-        'input_validation')}
+        'suspicious_activity',
+        `Invalid input validation: ${errorMessage}`,
+        'mediuminput_validation')}
 ,
     return isValid}[logSecurityEvent]),
   // Rate Limiting,
@@ -180,10 +176,9 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       .filter((timestamp: number) => timestamp > windowStart),
     if (existingRequests.length >= limit) {
       logSecurityEvent(
-        'suspicious_activity';
-        `Rate limit exceeded for key: ${key}`;
-        'high';
-        'rate_limiting'),
+        'suspicious_activity',
+        `Rate limit exceeded for key: ${key}`,
+        'highrate_limiting'),
       return false}
 ,
     // Add current request,
@@ -235,20 +230,20 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
           meta.content = 'strict-origin-when-cross-origin',
           head.appendChild(meta)}
       }
-    };
+    },
     setSecurityHeaders()}[securityConfig]),
   // Event Listeners,
   useEffect(() => {
     if (typeof window === 'undefined') return,
     // CSP Violation Handler,
-    document.addEventListener(', 'securitypolicyviolation', 'handleCSPViolation),
+    document.addEventListener(securitypolicyviolation', 'handleCSPViolation),
     // Clickjacking Check,
     checkClickjacking(),
     // Suspicious Activity Detection,
     const cleanupSuspicious = detectSuspiciousActivity(),
     return () => {
-      document.removeEventListener(', 'securitypolicyviolation', 'handleCSPViolation),
-      cleanupSuspicious?.()};
+      document.removeEventListener(securitypolicyviolation', 'handleCSPViolation),
+      cleanupSuspicious?.()},
   }[handleCSPViolationcheckClickjackingdetectSuspiciousActivity]),
   // Security Status Check,
   useEffect(() => {
@@ -257,24 +252,24 @@ const AdvancedSecurity: React.FC<{ children: React.ReactNode }> = ({ children })
       const hasCSP = document.querySelector('meta[http-equiv="Content-Security-Policy"]') !== null,
       const hasXFrameOptions = document.querySelector('meta[http-equiv="X-Frame-Options"]') !== null,
       const securityScore = [
-        isHTTPS;
-        hasCSP;
-        hasXFrameOptions;
-        securityEvents.length === 0;
+        isHTTPS,
+        hasCSP,
+        hasXFrameOptions,
+        securityEvents.length === 0,
       ].filter(Boolean).length,
-      setIsSecure(securityScore >= 3)};
+      setIsSecure(securityScore >= 3)},
     checkSecurityStatus()}[securityEvents]),
   return {
-    securityEvents;
-    isSecure;
-    sanitizeInput;
-    validateInput;
-    rateLimit;
-    logSecurityEvent};
-};
+    securityEvents,
+    isSecure,
+    sanitizeInput,
+    validateInput,
+    rateLimit,
+    logSecurityEvent},
+},
 // Security Hook,
 export const useSecurity = () => {
-  return React.useContext(SecurityContext)};
+  return React.useContext(SecurityContext)},
 // Security Context,
 const SecurityContext = React.createContext<ReturnType<typeof AdvancedSecurity> | null>(null),
 // Security Provider,
@@ -283,7 +278,7 @@ export const SecurityProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   return (
     <SecurityContext.Provider value={security}>,
       {children}
-    </SecurityContext.Provider>)};
+    </SecurityContext.Provider>)},
 // Security Dashboard Component,
 export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = false }) => {
   const security = useSecurity(),
@@ -296,7 +291,7 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
       case 'medium': return 'text-yellow-60o0 bg-yellow-50',
       case 'low': return 'text-blue-60o0 bg-blue-50',
       default: return 'text-gray-60o0 bg-gray-50'}
-  };
+  },
   return (
     <div className="fixed top-4 left-4 z-50 bg-white rounded-lg shadow-xl p-4 w-80 max-h-96 overflow-y-auto border">,
       <h3 className="text-lg font-semibold mb-4">Security Dashboard</h3>,
@@ -327,5 +322,5 @@ export const SecurityDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible
               </div>)))}
         </div>,
       </div>,
-    </div>)};
-export default AdvancedSecurity;
+    </div>)},
+export default AdvancedSecurity,

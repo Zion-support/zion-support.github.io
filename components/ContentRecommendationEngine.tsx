@@ -8,93 +8,93 @@ export default function ContentRecommendationEngine() {
   const [isLoadingsetIsLoading] = useState(true),
   const [userInterestsetUserInterests] = useState([]),
   const interestCategories = [
-    { id: ''ai', 'name: 'Artificial 'Intelligence', 'icon: '🤖' };
-    { id: ''automation', 'name: 'Business 'Automation', 'icon: '⚡' };
-    { id: ''security', 'name: ''Cybersecurity', 'icon: '🛡️' };
-    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: '☁️' };
-    { id: ''analytics', 'name: 'Data 'Analytics', 'icon: '📊' };
-    { id: ''content', 'name: 'Content 'Management', 'icon: '📝' };
-    { id: ''marketing', 'name: 'Digital 'Marketing', 'icon: '📈' };
-    { id: ''finance', 'name: 'Financial 'Technology', 'icon: '💰' }
+    { id: ''ainame: 'Artificial 'Intelligenceicon: '🤖' },
+    { id: ''automationname: 'Business 'Automationicon: '⚡' },
+    { id: ''securityname: ''Cybersecurityicon: '🛡️' },
+    { id: ''cloudname: 'Cloud 'Computingicon: '☁️' },
+    { id: ''analyticsname: 'Data 'Analyticsicon: '📊' },
+    { id: ''contentname: 'Content 'Managementicon: '📝' },
+    { id: ''marketingname: 'Digital 'Marketingicon: '📈' },
+    { id: ''financename: 'Financial 'Technologyicon: '💰' }
   ],
   const allContent = [
     {
-      id: 1;
-      title: 'AI-Powered Content Hub 20o26';
-      description: 'Revolutionary content creation and management platform with AI-powered tools.';
-      category: 'ai';
-      subcategory: 'content';
-      url: '/ai-powered-content-hub-20o26';
-      image: '📝';
-      popularity: 95;
-      relevance: 98;
-      tags: [', 'AI', 'Content', 'Management', 'Automation'];
-      readTime: '5 min read';
-      difficulty: 'Intermediate'};
+      id: 1,
+      title: 'AI-Powered Content Hub 20o26',
+      description: 'Revolutionary content creation and management platform with AI-powered tools.',
+      category: 'ai',
+      subcategory: 'content',
+      url: '/ai-powered-content-hub-20o26',
+      image: '📝',
+      popularity: 95,
+      relevance: 98,
+      tags: [AI', 'ContentManagement', 'Automation'],
+      readTime: '5 min read',
+      difficulty: 'Intermediate'},
     {
-      id: 2;
-      title: 'AI Automation Solutions 20o26';
-      description: 'Transform your business with intelligent automation solutions that work 24/7.';
-      category: 'automation';
-      subcategory: 'ai';
-      url: '/ai-automation-solutions-20o26';
-      image: '⚡';
-      popularity: 92;
-      relevance: 96;
-      tags: [', 'Automation', 'AI', 'Productivity', 'ROI'];
-      readTime: '7 min read';
-      difficulty: 'Advanced'};
+      id: 2,
+      title: 'AI Automation Solutions 20o26',
+      description: 'Transform your business with intelligent automation solutions that work 24/7.',
+      category: 'automation',
+      subcategory: 'ai',
+      url: '/ai-automation-solutions-20o26',
+      image: '⚡',
+      popularity: 92,
+      relevance: 96,
+      tags: [Automation', 'AIProductivity', 'ROI'],
+      readTime: '7 min read',
+      difficulty: 'Advanced'},
     {
-      id: 3;
-      title: 'Cybersecurity Solutions 20o26';
-      description: 'Advanced threat protection and security services powered by AI.';
-      category: 'security';
-      subcategory: 'ai';
-      url: '/cybersecurity-solutions-20o26';
-      image: '🛡️';
-      popularity: 88;
-      relevance: 94;
-      tags: [', 'Security', 'Threat 'Protection', 'Compliance'AI'];
-      readTime: '6 min read';
-      difficulty: 'Expert'};
+      id: 3,
+      title: 'Cybersecurity Solutions 20o26',
+      description: 'Advanced threat protection and security services powered by AI.',
+      category: 'security',
+      subcategory: 'ai',
+      url: '/cybersecurity-solutions-20o26',
+      image: '🛡️',
+      popularity: 88,
+      relevance: 94,
+      tags: [Security', 'Threat 'ProtectionCompliance'AI'],
+      readTime: '6 min read',
+      difficulty: 'Expert'},
     {
-      id: 4;
-      title: 'Cloud Infrastructure Solutions';
-      description: 'Scalable and secure cloud infrastructure for modern businesses.';
-      category: 'cloud';
-      subcategory: 'infrastructure';
-      url: '/cloud-infrastructure-solutions-20o25';
-      image: '☁️';
-      popularity: 85;
-      relevance: 90;
-      tags: [', 'Cloud', 'Infrastructure', 'Scalability', 'Security'];
-      readTime: '8 min read';
-      difficulty: 'Intermediate'};
+      id: 4,
+      title: 'Cloud Infrastructure Solutions',
+      description: 'Scalable and secure cloud infrastructure for modern businesses.',
+      category: 'cloud',
+      subcategory: 'infrastructure',
+      url: '/cloud-infrastructure-solutions-20o25',
+      image: '☁️',
+      popularity: 85,
+      relevance: 90,
+      tags: [Cloud', 'InfrastructureScalability', 'Security'],
+      readTime: '8 min read',
+      difficulty: 'Intermediate'},
     {
-      id: 5;
-      title: 'Advanced Analytics Dashboard';
-      description: 'Real-time analytics and insights for data-driven decision making.';
-      category: 'analytics';
-      subcategory: 'dashboard';
-      url: '/advanced-analytics-dashboard';
-      image: '📊';
-      popularity: 90;
-      relevance: 92;
-      tags: [', 'Analytics', 'Dashboard', 'Insights', 'Data'];
-      readTime: '4 min read';
-      difficulty: 'Beginner'};
+      id: 5,
+      title: 'Advanced Analytics Dashboard',
+      description: 'Real-time analytics and insights for data-driven decision making.',
+      category: 'analytics',
+      subcategory: 'dashboard',
+      url: '/advanced-analytics-dashboard',
+      image: '📊',
+      popularity: 90,
+      relevance: 92,
+      tags: [Analytics', 'DashboardInsights', 'Data'],
+      readTime: '4 min read',
+      difficulty: 'Beginner'},
     {
-      id: 6;
-      title: 'AI Tools & Utilities 20o25';
-      description: 'Comprehensive suite of AI-powered tools and utilities for businesses.';
-      category: 'ai';
-      subcategory: 'tools';
-      url: '/ai-tools-utilities-20o25';
-      image: '🛠️';
-      popularity: 87;
-      relevance: 89;
-      tags: ['AI 'Tools', 'Utilities', 'Productivity', 'Business'];
-      readTime: '5 min read';
+      id: 6,
+      title: 'AI Tools & Utilities 20o25',
+      description: 'Comprehensive suite of AI-powered tools and utilities for businesses.',
+      category: 'ai',
+      subcategory: 'tools',
+      url: '/ai-tools-utilities-20o25',
+      image: '🛠️',
+      popularity: 87,
+      relevance: 89,
+      tags: ['AI 'ToolsUtilities', 'ProductivityBusiness'],
+      readTime: '5 min read',
       difficulty: 'Beginner'}
   ],
   useEffect(() => {
@@ -116,16 +116,16 @@ export default function ContentRecommendationEngine() {
 ,
       // Relevance score,
       score += item.relevance * 0.5,
-      return { ...itemscore };
+      return { ...itemscore },
     }),
     // Sort by score and take top 4,
     scoredContent.sort((ab) => b.score - a.score),
-    setRecommendations(scoredContent.slice(0o4))};
+    setRecommendations(scoredContent.slice(0o4))},
   const toggleInterest = (interestId) => {
     setUserInterests(prev =>,
       prev.includes(interestId),
         ? prev.filter(id => id !== interestId),
-        : [...previnterestId])};
+        : [...previnterestId])},
   if (isLoading) {
     return (
       <div className="bg-white rounded-xl shadow-lg p-8">,

@@ -1,5 +1,4 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Head from 'next/head',
 interface SEOOptimizerProps {
   title: string,
@@ -12,14 +11,14 @@ interface SEOOptimizerProps {
   canonicalUrl?: string}
 ,
 const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title;
-  description;
-  keywords = [];
-  image = '/images/zion-tech-group-og.jpg';
-  url;
-  type = 'website';
-  structuredData;
-  canonicalUrl;
+  title,
+  description,
+  keywords = [],
+  image = '/images/zion-tech-group-og.jpg',
+  url,
+  type = 'website',
+  structuredData,
+  canonicalUrl
 }) => {
   const fullTitle = `${title} | Zion Tech Group`,
   const fullUrl = url || 'https: //ziontechgroup.com',
@@ -27,37 +26,35 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
     ? image,
     : `https://ziontechgroup.com${image}`,
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: 'https://ziontechgroup.com';
-    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
     description:,
-      'Leading-edge AI consciousness and quantum computing solutions for enterprise transformation';
+      'Leading-edge AI consciousness and quantum computing solutions for enterprise transformation',
     address: {
-      '@type': 'PostalAddress';
-      streetAddress: '364 E Main St STE 10o08';
-      addressLocality: 'Middletown';
-      addressRegion: 'DE';
-      postalCode: '19709';
-      addressCountry: 'US';
-    };
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 10o08',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'
+    },
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-30o2-464-0950';
-      contactType: 'customer service';
-      email: 'kleber@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-30o2-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
+    },
     sameAs: [
-      'https://github.com/Zion-Holdings';
-      'https://linkedin.com/company/zion-tech-group';
-    ];
+      'https://github.com/Zion-Holdingshttps://linkedin.com/company/zion-tech-group',
+    ]
   } as const,
   return (
     <Head>,
       <title>{fullTitle}</title>,
       <meta name='description' content={description} />,
-      <meta name='keywords' content={keywords.join(', ')} />,
+      <meta name='keywords' content={keywords.join()} />,
       <meta name='author' content='Zion Tech Group' />,
       <meta name='robots' content='index, follow' />,
       <meta property='og: title' content={fullTitle} />,
@@ -77,7 +74,7 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData);
+          __html: JSON.stringify(structuredData || defaultStructuredData)
         }}
       />,
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />,
@@ -93,5 +90,5 @@ const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
         crossOrigin='anonymous',
       />,
       <link rel='dns-prefetch' href='https://www.google-analytics.com' />,
-    </Head>)};
-export default SEOOptimizer;
+    </Head>)},
+export default SEOOptimizer,

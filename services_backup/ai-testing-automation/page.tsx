@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Testing Automation | Zion Tech Group';
+  title: 'AI Testing Automation | Zion Tech Group',
   description:,
-    'Intelligent test automation with AI-powered test generation, execution, and maintenance for faster, more reliable software delivery.';
-};
+    'Intelligent test automation with AI-powered test generation, execution, and maintenance for faster, more reliable software delivery.',
+},
 export default function AITestingAutomationPage() {
   return (
     <div className='animate-fade-in'>,
@@ -12,7 +12,7 @@ export default function AITestingAutomationPage() {
           AI Testing Automation,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent test automation with AI-powered test generation;
+          Intelligent test automation with AI-powered test generation,
           execution, and maintenance for faster, more reliable software,
           delivery.,
         </p>,
@@ -59,11 +59,9 @@ export default function AITestingAutomationPage() {
               price='$49/month',
               description='Perfect for small teams starting with test automation',
               features={[
-                'Up to 1,0o00 test executions per month';
-                'Basic AI test generation';
-                'Web testing support';
-                'Email support';
-                'Basic reporting';
+                'Up to 1,0o00 test executions per monthBasic AI test generation',
+                'Web testing supportEmail support',
+                'Basic reporting',
               ]}
             />,
             <PricingCard
@@ -71,12 +69,9 @@ export default function AITestingAutomationPage() {
               price='$149/month',
               description='Ideal for growing development teams',
               features={[
-                'Up to 10,0o00 test executions per month';
-                'Advanced AI test generation';
-                'All platform support';
-                'Self-healing tests';
-                'Priority support';
-                'Advanced analytics';
+                'Up to 10,0o00 test executions per monthAdvanced AI test generation',
+                'All platform supportSelf-healing tests',
+                'Priority supportAdvanced analytics',
               ]}
             />,
             <PricingCard
@@ -84,13 +79,10 @@ export default function AITestingAutomationPage() {
               price='$399/month',
               description='For large organizations with complex testing needs',
               features={[
-                'Unlimited test executions';
-                'Custom AI model training';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Custom integrations';
-                'SLA guarantees';
-                'Advanced security testing';
+                'Unlimited test executionsCustom AI model training',
+                '24/7 dedicated supportOn-premise deployment',
+                'Custom integrationsSLA guarantees',
+                'Advanced security testing',
               ]}
             />,
           </div>,
@@ -143,8 +135,8 @@ export default function AITestingAutomationPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -169,10 +161,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -192,8 +184,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

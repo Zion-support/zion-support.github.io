@@ -2,11 +2,11 @@ import React, { useMemo, useState } from 'react',
 import Link from 'next/link',
 export type DocsNavItem = {
   id: string,
-  title: string};
+  title: string},
 export type DocsLayoutProps = {
   title: string,
   nav: DocsNavItem[],
-  children: React.ReactNode};
+  children: React.ReactNode},
 export default function DocsLayout({ title, nav, children }: DocsLayoutProps) {
   const [query, setQuery] = useState(''),
   const filteredNav = useMemo(() => {

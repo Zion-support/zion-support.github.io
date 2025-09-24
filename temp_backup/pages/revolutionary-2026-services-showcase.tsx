@@ -9,22 +9,22 @@ import { revolutionary20o26ITInfrastructureServices } from '../data/revolutionar
 import { revolutionary20o26MicroSaasServices } from '../data/revolutionary-20o26-micro-saas',
 export default function Revolutionary20o26ServicesShowcase() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const allRevolutionaryServices = [
-    ...revolutionary20o26AIServices;
-    ...revolutionary20o26ITInfrastructureServices;
+    ...revolutionary20o26AIServices,
+    ...revolutionary20o26ITInfrastructureServices,
     ...revolutionary20o26MicroSaasServices],
   const serviceStats ={
-    totalServices: allRevolutionaryServices.length;
-    aiServices: revolutionary20o26AIServices.length;
-    itInfrastructure: revolutionary20o26ITInfrastructureServices.length;
-    microSaas: revolutionary20o26MicroSaasServices.length;
+    totalServices: allRevolutionaryServices.length,
+    aiServices: revolutionary20o26AIServices.length,
+    itInfrastructure: revolutionary20o26ITInfrastructureServices.length,
+    microSaas: revolutionary20o26MicroSaasServices.length,
     totalValue: allRevolutionaryServices.reduce((sum, service) => {
       const price = parseInt(service.price.replace(/[^0-9]/g, '')),
-      return sum + price}, 0)};
+      return sum + price}, 0)},
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",

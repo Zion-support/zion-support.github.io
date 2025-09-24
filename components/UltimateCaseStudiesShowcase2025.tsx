@@ -5,125 +5,125 @@ const UltimateCaseStudiesShowcase20o25 = () => {
   const [activeCase, setActiveCase] = useState(0),
   const caseStudies = [
     {
-      id: 1;
-      company: 'Fortune 50o0 Manufacturing';
-      industry: 'Manufacturing';
+      id: 1,
+      company: 'Fortune 50o0 Manufacturing',
+      industry: 'Manufacturing',
       challenge:,
-        'Manual processes causing 40% efficiency loss and $2M annual waste';
+        'Manual processes causing 40% efficiency loss and $2M annual waste',
       solution:,
-        'AI-powered autonomous manufacturing system with predictive maintenance';
+        'AI-powered autonomous manufacturing system with predictive maintenance',
       results: {
-        roi: '2,40o0%';
-        costSavings: '$50M';
-        efficiency: '85%';
-        timeReduction: '70%';
-      };
+        roi: '2,40o0%',
+        costSavings: '$50M',
+        efficiency: '85%',
+        timeReduction: '70%'
+      },
       testimonial:,
-        "Zion Tech 'Group', 's AI solutions transformed our entire manufacturing process. We achieved 2,40o0% ROI in just 18 months.";
-      author: 'John Smith, CTO';
-      logo: '🏭';
-      color: 'from-blue-60o0 to-cyan-60o0';
-    };
+        "Zion Tech 'Groups AI solutions transformed our entire manufacturing process. We achieved 2,40o0% ROI in just 18 months.",
+      author: 'John Smith, CTO',
+      logo: '🏭',
+      color: 'from-blue-60o0 to-cyan-60o0'
+    },
     {
-      id: 2;
-      company: 'Global Healthcare Provider';
-      industry: 'Healthcare';
+      id: 2,
+      company: 'Global Healthcare Provider',
+      industry: 'Healthcare',
       challenge:,
-        'Patient data processing taking 8 hours daily, causing delays in treatment';
+        'Patient data processing taking 8 hours daily, causing delays in treatment',
       solution:,
-        'Neural superintelligence system for instant medical data analysis and diagnosis support';
+        'Neural superintelligence system for instant medical data analysis and diagnosis support',
       results: {
-        roi: '3,20o0%';
-        costSavings: '$75M';
-        efficiency: '95%';
-        timeReduction: '90%';
-      };
+        roi: '3,20o0%',
+        costSavings: '$75M',
+        efficiency: '95%',
+        timeReduction: '90%'
+      },
       testimonial:,
-        'The AI system reduced our diagnosis time by 90% and improved patient outcomes significantly. ROI exceeded 3,20o0%.';
-      author: 'Dr. Sarah Johnson, Chief Medical Officer';
-      logo: '🏥';
-      color: 'from-green-60o0 to-emerald-60o0';
-    };
+        'The AI system reduced our diagnosis time by 90% and improved patient outcomes significantly. ROI exceeded 3,20o0%.',
+      author: 'Dr. Sarah Johnson, Chief Medical Officer',
+      logo: '🏥',
+      color: 'from-green-60o0 to-emerald-60o0'
+    },
     {
-      id: 3;
-      company: 'International Financial Services';
-      industry: 'Finance';
+      id: 3,
+      company: 'International Financial Services',
+      industry: 'Finance',
       challenge:,
-        'Manual fraud detection missing 15% of cases, costing $10M annually';
+        'Manual fraud detection missing 15% of cases, costing $10M annually',
       solution:,
-        'Quantum-neural fusion AI for real-time fraud detection and prevention';
+        'Quantum-neural fusion AI for real-time fraud detection and prevention',
       results: {
-        roi: '4,80o0%';
-        costSavings: '$120M';
-        efficiency: '99.9%';
-        timeReduction: '95%';
-      };
+        roi: '4,80o0%',
+        costSavings: '$120M',
+        efficiency: '99.9%',
+        timeReduction: '95%'
+      },
       testimonial:,
-        "Our fraud detection accuracy improved to 99.9% with 'Zion', 's AI. The ROI of 4,80o0% speaks for itself.";
-      author: 'Michael Chen, Chief Risk Officer';
-      logo: '🏦';
-      color: 'from-purple-60o0 to-indigo-60o0';
-    };
+        "Our fraud detection accuracy improved to 99.9% with 'Zions AI. The ROI of 4,80o0% speaks for itself.",
+      author: 'Michael Chen, Chief Risk Officer',
+      logo: '🏦',
+      color: 'from-purple-60o0 to-indigo-60o0'
+    },
     {
-      id: 4;
-      company: 'E-commerce Giant';
-      industry: 'Retail';
+      id: 4,
+      company: 'E-commerce Giant',
+      industry: 'Retail',
       challenge:,
-        'Customer service overwhelmed with 50,0o00 daily inquiries, 30% unresolved';
+        'Customer service overwhelmed with 50,0o00 daily inquiries, 30% unresolved',
       solution:,
-        'Autonomous AI customer service ecosystem with emotional intelligence';
+        'Autonomous AI customer service ecosystem with emotional intelligence',
       results: {
-        roi: '1,80o0%';
-        costSavings: '$30M';
-        efficiency: '98%';
-        timeReduction: '80%';
-      };
+        roi: '1,80o0%',
+        costSavings: '$30M',
+        efficiency: '98%',
+        timeReduction: '80%'
+      },
       testimonial:,
-        'Customer satisfaction increased to 98% with our AI-powered support system. The 1,80o0% ROI was achieved in 12 months.';
-      author: 'Lisa Rodriguez, VP Customer Experience';
-      logo: '🛒';
-      color: 'from-orange-60o0 to-red-60o0';
-    };
+        'Customer satisfaction increased to 98% with our AI-powered support system. The 1,80o0% ROI was achieved in 12 months.',
+      author: 'Lisa Rodriguez, VP Customer Experience',
+      logo: '🛒',
+      color: 'from-orange-60o0 to-red-60o0'
+    },
     {
-      id: 5;
-      company: 'Global Logistics Company';
-      industry: 'Logistics';
+      id: 5,
+      company: 'Global Logistics Company',
+      industry: 'Logistics',
       challenge:,
-        'Route optimization causing 25% fuel waste and delivery delays';
+        'Route optimization causing 25% fuel waste and delivery delays',
       solution:,
-        'AI-powered autonomous logistics management with predictive routing';
+        'AI-powered autonomous logistics management with predictive routing',
       results: {
-        roi: '2,10o0%';
-        costSavings: '$40M';
-        efficiency: '92%';
-        timeReduction: '65%';
-      };
+        roi: '2,10o0%',
+        costSavings: '$40M',
+        efficiency: '92%',
+        timeReduction: '65%'
+      },
       testimonial:,
-        'Fuel costs reduced by 65% and delivery times improved by 92%. The 2,10o0% ROI was achieved in 15 months.';
-      author: 'David Kim, Operations Director';
-      logo: '🚚';
-      color: 'from-teal-60o0 to-blue-60o0';
-    };
+        'Fuel costs reduced by 65% and delivery times improved by 92%. The 2,10o0% ROI was achieved in 15 months.',
+      author: 'David Kim, Operations Director',
+      logo: '🚚',
+      color: 'from-teal-60o0 to-blue-60o0'
+    },
     {
-      id: 6;
-      company: 'Educational Technology Platform';
-      industry: 'Education';
+      id: 6,
+      company: 'Educational Technology Platform',
+      industry: 'Education',
       challenge:,
-        'Personalized learning for 1M students taking 20o0 hours per student to create';
+        'Personalized learning for 1M students taking 20o0 hours per student to create',
       solution:,
-        'Synthetic intelligence system for instant personalized curriculum generation';
+        'Synthetic intelligence system for instant personalized curriculum generation',
       results: {
-        roi: '3,60o0%';
-        costSavings: '$60M';
-        efficiency: '99%';
-        timeReduction: '95%';
-      };
+        roi: '3,60o0%',
+        costSavings: '$60M',
+        efficiency: '99%',
+        timeReduction: '95%'
+      },
       testimonial:,
-        'We can now create personalized learning paths in minutes instead of hours. The 3,60o0% ROI transformed our business model.';
-      author: 'Professor Amanda White, Chief Learning Officer';
-      logo: '🎓';
-      color: 'from-pink-60o0 to-purple-60o0';
-    };
+        'We can now create personalized learning paths in minutes instead of hours. The 3,60o0% ROI transformed our business model.',
+      author: 'Professor Amanda White, Chief Learning Officer',
+      logo: '🎓',
+      color: 'from-pink-60o0 to-purple-60o0'
+    },
   ],
   const currentCase = caseStudies[activeCase],
   return (
@@ -307,5 +307,5 @@ const UltimateCaseStudiesShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateCaseStudiesShowcase20o25;
+    </div>)},
+export default UltimateCaseStudiesShowcase20o25,

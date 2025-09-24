@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import {
-  ArrowRightIcon;
-  ChartBarIcon;
-  CogIcon;
-  RocketLaunchIcon;
+  ArrowRightIcon,
+  ChartBarIcon,
+  CogIcon,
+  RocketLaunchIcon,
 } from '@heroicons/react/24/outline',
 const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {
   return (
@@ -74,7 +74,7 @@ const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {
         {/* Content Highlights */}
         <div className='bg-white/5 backdrop-blur-sm rounded-3xl p-8 mb-12 border border-white/10'>,
           <h3 className='text-2xl font-bold mb-6 text-center'>,
-            What 'You', 'll Discover,
+            What 'Youll Discover,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
             <div className='text-center'>,
@@ -127,5 +127,5 @@ const NewContent20o25UltimateBusinessTransformationBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25UltimateBusinessTransformationBanner;
+    </section>)},
+export default NewContent20o25UltimateBusinessTransformationBanner,

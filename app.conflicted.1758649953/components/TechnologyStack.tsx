@@ -1,15 +1,14 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 const TechnologyStack = () => {
   const technologies = [
-    { name: 'React', level: 'Expert' };
-    { name: 'Next.js', level: 'Expert' };
-    { name: 'TypeScript', level: 'Advanced' };
-    { name: 'Node.js', level: 'Expert' };
-    { name: 'Python', level: 'Advanced' };
-    { name: 'AWS', level: 'Expert' };
-    { name: 'Docker', level: 'Advanced' };
-    { name: 'Kubernetes', level: 'Intermediate' };
+    { name: 'React', level: 'Expert' },
+    { name: 'Next.js', level: 'Expert' },
+    { name: 'TypeScript', level: 'Advanced' },
+    { name: 'Node.js', level: 'Expert' },
+    { name: 'Python', level: 'Advanced' },
+    { name: 'AWS', level: 'Expert' },
+    { name: 'Docker', level: 'Advanced' },
+    { name: 'Kubernetes', level: 'Intermediate' },
   ],
   return (
     <div className='p-6 rounded-lg bg-white/10 text-white'>,
@@ -30,5 +29,5 @@ const TechnologyStack = () => {
             </span>,
           </div>))}
       </div>,
-    </div>)};
-export default TechnologyStack;
+    </div>)},
+export default TechnologyStack,

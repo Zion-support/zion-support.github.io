@@ -6,9 +6,9 @@ interface QuantumNeuralBackgroundProps {
   children?: React.ReactNode}
 ,
 const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
-  variant = 'quantum';
-  intensity = 'medium';
-  className = '';
+  variant = 'quantum',
+  intensity = 'medium',
+  className = '',
   children}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | null>(null),
@@ -20,7 +20,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Animation variables,
@@ -45,9 +45,9 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
       const nodeCount = variant === 'neural' ? 15 : 8,
       for (let i = 0, i < nodeCount, i++) {
         neuralNodes.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          connections: [],
           pulse: Math.random() * Math.PI * 2})}
 ,
       // Create connections,
@@ -58,22 +58,22 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
             node.connections.push(targetIndex)}
         }
-      })};
+      })},
     // Initialize particles,
     const initParticles = () => {
       particles.length = 0,
       const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 120 : 80,
       for (let i = 0, i < particleCount, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          color: getParticleColor(variant);
-          life: Math.random() * 10o0;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          color: getParticleColor(variant),
+          life: Math.random() * 10o0,
           maxLife: 10o0})}
-    };
+    },
     const getParticleColor = (variant: string): string => {
       switch (variant) {
         case 'quantum':,
@@ -86,7 +86,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
           return `hsl(${0 + Math.sin(time * 0.0o25) * 30}, 10o0%, 60%)`,
         default:  ,
           return `hsl(${20o0 + Math.sin(time * 0.0o1) * 60}, 70%, 60%)`}
-    };
+    },
     // Animation loop,
     const animate = () => {
       time += 1,
@@ -203,7 +203,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
 ,
       // Reset global alpha,
       ctx.globalAlpha = 1,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     // Initialize and start animation,
     initNeuralNetwork(),
     initParticles(),
@@ -213,7 +213,7 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [variant, intensity]),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -225,5 +225,5 @@ const QuantumNeuralBackground: React.FC<QuantumNeuralBackgroundProps> = ({
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default QuantumNeuralBackground;
+    </div>)},
+export default QuantumNeuralBackground,

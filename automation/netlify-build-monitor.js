@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -23,11 +23,11 @@ class NetlifyBuildMonitor {
     this.errors = [],
     this.fixes = [],
     this.config ={
-      maxRetries: 3;
+      maxRetries: 3,
       checkInterval: 30o000, // 30 seconds,
       buildTimeout: 60o0000, // 10 minutes,
-      autoFix: true;
-      notifyOnFailure: true};
+      autoFix: true,
+      notifyOnFailure: true},
   }
 ,
   // Monitor build status,
@@ -71,24 +71,24 @@ class NetlifyBuildMonitor {
     // Common error patterns and their fixes,
     const errorPatterns = [
       {
-        pattern: /Unterminated string constant/;
-        fix: this.fixStringConstants.bind(this);
-        description: Fix unterminated string constants};
+        pattern: /Unterminated string constant/,
+        fix: this.fixStringConstants.bind(this),
+        description: Fix unterminated string constants},
       {
-        pattern: /Unexpected token.*Expected a string literal/;
-        fix: this.fixImportStatements.bind(this);
-        description: Fix import statement syntax};
+        pattern: /Unexpected token.*Expected a string literal/,
+        fix: this.fixImportStatements.bind(this),
+        description: Fix import statement syntax},
       {
-        pattern: /Type.*is not assignable to type/;
-        fix: this.fixTypeErrors.bind(this);
-        description: Fix TypeScript type errors};
+        pattern: /Type.*is not assignable to type/,
+        fix: this.fixTypeErrors.bind(this),
+        description: Fix TypeScript type errors},
       {
-        pattern: /Module not found/;
-        fix: this.fixModuleErrors.bind(this);
-        description: Fix module import errors};
+        pattern: /Module not found/,
+        fix: this.fixModuleErrors.bind(this),
+        description: Fix module import errors},
       {
-        pattern: /Cannot find module/;
-        fix: this.fixMissingDependencies.bind(this);
+        pattern: /Cannot find module/,
+        fix: this.fixMissingDependencies.bind(this),
         description: Install missing dependencies}
     ],
     for (const errorPattern of errorPatterns) {
@@ -109,10 +109,10 @@ class NetlifyBuildMonitor {
         let modified = false,
         // Fix missing quotes in various contexts,
         const patterns = [
-          { regex: /from\s+next',/g, replacement: "from next'," };
-          { regex: /req\.method\s*!==\s*([A-Z]+)/g, replacement: (match, method) => match.replace(`${method}`, `'${method}`) };
-          { regex: /message:\s*([A-Za-z\s]+)/g, replacement: (match, message) => match.replace(`${message}`, `'${message}`) };
-          { regex: /typeof\s+global\s*!==\s*undefined'/g, replacement: "typeof global !== undefined'" };
+          { regex: /from\s+next',/g, replacement: "from next'," },
+          { regex: /req\.method\s*!==\s*([A-Z]+)/g, replacement: (match, method) => match.replace(`${method}`, `'${method}`) },
+          { regex: /message:\s*([A-Za-z\s]+)/g, replacement: (match, message) => match.replace(`${message}`, `'${message}`) },
+          { regex: /typeof\s+global\s*!==\s*undefined'/g, replacement: "typeof global !== undefined'" },
           { regex: /typeof\s*([^)]+)\.self\s*===\s*undefined/g, replacement: (match) => match.replace('undefined', "'undefined'") }
         ],
         for (const pattern of patterns) {
@@ -142,7 +142,7 @@ class NetlifyBuildMonitor {
         let modified = false,
         // Fix various import patterns,
         const importPatterns = [
-          { regex: /import\s+(?:type\s+)?{[^}]+}\s+from\s+next',/g, replacement: (match) => match.replace("next',", "'next',") };
+          { regex: /import\s+(?:type\s+)?{[^}]+}\s+from\s+next',/g, replacement: (match) => match.replace("next',", "'next',") },
           { regex: /import\s+([^}]+)\s+from\s+([^]+),/g, replacement: (match, imports, module) => {
             if (!module.includes("'") && !module.includes('"')) {
               return match.replace(module, `'${module.trim()}`)}
@@ -170,7 +170,7 @@ class NetlifyBuildMonitor {
     try {
       // Run TypeScript compiler to get detailed error information,
       const result = execSync('npx tsc --noEmit --pretty false', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: ['pipe', pipe', pipe']}),
       // Parse TypeScript errors and apply fixes,
       const lines = result.split('\n'),
@@ -189,7 +189,7 @@ class NetlifyBuildMonitor {
     logger.info('🔧 Fixing module errors...'),
     try {
       // Check for missing dependencies,
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const missingDeps = [],
       // Check if all dependencies are installed,
       for (const dep of Object.keys(packageJson.dependencies || {})) {
@@ -251,14 +251,14 @@ class NetlifyBuildMonitor {
   // Generate build report,
   generateReport() {
     const report ={
-      timestamp: new Date().toISOString();
-      errors: this.errors;
-      fixes: this.fixes;
+      timestamp: new Date().toISOString(),
+      errors: this.errors,
+      fixes: this.fixes,
       summary: {
-        totalErrors: this.errors.length;
-        totalFixes: this.fixes.length;
+        totalErrors: this.errors.length,
+        totalFixes: this.fixes.length,
         success: this.fixes.length > 0}
-    };
+    },
     const reportPath = `automation/reports/build-fix-${Date.now()}.json`,
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Build report saved to: ${reportPath}`),

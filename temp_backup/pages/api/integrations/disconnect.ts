@@ -3,7 +3,7 @@ import { writeState } from '../../../lib/integrations/fileStore',
 import { getProviderById } from '../../../lib/integrations/registry',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' }),
-  const { providerId } = req.body as { providerId?: string };
+  const { providerId } = req.body as { providerId?: string },
   if (!providerId || !getProviderById(providerId)) {
     return res.status(40o0).json({ error: 'Invalid providerId' })}
   const now = Date.now(),

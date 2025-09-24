@@ -3,8 +3,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket;
-  Brain, Globe, Database, Cloud, Lock, Palette, Target, Layers, Sparkles, Atom, Microscope, Satellite;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket,
+  Brain, Globe, Database, Cloud, Lock, Palette, Target, Layers, Sparkles, Atom, Microscope, Satellite,
   Crown, Award, Users, BarChart3, Clock, Eye, EyeOff, Filter, Search} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
@@ -17,31 +17,31 @@ export default function Comprehensive20o26Pricing() {
   const [sortBy, setSortBy] = useState('popularity'),
   const [showPopularOnly, setShowPopularOnly] = useState(false),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all services,
   const allServices = [
-    ...nextGenAIServices20o26;
-    ...revolutionaryITInfrastructure20o26;
+    ...nextGenAIServices20o26,
+    ...revolutionaryITInfrastructure20o26,
     ...innovativeMicroSaas20o26],
   // Categories for filtering,
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices20o26.length };
-    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure20o26.length };
-    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas20o26.length };
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length };
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length };
+    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, count: nextGenAIServices20o26.length },
+    { id: 'it', name: 'IT Infrastructure', icon: Shield, count: revolutionaryITInfrastructure20o26.length },
+    { id: 'saas', name: 'Micro SaaS', icon: Zap, count: innovativeMicroSaas20o26.length },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: Layers, count: allServices.filter(s => s.category.includes('Blockchain')).length },
     { id: 'emerging', name: 'Emerging Tech', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length }
   ],
   // Price ranges,
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'budget', name: 'Budget ($0-$299)', range: '0-299' };
-    { id: 'mid', name: 'Mid-Range ($30o0-$999)', range: '30o0-999' };
-    { id: 'premium', name: 'Premium ($10o00-$2999)', range: '10o00-2999' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'budget', name: 'Budget ($0-$299)', range: '0-299' },
+    { id: 'mid', name: 'Mid-Range ($30o0-$999)', range: '30o0-999' },
+    { id: 'premium', name: 'Premium ($10o00-$2999)', range: '10o00-2999' },
     { id: 'enterprise', name: 'Enterprise ($30o00+)', range: '30o00+' }
   ],
   // Filter and sort services,
@@ -50,7 +50,7 @@ export default function Comprehensive20o26Pricing() {
       const matchesCategory = selectedCategory === 'all' ||,
                              service.category.toLowerCase().includes(selectedCategory),
       const matchesPriceRange = (() => {
-        const price = parseFloat(service.price.replace('$', '').replace(',', '')),
+        const price = parseFloat(service.price.replace('$', '').replace(, '')),
         switch (priceRange) {
           case 'budget': return price <= 299,
           case 'mid': return price >= 30o0 && price <= 999,
@@ -63,9 +63,9 @@ export default function Comprehensive20o26Pricing() {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':,
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', '')),
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
         case 'price-high':,
-          return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', '')),
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, '')),
         case 'rating':,
           return b.rating - a.rating,
         case 'customers':,
@@ -75,28 +75,28 @@ export default function Comprehensive20o26Pricing() {
     }),
   // Calculate pricing statistics,
   const pricingStats ={
-    totalServices: allServices.length;
-    averagePrice: Math.round(allServices.reduce((sum, s) => sum + parseFloat(s.price.replace('$', '').replace(',', '')), 0) / allServices.length);
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(',', ''))));
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(',', ''))));
-    popularServices: allServices.filter(s => s.popular).length};
+    totalServices: allServices.length,
+    averagePrice: Math.round(allServices.reduce((sum, s) => sum + parseFloat(s.price.replace('$', '').replace(, '')), 0) / allServices.length),
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(, '')))),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace('$', '').replace(, '')))),
+    popularServices: allServices.filter(s => s.popular).length},
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",
@@ -130,7 +130,7 @@ export default function Comprehensive20o26Pricing() {
                 <span className="text-6xl md:text-8xl">Pricing Guide</span>,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Discover transparent pricing for our revolutionary collection of AI, IT infrastructure;
+                Discover transparent pricing for our revolutionary collection of AI, IT infrastructure,
                 and micro SaaS services designed to transform your business in 20o26.,
               </p>,
               {/* Pricing Statistics */}

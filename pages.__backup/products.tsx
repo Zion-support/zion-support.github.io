@@ -6,131 +6,113 @@ import {
 export default function ProductsPage() {
   const productCategories = [
     {
-      name: 'AI & Machine Learning';
-      description: 'Revolutionary AI solutions that transform business operations';
-      icon: Brain;
-      color: 'from-purple-40o0 to-pink-50o0';
+      name: 'AI & Machine Learning',
+      description: 'Revolutionary AI solutions that transform business operations',
+      icon: Brain,
+      color: 'from-purple-40o0 to-pink-50o0',
       products: [
-        'Autonomous Business Platform';
-        'AI-Powered Analytics Suite';
-        'Intelligent Process Automation';
-        'Predictive Maintenance System']};
+        'Autonomous Business PlatformAI-Powered Analytics Suite',
+        'Intelligent Process AutomationPredictive Maintenance System']},
     {
-      name: 'Quantum Computing';
-      description: 'Next-generation quantum solutions for complex problems';
-      icon: Zap;
-      color: 'from-cyan-40o0 to-blue-50o0';
+      name: 'Quantum Computing',
+      description: 'Next-generation quantum solutions for complex problems',
+      icon: Zap,
+      color: 'from-cyan-40o0 to-blue-50o0',
       products: [
-        'Quantum Optimization Engine';
-        'Quantum Machine Learning';
-        'Quantum Cryptography Suite';
-        'Quantum Simulation Platform']};
+        'Quantum Optimization EngineQuantum Machine Learning',
+        'Quantum Cryptography SuiteQuantum Simulation Platform']},
     {
-      name: 'Cloud & Infrastructure';
-      description: 'Scalablesecureand high-performance cloud solutions';
-      icon: Cloud;
-      color: 'from-green-40o0 to-emerald-50o0';
+      name: 'Cloud & Infrastructure',
+      description: 'Scalablesecureand high-performance cloud solutions',
+      icon: Cloud,
+      color: 'from-green-40o0 to-emerald-50o0',
       products: [
-        'Multi-Cloud Management';
-        'Edge Computing Platform';
-        'Serverless Architecture';
-        'Container Orchestration']};
+        'Multi-Cloud ManagementEdge Computing Platform',
+        'Serverless ArchitectureContainer Orchestration']},
     {
-      name: 'Cybersecurity';
-      description: 'Advanced security solutions for modern threats';
-      icon: Shield;
-      color: 'from-red-40o0 to-pink-50o0';
+      name: 'Cybersecurity',
+      description: 'Advanced security solutions for modern threats',
+      icon: Shield,
+      color: 'from-red-40o0 to-pink-50o0',
       products: [
-        'Zero-Trust Security';
-        'Threat Intelligence Platform';
-        'Identity Management';
-        'Security Operations Center']};
+        'Zero-Trust SecurityThreat Intelligence Platform',
+        'Identity ManagementSecurity Operations Center']},
     {
-      name: 'Data & Analytics';
-      description: 'Comprehensive data solutions for business intelligence';
-      icon: BarChart3;
-      color: 'from-orange-40o0 to-yellow-50o0';
+      name: 'Data & Analytics',
+      description: 'Comprehensive data solutions for business intelligence',
+      icon: BarChart3,
+      color: 'from-orange-40o0 to-yellow-50o0',
       products: [
-        'Real-Time Analytics';
-        'Data Lake Platform';
-        'Business Intelligence Suite';
-        'Predictive Analytics']};
+        'Real-Time AnalyticsData Lake Platform',
+        'Business Intelligence SuitePredictive Analytics']},
     {
-      name: 'IoT & Edge';
-      description: 'Connected solutions for the Internet of Things';
-      icon: Globe;
-      color: 'from-indigo-40o0 to-purple-50o0';
+      name: 'IoT & Edge',
+      description: 'Connected solutions for the Internet of Things',
+      icon: Globe,
+      color: 'from-indigo-40o0 to-purple-50o0',
       products: [
-        'IoT Platform';
-        'Edge Computing';
-        'Smart City Solutions';
-        'Industrial IoT']}
+        'IoT PlatformEdge Computing',
+        'Smart City SolutionsIndustrial IoT']}
   ],
   const featuredProducts = [
     {
-      name: 'Zion AI Autonomous Platform';
-      description: 'Complete AI-powered business automation platform that learns and adapts to your business needs.';
+      name: 'Zion AI Autonomous Platform',
+      description: 'Complete AI-powered business automation platform that learns and adapts to your business needs.',
       features: [
-        'Natural Language Processing';
-        'Predictive Analytics';
-        'Automated Decision Making';
-        'Real-time Learning'];
-      icon: Brain;
-      color: 'from-purple-40o0 to-pink-50o0';
-      status: 'Available Now'};
+        'Natural Language ProcessingPredictive Analytics',
+        'Automated Decision MakingReal-time Learning'],
+      icon: Brain,
+      color: 'from-purple-40o0 to-pink-50o0',
+      status: 'Available Now'},
     {
-      name: 'Quantum Computing Suite';
-      description: 'Enterprise-grade quantum computing solutions for complex optimization and simulation problems.';
+      name: 'Quantum Computing Suite',
+      description: 'Enterprise-grade quantum computing solutions for complex optimization and simulation problems.',
       features: [
-        'Quantum Algorithms';
-        'Hybrid Classical-Quantum';
-        'Optimization Engine';
-        'Simulation Tools'];
-      icon: Zap;
-      color: 'from-cyan-40o0 to-blue-50o0';
-      status: 'Early Access'};
+        'Quantum AlgorithmsHybrid Classical-Quantum',
+        'Optimization EngineSimulation Tools'],
+      icon: Zap,
+      color: 'from-cyan-40o0 to-blue-50o0',
+      status: 'Early Access'},
     {
-      name: 'SecureNet Enterprise';
-      description: 'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.';
+      name: 'SecureNet Enterprise',
+      description: 'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.',
       features: [
-        'AI-Powered Detection';
-        'Zero-Day Protection';
-        'Compliance Management';
-        'Incident Response'];
-      icon: Shield;
-      color: 'from-red-40o0 to-pink-50o0';
+        'AI-Powered DetectionZero-Day Protection',
+        'Compliance ManagementIncident Response'],
+      icon: Shield,
+      color: 'from-red-40o0 to-pink-50o0',
       status: 'Available Now'}
   ],
   const productBenefits = [
     {
-      title: 'Increased Efficiency';
-      description: 'Automate repetitive tasks and streamline operations';
-      icon: Rocket;
-      color: 'from-green-40o0 to-emerald-50o0'};
+      title: 'Increased Efficiency',
+      description: 'Automate repetitive tasks and streamline operations',
+      icon: Rocket,
+      color: 'from-green-40o0 to-emerald-50o0'},
     {
-      title: 'Cost Reduction';
-      description: 'Lower operational costs through intelligent automation';
-      icon: BarChart3;
-      color: 'from-blue-40o0 to-cyan-50o0'};
+      title: 'Cost Reduction',
+      description: 'Lower operational costs through intelligent automation',
+      icon: BarChart3,
+      color: 'from-blue-40o0 to-cyan-50o0'},
     {
-      title: 'Enhanced Security';
-      description: 'Protect your business with advanced security measures';
-      icon: Lock;
-      color: 'from-red-40o0 to-pink-50o0'};
+      title: 'Enhanced Security',
+      description: 'Protect your business with advanced security measures',
+      icon: Lock,
+      color: 'from-red-40o0 to-pink-50o0'},
     {
-      title: 'Scalability';
-      description: 'Grow your business without infrastructure limitations';
-      icon: Globe;
-      color: 'from-purple-40o0 to-indigo-50o0'};
+      title: 'Scalability',
+      description: 'Grow your business without infrastructure limitations',
+      icon: Globe,
+      color: 'from-purple-40o0 to-indigo-50o0'},
     {
-      title: 'Real-time Insights';
-      description: 'Make data-driven decisions with instant analytics';
-      icon: Cpu;
-      color: 'from-orange-40o0 to-yellow-50o0'};
+      title: 'Real-time Insights',
+      description: 'Make data-driven decisions with instant analytics',
+      icon: Cpu,
+      color: 'from-orange-40o0 to-yellow-50o0'},
     {
-      title: 'Future-Proof';
-      description: 'Built with cutting-edge technology for tomorrow\'s challenges';
-      icon: Zap;
+      title: 'Future-Proof',
+      description: 'Built with cutting-edge technology for tomorrow\'s challenges',
+      icon: Zap,
       color: 'from-cyan-40o0 to-blue-50o0'}
   ],
   return (

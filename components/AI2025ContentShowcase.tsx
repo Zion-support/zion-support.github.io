@@ -2,65 +2,65 @@ import Link from 'next/link',
 export default function AI20o25ContentShowcase() {
   const contentItems = [
     {
-      title: 'AI 20o25 Ultimate Breakthrough Revolution';
+      title: 'AI 20o25 Ultimate Breakthrough Revolution',
       description:,
-        'Revolutionary AI technologies delivering unprecedented 10,0o00% ROI and transforming entire industries.';
-      link: '/ai-20o25-ultimate-breakthrough-revolution';
-      badge: 'BREAKTHROUGH';
-      color: 'from-red-50o0 to-pink-50o0';
-      icon: '🚀';
-      stats: '10,0o00% ROI';
-    };
+        'Revolutionary AI technologies delivering unprecedented 10,0o00% ROI and transforming entire industries.',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      badge: 'BREAKTHROUGH',
+      color: 'from-red-50o0 to-pink-50o0',
+      icon: '🚀',
+      stats: '10,0o00% ROI',
+    },
     {
-      title: 'Global Transformation Case Study';
+      title: 'Global Transformation Case Study',
       description:,
-        'How a Fortune 50o0 company achieved 10,0o00% ROI through our revolutionary AI breakthrough technologies.';
-      link: '/case-studies/ai-20o25-global-transformation-breakthrough';
-      badge: 'SUCCESS STORY';
-      color: 'from-green-50o0 to-emerald-50o0';
-      icon: '🏆';
-      stats: '10,0o00% ROI';
-    };
+        'How a Fortune 50o0 company achieved 10,0o00% ROI through our revolutionary AI breakthrough technologies.',
+      link: '/case-studies/ai-20o25-global-transformation-breakthrough',
+      badge: 'SUCCESS STORY',
+      color: 'from-green-50o0 to-emerald-50o0',
+      icon: '🏆',
+      stats: '10,0o00% ROI',
+    },
     {
-      title: 'AI 20o25 Revolutionary Trends & Predictions';
+      title: 'AI 20o25 Revolutionary Trends & Predictions',
       description:,
-        'Comprehensive analysis of AI trends and predictions for 20o25. Discover the breakthrough technologies reshaping our world.';
-      link: '/blog/ai-20o25-revolutionary-trends-predictions';
-      badge: 'FUTURE PREDICTIONS';
-      color: 'from-purple-50o0 to-blue-50o0';
-      icon: '🔮';
-      stats: '95% Accuracy';
-    };
+        'Comprehensive analysis of AI trends and predictions for 20o25. Discover the breakthrough technologies reshaping our world.',
+      link: '/blog/ai-20o25-revolutionary-trends-predictions',
+      badge: 'FUTURE PREDICTIONS',
+      color: 'from-purple-50o0 to-blue-50o0',
+      icon: '🔮',
+      stats: '95% Accuracy'
+    },
     {
-      title: 'Quantum-Neural Fusion Technology';
+      title: 'Quantum-Neural Fusion Technology',
       description:,
-        'Revolutionary fusion of quantum computing and neural networksdelivering 15,0o00% ROI through unprecedented processing power.';
-      link: '/quantum-computing-solutions-20o25';
-      badge: 'REVOLUTIONARY';
-      color: 'from-indigo-50o0 to-purple-50o0';
-      icon: '⚛️';
-      stats: '15,0o00% ROI';
-    };
+        'Revolutionary fusion of quantum computing and neural networksdelivering 15,0o00% ROI through unprecedented processing power.',
+      link: '/quantum-computing-solutions-20o25',
+      badge: 'REVOLUTIONARY',
+      color: 'from-indigo-50o0 to-purple-50o0',
+      icon: '⚛️',
+      stats: '15,0o00% ROI',
+    },
     {
-      title: 'Neural Interface Revolution';
+      title: 'Neural Interface Revolution',
       description:,
-        'Direct brain-computer interfaces enabling seamless human-AI collaborationrevolutionizing healthcare and productivity.';
-      link: '/neural-interface-solutions';
-      badge: 'BREAKTHROUGH';
-      color: 'from-pink-50o0 to-rose-50o0';
-      icon: '🧠';
-      stats: '5,0o00% ROI';
-    };
+        'Direct brain-computer interfaces enabling seamless human-AI collaborationrevolutionizing healthcare and productivity.',
+      link: '/neural-interface-solutions',
+      badge: 'BREAKTHROUGH',
+      color: 'from-pink-50o0 to-rose-50o0',
+      icon: '🧠',
+      stats: '5,0o00% ROI',
+    },
     {
-      title: 'Autonomous Decision Systems';
+      title: 'Autonomous Decision Systems',
       description:,
-        'Self-evolving AI systems that make complex decisions with 99.9% accuracyreducing costs by 90% and increasing efficiency by 50o0%.';
-      link: '/autonomous-systems-20o25';
-      badge: 'AUTONOMOUS';
-      color: 'from-orange-50o0 to-red-50o0';
-      icon: '🤖';
-      stats: '99.9% Accuracy';
-    };
+        'Self-evolving AI systems that make complex decisions with 99.9% accuracyreducing costs by 90% and increasing efficiency by 50o0%.',
+      link: '/autonomous-systems-20o25',
+      badge: 'AUTONOMOUS',
+      color: 'from-orange-50o0 to-red-50o0',
+      icon: '🤖',
+      stats: '99.9% Accuracy'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,

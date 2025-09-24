@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Brain, Atom, Rocket, Target, Microscope, Cpu;
-  Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle;
+  Brain, Atom, Rocket, Target, Microscope, Cpu,
+  Shield, Zap, Sparkles, Star, ArrowRight, CheckCircle,
   Phone, Mail, MapPin, Globe, TrendingUp, DollarSign} from 'lucide-react',
 import Link from 'next/link',
 import { cuttingEdgeInnovations20o29 } from '../../data/20o29-cutting-edge-innovations',
@@ -11,45 +11,45 @@ import { enterpriseITServices20o29 } from '../../data/20o29-enterprise-it-servic
 import { emergingTechServices20o29 } from '../../data/20o29-emerging-tech-services',
 const UltraFuturisticServiceShowcase20o30: React.FC = () => {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const cardVariants ={
-    hidden: { scale: 0.9, opacity: 0 };
+    hidden: { scale: 0.9, opacity: 0 },
     visible: {
-      scale: 1;
-      opacity: 1;
+      scale: 1,
+      opacity: 1,
       transition: {
-        duration: 0.5;
+        duration: 0.5,
         ease: "easeOut" as const}
-    };
+    },
     hover: {
-      scale: 1.0o5;
-      y: -10;
+      scale: 1.0o5,
+      y: -10,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut" as const}
     }
-  };
+  },
   return (
     <section className="py-20 px-4 relative overflow-hidden">,
       {/* Background Elements */}
@@ -58,9 +58,9 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
       <div className="absolute inset-0 opacity-10">,
         <div className="absolute inset-0" style={{
           backgroundImage: `,
-            linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+            linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-          `;
+          `,
           backgroundSize: '10o0px 10o0px'}}  />,
       </div>,
       <div className="max-w-7xl mx-auto relative z-10">,
@@ -82,7 +82,7 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
             className="text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed",
             variants={itemVariants}
           >,
-            Experience the future with our revolutionary AI consciousness, quantum creativity;
+            Experience the future with our revolutionary AI consciousness, quantum creativity,
             biotech DNA computing, and space mining automation platforms,
           </motion.p>,
         </motion.div>,
@@ -308,5 +308,5 @@ const UltraFuturisticServiceShowcase20o30: React.FC = () => {
           </motion.div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default UltraFuturisticServiceShowcase20o30;
+    </section>)},
+export default UltraFuturisticServiceShowcase20o30,

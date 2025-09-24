@@ -13,7 +13,7 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     efficiency?: string,
-    accuracy?: string};
+    accuracy?: string},
   tags: string[],
   url: string}
 ,
@@ -24,152 +24,152 @@ interface ContentManagerProps {
   category?: string}
 ,
 const ContentManager: React.FC<ContentManagerProps> = ({
-  showFilters = true;
-  showMetrics = true;
-  maxItems = 12;
-  category = 'all';
+  showFilters = true,
+  showMetrics = true,
+  maxItems = 12,
+  category = 'all'
 }) => {
   const [activeCategory, setActiveCategory] = useState(category),
   const [searchTerm, setSearchTerm] = useState(''),
   const [sortBy, setSortBy] = useState('featured'),
   const content: ContentItem[] = [
     {
-      id: 'ai-innovation-breakthrough';
-      title: 'AI 20o25: The Ultimate Innovation Breakthrough';
+      id: 'ai-innovation-breakthrough',
+      title: 'AI 20o25: The Ultimate Innovation Breakthrough',
       description:,
-        'Complete Guide to 5,0o00% ROI Through Revolutionary AI Technologies';
-      type: 'blog';
-      category: 'innovation';
-      readingTime: '30 min read';
-      featured: true;
+        'Complete Guide to 5,0o00% ROI Through Revolutionary AI Technologies',
+      type: 'blog',
+      category: 'innovation',
+      readingTime: '30 min read',
+      featured: true,
       metrics: {
-        roi: '5,0o00%';
-        savings: '$12.8B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.7%';
-      };
-      tags: ['AI Innovation', 'ROI', 'Breakthrough', 'Revolutionary'];
-      url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide';
-    };
+        roi: '5,0o00%',
+        savings: '$12.8B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.7%'
+      },
+      tags: ['AI InnovationROI', 'BreakthroughRevolutionary'],
+      url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide'
+    },
     {
-      id: 'fortune-50o0-innovation-success';
-      title: 'Fortune 50o0 AI Innovation Success Story';
-      description: '$12.8B Annual Savings with 5,0o00% ROI Achievement';
-      type: 'case-study';
-      category: 'success-stories';
-      readingTime: '20 min read';
-      featured: true;
+      id: 'fortune-50o0-innovation-success',
+      title: 'Fortune 50o0 AI Innovation Success Story',
+      description: '$12.8B Annual Savings with 5,0o00% ROI Achievement',
+      type: 'case-study',
+      category: 'success-stories',
+      readingTime: '20 min read',
+      featured: true,
       metrics: {
-        roi: '5,0o00%';
-        savings: '$12.8B';
-        efficiency: '2,40o0%';
-        accuracy: '99.7%';
-      };
-      tags: ['Fortune 50o0', 'Success Story', 'ROI', 'Innovation'];
-      url: '/case-studies/fortune-50o0-ai-innovation-50o00-roi-success-story';
-    };
+        roi: '5,0o00%',
+        savings: '$12.8B',
+        efficiency: '2,40o0%',
+        accuracy: '99.7%'
+      },
+      tags: ['Fortune 50o0Success Story', 'ROIInnovation'],
+      url: '/case-studies/fortune-50o0-ai-innovation-50o00-roi-success-story'
+    },
     {
-      id: 'ai-implementation-guide';
-      title: 'AI Innovation Implementation Ultimate Guide';
-      description: 'Complete Roadmap to 5,0o00% ROI Implementation';
-      type: 'resource';
-      category: 'implementation';
-      readingTime: '45 min read';
-      featured: true;
+      id: 'ai-implementation-guide',
+      title: 'AI Innovation Implementation Ultimate Guide',
+      description: 'Complete Roadmap to 5,0o00% ROI Implementation',
+      type: 'resource',
+      category: 'implementation',
+      readingTime: '45 min read',
+      featured: true,
       metrics: {
-        roi: '5,0o00%';
-        savings: '$12.8B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.7%';
-      };
-      tags: ['Implementation', 'Guide', 'ROI', 'Roadmap'];
-      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25';
-    };
+        roi: '5,0o00%',
+        savings: '$12.8B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.7%'
+      },
+      tags: ['ImplementationGuide', 'ROIRoadmap'],
+      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25'
+    },
     {
-      id: 'quantum-neural-fusion';
-      title: 'Quantum Neural Fusion Revolution';
-      description: '25,0o00% ROI Through Quantum-AI Integration';
-      type: 'blog';
-      category: 'quantum';
-      readingTime: '35 min read';
-      featured: true;
+      id: 'quantum-neural-fusion',
+      title: 'Quantum Neural Fusion Revolution',
+      description: '25,0o00% ROI Through Quantum-AI Integration',
+      type: 'blog',
+      category: 'quantum',
+      readingTime: '35 min read',
+      featured: true,
       metrics: {
-        roi: '25,0o00%';
-        savings: '$45.2B+';
-        efficiency: '3,60o0%';
-        accuracy: '99.9%';
-      };
-      tags: ['Quantum AI', 'Neural Fusion', 'Revolution', '25,0o00% ROI'];
-      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough';
-    };
+        roi: '25,0o00%',
+        savings: '$45.2B+',
+        efficiency: '3,60o0%',
+        accuracy: '99.9%'
+      },
+      tags: ['Quantum AINeural Fusion', 'Revolution25,0o00% ROI'],
+      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough'
+    },
     {
-      id: 'autonomous-business-revolution';
-      title: 'Autonomous Business Revolution 20o25';
-      description: 'Complete Guide to Self-Managing Enterprise Systems';
-      type: 'blog';
-      category: 'autonomous';
-      readingTime: '40 min read';
-      featured: true;
+      id: 'autonomous-business-revolution',
+      title: 'Autonomous Business Revolution 20o25',
+      description: 'Complete Guide to Self-Managing Enterprise Systems',
+      type: 'blog',
+      category: 'autonomous',
+      readingTime: '40 min read',
+      featured: true,
       metrics: {
-        roi: '15,0o00%';
-        savings: '$28.5B+';
-        efficiency: '2,80o0%';
-        accuracy: '99.8%';
-      };
-      tags: ['Autonomous', 'Business', 'Revolution', 'Self-Managing'];
-      url: '/blog/ai-20o25-autonomous-business-revolution-complete-guide';
-    };
+        roi: '15,0o00%',
+        savings: '$28.5B+',
+        efficiency: '2,80o0%',
+        accuracy: '99.8%'
+      },
+      tags: ['AutonomousBusiness', 'RevolutionSelf-Managing'],
+      url: '/blog/ai-20o25-autonomous-business-revolution-complete-guide'
+    },
     {
-      id: 'business-intelligence-revolution';
-      title: 'AI Business Intelligence Revolution';
-      description: '15,0o00% ROI Through Advanced BI Solutions';
-      type: 'blog';
-      category: 'business-intelligence';
-      readingTime: '35 min read';
-      featured: true;
+      id: 'business-intelligence-revolution',
+      title: 'AI Business Intelligence Revolution',
+      description: '15,0o00% ROI Through Advanced BI Solutions',
+      type: 'blog',
+      category: 'business-intelligence',
+      readingTime: '35 min read',
+      featured: true,
       metrics: {
-        roi: '15,0o00%';
-        savings: '$45.2B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.8%';
-      };
-      tags: ['Business Intelligence', 'BI', 'Analytics', '15,0o00% ROI'];
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
-    };
+        roi: '15,0o00%',
+        savings: '$45.2B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.8%'
+      },
+      tags: ['Business IntelligenceBI', 'Analytics15,0o00% ROI'],
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough'
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'innovation';
-      name: 'AI Innovation';
-      count: content.filter(item => item.category === 'innovation').length;
-    };
+      id: 'innovation',
+      name: 'AI Innovation',
+      count: content.filter(item => item.category === 'innovation').length
+    },
     {
-      id: 'success-stories';
-      name: 'Success Stories';
-      count: content.filter(item => item.category === 'success-stories').length;
-    };
+      id: 'success-stories',
+      name: 'Success Stories',
+      count: content.filter(item => item.category === 'success-stories').length
+    },
     {
-      id: 'implementation';
-      name: 'Implementation';
-      count: content.filter(item => item.category === 'implementation').length;
-    };
+      id: 'implementation',
+      name: 'Implementation',
+      count: content.filter(item => item.category === 'implementation').length
+    },
     {
-      id: 'quantum';
-      name: 'Quantum AI';
-      count: content.filter(item => item.category === 'quantum').length;
-    };
+      id: 'quantum',
+      name: 'Quantum AI',
+      count: content.filter(item => item.category === 'quantum').length
+    },
     {
-      id: 'autonomous';
-      name: 'Autonomous Systems';
-      count: content.filter(item => item.category === 'autonomous').length;
-    };
+      id: 'autonomous',
+      name: 'Autonomous Systems',
+      count: content.filter(item => item.category === 'autonomous').length
+    },
     {
-      id: 'business-intelligence';
-      name: 'Business Intelligence';
+      id: 'business-intelligence',
+      name: 'Business Intelligence',
       count: content.filter(item => item.category === 'business-intelligence'),
-        .length;
-    };
+        .length,
+    },
   ],
   const filteredContent = content,
     .filter(item => {
@@ -201,7 +201,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
         return '⚙️',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -214,7 +214,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
         return 'bg-orange-10o0 text-orange-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className='w-full max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
       {/* Header */}
@@ -296,7 +296,7 @@ const ContentManager: React.FC<ContentManagerProps> = ({
                   <span
                     className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
                   >,
-                    {item.type.replace('-', ' ').toUpperCase()}
+                    {item.type.replace('- ').toUpperCase()}
                   </span>,
                 </div>,
                 {item.featured && (
@@ -389,5 +389,5 @@ const ContentManager: React.FC<ContentManagerProps> = ({
             </svg>,
           </Link>,
         </div>)}
-    </div>)};
-export default ContentManager;
+    </div>)},
+export default ContentManager,

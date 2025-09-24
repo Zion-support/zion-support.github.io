@@ -6,8 +6,8 @@ interface UltraAdvancedQuantumMatrixBackgroundProps {
   children: React.ReactNode}
 ,
 const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixBackgroundProps> = ({
-  intensity = 1.0;
-  variant = 'quantum';
+  intensity = 1.0,
+  variant = 'quantum',
   children}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -37,17 +37,17 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
                     variant === 'holographic' ? 'holographic' :,
                     variant === 'neural' ? 'neural' : 'cyberpunk',
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2 * intensity;
-          vy: (Math.random() - 0.5) * 2 * intensity;
-          size: Math.random() * 4 * intensity + 1;
-          opacity: Math.random() * 0.8 + 0.2;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * intensity,
+          vy: (Math.random() - 0.5) * 2 * intensity,
+          size: Math.random() * 4 * intensity + 1,
+          opacity: Math.random() * 0.8 + 0.2,
           color: type === 'quantum' ? '#0o0ffff' :,
                  type === 'holographic' ? '#ff0o0ff' :,
-                 type === 'neural' ? '#0o0ff0o0' : '#ff660o0';
+                 type === 'neural' ? '#0o0ff0o0' : '#ff660o0',
           type})}
-    };
+    },
     // Quantum entanglement effect,
     const drawQuantumEntanglement = () => {
       ctx.strokeStyle = 'rgba(0, 255, 255, 0.1)',
@@ -64,7 +64,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
             ctx.stroke()}
         }
       }
-    };
+    },
     // Holographic matrix effect,
     const drawHolographicMatrix = () => {
       ctx.fillStyle = 'rgba(255, 0, 255, 0.0o5)',
@@ -74,7 +74,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
           const char = String.fromCharCode(0x30A0 + Math.random() * 96),
           ctx.fillText(char, x, y)}
       }
-    };
+    },
     // Neural network effect,
     const drawNeuralNetwork = () => {
       ctx.strokeStyle = 'rgba(0, 255, 0, 0.1)',
@@ -87,7 +87,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
           ctx.moveTo(particle.x, particle.y),
           ctx.lineTo(nextParticle.x, nextParticle.y),
           ctx.stroke()}
-      })};
+      })},
     // Cyberpunk grid effect,
     const drawCyberpunkGrid = () => {
       ctx.strokeStyle = 'rgba(255, 10o2, 0, 0.1)',
@@ -104,7 +104,7 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
         ctx.stroke()}
-    };
+    },
     // Main animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -142,19 +142,19 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
         drawHolographicMatrix(),
         drawCyberpunkGrid()}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     initParticles(),
     animate(),
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight,
-      initParticles()};
+      initParticles()},
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, [intensity, variant]),
   return (
     <div className="relative min-h-screen overflow-hidden">,
@@ -180,17 +180,17 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              scale: [1, 2, 1];
-              opacity: [0.3, 1, 0.3];
-              x: [0, (Math.random() - 0.5) * 10o0];
+              scale: [1, 2, 1],
+              opacity: [0.3, 1, 0.3],
+              x: [0, (Math.random() - 0.5) * 10o0],
               y: [0, (Math.random() - 0.5) * 10o0]}}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: Math.random() * 2}}
            />))}
       </div>,
@@ -209,5 +209,5 @@ const UltraAdvancedQuantumMatrixBackground: React.FC<UltraAdvancedQuantumMatrixB
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default UltraAdvancedQuantumMatrixBackground;
+    </div>)},
+export default UltraAdvancedQuantumMatrixBackground,

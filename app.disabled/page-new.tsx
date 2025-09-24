@@ -1,14 +1,14 @@
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Zap;
-  Shield;
-  Globe;
-  Users;
-  TrendingUp;
-  Star;
-  CheckCircle;
-  ArrowRight;
+  ArrowRight,
+  Zap,
+  Shield,
+  Globe,
+  Users,
+  TrendingUp,
+  Star,
+  CheckCircle,
+  ArrowRight,
 } from 'lucide-react',
 export default function HomePage() {
   return (
@@ -29,7 +29,7 @@ export default function HomePage() {
               </span>,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-              Leading provider of revolutionary AI autonomous operations;
+              Leading provider of revolutionary AI autonomous operations,
               quantum computing breakthroughs, and advanced automation solutions,
               delivering unprecedented ROI and transformative results.,
             </p>,
@@ -91,71 +91,65 @@ export default function HomePage() {
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                icon: <Zap className='w-8 h-8 text-blue-40o0' />;
-                title: 'AI Autonomous Operations';
+                icon: <Zap className='w-8 h-8 text-blue-40o0' />,
+                title: 'AI Autonomous Operations',
                 description:,
-                  'Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.';
+                  'Revolutionary AI systems that operate independently, making intelligent decisions and optimizing processes in real-time.',
                 features: [
-                  'Real-time Decision Making';
-                  'Predictive Analytics';
-                  'Autonomous Optimization';
-                ];
-              };
+                  'Real-time Decision MakingPredictive Analytics',
+                  'Autonomous Optimization',
+                ]
+              },
               {
-                icon: <Shield className='w-8 h-8 text-purple-40o0' />;
-                title: 'Quantum Computing';
+                icon: <Shield className='w-8 h-8 text-purple-40o0' />,
+                title: 'Quantum Computing',
                 description:,
-                  'Breakthrough quantum computing solutions delivering exponential computational power and security.';
+                  'Breakthrough quantum computing solutions delivering exponential computational power and security.',
                 features: [
-                  'Quantum Supremacy';
-                  'Error-Corrected Quantum';
-                  'Quantum Internet';
-                ];
-              };
+                  'Quantum SupremacyError-Corrected Quantum',
+                  'Quantum Internet',
+                ]
+              },
               {
-                icon: <Globe className='w-8 h-8 text-cyan-40o0' />;
-                title: 'Advanced Automation';
+                icon: <Globe className='w-8 h-8 text-cyan-40o0' />,
+                title: 'Advanced Automation',
                 description:,
-                  'Intelligent process automation that streamlines operations and eliminates manual tasks.';
+                  'Intelligent process automation that streamlines operations and eliminates manual tasks.',
                 features: [
-                  'Process Automation';
-                  'Smart Resource Management';
-                  'Predictive Maintenance';
-                ];
-              };
+                  'Process AutomationSmart Resource Management',
+                  'Predictive Maintenance',
+                ]
+              },
               {
-                icon: <Users className='w-8 h-8 text-green-40o0' />;
-                title: 'Enterprise Solutions';
+                icon: <Users className='w-8 h-8 text-green-40o0' />,
+                title: 'Enterprise Solutions',
                 description:,
-                  'Comprehensive enterprise-grade solutions designed for scalability and reliability.';
+                  'Comprehensive enterprise-grade solutions designed for scalability and reliability.',
                 features: [
-                  'Scalable Architecture';
-                  'Enterprise Security';
-                  '24/7 Support';
-                ];
-              };
+                  'Scalable ArchitectureEnterprise Security',
+                  '24/7 Support',
+                ]
+              },
               {
-                icon: <TrendingUp className='w-8 h-8 text-yellow-40o0' />;
-                title: 'Business Intelligence';
+                icon: <TrendingUp className='w-8 h-8 text-yellow-40o0' />,
+                title: 'Business Intelligence',
                 description:,
-                  'Advanced analytics and insights that drive data-driven decision making and growth.';
+                  'Advanced analytics and insights that drive data-driven decision making and growth.',
                 features: [
-                  'Real-time Analytics';
-                  'Predictive Insights';
-                  'Performance Optimization';
-                ];
-              };
+                  'Real-time AnalyticsPredictive Insights',
+                  'Performance Optimization',
+                ]
+              },
               {
-                icon: <Star className='w-8 h-8 text-pink-40o0' />;
-                title: 'Innovation Hub';
+                icon: <Star className='w-8 h-8 text-pink-40o0' />,
+                title: 'Innovation Hub',
                 description:,
-                  'Cutting-edge research and development in emerging technologies and future solutions.';
+                  'Cutting-edge research and development in emerging technologies and future solutions.',
                 features: [
-                  'R&D Excellence';
-                  'Future Technologies';
-                  'Innovation Labs';
-                ];
-              };
+                  'R&D ExcellenceFuture Technologies',
+                  'Innovation Labs',
+                ]
+              },
             ].map((feature, index) => (
               <div
                 key={index}

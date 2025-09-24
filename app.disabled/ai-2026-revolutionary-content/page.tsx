@@ -5,18 +5,15 @@ import RevolutionaryContent20o26Banner from '../../components/RevolutionaryConte
 import UltimateContentShowcase20o26 from '../../components/UltimateContentShowcase20o26',
 import NewContent20o26PromotionBanner from '../../components/NewContent20o26PromotionBanner',
 export const metadata = {
-  title: 'AI 20o26 Revolutionary Content - Zion Tech Group';
+  title: 'AI 20o26 Revolutionary Content - Zion Tech Group',
   description:,
-    'Discover the most advanced AI content and case studies for 20o26. Quantum machine learning, generative AI, and enterprise transformation insights.';
+    'Discover the most advanced AI content and case studies for 20o26. Quantum machine learning, generative AI, and enterprise transformation insights.',
   keywords: [
-    'AI 20o26';
-    'quantum machine learning';
-    'generative AI';
-    'enterprise transformation';
-    'AI content';
-    'case studies';
-  ];
-};
+    'AI 20o26quantum machine learning',
+    'generative AIenterprise transformation',
+    'AI contentcase studies',
+  ]
+},
 export default function AI20o26RevolutionaryContentPage() {
   return (
     <div>,
@@ -67,7 +64,7 @@ export default function AI20o26RevolutionaryContentPage() {
                 Featured 20o26 Content,
               </h2>,
               <p className='text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed'>,
-                Explore our most advanced AI content covering the latest trends;
+                Explore our most advanced AI content covering the latest trends,
                 technologies, and successful implementations.,
               </p>,
             </div>,

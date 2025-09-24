@@ -2,11 +2,9 @@ import SEO from '../components/SEO',
 CheckExternalLink,
 export default function ApiPerformanceTestingPage() {
   const features = [
-    'k6/Gatling-compatible test runner';
-    'SLO-aware latency reports';
-    'Regression baselines per endpoint';
-    'CI checks and PR annotations';
-    'Synthetic traffic for staging';
+    'k6/Gatling-compatible test runnerSLO-aware latency reports',
+    'Regression baselines per endpointCI checks and PR annotations',
+    'Synthetic traffic for staging',
   ],
   return (
     <>,

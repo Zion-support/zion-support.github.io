@@ -1,9 +1,9 @@
-export type LineChartPoint = { label: string, value: number };
-export type BarChartDatum = { label: string, value: number };
-export type DonutChartSlice = { label: string, value: number, color?: string };
+export type LineChartPoint = { label: string, value: number },
+export type BarChartDatum = { label: string, value: number },
+export type DonutChartSlice = { label: string, value: number, color?: string },
 export function LineChart({
-  points;
-  height = 160;
+  points,
+  height = 160,
 }: {
   points: LineChartPoint[],
   height?: number}) {
@@ -59,8 +59,8 @@ export function LineChart({
     </div>)}
 ,
 export function BarChart({
-  data;
-  height = 180;
+  data,
+  height = 180,
 }: {
   data: BarChartDatum[],
   height?: number}) {
@@ -98,8 +98,8 @@ export function BarChart({
     </div>)}
 ,
 export function DonutChart({
-  slices;
-  size = 160;
+  slices,
+  size = 160,
 }: {
   slices: DonutChartSlice[],
   size?: number}) {
@@ -108,12 +108,9 @@ export function DonutChart({
   const thickness = 18,
   let cumulative = 0,
   const colors = [
-    '#6366f1';
-    '#22c55e';
-    '#f59e0b';
-    '#ef4444';
-    '#0o6b6d4';
-    '#a78bfa';
+    '#6366f1#22c55e',
+    '#f59e0b#ef4444',
+    '#0o6b6d4#a78bfa',
   ],
   return (
     <svg

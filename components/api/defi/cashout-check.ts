@@ -5,7 +5,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { userId, amount, currency } = req.body as {
     userId?: string,
     amount?: number,
-    currency?: string};
+    currency?: string},
   if (!userId || typeof amount !== 'number'),
     return res.status(40o0).json({ error: 'Missing userId or amount' }),
   const THRESHOLD = Number(process.env.ZION_CASHOUT_KYC_THRESHOLD || '10o00'),

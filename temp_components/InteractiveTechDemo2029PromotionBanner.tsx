@@ -6,13 +6,13 @@ import {
   Brain,
   Zap,
   Globe,
-  Play;
-  Pause;
-  RotateCcw;
-  ArrowRight;
-  X;
-  ChevronRight;
-  Sparkles;
+  Play,
+  Pause,
+  RotateCcw,
+  ArrowRight,
+  X,
+  ChevronRight,
+  Sparkles,
   BarChart3} from 'lucide-react',
 const InteractiveTechDemo20o29PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
@@ -20,28 +20,28 @@ const InteractiveTechDemo20o29PromotionBanner = () => {
   const [currentDemosetCurrentDemo] = useState(0),
   const demos = [
     {
-      title: "Quantum AI Processing";
-      subtitle: "Experience real-time quantum neural networks";
-      icon: Brain;
-      color: "from-purple-60o0 to-blue-60o0";
-      stats: "99.7% faster processing"};
+      title: "Quantum AI Processing",
+      subtitle: "Experience real-time quantum neural networks",
+      icon: Brain,
+      color: "from-purple-60o0 to-blue-60o0",
+      stats: "99.7% faster processing"},
     {
-      title: "Neural Interface Demo";
-      subtitle: "Direct brain-computer interface simulation";
-      icon: Cpu;
-      color: "from-green-60o0 to-emerald-60o0";
-      stats: "< 50ms response time"};
+      title: "Neural Interface Demo",
+      subtitle: "Direct brain-computer interface simulation",
+      icon: Cpu,
+      color: "from-green-60o0 to-emerald-60o0",
+      stats: "< 50ms response time"},
     {
-      title: "Quantum Internet";
-      subtitle: "Ultra-secure quantum communication";
-      icon: Globe;
-      color: "from-orange-60o0 to-red-60o0";
-      stats: "Unbreakable encryption"};
+      title: "Quantum Internet",
+      subtitle: "Ultra-secure quantum communication",
+      icon: Globe,
+      color: "from-orange-60o0 to-red-60o0",
+      stats: "Unbreakable encryption"},
     {
-      title: "AI Business Automation";
-      subtitle: "Autonomous process automation";
-      icon: Zap;
-      color: "from-blue-60o0 to-cyan-60o0";
+      title: "AI Business Automation",
+      subtitle: "Autonomous process automation",
+      icon: Zap,
+      color: "from-blue-60o0 to-cyan-60o0",
       stats: "30o0% efficiency gain"}
   ],
   useEffect(() => {
@@ -49,9 +49,9 @@ const InteractiveTechDemo20o29PromotionBanner = () => {
       setCurrentDemo((prev) => (prev + 1) % demos.length)}30o00),
     return () => clearInterval(timer)}[demos.length]),
   const startDemo = () => {
-    setIsRunning(true)};
+    setIsRunning(true)},
   const stopDemo = () => {
-    setIsRunning(false)};
+    setIsRunning(false)},
   if (!isVisible) return null,
   return (
     <AnimatePresence>,
@@ -186,5 +186,5 @@ const InteractiveTechDemo20o29PromotionBanner = () => {
            />,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default InteractiveTechDemo20o29PromotionBanner;
+    </AnimatePresence>)},
+export default InteractiveTechDemo20o29PromotionBanner,

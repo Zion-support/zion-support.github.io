@@ -1,5 +1,5 @@
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Button from '../ui/Button',
 import { ArrowRight, Play, Star, Zap, Shield, Users } from 'lucide-react',
 import Button from '../ui / Button',
@@ -8,10 +8,10 @@ interface HeroProps {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -30,10 +30,10 @@ interface HeroProps {
     text: string,
     href: string}
   stats?: Array<{
-  };
+  },
   secondaryAction?: {
     text: string,
-    href: string};
+    href: string},
   stats?: Array<{
     value: string,
     label: string,
@@ -45,18 +45,18 @@ const Hero: React.FC<HeroProps> = ({
   secondaryAction,
   stats,
 const Hero: React.FC < HeroProps> = ({
-  title;
-  subtitle;
-  primary_action;
-  secondary_action;
-  stats;
+  title,
+  subtitle,
+  primary_action,
+  secondary_action,
+  stats
 }) => {
 const Hero: React.FC<HeroProps> = ({
-  title;
-  subtitle;
-  primaryAction;
-  secondaryAction;
-  stats;
+  title,
+  subtitle,
+  primaryAction,
+  secondaryAction,
+  stats
 }) => {
   return (
       <div className='absolute inset-0'>,
@@ -114,14 +114,14 @@ const Hero: React.FC<HeroProps> = ({
             {title}
           </h1>,
           <p className='text-xl sm: text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed font-light'>            {subtitle}  primaryAction?: {
-    text: string;
-    href: string};
+    text: string,
+    href: string},
   secondaryAction?: {
-    text: string;
-    href: string};
+    text: string,
+    href: string},
   stats?: Array<{
-    value: string;
-    label: string;
+    value: string,
+    label: string,
     color: string}>}
 ,
 const Hero: React.FC<HeroProps> = ({
@@ -365,7 +365,7 @@ const Hero: React.FC<HeroProps> = ({
       </div>,
       {/* Decorative Elements */}
 }
-export default Hero;
+export default Hero,
 }
 }
 }
@@ -376,8 +376,8 @@ export default Hero;
       <div className="absolute top-1/4 right-1/4 w-2 h-2 bg-blue-500 rounded-full animate-pulse" />,
       <div className="absolute bottom-1/4 left-1/4 w-1 h-1 bg-green-500 rounded-full animate-pulse" style={{ animationDelay: '1s' }} />,
       <div className="absolute top-1/2 right-1/3 w-1.5 h-1.5 bg-purple-500 rounded-full animate-pulse" style={{ animationDelay: '2s' }} />,
-    </section>)};
-export default Hero;
+    </section>)},
+export default Hero,
                 </div>,
               </div>))}
           </div>)}

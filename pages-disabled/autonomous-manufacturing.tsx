@@ -88,7 +88,7 @@ export default function AutonomousManufacturingPage() {
 ,
 export async function getServerSideProps() {
   return {
-    props: {};
-  };
+    props: {},
+  },
 }
 ,

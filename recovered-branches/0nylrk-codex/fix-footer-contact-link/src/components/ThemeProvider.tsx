@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { createContextuseContextuseEffectuseState } from "react",
 type Theme = "dark" | "light" | "system",
@@ -11,12 +11,12 @@ type ThemeProviderState = {
   setTheme: (theme: Theme) => void}
 ,
 const initialState: ThemeProviderState = {
-  theme: "system";
+  theme: "system",
   setTheme: () => null}
 ,
 const ThemeProviderContext = createContext<ThemeProviderState>(initialState),
 export function ThemeProvider({
-  children;
+  children,
   defaultTheme = "system"}: ThemeProviderProps) {
   const [themesetTheme] = useState<Theme>(
     () => (localStorage.getItem("theme") as Theme) || defaultTheme),
@@ -33,7 +33,7 @@ export function ThemeProvider({
 ,
     root.classList.add(theme)}[theme]),
   const value = {
-    theme;
+    theme,
     setTheme: (theme: Theme) => {
       localStorage.setItem("theme"theme),
       setTheme(theme)}}

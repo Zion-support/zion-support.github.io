@@ -7,299 +7,255 @@ export interface EmergingTechSpecializedService {
   pricing: {
     basic: string,
     professional: string,
-    enterprise: string};
+    enterprise: string},
   category: string,
   tags: string[],
   contactInfo: {
     phone: string,
     email: string,
-    website: string};
+    website: string},
 }
 ,
 export const emergingTechSpecializedServices20o25: EmergingTechSpecializedService[] =,
   [
     {
-      id: 'edge-computing-platform';
-      name: 'Edge Computing Platform';
+      id: 'edge-computing-platform',
+      name: 'Edge Computing Platform',
       description:,
-        'Distributed edge computing infrastructure for ultra-low latency applications and IoT devices.';
+        'Distributed edge computing infrastructure for ultra-low latency applications and IoT devices.',
       features: [
-        'Global edge node distribution';
-        'Real-time data processing';
-        'IoT device management';
-        'Edge AI inference';
-        '5G network optimization';
-      ];
+        'Global edge node distributionReal-time data processing',
+        'IoT device managementEdge AI inference',
+        '5G network optimization',
+      ],
       benefits: [
-        'Reduced latency to 5-10ms';
-        'Lower bandwidth costs';
-        'Improved user experience';
-        'Enhanced security through edge processing';
-      ];
+        'Reduced latency to 5-10msLower bandwidth costs',
+        'Improved user experienceEnhanced security through edge processing',
+      ],
       pricing: {
-        basic: '$2,50o0/month';
-        professional: '$8,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Edge Computing';
-      tags: ['edge-computing', 'iot', '5g', 'low-latency', 'distributed'];
+        basic: '$2,50o0/month',
+        professional: '$8,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Edge Computing',
+      tags: ['edge-computingiot', '5glow-latency', 'distributed'],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'ar-vr-enterprise-suite';
-      name: 'AR/VR Enterprise Suite';
+      id: 'ar-vr-enterprise-suite',
+      name: 'AR/VR Enterprise Suite',
       description:,
-        'Complete augmented and virtual reality solution for enterprise training, design, and collaboration.';
+        'Complete augmented and virtual reality solution for enterprise training, design, and collaboration.',
       features: [
-        'Mixed reality workspace';
-        '3D modeling and visualization';
-        'Remote collaboration tools';
-        'Training simulation modules';
-        'Cross-platform compatibility';
-      ];
+        'Mixed reality workspace3D modeling and visualization',
+        'Remote collaboration toolsTraining simulation modules',
+        'Cross-platform compatibility',
+      ],
       benefits: [
-        'Enhanced training effectiveness';
-        'Reduced travel costs';
-        'Improved design collaboration';
-        'Increased productivity';
-      ];
+        'Enhanced training effectivenessReduced travel costs',
+        'Improved design collaborationIncreased productivity',
+      ],
       pricing: {
-        basic: '$3,20o0/month';
-        professional: '$12,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'AR/VR';
-      tags: ['ar', 'vr', 'mixed-reality', 'enterprise', 'training'];
+        basic: '$3,20o0/month',
+        professional: '$12,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'AR/VR',
+      tags: ['arvr', 'mixed-realityenterprise', 'training'],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'biotech-data-platform';
-      name: 'Biotech Data Platform';
+      id: 'biotech-data-platform',
+      name: 'Biotech Data Platform',
       description:,
-        'Advanced data management and analysis platform for biotechnology research and development.';
+        'Advanced data management and analysis platform for biotechnology research and development.',
       features: [
-        'Genomic data processing';
-        'Clinical trial management';
-        'Drug discovery analytics';
-        'Regulatory compliance tools';
-        'AI-powered insights';
-      ];
+        'Genomic data processingClinical trial management',
+        'Drug discovery analyticsRegulatory compliance tools',
+        'AI-powered insights',
+      ],
       benefits: [
-        'Accelerated research timelines';
-        'Improved data accuracy';
-        'Enhanced collaboration';
-        'Regulatory compliance';
-      ];
+        'Accelerated research timelinesImproved data accuracy',
+        'Enhanced collaborationRegulatory compliance',
+      ],
       pricing: {
-        basic: '$4,50o0/month';
-        professional: '$18,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Biotechnology';
+        basic: '$4,50o0/month',
+        professional: '$18,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Biotechnology',
       tags: [
-        'biotech';
-        'genomics';
-        'clinical-trials';
-        'drug-discovery';
-        'compliance';
-      ];
+        'biotechgenomics',
+        'clinical-trialsdrug-discovery',
+        'compliance',
+      ],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'space-tech-solutions';
-      name: 'Space Technology Solutions';
+      id: 'space-tech-solutions',
+      name: 'Space Technology Solutions',
       description:,
-        'Comprehensive space technology platform for satellite operations, space data analysis, and mission planning.';
+        'Comprehensive space technology platform for satellite operations, space data analysis, and mission planning.',
       features: [
-        'Satellite constellation management';
-        'Space weather monitoring';
-        'Orbital debris tracking';
-        'Mission planning tools';
-        'Ground station integration';
-      ];
+        'Satellite constellation managementSpace weather monitoring',
+        'Orbital debris trackingMission planning tools',
+        'Ground station integration',
+      ],
       benefits: [
-        'Enhanced satellite operations';
-        'Improved mission success rates';
-        'Cost optimization';
-        'Risk mitigation';
-      ];
+        'Enhanced satellite operationsImproved mission success rates',
+        'Cost optimizationRisk mitigation',
+      ],
       pricing: {
-        basic: '$6,50o0/month';
-        professional: '$25,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Space Technology';
+        basic: '$6,50o0/month',
+        professional: '$25,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Space Technology',
       tags: [
-        'space-tech';
-        'satellites';
-        'mission-planning';
-        'space-data';
-        'orbital';
-      ];
+        'space-techsatellites',
+        'mission-planningspace-data',
+        'orbital',
+      ],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'quantum-computing-services';
-      name: 'Quantum Computing Services';
+      id: 'quantum-computing-services',
+      name: 'Quantum Computing Services',
       description:,
-        'Quantum computing solutions for complex optimization problems, cryptography, and scientific simulations.';
+        'Quantum computing solutions for complex optimization problems, cryptography, and scientific simulations.',
       features: [
-        'Quantum algorithm development';
-        'Cryptography solutions';
-        'Optimization problem solving';
-        'Quantum simulation tools';
-        'Hybrid classical-quantum workflows';
-      ];
+        'Quantum algorithm developmentCryptography solutions',
+        'Optimization problem solvingQuantum simulation tools',
+        'Hybrid classical-quantum workflows',
+      ],
       benefits: [
-        'Exponential speedup for specific problems';
-        'Enhanced security through quantum cryptography';
-        'Improved optimization results';
-        'Scientific breakthrough potential';
-      ];
+        'Exponential speedup for specific problemsEnhanced security through quantum cryptography',
+        'Improved optimization resultsScientific breakthrough potential',
+      ],
       pricing: {
-        basic: '$8,50o0/month';
-        professional: '$35,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Quantum Computing';
+        basic: '$8,50o0/month',
+        professional: '$35,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Quantum Computing',
       tags: [
-        'quantum-computing';
-        'cryptography';
-        'optimization';
-        'simulation';
-        'algorithms';
-      ];
+        'quantum-computingcryptography',
+        'optimizationsimulation',
+        'algorithms',
+      ],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'neuromorphic-computing';
-      name: 'Neuromorphic Computing Platform';
+      id: 'neuromorphic-computing',
+      name: 'Neuromorphic Computing Platform',
       description:,
-        'Brain-inspired computing platform for AI applications, pattern recognition, and cognitive computing.';
+        'Brain-inspired computing platform for AI applications, pattern recognition, and cognitive computing.',
       features: [
-        'Spiking neural networks';
-        'Event-driven processing';
-        'Low-power AI inference';
-        'Real-time learning';
-        'Cognitive computing modules';
-      ];
+        'Spiking neural networksEvent-driven processing',
+        'Low-power AI inferenceReal-time learning',
+        'Cognitive computing modules',
+      ],
       benefits: [
-        'Ultra-low power consumption';
-        'Real-time learning capabilities';
-        'Improved pattern recognition';
-        'Enhanced AI efficiency';
-      ];
+        'Ultra-low power consumptionReal-time learning capabilities',
+        'Improved pattern recognitionEnhanced AI efficiency',
+      ],
       pricing: {
-        basic: '$5,50o0/month';
-        professional: '$22,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Neuromorphic Computing';
+        basic: '$5,50o0/month',
+        professional: '$22,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Neuromorphic Computing',
       tags: [
-        'neuromorphic';
-        'ai';
-        'neural-networks';
-        'cognitive-computing';
-        'low-power';
-      ];
+        'neuromorphicai',
+        'neural-networkscognitive-computing',
+        'low-power',
+      ],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'blockchain-enterprise';
-      name: 'Enterprise Blockchain Platform';
+      id: 'blockchain-enterprise',
+      name: 'Enterprise Blockchain Platform',
       description:,
-        'Scalable blockchain infrastructure for enterprise applications, supply chain management, and digital identity.';
+        'Scalable blockchain infrastructure for enterprise applications, supply chain management, and digital identity.',
       features: [
-        'Permissioned blockchain networks';
-        'Smart contract development';
-        'Supply chain tracking';
-        'Digital identity management';
-        'Interoperability solutions';
-      ];
+        'Permissioned blockchain networksSmart contract development',
+        'Supply chain trackingDigital identity management',
+        'Interoperability solutions',
+      ],
       benefits: [
-        'Enhanced transparency';
-        'Improved security';
-        'Reduced fraud';
-        'Streamlined processes';
-      ];
+        'Enhanced transparencyImproved security',
+        'Reduced fraudStreamlined processes',
+      ],
       pricing: {
-        basic: '$3,50o0/month';
-        professional: '$15,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Blockchain';
+        basic: '$3,50o0/month',
+        professional: '$15,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Blockchain',
       tags: [
-        'blockchain';
-        'smart-contracts';
-        'supply-chain';
-        'digital-identity';
-        'enterprise';
-      ];
+        'blockchainsmart-contracts',
+        'supply-chaindigital-identity',
+        'enterprise',
+      ],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
     {
-      id: 'autonomous-systems';
-      name: 'Autonomous Systems Platform';
+      id: 'autonomous-systems',
+      name: 'Autonomous Systems Platform',
       description:,
-        'Comprehensive platform for developing and deploying autonomous vehicles, drones, and robotic systems.';
+        'Comprehensive platform for developing and deploying autonomous vehicles, drones, and robotic systems.',
       features: [
-        'Autonomous vehicle software';
-        'Drone fleet management';
-        'Robotic process automation';
-        'Computer vision integration';
-        'Safety and compliance tools';
-      ];
+        'Autonomous vehicle softwareDrone fleet management',
+        'Robotic process automationComputer vision integration',
+        'Safety and compliance tools',
+      ],
       benefits: [
-        'Increased operational efficiency';
-        'Reduced human error';
-        '24/7 operation capability';
-        'Cost optimization';
-      ];
+        'Increased operational efficiencyReduced human error',
+        '24/7 operation capabilityCost optimization',
+      ],
       pricing: {
-        basic: '$4,20o0/month';
-        professional: '$18,50o0/month';
-        enterprise: 'Custom pricing';
-      };
-      category: 'Autonomous Systems';
+        basic: '$4,20o0/month',
+        professional: '$18,50o0/month',
+        enterprise: 'Custom pricing'
+      },
+      category: 'Autonomous Systems',
       tags: [
-        'autonomous';
-        'robotics';
-        'drones';
-        'computer-vision';
-        'automation';
-      ];
+        'autonomousrobotics',
+        'dronescomputer-vision',
+        'automation',
+      ],
       contactInfo: {
-        phone: '+1 30o2 464 0950';
-        email: 'kleber@ziontechgroup.com';
-        website: 'https://ziontechgroup.com';
-      };
-    };
+        phone: '+1 30o2 464 0950',
+        email: 'kleber@ziontechgroup.com',
+        website: 'https://ziontechgroup.com'
+      },
+    },
   ],

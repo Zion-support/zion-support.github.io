@@ -3,33 +3,30 @@ BarChart3TrendingUpPieChartActivityArrowRightCheckEye,
 export default function CloudPlatformPage() {
   const features = [
     {
-      icon: <Server className='w-8 h-8 text-white' />;
-      title: 'Scalable Infrastructure';
-      description: 'Auto-scaling compute resources that grow with your needs';
-    };
+      icon: <Server className='w-8 h-8 text-white' />,
+      title: 'Scalable Infrastructure',
+      description: 'Auto-scaling compute resources that grow with your needs'
+    },
     {
-      icon: <Database className='w-8 h-8 text-white' />;
-      title: 'Managed Databases';
-      description: 'Fully managed databases with automated backups and scaling';
-    };
+      icon: <Database className='w-8 h-8 text-white' />,
+      title: 'Managed Databases',
+      description: 'Fully managed databases with automated backups and scaling'
+    },
     {
-      icon: <Globe className='w-8 h-8 text-white' />;
-      title: 'Global CDN';
-      description: 'Lightning-fast content delivery across the globe';
-    };
+      icon: <Globe className='w-8 h-8 text-white' />,
+      title: 'Global CDN',
+      description: 'Lightning-fast content delivery across the globe'
+    },
     {
-      icon: <Shield className='w-8 h-8 text-white' />;
-      title: 'Enterprise Security';
-      description: 'SOC 2 compliant with advanced threat protection';
-    };
+      icon: <Shield className='w-8 h-8 text-white' />,
+      title: 'Enterprise Security',
+      description: 'SOC 2 compliant with advanced threat protection'
+    },
   ],
   const benefits = [
-    '99.99% uptime guarantee';
-    'Global edge locations';
-    'Real-time monitoring';
-    'Automated scaling';
-    'Pay-as-you-go pricing';
-    '24/7 expert support';
+    '99.99% uptime guaranteeGlobal edge locations',
+    'Real-time monitoringAutomated scaling',
+    'Pay-as-you-go pricing24/7 expert support',
   ],
   return (
     <>,

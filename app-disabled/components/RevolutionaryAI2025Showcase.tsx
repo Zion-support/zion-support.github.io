@@ -1,5 +1,4 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Link from 'next/link',
 interface ContentItem {
   id: string,
@@ -9,59 +8,59 @@ interface ContentItem {
   metrics: {
     roi: string,
     savings: string,
-    efficiency: string};
+    efficiency: string},
   readingTime: string,
   description: string,
   category: string}
 ,
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+    id: 'ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
     title:,
-      'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
-    type: 'blog';
-    url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+      'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+    type: 'blog',
+    url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
     metrics: {
-      roi: '2,50o0%';
-      savings: '$3.2B+';
-      efficiency: '95%';
-    };
-    readingTime: '25 min read';
+      roi: '2,50o0%',
+      savings: '$3.2B+',
+      efficiency: '95%'
+    },
+    readingTime: '25 min read',
     description:,
-      'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI implementation strategies.';
-    category: 'AI Innovation';
-  };
+      'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI implementation strategies.',
+    category: 'AI Innovation'
+  },
   {
-    id: 'fortune-50o0-ai-transformation-250o0-roi-success-story';
-    title: 'Fortune 50o0 AI Transformation Success: $3.2B Annual Savings';
-    type: 'case-study';
-    url: '/case-studies/fortune-50o0-ai-transformation-250o0-roi-success-story';
+    id: 'fortune-50o0-ai-transformation-250o0-roi-success-story',
+    title: 'Fortune 50o0 AI Transformation Success: $3.2B Annual Savings',
+    type: 'case-study',
+    url: '/case-studies/fortune-50o0-ai-transformation-250o0-roi-success-story',
     metrics: {
-      roi: '2,50o0%';
-      savings: '$3.2B';
-      efficiency: '99.2%';
-    };
-    readingTime: '18 min read';
+      roi: '2,50o0%',
+      savings: '$3.2B',
+      efficiency: '99.2%'
+    },
+    readingTime: '18 min read',
     description:,
-      'Real-world case study of a Fortune 50o0 manufacturing leader achieving 2,50o0% ROI through strategic AI implementation.';
-    category: 'Success Story';
-  };
+      'Real-world case study of a Fortune 50o0 manufacturing leader achieving 2,50o0% ROI through strategic AI implementation.',
+    category: 'Success Story'
+  },
   {
-    id: 'ai-20o25-implementation-ultimate-roadmap-250o0-roi';
+    id: 'ai-20o25-implementation-ultimate-roadmap-250o0-roi',
     title:,
-      'AI 20o25 Implementation Ultimate Roadmap: From Strategy to 2,50o0% ROI';
-    type: 'resource';
-    url: '/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi';
+      'AI 20o25 Implementation Ultimate Roadmap: From Strategy to 2,50o0% ROI',
+    type: 'resource',
+    url: '/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi',
     metrics: {
-      roi: '2,50o0%';
-      savings: '$2.5B-5B';
-      efficiency: '85-95%';
-    };
-    readingTime: '25 min read';
+      roi: '2,50o0%',
+      savings: '$2.5B-5B',
+      efficiency: '85-95%'
+    },
+    readingTime: '25 min read',
     description:,
-      'Complete step-by-step roadmap for achieving 2,50o0% ROI through strategic AI implementation in 18 months.';
-    category: 'Implementation Guide';
-  };
+      'Complete step-by-step roadmap for achieving 2,50o0% ROI through strategic AI implementation in 18 months.',
+    category: 'Implementation Guide'
+  },
 ],
 const RevolutionaryAI20o25Showcase: React.FC = () => {
   return (
@@ -207,5 +206,5 @@ const RevolutionaryAI20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryAI20o25Showcase;
+    </section>)},
+export default RevolutionaryAI20o25Showcase,

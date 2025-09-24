@@ -25,10 +25,8 @@ export default function IncidentPostmortemGeneratorPage() {
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'RCA timeline assembly';
-              'Impact summary & customer comms';
-              'Template library & reviewer flow';
-              'Action items with owners & SLAs';
+              'RCA timeline assemblyImpact summary & customer comms',
+              'Template library & reviewer flowAction items with owners & SLAs',
             ].map(f => (
               <div
                 key={f}

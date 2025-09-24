@@ -23,7 +23,7 @@ export function DateFields({ startDatesetStartDatendDatesetEndDate }: DateFields
               <Button
                 variant={"outline"}
                 className={cn(
-                  "w-full md:w-[240px] pl-3 text-left font-normal";
+                  "w-full md: w-[240px] pl-3 text-left font-normal",
                   !startDate && "text-muted-foreground")}
               >,
                 {startDate ? (
@@ -52,7 +52,7 @@ export function DateFields({ startDatesetStartDatendDatesetEndDate }: DateFields
               <Button
                 variant={"outline"}
                 className={cn(
-                  "w-full md:w-[240px] pl-3 text-left font-normal";
+                  "w-full md: w-[240px] pl-3 text-left font-normal",
                   !endDate && "text-muted-foreground")}
               >,
                 {endDate ? (

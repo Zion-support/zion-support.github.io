@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'API Testing Suite | Zion Tech Group';
+  title: 'API Testing Suite | Zion Tech Group',
   description:,
-    'Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.';
-};
+    'Comprehensive API testing platform with automated testing, monitoring, and documentation. Ensure your APIs are reliable and performant.',
+},
 export default function APITestingSuitePage() {
   return (
     <div className='animate-fade-in'>,
@@ -12,7 +12,7 @@ export default function APITestingSuitePage() {
           API Testing Suite,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Comprehensive API testing platform with automated testing, monitoring;
+          Comprehensive API testing platform with automated testing, monitoring,
           and documentation. Ensure your APIs are reliable, performant, and,
           secure with enterprise-grade testing tools.,
         </p>,
@@ -64,11 +64,9 @@ export default function APITestingSuitePage() {
               period='per month',
               description='Perfect for individual developers and small projects',
               features={[
-                'Up to 10 APIs';
-                'Basic testing suite';
-                'Standard monitoring';
-                'Email support';
-                'Basic documentation';
+                'Up to 10 APIsBasic testing suite',
+                'Standard monitoringEmail support',
+                'Basic documentation',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function APITestingSuitePage() {
               period='per month',
               description='Ideal for development teams and growing companies',
               features={[
-                'Up to 50 APIs';
-                'Advanced testing';
-                'Performance testing';
-                'Priority support';
-                'Team collaboration';
-                'Custom integrations';
+                'Up to 50 APIsAdvanced testing',
+                'Performance testingPriority support',
+                'Team collaborationCustom integrations',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function APITestingSuitePage() {
               period='per month',
               description='For large organizations with complex API ecosystems',
               features={[
-                'Unlimited APIs';
-                'Custom test frameworks';
-                'Advanced security testing';
-                '24/7 support';
-                'Custom integrations';
-                'On-premise deployment';
+                'Unlimited APIsCustom test frameworks',
+                'Advanced security testing24/7 support',
+                'Custom integrationsOn-premise deployment',
               ]}
               popular={false}
             />,
@@ -239,9 +231,9 @@ export default function APITestingSuitePage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -256,12 +248,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  title;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   title: string,
   price: string,
@@ -301,9 +293,9 @@ function PricingCard({
     </div>)}
 ,
 function TestingCapability({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -330,9 +322,9 @@ function IntegrationCard({ name, icon }: { name: string, icon: string }) {
     </div>)}
 ,
 function UseCaseCard({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,

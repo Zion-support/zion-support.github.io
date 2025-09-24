@@ -30,11 +30,11 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
   const [requestsetRequests] = useState<APIRequest[]>([]),
   const [responsesetResponses] = useState<APIResponse[]>([]),
   const config = useRef<APIClientConfig>({
-    baseURL: process.env.NEXT_PUBLIC_API_URL || '/api';
-    timeout: 10o000;
-    retryAttempts: 3;
-    retryDelay: 10o00;
-    enableCaching: true;
+    baseURL: process.env.NEXT_PUBLIC_API_URL || '/api',
+    timeout: 10o000,
+    retryAttempts: 3,
+    retryDelay: 10o00,
+    enableCaching: true,
     enableLogging: true}),
   const cache = useRef<Map<string{ data: any, timestamp: number, ttl: number }>>(new Map()),
   const logRequest = useCallback((request: APIRequestresponse?: APIResponse) => {
@@ -61,8 +61,8 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     if (!config.current.enableCaching) return,
     const key = getCacheKey(request),
     cache.current.set(key{
-      data;
-      timestamp: Date.now();
+      data,
+      timestamp: Date.now(),
       ttl})}[getCacheKey]),
   const makeRequest = useCallback(async <T = any>(
     request: APIRequest): Promise<APIResponse<T>> => {
@@ -74,11 +74,11 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
       if (cached) {
         setIsLoading(false),
         return {
-          data: cached;
-          status: 20o0;
-          statusText: 'OK';
-          headers: {};
-          success: true};
+          data: cached,
+          status: 20o0,
+          statusText: 'OK',
+          headers: {},
+          success: true},
       }
     }
 ,
@@ -91,21 +91,21 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
     const timeoutId = setTimeout(() => controller.abort()request.timeout || config.current.timeout),
     try {
       const response = await fetch(fullUrl{
-        method: request.method;
+        method: request.method,
         headers: {
-          'Content-Type': 'application/json';
-          ...request.headers};
-        body: request.body ? JSON.stringify(request.body) : undefined;
+          'Content-Type': 'application/json',
+          ...request.headers},
+        body: request.body ? JSON.stringify(request.body) : undefined,
         signal: controller.signal}),
       clearTimeout(timeoutId),
       const data = await response.json(),
       const apiResponse: APIResponse<T> ={
-        data;
-        status: response.status;
-        statusText: response.statusText;
-        headers: Object.fromEntries(response.headers.entries());
-        success: response.ok;
-        error: response.ok ? undefined : data.message || 'Request failed'};
+        data,
+        status: response.status,
+        statusText: response.statusText,
+        headers: Object.fromEntries(response.headers.entries()),
+        success: response.ok,
+        error: response.ok ? undefined : data.message || 'Request failed'},
       // Cache successful GET requests,
       if (request.method === 'GET' && response.ok) {
         setCachedResponse(requestdata)}
@@ -121,12 +121,12 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
       const errorMessage = error instanceof Error ? error.message : 'Unknown error',
       setError(errorMessage),
       const errorResponse: APIResponse<T> ={
-        data: null as T;
-        status: 0;
-        statusText: 'Error';
-        headers: {};
-        success: false;
-        error: errorMessage};
+        data: null as T,
+        status: 0,
+        statusText: 'Error',
+        headers: {},
+        success: false,
+        error: errorMessage},
       setResponses(prev => [...preverrorResponse]),
       logRequest(requesterrorResponse),
       setIsLoading(false),
@@ -135,35 +135,35 @@ const AdvancedAPIClient: React.FC<{ children: React.ReactNode }> = ({ children }
   const get = useCallback(<T = any>(url: stringoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
     return makeRequest<T>({ urlmethod: 'GET'...options })}[makeRequest]),
   const post = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ urlmethod: ''POST', 'body...options })}[makeRequest]),
+    return makeRequest<T>({ urlmethod: ''POSTbody...options })}[makeRequest]),
   const put = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ urlmethod: ''PUT', 'body...options })}[makeRequest]),
+    return makeRequest<T>({ urlmethod: ''PUTbody...options })}[makeRequest]),
   const del = useCallback(<T = any>(url: stringoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
     return makeRequest<T>({ urlmethod: 'DELETE'...options })}[makeRequest]),
   const patch = useCallback(<T = any>(url: stringbody?: anyoptions?: Partial<APIRequest>): Promise<APIResponse<T>> => {
-    return makeRequest<T>({ urlmethod: ''PATCH', 'body...options })}[makeRequest]),
+    return makeRequest<T>({ urlmethod: ''PATCHbody...options })}[makeRequest]),
   const clearCache = useCallback(() => {
     cache.current.clear()}[]),
   const clearHistory = useCallback(() => {
     setRequests([]),
     setResponses([])}[]),
   return {
-    isLoading;
-    error;
-    requests;
-    responses;
-    get;
-    post;
-    put;
-    delete: del;
-    patch;
-    clearCache;
-    clearHistory;
-    config: config.current};
-};
+    isLoading,
+    error,
+    requests,
+    responses,
+    get,
+    post,
+    put,
+    delete: del,
+    patch,
+    clearCache,
+    clearHistory,
+    config: config.current},
+},
 // API Hook,
 export const useAPI = () => {
-  return React.useContext(APIContext)};
+  return React.useContext(APIContext)},
 // API Context,
 const APIContext = React.createContext<ReturnType<typeof AdvancedAPIClient> | null>(null),
 // API Provider,
@@ -172,7 +172,7 @@ export const APIProvider: React.FC<{ children: React.ReactNode }> = ({ children 
   return (
     <APIContext.Provider value={api}>,
       {children}
-    </APIContext.Provider>)};
+    </APIContext.Provider>)},
 // API Dashboard Component,
 export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = false }) => {
   const api = useAPI(),
@@ -219,5 +219,5 @@ export const APIDashboard: React.FC<{ isVisible?: boolean }> = ({ isVisible = fa
                 </div>)}))}
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAPIClient;
+    </div>)},
+export default AdvancedAPIClient,

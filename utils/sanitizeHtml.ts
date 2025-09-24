@@ -2,7 +2,7 @@
 export const sanitizeHtml = (html: string): string => {
   if (!html) return '',
   let sanitized = html.replace(
-    /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi;
+    /<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,
     ''),
   sanitized = sanitized.replace(/\s*on\w+\s*=\s*[""][^""]*[""]/g, ''),
-  return sanitized};
+  return sanitized},

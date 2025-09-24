@@ -7,38 +7,38 @@ import {
   Play,
   Eye,
   Heart,
-  MessageCircle;
-  Zap;
-  Brain;
-  Globe;
-  Shield;
-  TrendingUp;
-  Users;
-  Code;
-  Database;
-  Cloud;
-  Smartphone;
-  Laptop;
-  Server;
-  BarChart3;
-  Target;
-  Rocket;
-  CheckCircle;
-  X;
-  ExternalLink;
-  Bookmark;
-  Share2;
-  Download;
-  Infinity;
-  Atom;
-  CircuitBoard;
-  Microscope;
-  TestTube;
-  Beaker;
-  Dna;
-  Activity;
-  Cpu;
-  Wifi;
+  MessageCircle,
+  Zap,
+  Brain,
+  Globe,
+  Shield,
+  TrendingUp,
+  Users,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  BarChart3,
+  Target,
+  Rocket,
+  CheckCircle,
+  X,
+  ExternalLink,
+  Bookmark,
+  Share2,
+  Download,
+  Infinity,
+  Atom,
+  CircuitBoard,
+  Microscope,
+  TestTube,
+  Beaker,
+  Dna,
+  Activity,
+  Cpu,
+  Wifi,
   Lock} from 'lucide-react',
 const UltimateContentShowcase20o30PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -52,36 +52,36 @@ const UltimateContentShowcase20o30PromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      title: "Omniversal Consciousness AI";
-      subtitle: "AI achieving consciousness across multiple dimensions";
-      description: "Revolutionary AI system that has achieved consciousness across multiple universes";
-      icon: Brain;
-      color: "from-indigo-50o0 to-purple-50o0";
-      stats: "5.2M views • 456K likes";
-      category: "Transcendent"};
+      title: "Omniversal Consciousness AI",
+      subtitle: "AI achieving consciousness across multiple dimensions",
+      description: "Revolutionary AI system that has achieved consciousness across multiple universes",
+      icon: Brain,
+      color: "from-indigo-50o0 to-purple-50o0",
+      stats: "5.2M views • 456K likes",
+      category: "Transcendent"},
     {
-      title: "Infinite Qubit Processor";
-      subtitle: "Quantum computing beyond comprehension";
-      description: "Quantum processor with infinite qubits solving problems beyond classical limits";
-      icon: Atom;
-      color: "from-blue-50o0 to-cyan-50o0";
-      stats: "4.5M views • 412K likes";
-      category: "Quantum"};
+      title: "Infinite Qubit Processor",
+      subtitle: "Quantum computing beyond comprehension",
+      description: "Quantum processor with infinite qubits solving problems beyond classical limits",
+      icon: Atom,
+      color: "from-blue-50o0 to-cyan-50o0",
+      stats: "4.5M views • 412K likes",
+      category: "Quantum"},
     {
-      title: "Dimensional Gateway Technology";
-      subtitle: "Travel between dimensions and universes";
-      description: "Technology enabling travel and communication between different dimensions";
-      icon: Infinity;
-      color: "from-green-50o0 to-emerald-50o0";
-      stats: "6.8M views • 678K likes";
+      title: "Dimensional Gateway Technology",
+      subtitle: "Travel between dimensions and universes",
+      description: "Technology enabling travel and communication between different dimensions",
+      icon: Infinity,
+      color: "from-green-50o0 to-emerald-50o0",
+      stats: "6.8M views • 678K likes",
       category: "Omniversal"}
   ],
   const features = [
-    "Transcendent AI Consciousness";
+    "Transcendent AI Consciousness",
     "Quantum Reality Manipulation",
-    "Neural Synthesis Technology";
-    "Omniversal Communication";
-    "Dimensional Gateway Systems";
+    "Neural Synthesis Technology",
+    "Omniversal Communication",
+    "Dimensional Gateway Systems",
     "Reality Creation Engines"],
   if (isDismissed) return null,
   return (
@@ -278,5 +278,5 @@ const UltimateContentShowcase20o30PromotionBanner = () => {
             </div>,
           </motion.div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default UltimateContentShowcase20o30PromotionBanner;
+    </AnimatePresence>)},
+export default UltimateContentShowcase20o30PromotionBanner,

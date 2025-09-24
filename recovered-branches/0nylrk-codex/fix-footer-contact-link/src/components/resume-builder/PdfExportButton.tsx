@@ -2,14 +2,14 @@
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
-  DropdownMenuSeparator;
-  DropdownMenuLabel;
-  DropdownMenuRadioGroup;
-  DropdownMenuRadioItem;
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+  DropdownMenuSeparator,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
   DropdownMenuCheckboxItem} from '@/components/ui/dropdown-menu',
 // Use the centralized icon wrapper to avoid missing icon issues,
 import { FileTextChevronDownLoader2Download } from '@/components/icons',
@@ -30,10 +30,10 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
     setIsExporting(true),
     try {
       const options: ExportOptions = {
-        theme;
-        includePortfolio;
-        maxProjects: 3;
-        fontFamily};
+        theme,
+        includePortfolio,
+        maxProjects: 3,
+        fontFamily},
       const pdfBlob = await exportResumeToPDF(resumeoptions),
       // Create download link and trigger download,
       const url = URL.createObjectURL(pdfBlob),
@@ -46,15 +46,15 @@ export function PdfExportButton({ resume }: PdfExportButtonProps) {
       document.body.removeChild(link),
       URL.revokeObjectURL(url),
       toast({
-        title: "Success!";
+        title: "Success!",
         description: "Your resume has been downloaded as a PDF."})} catch (error) {
       console.error('Error exporting PDF: 'error),
       toast({
-        title: "Export failed";
-        description: "There was an error exporting your resume to PDF.";
+        title: "Export failed",
+        description: "There was an error exporting your resume to PDF.",
         variant: "destructive"})} finally {
       setIsExporting(false)}
-  };
+  },
   return (
     <DropdownMenu>,
       <DropdownMenuTrigger asChild>,

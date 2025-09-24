@@ -1,130 +1,110 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Code;
-  Book;
-  Zap;
-  Shield;
-  Globe;
-  Database;
-  Server;
-  Lock;
-  CheckCircle;
-  ArrowRight;
+  Code,
+  Book,
+  Zap,
+  Shield,
+  Globe,
+  Database,
+  Server,
+  Lock,
+  CheckCircle,
+  ArrowRight,
 } from 'lucide-react',
 const apiServices = [
   {
-    title: 'RESTful API';
-    description: 'Clean, intuitive REST API design';
-    icon: Globe;
+    title: 'RESTful API',
+    description: 'Clean, intuitive REST API design',
+    icon: Globe,
     features: [
-      'RESTful Design';
-      'JSON Responses';
-      'HTTP Status Codes';
-      'Error Handling';
-    ];
-  };
+      'RESTful DesignJSON Responses',
+      'HTTP Status CodesError Handling',
+    ]
+  },
   {
-    title: 'GraphQL API';
-    description: 'Flexible query language for APIs';
-    icon: Code;
+    title: 'GraphQL API',
+    description: 'Flexible query language for APIs',
+    icon: Code,
     features: [
-      'Single Endpoint';
-      'Type Safety';
-      'Real-time Subscriptions';
-      'Introspection';
-    ];
-  };
+      'Single EndpointType Safety',
+      'Real-time SubscriptionsIntrospection',
+    ]
+  },
   {
-    title: 'WebSocket API';
-    description: 'Real-time bidirectional communication';
-    icon: Zap;
+    title: 'WebSocket API',
+    description: 'Real-time bidirectional communication',
+    icon: Zap,
     features: [
-      'Real-time Updates';
-      'Low Latency';
-      'Persistent Connection';
-      'Event-driven';
-    ];
-  };
+      'Real-time UpdatesLow Latency',
+      'Persistent ConnectionEvent-driven',
+    ]
+  },
   {
-    title: 'Authentication API';
-    description: 'Secure user authentication and authorization';
-    icon: Lock;
+    title: 'Authentication API',
+    description: 'Secure user authentication and authorization',
+    icon: Lock,
     features: [
-      'OAuth 2.0';
-      'JWT Tokens';
-      'Multi-factor Auth';
-      'Session Management';
-    ];
-  };
+      'OAuth 2.0JWT Tokens',
+      'Multi-factor AuthSession Management',
+    ]
+  },
   {
-    title: 'Data API';
-    description: 'Access and manage your data';
-    icon: Database;
+    title: 'Data API',
+    description: 'Access and manage your data',
+    icon: Database,
     features: [
-      'CRUD Operations';
-      'Data Validation';
-      'Query Optimization';
-      'Caching';
-    ];
-  };
+      'CRUD OperationsData Validation',
+      'Query OptimizationCaching',
+    ]
+  },
   {
-    title: 'Analytics API';
-    description: 'Track and analyze usage patterns';
-    icon: Server;
+    title: 'Analytics API',
+    description: 'Track and analyze usage patterns',
+    icon: Server,
     features: [
-      'Usage Metrics';
-      'Performance Data';
-      'Custom Events';
-      'Real-time Dashboards';
-    ];
-  };
+      'Usage MetricsPerformance Data',
+      'Custom EventsReal-time Dashboards',
+    ]
+  },
 ],
 const apiFeatures = [
   {
-    title: 'RESTful APIs';
-    description: 'Clean, intuitive REST API endpoints for easy integration';
-    icon: Code;
+    title: 'RESTful APIs',
+    description: 'Clean, intuitive REST API endpoints for easy integration',
+    icon: Code,
     benefits: [
-      'Standard HTTP methods';
-      'JSON request/response format';
-      'Comprehensive error handling';
-      'Rate limiting and throttling';
-    ];
-  };
+      'Standard HTTP methodsJSON request/response format',
+      'Comprehensive error handlingRate limiting and throttling',
+    ]
+  },
   {
-    title: 'Real-time Communication';
-    description: 'WebSocket and Server-Sent Events for live updates';
-    icon: Zap;
+    title: 'Real-time Communication',
+    description: 'WebSocket and Server-Sent Events for live updates',
+    icon: Zap,
     benefits: [
-      'Instant data synchronization';
-      'Low-latency communication';
-      'Scalable connection management';
-      'Automatic reconnection';
-    ];
-  };
+      'Instant data synchronizationLow-latency communication',
+      'Scalable connection managementAutomatic reconnection',
+    ]
+  },
   {
-    title: 'Security & Authentication';
-    description: 'Enterprise-grade security with multiple auth methods';
-    icon: Shield;
+    title: 'Security & Authentication',
+    description: 'Enterprise-grade security with multiple auth methods',
+    icon: Shield,
     benefits: [
-      'OAuth 2.0 and OpenID Connect';
-      'JWT token management';
-      'API key authentication';
-      'Role-based access control';
-    ];
-  };
+      'OAuth 2.0 and OpenID ConnectJWT token management',
+      'API key authenticationRole-based access control',
+    ]
+  },
   {
-    title: 'Developer Experience';
-    description: 'Comprehensive documentation and developer tools';
-    icon: Book;
+    title: 'Developer Experience',
+    description: 'Comprehensive documentation and developer tools',
+    icon: Book,
     benefits: [
-      'Interactive API documentation';
-      'SDKs for multiple languages';
-      'Code examples and tutorials';
-      'Sandbox environment';
-    ];
-  };
+      'Interactive API documentationSDKs for multiple languages',
+      'Code examples and tutorialsSandbox environment',
+    ]
+  },
 ],
 export default function APIPage() {
   return (

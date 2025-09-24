@@ -7,7 +7,7 @@ export const quoteRequestService = {
       .from('quote_requests'),
       .select(
         `,
-        *;
+        *,
         talent: talent_id (
           display_name),
       `),
@@ -15,9 +15,9 @@ export const quoteRequestService = {
     if (error) throw error,
     // Format the data to include talent_name,
     return data.map((item: any) => ({
-      ...item;
-      talent_name: item.talent?.display_name || 'Unknown Talent';
-    })) as QuoteRequest[]};
+      ...item,
+      talent_name: item.talent?.display_name || 'Unknown Talent'
+    })) as QuoteRequest[]},
   // Get quote requests for a specific talent,
   getByTalentId: async (talentId: string) => {
     const { data, error } = await supabase,
@@ -26,14 +26,14 @@ export const quoteRequestService = {
       .eq('talent_id', talentId),
       .order('created_at', { ascending: false }),
     if (error) throw error,
-    return data as QuoteRequest[]};
+    return data as QuoteRequest[]},
   // Get a single quote request by id,
   getById: async (id: string) => {
     const { data, error } = await supabase,
       .from('quote_requests'),
       .select(
         `,
-        *;
+        *,
         talent: talent_id (
           display_name),
       `),
@@ -41,12 +41,12 @@ export const quoteRequestService = {
       .single(),
     if (error) throw error,
     return {
-      ...data;
-      talent_name: data.talent?.display_name || 'Unknown Talent';
-    } as QuoteRequest};
+      ...data,
+      talent_name: data.talent?.display_name || 'Unknown Talent'
+    } as QuoteRequest},
   // Update quote request status,
   updateStatus: async (id: string, status: QuoteStatus) => {
-    const updates: any = { status };
+    const updates: any = { status },
     // If marking as responded, set replied_at,
     if (status === 'responded') {
       updates.replied_at = new Date().toISOString()}
@@ -68,7 +68,7 @@ export const quoteRequestService = {
       .eq('id', id),
       .select(),
     if (error) throw error,
-    return data[0] as QuoteRequest};
+    return data[0] as QuoteRequest},
   // Archive/Unarchive a quote request,
   toggleArchive: async (id: string, isArchived: boolean) => {
     const { data, error } = await supabase,
@@ -77,7 +77,7 @@ export const quoteRequestService = {
       .eq('id', id),
       .select(),
     if (error) throw error,
-    return data[0] as QuoteRequest};
+    return data[0] as QuoteRequest},
   // Delete a quote request,
   delete: async (id: string) => {
     const { error } = await supabase,
@@ -85,5 +85,5 @@ export const quoteRequestService = {
       .delete(),
       .eq('id', id),
     if (error) throw error,
-    return true};
-};
+    return true},
+},

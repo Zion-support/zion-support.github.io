@@ -4,14 +4,14 @@ import {Footer} from "@/components/Footer",
 import {IntegrationsHub} from "@/components/integrations/IntegrationsHub",
 import {SEO} from "@/components/SEO",
 import {ProtectedRoute} from "@/components/ProtectedRoute",
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { IntegrationsHub } from "@/components/integrations/IntegrationsHub";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { IntegrationsHub } from "@/components/integrations/IntegrationsHub",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
 import React, { useState } from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',

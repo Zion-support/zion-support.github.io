@@ -7,19 +7,19 @@ import useForm from '../../hooks/useForm',
 const ContactForm = () => {
   const [isSubmitted, setIsSubmitted] = useState(false),
   const initialValues ={
-    name: '';
-    email: '';
-    company: '';
-    message: '';
+    name: '',
+    email: '',
+    company: '',
+    message: '',
     service: ''}
 ,
   const serviceOptions = [
-    { value: '', label: 'Select a service' };
-    { value: 'ai-ml', label: 'AI & Machine Learning' };
-    { value: 'cloud', label: 'Cloud Infrastructure' };
-    { value: 'cybersecurity', label: 'Cybersecurity' };
-    { value: 'devops', label: 'DevOps & Automation' };
-    { value: 'consulting', label: 'Technology Consulting' };
+    { value: '', label: 'Select a service' },
+    { value: 'ai-ml', label: 'AI & Machine Learning' },
+    { value: 'cloud', label: 'Cloud Infrastructure' },
+    { value: 'cybersecurity', label: 'Cybersecurity' },
+    { value: 'devops', label: 'DevOps & Automation' },
+    { value: 'consulting', label: 'Technology Consulting' },
     { value: 'other', label: 'Other' }
   ],
   const validateForm = (values) => {
@@ -128,4 +128,4 @@ const ContactForm = () => {
       </form>,
     </div>)}
 ,
-export default ContactForm;
+export default ContactForm,

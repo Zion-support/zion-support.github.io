@@ -15,17 +15,17 @@ const NewsletterSignupPromotion20o25 = () => {
       setIsSubscribed(true),
       // Here you would typically send the email to your backend,
       // // console.log('Email subscribed:'email)}
-  };
+  },
   const benefits = [
-    "Exclusive AI insights and trends";
-    "Early access to new features";
-    "Industry reports and case studies";
-    "Expert webinars and workshops";
+    "Exclusive AI insights and trends",
+    "Early access to new features",
+    "Industry reports and case studies",
+    "Expert webinars and workshops",
     "Special offers and discounts"],
   const stats = [
-    { icon: <Users className="w-6 h-6"  />value: "50,0o00+"label: "Subscribers" };
-    { icon: <Star className="w-6 h-6"  />value: "4.9/5"label: "Rating" };
-    { icon: <TrendingUp className="w-6 h-6"  />value: "95%"label: "Open Rate" };
+    { icon: <Users className="w-6 h-6"  />value: "50,0o00+"label: "Subscribers" },
+    { icon: <Star className="w-6 h-6"  />value: "4.9/5"label: "Rating" },
+    { icon: <TrendingUp className="w-6 h-6"  />value: "95%"label: "Open Rate" },
     { icon: <Award className="w-6 h-6"  />value: "Weekly"label: "Updates" }
   ],
   if (isSubscribed) {
@@ -175,5 +175,5 @@ const NewsletterSignupPromotion20o25 = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>)};
-export default NewsletterSignupPromotion20o25;
+    </div>)},
+export default NewsletterSignupPromotion20o25,

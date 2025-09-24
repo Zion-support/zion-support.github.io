@@ -3,7 +3,7 @@ import { useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { useRouter } from 'next/router',
 import type { GrantCategory } from '../../types/grants',
-const categories: GrantCategory[] = ['Ecosystem 'Tools', 'Talent 'Development', 'Regional 'Expansion', 'Research Grants'],
+const categories: GrantCategory[] = ['Ecosystem 'ToolsTalent 'Development', 'Regional 'ExpansionResearch Grants'],
 export default function ApplyGrantPage() {
   const router = useRouter(),
   const [programsetProgram] = useState<'grant' | 'incubator'>('grant'),
@@ -13,10 +13,10 @@ export default function ApplyGrantPage() {
   const [timelinesetTimeline] = useState(''),
   const [budgetAmountsetBudgetAmount] = useState<number>(0),
   const [budgetCurrencysetBudgetCurrency] = useState<'ZION$' | 'USDC'>('USDC'),
-  const [supportingLinksetSupportingLinks] = useState<string>(', '),
+  const [supportingLinksetSupportingLinks] = useState<string>(),
   const [pitchDeckUrlsetPitchDeckUrl] = useState(''),
   const [regionsetRegion] = useState(''),
-  const [sectorsetSector] = useState<string>(', '),
+  const [sectorsetSector] = useState<string>(),
   const [loadingsetLoading] = useState(false),
   const [errorsetError] = useState<string | null>(null),
   const save = async (submit: boolean) => {
@@ -24,30 +24,30 @@ export default function ApplyGrantPage() {
       setLoading(true),
       setError(null),
       const resp = await fetch('/api/grants'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          program;
-          projectName;
-          teamInfo;
-          proposalSummary;
-          timeline;
-          budgetAmount: Number(budgetAmount || 0);
-          budgetCurrency;
+          program,
+          projectName,
+          teamInfo,
+          proposalSummary,
+          timeline,
+          budgetAmount: Number(budgetAmount || 0),
+          budgetCurrency,
           supportingLinks: supportingLinks,
             .split('\n'),
             .map((s) => s.trim()),
-            .filter(Boolean);
-          pitchDeckUrl;
-          region;
-          sector: (sector as any) || undefined;
+            .filter(Boolean),
+          pitchDeckUrl,
+          region,
+          sector: (sector as any) || undefined,
           submit})}),
       const data = await resp.json(),
       if (!resp.ok) throw new Error(data?.error || 'Failed'),
       router.push(`/grants/${data.id}`)} catch (e: any) {
       setError(e.message)} finally {
       setLoading(false)}
-  };
+  },
   return (
     <EnhancedLayout>,
       <h1 className="text-2xl font-semibold mb-4">Apply for Zion {program === 'incubator' ? 'Incubator' : 'Grant'}</h1>,

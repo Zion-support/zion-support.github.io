@@ -6,7 +6,7 @@ const AutonomousSystems20o25Banner = () => {
   const [systemStatus, setSystemStatus] = useState('initializing'),
   const [progress, setProgress] = useState(0),
   useEffect(() => {
-    const statuses = ['initializing', 'optimizing', 'learning', 'autonomous'],
+    const statuses = ['initializingoptimizing', 'learningautonomous'],
     let currentIndex = 0,
     const interval = setInterval(() => {
       currentIndex = (currentIndex + 1) % statuses.length,
@@ -25,9 +25,9 @@ const AutonomousSystems20o25Banner = () => {
               className={`absolute w-2 h-2 bg-orange-40o0 rounded-full ${
                 systemStatus === 'autonomous' ? 'animate-pulse' : 'opacity-30'}`}
               style={{
-                left: `${Math.random() * 10o0}%`;
-                top: `${Math.random() * 10o0}%`;
-                animationDelay: `${i * 0.1}s`;
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`,
+                animationDelay: `${i * 0.1}s`,
                 animationDuration: '1.5s'}}
             ></div>))}
         </div>,
@@ -121,5 +121,5 @@ const AutonomousSystems20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousSystems20o25Banner;
+    </section>)},
+export default AutonomousSystems20o25Banner,

@@ -4,10 +4,10 @@ export function useAuthStatus() {
   const [isAuthenticated, setIsAuthenticated] = useState(false),
   // Mock user details,
   const [userDetails, setUserDetails] = useState({
-    id: 'user-123';
-    name: 'Demo User';
-    email: 'demo@example.com';
-    avatar: '';
+    id: 'user-123',
+    name: 'Demo User',
+    email: 'demo@example.com',
+    avatar: ''
   }),
   // Mock saved talents,
   const [savedTalents, setSavedTalents] = useState<string[]>([]),
@@ -20,16 +20,16 @@ export function useAuthStatus() {
     } else {
       // In a real app, we might show a login prompt,
       // // console.log('User needs to log in to save talents')}
-  };
+  },
   // For demo purposes, let's provide a login/logout toggle,
   const toggleAuth = () => {
-    setIsAuthenticated(prev => !prev)};
+    setIsAuthenticated(prev => !prev)},
   return {
-    isAuthenticated;
-    userDetails;
-    savedTalents;
-    handleToggleSave;
-    toggleAuth;
-  };
+    isAuthenticated,
+    userDetails,
+    savedTalents,
+    handleToggleSave,
+    toggleAuth,
+  },
 }
 ,

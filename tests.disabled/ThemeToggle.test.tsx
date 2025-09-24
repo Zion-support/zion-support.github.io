@@ -1,7 +1,7 @@
 import { render, fireEvent, waitFor } from @testing-library/react', // Added waitFor,
 // Mock Sentry to prevent errors in test environment,
-jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn();
-  init: jest.fn();
+jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn(),
+  init: jest.fn(),
   // Add any other Sentry functions that might be called by the component or its dependencies,
   // For example, if it uses withSentryConfig, Sentry.XYZ, etc.,
   // For now, init and captureException are common ones.})),

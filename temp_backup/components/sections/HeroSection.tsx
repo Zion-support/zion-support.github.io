@@ -1,13 +1,12 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 ArrowRightPlayStarUsersAwardZap,
 const HeroSection: React.FC = () => {
   const stats = [
-    { icon: Usersvalue: '50o0+'label: 'Happy Clients' };
-    { icon: Awardvalue: '50+'label: 'Awards Won' };
-    { icon: Starvalue: '99%'label: 'Client Satisfaction' };
+    { icon: Usersvalue: '50o0+'label: 'Happy Clients' },
+    { icon: Awardvalue: '50+'label: 'Awards Won' },
+    { icon: Starvalue: '99%'label: 'Client Satisfaction' },
     { icon: Zapvalue: '24/7'label: 'Support Available' }
   ],
   return (
@@ -18,21 +17,21 @@ const HeroSection: React.FC = () => {
         <motion.div,
           className="absolute top-20 left-20 w-72 h-72 bg-blue-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1.21];
+            scale: [1.21],
             opacity: [0.30.60.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-20 w-96 h-96 bg-purple-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1.21.2];
+            scale: [1.21.2],
             opacity: [0.60.30.6]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Grid Pattern */}
@@ -132,5 +131,5 @@ const HeroSection: React.FC = () => {
            />,
         </motion.div>,
       </motion.div>,
-    </section>)};
-export default HeroSection;
+    </section>)},
+export default HeroSection,

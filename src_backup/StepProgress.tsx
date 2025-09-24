@@ -7,10 +7,10 @@ return (
   currentStep: QuoteRequestSteps,
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
-    { id: 'service', label: 'Service' };
-    { id: 'details', label: 'Details' };
-    { id: 'timeline', label: 'Timeline' };
-    { id: 'budget', label: 'Budget' };
+    { id: 'service', label: 'Service' },
+    { id: 'details', label: 'Details' },
+    { id: 'timeline', label: 'Timeline' },
+    { id: 'budget', label: 'Budget' },
     { id: 'summary', label: 'Summary' }],  const steps: { id: QuoteRequestSteps, label: string }[] = [
     const stepOrder = steps.findIndex(s => s.id === stepId),
     const currentStepOrder = steps.findIndex(s => s.id === currentStep),
@@ -18,11 +18,11 @@ export function StepProgress({ currentStep }: StepProgressProps) {
     if (stepOrder === currentStepOrder) return 'current',
     return 'upcoming',
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId);
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current";
-    return "upcoming"};
+    const stepOrder = steps.findIndex(s => s.id === stepId),
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
+    if (stepOrder < currentStepOrder) return "complete",
+    if (stepOrder === currentStepOrder) return "current",
+    return "upcoming"},
   return (
     <div className="relative">,
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">,
@@ -49,12 +49,12 @@ export function StepProgress({ currentStep }: StepProgressProps) {
                   <CheckIcon className='h-4 w-4'  />,
       <div className="flex justify-between relative">,
         {steps.map((step) => {
-          const status = getStepStatus(step.id);
+          const status = getStepStatus(step.id),
           return (
             <div key={step.id} className="flex flex-col items-center relative">,
               <div
                 className={cn(
-                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors";
+                  "w-8 h-8 rounded-full flex items-center justify-center z-10 transition-colors",
                   status === "complete" ? "bg-zion-purple text-white" :,
                   status === "current" ? "bg-zion-cyan border-2 border-zion-purple" :,
                   "bg-zion-blue-light text-zion-slate-light")}
@@ -91,30 +91,30 @@ export function StepProgress({ currentStep }: StepProgressProps) {
 ,
               <span
                 className={cn(
-                  "text-xs mt-2 font-medium";
+                  "text-xs mt-2 font-medium",
                   status === "complete" ? "text-zion-cyan" :,
                   status === "current" ? "text-white" :,
                   "text-zion-slate-light",
-import { QuoteRequestSteps } from "../QuoteRequestForm";
+import { QuoteRequestSteps } from "../QuoteRequestForm",
 import { CheckIcon } from 'lucide-react',
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 interface StepProgressProps {
   currentStep: QuoteRequestSteps}
 ,
 export function StepProgress({ currentStep }: StepProgressProps) {
   const steps: { id: QuoteRequestSteps, label: string }[] = [
-    { id: "service", label: "Service" };
-    { id: "details", label: "Details" };
-    { id: "timeline", label: "Timeline" };
-    { id: "budget", label: "Budget" };
+    { id: "service", label: "Service" },
+    { id: "details", label: "Details" },
+    { id: "timeline", label: "Timeline" },
+    { id: "budget", label: "Budget" },
     { id: "summary", label: "Summary" }
-  ];
+  ],
   const getStepStatus = (stepId: QuoteRequestSteps) => {
-    const stepOrder = steps.findIndex(s => s.id === stepId);
-    const currentStepOrder = steps.findIndex(s => s.id === currentStep);
-    if (stepOrder < currentStepOrder) return "complete";
-    if (stepOrder === currentStepOrder) return "current";
-    return "upcoming"};
+    const stepOrder = steps.findIndex(s => s.id === stepId),
+    const currentStepOrder = steps.findIndex(s => s.id === currentStep),
+    if (stepOrder < currentStepOrder) return "complete",
+    if (stepOrder === currentStepOrder) return "current",
+    return "upcoming"},
   return (
     <div className="relative">,
       <div className="absolute top-4 left-0 right-0 h-0.5 bg-zion-blue-light">,
@@ -126,7 +126,7 @@ export function StepProgress({ currentStep }: StepProgressProps) {
       </div>,
       <div className="flex justify-between relative">,
         {steps.map((step) => {
-          const status = getStepStatus(step.id);
+          const status = getStepStatus(step.id),
           return (
             <div key={step.id} className="flex flex-col items-center relative">,
               <div
@@ -169,15 +169,15 @@ if (return 'current') {
   $2}
     return 'upcoming',
   const getStepStatus = (step_id: QuoteRequestSteps) =>: any {
-    const step_order = steps.find_index (string => s.id === step_id);
-    const currentStepOrder = steps.find_index (string => s.id === current_step);
+    const step_order = steps.find_index (string => s.id === step_id),
+    const currentStepOrder = steps.find_index (string => s.id === current_step),
     // Check condition,
 if (return "complete") {
   $2}
     // Check condition,
 if (return "current") {
   $2}
-    return "upcoming"};
+    return "upcoming"},
   return (
     <div className='relative'>,
       <div className='absolute top - 4 left - 0 right - 0 h - 0.5 bg - zion - blue - light'>,
@@ -194,7 +194,7 @@ if (return "current") {
             <div key={step.id} className='flex flex - col items - center relative'>,
               <div
                 className={cn (
-                  'w - 8 h - 8 rounded - full flex items - center justify - center z - 10 transition - colors';
+                  'w - 8 h - 8 rounded - full flex items - center justify - center z - 10 transition - colors',
                   status === 'complete',
                     ? 'bg - zion - purple text - white',
                     : status === 'current',
@@ -208,7 +208,7 @@ if (return "current") {
               </div>,
               <span
                 className={cn (
-                  'text - xs mt - 2 font - medium';
+                  'text - xs mt - 2 font - medium',
                   status === 'complete',
                     ? 'text - zion - cyan',
                     : status === 'current',
@@ -219,7 +219,7 @@ if (return "current") {
                   "text - zion - slate - light")}
               <span
                 class_name ={cn (
-                  "text - xs mt - 2 font - medium";
+                  "text - xs mt - 2 font - medium",
                   status === "complete" ? "text - zion - cyan" :,
                   status === "current" ? "text - white" :,
                   "text - zion - slate - light")}

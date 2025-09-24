@@ -6,8 +6,8 @@ interface UltraAdvancedFuturisticBackground20o40Props {
   children?: React.ReactNode}
 ,
 export default function UltraAdvancedFuturisticBackground20o40({
-  intensity = 'medium';
-  theme = 'quantum-neon';
+  intensity = 'medium',
+  theme = 'quantum-neon',
   children}: UltraAdvancedFuturisticBackground20o40Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -38,44 +38,44 @@ export default function UltraAdvancedFuturisticBackground20o40({
     switch (theme) {
       case 'holographic-cyberpunk':,
         return {
-          primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80'];
-          secondary: ['#80o00ff', '#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
-          accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#ff6b6b', '#4ecdc4'];
-          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80'];
-          holographic: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'];
-          cyberpunk: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80']};
+          primary: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff#0o0ff80'],
+          secondary: ['#80o00ff#0o0ff80', '#ff80o00#0o080ff', '#ff4080#40ffff'],
+          accent: ['#ff4080#40ffff', '#ffff40#ff40ff', '#ff6b6b#4ecdc4'],
+          neon: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff#0o0ff80'],
+          holographic: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3'],
+          cyberpunk: ['#ff0o055#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff#0o0ff80']},
       case 'neural-quantum':,
         return {
-          primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444'];
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'];
-          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4'];
-          neural: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'];
-          quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'];
-          consciousness: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3']};
+          primary: ['#8b5cf6#0o6b6d4', '#ec4899#10b981', '#f59e0b#ef4444'],
+          secondary: ['#f59e0b#ef4444', '#8b5cf6#0o6b6d4', '#ec4899#10b981'],
+          accent: ['#ec4899#10b981', '#f59e0b#ef4444', '#8b5cf6#0o6b6d4'],
+          neural: ['#0o0d4ff#8b5cf6', '#ec4899#10b981', '#f59e0b#ef4444'],
+          quantum: ['#0o0ffff#ff0o0ff', '#ffff0o0#0o0ff0o0', '#ff0o080#80o00ff'],
+          consciousness: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3']},
       case 'space-time':,
         return {
-          primary: ['#1e40af', '#7c3aed', '#0o59669', '#dc2626', '#ea580c', '#d9770o6'];
-          secondary: ['#d9770o6', '#ea580c', '#dc2626', '#0o59669', '#7c3aed', '#1e40af'];
-          accent: ['#7c3aed', '#1e40af', '#d9770o6', '#ea580c', '#dc2626', '#0o59669'];
-          space: ['#0f172a', '#1e293b', '#334155', '#475569', '#64748b', '#94a3b8'];
-          time: ['#fbbf24', '#f59e0b', '#d9770o6', '#ea580c', '#dc2626', '#b91c1c'];
-          cosmic: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b', '#ef4444']};
+          primary: ['#1e40af#7c3aed', '#0o59669#dc2626', '#ea580c#d9770o6'],
+          secondary: ['#d9770o6#ea580c', '#dc2626#0o59669', '#7c3aed#1e40af'],
+          accent: ['#7c3aed#1e40af', '#d9770o6#ea580c', '#dc2626#0o59669'],
+          space: ['#0f172a#1e293b', '#334155#475569', '#64748b#94a3b8'],
+          time: ['#fbbf24#f59e0b', '#d9770o6#ea580c', '#dc2626#b91c1c'],
+          cosmic: ['#8b5cf6#0o6b6d4', '#ec4899#10b981', '#f59e0b#ef4444']},
       case 'consciousness-ai':,
         return {
-          primary: ['#ec4899', '#8b5cf6', '#0o6b6d4', '#10b981', '#f59e0b', '#ef4444'];
-          secondary: ['#f59e0b', '#ef4444', '#ec4899', '#8b5cf6', '#0o6b6d4', '#10b981'];
-          accent: ['#10b981', '#f59e0b', '#ef4444', '#ec4899', '#8b5cf6', '#0o6b6d4'];
-          consciousness: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3'];
-          ai: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'];
-          neural: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80']};
+          primary: ['#ec4899#8b5cf6', '#0o6b6d4#10b981', '#f59e0b#ef4444'],
+          secondary: ['#f59e0b#ef4444', '#ec4899#8b5cf6', '#0o6b6d4#10b981'],
+          accent: ['#10b981#f59e0b', '#ef4444#ec4899', '#8b5cf6#0o6b6d4'],
+          consciousness: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3'],
+          ai: ['#0o0d4ff#8b5cf6', '#ec4899#10b981', '#f59e0b#ef4444'],
+          neural: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff#0o0ff80']},
       default: // quantum-neon,
         return {
-          primary: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'];
-          secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'];
-          accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#0o0d4ff', '#8b5cf6'];
-          neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff', '#0o0ff80'];
-          quantum: ['#0o0d4ff', '#8b5cf6', '#ec4899', '#10b981', '#f59e0b', '#ef4444'];
-          consciousness: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57', '#ff9ff3']};
+          primary: ['#0o0d4ff#8b5cf6', '#ec4899#10b981', '#f59e0b#ef4444'],
+          secondary: ['#f59e0b#ef4444', '#8b5cf6#0o6b6d4', '#ec4899#10b981'],
+          accent: ['#ec4899#10b981', '#f59e0b#ef4444', '#0o0d4ff#8b5cf6'],
+          neon: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff#0o0ff80'],
+          quantum: ['#0o0d4ff#8b5cf6', '#ec4899#10b981', '#f59e0b#ef4444'],
+          consciousness: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57#ff9ff3']},
     }
   }, [theme]),
   // Initialize particles with enhanced consciousness and quantum effects,
@@ -88,29 +88,29 @@ export default function UltraAdvancedFuturisticBackground20o40({
     const particleCount = Math.floor(baseCount * (intensity === 'low' ? 0.7 : intensity === 'medium' ? 1 : 2)),
     particles.current = [],
     for (let i = 0, i < particleCount, i++) {
-      const particleTypes = ['quantum', 'neon', 'holographic', 'neural', 'consciousness', 'space-time', 'cyberpunk', 'energy', 'data-stream', 'quantum-entangled'],
+      const particleTypes = ['quantumneon', 'holographicneural', 'consciousnessspace-time', 'cyberpunkenergy', 'data-streamquantum-entangled'],
       const particleType = particleTypes[Math.floor(Math.random() * particleTypes.length)],
       const baseColor = colors.primary[Math.floor(Math.random() * colors.primary.length)],
       const secondaryColor = colors.secondary[Math.floor(Math.random() * colors.secondary.length)],
       particles.current.push({
-        x: Math.random() * window.innerWidth;
-        y: Math.random() * window.innerHeight;
-        vx: (Math.random() - 0.5) * 1.2;
-        vy: (Math.random() - 0.5) * 1.2;
-        size: Math.random() * 4 + 1;
-        opacity: Math.random() * 0.8 + 0.2;
-        color: baseColor;
-        life: Math.random() * 10o0 + 50;
-        maxLife: Math.random() * 10o0 + 50;
-        type: particleType as any;
-        rotation: Math.random() * Math.PI * 2;
-        rotationSpeed: (Math.random() - 0.5) * 0.1;
-        pulse: Math.random() * Math.PI * 2;
-        pulseSpeed: Math.random() * 0.0o5 + 0.0o2;
-        hue: Math.random() * 360;
-        trail: [];
-        quantumState: Math.random() * Math.PI * 2;
-        consciousness: Math.random();
+        x: Math.random() * window.innerWidth,
+        y: Math.random() * window.innerHeight,
+        vx: (Math.random() - 0.5) * 1.2,
+        vy: (Math.random() - 0.5) * 1.2,
+        size: Math.random() * 4 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: baseColor,
+        life: Math.random() * 10o0 + 50,
+        maxLife: Math.random() * 10o0 + 50,
+        type: particleType as any,
+        rotation: Math.random() * Math.PI * 2,
+        rotationSpeed: (Math.random() - 0.5) * 0.1,
+        pulse: Math.random() * Math.PI * 2,
+        pulseSpeed: Math.random() * 0.0o5 + 0.0o2,
+        hue: Math.random() * 360,
+        trail: [],
+        quantumState: Math.random() * Math.PI * 2,
+        consciousness: Math.random(),
         neuralConnections: []})}
 ,
     // Create neural connections between particles,
@@ -120,7 +120,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
         const target = Math.floor(Math.random() * particles.current.length),
         if (target !== i) {
           particles.current[i].neuralConnections.push({
-            target;
+            target,
             strength: Math.random() * 0.5 + 0.1})}
       }
     }
@@ -136,7 +136,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
     canvas.height = window.innerHeight,
     // Clear canvas with gradient background,
     const gradient = ctx.createRadialGradient(
-      canvas.width / 2, canvas.height / 2, 0;
+      canvas.width / 2, canvas.height / 2, 0,
       canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2),
     const colors = getThemeColors(),
     gradient.addColorStop(0, 'rgba(0, 0, 0, 0.1)'),
@@ -172,9 +172,9 @@ export default function UltraAdvancedFuturisticBackground20o40({
 ,
       // Update trail,
       particle.trail.push({
-        x: particle.x;
-        y: particle.y;
-        opacity: particle.opacity;
+        x: particle.x,
+        y: particle.y,
+        opacity: particle.opacity,
         color: particle.color}),
       // Limit trail length,
       if (particle.trail.length > 20) {
@@ -186,7 +186,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
         ctx.globalAlpha = trailOpacity,
         // Create trail gradient,
         const trailGradient = ctx.createRadialGradient(
-          trailPoint.x, trailPoint.y, 0;
+          trailPoint.x, trailPoint.y, 0,
           trailPoint.x, trailPoint.y, particle.size * 2),
         trailGradient.addColorStop(0, trailPoint.color),
         trailGradient.addColorStop(1, 'transparent'),
@@ -198,7 +198,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
       ctx.globalAlpha = particle.opacity * (0.8 + 0.2 * Math.sin(particle.pulse)),
       // Create particle glow effect,
       const glowGradient = ctx.createRadialGradient(
-        particle.x, particle.y, 0;
+        particle.x, particle.y, 0,
         particle.x, particle.y, particle.size * 4),
       glowGradient.addColorStop(0, particle.color),
       glowGradient.addColorStop(0.5, particle.color + '80'),
@@ -287,7 +287,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
     if (theme === 'consciousness-ai' || theme === 'neural-quantum') {
       ctx.globalAlpha = 0.1,
       const consciousnessGradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 3),
       consciousnessGradient.addColorStop(0, colors.consciousness[0]),
       consciousnessGradient.addColorStop(0.5, colors.consciousness[2]),
@@ -306,7 +306,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
     return () => {
       if (animationFrameRef.current) {
         cancelAnimationFrame(animationFrameRef.current)}
-    };
+    },
   }, [initParticles, animate]),
   // Handle window resize,
   useEffect(() => {
@@ -314,7 +314,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
       if (canvasRef.current) {
         canvasRef.current.width = window.innerWidth,
         canvasRef.current.height = window.innerHeight}
-    };
+    },
     window.addEventListener('resize', handleResize),
     return () => window.removeEventListener('resize', handleResize)}, []),
   return (
@@ -323,7 +323,7 @@ export default function UltraAdvancedFuturisticBackground20o40({
         ref={canvasRef}
         className="w-full h-full",
         style={{
-          background: 'transparent';
+          background: 'transparent',
           filter: 'blur(0.5px)'}}
        />,
       {/* Additional visual effects */}
@@ -335,15 +335,15 @@ export default function UltraAdvancedFuturisticBackground20o40({
               key={i}
               className="absolute w-px h-32 bg-gradient-to-b from-cyan-40o0/0 via-cyan-40o0/50 to-cyan-40o0/0",
               style={{
-                left: `${(i * 5) % 10o0}%`;
-                top: `${Math.random() * 10o0}%`;
+                left: `${(i * 5) % 10o0}%`,
+                top: `${Math.random() * 10o0}%`,
                 transform: `rotate(${Math.random() * 360}deg)`}}
               animate={{
-                opacity: [0, 1, 0];
+                opacity: [0, 1, 0],
                 scaleY: [0, 1, 0]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
@@ -355,16 +355,16 @@ export default function UltraAdvancedFuturisticBackground20o40({
                 key={i}
                 className="absolute w-4 h-4 rounded-full bg-gradient-to-r from-purple-40o0 to-pink-40o0",
                 style={{
-                  left: `${20 + i * 15}%`;
+                  left: `${20 + i * 15}%`,
                   top: `${30 + i * 10}%`}}
                 animate={{
-                  scale: [1, 1.5, 1];
-                  opacity: [0.3, 0.8, 0.3];
-                  x: [0, 20, 0];
+                  scale: [1, 1.5, 1],
+                  opacity: [0.3, 0.8, 0.3],
+                  x: [0, 20, 0],
                   y: [0, -20, 0]}}
                 transition={{
-                  duration: 4 + i;
-                  repeat: Infinity;
+                  duration: 4 + i,
+                  repeat: Infinity,
                   delay: i * 0.5}}
                />))}
           </div>)}
@@ -377,14 +377,14 @@ export default function UltraAdvancedFuturisticBackground20o40({
                 key={i}
                 className="absolute w-1 h-1 bg-green-40o0 rounded-full",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 animate={{
-                  scale: [0, 1, 0];
+                  scale: [0, 1, 0],
                   opacity: [0, 1, 0]}}
                 transition={{
-                  duration: 2 + Math.random() * 2;
-                  repeat: Infinity;
+                  duration: 2 + Math.random() * 2,
+                  repeat: Infinity,
                   delay: Math.random() * 2}}
                />))}
           </div>)}

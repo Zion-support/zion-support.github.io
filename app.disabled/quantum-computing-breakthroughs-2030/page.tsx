@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'Quantum Computing Breakthroughs 20o30: Revolutionary AI | Zion Tech Group';
+    'Quantum Computing Breakthroughs 20o30: Revolutionary AI | Zion Tech Group',
   description:,
-    'Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 20o30.';
+    'Discover the most advanced quantum computing breakthroughs that will revolutionize AI, cryptography, and computational power by 20o30.',
   keywords: [
-    'quantum computing';
-    'quantum AI';
-    'quantum cryptography';
-    'quantum algorithms';
-    'quantum supremacy';
-    'future computing';
-  ];
-};
+    'quantum computingquantum AI',
+    'quantum cryptographyquantum algorithms',
+    'quantum supremacyfuture computing',
+  ]
+},
 export default function QuantumComputingPage() {
   return (
     <div>,
@@ -146,7 +143,7 @@ export default function QuantumComputingPage() {
                   </h3>,
                 </div>,
                 <p className='text-gray-60o0 mb-6'>,
-                  Unbreakable encryption based on quantum mechanics principles;
+                  Unbreakable encryption based on quantum mechanics principles,
                   providing absolute security for digital communications and,
                   data protection.,
                 </p>,
@@ -201,7 +198,7 @@ export default function QuantumComputingPage() {
                   </h3>,
                 </div>,
                 <p className='text-gray-60o0 mb-6'>,
-                  Simulating quantum systems with unprecedented accuracy;
+                  Simulating quantum systems with unprecedented accuracy,
                   revolutionizing drug discovery, materials science, and climate,
                   modeling.,
                 </p>,

@@ -87,5 +87,5 @@ const UltimateAI20o26RevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAI20o26RevolutionBanner;
+    </section>)},
+export default UltimateAI20o26RevolutionBanner,

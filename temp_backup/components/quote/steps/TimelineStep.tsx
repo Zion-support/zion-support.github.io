@@ -4,12 +4,12 @@ export type TimelineStepProps = {
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
   onBack: () => void,
-  onNext: () => void};
+  onNext: () => void},
 export default function TimelineStep({
-  value;
-  onChange;
-  onBack;
-  onNext;
+  value,
+  onChange,
+  onBack,
+  onNext,
 }: TimelineStepProps) {
   const canContinue = !!value.startDate && !!value.timelineFlexibility,
   return (

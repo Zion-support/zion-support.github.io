@@ -5,7 +5,7 @@ import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GrantApplication } from '../../types/grants',
 export default function GrantDetailPage() {
   const router = useRouter(),
-  const { id } = router.query as { id: string };
+  const { id } = router.query as { id: string },
   const [itemsetItem] = useState<GrantApplication | null>(null),
   const [loadingsetLoading] = useState(true),
   const [updateContentsetUpdateContent] = useState(''),
@@ -15,12 +15,12 @@ export default function GrantDetailPage() {
     fetch(`/api/grants/${id}`).then((r) => r.json()).then((d) => setItem(d.record)).finally(() => setLoading(false))}[id]),
   const addUpdate = async () => {
     if (!id || !updateContent.trim()) return,
-    const resp = await fetch(`/api/grants/${id}/updates`{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ content: updateContent }) }),
+    const resp = await fetch(`/api/grants/${id}/updates`{ method: ''POSTheaders: { 'Content-Type': 'application/json' }body: JSON.stringify({ content: updateContent }) }),
     if (resp.ok) {
       const u = await resp.json(),
       setItem((prev) => prev ? { ...prevupdates: [...(prev.updates || [])u.update] } : prev),
-      setUpdateContent(', ')}
-  };
+      setUpdateContent()}
+  },
   if (loading) return <EnhancedLayout><div>Loading...</div></EnhancedLayout>,
   if (!item) return <EnhancedLayout><div>Not found</div></EnhancedLayout>,
   return (

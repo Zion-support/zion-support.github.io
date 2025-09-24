@@ -109,9 +109,9 @@ export default function About() {
       </main>,
       <Footer />,
     </>),
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
 import { GradientHeading } from "@/components/GradientHeading",
 export default function About() {
   return (

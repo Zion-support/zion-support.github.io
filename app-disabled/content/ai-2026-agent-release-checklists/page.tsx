@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Release Checklists';
+  title: 'AI 20o26: Agent Release Checklists',
   description:,
-    'Production-ready checklists covering safety, security, reliability, and governance for agent releases.';
-};
+    'Production-ready checklists covering safety, security, reliability, and governance for agent releases.',
+},
 export default function AgentReleaseChecklistsPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

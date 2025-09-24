@@ -12,7 +12,7 @@ interface AnalyticsData {
     fcp: number,
     lcp: number,
     fid: number,
-    cls: number};
+    cls: number},
 }
 ,
 export default function AnalyticsDashboard() {
@@ -27,37 +27,37 @@ export default function AnalyticsDashboard() {
       await new Promise(resolve => setTimeout(resolve10o00)),
       // Mock data - in real implementationthis would come from your analytics API,
       const mockData: AnalyticsData ={
-        pageViews: Math.floor(Math.random() * 10o000) + 50o00;
-        uniqueVisitors: Math.floor(Math.random() * 50o00) + 250o0;
-        bounceRate: Math.random() * 30 + 20;
-        avgSessionDuration: Math.random() * 30o0 + 120;
+        pageViews: Math.floor(Math.random() * 10o000) + 50o00,
+        uniqueVisitors: Math.floor(Math.random() * 50o00) + 250o0,
+        bounceRate: Math.random() * 30 + 20,
+        avgSessionDuration: Math.random() * 30o0 + 120,
         topPages: [
-          { path: '/'views: Math.floor(Math.random() * 20o00) + 10o00 };
-          { path: '/ai-20o26-advanced-automation-'mastery', 'views: Math.floor(Math.random() * 150o0) + 80o0 };
-          { path: '/ai-20o26-neural-interface-'revolution', 'views: Math.floor(Math.random() * 120o0) + 60o0 };
-          { path: '/'services', 'views: Math.floor(Math.random() * 10o00) + 50o0 };
-          { path: '/'about', 'views: Math.floor(Math.random() * 80o0) + 40o0 };
-        ];
+          { path: '/'views: Math.floor(Math.random() * 20o00) + 10o00 },
+          { path: '/ai-20o26-advanced-automation-'masteryviews: Math.floor(Math.random() * 150o0) + 80o0 },
+          { path: '/ai-20o26-neural-interface-'revolutionviews: Math.floor(Math.random() * 120o0) + 60o0 },
+          { path: '/'servicesviews: Math.floor(Math.random() * 10o00) + 50o0 },
+          { path: '/'aboutviews: Math.floor(Math.random() * 80o0) + 40o0 },
+        ],
         trafficSources: [
-          { source: ''Direct', 'percentage: 35 };
-          { source: ''Google', 'percentage: 28 };
-          { source: 'Social 'Media', 'percentage: 20 };
-          { source: ''Referral', 'percentage: 12 };
-          { source: ''Email', 'percentage: 5 };
-        ];
+          { source: ''Directpercentage: 35 },
+          { source: ''Googlepercentage: 28 },
+          { source: 'Social 'Mediapercentage: 20 },
+          { source: ''Referralpercentage: 12 },
+          { source: ''Emailpercentage: 5 },
+        ],
         deviceTypes: [
-          { type: ''Desktop', 'percentage: 45 };
-          { type: ''Mobile', 'percentage: 40 };
-          { type: ''Tablet', 'percentage: 15 };
-        ];
+          { type: ''Desktoppercentage: 45 },
+          { type: ''Mobilepercentage: 40 },
+          { type: ''Tabletpercentage: 15 },
+        ],
         performance: {
-          fcp: Math.random() * 10o00 + 80o0;
-          lcp: Math.random() * 150o0 + 120o0;
-          fid: Math.random() * 50 + 10;
+          fcp: Math.random() * 10o00 + 80o0,
+          lcp: Math.random() * 150o0 + 120o0,
+          fid: Math.random() * 50 + 10,
           cls: Math.random() * 0.1 + 0.0o5}
-      };
+      },
       setAnalyticsData(mockData),
-      setIsLoading(false)};
+      setIsLoading(false)},
     fetchAnalyticsData()}[timeRange]),
   if (isLoading) {
     return (

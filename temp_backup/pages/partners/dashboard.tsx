@@ -10,9 +10,9 @@ export default function PartnerDashboard() {
     if (saved) setToken(saved)}, []),
   async function getToken() {
     const res = await fetch('/api/partners/token', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ apiKey });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ apiKey }),
     }),
     const data = await res.json(),
     if (data.token) {
@@ -23,7 +23,7 @@ export default function PartnerDashboard() {
   async function fetchUsage() {
     setLoading(true),
     const res = await fetch('/api/partners/usage', {
-      headers: token ? { Authorization: `Bearer ${token}` } : {};
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
     }),
     const data = await res.json(),
     setUsage(data.summary || null),
@@ -31,8 +31,8 @@ export default function PartnerDashboard() {
 ,
   async function regenerateKey() {
     const res = await fetch('/api/partners/key', {
-      method: 'POST';
-      headers: token ? { Authorization: `Bearer ${token}` } : {};
+      method: 'POST',
+      headers: token ? { Authorization: `Bearer ${token}` } : {},
     }),
     const data = await res.json(),
     if (data.apiKey) {

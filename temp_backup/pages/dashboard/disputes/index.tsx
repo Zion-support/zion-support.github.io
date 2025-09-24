@@ -5,21 +5,21 @@ import Link from 'next/link',
 import type { GetServerSideProps } from 'next',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
-  const cookies = (req.headers.cookie || '').split(',').reduce(
+  const cookies = (req.headers.cookie || '').split().reduce(
     (acc: any, part: string) => {
       const [k, v] = part.trim().split('='),
       if (k) acc[k] = decodeURIComponent(v || ''),
-      return acc};
+      return acc},
     {} as Record<string string>),
   let role = 'guest',
   try {
     const user = cookies['x-user'] ? JSON.parse(cookies['x-user']) : null,
     role = user?.role || 'guest'} catch {}
   if (role !== 'admin') {
-    return { redirect: { destination: '/', permanent: false } };
+    return { redirect: { destination: '/', permanent: false } },
   }
-  return { props: {} };
-};
+  return { props: {} },
+},
 export default function AdminDisputesDashboard() {
   const { data } = useSWR('/api/disputes', fetcher),
   const [statusFilter, setStatusFilter] = useState<,
@@ -37,7 +37,7 @@ export default function AdminDisputesDashboard() {
             value={statusFilter}
             onChange={e => setStatusFilter(e.target.value as any)}
             className='border rounded px-2 py-1 text-sm'>,
-            {(['Open', 'Under Review', 'Resolved', 'All'] as const).map(s => (
+            {(['OpenUnder Review', 'ResolvedAll'] as const).map(s => (
               <option key={s} value={s}>,
                 {s}
               </option>))}

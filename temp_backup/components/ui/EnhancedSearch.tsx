@@ -21,40 +21,40 @@ const EnhancedSearch: React.FC = () => {
   const [isSearching, setIsSearching] = useState(false),
   const [showFilters, setShowFilters] = useState(false),
   const [filters, setFilters] = useState<SearchFilters>({
-    category: 'all';
-    type: 'all';
+    category: 'all',
+    type: 'all',
     priceRange: 'all'}),
   const [isOpen, setIsOpen] = useState(false),
   const searchRef = useRef<HTMLDivElement>(null),
   const router = useRouter(),
   const categories = [
-    { id: 'all', name: 'All Categories', icon: Sparkles, color: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, color: 'from-cyan-50o0 to-blue-50o0' };
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-50o0 to-indigo-50o0' };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-50o0' };
-    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-50o0 to-teal-50o0' };
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-50o0 to-orange-50o0' };
+    { id: 'all', name: 'All Categories', icon: Sparkles, color: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'ai', name: 'AI & Machine Learning', icon: Brain, color: 'from-cyan-50o0 to-blue-50o0' },
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-50o0 to-indigo-50o0' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-50o0' },
+    { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-50o0 to-teal-50o0' },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-yellow-50o0 to-orange-50o0' },
     { id: 'space', name: 'Space Technology', icon: Globe, color: 'from-purple-50o0 to-indigo-50o0' }
   ],
   const types = [
-    { id: 'all', name: 'All Types' };
-    { id: 'micro-saas', name: 'Micro SAAS' };
-    { id: 'ai-service', name: 'AI Service' };
-    { id: 'it-service', name: 'IT Service' };
+    { id: 'all', name: 'All Types' },
+    { id: 'micro-saas', name: 'Micro SAAS' },
+    { id: 'ai-service', name: 'AI Service' },
+    { id: 'it-service', name: 'IT Service' },
     { id: 'platform', name: 'Platform' }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices' };
-    { id: 'free', name: 'Free' };
-    { id: 'low', name: 'Under $10o0/month' };
-    { id: 'medium', name: '$10o0-$50o0/month' };
+    { id: 'all', name: 'All Prices' },
+    { id: 'free', name: 'Free' },
+    { id: 'low', name: 'Under $10o0/month' },
+    { id: 'medium', name: '$10o0-$50o0/month' },
     { id: 'high', name: 'Over $50o0/month' }
   ],
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   useEffect(() => {
@@ -69,28 +69,28 @@ const EnhancedSearch: React.FC = () => {
     // Mock search results - in real implementation, this would call an API,
     const mockResults: SearchResult[] = [
       {
-        id: 'ai-content-intelligence';
-        title: 'AI Content Intelligence Platform 20o45';
-        description: 'Advanced AI platform for content analysis and optimization';
-        category: 'AI & Machine Learning';
-        type: 'Micro SAAS';
-        slug: '/ai-content-intelligence-platform-20o45';
-        relevance: 0.95};
+        id: 'ai-content-intelligence',
+        title: 'AI Content Intelligence Platform 20o45',
+        description: 'Advanced AI platform for content analysis and optimization',
+        category: 'AI & Machine Learning',
+        type: 'Micro SAAS',
+        slug: '/ai-content-intelligence-platform-20o45',
+        relevance: 0.95},
       {
-        id: 'quantum-secure-data';
-        title: 'Quantum-Secure Data Pipeline Orchestrator';
-        description: 'Quantum-secured data processing platform';
-        category: 'Quantum Technology';
-        type: 'Platform';
-        slug: '/quantum-secure-data-pipeline-orchestrator-20o45';
-        relevance: 0.88};
+        id: 'quantum-secure-data',
+        title: 'Quantum-Secure Data Pipeline Orchestrator',
+        description: 'Quantum-secured data processing platform',
+        category: 'Quantum Technology',
+        type: 'Platform',
+        slug: '/quantum-secure-data-pipeline-orchestrator-20o45',
+        relevance: 0.88},
       {
-        id: 'autonomous-business-intelligence';
-        title: 'Autonomous Business Intelligence Platform';
-        description: 'Fully autonomous AI business intelligence system';
-        category: 'Business Solutions';
-        type: 'AI Service';
-        slug: '/autonomous-business-intelligence-20o45';
+        id: 'autonomous-business-intelligence',
+        title: 'Autonomous Business Intelligence Platform',
+        description: 'Fully autonomous AI business intelligence system',
+        category: 'Business Solutions',
+        type: 'AI Service',
+        slug: '/autonomous-business-intelligence-20o45',
         relevance: 0.82}
     ],
     // Filter results based on search query and filters,
@@ -103,15 +103,15 @@ const EnhancedSearch: React.FC = () => {
                          result.type.toLowerCase().includes(filters.type.toLowerCase()),
       return matchesQuery && matchesCategory && matchesType}),
     setResults(filteredResults),
-    setIsSearching(false)};
+    setIsSearching(false)},
   const handleResultClick = (result: SearchResult) => {
     router.push(result.slug),
     setIsOpen(false),
-    setQuery('')};
+    setQuery('')},
   const clearSearch = () => {
     setQuery(''),
     setResults([]),
-    setIsOpen(false)};
+    setIsOpen(false)},
   return (
     <div className="relative" ref={searchRef}>,
       {/* Search Input */}
@@ -244,5 +244,5 @@ const EnhancedSearch: React.FC = () => {
               </div>) : null}
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default EnhancedSearch;
+    </div>)},
+export default EnhancedSearch,

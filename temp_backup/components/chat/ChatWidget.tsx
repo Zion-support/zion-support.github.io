@@ -2,16 +2,14 @@ import React, { useEffect, useMemo, useRef, useState } from 'react',
 export type ChatMessage = {
   id: string,
   role: 'user' | 'assistant' | 'system',
-  content: string};
+  content: string},
 function generateId() {
   return Math.random().toString(36).slice(2)}
 ,
 const SUGGESTED_QUESTIONS: string[] = [
-  'What is the Zion AI Marketplace?';
-  'How do I list my AI model or service?';
-  'How does pricing and fees work?';
-  'How do I integrate the API into my app?';
-  'How do I contact support?';
+  'What is the Zion AI Marketplace?How do I list my AI model or service?',
+  'How does pricing and fees work?How do I integrate the API into my app?',
+  'How do I contact support?'
 ],
 export default function ChatWidget() {
   const [isOpen, setIsOpen] = useState(false),
@@ -25,40 +23,40 @@ export default function ChatWidget() {
     if (messages.length === 0) {
       setMessages([
         {
-          id: generateId();
-          role: 'assistant';
+          id: generateId(),
+          role: 'assistant',
           content:,
-            "Hi! I'm the Zion Assistant. I can help you explore features, answer FAQs, and guide you around the Zion AI Marketplace. How can I help today?";
-        };
+            "Hi! I'm the Zion Assistant. I can help you explore features, answer FAQs, and guide you around the Zion AI Marketplace. How can I help today?",
+        },
       ])}
     const t = setTimeout(() => inputRef.current?.focus(), 150),
     return () => clearTimeout(t)}, [isOpen]),
   useEffect(() => {
     scrollRef.current?.scrollTo({ top: 999999, behavior: 'smooth' })}, [messages, isOpen]),
   const canSend = useMemo(
-    () => input.trim().length > 0 && !isSending;
+    () => input.trim().length > 0 && !isSending,
     [input, isSending]),
   async function sendMessage(text: string) {
     const trimmed = text.trim(),
     if (!trimmed) return,
     const userMsg: ChatMessage = {
-      id: generateId();
-      role: 'user';
-      content: trimmed;
-    };
+      id: generateId(),
+      role: 'user',
+      content: trimmed
+    },
     setMessages(prev => [...prev, userMsg]),
     setInput(''),
     setIsSending(true),
     try {
       const res = await fetch('/api/assistant', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           messages: [...messages, userMsg].map(m => ({
-            role: m.role;
-            content: m.content;
-          }));
-        });
+            role: m.role,
+            content: m.content
+          })),
+        }),
       }),
       if (!res.ok) {
         throw new Error(`Request failed: ${res.status}`)}
@@ -67,17 +65,17 @@ export default function ChatWidget() {
         data?.message?.content ??,
         'Sorry, I could not generate a response right now.',
       setMessages(prev => [
-        ...prev;
-        { id: generateId(), role: 'assistant', content };
+        ...prev,
+        { id: generateId(), role: 'assistant', content },
       ])} catch (err) {
       setMessages(prev => [
-        ...prev;
+        ...prev,
         {
-          id: generateId();
-          role: 'assistant';
+          id: generateId(),
+          role: 'assistant',
           content:,
-            'Sorry, something went wrong connecting to the assistant. Please try again, and ensure your network is online.';
-        };
+            'Sorry, something went wrong connecting to the assistant. Please try again, and ensure your network is online.',
+        },
       ])} finally {
       setIsSending(false)}
   }

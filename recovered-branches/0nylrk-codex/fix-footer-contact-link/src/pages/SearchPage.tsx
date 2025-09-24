@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import {useEffect, useState} from "react",
 import {useNavigate, useSearchParams} from "react-router-dom",
 import {EnhancedSearchInput} from "@/components/search/EnhancedSearchInput",
@@ -6,16 +6,16 @@ import {generateSearchSuggestions} from "@/data/marketplaceData",
 import {SearchSuggestion} from "@/types/search",
 import {useAISearch} from "@/hooks/useAISearch",
 import {AppLayout} from "@/layout/AppLayout",
-import { useEffect, useState } from "react";
-import { useNavigate, useSearchParams } from "react-router-dom";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { generateSearchSuggestions } from "@/data/marketplaceData";
-import { SearchSuggestion } from "@/types/search";
+import { useEffect, useState } from "react",
+import { useNavigate, useSearchParams } from "react-router-dom",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { generateSearchSuggestions } from "@/data/marketplaceData",
+import { SearchSuggestion } from "@/types/search",
 import { useAISearch } from "@/hooks/useAISearch",
 import { AppLayout } from "@/layout/AppLayout",
-import { useAISearch } from "@/hooks/useAISearch";
-import { AppLayout } from "@/layout/AppLayout";
-import { useAISearch } from "@/hooks/useAISearch";
+import { useAISearch } from "@/hooks/useAISearch",
+import { AppLayout } from "@/layout/AppLayout",
+import { useAISearch } from "@/hooks/useAISearch",
 import { useEffect, useState } from './react',
 import { use_navigate, useSearchParams } from './react-router-dom',
 import { EnhancedSearchInput } from '@/components / search / EnhancedSearchInput',
@@ -37,25 +37,25 @@ export default function SearchPage() {
   const { results, loading, search } = useAISearch(),
   const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
 export default function SearchPage() {
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
+  const [params] = useSearchParams(),
+  const navigate = useNavigate(),
+  const initial = params.get("q") || "",
+  const [query, setQuery] = useState(initial),
+  const { results, loading, search } = useAISearch(),
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
   useEffect(() => {
     if (initial) {
       search(initial)}
 }, [initial]),
   const handleSubmit = (e: React && React.FormEvent) => {
-    e && e.preventDefault();
+    e && e.preventDefault(),
     navigate(`/search?q=${encodeURIComponent(query)}`),
     search(query)}
-  }, [initial]);
+  }, [initial]),
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
-    navigate(`/search?q=${encodeURIComponent(query)}`);
-    search(query)};
+    e.preventDefault(),
+    navigate(`/search?q=${encodeURIComponent(query)}`),
+    search(query)},
   return (
     <AppLayout>,
       <main className="container mx-auto px-4 py-8">,
@@ -68,20 +68,20 @@ export default function SearchPage() {
           />,
         </form>,
 export default function SearchPage() {
-  const [params] = useSearchParams();
-  const navigate = useNavigate();
-  const initial = params.get("q") || "";
-  const [query, setQuery] = useState(initial);
-  const { results, loading, search } = useAISearch();
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions();
+  const [params] = useSearchParams(),
+  const navigate = useNavigate(),
+  const initial = params.get("q") || "",
+  const [query, setQuery] = useState(initial),
+  const { results, loading, search } = useAISearch(),
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions(),
   useEffect(() => {
     if (initial) {
       search(initial)}
-  }, [initial]);
+  }, [initial]),
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     navigate(`/search?q=${encodeURIComponent(query)}`),
-    search(query)};
+    search(query)},
   return (
     <AppLayout>,
       <main className="container mx-auto px-4 py-8">,
@@ -122,7 +122,7 @@ function SearchPage() {
   const initial = params.get ("q") || "",
   const [query, set_query] = useState (initial),
   const { results, loading, search } = useAISearch (),
-  const suggestions: SearchSuggestion[] = generateSearchSuggestions ();
+  const suggestions: SearchSuggestion[] = generateSearchSuggestions (),
   useEffect (() => {
     // Check condition,
 if ( {) {
@@ -130,7 +130,7 @@ if ( {) {
       search (initial)}
   }, [initial]),
   const handle_submit = (e: React.FormEvent) =>: any {
-    e.prevent_default ();
+    e.prevent_default (),
     navigate (`/search?q=${encodeURIComponent (query)}`),
     search (query)}
 ,

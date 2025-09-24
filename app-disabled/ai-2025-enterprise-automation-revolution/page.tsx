@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 Enterprise Automation Revolution: The Ultimate Guide';
+  title: 'AI 20o25 Enterprise Automation Revolution: The Ultimate Guide',
   description:,
-    'Discover how AI-powered automation is revolutionizing enterprise operations in 20o25. Learn about cutting-edge technologies, implementation strategies, and real-world success stories.';
+    'Discover how AI-powered automation is revolutionizing enterprise operations in 20o25. Learn about cutting-edge technologies, implementation strategies, and real-world success stories.',
   keywords: [
-    'AI';
-    'Enterprise Automation';
-    'Digital Transformation';
-    '20o25 Trends';
-    'Business Intelligence';
-  ];
-};
+    'AIEnterprise Automation',
+    'Digital Transformation20o25 Trends',
+    'Business Intelligence',
+  ]
+},
 export default function AIEnterpriseAutomation20o25Page() {
   return (
     <>,

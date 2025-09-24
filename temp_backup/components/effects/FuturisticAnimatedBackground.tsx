@@ -5,7 +5,7 @@ interface FuturisticAnimatedBackgroundProps {
   intensity?: 'low' | 'medium' | 'high'}
 ,
 const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> = ({
-  className = '';
+  className = '',
   intensity = 'medium'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<any[]>([]),
@@ -18,7 +18,7 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle class,
@@ -105,13 +105,13 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
               ctx.stroke()}
           })})}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [intensity]),
   return (
     <div className={`fixed inset-0 z-0 overflow-hidden ${className}`}>,
@@ -128,52 +128,52 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
       <motion.div,
         className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30 rounded-lg",
         animate={{
-          rotate: [0, 360];
+          rotate: [0, 360],
           scale: [1, 1.1, 1]}}
         transition={{
-          duration: 20;
-          repeat: Infinity;
+          duration: 20,
+          repeat: Infinity,
           ease: "linear"}}
        />,
       <motion.div,
         className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
         animate={{
-          y: [0, -20, 0];
+          y: [0, -20, 0],
           opacity: [0.3, 0.7, 0.3]}}
         transition={{
-          duration: 8;
-          repeat: Infinity;
+          duration: 8,
+          repeat: Infinity,
           ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute bottom-32 left-1/4 w-16 h-16 border border-pink-40o0/30 transform rotate-45",
         animate={{
-          x: [0, 20, 0];
+          x: [0, 20, 0],
           rotate: [45, 40o5]}}
         transition={{
-          duration: 15;
-          repeat: Infinity;
+          duration: 15,
+          repeat: Infinity,
           ease: "linear"}}
        />,
       {/* Neon pulse effects */}
       <motion.div,
         className="absolute top-1/2 left-1/2 w-96 h-96 rounded-full border border-cyan-40o0/20",
         animate={{
-          scale: [1, 1.2, 1];
+          scale: [1, 1.2, 1],
           opacity: [0.1, 0.3, 0.1]}}
         transition={{
-          duration: 4;
-          repeat: Infinity;
+          duration: 4,
+          repeat: Infinity,
           ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute top-1/2 left-1/2 w-64 h-64 rounded-full border border-purple-40o0/20",
         animate={{
-          scale: [1, 1.3, 1];
+          scale: [1, 1.3, 1],
           opacity: [0.1, 0.2, 0.1]}}
         transition={{
-          duration: 6;
-          repeat: Infinity;
+          duration: 6,
+          repeat: Infinity,
           ease: "easeInOut"}}
        />,
       {/* Canvas for particle system */}
@@ -188,9 +188,9 @@ const FuturisticAnimatedBackground: React.FC<FuturisticAnimatedBackgroundProps> 
         animate={{
           y: [0, '10o0vh']}}
         transition={{
-          duration: 8;
-          repeat: Infinity;
+          duration: 8,
+          repeat: Infinity,
           ease: "linear"}}
        />,
-    </div>)};
-export default FuturisticAnimatedBackground;
+    </div>)},
+export default FuturisticAnimatedBackground,

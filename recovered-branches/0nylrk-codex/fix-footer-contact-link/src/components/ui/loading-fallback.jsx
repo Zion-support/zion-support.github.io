@@ -1,20 +1,20 @@
 import { motion } from 'framer-motion',
 import { Loader2 } from 'lucide-react',
 export function LoadingFallback({
-  message = 'Loading...';
-  size = 'md';
-  className = '';
+  message = 'Loading...',
+  size = 'md',
+  className = '',
 }) {
   const sizeClasses = {
-    sm: 'w-6 h-6';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12';
-  };
+    sm: 'w-6 h-6',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'
+  },
   const textSizes = {
-    sm: 'text-sm';
-    md: 'text-base';
-    lg: 'text-lg';
-  };
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  },
   return (
     <div
       className={`flex flex-col items-center justify-center p-8 space-y-4 ${className}`}
@@ -45,13 +45,13 @@ export function LoadingFallback({
             key={i}
             className='w-2 h-2 bg-zion-purple rounded-full',
             animate={{
-              scale: [1, 1.2, 1];
-              opacity: [0.5, 1, 0.5];
+              scale: [1, 1.2, 1],
+              opacity: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: 1.5;
-              repeat: Infinity;
-              delay: i * 0.2;
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.2
             }}
           />))}
       </motion.div>,

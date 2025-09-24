@@ -2,10 +2,10 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -49,128 +49,128 @@ export default function UltraAdvancedNavigation2026V2() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 20)};
+      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 20)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
   const navigationItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: <Zap className='w-4 h-4' />;
-    };
+      name: 'Home',
+      href: '/',
+      icon: <Zap className='w-4 h-4' />
+    },
     {
-      name: 'Services';
-      href: '/services';
-      icon: <Brain className='w-4 h-4' />;
+      name: 'Services',
+      href: '/services',
+      icon: <Brain className='w-4 h-4' />,
       dropdown: [
         {
-          name: 'AI & Machine Learning';
-          href: '/services?category=ai';
-          icon: <Brain className='w-4 h-4' />;
-        };
+          name: 'AI & Machine Learning',
+          href: '/services?category=ai',
+          icon: <Brain className='w-4 h-4' />
+        },
         {
-          name: 'Quantum & Space Tech';
-          href: '/services?category=quantum';
-          icon: <Atom className='w-4 h-4' />;
-        };
+          name: 'Quantum & Space Tech',
+          href: '/services?category=quantum',
+          icon: <Atom className='w-4 h-4' />
+        },
         {
-          name: 'Emerging Technologies';
-          href: '/services?category=emerging';
-          icon: <Microscope className='w-4 h-4' />;
-        };
+          name: 'Emerging Technologies',
+          href: '/services?category=emerging',
+          icon: <Microscope className='w-4 h-4' />
+        },
         {
-          name: 'Micro SaaS';
-          href: '/services?category=micro-saas';
-          icon: <Code className='w-4 h-4' />;
-        };
+          name: 'Micro SaaS',
+          href: '/services?category=micro-saas',
+          icon: <Code className='w-4 h-4' />
+        },
         {
-          name: 'Metaverse & VR';
-          href: '/services?category=metaverse';
-          icon: <Gamepad2 className='w-4 h-4' />;
-        };
+          name: 'Metaverse & VR',
+          href: '/services?category=metaverse',
+          icon: <Gamepad2 className='w-4 h-4' />
+        },
         {
-          name: 'Cybersecurity';
-          href: '/services?category=cybersecurity';
-          icon: <Shield className='w-4 h-4' />;
-        };
+          name: 'Cybersecurity',
+          href: '/services?category=cybersecurity',
+          icon: <Shield className='w-4 h-4' />
+        },
         {
-          name: 'Space Technology';
-          href: '/services?category=space';
-          icon: <Rocket className='w-4 h-4' />;
-        };
+          name: 'Space Technology',
+          href: '/services?category=space',
+          icon: <Rocket className='w-4 h-4' />
+        },
         {
-          name: 'Biotech & Healthcare';
-          href: '/services?category=biotech';
-          icon: <TestTube className='w-4 h-4' />;
-        };
+          name: 'Biotech & Healthcare',
+          href: '/services?category=biotech',
+          icon: <TestTube className='w-4 h-4' />
+        },
         {
-          name: 'Blockchain & Web3';
-          href: '/services?category=blockchain';
-          icon: <Database className='w-4 h-4' />;
-        };
+          name: 'Blockchain & Web3',
+          href: '/services?category=blockchain',
+          icon: <Database className='w-4 h-4' />
+        },
         {
-          name: 'Autonomous Vehicles';
-          href: '/services?category=transportation';
-          icon: <Car className='w-4 h-4' />;
-        };
+          name: 'Autonomous Vehicles',
+          href: '/services?category=transportation',
+          icon: <Car className='w-4 h-4' />
+        },
         {
-          name: 'Cloud & Infrastructure';
-          href: '/services?category=cloud';
-          icon: <Cloud className='w-4 h-4' />;
-        };
+          name: 'Cloud & Infrastructure',
+          href: '/services?category=cloud',
+          icon: <Cloud className='w-4 h-4' />
+        },
         {
-          name: 'Edge Computing';
-          href: '/services?category=edge';
-          icon: <Server className='w-4 h-4' />;
-        };
+          name: 'Edge Computing',
+          href: '/services?category=edge',
+          icon: <Server className='w-4 h-4' />
+        },
         {
-          name: 'IoT & Connectivity';
-          href: '/services?category=iot';
-          icon: <Network className='w-4 h-4' />;
-        };
+          name: 'IoT & Connectivity',
+          href: '/services?category=iot',
+          icon: <Network className='w-4 h-4' />
+        },
         {
-          name: 'Semiconductor Tech';
-          href: '/services?category=semiconductor';
-          icon: <Cpu className='w-4 h-4' />;
-        };
+          name: 'Semiconductor Tech',
+          href: '/services?category=semiconductor',
+          icon: <Cpu className='w-4 h-4' />
+        },
         {
-          name: 'Creative & Design';
-          href: '/services?category=creative';
-          icon: <Palette className='w-4 h-4' />;
-        };
+          name: 'Creative & Design',
+          href: '/services?category=creative',
+          icon: <Palette className='w-4 h-4' />
+        },
         {
-          name: 'Global Solutions';
-          href: '/services?category=global';
-          icon: <Globe className='w-4 h-4' />;
-        };
-      ];
+          name: 'Global Solutions',
+          href: '/services?category=global',
+          icon: <Globe className='w-4 h-4' />
+        },
+      ],
     },    {
-      name: 'Showcase';
-      href: '/enhanced-services-showcase-2026-v2';
-      icon: <Rocket className='w-4 h-4' />;
-    };
+      name: 'Showcase',
+      href: '/enhanced-services-showcase-2026-v2',
+      icon: <Rocket className='w-4 h-4' />
+    },
     {
-      name: 'Pricing';
-      href: '/pricing-enhanced-2026';
-      icon: <Database className='w-4 h-4' />;
-    };
+      name: 'Pricing',
+      href: '/pricing-enhanced-2026',
+      icon: <Database className='w-4 h-4' />
+    },
     {
-      name: 'About';
-      href: '/about';
-      icon: <Globe className='w-4 h-4' />;
-    };
+      name: 'About',
+      href: '/about',
+      icon: <Globe className='w-4 h-4' />
+    },
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: <Mail className='w-4 h-4' />;
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className='w-4 h-4' />
     }],      icon: <Mail className="w-4 h-4" />}
   ],
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709'};    address: '364 E Main St STE 1008 Middletown DE 19709'}
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'},    address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
     window.addEventListener ('scroll', handle_scroll),
     return () => window.removeEventListener ('scroll', handle_scroll)}, []),      setIsScrolled (window.scroll_y > 20)}
@@ -178,96 +178,96 @@ export default function UltraAdvancedNavigation2026V2() {
     return () => window.removeEventListener ('scroll', handle_scroll),
   const navigation_items = [
     {
-      name: 'Home';
-      href: '/';
-      icon: <Zap className='w - 4 h - 4' />;
-    };
+      name: 'Home',
+      href: '/',
+      icon: <Zap className='w - 4 h - 4' />
+    },
     {
-      name: 'Services';
-      href: '/services';
-      icon: <Brain className='w - 4 h - 4' />;
+      name: 'Services',
+      href: '/services',
+      icon: <Brain className='w - 4 h - 4' />,
       dropdown: [
         {
-          name: 'AI & Machine Learning';
-          href: '/services?category = ai';
-          icon: <Brain className='w - 4 h - 4' />;
-        };
+          name: 'AI & Machine Learning',
+          href: '/services?category = ai',
+          icon: <Brain className='w - 4 h - 4' />
+        },
         {
-          name: 'Quantum & Space Tech';
-          href: '/services?category = quantum';
-          icon: <Atom className='w - 4 h - 4' />;
-        };
+          name: 'Quantum & Space Tech',
+          href: '/services?category = quantum',
+          icon: <Atom className='w - 4 h - 4' />
+        },
         {
-          name: 'Emerging Technologies';
-          href: '/services?category = emerging';
-          icon: <Microscope className='w - 4 h - 4' />;
-        };
+          name: 'Emerging Technologies',
+          href: '/services?category = emerging',
+          icon: <Microscope className='w - 4 h - 4' />
+        },
         {
-          name: 'Micro SaaS';
-          href: '/services?category = micro - saas';
-          icon: <Code className='w - 4 h - 4' />;
-        };
+          name: 'Micro SaaS',
+          href: '/services?category = micro - saas',
+          icon: <Code className='w - 4 h - 4' />
+        },
         {
-          name: 'Metaverse & VR';
-          href: '/services?category = metaverse';
-          icon: <Gamepad2 className='w - 4 h - 4' />;
-        };
+          name: 'Metaverse & VR',
+          href: '/services?category = metaverse',
+          icon: <Gamepad2 className='w - 4 h - 4' />
+        },
         {
-          name: 'Cybersecurity';
-          href: '/services?category = cybersecurity';
-          icon: <Shield className='w - 4 h - 4' />;
-        };
+          name: 'Cybersecurity',
+          href: '/services?category = cybersecurity',
+          icon: <Shield className='w - 4 h - 4' />
+        },
         {
-          name: 'Space Technology';
-          href: '/services?category = space';
-          icon: <Rocket className='w - 4 h - 4' />;
-        };
+          name: 'Space Technology',
+          href: '/services?category = space',
+          icon: <Rocket className='w - 4 h - 4' />
+        },
         {
-          name: 'Biotech & Healthcare';
-          href: '/services?category = biotech';
-          icon: <TestTube className='w - 4 h - 4' />;
-        };
+          name: 'Biotech & Healthcare',
+          href: '/services?category = biotech',
+          icon: <TestTube className='w - 4 h - 4' />
+        },
         {
-          name: 'Blockchain & Web3';
-          href: '/services?category = blockchain';
-          icon: <Database className='w - 4 h - 4' />;
-        };
+          name: 'Blockchain & Web3',
+          href: '/services?category = blockchain',
+          icon: <Database className='w - 4 h - 4' />
+        },
         {
-          name: 'Autonomous Vehicles';
-          href: '/services?category = transportation';
-          icon: <Car className='w - 4 h - 4' />;
-        };
+          name: 'Autonomous Vehicles',
+          href: '/services?category = transportation',
+          icon: <Car className='w - 4 h - 4' />
+        },
         {
-          name: 'Cloud & Infrastructure';
-          href: '/services?category = cloud';
-          icon: <Cloud className='w - 4 h - 4' />;
-        };
+          name: 'Cloud & Infrastructure',
+          href: '/services?category = cloud',
+          icon: <Cloud className='w - 4 h - 4' />
+        },
         {
-          name: 'Edge Computing';
-          href: '/services?category = edge';
-          icon: <Server className='w - 4 h - 4' />;
-        };
+          name: 'Edge Computing',
+          href: '/services?category = edge',
+          icon: <Server className='w - 4 h - 4' />
+        },
         {
-          name: 'IoT & Connectivity';
-          href: '/services?category = iot';
-          icon: <Network className='w - 4 h - 4' />;
-        };
+          name: 'IoT & Connectivity',
+          href: '/services?category = iot',
+          icon: <Network className='w - 4 h - 4' />
+        },
         {
-          name: 'Semiconductor Tech';
-          href: '/services?category = semiconductor';
-          icon: <Cpu className='w - 4 h - 4' />;
-        };
+          name: 'Semiconductor Tech',
+          href: '/services?category = semiconductor',
+          icon: <Cpu className='w - 4 h - 4' />
+        },
         {
-          name: 'Creative & Design';
-          href: '/services?category = creative';
-          icon: <Palette className='w - 4 h - 4' />;
-        };
+          name: 'Creative & Design',
+          href: '/services?category = creative',
+          icon: <Palette className='w - 4 h - 4' />
+        },
         {
-          name: 'Global Solutions';
-          href: '/services?category = global';
-          icon: <Globe className='w - 4 h - 4' />;
-        };
-      ];
+          name: 'Global Solutions',
+          href: '/services?category = global',
+          icon: <Globe className='w - 4 h - 4' />
+        },
+      ],
     },    {
       name: 'Showcase',
       href: '/enhanced-services-showcase-2026-v2',
@@ -284,28 +284,28 @@ export default function UltraAdvancedNavigation2026V2() {
       name: 'Contact',
       href: '/contact',
       icon: <Mail className='w-4 h-4' />}],      icon: <Mail className="w-4 h-4" />}
-      name: 'Showcase';
-      href: '/enhanced - services - showcase - 2026 - v2';
-      icon: <Rocket className='w - 4 h - 4' />;
-    };
+      name: 'Showcase',
+      href: '/enhanced - services - showcase - 2026 - v2',
+      icon: <Rocket className='w - 4 h - 4' />
+    },
     {
-      name: 'Pricing';
-      href: '/pricing - enhanced - 2026';
-      icon: <Database className='w - 4 h - 4' />;
-    };
+      name: 'Pricing',
+      href: '/pricing - enhanced - 2026',
+      icon: <Database className='w - 4 h - 4' />
+    },
     {
-      name: 'About';
-      href: '/about';
-      icon: <Globe className='w - 4 h - 4' />;
-    };
+      name: 'About',
+      href: '/about',
+      icon: <Globe className='w - 4 h - 4' />
+    },
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: <Mail className='w - 4 h - 4' />;
+      name: 'Contact',
+      href: '/contact',
+      icon: <Mail className='w - 4 h - 4' />
     }],      icon: <Mail className="w - 4 h - 4" />],
   const contact_info = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
   return (
     <>,
       {/* Top Contact Bar */}

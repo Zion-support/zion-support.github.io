@@ -14,29 +14,29 @@ export default function AIMeetingTranscriberPro() {
           <div className='mt-8 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
             {[
               {
-                title: 'Accurate Transcription';
-                desc: 'Multi-speaker diarization, domain tuning, and timestamps.';
-              };
+                title: 'Accurate Transcription',
+                desc: 'Multi-speaker diarization, domain tuning, and timestamps.',
+              },
               {
-                title: 'AI Summaries';
-                desc: 'Executive summaries, highlights, and sentiment analysis.';
-              };
+                title: 'AI Summaries',
+                desc: 'Executive summaries, highlights, and sentiment analysis.',
+              },
               {
-                title: 'Action Items';
-                desc: 'Auto-detected tasks with assignees and due dates synced to Jira/Asana.';
-              };
+                title: 'Action Items',
+                desc: 'Auto-detected tasks with assignees and due dates synced to Jira/Asana.'
+              },
               {
-                title: 'Privacy & Security';
-                desc: 'SOC2-ready controls, data retention policies, and redaction.';
-              };
+                title: 'Privacy & Security',
+                desc: 'SOC2-ready controls, data retention policies, and redaction.',
+              },
               {
-                title: 'Integrations';
-                desc: 'Zoom, Google Meet, Microsoft Teams, Slack, Asana, Jira.';
-              };
+                title: 'Integrations',
+                desc: 'Zoom, Google Meet, Microsoft Teams, Slack, Asana, Jira.',
+              },
               {
-                title: 'APIs';
-                desc: 'Webhook callbacks and export to data warehouse.';
-              };
+                title: 'APIs',
+                desc: 'Webhook callbacks and export to data warehouse.'
+              },
             ].map(f => (
               <div
                 key={f.title}

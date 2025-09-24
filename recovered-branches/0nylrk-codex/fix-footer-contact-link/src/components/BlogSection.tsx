@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { GradientHeading } from "./GradientHeading",
 import { CardContentCardFooter } from "@/components/ui/card",

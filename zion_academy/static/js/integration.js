@@ -86,16 +86,16 @@ class ZionIntegration {
         navLinks.forEach(link => {
             link.addEventListener('click', (e) => {
                 this.analytics.trackEvent('navigation', {
-                    from: window.location.pathname;
-                    to: link.href;
+                    from: window.location.pathname,
+                    to: link.href,
                     link_text: link.textContent?.trim()})})}),
         // Track form submissions,
         const forms = document.querySelectorAll('form: not(.feedback-form)'),
         forms.forEach(form => {
             form.addEventListener('submit', (e) => {
                 this.analytics.trackEvent('form_submit', {
-                    form_id: form.id || 'unknown';
-                    form_action: form.action;
+                    form_id: form.id || 'unknown',
+                    form_action: form.action,
                     form_method: form.method})})})}
 ,
     setupFeedbackIntegration() {
@@ -173,9 +173,9 @@ class ZionIntegration {
     trackContentView(contentType, contentId, contentTitle) {
         if (this.analytics) {
             this.analytics.trackEvent('view', {
-                content_type: contentType;
+                content_type: contentType,
                 content_title: contentTitle}, {
-                content_type: contentType;
+                content_type: contentType,
                 [contentType === 'course' ? 'course_id' : 'lesson_id']: contentId})}
     }
 ,

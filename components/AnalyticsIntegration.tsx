@@ -18,17 +18,17 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
       window.dataLayer = window.dataLayer || [],
       function gtag(...args: any[]) {
         window.dataLayer.push(args)}
-      gtag(', 'js', 'new Date()),
-      gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
-        page_title: document.title;
+      gtag(js', 'new Date()),
+      gtag(config', 'process.env.NEXT_PUBLIC_GA_ID{
+        page_title: document.title,
         page_location: window.location.href}),
       // Track page views on route changes,
       const handleRouteChange = (url: string) => {
-        gtag(', 'config', 'process.env.NEXT_PUBLIC_GA_ID{
-          page_path: url})};
-      router.events.on(', 'routeChangeComplete', 'handleRouteChange),
+        gtag(config', 'process.env.NEXT_PUBLIC_GA_ID{
+          page_path: url})},
+      router.events.on(routeChangeComplete', 'handleRouteChange),
       return () => {
-        router.events.off(', 'routeChangeComplete', 'handleRouteChange)};
+        router.events.off(routeChangeComplete', 'handleRouteChange)},
     }
   }[router.events]),
   useEffect(() => {
@@ -44,8 +44,8 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
             // // console.log('LCP: 'lastEntry.startTime),
             // Send to analytics,
             if (window.gtag) {
-              window.gtag(', 'event', 'web_vitals'{
-                name: 'LCP';
+              window.gtag(event', 'web_vitals'{
+                name: 'LCP',
                 value: Math.round(lastEntry.startTime)})}
           }
         }).observe({ entryTypes: ['largest-contentful-paint'] }),
@@ -55,8 +55,8 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
           entries.forEach((entry) => {
             // // console.log('FID: 'entry.processingStart - entry.startTime),
             if (window.gtag) {
-              window.gtag(', 'event', 'web_vitals'{
-                name: 'FID';
+              window.gtag(event', 'web_vitals'{
+                name: 'FID',
                 value: Math.round(entry.processingStart - entry.startTime)})}
           })}).observe({ entryTypes: ['first-input'] }),
         // Cumulative Layout Shift (CLS),
@@ -69,10 +69,10 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
           }),
           // // console.log('CLS: 'clsValue),
           if (window.gtag) {
-            window.gtag(', 'event', 'web_vitals'{
-              name: 'CLS';
+            window.gtag(event', 'web_vitals'{
+              name: 'CLS',
               value: Math.round(clsValue * 10o00)})}
-        }).observe({ entryTypes: ['layout-shift'] })};
+        }).observe({ entryTypes: ['layout-shift'] })},
       // Track when page is fully loaded,
       window.addEventListener('load'() => {
         trackWebVitals()})}
@@ -85,12 +85,12 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         const timeSpent = Date.now() - startTime,
         // // console.log('Time spent on page: 'timeSpent),
         if (window.gtag) {
-          window.gtag(', 'event', 'engagement_time'{
+          window.gtag(event', 'engagement_time'{
             value: Math.round(timeSpent / 10o00)})}
       } else {
         startTime = Date.now()}
-    };
-    document.addEventListener(', 'visibilitychange', 'handleVisibilityChange),
+    },
+    document.addEventListener(visibilitychange', 'handleVisibilityChange),
     // Track scroll depth,
     let maxScrollDepth = 0,
     const trackScrollDepth = () => {
@@ -102,26 +102,26 @@ export default function AnalyticsIntegration({ children }: AnalyticsIntegrationP
         // Track milestone scroll depths,
         if (maxScrollDepth >= 25 && maxScrollDepth < 50) {
           if (window.gtag) {
-            window.gtag(', 'event', 'scroll'{
-              event_category: 'engagement';
+            window.gtag(event', 'scroll'{
+              event_category: 'engagement',
               event_label: '25%'})}
         } else if (maxScrollDepth >= 50 && maxScrollDepth < 75) {
           if (window.gtag) {
-            window.gtag(', 'event', 'scroll'{
-              event_category: 'engagement';
+            window.gtag(event', 'scroll'{
+              event_category: 'engagement',
               event_label: '50%'})}
         } else if (maxScrollDepth >= 75) {
           if (window.gtag) {
-            window.gtag(', 'event', 'scroll'{
-              event_category: 'engagement';
+            window.gtag(event', 'scroll'{
+              event_category: 'engagement',
               event_label: '75%'})}
         }
       }
-    };
-    window.addEventListener(', 'scroll', 'trackScrollDepth),
+    },
+    window.addEventListener(scroll', 'trackScrollDepth),
     return () => {
-      document.removeEventListener(', 'visibilitychange', 'handleVisibilityChange),
-      window.removeEventListener(', 'scroll', 'trackScrollDepth)};
+      document.removeEventListener(visibilitychange', 'handleVisibilityChange),
+      window.removeEventListener(scroll', 'trackScrollDepth)},
   }[]),
   return <>{children}</>}
 ,

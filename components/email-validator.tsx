@@ -23,20 +23,19 @@ export default function EmailValidatorPage() {
       results.push(result)}
 ,
     setValidationResults(results),
-    setIsValidating(false)};
+    setIsValidating(false)},
   const validateSingleEmail = (email: string) => {
     // Basic email regex,
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     // Check for common disposable email domains,
     const disposableDomains = [
-      'tempmail.'org', 'guerrillamail.'com', 'mailinator.com'10minutemail.com';
-      'throwaway.'email', 'temp-mail.'org', 'sharklasers.'com', 'getairmail.com'],
+      'tempmail.'orgguerrillamail.'com', 'mailinator.com'10minutemail.comthrowaway.'email', 'temp-mail.'orgsharklasers.'com', 'getairmail.com'],
     // Check for common typos,
     const commonTypos = {
-      'gmail.com': ['gmial.'com', 'gamil.'com', 'gmai.com'];
-      'yahoo.com': ['yaho.'com', 'yahooo.'com', 'yhaoo.com'];
-      'hotmail.com': ['hotmai.'com', 'hotmial.'com', 'hotmeil.com'];
-      'outlook.com': ['outlok.'com', 'outloook.'com', 'outlok.com']};
+      'gmail.com': ['gmial.'comgamil.'com', 'gmai.com'],
+      'yahoo.com': ['yaho.'comyahooo.'com', 'yhaoo.com'],
+      'hotmail.com': ['hotmai.'comhotmial.'com', 'hotmeil.com'],
+      'outlook.com': ['outlok.'comoutloook.'com', 'outlok.com']},
     const domain = email.split('@')[1],
     const isDisposable = disposableDomains.includes(domain),
     const hasTypo = Object.entries(commonTypos).some(([correctypos]) =>,
@@ -67,15 +66,15 @@ export default function EmailValidatorPage() {
       issues.push('Local part too long')}
 ,
     return {
-      email;
-      status;
-      score;
-      issues;
-      domain;
-      isDisposable;
-      hasTypo;
-      timestamp: new Date().toLocaleTimeString()};
-  };
+      email,
+      status,
+      score,
+      issues,
+      domain,
+      isDisposable,
+      hasTypo,
+      timestamp: new Date().toLocaleTimeString()},
+  },
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'valid':,
@@ -88,7 +87,7 @@ export default function EmailValidatorPage() {
         return <XCircle className="w-5 h-5 text-red-400" />,
       default:,
         return <AlertTriangle className="w-5 h-5 text-gray-400" />}
-  };
+  },
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'valid':,
@@ -101,19 +100,19 @@ export default function EmailValidatorPage() {
         return 'text-red-400',
       default:,
         return 'text-gray-400'}
-  };
+  },
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-400',
     if (score >= 60) return 'text-yellow-400',
     if (score >= 40) return 'text-orange-400',
-    return 'text-red-400'};
+    return 'text-red-400'},
   const copyResults = () => {
     const resultsText = validationResults.map(result =>,
       `${result.email} - ${result.status.toUpperCase()} (Score: ${result.score})`).join('\n'),
-    navigator.clipboard.writeText(resultsText)};
+    navigator.clipboard.writeText(resultsText)},
   const clearResults = () => {
     setValidationResults([]),
-    setEmails(', ')};
+    setEmails()},
   const getStats = () => {
     if (validationResults.length === 0) return null,
     const total = validationResults.length,
@@ -122,8 +121,8 @@ export default function EmailValidatorPage() {
     const suspicious = validationResults.filter(r => r.status === 'suspicious').length,
     const disposable = validationResults.filter(r => r.status === 'disposable').length,
     const avgScore = validationResults.reduce((sum, r) => sum + r.score, 0) / total,
-    return { totalvalidinvalidsuspiciousdisposableavgScore };
-  };
+    return { totalvalidinvalidsuspiciousdisposableavgScore },
+  },
   const stats = getStats(),
   return (
     <>,

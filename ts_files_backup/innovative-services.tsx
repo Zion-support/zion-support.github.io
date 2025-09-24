@@ -17,19 +17,19 @@ export default function InnovativeServicesPage() {
   const [sortBysetSortBy] = useState('innovation'),
   const [showFiltersetShowFilters] = useState(false),
   const priceRanges = [
-    { value: ''All', 'label: 'All Prices' };
-    { value: '0-1000'label: '$0 - $1,000' };
-    { value: '1001-2000'label: '$1,001 - $2,000' };
-    { value: '2001-3000'label: '$2,001 - $3,000' };
-    { value: '3001-5000'label: '$3,001 - $5,000' };
+    { value: ''Alllabel: 'All Prices' },
+    { value: '0-1000'label: '$0 - $1,000' },
+    { value: '1001-2000'label: '$1,001 - $2,000' },
+    { value: '2001-3000'label: '$2,001 - $3,000' },
+    { value: '3001-5000'label: '$3,001 - $5,000' },
     { value: '5001+'label: '$5,001+' }
   ],
   const sortOptions = [
-    { value: ''innovation', 'label: 'Innovation Level' };
-    { value: ''price', 'label: 'Price Low-High' };
-    { value: ''popularity', 'label: 'Most Popular' };
-    { value: ''category', 'label: 'Category' };
-    { value: ''roi', 'label: 'Highest ROI' }
+    { value: ''innovationlabel: 'Innovation Level' },
+    { value: ''pricelabel: 'Price Low-High' },
+    { value: ''popularitylabel: 'Most Popular' },
+    { value: ''categorylabel: 'Category' },
+    { value: ''roilabel: 'Highest ROI' }
   ],
   // Filter and sort services,
   let filteredServices = innovativeMicroSaasServices,
@@ -65,17 +65,17 @@ export default function InnovativeServicesPage() {
         return bRoi - aRoi}
               default: {
           // Innovation level sorting,
-          const innovationOrder = { 'Breakthrough': 3'Advanced': 2'Standard': 1 };
+          const innovationOrder = { 'Breakthrough': 3'Advanced': 2'Standard': 1 },
           const aLevel = a.innovationLevel.split(' - ')[0],
           const bLevel = b.innovationLevel.split(' - ')[0],
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)}
     }
   }),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const popularServices = getPopularInnovativeServices(),
   const categories = getInnovativeServiceCategories(),
   return (
@@ -101,7 +101,7 @@ export default function InnovativeServicesPage() {
                 </h1>,
                 <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
                   Discover the future of technology with our breakthrough micro SAAS services.,
-                  From quantum AI to autonomous 'systemswe', 're redefining 'what', 's possible.,
+                  From quantum AI to autonomous 'systemswere redefining 'what', 's possible.,
                 </p>,
               </div>,
               {/* Innovation Stats */}

@@ -16,16 +16,16 @@ interface ActiveFiltersProps {
   clearFilters: () => void}
 ,
 export function ActiveFilters({
-  selectedSkills;
-  toggleSkill;
-  selectedAvailability;
-  toggleAvailability;
-  selectedRegions;
-  toggleRegion;
-  priceRange;
-  setPriceRange;
-  experienceRange;
-  setExperienceRange;
+  selectedSkills,
+  toggleSkill,
+  selectedAvailability,
+  toggleAvailability,
+  selectedRegions,
+  toggleRegion,
+  priceRange,
+  setPriceRange,
+  experienceRange,
+  setExperienceRange,
   clearFilters}: ActiveFiltersProps) {
   // Check if any filters are active,
   const hasActiveFilters =,

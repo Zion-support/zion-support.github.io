@@ -3,42 +3,37 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
+    'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',
   description:,
-    'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $50o0B annual savings and 25,0o00% ROI.';
+    'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation. Learn the strategies that delivered $50o0B annual savings and 25,0o00% ROI.',
   keywords: [
-    'Fortune 50o0';
-    'AI automation';
-    'case study';
-    'ROI success';
-    'manufacturing automation';
-    '25,0o00% ROI';
-    'business transformation';
-  ];
+    'Fortune 50o0AI automation',
+    'case studyROI success',
+    'manufacturing automation25,0o00% ROI',
+    'business transformation',
+  ],
   openGraph: {
     title:,
-      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
+      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',
     description:,
-      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Fortune 50o0';
-      'AI automation';
-      'case study';
-      'ROI';
-      'manufacturing';
-    ];
-  };
+      'Fortune 50o0AI automation',
+      'case studyROI',
+      'manufacturing',
+    ]
+  },
   twitter: {
-    card: 'summary_large_image';
+    card: 'summary_large_image',
     title:,
-      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
+      'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',
     description:,
-      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.';
-  };
-};
+      'How a global manufacturing giant achieved unprecedented ROI through revolutionary AI automation implementation.',
+  },
+},
 export default function Fortune50o0UltimateAutomationSuccessPage() {
   return (
     <div>,
@@ -126,7 +121,7 @@ export default function Fortune50o0UltimateAutomationSuccessPage() {
                       <strong>Employees:</strong> 85,0o00 worldwide,
                     </p>,
                     <p>,
-                      <strong>Challenge:</strong> Operational inefficiencies;
+                      <strong>Challenge: </strong> Operational inefficiencies,
                       high costs, and competitive pressure,
                     </p>,
                   </div>,

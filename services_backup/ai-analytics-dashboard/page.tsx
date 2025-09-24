@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI-Powered Analytics Dashboard | Zion Tech Group';
+  title: 'AI-Powered Analytics Dashboard | Zion Tech Group',
   description:,
-    'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.';
-};
+    'Transform your data into actionable insights with our AI-powered analytics dashboard. Real-time visualization, predictive analytics, and automated reporting.',
+},
 export default function AIAnalyticsDashboardPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -10,35 +10,29 @@ export default function AIAnalyticsDashboardPage() {
         AI-Powered Analytics Dashboard,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Transform your data into actionable insights with intelligent analytics;
+        Transform your data into actionable insights with intelligent analytics,
         real-time visualization, and predictive modeling.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
         <FeatureCard
           title='Real-Time Analytics',
           features={[
-            'Live data streaming';
-            'Interactive dashboards';
-            'Custom KPI tracking';
-            'Automated alerts';
+            'Live data streamingInteractive dashboards',
+            'Custom KPI trackingAutomated alerts',
           ]}
         />,
         <FeatureCard
           title='AI-Powered Insights',
           features={[
-            'Predictive modeling';
-            'Anomaly detection';
-            'Trend analysis';
-            'Smart recommendations';
+            'Predictive modelingAnomaly detection',
+            'Trend analysisSmart recommendations',
           ]}
         />,
         <FeatureCard
           title='Advanced Visualization',
           features={[
-            'Custom charts & graphs';
-            'Drill-down capabilities';
-            'Mobile-responsive design';
-            'Export & sharing options';
+            'Custom charts & graphsDrill-down capabilities',
+            'Mobile-responsive designExport & sharing options',
           ]}
         />,
       </div>,
@@ -114,8 +108,8 @@ export default function AIAnalyticsDashboardPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -141,21 +135,17 @@ function Pricing() {
           name='Starter',
           price='$299/mo',
           features={[
-            'Up to 5 data sources';
-            'Basic dashboards';
-            'Email reports';
-            'Standard support';
+            'Up to 5 data sourcesBasic dashboards',
+            'Email reportsStandard support',
           ]}
         />,
         <Plan
           name='Professional',
           price='$799/mo',
           features={[
-            'Up to 20 data sources';
-            'Advanced AI insights';
-            'Real-time alerts';
-            'Priority support';
-            'Custom visualizations';
+            'Up to 20 data sourcesAdvanced AI insights',
+            'Real-time alertsPriority support',
+            'Custom visualizations',
           ]}
           popular={true}
         />,
@@ -163,21 +153,19 @@ function Pricing() {
           name='Enterprise',
           price='$1,999/mo',
           features={[
-            'Unlimited data sources';
-            'Custom AI models';
-            'White-label solution';
-            'Dedicated support';
-            'On-premise deployment';
+            'Unlimited data sourcesCustom AI models',
+            'White-label solutionDedicated support',
+            'On-premise deployment',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

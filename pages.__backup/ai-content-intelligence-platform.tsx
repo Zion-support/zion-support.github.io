@@ -3,120 +3,108 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircleArrowRightStarTrendingUpPhoneMailMapPin,
-  BrainBarChart3TargetZapShieldGlobeUsersAward;
-  ClockDollarSignCheckArrowUpRightPlayBookOpenCode;
+  BrainBarChart3TargetZapShieldGlobeUsersAward,
+  ClockDollarSignCheckArrowUpRightPlayBookOpenCode,
   ShoppingCart} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const features = [
   {
-    title: 'Real-time Content Analytics';
-    description: 'Monitor content performance across all channels with live dashboards and insights';
-    icon: BarChart3;
-    color: 'from-blue-50o0 to-cyan-50o0'};
+    title: 'Real-time Content Analytics',
+    description: 'Monitor content performance across all channels with live dashboards and insights',
+    icon: BarChart3,
+    color: 'from-blue-50o0 to-cyan-50o0'},
   {
-    title: 'AI-Powered Optimization';
-    description: 'Get intelligent suggestions for content improvement based on performance data';
-    icon: Brain;
-    color: 'from-purple-50o0 to-pink-50o0'};
+    title: 'AI-Powered Optimization',
+    description: 'Get intelligent suggestions for content improvement based on performance data',
+    icon: Brain,
+    color: 'from-purple-50o0 to-pink-50o0'},
   {
-    title: 'Predictive Performance Modeling';
-    description: 'Forecast content success before publishing using advanced AI algorithms';
-    icon: TrendingUp;
-    color: 'from-green-50o0 to-emerald-50o0'};
+    title: 'Predictive Performance Modeling',
+    description: 'Forecast content success before publishing using advanced AI algorithms',
+    icon: TrendingUp,
+    color: 'from-green-50o0 to-emerald-50o0'},
   {
-    title: 'Multi-Channel Strategy';
-    description: 'Optimize content across all digital platforms simultaneously';
-    icon: Globe;
-    color: 'from-orange-50o0 to-red-50o0'};
+    title: 'Multi-Channel Strategy',
+    description: 'Optimize content across all digital platforms simultaneously',
+    icon: Globe,
+    color: 'from-orange-50o0 to-red-50o0'},
   {
-    title: 'Competitor Analysis';
-    description: 'Track competitor content performance and identify opportunities';
-    icon: Target;
-    color: 'from-indigo-50o0 to-blue-50o0'};
+    title: 'Competitor Analysis',
+    description: 'Track competitor content performance and identify opportunities',
+    icon: Target,
+    color: 'from-indigo-50o0 to-blue-50o0'},
   {
-    title: 'SEO Content Intelligence';
-    description: 'AI-powered SEO optimization and keyword gap identification';
-    icon: Zap;
+    title: 'SEO Content Intelligence',
+    description: 'AI-powered SEO optimization and keyword gap identification',
+    icon: Zap,
     color: 'from-yellow-50o0 to-orange-50o0'}
 ],
 const pricingPlans = [
   {
-    name: 'Starter';
-    price: '$2,50o0';
-    period: '/month';
-    description: 'Perfect for small businesses and content creators';
+    name: 'Starter',
+    price: '$2,50o0',
+    period: '/month',
+    description: 'Perfect for small businesses and content creators',
     features: [
-      'Real-time content analytics';
-      'AI optimization suggestions';
-      'Basic performance tracking';
-      'SEO content insights';
-      'Email support';
-      'Up to 10o0 content pieces/month'];
-    popular: false;
-    color: 'from-gray-50o0 to-gray-60o0'};
+      'Real-time content analyticsAI optimization suggestions',
+      'Basic performance trackingSEO content insights',
+      'Email supportUp to 10o0 content pieces/month'],
+    popular: false,
+    color: 'from-gray-50o0 to-gray-60o0'},
   {
-    name: 'Professional';
-    price: '$5,0o00';
-    period: '/month';
-    description: 'Ideal for growing businesses and marketing teams';
+    name: 'Professional',
+    price: '$5,0o00',
+    period: '/month',
+    description: 'Ideal for growing businesses and marketing teams',
     features: [
-      'Everything in Starter';
-      'Predictive performance modeling';
-      'Advanced competitor analysis';
-      'Multi-channel optimization';
-      'Priority support';
-      'Up to 50o0 content pieces/month';
-      'Custom integrations'];
-    popular: true;
-    color: 'from-blue-50o0 to-purple-60o0'};
+      'Everything in StarterPredictive performance modeling',
+      'Advanced competitor analysisMulti-channel optimization',
+      'Priority supportUp to 50o0 content pieces/month',
+      'Custom integrations'],
+    popular: true,
+    color: 'from-blue-50o0 to-purple-60o0'},
   {
-    name: 'Enterprise';
-    price: '$10,0o00';
-    period: '/month';
-    description: 'For large organizations with complex content needs';
+    name: 'Enterprise',
+    price: '$10,0o00',
+    period: '/month',
+    description: 'For large organizations with complex content needs',
     features: [
-      'Everything in Professional';
-      'Custom AI models';
-      'Advanced analytics';
-      'Dedicated account manager';
-      '24/7 phone support';
-      'Unlimited content pieces';
-      'White-label solutions';
-      'API access'];
-    popular: false;
+      'Everything in ProfessionalCustom AI models',
+      'Advanced analyticsDedicated account manager',
+      '24/7 phone supportUnlimited content pieces',
+      'White-label solutionsAPI access'],
+    popular: false,
     color: 'from-purple-50o0 to-pink-60o0'}
 ],
 const useCases = [
   {
-    title: 'Content Marketing Optimization';
-    description: 'Optimize your content strategy based on real-time performance data and AI insights';
-    icon: Target;
-    color: 'from-blue-50o0 to-cyan-50o0'};
+    title: 'Content Marketing Optimization',
+    description: 'Optimize your content strategy based on real-time performance data and AI insights',
+    icon: Target,
+    color: 'from-blue-50o0 to-cyan-50o0'},
   {
-    title: 'SEO Strategy Enhancement';
-    description: 'Identify content gaps and optimize for search engines with AI-powered recommendations';
-    icon: TrendingUp;
-    color: 'from-green-50o0 to-emerald-50o0'};
+    title: 'SEO Strategy Enhancement',
+    description: 'Identify content gaps and optimize for search engines with AI-powered recommendations',
+    icon: TrendingUp,
+    color: 'from-green-50o0 to-emerald-50o0'},
   {
-    title: 'Social Media Management';
-    description: 'Create engaging content that performs across all social media platforms';
-    icon: Globe;
-    color: 'from-purple-50o0 to-pink-50o0'};
+    title: 'Social Media Management',
+    description: 'Create engaging content that performs across all social media platforms',
+    icon: Globe,
+    color: 'from-purple-50o0 to-pink-50o0'},
   {
-    title: 'E-commerce Content';
-    description: 'Optimize product descriptions and marketing content for better conversions';
-    icon: ShoppingCart;
+    title: 'E-commerce Content',
+    description: 'Optimize product descriptions and marketing content for better conversions',
+    icon: ShoppingCart,
     color: 'from-orange-50o0 to-red-50o0'}
 ],
 const integrations = [
-  'WordPress'Shopify'HubSpot'Mailchimp'Google Analytics';
-  'Facebook Ads'Google Ads'LinkedIn'Twitter'Instagram';
-  'YouTube'TikTok'Slack'Zapier'API Access'],
+  'WordPress'Shopify'HubSpot'Mailchimp'Google AnalyticsFacebook Ads'Google Ads'LinkedIn'Twitter'InstagramYouTube'TikTok'Slack'Zapier'API Access'],
 export default function AIContentIntelligencePlatform() {
   return (
     <Layout>,

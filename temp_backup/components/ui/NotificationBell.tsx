@@ -11,8 +11,8 @@ export default function NotificationBell() {
     setLoading(true),
     try {
       const [count, list] = await Promise.all([
-        fetchUnreadCount();
-        fetchNotifications({ limit: 5 });
+        fetchUnreadCount(),
+        fetchNotifications({ limit: 5 }),
       ]),
       setUnread(count),
       setItems(list)} finally {

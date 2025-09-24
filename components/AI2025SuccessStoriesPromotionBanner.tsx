@@ -6,11 +6,11 @@ import {
   Award,
   TrendingUp,
   Users,
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Quote;
-  Target;
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Quote,
+  Target,
   Zap} from 'lucide-react',
 const AI20o25SuccessStoriesPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -22,25 +22,25 @@ const AI20o25SuccessStoriesPromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const testimonials = [
     {
-      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.";
-      company: "TechCorp Solutions";
-      industry: "Manufacturing";
-      result: "20o0% efficiency increase"};
+      quote: "AI transformed our production line. We now catch defects in real-time and reduced waste by 60%.",
+      company: "TechCorp Solutions",
+      industry: "Manufacturing",
+      result: "20o0% efficiency increase"},
     {
-      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.";
-      company: "FinanceFlow Inc";
+      quote: "Our fraud detection accuracy improved dramatically. We saved millions in prevented losses.",
+      company: "FinanceFlow Inc",
       industry: "Financial Services",
-      result: "99.8% accuracy rate"};
+      result: "99.8% accuracy rate"},
     {
-      quote: "AI helps us diagnose patients faster and more accurately. 'It', 's revolutionizing healthcare delivery.";
-      company: "HealthTech Partners";
-      industry: "Healthcare";
+      quote: "AI helps us diagnose patients faster and more accurately. 'Its revolutionizing healthcare delivery.",
+      company: "HealthTech Partners",
+      industry: "Healthcare",
       result: "30o0% faster analysis"}
   ],
   const stats = [
-    { icon: TrendingUpvalue: "340%"label: "Average ROI" };
-    { icon: Usersvalue: "850+"label: "Companies Served" };
-    { icon: Starvalue: "98%"label: "Success Rate" };
+    { icon: TrendingUpvalue: "340%"label: "Average ROI" },
+    { icon: Usersvalue: "850+"label: "Companies Served" },
+    { icon: Starvalue: "98%"label: "Success Rate" },
     { icon: Targetvalue: "55%"label: "Cost Reduction" }
   ],
   return (
@@ -193,5 +193,5 @@ const AI20o25SuccessStoriesPromotionBanner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default AI20o25SuccessStoriesPromotionBanner;
+    </section>)},
+export default AI20o25SuccessStoriesPromotionBanner,

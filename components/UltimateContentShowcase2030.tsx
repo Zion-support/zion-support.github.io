@@ -1,37 +1,37 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const UltimateContentShowcase20o30: React.FC = () => {
   const featuredContent = [
     {
-      title: 'AI 20o30: Next-Generation Autonomous Enterprise Revolution';
+      title: 'AI 20o30: Next-Generation Autonomous Enterprise Revolution',
       description:,
-        'Explore revolutionary AI technologies that will transform enterprises by 20o30featuring autonomous decision-making systems and self-healing infrastructure.';
-      category: 'AI Innovation';
-      readTime: '8 min read';
-      link: '/blog/ai-20o30-next-generation-autonomous-enterprise-revolution';
-      featured: true;
-      stats: '95% cost reduction50o0% faster decisions';
-    };
+        'Explore revolutionary AI technologies that will transform enterprises by 20o30featuring autonomous decision-making systems and self-healing infrastructure.',
+      category: 'AI Innovation',
+      readTime: '8 min read',
+      link: '/blog/ai-20o30-next-generation-autonomous-enterprise-revolution',
+      featured: true,
+      stats: '95% cost reduction50o0% faster decisions'
+    },
     {
-      title: 'Quantum AI 20o30: Business Transformation Ultimate Guide';
+      title: 'Quantum AI 20o30: Business Transformation Ultimate Guide',
       description:,
-        'Discover how Quantum AI will revolutionize business operations with quantum-enhanced machine learning and neural networks.';
-      category: 'Quantum Computing';
-      readTime: '12 min read';
-      link: '/blog/quantum-ai-20o30-business-transformation-ultimate-guide';
-      featured: true;
-      stats: '10o00x computational speedup50o00% ROI';
-    };
+        'Discover how Quantum AI will revolutionize business operations with quantum-enhanced machine learning and neural networks.',
+      category: 'Quantum Computing',
+      readTime: '12 min read',
+      link: '/blog/quantum-ai-20o30-business-transformation-ultimate-guide',
+      featured: true,
+      stats: '10o00x computational speedup50o00% ROI'
+    },
     {
-      title: 'AI 20o30 Autonomous Enterprise: 10,0o00% ROI Success Story';
+      title: 'AI 20o30 Autonomous Enterprise: 10,0o00% ROI Success Story',
       description:,
-        'Fortune 50o0 manufacturing company achieves unprecedented ROI through AI 20o30 Autonomous Enterprise Platform implementation.';
-      category: 'Case Study';
-      readTime: '10 min read';
-      link: '/case-studies/ai-20o30-autonomous-enterprise-transformation-10o000-roi-success-story';
-      featured: true;
-      stats: '10,0o00% ROI$2.3B savings';
-    };
+        'Fortune 50o0 manufacturing company achieves unprecedented ROI through AI 20o30 Autonomous Enterprise Platform implementation.',
+      category: 'Case Study',
+      readTime: '10 min read',
+      link: '/case-studies/ai-20o30-autonomous-enterprise-transformation-10o000-roi-success-story',
+      featured: true,
+      stats: '10,0o00% ROI$2.3B savings',
+    },
   ],
   return (
     <section className='bg-gradient-to-br from-gray-50 to-blue-50 py-20'>,
@@ -145,7 +145,7 @@ const UltimateContentShowcase20o30: React.FC = () => {
               Ready to Transform Your Business for 20o30?,
             </h3>,
             <p className='text-lg opacity-90 mb-6 max-w-2xl mx-auto'>,
-              'Don', 't wait for the future to arrive. Start your transformation,
+              'Dont wait for the future to arrive. Start your transformation,
               journey today with our expert guidance and proven methodologies.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -163,5 +163,5 @@ const UltimateContentShowcase20o30: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentShowcase20o30;
+    </section>)},
+export default UltimateContentShowcase20o30,

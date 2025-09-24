@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import {
-  X;
-  ArrowRight;
-  ShoppingBag;
-  Heart;
-  Users;
-  BarChart3;
-  ArrowRight;
+  X,
+  ArrowRight,
+  ShoppingBag,
+  Heart,
+  Users,
+  BarChart3,
+  ArrowRight,
 } from 'lucide-react',
 const NewContent20o25RetailBanner = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -22,7 +22,7 @@ const NewContent20o25RetailBanner = () => {
   const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('retail-banner-dismissed', 'true')};
+    localStorage.setItem('retail-banner-dismissedtrue')},
   if (!isVisible || isDismissed) return null,
   return (
     <div className='relative bg-gradient-to-r from-pink-60o0 via-rose-60o0 to-red-60o0 text-white overflow-hidden'>,
@@ -129,5 +129,5 @@ const NewContent20o25RetailBanner = () => {
         aria-label='Dismiss banner'>,
         <X className='w-6 h-6' />,
       </button>,
-    </div>)};
-export default NewContent20o25RetailBanner;
+    </div>)},
+export default NewContent20o25RetailBanner,

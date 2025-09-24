@@ -13,17 +13,17 @@ interface FeaturesGridProps {
   className?: string}
 ,
 export default function FeaturesGrid({
-  title;
-  subtitle;
-  features;
-  columns = 3;
-  className = '';
+  title,
+  subtitle,
+  features,
+  columns = 3,
+  className = '',
 }: FeaturesGridProps) {
   const gridCols = {
-    2: 'grid-cols-1 md:grid-cols-2';
-    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3';
-    4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4';
-  };
+    2: 'grid-cols-1 md:grid-cols-2',
+    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3',
+    4: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'
+  },
   return (
     <section className={`py-16 lg: py-24 ${className}`}>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,

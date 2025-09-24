@@ -6,37 +6,37 @@ const AI20o25UltimateContentRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const contentPieces = [
     {
-      id: 'ultimate-content-revolution';
-      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough';
+      id: 'ultimate-content-revolution',
+      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '25,0o00%';
-        revenue: '$445M';
-        production: '2,40o0%';
-        engagement: '1,80o0%'};
-      description: 'Revolutionary AI-powered content creation transforming Fortune 50o0 companies'};
+        roi: '25,0o00%',
+        revenue: '$445M',
+        production: '2,40o0%',
+        engagement: '1,80o0%'},
+      description: 'Revolutionary AI-powered content creation transforming Fortune 50o0 companies'},
     {
-      id: 'fortune-50o0-content-success';
-      title: 'Fortune 50o0 Content Revolution: $445M Annual Revenue Success';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-content-revolution-250o00-roi-success-story';
+      id: 'fortune-50o0-content-success',
+      title: 'Fortune 50o0 Content Revolution: $445M Annual Revenue Success',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-content-revolution-250o00-roi-success-story',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$2.8B';
-        efficiency: '3,20o0%';
-        accuracy: '99.7%'};
-      description: 'Proven success story of content revolution implementation'};
+        roi: '25,0o00%',
+        savings: '$2.8B',
+        efficiency: '3,20o0%',
+        accuracy: '99.7%'},
+      description: 'Proven success story of content revolution implementation'},
     {
-      id: 'content-implementation-guide';
-      title: 'AI Content Revolution Implementation Guide: Complete Roadmap';
-      type: 'resource';
-      url: '/resources/ai-20o25-ultimate-content-revolution-implementation-guide';
+      id: 'content-implementation-guide',
+      title: 'AI Content Revolution Implementation Guide: Complete Roadmap',
+      type: 'resource',
+      url: '/resources/ai-20o25-ultimate-content-revolution-implementation-guide',
       metrics: {
-        roi: '25,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: '45 min read'};
+        roi: '25,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: '45 min read'},
       description: 'Step-by-step implementation roadmap for content revolution success'}
   ],
   useEffect(() => {
@@ -45,7 +45,7 @@ const AI20o25UltimateContentRevolutionBanner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-content-revolution-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-content-revolution-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25-content-revolution-banner-dismissed'),
     if (dismissed === 'true') {
@@ -157,5 +157,5 @@ const AI20o25UltimateContentRevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateContentRevolutionBanner;
+    </div>)},
+export default AI20o25UltimateContentRevolutionBanner,

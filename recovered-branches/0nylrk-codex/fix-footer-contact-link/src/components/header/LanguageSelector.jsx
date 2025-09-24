@@ -4,21 +4,21 @@ export const LanguageSelector = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [currentLanguage, setCurrentLanguage] = useState('EN'),
   const languages = [
-    { code: 'EN', name: 'English', flag: '🇺🇸' };
-    { code: 'ES', name: 'Español', flag: '🇪🇸' };
-    { code: 'FR', name: 'Français', flag: '🇫🇷' };
-    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' };
-    { code: 'IT', name: 'Italiano', flag: '🇮🇹' };
-    { code: 'PT', name: 'Português', flag: '🇵🇹' };
-    { code: 'RU', name: 'Русский', flag: '🇷🇺' };
-    { code: 'ZH', name: '中文', flag: '🇨🇳' };
-    { code: 'JA', name: '日本語', flag: '🇯🇵' };
-    { code: 'KO', name: '한국어', flag: '🇰🇷' };
+    { code: 'EN', name: 'English', flag: '🇺🇸' },
+    { code: 'ES', name: 'Español', flag: '🇪🇸' },
+    { code: 'FR', name: 'Français', flag: '🇫🇷' },
+    { code: 'DE', name: 'Deutsch', flag: '🇩🇪' },
+    { code: 'IT', name: 'Italiano', flag: '🇮🇹' },
+    { code: 'PT', name: 'Português', flag: '🇵🇹' },
+    { code: 'RU', name: 'Русский', flag: '🇷🇺' },
+    { code: 'ZH', name: '中文', flag: '🇨🇳' },
+    { code: 'JA', name: '日本語', flag: '🇯🇵' },
+    { code: 'KO', name: '한국어', flag: '🇰🇷' },
   ],
   const handleLanguageChange = languageCode => {
     setCurrentLanguage(languageCode),
     setIsOpen(false),
-    // Here you would typically implement language change logic};
+    // Here you would typically implement language change logic},
   const currentLang = languages.find(lang => lang.code === currentLanguage),
   return (
     <div className='relative'>,
@@ -48,4 +48,4 @@ export const LanguageSelector = () => {
               </button>))}
           </div>,
         </div>)}
-    </div>)};
+    </div>)},

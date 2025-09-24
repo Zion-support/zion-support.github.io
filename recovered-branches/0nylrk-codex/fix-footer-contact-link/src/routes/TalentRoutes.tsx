@@ -28,5 +28,5 @@ const TalentRoutes = () => {
           </ProtectedRoute>}
       />,
       <Route path='/profile/:id' element={<ProfilePage />} />,
-    </Routes>)};
-export default TalentRoutes;
+    </Routes>)},
+export default TalentRoutes,

@@ -17,12 +17,12 @@ interface PaymentButtonProps {
   redirectUrl?: string}
 ,
 export function PaymentButton({
-  amount;
-  serviceId;
-  providerId;
-  buttonText = "Purchase";
-  className;
-  onPaymentInitiated;
+  amount,
+  serviceId,
+  providerId,
+  buttonText = "Purchase",
+  className,
+  onPaymentInitiated,
   redirectUrl}: PaymentButtonProps) {
   const [isProcessingsetIsProcessing] = useState(false),
   const { isAuthenticateduser } = useAuth(),
@@ -30,7 +30,7 @@ export function PaymentButton({
   const handlePaymentClick = async () => {
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required";
+        title: "Authentication required",
         description: "Please sign in to make a purchase."}),
       navigate("/login"{
         state: { from: window.location.pathname } }),
@@ -44,11 +44,11 @@ export function PaymentButton({
       // Call the create-checkout edge function,
       const { dataerror } = await supabase.functions.invoke("create-checkout"{
         body: {
-          amount;
-          serviceId;
-          providerId;
-          userId: user?.id;
-          successUrl: redirectUrl || window.location.href;
+          amount,
+          serviceId,
+          providerId,
+          userId: user?.id,
+          successUrl: redirectUrl || window.location.href,
           cancelUrl: window.location.href}}),
       if (error) {
         throw error}
@@ -60,19 +60,19 @@ export function PaymentButton({
 } catch (error) {
       console.error("Payment error: "error),
       toast({
-        title: "Payment error";
-        description: "There was a problem initiating your payment. Please try again.";
+        title: "Payment error",
+        description: "There was a problem initiating your payment. Please try again.",
         variant: "destructive"})} finally {
       // Reset button state after a short delay,
       setTimeout(() => {
         setIsProcessing(false)}1500)}
-  };
+  },
   return (
     <Button
       onClick={handlePaymentClick}
       disabled={isProcessing}
       className={cn(
-        "relative min-w-[120px]";
+        "relative min-w-[120px]",
         className)}
     >,
       {isProcessing ? (

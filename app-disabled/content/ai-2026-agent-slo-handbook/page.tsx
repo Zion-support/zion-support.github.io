@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent SLO & SLI Handbook | Zion Tech Group';
+  title: 'AI 20o26: Agent SLO & SLI Handbook | Zion Tech Group',
   description:,
-    'Define and operate agent Service Level Objectives with measurable SLIs, error budgets, and guardrails.';
-};
+    'Define and operate agent Service Level Objectives with measurable SLIs, error budgets, and guardrails.',
+},
 const AgentSloHandbook20o26 = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -23,7 +23,7 @@ const AgentSloHandbook20o26 = () => {
             AI 20o26: Agent SLO & SLI Handbook,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            Establish clear reliability targets for autonomous agents with SLIs;
+            Establish clear reliability targets for autonomous agents with SLIs,
             SLOs, and error budgets wired to guardrails.,
           </p>,
         </header>,
@@ -54,5 +54,5 @@ const AgentSloHandbook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgentSloHandbook20o26;
+    </div>)},
+export default AgentSloHandbook20o26,

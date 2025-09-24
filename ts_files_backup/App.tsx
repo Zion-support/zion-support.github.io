@@ -138,7 +138,7 @@ export default function App(): JSX.Element {
                       <p className='text-2xl opacity-95 mb-8 max-w-6xl mx-auto'>,
                         Experience the most advanced technology content,
                         featuring AI Revolutionary Breakthrough, Quantum,
-                        Computing Revolution, Neural Interface Technology;
+                        Computing Revolution, Neural Interface Technology,
                         Biotech Revolution, Space Tech Innovation, and Advanced,
                         Robotics,
                       </p>,
@@ -263,7 +263,7 @@ export default function App(): JSX.Element {
                           Cloud Cost Optimizer,
                         </h3>,
                         <p className='text-gray-60o0 mb-4'>,
-                          Cut multi-cloud spend with automated rightsizing;
+                          Cut multi-cloud spend with automated rightsizing,
                           scheduling, and anomaly detection.,
                         </p>,
                         <a

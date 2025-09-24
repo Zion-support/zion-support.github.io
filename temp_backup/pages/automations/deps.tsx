@@ -4,12 +4,12 @@ export default function DependencyHealth() {
   const o =,
     deps.summary?.outdated || ({ total: 0, byType: {}, items: [] } as any),
   const v = deps.summary?.vulnerabilities || {
-    total: 0;
-    critical: 0;
-    high: 0;
-    moderate: 0;
-    low: 0;
-  };
+    total: 0,
+    critical: 0,
+    high: 0,
+    moderate: 0,
+    low: 0
+  },
   return (
     <div>,
       <Head>,

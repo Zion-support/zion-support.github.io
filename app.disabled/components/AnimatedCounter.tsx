@@ -7,9 +7,9 @@ interface AnimatedCounterProps {
   prefix?: string}
 ,
 const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
-  end;
-  duration = 2000;
-  suffix = '';
+  end,
+  duration = 2000,
+  suffix = '',
   prefix = ''}) => {
   const [count, setCount] = useState(0),
   useEffect(() => {
@@ -21,14 +21,14 @@ const AnimatedCounter: React.FC<AnimatedCounterProps> = ({
       setCount(Math.floor(progress * end)),
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)}
-    };
+    },
     animationFrame = requestAnimationFrame(animate),
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)}
-    };
+    },
   }, [end, duration]),
-type Props ={ value?: number, label?: string };
+type Props ={ value?: number, label?: string },
   return (
     <span>,
       {prefix}{count}{suffix}
@@ -36,5 +36,5 @@ type Props ={ value?: number, label?: string };
     <div className="text-center">,
       <div className="text-3xl font-bold text-white">{value}</div>,
       {label && <div className="text-sm text-gray-30o0">{label}</div>}
-    </div>)};
-export default AnimatedCounter;
+    </div>)},
+export default AnimatedCounter,

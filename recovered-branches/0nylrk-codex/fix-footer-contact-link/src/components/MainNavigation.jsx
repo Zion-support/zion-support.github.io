@@ -9,72 +9,72 @@ export function MainNavigation() {
   const location = useLocation(),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigation = [
     {
-      name: 'Services';
-      href: '/services';
+      name: 'Services',
+      href: '/services',
       dropdown: [
-        { name: 'AI Solutions', href: '/services/ai' };
-        { name: 'Cybersecurity', href: '/services/cybersecurity' };
-        { name: 'Cloud Computing', href: '/services/cloud' };
-        { name: 'IT Consulting', href: '/services/consulting' };
+        { name: 'AI Solutions', href: '/services/ai' },
+        { name: 'Cybersecurity', href: '/services/cybersecurity' },
+        { name: 'Cloud Computing', href: '/services/cloud' },
+        { name: 'IT Consulting', href: '/services/consulting' },
         {
-          name: 'Digital Transformation';
-          href: '/services/digital-transformation';
-        };
-      ];
-    };
+          name: 'Digital Transformation',
+          href: '/services/digital-transformation'
+        },
+      ],
+    },
     {
-      name: 'Solutions';
-      href: '/solutions';
+      name: 'Solutions',
+      href: '/solutions',
       dropdown: [
-        { name: 'Enterprise AI', href: '/solutions/enterprise-ai' };
-        { name: 'Quantum Computing', href: '/solutions/quantum' };
-        { name: 'Autonomous Systems', href: '/solutions/autonomous' };
-        { name: 'Blockchain', href: '/solutions/blockchain' };
-        { name: 'IoT Platform', href: '/solutions/iot' };
-      ];
-    };
+        { name: 'Enterprise AI', href: '/solutions/enterprise-ai' },
+        { name: 'Quantum Computing', href: '/solutions/quantum' },
+        { name: 'Autonomous Systems', href: '/solutions/autonomous' },
+        { name: 'Blockchain', href: '/solutions/blockchain' },
+        { name: 'IoT Platform', href: '/solutions/iot' },
+      ],
+    },
     {
-      name: 'Industries';
-      href: '/industries';
+      name: 'Industries',
+      href: '/industries',
       dropdown: [
-        { name: 'Healthcare', href: '/industries/healthcare' };
-        { name: 'Finance', href: '/industries/finance' };
-        { name: 'Manufacturing', href: '/industries/manufacturing' };
-        { name: 'Retail', href: '/industries/retail' };
-        { name: 'Education', href: '/industries/education' };
-      ];
-    };
+        { name: 'Healthcare', href: '/industries/healthcare' },
+        { name: 'Finance', href: '/industries/finance' },
+        { name: 'Manufacturing', href: '/industries/manufacturing' },
+        { name: 'Retail', href: '/industries/retail' },
+        { name: 'Education', href: '/industries/education' },
+      ],
+    },
     {
-      name: 'Resources';
-      href: '/resources';
+      name: 'Resources',
+      href: '/resources',
       dropdown: [
-        { name: 'Blog', href: '/blog' };
-        { name: 'Case Studies', href: '/case-studies' };
-        { name: 'White Papers', href: '/white-papers' };
-        { name: 'Webinars', href: '/webinars' };
-        { name: 'Documentation', href: '/docs' };
-      ];
-    };
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Documentation', href: '/docs' },
+      ],
+    },
     {
-      name: 'Company';
-      href: '/about';
+      name: 'Company',
+      href: '/about',
       dropdown: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Leadership', href: '/leadership' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'News', href: '/news' };
-        { name: 'Contact', href: '/contact' };
-      ];
-    };
+        { name: 'About Us', href: '/about' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News', href: '/news' },
+        { name: 'Contact', href: '/contact' },
+      ],
+    },
   ],
   const isActive = path => {
     if (path === '/') return location.pathname === '/',
-    return location.pathname.startsWith(path)};
+    return location.pathname.startsWith(path)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${

@@ -33,7 +33,7 @@ export function ReferralTable({ referralsisLoading }: ReferralTableProps) {
           </Badge>),
       default:,
         return null}
-  };
+  },
   if (isLoading) {
     return (
       <div className='flex items-center justify-center p-8'>,

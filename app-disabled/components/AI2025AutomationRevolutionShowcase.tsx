@@ -3,65 +3,65 @@ import Link from 'next/link',
 const AI20o25AutomationRevolutionShowcase = () => {
   const featuredContent = [
     {
-      id: 'ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25';
+      id: 'ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25',
       title:,
-        'AI 20o25: The Enterprise Automation Revolution - Ultimate Breakthrough Guide to 2,50o0% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25';
+        'AI 20o25: The Enterprise Automation Revolution - Ultimate Breakthrough Guide to 2,50o0% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25',
       description:,
-        'Transform your enterprise with cutting-edge AI automation that delivers unprecedented results. Learn the strategies, technologies, and implementation frameworks that Fortune 50o0 companies are using to achieve 2,50o0% ROI.';
+        'Transform your enterprise with cutting-edge AI automation that delivers unprecedented results. Learn the strategies, technologies, and implementation frameworks that Fortune 50o0 companies are using to achieve 2,50o0% ROI.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$15.8B+';
-        efficiency: '1,20o0%';
-        accuracy: '99.7%';
-      };
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,50o0%',
+        savings: '$15.8B+',
+        efficiency: '1,20o0%',
+        accuracy: '99.7%'
+      },
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'fortune-50o0-ai-automation-transformation-250o0-roi-success-story';
+      id: 'fortune-50o0-ai-automation-transformation-250o0-roi-success-story',
       title:,
-        'Fortune 50o0 AI Automation Transformation: $15.8B Annual Savings - 2,50o0% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-automation-transformation-250o0-roi-success-story';
+        'Fortune 50o0 AI Automation Transformation: $15.8B Annual Savings - 2,50o0% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-automation-transformation-250o0-roi-success-story',
       description:,
-        'Discover how a Fortune 50o0 manufacturing company achieved unprecedented results with comprehensive AI automation, generating $15.8B in annual savings while improving operational efficiency by 1,20o0%.';
+        'Discover how a Fortune 50o0 manufacturing company achieved unprecedented results with comprehensive AI automation, generating $15.8B in annual savings while improving operational efficiency by 1,20o0%.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$15.8B';
-        timeline: '18 months';
-        satisfaction: '98%';
-      };
-      readingTime: '18 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,50o0%',
+        savings: '$15.8B',
+        timeline: '18 months',
+        satisfaction: '98%'
+      },
+      readingTime: '18 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'ai-automation-implementation-ultimate-guide-20o25';
+      id: 'ai-automation-implementation-ultimate-guide-20o25',
       title:,
-        'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 2,50o0% ROI';
-      type: 'resource';
-      url: '/resources/ai-automation-implementation-ultimate-guide-20o25';
+        'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 2,50o0% ROI',
+      type: 'resource',
+      url: '/resources/ai-automation-implementation-ultimate-guide-20o25',
       description:,
-        'The definitive guide to implementing AI automation that delivers extraordinary results. Complete roadmap with strategies, technologies, and implementation frameworks for achieving 2,50o0% ROI.';
+        'The definitive guide to implementing AI automation that delivers extraordinary results. Complete roadmap with strategies, technologies, and implementation frameworks for achieving 2,50o0% ROI.',
       metrics: {
-        roi: '2,50o0%';
-        success: '1,0o00+';
-        timeline: '18 months';
-        projects: 'Fortune 50o0';
-      };
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,50o0%',
+        success: '1,0o00+',
+        timeline: '18 months',
+        projects: 'Fortune 50o0'
+      },
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true
+    },
   ],
   const successMetrics = [
-    { label: 'Average ROI', value: '2,50o0%', color: 'text-green-60o0' };
-    { label: 'Cost Savings', value: '$15.8B+', color: 'text-blue-60o0' };
-    { label: 'Efficiency Gains', value: '1,20o0%', color: 'text-purple-60o0' };
-    { label: 'Success Stories', value: '1,0o00+', color: 'text-orange-60o0' };
+    { label: 'Average ROI', value: '2,50o0%', color: 'text-green-60o0' },
+    { label: 'Cost Savings', value: '$15.8B+', color: 'text-blue-60o0' },
+    { label: 'Efficiency Gains', value: '1,20o0%', color: 'text-purple-60o0' },
+    { label: 'Success Stories', value: '1,0o00+', color: 'text-orange-60o0' },
   ],
   return (
     <div className='py-16 bg-gray-50'>,
@@ -235,5 +235,5 @@ const AI20o25AutomationRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25AutomationRevolutionShowcase;
+    </div>)},
+export default AI20o25AutomationRevolutionShowcase,

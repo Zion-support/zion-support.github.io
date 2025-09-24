@@ -8,54 +8,54 @@ const ModernHeader: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const serviceCategories = [
     {
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      href: '/services#ai';
-      description: 'Intelligent automation and AI solutions';
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']};
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      href: '/services#ai',
+      description: 'Intelligent automation and AI solutions',
+      services: ['AI AutomationMachine Learning', 'Natural Language ProcessingComputer Vision']},
     {
-      name: 'Cloud & DevOps';
-      icon: Cloud;
-      href: '/services#cloud';
-      description: 'Cloud infrastructure and DevOps automation';
-      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']};
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      href: '/services#cloud',
+      description: 'Cloud infrastructure and DevOps automation',
+      services: ['Cloud MigrationKubernetes', 'DevOps AutomationInfrastructure as Code']},
     {
-      name: 'Cybersecurity';
-      icon: Shield;
-      href: '/services#cybersecurity';
-      description: 'Advanced security and compliance solutions';
-      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']};
+      name: 'Cybersecurity',
+      icon: Shield,
+      href: '/services#cybersecurity',
+      description: 'Advanced security and compliance solutions',
+      services: ['Zero TrustSOC 2 Compliance', 'Threat DetectionSecurity Hardening']},
     {
-      name: 'Data & Analytics';
-      icon: BarChart3;
-      href: '/services#data';
-      description: 'Data platforms and business intelligence';
-      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']};
+      name: 'Data & Analytics',
+      icon: BarChart3,
+      href: '/services#data',
+      description: 'Data platforms and business intelligence',
+      services: ['Data WarehousingBusiness Intelligence', 'Data QualityReal-time Analytics']},
     {
-      name: 'Enterprise Solutions';
-      icon: Database;
-      href: '/services#enterprise';
-      description: 'Enterprise-grade business solutions';
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']};
+      name: 'Enterprise Solutions',
+      icon: Database,
+      href: '/services#enterprise',
+      description: 'Enterprise-grade business solutions',
+      services: ['ERP SystemsCRM Platforms', 'Workflow AutomationIntegration Services']},
     {
-      name: 'Emerging Technologies';
-      icon: Rocket;
-      href: '/services#emerging';
-      description: 'Quantum computing and blockchain';
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']}
+      name: 'Emerging Technologies',
+      icon: Rocket,
+      href: '/services#emerging',
+      description: 'Quantum computing and blockchain',
+      services: ['Quantum AIBlockchain', 'IoT PlatformsEdge Computing']}
   ],
   const mainNavigation = [
-    { name: 'Home', href: '/', hasDropdown: false };
-    { name: 'Services', href: '/services', hasDropdown: true };
-    { name: 'Solutions', href: '/solutions', hasDropdown: false };
-    { name: 'About', href: '/about', hasDropdown: false };
-    { name: 'Case Studies', href: '/case-studies', hasDropdown: false };
-    { name: 'Blog', href: '/blog', hasDropdown: false };
+    { name: 'Home', href: '/', hasDropdown: false },
+    { name: 'Services', href: '/services', hasDropdown: true },
+    { name: 'Solutions', href: '/solutions', hasDropdown: false },
+    { name: 'About', href: '/about', hasDropdown: false },
+    { name: 'Case Studies', href: '/case-studies', hasDropdown: false },
+    { name: 'Blog', href: '/blog', hasDropdown: false },
     { name: 'Contact', href: '/contact', hasDropdown: false }
   ],
   return (
@@ -218,5 +218,5 @@ const ModernHeader: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </motion.header>)};
-export default ModernHeader;
+    </motion.header>)},
+export default ModernHeader,

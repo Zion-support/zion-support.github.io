@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {
   return (
@@ -158,5 +158,5 @@ const NeuralInterfaces20o26EnterpriseRevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NeuralInterfaces20o26EnterpriseRevolutionBanner;
+    </section>)},
+export default NeuralInterfaces20o26EnterpriseRevolutionBanner,

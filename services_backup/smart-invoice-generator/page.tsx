@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Smart Invoice Generator | Zion Tech Group';
+  title: 'Smart Invoice Generator | Zion Tech Group',
   description:,
-    'Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.';
-};
+    'Automate your invoicing process with AI-powered smart invoice generation, payment tracking, and financial analytics.',
+},
 export default function SmartInvoiceGeneratorPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -17,28 +17,22 @@ export default function SmartInvoiceGeneratorPage() {
         <FeatureCard
           title='AI-Powered Generation',
           features={[
-            'Auto-populate from contracts';
-            'Smart line item suggestions';
-            'Tax calculation automation';
-            'Multi-currency support';
+            'Auto-populate from contractsSmart line item suggestions',
+            'Tax calculation automationMulti-currency support',
           ]}
         />,
         <FeatureCard
           title='Payment Management',
           features={[
-            'Automated payment reminders';
-            'Online payment processing';
-            'Late fee calculations';
-            'Payment status tracking';
+            'Automated payment remindersOnline payment processing',
+            'Late fee calculationsPayment status tracking',
           ]}
         />,
         <FeatureCard
           title='Financial Analytics',
           features={[
-            'Revenue forecasting';
-            'Cash flow analysis';
-            'Client payment patterns';
-            'Tax reporting';
+            'Revenue forecastingCash flow analysis',
+            'Client payment patternsTax reporting',
           ]}
         />,
       </div>,
@@ -118,8 +112,8 @@ export default function SmartInvoiceGeneratorPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -145,21 +139,17 @@ function Pricing() {
           name='Solo',
           price='$29/mo',
           features={[
-            'Up to 50 invoices/month';
-            'Basic templates';
-            'Payment tracking';
-            'Email support';
+            'Up to 50 invoices/monthBasic templates',
+            'Payment trackingEmail support',
           ]}
         />,
         <Plan
           name='Business',
           price='$79/mo',
           features={[
-            'Unlimited invoices';
-            'Custom branding';
-            'Advanced analytics';
-            'Priority support';
-            'API access';
+            'Unlimited invoicesCustom branding',
+            'Advanced analyticsPriority support',
+            'API access',
           ]}
           popular={true}
         />,
@@ -167,21 +157,19 @@ function Pricing() {
           name='Enterprise',
           price='$199/mo',
           features={[
-            'Multi-user access';
-            'Custom integrations';
-            'Dedicated support';
-            'Advanced reporting';
-            'White-label solution';
+            'Multi-user accessCustom integrations',
+            'Dedicated supportAdvanced reporting',
+            'White-label solution',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

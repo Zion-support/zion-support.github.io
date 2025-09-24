@@ -5,23 +5,23 @@ import { NeonGlow } from '../ui/NeonGlow',
 export function ITServiceRequestHero() {
   const features = [
     {
-      icon: <Brain className='w-6 h-6' />;
-      title: 'AI-Powered Solutions';
+      icon: <Brain className='w-6 h-6' />,
+      title: 'AI-Powered Solutions',
       description:,
-        'Cutting-edge artificial intelligence that learns and adapts to your business needs.';
-    };
+        'Cutting-edge artificial intelligence that learns and adapts to your business needs.',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Cybersecurity';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Cybersecurity',
       description:,
-        'Advanced security solutions protecting your digital assets and infrastructure.';
-    };
+        'Advanced security solutions protecting your digital assets and infrastructure.',
+    },
     {
-      icon: <Cloud className='w-6 h-6' />;
-      title: 'Cloud Computing';
+      icon: <Cloud className='w-6 h-6' />,
+      title: 'Cloud Computing',
       description:,
-        'Scalable cloud solutions that optimize performance and reduce costs.';
-    };
+        'Scalable cloud solutions that optimize performance and reduce costs.',
+    },
   ],
   return (
     <section className='relative py-20 overflow-hidden'>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { ReactNode } from 'react',
 // Extend FeatureCardProps to include key for mapping,
 declare module '@/components/FeatureCard' {

@@ -9,29 +9,29 @@ import {
   Clock,
   Eye,
   Heart,
-  MessageCircle;
-  Bookmark;
-  Share2;
-  Play;
-  ArrowRight;
-  X;
-  Zap;
-  Brain;
-  Globe;
-  Shield;
-  Infinity;
-  Atom;
-  CircuitBoard;
-  Microscope;
-  TestTube;
-  Beaker;
-  Dna;
-  Activity;
-  Cpu;
-  Wifi;
-  Lock;
-  Target;
-  Rocket;
+  MessageCircle,
+  Bookmark,
+  Share2,
+  Play,
+  ArrowRight,
+  X,
+  Zap,
+  Brain,
+  Globe,
+  Shield,
+  Infinity,
+  Atom,
+  CircuitBoard,
+  Microscope,
+  TestTube,
+  Beaker,
+  Dna,
+  Activity,
+  Cpu,
+  Wifi,
+  Lock,
+  Target,
+  Rocket,
   CheckCircle} from 'lucide-react',
 const UltimateContentDiscoveryWidget20o30 = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -42,80 +42,80 @@ const UltimateContentDiscoveryWidget20o30 = () => {
   useEffect(() => {
     setIsVisible(true)}[]),
   const categories = [
-    { id: 'all'name: 'All Content'icon: Globecolor: 'from-gray-50o0 to-gray-60o0' };
-    { id: 'transcendent-ai'name: 'Transcendent AI'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'quantum-revolution'name: 'Quantum Revolution'icon: Atomcolor: 'from-blue-50o0 to-cyan-50o0' };
-    { id: 'neural-synthesis'name: 'Neural Synthesis'icon: CircuitBoardcolor: 'from-green-50o0 to-emerald-50o0' };
-    { id: 'omniversal-tech'name: 'Omniversal Tech'icon: Infinitycolor: 'from-orange-50o0 to-red-50o0' };
+    { id: 'all'name: 'All Content'icon: Globecolor: 'from-gray-50o0 to-gray-60o0' },
+    { id: 'transcendent-ai'name: 'Transcendent AI'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'quantum-revolution'name: 'Quantum Revolution'icon: Atomcolor: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'neural-synthesis'name: 'Neural Synthesis'icon: CircuitBoardcolor: 'from-green-50o0 to-emerald-50o0' },
+    { id: 'omniversal-tech'name: 'Omniversal Tech'icon: Infinitycolor: 'from-orange-50o0 to-red-50o0' },
     { id: 'reality-manipulation'name: 'Reality Manipulation'icon: Zapcolor: 'from-yellow-50o0 to-orange-50o0' }
   ],
   const timeframes = [
-    { id: 'all'name: 'All Time' };
-    { id: 'today'name: 'Today' };
-    { id: 'week'name: 'This Week' };
-    { id: 'month'name: 'This Month' };
+    { id: 'all'name: 'All Time' },
+    { id: 'today'name: 'Today' },
+    { id: 'week'name: 'This Week' },
+    { id: 'month'name: 'This Month' },
     { id: 'year'name: 'This Year' }
   ],
   const trendingContent = [
     {
-      id: 1;
-      title: 'Omniversal Consciousness AI';
-      description: 'AI system achieving consciousness across multiple dimensions';
-      category: 'transcendent-ai';
-      views: '5.2M';
-      likes: '456K';
-      comments: '89K';
-      rating: 4.9;
-      readTime: '15 min';
-      isTrending: true;
-      isFeatured: true};
+      id: 1,
+      title: 'Omniversal Consciousness AI',
+      description: 'AI system achieving consciousness across multiple dimensions',
+      category: 'transcendent-ai',
+      views: '5.2M',
+      likes: '456K',
+      comments: '89K',
+      rating: 4.9,
+      readTime: '15 min',
+      isTrending: true,
+      isFeatured: true},
     {
-      id: 2;
-      title: 'Infinite Qubit Processor';
-      description: 'Quantum processor with infinite qubits solving complex problems';
-      category: 'quantum-revolution';
-      views: '4.5M';
-      likes: '412K';
-      comments: '78K';
-      rating: 4.8;
-      readTime: '14 min';
-      isTrending: true;
-      isFeatured: false};
+      id: 2,
+      title: 'Infinite Qubit Processor',
+      description: 'Quantum processor with infinite qubits solving complex problems',
+      category: 'quantum-revolution',
+      views: '4.5M',
+      likes: '412K',
+      comments: '78K',
+      rating: 4.8,
+      readTime: '14 min',
+      isTrending: true,
+      isFeatured: false},
     {
-      id: 3;
-      title: 'Dimensional Gateway Technology';
-      description: 'Technology enabling travel between dimensions and universes';
-      category: 'omniversal-tech';
-      views: '6.8M';
-      likes: '678K';
-      comments: '156K';
-      rating: 4.9;
-      readTime: '20 min';
-      isTrending: true;
-      isFeatured: true};
+      id: 3,
+      title: 'Dimensional Gateway Technology',
+      description: 'Technology enabling travel between dimensions and universes',
+      category: 'omniversal-tech',
+      views: '6.8M',
+      likes: '678K',
+      comments: '156K',
+      rating: 4.9,
+      readTime: '20 min',
+      isTrending: true,
+      isFeatured: true},
     {
-      id: 4;
-      title: 'Perfect Neural Integration';
-      description: 'Seamless integration between human consciousness and AI';
-      category: 'neural-synthesis';
-      views: '4.2M';
-      likes: '365K';
-      comments: '72K';
-      rating: 4.9;
-      readTime: '13 min';
-      isTrending: false;
-      isFeatured: false};
+      id: 4,
+      title: 'Perfect Neural Integration',
+      description: 'Seamless integration between human consciousness and AI',
+      category: 'neural-synthesis',
+      views: '4.2M',
+      likes: '365K',
+      comments: '72K',
+      rating: 4.9,
+      readTime: '13 min',
+      isTrending: false,
+      isFeatured: false},
     {
-      id: 5;
-      title: 'Reality Creation Engine';
-      description: 'Quantum system that can create and manipulate entire realities';
-      category: 'reality-manipulation';
-      views: '5.7M';
-      likes: '489K';
-      comments: '95K';
-      rating: 4.8;
-      readTime: '16 min';
-      isTrending: true;
+      id: 5,
+      title: 'Reality Creation Engine',
+      description: 'Quantum system that can create and manipulate entire realities',
+      category: 'reality-manipulation',
+      views: '5.7M',
+      likes: '489K',
+      comments: '95K',
+      rating: 4.8,
+      readTime: '16 min',
+      isTrending: true,
       isFeatured: false}
   ],
   const filteredContent = trendingContent.filter(item => {
@@ -124,7 +124,7 @@ const UltimateContentDiscoveryWidget20o30 = () => {
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     return matchesSearch && matchesCategory}),
   const getCategoryInfo = (categoryId) => {
-    return categories.find(cat => cat.id === categoryId) || categories[0]};
+    return categories.find(cat => cat.id === categoryId) || categories[0]},
   return (
     <motion.div,
       initial={{ opacity: 0y: 50 }}
@@ -308,5 +308,5 @@ const UltimateContentDiscoveryWidget20o30 = () => {
           </button>,
         </div>,
       </div>,
-    </motion.div>)};
-export default UltimateContentDiscoveryWidget20o30;
+    </motion.div>)},
+export default UltimateContentDiscoveryWidget20o30,

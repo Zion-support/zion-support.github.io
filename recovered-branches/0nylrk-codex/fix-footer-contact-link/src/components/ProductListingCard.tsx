@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useNavigate } from "react-router-dom",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -11,7 +11,7 @@ interface ProductListingCardProps {
 ,
 export function ProductListingCard({
   listing,
-  view = 'grid';
+  view = 'grid',
   onRequestQuote}: ProductListingCardProps) {
   const isGrid = view === 'grid',
   const navigate = useNavigate(),
@@ -22,13 +22,13 @@ export function ProductListingCard({
   // Format price display,
   const formatPrice = () => {
     if (listing.price === null) return "Custom pricing",
-    return `${listing.currency}${listing.price.toLocaleString()}`};
+    return `${listing.currency}${listing.price.toLocaleString()}`},
   // Handle image loading errors,
   const handleImageError = (e: React.SyntheticEvent<HTMLImageElement>) => {
-    e.currentTarget.src = '/placeholder.svg'};
+    e.currentTarget.src = '/placeholder.svg'},
   // Handle navigating to listing detail,
   const handleViewListing = () => {
-    navigate(`/listing/${listing.id}`)};
+    navigate(`/listing/${listing.id}`)},
   // Handle request quote button click,
   const handleRequestQuote = (e: React.MouseEvent) => {
     e.preventDefault(),
@@ -37,7 +37,7 @@ export function ProductListingCard({
       onRequestQuote(listing.id)} else {
       // Default behavior if no handler provided,
       navigate(`/request-quote?listing=${listing.id}`)}
-  };
+  },
   return (
     <div className={`bg-zion-blue-dark border border-zion-blue-light rounded-lg overflow-hidden flex ${isGrid ? 'flex-col' : 'flex-row'} cursor-pointer`} onClick={handleViewListing}>,
       {/* Image */}

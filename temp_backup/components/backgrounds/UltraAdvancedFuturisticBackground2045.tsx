@@ -29,16 +29,16 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
     setIsVisible(true),
     const updateDimensions = () => {
       setDimensions({
-        width: window.innerWidth;
-        height: window.innerHeight})};
+        width: window.innerWidth,
+        height: window.innerHeight})},
     updateDimensions(),
     window.addEventListener('resize', updateDimensions),
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     window.addEventListener('mousemove', handleMouseMove),
     return () => {
       window.removeEventListener('resize', updateDimensions),
-      window.removeEventListener('mousemove', handleMouseMove)};
+      window.removeEventListener('mousemove', handleMouseMove)},
   }, []),
   useEffect(() => {
     if (!canvasRef.current || dimensions.width === 0) return,
@@ -53,25 +53,25 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
     // Initialize particles,
     for (let i = 0, i < 150, i++) {
       particles.push({
-        id: i;
-        x: Math.random() * dimensions.width;
-        y: Math.random() * dimensions.height;
-        vx: (Math.random() - 0.5) * 0.5;
-        vy: (Math.random() - 0.5) * 0.5;
-        size: Math.random() * 3 + 1;
-        color: `hsl(${Math.random() * 360}, 70%, 60%)`;
-        opacity: Math.random() * 0.8 + 0.2;
+        id: i,
+        x: Math.random() * dimensions.width,
+        y: Math.random() * dimensions.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 3 + 1,
+        color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+        opacity: Math.random() * 0.8 + 0.2,
         life: Math.random() * 10o0})}
 ,
     // Initialize quantum fields,
     for (let i = 0, i < 8, i++) {
       quantumFields.push({
-        id: i;
-        x: Math.random() * dimensions.width;
-        y: Math.random() * dimensions.height;
-        radius: Math.random() * 20o0 + 10o0;
-        intensity: Math.random() * 0.5 + 0.5;
-        color: `hsl(${i * 45}, 80%, 60%)`;
+        id: i,
+        x: Math.random() * dimensions.width,
+        y: Math.random() * dimensions.height,
+        radius: Math.random() * 20o0 + 10o0,
+        intensity: Math.random() * 0.5 + 0.5,
+        color: `hsl(${i * 45}, 80%, 60%)`,
         phase: Math.random() * Math.PI * 2})}
 ,
     let animationId: number,
@@ -80,7 +80,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
       time += 0.0o16,
       // Clear canvas with gradient background,
       const gradient = ctx.createRadialGradient(
-        dimensions.width / 2, dimensions.height / 2, 0;
+        dimensions.width / 2, dimensions.height / 2, 0,
         dimensions.width / 2, dimensions.height / 2, Math.max(dimensions.width, dimensions.height) / 2),
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)'),
       gradient.addColorStop(0.5, 'rgba(20, 20, 40, 0.8)'),
@@ -92,7 +92,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
         const intensity = Math.sin(time * 0.5 + field.phase) * 0.3 + 0.7,
         // Create radial gradient for quantum field,
         const fieldGradient = ctx.createRadialGradient(
-          field.x, field.y, 0;
+          field.x, field.y, 0,
           field.x, field.y, field.radius * intensity),
         fieldGradient.addColorStop(0, `${field.color}20`),
         fieldGradient.addColorStop(0.5, `${field.color}10`),
@@ -157,7 +157,7 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
       if (mousePosition.x > 0 && mousePosition.y > 0) {
         const mouseFieldRadius = 150,
         const mouseGradient = ctx.createRadialGradient(
-          mousePosition.x, mousePosition.y, 0;
+          mousePosition.x, mousePosition.y, 0,
           mousePosition.x, mousePosition.y, mouseFieldRadius),
         mouseGradient.addColorStop(0, 'rgba(0, 212, 255, 0.1)'),
         mouseGradient.addColorStop(0.5, 'rgba(168, 85, 247, 0.0o5)'),
@@ -175,8 +175,8 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
 ,
       // Draw floating geometric shapes,
       const shapes = [
-        { x: dimensions.width * 0.2, y: dimensions.height * 0.3, size: 40, rotation: time * 0.5 };
-        { x: dimensions.width * 0.8, y: dimensions.height * 0.7, size: 60, rotation: time * 0.3 };
+        { x: dimensions.width * 0.2, y: dimensions.height * 0.3, size: 40, rotation: time * 0.5 },
+        { x: dimensions.width * 0.8, y: dimensions.height * 0.7, size: 60, rotation: time * 0.3 },
         { x: dimensions.width * 0.1, y: dimensions.height * 0.8, size: 30, rotation: time * 0.7 }
       ],
       shapes.forEach(shape => {
@@ -212,12 +212,12 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
 ,
         ctx.stroke()}
 ,
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     animate(),
     return () => {
       if (animationId) {
         cancelAnimationFrame(animationId)}
-    };
+    },
   }, [dimensions, mousePosition]),
   return (
     <motion.div,
@@ -238,34 +238,34 @@ const UltraAdvancedFuturisticBackground20o45: React.FC = () => {
       <motion.div,
         className="absolute top-1/4 left-1/4 w-4 h-4 rounded-full bg-cyan-40o0 shadow-lg shadow-cyan-40o0/50",
         animate={{
-          scale: [1, 1.2, 1];
+          scale: [1, 1.2, 1],
           opacity: [0.5, 1, 0.5]}}
         transition={{
-          duration: 3;
-          repeat: Infinity;
+          duration: 3,
+          repeat: Infinity,
           ease: "easeInOut"}}
        />,
       <motion.div,
         className="absolute top-3/4 right-1/4 w-3 h-3 rounded-full bg-purple-40o0 shadow-lg shadow-purple-40o0/50",
         animate={{
-          scale: [1, 1.3, 1];
+          scale: [1, 1.3, 1],
           opacity: [0.3, 1, 0.3]}}
         transition={{
-          duration: 4;
-          repeat: Infinity;
-          ease: "easeInOut";
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
           delay: 1}}
        />,
       <motion.div,
         className="absolute top-1/2 left-1/2 w-2 h-2 rounded-full bg-pink-40o0 shadow-lg shadow-pink-40o0/50",
         animate={{
-          scale: [1, 1.5, 1];
+          scale: [1, 1.5, 1],
           opacity: [0.4, 1, 0.4]}}
         transition={{
-          duration: 2.5;
-          repeat: Infinity;
-          ease: "easeInOut";
+          duration: 2.5,
+          repeat: Infinity,
+          ease: "easeInOut",
           delay: 2}}
        />,
-    </motion.div>)};
-export default UltraAdvancedFuturisticBackground20o45;
+    </motion.div>)},
+export default UltraAdvancedFuturisticBackground20o45,

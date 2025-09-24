@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: LLM Evals Maturity Model';
+  title: 'AI 20o26: LLM Evals Maturity Model',
   description:,
-    'Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.';
-};
+    'Evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',
+},
 export default function EvalsMaturityModelPage() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -45,7 +45,7 @@ export default function EvalsMaturityModelPage() {
                 safety metrics,
               </li>,
               <li>,
-                <strong>Programmatic</strong>: automated harness, CI checks;
+                <strong>Programmatic</strong>: automated harness, CI checks,
                 regression suites,
               </li>,
               <li>,

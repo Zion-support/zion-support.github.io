@@ -9,109 +9,95 @@ import {
 export default function Careers() {
   const [selectedDepartmentsetSelectedDepartment] = useState('all'),
   const departments = [
-    { id: ''all', 'name: 'All Departments' };
-    { id: ''engineering', 'name: 'Engineering' };
-    { id: 'ai-'research', 'name: 'AI Research' };
-    { id: ''quantum', 'name: 'Quantum Computing' };
-    { id: 'space-'tech', 'name: 'Space Technology' };
-    { id: ''sales', 'name: 'Sales & Business Development' };
-    { id: ''marketing', 'name: 'Marketing' };
-    { id: ''operations', 'name: 'Operations' }
+    { id: ''allname: 'All Departments' },
+    { id: ''engineeringname: 'Engineering' },
+    { id: 'ai-'researchname: 'AI Research' },
+    { id: ''quantumname: 'Quantum Computing' },
+    { id: 'space-'techname: 'Space Technology' },
+    { id: ''salesname: 'Sales & Business Development' },
+    { id: ''marketingname: 'Marketing' },
+    { id: ''operationsname: 'Operations' }
   ],
   const jobOpenings = [
     {
-      id: 1;
-      title: 'Senior AI Engineer';
-      department: 'ai-research';
-      location: 'Remote / MiddletownDE';
-      type: 'Full-time';
-      experience: '5+ years';
-      description: 'Lead the development of cutting-edge AI solutions and machine learning models.';
+      id: 1,
+      title: 'Senior AI Engineer',
+      department: 'ai-research',
+      location: 'Remote / MiddletownDE',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Lead the development of cutting-edge AI solutions and machine learning models.',
       requirements: [
-        'Advanced degree in Computer ScienceAIor related field';
-        'Expertise in PythonTensorFlowPyTorch';
-        'Experience with large language models and neural networks';
-        'Strong problem-solving and analytical skills']};
+        'Advanced degree in Computer ScienceAIor related fieldExpertise in PythonTensorFlowPyTorch',
+        'Experience with large language models and neural networksStrong problem-solving and analytical skills']},
     {
-      id: 2;
-      title: 'Quantum Computing Researcher';
-      department: 'quantum';
-      location: 'Remote / MiddletownDE';
-      type: 'Full-time';
-      experience: '3+ years';
-      description: 'Research and develop quantum algorithms and quantum computing solutions.';
+      id: 2,
+      title: 'Quantum Computing Researcher',
+      department: 'quantum',
+      location: 'Remote / MiddletownDE',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Research and develop quantum algorithms and quantum computing solutions.',
       requirements: [
-        'PhD in PhysicsComputer Scienceor related field';
-        'Experience with quantum programming languages (QiskitCirq)';
-        'Knowledge of quantum algorithms and quantum information theory';
-        'Strong mathematical and theoretical background']};
+        'PhD in PhysicsComputer Scienceor related fieldExperience with quantum programming languages (QiskitCirq)',
+        'Knowledge of quantum algorithms and quantum information theoryStrong mathematical and theoretical background']},
     {
-      id: 3;
-      title: 'Space Technology Engineer';
-      department: 'space-tech';
-      location: 'Remote / MiddletownDE';
-      type: 'Full-time';
-      experience: '4+ years';
-      description: 'Design and develop innovative space technology solutions and satellite systems.';
+      id: 3,
+      title: 'Space Technology Engineer',
+      department: 'space-tech',
+      location: 'Remote / MiddletownDE',
+      type: 'Full-time',
+      experience: '4+ years',
+      description: 'Design and develop innovative space technology solutions and satellite systems.',
       requirements: [
-        'Degree in Aerospace EngineeringPhysicsor related field';
-        'Experience with satellite design and space systems';
-        'Knowledge of orbital mechanics and space environment';
-        'Familiarity with space industry standards and regulations']};
+        'Degree in Aerospace EngineeringPhysicsor related fieldExperience with satellite design and space systems',
+        'Knowledge of orbital mechanics and space environmentFamiliarity with space industry standards and regulations']},
     {
-      id: 4;
-      title: 'Full Stack Developer';
-      department: 'engineering';
-      location: 'Remote / MiddletownDE';
-      type: 'Full-time';
-      experience: '3+ years';
-      description: 'Build scalable web applications and cloud-based solutions.';
+      id: 4,
+      title: 'Full Stack Developer',
+      department: 'engineering',
+      location: 'Remote / MiddletownDE',
+      type: 'Full-time',
+      experience: '3+ years',
+      description: 'Build scalable web applications and cloud-based solutions.',
       requirements: [
-        'Experience with ReactNode.jsand cloud platforms';
-        'Knowledge of modern web technologies and APIs';
-        'Understanding of software architecture and design patterns';
-        'Experience with DevOps and CI/CD practices']};
+        'Experience with ReactNode.jsand cloud platformsKnowledge of modern web technologies and APIs',
+        'Understanding of software architecture and design patternsExperience with DevOps and CI/CD practices']},
     {
-      id: 5;
-      title: 'Business Development Manager';
-      department: 'sales';
-      location: 'Remote / MiddletownDE';
-      type: 'Full-time';
-      experience: '5+ years';
-      description: 'Drive business growth through strategic partnerships and client relationships.';
+      id: 5,
+      title: 'Business Development Manager',
+      department: 'sales',
+      location: 'Remote / MiddletownDE',
+      type: 'Full-time',
+      experience: '5+ years',
+      description: 'Drive business growth through strategic partnerships and client relationships.',
       requirements: [
-        'Proven track record in B2B sales and business development';
-        'Experience in technology or consulting industries';
-        'Strong networking and relationship-building skills';
-        'Understanding of emerging technologies and market trends']}
+        'Proven track record in B2B sales and business developmentExperience in technology or consulting industries',
+        'Strong networking and relationship-building skillsUnderstanding of emerging technologies and market trends']}
   ],
   const companyValues = [
     {
-      icon: <Brain className="w-8 h-8" />;
-      title: 'Innovation First';
-      description: 'We push boundaries and explore new technologies to solve complex problems.'};
+      icon: <Brain className="w-8 h-8" />,
+      title: 'Innovation First',
+      description: 'We push boundaries and explore new technologies to solve complex problems.'},
     {
-      icon: <Heart className="w-8 h-8" />;
-      title: 'People Matter';
-      description: 'Our team is our greatest assetand we invest in their growth and well-being.'};
+      icon: <Heart className="w-8 h-8" />,
+      title: 'People Matter',
+      description: 'Our team is our greatest assetand we invest in their growth and well-being.'},
     {
-      icon: <Globe className="w-8 h-8" />;
-      title: 'Global Impact';
-      description: 'We create solutions that make a difference in the world.'};
+      icon: <Globe className="w-8 h-8" />,
+      title: 'Global Impact',
+      description: 'We create solutions that make a difference in the world.'},
     {
-      icon: <Star className="w-8 h-8" />;
-      title: 'Excellence';
+      icon: <Star className="w-8 h-8" />,
+      title: 'Excellence',
       description: 'We strive for the highest quality in everything we do.'}
   ],
   const benefits = [
-    'Competitive salary and equity packages';
-    'Comprehensive healthdentaland vision insurance';
-    'Flexible work arrangements and remote work options';
-    'Professional development and training programs';
-    'Generous paid time off and holidays';
-    '401(k) with company matching';
-    'Modern technology and equipment';
-    'Collaborative and inclusive work environment'],
+    'Competitive salary and equity packagesComprehensive healthdentaland vision insurance',
+    'Flexible work arrangements and remote work optionsProfessional development and training programs',
+    'Generous paid time off and holidays401(k) with company matching',
+    'Modern technology and equipmentCollaborative and inclusive work environment'],
   const filteredJobs = selectedDepartment === 'all',
     ? jobOpenings,
     : jobOpenings.filter(job => job.department === selectedDepartment),
@@ -120,7 +106,7 @@ export default function Careers() {
       <div className="min-h-screen">,
         <Head>,
           <title>Careers - Zion Tech Group | Join Our Revolutionary Technology Team</title>,
-          <meta name="description" content="Join Zion Tech 'Group', 's team of innovators. Explore career opportunities in AIquantum computingand emerging technologies. Remote workcompetitive benefitsand cutting-edge projects." />,
+          <meta name="description" content="Join Zion Tech 'Groups team of innovators. Explore career opportunities in AIquantum computingand emerging technologies. Remote workcompetitive benefitsand cutting-edge projects." />,
         </Head>,
       <div className="min-h-screen py-12 px-4 sm: px-6 lg:px-8">,
         {/* Hero Section */}
@@ -244,7 +230,7 @@ export default function Careers() {
               <Briefcase className="w-16 h-16 text-gray-500 mx-auto mb-4" />,
               <h3 className="text-xl font-semibold text-gray-400 mb-2">No Open Positions</h3>,
               <p className="text-gray-500">,
-                We 'don', 't have any open positions in this department at the moment.,
+                We 'dont have any open positions in this department at the moment.,
                 Check back later or send us your resume for future opportunities.,
               </p>,
             </div>)}
@@ -258,7 +244,7 @@ export default function Careers() {
           <div className="bg-gradient-to-r from-blue-600/20 to-purple-600/20 p-8 rounded-2xl border border-blue-500/20 max-w-4xl mx-auto">,
             <h2 className="text-2xl font-bold text-white mb-4">'Don', 't See the Right Fit?</h2>,
             <p className="text-gray-300 mb-6">,
-              'We', 're always looking for talented individuals to join our team.,
+              'Were always looking for talented individuals to join our team.,
               Send us your resume and 'let', 's discuss how you can contribute to our mission.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -277,5 +263,5 @@ export default function Careers() {
           </div>,
         </motion.div>,
       </div>,
-    </Layout>)};
-export default CareersPage;
+    </Layout>)},
+export default CareersPage,

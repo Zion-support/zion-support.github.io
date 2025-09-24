@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Shield, Cookie, Settings, Eye, Lock, Database } from 'lucide-react',
 import Link from 'next/link',
@@ -68,7 +68,7 @@ const CookiePolicy = () => {
                 </h3>,
                 <p className='text-gray-300'>,
                   These cookies are necessary for the website to function,
-                  properly. They enable basic functions like page navigation;
+                  properly. They enable basic functions like page navigation,
                   access to secure areas, and form submissions.,
                 </p>,
               </div>,
@@ -247,5 +247,5 @@ const CookiePolicy = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
-export default CookiePolicy;
+    </div>)},
+export default CookiePolicy,

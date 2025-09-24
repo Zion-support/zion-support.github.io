@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Evals Blueprint';
+  title: 'AI 20o26: Autonomous Evals Blueprint',
   description:,
-    'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.';
-};
+    'A practical blueprint to design eval-first, guardrail-driven autonomous AI systems with measurable reliability.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -73,7 +73,7 @@ export default function Page() {
               </li>,
             </ol>,
             <p>,
-              Use this guide with our related resources on agent posture;
+              Use this guide with our related resources on agent posture,
               observability, and maturity models to accelerate safe adoption at,
               enterprise scale.,
             </p>,

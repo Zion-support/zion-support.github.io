@@ -19,12 +19,12 @@ export interface Conversation {
     id: string,
     name: string,
     avatar_url?: string,
-    user_type?: string};
+    user_type?: string},
   name: string,
   avatar_url?: string,
   last_message?: {
     content: string,
-    created_at: string};
+    created_at: string},
   updated_at: string,
   unread_count: number,
   context_type?: 'job' | 'talent' | 'general',
@@ -47,10 +47,10 @@ export interface MessagingContextType {
   isLoading: boolean,
   sendMessage: (conversationId: string, content: string) => Promise<void>,
   createConversation: (
-    recipientId: string;
-    initialMessage: string;
-    contextType?: 'job' | 'talent' | 'general';
-    contextId?: string;
+    recipientId: string,
+    initialMessage: string,
+    contextType?: 'job' | 'talent' | 'general',
+    contextId?: string,
     contextData?: ConversationContextData) => Promise<void>,
   markAsRead: (conversationId: string) => Promise<void>,
   /**,

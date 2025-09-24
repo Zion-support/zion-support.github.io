@@ -5,7 +5,7 @@ export interface UseApiOptions<T = unknown> {
   onError?: (error: Error) => void}
 ,
 export function useApi<T = unknown>(
-  apiFunction: (...args: unknown[]) => Promise<T>;
+  apiFunction: (...args: unknown[]) => Promise<T>,
   options: UseApiOptions<T> = {}
 ) {
   const [data, setData] = useState<T | null>(null),
@@ -25,13 +25,13 @@ export function useApi<T = unknown>(
         options.onError?.(normalized),
         throw normalized} finally {
         setLoading(false)}
-    };
+    },
     [apiFunction, options]),
   useEffect(() => {
     if (options.immediate) {
       execute()}
   }, [execute, options.immediate]),
-  return { data, loading, error, execute };
+  return { data, loading, error, execute },
 }
 ,
-export default useApi;
+export default useApi,

@@ -1,6 +1,6 @@
 "use client",
-const InteractiveNavigation = () => {};
-export default InteractiveNavigation;
+const InteractiveNavigation = () => {},
+export default InteractiveNavigation,
 import React{ useState } from 'react',
 export default function InteractiveNavigation() {
   const [opensetOpen] = useState(false),

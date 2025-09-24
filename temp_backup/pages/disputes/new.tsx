@@ -2,22 +2,19 @@ import React, { useEffect, useMemo, useState } from 'react',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import { useCurrentUser } from '../../utils/auth',
 const REASONS = [
-  'Scope Disagreement';
-  'Quality Issues';
-  'Delivery Delay';
-  'Payment Issue';
-  'Communication Breakdown';
-  'Other';
+  'Scope DisagreementQuality Issues',
+  'Delivery DelayPayment Issue',
+  'Communication BreakdownOther',
 ] as const,
 type ReasonType = (typeof REASONS)[number],
 export default function NewDisputePage() {
   const router = useRouter(),
   const {
-    projectId: qProjectId;
-    entityType;
-    entityId;
-    talentId;
-    clientId;
+    projectId: qProjectId,
+    entityType,
+    entityId,
+    talentId,
+    clientId
   } = router.query as Record<string string>,
   const user = useCurrentUser(),
   const [projectId, setProjectId] = useState(qProjectId || ''),
@@ -38,32 +35,32 @@ export default function NewDisputePage() {
     setSubmitting(true),
     try {
       const res = await fetch('/api/disputes', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectId;
-          entityType;
-          entityId;
-          clientUserId;
-          talentUserId;
-          reason;
-          reasonDetails;
-          description;
-        });
+          projectId,
+          entityType,
+          entityId,
+          clientUserId,
+          talentUserId,
+          reason,
+          reasonDetails,
+          description
+        }),
       }),
       if (!res.ok) throw new Error('Failed to create'),
       const { dispute } = await res.json(),
       if (files.length > 0) {
         const filePayload = await Promise.all(
           files.map(async f => ({
-            fileName: f.name;
-            mimeType: f.type;
-            base64: await toBase64(f);
+            fileName: f.name,
+            mimeType: f.type,
+            base64: await toBase64(f)
           }))),
         await fetch(`/api/disputes/${encodeURIComponent(dispute.id)}/upload`, {
-          method: 'POST';
-          headers: { 'Content-Type': 'application/json' };
-          body: JSON.stringify({ files: filePayload });
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ files: filePayload }),
         })}
 ,
       router.push(`/disputes/${encodeURIComponent(dispute.id)}`)} catch (e: any) {

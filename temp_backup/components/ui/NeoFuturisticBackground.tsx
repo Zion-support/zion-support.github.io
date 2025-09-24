@@ -5,8 +5,8 @@ interface NeoFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high'}
 ,
 const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
-  children;
-  className = '';
+  children,
+  className = '',
   intensity = 'medium'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -21,20 +21,20 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
     const resizeCanvas = () => {
       const rect = container.getBoundingClientRect(),
       canvas.width = rect.width,
-      canvas.height = rect.height};
+      canvas.height = rect.height},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Animation parameters based on intensity,
     const getIntensityParams = () => {
       switch (intensity) {
         case 'low':,
-          return { particleCount: 20, gridSize: 40, waveSpeed: 0.5, orbCount: 3 };
+          return { particleCount: 20, gridSize: 40, waveSpeed: 0.5, orbCount: 3 },
         case 'high':,
-          return { particleCount: 60, gridSize: 20, waveSpeed: 2, orbCount: 8 };
+          return { particleCount: 60, gridSize: 20, waveSpeed: 2, orbCount: 8 },
         default:,
-          return { particleCount: 40, gridSize: 30, waveSpeed: 1, orbCount: 5 };
+          return { particleCount: 40, gridSize: 30, waveSpeed: 1, orbCount: 5 },
       }
-    };
+    },
     const params = getIntensityParams(),
     // Particle system,
     interface Particle {
@@ -49,11 +49,11 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
     // Initialize particles,
     for (let i = 0, i < params.particleCount, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        life: Math.random() * 10o0;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        life: Math.random() * 10o0,
         maxLife: 10o0})}
 ,
     // Grid system,
@@ -63,8 +63,8 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
     for (let col = 0, col < gridCols, col++) {
       for (let row = 0, row < gridRows, row++) {
         gridPoints.push({
-          x: col * params.gridSize;
-          y: row * params.gridSize;
+          x: col * params.gridSize,
+          y: row * params.gridSize,
           phase: Math.random() * Math.PI * 2})}
     }
 ,
@@ -74,9 +74,9 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
     const orbs: { x: number, y: number, size: number, phase: number }[] = [],
     for (let i = 0, i < params.orbCount, i++) {
       orbs.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        size: 20 + Math.random() * 40;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        size: 20 + Math.random() * 40,
         phase: Math.random() * Math.PI * 2})}
 ,
     // Animation loop,
@@ -147,7 +147,7 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
         const pulse = Math.sin(orb.phase) * 0.3 + 0.7,
         // Create radial gradient for orb,
         const gradient = ctx.createRadialGradient(
-          orb.x, orb.y, 0;
+          orb.x, orb.y, 0,
           orb.x, orb.y, orb.size * pulse),
         gradient.addColorStop(0, 'rgba(0, 255, 255, 0.8)'),
         gradient.addColorStop(0.5, 'rgba(0, 255, 255, 0.3)'),
@@ -196,14 +196,14 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
       scanGradient.addColorStop(1, 'rgba(0, 255, 255, 0)'),
       ctx.fillStyle = scanGradient,
       ctx.fillRect(0, scanY - 2, canvas.width, 4),
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     // Cleanup,
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [intensity]),
   return (
     <div ref={containerRef} className={`relative ${className}`}>,
@@ -215,5 +215,5 @@ const NeoFuturisticBackground: React.FC<NeoFuturisticBackgroundProps> = ({
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default NeoFuturisticBackground;
+    </div>)},
+export default NeoFuturisticBackground,

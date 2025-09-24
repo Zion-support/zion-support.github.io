@@ -7,7 +7,7 @@ async function fetchFromGitHub(): Promise<any[]> {
     const repo = process.env.GITHUB_REPO || (match ? match[2] : ''),
     if (!owner || !repo) return [],
     const apiUrl = `https: //api.github.com/repos/${owner}/${repo}/contents/automation_logs`,
-    const headers: Record<string string> ={ 'User-Agent': 'zion-autonomy' };
+    const headers: Record<string string> ={ 'User-Agent': 'zion-autonomy' },
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`,
     const resp = await fetch(apiUrl, { headers }),
     if (!resp.ok) return [],
@@ -36,9 +36,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
           try {
             const raw = fs.readFileSync(path.join(dir, f), 'utf8'),
             const json = JSON.parse(raw),
-            return { id: json.id || f, file: f, generatedAt: json.generatedAt, insights: json.insights };
+            return { id: json.id || f, file: f, generatedAt: json.generatedAt, insights: json.insights },
           } catch {
-            return { id: f, file: f };
+            return { id: f, file: f },
           }
         }),
         return res.status(20o0).json({ logs })}

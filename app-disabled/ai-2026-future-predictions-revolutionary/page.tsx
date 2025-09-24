@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26 Future Predictions - Revolutionary Technology Forecasts';
+  title: 'AI 20o26 Future Predictions - Revolutionary Technology Forecasts',
   description:,
-    'Explore groundbreaking AI predictions for 20o26, including quantum neural interfaces, synthetic intelligence, and autonomous business ecosystems that will reshape our world.';
+    'Explore groundbreaking AI predictions for 20o26, including quantum neural interfaces, synthetic intelligence, and autonomous business ecosystems that will reshape our world.',
   keywords: [
-    'AI 20o26';
-    'future predictions';
-    'quantum AI';
-    'neural interfaces';
-    'synthetic intelligence';
-    'technology forecasts';
-  ];
-};
+    'AI 20o26future predictions',
+    'quantum AIneural interfaces',
+    'synthetic intelligencetechnology forecasts',
+  ]
+},
 export default function AI20o26FuturePredictionsRevolutionary() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
@@ -59,7 +56,7 @@ export default function AI20o26FuturePredictionsRevolutionary() {
             <div className='text-4xl mb-4'>🤖</div>,
             <h3 className='text-2xl font-bold mb-4'>Synthetic Intelligence</h3>,
             <p className='text-gray-30o0 mb-6'>,
-              AI systems that surpass human intelligence across all domains;
+              AI systems that surpass human intelligence across all domains,
               capable of creative problem-solving and autonomous decision-making,
               at unprecedented levels.,
             </p>,

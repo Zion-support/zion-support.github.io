@@ -16,23 +16,23 @@ class EnhancedErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props),
     this.state ={
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: ''};
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''},
   }
 ,
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true;
-      error;
-      errorInfo: null;
-      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`};
+      hasError: true,
+      error,
+      errorInfo: null,
+      errorId: `error_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`},
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error;
+      error,
       errorInfo}),
     // Log error to monitoring service in production,
     if (process.env.NODE_ENV === 'development') {
@@ -53,36 +53,36 @@ class EnhancedErrorBoundary extends Component<Props State> {
     // In a real application, you would send this to your error reporting service,
     // For now, we'll just log it,
     console.error('Error Report:', {
-      errorId: this.state.errorId;
-      message: error.message;
-      stack: error.stack;
-      componentStack: errorInfo.componentStack;
-      timestamp: new Date().toISOString()})};
+      errorId: this.state.errorId,
+      message: error.message,
+      stack: error.stack,
+      componentStack: errorInfo.componentStack,
+      timestamp: new Date().toISOString()})},
   private handleRetry = () => {
     this.setState({
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: ''})};
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''})},
   private handleGoHome = () => {
-    window.location.href = '/'};
+    window.location.href = '/'},
   private handleGoBack = () => {
-    window.history.back()};
+    window.history.back()},
   private handleReportBug = () => {
     const errorDetails ={
-      errorId: this.state.errorId;
-      message: this.state.error?.message;
-      stack: this.state.error?.stack;
-      componentStack: this.state.errorInfo?.componentStack;
-      url: window.location.href;
-      userAgent: navigator.userAgent;
-      timestamp: new Date().toISOString()};
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
+      url: window.location.href,
+      userAgent: navigator.userAgent,
+      timestamp: new Date().toISOString()},
     // In a real application, you would send this to your bug reporting system,
     // // console.log('Bug Report:', errorDetails),
     // For now, we'll open the contact page,
-    window.location.href = '/contact'};
+    window.location.href = '/contact'},
   private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }))};
+    this.setState(prev => ({ showDetails: !prev.showDetails }))},
   render() {
     if (this.state.hasError) {
       // Custom fallback UI,
@@ -101,11 +101,11 @@ class EnhancedErrorBoundary extends Component<Props State> {
             <motion.div,
               className="w-24 h-24 mx-auto mb-8 bg-red-50o0/20 rounded-full flex items-center justify-center",
               animate={{
-                scale: [1, 1.1, 1];
+                scale: [1, 1.1, 1],
                 rotate: [0, 5, -5, 0]}}
               transition={{
-                duration: 2;
-                repeat: Infinity;
+                duration: 2,
+                repeat: Infinity,
                 ease: "easeInOut"}}
             >,
               <AlertTriangle className="w-12 h-12 text-red-40o0"  />,

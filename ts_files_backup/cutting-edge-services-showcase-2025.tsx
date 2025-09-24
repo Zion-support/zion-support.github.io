@@ -3,9 +3,9 @@ import React{ useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  BrainAtomShieldRocketStarAwardTrendingUp;
-  CheckCircleArrowRightZapTargetMicroscope;
-  LockCloudBarChart3SettingsEyeCodePalette;
+  BrainAtomShieldRocketStarAwardTrendingUp,
+  CheckCircleArrowRightZapTargetMicroscope,
+  LockCloudBarChart3SettingsEyeCodePalette,
   SearchFilterGridListExternalLinkPhoneMailMapPin} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { cuttingEdgeAIServices2025 } from '../data/2025-cutting-edge-ai-services',
@@ -13,48 +13,48 @@ import { cuttingEdgeQuantumServices2025 } from '../data/2025-cutting-edge-quantu
 import { cuttingEdgeEnterpriseITServices2025 } from '../data/2025-cutting-edge-enterprise-it',
 import { cuttingEdgeMicroSaasServices2025 } from '../data/2025-cutting-edge-micro-saas',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { label: 'Cutting-Edge 'Services', 'value: '25+'icon: <Star className="w-5 h-5" /> };
-  { label: 'Innovation 'Areas', 'value: '8+'icon: <Brain className="w-5 h-5" /> };
-  { label: 'Market 'Coverage', 'value: '$500B+'icon: <TrendingUp className="w-5 h-5" /> };
-  { label: 'Success 'Rate', 'value: '99.9%'icon: <Award className="w-5 h-5" /> }
+  { label: 'Cutting-Edge 'Servicesvalue: '25+'icon: <Star className="w-5 h-5" /> },
+  { label: 'Innovation 'Areasvalue: '8+'icon: <Brain className="w-5 h-5" /> },
+  { label: 'Market 'Coveragevalue: '$500B+'icon: <TrendingUp className="w-5 h-5" /> },
+  { label: 'Success 'Ratevalue: '99.9%'icon: <Award className="w-5 h-5" /> }
 ],
 const serviceCategories = [
   {
-    title: 'AI & Consciousness';
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence';
-    services: cuttingEdgeAIServices2025;
-    icon: Brain;
-    color: 'from-violet-500 to-purple-600';
-    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600';
-    count: cuttingEdgeAIServices2025.length};
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence',
+    services: cuttingEdgeAIServices2025,
+    icon: Brain,
+    color: 'from-violet-500 to-purple-600',
+    gradient: 'bg-gradient-to-r from-violet-500 to-purple-600',
+    count: cuttingEdgeAIServices2025.length},
   {
-    title: 'Quantum & Emerging Tech';
-    description: 'Breakthrough quantum computing and space technology solutions';
-    services: cuttingEdgeQuantumServices2025;
-    icon: Atom;
-    color: 'from-indigo-500 to-blue-600';
-    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600';
-    count: cuttingEdgeQuantumServices2025.length};
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum computing and space technology solutions',
+    services: cuttingEdgeQuantumServices2025,
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-600',
+    gradient: 'bg-gradient-to-r from-indigo-500 to-blue-600',
+    count: cuttingEdgeQuantumServices2025.length},
   {
-    title: 'Enterprise IT';
-    description: 'Advanced enterprise infrastructure and security solutions';
-    services: cuttingEdgeEnterpriseITServices2025;
-    icon: Shield;
-    color: 'from-blue-500 to-cyan-600';
-    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600';
-    count: cuttingEdgeEnterpriseITServices2025.length};
+    title: 'Enterprise IT',
+    description: 'Advanced enterprise infrastructure and security solutions',
+    services: cuttingEdgeEnterpriseITServices2025,
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-600',
+    gradient: 'bg-gradient-to-r from-blue-500 to-cyan-600',
+    count: cuttingEdgeEnterpriseITServices2025.length},
   {
-    title: 'Micro SAAS';
-    description: 'Innovative business solutions for modern enterprises';
-    services: cuttingEdgeMicroSaasServices2025;
-    icon: Rocket;
-    color: 'from-teal-500 to-emerald-600';
-    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600';
+    title: 'Micro SAAS',
+    description: 'Innovative business solutions for modern enterprises',
+    services: cuttingEdgeMicroSaasServices2025,
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-600',
+    gradient: 'bg-gradient-to-r from-teal-500 to-emerald-600',
     count: cuttingEdgeMicroSaasServices2025.length}
 ],
 export default function CuttingEdgeServicesShowcase2025() {
@@ -62,9 +62,9 @@ export default function CuttingEdgeServicesShowcase2025() {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [viewModesetViewMode] = useState<'grid' | 'list'>('grid'),
   const allServices = [
-    ...cuttingEdgeAIServices2025;
-    ...cuttingEdgeQuantumServices2025;
-    ...cuttingEdgeEnterpriseITServices2025;
+    ...cuttingEdgeAIServices2025,
+    ...cuttingEdgeQuantumServices2025,
+    ...cuttingEdgeEnterpriseITServices2025,
     ...cuttingEdgeMicroSaasServices2025],
   const filteredServices = allServices.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -73,22 +73,22 @@ export default function CuttingEdgeServicesShowcase2025() {
     const matchesCategory = selectedCategory === 'all' || service.category === selectedCategory,
     return matchesSearch && matchesCategory}),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { y: 20opacity: 0 };
+    hidden: { y: 20opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <>,
       <Head>,
@@ -341,7 +341,7 @@ export default function CuttingEdgeServicesShowcase2025() {
                 <p className="text-white/70 mb-6">Try adjusting your search terms or category filter</p>,
                 <button
                   onClick={() => {
-                    setSearchTerm(', '),
+                    setSearchTerm(),
                     setSelectedCategory('all')}}
                   className="px-6 py-3 bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-medium rounded-lg hover: from-cyan-600 hover:to-purple-700 transition-all duration-300">,
                   Clear Filters,

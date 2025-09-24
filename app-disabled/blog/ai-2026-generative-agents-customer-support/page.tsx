@@ -72,5 +72,5 @@ const GenerativeAgentsCustomerSupport20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default GenerativeAgentsCustomerSupport20o26;
+    </div>)},
+export default GenerativeAgentsCustomerSupport20o26,

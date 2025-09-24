@@ -1,132 +1,132 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Palette;
-  Type;
-  User;
-  Search;
-  Eye;
-  Heart;
-  ShoppingCart;
-  Code;
-  Database;
-  Globe;
-  Shield;
-  Cpu;
-  Users2;
-  Award;
-  CheckCircle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Lock;
-  Server;
-  Network;
-  Monitor;
-  Settings;
-  RefreshCw;
-  Play;
-  Pause;
-  AlertTriangle;
-  CheckCircle2;
-  Building;
-  Wifi;
-  HardDrive;
-  Cloud;
-  Smartphone;
-  Link;
-  Blocks;
-  Wallet;
-  CreditCard;
-  PiggyBank;
-  Building2;
-  Activity;
-  Waves;
-  Zap;
-  BrainCircuit;
-  CpuIcon;
-  MonitorHeart;
-  Film;
-  Headphones;
-  Camera;
-  Gamepad2;
-  Tv;
-  Radio;
-  Factory;
-  Cog;
-  Gauge;
-  Wrench;
-  Settings2;
-  CpuIcon2;
-  Calendar;
-  Clock;
-  Target;
-  Users2;
-  FileText2;
-  PieChart;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Cpu,
+  Users2,
+  Award,
+  CheckCircle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Lock,
+  Server,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Play,
+  Pause,
+  AlertTriangle,
+  CheckCircle2,
+  Building,
+  Wifi,
+  HardDrive,
+  Cloud,
+  Smartphone,
+  Link,
+  Blocks,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building2,
+  Activity,
+  Waves,
+  Zap,
+  BrainCircuit,
+  CpuIcon,
+  MonitorHeart,
+  Film,
+  Headphones,
+  Camera,
+  Gamepad2,
+  Tv,
+  Radio,
+  Factory,
+  Cog,
+  Gauge,
+  Wrench,
+  Settings2,
+  CpuIcon2,
+  Calendar,
+  Clock,
+  Target,
+  Users2,
+  FileText2,
+  PieChart,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'Intelligent Project Management Suite | Zion Tech Group';
+  title: 'Intelligent Project Management Suite | Zion Tech Group',
   description:,
-    'AI-powered project management platform for intelligent planning, execution, and optimization.';
+    'AI-powered project management platform for intelligent planning, execution, and optimization.',
   keywords:,
-    'project management, AI project management, intelligent planning, project optimization, team collaboration';
+    'project management, AI project management, intelligent planning, project optimization, team collaboration',
   openGraph: {
-    title: 'Intelligent Project Management Suite | Zion Tech Group';
+    title: 'Intelligent Project Management Suite | Zion Tech Group',
     description:,
-      'AI-powered project management platform for intelligent planning, execution, and optimization.';
-    url: 'https://ziontechgroup.com/intelligent-project-management-suite';
-    siteName: 'Zion Tech Group';
+      'AI-powered project management platform for intelligent planning, execution, and optimization.',
+    url: 'https://ziontechgroup.com/intelligent-project-management-suite',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-project-management.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'Intelligent Project Management Suite';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-project-management.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Intelligent Project Management Suite'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'Intelligent Project Management Suite | Zion Tech Group';
+    card: 'summary_large_image',
+    title: 'Intelligent Project Management Suite | Zion Tech Group',
     description:,
-      'AI-powered project management platform for intelligent planning, execution, and optimization.';
-    images: ['https://ziontechgroup.com/og-image-project-management.jpg'];
-  };
+      'AI-powered project management platform for intelligent planning, execution, and optimization.',
+    images: ['https://ziontechgroup.com/og-image-project-management.jpg']
+  },
   alternates: {
-    canonical: 'https://ziontechgroup.com/intelligent-project-management-suite';
-  };
-};
+    canonical: 'https://ziontechgroup.com/intelligent-project-management-suite'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function IntelligentProjectManagementSuite() {
   return (
     <div className='min-h-screen bg-black text-white'>,

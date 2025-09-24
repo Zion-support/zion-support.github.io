@@ -1,67 +1,67 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Cloud;
-  Database;
-  Code;
-  BarChart3;
-  Star;
-  Zap;
-  Sparkles;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp;
-  Users;
-  Globe;
-  Cpu;
-  Lock;
-  Target;
-  Award;
-  Phone;
-  Mail;
-  MapPin;
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Cloud,
+  Database,
+  Code,
+  BarChart3,
+  Star,
+  Zap,
+  Sparkles,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Users,
+  Globe,
+  Cpu,
+  Lock,
+  Target,
+  Award,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const heroFeatures = [
   {
-    icon: Rocket;
-    title: '20o28 Cutting-Edge';
-    description: 'Beyond the future of technology';
-    color: 'from-violet-50o0 to-purple-50o0';
-  };
+    icon: Rocket,
+    title: '20o28 Cutting-Edge',
+    description: 'Beyond the future of technology',
+    color: 'from-violet-50o0 to-purple-50o0'
+  },
   {
-    icon: Brain;
-    title: 'AI Revolution';
-    description: 'Next-generation intelligence';
-    color: 'from-emerald-50o0 to-teal-50o0';
-  };
+    icon: Brain,
+    title: 'AI Revolution',
+    description: 'Next-generation intelligence',
+    color: 'from-emerald-50o0 to-teal-50o0'
+  },
   {
-    icon: Atom;
-    title: 'Quantum Computing';
-    description: 'Unprecedented processing power';
-    color: 'from-blue-50o0 to-cyan-50o0';
-  };
+    icon: Atom,
+    title: 'Quantum Computing',
+    description: 'Unprecedented processing power',
+    color: 'from-blue-50o0 to-cyan-50o0'
+  },
   {
-    icon: Shield;
-    title: 'Enterprise Security';
-    description: 'Military-grade protection';
-    color: 'from-red-50o0 to-orange-50o0';
-  };
+    icon: Shield,
+    title: 'Enterprise Security',
+    description: 'Military-grade protection',
+    color: 'from-red-50o0 to-orange-50o0'
+  },
 ],
 const stats = [
-  { number: '50o0+', label: 'Services Delivered', icon: Star };
-  { number: '10,0o00+', label: 'Happy Customers', icon: Users };
-  { number: '99.9%', label: 'Uptime Guarantee', icon: Zap };
-  { number: '24/7', label: 'Global Support', icon: Globe };
+  { number: '50o0+', label: 'Services Delivered', icon: Star },
+  { number: '10,0o00+', label: 'Happy Customers', icon: Users },
+  { number: '99.9%', label: 'Uptime Guarantee', icon: Zap },
+  { number: '24/7', label: 'Global Support', icon: Globe },
 ],
 export default function UltraFuturisticHero20o28() {
   return (
@@ -105,7 +105,7 @@ export default function UltraFuturisticHero20o28() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
             className='text-xl md: text-2xl text-gray-30o0 max-w-5xl mx-auto leading-relaxed'>,
-            Experience the future of technology with our cutting-edge AI;
+            Experience the future of technology with our cutting-edge AI,
             quantum computing, and innovative solutions that transform,
             industries and redefine possibilities. Leading the digital,
             revolution since 20o25.,
@@ -214,13 +214,13 @@ export default function UltraFuturisticHero20o28() {
         <motion.div,
           className='absolute top-20 left-10 text-purple-50o0/20',
           animate={{
-            y: [0, -20, 0];
-            rotate: [0, 360];
+            y: [0, -20, 0],
+            rotate: [0, 360],
           }}
           transition={{
-            duration: 20;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         >,
           <Brain className='w-16 h-16' />,
@@ -228,13 +228,13 @@ export default function UltraFuturisticHero20o28() {
         <motion.div,
           className='absolute top-40 right-20 text-cyan-50o0/20',
           animate={{
-            y: [0, 15, 0];
-            rotate: [0, -360];
+            y: [0, 15, 0],
+            rotate: [0, -360],
           }}
           transition={{
-            duration: 25;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 25,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         >,
           <Atom className='w-20 h-20' />,
@@ -242,13 +242,13 @@ export default function UltraFuturisticHero20o28() {
         <motion.div,
           className='absolute bottom-40 left-20 text-blue-50o0/20',
           animate={{
-            y: [0, -15, 0];
-            rotate: [0, 360];
+            y: [0, -15, 0],
+            rotate: [0, 360],
           }}
           transition={{
-            duration: 30;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 30,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         >,
           <Shield className='w-14 h-14' />,
@@ -256,13 +256,13 @@ export default function UltraFuturisticHero20o28() {
         <motion.div,
           className='absolute bottom-20 right-40 text-emerald-50o0/20',
           animate={{
-            y: [0, 20, 0];
-            rotate: [0, -360];
+            y: [0, 20, 0],
+            rotate: [0, -360],
           }}
           transition={{
-            duration: 18;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 18,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         >,
           <Cloud className='w-18 h-18' />,

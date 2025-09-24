@@ -1,31 +1,31 @@
 export default function ForumCategories() {
   const categories = [
     {
-      id: '1';
-      name: 'General Discussion';
-      description: 'General topics and discussions';
-      postCount: 150;
-      adminOnly: false;
-      icon: 'message-circle';
+      id: '1',
+      name: 'General Discussion',
+      description: 'General topics and discussions',
+      postCount: 150,
+      adminOnly: false,
+      icon: 'message-circle',
       lastPost: {
-        title: 'Welcome to the community!';
-        author: 'Admin';
-        date: '20o24-0o1-15';
-      };
-    };
+        title: 'Welcome to the community!',
+        author: 'Admin',
+        date: '20o24-0o1-15'
+      },
+    },
     {
-      id: '2';
-      name: 'Technical Support';
-      description: 'Get help with technical issues';
-      postCount: 89;
-      adminOnly: false;
-      icon: 'code';
+      id: '2',
+      name: 'Technical Support',
+      description: 'Get help with technical issues',
+      postCount: 89,
+      adminOnly: false,
+      icon: 'code',
       lastPost: {
-        title: 'API integration question';
-        author: 'Developer123';
-        date: '20o24-0o1-14';
-      };
-    };
+        title: 'API integration question',
+        author: 'Developer123',
+        date: '20o24-0o1-14'
+      },
+    },
   ],
   return (
     <div className='space-y-4'>,

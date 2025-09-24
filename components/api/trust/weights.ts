@@ -1,8 +1,8 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import {
-  getTrustWeights;
-  setTrustWeights;
-  getDefaultWeights;
+  getTrustWeights,
+  setTrustWeights,
+  getDefaultWeights,
 } from '../../../utils/trust/weights',
   getTrustWeights,
   setTrustWeights,
@@ -22,11 +22,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const incoming = req.body |{}
 ,
   if (req && req.method === 'PUT') {
-    const incoming = req && req.body || {};
+    const incoming = req && req.body || {},
     const updated = await setTrustWeights(incoming),
     return res && res.status(200).json({ updated })}
 ,
-  res && res.setHeader('Allow', 'GET, PUT'),
+  res && res.setHeader('AllowGET, PUT'),
   return res && res.status(405).json({ error: 'Method not allowed' }),    return res && res.status(200).json({ updated })}
   res && res.setHeader('AllowGET, PUT'),
   return res && res.status(405).json({ error: 'Method not allowed' })}
@@ -48,7 +48,7 @@ if ( {) {
     const incoming = req.body || {}
     const updated = await setTrustWeights (incoming),
     return res.status (200).json ({ updated })}
-  res.set_header ('Allow', 'GET, PUT'),
+  res.set_header ('AllowGET, PUT'),
   return res.status (405).json ({ error: 'Method not allowed' }),    return res.status (200).json ({ updated })}
   res.set_header ('AllowGET, PUT'),
   return res.status (405).json ({ error: 'Method not allowed' })}

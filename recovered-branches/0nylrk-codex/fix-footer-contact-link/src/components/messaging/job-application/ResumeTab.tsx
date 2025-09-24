@@ -1,9 +1,9 @@
-import React from "react";
+import React from "react",
 import { ResumeSelector, ResumeOption } from "../resume-selector",
 import { Button } from "@/components/ui/button",
-import React from 'react';;
-import { ResumeSelector, ResumeOption } from "../resume-selector";
-import { Button } from "@/components/ui/button";
+import React from 'react',
+import { ResumeSelector, ResumeOption } from "../resume-selector",
+import { Button } from "@/components/ui/button",
 
 export interface ResumeTabProps {
   selectedResumeId?: string | null,
@@ -39,11 +39,11 @@ export interface ResumeTabProps {
   onSelectResume?: (resume_id: string) => void,
   onResumeSelected?: (resume: ResumeOption) => void,
 export function ResumeTab(): any ({
-  selectedResumeId;
-  onSelectResume;
-  onResumeSelected;
-  onApply;
-  isSubmitting = false;
+  selectedResumeId,
+  onSelectResume,
+  onResumeSelected,
+  onApply,
+  isSubmitting = false,
 }: ResumeTabProps) {
   const handleResumeSelected = (resume: ResumeOption) => {
     if (onResumeSelected) {
@@ -57,15 +57,15 @@ export function ResumeTab(): any ({
     <div className="space-y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,
 export interface ResumeTabProps {
-  selectedResumeId?: string | null;
-  onSelectResume?: (resumeId: string) => void;
-  onResumeSelected?: (resume: ResumeOption) => void;
-  onApply?: () => Promise<void>;
+  selectedResumeId?: string | null,
+  onSelectResume?: (resumeId: string) => void,
+  onResumeSelected?: (resume: ResumeOption) => void,
+  onApply?: () => Promise<void>,
   isSubmitting?: boolean,
 export interface ResumeTabProps {
-  selectedResumeId?: string | null;
-  onSelectResume?: (resumeId: string) => void;
-  onResumeSelected?: (resume: ResumeOption) => void;
+  selectedResumeId?: string | null,
+  onSelectResume?: (resumeId: string) => void,
+  onResumeSelected?: (resume: ResumeOption) => void,
   onApply?: () => Promise<void>,
   isSubmitting?: boolean}
 ,
@@ -76,7 +76,7 @@ export function ResumeTab({ selectedResumeId, onSelectResume, onResumeSelected, 
 ,
     if (onSelectResume) {
       onSelectResume(resume.id)}
-  };
+  },
   return (
     <div className="space-y-4">,
       <ResumeSelector onResumeSelected={handleResumeSelected} />,

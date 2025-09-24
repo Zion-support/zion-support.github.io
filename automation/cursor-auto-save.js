@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -43,10 +43,10 @@ class CursorAutoSave {
     const projectRoot = process.cwd(),
     // Watch common directories for changes,
     const watchDirs = [
-      src';
-      pages';
-      components';
-      automation';
+      src',
+      pages',
+      components',
+      automation',
       public],
     watchDirs.forEach(dir => {
       const dirPath = path.join(projectRoot, dir),
@@ -55,9 +55,9 @@ class CursorAutoSave {
     }),
     // Watch root files,
     const rootFiles = [
-      package.json';
-      next.config.js';
-      tailwind.config.js';
+      package.json',
+      next.config.js',
+      tailwind.config.js',
       tsconfig.json],
     rootFiles.forEach(file => {
       const filePath = path.join(projectRoot, file),

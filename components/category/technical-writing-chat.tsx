@@ -13,5 +13,5 @@ const TechnicalWritingChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default TechnicalWritingChat;
+    </div>)},
+export default TechnicalWritingChat,

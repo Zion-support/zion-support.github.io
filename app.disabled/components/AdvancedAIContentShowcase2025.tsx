@@ -2,180 +2,170 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ChevronRightIcon;
-  StarIcon;
-  ChartBarIcon;
-  CurrencyDollarIcon;
-  ClockIcon;
-  TagIcon;
+  ChevronRightIcon,
+  StarIcon,
+  ChartBarIcon,
+  CurrencyDollarIcon,
+  ClockIcon,
+  TagIcon,
 } from '@heroicons/react/24/outline',
 const AdvancedAIContentShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'advanced-automation-mastery';
-      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide';
+      id: 'advanced-automation-mastery',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
       description:,
-        'Master advanced AI automation with our comprehensive guide. Achieve 1,20o0% ROI, 99.8% efficiency, and transform your business operations in 20o25.';
-      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide';
-      type: 'Blog Post';
-      category: 'blog';
+        'Master advanced AI automation with our comprehensive guide. Achieve 1,20o0% ROI, 99.8% efficiency, and transform your business operations in 20o25.',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
-        roi: '1,20o0%';
-        efficiency: '99.8%';
-        savings: '$2.8B';
-        satisfaction: '98%';
-      };
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true;
+        roi: '1,20o0%',
+        efficiency: '99.8%',
+        savings: '$2.8B',
+        satisfaction: '98%'
+      },
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true,
       tags: [
-        'AI Automation';
-        'Advanced AI';
-        'Business Mastery';
-        'ROI';
-        '20o25';
-      ];
-    };
+        'AI AutomationAdvanced AI',
+        'Business MasteryROI',
+        '20o25',
+      ]
+    },
     {
-      id: 'ai-transformation-120o0-roi';
+      id: 'ai-transformation-120o0-roi',
       title:,
-        'AI Transformation Success Story: $5B Company Achieves 1,20o0% ROI';
+        'AI Transformation Success Story: $5B Company Achieves 1,20o0% ROI',
       description:,
-        'Discover how a Fortune 50o0 company achieved extraordinary results with advanced AI automation, saving $2.8B annually and transforming their entire operation.';
-      url: '/case-studies/ai-transformation-120o0-percent-roi-ultimate-success-story';
-      type: 'Case Study';
-      category: 'case-study';
+        'Discover how a Fortune 50o0 company achieved extraordinary results with advanced AI automation, saving $2.8B annually and transforming their entire operation.',
+      url: '/case-studies/ai-transformation-120o0-percent-roi-ultimate-success-story',
+      type: 'Case Study',
+      category: 'case-study',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        efficiency: '99.8%';
-      };
-      readingTime: '15 min read';
-      isNew: true;
-      featured: true;
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        efficiency: '99.8%'
+      },
+      readingTime: '15 min read',
+      isNew: true,
+      featured: true,
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'AI Transformation';
-        'ROI';
-        'Success Story';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'AI TransformationROI',
+        'Success Story',
+      ]
+    },
     {
-      id: 'implementation-framework';
-      title: 'AI 20o25 Implementation Ultimate Success Framework';
+      id: 'implementation-framework',
+      title: 'AI 20o25 Implementation Ultimate Success Framework',
       description:,
-        'Complete guide to achieving 1,20o0% ROI with our proven implementation framework. Transform your business with advanced AI technologies and methodologies.';
-      url: '/resources/ai-20o25-implementation-ultimate-success-framework';
-      type: 'Resource';
-      category: 'resource';
+        'Complete guide to achieving 1,20o0% ROI with our proven implementation framework. Transform your business with advanced AI technologies and methodologies.',
+      url: '/resources/ai-20o25-implementation-ultimate-success-framework',
+      type: 'Resource',
+      category: 'resource',
       metrics: {
-        roi: '1,20o0%';
-        success: '94%';
-        timeline: '18 months';
-        projects: '50o0+';
-      };
-      readingTime: '30 min read';
-      isNew: true;
-      featured: true;
+        roi: '1,20o0%',
+        success: '94%',
+        timeline: '18 months',
+        projects: '50o0+'
+      },
+      readingTime: '30 min read',
+      isNew: true,
+      featured: true,
       tags: [
-        'Implementation Framework';
-        'AI Strategy';
-        'ROI';
-        'Success Guide';
-        '20o25';
-      ];
-    };
+        'Implementation FrameworkAI Strategy',
+        'ROISuccess Guide',
+        '20o25',
+      ]
+    },
     {
-      id: 'quantum-ai-business-revolution';
+      id: 'quantum-ai-business-revolution',
       title:,
-        'AI 20o25: The Quantum AI Business Revolution - $10o0B Market Transformation';
+        'AI 20o25: The Quantum AI Business Revolution - $10o0B Market Transformation',
       description:,
-        "Explore the quantum AI revolution that's transforming business operations with 1,20o0% processing speed improvements and 99.97% accuracy.";
-      url: '/blog/ai-20o25-quantum-computing-business-revolution';
-      type: 'Blog Post';
-      category: 'blog';
+        "Explore the quantum AI revolution that's transforming business operations with 1,20o0% processing speed improvements and 99.97% accuracy.",
+      url: '/blog/ai-20o25-quantum-computing-business-revolution',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
-        roi: '1,20o0%';
-        market: '$10o0B';
-        accuracy: '99.97%';
-        speed: '1,20o0%';
-      };
-      readingTime: '20 min read';
-      isNew: true;
-      featured: false;
+        roi: '1,20o0%',
+        market: '$10o0B',
+        accuracy: '99.97%',
+        speed: '1,20o0%',
+      },
+      readingTime: '20 min read',
+      isNew: true,
+      featured: false,
       tags: [
-        'Quantum AI';
-        'Quantum Computing';
-        'Business Revolution';
-        'ROI';
-        'Fortune 50o0';
-      ];
-    };
+        'Quantum AIQuantum Computing',
+        'Business RevolutionROI',
+        'Fortune 50o0',
+      ]
+    },
     {
-      id: 'fortune-50o0-ai-success';
-      title: 'Fortune 50o0 AI Success 20o25: $2.8B Annual Savings';
+      id: 'fortune-50o0-ai-success',
+      title: 'Fortune 50o0 AI Success 20o25: $2.8B Annual Savings',
       description:,
-        'Learn how a Fortune 50o0 company achieved $2.8B in annual savings with advanced AI automation and 1,50o0% ROI in just 8 months.';
-      url: '/case-studies/fortune-50o0-ai-success-20o25';
-      type: 'Case Study';
-      category: 'case-study';
+        'Learn how a Fortune 50o0 company achieved $2.8B in annual savings with advanced AI automation and 1,50o0% ROI in just 8 months.',
+      url: '/case-studies/fortune-50o0-ai-success-20o25',
+      type: 'Case Study',
+      category: 'case-study',
       metrics: {
-        savings: '$2.8B';
-        roi: '1,50o0%';
-        timeline: '8 months';
-        efficiency: '89%';
-      };
-      readingTime: '20 min read';
-      isNew: true;
-      featured: false;
+        savings: '$2.8B',
+        roi: '1,50o0%',
+        timeline: '8 months',
+        efficiency: '89%'
+      },
+      readingTime: '20 min read',
+      isNew: true,
+      featured: false,
       tags: [
-        'Fortune 50o0';
-        'AI Transformation';
-        'Case Study';
-        'ROI';
-        'Success Story';
-      ];
-    };
+        'Fortune 50o0AI Transformation',
+        'Case StudyROI',
+        'Success Story',
+      ]
+    },
     {
-      id: 'ai-roi-guide-20o25';
-      title: 'AI ROI Guide 20o25: Achieve 1,20o0% ROI';
+      id: 'ai-roi-guide-20o25',
+      title: 'AI ROI Guide 20o25: Achieve 1,20o0% ROI',
       description:,
-        'Comprehensive guide to calculating and achieving extraordinary ROI with AI implementation. Includes ROI calculator and proven strategies.';
-      url: '/resources/ai-roi-guide-20o25';
-      type: 'Resource';
-      category: 'resource';
+        'Comprehensive guide to calculating and achieving extraordinary ROI with AI implementation. Includes ROI calculator and proven strategies.',
+      url: '/resources/ai-roi-guide-20o25',
+      type: 'Resource',
+      category: 'resource',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$50o0M+';
-        efficiency: '99.8%';
-        accuracy: '95%';
-      };
-      readingTime: '15 min read';
-      isNew: true;
-      featured: false;
-      tags: ['AI', 'ROI', 'Guide', '20o25', 'Calculator'];
-    };
+        roi: '1,20o0%',
+        savings: '$50o0M+',
+        efficiency: '99.8%',
+        accuracy: '95%'
+      },
+      readingTime: '15 min read',
+      isNew: true,
+      featured: false,
+      tags: ['AIROI', 'Guide20o25', 'Calculator'],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.category === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.category === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.category === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.category === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -265,7 +255,7 @@ const AdvancedAIContentShowcase20o25 = () => {
                           {value}
                         </div>,
                         <div className='text-xs text-gray-50o0 capitalize'>,
-                          {key.replace('_', ' ')}
+                          {key.replace('_ ')}
                         </div>,
                       </div>))}
                   </div>,
@@ -344,7 +334,7 @@ const AdvancedAIContentShowcase20o25 = () => {
                           {value}
                         </div>,
                         <div className='text-xs text-gray-50o0 capitalize'>,
-                          {key.replace('_', ' ')}
+                          {key.replace('_ ')}
                         </div>,
                       </div>))}
                 </div>,
@@ -382,5 +372,5 @@ const AdvancedAIContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAIContentShowcase20o25;
+    </div>)},
+export default AdvancedAIContentShowcase20o25,

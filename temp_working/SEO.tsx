@@ -14,95 +14,92 @@ interface SEOProps {
   noindex?: boolean,
   nofollow?: boolean}
 export function SEO({
-  title;
-  description;
-  canonical;
-  url;
-  image = '/images/zion-tech-group-og.jpg';
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section;
-  tags = [];
-  noindex = false;
-  nofollow = false;
+  title,
+  description,
+  canonical,
+  url,
+  image = '/images/zion-tech-group-og.jpg',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section,
+  tags = [],
+  noindex = false,
+  nofollow = false,
 }: SEOProps) {
   const siteName = 'Zion Tech Group',
   const fullTitle = title.includes(siteName) ? title : `${title} | ${siteName}`,
   const fullCanonical = canonical || window.location.href,
   // Default structured data for organization,
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: siteUrl;
-    logo: `${siteUrl}/images/zion-tech-group-logo.png`;
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: siteUrl,
+    logo: `${siteUrl}/images/zion-tech-group-logo.png`,
     description:,
-      'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services';
-    foundingDate: '20o20';
+      'Leading provider of cutting-edge AI solutions, cloud computing, and digital transformation services',
+    foundingDate: '20o20',
     address: {
-      '@type': 'PostalAddress';
-      addressCountry: 'US';
-      addressLocality: 'Middletown';
-      addressRegion: 'DE';
-      postalCode: '19709';
-      streetAddress: '364 E Main St STE 10o08';
-    };
+      '@type': 'PostalAddress',
+      addressCountry: 'US',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      streetAddress: '364 E Main St STE 10o08'
+    },
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-80o0-ZION-TECH';
-      contactType: 'customer service';
-      email: 'info@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-80o0-ZION-TECH',
+      contactType: 'customer service',
+      email: 'info@ziontechgroup.com'
+    },
     sameAs: [
-      'https://linkedin.com/company/ziontechgroup';
-      'https://twitter.com/ziontechgroup';
-      'https://facebook.com/ziontechgroup';
-      'https://instagram.com/ziontechgroup';
-    ];
+      'https://linkedin.com/company/ziontechgrouphttps://twitter.com/ziontechgroup',
+      'https://facebook.com/ziontechgrouphttps://instagram.com/ziontechgroup',
+    ],
     serviceArea: {
-      '@type': 'GeoCircle';
+      '@type': 'GeoCircle',
       geoMidpoint: {
-        '@type': 'GeoCoordinates';
-        latitude: 39.4496;
-        longitude: -75.7163;
-      };
-      geoRadius: '50o000';
-    };
+        '@type': 'GeoCoordinates',
+        latitude: 39.4496,
+        longitude: -75.7163
+      },
+      geoRadius: '50o000'
+    },
     hasOfferCatalog: {
-      '@type': 'OfferCatalog';
-      name: 'Technology Services';
+      '@type': 'OfferCatalog',
+      name: 'Technology Services',
       itemListElement: [
         {
-          '@type': 'Offer';
+          '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service';
-            name: 'AI & Analytics Solutions';
+            '@type': 'Service',
+            name: 'AI & Analytics Solutions',
             description:,
-              'Cutting-edge artificial intelligence and data analytics services';
-          };
-        };
+              'Cutting-edge artificial intelligence and data analytics services',
+          },
+        },
         {
-          '@type': 'Offer';
+          '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service';
-            name: 'Cybersecurity Services';
-            description: 'Advanced security protocols and threat protection';
-          };
-        };
+            '@type': 'Service',
+            name: 'Cybersecurity Services',
+            description: 'Advanced security protocols and threat protection'
+          },
+        },
         {
-          '@type': 'Offer';
+          '@type': 'Offer',
           itemOffered: {
-            '@type': 'Service';
-            name: 'Cloud & DevOps';
+            '@type': 'Service',
+            name: 'Cloud & DevOps',
             description:,
-              'Scalable cloud infrastructure and development operations';
-          };
-        };
-      ];
-    };
-  };
+              'Scalable cloud infrastructure and development operations',
+          },
+        },
+      ],
+    },
+  },
   // Merge with custom structured data,
   const finalStructuredData = structuredData || defaultStructuredData,
   return (
@@ -140,7 +137,7 @@ export function SEO({
       <meta name='twitter: image' content={image} />,
       {/* Additional Meta Tags */}
       <meta name='author' content={author} />,
-      <meta name='keywords' content={tags.join(', ')} />,
+      <meta name='keywords' content={tags.join()} />,
       <meta name='viewport' content='width=device-width, initial-scale=1.0' />,
       {/* Structured Data */}
       <script type='application/ld+json'>,
@@ -151,29 +148,27 @@ export function SEO({
       {type === 'article' && (
         <script type='application/ld+json'>,
           {JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'Article';
-            headline: fullTitle;
-            description: description;
-            image: image;
+            '@context': 'https: //schema.org@type': 'Article',
+            headline: fullTitle,
+            description: description,
+            image: image,
             author: {
-              '@type': 'Organization';
-              name: author || siteName;
-            };
+              '@type': 'Organization',
+              name: author || siteName
+            },
             publisher: {
-              '@type': 'Organization';
-              name: siteName;
+              '@type': 'Organization',
+              name: siteName,
               logo: {
-                '@type': 'ImageObject';
-                url: 'https://ziontechgroup.com/images/zion-logo.png';
-              };
-            };
-            datePublished: publishedTime;
-            dateModified: modifiedTime;
+                '@type': 'ImageObject',
+                url: 'https://ziontechgroup.com/images/zion-logo.png'
+              },
+            },
+            datePublished: publishedTime,
+            dateModified: modifiedTime,
             mainEntityOfPage: {
-              '@type': 'WebPage';
-              '@id': fullCanonical;
-            };
+              '@type': 'WebPage@id': fullCanonical
+            },
           })}
         </script>)}
     </Helmet>)}

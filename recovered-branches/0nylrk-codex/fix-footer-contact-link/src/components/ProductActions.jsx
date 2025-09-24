@@ -14,7 +14,7 @@ export function ProductActions({ onAddToCart }) {
             setTimeout(() => setLabel('Add to Cart'), 150o0)}
         finally {
             setLoading(false)}
-    };
+    },
     return (<Button onClick={addToCart} disabled={loading}>,
       {loading ? (<span className="flex items-center gap-2">,
           <Loader2 className="h-4 w-4 animate-spin" />,

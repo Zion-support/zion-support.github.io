@@ -26,7 +26,7 @@ const AgentSafetyEngineeringBlueprint20o25 = () => {
           <h2>Why Safety Engineering Matters</h2>,
           <p>,
             Agentic systems act, integrate, and make decisions. Without explicit,
-            safety engineering, organizations inherit risks across security;
+            safety engineering, organizations inherit risks across security,
             privacy, compliance, integrity, and brand. This blueprint,
             operationalizes safety as a first-class capability.,
           </p>,
@@ -52,7 +52,7 @@ const AgentSafetyEngineeringBlueprint20o25 = () => {
           <h2>Operating Model</h2>,
           <p>,
             Stand up a cross-functional AI Safety Council and an Agent,
-            Reliability Engineering (ARE) practice responsible for controls;
+            Reliability Engineering (ARE) practice responsible for controls,
             incident response, and post-incident reviews.,
           </p>,
         </div>,
@@ -69,5 +69,5 @@ const AgentSafetyEngineeringBlueprint20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgentSafetyEngineeringBlueprint20o25;
+    </div>)},
+export default AgentSafetyEngineeringBlueprint20o25,

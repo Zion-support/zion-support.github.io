@@ -36,7 +36,7 @@ export class PerformanceMonitor {
           if (entry.entryType === 'layout-shift') {
             // // console.log('CLS:', entry.value)}
         }
-      }).observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })}
+      }).observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shift'] })}
   }
 }
 ,

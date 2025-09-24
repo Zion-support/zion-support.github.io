@@ -223,5 +223,5 @@ const UltimateAI20o26Showcase = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAI20o26Showcase;
+    </section>)},
+export default UltimateAI20o26Showcase,

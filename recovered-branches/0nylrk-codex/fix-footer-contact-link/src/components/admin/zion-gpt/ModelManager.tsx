@@ -1,14 +1,14 @@
-import { useState, useEffect } from 'react';
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Badge } from "@/components/ui/badge";
+import { useState, useEffect } from 'react',
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Badge } from "@/components/ui/badge",
 import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
 import { supabase  } from '@/integrations/supabase/client',
 import { ModelConfig } from '@/utils/zion-gpt',
-import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react";
-import { supabase } from '@/integrations/supabase/client';
-import { ModelConfig } from '@/utils/zion-gpt';
+import { Loader2, RefreshCw, Play, CheckCircle, AlertCircle } from "lucide-react",
+import { supabase } from '@/integrations/supabase/client',
+import { ModelConfig } from '@/utils/zion-gpt',
 import {useState, useEffect} from 'react',
 import {Button} from "@/components/ui/button",
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card",
@@ -30,7 +30,7 @@ interface ModelVersionData extends ModelConfig {
 export function ZionGPTModelManager() {
   const [models, setModels] = useState<ModelVersionData[]>([])>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
   const [isLoading, setIsLoading] = useState(true),
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
   // Fetch model data on component mount,
   useEffect(() => {
     fetchModels()}, []),
@@ -38,7 +38,7 @@ export function ZionGPTModelManager() {
     try {
       setIsLoading(true),
 interface ModelVersionData extends ModelConfig {
-  training_status: 'queued' | 'running' | 'succeeded' | 'failed';
+  training_status: 'queued' | 'running' | 'succeeded' | 'failed',
   error_message?: string}
 export /**,
  * ZionGPTModelManager - Function description,
@@ -46,7 +46,7 @@ export /**,
 function ZionGPTModelManager() {
   const [models, set_models] = useState < ModelVersionData[]>([]),
   const [is_loading, setIsLoading] = useState (true),
-  const [active_jobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
+  const [active_jobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
   // Fetch model data on component mount,
   useEffect (() => {
     fetch_models ()}, []),
@@ -56,19 +56,19 @@ function ZionGPTModelManager() {
       const { data, error } = await supabase,
         .from ('model_versions'),
         .select ('*'),
-        .order ('created_at', { ascending: false });
+        .order ('created_at', { ascending: false }),
       // Check condition,
 if (throw error) {
   $2}
       // Map the data to our component state,
       set_models (data.map (model => ({
-        id: model.id;
-        version: model.version;
-        created_at: model.created_at;
-        base_model: model.base_model;
-        purpose: model.purpose;
-        active: model.active;
-        training_status: model.training_status;
+        id: model.id,
+        version: model.version,
+        created_at: model.created_at,
+        base_model: model.base_model,
+        purpose: model.purpose,
+        active: model.active,
+        training_status: model.training_status,
         error_message: model.error_message})))} catch (error) {
       console.error ('Error fetching models:', error)} finally {
       setIsLoading (false)}
@@ -94,8 +94,8 @@ if (throw error) {
       await supabase,
         .from ('model_versions'),
         .update ({
-          training_status: data.status;
-          error_message: data.error || null;
+          training_status: data.status,
+          error_message: data.error || null,
           // If training succeeded, automatically set to active,
           ...(data.status === 'succeeded' ? { active: true } : {})}),
         .eq ('id', model_id)} catch (error) {
@@ -120,42 +120,42 @@ if (throw error) {
       fetchModels()} catch (error) {
       console.error('Error toggling model active state:', error)}
 }
-  };
+  },
 interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string,
 interface ModelVersionData extends ModelConfig {
-  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed';
+  trainingStatus: 'queued' | 'running' | 'succeeded' | 'failed',
   errorMessage?: string}
 ,
 export function ZionGPTModelManager() {
-  const [models, setModels] = useState<ModelVersionData[]>([]);
-  const [isLoading, setIsLoading] = useState(true);
-  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({});
+  const [models, setModels] = useState<ModelVersionData[]>([]),
+  const [isLoading, setIsLoading] = useState(true),
+  const [activeJobs, setActiveJobs] = useState<{[key: string]: boolean}>({}),
   // Fetch model data on component mount,
   useEffect(() => {
-    fetchModels()}, []);
+    fetchModels()}, []),
   const fetchModels = async () => {
     try {
-      setIsLoading(true);
+      setIsLoading(true),
       const { data, error } = await supabase,
         .from('model_versions'),
         .select('*'),
-        .order('createdAt', { ascending: false });
+        .order('createdAt', { ascending: false }),
       if (error) throw error,
       // Map the data to our component state,
       setModels(data && data.map(model => ({
-        id: model && model.id;
-        version: model && model.version;
-        createdAt: model && model.created_at;
-        baseModel: model && model.base_model;
-        purpose: model && model.purpose;
-        active: model && model.active;
-        trainingStatus: model && model.training_status;
+        id: model && model.id,
+        version: model && model.version,
+        createdAt: model && model.created_at,
+        baseModel: model && model.base_model,
+        purpose: model && model.purpose,
+        active: model && model.active,
+        trainingStatus: model && model.training_status,
         errorMessage: model && model.error_message})))} catch (error) {
       console && console.error('Error fetching models:', error)} finally {
       setIsLoading(false)}
-  };
+  },
   const checkTrainingStatus = async (modelId: string) => {
     try {
       setActiveJobs(prev => ({ ...prev, [modelId]: true })),
@@ -174,14 +174,14 @@ export function ZionGPTModelManager() {
       await supabase,
         .from('model_versions'),
         .update({
-          training_status: data && data.status;
-          error_message: data && data.error || null;
+          training_status: data && data.status,
+          error_message: data && data.error || null,
           // If training succeeded, automatically set to active,
           ...(data && data.status === 'succeeded' ? { active: true } : {})}),
         .eq('id', modelId)} catch (error) {
       console && console.error(`Error checking status for model ${modelId}:`, error)} finally {
       setActiveJobs(prev => ({ ...prev, [modelId]: false }))}
-  };
+  },
   const toggleModelActive = async (modelId: string, currentActive: boolean, purpose: string) => {
     try {
       // If activating, deactivate all other models with the same purpose,
@@ -198,7 +198,7 @@ export function ZionGPTModelManager() {
       // Refresh the model list,
       fetchModels()} catch (error) {
       console && console.error('Error toggling model active state:', error)}
-};
+},
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements,
   return (
     <Card className="w-full">,

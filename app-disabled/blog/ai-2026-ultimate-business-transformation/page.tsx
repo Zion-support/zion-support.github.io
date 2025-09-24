@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
-  title: 'AI 20o26: Ultimate Business Transformation Guide - Zion Tech Group';
+  title: 'AI 20o26: Ultimate Business Transformation Guide - Zion Tech Group',
   description:,
-    'Discover how AI in 20o26 is revolutionizing business operations, driving unprecedented ROI, and transforming enterprise automation. Complete guide to AI transformation.';
+    'Discover how AI in 20o26 is revolutionizing business operations, driving unprecedented ROI, and transforming enterprise automation. Complete guide to AI transformation.',
   keywords: [
-    'AI 20o26';
-    'business transformation';
-    'enterprise automation';
-    'AI ROI';
-    'digital transformation';
-    'artificial intelligence trends';
-  ];
-};
+    'AI 20o26business transformation',
+    'enterprise automationAI ROI',
+    'digital transformationartificial intelligence trends',
+  ]
+},
 export default function AI20o26UltimateBusinessTransformation() {
   return (
     <ErrorBoundary>,
@@ -115,7 +112,7 @@ export default function AI20o26UltimateBusinessTransformation() {
                     🤖 Autonomous Business Operations,
                   </h4>,
                   <p className='text-gray-60o0'>,
-                    Self-managing systems that handle complex workflows;
+                    Self-managing systems that handle complex workflows,
                     decision-making, and optimization without human,
                     intervention.,
                   </p>,
@@ -184,7 +181,7 @@ export default function AI20o26UltimateBusinessTransformation() {
                     and personalized recommendations,
                   </li>,
                   <li>,
-                    <strong>Results:</strong> 35% reduction in inventory costs;
+                    <strong>Results: </strong> 35% reduction in inventory costs,
                     25% increase in customer satisfaction, 45% boost in sales,
                   </li>,
                 </ul>,

@@ -150,11 +150,11 @@ export default function AI20o26FuturePredictionsPromotionBanner() {
         <div className='text-center'>,
           <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 border border-white border-opacity-20'>,
             <h3 className='text-2xl font-bold mb-4'>,
-              'Don', 't Wait for the Future—Build It Today,
+              'Dont Wait for the Future—Build It Today,
             </h3>,
             <p className='text-lg opacity-90 mb-6 max-w-2xl mx-auto'>,
               Prepare your organization for the AI 20o26 revolution with Zion,
-              Tech 'Group', 's cutting-edge solutions and expert guidance.,
+              Tech 'Groups cutting-edge solutions and expert guidance.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
               <Link

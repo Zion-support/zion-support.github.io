@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const UltimateBreakthroughBanner20o26: React.FC = () => {
   return (
@@ -76,5 +76,5 @@ const UltimateBreakthroughBanner20o26: React.FC = () => {
         <div className='absolute bottom-20 left-1/3 w-20 h-20 bg-white/5 rounded-full animate-pulse delay-20o00'></div>,
         <div className='absolute bottom-40 right-1/3 w-28 h-28 bg-white/5 rounded-full animate-pulse delay-30o00'></div>,
       </div>,
-    </div>)};
-export default UltimateBreakthroughBanner20o26;
+    </div>)},
+export default UltimateBreakthroughBanner20o26,

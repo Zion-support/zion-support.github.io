@@ -9,41 +9,41 @@ interface NavItem {
 ,
 const navigationItems: NavItem[] = [
   {
-    label: 'Home';
-    href: '/'};
+    label: 'Home',
+    href: '/'},
   {
-    label: 'AI Solutions';
-    href: '/solutions';
+    label: 'AI Solutions',
+    href: '/solutions',
     children: [
-      { label: 'AI 'Automation', 'href: '/solutions/ai-automation' };
-      { label: 'Machine 'Learning', 'href: '/solutions/machine-learning' };
-      { label: 'Data 'Analytics', 'href: '/solutions/data-analytics' };
-      { label: 'Cloud 'Infrastructure', 'href: '/solutions/cloud-infrastructure' };
-    ]};
+      { label: 'AI 'Automationhref: '/solutions/ai-automation' },
+      { label: 'Machine 'Learninghref: '/solutions/machine-learning' },
+      { label: 'Data 'Analyticshref: '/solutions/data-analytics' },
+      { label: 'Cloud 'Infrastructurehref: '/solutions/cloud-infrastructure' },
+    ]},
   {
-    label: 'Case Studies';
-    href: '/case-studies';
+    label: 'Case Studies',
+    href: '/case-studies',
     children: [
-      { label: 'Fortune 50o0 'Success', 'href: '/case-studies/fortune-50o0' };
-      { label: 'Manufacturing 'AI', 'href: '/case-studies/manufacturing' };
-      { label: 'Healthcare 'AI', 'href: '/case-studies/healthcare' };
-      { label: 'Financial 'Services', 'href: '/case-studies/financial' };
-    ]};
+      { label: 'Fortune 50o0 'Successhref: '/case-studies/fortune-50o0' },
+      { label: 'Manufacturing 'AIhref: '/case-studies/manufacturing' },
+      { label: 'Healthcare 'AIhref: '/case-studies/healthcare' },
+      { label: 'Financial 'Serviceshref: '/case-studies/financial' },
+    ]},
   {
-    label: 'Resources';
-    href: '/resources';
+    label: 'Resources',
+    href: '/resources',
     children: [
-      { label: 'Implementation 'Guides', 'href: '/resources/guides' };
-      { label: 'ROI 'Calculator', 'href: '/tools/roi-calculator' };
-      { label: 'AI Readiness 'Assessment', 'href: '/tools/readiness-assessment' };
-      { label: 'White 'Papers', 'href: '/resources/whitepapers' };
-    ]};
+      { label: 'Implementation 'Guideshref: '/resources/guides' },
+      { label: 'ROI 'Calculatorhref: '/tools/roi-calculator' },
+      { label: 'AI Readiness 'Assessmenthref: '/tools/readiness-assessment' },
+      { label: 'White 'Papershref: '/resources/whitepapers' },
+    ]},
   {
-    label: 'About';
-    href: '/about'};
+    label: 'About',
+    href: '/about'},
   {
-    label: 'Contact';
-    href: '/contact'};
+    label: 'Contact',
+    href: '/contact'},
 ],
 export default function MobileOptimizedNav() {
   const [isOpen, setIsOpen] = useState(false),
@@ -53,9 +53,9 @@ export default function MobileOptimizedNav() {
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)};
-    window.addEventListener(', 'scroll', 'handleScroll),
-    return () => window.removeEventListener(', 'scroll', 'handleScroll)}[]),
+      setIsScrolled(window.scrollY > 10)},
+    window.addEventListener(scroll', 'handleScroll),
+    return () => window.removeEventListener(scroll', 'handleScroll)}[]),
   // Close mobile menu on route change,
   useEffect(() => {
     setIsOpen(false),
@@ -67,11 +67,11 @@ export default function MobileOptimizedNav() {
       if (isOpen && !target.closest('.mobile-nav')) {
         setIsOpen(false),
         setActiveDropdown(null)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [isOpen]),
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label)};
+    setActiveDropdown(activeDropdown === label ? null : label)},
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
       isScrolled ? 'bg-white shadow-lg' : 'bg-white/95 backdrop-blur-sm'}`}>,

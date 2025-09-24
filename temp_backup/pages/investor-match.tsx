@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
 import EnhancedLayout from '../components/layout/EnhancedLayout',
@@ -11,7 +11,7 @@ type Investor = {
   notable_investments: string[],
   location_focus?: string[],
   stages?: string[],
-  type?: string};
+  type?: string},
 export default function InvestorMatchPage() {
   const [session, setSession] = useState<boolean>(false), // TODO: replace with real auth check,
   const [startupName, setStartupName] = useState(''),
@@ -47,45 +47,45 @@ export default function InvestorMatchPage() {
     setInvestors([]),
     try {
       const res = await fetch('/api/investor-match', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          startupName;
-          industry;
-          roundType;
-          teamSize;
-          pitchSummary;
-          deckOrWebsite;
-          location;
-        });
+          startupName,
+          industry,
+          roundType,
+          teamSize,
+          pitchSummary,
+          deckOrWebsite,
+          location
+        }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
       setInvestors(data.investors || [])} catch (err: any) {
       setError(err.message || 'Something went wrong')} finally {
       setLoading(false)}
-  };
+  },
   const toggleFavorite = (name: string) => {
     setFavorites(prev =>,
-      prev.includes(name) ? prev.filter(n => n !== name) : [...prev, name])};
+      prev.includes(name) ? prev.filter(n => n !== name) : [...prev, name])},
   const generateEmail = async (inv: Investor) => {
     try {
       const res = await fetch('/api/generate-intro-email', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          startupName;
-          investorName: inv.name;
-          investorType: inv.type || 'Investor';
-          highlights: [industry, roundType, teamSize ? `${teamSize} FTE` : ''];
-          pitchSummary;
-          website: deckOrWebsite;
-        });
+          startupName,
+          investorName: inv.name,
+          investorType: inv.type || 'Investor',
+          highlights: [industry, roundType, teamSize ? `${teamSize} FTE` : ''],
+          pitchSummary,
+          website: deckOrWebsite
+        }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
       const blob = new Blob(
-        [`Subject: ${data.subject}\n\n${data.body_markdown}`];
+        [`Subject: ${data.subject}\n\n${data.body_markdown}`],
         { type: 'text/markdown' }
       ),
       const url = URL.createObjectURL(blob),
@@ -95,7 +95,7 @@ export default function InvestorMatchPage() {
       a.click(),
       URL.revokeObjectURL(url)} catch (e: any) {
       alert(e.message || 'Failed to generate email')}
-  };
+  },
   return (
     <EnhancedLayout>,
       <Head>,
@@ -237,7 +237,7 @@ export default function InvestorMatchPage() {
                         </span>)}
                       {inv.stages?.length ? (
                         <span className='px-2 py-0.5 rounded-md border'>,
-                          {inv.stages.join(', ')}
+                          {inv.stages.join()}
                         </span>) : null}
                       <span className='px-2 py-0.5 rounded-md border'>,
                         Score: {Math.round(inv.relevance_score)}
@@ -254,7 +254,7 @@ export default function InvestorMatchPage() {
                 <p className='text-sm mt-2'>{inv.why_fit}</p>,
                 {inv.notable_investments?.length ? (
                   <p className='text-sm mt-2 opacity-80'>,
-                    Notable investments: {inv.notable_investments.join(', ')}
+                    Notable investments: {inv.notable_investments.join()}
                   </p>) : null}
                 <div className='flex flex-wrap items-center gap-3 mt-3 text-sm'>,
                   <a

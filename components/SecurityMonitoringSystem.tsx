@@ -3,53 +3,53 @@ import React, { useState, useEffect } from 'react',
 ShieldAlertTriangleCheckCircleLockEyeZapGlobeDatabase,
 const SecurityMonitoringSystem = () => {
   const [securityStatusetSecurityStatus] = useState({
-    overallScore: 0;
-    threatsBlocked: 0;
-    vulnerabilitiesFixed: 0;
-    securityEvents: [];
-    complianceStatus: 'excellent';
-    lastScan: new Date();
-    activeThreats: 0;
+    overallScore: 0,
+    threatsBlocked: 0,
+    vulnerabilitiesFixed: 0,
+    securityEvents: [],
+    complianceStatus: 'excellent',
+    lastScan: new Date(),
+    activeThreats: 0,
     protectedAssets: 0}),
   const [isScanningsetIsScanning] = useState(false),
   useEffect(() => {
     // Simulate security data loading,
     const loadSecurityData = () => {
       setSecurityStatus({
-        overallScore: 98;
-        threatsBlocked: 1247;
-        vulnerabilitiesFixed: 23;
+        overallScore: 98,
+        threatsBlocked: 1247,
+        vulnerabilitiesFixed: 23,
         securityEvents: [
-          { type: ''success', 'message: 'SSL Certificate 'renewed', 'time: '2 hours ago' };
-          { type: ''info', 'message: 'Security scan 'completed', 'time: '4 hours ago' };
-          { type: ''success', 'message: 'Firewall rules 'updated', 'time: '6 hours ago' };
-          { type: ''warning', 'message: 'Unusual traffic pattern 'detected', 'time: '8 hours ago' }
-        ];
-        complianceStatus: 'excellent';
-        lastScan: new Date();
-        activeThreats: 0;
-        protectedAssets: 156})};
+          { type: ''successmessage: 'SSL Certificate 'renewedtime: '2 hours ago' },
+          { type: ''infomessage: 'Security scan 'completedtime: '4 hours ago' },
+          { type: ''successmessage: 'Firewall rules 'updatedtime: '6 hours ago' },
+          { type: ''warningmessage: 'Unusual traffic pattern 'detectedtime: '8 hours ago' }
+        ],
+        complianceStatus: 'excellent',
+        lastScan: new Date(),
+        activeThreats: 0,
+        protectedAssets: 156})},
     loadSecurityData()}[]),
   const runSecurityScan = () => {
     setIsScanning(true),
     setTimeout(() => {
       setSecurityStatus(prev => ({
-        ...prev;
-        overallScore: 99;
-        threatsBlocked: prev.threatsBlocked + 3;
+        ...prev,
+        overallScore: 99,
+        threatsBlocked: prev.threatsBlocked + 3,
         lastScan: new Date()})),
-      setIsScanning(false)}30o00)};
+      setIsScanning(false)}30o00)},
   const getScoreColor = (score: number) => {
     if (score >= 95) return 'text-green-40o0',
     if (score >= 80) return 'text-yellow-40o0',
-    return 'text-red-40o0'};
+    return 'text-red-40o0'},
   const getEventIcon = (type: string) => {
     switch (type) {
       case 'success': return <CheckCircle className="w-4 h-4 text-green-40o0"  />,
       case 'warning': return <AlertTriangle className="w-4 h-4 text-yellow-40o0"  />,
       case 'error': return <AlertTriangle className="w-4 h-4 text-red-40o0"  />,
       default: return <Eye className="w-4 h-4 text-blue-40o0"  />}
-  };
+  },
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-red-90o0 to-orange-90o0 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -200,5 +200,5 @@ const SecurityMonitoringSystem = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default SecurityMonitoringSystem;
+    </div>)},
+export default SecurityMonitoringSystem,

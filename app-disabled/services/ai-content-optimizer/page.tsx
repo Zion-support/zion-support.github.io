@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-content-optimizer - Zion Tech Group';
+  title: 'ai-content-optimizer - Zion Tech Group',
   description:,
-    'Professional ai-content-optimizer solutions for your business needs.';
-  keywords: 'ai-content-optimizer, services, business, technology';
-};
+    'Professional ai-content-optimizer solutions for your business needs.',
+  keywords: 'ai-content-optimizer, services, business, technology',
+},
 export default function AiContentOptimizerPage() {
   return (
     <div className='min-h-screen bg-white'>,

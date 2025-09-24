@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { QuoteRequestCard } from "./QuoteRequestCard",
 import { EmptyStateCard } from "./EmptyStateCard",
@@ -9,13 +9,13 @@ type QuoteRequestsListProps = {
   isArchived: boolean,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded: (id: string) => void,
-  onToggleArchive: (id: stringisArchived: boolean) => void};
+  onToggleArchive: (id: stringisArchived: boolean) => void},
 export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
-  quotes;
-  isLoading;
-  isArchived;
-  onViewDetails;
-  onMarkAsResponded;
+  quotes,
+  isLoading,
+  isArchived,
+  onViewDetails,
+  onMarkAsResponded,
   onToggleArchive}) => {
   if (isLoading) {
     return (
@@ -36,4 +36,4 @@ export const QuoteRequestsList: React.FC<QuoteRequestsListProps> = ({
           onMarkAsResponded={!isArchived ? onMarkAsResponded : undefined}
           onToggleArchive={onToggleArchive}
         />))}
-    </div>)};
+    </div>)},

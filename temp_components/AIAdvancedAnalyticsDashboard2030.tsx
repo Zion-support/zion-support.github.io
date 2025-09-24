@@ -9,38 +9,38 @@ import {
   MousePointer,
   Clock,
   Zap,
-  Target;
-  Brain;
-  Cpu;
-  Database;
-  Network;
-  Shield;
-  Star;
-  Award;
-  ChevronRight;
-  Play;
-  Pause;
-  RotateCcw;
-  Maximize;
-  Minimize;
-  Filter;
-  SortAsc;
-  SortDesc;
-  Download;
-  Share;
-  Settings;
-  RefreshCw;
-  AlertTriangle;
-  CheckCircle;
-  Info;
-  Activity;
-  Globe;
-  Smartphone;
-  Laptop;
-  Server;
-  Cloud;
-  Lock;
-  Heart;
+  Target,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Shield,
+  Star,
+  Award,
+  ChevronRight,
+  Play,
+  Pause,
+  RotateCcw,
+  Maximize,
+  Minimize,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Download,
+  Share,
+  Settings,
+  RefreshCw,
+  AlertTriangle,
+  CheckCircle,
+  Info,
+  Activity,
+  Globe,
+  Smartphone,
+  Laptop,
+  Server,
+  Cloud,
+  Lock,
+  Heart,
   Sparkles} from 'lucide-react',
 const AIAdvancedAnalyticsDashboard20o30 = () => {
   const [activeTabsetActiveTab] = useState('overview'),
@@ -49,165 +49,165 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
   const [currentMetricsetCurrentMetric] = useState(0),
   const analyticsTabs ={
     overview: {
-      title: 'Overview';
-      subtitle: 'Complete business intelligence overview';
-      icon: BarChart3;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      title: 'Overview',
+      subtitle: 'Complete business intelligence overview',
+      icon: BarChart3,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     users: {
-      title: 'Users';
-      subtitle: 'User behavior and engagement analytics';
-      icon: Users;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      title: 'Users',
+      subtitle: 'User behavior and engagement analytics',
+      icon: Users,
+      color: 'from-green-50o0 to-emerald-50o0'},
     performance: {
-      title: 'Performance';
-      subtitle: 'System performance and optimization metrics';
-      icon: Zap;
-      color: 'from-yellow-50o0 to-orange-50o0'};
+      title: 'Performance',
+      subtitle: 'System performance and optimization metrics',
+      icon: Zap,
+      color: 'from-yellow-50o0 to-orange-50o0'},
     revenue: {
-      title: 'Revenue';
-      subtitle: 'Financial metrics and conversion tracking';
-      icon: TrendingUp;
+      title: 'Revenue',
+      subtitle: 'Financial metrics and conversion tracking',
+      icon: TrendingUp,
       color: 'from-purple-50o0 to-pink-50o0'}
-  };
+  },
   const realTimeMetrics = [
     {
-      label: 'Active Users';
-      value: '2.3M';
-      change: '+12%';
-      trend: 'up';
-      icon: Users;
-      color: 'text-green-40o0'};
+      label: 'Active Users',
+      value: '2.3M',
+      change: '+12%',
+      trend: 'up',
+      icon: Users,
+      color: 'text-green-40o0'},
     {
-      label: 'Page Views';
-      value: '45.2M';
-      change: '+8%';
-      trend: 'up';
-      icon: Eye;
-      color: 'text-blue-40o0'};
+      label: 'Page Views',
+      value: '45.2M',
+      change: '+8%',
+      trend: 'up',
+      icon: Eye,
+      color: 'text-blue-40o0'},
     {
-      label: 'Conversion Rate';
-      value: '3.8%';
-      change: '+0.5%';
-      trend: 'up';
-      icon: Target;
-      color: 'text-purple-40o0'};
+      label: 'Conversion Rate',
+      value: '3.8%',
+      change: '+0.5%',
+      trend: 'up',
+      icon: Target,
+      color: 'text-purple-40o0'},
     {
-      label: 'Revenue';
-      value: '$2.1M';
-      change: '+15%';
-      trend: 'up';
-      icon: TrendingUp;
+      label: 'Revenue',
+      value: '$2.1M',
+      change: '+15%',
+      trend: 'up',
+      icon: TrendingUp,
       color: 'text-yellow-40o0'}
   ],
   const userInsights = [
     {
-      title: 'User Engagement Peak';
-      description: 'Peak engagement occurs at 2:0o0 PM EST';
-      value: '2.3M users';
-      trend: 'up';
-      change: '+12%';
-      icon: Clock;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      title: 'User Engagement Peak',
+      description: 'Peak engagement occurs at 2:0o0 PM EST',
+      value: '2.3M users',
+      trend: 'up',
+      change: '+12%',
+      icon: Clock,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      title: 'Mobile Usage Surge';
-      description: 'Mobile traffic increased by 25% this week';
-      value: '68% mobile';
-      trend: 'up';
-      change: '+25%';
-      icon: Smartphone;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      title: 'Mobile Usage Surge',
+      description: 'Mobile traffic increased by 25% this week',
+      value: '68% mobile',
+      trend: 'up',
+      change: '+25%',
+      icon: Smartphone,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      title: 'AI Recommendations';
-      description: 'AI-powered recommendations driving 40% of conversions';
-      value: '40% conversions';
-      trend: 'up';
-      change: '+8%';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0'};
+      title: 'AI Recommendations',
+      description: 'AI-powered recommendations driving 40% of conversions',
+      value: '40% conversions',
+      trend: 'up',
+      change: '+8%',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      title: 'Performance Score';
-      description: 'Website performance score improved significantly';
-      value: '94/10o0';
-      trend: 'up';
-      change: '+6 points';
-      icon: Zap;
+      title: 'Performance Score',
+      description: 'Website performance score improved significantly',
+      value: '94/10o0',
+      trend: 'up',
+      change: '+6 points',
+      icon: Zap,
       color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const performanceData = [
     {
-      metric: 'Page Load Time';
-      current: 1.2;
-      target: 0.8;
-      unit: 's';
-      improvement: 33;
-      icon: Clock;
-      status: 'Good'};
+      metric: 'Page Load Time',
+      current: 1.2,
+      target: 0.8,
+      unit: 's',
+      improvement: 33,
+      icon: Clock,
+      status: 'Good'},
     {
-      metric: 'First Contentful Paint';
-      current: 0.8;
-      target: 0.5;
-      unit: 's';
-      improvement: 37;
-      icon: Eye;
-      status: 'Excellent'};
+      metric: 'First Contentful Paint',
+      current: 0.8,
+      target: 0.5,
+      unit: 's',
+      improvement: 37,
+      icon: Eye,
+      status: 'Excellent'},
     {
-      metric: 'Largest Contentful Paint';
-      current: 2.1;
-      target: 1.5;
-      unit: 's';
-      improvement: 28;
-      icon: Maximize;
-      status: 'Good'};
+      metric: 'Largest Contentful Paint',
+      current: 2.1,
+      target: 1.5,
+      unit: 's',
+      improvement: 28,
+      icon: Maximize,
+      status: 'Good'},
     {
-      metric: 'Cumulative Layout Shift';
-      current: 0.0o5;
-      target: 0.1;
-      unit: '';
-      improvement: 50;
-      icon: Activity;
+      metric: 'Cumulative Layout Shift',
+      current: 0.0o5,
+      target: 0.1,
+      unit: '',
+      improvement: 50,
+      icon: Activity,
       status: 'Excellent'}
   ],
   const aiFeatures = [
     {
-      title: 'Predictive Analytics';
-      description: 'AI predicts user behavior and trends with 94% accuracy';
-      icon: Brain;
-      status: 'Active';
-      impact: 'High'};
+      title: 'Predictive Analytics',
+      description: 'AI predicts user behavior and trends with 94% accuracy',
+      icon: Brain,
+      status: 'Active',
+      impact: 'High'},
     {
-      title: 'Automated Insights';
-      description: 'AI automatically generates actionable business insights';
-      icon: Sparkles;
-      status: 'Active';
-      impact: 'Critical'};
+      title: 'Automated Insights',
+      description: 'AI automatically generates actionable business insights',
+      icon: Sparkles,
+      status: 'Active',
+      impact: 'Critical'},
     {
-      title: 'Real-time Optimization';
-      description: 'AI continuously optimizes user experience in real-time';
-      icon: Zap;
-      status: 'Beta';
-      impact: 'High'};
+      title: 'Real-time Optimization',
+      description: 'AI continuously optimizes user experience in real-time',
+      icon: Zap,
+      status: 'Beta',
+      impact: 'High'},
     {
-      title: 'Anomaly Detection';
-      description: 'AI detects unusual patterns and potential issues';
-      icon: AlertTriangle;
-      status: 'Active';
+      title: 'Anomaly Detection',
+      description: 'AI detects unusual patterns and potential issues',
+      icon: AlertTriangle,
+      status: 'Active',
       impact: 'Medium'}
   ],
   const charts = [
     {
-      title: 'User Growth Over Time';
-      type: 'line';
-      data: [120o0190o030005000750012000180o0023000];
-      labels: ['Jan'Feb'Mar'Apr'May'Jun'Jul'Aug']};
+      title: 'User Growth Over Time',
+      type: 'line',
+      data: [120o0190o030005000750012000180o0023000],
+      labels: ['Jan'Feb'Mar'Apr'May'Jun'Jul'Aug']},
     {
-      title: 'Revenue by Source';
-      type: 'pie';
-      data: [452520o10];
-      labels: ['Organic'Paid'Social'Direct']};
+      title: 'Revenue by Source',
+      type: 'pie',
+      data: [452520o10],
+      labels: ['Organic'Paid'Social'Direct']},
     {
-      title: 'Page Performance';
-      type: 'bar';
-      data: [8592789688949087];
+      title: 'Page Performance',
+      type: 'bar',
+      data: [8592789688949087],
       labels: ['Home'About'Services'Products'Blog'Contact'Pricing'Support']}
   ],
   useEffect(() => {
@@ -226,7 +226,7 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
     return () => clearInterval(interval)}[]),
   const startAnalysis = () => {
     setIsAnalyzing(true),
-    setAnalysisProgress(0)};
+    setAnalysisProgress(0)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
@@ -511,5 +511,5 @@ const AIAdvancedAnalyticsDashboard20o30 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AIAdvancedAnalyticsDashboard20o30;
+    </div>)},
+export default AIAdvancedAnalyticsDashboard20o30,

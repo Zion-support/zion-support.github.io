@@ -8,7 +8,7 @@ const path = require('path'),
 // // console.log('\n--- Testing PM2 Redundancy Manager ---'),
 try {
   const {
-    EnhancedPM2RedundancyManager;
+    EnhancedPM2RedundancyManager,
   } = require('./automation/redundancy/enhanced-pm2-redundancy-manager.cjs'),
   // // console.log('✓ PM2 Redundancy Manager loaded successfully'),
   const pm2Manager = new EnhancedPM2RedundancyManager(),
@@ -19,7 +19,7 @@ try {
 // // console.log('\n--- Testing GitHub Actions Redundancy Manager ---'),
 try {
   const {
-    EnhancedGitHubActionsRedundancyManager;
+    EnhancedGitHubActionsRedundancyManager,
   } = require('./automation/redundancy/enhanced-github-actions-redundancy-manager.cjs'),
   // // console.log('✓ GitHub Actions Redundancy Manager loaded successfully'),
   const githubManager = new EnhancedGitHubActionsRedundancyManager(),
@@ -30,21 +30,21 @@ try {
 // // console.log('\n--- Testing Netlify Functions Redundancy Manager ---'),
 try {
   const {
-    EnhancedNetlifyFunctionsRedundancyManager;
+    EnhancedNetlifyFunctionsRedundancyManager,
   } = require('./automation/redundancy/enhanced-netlify-functions-redundancy-manager.cjs'),
   // // console.log('✓ Netlify Functions Redundancy Manager loaded successfully'),
   const netlifyManager = new EnhancedNetlifyFunctionsRedundancyManager(),
   // // console.log(
     '✓ Netlify Functions Redundancy Manager instantiated successfully')} catch (error) {
   console.error(
-    '✗ Netlify Functions Redundancy Manager failed:';
+    '✗ Netlify Functions Redundancy Manager failed: ',
     error.message)}
 ,
 // Test Master Orchestrator,
 // // console.log('\n--- Testing Master Redundancy Orchestrator ---'),
 try {
   const {
-    EnhancedMasterRedundancyOrchestrator;
+    EnhancedMasterRedundancyOrchestrator,
   } = require('./automation/redundancy/enhanced-master-redundancy-orchestrator.cjs'),
   // // console.log('✓ Master Redundancy Orchestrator loaded successfully'),
   const masterOrchestrator = new EnhancedMasterRedundancyOrchestrator(),

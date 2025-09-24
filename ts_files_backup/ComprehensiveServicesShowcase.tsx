@@ -3,7 +3,7 @@ import React{ useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   StarClockUsersTrendingUpCheckCircleExternalLink,
-  ChevronRightShieldZapGlobeRocketBrainAtom;
+  ChevronRightShieldZapGlobeRocketBrainAtom,
   SearchFilterGridListArrowRightAwardTarget} from 'lucide-react',
 import { comprehensiveMicroSaasServices } from '../data/comprehensive-2025-micro-saas-expansion',
 import { specializedEmergingTechServices } from '../data/specialized-emerging-tech-services-2025',
@@ -16,23 +16,23 @@ export default function ComprehensiveServicesShowcase() {
   // Combine all services,
   const allServices = [...comprehensiveMicroSaasServices...specializedEmergingTechServices],
   const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: '🚀'count: allServices.length };
-    { id: 'AI & Machine 'Learning', 'name: 'AI & 'ML', 'icon: '🧠'count: allServices.filter(s => s.category === 'AI & Machine Learning').length };
-    { id: 'Healthcare 'AI', 'name: ''Healthcare', 'icon: '🏥'count: allServices.filter(s => s.category === 'Healthcare AI').length };
-    { id: 'Fintech 'AI', 'name: ''Fintech', 'icon: '💰'count: allServices.filter(s => s.category === 'Fintech AI').length };
-    { id: ''Cybersecurity', 'name: ''Security', 'icon: '🛡️'count: allServices.filter(s => s.category === 'Cybersecurity').length };
-    { id: 'IoT & Smart 'Cities', 'name: 'Smart 'Cities', 'icon: '🏙️'count: allServices.filter(s => s.category === 'IoT & Smart Cities').length };
-    { id: 'Blockchain & 'DeFi', 'name: ''Blockchain', 'icon: '🔗'count: allServices.filter(s => s.category === 'Blockchain & DeFi').length };
-    { id: 'Quantum 'Computing', 'name: ''Quantum', 'icon: '⚛️'count: allServices.filter(s => s.category === 'Quantum Computing').length };
-    { id: 'Space 'Technology', 'name: 'Space 'Tech', 'icon: '🚀'count: allServices.filter(s => s.category === 'Space Technology').length };
-    { id: 'Autonomous 'Systems', 'name: ''Autonomous', 'icon: '🤖'count: allServices.filter(s => s.category === 'Autonomous Systems').length };
-    { id: 'AR/VR & 'Metaverse', 'name: 'AR/'VR', 'icon: '🥽'count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length };
-    { id: '5G/6G 'Networks', 'name: '5G/6'G', 'icon: '📡'count: allServices.filter(s => s.category === '5G/6G Networks').length };
-    { id: 'Biotechnology 'AI', 'name: ''Biotech', 'icon: '🧬'count: allServices.filter(s => s.category === 'Biotechnology AI').length };
-    { id: 'Renewable 'Energy', 'name: ''Energy', 'icon: '⚡'count: allServices.filter(s => s.category === 'Renewable Energy').length };
-    { id: 'Edge 'Computing', 'name: ''Edge', 'icon: '🌐'count: allServices.filter(s => s.category === 'Edge Computing').length };
-    { id: 'Quantum 'Internet', 'name: 'Q-'Internet', 'icon: '🌍'count: allServices.filter(s => s.category === 'Quantum Internet').length };
-    { id: 'Neuromorphic 'Computing', 'name: ''Neuro', 'icon: '🧠'count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
+    { id: ''allname: 'All 'Servicesicon: '🚀'count: allServices.length },
+    { id: 'AI & Machine 'Learningname: 'AI & 'MLicon: '🧠'count: allServices.filter(s => s.category === 'AI & Machine Learning').length },
+    { id: 'Healthcare 'AIname: ''Healthcareicon: '🏥'count: allServices.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Fintech 'AIname: ''Fintechicon: '💰'count: allServices.filter(s => s.category === 'Fintech AI').length },
+    { id: ''Cybersecurityname: ''Securityicon: '🛡️'count: allServices.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'IoT & Smart 'Citiesname: 'Smart 'Citiesicon: '🏙️'count: allServices.filter(s => s.category === 'IoT & Smart Cities').length },
+    { id: 'Blockchain & 'DeFiname: ''Blockchainicon: '🔗'count: allServices.filter(s => s.category === 'Blockchain & DeFi').length },
+    { id: 'Quantum 'Computingname: ''Quantumicon: '⚛️'count: allServices.filter(s => s.category === 'Quantum Computing').length },
+    { id: 'Space 'Technologyname: 'Space 'Techicon: '🚀'count: allServices.filter(s => s.category === 'Space Technology').length },
+    { id: 'Autonomous 'Systemsname: ''Autonomousicon: '🤖'count: allServices.filter(s => s.category === 'Autonomous Systems').length },
+    { id: 'AR/VR & 'Metaversename: 'AR/'VRicon: '🥽'count: allServices.filter(s => s.category === 'AR/VR & Metaverse').length },
+    { id: '5G/6G 'Networksname: '5G/6'Gicon: '📡'count: allServices.filter(s => s.category === '5G/6G Networks').length },
+    { id: 'Biotechnology 'AIname: ''Biotechicon: '🧬'count: allServices.filter(s => s.category === 'Biotechnology AI').length },
+    { id: 'Renewable 'Energyname: ''Energyicon: '⚡'count: allServices.filter(s => s.category === 'Renewable Energy').length },
+    { id: 'Edge 'Computingname: ''Edgeicon: '🌐'count: allServices.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Quantum 'Internetname: 'Q-'Interneticon: '🌍'count: allServices.filter(s => s.category === 'Quantum Internet').length },
+    { id: 'Neuromorphic 'Computingname: ''Neuroicon: '🧠'count: allServices.filter(s => s.category === 'Neuromorphic Computing').length }
   ],
   // Filter and sort services,
   const filteredServices = allServices,
@@ -47,7 +47,7 @@ export default function ComprehensiveServicesShowcase() {
         case 'popularity':,
           return b.popular ? 1 : -1,
         case 'price':,
-          return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', ')),
+          return parseFloat(a.price.replace('$).replace(',', ')) - parseFloat(b.price.replace('$).replace(',', ')),
         case 'rating':,
           return b.rating - a.rating,
         case 'newest':,
@@ -57,9 +57,9 @@ export default function ComprehensiveServicesShowcase() {
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀'};
+    return categoryData?.icon || '🚀'},
   const formatPrice = (price: string) => {
-    return price.replace('$', ').replace(',', ')};
+    return price.replace('$).replace(',', ')},
   return (
     <section className="py-20 px-6 bg-gradient-to-br from-slate-950 via-slate-900 to-slate-950">,
       <div className="max-w-7xl mx-auto">,

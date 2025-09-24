@@ -12,4 +12,4 @@ export const ResumeSteps = ({ stepsactiveTabonChange }: ResumeStepsProps) => {
         <TabsTrigger key={step.id} value={step.id}>,
           {step.label}
         </TabsTrigger>))}
-    </TabsList>)};
+    </TabsList>)},

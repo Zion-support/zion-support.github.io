@@ -1,14 +1,14 @@
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -28,10 +28,10 @@ class ComprehensiveAutomationTester {
 ,
   addTestResult(testName, passed, message, details = null) {
     this.testResults.push({
-      testName;
-      passed;
-      message;
-      details;
+      testName,
+      passed,
+      message,
+      details,
       timestamp: new Date().toISOString()})}
 ,
   async runAllTests() {
@@ -51,166 +51,157 @@ class ComprehensiveAutomationTester {
   }
 ,
   async testCoreAutomationSystem() {
-    this.log('Testing Core Automation System...', 'info'),
+    this.log('Testing Core Automation System...info'),
     const coreFiles = [
-      'intelligent-automation-orchestrator.js';
-      'autonomous-system.js';
-      'autonomous-orchestrator.js';
-      'autonomous-daemon.js';
-      'automation-manager.js';
-      'improved-automation-orchestrator.js';
+      'intelligent-automation-orchestrator.jsautonomous-system.js',
+      'autonomous-orchestrator.jsautonomous-daemon.js',
+      'automation-manager.jsimproved-automation-orchestrator.js',
     ],
     for (const file of coreFiles) {
       const exists = await this.checkFileExists(file),
       this.addTestResult(
-        `Core File: ${file}`;
-        exists;
-        exists ? 'File exists' : 'File missing';
+        `Core File: ${file}`,
+        exists,
+        exists ? 'File exists' : 'File missing',
         { file })}
 ,
     try {
       const coreSystem = require('./intelligent-automation-orchestrator.js'),
       this.addTestResult(
-        'Core System Import';
-        true;
+        'Core System Import',
+        true,
         'Core system imported successfully')} catch (error) {
       this.addTestResult(
-        'Core System Import';
-        false;
+        'Core System Import',
+        false,
         `Import failed: ${error.message}`)}
   }
 ,
   async testNetlifyAutomation() {
-    this.log('Testing Netlify Automation...', 'info'),
+    this.log('Testing Netlify Automation...info'),
     const netlifyFiles = [
-      'netlify-monitor.js';
-      'netlify-error-fixer.js';
-      'netlify-build-automation.js';
-      'netlify-build-monitor.js';
+      'netlify-monitor.jsnetlify-error-fixer.js',
+      'netlify-build-automation.jsnetlify-build-monitor.js',
     ],
     for (const file of netlifyFiles) {
       const exists = await this.checkFileExists(file),
       this.addTestResult(
-        `Netlify File: ${file}`;
-        exists;
-        exists ? 'File exists' : 'File missing';
+        `Netlify File: ${file}`,
+        exists,
+        exists ? 'File exists' : 'File missing',
         { file })}
 ,
     try {
       const netlifyMonitor = require('./netlify-monitor.js'),
       this.addTestResult(
-        'Netlify Monitor Import';
-        true;
+        'Netlify Monitor Import',
+        true,
         'Netlify monitor imported successfully')} catch (error) {
       this.addTestResult(
-        'Netlify Monitor Import';
-        false;
+        'Netlify Monitor Import',
+        false,
         `Import failed: ${error.message}`)}
   }
 ,
   async testPerformanceMonitoring() {
-    this.log('Testing Performance Monitoring...', 'info'),
+    this.log('Testing Performance Monitoring...info'),
     const performanceFiles = [
-      'performance/monitor.js';
-      'performance/frontend-fix.js';
+      'performance/monitor.jsperformance/frontend-fix.js',
     ],
     for (const file of performanceFiles) {
       const exists = await this.checkFileExists(file),
       this.addTestResult(
-        `Performance File: ${file}`;
-        exists;
-        exists ? 'File exists' : 'File missing';
+        `Performance File: ${file}`,
+        exists,
+        exists ? 'File exists' : 'File missing',
         { file })}
 ,
     try {
       const performanceMonitor = require('./performance/monitor.js'),
       this.addTestResult(
-        'Performance Monitor Import';
-        true;
+        'Performance Monitor Import',
+        true,
         'Performance monitor imported successfully')} catch (error) {
       this.addTestResult(
-        'Performance Monitor Import';
-        false;
+        'Performance Monitor Import',
+        false,
         `Import failed: ${error.message}`)}
   }
 ,
   async testContinuousImprovement() {
-    this.log('Testing Continuous Improvement System...', 'info'),
+    this.log('Testing Continuous Improvement System...info'),
     const ciFiles = [
-      'continuous-improvement/enhanced-automation.js';
-      'continuous-improvement/monitor.js';
-      'continuous-improvement/improve.js';
+      'continuous-improvement/enhanced-automation.jscontinuous-improvement/monitor.js',
+      'continuous-improvement/improve.js',
     ],
     for (const file of ciFiles) {
       const exists = await this.checkFileExists(file),
       this.addTestResult(
-        `CI File: ${file}`;
-        exists;
-        exists ? 'File exists' : 'File missing';
+        `CI File: ${file}`,
+        exists,
+        exists ? 'File exists' : 'File missing',
         { file })}
 ,
     try {
       const ciSystem = require('./continuous-improvement/monitor.js'),
       this.addTestResult(
-        'CI System Import';
-        true;
+        'CI System Import',
+        true,
         'CI system imported successfully')} catch (error) {
       this.addTestResult(
-        'CI System Import';
-        false;
+        'CI System Import',
+        false,
         `Import failed: ${error.message}`)}
   }
 ,
   async testTaskAutomation() {
-    this.log('Testing Task Automation...', 'info'),
+    this.log('Testing Task Automation...info'),
     const taskFiles = [
-      'tasks/DependencyUpdater.js';
-      'tasks/SecurityScanner.js';
-      'tasks/CodeQualityEnforcer.js';
+      'tasks/DependencyUpdater.jstasks/SecurityScanner.js',
+      'tasks/CodeQualityEnforcer.js',
     ],
     for (const file of taskFiles) {
       const exists = await this.checkFileExists(file),
       this.addTestResult(
-        `Task File: ${file}`;
-        exists;
-        exists ? 'File exists' : 'File missing';
+        `Task File: ${file}`,
+        exists,
+        exists ? 'File exists' : 'File missing',
         { file })}
 ,
     try {
       const taskSystem = require('./tasks/DependencyUpdater.js'),
       this.addTestResult(
-        'Task System Import';
-        true;
+        'Task System Import',
+        true,
         'Task system imported successfully')} catch (error) {
       this.addTestResult(
-        'Task System Import';
-        false;
+        'Task System Import',
+        false,
         `Import failed: ${error.message}`)}
   }
 ,
   async testCursorAutomation() {
-    this.log('Testing Cursor Automation...', 'info'),
+    this.log('Testing Cursor Automation...info'),
     const cursorFiles = [
-      'cursor-automated-communication.js';
-      'cursor-automated-extension/background.js';
+      'cursor-automated-communication.jscursor-automated-extension/background.js',
     ],
     for (const file of cursorFiles) {
       const exists = await this.checkFileExists(file),
       this.addTestResult(
-        `Cursor File: ${file}`;
-        exists;
-        exists ? 'File exists' : 'File missing';
+        `Cursor File: ${file}`,
+        exists,
+        exists ? 'File exists' : 'File missing',
         { file })}
 ,
     try {
       const cursorSystem = require('./cursor-automated-communication.js'),
       this.addTestResult(
-        'Cursor System Import';
-        true;
+        'Cursor System Import',
+        true,
         'Cursor system imported successfully')} catch (error) {
       this.addTestResult(
-        'Cursor System Import';
-        false;
+        'Cursor System Import',
+        false,
         `Import failed: ${error.message}`)}
   }
 ,
@@ -249,12 +240,12 @@ class ComprehensiveAutomationTester {
       .forEach((r) => {
         logger.info(`  - ${r.testName}: ${r.message}`)}),
     const report ={
-      timestamp: new Date().toISOString();
-      duration;
-      summary: { total, passed, failed, successRate: (passed / total) * 10o0 };
-      results: this.testResults};
+      timestamp: new Date().toISOString(),
+      duration,
+      summary: { total, passed, failed, successRate: (passed / total) * 10o0 },
+      results: this.testResults},
     fs.writeFile('test-report.json', JSON.stringify(report, null, 2)),
-      .then(() => this.log('Detailed report saved to test-report.json', 'info')),
+      .then(() => this.log('Detailed report saved to test-report.jsoninfo')),
       .catch((err) =>,
         this.log(`Failed to save report: ${err.message}`, 'error'))}
 }

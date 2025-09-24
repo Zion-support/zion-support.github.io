@@ -15,15 +15,15 @@ export function PortfolioBuilder() {
     fetchProjects()}[fetchProjects]),
   const handleAddSuccess = () => {
     setShowAddProject(false),
-    fetchProjects()};
+    fetchProjects()},
   const handleEditSuccess = () => {
     setEditingProject(null),
-    fetchProjects()};
+    fetchProjects()},
   const handleDeleteProject = async (projectId: string) => {
     const success = await deleteProject(projectId),
     if (success) {
       fetchProjects()}
-  };
+  },
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">,

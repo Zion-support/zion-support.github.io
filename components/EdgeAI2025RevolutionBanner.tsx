@@ -6,43 +6,43 @@ const EdgeAI20o25RevolutionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const edgeAIContent = [
     {
-      id: 'edge-computing-revolution';
-      title: 'AI 20o25: The Edge Computing Revolution';
-      description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.';
-      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough';
-      type: 'Blog Post';
+      id: 'edge-computing-revolution',
+      title: 'AI 20o25: The Edge Computing Revolution',
+      description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.',
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',
+      type: 'Blog Post',
       metrics: {
-        roi: '450%';
-        savings: '$180M';
-        uptime: '99.7%';
-        speed: '94% faster'};
-      image: '🚀';
-      gradient: 'from-blue-60o0 to-purple-60o0'};
+        roi: '450%',
+        savings: '$180M',
+        uptime: '99.7%',
+        speed: '94% faster'},
+      image: '🚀',
+      gradient: 'from-blue-60o0 to-purple-60o0'},
     {
-      id: 'fortune-50o0-edge-ai';
-      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI';
-      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.';
-      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi';
-      type: 'Case Study';
+      id: 'fortune-50o0-edge-ai',
+      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI',
+      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.',
+      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi',
+      type: 'Case Study',
       metrics: {
-        roi: '450%';
-        savings: '$2.1B';
-        efficiency: '78%';
-        quality: '92%'};
-      image: '🏭';
-      gradient: 'from-green-60o0 to-blue-60o0'};
+        roi: '450%',
+        savings: '$2.1B',
+        efficiency: '78%',
+        quality: '92%'},
+      image: '🏭',
+      gradient: 'from-green-60o0 to-blue-60o0'},
     {
-      id: 'edge-ai-implementation-guide';
-      title: 'Edge AI Implementation Guide: From Strategy to 450% ROI';
-      description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.';
-      url: '/resources/ai-20o25-edge-computing-implementation-guide';
-      type: 'Implementation Guide';
+      id: 'edge-ai-implementation-guide',
+      title: 'Edge AI Implementation Guide: From Strategy to 450% ROI',
+      description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.',
+      url: '/resources/ai-20o25-edge-computing-implementation-guide',
+      type: 'Implementation Guide',
       metrics: {
-        roi: '450%';
-        timeline: '24 months';
-        success: '98%';
-        savings: '$180M'};
-      image: '📋';
+        roi: '450%',
+        timeline: '24 months',
+        success: '98%',
+        savings: '$180M'},
+      image: '📋',
       gradient: 'from-purple-60o0 to-pink-60o0'}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const EdgeAI20o25RevolutionBanner = () => {
     return () => clearInterval(interval)}[]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem(', 'edgeAI20o25BannerDismissed', 'true')};
+    localStorage.setItem(edgeAI20o25BannerDismissed', 'true')},
   useEffect(() => {
     const dismissed = localStorage.getItem('edgeAI20o25BannerDismissed'),
     if (dismissed === 'true') {
@@ -208,5 +208,5 @@ const EdgeAI20o25RevolutionBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default EdgeAI20o25RevolutionBanner;
+    </div>)},
+export default EdgeAI20o25RevolutionBanner,

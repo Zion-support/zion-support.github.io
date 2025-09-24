@@ -9,19 +9,19 @@ import {createTestNotification, createOnboardingNotification, createSystemNotifi
 import {NotificationCenter} from "@/components/NotificationCenter",
 import {useToast} from "@/hooks/use-toast",
 import {Link} from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CommunityDiscussion } from "@/components/CommunityDiscussion";
-import { Badge } from "@/components/ui/badge";
-import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react";
-import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications";
-import { NotificationCenter } from "@/components/NotificationCenter";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CommunityDiscussion } from "@/components/CommunityDiscussion",
+import { Badge } from "@/components/ui/badge",
+import { UserCheck, Bell, MessageSquare, LogOut, Send, Settings } from "lucide-react",
+import { createTestNotification, createOnboardingNotification, createSystemNotification } from "@/utils/notifications",
+import { NotificationCenter } from "@/components/NotificationCenter",
 import { useToast } from "@/hooks/use-toast",
 import { Link } from "react-router-dom",
-import { useToast } from "@/hooks/use-toast";
-import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast",
+import { Link } from "react-router-dom",
 import { use_auth } from '@/hooks / use_auth',
 import { Button } from '@/components / ui / button',
 import { Header } from '@/components / Header',
@@ -41,21 +41,21 @@ export default function Dashboard() {
   const { toast } = useToast(),
   if (!user) return null,
 export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
+  if (!user) return null,
   const handleTestNotification = async () => {
     const result = await createTestNotification(user && user.id),
     if (result && result.success) {
       toast({
-        title: "Test notification created";
+        title: "Test notification created",
         description: "Check your notification center"})} else {
       toast({
-        title: "Error creating test notification";
-        description: "Something went wrong";
+        title: "Error creating test notification",
+        description: "Something went wrong",
         variant: "destructive"})}
 }
-  };
+  },
   return (
     <>,
       <Header />,
@@ -131,9 +131,9 @@ export default function Dashboard() {
                           userId: user.id,
                           missingMilestone: 'profile_completed',
                           userRole: user.userType === 'employer' |user.userType === 'buyer' ? 'client' : 'talent'}),
-                          userId: user.id;
-                          missingMilestone: 'profile_completed';
-                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'});
+                          userId: user.id,
+                          missingMilestone: 'profile_completed',
+                          userRole: user.userType === 'employer' || user.userType === 'buyer' ? 'client' : 'talent'}),
                         toast({
                           title: "Onboarding notification sent",
                           description: "Check your notification center"})}}
@@ -248,20 +248,20 @@ export default function Dashboard() {
       <Footer />,
     </>)}
 export default function Dashboard() {
-  const { user, logout } = useAuth();
-  const { toast } = useToast();
-  if (!user) return null;
+  const { user, logout } = useAuth(),
+  const { toast } = useToast(),
+  if (!user) return null,
   const handleTestNotification = async () => {
-    const result = await createTestNotification(user.id);
+    const result = await createTestNotification(user.id),
     if (result.success) {
       toast({
-        title: "Test notification created";
+        title: "Test notification created",
         description: "Check your notification center"})} else {
       toast({
-        title: "Error creating test notification";
-        description: "Something went wrong";
+        title: "Error creating test notification",
+        description: "Something went wrong",
         variant: "destructive"})}
-  };
+  },
   return (
     <>,
       <Header />,
@@ -330,11 +330,11 @@ export default function Dashboard() {
                       variant="outline",
                       onClick={async () => {
                         await createOnboardingNotification({
-                          userId: user && user.id;
-                          missingMilestone: 'profile_completed';
+                          userId: user && user.id,
+                          missingMilestone: 'profile_completed',
                           userRole: user && user.userType === 'employer' || user && user.userType === 'buyer' ? 'client' : 'talent'}),
                         toast({
-                          title: "Onboarding notification sent";
+                          title: "Onboarding notification sent",
                           description: "Check your notification center"})}}
                     >,
                       <Settings size={16} className="text-zion-purple" />,
@@ -345,13 +345,13 @@ export default function Dashboard() {
                       variant="outline",
                       onClick={async () => {
                         await createSystemNotification({
-                          userId: user && user.id;
-                          title: "New Feature Available!";
-                          message: "We've added a new notification center to help you stay updated with important information.";
-                          actionUrl: "/notifications";
+                          userId: user && user.id,
+                          title: "New Feature Available!",
+                          message: "We've added a new notification center to help you stay updated with important information.",
+                          actionUrl: "/notifications",
                           actionText: "Explore Now"}),
                         toast({
-                          title: "System notification sent";
+                          title: "System notification sent",
                           description: "Check your notification center"})}}
                     >,
                       <Bell size={16} className="text-yellow-500" />,
@@ -450,11 +450,11 @@ if (return null) {
 if ( {) {
   $2}
       toast ({
-        title: "Test notification created";
+        title: "Test notification created",
         description: "Check your notification center"})} else {
       toast ({
-        title: "Error creating test notification";
-        description: "Something went wrong";
+        title: "Error creating test notification",
+        description: "Something went wrong",
         variant: "destructive"})}
   }
 ,
@@ -526,11 +526,11 @@ if ( {) {
                       variant="outline",
                       on_click={async () => {
                         await createOnboardingNotification ({
-                          user_id: user.id;
-                          missing_milestone: 'profile_completed';
+                          user_id: user.id,
+                          missing_milestone: 'profile_completed',
                           user_role: user.user_type === 'employer' || user.user_type === 'buyer' ? 'client' : 'talent'}),
                         toast ({
-                          title: "Onboarding notification sent";
+                          title: "Onboarding notification sent",
                           description: "Check your notification center"})}}
                     >,
                       <Settings size={16} className="text - zion - purple" />,
@@ -541,13 +541,13 @@ if ( {) {
                       variant="outline",
                       on_click={async () => {
                         await createSystemNotification ({
-                          user_id: user.id;
-                          title: "New Feature Available!";
-                          message: "We've added a new notification center to help you stay updated with important information.";
-                          action_url: "/notifications";
+                          user_id: user.id,
+                          title: "New Feature Available!",
+                          message: "We've added a new notification center to help you stay updated with important information.",
+                          action_url: "/notifications",
                           action_text: "Explore Now"}),
                         toast ({
-                          title: "System notification sent";
+                          title: "System notification sent",
                           description: "Check your notification center"})}}
                     >,
                       <Bell size={16} className="text - yellow - 500" />,

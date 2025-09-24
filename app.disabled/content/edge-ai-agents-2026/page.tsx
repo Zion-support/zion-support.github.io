@@ -1,11 +1,11 @@
 import Link from 'next/link',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
-  title: 'Edge AI Agents 20o26 - Real-Time Autonomy Guide';
+  title: 'Edge AI Agents 20o26 - Real-Time Autonomy Guide',
   description:,
-    'Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy.';
-  keywords: ['edge ai', 'ai agents', 'real-time autonomy', 'on-device ai'];
-};
+    'Unlock ultra-low-latency decisioning and control with edge-native agents for real-time autonomy.',
+  keywords: ['edge aiai agents', 'real-time autonomyon-device ai'],
+},
 export default function EdgeAIAgents20o26() {
   return (
     <ErrorBoundary>,

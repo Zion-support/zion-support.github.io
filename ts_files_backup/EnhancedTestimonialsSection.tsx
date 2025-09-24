@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 StarQuoteUsersAwardTrendingUpCheckCircle,
 interface Testimonial {
   id: string,
@@ -13,65 +13,65 @@ interface Testimonial {
 const EnhancedTestimonialsSection: React.FC = () => {
   const testimonials: Testimonial[] = [
     {
-      id: '1';
-      name: 'Dr. Sarah Chen';
-      title: 'CTO';
-      company: 'Quantum Dynamics Inc.';
-      content: 'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.';
-      rating: 5;
-      avatar: 'SC';
-      category: 'AI & Security'};
+      id: '1',
+      name: 'Dr. Sarah Chen',
+      title: 'CTO',
+      company: 'Quantum Dynamics Inc.',
+      content: 'Zion Tech Group transformed our AI infrastructure completely. Their quantum cybersecurity solution prevented multiple sophisticated attacks and their AI business intelligence platform gave us insights we never had before. ROI exceeded 400% within 8 months.',
+      rating: 5,
+      avatar: 'SC',
+      category: 'AI & Security'},
     {
-      id: '2';
-      name: 'Marcus Rodriguez';
-      title: 'VP of Engineering';
-      company: 'SpaceTech Ventures';
-      content: 'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.';
-      rating: 5;
-      avatar: 'MR';
-      category: 'Space Technology'};
+      id: '2',
+      name: 'Marcus Rodriguez',
+      title: 'VP of Engineering',
+      company: 'SpaceTech Ventures',
+      content: 'Working with Zion Tech Group on our space technology platform was game-changing. Their edge computing orchestration and AI-powered mission planning reduced our satellite deployment time by 60% and increased mission success rate to 98%.',
+      rating: 5,
+      avatar: 'MR',
+      category: 'Space Technology'},
     {
-      id: '3';
-      name: 'Dr. Emily Watson';
-      title: 'Research Director';
-      company: 'NeuralLink Research';
-      content: 'Zion Tech Group\'s neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn\'t considered. The team\'s expertise is unmatched.';
-      rating: 5;
-      avatar: 'EW';
-      category: 'Emerging Tech'};
+      id: '3',
+      name: 'Dr. Emily Watson',
+      title: 'Research Director',
+      company: 'NeuralLink Research',
+      content: 'Zion Tech Group\'s neural interface development tools are revolutionary. Their AI consciousness simulation platform accelerated our research by 3x and opened new possibilities we hadn\'t considered. The team\'s expertise is unmatched.',
+      rating: 5,
+      avatar: 'EW',
+      category: 'Emerging Tech'},
     {
-      id: '4';
-      name: 'James Thompson';
-      title: 'CEO';
-      company: 'EdgeFlow Systems';
-      content: 'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.';
-      rating: 5;
-      avatar: 'JT';
-      category: 'Infrastructure'};
+      id: '4',
+      name: 'James Thompson',
+      title: 'CEO',
+      company: 'EdgeFlow Systems',
+      content: 'The edge computing orchestration solution from Zion Tech Group transformed our IoT infrastructure. We saw 50% latency reduction and 40% cost savings while improving reliability. Their support team is incredibly responsive.',
+      rating: 5,
+      avatar: 'JT',
+      category: 'Infrastructure'},
     {
-      id: '5';
-      name: 'Dr. Lisa Park';
-      title: 'Chief Innovation Officer';
-      company: 'FutureTech Labs';
-      content: 'Zion Tech Group\'s quantum AI neural networks are cutting-edge. We\'ve achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.';
-      rating: 5;
-      avatar: 'LP';
-      category: 'Quantum AI'};
+      id: '5',
+      name: 'Dr. Lisa Park',
+      title: 'Chief Innovation Officer',
+      company: 'FutureTech Labs',
+      content: 'Zion Tech Group\'s quantum AI neural networks are cutting-edge. We\'ve achieved breakthroughs in consciousness simulation that seemed impossible. Their technology is truly ahead of its time.',
+      rating: 5,
+      avatar: 'LP',
+      category: 'Quantum AI'},
     {
-      id: '6';
-      name: 'Robert Kim';
-      title: 'Head of Digital Transformation';
-      company: 'Global Innovations Corp';
-      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departmentsleading to 35% faster market response and 28% cost optimization.';
-      rating: 5;
-      avatar: 'RK';
+      id: '6',
+      name: 'Robert Kim',
+      title: 'Head of Digital Transformation',
+      company: 'Global Innovations Corp',
+      content: 'Implementing Zion Tech Group\'s AI business intelligence suite revolutionized our decision-making process. We now have real-time insights across all departmentsleading to 35% faster market response and 28% cost optimization.',
+      rating: 5,
+      avatar: 'RK',
       category: 'AI & Analytics'}
   ],
   const stats = [
-    { number: '500+'label: 'Projects 'Delivered', 'icon: CheckCircle };
-    { number: '50+'label: 'Enterprise 'Clients', 'icon: Users };
-    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Award };
-    { number: '4.9/5'label: 'Average 'Rating', 'icon: Star }
+    { number: '500+'label: 'Projects 'Deliveredicon: CheckCircle },
+    { number: '50+'label: 'Enterprise 'Clientsicon: Users },
+    { number: '99.9%'label: 'Client 'Satisfactionicon: Award },
+    { number: '4.9/5'label: 'Average 'Ratingicon: Star }
   ],
   const renderStars = (rating: number) => {
     return Array.from({ length: 5 }(_i) => (
@@ -79,7 +79,7 @@ const EnhancedTestimonialsSection: React.FC = () => {
         key={i}
         className={`w-4 h-4 ${
           i < rating ? 'text-yellow-400 fill-current' : 'text-gray-400'}`}
-      />))};
+      />))},
   return (
     <section className="py-24 px-6 relative overflow-hidden">,
       {/* Background */}
@@ -200,6 +200,6 @@ const EnhancedTestimonialsSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedTestimonialsSection;
+    </section>)},
+export default EnhancedTestimonialsSection,
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

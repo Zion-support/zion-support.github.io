@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 export const metadata ={
-  title: 'Micro SaaS Development | Zion Tech Group';
-  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.';
-  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'};
+  title: 'Micro SaaS Development | Zion Tech Group',
+  description: 'Complete micro SaaS development services including AI-powered tools, productivity apps, marketing automation, and business intelligence solutions.',
+  keywords: 'micro SaaS development, SaaS products, AI tools, productivity apps, marketing automation, business intelligence'},
 export default function MicroSaasPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">,
@@ -10,7 +10,7 @@ export default function MicroSaasPage() {
         <div className="text-center mb-16">,
           <h1 className="text-4xl font-bold text-gray-90o0 mb-6">Micro SaaS Development</h1>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            Complete micro SaaS solutions including productivity tools, automation platforms;
+            Complete micro SaaS solutions including productivity tools, automation platforms,
             analytics dashboards, and specialized business applications. From MVP to scale.,
           </p>,
         </div>,
@@ -21,11 +21,11 @@ export default function MicroSaasPage() {
             icon="⚡",
             description="Tools that enhance team productivity and workflow efficiency",
             services={[
-              "Task management systems";
-              "Time tracking applications";
-              "Project collaboration tools";
-              "Note-taking platforms";
-              "Calendar scheduling apps";
+              "Task management systems",
+              "Time tracking applications",
+              "Project collaboration tools",
+              "Note-taking platforms",
+              "Calendar scheduling apps",
               "Workflow automation tools"]}
            />,
           <MicroSaaSCategory
@@ -33,11 +33,11 @@ export default function MicroSaasPage() {
             icon="📊",
             description="Data-driven insights and reporting solutions",
             services={[
-              "Custom dashboards";
-              "KPI monitoring tools";
-              "Financial reporting apps";
-              "Customer analytics platforms";
-              "Sales tracking systems";
+              "Custom dashboards",
+              "KPI monitoring tools",
+              "Financial reporting apps",
+              "Customer analytics platforms",
+              "Sales tracking systems",
               "Performance metrics tools"]}
            />,
           <MicroSaaSCategory
@@ -45,11 +45,11 @@ export default function MicroSaasPage() {
             icon="🎯",
             description="Marketing tools and automation platforms",
             services={[
-              "Email marketing platforms";
-              "Social media schedulers";
-              "Lead generation tools";
-              "Content management systems";
-              "A/B testing platforms";
+              "Email marketing platforms",
+              "Social media schedulers",
+              "Lead generation tools",
+              "Content management systems",
+              "A/B testing platforms",
               "Campaign analytics tools"]}
            />,
         </div>,
@@ -61,11 +61,11 @@ export default function MicroSaasPage() {
               title="Team Productivity Hub",
               description="All-in-one workspace for remote teams",
               features={[
-                "Task management & kanban boards";
-                "Time tracking & reporting";
-                "Team chat & video calls";
-                "File sharing & collaboration";
-                "Project templates";
+                "Task management & kanban boards",
+                "Time tracking & reporting",
+                "Team chat & video calls",
+                "File sharing & collaboration",
+                "Project templates",
                 "Mobile app"]}
               price="$15k - $35k",
               timeline="8-12 weeks",
@@ -76,11 +76,11 @@ export default function MicroSaasPage() {
               title="E-commerce Analytics Dashboard",
               description="Advanced analytics for online stores",
               features={[
-                "Real-time sales tracking";
-                "Customer behavior analysis";
-                "Inventory management";
-                "Revenue forecasting";
-                "Multi-store support";
+                "Real-time sales tracking",
+                "Customer behavior analysis",
+                "Inventory management",
+                "Revenue forecasting",
+                "Multi-store support",
                 "Custom reports"]}
               price="$12k - $28k",
               timeline="6-10 weeks",
@@ -91,11 +91,11 @@ export default function MicroSaasPage() {
               title="Social Media Scheduler",
               description="Multi-platform social media management",
               features={[
-                "Content calendar";
-                "Auto-posting to all platforms";
-                "Analytics & insights";
-                "Team collaboration";
-                "Content library";
+                "Content calendar",
+                "Auto-posting to all platforms",
+                "Analytics & insights",
+                "Team collaboration",
+                "Content library",
                 "Hashtag optimization"]}
               price="$10k - $25k",
               timeline="6-8 weeks",
@@ -106,11 +106,11 @@ export default function MicroSaasPage() {
               title="Invoice & Payment Tracker",
               description="Streamlined invoicing and payment management",
               features={[
-                "Automated invoicing";
-                "Payment tracking";
-                "Client portal";
-                "Recurring billing";
-                "Tax calculations";
+                "Automated invoicing",
+                "Payment tracking",
+                "Client portal",
+                "Recurring billing",
+                "Tax calculations",
                 "Financial reporting"]}
               price="$8k - $20k",
               timeline="4-8 weeks",
@@ -121,11 +121,11 @@ export default function MicroSaasPage() {
               title="Customer Support Ticketing",
               description="Help desk and customer service platform",
               features={[
-                "Ticket management system";
-                "Knowledge base";
-                "Live chat integration";
-                "Automated responses";
-                "Performance analytics";
+                "Ticket management system",
+                "Knowledge base",
+                "Live chat integration",
+                "Automated responses",
+                "Performance analytics",
                 "Multi-channel support"]}
               price="$18k - $40k",
               timeline="8-14 weeks",
@@ -136,11 +136,11 @@ export default function MicroSaasPage() {
               title="Lead Generation Platform",
               description="Automated lead capture and nurturing",
               features={[
-                "Lead capture forms";
-                "Email sequences";
-                "Lead scoring";
-                "CRM integration";
-                "Analytics dashboard";
+                "Lead capture forms",
+                "Email sequences",
+                "Lead scoring",
+                "CRM integration",
+                "Analytics dashboard",
                 "A/B testing"]}
               price="$14k - $32k",
               timeline="6-12 weeks",
@@ -151,11 +151,11 @@ export default function MicroSaasPage() {
               title="Employee Onboarding System",
               description="Streamlined new hire experience",
               features={[
-                "Digital forms & documents";
-                "Task checklists";
-                "Training modules";
-                "Progress tracking";
-                "Manager dashboard";
+                "Digital forms & documents",
+                "Task checklists",
+                "Training modules",
+                "Progress tracking",
+                "Manager dashboard",
                 "Compliance tracking"]}
               price="$16k - $38k",
               timeline="8-12 weeks",
@@ -166,11 +166,11 @@ export default function MicroSaasPage() {
               title="Inventory Management System",
               description="Smart inventory tracking and optimization",
               features={[
-                "Real-time stock levels";
-                "Automated reordering";
-                "Barcode scanning";
-                "Supplier management";
-                "Cost tracking";
+                "Real-time stock levels",
+                "Automated reordering",
+                "Barcode scanning",
+                "Supplier management",
+                "Cost tracking",
                 "Analytics & forecasting"]}
               price="$20k - $45k",
               timeline="10-16 weeks",
@@ -181,11 +181,11 @@ export default function MicroSaasPage() {
               title="Event Management Platform",
               description="Complete event planning and management solution",
               features={[
-                "Event registration";
-                "Payment processing";
-                "Attendee management";
-                "Event analytics";
-                "Mobile check-in";
+                "Event registration",
+                "Payment processing",
+                "Attendee management",
+                "Event analytics",
+                "Mobile check-in",
                 "Post-event surveys"]}
               price="$22k - $50k",
               timeline="10-18 weeks",
@@ -261,11 +261,11 @@ export default function MicroSaasPage() {
               price="$8k - $20k",
               duration="4-8 weeks",
               features={[
-                "Core functionality";
-                "Basic authentication";
-                "Stripe billing";
-                "Admin dashboard";
-                "Mobile responsive";
+                "Core functionality",
+                "Basic authentication",
+                "Stripe billing",
+                "Admin dashboard",
+                "Mobile responsive",
                 "Basic analytics"]}
               popular={false}
              />,
@@ -274,11 +274,11 @@ export default function MicroSaasPage() {
               price="$25k - $60k",
               duration="8-16 weeks",
               features={[
-                "Full feature set";
-                "Advanced analytics";
-                "API integrations";
-                "Mobile apps";
-                "Advanced billing";
+                "Full feature set",
+                "Advanced analytics",
+                "API integrations",
+                "Mobile apps",
+                "Advanced billing",
                 "Customer support"]}
               popular={true}
              />,
@@ -287,11 +287,11 @@ export default function MicroSaasPage() {
               price="$60k+",
               duration="12+ weeks",
               features={[
-                "Custom architecture";
-                "Advanced security";
-                "Multi-tenant";
-                "White-label options";
-                "SLA guarantees";
+                "Custom architecture",
+                "Advanced security",
+                "Multi-tenant",
+                "White-label options",
+                "SLA guarantees",
                 "Ongoing maintenance"]}
               popular={false}
              />,

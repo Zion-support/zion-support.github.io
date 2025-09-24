@@ -2,7 +2,7 @@ type Props = {
   category: string,
   level: string,
   isFree: string,
-  onChange: (next: { category: string, level: string, isFree: string }) => void};
+  onChange: (next: { category: string, level: string, isFree: string }) => void},
 export default function FilterBar({ categorylevelisFreeonChange }: Props) {
   return (
     <div className='grid grid-cols-1 sm: grid-cols-3 gap-3'>,

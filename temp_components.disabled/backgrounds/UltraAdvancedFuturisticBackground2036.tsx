@@ -7,9 +7,9 @@ interface UltraAdvancedFuturisticBackground20o36Props {
   children?: React.ReactNode}
 ,
 export default function UltraAdvancedFuturisticBackground20o36({
-  intensity = 'medium';
-  theme = 'quantum';
-  interactive = true;
+  intensity = 'medium',
+  theme = 'quantum',
+  interactive = true,
   children}: UltraAdvancedFuturisticBackground20o36Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -28,7 +28,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
         canvas.width = rect.width * (window.devicePixelRatio || 1),
         canvas.height = rect.height * (window.devicePixelRatio || 1),
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)}
-    };
+    },
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Enhanced theme-based color schemes,
@@ -36,36 +36,36 @@ export default function UltraAdvancedFuturisticBackground20o36({
       switch (theme) {
         case 'neon':,
           return {
-            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'];
-            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
-            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'];
-            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']};
+            primary: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80#ff80o00', '#0o080ff#ff4080', '#40ffff'],
+            accent: ['#ffff40#ff40ff', '#80o40ff#40ff80', '#ff80o40'],
+            glow: ['#ff1493#0o0bfff', '#ffd70o0#ff450o0', '#940o0d3']},
         case 'holographic':,
           return {
-            primary: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
-            secondary: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff9f43', '#10ac84'];
-            accent: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff6b6b', '#4ecdc4'];
-            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']};
+            primary: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57'],
+            secondary: ['#ff9ff3#54a0ff', '#5f27cd#ff9f43', '#10ac84'],
+            accent: ['#ff9ff3#54a0ff', '#5f27cd#ff6b6b', '#4ecdc4'],
+            glow: ['#ff1493#0o0bfff', '#ffd70o0#ff450o0', '#940o0d3']},
         case 'cyberpunk':,
           return {
-            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'];
-            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
-            accent: ['#ffff40', '#ff40ff', '#80o40ff', '#40ff80', '#ff80o40'];
-            glow: ['#ff1493', '#0o0bfff', '#ffd70o0', '#ff450o0', '#940o0d3']};
+            primary: ['#ff0o055#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80#ff80o00', '#0o080ff#ff4080', '#40ffff'],
+            accent: ['#ffff40#ff40ff', '#80o40ff#40ff80', '#ff80o40'],
+            glow: ['#ff1493#0o0bfff', '#ffd70o0#ff450o0', '#940o0d3']},
         case 'space':,
           return {
-            primary: ['#1e3a8a', '#7c3aed', '#0o59669', '#dc2626', '#ea580c'];
-            secondary: ['#3b82f6', '#a855f7', '#10b981', '#ef4444', '#f97316'];
-            accent: ['#60a5fa', '#c084fc', '#34d399', '#f87171', '#fb923c'];
-            glow: ['#93c5fd', '#d8b4fe', '#6ee7b7', '#fca5a5', '#fdba74']};
+            primary: ['#1e3a8a#7c3aed', '#0o59669#dc2626', '#ea580c'],
+            secondary: ['#3b82f6#a855f7', '#10b981#ef4444', '#f97316'],
+            accent: ['#60a5fa#c084fc', '#34d399#f87171', '#fb923c'],
+            glow: ['#93c5fd#d8b4fe', '#6ee7b7#fca5a5', '#fdba74']},
         default: // quantum,
           return {
-            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'];
-            secondary: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'];
-            accent: ['#ec4899', '#10b981', '#f59e0b', '#ef4444', '#8b5cf6'];
-            glow: ['#a78bfa', '#22d3ee', '#f472b6', '#34d399', '#fbbf24']};
+            primary: ['#8b5cf6#0o6b6d4', '#ec4899#10b981', '#f59e0b'],
+            secondary: ['#f59e0b#ef4444', '#8b5cf6#0o6b6d4', '#ec4899'],
+            accent: ['#ec4899#10b981', '#f59e0b#ef4444', '#8b5cf6'],
+            glow: ['#a78bfa#22d3ee', '#f472b6#34d399', '#fbbf24']},
       }
-    };
+    },
     const colors = getThemeColors(),
     // Enhanced particle system with multiple types,
     let particles: Array<{
@@ -98,22 +98,22 @@ export default function UltraAdvancedFuturisticBackground20o36({
                            Math.random() < 0.6 ? 'energy' :,
                            Math.random() < 0.7 ? 'data' : 'particle',
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2 * intensityMultiplier;
-          vy: (Math.random() - 0.5) * 2 * intensityMultiplier;
-          size: Math.random() * 4 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
-          color: colors.primary[Math.floor(Math.random() * colors.primary.length)];
-          type: particleType;
-          life: Math.random() * 10o0;
-          maxLife: 10o0 + Math.random() * 20o0;
-          rotation: Math.random() * Math.PI * 2;
-          rotationSpeed: (Math.random() - 0.5) * 0.1;
-          pulse: Math.random() * Math.PI * 2;
-          pulseSpeed: Math.random() * 0.0o5 + 0.0o2;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          size: Math.random() * 4 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
+          type: particleType,
+          life: Math.random() * 10o0,
+          maxLife: 10o0 + Math.random() * 20o0,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.1,
+          pulse: Math.random() * Math.PI * 2,
+          pulseSpeed: Math.random() * 0.0o5 + 0.0o2,
           connectionTargets: []})}
-    };
+    },
     // Initialize connections between particles,
     const initConnections = () => {
       particles.forEach((particle, i) => {
@@ -123,7 +123,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
           if (targetIndex !== i && !particle.connectionTargets.includes(targetIndex)) {
             particle.connectionTargets.push(targetIndex)}
         }
-      })};
+      })},
     // Update particles,
     const updateParticles = () => {
       particles.forEach((particle) => {
@@ -153,7 +153,7 @@ export default function UltraAdvancedFuturisticBackground20o36({
             particle.vx += (dx / distance) * force * 0.1,
             particle.vy += (dy / distance) * force * 0.1}
         }
-      })};
+      })},
     // Draw particles,
     const drawParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -239,13 +239,13 @@ export default function UltraAdvancedFuturisticBackground20o36({
             ctx.arc(0, 0, particle.size, 0, Math.PI * 2),
             ctx.fill()}
 ,
-        ctx.restore()})};
+        ctx.restore()})},
     // Animation loop,
     let animationId: number,
     const animate = () => {
       updateParticles(),
       drawParticles(),
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     initParticles(),
     initConnections(),
     animate(),
@@ -254,8 +254,8 @@ export default function UltraAdvancedFuturisticBackground20o36({
       const handleMouseMove = (e: MouseEvent) => {
         const rect = canvas.getBoundingClientRect(),
         setMousePosition({
-          x: e.clientX - rect.left;
-          y: e.clientY - rect.top})};
+          x: e.clientX - rect.left,
+          y: e.clientY - rect.top})},
       const handleMouseEnter = () => setIsHovered(true),
       const handleMouseLeave = () => setIsHovered(false),
       canvas.addEventListener('mousemove', handleMouseMove),
@@ -266,12 +266,12 @@ export default function UltraAdvancedFuturisticBackground20o36({
         window.removeEventListener('resize', resizeCanvas),
         canvas.removeEventListener('mousemove', handleMouseMove),
         canvas.removeEventListener('mouseenter', handleMouseEnter),
-        canvas.removeEventListener('mouseleave', handleMouseLeave)};
+        canvas.removeEventListener('mouseleave', handleMouseLeave)},
     }
 ,
     return () => {
       cancelAnimationFrame(animationId),
-      window.removeEventListener('resize', resizeCanvas)};
+      window.removeEventListener('resize', resizeCanvas)},
   }, [intensity, theme, interactive, mousePosition.x, mousePosition.y, isHovered]),
   return (
     <div ref={containerRef} className="fixed inset-0 overflow-hidden pointer-events-none">,
@@ -294,21 +294,21 @@ export default function UltraAdvancedFuturisticBackground20o36({
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-full blur-xl",
           animate={{
-            scale: [1, 1.2, 1];
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
+            duration: 4,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-24 h-24 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-xl",
           animate={{
-            scale: [1.2, 1, 1.2];
+            scale: [1.2, 1, 1.2],
             opacity: [0.6, 0.3, 0.6]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,

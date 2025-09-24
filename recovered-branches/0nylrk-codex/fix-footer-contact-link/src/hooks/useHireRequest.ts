@@ -7,16 +7,16 @@ export interface HireRequestData {
     id: string,
     full_name: string,
     professional_title: string,
-    email?: string};
+    email?: string},
   requester: {
     name: string,
     email: string,
-    id?: string};
+    id?: string},
   project: {
     overview: string,
     timeline: string,
     budgetMin: number,
-    budgetMax: number};
+    budgetMax: number},
 }
 ,
 export function useHireRequest() {
@@ -28,18 +28,18 @@ export function useHireRequest() {
     try {
       // Call the edge function to process the hire request,
       const { data: response, error } = await supabase.functions.invoke(
-        'process-hire-request';
+        'process-hire-request',
         {
-          body: requestData;
+          body: requestData
         }
       ),
       if (error) throw error,
       // Show success message,
       toast({
-        title: 'Request Submitted';
-        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`;
+        title: 'Request Submitted',
+        description: `Your request to hire ${requestData.talent.full_name} has been sent successfully.`,
       }),
-      return { success: true, requestId: response?.request_id };
+      return { success: true, requestId: response?.request_id },
     } catch (error) {
       console.error('Error submitting hire request:', error),
       const errorMessage =,
@@ -48,18 +48,18 @@ export function useHireRequest() {
           : 'There was a problem submitting your request. Please try again.',
       setError(errorMessage),
       toast({
-        title: 'Error';
-        description: errorMessage;
-        variant: 'destructive';
+        title: 'Error',
+        description: errorMessage,
+        variant: 'destructive'
       }),
-      return { success: false, error: errorMessage };
+      return { success: false, error: errorMessage },
     } finally {
       setIsSubmitting(false)}
-  };
+  },
   return {
-    submitHireRequest;
-    isSubmitting;
-    error;
-  };
+    submitHireRequest,
+    isSubmitting,
+    error,
+  },
 }
 ,

@@ -34,11 +34,11 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
           <ul>,
             <li>Business fit: top-3 use cases, value hypotheses, and KPIs</li>,
             <li>,
-              Model fit: reasoning, multilingual, tools, context length;
+              Model fit: reasoning, multilingual, tools, context length,
               cost-to-serve,
             </li>,
             <li>,
-              Operational fit: latency SLOs, availability, observability;
+              Operational fit: latency SLOs, availability, observability,
               incident playbooks,
             </li>,
             <li>,
@@ -48,7 +48,7 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
           </ul>,
           <h2>Architecture Blueprint</h2>,
           <p>,
-            Adopt a model routing layer, retrieval layer, function/tool layer;
+            Adopt a model routing layer, retrieval layer, function/tool layer,
             and guardrails. Standardize on evaluation harnesses and golden tasks,
             to compare vendors and versions objectively.,
           </p>,
@@ -60,7 +60,7 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
           </p>,
           <h2>Success Metrics</h2>,
           <p>,
-            Track task success rate, cost per successful task, resolution time;
+            Track task success rate, cost per successful task, resolution time,
             escalation rate, and net business impact. Tie model promotion to,
             these metrics, not leaderboard scores.,
           </p>,
@@ -92,5 +92,5 @@ const EnterpriseFoundationModelsPracticalGuide20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default EnterpriseFoundationModelsPracticalGuide20o25;
+    </div>)},
+export default EnterpriseFoundationModelsPracticalGuide20o25,

@@ -9,11 +9,11 @@ export default function IntelligentContentAutomationPlatform() {
 			implementationWeeks="1 week",
 			roiNote="Cut production time by 50–70% while improving consistency",
 			features={[
-				"Brief generation and editorial workflows";
-				"Brand voice profiles and approvals";
-				"Entity coverage and SEO suggestions";
-				"Multi-channel exports (blog, ads, social)";
-				"Plagiarism, toxicity, and bias checks";
+				"Brief generation and editorial workflows",
+				"Brand voice profiles and approvals",
+				"Entity coverage and SEO suggestions",
+				"Multi-channel exports (blog, ads, social)",
+				"Plagiarism, toxicity, and bias checks",
 				"CMS integrations and scheduling]}
 			]}
 			industries={["Marketing", "Agencies", "E-commerce", "Media"]}

@@ -2,11 +2,9 @@ import SEO from '../components/SEO',
 CheckExternalLink,
 export default function SecretsRotationAutomationPage() {
   const features = [
-    'Automated key and secret rotation';
-    'JIT credentials with expirations';
-    'Policy approvals and audit trails';
-    'CI/CD integration (GitHub ActionsCircleCI)';
-    'Cloud KMS and Vault support';
+    'Automated key and secret rotationJIT credentials with expirations',
+    'Policy approvals and audit trailsCI/CD integration (GitHub ActionsCircleCI)',
+    'Cloud KMS and Vault support',
   ],
   return (
     <>,

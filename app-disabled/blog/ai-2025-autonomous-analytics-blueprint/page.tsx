@@ -18,7 +18,7 @@ const AutonomousAnalyticsBlueprint20o25 = () => {
             AI 20o25: Autonomous Analytics Blueprint,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            How to architect self-directed analytics that monitor signals;
+            How to architect self-directed analytics that monitor signals,
             generate hypotheses, and trigger actions—without manual dashboards.,
           </p>,
         </header>,
@@ -69,5 +69,5 @@ const AutonomousAnalyticsBlueprint20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousAnalyticsBlueprint20o25;
+    </div>)},
+export default AutonomousAnalyticsBlueprint20o25,

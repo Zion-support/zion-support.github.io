@@ -2,13 +2,13 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  Clock;
-  Shield;
-  Zap;
-  Users;
-  Award;
+  ArrowRight,
+  TrendingUp,
+  Clock,
+  Shield,
+  Zap,
+  Users,
+  Award,
 } from 'lucide-react',
 interface ContentItem {
   id: string,
@@ -22,7 +22,7 @@ interface ContentItem {
     uptime?: string,
     efficiency?: string,
     accuracy?: string,
-    projects?: string};
+    projects?: string},
   readingTime: string,
   featured: boolean,
   tags: string[]}
@@ -32,98 +32,92 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
   const [hoveredItem, setHoveredItem] = useState<string | null>(null),
   const contentItems: ContentItem[] = [
     {
-      id: 'autonomous-enterprise-revolution';
+      id: 'autonomous-enterprise-revolution',
       title:,
-        'AI 20o25: The Autonomous Enterprise Revolution - Ultimate Breakthrough Guide';
+        'AI 20o25: The Autonomous Enterprise Revolution - Ultimate Breakthrough Guide',
       description:,
-        'Discover how autonomous AI systems are revolutionizing enterprise operations with 50o0% ROI, 99.9% uptime, and $2.8B in annual savings.';
-      type: 'blog';
-      url: '/blog/ai-20o25-autonomous-enterprise-revolution-ultimate-breakthrough';
+        'Discover how autonomous AI systems are revolutionizing enterprise operations with 50o0% ROI, 99.9% uptime, and $2.8B in annual savings.',
+      type: 'blog',
+      url: '/blog/ai-20o25-autonomous-enterprise-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        uptime: '99.9%';
-        efficiency: '78%';
-        accuracy: '99.7%';
-      };
-      readingTime: '18 min read';
-      featured: true;
+        roi: '50o0%',
+        savings: '$2.8B',
+        uptime: '99.9%',
+        efficiency: '78%',
+        accuracy: '99.7%'
+      },
+      readingTime: '18 min read',
+      featured: true,
       tags: [
-        'AI';
-        'Autonomous Systems';
-        'Enterprise';
-        'ROI';
-        'Digital Transformation';
-      ];
-    };
+        'AIAutonomous Systems',
+        'EnterpriseROI',
+        'Digital Transformation',
+      ]
+    },
     {
-      id: 'fortune-50o0-autonomous-transformation';
+      id: 'fortune-50o0-autonomous-transformation',
       title:,
-        'Fortune 50o0 Autonomous Transformation: $2.8B Annual Savings with 50o0% ROI Success Story';
+        'Fortune 50o0 Autonomous Transformation: $2.8B Annual Savings with 50o0% ROI Success Story',
       description:,
-        'How a Fortune 50o0 manufacturing company achieved 50o0% ROI and $2.8B in annual savings through comprehensive autonomous AI transformation.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-transformation-50o0-percent-roi-success';
+        'How a Fortune 50o0 manufacturing company achieved 50o0% ROI and $2.8B in annual savings through comprehensive autonomous AI transformation.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-transformation-50o0-percent-roi-success',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        uptime: '99.9%';
-        efficiency: '78%';
-        projects: '20o0+ Facilities';
-      };
-      readingTime: '12 min read';
-      featured: true;
+        roi: '50o0%',
+        savings: '$2.8B',
+        uptime: '99.9%',
+        efficiency: '78%',
+        projects: '20o0+ Facilities'
+      },
+      readingTime: '12 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Autonomous AI';
-        'ROI';
-        'Manufacturing';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'Autonomous AIROI',
+        'Manufacturing',
+      ]
+    },
     {
-      id: 'autonomous-enterprise-implementation-guide';
+      id: 'autonomous-enterprise-implementation-guide',
       title:,
-        'AI 20o25 Autonomous Enterprise Implementation Master Guide: Complete Roadmap to 50o0% ROI';
+        'AI 20o25 Autonomous Enterprise Implementation Master Guide: Complete Roadmap to 50o0% ROI',
       description:,
-        'Complete implementation guide for autonomous enterprise transformation. Step-by-step roadmap to achieve 50o0% ROI and $2.8B savings.';
-      type: 'resource';
-      url: '/resources/ai-20o25-autonomous-enterprise-implementation-master-guide';
+        'Complete implementation guide for autonomous enterprise transformation. Step-by-step roadmap to achieve 50o0% ROI and $2.8B savings.',
+      type: 'resource',
+      url: '/resources/ai-20o25-autonomous-enterprise-implementation-master-guide',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        uptime: '99.9%';
-        efficiency: '78%';
-        projects: '50o0+ Success Stories';
-      };
-      readingTime: '25 min read';
-      featured: true;
+        roi: '50o0%',
+        savings: '$2.8B',
+        uptime: '99.9%',
+        efficiency: '78%',
+        projects: '50o0+ Success Stories'
+      },
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Autonomous AI';
-        'Enterprise';
-        'ROI';
-        'Strategy';
-      ];
-    };
+        'Implementation GuideAutonomous AI',
+        'EnterpriseROI',
+        'Strategy',
+      ]
+    },
   ],
   const typeFilters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     selectedType === 'all',
@@ -139,7 +133,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -150,7 +144,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const getMetricIcon = (metric: string) => {
     switch (metric) {
       case 'roi':,
@@ -167,7 +161,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
         return <Users className='w-4 h-4 text-orange-60o0' />,
       default:,
         return <Clock className='w-4 h-4 text-gray-60o0' />}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -254,7 +248,7 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-semibold border ${getTypeColor(item.type)}`}
                     >,
-                      {item.type.replace('-', ' ').toUpperCase()}
+                      {item.type.replace('- ').toUpperCase()}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -351,5 +345,5 @@ const AutonomousEnterpriseContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousEnterpriseContentShowcase20o25;
+    </section>)},
+export default AutonomousEnterpriseContentShowcase20o25,

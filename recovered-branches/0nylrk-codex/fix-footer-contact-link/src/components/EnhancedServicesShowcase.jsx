@@ -6,11 +6,11 @@ const EnhancedServicesShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🌟' };
-    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' };
-    { id: 'it-services', name: 'IT Services', icon: '🖥️' };
-    { id: 'ai-services', name: 'AI Services', icon: '🤖' };
-    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' };
+    { id: 'all', name: 'All Services', icon: '🌟' },
+    { id: 'micro-saas', name: 'Micro SAAS', icon: '💻' },
+    { id: 'it-services', name: 'IT Services', icon: '🖥️' },
+    { id: 'ai-services', name: 'AI Services', icon: '🤖' },
+    { id: 'emerging-tech', name: 'Emerging Tech', icon: '🚀' },
   ],
   const filteredServices = enhancedServices20o25.filter(service => {
     const matchesCategory =,
@@ -21,23 +21,23 @@ const EnhancedServicesShowcase = () => {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch}),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-        delayChildren: 0.2;
-      };
-    };
-  };
+        staggerChildren: 0.1,
+        delayChildren: 0.2
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
-      transition: { duration: 0.5 };
-    };
-  };
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.5 },
+    },
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white'>,
       {/* Hero Section */}
@@ -61,7 +61,7 @@ const EnhancedServicesShowcase = () => {
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >,
-            Discover our extensive portfolio of innovative micro SAAS services;
+            Discover our extensive portfolio of innovative micro SAAS services,
             enterprise IT solutions, cutting-edge AI services, and emerging,
             technology solutions designed to transform your business.,
           </motion.p>,
@@ -144,7 +144,7 @@ const EnhancedServicesShowcase = () => {
                     {service.name}
                   </h3>,
                   <p className='text-sm text-blue-40o0 font-medium'>,
-                    {service.category.replace('-', ' ').toUpperCase()}
+                    {service.category.replace('- ').toUpperCase()}
                   </p>,
                 </div>,
                 {/* Tagline */}
@@ -331,5 +331,5 @@ const EnhancedServicesShowcase = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
-export default EnhancedServicesShowcase;
+    </div>)},
+export default EnhancedServicesShowcase,

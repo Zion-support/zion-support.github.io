@@ -3,7 +3,7 @@ import React{ useStateuseEffectuseCallbackuseRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   ActivityZapClockTrendingUpTrendingDown,
-  AlertTriangleCheckCircleXSettingsRefreshCw;
+  AlertTriangleCheckCircleXSettingsRefreshCw,
   BarChart3GaugeHardDriveWifiCpu} from 'lucide-react',
 interface PerformanceMetrics {
   loadTime: number,
@@ -21,15 +21,15 @@ interface PerformanceMonitorProps {
   refreshInterval?: number}
 ,
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  showUI = false;
-  autoRefresh = false;
+  showUI = false,
+  autoRefresh = false,
   refreshInterval = 30000}) => {
   const [metricsetMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0;
-    firstContentfulPaint: 0;
-    largestContentfulPaint: 0;
-    cumulativeLayoutShift: 0;
-    firstInputDelay: 0;
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
     timeToInteractive: 0}),
   const [isVisiblesetIsVisible] = useState(showUI),
   const [isExpandedsetIsExpanded] = useState(false),
@@ -46,12 +46,12 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
           const lcp = window.window.performance.getEntriesByType('largest-contentful-paint')[0],
           const metrics: PerformanceMetrics = {
-            loadTime: navigation.loadEventEnd - navigation.loadEventStart;
-            firstContentfulPaint: fcp ? fcp.startTime : 0;
-            largestContentfulPaint: lcp ? lcp.startTime : 0;
+            loadTime: navigation.loadEventEnd - navigation.loadEventStart,
+            firstContentfulPaint: fcp ? fcp.startTime : 0,
+            largestContentfulPaint: lcp ? lcp.startTime : 0,
             cumulativeLayoutShift: 0// Would need to be calculated from LayoutShift API,
             firstInputDelay: 0// Would need to be calculated from FirstInput API,
-            timeToInteractive: navigation.domInteractive - navigation.fetchStart};
+            timeToInteractive: navigation.domInteractive - navigation.fetchStart},
           // Add memory usage if available,
           if ('memory' in performance) {
             const memory = (performance as any).memory,
@@ -63,11 +63,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             setTimeout(() => getPerformanceMetrics().then(resolve)100)})}
       } else {
         resolve({
-          loadTime: 0;
-          firstContentfulPaint: 0;
-          largestContentfulPaint: 0;
-          cumulativeLayoutShift: 0;
-          firstInputDelay: 0;
+          loadTime: 0,
+          firstContentfulPaint: 0,
+          largestContentfulPaint: 0,
+          cumulativeLayoutShift: 0,
+          firstInputDelay: 0,
           timeToInteractive: 0})}
     })}[]),
   const refreshMetrics = useCallback(async () => {
@@ -102,22 +102,22 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
   const getScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-400',
     if (score >= 70) return 'text-yellow-400',
-    return 'text-red-400'};
+    return 'text-red-400'},
   const getScoreIcon = (score: number) => {
     if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />,
     if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
-    return <AlertTriangle className="w-5 h-5 text-red-400" />};
+    return <AlertTriangle className="w-5 h-5 text-red-400" />},
   const formatTime = (ms: number): string => {
     if (ms === 0) return 'N/A',
     if (ms < 1000) return `${Math.round(ms)}ms`,
-    return `${(ms / 1000).toFixed(2)}s`};
+    return `${(ms / 1000).toFixed(2)}s`},
   // Get device icon,
   const getDeviceIcon = (deviceType: string) => {
     switch (deviceType) {
       case 'mobile': return Smartphone,
       case 'tablet': return Tablet,
       default: return Laptop}
-  };
+  },
   const getPerformanceScore = () => {
     let score = 0,
     let totalMetrics = 0,
@@ -153,8 +153,8 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
       else if (metrics.cls < 0.4) score += 50,
       else score += 25}
 ,
-    return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0};
-  // 'Don', 't render anything in production,
+    return totalMetrics > 0 ? Math.round(score / totalMetrics) : 0},
+  // 'Dont render anything in production,
   if (process.env.NODE_ENV === 'production') {
     return null}
 ,
@@ -237,7 +237,7 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
               {isExpanded && (
                 <motion.div,
                   initial={{ height: 0opacity: 0 }}
-                  animate={{ height: ''auto', 'opacity: 1 }}
+                  animate={{ height: ''autoopacity: 1 }}
                   exit={{ height: 0opacity: 0 }}
                   transition={{ duration: 0.3 }}
                   className="border-t border-gray-700/50">,
@@ -294,15 +294,15 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
           </div>,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
+    </AnimatePresence>)},
 // Helper functions,
 const getScoreIcon = (score: number) => {
   if (score >= 90) return <CheckCircle className="w-5 h-5 text-green-400" />,
   if (score >= 70) return <AlertTriangle className="w-5 h-5 text-yellow-400" />,
-  return <AlertTriangle className="w-5 h-5 text-red-400" />};
+  return <AlertTriangle className="w-5 h-5 text-red-400" />},
 const getScoreLabel = (score: number) => {
   if (score >= 90) return 'Excellent',
   if (score >= 70) return 'Good',
   if (score >= 50) return 'Needs Improvement',
-  return 'Poor'};
+  return 'Poor'},
 export default PerformanceMonitor})

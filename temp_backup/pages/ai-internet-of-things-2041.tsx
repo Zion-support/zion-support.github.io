@@ -1,16 +1,16 @@
 import Layout from '../components/layout/Layout',
 import {
-  Network;
-  Sparkles;
-  Zap;
-  Target;
-  Cpu;
-  Clock;
-  CheckCircle;
-  Wifi;
-  Activity;
-  Cloud;
-  Brain;
+  Network,
+  Sparkles,
+  Zap,
+  Target,
+  Cpu,
+  Clock,
+  CheckCircle,
+  Wifi,
+  Activity,
+  Cloud,
+  Brain,
 } from 'lucide-react',
 export default function AIInternetOfThings20o41() {
   return (
@@ -63,47 +63,47 @@ export default function AIInternetOfThings20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Network className='w-8 h-8' />;
-                  title: 'Intelligent Networking';
+                  icon: <Network className='w-8 h-8' />,
+                  title: 'Intelligent Networking',
                   description:,
-                    'AI-powered network orchestration that optimizes connectivity and data flow automatically.';
-                  color: 'from-orange-50o0 to-amber-50o0';
-                };
+                    'AI-powered network orchestration that optimizes connectivity and data flow automatically.',
+                  color: 'from-orange-50o0 to-amber-50o0'
+                },
                 {
-                  icon: <Activity className='w-8 h-8' />;
-                  title: 'Smart Sensors';
+                  icon: <Activity className='w-8 h-8' />,
+                  title: 'Smart Sensors',
                   description:,
-                    'Advanced sensors with embedded AI that process data locally and make intelligent decisions.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Advanced sensors with embedded AI that process data locally and make intelligent decisions.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Cloud className='w-8 h-8' />;
-                  title: 'Edge Computing';
+                  icon: <Cloud className='w-8 h-8' />,
+                  title: 'Edge Computing',
                   description:,
-                    'Distributed AI processing at the edge for real-time decision making and reduced latency.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Distributed AI processing at the edge for real-time decision making and reduced latency.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Predictive Analytics';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Predictive Analytics',
                   description:,
-                    'AI systems that predict device failures, optimize performance, and prevent issues.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'AI systems that predict device failures, optimize performance, and prevent issues.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Optimization';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Optimization',
                   description:,
-                    'Instant optimization of IoT networks and devices for maximum efficiency and window.window.performance.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Instant optimization of IoT networks and devices for maximum efficiency and window.window.performance.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Autonomous Management';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Autonomous Management',
                   description:,
-                    'Self-managing IoT systems that configure, monitor, and optimize themselves automatically.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Self-managing IoT systems that configure, monitor, and optimize themselves automatically.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -138,40 +138,40 @@ export default function AIInternetOfThings20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Device Management';
+                  name: 'Device Management',
                   description:,
-                    'Centralized management of IoT devices and networks';
-                };
+                    'Centralized management of IoT devices and networks',
+                },
                 {
-                  name: 'Data Collection';
+                  name: 'Data Collection',
                   description:,
-                    'Intelligent data gathering from sensors and devices';
-                };
+                    'Intelligent data gathering from sensors and devices',
+                },
                 {
-                  name: 'Real-time Monitoring';
-                  description: 'Continuous monitoring and alerting systems';
-                };
+                  name: 'Real-time Monitoring',
+                  description: 'Continuous monitoring and alerting systems'
+                },
                 {
-                  name: 'Predictive Maintenance';
+                  name: 'Predictive Maintenance',
                   description:,
-                    'AI-powered maintenance prediction and optimization';
-                };
+                    'AI-powered maintenance prediction and optimization',
+                },
                 {
-                  name: 'Energy Optimization';
-                  description: 'Smart energy management and optimization';
-                };
+                  name: 'Energy Optimization',
+                  description: 'Smart energy management and optimization'
+                },
                 {
-                  name: 'Security & Privacy';
-                  description: 'Advanced IoT security and data protection';
-                };
+                  name: 'Security & Privacy',
+                  description: 'Advanced IoT security and data protection'
+                },
                 {
-                  name: 'Scalability';
-                  description: 'Easily scalable IoT solutions for growth';
-                };
+                  name: 'Scalability',
+                  description: 'Easily scalable IoT solutions for growth'
+                },
                 {
-                  name: 'Integration';
-                  description: 'Seamless integration with existing systems';
-                };
+                  name: 'Integration',
+                  description: 'Seamless integration with existing systems'
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -201,55 +201,50 @@ export default function AIInternetOfThings20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Device Discovery';
+                  phase: 'Device Discovery',
                   description:,
-                    'AI automatically discovers and registers IoT devices across the network';
+                    'AI automatically discovers and registers IoT devices across the network',
                   features: [
-                    'Device detection';
-                    'Auto-registration';
-                    'Capability mapping';
-                  ];
-                };
+                    'Device detectionAuto-registration',
+                    'Capability mapping',
+                  ]
+                },
                 {
-                  phase: 'Data Collection';
+                  phase: 'Data Collection',
                   description:,
-                    'Intelligent data gathering and processing from all connected devices and sensors';
+                    'Intelligent data gathering and processing from all connected devices and sensors',
                   features: [
-                    'Sensor data';
-                    'Device metrics';
-                    'Performance data';
-                  ];
-                };
+                    'Sensor dataDevice metrics',
+                    'Performance data',
+                  ]
+                },
                 {
-                  phase: 'AI Analysis';
+                  phase: 'AI Analysis',
                   description:,
-                    'Advanced AI algorithms analyze data patterns and generate insights';
+                    'Advanced AI algorithms analyze data patterns and generate insights',
                   features: [
-                    'Pattern recognition';
-                    'Anomaly detection';
-                    'Predictive modeling';
-                  ];
-                };
+                    'Pattern recognitionAnomaly detection',
+                    'Predictive modeling',
+                  ]
+                },
                 {
-                  phase: 'Intelligent Optimization';
+                  phase: 'Intelligent Optimization',
                   description:,
-                    'AI-driven optimization of network performance and device operations';
+                    'AI-driven optimization of network performance and device operations',
                   features: [
-                    'Network optimization';
-                    'Device optimization';
-                    'Energy management';
-                  ];
-                };
+                    'Network optimizationDevice optimization',
+                    'Energy management',
+                  ]
+                },
                 {
-                  phase: 'Autonomous Actions';
+                  phase: 'Autonomous Actions',
                   description:,
-                    'Self-executing actions based on AI insights and predictions';
+                    'Self-executing actions based on AI insights and predictions',
                   features: [
-                    'Automated responses';
-                    'Predictive actions';
-                    'Self-healing';
-                  ];
-                };
+                    'Automated responsesPredictive actions',
+                    'Self-healing',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -294,71 +289,59 @@ export default function AIInternetOfThings20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Smart Homes';
+                  category: 'Smart Homes',
                   description:,
-                    'Intelligent home automation and management systems for comfort and efficiency.';
+                    'Intelligent home automation and management systems for comfort and efficiency.',
                   applications: [
-                    'Climate control';
-                    'Security systems';
-                    'Energy management';
-                    'Entertainment';
-                  ];
-                };
+                    'Climate controlSecurity systems',
+                    'Energy managementEntertainment',
+                  ]
+                },
                 {
-                  category: 'Smart Cities';
+                  category: 'Smart Cities',
                   description:,
-                    'Urban infrastructure management and optimization for sustainable living.';
+                    'Urban infrastructure management and optimization for sustainable living.',
                   applications: [
-                    'Traffic management';
-                    'Public safety';
-                    'Environmental monitoring';
-                    'Utilities';
-                  ];
-                };
+                    'Traffic managementPublic safety',
+                    'Environmental monitoringUtilities',
+                  ]
+                },
                 {
-                  category: 'Industrial IoT';
+                  category: 'Industrial IoT',
                   description:,
-                    'Manufacturing and industrial process optimization and monitoring.';
+                    'Manufacturing and industrial process optimization and monitoring.',
                   applications: [
-                    'Predictive maintenance';
-                    'Quality control';
-                    'Supply chain';
-                    'Safety monitoring';
-                  ];
-                };
+                    'Predictive maintenanceQuality control',
+                    'Supply chainSafety monitoring',
+                  ]
+                },
                 {
-                  category: 'Healthcare IoT';
+                  category: 'Healthcare IoT',
                   description:,
-                    'Patient monitoring and healthcare system optimization.';
+                    'Patient monitoring and healthcare system optimization.',
                   applications: [
-                    'Patient monitoring';
-                    'Medical devices';
-                    'Hospital management';
-                    'Telemedicine';
-                  ];
-                };
+                    'Patient monitoringMedical devices',
+                    'Hospital managementTelemedicine',
+                  ]
+                },
                 {
-                  category: 'Agricultural IoT';
+                  category: 'Agricultural IoT',
                   description:,
-                    'Smart farming and agricultural optimization systems.';
+                    'Smart farming and agricultural optimization systems.',
                   applications: [
-                    'Crop monitoring';
-                    'Irrigation control';
-                    'Livestock tracking';
-                    'Weather monitoring';
-                  ];
-                };
+                    'Crop monitoringIrrigation control',
+                    'Livestock trackingWeather monitoring',
+                  ]
+                },
                 {
-                  category: 'Transportation IoT';
+                  category: 'Transportation IoT',
                   description:,
-                    'Intelligent transportation and logistics management.';
+                    'Intelligent transportation and logistics management.',
                   applications: [
-                    'Fleet management';
-                    'Traffic optimization';
-                    'Public transit';
-                    'Logistics';
-                  ];
-                };
+                    'Fleet managementTraffic optimization',
+                    'Public transitLogistics',
+                  ]
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -395,65 +378,59 @@ export default function AIInternetOfThings20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'Smart factories with connected equipment and predictive maintenance systems.';
+                    'Smart factories with connected equipment and predictive maintenance systems.',
                   applications: [
-                    'Predictive maintenance';
-                    'Quality control';
-                    'Supply chain optimization';
-                  ];
-                };
+                    'Predictive maintenanceQuality control',
+                    'Supply chain optimization',
+                  ]
+                },
                 {
-                  industry: 'Energy';
+                  industry: 'Energy',
                   description:,
-                    'Smart grid management and renewable energy optimization with IoT.';
+                    'Smart grid management and renewable energy optimization with IoT.',
                   applications: [
-                    'Grid management';
-                    'Energy optimization';
-                    'Renewable integration';
-                  ];
-                };
+                    'Grid managementEnergy optimization',
+                    'Renewable integration',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Connected medical devices and patient monitoring systems.';
+                    'Connected medical devices and patient monitoring systems.',
                   applications: [
-                    'Patient monitoring';
-                    'Medical devices';
-                    'Hospital management';
-                  ];
-                };
+                    'Patient monitoringMedical devices',
+                    'Hospital management',
+                  ]
+                },
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'Smart retail environments with inventory and customer analytics.';
+                    'Smart retail environments with inventory and customer analytics.',
                   applications: [
-                    'Inventory management';
-                    'Customer analytics';
-                    'Store optimization';
-                  ];
-                };
+                    'Inventory managementCustomer analytics',
+                    'Store optimization',
+                  ]
+                },
                 {
-                  industry: 'Transportation';
+                  industry: 'Transportation',
                   description:,
-                    'Connected vehicles and intelligent transportation systems.';
+                    'Connected vehicles and intelligent transportation systems.',
                   applications: [
-                    'Vehicle connectivity';
-                    'Traffic management';
-                    'Fleet optimization';
-                  ];
-                };
+                    'Vehicle connectivityTraffic management',
+                    'Fleet optimization',
+                  ]
+                },
                 {
-                  industry: 'Agriculture';
+                  industry: 'Agriculture',
                   description:,
-                    'Precision agriculture with sensor networks and automated systems.';
+                    'Precision agriculture with sensor networks and automated systems.',
                   applications: [
-                    'Crop monitoring';
-                    'Automated irrigation';
-                    'Weather prediction';
-                  ];
-                };
+                    'Crop monitoringAutomated irrigation',
+                    'Weather prediction',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -490,33 +467,33 @@ export default function AIInternetOfThings20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Operational Efficiency';
+                  title: 'Operational Efficiency',
                   description:,
-                    'Optimize operations and reduce costs through intelligent automation and monitoring.';
-                  icon: <Network className='w-8 h-8' />;
-                  color: 'from-orange-50o0 to-amber-50o0';
-                };
+                    'Optimize operations and reduce costs through intelligent automation and monitoring.',
+                  icon: <Network className='w-8 h-8' />,
+                  color: 'from-orange-50o0 to-amber-50o0'
+                },
                 {
-                  title: 'Predictive Insights';
+                  title: 'Predictive Insights',
                   description:,
-                    'Gain predictive capabilities that help prevent issues and optimize window.window.performance.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Gain predictive capabilities that help prevent issues and optimize window.window.performance.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Real-time Monitoring';
+                  title: 'Real-time Monitoring',
                   description:,
-                    'Monitor and respond to events in real-time for maximum efficiency and safety.';
-                  icon: <Clock className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Monitor and respond to events in real-time for maximum efficiency and safety.',
+                  icon: <Clock className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Scalable Growth';
+                  title: 'Scalable Growth',
                   description:,
-                    'Easily scale your IoT infrastructure as your business grows and evolves.';
-                  icon: <Cloud className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Easily scale your IoT infrastructure as your business grows and evolves.',
+                  icon: <Cloud className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

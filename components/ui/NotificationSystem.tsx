@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 interface Notification {
   id: string,
   type: 'success' | 'error' | 'warning' | 'info',
@@ -11,9 +11,9 @@ interface NotificationSystemProps {
   className?: string}
 ,
 export const NotificationSystem: React.FC<NotificationSystemProps> = ({
-  notifications;
-  onDismiss;
-  className = '';
+  notifications,
+  onDismiss,
+  className = ''
 }) => {
   return (
     <div className={`fixed top-4 right-4 z-50 space-y-2 ${className}`}>,
@@ -39,4 +39,4 @@ export const NotificationSystem: React.FC<NotificationSystemProps> = ({
               Dismiss,
             </button>)}
         </div>))}
-    </div>)};
+    </div>)},

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'e-commerce-solutions - Zion Tech Group';
+  title: 'e-commerce-solutions - Zion Tech Group',
   description:,
-    'Professional e-commerce-solutions solutions for your business needs.';
-  keywords: 'e-commerce-solutions, services, business, technology';
-};
+    'Professional e-commerce-solutions solutions for your business needs.',
+  keywords: 'e-commerce-solutions, services, business, technology',
+},
 export default function ECommerceSolutionsPage() {
   return (
     <div className='min-h-screen bg-white'>,

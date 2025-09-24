@@ -3,9 +3,9 @@ import React{ useEffectuseState } from 'react',
 import { connectMetaMaskgetAccounts } from '../../utils/wallet',
 export type RedemptionType = 'boost_profile' | 'promote_listing' | 'premium_support',
 export default function UseTokensModal({
-  isOpen;
-  onClose;
-  serviceId;
+  isOpen,
+  onClose,
+  serviceId,
   defaultType}: {
   isOpen: boolean,
   onClose: () => void,
@@ -28,8 +28,8 @@ export default function UseTokensModal({
     setIsSubmitting(true),
     try {
       const res = await fetch('/api/tokens/redeem'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ accountamount: tokenstypeserviceId })}),
       const data = await res.json(),
       if (data?.ok) {

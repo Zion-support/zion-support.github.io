@@ -7,43 +7,33 @@ import { advancedITInfrastructureExpansion20o25V2 } from '../data/20o25-advanced
 import { advancedAIServicesExpansion20o25V2 } from '../data/20o25-advanced-ai-services-expansion-v2',
 export default function AdvancedServicesShowcase20o25V2() {
   const allServices = [
-    ...advancedMicroSaasExpansion20o25V2;
-    ...advancedITInfrastructureExpansion20o25V2;
-    ...advancedAIServicesExpansion20o25V2;
+    ...advancedMicroSaasExpansion20o25V2,
+    ...advancedITInfrastructureExpansion20o25V2,
+    ...advancedAIServicesExpansion20o25V2,
   ],
   const categories = [
-    'AI & Data';
-    'Developer Tools';
-    'Cloud & Infrastructure';
-    'Security & Compliance';
-    'Content & Marketing';
-    'E-commerce & Analytics';
-    'Financial Technology';
-    'Research & Development';
-    'Quantum Computing';
-    'Edge Computing';
-    'DevOps & Automation';
-    'Testing & Quality Assurance';
+    'AI & DataDeveloper Tools',
+    'Cloud & InfrastructureSecurity & Compliance',
+    'Content & MarketingE-commerce & Analytics',
+    'Financial TechnologyResearch & Development',
+    'Quantum ComputingEdge Computing',
+    'DevOps & AutomationTesting & Quality Assurance',
   ],
   const getCategoryServices = (category: string) => {
     return allServices.filter(
       service =>,
-        service.category.includes(category) || service.type.includes(category))};
+        service.category.includes(category) || service.type.includes(category))},
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO
         title='20o25 Advanced Services Showcase V2 - Zion Tech Group',
         description='Discover our cutting-edge micro SAAS, IT infrastructure, and AI services for 20o25. Advanced solutions with AI-powered automation, quantum computing, and intelligent systems.',
         keywords={[
-          'micro SAAS';
-          'IT services';
-          'AI services';
-          'quantum computing';
-          'edge computing';
-          'DevOps automation';
-          'AI security';
-          'content creation';
-          'e-commerce analytics';
+          'micro SAASIT services',
+          'AI servicesquantum computing',
+          'edge computingDevOps automation',
+          'AI securitycontent creation',
+          'e-commerce analytics',
         ]}
       />,
       <UltraFuturisticBackground>,

@@ -6,13 +6,13 @@ export interface InvestmentPortfolio {
   name: string,
   totalValue: number,
   currency: string,
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive';
+  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   investment_horizon: number, // in years,
   target_return: number,
   assets: PortfolioAsset[],
   last_rebalanced: Date,
   performance: PortfolioPerformance,
-  created_at: Date;
+  created_at: Date,
   updated_at: Date}
 ,
   id: string,
@@ -21,7 +21,7 @@ export interface InvestmentPortfolio {
   type: 'stock' | 'bond' | 'etf' | 'mutual_fund' | 'crypto' | 'real_estate' | 'commodity',
   quantity: number,
   current_price: number,
-  market_value: number;
+  market_value: number,
   allocation: number, // percentage of portfolio,
   purchase_price: number,
   purchase_date: Date,
@@ -29,7 +29,7 @@ export interface InvestmentPortfolio {
     daily_return: number,
     weekly_return: number,
     monthly_return: number,
-    yearly_return: number;
+    yearly_return: number,
     total_return: number}
 }
 ,
@@ -41,7 +41,7 @@ export interface InvestmentPortfolio {
   beta: number,
   alpha: number,
   tracking_error: number,
-  information_ratio: number;
+  information_ratio: number,
   sortino_ratio: number}
 ,
   id: string,
@@ -50,15 +50,15 @@ export interface InvestmentPortfolio {
   asset: {
     symbol: string,
     name: string,
-    type: string;
+    type: string,
     current_price: number}
   confidence: number,
   reasoning: string[],
   expected_return: number,
-  risk_level: 'low' | 'medium' | 'high';
+  risk_level: 'low' | 'medium' | 'high',
   time_horizon: number, // in months,
   alternatives: string[],
-  created_at: Date;
+  created_at: Date,
   expires_at: Date}
 ,
   id: string,
@@ -71,54 +71,54 @@ export interface InvestmentPortfolio {
   category: 'retirement' | 'education' | 'home' | 'emergency' | 'vacation' | 'business' | 'other',
   monthly_contribution: number,
   expected_return: number,
-  risk_tolerance: 'conservative' | 'moderate' | 'aggressive';
+  risk_tolerance: 'conservative' | 'moderate' | 'aggressive',
   progress: number, // percentage,
-  created_at: Date;
+  created_at: Date,
   updated_at: Date}
 ,
   id: string,
   market: string,
-  analysis: string;
+  analysis: string,
   key_metrics: Record < string, number>,
   trends: string[],
   risks: string[],
   opportunities: string[],
   recommendations: string[],
   confidence: number,
-  last_updated: Date;
+  last_updated: Date,
   next_update: Date}
 ,
   id: string,
   user_id: string,
   name: string,
   summary: string,
-  goals: FinancialGoal[];
+  goals: FinancialGoal[],
   investment_strategy: {
     asset_allocation: Record < string, number>,
-    rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually';
+    rebalancing_frequency: 'monthly' | 'quarterly' | 'semi_annually' | 'annually',
     risk_management: string[]}
   cash_flow: {
     monthly_income: number,
     monthly_expenses: number,
-    savings_rate: number;
+    savings_rate: number,
     emergency_fund: number}
   insurance: {
     life: boolean,
     health: boolean,
     disability: boolean,
-    property: boolean;
+    property: boolean,
     recommendations: string[]}
   tax: {
     estimatedTaxLiability: number,
-    taxOptimizationStrategies: string[];
+    taxOptimizationStrategies: string[],
     deductions: string[]}
   retirement: {
     target_age: number,
     estimated_needs: number,
     current_savings: number,
-    monthly_contribution: number;
+    monthly_contribution: number,
     projected_value: number}
-  created_at: Date;
+  created_at: Date,
   updated_at: Date}
 ,
   userId: string,
@@ -132,7 +132,7 @@ export interface InvestmentPortfolio {
     recommendations?: InvestmentRecommendation[],
     plan?: FinancialPlan,
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey;
+    this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl,
   estimatedFees: number}
 ,
@@ -155,10 +155,10 @@ export class AIFinancialAdvisorService {
   async getInvestmentRecommendations(userId: string, riskTolerance: string, investmentHorizon: number): Promise<InvestmentRecommendation[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/recommendations`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ userId, riskTolerance, investmentHorizon })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -171,10 +171,10 @@ export class AIFinancialAdvisorService {
   async createFinancialPlan(request: FinancialRequest): Promise<FinancialPlan> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/plan`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(request)}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -222,10 +222,10 @@ export class AIFinancialAdvisorService {
     expectedImpact: string}> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/portfolio/${portfolioId}/rebalance`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ targetAllocation })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -243,10 +243,10 @@ export class AIFinancialAdvisorService {
     recommendations: string[]}> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/retirement-calculator`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ userId, targetAge, desiredIncome })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -257,17 +257,17 @@ export class AIFinancialAdvisorService {
       throw error}
   }
   async getTaxOptimizationStrategies(userId: string, taxYear: number): Promise<{
-    analysis?: MarketAnalysis;
+    analysis?: MarketAnalysis,
     goals?: FinancialGoal[]}
   insights: string[],
   next_steps: string[],
-  risk_warnings: string[];
+  risk_warnings: string[],
   estimated_fees: number}
 export class AIFinancialAdvisorService {
   private api_key: string,
-  private base_url: string;
+  private base_url: string,
   constructor (api_key: string, base_url: string = 'https://api.ziontechgroup.com') {
-    this.api_key = api_key;
+    this.api_key = api_key,
     this.base_url = base_url}
   async analyze_portfolio (portfolio_id: string): Promise < InvestmentPortfolio> {
     try {
@@ -286,7 +286,7 @@ if ( {) {
   async getInvestmentRecommendations (user_id: string, risk_tolerance: string, investment_horizon: number): Promise < InvestmentRecommendation[]> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / recommendations`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -303,7 +303,7 @@ if ( {) {
   async createFinancialPlan (request: FinancialRequest): Promise < FinancialPlan> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / plan`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -351,13 +351,13 @@ if ( {) {
     rebalancing_actions: Array<{
       action: 'buy' | 'sell',
       symbol: string,
-      quantity: number;
+      quantity: number,
       estimated_cost: number}>,
-    estimated_fees: number;
+    estimated_fees: number,
     expected_impact: string}> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / portfolio/${portfolio_id}/rebalance`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -374,12 +374,12 @@ if ( {) {
   async calculateRetirementNeeds (user_id: string, target_age: number, desired_income: number): Promise<{
     estimated_needs: number,
     monthly_contribution: number,
-    projected_value: number;
+    projected_value: number,
     assumptions: Record < string, any>,
     recommendations: string[]}> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / retirement - calculator`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -398,10 +398,10 @@ if ( {) {
     estimated_savings: number,
     implementation: string[],
       const response = await fetch(`${this && this.baseUrl}/api/financial/tax-optimization`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ userId, taxYear })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -420,10 +420,10 @@ if ( {) {
     nextSteps: string[]}> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/financial/report`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ userId, reportType })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -435,18 +435,18 @@ if ( {) {
   }
 }
 export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.env.FINANCIAL_ADVISOR_API_KEY |'demo-key'),
-  id: string;
-  userId: string;
-  name: string;
-  totalValue: number;
-  currency: string;
-  riskTolerance: 'conservative' | 'moderate' | 'aggressive';
+  id: string,
+  userId: string,
+  name: string,
+  totalValue: number,
+  currency: string,
+  riskTolerance: 'conservative' | 'moderate' | 'aggressive',
   investmentHorizon: number, // in years,
-  targetReturn: number;
-  assets: PortfolioAsset[];
-  lastRebalanced: Date;
-  performance: PortfolioPerformance;
-  createdAt: Date;
+  targetReturn: number,
+  assets: PortfolioAsset[],
+  lastRebalanced: Date,
+  performance: PortfolioPerformance,
+  createdAt: Date,
   updatedAt: Date}
         throw new Error (`HTTP error! status: ${response.status}`)}
       const data = await response.json (),
@@ -457,13 +457,13 @@ export const aiFinancialAdvisorService = new AIFinancialAdvisorService(process.e
   async generateFinancialReport (user_id: string, report_type: 'comprehensive' | 'portfolio' | 'goals' | 'tax'): Promise<{
     report_id: string,
     download_url: string,
-    summary: string;
+    summary: string,
     key_metrics: Record < string, any>,
-    recommendations: string[];
+    recommendations: string[],
     next_steps: string[]}> {
     try {
       const response = await fetch (`${this.base_url}/api / financial / report`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}

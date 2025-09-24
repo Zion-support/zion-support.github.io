@@ -5,122 +5,111 @@ BrainZapShieldBarChart3UsersClockCheckCircleStarArrowRightPlayDownloadCodeGlobeL
 export default function AIContentGeneratorPage() {
   const features = [
     {
-      icon: <Brain className="w-8 h-8 text-white" />;
-      title: 'AI-Powered Content Creation';
-      description: 'Generate high-qualityengaging content using advanced language models trained on millions of articlesblogsand marketing copy.';
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
-      gradient: 'from-purple-400 to-indigo-500'};
+      icon: <Brain className="w-8 h-8 text-white" />,
+      title: 'AI-Powered Content Creation',
+      description: 'Generate high-qualityengaging content using advanced language models trained on millions of articlesblogsand marketing copy.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />;
-      title: 'Real-time Generation';
-      description: 'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.';
-      color: 'bg-gradient-to-br from-yellow-500 to-orange-600';
-      gradient: 'from-yellow-400 to-orange-500'};
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'Real-time Generation',
+      description: 'Create content in seconds with our lightning-fast AI engine. No more waiting hours for content creation.',
+      color: 'bg-gradient-to-br from-yellow-500 to-orange-600',
+      gradient: 'from-yellow-400 to-orange-500'},
     {
-      icon: <Shield className="w-8 h-8 text-white" />;
-      title: 'Plagiarism-Free Content';
-      description: 'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-      gradient: 'from-green-400 to-emerald-500'};
+      icon: <Shield className="w-8 h-8 text-white" />,
+      title: 'Plagiarism-Free Content',
+      description: 'Every piece of content is unique and original. Our AI ensures 100% plagiarism-free writing.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />;
-      title: 'SEO Optimization';
-      description: 'Built-in SEO tools that analyze keywordsuggest improvementsand optimize content for search engines.';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
-      gradient: 'from-blue-400 to-cyan-500'};
+      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      title: 'SEO Optimization',
+      description: 'Built-in SEO tools that analyze keywordsuggest improvementsand optimize content for search engines.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <Users className="w-8 h-8 text-white" />;
-      title: 'Multi-Language Support';
-      description: 'Generate content in 50+ languages with native-level fluency and cultural understanding.';
-      color: 'bg-gradient-to-br from-red-500 to-pink-600';
-      gradient: 'from-red-400 to-pink-500'};
+      icon: <Users className="w-8 h-8 text-white" />,
+      title: 'Multi-Language Support',
+      description: 'Generate content in 50+ languages with native-level fluency and cultural understanding.',
+      color: 'bg-gradient-to-br from-red-500 to-pink-600',
+      gradient: 'from-red-400 to-pink-500'},
     {
-      icon: <Clock className="w-8 h-8 text-white" />;
-      title: '24/7 Availability';
-      description: 'Access our AI content generator anytimeanywhere. No downtimeno waitinginstant results.';
-      color: 'bg-gradient-to-br from-teal-500 to-blue-600';
+      icon: <Clock className="w-8 h-8 text-white" />,
+      title: '24/7 Availability',
+      description: 'Access our AI content generator anytimeanywhere. No downtimeno waitinginstant results.',
+      color: 'bg-gradient-to-br from-teal-500 to-blue-600',
       gradient: 'from-teal-400 to-blue-500'}],
   const pricingPlans = [
     {
-      name: 'Starter';
-      price: '$29';
-      period: '/month';
-      description: 'Perfect for individuals and small blogs';
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individuals and small blogs',
       features: [
-        '1,000 words per month';
-        '5 content templates';
-        'Basic SEO optimization';
-        'Email support';
-        'API access (100 calls/month)';
-        'Content analytics dashboard'];
-      popular: false;
-      color: 'border-gray-600';
-      buttonColor: 'bg-gray-600 hover:bg-gray-700'};
+        '1,000 words per month5 content templates',
+        'Basic SEO optimizationEmail support',
+        'API access (100 calls/month)Content analytics dashboard'],
+      popular: false,
+      color: 'border-gray-600',
+      buttonColor: 'bg-gray-600 hover:bg-gray-700'},
     {
-      name: 'Professional';
-      price: '$99';
-      period: '/month';
-      description: 'Ideal for growing businesses and agencies';
+      name: 'Professional',
+      price: '$99',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        '10,000 words per month';
-        '25+ content templates';
-        'Advanced SEO tools';
-        'Priority support';
-        'API access (1,000 calls/month)';
-        'Advanced analytics';
-        'Team collaboration';
-        'Custom branding'];
-      popular: true;
-      color: 'border-blue-500';
-      buttonColor: 'bg-blue-600 hover:bg-blue-700'};
+        '10,000 words per month25+ content templates',
+        'Advanced SEO toolsPriority support',
+        'API access (1,000 calls/month)Advanced analytics',
+        'Team collaborationCustom branding'],
+      popular: true,
+      color: 'border-blue-500',
+      buttonColor: 'bg-blue-600 hover:bg-blue-700'},
     {
-      name: 'Enterprise';
-      price: '$299';
-      period: '/month';
-      description: 'For large organizations and enterprises';
+      name: 'Enterprise',
+      price: '$299',
+      period: '/month',
+      description: 'For large organizations and enterprises',
       features: [
-        'Unlimited words';
-        'All templates + custom';
-        'Full SEO suite';
-        'Dedicated support';
-        'Unlimited API access';
-        'Advanced analytics';
-        'White-label solution';
-        'Custom integrations';
-        'SLA guarantee'];
-      popular: false;
-      color: 'border-purple-600';
+        'Unlimited wordsAll templates + custom',
+        'Full SEO suiteDedicated support',
+        'Unlimited API accessAdvanced analytics',
+        'White-label solutionCustom integrations',
+        'SLA guarantee'],
+      popular: false,
+      color: 'border-purple-600',
       buttonColor: 'bg-purple-600 hover:bg-purple-700'}
   ],
   const useCases = [
     {
-      title: 'Blog Writing';
-      description: 'Generate engaging blog postsarticlesand long-form content in minutes.';
-      icon: '📝';
-      examples: ['Tech 'reviews', 'How-to 'guides', 'Industry 'insights', 'Product comparisons']};
+      title: 'Blog Writing',
+      description: 'Generate engaging blog postsarticlesand long-form content in minutes.',
+      icon: '📝',
+      examples: ['Tech 'reviewsHow-to 'guides', 'Industry 'insightsProduct comparisons']},
     {
-      title: 'Marketing Copy';
-      description: 'Create compelling ad copylanding pagesand marketing materials.';
-      icon: '🎯';
-      examples: ['Facebook 'ads', 'Google 'ads', 'Landing 'pages', 'Email campaigns']};
+      title: 'Marketing Copy',
+      description: 'Create compelling ad copylanding pagesand marketing materials.',
+      icon: '🎯',
+      examples: ['Facebook 'adsGoogle 'ads', 'Landing 'pagesEmail campaigns']},
     {
-      title: 'Social Media';
-      description: 'Generate engaging social media postscaptionsand hashtag suggestions.';
-      icon: '📱';
-      examples: ['Instagram 'posts', 'Twitter 'threads', 'LinkedIn 'articles', 'TikTok captions']};
+      title: 'Social Media',
+      description: 'Generate engaging social media postscaptionsand hashtag suggestions.',
+      icon: '📱',
+      examples: ['Instagram 'postsTwitter 'threads', 'LinkedIn 'articlesTikTok captions']},
     {
-      title: 'E-commerce';
-      description: 'Write product descriptionscategory pagesand promotional content.';
-      icon: '🛍️';
-      examples: ['Product 'descriptions', 'Category 'pages', 'Promotional 'emails', 'FAQ sections']}
+      title: 'E-commerce',
+      description: 'Write product descriptionscategory pagesand promotional content.',
+      icon: '🛍️',
+      examples: ['Product 'descriptionsCategory 'pages', 'Promotional 'emailsFAQ sections']}
   ],
   const integrations = [
-    { name: ''WordPress', 'icon: '🔌'description: 'Direct plugin integration' };
-    { name: ''Shopify', 'icon: '🛒'description: 'E-commerce content automation' };
-    { name: ''HubSpot', 'icon: '📊'description: 'Marketing automation sync' };
-    { name: ''Mailchimp', 'icon: '📧'description: 'Email campaign content' };
-    { name: ''Slack', 'icon: '💬'description: 'Team collaboration' };
-    { name: ''Zapier', 'icon: '⚡'description: '500+ app integrations' }
+    { name: ''WordPressicon: '🔌'description: 'Direct plugin integration' },
+    { name: ''Shopifyicon: '🛒'description: 'E-commerce content automation' },
+    { name: ''HubSpoticon: '📊'description: 'Marketing automation sync' },
+    { name: ''Mailchimpicon: '📧'description: 'Email campaign content' },
+    { name: ''Slackicon: '💬'description: 'Team collaboration' },
+    { name: ''Zapiericon: '⚡'description: '500+ app integrations' }
   ],
   return (
     <>,
@@ -148,7 +137,7 @@ export default function AIContentGeneratorPage() {
             AI Content Generator,
           </h1>,
           <p className="text-xl sm:text-2xl md:text-3xl text-gray-300 max-w-4xl mx-auto mb-16 leading-relaxed">,
-            Create engagingSEO-optimized content in seconds with the 'world', 's most advanced AI writing assistant,
+            Create engagingSEO-optimized content in seconds with the 'worlds most advanced AI writing assistant,
           </p>,
           <div className="flex flex-col sm: flex-row gap-6 justify-center items-center mb-20">,
             <Button

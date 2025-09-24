@@ -1,16 +1,14 @@
 import Link from 'next/link',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
-  title: 'Hyperautomation Blueprint 20o26 | Zion Tech Group';
+  title: 'Hyperautomation Blueprint 20o26 | Zion Tech Group',
   description:,
-    'A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise in 20o26.';
+    'A practical blueprint to design, deploy, and scale AI-driven hyperautomation across the enterprise in 20o26.',
   keywords: [
-    'hyperautomation';
-    'AI automation';
-    'enterprise blueprint';
-    'process orchestration';
-  ];
-};
+    'hyperautomationAI automation',
+    'enterprise blueprintprocess orchestration',
+  ]
+},
 export default function HyperautomationBlueprint20o26() {
   return (
     <ErrorBoundary>,
@@ -48,7 +46,7 @@ export default function HyperautomationBlueprint20o26() {
             </h2>,
             <p className='text-gray-70o0 mb-6'>,
               This blueprint outlines the architecture, governance, and,
-              operating model to scale hyperautomation across business units;
+              operating model to scale hyperautomation across business units,
               combining AI agents, RPA, event-driven orchestration, and,
               human-in-the-loop controls.,
             </p>,

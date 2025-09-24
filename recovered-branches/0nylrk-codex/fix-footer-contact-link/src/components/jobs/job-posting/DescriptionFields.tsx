@@ -8,7 +8,7 @@ interface DescriptionFieldsProps {
   editorContent: string}
 ,
 export function DescriptionFields({
-  controlhandleEditorChangeditorContent;
+  controlhandleEditorChangeditorContent,
 }: DescriptionFieldsProps) {
   return (
     <>,

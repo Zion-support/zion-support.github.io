@@ -3,51 +3,51 @@ ArrowRightSearchFilterTrendingUpStar,
 const SEOOptimizedContentHub = () => {
   const contentCategories = [
     {
-      title: "AI Innovation 20o25-20o30";
-      description: "Cutting-edge AI technologies and breakthrough innovations";
-      icon: "🤖";
-      link: "/ai-innovation-hub-20o25";
-      keywords: ["AI innovation"artificial intelligence"machine learning"20o25"20o30"]};
+      title: "AI Innovation 20o25-20o30",
+      description: "Cutting-edge AI technologies and breakthrough innovations",
+      icon: "🤖",
+      link: "/ai-innovation-hub-20o25",
+      keywords: ["AI innovation"artificial intelligence"machine learning"20o25"20o30"]},
     {
-      title: "Quantum Computing Solutions";
-      description: "Revolutionary quantum computing breakthroughs and applications";
-      icon: "⚛️";
-      link: "/quantum-computing-solutions-20o25";
-      keywords: ["quantum computing"quantum supremacy"quantum algorithms"20o25"]};
+      title: "Quantum Computing Solutions",
+      description: "Revolutionary quantum computing breakthroughs and applications",
+      icon: "⚛️",
+      link: "/quantum-computing-solutions-20o25",
+      keywords: ["quantum computing"quantum supremacy"quantum algorithms"20o25"]},
     {
-      title: "Autonomous Business Operations";
-      description: "Complete automation solutions for enterprise transformation";
-      icon: "🚀";
-      link: "/autonomous-business-operations-20o25";
-      keywords: ["business automation"autonomous operations"enterprise AI"ROI"]};
+      title: "Autonomous Business Operations",
+      description: "Complete automation solutions for enterprise transformation",
+      icon: "🚀",
+      link: "/autonomous-business-operations-20o25",
+      keywords: ["business automation"autonomous operations"enterprise AI"ROI"]},
     {
-      title: "Revolutionary Tech Showcase";
-      description: "Latest technological breakthroughs and future predictions";
-      icon: "✨";
-      link: "/revolutionary-tech-showcase-20o25";
+      title: "Revolutionary Tech Showcase",
+      description: "Latest technological breakthroughs and future predictions",
+      icon: "✨",
+      link: "/revolutionary-tech-showcase-20o25",
       keywords: ["technology trends"future tech"innovation"breakthrough"]}
   ],
   const featuredContent = [
     {
-      title: "AI 20o25 Revolutionary Automation Breakthrough";
-      excerpt: "Discover how Fortune 50o0 companies achieved 15,0o00% ROI with our revolutionary AI automation solutions.";
-      link: "/case-studies/fortune-50o0-ai-transformation-20o25-breakthrough";
-      category: "Case Study";
-      readTime: "8 min read";
-      featured: true};
+      title: "AI 20o25 Revolutionary Automation Breakthrough",
+      excerpt: "Discover how Fortune 50o0 companies achieved 15,0o00% ROI with our revolutionary AI automation solutions.",
+      link: "/case-studies/fortune-50o0-ai-transformation-20o25-breakthrough",
+      category: "Case Study",
+      readTime: "8 min read",
+      featured: true},
     {
-      title: "Quantum-Neural Fusion: The Next Frontier";
-      excerpt: "Explore the convergence of quantum computing and neural networks for unprecedented computational power.";
-      link: "/blog/quantum-ai-hybrid-systems-20o26-breakthrough";
-      category: "Blog Post";
-      readTime: "12 min read";
-      featured: true};
+      title: "Quantum-Neural Fusion: The Next Frontier",
+      excerpt: "Explore the convergence of quantum computing and neural networks for unprecedented computational power.",
+      link: "/blog/quantum-ai-hybrid-systems-20o26-breakthrough",
+      category: "Blog Post",
+      readTime: "12 min read",
+      featured: true},
     {
-      title: "Edge Computing Revolution 20o25";
-      excerpt: "Next-generation edge computing solutions for real-time AI processing and decision making.";
-      link: "/blog/ai-20o25-edge-computing-revolution-next-generation";
-      category: "Technical Guide";
-      readTime: "10 min read";
+      title: "Edge Computing Revolution 20o25",
+      excerpt: "Next-generation edge computing solutions for real-time AI processing and decision making.",
+      link: "/blog/ai-20o25-edge-computing-revolution-next-generation",
+      category: "Technical Guide",
+      readTime: "10 min read",
       featured: false}
   ],
   return (
@@ -206,5 +206,5 @@ const SEOOptimizedContentHub = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SEOOptimizedContentHub;
+    </section>)},
+export default SEOOptimizedContentHub,

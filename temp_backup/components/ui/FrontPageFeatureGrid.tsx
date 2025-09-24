@@ -49,5 +49,5 @@ const FrontPageFeatureGrid: React.FC = () => {
                 </Link>))}
           </div>,
         </section>))}
-    </div>)};
-export default FrontPageFeatureGrid;
+    </div>)},
+export default FrontPageFeatureGrid,

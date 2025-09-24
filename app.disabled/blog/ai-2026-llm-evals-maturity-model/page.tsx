@@ -2,17 +2,15 @@ import Link from 'next/link',
 import ErrorBoundary from '../../components/ErrorBoundary',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: LLM Evals Maturity Model';
+  title: 'AI 20o26: LLM Evals Maturity Model',
   description:,
-    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.';
+    'An evaluation-first framework with metrics, harnesses, and governance to ship reliable AI.',
   keywords: [
-    'LLM evals';
-    'AI maturity model';
-    'AI governance';
-    'AI reliability';
-    'evaluations';
-  ];
-};
+    'LLM evalsAI maturity model',
+    'AI governanceAI reliability',
+    'evaluations',
+  ]
+},
 export default function LLMEvalsMaturityModel20o26() {
   return (
     <ErrorBoundary>,
@@ -88,7 +86,7 @@ export default function LLMEvalsMaturityModel20o26() {
                   Metrics & Benchmarks,
                 </h4>,
                 <p>,
-                  Task-specific KPIs, hallucination rate, toxicity, latency;
+                  Task-specific KPIs, hallucination rate, toxicity, latency,
                   cost, and reliability SLOs.,
                 </p>,
               </div>,

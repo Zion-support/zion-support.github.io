@@ -1,13 +1,13 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Filter;
-  Search;
-  Grid;
-  List;
-  Star;
-  TrendingUp;
-  Zap;
+  Filter,
+  Search,
+  Grid,
+  List,
+  Star,
+  TrendingUp,
+  Zap,
 } from 'lucide-react',
 import UltraAdvancedServiceCard from '../ui/UltraAdvancedServiceCard',
 import { innovativeMicroSaasServices } from '../../data/innovative-micro-saas-services',
@@ -19,9 +19,9 @@ const InnovativeServicesShowcase: React.FC = () => {
     'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   // Get unique categories,
   const categories = [
-    'all';
+    'all',
     ...Array.from(
-      new Set(innovativeMicroSaasServices.map(service => service.category)));
+      new Set(innovativeMicroSaasServices.map(service => service.category))),
   ],
   // Filter and sort services,
   const filteredServices = innovativeMicroSaasServices,
@@ -39,8 +39,8 @@ const InnovativeServicesShowcase: React.FC = () => {
           return a.name.localeCompare(b.name),
         case 'price':,
           return (
-            parseFloat(a.price.replace('$', '').replace(',', '')) -,
-            parseFloat(b.price.replace('$', '').replace(',', ''))),
+            parseFloat(a.price.replace('$', '').replace(, '')) -,
+            parseFloat(b.price.replace('$', '').replace(, ''))),
         case 'rating':,
           return b.rating - a.rating,
         case 'popularity':,
@@ -49,18 +49,18 @@ const InnovativeServicesShowcase: React.FC = () => {
           return 0}
     }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
   return (
     <section className='py-20 px-4 relative'>,
       {/* Background Effects */}
@@ -263,5 +263,5 @@ const InnovativeServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default InnovativeServicesShowcase;
+    </section>)},
+export default InnovativeServicesShowcase,

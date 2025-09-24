@@ -1,75 +1,75 @@
 import { motion } from 'framer-motion',
 import {
-  CheckCircleIcon;
-  ClockIcon;
-  UserGroupIcon;
-  ShieldCheckIcon;
-  RocketLaunchIcon;
-  CogIcon;
+  CheckCircleIcon,
+  ClockIcon,
+  UserGroupIcon,
+  ShieldCheckIcon,
+  RocketLaunchIcon,
+  CogIcon,
 } from '@heroicons/react/24/outline',
 export function FeaturesSection() {
   const features = [
     {
-      icon: CheckCircleIcon;
-      title: 'Proven Track Record';
+      icon: CheckCircleIcon,
+      title: 'Proven Track Record',
       description:,
-        '50o0+ successful projects delivered across various industries with measurable results';
-      color: 'text-zion-cyan';
-    };
+        '50o0+ successful projects delivered across various industries with measurable results',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: ClockIcon;
-      title: 'Rapid Delivery';
+      icon: ClockIcon,
+      title: 'Rapid Delivery',
       description:,
-        'Fast turnaround times with agile methodologies and efficient development processes';
-      color: 'text-zion-purple';
-    };
+        'Fast turnaround times with agile methodologies and efficient development processes',
+      color: 'text-zion-purple'
+    },
     {
-      icon: UserGroupIcon;
-      title: 'Expert Team';
+      icon: UserGroupIcon,
+      title: 'Expert Team',
       description:,
-        'Certified professionals with deep expertise in cutting-edge technologies';
-      color: 'text-zion-cyan';
-    };
+        'Certified professionals with deep expertise in cutting-edge technologies',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: ShieldCheckIcon;
-      title: 'Enterprise Security';
+      icon: ShieldCheckIcon,
+      title: 'Enterprise Security',
       description:,
-        'SOC 2 compliant with industry-leading security practices and protocols';
-      color: 'text-zion-purple';
-    };
+        'SOC 2 compliant with industry-leading security practices and protocols',
+      color: 'text-zion-purple'
+    },
     {
-      icon: RocketLaunchIcon;
-      title: 'Scalable Solutions';
+      icon: RocketLaunchIcon,
+      title: 'Scalable Solutions',
       description:,
-        'Architected for growth with cloud-native and microservices approaches';
-      color: 'text-zion-cyan';
-    };
+        'Architected for growth with cloud-native and microservices approaches',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: CogIcon;
-      title: '24/7 Support';
-      description: 'Round-the-clock technical support and maintenance services';
-      color: 'text-zion-purple';
-    };
+      icon: CogIcon,
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and maintenance services',
+      color: 'text-zion-purple'
+    },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <section className='py-20 bg-white relative overflow-hidden'>,
       {/* Background Elements */}

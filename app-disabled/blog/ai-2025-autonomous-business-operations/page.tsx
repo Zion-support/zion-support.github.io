@@ -2,28 +2,25 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group';
+    'AI 20o25: Autonomous Business Operations - The Future of Enterprise Management | Zion Tech Group',
   description:,
-    'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 20o25. Learn about self-managing systems, automated decision-making, and the future of work.';
+    'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 20o25. Learn about self-managing systems, automated decision-making, and the future of work.',
   keywords: [
-    'autonomous operations';
-    'AI 20o25';
-    'business automation';
-    'enterprise management';
-    'future of work';
-    'AI automation';
-  ];
+    'autonomous operationsAI 20o25',
+    'business automationenterprise management',
+    'future of workAI automation',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: Autonomous Business Operations - The Future of Enterprise Management';
+      'AI 20o25: Autonomous Business Operations - The Future of Enterprise Management',
     description:,
-      'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 20o25.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['autonomous operations', 'AI 20o25', 'business automation'];
-  };
-};
+      'Explore how AI-powered autonomous business operations are revolutionizing enterprise management in 20o25.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['autonomous operationsAI 20o25', 'business automation'],
+  },
+},
 export default function AutonomousBusinessOperationsPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -342,7 +339,7 @@ export default function AutonomousBusinessOperationsPage() {
             <p className='text-lg text-gray-70o0 mb-8'>,
               Autonomous business operations represent the future of enterprise,
               management. Companies that embrace this transformation today will,
-              gain significant competitive advantages in efficiency, agility;
+              gain significant competitive advantages in efficiency, agility,
               and innovation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

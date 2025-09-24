@@ -10,70 +10,70 @@ export function useTalentDirectory() {
   const { talents, isLoading } = useTalentData(),
   // Apply filters and sorting,
   const {
-    filteredTalents;
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
+    filteredTalents,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
   } = useFilterTalents(talents),
   // Manage UI state,
   const {
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selectedTalent;
-    setSelectedTalent;
-    expandedSections;
-    toggleSection;
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
+    toggleSection,
   } = useUIState(),
   return {
     // Talents and loading state,
-    talents;
-    filteredTalents;
-    isLoading;
+    talents,
+    filteredTalents,
+    isLoading,
     // Search and filter state,
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
     // UI state,
-    isMobileFilterOpen;
-    setIsMobileFilterOpen;
-    isHireModalOpen;
-    setIsHireModalOpen;
-    selectedTalent;
-    setSelectedTalent;
-    expandedSections;
+    isMobileFilterOpen,
+    setIsMobileFilterOpen,
+    isHireModalOpen,
+    setIsHireModalOpen,
+    selectedTalent,
+    setSelectedTalent,
+    expandedSections,
     // Auth and user state,
-    isAuthenticated;
-    userDetails;
-    savedTalents;
+    isAuthenticated,
+    userDetails,
+    savedTalents,
     // Actions,
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters;
-    toggleSection;
-    handleToggleSave;
-  };
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters,
+    toggleSection,
+    handleToggleSave,
+  },
 }
 ,

@@ -1,8 +1,8 @@
 export default function ReplyCard({
-  reply;
-  className = '';
-  onMarkAnswer;
-  canMarkAnswer;
+  reply,
+  className = '',
+  onMarkAnswer,
+  canMarkAnswer,
 }) {
   return (
     <div

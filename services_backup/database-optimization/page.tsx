@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Database Optimization | Zion Tech Group';
+  title: 'Database Optimization | Zion Tech Group',
   description:,
-    'Maximize your database performance with expert optimization services, query tuning, and performance monitoring.';
-};
+    'Maximize your database performance with expert optimization services, query tuning, and performance monitoring.',
+},
 export default function DatabaseOptimizationPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -10,35 +10,29 @@ export default function DatabaseOptimizationPage() {
         Database Optimization,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Maximize your database performance with expert optimization services;
+        Maximize your database performance with expert optimization services,
         query tuning, and performance monitoring.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
         <FeatureCard
           title='Performance Tuning',
           features={[
-            'Query optimization';
-            'Index optimization';
-            'Schema design';
-            'Connection pooling';
+            'Query optimizationIndex optimization',
+            'Schema designConnection pooling',
           ]}
         />,
         <FeatureCard
           title='Database Platforms',
           features={[
-            'MySQL optimization';
-            'PostgreSQL tuning';
-            'MongoDB optimization';
-            'SQL Server tuning';
+            'MySQL optimizationPostgreSQL tuning',
+            'MongoDB optimizationSQL Server tuning',
           ]}
         />,
         <FeatureCard
           title='Monitoring & Maintenance',
           features={[
-            'Performance monitoring';
-            'Automated backups';
-            'Health checks';
-            'Capacity planning';
+            'Performance monitoringAutomated backups',
+            'Health checksCapacity planning',
           ]}
         />,
       </div>,
@@ -114,8 +108,8 @@ export default function DatabaseOptimizationPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -141,20 +135,16 @@ function Pricing() {
           name='Audit',
           price='$1,999',
           features={[
-            'Performance analysis';
-            'Optimization report';
-            'Recommendations';
-            'Implementation guide';
+            'Performance analysisOptimization report',
+            'RecommendationsImplementation guide',
           ]}
         />,
         <Plan
           name='Optimization',
           price='$4,999',
           features={[
-            'Query tuning';
-            'Index optimization';
-            'Schema improvements';
-            '2 weeks support';
+            'Query tuningIndex optimization',
+            'Schema improvements2 weeks support',
           ]}
           popular={true}
         />,
@@ -162,20 +152,18 @@ function Pricing() {
           name='Managed',
           price='$2,999/mo',
           features={[
-            'Continuous monitoring';
-            'Regular optimization';
-            '24/7 support';
-            'Performance reports';
+            'Continuous monitoringRegular optimization',
+            '24/7 supportPerformance reports',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

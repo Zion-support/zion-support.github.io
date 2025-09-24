@@ -6,17 +6,17 @@ export type Section = {
   id: string,
   title: string,
   html?: string,
-  code?: { language?: string, content: string }[]};
+  code?: { language?: string, content: string }[]},
 type DocsContent = {
   title: string,
-  sections: Section[]};
+  sections: Section[]},
 type PageProps = {
-  docs: DocsContent};
+  docs: DocsContent},
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
-      docs: content as DocsContent}};
-};
+      docs: content as DocsContent}},
+},
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print()500),

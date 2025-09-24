@@ -11,13 +11,13 @@ interface UseApiOptions<T = unknown> {
   onError?: (error: string) => void}
 ,
 export function useApi<T = unknown>(
-  apiFunction: () => Promise<T>;
+  apiFunction: () => Promise<T>,
   options: UseApiOptions<T> = {}
 ) {
   const [state, setState] = useState<ApiState<T>>({
-    data: null;
-    loading: false;
-    error: null;
+    data: null,
+    loading: false,
+    error: null
   }),
   const execute = useCallback(async () => {
     setState(prev => ({ ...prev, loading: true, error: null })),
@@ -39,20 +39,20 @@ export function useApi<T = unknown>(
   const reset = useCallback(() => {
     setState({ data: null, loading: false, error: null })}, []),
   return {
-    ...state;
-    execute;
-    reset;
-  };
+    ...state,
+    execute,
+    reset,
+  },
 }
 ,
 export function useMutation<T = unknown, P = unknown>(
-  mutationFunction: (params: P) => Promise<T>;
+  mutationFunction: (params: P) => Promise<T>,
   options: UseApiOptions<T> = {}
 ) {
   const [state, setState] = useState<ApiState<T>>({
-    data: null;
-    loading: false;
-    error: null;
+    data: null,
+    loading: false,
+    error: null
   }),
   const mutate = useCallback(
     async (params: P) => {
@@ -67,14 +67,14 @@ export function useMutation<T = unknown, P = unknown>(
         setState({ data: null, loading: false, error: errorMessage }),
         options.onError?.(errorMessage),
         throw error}
-    };
+    },
     [mutationFunction, options]),
   const reset = useCallback(() => {
     setState({ data: null, loading: false, error: null })}, []),
   return {
-    ...state;
-    mutate;
-    reset;
-  };
+    ...state,
+    mutate,
+    reset,
+  },
 }
 ,

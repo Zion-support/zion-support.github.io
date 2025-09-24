@@ -1,83 +1,75 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Atom;
-  Cpu;
-  Shield;
-  Rocket;
-  Zap;
-  Database;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  TrendingUp;
+  Atom,
+  Cpu,
+  Shield,
+  Rocket,
+  Zap,
+  Database,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function QuantumServicesPage() {
   const services = [
     {
-      title: 'Quantum Algorithm Development';
+      title: 'Quantum Algorithm Development',
       description:,
-        'Custom quantum algorithms designed for specific business problems';
+        'Custom quantum algorithms designed for specific business problems',
       features: [
-        'Optimization Algorithms';
-        'Machine Learning';
-        'Cryptography';
-        'Simulation';
-      ];
-      price: 'From $15,0o00';
-      icon: Atom;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'Optimization AlgorithmsMachine Learning',
+        'CryptographySimulation',
+      ],
+      price: 'From $15,0o00',
+      icon: Atom,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Quantum Security Solutions';
-      description: 'Quantum-resistant cryptography and security protocols';
+      title: 'Quantum Security Solutions',
+      description: 'Quantum-resistant cryptography and security protocols',
       features: [
-        'Post-Quantum Cryptography';
-        'Quantum Key Distribution';
-        'Security Auditing';
-        'Compliance';
-      ];
-      price: 'From $12,0o00';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
-    };
+        'Post-Quantum CryptographyQuantum Key Distribution',
+        'Security AuditingCompliance',
+      ],
+      price: 'From $12,0o00',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0'
+    },
     {
-      title: 'Quantum Computing Infrastructure';
-      description: 'Quantum computing hardware and cloud access solutions';
+      title: 'Quantum Computing Infrastructure',
+      description: 'Quantum computing hardware and cloud access solutions',
       features: [
-        'Cloud Quantum Access';
-        'Hardware Integration';
-        'Performance Optimization';
-        'Scalability';
-      ];
-      price: 'From $8,0o00';
-      icon: Cpu;
-      color: 'from-indigo-50o0 to-purple-50o0';
-    };
+        'Cloud Quantum AccessHardware Integration',
+        'Performance OptimizationScalability',
+      ],
+      price: 'From $8,0o00',
+      icon: Cpu,
+      color: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      title: 'Quantum AI Integration';
+      title: 'Quantum AI Integration',
       description:,
-        'Hybrid quantum-classical AI systems for enhanced performance';
+        'Hybrid quantum-classical AI systems for enhanced performance',
       features: [
-        'Quantum Neural Networks';
-        'Hybrid Algorithms';
-        'Performance Enhancement';
-        'Future-Proofing';
-      ];
-      price: 'From $20,0o00';
-      icon: Zap;
-      color: 'from-emerald-50o0 to-teal-50o0';
-    };
+        'Quantum Neural NetworksHybrid Algorithms',
+        'Performance EnhancementFuture-Proofing',
+      ],
+      price: 'From $20,0o00',
+      icon: Zap,
+      color: 'from-emerald-50o0 to-teal-50o0'
+    },
   ],
   const stats = [
-    { number: '10o0+', label: 'Quantum Algorithms', icon: Atom };
-    { number: '99.99%', label: 'Security Guarantee', icon: Shield };
-    { number: '10x', label: 'Performance Boost', icon: TrendingUp };
-    { number: '24/7', label: 'Quantum Support', icon: Clock };
+    { number: '10o0+', label: 'Quantum Algorithms', icon: Atom },
+    { number: '99.99%', label: 'Security Guarantee', icon: Shield },
+    { number: '10x', label: 'Performance Boost', icon: TrendingUp },
+    { number: '24/7', label: 'Quantum Support', icon: Clock },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,

@@ -13,15 +13,15 @@ interface UltraAdvancedFuturisticBackgroundV2Props {
   children: React.ReactNode}
 ,
 export default function UltraAdvancedFuturisticBackgroundV2({
-  intensity = 'high';
-  colorScheme = 'hybrid';
-  particleCount = 30o0;
-  animationSpeed = 1.5;
-  enableGlitch = true;
-  enableHologram = true;
-  enableQuantum = true;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'hybrid',
+  particleCount = 30o0,
+  animationSpeed = 1.5,
+  enableGlitch = true,
+  enableHologram = true,
+  enableQuantum = true,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children}: UltraAdvancedFuturisticBackgroundV2Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const [isVisible, setIsVisible] = useState(false),
@@ -29,36 +29,36 @@ export default function UltraAdvancedFuturisticBackgroundV2({
   // Enhanced color schemes with more vibrant colors,
   const colorSchemes ={
     quantum: {
-      primary: '#0o0ffff';
-      secondary: '#8b5cf6';
-      accent: '#10b981';
-      glow: '0 0 30px rgba(0, 255, 255, 0.6)';
-      particles: ['#0o0ffff', '#8b5cf6', '#10b981', '#3b82f6']};
+      primary: '#0o0ffff',
+      secondary: '#8b5cf6',
+      accent: '#10b981',
+      glow: '0 0 30px rgba(0, 255, 255, 0.6)',
+      particles: ['#0o0ffff#8b5cf6', '#10b981#3b82f6']},
     holographic: {
-      primary: '#ec4899';
-      secondary: '#8b5cf6';
-      accent: '#f59e0b';
-      glow: '0 0 40px rgba(236, 73, 153, 0.7)';
-      particles: ['#ec4899', '#8b5cf6', '#f59e0b', '#ef4444']};
+      primary: '#ec4899',
+      secondary: '#8b5cf6',
+      accent: '#f59e0b',
+      glow: '0 0 40px rgba(236, 73, 153, 0.7)',
+      particles: ['#ec4899#8b5cf6', '#f59e0b#ef4444']},
     cyberpunk: {
-      primary: '#ef4444';
-      secondary: '#f59e0b';
-      accent: '#10b981';
-      glow: '0 0 35px rgba(239, 68, 68, 0.8)';
-      particles: ['#ef4444', '#f59e0b', '#10b981', '#3b82f6']};
+      primary: '#ef4444',
+      secondary: '#f59e0b',
+      accent: '#10b981',
+      glow: '0 0 35px rgba(239, 68, 68, 0.8)',
+      particles: ['#ef4444#f59e0b', '#10b981#3b82f6']},
     neural: {
-      primary: '#10b981';
-      secondary: '#3b82f6';
-      accent: '#8b5cf6';
-      glow: '0 0 45px rgba(16, 185, 129, 0.6)';
-      particles: ['#10b981', '#3b82f6', '#8b5cf6', '#f59e0b']};
+      primary: '#10b981',
+      secondary: '#3b82f6',
+      accent: '#8b5cf6',
+      glow: '0 0 45px rgba(16, 185, 129, 0.6)',
+      particles: ['#10b981#3b82f6', '#8b5cf6#f59e0b']},
     hybrid: {
-      primary: '#0o0ffff';
-      secondary: '#ec4899';
-      accent: '#10b981';
-      glow: '0 0 50px rgba(0, 255, 255, 0.5)';
-      particles: ['#0o0ffff', '#ec4899', '#10b981', '#8b5cf6', '#f59e0b']}
-  };
+      primary: '#0o0ffff',
+      secondary: '#ec4899',
+      accent: '#10b981',
+      glow: '0 0 50px rgba(0, 255, 255, 0.5)',
+      particles: ['#0o0ffff#ec4899', '#10b981#8b5cf6', '#f59e0b']}
+  },
   const currentScheme = colorSchemes[colorScheme],
   const intensityMultiplier ={ low: 0.5, medium: 1, high: 1.5, extreme: 2 }[intensity],
   useEffect(() => {
@@ -83,15 +83,15 @@ export default function UltraAdvancedFuturisticBackgroundV2({
     // Initialize particles with enhanced variety,
     for (let i = 0, i < particleCount, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * animationSpeed * intensityMultiplier;
-        vy: (Math.random() - 0.5) * 2 * animationSpeed * intensityMultiplier;
-        size: Math.random() * 3 + 1;
-        color: currentScheme.particles[Math.floor(Math.random() * currentScheme.particles.length)];
-        life: Math.random() * 10o0;
-        maxLife: 10o0;
-        type: ['quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as any})}
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * animationSpeed * intensityMultiplier,
+        vy: (Math.random() - 0.5) * 2 * animationSpeed * intensityMultiplier,
+        size: Math.random() * 3 + 1,
+        color: currentScheme.particles[Math.floor(Math.random() * currentScheme.particles.length)],
+        life: Math.random() * 10o0,
+        maxLife: 10o0,
+        type: ['quantumholographic', 'neuralcyberpunk'][Math.floor(Math.random() * 4)] as any})}
 ,
     // Enhanced animation loop,
     let animationId: number,
@@ -238,16 +238,16 @@ export default function UltraAdvancedFuturisticBackgroundV2({
           ctx.stroke()}
         ctx.restore()}
 ,
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     animate(),
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       cancelAnimationFrame(animationId),
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, [particleCount, animationSpeed, intensityMultiplier, currentScheme, enableGlitch, enableHologram, enableQuantum, enableHolographic, enableQuantumEffects]),
   return (
     <div className="relative min-h-screen overflow-hidden">,
@@ -256,7 +256,7 @@ export default function UltraAdvancedFuturisticBackgroundV2({
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0",
         style={{
-          filter: `blur(${glitchIntensity}px)`;
+          filter: `blur(${glitchIntensity}px)`,
           transform: `scale(${1 + glitchIntensity * 0.1})`}}
        />,
       {/* Enhanced Overlay Effects */}
@@ -266,7 +266,7 @@ export default function UltraAdvancedFuturisticBackgroundV2({
           <div
             className="fixed inset-0 pointer-events-none",
             style={{
-              background: `radial-gradient(circle at 50% 50%, ${currentScheme.primary}10 0%, transparent 70%)`;
+              background: `radial-gradient(circle at 50% 50%, ${currentScheme.primary}10 0%, transparent 70%)`,
               animation: 'quantum-pulse 4s ease-in-out infinite'}}
            />)}
 ,
@@ -276,10 +276,10 @@ export default function UltraAdvancedFuturisticBackgroundV2({
             className="fixed inset-0 pointer-events-none opacity-5",
             style={{
               backgroundImage: `,
-                linear-gradient(90deg, ${currentScheme.secondary} 1px, transparent 1px);
+                linear-gradient(90deg, ${currentScheme.secondary} 1px, transparent 1px),
                 linear-gradient(0deg, ${currentScheme.secondary} 1px, transparent 1px),
-              `;
-              backgroundSize: '50px 50px';
+              `,
+              backgroundSize: '50px 50px',
               animation: 'matrix-scroll 20s linear infinite'}}
            />)}
 ,
@@ -287,7 +287,7 @@ export default function UltraAdvancedFuturisticBackgroundV2({
         <div
           className="fixed inset-0 pointer-events-none opacity-10",
           style={{
-            background: `radial-gradient(circle at 30% 30%, ${currentScheme.accent}20 0%, transparent 50%);
+            background: `radial-gradient(circle at 30% 30%, ${currentScheme.accent}20 0%, transparent 50%),
                         radial-gradient(circle at 70% 70%, ${currentScheme.primary}20 0%, transparent 50%)`}}
          />,
         {/* Enhanced Content */}

@@ -6,13 +6,13 @@ export type AIAssistantProps = {
   defaultPrompt: string,
   systemPrompt?: string,
   onAccept: (markdown: string) => void,
-  authorizationToken?: string};
+  authorizationToken?: string},
 export default function AIAssistant({
-  buttonLabel = 'Generate with AI';
-  title = 'AI Writing Assistant';
-  defaultPrompt;
-  systemPrompt;
-  onAccept;
+  buttonLabel = 'Generate with AI',
+  title = 'AI Writing Assistant',
+  defaultPrompt,
+  systemPrompt,
+  onAccept,
   authorizationToken}: AIAssistantProps) {
   const [isOpensetIsOpen] = useState(false),
   const [promptsetPrompt] = useState(defaultPrompt),
@@ -27,19 +27,19 @@ export default function AIAssistant({
     setError(null),
     try {
       const res = await fetch('/api/ai/operator'{
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json';
+          'Content-Type': 'application/json',
           ...(authorizationToken,
             ? { Authorization: `Bearer ${authorizationToken}` }
             : process.env.NEXT_PUBLIC_OPERATOR_TOKEN,
             ? { Authorization: `Bearer ${process.env.NEXT_PUBLIC_OPERATOR_TOKEN}` }
-            : {})};
+            : {})},
         body: JSON.stringify({ promptsystem: systemPrompt })}),
       const data = await res.json(),
       if (!res.ok) {
         throw new Error(data?.error || 'Failed to generate')}
-      setOutput(String(data.text || ', ')),
+      setOutput(String(data.text || )),
       setIsEditing(false)} catch (e: any) {
       setError(e.message || 'Request failed')} finally {
       setLoading(false)}
@@ -50,7 +50,7 @@ export default function AIAssistant({
   }[output]),
   const onOpen = useCallback(() => {
     setIsOpen(true),
-    setOutput(', '),
+    setOutput(),
     setIsEditing(false),
     setError(null)}[]),
   const onClose = useCallback(() => setIsOpen(false)[]),

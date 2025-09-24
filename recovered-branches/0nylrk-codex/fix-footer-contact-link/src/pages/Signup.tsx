@@ -4,12 +4,12 @@ import {useForm, type, UseFormReturn} from "react-hook-form",
 import {zodResolver} from "@hookform/resolvers/zod",
 import {z} from "zod",
 import {User, Mail, Lock, Eye, EyeOff, Facebook, Twitter} from "lucide-react",
-import { useState } from "react";
-import { Link, Navigate } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react";
+import { useState } from "react",
+import { Link, Navigate } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { User, Mail, Lock, Eye, EyeOff, Facebook, Twitter } from "lucide-react",
 import {useAuth} from "@/hooks/useAuth",
 import {Button} from "@/components/ui/button",
 import {Input} from "@/components/ui/input",
@@ -17,13 +17,13 @@ import {Checkbox} from "@/components/ui/checkbox",
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Checkbox } from "@/components/ui/checkbox";
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Checkbox } from "@/components/ui/checkbox",
 import {
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 import { useState } from './react',
 import { Link, Navigate } from './react-router-dom',
 import { use_form, type, UseFormReturn } from './react - hook - form',
@@ -37,19 +37,19 @@ import { Checkbox } from '@/components / ui / checkbox',
 import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components / ui / form',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer'>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
 // Form validation schema,
 const signupSchema = z,
   .object({
     displayName: z.string().min(2, "Name must be at least 2 characters"),
     email: z.string().email("Please enter a valid email"),
-    displayName: z.string().min(2, "Name must be at least 2 characters");
-    email: z.string().email("Please enter a valid email");
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
     password: z.string(),
       .min(8, "Password must be at least 8 characters"),
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter"),
@@ -67,23 +67,23 @@ export default function Signup() {
   const [showPassword, setShowPassword] = useState(false),
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
-      .regex(/[0-9]/, "Password must contain at least one number");
-    confirmPassword: z.string();
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
       message: "You must accept the terms and conditions"})}),
   .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords do not match";
-    path: ["confirmPassword"]});
+    message: "Passwords do not match",
+    path: ["confirmPassword"]}),
 export default function Signup() {
   const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
   const [showPassword, setShowPassword] = useState(false),
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
 export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   // Initialize react-hook-form,
   const form = useForm({
     resolver: zodResolver(signupSchema),
@@ -97,12 +97,12 @@ export default function Signup() {
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions,
     setIsSubmitting(true),
-    setIsSubmitting(true);
+    setIsSubmitting(true),
     try {
       await signup(data.email, data.password, data.displayName)} finally {
       setIsSubmitting(false)}
 }
-  };
+  },
   // Redirect if user is already logged in and has completed profile,
   if (isAuthenticated && user?.profileComplete) {
     return <Navigate to="/" />}
@@ -149,43 +149,43 @@ export default function Signup() {
                         </FormControl>,
                         <FormMessage className="text-red-400" />,
                       </FormItem>,
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
 // Form validation schema,
 const signupSchema = z,
   .object({
-    displayName: z.string().min(2, "Name must be at least 2 characters");
-    email: z.string().email("Please enter a valid email");
+    displayName: z.string().min(2, "Name must be at least 2 characters"),
+    email: z.string().email("Please enter a valid email"),
     password: z.string(),
       .min(8, "Password must be at least 8 characters"),
       .regex(/[A-Z]/, "Password must contain at least one uppercase letter"),
       .regex(/[a-z]/, "Password must contain at least one lowercase letter"),
-      .regex(/[0-9]/, "Password must contain at least one number");
-    confirmPassword: z.string();
+      .regex(/[0-9]/, "Password must contain at least one number"),
+    confirmPassword: z.string(),
     termsAccepted: z.boolean().refine(val => val === true, {
       message: "You must accept the terms and conditions"})}),
   .refine(data => data.password === data.confirmPassword, {
-    message: "Passwords do not match";
-    path: ["confirmPassword"]});
-type SignupFormValues = z.infer<typeof signupSchema>;
+    message: "Passwords do not match",
+    path: ["confirmPassword"]}),
+type SignupFormValues = z.infer<typeof signupSchema>,
 export default function Signup() {
-  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth();
-  const [showPassword, setShowPassword] = useState(false);
-  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { signup, loginWithGoogle, loginWithFacebook, loginWithTwitter, isLoading, isAuthenticated, user } = useAuth(),
+  const [showPassword, setShowPassword] = useState(false),
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   // Initialize react-hook-form,
   const form = useForm({
-    resolver: zodResolver(signupSchema);
+    resolver: zodResolver(signupSchema),
     defaultValues: {
-      displayName: "";
-      email: "";
-      password: "";
-      confirmPassword: "";
-      termsAccepted: false}}) as UseFormReturn<SignupFormValues>;
+      displayName: "",
+      email: "",
+      password: "",
+      confirmPassword: "",
+      termsAccepted: false}}) as UseFormReturn<SignupFormValues>,
   // Form submission handler,
   const onSubmit = async (data: SignupFormValues) => {
     if (isSubmitting) return, // Prevent multiple submissions,
@@ -206,18 +206,18 @@ export default function Signup() {
 const signup_schema = z,
   .object ({
     display_name: z.string ().min (2, "Name must be at least 2 characters"),
-    email: z.string ().email ("Please enter a valid email");
+    email: z.string ().email ("Please enter a valid email"),
     password: z.string (),
       .min (8, "Password must be at least 8 characters"),
       .regex (/[A - Z]/, "Password must contain at least one uppercase letter"),
       .regex (/[a - z]/, "Password must contain at least one lowercase letter"),
       .regex (/[0 - 9]/, "Password must contain at least one number"),
-    confirm_password: z.string ();
+    confirm_password: z.string (),
     terms_accepted: z.boolean ().refine (val => val === true, {
       message: "You must accept the terms and conditions"})}),
   .refine (data => data.password === data.confirm_password, {
-    message: "Passwords do not match";
-    path: ["confirm_password"]});
+    message: "Passwords do not match",
+    path: ["confirm_password"]}),
 type SignupFormValues = z.infer < typeof signup_schema>,
 export default /**,
  * Signup - Function description,
@@ -229,13 +229,13 @@ function Signup() {
   const [is_submitting, setIsSubmitting] = useState (false),
   // Initialize react - hook - form,
   const form = use_form ({
-    resolver: zod_resolver (signup_schema);
+    resolver: zod_resolver (signup_schema),
     default_values: {
-      display_name: "";
-      email: "";
-      password: "";
-      confirm_password: "";
-      terms_accepted: false}}) as UseFormReturn < SignupFormValues>;
+      display_name: "",
+      email: "",
+      password: "",
+      confirm_password: "",
+      terms_accepted: false}}) as UseFormReturn < SignupFormValues>,
   // Form submission handler,
   const on_submit = async (data: SignupFormValues) => {
     // Check condition,

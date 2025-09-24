@@ -8,9 +8,9 @@ interface DropdownMenuProps {
   className?: string}
 ,
 const DropdownMenu: React.FC<DropdownMenuProps> = ({
-  trigger;
-  children;
-  className = '';
+  trigger,
+  children,
+  className = ''
 }) => {
   const [isOpen, setIsOpen] = useState(false),
   return (
@@ -26,7 +26,7 @@ const DropdownMenu: React.FC<DropdownMenuProps> = ({
         >,
           <div className='py-2'>{children}</div>,
         </div>)}
-    </div>)};
+    </div>)},
 const DropdownItem: React.FC<{ item: NavigationItem }> = ({ item }) => (
   <Link
     href={item.href}
@@ -54,65 +54,65 @@ export default function SmartHeader() {
     if (!navigation) return [],
     return [
       {
-        id: 'home';
-        label: '🏠 Home';
-        href: '/';
-        priority: 1;
-      };
+        id: 'home',
+        label: '🏠 Home',
+        href: '/',
+        priority: 1
+      },
       {
-        id: 'explore';
-        label: '🔍 Explore';
-        href: '/explore';
-        priority: 2;
-      };
+        id: 'explore',
+        label: '🔍 Explore',
+        href: '/explore',
+        priority: 2
+      },
       {
-        id: 'services';
-        label: '🚀 Services';
-        href: '/services';
-        priority: 3;
-      };
+        id: 'services',
+        label: '🚀 Services',
+        href: '/services',
+        priority: 3
+      },
       {
-        id: 'automation';
-        label: '⚡ Automations';
-        href: '/automation';
-        priority: 4;
-      };
+        id: 'automation',
+        label: '⚡ Automations',
+        href: '/automation',
+        priority: 4
+      },
       {
-        id: 'reports';
-        label: '📊 Reports';
-        href: '/reports';
-        priority: 5;
-      };
+        id: 'reports',
+        label: '📊 Reports',
+        href: '/reports',
+        priority: 5
+      },
       {
-        id: 'newsroom';
-        label: '📰 Updates';
-        href: '/newsroom';
-        priority: 6;
-      };
+        id: 'newsroom',
+        label: '📰 Updates',
+        href: '/newsroom',
+        priority: 6
+      },
       {
-        id: 'search';
-        label: '🔎 Search';
-        href: '/search';
-        priority: 7;
-      };
+        id: 'search',
+        label: '🔎 Search',
+        href: '/search',
+        priority: 7
+      },
     ]}, [navigation]),
   // Auto-categorize and group items for dropdown menus,
   const categorizedNav = useMemo(() => {
     if (!navigation) return [],
     // Create service categories dropdown,
     const servicesCategory = {
-      id: 'services-dropdown';
-      name: 'Services';
+      id: 'services-dropdown',
+      name: 'Services',
       items: navigation.services.sort(
-        (a, b) => (a.priority || 0) - (b.priority || 0));
-    };
+        (a, b) => (a.priority || 0) - (b.priority || 0)),
+    },
     // Create category-based dropdowns,
     const categoryDropdowns = navigation.categories.map(category => ({
-      id: `category-${category.id}`;
-      name: category.name;
+      id: `category-${category.id}`,
+      name: category.name,
       items: navigation.services,
         .filter(service => service.category === category.name),
-        .sort((a, b) => (a.priority || 0) - (b.priority || 0));
+        .sort((a, b) => (a.priority || 0) - (b.priority || 0)),
     })),
     return [servicesCategory, ...categoryDropdowns]}, [navigation]),
   // Generate main navigation with dropdowns,
@@ -120,57 +120,57 @@ export default function SmartHeader() {
     if (!navigation) return navItems,
     return [
       {
-        id: 'home';
-        label: '🏠 Home';
-        href: '/';
-        priority: 1;
-      };
+        id: 'home',
+        label: '🏠 Home',
+        href: '/',
+        priority: 1
+      },
       {
-        id: 'explore';
-        label: '🔍 Explore';
-        href: '/explore';
-        priority: 2;
-      };
+        id: 'explore',
+        label: '🔍 Explore',
+        href: '/explore',
+        priority: 2
+      },
       // Services dropdown,
       {
-        id: 'services-dropdown';
-        label: '🚀 Services';
-        href: '#';
-        priority: 3;
-        isDropdown: true;
-      };
+        id: 'services-dropdown',
+        label: '🚀 Services',
+        href: '#',
+        priority: 3,
+        isDropdown: true
+      },
       // Categories dropdown,
       {
-        id: 'categories-dropdown';
-        label: '📂 Categories';
-        href: '#';
-        priority: 4;
-        isDropdown: true;
-      };
+        id: 'categories-dropdown',
+        label: '📂 Categories',
+        href: '#',
+        priority: 4,
+        isDropdown: true
+      },
       {
-        id: 'automation';
-        label: '⚡ Automations';
-        href: '/automation';
-        priority: 5;
-      };
+        id: 'automation',
+        label: '⚡ Automations',
+        href: '/automation',
+        priority: 5
+      },
       {
-        id: 'reports';
-        label: '📊 Reports';
-        href: '/reports';
-        priority: 6;
-      };
+        id: 'reports',
+        label: '📊 Reports',
+        href: '/reports',
+        priority: 6
+      },
       {
-        id: 'newsroom';
-        label: '📰 Updates';
-        href: '/newsroom';
-        priority: 7;
-      };
+        id: 'newsroom',
+        label: '📰 Updates',
+        href: '/newsroom',
+        priority: 7
+      },
       {
-        id: 'search';
-        label: '🔎 Search';
-        href: '/search';
-        priority: 8;
-      };
+        id: 'search',
+        label: '🔎 Search',
+        href: '/search',
+        priority: 8
+      },
     ]}, [navigation, navItems]),
   if (isLoading) {
     return (

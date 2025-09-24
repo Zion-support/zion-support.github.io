@@ -2,10 +2,10 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o26: Policy-as-Code Templates for Agent Governance | Zion Tech Group';
+    'AI 20o26: Policy-as-Code Templates for Agent Governance | Zion Tech Group',
   description:,
-    'Ready-to-use policy-as-code templates to enforce guardrails, approvals, and eval gates for autonomous agents.';
-};
+    'Ready-to-use policy-as-code templates to enforce guardrails, approvals, and eval gates for autonomous agents.',
+},
 const PolicyAsCodeTemplates20o26 = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -56,5 +56,5 @@ const PolicyAsCodeTemplates20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default PolicyAsCodeTemplates20o26;
+    </div>)},
+export default PolicyAsCodeTemplates20o26,

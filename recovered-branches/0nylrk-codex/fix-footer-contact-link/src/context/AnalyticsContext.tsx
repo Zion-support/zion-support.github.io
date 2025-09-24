@@ -52,41 +52,41 @@ export function AnalyticsProvider({ children }: { children: ReactNode }) {
   // Function to track general analytics events,
   const trackEvent = async (type: AnalyticsEventTypemetadata: Record<stringany> = {}) => {
     const event: AnalyticsEvent = {
-      type;
-      path: location.pathname;
-      timestamp: Date.now();
-      userId: user?.id;
-      metadata};
+      type,
+      path: location.pathname,
+      timestamp: Date.now(),
+      userId: user?.id,
+      metadata},
     setEvents((prevEvents) => [...prevEventsevent]),
     setLastEvent(event),
     try {
       // Store event in Supabase for persistent analytics,
       await supabase.from('analytics_events').insert([{
-        event_type: type;
-        path: location.pathname;
-        user_id: user?.id;
+        event_type: type,
+        path: location.pathname,
+        user_id: user?.id,
         metadata: metadata}]),
       // // console.log(`Analytics event tracked: ${type}`metadata)} catch (error) {
       console.error('Error logging analytics event: 'error)}
-  };
+  },
   // Function to track conversion events,
   const trackConversion = (conversionType: stringvalue?: numbermetadata: Record<stringany> = {}) => {
     trackEvent('conversion'{
       conversionType,
       value,
-      ...metadata})};
+      ...metadata})},
   // Clear events (for development or testing),
   const clearEvents = () => {
     setEvents([]),
-    setLastEvent(null)};
+    setLastEvent(null)},
   return (
     <AnalyticsContext.Provider,
       value={{
-        trackEvent;
-        trackConversion;
-        pageViews;
-        lastEvent;
-        events;
+        trackEvent,
+        trackConversion,
+        pageViews,
+        lastEvent,
+        events,
         clearEvents}}
     >,
       {children}
@@ -98,4 +98,4 @@ export const useAnalytics = (): AnalyticsContextType => {
     throw new Error('useAnalytics must be used within an AnalyticsProvider')}
   // Cast is used here because the context default is undefined until provided,
   // by `AnalyticsProvider`. The runtime check above ensures it's defined.,
-  return context as AnalyticsContextType};
+  return context as AnalyticsContextType},

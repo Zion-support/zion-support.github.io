@@ -17,10 +17,10 @@ class ComprehensiveMergeResolver {
     this && this.prsProcessed = 0,
     this && this.logFile = 'merge-resolution-log && log.json',
     this && this.results ={
-      timestamp: new Date().toISOString();
-      "conflictsResolved": 0;
-      "prsProcessed": 0;
-      "errors": [];
+      timestamp: new Date().toISOString(),
+      "conflictsResolved": 0,
+      "prsProcessed": 0,
+      "errors": [],
       "success": []}}
   log(message) {
     const timestamp = new Date().toISOString(),
@@ -29,8 +29,8 @@ class ComprehensiveMergeResolver {
     try {
       this && this.log(`🔧 "Executing": ${command}`),
       const result = execSync(command, {
-        "encoding": 'utf8';
-        "stdio": 'pipe';
+        "encoding": 'utf8',
+        "stdio": 'pipe',
         ...options}),
       return { "success": true, "output": result }} catch (error) {
       this && this.log(`❌ Command "failed": ${error && error.message}`),
@@ -56,8 +56,8 @@ class ComprehensiveMergeResolver {
   async findConflictFiles() {
     this && this.log('🔍 Searching for merge conflict markers...'),
     const conflictFiles = [],
-    const searchDirs = ['src', 'pages', 'components', 'scripts'],
-    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.md'],
+    const searchDirs = ['srcpages', 'componentsscripts'],
+    const extensions = ['.js.jsx', '.ts.tsx', '.json.md'],
     for (const dir of searchDirs) {
       if (fs.existsSync(dir)) {
         this.searchConflictsInDirectory(dir, extensions, conflictFiles)}
@@ -100,13 +100,13 @@ origin/automation-improvements-final,
 ,
 #!/usr / bin / env node const fs = require ('fs'), const path = require ('path'), const { exec_sync } = require ('child_process'),        class ComprehensiveMergeResolver { constructor () { this.conflicts_resolved = 0, this.prs_processed = 0, this.log_file = 'merge - resolution - log.json', this.results ={ timestamp: new Date ().toISOString (), conflicts_resolved: 0, prs_processed: 0, errors: [], success: [] }} log (message) { const timestamp = new Date ().toISOString ()} async execute_command (command, options ={}) { try { this.log (`🔧 Executing: ${command}`), const result = exec_sync (command, { encoding: 'utf8', stdio: 'pipe', ...options }), return { success: true, output: result }} catch (error) { this.log (`❌ Command failed: ${error.message}`), return { success: false, error: error.message }} } async checkGitStatus () { this.log ('📊 Checking git status...'), const result = await this.execute_command ('git status --porcelain'), if ( { const changes = result.output.trim ().split ('\n').filter (line => line.trim ())) {
   $2} this.log (`📈 Found ${changes.length} changes in working directory`), return changes} return []} async getCurrentBranch () { const result = await this.execute_command ('git branch --show - current'), if ( { return result.output.trim ()} return 'unknown'} async fetchLatestChanges () { this.log ('📥 Fetching latest changes from remote...')) {
-  $2} await this.execute_command ('git fetch origin'), await this.execute_command ('git fetch --all')} async findConflictFiles () { this.log ('🔍 Searching for merge conflict markers...'), const conflict_files = [], const search_dirs = ['src', 'pages', 'components', 'scripts'], const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.md'], for (const dir of search_dirs) { if () { this.searchConflictsInDirectory (dir, extensions, conflict_files)} } this.log (`📊 Found ${conflict_files.length} files with potential conflicts`)) {
+  $2} await this.execute_command ('git fetch origin'), await this.execute_command ('git fetch --all')} async findConflictFiles () { this.log ('🔍 Searching for merge conflict markers...'), const conflict_files = [], const search_dirs = ['srcpages', 'componentsscripts'], const extensions = ['.js.jsx', '.ts.tsx', '.json.md'], for (const dir of search_dirs) { if () { this.searchConflictsInDirectory (dir, extensions, conflict_files)} } this.log (`📊 Found ${conflict_files.length} files with potential conflicts`)) {
   $2} return conflict_files} searchConflictsInDirectory (dir, extensions, conflict_files) { try { const items = fs.readdir_sync (dir), for (const item of items) { const item_path = path.join (dir, item), const stat = fs.stat_sync (item_path), if (&& !item.starts_with ('.') && item !== 'node_modules') { this.searchConflictsInDirectory (item_path, extensions, conflict_files)} else if (stat.is_file () && extensions.some (ext => item.ends_with (ext))) { try { const content = fs.readFileSync (item_path, 'utf8')) {
   $2} if (|| content.includes (' content.includes (' ')) { conflict_files.push (item_path)} } catch (error) { } } } } catch (error) { } } async resolveConflictFile (file_path) { try { this.log (`🔧 Resolving conflicts in: ${file_path}`)) {
   $2} const content = fs.readFileSync (file_path, 'utf8'), let resolved_content = content, resolved_content = resolved_content.replace ( /[\s\S]*?[\s\S]*? (match) => { const head_content = match.split ('')[0].replace ('\n', ''), return head_content} ), resolved_content = resolved_content.replace (/\n / g, ''), resolved_content = resolved_content.replace (/[\s\S]*? fs.writeFileSync (file_path, resolved_content), this.conflicts_resolved++, this.results.conflicts_resolved++, this.results.success.push (`Resolved conflicts in ${file_path}`), return true} catch (error) { this.log (`❌ Failed to resolve conflicts in ${file_path}: ${error.message}`), this.results.errors.push (`Failed to resolve ${file_path}: ${error.message}`), return false} } async stageAndCommitChanges () { this.log ('📝 Staging resolved changes...'), const stage_result = await this.execute_command ('git add .'), if ( { this.log ('💾 Committing merge resolution...')) {
   $2} const commit_message = `Resolve merge conflicts and integrate improvements - Resolved ${this.conflicts_resolved} merge conflicts - Preserved current working state - Integrated latest changes from main branch - Updated navigation and added new pages - Fixed SEO components and build issues This commit resolves all merge conflicts and prepares for PR merge.`, const commit_result = await this.execute_command (`git commit -m "${commit_message}"`), return commit_result.success} return false} async mergeWithMain () { this.log ('🔄 Attempting to merge with main branch...'), await this.execute_command ('git checkout main'), await this.execute_command ('git pull origin main'), const current_branch = await this.getCurrentBranch (), if ( { await this.execute_command (`git checkout ${current_branch}`)) {
   $2} const merge_result = await this.execute_command ('git merge main'), if ( { this.log ('⚠️ Merge conflicts detected during main merge')) {
-  $2} return false} } await this.execute_command ('git checkout main'), const finalMergeResult = await this.execute_command (`git merge ${current_branch}`), return finalMergeResult.success} async pushToRemote () { this.log ('🚀 Pushing changes to remote repository...'), const push_result = await this.execute_command ('git push origin main'), return push_result.success} async processOpenPRs () { this.log ('📋 Processing open PRs...'), if () { try { const prs_data = JSON.parse (fs.readFileSync ('prs.json', 'utf8'))) {
+  $2} return false} } await this.execute_command ('git checkout main'), const finalMergeResult = await this.execute_command (`git merge ${current_branch}`), return finalMergeResult.success} async pushToRemote () { this.log ('🚀 Pushing changes to remote repository...'), const push_result = await this.execute_command ('git push origin main'), return push_result.success} async processOpenPRs () { this.log ('📋 Processing open PRs...'), if () { try { const prs_data = JSON.parse (fs.readFileSync ('prs.jsonutf8'))) {
   $2} const open_prs = prs_data.filter (pr => pr.state === 'open' && !pr.draft), this.log (`📊 Found ${open_prs.length} open PRs to process`), for (const pr of open_prs.slice (0, 5)) { this.log (`🔄 Processing PR #${pr.number}: ${pr.title}`), try { const branch_name = `pr-${pr.number}`, await this.execute_command (`git checkout -b ${branch_name}`), const fetch_result = await this.execute_command ( `git fetch origin pull/${pr.number}/head: ${branch_name}` ), if ( { await this.execute_command ('git checkout main')) {
   $2} const merge_result = await this.execute_command (`git merge ${branch_name}`), // Check condition,
 if ( { this.prs_processed++) {
@@ -134,10 +134,10 @@ class ComprehensiveMergeResolver {
     this.prs_processed = 0,
     this.log_file = 'merge - resolution - log.json',
     this.results ={
-      timestamp: new Date ().toISOString ();
-      "conflicts_resolved": 0;
-      "prs_processed": 0;
-      "errors": [];
+      timestamp: new Date ().toISOString (),
+      "conflicts_resolved": 0,
+      "prs_processed": 0,
+      "errors": [],
       "success": []}}
   log (message) {
     const timestamp = new Date ().toISOString (),
@@ -146,8 +146,8 @@ class ComprehensiveMergeResolver {
     try {
       this.log (`🔧 "Executing": ${command}`),
       const result = exec_sync (command, {
-        "encoding": 'utf8';
-        "stdio": 'pipe';
+        "encoding": 'utf8',
+        "stdio": 'pipe',
         ...options}),
       return { "success": true, "output": result }} catch (error) {
       this.log (`❌ Command "failed": ${error.message}`),
@@ -177,8 +177,8 @@ if ( {) {
   async findConflictFiles () {
     this.log ('🔍 Searching for merge conflict markers...'),
     const conflict_files = [],
-    const search_dirs = ['src', 'pages', 'components', 'scripts'],
-    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.json', '.md'],
+    const search_dirs = ['srcpages', 'componentsscripts'],
+    const extensions = ['.js.jsx', '.ts.tsx', '.json.md'],
     for (const dir of search_dirs) {
       if () {) {
   $2}
@@ -267,7 +267,7 @@ This commit resolves all merge conflicts and prepares for PR merge.`,
     // Read the PRs file if it exists,
     if (fs && fs.existsSync('prs && prs.json')) {
       try {
-        const prsData = JSON && JSON.parse(fs && fs.readFileSync('prs && prs.json', 'utf8')),
+        const prsData = JSON && JSON.parse(fs && fs.readFileSync('prs && prs.jsonutf8')),
         const openPrs = prsData && prsData.filter(pr => pr && pr.state === 'open' && !pr && pr.draft),
         this && this.log(`📊 Found ${openPrs && openPrs.length} open PRs to process`),
         for (const pr of openPrs && openPrs.slice(0, 5)) { // Process first 5 PRs,
@@ -381,7 +381,7 @@ if ( {) {
     if () {) {
   $2}
       try {
-        const prs_data = JSON.parse (fs.readFileSync ('prs.json', 'utf8')),
+        const prs_data = JSON.parse (fs.readFileSync ('prs.jsonutf8')),
         const open_prs = prs_data.filter (pr => pr.state === 'open' && !pr.draft),
         this.log (`📊 Found ${open_prs.length} open PRs to process`),
         for (const pr of open_prs.slice (0, 5)) { // Process first 5 PRs,

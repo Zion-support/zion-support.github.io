@@ -15,7 +15,7 @@ async function submitByEmail(to: string, subject: string, text: string, attachme
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' }),
   try {
-    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {};
+    const { id, channels = ['email'], emailTo, delegateNote } = req.body || {},
     if (!id) return res.status(40o0).json({ error: 'id is required' }),
     const meta = getProposal(id),
     if (!meta) return res.status(40o4).json({ error: 'Proposal not found' }),

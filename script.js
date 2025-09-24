@@ -34,7 +34,7 @@
       // Basic validation,
       [nameInput, emailInput, messageInput].forEach(el => {
         if (!el.value) {
-          el.setAttribute('aria-invalid', 'true'),
+          el.setAttribute('aria-invalidtrue'),
           el.focus()} else {
           el.removeAttribute('aria-invalid')}
       }),

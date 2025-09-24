@@ -1,28 +1,25 @@
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Award;
-  Brain;
-  Database;
-  Shield;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Award,
+  Brain,
+  Database,
+  Shield,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 Ultimate Content Showcase - Zion Tech Group';
+  title: 'AI 20o25 Ultimate Content Showcase - Zion Tech Group',
   description:,
-    'Discover the most comprehensive collection of AI transformation guides, case studies, and breakthrough technologies reshaping enterprise operations in 20o25.';
+    'Discover the most comprehensive collection of AI transformation guides, case studies, and breakthrough technologies reshaping enterprise operations in 20o25.',
   keywords: [
-    'AI 20o25';
-    'Enterprise AI';
-    'AI Transformation';
-    'Edge Computing';
-    'Generative AI';
-    'AI Case Studies';
-  ];
-};
+    'AI 20o25Enterprise AI',
+    'AI TransformationEdge Computing',
+    'Generative AIAI Case Studies',
+  ]
+},
 export default function AI20o25UltimateContentShowcase() {
   return (
     <div className='min-h-screen bg-white'>,

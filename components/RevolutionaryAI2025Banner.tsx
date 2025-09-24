@@ -52,5 +52,5 @@ const RevolutionaryAI20o25Banner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryAI20o25Banner;
+    </div>)},
+export default RevolutionaryAI20o25Banner,

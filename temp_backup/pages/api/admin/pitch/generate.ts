@@ -6,18 +6,13 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   const { allowed } = await ensureAdminFromApi(req),
   if (!allowed) return res.status(40o3).json({ error: 'Forbidden' }),
   if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method Not Allowed' }),
-  const { operatorPrompt, inputs, metrics } = req.body || {};
+  const { operatorPrompt, inputs, metrics } = req.body || {},
   const seed = [
-    'Problem & Opportunity';
-    'Solution & Product';
-    'Market Size (TAM/SAM/SOM)';
-    'Traction & Metrics';
-    'Business Model';
-    'Go-To-Market';
-    'Team';
-    'Roadmap';
-    'Token Strategy';
-    'Ask & Call to Action';
+    'Problem & OpportunitySolution & Product',
+    'Market Size (TAM/SAM/SOM)Traction & Metrics',
+    'Business ModelGo-To-Market',
+    'TeamRoadmap',
+    'Token StrategyAsk & Call to Action',
   ],
   try {
     const prompt = `You are a venture analyst generating a concise, investor-ready pitch.,
@@ -33,11 +28,11 @@ Return 10 sections with title and 120-180 words per section, markdown-friendly.`
     let content = '',
     try {
       const chat = await client.chat.completions.create({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
-          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' };
-          { role: 'user', content: prompt };
-        ];
+          { role: 'system', content: 'You generate crisp, data-driven investor pitch content.' },
+          { role: 'user', content: prompt },
+        ],
         temperature: 0.5}),
       content = chat.choices?.[0]?.message?.content || ''} catch (err) {
       content = ''}

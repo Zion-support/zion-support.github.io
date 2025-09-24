@@ -18,7 +18,7 @@ const ThemeToggle = () => {
       document.documentElement.classList.remove('light')} else {
       document.documentElement.classList.add('light'),
       document.documentElement.classList.remove('dark')}
-  };
+  },
   return (
     <button
       onClick={toggleTheme}
@@ -28,5 +28,5 @@ const ThemeToggle = () => {
       {isDark ? (
         <SunIcon className='w-5 h-5 text-yellow-40o0 group-hover: text-yellow-30o0 transition-colors duration-30o0' />) : (
         <MoonIcon className='w-5 h-5 text-blue-40o0 group-hover:text-blue-30o0 transition-colors duration-30o0' />)}
-    </button>)};
-export default ThemeToggle;
+    </button>)},
+export default ThemeToggle,

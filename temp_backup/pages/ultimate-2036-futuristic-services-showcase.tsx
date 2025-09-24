@@ -3,12 +3,12 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Star, DollarSign, CheckCircle, Rocket, Phone, Mail, MapPin;
-  Grid, List, ChevronDown, Brain, Atom, Shield, Zap, Globe, Users;
-  TrendingUp, Award, Clock, Heart, Lightbulb, Sparkles, Cpu, Lock;
-  Cloud, Settings, Eye, User, ShoppingCart, Bell, HelpCircle, FileText;
-  Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone;
-  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building;
+  Search, Star, DollarSign, CheckCircle, Rocket, Phone, Mail, MapPin,
+  Grid, List, ChevronDown, Brain, Atom, Shield, Zap, Globe, Users,
+  TrendingUp, Award, Clock, Heart, Lightbulb, Sparkles, Cpu, Lock,
+  Cloud, Settings, Eye, User, ShoppingCart, Bell, HelpCircle, FileText,
+  Video, Headphones, Code, Database, Network, Server, Monitor, Smartphone,
+  Camera, Gamepad2, Palette, Music, Film, BookOpenCheck, Building,
   MessageCircle, Target, BarChart3, Truck, BookOpen, X} from 'lucide-react',
 import { real20o36InnovativeServices } from '../data/real-20o36-innovative-services',
 import { real20o36EmergingTechServices } from '../data/real-20o36-emerging-tech-services',
@@ -20,13 +20,13 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [selectedService, setSelectedService] = useState<any>(null),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all services,
   const allServices = [
-    ...real20o36InnovativeServices;
+    ...real20o36InnovativeServices,
     ...real20o36EmergingTechServices],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
@@ -40,18 +40,18 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
   const biotechCount = allServices.filter(service =>,
     service.category?.includes('Biology') || service.category?.includes('Biotech')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length, color: 'from-blue-50o0 to-purple-60o0' };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount, color: 'from-purple-50o0 to-pink-60o0' };
-    { id: 'quantum', name: 'Quantum Technology', icon: '⚛️', count: quantumCount, color: 'from-cyan-50o0 to-blue-60o0' };
-    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount, color: 'from-green-50o0 to-emerald-60o0' };
-    { id: 'robotics', name: 'Robotics & Automation', icon: '🤖', count: roboticsCount, color: 'from-orange-50o0 to-red-60o0' };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length, color: 'from-blue-50o0 to-purple-60o0' },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount, color: 'from-purple-50o0 to-pink-60o0' },
+    { id: 'quantum', name: 'Quantum Technology', icon: '⚛️', count: quantumCount, color: 'from-cyan-50o0 to-blue-60o0' },
+    { id: 'emerging', name: 'Emerging Tech', icon: '✨', count: emergingCount, color: 'from-green-50o0 to-emerald-60o0' },
+    { id: 'robotics', name: 'Robotics & Automation', icon: '🤖', count: roboticsCount, color: 'from-orange-50o0 to-red-60o0' },
     { id: 'biotech', name: 'Biotechnology', icon: '🧬', count: biotechCount, color: 'from-teal-50o0 to-green-60o0' }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' };
-    { id: 'medium', name: '$2K - $5K/month', range: '$2K - $5K' };
-    { id: 'high', name: '$5K - $10K/month', range: '$5K - $10K' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $2K/month', range: 'Under $2K' },
+    { id: 'medium', name: '$2K - $5K/month', range: '$2K - $5K' },
+    { id: 'high', name: '$5K - $10K/month', range: '$5K - $10K' },
     { id: 'enterprise', name: 'Custom pricing', range: 'Custom' }
   ],
   // Filter and sort services,
@@ -93,22 +93,22 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
 ,
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <>,
       <Head>,
@@ -141,7 +141,7 @@ export default function Ultimate20o36FuturisticServicesShowcase() {
                 Futuristic Services Showcase,
               </h2>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed">,
-                Discover the future of technology with our comprehensive collection of cutting-edge micro SAAS services;
+                Discover the future of technology with our comprehensive collection of cutting-edge micro SAAS services,
                 AI solutions, quantum computing platforms, and emerging technology solutions designed for 20o36 and beyond.,
               </p>,
               {/* Contact Information */}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO',
 const About: React.FC = () => {
   return (
@@ -15,5 +15,5 @@ const About: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </>)};
-export default About;
+    </>)},
+export default About,

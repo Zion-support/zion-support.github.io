@@ -3,28 +3,17 @@ import { execSync } from 'child_process',
 // // console.log('🔧 Performing selective merge of main source files...'),
 // List of main source directories to merge,
 const mainSourceDirs = [
-  'pages/';
-  'components/';
-  'utils/';
-  'types/';
-  'lib/';
-  'hooks/';
-  'context/';
-  'data/';
-  'services/';
-  'store/';
-  'routes/';
-  'layout/';
-  'legal/';
-  'integrations/';
-  'middleware.ts';
-  'next.config.js';
-  'tailwind.config.js';
-  'postcss.config.cjs';
-  'tsconfig.json';
-  'package.json';
-  'package-lock.json';
-  'yarn.lock';
+  'pages/components/',
+  'utils/types/',
+  'lib/hooks/',
+  'context/data/',
+  'services/store/',
+  'routes/layout/',
+  'legal/integrations/',
+  'middleware.tsnext.config.js',
+  'tailwind.config.jspostcss.config.cjs',
+  'tsconfig.jsonpackage.json',
+  'package-lock.jsonyarn.lock',
 ],
 // Try to merge specific files from the clean-merge-services-improvements branch,
 const mergeSpecificFiles = () => {
@@ -33,7 +22,7 @@ const mergeSpecificFiles = () => {
     // // console.log(
       '📋 Checking files in clean-merge-services-improvements branch...'),
     const files = execSync(
-      'git ls-tree -r --name-only origin/clean-merge-services-improvements';
+      'git ls-tree -r --name-only origin/clean-merge-services-improvements',
       { encoding: 'utf8' }
     ),
     const fileList = files.trim().split('\n'),
@@ -48,7 +37,7 @@ const mergeSpecificFiles = () => {
     // // console.log('🍒 Attempting to cherry-pick specific changes...'),
     // Get the latest commit from the clean-merge-services-improvements branch,
     const latestCommit = execSync(
-      'git rev-parse origin/clean-merge-services-improvements';
+      'git rev-parse origin/clean-merge-services-improvements',
       { encoding: 'utf8' }
     ).trim(),
     // // console.log(`Latest commit: ${latestCommit}`),
@@ -58,7 +47,7 @@ const mergeSpecificFiles = () => {
       try {
         // // console.log(`Merging file: ${file}`),
         execSync(
-          `git checkout origin/clean-merge-services-improvements -- "${file}"`;
+          `git checkout origin/clean-merge-services-improvements -- "${file}"`,
           { stdio: 'inherit' }
         )} catch (error) {
         // // console.log(`Skipping ${file} due to conflicts`)}
@@ -67,7 +56,7 @@ const mergeSpecificFiles = () => {
     return true} catch (error) {
     console.error('Error in selective merge:', error.message),
     return false}
-};
+},
 // Main execution,
 const main = () => {
   if (mergeSpecificFiles()) {
@@ -78,12 +67,12 @@ const main = () => {
       // // console.log('📝 Files added to staging area'),
       // Commit the changes,
       execSync(
-        'git commit -m "Selective merge of main source files from clean-merge-services-improvements"';
+        'git commit -m "Selective merge of main source files from clean-merge-services-improvements"',
         { stdio: 'inherit' }
       ),
       // // console.log('✅ Changes committed')} catch (error) {
       console.error('Error committing changes:', error.message)}
   } else {
     // // console.log('❌ Selective merge failed')}
-};
+},
 main(),

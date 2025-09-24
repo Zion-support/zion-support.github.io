@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Documentation Generator | Zion Tech Group';
+  title: 'AI Documentation Generator | Zion Tech Group',
   description:,
-    'Automated documentation generation with AI-powered analysis, intelligent formatting, and multi-format output for comprehensive project documentation.';
-};
+    'Automated documentation generation with AI-powered analysis, intelligent formatting, and multi-format output for comprehensive project documentation.',
+},
 export default function AIDocumentationGeneratorPage() {
   return (
     <div className='animate-fade-in'>,
@@ -12,7 +12,7 @@ export default function AIDocumentationGeneratorPage() {
           AI Documentation Generator,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Automated documentation generation with AI-powered analysis;
+          Automated documentation generation with AI-powered analysis,
           intelligent formatting, and multi-format output for comprehensive,
           project documentation.,
         </p>,
@@ -59,11 +59,9 @@ export default function AIDocumentationGeneratorPage() {
               price='$39/month',
               description='Perfect for small projects and individual developers',
               features={[
-                'Up to 5 projects';
-                'Basic documentation generation';
-                'Email support';
-                'Standard templates';
-                'PDF export';
+                'Up to 5 projectsBasic documentation generation',
+                'Email supportStandard templates',
+                'PDF export',
               ]}
             />,
             <PricingCard
@@ -71,12 +69,9 @@ export default function AIDocumentationGeneratorPage() {
               price='$99/month',
               description='Ideal for growing teams and larger projects',
               features={[
-                'Up to 25 projects';
-                'Advanced AI generation';
-                'Priority support';
-                'Custom templates';
-                'Interactive documentation';
-                'API integration';
+                'Up to 25 projectsAdvanced AI generation',
+                'Priority supportCustom templates',
+                'Interactive documentationAPI integration',
               ]}
             />,
             <PricingCard
@@ -84,13 +79,10 @@ export default function AIDocumentationGeneratorPage() {
               price='$249/month',
               description='For large organizations with complex documentation needs',
               features={[
-                'Unlimited projects';
-                'Custom AI models';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Custom integrations';
-                'SLA guarantees';
-                'White-label options';
+                'Unlimited projectsCustom AI models',
+                '24/7 dedicated supportOn-premise deployment',
+                'Custom integrationsSLA guarantees',
+                'White-label options',
               ]}
             />,
           </div>,
@@ -143,8 +135,8 @@ export default function AIDocumentationGeneratorPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -169,10 +161,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -192,8 +184,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

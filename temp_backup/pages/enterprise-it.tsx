@@ -5,42 +5,42 @@ import { Server, CheckCircle, Database, Cloud } from 'lucide-react',
 export default function EnterpriseITPage() {
   const solutions = [
     {
-      icon: <Server className="w-8 h-8 text-blue-400" />;
-      title: 'Infrastructure Management';
-      description: 'Modernize and optimize your IT infrastructure';
-      features: ['Cloud migration', 'Hybrid cloud solutions', 'Infrastructure automation']};
+      icon: <Server className="w-8 h-8 text-blue-400" />,
+      title: 'Infrastructure Management',
+      description: 'Modernize and optimize your IT infrastructure',
+      features: ['Cloud migrationHybrid cloud solutions', 'Infrastructure automation']},
     {
-      icon: <Database className="w-8 h-8 text-green-400" />;
-      title: 'Data Management';
-      description: 'Secure, scalable data solutions for enterprise';
-      features: ['Data warehousing', 'Big data analytics', 'Data governance']};
+      icon: <Database className="w-8 h-8 text-green-400" />,
+      title: 'Data Management',
+      description: 'Secure, scalable data solutions for enterprise',
+      features: ['Data warehousingBig data analytics', 'Data governance']},
     {
-      icon: <Shield className="w-8 h-8 text-red-400" />;
-      title: 'Cybersecurity';
-      description: 'Comprehensive security for enterprise environments';
-      features: ['Threat detection', 'Identity management', 'Compliance automation']};
+      icon: <Shield className="w-8 h-8 text-red-400" />,
+      title: 'Cybersecurity',
+      description: 'Comprehensive security for enterprise environments',
+      features: ['Threat detectionIdentity management', 'Compliance automation']},
     {
-      icon: <Network className="w-8 h-8 text-purple-400" />;
-      title: 'Network Solutions';
-      description: 'High-performance networking infrastructure';
-      features: ['SD-WAN', 'Network monitoring', 'Performance optimization']}
+      icon: <Network className="w-8 h-8 text-purple-400" />,
+      title: 'Network Solutions',
+      description: 'High-performance networking infrastructure',
+      features: ['SD-WANNetwork monitoring', 'Performance optimization']}
   ],
   const services = [
     {
-      title: 'IT Strategy & Consulting';
-      description: 'Strategic IT planning and digital transformation consulting';
-      price: 'Starting at $25,000';
-      features: ['Technology assessment', 'Roadmap development', 'Change management']};
+      title: 'IT Strategy & Consulting',
+      description: 'Strategic IT planning and digital transformation consulting',
+      price: 'Starting at $25,000',
+      features: ['Technology assessmentRoadmap development', 'Change management']},
     {
-      title: 'Infrastructure Modernization';
-      description: 'Legacy system modernization and cloud transformation';
-      price: 'Starting at $50,000';
-      features: ['System analysis', 'Migration planning', 'Implementation support']};
+      title: 'Infrastructure Modernization',
+      description: 'Legacy system modernization and cloud transformation',
+      price: 'Starting at $50,000',
+      features: ['System analysisMigration planning', 'Implementation support']},
     {
-      title: 'Managed IT Services';
-      description: '24/7 IT operations and support services';
-      price: 'Starting at $15,000/month';
-      features: ['Proactive monitoring', 'Incident response', 'Performance optimization']}
+      title: 'Managed IT Services',
+      description: '24/7 IT operations and support services',
+      price: 'Starting at $15,000/month',
+      features: ['Proactive monitoringIncident response', 'Performance optimization']}
   ],
   return (
     <UltraAdvancedFuturisticBackground>,

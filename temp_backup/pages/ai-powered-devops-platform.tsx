@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPoweredDevOpsPlatform() {
   return (
@@ -10,14 +10,11 @@ export default function AIPoweredDevOpsPlatform() {
       implementationWeeks='Implementation: 3-6 weeks',
       roiNote='20-40% faster cycle time and fewer regressions',
       features={[
-        'Intelligent test and data generation';
-        'Flaky test detection and triage';
-        'PR risk scoring and change impact analysis';
-        'Automated rollback recommendations';
-        'SLO-aware deployments and feature flags';
-        'Integrations: GitHub, GitLab, Jenkins, Argo, LaunchDarkly';
+        'Intelligent test and data generationFlaky test detection and triage',
+        'PR risk scoring and change impact analysisAutomated rollback recommendations',
+        'SLO-aware deployments and feature flagsIntegrations: GitHub, GitLab, Jenkins, Argo, LaunchDarkly',
       ]}
-      industries={['SaaS', 'Fintech', 'E-commerce', 'Media']}
+      industries={['SaaSFintech', 'E-commerceMedia']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-powered-devops-platform',
     />)}

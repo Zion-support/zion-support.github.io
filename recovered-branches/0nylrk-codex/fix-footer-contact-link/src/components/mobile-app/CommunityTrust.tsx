@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 
 import { Star } from "lucide-react",
 export const CommunityTrust: React.FC = () => {
   // Stats display with social proof,
   const stats = [
-    { value: "4.8"label: "App Store Rating" };
-    { value: "50K+"label: "Downloads" };
-    { value: "96%"label: "User Satisfaction" };
+    { value: "4.8"label: "App Store Rating" },
+    { value: "50K+"label: "Downloads" },
+    { value: "96%"label: "User Satisfaction" },
     { value: "12M+"label: "Matches Made" }
   ],
   return (
@@ -43,4 +43,4 @@ export const CommunityTrust: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

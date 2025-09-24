@@ -9,22 +9,22 @@ interface CodeBlockProps {
   className?: string}
 ,
 export function CodeBlock({
-  code;
-  language = 'bash';
-  showLineNumbers = false;
+  code,
+  language = 'bash',
+  showLineNumbers = false,
   className}: CodeBlockProps) {
   const [copiedsetCopied] = useState(false),
   const handleCopyClick = async () => {
     await navigator.clipboard.writeText(code),
     setCopied(true),
     setTimeout(() => {
-      setCopied(false)}2000)};
+      setCopied(false)}2000)},
   return (
     <div className={cn(
-      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto";
+      "relative rounded-md bg-zinc-900 text-zinc-50 font-mono text-sm overflow-x-auto",
       className)}>,
       <pre className={cn(
-        "p-4 overflow-auto";
+        "p-4 overflow-auto",
         showLineNumbers && "pl-12 relative")}>,
         {showLineNumbers && (
           <div className="absolute left-0 top-0 bottom-0 w-8 bg-zinc-800 flex flex-col items-end pr-2 text-zinc-500">,
@@ -47,4 +47,4 @@ export function CodeBlock({
         </div>)}
     </div>)}
 ,
-export default CodeBlock;
+export default CodeBlock,

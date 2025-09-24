@@ -78,9 +78,9 @@ export default function NewContentShowcaseBanner() {
             key={i}
             className="absolute w-2 h-2 bg-white/20 rounded-full animate-ping",
             style={{
-              left: `${Math.random() * 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
-              animationDelay: `${Math.random() * 4}s`;
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
+              animationDelay: `${Math.random() * 4}s`,
               animationDuration: `${3 + Math.random() * 2}s`}}
            />))}
       </div>,

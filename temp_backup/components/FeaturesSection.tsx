@@ -4,59 +4,59 @@ const FeaturesSection: React.FC = () => {
   const [hoveredCard, setHoveredCard] = useState<number | null>(null),
   const features = [
     {
-      icon: '🤖';
-      title: 'AI & Machine Learning';
+      icon: '🤖',
+      title: 'AI & Machine Learning',
       description:,
-        'Advanced artificial intelligence solutions that learn, adapt, and evolve with your business needs.';
-      color: 'from-cyan-50o0 to-blue-60o0';
-      glow: 'glow';
-      link: '/services#ai';
-    };
+        'Advanced artificial intelligence solutions that learn, adapt, and evolve with your business needs.',
+      color: 'from-cyan-50o0 to-blue-60o0',
+      glow: 'glow',
+      link: '/services#ai'
+    },
     {
-      icon: '⚡';
-      title: 'Cloud Infrastructure';
+      icon: '⚡',
+      title: 'Cloud Infrastructure',
       description:,
-        'Scalable cloud solutions designed for performance, security, and seamless integration.';
-      color: 'from-purple-50o0 to-pink-60o0';
-      glow: 'glow-purple';
-      link: '/services#cloud';
-    };
+        'Scalable cloud solutions designed for performance, security, and seamless integration.',
+      color: 'from-purple-50o0 to-pink-60o0',
+      glow: 'glow-purple',
+      link: '/services#cloud'
+    },
     {
-      icon: '🔒';
-      title: 'Cybersecurity';
+      icon: '🔒',
+      title: 'Cybersecurity',
       description:,
-        'Comprehensive security frameworks protecting your digital assets and ensuring compliance.';
-      color: 'from-green-50o0 to-emerald-60o0';
-      glow: 'glow-green';
-      link: '/services#security';
-    };
+        'Comprehensive security frameworks protecting your digital assets and ensuring compliance.',
+      color: 'from-green-50o0 to-emerald-60o0',
+      glow: 'glow-green',
+      link: '/services#security'
+    },
     {
-      icon: '📱';
-      title: 'Digital Transformation';
+      icon: '📱',
+      title: 'Digital Transformation',
       description:,
-        'End-to-end digital solutions that modernize operations and enhance customer experiences.';
-      color: 'from-orange-50o0 to-red-60o0';
-      glow: 'glow-orange';
-      link: '/services#digital';
-    };
+        'End-to-end digital solutions that modernize operations and enhance customer experiences.',
+      color: 'from-orange-50o0 to-red-60o0',
+      glow: 'glow-orange',
+      link: '/services#digital'
+    },
     {
-      icon: '🌐';
-      title: 'IoT Solutions';
+      icon: '🌐',
+      title: 'IoT Solutions',
       description:,
-        'Connected device ecosystems that gather data and enable smart decision-making.';
-      color: 'from-indigo-50o0 to-purple-60o0';
-      glow: 'glow-purple';
-      link: '/services#iot';
-    };
+        'Connected device ecosystems that gather data and enable smart decision-making.',
+      color: 'from-indigo-50o0 to-purple-60o0',
+      glow: 'glow-purple',
+      link: '/services#iot'
+    },
     {
-      icon: '📊';
-      title: 'Data Analytics';
+      icon: '📊',
+      title: 'Data Analytics',
       description:,
-        'Powerful insights from your data to drive strategic decisions and optimize window.window.performance.';
-      color: 'from-yellow-50o0 to-orange-60o0';
-      glow: 'glow-yellow';
-      link: '/services#analytics';
-    };
+        'Powerful insights from your data to drive strategic decisions and optimize window.window.performance.',
+      color: 'from-yellow-50o0 to-orange-60o0',
+      glow: 'glow-yellow',
+      link: '/services#analytics'
+    },
   ],
   return (
     <section className='relative py-24 px-6 overflow-hidden'>,
@@ -151,5 +151,5 @@ const FeaturesSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default FeaturesSection;
+    </section>)},
+export default FeaturesSection,

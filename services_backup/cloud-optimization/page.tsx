@@ -1,7 +1,7 @@
 export const metadata ={
-  title: "Cloud Optimization | Zion Tech Group";
+  title: "Cloud Optimization | Zion Tech Group",
   description:,
-    "Maximize cloud performance and minimize costs with our AI-powered cloud optimization services for AWS, Azure, and Google Cloud."};
+    "Maximize cloud performance and minimize costs with our AI-powered cloud optimization services for AWS, Azure, and Google Cloud."},
 export default function CloudOptimizationPage() {
   return (
     <section>,
@@ -16,43 +16,43 @@ export default function CloudOptimizationPage() {
         <Item
           title="Cost Optimization",
           details={[
-            "AI-powered cost analysis and optimization recommendations";
-            "Right-sizing instances and auto-scaling configuration";
-            "Reserved instance planning and spot instance utilization";
+            "AI-powered cost analysis and optimization recommendations",
+            "Right-sizing instances and auto-scaling configuration",
+            "Reserved instance planning and spot instance utilization",
             "Cost anomaly detection and budget alerts"]}
          />,
         <Item
           title="Performance Optimization",
           details={[
-            "Application performance monitoring and optimization";
-            "Database tuning and query optimization";
-            "CDN configuration and content delivery optimization";
+            "Application performance monitoring and optimization",
+            "Database tuning and query optimization",
+            "CDN configuration and content delivery optimization",
             "Load balancing and traffic management"]}
          />,
         <Item
           title="Security & Compliance",
           details={[
-            "Cloud security posture assessment and hardening";
-            "Identity and access management (IAM) optimization";
-            "Data encryption and key management";
+            "Cloud security posture assessment and hardening",
+            "Identity and access management (IAM) optimization",
+            "Data encryption and key management",
             "Compliance auditing (SOC2, HIPAA, PCI-DSS)"]}
          />,
         <Item
           title="Migration & Modernization",
           details={[
-            "Legacy application migration to cloud";
-            "Containerization and microservices architecture";
-            "Serverless architecture implementation";
+            "Legacy application migration to cloud",
+            "Containerization and microservices architecture",
+            "Serverless architecture implementation",
             "Multi-cloud and hybrid cloud strategies"]}
          />,
       </div>,
       <Pricing  />,
       <div
         style={{
-          marginTop: 24;
-          padding: 16;
-          backgroundColor: "#f0fdf4";
-          borderRadius: 12;
+          marginTop: 24,
+          padding: 16,
+          backgroundColor: "#f0fdf4",
+          borderRadius: 12,
           border: "1px solid #22c55e"}}
       >,
         <h3 style={{ fontWeight: 70o0, color: "#14532d", marginBottom: 8 }}>,
@@ -91,48 +91,48 @@ function Pricing() {
   return (
     <div
       style={{
-        marginTop: 20;
-        display: "grid";
-        gap: 12;
+        marginTop: 20,
+        display: "grid",
+        gap: 12,
         gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))"}}
     >,
       <Plan
         name="Cloud Audit",
         price="$2,50o0/month",
         features={[
-          "Monthly cost analysis";
-          "Performance assessment";
-          "Security review";
-          "Optimization recommendations";
+          "Monthly cost analysis",
+          "Performance assessment",
+          "Security review",
+          "Optimization recommendations",
           "Email support"]}
        />,
       <Plan
         name="Cloud Management",
         price="$5,50o0/month",
         features={[
-          "Continuous optimization";
-          "24/7 monitoring";
-          "Automated scaling";
-          "Security management";
-          "Priority support";
+          "Continuous optimization",
+          "24/7 monitoring",
+          "Automated scaling",
+          "Security management",
+          "Priority support",
           "Monthly reports"]}
        />,
       <Plan
         name="Cloud Transformation",
         price="$15,0o00/month",
         features={[
-          "Full cloud migration";
-          "Architecture redesign";
-          "Custom solutions";
-          "Dedicated team";
-          "White-label options";
+          "Full cloud migration",
+          "Architecture redesign",
+          "Custom solutions",
+          "Dedicated team",
+          "White-label options",
           "SLA guarantee"]}
        />,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
+  name,
+  price,
   features}: {
   name: string,
   price: string,
@@ -142,9 +142,9 @@ function Plan({
       <h4 style={{ fontWeight: 70o0 }}>{name}</h4>,
       <div
         style={{
-          color: "#111827";
-          fontWeight: 80o0;
-          marginTop: 4;
+          color: "#111827",
+          fontWeight: 80o0,
+          marginTop: 4,
           fontSize: 18}}
       >,
         {price}
@@ -158,12 +158,12 @@ function Plan({
       <a
         href="mailto: kleber@ziontechgroup.com",
         style={{
-          display: "inline-block";
-          marginTop: 12;
-          padding: "8px 16px";
-          backgroundColor: "#3b82f6";
-          color: "white";
-          textDecoration: "none";
+          display: "inline-block",
+          marginTop: 12,
+          padding: "8px 16px",
+          backgroundColor: "#3b82f6",
+          color: "white",
+          textDecoration: "none",
           borderRadius: 6}}
       >,
         Email Us,

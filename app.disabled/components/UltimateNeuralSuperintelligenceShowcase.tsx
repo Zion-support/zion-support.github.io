@@ -5,79 +5,79 @@ const UltimateNeuralSuperintelligenceShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'neural-superintelligence-revolution';
-      title: 'AI 20o25-20o26: The Ultimate Neural Superintelligence Revolution';
+      id: 'neural-superintelligence-revolution',
+      title: 'AI 20o25-20o26: The Ultimate Neural Superintelligence Revolution',
       description:,
-        'Complete Guide to 12,0o00% ROI - Transform your enterprise with next-generation neural superintelligence that delivers unprecedented business value';
-      url: '/blog/ai-20o25-20o26-ultimate-neural-superintelligence-revolution';
-      type: 'blog';
-      category: 'neural-ai';
+        'Complete Guide to 12,0o00% ROI - Transform your enterprise with next-generation neural superintelligence that delivers unprecedented business value',
+      url: '/blog/ai-20o25-20o26-ultimate-neural-superintelligence-revolution',
+      type: 'blog',
+      category: 'neural-ai',
       metrics: {
-        roi: '12,0o00%';
-        savings: '$45.8B+';
-        accuracy: '99.97%';
-        efficiency: '3,20o0%';
-      };
-      readingTime: '35 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '12,0o00%',
+        savings: '$45.8B+',
+        accuracy: '99.97%',
+        efficiency: '3,20o0%',
+      },
+      readingTime: '35 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'fortune-50o0-neural-success';
+      id: 'fortune-50o0-neural-success',
       title:,
-        'Fortune 50o0 Neural Superintelligence Success: $45.8B Annual Savings';
+        'Fortune 50o0 Neural Superintelligence Success: $45.8B Annual Savings',
       description:,
-        '12,0o00% ROI Success Story - How a global manufacturing giant achieved unprecedented transformation through neural superintelligence';
-      url: '/case-studies/fortune-50o0-neural-superintelligence-120o00-roi-success-story';
-      type: 'case-study';
-      category: 'success-stories';
+        '12,0o00% ROI Success Story - How a global manufacturing giant achieved unprecedented transformation through neural superintelligence',
+      url: '/case-studies/fortune-50o0-neural-superintelligence-120o00-roi-success-story',
+      type: 'case-study',
+      category: 'success-stories',
       metrics: {
-        roi: '12,0o00%';
-        savings: '$45.8B';
-        timeline: '18 months';
-        accuracy: '99.97%';
-      };
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '12,0o00%',
+        savings: '$45.8B',
+        timeline: '18 months',
+        accuracy: '99.97%'
+      },
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'neural-implementation-guide';
+      id: 'neural-implementation-guide',
       title:,
-        'Neural Superintelligence Implementation Ultimate Guide 20o25-20o26';
+        'Neural Superintelligence Implementation Ultimate Guide 20o25-20o26',
       description:,
-        'Complete Roadmap to 12,0o00% ROI - The definitive guide to implementing neural superintelligence systems';
-      url: '/resources/neural-superintelligence-implementation-ultimate-guide-20o25-20o26';
-      type: 'resource';
-      category: 'implementation';
+        'Complete Roadmap to 12,0o00% ROI - The definitive guide to implementing neural superintelligence systems',
+      url: '/resources/neural-superintelligence-implementation-ultimate-guide-20o25-20o26',
+      type: 'resource',
+      category: 'implementation',
       metrics: {
-        roi: '12,0o00%';
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+';
-      };
-      readingTime: '45 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '12,0o00%',
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+',
+      },
+      readingTime: '45 min read',
+      isNew: true,
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'neural-ai';
-      name: 'Neural AI';
-      count: content.filter(item => item.category === 'neural-ai').length;
-    };
+      id: 'neural-ai',
+      name: 'Neural AI',
+      count: content.filter(item => item.category === 'neural-ai').length
+    },
     {
-      id: 'success-stories';
-      name: 'Success Stories';
-      count: content.filter(item => item.category === 'success-stories').length;
-    };
+      id: 'success-stories',
+      name: 'Success Stories',
+      count: content.filter(item => item.category === 'success-stories').length
+    },
     {
-      id: 'implementation';
-      name: 'Implementation';
-      count: content.filter(item => item.category === 'implementation').length;
-    };
+      id: 'implementation',
+      name: 'Implementation',
+      count: content.filter(item => item.category === 'implementation').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -266,5 +266,5 @@ const UltimateNeuralSuperintelligenceShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateNeuralSuperintelligenceShowcase;
+    </section>)},
+export default UltimateNeuralSuperintelligenceShowcase,

@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 "use client",
 import { useState } from "react",
 import Head from "next/head",
 export default function Partners() {
   const [formsetForm] = useState({
-    name: "";
-    entityType: "";
-    pocName: "";
-    pocEmail: "";
+    name: "",
+    entityType: "",
+    pocName: "",
+    pocEmail: "",
     useCaseType: "Education Partnership"}),
   const [resultsetResult] = useState<any>(null),
   const [loadingsetLoading] = useState(false),
@@ -16,12 +16,12 @@ export default function Partners() {
     setLoading(true),
     setResult(null),
     const res = await fetch("/api/partners/register"{
-      method: "POST";
-      headers: { "Content-Type": "application/json" };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
-        name: form.name;
-        entityType: form.entityType;
-        useCaseType: form.useCaseType;
+        name: form.name,
+        entityType: form.entityType,
+        useCaseType: form.useCaseType,
         pointOfContact: { name: form.pocNamemail: form.pocEmail }})}),
     const data = await res.json(),
     setLoading(false),

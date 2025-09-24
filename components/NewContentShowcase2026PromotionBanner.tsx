@@ -6,22 +6,20 @@ import {
   Sparkles,
   ArrowRight,
   Star,
-  Zap;
-  Brain;
-  Rocket;
-  Target;
-  CheckCircle;
-  Play;
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  CheckCircle,
+  Play,
   ExternalLink} from 'lucide-react',
 const NewContentShowcase20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const features = [
-    'Revolutionary AI Innovations';
-    'Advanced Automation Solutions',
-    'Future Technology Predictions';
-    'Interactive Demonstrations'],
+    'Revolutionary AI InnovationsAdvanced Automation Solutions',
+    'Future Technology PredictionsInteractive Demonstrations'],
   return (
     <motion.div,
       initial={{ opacity: 0, y: 20 }}
@@ -35,10 +33,8 @@ const NewContentShowcase20o26PromotionBanner = () => {
           className="absolute top-0 left-0 w-full h-full",
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)';
-              'radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)';
-              'radial-gradient(circle at 40% 80%rgba(2552550.1) 0%transparent 50%)';
-              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)']}}
+              'radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(2552550.1) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(2552550.1) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(2552550.1) 0%transparent 50%)']}}
           transition={{ duration: 8repeat: Infinity }}
          />,
       </div>,
@@ -129,5 +125,5 @@ const NewContentShowcase20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </motion.div>)};
-export default NewContentShowcase20o26PromotionBanner;
+    </motion.div>)},
+export default NewContentShowcase20o26PromotionBanner,

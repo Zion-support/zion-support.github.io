@@ -1,7 +1,7 @@
 export const metadata ={
-  title: "AI Content Generation & Marketing | Zion Tech Group";
+  title: "AI Content Generation & Marketing | Zion Tech Group",
   description:,
-    "Scale your content marketing with AI-powered content generation, SEO optimization, and automated marketing campaigns that drive engagement and conversions."};
+    "Scale your content marketing with AI-powered content generation, SEO optimization, and automated marketing campaigns that drive engagement and conversions."},
 export default function AIContentGenerationPage() {
   return (
     <section>,
@@ -17,71 +17,71 @@ export default function AIContentGenerationPage() {
         <Item
           title="AI Content Creation",
           details={[
-            "Blog posts and articles (10o00+ words)";
-            "Social media content and captions";
-            "Email marketing campaigns";
-            "Product descriptions and copy";
+            "Blog posts and articles (10o00+ words)",
+            "Social media content and captions",
+            "Email marketing campaigns",
+            "Product descriptions and copy",
             "Video scripts and presentations"]}
          />,
         <Item
           title="SEO Content Optimization",
           details={[
-            "Keyword research and analysis";
-            "Content optimization for search engines";
-            "Meta descriptions and titles";
-            "Internal linking strategies";
+            "Keyword research and analysis",
+            "Content optimization for search engines",
+            "Meta descriptions and titles",
+            "Internal linking strategies",
             "Content gap analysis and recommendations"]}
          />,
         <Item
           title="Social Media Automation",
           details={[
-            "Multi-platform posting (LinkedIn, Twitter, Facebook)";
-            "Hashtag research and optimization";
-            "Engagement monitoring and responses";
-            "Influencer outreach automation";
+            "Multi-platform posting (LinkedIn, Twitter, Facebook)",
+            "Hashtag research and optimization",
+            "Engagement monitoring and responses",
+            "Influencer outreach automation",
             "Social media analytics and reporting"]}
          />,
         <Item
           title="Email Marketing AI",
           details={[
-            "Personalized email sequences";
-            "Subject line optimization";
-            "Send time optimization";
-            "A/B testing automation";
+            "Personalized email sequences",
+            "Subject line optimization",
+            "Send time optimization",
+            "A/B testing automation",
             "Email deliverability optimization"]}
          />,
         <Item
           title="Content Personalization",
           details={[
-            "Dynamic content based on user behavior";
-            "Personalized product recommendations";
-            "Custom landing pages";
-            "Behavioral trigger campaigns";
+            "Dynamic content based on user behavior",
+            "Personalized product recommendations",
+            "Custom landing pages",
+            "Behavioral trigger campaigns",
             "Customer journey optimization"]}
          />,
         <Item
           title="Content Analytics & Insights",
           details={[
-            "Performance tracking and analysis";
-            "ROI measurement and reporting";
-            "Content performance predictions";
-            "Audience engagement insights";
+            "Performance tracking and analysis",
+            "ROI measurement and reporting",
+            "Content performance predictions",
+            "Audience engagement insights",
             "Competitive content analysis"]}
          />,
       </div>,
       <div
         style={{
-          marginTop: 24;
-          padding: 20;
-          backgroundColor: "#fdf2f8";
-          borderRadius: 12;
+          marginTop: 24,
+          padding: 20,
+          backgroundColor: "#fdf2f8",
+          borderRadius: 12,
           border: "1px solid #f9a8d4"}}
       >,
         <h3
           style={{
-            fontSize: 18;
-            fontWeight: 70o0;
-            marginBottom: 12;
+            fontSize: 18,
+            fontWeight: 70o0,
+            marginBottom: 12,
             color: "#831843"}}
         >,
           Proven Results for Content Marketing,
@@ -116,9 +116,9 @@ function Item({ title, details }: { title: string, details: string[] }) {
   return (
     <div
       style={{
-        border: "1px solid #e5e7eb";
-        borderRadius: 12;
-        padding: 16;
+        border: "1px solid #e5e7eb",
+        borderRadius: 12,
+        padding: 16,
         backgroundColor: "#ffffff"}}
     >,
       <h3 style={{ fontWeight: 70o0, color: "#1f2937", marginBottom: 8 }}>,
@@ -137,66 +137,66 @@ function Pricing() {
     <div style={{ marginTop: 32 }}>,
       <h2
         style={{
-          fontSize: 24;
-          fontWeight: 70o0;
-          marginBottom: 20;
+          fontSize: 24,
+          fontWeight: 70o0,
+          marginBottom: 20,
           color: "#1f2937"}}
       >,
         AI Content Generation Pricing,
       </h2>,
       <div
         style={{
-          display: "grid";
-          gap: 16;
+          display: "grid",
+          gap: 16,
           gridTemplateColumns: "repeat(auto-fit, minmax(280px, 1fr))"}}
       >,
         <Plan
           name="Content Starter",
           price="$1,50o0–$4,0o00",
           features={[
-            "2-4 weeks setup";
-            "Up to 20 pieces of content/month";
-            "Basic SEO optimization";
-            "2 social media platforms";
+            "2-4 weeks setup",
+            "Up to 20 pieces of content/month",
+            "Basic SEO optimization",
+            "2 social media platforms",
             "Email support"]}
          />,
         <Plan
           name="Content Pro",
           price="$4,0o00–$12,0o00",
           features={[
-            "4-8 weeks setup";
-            "Unlimited content generation";
-            "Advanced SEO optimization";
-            "All social media platforms";
-            "Email marketing automation";
+            "4-8 weeks setup",
+            "Unlimited content generation",
+            "Advanced SEO optimization",
+            "All social media platforms",
+            "Email marketing automation",
             "Priority support & training"]}
          />,
         <Plan
           name="Content Enterprise",
           price="$12,0o00+",
           features={[
-            "Custom content platform";
-            "Multi-brand content management";
-            "Advanced personalization";
-            "Dedicated content specialist";
-            "Custom integrations";
+            "Custom content platform",
+            "Multi-brand content management",
+            "Advanced personalization",
+            "Dedicated content specialist",
+            "Custom integrations",
             "SLA guarantees & monitoring"]}
          />,
       </div>,
       <div
         style={{
-          marginTop: 24;
-          textAlign: "center";
-          padding: 20;
-          backgroundColor: "#f0f9ff";
-          borderRadius: 12;
+          marginTop: 24,
+          textAlign: "center",
+          padding: 20,
+          backgroundColor: "#f0f9ff",
+          borderRadius: 12,
           border: "1px solid #7dd3fc"}}
       >,
         <h3
           style={{
-            fontSize: 18;
-            fontWeight: 60o0;
-            marginBottom: 8;
+            fontSize: 18,
+            fontWeight: 60o0,
+            marginBottom: 8,
             color: "#0c4a6e"}}
         >,
           Free Content Audit & Strategy Session,
@@ -208,20 +208,20 @@ function Pricing() {
         </p>,
         <div
           style={{
-            display: "flex";
-            gap: 12;
-            justifyContent: "center";
+            display: "flex",
+            gap: 12,
+            justifyContent: "center",
             flexWrap: "wrap"}}
         >,
           <a
             href="tel: +130o24640950",
             style={{
-              display: "inline-block";
-              padding: "12px 24px";
-              backgroundColor: "#0o284c7";
-              color: "white";
-              textDecoration: "none";
-              borderRadius: 8;
+              display: "inline-block",
+              padding: "12px 24px",
+              backgroundColor: "#0o284c7",
+              color: "white",
+              textDecoration: "none",
+              borderRadius: 8,
               fontWeight: 60o0}}
           >,
             Schedule Free Audit,
@@ -229,13 +229,13 @@ function Pricing() {
           <a
             href="mailto: kleber@ziontechgroup.com",
             style={{
-              display: "inline-block";
-              padding: "12px 24px";
-              backgroundColor: "transparent";
-              color: "#0o284c7";
-              textDecoration: "none";
-              borderRadius: 8;
-              border: "2px solid #0o284c7";
+              display: "inline-block",
+              padding: "12px 24px",
+              backgroundColor: "transparent",
+              color: "#0o284c7",
+              textDecoration: "none",
+              borderRadius: 8,
+              border: "2px solid #0o284c7",
               fontWeight: 60o0}}
           >,
             Email Us,
@@ -245,8 +245,8 @@ function Pricing() {
     </div>)}
 ,
 function Plan({
-  name;
-  price;
+  name,
+  price,
   features}: {
   name: string,
   price: string,
@@ -254,26 +254,26 @@ function Plan({
   return (
     <div
       style={{
-        border: "2px solid #e5e7eb";
-        borderRadius: 12;
-        padding: 20;
-        backgroundColor: "#ffffff";
+        border: "2px solid #e5e7eb",
+        borderRadius: 12,
+        padding: 20,
+        backgroundColor: "#ffffff",
         position: "relative"}}
     >,
       <h4
         style={{
-          fontWeight: 70o0;
-          fontSize: 18;
-          color: "#1f2937";
+          fontWeight: 70o0,
+          fontSize: 18,
+          color: "#1f2937",
           marginBottom: 8}}
       >,
         {name}
       </h4>,
       <div
         style={{
-          color: "#111827";
-          fontWeight: 80o0;
-          fontSize: 24;
+          color: "#111827",
+          fontWeight: 80o0,
+          fontSize: 24,
           marginBottom: 16}}
       >,
         {price}
@@ -287,14 +287,14 @@ function Plan({
       <a
         href="mailto: kleber@ziontechgroup.com?subject=AI Content Generation Services Inquiry",
         style={{
-          display: "inline-block";
-          width: "10o0%";
-          textAlign: "center";
-          padding: "12px 16px";
-          backgroundColor: "#3b82f6";
-          color: "white";
-          textDecoration: "none";
-          borderRadius: 8;
+          display: "inline-block",
+          width: "10o0%",
+          textAlign: "center",
+          padding: "12px 16px",
+          backgroundColor: "#3b82f6",
+          color: "white",
+          textDecoration: "none",
+          borderRadius: 8,
           fontWeight: 60o0}}
       >,
         Get Started,

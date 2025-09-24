@@ -12,7 +12,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
         to="/",
         className={({ isActive }) =>,
           cn(
-            "text-sm font-medium transition-colors hover:text-primary";
+            "text-sm font-medium transition-colors hover: text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground")}
       >,
         Home,
@@ -36,7 +36,7 @@ export function MainNavigation({ className }: MainNavigationProps) {
         to="/partners",
         className={({ isActive }) =>,
           cn(
-            "text-sm font-medium transition-colors hover:text-primary";
+            "text-sm font-medium transition-colors hover: text-primary",
             isActive ? "text-zion-cyan" : "text-muted-foreground")}
       >,
         Partner Program,
@@ -45,8 +45,8 @@ export function MainNavigation({ className }: MainNavigationProps) {
         to="/signup",
         className={({ isActive }) =>,
           cn(
-            "text-sm font-medium transition-colors hover:text-primary";
-            isActive ? "text-zion-cyan" : "text-muted-foreground";
+            "text-sm font-medium transition-colors hover: text-primary",
+            isActive ? "text-zion-cyan" : "text-muted-foreground",
             "bg-zion-purple px-4 py-2 rounded-md hover: bg-zion-purple-light")}
       >,
         Register,

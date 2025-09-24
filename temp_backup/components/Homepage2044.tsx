@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react',
 import Layout from './layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
+  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
   ChevronDown, CheckCircle, Users, Award, Clock} from 'lucide-react',
 import { Service } from '../types',
 // Import our new revolutionary services,
@@ -37,7 +37,7 @@ interface Service {
   type: string,
   category: string,
   pricing: {
-    starter: string};
+    starter: string},
   slug: string}
 ,
 const Homepage20o44: React.FC = () => {
@@ -49,8 +49,8 @@ const Homepage20o44: React.FC = () => {
   const [scrollProgress, setScrollProgress] = useState(0),
   // Memoize expensive computations,
   const allRevolutionaryServices = useMemo(() => [
-    ...revolutionary20o44AdvancedMicroSaas;
-    ...revolutionary20o44ITServices;
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
     ...revolutionary20o44AIServices], []),
   const featuredServices = useMemo(() =>,
     allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]),
@@ -60,53 +60,53 @@ const Homepage20o44: React.FC = () => {
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||,
       service.type.toLowerCase().includes(selectedCategory.toLowerCase()))}, [selectedCategory, allRevolutionaryServices]),
   const categories = useMemo(() => [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0' };
-    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0' };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0' };
-    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-50o0 to-purple-50o0' };
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0' },
+    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0' },
+    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-50o0 to-purple-50o0' },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-50o0 to-teal-50o0' }
   ], []),
   const features = useMemo(() => [
-    { icon: Brain, title: "AI Consciousness Evolution 20o44", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-20o44", color: "from-purple-50o0 to-pink-50o0" };
-    { icon: Atom, title: "Quantum Neural Networks 20o44", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-20o44", color: "from-blue-50o0 to-cyan-50o0" };
-    { icon: Shield, title: "Quantum Cybersecurity 20o44", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-20o44", color: "from-red-50o0 to-orange-50o0" };
-    { icon: Rocket, title: "Space Resource Intelligence 20o44", description: "AI-powered space exploration with consciousness", href: "/space-resource-intelligence-20o44", color: "from-indigo-50o0 to-purple-50o0" };
-    { icon: Cpu, title: "Autonomous Business Intelligence 20o44", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-20o44", color: "from-emerald-50o0 to-teal-50o0" };
+    { icon: Brain, title: "AI Consciousness Evolution 20o44", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-20o44", color: "from-purple-50o0 to-pink-50o0" },
+    { icon: Atom, title: "Quantum Neural Networks 20o44", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-20o44", color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Shield, title: "Quantum Cybersecurity 20o44", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-20o44", color: "from-red-50o0 to-orange-50o0" },
+    { icon: Rocket, title: "Space Resource Intelligence 20o44", description: "AI-powered space exploration with consciousness", href: "/space-resource-intelligence-20o44", color: "from-indigo-50o0 to-purple-50o0" },
+    { icon: Cpu, title: "Autonomous Business Intelligence 20o44", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-20o44", color: "from-emerald-50o0 to-teal-50o0" },
     { icon: Database, title: "Quantum Cloud Infrastructure 20o44", description: "Quantum-powered cloud with consciousness", href: "/quantum-cloud-infrastructure-20o44", color: "from-yellow-50o0 to-orange-50o0" }
   ],
   const stats = useMemo(() => [
-    { number: "20o00+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" };
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" };
-    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always there for you" };
+    { number: "20o00+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" },
+    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always there for you" },
     { number: "20o0+", label: "Countries Served", icon: Globe, description: "Global reach" }
   ], []),
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'get_started' })}
+      (window as any).gtag('eventcta_click', { cta_type: 'get_started' })}
     window.location.href = '/revolutionary-20o44-pricing-showcase'}, []),
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'explore_services' })}
+      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' })}
     window.location.href = '/services'}, []),
   const handleServiceClick = useCallback((service: any) => {
     // Add analytics tracking,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'service_click', { service_name: service.name })}
+      (window as any).gtag('eventservice_click', { service_name: service.name })}
     window.location.href = service.slug}, []),
   const handleCategoryChange = useCallback((categoryId: string) => {
     setSelectedCategory(categoryId),
     // Add analytics tracking,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'category_filter', { category: categoryId })}
+      (window as any).gtag('eventcategory_filter', { category: categoryId })}
   }, []),
   useEffect(() => {
     // Performance optimization: Use requestIdleCallback for non-critical operations,
     const initializePage = () => {
       setIsVisible(true),
-      setIsLoading(false)};
+      setIsLoading(false)},
     if ('requestIdleCallback' in window) {
       (window as any).requestIdleCallback(initializePage)} else {
       setTimeout(initializePage, 10o0)}
@@ -122,19 +122,19 @@ const Homepage20o44: React.FC = () => {
           setMousePosition({ x: e.clientX, y: e.clientY }),
           ticking = false}),
         ticking = true}
-    };
+    },
     window.addEventListener('mousemove', handleMouseMove, { passive: true }),
     // Track scroll progress for performance monitoring,
     const handleScroll = () => {
       const scrollTop = window.pageYOffset,
       const docHeight = document.body.offsetHeight - window.innerHeight,
       const scrollPercent = (scrollTop / docHeight) * 10o0,
-      setScrollProgress(scrollPercent)};
+      setScrollProgress(scrollPercent)},
     window.addEventListener('scroll', handleScroll, { passive: true }),
     return () => {
       clearInterval(interval),
       window.removeEventListener('mousemove', handleMouseMove),
-      window.removeEventListener('scroll', handleScroll)};
+      window.removeEventListener('scroll', handleScroll)},
   }, []),
   // Loading state,
   if (isLoading) {
@@ -180,46 +180,46 @@ const Homepage20o44: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-40o0/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]",
                   animate={{
-                    x: [0, 150, 0];
-                    y: [0, -150, 0];
-                    opacity: [0, 1, 0];
+                    x: [0, 150, 0],
+                    y: [0, -150, 0],
+                    opacity: [0, 1, 0],
                     scale: [0, 1.5, 0]}}
                   transition={{
-                    duration: 8 + i * 0.3;
-                    repeat: Infinity as any;
-                    delay: i * 0.2;
+                    duration: 8 + i * 0.3,
+                    repeat: Infinity as any,
+                    delay: i * 0.2,
                     ease: "easeInOut"}}
                   style={{
-                    left: `${Math.random() * 10o0}%`;
+                    left: `${Math.random() * 10o0}%`,
                     top: `${Math.random() * 10o0}%`}}
                  />))}
             </div>,
             {/* Grid pattern with neon glow */}
             <div className="absolute inset-0 opacity-20">,
               <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`;
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
                 backgroundSize: '60px 60px'}}></div>,
             </div>,
             {/* Floating geometric shapes - optimized animations */}
             <motion.div,
               className="absolute top-32 right-32 w-24 h-24 border border-cyan-40o0/30 rotate-45",
               animate={{
-                rotate: [45, 40o5];
-                scale: [1, 1.2, 1];
+                rotate: [45, 40o5],
+                scale: [1, 1.2, 1],
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
-                duration: 10;
-                repeat: Infinity as any;
+                duration: 10,
+                repeat: Infinity as any,
                 ease: "linear"}}
              />,
             <motion.div,
               className="absolute bottom-32 left-32 w-16 h-16 border border-purple-40o0/30 rounded-full",
               animate={{
-                scale: [1, 1.5, 1];
+                scale: [1, 1.5, 1],
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
-                duration: 8;
-                repeat: Infinity as any;
+                duration: 8,
+                repeat: Infinity as any,
                 ease: "easeInOut"}}
              />,
           </div>,
@@ -251,19 +251,19 @@ const Homepage20o44: React.FC = () => {
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
+              "url": "https: //ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
               "sameAs": [
-                "https://linkedin.com/company/ziontechgroup";
-                "https://twitter.com/ziontechgroup";
-                "https: //github.com/ziontechgroup"];
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"],
               "contactPoint": {
-                "@type": "ContactPoint";
-                "contactType": "customer service";
+                "@type": "ContactPoint",
+                "contactType": "customer service",
                 "availableLanguage": "English"}
             })}}
          />,
@@ -500,5 +500,5 @@ const Homepage20o44: React.FC = () => {
           </section>,
         </main>,
       </Layout>,
-    </>)};
+    </>)},
 export default Homepage20o44)

@@ -9,7 +9,7 @@ export function Dialog({ children, open, onOpenChange }) {
       setInternalOpen(newOpen)}
     if (onOpenChange) {
       onOpenChange(newOpen)}
-  };
+  },
   return (
     <DialogContext.Provider value={{ isOpen, setIsOpen }}>,
       <div className='relative'>{children}</div>,

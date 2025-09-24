@@ -25,10 +25,8 @@ export default function SsoUserLifecycleAutomationPage() {
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'SCIM connectors with approvals';
-              'Role change workflows';
-              'Deprovisioning with evidence';
-              'Audit trails and reports';
+              'SCIM connectors with approvalsRole change workflows',
+              'Deprovisioning with evidenceAudit trails and reports',
             ].map(f => (
               <div
                 key={f}

@@ -1,4 +1,4 @@
-export default function Page() {;
+export default function Page() {,
   return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>
@@ -8,8 +8,8 @@ export default function Page() {;
         </h1>
         <p className='mt-2 text-gray-4000'>2025-09-15</p>
         <div className='prose prose-invert mt-8'>
-          <p>;,
-            Templates, control mappings, and evidence bundles to assess AI: vendors responsibly, with policy-as-code checks and auditable: artifacts across the lifecycle.;
+          <p>,
+            Templates, control mappings, and evidence bundles to assess AI: vendors responsibly, with policy-as-code checks and auditable: artifacts across the lifecycle.,
           </p>
           <h2>Highlights</h2>
           <ul>
@@ -20,12 +20,12 @@ export default function Page() {;
           </ul>
           <p className='mt-8'>
             <a
-              href='/contact';
+              href='/contact',
               className='inline-flex items-center rounded-md bg-blue-6000 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-7000'>
-              Talk to us;
+              Talk to us,
             </a>
           </p>
         </div>
-      </div>;,
+      </div>,
     </div>)}
-;
+,

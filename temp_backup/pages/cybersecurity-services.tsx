@@ -2,124 +2,114 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  Lock;
-  Eye;
-  AlertTriangle;
-  Cpu;
-  Globe;
-  Cloud;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Clock;
-  Target;
-  Zap;
-  Users;
-  BarChart3;
-  Settings;
-  Server;
+  Shield,
+  Lock,
+  Eye,
+  AlertTriangle,
+  Cpu,
+  Globe,
+  Cloud,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Target,
+  Zap,
+  Users,
+  BarChart3,
+  Settings,
+  Server,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceHighlights = [
   {
-    title: 'Zero Trust Security';
+    title: 'Zero Trust Security',
     description:,
-      'Never trust, always verify - Advanced zero trust implementation';
-    icon: Shield;
-    color: 'from-red-500 to-pink-600';
+      'Never trust, always verify - Advanced zero trust implementation',
+    icon: Shield,
+    color: 'from-red-500 to-pink-600',
     features: [
-      'Continuous verification';
-      'Micro-segmentation';
-      'Adaptive controls';
-      'Real-time monitoring';
-    ];
-  };
+      'Continuous verificationMicro-segmentation',
+      'Adaptive controlsReal-time monitoring',
+    ]
+  },
   {
-    title: 'AI Threat Intelligence';
-    description: 'Predict and prevent cyber threats with AI intelligence';
-    icon: Eye;
-    color: 'from-indigo-500 to-purple-600';
+    title: 'AI Threat Intelligence',
+    description: 'Predict and prevent cyber threats with AI intelligence',
+    icon: Eye,
+    color: 'from-indigo-500 to-purple-600',
     features: [
-      'Real-time detection';
-      'Predictive analytics';
-      'Automated response';
-      'Global intelligence';
-    ];
-  };
+      'Real-time detectionPredictive analytics',
+      'Automated responseGlobal intelligence',
+    ]
+  },
   {
-    title: 'Cloud Security Posture';
+    title: 'Cloud Security Posture',
     description:,
-      'Secure your cloud infrastructure with comprehensive posture management';
-    icon: Cloud;
-    color: 'from-blue-500 to-cyan-600';
+      'Secure your cloud infrastructure with comprehensive posture management',
+    icon: Cloud,
+    color: 'from-blue-500 to-cyan-600',
     features: [
-      'Multi-cloud support';
-      'Continuous compliance';
-      'Automated remediation';
-      'Risk management';
-    ];
-  };
+      'Multi-cloud supportContinuous compliance',
+      'Automated remediationRisk management',
+    ]
+  },
   {
-    title: 'DevSecOps Security';
-    description: 'Integrate security into your DevOps pipeline seamlessly';
-    icon: Cpu;
-    color: 'from-green-500 to-emerald-600';
+    title: 'DevSecOps Security',
+    description: 'Integrate security into your DevOps pipeline seamlessly',
+    icon: Cpu,
+    color: 'from-green-500 to-emerald-600',
     features: [
-      'CI/CD integration';
-      'Automated testing';
-      'Vulnerability scanning';
-      'Compliance automation';
-    ];
-  };
+      'CI/CD integrationAutomated testing',
+      'Vulnerability scanningCompliance automation',
+    ]
+  },
   {
-    title: 'IoT Security Platform';
-    description: 'Secure your IoT ecosystem with comprehensive protection';
-    icon: Server;
-    color: 'from-purple-500 to-violet-600';
+    title: 'IoT Security Platform',
+    description: 'Secure your IoT ecosystem with comprehensive protection',
+    icon: Server,
+    color: 'from-purple-500 to-violet-600',
     features: [
-      'Device authentication';
-      'Network monitoring';
-      'Threat detection';
-      'Secure updates';
-    ];
-  };
+      'Device authenticationNetwork monitoring',
+      'Threat detectionSecure updates',
+    ]
+  },
 ],
 const benefits = [
   {
-    title: '99.9% Threat Detection';
+    title: '99.9% Threat Detection',
     description:,
-      'Advanced AI algorithms detect threats before they impact your business';
-    icon: Shield;
-    color: 'text-red-400';
-  };
+      'Advanced AI algorithms detect threats before they impact your business',
+    icon: Shield,
+    color: 'text-red-400'
+  },
   {
-    title: '450% ROI Improvement';
+    title: '450% ROI Improvement',
     description:,
-      'Significant returns through reduced security incidents and compliance costs';
-    icon: BarChart3;
-    color: 'text-blue-400';
-  };
+      'Significant returns through reduced security incidents and compliance costs',
+    icon: BarChart3,
+    color: 'text-blue-400'
+  },
   {
-    title: '24/7 Security Monitoring';
-    description: 'Round-the-clock protection with automated incident response';
-    icon: Clock;
-    color: 'text-purple-400';
-  };
+    title: '24/7 Security Monitoring',
+    description: 'Round-the-clock protection with automated incident response',
+    icon: Clock,
+    color: 'text-purple-400'
+  },
   {
-    title: 'Zero False Positives';
+    title: 'Zero False Positives',
     description:,
-      'AI-powered analysis eliminates false alarms and alert fatigue';
-    icon: CheckCircle;
-    color: 'text-green-400';
-  };
+      'AI-powered analysis eliminates false alarms and alert fatigue',
+    icon: CheckCircle,
+    color: 'text-green-400'
+  },
 ],
 export default function CybersecurityServices() {
   return (

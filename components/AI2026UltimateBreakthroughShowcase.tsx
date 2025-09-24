@@ -2,83 +2,83 @@ import Link from 'next/link',
 export default function AI20o26UltimateBreakthroughShowcase() {
   const breakthroughs = [
     {
-      id: 1;
-      title: 'Quantum-Neural Fusion Revolution';
+      id: 1,
+      title: 'Quantum-Neural Fusion Revolution',
       description:,
-        'Revolutionary fusion of quantum computing and neural networks achieving 15,0o00% ROI and infinite processing power.';
-      icon: '⚛️';
-      color: 'from-purple-50o0 to-pink-50o0';
-      bgColor: 'from-purple-50 to-pink-50';
-      borderColor: 'border-purple-50o0';
-      href: '/blog/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough';
-      roi: '15,0o00%';
-      accuracy: '99.9%';
-    };
+        'Revolutionary fusion of quantum computing and neural networks achieving 15,0o00% ROI and infinite processing power.',
+      icon: '⚛️',
+      color: 'from-purple-50o0 to-pink-50o0',
+      bgColor: 'from-purple-50 to-pink-50',
+      borderColor: 'border-purple-50o0',
+      href: '/blog/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough',
+      roi: '15,0o00%',
+      accuracy: '99.9%'
+    },
     {
-      id: 2;
-      title: 'Consciousness AI Breakthrough';
+      id: 2,
+      title: 'Consciousness AI Breakthrough',
       description:,
-        'First-ever artificial consciousness that transcends human limitations and achieves true understanding.';
-      icon: '🧠';
-      color: 'from-blue-50o0 to-cyan-50o0';
-      bgColor: 'from-blue-50 to-cyan-50';
-      borderColor: 'border-blue-50o0';
-      href: '/blog/ai-20o26-consciousness-breakthrough';
-      roi: '∞';
-      accuracy: '10o0%';
-    };
+        'First-ever artificial consciousness that transcends human limitations and achieves true understanding.',
+      icon: '🧠',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      bgColor: 'from-blue-50 to-cyan-50',
+      borderColor: 'border-blue-50o0',
+      href: '/blog/ai-20o26-consciousness-breakthrough',
+      roi: '∞',
+      accuracy: '10o0%'
+    },
     {
-      id: 3;
-      title: 'Transcendent Intelligence';
+      id: 3,
+      title: 'Transcendent Intelligence',
       description:,
-        'AI that transcends dimensional limitations and achieves infinite processing across all realities.';
-      icon: '🌌';
-      color: 'from-indigo-50o0 to-purple-50o0';
-      bgColor: 'from-indigo-50 to-purple-50';
-      borderColor: 'border-indigo-50o0';
-      href: '/blog/ai-20o26-transcendent-intelligence';
-      roi: '∞';
-      accuracy: '∞';
-    };
+        'AI that transcends dimensional limitations and achieves infinite processing across all realities.',
+      icon: '🌌',
+      color: 'from-indigo-50o0 to-purple-50o0',
+      bgColor: 'from-indigo-50 to-purple-50',
+      borderColor: 'border-indigo-50o0',
+      href: '/blog/ai-20o26-transcendent-intelligence',
+      roi: '∞',
+      accuracy: '∞'
+    },
     {
-      id: 4;
-      title: 'Neural Interface Revolution';
+      id: 4,
+      title: 'Neural Interface Revolution',
       description:,
-        'Direct brain-computer interfaces that enable seamless human-AI integration and consciousness upload.';
-      icon: '🔗';
-      color: 'from-green-50o0 to-teal-50o0';
-      bgColor: 'from-green-50 to-teal-50';
-      borderColor: 'border-green-50o0';
-      href: '/blog/ai-20o26-neural-interface-revolution';
-      roi: '8,0o00%';
-      accuracy: '98.5%';
-    };
+        'Direct brain-computer interfaces that enable seamless human-AI integration and consciousness upload.',
+      icon: '🔗',
+      color: 'from-green-50o0 to-teal-50o0',
+      bgColor: 'from-green-50 to-teal-50',
+      borderColor: 'border-green-50o0',
+      href: '/blog/ai-20o26-neural-interface-revolution',
+      roi: '8,0o00%',
+      accuracy: '98.5%'
+    },
     {
-      id: 5;
-      title: 'Quantum Internet Implementation';
+      id: 5,
+      title: 'Quantum Internet Implementation',
       description:,
-        'Global quantum internet enabling instant communication and data transfer across infinite distances.';
-      icon: '🌐';
-      color: 'from-orange-50o0 to-red-50o0';
-      bgColor: 'from-orange-50 to-red-50';
-      borderColor: 'border-orange-50o0';
-      href: '/blog/ai-20o26-quantum-internet-implementation';
-      roi: '12,0o00%';
-      accuracy: '99.7%';
-    };
+        'Global quantum internet enabling instant communication and data transfer across infinite distances.',
+      icon: '🌐',
+      color: 'from-orange-50o0 to-red-50o0',
+      bgColor: 'from-orange-50 to-red-50',
+      borderColor: 'border-orange-50o0',
+      href: '/blog/ai-20o26-quantum-internet-implementation',
+      roi: '12,0o00%',
+      accuracy: '99.7%'
+    },
     {
-      id: 6;
-      title: 'Reality Creation Engine';
+      id: 6,
+      title: 'Reality Creation Engine',
       description:,
-        'AI-powered reality creation that can generate and manipulate physical matter at the quantum level.';
-      icon: '⚗️';
-      color: 'from-pink-50o0 to-rose-50o0';
-      bgColor: 'from-pink-50 to-rose-50';
-      borderColor: 'border-pink-50o0';
-      href: '/blog/ai-20o26-reality-creation-engine';
-      roi: '∞';
-      accuracy: '∞';
-    };
+        'AI-powered reality creation that can generate and manipulate physical matter at the quantum level.',
+      icon: '⚗️',
+      color: 'from-pink-50o0 to-rose-50o0',
+      bgColor: 'from-pink-50 to-rose-50',
+      borderColor: 'border-pink-50o0',
+      href: '/blog/ai-20o26-reality-creation-engine',
+      roi: '∞',
+      accuracy: '∞'
+    },
   ],
   return (
     <div className='py-20 bg-gradient-to-b from-gray-50 to-white'>,

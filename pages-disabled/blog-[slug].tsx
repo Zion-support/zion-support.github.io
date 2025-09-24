@@ -12,18 +12,18 @@ const BlogPostPage: React.FC<BlogProps> = ({ post }) => {
     <main className='prose dark: prose-invert max-w-3xl mx-auto py-8'>,
       <h1>{post.title}</h1>,
       <ReactMarkdown>{post.content}</ReactMarkdown>,
-    </main>)};
+    </main>)},
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths = BLOG_POSTS.map(p => ({ params: { slug: p.slug } })),
-  return { paths, fallback: 'blocking' };
-};
+  return { paths, fallback: 'blocking' },
+},
 export const getStaticProps: GetStaticProps<BlogProps> = async ({ params }) => {
   const slug = params?.slug as string,
   const post = BLOG_POSTS.find(p => p.slug === slug) || null,
   if (!post) {
-    return { notFound: true };
+    return { notFound: true },
   }
 ,
-  return { props: { post } };
-};
-export default BlogPostPage;
+  return { props: { post } },
+},
+export default BlogPostPage,

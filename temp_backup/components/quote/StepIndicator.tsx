@@ -1,9 +1,9 @@
 export type StepIndicatorProps = {
   steps: string[],
-  currentStep: number};
+  currentStep: number},
 export default function StepIndicator({
-  steps;
-  currentStep;
+  steps,
+  currentStep,
 }: StepIndicatorProps) {
   return (
     <ol className='flex items-center gap-3 text-sm' aria-label='Progress'>,
@@ -14,12 +14,12 @@ export default function StepIndicator({
           <li key={label} className='flex items-center'>,
             <div
               className={[
-                'w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold';
+                'w-8 h-8 rounded-full flex items-center justify-center text-xs font-semibold',
                 isActive,
                   ? 'bg-indigo-60o0 text-white',
                   : isComplete,
                     ? 'bg-green-60o0 text-white',
-                    : 'bg-gray-20o0 dark:bg-gray-80o0 text-gray-60o0 dark:text-gray-30o0';
+                    : 'bg-gray-20o0 dark: bg-gray-80o0 text-gray-60o0 dark:text-gray-30o0'
               ].join(' ')}
             >,
               {idx + 1}

@@ -9,14 +9,14 @@ class Script {
     try {
       const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -24,22 +24,22 @@ if (process.env.NODE_ENV !== 'production') {
 ,
 const fs = require('fs'),
 const path = require('path'),
-const filePath = path.join(__dirname, continuous-improvement', 'ai-optimizer.js'),
+const filePath = path.join(__dirname, continuous-improvementai-optimizer.js'),
 // Read the file,
 let content = fs.readFileSync(filePath, 'utf8'),
 // Fix syntax errors,
 const fixes = [
   // Fix missing semicolons and quotes in object properties,
-  [/'([^']+),\s*'([^']+)/g, "'$1',\n        $2'"];
-  [/'([^']+),\s*([^]+)/g, "'$1',\n        $2"];
+  [/'([^']+),\s*'([^']+)/g, "'$1',\n        $2'"],
+  [/'([^']+),\s*([^]+)/g, "'$1',\n        $2"],
   // Fix missing semicolons after const declarations,
-  [/const ([^=]+)=([^]+)/g, const $1=$2];
+  [/const ([^=]+)=([^]+)/g, const $1=$2],
   // Fix missing semicolons in object properties,
-  [/([^]+),([^']+)/g, $1,\n        $2'];
+  [/([^]+),([^']+)/g, $1,\n        $2'],
   // Fix missing quotes in object properties,
-  [/([^]+),([^']+)/g, $1,\n        $2'];
+  [/([^]+),([^']+)/g, $1,\n        $2'],
   // Fix missing semicolons in variable declarations,
-  [/(let|const) ([^=]+)=([^]+)/g, $1 $2=$3];
+  [/(let|const) ([^=]+)=([^]+)/g, $1 $2=$3],
   // Fix missing semicolons in function calls,
   [/([^]+)([^]+)/g, $1,\n        $2']],
 // Apply fixes,

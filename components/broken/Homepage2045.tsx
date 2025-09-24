@@ -4,7 +4,7 @@ import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket,
-  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart;
+  Loader2ChevronDownZapGlobeLockCpuDatabaseCloudPaletteHeart,
   PhoneMailMapPinSearchGridListAtomTargetSparkles} from 'lucide-react',
 import Link from 'next/link',
 // Import our new innovative services,
@@ -46,7 +46,7 @@ const Homepage2045: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)}
-          })};
+          })},
         { threshold: 0.3rootMargin: '-100px' }
       ),
       const sections = document.querySelectorAll('section[id]'),
@@ -54,31 +54,28 @@ const Homepage2045: React.FC = () => {
       return () => observer.disconnect()}
   }[]),
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6ease: "easeOut" }
-  };
+  },
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const backgroundVariants = {
-    initial: { opacity: 0scale: 0.8 };
-    animate: { opacity: 1scale: 1 };
+    initial: { opacity: 0scale: 0.8 },
+    animate: { opacity: 1scale: 1 },
     transition: { duration: 1.2ease: "easeOut" }
-  };
+  },
   const getColorClasses = (index: number) => {
     const colors = [
-      'from-cyan-400 to-blue-500';
-      'from-purple-400 to-pink-500';
-      'from-emerald-400 to-teal-500';
-      'from-orange-400 to-red-500';
-      'from-indigo-400 to-purple-500';
-      'from-yellow-400 to-orange-500'],
-    return colors[index % colors.length]};
+      'from-cyan-400 to-blue-500from-purple-400 to-pink-500',
+      'from-emerald-400 to-teal-500from-orange-400 to-red-500',
+      'from-indigo-400 to-purple-500from-yellow-400 to-orange-500'],
+    return colors[index % colors.length]},
   if (isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">,
@@ -98,34 +95,34 @@ const Homepage2045: React.FC = () => {
             <motion.div,
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20 rounded-lg",
               animate={{
-                rotate: [0360];
-                scale: [1.1];
+                rotate: [0360],
+                scale: [1.1],
                 opacity: [0.30.60.3]}}
               transition={{
-                duration: 8;
-                repeat: Infinity;
+                duration: 8,
+                repeat: Infinity,
                 ease: "easeInOut"}}
             />,
             <motion.div,
               className="absolute top-40 right-32 w-24 h-24 border border-purple-400/20 rounded-full",
               animate={{
-                rotate: [360];
-                scale: [1.21];
+                rotate: [360],
+                scale: [1.21],
                 opacity: [0.30.70.3]}}
               transition={{
-                duration: 6;
-                repeat: Infinity;
+                duration: 6,
+                repeat: Infinity,
                 ease: "easeInOut"}}
             />,
             <motion.div,
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400/20 transform rotate-45",
               animate={{
-                rotate: [45405];
-                scale: [1.151];
+                rotate: [45405],
+                scale: [1.151],
                 opacity: [0.30.50.3]}}
               transition={{
-                duration: 10;
-                repeat: Infinity;
+                duration: 10,
+                repeat: Infinity,
                 ease: "easeInOut"}}
             />,
           </div>,
@@ -150,7 +147,7 @@ const Homepage2045: React.FC = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8delay: 0.4 }}
                 className="text-xl md: text-2xl text-gray-300 mb-8 max-w-4xl mx-auto">,
-                Transform your business with Zion Tech 'Group', 's revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.,
+                Transform your business with Zion Tech 'Groups revolutionary AI servicesquantum computingand cutting-edge emerging technologies. Leading the future of technology innovation.,
               </motion.p>,
             </motion.div>,
             {/* CTA Buttons */}
@@ -213,40 +210,40 @@ const Homepage2045: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-12 h-12" />;
-                  title: "AI & Consciousness";
-                  description: "Revolutionary AI platforms with emotional intelligence and autonomous operations";
-                  color: "from-cyan-400 to-blue-500";
-                  href: "/ai-services"};
+                  icon: <Brain className="w-12 h-12" />,
+                  title: "AI & Consciousness",
+                  description: "Revolutionary AI platforms with emotional intelligence and autonomous operations",
+                  color: "from-cyan-400 to-blue-500",
+                  href: "/ai-services"},
                 {
-                  icon: <Atom className="w-12 h-12" />;
-                  title: "Quantum Technology";
-                  description: "Breakthrough quantum computing solutions for next-generation applications";
-                  color: "from-purple-400 to-pink-500";
-                  href: "/quantum-services"};
+                  icon: <Atom className="w-12 h-12" />,
+                  title: "Quantum Technology",
+                  description: "Breakthrough quantum computing solutions for next-generation applications",
+                  color: "from-purple-400 to-pink-500",
+                  href: "/quantum-services"},
                 {
-                  icon: <Rocket className="w-12 h-12" />;
-                  title: "Space Technology";
-                  description: "Advanced space exploration and resource management platforms";
-                  color: "from-emerald-400 to-teal-500";
-                  href: "/space-technology"};
+                  icon: <Rocket className="w-12 h-12" />,
+                  title: "Space Technology",
+                  description: "Advanced space exploration and resource management platforms",
+                  color: "from-emerald-400 to-teal-500",
+                  href: "/space-technology"},
                 {
-                  icon: <Shield className="w-12 h-12" />;
-                  title: "Enterprise Solutions";
-                  description: "Advanced infrastructure and security solutions for modern enterprises";
-                  color: "from-orange-400 to-red-500";
-                  href: "/enterprise-solutions"};
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Enterprise Solutions",
+                  description: "Advanced infrastructure and security solutions for modern enterprises",
+                  color: "from-orange-400 to-red-500",
+                  href: "/enterprise-solutions"},
                 {
-                  icon: <Target className="w-12 h-12" />;
-                  title: "Micro SAAS";
-                  description: "Innovative business solutions that drive growth and efficiency";
-                  color: "from-indigo-400 to-purple-500";
-                  href: "/micro-saas"};
+                  icon: <Target className="w-12 h-12" />,
+                  title: "Micro SAAS",
+                  description: "Innovative business solutions that drive growth and efficiency",
+                  color: "from-indigo-400 to-purple-500",
+                  href: "/micro-saas"},
                 {
-                  icon: <Sparkles className="w-12 h-12" />;
-                  title: "Emerging Tech";
-                  description: "Cutting-edge technologies that define the future of innovation";
-                  color: "from-yellow-400 to-orange-500";
+                  icon: <Sparkles className="w-12 h-12" />,
+                  title: "Emerging Tech",
+                  description: "Cutting-edge technologies that define the future of innovation",
+                  color: "from-yellow-400 to-orange-500",
                   href: "/emerging-tech"}
               ].map((serviceindex) => (
                 <motion.div,
@@ -374,5 +371,5 @@ const Homepage2045: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default Homepage2045;
+    </Layout>)},
+export default Homepage2045,

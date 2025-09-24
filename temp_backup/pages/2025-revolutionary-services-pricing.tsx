@@ -2,29 +2,29 @@ import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain;
-  Atom;
-  Shield;
-  Target;
-  Rocket;
-  ArrowRight;
-  Check;
-  Palette;
-  Heart;
-  Truck;
-  GraduationCap;
-  Building;
-  Cpu;
-  Zap;
-  Star;
-  Globe;
-  Lock;
-  Cloud;
-  Database;
-  DollarSign;
-  Users;
-  Crown;
-  Sparkles;
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Rocket,
+  ArrowRight,
+  Check,
+  Palette,
+  Heart,
+  Truck,
+  GraduationCap,
+  Building,
+  Cpu,
+  Zap,
+  Star,
+  Globe,
+  Lock,
+  Cloud,
+  Database,
+  DollarSign,
+  Users,
+  Crown,
+  Sparkles,
 } from 'lucide-react',
 // Import all our revolutionary services,
 import { advancedAIAutonomousEcosystemServices20o25 } from '../data/20o25-advanced-ai-autonomous-ecosystem-services',
@@ -34,84 +34,69 @@ import { emergingTechnologyBreakthroughs20o25 } from '../data/20o25-emerging-tec
 import { specializedEnterpriseSolutions20o25 } from '../data/20o25-specialized-enterprise-solutions',
 // Combine all services,
 const allRevolutionaryServices = [
-  ...advancedAIAutonomousEcosystemServices20o25;
-  ...cuttingEdgeITInfrastructureInnovations20o25;
-  ...revolutionaryMicroSaasInnovations20o25;
-  ...emergingTechnologyBreakthroughs20o25;
-  ...specializedEnterpriseSolutions20o25;
+  ...advancedAIAutonomousEcosystemServices20o25,
+  ...cuttingEdgeITInfrastructureInnovations20o25,
+  ...revolutionaryMicroSaasInnovations20o25,
+  ...emergingTechnologyBreakthroughs20o25,
+  ...specializedEnterpriseSolutions20o25,
 ],
 const pricingTiers = [
   {
-    name: 'Starter';
-    description: 'Perfect for small businesses and startups';
-    icon: <Target className='w-8 h-8' />;
-    color: 'from-green-50o0 to-emerald-50o0';
+    name: 'Starter',
+    description: 'Perfect for small businesses and startups',
+    icon: <Target className='w-8 h-8' />,
+    color: 'from-green-50o0 to-emerald-50o0',
     features: [
-      'Basic service access';
-      'Standard support';
-      'Core features';
-      'Community forum access';
-      'Basic analytics';
-      'Email support';
-    ];
-    popular: false;
-  };
+      'Basic service accessStandard support',
+      'Core featuresCommunity forum access',
+      'Basic analyticsEmail support',
+    ],
+    popular: false
+  },
   {
-    name: 'Professional';
-    description: 'Ideal for growing businesses and teams';
-    icon: <Users className='w-8 h-8' />;
-    color: 'from-blue-50o0 to-purple-50o0';
+    name: 'Professional',
+    description: 'Ideal for growing businesses and teams',
+    icon: <Users className='w-8 h-8' />,
+    color: 'from-blue-50o0 to-purple-50o0',
     features: [
-      'All Starter features';
-      'Advanced features';
-      'Priority support';
-      'Team collaboration';
-      'Advanced analytics';
-      'Phone & email support';
-      'Custom integrations';
-      'Training sessions';
-    ];
-    popular: true;
-  };
+      'All Starter featuresAdvanced features',
+      'Priority supportTeam collaboration',
+      'Advanced analyticsPhone & email support',
+      'Custom integrationsTraining sessions',
+    ],
+    popular: true
+  },
   {
-    name: 'Enterprise';
-    description: 'For large organizations with complex needs';
-    icon: <Crown className='w-8 h-8' />;
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'Enterprise',
+    description: 'For large organizations with complex needs',
+    icon: <Crown className='w-8 h-8' />,
+    color: 'from-purple-50o0 to-pink-50o0',
     features: [
-      'All Professional features';
-      'Custom development';
-      'Dedicated support manager';
-      'SLA guarantees';
-      'Custom integrations';
-      'On-site training';
-      'White-label options';
-      'Custom AI model training';
-      '24/7 priority support';
-    ];
-    popular: false;
-  };
+      'All Professional featuresCustom development',
+      'Dedicated support managerSLA guarantees',
+      'Custom integrationsOn-site training',
+      'White-label optionsCustom AI model training',
+      '24/7 priority support',
+    ],
+    popular: false
+  },
   {
-    name: 'Custom';
-    description: 'Tailored solutions for unique requirements';
-    icon: <Sparkles className='w-8 h-8' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
+    name: 'Custom',
+    description: 'Tailored solutions for unique requirements',
+    icon: <Sparkles className='w-8 h-8' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
     features: [
-      'Everything in Enterprise';
-      'Custom architecture';
-      'Dedicated development team';
-      'Custom AI models';
-      'Exclusive features';
-      'Source code access';
-      'Custom deployment';
-      'Strategic partnership';
-    ];
-    popular: false;
-  };
+      'Everything in EnterpriseCustom architecture',
+      'Dedicated development teamCustom AI models',
+      'Exclusive featuresSource code access',
+      'Custom deploymentStrategic partnership',
+    ],
+    popular: false
+  },
 ],
 const ServicePricingCard = ({
-  service;
-  tier;
+  service,
+  tier,
 }: {
   service: any,
   tier: string}) => {
@@ -130,7 +115,7 @@ const ServicePricingCard = ({
         return service.pricing.custom || 'Contact for pricing',
       default:,
         return service.pricing.starter}
-  };
+  },
   const getFeatures = (tier: string) => {
     const baseFeatures = service.features.slice(0, 4),
     const advancedFeatures = service.features.slice(4, 8),
@@ -146,7 +131,7 @@ const ServicePricingCard = ({
         return service.features,
       default: ,
         return baseFeatures}
-  };
+  },
   return (
     <motion.div,
       className='bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl border border-white/10 rounded-2xl p-6 transition-all duration-50o0 hover: scale-10o5',
@@ -187,11 +172,11 @@ const ServicePricingCard = ({
         Learn More,
         <ArrowRight className='w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform' />,
       </button>,
-    </motion.div>)};
+    </motion.div>)},
 const PricingTierCard = ({
-  tier;
-  isSelected;
-  onSelect;
+  tier,
+  isSelected,
+  onSelect,
 }: {
   tier: any,
   isSelected: boolean,
@@ -244,7 +229,7 @@ const PricingTierCard = ({
           </div>,
         </div>,
       </div>,
-    </motion.div>)};
+    </motion.div>)},
 export default function RevolutionaryServicesPricing() {
   const [selectedTier, setSelectedTier] = useState('Professional'),
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -252,32 +237,32 @@ export default function RevolutionaryServicesPricing() {
   useEffect(() => {
     setIsVisible(true)}, []),
   const categories = [
-    { id: 'all', name: 'All Services', count: allRevolutionaryServices.length };
+    { id: 'all', name: 'All Services', count: allRevolutionaryServices.length },
     {
-      id: 'ai-autonomous-ecosystem';
-      name: 'AI Autonomous Ecosystem';
-      count: advancedAIAutonomousEcosystemServices20o25.length;
-    };
+      id: 'ai-autonomous-ecosystem',
+      name: 'AI Autonomous Ecosystem',
+      count: advancedAIAutonomousEcosystemServices20o25.length
+    },
     {
-      id: 'it-infrastructure-innovations';
-      name: 'IT Infrastructure';
-      count: cuttingEdgeITInfrastructureInnovations20o25.length;
-    };
+      id: 'it-infrastructure-innovations',
+      name: 'IT Infrastructure',
+      count: cuttingEdgeITInfrastructureInnovations20o25.length
+    },
     {
-      id: 'revolutionary-micro-saas';
-      name: 'Micro SAAS';
-      count: revolutionaryMicroSaasInnovations20o25.length;
-    };
+      id: 'revolutionary-micro-saas',
+      name: 'Micro SAAS',
+      count: revolutionaryMicroSaasInnovations20o25.length
+    },
     {
-      id: 'emerging-technology';
-      name: 'Emerging Tech';
-      count: emergingTechnologyBreakthroughs20o25.length;
-    };
+      id: 'emerging-technology',
+      name: 'Emerging Tech',
+      count: emergingTechnologyBreakthroughs20o25.length
+    },
     {
-      id: 'specialized-enterprise';
-      name: 'Enterprise';
-      count: specializedEnterpriseSolutions20o25.length;
-    };
+      id: 'specialized-enterprise',
+      name: 'Enterprise',
+      count: specializedEnterpriseSolutions20o25.length
+    },
   ],
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allRevolutionaryServices,
@@ -294,7 +279,7 @@ export default function RevolutionaryServicesPricing() {
         return specializedEnterpriseSolutions20o25,
       default: ,
         return allRevolutionaryServices}
-  };
+  },
   const filteredServices = getFilteredServices(),
   return (
     <>,
@@ -302,12 +287,9 @@ export default function RevolutionaryServicesPricing() {
         title='20o25 Revolutionary Services Pricing | Zion Tech Group',
         description='Comprehensive pricing for our revolutionary micro SAAS services, AI autonomous ecosystem, quantum computing solutions, and cutting-edge IT infrastructure innovations.',
         keywords={[
-          'revolutionary services pricing';
-          'AI autonomous ecosystem pricing';
-          'quantum computing pricing';
-          'micro SAAS pricing';
-          'IT infrastructure pricing';
-          'Zion Tech Group';
+          'revolutionary services pricingAI autonomous ecosystem pricing',
+          'quantum computing pricingmicro SAAS pricing',
+          'IT infrastructure pricingZion Tech Group',
         ]}
         image='/og-revolutionary-pricing.jpg',
       />,

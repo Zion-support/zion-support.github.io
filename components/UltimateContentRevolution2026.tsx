@@ -10,15 +10,15 @@ import {
   Target,
   TrendingUp,
   Users,
-  Award;
-  ChevronRight;
-  Play;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Globe;
-  Shield;
-  Lightbulb;
+  Award,
+  ChevronRight,
+  Play,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Shield,
+  Lightbulb,
   BarChart3} from 'lucide-react',
 const UltimateContentRevolution20o26 = () => {
   const [activeTabsetActiveTab] = useState(0),
@@ -27,90 +27,81 @@ const UltimateContentRevolution20o26 = () => {
     setIsVisible(true)}[]),
   const contentSections = [
     {
-      id: 'ai-breakthroughs';
-      title: 'AI Breakthroughs 20o26';
-      icon: Brain;
-      color: 'from-purple-60o0 to-pink-60o0';
+      id: 'ai-breakthroughs',
+      title: 'AI Breakthroughs 20o26',
+      icon: Brain,
+      color: 'from-purple-60o0 to-pink-60o0',
       content: {
-        headline: 'Revolutionary AI Technologies That Will Transform Your Business';
-        description: 'Discover the latest AI innovations that are reshaping industries and creating unprecedented opportunities for growth.';
+        headline: 'Revolutionary AI Technologies That Will Transform Your Business',
+        description: 'Discover the latest AI innovations that are reshaping industries and creating unprecedented opportunities for growth.',
         features: [
-          'Neural Interface Integration';
-          'Quantum-Enhanced Machine Learning';
-          'Autonomous Decision Making Systems';
-          'Predictive Analytics 2.0';
-          'Emotional Intelligence AI';
-          'Real-time Language Processing'];
+          'Neural Interface IntegrationQuantum-Enhanced Machine Learning',
+          'Autonomous Decision Making SystemsPredictive Analytics 2.0',
+          'Emotional Intelligence AIReal-time Language Processing'],
         stats: [
-          { label: 'ROI 'Increase', 'value: '340%'icon: TrendingUp };
-          { label: 'Efficiency 'Gain', 'value: '85%'icon: Zap };
-          { label: 'Cost 'Reduction', 'value: '60%'icon: Target }
+          { label: 'ROI 'Increasevalue: '340%'icon: TrendingUp },
+          { label: 'Efficiency 'Gainvalue: '85%'icon: Zap },
+          { label: 'Cost 'Reductionvalue: '60%'icon: Target }
         ]}
-    };
+    },
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing Revolution';
-      icon: Zap;
-      color: 'from-cyan-60o0 to-blue-60o0';
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution',
+      icon: Zap,
+      color: 'from-cyan-60o0 to-blue-60o0',
       content: {
-        headline: 'Quantum Supremacy in Business Applications';
-        description: 'Harness the power of quantum computing to solve complex problems and unlock new possibilities.';
+        headline: 'Quantum Supremacy in Business Applications',
+        description: 'Harness the power of quantum computing to solve complex problems and unlock new possibilities.',
         features: [
-          'Quantum Machine Learning';
-          'Cryptographic Security';
-          'Optimization Algorithms';
-          'Simulation Capabilities';
-          'Quantum Networking';
-          'Error Correction Systems'];
+          'Quantum Machine LearningCryptographic Security',
+          'Optimization AlgorithmsSimulation Capabilities',
+          'Quantum NetworkingError Correction Systems'],
         stats: [
-          { label: 'Processing 'Speed', 'value: '10o00'x', 'icon: Zap };
-          { label: 'Security 'Level', 'value: '99.9%'icon: Shield };
-          { label: 'Problem 'Solving', 'value: '∞'icon: Brain }
+          { label: 'Processing 'Speedvalue: '10o00'xicon: Zap },
+          { label: 'Security 'Levelvalue: '99.9%'icon: Shield },
+          { label: 'Problem 'Solvingvalue: '∞'icon: Brain }
         ]}
-    };
+    },
     {
-      id: 'automation';
-      title: 'Intelligent Automation';
-      icon: Rocket;
-      color: 'from-orange-60o0 to-red-60o0';
+      id: 'automation',
+      title: 'Intelligent Automation',
+      icon: Rocket,
+      color: 'from-orange-60o0 to-red-60o0',
       content: {
-        headline: 'Autonomous Systems That Work 24/7';
-        description: 'Deploy intelligent automation solutions that never sleep and continuously optimize your operations.';
+        headline: 'Autonomous Systems That Work 24/7',
+        description: 'Deploy intelligent automation solutions that never sleep and continuously optimize your operations.',
         features: [
-          'Process Automation';
-          'Intelligent Monitoring';
-          'Predictive Maintenance';
-          'Resource Optimization';
-          'Quality Assurance';
-          'Customer Service Bots'];
+          'Process AutomationIntelligent Monitoring',
+          'Predictive MaintenanceResource Optimization',
+          'Quality AssuranceCustomer Service Bots'],
         stats: [
-          { label: ''Uptime', 'value: '99.9%'icon: CheckCircle };
-          { label: 'Cost 'Savings', 'value: '75%'icon: TrendingUp };
-          { label: 'Error 'Reduction', 'value: '95%'icon: Target }
+          { label: ''Uptimevalue: '99.9%'icon: CheckCircle },
+          { label: 'Cost 'Savingsvalue: '75%'icon: TrendingUp },
+          { label: 'Error 'Reductionvalue: '95%'icon: Target }
         ]}
     }
   ],
   const testimonials = [
     {
-      name: 'Sarah Chen';
-      role: 'CTOTechCorp';
-      company: 'Fortune 50o0';
-      content: 'Zion\'s AI solutions increased our operational efficiency by 340% in just 6 months.';
-      avatar: '/api/placeholder/64/64';
-      rating: 5};
+      name: 'Sarah Chen',
+      role: 'CTOTechCorp',
+      company: 'Fortune 50o0',
+      content: 'Zion\'s AI solutions increased our operational efficiency by 340% in just 6 months.',
+      avatar: '/api/placeholder/64/64',
+      rating: 5},
     {
-      name: 'Michael Rodriguez';
-      role: 'CEOInnovateLabs';
-      company: 'Startup';
-      content: 'The quantum computing integration transformed our data processing capabilities completely.';
-      avatar: '/api/placeholder/64/64';
-      rating: 5};
+      name: 'Michael Rodriguez',
+      role: 'CEOInnovateLabs',
+      company: 'Startup',
+      content: 'The quantum computing integration transformed our data processing capabilities completely.',
+      avatar: '/api/placeholder/64/64',
+      rating: 5},
     {
-      name: 'Dr. Emily Watson';
-      role: 'Head of R&D';
-      company: 'Global Corp';
-      content: 'Revolutionary technology that delivered results beyond our wildest expectations.';
-      avatar: '/api/placeholder/64/64';
+      name: 'Dr. Emily Watson',
+      role: 'Head of R&D',
+      company: 'Global Corp',
+      content: 'Revolutionary technology that delivered results beyond our wildest expectations.',
+      avatar: '/api/placeholder/64/64',
       rating: 5}
   ],
   return (
@@ -254,5 +245,5 @@ const UltimateContentRevolution20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default UltimateContentRevolution20o26;
+    </div>)},
+export default UltimateContentRevolution20o26,

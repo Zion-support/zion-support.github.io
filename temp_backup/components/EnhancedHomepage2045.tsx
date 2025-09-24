@@ -4,23 +4,23 @@ import Link from 'next/link',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight;
-  TrendingUp;
-  Brain;
-  Shield;
-  Globe;
-  Cpu;
-  Atom;
-  Target;
-  Star;
-  Sparkles as SparklesIcon;
-  Brain as BrainIcon;
-  Atom as AtomIcon;
-  Shield as ShieldIcon;
-  Zap;
-  Phone;
-  Mail;
-  MapPin;
+  ArrowRight,
+  TrendingUp,
+  Brain,
+  Shield,
+  Globe,
+  Cpu,
+  Atom,
+  Target,
+  Star,
+  Sparkles as SparklesIcon,
+  Brain as BrainIcon,
+  Atom as AtomIcon,
+  Shield as ShieldIcon,
+  Zap,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 import Head from 'next/head',
 // Import our new revolutionary services,
@@ -42,16 +42,16 @@ const EnhancedHomepage20o45: React.FC = () => {
     setIsClient(true),
     // Cleanup function,
     return () => {
-      // Cleanup if needed};
+      // Cleanup if needed},
   }, []),
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
-    ...revolutionary20o44AdvancedMicroSaas;
-    ...revolutionary20o44ITServices;
-    ...revolutionary20o44AIServices;
-    ...realEnterpriseMicroSaas20o25;
-    ...innovativeITInfrastructureServices20o25;
-    ...innovativeAIAutonomousServices20o25;
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
+    ...revolutionary20o44AIServices,
+    ...realEnterpriseMicroSaas20o25,
+    ...innovativeITInfrastructureServices20o25,
+    ...innovativeAIAutonomousServices20o25,
   ],
   // Filter services by category,
   const getFilteredServices = () => {
@@ -61,66 +61,66 @@ const EnhancedHomepage20o45: React.FC = () => {
         service.category,
           .toLowerCase(),
           .includes(selectedCategory.toLowerCase()) ||,
-        service.type.toLowerCase().includes(selectedCategory.toLowerCase()))};
+        service.type.toLowerCase().includes(selectedCategory.toLowerCase()))},
   const categories = [
     {
-      id: 'all';
-      name: 'All Services';
-      icon: SparklesIcon;
-      color: 'from-purple-50o0 to-pink-50o0';
-      count: allRevolutionaryServices.length;
-    };
+      id: 'all',
+      name: 'All Services',
+      icon: SparklesIcon,
+      color: 'from-purple-50o0 to-pink-50o0',
+      count: allRevolutionaryServices.length
+    },
     {
-      id: 'ai';
-      name: 'AI & Consciousness';
-      icon: BrainIcon;
-      color: 'from-cyan-50o0 to-blue-50o0';
-      count: revolutionary20o45AdvancedAIServices.length;
-    };
+      id: 'ai',
+      name: 'AI & Consciousness',
+      icon: BrainIcon,
+      color: 'from-cyan-50o0 to-blue-50o0',
+      count: revolutionary20o45AdvancedAIServices.length
+    },
     {
-      id: 'quantum';
-      name: 'Quantum Technology';
-      icon: AtomIcon;
-      color: 'from-blue-50o0 to-indigo-50o0';
+      id: 'quantum',
+      name: 'Quantum Technology',
+      icon: AtomIcon,
+      color: 'from-blue-50o0 to-indigo-50o0',
       count: allRevolutionaryServices.filter(s =>,
-        s.category.includes('Quantum')).length;
-    };
+        s.category.includes('Quantum')).length,
+    },
     {
-      id: 'cybersecurity';
-      name: 'Cybersecurity';
-      icon: ShieldIcon;
-      color: 'from-red-50o0 to-orange-50o0';
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: ShieldIcon,
+      color: 'from-red-50o0 to-orange-50o0',
       count: allRevolutionaryServices.filter(s =>,
-        s.category.includes('Security')).length;
-    };
+        s.category.includes('Security')).length,
+    },
     {
-      id: 'business';
-      name: 'Business Solutions';
-      icon: Target;
-      color: 'from-emerald-50o0 to-teal-50o0';
+      id: 'business',
+      name: 'Business Solutions',
+      icon: Target,
+      color: 'from-emerald-50o0 to-teal-50o0',
       count: allRevolutionaryServices.filter(s => s.type === 'Micro SAAS'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'it';
-      name: 'IT Infrastructure';
-      icon: Cpu;
-      color: 'from-yellow-50o0 to-orange-50o0';
-      count: revolutionary20o45AdvancedITServices.length;
-    };
+      id: 'it',
+      name: 'IT Infrastructure',
+      icon: Cpu,
+      color: 'from-yellow-50o0 to-orange-50o0',
+      count: revolutionary20o45AdvancedITServices.length
+    },
   ],
   const stats = [
-    { number: '30o00+', label: 'Revolutionary Services', icon: Star };
-    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp };
-    { number: '24/7', label: 'AI Support Available', icon: Brain };
-    { number: '250+', label: 'Countries Served', icon: Globe };
+    { number: '30o00+', label: 'Revolutionary Services', icon: Star },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: TrendingUp },
+    { number: '24/7', label: 'AI Support Available', icon: Brain },
+    { number: '250+', label: 'Countries Served', icon: Globe },
   ],
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const handleGetStarted = useCallback(() => {
     window.location.href = '/contact'}, []),
   const handleWatchDemo = useCallback(() => {
@@ -404,5 +404,5 @@ const EnhancedHomepage20o45: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default EnhancedHomepage20o45;
+    </>)},
+export default EnhancedHomepage20o45,

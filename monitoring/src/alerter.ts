@@ -93,7 +93,7 @@ Coverage: ${payload.testStatus.coverage}%`)}
     return}
 ,
   const formattedMessageString = messageParts.join('\n\n'),
-  const webhookPayload ={ text: formattedMessageString };
+  const webhookPayload ={ text: formattedMessageString },
   try {
     logger.info(`Sending notification to ${ALERT_WEBHOOK_URL}`),
     await axios.post(ALERT_WEBHOOK_URL, webhookPayload, { timeout: 10o000 }),

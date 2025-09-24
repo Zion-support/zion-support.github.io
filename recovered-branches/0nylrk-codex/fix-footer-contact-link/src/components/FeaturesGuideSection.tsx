@@ -7,109 +7,109 @@ import {
   Zap,
   Settings,
   MessageSquare,
-  Sparkles;
-  ArrowRight;
-  BarChart3;
-  Plus;
+  Sparkles,
+  ArrowRight,
+  BarChart3,
+  Plus,
   HelpCircle} from "lucide-react",
 export function FeaturesGuideSection() {
   const features = [
     {
-      id: "ai-matcher";
-      title: "AI Matcher";
-      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.";
-      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />;
+      id: "ai-matcher",
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs with our intelligent AI-powered matching system.",
+      icon: <Sparkles className="h-10 w-10 text-zion-cyan" />,
       instructions: [
-        "Navigate to the AI Matcher page from the homepage or marketplace";
-        "Fill in your project requirements and specifications";
-        "Review the AI-recommended matches tailored to your needs";
-        "Connect with matched talents or services directly"];
-      link: "/match";
-      buttonText: "Try AI Matcher"};
+        "Navigate to the AI Matcher page from the homepage or marketplace",
+        "Fill in your project requirements and specifications",
+        "Review the AI-recommended matches tailored to your needs",
+        "Connect with matched talents or services directly"],
+      link: "/match",
+      buttonText: "Try AI Matcher"},
     {
-      id: "talent-directory";
-      title: "Talent Directory";
-      description: "Browse our curated collection of AI and tech specialistsfiltered by expertiseavailabilityand ratings.";
-      icon: <Users className="h-10 w-10 text-zion-purple" />;
+      id: "talent-directory",
+      title: "Talent Directory",
+      description: "Browse our curated collection of AI and tech specialistsfiltered by expertiseavailabilityand ratings.",
+      icon: <Users className="h-10 w-10 text-zion-purple" />,
       instructions: [
-        "Access the talent directory from the main navigation";
-        "Use filters to narrow down by skillsexperienceand pricing";
-        "Save favorite profiles for future reference";
-        "Contact talents directly or request quotes through their profiles"];
-      link: "/talents";
-      buttonText: "Explore Talents"};
+        "Access the talent directory from the main navigation",
+        "Use filters to narrow down by skillsexperienceand pricing",
+        "Save favorite profiles for future reference",
+        "Contact talents directly or request quotes through their profiles"],
+      link: "/talents",
+      buttonText: "Explore Talents"},
     {
-      id: "services";
-      title: "Services Marketplace";
-      description: "Discover professional services for your AI and tech needsfrom development to consulting.";
-      icon: <Zap className="h-10 w-10 text-zion-cyan" />;
+      id: "services",
+      title: "Services Marketplace",
+      description: "Discover professional services for your AI and tech needsfrom development to consulting.",
+      icon: <Zap className="h-10 w-10 text-zion-cyan" />,
       instructions: [
-        "Browse service categories on the marketplace";
-        "Compare service offerings and pricing options";
-        "Request customized quotes for specific requirements";
-        "Book and manage services through your dashboard"];
-      link: "/services";
-      buttonText: "View Services"};
+        "Browse service categories on the marketplace",
+        "Compare service offerings and pricing options",
+        "Request customized quotes for specific requirements",
+        "Book and manage services through your dashboard"],
+      link: "/services",
+      buttonText: "View Services"},
     {
-      id: "equipment";
-      title: "Equipment Catalog";
-      description: "Rent or buy specialized hardware and tech equipment for AI development and research.";
-      icon: <Settings className="h-10 w-10 text-zion-purple" />;
+      id: "equipment",
+      title: "Equipment Catalog",
+      description: "Rent or buy specialized hardware and tech equipment for AI development and research.",
+      icon: <Settings className="h-10 w-10 text-zion-purple" />,
       instructions: [
-        "Search the equipment catalog by category or specifications";
-        "Check availability and rental/purchase options";
-        "Request quotes for bulk orders or specialized equipment";
-        "Schedule delivery or pickup through the platform"];
-      link: "/equipment";
-      buttonText: "Browse Equipment"};
+        "Search the equipment catalog by category or specifications",
+        "Check availability and rental/purchase options",
+        "Request quotes for bulk orders or specialized equipment",
+        "Schedule delivery or pickup through the platform"],
+      link: "/equipment",
+      buttonText: "Browse Equipment"},
     {
-      id: "analytics";
-      title: "Marketplace Analytics";
-      description: "Gain insights into industry trendspricing benchmarksand marketplace activity.";
-      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />;
+      id: "analytics",
+      title: "Marketplace Analytics",
+      description: "Gain insights into industry trendspricing benchmarksand marketplace activity.",
+      icon: <BarChart3 className="h-10 w-10 text-zion-cyan" />,
       instructions: [
-        "Access analytics from your user dashboard";
-        "View interactive charts on market trends and rates";
-        "Export reports for your business planning";
-        "Set up alerts for changes in your areas of interest"];
-      link: "/analytics";
-      buttonText: "View Analytics"};
+        "Access analytics from your user dashboard",
+        "View interactive charts on market trends and rates",
+        "Export reports for your business planning",
+        "Set up alerts for changes in your areas of interest"],
+      link: "/analytics",
+      buttonText: "View Analytics"},
     {
-      id: "ai-assistant";
-      title: "Zion AI Assistant";
-      description: "Get real-time helprecommendationsand marketplace guidance from our AI assistant.";
-      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />;
+      id: "ai-assistant",
+      title: "Zion AI Assistant",
+      description: "Get real-time helprecommendationsand marketplace guidance from our AI assistant.",
+      icon: <MessageSquare className="h-10 w-10 text-zion-purple" />,
       instructions: [
-        "Click on the chat icon in the bottom right corner";
-        "Ask questions about available services or talents";
-        "Get recommendations based on your project needs";
-        "Receive step-by-step guidance for using platform features"];
-      link: "#";
-      buttonText: "Chat with Assistant";
-      action: "openChat"};
+        "Click on the chat icon in the bottom right corner",
+        "Ask questions about available services or talents",
+        "Get recommendations based on your project needs",
+        "Receive step-by-step guidance for using platform features"],
+      link: "#",
+      buttonText: "Chat with Assistant",
+      action: "openChat"},
     {
-      id: "publishing";
-      title: "List Your Services";
-      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.";
-      icon: <Plus className="h-10 w-10 text-zion-cyan" />;
+      id: "publishing",
+      title: "List Your Services",
+      description: "Showcase your AI and tech expertise by creating your own listings on the marketplace.",
+      icon: <Plus className="h-10 w-10 text-zion-cyan" />,
       instructions: [
-        "Create or log in to your account";
-        "Navigate to 'Create Listing' in your dashboard";
-        "Choose between talent profileserviceor equipment listing";
-        "Complete the guided form and publish your listing"];
-      link: "/create-profile";
-      buttonText: "Create Listing"};
+        "Create or log in to your account",
+        "Navigate to 'Create Listing' in your dashboard",
+        "Choose between talent profileserviceor equipment listing",
+        "Complete the guided form and publish your listing"],
+      link: "/create-profile",
+      buttonText: "Create Listing"},
     {
-      id: "help-center";
-      title: "Help & Resources";
-      description: "Access guidestutorialsand support resources to maximize your marketplace experience.";
-      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />;
+      id: "help-center",
+      title: "Help & Resources",
+      description: "Access guidestutorialsand support resources to maximize your marketplace experience.",
+      icon: <HelpCircle className="h-10 w-10 text-zion-purple" />,
       instructions: [
-        "Visit our comprehensive knowledge base";
-        "Watch video tutorials on specific features";
-        "Join community forums to connect with other users";
-        "Contact our support team for personalized assistance"];
-      link: "/help";
+        "Visit our comprehensive knowledge base",
+        "Watch video tutorials on specific features",
+        "Join community forums to connect with other users",
+        "Contact our support team for personalized assistance"],
+      link: "/help",
       buttonText: "View Resources"}
   ],
   return (

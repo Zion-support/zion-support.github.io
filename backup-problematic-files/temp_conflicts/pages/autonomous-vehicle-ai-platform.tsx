@@ -11,11 +11,11 @@ import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micr
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -27,24 +27,24 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Car;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Car;
-  Star;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,
+  Star,
 } from "lucide-react",
 export default function AutonomousVehicleAIPage() {
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>,
-    s && s.link.endsWith("/autonomous-vehicle-ai-platform");
+    s && s.link.endsWith("/autonomous-vehicle-ai-platform"),
 ),
   if (!service) return null,
   return (
@@ -108,12 +108,12 @@ export default function AutonomousVehicleAIPage() {
                 href="/contact",
                 variant="quantum",
                 size="lg",
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Car;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Car,
   Star} from './lucide-react',
 export default /**,
  * AutonomousVehicleAIPage - Function description,

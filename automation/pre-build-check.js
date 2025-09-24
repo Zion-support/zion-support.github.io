@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -48,25 +48,25 @@ class PreBuildChecker {
         const content = fs.readFileSync(file, 'utf8'),
         // Check for common syntax errors,
         const syntaxErrors = [
-          { pattern: /from\s+next',/, description: Missing quotes in import statement' };
-          { pattern: /req\.method\s*!==\s*([A-Z]+)/, description: Missing quotes in method check' };
-          { pattern: /message:\s*([A-Za-z\s]+)/, description: Missing quotes in string literal' };
-          { pattern: /typeof\s+global\s*!==\s*undefined'/, description: Missing quotes in typeof check' };
+          { pattern: /from\s+next',/, description: Missing quotes in import statement' },
+          { pattern: /req\.method\s*!==\s*([A-Z]+)/, description: Missing quotes in method check' },
+          { pattern: /message:\s*([A-Za-z\s]+)/, description: Missing quotes in string literal' },
+          { pattern: /typeof\s+global\s*!==\s*undefined'/, description: Missing quotes in typeof check' },
           { pattern: /typeof\s*([^)]+)\.self\s*===\s*undefined/, description: Missing quotes in typeof check' }
         ],
         for (const error of syntaxErrors) {
           if (error.pattern.test(content)) {
             this.issues.push({
-              file;
-              type: 'syntax';
-              description: error.description;
+              file,
+              type: 'syntax',
+              description: error.description,
               line: this.findLineNumber(content, error.pattern)}),
             errorCount++}
         }
       } catch (error) {
         this.issues.push({
-          file;
-          type: 'file_read_error';
+          file,
+          type: 'file_read_error',
           description: `Could not read file: ${error.message}`}),
         errorCount++}
     }
@@ -78,7 +78,7 @@ class PreBuildChecker {
     logger.info('🔍 Checking TypeScript errors...'),
     try {
       const result = execSync('npx tsc --noEmit --pretty false', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: ['pipe', pipe', pipe']}),
       const lines = result.split('\n'),
       let errorCount = 0,
@@ -87,10 +87,10 @@ class PreBuildChecker {
           const match = line.match(/([^(]+)((\d+),(\d+)): error TS\d+: (.+)/),
           if (match) {
             this.issues.push({
-              file: match[1].trim();
-              type: 'typescript';
-              description: match[4];
-              line: parseInt(match[2]);
+              file: match[1].trim(),
+              type: 'typescript',
+              description: match[4],
+              line: parseInt(match[2]),
               column: parseInt(match[3])}),
             errorCount++}
         }
@@ -108,29 +108,29 @@ class PreBuildChecker {
       // Check if package.json exists,
       if (!fs.existsSync('package.json')) {
         this.issues.push({
-          type: 'dependency';
+          type: 'dependency',
           description: package.json not found}),
         return}
 ,
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       // Check for required dependencies,
       const requiredDeps = ['next', react', react-dom'],
       for (const dep of requiredDeps) {
         if (!packageJson.dependencies?.[dep] && !packageJson.devDependencies?.[dep]) {
           this.issues.push({
-            type: 'dependency';
+            type: 'dependency',
             description: `Missing required dependency: ${dep}`})}
       }
 ,
       // Check if node_modules exists,
       if (!fs.existsSync('node_modules')) {
         this.issues.push({
-          type: 'dependency';
+          type: 'dependency',
           description: node_modules not found, run npm install})}
 ,
       logger.info('Dependencies check completed')} catch (error) {
       this.issues.push({
-        type: 'dependency';
+        type: 'dependency',
         description: `Error checking dependencies: ${error.message}`})}
   }
 ,
@@ -138,12 +138,12 @@ class PreBuildChecker {
   async checkEnvironmentVariables() {
     logger.info('🔍 Checking environment variables...'),
     const requiredEnvVars = [
-      NEXT_PUBLIC_SUPABASE_URL';
+      NEXT_PUBLIC_SUPABASE_URL',
       NEXT_PUBLIC_SUPABASE_ANON_KEY],
     for (const envVar of requiredEnvVars) {
       if (!process.env[envVar]) {
         this.issues.push({
-          type: 'environment';
+          type: 'environment',
           description: `Missing environment variable: ${envVar}`})}
     }
 ,
@@ -155,13 +155,13 @@ class PreBuildChecker {
     // Check if netlify.toml exists,
     if (!fs.existsSync('netlify.toml')) {
       this.issues.push({
-        type: 'configuration';
+        type: 'configuration',
         description: netlify.toml not found})}
 ,
     // Check if next.config.js exists,
     if (!fs.existsSync('next.config.js') && !fs.existsSync('next.config.ts')) {
       this.issues.push({
-        type: 'configuration';
+        type: 'configuration',
         description: next.config.js or next.config.ts not found})}
 ,
     logger.info('Build configuration check completed')}
@@ -194,16 +194,16 @@ class PreBuildChecker {
   // Generate report,
   generateReport() {
     const report ={
-      timestamp: new Date().toISOString();
-      issues: this.issues;
+      timestamp: new Date().toISOString(),
+      issues: this.issues,
       summary: {
-        totalIssues: this.issues.length;
-        syntaxErrors: this.issues.filter(i => i.type === 'syntax').length;
-        typescriptErrors: this.issues.filter(i => i.type === 'typescript').length;
-        dependencyIssues: this.issues.filter(i => i.type === 'dependency').length;
-        environmentIssues: this.issues.filter(i => i.type === 'environment').length;
+        totalIssues: this.issues.length,
+        syntaxErrors: this.issues.filter(i => i.type === 'syntax').length,
+        typescriptErrors: this.issues.filter(i => i.type === 'typescript').length,
+        dependencyIssues: this.issues.filter(i => i.type === 'dependency').length,
+        environmentIssues: this.issues.filter(i => i.type === 'environment').length,
         configurationIssues: this.issues.filter(i => i.type === 'configuration').length}
-    };
+    },
     const reportPath = `automation/reports/pre-build-${Date.now()}.json`,
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Pre-build report saved to: ${reportPath}`),

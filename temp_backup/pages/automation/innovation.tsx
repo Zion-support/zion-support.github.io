@@ -1,18 +1,18 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item ={ source: string, title: string, url: string, date?: string, summary?: string };
-type Props ={ items: Item[] };
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
+type Item ={ source: string, title: string, url: string, date?: string, summary?: string },
+type Props ={ items: Item[] },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd()'public'automation'innovation-digest.json'),
     const raw = fs.readFileSync(file'utf8'),
     const data = JSON.parse(raw),
-    return { props: { items: data.items || [] }revalidate: 180o0 };
+    return { props: { items: data.items || [] }revalidate: 180o0 },
   } catch {
-    return { props: { items: [] }revalidate: 180o0 };
+    return { props: { items: [] }revalidate: 180o0 },
   }
-};
+},
 export default function InnovationDigest({ items }: Props) {
   return (
     <div className="space-y-6">,

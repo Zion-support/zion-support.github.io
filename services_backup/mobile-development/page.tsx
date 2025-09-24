@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {
-  title: 'Mobile App Development | Zion Tech Group';
+  title: 'Mobile App Development | Zion Tech Group',
   description:,
-    'Professional mobile app development services for iOS, Android, and cross-platform applications with modern technologies.';
-};
+    'Professional mobile app development services for iOS, Android, and cross-platform applications with modern technologies.',
+},
 export default function MobileDevelopmentPage() {
   return (
     <div className='animate-fade-in'>,
@@ -28,10 +28,8 @@ export default function MobileDevelopmentPage() {
               title='Native iOS Development',
               description='High-performance iOS apps using Swift and SwiftUI',
               features={[
-                'Swift/SwiftUI';
-                'Core Data';
-                'Push notifications';
-                'App Store optimization';
+                'Swift/SwiftUICore Data',
+                'Push notificationsApp Store optimization',
               ]}
               price='Starting at $15k',
               icon='📱',
@@ -40,10 +38,8 @@ export default function MobileDevelopmentPage() {
               title='Native Android Development',
               description='Robust Android apps using Kotlin and Jetpack Compose',
               features={[
-                'Kotlin/Java';
-                'Room database';
-                'Material Design';
-                'Play Store optimization';
+                'Kotlin/JavaRoom database',
+                'Material DesignPlay Store optimization',
               ]}
               price='Starting at $15k',
               icon='🤖',
@@ -52,10 +48,8 @@ export default function MobileDevelopmentPage() {
               title='Cross-Platform Development',
               description='Single codebase for iOS and Android using React Native or Flutter',
               features={[
-                'React Native';
-                'Flutter';
-                'Code sharing';
-                'Faster development';
+                'React NativeFlutter',
+                'Code sharingFaster development',
               ]}
               price='Starting at $20k',
               icon='🔄',
@@ -64,10 +58,8 @@ export default function MobileDevelopmentPage() {
               title='Progressive Web Apps',
               description='Web apps that work like native mobile applications',
               features={[
-                'PWA features';
-                'Offline support';
-                'Push notifications';
-                'App-like experience';
+                'PWA featuresOffline support',
+                'Push notificationsApp-like experience',
               ]}
               price='Starting at $12k',
               icon='🌐',
@@ -76,10 +68,8 @@ export default function MobileDevelopmentPage() {
               title='Mobile Backend Development',
               description='Scalable backend services and APIs for mobile applications',
               features={[
-                'RESTful APIs';
-                'Real-time features';
-                'Database design';
-                'Cloud integration';
+                'RESTful APIsReal-time features',
+                'Database designCloud integration',
               ]}
               price='Starting at $18k',
               icon='⚙️',
@@ -88,10 +78,8 @@ export default function MobileDevelopmentPage() {
               title='App Maintenance & Support',
               description='Ongoing maintenance, updates, and technical support',
               features={[
-                'Bug fixes';
-                'Feature updates';
-                'Performance optimization';
-                '24/7 support';
+                'Bug fixesFeature updates',
+                'Performance optimization24/7 support',
               ]}
               price='Starting at $2k/mo',
               icon='🔧',
@@ -108,10 +96,8 @@ export default function MobileDevelopmentPage() {
               title='E-commerce Mobile Apps',
               description='Complete mobile shopping experiences with payment integration',
               features={[
-                'Product catalogs';
-                'Shopping cart';
-                'Payment processing';
-                'Order tracking';
+                'Product catalogsShopping cart',
+                'Payment processingOrder tracking',
               ]}
               price='$25k - $80k',
               icon='🛒',
@@ -120,10 +106,8 @@ export default function MobileDevelopmentPage() {
               title='Healthcare Mobile Apps',
               description='HIPAA-compliant mobile solutions for healthcare providers',
               features={[
-                'Patient portals';
-                'Telemedicine';
-                'Health records';
-                'Appointment booking';
+                'Patient portalsTelemedicine',
+                'Health recordsAppointment booking',
               ]}
               price='$30k - $10o0k',
               icon='🏥',
@@ -132,10 +116,8 @@ export default function MobileDevelopmentPage() {
               title='FinTech Mobile Apps',
               description='Secure financial applications with advanced security features',
               features={[
-                'Banking features';
-                'Payment processing';
-                'Biometric auth';
-                'Fraud detection';
+                'Banking featuresPayment processing',
+                'Biometric authFraud detection',
               ]}
               price='$35k - $120k',
               icon='💰',
@@ -144,10 +126,8 @@ export default function MobileDevelopmentPage() {
               title='Social & Communication Apps',
               description='Engaging social platforms and messaging applications',
               features={[
-                'Real-time chat';
-                'Media sharing';
-                'User profiles';
-                'Push notifications';
+                'Real-time chatMedia sharing',
+                'User profilesPush notifications',
               ]}
               price='$28k - $90k',
               icon='💬',
@@ -163,34 +143,25 @@ export default function MobileDevelopmentPage() {
             <TechStackCard
               title='Mobile Technologies',
               details={[
-                'iOS (Swift, SwiftUI)';
-                'Android (Kotlin, Jetpack)';
-                'React Native';
-                'Flutter';
-                'Xamarin';
-                'Ionic';
+                'iOS (Swift, SwiftUI)Android (Kotlin, Jetpack)',
+                'React NativeFlutter',
+                'XamarinIonic',
               ]}
             />,
             <TechStackCard
               title='Backend & APIs',
               details={[
-                'Node.js';
-                'Python';
-                'Java';
-                'REST APIs';
-                'GraphQL';
-                'WebSocket';
+                'Node.jsPython',
+                'JavaREST APIs',
+                'GraphQLWebSocket',
               ]}
             />,
             <TechStackCard
               title='Cloud & Services',
               details={[
-                'AWS';
-                'Firebase';
-                'MongoDB';
-                'PostgreSQL';
-                'Redis';
-                'CDN';
+                'AWSFirebase',
+                'MongoDBPostgreSQL',
+                'RedisCDN',
               ]}
             />,
           </div>,
@@ -233,11 +204,11 @@ export default function MobileDevelopmentPage() {
     </div>)}
 ,
 function MobileServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -259,11 +230,11 @@ function MobileServiceCard({
     </div>)}
 ,
 function SpecializedMobileCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -285,8 +256,8 @@ function SpecializedMobileCard({
     </div>)}
 ,
 function TechStackCard({
-  title;
-  details;
+  title,
+  details,
 }: {
   title: string,
   details: string[]}) {
@@ -302,10 +273,10 @@ function TechStackCard({
     </div>)}
 ,
 function AppCategoryCard({
-  title;
-  description;
-  price;
-  icon;
+  title,
+  description,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -331,10 +302,8 @@ function Pricing() {
           price='$15k–$35k',
           duration='8–12 weeks',
           features={[
-            'Core features';
-            'Basic UI/UX';
-            'Single platform';
-            'Testing';
+            'Core featuresBasic UI/UX',
+            'Single platformTesting',
           ]}
         />,
         <Plan
@@ -342,10 +311,8 @@ function Pricing() {
           price='$35k–$80k',
           duration='12–20 weeks',
           features={[
-            'Complete features';
-            'Custom UI/UX';
-            'Both platforms';
-            'Backend integration';
+            'Complete featuresCustom UI/UX',
+            'Both platformsBackend integration',
           ]}
         />,
         <Plan
@@ -353,20 +320,18 @@ function Pricing() {
           price='$80k+',
           duration='Custom timeline',
           features={[
-            'Advanced features';
-            'Custom design';
-            'Scalable backend';
-            'Ongoing support';
+            'Advanced featuresCustom design',
+            'Scalable backendOngoing support',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

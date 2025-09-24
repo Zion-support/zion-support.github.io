@@ -14,8 +14,8 @@ if (typeof window !== 'undefined') {
   new PerformanceObserver(entryList => {
     for (const entry of entryList.getEntries()) {
       sendToAnalytics({
-        name: 'FID';
-        value: entry.processingStart - entry.startTime;
+        name: 'FID',
+        value: entry.processingStart - entry.startTime
       })}
   }).observe({ entryTypes: ['first-input'] }),
   // CLS monitoring,

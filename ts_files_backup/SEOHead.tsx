@@ -10,14 +10,14 @@ interface SEOHeadProps {
   structuredData?: object}
 ,
 export default function SEOHead({
-  title = 'Zion Tech Group - Leading AI & Technology Solutions';
-  description = 'Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.';
-  keywords = 'AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology';
-  canonical;
-  ogImage = '/og-image.jpg';
-  ogType = 'website';
-  twitterCard = 'summary_large_image';
-  structuredData;
+  title = 'Zion Tech Group - Leading AI & Technology Solutions',
+  description = 'Revolutionary AI solutions, enterprise IT services, and innovative micro SaaS products. Transform your business with cutting-edge technology from quantum computing to metaverse intelligence.',
+  keywords = 'AI solutions, IT services, micro SaaS, quantum computing, blockchain, machine learning, digital transformation, enterprise technology',
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
 }: SEOHeadProps) {
   const fullTitle = title.includes('Zion Tech Group'),
     ? title,
@@ -25,57 +25,55 @@ export default function SEOHead({
   const canonicalUrl =,
     canonical || (typeof window !== 'undefined' ? window.location.href : ''),
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: 'https://ziontechgroup.com';
-    logo: 'https://ziontechgroup.com/logo.png';
-    description: description;
-    foundingDate: '2020';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
+    description: description,
+    foundingDate: '2020',
     address: {
-      '@type': 'PostalAddress';
-      streetAddress: '364 E Main St STE 1008';
-      addressLocality: 'Middletown';
-      addressRegion: 'DE';
-      postalCode: '19709';
-      addressCountry: 'US';
-    };
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 1008',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'
+    },
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-302-464-0950';
-      contactType: 'customer service';
-      email: 'kleber@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-302-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
+    },
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group';
-      'https://twitter.com/ziontechgroup';
-      'https://github.com/zion-tech-group';
-    ];
+      'https://linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup',
+      'https://github.com/zion-tech-group',
+    ],
     offers: {
-      '@type': 'AggregateOffer';
-      offerCount: '100+';
+      '@type': 'AggregateOffer',
+      offerCount: '100+',
       offers: [
         {
-          '@type': 'Offer';
-          name: 'AI Solutions';
+          '@type': 'Offer',
+          name: 'AI Solutions',
           description:,
-            'Revolutionary AI solutions from quantum computing to metaverse intelligence';
-        };
+            'Revolutionary AI solutions from quantum computing to metaverse intelligence',
+        },
         {
-          '@type': 'Offer';
-          name: 'IT Services';
+          '@type': 'Offer',
+          name: 'IT Services',
           description:,
-            'Enterprise-grade infrastructure from 5G networks to space technology';
-        };
+            'Enterprise-grade infrastructure from 5G networks to space technology',
+        },
         {
-          '@type': 'Offer';
-          name: 'Micro SaaS';
+          '@type': 'Offer',
+          name: 'Micro SaaS',
           description:,
-            'Innovative SaaS solutions from AI code generation to metaverse builders';
-        };
-      ];
-    };
-  };
+            'Innovative SaaS solutions from AI code generation to metaverse builders',
+        },
+      ],
+    },
+  },
   const finalStructuredData = structuredData || defaultStructuredData,
   return (
     <Head>,
@@ -145,7 +143,7 @@ export default function SEOHead({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData);
+          __html: JSON.stringify(finalStructuredData)
         }}
       />,
       {/* Additional Performance Hints */}

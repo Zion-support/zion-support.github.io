@@ -2,16 +2,16 @@
 import React, { useState, useEffect } from 'react',
 const ROICalculatorWidget: React.FC = () => {
   const [inputs, setInputs] = useState({
-    currentRevenue: 10o00000;
-    currentEmployees: 50;
-    currentEfficiency: 70;
-    automationLevel: 50;
+    currentRevenue: 10o00000,
+    currentEmployees: 50,
+    currentEfficiency: 70,
+    automationLevel: 50,
     implementationTime: 6}),
   const [results, setResults] = useState({
-    revenueIncrease: 0;
-    costSavings: 0;
-    efficiencyGain: 0;
-    totalROI: 0;
+    revenueIncrease: 0,
+    costSavings: 0,
+    efficiencyGain: 0,
+    totalROI: 0,
     paybackPeriod: 0}),
   const [isCalculating, setIsCalculating] = useState(false),
   useEffect(() => {
@@ -21,10 +21,10 @@ const ROICalculatorWidget: React.FC = () => {
     // Simulate calculation delay for better UX,
     await new Promise(resolve => setTimeout(resolve, 50o0)),
     const {
-      currentRevenue;
-      currentEmployees;
-      currentEfficiency;
-      automationLevel;
+      currentRevenue,
+      currentEmployees,
+      currentEfficiency,
+      automationLevel,
       implementationTime} = inputs,
     // Calculate based on typical AI automation benefits,
     const efficiencyGain = (automationLevel / 10o0) * (10o0 - currentEfficiency) * 0.8,
@@ -35,16 +35,16 @@ const ROICalculatorWidget: React.FC = () => {
     const totalROI = ((totalBenefits - implementationCost) / implementationCost) * 10o0,
     const paybackPeriod = implementationTime + (implementationCost / (totalBenefits / 12)),
     setResults({
-      revenueIncrease: Math.round(revenueIncrease);
-      costSavings: Math.round(costSavings);
-      efficiencyGain: Math.round(efficiencyGain);
-      totalROI: Math.round(totalROI);
+      revenueIncrease: Math.round(revenueIncrease),
+      costSavings: Math.round(costSavings),
+      efficiencyGain: Math.round(efficiencyGain),
+      totalROI: Math.round(totalROI),
       paybackPeriod: Math.round(paybackPeriod * 10) / 10}),
-    setIsCalculating(false)};
+    setIsCalculating(false)},
   const handleInputChange = (field: string, value: number) => {
     setInputs(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   return (
     <section className="py-20 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -227,5 +227,5 @@ const ROICalculatorWidget: React.FC = () => {
           border: none,
           box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1)}
       `}</style>,
-    </section>)};
-export default ROICalculatorWidget;
+    </section>)},
+export default ROICalculatorWidget,

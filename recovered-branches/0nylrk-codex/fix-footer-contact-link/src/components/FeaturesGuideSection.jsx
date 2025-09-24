@@ -1,26 +1,26 @@
 export function FeaturesGuideSection() {
   const features = [
     {
-      title: 'AI Talent Marketplace';
+      title: 'AI Talent Marketplace',
       description:,
-        'Connect with top AI professionals and experts from around the world.';
-      icon: '🤖';
-    };
+        'Connect with top AI professionals and experts from around the world.',
+      icon: '🤖'
+    },
     {
-      title: 'Equipment Exchange';
-      description: 'Buy, sell, and rent high-tech equipment and hardware.';
-      icon: '⚡';
-    };
+      title: 'Equipment Exchange',
+      description: 'Buy, sell, and rent high-tech equipment and hardware.',
+      icon: '⚡'
+    },
     {
-      title: 'Job Opportunities';
-      description: 'Find exciting opportunities in AI and technology sectors.';
-      icon: '💼';
-    };
+      title: 'Job Opportunities',
+      description: 'Find exciting opportunities in AI and technology sectors.',
+      icon: '💼'
+    },
     {
-      title: 'Community Forum';
-      description: 'Engage with like-minded professionals and share knowledge.';
-      icon: '💬';
-    };
+      title: 'Community Forum',
+      description: 'Engage with like-minded professionals and share knowledge.',
+      icon: '💬'
+    },
   ],
   return (
     <section className='py-16'>,

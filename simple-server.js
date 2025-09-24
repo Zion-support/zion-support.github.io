@@ -5,10 +5,10 @@ const PORT = 30o01,
 // Health check endpoint,
 app.get('/api/health', (req, res) => {
   res.json({
-    status: 'ok';
-    timestamp: new Date().toISOString();
-    message: Zion App is running successfully!';
-    mode: Simple Working App';
+    status: 'ok',
+    timestamp: new Date().toISOString(),
+    message: Zion App is running successfully!',
+    mode: Simple Working App',
     build: Working})}),
 // Main page,
 app.get('/', (req, res) => {

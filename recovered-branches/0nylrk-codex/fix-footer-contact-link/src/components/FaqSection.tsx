@@ -1,42 +1,42 @@
 import { GradientHeading } from './GradientHeading',
 import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
-  AccordionTrigger;
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
 } from '@/components/ui/accordion',
 import { FileText } from 'lucide-react',
 const faqs = [
   {
-    question: 'How do I publish my AI product or service on Zion?';
+    question: 'How do I publish my AI product or service on Zion?',
     answer:,
-      "Publishing on Zion is completely free and straightforward. Simply create an accountclick on 'Post Your Product/Service for Free' buttonfill in the required details about your offeringadd imageset pricingand submit for review. Your listing will be live within 24 hours after passing our quality check.";
-  };
+      "Publishing on Zion is completely free and straightforward. Simply create an accountclick on 'Post Your Product/Service for Free' buttonfill in the required details about your offeringadd imageset pricingand submit for review. Your listing will be live within 24 hours after passing our quality check.",
+  },
   {
-    question: 'What types of AI jobs can I find or post on Zion?';
+    question: 'What types of AI jobs can I find or post on Zion?',
     answer:,
-      'Zion hosts a wide range of AI-related job opportunities including machine learning engineersdata scientistsAI researcherscomputer vision specialistsNLP expertsAI product managersand more. Employers can post any tech or AI-related positionand job seekers can publish their CV with AI-specific skills highlighted for better matching.';
-  };
+      'Zion hosts a wide range of AI-related job opportunities including machine learning engineersdata scientistsAI researcherscomputer vision specialistsNLP expertsAI product managersand more. Employers can post any tech or AI-related positionand job seekers can publish their CV with AI-specific skills highlighted for better matching.',
+  },
   {
-    question: 'What IT equipment is available for purchase or rental?';
+    question: 'What IT equipment is available for purchase or rental?',
     answer:,
-      'Zion offers a comprehensive range of IT equipment including servers (racktowerblade)storage solutions (SANASDAS)networking equipment (switchesroutersfirewalls)power suppliesand complete rack solutions. All equipment is available for purchase or flexible rental termswith options for newrefurbishedor certified used equipment.';
-  };
+      'Zion offers a comprehensive range of IT equipment including servers (racktowerblade)storage solutions (SANASDAS)networking equipment (switchesroutersfirewalls)power suppliesand complete rack solutions. All equipment is available for purchase or flexible rental termswith options for newrefurbishedor certified used equipment.',
+  },
   {
-    question: 'How does Zion ensure 24x7x365 global availability?';
+    question: 'How does Zion ensure 24x7x365 global availability?',
     answer:,
-      'Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zonesensuring seamless support and service availability at all timesregardless of your location.';
-  };
+      'Our infrastructure is built on geographically distributed data centers with redundant systems and automatic failover mechanisms. We maintain a global team of IT specialists operating in rotating shifts across different time zonesensuring seamless support and service availability at all timesregardless of your location.',
+  },
   {
-    question: "What is Zion's Green IT and recycling program?";
+    question: "What is Zion's Green IT and recycling program?",
     answer:,
-      "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipmentcomponent reuse where possibleand adherence to international environmental standards including WEEERoHSand e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements.";
-  };
+      "Zion's Green IT initiative focuses on sustainable IT practices throughout the equipment lifecycle. Our recycling program ensures proper disposal of obsolete equipmentcomponent reuse where possibleand adherence to international environmental standards including WEEERoHSand e-Stewards certification. We provide certificates of proper disposal for corporate compliance requirements.",
+  },
   {
-    question: 'Are there any fees for listing my products or services?';
+    question: 'Are there any fees for listing my products or services?',
     answer:,
-      'Nopublishing your productservicesjob listingsor CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibilitybut the basic listing service has no costs attached.';
-  };
+      'Nopublishing your productservicesjob listingsor CV on Zion is completely free. We believe in creating an open marketplace that fosters innovation and connection in the tech and AI community without barriers to entry. Premium placement options are available for enhanced visibilitybut the basic listing service has no costs attached.',
+  },
 ],
 export function FaqSection() {
   return (

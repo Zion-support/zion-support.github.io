@@ -1,10 +1,9 @@
 import { serve } from 'https: //deno.land/std@0.190.0/http/server.ts',
 import 'https://deno.land/x/xhr@0.1.0/mod.ts',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })}
@@ -32,13 +31,13 @@ serve(async req => {
 ,
     // Check the status from OpenAI API,
     const response = await fetch(
-      `https: //api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`;
+      `https: //api.openai.com/v1/fine_tuning/jobs/${finetuneJobId}`,
       {
-        method: 'GET';
+        method: 'GET',
         headers: {
-          Authorization: `Bearer ${openAIApiKey}`;
-          'Content-Type': 'application/json';
-        };
+          Authorization: `Bearer ${openAIApiKey}`,
+          'Content-Type': 'application/json',
+        },
       }
     ),
     if (!response.ok) {
@@ -46,9 +45,9 @@ serve(async req => {
       if (response.status === 404) {
         return new Response(
           JSON.stringify({
-            status: 'unknown';
-            error: 'Fine-tuning job not found';
-          });
+            status: 'unknown',
+            error: 'Fine-tuning job not found'
+          }),
           { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
         )}
 ,
@@ -79,20 +78,20 @@ serve(async req => {
 ,
     return new Response(
       JSON.stringify({
-        status;
-        error;
+        status,
+        error,
         progress: data.trained_tokens,
           ? {
-              trainedTokens: data.trained_tokens;
-              trainingFiles: data.training_file;
+              trainedTokens: data.trained_tokens,
+              trainingFiles: data.training_file
             }
-          : null;
-      });
+          : null,
+      }),
       { headers: { ...corsHeaders, 'Content-Type': 'application/json' } }
     )} catch (error) {
     console.error('Error in check-training-status function:', error),
     return new Response(JSON.stringify({ error: error.message }), {
-      status: 500;
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })}
 }),

@@ -18,11 +18,11 @@ export function ApiKeysManager() {
   const {
     keys,
     loading,
-    newApiKey;
+    newApiKey,
     fetchApiKeys,
     createApiKey,
     regenerateApiKey,
-    revokeApiKey;
+    revokeApiKey,
     clearNewApiKey} = useApiKeys(),
   const [showCreateDialogsetShowCreateDialog] = useState(false),
   const [showDeleteConfirmsetShowDeleteConfirm] = useState<string | null>(null),
@@ -38,35 +38,35 @@ export function ApiKeysManager() {
     await createApiKey(keyNameselectedScopes),
     setShowCreateDialog(false),
     setKeyName(""),
-    setSelectedScopes([])};
+    setSelectedScopes([])},
   const handleRegenerateKey = async (keyId: string) => {
     await regenerateApiKey(keyId),
-    setShowRegenerateConfirm(null)};
+    setShowRegenerateConfirm(null)},
   const handleRevokeKey = async (keyId: string) => {
     await revokeApiKey(keyId),
-    setShowDeleteConfirm(null)};
+    setShowDeleteConfirm(null)},
   // Scope options,
   const scopeOptions: { value: ApiKeyScope, label: string, description: string }[] = [
-    { value: 'jobs:read'label: 'Read Jobs'description: 'Access to view job listings' };
-    { value: 'jobs:write'label: 'Write Jobs'description: 'Create and manage job listings' };
-    { value: 'talent:read'label: 'Read Talent'description: 'Access to view talent profiles' };
-    { value: 'quotes:write'label: 'Write Quotes'description: 'Create and manage quotes' };
+    { value: 'jobs:read'label: 'Read Jobs'description: 'Access to view job listings' },
+    { value: 'jobs:write'label: 'Write Jobs'description: 'Create and manage job listings' },
+    { value: 'talent:read'label: 'Read Talent'description: 'Access to view talent profiles' },
+    { value: 'quotes:write'label: 'Write Quotes'description: 'Create and manage quotes' },
     { value: 'webhooks:manage'label: 'Manage Webhooks'description: 'Set up and manage webhook endpoints' }],
   // Toggle a scope selection,
   const toggleScope = (scope: ApiKeyScope) => {
     setSelectedScopes(prev =>,
       prev.includes(scope),
         ? prev.filter(s => s !== scope),
-        : [...prevscope])};
+        : [...prevscope])},
   const getExampleCode = (key: string) => {
     return `curl -X GET "https://api.ziontechgroup.com/v1/jobs" \\,
   -H "Authorization: Bearer ${key}" \\,
-  -H "Content-Type: application/json"`};
+  -H "Content-Type: application/json"`},
   // Reset form when dialog closes,
   const handleDialogClose = () => {
     setKeyName(""),
     setSelectedScopes([]),
-    setShowCreateDialog(false)};
+    setShowCreateDialog(false)},
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">,
       <CardHeader>,

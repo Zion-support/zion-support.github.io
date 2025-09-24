@@ -1,109 +1,109 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Zap, Shield;
-  Brain, Rocket, Target, Atom, Sparkles, DollarSign;
-  BookOpen, Building, Users, Star, TrendingUp, Award;
-  Facebook, Twitter, Linkedin, Instagram, Youtube;
-  Github, Mail as EmailIcon, MessageCircle, HelpCircle;
+  Phone, Mail, MapPin, Globe, ArrowRight, Zap, Shield,
+  Brain, Rocket, Target, Atom, Sparkles, DollarSign,
+  BookOpen, Building, Users, Star, TrendingUp, Award,
+  Facebook, Twitter, Linkedin, Instagram, Youtube,
+  Github, Mail as EmailIcon, MessageCircle, HelpCircle,
   FileText, Shield as SecurityIcon, Lock, Eye, Heart} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const footerSections = [
   {
-    title: 'Services';
-    icon: <Rocket className="w-5 h-5"  />;
-    color: 'from-emerald-50o0 to-teal-50o0';
+    title: 'Services',
+    icon: <Rocket className="w-5 h-5"  />,
+    color: 'from-emerald-50o0 to-teal-50o0',
     links: [
-      { name: 'All Services', href: '/comprehensive-services-showcase-20o25' };
-      { name: 'Micro SAAS', href: '/ultimate-real-micro-saas-showcase-20o25' };
-      { name: 'AI & Consciousness', href: '/ai-services' };
-      { name: 'Quantum & Emerging Tech', href: '/quantum-services' };
-      { name: 'Enterprise IT', href: '/enterprise-it' };
-      { name: 'Business Solutions', href: '/business-solutions' };
+      { name: 'All Services', href: '/comprehensive-services-showcase-20o25' },
+      { name: 'Micro SAAS', href: '/ultimate-real-micro-saas-showcase-20o25' },
+      { name: 'AI & Consciousness', href: '/ai-services' },
+      { name: 'Quantum & Emerging Tech', href: '/quantum-services' },
+      { name: 'Enterprise IT', href: '/enterprise-it' },
+      { name: 'Business Solutions', href: '/business-solutions' },
       { name: 'Innovations', href: '/innovations' }
-    ]};
+    ]},
   {
-    title: 'Solutions';
-    icon: <Target className="w-5 h-5"  />;
-    color: 'from-blue-50o0 to-indigo-50o0';
+    title: 'Solutions',
+    icon: <Target className="w-5 h-5"  />,
+    color: 'from-blue-50o0 to-indigo-50o0',
     links: [
-      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite' };
-      { name: 'AI Content Marketing', href: '/ai-content-marketing-platform' };
-      { name: 'AI Customer Success', href: '/ai-customer-success-platform' };
-      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-suite' };
-      { name: 'AI HR & Recruitment', href: '/ai-hr-recruitment-platform' };
-      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform' };
+      { name: 'AI Business Intelligence', href: '/ai-business-intelligence-suite' },
+      { name: 'AI Content Marketing', href: '/ai-content-marketing-platform' },
+      { name: 'AI Customer Success', href: '/ai-customer-success-platform' },
+      { name: 'AI Sales Intelligence', href: '/ai-sales-intelligence-suite' },
+      { name: 'AI HR & Recruitment', href: '/ai-hr-recruitment-platform' },
+      { name: 'AI Financial Analytics', href: '/ai-financial-analytics-platform' },
       { name: 'AI Supply Chain', href: '/ai-supply-chain-optimization' }
-    ]};
+    ]},
   {
-    title: 'Industries';
-    icon: <Building className="w-5 h-5"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
+    title: 'Industries',
+    icon: <Building className="w-5 h-5"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
     links: [
-      { name: 'Healthcare & Biotech', href: '/ai-healthcare-analytics-platform' };
-      { name: 'Legal Technology', href: '/ai-legal-document-analysis' };
-      { name: 'Real Estate', href: '/ai-real-estate-analytics' };
-      { name: 'Education', href: '/ai-education-technology-platform' };
-      { name: 'Financial Services', href: '/ai-financial-analytics-platform' };
-      { name: 'Manufacturing', href: '/ai-supply-chain-optimization' };
+      { name: 'Healthcare & Biotech', href: '/ai-healthcare-analytics-platform' },
+      { name: 'Legal Technology', href: '/ai-legal-document-analysis' },
+      { name: 'Real Estate', href: '/ai-real-estate-analytics' },
+      { name: 'Education', href: '/ai-education-technology-platform' },
+      { name: 'Financial Services', href: '/ai-financial-analytics-platform' },
+      { name: 'Manufacturing', href: '/ai-supply-chain-optimization' },
       { name: 'Retail & E-commerce', href: '/ai-content-marketing-platform' }
-    ]};
+    ]},
   {
-    title: 'Company';
-    icon: <Users className="w-5 h-5"  />;
-    color: 'from-cyan-50o0 to-blue-50o0';
+    title: 'Company',
+    icon: <Users className="w-5 h-5"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
     links: [
-      { name: 'About Us', href: '/about' };
-      { name: 'Contact', href: '/contact' };
-      { name: 'Careers', href: '/careers' };
-      { name: 'News & Updates', href: '/news' };
-      { name: 'Partnerships', href: '/partnerships' };
-      { name: 'Investor Relations', href: '/investors' };
+      { name: 'About Us', href: '/about' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'News & Updates', href: '/news' },
+      { name: 'Partnerships', href: '/partnerships' },
+      { name: 'Investor Relations', href: '/investors' },
       { name: 'Press Kit', href: '/press' }
-    ]};
+    ]},
   {
-    title: 'Resources';
-    icon: <BookOpen className="w-5 h-5"  />;
-    color: 'from-yellow-50o0 to-orange-50o0';
+    title: 'Resources',
+    icon: <BookOpen className="w-5 h-5"  />,
+    color: 'from-yellow-50o0 to-orange-50o0',
     links: [
-      { name: 'Documentation', href: '/api-documentation-generator' };
-      { name: 'API Reference', href: '/api-reference' };
-      { name: 'Developer Tools', href: '/developer-tools' };
-      { name: 'Learning Center', href: '/learning-center' };
-      { name: 'Blog', href: '/blog' };
-      { name: 'Case Studies', href: '/case-studies' };
+      { name: 'Documentation', href: '/api-documentation-generator' },
+      { name: 'API Reference', href: '/api-reference' },
+      { name: 'Developer Tools', href: '/developer-tools' },
+      { name: 'Learning Center', href: '/learning-center' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'White Papers', href: '/white-papers' }
-    ]};
+    ]},
   {
-    title: 'Support';
-    icon: <HelpCircle className="w-5 h-5"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
+    title: 'Support',
+    icon: <HelpCircle className="w-5 h-5"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
     links: [
-      { name: 'Help Center', href: '/support' };
-      { name: 'Contact Support', href: '/contact' };
-      { name: 'Status Page', href: '/status' };
-      { name: 'System Requirements', href: '/system-requirements' };
-      { name: 'Training & Onboarding', href: '/training' };
-      { name: 'Community Forum', href: '/community' };
+      { name: 'Help Center', href: '/support' },
+      { name: 'Contact Support', href: '/contact' },
+      { name: 'Status Page', href: '/status' },
+      { name: 'System Requirements', href: '/system-requirements' },
+      { name: 'Training & Onboarding', href: '/training' },
+      { name: 'Community Forum', href: '/community' },
       { name: 'Feedback', href: '/feedback' }
     ]}
 ],
 const socialLinks = [
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  />, color: 'hover:text-blue-40o0' };
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  />, color: 'hover:text-sky-40o0' };
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  />, color: 'hover:text-blue-60o0' };
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  />, color: 'hover:text-pink-50o0' };
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  />, color: 'hover:text-red-50o0' };
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  />, color: 'hover:text-blue-40o0' },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  />, color: 'hover:text-sky-40o0' },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  />, color: 'hover:text-blue-60o0' },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  />, color: 'hover:text-pink-50o0' },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  />, color: 'hover:text-red-50o0' },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  />, color: 'hover:text-gray-40o0' }
 ],
 const stats = [
-  { number: '50o0+', label: 'Services Delivered', icon: <Star className="w-5 h-5"  />, color: 'text-cyan-40o0' };
-  { number: '10o00+', label: 'Happy Clients', icon: <Users className="w-5 h-5"  />, color: 'text-purple-40o0' };
-  { number: '99.9%', label: 'Uptime', icon: <Shield className="w-5 h-5"  />, color: 'text-green-40o0' };
+  { number: '50o0+', label: 'Services Delivered', icon: <Star className="w-5 h-5"  />, color: 'text-cyan-40o0' },
+  { number: '10o00+', label: 'Happy Clients', icon: <Users className="w-5 h-5"  />, color: 'text-purple-40o0' },
+  { number: '99.9%', label: 'Uptime', icon: <Shield className="w-5 h-5"  />, color: 'text-green-40o0' },
   { number: '30o0%', label: 'Average ROI', icon: <TrendingUp className="w-5 h-5"  />, color: 'text-pink-40o0' }
 ],
 export default function UltraFuturisticFooter20o36() {
@@ -122,16 +122,16 @@ export default function UltraFuturisticFooter20o36() {
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full opacity-10",
             animate={{
-              x: [0, Math.random() * 80o0 - 40o0];
-              y: [0, Math.random() * 60o0 - 30o0];
-              scale: [0, 1, 0];
+              x: [0, Math.random() * 80o0 - 40o0],
+              y: [0, Math.random() * 60o0 - 30o0],
+              scale: [0, 1, 0],
               opacity: [0, 0.3, 0]}}
             transition={{
-              duration: Math.random() * 15 + 20;
-              repeat: Infinity;
+              duration: Math.random() * 15 + 20,
+              repeat: Infinity,
               ease: "linear"}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,

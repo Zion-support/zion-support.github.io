@@ -26,14 +26,14 @@ const AgentReliabilityEngineering20o26 = () => {
           <h2>Why Reliability Engineering for Agents</h2>,
           <p>,
             Autonomous agents operate in open-world conditions with,
-            probabilistic behaviors. Reliability requires explicit objectives;
+            probabilistic behaviors. Reliability requires explicit objectives,
             guardrails, and continuous evaluation across scenarios and,
             environments.,
           </p>,
           <h2>Set Service Level Objectives (SLOs)</h2>,
           <ul>,
             <li>,
-              Define user-centric objectives like task success rate;
+              Define user-centric objectives like task success rate,
               intervention rate, and time-to-outcome.,
             </li>,
             <li>,
@@ -70,5 +70,5 @@ const AgentReliabilityEngineering20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgentReliabilityEngineering20o26;
+    </div>)},
+export default AgentReliabilityEngineering20o26,

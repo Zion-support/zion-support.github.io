@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 Future Predictions - Zion Tech Group';
+  title: 'AI 20o25 Future Predictions - Zion Tech Group',
   description:,
-    'Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.';
+    'Explore AI predictions for 20o25 and beyond. Discover emerging trends, breakthrough technologies, and future opportunities in artificial intelligence.',
   keywords: [
-    'AI predictions 20o25';
-    'future AI trends';
-    'artificial intelligence future';
-    'AI technology trends';
-    'future technology';
-  ];
-};
+    'AI predictions 20o25future AI trends',
+    'artificial intelligence futureAI technology trends',
+    'future technology',
+  ]
+},
 export default function AI20o25FuturePredictions() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
@@ -68,7 +66,7 @@ export default function AI20o25FuturePredictions() {
                 Conscious AI Emergence,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                AI systems will demonstrate self-awareness and consciousness;
+                AI systems will demonstrate self-awareness and consciousness,
                 fundamentally changing how we interact with technology.,
               </p>,
               <div className='text-sm text-cyan-40o0 font-semibold'>,
@@ -114,7 +112,7 @@ export default function AI20o25FuturePredictions() {
               <div className='text-4xl mb-4'>🔮</div>,
               <h3 className='text-2xl font-bold mb-4'>Predictive Mastery</h3>,
               <p className='text-gray-30o0 mb-6'>,
-                AI will predict future events with unprecedented accuracy;
+                AI will predict future events with unprecedented accuracy,
                 revolutionizing decision-making and planning.,
               </p>,
               <div className='text-sm text-cyan-40o0 font-semibold'>,

@@ -14,12 +14,12 @@ interface OnboardingStatus {
 export function useOnboardingStatus() {
   const { user } = useAuth(),
   const [statusetStatus] = useState<OnboardingStatus>({
-    profileCompleted: false;
-    skillsAdded: false;
-    availabilitySet: false;
-    matchReceived: false;
-    jobPosted: false;
-    inviteSent: false;
+    profileCompleted: false,
+    skillsAdded: false,
+    availabilitySet: false,
+    matchReceived: false,
+    jobPosted: false,
+    inviteSent: false,
     responseReceived: false}),
   useEffect(() => {
     const fetchOnboardingStatus = async () => {
@@ -37,16 +37,16 @@ export function useOnboardingStatus() {
 ,
         if (data) {
           setStatus({
-            profileCompleted: data.profile_completed || false;
-            skillsAdded: data.skills_added || false;
-            availabilitySet: data.availability_set || false;
-            matchReceived: data.match_received || false;
-            jobPosted: data.job_posted || false;
-            inviteSent: data.talent_invited || false;
+            profileCompleted: data.profile_completed || false,
+            skillsAdded: data.skills_added || false,
+            availabilitySet: data.availability_set || false,
+            matchReceived: data.match_received || false,
+            jobPosted: data.job_posted || false,
+            inviteSent: data.talent_invited || false,
             responseReceived: data.quote_received || false})}
       } catch (err) {
         console.error("Error in onboarding status hook: "err)}
-    };
+    },
     fetchOnboardingStatus()}[user]),
   return status}
 ,

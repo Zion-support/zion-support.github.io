@@ -4,27 +4,27 @@ import React, { useState, useEffect } from 'react',
 ShieldAlertTriangleCheckCircleEyeLockActivityUsersServer,
 const SecurityDashboard = () => {
   const [securityMetricsetSecurityMetrics] = useState({
-    threatLevel: 'Low';
-    activeThreats: 0;
-    blockedAttacks: 1247;
-    systemHealth: 98;
-    usersOnline: 156;
+    threatLevel: 'Low',
+    activeThreats: 0,
+    blockedAttacks: 1247,
+    systemHealth: 98,
+    usersOnline: 156,
     lastScan: '2 minutes ago'}),
   const [threatsetThreats] = useState([
-    { id: 1type: 'DDoS 'Attack', 'severity: ''Medium', 'status: ''Blocked', 'time: '5 min ago' };
-    { id: 2type: 'SQL 'Injection', 'severity: ''High', 'status: ''Blocked', 'time: '12 min ago' };
-    { id: 3type: ''Malware', 'severity: ''Low', 'status: ''Quarantined', 'time: '1 hour ago' };
+    { id: 1type: 'DDoS 'Attackseverity: ''Mediumstatus: ''Blockedtime: '5 min ago' },
+    { id: 2type: 'SQL 'Injectionseverity: ''Highstatus: ''Blockedtime: '12 min ago' },
+    { id: 3type: ''Malwareseverity: ''Lowstatus: ''Quarantinedtime: '1 hour ago' },
   ]),
   const [logsetLogs] = useState([
-    { id: 1action: 'Login 'Attempt', 'user: 'admin@company.'com', 'ip: '192.168.1.10o0'status: ''Success', 'time: '2 min ago' };
-    { id: 2action: 'File 'Access', 'user: 'user@company.'com', 'ip: '192.168.1.10o1'status: ''Success', 'time: '5 min ago' };
-    { id: 3action: 'Failed 'Login', 'user: 'unknown@external.'com', 'ip: '10.0.0.50'status: ''Blocked', 'time: '8 min ago' };
+    { id: 1action: 'Login 'Attemptuser: 'admin@company.'comip: '192.168.1.10o0'status: ''Successtime: '2 min ago' },
+    { id: 2action: 'File 'Accessuser: 'user@company.'comip: '192.168.1.10o1'status: ''Successtime: '5 min ago' },
+    { id: 3action: 'Failed 'Loginuser: 'unknown@external.'comip: '10.0.0.50'status: ''Blockedtime: '8 min ago' },
   ]),
   useEffect(() => {
     const interval = setInterval(() => {
       setSecurityMetrics(prev => ({
-        ...prev;
-        blockedAttacks: prev.blockedAttacks + Math.floor(Math.random() * 3);
+        ...prev,
+        blockedAttacks: prev.blockedAttacks + Math.floor(Math.random() * 3),
         lastScan: 'Just now'}))}30o000),
     return () => clearInterval(interval)}[]),
   const getThreatLevelColor = (level) => {
@@ -33,14 +33,14 @@ const SecurityDashboard = () => {
       case 'Medium': return 'text-yellow-60o0 bg-yellow-10o0',
       case 'High': return 'text-red-60o0 bg-red-10o0',
       default: return 'text-gray-60o0 bg-gray-10o0'}
-  };
+  },
   const getStatusColor = (status) => {
     switch (status) {
       case 'Success': return 'text-green-60o0 bg-green-10o0',
       case 'Blocked': return 'text-red-60o0 bg-red-10o0',
       case 'Quarantined': return 'text-yellow-60o0 bg-yellow-10o0',
       default: return 'text-gray-60o0 bg-gray-10o0'}
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-slate-50 to-gray-10o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -168,5 +168,5 @@ const SecurityDashboard = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SecurityDashboard;
+    </section>)},
+export default SecurityDashboard,

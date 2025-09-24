@@ -3,16 +3,16 @@ import Head from 'next/head',
 import Link from 'next/link',
 function Contact() {
   const [formData, setFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    service: '';
+    name: '',
+    email: '',
+    company: '',
+    service: '',
     message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState(null),
   const handleChange = (e) => {
     setFormData({
-      ...formData;
+      ...formData,
       [e.target.name]: e.target.value})}
 ,
   const handleSubmit = async (e) => {
@@ -238,16 +238,16 @@ function Contact() {
           <div className="grid md: grid-cols-2 gap-8 max-w-4xl mx-auto">,
             {[
               {
-                question: "How quickly can you start a project?";
-                answer: "We can typically begin new projects within 1-2 weeks after the initial consultation and project planning phase."};
+                question: "How quickly can you start a project?",
+                answer: "We can typically begin new projects within 1-2 weeks after the initial consultation and project planning phase."},
               {
-                question: "Do you provide ongoing support?";
-                answer: "Yes, we offer comprehensive ongoing support and maintenance services to ensure optimal performance of your solutions."};
+                question: "Do you provide ongoing support?",
+                answer: "Yes, we offer comprehensive ongoing support and maintenance services to ensure optimal performance of your solutions."},
               {
-                question: "What industries do you serve?";
-                answer: "We serve clients across various industries including healthcare, finance, e-commerce, manufacturing, and technology."};
+                question: "What industries do you serve?",
+                answer: "We serve clients across various industries including healthcare, finance, e-commerce, manufacturing, and technology."},
               {
-                question: "Can you work with our existing systems?";
+                question: "Can you work with our existing systems?",
                 answer: "Absolutely! We specialize in integrating new solutions with existing systems and infrastructure."}
             ].map((faq, index) => (
               <div key={index} className="card p-6 animate-fade-in-up" style={{ animationDelay: `${index * 0.1}s` }}>,
@@ -259,4 +259,4 @@ function Contact() {
       </section>,
     </>)}
 ,
-export default Contact;
+export default Contact,

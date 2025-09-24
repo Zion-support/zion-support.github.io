@@ -1,36 +1,36 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain;
-  Rocket;
-  Shield;
-  Atom;
-  Cpu;
-  Cloud;
-  Target;
-  ArrowRight;
-  Star;
-  Zap;
-  Users;
-  Award;
-  Globe;
-  Search;
-  Filter;
-  ChevronDown;
-  ExternalLink;
-  Sparkles;
-  Eye;
-  Lock;
-  Clock;
-  CheckCircle;
-  TrendingUp;
-  DollarSign;
-  Phone;
-  Mail;
-  MapPin;
-  Globe as GlobeIcon;
-  Grid;
-  List;
+  Brain,
+  Rocket,
+  Shield,
+  Atom,
+  Cpu,
+  Cloud,
+  Target,
+  ArrowRight,
+  Star,
+  Zap,
+  Users,
+  Award,
+  Globe,
+  Search,
+  Filter,
+  ChevronDown,
+  ExternalLink,
+  Sparkles,
+  Eye,
+  Lock,
+  Clock,
+  CheckCircle,
+  TrendingUp,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin,
+  Globe as GlobeIcon,
+  Grid,
+  List,
 } from 'lucide-react',
 // Import our new revolutionary services,
 import { revolutionary20o252026MicroSaasServices } from '../../data/revolutionary-20o25-20o26-micro-saas-services',
@@ -43,36 +43,36 @@ const Revolutionary20o252026ServicesShowcase: React.FC = () => {
   const [viewMode, setViewMode] = useState('grid'),
   // Combine all revolutionary services,
   const allServices = [
-    ...revolutionary20o252026MicroSaasServices;
-    ...revolutionary20o252026AIServices;
-    ...revolutionary20o252026ITInfrastructureServices;
+    ...revolutionary20o252026MicroSaasServices,
+    ...revolutionary20o252026AIServices,
+    ...revolutionary20o252026ITInfrastructureServices,
   ],
   // Categories,
   const categories = [
     {
-      id: 'all';
-      name: 'All Revolutionary Services';
-      icon: <Globe className='w-5 h-5' />;
-      count: allServices.length;
-    };
+      id: 'all',
+      name: 'All Revolutionary Services',
+      icon: <Globe className='w-5 h-5' />,
+      count: allServices.length
+    },
     {
-      id: 'micro-saas';
-      name: 'Micro SAAS Solutions';
-      icon: <Rocket className='w-5 h-5' />;
-      count: revolutionary20o252026MicroSaasServices.length;
-    };
+      id: 'micro-saas',
+      name: 'Micro SAAS Solutions',
+      icon: <Rocket className='w-5 h-5' />,
+      count: revolutionary20o252026MicroSaasServices.length
+    },
     {
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: <Brain className='w-5 h-5' />;
-      count: revolutionary20o252026AIServices.length;
-    };
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: <Brain className='w-5 h-5' />,
+      count: revolutionary20o252026AIServices.length
+    },
     {
-      id: 'it-infrastructure';
-      name: 'IT Infrastructure';
-      icon: <Cpu className='w-5 h-5' />;
-      count: revolutionary20o252026ITInfrastructureServices.length;
-    };
+      id: 'it-infrastructure',
+      name: 'IT Infrastructure',
+      icon: <Cpu className='w-5 h-5' />,
+      count: revolutionary20o252026ITInfrastructureServices.length
+    },
   ],
   // Filter and sort services,
   const filteredServices = allServices,
@@ -104,11 +104,11 @@ const Revolutionary20o252026ServicesShowcase: React.FC = () => {
           return 0}
     }),
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   return (
     <section className='relative bg-black text-white py-20 overflow-hidden'>,
       {/* Background effects */}
@@ -120,18 +120,18 @@ const Revolutionary20o252026ServicesShowcase: React.FC = () => {
           className='absolute inset-0 opacity-5',
           style={{
             backgroundImage: `,
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
-            `;
-            backgroundSize: '20o0px 20o0px';
+            `,
+            backgroundSize: '20o0px 20o0px'
           }}
           animate={{
-            backgroundPosition: ['0px 0px', '20o0px 20o0px'];
+            backgroundPosition: ['0px 0px20o0px 20o0px'],
           }}
           transition={{
-            duration: 20;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 20,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         />,
       </div>,
@@ -151,7 +151,7 @@ const Revolutionary20o252026ServicesShowcase: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.2 }}
             className='text-xl md: text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8'>,
             Experience the future of technology with our cutting-edge micro,
-            SAAS, AI, and IT infrastructure solutions. Built for tomorrow;
+            SAAS, AI, and IT infrastructure solutions. Built for tomorrow,
             available today.,
           </motion.p>,
           {/* Contact Information */}
@@ -420,5 +420,5 @@ const Revolutionary20o252026ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Revolutionary20o252026ServicesShowcase;
+    </section>)},
+export default Revolutionary20o252026ServicesShowcase,

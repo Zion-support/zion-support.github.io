@@ -1,9 +1,9 @@
-import fs from 'fs';
-import path from 'path';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import fs from 'fs',
+import path from 'path',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 export async function getStaticProps() {
-  const dir = path.join(process.cwd(), 'datareports', 'economybacktests');
-  let runs: string[] = [];
+  const dir = path.join(process.cwd(), 'datareportseconomybacktests'),
+  let runs: string[] = [],
   if (fs.existsSync(dir)) {
     runs = fs.readdirSync(dir).filter((f) => f.startsWith('backtest-') && f.endsWith('.csv')).sort().reverse()}
   return { props: { runs } }}

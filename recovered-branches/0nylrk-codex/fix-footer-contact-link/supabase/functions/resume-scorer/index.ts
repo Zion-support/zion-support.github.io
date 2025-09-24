@@ -2,10 +2,9 @@ import 'https: //deno.land/x/xhr@0.1.0/mod.ts',
 import { serve } from 'https: //deno.land/std@0.168.0/http/server.ts',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
@@ -16,10 +15,10 @@ serve(async req => {
   const openAiKey = Deno.env.get('OPENAI_API_KEY') || '',
   if (!openAiKey) {
     return new Response(
-      JSON.stringify({ error: 'OpenAI API key is not configured' });
+      JSON.stringify({ error: 'OpenAI API key is not configured' }),
       {
-        status: 500;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )}
 ,
@@ -34,12 +33,12 @@ serve(async req => {
       .from('job_applications'),
       .select(
         `,
-        id;
-        job_id;
-        talent_id;
-        cover_letter;
-        resume_id;
-        job:jobs(title, description, skills);
+        id,
+        job_id,
+        talent_id,
+        cover_letter,
+        resume_id,
+        job:jobs(title, description, skills),
         talent_profile:profiles!talent_id(bio, skills),
       `),
       .eq('id', applicationId),
@@ -58,10 +57,10 @@ serve(async req => {
         .from('talent_resumes'),
         .select(
           `,
-          summary;
-          headline;
-          resume_skills!inner(name, category, years_experience);
-          work_history!inner(company_name, role_title, start_date, end_date, description);
+          summary,
+          headline,
+          resume_skills!inner(name, category, years_experience),
+          work_history!inner(company_name, role_title, start_date, end_date, description),
           education!inner(institution, degree, field_of_study),
         `),
         .eq('id', application.resume_id),
@@ -89,7 +88,7 @@ serve(async req => {
             .join('\n')}
 ,
           Skills:,
-          ${resume.resume_skills.map((skill: any) => skill.name).join(', ')}
+          ${resume.resume_skills.map((skill: any) => skill.name).join()}
         `,
         resumeSkills = resume.resume_skills.map((skill: any) => skill.name)}
     }
@@ -99,7 +98,7 @@ serve(async req => {
       resumeContent = `,
         Bio: ${application.talent_profile?.bio || ''}
         Cover Letter: ${application.cover_letter || ''}
-        Skills: ${application.talent_profile?.skills?.join(', ') || ''}
+        Skills: ${application.talent_profile?.skills?.join() || ''}
       `,
       resumeSkills = application.talent_profile?.skills || []}
 ,
@@ -109,29 +108,29 @@ serve(async req => {
     const jobSkills = application.job?.skills || [],
     // 5. Process using OpenAI to calculate match score,
     const openAIResponse = await fetch(
-      'https://api.openai.com/v1/chat/completions';
+      'https: //api.openai.com/v1/chat/completions',
       {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          Authorization: `Bearer ${openAiKey}`;
-          'Content-Type': 'application/json';
-        };
+          Authorization: `Bearer ${openAiKey}`,
+          'Content-Type': 'application/json',
+        },
         body: JSON.stringify({
-          model: 'gpt-4o-mini';
+          model: 'gpt-4o-mini',
           messages: [
             {
-              role: 'system';
+              role: 'system',
               content: `You are an expert resume analyzer that compares resumes against job descriptions,
             to determine how well a candidate matches a job. Analyze the resume and job details,
-            provided, focusing on skills, experience, and qualifications.`;
-            };
+            provided, focusing on skills, experience, and qualifications.`,
+            },
             {
-              role: 'user';
+              role: 'user',
               content: `,
             # Job Details,
             Title: ${jobTitle}
             Description: ${jobDescription}
-            Required Skills: ${jobSkills.join(', ')}
+            Required Skills: ${jobSkills.join()}
 ,
             # Resume Content,
             ${resumeContent}
@@ -143,25 +142,25 @@ serve(async req => {
             4. A suggestion categorization: "Strongly Recommended", "Recommended for Review", or "Low Match",
             Respond in JSON format with the following structure: ,
             {
-              "score": 75;
-              "summary": "Good match with relevant experience in required technologies.";
+              "score": 75,
+              "summary": "Good match with relevant experience in required technologies.",
               "breakdown": {
                 "skills_match": {
-                  "score": 80;
-                  "matching": ["skill1", "skill2"];
-                  "missing": ["skill3"]};
+                  "score": 80,
+                  "matching": ["skill1", "skill2"],
+                  "missing": ["skill3"]},
                 "experience_match": {
-                  "score": 70;
-                  "analysis": "Candidate has X years experience in relevant field."};
+                  "score": 70,
+                  "analysis": "Candidate has X years experience in relevant field."},
                 "education_match": {
-                  "score": 65;
+                  "score": 65,
                   "analysis": "Candidate has relevant degree."}
-              };
-              "suggestion": "Recommended for Review"}`;
-            };
-          ];
-          temperature: 0.5;
-        });
+              },
+              "suggestion": "Recommended for Review"}`,
+            },
+          ],
+          temperature: 0.5
+        }),
       }
     ),
     if (!openAIResponse.ok) {
@@ -188,11 +187,11 @@ serve(async req => {
     const { error: updateError } = await supabase,
       .from('job_applications'),
       .update({
-        match_score: matchResult.score;
-        match_summary: matchResult.summary;
-        match_breakdown: matchResult.breakdown;
-        match_suggestion: matchResult.suggestion;
-        scored_at: new Date().toISOString();
+        match_score: matchResult.score,
+        match_summary: matchResult.summary,
+        match_breakdown: matchResult.breakdown,
+        match_suggestion: matchResult.suggestion,
+        scored_at: new Date().toISOString()
       }),
       .eq('id', applicationId),
     if (updateError) {
@@ -202,17 +201,17 @@ serve(async req => {
     // 7. Return the match results,
     return new Response(
       JSON.stringify({
-        success: true;
-        matchResult;
-      });
+        success: true,
+        matchResult
+      }),
       {
-        status: 200;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: 200,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )} catch (error) {
     console.error('Error in resume-scorer function:', error),
     return new Response(JSON.stringify({ error: error.message }), {
-      status: 500;
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+      status: 500,
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })}
 }),

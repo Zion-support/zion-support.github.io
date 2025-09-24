@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import './globals.css',
 import '../styles/optimizations.css',
@@ -11,8 +11,8 @@ import AdvancedPerformanceMonitor20o26 from '../components/AdvancedPerformanceMo
 import UltimateAIAssistant20o26 from '../components/UltimateAIAssistant20o26',
 import PerformanceOptimizations from '../components/PerformanceOptimizations',
 export const metadata ={
-  title: 'Zion Tech Group - AI & Technology Solutions';
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'};
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.'},
 function Header() {
   return (
     <header className="border-b border-gray-20o0 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">,
@@ -1239,33 +1239,33 @@ export default function RootLayout({
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "url": "https://zion.tech";
-              "logo": "https://zion.tech/logo.png";
-              "description": "Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.";
-              "foundingDate": "20o20";
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://zion.tech",
+              "logo": "https://zion.tech/logo.png",
+              "description": "Leading provider of revolutionary AI solutions, quantum computing breakthroughs, and digital transformation services.",
+              "foundingDate": "20o20",
               "founders": [
                 {
-                  "@type": "Person";
+                  "@type": "Person",
                   "name": "Zion Tech Group Founders"}
-              ];
+              ],
               "address": {
-                "@type": "PostalAddress";
-                "addressCountry": "US"};
+                "@type": "PostalAddress",
+                "addressCountry": "US"},
               "contactPoint": {
-                "@type": "ContactPoint";
-                "telephone": "+1-555-ZION-TECH";
-                "contactType": "customer service";
-                "availableLanguage": "English"};
+                "@type": "ContactPoint",
+                "telephone": "+1-555-ZION-TECH",
+                "contactType": "customer service",
+                "availableLanguage": "English"},
               "sameAs": [
-                "https://twitter.com/ziontechgroup";
-                "https://linkedin.com/company/zion-tech-group";
-                "https: //github.com/zion-tech-group"];
+                "https: //twitter.com/ziontechgroup",
+                "https://linkedin.com/company/zion-tech-group",
+                "https: //github.com/zion-tech-group"],
               "offers": {
-                "@type": "Offer";
-                "description": "AI Solutions and Technology Services";
+                "@type": "Offer",
+                "description": "AI Solutions and Technology Services",
                 "category": "Technology Services"}
             })}}
          />,

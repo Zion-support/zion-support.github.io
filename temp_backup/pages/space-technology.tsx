@@ -1,76 +1,74 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Satellite;
-  Globe;
-  Star;
-  Zap;
-  Target;
-  Atom;
-  Users;
-  ArrowRight;
-  Shield;
-  Brain;
+  Rocket,
+  Satellite,
+  Globe,
+  Star,
+  Zap,
+  Target,
+  Atom,
+  Users,
+  ArrowRight,
+  Shield,
+  Brain,
 } from 'lucide-react',
 import SEO from '../components/SEO',
 const spaceServices = [
   {
-    title: 'Space Resource Mining';
+    title: 'Space Resource Mining',
     description:,
-      'Advanced platforms for extracting and processing resources from asteroids and celestial bodies';
-    icon: <Rocket className='w-8 h-8 text-orange-400' />;
-    href: '/space-resource-mining-platform';
-    features: ['Asteroid Mining', 'Resource Processing', 'Space Logistics'];
-  };
+      'Advanced platforms for extracting and processing resources from asteroids and celestial bodies',
+    icon: <Rocket className='w-8 h-8 text-orange-400' />,
+    href: '/space-resource-mining-platform',
+    features: ['Asteroid MiningResource Processing', 'Space Logistics'],
+  },
   {
-    title: 'AI-Powered Space Technology';
+    title: 'AI-Powered Space Technology',
     description:,
-      'Intelligent systems for space exploration, navigation, and mission control';
-    icon: <Brain className='w-8 h-8 text-cyan-400' />;
-    href: '/ai-powered-space-technology';
-    features: ['Autonomous Navigation', 'Mission Planning', 'Data Analysis'];
-  };
+      'Intelligent systems for space exploration, navigation, and mission control',
+    icon: <Brain className='w-8 h-8 text-cyan-400' />,
+    href: '/ai-powered-space-technology',
+    features: ['Autonomous NavigationMission Planning', 'Data Analysis'],
+  },
   {
-    title: 'Satellite Technology';
+    title: 'Satellite Technology',
     description:,
-      'Advanced satellite systems for communication, observation, and research';
-    icon: <Satellite className='w-8 h-8 text-blue-400' />;
-    href: '/satellite-technology-solutions';
+      'Advanced satellite systems for communication, observation, and research',
+    icon: <Satellite className='w-8 h-8 text-blue-400' />,
+    href: '/satellite-technology-solutions',
     features: [
-      'Communication Satellites';
-      'Earth Observation';
-      'Research Platforms';
-    ];
-  };
+      'Communication SatellitesEarth Observation',
+      'Research Platforms',
+    ]
+  },
   {
-    title: 'Space Infrastructure';
+    title: 'Space Infrastructure',
     description:,
-      'Orbital and lunar infrastructure for sustainable space operations';
-    icon: <Globe className='w-8 h-8 text-green-400' />;
-    href: '/space-infrastructure-platform';
-    features: ['Orbital Stations', 'Lunar Bases', 'Space Habitats'];
-  };
+      'Orbital and lunar infrastructure for sustainable space operations',
+    icon: <Globe className='w-8 h-8 text-green-400' />,
+    href: '/space-infrastructure-platform',
+    features: ['Orbital StationsLunar Bases', 'Space Habitats'],
+  },
   {
-    title: 'Space Communications';
+    title: 'Space Communications',
     description:,
-      'High-speed communication networks for interplanetary and deep space missions';
-    icon: <Zap className='w-8 h-8 text-yellow-400' />;
-    href: '/space-communications-network';
+      'High-speed communication networks for interplanetary and deep space missions',
+    icon: <Zap className='w-8 h-8 text-yellow-400' />,
+    href: '/space-communications-network',
     features: [
-      'Deep Space Comms';
-      'Quantum Communications';
-      'Network Security';
-    ];
-  };
+      'Deep Space CommsQuantum Communications',
+      'Network Security',
+    ]
+  },
   {
-    title: 'Space Robotics';
+    title: 'Space Robotics',
     description:,
-      'Autonomous robotic systems for space exploration and maintenance';
-    icon: <Target className='w-8 h-8 text-purple-400' />;
-    href: '/space-robotics-platform';
-    features: ['Autonomous Rovers', 'Maintenance Robots', 'Exploration Drones'];
-  };
+      'Autonomous robotic systems for space exploration and maintenance',
+    icon: <Target className='w-8 h-8 text-purple-400' />,
+    href: '/space-robotics-platform',
+    features: ['Autonomous RoversMaintenance Robots', 'Exploration Drones'],
+  },
 ],
 export default function SpaceTechnology() {
   return (
@@ -183,29 +181,29 @@ export default function SpaceTechnology() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
               {[
                 {
-                  title: 'Resource Mining';
+                  title: 'Resource Mining',
                   description:,
-                    'Extract valuable resources from asteroids and celestial bodies';
-                  icon: <Rocket className='w-12 h-12 text-orange-400' />;
-                };
+                    'Extract valuable resources from asteroids and celestial bodies',
+                  icon: <Rocket className='w-12 h-12 text-orange-400' />
+                },
                 {
-                  title: 'AI Navigation';
+                  title: 'AI Navigation',
                   description:,
-                    'Autonomous space navigation and mission planning';
-                  icon: <Brain className='w-12 h-12 text-cyan-400' />;
-                };
+                    'Autonomous space navigation and mission planning',
+                  icon: <Brain className='w-12 h-12 text-cyan-400' />
+                },
                 {
-                  title: 'Quantum Communications';
+                  title: 'Quantum Communications',
                   description:,
-                    'Secure quantum communication for deep space missions';
-                  icon: <Atom className='w-12 h-12 text-purple-400' />;
-                };
+                    'Secure quantum communication for deep space missions',
+                  icon: <Atom className='w-12 h-12 text-purple-400' />
+                },
                 {
-                  title: 'Sustainable Infrastructure';
+                  title: 'Sustainable Infrastructure',
                   description:,
-                    'Eco-friendly space habitats and orbital stations';
-                  icon: <Globe className='w-12 h-12 text-green-400' />;
-                };
+                    'Eco-friendly space habitats and orbital stations',
+                  icon: <Globe className='w-12 h-12 text-green-400' />
+                },
               ].map((innovation, index) => (
                 <motion.div,
                   key={innovation.title}

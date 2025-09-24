@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 const AI20o26QuantumNeuralFusionPage: React.FC = () => {
@@ -367,5 +367,5 @@ const AI20o26QuantumNeuralFusionPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </div>)};
-export default AI20o26QuantumNeuralFusionPage;
+    </div>)},
+export default AI20o26QuantumNeuralFusionPage,

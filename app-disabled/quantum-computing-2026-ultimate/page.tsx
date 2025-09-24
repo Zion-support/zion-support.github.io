@@ -2,17 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import Card from '../../components/ui/Card',
 export const metadata = {
-  title: 'Quantum Computing 20o26 Ultimate - The Next Computing Revolution';
+  title: 'Quantum Computing 20o26 Ultimate - The Next Computing Revolution',
   description:,
-    'Explore the ultimate quantum computing breakthroughs of 20o26 that are revolutionizing computation, cryptography, and problem-solving capabilities.';
+    'Explore the ultimate quantum computing breakthroughs of 20o26 that are revolutionizing computation, cryptography, and problem-solving capabilities.',
   keywords: [
-    'quantum computing 20o26';
-    'quantum supremacy';
-    'quantum algorithms';
-    'quantum cryptography';
-    'quantum AI';
-  ];
-};
+    'quantum computing 20o26quantum supremacy',
+    'quantum algorithmsquantum cryptography',
+    'quantum AI',
+  ]
+},
 export default function QuantumComputing20o26Ultimate() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-cyan-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,

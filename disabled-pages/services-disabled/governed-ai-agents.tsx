@@ -21,7 +21,7 @@ export default function GovernedAIAgents(...args: any[]): any {
           Governed AI Agents,
         </h1>,
         <p className='mt-4 text-white/80'>,
-          Autonomous workflows for marketing ops, finance close, HR onboarding;
+          Autonomous workflows for marketing ops, finance close, HR onboarding,
           and IT runbooks with human-in-the-loop controls.,
         </p>,
         <ul className='mt-6 space-y-2 text-white/80 list-disc pl-5'>,

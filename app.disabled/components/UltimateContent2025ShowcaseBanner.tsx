@@ -6,43 +6,43 @@ const UltimateContent20o25ShowcaseBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const featuredContent = [
     {
-      id: 'enterprise-automation-mastery';
-      title: 'AI 20o25: Enterprise Automation Mastery - Ultimate Success Guide';
-      description: 'Master enterprise automation with AI in 20o25. Achieve 60o0% ROI, $50o0M+ savings, and 99.9% efficiency.';
-      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-success';
-      type: 'Blog Post';
+      id: 'enterprise-automation-mastery',
+      title: 'AI 20o25: Enterprise Automation Mastery - Ultimate Success Guide',
+      description: 'Master enterprise automation with AI in 20o25. Achieve 60o0% ROI, $50o0M+ savings, and 99.9% efficiency.',
+      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-success',
+      type: 'Blog Post',
       metrics: {
-        roi: '60o0%';
-        savings: '$50o0M+';
-        efficiency: '99.9%';
-        time: '18 min read'};
-      badge: 'NEW';
-      badgeColor: 'bg-red-50o0'};
+        roi: '60o0%',
+        savings: '$50o0M+',
+        efficiency: '99.9%',
+        time: '18 min read'},
+      badge: 'NEW',
+      badgeColor: 'bg-red-50o0'},
     {
-      id: 'fortune-50o0-transformation';
-      title: 'Fortune 50o0 AI Transformation 20o25: $2.1B Annual Savings';
-      description: 'How a Fortune 50o0 company achieved $2.1B annual savings and 80o0% ROI through AI transformation.';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success';
-      type: 'Case Study';
+      id: 'fortune-50o0-transformation',
+      title: 'Fortune 50o0 AI Transformation 20o25: $2.1B Annual Savings',
+      description: 'How a Fortune 50o0 company achieved $2.1B annual savings and 80o0% ROI through AI transformation.',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success',
+      type: 'Case Study',
       metrics: {
-        roi: '80o0%';
-        savings: '$2.1B';
-        automation: '98.5%';
-        time: '12 min read'};
-      badge: 'FEATURED';
-      badgeColor: 'bg-blue-50o0'};
+        roi: '80o0%',
+        savings: '$2.1B',
+        automation: '98.5%',
+        time: '12 min read'},
+      badge: 'FEATURED',
+      badgeColor: 'bg-blue-50o0'},
     {
-      id: 'ai-transformation-guide';
-      title: 'AI Transformation Ultimate Guide 20o25: From Strategy to 80o0% ROI';
-      description: 'Complete roadmap for AI transformation success. Achieve 80o0% ROI, $50o0M+ savings, and 99% automation.';
-      url: '/resources/ai-transformation-ultimate-guide-20o25';
-      type: 'Resource';
+      id: 'ai-transformation-guide',
+      title: 'AI Transformation Ultimate Guide 20o25: From Strategy to 80o0% ROI',
+      description: 'Complete roadmap for AI transformation success. Achieve 80o0% ROI, $50o0M+ savings, and 99% automation.',
+      url: '/resources/ai-transformation-ultimate-guide-20o25',
+      type: 'Resource',
       metrics: {
-        roi: '80o0%';
-        savings: '$50o0M+';
-        automation: '99%';
-        time: '25 min read'};
-      badge: 'ULTIMATE';
+        roi: '80o0%',
+        savings: '$50o0M+',
+        automation: '99%',
+        time: '25 min read'},
+      badge: 'ULTIMATE',
       badgeColor: 'bg-purple-50o0'}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const UltimateContent20o25ShowcaseBanner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateContent20o25BannerDismissed', 'true')};
+    localStorage.setItem('ultimateContent20o25BannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimateContent20o25BannerDismissed'),
     if (dismissed === 'true') {
@@ -186,5 +186,5 @@ const UltimateContent20o25ShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent20o25ShowcaseBanner;
+    </div>)},
+export default UltimateContent20o25ShowcaseBanner,

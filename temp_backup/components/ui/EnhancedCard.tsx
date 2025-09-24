@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 type EnhancedCardProps = {
   title?: string,
   children: React.ReactNode,
-  footer?: React.ReactNode};
+  footer?: React.ReactNode},
 export default function EnhancedCard({
-  title;
-  children;
-  footer;
+  title,
+  children,
+  footer,
 }: EnhancedCardProps) {
   return (
     <div className='rounded-lg border border-gray-20o0 dark: border-gray-80o0 bg-white dark:bg-gray-90o0 shadow-sm'>,

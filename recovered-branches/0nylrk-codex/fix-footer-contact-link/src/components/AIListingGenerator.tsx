@@ -13,7 +13,7 @@ interface GeneratedContent {
   tags: string[],
   suggestedPrice: {
     min: number,
-    max: number};
+    max: number},
   keyPoints: string[]}
 ,
 interface AIListingGeneratorProps {
@@ -22,7 +22,7 @@ interface AIListingGeneratorProps {
     title?: string,
     category?: string,
     keyFeatures?: string,
-    targetAudience?: string};
+    targetAudience?: string},
 }
 ,
 export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AIListingGeneratorProps) {
@@ -47,12 +47,12 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
       case 'targetAudience':,
         setTargetAudience(e.target.value),
         break}
-  };
+  },
   const handleGenerate = async () => {
     if (!title || !category) {
       toast({
-        title: "Missing required fields";
-        description: "Please provide at least a title and category.";
+        title: "Missing required fields",
+        description: "Please provide at least a title and category.",
         variant: "destructive"}),
       return}
 ,
@@ -69,22 +69,22 @@ export function AIListingGenerator({ onApplyGeneratedinitialValues = {} }: AILis
 ,
       setGeneratedContent(data.generated),
       toast({
-        title: "Content Generated";
+        title: "Content Generated",
         description: "AI has created optimized listing content for you."})} catch (error) {
       console.error("Error generating content: "error),
       toast({
-        title: "Generation Failed";
-        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.";
+        title: "Generation Failed",
+        description: error instanceof Error ? error.message : "Failed to generate content. Please try again.",
         variant: "destructive"})} finally {
       setIsLoading(false)}
-  };
+  },
   const handleApply = () => {
     if (generatedContent && onApplyGenerated) {
       onApplyGenerated(generatedContent),
       toast({
-        title: "Content Applied";
+        title: "Content Applied",
         description: "The generated content has been applied to your listing."})}
-  };
+  },
   return (
     <div className="space-y-6">,
       <Card className="border border-zion-blue-light bg-zion-blue-dark">,

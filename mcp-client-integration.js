@@ -13,11 +13,11 @@ class MCPClientIntegration {
 ,
   connect() {
     // // console.log('MCP client would connect here'),
-    return { success: true, message: 'Placeholder connection' };
+    return { success: true, message: 'Placeholder connection' },
   }
 ,
   status() {
-    return { status: 'placeholder', message: 'Not implemented yet' };
+    return { status: 'placeholder', message: 'Not implemented yet' },
   }
 }
 ,

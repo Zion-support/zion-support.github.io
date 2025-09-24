@@ -1,133 +1,133 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import {
-  Search, Filter, Star, CheckCircle, ArrowRight;
-  Brain, Atom, Shield, Rocket, Target, Microscope;
-  Phone, Mail, MapPin, TrendingUp, Users, Award;
-  Zap, Globe, Cpu, Database, Lock, Cloud;
-  Stethoscope, GraduationCap, Leaf, Truck} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+  Search, Filter, Star, CheckCircle, ArrowRight,
+  Brain, Atom, Shield, Rocket, Target, Microscope,
+  Phone, Mail, MapPin, TrendingUp, Users, Award,
+  Zap, Globe, Cpu, Database, Lock, Cloud,
+  Stethoscope, GraduationCap, Leaf, Truck} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 // Import all the new 20o25 innovative service data,
-import { innovativeFinancialServices20o25 } from '../data/20o25-innovative-financial-services';
-import { innovativeHealthcareServices20o25 } from '../data/20o25-innovative-healthcare-services';
-import { innovativeEducationServices20o25 } from '../data/20o25-innovative-education-services';
-import { innovativeSustainabilityServices20o25 } from '../data/20o25-innovative-sustainability-services';
-import { innovativeLogisticsServices20o25 } from '../data/20o25-innovative-logistics-services';
+import { innovativeFinancialServices20o25 } from '../data/20o25-innovative-financial-services',
+import { innovativeHealthcareServices20o25 } from '../data/20o25-innovative-healthcare-services',
+import { innovativeEducationServices20o25 } from '../data/20o25-innovative-education-services',
+import { innovativeSustainabilityServices20o25 } from '../data/20o25-innovative-sustainability-services',
+import { innovativeLogisticsServices20o25 } from '../data/20o25-innovative-logistics-services',
 // Import existing services for comprehensive coverage,
-import { realMicroSaasServices20o25 } from '../data/20o25-real-micro-saas-services';
-import { innovativeAIServices20o25 } from '../data/20o25-innovative-ai-services';
-import { innovativeITServices20o25 } from '../data/20o25-innovative-it-services';
-import { emergingTechServices20o25 } from '../data/20o25-emerging-tech-services';
+import { realMicroSaasServices20o25 } from '../data/20o25-real-micro-saas-services',
+import { innovativeAIServices20o25 } from '../data/20o25-innovative-ai-services',
+import { innovativeITServices20o25 } from '../data/20o25-innovative-it-services',
+import { emergingTechServices20o25 } from '../data/20o25-emerging-tech-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    id: 'financial-technology';
-    title: '💰 Financial Technology';
-    description: 'Innovative fintech, DeFi, and financial services';
-    icon: TrendingUp;
-    color: 'from-green-50o0 to-emerald-50o0';
-    services: [...innovativeFinancialServices20o25];
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20';
-    badge: 'New'};
+    id: 'financial-technology',
+    title: '💰 Financial Technology',
+    description: 'Innovative fintech, DeFi, and financial services',
+    icon: TrendingUp,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: [...innovativeFinancialServices20o25],
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
+    badge: 'New'},
   {
-    id: 'healthcare-biotech';
-    title: '🏥 Healthcare & Biotech';
-    description: 'AI-powered healthcare and biotechnology solutions';
-    icon: Stethoscope;
-    color: 'from-blue-50o0 to-indigo-50o0';
-    services: [...innovativeHealthcareServices20o25];
-    gradient: 'from-blue-50o0/20 to-indigo-50o0/20';
-    badge: 'Hot'};
+    id: 'healthcare-biotech',
+    title: '🏥 Healthcare & Biotech',
+    description: 'AI-powered healthcare and biotechnology solutions',
+    icon: Stethoscope,
+    color: 'from-blue-50o0 to-indigo-50o0',
+    services: [...innovativeHealthcareServices20o25],
+    gradient: 'from-blue-50o0/20 to-indigo-50o0/20',
+    badge: 'Hot'},
   {
-    id: 'education-technology';
-    title: '🎓 Education Technology';
-    description: 'AI-powered learning and educational innovation';
-    icon: GraduationCap;
-    color: 'from-purple-50o0 to-pink-50o0';
-    services: [...innovativeEducationServices20o25];
-    gradient: 'from-purple-50o0/20 to-pink-50o0/20';
-    badge: 'Innovative'};
+    id: 'education-technology',
+    title: '🎓 Education Technology',
+    description: 'AI-powered learning and educational innovation',
+    icon: GraduationCap,
+    color: 'from-purple-50o0 to-pink-50o0',
+    services: [...innovativeEducationServices20o25],
+    gradient: 'from-purple-50o0/20 to-pink-50o0/20',
+    badge: 'Innovative'},
   {
-    id: 'sustainability-green-tech';
-    title: '🌱 Sustainability & Green Tech';
-    description: 'Environmental technology and sustainability solutions';
-    icon: Leaf;
-    color: 'from-emerald-50o0 to-teal-50o0';
-    services: [...innovativeSustainabilityServices20o25];
-    gradient: 'from-emerald-50o0/20 to-teal-50o0/20';
-    badge: 'Eco-Friendly'};
+    id: 'sustainability-green-tech',
+    title: '🌱 Sustainability & Green Tech',
+    description: 'Environmental technology and sustainability solutions',
+    icon: Leaf,
+    color: 'from-emerald-50o0 to-teal-50o0',
+    services: [...innovativeSustainabilityServices20o25],
+    gradient: 'from-emerald-50o0/20 to-teal-50o0/20',
+    badge: 'Eco-Friendly'},
   {
-    id: 'logistics-supply-chain';
-    title: '🚚 Logistics & Supply Chain';
-    description: 'Autonomous logistics and supply chain optimization';
-    icon: Truck;
-    color: 'from-orange-50o0 to-red-50o0';
-    services: [...innovativeLogisticsServices20o25];
-    gradient: 'from-orange-50o0/20 to-red-50o0/20';
-    badge: 'Autonomous'};
+    id: 'logistics-supply-chain',
+    title: '🚚 Logistics & Supply Chain',
+    description: 'Autonomous logistics and supply chain optimization',
+    icon: Truck,
+    color: 'from-orange-50o0 to-red-50o0',
+    services: [...innovativeLogisticsServices20o25],
+    gradient: 'from-orange-50o0/20 to-red-50o0/20',
+    badge: 'Autonomous'},
   {
-    id: 'ai-consciousness';
-    title: '🧠 AI & Consciousness';
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms';
-    icon: Brain;
-    color: 'from-violet-50o0 to-purple-50o0';
-    services: [...innovativeAIServices20o25];
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20';
-    badge: 'Revolutionary'};
+    id: 'ai-consciousness',
+    title: '🧠 AI & Consciousness',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-50o0 to-purple-50o0',
+    services: [...innovativeAIServices20o25],
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20',
+    badge: 'Revolutionary'},
   {
-    id: 'quantum-emerging';
-    title: '⚛️ Quantum & Emerging Tech';
-    description: 'Quantum computing, DNA computing, and beyond';
-    icon: Atom;
-    color: 'from-indigo-50o0 to-blue-50o0';
-    services: [...emergingTechServices20o25];
-    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20';
-    badge: 'Quantum'};
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing, DNA computing, and beyond',
+    icon: Atom,
+    color: 'from-indigo-50o0 to-blue-50o0',
+    services: [...emergingTechServices20o25],
+    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20',
+    badge: 'Quantum'},
   {
-    id: 'enterprise-it';
-    title: '🏙️ Enterprise IT';
-    description: 'Autonomous operations and zero-trust security';
-    icon: Shield;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    services: [...innovativeITServices20o25];
-    gradient: 'from-blue-50o0/20 to-teal-50o0/20';
-    badge: 'Enterprise'};
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Shield,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    services: [...innovativeITServices20o25],
+    gradient: 'from-blue-50o0/20 to-teal-50o0/20',
+    badge: 'Enterprise'},
   {
-    id: 'micro-saas';
-    title: '🎯 Micro SAAS';
-    description: 'Innovative solutions for every business need';
-    icon: Target;
-    color: 'from-teal-50o0 to-green-50o0';
-    services: [...realMicroSaasServices20o25];
-    gradient: 'from-teal-50o0/20 to-green-50o0/20';
+    id: 'micro-saas',
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from-teal-50o0 to-green-50o0',
+    services: [...realMicroSaasServices20o25],
+    gradient: 'from-teal-50o0/20 to-green-50o0/20',
     badge: 'Popular'}
-];
+],
 export default function InnovativeServicesShowcase20o25() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
   const filteredServices = serviceCategories.flatMap(category =>,
     category.services.filter(service =>,
       (selectedCategory === 'all' || category.id === selectedCategory) &&,
       (searchTerm === '' ||,
         service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-        service.category.toLowerCase().includes(searchTerm.toLowerCase()))));
+        service.category.toLowerCase().includes(searchTerm.toLowerCase())))),
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'name':,
-        return a.name.localeCompare(b.name);
+        return a.name.localeCompare(b.name),
       case 'price':,
-        return a.pricing.starter.price - b.pricing.starter.price;
+        return a.pricing.starter.price - b.pricing.starter.price,
       case 'category':,
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       default: return 0}
-  });
+  }),
   return (
     <Layout>,
       <Head>,

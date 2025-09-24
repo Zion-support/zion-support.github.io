@@ -1,4 +1,5 @@
-import React from react',import { render, screen, fireEvent } from @testing-library/react',import { GuidedTour } from @/components/onboarding/GuidedTour',
+import React from react',
+import { render, screen, fireEvent } from @testing-library/react',import { GuidedTour } from @/components/onboarding/GuidedTour',
 // Helper to add target elements to the DOM,
 function setupTargets() {
   const profile = document.createElement('button'),  profile.id = profile-link',  profile.textContent = profile',  document.body.appendChild(profile),

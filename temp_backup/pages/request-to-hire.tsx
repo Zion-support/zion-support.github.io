@@ -1,18 +1,18 @@
-import React from 'react';
+import React from 'react',
 import { useEffect, useMemo, useState } from 'react',
 import { TALENT_PROFILES } from '../data/talent',
 export default function RequestToHirePage() {
   const router = useRouter(),
-  const { talent } = router.query as { talent?: string };
+  const { talent } = router.query as { talent?: string },
   const selected = useMemo(
-    () => TALENT_PROFILES.find(t => t.slug === talent);
+    () => TALENT_PROFILES.find(t => t.slug === talent),
     [talent]),
   const [form, setForm] = useState({
-    name: '';
-    email: '';
-    budget: '';
-    timeline: '';
-    description: '';
+    name: '',
+    email: '',
+    budget: '',
+    timeline: '',
+    description: ''
   }),
   const [submitting, setSubmitting] = useState(false),
   const [result, setResult] = useState<null | { id: string, message: string }>(
@@ -29,20 +29,20 @@ export default function RequestToHirePage() {
     setSubmitting(true),
     try {
       const res = await fetch('/api/requests/create', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...form;
-          budget: normalizedBudget;
-          talentSlug: selected?.slug || null;
-        });
+          ...form,
+          budget: normalizedBudget,
+          talentSlug: selected?.slug || null
+        }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
       setResult({ id: data.id, message: 'Request submitted successfully.' })} catch (err: any) {
       setError(err.message || 'Something went wrong')} finally {
       setSubmitting(false)}
-  };
+  },
   if (result) {
     return (
       <div className='max-w-xl mx-auto py-12'>,

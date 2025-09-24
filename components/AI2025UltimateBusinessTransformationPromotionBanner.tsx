@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {
   return (
@@ -31,7 +31,7 @@ const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {
             </div>,
           </div>,
           <div className='bg-white bg-opacity-10 rounded-xl p-8 backdrop-blur-sm'>,
-            <h3 className='text-xl font-bold mb-4'>What 'You', 'll Learn: </h3>,
+            <h3 className='text-xl font-bold mb-4'>What 'Youll Learn: </h3>,
             <ul className='space-y-3 text-sm'>,
               <li className='flex items-start'>,
                 <span className='text-green-40o0 mr-3'>✓</span>,
@@ -77,5 +77,5 @@ const AI20o25UltimateBusinessTransformationPromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25UltimateBusinessTransformationPromotionBanner;
+    </section>)},
+export default AI20o25UltimateBusinessTransformationPromotionBanner,

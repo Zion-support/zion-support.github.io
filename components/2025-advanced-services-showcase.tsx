@@ -3,66 +3,66 @@ import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Grid, List, Star, CheckCircle, ArrowRight, Check;
-  Phone, Mail, MapPin, Globe, ChevronDown, ChevronUp;
-  Users, Building2, Zap, Shield, Cloud, Database;
-  Brain, Cpu, Network, Lock, Server, Monitor;
+  Search, Grid, List, Star, CheckCircle, ArrowRight, Check,
+  Phone, Mail, MapPin, Globe, ChevronDown, ChevronUp,
+  Users, Building2, Zap, Shield, Cloud, Database,
+  Brain, Cpu, Network, Lock, Server, Monitor,
   Smartphone, Tablet, Laptop, Desktop, Wifi, Router} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const allServices = [
 ],
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of advanced services'};
+    id: 'all',
+    name: 'All Services',
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of advanced services'},
   {
-    id: 'enterprise';
-    name: 'Enterprise Solutions';
-    icon: <Building className="w-6 h-6"  />;
-    color: 'from-blue-50o0 to-purple-50o0';
-    description: 'Enterprise-grade AI and IT solutions'};
+    id: 'enterprise',
+    name: 'Enterprise Solutions',
+    icon: <Building className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-purple-50o0',
+    description: 'Enterprise-grade AI and IT solutions'},
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Globe className="w-6 h-6"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Innovative micro SAAS solutions'};
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Globe className="w-6 h-6"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    description: 'Innovative micro SAAS solutions'},
   {
-    id: 'infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Shield className="w-6 h-6"  />;
-    color: 'from-orange-50o0 to-red-50o0';
-    description: 'Cutting-edge infrastructure services'};
+    id: 'infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Shield className="w-6 h-6"  />,
+    color: 'from-orange-50o0 to-red-50o0',
+    description: 'Cutting-edge infrastructure services'},
   {
-    id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    icon: <Brain className="w-6 h-6"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Advanced AI and ML platforms'};
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    icon: <Brain className="w-6 h-6"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    description: 'Advanced AI and ML platforms'},
   {
-    id: 'quantum';
-    name: 'Quantum Computing';
-    color: 'from-violet-50o0 to-indigo-50o0';
+    id: 'quantum',
+    name: 'Quantum Computing',
+    color: 'from-violet-50o0 to-indigo-50o0',
     description: 'Quantum computing solutions'}
 ],
 const getServiceCategory = (service: any) => {
   if (service.category) return service.category,
-  return 'Other'};
+  return 'Other'},
 const getServicePricing = (service: any) => {
   if (service.price) return `${service.price}${service.period}`,
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
-  return 'Contact for pricing'};
+  return 'Contact for pricing'},
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
-  return []};
+  return []},
 export default function AdvancedServicesShowcase() {
   useEffect(() => {
     let filtered = allServices,

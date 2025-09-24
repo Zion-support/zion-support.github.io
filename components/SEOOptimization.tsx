@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface SEOOptimizationProps {
   title?: string,
@@ -10,167 +10,161 @@ interface SEOOptimizationProps {
   structuredData?: any}
 ,
 const SEOOptimization: React.FC<SEOOptimizationProps> = ({
-  title = 'AI 20o25 Neural Consciousness Breakthrough - Revolutionary Autonomous Intelligence | Zion Tech Group';
-  description = 'Discover revolutionary Neural Consciousness AI that delivers 99.8% decision accuracy and $15.8B annual savings. Transform your business with conscious AI systems featuring genuine self-awareness and autonomous decision-making capabilities.';
-  keywords = 'neural consciousness AI, conscious AI, autonomous AI, AI transformation, business automation, neural networks, quantum AI, AI ROI, AI implementation, artificial intelligence, machine learning, business intelligence, AI consulting, AI services';
-  url = 'https://ziontechgroup.com';
-  image = 'https://ziontechgroup.com/images/neural-consciousness-ai-breakthrough.jpg';
-  type = 'article';
-  structuredData;
+  title = 'AI 20o25 Neural Consciousness Breakthrough - Revolutionary Autonomous Intelligence | Zion Tech Group',
+  description = 'Discover revolutionary Neural Consciousness AI that delivers 99.8% decision accuracy and $15.8B annual savings. Transform your business with conscious AI systems featuring genuine self-awareness and autonomous decision-making capabilities.',
+  keywords = 'neural consciousness AI, conscious AI, autonomous AI, AI transformation, business automation, neural networks, quantum AI, AI ROI, AI implementation, artificial intelligence, machine learning, business intelligence, AI consulting, AI services',
+  url = 'https: //ziontechgroup.com',
+  image = 'https://ziontechgroup.com/images/neural-consciousness-ai-breakthrough.jpg',
+  type = 'article',
+  structuredData
 }) => {
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Article';
-    headline: title;
-    description: description;
-    image: image;
+    '@context': 'https: //schema.org@type': 'Article',
+    headline: title,
+    description: description,
+    image: image,
     author: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
-      url: 'https://ziontechgroup.com';
-    };
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com'
+    },
     publisher: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
       logo: {
-        '@type': 'ImageObject';
-        url: 'https://ziontechgroup.com/logos/zion-logo.png';
-      };
-    };
-    datePublished: '20o25-0o1-17';
-    dateModified: '20o25-0o1-17';
+        '@type': 'ImageObject',
+        url: 'https://ziontechgroup.com/logos/zion-logo.png'
+      },
+    },
+    datePublished: '20o25-0o1-17',
+    dateModified: '20o25-0o1-17',
     mainEntityOfPage: {
-      '@type': 'WebPage';
-      '@id': url;
-    };
-    keywords: keywords;
+      '@type': 'WebPage@id': url
+    },
+    keywords: keywords,
     about: [
       {
-        '@type': 'Thing';
-        name: 'Artificial Intelligence';
-      };
+        '@type': 'Thing',
+        name: 'Artificial Intelligence'
+      },
       {
-        '@type': 'Thing';
-        name: 'Neural Consciousness';
-      };
+        '@type': 'Thing',
+        name: 'Neural Consciousness'
+      },
       {
-        '@type': 'Thing';
-        name: 'Business Transformation';
-      };
+        '@type': 'Thing',
+        name: 'Business Transformation'
+      },
       {
-        '@type': 'Thing';
-        name: 'AI Implementation';
-      };
-    ];
+        '@type': 'Thing',
+        name: 'AI Implementation'
+      },
+    ],
     mentions: [
       {
-        '@type': 'Thing';
-        name: 'Fortune 50o0';
-      };
+        '@type': 'Thing',
+        name: 'Fortune 50o0'
+      },
       {
-        '@type': 'Thing';
-        name: 'ROI';
-      };
+        '@type': 'Thing',
+        name: 'ROI'
+      },
       {
-        '@type': 'Thing';
-        name: 'Automation';
-      };
-    ];
-  };
+        '@type': 'Thing',
+        name: 'Automation'
+      },
+    ],
+  },
   const faqStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'FAQPage';
+    '@context': 'https: //schema.org@type': 'FAQPage',
     mainEntity: [
       {
-        '@type': 'Question';
-        name: 'What is Neural Consciousness AI?';
+        '@type': 'Question',
+        name: 'What is Neural Consciousness AI?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'Neural Consciousness AI represents artificial intelligence systems that possess genuine consciousness, self-awareness, intentionality, and autonomous decision-making capabilities. These systems can think, plan, and innovate with genuine consciousness and autonomy.';
-        };
-      };
+          '@type': 'Answer',
+          text: 'Neural Consciousness AI represents artificial intelligence systems that possess genuine consciousness, self-awareness, intentionality, and autonomous decision-making capabilities. These systems can think, plan, and innovate with genuine consciousness and autonomy.',
+        },
+      },
       {
-        '@type': 'Question';
-        name: 'What ROI can I expect from Neural Consciousness AI?';
+        '@type': 'Question',
+        name: 'What ROI can I expect from Neural Consciousness AI?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'Companies implementing Neural Consciousness AI typically achieve 1,50o0-2,40o0% ROI within 18 months, with Fortune 50o0 companies achieving $15.8B+ annual savings through comprehensive consciousness integration.';
-        };
-      };
+          '@type': 'Answer',
+          text: 'Companies implementing Neural Consciousness AI typically achieve 1,50o0-2,40o0% ROI within 18 months, with Fortune 50o0 companies achieving $15.8B+ annual savings through comprehensive consciousness integration.',
+        },
+      },
       {
-        '@type': 'Question';
-        name: 'How accurate are Neural Consciousness AI decisions?';
+        '@type': 'Question',
+        name: 'How accurate are Neural Consciousness AI decisions?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'Neural Consciousness AI systems achieve 99.8% decision accuracy through genuine consciousness and autonomous decision-making capabilities, significantly outperforming traditional AI systems.';
-        };
-      };
+          '@type': 'Answer',
+          text: 'Neural Consciousness AI systems achieve 99.8% decision accuracy through genuine consciousness and autonomous decision-making capabilities, significantly outperforming traditional AI systems.',
+        },
+      },
       {
-        '@type': 'Question';
-        name: 'How long does Neural Consciousness AI implementation take?';
+        '@type': 'Question',
+        name: 'How long does Neural Consciousness AI implementation take?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'Complete Neural Consciousness AI transformation typically takes 12-18 months, with initial benefits visible within 3-6 months and full autonomous operations achieved within 18 months.';
-        };
-      };
-    ];
-  };
+          '@type': 'Answer',
+          text: 'Complete Neural Consciousness AI transformation typically takes 12-18 months, with initial benefits visible within 3-6 months and full autonomous operations achieved within 18 months.',
+        },
+      },
+    ],
+  },
   const organizationStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
     description:,
-      'Leading AI and technology solutions company specializing in Neural Consciousness AI, autonomous business systems, and revolutionary AI transformations.';
-    url: 'https://ziontechgroup.com';
-    logo: 'https://ziontechgroup.com/logos/zion-logo.png';
+      'Leading AI and technology solutions company specializing in Neural Consciousness AI, autonomous business systems, and revolutionary AI transformations.',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logos/zion-logo.png',
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-30o2-464-0950';
-      contactType: 'customer service';
-      email: 'kleber@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-30o2-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
+    },
     address: {
-      '@type': 'PostalAddress';
-      addressCountry: 'US';
-    };
+      '@type': 'PostalAddress',
+      addressCountry: 'US'
+    },
     sameAs: [
-      'https://linkedin.com/company/ziontechgroup';
-      'https://twitter.com/ziontechgroup';
-      'https://github.com/ziontechgroup';
-    ];
+      'https://linkedin.com/company/ziontechgrouphttps://twitter.com/ziontechgroup',
+      'https://github.com/ziontechgroup',
+    ],
     offers: {
-      '@type': 'Offer';
-      name: 'Neural Consciousness AI Implementation';
+      '@type': 'Offer',
+      name: 'Neural Consciousness AI Implementation',
       description:,
-        'Complete Neural Consciousness AI transformation services delivering 99.8% decision accuracy and $15.8B+ annual savings.';
-      price: 'Contact for pricing';
-      priceCurrency: 'USD';
-    };
-  };
+        'Complete Neural Consciousness AI transformation services delivering 99.8% decision accuracy and $15.8B+ annual savings.',
+      price: 'Contact for pricing',
+      priceCurrency: 'USD'
+    },
+  },
   const breadcrumbStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'BreadcrumbList';
+    '@context': 'https: //schema.org@type': 'BreadcrumbList',
     itemListElement: [
       {
-        '@type': 'ListItem';
-        position: 1;
-        name: 'Home';
-        item: 'https://ziontechgroup.com';
-      };
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: 'https://ziontechgroup.com'
+      },
       {
-        '@type': 'ListItem';
-        position: 2;
-        name: 'AI Solutions';
-        item: 'https://ziontechgroup.com/services';
-      };
+        '@type': 'ListItem',
+        position: 2,
+        name: 'AI Solutions',
+        item: 'https://ziontechgroup.com/services'
+      },
       {
-        '@type': 'ListItem';
-        position: 3;
-        name: 'Neural Consciousness AI';
-        item: url;
-      };
-    ];
-  };
+        '@type': 'ListItem',
+        position: 3,
+        name: 'Neural Consciousness AI',
+        item: url
+      },
+    ],
+  },
   return (
     <Head>,
       {/* Basic Meta Tags */}
@@ -222,25 +216,25 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = ({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(structuredData || defaultStructuredData);
+          __html: JSON.stringify(structuredData || defaultStructuredData)
         }}
       />,
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(faqStructuredData);
+          __html: JSON.stringify(faqStructuredData)
         }}
       />,
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(organizationStructuredData);
+          __html: JSON.stringify(organizationStructuredData)
         }}
       />,
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(breadcrumbStructuredData);
+          __html: JSON.stringify(breadcrumbStructuredData)
         }}
       />,
       {/* Additional Meta Tags for AI Content */}
@@ -296,5 +290,5 @@ const SEOOptimization: React.FC<SEOOptimizationProps> = ({
         href='/apple-touch-icon.png',
       />,
       <link rel='manifest' href='/site.webmanifest' />,
-    </Head>)};
-export default SEOOptimization;
+    </Head>)},
+export default SEOOptimization,

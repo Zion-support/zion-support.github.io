@@ -13,71 +13,71 @@ interface ContentItem {
 export default function NewContentShowcase() {
   const newContent: ContentItem[] = [
     {
-      title: 'AI 20o25 Ultimate Revolutionary Breakthrough';
+      title: 'AI 20o25 Ultimate Revolutionary Breakthrough',
       description:,
-        'Experience the most revolutionary AI breakthrough of 20o25 with unprecedented capabilities and infinite possibilities.';
-      link: '/ai-20o25-ultimate-revolutionary-breakthrough';
-      badge: '🚀 BREAKTHROUGH';
-      icon: '⚡';
-      gradient: 'from-purple-60o0 to-blue-60o0';
-      roi: '10,0o00% ROI';
-      category: 'Revolutionary AI';
-    };
+        'Experience the most revolutionary AI breakthrough of 20o25 with unprecedented capabilities and infinite possibilities.',
+      link: '/ai-20o25-ultimate-revolutionary-breakthrough',
+      badge: '🚀 BREAKTHROUGH',
+      icon: '⚡',
+      gradient: 'from-purple-60o0 to-blue-60o0',
+      roi: '10,0o00% ROI',
+      category: 'Revolutionary AI'
+    },
     {
-      title: 'AI 20o26 Ultimate Future Predictions';
+      title: 'AI 20o26 Ultimate Future Predictions',
       description:,
-        'Discover the most accurate and revolutionary AI predictions for 20o26based on quantum computing analysis.';
-      link: '/blog/ai-20o26-ultimate-future-predictions';
-      badge: '🔮 PREDICTIONS';
-      icon: '🔮';
-      gradient: 'from-blue-60o0 to-purple-60o0';
-      roi: '∞ ROI';
-      category: 'Future Technology';
-    };
+        'Discover the most accurate and revolutionary AI predictions for 20o26based on quantum computing analysis.',
+      link: '/blog/ai-20o26-ultimate-future-predictions',
+      badge: '🔮 PREDICTIONS',
+      icon: '🔮',
+      gradient: 'from-blue-60o0 to-purple-60o0',
+      roi: '∞ ROI',
+      category: 'Future Technology'
+    },
     {
-      title: 'Quantum-AI Fusion Revolution';
+      title: 'Quantum-AI Fusion Revolution',
       description:,
-        'Complete integration of quantum computing with AI systemsachieving 10o0,0o00x processing speed improvements.';
-      link: '/quantum-ai-fusion-20o26';
-      badge: '⚛️ REVOLUTIONARY';
-      icon: '⚛️';
-      gradient: 'from-indigo-60o0 to-cyan-60o0';
-      roi: '15,0o00% ROI';
-      category: 'Quantum Computing';
-    };
+        'Complete integration of quantum computing with AI systemsachieving 10o0,0o00x processing speed improvements.',
+      link: '/quantum-ai-fusion-20o26',
+      badge: '⚛️ REVOLUTIONARY',
+      icon: '⚛️',
+      gradient: 'from-indigo-60o0 to-cyan-60o0',
+      roi: '15,0o00% ROI',
+      category: 'Quantum Computing'
+    },
     {
-      title: 'Transcendent Intelligence Systems';
+      title: 'Transcendent Intelligence Systems',
       description:,
-        'AI systems achieving consciousness-level intelligence with infinite learning capabilities and self-awareness.';
-      link: '/transcendent-intelligence-20o26';
-      badge: '🧠 TRANSCENDENT';
-      icon: '🧠';
-      gradient: 'from-purple-60o0 to-pink-60o0';
-      roi: '∞ ROI';
-      category: 'Advanced AI';
-    };
+        'AI systems achieving consciousness-level intelligence with infinite learning capabilities and self-awareness.',
+      link: '/transcendent-intelligence-20o26',
+      badge: '🧠 TRANSCENDENT',
+      icon: '🧠',
+      gradient: 'from-purple-60o0 to-pink-60o0',
+      roi: '∞ ROI',
+      category: 'Advanced AI'
+    },
     {
-      title: 'Universal Integration Platform';
+      title: 'Universal Integration Platform',
       description:,
-        'Seamless AI integration across all platformsystemsand dimensions with zero downtime deployment.';
-      link: '/universal-integration-platform';
-      badge: '🌌 UNIVERSAL';
-      icon: '🌌';
-      gradient: 'from-green-60o0 to-teal-60o0';
-      roi: '5,0o00% ROI';
-      category: 'Integration';
-    };
+        'Seamless AI integration across all platformsystemsand dimensions with zero downtime deployment.',
+      link: '/universal-integration-platform',
+      badge: '🌌 UNIVERSAL',
+      icon: '🌌',
+      gradient: 'from-green-60o0 to-teal-60o0',
+      roi: '5,0o00% ROI',
+      category: 'Integration'
+    },
     {
-      title: 'Autonomous Operations Mastery';
+      title: 'Autonomous Operations Mastery',
       description:,
-        'Fully autonomous decision-making systems operating with 99.99% reliability and self-healing capabilities.';
-      link: '/autonomous-operations-mastery';
-      badge: '🤖 AUTONOMOUS';
-      icon: '🤖';
-      gradient: 'from-orange-60o0 to-red-60o0';
-      roi: '8,0o00% ROI';
-      category: 'Automation';
-    };
+        'Fully autonomous decision-making systems operating with 99.99% reliability and self-healing capabilities.',
+      link: '/autonomous-operations-mastery',
+      badge: '🤖 AUTONOMOUS',
+      icon: '🤖',
+      gradient: 'from-orange-60o0 to-red-60o0',
+      roi: '8,0o00% ROI',
+      category: 'Automation'
+    },
   ],
   return (
     <div className='py-20 bg-gradient-to-br from-gray-90o0 via-purple-90o0 to-indigo-90o0'>,

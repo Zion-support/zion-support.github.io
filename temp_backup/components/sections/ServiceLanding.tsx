@@ -17,17 +17,17 @@ interface ServiceLandingProps {
 ,
 export default function ServiceLanding(props: ServiceLandingProps) {
   const {
-    title;
-    slug;
-    description;
-    subtitle;
-    pricePerMonthUSD;
-    implementationWeeks;
-    roiNote;
-    features;
-    industries;
-    ctaHref;
-    canonical;
+    title,
+    slug,
+    description,
+    subtitle,
+    pricePerMonthUSD,
+    implementationWeeks,
+    roiNote,
+    features,
+    industries,
+    ctaHref,
+    canonical
   } = props,
   const price =,
     typeof pricePerMonthUSD === 'number',

@@ -66,7 +66,7 @@ const GenAIOpsPlaybook20o26 = () => {
           </ul>,
           <h2>KPIs That Matter</h2>,
           <p>,
-            Time-to-first-use-case, cycle-time reduction, deflection rate;
+            Time-to-first-use-case, cycle-time reduction, deflection rate,
             accuracy at task, cost per task, and ROI. Instrument these metrics,
             per workflow.,
           </p>,
@@ -84,5 +84,5 @@ const GenAIOpsPlaybook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default GenAIOpsPlaybook20o26;
+    </div>)},
+export default GenAIOpsPlaybook20o26,

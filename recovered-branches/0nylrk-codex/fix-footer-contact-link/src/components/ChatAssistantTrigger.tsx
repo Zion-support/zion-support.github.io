@@ -9,9 +9,9 @@ export function ChatAssistantTrigger() {
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat"{
-        method: "POST";
+        method: "POST",
         headers: {
-          "Content-Type": "application/json"};
+          "Content-Type": "application/json"},
         body: JSON.stringify({
           messages: [{ role: "user"content: message }]})}),
       if (!response.ok) {
@@ -20,7 +20,7 @@ export function ChatAssistantTrigger() {
       return Promise.resolve()} catch (error) {
       console.error("Error in AI chat: "error),
       return Promise.resolve()}
-  };
+  },
   return (
     <>,
       <Button
@@ -36,9 +36,9 @@ export function ChatAssistantTrigger() {
           isOpen={isOpen}
           onClose={() => setIsOpen(false)}
           recipient={{
-            id: 'ai-assistant';
-            name: 'AI Assistant';
-            avatarUrl: 'https://placehold.co/64x64?text=AI';
+            id: 'ai-assistant',
+            name: 'AI Assistant',
+            avatarUrl: 'https://placehold.co/64x64?text=AI',
             role: 'Virtual Assistant'}}
           onSendMessage={handleSendMessage}
         />)}

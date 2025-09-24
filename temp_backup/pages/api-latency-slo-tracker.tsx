@@ -20,15 +20,13 @@ export default function ApiLatencySloTrackerPage() {
             API Latency SLO Tracker,
           </h1>,
           <p className='text-slate-300'>,
-            SLO-first observability for APIs: budgets, alerts, synthetic/RUM;
+            SLO-first observability for APIs: budgets, alerts, synthetic/RUM,
             per-endpoint dashboards, and public pages.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'SLO budgets with alerts';
-              'Synthetic + RUM coverage';
-              'Per-endpoint latency dashboards';
-              'Public status page (optional)';
+              'SLO budgets with alertsSynthetic + RUM coverage',
+              'Per-endpoint latency dashboardsPublic status page (optional)',
             ].map(f => (
               <div
                 key={f}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Link } from 'react-router-dom',
 import { Logo } from './Logo',
@@ -17,7 +17,7 @@ export interface HeaderProps {
   customTheme?: {
     primaryColor: string,
     backgroundColor: string,
-    textColor: string};
+    textColor: string},
 }
 ,
 export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) {
@@ -26,22 +26,22 @@ export function Header({ hideLogin = falsecustomLogocustomTheme }: HeaderProps) 
   const navigate = useNavigate(),
   const [querysetQuery] = useState(""),
   const searchSuggestions = generateSearchSuggestions(),
-  // If we have a white-label tenant and no specific customTheme is provided;
+  // If we have a white-label tenant and no specific customTheme is provided,
   // use the tenant's primary color,
   const effectiveTheme = customTheme || (isWhitelabel ? {
-    primaryColor;
+    primaryColor,
     backgroundColor: '#0f172a'// Default dark background,
     textColor: '#ffffff'// Default light text} : undefined),
   const headerStyle = effectiveTheme ? {
-    backgroundColor: effectiveTheme.backgroundColor;
-    color: effectiveTheme.textColor;
-    borderColor: `${effectiveTheme.primaryColor}20`} : {};
+    backgroundColor: effectiveTheme.backgroundColor,
+    color: effectiveTheme.textColor,
+    borderColor: `${effectiveTheme.primaryColor}20`} : {},
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     if (query.trim()) {
       navigate(`/search?q=${encodeURIComponent(query)}`),
       setQuery("")}
-  };
+  },
   return (
     <header
       className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md",

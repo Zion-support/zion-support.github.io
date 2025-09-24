@@ -2,48 +2,48 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Brain, Atom, Shield, Target, Rocket, Globe, Cpu;
-  ArrowRight, Check, Star, TrendingUp, Users, Zap;
+  Brain, Atom, Shield, Target, Rocket, Globe, Cpu,
+  ArrowRight, Check, Star, TrendingUp, Users, Zap,
   Phone, Mail, MapPin, ExternalLink, ChevronDown, ChevronUp} from 'lucide-react',
 // Import our new innovative services,
 import { innovative20o37Services } from '../data/innovative-20o37-services',
 import { advanced20o38Services } from '../data/advanced-20o38-services',
 import { revolutionary20o39Services } from '../data/revolutionary-20o39-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const containerVariants ={
-  hidden: { opacity: 0 };
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1;
+    opacity: 1,
     transition: {
       staggerChildren: 0.1}
   }
-};
+},
 const itemVariants ={
-  hidden: { y: 20, opacity: 0 };
+  hidden: { y: 20, opacity: 0 },
   visible: {
-    y: 0;
-    opacity: 1;
+    y: 0,
+    opacity: 1,
     transition: {
       duration: 0.5}
   }
-};
+},
 export default function ComprehensivePricing20o37() {
   const [expandedServices, setExpandedServices] = useState<Set<string>>(new Set()),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const allServices = [
-    ...innovative20o37Services;
-    ...advanced20o38Services;
+    ...innovative20o37Services,
+    ...advanced20o38Services,
     ...revolutionary20o39Services],
   const categories = [
-    { id: 'all', name: 'All Services', color: 'from-gray-50o0 to-slate-50o0' };
-    { id: 'ai-emotional', name: 'AI & Emotional Intelligence', color: 'from-pink-50o0 to-purple-60o0' };
-    { id: 'quantum-security', name: 'Quantum Security', color: 'from-indigo-60o0 to-purple-70o0' };
-    { id: 'autonomous-systems', name: 'Autonomous Systems', color: 'from-green-60o0 to-teal-70o0' };
-    { id: 'metaverse-business', name: 'Metaverse Business', color: 'from-blue-50o0 to-cyan-60o0' };
+    { id: 'all', name: 'All Services', color: 'from-gray-50o0 to-slate-50o0' },
+    { id: 'ai-emotional', name: 'AI & Emotional Intelligence', color: 'from-pink-50o0 to-purple-60o0' },
+    { id: 'quantum-security', name: 'Quantum Security', color: 'from-indigo-60o0 to-purple-70o0' },
+    { id: 'autonomous-systems', name: 'Autonomous Systems', color: 'from-green-60o0 to-teal-70o0' },
+    { id: 'metaverse-business', name: 'Metaverse Business', color: 'from-blue-50o0 to-cyan-60o0' },
     { id: 'neural-quantum', name: 'Neural & Quantum', color: 'from-purple-60o0 to-pink-70o0' }
   ],
   const filteredServices = selectedCategory === 'all',
@@ -68,7 +68,7 @@ export default function ComprehensivePricing20o37() {
     if (newExpanded.has(serviceId)) {
       newExpanded.delete(serviceId)} else {
       newExpanded.add(serviceId)}
-    setExpandedServices(newExpanded)};
+    setExpandedServices(newExpanded)},
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'AI & Personal Development':,
@@ -98,7 +98,7 @@ export default function ComprehensivePricing20o37() {
         return <Rocket className="w-6 h-6"  />,
       default:,
         return <Target className="w-6 h-6"  />}
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <Head>,
@@ -122,7 +122,7 @@ export default function ComprehensivePricing20o37() {
               <span className="text-white">20o37 Services</span>,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              Transparent pricing for our revolutionary portfolio of AI consciousness;
+              Transparent pricing for our revolutionary portfolio of AI consciousness,
               quantum computing, autonomous systems, and cutting-edge innovations,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
@@ -305,7 +305,7 @@ export default function ComprehensivePricing20o37() {
                         </div>,
                         <div>,
                           <h5 className="text-white font-semibold mb-2">Competitors</h5>,
-                          <p className="text-gray-30o0 text-sm">{service.competitors.join(', ')}</p>,
+                          <p className="text-gray-30o0 text-sm">{service.competitors.join()}</p>,
                         </div>,
                         <div>,
                           <h5 className="text-white font-semibold mb-2">Implementation Details</h5>,
@@ -348,7 +348,7 @@ export default function ComprehensivePricing20o37() {
               Pricing Summary,
             </h2>,
             <p className="text-xl text-gray-30o0 mb-12 max-w-4xl mx-auto">,
-              Our comprehensive 20o37 services portfolio offers competitive pricing across all categories;
+              Our comprehensive 20o37 services portfolio offers competitive pricing across all categories,
               with transparent costs and clear value propositions for every business need.,
             </p>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-8">,
@@ -415,7 +415,7 @@ export default function ComprehensivePricing20o37() {
             <div>,
               <h3 className="text-white font-bold text-lg mb-4">Zion Tech Group</h3>,
               <p className="text-gray-40o0 text-sm">,
-                Leading the future of technology with innovative AI, quantum computing;
+                Leading the future of technology with innovative AI, quantum computing,
                 and autonomous systems solutions.,
               </p>,
             </div>,

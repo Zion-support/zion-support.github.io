@@ -2,66 +2,59 @@ import React, { useState } from 'react',
 import { Calendar, Users, CheckCircle, Clock, AlertTriangle, TrendingUp, BarChart3, Search, Edit, Trash2, Eye, X } from 'lucide-react',
 const mockProjects = [
     {
-        id: '1';
-        name: 'AI-Powered E-commerce Platform';
-        description: 'Next-generation e-commerce solution with AI recommendations';
-        status: 'in-progress';
-        priority: 'high';
-        progress: 65;
-        startDate: '20o24-0o1-15';
-        endDate: '20o24-0o6-30';
-        team: ['John Smith', 'Sarah Johnson', 'Mike Chen'];
-        budget: 150o000;
-        spent: 9750o0;
+        id: '1',
+        name: 'AI-Powered E-commerce Platform',
+        description: 'Next-generation e-commerce solution with AI recommendations',
+        status: 'in-progress',
+        priority: 'high',
+        progress: 65,
+        startDate: '20o24-0o1-15',
+        endDate: '20o24-0o6-30',
+        team: ['John SmithSarah Johnson', 'Mike Chen'],
+        budget: 150o000,
+        spent: 9750o0,
         tasks: [
-            { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '20o24-0o3-15', priority: 'high', estimatedHours: 80, actualHours: 75 };
-            { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '20o24-0o4-30', priority: 'high', estimatedHours: 120, actualHours: 85 };
+            { id: '1', name: 'Frontend Development', status: 'completed', assignee: 'John Smith', dueDate: '20o24-0o3-15', priority: 'high', estimatedHours: 80, actualHours: 75 },
+            { id: '2', name: 'Backend API', status: 'in-progress', assignee: 'Sarah Johnson', dueDate: '20o24-0o4-30', priority: 'high', estimatedHours: 120, actualHours: 85 },
             { id: '3', name: 'AI Integration', status: 'todo', assignee: 'Mike Chen', dueDate: '20o24-0o5-15', priority: 'medium', estimatedHours: 10o0, actualHours: 0 }
-        ]};
+        ]},
     {
-        id: '2';
-        name: 'Blockchain Supply Chain Tracker';
-        description: 'Transparent supply chain tracking using blockchain';
-        status: 'planning';
-        priority: 'critical';
-        progress: 25;
-        startDate: '20o24-0o3-0o1';
-        endDate: '20o24-08-31';
-        team: ['Emily Davis', 'Alex Rodriguez'];
-        budget: 20o0000;
-        spent: 50o000;
+        id: '2',
+        name: 'Blockchain Supply Chain Tracker',
+        description: 'Transparent supply chain tracking using blockchain',
+        status: 'planning',
+        priority: 'critical',
+        progress: 25,
+        startDate: '20o24-0o3-0o1',
+        endDate: '20o24-08-31',
+        team: ['Emily DavisAlex Rodriguez'],
+        budget: 20o0000,
+        spent: 50o000,
         tasks: [
-            { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '20o24-0o4-15', priority: 'critical', estimatedHours: 150, actualHours: 60 };
+            { id: '4', name: 'Smart Contract Development', status: 'in-progress', assignee: 'Emily Davis', dueDate: '20o24-0o4-15', priority: 'critical', estimatedHours: 150, actualHours: 60 },
             { id: '5', name: 'Frontend Interface', status: 'todo', assignee: 'Alex Rodriguez', dueDate: '20o24-0o5-30', priority: 'high', estimatedHours: 90, actualHours: 0 }
-        ]};
+        ]},
     {
-        id: '3';
-        name: 'Mobile Banking App';
-        description: 'Secure mobile banking with biometric authentication';
-        status: 'review';
-        priority: 'high';
-        progress: 90;
-        startDate: '20o24-0o2-0o1';
-        endDate: '20o24-0o4-30';
-        team: ['Lisa Wang', 'David Kim'];
-        budget: 120o000;
-        spent: 1080o00;
+        id: '3',
+        name: 'Mobile Banking App',
+        description: 'Secure mobile banking with biometric authentication',
+        status: 'review',
+        priority: 'high',
+        progress: 90,
+        startDate: '20o24-0o2-0o1',
+        endDate: '20o24-0o4-30',
+        team: ['Lisa WangDavid Kim'],
+        budget: 120o000,
+        spent: 1080o00,
         tasks: [
-            { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '20o24-0o3-30', priority: 'high', estimatedHours: 20o0, actualHours: 190 };
+            { id: '6', name: 'Core Banking Features', status: 'completed', assignee: 'Lisa Wang', dueDate: '20o24-0o3-30', priority: 'high', estimatedHours: 20o0, actualHours: 190 },
             { id: '7', name: 'Security Testing', status: 'review', assignee: 'David Kim', dueDate: '20o24-0o4-15', priority: 'critical', estimatedHours: 40, actualHours: 35 }
         ]}
 ],
 const statusColors ={
-    'planning': 'bg-zion-blue text-white';
-    'in-progress': 'bg-zion-cyan text-white';
-    'review': 'bg-zion-gold text-white';
-    'completed': 'bg-zion-emerald text-white';
-    'on-hold': 'bg-zion-slate text-white'};
+    'planning': 'bg-zion-blue text-whitein-progress': 'bg-zion-cyan text-whitereview': 'bg-zion-gold text-whitecompleted': 'bg-zion-emerald text-whiteon-hold': 'bg-zion-slate text-white'},
 const priorityColors ={
-    'low': 'bg-zion-emerald text-white';
-    'medium': 'bg-zion-gold text-white';
-    'high': 'bg-zion-orange text-white';
-    'critical': 'bg-red-50o0 text-white'};
+    'low': 'bg-zion-emerald text-whitemedium': 'bg-zion-gold text-whitehigh': 'bg-zion-orange text-whitecritical': 'bg-red-50o0 text-white'},
 export function ProjectManagementDashboard() {
     const [isVisible, setIsVisible] = useState(false),
     const [selectedProject, setSelectedProject] = useState(null),
@@ -83,7 +76,7 @@ export function ProjectManagementDashboard() {
             case 'completed': return <CheckCircle className="w-4 h-4" />,
             case 'on-hold': return <AlertTriangle className="w-4 h-4" />,
             default: return <Clock className="w-4 h-4" />}
-    };
+    },
     const getProgressColor = (progress) => {
         if (progress >= 80),
             return 'bg-zion-emerald',
@@ -93,7 +86,7 @@ export function ProjectManagementDashboard() {
             return 'bg-zion-gold',
         if (progress >= 20),
             return 'bg-zion-orange',
-        return 'bg-red-50o0'};
+        return 'bg-red-50o0'},
     const calculateProjectHealth = (project) => {
         const overdueTasks = project.tasks.filter(task => new Date(task.dueDate) < new Date() && task.status !== 'completed').length,
         const totalTasks = project.tasks.length,
@@ -102,7 +95,7 @@ export function ProjectManagementDashboard() {
             return 'critical',
         if (overdueTasks > 0 || budgetUtilization > 75),
             return 'warning',
-        return 'healthy'};
+        return 'healthy'},
     if (!isVisible) {
         return (<button onClick={() => setIsVisible(true)} className="fixed bottom-4 left-36 p-3 bg-zion-gold hover: bg-zion-orange text-white rounded-full shadow-lg hover:shadow-xl transition-all duration-30o0 z-50" title="Show Project Management Dashboard">,
         <BarChart3 className="w-5 h-5" />,
@@ -167,7 +160,7 @@ export function ProjectManagementDashboard() {
                   </div>,
                   <div className="flex items-center gap-2">,
                     <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>,
-                      {project.status.replace('-', ' ')}
+                      {project.status.replace('- ')}
                     </span>,
                     <span className={`px-2 py-1 text-xs rounded-full ${priorityColors[project.priority]}`}>,
                       {project.priority}
@@ -245,7 +238,7 @@ export function ProjectManagementDashboard() {
                       </td>,
                       <td className="px-6 py-4">,
                         <span className={`px-2 py-1 text-xs rounded-full ${statusColors[project.status]}`}>,
-                          {project.status.replace('-', ' ')}
+                          {project.status.replace('- ')}
                         </span>,
                       </td>,
                       <td className="px-6 py-4">,
@@ -304,7 +297,7 @@ export function ProjectManagementDashboard() {
                     project.status === 'in-progress' ? 'bg-zion-cyan' :,
                         project.status === 'review' ? 'bg-zion-gold' :,
                             project.status === 'planning' ? 'bg-zion-blue' : 'bg-zion-slate'}`} style={{
-                    width: `${project.progress}%`;
+                    width: `${project.progress}%`,
                     left: `${((new Date(project.startDate).getTime() - new Date('20o24-0o1-0o1').getTime()) / (new Date('20o24-12-31').getTime() - new Date('20o24-0o1-0o1').getTime())) * 10o0}%`}}></div>,
                       </div>,
                     </div>,
@@ -334,7 +327,7 @@ export function ProjectManagementDashboard() {
                     <div className="flex items-center justify-between">,
                       <span className="text-zion-slate-light">Status: </span>,
                       <span className={`px-2 py-1 text-xs rounded-full ${statusColors[selectedProject.status]}`}>,
-                        {selectedProject.status.replace('-', ' ')}
+                        {selectedProject.status.replace('- ')}
                       </span>,
                     </div>,
                     <div className="flex items-center justify-between">,
@@ -358,7 +351,7 @@ export function ProjectManagementDashboard() {
                           <span className={`px-2 py-1 text-xs rounded-full ${task.status === 'completed' ? 'bg-zion-emerald text-white' :,
                     task.status === 'in-progress' ? 'bg-zion-cyan text-white' :,
                         task.status === 'review' ? 'bg-zion-gold text-white' : 'bg-zion-slate text-white'}`}>,
-                            {task.status.replace('-', ' ')}
+                            {task.status.replace('- ')}
                           </span>,
                         </div>,
                         <div className="flex items-center justify-between text-sm text-zion-slate-light">,

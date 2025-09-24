@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Document Processing Automation | Zion Tech Group';
+  title: 'Document Processing Automation | Zion Tech Group',
   description:,
-    'Automate document workflows with AI-powered processing, data extraction, and intelligent classification for maximum efficiency.';
-};
+    'Automate document workflows with AI-powered processing, data extraction, and intelligent classification for maximum efficiency.',
+},
 export default function DocumentProcessingAutomationPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -10,35 +10,29 @@ export default function DocumentProcessingAutomationPage() {
         Document Processing Automation,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Automate document workflows with AI-powered processing, data extraction;
+        Automate document workflows with AI-powered processing, data extraction,
         and intelligent classification for maximum efficiency.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
         <FeatureCard
           title='Intelligent Data Extraction',
           features={[
-            'OCR text recognition';
-            'Form field extraction';
-            'Table data parsing';
-            'Handwriting recognition';
+            'OCR text recognitionForm field extraction',
+            'Table data parsingHandwriting recognition',
           ]}
         />,
         <FeatureCard
           title='Document Classification',
           features={[
-            'Automatic categorization';
-            'Content analysis';
-            'Priority assignment';
-            'Workflow routing';
+            'Automatic categorizationContent analysis',
+            'Priority assignmentWorkflow routing',
           ]}
         />,
         <FeatureCard
           title='Process Automation',
           features={[
-            'Batch processing';
-            'Quality validation';
-            'Exception handling';
-            'Integration workflows';
+            'Batch processingQuality validation',
+            'Exception handlingIntegration workflows',
           ]}
         />,
       </div>,
@@ -118,8 +112,8 @@ export default function DocumentProcessingAutomationPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -145,21 +139,17 @@ function Pricing() {
           name='Starter',
           price='$1,499/mo',
           features={[
-            'Basic document processing';
-            'Up to 5,0o00 documents/month';
-            'Standard support';
-            'Cloud deployment';
+            'Basic document processingUp to 5,0o00 documents/month',
+            'Standard supportCloud deployment',
           ]}
         />,
         <Plan
           name='Professional',
           price='$3,999/mo',
           features={[
-            'Advanced AI processing';
-            'Up to 50,0o00 documents/month';
-            'Custom workflows';
-            'Priority support';
-            'API access';
+            'Advanced AI processingUp to 50,0o00 documents/month',
+            'Custom workflowsPriority support',
+            'API access',
           ]}
           popular={true}
         />,
@@ -167,21 +157,19 @@ function Pricing() {
           name='Enterprise',
           price='$9,999/mo',
           features={[
-            'Unlimited processing';
-            'Custom model training';
-            'On-premise deployment';
-            'Dedicated support';
-            'White-label solution';
+            'Unlimited processingCustom model training',
+            'On-premise deploymentDedicated support',
+            'White-label solution',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

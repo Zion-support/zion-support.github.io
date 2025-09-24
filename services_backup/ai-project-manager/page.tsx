@@ -1,6 +1,6 @@
 export const metadata ={
-  title: 'AI Project Manager | Zion Tech Group';
-  description: 'Intelligent project management with AI-powered task automation, resource optimization, and predictive analytics. Complete projects 40% faster with 99% accuracy.'};
+  title: 'AI Project Manager | Zion Tech Group',
+  description: 'Intelligent project management with AI-powered task automation, resource optimization, and predictive analytics. Complete projects 40% faster with 99% accuracy.'},
 export default function AIProjectManagerPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">,
@@ -10,7 +10,7 @@ export default function AIProjectManagerPage() {
           AI Project Manager,
         </h1>,
         <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
-          Revolutionize project management with AI-powered automation, intelligent resource allocation;
+          Revolutionize project management with AI-powered automation, intelligent resource allocation,
           and predictive analytics. Complete projects 40% faster with unprecedented accuracy.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -35,9 +35,9 @@ export default function AIProjectManagerPage() {
             title="AI Task Automation",
             description="Automatically create, assign, and prioritize tasks based on project requirements and team capabilities.",
             features={[
-              "Smart task breakdown";
-              "Automatic assignment";
-              "Priority optimization";
+              "Smart task breakdown",
+              "Automatic assignment",
+              "Priority optimization",
               "Deadline prediction"]}
            />,
           <FeatureCard
@@ -45,9 +45,9 @@ export default function AIProjectManagerPage() {
             title="Predictive Analytics",
             description="Forecast project outcomes, identify risks, and optimize resource allocation with AI-powered insights.",
             features={[
-              "Risk prediction";
-              "Resource optimization";
-              "Timeline forecasting";
+              "Risk prediction",
+              "Resource optimization",
+              "Timeline forecasting",
               "Budget analysis"]}
            />,
           <FeatureCard
@@ -55,9 +55,9 @@ export default function AIProjectManagerPage() {
             title="Team Optimization",
             description="AI analyzes team performance and suggests optimal team compositions for maximum productivity.",
             features={[
-              "Performance analysis";
-              "Skill matching";
-              "Workload balancing";
+              "Performance analysis",
+              "Skill matching",
+              "Workload balancing",
               "Team recommendations"]}
            />,
           <FeatureCard
@@ -65,9 +65,9 @@ export default function AIProjectManagerPage() {
             title="Real-time Monitoring",
             description="Track project progress in real-time with intelligent alerts and automated status updates.",
             features={[
-              "Live progress tracking";
-              "Smart notifications";
-              "Automated reporting";
+              "Live progress tracking",
+              "Smart notifications",
+              "Automated reporting",
               "Performance metrics"]}
            />,
           <FeatureCard
@@ -75,9 +75,9 @@ export default function AIProjectManagerPage() {
             title="Smart Scheduling",
             description="AI-powered scheduling that considers dependencies, resource availability, and optimal work patterns.",
             features={[
-              "Dependency management";
-              "Resource scheduling";
-              "Conflict resolution";
+              "Dependency management",
+              "Resource scheduling",
+              "Conflict resolution",
               "Timeline optimization"]}
            />,
           <FeatureCard
@@ -85,9 +85,9 @@ export default function AIProjectManagerPage() {
             title="Intelligent Communication",
             description="AI-powered communication tools that facilitate better collaboration and reduce miscommunication.",
             features={[
-              "Smart meeting scheduling";
-              "Communication analysis";
-              "Automated updates";
+              "Smart meeting scheduling",
+              "Communication analysis",
+              "Automated updates",
               "Stakeholder management"]}
            />,
         </div>,
@@ -102,10 +102,10 @@ export default function AIProjectManagerPage() {
             period="month",
             description="Perfect for small teams and startups",
             features={[
-              "Up to 10 team members";
-              "5 active projects";
-              "Basic AI features";
-              "Standard analytics";
+              "Up to 10 team members",
+              "5 active projects",
+              "Basic AI features",
+              "Standard analytics",
               "Email support"]}
             popular={false}
            />,
@@ -115,11 +115,11 @@ export default function AIProjectManagerPage() {
             period="month",
             description="Ideal for growing businesses",
             features={[
-              "Up to 50 team members";
-              "Unlimited projects";
-              "Advanced AI features";
-              "Detailed analytics & reporting";
-              "Priority support";
+              "Up to 50 team members",
+              "Unlimited projects",
+              "Advanced AI features",
+              "Detailed analytics & reporting",
+              "Priority support",
               "Custom integrations"]}
             popular={true}
            />,
@@ -129,11 +129,11 @@ export default function AIProjectManagerPage() {
             period="month",
             description="For large organizations",
             features={[
-              "Unlimited team members";
-              "Unlimited projects";
-              "Custom AI training";
-              "White-label solution";
-              "24/7 dedicated support";
+              "Unlimited team members",
+              "Unlimited projects",
+              "Custom AI training",
+              "White-label solution",
+              "24/7 dedicated support",
               "API access & custom development"]}
             popular={false}
            />,

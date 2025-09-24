@@ -10,9 +10,9 @@ export function formatDate(date: Date | string | undefined): string {
   try {
     const d = typeof date === 'string' ? new Date(date) : date,
     return new Intl.DateTimeFormat('en-US', {
-      month: 'short';
-      day: 'numeric';
-      year: 'numeric';
+      month: 'short',
+      day: 'numeric',
+      year: 'numeric'
     }).format(d)} catch (e) {
     logErrorToProduction('Error formatting date:', { data: e }),
     return '-'}
@@ -44,15 +44,15 @@ export async function trackReferral(userId: string, email: string) {
     if (!refCode) return false,
     // Call API to record the referral,
     const response = await apiClient('/api/track-referral', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-      };
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
-        refCode;
-        userId;
-        email;
-        ipAddress: '', // This will be captured by the server});
+        refCode,
+        userId,
+        email,
+        ipAddress: '', // This will be captured by the server}),
     }),
     if (response.status >= 200 && response.status < 300) {
       // Clear the stored referral code,

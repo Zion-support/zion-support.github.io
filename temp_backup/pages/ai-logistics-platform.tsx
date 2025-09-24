@@ -1,43 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Truck;
-  Package, Route, Globe, Shield, Cpu, Users2, Award;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Truck,
+  Package, Route, Globe, Shield, Cpu, Users2, Award,
   CheckCircle, Target, BarChart3, TrendingUp, Clock} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Logistics Platform | Zion Tech Group';
-  description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.';
-  keywords: 'AI logistics, supply chain optimization, delivery management, logistics AI, transportation AI, warehouse management';
+  title: 'AI Logistics Platform | Zion Tech Group',
+  description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.',
+  keywords: 'AI logistics, supply chain optimization, delivery management, logistics AI, transportation AI, warehouse management',
   openGraph: {
-    title: 'AI Logistics Platform | Zion Tech Group';
-    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.';
-    url: 'https://ziontechgroup.com/ai-logistics-platform';
-    siteName: 'Zion Tech Group';
+    title: 'AI Logistics Platform | Zion Tech Group',
+    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.',
+    url: 'https://ziontechgroup.com/ai-logistics-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-logistics-platform.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Logistics Platform'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-logistics-platform.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Logistics Platform'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Logistics Platform | Zion Tech Group';
-    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.';
-    images: ['https://ziontechgroup.com/og-image-ai-logistics-platform.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Logistics Platform | Zion Tech Group',
+    description: 'Advanced AI-powered logistics platform that optimizes supply chain operations and delivery management.',
+    images: ['https://ziontechgroup.com/og-image-ai-logistics-platform.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-logistics-platform'}};
+    canonical: 'https://ziontechgroup.com/ai-logistics-platform'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AILogisticsPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -54,7 +54,7 @@ export default function AILogisticsPlatform() {
               AI Logistics Platform,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              The world's most advanced AI logistics platform that optimizes supply chain operations;
+              The world's most advanced AI logistics platform that optimizes supply chain operations,
               delivery management, and warehouse efficiency with intelligent automation.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -81,7 +81,7 @@ export default function AILogisticsPlatform() {
               Revolutionary AI Logistics Platform,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of logistics from route optimization to warehouse management;
+              Our AI platform handles every aspect of logistics from route optimization to warehouse management,
               continuously learning and improving operational efficiency.,
             </p>,
           </div>,

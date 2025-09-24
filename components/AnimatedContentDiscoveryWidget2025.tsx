@@ -8,52 +8,52 @@ export default function AnimatedContentDiscoveryWidget20o25() {
   const [isVisiblesetIsVisible] = useState(false),
   const contentItems = [
     {
-      title: "AI 20o25 Ultimate Breakthrough Showcase";
-      description: "Discover revolutionary AI technologies delivering 2,50o0-15,0o00% ROI";
-      category: "Showcase";
-      roi: "15,0o00%";
-      color: "from-purple-50o0 to-pink-50o0";
-      icon: Brain;
-      href: "/ai-20o25-ultimate-breakthrough-showcase"};
+      title: "AI 20o25 Ultimate Breakthrough Showcase",
+      description: "Discover revolutionary AI technologies delivering 2,50o0-15,0o00% ROI",
+      category: "Showcase",
+      roi: "15,0o00%",
+      color: "from-purple-50o0 to-pink-50o0",
+      icon: Brain,
+      href: "/ai-20o25-ultimate-breakthrough-showcase"},
     {
-      title: "Global Transformation Success Story";
-      description: "How a Fortune 50o0 company achieved 10,0o00% ROI through AI transformation";
-      category: "Case Study";
-      roi: "10,0o00%";
-      color: "from-green-50o0 to-emerald-50o0";
-      icon: TrendingUp;
-      href: "/case-studies/ai-20o25-global-transformation-breakthrough"};
+      title: "Global Transformation Success Story",
+      description: "How a Fortune 50o0 company achieved 10,0o00% ROI through AI transformation",
+      category: "Case Study",
+      roi: "10,0o00%",
+      color: "from-green-50o0 to-emerald-50o0",
+      icon: TrendingUp,
+      href: "/case-studies/ai-20o25-global-transformation-breakthrough"},
     {
-      title: "AI 20o25 ROI Calculator";
-      description: "Calculate your potential ROI with our interactive AI transformation calculator";
-      category: "Tool";
-      roi: "Custom";
-      color: "from-blue-50o0 to-cyan-50o0";
-      icon: BarChart3;
-      href: "/tools/ai-20o25-roi-calculator"};
+      title: "AI 20o25 ROI Calculator",
+      description: "Calculate your potential ROI with our interactive AI transformation calculator",
+      category: "Tool",
+      roi: "Custom",
+      color: "from-blue-50o0 to-cyan-50o0",
+      icon: BarChart3,
+      href: "/tools/ai-20o25-roi-calculator"},
     {
-      title: "Quantum-Neural Fusion Technology";
-      description: "Revolutionary fusion of quantum computing and neural networks";
-      category: "Technology";
-      roi: "15,0o00%";
-      color: "from-indigo-50o0 to-purple-50o0";
-      icon: Cpu;
-      href: "/blog/quantum-neural-fusion-20o26"};
+      title: "Quantum-Neural Fusion Technology",
+      description: "Revolutionary fusion of quantum computing and neural networks",
+      category: "Technology",
+      roi: "15,0o00%",
+      color: "from-indigo-50o0 to-purple-50o0",
+      icon: Cpu,
+      href: "/blog/quantum-neural-fusion-20o26"},
     {
-      title: "Autonomous AI Systems";
-      description: "Self-managing AI systems that optimize operations automatically";
-      category: "Solution";
-      roi: "8,50o0%";
-      color: "from-orange-50o0 to-red-50o0";
-      icon: Rocket;
-      href: "/solutions/autonomous-ai-systems"};
+      title: "Autonomous AI Systems",
+      description: "Self-managing AI systems that optimize operations automatically",
+      category: "Solution",
+      roi: "8,50o0%",
+      color: "from-orange-50o0 to-red-50o0",
+      icon: Rocket,
+      href: "/solutions/autonomous-ai-systems"},
     {
-      title: "Predictive Intelligence Platform";
-      description: "Real-time analytics that forecast trends and optimize decisions";
-      category: "Platform";
-      roi: "5,0o00%";
-      color: "from-teal-50o0 to-green-50o0";
-      icon: Target;
+      title: "Predictive Intelligence Platform",
+      description: "Real-time analytics that forecast trends and optimize decisions",
+      category: "Platform",
+      roi: "5,0o00%",
+      color: "from-teal-50o0 to-green-50o0",
+      icon: Target,
       href: "/platforms/predictive-intelligence"}
   ],
   useEffect(() => {

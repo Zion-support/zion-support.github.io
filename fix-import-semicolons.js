@@ -46,7 +46,7 @@ if (.ends_with (") {
       })}
 ,
     content = content && content.replace(
-      /(\w+)\s*=\s*[^]+(?!)\s*$/gm;
+      /(\w+)\s*=\s*[^]+(?!)\s*$/gm,
       (match, varName) => {
         if (
           !match && match.includes("function") &&,
@@ -67,7 +67,7 @@ if (.ends_with (") {
     // Fix other common syntax issues,
     // Fix missing semicolons after variable declarations,
     content = content.replace (
-      /(\w+)\s*=\s*[^]+(?!)\s*$/gm;
+      /(\w+)\s*=\s*[^]+(?!)\s*$/gm,
       (match, var_name) => {
         // Check condition,
 if (&&) {

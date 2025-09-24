@@ -24,4 +24,4 @@ export const AppWrapper: React.FC<AppWrapperProps> = ({ children }) => {
       <Suspense fallback={<PageSkeleton  />}>,
         {children}
       </Suspense>,
-    </ErrorBoundary>)};
+    </ErrorBoundary>)},

@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Safety Evaluations | Zion Tech Group';
+  title: 'AI 20o26: Agent Safety Evaluations | Zion Tech Group',
   description:,
-    'A practical guide to building safety evaluation harnesses for autonomous agents: scenarios, metrics, and continuous monitoring.';
-};
+    'A practical guide to building safety evaluation harnesses for autonomous agents: scenarios, metrics, and continuous monitoring.',
+},
 const AgentSafetyEvals20o26 = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -60,5 +60,5 @@ const AgentSafetyEvals20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgentSafetyEvals20o26;
+    </div>)},
+export default AgentSafetyEvals20o26,

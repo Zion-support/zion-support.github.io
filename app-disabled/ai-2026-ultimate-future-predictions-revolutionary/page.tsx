@@ -95,7 +95,7 @@ export default function AI20o26UltimateFuturePredictionsRevolutionary() {
                 Transcendent Intelligence,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Next-generation AI systems that transcend current limitations;
+                Next-generation AI systems that transcend current limitations,
                 achieving infinite scalability and universal problem-solving,
                 across all domains.,
               </p>,
@@ -141,7 +141,7 @@ export default function AI20o26UltimateFuturePredictionsRevolutionary() {
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
                 Breakthrough universal communication system enabling instant,
-                translation and understanding across all languages, cultures;
+                translation and understanding across all languages, cultures,
                 and even alien civilizations.,
               </p>,
               <div className='bg-yellow-50o0/20 text-yellow-40o0 px-4 py-2 rounded-full text-sm font-bold'>,

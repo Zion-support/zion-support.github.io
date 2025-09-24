@@ -1,5 +1,5 @@
 "use client",
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { Brain, Mail, MapPin, Phone } from 'lucide-react',
 const Footer = () => {
@@ -175,5 +175,5 @@ const Footer = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default Footer;
+    </footer>)},
+export default Footer,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Evaluations in Production | Zion Tech Group';
+  title: 'AI 20o26: Evaluations in Production | Zion Tech Group',
   description:,
-    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.';
-};
+    'Operationalize LLM and agent evaluations in production with live metrics, drift detection, and rollback playbooks.',
+},
 export default function EvaluationsInProductionArticle() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
@@ -21,7 +21,7 @@ export default function EvaluationsInProductionArticle() {
       <div className='prose prose-lg max-w-none'>,
         <h2>Why production evals</h2>,
         <p>,
-          Offline benchmarks are insufficient. Pair them with online metrics;
+          Offline benchmarks are insufficient. Pair them with online metrics,
           task success rates, human feedback loops, and safety signals to ensure,
           reliability under real-world conditions.,
         </p>,

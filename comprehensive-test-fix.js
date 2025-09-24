@@ -17,7 +17,7 @@ function fixTestFile(filePath) {
 ,
       // Fix import statements,
       if (line.includes("import React from 'react'")) {
-        fixedLines.push("import React from 'react';")} else if (
+        fixedLines.push("import React from 'react',")} else if (
         line.includes('import {') &&,
         line.includes('render') &&,
         line.includes('screen')) {

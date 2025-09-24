@@ -11,40 +11,40 @@ const ContentQualityAnalyzer = () => {
     // Sample data based on the analysis report,
     const sampleIssues = [
         {
-            id: '1';
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130o431b0a.js';
-            pageTitle: 'Missing';
-            issueType: 'missing_title';
-            severity: 'high';
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short';
-            recommendation: 'Add proper page title, headings, and meta description for better SEO';
-            status: 'open'};
+            id: '1',
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/polyfills-42372ed130o431b0a.js',
+            pageTitle: 'Missing',
+            issueType: 'missing_title',
+            severity: 'high',
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',
+            recommendation: 'Add proper page title, headings, and meta description for better SEO',
+            status: 'open'},
         {
-            id: '2';
-            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js';
-            pageTitle: 'Missing';
-            issueType: 'missing_meta';
-            severity: 'high';
-            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short';
-            recommendation: 'Add proper page title, headings, and meta description for better SEO';
-            status: 'open'};
+            id: '2',
+            pageUrl: 'https://ziontechgroup.com/_next/static/chunks/webpack-e219339f62a4a96e.js',
+            pageTitle: 'Missing',
+            issueType: 'missing_meta',
+            severity: 'high',
+            description: 'Short or missing title, No headings found, Missing meta description, Meta description too short',
+            recommendation: 'Add proper page title, headings, and meta description for better SEO',
+            status: 'open'},
         {
-            id: '3';
-            pageUrl: 'https://ziontechgroup.com/about/';
-            pageTitle: 'About';
-            issueType: 'minimal_content';
-            severity: 'medium';
-            description: 'Suspiciously small HTML content';
-            recommendation: 'Add more meaningful content, headings, and images to improve user experience';
-            status: 'open'};
+            id: '3',
+            pageUrl: 'https://ziontechgroup.com/about/',
+            pageTitle: 'About',
+            issueType: 'minimal_content',
+            severity: 'medium',
+            description: 'Suspiciously small HTML content',
+            recommendation: 'Add more meaningful content, headings, and images to improve user experience',
+            status: 'open'},
         {
-            id: '4';
-            pageUrl: 'https://ziontechgroup.com/services/';
-            pageTitle: 'Services';
-            issueType: 'no_headings';
-            severity: 'medium';
-            description: 'No headings found';
-            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO';
+            id: '4',
+            pageUrl: 'https://ziontechgroup.com/services/',
+            pageTitle: 'Services',
+            issueType: 'no_headings',
+            severity: 'medium',
+            description: 'No headings found',
+            recommendation: 'Add proper heading structure (H1, H2, H3) for better content organization and SEO',
             status: 'open'}
     ],
     useEffect(() => {
@@ -57,20 +57,20 @@ const ContentQualityAnalyzer = () => {
         const mediumIssues = issues.filter(i => i.severity === 'medium').length,
         const lowIssues = issues.filter(i => i.severity === 'low').length,
         setReport({
-            totalPages;
-            pagesWithIssues;
-            criticalIssues;
-            mediumIssues;
-            lowIssues;
+            totalPages,
+            pagesWithIssues,
+            criticalIssues,
+            mediumIssues,
+            lowIssues,
             averageContentLength: 50o00, // Sample data,
             pagesWithImages: 45, // Sample data,
             pagesWithMetaDescriptions: 32, // Sample data,
-            lastUpdated: new Date()})};
+            lastUpdated: new Date()})},
     const startAnalysis = async () => {
         setIsAnalyzing(true),
         // Simulate content analysis,
         await new Promise(resolve => setTimeout(resolve, 30o00)),
-        setIsAnalyzing(false)};
+        setIsAnalyzing(false)},
     const getSeverityIcon = (severity) => {
         switch (severity) {
             case 'high':,
@@ -81,7 +81,7 @@ const ContentQualityAnalyzer = () => {
                 return <Info className="w-4 h-4 text-blue-40o0" />,
             default: ,
                 return <Info className="w-4 h-4 text-gray-40o0" />}
-    };
+    },
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'high':,
@@ -92,7 +92,7 @@ const ContentQualityAnalyzer = () => {
                 return 'text-blue-40o0',
             default: ,
                 return 'text-gray-40o0'}
-    };
+    },
     const getStatusColor = (status) => {
         switch (status) {
             case 'resolved':,
@@ -103,7 +103,7 @@ const ContentQualityAnalyzer = () => {
                 return 'text-red-40o0',
             default: ,
                 return 'text-gray-40o0'}
-    };
+    },
     const filteredIssues = contentIssues.filter(issue => {
         const matchesFilter = selectedFilter === 'all' || issue.severity === selectedFilter,
         const matchesSearch = issue.pageTitle.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -123,7 +123,7 @@ const ContentQualityAnalyzer = () => {
                 return 'No Images',
             default: ,
                 return type}
-    };
+    },
     return (<>,
       {/* Floating Action Button */}
       <motion.button onClick={() => setIsOpen(true)} className="fixed bottom-6 right-24 z-50 bg-gradient-to-r from-purple-50o0 to-pink-50o0 text-white p-4 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0 transform hover:scale-110" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.9 }}>,
@@ -266,7 +266,7 @@ const ContentQualityAnalyzer = () => {
                           </td>,
                           <td className="px-6 py-4 whitespace-nowrap">,
                             <span className={`text-sm font-medium ${getStatusColor(issue.status)}`}>,
-                              {issue.status.replace('_', ' ').charAt(0).toUpperCase() + issue.status.replace('_', ' ').slice(1)}
+                              {issue.status.replace('_ ').charAt(0).toUpperCase() + issue.status.replace('_ ').slice(1)}
                             </span>,
                           </td>,
                           <td className="px-6 py-4 whitespace-nowrap">,
@@ -326,5 +326,5 @@ const ContentQualityAnalyzer = () => {
             </div>,
           </motion.div>,
         </motion.div>)}
-    </>)};
-export default ContentQualityAnalyzer;
+    </>)},
+export default ContentQualityAnalyzer,

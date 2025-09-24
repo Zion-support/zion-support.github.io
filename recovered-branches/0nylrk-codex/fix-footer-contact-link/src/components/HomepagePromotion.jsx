@@ -3,105 +3,93 @@ import { Link } from 'react-router-dom',
 export function HomepagePromotion() {
   const featuredServices = [
     {
-      id: 'ai-content-generation';
-      title: 'AI Content Generation Suite';
+      id: 'ai-content-generation',
+      title: 'AI Content Generation Suite',
       description:,
-        'Generate high-quality, SEO-optimized content in minutes, not hours';
-      price: '$399/month';
-      category: 'AI & Content Marketing';
+        'Generate high-quality, SEO-optimized content in minutes, not hours',
+      price: '$399/month',
+      category: 'AI & Content Marketing',
       features: [
-        'Multi-format content';
-        'SEO optimization';
-        'Brand voice customization';
-        'Plagiarism detection';
-      ];
+        'Multi-format contentSEO optimization',
+        'Brand voice customizationPlagiarism detection',
+      ],
       benefits: [
-        '80% faster content creation';
-        '45% better SEO rankings';
-        '60% higher engagement';
-      ];
-      link: '/comprehensive-services-showcase';
-    };
+        '80% faster content creation45% better SEO rankings',
+        '60% higher engagement',
+      ],
+      link: '/comprehensive-services-showcase'
+    },
     {
-      id: 'edge-computing-iot';
-      title: 'Edge Computing & IoT Platform';
+      id: 'edge-computing-iot',
+      title: 'Edge Computing & IoT Platform',
       description:,
-        'Process data closer to devices for ultra-low latency and real-time insights';
-      price: '$799/month';
-      category: 'IT Infrastructure';
+        'Process data closer to devices for ultra-low latency and real-time insights',
+      price: '$799/month',
+      category: 'IT Infrastructure',
       features: [
-        'Distributed edge nodes';
-        'Real-time processing';
-        'IoT device management';
-        'Edge AI capabilities';
-      ];
+        'Distributed edge nodesReal-time processing',
+        'IoT device managementEdge AI capabilities',
+      ],
       benefits: [
-        '80% lower latency';
-        '60% bandwidth cost reduction';
-        'Enhanced security';
-      ];
-      link: '/comprehensive-services-showcase';
-    };
+        '80% lower latency60% bandwidth cost reduction',
+        'Enhanced security',
+      ],
+      link: '/comprehensive-services-showcase'
+    },
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing Applications';
+      id: 'quantum-computing',
+      title: 'Quantum Computing Applications',
       description:,
-        'Solve previously intractable problems with quantum advantage';
-      price: '$3,999/month';
-      category: 'Emerging Technology';
+        'Solve previously intractable problems with quantum advantage',
+      price: '$3,999/month',
+      category: 'Emerging Technology',
       features: [
-        'Quantum algorithms';
-        'Optimization solvers';
-        'Cryptography tools';
-        'Scientific simulation';
-      ];
+        'Quantum algorithmsOptimization solvers',
+        'Cryptography toolsScientific simulation',
+      ],
       benefits: [
-        'Exponential speedup';
-        'Future-proof technology';
-        'Competitive advantage';
-      ];
-      link: '/comprehensive-services-showcase';
-    };
+        'Exponential speedupFuture-proof technology',
+        'Competitive advantage',
+      ],
+      link: '/comprehensive-services-showcase'
+    },
     {
-      id: 'zero-trust-security';
-      title: 'Zero-Trust Security Architecture';
+      id: 'zero-trust-security',
+      title: 'Zero-Trust Security Architecture',
       description:,
-        'Continuous verification and least-privilege access across all resources';
-      price: '$1,499/month';
-      category: 'IT Infrastructure';
+        'Continuous verification and least-privilege access across all resources',
+      price: '$1,499/month',
+      category: 'IT Infrastructure',
       features: [
-        'Identity verification';
-        'Device trust scoring';
-        'Network segmentation';
-        'Continuous monitoring';
-      ];
+        'Identity verificationDevice trust scoring',
+        'Network segmentationContinuous monitoring',
+      ],
       benefits: [
-        '90% fewer security breaches';
-        'Enhanced compliance';
-        'Simplified security management';
-      ];
-      link: '/comprehensive-services-showcase';
-    };
+        '90% fewer security breachesEnhanced compliance',
+        'Simplified security management',
+      ],
+      link: '/comprehensive-services-showcase'
+    },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.2;
-      };
-    };
-  };
+        staggerChildren: 0.2
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 };
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6;
-      };
-    };
-  };
+        duration: 0.6
+      },
+    },
+  },
   return (
     <section className='py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple relative overflow-hidden'>,
       {/* Background Elements */}
@@ -127,7 +115,7 @@ export function HomepagePromotion() {
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl text-zion-slate-light mb-8 max-w-4xl mx-auto'>,
-            Discover our comprehensive portfolio of AI-powered solutions;
+            Discover our comprehensive portfolio of AI-powered solutions,
             innovative IT infrastructure, and emerging technology services,
             designed to give you a competitive advantage,
           </p>,

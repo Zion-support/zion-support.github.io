@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Trust Grid for Autonomous Agents';
+  title: 'AI 20o26: Trust Grid for Autonomous Agents',
   description:,
-    'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.';
-};
+    'Define, measure, and enforce multi-dimensional trust for autonomous agents across safety, security, reliability, and compliance.',
+},
 export default function TrustGridForAgentsPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

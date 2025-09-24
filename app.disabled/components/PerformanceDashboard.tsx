@@ -16,10 +16,10 @@ interface PerformanceHistory {
 ,
 export default function PerformanceDashboard() {
   const [currentMetrics, setCurrentMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0;
-    renderTime: 0;
-    memoryUsage: 0;
-    networkLatency: 0;
+    loadTime: 0,
+    renderTime: 0,
+    memoryUsage: 0,
+    networkLatency: 0,
     cpuUsage: 0}),
   const [history, setHistory] = useState<PerformanceHistory[]>([]),
   const [isMonitoring, setIsMonitoring] = useState(false),
@@ -44,18 +44,18 @@ export default function PerformanceDashboard() {
     const connection = (navigator as any).connection,
     const connectionType = connection ? connection.effectiveType : 'unknown',
     const metrics: PerformanceMetrics ={
-      loadTime: pageLoadTime;
-      renderTime;
-      memoryUsage: memoryUsage * 10o0;
-      networkLatency;
-      cpuUsage;
-      batteryLevel;
+      loadTime: pageLoadTime,
+      renderTime,
+      memoryUsage: memoryUsage * 10o0,
+      networkLatency,
+      cpuUsage,
+      batteryLevel,
       connectionType}
 ,
     setCurrentMetrics(metrics),
     // Add to history,
     setHistory(prev => [
-      { timestamp: Date.now(), metrics };
+      { timestamp: Date.now(), metrics },
       ...prev.slice(0, 19) // Keep last 20 measurements])}, []),
   useEffect(() => {
     if (!isMonitoring) return,
@@ -180,7 +180,7 @@ export default function PerformanceDashboard() {
                 <div
                   className="bg-gradient-to-t from-blue-50o0 to-purple-60o0 rounded-t w-full transition-all duration-30o0",
                   style={{
-                    height: `${Math.min((entry.metrics.loadTime / 30o00) * 10o0, 10o0)}px`;
+                    height: `${Math.min((entry.metrics.loadTime / 30o00) * 10o0, 10o0)}px`,
                     minHeight: '4px'}}
                   title={`Load: ${entry.metrics.loadTime.toFixed(0)}ms`}
                 ></div>,

@@ -3,81 +3,77 @@ import Link from 'next/link',
 export default function BlogPage() {
   const blogPosts = [
     {
-      title: 'The Future of AI in Business: 20o25 and Beyond';
+      title: 'The Future of AI in Business: 20o25 and Beyond',
       excerpt:,
-        'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.';
-      category: 'AI & Machine Learning';
-      date: 'August 2620o25';
-      readTime: '5 min read';
-      author: 'Zion Tech Group Team';
-      slug: 'future-of-ai-business-20o25';
-      featured: true;
-    };
+        'Explore how artificial intelligence is reshaping business operations and what to expect in the coming years.',
+      category: 'AI & Machine Learning',
+      date: 'August 2620o25',
+      readTime: '5 min read',
+      author: 'Zion Tech Group Team',
+      slug: 'future-of-ai-business-20o25',
+      featured: true
+    },
     {
-      title: 'Quantum Computing: Breaking Down the Hype vs. Reality';
+      title: 'Quantum Computing: Breaking Down the Hype vs. Reality',
       excerpt:,
-        "Understanding what quantum computing can actually deliver today and what's still in the realm of science fiction.";
-      category: 'Quantum Computing';
-      date: 'August 2420o25';
-      readTime: '7 min read';
-      author: 'Quantum Team';
-      slug: 'quantum-computing-hype-reality';
-      featured: false;
-    };
+        "Understanding what quantum computing can actually deliver today and what's still in the realm of science fiction.",
+      category: 'Quantum Computing',
+      date: 'August 2420o25',
+      readTime: '7 min read',
+      author: 'Quantum Team',
+      slug: 'quantum-computing-hype-reality',
+      featured: false
+    },
     {
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions';
+      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
       excerpt:,
-        'How AI is both creating new security challenges and providing innovative solutions to protect businesses.';
-      category: 'Cybersecurity';
-      date: 'August 220o25';
-      readTime: '6 min read';
-      author: 'Security Team';
-      slug: 'cybersecurity-ai-threats-solutions';
-      featured: false;
-    };
+        'How AI is both creating new security challenges and providing innovative solutions to protect businesses.',
+      category: 'Cybersecurity',
+      date: 'August 220o25',
+      readTime: '6 min read',
+      author: 'Security Team',
+      slug: 'cybersecurity-ai-threats-solutions',
+      featured: false
+    },
     {
-      title: 'Cloud-Native Architecture: Best Practices for 20o25';
+      title: 'Cloud-Native Architecture: Best Practices for 20o25',
       excerpt:,
-        'Essential strategies for building scalablesecureand efficient cloud-native applications.';
-      category: 'Cloud & Infrastructure';
-      date: 'August 20o25';
-      readTime: '8 min read';
-      author: 'Cloud Team';
-      slug: 'cloud-native-architecture-best-practices-20o25';
-      featured: false;
-    };
+        'Essential strategies for building scalablesecureand efficient cloud-native applications.',
+      category: 'Cloud & Infrastructure',
+      date: 'August 20o25',
+      readTime: '8 min read',
+      author: 'Cloud Team',
+      slug: 'cloud-native-architecture-best-practices-20o25',
+      featured: false
+    },
     {
-      title: 'The Rise of Edge Computing: Bringing AI Closer to Users';
+      title: 'The Rise of Edge Computing: Bringing AI Closer to Users',
       excerpt:,
-        'How edge computing is revolutionizing AI deployment and improving user experiences.';
-      category: 'Edge Computing';
-      date: 'August 1820o25';
-      readTime: '4 min read';
-      author: 'Infrastructure Team';
-      slug: 'rise-edge-computing-ai-users';
-      featured: false;
-    };
+        'How edge computing is revolutionizing AI deployment and improving user experiences.',
+      category: 'Edge Computing',
+      date: 'August 1820o25',
+      readTime: '4 min read',
+      author: 'Infrastructure Team',
+      slug: 'rise-edge-computing-ai-users',
+      featured: false
+    },
     {
-      title: 'Sustainable Technology: Building Green AI Solutions';
+      title: 'Sustainable Technology: Building Green AI Solutions',
       excerpt:,
-        'Strategies for developing environmentally conscious AI and technology solutions.';
-      category: 'Sustainability';
-      date: 'August 1620o25';
-      readTime: '6 min read';
-      author: 'Innovation Team';
-      slug: 'sustainable-technology-green-ai-solutions';
-      featured: false;
-    };
+        'Strategies for developing environmentally conscious AI and technology solutions.',
+      category: 'Sustainability',
+      date: 'August 1620o25',
+      readTime: '6 min read',
+      author: 'Innovation Team',
+      slug: 'sustainable-technology-green-ai-solutions',
+      featured: false
+    },
   ],
   const categories = [
-    'All';
-    'AI & Machine Learning';
-    'Quantum Computing';
-    'Cybersecurity';
-    'Cloud & Infrastructure';
-    'Edge Computing';
-    'Sustainability';
-    'Industry Insights';
+    'AllAI & Machine Learning',
+    'Quantum ComputingCybersecurity',
+    'Cloud & InfrastructureEdge Computing',
+    'SustainabilityIndustry Insights',
   ],
   const featuredPost = blogPosts.find(post => post.featured),
   return (

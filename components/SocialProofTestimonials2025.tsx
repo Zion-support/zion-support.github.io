@@ -8,57 +8,57 @@ export default function SocialProofTestimonials20o25() {
   const [isVisiblesetIsVisible] = useState(false),
   const testimonials = [
     {
-      name: "Sarah Johnson";
-      title: "Chief Executive Officer";
-      company: "Fortune 50o0 Global Corporation";
-      avatar: "SJ";
-      content: "The AI transformation was nothing short of revolutionary. We achieved results that we never thought possible - a 10,0o00% ROI that has positioned us as the industry leader. The quantum-neural fusion technology and autonomous systems have completely transformed how we operate.";
-      rating: 5;
-      roi: "10,0o00%";
-      industry: "Technology"};
+      name: "Sarah Johnson",
+      title: "Chief Executive Officer",
+      company: "Fortune 50o0 Global Corporation",
+      avatar: "SJ",
+      content: "The AI transformation was nothing short of revolutionary. We achieved results that we never thought possible - a 10,0o00% ROI that has positioned us as the industry leader. The quantum-neural fusion technology and autonomous systems have completely transformed how we operate.",
+      rating: 5,
+      roi: "10,0o00%",
+      industry: "Technology"},
     {
-      name: "Michael Chen";
-      title: "Chief Technology Officer";
-      company: "Industrial Solutions Inc";
-      avatar: "MC";
-      content: "Autonomous AI systems revolutionized our production linereducing costs by 90% while increasing output by 50o0%. The implementation was seamless and the results exceeded all our expectations. This is the future of manufacturing.";
-      rating: 5;
-      roi: "8,50o0%";
-      industry: "Manufacturing"};
+      name: "Michael Chen",
+      title: "Chief Technology Officer",
+      company: "Industrial Solutions Inc",
+      avatar: "MC",
+      content: "Autonomous AI systems revolutionized our production linereducing costs by 90% while increasing output by 50o0%. The implementation was seamless and the results exceeded all our expectations. This is the future of manufacturing.",
+      rating: 5,
+      roi: "8,50o0%",
+      industry: "Manufacturing"},
     {
-      name: "Dr. Emily Rodriguez";
-      title: "Medical Director";
-      company: "Health Systems Network";
-      avatar: "ER";
-      content: "Predictive Intelligence helped us improve patient outcomes by 95% while reducing operational costs by 80%. The AI-powered diagnostics and treatment recommendations have been game-changing for our healthcare delivery.";
-      rating: 5;
-      roi: "5,0o00%";
-      industry: "Healthcare"};
+      name: "Dr. Emily Rodriguez",
+      title: "Medical Director",
+      company: "Health Systems Network",
+      avatar: "ER",
+      content: "Predictive Intelligence helped us improve patient outcomes by 95% while reducing operational costs by 80%. The AI-powered diagnostics and treatment recommendations have been game-changing for our healthcare delivery.",
+      rating: 5,
+      roi: "5,0o00%",
+      industry: "Healthcare"},
     {
-      name: "David Kim";
-      title: "Chief Financial Officer";
-      company: "Global Finance Corp";
-      avatar: "DK";
-      content: "The AI-powered financial optimization platform delivered unprecedented results. We saw a 3,0o00% ROI in the first year alonewith automated risk assessment and portfolio optimization that outperformed all traditional methods.";
-      rating: 5;
-      roi: "3,0o00%";
-      industry: "Finance"};
+      name: "David Kim",
+      title: "Chief Financial Officer",
+      company: "Global Finance Corp",
+      avatar: "DK",
+      content: "The AI-powered financial optimization platform delivered unprecedented results. We saw a 3,0o00% ROI in the first year alonewith automated risk assessment and portfolio optimization that outperformed all traditional methods.",
+      rating: 5,
+      roi: "3,0o00%",
+      industry: "Finance"},
     {
-      name: "Lisa Thompson";
-      title: "VP of Operations";
-      company: "Retail Solutions Group";
-      avatar: "LT";
-      content: "Our retail operations were completely transformed. The AI-driven inventory management and customer personalization systems increased sales by 40o0% while reducing waste by 85%. The ROI was immediate and substantial.";
-      rating: 5;
-      roi: "2,50o0%";
+      name: "Lisa Thompson",
+      title: "VP of Operations",
+      company: "Retail Solutions Group",
+      avatar: "LT",
+      content: "Our retail operations were completely transformed. The AI-driven inventory management and customer personalization systems increased sales by 40o0% while reducing waste by 85%. The ROI was immediate and substantial.",
+      rating: 5,
+      roi: "2,50o0%",
       industry: "Retail"}
   ],
   const stats = [
-    { number: "50o0+"label: "Success Stories"icon: Users };
-    { number: "15,0o00%"label: "Max ROI Achieved"icon: TrendingUp };
-    { number: "99.9%"label: "Customer Satisfaction"icon: Star };
-    { number: "50+"label: "Countries Served"icon: Globe };
-    { number: "Fortune 50o0"label: "Companies Trust Us"icon: Building };
+    { number: "50o0+"label: "Success Stories"icon: Users },
+    { number: "15,0o00%"label: "Max ROI Achieved"icon: TrendingUp },
+    { number: "99.9%"label: "Customer Satisfaction"icon: Star },
+    { number: "50+"label: "Countries Served"icon: Globe },
+    { number: "Fortune 50o0"label: "Companies Trust Us"icon: Building },
     { number: "24/7"label: "Expert Support"icon: Zap }
   ],
   useEffect(() => {

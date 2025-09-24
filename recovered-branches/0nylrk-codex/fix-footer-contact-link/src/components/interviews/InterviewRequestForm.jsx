@@ -12,57 +12,57 @@ import { format, addDays } from 'date-fns',
 import { CalendarIcon } from 'lucide-react',
 import { toast } from '@/components/ui/use-toast',
 import { useInterviews } from '@/hooks/useInterviews',
-  Form;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormMessage;
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
 } from '@/components/ui/form',
-  Select;
-  SelectTrigger;
-  SelectValue;
-  SelectContent;
-  SelectItem;
+  Select,
+  SelectTrigger,
+  SelectValue,
+  SelectContent,
+  SelectItem,
 } from '@/components/ui/select',
-  Popover;
-  PopoverTrigger;
-  PopoverContent;
+  Popover,
+  PopoverTrigger,
+  PopoverContent,
 } from '@/components/ui/popover',
 const formSchema = z.object({
   date: z,
     .date({
-      required_error: 'Please select a date for the interview.';
+      required_error: 'Please select a date for the interview.'
     }),
     .refine(date => date > new Date(), {
-      message: 'Interview date must be in the future';
-    });
-  time: z.string().min(1, 'Please select a time for the interview.');
-  duration: z.string().min(1, 'Please select the interview duration.');
-  platform: z.string().min(1, 'Please select a meeting platform.');
-  meetingLink: z.string().optional();
-  title: z.string().min(3, 'Please provide a brief title for the interview.');
-  notes: z.string().optional();
+      message: 'Interview date must be in the future'
+    }),
+  time: z.string().min(1, 'Please select a time for the interview.'),
+  duration: z.string().min(1, 'Please select the interview duration.'),
+  platform: z.string().min(1, 'Please select a meeting platform.'),
+  meetingLink: z.string().optional(),
+  title: z.string().min(3, 'Please provide a brief title for the interview.'),
+  notes: z.string().optional()
 }),
 export function InterviewRequestForm({ talent, onClose, userDetails }) {
   const { requestInterview } = useInterviews(),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const form = useForm({
-    resolver: zodResolver(formSchema);
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      title: `Interview with ${talent.full_name}`;
-      duration: '30';
-      platform: 'zoom';
-      notes: '';
-      meetingLink: '';
-    };
+      title: `Interview with ${talent.full_name}`,
+      duration: '30',
+      platform: 'zoom',
+      notes: '',
+      meetingLink: ''
+    },
   }),
   async function onSubmit(values) {
     if (!userDetails?.id) {
       toast({
-        title: 'Authentication required';
-        description: 'Please log in to schedule an interview';
-        variant: 'destructive';
+        title: 'Authentication required',
+        description: 'Please log in to schedule an interview',
+        variant: 'destructive'
       }),
       return}
     setIsSubmitting(true),
@@ -73,54 +73,43 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
       // Calculate end time based on duration,
       const durationMinutes = parseInt(values.duration),
       await requestInterview({
-        talent_id: talent.id;
-        client_id: userDetails.id;
-        scheduled_date: scheduledDate.toISOString();
-        duration_minutes: durationMinutes;
-        notes: values.notes;
-        meeting_platform: values.platform;
-        meeting_link: values.meetingLink;
-        interview_type: 'video';
-        title: values.title;
+        talent_id: talent.id,
+        client_id: userDetails.id,
+        scheduled_date: scheduledDate.toISOString(),
+        duration_minutes: durationMinutes,
+        notes: values.notes,
+        meeting_platform: values.platform,
+        meeting_link: values.meetingLink,
+        interview_type: 'video',
+        title: values.title
       }),
       toast({
-        title: 'Interview requested';
-        description: `Your interview request with ${talent.full_name} has been sent.`;
+        title: 'Interview requested',
+        description: `Your interview request with ${talent.full_name} has been sent.`,
       }),
       onClose()} catch (error) {
       console.error('Failed to schedule interview:', error),
       toast({
-        title: 'Failed to schedule interview';
+        title: 'Failed to schedule interview',
         description:,
-          'An error occurred while scheduling the interview. Please try again.';
-        variant: 'destructive';
+          'An error occurred while scheduling the interview. Please try again.',
+        variant: 'destructive'
       })} finally {
       setIsSubmitting(false)}
   }
   const timeSlots = [
-    '09:0o0';
-    '09:30';
-    '10:0o0';
-    '10:30';
-    '11:0o0';
-    '11:30';
-    '12:0o0';
-    '12:30';
-    '13:0o0';
-    '13:30';
-    '14:0o0';
-    '14:30';
-    '15:0o0';
-    '15:30';
-    '16:0o0';
-    '16:30';
-    '17:0o0';
-    '17:30';
-    '18:0o0';
-    '18:30';
-    '19:0o0';
-    '19:30';
-    '20:0o0';
+    '09: 0o009:30',
+    '10:0o010:30',
+    '11:0o011:30',
+    '12:0o012:30',
+    '13:0o013:30',
+    '14:0o014:30',
+    '15:0o015:30',
+    '16:0o016:30',
+    '17:0o017:30',
+    '18:0o018:30',
+    '19:0o019:30',
+    '20:0o0'
   ],
   return (
     <Form {...form}>,
@@ -168,7 +157,7 @@ export function InterviewRequestForm({ talent, onClose, userDetails }) {
                       <Button
                         variant='outline',
                         className={cn(
-                          'w-full pl-3 text-left font-normal';
+                          'w-full pl-3 text-left font-normal',
                           !field.value && 'text-muted-foreground')}
                       >,
                         {field.value ? (

@@ -11,7 +11,7 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     improvement?: string,
-    satisfaction?: string};
+    satisfaction?: string},
   isNew: boolean,
   featured: boolean}
 ,
@@ -20,40 +20,40 @@ const NewContent20o25Showcase: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const newContent: ContentItem[] = [
     {
-      id: 'cybersecurity-revolution';
-      title: 'AI 20o25: The Cybersecurity Revolution';
-      description: 'Discover how AI-powered cybersecurity solutions are reducing threats by 95% and saving companies $2.3M on average.';
-      url: '/blog/ai-20o25-cybersecurity-revolution';
-      type: 'blog';
+      id: 'cybersecurity-revolution',
+      title: 'AI 20o25: The Cybersecurity Revolution',
+      description: 'Discover how AI-powered cybersecurity solutions are reducing threats by 95% and saving companies $2.3M on average.',
+      url: '/blog/ai-20o25-cybersecurity-revolution',
+      type: 'blog',
       metrics: {
-        improvement: '95% threat reduction';
-        savings: '$2.3M average savings';
-        satisfaction: '89% false positive reduction'};
-      isNew: true;
-      featured: true};
+        improvement: '95% threat reduction',
+        savings: '$2.3M average savings',
+        satisfaction: '89% false positive reduction'},
+      isNew: true,
+      featured: true},
     {
-      id: 'healthcare-transformation';
-      title: 'Healthcare AI Transformation: 450% ROI Success';
-      description: 'How a regional hospital system achieved 450% ROI, $12.8M savings, and 60% reduction in patient wait times.';
-      url: '/case-studies/healthcare-ai-transformation-20o25';
-      type: 'case-study';
+      id: 'healthcare-transformation',
+      title: 'Healthcare AI Transformation: 450% ROI Success',
+      description: 'How a regional hospital system achieved 450% ROI, $12.8M savings, and 60% reduction in patient wait times.',
+      url: '/case-studies/healthcare-ai-transformation-20o25',
+      type: 'case-study',
       metrics: {
-        roi: '450% ROI';
-        savings: '$12.8M annually';
-        improvement: '60% wait time reduction'};
-      isNew: true;
-      featured: true};
+        roi: '450% ROI',
+        savings: '$12.8M annually',
+        improvement: '60% wait time reduction'},
+      isNew: true,
+      featured: true},
     {
-      id: 'implementation-checklist';
-      title: 'AI Implementation Checklist 20o25';
-      description: 'Complete step-by-step guide for successful AI deployment with 95% success rate and 340% average ROI.';
-      url: '/resources/ai-implementation-checklist-20o25';
-      type: 'resource';
+      id: 'implementation-checklist',
+      title: 'AI Implementation Checklist 20o25',
+      description: 'Complete step-by-step guide for successful AI deployment with 95% success rate and 340% average ROI.',
+      url: '/resources/ai-implementation-checklist-20o25',
+      type: 'resource',
       metrics: {
-        improvement: '95% success rate';
-        roi: '340% average ROI';
-        satisfaction: '89% user adoption'};
-      isNew: true;
+        improvement: '95% success rate',
+        roi: '340% average ROI',
+        satisfaction: '89% user adoption'},
+      isNew: true,
       featured: true}
   ],
   useEffect(() => {
@@ -62,7 +62,7 @@ const NewContent20o25Showcase: React.FC = () => {
     return () => clearInterval(interval)}, [newContent.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('newContent20o25Showcase_dismissed', 'true')};
+    localStorage.setItem('newContent20o25Showcase_dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('newContent20o25Showcase_dismissed'),
     if (dismissed === 'true') {
@@ -76,14 +76,14 @@ const NewContent20o25Showcase: React.FC = () => {
       case 'case-study': return '📊',
       case 'resource': return '📋',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="relative bg-gradient-to-r from-indigo-50 via-purple-50 to-pink-50 border-b border-indigo-20o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">,
@@ -96,7 +96,7 @@ const NewContent20o25Showcase: React.FC = () => {
             Latest AI Insights & Success Stories,
           </h2>,
           <p className="text-lg text-gray-60o0 max-w-3xl mx-auto">,
-            Discover our newest content featuring real-world AI transformations;
+            Discover our newest content featuring real-world AI transformations,
             implementation guides, and success stories with proven ROI.,
           </p>,
         </div>,
@@ -236,5 +236,5 @@ const NewContent20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25Showcase;
+    </div>)},
+export default NewContent20o25Showcase,

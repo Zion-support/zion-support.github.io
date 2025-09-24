@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import {
-  TrophyIcon;
-  ChartBarIcon;
-  CurrencyDollarIcon;
-  ArrowTrendingUpIcon;
-  ArrowRightIcon;
-  StarIcon;
+  TrophyIcon,
+  ChartBarIcon,
+  CurrencyDollarIcon,
+  ArrowTrendingUpIcon,
+  ArrowRightIcon,
+  StarIcon,
 } from '@heroicons/react/24/outline',
 const Fortune50o0SuccessStoryBanner: React.FC = () => {
   return (
@@ -36,7 +36,7 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Discover how a global manufacturing leader achieved{' '}
             <strong>$50o0M ROI</strong> in just 18 months through comprehensive,
-            AI transformation. Complete case study with implementation details;
+            AI transformation. Complete case study with implementation details,
             challenges overcome, and measurable results.,
           </p>,
         </div>,
@@ -219,5 +219,5 @@ const Fortune50o0SuccessStoryBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default Fortune50o0SuccessStoryBanner;
+    </section>)},
+export default Fortune50o0SuccessStoryBanner,

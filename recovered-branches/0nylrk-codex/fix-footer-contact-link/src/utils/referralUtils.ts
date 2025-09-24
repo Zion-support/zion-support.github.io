@@ -39,15 +39,15 @@ export async function trackReferral(userId: string, email: string) {
     if (!refCode) return,
     // Call API to record the referral,
     const response = await fetch('/api/track-referral', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-      };
+        'Content-Type': 'application/json'
+      },
       body: JSON.stringify({
-        refCode;
-        userId;
-        email;
-        ipAddress: '', // This will be captured by the server});
+        refCode,
+        userId,
+        email,
+        ipAddress: '', // This will be captured by the server}),
     }),
     if (response.ok) {
       // Clear the stored referral code,

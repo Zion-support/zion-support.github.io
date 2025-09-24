@@ -3,33 +3,33 @@ const QuantumAIContentShowcase20o26 = () => {
   const contentItems = [
     {
       title:,
-        'Quantum AI 20o26: Revolutionary Breakthrough in Business Intelligence';
+        'Quantum AI 20o26: Revolutionary Breakthrough in Business Intelligence',
       description:,
-        'Discover how quantum computing integration with AI is creating unprecedented business intelligence capabilities and instant decision-making systems.';
-      type: 'Technology Deep Dive';
-      readingTime: '20 min read';
-      impact: '10o00x Faster Processing';
-      url: '/quantum-ai-20o26-breakthrough';
-    };
+        'Discover how quantum computing integration with AI is creating unprecedented business intelligence capabilities and instant decision-making systems.',
+      type: 'Technology Deep Dive',
+      readingTime: '20 min read',
+      impact: '10o00x Faster Processing',
+      url: '/quantum-ai-20o26-breakthrough'
+    },
     {
-      title: 'Quantum Machine Learning: The Future of Predictive Analytics';
+      title: 'Quantum Machine Learning: The Future of Predictive Analytics',
       description:,
-        'Explore how quantum machine learning algorithms are revolutionizing predictive analytics and enabling real-time optimization across all business processes.';
-      type: 'Technical Guide';
-      readingTime: '18 min read';
-      impact: '99.9% Accuracy';
-      url: '/quantum-ai-20o26-breakthrough';
-    };
+        'Explore how quantum machine learning algorithms are revolutionizing predictive analytics and enabling real-time optimization across all business processes.',
+      type: 'Technical Guide',
+      readingTime: '18 min read',
+      impact: '99.9% Accuracy',
+      url: '/quantum-ai-20o26-breakthrough'
+    },
     {
       title:,
-        'Quantum AI Implementation: Complete Framework for Enterprise Integration';
+        'Quantum AI Implementation: Complete Framework for Enterprise Integration',
       description:,
-        'Master the implementation of quantum AI technologies with our comprehensive framework designed for enterprise-scale deployment and optimization.';
-      type: 'Implementation Guide';
-      readingTime: '25 min read';
-      impact: 'Complete Framework';
-      url: '/quantum-ai-20o26-breakthrough';
-    };
+        'Master the implementation of quantum AI technologies with our comprehensive framework designed for enterprise-scale deployment and optimization.',
+      type: 'Implementation Guide',
+      readingTime: '25 min read',
+      impact: 'Complete Framework',
+      url: '/quantum-ai-20o26-breakthrough'
+    },
   ],
   return (
     <div className='bg-gradient-to-br from-blue-90o0 via-indigo-90o0 to-purple-90o0 text-white py-20 px-4'>,
@@ -39,8 +39,7 @@ const QuantumAIContentShowcase20o26 = () => {
             Quantum AI 20o26 Content,
           </h2>,
           <p className='text-xl md:text-2xl mb-8 text-blue-10o0 max-w-4xl mx-auto'>,
-            Explore the revolutionary world of quantum AI and discover how 'it';
-            's transforming business intelligencedecision-makingand,
+            Explore the revolutionary world of quantum AI and discover how 'its transforming business intelligencedecision-makingand,
             optimization.,
           </p>,
         </div>,
@@ -112,5 +111,5 @@ const QuantumAIContentShowcase20o26 = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default QuantumAIContentShowcase20o26;
+    </div>)},
+export default QuantumAIContentShowcase20o26,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Lead Generation Tool | Zion Tech Group';
+  title: 'Lead Generation Tool | Zion Tech Group',
   description:,
-    'AI-powered lead generation platform. Find, qualify, and nurture leads automatically with advanced targeting and CRM integration.';
-};
+    'AI-powered lead generation platform. Find, qualify, and nurture leads automatically with advanced targeting and CRM integration.',
+},
 export default function LeadGenerationToolPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function LeadGenerationToolPage() {
         <FeatureCard
           title='Lead Discovery',
           details={[
-            'AI-powered prospect research';
-            'Contact information enrichment';
-            'Company data verification';
-            'Social media intelligence';
-            'Email finder & verification';
+            'AI-powered prospect researchContact information enrichment',
+            'Company data verificationSocial media intelligence',
+            'Email finder & verification',
           ]}
         />,
         <FeatureCard
           title='Qualification & Scoring',
           details={[
-            'Lead scoring algorithms';
-            'Intent detection';
-            'BANT qualification';
-            'Behavioral analysis';
-            'Custom qualification rules';
+            'Lead scoring algorithmsIntent detection',
+            'BANT qualificationBehavioral analysis',
+            'Custom qualification rules',
           ]}
         />,
         <FeatureCard
           title='Outreach & Nurturing',
           details={[
-            'Automated email sequences';
-            'LinkedIn outreach automation';
-            'Personalized messaging';
-            'Follow-up scheduling';
-            'CRM integration (Salesforce, HubSpot)';
+            'Automated email sequencesLinkedIn outreach automation',
+            'Personalized messagingFollow-up scheduling',
+            'CRM integration (Salesforce, HubSpot)',
           ]}
         />,
       </div>,
@@ -96,22 +90,18 @@ function PricingSection() {
           name='Starter',
           price='$49/mo',
           features={[
-            '50o0 leads/month';
-            'Basic contact data';
-            'Email verification';
-            'Standard CRM integration';
-            'Email support';
+            '50o0 leads/monthBasic contact data',
+            'Email verificationStandard CRM integration',
+            'Email support',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$149/mo',
           features={[
-            '2,0o00 leads/month';
-            'Advanced contact enrichment';
-            'Lead scoring & qualification';
-            'Automated outreach sequences';
-            'Priority support';
+            '2,0o00 leads/monthAdvanced contact enrichment',
+            'Lead scoring & qualificationAutomated outreach sequences',
+            'Priority support',
           ]}
           featured={true}
         />,
@@ -119,21 +109,19 @@ function PricingSection() {
           name='Enterprise',
           price='$399/mo',
           features={[
-            '10,0o00 leads/month';
-            'Custom data sources';
-            'Advanced AI targeting';
-            'White-label solution';
-            'Dedicated account manager';
+            '10,0o00 leads/monthCustom data sources',
+            'Advanced AI targetingWhite-label solution',
+            'Dedicated account manager',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

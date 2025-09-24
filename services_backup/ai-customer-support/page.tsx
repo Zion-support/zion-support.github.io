@@ -1,6 +1,6 @@
 export const metadata ={
-  title: 'AI Customer Support | Zion Tech Group';
-  description: 'Intelligent customer support automation with AI chatbots, sentiment analysis, and 24/7 multilingual support. Reduce support costs by 70% while improving satisfaction.'};
+  title: 'AI Customer Support | Zion Tech Group',
+  description: 'Intelligent customer support automation with AI chatbots, sentiment analysis, and 24/7 multilingual support. Reduce support costs by 70% while improving satisfaction.'},
 export default function AICustomerSupportPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">,
@@ -10,7 +10,7 @@ export default function AICustomerSupportPage() {
           AI Customer Support,
         </h1>,
         <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
-          Transform your customer support with AI-powered chatbots, intelligent ticket routing;
+          Transform your customer support with AI-powered chatbots, intelligent ticket routing,
           and automated responses. Reduce costs by 70% while improving customer satisfaction by 85%.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -35,9 +35,9 @@ export default function AICustomerSupportPage() {
             title="AI Chatbots",
             description="Advanced conversational AI that understands context and provides accurate, helpful responses.",
             features={[
-              "Natural language processing";
-              "Context-aware conversations";
-              "Multi-turn dialogue support";
+              "Natural language processing",
+              "Context-aware conversations",
+              "Multi-turn dialogue support",
               "Intent recognition"]}
            />,
           <FeatureCard
@@ -45,9 +45,9 @@ export default function AICustomerSupportPage() {
             title="Smart Ticket Routing",
             description="Automatically categorize and route tickets to the right agent based on content and urgency.",
             features={[
-              "Automatic categorization";
-              "Priority detection";
-              "Skill-based routing";
+              "Automatic categorization",
+              "Priority detection",
+              "Skill-based routing",
               "Escalation management"]}
            />,
           <FeatureCard
@@ -55,9 +55,9 @@ export default function AICustomerSupportPage() {
             title="Multilingual Support",
             description="Support customers in 50+ languages with real-time translation and cultural adaptation.",
             features={[
-              "50+ language support";
-              "Real-time translation";
-              "Cultural context awareness";
+              "50+ language support",
+              "Real-time translation",
+              "Cultural context awareness",
               "Regional customization"]}
            />,
           <FeatureCard
@@ -65,9 +65,9 @@ export default function AICustomerSupportPage() {
             title="Sentiment Analysis",
             description="Monitor customer emotions and satisfaction in real-time to prevent escalations.",
             features={[
-              "Real-time sentiment tracking";
-              "Emotion detection";
-              "Satisfaction prediction";
+              "Real-time sentiment tracking",
+              "Emotion detection",
+              "Satisfaction prediction",
               "Alert system"]}
            />,
           <FeatureCard
@@ -75,9 +75,9 @@ export default function AICustomerSupportPage() {
             title="Knowledge Base AI",
             description="Intelligent search and retrieval from your knowledge base with context-aware responses.",
             features={[
-              "Semantic search";
-              "Context-aware retrieval";
-              "Auto-updating knowledge";
+              "Semantic search",
+              "Context-aware retrieval",
+              "Auto-updating knowledge",
               "Source attribution"]}
            />,
           <FeatureCard
@@ -85,9 +85,9 @@ export default function AICustomerSupportPage() {
             title="Analytics & Insights",
             description="Comprehensive analytics to track performance, identify trends, and optimize support processes.",
             features={[
-              "Performance metrics";
-              "Trend analysis";
-              "Agent productivity";
+              "Performance metrics",
+              "Trend analysis",
+              "Agent productivity",
               "Customer journey mapping"]}
            />,
         </div>,
@@ -102,10 +102,10 @@ export default function AICustomerSupportPage() {
             period="month",
             description="Perfect for small businesses",
             features={[
-              "Up to 1,0o00 conversations/month";
-              "Basic AI chatbot";
-              "Email support";
-              "Standard analytics";
+              "Up to 1,0o00 conversations/month",
+              "Basic AI chatbot",
+              "Email support",
+              "Standard analytics",
               "5 languages supported"]}
             popular={false}
            />,
@@ -115,11 +115,11 @@ export default function AICustomerSupportPage() {
             period="month",
             description="Ideal for growing businesses",
             features={[
-              "Up to 10,0o00 conversations/month";
-              "Advanced AI features";
-              "Priority support";
-              "Detailed analytics";
-              "25 languages supported";
+              "Up to 10,0o00 conversations/month",
+              "Advanced AI features",
+              "Priority support",
+              "Detailed analytics",
+              "25 languages supported",
               "Custom integrations"]}
             popular={true}
            />,
@@ -129,11 +129,11 @@ export default function AICustomerSupportPage() {
             period="month",
             description="For large organizations",
             features={[
-              "Unlimited conversations";
-              "Custom AI training";
-              "White-label solution";
-              "24/7 dedicated support";
-              "50+ languages supported";
+              "Unlimited conversations",
+              "Custom AI training",
+              "White-label solution",
+              "24/7 dedicated support",
+              "50+ languages supported",
               "API access & custom development"]}
             popular={false}
            />,

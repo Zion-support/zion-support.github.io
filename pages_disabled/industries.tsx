@@ -1,160 +1,142 @@
 import { motion } from 'framer-motion',
 import Head from 'next/head',
 import Link from 'next/link',
-import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react';
-import Head from 'next/head',',
+import { Heart, Building, ShoppingCart, Settings, BookOpen, Shield, ArrowRight, CheckCircle, Star, Zap, Users, Globe, BarChart3, Brain, Network, Cloud } from 'lucide-react',
+import Head from 'next/head,
 import Link from 'next/link',',
 import Layout from '../components/Layout',
 import {
-  Heart;
-  Building;
-  ShoppingCart;
-  Settings;
-  BookOpen;
-  Shield;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Zap;
-  Heart;
-  Building;
-  ShoppingCart;
-  Settings;
-  BookOpen;
-  Shield;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Zap;
-  Users;
-  Globe;
-  BarChart3;
-  Brain;
-  Network;
+  Heart,
+  Building,
+  ShoppingCart,
+  Settings,
+  BookOpen,
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
+  Heart,
+  Building,
+  ShoppingCart,
+  Settings,
+  BookOpen,
+  Shield,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Zap,
+  Users,
+  Globe,
+  BarChart3,
+  Brain,
+  Network,
   Cloud} from 'lucide-react',
 const industries = [
   {}
-    title: 'Healthcare,';
-    icon: Heart;
-    description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.',';
-    color: 'from-red-50o0 to-pink-50o0,';
+    title: 'Healthcare,',
+    icon: Heart,
+    description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.,
+    color: 'from-red-50o0 to-pink-50o0,',
     services: [
-      'AI Medical Imaging Analysis,';
-      'Drug Discovery Platform',';
-      'Patient Data Analytics',';
-      'Telemedicine Solutions',';
-      'Clinical Decision Support',';
-      'Healthcare IoT Management''];
+      'AI Medical Imaging Analysis,Drug Discovery Platform',',
+      'Patient Data Analytics,
+      'Telemedicine Solutions',Clinical Decision Support',',
+      'Healthcare IoT Management''],
     benefits: [
-      'Improved Patient Outcomes,';
-      'Reduced Diagnostic Time',';
-      'Enhanced Treatment Accuracy',';
-      'Cost-effective Care Delivery''];
-    caseStudy: 'Reduced diagnostic time by 60% for a major hospital network,';
-    pricing: 'Starting at $15,0o00/project'};
+      'Improved Patient Outcomes,Reduced Diagnostic Time',',
+      'Enhanced Treatment Accuracy,
+      'Cost-effective Care Delivery''],
+    caseStudy: 'Reduced diagnostic time by 60% for a major hospital network,',
+    pricing: 'Starting at $15,0o00/project'},
   {}
-    title: 'Finance,';
-    icon: Building;
-    description: 'Fraud detection, risk assessment, algorithmic trading, and financial planning solutions.',';
-    color: 'from-green-50o0 to-emerald-50o0,';
+    title: 'Finance,',
+    icon: Building,
+    description: 'Fraud detection, risk assessment, algorithmic trading, and financial planning solutions.,
+    color: 'from-green-50o0 to-emerald-50o0,',
     services: [
-      'AI Fraud Detection,';
-      'Algorithmic Trading',';
-      'Risk Assessment Models',';
-      'Financial Planning Tools',';
-      'Regulatory Compliance',';
-      'Blockchain Solutions''];
+      'AI Fraud Detection,Algorithmic Trading',',
+      'Risk Assessment Models,
+      'Financial Planning Tools',Regulatory Compliance',',
+      'Blockchain Solutions''],
     benefits: [
-      'Enhanced Security,';
-      'Reduced Financial Risk',';
-      'Improved Compliance',';
-      'Automated Trading''];
-    caseStudy: 'Prevented $2M+ in fraudulent transactions for a major bank,';
-    pricing: 'Starting at $10,0o00/setup'};
+      'Enhanced Security,Reduced Financial Risk',',
+      'Improved Compliance,
+      'Automated Trading''],
+    caseStudy: 'Prevented $2M+ in fraudulent transactions for a major bank,',
+    pricing: 'Starting at $10,0o00/setup'},
   {}
-    title: 'E-commerce,';
-    icon: ShoppingCart;
-    description: 'Personalized recommendations, inventory optimization, and customer experience enhancement.',';
-    color: 'from-blue-50o0 to-cyan-50o0,';
+    title: 'E-commerce,',
+    icon: ShoppingCart,
+    description: 'Personalized recommendations, inventory optimization, and customer experience enhancement.,
+    color: 'from-blue-50o0 to-cyan-50o0,',
     services: [
-      'AI Recommendation Engine,';
-      'Inventory Optimization',';
-      'Customer Analytics',';
-      'Price Optimization',';
-      'Chatbot Support',';
-      'Visual Search''];
+      'AI Recommendation Engine,Inventory Optimization',',
+      'Customer Analytics,
+      'Price Optimization',Chatbot Support',',
+      'Visual Search''],
     benefits: [
-      'Increased Sales,';
-      'Better Customer Experience',';
-      'Optimized Inventory',';
-      'Reduced Cart Abandonment''];
-    caseStudy: 'Increased conversion rates by 35% for an online retailer,';
-    pricing: 'Starting at $3,0o00/setup'};
+      'Increased Sales,Better Customer Experience',',
+      'Optimized Inventory,
+      'Reduced Cart Abandonment''],
+    caseStudy: 'Increased conversion rates by 35% for an online retailer,',
+    pricing: 'Starting at $3,0o00/setup'},
   {}
-    title: 'Manufacturing,';
-    icon: Settings;
-    description: 'Predictive maintenance, quality control, supply chain optimization, and smart factory solutions.',';
-    color: 'from-orange-50o0 to-yellow-50o0,';
+    title: 'Manufacturing,',
+    icon: Settings,
+    description: 'Predictive maintenance, quality control, supply chain optimization, and smart factory solutions.,
+    color: 'from-orange-50o0 to-yellow-50o0,',
     services: [
-      'Predictive Maintenance,';
-      'Quality Control AI',';
-      'Supply Chain Optimization',';
-      'Smart Factory Solutions',';
-      'IoT Integration',';
-      'Energy Optimization''];
+      'Predictive Maintenance,Quality Control AI',',
+      'Supply Chain Optimization,
+      'Smart Factory Solutions',IoT Integration',',
+      'Energy Optimization''],
     benefits: [
-      'Reduced Downtime,';
-      'Improved Quality',';
-      'Cost Optimization',';
-      'Enhanced Efficiency''];
-    caseStudy: 'Reduced equipment downtime by 40% for a manufacturing plant,';
-    pricing: 'Starting at $20,0o00/project'};
+      'Reduced Downtime,Improved Quality',',
+      'Cost Optimization,
+      'Enhanced Efficiency''],
+    caseStudy: 'Reduced equipment downtime by 40% for a manufacturing plant,',
+    pricing: 'Starting at $20,0o00/project'},
   {}
-    title: 'Education,';
-    icon: BookOpen;
-    description: 'Personalized learning, automated assessment, and educational content generation.',';
-    color: 'from-purple-50o0 to-indigo-50o0,';
+    title: 'Education,',
+    icon: BookOpen,
+    description: 'Personalized learning, automated assessment, and educational content generation.,
+    color: 'from-purple-50o0 to-indigo-50o0,',
     services: [
-      'Personalized Learning,';
-      'Automated Assessment',';
-      'Content Generation',';
-      'Student Analytics',';
-      'Virtual Tutoring',';
-      'Learning Management''];
+      'Personalized Learning,Automated Assessment',',
+      'Content Generation,
+      'Student Analytics',Virtual Tutoring',',
+      'Learning Management''],
     benefits: [
-      'Personalized Education,';
-      'Improved Learning Outcomes',';
-      'Automated Grading',';
-      'Enhanced Engagement''];
-    caseStudy: 'Improved student performance by 25% in a university program,';
-    pricing: 'Starting at $5,0o00/setup'};
+      'Personalized Education,Improved Learning Outcomes',',
+      'Automated Grading,
+      'Enhanced Engagement''],
+    caseStudy: 'Improved student performance by 25% in a university program,',
+    pricing: 'Starting at $5,0o00/setup'},
   {}
-    title: 'Government,';
-    icon: Shield;
-    description: 'Citizen services, data analytics, cybersecurity, and digital transformation solutions.',';
-    color: 'from-gray-60o0 to-slate-60o0,';
+    title: 'Government,',
+    icon: Shield,
+    description: 'Citizen services, data analytics, cybersecurity, and digital transformation solutions.,
+    color: 'from-gray-60o0 to-slate-60o0,',
     services: [
-      'Citizen Services Portal,';
-      'Data Analytics Platform',';
-      'Cybersecurity Solutions',';
-      'Digital Transformation',';
-      'Compliance Management',';
-      'Public Safety AI''];
+      'Citizen Services Portal,Data Analytics Platform',',
+      'Cybersecurity Solutions,
+      'Digital Transformation',Compliance Management',',
+      'Public Safety AI''],
     benefits: [
-      'Improved Citizen Services,';
-      'Enhanced Security',';
-      'Better Data Insights',';
-      'Streamlined Operations''];
-    caseStudy: 'Streamlined citizen services for a state government,';
+      'Improved Citizen Services,Enhanced Security',',
+      'Better Data Insights,
+      'Streamlined Operations''],
+    caseStudy: 'Streamlined citizen services for a state government,',
     pricing: 'Starting at $25,0o00/project'}
 ],
 const technologies = [
-  { name: 'AI & Machine Learning, icon: Brain, description: 'Advanced AI solutions for every industry' },';
-  { name: 'Cloud Infrastructure, icon: Cloud, description: 'Scalable and secure cloud solutions' },';
-  { name: 'Cybersecurity, icon: Shield, description: 'Enterprise-grade security solutions' },';
-  { name: 'Data Analytics, icon: BarChart3, description: 'Insights-driven decision making' },';
-  { name: 'IoT & Edge Computing, icon: Network, description: 'Connected and intelligent systems' },';
-  { name: 'Blockchain, icon: Globe, description: 'Secure and transparent solutions' }';
+  { name: 'AI & Machine Learning, icon: Brain, description: 'Advanced AI solutions for every industry' },',
+  { name: 'Cloud Infrastructure, icon: Cloud, description: 'Scalable and secure cloud solutions' },',
+  { name: 'Cybersecurity, icon: Shield, description: 'Enterprise-grade security solutions' },',
+  { name: 'Data Analytics, icon: BarChart3, description: 'Insights-driven decision making' },',
+  { name: 'IoT & Edge Computing, icon: Network, description: 'Connected and intelligent systems' },',
+  { name: 'Blockchain, icon: Globe, description: 'Secure and transparent solutions' }',
 ],
 export default function IndustriesPage() {
   return (
@@ -177,7 +159,7 @@ export default function IndustriesPage() {
             transition={{ duration: 0.8 }}
             className="text-center"">,
             <h1 className="text-4xl md: text-6xl font-bold mb-6">",
-              Industry-Specific{' '}';
+              Industry-Specific{' '}',
               <span className="bg-gradient-to-r from-blue-40o0 to-purple-40o0 bg-clip-text text-transparent">",
                 Solutions,
               </span>,
@@ -204,103 +186,79 @@ export default function IndustriesPage() {
   Cloud} from 'lucide-react',
 const industries = [
   {
-    id: 1;
-    name: 'Healthcare';
-    icon: Heart;
-    description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.';
-    color: 'from-red-50o0 to-pink-50o0';
+    id: 1,
+    name: 'Healthcare',
+    icon: Heart,
+    description: 'AI-powered diagnostics, medical imaging, drug discovery, and patient care solutions.',
+    color: 'from-red-50o0 to-pink-50o0',
     services: [
-      'AI Medical Imaging Analysis';
-      'Drug Discovery Platform';
-      'Patient Data Analytics';
-      'Telemedicine Solutions';
-      'Clinical Decision Support';
-      'Healthcare IoT Management']};
+      'AI Medical Imaging AnalysisDrug Discovery Platform',
+      'Patient Data AnalyticsTelemedicine Solutions',
+      'Clinical Decision SupportHealthcare IoT Management']},
   {
-    title: 'Financial Services';
-    icon: BarChart3;
-    description: 'Advanced fintech solutions including fraud detection, risk assessment, and automated trading.';
-    color: 'from-green-50o0 to-emerald-50o0';
+    title: 'Financial Services',
+    icon: BarChart3,
+    description: 'Advanced fintech solutions including fraud detection, risk assessment, and automated trading.',
+    color: 'from-green-50o0 to-emerald-50o0',
     services: [
-      'Fraud Detection Systems';
-      'Risk Assessment Tools';
-      'Algorithmic Trading';
-      'Credit Scoring Models';
-      'Regulatory Compliance';
-      'Digital Banking Solutions']};
+      'Fraud Detection SystemsRisk Assessment Tools',
+      'Algorithmic TradingCredit Scoring Models',
+      'Regulatory ComplianceDigital Banking Solutions']},
   {
-    title: 'E-commerce & Retail';
-    icon: ShoppingCart;
-    description: 'Personalized shopping experiences, inventory optimization, and customer analytics.';
-    color: 'from-blue-50o0 to-cyan-50o0';
+    title: 'E-commerce & Retail',
+    icon: ShoppingCart,
+    description: 'Personalized shopping experiences, inventory optimization, and customer analytics.',
+    color: 'from-blue-50o0 to-cyan-50o0',
     services: [
-      'Personalized Recommendations';
-      'Inventory Optimization';
-      'Customer Analytics';
-      'Price Optimization';
-      'Supply Chain Management';
-      'Omnichannel Solutions']};
+      'Personalized RecommendationsInventory Optimization',
+      'Customer AnalyticsPrice Optimization',
+      'Supply Chain ManagementOmnichannel Solutions']},
   {
-    title: 'Education';
-    icon: GraduationCap;
-    description: 'AI-powered learning platforms, personalized education, and student analytics.';
-    color: 'from-purple-50o0 to-indigo-50o0';
+    title: 'Education',
+    icon: GraduationCap,
+    description: 'AI-powered learning platforms, personalized education, and student analytics.',
+    color: 'from-purple-50o0 to-indigo-50o0',
     services: [
-      'Personalized Learning';
-      'Student Analytics';
-      'Automated Grading';
-      'Virtual Classrooms';
-      'Learning Management Systems';
-      'Educational Content Generation']};
+      'Personalized LearningStudent Analytics',
+      'Automated GradingVirtual Classrooms',
+      'Learning Management SystemsEducational Content Generation']},
   {
-    id: 4;
-    name: 'Manufacturing';
-    icon: Settings;
-    description: 'Smart manufacturing solutions with predictive maintenance and quality control.';
-    color: 'from-orange-50o0 to-red-50o0';
+    id: 4,
+    name: 'Manufacturing',
+    icon: Settings,
+    description: 'Smart manufacturing solutions with predictive maintenance and quality control.',
+    color: 'from-orange-50o0 to-red-50o0',
     services: [
-      'Predictive Maintenance';
-      'Quality Control Systems';
-      'Supply Chain Optimization';
-      'Robotic Process Automation';
-      'Production Analytics';
-      'IoT Integration']};
+      'Predictive MaintenanceQuality Control Systems',
+      'Supply Chain OptimizationRobotic Process Automation',
+      'Production AnalyticsIoT Integration']},
   {
-    title: 'Transportation';
-    icon: Car;
-    description: 'Autonomous vehicles, route optimization, and fleet management solutions.';
-    color: 'from-yellow-50o0 to-orange-50o0';
+    title: 'Transportation',
+    icon: Car,
+    description: 'Autonomous vehicles, route optimization, and fleet management solutions.',
+    color: 'from-yellow-50o0 to-orange-50o0',
     services: [
-      'Autonomous Vehicle Systems';
-      'Route Optimization';
-      'Fleet Management';
-      'Traffic Analytics';
-      'Predictive Maintenance';
-      'Smart Transportation']};
+      'Autonomous Vehicle SystemsRoute Optimization',
+      'Fleet ManagementTraffic Analytics',
+      'Predictive MaintenanceSmart Transportation']},
   {
-    title: 'Real Estate';
-    icon: Building;
-    description: 'Property valuation, market analysis, and smart building management.';
-    color: 'from-teal-50o0 to-green-50o0';
+    title: 'Real Estate',
+    icon: Building,
+    description: 'Property valuation, market analysis, and smart building management.',
+    color: 'from-teal-50o0 to-green-50o0',
     services: [
-      'Property Valuation Models';
-      'Market Analysis Tools';
-      'Smart Building Management';
-      'Investment Analytics';
-      'Property Management Systems';
-      'Virtual Property Tours']};
+      'Property Valuation ModelsMarket Analysis Tools',
+      'Smart Building ManagementInvestment Analytics',
+      'Property Management SystemsVirtual Property Tours']},
   {
-    title: 'Government';
-    icon: Globe;
-    description: 'Digital government services, citizen analytics, and public safety solutions.';
-    color: 'from-indigo-50o0 to-purple-50o0';
+    title: 'Government',
+    icon: Globe,
+    description: 'Digital government services, citizen analytics, and public safety solutions.',
+    color: 'from-indigo-50o0 to-purple-50o0',
     services: [
-      'Digital Government Services';
-      'Citizen Analytics';
-      'Public Safety Systems';
-      'Resource Optimization';
-      'Policy Analysis Tools';
-      'Smart City Solutions']}
+      'Digital Government ServicesCitizen Analytics',
+      'Public Safety SystemsResource Optimization',
+      'Policy Analysis ToolsSmart City Solutions']}
 ],
 export default function IndustriesPage() {
   return (
@@ -309,7 +267,7 @@ export default function IndustriesPage() {
                 Industries We <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-40o0 to-purple-40o0">Serve</span>,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 leading-relaxed">,
-                We provide specialized AI and technology solutions across multiple industries;
+                We provide specialized AI and technology solutions across multiple industries,
                 helping organizations transform their operations and achieve their goals.,
               </p>,
             </motion.div>,

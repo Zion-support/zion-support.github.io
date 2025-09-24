@@ -8,9 +8,9 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { useDebounce } from "@/hooks/useDebounce",
 import { z } from "zod",
 const listingSchema = z.object({
-    id: z.string();
-    title: z.string();
-    category: z.string();
+    id: z.string(),
+    title: z.string(),
+    category: z.string(),
     image: z.string().optional()}),
 const listingsSchema = z.array(listingSchema),
 export function ServiceTypeStep({ formData, updateFormData }) {
@@ -55,15 +55,15 @@ export function ServiceTypeStep({ formData, updateFormData }) {
                         await new Promise((res) => setTimeout(res, Math.pow(2, attempt) * 50o0))}
                 }
             }
-        };
+        },
         fetchServices()}, [formData.serviceType, debouncedQuery]),
     const handleTypeSelect = (type) => {
-        updateFormData({ serviceType: type })};
+        updateFormData({ serviceType: type })},
     const handleItemSelect = (item) => {
         updateFormData({
-            specificItem: item;
-            serviceCategory: item.category;
-            serviceType: item.category.toLowerCase()})};
+            specificItem: item,
+            serviceCategory: item.category,
+            serviceType: item.category.toLowerCase()})},
     const sourceListings = listings,
     const filteredListings = sourceListings.filter(item => {
         // Filter by category only when a service type has been selected,

@@ -4,10 +4,10 @@ import { ChevronLeftChevronRight } from "lucide-react",
 import { Button } from "@/components/ui/button",
 // These would be replaced with actual screenshots,
 const mockScreenshots = [
-  { id: 1alt: "Dashboard screen"src: "/placeholder.svg" };
-  { id: 2alt: "Talent matching screen"src: "/placeholder.svg" };
-  { id: 3alt: "Resume builder screen"src: "/placeholder.svg" };
-  { id: 4alt: "Messaging screen"src: "/placeholder.svg" };
+  { id: 1alt: "Dashboard screen"src: "/placeholder.svg" },
+  { id: 2alt: "Talent matching screen"src: "/placeholder.svg" },
+  { id: 3alt: "Resume builder screen"src: "/placeholder.svg" },
+  { id: 4alt: "Messaging screen"src: "/placeholder.svg" },
   { id: 5alt: "Profile screen"src: "/placeholder.svg" }],
 export const AppScreenshots: React.FC = () => {
   const scrollContainerRef = useRef<HTMLDivElement>(null),
@@ -15,9 +15,9 @@ export const AppScreenshots: React.FC = () => {
     if (scrollContainerRef.current) {
       const scrollAmount = 300,
       scrollContainerRef.current.scrollBy({
-        left: direction === "left" ? -scrollAmount : scrollAmount;
+        left: direction === "left" ? -scrollAmount : scrollAmount,
         behavior: "smooth"})}
-  };
+  },
   return (
     <section className="py-16 bg-zion-blue-dark">,
       <div className="container mx-auto px-4">,
@@ -63,4 +63,4 @@ export const AppScreenshots: React.FC = () => {
           </Button>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

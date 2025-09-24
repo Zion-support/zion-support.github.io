@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { cn } from '@/lib/utils',
 interface SwitchProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>'type'> {
   checked?: boolean,
@@ -18,17 +18,17 @@ const Switch = React.forwardRef<HTMLInputElementSwitchProps>(
         />,
         <div
           className={cn(
-            'relative inline-flex h-6 w-11 items-center rounded-full transition-colors';
-            checked ? 'bg-primary' : 'bg-input';
+            'relative inline-flex h-6 w-11 items-center rounded-full transition-colors',
+            checked ? 'bg-primary' : 'bg-input',
             className)}
         >,
           <span
             className={cn(
-              'inline-block h-4 w-4 transform rounded-full bg-background transition-transform';
+              'inline-block h-4 w-4 transform rounded-full bg-background transition-transform',
               checked ? 'translate-x-6' : 'translate-x-1')}
            />,
         </div>,
       </label>)}
 ),
 Switch.displayName = 'Switch',
-export { Switch };
+export { Switch },

@@ -1,5 +1,5 @@
 "use client",
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -59,83 +59,83 @@ import {
   Menu, X, ChevronDown, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Briefcase,
-  Menu;
-  X;
-  ChevronDown;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Timer;} from 'lucide-react',import {
-  Menu, X, ChevronDown, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Timer,} from 'lucide-react',import {
+  Menu, X, ChevronDown, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Briefcase,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
   Earth, Factory, Car, Building, GraduationCap, Scale,
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
-    title: '🚀 2029 Space Colonization & Mining';
-    icon: Rocket;
-    color: 'from - red - 600 to - orange - 600';
-    description: 'Interplanetary expansion and resource extraction';
+    title: '🚀 2029 Space Colonization & Mining',
+    icon: Rocket,
+    color: 'from - red - 600 to - orange - 600',
+    description: 'Interplanetary expansion and resource extraction',
     services: [
       {
-        name: 'Mars Colonization Automation Platform';
-        href: '/mars - colonization - automation - platform';
-        description: 'Automate Mars colonization process';
-        price: '$99, 999 / month';
-      };
+        name: 'Mars Colonization Automation Platform',
+        href: '/mars - colonization - automation - platform',
+        description: 'Automate Mars colonization process',
+        price: '$99, 999 / month',
+      },
       {
-        name: 'Interplanetary Communication Network';
-        href: '/interplanetary - communication - network';
-        description: 'Real - time solar system communication';
-        price: '$75, 999 / month';
-      };
+        name: 'Interplanetary Communication Network',
+        href: '/interplanetary - communication - network',
+        description: 'Real - time solar system communication',
+        price: '$75, 999 / month',
+      },
       {
         name: 'AI Reality Augmentation Platform',
         href: '/ai-reality-augmentation-platform',
@@ -367,85 +367,85 @@ import {
       { name: 'Business Process Automation', href: '/business-process-automation', description: 'End-to-end process automation', price: '$4,999/month' }
       { name: 'Corporate Intelligence Platform', href: '/corporate-intelligence-platform', description: 'AI-powered business intelligence', price: '$7,999/month' }
     ]}
-        name: 'Corporate Intelligence Platform';
-        href: '/corporate-intelligence-platform';
-        description: 'AI-powered business intelligence';
-        price: '$7,999/month';
-      };
-    ];
+        name: 'Corporate Intelligence Platform',
+        href: '/corporate-intelligence-platform',
+        description: 'AI-powered business intelligence',
+        price: '$7,999/month',
+      },
+    ],
   },  {      { name: 'Mars Colonization Automation Platform', href: '/mars - colonization - automation - platform', description: 'Automate Mars colonization process', price: '$99, 999 / month' }
       { name: 'Interplanetary Communication Network', href: '/interplanetary - communication - network', description: 'Real - time solar system communication', price: '$75, 999 / month' }
       { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automate asteroid and lunar mining', price: '$65, 999 / month' }
     ]}
 ,
-    title: '🏠 2029 Space Architecture & Energy';
-    icon: Building;
-    color: 'from - green - 600 to - teal - 600';
-    description: 'Habitat design and space energy harvesting';
+    title: '🏠 2029 Space Architecture & Energy',
+    icon: Building,
+    color: 'from - green - 600 to - teal - 600',
+    description: 'Habitat design and space energy harvesting',
     services: [
       {
-        name: 'Space Habitat Design Platform';
-        href: '/space - habitat - design - platform';
-        description: 'Design space habitats for any planet';
-        price: '$45, 999 / month';
-      };
+        name: 'Space Habitat Design Platform',
+        href: '/space - habitat - design - platform',
+        description: 'Design space habitats for any planet',
+        price: '$45, 999 / month',
+      },
       {
-        name: 'Space Energy Harvesting Platform';
-        href: '/space - energy - harvesting - platform';
-        description: 'Harvest energy from space sources';
-        price: '$55, 999 / month';
-      };
-    ];
+        name: 'Space Energy Harvesting Platform',
+        href: '/space - energy - harvesting - platform',
+        description: 'Harvest energy from space sources',
+        price: '$55, 999 / month',
+      },
+    ],
   },  {      { name: 'Space Habitat Design Platform', href: '/space - habitat - design - platform', description: 'Design space habitats for any planet', price: '$45, 999 / month' }
       { name: 'Space Energy Harvesting Platform', href: '/space - energy - harvesting - platform', description: 'Harvest energy from space sources', price: '$55, 999 / month' }
     ]}
-    title: '🤖 Advanced AI & Machine Learning';
-    icon: Brain;
-    color: 'from - emerald - 600 to - teal - 600';
-    description: 'Next - generation AI solutions';
+    title: '🤖 Advanced AI & Machine Learning',
+    icon: Brain,
+    color: 'from - emerald - 600 to - teal - 600',
+    description: 'Next - generation AI solutions',
     services: [
       {
-        name: 'AI Emotional Intelligence Platform';
-        href: '/ai - emotional - intelligence - platform';
-        description: 'AI that understands human emotions';
-        price: '$2, 999 / month';
-      };
+        name: 'AI Emotional Intelligence Platform',
+        href: '/ai - emotional - intelligence - platform',
+        description: 'AI that understands human emotions',
+        price: '$2, 999 / month',
+      },
       {
-        name: 'AI Multimodal Fusion Platform';
-        href: '/ai - multimodal - fusion - platform';
-        description: 'Unified text, image, audio, video AI';
-        price: '$4, 999 / month';
-      };
+        name: 'AI Multimodal Fusion Platform',
+        href: '/ai - multimodal - fusion - platform',
+        description: 'Unified text, image, audio, video AI',
+        price: '$4, 999 / month',
+      },
       {
-        name: 'AI Customer Service Automation';
-        href: '/ai - customer - service - automation';
-        description: 'Intelligent customer support';
-        price: '$899 / month';
-      };
+        name: 'AI Customer Service Automation',
+        href: '/ai - customer - service - automation',
+        description: 'Intelligent customer support',
+        price: '$899 / month'
+      },
       {
-        name: 'AI Education Platform';
-        href: '/ai - education - platform';
-        description: 'Personalized learning with AI';
-        price: '$1, 499 / month';
-      };
+        name: 'AI Education Platform',
+        href: '/ai - education - platform',
+        description: 'Personalized learning with AI',
+        price: '$1, 499 / month',
+      },
       {
-        name: 'AI Content Creation Suite';
-        href: '/ai - content - creation - suite';
-        description: 'Unlimited AI content creation';
-        price: '$1, 299 / month';
-      };
-    ];
+        name: 'AI Content Creation Suite',
+        href: '/ai - content - creation - suite',
+        description: 'Unlimited AI content creation',
+        price: '$1, 299 / month',
+      },
+    ],
   },  {      { name: 'AI Emotional Intelligence Platform', href: '/ai - emotional - intelligence - platform', description: 'AI that understands human emotions', price: '$2, 999 / month' }
       { name: 'AI Multimodal Fusion Platform', href: '/ai - multimodal - fusion - platform', description: 'Unified text, image, audio, video AI', price: '$4, 999 / month' }
-      { name: 'AI Customer Service Automation', href: '/ai - customer - service - automation', description: 'Intelligent customer support', price: '$899 / month' };
+      { name: 'AI Customer Service Automation', href: '/ai - customer - service - automation', description: 'Intelligent customer support', price: '$899 / month' },
       { name: 'AI Education Platform', href: '/ai - education - platform', description: 'Personalized learning with AI', price: '$1, 499 / month' }
       { name: 'AI Content Creation Suite', href: '/ai - content - creation - suite', description: 'Unlimited AI content creation', price: '$1, 299 / month' }
     ]}
 ,
-    title: '⛓️ Blockchain & Web3 Solutions';
-    icon: Layers;
-    color: 'from - orange - 600 to - red - 600';
-    description: 'Decentralized and blockchain solutions';
+    title: '⛓️ Blockchain & Web3 Solutions',
+    icon: Layers,
+    color: 'from - orange - 600 to - red - 600',
+    description: 'Decentralized and blockchain solutions',
 const mainNavItems = [
   { name: 'Home', href: '/', icon: Home }
   { name: 'Services', href: '/services', icon: Briefcase }
@@ -468,13 +468,13 @@ const mainNavItems = [
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll),
 const mainNavItems = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Target };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'News', href: '/news', icon: TrendingUp };
-  { name: 'Support', href: '/support', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Target },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'News', href: '/news', icon: TrendingUp },
+  { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: Phone }],  { name: 'Contact', href: '/contact', icon: Phone }
 ],
 export default function UltraFuturisticNavigation2029() {
@@ -483,9 +483,9 @@ export default function UltraFuturisticNavigation2029() {
   const [scrolled, setScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window && window.scrollY > 50)};
+      setScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setScrolled(window && window.scrollY > 50)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
   const toggleMenu = () => setIsOpen(!isOpen),

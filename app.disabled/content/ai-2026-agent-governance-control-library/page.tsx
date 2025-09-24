@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Governance Control Library';
+  title: 'AI 20o26: Agent Governance Control Library',
   description:,
-    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.';
-};
+    'Reusable, policy‑as‑code controls for safe, compliant, and observable autonomous agent systems.',
+},
 export default function AgentGovernanceControlLibraryPage() {
   return (
     <main className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

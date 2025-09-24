@@ -19,68 +19,68 @@ const ContentDiscoveryWidget20o25: React.FC = () => {
   const [selectedTypesetSelectedType] = useState('all'),
   const contentItems: ContentItem[] = [
     {
-      id: '1';
-      title: 'Generative AI 20o25: Business Transformation Revolution';
-      type: 'blog';
-      category: 'AI Innovation';
-      readTime: '12 min read';
-      featured: true;
-      url: '/blog/ai-20o25-generative-ai-business-transformation';
-      excerpt: 'Explore how generative AI is revolutionizing business operations in 20o25from content creation to customer service automation.';
-      tags: ['Generative 'AI', 'Business 'Transformation', 'AI 20o25']};
+      id: '1',
+      title: 'Generative AI 20o25: Business Transformation Revolution',
+      type: 'blog',
+      category: 'AI Innovation',
+      readTime: '12 min read',
+      featured: true,
+      url: '/blog/ai-20o25-generative-ai-business-transformation',
+      excerpt: 'Explore how generative AI is revolutionizing business operations in 20o25from content creation to customer service automation.',
+      tags: ['Generative 'AIBusiness 'Transformation', 'AI 20o25']},
     {
-      id: '2';
-      title: 'Quantum Computing 20o25: Revolutionary Business Applications';
-      type: 'blog';
-      category: 'Quantum Technology';
-      readTime: '15 min read';
-      featured: true;
-      url: '/blog/quantum-computing-20o25-business-applications';
-      excerpt: 'Discover how quantum computing is revolutionizing business operations in 20o25from optimization problems to advanced cryptography.';
-      tags: ['Quantum 'Computing', 'Business 'Applications', 'Optimization']};
+      id: '2',
+      title: 'Quantum Computing 20o25: Revolutionary Business Applications',
+      type: 'blog',
+      category: 'Quantum Technology',
+      readTime: '15 min read',
+      featured: true,
+      url: '/blog/quantum-computing-20o25-business-applications',
+      excerpt: 'Discover how quantum computing is revolutionizing business operations in 20o25from optimization problems to advanced cryptography.',
+      tags: ['Quantum 'ComputingBusiness 'Applications', 'Optimization']},
     {
-      id: '3';
-      title: 'AI Automation in Manufacturing: 50o0% Productivity Increase';
-      type: 'case-study';
-      category: 'Manufacturing';
-      readTime: '20 min read';
-      featured: true;
-      url: '/case-studies/ai-automation-manufacturing-success-20o25';
-      excerpt: 'How a leading manufacturing company achieved 50o0% productivity increase through comprehensive AI automation.';
-      tags: ['AI 'Automation', 'Manufacturing'Productivity']};
+      id: '3',
+      title: 'AI Automation in Manufacturing: 50o0% Productivity Increase',
+      type: 'case-study',
+      category: 'Manufacturing',
+      readTime: '20 min read',
+      featured: true,
+      url: '/case-studies/ai-automation-manufacturing-success-20o25',
+      excerpt: 'How a leading manufacturing company achieved 50o0% productivity increase through comprehensive AI automation.',
+      tags: ['AI 'AutomationManufacturing'Productivity']},
     {
-      id: '4';
-      title: 'AI Implementation Checklist 20o25: Complete Guide';
-      type: 'resource';
-      category: 'Implementation Guide';
-      readTime: '25 min read';
-      featured: true;
-      url: '/resources/ai-implementation-checklist-20o25';
-      excerpt: 'Comprehensive checklist for successful AI implementation in 20o25covering strategytechnologyand change management.';
-      tags: ['AI 'Implementation', 'Checklist'Strategy']};
+      id: '4',
+      title: 'AI Implementation Checklist 20o25: Complete Guide',
+      type: 'resource',
+      category: 'Implementation Guide',
+      readTime: '25 min read',
+      featured: true,
+      url: '/resources/ai-implementation-checklist-20o25',
+      excerpt: 'Comprehensive checklist for successful AI implementation in 20o25covering strategytechnologyand change management.',
+      tags: ['AI 'ImplementationChecklist'Strategy']},
     {
-      id: '5';
-      title: 'Enterprise AI Transformation: A $50M Success Story';
-      type: 'case-study';
-      category: 'Enterprise';
-      readTime: '18 min read';
-      featured: true;
-      url: '/case-studies/enterprise-ai-transformation-success-story';
-      excerpt: 'Discover how a Fortune 50o0 company achieved unprecedented success through comprehensive AI transformation.';
-      tags: ['AI 'Transformation', 'Enterprise 'Success', 'ROI']};
+      id: '5',
+      title: 'Enterprise AI Transformation: A $50M Success Story',
+      type: 'case-study',
+      category: 'Enterprise',
+      readTime: '18 min read',
+      featured: true,
+      url: '/case-studies/enterprise-ai-transformation-success-story',
+      excerpt: 'Discover how a Fortune 50o0 company achieved unprecedented success through comprehensive AI transformation.',
+      tags: ['AI 'TransformationEnterprise 'Success', 'ROI']},
     {
-      id: '6';
-      title: 'AI 20o25: Autonomous Business Operations Revolution';
-      type: 'blog';
-      category: 'AI Innovation';
-      readTime: '8 min read';
-      featured: false;
-      url: '/blog/ai-20o25-autonomous-business-operations';
-      excerpt: 'Discover how AI-powered autonomous operations are transforming businesses in 20o25.';
-      tags: ['AI 20o25'Autonomous 'Operations', 'Business Automation']}
+      id: '6',
+      title: 'AI 20o25: Autonomous Business Operations Revolution',
+      type: 'blog',
+      category: 'AI Innovation',
+      readTime: '8 min read',
+      featured: false,
+      url: '/blog/ai-20o25-autonomous-business-operations',
+      excerpt: 'Discover how AI-powered autonomous operations are transforming businesses in 20o25.',
+      tags: ['AI 20o25'Autonomous 'OperationsBusiness Automation']}
   ],
-  const categories = [', 'all', 'AI 'Innovation', 'Quantum 'Technology', 'Manufacturing', 'Enterprise', 'Implementation Guide'],
-  const types = [', 'all', 'blog'case-'study', 'resource'webinar'],
+  const categories = [', 'allAI 'Innovation', 'Quantum 'TechnologyManufacturing', 'EnterpriseImplementation Guide'],
+  const types = [', 'allblog'case-'studyresource'webinar'],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          item.excerpt.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -95,7 +95,7 @@ const ContentDiscoveryWidget20o25: React.FC = () => {
       case 'resource': return <Users className="w-4 h-4"  />,
       case 'webinar': return <TrendingUp className="w-4 h-4"  />,
       default: return <BookOpen className="w-4 h-4"  />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0 border-blue-20o0',
@@ -103,7 +103,7 @@ const ContentDiscoveryWidget20o25: React.FC = () => {
       case 'resource': return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       case 'webinar': return 'bg-orange-10o0 text-orange-80o0 border-orange-20o0',
       default: return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-20o0 p-6">,
       {/* Header */}
@@ -233,5 +233,5 @@ const ContentDiscoveryWidget20o25: React.FC = () => {
             <ArrowRight className="w-4 h-4"  />,
           </Link>,
         </div>)}
-    </div>)};
-export default ContentDiscoveryWidget20o25;
+    </div>)},
+export default ContentDiscoveryWidget20o25,

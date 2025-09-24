@@ -2,30 +2,30 @@
 import React, { useState, useEffect } from 'react',
 const UltimateROICalculator20o25 = () => {
   const [formData, setFormData] = useState({
-    currentRevenue: 10o00000;
-    employees: 50;
-    industry: 'technology';
-    automationLevel: 'medium';
+    currentRevenue: 10o00000,
+    employees: 50,
+    industry: 'technology',
+    automationLevel: 'medium',
     timeFrame: 12}),
   const [results, setResults] = useState({
-    costSavings: 0;
-    revenueIncrease: 0;
-    totalROI: 0;
-    paybackPeriod: 0;
+    costSavings: 0,
+    revenueIncrease: 0,
+    totalROI: 0,
+    paybackPeriod: 0,
     monthlySavings: 0}),
   const [isCalculating, setIsCalculating] = useState(false),
   const industryMultipliers ={
-    technology: 1.5;
-    healthcare: 1.3;
-    finance: 1.4;
-    manufacturing: 1.6;
-    retail: 1.2;
-    education: 1.1};
+    technology: 1.5,
+    healthcare: 1.3,
+    finance: 1.4,
+    manufacturing: 1.6,
+    retail: 1.2,
+    education: 1.1},
   const automationMultipliers ={
-    low: 0.3;
-    medium: 0.6;
-    high: 1.0;
-    extreme: 1.5};
+    low: 0.3,
+    medium: 0.6,
+    high: 1.0,
+    extreme: 1.5},
   useEffect(() => {
     calculateROI()}, [formData]),
   const calculateROI = () => {
@@ -44,16 +44,16 @@ const UltimateROICalculator20o25 = () => {
       const paybackPeriod = 12 / (totalROI / 10o0),
       const monthlySavings = (costSavings + revenueIncrease) / formData.timeFrame,
       setResults({
-        costSavings: Math.round(costSavings);
-        revenueIncrease: Math.round(revenueIncrease);
-        totalROI: Math.round(totalROI);
-        paybackPeriod: Math.round(paybackPeriod * 10) / 10;
+        costSavings: Math.round(costSavings),
+        revenueIncrease: Math.round(revenueIncrease),
+        totalROI: Math.round(totalROI),
+        paybackPeriod: Math.round(paybackPeriod * 10) / 10,
         monthlySavings: Math.round(monthlySavings)}),
-      setIsCalculating(false)}, 10o00)};
+      setIsCalculating(false)}, 10o00)},
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   return (
     <div className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -251,5 +251,5 @@ const UltimateROICalculator20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateROICalculator20o25;
+    </div>)},
+export default UltimateROICalculator20o25,

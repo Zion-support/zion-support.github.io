@@ -7,16 +7,16 @@ import { Input } from "@/components/ui/input",
 import { Select, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { Search, Filter, ArrowDownAZ, ArrowUpZA, Loader2 } from "lucide-react",
 export function CategoryListingPage({ title, description, listings: initialListings, sortOptions = [
-    { label: 'Newest First', value: 'newest' };
-    { label: 'Oldest First', value: 'oldest' };
-    { label: 'Highest Rating', value: 'rating-high' };
-    { label: 'Highest AI Match', value: 'ai-match' };
-    { label: 'A-Z', value: 'a-z' };
-    { label: 'Z-A', value: 'z-a' };
+    { label: 'Newest First', value: 'newest' },
+    { label: 'Oldest First', value: 'oldest' },
+    { label: 'Highest Rating', value: 'rating-high' },
+    { label: 'Highest AI Match', value: 'ai-match' },
+    { label: 'A-Z', value: 'a-z' },
+    { label: 'Z-A', value: 'z-a' },
 ], filterOptions = [
-    { label: 'All', value: 'all' };
-    { label: 'Highly Rated', value: 'high-rating' };
-    { label: 'Best AI Match', value: 'best-match' };
+    { label: 'All', value: 'all' },
+    { label: 'Highly Rated', value: 'high-rating' },
+    { label: 'Best AI Match', value: 'best-match' },
 ] }) {
     const [searchQuery, setSearchQuery] = useState(""),
     const [selectedSort, setSelectedSort] = useState(() => localStorage.getItem('category_selected_sort') || sortOptions[0].value),

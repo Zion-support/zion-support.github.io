@@ -11,7 +11,7 @@ const RevolutionaryAI20o26ContentBanner = () => {
             The AI Revolution Starts Here,
           </h2>,
           <p className='text-2xl md:text-3xl opacity-90 mb-12 max-w-6xl mx-auto leading-relaxed'>,
-            Discover the most comprehensive collection of AI guides, strategies;
+            Discover the most comprehensive collection of AI guides, strategies,
             and insights that will define the future of business. From,
             generative AI to quantum computing and autonomous systems -,
             everything you need to lead the AI transformation.,
@@ -140,5 +140,5 @@ const RevolutionaryAI20o26ContentBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryAI20o26ContentBanner;
+    </section>)},
+export default RevolutionaryAI20o26ContentBanner,

@@ -34,7 +34,7 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
         setJobs(data as Job[])} catch (error) {
         console.error("Error fetching jobs: "error)} finally {
         setIsLoading(false)}
-    };
+    },
     fetchJobs()}[userfilter]),
   if (isLoading) {
     return (
@@ -67,7 +67,7 @@ export function JobsList({ filteronSelectJob }: JobsListProps) {
         return "bg-gray-100 text-gray-800",
       default:,
         return "bg-gray-100 text-gray-800"}
-  };
+  },
   return (
     <div className="grid gap-6 md: grid-cols-2">,
       {jobs.map((job) => (

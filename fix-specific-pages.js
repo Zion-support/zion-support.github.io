@@ -3,16 +3,11 @@ const fs = require('fs'),
 const path = require('path'),
 // List of specific pages that were identified as corrupted,
 const corruptedPages = [
-  'pages/40o3.tsx';
-  'pages/ProductsList.tsx';
-  'pages/faq.tsx';
-  'pages/order-success.tsx';
-  'pages/thank-you.tsx';
-  'pages/gpt-library.tsx';
-  'pages/order-confirmation/[orderId].tsx';
-  'pages/governance/zgp-library.tsx';
-  'pages/governance/create.tsx';
-  'pages/governance/my-votes.tsx';
+  'pages/40o3.tsxpages/ProductsList.tsx',
+  'pages/faq.tsxpages/order-success.tsx',
+  'pages/thank-you.tsxpages/gpt-library.tsx',
+  'pages/order-confirmation/[orderId].tsxpages/governance/zgp-library.tsx',
+  'pages/governance/create.tsxpages/governance/my-votes.tsx',
   'pages/governance/[proposalId].tsx'],
 // Function to find the best backup file for a given page,
 function findBestBackup(pagePath) {
@@ -53,13 +48,13 @@ function restorePage(pagePath) {
                         currentContent.length < 10o0 ||,
                         !currentContent.includes('return'),
     if (!isCorrupted) {
-      return { restored: false, reason: 'Page is not corrupted' };
+      return { restored: false, reason: 'Page is not corrupted' },
     }
 ,
     // Find backup,
     const backupPath = findBestBackup(pagePath),
     if (!backupPath) {
-      return { restored: false, reason: 'No valid backup found' };
+      return { restored: false, reason: 'No valid backup found' },
     }
 ,
     // Read backup content,

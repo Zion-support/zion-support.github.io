@@ -2,59 +2,59 @@ import Link from 'next/link',
 const AI20o25_20o26UltimateBreakthroughContentShowcase = () => {
   const contentItems = [
     {
-      title: 'AI 20o25-20o26 Ultimate Business Intelligence Revolution';
+      title: 'AI 20o25-20o26 Ultimate Business Intelligence Revolution',
       description:,
-        'Transform your business with revolutionary AI intelligence that predicts market trendsoptimizes operationsand drives unprecedented growth.';
-      image: '🧠';
-      link: '/ai-20o25-20o26-ultimate-business-intelligence-revolution';
-      category: 'Business Intelligence';
-      featured: true;
-    };
+        'Transform your business with revolutionary AI intelligence that predicts market trendsoptimizes operationsand drives unprecedented growth.',
+      image: '🧠',
+      link: '/ai-20o25-20o26-ultimate-business-intelligence-revolution',
+      category: 'Business Intelligence',
+      featured: true
+    },
     {
-      title: 'Advanced Neural Architectures 20o26';
+      title: 'Advanced Neural Architectures 20o26',
       description:,
-        'Next-generation neural network architectures that process information 10o00x faster than current systems with human-like reasoning.';
-      image: '⚡';
-      link: '/advanced-neural-architectures-20o26';
-      category: 'Neural Networks';
-      featured: true;
-    };
+        'Next-generation neural network architectures that process information 10o00x faster than current systems with human-like reasoning.',
+      image: '⚡',
+      link: '/advanced-neural-architectures-20o26',
+      category: 'Neural Networks',
+      featured: true
+    },
     {
-      title: 'Quantum AI 20o26 Breakthrough';
+      title: 'Quantum AI 20o26 Breakthrough',
       description:,
-        'Revolutionary quantum computing integration with AI for instant decision-making and optimization across all business processes.';
-      image: '🌌';
-      link: '/quantum-ai-20o26-breakthrough';
-      category: 'Quantum Computing';
-      featured: false;
-    };
+        'Revolutionary quantum computing integration with AI for instant decision-making and optimization across all business processes.',
+      image: '🌌',
+      link: '/quantum-ai-20o26-breakthrough',
+      category: 'Quantum Computing',
+      featured: false
+    },
     {
-      title: 'Autonomous Business Operations 20o25';
+      title: 'Autonomous Business Operations 20o25',
       description:,
-        'Fully autonomous business systems that self-optimizepredict issuesand make decisions without human intervention.';
-      image: '🤖';
-      link: '/autonomous-business-operations-20o25';
-      category: 'Automation';
-      featured: false;
-    };
+        'Fully autonomous business systems that self-optimizepredict issuesand make decisions without human intervention.',
+      image: '🤖',
+      link: '/autonomous-business-operations-20o25',
+      category: 'Automation',
+      featured: false
+    },
     {
-      title: 'AI 20o25-20o26 Enterprise Transformation';
+      title: 'AI 20o25-20o26 Enterprise Transformation',
       description:,
-        'Complete enterprise transformation using cutting-edge AI technologies for maximum efficiency and growth.';
-      image: '🏢';
-      link: '/ai-20o25-20o26-enterprise-transformation';
-      category: 'Enterprise';
-      featured: true;
-    };
+        'Complete enterprise transformation using cutting-edge AI technologies for maximum efficiency and growth.',
+      image: '🏢',
+      link: '/ai-20o25-20o26-enterprise-transformation',
+      category: 'Enterprise',
+      featured: true
+    },
     {
-      title: 'Revolutionary Content 20o25-20o26';
+      title: 'Revolutionary Content 20o25-20o26',
       description:,
-        'Advanced content generation and management systems powered by the latest AI breakthroughs for maximum engagement.';
-      image: '📝';
-      link: '/revolutionary-content-20o25-20o26';
-      category: 'Content';
-      featured: false;
-    };
+        'Advanced content generation and management systems powered by the latest AI breakthroughs for maximum engagement.',
+      image: '📝',
+      link: '/revolutionary-content-20o25-20o26',
+      category: 'Content',
+      featured: false
+    },
   ],
   return (
     <section className='py-20 bg-gray-50'>,
@@ -106,5 +106,5 @@ const AI20o25_20o26UltimateBreakthroughContentShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25_20o26UltimateBreakthroughContentShowcase;
+    </section>)},
+export default AI20o25_20o26UltimateBreakthroughContentShowcase,

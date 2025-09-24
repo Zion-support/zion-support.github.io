@@ -2,10 +2,10 @@ import { useTranslation } from 'react-i18next',
 import { Button } from '@/components/ui/button',
 Globe,
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger;
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu',
 import { useLanguageSupportedLanguage } from '@/context/LanguageContext',
 export function LanguageSelector() {

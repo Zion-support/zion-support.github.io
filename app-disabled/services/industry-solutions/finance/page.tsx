@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'finance - Zion Tech Group';
-  description: 'Professional finance solutions for your business needs.';
-  keywords: 'finance, services, business, technology';
-};
+  title: 'finance - Zion Tech Group',
+  description: 'Professional finance solutions for your business needs.',
+  keywords: 'finance, services, business, technology',
+},
 export default function FinancePage() {
   return (
     <div className='min-h-screen bg-white'>,

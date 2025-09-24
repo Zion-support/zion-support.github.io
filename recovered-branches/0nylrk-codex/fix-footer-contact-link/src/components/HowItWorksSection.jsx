@@ -1,62 +1,62 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Clock;
-  Target;
-  Zap;
-  Shield;
-  Users;
-  Rocket;
+  Clock,
+  Target,
+  Zap,
+  Shield,
+  Users,
+  Rocket,
   ArrowRight} from 'lucide-react',
 const HowItWorksSection = () => {
   const [hoveredStep, setHoveredStep] = useState(null),
   const steps = [
     {
-      number: "0o1";
-      title: "Discovery & Planning";
-      description: "We analyze your requirements and create a comprehensive project roadmap.";
-      duration: "1-2 weeks";
-      success: "99% accuracy";
+      number: "0o1",
+      title: "Discovery & Planning",
+      description: "We analyze your requirements and create a comprehensive project roadmap.",
+      duration: "1-2 weeks",
+      success: "99% accuracy",
       details: [
-        "Requirements gathering";
-        "Technical architecture";
-        "Project timeline";
-        "Resource allocation"]};
+        "Requirements gathering",
+        "Technical architecture",
+        "Project timeline",
+        "Resource allocation"]},
     {
-      number: "0o2";
-      title: "Development & Testing";
-      description: "Our expert team builds your solution with rigorous quality assurance.";
-      duration: "4-8 weeks";
-      success: "95% efficiency";
+      number: "0o2",
+      title: "Development & Testing",
+      description: "Our expert team builds your solution with rigorous quality assurance.",
+      duration: "4-8 weeks",
+      success: "95% efficiency",
       details: [
-        "Agile development";
-        "Continuous testing";
-        "Code review";
-        "Performance optimization"]};
+        "Agile development",
+        "Continuous testing",
+        "Code review",
+        "Performance optimization"]},
     {
-      number: "0o3";
-      title: "Deployment & Launch";
-      description: "Seamless deployment with monitoring and support for smooth operation.";
-      duration: "1-2 weeks";
-      success: "10o0% uptime";
+      number: "0o3",
+      title: "Deployment & Launch",
+      description: "Seamless deployment with monitoring and support for smooth operation.",
+      duration: "1-2 weeks",
+      success: "10o0% uptime",
       details: [
-        "Production deployment";
-        "Performance monitoring";
-        "User training";
+        "Production deployment",
+        "Performance monitoring",
+        "User training",
         "Ongoing support"]}
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">,
       {/* Background decorative elements */}
@@ -78,7 +78,7 @@ const HowItWorksSection = () => {
             How It <span className="bg-gradient-to-r from-zion-cyan to-zion-purple bg-clip-text text-transparent">Works</span>,
           </h2>,
           <p className="text-zion-slate-light text-lg md:text-xl max-w-4xl mx-auto leading-relaxed">,
-            Our proven process ensures successful project delivery with transparency;
+            Our proven process ensures successful project delivery with transparency,
             quality, and efficiency at every step.,
           </p>,
         </motion.div>,
@@ -206,5 +206,5 @@ const HowItWorksSection = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default HowItWorksSection;
+    </section>)},
+export default HowItWorksSection,

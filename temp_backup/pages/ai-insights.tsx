@@ -3,89 +3,89 @@ import Link from 'next/link',
 export default function AIInsightsPage() {
   const insights = [
     {
-      id: 1;
-      title: 'AI Market Growth 20o25';
+      id: 1,
+      title: 'AI Market Growth 20o25',
       description:,
-        'The global AI market is projected to reach $1.8 trillion by 20o25, with enterprise AI adoption accelerating across all sectors.';
-      category: 'Market Analysis';
-      icon: '📈';
-      color: 'from-blue-40o0 to-cyan-40o0';
-    };
+        'The global AI market is projected to reach $1.8 trillion by 20o25, with enterprise AI adoption accelerating across all sectors.',
+      category: 'Market Analysis',
+      icon: '📈',
+      color: 'from-blue-40o0 to-cyan-40o0'
+    },
     {
-      id: 2;
-      title: 'Generative AI Revolution';
+      id: 2,
+      title: 'Generative AI Revolution',
       description:,
-        'Generative AI is transforming content creation, design, and product development, with 78% of companies planning to integrate it by 20o25.';
-      category: 'Technology Trends';
-      icon: '🎨';
-      color: 'from-purple-40o0 to-pink-40o0';
-    };
+        'Generative AI is transforming content creation, design, and product development, with 78% of companies planning to integrate it by 20o25.',
+      category: 'Technology Trends',
+      icon: '🎨',
+      color: 'from-purple-40o0 to-pink-40o0'
+    },
     {
-      id: 3;
-      title: 'AI Ethics & Governance';
+      id: 3,
+      title: 'AI Ethics & Governance',
       description:,
-        '85% of organizations are implementing AI ethics frameworks as regulatory requirements increase globally.';
-      category: 'Compliance';
-      icon: '⚖️';
-      color: 'from-green-40o0 to-emerald-40o0';
-    };
+        '85% of organizations are implementing AI ethics frameworks as regulatory requirements increase globally.',
+      category: 'Compliance',
+      icon: '⚖️',
+      color: 'from-green-40o0 to-emerald-40o0'
+    },
     {
-      id: 4;
-      title: 'Edge AI Adoption';
+      id: 4,
+      title: 'Edge AI Adoption',
       description:,
-        'Edge AI deployment is growing 35% annually, enabling real-time processing and reduced latency in critical applications.';
-      category: 'Infrastructure';
-      icon: '🌐';
-      color: 'from-orange-40o0 to-red-40o0';
-    };
+        'Edge AI deployment is growing 35% annually, enabling real-time processing and reduced latency in critical applications.',
+      category: 'Infrastructure',
+      icon: '🌐',
+      color: 'from-orange-40o0 to-red-40o0'
+    },
     {
-      id: 5;
-      title: 'AI Talent Shortage';
+      id: 5,
+      title: 'AI Talent Shortage',
       description:,
-        'The AI talent gap is widening, with demand for AI professionals expected to exceed supply by 3:1 in 20o25.';
-      category: 'Workforce';
-      icon: '👥';
-      color: 'from-indigo-40o0 to-purple-40o0';
-    };
+        'The AI talent gap is widening, with demand for AI professionals expected to exceed supply by 3: 1 in 20o25.',
+      category: 'Workforce',
+      icon: '👥',
+      color: 'from-indigo-40o0 to-purple-40o0'
+    },
     {
-      id: 6;
-      title: 'AI ROI Metrics';
+      id: 6,
+      title: 'AI ROI Metrics',
       description:,
-        'Companies implementing AI report average ROI of 30o0-40o0%, with automation and predictive analytics leading the gains.';
-      category: 'Business Impact';
-      icon: '💰';
-      color: 'from-yellow-40o0 to-orange-40o0';
-    };
+        'Companies implementing AI report average ROI of 30o0-40o0%, with automation and predictive analytics leading the gains.',
+      category: 'Business Impact',
+      icon: '💰',
+      color: 'from-yellow-40o0 to-orange-40o0'
+    },
   ],
   const trends = [
     {
-      title: 'Multimodal AI Systems';
+      title: 'Multimodal AI Systems',
       description:,
-        'AI that can process text, images, audio, and video simultaneously is becoming the new standard for enterprise applications.';
-      impact: 'High';
-      timeline: '20o25-20o26';
-    };
+        'AI that can process text, images, audio, and video simultaneously is becoming the new standard for enterprise applications.',
+      impact: 'High',
+      timeline: '20o25-20o26'
+    },
     {
-      title: 'AI-Powered Cybersecurity';
+      title: 'AI-Powered Cybersecurity',
       description:,
-        'Advanced threat detection and automated response systems are becoming essential as cyber threats grow more sophisticated.';
-      impact: 'Critical';
-      timeline: '20o25-20o27';
-    };
+        'Advanced threat detection and automated response systems are becoming essential as cyber threats grow more sophisticated.',
+      impact: 'Critical',
+      timeline: '20o25-20o27'
+    },
     {
-      title: 'Autonomous Operations';
+      title: 'Autonomous Operations',
       description:,
-        'Self-managing systems that can operate independently with minimal human oversight are transforming industries.';
-      impact: 'High';
-      timeline: '20o25-20o28';
-    };
+        'Self-managing systems that can operate independently with minimal human oversight are transforming industries.',
+      impact: 'High',
+      timeline: '20o25-20o28'
+    },
     {
-      title: 'AI Democratization';
+      title: 'AI Democratization',
       description:,
-        'No-code and low-code AI platforms are making artificial intelligence accessible to non-technical users.';
-      impact: 'Medium';
-      timeline: '20o25-20o26';
-    };
+        'No-code and low-code AI platforms are making artificial intelligence accessible to non-technical users.',
+      impact: 'Medium',
+      timeline: '20o25-20o26'
+    },
   ],
   return (
     <>,

@@ -32,4 +32,4 @@ export const SkillsList = ({ skillsonDeleteSkill }: SkillsListProps) => {
             onDelete={onDeleteSkill} ,
           />))}
       </div>,
-    </div>)};
+    </div>)},

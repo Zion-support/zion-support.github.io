@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { LinkuseLocation } from 'react-router-dom',
 import { HomeSearchBriefcaseIconMessageSquareUserMessageCircle } from 'lucide-react',
 import { cn } from '@/lib/utils',
@@ -12,43 +12,43 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
   const isAuthenticated = !!user,
   const navItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: Home;
-      matches: (path: string) => path === '/';
-    };
+      name: 'Home',
+      href: '/',
+      icon: Home,
+      matches: (path: string) => path === '/'
+    },
     {
-      name: 'Browse';
-      href: '/talent';
-      icon: Search;
+      name: 'Browse',
+      href: '/talent',
+      icon: Search,
       matches: (path: string) =>,
         path.startsWith('/talent') ||,
         path.startsWith('/categories') ||,
-        path.startsWith('/marketplace');
-    };
+        path.startsWith('/marketplace'),
+    },
     {
-      name: 'Community';
-      href: '/community';
-      icon: MessageCircle;
+      name: 'Community',
+      href: '/community',
+      icon: MessageCircle,
       matches: (path: string) =>,
-        path.startsWith('/community') || path.startsWith('/forum');
-    };
+        path.startsWith('/community') || path.startsWith('/forum'),
+    },
     {
-      name: 'Messages';
-      href: '/messages';
-      icon: MessageSquare;
+      name: 'Messages',
+      href: '/messages',
+      icon: MessageSquare,
       matches: (path: string) =>,
-        path.startsWith('/messages') || path.startsWith('/inbox');
-      badge: unreadCount;
-      authRequired: true;
-    };
+        path.startsWith('/messages') || path.startsWith('/inbox'),
+      badge: unreadCount,
+      authRequired: true
+    },
     {
-      name: 'Dashboard';
-      href: '/dashboard';
-      icon: User;
-      matches: (path: string) => path.startsWith('/dashboard');
-      authRequired: true;
-    };
+      name: 'Dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: (path: string) => path.startsWith('/dashboard'),
+      authRequired: true
+    },
   ],
   // Filter items based on auth status,
   const visibleItems = navItems.filter(
@@ -61,7 +61,7 @@ export function MobileBottomNav({ unreadCount = 0 }: MobileBottomNavProps) {
             key={item.name}
             to={item.href}
             className={cn(
-              'flex flex-col items-center justify-center w-full h-full px-1 py-1';
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1',
               item.matches(location.pathname),
                 ? 'text-zion-cyan',
                 : 'text-white/70 hover: text-white')}

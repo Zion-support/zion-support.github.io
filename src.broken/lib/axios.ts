@@ -9,10 +9,10 @@ class InterceptorManager {
 }
 ,
 export interface AxiosInstance {
-  defaults: { headers: { common: Record<string string> } };
-  interceptors: { response: InterceptorManager };
+  defaults: { headers: { common: Record<string string> } },
+  interceptors: { response: InterceptorManager },
   get(
-    url: string;
+    url: string,
     config?: { params?: Record<string any> } & RequestInit): Promise<any>,
   post(url: string, data?: any, config?: RequestInit): Promise<any>}
 ,
@@ -22,32 +22,32 @@ export function create(
   const baseURL = config.baseURL || '',
   const withCreds = !!config.withCredentials,
   const instance: AxiosInstance = {
-    defaults: { headers: { common: {} } };
-    interceptors: { response: new InterceptorManager() };
+    defaults: { headers: { common: {} } },
+    interceptors: { response: new InterceptorManager() },
     async get(url, init = {}) {
       const params = (init as any).params,
         ? '?' + new URLSearchParams((init as any).params).toString(),
         : '',
       const headers = {
-        ...instance.defaults.headers.common;
-        ...(init as any).headers;
-      };
+        ...instance.defaults.headers.common,
+        ...(init as any).headers,
+      },
       const opts = { ...init, headers } as RequestInit,
       delete (opts as any).params,
-      return request(baseURL + url + params, 'GET', opts)};
+      return request(baseURL + url + params, 'GET', opts)},
     async post(url, data = {}, init = {}) {
       const headers = {
-        'Content-Type': 'application/json';
-        ...instance.defaults.headers.common;
-        ...(init as any).headers;
-      };
+        'Content-Type': 'application/json',
+        ...instance.defaults.headers.common,
+        ...(init as any).headers,
+      },
       const opts = {
-        ...init;
-        body: JSON.stringify(data);
-        headers;
+        ...init,
+        body: JSON.stringify(data),
+        headers
       } as RequestInit,
-      return request(baseURL + url, 'POST', opts)};
-  };
+      return request(baseURL + url, 'POST', opts)},
+  },
   // Request interceptor,
   instance.interceptors.request.use(
     (config: any) => {
@@ -57,13 +57,13 @@ export function create(
         if (token && config.headers) {
           config.headers.Authorization = `Bearer ${token}`}
       }
-      return config};
+      return config},
     (error: any) => {
       return Promise.reject(error)}
   ),
   // Response interceptor,
   instance.interceptors.response.use(
-    (response: any) => response;
+    (response: any) => response,
     (error: any) => {
       if (error?.response?.status === 401) {
         // Handle unauthorized access,
@@ -76,4 +76,4 @@ export function create(
   return instance}
 ,
 // Export the function instead of calling it immediately to avoid temporal dead zone issues,
-export default createAxiosInstance;
+export default createAxiosInstance,

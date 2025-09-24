@@ -12,7 +12,7 @@ export default function FuturisticAnimatedBackground20o29({ className = '' }: Fu
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -218,14 +218,14 @@ export default function FuturisticAnimatedBackground20o29({ className = '' }: Fu
       ctx.closePath(),
       ctx.stroke(),
       ctx.restore(),
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     animate(),
     // Cleanup,
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationId) {
         cancelAnimationFrame(animationId)}
-    };
+    },
   }, []),
   return (
     <div className={`fixed inset-0 pointer-events-none ${className}`}>,

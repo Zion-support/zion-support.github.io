@@ -11,34 +11,30 @@ interface SEOHeadProps {
   noFollow?: boolean}
 ,
 export default function SEOHead({
-  title;
-  description;
-  keywords = [];
-  canonical;
-  ogImage = '/images/zion-tech-group-og.jpg';
-  ogType = 'website';
-  structuredData;
-  noIndex = false;
-  noFollow = false;
+  title,
+  description,
+  keywords = [],
+  canonical,
+  ogImage = '/images/zion-tech-group-og.jpg',
+  ogType = 'website',
+  structuredData,
+  noIndex = false,
+  noFollow = false,
 }: SEOHeadProps) {
   const fullTitle = `${title} | Zion Tech Group - AI & Technology Solutions`,
   const defaultKeywords = [
-    'AI services';
-    'technology solutions';
-    'enterprise automation';
-    'cybersecurity';
-    'quantum computing';
-    'blockchain solutions';
-    'cloud services';
-    'digital transformation';
-    'Zion Tech Group';
+    'AI servicestechnology solutions',
+    'enterprise automationcybersecurity',
+    'quantum computingblockchain solutions',
+    'cloud servicesdigital transformation',
+    'Zion Tech Group',
   ],
   const allKeywords = [...new Set([...defaultKeywords, ...keywords])],
   return (
     <Head>,
       <title>{fullTitle}</title>,
       <meta name='description' content={description} />,
-      <meta name='keywords' content={allKeywords.join(', ')} />,
+      <meta name='keywords' content={allKeywords.join()} />,
       <meta name='author' content='Zion Tech Group' />,
       <meta
         name='robots',

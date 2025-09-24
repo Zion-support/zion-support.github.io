@@ -184,5 +184,5 @@ const AutonomousSystems20o26Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousSystems20o26Banner;
+    </section>)},
+export default AutonomousSystems20o26Banner,

@@ -114,40 +114,40 @@ export default function AIToolsInteractiveShowcase20o25PromotionBanner() {
     </div>)}
 ,
 const toolCategories = [
-  { icon: <Code className="h-8 w-8 text-white"  />title: "Development"count: "45" };
-  { icon: <Brain className="h-8 w-8 text-white"  />title: "Machine Learning"count: "32" };
-  { icon: <Target className="h-8 w-8 text-white"  />title: "Business Automation"count: "67" };
+  { icon: <Code className="h-8 w-8 text-white"  />title: "Development"count: "45" },
+  { icon: <Brain className="h-8 w-8 text-white"  />title: "Machine Learning"count: "32" },
+  { icon: <Target className="h-8 w-8 text-white"  />title: "Business Automation"count: "67" },
   { icon: <Shield className="h-8 w-8 text-white"  />title: "Security"count: "28" }
 ],
 const featuredTools = [
   {
-    icon: <Brain className="h-5 w-5 text-white"  />;
-    title: "Neural Code Generator";
-    category: "Development";
-    description: "Generate high-quality code using advanced neural networks.";
-    status: "Live Demo"};
+    icon: <Brain className="h-5 w-5 text-white"  />,
+    title: "Neural Code Generator",
+    category: "Development",
+    description: "Generate high-quality code using advanced neural networks.",
+    status: "Live Demo"},
   {
-    icon: <Zap className="h-5 w-5 text-white"  />;
-    title: "Quantum Data Processor";
-    category: "Data Science";
-    description: "Process massive datasets with quantum-enhanced algorithms.";
-    status: "Beta Testing"};
+    icon: <Zap className="h-5 w-5 text-white"  />,
+    title: "Quantum Data Processor",
+    category: "Data Science",
+    description: "Process massive datasets with quantum-enhanced algorithms.",
+    status: "Beta Testing"},
   {
-    icon: <Users className="h-5 w-5 text-white"  />;
-    title: "Intelligent Chat Assistant";
-    category: "Customer Service";
-    description: "Advanced conversational AI with human-like responses.";
+    icon: <Users className="h-5 w-5 text-white"  />,
+    title: "Intelligent Chat Assistant",
+    category: "Customer Service",
+    description: "Advanced conversational AI with human-like responses.",
     status: "Production Ready"}
 ],
 const liveDemos = [
   {
-    title: "Neural Code Generation";
-    duration: "15 min";
-    description: "Watch AI generate a complete web application from description.";
-    complexity: "Beginner"};
+    title: "Neural Code Generation",
+    duration: "15 min",
+    description: "Watch AI generate a complete web application from description.",
+    complexity: "Beginner"},
   {
-    title: "Quantum Data Processing";
-    duration: "20 min";
-    description: "See quantum algorithms process data 10o00x faster.";
+    title: "Quantum Data Processing",
+    duration: "20 min",
+    description: "See quantum algorithms process data 10o00x faster.",
     complexity: "Advanced"}
 ],

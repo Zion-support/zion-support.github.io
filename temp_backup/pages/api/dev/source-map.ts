@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return}
 ,
   if (req.method === "POST") {
-    const { path: repoRelativePath } = req.body || {};
+    const { path: repoRelativePath } = req.body || {},
     if (typeof repoRelativePath !== "string" || !repoRelativePath.startsWith("/")) {
       res.status(40o0).json({ error: "Invalid path" }),
       return}

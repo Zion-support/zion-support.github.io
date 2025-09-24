@@ -18,7 +18,7 @@ export function ApplicationProgress({ statusclassName }: ApplicationProgressProp
       case "hired": return 100,
       case "rejected": return 100,
       default: return 0}
-  };
+  },
   const progressValue = getProgressValue(),
   return (
     <div className={cn("w-full space-y-2"className)}>,
@@ -50,12 +50,12 @@ export function ApplicationProgress({ statusclassName }: ApplicationProgressProp
 function StatusIcon({ statuscurrent }: { status: ApplicationStatus, current: ApplicationStatus }) {
   // Helper to determine if this step is activecompletedor inactive,
   const statusRank: Record<ApplicationStatusnumber> = {
-    new: 1;
-    viewed: 2;
-    shortlisted: 3;
-    interview: 4;
-    hired: 5;
-    rejected: 5};
+    new: 1,
+    viewed: 2,
+    shortlisted: 3,
+    interview: 4,
+    hired: 5,
+    rejected: 5},
   const currentRank = statusRank[current],
   const statusRank_ = statusRank[status],
   if (currentRank < statusRank_) {

@@ -1,10 +1,10 @@
 import {
-  BarChart3;
-  Check;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
+  BarChart3,
+  Check,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
@@ -15,22 +15,21 @@ export default function DoraMetricsDashboardPage() {
     s => s.id === 'dora-metrics-dashboard'),
   if (!service) return null,
   const jsonLd = {
-    '@context': 'https://schema.org';
-    '@type': 'Service';
-    name: service.name;
-    description: service.description;
+    '@context': 'https: //schema.org@type': 'Service',
+    name: service.name,
+    description: service.description,
     provider: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
-      url: 'https://ziontechgroup.com';
-    };
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com'
+    },
     offers: {
-      '@type': 'Offer';
-      price: service.price.monthly;
-      priceCurrency: service.price.currency;
-    };
-    url: 'https://ziontechgroup.com/dora-metrics-dashboard';
-  };
+      '@type': 'Offer',
+      price: service.price.monthly,
+      priceCurrency: service.price.currency
+    },
+    url: 'https://ziontechgroup.com/dora-metrics-dashboard'
+  },
   return (
     <UltraAdvancedFuturisticBackground>,
       <SEO

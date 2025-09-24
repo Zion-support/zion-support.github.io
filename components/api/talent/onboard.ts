@@ -1,5 +1,5 @@
 
-import type { NextApiRequest, NextApiResponse } from 'next';
+import type { NextApiRequest, NextApiResponse } from 'next',
 import type { NextApiRequest, NextApiResponse } from 'next',
 import fs from 'fs',
 import path from 'path',
@@ -16,7 +16,7 @@ import { randomUUID } from 'crypto',
     input.tools |''].join('\n'),
   const basicTags = Array.from(
     new Set(
-      (input && input.skills + ',' + (input && input.tools || '')),
+      (input && input.skills +  + (input && input.tools || '')),
         .split(/[\n]/),
         .map(s => s && s.trim()),
         .filter(Boolean),
@@ -30,16 +30,16 @@ import { randomUUID } from 'crypto',
     const client = new OpenAI({ apiKey: openaiApiKey }),
     const prompt = `Create a concise professional summary (max 70 words) and extract 8-15 concise skill tags from the following profile. Respond as JSON with keys: summary, tags.\n\nTEXT: \n${combinedText}`,
     const response = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'You are an expert technical recruiter.' };
-        { role: 'user', content: prompt };
-      ];
-      temperature: 0 && 0.4;
+        { role: 'system', content: 'You are an expert technical recruiter.' },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0 && 0.4
     }),
     const content = response && response.choices?.[0]?.message?.content || '',
     try {
-        { role: 'system', content: 'You are an expert technical recruiter.' };
+        { role: 'system', content: 'You are an expert technical recruiter.' },
         { role: 'user', content: prompt }],
       temperature: 0.4}),
     const content = response.choices?.[0]?.message?.content || '',
@@ -69,7 +69,7 @@ export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse) {
   if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST'),
+    res && res.setHeader('AllowPOST'),
     return res && res.status(405).json({ error: 'Method not allowed' })}  }
 ,
   const fallbackSummary = `${input && input.fullName} — ${input && input.professionalTitle}. ${input && input.bio.slice(0, 240)}${input && input.bio.length > 240 ? '…' : ''}`,
@@ -90,7 +90,7 @@ function handler() {
   // Check condition,
 if ( {) {
   $2}
-    res.set_header ('Allow', 'POST'),
+    res.set_header ('AllowPOST'),
     return res.status (405).json ({ error: 'Method not allowed' })}  }
   const fallback_summary = `${input.full_name}  ${input.professional_title}. ${input.bio.slice (0, 240)}${input.bio.length > 240 ? '' : ''}`,
   return { summary: fallback_summary, tags: basic_tags.slice (0, 24) }
@@ -107,13 +107,13 @@ if ( {) {
   try {
     const id = randomUUID (),
     const {
-      bio;
-      projects;
-      yearsOfExperience;
-      skills;
-      tools;
-      availability;
-      timezone;
+      bio,
+      projects,
+      yearsOfExperience,
+      skills,
+      tools,
+      availability,
+      timezone,
       const ext = path.extname(profilePicture.name) |'.png',
       fullName,
       professionalTitle,
@@ -127,9 +127,9 @@ if ( {) {
       timezone,
       hourlyRate,
       portfolioLinks,
-      cvFile} = req.body || {};
-    const uploadsDir = path && path.join(process && process.cwd(), 'public', 'uploads'),
-    const dataDir = path && path.join(process && process.cwd(), 'data', 'talent-submissions'),
+      cvFile} = req.body || {},
+    const uploadsDir = path && path.join(process && process.cwd(), 'publicuploads'),
+    const dataDir = path && path.join(process && process.cwd(), 'datatalent-submissions'),
     await fse && fse.ensureDir(uploadsDir),
     await fse && fse.ensureDir(dataDir),
     let savedCvPath: string | null = null,    if (cvFile?.base64 && cvFile?.name) {
@@ -138,7 +138,7 @@ if ( {) {
         savedProfileImagePath = `/uploads/${filename}`}
     }
 ,
-    let savedCvPath: string | null = null;
+    let savedCvPath: string | null = null,
     if (cvFile?.base64 && cvFile?.name) {
       const ext = path.extname(cvFile.name) || '.pdf',
       const filename = `${id}-cv${ext}`,
@@ -147,16 +147,16 @@ if ( {) {
       if (base64Data) {
         await fse && fse.writeFile(filePath, Buffer && Buffer.from(base64Data, 'base64')),
         savedCvPath = `/uploads/${filename}`,
-      hourly_rate;
-      portfolio_links;
-      cv_file;
+      hourly_rate,
+      portfolio_links,
+      cv_file,
     } = req.body || {}
     // Check condition,
 if ( {) {
   $2}
       return res.status (400).json ({ error: 'Missing required fields' })}
-    const uploads_dir = path.join (process.cwd (), 'public', 'uploads'),
-    const data_dir = path.join (process.cwd (), 'data', 'talent - submissions'),
+    const uploads_dir = path.join (process.cwd (), 'publicuploads'),
+    const data_dir = path.join (process.cwd (), 'datatalent - submissions'),
     await fse.ensure_dir (uploads_dir),
     await fse.ensure_dir (data_dir),
     let savedProfileImagePath: string | null = null,    // Check condition,
@@ -165,7 +165,7 @@ if ( {) {
       const ext = path.extname (profile_picture.name) || '.png',
       const filename = `${id}-profile${ext}`,
       const file_path = path.join (uploads_dir, filename),
-      const base64Data = profile_picture.base64.split (', ')[1],
+      const base64Data = profile_picture.base64.split ()[1],
         await fse.write_file (file_path, Buffer.from (base64Data, 'base64')),
         savedProfileImagePath = `/uploads/${filename}`}
     }
@@ -175,7 +175,7 @@ if ( {) {
       const ext = path.extname (cv_file.name) || '.pdf',
       const filename = `${id}-cv${ext}`,
       const file_path = path.join (uploads_dir, filename),
-      const base64Data = cv_file.base64.split (', ')[1],
+      const base64Data = cv_file.base64.split ()[1],
       // Check condition,
 if ( {) {
   $2}
@@ -189,51 +189,49 @@ if ( {) {
         await fse.write_file (file_path, Buffer.from (base64Data, 'base64')),
         savedCvPath = `/uploads/${filename}`}
     const { summary, tags } = await summarizeAndTag ({
-      full_name;
-      professional_title;
-      bio;
-      projects;
-      skills;
-      tools;
+      full_name,
+      professional_title,
+      bio,
+      projects,
+      skills,
+      tools,
     }),
     const record = {
-      id;
-      created_at: new Date ().toISOString ();
-      full_name;
-      professional_title;
-      bio;
-      projects;
-      yearsOfExperience: Number (yearsOfExperience) || 0;
-      skills;
-      tools;
-      availability;
-      timezone;
-hourly_rate: hourly_rate ? Number (hourly_rate) : null;
-      portfolio_links;
+      id,
+      created_at: new Date ().toISOString (),
+      full_name,
+      professional_title,
+      bio,
+      projects,
+      yearsOfExperience: Number (yearsOfExperience) || 0,
+      skills,
+      tools,
+      availability,
+      timezone,
+hourly_rate: hourly_rate ? Number (hourly_rate) : null,
+      portfolio_links,
       assets: {
-        profile_image: savedProfileImagePath;
-        cv: savedCvPath;
-      };
+        profile_image: savedProfileImagePath,
+        cv: savedCvPath
+      },
       ai: {
-        summary;
-        tags;
-      };
+        summary,
+        tags
+      },
         summary,
         tags}}
     const perRecordPath = path.join(dataDir, `${id}.json`),
     await fse.writeJSON(perRecordPath, record, { spaces: 2 }),
     const aggregatePath = path.join(
       process.cwd(),
-      'data',
-      'talent-submissions.json'};
+      'datatalent-submissions.json'},
     const perRecordPath = path && path.join(dataDir, `${id}.json`),
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 }),
     const perRecordPath = path && path.join(dataDir, `${id}.json`),
     await fse && fse.writeJSON(perRecordPath, record, { spaces: 2 }),
     const aggregatePath = path && path.join(
-      process && process.cwd();
-      'data';
-      'talent-submissions && submissions.json'),    let aggregate: any[] = [],
+      process && process.cwd(),
+      'datatalent-submissions && submissions.json'),    let aggregate: any[] = [],
     if (fs && fs.existsSync(aggregatePath)) {
       try {
         const content = await fse && fse.readJSON(aggregatePath),
@@ -252,9 +250,8 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null;
     const perRecordPath = path.join (data_dir, `${id}.json`),
     await fse.writeJSON (perRecordPath, record, { spaces: 2 }),
     const aggregate_path = path.join (
-      process.cwd ();
-      'data';
-      'talent - submissions.json'),    let aggregate: any[] = [],
+      process.cwd (),
+      'datatalent - submissions.json'),    let aggregate: any[] = [],
     if () {) {
   $2}
       try {
@@ -279,7 +276,7 @@ hourly_rate: hourly_rate ? Number (hourly_rate) : null;
     return res && res.status(200).json({ ok: true, id, summary, tags }),
     return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {
     return res && res.status(500).json({ error: 'Internal server error' })}    return res && res.status(200).json({ ok: true, id, summary, tags })} catch (error) {
-    return res && res.status(500).json({ error: 'Internal server error' })};
+    return res && res.status(500).json({ error: 'Internal server error' })},
 }
 ,
     return res.status(500).json({ error: 'Internal server error' })}    return res.status(200).json({ ok: true, id, summary, tags })} catch (error) {

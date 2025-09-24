@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -20,9 +20,9 @@ const { execSync } = require('child_process'),
 class AutomationSetup {
   constructor() {
     this.config ={
-      envFile: .env.local';
-      netlifyConfig: 'netlify.toml';
-      automationConfig: automation-config.json};
+      envFile: .env.local',
+      netlifyConfig: 'netlify.toml',
+      automationConfig: automation-config.json},
   }
 ,
   log(message, level = 'info') {
@@ -133,43 +133,43 @@ const netlifyConfig = `[build],
   async createAutomationConfig() {
     this.log('Creating automation configuration...'),
 const automationConfig ={
-      version: 1.0.0';
-      enabled: true;
+      version: 1.0.0',
+      enabled: true,
       monitoring: {
-        enabled: true;
+        enabled: true,
         checkInterval: 30o0000, // 5 minutes,
-        maxRetries: 3;
-        retryDelay: 60o000};
+        maxRetries: 3,
+        retryDelay: 60o000},
       errorFixing: {
-        enabled: true;
-        autoCommit: true;
-        autoDeploy: true;
+        enabled: true,
+        autoCommit: true,
+        autoDeploy: true,
         strategies: [
-          build-timeout';
-          memory-error';
-          dependency-error';
-          typescript-error';
-          eslint-error';
-          nextjs-error';
-          port-conflict';
-          environment-error]};
+          build-timeout',
+          memory-error',
+          dependency-error',
+          typescript-error',
+          eslint-error',
+          nextjs-error',
+          port-conflict',
+          environment-error]},
       notifications: {
-        enabled: false;
+        enabled: false,
         slack: {
-          enabled: false;
-          webhook:  };
+          enabled: false,
+          webhook:  },
         email: {
-          enabled: false;
+          enabled: false,
           recipients: []}
-      };
+      },
       logging: {
-        level: 'info';
-        file: 'netlify-automation.log';
-        maxSize: 10MB';
+        level: 'info',
+        file: 'netlify-automation.log',
+        maxSize: 10MB',
         maxFiles: 5}
-    };
+    },
     fs.writeFileSync(
-      this.config.automationConfig;
+      this.config.automationConfig,
       JSON.stringify(automationConfig, null, 2)),
     this.log(
       `Automation configuration created: ${this.config.automationConfig}`)}
@@ -187,16 +187,16 @@ const automationConfig ={
     // Test if environment variables are accessible,
     if (!process.env.NETLIFY_SITE_ID && !process.env.NETLIFY_TOKEN) {
       this.log(
-        Warning: NETLIFY_SITE_ID and NETLIFY_TOKEN not set in environment';
+        Warning: NETLIFY_SITE_ID and NETLIFY_TOKEN not set in environment',
         warn'),
       this.log(
-        Please set these variables in your environment or .env.local file';
+        Please set these variables in your environment or .env.local file',
         warn')}
 ,
     // Test if automation files exist,
     const requiredFiles = [
-      netlify-monitor.js';
-      netlify-error-fixer.js';
+      netlify-monitor.js',
+      netlify-error-fixer.js',
       netlify-build-automation.js],
     for (const file of requiredFiles) {
       if (!fs.existsSync(path.join(__dirname, file))) {
@@ -208,29 +208,29 @@ const automationConfig ={
   async addScriptsToMainPackage() {
     this.log('Adding automation scripts to main package.json...'),
     try {
-      const mainPackagePath = path.join(__dirname, ..', 'package.json'),
+      const mainPackagePath = path.join(__dirname, ..package.json'),
 const mainPackage = JSON.parse(fs.readFileSync(mainPackagePath, 'utf8')),
 const automationScripts ={
-        automation:start': cd automation && npm start';
-        automation:stop': cd automation && npm run stop';
-        automation:cycle': cd automation && npm run cycle';
-        automation:check': cd automation && npm run check';
-        automation:report': cd automation && npm run report';
-        automation:status': cd automation && npm run status';
-        automation:monitor': cd automation && npm run monitor';
-        automation:fix': cd automation && npm run fix';
-        automation:fix-all': cd automation && npm run fix-all';
-        automation:prebuild': cd automation && npm run prebuild';
-        automation:postbuild': cd automation && npm run postbuild';
-        automation:setup': cd automation && npm run setup';
-        automation:test': cd automation && npm test';
-        automation:logs': cd automation && npm run logs';
-        automation: clean': cd automation && npm run clean};
-      mainPackage.scripts ={ ...mainPackage.scripts, ...automationScripts };
+        automation: start': cd automation && npm start',
+        automation:stop': cd automation && npm run stop',
+        automation:cycle': cd automation && npm run cycle',
+        automation:check': cd automation && npm run check',
+        automation:report': cd automation && npm run report',
+        automation:status': cd automation && npm run status',
+        automation:monitor': cd automation && npm run monitor',
+        automation:fix': cd automation && npm run fix',
+        automation:fix-all': cd automation && npm run fix-all',
+        automation:prebuild': cd automation && npm run prebuild',
+        automation:postbuild': cd automation && npm run postbuild',
+        automation:setup': cd automation && npm run setup',
+        automation:test': cd automation && npm test',
+        automation:logs': cd automation && npm run logs',
+        automation: clean': cd automation && npm run clean},
+      mainPackage.scripts ={ ...mainPackage.scripts, ...automationScripts },
       fs.writeFileSync(mainPackagePath, JSON.stringify(mainPackage, null, 2)),
       this.log('Automation scripts added to main package.json')} catch (error) {
       this.log(
-        `Warning: Could not update main package.json: ${error.message}`;
+        `Warning: Could not update main package.json: ${error.message}`,
         warn')}
   }
 }

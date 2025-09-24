@@ -6,43 +6,43 @@ const AI20o25TrendsRevolutionaryBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      id: 'ai-20o25-future-trends';
-      title: 'AI 20o25: The Future Trends Revolutionary Breakthrough';
-      description: 'Ultimate Guide to 15,0o00% ROI Through Revolutionary AI Trends';
-      type: 'blog';
-      url: '/blog/ai-20o25-future-trends-revolutionary-breakthrough-ultimate-guide';
+      id: 'ai-20o25-future-trends',
+      title: 'AI 20o25: The Future Trends Revolutionary Breakthrough',
+      description: 'Ultimate Guide to 15,0o00% ROI Through Revolutionary AI Trends',
+      type: 'blog',
+      url: '/blog/ai-20o25-future-trends-revolutionary-breakthrough-ultimate-guide',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$20o0B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.97%'};
-      readingTime: '35 min read';
-      featured: true};
+        roi: '15,0o00%',
+        savings: '$20o0B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.97%'},
+      readingTime: '35 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-ai-trends-success';
-      title: 'Fortune 50o0 AI Trends Success Story';
-      description: '$20o0B Annual Savings - 15,0o00% ROI Achievement';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-trends-150o00-roi-success-story';
+      id: 'fortune-50o0-ai-trends-success',
+      title: 'Fortune 50o0 AI Trends Success Story',
+      description: '$20o0B Annual Savings - 15,0o00% ROI Achievement',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-trends-150o00-roi-success-story',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$20o0B';
-        timeline: '18 months';
-        satisfaction: '99.8%'};
-      readingTime: '25 min read';
-      featured: true};
+        roi: '15,0o00%',
+        savings: '$20o0B',
+        timeline: '18 months',
+        satisfaction: '99.8%'},
+      readingTime: '25 min read',
+      featured: true},
     {
-      id: 'ai-trends-implementation-guide';
-      title: 'AI 20o25 Trends Implementation Ultimate Guide';
-      description: 'Complete Roadmap to 15,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ai-20o25-trends-implementation-ultimate-guide';
+      id: 'ai-trends-implementation-guide',
+      title: 'AI 20o25 Trends Implementation Ultimate Guide',
+      description: 'Complete Roadmap to 15,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ai-20o25-trends-implementation-ultimate-guide',
       metrics: {
-        roi: '15,0o00%';
-        success: '99.7%';
-        timeline: '18 months';
-        guide: '45 min read'};
-      readingTime: '45 min read';
+        roi: '15,0o00%',
+        success: '99.7%',
+        timeline: '18 months',
+        guide: '45 min read'},
+      readingTime: '45 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const AI20o25TrendsRevolutionaryBanner = () => {
     return () => clearInterval(timer)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25TrendsBannerDismissed', 'true')};
+    localStorage.setItem('ai20o25TrendsBannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25TrendsBannerDismissed'),
     if (dismissed === 'true') {
@@ -212,5 +212,5 @@ const AI20o25TrendsRevolutionaryBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25TrendsRevolutionaryBanner;
+    </div>)},
+export default AI20o25TrendsRevolutionaryBanner,

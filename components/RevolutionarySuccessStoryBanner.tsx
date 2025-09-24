@@ -13,23 +13,23 @@ export default function RevolutionarySuccessStoryBanner() {
       {/* Floating Success Icons */}
       <motion.div,
         animate={{
-          y: [0-10];
+          y: [0-10],
           rotate: [0o50]}}
         transition={{
-          duration: 3;
-          repeat: Infinity;
+          duration: 3,
+          repeat: Infinity,
           ease: "easeInOut"}}
         className="absolute top-6 right-6 text-4xl">,
         🎯,
       </motion.div>,
       <motion.div,
         animate={{
-          y: [0o10];
+          y: [0o10],
           rotate: [0-50]}}
         transition={{
-          duration: 4;
-          repeat: Infinity;
-          ease: "easeInOut";
+          duration: 4,
+          repeat: Infinity,
+          ease: "easeInOut",
           delay: 1}}
         className="absolute bottom-6 left-6 text-4xl">,
         💰,

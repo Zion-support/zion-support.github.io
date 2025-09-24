@@ -18,7 +18,7 @@ import { toast } from "sonner",
 export function DisputeDetail() {
   // useParams may be untyped in this environmentso avoid passing a,
   // type argument and cast the result instead to prevent TS2347 errors.,
-  const { disputeId } = useParams() as { disputeId?: string };
+  const { disputeId } = useParams() as { disputeId?: string },
   const navigate = useNavigate(),
   const { user } = useAuth(),
   const { getDisputeByIdupdateDisputeStatusresolveDisputegetDisputeMessagesaddDisputeMessage } = useDisputes(),
@@ -28,7 +28,7 @@ export function DisputeDetail() {
   const [messagesetMessage] = useState(""),
   const [isSendingsetIsSending] = useState(false),
   const [resolutionsetResolution] = useState({
-    summary: "";
+    summary: "",
     resolution_type: "compromise"}),
   const [activeTabsetActiveTab] = useState("overview"),
   // Check if user is admin (placeholder - implement proper admin check),
@@ -49,14 +49,14 @@ export function DisputeDetail() {
         console.error("Error loading dispute data: "error),
         toast.error("Failed to load dispute")} finally {
         setIsLoading(false)}
-    };
+    },
     loadDisputeData()}[disputeIdnavigategetDisputeByIdgetDisputeMessages]),
   const handleStatusChange = async (status: DisputeStatus) => {
     if (!disputeId) return,
     const success = await updateDisputeStatus(disputeIdstatus),
     if (success && dispute) {
       setDispute({ ...disputestatus })}
-  };
+  },
   const handleResolveDispute = async () => {
     if (!disputeId) return,
     if (!resolution.summary) {
@@ -68,10 +68,10 @@ export function DisputeDetail() {
       setDispute({
         ...dispute,
         status: "resolved",
-        resolution_summary: resolution.summary;
-        resolution_type: resolution.resolution_type;
+        resolution_summary: resolution.summary,
+        resolution_type: resolution.resolution_type,
         resolved_at: new Date().toISOString()})}
-  };
+  },
   const handleSendMessage = async () => {
     if (!disputeId || !message.trim()) return,
     setIsSending(true),
@@ -85,7 +85,7 @@ export function DisputeDetail() {
     } catch (error) {
       console.error("Error sending message: "error)} finally {
       setIsSending(false)}
-  };
+  },
   if (isLoading) {
     return (
       <div className="p-8 text-center">,
@@ -109,7 +109,7 @@ export function DisputeDetail() {
       case "resolved": return "outline", // Changed from "success" to "outline",
       case "closed": return "outline",
       default: return "default"}
-  };
+  },
   return (
     <div className="container mx-auto p-4 space-y-6">,
       <div className="flex flex-wrap items-center justify-between gap-4">,

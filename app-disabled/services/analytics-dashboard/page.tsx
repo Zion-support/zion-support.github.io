@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'analytics-dashboard - Zion Tech Group';
+  title: 'analytics-dashboard - Zion Tech Group',
   description:,
-    'Professional analytics-dashboard solutions for your business needs.';
-  keywords: 'analytics-dashboard, services, business, technology';
-};
+    'Professional analytics-dashboard solutions for your business needs.',
+  keywords: 'analytics-dashboard, services, business, technology',
+},
 export default function AnalyticsDashboardPage() {
   return (
     <div className='min-h-screen bg-white'>,

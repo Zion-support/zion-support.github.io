@@ -8,11 +8,11 @@ interface EnhancedLoadingSpinnerProps {
   className?: string}
 ,
 const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
-  size = 'md';
-  variant = 'spinner';
-  message = 'Loading...';
-  progress;
-  showProgress = false;
+  size = 'md',
+  variant = 'spinner',
+  message = 'Loading...',
+  progress,
+  showProgress = false,
   className = ''}) => {
   const [dots, setDots] = useState(''),
   useEffect(() => {
@@ -22,15 +22,15 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
       return () => clearInterval(interval)}
   }, [variant]),
   const sizeClasses ={
-    sm: 'w-4 h-4';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12';
-    xl: 'w-16 h-16'};
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'},
   const textSizeClasses ={
-    sm: 'text-xs';
-    md: 'text-sm';
-    lg: 'text-base';
-    xl: 'text-lg'};
+    sm: 'text-xs',
+    md: 'text-sm',
+    lg: 'text-base',
+    xl: 'text-lg'},
   const renderSpinner = () => {
     switch (variant) {
       case 'spinner':,
@@ -44,7 +44,7 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
                 key={i}
                 className={`${sizeClasses[size]} bg-blue-60o0 rounded-full animate-pulse`}
                 style={{
-                  animationDelay: `${i * 0.2}s`;
+                  animationDelay: `${i * 0.2}s`,
                   animationDuration: '1s'}}
                />))}
           </div>),
@@ -61,7 +61,7 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
       default:,
         return (
           <div className={`${sizeClasses[size]} border-2 border-blue-20o0 border-t-blue-60o0 rounded-full animate-spin`}  />)}
-  };
+  },
   return (
     <div className={`flex flex-col items-center justify-center space-y-4 ${className}`}>,
       {renderSpinner()}
@@ -84,5 +84,5 @@ const EnhancedLoadingSpinner: React.FC<EnhancedLoadingSpinnerProps> = ({
              />,
           </div>,
         </div>)}
-    </div>)};
-export default EnhancedLoadingSpinner;
+    </div>)},
+export default EnhancedLoadingSpinner,

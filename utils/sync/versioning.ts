@@ -39,8 +39,8 @@ export function isVersionEqual(a: string, b: string): boolean {
   return compareVersions(parseVersion(a), parseVersion(b)) === 0}
 }
 ,
-  getVersion: () => '1.0.0';
-  compareVersions: (v1: string, v2: string) => 0;
-  incrementVersion: (version: string) => version};
+  getVersion: () => '1.0.0',
+  compareVersions: (v1: string, v2: string) => 0,
+  incrementVersion: (version: string) => version},
 }
 ,

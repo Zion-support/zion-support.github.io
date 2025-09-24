@@ -26,13 +26,13 @@ interface TalentResultsProps {
 }
 ,
 export function TalentResults({
-  filteredTalents;
-  isLoading;
-  viewProfile;
-  handleRequestHire;
-  savedTalents;
-  handleToggleSave;
-  isAuthenticated;
+  filteredTalents,
+  isLoading,
+  viewProfile,
+  handleRequestHire,
+  savedTalents,
+  handleToggleSave,
+  isAuthenticated,
   activeFiltersProps}: TalentResultsProps) {
   return (
     <div className="flex-1">,

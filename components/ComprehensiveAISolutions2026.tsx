@@ -10,19 +10,19 @@ import {
   BarChart3,
   Users,
   Globe,
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Target;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Play;
-  Download;
-  Star;
-  Award;
-  Lightbulb;
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Play,
+  Download,
+  Star,
+  Award,
+  Lightbulb,
   Settings} from 'lucide-react',
 const ComprehensiveAISolutions20o26 = () => {
   const [activeSolutionsetActiveSolution] = useState(0),
@@ -31,116 +31,100 @@ const ComprehensiveAISolutions20o26 = () => {
     setIsVisible(true)}[]),
   const solutions = [
     {
-      id: 'enterprise-ai';
-      title: 'Enterprise AI Platform';
-      icon: Brain;
-      color: 'from-blue-60o0 to-purple-60o0';
-      description: 'Complete AI infrastructure for large-scale enterprise operations';
+      id: 'enterprise-ai',
+      title: 'Enterprise AI Platform',
+      icon: Brain,
+      color: 'from-blue-60o0 to-purple-60o0',
+      description: 'Complete AI infrastructure for large-scale enterprise operations',
       features: [
-        'Multi-modal AI processing';
-        'Real-time decision making';
-        'Scalable cloud architecture';
-        'Advanced security protocols'];
+        'Multi-modal AI processingReal-time decision making',
+        'Scalable cloud architectureAdvanced security protocols'],
       metrics: {
-        performance: '99.9% uptime';
-        speed: '10x faster processing';
-        accuracy: '98.5% precision';
-        cost: '60% cost reduction'};
+        performance: '99.9% uptime',
+        speed: '10x faster processing',
+        accuracy: '98.5% precision',
+        cost: '60% cost reduction'},
       useCases: [
-        'Predictive analytics';
-        'Customer service automation';
-        'Supply chain optimization';
-        'Risk assessment']};
+        'Predictive analyticsCustomer service automation',
+        'Supply chain optimizationRisk assessment']},
     {
-      id: 'quantum-ai';
-      title: 'Quantum AI Fusion';
-      icon: Rocket;
-      color: 'from-purple-60o0 to-pink-60o0';
-      description: 'Revolutionary quantum computing integrated with AI for exponential performance';
+      id: 'quantum-ai',
+      title: 'Quantum AI Fusion',
+      icon: Rocket,
+      color: 'from-purple-60o0 to-pink-60o0',
+      description: 'Revolutionary quantum computing integrated with AI for exponential performance',
       features: [
-        'Quantum neural networks';
-        'Exponential speed improvements';
-        'Complex optimization solving';
-        'Unbreakable encryption'];
+        'Quantum neural networksExponential speed improvements',
+        'Complex optimization solvingUnbreakable encryption'],
       metrics: {
-        performance: '10o00x faster';
-        speed: 'Quantum speedup';
-        accuracy: '99.9% precision';
-        cost: 'Revolutionary efficiency'};
+        performance: '10o00x faster',
+        speed: 'Quantum speedup',
+        accuracy: '99.9% precision',
+        cost: 'Revolutionary efficiency'},
       useCases: [
-        'Drug discovery';
-        'Financial modeling';
-        'Climate simulation';
-        'Cryptography']};
+        'Drug discoveryFinancial modeling',
+        'Climate simulationCryptography']},
     {
-      id: 'automation-suite';
-      title: 'Intelligent Automation Suite';
-      icon: Zap;
-      color: 'from-green-60o0 to-blue-60o0';
-      description: 'End-to-end business process automation with AI-powered decision making';
+      id: 'automation-suite',
+      title: 'Intelligent Automation Suite',
+      icon: Zap,
+      color: 'from-green-60o0 to-blue-60o0',
+      description: 'End-to-end business process automation with AI-powered decision making',
       features: [
-        'Workflow orchestration';
-        'Intelligent document processing';
-        'Predictive maintenance';
-        'Dynamic resource allocation'];
+        'Workflow orchestrationIntelligent document processing',
+        'Predictive maintenanceDynamic resource allocation'],
       metrics: {
-        performance: '95% automation';
-        speed: '24/7 operations';
-        accuracy: '99.2% reliability';
-        cost: '80% cost savings'};
+        performance: '95% automation',
+        speed: '24/7 operations',
+        accuracy: '99.2% reliability',
+        cost: '80% cost savings'},
       useCases: [
-        'Manufacturing automation';
-        'Document processing';
-        'Customer onboarding';
-        'Inventory management']};
+        'Manufacturing automationDocument processing',
+        'Customer onboardingInventory management']},
     {
-      id: 'security-ai';
-      title: 'AI Security Platform';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
-      description: 'Advanced AI-powered cybersecurity and threat detection system';
+      id: 'security-ai',
+      title: 'AI Security Platform',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
+      description: 'Advanced AI-powered cybersecurity and threat detection system',
       features: [
-        'Real-time threat detection';
-        'Behavioral analysis';
-        'Automated response';
-        'Zero-trust architecture'];
+        'Real-time threat detectionBehavioral analysis',
+        'Automated responseZero-trust architecture'],
       metrics: {
-        performance: '99.8% detection';
-        speed: 'Real-time response';
-        accuracy: '99.5% precision';
-        cost: '70% faster resolution'};
+        performance: '99.8% detection',
+        speed: 'Real-time response',
+        accuracy: '99.5% precision',
+        cost: '70% faster resolution'},
       useCases: [
-        'Threat prevention';
-        'Incident response';
-        'Compliance monitoring';
-        'Risk assessment']}
+        'Threat preventionIncident response',
+        'Compliance monitoringRisk assessment']}
   ],
   const industries = [
-    { name: ''Healthcare', 'icon: Userscount: '50o0+'color: 'from-blue-50o0 to-cyan-50o0' };
-    { name: ''Finance', 'icon: BarChart3count: '30o0+'color: 'from-green-50o0 to-emerald-50o0' };
-    { name: ''Manufacturing', 'icon: Settingscount: '40o0+'color: 'from-orange-50o0 to-red-50o0' };
-    { name: ''Retail', 'icon: Globecount: '60o0+'color: 'from-purple-50o0 to-pink-50o0' };
-    { name: ''Education', 'icon: Lightbulbcount: '20o0+'color: 'from-indigo-50o0 to-blue-50o0' };
-    { name: ''Government', 'icon: Shieldcount: '10o0+'color: 'from-gray-50o0 to-slate-50o0' }
+    { name: ''Healthcareicon: Userscount: '50o0+'color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: ''Financeicon: BarChart3count: '30o0+'color: 'from-green-50o0 to-emerald-50o0' },
+    { name: ''Manufacturingicon: Settingscount: '40o0+'color: 'from-orange-50o0 to-red-50o0' },
+    { name: ''Retailicon: Globecount: '60o0+'color: 'from-purple-50o0 to-pink-50o0' },
+    { name: ''Educationicon: Lightbulbcount: '20o0+'color: 'from-indigo-50o0 to-blue-50o0' },
+    { name: ''Governmenticon: Shieldcount: '10o0+'color: 'from-gray-50o0 to-slate-50o0' }
   ],
   const testimonials = [
     {
-      name: 'Sarah Johnson';
-      role: 'CTOTechCorp';
-      content: 'The AI platform transformed our operations completely. We achieved 90% automation and reduced costs by 60%.';
-      rating: 5;
-      company: 'TechCorp'};
+      name: 'Sarah Johnson',
+      role: 'CTOTechCorp',
+      content: 'The AI platform transformed our operations completely. We achieved 90% automation and reduced costs by 60%.',
+      rating: 5,
+      company: 'TechCorp'},
     {
-      name: 'Michael Chen';
-      role: 'CEOInnovateLabs';
-      content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 10o00x.';
-      rating: 5;
-      company: 'InnovateLabs'};
+      name: 'Michael Chen',
+      role: 'CEOInnovateLabs',
+      content: 'Quantum AI fusion gave us capabilities we never thought possible. Our research speed increased 10o00x.',
+      rating: 5,
+      company: 'InnovateLabs'},
     {
-      name: 'Emily Rodriguez';
-      role: 'VP EngineeringDataFlow';
-      content: 'The security platform prevented 99.8% of threats. Our security team can now focus on strategy.';
-      rating: 5;
+      name: 'Emily Rodriguez',
+      role: 'VP EngineeringDataFlow',
+      content: 'The security platform prevented 99.8% of threats. Our security team can now focus on strategy.',
+      rating: 5,
       company: 'DataFlow'}
   ],
   return (
@@ -352,5 +336,5 @@ const ComprehensiveAISolutions20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default ComprehensiveAISolutions20o26;
+    </div>)},
+export default ComprehensiveAISolutions20o26,

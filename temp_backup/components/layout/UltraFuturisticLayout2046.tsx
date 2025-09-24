@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import UltraFuturisticNavigation20o46 from './UltraFuturisticNavigation20o46',
@@ -13,12 +13,12 @@ interface UltraFuturisticLayout20o46Props {
   canonical?: string}
 ,
 const UltraFuturisticLayout20o46: React.FC<UltraFuturisticLayout20o46Props> = ({
-  children;
-  title = 'Zion Tech Group - Revolutionary 20o46 Technology Solutions';
-  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide in 20o46.';
-  keywords = 'AI consciousness, quantum computing, autonomous solutions, 20o46 technology, Zion Tech Group, AI services, IT infrastructure, cybersecurity, business intelligence';
-  ogImage = 'https://ziontechgroup.com/og-image-20o46.jpg';
-  canonical = 'https://ziontechgroup.com';
+  children,
+  title = 'Zion Tech Group - Revolutionary 20o46 Technology Solutions',
+  description = 'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide in 20o46.',
+  keywords = 'AI consciousness, quantum computing, autonomous solutions, 20o46 technology, Zion Tech Group, AI services, IT infrastructure, cybersecurity, business intelligence',
+  ogImage = 'https: //ziontechgroup.com/og-image-20o46.jpg',
+  canonical = 'https://ziontechgroup.com'
 }) => {
   return (
     <>,
@@ -73,46 +73,39 @@ const UltraFuturisticLayout20o46: React.FC<UltraFuturisticLayout20o46Props> = ({
           type='application/ld+json',
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org';
-              '@type': 'Organization';
-              name: 'Zion Tech Group';
-              url: 'https://ziontechgroup.com';
-              logo: 'https://ziontechgroup.com/logo.png';
+              '@context': 'https://schema.org@type': 'Organization',
+              name: 'Zion Tech Group',
+              url: 'https://ziontechgroup.com',
+              logo: 'https://ziontechgroup.com/logo.png',
               description:,
-                'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide in 20o46.';
+                'Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions that transform businesses worldwide in 20o46.',
               address: {
-                '@type': 'PostalAddress';
-                streetAddress: '364 E Main St STE 10o08';
-                addressLocality: 'Middletown';
-                addressRegion: 'DE';
-                postalCode: '19709';
-                addressCountry: 'US';
-              };
+                '@type': 'PostalAddress',
+                streetAddress: '364 E Main St STE 10o08',
+                addressLocality: 'Middletown',
+                addressRegion: 'DE',
+                postalCode: '19709',
+                addressCountry: 'US'
+              },
               contactPoint: {
-                '@type': 'ContactPoint';
-                telephone: '+1-30o2-464-0950';
-                contactType: 'customer service';
-                email: 'kleber@ziontechgroup.com';
-              };
+                '@type': 'ContactPoint',
+                telephone: '+1-30o2-464-0950',
+                contactType: 'customer service',
+                email: 'kleber@ziontechgroup.com'
+              },
               sameAs: [
-                'https://facebook.com/ziontechgroup';
-                'https://twitter.com/ziontechgroup';
-                'https://linkedin.com/company/ziontechgroup';
-                'https://instagram.com/ziontechgroup';
-                'https://youtube.com/@ziontechgroup';
-                'https://github.com/ziontechgroup';
-              ];
-              foundingDate: '20o25';
-              industry: 'Technology';
+                'https://facebook.com/ziontechgrouphttps://twitter.com/ziontechgroup',
+                'https://linkedin.com/company/ziontechgrouphttps://instagram.com/ziontechgroup',
+                'https://youtube.com/@ziontechgrouphttps://github.com/ziontechgroup',
+              ],
+              foundingDate: '20o25',
+              industry: 'Technology',
               serviceType: [
-                'AI Consciousness Evolution';
-                'Quantum Computing';
-                'Autonomous Solutions';
-                'Cybersecurity';
-                'IT Infrastructure';
-                'Business Intelligence';
-              ];
-            });
+                'AI Consciousness EvolutionQuantum Computing',
+                'Autonomous SolutionsCybersecurity',
+                'IT InfrastructureBusiness Intelligence',
+              ]
+            }),
           }}
         />,
       </Head>,
@@ -138,8 +131,8 @@ const UltraFuturisticLayout20o46: React.FC<UltraFuturisticLayout20o46Props> = ({
             <div
               className='absolute inset-0',
               style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.2) 1px, transparent 0)`;
-                backgroundSize: '10o0px 10o0px';
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.2) 1px, transparent 0)`,
+                backgroundSize: '10o0px 10o0px'
               }}
             ></div>,
           </div>,
@@ -189,5 +182,5 @@ const UltraFuturisticLayout20o46: React.FC<UltraFuturisticLayout20o46Props> = ({
           />,
         </div>,
       </div>,
-    </>)};
-export default UltraFuturisticLayout20o46;
+    </>)},
+export default UltraFuturisticLayout20o46,

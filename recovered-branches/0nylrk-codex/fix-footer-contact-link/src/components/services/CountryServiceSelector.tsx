@@ -6,12 +6,12 @@ import {onsiteServicePricing, CountryPricing} from "@/data/onsiteServicePricing"
 import {CountrySelector} from "./CountrySelector",
 import {PaymentSection} from "./PaymentSection",
 import {ServiceDetails} from "./ServiceDetails",
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { CountrySelector } from "./CountrySelector";
-import { PaymentSection } from "./PaymentSection";
-import { ServiceDetails } from "./ServiceDetails";
-  onsiteServicePricing;
-  CountryPricing;
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { CountrySelector } from "./CountrySelector",
+import { PaymentSection } from "./PaymentSection",
+import { ServiceDetails } from "./ServiceDetails",
+  onsiteServicePricing,
+  CountryPricing,
 } from "@/data/onsiteServicePricing">>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
 interface CountryServiceSelectorProps {
   onCountryChange?: (country: CountryPricing | null) => void,
@@ -43,7 +43,7 @@ export function CountryServiceSelector({ onCountryChange, selectedCountry: initi
       {initialCountry && <ServiceDetails country={initialCountry.country} />}
     </div>,
 interface CountryServiceSelectorProps {
-  onCountryChange?: (country: CountryPricing | null) => void;
+  onCountryChange?: (country: CountryPricing | null) => void,
   selectedCountry?: CountryPricing | null}
 ,
 export function CountryServiceSelector(): any ({ onCountryChange, selectedCountry: initialCountry }: CountryServiceSelectorProps) {

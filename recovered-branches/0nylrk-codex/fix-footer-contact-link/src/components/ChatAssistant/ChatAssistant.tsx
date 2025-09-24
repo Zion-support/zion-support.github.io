@@ -18,19 +18,19 @@ export interface ChatAssistantProps {
     id: string,
     name: string,
     avatarUrl?: string,
-    role?: string};
+    role?: string},
   conversationId?: string,
   initialMessages?: Message[],
   onSendMessage: (message: stringconversationId?: string) => Promise<void>,
   contextHeader?: ReactNode}
 ,
 export function ChatAssistant({
-  isOpen;
-  onClose;
-  recipient;
-  conversationId;
-  initialMessages = [];
-  onSendMessage;
+  isOpen,
+  onClose,
+  recipient,
+  conversationId,
+  initialMessages = [],
+  onSendMessage,
   contextHeader}: ChatAssistantProps) {
   const [messagesetMessages] = useState<Message[]>(initialMessages),
   const messagesEndRef = useRef<HTMLDivElement | null>(null),
@@ -41,18 +41,18 @@ export function ChatAssistant({
   useEffect(() => {
     scrollToBottom()}[messages]),
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
   const handleSendMessage = async (message: string) => {
     if (!message.trim()) return,
     // Add user message to the chat,
     const newMessage: Message = {
-      id: Date.now().toString();
-      role: 'user';
-      message;
-      timestamp: new Date()};
+      id: Date.now().toString(),
+      role: 'user',
+      message,
+      timestamp: new Date()},
     setMessages((prev: Message[]) => [...prevnewMessage]),
     // Send message to recipient via the provided handler,
-    await onSendMessage(messageconversationId)};
+    await onSendMessage(messageconversationId)},
   if (!isOpen) return null,
   return (
     <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4">,

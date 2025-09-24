@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import Head from 'next/head',
 import React, { useState } from 'react',
@@ -8,145 +8,145 @@ import React{ useState } from 'react',
 "use client",
   const featuredNews = [
     {
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
-      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.';
-      author: 'Press Team';
-      date: '2025-01-15';
-      author: 'Dr. Kleber';
-      featured: true;
-      image: '/api/placeholder/600/400';
-      tags: ['AI 'Consciousness', 'Breakthrough'Innovation'];
-      readTime: '5 min read'};
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
+      author: 'Press Team',
+      date: '2025-01-15',
+      author: 'Dr. Kleber',
+      featured: true,
+      image: '/api/placeholder/600/400',
+      tags: ['AI 'ConsciousnessBreakthrough'Innovation'],
+      readTime: '5 min read'},
     {
-      title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems';
-      excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.';
-      author: 'Research Team';
-      date: '2025-01-12';
-      category: 'Research';
-      readTime: '6 min read';
-      image: '/news/quantum-breakthrough.jpg';
-      tags: ['Quantum 'Computing', 'Research'Breakthrough'];
-      icon: <Atom className="w-6 h-6" />;
-      featured: true};
+      title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems',
+      excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',
+      author: 'Research Team',
+      date: '2025-01-12',
+      category: 'Research',
+      readTime: '6 min read',
+      image: '/news/quantum-breakthrough.jpg',
+      tags: ['Quantum 'ComputingResearch'Breakthrough'],
+      icon: <Atom className="w-6 h-6" />,
+      featured: true},
     {
-      title: 'Cybersecurity Partnership with Global Tech Leaders';
-      excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
-      author: 'Partnerships Team';
-      date: '2025-01-10';
+      title: 'Cybersecurity Partnership with Global Tech Leaders',
+      excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
+      author: 'Partnerships Team',
+      date: '2025-01-10',
 =======,
   const [searchQuerysetSearchQuery] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [selectedYearsetSelectedYear] = useState('all'),
   const categories = [
-    { id: ''all', 'name: 'All 'News', 'icon: Newspapercount: 45 };
-    { id: ''ai', 'name: 'AI & 'Technology', 'icon: Braincount: 18 };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: 12 };
-    { id: ''space', 'name: 'Space 'Technology', 'icon: Rocketcount: 8 };
-    { id: ''security', 'name: ''Cybersecurity', 'icon: Shieldcount: 7 }
+    { id: ''allname: 'All 'Newsicon: Newspapercount: 45 },
+    { id: ''ainame: 'AI & 'Technologyicon: Braincount: 18 },
+    { id: ''quantumname: 'Quantum 'Computingicon: Atomcount: 12 },
+    { id: ''spacename: 'Space 'Technologyicon: Rocketcount: 8 },
+    { id: ''securityname: ''Cybersecurityicon: Shieldcount: 7 }
   ],
   const years = [
-    { id: ''all', 'name: 'All Years' };
-    { id: '2025'name: '2025' };
-    { id: '2024'name: '2024' };
+    { id: ''allname: 'All Years' },
+    { id: '2025'name: '2025' },
+    { id: '2024'name: '2024' },
     { id: '2023'name: '2023' }
   ],
-  NewspaperCalendarUserTagArrowRightExternalLink;
-  TrendingUpLightbulbRocketGlobeShieldZap;
+  NewspaperCalendarUserTagArrowRightExternalLink,
+  TrendingUpLightbulbRocketGlobeShieldZap,
   ClockBookOpenVideoPodcastFileTextSearch} from 'lucide-react',
   return (
     <UltraFuturisticBackground>,
       <div className="min-h-screen">,
         <Head>,
           <title>News & Updates - Zion Tech Group | Latest Technology Insights & Company Updates</title>,
-          <meta name="description" content="Stay updated with Zion Tech 'Group', 's latest newsproduct launchespartnershipsand industry insights. Read about our breakthroughs in AIquantum computingand emerging technologies." />,
+          <meta name="description" content="Stay updated with Zion Tech 'Groups latest newsproduct launchespartnershipsand industry insights. Read about our breakthroughs in AIquantum computingand emerging technologies." />,
         </Head>,
-      id: 1;
-      title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
-      excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
-      category: "Product Launch";
-      author: "Zion Tech Group Team";
-      date: "2025-01-15";
-      readTime: "5 min read";
-      image: "/images/news/quantum-ai-launch.jpg";
-      tags: ["Quantum Computing"AI"Product Launch"]};
+      id: 1,
+      title: "Zion Tech Group Launches Revolutionary Quantum AI Platform",
+      excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",
+      category: "Product Launch",
+      author: "Zion Tech Group Team",
+      date: "2025-01-15",
+      readTime: "5 min read",
+      image: "/images/news/quantum-ai-launch.jpg",
+      tags: ["Quantum Computing"AI"Product Launch"]},
     {
-      id: 2;
-      title: "New Partnership with Global Healthcare Consortium";
-      excerpt: "'We', 're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.";
-      category: "Partnership";
-      author: "Business Development";
-      date: "2025-01-12";
-      readTime: "4 min read";
-      image: "/images/news/healthcare-partnership.jpg";
-      tags: ["Healthcare"Partnership"AI"]};
+      id: 2,
+      title: "New Partnership with Global Healthcare Consortium",
+      excerpt: "'We', 're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",
+      category: "Partnership",
+      author: "Business Development",
+      date: "2025-01-12",
+      readTime: "4 min read",
+      image: "/images/news/healthcare-partnership.jpg",
+      tags: ["Healthcare"Partnership"AI"]},
     {
-      id: 3;
-      title: "Breakthrough in Autonomous Cybersecurity Systems";
-      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecuritydeveloping systems that can detect and respond to threats in real-time without human intervention.";
-      category: "Research";
-      author: "Research Team";
-      date: "2025-01-10";
-      readTime: "6 min read";
-      image: "/images/news/cybersecurity-breakthrough.jpg";
-      tags: ["Cybersecurity"Research"Autonomous Systems"]};
+      id: 3,
+      title: "Breakthrough in Autonomous Cybersecurity Systems",
+      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecuritydeveloping systems that can detect and respond to threats in real-time without human intervention.",
+      category: "Research",
+      author: "Research Team",
+      date: "2025-01-10",
+      readTime: "6 min read",
+      image: "/images/news/cybersecurity-breakthrough.jpg",
+      tags: ["Cybersecurity"Research"Autonomous Systems"]},
     {
-      id: 4;
-      title: "Space Technology Division Expands Operations";
-      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operationspace resource miningand orbital analytics services.";
-      category: "Company News";
-      author: "Space Technology Team";
-      date: "2025-01-08";
-      readTime: "3 min read";
-      image: "/images/news/space-expansion.jpg";
-      tags: ["Space Technology"Expansion"Satellites"]};
+      id: 4,
+      title: "Space Technology Division Expands Operations",
+      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operationspace resource miningand orbital analytics services.",
+      category: "Company News",
+      author: "Space Technology Team",
+      date: "2025-01-08",
+      readTime: "3 min read",
+      image: "/images/news/space-expansion.jpg",
+      tags: ["Space Technology"Expansion"Satellites"]},
     {
-      id: 5;
-      title: "AI Ethics and Governance Framework Released";
-      excerpt: "'We', 've published our comprehensive AI ethics and governance frameworksetting new standards for responsible AI development and deployment in enterprise environments.";
-      category: "Policy";
-      author: "AI Ethics Team";
-      date: "2025-01-05";
-      readTime: "7 min read";
-      image: "/images/news/ai-ethics-framework.jpg";
-      tags: ["AI Ethics"Governance"Policy"]};
+      id: 5,
+      title: "AI Ethics and Governance Framework Released",
+      excerpt: "'Weve published our comprehensive AI ethics and governance frameworksetting new standards for responsible AI development and deployment in enterprise environments.",
+      category: "Policy",
+      author: "AI Ethics Team",
+      date: "2025-01-05",
+      readTime: "7 min read",
+      image: "/images/news/ai-ethics-framework.jpg",
+      tags: ["AI Ethics"Governance"Policy"]},
     {
-      id: 6;
-      title: "Financial Services Innovation Award Winner";
-      excerpt: "Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.";
-      category: "Awards";
-      author: "Marketing Team";
-      date: "2025-01-03";
-      readTime: "3 min read";
-      image: "/images/news/financial-award.jpg";
+      id: 6,
+      title: "Financial Services Innovation Award Winner",
+      excerpt: "Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",
+      category: "Awards",
+      author: "Marketing Team",
+      date: "2025-01-03",
+      readTime: "3 min read",
+      image: "/images/news/financial-award.jpg",
 =======,
       tags: ["Awards"Financial Services"Quantum Computing"],
 export default function News() {
   const featuredNews = [
     {
-      id: 1;
-      title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform';
-      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptographyoptimizationand scientific research.';
-      category: 'Company News';
-      author: 'Dr. Sarah Chen';
-      date: '2024-01-15';
-      readTime: '5 min read';
-      image: '/api/placeholder/600/400';
+      id: 1,
+      title: 'Zion Tech Group Launches Revolutionary AI-Powered Quantum Computing Platform',
+      excerpt: 'Our latest breakthrough combines artificial intelligence with quantum computing to solve previously unsolvable problems in cryptographyoptimizationand scientific research.',
+      category: 'Company News',
+      author: 'Dr. Sarah Chen',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      image: '/api/placeholder/600/400',
 =======,
-      tags: [', 'AI', 'Quantum 'Computing', 'Innovation'];
+      tags: [AI', 'Quantum 'ComputingInnovation'],
 export default function NewsPage() {
   const newsArticles = [
     {
-      id: 1;
-      title: "Zion Tech Group Launches New AI-Powered Automation Platform";
-      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environmentsrevolutionizing how businesses operate.";
-      date: "2025-01-19";
-      category: "Company News";
-      author: "Zion Tech Group";
-      readTime: "3 min read";
-      image: "🚀";
-      featured: true};
+      id: 1,
+      title: "Zion Tech Group Launches New AI-Powered Automation Platform",
+      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environmentsrevolutionizing how businesses operate.",
+      date: "2025-01-19",
+      category: "Company News",
+      author: "Zion Tech Group",
+      readTime: "3 min read",
+      image: "🚀",
+      featured: true},
     {
-      id: 2;
+      id: 2,
             </motion.div>,
           </div>,
         </section>,
@@ -349,8 +349,8 @@ export default function NewsPage() {
                     category === "All News",
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white",
                       : "bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700 hover:border-gray-600",
-  Search, Calendar, Clock, User, Tag;
-  ArrowRight, ExternalLink, TrendingUp;
+  Search, Calendar, Clock, User, Tag,
+  ArrowRight, ExternalLink, TrendingUp,
   BookOpen, Globe, Video,
 =======,
   SearchCalendarClockUserTag,
@@ -360,117 +360,117 @@ export default function News() {
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const categories = [
-    { id: ''all', 'name: 'All 'News', 'count: 24 };
-    { id: ''ai', 'name: 'AI & 'Consciousness', 'count: 8 };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'count: 6 };
-    { id: ''enterprise', 'name: 'Enterprise 'IT', 'count: 5 };
-    { id: ''research', 'name: 'Research & 'Development', 'count: 3 };
-    { id: ''industry', 'name: 'Industry 'Insights', 'count: 2 }
+    { id: ''allname: 'All 'Newscount: 24 },
+    { id: ''ainame: 'AI & 'Consciousnesscount: 8 },
+    { id: ''quantumname: 'Quantum 'Computingcount: 6 },
+    { id: ''enterprisename: 'Enterprise 'ITcount: 5 },
+    { id: ''researchname: 'Research & 'Developmentcount: 3 },
+    { id: ''industryname: 'Industry 'Insightscount: 2 }
   ],
   const featuredNews = [
     {
-      id: 1;
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
-      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systemsenabling unprecedented levels of understanding and collaboration.';
-      category: 'ai';
-      author: 'Dr. Sarah Chen';
-      date: '2024-01-15';
-      readTime: '5 min read';
-      image: '/images/news/ai-consciousness-launch.jpg';
-      featured: true;
-      tags: ['AI 'Consciousness', 'Platform 'Launch', 'Innovation']};
+      id: 1,
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
+      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systemsenabling unprecedented levels of understanding and collaboration.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      image: '/images/news/ai-consciousness-launch.jpg',
+      featured: true,
+      tags: ['AI 'ConsciousnessPlatform 'Launch', 'Innovation']},
     {
-      id: 2;
-      title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability';
-      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stabilityopening new possibilities for complex computational problems.';
-      category: 'quantum';
-      author: 'Prof. Michael Rodriguez';
-      date: '2024-01-12';
-      readTime: '7 min read';
-      image: '/images/news/quantum-breakthrough.jpg';
-      featured: true;
-      tags: ['Quantum 'Computing', 'Research'Breakthrough']}
+      id: 2,
+      title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability',
+      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stabilityopening new possibilities for complex computational problems.',
+      category: 'quantum',
+      author: 'Prof. Michael Rodriguez',
+      date: '2024-01-12',
+      readTime: '7 min read',
+      image: '/images/news/quantum-breakthrough.jpg',
+      featured: true,
+      tags: ['Quantum 'ComputingResearch'Breakthrough']}
   ],
   const latestNews = [
     {
-      id: 3;
-      title: 'Enterprise AI Adoption: Trends and Best Practices for 2024';
-      excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.';
-      category: 'enterprise';
-      author: 'Jennifer Kim';
-      date: '2024-01-10';
-      readTime: '4 min read';
-      image: '/images/news/enterprise-ai-trends.jpg';
-      tags: ['Enterprise 'AI', 'Best Practices'2024 Trends']};
+      id: 3,
+      title: 'Enterprise AI Adoption: Trends and Best Practices for 2024',
+      excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.',
+      category: 'enterprise',
+      author: 'Jennifer Kim',
+      date: '2024-01-10',
+      readTime: '4 min read',
+      image: '/images/news/enterprise-ai-trends.jpg',
+      tags: ['Enterprise 'AIBest Practices'2024 Trends']},
     {
-      id: 4;
-      title: 'The Future of Autonomous Business Systems';
-      excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.';
-      category: 'research';
-      author: 'Dr. Alex Thompson';
-      date: '2024-01-08';
-      readTime: '6 min read';
-      image: '/images/news/autonomous-systems.jpg';
-      tags: ['Autonomous 'Systems', 'Future of 'Work', 'Innovation']};
+      id: 4,
+      title: 'The Future of Autonomous Business Systems',
+      excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.',
+      category: 'research',
+      author: 'Dr. Alex Thompson',
+      date: '2024-01-08',
+      readTime: '6 min read',
+      image: '/images/news/autonomous-systems.jpg',
+      tags: ['Autonomous 'SystemsFuture of 'Work', 'Innovation']},
     {
-      id: 5;
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions';
-      excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.';
-      category: 'enterprise';
-      author: 'Marcus Johnson';
-      date: '2024-01-05';
-      readTime: '5 min read';
-      image: '/images/news/ai-cybersecurity.jpg';
-      tags: [', 'Cybersecurity', 'AI 'Security', 'Digital Protection']};
+      id: 5,
+      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
+      excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.',
+      category: 'enterprise',
+      author: 'Marcus Johnson',
+      date: '2024-01-05',
+      readTime: '5 min read',
+      image: '/images/news/ai-cybersecurity.jpg',
+      tags: [Cybersecurity', 'AI 'SecurityDigital Protection']},
     {
-      id: 6;
-      title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies';
-      excerpt: 'Our research team explores the intersection of quantum computing and machine learningrevealing exciting possibilities for the future.';
-      category: 'quantum';
-      author: 'Dr. Elena Petrova';
-      date: '2024-01-03';
-      readTime: '8 min read';
-      image: '/images/news/quantum-ml.jpg';
-      tags: ['Quantum 'ML', 'Research'Technology Convergence']}
+      id: 6,
+      title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies',
+      excerpt: 'Our research team explores the intersection of quantum computing and machine learningrevealing exciting possibilities for the future.',
+      category: 'quantum',
+      author: 'Dr. Elena Petrova',
+      date: '2024-01-03',
+      readTime: '8 min read',
+      image: '/images/news/quantum-ml.jpg',
+      tags: ['Quantum 'MLResearch'Technology Convergence']}
   ],
   const industryInsights = [
     {
-      id: 7;
-      title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact';
-      excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';
-      category: 'industry';
-      author: 'Dr. Robert Chang';
-      date: '2024-01-01';
-      readTime: '6 min read';
-      tags: ['AI 'Ethics', 'Business 'Impact', 'Consciousness']};
+      id: 7,
+      title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact',
+      excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.',
+      category: 'industry',
+      author: 'Dr. Robert Chang',
+      date: '2024-01-01',
+      readTime: '6 min read',
+      tags: ['AI 'EthicsBusiness 'Impact', 'Consciousness']},
     {
-      id: 8;
-      title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions';
-      excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.';
-      category: 'industry';
-      author: 'Lisa Wang';
-      date: '2023-12-28';
-      readTime: '4 min read';
-      tags: ['Micro-'SaaS', 'Startups'Software Industry']}
+      id: 8,
+      title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions',
+      excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.',
+      category: 'industry',
+      author: 'Lisa Wang',
+      date: '2023-12-28',
+      readTime: '4 min read',
+      tags: ['Micro-'SaaSStartups'Software Industry']}
   ],
   const upcomingEvents = [
     {
-      id: 1;
-      title: 'AI Consciousness Summit 2024';
-      type: 'Conference';
-      date: '2024-02-15';
-      time: '9:00 AM - 6:00 PM';
-      location: 'San FranciscoCA';
-      description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
-      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'};
+      id: 1,
+      title: 'AI Consciousness Summit 2024',
+      type: 'Conference',
+      date: '2024-02-15',
+      time: '9:00 AM - 6:00 PM',
+      location: 'San FranciscoCA',
+      description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',
+      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'},
     {
-      id: 2;
-      title: 'Quantum Computing Workshop';
-      type: 'Workshop';
-      date: '2024-02-22';
-      time: '1:00 PM - 5:00 PM';
-      location: 'Virtual';
-      description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';
+      id: 2,
+      title: 'Quantum Computing Workshop',
+      type: 'Workshop',
+      date: '2024-02-22',
+      time: '1:00 PM - 5:00 PM',
+      location: 'Virtual',
+      description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.',
       registration: 'https://ziontechgroup.com/events/quantum-workshop'}
   ],
   const filteredNews = [...featuredNews...latestNews...industryInsights].filter(article => {
@@ -481,17 +481,17 @@ export default function News() {
     return matchesSearch && matchesCategory}),
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US'{
-      year: 'numeric';
-      month: 'long';
-      day: 'numeric'})};
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'})},
   const getCategoryColor = (category: string) => {
     const colors = {
-      ai: 'from-cyan-500 to-blue-500';
-      quantum: 'from-purple-500 to-pink-500';
-      enterprise: 'from-green-500 to-emerald-500';
-      research: 'from-orange-500 to-red-500';
-      industry: 'from-indigo-500 to-purple-500'};
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'};
+      ai: 'from-cyan-500 to-blue-500',
+      quantum: 'from-purple-500 to-pink-500',
+      enterprise: 'from-green-500 to-emerald-500',
+      research: 'from-orange-500 to-red-500',
+      industry: 'from-indigo-500 to-purple-500'},
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'},
   return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
@@ -549,22 +549,17 @@ export default function News() {
         <div className="max-w-7xl mx-auto">,
           <motion.h2,
 =======,
-    'All News';
-    'Company News';
-    'Partnerships';
-    'AI & Ethics';
-    'Quantum Technology';
-    'Space Technology';
-    'Micro SAAS';
-    'IT Services';
-    'Metaverse';
-    'Industry Insights'],
+    'All NewsCompany News',
+    'PartnershipsAI & Ethics',
+    'Quantum TechnologySpace Technology',
+    'Micro SAASIT Services',
+    'MetaverseIndustry Insights'],
   const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US'{
-      year: 'numeric';
-      month: 'long';
-      day: 'numeric'})};
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'})},
   return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
@@ -1292,66 +1287,66 @@ export default function News() {
       </section>,
     </div>)}
 =======,
-      title: "Partnership with TechCorp Announced for Cloud Infrastructure";
-      excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.";
-      date: "2025-01-18";
-      category: "Partnerships";
-      author: "Sarah Chen";
-      readTime: "2 min read";
-      image: "🤝"};
+      title: "Partnership with TechCorp Announced for Cloud Infrastructure",
+      excerpt: "Strategic collaboration to deliver next-generation cloud automation solutions for enterprise clients worldwide.",
+      date: "2025-01-18",
+      category: "Partnerships",
+      author: "Sarah Chen",
+      readTime: "2 min read",
+      image: "🤝"},
     {
-      id: 3;
-      title: "AI Ethics Guidelines Released for Responsible Development";
-      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparencyfairnessand societal benefit in mind.";
-      date: "2025-01-17";
-      category: "Innovation";
-      author: "Dr. Emily Watson";
-      readTime: "4 min read";
-      image: "⚖️"};
+      id: 3,
+      title: "AI Ethics Guidelines Released for Responsible Development",
+      excerpt: "Comprehensive framework ensuring our AI solutions are developed with transparencyfairnessand societal benefit in mind.",
+      date: "2025-01-17",
+      category: "Innovation",
+      author: "Dr. Emily Watson",
+      readTime: "4 min read",
+      image: "⚖️"},
     {
-      id: 4;
-      title: "New Office Opening in Singapore";
-      excerpt: "Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.";
-      date: "2025-01-16";
-      category: "Company News";
-      author: "Marcus Rodriguez";
-      readTime: "2 min read";
-      image: "🌏"};
+      id: 4,
+      title: "New Office Opening in Singapore",
+      excerpt: "Expanding our global presence to better serve clients in the Asia-Pacific region with local expertise and support.",
+      date: "2025-01-16",
+      category: "Company News",
+      author: "Marcus Rodriguez",
+      readTime: "2 min read",
+      image: "🌏"},
     {
-      id: 5;
-      title: "Machine Learning Model Achieves 99.7% Accuracy";
-      excerpt: "Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.performance.";
-      date: "2025-01-15";
-      category: "Technology";
-      author: "Dr. James Wilson";
-      readTime: "5 min read";
-      image: "🧠"};
+      id: 5,
+      title: "Machine Learning Model Achieves 99.7% Accuracy",
+      excerpt: "Breakthrough in predictive analytics demonstrates our commitment to pushing the boundaries of AI window.window.performance.",
+      date: "2025-01-15",
+      category: "Technology",
+      author: "Dr. James Wilson",
+      readTime: "5 min read",
+      image: "🧠"},
     {
-      id: 6;
-      title: "Annual Sustainability Report Published";
-      excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development.";
-      date: "2025-01-14";
-      category: "Sustainability";
-      author: "Lisa Park";
-      readTime: "6 min read";
-      image: "🌱"};
+      id: 6,
+      title: "Annual Sustainability Report Published",
+      excerpt: "Comprehensive overview of our environmental impact and commitment to sustainable technology development.",
+      date: "2025-01-14",
+      category: "Sustainability",
+      author: "Lisa Park",
+      readTime: "6 min read",
+      image: "🌱"},
     {
-      id: 7;
-      title: "Customer Success Story: Retail Automation";
-      excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems.";
-      date: "2025-01-13";
-      category: "Case Studies";
-      author: "Alex Thompson";
-      readTime: "4 min read";
-      image: "📊"};
+      id: 7,
+      title: "Customer Success Story: Retail Automation",
+      excerpt: "How we helped a major retailer increase efficiency by 300% through intelligent automation systems.",
+      date: "2025-01-13",
+      category: "Case Studies",
+      author: "Alex Thompson",
+      readTime: "4 min read",
+      image: "📊"},
     {
-      id: 8;
-      title: "New Research Paper on Autonomous Systems";
-      excerpt: "Published in leading AI journalour research explores the future of self-managing technology infrastructure.";
-      date: "2025-01-12";
-      category: "Research";
-      author: "Prof. Maria Garcia";
-      readTime: "7 min read";
+      id: 8,
+      title: "New Research Paper on Autonomous Systems",
+      excerpt: "Published in leading AI journalour research explores the future of self-managing technology infrastructure.",
+      date: "2025-01-12",
+      category: "Research",
+      author: "Prof. Maria Garcia",
+      readTime: "7 min read",
       image: "📚"}
   ],
   const categories = ["All"Company News"Partnerships"Innovation"Technology"Sustainability"Case Studies"Research"],

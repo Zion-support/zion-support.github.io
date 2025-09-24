@@ -6,44 +6,44 @@ const ConsciousnessAI20o25RevolutionBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const consciousnessContent = [
     {
-      id: 'consciousness-revolution';
-      type: 'blog';
-      title: 'AI 20o25: The Consciousness Revolution - Ultimate Business Breakthrough Guide to 50,0o00% ROI';
-      description: 'The most significant technological breakthrough in human history, delivering unprecedented business transformation capabilities.';
-      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough';
+      id: 'consciousness-revolution',
+      type: 'blog',
+      title: 'AI 20o25: The Consciousness Revolution - Ultimate Business Breakthrough Guide to 50,0o00% ROI',
+      description: 'The most significant technological breakthrough in human history, delivering unprecedented business transformation capabilities.',
+      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$1.2T';
-        accuracy: '99.97%';
-        efficiency: '10,0o00%'};
-      readingTime: '45 min read';
-      tags: ['AI Consciousness', 'Business Transformation', '50,0o00% ROI', 'Revolutionary Technology']};
+        roi: '50,0o00%',
+        savings: '$1.2T',
+        accuracy: '99.97%',
+        efficiency: '10,0o00%'},
+      readingTime: '45 min read',
+      tags: ['AI ConsciousnessBusiness Transformation', '50,0o00% ROIRevolutionary Technology']},
     {
-      id: 'fortune-50o0-consciousness-success';
-      type: 'case-study';
-      title: 'Fortune 50o0 Consciousness AI Transformation: $2.8B Annual Savings - 50,0o00% ROI Success Story';
-      description: 'TechGlobal Industries achieved unprecedented success with consciousness AI, revolutionizing their business operations.';
-      url: '/case-studies/fortune-50o0-consciousness-ai-transformation-50o000-roi-success-story';
+      id: 'fortune-50o0-consciousness-success',
+      type: 'case-study',
+      title: 'Fortune 50o0 Consciousness AI Transformation: $2.8B Annual Savings - 50,0o00% ROI Success Story',
+      description: 'TechGlobal Industries achieved unprecedented success with consciousness AI, revolutionizing their business operations.',
+      url: '/case-studies/fortune-50o0-consciousness-ai-transformation-50o000-roi-success-story',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B';
-        accuracy: '99.97%';
-        efficiency: '340%'};
-      readingTime: '35 min read';
-      tags: ['Fortune 50o0', 'Consciousness AI', 'Success Story', 'Manufacturing']};
+        roi: '50,0o00%',
+        savings: '$2.8B',
+        accuracy: '99.97%',
+        efficiency: '340%'},
+      readingTime: '35 min read',
+      tags: ['Fortune 50o0Consciousness AI', 'Success StoryManufacturing']},
     {
-      id: 'consciousness-implementation-guide';
-      type: 'resource';
-      title: 'Consciousness AI Implementation Ultimate Guide 20o25: Complete Roadmap to 50,0o00% ROI';
-      description: 'Comprehensive roadmap for achieving 50,0o00% ROI through strategic consciousness AI deployment.';
-      url: '/resources/consciousness-ai-implementation-ultimate-guide-20o25-50o000-roi';
+      id: 'consciousness-implementation-guide',
+      type: 'resource',
+      title: 'Consciousness AI Implementation Ultimate Guide 20o25: Complete Roadmap to 50,0o00% ROI',
+      description: 'Comprehensive roadmap for achieving 50,0o00% ROI through strategic consciousness AI deployment.',
+      url: '/resources/consciousness-ai-implementation-ultimate-guide-20o25-50o000-roi',
       metrics: {
-        roi: '50,0o00%';
-        timeline: '12 months';
-        success: '99.7%';
-        guide: 'Complete'};
-      readingTime: '60 min read';
-      tags: ['Implementation Guide', 'Consciousness AI', 'ROI Strategy', 'Complete Roadmap']}
+        roi: '50,0o00%',
+        timeline: '12 months',
+        success: '99.7%',
+        guide: 'Complete'},
+      readingTime: '60 min read',
+      tags: ['Implementation GuideConsciousness AI', 'ROI StrategyComplete Roadmap']}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -51,7 +51,7 @@ const ConsciousnessAI20o25RevolutionBanner: React.FC = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('consciousness-ai-banner-dismissed', 'true')};
+    localStorage.setItem('consciousness-ai-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('consciousness-ai-banner-dismissed'),
     if (dismissed === 'true') {
@@ -169,5 +169,5 @@ const ConsciousnessAI20o25RevolutionBanner: React.FC = () => {
       <div className="absolute top-20 right-20 w-1 h-1 bg-blue-40o0 rounded-full animate-pulse"></div>,
       <div className="absolute bottom-20 left-20 w-3 h-3 bg-indigo-40o0 rounded-full animate-bounce"></div>,
       <div className="absolute bottom-10 right-10 w-2 h-2 bg-purple-30o0 rounded-full animate-ping"></div>,
-    </div>)};
-export default ConsciousnessAI20o25RevolutionBanner;
+    </div>)},
+export default ConsciousnessAI20o25RevolutionBanner,

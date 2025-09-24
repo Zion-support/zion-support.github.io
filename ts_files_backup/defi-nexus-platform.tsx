@@ -2,41 +2,37 @@ import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
   TrendingUpBrainShieldZapTarget,
-  BarChart3CpuGlobeUsersAward;
+  BarChart3CpuGlobeUsersAward,
   CheckCircleArrowRightStarPhoneMailMapPin} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const features = [
-  'Multi-chain DeFi aggregation';
-  'Automated yield optimization';
-  'Liquidity pool management';
-  'Cross-chain bridge services';
-  'Smart contract auditing';
-  'DeFi analytics dashboard';
-  'Mobile app integration';
-  'Staking and governance'],
+  'Multi-chain DeFi aggregationAutomated yield optimization',
+  'Liquidity pool managementCross-chain bridge services',
+  'Smart contract auditingDeFi analytics dashboard',
+  'Mobile app integrationStaking and governance'],
 const pricingPlans = [
   {
-    name: 'Starter';
-    price: 29;
-    period: 'month';
-    features: ['Basic DeFi tools'3 blockchain 'networks', 'Yield 'tracking', 'Standard support'];
-    popular: false};
+    name: 'Starter',
+    price: 29,
+    period: 'month',
+    features: ['Basic DeFi tools'3 blockchain 'networksYield 'tracking', 'Standard support'],
+    popular: false},
   {
-    name: 'Professional';
-    price: 99;
-    period: 'month';
-    features: ['Advanced DeFi 'tools', 'All major 'networks', 'Automated 'strategies', 'Analytics'Priority support'];
-    popular: true};
+    name: 'Professional',
+    price: 99,
+    period: 'month',
+    features: ['Advanced DeFi 'toolsAll major 'networks', 'Automated 'strategiesAnalytics'Priority support'],
+    popular: true},
   {
-    name: 'Enterprise';
-    price: 299;
-    period: 'month';
-    features: ['Custom DeFi 'solutions', 'White-label 'platform', 'API 'access', 'Priority 'support', 'Custom integrations'];
+    name: 'Enterprise',
+    price: 299,
+    period: 'month',
+    features: ['Custom DeFi 'solutionsWhite-label 'platform', 'API 'accessPriority 'support', 'Custom integrations'],
     popular: false}
 ],
 export default function DeFiNexusPlatform() {

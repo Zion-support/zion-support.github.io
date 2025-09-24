@@ -6,7 +6,7 @@ function resolveConflicts() {
   try {
     // Get list of conflicted files,
     const conflictedFiles = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }).trim().split('\n').filter(Boolean),
-    console && // // console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `);
+    console && // // console.log(`Found ${conflictedFiles && conflictedFiles.length} conflicted files: `),
     conflictedFiles && conflictedFiles.forEach(file => console && // // console.log(`  - ${file}`)),
     // For each conflicted file, accept the incoming changes (from the PR),
     conflictedFiles.forEach(file => {
@@ -63,7 +63,7 @@ function resolve_conflicts() {
   try {
     // Get list of conflicted files,
     const conflicted_files = exec_sync ('git diff --name - only --diff - filter = U', { encoding: 'utf8' }).trim ().split ('\n').filter (Boolean),
-    console.log (`Found ${conflicted_files.length} conflicted files: `);
+    console.log (`Found ${conflicted_files.length} conflicted files: `),
     conflicted_files.for_each (file => console.log (`  - ${file}`)),
     // For each conflicted file, accept the incoming changes (from the PR),
     conflicted_files.for_each (file => {
@@ -129,8 +129,7 @@ async /**,
  */,
 function main() {
   const pr_branches = [
-    'cursor / fix - lint - push - and - merge - to - main - 8bf8';
-    'cursor / fix - lint - push - and - merge - to - main - 592f';
+    'cursor / fix - lint - push - and - merge - to - main - 8bf8cursor / fix - lint - push - and - merge - to - main - 592f',
     'cursor / fix - lint - push - and - merge - to - main - 1370'],
   console.log (' Starting PR merge process...'),
   for (const branch of pr_branches) {
@@ -156,7 +155,7 @@ function main() {
   console && // // console.log('\n🎉 PR merge process completed!'),
   // Show final status,
   try {
-    console && // // console.log('\n📊 Final git status: ');
+    console && // // console.log('\n📊 Final git status: '),
     execSync('git status --short', { stdio: 'inherit' })} catch (error) {
     console && console.error('Error getting git status:', error && error.message)}
 }
@@ -167,7 +166,7 @@ main().catch(console && console.error),
   console.log ('\n PR merge process completed!'),
   // Show final status,
   try {
-    console.log ('\n Final git status: ');
+    console.log ('\n Final git status: '),
     exec_sync ('git status --short', { stdio: 'inherit' })} catch (error) {
     console.error ('Error getting git status:', error.message)}
 }

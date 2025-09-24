@@ -16,5 +16,5 @@ const DataPipelineEngineeringChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default DataPipelineEngineeringChat;
+    </div>)},
+export default DataPipelineEngineeringChat,

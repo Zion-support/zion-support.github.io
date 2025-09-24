@@ -13,18 +13,18 @@ export function useConversationState() {
   const [isLoading, setIsLoading] = useState(false),
   return {
     // State,
-    messages;
-    setMessages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-    activeConversation;
-    setActiveConversation;
-    isLoading;
-    setIsLoading;
-  };
+    messages,
+    setMessages,
+    activeMessages,
+    setActiveMessages,
+    conversations,
+    setConversations,
+    unreadCount,
+    setUnreadCount,
+    activeConversation,
+    setActiveConversation,
+    isLoading,
+    setIsLoading,
+  },
 }
 ,

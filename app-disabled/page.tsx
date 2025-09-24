@@ -1,7 +1,7 @@
 import Link from 'next/link',
 import { ArrowRight, Brain, Cloud, Shield, Zap } from 'lucide-react',
 export const metadata ={
-  title: 'Zion Tech Group - AI & Technology Solutions';
+  title: 'Zion Tech Group - AI & Technology Solutions',
   description: 'Transform your business with AI, cloud, and micro SaaS solutions.'}
 ,
 export default function HomePage() {
@@ -710,22 +710,22 @@ export default function HomePage() {
           <StructuredData
             type="Organization",
             data={{
-              name: "Zion Tech Group";
-              description: "Transforming businesses through cutting-edge technology solutions";
-              url: "https://zion.app";
-              logo: "https://zion.app/images/zion-tech-group-logo.png";
+              name: "Zion Tech Group",
+              description: "Transforming businesses through cutting-edge technology solutions",
+              url: "https://zion.app",
+              logo: "https://zion.app/images/zion-tech-group-logo.png",
               sameAs: [
-                "https://twitter.com/ZionTechGroup";
+                "https://twitter.com/ZionTechGroup",
                 "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
           <StructuredData
             type="WebSite",
             data={{
-              name: "Zion Tech Group";
-              url: "https://zion.app";
+              name: "Zion Tech Group",
+              url: "https://zion.app",
               potentialAction: {
-                "@type": "SearchAction";
-                "target": "https: //zion.app/search?q={search_term_string}";
+                "@type": "SearchAction",
+                "target": "https: //zion.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"}
             }} ,
            />,

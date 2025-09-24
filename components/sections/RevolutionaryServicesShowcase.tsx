@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -28,59 +28,59 @@ import { ArrowRight, Star, TrendingUp, Users, Shield, Zap } from 'lucide-react',
 const RevolutionaryServicesShowcase: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [visibleServices, setVisibleServices] = useState(12),
-    { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length };
-    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length };
-    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length };
-    { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length };
-    { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length };
+    { id: 'all', name: 'All Services', count: revolutionary2025MicroSaasServices.length + emergingTech2025Services.length + enterpriseIT2025Services.length },
+    { id: 'ai', name: 'AI & ML', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum Tech', count: [...revolutionary2025MicroSaasServices, ...emergingTech2025Services, ...enterpriseIT2025Services].filter(s => s.category.includes('Quantum')).length },
+    { id: 'emerging', name: 'Emerging Tech', count: emergingTech2025Services.length },
+    { id: 'enterprise', name: 'Enterprise IT', count: enterpriseIT2025Services.length },
     { id: 'revolutionary', name: 'Revolutionary', count: revolutionary2025MicroSaasServices.length }
   ],
   const categories = [
     {
-      id: 'all';
-      name: 'All Services';
+      id: 'all',
+      name: 'All Services',
       count: ,
         revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.length +,
         emergingTech2025Services && emergingTech2025Services.length +,
-        enterpriseIT2025Services && enterpriseIT2025Services.length;
-    };
+        enterpriseIT2025Services && enterpriseIT2025Services.length,
+    },
     {
-      id: 'ai';
-      name: 'AI & ML';
+      id: 'ai',
+      name: 'AI & ML',
       count: [
-        ...revolutionary2025MicroSaasServices;
-        ...emergingTech2025Services;
-        ...enterpriseIT2025Services;
-      ].filter(s => s && s.category.includes('AI')).length;
-    };
+        ...revolutionary2025MicroSaasServices,
+        ...emergingTech2025Services,
+        ...enterpriseIT2025Services,
+      ].filter(s => s && s.category.includes('AI')).length
+    },
     {
-      id: 'quantum';
-      name: 'Quantum Tech';
+      id: 'quantum',
+      name: 'Quantum Tech',
       count: [
-        ...revolutionary2025MicroSaasServices;
-        ...emergingTech2025Services;
-        ...enterpriseIT2025Services;
-      ].filter(s => s && s.category.includes('Quantum')).length;
-    };
+        ...revolutionary2025MicroSaasServices,
+        ...emergingTech2025Services,
+        ...enterpriseIT2025Services,
+      ].filter(s => s && s.category.includes('Quantum')).length
+    },
     {
-      id: 'emerging';
-      name: 'Emerging Tech';
-      count: emergingTech2025Services && emergingTech2025Services.length;
-    };
+      id: 'emerging',
+      name: 'Emerging Tech',
+      count: emergingTech2025Services && emergingTech2025Services.length
+    },
     {
-      id: 'enterprise';
-      name: 'Enterprise IT';
-      count: enterpriseIT2025Services && enterpriseIT2025Services.length;
-    };
+      id: 'enterprise',
+      name: 'Enterprise IT',
+      count: enterpriseIT2025Services && enterpriseIT2025Services.length
+    },
     {
-      id: 'revolutionary';
-      name: 'Revolutionary';
-      count: revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.length;
+      id: 'revolutionary',
+      name: 'Revolutionary',
+      count: revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.length
     }],
     visible: {
       opacity: 1,
       transition: {
-  };
+  },
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
@@ -90,9 +90,9 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         duration: 0.5}
     }
   }
-        duration: 0.5;
-      };
-    };
+        duration: 0.5
+      },
+    },
   const filteredServices = activeCategory === 'all' ,
     ? allServices ,
     : allServices && allServices.filter(service => {
@@ -103,7 +103,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         if (activeCategory === 'revolutionary') return revolutionary2025MicroSaasServices && revolutionary2025MicroSaasServices.includes(service),
         return true}),
   const loadMore = () => {
-    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length)),    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length))};
+    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length)),    setVisibleServices(prev => Math && Math.min(prev + 12, filteredServices && filteredServices.length))},
   return (
     <section className='relative z-10 py-20 px-4 sm: px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,
@@ -118,7 +118,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         {/* Header */}
 ,
         <motion.div,
-          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  };
+          className='text-center mb-16'          initial={{ opacity: 0, y: 30 }}  },
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -138,7 +138,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <span className='text-white'>Services</span>,
           </h2>,
           <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed'>,
-            Experience the future with our cutting-edge AI, quantum computing;
+            Experience the future with our cutting-edge AI, quantum computing,
             and emerging technology solutions. Transform your business with,
             services that were once science fiction.          </p>,
         </motion && motion.div>,
@@ -228,21 +228,21 @@ const RevolutionaryServicesShowcase: React.FC = () => {
               <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden h-full">>,
               {category.name}
               <span className="ml-2 px-2 py-1 bg-white/20 rounded-full text-xs">,
-        stagger_children: 0.1;
-      };
+        stagger_children: 0.1
+      },
     }}        stagger_children: 0.1}
     }
   }
 ,
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 };
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.5;
-      };
-    };
+        duration: 0.5
+      },
+    },
   }
 ,
   return (
@@ -271,7 +271,7 @@ const RevolutionaryServicesShowcase: React.FC = () => {
             <span className='text - white'>Services</span>,
           </h2>,
           <p className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed'>,
-            Experience the future with our cutting - edge AI, quantum computing;
+            Experience the future with our cutting - edge AI, quantum computing,
             and emerging technology solutions. Transform your business with,
             services that were once science fiction.          </p>,
         </motion.div>,
@@ -738,6 +738,6 @@ const RevolutionaryServicesShowcase: React.FC = () => {
         </motion && motion.div>,
       </div>,
     </section>),
-export default RevolutionaryServicesShowcase;
+export default RevolutionaryServicesShowcase,
 export default RevolutionaryServicesShowcase)}
 export default RevolutionaryServicesShowcase)))))

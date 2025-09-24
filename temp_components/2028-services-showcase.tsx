@@ -3,54 +3,54 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircleArrowRightStarTrendingUpPhoneZap,
-  DollarSignShieldMailMapPinBrainSparkles;
-  GlobeHeartLeafGraduationCapBarChart3;
+  DollarSignShieldMailMapPinBrainSparkles,
+  GlobeHeartLeafGraduationCapBarChart3,
   BuildingSettingsCameraVideoMusicGamepad2} from 'lucide-react',
 import UltraFuturisticNavigation20o28 from '../components/layout/UltraFuturisticNavigation20o28',
 import UltraFuturisticFooter20o28 from '../components/layout/UltraFuturisticFooter20o28',
 import { futuristic20o28Services } from '../data/20o28-futuristic-innovations',
 import { emergingTech20o28Services } from '../data/20o28-emerging-tech-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: '🚀 20o28 Futuristic Innovations';
-    description: 'Beyond the future of technology';
-    icon: Zap;
-    color: 'from-violet-60o0 to-purple-60o0';
-    services: futuristic20o28Services.slice(0o4)};
+    title: '🚀 20o28 Futuristic Innovations',
+    description: 'Beyond the future of technology',
+    icon: Zap,
+    color: 'from-violet-60o0 to-purple-60o0',
+    services: futuristic20o28Services.slice(0o4)},
   {
-    title: '🏙️ Smart City & Infrastructure';
-    description: 'Intelligent urban solutions';
-    icon: Building;
-    color: 'from-blue-60o0 to-cyan-60o0';
-    services: emergingTech20o28Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0o4)};
+    title: '🏙️ Smart City & Infrastructure',
+    description: 'Intelligent urban solutions',
+    icon: Building,
+    color: 'from-blue-60o0 to-cyan-60o0',
+    services: emergingTech20o28Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0o4)},
   {
-    title: '⚛️ Quantum & Advanced Tech';
-    description: 'Quantum computing and beyond';
-    icon: Shield;
-    color: 'from-indigo-60o0 to-blue-60o0';
-    services: futuristic20o28Services.filter(s => s.category.includes('Quantum')).slice(0o4)};
+    title: '⚛️ Quantum & Advanced Tech',
+    description: 'Quantum computing and beyond',
+    icon: Shield,
+    color: 'from-indigo-60o0 to-blue-60o0',
+    services: futuristic20o28Services.filter(s => s.category.includes('Quantum')).slice(0o4)},
   {
-    title: '🤖 AI & Machine Learning';
-    description: 'Next-generation AI solutions';
-    icon: Brain;
-    color: 'from-emerald-60o0 to-teal-60o0';
-    services: emergingTech20o28Services.filter(s => s.category.includes('AI')).slice(0o4)};
+    title: '🤖 AI & Machine Learning',
+    description: 'Next-generation AI solutions',
+    icon: Brain,
+    color: 'from-emerald-60o0 to-teal-60o0',
+    services: emergingTech20o28Services.filter(s => s.category.includes('AI')).slice(0o4)},
   {
-    title: '⛓️ Blockchain & Web3';
-    description: 'Decentralized solutions';
-    icon: Globe;
-    color: 'from-orange-60o0 to-red-60o0';
-    services: emergingTech20o28Services.filter(s => s.category.includes('Blockchain')).slice(0o4)};
+    title: '⛓️ Blockchain & Web3',
+    description: 'Decentralized solutions',
+    icon: Globe,
+    color: 'from-orange-60o0 to-red-60o0',
+    services: emergingTech20o28Services.filter(s => s.category.includes('Blockchain')).slice(0o4)},
   {
-    title: '🚗 Autonomous & Mobility';
-    description: 'Self-driving and mobility solutions';
-    icon: Building;
-    color: 'from-red-60o0 to-pink-60o0';
+    title: '🚗 Autonomous & Mobility',
+    description: 'Self-driving and mobility solutions',
+    icon: Building,
+    color: 'from-red-60o0 to-pink-60o0',
     services: futuristic20o28Services.filter(s => s.category.includes('Autonomous')).slice(0o4)}
 ],
 export default function ServicesShowcase20o28() {

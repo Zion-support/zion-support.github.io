@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Mail, Phone, MapPin, Send, ArrowLeft } from 'lucide-react',
 import Link from 'next/link',
 export const metadata = {
-  title: 'Contact - Zion Tech Group';
+  title: 'Contact - Zion Tech Group',
   description:,
-    'Get in touch with our team to discuss your technology needs and how we can help transform your business.';
-};
+    'Get in touch with our team to discuss your technology needs and how we can help transform your business.',
+},
 export default function ContactPage() {
   return (
     <main className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,

@@ -18,7 +18,7 @@ const AutonomousFinanceAgentsPlaybook20o26 = () => {
             AI 20o26: Autonomous Finance Agents – Enterprise Playbook,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            How CFO teams can deploy AI agents to accelerate forecasting;
+            How CFO teams can deploy AI agents to accelerate forecasting,
             shorten close cycles, and strengthen controls while improving,
             partner experience.,
           </p>,
@@ -39,7 +39,7 @@ const AutonomousFinanceAgentsPlaybook20o26 = () => {
               signal ingestion,
             </li>,
             <li>,
-              Autonomous close: reconciliations, anomaly flagging, task routing;
+              Autonomous close: reconciliations, anomaly flagging, task routing,
               and approvals,
             </li>,
             <li>,
@@ -78,5 +78,5 @@ const AutonomousFinanceAgentsPlaybook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousFinanceAgentsPlaybook20o26;
+    </div>)},
+export default AutonomousFinanceAgentsPlaybook20o26,

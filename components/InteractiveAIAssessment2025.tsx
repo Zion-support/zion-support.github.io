@@ -8,139 +8,139 @@ const InteractiveAIAssessment20o25 = () => {
   const [assessmentScore, setAssessmentScore] = useState(0),
   const questions = [
     {
-      id: 1;
-      question: "What is your current AI adoption level?";
+      id: 1,
+      question: "What is your current AI adoption level?",
       options: [
-        "No AI implementation yet";
-        "Basic AI tools (chatbots, simple automation)";
-        "Some machine learning applications";
-        "Advanced AI systems with deep learning";
-        "Fully integrated AI ecosystem"];
-      scores: [0, 1, 2, 3, 4]};
+        "No AI implementation yet",
+        "Basic AI tools (chatbots, simple automation)",
+        "Some machine learning applications",
+        "Advanced AI systems with deep learning",
+        "Fully integrated AI ecosystem"],
+      scores: [0, 1, 2, 3, 4]},
     {
-      id: 2;
-      question: "How much data do you have available for AI training?";
+      id: 2,
+      question: "How much data do you have available for AI training?",
       options: [
-        "Very limited data";
-        "Some structured data";
-        "Good amount of clean data";
-        "Large datasets with good quality";
-        "Massive datasets with excellent quality"];
-      scores: [0, 1, 2, 3, 4]};
+        "Very limited data",
+        "Some structured data",
+        "Good amount of clean data",
+        "Large datasets with good quality",
+        "Massive datasets with excellent quality"],
+      scores: [0, 1, 2, 3, 4]},
     {
-      id: 3;
-      question: "What is your 'team', 's AI expertise level?";
+      id: 3,
+      question: "What is your 'teams AI expertise level?",
       options: [
-        "No AI expertise";
-        "Basic understanding";
-        "Some AI practitioners";
-        "Experienced AI team";
-        "World-class AI experts"];
-      scores: [0, 1, 2, 3, 4]};
+        "No AI expertise",
+        "Basic understanding",
+        "Some AI practitioners",
+        "Experienced AI team",
+        "World-class AI experts"],
+      scores: [0, 1, 2, 3, 4]},
     {
-      id: 4;
-      question: "What is your budget for AI implementation?";
+      id: 4,
+      question: "What is your budget for AI implementation?",
       options: [
-        "Under $10K";
-        "$10K - $50K";
-        "$50K - $20o0K";
-        "$20o0K - $1M";
-        "Over $1M"];
-      scores: [0, 1, 2, 3, 4]};
+        "Under $10K",
+        "$10K - $50K",
+        "$50K - $20o0K",
+        "$20o0K - $1M",
+        "Over $1M"],
+      scores: [0, 1, 2, 3, 4]},
     {
-      id: 5;
-      question: "What is your timeline for AI implementation?";
+      id: 5,
+      question: "What is your timeline for AI implementation?",
       options: [
-        "No specific timeline";
-        "6+ months";
-        "3-6 months";
-        "1-3 months";
-        "Immediate implementation"];
-      scores: [0, 1, 2, 3, 4]};
+        "No specific timeline",
+        "6+ months",
+        "3-6 months",
+        "1-3 months",
+        "Immediate implementation"],
+      scores: [0, 1, 2, 3, 4]},
     {
-      id: 6;
-      question: "What are your primary AI use cases?";
+      id: 6,
+      question: "What are your primary AI use cases?",
       options: [
-        "Not sure yet";
-        "Basic automation";
-        "Customer service";
-        "Data analytics and insights";
-        "Advanced AI applications (NLP, computer vision, etc.)"];
+        "Not sure yet",
+        "Basic automation",
+        "Customer service",
+        "Data analytics and insights",
+        "Advanced AI applications (NLP, computer vision, etc.)"],
       scores: [0, 1, 2, 3, 4]}
   ],
   const handleAnswer = (questionId: number, score: number) => {
-    setAnswers(prev => ({ ...prev, [questionId]: score }))};
+    setAnswers(prev => ({ ...prev, [questionId]: score }))},
   const nextQuestion = () => {
     if (currentQuestion < questions.length - 1) {
       setCurrentQuestion(currentQuestion + 1)} else {
       calculateResults()}
-  };
+  },
   const prevQuestion = () => {
     if (currentQuestion > 0) {
       setCurrentQuestion(currentQuestion - 1)}
-  };
+  },
   const calculateResults = () => {
     const totalScore = Object.values(answers).reduce((sum, score) => sum + score, 0),
     const maxScore = questions.length * 4,
     const percentage = (totalScore / maxScore) * 10o0,
     setAssessmentScore(percentage),
-    setShowResults(true)};
+    setShowResults(true)},
   const getRecommendation = (score: number) => {
     if (score < 25) {
       return {
-        level: "Beginner";
-        color: "text-red-60o0";
-        bgColor: "bg-red-50";
-        borderColor: "border-red-20o0";
-        recommendation: "Start with basic AI tools and build foundational knowledge";
+        level: "Beginner",
+        color: "text-red-60o0",
+        bgColor: "bg-red-50",
+        borderColor: "border-red-20o0",
+        recommendation: "Start with basic AI tools and build foundational knowledge",
         nextSteps: [
-          "Begin with simple automation tools";
-          "Invest in team training";
-          "Start with pilot projects";
-          "Focus on data collection and quality"]};
+          "Begin with simple automation tools",
+          "Invest in team training",
+          "Start with pilot projects",
+          "Focus on data collection and quality"]},
     } else if (score < 50) {
       return {
-        level: "Intermediate";
-        color: "text-yellow-60o0";
-        bgColor: "bg-yellow-50";
-        borderColor: "border-yellow-20o0";
-        recommendation: "Implement targeted AI solutions and expand gradually";
+        level: "Intermediate",
+        color: "text-yellow-60o0",
+        bgColor: "bg-yellow-50",
+        borderColor: "border-yellow-20o0",
+        recommendation: "Implement targeted AI solutions and expand gradually",
         nextSteps: [
-          "Deploy machine learning models";
-          "Enhance data infrastructure";
-          "Scale successful pilots";
-          "Invest in advanced AI tools"]};
+          "Deploy machine learning models",
+          "Enhance data infrastructure",
+          "Scale successful pilots",
+          "Invest in advanced AI tools"]},
     } else if (score < 75) {
       return {
-        level: "Advanced";
-        color: "text-blue-60o0";
-        bgColor: "bg-blue-50";
-        borderColor: "border-blue-20o0";
-        recommendation: "Optimize existing AI systems and explore advanced applications";
+        level: "Advanced",
+        color: "text-blue-60o0",
+        bgColor: "bg-blue-50",
+        borderColor: "border-blue-20o0",
+        recommendation: "Optimize existing AI systems and explore advanced applications",
         nextSteps: [
-          "Implement deep learning solutions";
-          "Optimize AI performance";
-          "Explore new AI technologies";
-          "Scale across organization"]};
+          "Implement deep learning solutions",
+          "Optimize AI performance",
+          "Explore new AI technologies",
+          "Scale across organization"]},
     } else {
       return {
-        level: "Expert";
-        color: "text-green-60o0";
-        bgColor: "bg-green-50";
-        borderColor: "border-green-20o0";
-        recommendation: "Lead AI innovation and develop cutting-edge solutions";
+        level: "Expert",
+        color: "text-green-60o0",
+        bgColor: "bg-green-50",
+        borderColor: "border-green-20o0",
+        recommendation: "Lead AI innovation and develop cutting-edge solutions",
         nextSteps: [
-          "Develop proprietary AI solutions";
-          "Explore emerging technologies";
-          "Share expertise with industry";
-          "Drive AI strategy and vision"]};
+          "Develop proprietary AI solutions",
+          "Explore emerging technologies",
+          "Share expertise with industry",
+          "Drive AI strategy and vision"]},
     }
-  };
+  },
   const resetAssessment = () => {
     setCurrentQuestion(0),
     setAnswers({}),
     setShowResults(false),
-    setAssessmentScore(0)};
+    setAssessmentScore(0)},
   if (showResults) {
     const recommendation = getRecommendation(assessmentScore),
     return (
@@ -254,5 +254,5 @@ const InteractiveAIAssessment20o25 = () => {
           {currentQuestion === questions.length - 1 ? 'Get Results' : 'Next'}
         </button>,
       </div>,
-    </div>)};
-export default InteractiveAIAssessment20o25;
+    </div>)},
+export default InteractiveAIAssessment20o25,

@@ -1,17 +1,17 @@
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Building;
-  Shield;
-  Brain;
-  Zap;
-  Cpu;
-  Globe;
-  Lock;
-  CheckCircle;
-  ArrowRight;
-  BarChart3;
-  Users;
+  Building,
+  Shield,
+  Brain,
+  Zap,
+  Cpu,
+  Globe,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Users,
 } from 'lucide-react',
 export default function GovernmentSolutions() {
   return (
@@ -68,7 +68,7 @@ export default function GovernmentSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Advanced cybersecurity platform with threat detection;
+                  Advanced cybersecurity platform with threat detection,
                   incident response, and compliance management.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -106,7 +106,7 @@ export default function GovernmentSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Modern digital services platform for citizen engagement;
+                  Modern digital services platform for citizen engagement,
                   online applications, and government service delivery.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -144,7 +144,7 @@ export default function GovernmentSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Comprehensive data analytics platform for government insights;
+                  Comprehensive data analytics platform for government insights,
                   performance monitoring, and decision support.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -182,7 +182,7 @@ export default function GovernmentSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  AI-powered operations center for government efficiency;
+                  AI-powered operations center for government efficiency,
                   automation, and intelligent decision-making.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -220,7 +220,7 @@ export default function GovernmentSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Secure infrastructure solutions for government systems;
+                  Secure infrastructure solutions for government systems,
                   networks, and critical operations.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,

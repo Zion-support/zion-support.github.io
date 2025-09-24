@@ -1,51 +1,45 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 import {
-  Brain;
-  TrendingUp;
-  Zap;
-  Clock;
-  Users;
-  ArrowRight;
-  CheckCircle;
+  Brain,
+  TrendingUp,
+  Zap,
+  Clock,
+  Users,
+  ArrowRight,
+  CheckCircle,
 } from 'lucide-react',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Autonomous Business Intelligence Revolution - 1,80o0% ROI Through Self-Managing Analytics';
+    'AI 20o25: The Autonomous Business Intelligence Revolution - 1,80o0% ROI Through Self-Managing Analytics',
   description:,
-    'Discover how Fortune 50o0 companies are achieving 1,80o0% ROI through autonomous business intelligence systems that operate independently and deliver predictive insights in real-time.';
+    'Discover how Fortune 50o0 companies are achieving 1,80o0% ROI through autonomous business intelligence systems that operate independently and deliver predictive insights in real-time.',
   keywords: [
-    'Autonomous BI';
-    'AI Analytics';
-    'Business Intelligence';
-    'ROI';
-    'Enterprise AI';
-    'Data Analytics';
-    'Predictive Analytics';
-    'Machine Learning';
-  ];
+    'Autonomous BIAI Analytics',
+    'Business IntelligenceROI',
+    'Enterprise AIData Analytics',
+    'Predictive AnalyticsMachine Learning',
+  ],
   openGraph: {
-    title: 'AI 20o25: The Autonomous Business Intelligence Revolution';
+    title: 'AI 20o25: The Autonomous Business Intelligence Revolution',
     description:,
-      '1,80o0% ROI Through Self-Managing Analytics - Fortune 50o0 companies achieving extraordinary results with autonomous BI systems.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      '1,80o0% ROI Through Self-Managing Analytics - Fortune 50o0 companies achieving extraordinary results with autonomous BI systems.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Autonomous BI';
-      'AI Analytics';
-      'Business Intelligence';
-      'ROI';
-      'Enterprise AI';
-    ];
-  };
+      'Autonomous BIAI Analytics',
+      'Business IntelligenceROI',
+      'Enterprise AI',
+    ]
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI 20o25: The Autonomous Business Intelligence Revolution';
+    card: 'summary_large_image',
+    title: 'AI 20o25: The Autonomous Business Intelligence Revolution',
     description:,
-      '1,80o0% ROI Through Self-Managing Analytics - Transform your business with autonomous BI systems.';
-  };
-};
+      '1,80o0% ROI Through Self-Managing Analytics - Transform your business with autonomous BI systems.',
+  },
+},
 export default function AutonomousBIRevolutionPage() {
   return (
     <div className='min-h-screen bg-white'>,

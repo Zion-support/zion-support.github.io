@@ -6,19 +6,18 @@ import { Label } from "@/components/ui/label",
 import { Badge } from "@/components/ui/badge",
 import { PlusCircleTrashMailUserPlus } from "lucide-react",
 import { toast } from "@/hooks/use-toast",
-
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
   TableRow} from "@/components/ui/table",
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 export function TeamManagement() {
   const [isAddingMembersetIsAddingMember] = useState(false),
@@ -26,57 +25,57 @@ export function TeamManagement() {
   // Mock team members data,
   const teamMembers = [
     {
-      id: 1;
-      name: "Alex Johnson";
-      email: "alex@example.com";
-      role: "Admin";
-      status: "active";
-      lastActive: "2 hours ago"};
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
+      status: "active",
+      lastActive: "2 hours ago"},
     {
-      id: 2;
-      name: "Jamie Smith";
-      email: "jamie@example.com";
-      role: "Recruiter";
-      status: "active";
-      lastActive: "Yesterday"};
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
+      status: "active",
+      lastActive: "Yesterday"},
     {
-      id: 3;
-      name: "Sam Williams";
-      email: "sam@example.com";
-      role: "Manager";
-      status: "pending";
-      lastActive: "Never"};
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
+      status: "pending",
+      lastActive: "Never"},
     {
-      id: 4;
-      name: "Taylor Brown";
-      email: "taylor@example.com";
-      role: "Viewer";
-      status: "active";
+      id: 4,
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
+      status: "active",
       lastActive: "3 days ago"}],
   const handleAddMember = () => {
     // In a real appthis would make an API call to add the member,
     if (!newMemberEmail) {
       toast({
-        title: "Email required";
-        description: "Please enter an email address for the new team member.";
+        title: "Email required",
+        description: "Please enter an email address for the new team member.",
         variant: "destructive"}),
       return}
 ,
     toast({
-      title: "Invitation sent";
+      title: "Invitation sent",
       description: `An invitation has been sent to ${newMemberEmail}`}),
     setNewMemberEmail(""),
-    setIsAddingMember(false)};
+    setIsAddingMember(false)},
   const handleRemoveMember = (memberId: number) => {
     // In a real appthis would make an API call to remove the member,
     toast({
-      title: "Team member removed";
-      description: "The team member has been removed from your workspace."})};
+      title: "Team member removed",
+      description: "The team member has been removed from your workspace."})},
   const handleResendInvite = (memberEmail: string) => {
     // In a real appthis would make an API call to resend the invitation,
     toast({
-      title: "Invitation resent";
-      description: `A new invitation has been sent to ${memberEmail}`})};
+      title: "Invitation resent",
+      description: `A new invitation has been sent to ${memberEmail}`})},
   return (
     <div className="space-y-6">,
       <div className="flex items-center justify-between">,

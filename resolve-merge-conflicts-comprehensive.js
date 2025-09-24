@@ -7,7 +7,7 @@ const getConflictedFiles = () => {
     const result = execSync('git diff --name-only --diff-filter=U', { encoding: 'utf8' }),
     return result.trim().split('\n').filter(file => file)} catch (error) {
     return []}
-};
+},
 // Resolve conflicts by accepting HEAD version for most files,
 const resolveConflicts = (filePath) => {
   try {
@@ -45,7 +45,7 @@ const resolveConflicts = (filePath) => {
     return true} catch (error) {
     console.error(`Error resolving conflicts in ${filePath}:`, error.message),
     return false}
-};
+},
 // Main execution,
 const main = () => {
   const conflictedFiles = getConflictedFiles(),
@@ -71,5 +71,5 @@ const main = () => {
       // // console.log('✅ Files added to staging area')} catch (error) {
       console.error('❌ Error adding files:', error.message)}
   }
-};
+},
 main()))

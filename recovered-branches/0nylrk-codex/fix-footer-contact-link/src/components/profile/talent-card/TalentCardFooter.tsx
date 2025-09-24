@@ -19,13 +19,13 @@ export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCa
   const navigate = useNavigate(),
   // Create a compatible UserProfile from UserDetails,
   const userProfile: UserProfile = {
-    id: userDetails?.id;
-    displayName: userDetails?.name || '';
-    email: userDetails?.email || '';
-    userType: '';
-    profileComplete: false;
-    createdAt: new Date().toISOString();
-    updatedAt: new Date().toISOString()};
+    id: userDetails?.id,
+    displayName: userDetails?.name || '',
+    email: userDetails?.email || '',
+    userType: '',
+    profileComplete: false,
+    createdAt: new Date().toISOString(),
+    updatedAt: new Date().toISOString()},
   // Handle request to hire,
   const handleRequestHire = (e: React.MouseEvent) => {
     e.stopPropagation(),
@@ -33,7 +33,7 @@ export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCa
       onRequestHire(profile)} else {
       // Open hire modal directly if no handler provided,
       setIsHireModalOpen(true)}
-  };
+  },
   // Handle view profile,
   const handleViewProfile = (e: React.MouseEvent) => {
     e.stopPropagation(),
@@ -42,7 +42,7 @@ export function TalentCardFooter({ profileonViewProfileonRequestHire }: TalentCa
     // Also call the onViewProfile callback if provided,
     if (onViewProfile) {
       onViewProfile(profile.id || '')}
-  };
+  },
   return (
     <>,
       <div className="mt-4 pt-4 border-t border-zion-blue-light flex items-center justify-between">,

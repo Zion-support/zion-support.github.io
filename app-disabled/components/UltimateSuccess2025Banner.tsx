@@ -7,43 +7,43 @@ const UltimateSuccess20o25Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const featuredContent = [
     {
-      id: 'advanced-automation-mastery';
-      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide';
+      id: 'advanced-automation-mastery',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        efficiency: '340%';
-        satisfaction: '98%'};
-      description: 'Transform your enterprise with cutting-edge AI automation technologies delivering unprecedented ROI.';
-      readingTime: '18 min read';
-      featured: true};
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        efficiency: '340%',
+        satisfaction: '98%'},
+      description: 'Transform your enterprise with cutting-edge AI automation technologies delivering unprecedented ROI.',
+      readingTime: '18 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Transformation: 1,20o0% ROI Ultimate Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-transformation-120o0-percent-roi-ultimate-success';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Transformation: 1,20o0% ROI Ultimate Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-transformation-120o0-percent-roi-ultimate-success',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        satisfaction: '98.7%'};
-      description: 'How a $50B manufacturing giant achieved unprecedented results with advanced AI automation.';
-      readingTime: '22 min read';
-      featured: true};
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        satisfaction: '98.7%'},
+      description: 'How a $50B manufacturing giant achieved unprecedented results with advanced AI automation.',
+      readingTime: '22 min read',
+      featured: true},
     {
-      id: 'implementation-framework';
-      title: 'AI 20o25 Implementation Ultimate Success Framework';
-      type: 'resource';
-      url: '/resources/ai-20o25-implementation-ultimate-success-framework';
+      id: 'implementation-framework',
+      title: 'AI 20o25 Implementation Ultimate Success Framework',
+      type: 'resource',
+      url: '/resources/ai-20o25-implementation-ultimate-success-framework',
       metrics: {
-        roi: '1,20o0%';
-        success: '98%';
-        timeline: '18 months';
-        projects: '50o0+'};
-      description: 'The complete guide to achieving 1,20o0% ROI with advanced AI automation based on 50o0+ successful implementations.';
-      readingTime: '25 min read';
+        roi: '1,20o0%',
+        success: '98%',
+        timeline: '18 months',
+        projects: '50o0+'},
+      description: 'The complete guide to achieving 1,20o0% ROI with advanced AI automation based on 50o0+ successful implementations.',
+      readingTime: '25 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -52,7 +52,7 @@ const UltimateSuccess20o25Banner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateSuccess20o25BannerDismissed', 'true')};
+    localStorage.setItem('ultimateSuccess20o25BannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimateSuccess20o25BannerDismissed'),
     if (dismissed === 'true') {
@@ -201,5 +201,5 @@ const UltimateSuccess20o25Banner = () => {
         aria-label="Dismiss banner">,
         <X className="w-6 h-6"  />,
       </button>,
-    </div>)};
-export default UltimateSuccess20o25Banner;
+    </div>)},
+export default UltimateSuccess20o25Banner,

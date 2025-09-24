@@ -3,85 +3,85 @@ import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
 import {
-  Shield;
-  Lock;
-  Eye;
-  Database;
-  UserCheck;
-  FileText;
-  AlertTriangle;
-  CheckCircle;
+  Shield,
+  Lock,
+  Eye,
+  Database,
+  UserCheck,
+  FileText,
+  AlertTriangle,
+  CheckCircle,
 } from 'lucide-react',
 export default function GDPR() {
   const gdprPrinciples = [
     {
-      icon: Shield;
-      title: 'Lawfulness, Fairness & Transparency';
+      icon: Shield,
+      title: 'Lawfulness, Fairness & Transparency',
       description:,
-        'We process personal data lawfully, fairly, and in a transparent manner in relation to the data subject.';
-    };
+        'We process personal data lawfully, fairly, and in a transparent manner in relation to the data subject.',
+    },
     {
-      icon: Eye;
-      title: 'Purpose Limitation';
+      icon: Eye,
+      title: 'Purpose Limitation',
       description:,
-        'Personal data is collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes.';
-    };
+        'Personal data is collected for specified, explicit, and legitimate purposes and not further processed in a manner incompatible with those purposes.',
+    },
     {
-      icon: Database;
-      title: 'Data Minimisation';
+      icon: Database,
+      title: 'Data Minimisation',
       description:,
-        'Personal data is adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed.';
-    };
+        'Personal data is adequate, relevant, and limited to what is necessary in relation to the purposes for which they are processed.',
+    },
     {
-      icon: CheckCircle;
-      title: 'Accuracy';
+      icon: CheckCircle,
+      title: 'Accuracy',
       description:,
-        'Personal data is accurate and, where necessary, kept up to date. We take reasonable steps to ensure inaccurate data is erased or rectified.';
-    };
+        'Personal data is accurate and, where necessary, kept up to date. We take reasonable steps to ensure inaccurate data is erased or rectified.',
+    },
     {
-      icon: Lock;
-      title: 'Storage Limitation';
+      icon: Lock,
+      title: 'Storage Limitation',
       description:,
-        'Personal data is kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the data is processed.';
-    };
+        'Personal data is kept in a form which permits identification of data subjects for no longer than is necessary for the purposes for which the data is processed.',
+    },
     {
-      icon: UserCheck;
-      title: 'Integrity & Confidentiality';
+      icon: UserCheck,
+      title: 'Integrity & Confidentiality',
       description:,
-        'Personal data is processed in a manner that ensures appropriate security, including protection against unauthorized or unlawful processing.';
-    };
+        'Personal data is processed in a manner that ensures appropriate security, including protection against unauthorized or unlawful processing.',
+    },
   ],
   const dataRights = [
     {
-      title: 'Right of Access';
+      title: 'Right of Access',
       description:,
-        'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.';
-    };
+        'You have the right to obtain confirmation as to whether or not personal data concerning you is being processed.',
+    },
     {
-      title: 'Right to Rectification';
+      title: 'Right to Rectification',
       description:,
-        'You have the right to have inaccurate personal data corrected and incomplete personal data completed.';
-    };
+        'You have the right to have inaccurate personal data corrected and incomplete personal data completed.',
+    },
     {
-      title: 'Right to Erasure';
+      title: 'Right to Erasure',
       description:,
-        'You have the right to request the deletion of your personal data under certain circumstances.';
-    };
+        'You have the right to request the deletion of your personal data under certain circumstances.',
+    },
     {
-      title: 'Right to Restrict Processing';
+      title: 'Right to Restrict Processing',
       description:,
-        'You have the right to request the restriction of processing of your personal data.';
-    };
+        'You have the right to request the restriction of processing of your personal data.',
+    },
     {
-      title: 'Right to Data Portability';
+      title: 'Right to Data Portability',
       description:,
-        'You have the right to receive your personal data in a structured, commonly used format.';
-    };
+        'You have the right to receive your personal data in a structured, commonly used format.',
+    },
     {
-      title: 'Right to Object';
+      title: 'Right to Object',
       description:,
-        'You have the right to object to the processing of your personal data for direct marketing purposes.';
-    };
+        'You have the right to object to the processing of your personal data for direct marketing purposes.',
+    },
   ],
   return (
     <>,
@@ -126,7 +126,7 @@ export default function GDPR() {
               <p className='text-lg text-gray-60o0 max-w-4xl mx-auto'>,
                 At Zion Tech Group, we are fully committed to complying with the,
                 General Data Protection Regulation (GDPR) and ensuring the,
-                highest standards of data protection for all our users, clients;
+                highest standards of data protection for all our users, clients,
                 and partners.,
               </p>,
             </div>,
@@ -204,7 +204,7 @@ export default function GDPR() {
                   <li className='flex items-start'>,
                     <CheckCircle className='h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0' />,
                     <div>,
-                      <strong>Contact Information:</strong> Name, email address;
+                      <strong>Contact Information:</strong> Name, email address,
                       phone number,
                     </div>,
                   </li>,
@@ -225,7 +225,7 @@ export default function GDPR() {
                   <li className='flex items-start'>,
                     <CheckCircle className='h-5 w-5 text-green-50o0 mr-3 mt-1 flex-shrink-0' />,
                     <div>,
-                      <strong>Technical Data:</strong> IP address, browser type;
+                      <strong>Technical Data:</strong> IP address, browser type,
                       device information,
                     </div>,
                   </li>,

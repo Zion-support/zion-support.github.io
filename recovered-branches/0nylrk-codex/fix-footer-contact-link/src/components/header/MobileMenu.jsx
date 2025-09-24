@@ -20,49 +20,49 @@ export function MobileMenu({ className }) {
   const toggleMenu = () => setIsOpen(!isOpen),
   const navigationItems = [
     {
-      href: '/';
-      label: t('nav.home');
-      icon: Home;
-      matches: path => path === '/';
-    };
+      href: '/',
+      label: t('nav.home'),
+      icon: Home,
+      matches: path => path === '/'
+    },
     {
-      href: '/marketplace';
-      label: t('nav.marketplace');
-      icon: Store;
-      matches: path => path.startsWith('/marketplace');
-    };
+      href: '/marketplace',
+      label: t('nav.marketplace'),
+      icon: Store,
+      matches: path => path.startsWith('/marketplace')
+    },
     {
-      href: '/talent';
-      label: t('nav.talent');
-      icon: Users;
+      href: '/talent',
+      label: t('nav.talent'),
+      icon: Users,
       matches: path =>,
-        path.startsWith('/talent') && !path.includes('/talent-dashboard');
-    };
+        path.startsWith('/talent') && !path.includes('/talent-dashboard'),
+    },
     {
-      href: '/categories';
-      label: t('nav.categories');
-      icon: Store;
-      matches: path => path.startsWith('/categories');
-    };
+      href: '/categories',
+      label: t('nav.categories'),
+      icon: Store,
+      matches: path => path.startsWith('/categories')
+    },
     {
-      href: '/equipment';
-      label: t('nav.equipment');
-      icon: Store;
-      matches: path => path.startsWith('/equipment');
-    };
+      href: '/equipment',
+      label: t('nav.equipment'),
+      icon: Store,
+      matches: path => path.startsWith('/equipment')
+    },
     {
-      href: '/community';
-      label: t('nav.community');
-      icon: Users;
-      matches: path => path.startsWith('/community');
-    };
+      href: '/community',
+      label: t('nav.community'),
+      icon: Users,
+      matches: path => path.startsWith('/community')
+    },
   ],
   if (isAuthenticated) {
     navigationItems.push({
-      href: '/dashboard';
-      label: t('nav.dashboard');
-      icon: Settings;
-      matches: path => path.startsWith('/dashboard');
+      href: '/dashboard',
+      label: t('nav.dashboard'),
+      icon: Settings,
+      matches: path => path.startsWith('/dashboard')
     })}
   return (
     <div className={cn('md:hidden', className)}>,
@@ -101,7 +101,7 @@ export function MobileMenu({ className }) {
                     to={item.href}
                     onClick={toggleMenu}
                     className={cn(
-                      'flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors';
+                      'flex items-center gap-3 px-4 py-3 rounded-lg text-white transition-colors',
                       isActive,
                         ? 'bg-zion-purple/20 text-zion-cyan border border-zion-purple/40',
                         : 'hover: bg-zion-purple/10 hover:text-zion-cyan')}

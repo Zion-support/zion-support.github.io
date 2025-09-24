@@ -6,31 +6,31 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const content = [
     {
-      id: 'ai-innovation-breakthrough';
-      title: 'AI 20o25: The Ultimate Innovation Breakthrough';
-      description: 'Complete Guide to 5,0o00% ROI Through Revolutionary AI Technologies';
-      metrics: '5,0o00% ROI • $12.8B+ Savings • 2,40o0% Efficiency';
-      url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide';
-      type: 'blog';
-      readingTime: '30 min read';
-      featured: true};
+      id: 'ai-innovation-breakthrough',
+      title: 'AI 20o25: The Ultimate Innovation Breakthrough',
+      description: 'Complete Guide to 5,0o00% ROI Through Revolutionary AI Technologies',
+      metrics: '5,0o00% ROI • $12.8B+ Savings • 2,40o0% Efficiency',
+      url: '/blog/ai-20o25-ultimate-innovation-breakthrough-ultimate-guide',
+      type: 'blog',
+      readingTime: '30 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-innovation-success';
-      title: 'Fortune 50o0 AI Innovation Success Story';
-      description: '$12.8B Annual Savings with 5,0o00% ROI Achievement';
-      metrics: '5,0o00% ROI • $12.8B Savings • 99.7% Success Rate';
-      url: '/case-studies/fortune-50o0-ai-innovation-50o00-roi-success-story';
-      type: 'case-study';
-      readingTime: '20 min read';
-      featured: true};
+      id: 'fortune-50o0-innovation-success',
+      title: 'Fortune 50o0 AI Innovation Success Story',
+      description: '$12.8B Annual Savings with 5,0o00% ROI Achievement',
+      metrics: '5,0o00% ROI • $12.8B Savings • 99.7% Success Rate',
+      url: '/case-studies/fortune-50o0-ai-innovation-50o00-roi-success-story',
+      type: 'case-study',
+      readingTime: '20 min read',
+      featured: true},
     {
-      id: 'ai-innovation-implementation-guide';
-      title: 'AI Innovation Implementation Ultimate Guide';
-      description: 'Complete Roadmap to 5,0o00% ROI in 18 Months';
-      metrics: '5,0o00% ROI • 18 Months • 99.7% Success Rate';
-      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25';
-      type: 'resource';
-      readingTime: '45 min read';
+      id: 'ai-innovation-implementation-guide',
+      title: 'AI Innovation Implementation Ultimate Guide',
+      description: 'Complete Roadmap to 5,0o00% ROI in 18 Months',
+      metrics: '5,0o00% ROI • 18 Months • 99.7% Success Rate',
+      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25',
+      type: 'resource',
+      readingTime: '45 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -45,7 +45,7 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
   }, []),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ai-innovation-banner-dismissed', 'true')};
+    localStorage.setItem('ai-innovation-banner-dismissedtrue')},
   if (isDismissed) return null,
   const currentContent = content[currentSlide],
   return (
@@ -145,5 +145,5 @@ const AI20o25UltimateInnovationBreakthroughBanner = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
         </svg>,
       </button>,
-    </div>)};
-export default AI20o25UltimateInnovationBreakthroughBanner;
+    </div>)},
+export default AI20o25UltimateInnovationBreakthroughBanner,

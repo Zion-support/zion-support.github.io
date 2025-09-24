@@ -4,10 +4,10 @@ type Question = {
   id: string,
   question: string,
   options: string[],
-  answerIndex: number};
+  answerIndex: number},
 type Props = {
   questions: Question[],
-  onComplete: (score: number) => void};
+  onComplete: (score: number) => void},
 export default function Quiz({ questionsonComplete }: Props) {
   const [answersetAnswers] = useState<Record<stringnumber>>({}),
   const [submittedsetSubmitted] = useState(false),

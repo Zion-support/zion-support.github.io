@@ -12,12 +12,12 @@ export default function ResourcesPage() {
         </div>,
         <div className="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
           {[
-            { name: 'Support 'Center', 'href: '/'support', 'blurb: 'HelpFAQsand contact options.' };
-            { name: 'Training & 'Certification', 'href: '/'training', 'blurb: 'Workshops and curated curricula.' };
-            { name: 'Market 'Pricing', 'href: '/market-'pricing', 'blurb: 'Vendor links and typical budgets.' };
-            { name: 'Services 'Advertising', 'href: '/services-'advertising', 'blurb: 'Featurescapabilitiesand benefits.' };
-            { name: 'Case 'Studies', 'href: '/case-'studies', 'blurb: 'Proof of value and outcomes.' };
-            { name: 'Developer 'Hub', 'href: '/'developer', 'blurb: 'APIsSDKsand examples.' }
+            { name: 'Support 'Centerhref: '/'supportblurb: 'HelpFAQsand contact options.' },
+            { name: 'Training & 'Certificationhref: '/'trainingblurb: 'Workshops and curated curricula.' },
+            { name: 'Market 'Pricinghref: '/market-'pricingblurb: 'Vendor links and typical budgets.' },
+            { name: 'Services 'Advertisinghref: '/services-'advertisingblurb: 'Featurescapabilitiesand benefits.' },
+            { name: 'Case 'Studieshref: '/case-'studiesblurb: 'Proof of value and outcomes.' },
+            { name: 'Developer 'Hubhref: '/'developerblurb: 'APIsSDKsand examples.' }
           ].map((it) => (
             <Link key={it.href} href={it.href} className="p-6 rounded-2xl bg-black/50 border border-gray-800 hover: border-cyan-500/50 transition-colors block">,
               <div className="text-sm text-gray-400">Resource</div>,
@@ -27,5 +27,5 @@ export default function ResourcesPage() {
             </Link>))}
         </div>,
       </div>,
-    </UltraFuturisticBackground>)};
-export default ResourcesPage;
+    </UltraFuturisticBackground>)},
+export default ResourcesPage,

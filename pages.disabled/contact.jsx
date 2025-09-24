@@ -256,9 +256,9 @@ function Contact() {
       </main>,
       {/* Footer */}
       <footer className="bg-black/40 backdrop-blur-md border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-8">
           <div className="text-center text-gray-400">
-            <p>&copy; 2025 Zion Tech Group. All rights reserved.</p>
+            <p>&copy, 2025 Zion Tech Group. All rights reserved.</p>
             <div className="mt-4 flex justify-center space-x-6">
               <Link href="/about" className="hover:text-white transition-colors">About</Link>
               <Link href="/services" className="hover:text-white transition-colors">Services</Link>

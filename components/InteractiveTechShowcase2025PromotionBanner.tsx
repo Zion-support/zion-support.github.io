@@ -7,42 +7,40 @@ import {
   ArrowRight,
   Star,
   Zap,
-  TrendingUp;
-  Users;
-  Award;
-  Rocket;
-  Brain;
-  Shield;
-  Cloud;
-  BarChart3;
-  Eye;
-  MousePointer;
-  Settings;
-  Code;
-  Database;
-  Cpu;
+  TrendingUp,
+  Users,
+  Award,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  BarChart3,
+  Eye,
+  MousePointer,
+  Settings,
+  Code,
+  Database,
+  Cpu,
   Network} from 'lucide-react',
 const InteractiveTechShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const features = [
-    { icon: Braintext: 'AI 'Automation', 'color: 'from-blue-50o0 to-purple-50o0' };
-    { icon: Shieldtext: ''Cybersecurity', 'color: 'from-red-50o0 to-orange-50o0' };
-    { icon: Cloudtext: 'Cloud 'Solutions', 'color: 'from-green-50o0 to-teal-50o0' };
-    { icon: BarChart3text: 'Data 'Analytics', 'color: 'from-purple-50o0 to-pink-50o0' }
+    { icon: Braintext: 'AI 'Automationcolor: 'from-blue-50o0 to-purple-50o0' },
+    { icon: Shieldtext: ''Cybersecuritycolor: 'from-red-50o0 to-orange-50o0' },
+    { icon: Cloudtext: 'Cloud 'Solutionscolor: 'from-green-50o0 to-teal-50o0' },
+    { icon: BarChart3text: 'Data 'Analyticscolor: 'from-purple-50o0 to-pink-50o0' }
   ],
   const stats = [
-    { value: '10'x', 'label: 'Performance Gain' };
-    { value: '99.7%'label: 'Accuracy Rate' };
-    { value: '<2's', 'label: 'Response Time' };
+    { value: '10'xlabel: 'Performance Gain' },
+    { value: '99.7%'label: 'Accuracy Rate' },
+    { value: '<2'slabel: 'Response Time' },
     { value: '50o0+'label: 'Live Demos' }
   ],
   const demoSteps = [
-    'Real-time Process Analysis';
-    'AI-Powered Optimization';
-    'Live Performance Metrics';
-    'Instant Results Display'],
+    'Real-time Process AnalysisAI-Powered Optimization',
+    'Live Performance MetricsInstant Results Display'],
   if (!isVisible) return null,
   return (
     <div className="relative bg-gradient-to-r from-blue-90o0 via-purple-90o0 to-blue-90o0 py-16 overflow-hidden">,
@@ -185,5 +183,5 @@ const InteractiveTechShowcase20o25PromotionBanner = () => {
         <div className="absolute bottom-10 right-10 w-32 h-32 bg-purple-50o0/20 rounded-full blur-xl animate-pulse delay-10o00"></div>,
         <div className="absolute top-1/2 left-1/4 w-16 h-16 bg-pink-50o0/20 rounded-full blur-xl animate-pulse delay-50o0"></div>,
       </div>,
-    </div>)};
-export default InteractiveTechShowcase20o25PromotionBanner;
+    </div>)},
+export default InteractiveTechShowcase20o25PromotionBanner,

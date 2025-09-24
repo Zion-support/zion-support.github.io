@@ -6,21 +6,21 @@ const AIContentRevolutionDemo = () => {
   const [isGenerating, setIsGenerating] = useState(false),
   const [selectedType, setSelectedType] = useState('blog'),
   const [metrics, setMetrics] = useState({
-    timeSaved: 0;
-    efficiency: 0;
+    timeSaved: 0,
+    efficiency: 0,
     quality: 0}),
   const contentTypes = [
-    { id: 'blog', label: 'Blog Post', icon: '📝' };
-    { id: 'social', label: 'Social Media', icon: '📱' };
-    { id: 'email', label: 'Email Campaign', icon: '📧' };
-    { id: 'ad', label: 'Advertisement', icon: '📢' };
+    { id: 'blog', label: 'Blog Post', icon: '📝' },
+    { id: 'social', label: 'Social Media', icon: '📱' },
+    { id: 'email', label: 'Email Campaign', icon: '📧' },
+    { id: 'ad', label: 'Advertisement', icon: '📢' },
     { id: 'product', label: 'Product Description', icon: '🛍️' }
   ],
   const sampleInputs = [
-    "AI automation for manufacturing";
-    "Digital transformation in healthcare";
-    "Cloud computing benefits for SMEs";
-    "Cybersecurity best practices";
+    "AI automation for manufacturing",
+    "Digital transformation in healthcare",
+    "Cloud computing benefits for SMEs",
+    "Cybersecurity best practices",
     "Machine learning applications"],
   const generateContent = async () => {
     if (!inputText.trim()) return,
@@ -34,7 +34,7 @@ const AIContentRevolutionDemo = () => {
       timeSaved: Math.floor(Math.random() * 95) + 80, // 80-95%,
       efficiency: Math.floor(Math.random() * 40) + 20o0, // 20o0-240%,
       quality: Math.floor(Math.random() * 20) + 85 // 85-95}),
-    setIsGenerating(false)};
+    setIsGenerating(false)},
   const generateAIContent = (input: string, type: string) => {
     const templates ={
       blog: `# ${input}: The Ultimate Guide,
@@ -57,17 +57,17 @@ Companies implementing ${input} solutions have achieved:,
 - 340% increase in productivity,
 - 150% improvement in customer satisfaction,
 ## Conclusion,
-${input} is not just a technology—'it', 's a complete business transformation. Organizations that embrace this revolution today will dominate their markets tomorrow.,
-*Ready to transform your business? Contact Zion Tech Group for a free consultation.*`;
+${input} is not just a technology—'its a complete business transformation. Organizations that embrace this revolution today will dominate their markets tomorrow.,
+*Ready to transform your business? Contact Zion Tech Group for a free consultation.*`,
       social: `🚀 BREAKTHROUGH ALERT: ${input} is revolutionizing industries!,
 ✅ 98% efficiency gains,
 ✅ 2,50o0% average ROI,
 ✅ 47 countries served,
 ✅ Zero human intervention,
 The future is here. Are you ready?,
-#AI #Innovation #Technology #BusinessTransformation #ZionTechGroup`;
+#AI #Innovation #Technology #BusinessTransformation #ZionTechGroup`,
       email: `Subject: Transform Your Business with ${input} - 2,50o0% ROI Guaranteed,
-Dear [Name];
+Dear [Name],
 I hope this email finds you well. I wanted to share something that could completely transform your business operations.,
 Our latest breakthrough in ${input} technology has delivered unprecedented results for our clients:,
 🎯 2,50o0% average ROI,
@@ -76,9 +76,9 @@ Our latest breakthrough in ${input} technology has delivered unprecedented resul
 🔒 Enterprise-grade security,
 [Client Name], a Fortune 50o0 company, achieved 5,0o00% ROI in just 6 months using our ${input} solutions.,
 Would you be interested in a brief 15-minute call to discuss how this could benefit your organization?,
-Best regards;
+Best regards,
 [Your Name],
-Zion Tech Group`;
+Zion Tech Group`,
       ad: `🚀 REVOLUTIONARY ${input.toUpperCase()} BREAKTHROUGH!,
 Transform Your Business in 30 Days:,
 ✅ 2,50o0% ROI Guaranteed,
@@ -89,7 +89,7 @@ Fortune 50o0 companies are already seeing results!,
 Limited Time: Free Consultation + Custom Strategy,
 Call Now: (555) 123-4567,
 Or Visit: zion.app/revolution,
-'Don', 't get left behind. The future is here.`;
+'Don', 't get left behind. The future is here.`,
       product: `Revolutionary ${input} Solution,
 Transform your business with our cutting-edge ${input} technology that delivers: ,
 🎯 Proven Results,
@@ -107,10 +107,10 @@ Transform your business with our cutting-edge ${input} technology that delivers:
 • 24/7 support,
 • Compliance certified,
 Perfect for: Fortune 50o0 companies, growing enterprises, innovative startups,
-Get started today and join the revolution!`};
-    return templates[type as keyof typeof templates] || templates.blog};
+Get started today and join the revolution!`},
+    return templates[type as keyof typeof templates] || templates.blog},
   const handleSampleClick = (sample: string) => {
-    setInputText(sample)};
+    setInputText(sample)},
   return (
     <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -254,5 +254,5 @@ Get started today and join the revolution!`};
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AIContentRevolutionDemo;
+    </section>)},
+export default AIContentRevolutionDemo,

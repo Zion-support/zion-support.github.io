@@ -2,20 +2,20 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Atom;
-  Rocket;
-  Target;
-  Star;
-  Search;
-  Grid;
-  List;
-  ArrowRight;
-  Globe;
-  Phone;
-  Mail;
-  MapPin;
-  Cpu;
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Star,
+  Search,
+  Grid,
+  List,
+  ArrowRight,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  Cpu,
 } from 'lucide-react',
 // Import our new 20o37 services,
 import { innovative20o37MicroSaasServices } from '../data/innovative-20o37-micro-saas-services',
@@ -23,53 +23,53 @@ import { innovative20o37ITServices } from '../data/innovative-20o37-it-services'
 import { innovative20o37AIServices } from '../data/innovative-20o37-ai-services',
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    icon: <Grid className='w-6 h-6' />;
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of all 20o37 services';
-  };
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of all 20o37 services'
+  },
   {
-    id: 'ai-services';
-    name: 'AI & Consciousness';
-    icon: <Brain className='w-6 h-6' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Revolutionary AI platforms and consciousness solutions';
-  };
+    id: 'ai-services',
+    name: 'AI & Consciousness',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    description: 'Revolutionary AI platforms and consciousness solutions'
+  },
   {
-    id: 'quantum-services';
-    name: 'Quantum Technology';
-    icon: <Atom className='w-6 h-6' />;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    description: 'Breakthrough quantum computing solutions';
-  };
+    id: 'quantum-services',
+    name: 'Quantum Technology',
+    icon: <Atom className='w-6 h-6' />,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    description: 'Breakthrough quantum computing solutions'
+  },
   {
-    id: 'space-tech';
-    name: 'Space Technology';
-    icon: <Rocket className='w-6 h-6' />;
-    color: 'from-indigo-50o0 to-purple-50o0';
-    description: 'Space exploration and resource mining solutions';
-  };
+    id: 'space-tech',
+    name: 'Space Technology',
+    icon: <Rocket className='w-6 h-6' />,
+    color: 'from-indigo-50o0 to-purple-50o0',
+    description: 'Space exploration and resource mining solutions'
+  },
   {
-    id: 'it-solutions';
-    name: 'Enterprise IT';
-    icon: <Cpu className='w-6 h-6' />;
-    color: 'from-orange-50o0 to-red-50o0';
-    description: 'Advanced enterprise infrastructure solutions';
-  };
+    id: 'it-solutions',
+    name: 'Enterprise IT',
+    icon: <Cpu className='w-6 h-6' />,
+    color: 'from-orange-50o0 to-red-50o0',
+    description: 'Advanced enterprise infrastructure solutions'
+  },
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Target className='w-6 h-6' />;
-    color: 'from-emerald-50o0 to-cyan-50o0';
-    description: 'Innovative business solutions for modern enterprises';
-  };
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Target className='w-6 h-6' />,
+    color: 'from-emerald-50o0 to-cyan-50o0',
+    description: 'Innovative business solutions for modern enterprises'
+  },
 ],
 // Combine all services,
 const allServices = [
-  ...innovative20o37MicroSaasServices;
-  ...innovative20o37ITServices;
-  ...innovative20o37AIServices;
+  ...innovative20o37MicroSaasServices,
+  ...innovative20o37ITServices,
+  ...innovative20o37AIServices,
 ],
 export default function FuturisticServicesShowcase20o37() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -80,7 +80,7 @@ export default function FuturisticServicesShowcase20o37() {
       selectedCategory === 'all' ||,
       service.category,
         .toLowerCase(),
-        .includes(selectedCategory.replace('-', ' ')),
+        .includes(selectedCategory.replace('- ')),
     const matchesSearch =,
       service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -94,7 +94,7 @@ export default function FuturisticServicesShowcase20o37() {
       return <Cpu className='w-6 h-6' />,
     if (category.includes('Micro') || category.includes('SAAS')),
       return <Target className='w-6 h-6' />,
-    return <Star className='w-6 h-6' />};
+    return <Star className='w-6 h-6' />},
   const getServiceColor = (category: string) => {
     if (category.includes('AI')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -103,20 +103,17 @@ export default function FuturisticServicesShowcase20o37() {
       return 'from-orange-50o0 to-red-50o0',
     if (category.includes('Micro') || category.includes('SAAS')),
       return 'from-emerald-50o0 to-cyan-50o0',
-    return 'from-gray-50o0 to-slate-50o0'};
+    return 'from-gray-50o0 to-slate-50o0'},
   return (
     <>,
       <SEO
         title='20o37 Futuristic Services Showcase | Zion Tech Group',
         description='Explore our revolutionary 20o37 services including AI consciousness evolution, quantum computing, space technology, and enterprise solutions. Transform your business with cutting-edge technology.',
         keywords={[
-          '20o37 services';
-          'AI consciousness';
-          'quantum computing';
-          'space technology';
-          'enterprise IT';
-          'micro SAAS';
-          'Zion Tech Group';
+          '20o37 servicesAI consciousness',
+          'quantum computingspace technology',
+          'enterprise ITmicro SAAS',
+          'Zion Tech Group',
         ]}
       />,
       <div className='min-h-screen bg-black text-white'>,

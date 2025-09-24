@@ -2,27 +2,27 @@ import SEO from '../components/SEO',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Brain;
-  Globe;
-  TrendingUp;
-  Award;
-  CheckCircle;
-  ExternalLink;
+  Zap,
+  Brain,
+  Globe,
+  TrendingUp,
+  Award,
+  CheckCircle,
+  ExternalLink,
 } from 'lucide-react',
 export default function EnhancedMarketPricing20o37Page() {
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
-    transition: { duration: 0.6 };
-  };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+  },
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   return (
     <UltraAdvancedFuturisticBackground>,
       <SEO

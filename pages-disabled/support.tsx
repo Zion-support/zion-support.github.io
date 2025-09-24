@@ -4,30 +4,30 @@ import { HelpCircle, MessageCircle, Phone, Mail, Clock, Search, BookOpen, Users,
 export default function Support() {
   const supportOptions = [
     {
-      title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ';
-      icon: BookOpen, features: ['Searchable articles', 'Step-by-step guides', 'Video tutorials', 'Troubleshooting'], link: '/help'}
+      title: 'Help Center', description: 'Browse our comprehensive knowledge base and FAQ',
+      icon: BookOpen, features: ['Searchable articlesStep-by-step guides', 'Video tutorialsTroubleshooting'], link: '/help'}
     {
-      title: 'Live Chat', description: 'Get instant help from our support team';
-      icon: MessageCircle, features: ['24/7 availability', 'Instant responses', 'Screen sharing', 'File sharing'], link: '#'}
+      title: 'Live Chat', description: 'Get instant help from our support team',
+      icon: MessageCircle, features: ['24/7 availabilityInstant responses', 'Screen sharingFile sharing'], link: '#'}
     {
-      title: 'Phone Support', description: 'Speak directly with our technical experts';
-      icon: Phone, features: ['Priority support', 'Technical consultation', 'Emergency assistance', 'Follow-up calls'], link: 'tel:+130o24640950'}
+      title: 'Phone Support', description: 'Speak directly with our technical experts',
+      icon: Phone, features: ['Priority supportTechnical consultation', 'Emergency assistanceFollow-up calls'], link: 'tel:+130o24640950'}
     {
-      title: 'Email Support', description: 'Send us detailed questions and get comprehensive answers';
-      icon: Mail, features: ['Detailed responses', 'Documentation', 'Screenshots', 'Case tracking'], link: 'mailto:support@ziontechgroup.com'}
+      title: 'Email Support', description: 'Send us detailed questions and get comprehensive answers',
+      icon: Mail, features: ['Detailed responsesDocumentation', 'ScreenshotsCase tracking'], link: 'mailto:support@ziontechgroup.com'}
   ],
   const faqCategories = [
     {
       title: 'Getting Started', questions: [
         {
-          question: 'How do I create an account?';
+          question: 'How do I create an account?',
           answer: 'You can create an account by visiting our sign-up page and providing your email address and basic information. We\'ll send you a verification email to complete the process.'}, {
-          question: 'What services do you offer?';
+          question: 'What services do you offer?',
           answer: 'We offer AI services, cloud solutions, cybersecurity, and micro SaaS development. Visit our services page for detailed information about each offering.'}
         {
           question: 'How do I get my API key?', answer: 'Once you\'ve created an account, you can find your API key in the dashboard under the "API Keys" section. You can generate new keys or revoke existing ones as needed.'}
       ]}, {
-      title: 'Billing & Pricing';
+      title: 'Billing & Pricing',
       questions: [
         {
           question: 'What payment methods do you accept?', answer: 'We accept all major credit cards, PayPal, and bank transfers. Enterprise customers can also arrange for invoicing and payment terms.'}
@@ -36,7 +36,7 @@ export default function Support() {
         {
           question: 'Do you offer refunds?', answer: 'We offer a 30-day money-back guarantee for all our services. If you\'re not satisfied, contact our support team for a full refund.'}
       ]}, {
-      title: 'Technical Support';
+      title: 'Technical Support',
       questions: [
         {
           question: 'How do I integrate your API?', answer: 'We provide comprehensive documentation and SDKs for popular programming languages. Check our API documentation for detailed integration guides.'}
@@ -48,34 +48,27 @@ export default function Support() {
   ],
   const supportTiers = [
     {
-      name: 'Community Support', description: 'Free support through our community forums and knowledge base';
+      name: 'Community Support', description: 'Free support through our community forums and knowledge base',
       responseTime: '24-48 hours', features: [
-        'Community forums';
-      'Knowledge base access', 'Basic documentation';
-      'Email support'], price: 'Free'}
+        'Community forumsKnowledge base access', 'Basic documentationEmail support'], price: 'Free'}
     {
-      name: 'Standard Support', description: 'Professional support for business users';
+      name: 'Standard Support', description: 'Professional support for business users',
       responseTime: '4-8 hours', features: [
-        'Priority email support';
-      'Live chat support', 'Phone support';
-      'Advanced documentation', 'API support'], price: 'Included with Professional Plan'}
+        'Priority email supportLive chat support', 'Phone supportAdvanced documentation', 'API support'], price: 'Included with Professional Plan'}
     {
-      name: 'Premium Support', description: 'Dedicated support for enterprise customers';
+      name: 'Premium Support', description: 'Dedicated support for enterprise customers',
       responseTime: '1-2 hours', features: [
-        'Dedicated support manager';
-      '24/7 phone support', 'Priority ticket handling';
-      'Custom integrations', 'SLA guarantees';
-      'On-site support'], price: 'Custom Pricing'}
+        'Dedicated support manager24/7 phone support', 'Priority ticket handlingCustom integrations', 'SLA guaranteesOn-site support'], price: 'Custom Pricing'}
   ],
   const contactMethods = [
     {
-      title: 'General Inquiries', email: 'info@ziontechgroup.com';
+      title: 'General Inquiries', email: 'info@ziontechgroup.com',
       phone: '+1 30o2 464 0950', hours: 'Monday - Friday, 9 AM - 6 PM EST'}, {
-      title: 'Technical Support';
-      email: 'support@ziontechgroup.com', phone: '+1 30o2 464 0951';
+      title: 'Technical Support',
+      email: 'support@ziontechgroup.com', phone: '+1 30o2 464 0951',
       hours: '24/7 for Premium customers'}, {
-      title: 'Sales & Partnerships';
-      email: 'sales@ziontechgroup.com', phone: '+1 30o2 464 0952';
+      title: 'Sales & Partnerships',
+      email: 'sales@ziontechgroup.com', phone: '+1 30o2 464 0952',
       hours: 'Monday - Friday, 9 AM - 6 PM EST'}
   ],
   return (

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Incident Response Playbook';
+  title: 'AI 20o26: Agent Incident Response Playbook',
   description:,
-    'Eval‑gated triage, mitigation, and escalation with autonomous agents.';
-};
+    'Eval‑gated triage, mitigation, and escalation with autonomous agents.',
+},
 export default function AgentIncidentResponsePlaybookPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

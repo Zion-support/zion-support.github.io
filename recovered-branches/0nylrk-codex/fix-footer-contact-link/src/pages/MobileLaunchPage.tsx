@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import {SEO} from "@/components/SEO",
 import {AppLayout} from "@/layout/AppLayout",
 import {MobileLaunchHero} from "@/components/mobile-app/MobileLaunchHero",
@@ -8,24 +8,24 @@ import {MobileEmailCapture} from "@/components/mobile-app/MobileEmailCapture",
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner",
 import {QrCodeDownload} from "@/components/mobile-app/QrCodeDownload",
 import {CommunityTrust} from "@/components/mobile-app/CommunityTrust",
-import React from "react";;
-import { SEO } from "@/components/SEO";
-import { AppLayout } from "@/layout/AppLayout";
-import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero";
-import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase";
-import { AppTestimonials } from "@/components/mobile-app/AppTestimonials";
-import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture";
-import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
-import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload";
-import { CommunityTrust } from "@/components/mobile-app/CommunityTrust";
+import React from "react",
+import { SEO } from "@/components/SEO",
+import { AppLayout } from "@/layout/AppLayout",
+import { MobileLaunchHero } from "@/components/mobile-app/MobileLaunchHero",
+import { MobileFeatureShowcase } from "@/components/mobile-app/MobileFeatureShowcase",
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
+import { MobileEmailCapture } from "@/components/mobile-app/MobileEmailCapture",
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
+import { QrCodeDownload } from "@/components/mobile-app/QrCodeDownload",
+import { CommunityTrust } from "@/components/mobile-app/CommunityTrust",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -56,7 +56,7 @@ const MobileLaunchPage: React.FC = () => {
       <MobileEmailCapture />,
       <AppStoreBanner />,
     </AppLayout>),
-export default MobileLaunchPage;
+export default MobileLaunchPage,
 const MobileLaunchPage: React.FC = () => {
   return (
     <AppLayout>,
@@ -75,5 +75,5 @@ const MobileLaunchPage: React.FC = () => {
       <AppStoreBanner />,
     </AppLayout>)}
 ,
-export default MobileLaunchPage;
+export default MobileLaunchPage,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

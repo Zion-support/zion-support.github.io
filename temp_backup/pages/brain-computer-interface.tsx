@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Cpu;
-  Zap;
-  Target;
-  Users;
-  Globe;
-  ArrowRight;
-  Activity;
+  Brain,
+  Cpu,
+  Zap,
+  Target,
+  Users,
+  Globe,
+  ArrowRight,
+  Activity,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function BrainComputerInterface() {
@@ -27,7 +27,7 @@ export default function BrainComputerInterface() {
               </h1>,
               <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
                 Direct neural connection between human consciousness and,
-                artificial intelligence. Control technology with your thoughts;
+                artificial intelligence. Control technology with your thoughts,
                 enhance cognitive abilities, and unlock human potential.,
               </p>,
             </motion.div>,
@@ -96,41 +96,41 @@ export default function BrainComputerInterface() {
             <div className='grid md: grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'Neural Signal Processing';
+                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'Neural Signal Processing',
                   description:,
-                    'Advanced algorithms that decode brain activity patterns in real-time with high accuracy.';
-                };
+                    'Advanced algorithms that decode brain activity patterns in real-time with high accuracy.',
+                },
                 {
-                  icon: <Zap className='w-12 h-12 text-blue-40o0' />;
-                  title: 'Thought-to-Action';
+                  icon: <Zap className='w-12 h-12 text-blue-40o0' />,
+                  title: 'Thought-to-Action',
                   description:,
-                    'Direct control of devices and systems through pure mental commands.';
-                };
+                    'Direct control of devices and systems through pure mental commands.',
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-purple-40o0' />;
-                  title: 'Cognitive Enhancement';
+                  icon: <Target className='w-12 h-12 text-purple-40o0' />,
+                  title: 'Cognitive Enhancement',
                   description:,
-                    'Augment memory, learning, and problem-solving capabilities through neural stimulation.';
-                };
+                    'Augment memory, learning, and problem-solving capabilities through neural stimulation.',
+                },
                 {
-                  icon: <Users className='w-12 h-12 text-green-40o0' />;
-                  title: 'Human-AI Collaboration';
+                  icon: <Users className='w-12 h-12 text-green-40o0' />,
+                  title: 'Human-AI Collaboration',
                   description:,
-                    'Seamless integration between human consciousness and artificial intelligence.';
-                };
+                    'Seamless integration between human consciousness and artificial intelligence.',
+                },
                 {
-                  icon: <Globe className='w-12 h-12 text-yellow-40o0' />;
-                  title: 'Virtual Reality Control';
+                  icon: <Globe className='w-12 h-12 text-yellow-40o0' />,
+                  title: 'Virtual Reality Control',
                   description:,
-                    'Navigate digital worlds and virtual environments using only your thoughts.';
-                };
+                    'Navigate digital worlds and virtual environments using only your thoughts.',
+                },
                 {
-                  icon: <Activity className='w-12 h-12 text-pink-40o0' />;
-                  title: 'Biometric Monitoring';
+                  icon: <Activity className='w-12 h-12 text-pink-40o0' />,
+                  title: 'Biometric Monitoring',
                   description:,
-                    'Real-time health monitoring and early warning systems for neurological conditions.';
-                };
+                    'Real-time health monitoring and early warning systems for neurological conditions.',
+                },
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -167,45 +167,41 @@ export default function BrainComputerInterface() {
             <div className='grid md: grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Medical Rehabilitation';
+                  title: 'Medical Rehabilitation',
                   description:,
-                    'Restore mobility and communication for patients with paralysis or speech disorders.';
+                    'Restore mobility and communication for patients with paralysis or speech disorders.',
                   benefits: [
-                    'Motor function restoration';
-                    'Communication recovery';
-                    'Quality of life improvement';
-                  ];
-                };
+                    'Motor function restorationCommunication recovery',
+                    'Quality of life improvement',
+                  ]
+                },
                 {
-                  title: 'Gaming & Entertainment';
+                  title: 'Gaming & Entertainment',
                   description:,
-                    'Control games and virtual experiences through pure thought and imagination.';
+                    'Control games and virtual experiences through pure thought and imagination.',
                   benefits: [
-                    'Immersive gameplay';
-                    'Thought-controlled VR';
-                    'Enhanced user experience';
-                  ];
-                };
+                    'Immersive gameplayThought-controlled VR',
+                    'Enhanced user experience',
+                  ]
+                },
                 {
-                  title: 'Productivity Enhancement';
+                  title: 'Productivity Enhancement',
                   description:,
-                    'Control computers and software applications using mental commands.';
+                    'Control computers and software applications using mental commands.',
                   benefits: [
-                    'Hands-free operation';
-                    'Increased efficiency';
-                    'Accessibility improvement';
-                  ];
-                };
+                    'Hands-free operationIncreased efficiency',
+                    'Accessibility improvement',
+                  ]
+                },
                 {
-                  title: 'Research & Development';
+                  title: 'Research & Development',
                   description:,
-                    'Advance neuroscience research and develop new BCI applications.';
+                    'Advance neuroscience research and develop new BCI applications.',
                   benefits: [
-                    'Scientific breakthroughs';
-                    'Technology advancement';
-                    'Human potential expansion';
-                  ];
-                };
+                    'Scientific breakthroughsTechnology advancement',
+                    'Human potential expansion',
+                  ]
+                },
               ].map((app, index) => (
                 <motion.div,
                   key={index}

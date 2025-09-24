@@ -7,37 +7,37 @@ const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const contentItems = [
     {
-      id: 'ultimate-automation-revolution';
-      title: 'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
+      id: 'ultimate-automation-revolution',
+      title: 'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B+';
-        efficiency: '2,50o0%';
-        accuracy: '99.97%'};
-      description: 'Transform your business with revolutionary AI automation that delivers unprecedented returns'};
+        roi: '50,0o00%',
+        savings: '$2.8B+',
+        efficiency: '2,50o0%',
+        accuracy: '99.97%'},
+      description: 'Transform your business with revolutionary AI automation that delivers unprecedented returns'},
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        accuracy: '99.97%'};
-      description: 'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation'};
+        roi: '50,0o00%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        accuracy: '99.97%'},
+      description: 'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation'},
     {
-      id: 'implementation-ultimate-guide';
-      title: 'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi';
+      id: 'implementation-ultimate-guide',
+      title: 'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi',
       metrics: {
-        roi: '50,0o00%';
-        success: '94%';
-        timeline: '12-18 months';
-        guide: 'Complete'};
+        roi: '50,0o00%',
+        success: '94%',
+        timeline: '12-18 months',
+        guide: 'Complete'},
       description: 'The definitive guide to achieving unprecedented returns through revolutionary AI automation'}
   ],
   useEffect(() => {
@@ -46,7 +46,7 @@ const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai-20o25-ultimate-automation-banner-dismissed', 'true')};
+    localStorage.setItem('ai-20o25-ultimate-automation-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai-20o25-ultimate-automation-banner-dismissed'),
     if (dismissed === 'true') {
@@ -147,5 +147,5 @@ const AI20o25UltimateAutomationRevolution50o000ROIBanner = () => {
       </div>,
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-8 bg-gradient-to-t from-gray-90o0/50 to-transparent"></div>,
-    </div>)};
-export default AI20o25UltimateAutomationRevolution50o000ROIBanner;
+    </div>)},
+export default AI20o25UltimateAutomationRevolution50o000ROIBanner,

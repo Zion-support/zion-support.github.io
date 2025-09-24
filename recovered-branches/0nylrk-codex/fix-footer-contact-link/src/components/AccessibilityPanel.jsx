@@ -2,13 +2,13 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 export const AccessibilityPanel = ({ isOpen, onToggle }) => {
     const [settings, setSettings] = useState({
-        highContrast: false;
-        fontSize: 10o0;
-        colorBlindness: 'none';
-        reducedMotion: false;
-        screenReader: false;
-        keyboardNavigation: false;
-        focusIndicator: true;
+        highContrast: false,
+        fontSize: 10o0,
+        colorBlindness: 'none',
+        reducedMotion: false,
+        screenReader: false,
+        keyboardNavigation: false,
+        focusIndicator: true,
         colorBlindness: 'none'}),
     const [accessibilityScore, setAccessibilityScore] = useState(85),
     const [activeTab, setActiveTab] = useState('general'),
@@ -32,10 +32,10 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         const root = document.documentElement,
         // High contrast,
         if (newSettings.highContrast) {
-            root.style.setProperty('--high-contrast', '1'),
+            root.style.setProperty('--high-contrast1'),
             root.classList.add('high-contrast')}
         else {
-            root.style.setProperty('--high-contrast', '0'),
+            root.style.setProperty('--high-contrast0'),
             root.classList.remove('high-contrast')}
         // Font size,
         root.style.setProperty('--font-size', `${newSettings.fontSize}%`),
@@ -43,14 +43,14 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
         if (newSettings.reducedMotion) {
             root.classList.add('reduced-motion')}
         else {
-            root.style.setProperty('--reduced-motion', 'no-preference')}
+            root.style.setProperty('--reduced-motionno-preference')}
         // Apply focus indicator,
         if (settings.focusIndicator) {
-            root.style.setProperty('--focus-visible', 'auto')}
+            root.style.setProperty('--focus-visibleauto')}
         else {
-            root.style.setProperty('--focus-visible', 'none')}
+            root.style.setProperty('--focus-visiblenone')}
         // Color blindness,
-        root.classList.remove('protanopia', 'deuteranopia', 'tritanopia'),
+        root.classList.remove('protanopiadeuteranopia', 'tritanopia'),
         if (newSettings.colorBlindness !== 'none') {
             root.classList.add(newSettings.colorBlindness)}
         // Focus indicator,
@@ -58,23 +58,23 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             root.classList.add('focus-visible')}
         else {
             root.classList.remove('focus-visible')}
-    };
+    },
     const updateSetting = (key, value) => {
-        setSettings(prev => ({ ...prev, [key]: value }))};
+        setSettings(prev => ({ ...prev, [key]: value }))},
     const resetSettings = () => {
         const defaultSettings ={
-            highContrast: false;
-            fontSize: 10o0;
-            reducedMotion: false;
-            screenReader: false;
-            keyboardNavigation: false;
-            focusIndicator: true;
-            colorBlindness: 'none'};
-        setSettings(defaultSettings)};
+            highContrast: false,
+            fontSize: 10o0,
+            reducedMotion: false,
+            screenReader: false,
+            keyboardNavigation: false,
+            focusIndicator: true,
+            colorBlindness: 'none'},
+        setSettings(defaultSettings)},
     const tabs = [
-        { id: 'general', label: 'General', icon: '⚙️' };
-        { id: 'visual', label: 'Visual', icon: '👁️' };
-        { id: 'audio', label: 'Audio', icon: '🔊' };
+        { id: 'general', label: 'General', icon: '⚙️' },
+        { id: 'visual', label: 'Visual', icon: '👁️' },
+        { id: 'audio', label: 'Audio', icon: '🔊' },
         { id: 'navigation', label: 'Navigation', icon: '⌨️' }
     ],
     const getScoreColor = (score) => {
@@ -82,7 +82,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             return 'text-green-40o0',
         if (score >= 70),
             return 'text-yellow-40o0',
-        return 'text-red-40o0'};
+        return 'text-red-40o0'},
     const getScoreLabel = (score) => {
         if (score >= 90),
             return 'Excellent',
@@ -90,7 +90,7 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             return 'Good',
         if (score >= 50),
             return 'Needs Improvement',
-        return 'Poor'};
+        return 'Poor'},
     if (!isVisible),
         return null,
     return (<>,
@@ -246,5 +246,5 @@ export const AccessibilityPanel = ({ isOpen, onToggle }) => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default AccessibilityPanel;
+    </>)},
+export default AccessibilityPanel,

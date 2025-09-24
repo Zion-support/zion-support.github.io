@@ -3,11 +3,11 @@ import Layout from './layout/Layout',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Star;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe;
-  Rocket, Target, Users, Cpu, Eye, Network;
-  Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette;
-  FileText, BarChart3, Heart, Truck, ShieldCheck;
+  ArrowRight, Star,
+  Brain, Atom, Shield, Zap, TrendingUp, Globe,
+  Rocket, Target, Users, Cpu, Eye, Network,
+  Car, Search, TestTube, Globe as PlanetIcon, Lock, Palette,
+  FileText, BarChart3, Heart, Truck, ShieldCheck,
   Sparkles, Infinity as InfinityIcon, Zap as Lightning} from 'lucide-react',
 // Import new service data,
 import { innovativeMicroSaasServices20o25V2 } from '../data/20o25-innovative-micro-saas-expansion-v2',
@@ -24,61 +24,61 @@ const Homepage20o40: React.FC = () => {
     return () => clearInterval(interval)}, []),
   // Enhanced animation variants for better performance,
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants ={
     float: {
-      y: [-10, 10, -10];
+      y: [-10, 10, -10],
       transition: {
-        duration: 3;
-        repeat: -1;
+        duration: 3,
+        repeat: -1,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const statsData = [
     {
-      number: "10o0+";
-      label: "Innovative Services";
-      description: "Cutting-edge solutions";
-      icon: Sparkles;
-      color: "text-cyan-40o0";
-      hoverColor: "group-hover:text-cyan-30o0"};
+      number: "10o0+",
+      label: "Innovative Services",
+      description: "Cutting-edge solutions",
+      icon: Sparkles,
+      color: "text-cyan-40o0",
+      hoverColor: "group-hover:text-cyan-30o0"},
     {
-      number: "∞";
-      label: "Future Possibilities";
-      description: "Unlimited potential";
-      icon: InfinityIcon;
-      color: "text-purple-40o0";
-      hoverColor: "group-hover:text-purple-30o0"};
+      number: "∞",
+      label: "Future Possibilities",
+      description: "Unlimited potential",
+      icon: InfinityIcon,
+      color: "text-purple-40o0",
+      hoverColor: "group-hover:text-purple-30o0"},
     {
-      number: "24/7";
-      label: "Autonomous Operations";
-      description: "Always available";
-      icon: Cpu;
-      color: "text-blue-40o0";
-      hoverColor: "group-hover:text-blue-30o0"};
+      number: "24/7",
+      label: "Autonomous Operations",
+      description: "Always available",
+      icon: Cpu,
+      color: "text-blue-40o0",
+      hoverColor: "group-hover:text-blue-30o0"},
     {
-      number: "10x";
-      label: "Performance Boost";
-      description: "Quantum enhancement";
-      icon: Lightning;
-      color: "text-green-40o0";
+      number: "10x",
+      label: "Performance Boost",
+      description: "Quantum enhancement",
+      icon: Lightning,
+      color: "text-green-40o0",
       hoverColor: "group-hover:text-green-30o0"}
   ],
   // Combine all services for showcase,
@@ -86,24 +86,24 @@ const Homepage20o40: React.FC = () => {
   const featuredServices = allServices.filter(service => service.popular).slice(0, 6),
   const serviceCategories = [
     {
-      name: "AI & Machine Learning";
-      icon: Brain;
-      count: allServices.filter(s => s.category.includes('AI')).length;
-      color: "from-pink-50o0 to-rose-60o0"};
+      name: "AI & Machine Learning",
+      icon: Brain,
+      count: allServices.filter(s => s.category.includes('AI')).length,
+      color: "from-pink-50o0 to-rose-60o0"},
     {
-      name: "Quantum Technology";
-      icon: Atom;
-      count: allServices.filter(s => s.category.includes('Quantum')).length;
-      color: "from-blue-50o0 to-cyan-60o0"};
+      name: "Quantum Technology",
+      icon: Atom,
+      count: allServices.filter(s => s.category.includes('Quantum')).length,
+      color: "from-blue-50o0 to-cyan-60o0"},
     {
-      name: "Emerging Tech";
-      icon: Rocket;
-      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length;
-      color: "from-purple-50o0 to-indigo-60o0"};
+      name: "Emerging Tech",
+      icon: Rocket,
+      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length,
+      color: "from-purple-50o0 to-indigo-60o0"},
     {
-      name: "Cybersecurity";
-      icon: Shield;
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length;
+      name: "Cybersecurity",
+      icon: Shield,
+      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
       color: "from-green-50o0 to-emerald-60o0"}
   ],
   return (
@@ -138,15 +138,15 @@ const Homepage20o40: React.FC = () => {
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-40o0/30 rounded-full",
                   style={{
-                    left: `${Math.random() * 10o0}%`;
-                    top: `${Math.random() * 10o0}%`;
+                    left: `${Math.random() * 10o0}%`,
+                    top: `${Math.random() * 10o0}%`,
                     animationDelay: `${Math.random() * 3}s`}}
                   animate={{
-                    scale: [0, 1, 0];
+                    scale: [0, 1, 0],
                     opacity: [0, 1, 0]}}
                   transition={{
-                    duration: 3;
-                    repeat: Infinity;
+                    duration: 3,
+                    repeat: Infinity,
                     delay: Math.random() * 3}}
                  />))}
             </div>,
@@ -437,5 +437,5 @@ const Homepage20o40: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage20o40;
+    </Layout>)},
+export default Homepage20o40,

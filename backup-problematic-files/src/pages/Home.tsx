@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Link } from 'react-router-dom',
 const HomePage: React.FC = () => {
   return (
@@ -10,7 +10,7 @@ const HomePage: React.FC = () => {
           <span className='text-purple-60o0'>Enterprise IT</span>,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto leading-relaxed'>,
-          We design, build and operate production-grade platforms: AI copilots;
+          We design, build and operate production-grade platforms: AI copilots,
           data/ML pipelines, automation, cloud infra, and secure micro SaaS,
           products.,
         </p>,
@@ -78,12 +78,12 @@ const HomePage: React.FC = () => {
           />,
         </div>,
       </section>,
-    </div>)};
+    </div>)},
 function Card({
-  title;
-  description;
-  href;
-  icon;
+  title,
+  description,
+  href,
+  icon,
 }: {
   title: string,
   description: string,
@@ -101,8 +101,8 @@ function Card({
     </Link>)}
 ,
 function FeatureCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -112,4 +112,4 @@ function FeatureCard({
       <p className='text-gray-60o0'>{description}</p>,
     </div>)}
 ,
-export default HomePage;
+export default HomePage,

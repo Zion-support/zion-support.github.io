@@ -2,178 +2,160 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Mail;
-  MapPin;
-  Shield;
-  Lock;
-  Zap;
-  Target;
-  Globe;
-  Users;
-  Award;
-  Check;
-  Clock;
-  DollarSign;
-  ArrowUpRight;
-  Play;
-  BookOpen;
-  Code;
-  Network;
-  Cpu;
-  Server;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Shield,
+  Lock,
+  Zap,
+  Target,
+  Globe,
+  Users,
+  Award,
+  Check,
+  Clock,
+  DollarSign,
+  ArrowUpRight,
+  Play,
+  BookOpen,
+  Code,
+  Network,
+  Cpu,
+  Server,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
   {
-    title: 'Quantum Key Distribution (QKD)';
+    title: 'Quantum Key Distribution (QKD)',
     description:,
-      'Unbreakable encryption using quantum mechanics principles for secure key exchange';
-    icon: Lock;
-    color: 'from-blue-50o0 to-cyan-50o0';
-  };
+      'Unbreakable encryption using quantum mechanics principles for secure key exchange',
+    icon: Lock,
+    color: 'from-blue-50o0 to-cyan-50o0'
+  },
   {
-    title: 'Real-time Quantum Monitoring';
+    title: 'Real-time Quantum Monitoring',
     description:,
-      'Continuous monitoring of quantum states and network security in real-time';
-    icon: Shield;
-    color: 'from-green-50o0 to-emerald-50o0';
-  };
+      'Continuous monitoring of quantum states and network security in real-time',
+    icon: Shield,
+    color: 'from-green-50o0 to-emerald-50o0'
+  },
   {
-    title: 'Multi-node Quantum Network';
+    title: 'Multi-node Quantum Network',
     description:,
-      'Distributed quantum network architecture for scalable secure communications';
-    icon: Network;
-    color: 'from-purple-50o0 to-pink-50o0';
-  };
+      'Distributed quantum network architecture for scalable secure communications',
+    icon: Network,
+    color: 'from-purple-50o0 to-pink-50o0'
+  },
   {
-    title: 'Post-Quantum Cryptography';
+    title: 'Post-Quantum Cryptography',
     description:,
-      'Future-proof encryption algorithms resistant to quantum computing attacks';
-    icon: Cpu;
-    color: 'from-orange-50o0 to-red-50o0';
-  };
+      'Future-proof encryption algorithms resistant to quantum computing attacks',
+    icon: Cpu,
+    color: 'from-orange-50o0 to-red-50o0'
+  },
   {
-    title: 'Quantum Memory Systems';
+    title: 'Quantum Memory Systems',
     description:,
-      'Advanced quantum memory for storing and retrieving quantum information';
-    icon: Server;
-    color: 'from-indigo-50o0 to-blue-50o0';
-  };
+      'Advanced quantum memory for storing and retrieving quantum information',
+    icon: Server,
+    color: 'from-indigo-50o0 to-blue-50o0'
+  },
   {
-    title: 'Compliance & Audit Trails';
+    title: 'Compliance & Audit Trails',
     description:,
-      'Comprehensive compliance frameworks and detailed audit logging';
-    icon: CheckCircle;
-    color: 'from-yellow-50o0 to-orange-50o0';
-  };
+      'Comprehensive compliance frameworks and detailed audit logging',
+    icon: CheckCircle,
+    color: 'from-yellow-50o0 to-orange-50o0'
+  },
 ],
 const pricingPlans = [
   {
-    name: 'Government';
-    price: '$15,0o00';
-    period: '/month';
-    description: 'For government agencies and critical infrastructure';
+    name: 'Government',
+    price: '$15,0o00',
+    period: '/month',
+    description: 'For government agencies and critical infrastructure',
     features: [
-      'Quantum key distribution (QKD)';
-      'Real-time quantum monitoring';
-      'Multi-node quantum network';
-      'Post-quantum cryptography';
-      '24/7 dedicated support';
-      'Compliance frameworks';
-      'Custom integrations';
-      'Security audits';
-    ];
-    popular: false;
-    color: 'from-gray-50o0 to-gray-60o0';
-  };
+      'Quantum key distribution (QKD)Real-time quantum monitoring',
+      'Multi-node quantum networkPost-quantum cryptography',
+      '24/7 dedicated supportCompliance frameworks',
+      'Custom integrationsSecurity audits',
+    ],
+    popular: false,
+    color: 'from-gray-50o0 to-gray-60o0'
+  },
   {
-    name: 'Enterprise';
-    price: '$25,0o00';
-    period: '/month';
-    description: 'For large enterprises and financial institutions';
+    name: 'Enterprise',
+    price: '$25,0o00',
+    period: '/month',
+    description: 'For large enterprises and financial institutions',
     features: [
-      'Everything in Government';
-      'Advanced quantum memory';
-      'Quantum entanglement distribution';
-      'Multi-party quantum protocols';
-      'Dedicated account manager';
-      'Custom security protocols';
-      'White-label solutions';
-      'API access';
-    ];
-    popular: true;
-    color: 'from-blue-50o0 to-purple-60o0';
-  };
+      'Everything in GovernmentAdvanced quantum memory',
+      'Quantum entanglement distributionMulti-party quantum protocols',
+      'Dedicated account managerCustom security protocols',
+      'White-label solutionsAPI access',
+    ],
+    popular: true,
+    color: 'from-blue-50o0 to-purple-60o0'
+  },
   {
-    name: 'Defense';
-    price: '$50,0o00';
-    period: '/month';
-    description: 'For defense contractors and military applications';
+    name: 'Defense',
+    price: '$50,0o00',
+    period: '/month',
+    description: 'For defense contractors and military applications',
     features: [
-      'Everything in Enterprise';
-      'Military-grade security';
-      'Classified information handling';
-      'Custom quantum protocols';
-      'On-site deployment';
-      '24/7 phone support';
-      'Security clearances';
-      'Defense compliance';
-    ];
-    popular: false;
-    color: 'from-purple-50o0 to-pink-60o0';
-  };
+      'Everything in EnterpriseMilitary-grade security',
+      'Classified information handlingCustom quantum protocols',
+      'On-site deployment24/7 phone support',
+      'Security clearancesDefense compliance',
+    ],
+    popular: false,
+    color: 'from-purple-50o0 to-pink-60o0'
+  },
 ],
 const useCases = [
   {
-    title: 'Government Communications';
+    title: 'Government Communications',
     description:,
-      'Secure communication between government agencies and departments';
-    icon: Shield;
-    color: 'from-blue-50o0 to-cyan-50o0';
-  };
+      'Secure communication between government agencies and departments',
+    icon: Shield,
+    color: 'from-blue-50o0 to-cyan-50o0'
+  },
   {
-    title: 'Financial Transactions';
-    description: 'Unbreakable encryption for high-value financial operations';
-    icon: DollarSign;
-    color: 'from-green-50o0 to-emerald-50o0';
-  };
+    title: 'Financial Transactions',
+    description: 'Unbreakable encryption for high-value financial operations',
+    icon: DollarSign,
+    color: 'from-green-50o0 to-emerald-50o0'
+  },
   {
-    title: 'Healthcare Data';
-    description: 'Secure transmission of sensitive medical information';
-    icon: Users;
-    color: 'from-purple-50o0 to-pink-50o0';
-  };
+    title: 'Healthcare Data',
+    description: 'Secure transmission of sensitive medical information',
+    icon: Users,
+    color: 'from-purple-50o0 to-pink-50o0'
+  },
   {
-    title: 'Military Communications';
-    description: 'Classified information exchange with quantum-level security';
-    icon: Target;
-    color: 'from-orange-50o0 to-red-50o0';
-  };
+    title: 'Military Communications',
+    description: 'Classified information exchange with quantum-level security',
+    icon: Target,
+    color: 'from-orange-50o0 to-red-50o0'
+  },
 ],
 const integrations = [
-  'Government Systems';
-  'Financial Platforms';
-  'Healthcare Networks';
-  'Military Infrastructure';
-  'Cloud Providers';
-  'VPN Solutions';
-  'Firewall Systems';
-  'Identity Management';
-  'Compliance Tools';
-  'Monitoring Systems';
-  'API Gateways';
-  'Custom Applications';
+  'Government SystemsFinancial Platforms',
+  'Healthcare NetworksMilitary Infrastructure',
+  'Cloud ProvidersVPN Solutions',
+  'Firewall SystemsIdentity Management',
+  'Compliance ToolsMonitoring Systems',
+  'API GatewaysCustom Applications',
 ],
 export default function QuantumSecureCommunicationNetwork() {
   return (

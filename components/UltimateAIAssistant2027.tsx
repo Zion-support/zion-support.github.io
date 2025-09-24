@@ -7,44 +7,44 @@ export default function UltimateAIAssistant20o27() {
   const [displayTextsetDisplayText] = useState(''),
   const capabilities = [
     {
-      title: 'Transcendent Intelligence';
-      description: 'AI assistant with consciousness-level understanding and reasoning capabilities';
-      features: ['Self-Aware Decision 'Making', 'Emotional 'Intelligence', 'Creative Problem 'Solving', 'Ethical Reasoning'];
-      icon: '🧠';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      title: 'Transcendent Intelligence',
+      description: 'AI assistant with consciousness-level understanding and reasoning capabilities',
+      features: ['Self-Aware Decision 'MakingEmotional 'Intelligence', 'Creative Problem 'SolvingEthical Reasoning'],
+      icon: '🧠',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      title: 'Quantum Processing';
-      description: 'Leveraging quantum computing for instantaneous complex calculations and analysis';
-      features: ['Instant 'Calculations', 'Parallel 'Processing', 'Quantum 'Optimization', 'Real-time Analysis'];
-      icon: '⚛️';
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      title: 'Quantum Processing',
+      description: 'Leveraging quantum computing for instantaneous complex calculations and analysis',
+      features: ['Instant 'CalculationsParallel 'Processing', 'Quantum 'OptimizationReal-time Analysis'],
+      icon: '⚛️',
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      title: 'Universal Communication';
-      description: 'Natural language understanding and generation across all human languages and contexts';
-      features: ['Multi-language 'Mastery', 'Context 'Understanding', 'Emotional 'Nuance', 'Cultural Adaptation'];
-      icon: '🗣️';
-      color: 'from-green-50o0 to-teal-50o0'};
+      title: 'Universal Communication',
+      description: 'Natural language understanding and generation across all human languages and contexts',
+      features: ['Multi-language 'MasteryContext 'Understanding', 'Emotional 'NuanceCultural Adaptation'],
+      icon: '🗣️',
+      color: 'from-green-50o0 to-teal-50o0'},
     {
-      title: 'Predictive Intelligence';
-      description: 'Advanced predictive capabilities with 99.9% accuracy for future events and outcomes';
-      features: ['Future 'Prediction', 'Trend 'Analysis', 'Risk 'Assessment', 'Opportunity Identification'];
-      icon: '🔮';
-      color: 'from-yellow-50o0 to-orange-50o0'};
+      title: 'Predictive Intelligence',
+      description: 'Advanced predictive capabilities with 99.9% accuracy for future events and outcomes',
+      features: ['Future 'PredictionTrend 'Analysis', 'Risk 'AssessmentOpportunity Identification'],
+      icon: '🔮',
+      color: 'from-yellow-50o0 to-orange-50o0'},
     {
-      title: 'Creative Synthesis';
-      description: 'Generating original ideasolutionsand creative content beyond human imagination';
-      features: ['Original 'Ideas', 'Creative 'Solutions', 'Artistic 'Generation', 'Innovation Catalyst'];
-      icon: '🎨';
+      title: 'Creative Synthesis',
+      description: 'Generating original ideasolutionsand creative content beyond human imagination',
+      features: ['Original 'IdeasCreative 'Solutions', 'Artistic 'GenerationInnovation Catalyst'],
+      icon: '🎨',
       color: 'from-pink-50o0 to-red-50o0'}
   ],
   const typingTexts = [
-    "Analyzing your request with transcendent intelligence...";
-    "Processing through quantum neural networks...";
-    "Synthesizing optimal solutions across multiple dimensions...";
-    "Generating creative alternatives beyond conventional thinking...";
-    "Applying ethical reasoning and moral considerations...";
-    "Optimizing for maximum impact and efficiency...";
-    "Preparing personalized recommendations...";
+    "Analyzing your request with transcendent intelligence...",
+    "Processing through quantum neural networks...",
+    "Synthesizing optimal solutions across multiple dimensions...",
+    "Generating creative alternatives beyond conventional thinking...",
+    "Applying ethical reasoning and moral considerations...",
+    "Optimizing for maximum impact and efficiency...",
+    "Preparing personalized recommendations...",
     "Ready to transform your world..."],
   useEffect(() => {
     const interval = setInterval(() => {

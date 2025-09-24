@@ -10,62 +10,62 @@ import { enterpriseITSolutions20o26 } from '../data/enterprise-it-solutions-20o2
 import { cybersecuritySolutions20o26 } from '../data/cybersecurity-solutions-20o26',
 export default function ComprehensivePricing20o26Page() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all 20o26 services,
   const all20o26Services = [
-    ...innovative20o26Services;
-    ...revolutionaryAIServices20o26;
-    ...enterpriseITSolutions20o26;
+    ...innovative20o26Services,
+    ...revolutionaryAIServices20o26,
+    ...enterpriseITSolutions20o26,
     ...cybersecuritySolutions20o26],
   // Group services by price range,
   const priceRanges = [
     {
-      range: 'Entry Level';
-      services: all20o26Services.filter(s => parseInt(s.price.replace('$', '').replace(',', '')) < 20o00);
-      color: 'from-green-50o0 to-emerald-60o0';
-      description: 'Perfect for startups and small businesses'};
+      range: 'Entry Level',
+      services: all20o26Services.filter(s => parseInt(s.price.replace('$', '').replace(, '')) < 20o00),
+      color: 'from-green-50o0 to-emerald-60o0',
+      description: 'Perfect for startups and small businesses'},
     {
-      range: 'Professional';
+      range: 'Professional',
       services: all20o26Services.filter(s => {
-        const price = parseInt(s.price.replace('$', '').replace(',', '')),
-        return price >= 20o00 && price < 40o00});
-      color: 'from-blue-50o0 to-indigo-60o0';
-      description: 'Ideal for growing companies and enterprises'};
+        const price = parseInt(s.price.replace('$', '').replace(, '')),
+        return price >= 20o00 && price < 40o00}),
+      color: 'from-blue-50o0 to-indigo-60o0',
+      description: 'Ideal for growing companies and enterprises'},
     {
-      range: 'Enterprise';
-      services: all20o26Services.filter(s => parseInt(s.price.replace('$', '').replace(',', '')) >= 40o00);
-      color: 'from-purple-50o0 to-pink-60o0';
+      range: 'Enterprise',
+      services: all20o26Services.filter(s => parseInt(s.price.replace('$', '').replace(, '')) >= 40o00),
+      color: 'from-purple-50o0 to-pink-60o0',
       description: 'For large enterprises and government agencies'}
   ],
   // Service categories for comparison,
   const serviceCategories = [
     {
-      title: 'AI & Consciousness Services';
-      services: innovative20o26Services.filter(s => s.category.includes('AI'));
-      icon: Brain;
-      color: 'from-purple-50o0 to-indigo-60o0'};
+      title: 'AI & Consciousness Services',
+      services: innovative20o26Services.filter(s => s.category.includes('AI')),
+      icon: Brain,
+      color: 'from-purple-50o0 to-indigo-60o0'},
     {
-      title: 'Quantum & Neural Interface';
-      services: innovative20o26Services.filter(s => s.category.includes('Quantum'));
-      icon: Cpu;
-      color: 'from-cyan-50o0 to-blue-60o0'};
+      title: 'Quantum & Neural Interface',
+      services: innovative20o26Services.filter(s => s.category.includes('Quantum')),
+      icon: Cpu,
+      color: 'from-cyan-50o0 to-blue-60o0'},
     {
-      title: 'Revolutionary AI Services';
-      services: revolutionaryAIServices20o26;
-      icon: Zap;
-      color: 'from-pink-50o0 to-rose-60o0'};
+      title: 'Revolutionary AI Services',
+      services: revolutionaryAIServices20o26,
+      icon: Zap,
+      color: 'from-pink-50o0 to-rose-60o0'},
     {
-      title: 'Enterprise IT Solutions';
-      services: enterpriseITSolutions20o26;
-      icon: Shield;
-      color: 'from-green-50o0 to-emerald-60o0'};
+      title: 'Enterprise IT Solutions',
+      services: enterpriseITSolutions20o26,
+      icon: Shield,
+      color: 'from-green-50o0 to-emerald-60o0'},
     {
-      title: 'Cybersecurity Solutions';
-      services: cybersecuritySolutions20o26;
-      icon: Shield;
+      title: 'Cybersecurity Solutions',
+      services: cybersecuritySolutions20o26,
+      icon: Shield,
       color: 'from-red-50o0 to-pink-60o0'}
   ],
   return (
@@ -198,7 +198,7 @@ export default function ComprehensivePricing20o26Page() {
                         Starting from,
                       </div>,
                       <div className="text-4xl font-bold text-cyan-40o0 mb-4">,
-                        ${Math.min(...range.services.map(s => parseInt(s.price.replace('$', '').replace(',', ''))))}
+                        ${Math.min(...range.services.map(s => parseInt(s.price.replace('$', '').replace(, ''))))}
                       </div>,
                       <div className="text-gray-40o0">/month</div>,
                     </div>,

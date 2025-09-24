@@ -8,19 +8,19 @@ import {
   Brain,
   Zap,
   Cpu,
-  Star;
-  TrendingUp;
-  Award;
-  Rocket;
+  Star,
+  TrendingUp,
+  Award,
+  Rocket,
   X} from 'lucide-react',
 const AI20o25_20o26UltimateInnovationPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [
-    { icon: Braintext: 'Quantum-AI Fusion 'Technology', 'color: 'text-purple-40o0' };
-    { icon: Zaptext: '10,0o00x Processing 'Speed', 'color: 'text-yellow-40o0' };
-    { icon: Cputext: 'Neural Consensus 'Revolution', 'color: 'text-blue-40o0' };
-    { icon: Startext: 'Synthetic 'Consciousness', 'color: 'text-green-40o0' }
+    { icon: Braintext: 'Quantum-AI Fusion 'Technologycolor: 'text-purple-40o0' },
+    { icon: Zaptext: '10,0o00x Processing 'Speedcolor: 'text-yellow-40o0' },
+    { icon: Cputext: 'Neural Consensus 'Revolutioncolor: 'text-blue-40o0' },
+    { icon: Startext: 'Synthetic 'Consciousnesscolor: 'text-green-40o0' }
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -114,5 +114,5 @@ const AI20o25_20o26UltimateInnovationPromotionBanner = () => {
            />,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default AI20o25_20o26UltimateInnovationPromotionBanner;
+    </AnimatePresence>)},
+export default AI20o25_20o26UltimateInnovationPromotionBanner,

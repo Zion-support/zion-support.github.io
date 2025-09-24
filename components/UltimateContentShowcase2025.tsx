@@ -5,59 +5,59 @@ const UltimateContentShowcase2025: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ultimate-automation-revolution';
-      title: 'AI 2025 Ultimate Automation Revolution';
+      id: 'ultimate-automation-revolution',
+      title: 'AI 2025 Ultimate Automation Revolution',
       description:,
-        'Comprehensive guide to the next generation of AI automation technologies transforming businesses worldwide.';
-      category: 'automation';
-      type: 'blog';
-      url: '/blog/ai-2025-ultimate-automation-revolution';
-      featured: true;
-      readTime: '15 min read';
-      publishDate: '2025-01-15';
-    };
+        'Comprehensive guide to the next generation of AI automation technologies transforming businesses worldwide.',
+      category: 'automation',
+      type: 'blog',
+      url: '/blog/ai-2025-ultimate-automation-revolution',
+      featured: true,
+      readTime: '15 min read',
+      publishDate: '2025-01-15'
+    },
     {
-      id: 'enterprise-transformation-guide';
-      title: 'Enterprise AI Transformation Complete Guide';
+      id: 'enterprise-transformation-guide',
+      title: 'Enterprise AI Transformation Complete Guide',
       description:,
-        'Step-by-step roadmap for enterprise AI implementation with proven ROI strategies.';
-      category: 'enterprise';
-      type: 'blog';
-      url: '/blog/ai-2025-enterprise-transformation-complete-guide';
-      featured: true;
-      readTime: '20 min read';
-      publishDate: '2025-01-14';
-    };
+        'Step-by-step roadmap for enterprise AI implementation with proven ROI strategies.',
+      category: 'enterprise',
+      type: 'blog',
+      url: '/blog/ai-2025-enterprise-transformation-complete-guide',
+      featured: true,
+      readTime: '20 min read',
+      publishDate: '2025-01-14'
+    },
     {
-      id: 'quantum-computing-breakthrough';
-      title: 'Quantum Computing Business Breakthrough';
+      id: 'quantum-computing-breakthrough',
+      title: 'Quantum Computing Business Breakthrough',
       description:,
-        'How quantum computing is revolutionizing business operations and creating new opportunities.';
-      category: 'quantum';
-      type: 'blog';
-      url: '/blog/ai-2025-quantum-computing-breakthrough';
-      featured: true;
-      readTime: '12 min read';
-      publishDate: '2025-01-13';
-    };
+        'How quantum computing is revolutionizing business operations and creating new opportunities.',
+      category: 'quantum',
+      type: 'blog',
+      url: '/blog/ai-2025-quantum-computing-breakthrough',
+      featured: true,
+      readTime: '12 min read',
+      publishDate: '2025-01-13'
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'automation';
-      label: 'Automation';
-      count: contentItems.filter(item => item.category === 'automation').length;
-    };
+      id: 'automation',
+      label: 'Automation',
+      count: contentItems.filter(item => item.category === 'automation').length
+    },
     {
-      id: 'enterprise';
-      label: 'Enterprise';
-      count: contentItems.filter(item => item.category === 'enterprise').length;
-    };
+      id: 'enterprise',
+      label: 'Enterprise',
+      count: contentItems.filter(item => item.category === 'enterprise').length
+    },
     {
-      id: 'quantum';
-      label: 'Quantum';
-      count: contentItems.filter(item => item.category === 'quantum').length;
-    };
+      id: 'quantum',
+      label: 'Quantum',
+      count: contentItems.filter(item => item.category === 'quantum').length
+    },
   ],
   const filteredItems =,
     activeCategory === 'all',
@@ -152,5 +152,5 @@ const UltimateContentShowcase2025: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentShowcase2025;
+    </section>)},
+export default UltimateContentShowcase2025,

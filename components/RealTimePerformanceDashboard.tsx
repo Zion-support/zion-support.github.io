@@ -24,13 +24,13 @@ interface SystemHealth {
 const RealTimePerformanceDashboard: React.FC = () => {
   const [metricsetMetrics] = useState<PerformanceMetric[]>([]),
   const [systemHealthsetSystemHealth] = useState<SystemHealth>({
-    cpu: 0;
-    memory: 0;
-    disk: 0;
-    network: 0;
-    uptime: '0d 0h 0m';
-    activeUsers: 0;
-    requestsPerMinute: 0;
+    cpu: 0,
+    memory: 0,
+    disk: 0,
+    network: 0,
+    uptime: '0d 0h 0m',
+    activeUsers: 0,
+    requestsPerMinute: 0,
     errorRate: 0}),
   const [isLoadingsetIsLoading] = useState(true),
   const [autoRefreshsetAutoRefresh] = useState(true),
@@ -39,72 +39,72 @@ const RealTimePerformanceDashboard: React.FC = () => {
       // Simulate real-time data generation,
       const newMetrics: PerformanceMetric[] = [
         {
-          id: 'page-load-time';
-          name: 'Page Load Time';
-          value: Math.random() * 2000 + 500;
-          unit: 'ms';
-          trend: Math.random() > 0.5 ? 'down' : 'up';
-          change: Math.random() * 20 - 10;
-          status: Math.random() > 0.3 ? 'excellent' : Math.random() > 0.6 ? 'good' : 'warning';
-          lastUpdated: new Date().toISOString()};
+          id: 'page-load-time',
+          name: 'Page Load Time',
+          value: Math.random() * 2000 + 500,
+          unit: 'ms',
+          trend: Math.random() > 0.5 ? 'down' : 'up',
+          change: Math.random() * 20 - 10,
+          status: Math.random() > 0.3 ? 'excellent' : Math.random() > 0.6 ? 'good' : 'warning',
+          lastUpdated: new Date().toISOString()},
         {
-          id: 'api-response-time';
-          name: 'API Response Time';
-          value: Math.random() * 500 + 100;
-          unit: 'ms';
-          trend: Math.random() > 0.4 ? 'down' : 'up';
-          change: Math.random() * 15 - 7.5;
-          status: Math.random() > 0.4 ? 'excellent' : 'good';
-          lastUpdated: new Date().toISOString()};
+          id: 'api-response-time',
+          name: 'API Response Time',
+          value: Math.random() * 500 + 100,
+          unit: 'ms',
+          trend: Math.random() > 0.4 ? 'down' : 'up',
+          change: Math.random() * 15 - 7.5,
+          status: Math.random() > 0.4 ? 'excellent' : 'good',
+          lastUpdated: new Date().toISOString()},
         {
-          id: 'throughput';
-          name: 'Requests/Second';
-          value: Math.random() * 1000 + 500;
-          unit: 'req/s';
-          trend: Math.random() > 0.3 ? 'up' : 'down';
-          change: Math.random() * 25 - 12.5;
-          status: Math.random() > 0.5 ? 'excellent' : 'good';
-          lastUpdated: new Date().toISOString()};
+          id: 'throughput',
+          name: 'Requests/Second',
+          value: Math.random() * 1000 + 500,
+          unit: 'req/s',
+          trend: Math.random() > 0.3 ? 'up' : 'down',
+          change: Math.random() * 25 - 12.5,
+          status: Math.random() > 0.5 ? 'excellent' : 'good',
+          lastUpdated: new Date().toISOString()},
         {
-          id: 'error-rate';
-          name: 'Error Rate';
-          value: Math.random() * 2;
-          unit: '%';
-          trend: Math.random() > 0.6 ? 'down' : 'up';
-          change: Math.random() * 0.5 - 0.25;
-          status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.5 ? 'good' : 'warning';
-          lastUpdated: new Date().toISOString()};
+          id: 'error-rate',
+          name: 'Error Rate',
+          value: Math.random() * 2,
+          unit: '%',
+          trend: Math.random() > 0.6 ? 'down' : 'up',
+          change: Math.random() * 0.5 - 0.25,
+          status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.5 ? 'good' : 'warning',
+          lastUpdated: new Date().toISOString()},
         {
-          id: 'cache-hit-rate';
-          name: 'Cache Hit Rate';
-          value: Math.random() * 20 + 80;
-          unit: '%';
-          trend: Math.random() > 0.4 ? 'up' : 'down';
-          change: Math.random() * 5 - 2.5;
-          status: Math.random() > 0.6 ? 'excellent' : 'good';
-          lastUpdated: new Date().toISOString()};
+          id: 'cache-hit-rate',
+          name: 'Cache Hit Rate',
+          value: Math.random() * 20 + 80,
+          unit: '%',
+          trend: Math.random() > 0.4 ? 'up' : 'down',
+          change: Math.random() * 5 - 2.5,
+          status: Math.random() > 0.6 ? 'excellent' : 'good',
+          lastUpdated: new Date().toISOString()},
         {
-          id: 'memory-usage';
-          name: 'Memory Usage';
-          value: Math.random() * 30 + 60;
-          unit: '%';
-          trend: Math.random() > 0.5 ? 'up' : 'down';
-          change: Math.random() * 8 - 4;
-          status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.4 ? 'good' : 'warning';
+          id: 'memory-usage',
+          name: 'Memory Usage',
+          value: Math.random() * 30 + 60,
+          unit: '%',
+          trend: Math.random() > 0.5 ? 'up' : 'down',
+          change: Math.random() * 8 - 4,
+          status: Math.random() > 0.7 ? 'excellent' : Math.random() > 0.4 ? 'good' : 'warning',
           lastUpdated: new Date().toISOString()}
       ],
       const newSystemHealth: SystemHealth = {
-        cpu: Math.random() * 30 + 40;
-        memory: Math.random() * 25 + 65;
-        disk: Math.random() * 15 + 70;
-        network: Math.random() * 20 + 80;
-        uptime: `${Math.floor(Math.random() * 30)}d ${Math.floor(Math.random() * 24)}h ${Math.floor(Math.random() * 60)}m`;
-        activeUsers: Math.floor(Math.random() * 1000) + 500;
-        requestsPerMinute: Math.floor(Math.random() * 5000) + 2000;
-        errorRate: Math.random() * 1.5};
+        cpu: Math.random() * 30 + 40,
+        memory: Math.random() * 25 + 65,
+        disk: Math.random() * 15 + 70,
+        network: Math.random() * 20 + 80,
+        uptime: `${Math.floor(Math.random() * 30)}d ${Math.floor(Math.random() * 24)}h ${Math.floor(Math.random() * 60)}m`,
+        activeUsers: Math.floor(Math.random() * 1000) + 500,
+        requestsPerMinute: Math.floor(Math.random() * 5000) + 2000,
+        errorRate: Math.random() * 1.5},
       setMetrics(newMetrics),
       setSystemHealth(newSystemHealth),
-      setIsLoading(false)};
+      setIsLoading(false)},
     generateMockData(),
     if (autoRefresh) {
       const interval = setInterval(generateMockData3000), // Update every 3 seconds,
@@ -117,14 +117,14 @@ const RealTimePerformanceDashboard: React.FC = () => {
       case 'warning': return 'text-yellow-600 bg-yellow-100',
       case 'critical': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
       default: return '➡️'}
-  };
+  },
   const getHealthColor = (value: numbertype: string) => {
     if (type === 'cpu' || type === 'memory' || type === 'disk') {
       if (value > 90) return 'text-red-600',
@@ -134,7 +134,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
       if (value > 95) return 'text-green-600',
       if (value > 80) return 'text-yellow-600',
       return 'text-red-600'}
-    return 'text-gray-600'};
+    return 'text-gray-600'},
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -159,7 +159,7 @@ const RealTimePerformanceDashboard: React.FC = () => {
             📊 Real-Time Performance Dashboard,
           </h2>,
           <p className="text-xl text-gray-600">,
-            Monitor your 'application', 's performance metrics in real-time,
+            Monitor your 'applications performance metrics in real-time,
           </p>,
         </div>,
         <div className="flex items-center space-x-4">,
@@ -189,19 +189,19 @@ const RealTimePerformanceDashboard: React.FC = () => {
             <div className="text-sm opacity-90">CPU Usage</div>,
           </div>,
           <div className="text-center">,
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'memory', 'memory')}`}>,
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'memorymemory')}`}>,
               {systemHealth.memory.toFixed(1)}%,
             </div>,
             <div className="text-sm opacity-90">Memory</div>,
           </div>,
           <div className="text-center">,
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'disk', 'disk')}`}>,
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'diskdisk')}`}>,
               {systemHealth.disk.toFixed(1)}%,
             </div>,
             <div className="text-sm opacity-90">Disk Usage</div>,
           </div>,
           <div className="text-center">,
-            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'network', 'network')}`}>,
+            <div className={`text-2xl font-bold mb-1 ${getHealthColor(systemHealth.'networknetwork')}`}>,
               {systemHealth.network.toFixed(1)}%,
             </div>,
             <div className="text-sm opacity-90">Network</div>,
@@ -288,5 +288,5 @@ const RealTimePerformanceDashboard: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default RealTimePerformanceDashboard;
+    </div>)},
+export default RealTimePerformanceDashboard,

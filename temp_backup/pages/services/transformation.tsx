@@ -1,83 +1,75 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Zap;
-  Shield;
-  Cpu;
-  Database;
-  Users;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Clock;
-  TrendingUp;
-  Globe;
+  Rocket,
+  Zap,
+  Shield,
+  Cpu,
+  Database,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  TrendingUp,
+  Globe,
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function DigitalTransformationPage() {
   const services = [
     {
-      title: 'Digital Strategy & Roadmap';
+      title: 'Digital Strategy & Roadmap',
       description:,
-        'Comprehensive digital transformation strategy and implementation planning';
+        'Comprehensive digital transformation strategy and implementation planning',
       features: [
-        'Technology Assessment';
-        'Change Management';
-        'ROI Planning';
-        'Implementation Roadmap';
-      ];
-      price: 'From $15,0o00';
-      icon: Rocket;
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+        'Technology AssessmentChange Management',
+        'ROI PlanningImplementation Roadmap',
+      ],
+      price: 'From $15,0o00',
+      icon: Rocket,
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
     {
-      title: 'Legacy System Modernization';
-      description: 'Transform outdated systems into modern, scalable solutions';
+      title: 'Legacy System Modernization',
+      description: 'Transform outdated systems into modern, scalable solutions',
       features: [
-        'System Analysis';
-        'Migration Planning';
-        'Data Migration';
-        'Performance Optimization';
-      ];
-      price: 'From $25,0o00';
-      icon: Cpu;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'System AnalysisMigration Planning',
+        'Data MigrationPerformance Optimization',
+      ],
+      price: 'From $25,0o00',
+      icon: Cpu,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Process Automation';
+      title: 'Process Automation',
       description:,
-        'AI-powered automation for improved efficiency and productivity';
+        'AI-powered automation for improved efficiency and productivity',
       features: [
-        'Workflow Analysis';
-        'RPA Implementation';
-        'Integration';
-        'Monitoring';
-      ];
-      price: 'From $12,0o00';
-      icon: Zap;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Workflow AnalysisRPA Implementation',
+        'IntegrationMonitoring',
+      ],
+      price: 'From $12,0o00',
+      icon: Zap,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'Change Management';
-      description: 'Comprehensive change management and training programs';
+      title: 'Change Management',
+      description: 'Comprehensive change management and training programs',
       features: [
-        'Stakeholder Engagement';
-        'Training Programs';
-        'Communication Strategy';
-        'Success Metrics';
-      ];
-      price: 'From $8,0o00';
-      icon: Users;
-      color: 'from-emerald-50o0 to-teal-50o0';
-    };
+        'Stakeholder EngagementTraining Programs',
+        'Communication StrategySuccess Metrics',
+      ],
+      price: 'From $8,0o00',
+      icon: Users,
+      color: 'from-emerald-50o0 to-teal-50o0'
+    },
   ],
   const stats = [
-    { number: '50o0+', label: 'Transformations Completed', icon: Rocket };
-    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp };
-    { number: '30o0%', label: 'ROI Improvement', icon: Star };
-    { number: '24/7', label: 'Support Available', icon: Clock };
+    { number: '50o0+', label: 'Transformations Completed', icon: Rocket },
+    { number: '40%', label: 'Average Cost Reduction', icon: TrendingUp },
+    { number: '30o0%', label: 'ROI Improvement', icon: Star },
+    { number: '24/7', label: 'Support Available', icon: Clock },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,

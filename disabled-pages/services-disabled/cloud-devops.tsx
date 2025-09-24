@@ -6,76 +6,68 @@ import { Cloud, Server, GitBranch, Zap, CheckCircle, ArrowRight, Users, Globe, D
 const CloudDevOps = () => {
   const services = [
     {
-      title: 'Cloud Migration';
-      description: 'Seamlessly migrate your infrastructure to the cloud';
-      icon: Cloud;
+      title: 'Cloud Migration',
+      description: 'Seamlessly migrate your infrastructure to the cloud',
+      icon: Cloud,
       features: [
-        'AWS, Azure, GCP migration';
-        'Application modernization';
-        'Data migration strategies';
-        'Cost optimization';
-        'Performance tuning']};
+        'AWS, Azure, GCP migrationApplication modernization',
+        'Data migration strategiesCost optimization',
+        'Performance tuning']},
     {
-      title: 'DevOps Implementation';
-      description: 'Implement modern DevOps practices and tools';
-      icon: GitBranch;
+      title: 'DevOps Implementation',
+      description: 'Implement modern DevOps practices and tools',
+      icon: GitBranch,
       features: [
-        'CI/CD pipeline setup';
-        'Infrastructure as Code';
-        'Container orchestration';
-        'Monitoring & logging';
-        'Automated testing']};
+        'CI/CD pipeline setupInfrastructure as Code',
+        'Container orchestrationMonitoring & logging',
+        'Automated testing']},
     {
-      title: 'Infrastructure Management';
-      description: 'Manage and optimize your cloud infrastructure';
-      icon: Server;
+      title: 'Infrastructure Management',
+      description: 'Manage and optimize your cloud infrastructure',
+      icon: Server,
       features: [
-        'Auto-scaling configuration';
-        'Load balancing';
-        'Resource optimization';
-        'Backup & disaster recovery';
-        'Security hardening']};
+        'Auto-scaling configurationLoad balancing',
+        'Resource optimizationBackup & disaster recovery',
+        'Security hardening']},
     {
-      title: 'Monitoring & Analytics';
-      description: 'Comprehensive monitoring and performance analytics';
-      icon: Monitor;
+      title: 'Monitoring & Analytics',
+      description: 'Comprehensive monitoring and performance analytics',
+      icon: Monitor,
       features: [
-        'Real-time monitoring';
-        'Performance metrics';
-        'Alert management';
-        'Log aggregation';
+        'Real-time monitoringPerformance metrics',
+        'Alert managementLog aggregation',
         'Cost tracking']}
   ],
   const technologies = [
     {
-      name: 'AWS';
-      description: 'Amazon Web Services cloud platform';
-      icon: Cloud};
+      name: 'AWS',
+      description: 'Amazon Web Services cloud platform',
+      icon: Cloud},
     {
-      name: 'Azure';
-      description: 'Microsoft Azure cloud services';
-      icon: Cloud};
+      name: 'Azure',
+      description: 'Microsoft Azure cloud services',
+      icon: Cloud},
     {
-      name: 'Docker';
-      description: 'Containerization platform';
-      icon: Server};
+      name: 'Docker',
+      description: 'Containerization platform',
+      icon: Server},
     {
-      name: 'Kubernetes';
-      description: 'Container orchestration';
-      icon: Settings};
+      name: 'Kubernetes',
+      description: 'Container orchestration',
+      icon: Settings},
     {
-      name: 'Terraform';
-      description: 'Infrastructure as Code';
-      icon: GitBranch};
+      name: 'Terraform',
+      description: 'Infrastructure as Code',
+      icon: GitBranch},
     {
-      name: 'Jenkins';
-      description: 'CI/CD automation';
+      name: 'Jenkins',
+      description: 'CI/CD automation',
       icon: Zap}
   ],
   const stats = [
-    { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' };
-    { number: '50%', label: 'Cost Reduction', description: 'Average savings' };
-    { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' };
+    { number: '99.9%', label: 'Uptime', description: 'Reliable infrastructure' },
+    { number: '50%', label: 'Cost Reduction', description: 'Average savings' },
+    { number: '10x', label: 'Faster Deployment', description: 'Improved efficiency' },
     { number: '24/7', label: 'Support', description: 'Round-the-clock monitoring' }
   ],
   return (
@@ -269,5 +261,5 @@ const CloudDevOps = () => {
         </section>,
       </main>,
       <Footer  />,
-    </>)};
-export default CloudDevOps;
+    </>)},
+export default CloudDevOps,

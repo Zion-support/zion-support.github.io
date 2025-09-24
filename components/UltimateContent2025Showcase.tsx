@@ -3,48 +3,48 @@ import Image from 'next/image',
 const UltimateContent20o25Showcase = () => {
   const contentItems = [
     {
-      id: 1;
-      title: "AI 20o25-20o26 Ultimate Trends: Revolutionary Breakthrough Guide";
-      description: "Discover the most revolutionary AI trends and breakthroughs that will transform businesses in 20o25-20o26. Complete guide to next-generation AI technologies.";
-      category: "Blog Post";
-      readTime: "15 min read";
-      featured: true;
-      image: "/images/ai-20o25-20o26-revolutionary-breakthrough.jpg";
-      href: "/blog/ai-20o25-20o26-ultimate-trends-revolutionary-breakthrough";
-      tags: ["AI Trends"20o25-20o26"Revolutionary"Breakthrough"];
+      id: 1,
+      title: "AI 20o25-20o26 Ultimate Trends: Revolutionary Breakthrough Guide",
+      description: "Discover the most revolutionary AI trends and breakthroughs that will transform businesses in 20o25-20o26. Complete guide to next-generation AI technologies.",
+      category: "Blog Post",
+      readTime: "15 min read",
+      featured: true,
+      image: "/images/ai-20o25-20o26-revolutionary-breakthrough.jpg",
+      href: "/blog/ai-20o25-20o26-ultimate-trends-revolutionary-breakthrough",
+      tags: ["AI Trends"20o25-20o26"Revolutionary"Breakthrough"],
       stats: {
-        roi: "50o00%";
-        views: "50K+";
+        roi: "50o00%",
+        views: "50K+",
         rating: "5.0"}
-    };
+    },
     {
-      id: 2;
-      title: "Fortune 50o0 AI Transformation: Ultimate Success Story 20o25-20o26";
-      description: "How a Fortune 50o0 manufacturing company achieved 50o00% ROI through comprehensive AI transformationrevolutionizing operations and achieving unprecedented success.";
-      category: "Case Study";
-      readTime: "12 min read";
-      featured: true;
-      image: "/images/fortune-50o0-ai-transformation-success.jpg";
-      href: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25-20o26";
-      tags: ["Fortune 50o0"Success Story"50o00% ROI"Manufacturing"];
+      id: 2,
+      title: "Fortune 50o0 AI Transformation: Ultimate Success Story 20o25-20o26",
+      description: "How a Fortune 50o0 manufacturing company achieved 50o00% ROI through comprehensive AI transformationrevolutionizing operations and achieving unprecedented success.",
+      category: "Case Study",
+      readTime: "12 min read",
+      featured: true,
+      image: "/images/fortune-50o0-ai-transformation-success.jpg",
+      href: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25-20o26",
+      tags: ["Fortune 50o0"Success Story"50o00% ROI"Manufacturing"],
       stats: {
-        roi: "50o00%";
-        revenue: "$2.5B";
+        roi: "50o00%",
+        revenue: "$2.5B",
         timeline: "18 months"}
-    };
+    },
     {
-      id: 3;
-      title: "AI 20o25-20o26 Implementation: Ultimate Master Guide";
-      description: "Complete implementation guide for AI transformation in 20o25-20o26. Step-by-step roadmap to achieve 10o00%+ ROI through revolutionary AI technologies.";
-      category: "Implementation Guide";
-      readTime: "20 min read";
-      featured: true;
-      image: "/images/ai-20o25-20o26-implementation-guide.jpg";
-      href: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide";
-      tags: ["Implementation"Master Guide"10o00%+ ROI"Roadmap"];
+      id: 3,
+      title: "AI 20o25-20o26 Implementation: Ultimate Master Guide",
+      description: "Complete implementation guide for AI transformation in 20o25-20o26. Step-by-step roadmap to achieve 10o00%+ ROI through revolutionary AI technologies.",
+      category: "Implementation Guide",
+      readTime: "20 min read",
+      featured: true,
+      image: "/images/ai-20o25-20o26-implementation-guide.jpg",
+      href: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide",
+      tags: ["Implementation"Master Guide"10o00%+ ROI"Roadmap"],
       stats: {
-        roi: "10o00%+";
-        pages: "50+";
+        roi: "10o00%+",
+        pages: "50+",
         rating: "5.0"}
     }
   ],
@@ -198,5 +198,5 @@ const UltimateContent20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContent20o25Showcase;
+    </section>)},
+export default UltimateContent20o25Showcase,

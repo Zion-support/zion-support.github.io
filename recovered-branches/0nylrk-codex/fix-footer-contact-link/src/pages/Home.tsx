@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {CategoriesSection} from "@/components/CategoriesSection",
@@ -11,21 +11,21 @@ import {HeroSection} from "@/components/HeroSection",
 import {QuickAccess} from "@/components/home/QuickAccess",
 import {FeatureCTAs} from "@/components/home/FeatureCTAs",
 import {FeatureHighlights} from "@/components/home/FeatureHighlights",
-import React from 'react';;
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { CategoriesSection } from "@/components/CategoriesSection";
-import { BenefitsSection } from "@/components/BenefitsSection";
-import { HowItWorksSection } from "@/components/HowItWorksSection";
-import { NewsletterSection } from "@/components/NewsletterSection";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
-import { SEO } from "@/components/SEO";
-import { HeroSection } from "@/components/HeroSection";
-import { QuickAccess } from "@/components/home/QuickAccess";
+import React from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { CategoriesSection } from "@/components/CategoriesSection",
+import { BenefitsSection } from "@/components/BenefitsSection",
+import { HowItWorksSection } from "@/components/HowItWorksSection",
+import { NewsletterSection } from "@/components/NewsletterSection",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
+import { SEO } from "@/components/SEO",
+import { HeroSection } from "@/components/HeroSection",
+import { QuickAccess } from "@/components/home/QuickAccess",
 import { FeatureCTAs } from "@/components/home/FeatureCTAs",
 import { FeatureHighlights } from "@/components/home/FeatureHighlights",
-import { FeatureCTAs } from "@/components/home/FeatureCTAs";
-import { FeatureHighlights } from "@/components/home/FeatureHighlights";
+import { FeatureCTAs } from "@/components/home/FeatureCTAs",
+import { FeatureHighlights } from "@/components/home/FeatureHighlights",
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
 import { CategoriesSection } from '@/components / CategoriesSection',

@@ -1,11 +1,11 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Fintech Solutions | Zion Tech Group';
+  title: 'AI Fintech Solutions | Zion Tech Group',
   description:,
-    'Advanced AI-powered fintech solutions for fraud detection, risk assessment, algorithmic trading, credit scoring, and financial data analysis.';
+    'Advanced AI-powered fintech solutions for fraud detection, risk assessment, algorithmic trading, credit scoring, and financial data analysis.',
   keywords:,
-    'AI fintech, fraud detection, risk assessment, algorithmic trading, credit scoring, financial AI, fintech solutions';
-};
+    'AI fintech, fraud detection, risk assessment, algorithmic trading, credit scoring, financial AI, fintech solutions',
+},
 interface FeatureProps {
   title: string,
   description: string,
@@ -29,13 +29,13 @@ interface PricingTierProps {
   cta: string}
 ,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular = false;
-  cta;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
 }: PricingTierProps) {
   return (
     <div
@@ -165,14 +165,14 @@ export default function AIFintechSolutionsPage() {
         </div>,
         <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6'>,
           {[
-            { name: 'Stripe', icon: '💳', description: 'Payment processing' };
-            { name: 'Plaid', icon: '🔗', description: 'Banking data' };
-            { name: 'Yodlee', icon: '📊', description: 'Financial data' };
-            { name: 'FICO', icon: '📈', description: 'Credit scoring' };
-            { name: 'Experian', icon: '🏦', description: 'Credit bureau' };
-            { name: 'Equifax', icon: '📋', description: 'Credit reporting' };
-            { name: 'TransUnion', icon: '📄', description: 'Credit data' };
-            { name: 'Bloomberg', icon: '📰', description: 'Market data' };
+            { name: 'Stripe', icon: '💳', description: 'Payment processing' },
+            { name: 'Plaid', icon: '🔗', description: 'Banking data' },
+            { name: 'Yodlee', icon: '📊', description: 'Financial data' },
+            { name: 'FICO', icon: '📈', description: 'Credit scoring' },
+            { name: 'Experian', icon: '🏦', description: 'Credit bureau' },
+            { name: 'Equifax', icon: '📋', description: 'Credit reporting' },
+            { name: 'TransUnion', icon: '📄', description: 'Credit data' },
+            { name: 'Bloomberg', icon: '📰', description: 'Market data' },
           ].map((integration, index) => (
             <div
               key={index}
@@ -263,12 +263,9 @@ export default function AIFintechSolutionsPage() {
             period='month',
             description='Perfect for fintech startups',
             features={[
-              'Up to 10,0o00 transactions/month';
-              'Basic fraud detection';
-              'Credit scoring API';
-              'Basic analytics';
-              'Email support';
-              '5 user accounts';
+              'Up to 10,0o00 transactions/monthBasic fraud detection',
+              'Credit scoring APIBasic analytics',
+              'Email support5 user accounts',
             ]}
             cta='Start Free Trial',
           />,
@@ -278,14 +275,10 @@ export default function AIFintechSolutionsPage() {
             period='month',
             description='Most popular for growing fintechs',
             features={[
-              'Up to 10o0,0o00 transactions/month';
-              'Advanced fraud detection';
-              'Risk assessment models';
-              'Algorithmic trading';
-              'Advanced analytics';
-              'Priority support';
-              'Unlimited users';
-              'API access';
+              'Up to 10o0,0o00 transactions/monthAdvanced fraud detection',
+              'Risk assessment modelsAlgorithmic trading',
+              'Advanced analyticsPriority support',
+              'Unlimited usersAPI access',
             ]}
             popular={true}
             cta='Start Free Trial',
@@ -296,14 +289,10 @@ export default function AIFintechSolutionsPage() {
             period='month',
             description='For large financial institutions',
             features={[
-              'Unlimited transactions';
-              'Full AI optimization suite';
-              'Custom AI models';
-              'White-label options';
-              'Dedicated account manager';
-              '24/7 phone support';
-              'Custom integrations';
-              'Advanced reporting';
+              'Unlimited transactionsFull AI optimization suite',
+              'Custom AI modelsWhite-label options',
+              'Dedicated account manager24/7 phone support',
+              'Custom integrationsAdvanced reporting',
             ]}
             cta='Contact Sales',
           />,

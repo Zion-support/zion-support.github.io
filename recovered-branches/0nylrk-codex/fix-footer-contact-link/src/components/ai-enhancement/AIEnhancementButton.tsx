@@ -19,13 +19,13 @@ interface AIEnhancementButtonProps {
   contentLength?: number}
 ,
 export function AIEnhancementButton({
-  options;
-  onEnhanced;
-  buttonText = 'Enhance with AI';
-  className;
-  variant = 'ghost';
-  size = 'sm';
-  contentLength = 10;
+  options,
+  onEnhanced,
+  buttonText = 'Enhance with AI',
+  className,
+  variant = 'ghost',
+  size = 'sm',
+  contentLength = 10,
 }: AIEnhancementButtonProps) {
   const { enhanceContentisEnhancing } = useAIContentEnhancer(),
   const [showActionsetShowActions] = useState(false),
@@ -35,9 +35,9 @@ export function AIEnhancementButton({
       (!options.content || options.content.trim().length < contentLength) &&,
       (!options.context || options.context.trim().length < contentLength)) {
       toast({
-        title: 'Not enough content';
-        description: `Please enter at least ${contentLength} characters before enhancing.`;
-        variant: 'destructive';
+        title: 'Not enough content',
+        description: `Please enter at least ${contentLength} characters before enhancing.`,
+        variant: 'destructive'
       }),
       return}
 ,
@@ -45,22 +45,22 @@ export function AIEnhancementButton({
     if (enhancedContent) {
       setGeneratedContent(enhancedContent),
       setShowActions(true)}
-  };
+  },
   const handleAccept = () => {
     if (generatedContent) {
       onEnhanced(generatedContent),
       setShowActions(false),
       setGeneratedContent(null),
       toast({
-        title: 'Content applied';
-        description: 'AI-enhanced content has been applied.';
+        title: 'Content applied',
+        description: 'AI-enhanced content has been applied.'
       })}
-  };
+  },
   const handleRegenerate = async () => {
-    await handleEnhance()};
+    await handleEnhance()},
   const handleCancel = () => {
     setShowActions(false),
-    setGeneratedContent(null)};
+    setGeneratedContent(null)},
   if (showActions) {
     return (
       <div className='flex gap-2 items-center'>,

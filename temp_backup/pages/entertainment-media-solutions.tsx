@@ -1,120 +1,120 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Palette;
-  Type;
-  User;
-  Search;
-  Eye;
-  Heart;
-  ShoppingCart;
-  Code;
-  Database;
-  Globe;
-  Shield;
-  Cpu;
-  Users2;
-  Award;
-  CheckCircle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Lock;
-  Server;
-  Network;
-  Monitor;
-  Settings;
-  RefreshCw;
-  Play;
-  Pause;
-  AlertTriangle;
-  CheckCircle2;
-  Building;
-  Wifi;
-  HardDrive;
-  Cloud;
-  Smartphone;
-  Link;
-  Blocks;
-  Wallet;
-  CreditCard;
-  PiggyBank;
-  Building2;
-  Activity;
-  Waves;
-  Zap;
-  BrainCircuit;
-  CpuIcon;
-  MonitorHeart;
-  Film;
-  Headphones;
-  Camera;
-  Gamepad2;
-  Tv;
-  Radio;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Cpu,
+  Users2,
+  Award,
+  CheckCircle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Lock,
+  Server,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Play,
+  Pause,
+  AlertTriangle,
+  CheckCircle2,
+  Building,
+  Wifi,
+  HardDrive,
+  Cloud,
+  Smartphone,
+  Link,
+  Blocks,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building2,
+  Activity,
+  Waves,
+  Zap,
+  BrainCircuit,
+  CpuIcon,
+  MonitorHeart,
+  Film,
+  Headphones,
+  Camera,
+  Gamepad2,
+  Tv,
+  Radio,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'Entertainment Media Solutions | Zion Tech Group';
+  title: 'Entertainment Media Solutions | Zion Tech Group',
   description:,
-    'Comprehensive entertainment and media technology solutions for modern digital experiences.';
+    'Comprehensive entertainment and media technology solutions for modern digital experiences.',
   keywords:,
-    'entertainment media, digital media, streaming solutions, content creation, media technology';
+    'entertainment media, digital media, streaming solutions, content creation, media technology',
   openGraph: {
-    title: 'Entertainment Media Solutions | Zion Tech Group';
+    title: 'Entertainment Media Solutions | Zion Tech Group',
     description:,
-      'Comprehensive entertainment and media technology solutions for modern digital experiences.';
-    url: 'https://ziontechgroup.com/entertainment-media-solutions';
-    siteName: 'Zion Tech Group';
+      'Comprehensive entertainment and media technology solutions for modern digital experiences.',
+    url: 'https://ziontechgroup.com/entertainment-media-solutions',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-entertainment-media.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'Entertainment Media Solutions';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-entertainment-media.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Entertainment Media Solutions'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'Entertainment Media Solutions | Zion Tech Group';
+    card: 'summary_large_image',
+    title: 'Entertainment Media Solutions | Zion Tech Group',
     description:,
-      'Comprehensive entertainment and media technology solutions for modern digital experiences.';
-    images: ['https://ziontechgroup.com/og-image-entertainment-media.jpg'];
-  };
+      'Comprehensive entertainment and media technology solutions for modern digital experiences.',
+    images: ['https://ziontechgroup.com/og-image-entertainment-media.jpg']
+  },
   alternates: {
-    canonical: 'https://ziontechgroup.com/entertainment-media-solutions';
-  };
-};
+    canonical: 'https://ziontechgroup.com/entertainment-media-solutions'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function EntertainmentMediaSolutions() {
   return (
     <div className='min-h-screen bg-black text-white'>,

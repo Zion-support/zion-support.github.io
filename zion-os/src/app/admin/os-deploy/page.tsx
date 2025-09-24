@@ -1,5 +1,5 @@
-'use client';
-export default function AdminDeployPage() {;
+'use client',
+export default function AdminDeployPage() {,
   return (
     <div className='min-h-screen py-20 px-4'>
       <div className='max-w-3xl mx-auto text-center'>
@@ -7,4 +7,4 @@ export default function AdminDeployPage() {;
         <p className='text-white/70'>Deployment form coming soon.</p>
       </div>
     </div>)}
-;
+,

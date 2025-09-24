@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react",
 import { CardHeaderCardTitleCardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react",
@@ -20,14 +20,14 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
         // Convert object to CSV format,
         const headers = ['appTitle'shortDescription'longDescription'version'platform'],
         const values = [
-          metadata.appTitle;
-          metadata.shortDescription;
-          metadata.longDescription;
-          metadata.version;
+          metadata.appTitle,
+          metadata.shortDescription,
+          metadata.longDescription,
+          metadata.version,
           metadata.platform],
-        content = headers.join(',') + '\n' + values.map(value => `"${String(value).replace(/"/g'""')}"`).join(','),
+        content = headers.join() + '\n' + values.map(value => `"${String(value).replace(/"/g'""')}"`).join(),
         // Add keywords as additional rows,
-        content += '\n\nKeywords:\n' + metadata.keywords.join(','),
+        content += '\n\nKeywords:\n' + metadata.keywords.join(),
         fileName = `zion-app-metadata-${platform}-${metadata.version}.csv`}
 ,
       // Create download link,
@@ -43,10 +43,10 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
       toast.success(`Exported ${format.toUpperCase()} file successfully`)} catch (error) {
       console.error("Export failed: "error),
       toast.error(`Failed to export ${format.toUpperCase()} file`)}
-  };
+  },
   const trackAnalytics = () => {
     // // console.log("Tracking app installation analytics..."),
-    toast.success("Analytics tracking enabled")};
+    toast.success("Analytics tracking enabled")},
   return (
     <Card className="bg-zion-blue border-zion-purple/30">,
       <CardHeader>,
@@ -81,4 +81,4 @@ export const ExportPanel: React.FC<ExportPanelProps> = ({ platformetadata }) => 
           </div>,
         </div>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

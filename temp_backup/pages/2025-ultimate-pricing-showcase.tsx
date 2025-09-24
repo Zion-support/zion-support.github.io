@@ -2,39 +2,39 @@ import React, { useState, useEffect } from 'react',
 import Layout from '../components/layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search;
-  Filter;
-  Star;
-  TrendingUp;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cloud;
-  Target;
-  Building;
-  Users;
-  Code;
-  Sparkles;
-  Zap;
-  Eye;
-  Heart;
-  Infinity;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Award;
-  Clock;
-  CheckCircle;
-  ArrowUpRight;
-  ChevronDown;
-  DollarSign;
-  Crown;
-  Zap as ZapIcon;
-  Shield as ShieldIcon;
-  Rocket as RocketIcon;
+  Search,
+  Filter,
+  Star,
+  TrendingUp,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Target,
+  Building,
+  Users,
+  Code,
+  Sparkles,
+  Zap,
+  Eye,
+  Heart,
+  Infinity,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Award,
+  Clock,
+  CheckCircle,
+  ArrowUpRight,
+  ChevronDown,
+  DollarSign,
+  Crown,
+  Zap as ZapIcon,
+  Shield as ShieldIcon,
+  Rocket as RocketIcon,
 } from 'lucide-react',
 // Import all our new services,
 import { realInnovativeMicroSaas20o25 } from '../data/20o25-real-innovative-micro-saas',
@@ -51,17 +51,17 @@ const UltimatePricingShowcase20o25: React.FC = () => {
   const [isExpanded, setIsExpanded] = useState<{ [key: string]: boolean }>({}),
   // Combine all services,
   const allServices = [
-    ...realInnovativeMicroSaas20o25;
-    ...cuttingEdgeITServices20o25;
-    ...innovativeAIServices20o25;
-    ...ultimateInnovativeMicroSaas20o25V2;
-    ...cuttingEdgeITServices20o25V2;
-    ...innovativeAIServices20o25V2;
+    ...realInnovativeMicroSaas20o25,
+    ...cuttingEdgeITServices20o25,
+    ...innovativeAIServices20o25,
+    ...ultimateInnovativeMicroSaas20o25V2,
+    ...cuttingEdgeITServices20o25V2,
+    ...innovativeAIServices20o25V2,
   ],
   // Get unique categories and types,
   const categories = [
-    'all';
-    ...Array.from(new Set(allServices.map(s => s.category)));
+    'all',
+    ...Array.from(new Set(allServices.map(s => s.category))),
   ],
   const types = ['all', ...Array.from(new Set(allServices.map(s => s.type)))],
   // Filter services,
@@ -94,7 +94,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
 ,
     return matchesSearch && matchesCategory && matchesType && matchesPrice}),
   const toggleExpanded = (id: string) => {
-    setIsExpanded(prev => ({ ...prev, [id]: !prev[id] }))};
+    setIsExpanded(prev => ({ ...prev, [id]: !prev[id] }))},
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return <Brain className='w-5 h-5' />,
     if (category.includes('Quantum')) return <Atom className='w-5 h-5' />,
@@ -104,7 +104,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
     if (category.includes('Cloud') || category.includes('IT')),
       return <Cloud className='w-5 h-5' />,
     if (category.includes('Business')) return <Target className='w-5 h-5' />,
-    return <Sparkles className='w-5 h-5' />};
+    return <Sparkles className='w-5 h-5' />},
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-purple-50o0 to-pink-50o0',
     if (category.includes('Quantum')) return 'from-blue-50o0 to-cyan-50o0',
@@ -114,7 +114,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
     if (category.includes('Cloud') || category.includes('IT')),
       return 'from-emerald-50o0 to-teal-50o0',
     if (category.includes('Business')) return 'from-yellow-50o0 to-orange-50o0',
-    return 'from-gray-50o0 to-slate-50o0'};
+    return 'from-gray-50o0 to-slate-50o0'},
   const getPricingTierIcon = (tier: string) => {
     switch (tier) {
       case 'starter':,
@@ -125,7 +125,7 @@ const UltimatePricingShowcase20o25: React.FC = () => {
         return <Crown className='w-5 h-5' />,
       default:,
         return <Star className='w-5 h-5' />}
-  };
+  },
   const getPricingTierColor = (tier: string) => {
     switch (tier) {
       case 'starter':,
@@ -136,23 +136,23 @@ const UltimatePricingShowcase20o25: React.FC = () => {
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   const stats = [
     {
-      number: `${allServices.length}+`;
-      label: 'Innovative Services';
-      icon: Star;
-    };
-    { number: '$20o0B+', label: 'Total Market Size', icon: TrendingUp };
-    { number: '4', label: 'Pricing Tiers', icon: Crown };
-    { number: '24/7', label: 'AI Support Available', icon: Brain };
+      number: `${allServices.length}+`,
+      label: 'Innovative Services',
+      icon: Star
+    },
+    { number: '$20o0B+', label: 'Total Market Size', icon: TrendingUp },
+    { number: '4', label: 'Pricing Tiers', icon: Crown },
+    { number: '24/7', label: 'AI Support Available', icon: Brain },
   ],
   const pricingRanges = [
-    { value: 'all', label: 'All Prices' };
-    { value: 'budget', label: 'Budget ($0-$299)' };
-    { value: 'mid-range', label: 'Mid-Range ($30o0-$799)' };
-    { value: 'premium', label: 'Premium ($80o0-$1499)' };
-    { value: 'enterprise', label: 'Enterprise ($150o0+)' };
+    { value: 'all', label: 'All Prices' },
+    { value: 'budget', label: 'Budget ($0-$299)' },
+    { value: 'mid-range', label: 'Mid-Range ($30o0-$799)' },
+    { value: 'premium', label: 'Premium ($80o0-$1499)' },
+    { value: 'enterprise', label: 'Enterprise ($150o0+)' },
   ],
   return (
     <Layout>,
@@ -426,57 +426,49 @@ const UltimatePricingShowcase20o25: React.FC = () => {
           <div className='grid grid-cols-1 md:grid-cols-4 gap-6 max-w-6xl mx-auto'>,
             {[
               {
-                tier: 'Starter';
-                price: '$299/month';
-                description: 'Perfect for small businesses and startups';
+                tier: 'Starter',
+                price: '$299/month',
+                description: 'Perfect for small businesses and startups',
                 features: [
-                  'Core functionality';
-                  'Basic support';
-                  'Standard features';
-                  'Email support';
-                ];
-                icon: <ZapIcon className='w-8 h-8' />;
-                color: 'from-green-50o0 to-emerald-50o0';
-              };
+                  'Core functionalityBasic support',
+                  'Standard featuresEmail support',
+                ],
+                icon: <ZapIcon className='w-8 h-8' />,
+                color: 'from-green-50o0 to-emerald-50o0'
+              },
               {
-                tier: 'Professional';
-                price: '$799/month';
-                description: 'Ideal for growing businesses';
+                tier: 'Professional',
+                price: '$799/month',
+                description: 'Ideal for growing businesses',
                 features: [
-                  'Advanced features';
-                  'Priority support';
-                  'Custom integrations';
-                  'Phone support';
-                ];
-                icon: <ShieldIcon className='w-8 h-8' />;
-                color: 'from-blue-50o0 to-cyan-50o0';
-              };
+                  'Advanced featuresPriority support',
+                  'Custom integrationsPhone support',
+                ],
+                icon: <ShieldIcon className='w-8 h-8' />,
+                color: 'from-blue-50o0 to-cyan-50o0'
+              },
               {
-                tier: 'Enterprise';
-                price: '$1,999/month';
-                description: 'For large organizations';
+                tier: 'Enterprise',
+                price: '$1,999/month',
+                description: 'For large organizations',
                 features: [
-                  'Full feature set';
-                  '24/7 support';
-                  'Custom development';
-                  'Dedicated manager';
-                ];
-                icon: <Crown className='w-8 h-8' />;
-                color: 'from-purple-50o0 to-pink-50o0';
-              };
+                  'Full feature set24/7 support',
+                  'Custom developmentDedicated manager',
+                ],
+                icon: <Crown className='w-8 h-8' />,
+                color: 'from-purple-50o0 to-pink-50o0'
+              },
               {
-                tier: 'Custom';
-                price: 'Contact Us';
-                description: 'Tailored solutions for unique needs';
+                tier: 'Custom',
+                price: 'Contact Us',
+                description: 'Tailored solutions for unique needs',
                 features: [
-                  'Custom features';
-                  'White-label options';
-                  'On-premise deployment';
-                  'SLA guarantees';
-                ];
-                icon: <Star className='w-8 h-8' />;
-                color: 'from-yellow-50o0 to-orange-50o0';
-              };
+                  'Custom featuresWhite-label options',
+                  'On-premise deploymentSLA guarantees',
+                ],
+                icon: <Star className='w-8 h-8' />,
+                color: 'from-yellow-50o0 to-orange-50o0'
+              },
             ].map((plan, index) => (
               <motion.div,
                 key={index}
@@ -574,5 +566,5 @@ const UltimatePricingShowcase20o25: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>)};
-export default UltimatePricingShowcase20o25;
+    </Layout>)},
+export default UltimatePricingShowcase20o25,

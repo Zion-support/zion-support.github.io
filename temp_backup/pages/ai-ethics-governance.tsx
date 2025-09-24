@@ -1,43 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Scale;
-  Shield, Lock, Eye, Users2, Award, CheckCircle;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Scale,
+  Shield, Lock, Eye, Users2, Award, CheckCircle,
   AlertTriangle, Target, BarChart3} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Ethics Governance | Zion Tech Group';
-  description: 'Comprehensive AI ethics governance platform that ensures responsible AI development and deployment.';
-  keywords: 'AI ethics, AI governance, responsible AI, AI compliance, ethical AI, AI regulations';
+  title: 'AI Ethics Governance | Zion Tech Group',
+  description: 'Comprehensive AI ethics governance platform that ensures responsible AI development and deployment.',
+  keywords: 'AI ethics, AI governance, responsible AI, AI compliance, ethical AI, AI regulations',
   openGraph: {
-    title: 'AI Ethics Governance | Zion Tech Group';
-    description: 'Comprehensive AI ethics governance platform that ensures responsible AI development and deployment.';
-    url: 'https://ziontechgroup.com/ai-ethics-governance';
-    siteName: 'Zion Tech Group';
+    title: 'AI Ethics Governance | Zion Tech Group',
+    description: 'Comprehensive AI ethics governance platform that ensures responsible AI development and deployment.',
+    url: 'https://ziontechgroup.com/ai-ethics-governance',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-ethics-governance.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Ethics Governance'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-ethics-governance.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Ethics Governance'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Ethics Governance | Zion Tech Group';
-    description: 'Comprehensive AI ethics governance platform that ensures responsible AI development and deployment.';
-    images: ['https://ziontechgroup.com/og-image-ai-ethics-governance.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Ethics Governance | Zion Tech Group',
+    description: 'Comprehensive AI ethics governance platform that ensures responsible AI development and deployment.',
+    images: ['https://ziontechgroup.com/og-image-ai-ethics-governance.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-ethics-governance'}};
+    canonical: 'https://ziontechgroup.com/ai-ethics-governance'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIEthicsGovernance() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -54,7 +54,7 @@ export default function AIEthicsGovernance() {
               AI Ethics Governance,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              The world's most comprehensive AI ethics governance platform that ensures responsible AI development;
+              The world's most comprehensive AI ethics governance platform that ensures responsible AI development,
               deployment, and compliance with ethical standards and regulations.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -81,7 +81,7 @@ export default function AIEthicsGovernance() {
               Revolutionary AI Ethics Governance,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of ethical AI governance from development guidelines to compliance monitoring;
+              Our AI platform handles every aspect of ethical AI governance from development guidelines to compliance monitoring,
               ensuring responsible and trustworthy AI systems.,
             </p>,
           </div>,

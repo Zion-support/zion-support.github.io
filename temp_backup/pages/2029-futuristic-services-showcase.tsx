@@ -2,49 +2,49 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Phone;
-  Mail;
-  MapPin;
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o28 from '../components/layout/UltraFuturisticNavigation20o28',
 import UltraFuturisticFooter20o28 from '../components/layout/UltraFuturisticFooter20o28',
@@ -54,62 +54,62 @@ import { biotechEmerging20o29Services } from '../data/20o29-biotech-emerging-ser
 import { enterpriseIT20o29Services } from '../data/20o29-enterprise-it-services',
 export default function Futuristic20o29ServicesShowcase() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const allServices = [
-    ...futuristic20o29AIServices;
-    ...quantumSpace20o29Services;
-    ...biotechEmerging20o29Services;
-    ...enterpriseIT20o29Services;
+    ...futuristic20o29AIServices,
+    ...quantumSpace20o29Services,
+    ...biotechEmerging20o29Services,
+    ...enterpriseIT20o29Services,
   ],
   const serviceCategories = [
     {
-      title: '🤖 AI & Consciousness 20o29';
-      icon: Brain;
-      color: 'from-purple-60o0 to-pink-60o0';
-      services: futuristic20o29AIServices;
-    };
+      title: '🤖 AI & Consciousness 20o29',
+      icon: Brain,
+      color: 'from-purple-60o0 to-pink-60o0',
+      services: futuristic20o29AIServices
+    },
     {
-      title: '🚀 Quantum Space Technology 20o29';
-      icon: Rocket;
-      color: 'from-blue-60o0 to-cyan-60o0';
-      services: quantumSpace20o29Services;
-    };
+      title: '🚀 Quantum Space Technology 20o29',
+      icon: Rocket,
+      color: 'from-blue-60o0 to-cyan-60o0',
+      services: quantumSpace20o29Services
+    },
     {
-      title: '🧬 Biotechnology & Emerging Tech 20o29';
-      icon: Microscope;
-      color: 'from-green-60o0 to-emerald-60o0';
-      services: biotechEmerging20o29Services;
-    };
+      title: '🧬 Biotechnology & Emerging Tech 20o29',
+      icon: Microscope,
+      color: 'from-green-60o0 to-emerald-60o0',
+      services: biotechEmerging20o29Services
+    },
     {
-      title: '🏢 Enterprise IT & Security 20o29';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
-      services: enterpriseIT20o29Services;
-    };
+      title: '🏢 Enterprise IT & Security 20o29',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
+      services: enterpriseIT20o29Services
+    },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <>,
       <Head>,

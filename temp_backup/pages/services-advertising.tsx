@@ -8,14 +8,10 @@ export default function ServicesAdvertisingPage() {
 			<div className="max-w-6xl mx-auto space-y-10">,
 				<h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-40o0 via-purple-40o0 to-pink-40o0 bg-clip-text text-transparent">Services Advertising</h1>,
   const benefits = [
-    '10o00% ROI target with measurable KPIs';
-    'Transparent pricing with market references';
-    'Fast onboarding with templates and playbooks';
-    'Enterprise-grade security and compliance';
-    '24/7 support with SLAs';
-    'Proven architectures and reference implementations';
-    'No long-term lock-in, cancel anytime';
-    'SOC 2-aligned processes and data handling';
+    '10o00% ROI target with measurable KPIsTransparent pricing with market references',
+    'Fast onboarding with templates and playbooksEnterprise-grade security and compliance',
+    '24/7 support with SLAsProven architectures and reference implementations',
+    'No long-term lock-in, cancel anytimeSOC 2-aligned processes and data handling',
     'Flexible deployment: SaaS or self-hosted options'],
 				{/* New: Core micro SaaS and AI additions */}
 				<section className="space-y-6">,
@@ -65,11 +61,11 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">New Real Micro SaaS</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
               {[
-                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10', 'CI/CD checks', 'PII detection'] };
-                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIM', 'BIMI readiness', 'Weekly reports'] };
-                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + Synthetic', 'Core Web Vitals', 'Alerts'] };
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['Anomalies', 'Rightsizing', 'Budgets'] };
-                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['Traces', 'SLOs', 'Deps map'] }
+                { name: 'API Security Scanner', price: '$299/mo', href: '/services/api-security-scanner', points: ['OWASP Top 10CI/CD checks', 'PII detection'] },
+                { name: 'Email DMARC Analyzer', price: '$99/mo', href: '/services/email-dmarc-analyzer', points: ['DMARC/SPF/DKIMBIMI readiness', 'Weekly reports'] },
+                { name: 'Browser Performance Monitor', price: '$149/mo', href: '/services/browser-performance-monitor', points: ['RUM + SyntheticCore Web Vitals', 'Alerts'] },
+                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/services/cloud-cost-optimizer', points: ['AnomaliesRightsizing', 'Budgets'] },
+                { name: 'API Observability Starter', price: '$149/mo', href: '/services/api-observability-starter', points: ['TracesSLOs', 'Deps map'] }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40">,
                   <div className="text-sm text-gray-400 mb-1">From</div>,
@@ -97,14 +93,14 @@ export default function ServicesAdvertisingPage() {
             <h2 className="text-3xl md: text-4xl font-bold text-white mb-6 text-center">Featured Offerings</h2>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
               {[
-                { name: 'LLM Gateway & Cost Control', price: '$299/mo', href: '/llm-gateway' };
-                { name: 'API Observability Starter', price: '$149/mo', href: '/api-observability-starter' };
-                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/cloud-cost-optimizer' };
-                { name: 'SOC 2 Evidence Automation', price: '$499/mo', href: '/soc2-evidence-automation' };
-                { name: 'Vector Search Starter', price: '$249/mo', href: '/vector-search-starter' };
-                { name: 'TLS Certificate Monitor', price: '$49/mo', href: '/tls-certificate-monitor' };
-                { name: 'Affiliate Marketing Tracking Suite', price: '$149/mo', href: '/services/affiliate-marketing-tracking-suite' };
-                { name: 'SMB Website Analytics Dashboard', price: '$29/mo', href: '/services/smb-website-analytics-dashboard' };
+                { name: 'LLM Gateway & Cost Control', price: '$299/mo', href: '/llm-gateway' },
+                { name: 'API Observability Starter', price: '$149/mo', href: '/api-observability-starter' },
+                { name: 'Cloud Cost Optimizer', price: '$399/mo', href: '/cloud-cost-optimizer' },
+                { name: 'SOC 2 Evidence Automation', price: '$499/mo', href: '/soc2-evidence-automation' },
+                { name: 'Vector Search Starter', price: '$249/mo', href: '/vector-search-starter' },
+                { name: 'TLS Certificate Monitor', price: '$49/mo', href: '/tls-certificate-monitor' },
+                { name: 'Affiliate Marketing Tracking Suite', price: '$149/mo', href: '/services/affiliate-marketing-tracking-suite' },
+                { name: 'SMB Website Analytics Dashboard', price: '$29/mo', href: '/services/smb-website-analytics-dashboard' },
                 { name: 'Customer Support Helpdesk Pro', price: '$79/mo', href: '/services/customer-support-helpdesk-pro' }
               ].map((o) => (
                 <a key={o.name} href={o.href} className="block p-6 rounded-2xl bg-black/40 border border-gray-700/60 hover: border-cyan-500/40">,
@@ -400,40 +396,40 @@ export default function ServicesAdvertisingPage() {
 					<h2 className="text-2xl font-semibold text-white">Latest Real Additions</h2>,
 					<ul className="list-disc list-inside text-slate-300 space-y-2">,
 						<li>,
-							<strong className="text-white">Postgres Index Advisor Pro</strong> — $79/mo. Auto index insights, PR rollouts. Learn: <a className="text-cyan-400 underline" href="/services/postgres-index-advisor-pro">/services/postgres-index-advisor-pro</a>. Benchmarks: {ext('https://www.postgresql.org/docs/current/auto-explain.html')}{', '}{ext('https: //pganalyze.com/blog')}
+							<strong className="text-white">Postgres Index Advisor Pro</strong> — $79/mo. Auto index insights, PR rollouts. Learn: <a className="text-cyan-400 underline" href="/services/postgres-index-advisor-pro">/services/postgres-index-advisor-pro</a>. Benchmarks: {ext('https://www.postgresql.org/docs/current/auto-explain.html')}{}{ext('https: //pganalyze.com/blog')}
 						</li>,
 						<li>,
-							<strong className="text-white">S3 Lifecycle Optimizer</strong> — $59/mo. Smart storage class moves. Learn: <a className="text-cyan-400 underline" href="/services/s3-lifecycle-optimizer">/services/s3-lifecycle-optimizer</a>. References: {ext('https://aws.amazon.com/s3/pricing/')}{', '}{ext('https: //aws.amazon.com/s3/storage-classes/')}
+							<strong className="text-white">S3 Lifecycle Optimizer</strong> — $59/mo. Smart storage class moves. Learn: <a className="text-cyan-400 underline" href="/services/s3-lifecycle-optimizer">/services/s3-lifecycle-optimizer</a>. References: {ext('https://aws.amazon.com/s3/pricing/')}{}{ext('https: //aws.amazon.com/s3/storage-classes/')}
 						</li>,
 						<li>,
-							<strong className="text-white">Synthetic Journey Monitor</strong> — $39/mo. Record/replay + SLO alerts. Learn: <a className="text-cyan-400 underline" href="/services/synthetic-journey-monitor">/services/synthetic-journey-monitor</a>. References: {ext('https://playwright.dev')}{', '}{ext('https: //www.checklyhq.com/pricing/')}
+							<strong className="text-white">Synthetic Journey Monitor</strong> — $39/mo. Record/replay + SLO alerts. Learn: <a className="text-cyan-400 underline" href="/services/synthetic-journey-monitor">/services/synthetic-journey-monitor</a>. References: {ext('https://playwright.dev')}{}{ext('https: //www.checklyhq.com/pricing/')}
 						</li>,
 						<li>,
-							<strong className="text-white">Feature Flag Auditor</strong> — $29/mo. Hygiene checks + PRs. Learn: <a className="text-cyan-400 underline" href="/services/feature-flag-auditor">/services/feature-flag-auditor</a>. References: {ext('https://launchdarkly.com/pricing/')}{', '}{ext('https: //www.flagsmith.com/pricing')}
+							<strong className="text-white">Feature Flag Auditor</strong> — $29/mo. Hygiene checks + PRs. Learn: <a className="text-cyan-400 underline" href="/services/feature-flag-auditor">/services/feature-flag-auditor</a>. References: {ext('https://launchdarkly.com/pricing/')}{}{ext('https: //www.flagsmith.com/pricing')}
 						</li>,
 						<li>,
-							<strong className="text-white">SOC 2 Evidence Collector</strong> — $99/mo. Continuous evidence bundles. Learn: <a className="text-cyan-400 underline" href="/services/soc2-evidence-collector">/services/soc2-evidence-collector</a>. References: {ext('https://www.servicenow.com/trust/compliance-reports.html')}{', '}{ext('https: //www.aicpa.org/resources/certification/soc-2')}
+							<strong className="text-white">SOC 2 Evidence Collector</strong> — $99/mo. Continuous evidence bundles. Learn: <a className="text-cyan-400 underline" href="/services/soc2-evidence-collector">/services/soc2-evidence-collector</a>. References: {ext('https://www.servicenow.com/trust/compliance-reports.html')}{}{ext('https: //www.aicpa.org/resources/certification/soc-2')}
 						</li>,
 						<li>,
-							<strong className="text-white">IAM Permission Analyzer</strong> — $79/mo. Least privilege guidance. Learn: <a className="text-cyan-400 underline" href="/services/iam-permission-analyzer">/services/iam-permission-analyzer</a>. References: {ext('https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html')}{', '}{ext('https: //cloud.google.com/iam/docs')}
+							<strong className="text-white">IAM Permission Analyzer</strong> — $79/mo. Least privilege guidance. Learn: <a className="text-cyan-400 underline" href="/services/iam-permission-analyzer">/services/iam-permission-analyzer</a>. References: {ext('https://docs.aws.amazon.com/IAM/latest/UserGuide/access_policies.html')}{}{ext('https: //cloud.google.com/iam/docs')}
 						</li>,
 						<li>,
-							<strong className="text-white">GitOps Drift Auto-Remediator</strong> — $69/mo. Detect drift, open PRs. Learn: <a className="text-cyan-400 underline" href="/services/gitops-drift-auto-remediator">/services/gitops-drift-auto-remediator</a>. References: {ext('https://www.openpolicyagent.org/')}{', '}{ext('https: //argo-cd.readthedocs.io/en/stable/')}
+							<strong className="text-white">GitOps Drift Auto-Remediator</strong> — $69/mo. Detect drift, open PRs. Learn: <a className="text-cyan-400 underline" href="/services/gitops-drift-auto-remediator">/services/gitops-drift-auto-remediator</a>. References: {ext('https://www.openpolicyagent.org/')}{}{ext('https: //argo-cd.readthedocs.io/en/stable/')}
 						</li>,
 						<li>,
-							<strong className="text-white">AI Meeting‑to‑Ticket Copilot</strong> — $25/user/mo. Action items → Jira/GitHub. Learn: <a className="text-cyan-400 underline" href="/services/ai-meeting-to-ticket">/services/ai-meeting-to-ticket</a>. References: {ext('https://workspace.google.com/pricing')}{', '}{ext('https: //www.atlassian.com/software/jira/pricing')}
+							<strong className="text-white">AI Meeting‑to‑Ticket Copilot</strong> — $25/user/mo. Action items → Jira/GitHub. Learn: <a className="text-cyan-400 underline" href="/services/ai-meeting-to-ticket">/services/ai-meeting-to-ticket</a>. References: {ext('https://workspace.google.com/pricing')}{}{ext('https: //www.atlassian.com/software/jira/pricing')}
 						</li>,
 						<li>,
-							<strong className="text-white">Email Warmup & Reputation Monitor</strong> — $39/mo. Sender reputation & inbox tests. Learn: <a className="text-cyan-400 underline" href="/services/email-warmup-monitor">/services/email-warmup-monitor</a>. References: {ext('https://postmaster.google.com')}{', '}{ext('https: //sendgrid.com/pricing/')}
+							<strong className="text-white">Email Warmup & Reputation Monitor</strong> — $39/mo. Sender reputation & inbox tests. Learn: <a className="text-cyan-400 underline" href="/services/email-warmup-monitor">/services/email-warmup-monitor</a>. References: {ext('https://postmaster.google.com')}{}{ext('https: //sendgrid.com/pricing/')}
 						</li>,
 						<li>,
-							<strong className="text-white">PII Discovery Scanner</strong> — $89/mo. Detect, redact, export evidence. Learn: <a className="text-cyan-400 underline" href="/services/pii-discovery-scanner">/services/pii-discovery-scanner</a>. References: {ext('https://cloud.google.com/dlp/pricing')}{', '}{ext('https: //aws.amazon.com/macie/pricing/')}
+							<strong className="text-white">PII Discovery Scanner</strong> — $89/mo. Detect, redact, export evidence. Learn: <a className="text-cyan-400 underline" href="/services/pii-discovery-scanner">/services/pii-discovery-scanner</a>. References: {ext('https://cloud.google.com/dlp/pricing')}{}{ext('https: //aws.amazon.com/macie/pricing/')}
 						</li>,
 						<li>,
-							<strong className="text-white">API Breaking Change Watcher</strong> — $49/mo. Schema diff + CI gates. Learn: <a className="text-cyan-400 underline" href="/services/api-breaking-change-watcher">/services/api-breaking-change-watcher</a>. References: {ext('https://www.openapis.org/')}{', '}{ext('https: //graphql.org/learn/best-practices/')}
+							<strong className="text-white">API Breaking Change Watcher</strong> — $49/mo. Schema diff + CI gates. Learn: <a className="text-cyan-400 underline" href="/services/api-breaking-change-watcher">/services/api-breaking-change-watcher</a>. References: {ext('https://www.openapis.org/')}{}{ext('https: //graphql.org/learn/best-practices/')}
 						</li>,
 						<li>,
-							<strong className="text-white">Data Warehouse Cost Optimizer</strong> — $99/mo. Right-size warehouses. Learn: <a className="text-cyan-400 underline" href="/services/warehouse-cost-optimizer">/services/warehouse-cost-optimizer</a>. References: {ext('https://www.snowflake.com/en/pricing/')}{', '}{ext('https: //cloud.google.com/bigquery/pricing')}
+							<strong className="text-white">Data Warehouse Cost Optimizer</strong> — $99/mo. Right-size warehouses. Learn: <a className="text-cyan-400 underline" href="/services/warehouse-cost-optimizer">/services/warehouse-cost-optimizer</a>. References: {ext('https://www.snowflake.com/en/pricing/')}{}{ext('https: //cloud.google.com/bigquery/pricing')}
 						</li>,
 					</ul>,
 				</section>,

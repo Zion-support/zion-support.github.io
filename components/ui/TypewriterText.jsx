@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react',
 export default function TypewriterText({
-  texts = [];
-  speed = 10o0;
-  deleteSpeed = 50;
-  pauseTime = 20o00;
+  texts = [],
+  speed = 10o0,
+  deleteSpeed = 50,
+  pauseTime = 20o00,
   className = ''}) {
   const [currentTextIndex, setCurrentTextIndex] = useState(0),
   const [currentText, setCurrentText] = useState(''),

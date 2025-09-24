@@ -1,15 +1,15 @@
 import Head from 'next/head',
 export default function SitemapPage() {
 	const links = [
-		{ name: ''Home', 'href: '/' };
-		{ name: ''Services', 'href: '/services' };
-		{ name: 'All Services 'Showcase', 'href: '/comprehensive-services-showcase-2025' };
-		{ name: ''Pricing', 'href: '/pricing' };
-		{ name: 'Market 'Pricing', 'href: '/market-pricing' };
-		{ name: 'Services 'Advertising', 'href: '/services-advertising' };
-		{ name: ''Resources', 'href: '/resources' };
-		{ name: ''Support', 'href: '/support' };
-		{ name: ''Contact', 'href: '/contact' }
+		{ name: ''Homehref: '/' },
+		{ name: ''Serviceshref: '/services' },
+		{ name: 'All Services 'Showcasehref: '/comprehensive-services-showcase-2025' },
+		{ name: ''Pricinghref: '/pricing' },
+		{ name: 'Market 'Pricinghref: '/market-pricing' },
+		{ name: 'Services 'Advertisinghref: '/services-advertising' },
+		{ name: ''Resourceshref: '/resources' },
+		{ name: ''Supporthref: '/support' },
+		{ name: ''Contacthref: '/contact' }
 	],
 	return (
 		<div className="min-h-screen pt-24 pb-20 px-4 sm: px-6 lg:px-8">,

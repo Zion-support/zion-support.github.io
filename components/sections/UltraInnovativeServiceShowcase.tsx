@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Clock, Users, Zap, Shield, Globe, Rocket, Brain, Atom, Cpu } from 'lucide-react',
 import { innovative20o25Services } from '../../data/innovative-20o25-services',
@@ -7,67 +7,59 @@ interface UltraInnovativeServiceShowcaseProps {
   maxServices?: number}
 ,
 export default function UltraInnovativeServiceShowcase({
-  className = '';
+  className = '',
   maxServices = 6}: UltraInnovativeServiceShowcaseProps) {
   const featuredServices = innovative20o25Services,
     .filter(service => service.popular),
     .slice(0, maxServices),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.2;
+        staggerChildren: 0.2,
         delayChildren: 0.1}
     }
-  };
+  },
   const cardVariants ={
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0.9;
-      rotateX: -15};
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+      rotateX: -15},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
-      rotateX: 0;
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
-      rotateX: 5;
+      y: -10,
+      scale: 1.0o2,
+      rotateX: 5,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const getServiceIcon = (icon: string) => {
     const iconMap: { [key: string]: React.ReactNode } ={
-      '🔮': <Brain className="w-8 h-8"  />;
-      '💝': <Heart className="w-8 h-8"  />;
-      '⚛️': <Atom className="w-8 h-8"  />;
-      '🔗': <Link className="w-8 h-8"  />;
-      '🌐': <Globe className="w-8 h-8"  />;
-      '🛡️': <Shield className="w-8 h-8"  />;
-      '🏥': <Activity className="w-8 h-8"  />;
-      '📈': <TrendingUp className="w-8 h-8"  />};
-    return iconMap[icon] || <Zap className="w-8 h-8"  />};
+      '🔮': <Brain className="w-8 h-8"  />,
+      '💝': <Heart className="w-8 h-8"  />,
+      '⚛️': <Atom className="w-8 h-8"  />,
+      '🔗': <Link className="w-8 h-8"  />,
+      '🌐': <Globe className="w-8 h-8"  />,
+      '🛡️': <Shield className="w-8 h-8"  />,
+      '🏥': <Activity className="w-8 h-8"  />,
+      '📈': <TrendingUp className="w-8 h-8"  />},
+    return iconMap[icon] || <Zap className="w-8 h-8"  />},
   const getCategoryColor = (category: string) => {
     const colorMap: { [key: string]: string } ={
-      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0';
-      'AI & Emotional Intelligence': 'from-pink-50o0 to-rose-60o0';
-      'Quantum Computing & AI': 'from-cyan-50o0 to-blue-60o0';
-      'Blockchain & Web3': 'from-green-50o0 to-emerald-60o0';
-      'Metaverse & VR': 'from-violet-50o0 to-purple-60o0';
-      'IoT & Edge Computing': 'from-orange-50o0 to-red-60o0';
-      'Cybersecurity': 'from-red-50o0 to-pink-60o0';
-      'Healthcare AI': 'from-blue-50o0 to-indigo-60o0';
-      'Financial Technology': 'from-green-50o0 to-emerald-60o0'};
-    return colorMap[category] || 'from-gray-50o0 to-gray-60o0'};
+      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0AI & Emotional Intelligence': 'from-pink-50o0 to-rose-60o0Quantum Computing & AI': 'from-cyan-50o0 to-blue-60o0Blockchain & Web3': 'from-green-50o0 to-emerald-60o0Metaverse & VR': 'from-violet-50o0 to-purple-60o0IoT & Edge Computing': 'from-orange-50o0 to-red-60o0Cybersecurity': 'from-red-50o0 to-pink-60o0Healthcare AI': 'from-blue-50o0 to-indigo-60o0Financial Technology': 'from-green-50o0 to-emerald-60o0'},
+    return colorMap[category] || 'from-gray-50o0 to-gray-60o0'},
   return (
     <section className={`py-24 px-4 sm: px-6 lg:px-8 ${className}`}>,
       <div className="max-w-7xl mx-auto">,
@@ -105,9 +97,9 @@ export default function UltraInnovativeServiceShowcase({
             transition={{ duration: 0.6, delay: 0.6 }}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 mt-12 max-w-4xl mx-auto">,
             {[
-              { label: 'AI Services', value: '50+', icon: Brain, color: 'from-purple-50o0 to-pink-60o0' };
-              { label: 'Quantum Solutions', value: '25+', icon: Atom, color: 'from-cyan-50o0 to-blue-60o0' };
-              { label: 'Emerging Tech', value: '10o0+', icon: Rocket, color: 'from-green-50o0 to-emerald-60o0' };
+              { label: 'AI Services', value: '50+', icon: Brain, color: 'from-purple-50o0 to-pink-60o0' },
+              { label: 'Quantum Solutions', value: '25+', icon: Atom, color: 'from-cyan-50o0 to-blue-60o0' },
+              { label: 'Emerging Tech', value: '10o0+', icon: Rocket, color: 'from-green-50o0 to-emerald-60o0' },
               { label: 'Success Rate', value: '99.9%', icon: Star, color: 'from-yellow-50o0 to-orange-60o0' }
             ].map((stat, index) => (
               <motion.div,

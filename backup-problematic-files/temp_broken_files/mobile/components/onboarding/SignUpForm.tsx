@@ -1,97 +1,97 @@
-import React, { useState } from "react";
-import { Label } from "@/components/ui/label";
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
-import { LoadingSpinner } from "@/components/ui/enhanced-loading-states";
-import { useRouter } from 'next/router';
-import Link from 'next/link';
-import { useAuth } from "@/context/auth/AuthProvider";
+import React, { useState } from "react",
+import { Label } from "@/components/ui/label",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
+import { LoadingSpinner } from "@/components/ui/enhanced-loading-states",
+import { useRouter } from 'next/router',
+import Link from 'next/link',
+import { useAuth } from "@/context/auth/AuthProvider",
 import { AlertCircle } from 'lucide-react',
-import { Alert, AlertDescription } from "@/components/ui/alert";
-import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter";
-import {logErrorToProduction} from '@/utils/productionLogger';
+import { Alert, AlertDescription } from "@/components/ui/alert",
+import { PasswordStrengthMeter } from "@/components/PasswordStrengthMeter",
+import {logErrorToProduction} from '@/utils/productionLogger',
 export function SignUpForm() {
-  const router = useRouter();
-  const { signUp, login, loginWithGoogle } = useAuth();
+  const router = useRouter(),
+  const { signUp, login, loginWithGoogle } = useAuth(),
   const [formData, setFormData] = useState({
-    email:"";
-    password:"";
-    name: ""});
-  const [isLoading, setIsLoading] = useState(false);
-  const [signupMode, setSignupMode] = useState(true);
-  const [error, setError] = useState("");
-  const [fieldErrors, setFieldErrors] = useState<{ email?:string, password?:string, name?:string }>({});
-  const [showVerificationMessage, setShowVerificationMessage] = useState(false);
+    email: "",
+    password:"",
+    name: ""}),
+  const [isLoading, setIsLoading] = useState(false),
+  const [signupMode, setSignupMode] = useState(true),
+  const [error, setError] = useState(""),
+  const [fieldErrors, setFieldErrors] = useState<{ email?:string, password?:string, name?:string }>({}),
+  const [showVerificationMessage, setShowVerificationMessage] = useState(false),
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]:value }));
-    setError("");
-    setFieldErrors(prev => ({ ...prev, [name]:"" }));
-  };
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]:value })),
+    setError(""),
+    setFieldErrors(prev => ({ ...prev, [name]:"" })),
+  },
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setError("");
-    setFieldErrors({});
-    setIsLoading(true);
-    const errors:{ email?:string, password?:string, name?:string } ={};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/;
+    e.preventDefault(),
+    setError(""),
+    setFieldErrors({}),
+    setIsLoading(true),
+    const errors:{ email?:string, password?:string, name?:string } ={},
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
+    const strongPasswordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8}$/,
     if (signupMode && !formData.name.trim()) {
-      errors.name = 'Full name is required';
+      errors.name = 'Full name is required',
     }
 ,
     if (!formData.email.trim()) {
-      errors.email = 'Email is required';
+      errors.email = 'Email is required',
     } else if (!emailRegex.test(formData.email)) {
-      errors.email = 'Invalid email address';
+      errors.email = 'Invalid email address',
     }
 ,
     if (!formData.password) {
-      errors.password = 'Password is required';
+      errors.password = 'Password is required',
     } else if (!strongPasswordRegex.test(formData.password)) {
-      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.';
+      errors.password = 'Password must be at least 8 characters and include uppercase, lowercase, and a number.',
     }
 ,
     if (Object.keys(errors).length > 0) {
-      setFieldErrors(errors);
-      setIsLoading(false);
-      return;    }
+      setFieldErrors(errors),
+      setIsLoading(false),
+      return,    }
     ,
     try {
       setShowVerificationMessage(false), // Reset verification message,
       if (signupMode) {
         const result = await signUp(formData.email, formData.password, {
-          name: formData.name});
+          name: formData.name}),
         if (result?.error) {
           throw new Error(result.error as any), // Cast to any if type is AuthError}
 ,
         if (result?.emailVerificationRequired) {
-          setShowVerificationMessage(true);
+          setShowVerificationMessage(true),
         } else {
           // Only navigate if email verification is not required,
-          router.push("/mobile");
+          router.push("/mobile"),
         }
       } else {
-        const { error } = await login(formData.email, formData.password);
+        const { error } = await login(formData.email, formData.password),
         if (error) {
-          throw new Error(error);
+          throw new Error(error),
         }
         ,
-        router.push("/mobile");
+        router.push("/mobile"),
       }
     } catch (err: any) {
-      logErrorToProduction('Signup/Login error:', { data: err });
-      setError(err.message || 'An unexpected error occurred. Please try again.');
+      logErrorToProduction('Signup/Login error:', { data: err }),
+      setError(err.message || 'An unexpected error occurred. Please try again.'),
     } finally {
-      setIsLoading(false);
+      setIsLoading(false),
     }
-  };
+  },
   const handleGoogleLogin = async () => {
     try {
-      await loginWithGoogle();
+      await loginWithGoogle(),
     } catch (err: any) {
       setError(err.message)}
-  };
+  },
   return (
     <div className="space-y-4 px-4">,
       <h2 className="text-xl font-medium text-center">,

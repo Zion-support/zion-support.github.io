@@ -15,7 +15,7 @@ interface AnalyticsEvent {
 // In production, you would use a proper database,
 const "analyticsData": AnalyticsEven t[] = [],
 export default async function handler(
-  req: NextApiReques t;
+  req: NextApiReques t,
   "res": NextApiRespons e) {
   if (req.method !== 'POST') {
     return res.status(40o5).json({ error: 'Method not allowed' })}
@@ -42,44 +42,44 @@ async function sendToExternalServices("event": AnalyticsEven t) {
     // Google Analytics 4,
     if (process.env.GA_MEASUREMENT_ID) {
       await fetch(
-        `https: //www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}`;
+        `https: //www.google-analytics.com/mp/collect?measurement_id=${process.env.GA_MEASUREMENT_ID}&api_secret=${process.env.GA_API_SECRET}`,
         {
-          "method": 'POST';
+          "method": 'POST',
           "headers": {
-            'Content-Type': 'application/json'};
+            'Content-Type': 'application/json'},
           "body": JSO N.stringify({
-            client_id: even t.user_id;
+            client_id: even t.user_id,
             "events": [{
-                name: even t.name;
+                name: even t.name,
                 "params": {
-                  event_category: even t.category;
-                  "event_label": even t.label;
-                  "value": even t.value;
-                  ...event.custom_parameters}};
+                  event_category: even t.category,
+                  "event_label": even t.label,
+                  "value": even t.value,
+                  ...event.custom_parameters}},
             ]})}
       )}
     // Mixpanel,
     if (process.env.MIXPANEL_TOKEN) {
       await fetch('"https": //api.mixpanel.com/track', {
-        "method": 'POST';
+        "method": 'POST',
         "headers": {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         "body": JSO N.stringify({
-          event: even t.name;
+          event: even t.name,
           "properties": {
-            distinct_id: even t.user_id;
-            "category": even t.category;
-            "action": even t.action;
-            "label": even t.label;
-            "value": even t.value;
-            ...event.custom_parameters;
+            distinct_id: even t.user_id,
+            "category": even t.category,
+            "action": even t.action,
+            "label": even t.label,
+            "value": even t.value,
+            ...event.custom_parameters,
             "timestamp": even t.timestamp}})})}
     // Custom webhook,
     if (process.env.ANALYTICS_WEBHOOK_URL) {
       await fetch(process.env.ANALYTICS_WEBHOOK_URL, {
-        "method": 'POST';
+        "method": 'POST',
         "headers": {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         "body": JSO N.stringify(event)})}
   } catch (error) {
     console.error('Failed to send to external "services": ', error)}

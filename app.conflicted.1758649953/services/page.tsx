@@ -1,91 +1,79 @@
-import React from 'react';
+import React from 'react',
 import {
-  ArrowRight;
-  Cloud;
-  Shield;
-  Zap;
-  Database;
-  Brain;
-  Globe;
+  ArrowRight,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Brain,
+  Globe,
 } from 'lucide-react',
 export const metadata = {
-  title: 'Services - Zion Tech Group';
+  title: 'Services - Zion Tech Group',
   description:,
-    'Comprehensive AI, cloud infrastructure, and cybersecurity solutions for modern businesses.';
-};
+    'Comprehensive AI, cloud infrastructure, and cybersecurity solutions for modern businesses.',
+},
 const services = [
   {
-    icon: Brain;
-    title: 'AI & Machine Learning';
+    icon: Brain,
+    title: 'AI & Machine Learning',
     description:,
-      'Custom AI solutions, machine learning models, and intelligent automation to transform your business processes.';
+      'Custom AI solutions, machine learning models, and intelligent automation to transform your business processes.',
     features: [
-      'Custom AI Development';
-      'Machine Learning Models';
-      'Natural Language Processing';
-      'Computer Vision';
-    ];
-  };
+      'Custom AI DevelopmentMachine Learning Models',
+      'Natural Language ProcessingComputer Vision',
+    ]
+  },
   {
-    icon: Cloud;
-    title: 'Cloud Infrastructure';
+    icon: Cloud,
+    title: 'Cloud Infrastructure',
     description:,
-      'Scalable cloud solutions and infrastructure management to optimize performance and reduce costs.';
+      'Scalable cloud solutions and infrastructure management to optimize performance and reduce costs.',
     features: [
-      'AWS/Azure/GCP Setup';
-      'Cloud Migration';
-      'DevOps Automation';
-      'Microservices Architecture';
-    ];
-  };
+      'AWS/Azure/GCP SetupCloud Migration',
+      'DevOps AutomationMicroservices Architecture',
+    ]
+  },
   {
-    icon: Shield;
-    title: 'Cybersecurity';
+    icon: Shield,
+    title: 'Cybersecurity',
     description:,
-      'Comprehensive security solutions to protect your digital assets and ensure compliance.';
+      'Comprehensive security solutions to protect your digital assets and ensure compliance.',
     features: [
-      'Security Audits';
-      'Penetration Testing';
-      'Compliance Management';
-      'Incident Response';
-    ];
-  };
+      'Security AuditsPenetration Testing',
+      'Compliance ManagementIncident Response',
+    ]
+  },
   {
-    icon: Zap;
-    title: 'Performance Optimization';
+    icon: Zap,
+    title: 'Performance Optimization',
     description:,
-      'Application and infrastructure optimization to maximize speed, efficiency, and user experience.';
+      'Application and infrastructure optimization to maximize speed, efficiency, and user experience.',
     features: [
-      'Code Optimization';
-      'Database Tuning';
-      'CDN Setup';
-      'Monitoring Solutions';
-    ];
-  };
+      'Code OptimizationDatabase Tuning',
+      'CDN SetupMonitoring Solutions',
+    ]
+  },
   {
-    icon: Database;
-    title: 'Data Solutions';
+    icon: Database,
+    title: 'Data Solutions',
     description:,
-      'Data engineering, analytics, and business intelligence solutions to unlock insights from your data.';
+      'Data engineering, analytics, and business intelligence solutions to unlock insights from your data.',
     features: [
-      'Data Pipeline Design';
-      'Analytics Dashboards';
-      'Business Intelligence';
-      'Data Warehousing';
-    ];
-  };
+      'Data Pipeline DesignAnalytics Dashboards',
+      'Business IntelligenceData Warehousing',
+    ]
+  },
   {
-    icon: Globe;
-    title: 'Web Development';
+    icon: Globe,
+    title: 'Web Development',
     description:,
-      'Modern, responsive web applications built with cutting-edge technologies and best practices.';
+      'Modern, responsive web applications built with cutting-edge technologies and best practices.',
     features: [
-      'React/Next.js Apps';
-      'Full-Stack Development';
-      'API Development';
-      'Progressive Web Apps';
-    ];
-  };
+      'React/Next.js AppsFull-Stack Development',
+      'API DevelopmentProgressive Web Apps',
+    ]
+  },
 ],
 export default function ServicesPage() {
   return (

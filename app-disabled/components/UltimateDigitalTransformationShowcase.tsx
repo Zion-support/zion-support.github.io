@@ -5,95 +5,89 @@ const UltimateDigitalTransformationShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const content = [
     {
-      id: 'ultimate-digital-transformation-revolution';
-      title: 'AI 20o25: The Ultimate Digital Transformation Revolution';
-      subtitle: 'Complete Guide to 30,0o00% ROI';
+      id: 'ultimate-digital-transformation-revolution',
+      title: 'AI 20o25: The Ultimate Digital Transformation Revolution',
+      subtitle: 'Complete Guide to 30,0o00% ROI',
       description:,
-        'Discover how Fortune 50o0 companies are achieving unprecedented ROI through strategic AI implementation. This comprehensive guide explores the strategies, technologies, and methodologies that enable organizations to achieve extraordinary results.';
-      type: 'blog';
-      readingTime: '40 min read';
+        'Discover how Fortune 50o0 companies are achieving unprecedented ROI through strategic AI implementation. This comprehensive guide explores the strategies, technologies, and methodologies that enable organizations to achieve extraordinary results.',
+      type: 'blog',
+      readingTime: '40 min read',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$2.8B';
-        efficiency: '4,20o0%';
-        success: '99.7%';
-      };
-      link: '/blog/ai-20o25-ultimate-digital-transformation-revolution';
-      featured: true;
+        roi: '30,0o00%',
+        savings: '$2.8B',
+        efficiency: '4,20o0%',
+        success: '99.7%'
+      },
+      link: '/blog/ai-20o25-ultimate-digital-transformation-revolution',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Digital Transformation';
-        'ROI';
-        'Fortune 50o0';
-        'Strategy';
-      ];
-    };
+        'AI RevolutionDigital Transformation',
+        'ROIFortune 50o0',
+        'Strategy',
+      ]
+    },
     {
-      id: 'fortune-50o0-digital-transformation-success';
-      title: 'Fortune 50o0 Digital Transformation Success Story';
-      subtitle: '$2.8B Annual Savings - 30,0o00% ROI';
+      id: 'fortune-50o0-digital-transformation-success',
+      title: 'Fortune 50o0 Digital Transformation Success Story',
+      subtitle: '$2.8B Annual Savings - 30,0o00% ROI',
       description:,
-        'Learn how a Fortune 50o0 manufacturing company transformed their entire operations using advanced AI technologies, resulting in $2.8 billion in annual savings and a complete reimagining of their business model.';
-      type: 'case-study';
-      readingTime: '25 min read';
+        'Learn how a Fortune 50o0 manufacturing company transformed their entire operations using advanced AI technologies, resulting in $2.8 billion in annual savings and a complete reimagining of their business model.',
+      type: 'case-study',
+      readingTime: '25 min read',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$2.8B';
-        revenue: '45%';
-        satisfaction: '99.7%';
-      };
-      link: '/case-studies/fortune-50o0-digital-transformation-30o000-roi-success-story';
-      featured: true;
+        roi: '30,0o00%',
+        savings: '$2.8B',
+        revenue: '45%',
+        satisfaction: '99.7%'
+      },
+      link: '/case-studies/fortune-50o0-digital-transformation-30o000-roi-success-story',
+      featured: true,
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Manufacturing';
-        'Success Story';
-        'ROI';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'ManufacturingSuccess Story',
+        'ROI',
+      ]
+    },
     {
-      id: 'ai-digital-transformation-implementation-guide';
-      title: 'AI Digital Transformation Implementation Guide';
-      subtitle: 'Complete Roadmap to 30,0o00% ROI';
+      id: 'ai-digital-transformation-implementation-guide',
+      title: 'AI Digital Transformation Implementation Guide',
+      subtitle: 'Complete Roadmap to 30,0o00% ROI',
       description:,
-        'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results. Based on analysis of 50o0+ successful transformations, this guide reveals the strategies and methodologies that enable success.';
-      type: 'resource';
-      readingTime: '60 min read';
+        'Step-by-step guide to implementing AI-driven digital transformation that delivers extraordinary results. Based on analysis of 50o0+ successful transformations, this guide reveals the strategies and methodologies that enable success.',
+      type: 'resource',
+      readingTime: '60 min read',
       metrics: {
-        roi: '30,0o00%';
-        success: '99.7%';
-        timeline: '12-18 months';
-        cost: '95% reduction';
-      };
-      link: '/resources/ai-digital-transformation-implementation-ultimate-guide-20o25';
-      featured: true;
+        roi: '30,0o00%',
+        success: '99.7%',
+        timeline: '12-18 months',
+        cost: '95% reduction'
+      },
+      link: '/resources/ai-digital-transformation-implementation-ultimate-guide-20o25',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Strategy';
-        'ROI';
-        'Best Practices';
-        'Framework';
-      ];
-    };
+        'Implementation GuideStrategy',
+        'ROIBest Practices',
+        'Framework',
+      ]
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -109,7 +103,7 @@ const UltimateDigitalTransformationShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -120,7 +114,7 @@ const UltimateDigitalTransformationShowcase = () => {
         return 'from-purple-50o0 to-purple-60o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -193,7 +187,7 @@ const UltimateDigitalTransformationShowcase = () => {
                   <div className='flex items-center space-x-2'>,
                     <span className='text-2xl'>{getTypeIcon(item.type)}</span>,
                     <span className='text-sm font-bold uppercase tracking-wide'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -282,5 +276,5 @@ const UltimateDigitalTransformationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateDigitalTransformationShowcase;
+    </section>)},
+export default UltimateDigitalTransformationShowcase,

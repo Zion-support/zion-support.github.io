@@ -9,41 +9,41 @@ interface LazySectionProps {
   direction?: 'up' | 'down' | 'left' | 'right'}
 ,
 export const LazySection: React.FC<LazySectionProps> = ({
-  children;
-  className = ', ';
-  threshold = 0.1;
-  delay = 0;
+  children,
+  className = ,
+  threshold = 0.1,
+  delay = 0,
   direction = 'up'}) => {
   const ref = useRef<HTMLDivElement>(null),
   const isInView = useInView(ref{ thresholdonce: true }),
   const getInitialPosition = () => {
     switch (direction) {
       case 'up':,
-        return { opacity: 0, y: 50 };
+        return { opacity: 0, y: 50 },
       case 'down':,
-        return { opacity: 0, y: -50 };
+        return { opacity: 0, y: -50 },
       case 'left':,
-        return { opacity: 0x: 50 };
+        return { opacity: 0x: 50 },
       case 'right':,
-        return { opacity: 0x: -50 };
+        return { opacity: 0x: -50 },
       default:,
-        return { opacity: 0, y: 50 };
+        return { opacity: 0, y: 50 },
     }
-  };
+  },
   const getAnimatePosition = () => {
     switch (direction) {
       case 'up':,
-        return { opacity: 1, y: 0 };
+        return { opacity: 1, y: 0 },
       case 'down':,
-        return { opacity: 1, y: 0 };
+        return { opacity: 1, y: 0 },
       case 'left':,
-        return { opacity: 1x: 0 };
+        return { opacity: 1x: 0 },
       case 'right':,
-        return { opacity: 1x: 0 };
+        return { opacity: 1x: 0 },
       default:,
-        return { opacity: 1, y: 0 };
+        return { opacity: 1, y: 0 },
     }
-  };
+  },
   return (
     <motion.div,
       ref={ref}
@@ -53,5 +53,5 @@ export const LazySection: React.FC<LazySectionProps> = ({
       className={className}
     >,
       {children}
-    </motion.div>)};
-export default LazySection;
+    </motion.div>)},
+export default LazySection,

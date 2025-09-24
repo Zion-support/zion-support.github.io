@@ -1,19 +1,20 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-import Link from 'next / link',import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react',
 import Link from 'next / link',
-import Link from 'next/link',import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react',
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react',
+import Link from 'next / link',
 import Link from 'next/link',
-
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud } from 'lucide-react',
+import Link from 'next/link',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -38,84 +39,78 @@ class ErrorBoundary extends React.Component {
   Cpu,
   Lock,
   Cloud,
-  ArrowRight;
-  Brain;
-  Zap;
-  Shield;
-  Rocket;
-  Sparkles;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Lock;
-  Cloud;
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
 } from 'lucide-react',
 const Enhanced2026ServicesShowcase = () =>: any {
   const featured_services = [
     {
-      id: 'ai - business - intelligence - elite - 2026';
-      name: 'AI Business Intelligence Elite 2026';
+      id: 'ai - business - intelligence - elite - 2026',
+      name: 'AI Business Intelligence Elite 2026',
       description:,
-        'Transform your business data into actionable intelligence with our advanced AI - powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI - powered analytics platform.';
-      price: '$299';
-      period: '/month';
-      icon: Brain;
-      color: 'from - purple - 500 to - pink - 500';
-      category: 'AI & Analytics';
+        'Transform your business data into actionable intelligence with our advanced AI - powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI - powered analytics platform.',
+      price: '$299',
+      period: '/month',
+      icon: Brain,
+      color: 'from - purple - 500 to - pink - 500',
+      category: 'AI & Analytics',
       features: [
-        'Predictive Analytics';
-        'Real - time Insights';
-        'Custom Dashboards';
-        'AI - powered Reports';
-      ];
-    };
+        'Predictive AnalyticsReal - time Insights',
+        'Custom DashboardsAI - powered Reports',
+      ]
+    },
     {
-      id: 'autonomous - ai - agents - platform - 2026';
-      name: 'Autonomous AI Agents Platform 2026';
+      id: 'autonomous - ai - agents - platform - 2026',
+      name: 'Autonomous AI Agents Platform 2026',
       description:,
-        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.';
-      price: '$199',      period: '/month';
-      icon: Zap;
-      color: 'from - blue - 500 to - cyan - 500';
-      category: 'AI & Automation';
+        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
+      price: '$199',      period: '/month',
+      icon: Zap,
+      color: 'from - blue - 500 to - cyan - 500',
+      category: 'AI & Automation',
       features: [
-        'Task Automation';
-        'Process Optimization';
-        '24 / 7 Operation';
-        'Scalable Architecture';
-      ];
-    };
+        'Task AutomationProcess Optimization',
+        '24 / 7 OperationScalable Architecture',
+      ]
+    },
     {
-      id: 'quantum - cybersecurity - suite - 2026';
-      name: 'Quantum Cybersecurity Suite 2026';
+      id: 'quantum - cybersecurity - suite - 2026',
+      name: 'Quantum Cybersecurity Suite 2026',
       description:,
         'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24 / 7 OperationScalable Architecture']}
 ,
     {
-      id: 'quantum - cybersecurity - suite - 2026';
-      name: 'Quantum Cybersecurity Suite 2026';
-      description: 'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.';
-      period: '/month';
-      icon: Shield;
-      color: 'from - red - 500 to - orange - 500';
-      category: 'Security';
+      id: 'quantum - cybersecurity - suite - 2026',
+      name: 'Quantum Cybersecurity Suite 2026',
+      description: 'Next - generation cybersecurity platform that uses quantum - resistant algorithms to protect against current and future cyber threats.',
+      period: '/month',
+      icon: Shield,
+      color: 'from - red - 500 to - orange - 500',
+      category: 'Security',
       features: [
-        'Quantum Encryption';
-        'Threat Detection';
-        'Zero Trust';
-        'Compliance Ready';
-      ];
-    };
+        'Quantum EncryptionThreat Detection',
+        'Zero TrustCompliance Ready',
+      ]
+    },
     {
-      id: 'neuromorphic-computing-platform-2026';
-      name: 'Neuromorphic Computing Platform 2026';
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.';
-      price: '$1,499';
-    period: '/month';
-      icon: Cpu;
-      color: 'from - green - 500 to - emerald - 500';
-      category: 'Emerging Tech';
+      id: 'neuromorphic-computing-platform-2026',
+      name: 'Neuromorphic Computing Platform 2026',
+      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
+      price: '$1,499',
+    period: '/month',
+      icon: Cpu,
+      color: 'from - green - 500 to - emerald - 500',
+      category: 'Emerging Tech',
       features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']}
     {
       id: 'dna-computing-platform-2026',
@@ -128,25 +123,23 @@ const Enhanced2026ServicesShowcase = () =>: any {
       category: 'Emerging Tech',
       features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']}
     {
-      id: 'space - debris - tracking - system';
-      name: 'Space Debris Tracking System 2026';
+      id: 'space - debris - tracking - system',
+      name: 'Space Debris Tracking System 2026',
       description:,
-        'Brain - inspired computing for next - generation AI with ultra - low power consumption and cognitive capabilities.';
-      price: '$1, 499';
-      period: '/month';
-      icon: Cpu;
-      color: 'from - green - 500 to - emerald - 500';
-      category: 'Emerging Tech';
-      id: 'space-debris-tracking-system';
-      name: 'Space Debris Tracking System 2026';
-      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.';
+        'Brain - inspired computing for next - generation AI with ultra - low power consumption and cognitive capabilities.',
+      price: '$1, 499',
+      period: '/month',
+      icon: Cpu,
+      color: 'from - green - 500 to - emerald - 500',
+      category: 'Emerging Tech',
+      id: 'space-debris-tracking-system',
+      name: 'Space Debris Tracking System 2026',
+      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
       features: [
-        'Brain - like Processing';
-        'Low Power';
-        'Real - time Learning';
-        'Cognitive Computing';
-      ];
-    };
+        'Brain - like ProcessingLow Power',
+        'Real - time LearningCognitive Computing',
+      ]
+    },
     {
       id: 'dna-computing-platform-2026',
       name: 'DNA Computing Platform 2026',
@@ -158,189 +151,175 @@ const Enhanced2026ServicesShowcase = () =>: any {
       color: 'from-indigo-500 to-purple-500',
       category: 'Emerging Tech',
       features: [
-        'Molecular Processing',
-        'Exponential Speed',
-        'Complex Algorithms',
-        'Research Ready']}
+        'Molecular ProcessingExponential Speed',
+        'Complex AlgorithmsResearch Ready']}
     {
-      id: 'space - debris - tracking - system';
-      name: 'Space Debris Tracking System 2026';
+      id: 'space - debris - tracking - system',
+      name: 'Space Debris Tracking System 2026',
       description:,
-        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.';
-      price: '$899';
-      period: '/month';
-      icon: Rocket;
-      color: 'from - yellow - 500 to - orange - 500';
-      category: 'Space Tech';
-  ArrowRight;
-  Brain;
-  Zap;
-  Shield;
-  Rocket;
-  Sparkles;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Lock;
-  Cloud;
-  Lock;
-  Cloud;
+        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
+      price: '$899',
+      period: '/month',
+      icon: Rocket,
+      color: 'from - yellow - 500 to - orange - 500',
+      category: 'Space Tech',
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  Lock,
+  Cloud
 } from 'lucide-react',
 const Enhanced2026ServicesShowcase = () => {
   const featuredServices = [
     {
-      id: 'ai-business-intelligence-elite-2026';
-      name: 'AI Business Intelligence Elite 2026';
+      id: 'ai-business-intelligence-elite-2026',
+      name: 'AI Business Intelligence Elite 2026',
       description:,
-        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.';
-      price: '$299';
-      period: '/month';
-      icon: Brain;
-      color: 'from-purple-500 to-pink-500';
-      category: 'AI & Analytics';
+        'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',      price: '$299',      description: 'Transform your business data into actionable intelligence with our advanced AI-powered analytics platform.',
+      price: '$299',
+      period: '/month',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500',
+      category: 'AI & Analytics',
       features: [
-        'Predictive Analytics';
-        'Real-time Insights';
-        'Custom Dashboards';
-        'AI-powered Reports';
-      ];
-    };
+        'Predictive AnalyticsReal-time Insights',
+        'Custom DashboardsAI-powered Reports',
+      ]
+    },
     {
-      id: 'autonomous-ai-agents-platform-2026';
-      name: 'Autonomous AI Agents Platform 2026';
+      id: 'autonomous-ai-agents-platform-2026',
+      name: 'Autonomous AI Agents Platform 2026',
       description:,
-        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.';
-      price: '$199',      period: '/month';
-      icon: Zap;
-      color: 'from-blue-500 to-cyan-500';
-      category: 'AI & Automation';
+        'Build, deploy, and manage autonomous AI agents that can handle complex business tasks without human intervention.',
+      price: '$199',      period: '/month',
+      icon: Zap,
+      color: 'from-blue-500 to-cyan-500',
+      category: 'AI & Automation',
       features: [
-        'Task Automation';
-        'Process Optimization';
-        '24/7 Operation';
-        'Scalable Architecture';
-      ];
-    };
+        'Task AutomationProcess Optimization',
+        '24/7 OperationScalable Architecture',
+      ]
+    },
     {
-      id: 'quantum-cybersecurity-suite-2026';
-      name: 'Quantum Cybersecurity Suite 2026';
+      id: 'quantum-cybersecurity-suite-2026',
+      name: 'Quantum Cybersecurity Suite 2026',
       description:,
-        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']};
+        'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',      price: '$599',      features: ['Task AutomationProcess Optimization24/7 OperationScalable Architecture']},
     {
-      id: 'quantum-cybersecurity-suite-2026';
-      name: 'Quantum Cybersecurity Suite 2026';
-      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.';
-      period: '/month';
-      icon: Shield;
-      color: 'from-red-500 to-orange-500';
-      category: 'Security';
+      id: 'quantum-cybersecurity-suite-2026',
+      name: 'Quantum Cybersecurity Suite 2026',
+      description: 'Next-generation cybersecurity platform that uses quantum-resistant algorithms to protect against current and future cyber threats.',
+      period: '/month',
+      icon: Shield,
+      color: 'from-red-500 to-orange-500',
+      category: 'Security',
       features: [
-        'Quantum Encryption';
-        'Threat Detection';
-        'Zero Trust';
-        'Compliance Ready';
-      ];
-    };
+        'Quantum EncryptionThreat Detection',
+        'Zero TrustCompliance Ready',
+      ]
+    },
     {
-      id: 'neuromorphic-computing-platform-2026';
+      id: 'neuromorphic-computing-platform-2026',
       name: 'Neuromorphic Computing Platform 2026',    {
-      id: 'neuromorphic-computing-platform-2026';
-      name: 'Neuromorphic Computing Platform 2026';
-      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.';
+      id: 'neuromorphic-computing-platform-2026',
+      name: 'Neuromorphic Computing Platform 2026',
+      description: 'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
       price: '$1,499',
-      period: '/month';
-      icon: Cpu;
-      color: 'from-green-500 to-emerald-500';
-      category: 'Emerging Tech';
-      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']};
+      period: '/month',
+      icon: Cpu,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Emerging Tech',
+      features: ['Brain-like ProcessingLow PowerReal-time LearningCognitive Computing']},
     {
-      id: 'dna-computing-platform-2026';
-      name: 'DNA Computing Platform 2026';
-      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.';
+      id: 'dna-computing-platform-2026',
+      name: 'DNA Computing Platform 2026',
+      description: 'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
       price: '$2,999',
-      period: '/month';
-      icon: Globe;
-      color: 'from-indigo-500 to-purple-500';
-      category: 'Emerging Tech';
-      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']};
+      period: '/month',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Emerging Tech',
+      features: ['Molecular ProcessingExponential SpeedComplex AlgorithmsResearch Ready']},
     {
-      id: 'space-debris-tracking-system';
-      name: 'Space Debris Tracking System 2026';
+      id: 'space-debris-tracking-system',
+      name: 'Space Debris Tracking System 2026',
       description:,
-        'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.';
-      price: '$1,499';
-      period: '/month';
-      icon: Cpu;
-      color: 'from-green-500 to-emerald-500';
-      category: 'Emerging Tech';
+        'Brain-inspired computing for next-generation AI with ultra-low power consumption and cognitive capabilities.',
+      price: '$1,499',
+      period: '/month',
+      icon: Cpu,
+      color: 'from-green-500 to-emerald-500',
+      category: 'Emerging Tech',
       features: [
-        'Brain-like Processing';
-        'Low Power';
-        'Real-time Learning';
-        'Cognitive Computing';
-      ];
-    };
+        'Brain-like ProcessingLow Power',
+        'Real-time LearningCognitive Computing',
+      ]
+    },
     {
-      id: 'dna-computing-platform-2026';
-      name: 'DNA Computing Platform 2026';
+      id: 'dna-computing-platform-2026',
+      name: 'DNA Computing Platform 2026',
       description:,
-        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.';
-      price: '$2,999';
-      period: '/month';
-      icon: Globe;
-      color: 'from-indigo-500 to-purple-500';
-      category: 'Emerging Tech';
+        'Molecular computing for complex problem solving with exponential speed improvements for specific algorithms.',
+      price: '$2,999',
+      period: '/month',
+      icon: Globe,
+      color: 'from-indigo-500 to-purple-500',
+      category: 'Emerging Tech',
       features: [
-        'Molecular Processing';
-        'Exponential Speed';
-        'Complex Algorithms';
-        'Research Ready';
-      ];
-    };
+        'Molecular ProcessingExponential Speed',
+        'Complex AlgorithmsResearch Ready',
+      ]
+    },
     {
-      id: 'space-debris-tracking-system';
-      name: 'Space Debris Tracking System 2026';
+      id: 'space-debris-tracking-system',
+      name: 'Space Debris Tracking System 2026',
       description:,
-        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.';
-      price: '$899';
-      period: '/month';
-      icon: Rocket;
-      color: 'from-yellow-500 to-orange-500';
-      category: 'Space Tech';
+        'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',      price: '$899',      description: 'Advanced space debris monitoring and collision prediction system using AI and satellite technology.',
+      price: '$899',
+      period: '/month',
+      icon: Rocket,
+      color: 'from-yellow-500 to-orange-500',
+      category: 'Space Tech',
       features: [
-        'Real-time Tracking';
-        'Collision Prediction';
-        'Satellite Safety';
-        'Space Traffic Management';
-      ];
-    };
+        'Real-time TrackingCollision Prediction',
+        'Satellite SafetySpace Traffic Management',
+      ]
+    },
   ],
   const categories = [
     {
-      name: 'AI Services';
-      count: '150+';
-      icon: Brain;
-      color: 'from-purple-500 to-pink-500';
-    };
+      name: 'AI Services',
+      count: '150+',
+      icon: Brain,
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-      name: 'Quantum Tech';
-      count: '75+';
-      icon: Sparkles;
-      color: 'from-blue-500 to-cyan-500';
-    };
+      name: 'Quantum Tech',
+      count: '75+',
+      icon: Sparkles,
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      name: 'Emerging Tech';
-      count: '100+';
-      icon: Rocket;
-      color: 'from-green-500 to-emerald-500';
-    };
+      name: 'Emerging Tech',
+      count: '100+',
+      icon: Rocket,
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      name: 'IT Solutions';
-      count: '200+';
-      icon: Cloud;
-      color: 'from-yellow-500 to-orange-500';
-    };
+      name: 'IT Solutions',
+      count: '200+',
+      icon: Cloud,
+      color: 'from-yellow-500 to-orange-500'
+    },
   ],
   return (
     <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
@@ -349,9 +328,9 @@ const Enhanced2026ServicesShowcase = () => {
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/10 to-cyan-900/10'></div>,
       <div className='max-w-7xl mx-auto relative z-10'>        {/* Section Header */}  ],
   const categories = [
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' };
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' };
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' };
+    { name: 'AI Services', count: '150+', icon: Brain, color: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from-blue-500 to-cyan-500' },
+    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from-green-500 to-emerald-500' },
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from-yellow-500 to-orange-500' }
   ],
   return (
@@ -395,38 +374,36 @@ const Enhanced2026ServicesShowcase = () => {
           {categories.map((category, index) => (
             <motion.div,
       features: [
-        'Real - time Tracking';
-        'Collision Prediction';
-        'Satellite Safety';
-        'Space Traffic Management';
-      ];
-    };
+        'Real - time TrackingCollision Prediction',
+        'Satellite SafetySpace Traffic Management',
+      ]
+    },
   ],
   const categories = [
     {
-      name: 'AI Services';
-      count: '150+';
-      icon: Brain;
-      color: 'from - purple - 500 to - pink - 500';
-    };
+      name: 'AI Services',
+      count: '150+',
+      icon: Brain,
+      color: 'from - purple - 500 to - pink - 500'
+    },
     {
-      name: 'Quantum Tech';
-      count: '75+';
-      icon: Sparkles;
-      color: 'from - blue - 500 to - cyan - 500';
-    };
+      name: 'Quantum Tech',
+      count: '75+',
+      icon: Sparkles,
+      color: 'from - blue - 500 to - cyan - 500'
+    },
     {
-      name: 'Emerging Tech';
-      count: '100+';
-      icon: Rocket;
-      color: 'from - green - 500 to - emerald - 500';
-    };
+      name: 'Emerging Tech',
+      count: '100+',
+      icon: Rocket,
+      color: 'from - green - 500 to - emerald - 500'
+    },
     {
-      name: 'IT Solutions';
-      count: '200+';
-      icon: Cloud;
-      color: 'from - yellow - 500 to - orange - 500';
-    };
+      name: 'IT Solutions',
+      count: '200+',
+      icon: Cloud,
+      color: 'from - yellow - 500 to - orange - 500'
+    },
   ],
   return (
     <section className='py - 20 px - 4 sm: px - 6 lg:px - 8 relative overflow - hidden'>,
@@ -434,9 +411,9 @@ const Enhanced2026ServicesShowcase = () => {
       <div className='absolute inset - 0 bg - gradient - to - b from - transparent via - purple - 900 / 10 to - cyan - 900 / 10'></div>,
       <div className='max - w-7xl mx - auto relative z - 10'>        {/* Section Header */}  ],
   const categories = [
-    { name: 'AI Services', count: '150+', icon: Brain, color: 'from - purple - 500 to - pink - 500' };
-    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from - blue - 500 to - cyan - 500' };
-    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from - green - 500 to - emerald - 500' };
+    { name: 'AI Services', count: '150+', icon: Brain, color: 'from - purple - 500 to - pink - 500' },
+    { name: 'Quantum Tech', count: '75+', icon: Sparkles, color: 'from - blue - 500 to - cyan - 500' },
+    { name: 'Emerging Tech', count: '100+', icon: Rocket, color: 'from - green - 500 to - emerald - 500' },
     { name: 'IT Solutions', count: '200+', icon: Cloud, color: 'from - yellow - 500 to - orange - 500' }
   ],
   return (
@@ -686,11 +663,11 @@ const Enhanced2026ServicesShowcase = () => {
         </motion.div>,
       </div>,
     </section>)}
-};
+},
 export default Enhanced2026ServicesShowcase)}
-export default Enhanced2026ServicesShowcase;
-export default Enhanced2026ServicesShowcase;
+export default Enhanced2026ServicesShowcase,
+export default Enhanced2026ServicesShowcase,
 }
 }
-export default Enhanced2026ServicesShowcase;
+export default Enhanced2026ServicesShowcase,
 }))))))))

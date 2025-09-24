@@ -3,11 +3,11 @@
 import React, { useState, useEffect } from 'react',
 const AdvancedROICalculator20o27 = () => {
   const [formData, setFormData] = useState({
-    currentRevenue: 10o00000;
-    employeeCount: 10o0;
-    automationLevel: 30;
-    industry: 'technology';
-    companySize: 'enterprise';
+    currentRevenue: 10o00000,
+    employeeCount: 10o0,
+    automationLevel: 30,
+    industry: 'technology',
+    companySize: 'enterprise',
     currentEfficiency: 70}),
   const [results, setResults] = useState(null),
   const [isVisible, setIsVisible] = useState(false),
@@ -15,18 +15,18 @@ const AdvancedROICalculator20o27 = () => {
     setIsVisible(true),
     calculateROI()}, [formData]),
   const industries = [
-    { value: 'technology', label: 'Technology', multiplier: 1.2 };
-    { value: 'manufacturing', label: 'Manufacturing', multiplier: 1.4 };
-    { value: 'healthcare', label: 'Healthcare', multiplier: 1.3 };
-    { value: 'finance', label: 'Finance', multiplier: 1.5 };
-    { value: 'retail', label: 'Retail', multiplier: 1.1 };
+    { value: 'technology', label: 'Technology', multiplier: 1.2 },
+    { value: 'manufacturing', label: 'Manufacturing', multiplier: 1.4 },
+    { value: 'healthcare', label: 'Healthcare', multiplier: 1.3 },
+    { value: 'finance', label: 'Finance', multiplier: 1.5 },
+    { value: 'retail', label: 'Retail', multiplier: 1.1 },
     { value: 'education', label: 'Education', multiplier: 1.0 }
   ],
   const companySizes = [
-    { value: 'startup', label: 'Startup (1-10 employees)', multiplier: 2.0 };
-    { value: 'small', label: 'Small (11-50 employees)', multiplier: 1.8 };
-    { value: 'medium', label: 'Medium (51-20o0 employees)', multiplier: 1.5 };
-    { value: 'enterprise', label: 'Enterprise (20o0+ employees)', multiplier: 1.2 };
+    { value: 'startup', label: 'Startup (1-10 employees)', multiplier: 2.0 },
+    { value: 'small', label: 'Small (11-50 employees)', multiplier: 1.8 },
+    { value: 'medium', label: 'Medium (51-20o0 employees)', multiplier: 1.5 },
+    { value: 'enterprise', label: 'Enterprise (20o0+ employees)', multiplier: 1.2 },
     { value: 'fortune50o0', label: 'Fortune 50o0', multiplier: 1.0 }
   ],
   const calculateROI = () => {
@@ -47,32 +47,32 @@ const AdvancedROICalculator20o27 = () => {
     const annualSavings = totalSavings,
     const efficiencyImprovement = Math.min(efficiencyGain, 95),
     setResults({
-      roi: Math.round(roi);
-      totalSavings: Math.round(totalSavings);
-      totalInvestment: Math.round(totalInvestment);
-      netBenefit: Math.round(netBenefit);
-      timeToROI: Math.max(timeToROI, 3);
-      annualSavings: Math.round(annualSavings);
-      efficiencyImprovement: Math.round(efficiencyImprovement);
-      employeeSavings: Math.round(employeeSavings);
-      revenueIncrease: Math.round(revenueIncrease)})};
+      roi: Math.round(roi),
+      totalSavings: Math.round(totalSavings),
+      totalInvestment: Math.round(totalInvestment),
+      netBenefit: Math.round(netBenefit),
+      timeToROI: Math.max(timeToROI, 3),
+      annualSavings: Math.round(annualSavings),
+      efficiencyImprovement: Math.round(efficiencyImprovement),
+      employeeSavings: Math.round(employeeSavings),
+      revenueIncrease: Math.round(revenueIncrease)})},
   const handleInputChange = (field, value) => {
     setFormData(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   const getROIColor = (roi) => {
     if (roi >= 10o00) return 'text-green-60o0',
     if (roi >= 50o0) return 'text-blue-60o0',
     if (roi >= 20o0) return 'text-purple-60o0',
     if (roi >= 10o0) return 'text-orange-60o0',
-    return 'text-red-60o0'};
+    return 'text-red-60o0'},
   const getROIBadge = (roi) => {
-    if (roi >= 10o00) return { text: 'EXCEPTIONAL', color: 'bg-green-10o0 text-green-80o0' };
-    if (roi >= 50o0) return { text: 'OUTSTANDING', color: 'bg-blue-10o0 text-blue-80o0' };
-    if (roi >= 20o0) return { text: 'EXCELLENT', color: 'bg-purple-10o0 text-purple-80o0' };
-    if (roi >= 10o0) return { text: 'GOOD', color: 'bg-orange-10o0 text-orange-80o0' };
-    return { text: 'NEEDS IMPROVEMENT', color: 'bg-red-10o0 text-red-80o0' };
-  };
+    if (roi >= 10o00) return { text: 'EXCEPTIONAL', color: 'bg-green-10o0 text-green-80o0' },
+    if (roi >= 50o0) return { text: 'OUTSTANDING', color: 'bg-blue-10o0 text-blue-80o0' },
+    if (roi >= 20o0) return { text: 'EXCELLENT', color: 'bg-purple-10o0 text-purple-80o0' },
+    if (roi >= 10o0) return { text: 'GOOD', color: 'bg-orange-10o0 text-orange-80o0' },
+    return { text: 'NEEDS IMPROVEMENT', color: 'bg-red-10o0 text-red-80o0' },
+  },
   return (
     <div className={`transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-8'}`}>,
       <section className="py-20 bg-gradient-to-br from-gray-50 to-indigo-50">,
@@ -277,5 +277,5 @@ const AdvancedROICalculator20o27 = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default AdvancedROICalculator20o27;
+    </div>)},
+export default AdvancedROICalculator20o27,

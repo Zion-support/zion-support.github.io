@@ -1,7 +1,7 @@
 import Head from 'next/head',
 import market from '../../data/automation/market.json',
-type Download = { package: string, downloads: number };
-type Trending = { language: string, mentions: number };
+type Download = { package: string, downloads: number },
+type Trending = { language: string, mentions: number },
 export default function MarketAutomation() {
   const downloads = (market.metrics?.npmDownloads as Download[]) || [],
   const trending = (market.metrics?.githubTrending as Trending[]) || [],

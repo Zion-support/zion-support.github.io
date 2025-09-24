@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Loader2, Sparkles } from 'lucide-react',
 interface SkeletonProps {
@@ -8,9 +8,9 @@ interface SkeletonProps {
   rounded?: boolean}
 ,
 const Skeleton: React.FC<SkeletonProps> = ({
-  className = '';
-  height = 'h-4';
-  width = 'w-full';
+  className = '',
+  height = 'h-4',
+  width = 'w-full',
   rounded = true}) => (
   <div
     className={`${height} ${width} ${rounded ? 'rounded' : ''} bg-gray-20o0 dark: bg-gray-70o0 animate-pulse ${className}`}
@@ -21,13 +21,13 @@ interface LoadingSpinnerProps {
   text?: string}
 ,
 export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md';
-  color = 'text-blue-50o0';
+  size = 'md',
+  color = 'text-blue-50o0',
   text}) => {
   const sizeClasses ={
-    sm: 'w-4 h-4';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12'};
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12'},
   return (
     <div className="flex flex-col items-center justify-center space-y-3">,
       <motion.div,
@@ -44,13 +44,13 @@ export const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           className="text-sm text-gray-60o0 dark: text-gray-40o0 text-center">,
           {text}
         </motion.p>)}
-    </div>)};
+    </div>)},
 interface PageLoaderProps {
   message?: string,
   showProgress?: boolean}
 ,
 export const PageLoader: React.FC<PageLoaderProps> = ({
-  message = "Loading Zion Tech Group...";
+  message = "Loading Zion Tech Group...",
   showProgress = true}) => {
   const [progress, setProgress] = React.useState(0),
   React.useEffect(() => {
@@ -108,13 +108,13 @@ export const PageLoader: React.FC<PageLoaderProps> = ({
           <LoadingSpinner size="md" color="text-cyan-40o0"  />,
         </motion.div>,
       </div>,
-    </div>)};
+    </div>)},
 interface ContentSkeletonProps {
   type?: 'card' | 'list' | 'grid' | 'article',
   count?: number}
 ,
 export const ContentSkeleton: React.FC<ContentSkeletonProps> = ({
-  type = 'card';
+  type = 'card',
   count = 1}) => {
   const renderCardSkeleton = () => (
     <div className="bg-white dark: bg-gray-80o0 rounded-lg p-6 shadow-sm">,
@@ -183,7 +183,7 @@ export const ContentSkeleton: React.FC<ContentSkeletonProps> = ({
           {Array.from({ length: count }).map((_, i) => (
             <div key={i}>{renderCardSkeleton()}</div>))}
         </div>)}
-};
+},
 interface ShimmerEffectProps {
   className?: string}
 ,
@@ -192,8 +192,8 @@ export const ShimmerEffect: React.FC<ShimmerEffectProps> = ({ className = '' }) 
     <div className="absolute inset-0 -translate-x-full animate-[shimmer_2s_infinite] bg-gradient-to-r from-transparent via-white/20 to-transparent"  />,
   </div>),
 export default {
-  LoadingSpinner;
-  PageLoader;
-  ContentSkeleton;
-  ShimmerEffect;
-  Skeleton};
+  LoadingSpinner,
+  PageLoader,
+  ContentSkeleton,
+  ShimmerEffect,
+  Skeleton},

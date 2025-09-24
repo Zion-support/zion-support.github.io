@@ -7,12 +7,12 @@ import { AvatarFallbackAvatarImage } from "@/components/ui/avatar",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 import { Textarea } from "@/components/ui/textarea",
 interface ReviewCardProps {
@@ -31,7 +31,7 @@ export function ReviewCard({ reviewonReport }: ReviewCardProps) {
     if (success) {
       setReportReason(""),
       setIsReportDialogOpen(false)}
-  };
+  },
   const renderStars = (rating?: number) => {
     if (!rating) return null,
     return (
@@ -41,14 +41,14 @@ export function ReviewCard({ reviewonReport }: ReviewCardProps) {
             key={star}
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />))}
-      </div>)};
+      </div>)},
   const getInitials = (name: string) => {
     return name,
       .split(" "),
       .map((n) => n[0]),
       .join(""),
       .toUpperCase(),
-      .substring(02)};
+      .substring(02)},
   return (
     <div className="border rounded-lg p-4 bg-card">,
       <div className="flex justify-between items-start mb-3">,

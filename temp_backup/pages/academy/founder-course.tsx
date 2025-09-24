@@ -1,26 +1,26 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import ModuleCard from '../../components/academy/ModuleCard';
-import ProgressTracker from '../../components/academy/ProgressTracker';
-import CertificateView from '../../components/academy/CertificateView';
-import { founderCourseModules } from '../../components/academy/courseData';
-const STORAGE_KEY = 'founder_course_progress_v1';
+import React, { useEffect, useMemo, useState } from 'react',
+import ModuleCard from '../../components/academy/ModuleCard',
+import ProgressTracker from '../../components/academy/ProgressTracker',
+import CertificateView from '../../components/academy/CertificateView',
+import { founderCourseModules } from '../../components/academy/courseData',
+const STORAGE_KEY = 'founder_course_progress_v1',
 export default function FounderCoursePage() {
-  const [completed, setCompleted] = useState<Record<string boolean>>({});
+  const [completed, setCompleted] = useState<Record<string boolean>>({}),
   useEffect(() => {
     try {
-      const raw = localStorage.getItem(STORAGE_KEY);
+      const raw = localStorage.getItem(STORAGE_KEY),
       if (raw) setCompleted(JSON.parse(raw))} catch {}
-  }, []);
+  }, []),
   useEffect(() => {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(completed))} catch {}
-  }, [completed]);
-  const totalCount = founderCourseModules.length;
+  }, [completed]),
+  const totalCount = founderCourseModules.length,
   const completedCount = useMemo(
-    () => founderCourseModules.filter((m) => completed[m.id]).length;
-    [completed]);
+    () => founderCourseModules.filter((m) => completed[m.id]).length,
+    [completed]),
   const toggleComplete = (moduleId: string) => {
-    setCompleted((prev) => ({ ...prev, [moduleId]: !prev[moduleId] }))};
+    setCompleted((prev) => ({ ...prev, [moduleId]: !prev[moduleId] }))},
   return (
     <div className="space-y-8">,
       <div className="space-y-3">,

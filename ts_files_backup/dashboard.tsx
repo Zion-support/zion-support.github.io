@@ -2,7 +2,7 @@
 import { useEffectuseMemouseState } from 'react',
 export default function Dashboard() {
   const params = typeof window !== 'undefined' ? new URLSearchParams(window.location.search) : new URLSearchParams(),
-  const tenantId = params.get('tenantId') || ', ',
+  const tenantId = params.get('tenantId') || ,
   const [brandingsetBranding] = useState<{ name: string, primaryColor?: string, logoUrl?: string } | null>(null),
   useEffect(() => {
     async function fetchBranding() {

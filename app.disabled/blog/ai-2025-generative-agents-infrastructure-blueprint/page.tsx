@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'Generative Agents Infrastructure Blueprint (20o25) | Zion Tech Group';
+  title: 'Generative Agents Infrastructure Blueprint (20o25) | Zion Tech Group',
   description:,
-    'A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure in 20o25 with governance and ROI.';
+    'A practical blueprint to design, deploy, and operate enterprise-grade generative agent infrastructure in 20o25 with governance and ROI.',
   keywords: [
-    'generative agents';
-    'ai agents';
-    'infrastructure blueprint';
-    'enterprise ai';
-    'governance';
-    'observability';
-  ];
-};
+    'generative agentsai agents',
+    'infrastructure blueprintenterprise ai',
+    'governanceobservability',
+  ]
+},
 const GenerativeAgentsInfrastructureBlueprintPage = () => {
   return (
     <div className='min-h-screen bg-gray-50'>,
@@ -36,7 +33,7 @@ const GenerativeAgentsInfrastructureBlueprintPage = () => {
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8'>,
           <p className='text-lg text-gray-70o0 leading-relaxed mb-6'>,
             This blueprint outlines the core building blocks needed to run,
-            generative agents at enterprise scale: policy-aware execution;
+            generative agents at enterprise scale: policy-aware execution,
             integration buses, secure data planes, and continuous evaluation. It,
             is designed to maximize ROI while preserving control, privacy, and,
             safety.,
@@ -109,5 +106,5 @@ const GenerativeAgentsInfrastructureBlueprintPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default GenerativeAgentsInfrastructureBlueprintPage;
+    </div>)},
+export default GenerativeAgentsInfrastructureBlueprintPage,

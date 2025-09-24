@@ -9,9 +9,9 @@ import {
   Brain,
   Zap,
   TrendingUp,
-  X;
-  Star;
-  Rocket;
+  X,
+  Star,
+  Rocket,
   Target} from 'lucide-react',
 const AIInnovationShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -24,7 +24,7 @@ const AIInnovationShowcase20o25PromotionBanner = () => {
   }[]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ai-innovation-banner-'dismissed', 'true')};
+    localStorage.setItem('ai-innovation-banner-'dismissedtrue')},
   if (isDismissed || !isVisible) return null,
   return (
     <AnimatePresence>,
@@ -106,26 +106,26 @@ const AIInnovationShowcase20o25PromotionBanner = () => {
         <div className="absolute inset-0 overflow-hidden pointer-events-none">,
           <motion.div,
             animate={{
-              x: [0o100];
+              x: [0o100],
               opacity: [0.30.60.3]}}
             transition={{
-              duration: 4;
-              repeat: Infinity;
+              duration: 4,
+              repeat: Infinity,
               ease: "linear"}}
             className="absolute top-0 left-0 w-32 h-32 bg-gradient-to-r from-blue-40o0/20 to-purple-40o0/20 rounded-full blur-xl",
            />,
           <motion.div,
             animate={{
-              x: [0-10o0];
+              x: [0-10o0],
               opacity: [0.20.50.2]}}
             transition={{
-              duration: 6;
-              repeat: Infinity;
-              ease: "linear";
+              duration: 6,
+              repeat: Infinity,
+              ease: "linear",
               delay: 2}}
             className="absolute top-0 right-0 w-24 h-24 bg-gradient-to-r from-purple-40o0/20 to-pink-40o0/20 rounded-full blur-xl",
            />,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default AIInnovationShowcase20o25PromotionBanner;
+    </AnimatePresence>)},
+export default AIInnovationShowcase20o25PromotionBanner,

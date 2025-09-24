@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Globe;
-  Zap;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Globe,
+  Zap,
 } from 'lucide-react',
 import Button from '../ui/Button',
 export default function UltraAdvancedNavigation20o26V2() {
@@ -23,62 +23,62 @@ export default function UltraAdvancedNavigation20o26V2() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigationItems = [
     {
-      name: 'Services';
-      href: '/services';
+      name: 'Services',
+      href: '/services',
       dropdown: [
         {
-          name: 'AI Services';
-          href: '/ai-services';
-          icon: Brain;
-          description: 'Advanced AI solutions';
-        };
+          name: 'AI Services',
+          href: '/ai-services',
+          icon: Brain,
+          description: 'Advanced AI solutions'
+        },
         {
-          name: 'Quantum Computing';
-          href: '/quantum-services';
-          icon: Atom;
-          description: 'Quantum technology';
-        };
+          name: 'Quantum Computing',
+          href: '/quantum-services',
+          icon: Atom,
+          description: 'Quantum technology'
+        },
         {
-          name: 'Cybersecurity';
-          href: '/cybersecurity';
-          icon: Shield;
-          description: 'Security solutions';
-        };
+          name: 'Cybersecurity',
+          href: '/cybersecurity',
+          icon: Shield,
+          description: 'Security solutions'
+        },
         {
-          name: 'Micro SAAS';
-          href: '/micro-saas';
-          icon: Rocket;
-          description: 'Business applications';
-        };
+          name: 'Micro SAAS',
+          href: '/micro-saas',
+          icon: Rocket,
+          description: 'Business applications'
+        },
         {
-          name: 'Emerging Tech';
-          href: '/emerging-tech';
-          icon: Zap;
-          description: 'Cutting-edge innovations';
-        };
+          name: 'Emerging Tech',
+          href: '/emerging-tech',
+          icon: Zap,
+          description: 'Cutting-edge innovations'
+        },
         {
-          name: 'Enterprise IT';
-          href: '/enterprise-it';
-          icon: Globe;
-          description: 'Corporate solutions';
-        };
-      ];
-    };
-    { name: 'Solutions', href: '/solutions' };
-    { name: 'Pricing', href: '/pricing' };
-    { name: 'About', href: '/about' };
-    { name: 'Contact', href: '/contact' };
+          name: 'Enterprise IT',
+          href: '/enterprise-it',
+          icon: Globe,
+          description: 'Corporate solutions'
+        },
+      ],
+    },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ],
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
+  },
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${

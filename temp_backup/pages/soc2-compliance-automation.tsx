@@ -1,6 +1,6 @@
-import React from 'react';;
-import SEO from '../components/SEO';
-import Link from 'next/link';
+import React from 'react',
+import SEO from '../components/SEO',
+import Link from 'next/link',
 export default function SOC2ComplianceAutomationPage() {
 	return (
 		<>,
@@ -13,11 +13,11 @@ export default function SOC2ComplianceAutomationPage() {
 					</p>,
 					<div className="mt-8 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,
 						{[
-							{ title: 'Controls Library', desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.' };
-							{ title: 'Evidence Automation', desc: 'Pull evidence from cloud, CI, ticketing, security tools.' };
-							{ title: 'Vendor Risk', desc: 'Automated questionnaires, tracking, and remediation workflows.' };
-							{ title: 'Asset Inventory', desc: 'Infrastructure and device inventory with configuration checks.' };
-							{ title: 'Workflow & Tasks', desc: 'Assign remediation tasks, SLAs, and approvals.' };
+							{ title: 'Controls Library', desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.' },
+							{ title: 'Evidence Automation', desc: 'Pull evidence from cloud, CI, ticketing, security tools.' },
+							{ title: 'Vendor Risk', desc: 'Automated questionnaires, tracking, and remediation workflows.' },
+							{ title: 'Asset Inventory', desc: 'Infrastructure and device inventory with configuration checks.' },
+							{ title: 'Workflow & Tasks', desc: 'Assign remediation tasks, SLAs, and approvals.' },
 							{ title: 'Audit Room', desc: 'Share evidence securely with auditors, immutable logs.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">,

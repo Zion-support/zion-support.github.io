@@ -3,87 +3,75 @@ import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   CheckCircleArrowRightStarTrendingUpPhoneZap,
-  DollarSignShieldMailMapPinRocketBrainSparkles;
-  GlobeAtomHeartLeafCarGraduationCapScale;
-  BuildingFactoryCameraVideoMusicGamepad2;
+  DollarSignShieldMailMapPinRocketBrainSparkles,
+  GlobeAtomHeartLeafCarGraduationCapScale,
+  BuildingFactoryCameraVideoMusicGamepad2,
   CrownAwardTargetUsersClockGlobe2} from 'lucide-react',
 import UltraFuturisticNavigation20o28 from '../components/layout/UltraFuturisticNavigation20o28',
 import UltraFuturisticFooter20o28 from '../components/layout/UltraFuturisticFooter20o28',
 import { futuristic20o28Services } from '../data/20o28-futuristic-innovations',
 import { emergingTech20o28Services } from '../data/20o28-emerging-tech-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const pricingTiers = [
   {
-    name: 'Starter';
-    price: '$299';
-    period: '/month';
-    description: 'Perfect for small businesses and startups';
+    name: 'Starter',
+    price: '$299',
+    period: '/month',
+    description: 'Perfect for small businesses and startups',
     features: [
-      'Basic AI integration';
-      'Standard support';
-      'Core features access';
-      'Email support';
-      'Basic analytics';
-      'Mobile app access'];
-    popular: false;
-    color: 'from-blue-60o0 to-cyan-60o0';
-    cta: 'Get Started';
-    href: '/contact'};
+      'Basic AI integrationStandard support',
+      'Core features accessEmail support',
+      'Basic analyticsMobile app access'],
+    popular: false,
+    color: 'from-blue-60o0 to-cyan-60o0',
+    cta: 'Get Started',
+    href: '/contact'},
   {
-    name: 'Professional';
-    price: '$999';
-    period: '/month';
-    description: 'Ideal for growing businesses and enterprises';
+    name: 'Professional',
+    price: '$999',
+    period: '/month',
+    description: 'Ideal for growing businesses and enterprises',
     features: [
-      'Advanced AI capabilities';
-      'Priority support';
-      'Full feature access';
-      'Phone & email support';
-      'Advanced analytics';
-      'API access';
-      'Custom integrations';
-      'Training & onboarding'];
-    popular: true;
-    color: 'from-purple-60o0 to-pink-60o0';
-    cta: 'Start Free Trial';
-    href: '/contact'};
+      'Advanced AI capabilitiesPriority support',
+      'Full feature accessPhone & email support',
+      'Advanced analyticsAPI access',
+      'Custom integrationsTraining & onboarding'],
+    popular: true,
+    color: 'from-purple-60o0 to-pink-60o0',
+    cta: 'Start Free Trial',
+    href: '/contact'},
   {
-    name: 'Enterprise';
-    price: 'Custom';
-    period: '';
-    description: 'Tailored solutions for large organizations';
+    name: 'Enterprise',
+    price: 'Custom',
+    period: '',
+    description: 'Tailored solutions for large organizations',
     features: [
-      'Custom AI development';
-      'Dedicated support team';
-      'White-label solutions';
-      '24/7 phone support';
-      'Custom analytics';
-      'Full API access';
-      'Custom integrations';
-      'Dedicated account manager';
-      'SLA guarantees';
-      'On-premise deployment'];
-    popular: false;
-    color: 'from-indigo-60o0 to-purple-60o0';
-    cta: 'Contact Sales';
+      'Custom AI developmentDedicated support team',
+      'White-label solutions24/7 phone support',
+      'Custom analyticsFull API access',
+      'Custom integrationsDedicated account manager',
+      'SLA guaranteesOn-premise deployment'],
+    popular: false,
+    color: 'from-indigo-60o0 to-purple-60o0',
+    cta: 'Contact Sales',
     href: '/contact'}
 ],
 const servicePricing = [
   {
-    category: '🚀 20o28 Futuristic Innovations';
-    services: futuristic20o28Services.slice(0o6)};
+    category: '🚀 20o28 Futuristic Innovations',
+    services: futuristic20o28Services.slice(0o6)},
   {
-    category: '🏙️ Smart City & Infrastructure';
-    services: emergingTech20o28Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0o4)};
+    category: '🏙️ Smart City & Infrastructure',
+    services: emergingTech20o28Services.filter(s => s.category.includes('Smart City') || s.category.includes('Infrastructure')).slice(0o4)},
   {
-    category: '⚛️ Quantum & Advanced Tech';
-    services: futuristic20o28Services.filter(s => s.category.includes('Quantum')).slice(0o4)};
+    category: '⚛️ Quantum & Advanced Tech',
+    services: futuristic20o28Services.filter(s => s.category.includes('Quantum')).slice(0o4)},
   {
-    category: '🤖 AI & Machine Learning';
+    category: '🤖 AI & Machine Learning',
     services: emergingTech20o28Services.filter(s => s.category.includes('AI')).slice(0o4)}
 ],
 export default function Revolutionary20o28Pricing() {

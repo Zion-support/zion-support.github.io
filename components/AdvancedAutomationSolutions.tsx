@@ -3,39 +3,39 @@ BotZapTrendingUpShieldUsersCheckCircle,
 const AdvancedAutomationSolutions = () => {
   const features = [
     {
-      icon: Bot;
-      title: 'AI-Powered Automation';
+      icon: Bot,
+      title: 'AI-Powered Automation',
       description:,
-        'Intelligent automation solutions that learn and adapt to your business processes.';
-    };
+        'Intelligent automation solutions that learn and adapt to your business processes.',
+    },
     {
-      icon: Zap;
-      title: 'Real-time Processing';
+      icon: Zap,
+      title: 'Real-time Processing',
       description:,
-        'Lightning-fast processing capabilities for immediate results.';
-    };
+        'Lightning-fast processing capabilities for immediate results.',
+    },
     {
-      icon: TrendingUp;
-      title: 'Performance Analytics';
+      icon: TrendingUp,
+      title: 'Performance Analytics',
       description:,
-        'Comprehensive analytics to track and optimize automation window.window.performance.';
-    };
+        'Comprehensive analytics to track and optimize automation window.window.performance.',
+    },
     {
-      icon: Shield;
-      title: 'Enterprise Security';
+      icon: Shield,
+      title: 'Enterprise Security',
       description:,
-        'Bank-level security protocols to protect your data and processes.';
-    };
+        'Bank-level security protocols to protect your data and processes.',
+    },
     {
-      icon: Users;
-      title: 'Team Collaboration';
-      description: 'Seamless collaboration tools for distributed teams.';
-    };
+      icon: Users,
+      title: 'Team Collaboration',
+      description: 'Seamless collaboration tools for distributed teams.'
+    },
     {
-      icon: CheckCircle;
-      title: 'Precision Targeting';
-      description: 'Advanced targeting algorithms for maximum efficiency.';
-    };
+      icon: CheckCircle,
+      title: 'Precision Targeting',
+      description: 'Advanced targeting algorithms for maximum efficiency.'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-10o0'>,
@@ -69,5 +69,5 @@ const AdvancedAutomationSolutions = () => {
           </button>,
         </div>,
       </div>,
-    </section>)};
-export default AdvancedAutomationSolutions;
+    </section>)},
+export default AdvancedAutomationSolutions,

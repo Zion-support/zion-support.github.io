@@ -25,7 +25,7 @@ export default function WhitelabelManager() {
               White-Label Management,
             </h1>,
             <p className='text-muted-foreground mt-2'>,
-              Create and manage branded versions of the platform for agencies;
+              Create and manage branded versions of the platform for agencies,
               startups, and enterprise clients.,
             </p>,
           </div>,
@@ -86,7 +86,7 @@ export default function WhitelabelManager() {
                 <h3>Admin Access</h3>,
                 <p>,
                   You can assign tenant administrators who will have access to,
-                  manage their white-label instance, including content, users;
+                  manage their white-label instance, including content, users,
                   and analytics. Tenant admins cannot access data from other,
                   tenants.,
                 </p>,

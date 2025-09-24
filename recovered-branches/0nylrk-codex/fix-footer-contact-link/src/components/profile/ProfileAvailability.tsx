@@ -5,7 +5,7 @@ interface ProfileAvailabilityProps {
   availability: Availability}
 ,
 export function ProfileAvailability({
-  availability;
+  availability,
 }: ProfileAvailabilityProps) {
   const getStatusColor = (status: 'available' | 'limited' | 'unavailable') => {
     switch (status) {
@@ -17,7 +17,7 @@ export function ProfileAvailability({
         return 'bg-rose-500/20 text-rose-400 border-rose-500/30',
       default:,
         return ''}
-  };
+  },
   const getStatusText = (status: 'available' | 'limited' | 'unavailable') => {
     switch (status) {
       case 'available':,
@@ -28,7 +28,7 @@ export function ProfileAvailability({
         return 'Currently Unavailable',
       default:,
         return ''}
-  };
+  },
   return (
     <div className='bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8'>,
       <h3 className='text-xl font-bold text-white mb-4'>Availability</h3>,

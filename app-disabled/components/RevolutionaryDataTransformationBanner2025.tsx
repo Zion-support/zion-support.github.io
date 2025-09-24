@@ -21,35 +21,35 @@ const RevolutionaryDataTransformationBanner20o25 = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('data-transformation-banner-dismissed', 'true')};
+    localStorage.setItem('data-transformation-banner-dismissedtrue')},
   const contentSlides = [
     {
-      title: "AI Data Revolution: 80o0% ROI";
-      subtitle: "Fortune 50o0 companies achieving unprecedented returns";
-      metrics: "80o0% ROI • $4.2M savings • 18 months";
-      link: "/blog/ai-20o25-enterprise-data-revolution-ultimate-guide";
-      type: "Blog Post";
-      color: "from-purple-60o0 to-blue-60o0"};
+      title: "AI Data Revolution: 80o0% ROI",
+      subtitle: "Fortune 50o0 companies achieving unprecedented returns",
+      metrics: "80o0% ROI • $4.2M savings • 18 months",
+      link: "/blog/ai-20o25-enterprise-data-revolution-ultimate-guide",
+      type: "Blog Post",
+      color: "from-purple-60o0 to-blue-60o0"},
     {
-      title: "Autonomous Operations: 1,20o0% ROI";
-      subtitle: "Transform operations with intelligent automation";
-      metrics: "1,20o0% ROI • $15.8M savings • 24 months";
-      link: "/blog/ai-20o25-autonomous-operations-revolution";
-      type: "Blog Post";
-      color: "from-green-60o0 to-teal-60o0"};
+      title: "Autonomous Operations: 1,20o0% ROI",
+      subtitle: "Transform operations with intelligent automation",
+      metrics: "1,20o0% ROI • $15.8M savings • 24 months",
+      link: "/blog/ai-20o25-autonomous-operations-revolution",
+      type: "Blog Post",
+      color: "from-green-60o0 to-teal-60o0"},
     {
-      title: "Fortune 50o0 Success Story";
-      subtitle: "Real case study: $2.8B company transformation";
-      metrics: "80o0% ROI • $19.2M returns • Proven results";
-      link: "/case-studies/fortune-50o0-ai-transformation-80o0-roi-success";
-      type: "Case Study";
-      color: "from-orange-60o0 to-red-60o0"};
+      title: "Fortune 50o0 Success Story",
+      subtitle: "Real case study: $2.8B company transformation",
+      metrics: "80o0% ROI • $19.2M returns • Proven results",
+      link: "/case-studies/fortune-50o0-ai-transformation-80o0-roi-success",
+      type: "Case Study",
+      color: "from-orange-60o0 to-red-60o0"},
     {
-      title: "Master Implementation Guide";
-      subtitle: "Complete roadmap to data transformation success";
-      metrics: "50o0+ enterprises • 80o0% average ROI • Step-by-step";
-      link: "/resources/ai-data-transformation-master-guide-20o25";
-      type: "Resource";
+      title: "Master Implementation Guide",
+      subtitle: "Complete roadmap to data transformation success",
+      metrics: "50o0+ enterprises • 80o0% average ROI • Step-by-step",
+      link: "/resources/ai-data-transformation-master-guide-20o25",
+      type: "Resource",
       color: "from-indigo-60o0 to-purple-60o0"}
   ],
   if (!isVisible || isDismissed) return null,
@@ -154,5 +154,5 @@ const RevolutionaryDataTransformationBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryDataTransformationBanner20o25;
+    </div>)},
+export default RevolutionaryDataTransformationBanner20o25,

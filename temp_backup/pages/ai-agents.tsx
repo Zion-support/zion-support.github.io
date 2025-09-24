@@ -2,52 +2,46 @@ import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { Button } from '../components/ui/Button',
 import {
-  Bot;
-  ListTree;
-  Check;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
+  Bot,
+  ListTree,
+  Check,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
 } from 'lucide-react',
 export default function AIAgentsPage() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const plans = [
     {
-      name: 'Builder';
-      price: '$249/month';
+      name: 'Builder',
+      price: '$249/month',
       items: [
-        '3 agents';
-        'Tools: web, code, docs';
-        'JSON events stream';
-        'Retry and timeouts';
-      ];
-    };
+        '3 agentsTools: web, code, docs',
+        'JSON events streamRetry and timeouts',
+      ],
+    },
     {
-      name: 'Scale';
-      price: '$799/month';
+      name: 'Scale',
+      price: '$799/month',
       items: [
-        '10 agents';
-        'Graph planner';
-        'Long-term memory';
-        'Slack/Jira integration';
-      ];
-    };
+        '10 agentsGraph planner',
+        'Long-term memorySlack/Jira integration',
+      ]
+    },
     {
-      name: 'Enterprise';
-      price: 'Custom';
+      name: 'Enterprise',
+      price: 'Custom',
       items: [
-        'Unlimited agents';
-        'Private infra';
-        'SLA & audit logs';
-        'SSO/SAML';
-      ];
-    };
+        'Unlimited agentsPrivate infra',
+        'SLA & audit logsSSO/SAML',
+      ]
+    },
   ],
   return (
     <UltraAdvancedFuturisticBackground>,
@@ -65,7 +59,7 @@ export default function AIAgentsPage() {
             Multi-Agent Orchestrator,
           </h1>,
           <p className='text-xl text-gray-30o0'>,
-            Assign roles, define plans, and execute workflows with reliable;
+            Assign roles, define plans, and execute workflows with reliable,
             observable multi-agent AI.,
           </p>,
           <div className='mt-6 flex justify-center gap-3'>,

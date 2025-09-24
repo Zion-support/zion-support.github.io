@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 /**,
  * Cursor Sync Orchestrator,
@@ -13,7 +13,7 @@ class CursorSyncOrchestrator {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'cursor-sync-orchestrator.log'),
+    this.logFile = path.join(__dirname, 'logscursor-sync-orchestrator.log'),
     this.ensureLogDirectory(),
     this.syncState = this.loadSyncState(),
     this.computers = this.loadComputerRegistry(),
@@ -25,43 +25,43 @@ class CursorSyncOrchestrator {
     if (fs.existsSync(configPath)) {
       return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
     return {
-      enabled: true;
+      enabled: true,
       syncInterval: 60o000, // 1 minute,
-      maxConcurrentSyncs: 1;
-      conflictResolution: 'auto';
-      enableNotifications: true;
-      enableMetrics: true;
+      maxConcurrentSyncs: 1,
+      conflictResolution: 'auto',
+      enableNotifications: true,
+      enableMetrics: true,
       syncTimeout: 30o000, // 30 seconds,
-      retryAttempts: 3;
-      retryDelay: 50o00;
-      computerId: this.generateComputerId();
-      centralRepository: 'origin';
-      branch: 'main'};
+      retryAttempts: 3,
+      retryDelay: 50o00,
+      computerId: this.generateComputerId(),
+      centralRepository: 'origin',
+      branch: 'main'},
   }
 ,
   loadSyncState() {
-    const stateFile = path.join(__dirname, 'logs', 'sync-state.json'),
+    const stateFile = path.join(__dirname, 'logssync-state.json'),
     if (fs.existsSync(stateFile)) {
       try {
         return JSON.parse(fs.readFileSync(stateFile, 'utf8'))} catch (error) {
         this.log(`Error loading sync state: ${error.message}`, 'warn')}
     }
     return {
-      lastSync: null;
-      lastComputerSync: {};
-      pendingChanges: [];
-      conflicts: [];
-      syncHistory: []};
+      lastSync: null,
+      lastComputerSync: {},
+      pendingChanges: [],
+      conflicts: [],
+      syncHistory: []},
   }
 ,
   loadComputerRegistry() {
-    const registryFile = path.join(__dirname, 'logs', 'computer-registry.json'),
+    const registryFile = path.join(__dirname, 'logscomputer-registry.json'),
     if (fs.existsSync(registryFile)) {
       try {
         return JSON.parse(fs.readFileSync(registryFile, 'utf8'))} catch (error) {
         this.log(`Error loading computer registry: ${error.message}`, 'warn')}
     }
-    return {};
+    return {},
   }
 ,
   ensureLogDirectory() {
@@ -92,14 +92,14 @@ class CursorSyncOrchestrator {
   }
 ,
   saveSyncState() {
-    const stateFile = path.join(__dirname, 'logs', 'sync-state.json'),
+    const stateFile = path.join(__dirname, 'logssync-state.json'),
     try {
       fs.writeFileSync(stateFile, JSON.stringify(this.syncState, null, 2))} catch (error) {
       this.log(`Error saving sync state: ${error.message}`, 'error')}
   }
 ,
   saveComputerRegistry() {
-    const registryFile = path.join(__dirname, 'logs', 'computer-registry.json'),
+    const registryFile = path.join(__dirname, 'logscomputer-registry.json'),
     try {
       fs.writeFileSync(registryFile, JSON.stringify(this.computers, null, 2))} catch (error) {
       this.log(`Error saving computer registry: ${error.message}`, 'error')}
@@ -108,12 +108,12 @@ class CursorSyncOrchestrator {
   registerComputer() {
     const os = require('os'),
     const computerInfo ={
-      id: this.config.computerId;
-      hostname: os.hostname();
-      platform: os.platform();
-      arch: os.arch();
-      lastSeen: new Date().toISOString();
-      version: require('../package.json').version || 'unknown'};
+      id: this.config.computerId,
+      hostname: os.hostname(),
+      platform: os.platform(),
+      arch: os.arch(),
+      lastSeen: new Date().toISOString(),
+      version: require('../package.json').version || 'unknown'},
     this.computers[this.config.computerId] = computerInfo,
     this.saveComputerRegistry(),
     this.log(`Registered computer: ${computerInfo.hostname} (${this.config.computerId})`)}
@@ -121,7 +121,7 @@ class CursorSyncOrchestrator {
   async checkGitStatus() {
     try {
       const status = execSync('git status --porcelain', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         cwd: this.projectRoot}),
       return status.trim().split('\n').filter(line => line.length > 0)} catch (error) {
       this.log(`Error checking git status: ${error.message}`, 'error'),
@@ -131,10 +131,10 @@ class CursorSyncOrchestrator {
   async checkRemoteChanges() {
     try {
       execSync('git fetch origin', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       const behind = execSync('git rev-list HEAD..origin/main --count', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         cwd: this.projectRoot}).trim(),
       return parseInt(behind) > 0} catch (error) {
       this.log(`Error checking remote changes: ${error.message}`, 'warn'),
@@ -145,7 +145,7 @@ class CursorSyncOrchestrator {
     try {
       this.log('Pulling latest changes from remote...'),
       execSync('git pull origin main', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log('✅ Successfully pulled changes'),
       return true} catch (error) {
@@ -157,7 +157,7 @@ class CursorSyncOrchestrator {
     try {
       if (files.length === 0) return true,
       execSync('git add .', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log(`Staged ${files.length} changed files`),
       return true} catch (error) {
@@ -174,7 +174,7 @@ class CursorSyncOrchestrator {
     return `chore(sync): auto-sync ${description} (${files.length} files) - ${computerId} - ${timestamp}`}
 ,
   analyzeFileTypes(files) {
-    const types ={};
+    const types ={},
     files.forEach(file => {
       const ext = path.extname(file),
       const type = this.getFileType(ext),
@@ -183,29 +183,19 @@ class CursorSyncOrchestrator {
 ,
   getFileType(ext) {
     const typeMap ={
-      '.ts': 'TypeScript';
-      '.tsx': 'TypeScript React';
-      '.js': 'JavaScript';
-      '.jsx': 'JavaScript React';
-      '.css': 'CSS';
-      '.scss': 'SCSS';
-      '.json': 'Configuration';
-      '.md': 'Documentation';
-      '.html': 'HTML';
-      '.py': 'Python';
-      '.sh': 'Shell Script'};
+      '.ts': 'TypeScript.tsx': 'TypeScript React.js': 'JavaScript.jsx': 'JavaScript React.css': 'CSS.scss': 'SCSS.json': 'Configuration.md': 'Documentation.html': 'HTML.py': 'Python.sh': 'Shell Script'},
     return typeMap[ext] || ext.slice(1).toUpperCase()}
 ,
   generateDescription(fileTypes) {
     const descriptions = [],
     for (const [type, count] of Object.entries(fileTypes)) {
       descriptions.push(`${count} ${type} file${count > 1 ? 's' : ''}`)}
-    return descriptions.join(', ')}
+    return descriptions.join()}
 ,
   async commitChanges(message) {
     try {
       execSync(`git commit -m "${message}"`, {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log(`✅ Committed: ${message}`),
       return true} catch (error) {
@@ -217,7 +207,7 @@ class CursorSyncOrchestrator {
     try {
       this.log('Pushing changes to remote...'),
       execSync('git push origin main', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log('✅ Successfully pushed changes'),
       return true} catch (error) {
@@ -228,22 +218,22 @@ class CursorSyncOrchestrator {
   async resolveConflicts() {
     try {
       const status = execSync('git status --porcelain', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         cwd: this.projectRoot}),
       if (status.includes('UU') || status.includes('AA')) {
         this.log('⚠️ Merge conflicts detected, attempting to resolve...'),
         // Record conflict in sync state,
         this.syncState.conflicts.push({
-          timestamp: new Date().toISOString();
-          computerId: this.config.computerId;
+          timestamp: new Date().toISOString(),
+          computerId: this.config.computerId,
           status: status}),
         // Abort current merge,
         execSync('git merge --abort', {
-          stdio: 'pipe';
+          stdio: 'pipe',
           cwd: this.projectRoot}),
         // Reset to clean state,
         execSync('git reset --hard HEAD', {
-          stdio: 'pipe';
+          stdio: 'pipe',
           cwd: this.projectRoot}),
         this.log('✅ Conflicts resolved by resetting to clean state'),
         return true}
@@ -275,7 +265,7 @@ class CursorSyncOrchestrator {
       // Stage changes,
       const staged = await this.stageChanges(changedFiles),
       if (!staged) {
-        this.log('Failed to stage changes', 'error'),
+        this.log('Failed to stage changeserror'),
         return false}
 ,
       // Generate commit message,
@@ -283,13 +273,13 @@ class CursorSyncOrchestrator {
       // Commit changes,
       const committed = await this.commitChanges(commitMessage),
       if (!committed) {
-        this.log('Failed to commit changes', 'error'),
+        this.log('Failed to commit changeserror'),
         return false}
 ,
       // Push changes,
       const pushed = await this.pushChanges(),
       if (!pushed) {
-        this.log('Failed to push changes', 'error'),
+        this.log('Failed to push changeserror'),
         return false}
 ,
       this.updateSyncState(),
@@ -321,7 +311,7 @@ class CursorSyncOrchestrator {
         await this.sleep(this.config.retryDelay)}
     }
 ,
-    this.log('All retry attempts failed', 'error'),
+    this.log('All retry attempts failederror'),
     return false}
 ,
   sleep(ms) {
@@ -351,12 +341,12 @@ class CursorSyncOrchestrator {
 ,
   getStatus() {
     return {
-      computerId: this.config.computerId;
-      isRunning: this.isRunning;
-      lastSync: this.syncState.lastSync;
-      registeredComputers: Object.keys(this.computers).length;
-      conflicts: this.syncState.conflicts.length;
-      config: this.config};
+      computerId: this.config.computerId,
+      isRunning: this.isRunning,
+      lastSync: this.syncState.lastSync,
+      registeredComputers: Object.keys(this.computers).length,
+      conflicts: this.syncState.conflicts.length,
+      config: this.config},
   }
 }
 ,

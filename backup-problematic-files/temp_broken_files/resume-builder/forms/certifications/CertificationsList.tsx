@@ -1,17 +1,17 @@
 
-import { Certification } from '@/types/resume';
-import { Card, CardContent } from '@/components/ui/card';
-import { Button } from '@/components/ui/button';
+import { Certification } from '@/types/resume',
+import { Card, CardContent } from '@/components/ui/card',
+import { Button } from '@/components/ui/button',
 import { Edit, Trash2 } from 'lucide-react',
-import { format } from 'date-fns';
+import { format } from 'date-fns',
 interface CertificationsListProps {
-  certifications:Certification[];
-  onEdit:(cert:Certification) => void;
+  certifications: Certification[],
+  onEdit:(cert:Certification) => void,
   onDelete: (id:string) => void}
 ,
 export function CertificationsList({ certifications, onEdit, onDelete } CertificationsListProps) {
   if (certifications.length === 0) {
-    return null;
+    return null,
   }
 ,
   return (
@@ -64,7 +64,7 @@ export function CertificationsList({ certifications, onEdit, onDelete } Certific
               </p>)}
           </CardContent>,
         </Card>))}
-    </div>);}
+    </div>),}
  ? cert.issue date : format (cert.issue date, 'MMM yyyy') ) : 'N/A' }{
   cert.expiration date && (<>  Expires: {',
   typeof cert.expiration date === 'string' ? cert.expiration date : format (cert.expiration date, 'MMM yyyy') }</>) }</p> </div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4"  /> </Button> <Button > <Trash2 className="h-4 w-4"  /> </Button> </div> </div> <a href={"  cert.credential url ","}target="blank" rel="noopener noreferrer" className="text-primary hover: underline" > View credential </Link> </p>) }</CardContent> </Card>) ) ,

@@ -1,40 +1,40 @@
 import React, { useState, useEffect, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  Search;
-  ChevronDown;
-  Phone;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  Home;
-  Briefcase;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cloud;
-  Target;
-  Building;
-  Users;
-  BookOpen;
-  FileText;
-  Video;
-  Code;
-  Sparkles;
-  Zap;
-  Globe;
-  Star;
-  Lock;
-  Database;
-  Cpu;
-  BarChart3;
-  Lightbulb;
-  Award;
-  Mail;
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Phone,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  Home,
+  Briefcase,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Target,
+  Building,
+  Users,
+  BookOpen,
+  FileText,
+  Video,
+  Code,
+  Sparkles,
+  Zap,
+  Globe,
+  Star,
+  Lock,
+  Database,
+  Cpu,
+  BarChart3,
+  Lightbulb,
+  Award,
+  Mail,
   MapPin} from 'lucide-react',
 import Link from 'next/link',
 interface MobileNavigationProps {
@@ -51,14 +51,14 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as Element).closest('.mobile-nav')) {
         onClose()}
-    };
+    },
     if (isOpen) {
       document.addEventListener('mousedown', handleClickOutside),
       document.body.style.overflow = 'hidden'}
 ,
     return () => {
       document.removeEventListener('mousedown', handleClickOutside),
-      document.body.style.overflow = 'unset'};
+      document.body.style.overflow = 'unset'},
   }, [isOpen, onClose]),
   // Focus search input when opened,
   useEffect(() => {
@@ -67,52 +67,52 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
   }, [isSearchOpen]),
   const navigationSections = [
     {
-      id: 'services';
-      title: 'Services';
-      icon: Briefcase;
+      id: 'services',
+      title: 'Services',
+      icon: Briefcase,
       items: [
-        { label: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: Brain, color: 'from-purple-50o0 to-pink-50o0' };
-        { label: 'Quantum Computing', href: '/services?category=quantum', icon: Atom, color: 'from-blue-50o0 to-cyan-50o0' };
-        { label: 'Space Technology', href: '/services?category=space-tech', icon: Rocket, color: 'from-indigo-50o0 to-purple-50o0' };
-        { label: 'Cybersecurity', href: '/services?category=cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-50o0' };
-        { label: 'Cloud Infrastructure', href: '/services?category=cloud', icon: Cloud, color: 'from-indigo-50o0 to-blue-50o0' };
+        { label: 'AI & Machine Learning', href: '/services?category=ai-ml', icon: Brain, color: 'from-purple-50o0 to-pink-50o0' },
+        { label: 'Quantum Computing', href: '/services?category=quantum', icon: Atom, color: 'from-blue-50o0 to-cyan-50o0' },
+        { label: 'Space Technology', href: '/services?category=space-tech', icon: Rocket, color: 'from-indigo-50o0 to-purple-50o0' },
+        { label: 'Cybersecurity', href: '/services?category=cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-50o0' },
+        { label: 'Cloud Infrastructure', href: '/services?category=cloud', icon: Cloud, color: 'from-indigo-50o0 to-blue-50o0' },
         { label: 'Edge Computing', href: '/services?category=edge', icon: Cpu, color: 'from-green-50o0 to-emerald-50o0' }
-      ]};
+      ]},
     {
-      id: 'solutions';
-      title: 'Solutions';
-      icon: Target;
+      id: 'solutions',
+      title: 'Solutions',
+      icon: Target,
       items: [
-        { label: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, color: 'from-blue-50o0 to-indigo-50o0' };
-        { label: 'Healthcare Technology', href: '/solutions/healthcare', icon: Users, color: 'from-green-50o0 to-emerald-50o0' };
-        { label: 'Financial Technology', href: '/solutions/financial', icon: BarChart3, color: 'from-emerald-50o0 to-teal-50o0' };
+        { label: 'Enterprise Solutions', href: '/solutions/enterprise', icon: Building, color: 'from-blue-50o0 to-indigo-50o0' },
+        { label: 'Healthcare Technology', href: '/solutions/healthcare', icon: Users, color: 'from-green-50o0 to-emerald-50o0' },
+        { label: 'Financial Technology', href: '/solutions/financial', icon: BarChart3, color: 'from-emerald-50o0 to-teal-50o0' },
         { label: 'Manufacturing & IoT', href: '/solutions/manufacturing', icon: Cpu, color: 'from-orange-50o0 to-red-50o0' }
-      ]};
+      ]},
     {
-      id: 'resources';
-      title: 'Resources';
-      icon: BookOpen;
+      id: 'resources',
+      title: 'Resources',
+      icon: BookOpen,
       items: [
-        { label: 'Documentation', href: '/docs', icon: FileText, color: 'from-blue-50o0 to-cyan-50o0' };
-        { label: 'Blog & Insights', href: '/blog', icon: Lightbulb, color: 'from-yellow-50o0 to-orange-50o0' };
-        { label: 'Webinars', href: '/webinars', icon: Video, color: 'from-purple-50o0 to-pink-50o0' };
+        { label: 'Documentation', href: '/docs', icon: FileText, color: 'from-blue-50o0 to-cyan-50o0' },
+        { label: 'Blog & Insights', href: '/blog', icon: Lightbulb, color: 'from-yellow-50o0 to-orange-50o0' },
+        { label: 'Webinars', href: '/webinars', icon: Video, color: 'from-purple-50o0 to-pink-50o0' },
         { label: 'Case Studies', href: '/case-studies', icon: Award, color: 'from-emerald-50o0 to-teal-50o0' }
-      ]};
+      ]},
     {
-      id: 'company';
-      title: 'Company';
-      icon: Building;
+      id: 'company',
+      title: 'Company',
+      icon: Building,
       items: [
-        { label: 'About Us', href: '/about', icon: Users, color: 'from-blue-50o0 to-purple-50o0' };
-        { label: 'Leadership', href: '/leadership', icon: Star, color: 'from-yellow-50o0 to-orange-50o0' };
-        { label: 'Careers', href: '/careers', icon: Users, color: 'from-green-50o0 to-emerald-50o0' };
+        { label: 'About Us', href: '/about', icon: Users, color: 'from-blue-50o0 to-purple-50o0' },
+        { label: 'Leadership', href: '/leadership', icon: Star, color: 'from-yellow-50o0 to-orange-50o0' },
+        { label: 'Careers', href: '/careers', icon: Users, color: 'from-green-50o0 to-emerald-50o0' },
         { label: 'Contact', href: '/contact', icon: Phone, color: 'from-cyan-50o0 to-blue-50o0' }
       ]}
   ],
   const quickActions = [
-    { label: 'Get Started', href: '/contact', icon: Sparkles, color: 'from-cyan-50o0 to-purple-60o0' };
-    { label: 'View Pricing', href: '/pricing', icon: Star, color: 'from-yellow-50o0 to-orange-50o0' };
-    { label: 'Schedule Demo', href: '/demo', icon: Video, color: 'from-purple-50o0 to-pink-50o0' };
+    { label: 'Get Started', href: '/contact', icon: Sparkles, color: 'from-cyan-50o0 to-purple-60o0' },
+    { label: 'View Pricing', href: '/pricing', icon: Star, color: 'from-yellow-50o0 to-orange-50o0' },
+    { label: 'Schedule Demo', href: '/demo', icon: Video, color: 'from-purple-50o0 to-pink-50o0' },
     { label: 'Support', href: '/support', icon: Users, color: 'from-green-50o0 to-emerald-50o0' }
   ],
   const handleSearch = (e: React.FormEvent) => {
@@ -122,9 +122,9 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
       // // console.log('Searching for:', searchQuery),
       setIsSearchOpen(false),
       setSearchQuery('')}
-  };
+  },
   const toggleSection = (sectionId: string) => {
-    setActiveSection(activeSection === sectionId ? null : sectionId)};
+    setActiveSection(activeSection === sectionId ? null : sectionId)},
   return (
     <AnimatePresence>,
       {isOpen && (
@@ -276,9 +276,9 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
                 <h3 className="text-sm font-semibold text-gray-40o0 uppercase tracking-wider mb-3">Follow Us</h3>,
                 <div className="flex gap-3">,
                   {[
-                    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', color: 'from-blue-50o0 to-blue-60o0' };
-                    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-40o0 to-blue-50o0' };
-                    { icon: Github, href: 'https://github.com/zion-tech-group', color: 'from-gray-60o0 to-gray-70o0' };
+                    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', color: 'from-blue-50o0 to-blue-60o0' },
+                    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-40o0 to-blue-50o0' },
+                    { icon: Github, href: 'https://github.com/zion-tech-group', color: 'from-gray-60o0 to-gray-70o0' },
                     { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-50o0 to-red-60o0' }
                   ].map((social) => (
                     <a
@@ -295,5 +295,5 @@ const MobileNavigation: React.FC<MobileNavigationProps> = ({ isOpen, onClose }) 
             </div>,
           </motion.div>,
         </>)}
-    </AnimatePresence>)};
-export default MobileNavigation;
+    </AnimatePresence>)},
+export default MobileNavigation,

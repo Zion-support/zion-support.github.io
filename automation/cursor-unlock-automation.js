@@ -20,8 +20,8 @@ class CursorUnlockAutomation {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'cursor-unlock.log'),
-    this.statusFile = path.join(__dirname, 'logs', 'cursor-status.json'),
+    this.logFile = path.join(__dirname, 'logscursor-unlock.log'),
+    this.statusFile = path.join(__dirname, 'logscursor-status.json'),
     this.ensureDirectories(),
     this.initializeStatus()}
 ,
@@ -30,32 +30,32 @@ class CursorUnlockAutomation {
     if (fs.existsSync(configPath)) {
       const config = JSON.parse(fs.readFileSync(configPath, 'utf8')),
       return {
-        ...config;
+        ...config,
         cursorUnlock: {
-          enabled: true;
-          aggressiveMode: false;
-          backupBeforeUnlock: true;
-          clearCache: true;
-          resetExtensions: false;
-          killProcesses: true;
-          clearWorkspace: false;
-          maxRetries: 3;
-          retryDelay: 20o00;
-          timeout: 30o000;
-          ...config.cursorUnlock}};
+          enabled: true,
+          aggressiveMode: false,
+          backupBeforeUnlock: true,
+          clearCache: true,
+          resetExtensions: false,
+          killProcesses: true,
+          clearWorkspace: false,
+          maxRetries: 3,
+          retryDelay: 20o00,
+          timeout: 30o000,
+          ...config.cursorUnlock}},
     }
     return {
       cursorUnlock: {
-        enabled: true;
-        aggressiveMode: false;
-        backupBeforeUnlock: true;
-        clearCache: true;
-        resetExtensions: false;
-        killProcesses: true;
-        clearWorkspace: false;
-        maxRetries: 3;
-        retryDelay: 20o00;
-        timeout: 30o000}};
+        enabled: true,
+        aggressiveMode: false,
+        backupBeforeUnlock: true,
+        clearCache: true,
+        resetExtensions: false,
+        killProcesses: true,
+        clearWorkspace: false,
+        maxRetries: 3,
+        retryDelay: 20o00,
+        timeout: 30o000}},
   }
 ,
   ensureDirectories() {
@@ -67,17 +67,17 @@ class CursorUnlockAutomation {
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
       const initialStatus ={
-        lastUnlockAttempt: null;
-        unlockSuccess: false;
-        processesKilled: 0;
-        filesUnlocked: 0;
-        cacheCleared: false;
-        errors: [];
+        lastUnlockAttempt: null,
+        unlockSuccess: false,
+        processesKilled: 0,
+        filesUnlocked: 0,
+        cacheCleared: false,
+        errors: [],
         performance: {
-          unlockTime: 0;
-          memoryBefore: 0;
-          memoryAfter: 0};
-        lastUpdated: new Date().toISOString()};
+          unlockTime: 0,
+          memoryBefore: 0,
+          memoryAfter: 0},
+        lastUpdated: new Date().toISOString()},
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2))}
   }
 ,
@@ -91,8 +91,8 @@ class CursorUnlockAutomation {
     return new Promise((resolve, reject) => {
       const timeout = options.timeout || this.config.cursorUnlock.timeout,
       const child = exec(command, {
-        timeout;
-        cwd: this.projectRoot;
+        timeout,
+        cwd: this.projectRoot,
         ...options}),
       let stdout = '',
       let stderr = '',
@@ -160,18 +160,18 @@ class CursorUnlockAutomation {
     const directories = [],
     if (platform === 'darwin') {
       directories.push(
-        path.join(homeDir, 'Library', 'Application Support', 'Cursor');
-        path.join(homeDir, 'Library', 'Caches', 'Cursor');
-        path.join(homeDir, 'Library', 'Preferences', 'Cursor');
-        path.join(homeDir, 'Library', 'Logs', 'Cursor'))} else if (platform === 'win32') {
+        path.join(homeDir, 'LibraryApplication Support', 'Cursor'),
+        path.join(homeDir, 'LibraryCaches', 'Cursor'),
+        path.join(homeDir, 'LibraryPreferences', 'Cursor'),
+        path.join(homeDir, 'LibraryLogs', 'Cursor'))} else if (platform === 'win32') {
       directories.push(
-        path.join(homeDir, 'AppData', 'Roaming', 'Cursor');
-        path.join(homeDir, 'AppData', 'Local', 'Cursor');
-        path.join(homeDir, 'AppData', 'Local', 'Temp', 'Cursor'))} else {
+        path.join(homeDir, 'AppDataRoaming', 'Cursor'),
+        path.join(homeDir, 'AppDataLocal', 'Cursor'),
+        path.join(homeDir, 'AppDataLocal', 'TempCursor'))} else {
       directories.push(
-        path.join(homeDir, '.config', 'Cursor');
-        path.join(homeDir, '.cache', 'Cursor');
-        path.join(homeDir, '.local', 'share', 'Cursor'))}
+        path.join(homeDir, '.configCursor'),
+        path.join(homeDir, '.cacheCursor'),
+        path.join(homeDir, '.localshare', 'Cursor'))}
 ,
     return directories.filter((dir) => fs.existsSync(dir))}
 ,
@@ -186,7 +186,7 @@ class CursorUnlockAutomation {
     for (const dir of directories) {
       try {
         if (fs.existsSync(dir)) {
-          const cacheDirs = ['Cache', 'CachedData', 'GPUCache', 'Code Cache'],
+          const cacheDirs = ['CacheCachedData', 'GPUCacheCode Cache'],
           for (const cacheDir of cacheDirs) {
             const cachePath = path.join(dir, cacheDir),
             if (fs.existsSync(cachePath)) {
@@ -197,7 +197,7 @@ class CursorUnlockAutomation {
         }
       } catch (error) {
         this.log(
-          `❌ Failed to clear cache in ${dir}: ${error.message}`;
+          `❌ Failed to clear cache in ${dir}: ${error.message}`,
           'error')}
     }
 ,
@@ -206,23 +206,19 @@ class CursorUnlockAutomation {
   async unlockWorkspaceFiles() {
     this.log('🔓 Unlocking workspace files...'),
     const lockPatterns = [
-      '**/*.lock';
-      '**/package-lock.json';
-      '**/yarn.lock';
-      '**/.git/index.lock';
-      '**/node_modules/.cache/**';
-      '**/.next/**';
-      '**/.nuxt/**';
-      '**/dist/**';
-      '**/build/**';
+      '**/*.lock**/package-lock.json',
+      '**/yarn.lock**/.git/index.lock',
+      '**/node_modules/.cache/****/.next/**',
+      '**/.nuxt/****/dist/**',
+      '**/build/**',
     ],
     let unlockedCount = 0,
     for (const pattern of lockPatterns) {
       try {
         const glob = require('glob'),
         const files = glob.sync(pattern, {
-          cwd: this.projectRoot;
-          ignore: ['node_modules/**', '.git/**']}),
+          cwd: this.projectRoot,
+          ignore: ['node_modules/**.git/**']}),
         for (const file of files) {
           const filePath = path.join(this.projectRoot, file),
           try {
@@ -236,7 +232,7 @@ class CursorUnlockAutomation {
         }
       } catch (error) {
         this.log(
-          `❌ Error processing pattern ${pattern}: ${error.message}`;
+          `❌ Error processing pattern ${pattern}: ${error.message}`,
           'error')}
     }
 ,
@@ -248,37 +244,31 @@ class CursorUnlockAutomation {
 ,
     this.log('💾 Creating workspace backup...'),
     const backupDir = path.join(
-      __dirname;
-      'backups';
+      __dirname,
+      'backups',
       `cursor-backup-${Date.now()}`),
     fs.mkdirSync(backupDir, { recursive: true }),
     try {
       const excludePatterns = [
-        'node_modules';
-        '.git';
-        '.next';
-        '.nuxt';
-        'dist';
-        'build';
-        'coverage';
-        'logs';
-        'temp';
-        'tmp';
+        'node_modules.git',
+        '.next.nuxt',
+        'distbuild',
+        'coveragelogs',
+        'temptmp',
       ],
       const rsync = require('child_process').spawnSync,
       const excludeArgs = excludePatterns.flatMap((pattern) => [
-        '--exclude';
-        pattern;
+        '--exclude',
+        pattern,
       ]),
       const result = rsync(
-        'rsync';
+        'rsync',
         [
-          '-av';
-          '--delete';
-          ...excludeArgs;
-          this.projectRoot + '/';
-          backupDir + '/';
-        ];
+          '-av--delete',
+          ...excludeArgs,
+          this.projectRoot + '/',
+          backupDir + '/',
+        ],
         { stdio: 'pipe' }),
       if (result.status === 0) {
         this.log(`✅ Backup created: ${backupDir}`),
@@ -300,25 +290,19 @@ class CursorUnlockAutomation {
     let extensionsDir = '',
     if (platform === 'darwin') {
       extensionsDir = path.join(
-        homeDir;
-        'Library';
-        'Application Support';
-        'Cursor';
-        'User';
+        homeDir,
+        'LibraryApplication Support',
+        'CursorUser',
         'extensions')} else if (platform === 'win32') {
       extensionsDir = path.join(
-        homeDir;
-        'AppData';
-        'Roaming';
-        'Cursor';
-        'User';
+        homeDir,
+        'AppDataRoaming',
+        'CursorUser',
         'extensions')} else {
       extensionsDir = path.join(
-        homeDir;
-        '.config';
-        'Cursor';
-        'User';
-        'extensions')}
+        homeDir,
+        '.configCursor',
+        'Userextensions')}
 ,
     if (fs.existsSync(extensionsDir)) {
       try {
@@ -336,15 +320,15 @@ class CursorUnlockAutomation {
     this.log('⚡ Optimizing window.window.performance...'),
     const optimizations = [
       // Clear npm cache,
-      'npm cache clean --force';
+      'npm cache clean --force',
       // Clear yarn cache,
-      'yarn cache clean';
+      'yarn cache clean',
       // Clear git cache,
-      'git gc --prune=now';
+      'git gc --prune=now',
       // Clear system temp files,
-      'rm -rf /tmp/cursor-*';
+      'rm -rf /tmp/cursor-*',
       // Clear node_modules if corrupted,
-      'find . -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true';
+      'find . -name "node_modules" -type d -exec rm -rf {} + 2>/dev/null || true',
     ],
     let successCount = 0,
     for (const command of optimizations) {
@@ -353,7 +337,7 @@ class CursorUnlockAutomation {
         successCount++,
         this.log(`✅ Optimization completed: ${command}`)} catch (error) {
         this.log(
-          `⚠️ Optimization failed: ${command} - ${error.message}`;
+          `⚠️ Optimization failed: ${command} - ${error.message}`,
           'warn')}
     }
 ,
@@ -379,20 +363,20 @@ class CursorUnlockAutomation {
       const unlockTime = Date.now() - startTime,
       // Update status,
       const status ={
-        lastUnlockAttempt: new Date().toISOString();
-        unlockSuccess: true;
-        processesKilled;
-        filesUnlocked;
-        cacheCleared;
-        extensionsReset;
-        optimizationsCompleted;
-        backupPath;
-        errors: [];
+        lastUnlockAttempt: new Date().toISOString(),
+        unlockSuccess: true,
+        processesKilled,
+        filesUnlocked,
+        cacheCleared,
+        extensionsReset,
+        optimizationsCompleted,
+        backupPath,
+        errors: [],
         performance: {
-          unlockTime;
-          memoryBefore: process.memoryUsage().heapUsed;
-          memoryAfter: process.memoryUsage().heapUsed};
-        lastUpdated: new Date().toISOString()};
+          unlockTime,
+          memoryBefore: process.memoryUsage().heapUsed,
+          memoryAfter: process.memoryUsage().heapUsed},
+        lastUpdated: new Date().toISOString()},
       fs.writeFileSync(this.statusFile, JSON.stringify(status, null, 2)),
       this.log(`✅ Cursor unlock completed successfully in ${unlockTime}ms`),
       this.log(
@@ -402,8 +386,8 @@ class CursorUnlockAutomation {
       // Update status with error,
       const status = JSON.parse(fs.readFileSync(this.statusFile, 'utf8')),
       status.errors.push({
-        timestamp: new Date().toISOString();
-        error: error.message;
+        timestamp: new Date().toISOString(),
+        error: error.message,
         attempt: retryCount + 1}),
       status.unlockSuccess = false,
       status.lastUpdated = new Date().toISOString(),

@@ -3,9 +3,9 @@ import { Education } from '@/types/resume',
 import { PdfThemeColors } from '../themeConfig',
 import { formatDate } from '../formatters',
 export function addEducationSection(
-  doc: jsPDF;
-  education: Education[];
-  colors: PdfThemeColors;
+  doc: jsPDF,
+  education: Education[],
+  colors: PdfThemeColors,
   startY: number): number {
   if (education.length === 0) return startY,
   let yPos = startY,
@@ -39,7 +39,7 @@ export function addEducationSection(
     doc.setFontSize(14),
     doc.setTextColor(colors.subheading),
     doc.text(edu.institution, 20, yPos),
-    const degreeText = `${edu.degree}${edu.field_of_study ? ', ' + edu.field_of_study : ''}`,
+    const degreeText = `${edu.degree}${edu.field_of_study ?  + edu.field_of_study : ''}`,
     doc.setFontSize(12),
     doc.text(degreeText, 20, yPos + 5),
     const startDate = formatDate(edu.start_date),

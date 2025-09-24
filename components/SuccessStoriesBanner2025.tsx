@@ -18,60 +18,52 @@ const SuccessStoriesBanner20o25: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const successStories: SuccessStory[] = [
     {
-      id: 'manufacturing-transformation';
-      title: 'Manufacturing AI Transformation';
-      industry: 'Automotive Parts Manufacturing';
-      roi: '340%';
-      savings: '$2.8M';
-      timeframe: '18 months';
+      id: 'manufacturing-transformation',
+      title: 'Manufacturing AI Transformation',
+      industry: 'Automotive Parts Manufacturing',
+      roi: '340%',
+      savings: '$2.8M',
+      timeframe: '18 months',
       keyResults: [
-        '25% quality improvement';
-        '30% reduction in maintenance costs';
-        '20% productivity increase';
-        '15% reduction in energy costs'];
-      url: '/case-studies/manufacturing-ai-transformation';
-      logo: '🏭'};
+        '25% quality improvement30% reduction in maintenance costs',
+        '20% productivity increase15% reduction in energy costs'],
+      url: '/case-studies/manufacturing-ai-transformation',
+      logo: '🏭'},
     {
-      id: 'healthcare-optimization';
-      title: 'Healthcare AI Optimization';
-      industry: 'Regional Hospital Network';
-      roi: '280%';
-      savings: '$4.2M';
-      timeframe: '24 months';
+      id: 'healthcare-optimization',
+      title: 'Healthcare AI Optimization',
+      industry: 'Regional Hospital Network',
+      roi: '280%',
+      savings: '$4.2M',
+      timeframe: '24 months',
       keyResults: [
-        '40% reduction in diagnostic time';
-        '35% improvement in patient outcomes';
-        '25% cost reduction in operations';
-        '50% faster treatment planning'];
-      url: '/case-studies/healthcare-ai-optimization';
-      logo: '🏥'};
+        '40% reduction in diagnostic time35% improvement in patient outcomes',
+        '25% cost reduction in operations50% faster treatment planning'],
+      url: '/case-studies/healthcare-ai-optimization',
+      logo: '🏥'},
     {
-      id: 'retail-personalization';
-      title: 'Retail AI Personalization';
-      industry: 'E-commerce Platform';
-      roi: '420%';
-      savings: '$5.1M';
-      timeframe: '12 months';
+      id: 'retail-personalization',
+      title: 'Retail AI Personalization',
+      industry: 'E-commerce Platform',
+      roi: '420%',
+      savings: '$5.1M',
+      timeframe: '12 months',
       keyResults: [
-        '35% increase in conversion rates';
-        '28% improvement in customer satisfaction';
-        '40% reduction in cart abandonment';
-        '22% increase in average order value'];
-      url: '/case-studies/retail-ai-personalization';
-      logo: '🛒'};
+        '35% increase in conversion rates28% improvement in customer satisfaction',
+        '40% reduction in cart abandonment22% increase in average order value'],
+      url: '/case-studies/retail-ai-personalization',
+      logo: '🛒'},
     {
-      id: 'financial-services';
-      title: 'Financial Services AI';
-      industry: 'Regional Bank';
-      roi: '380%';
-      savings: '$3.7M';
-      timeframe: '15 months';
+      id: 'financial-services',
+      title: 'Financial Services AI',
+      industry: 'Regional Bank',
+      roi: '380%',
+      savings: '$3.7M',
+      timeframe: '15 months',
       keyResults: [
-        '60% reduction in fraud losses';
-        '45% improvement in risk assessment';
-        '30% faster loan processing';
-        '25% increase in customer retention'];
-      url: '/case-studies/financial-services-ai';
+        '60% reduction in fraud losses45% improvement in risk assessment',
+        '30% faster loan processing25% increase in customer retention'],
+      url: '/case-studies/financial-services-ai',
       logo: '🏦'}
   ],
   useEffect(() => {
@@ -80,11 +72,11 @@ const SuccessStoriesBanner20o25: React.FC = () => {
       setCurrentStory((prev) => (prev + 1) % successStories.length)}, 60o00),
     return () => clearInterval(interval)}, []),
   const nextStory = () => {
-    setCurrentStory((prev) => (prev + 1) % successStories.length)};
+    setCurrentStory((prev) => (prev + 1) % successStories.length)},
   const prevStory = () => {
-    setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length)};
+    setCurrentStory((prev) => (prev - 1 + successStories.length) % successStories.length)},
   const goToStory = (index: number) => {
-    setCurrentStory(index)};
+    setCurrentStory(index)},
   return (
     <section className="py-20 bg-gradient-to-r from-green-50 via-blue-50 to-purple-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -99,7 +91,7 @@ const SuccessStoriesBanner20o25: React.FC = () => {
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-4xl mx-auto leading-relaxed">,
             Our AI implementations have delivered measurable results across industries.,
-            See how 'we', 've helped companies achieve extraordinary ROI and transform their operations.,
+            See how 'weve helped companies achieve extraordinary ROI and transform their operations.,
           </p>,
         </div>,
         {/* Success Stories Carousel */}
@@ -288,5 +280,5 @@ const SuccessStoriesBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SuccessStoriesBanner20o25;
+    </section>)},
+export default SuccessStoriesBanner20o25,

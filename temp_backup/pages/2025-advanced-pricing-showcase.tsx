@@ -2,8 +2,8 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Check, Star, Users, TrendingUp, Zap, Globe, Shield;
-  Brain, Target, Heart, Building, Rocket, Atom, Palette;
+  Check, Star, Users, TrendingUp, Zap, Globe, Shield,
+  Brain, Target, Heart, Building, Rocket, Atom, Palette,
   GraduationCap, Truck, Phone, Mail, MapPin, ArrowRight} from 'lucide-react',
 // Import our new advanced service data,
 import { advancedCybersecurityMicroSaasServices } from '../data/20o25-advanced-cybersecurity-micro-saas',
@@ -12,44 +12,44 @@ import { fintechBlockchainMicroSaasServices } from '../data/20o25-fintech-blockc
 import { healthcareBiotechMicroSaasServices } from '../data/20o25-healthcare-biotech-micro-saas',
 // Contact information,
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 // Service categories with icons and colors,
 const serviceCategories = [
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity & Threat Intelligence';
-    icon: <Shield className="w-8 h-8"  />;
-    color: 'from-red-50o0 to-orange-60o0';
-    services: advancedCybersecurityMicroSaasServices};
+    id: 'cybersecurity',
+    name: 'Cybersecurity & Threat Intelligence',
+    icon: <Shield className="w-8 h-8"  />,
+    color: 'from-red-50o0 to-orange-60o0',
+    services: advancedCybersecurityMicroSaasServices},
   {
-    id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    icon: <Brain className="w-8 h-8"  />;
-    color: 'from-purple-50o0 to-pink-60o0';
-    services: advancedAIMLMicroSaasServices};
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    icon: <Brain className="w-8 h-8"  />,
+    color: 'from-purple-50o0 to-pink-60o0',
+    services: advancedAIMLMicroSaasServices},
   {
-    id: 'fintech-blockchain';
-    name: 'Fintech & Blockchain';
-    icon: <Target className="w-8 h-8"  />;
-    color: 'from-green-50o0 to-emerald-60o0';
-    services: fintechBlockchainMicroSaasServices};
+    id: 'fintech-blockchain',
+    name: 'Fintech & Blockchain',
+    icon: <Target className="w-8 h-8"  />,
+    color: 'from-green-50o0 to-emerald-60o0',
+    services: fintechBlockchainMicroSaasServices},
   {
-    id: 'healthcare-biotech';
-    name: 'Healthcare & Biotech';
-    icon: <Heart className="w-8 h-8"  />;
-    color: 'from-blue-50o0 to-cyan-60o0';
+    id: 'healthcare-biotech',
+    name: 'Healthcare & Biotech',
+    icon: <Heart className="w-8 h-8"  />,
+    color: 'from-blue-50o0 to-cyan-60o0',
     services: healthcareBiotechMicroSaasServices}
 ],
 export default function AdvancedPricingShowcase20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const allServices = [
-    ...advancedCybersecurityMicroSaasServices;
-    ...advancedAIMLMicroSaasServices;
-    ...fintechBlockchainMicroSaasServices;
+    ...advancedCybersecurityMicroSaasServices,
+    ...advancedAIMLMicroSaasServices,
+    ...fintechBlockchainMicroSaasServices,
     ...healthcareBiotechMicroSaasServices],
   const filteredServices = selectedCategory === 'all',
     ? allServices,
@@ -57,13 +57,13 @@ export default function AdvancedPricingShowcase20o25() {
   const getPrice = (service: any) => {
     if (billingCycle === 'yearly') {
       return service.price?.yearly || service.price?.monthly * 12}
-    return service.price?.monthly || 0};
+    return service.price?.monthly || 0},
   const getSavings = (service: any) => {
     if (billingCycle === 'yearly' && service.price?.yearly && service.price?.monthly) {
       const monthlyTotal = service.price.monthly * 12,
       const yearlyPrice = service.price.yearly,
       return Math.round(((monthlyTotal - yearlyPrice) / monthlyTotal) * 10o0)}
-    return 0};
+    return 0},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0">,
       <SEO

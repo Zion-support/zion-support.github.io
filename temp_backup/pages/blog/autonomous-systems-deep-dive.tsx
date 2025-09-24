@@ -286,9 +286,9 @@ class DataProcessingAgent extends AutonomousAgent {
                     {`class AutonomousSystemMonitor {
   async trackDecision(agent: string, decision: any, outcome: any) {
     await this.metrics.record('decision', {
-      agent;
-      decision;
-      outcome;
+      agent,
+      decision,
+      outcome,
       timestamp: Date.now()}),
     // Analyze decision effectiveness,
     const effectiveness = this.analyzeEffectiveness(decision, outcome),
@@ -317,7 +317,7 @@ class DataProcessingAgent extends AutonomousAgent {
                 </h3>,
                 <p className='text-white/90 mb-4'>,
                   Don't try to build a fully autonomous system from day one.,
-                  Start with basic automation, add intelligence incrementally;
+                  Start with basic automation, add intelligence incrementally,
                   and gradually increase autonomy as you gain confidence and,
                   experience.,
                 </p>,
@@ -446,7 +446,7 @@ class DataProcessingAgent extends AutonomousAgent {
                   and competitive position.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
-                  The key to success lies in taking an incremental approach;
+                  The key to success lies in taking an incremental approach,
                   focusing on robust monitoring and observability, and ensuring,
                   human oversight remains a core part of your system design.,
                 </p>,
@@ -486,7 +486,7 @@ class DataProcessingAgent extends AutonomousAgent {
               </h3>,
               <p className='text-white/80 mb-4'>,
                 Get expert guidance on implementing autonomous systems in your,
-                organization. Our team of specialists can help you design;
+                organization. Our team of specialists can help you design,
                 build, and deploy production-ready autonomous solutions.,
               </p>,
               <div className='flex gap-4'>,

@@ -8,15 +8,15 @@ import {
   Zap,
   Eye,
   Mic,
-  MessageSquare;
-  Sparkles;
-  ArrowRight;
-  Play;
-  Pause;
-  Volume2;
-  Camera;
-  Globe;
-  Shield;
+  MessageSquare,
+  Sparkles,
+  ArrowRight,
+  Play,
+  Pause,
+  Volume2,
+  Camera,
+  Globe,
+  Shield,
   Rocket} from 'lucide-react',
 const NextGenAIShowcase20o26 = () => {
   const [activeDemosetActiveDemo] = useState(0),
@@ -24,66 +24,66 @@ const NextGenAIShowcase20o26 = () => {
   const [aiThinkingsetAiThinking] = useState(false),
   const demos = [
     {
-      id: 0;
-      title: "Neural Language Processing";
-      description: "Advanced AI that understands contextemotionand intent";
-      icon: <MessageSquare className="w-8 h-8"  />;
-      color: "from-blue-60o0 to-cyan-60o0";
+      id: 0,
+      title: "Neural Language Processing",
+      description: "Advanced AI that understands contextemotionand intent",
+      icon: <MessageSquare className="w-8 h-8"  />,
+      color: "from-blue-60o0 to-cyan-60o0",
       features: [
-        "Real-time language translation";
-        "Emotion detection and response";
-        "Context-aware conversations";
-        "Multi-modal communication"];
-      demo: "🧠💬";
+        "Real-time language translation",
+        "Emotion detection and response",
+        "Context-aware conversations",
+        "Multi-modal communication"],
+      demo: "🧠💬",
       stats: { accuracy: "99.7%"languages: "247"speed: "0.1ms" }
-    };
+    },
     {
-      id: 1;
-      title: "Computer Vision AI";
-      description: "Revolutionary visual intelligence with human-level perception";
-      icon: <Eye className="w-8 h-8"  />;
-      color: "from-purple-60o0 to-pink-60o0";
+      id: 1,
+      title: "Computer Vision AI",
+      description: "Revolutionary visual intelligence with human-level perception",
+      icon: <Eye className="w-8 h-8"  />,
+      color: "from-purple-60o0 to-pink-60o0",
       features: [
-        "Object recognition & tracking";
-        "Facial emotion analysis";
-        "Scene understanding";
-        "Augmented reality integration"];
-      demo: "👁️📷";
+        "Object recognition & tracking",
+        "Facial emotion analysis",
+        "Scene understanding",
+        "Augmented reality integration"],
+      demo: "👁️📷",
       stats: { accuracy: "99.9%"objects: "10M+"fps: "240" }
-    };
+    },
     {
-      id: 2;
-      title: "Quantum Processing Core";
-      description: "Quantum-enhanced AI for exponential performance gains";
-      icon: <Cpu className="w-8 h-8"  />;
-      color: "from-green-60o0 to-emerald-60o0";
+      id: 2,
+      title: "Quantum Processing Core",
+      description: "Quantum-enhanced AI for exponential performance gains",
+      icon: <Cpu className="w-8 h-8"  />,
+      color: "from-green-60o0 to-emerald-60o0",
       features: [
-        "Quantum algorithm optimization";
-        "Parallel universe computation";
-        "Instantaneous pattern recognition";
-        "Unlimited scalability"];
-      demo: "⚛️💎";
+        "Quantum algorithm optimization",
+        "Parallel universe computation",
+        "Instantaneous pattern recognition",
+        "Unlimited scalability"],
+      demo: "⚛️💎",
       stats: { speed: "10o00x"qubits: "10o24"efficiency: "99.99%" }
-    };
+    },
     {
-      id: 3;
-      title: "Voice Intelligence";
-      description: "Natural voice interaction with emotional understanding";
-      icon: <Mic className="w-8 h-8"  />;
-      color: "from-orange-60o0 to-red-60o0";
+      id: 3,
+      title: "Voice Intelligence",
+      description: "Natural voice interaction with emotional understanding",
+      icon: <Mic className="w-8 h-8"  />,
+      color: "from-orange-60o0 to-red-60o0",
       features: [
-        "Natural speech synthesis";
-        "Voice cloning technology";
-        "Accent adaptation";
-        "Emotional tone matching"];
-      demo: "🎤🔊";
+        "Natural speech synthesis",
+        "Voice cloning technology",
+        "Accent adaptation",
+        "Emotional tone matching"],
+      demo: "🎤🔊",
       stats: { clarity: "98.8%"voices: "50o0K"latency: "50ms" }
     }
   ],
   const aiCapabilities = [
-    { icon: <Brain className="w-6 h-6"  />title: "Deep Learning"desc: "Neural networks with billions of parameters" };
-    { icon: <Zap className="w-6 h-6"  />title: "Real-time Processing"desc: "Lightning-fast AI responses" };
-    { icon: <Shield className="w-6 h-6"  />title: "Secure & Private"desc: "Enterprise-grade security" };
+    { icon: <Brain className="w-6 h-6"  />title: "Deep Learning"desc: "Neural networks with billions of parameters" },
+    { icon: <Zap className="w-6 h-6"  />title: "Real-time Processing"desc: "Lightning-fast AI responses" },
+    { icon: <Shield className="w-6 h-6"  />title: "Secure & Private"desc: "Enterprise-grade security" },
     { icon: <Globe className="w-6 h-6"  />title: "Global Scale"desc: "Worldwide deployment ready" }
   ],
   useEffect(() => {
@@ -98,23 +98,23 @@ const NextGenAIShowcase20o26 = () => {
       setAiThinking(prev => !prev)}20o00),
     return () => clearInterval(thinkingInterval)}[]),
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-gray-90o0 via-indigo-90o0 to-purple-90o0 relative overflow-hidden">,
       {/* Animated Background */}
@@ -134,7 +134,7 @@ const NextGenAIShowcase20o26 = () => {
           <motion.div variants={itemVariants} className="flex items-center justify-center mb-6">,
             <motion.div,
               animate={{
-                scale: aiThinking ? 1.1 : 1;
+                scale: aiThinking ? 1.1 : 1,
                 rotate: aiThinking ? 5 : 0}}
               transition={{ duration: 0.3 }}
             >,
@@ -178,11 +178,11 @@ const NextGenAIShowcase20o26 = () => {
                 <div className="absolute inset-0 opacity-20">,
                   <motion.div,
                     animate={{
-                      scale: [1.1];
+                      scale: [1.1],
                       rotate: [0o50]}}
                     transition={{
                       duration: 3,
-                      repeat: Infinity;
+                      repeat: Infinity,
                       ease: "easeInOut"}}
                     className="text-9xl font-bold text-white/30 absolute top-4 right-4">,
                     {demos[activeDemo].demo}
@@ -333,5 +333,5 @@ const NextGenAIShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default NextGenAIShowcase20o26;
+    </section>)},
+export default NextGenAIShowcase20o26,

@@ -3,78 +3,78 @@ export default function Footer() {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Leadership', href: '/leadership' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'News', href: '/news' };
-        { name: 'Contact', href: '/contact' };
-      ];
-    };
+        { name: 'About Us', href: '/about' },
+        { name: 'Leadership', href: '/leadership' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News', href: '/news' },
+        { name: 'Contact', href: '/contact' },
+      ],
+    },
     {
-      title: 'Services';
+      title: 'Services',
       links: [
-        { name: 'AI Solutions', href: '/ai-solutions' };
-        { name: 'Quantum Computing', href: '/quantum-computing' };
+        { name: 'AI Solutions', href: '/ai-solutions' },
+        { name: 'Quantum Computing', href: '/quantum-computing' },
         {
-          name: 'Enterprise Security';
-          href: '/ai-powered-enterprise-security';
-        };
-        { name: 'Research & Development', href: '/research-development' };
-        { name: 'Consulting', href: '/consulting' };
-      ];
-    };
+          name: 'Enterprise Security',
+          href: '/ai-powered-enterprise-security'
+        },
+        { name: 'Research & Development', href: '/research-development' },
+        { name: 'Consulting', href: '/consulting' },
+      ],
+    },
     {
-      title: 'AI Platforms';
+      title: 'AI Platforms',
       links: [
-        { name: 'Autonomous Systems', href: '/ai-autonomous-systems' };
-        { name: 'Business Intelligence', href: '/ai-business-intelligence' };
-        { name: 'Content Generation', href: '/ai-content-generator' };
+        { name: 'Autonomous Systems', href: '/ai-autonomous-systems' },
+        { name: 'Business Intelligence', href: '/ai-business-intelligence' },
+        { name: 'Content Generation', href: '/ai-content-generator' },
         {
-          name: 'Research Assistant';
-          href: '/ai-autonomous-research-assistant';
-        };
-        { name: 'Neural Networks', href: '/quantum-neural-network-platform' };
-      ];
-    };
+          name: 'Research Assistant',
+          href: '/ai-autonomous-research-assistant'
+        },
+        { name: 'Neural Networks', href: '/quantum-neural-network-platform' },
+      ],
+    },
     {
-      title: 'Resources';
+      title: 'Resources',
       links: [
-        { name: 'Case Studies', href: '/case-studies' };
-        { name: 'White Papers', href: '/white-papers' };
-        { name: 'Documentation', href: '/docs' };
-        { name: 'Webinars', href: '/webinars' };
-        { name: 'Events', href: '/events' };
-      ];
-    };
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'White Papers', href: '/white-papers' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Events', href: '/events' },
+      ],
+    },
   ],
   const socialLinks = [
     {
-      name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';
-      icon: 'LinkedIn';
-    };
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: 'LinkedIn'
+    },
     {
-      name: 'Twitter';
-      href: 'https://twitter.com/ziontechgroup';
-      icon: 'Twitter';
-    };
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: 'Twitter'
+    },
     {
-      name: 'GitHub';
-      href: 'https://github.com/ziontechgroup';
-      icon: 'GitHub';
-    };
+      name: 'GitHub',
+      href: 'https://github.com/ziontechgroup',
+      icon: 'GitHub'
+    },
     {
-      name: 'YouTube';
-      href: 'https://youtube.com/@ziontechgroup';
-      icon: 'YouTube';
-    };
+      name: 'YouTube',
+      href: 'https://youtube.com/@ziontechgroup',
+      icon: 'YouTube'
+    },
     {
-      name: 'Discord';
-      href: 'https://discord.gg/ziontechgroup';
-      icon: 'Discord';
-    };
+      name: 'Discord',
+      href: 'https://discord.gg/ziontechgroup',
+      icon: 'Discord'
+    },
   ],
   return (
     <footer className='bg-black/90 border-t border-white/10'>,

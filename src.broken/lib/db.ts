@@ -11,7 +11,7 @@ function openDB(): Promise<IDBDatabase> {
         db.createObjectStore(CART_STORE)}
       if (!db.objectStoreNames.contains(WISHLIST_STORE)) {
         db.createObjectStore(WISHLIST_STORE)}
-    };
+    },
     request.onsuccess = () => resolve(request.result),
     request.onerror = () => reject(request.error)})}
 ,

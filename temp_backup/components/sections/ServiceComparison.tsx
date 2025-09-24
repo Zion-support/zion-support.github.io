@@ -2,27 +2,27 @@ import React, { useState } from 'react',
 import Card from '../ui/Card',
 import Button from '../ui/Button',
 import {
-  MicroSaasService;
-  getServicesByCategory;
+  MicroSaasService,
+  getServicesByCategory,
 } from '../../data/micro-saas-services',
-  Check;
-  X;
-  Star;
-  TrendingUp;
-  Users;
-  Globe;
-  Shield;
-  ArrowRight;
-  ExternalLink;
-  Zap;
+  Check,
+  X,
+  Star,
+  TrendingUp,
+  Users,
+  Globe,
+  Shield,
+  ArrowRight,
+  ExternalLink,
+  Zap,
 } from 'lucide-react',
 interface ServiceComparisonProps {
   services?: MicroSaasService[],
   category?: string}
 ,
 const ServiceComparison: React.FC<ServiceComparisonProps> = ({
-  services: propServices;
-  category;
+  services: propServices,
+  category
 }) => {
   const [selectedServices, setSelectedServices] = useState<string[]>([]),
   const [compareMode, setCompareMode] = useState(false),
@@ -37,46 +37,46 @@ const ServiceComparison: React.FC<ServiceComparisonProps> = ({
     if (selectedServices.includes(serviceId)) {
       setSelectedServices(selectedServices.filter(id => id !== serviceId))} else if (selectedServices.length < 3) {
       setSelectedServices([...selectedServices, serviceId])}
-  };
+  },
   const startComparison = () => {
     if (selectedServices.length >= 2) {
       setCompareMode(true)}
-  };
+  },
   const resetComparison = () => {
     setSelectedServices([]),
-    setCompareMode(false)};
+    setCompareMode(false)},
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'Content & Marketing': <Zap className='w-4 h-4' />;
-      'Analytics & Business Intelligence': <TrendingUp className='w-4 h-4' />;
-      'Customer Support': <Users className='w-4 h-4' />;
-      'SEO & Marketing': <Globe className='w-4 h-4' />;
-      'Project Management': <Users className='w-4 h-4' />;
-      'Email Marketing': <Zap className='w-4 h-4' />;
-      'Social Media': <Globe className='w-4 h-4' />;
-      'E-commerce & Inventory': <TrendingUp className='w-4 h-4' />;
-      'Human Resources': <Users className='w-4 h-4' />;
-      'Finance & Accounting': <TrendingUp className='w-4 h-4' />;
-      'Design & Creative': <Star className='w-4 h-4' />;
-      'Video & Media': <Star className='w-4 h-4' />;
-      'Legal & Compliance': <Shield className='w-4 h-4' />;
-    };
-    return iconMap[category] || <Zap className='w-4 h-4' />};
+      'Content & Marketing': <Zap className='w-4 h-4' />,
+      'Analytics & Business Intelligence': <TrendingUp className='w-4 h-4' />,
+      'Customer Support': <Users className='w-4 h-4' />,
+      'SEO & Marketing': <Globe className='w-4 h-4' />,
+      'Project Management': <Users className='w-4 h-4' />,
+      'Email Marketing': <Zap className='w-4 h-4' />,
+      'Social Media': <Globe className='w-4 h-4' />,
+      'E-commerce & Inventory': <TrendingUp className='w-4 h-4' />,
+      'Human Resources': <Users className='w-4 h-4' />,
+      'Finance & Accounting': <TrendingUp className='w-4 h-4' />,
+      'Design & Creative': <Star className='w-4 h-4' />,
+      'Video & Media': <Star className='w-4 h-4' />,
+      'Legal & Compliance': <Shield className='w-4 h-4' />,
+    },
+    return iconMap[category] || <Zap className='w-4 h-4' />},
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       active: {
-        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20';
-        text: 'Active';
-      };
+        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20',
+        text: 'Active'
+      },
       beta: {
-        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20';
-        text: 'Beta';
-      };
+        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20',
+        text: 'Beta'
+      },
       'coming-soon': {
-        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20';
-        text: 'Coming Soon';
-      };
-    };
+        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20',
+        text: 'Coming Soon'
+      },
+    },
     const config =,
       statusConfig[status as keyof typeof statusConfig] || statusConfig.active,
     return (
@@ -84,7 +84,7 @@ const ServiceComparison: React.FC<ServiceComparisonProps> = ({
         className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${config.color}`}
       >,
         {config.text}
-      </span>)};
+      </span>)},
   if (compareMode && selectedServices.length >= 2) {
     const servicesToCompare = services.filter(service =>,
       selectedServices.includes(service.id)),
@@ -363,5 +363,5 @@ const ServiceComparison: React.FC<ServiceComparisonProps> = ({
             </Card>))}
         </div>,
       </div>,
-    </div>)};
-export default ServiceComparison;
+    </div>)},
+export default ServiceComparison,

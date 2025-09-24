@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'computer-vision-solutions - Zion Tech Group';
+  title: 'computer-vision-solutions - Zion Tech Group',
   description:,
-    'Professional computer-vision-solutions solutions for your business needs.';
-  keywords: 'computer-vision-solutions, services, business, technology';
-};
+    'Professional computer-vision-solutions solutions for your business needs.',
+  keywords: 'computer-vision-solutions, services, business, technology',
+},
 export default function ComputerVisionSolutionsPage() {
   return (
     <div className='min-h-screen bg-white'>,

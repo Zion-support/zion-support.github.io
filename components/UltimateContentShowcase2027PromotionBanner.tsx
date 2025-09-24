@@ -9,12 +9,12 @@ import {
   Rocket,
   Star,
   TrendingUp,
-  ArrowRight;
-  Play;
-  X;
-  ChevronRight;
-  Award;
-  Users;
+  ArrowRight,
+  Play,
+  X,
+  ChevronRight,
+  Award,
+  Users,
   Clock} from 'lucide-react',
 const UltimateContentShowcase20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -24,30 +24,30 @@ const UltimateContentShowcase20o27PromotionBanner = () => {
     setIsVisible(true)}[]),
   const features = [
     {
-      icon: Brain;
-      title: 'Neural Interface Revolution';
-      description: 'Direct brain-computer interfaces';
-      color: 'from-purple-50o0 to-blue-50o0'};
+      icon: Brain,
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer interfaces',
+      color: 'from-purple-50o0 to-blue-50o0'},
     {
-      icon: Zap;
-      title: 'Quantum AI Processing';
-      description: '10o00x faster processing speeds';
-      color: 'from-green-50o0 to-teal-50o0'};
+      icon: Zap,
+      title: 'Quantum AI Processing',
+      description: '10o00x faster processing speeds',
+      color: 'from-green-50o0 to-teal-50o0'},
     {
-      icon: Rocket;
-      title: 'Holographic Interfaces';
-      description: '3D immersive experiences';
-      color: 'from-orange-50o0 to-red-50o0'};
+      icon: Rocket,
+      title: 'Holographic Interfaces',
+      description: '3D immersive experiences',
+      color: 'from-orange-50o0 to-red-50o0'},
     {
-      icon: Award;
-      title: '99.8% Success Rate';
-      description: 'Proven reliability';
+      icon: Award,
+      title: '99.8% Success Rate',
+      description: 'Proven reliability',
       color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const stats = [
-    { value: '2.5M+'label: 'Active Users' };
-    { value: '50o0%'label: 'ROI Increase' };
-    { value: '99.8%'label: 'Success Rate' };
+    { value: '2.5M+'label: 'Active Users' },
+    { value: '50o0%'label: 'ROI Increase' },
+    { value: '99.8%'label: 'Success Rate' },
     { value: '10M+'label: 'Hours Saved' }
   ],
   useEffect(() => {
@@ -70,10 +70,8 @@ const UltimateContentShowcase20o27PromotionBanner = () => {
               className="absolute inset-0 opacity-30",
               animate={{
                 background: [
-                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)';
-                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
+                  'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+                  'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)'
                 ]}}
               transition={{ duration: 8repeat: Infinity }}
              />,
@@ -158,5 +156,5 @@ const UltimateContentShowcase20o27PromotionBanner = () => {
           {/* Progress Bar */}
           <div className="absolute bottom-0 left-0 h-1 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-purple-60o0 animate-pulse"  />,
         </motion.div>)}
-    </AnimatePresence>)};
-export default UltimateContentShowcase20o27PromotionBanner;
+    </AnimatePresence>)},
+export default UltimateContentShowcase20o27PromotionBanner,

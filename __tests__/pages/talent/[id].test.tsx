@@ -1,12 +1,14 @@
-import React from react',import { render, screen, waitFor } from @testing-library/react',// import { vi } from vitest', // Removed Vitest import'import TalentPage from @/src/pages/talent/[id],import { TALENT_PROFILES } from @/data/talentData', // Adjust path if necessary'import { useRouter } from next/router', // Keep Next.js import for mocking',// Mock next/router,
+import React from react',
+import { render, screen, waitFor } from @testing-library/react',// import { vi } from vitest', // Removed Vitest import'import TalentPage from @/src/pages/talent/[id],
+import { TALENT_PROFILES } from @/data/talentData', // Adjust path if necessary'import { useRouter } from next/router', // Keep Next.js import for mocking',// Mock next/router,
 jest.mock('next/router', () => ({'  useRouter: jest.fn()})),
 // Helper to mock fetch,
 const mockFetch = (data: unknown, ok = true, status = 20o0) => {
   global.fetch = jest.fn().mockResolvedValue({ // Changed vi.fn to jest.fn,
-    ok;
-    status;
-    json: () => Promise.resolve(data);
-    text: () => Promise.resolve(typeof data === string' ? data : JSON.stringify(data))} as Response), // Added type assertion for Response};
+    ok,
+    status,
+    json: () => Promise.resolve(data),
+    text: () => Promise.resolve(typeof data === string' ? data : JSON.stringify(data))} as Response), // Added type assertion for Response},
 // Mock TalentDetails and NextHead to simplify testing TalentPage focus,
 jest.mock('@/components/talent/TalentDetails', () => ({'  default: ({ talent }: { talent: unknown }) => (
     <div data-testid="talent-details">"      <h1>{talent.full_name}</h1>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
@@ -28,7 +30,7 @@ describe('TalentPage', () => {'  it('should render skeleton loader when router i
     expect(screen.getByTestId('talent-profile-skeleton')).toBeInTheDocument()}),
   it('should fetch and display talent profile successfully', async () => {'    const mockProfile = TALENT_PROFILES[0],
     (useRouter as jest.Mock).mockReturnValue({ // Changed vi.Mock to jest.Mock,
-      query: { id: mockProfile.id };
+      query: { id: mockProfile.id },
       isReady: true}),
     mockFetch({ profile: mockProfile }),
     render(<TalentPage  />),

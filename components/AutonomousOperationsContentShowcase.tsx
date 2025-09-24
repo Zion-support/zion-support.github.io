@@ -6,59 +6,59 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'autonomous-business-operations-revolution';
-      type: 'blog';
-      title: 'AI 20o25: The Autonomous Business Operations Revolution';
-      subtitle: '$5.2T Market Transformation';
-      description: 'Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.';
+      id: 'autonomous-business-operations-revolution',
+      type: 'blog',
+      title: 'AI 20o25: The Autonomous Business Operations Revolution',
+      subtitle: '$5.2T Market Transformation',
+      description: 'Transform your business with autonomous AI systems that deliver unprecedented efficiency and competitive advantage.',
       metrics: {
-        roi: '750%';
-        savings: '$8.5M';
-        efficiency: '95%';
-        market: '$5.2T'};
-      tags: ['Autonomous 'Operations', 'AI 'Revolution', 'Enterprise'ROI'];
-      readingTime: '22 min read';
-      url: '/blog/ai-20o25-autonomous-business-operations-revolution';
-      featured: true;
-      category: 'blog'};
+        roi: '750%',
+        savings: '$8.5M',
+        efficiency: '95%',
+        market: '$5.2T'},
+      tags: ['Autonomous 'OperationsAI 'Revolution', 'Enterprise'ROI'],
+      readingTime: '22 min read',
+      url: '/blog/ai-20o25-autonomous-business-operations-revolution',
+      featured: true,
+      category: 'blog'},
     {
-      id: 'fortune-10o0-autonomous-operations-success';
-      type: 'case-study';
-      title: 'Fortune 10o0 Autonomous Operations Success';
-      subtitle: '$12.8B Annual Savings with 890% ROI';
-      description: 'See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations implementation.';
+      id: 'fortune-10o0-autonomous-operations-success',
+      type: 'case-study',
+      title: 'Fortune 10o0 Autonomous Operations Success',
+      subtitle: '$12.8B Annual Savings with 890% ROI',
+      description: 'See how a Fortune 10o0 manufacturing giant achieved record-breaking results with autonomous operations implementation.',
       metrics: {
-        roi: '890%';
-        savings: '$12.8B';
-        efficiency: '156%';
-        uptime: '99.97%'};
-      tags: ['Fortune 10o0'Case 'Study', 'Manufacturing'Success Story'];
-      readingTime: '18 min read';
-      url: '/case-studies/fortune-10o0-autonomous-operations-890-roi-success';
-      featured: true;
-      category: 'case-study'};
+        roi: '890%',
+        savings: '$12.8B',
+        efficiency: '156%',
+        uptime: '99.97%'},
+      tags: ['Fortune 10o0'Case 'StudyManufacturing'Success Story'],
+      readingTime: '18 min read',
+      url: '/case-studies/fortune-10o0-autonomous-operations-890-roi-success',
+      featured: true,
+      category: 'case-study'},
     {
-      id: 'autonomous-operations-implementation-guide';
-      type: 'resource';
-      title: 'Autonomous Operations Implementation Guide';
-      subtitle: 'From Strategy to 890% ROI';
-      description: 'Complete roadmap for implementing autonomous operations with proven strategiesframeworksand best practices.';
+      id: 'autonomous-operations-implementation-guide',
+      type: 'resource',
+      title: 'Autonomous Operations Implementation Guide',
+      subtitle: 'From Strategy to 890% ROI',
+      description: 'Complete roadmap for implementing autonomous operations with proven strategiesframeworksand best practices.',
       metrics: {
-        roi: '890%';
-        success: '98%';
-        payback: '1.4 months';
-        implementations: '50o0+'};
-      tags: ['Implementation 'Guide', 'Strategy', 'Framework', 'Best Practices'];
-      readingTime: '35 min read';
-      url: '/resources/autonomous-operations-implementation-guide-20o25';
-      featured: true;
+        roi: '890%',
+        success: '98%',
+        payback: '1.4 months',
+        implementations: '50o0+'},
+      tags: ['Implementation 'GuideStrategy', 'FrameworkBest Practices'],
+      readingTime: '35 min read',
+      url: '/resources/autonomous-operations-implementation-guide-20o25',
+      featured: true,
       category: 'resource'}
   ],
   const categories = [
-    { id: ''all', 'label: 'All 'Content', 'count: contentItems.length };
-    { id: ''blog', 'label: 'Blog 'Posts', 'count: contentItems.filter(item => item.category === 'blog').length };
-    { id: 'case-'study', 'label: 'Case 'Studies', 'count: contentItems.filter(item => item.category === 'case-study').length };
-    { id: ''resource', 'label: ''Resources', 'count: contentItems.filter(item => item.category === 'resource').length }
+    { id: ''alllabel: 'All 'Contentcount: contentItems.length },
+    { id: ''bloglabel: 'Blog 'Postscount: contentItems.filter(item => item.category === 'blog').length },
+    { id: 'case-'studylabel: 'Case 'Studiescount: contentItems.filter(item => item.category === 'case-study').length },
+    { id: ''resourcelabel: ''Resourcescount: contentItems.filter(item => item.category === 'resource').length }
   ],
   const filteredContent = activeCategory === 'all',
     ? contentItems,
@@ -69,14 +69,14 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
       case 'case-study': return '📊',
       case 'resource': return '📚',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-50o0 to-blue-60o0',
       case 'case-study': return 'from-green-50o0 to-green-60o0',
       case 'resource': return 'from-purple-50o0 to-purple-60o0',
       default: return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -225,5 +225,5 @@ const AutonomousOperationsContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousOperationsContentShowcase;
+    </section>)},
+export default AutonomousOperationsContentShowcase,

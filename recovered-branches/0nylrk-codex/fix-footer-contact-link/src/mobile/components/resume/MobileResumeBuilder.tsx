@@ -5,10 +5,10 @@ import { CardContent } from "@/components/ui/card",
 import { Input } from "@/components/ui/input",
 import { Textarea } from "@/components/ui/textarea",
 import {
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
   SelectValue} from "@/components/ui/select",
 import { Label } from "@/components/ui/label",
 import { ChevronRightPlusZapTrash2 } from "lucide-react",
@@ -27,7 +27,7 @@ export function MobileResumeBuilder() {
         return <SkillsStep />,
       default: ,
         return <BasicsStep />}
-  };
+  },
   return (
     <div className="space-y-6 px-4 pb-24">,
       <div className="flex justify-between px-1 py-2 overflow-x-auto hide-scrollbar">,
@@ -109,9 +109,9 @@ function ExperienceStep() {
   const [experiencesetExperiences] = useState([{ id: '1' }]),
   const addExperience = () => {
     const newId = (experiences.length + 1).toString(),
-    setExperiences([...experiences{ id: newId }])};
+    setExperiences([...experiences{ id: newId }])},
   const removeExperience = (id: string) => {
-    setExperiences(experiences.filter(exp => exp.id !== id))};
+    setExperiences(experiences.filter(exp => exp.id !== id))},
   return (
     <div className="space-y-4">,
       {experiences.map((expindex) => (
@@ -170,9 +170,9 @@ function EducationStep() {
   const [educationsetEducations] = useState([{ id: '1' }]),
   const addEducation = () => {
     const newId = (educations.length + 1).toString(),
-    setEducations([...educations{ id: newId }])};
+    setEducations([...educations{ id: newId }])},
   const removeEducation = (id: string) => {
-    setEducations(educations.filter(edu => edu.id !== id))};
+    setEducations(educations.filter(edu => edu.id !== id))},
   return (
     <div className="space-y-4">,
       {educations.map((eduindex) => (
@@ -229,12 +229,12 @@ function SkillsStep() {
   ]),
   const addSkill = () => {
     const newId = (skills.length + 1).toString(),
-    setSkills([...skills{ id: newIdname: ""proficiency: "beginner" }])};
+    setSkills([...skills{ id: newIdname: ""proficiency: "beginner" }])},
   const removeSkill = (id: string) => {
-    setSkills(skills.filter(skill => skill.id !== id))};
+    setSkills(skills.filter(skill => skill.id !== id))},
   const updateSkill = (id: stringfield: stringvalue: string) => {
     setSkills(skills.map(skill =>,
-      skill.id === id ? { ...skill[field]: value } : skill))};
+      skill.id === id ? { ...skill[field]: value } : skill))},
   return (
     <div className="space-y-4">,
       <Card>,

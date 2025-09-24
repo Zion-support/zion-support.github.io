@@ -3,47 +3,47 @@ import { FileText, Download, Eye, Calendar, User, ArrowRight } from 'lucide-reac
 const Whitepapers: NextPage = () => {
   const whitepapers = [
     {
-      id: 1;
-      title: "The Future of AI in Business: A Comprehensive Guide";
-      description: "Explore how artificial intelligence is transforming business operations and discover implementation strategies for your organization.";
-      author: "Dr. Sarah Chen";
-      date: "January 20o25";
-      pages: 24;
-      downloads: 1250;
-      category: "AI & Machine Learning";
-      image: "/whitepapers/ai-future.jpg"};
+      id: 1,
+      title: "The Future of AI in Business: A Comprehensive Guide",
+      description: "Explore how artificial intelligence is transforming business operations and discover implementation strategies for your organization.",
+      author: "Dr. Sarah Chen",
+      date: "January 20o25",
+      pages: 24,
+      downloads: 1250,
+      category: "AI & Machine Learning",
+      image: "/whitepapers/ai-future.jpg"},
     {
-      id: 2;
-      title: "Cloud Cost Optimization: Strategies for Maximum ROI";
-      description: "Learn proven strategies to optimize your cloud infrastructure and reduce costs while improving performance and scalability.";
-      author: "Michael Rodriguez";
-      date: "December 20o24";
-      pages: 18;
-      downloads: 890;
-      category: "Cloud Computing";
-      image: "/whitepapers/cloud-optimization.jpg"};
+      id: 2,
+      title: "Cloud Cost Optimization: Strategies for Maximum ROI",
+      description: "Learn proven strategies to optimize your cloud infrastructure and reduce costs while improving performance and scalability.",
+      author: "Michael Rodriguez",
+      date: "December 20o24",
+      pages: 18,
+      downloads: 890,
+      category: "Cloud Computing",
+      image: "/whitepapers/cloud-optimization.jpg"},
     {
-      id: 3;
-      title: "Zero Trust Security Architecture: Implementation Guide";
-      description: "Comprehensive guide to implementing zero trust security architecture to protect your organization from modern threats.";
-      author: "Jennifer Liu";
-      date: "November 20o24";
-      pages: 32;
-      downloads: 110o0;
-      category: "Cybersecurity";
-      image: "/whitepapers/zero-trust.jpg"};
+      id: 3,
+      title: "Zero Trust Security Architecture: Implementation Guide",
+      description: "Comprehensive guide to implementing zero trust security architecture to protect your organization from modern threats.",
+      author: "Jennifer Liu",
+      date: "November 20o24",
+      pages: 32,
+      downloads: 110o0,
+      category: "Cybersecurity",
+      image: "/whitepapers/zero-trust.jpg"},
     {
-      id: 4;
-      title: "Micro SaaS: Building Profitable Software Products";
-      description: "Discover how to build and scale micro SaaS products that generate recurring revenue with minimal overhead.";
-      author: "Alex Thompson";
-      date: "October 20o24";
-      pages: 20;
-      downloads: 750;
-      category: "Software Development";
+      id: 4,
+      title: "Micro SaaS: Building Profitable Software Products",
+      description: "Discover how to build and scale micro SaaS products that generate recurring revenue with minimal overhead.",
+      author: "Alex Thompson",
+      date: "October 20o24",
+      pages: 20,
+      downloads: 750,
+      category: "Software Development",
       image: "/whitepapers/micro-saas.jpg"}
   ],
-  const categories = ['All', 'AI & Machine Learning', 'Cloud Computing', 'Cybersecurity', 'Software Development'],
+  const categories = ['AllAI & Machine Learning', 'Cloud ComputingCybersecurity', 'Software Development'],
   return (
     <div className="min-h-screen bg-gray-50">,
       {/* Hero Section */}
@@ -148,5 +148,5 @@ const Whitepapers: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default Whitepapers;
+    </div>)},
+export default Whitepapers,

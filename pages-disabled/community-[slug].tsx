@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { MessageSquare } from 'lucide-react',
@@ -13,9 +13,9 @@ interface CategoryPageProps {
   category: string}
 ,
 const CategoryPage: React.FC<CategoryPageProps> = ({
-  posts;
-  hasSession;
-  category;
+  posts,
+  hasSession,
+  category
 }) => {
   return (
     <>,
@@ -36,13 +36,13 @@ const CategoryPage: React.FC<CategoryPageProps> = ({
             hasSession={hasSession}
           />)}
       </main>,
-    </>)};
+    </>)},
 export const getServerSideProps = async ({
-  req;
-  params;
+  req,
+  params,
 }: {
   req: any,
-  params?: { slug?: string };
+  params?: { slug?: string },
 }) => {
   const category = params?.slug as string,
   const supabaseUrl =,
@@ -57,7 +57,7 @@ export const getServerSideProps = async ({
     '',
   const token = req.cookies?.['sb-access-token'] || null,
   if (!supabaseUrl || !anonKey) {
-    return { props: { posts: [], hasSession: Boolean(token), category } };
+    return { props: { posts: [], hasSession: Boolean(token), category } },
   }
 ,
   const supabase = createClient(supabaseUrl, anonKey),
@@ -71,10 +71,10 @@ export const getServerSideProps = async ({
 ,
   return {
     props: {
-      posts: (data as ForumPost[]) || [];
-      hasSession: Boolean(token);
-      category;
-    };
-  };
-};
-export default CategoryPage;
+      posts: (data as ForumPost[]) || [],
+      hasSession: Boolean(token),
+      category
+    },
+  },
+},
+export default CategoryPage,

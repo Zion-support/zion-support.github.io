@@ -4,9 +4,9 @@ import { OnboardingNotificationParams } from './types',
  * Creates an onboarding notification for a user,
  */,
 export async function createOnboardingNotification({
-  userId;
-  missingMilestone;
-  userRole;
+  userId,
+  missingMilestone,
+  userRole,
 }: OnboardingNotificationParams) {
   let title = '',
   let message = '',
@@ -56,12 +56,12 @@ export async function createOnboardingNotification({
   }
 ,
   return createNotification({
-    userId;
-    title;
-    message;
-    type: 'onboarding';
-    sendEmail: false;
-    actionUrl;
-    actionText;
+    userId,
+    title,
+    message,
+    type: 'onboarding',
+    sendEmail: false,
+    actionUrl,
+    actionText
   })}
 ,

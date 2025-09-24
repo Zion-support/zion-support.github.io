@@ -9,16 +9,12 @@ export default function InvoiceStudio() {
       implementationWeeks='Instant setup',
       roiNote='Reduce DSO and improve cash flow with automated reminders',
       features={[
-        'Custom templates and branding';
-        'Email and PDF delivery';
-        'Payment links and gateways';
-        'Taxes, discounts, and multi-currency';
-        'Client portal and status tracking';
-        'Exports to QuickBooks/Xero';
-        'Recurring invoices and subscriptions';
-        'Webhooks and API';
+        'Custom templates and brandingEmail and PDF delivery',
+        'Payment links and gatewaysTaxes, discounts, and multi-currency',
+        'Client portal and status trackingExports to QuickBooks/Xero',
+        'Recurring invoices and subscriptionsWebhooks and API',
       ]}
-      industries={['Freelancers', 'Agencies', 'SMBs', 'SaaS']}
+      industries={['FreelancersAgencies', 'SMBsSaaS']}
       canonical='https: //ziontechgroup.com/invoice-studio',
     />)}
 ,

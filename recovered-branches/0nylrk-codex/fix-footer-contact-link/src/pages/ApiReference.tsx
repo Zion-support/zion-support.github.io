@@ -2,12 +2,12 @@ import React, { useState } from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import {CodeBlock} from "@/components/developers/CodeBlock",
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
-import React, { useState } from "react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+import React, { useState } from "react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import { CodeBlock } from "@/components/developers/CodeBlock",
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
-import { CodeBlock } from "@/components/developers/CodeBlock";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { CodeBlock } from "@/components/developers/CodeBlock",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import React, { useState } from './react',
 import ApiDocsLayout from "@/components / developers / ApiDocsLayout",
 import { CodeBlock } from '@/components / developers / CodeBlock',
@@ -17,7 +17,7 @@ export function ApiReference() {
 export function ApiReference() {
   const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
 export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
   // Sample endpoint data,
   const endpoints = [
     {
@@ -30,10 +30,10 @@ export function ApiReference() {
         { name: "category", type: "string", description: "Filter by job category" }
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" };
-        { name: "category", type: "string", description: "Filter by job category" };
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }];
+        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
+        { name: "category", type: "string", description: "Filter by job category" },
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
           description: "A list of jobs",
@@ -43,11 +43,11 @@ export function ApiReference() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -65,18 +65,18 @@ export function ApiReference() {
   // Sample endpoint data,
   const endpoints = [
     {
-      id: "get-jobs";
-      method: "GET";
-      path: "/api/jobs";
-      description: "Retrieve a list of job postings with optional filtering";
+      id: "get-jobs",
+      method: "GET",
+      path: "/api/jobs",
+      description: "Retrieve a list of job postings with optional filtering",
       parameters: [
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" };
-        { name: "category", type: "string", description: "Filter by job category" };
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }];
+        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
+        { name: "category", type: "string", description: "Filter by job category" },
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
-          description: "A list of jobs";
+          description: "A list of jobs",
           example: `{
   "jobs": [
     {
@@ -89,18 +89,18 @@ function ApiReference() {
   // Sample endpoint data,
   const endpoints = [
     {
-      id: "get - jobs";
-      method: "GET";
-      path: "/api / jobs";
-      description: "Retrieve a list of job postings with optional filtering";
+      id: "get - jobs",
+      method: "GET",
+      path: "/api / jobs",
+      description: "Retrieve a list of job postings with optional filtering",
       parameters: [
         { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" }
-        { name: "category", type: "string", description: "Filter by job category" };
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }];
+        { name: "category", type: "string", description: "Filter by job category" },
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
-          description: "A list of jobs";
+          description: "A list of jobs",
           example: `{
   "jobs": [
     {
@@ -121,38 +121,38 @@ function ApiReference() {
         "401": {
           description: "Unauthorized",
           example: `{
-  "error": "invalid_token";
+  "error": "invalid_token",
   "message": "The provided API key is invalid or expired"}`}
         "429": {
           description: "Rate limit exceeded",
           example: `{
   "error": "rate_limit_exceeded",
-      "id": "job-123";
-      "title": "Senior React Developer";
-      "description": "We're looking for an experienced React developer...";
-      "category": "development";
+      "id": "job-123",
+      "title": "Senior React Developer",
+      "description": "We're looking for an experienced React developer...",
+      "category": "development",
       "budget": {
         "min": 5000,
         "max": 10000,
         "currency": "USD"}
       "status": "open",
       "created_at": "2023-05-10T15: 30:00Z"}
-        "min": 5000;
-        "max": 10000;
-        "currency": "USD"};
-      "status": "open";
-      "created_at": "2023-05-10T15: 30:00Z"};
-    // More jobs...];
-  "count": 42;
-  "limit": 20;
+        "min": 5000,
+        "max": 10000,
+        "currency": "USD"},
+      "status": "open",
+      "created_at": "2023-05-10T15: 30:00Z"},
+    // More jobs...],
+  "count": 42,
+  "limit": 20,
   "offset": 0}`}
-        };
+        },
         "401": {
           description: "Unauthorized",
           example: `{
   "error": "invalid_token",
   "message": "The provided API key is invalid or expired"}`}
-        };
+        },
         "429": {
           description: "Rate limit exceeded",
           example: `{
@@ -163,13 +163,13 @@ function ApiReference() {
       requestExample: `curl -X GET \\,
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\,
   -H "Authorization: Bearer YOUR_API_KEY"`}
-  "error": "rate_limit_exceeded";
-  "message": "Rate limit exceeded. Please try again in 60 seconds";
+  "error": "rate_limit_exceeded",
+  "message": "Rate limit exceeded. Please try again in 60 seconds",
   "retry_after": 60}`}
       }
       requestExample: `curl -X GET \\,
   https://api.zionai.com/v1/api/jobs?status=open&limit=10 \\,
-  -H "Authorization: Bearer YOUR_API_KEY"`};
+  -H "Authorization: Bearer YOUR_API_KEY"`},
     {
       id: "post-jobs",
       method: "POST",
@@ -182,108 +182,108 @@ function ApiReference() {
         { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" }
         { name: "skills", type: "array", description: "Array of required skills" }
         { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
-        { name: "title", type: "string", required: true, description: "Job title" };
-        { name: "description", type: "string", required: true, description: "Detailed job description" };
-        { name: "category", type: "string", required: true, description: "Job category" };
-        { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" };
-        { name: "skills", type: "array", description: "Array of required skills" };
-        { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }];
+        { name: "title", type: "string", required: true, description: "Job title" },
+        { name: "description", type: "string", required: true, description: "Detailed job description" },
+        { name: "category", type: "string", required: true, description: "Job category" },
+        { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },
+        { name: "skills", type: "array", description: "Array of required skills" },
+        { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
       responses: {
         "201": {
           description: "Job created successfully",
           example: `{
-  "id": "job-456";
-  "title": "UX Designer";
-  "description": "Looking for a UX designer with 3+ years experience...";
-  "category": "design";
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
   "budget": {
     "min": 3000,
     "max": 5000,
-    "currency": "USD"};
-  "status": "open";
+    "currency": "USD"},
+  "status": "open",
   "created_at": "2023-05-15T10: 12:00Z"}`}
-    "min": 3000;
-    "max": 5000;
-    "currency": "USD"};
-  "status": "open";
-  "created_at": "2023-05-15T10: 12:00Z"}`};
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"},
+  "status": "open",
+  "created_at": "2023-05-15T10: 12:00Z"}`},
         "400": {
           description: "Bad request",
           example: `{
-  "error": "validation_error";
-  "message": "Invalid input";
+  "error": "validation_error",
+  "message": "Invalid input",
   "details": [
     {
       "field": "title",
       "error": "Title is required"}
   ]}`}
 }
-      "field": "title";
-      "error": "Title is required"};
+      "field": "title",
+      "error": "Title is required"},
 export function ApiReference() {
-  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs");
+  const [activeEndpoint, setActiveEndpoint] = useState("get-jobs"),
   // Sample endpoint data,
   const endpoints = [
     {
-      id: "get-jobs";
-      method: "GET";
-      path: "/api/jobs";
-      description: "Retrieve a list of job postings with optional filtering";
+      id: "get-jobs",
+      method: "GET",
+      path: "/api/jobs",
+      description: "Retrieve a list of job postings with optional filtering",
       parameters: [
-        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" };
-        { name: "category", type: "string", description: "Filter by job category" };
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }];
+        { name: "status", type: "string", description: "Filter by job status (open, closed, draft)" },
+        { name: "category", type: "string", description: "Filter by job category" },
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
-          description: "A list of jobs";
+          description: "A list of jobs",
           example: `{
   "jobs": [
     {
-      "id": "job-123";
-      "title": "Senior React Developer";
-      "description": "We're looking for an experienced React developer...";
-      "category": "development";
+      "id": "job-123",
+      "title": "Senior React Developer",
+      "description": "We're looking for an experienced React developer...",
+      "category": "development",
       "budget": {
-        "min": 5000;
-        "max": 10000;
-        "currency": "USD"};
+        "min": 5000,
+        "max": 10000,
+        "currency": "USD"},
       "status": "open",
-      "created_at": "2023-05-10T15: 30:00Z"};
+      "created_at": "2023-05-10T15: 30:00Z"},
     // More jobs...],
   "count": 42,
   "limit": 20,
-  "offset": 0}`};
+  "offset": 0}`},
         "401": {
-          description: "Unauthorized";
+          description: "Unauthorized",
           example: `{
-  "error": "invalid_token";
-  "message": "The provided API key is invalid or expired"}`};
+  "error": "invalid_token",
+  "message": "The provided API key is invalid or expired"}`},
         "429": {
-          description: "Rate limit exceeded";
+          description: "Rate limit exceeded",
           example: `{
   "error": "rate_limit_exceeded",
-  "message": "Rate limit exceeded. Please try again in 60 seconds";
+  "message": "Rate limit exceeded. Please try again in 60 seconds",
   "retry_after": 60}`}
-      };
+      },
       requestExample: `curl -X GET \,
   https://api && api.zionai.com/v1/api/jobs?status=open&limit=10 \,
-  -H "Authorization: Bearer YOUR_API_KEY"`};
+  -H "Authorization: Bearer YOUR_API_KEY"`},
     {
-      id: "post-jobs";
-      method: "POST";
-      path: "/api/jobs";
-      description: "Create a new job posting";
+      id: "post-jobs",
+      method: "POST",
+      path: "/api/jobs",
+      description: "Create a new job posting",
       parameters: [
-        { name: "title", type: "string", required: true, description: "Job title" };
-        { name: "description", type: "string", required: true, description: "Detailed job description" };
-        { name: "category", type: "string", required: true, description: "Job category" };
-        { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" };
-        { name: "skills", type: "array", description: "Array of required skills" };
-        { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }];
+        { name: "title", type: "string", required: true, description: "Job title" },
+        { name: "description", type: "string", required: true, description: "Detailed job description" },
+        { name: "category", type: "string", required: true, description: "Job category" },
+        { name: "budget", type: "object", required: true, description: "Budget information with min, max, and currency" },
+        { name: "skills", type: "array", description: "Array of required skills" },
+        { name: "deadline", type: "string", description: "Application deadline (ISO date format)" }],
       responses: {
         "201": {
-          description: "Job created successfully";
+          description: "Job created successfully",
           example: `{
   "id": "job-456",
   "title": "UX Designer",
@@ -302,38 +302,38 @@ export function ApiReference() {
   "message": "Invalid input",
   "details": [
     {
-    "max": 5000;
-    "currency": "USD"};
+    "max": 5000,
+    "currency": "USD"},
   "status": "open",
-  "created_at": "2023-05-15T10: 12:00Z"}`};
+  "created_at": "2023-05-15T10: 12:00Z"}`},
         "400": {
-          description: "Bad request";
+          description: "Bad request",
           example: `{
   "error": "validation_error",
   "message": "Invalid input",
   "details": [
     {
-      "field": "title";
+      "field": "title",
       "error": "Title is required",
-      "field": "title";
+      "field": "title",
       "error": "Title is required"}
   ]}`}
 ,
-  "id": "job-456";
-  "title": "UX Designer";
-  "description": "Looking for a UX designer with 3+ years experience...";
-  "category": "design";
+  "id": "job-456",
+  "title": "UX Designer",
+  "description": "Looking for a UX designer with 3+ years experience...",
+  "category": "design",
   "budget": {
-    "min": 3000;
-    "max": 5000;
-    "currency": "USD"};
-  "status": "open";
-  "created_at": "2023-05-15T10: 12:00Z"}`};
+    "min": 3000,
+    "max": 5000,
+    "currency": "USD"},
+  "status": "open",
+  "created_at": "2023-05-15T10: 12:00Z"}`},
         "400": {
           description: "Bad request",
           example: `{
-  "error": "validation_error";
-  "message": "Invalid input";
+  "error": "validation_error",
+  "message": "Invalid input",
   "details": [
     {
       requestExample: `curl -X POST \\,
@@ -345,7 +345,7 @@ export function ApiReference() {
   -H "Authorization: Bearer YOUR_API_KEY" \,
   -H "Content - Type: application / json" \,
   -d '{
-      };
+      },
       requestExample: `curl -X POST \,
   https://api && api.zionai.com/v1/api/jobs \,
   -H "Authorization: Bearer YOUR_API_KEY" \,
@@ -356,20 +356,20 @@ export function ApiReference() {
     "category": "design",
     "budget": {
       "min": 3000,
-    "title": "UX Designer";
-    "description": "Looking for a UX designer with 3+ years experience...";
-    "category": "design";
+    "title": "UX Designer",
+    "description": "Looking for a UX designer with 3+ years experience...",
+    "category": "design",
     "budget": {
       "min": 3000,
       "max": 5000,
       "currency": "USD"}
     "skills": ["Figma", "User Research", "Prototyping"],
     "deadline": "2023-07-01T00: 00:00Z"}'`}
-      "min": 3000;
-      "max": 5000;
-      "currency": "USD"};
-    "skills": ["Figma", "User Research", "Prototyping"];
-    "deadline": "2023-07-01T00: 00:00Z"}'`};
+      "min": 3000,
+      "max": 5000,
+      "currency": "USD"},
+    "skills": ["Figma", "User Research", "Prototyping"],
+    "deadline": "2023-07-01T00: 00:00Z"}'`},
     {
       id: "get-talent",
       method: "GET",
@@ -383,13 +383,13 @@ export function ApiReference() {
         { name: "availability", type: "string", description: "Availability type (full-time, part-time)" }
         { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" }
         { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
-        { name: "skills", type: "string", description: "Comma-separated list of skills" };
-        { name: "category", type: "string", description: "Filter by talent category" };
-        { name: "rate_min", type: "integer", description: "Minimum hourly rate" };
-        { name: "rate_max", type: "integer", description: "Maximum hourly rate" };
+        { name: "skills", type: "string", description: "Comma-separated list of skills" },
+        { name: "category", type: "string", description: "Filter by talent category" },
+        { name: "rate_min", type: "integer", description: "Minimum hourly rate" },
+        { name: "rate_max", type: "integer", description: "Maximum hourly rate" },
         { name: "availability", type: "string", description: "Availability type (full - time, part - time)" }
-        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" };
-        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }];
+        { name: "limit", type: "integer", description: "Number of results per page (default: 20, max: 100)" },
+        { name: "offset", type: "integer", description: "Pagination offset (default: 0)" }],
       responses: {
         "200": {
           description: "A list of talent profiles",
@@ -398,34 +398,34 @@ export function ApiReference() {
     {
       "id": "talent-123",
       "full_name": "Jane Smith",
-      "professional_title": "Full Stack Developer";
+      "professional_title": "Full Stack Developer",
       "skills": ["React", "Node && Node.js", "TypeScript"],
       "hourly_rate": 75,
       "availability": "full - time",
       "years_experience": 5,
       "location": "Remote, US",
       "bio": "Experienced full stack developer with a focus on React and Node.js..."}
-      "id": "talent-123";
-      "full_name": "Jane Smith";
-      "professional_title": "Full Stack Developer";
-      "skills": ["React", "Node.js", "TypeScript"];
-      "hourly_rate": 75;
-      "availability": "full-time";
-      "years_experience": 5;
-      "location": "Remote, US";
-      "bio": "Experienced full stack developer with a focus on React and Node.js..."};
-    // More talent profiles...];
-  "count": 38;
-  "limit": 20;
+      "id": "talent-123",
+      "full_name": "Jane Smith",
+      "professional_title": "Full Stack Developer",
+      "skills": ["React", "Node.js", "TypeScript"],
+      "hourly_rate": 75,
+      "availability": "full-time",
+      "years_experience": 5,
+      "location": "Remote, US",
+      "bio": "Experienced full stack developer with a focus on React and Node.js..."},
+    // More talent profiles...],
+  "count": 38,
+  "limit": 20,
   "offset": 0}`}
 }
-      };
+      },
       requestExample: `curl -X GET \\,
   https://api.zionai.com/v1/api/talent?skills=React,Node.js&limit=10 \\,
   -H "Authorization: Bearer YOUR_API_KEY"`}
 ],
   // Find the active endpoint data,
-  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint)];
+  const activeEndpointData = endpoints.find(e => e.id === activeEndpoint)],
   return (
     <ApiDocsLayout>,
       <div className="grid md: grid-cols-5 gap-8">,
@@ -587,7 +587,7 @@ export function ApiReference() {
       </div>,
     </ApiDocsLayout>)}
 ,
-export default ApiReference;
+export default ApiReference,
 =======,
                             status.startsWith('2') ? 'bg-green-950 text-green-500' :,
                             status === '401' |status === '403' ? 'bg-orange-950 text-orange-500' :,

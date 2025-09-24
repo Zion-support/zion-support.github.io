@@ -2,13 +2,13 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import {
-  X;
-  ArrowRight;
-  Factory;
-  TrendingUp;
-  Shield;
-  Zap;
-  ArrowRight;
+  X,
+  ArrowRight,
+  Factory,
+  TrendingUp,
+  Shield,
+  Zap,
+  ArrowRight,
 } from 'lucide-react',
 const NewContent20o25ManufacturingBanner = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -22,7 +22,7 @@ const NewContent20o25ManufacturingBanner = () => {
   const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('manufacturing-banner-dismissed', 'true')};
+    localStorage.setItem('manufacturing-banner-dismissedtrue')},
   if (!isVisible || isDismissed) return null,
   return (
     <div className='relative bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0 text-white overflow-hidden'>,
@@ -125,5 +125,5 @@ const NewContent20o25ManufacturingBanner = () => {
         aria-label='Dismiss banner'>,
         <X className='w-6 h-6' />,
       </button>,
-    </div>)};
-export default NewContent20o25ManufacturingBanner;
+    </div>)},
+export default NewContent20o25ManufacturingBanner,

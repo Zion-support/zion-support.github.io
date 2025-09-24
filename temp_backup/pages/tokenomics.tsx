@@ -1,6 +1,6 @@
 import React, { useMemo, useState } from 'react',
 import Head from 'next/head',
-type DistributionItem ={ label: string, percent: number };
+type DistributionItem ={ label: string, percent: number },
 const defaultOperatorPrompt = `Generate a professional Web3 tokenomics whitepaper for a utility token used in a freelance AI marketplace. Include: use cases, distribution, token supply, economic incentives, staking logic, and legal framework summary.`,
 export default function TokenomicsWhitepaperBuilder() {
   const [isAdmin, setIsAdmin] = useState(true),
@@ -11,12 +11,12 @@ export default function TokenomicsWhitepaperBuilder() {
   const [useCases, setUseCases] = useState<string>('Access to premium AI agents, marketplace discounts, reputation staking, governance participation'),
   const [rewardsLogic, setRewardsLogic] = useState<string>('Earn via contributions, referrals, and successful task completions, burn on dispute resolution fees and premium access'),
   const [distribution, setDistribution] = useState<DistributionItem[]>([
-    { label: 'Ecosystem & Rewards', percent: 35 };
-    { label: 'Community Treasury', percent: 20 };
-    { label: 'Team & Contributors', percent: 15 };
-    { label: 'Investors', percent: 15 };
-    { label: 'Liquidity & Market Making', percent: 10 };
-    { label: 'Advisors & Partnerships', percent: 5 };
+    { label: 'Ecosystem & Rewards', percent: 35 },
+    { label: 'Community Treasury', percent: 20 },
+    { label: 'Team & Contributors', percent: 15 },
+    { label: 'Investors', percent: 15 },
+    { label: 'Liquidity & Market Making', percent: 10 },
+    { label: 'Advisors & Partnerships', percent: 5 },
   ]),
   const [governance, setGovernance] = useState<string>('One-token-one-vote with quadratic weighting for proposals, staking required for proposal submission, delegated voting supported'),
   const [jurisdiction, setJurisdiction] = useState<string>('US'),
@@ -27,29 +27,29 @@ export default function TokenomicsWhitepaperBuilder() {
   const [activeSection, setActiveSection] = useState<string>('Executive Summary'),
   const previewMarkdown = useMemo(() => {
     return generatedMarkdown || buildLocalMarkdown({
-      tokenName;
-      tokenSupply;
-      useCases;
-      rewardsLogic;
-      distribution;
-      governance;
-      jurisdiction;
+      tokenName,
+      tokenSupply,
+      useCases,
+      rewardsLogic,
+      distribution,
+      governance,
+      jurisdiction,
       legalReview})}, [generatedMarkdown, tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, legalReview]),
   async function handleGenerate() {
     try {
       setIsGenerating(true),
       const res = await fetch('/api/whitepaper/generate', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json', 'X-Admin': isAdmin ? 'true' : 'false' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonX-Admin': isAdmin ? 'true' : 'false' },
         body: JSON.stringify({
-          tokenName;
-          tokenSupply;
-          useCases;
-          rewardsLogic;
-          distribution;
-          governance;
-          jurisdiction;
-          operatorPrompt;
+          tokenName,
+          tokenSupply,
+          useCases,
+          rewardsLogic,
+          distribution,
+          governance,
+          jurisdiction,
+          operatorPrompt,
           legalReview})}),
       if (!res.ok) throw new Error('Failed to generate'),
       const data = await res.json(),
@@ -71,8 +71,8 @@ export default function TokenomicsWhitepaperBuilder() {
       document.body.removeChild(a),
       URL.revokeObjectURL(url)} else {
       const res = await fetch('/api/whitepaper/export', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ markdown: previewMarkdown, tokenName })}),
       if (!res.ok) {
         alert('PDF export failed'),
@@ -84,7 +84,7 @@ export default function TokenomicsWhitepaperBuilder() {
   function updateDistribution(index: number, key: keyof DistributionItem, value: string) {
     setDistribution((prev) => {
       const copy = [...prev],
-      const item ={ ...copy[index] };
+      const item ={ ...copy[index] },
       if (key === 'percent') item.percent = Number(value),
       if (key === 'label') item.label = value,
       copy[index] = item,
@@ -98,8 +98,8 @@ export default function TokenomicsWhitepaperBuilder() {
 ,
   async function handleShareableLink() {
     const res = await fetch('/api/whitepaper/share', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ markdown: previewMarkdown, publicPreview })}),
     if (!res.ok) {
       alert('Failed to create share link'),
@@ -108,7 +108,7 @@ export default function TokenomicsWhitepaperBuilder() {
     await navigator.clipboard.writeText(url),
     alert('Shareable link copied to clipboard')}
 ,
-  const sections = ['Executive Summary', 'Market Context', 'Utility & Usage', 'Rewards System', 'Distribution', 'Governance Model', 'Risks + Disclaimers'],
+  const sections = ['Executive SummaryMarket Context', 'Utility & UsageRewards System', 'DistributionGovernance Model', 'Risks + Disclaimers'],
   return (
     <>,
       <Head>,
@@ -264,7 +264,7 @@ function MarkdownPreview({ markdown, activeSection }: { markdown: string, active
   // Very lightweight section filter: split by headings,
   const parts = useMemo(() => {
     const sections = markdown.split(/\n## /g),
-    const map: Record<string string> ={};
+    const map: Record<string string> ={},
     sections.forEach((s, i) => {
       if (i === 0) return, // first is H1,
       const [titleLine, ...rest] = s.split('\n'),

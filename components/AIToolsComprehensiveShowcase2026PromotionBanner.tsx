@@ -9,44 +9,44 @@ import {
   Target,
   TrendingUp,
   Shield,
-  Cpu;
-  BarChart3;
-  Code;
-  Database;
-  Network;
+  Cpu,
+  BarChart3,
+  Code,
+  Database,
+  Network,
   Cloud} from 'lucide-react',
 const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentToolsetCurrentTool] = useState(0),
   const tools = [
     {
-      name: 'Quantum Neural Optimizer';
-      description: '10,0o00x faster processing';
-      icon: Brain;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      name: 'Quantum Neural Optimizer',
+      description: '10,0o00x faster processing',
+      icon: Brain,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      name: 'AutoPilot Manager';
-      description: '24/7 autonomous operations';
-      icon: Rocket;
-      color: 'from-purple-50o0 to-pink-50o0'};
+      name: 'AutoPilot Manager',
+      description: '24/7 autonomous operations',
+      icon: Rocket,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      name: 'Market Predictor Pro';
-      description: '98.5% accuracy predictions';
-      icon: BarChart3;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      name: 'Market Predictor Pro',
+      description: '98.5% accuracy predictions',
+      icon: BarChart3,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      name: 'Threat Detection AI';
-      description: '99.9% security coverage';
-      icon: Shield;
+      name: 'Threat Detection AI',
+      description: '99.9% security coverage',
+      icon: Shield,
       color: 'from-red-50o0 to-orange-50o0'}
   ],
   const categories = [
-    { name: 'Quantum 'Computing', 'icon: Cpucount: '12 tools' };
-    { name: 'Autonomous 'Operations', 'icon: Rocketcount: '8 tools' };
-    { name: 'Neural 'Interfaces', 'icon: Braincount: '6 tools' };
-    { name: 'Predictive 'Analytics', 'icon: BarChart3count: '10 tools' };
-    { name: 'Process 'Automation', 'icon: Zapcount: '15 tools' };
-    { name: ''Cybersecurity', 'icon: Shieldcount: '9 tools' }
+    { name: 'Quantum 'Computingicon: Cpucount: '12 tools' },
+    { name: 'Autonomous 'Operationsicon: Rocketcount: '8 tools' },
+    { name: 'Neural 'Interfacesicon: Braincount: '6 tools' },
+    { name: 'Predictive 'Analyticsicon: BarChart3count: '10 tools' },
+    { name: 'Process 'Automationicon: Zapcount: '15 tools' },
+    { name: ''Cybersecurityicon: Shieldcount: '9 tools' }
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -175,5 +175,5 @@ const AIToolsComprehensiveShowcase20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AIToolsComprehensiveShowcase20o26PromotionBanner;
+    </div>)},
+export default AIToolsComprehensiveShowcase20o26PromotionBanner,

@@ -28,8 +28,8 @@ const https = require(
       "netlifyApiUrl": https: //api.netlify.com/api/v,1,
       "checkInterval": 2: * 60 * 10o0,0, // 2 minutes,
       "buildTimeout": 30: * 60 * 10o0,0, // 30 minutes,
-      "maxRetries": 3;
-      "logFile": ./logs/netlify-build-automation.log', ',
+      "maxRetries": 3,
+      "logFile": ./logs/netlify-build-automation.log,
       "errorFile": './logs/netlify-build-automation-error.lo,g, ',
       "autoDeployEnabled": tru,e,
       "notificationEnabled": tru,e}
@@ -43,4 +43,4 @@ const https = require(
     this.validateConfiguration(),
     this.ensureLogDirectory(),
     this.log(
-#!/usr/bin/env: node, const fs = require( 'fs')'; const path = require( 'path')', const { execSync} = require( 'child_process')'; const cron = require( 'node-cron')'; const https = require( 'https')'; class: NetlifyBuildAutomation { constructor() { this.config ={ netlifySiteId: process.env.NETLIFY_SITE_I,D netlifyToken: process.env.NETLIFY_TOKE,N netlifyApiUrl: https: checkInterval: 2: * 60 * 10o0,0,buildTimeout: 30: * 60 * 10o0,0,maxRetries: 3,logFile: ./logs/netlify-build-automation.log',', errorFile: './logs/netlify-build-automation-error.lo,g,', autoDeployEnabled: tru,e notificationEnabled: tru,e} , this.buildHistory: = [], this.currentBuild: = null, this.isRunning: = false, this.initialize()} initialize() { this.setupLogging(), this.validateConfiguration(), this.ensureLogDirectory(), this.log(}}}}))
+#!/usr/bin/env: node, const fs = require( 'fs')', const path = require( 'path')', const { execSync} = require( 'child_process')', const cron = require( 'node-cron')', const https = require( 'https')', class: NetlifyBuildAutomation { constructor() { this.config ={ netlifySiteId: process.env.NETLIFY_SITE_I,D netlifyToken: process.env.NETLIFY_TOKE,N netlifyApiUrl: https: checkInterval: 2: * 60 * 10o0,0,buildTimeout: 30: * 60 * 10o0,0,maxRetries: 3,logFile: ./logs/netlify-build-automation.log, errorFile: './logs/netlify-build-automation-error.lo,g,', autoDeployEnabled: tru,e notificationEnabled: tru,e} , this.buildHistory: = [], this.currentBuild: = null, this.isRunning: = false, this.initialize()} initialize() { this.setupLogging(), this.validateConfiguration(), this.ensureLogDirectory(), this.log(}}}}))

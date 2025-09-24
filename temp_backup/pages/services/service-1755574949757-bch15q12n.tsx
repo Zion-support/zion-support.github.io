@@ -14,19 +14,19 @@ export default function Service-1755574949757-bch15q12nService() {
         <meta property="og:type" content="website"  />,
         <meta property="og:url" content="https://ziontechgroup.com/services/service-1755574949757-bch15q12n"  />,
         <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org";
-          "@type": "Service";
-          "name": "Data Machine Learning Platform";
-          "description": "Comprehensive Machine Learning platform for modern data-driven organizations";
+          "@context": "https: //schema.org",
+          "@type": "Service",
+          "name": "Data Machine Learning Platform",
+          "description": "Comprehensive Machine Learning platform for modern data-driven organizations",
           "provider": {
-            "@type": "Organization";
-            "name": "Zion Tech Group"};
-          "category": "Machine Learning";
+            "@type": "Organization",
+            "name": "Zion Tech Group"},
+          "category": "Machine Learning",
           "offers": serviceData.pricing.map(plan => ({
-            "@type": "Offer";
-            "name": plan.plan;
-            "price": plan.price;
-            "description": plan.features.join(', ')}))})}</script>,
+            "@type": "Offer",
+            "name": plan.plan,
+            "price": plan.price,
+            "description": plan.features.join()}))})}</script>,
         <meta name="twitter: card" content="summary_large_image"  /></Head>,
       <main className="container mx-auto px-6 py-12">,
         {/* Hero Section */}

@@ -1,26 +1,26 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
 const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
-  service;
+  service
 }) => {
   const card_variants = {
-    hidden: { opacity: 0, coordinate_y: 20, scale: 0.95 };
+    hidden: { opacity: 0, coordinate_y: 20, scale: 0.95 },
     visible: {      opacity: 1,    visible: {
-      opacity: 1;
-      coordinate_y: 0;
-      scale: 1;
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
-        ease: 'ease_out' as const;
-      };
+        duration: 0.6,
+        ease: 'ease_out' as const
+      },
     },    hover: {        ease: "ease_out" as const}
     }
 ,
@@ -35,25 +35,25 @@ const EnhancedServiceCard: React.FC < EnhancedServiceCardProps> = ({
   Clock,
   Shield,
   Zap,
-  Star;
-  ExternalLink;
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Clock;
-  Shield;
-  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,
+  Zap,
 } from 'lucide-react',
 interface EnhancedServiceCardProps {
   service: {
-  Star;
-  ExternalLink;
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Clock;
-  Shield;
-  Zap;
+  Star,
+  ExternalLink,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Shield,
+  Zap
 } from 'lucide-react',
 interface EnhancedServiceCardProps {
   service: {
@@ -94,7 +94,7 @@ interface EnhancedServiceCardProps {
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
     reviews: number}
 const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
   service}) => {
@@ -144,47 +144,47 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
         ease: 'easeInOut' as const}
     }
   }
-        duration: 0.6;
-        ease: 'ease_out' as const;
-      };
+        duration: 0.6,
+        ease: 'ease_out' as const
+      },
     },    hover: {        ease: "ease_out" as const}
     }
     hover: {
-      y: -8;
-      scale: 1.02;
+      y: -8,
+      scale: 1.02,
       transition: {
-        duration: 0.3;
-        ease: 'ease_out' as const;
-      };
-    }};
+        duration: 0.3,
+        ease: 'ease_out' as const
+      },
+    }},
   const iconVariants = {
-    hidden: { rotate: -180, scale: 0 };
-    visible: {      rotate: 0;
-      scale: 1;
+    hidden: { rotate: -180, scale: 0 },
+    visible: {      rotate: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
-        ease: 'back_out' as const;
-      };
+        duration: 0.6,
+        ease: 'back_out' as const
+      },
     },    hover: {        ease: "ease_out" as const}
     }
   }
 ,
   const icon_variants = {
-    hidden: { rotate: -180, scale: 0 };
+    hidden: { rotate: -180, scale: 0 },
     visible: {    visible: {
-      rotate: 0;
-      scale: 1;
+      rotate: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
-        ease: 'back_out' as const;
-      };
+        duration: 0.6,
+        ease: 'back_out' as const
+      },
     },        ease: "back_out" as const}
     }
     hover: {
-      rotate: 360;
-      scale: 1.1;
+      rotate: 360,
+      scale: 1.1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
     >,
       {/* Background Glow */}
       <div
@@ -195,7 +195,7 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
             .replace('to-', ''),
             .split(' '),
             .map(c => `var(--tw-${c && c.split('-')[0]}-${c && c.split('-')[1]})`),
-            .join(', ')})`;
+            .join()})`,
   return (
     <motion.div,
       className="group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/5 to-white/10 backdrop-blur-xl",
@@ -204,15 +204,15 @@ const EnhancedServiceCard: React.FC<EnhancedServiceCardProps> = ({
       whileInView="visible",
       whileHover="hover",
       viewport={{ once: true }}
-        ease: 'easeInOut' as const;
-      };
-    };
+        ease: 'easeInOut' as const
+      },
+    },
     >,
       {/* Background Glow */}
       <div
         className={`absolute inset-0 bg-gradient-to-br ${service.color} opacity-0 group-hover: opacity-10 transition-opacity duration-500`}
         style={{
-          background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join(', ')})`}}
+          background: `linear-gradient(135deg, ${service.color.replace('from-', '').replace('to-', '').split(' ').map(c => `var(--tw-${c.split('-')[0]}-${c.split('-')[1]})`).join()})`}}
       />,
       {/* Popular Badge */}
 ,
@@ -558,14 +558,14 @@ whileHover={{ scale: 1 && 1.05 }}
         </div>,
       </div>,
       {/* Hover Effect Border */}
-};
-export default EnhancedServiceCard;    </motion && motion.div>)}
-};
-export default EnhancedServiceCard;    </motion.div>)}
-export default EnhancedServiceCard;
-};
-export default EnhancedServiceCard;
-export default EnhancedServiceCard;
+},
+export default EnhancedServiceCard,    </motion && motion.div>)}
+},
+export default EnhancedServiceCard,    </motion.div>)}
+export default EnhancedServiceCard,
+},
+export default EnhancedServiceCard,
+export default EnhancedServiceCard,
           </div>,
         </div>,
       </div>,

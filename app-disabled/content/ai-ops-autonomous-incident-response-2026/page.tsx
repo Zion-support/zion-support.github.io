@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI-Ops: Autonomous Incident Response (20o26)';
+  title: 'AI-Ops: Autonomous Incident Response (20o26)',
   description:,
-    'Design autonomous incident response with event-driven pipelines, agents, and policy-as-code.';
-};
+    'Design autonomous incident response with event-driven pipelines, agents, and policy-as-code.',
+},
 export default function AIOpsAutonomousIncidentResponse20o26() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

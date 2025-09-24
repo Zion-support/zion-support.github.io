@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const RevolutionaryTransformationSuccessBanner: React.FC = () => {
   return (
@@ -172,5 +172,5 @@ const RevolutionaryTransformationSuccessBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTransformationSuccessBanner;
+    </section>)},
+export default RevolutionaryTransformationSuccessBanner,

@@ -6,43 +6,43 @@ const NewContent20o25DataRevolutionBanner = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
   const contentItems = [
     {
-      id: 'data-revolution-guide';
-      title: 'AI 20o25: The Enterprise Data Revolution';
-      description: 'Complete guide to achieving 50o0% ROI with AI-powered data transformation';
-      type: 'Blog Post';
-      readingTime: '18 min read';
+      id: 'data-revolution-guide',
+      title: 'AI 20o25: The Enterprise Data Revolution',
+      description: 'Complete guide to achieving 50o0% ROI with AI-powered data transformation',
+      type: 'Blog Post',
+      readingTime: '18 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        speed: '1,20o0%'};
-      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide';
-      featured: true};
+        roi: '50o0%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        speed: '1,20o0%'},
+      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide',
+      featured: true},
     {
-      id: 'fortune-50o0-case-study';
-      title: 'Fortune 50o0 Data Transformation Success';
-      description: 'How a global manufacturing giant achieved 50o0% ROI in 8 months';
-      type: 'Case Study';
-      readingTime: '12 min read';
+      id: 'fortune-50o0-case-study',
+      title: 'Fortune 50o0 Data Transformation Success',
+      description: 'How a global manufacturing giant achieved 50o0% ROI in 8 months',
+      type: 'Case Study',
+      readingTime: '12 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '$45M';
-        accuracy: '99.7%';
-        timeline: '8 months'};
-      url: '/case-studies/fortune-50o0-data-transformation-50o0-roi-success';
-      featured: true};
+        roi: '50o0%',
+        savings: '$45M',
+        accuracy: '99.7%',
+        timeline: '8 months'},
+      url: '/case-studies/fortune-50o0-data-transformation-50o0-roi-success',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'AI Data Transformation Implementation Guide';
-      description: 'Step-by-step guide from strategy to 50o0% ROI';
-      type: 'Resource';
-      readingTime: '25 min read';
+      id: 'implementation-guide',
+      title: 'AI Data Transformation Implementation Guide',
+      description: 'Step-by-step guide from strategy to 50o0% ROI',
+      type: 'Resource',
+      readingTime: '25 min read',
       metrics: {
-        success: '98%';
-        roi: '50o0%';
-        projects: '50o0+';
-        timeline: '12 months'};
-      url: '/resources/ai-data-transformation-implementation-guide-20o25';
+        success: '98%',
+        roi: '50o0%',
+        projects: '50o0+',
+        timeline: '12 months'},
+      url: '/resources/ai-data-transformation-implementation-guide-20o25',
       featured: true}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const NewContent20o25DataRevolutionBanner = () => {
     return () => clearInterval(interval)}[contentItems.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('data-revolution-banner-'dismissed', 'true')};
+    localStorage.setItem('data-revolution-banner-'dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('data-revolution-banner-dismissed'),
     if (dismissed === 'true') {
@@ -177,5 +177,5 @@ const NewContent20o25DataRevolutionBanner = () => {
           </svg>,
         </button>,
       </div>,
-    </div>)};
-export default NewContent20o25DataRevolutionBanner;
+    </div>)},
+export default NewContent20o25DataRevolutionBanner,

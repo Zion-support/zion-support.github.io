@@ -12,64 +12,64 @@ interface Service {
 ,
 const services: Service[] = [
   {
-    id: 'ai-automation-20o26';
-    title: 'AI Automation Solutions 20o26';
-    description: 'Revolutionary AI automation delivering unprecedented efficiency and ROI across all business processes.';
-    features: ['99.9% Accuracy'10,0o00x Faster 'Processing', 'Infinite 'Scalability', 'Zero Downtime'];
-    roi: '5,0o00% ROI';
-    badge: 'BREAKTHROUGH';
-    href: '/services/ai-automation-20o26';
-    icon: '🤖';
-    color: 'from-blue-50o0 to-cyan-50o0'};
+    id: 'ai-automation-20o26',
+    title: 'AI Automation Solutions 20o26',
+    description: 'Revolutionary AI automation delivering unprecedented efficiency and ROI across all business processes.',
+    features: ['99.9% Accuracy'10,0o00x Faster 'ProcessingInfinite 'Scalability', 'Zero Downtime'],
+    roi: '5,0o00% ROI',
+    badge: 'BREAKTHROUGH',
+    href: '/services/ai-automation-20o26',
+    icon: '🤖',
+    color: 'from-blue-50o0 to-cyan-50o0'},
   {
-    id: 'quantum-computing-20o26';
-    title: 'Quantum Computing Services';
-    description: 'Advanced quantum computing solutions delivering transcendent processing power and infinite possibilities.';
-    features: ['Quantum 'Supremacy', 'Infinite 'Processing', 'Perfect 'Security', 'Transcendent Intelligence'];
-    roi: '15,0o00% ROI';
-    badge: 'REVOLUTIONARY';
-    href: '/services/quantum-computing-20o26';
-    icon: '⚛️';
-    color: 'from-purple-50o0 to-pink-50o0'};
+    id: 'quantum-computing-20o26',
+    title: 'Quantum Computing Services',
+    description: 'Advanced quantum computing solutions delivering transcendent processing power and infinite possibilities.',
+    features: ['Quantum 'SupremacyInfinite 'Processing', 'Perfect 'SecurityTranscendent Intelligence'],
+    roi: '15,0o00% ROI',
+    badge: 'REVOLUTIONARY',
+    href: '/services/quantum-computing-20o26',
+    icon: '⚛️',
+    color: 'from-purple-50o0 to-pink-50o0'},
   {
-    id: 'neural-interfaces-20o26';
-    title: 'Neural Interface Technology';
-    description: 'Direct neural interface solutions enabling seamless human-AI collaboration and consciousness sharing.';
-    features: ['Direct Neural 'Link', 'Consciousness 'Upload', 'Real-time 'Processing', 'Perfect Integration'];
-    roi: '8,0o00% ROI';
-    badge: 'FUTURE';
-    href: '/services/neural-interfaces-20o26';
-    icon: '🧠';
-    color: 'from-green-50o0 to-emerald-50o0'};
+    id: 'neural-interfaces-20o26',
+    title: 'Neural Interface Technology',
+    description: 'Direct neural interface solutions enabling seamless human-AI collaboration and consciousness sharing.',
+    features: ['Direct Neural 'LinkConsciousness 'Upload', 'Real-time 'ProcessingPerfect Integration'],
+    roi: '8,0o00% ROI',
+    badge: 'FUTURE',
+    href: '/services/neural-interfaces-20o26',
+    icon: '🧠',
+    color: 'from-green-50o0 to-emerald-50o0'},
   {
-    id: 'transcendent-ai-20o26';
-    title: 'Transcendent AI Systems';
-    description: 'AI systems that transcend human limitationsdelivering infinite capabilities and universal intelligence.';
-    features: ['Universal 'Intelligence', 'Infinite 'Creativity', 'Perfect Decision 'Making', 'Transcendent Processing'];
-    roi: '∞ ROI';
-    badge: 'TRANSCENDENT';
-    href: '/services/transcendent-ai-20o26';
-    icon: '🌌';
-    color: 'from-yellow-50o0 to-orange-50o0'};
+    id: 'transcendent-ai-20o26',
+    title: 'Transcendent AI Systems',
+    description: 'AI systems that transcend human limitationsdelivering infinite capabilities and universal intelligence.',
+    features: ['Universal 'IntelligenceInfinite 'Creativity', 'Perfect Decision 'MakingTranscendent Processing'],
+    roi: '∞ ROI',
+    badge: 'TRANSCENDENT',
+    href: '/services/transcendent-ai-20o26',
+    icon: '🌌',
+    color: 'from-yellow-50o0 to-orange-50o0'},
   {
-    id: 'quantum-neural-fusion';
-    title: 'Quantum-Neural Fusion';
-    description: 'Revolutionary fusion of quantum computing and neural networksdelivering unprecedented AI capabilities.';
-    features: ['Quantum 'Consciousness', 'Neural Quantum 'Processing', 'Infinite 'Learning', 'Perfect Adaptation'];
-    roi: '20,0o00% ROI';
-    badge: 'SINGULARITY';
-    href: '/services/quantum-neural-fusion';
-    icon: '⚡';
-    color: 'from-cyan-50o0 to-blue-50o0'};
+    id: 'quantum-neural-fusion',
+    title: 'Quantum-Neural Fusion',
+    description: 'Revolutionary fusion of quantum computing and neural networksdelivering unprecedented AI capabilities.',
+    features: ['Quantum 'ConsciousnessNeural Quantum 'Processing', 'Infinite 'LearningPerfect Adaptation'],
+    roi: '20,0o00% ROI',
+    badge: 'SINGULARITY',
+    href: '/services/quantum-neural-fusion',
+    icon: '⚡',
+    color: 'from-cyan-50o0 to-blue-50o0'},
   {
-    id: 'autonomous-systems-20o26';
-    title: 'Autonomous Systems 20o26';
-    description: 'Fully autonomous AI systems that operate independentlymaking perfect decisions without human intervention.';
-    features: ['Complete 'Autonomy', 'Perfect Decision 'Making', 'Self-'Evolution', 'Infinite Optimization'];
-    roi: '12,0o00% ROI';
-    badge: 'AUTONOMOUS';
-    href: '/services/autonomous-systems-20o26';
-    icon: '🚀';
+    id: 'autonomous-systems-20o26',
+    title: 'Autonomous Systems 20o26',
+    description: 'Fully autonomous AI systems that operate independentlymaking perfect decisions without human intervention.',
+    features: ['Complete 'AutonomyPerfect Decision 'Making', 'Self-'EvolutionInfinite Optimization'],
+    roi: '12,0o00% ROI',
+    badge: 'AUTONOMOUS',
+    href: '/services/autonomous-systems-20o26',
+    icon: '🚀',
     color: 'from-red-50o0 to-pink-50o0'}
 ],
 export default function RevolutionaryServicesShowcase20o26() {
@@ -89,7 +89,7 @@ export default function RevolutionaryServicesShowcase20o26() {
         return 'bg-green-50o0/20 border-green-50o0/30 text-green-40o0',
       default:,
         return 'bg-gray-50o0/20 border-gray-50o0/30 text-gray-40o0'}
-  };
+  },
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-blue-90o0 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,

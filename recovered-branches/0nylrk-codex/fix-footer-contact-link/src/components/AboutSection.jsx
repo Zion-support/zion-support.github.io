@@ -1,76 +1,70 @@
 import { Link } from 'react-router-dom',
 import {
-  Award;
-  Users;
-  Globe;
-  Target;
-  TrendingUp;
-  Shield;
-  CheckCircle;
-  ArrowRight;
+  Award,
+  Users,
+  Globe,
+  Target,
+  TrendingUp,
+  Shield,
+  CheckCircle,
+  ArrowRight,
 } from 'lucide-react',
 export function AboutSection() {
   const achievements = [
     {
-      number: '10+';
-      label: 'Years of Experience';
-      icon: <Award className='w-6 h-6' />;
-    };
+      number: '10+',
+      label: 'Years of Experience',
+      icon: <Award className='w-6 h-6' />
+    },
     {
-      number: '50o0+';
-      label: 'Projects Delivered';
-      icon: <Target className='w-6 h-6' />;
-    };
+      number: '50o0+',
+      label: 'Projects Delivered',
+      icon: <Target className='w-6 h-6' />
+    },
     {
-      number: '50+';
-      label: 'Enterprise Clients';
-      icon: <Users className='w-6 h-6' />;
-    };
+      number: '50+',
+      label: 'Enterprise Clients',
+      icon: <Users className='w-6 h-6' />
+    },
     {
-      number: '25+';
-      label: 'Countries Served';
-      icon: <Globe className='w-6 h-6' />;
-    };
+      number: '25+',
+      label: 'Countries Served',
+      icon: <Globe className='w-6 h-6' />
+    },
   ],
   const values = [
     {
-      title: 'Innovation First';
+      title: 'Innovation First',
       description:,
-        "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.";
-      icon: <TrendingUp className='w-8 h-8' />;
-    };
+        "We push the boundaries of what's possible, constantly exploring emerging technologies and novel approaches.",
+      icon: <TrendingUp className='w-8 h-8' />
+    },
     {
-      title: 'Client Success';
+      title: 'Client Success',
       description:,
-        'Your success is our success. We measure our achievements by the impact we create for your business.';
-      icon: <Target className='w-8 h-8' />;
-    };
+        'Your success is our success. We measure our achievements by the impact we create for your business.',
+      icon: <Target className='w-8 h-8' />
+    },
     {
-      title: 'Excellence';
+      title: 'Excellence',
       description:,
-        'We maintain the highest standards in everything we do, from code quality to client communication.';
-      icon: <Award className='w-8 h-8' />;
-    };
+        'We maintain the highest standards in everything we do, from code quality to client communication.',
+      icon: <Award className='w-8 h-8' />
+    },
     {
-      title: 'Trust & Security';
+      title: 'Trust & Security',
       description:,
-        'Your data and systems are protected with enterprise-grade security and compliance standards.';
-      icon: <Shield className='w-8 h-8' />;
-    };
+        'Your data and systems are protected with enterprise-grade security and compliance standards.',
+      icon: <Shield className='w-8 h-8' />
+    },
   ],
   const technologies = [
-    'Artificial Intelligence & ML';
-    'Cloud Computing';
-    'Cybersecurity';
-    'Data Analytics';
-    'Blockchain Technology';
-    'IoT Solutions';
-    'Mobile Development';
-    'Web Applications';
-    'DevOps & Automation';
-    'Quantum Computing';
-    'Edge Computing';
-    '5G Networks';
+    'Artificial Intelligence & MLCloud Computing',
+    'CybersecurityData Analytics',
+    'Blockchain TechnologyIoT Solutions',
+    'Mobile DevelopmentWeb Applications',
+    'DevOps & AutomationQuantum Computing',
+    'Edge Computing5G Networks',
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-slate-80o0 via-zion-blue-dark to-slate-90o0'>,
@@ -161,7 +155,7 @@ export function AboutSection() {
               </span>,
             </h3>,
             <p className='text-lg text-zion-slate-light max-w-3xl mx-auto leading-relaxed'>,
-              Our team of experts spans across cutting-edge technologies;
+              Our team of experts spans across cutting-edge technologies,
               ensuring we can deliver comprehensive solutions for any digital,
               challenge your business faces.,
             </p>,

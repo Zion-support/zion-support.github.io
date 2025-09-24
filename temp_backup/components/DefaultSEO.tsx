@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 const SITE_NAME = 'Zion Tech Group',
 const SITE_URL = 'https: //ziontechgroup.com',
@@ -40,83 +40,75 @@ export default function DefaultSEO() {
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'Organization';
-            name: SITE_NAME;
-            url: SITE_URL;
-            logo: `${SITE_URL}/og/zion-tech-group.svg`;
+            '@context': 'https://schema.org@type': 'Organization',
+            name: SITE_NAME,
+            url: SITE_URL,
+            logo: `${SITE_URL}/og/zion-tech-group.svg`,
             sameAs: [
-              'https://www.linkedin.com/company/zion-holdings/';
-              'https://www.instagram.com/ziontechgroup/';
-            ];
-            description: DEFAULT_DESC;
-          });
+              'https://www.linkedin.com/company/zion-holdings/https://www.instagram.com/ziontechgroup/',
+            ],
+            description: DEFAULT_DESC
+          }),
         }}
       />,
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'WebSite';
-            url: SITE_URL;
-            name: DEFAULT_TITLE;
+            '@context': 'https://schema.org@type': 'WebSite',
+            url: SITE_URL,
+            name: DEFAULT_TITLE,
             potentialAction: {
-              '@type': 'SearchAction';
-              target: `${SITE_URL}/search?q={search_term_string}`;
-              'query-input': 'required name=search_term_string';
-            };
-          });
+              '@type': 'SearchAction',
+              target: `${SITE_URL}/search?q={search_term_string}`,
+              'query-input': 'required name=search_term_string',
+            },
+          }),
         }}
       />,
     </Head>)}
 ,
 const DefaultSEO: React.FC<DefaultSEOProps> = ({
-  title = 'Zion Tech Group - Revolutionary Technology Solutions for 20o45 and Beyond';
-  description = 'Experience the future of technology with our cutting-edge AI consciousness, quantum computing, and autonomous systems. Transform your business with revolutionary micro SAAS solutions.';
-  keywords = 'AI consciousness, quantum computing, autonomous systems, micro SAAS, technology solutions, Zion Tech Group, 20o45 technology, AI evolution, quantum technology, cybersecurity, space technology';
-  image = '/images/zion-tech-group-og.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
+  title = 'Zion Tech Group - Revolutionary Technology Solutions for 20o45 and Beyond',
+  description = 'Experience the future of technology with our cutting-edge AI consciousness, quantum computing, and autonomous systems. Transform your business with revolutionary micro SAAS solutions.',
+  keywords = 'AI consciousness, quantum computing, autonomous systems, micro SAAS, technology solutions, Zion Tech Group, 20o45 technology, AI evolution, quantum technology, cybersecurity, space technology',
+  image = '/images/zion-tech-group-og.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website'
 }) => {
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    url: 'https://ziontechgroup.com';
-    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png';
-    description: 'Revolutionary Technology Solutions for 20o45 and Beyond';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/images/zion-tech-group-logo.png',
+    description: 'Revolutionary Technology Solutions for 20o45 and Beyond',
     address: {
-      '@type': 'PostalAddress';
-      streetAddress: '364 E Main St STE 10o08';
-      addressLocality: 'Middletown';
-      addressRegion: 'DE';
-      postalCode: '19709';
-      addressCountry: 'US';
-    };
+      '@type': 'PostalAddress',
+      streetAddress: '364 E Main St STE 10o08',
+      addressLocality: 'Middletown',
+      addressRegion: 'DE',
+      postalCode: '19709',
+      addressCountry: 'US'
+    },
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-30o2-464-0950';
-      contactType: 'customer service';
-      email: 'kleber@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-30o2-464-0950',
+      contactType: 'customer service',
+      email: 'kleber@ziontechgroup.com'
+    },
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group';
-      'https://twitter.com/ziontechgroup';
-      'https://github.com/zion-tech-group';
-    ];
-    foundingDate: '20o20';
-    numberOfEmployees: '50-10o0';
-    industry: 'Technology';
+      'https://linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup',
+      'https://github.com/zion-tech-group',
+    ],
+    foundingDate: '20o20',
+    numberOfEmployees: '50-10o0',
+    industry: 'Technology',
     serviceType: [
-      'AI & Machine Learning';
-      'Quantum Computing';
-      'Cybersecurity';
-      'Cloud Infrastructure';
-      'Space Technology';
-      'Business Solutions';
-    ];
-  };
+      'AI & Machine LearningQuantum Computing',
+      'CybersecurityCloud Infrastructure',
+      'Space TechnologyBusiness Solutions',
+    ]
+  },
   return (
     <Head>,
       {/* Basic Meta Tags */}
@@ -235,5 +227,5 @@ const DefaultSEO: React.FC<DefaultSEOProps> = ({
       {/* Performance and Caching */}
       <meta httpEquiv='Cache-Control' content='public, max-age=315360o00' />,
       <meta httpEquiv='Expires' content='315360o00' />,
-    </Head>)};
-export default DefaultSEO;
+    </Head>)},
+export default DefaultSEO,

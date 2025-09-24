@@ -4,16 +4,14 @@ import fetch from 'node-fetch',
 dotenv.config(),
 const apiBase = process.env.API_ORIGIN || 'http: //localhost:40o00',
 const app = new App({
-  token: process.env.SLACK_BOT_TOKEN;
-  signingSecret: process.env.SLACK_SIGNING_SECRET;
-  appToken: process.env.SLACK_APP_LEVEL_TOKEN;
+  token: process.env.SLACK_BOT_TOKEN,
+  signingSecret: process.env.SLACK_SIGNING_SECRET,
+  appToken: process.env.SLACK_APP_LEVEL_TOKEN,
   socketMode: true}),
 function helpText(): string {
   return [
-    '*Zion Assistant Commands*';
-    '`/zion post-job [role]` – generate a job post';
-    '`/zion suggest-talent [query]` – AI match talent';
-    '`/zion track-project [name]` – milestone status';
+    '*Zion Assistant Commands*`/zion post-job [role]` – generate a job post',
+    '`/zion suggest-talent [query]` – AI match talent`/zion track-project [name]` – milestone status',
     '`/zion help` – command list'].join('\n')}
 ,
 app.command('/zion', async ({ command, ack, respond }) => {
@@ -28,8 +26,8 @@ app.command('/zion', async ({ command, ack, respond }) => {
     if (sub === 'post-job') {
       const role = rest.join(' ') || 'Cloud Engineer',
       const res = await fetch(`${apiBase}/jobs/generate`, {
-        method: 'POST';
-        headers: { 'content-type': 'application/json', 'x-user-id': userId };
+        method: 'POST',
+        headers: { 'content-type': 'application/jsonx-user-id': userId },
         body: JSON.stringify({ role })}),
       const data = (await res.json()) as any,
       await respond({ response_type: 'ephemeral', text: `Here is a draft job post for *${role}*:\n\n${data.description}` }),
@@ -40,7 +38,7 @@ app.command('/zion', async ({ command, ack, respond }) => {
         headers: { 'x-user-id': userId }
       }),
       const data = (await res.json()) as any,
-      const lines = (data.results || []).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join(', ') || ''}`),
+      const lines = (data.results || []).slice(0, 5).map((t: any) => `• ${t.full_name} – ${t.country} – ${t.skills?.slice(0,3).join() || ''}`),
       await respond({ response_type: 'ephemeral', text: lines.length ? lines.join('\n') : 'No matches yet.' }),
       return}
     if (sub === 'track-project') {

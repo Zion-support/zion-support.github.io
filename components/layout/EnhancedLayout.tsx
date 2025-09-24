@@ -1,6 +1,6 @@
-import React, { useEffect } from 'react';
-import EnhancedNavigation from './EnhancedNavigation';
-import EnhancedFooter from './EnhancedFooter';
+import React, { useEffect } from 'react',
+import EnhancedNavigation from './EnhancedNavigation',
+import EnhancedFooter from './EnhancedFooter',
 import i18n, { isRtl } from '../../utils/i18n',
 import LanguageSwitchPrompt from '../i18n/LanguageSwitchPrompt',
 import React, { useEffect } from 'react',
@@ -10,10 +10,10 @@ import EnhancedFooter from './EnhancedFooter',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -34,11 +34,11 @@ export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
     const lng = i18n.resolvedLanguage |i18n.language,
 export type EnhancedLayoutProps = {
 export type EnhancedLayoutProps = {
-  children: React.ReactNode};
+  children: React.ReactNode},
 export type EnhancedLayoutProps = {
   children: React.ReactNode,
 export type EnhancedLayoutProps = {
-  children: React.ReactNode};
+  children: React.ReactNode},
 export default function EnhancedLayout({ children }: EnhancedLayoutProps) {
   useEffect(() => {
     const lng = i18n.resolvedLanguage || i18n.language,

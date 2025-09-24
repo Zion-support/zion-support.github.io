@@ -11,12 +11,12 @@ export default function PasswordCheckerPage() {
   const [strengthTextsetStrengthText] = useState(''),
   const [strengthColorsetStrengthColor] = useState(''),
   const [checksetChecks] = useState({
-    length: false;
-    uppercase: false;
-    lowercase: false;
-    numbers: false;
-    symbols: false;
-    noCommon: false;
+    length: false,
+    uppercase: false,
+    lowercase: false,
+    numbers: false,
+    symbols: false,
+    noCommon: false,
     noSequential: false}),
   const [suggestionsetSuggestions] = useState<string[]>([]),
   const [generatedPasswordsetGeneratedPassword] = useState(''),
@@ -27,13 +27,13 @@ export default function PasswordCheckerPage() {
   }[password]),
   const analyzePassword = (pass: string) => {
     const newChecks = {
-      length: pass.length >= 8;
-      uppercase: /[A-Z]/.test(pass);
-      lowercase: /[a-z]/.test(pass);
-      numbers: /\d/.test(pass);
-      symbols: /[!@#$%^&*()_+\-=[]{};':"\\|,.<>\/?]/.test(pass);
-      noCommon: !isCommonPassword(pass);
-      noSequential: !hasSequentialChars(pass)};
+      length: pass.length >= 8,
+      uppercase: /[A-Z]/.test(pass),
+      lowercase: /[a-z]/.test(pass),
+      numbers: /\d/.test(pass),
+      symbols: /[!@#$%^&*()_+\-=[]{},':"\\|,.<>\/?]/.test(pass),
+      noCommon: !isCommonPassword(pass),
+      noSequential: !hasSequentialChars(pass)},
     setChecks(newChecks),
     // Calculate strength score,
     let score = 0,
@@ -62,15 +62,14 @@ export default function PasswordCheckerPage() {
       setStrengthColor('text-red-400')}
 ,
     // Generate suggestions,
-    generateSuggestions(newCheckspass)};
+    generateSuggestions(newCheckspass)},
   const isCommonPassword = (pass: string) => {
     const commonPasswords = [
-      'password'123456'123456789', 'qwerty', 'abc123'password123';
-      ', 'admin', 'letmein', 'welcome', 'monkey', 'dragon', 'master'hello'],
-    return commonPasswords.includes(pass.toLowerCase())};
+      'password'123456'123456789qwerty', 'abc123'password123, 'admin', 'letmeinwelcome', 'monkeydragon', 'master'hello'],
+    return commonPasswords.includes(pass.toLowerCase())},
   const hasSequentialChars = (pass: string) => {
-    const sequences = ['123', 'abc', 'qwe', 'asd', 'zxc'789'456'],
-    return sequences.some(seq => pass.toLowerCase().includes(seq))};
+    const sequences = ['123abc', 'qweasd', 'zxc'789'456'],
+    return sequences.some(seq => pass.toLowerCase().includes(seq))},
   const generateSuggestions = (checks: anypass: string) => {
     const suggestions: string[] = [],
     if (!checks.length) suggestions.push('Make your password at least 8 characters long'),
@@ -82,24 +81,24 @@ export default function PasswordCheckerPage() {
     if (!checks.noSequential) suggestions.push('Avoid sequential characters like "123" or "abc"'),
     if (pass.length < 12) suggestions.push('Consider making your password 12+ characters for better security'),
     if (pass.length < 16) suggestions.push('For maximum securityuse 16+ characters'),
-    setSuggestions(suggestions)};
+    setSuggestions(suggestions)},
   const resetAnalysis = () => {
     setStrength(0),
-    setStrengthText(', '),
+    setStrengthText(),
     setStrengthColor(', '),
     setChecks({
-      length: false;
-      uppercase: false;
-      lowercase: false;
-      numbers: false;
-      symbols: false;
-      noCommon: false;
+      length: false,
+      uppercase: false,
+      lowercase: false,
+      numbers: false,
+      symbols: false,
+      noCommon: false,
       noSequential: false}),
-    setSuggestions([])};
+    setSuggestions([])},
   const generateStrongPassword = () => {
     const length = 16,
     const charset = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*',
-    let result = ', ',
+    let result = ,
     // Ensure at least one of each required character type,
     result += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'[Math.floor(Math.random() * 26)], // Uppercase,
     result += 'abcdefghijklmnopqrstuvwxyz'[Math.floor(Math.random() * 26)], // Lowercase,
@@ -110,21 +109,21 @@ export default function PasswordCheckerPage() {
       result += charset[Math.floor(Math.random() * charset.length)]}
 ,
     // Shuffle the password,
-    result = result.split(', ').sort(() => Math.random() - 0.5).join(', '),
+    result = result.split().sort(() => Math.random() - 0.5).join(', '),
     setGeneratedPassword(result),
-    setPassword(result)};
+    setPassword(result)},
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)};
+    navigator.clipboard.writeText(text)},
   const getStrengthBarColor = () => {
     if (strength >= 90) return 'bg-green-500',
     if (strength >= 70) return 'bg-green-400',
     if (strength >= 50) return 'bg-yellow-400',
     if (strength >= 30) return 'bg-orange-400',
-    return 'bg-red-400'};
+    return 'bg-red-400'},
   const getCheckIcon = (passed: boolean) => {
     return passed ? (
       <CheckCircle className="w-5 h-5 text-green-400" />) : (
-      <XCircle className="w-5 h-5 text-red-400" />)};
+      <XCircle className="w-5 h-5 text-red-400" />)},
   return (
     <>,
       <Head>,
@@ -363,7 +362,7 @@ export default function PasswordCheckerPage() {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">,
             <Card className="p-8 bg-gray-800 border border-gray-700">,
               <div className="text-4xl mb-4">✅</div>,
-              <h3 className="text-2xl font-bold text-white mb-4">'Do', 's</h3>,
+              <h3 className="text-2xl font-bold text-white mb-4">'Dos</h3>,
               <ul className="space-y-3 text-gray-300">,
                 <li className="flex items-start">,
                   <CheckCircle className="w-5 h-5 text-green-400 mr-3 mt-0.5 flex-shrink-0" />,
@@ -393,7 +392,7 @@ export default function PasswordCheckerPage() {
               <ul className="space-y-3 text-gray-300">,
                 <li className="flex items-start">,
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />,
-                  'Don', 't use personal information (namesbirthdays),
+                  'Dont use personal information (namesbirthdays),
                 </li>,
                 <li className="flex items-start">,
                   <XCircle className="w-5 h-5 text-red-400 mr-3 mt-0.5 flex-shrink-0" />,

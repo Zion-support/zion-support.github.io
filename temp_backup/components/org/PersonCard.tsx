@@ -1,7 +1,7 @@
 import type { BasePerson } from '../../types/org',
 export default function PersonCard({
-  person;
-  showPhoto = true;
+  person,
+  showPhoto = true,
 }: {
   person: BasePerson,
   showPhoto?: boolean}) {

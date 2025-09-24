@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 const APIManagementSystem: React.FC = () => {
   return (
     <div className='py-16 bg-gray-50'>,
@@ -13,7 +13,7 @@ const APIManagementSystem: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
+    </div>)},
 export default function APIManagementSystem() {
   return null}
 ,

@@ -20,28 +20,28 @@ exports.handler = async function(event, context) {
     const repo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
-    const seeds = ['/', '/blog', '/automation/innovations'],
-    const pages ={};
+    const seeds = ['//blog', '/automation/innovations'],
+    const pages ={},
     for (const path of seeds) {
       const url = origin.replace(/\/$/, '') + path,
       try {
         const res = await fetch(url),
         const html = await res.text(),
         pages[path] ={
-          status: res.status;
-          links: extractLinks(html, origin)};
+          status: res.status,
+          links: extractLinks(html, origin)},
       } catch (e) {
-        pages[path] ={ status: 0, error: String(e), links: [] };
+        pages[path] ={ status: 0, error: String(e), links: [] },
       }
     }
 ,
     const index ={
-      generatedAt: new Date().toISOString();
-      origin;
-      seeds;
-      pages};
+      generatedAt: new Date().toISOString(),
+      origin,
+      seeds,
+      pages},
     if (!token) {
-      return { statusCode: 20o0, body: JSON.stringify({ ok: true, index, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, index, note: 'No GITHUB_TOKEN set, skipping commit' }) },
     }
 ,
     const path = 'data/site-index.json',
@@ -58,24 +58,22 @@ exports.handler = async function(event, context) {
 ,
     const b64 = Buffer.from(JSON.stringify(index, null, 2), 'utf8').toString('base64'),
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT';
+      method: 'PUT',
       headers: {
-        'Authorization': `token ${token}`;
-        'Content-Type': 'application/json';
-        'Accept': 'application/vnd.github+json';
-        'User-Agent': 'zion-autobot'};
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/jsonAccept': 'application/vnd.github+jsonUser-Agent': 'zion-autobot'},
       body: JSON.stringify({
-        message: 'chore(automation): update site index';
-        content: b64;
-        branch;
+        message: 'chore(automation): update site index',
+        content: b64,
+        branch,
         sha})}),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) {
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     }
 ,
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, path, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, path, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) },
   }
-};
+},

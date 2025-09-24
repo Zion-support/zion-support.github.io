@@ -5,19 +5,19 @@
  */,
 const fs = require('fs'),
 const path = require('path'),
-const PAGES_DIR = path.join(__dirname, '..', 'pages'),
-const OUTPUT_DIR = path.join(__dirname, '..', 'public', 'search'),
+const PAGES_DIR = path.join(__dirname, '..pages'),
+const OUTPUT_DIR = path.join(__dirname, '..public', 'search'),
 // Content types to index,
 const CONTENT_TYPES ={
   'pages': {
-    path: PAGES_DIR;
-    extensions: ['.tsx', '.ts', '.jsx', '.js'];
-    exclude: ['_app', '_document', 'api']};
+    path: PAGES_DIR,
+    extensions: ['.tsx.ts', '.jsx.js'],
+    exclude: ['_app_document', 'api']},
   'blog': {
-    path: path.join(PAGES_DIR, 'blog');
-    extensions: ['.tsx', '.ts', '.jsx', '.js'];
+    path: path.join(PAGES_DIR, 'blog'),
+    extensions: ['.tsx.ts', '.jsx.js'],
     exclude: []}
-};
+},
 function extractTextFromJSX(content) {
   // Simple text extraction from JSX/TSX content,
   return content,
@@ -30,9 +30,9 @@ function extractTextFromJSX(content) {
 ,
 function generateSearchIndex() {
   const searchIndex ={
-    pages: [];
-    blog: [];
-    generated: new Date().toISOString()};
+    pages: [],
+    blog: [],
+    generated: new Date().toISOString()},
   // Process each content type,
   Object.entries(CONTENT_TYPES).forEach(([type, config]) => {
     if (!fs.existsSync(config.path)) return,
@@ -53,12 +53,12 @@ function generateSearchIndex() {
               const content = fs.readFileSync(filePath, 'utf8'),
               const text = extractTextFromJSX(content),
               const entry ={
-                id: `${type}-${fileName}`;
-                title: fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
+                id: `${type}-${fileName}`,
+                title: fileName.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
                 content: text.substring(0, 50o0), // Limit content length,
-                url: `/${type === 'pages' ? '' : type + '/'}${fileName}`;
-                type: type;
-                lastModified: stats.mtime.toISOString()};
+                url: `/${type === 'pages' ? '' : type + '/'}${fileName}`,
+                type: type,
+                lastModified: stats.mtime.toISOString()},
               searchIndex[type].push(entry)} catch (error) {
               console.warn(`⚠️  Could not process ${filePath}:`, error.message)}
           }
@@ -78,5 +78,5 @@ function generateSearchIndex() {
 if (require.main === module) {
   generateSearchIndex()}
 ,
-module.exports ={ generateSearchIndex };
+module.exports ={ generateSearchIndex },
 }

@@ -1,55 +1,55 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
-  Calendar, Clock, Target, Users2, FileText2, PieChart;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
-  TrendingUp, Shield, Globe, Database, Network, Wallet;
-  CreditCard, PiggyBank, Building2, Activity, BarChart3;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
+  Calendar, Clock, Target, Users2, FileText2, PieChart,
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,
+  TrendingUp, Shield, Globe, Database, Network, Wallet,
+  CreditCard, PiggyBank, Building2, Activity, BarChart3,
   TrendingUp, Shield, Lock, Eye, Server, Cloud} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Quantum Risk Financial Manager | Zion Tech Group';
-  description: 'Revolutionary quantum-powered financial risk management platform with AI-driven analysis, real-time monitoring, and predictive risk assessment.';
-  keywords: 'quantum risk financial manager, AI risk management, financial risk assessment, quantum finance, risk analytics, financial security, quantum risk modeling';
+  title: 'Quantum Risk Financial Manager | Zion Tech Group',
+  description: 'Revolutionary quantum-powered financial risk management platform with AI-driven analysis, real-time monitoring, and predictive risk assessment.',
+  keywords: 'quantum risk financial manager, AI risk management, financial risk assessment, quantum finance, risk analytics, financial security, quantum risk modeling',
   openGraph: {
-    title: 'Quantum Risk Financial Manager | Zion Tech Group';
-    description: 'Revolutionary quantum-powered financial risk management platform with AI-driven analysis, real-time monitoring, and predictive risk assessment.';
-    url: 'https://ziontechgroup.com/quantum-risk-financial-manager';
-    siteName: 'Zion Tech Group';
+    title: 'Quantum Risk Financial Manager | Zion Tech Group',
+    description: 'Revolutionary quantum-powered financial risk management platform with AI-driven analysis, real-time monitoring, and predictive risk assessment.',
+    url: 'https://ziontechgroup.com/quantum-risk-financial-manager',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-quantum-risk-financial.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Quantum Risk Financial Manager'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-quantum-risk-financial.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Quantum Risk Financial Manager'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Quantum Risk Financial Manager | Zion Tech Group';
-    description: 'Revolutionary quantum-powered financial risk management platform with AI-driven analysis, real-time monitoring, and predictive risk assessment.';
-    images: ['https://ziontechgroup.com/og-image-quantum-risk-financial.jpg']};
+    card: 'summary_large_image',
+    title: 'Quantum Risk Financial Manager | Zion Tech Group',
+    description: 'Revolutionary quantum-powered financial risk management platform with AI-driven analysis, real-time monitoring, and predictive risk assessment.',
+    images: ['https://ziontechgroup.com/og-image-quantum-risk-financial.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/quantum-risk-financial-manager'}};
+    canonical: 'https://ziontechgroup.com/quantum-risk-financial-manager'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function QuantumRiskFinancialManager() {
   return (
     <div className="min-h-screen bg-black text-white">,

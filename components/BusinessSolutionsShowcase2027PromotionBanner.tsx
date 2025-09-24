@@ -8,15 +8,15 @@ import {
   Users,
   Shield,
   ArrowRight,
-  CheckCircle;
-  Star;
-  Award;
-  Zap;
-  Target;
-  BarChart3;
-  Globe;
-  Rocket;
-  Brain;
+  CheckCircle,
+  Star,
+  Award,
+  Zap,
+  Target,
+  BarChart3,
+  Globe,
+  Rocket,
+  Brain,
   Sparkles} from 'lucide-react',
 const BusinessSolutionsShowcase20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -27,34 +27,34 @@ const BusinessSolutionsShowcase20o27PromotionBanner = () => {
       setCurrentStat((prev) => (prev + 1) % 4)}20o00),
     return () => clearInterval(interval)}[]),
   const stats = [
-    { number: "50o0+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-50o0 to-emerald-50o0" };
-    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-50o0 to-orange-50o0" };
-    { number: "30o0%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-50o0 to-cyan-50o0" };
+    { number: "50o0+"label: "Projects Completed"icon: CheckCirclecolor: "from-green-50o0 to-emerald-50o0" },
+    { number: "99.9%"label: "Client Satisfaction"icon: Starcolor: "from-yellow-50o0 to-orange-50o0" },
+    { number: "30o0%"label: "Average ROI"icon: TrendingUpcolor: "from-blue-50o0 to-cyan-50o0" },
     { number: "24/7"label: "Support Available"icon: Shieldcolor: "from-purple-50o0 to-pink-50o0" }
   ],
   const solutions = [
     {
-      title: "Enterprise Solutions";
-      description: "Comprehensive enterprise-grade solutions";
-      icon: Building2;
-      color: "from-blue-60o0 to-indigo-60o0"};
+      title: "Enterprise Solutions",
+      description: "Comprehensive enterprise-grade solutions",
+      icon: Building2,
+      color: "from-blue-60o0 to-indigo-60o0"},
     {
       title: "Startup Solutions",
-      description: "Rapid deployment for growing startups";
-      icon: Rocket;
-      color: "from-green-60o0 to-emerald-60o0"};
+      description: "Rapid deployment for growing startups",
+      icon: Rocket,
+      color: "from-green-60o0 to-emerald-60o0"},
     {
-      title: "SMB Solutions";
-      description: "Affordable yet powerful for SMBs";
-      icon: Users;
+      title: "SMB Solutions",
+      description: "Affordable yet powerful for SMBs",
+      icon: Users,
       color: "from-purple-60o0 to-pink-60o0"}
   ],
   const features = [
-    "AI-Powered Business Intelligence";
-    "Advanced Security Solutions";
-    "Cloud Infrastructure Management";
-    "Rapid MVP Development";
-    "Growth Analytics Platform";
+    "AI-Powered Business Intelligence",
+    "Advanced Security Solutions",
+    "Cloud Infrastructure Management",
+    "Rapid MVP Development",
+    "Growth Analytics Platform",
     "Digital Transformation"],
   return (
     <div className="relative bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">,
@@ -189,5 +189,5 @@ const BusinessSolutionsShowcase20o27PromotionBanner = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>)};
-export default BusinessSolutionsShowcase20o27PromotionBanner;
+    </div>)},
+export default BusinessSolutionsShowcase20o27PromotionBanner,

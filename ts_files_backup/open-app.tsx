@@ -25,7 +25,7 @@ export default function OpenApp() {
       clearTimeout(timeout),
       clearTimeout(timer),
       try { document.body.removeChild(iframe)} catch {}
-    };
+    },
   }[]),
   return (
     <div className="min-h-[50vh] flex items-center justify-center">,

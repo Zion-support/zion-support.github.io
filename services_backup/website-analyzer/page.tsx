@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Website Analyzer | Zion Tech Group';
+  title: 'Website Analyzer | Zion Tech Group',
   description:,
-    'Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.';
-};
+    'Comprehensive website analysis tool. SEO audit, performance monitoring, security scanning, and competitive analysis.',
+},
 export default function WebsiteAnalyzerPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -12,7 +12,7 @@ export default function WebsiteAnalyzerPage() {
           Website Analyzer,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Comprehensive website analysis tool that provides SEO audits;
+          Comprehensive website analysis tool that provides SEO audits,
           performance monitoring, security scanning, and competitive analysis.,
           Optimize your website for maximum impact.,
         </p>,
@@ -21,31 +21,25 @@ export default function WebsiteAnalyzerPage() {
         <FeatureCard
           title='SEO Analysis',
           details={[
-            'Technical SEO audit';
-            'Keyword ranking tracking';
-            'Backlink analysis';
-            'Content optimization suggestions';
-            'Core Web Vitals monitoring';
+            'Technical SEO auditKeyword ranking tracking',
+            'Backlink analysisContent optimization suggestions',
+            'Core Web Vitals monitoring',
           ]}
         />,
         <FeatureCard
           title='Performance Monitoring',
           details={[
-            'Page speed analysis';
-            'Mobile performance testing';
-            'Uptime monitoring';
-            'Load time optimization';
-            'Performance alerts';
+            'Page speed analysisMobile performance testing',
+            'Uptime monitoringLoad time optimization',
+            'Performance alerts',
           ]}
         />,
         <FeatureCard
           title='Security & Compliance',
           details={[
-            'Security vulnerability scanning';
-            'SSL certificate monitoring';
-            'GDPR compliance check';
-            'Malware detection';
-            'Security recommendations';
+            'Security vulnerability scanningSSL certificate monitoring',
+            'GDPR compliance checkMalware detection',
+            'Security recommendations',
           ]}
         />,
       </div>,
@@ -96,22 +90,18 @@ function PricingSection() {
           name='Basic',
           price='$19/mo',
           features={[
-            '5 websites';
-            'Monthly SEO reports';
-            'Basic performance monitoring';
-            'Email support';
-            'Standard security scan';
+            '5 websitesMonthly SEO reports',
+            'Basic performance monitoringEmail support',
+            'Standard security scan',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$79/mo',
           features={[
-            '25 websites';
-            'Weekly SEO reports';
-            'Advanced performance monitoring';
-            'Priority support';
-            'Comprehensive security analysis';
+            '25 websitesWeekly SEO reports',
+            'Advanced performance monitoringPriority support',
+            'Comprehensive security analysis',
           ]}
           featured={true}
         />,
@@ -119,21 +109,19 @@ function PricingSection() {
           name='Agency',
           price='$199/mo',
           features={[
-            'Unlimited websites';
-            'Real-time monitoring';
-            'White-label reports';
-            'API access';
-            'Dedicated account manager';
+            'Unlimited websitesReal-time monitoring',
+            'White-label reportsAPI access',
+            'Dedicated account manager',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

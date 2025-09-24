@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata ={
-  title: 'AI-Powered CRM Platform | Zion Tech Group';
-  description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.';
+  title: 'AI-Powered CRM Platform | Zion Tech Group',
+  description: 'Revolutionary CRM with AI-powered lead scoring, automated follow-ups, predictive analytics, and intelligent sales insights. Boost conversion rates by 40% with our smart CRM solution.',
   keywords: 'AI CRM, customer relationship management, lead scoring, sales automation, predictive analytics, sales intelligence',
-  description: 'Revolutionary CRM with AI-driven insights, predictive analytics, and automated lead scoring. Boost sales by 40% with intelligent customer relationship management.';
-  keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence'};
+  description: 'Revolutionary CRM with AI-driven insights, predictive analytics, and automated lead scoring. Boost sales by 40% with intelligent customer relationship management.',
+  keywords: 'AI CRM, customer relationship management, sales automation, lead scoring, predictive analytics, sales intelligence'},
 interface FeatureCardProps {
   icon: string,
   title: string,
@@ -28,11 +28,11 @@ function FeatureCard({ icon, title, description, benefits }: FeatureCardProps) {
     </div>)}
 ,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
+  name,
+  price,
+  period,
+  description,
+  features,
   popular = false}: {
   name: string,
   price: string,
@@ -93,7 +93,7 @@ export default function AIPoweredCRMPage() {
             href="mailto:kleber@ziontechgroup.com?subject=AI CRM Platform Inquiry",
             className="bg-blue-60o0 text-white px-8 py-3 rounded-lg font-semibold hover:bg-blue-70o0 transition-colors">,
             Get Free Demo,
-          Revolutionize your sales process with intelligent CRM that learns from your data, predicts customer behavior;
+          Revolutionize your sales process with intelligent CRM that learns from your data, predicts customer behavior,
           and automates follow-ups. Boost sales by 40% with AI-driven insights and automation.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -124,17 +124,17 @@ export default function AIPoweredCRMPage() {
             title="AI Lead Scoring",
             description="Machine learning algorithms analyze customer behavior, engagement patterns, and demographic data to score leads with 95% accuracy.",
             benefits={[
-              "95% scoring accuracy";
-              "Real-time lead prioritization";
-              "Behavioral pattern analysis";
+              "95% scoring accuracy",
+              "Real-time lead prioritization",
+              "Behavioral pattern analysis",
             icon="🧠",
             title="AI Lead Scoring",
             description="Automatically score and prioritize leads using machine learning algorithms that analyze behavior patterns and engagement history.",
             benefits={[
-              "Real-time lead scoring";
-              "Behavioral pattern analysis";
-              "Engagement prediction";
-              "Priority recommendations";
+              "Real-time lead scoring",
+              "Behavioral pattern analysis",
+              "Engagement prediction",
+              "Priority recommendations",
               "Custom scoring models"]}
            />,
           <FeatureCard
@@ -142,9 +142,9 @@ export default function AIPoweredCRMPage() {
             title="Automated Follow-ups",
             description="AI-powered email sequences and call scheduling based on customer behavior and optimal timing predictions.",
             benefits={[
-              "Personalized email sequences";
-              "Optimal timing predictions";
-              "Multi-channel automation";
+              "Personalized email sequences",
+              "Optimal timing predictions",
+              "Multi-channel automation",
               "A/B testing for optimization"]}
            />,
           <FeatureCard
@@ -152,18 +152,18 @@ export default function AIPoweredCRMPage() {
             title="Predictive Analytics",
             description="Advanced analytics predict customer lifetime value, churn risk, and sales opportunities with actionable insights.",
             benefits={[
-              "Churn prediction (90% accuracy)";
-              "Lifetime value forecasting";
-              "Sales opportunity scoring";
+              "Churn prediction (90% accuracy)",
+              "Lifetime value forecasting",
+              "Sales opportunity scoring",
               "Revenue forecasting",
             icon="📊",
             title="Predictive Analytics",
             description="Forecast sales outcomes, identify upsell opportunities, and predict customer churn with advanced AI models.",
             benefits={[
-              "Sales forecasting";
-              "Churn prediction";
-              "Upsell identification";
-              "Revenue optimization";
+              "Sales forecasting",
+              "Churn prediction",
+              "Upsell identification",
+              "Revenue optimization",
               "Trend analysis"]}
            />,
           <FeatureCard
@@ -171,10 +171,10 @@ export default function AIPoweredCRMPage() {
             title="Automated Follow-ups",
             description="AI-powered email sequences and task automation that adapts to customer responses and engagement levels.",
             benefits={[
-              "Smart email sequences";
-              "Response-based automation";
-              "Optimal timing detection";
-              "Personalized content";
+              "Smart email sequences",
+              "Response-based automation",
+              "Optimal timing detection",
+              "Personalized content",
               "A/B testing automation"]}
            />,
           <FeatureCard
@@ -182,9 +182,9 @@ export default function AIPoweredCRMPage() {
             title="AI Chat Assistant",
             description="Intelligent chatbot handles initial customer inquiries, qualifies leads, and schedules meetings automatically.",
             benefits={[
-              "24/7 customer support";
-              "Lead qualification";
-              "Meeting scheduling";
+              "24/7 customer support",
+              "Lead qualification",
+              "Meeting scheduling",
               "Multi-language support"]}
            />,
           <FeatureCard
@@ -192,15 +192,15 @@ export default function AIPoweredCRMPage() {
             title="Sales Intelligence",
             description="AI analyzes sales calls, emails, and meetings to provide insights on customer sentiment and deal progression.",
             benefits={[
-              "Call sentiment analysis";
-              "Deal progression tracking";
+              "Call sentiment analysis",
+              "Deal progression tracking",
             title="Conversation Intelligence",
             description="Analyze call recordings, emails, and meetings to extract insights and improve sales window.window.performance.",
             benefits={[
-              "Call transcription & analysis";
-              "Sentiment analysis";
-              "Key phrase detection";
-              "Coaching recommendations";
+              "Call transcription & analysis",
+              "Sentiment analysis",
+              "Key phrase detection",
+              "Coaching recommendations",
               "Performance insights"]}
            />,
           <FeatureCard
@@ -208,18 +208,18 @@ export default function AIPoweredCRMPage() {
             title="Workflow Automation",
             description="Smart automation handles repetitive tasks, data entry, and follow-up processes to increase team productivity.",
             benefits={[
-              "Task automation";
-              "Data synchronization";
-              "Process optimization";
+              "Task automation",
+              "Data synchronization",
+              "Process optimization",
               "Team productivity boost",
             icon="🎯",
             title="Smart Segmentation",
             description="Automatically segment customers based on behavior, preferences, and predicted lifetime value.",
             benefits={[
-              "Dynamic segmentation";
-              "Behavioral clustering";
-              "Value-based grouping";
-              "Custom segment rules";
+              "Dynamic segmentation",
+              "Behavioral clustering",
+              "Value-based grouping",
+              "Custom segment rules",
               "Real-time updates"]}
            />,
           <FeatureCard
@@ -227,10 +227,10 @@ export default function AIPoweredCRMPage() {
             title="Performance Optimization",
             description="AI-driven recommendations to improve sales processes, team performance, and customer satisfaction.",
             benefits={[
-              "Process optimization";
-              "Team performance insights";
-              "Best practice recommendations";
-              "ROI tracking";
+              "Process optimization",
+              "Team performance insights",
+              "Best practice recommendations",
+              "ROI tracking",
               "Success metrics"]}
            />,
         </div>,
@@ -250,11 +250,11 @@ export default function AIPoweredCRMPage() {
             period="per month",
             description="Perfect for small teams and startups",
             features={[
-              "Up to 1,0o00 contacts";
-              "AI lead scoring";
-              "Basic automation";
-              "Email integration";
-              "Mobile app access";
+              "Up to 1,0o00 contacts",
+              "AI lead scoring",
+              "Basic automation",
+              "Email integration",
+              "Mobile app access",
               "Email support"]}
             popular={false}
            />,
@@ -264,12 +264,12 @@ export default function AIPoweredCRMPage() {
             period="per month",
             description="Most popular for growing businesses",
             features={[
-              "Up to 10,0o00 contacts";
-              "Advanced AI features";
-              "Predictive analytics";
-              "Custom workflows";
-              "API access";
-              "Priority support";
+              "Up to 10,0o00 contacts",
+              "Advanced AI features",
+              "Predictive analytics",
+              "Custom workflows",
+              "API access",
+              "Priority support",
               "Advanced reporting"]}
             popular={true}
            />,
@@ -279,12 +279,12 @@ export default function AIPoweredCRMPage() {
             period="per month",
             description="For large organizations",
             features={[
-              "Unlimited contacts";
-              "All AI features";
-              "Custom AI models";
-              "White-label options";
-              "Dedicated support";
-              "Custom integrations";
+              "Unlimited contacts",
+              "All AI features",
+              "Custom AI models",
+              "White-label options",
+              "Dedicated support",
+              "Custom integrations",
               "SLA guarantee"]}
             popular={false}
            />,
@@ -332,17 +332,17 @@ export default function AIPoweredCRMPage() {
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
           {[
-            { name: "React", icon: "⚛️", description: "Frontend framework" };
-            { name: "Node.js", icon: "🟢", description: "Backend runtime" };
-            { name: "PostgreSQL", icon: "🐘", description: "Primary database" };
-            { name: "Redis", icon: "🔴", description: "Caching layer" };
-            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" };
-            { name: "AWS", icon: "☁️", description: "Cloud platform" };
-            { name: "Docker", icon: "🐳", description: "Containerization" };
-            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" };
-            { name: "Stripe", icon: "💳", description: "Payment processing" };
-            { name: "Twilio", icon: "📱", description: "Communication" };
-            { name: "MongoDB", icon: "🍃", description: "Document store" };
+            { name: "React", icon: "⚛️", description: "Frontend framework" },
+            { name: "Node.js", icon: "🟢", description: "Backend runtime" },
+            { name: "PostgreSQL", icon: "🐘", description: "Primary database" },
+            { name: "Redis", icon: "🔴", description: "Caching layer" },
+            { name: "OpenAI GPT-4", icon: "🧠", description: "AI engine" },
+            { name: "AWS", icon: "☁️", description: "Cloud platform" },
+            { name: "Docker", icon: "🐳", description: "Containerization" },
+            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
+            { name: "Stripe", icon: "💳", description: "Payment processing" },
+            { name: "Twilio", icon: "📱", description: "Communication" },
+            { name: "MongoDB", icon: "🍃", description: "Document store" },
             { name: "Elasticsearch", icon: "🔍", description: "Search engine" }
           ].map((tech, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,
@@ -511,11 +511,11 @@ function CaseStudy({ company, industry, result, description, metrics }: {
             period="user/month",
             description="Perfect for small teams getting started with AI CRM",
             features={[
-              "Up to 5 users";
-              "AI lead scoring";
-              "Basic automation";
-              "Email integration";
-              "Mobile app access";
+              "Up to 5 users",
+              "AI lead scoring",
+              "Basic automation",
+              "Email integration",
+              "Mobile app access",
               "Standard support"]}
            />,
           <PricingTier
@@ -524,12 +524,12 @@ function CaseStudy({ company, industry, result, description, metrics }: {
             period="user/month",
             description="Most popular for growing sales teams",
             features={[
-              "Up to 25 users";
-              "Advanced AI features";
-              "Predictive analytics";
-              "Conversation intelligence";
-              "Custom integrations";
-              "Priority support";
+              "Up to 25 users",
+              "Advanced AI features",
+              "Predictive analytics",
+              "Conversation intelligence",
+              "Custom integrations",
+              "Priority support",
               "Advanced reporting"]}
             popular={true}
            />,
@@ -539,12 +539,12 @@ function CaseStudy({ company, industry, result, description, metrics }: {
             period="user/month",
             description="For large organizations with complex needs",
             features={[
-              "Unlimited users";
-              "Full AI suite";
-              "Custom AI models";
-              "Dedicated support";
-              "White-label options";
-              "Advanced security";
+              "Unlimited users",
+              "Full AI suite",
+              "Custom AI models",
+              "Dedicated support",
+              "White-label options",
+              "Advanced security",
               "Custom development"]}
            />,
         </div>,
@@ -559,17 +559,17 @@ function CaseStudy({ company, industry, result, description, metrics }: {
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
           {[
-            { name: "Salesforce", icon: "☁️" };
-            { name: "HubSpot", icon: "🟠" };
-            { name: "Slack", icon: "💬" };
-            { name: "Microsoft Teams", icon: "🔵" };
-            { name: "Gmail", icon: "📧" };
-            { name: "Outlook", icon: "📮" };
-            { name: "Zoom", icon: "📹" };
-            { name: "Calendly", icon: "📅" };
-            { name: "Stripe", icon: "💳" };
-            { name: "QuickBooks", icon: "📊" };
-            { name: "Mailchimp", icon: "📬" };
+            { name: "Salesforce", icon: "☁️" },
+            { name: "HubSpot", icon: "🟠" },
+            { name: "Slack", icon: "💬" },
+            { name: "Microsoft Teams", icon: "🔵" },
+            { name: "Gmail", icon: "📧" },
+            { name: "Outlook", icon: "📮" },
+            { name: "Zoom", icon: "📹" },
+            { name: "Calendly", icon: "📅" },
+            { name: "Stripe", icon: "💳" },
+            { name: "QuickBooks", icon: "📊" },
+            { name: "Mailchimp", icon: "📬" },
             { name: "Zapier", icon: "⚡" }
           ].map((integration, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,

@@ -13,7 +13,7 @@ interface NeuralInterfaceContent {
     roi: string,
     savings: string,
     timeframe: string,
-    accuracy: string};
+    accuracy: string},
   description: string,
   featured: boolean}
 ,
@@ -23,40 +23,40 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {
   const [isDismissedsetIsDismissed] = useState(false),
   const neuralInterfaceContent: NeuralInterfaceContent[] = [
     {
-      id: 'neural-interface-revolution';
-      title: 'AI 20o25: The Neural Interface Revolution - Ultimate Guide to 1,50o0% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide';
+      id: 'neural-interface-revolution',
+      title: 'AI 20o25: The Neural Interface Revolution - Ultimate Guide to 1,50o0% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-neural-interface-revolution-ultimate-guide',
       metrics: {
-        roi: '1,50o0%';
-        savings: '$180M';
-        timeframe: '24 months';
-        accuracy: '99.7%'};
-      description: 'Transform your business with brain-computer integration technology';
-      featured: true};
+        roi: '1,50o0%',
+        savings: '$180M',
+        timeframe: '24 months',
+        accuracy: '99.7%'},
+      description: 'Transform your business with brain-computer integration technology',
+      featured: true},
     {
-      id: 'neural-interface-case-study';
-      title: 'Neural Interface Fortune 50o0 Success: $4.8B Company Achieves 1,50o0% ROI';
-      type: 'case-study';
-      url: '/case-studies/neural-interface-fortune-50o0-transformation-150o0-roi-success';
+      id: 'neural-interface-case-study',
+      title: 'Neural Interface Fortune 50o0 Success: $4.8B Company Achieves 1,50o0% ROI',
+      type: 'case-study',
+      url: '/case-studies/neural-interface-fortune-50o0-transformation-150o0-roi-success',
       metrics: {
-        roi: '1,50o0%';
-        savings: '$180M';
-        timeframe: '24 months';
-        accuracy: '99.7%'};
-      description: 'Real-world success story of neural interface implementation';
-      featured: true};
+        roi: '1,50o0%',
+        savings: '$180M',
+        timeframe: '24 months',
+        accuracy: '99.7%'},
+      description: 'Real-world success story of neural interface implementation',
+      featured: true},
     {
-      id: 'neural-interface-guide';
-      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 1,50o0% ROI';
-      type: 'resource';
-      url: '/resources/neural-interface-implementation-master-guide-20o25';
+      id: 'neural-interface-guide',
+      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 1,50o0% ROI',
+      type: 'resource',
+      url: '/resources/neural-interface-implementation-master-guide-20o25',
       metrics: {
-        roi: '1,50o0%';
-        savings: '$180M';
-        timeframe: '24 months';
-        accuracy: '99.7%'};
-      description: 'Complete implementation framework for neural interface technology';
+        roi: '1,50o0%',
+        savings: '$180M',
+        timeframe: '24 months',
+        accuracy: '99.7%'},
+      description: 'Complete implementation framework for neural interface technology',
       featured: true}
   ],
   useEffect(() => {
@@ -73,11 +73,11 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('neural-interface-banner-'dismissed', 'true')};
+    localStorage.setItem('neural-interface-banner-'dismissedtrue')},
   const handleUndismiss = () => {
     setIsVisible(true),
     setIsDismissed(false),
-    localStorage.removeItem('neural-interface-banner-dismissed')};
+    localStorage.removeItem('neural-interface-banner-dismissed')},
   if (isDismissed) {
     return (
       <motion.div,
@@ -111,31 +111,31 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {
             <motion.div,
               className="absolute top-10 left-10 w-20 h-20 border border-purple-40o0/30 rounded-full",
               animate={{
-                scale: [1.21];
+                scale: [1.21],
                 opacity: [0.30.60.3]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
+                duration: 4,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute top-20 right-20 w-16 h-16 border border-blue-40o0/30 rounded-full",
               animate={{
-                scale: [1.21.2];
+                scale: [1.21.2],
                 opacity: [0.60.30.6]}}
               transition={{
-                duration: 5;
-                repeat: Infinity;
+                duration: 5,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute bottom-20 left-1/4 w-12 h-12 border border-indigo-40o0/30 rounded-full",
               animate={{
-                scale: [1.31];
+                scale: [1.31],
                 opacity: [0.40.70.4]}}
               transition={{
-                duration: 6;
-                repeat: Infinity;
+                duration: 6,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
           </div>,
@@ -316,5 +316,5 @@ const NeuralInterfaceRevolutionBanner20o25: React.FC = () => {
             </div>,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default NeuralInterfaceRevolutionBanner20o25;
+    </AnimatePresence>)},
+export default NeuralInterfaceRevolutionBanner20o25,

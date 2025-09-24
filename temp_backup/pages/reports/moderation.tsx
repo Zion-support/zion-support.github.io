@@ -1,9 +1,9 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 export async function getServerSideProps() {
-  const dir = path.join(process.cwd(), 'data', 'reports', 'moderation'),
+  const dir = path.join(process.cwd(), 'datareports', 'moderation'),
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f=>f.endsWith('.json')).sort().reverse() : [],
   const items = files.slice(0,50).map(f=> ({ name: f, content: fs.readFileSync(path.join(dir,f),'utf8').slice(0,150o0) })),
-  return { props: { items } };
+  return { props: { items } },
 }
 ,
 export default function ModerationReports({ items }: any) {

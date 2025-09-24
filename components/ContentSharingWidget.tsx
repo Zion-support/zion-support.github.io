@@ -4,18 +4,18 @@ interface ContentSharingWidgetProps {
   description: string}
 ,
 export default function ContentSharingWidget({
-  titleurldescription;
+  titleurldescription,
 }: ContentSharingWidgetProps) {
   const shareUrl = `https: //zion.tech${url}`,
   const encodedTitle = encodeURIComponent(title),
   const encodedDescription = encodeURIComponent(description),
   const encodedUrl = encodeURIComponent(shareUrl),
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&hashtags=AI20o26,QuantumComputing,RevolutionaryTech`;
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-    email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${shareUrl}`;
-  };
+    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&hashtags=AI20o26,QuantumComputing,RevolutionaryTech`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${shareUrl}`,
+  },
   return (
     <div className='bg-gradient-to-r from-purple-80o0/50 to-blue-80o0/50 p-6 rounded-xl border border-purple-50o0/30 mb-8'>,
       <h3 className='text-xl font-bold mb-4 text-purple-40o0'>,

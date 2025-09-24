@@ -1,4 +1,4 @@
-export default function ITSolutionsPage() {;
+export default function ITSolutionsPage() {,
   return (
     <main className='min-h-screen py-20 px-4'>
       <div className='max-w-5xl mx-auto'>
@@ -6,4 +6,4 @@ export default function ITSolutionsPage() {;
         <p className='text-zinc-500'>IT solutions details coming soon.</p>
       </div>
     </main>)}
-;
+,

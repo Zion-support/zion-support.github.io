@@ -6,7 +6,7 @@ interface AuditReport {
   error?: string,
   raw?: string}
 ,
-type Props ={ report: AuditReport };
+type Props ={ report: AuditReport },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
 }}

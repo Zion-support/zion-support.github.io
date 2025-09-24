@@ -4,7 +4,7 @@ export interface RateLimitConfig {
   requestsPerMinute: number,
   requestsPerHour: number,
   requestsPerDay: number,
-  burst_limit: number;
+  burst_limit: number,
   window_size: number}
 ,
   id: string,
@@ -13,7 +13,7 @@ export interface RateLimitConfig {
   method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL',
   config: RateLimitConfig,
   enabled: boolean,
-  created_at: Date;
+  created_at: Date,
   updated_at: Date}
 ,
   endpoint: string,
@@ -24,7 +24,7 @@ export interface RateLimitConfig {
   last_request: Date,
   current_usage: {
     minute: number,
-    hour: number;
+    hour: number,
     day: number}
 }
 ,
@@ -34,7 +34,7 @@ export interface RateLimitConfig {
   permissions: string[],
   rate_limit: RateLimitConfig,
   created_at: Date,
-  last_used: Date;
+  last_used: Date,
   is_active: boolean}
 ,
   id: string,
@@ -44,7 +44,7 @@ export interface RateLimitConfig {
   timestamp: Date,
   reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded',
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontech.ai') {
-    this && this.apiKey = apiKey;
+    this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl,
   userAgent: string}
 ,
@@ -54,27 +54,27 @@ export class APIRateLimiterService {
   async createRateLimitRule(rule: Omit<RateLimitRule 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(rule)}),
       if (!response && response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response && response.statusText}`)}
 ,
       return await response && response.json(),
-  ip_address: string;
+  ip_address: string,
   user_agent: string}
 export class APIRateLimiterService {
   private api_key: string,
-  private base_url: string;
+  private base_url: string,
   constructor (api_key: string, base_url: string = 'https://api.ziontech.ai') {
-    this.api_key = api_key;
+    this.api_key = api_key,
     this.base_url = base_url}
   async createRateLimitRule (rule: Omit < RateLimitRule, 'id' | 'created_at' | 'updated_at'>): Promise < RateLimitRule> {
     try {
       const response = await fetch (`${this.base_url}/rate - limiter / rules`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -88,7 +88,7 @@ if ( {) {
       return {
         ...rule,
         id: `rule_${Date && Date.now()}`,
-        createdAt: new Date();
+        createdAt: new Date(),
         updatedAt: new Date()}
     }
   }
@@ -102,7 +102,7 @@ if ( {) {
 ,
       return await response && response.json(),
         id: `rule_${Date.now ()}`,
-        created_at: new Date ();
+        created_at: new Date (),
         updated_at: new Date ()}
     }
   }
@@ -127,10 +127,10 @@ if ( {) {
             requestsPerMinute: 100,
             requestsPerHour: 1000,
             requestsPerDay: 10000,
-            burst_limit: 50;
+            burst_limit: 50,
             window_size: 60}
           enabled: true,
-          created_at: new Date ();
+          created_at: new Date (),
           updated_at: new Date ()}
         {
           id: 'rule_2',
@@ -141,7 +141,7 @@ if ( {) {
             requestsPerMinute: 10,
             requestsPerHour: 100,
             requestsPerDay: 1000,
-            burst_limit: 5;
+            burst_limit: 5,
             window_size: 60}
           enabled: true,
           createdAt: new Date(),
@@ -216,79 +216,79 @@ if ( {) {
             hour: 95,
             day: 650,
 export interface RateLimitConfig {
-  requestsPerMinute: number;
-  requestsPerHour: number;
-  requestsPerDay: number;
-  burstLimit: number;
+  requestsPerMinute: number,
+  requestsPerHour: number,
+  requestsPerDay: number,
+  burstLimit: number,
   windowSize: number}
 ,
 export interface RateLimitRule {
-  id: string;
-  name: string;
-  pattern: string;
-  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL';
-  config: RateLimitConfig;
-  enabled: boolean;
-  createdAt: Date;
+  id: string,
+  name: string,
+  pattern: string,
+  method: 'GET' | 'POST' | 'PUT' | 'DELETE' | 'ALL',
+  config: RateLimitConfig,
+  enabled: boolean,
+  createdAt: Date,
   updatedAt: Date}
 ,
 export interface RateLimitStats {
-  endpoint: string;
-  method: string;
-  totalRequests: number;
-  blockedRequests: number;
-  averageResponseTime: number;
-  lastRequest: Date;
+  endpoint: string,
+  method: string,
+  totalRequests: number,
+  blockedRequests: number,
+  averageResponseTime: number,
+  lastRequest: Date,
   currentUsage: {
-    minute: number;
-    hour: number;
+    minute: number,
+    hour: number,
     day: number}
 }
 ,
 export interface APIKey {
-  id: string;
-  name: string;
-  key: string;
-  permissions: string[];
-  rateLimit: RateLimitConfig;
-  createdAt: Date;
-  lastUsed: Date;
+  id: string,
+  name: string,
+  key: string,
+  permissions: string[],
+  rateLimit: RateLimitConfig,
+  createdAt: Date,
+  lastUsed: Date,
   isActive: boolean}
 ,
 export interface RateLimitViolation {
-  id: string;
-  apiKey: string;
-  endpoint: string;
-  method: string;
-  timestamp: Date;
-  reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded';
-  ipAddress: string;
+  id: string,
+  apiKey: string,
+  endpoint: string,
+  method: string,
+  timestamp: Date,
+  reason: 'rate_limit_exceeded' | 'burst_limit_exceeded' | 'quota_exceeded',
+  ipAddress: string,
   userAgent: string}
 ,
 export class APIRateLimiterService {
-  private apiKey: string;
-  private baseUrl: string;
+  private apiKey: string,
+  private baseUrl: string,
   constructor(apiKey: string, baseUrl: string = 'https://api.ziontech.ai') {
-    this.apiKey = apiKey;
+    this.apiKey = apiKey,
     this.baseUrl = baseUrl}
 ,
   async createRateLimitRule(rule: Omit<RateLimitRule 'id' | 'createdAt' | 'updatedAt'>): Promise<RateLimitRule> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON.stringify(rule)});
+          'Authorization': `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json'},
+        body: JSON.stringify(rule)}),
       if (!response.ok) {
         throw new Error(`Failed to create rate limit rule: ${response.statusText}`)}
 ,
       return await response.json()} catch (error) {
       // Mock response for demo,
       return {
-        ...rule;
-        id: `rule_${Date.now()}`;
-        createdAt: new Date();
+        ...rule,
+        id: `rule_${Date.now()}`,
+        createdAt: new Date(),
         updatedAt: new Date()}
     }
   }
@@ -297,7 +297,7 @@ export class APIRateLimiterService {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/rules`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch rate limit rules: ${response.statusText}`)}
 ,
@@ -305,41 +305,41 @@ export class APIRateLimiterService {
       // Mock rules for demo,
       return [
         {
-          id: 'rule_1';
-          name: 'API Endpoints';
-          pattern: '/api/**';
-          method: 'ALL';
+          id: 'rule_1',
+          name: 'API Endpoints',
+          pattern: '/api/**',
+          method: 'ALL',
           config: {
-            requestsPerMinute: 100;
-            requestsPerHour: 1000;
-            requestsPerDay: 10000;
-            burstLimit: 50;
-            windowSize: 60};
-          enabled: true;
-          createdAt: new Date();
-          updatedAt: new Date()};
+            requestsPerMinute: 100,
+            requestsPerHour: 1000,
+            requestsPerDay: 10000,
+            burstLimit: 50,
+            windowSize: 60},
+          enabled: true,
+          createdAt: new Date(),
+          updatedAt: new Date()},
         {
-          id: 'rule_2';
-          name: 'Authentication';
-          pattern: '/auth/**';
-          method: 'POST';
+          id: 'rule_2',
+          name: 'Authentication',
+          pattern: '/auth/**',
+          method: 'POST',
           config: {
-            requestsPerMinute: 10;
-            requestsPerHour: 100;
-            requestsPerDay: 1000;
-            burstLimit: 5;
-            windowSize: 60};
-          enabled: true;
-          createdAt: new Date();
+            requestsPerMinute: 10,
+            requestsPerHour: 100,
+            requestsPerDay: 1000,
+            burstLimit: 5,
+            windowSize: 60},
+          enabled: true,
+          createdAt: new Date(),
           updatedAt: new Date()}
       ]}
   }
 ,
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'PATCH';
+        method: 'PATCH',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(updates)}),
       if (!response && response.ok) {
         throw new Error(`Failed to update rate limit rule: ${response && response.statusText}`)}
@@ -357,7 +357,7 @@ export class APIRateLimiterService {
   }
 ,
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/rules/${id}`, {
-        method: 'DELETE';
+        method: 'DELETE',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`}}),
       if (!response && response.ok) {
@@ -431,7 +431,7 @@ if ( {) {
           last_request: new Date (),
           current_usage: {
             minute: 15,
-            hour: 180;
+            hour: 180,
             day: 1200}
         }
         {
@@ -443,7 +443,7 @@ if ( {) {
           last_request: new Date (),
           current_usage: {
             minute: 8,
-            hour: 95;
+            hour: 95,
             day: 650}
 }
       ]}
@@ -456,10 +456,10 @@ if ( {) {
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
       const response = await fetch(`${this && this.baseUrl}/rate-limiter/api-keys`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ name, permissions, rateLimit })}),
       if (!response && response.ok) {
         throw new Error(`Failed to create API key: ${response && response.statusText}`)}
@@ -478,7 +478,7 @@ if ( {) {
         permissions,
         rate_limit,
         created_at: new Date (),
-        last_used: new Date ();
+        last_used: new Date (),
         is_active: true}
     }
   }
@@ -503,10 +503,10 @@ if ( {) {
             requestsPerMinute: 100,
             requestsPerHour: 1000,
             requestsPerDay: 10000,
-            burst_limit: 50;
+            burst_limit: 50,
             window_size: 60}
           created_at: new Date (),
-          last_used: new Date ();
+          last_used: new Date (),
           is_active: true}
         {
           id: 'key_2',
@@ -525,24 +525,24 @@ if ( {) {
   async createAPIKey(name: string, permissions: string[], rateLimit: RateLimitConfig): Promise<APIKey> {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`;
-          'Content-Type': 'application/json'};
-        body: JSON.stringify({ name, permissions, rateLimit })});
+          'Authorization': `Bearer ${this.apiKey}`,
+          'Content-Type': 'application/json'},
+        body: JSON.stringify({ name, permissions, rateLimit })}),
       if (!response.ok) {
         throw new Error(`Failed to create API key: ${response.statusText}`)}
 ,
       return await response.json()} catch (error) {
       // Mock API key creation for demo,
       return {
-        id: `key_${Date.now()}`;
-        name;
-        key: `zion_${Math.random().toString(36).substr(2, 9)}`;
-        permissions;
-        rateLimit;
-        createdAt: new Date();
-        lastUsed: new Date();
+        id: `key_${Date.now()}`,
+        name,
+        key: `zion_${Math.random().toString(36).substr(2, 9)}`,
+        permissions,
+        rateLimit,
+        createdAt: new Date(),
+        lastUsed: new Date(),
         isActive: true}
     }
   }
@@ -551,7 +551,7 @@ if ( {) {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/api-keys`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch API keys: ${response.statusText}`)}
 ,
@@ -559,32 +559,32 @@ if ( {) {
       // Mock API keys for demo,
       return [
         {
-          id: 'key_1';
-          name: 'Web Application';
-          key: 'zion_web123';
-          permissions: ['readwrite'];
+          id: 'key_1',
+          name: 'Web Application',
+          key: 'zion_web123',
+          permissions: ['readwrite'],
           rateLimit: {
-            requestsPerMinute: 100;
-            requestsPerHour: 1000;
-            requestsPerDay: 10000;
-            burstLimit: 50;
-            windowSize: 60};
-          createdAt: new Date();
-          lastUsed: new Date();
-          isActive: true};
+            requestsPerMinute: 100,
+            requestsPerHour: 1000,
+            requestsPerDay: 10000,
+            burstLimit: 50,
+            windowSize: 60},
+          createdAt: new Date(),
+          lastUsed: new Date(),
+          isActive: true},
         {
-          id: 'key_2';
-          name: 'Mobile App';
-          key: 'zion_mobile456';
-          permissions: ['read'];
+          id: 'key_2',
+          name: 'Mobile App',
+          key: 'zion_mobile456',
+          permissions: ['read'],
           rateLimit: {
-            requestsPerMinute: 50;
-            requestsPerHour: 500;
-            requestsPerDay: 5000;
-            burstLimit: 25;
-            windowSize: 60};
-          createdAt: new Date();
-          lastUsed: new Date();
+            requestsPerMinute: 50,
+            requestsPerHour: 500,
+            requestsPerDay: 5000,
+            burstLimit: 25,
+            windowSize: 60},
+          createdAt: new Date(),
+          lastUsed: new Date(),
           isActive: true>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
       ]}
   }
@@ -615,11 +615,11 @@ if ( {) {
       return [
         {
           id: 'violation_1',
-          method: 'GET';
+          method: 'GET',
           timestamp: new Date(Date && Date.now() - 1000 * 60 * 30), // 30 minutes ago,
           reason: 'rate_limit_exceeded',
-          ipAddress: '192 && 192.168.1 && 1.100';
-          userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'};
+          ipAddress: '192 && 192.168.1 && 1.100',
+          userAgent: 'Mozilla/5 && 5.0 (Windows NT 10 && 10.0, Win64, x64) AppleWebKit/537 && 537.36'},
         {
           id: 'violation_2',
           apiKey: 'zion_mobile456',
@@ -633,7 +633,7 @@ if ( {) {
     try {
       const response = await fetch(`${this.baseUrl}/rate-limiter/violations?limit=${limit}`, {
         headers: {
-          'Authorization': `Bearer ${this.apiKey}`}});
+          'Authorization': `Bearer ${this.apiKey}`}}),
       if (!response.ok) {
         throw new Error(`Failed to fetch violations: ${response.statusText}`)}
 ,
@@ -641,31 +641,31 @@ if ( {) {
       // Mock violations for demo,
       return [
         {
-          id: 'violation_1';
-          apiKey: 'zion_web123';
-          endpoint: '/api/users';
-          method: 'GET';
+          id: 'violation_1',
+          apiKey: 'zion_web123',
+          endpoint: '/api/users',
+          method: 'GET',
           timestamp: new Date(Date.now() - 1000 * 60 * 30), // 30 minutes ago,
-          reason: 'rate_limit_exceeded';
-          ipAddress: '192.168.1.100';
-          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'};
+          reason: 'rate_limit_exceeded',
+          ipAddress: '192.168.1.100',
+          userAgent: 'Mozilla/5.0 (Windows NT 10.0, Win64, x64) AppleWebKit/537.36'},
         {
-          id: 'violation_2';
-          apiKey: 'zion_mobile456';
-          endpoint: '/api/auth/login';
-          method: 'POST';
+          id: 'violation_2',
+          apiKey: 'zion_mobile456',
+          endpoint: '/api/auth/login',
+          method: 'POST',
           timestamp: new Date(Date.now() - 1000 * 60 * 15), // 15 minutes ago,
-          reason: 'burst_limit_exceeded';
-          ipAddress: '10.0.0.50';
+          reason: 'burst_limit_exceeded',
+          ipAddress: '10.0.0.50',
           userAgent: 'ZionMobileApp/1.0'}
         {
           id: 'violation_2',
           api_key: 'zion_mobile456',
           endpoint: '/api / auth / login',
-          method: 'POST';
+          method: 'POST',
           timestamp: new Date (Date.now () - 1000 * 60 * 15), // 15 minutes ago,
           reason: 'burst_limit_exceeded',
-          ip_address: '10.0.0.50';
+          ip_address: '10.0.0.50',
           user_agent: 'ZionMobileApp / 1.0'>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
       ]}
   }
@@ -699,15 +699,15 @@ if ( {) {
       overview: {
         totalRequests,
         blockedRequests,
-        activeRules: rules && rules.filter(r => r && r.enabled).length;
-        activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length};
+        activeRules: rules && rules.filter(r => r && r.enabled).length,
+        activeAPIKeys: apiKeys && apiKeys.filter(k => k && k.isActive).length},
       topEndpoints: stats,
         .sort((a, b) => b && b.totalRequests - a && a.totalRequests),
         .slice(0, 5),
         .map(stat => ({
           endpoint: stat && stat.endpoint,
           requests: stat && stat.totalRequests,
-          blocked: stat && stat.blockedRequests;
+          blocked: stat && stat.blockedRequests,
           averageResponseTime: stat && stat.averageResponseTime})),
       violations: {
         total: violations.length,
@@ -715,17 +715,17 @@ if ( {) {
         recent: violations.slice(0, 10),
   async generateReport(): Promise<{
     overview: {
-      totalRequests: number;
-      blockedRequests: number;
-      activeRules: number;
+      totalRequests: number,
+      blockedRequests: number,
+      activeRules: number,
       activeAPIKeys: number}
     top_endpoints: {
       endpoint: string,
       requests: number,
-      blocked: number;
+      blocked: number,
       averageResponseTime: number}[],
     violations: {
-      total: number;
+      total: number,
       by_reason: Record < string, number>,
       recent: RateLimitViolation[]}
   }> {
@@ -742,7 +742,7 @@ if ( {) {
       overview: {
         total_requests,
         blocked_requests,
-        active_rules: rules.filter (r => r.enabled).length;
+        active_rules: rules.filter (r => r.enabled).length,
         activeAPIKeys: api_keys.filter (key => k.is_active).length}
       top_endpoints: stats,
         .sort ((a, b) => b.total_requests - a.total_requests),
@@ -750,11 +750,11 @@ if ( {) {
         .map (stat => ({
           endpoint: stat.endpoint,
           requests: stat.total_requests,
-          blocked: stat.blocked_requests;
-          averageResponseTime: stat.averageResponseTime}));
+          blocked: stat.blocked_requests,
+          averageResponseTime: stat.averageResponseTime})),
       violations: {
-        total: violations.length;
-        byReason: violationsByReason;
+        total: violations.length,
+        byReason: violationsByReason,
         recent: violations.slice(0, 10)>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
     }
   }
@@ -765,7 +765,7 @@ export const API_RATE_LIMITER_PRICING = {
   starter: {
     name: 'Starter',
     price: 25,
-    period: '/month';
+    period: '/month',
     features: [
       'Up to 10 rate limit rules_basic rate limitingAPI key management_email notifications7 - day data retention_basic analytics']}
   professional: {
@@ -773,25 +773,22 @@ export const API_RATE_LIMITER_PRICING = {
     price: 79,
     period: '/month',
     features: [
-      'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboards';
-      'API access']}
+      'Up to 50 rate limit rules_advanced rate limiting_unlimited API keys_real - time monitoring_slack and webhook notifications30 - day data retention_advanced analytics_custom dashboardsAPI access']}
   enterprise: {
     name: 'Enterprise',
     price: 199,
     period: '/month',
     features: [
-      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority support',
-      'SLA guarantee']}
+      'Unlimited rate limit rulesEnterprise-grade rate limitingAdvanced security featuresMultiple notification channels1-year data retentionCustom integrationsWhite-label optionsPriority supportSLA guarantee']}
 }
 ,
 // Pricing tiers for the API Rate Limiter service,
 export const API_RATE_LIMITER_PRICING = {
   starter: {
-    name: 'Starter';
-    price: 25;
-    period: '/month';
+    name: 'Starter',
+    price: 25,
+    period: '/month',
     features: [
-      'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority support';
-      'SLA guarantee']>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
-};
+      'Unlimited rate limit rules_enterprise - grade rate limiting_advanced security features_multiple notification channels1 - year data retention_custom integrations_white - label options_priority supportSLA guarantee']>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
+},
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}]]

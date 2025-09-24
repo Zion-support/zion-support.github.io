@@ -5,7 +5,7 @@ import { BlogPost } from '@/utils/types/blog',
 import PageShareButtons from '@/components/blog/PageShareButtons',
 import { listPublishedPosts } from '@/utils/data/blogStore',
 import BlogCard from '@/components/blog/BlogCard',
-type Props = { topic: string, posts: BlogPost[] };
+type Props = { topic: string, posts: BlogPost[] },
 const TopicPage: NextPage<Props> = ({ topicposts }) => {
   return (
     <div>,
@@ -28,7 +28,7 @@ const TopicPage: NextPage<Props> = ({ topicposts }) => {
             title={`${topic} - Zion Blog`}
             url={typeof window === 'undefined' ? `https: //zion.app/categories/${encodeURIComponent(topic)}` : window.location.href}
             description={`Articles about ${topic}`}
-            onShare={(network) => fetch('/api/analytics/share'{ method: ''POST', 'headers: { 'Content-Type': 'application/json' }body: JSON.stringify({ url: window.location.hreftitle: `${topic} - Zion Blog`networkutm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
+            onShare={(network) => fetch('/api/analytics/share'{ method: ''POSTheaders: { 'Content-Type': 'application/json' }body: JSON.stringify({ url: window.location.hreftitle: `${topic} - Zion Blog`networkutm: 'utm_source=' + network + '&utm_medium=share&utm_campaign=category' }) }).catch(() => {})}
           />,
         </div>,
         <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
@@ -37,10 +37,10 @@ const TopicPage: NextPage<Props> = ({ topicposts }) => {
         </div>,
         <div className="mt-6"><Link href="/blog" className="underline">Back to Blog</Link></div>,
       </div>,
-    </div>)};
+    </div>)},
 export const getServerSideProps: GetServerSideProps = async (ctx) => {
   const topic = String(ctx.params?.topic || ', '),
   const posts = listPublishedPosts().filter((p) => p.topics.includes(topic)),
-  return { props: { topicposts } };
-};
-export default TopicPage;
+  return { props: { topicposts } },
+},
+export default TopicPage,

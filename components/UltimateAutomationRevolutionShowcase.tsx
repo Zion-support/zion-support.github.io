@@ -1,5 +1,4 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Link from 'next/link',
 interface ContentCard {
   id: string,
@@ -11,71 +10,71 @@ interface ContentCard {
     roi: string,
     savings: string,
     efficiency: string,
-    timeframe: string};
+    timeframe: string},
   featured: boolean}
 ,
 const UltimateAutomationRevolutionShowcase: React.FC = () => {
   const contentCards: ContentCard[] = [
     {
-      id: 'ultimate-automation-revolution';
-      title: 'AI 20o25: The Ultimate Business Automation Revolution';
+      id: 'ultimate-automation-revolution',
+      title: 'AI 20o25: The Ultimate Business Automation Revolution',
       description:,
-        'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,0o00% ROI through next-generation autonomous systems.';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-business-automation-revolution';
+        'Transform your enterprise with revolutionary AI automation delivering unprecedented 25,0o00% ROI through next-generation autonomous systems.',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-business-automation-revolution',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
-        efficiency: '3,20o0%';
-        timeframe: '18 months';
-      };
-      featured: true;
-    };
+        roi: '25,0o00%',
+        savings: '$50o0B+',
+        efficiency: '3,20o0%',
+        timeframe: '18 months'
+      },
+      featured: true
+    },
     {
-      id: 'fortune-50o0-automation-success';
-      title: 'Fortune 50o0 Ultimate Automation Success Story';
+      id: 'fortune-50o0-automation-success',
+      title: 'Fortune 50o0 Ultimate Automation Success Story',
       description:,
-        'How a global manufacturing giant achieved $50o0B annual savings and 25,0o00% ROI through revolutionary AI automation implementation.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-automation-250o00-roi-success';
+        'How a global manufacturing giant achieved $50o0B annual savings and 25,0o00% ROI through revolutionary AI automation implementation.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-automation-250o00-roi-success',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B';
-        efficiency: '99%';
-        timeframe: '18 months';
-      };
-      featured: true;
-    };
+        roi: '25,0o00%',
+        savings: '$50o0B',
+        efficiency: '99%',
+        timeframe: '18 months'
+      },
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      title: 'Ultimate AI Automation Implementation Guide';
+      id: 'implementation-guide',
+      title: 'Ultimate AI Automation Implementation Guide',
       description:,
-        'Complete roadmap to achieving 25,0o00% ROI through comprehensive AI automation strategy, technology integration, and organizational transformation.';
-      type: 'resource';
-      url: '/resources/ultimate-ai-automation-implementation-guide';
+        'Complete roadmap to achieving 25,0o00% ROI through comprehensive AI automation strategy, technology integration, and organizational transformation.',
+      type: 'resource',
+      url: '/resources/ultimate-ai-automation-implementation-guide',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
-        efficiency: '3,20o0%';
-        timeframe: '12-18 months';
-      };
-      featured: false;
-    };
+        roi: '25,0o00%',
+        savings: '$50o0B+',
+        efficiency: '3,20o0%',
+        timeframe: '12-18 months'
+      },
+      featured: false
+    },
     {
-      id: 'advanced-automation-mastery';
-      title: 'Advanced Automation Mastery Framework';
+      id: 'advanced-automation-mastery',
+      title: 'Advanced Automation Mastery Framework',
       description:,
-        'Master the art of AI automation with proven frameworks, best practices, and implementation strategies for maximum ROI and operational excellence.';
-      type: 'resource';
-      url: '/resources/advanced-automation-mastery-framework';
+        'Master the art of AI automation with proven frameworks, best practices, and implementation strategies for maximum ROI and operational excellence.',
+      type: 'resource',
+      url: '/resources/advanced-automation-mastery-framework',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$20o0B+';
-        efficiency: '2,50o0%';
-        timeframe: '12 months';
-      };
-      featured: false;
-    };
+        roi: '15,0o00%',
+        savings: '$20o0B+',
+        efficiency: '2,50o0%',
+        timeframe: '12 months'
+      },
+      featured: false
+    },
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -87,7 +86,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -98,7 +97,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -158,7 +157,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getTypeColor(card.type)}`}
                     >,
-                      {card.type.replace('-', ' ').toUpperCase()}
+                      {card.type.replace('- ').toUpperCase()}
                     </span>,
                   </div>,
                   {card.featured && (
@@ -265,5 +264,5 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAutomationRevolutionShowcase;
+    </section>)},
+export default UltimateAutomationRevolutionShowcase,

@@ -1,13 +1,13 @@
 import React, { useState, useEffect, createContext, useContext } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Eye;
-  EyeOff;
-  Volume2;
-  VolumeX;
-  Keyboard;
-  Accessibility;
-  X;
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  Keyboard,
+  Accessibility,
+  X,
 } from 'lucide-react',
 import { Button } from '../ui/button',
 const AccessibilityContext = createContext(undefined),
@@ -16,7 +16,7 @@ export const useAccessibility = () => {
   if (!context) {
     throw new Error(
       'useAccessibility must be used within an AccessibilityProvider')}
-  return context};
+  return context},
 // Accessibility Provider Component,
 export const AccessibilityProvider = ({ children }) => {
   const [highContrast, setHighContrast] = useState(false),
@@ -36,13 +36,13 @@ export const AccessibilityProvider = ({ children }) => {
   // Save settings to localStorage,
   useEffect(() => {
     const settings = {
-      highContrast;
-      reducedMotion;
-      fontSize;
-      colorBlindMode;
-    };
+      highContrast,
+      reducedMotion,
+      fontSize,
+      colorBlindMode,
+    },
     localStorage.setItem(
-      'zion-accessibility-settings';
+      'zion-accessibility-settings',
       JSON.stringify(settings))}, [highContrast, reducedMotion, fontSize, colorBlindMode]),
   // Apply accessibility settings to document,
   useEffect(() => {
@@ -70,31 +70,31 @@ export const AccessibilityProvider = ({ children }) => {
   const toggleHighContrast = () => setHighContrast(!highContrast),
   const toggleReducedMotion = () => setReducedMotion(!reducedMotion),
   const value = {
-    highContrast;
-    reducedMotion;
-    fontSize;
-    colorBlindMode;
-    toggleHighContrast;
-    toggleReducedMotion;
-    setFontSize;
-    setColorBlindMode;
-  };
+    highContrast,
+    reducedMotion,
+    fontSize,
+    colorBlindMode,
+    toggleHighContrast,
+    toggleReducedMotion,
+    setFontSize,
+    setColorBlindMode,
+  },
   return (
     <AccessibilityContext.Provider value={value}>,
       {children}
-    </AccessibilityContext.Provider>)};
+    </AccessibilityContext.Provider>)},
 // Accessibility Panel Component,
 export const AccessibilityPanel = () => {
   const [isOpen, setIsOpen] = useState(false),
   const {
-    highContrast;
-    reducedMotion;
-    fontSize;
-    colorBlindMode;
-    toggleHighContrast;
-    toggleReducedMotion;
-    setFontSize;
-    setColorBlindMode;
+    highContrast,
+    reducedMotion,
+    fontSize,
+    colorBlindMode,
+    toggleHighContrast,
+    toggleReducedMotion,
+    setFontSize,
+    setColorBlindMode,
   } = useAccessibility(),
   // Keyboard shortcuts,
   useEffect(() => {
@@ -120,7 +120,7 @@ export const AccessibilityPanel = () => {
         event.key === 'M') {
         event.preventDefault(),
         toggleReducedMotion()}
-    };
+    },
     window.addEventListener('keydown', handleKeyDown),
     return () => window.removeEventListener('keydown', handleKeyDown)}, [isOpen, toggleHighContrast, toggleReducedMotion]),
   return (
@@ -219,7 +219,7 @@ export const AccessibilityPanel = () => {
                 <div>,
                   <h3 className='text-white font-medium mb-3'>Font Size</h3>,
                   <div className='flex gap-2'>,
-                    {['small', 'medium', 'large'].map(size => (
+                    {['smallmedium', 'large'].map(size => (
                       <Button
                         key={size}
                         variant={fontSize === size ? 'default' : 'outline'}
@@ -240,7 +240,7 @@ export const AccessibilityPanel = () => {
                     Color Blind Support,
                   </h3>,
                   <div className='grid grid-cols-2 gap-2'>,
-                    {['none', 'protanopia', 'deuteranopia', 'tritanopia'].map(
+                    {['noneprotanopia', 'deuteranopiatritanopia'].map(
                       mode => (
                         <Button
                           key={mode}
@@ -295,7 +295,7 @@ export const AccessibilityPanel = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
+    </>)},
 // Skip to Content Link,
 export const SkipToContent = () => (
   <a
@@ -326,10 +326,10 @@ export const useFocusTrap = isActive => {
             firstFocusableElement.focus()}
         }
       }
-    };
+    },
     document.addEventListener('keydown', handleTabKey),
-    return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])};
+    return () => document.removeEventListener('keydown', handleTabKey)}, [isActive])},
 // Screen Reader Only Text,
 export const SrOnly = ({ children }) => (
   <span className='sr-only'>{children}</span>),
-export default AccessibilityPanel;
+export default AccessibilityPanel,

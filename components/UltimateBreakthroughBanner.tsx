@@ -12,7 +12,7 @@ export default function UltimateBreakthroughBanner() {
     return () => clearTimeout(timer)}[]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    setIsVisible(false)};
+    setIsVisible(false)},
   if (isDismissed || !isVisible) {
     return null}
 ,

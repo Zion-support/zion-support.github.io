@@ -49,7 +49,7 @@ export function TimelineStep({ formDataupdateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline",
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.startDate && "text-zion-slate-light")}
                     >,
                       <CalendarIcon className="mr-2 h-4 w-4" />,
@@ -74,7 +74,7 @@ export function TimelineStep({ formDataupdateFormData }: TimelineStepProps) {
                     <Button
                       variant="outline",
                       className={cn(
-                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover:bg-zion-blue-dark";
+                        "w-full justify-start text-left font-normal bg-zion-blue border border-zion-blue-light hover: bg-zion-blue-dark",
                         !formData.endDate && "text-zion-slate-light")}
                     >,
                       <CalendarIcon className="mr-2 h-4 w-4" />,

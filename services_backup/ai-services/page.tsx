@@ -1,9 +1,9 @@
 
 ,
 export const metadata ={
-  title: 'AI Services | Zion Tech Group';
-  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.';
-  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'};
+  title: 'AI Services | Zion Tech Group',
+  description: 'Comprehensive AI services including custom LLM development, RAG systems, AI agents, computer vision, and MLOps solutions for enterprise applications.',
+  keywords: 'AI services, machine learning, LLM development, RAG systems, AI agents, computer vision, MLOps, AI consulting'},
 export default function AIPage() {
   return (
     <div className="min-h-screen bg-gray-50 py-12">,
@@ -11,7 +11,7 @@ export default function AIPage() {
         <div className="text-center mb-16">,
           <h1 className="text-4xl font-bold text-gray-90o0 mb-6">AI Services</h1>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            Advanced AI solutions including machine learning, natural language processing;
+            Advanced AI solutions including machine learning, natural language processing,
             computer vision, and intelligent automation. Transform your business with cutting-edge AI technology.,
           </p>,
         </div>,
@@ -22,11 +22,11 @@ export default function AIPage() {
             icon="🧠",
             description="Custom ML models and predictive analytics",
             services={[
-              "Predictive modeling";
-              "Recommendation systems";
-              "Anomaly detection";
-              "Time series forecasting";
-              "Classification algorithms";
+              "Predictive modeling",
+              "Recommendation systems",
+              "Anomaly detection",
+              "Time series forecasting",
+              "Classification algorithms",
               "Regression analysis"]}
            />,
           <AIServiceCategory
@@ -34,11 +34,11 @@ export default function AIPage() {
             icon="💬",
             description="Text analysis and language understanding",
             services={[
-              "Sentiment analysis";
-              "Text classification";
-              "Named entity recognition";
-              "Language translation";
-              "Chatbot development";
+              "Sentiment analysis",
+              "Text classification",
+              "Named entity recognition",
+              "Language translation",
+              "Chatbot development",
               "Document processing"]}
            />,
           <AIServiceCategory
@@ -46,11 +46,11 @@ export default function AIPage() {
             icon="👁️",
             description="Image and video analysis solutions",
             services={[
-              "Object detection";
-              "Image classification";
-              "Facial recognition";
-              "OCR (Optical Character Recognition)";
-              "Video analytics";
+              "Object detection",
+              "Image classification",
+              "Facial recognition",
+              "OCR (Optical Character Recognition)",
+              "Video analytics",
               "Medical imaging"]}
            />,
         </div>,
@@ -62,11 +62,11 @@ export default function AIPage() {
               title="Intelligent Document Processing",
               description="Automated document analysis and data extraction",
               features={[
-                "OCR with 99%+ accuracy";
-                "Smart data extraction";
-                "Document classification";
-                "Automated workflows";
-                "Multi-language support";
+                "OCR with 99%+ accuracy",
+                "Smart data extraction",
+                "Document classification",
+                "Automated workflows",
+                "Multi-language support",
                 "API integration"]}
               price="$25k - $60k",
               timeline="8-16 weeks",
@@ -77,11 +77,11 @@ export default function AIPage() {
               title="Predictive Maintenance System",
               description="AI-powered equipment monitoring and failure prediction",
               features={[
-                "IoT sensor integration";
-                "Real-time monitoring";
-                "Failure prediction algorithms";
-                "Maintenance scheduling";
-                "Cost optimization";
+                "IoT sensor integration",
+                "Real-time monitoring",
+                "Failure prediction algorithms",
+                "Maintenance scheduling",
+                "Cost optimization",
                 "Dashboard analytics"]}
               price="$35k - $80k",
               timeline="12-20 weeks",
@@ -92,11 +92,11 @@ export default function AIPage() {
               title="Customer Service AI Assistant",
               description="Intelligent chatbot with human-like interactions",
               features={[
-                "Natural language understanding";
-                "Multi-channel support";
-                "Sentiment analysis";
-                "Escalation to humans";
-                "Knowledge base integration";
+                "Natural language understanding",
+                "Multi-channel support",
+                "Sentiment analysis",
+                "Escalation to humans",
+                "Knowledge base integration",
                 "Performance analytics"]}
               price="$20k - $50k",
               timeline="6-12 weeks",
@@ -107,11 +107,11 @@ export default function AIPage() {
               title="Fraud Detection System",
               description="Real-time fraud prevention and risk assessment",
               features={[
-                "Real-time monitoring";
-                "Pattern recognition";
-                "Risk scoring";
-                "Alert system";
-                "Machine learning models";
+                "Real-time monitoring",
+                "Pattern recognition",
+                "Risk scoring",
+                "Alert system",
+                "Machine learning models",
                 "Compliance reporting"]}
               price="$30k - $70k",
               timeline="10-18 weeks",
@@ -122,11 +122,11 @@ export default function AIPage() {
               title="Personalized Recommendation Engine",
               description="AI-driven product and content recommendations",
               features={[
-                "Collaborative filtering";
-                "Content-based filtering";
-                "Real-time recommendations";
-                "A/B testing framework";
-                "Performance metrics";
+                "Collaborative filtering",
+                "Content-based filtering",
+                "Real-time recommendations",
+                "A/B testing framework",
+                "Performance metrics",
                 "Scalable architecture"]}
               price="$18k - $45k",
               timeline="8-14 weeks",
@@ -137,11 +137,11 @@ export default function AIPage() {
               title="Medical Image Analysis",
               description="AI-powered medical imaging and diagnosis support",
               features={[
-                "Image preprocessing";
-                "Disease detection";
-                "Segmentation algorithms";
-                "Diagnostic support";
-                "Radiologist workflow";
+                "Image preprocessing",
+                "Disease detection",
+                "Segmentation algorithms",
+                "Diagnostic support",
+                "Radiologist workflow",
                 "HIPAA compliance"]}
               price="$50k - $120k",
               timeline="16-24 weeks",

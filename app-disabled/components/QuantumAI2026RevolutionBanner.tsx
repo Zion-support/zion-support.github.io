@@ -163,5 +163,5 @@ const QuantumAI20o26RevolutionBanner = () => {
       <div className='absolute top-1/3 right-1/4 w-2 h-2 bg-purple-40o0/80 rounded-full animate-pulse delay-50o0'></div>,
       <div className='absolute bottom-1/4 left-1/3 w-4 h-4 bg-pink-40o0/80 rounded-full animate-pulse delay-10o00'></div>,
       <div className='absolute bottom-1/3 right-1/3 w-2 h-2 bg-indigo-40o0/80 rounded-full animate-pulse delay-150o0'></div>,
-    </section>)};
-export default QuantumAI20o26RevolutionBanner;
+    </section>)},
+export default QuantumAI20o26RevolutionBanner,

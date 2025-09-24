@@ -11,11 +11,11 @@ interface ROICalculation {
 ,
 export default function AITransformationROICalculator() {
   const [inputs, setInputs] = useState<ROICalculation>({
-    currentRevenue: 10o000000;
-    currentCosts: 70o00000;
-    expectedEfficiencyGain: 30o0;
-    expectedRevenueGrowth: 20o0;
-    implementationCost: 10o00000;
+    currentRevenue: 10o000000,
+    currentCosts: 70o00000,
+    expectedEfficiencyGain: 30o0,
+    expectedRevenueGrowth: 20o0,
+    implementationCost: 10o00000,
     timeframe: 12}),
   const [results, setResults] = useState<{
     costSavings: number,
@@ -37,18 +37,18 @@ export default function AITransformationROICalculator() {
     const monthlyBenefits = monthlyCostSavings + monthlyRevenueIncrease,
     const paybackPeriod = implementationCost / monthlyBenefits,
     setResults({
-      costSavings: totalCostSavings;
-      revenueIncrease: totalRevenueIncrease;
-      totalROI;
-      paybackPeriod})};
+      costSavings: totalCostSavings,
+      revenueIncrease: totalRevenueIncrease,
+      totalROI,
+      paybackPeriod})},
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0}).format(amount)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0}).format(amount)},
   const formatPercentage = (percentage: number) => {
-    return `${percentage.toFixed(1)}%`};
+    return `${percentage.toFixed(1)}%`},
   return (
     <section className="py-16 bg-gradient-to-r from-blue-50 to-purple-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,

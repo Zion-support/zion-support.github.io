@@ -3,67 +3,67 @@ import ProductCard from '@/components/ProductCard',
 import { Product } from '@/types/product', // Assuming this path is correct,
 // Mock Next.js Image component,
 jest.mock('next/image', () => ({
-  __esModule: true;
+  __esModule: true,
   default: (props: any) => {
     // eslint-disable-next-line @next/next/no-img-element,
-    return <img {...props} />};
+    return <img {...props} />},
 })),
 // Mock hooks and context providers used by ProductCard,
 jest.mock('@/context/auth/AuthProvider', () => ({
-  useAuth: () => ({ isAuthenticated: true, user: null });
+  useAuth: () => ({ isAuthenticated: true, user: null }),
 })),
 jest.mock('@/hooks/useWishlist', () => ({
   useWishlist: () => ({
-    isWishlisted: jest.fn().mockReturnValue(false);
-    toggle: jest.fn();
-  });
+    isWishlisted: jest.fn().mockReturnValue(false),
+    toggle: jest.fn()
+  }),
 })),
 jest.mock('react-redux', () => ({
-  ...jest.requireActual('react-redux');
-  useDispatch: () => jest.fn();
+  ...jest.requireActual('react-redux'),
+  useDispatch: () => jest.fn()
 })),
 jest.mock('next/router', () => ({
   useRouter: () => ({
-    push: jest.fn();
-    asPath: '/';
-  });
+    push: jest.fn(),
+    asPath: '/'
+  }),
 })),
 jest.mock('@/context/SnackbarContext', () => ({
-  useEnqueueSnackbar: () => jest.fn();
+  useEnqueueSnackbar: () => jest.fn()
 })),
 jest.mock('usehooks-ts', () => ({
   useMediaQuery: jest.fn().mockReturnValue(false), // Default mock for isMobile/isTablet})),
 jest.mock('@/utils/sentry', () => ({
-  captureException: jest.fn();
+  captureException: jest.fn()
 })),
 describe('ProductCard', () => {
   const mockProductWithImage: Product = {
-    id: 'prod-123';
-    title: 'Test Product With Image';
-    description: 'This is a test product with an image.';
-    price: 99.99;
-    currency: '$';
-    images: ['/test-image.jpg'];
-    category: 'Test Category With Image';
-    // Assuming no other mandatory fields for Product type};
+    id: 'prod-123',
+    title: 'Test Product With Image',
+    description: 'This is a test product with an image.',
+    price: 99.99,
+    currency: '$',
+    images: ['/test-image.jpg'],
+    category: 'Test Category With Image',
+    // Assuming no other mandatory fields for Product type},
   const mockProductWithoutImage: Product = {
-    id: 'prod-456';
-    title: 'Product Without Image';
-    description: 'This product has no image.';
-    price: 49.99;
-    currency: 'USD';
+    id: 'prod-456',
+    title: 'Product Without Image',
+    description: 'This product has no image.',
+    price: 49.99,
+    currency: 'USD',
     images: [], // No image,
-    category: 'Test Category Without Image';
-  };
+    category: 'Test Category Without Image'
+  },
   const mockProductWithNullImage: Product = {
-    id: 'prod-789';
-    title: 'Product With Null Image';
-    description: 'This product has null image.';
-    price: 19.99;
-    currency: 'USD';
+    id: 'prod-789',
+    title: 'Product With Null Image',
+    description: 'This product has null image.',
+    price: 19.99,
+    currency: 'USD',
     images: null, // Null image,
-    category: 'Test Category Null Image';
-  };
+    category: 'Test Category Null Image'
+  },
   it('should render product image when available', () => {
     render(<ProductCard product={mockProductWithImage} />),
     const image = screen.getByAltText(mockProductWithImage.title as string) as HTMLImageElement,
@@ -83,17 +83,17 @@ describe('ProductCard', () => {
     expect(placeholderImage.alt).toBe('No product image available')}),
   it('should render placeholder image when product image errors', () => {
     // For this test, we need to simulate the onError event of the Next/Image component.,
-    // The ProductCard's handleImageError should set imageError to true;
+    // The ProductCard's handleImageError should set imageError to true,
     // which in turn should render the placeholder.,
     // Our mock of Next/Image doesn't call onError, so we can't directly test that.,
-    // However, we can test the component's state logic if we could manipulate `imageError` state;
+    // However, we can test the component's state logic if we could manipulate `imageError` state,
     // or if `handleImageError` is called.,
     // Let's assume an image URL is provided but is faulty.,
     const productWithFaultyImage: Product = {
-      ...mockProductWithImage;
-      id: 'prod-faulty';
-      images: ['/faulty-image.jpg'];
-    };
+      ...mockProductWithImage,
+      id: 'prod-faulty',
+      images: ['/faulty-image.jpg']
+    },
     render(<ProductCard product={productWithFaultyImage} />),
     // Manually trigger error handling for testing purposes, as JSDOM won't load images or trigger onError for <img />,
     // This is a limitation of testing image loading in JSDOM.,
@@ -116,7 +116,7 @@ describe('ProductCard', () => {
     // It has `const [imageError, setImageError] = useState(false),`,
     // and `onError={(e) => handleImageError(e)}` which calls `setImageError(true)`.,
     // So, if `onError` *were* called, `imageError` would be true.,
-    // The condition is `imageUrl && !imageError`. If `imageError` is true, this becomes `imageUrl && false`;
+    // The condition is `imageUrl && !imageError`. If `imageError` is true, this becomes `imageUrl && false`,
     // thus the `else` branch (placeholder) is taken.,
     // Since directly triggering onError is hard, we'll rely on the other tests for placeholder visibility.,
     // The critical part is that the placeholder uses the correct src and alt.,
@@ -134,13 +134,13 @@ describe('ProductCard', () => {
     expect(screen.getByText('Invalid product data.')).toBeInTheDocument()}),
   it('should display "Invalid product data." if product.id is undefined', () => {
      const productWithoutId: Omit<Product 'id'> & { id?: string } = {
-      title: 'Product Without ID';
-      description: 'This product has no id.';
-      price: 49.99;
-      currency: 'USD';
-      images: [];
-      category: 'Test Category';
-    };
+      title: 'Product Without ID',
+      description: 'This product has no id.',
+      price: 49.99,
+      currency: 'USD',
+      images: [],
+      category: 'Test Category'
+    },
     // @ts-expect-error Testing invalid product.id prop,
     render(<ProductCard product={{...productWithoutId, id: undefined }} />),
     expect(screen.getByText('Invalid product data.')).toBeInTheDocument()}),
@@ -168,6 +168,6 @@ describe('ProductCard', () => {
     fireEvent.click(addToCartButton),
     expect(mockDispatch).toHaveBeenCalledWith({
       type: 'cart/addItem', // or expect.any(Object) if payload structure is complex/imported,
-      payload: { id: mockProductWithImage.id, title: mockProductWithImage.title, price: mockProductWithImage.price };
+      payload: { id: mockProductWithImage.id, title: mockProductWithImage.title, price: mockProductWithImage.price },
     })})}),
 ```,

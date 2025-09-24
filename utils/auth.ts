@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next'
 
-export type User = { id: string; email: string; role: 'admin' | 'user' | 'guest' }
+export type User = { id: string, email: string, role: 'admin' | 'user' | 'guest' }
 
 export function parseUserFromRequest(req: NextApiRequest): User {
   const authHeader = req.headers.authorization
@@ -67,12 +67,12 @@ export function upsertUser(user: DemoUser): void {
 }
 
 export function setUserCookie(res: NextApiResponse, user: DemoUser): void {
-  res.setHeader('Set-Cookie', `user=${encodeURIComponent(JSON.stringify(user))}; Path=/; HttpOnly`)
+  res.setHeader('Set-Cookie', `user=${encodeURIComponent(JSON.stringify(user))}, Path=/, HttpOnly`)
 }
 
 export function getUserFromRequest(req: NextApiRequest): DemoUser | null {
   const cookieHeader = req.headers.cookie || ''
-  const match = cookieHeader.match(/user=([^;]+)/)
+  const match = cookieHeader.match(/user=([^]+)/)
   if (!match) return null
   try {
     return JSON.parse(decodeURIComponent(match[1]))

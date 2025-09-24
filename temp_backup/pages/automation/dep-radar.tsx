@@ -1,6 +1,6 @@
-import fs from 'fs';
-import path from 'path';
-type Outdated ={ name: string, current: string, latest: string, type: 'dependency' | 'devDependency' };
+import fs from 'fs',
+import path from 'path',
+type Outdated ={ name: string, current: string, latest: string, type: 'dependency' | 'devDependency' },
 export async function getServerSideProps() {
   const file = path.join(process.cwd()'data'dep-radar.json'),
   let outdated: Outdated[] = [],
@@ -10,7 +10,7 @@ export async function getServerSideProps() {
     const json = JSON.parse(raw),
     outdated = json.outdated || [],
     generatedAt = json.generatedAt || ''} catch {}
-  return { props: { outdatedgeneratedAt } };
+  return { props: { outdatedgeneratedAt } },
 }
 ,
 export default function DepRadarPage({ outdatedgeneratedAt }: { outdated: Outdated[], generatedAt: string }) {

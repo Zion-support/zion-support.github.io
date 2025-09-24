@@ -6,40 +6,40 @@ const UltimateContent20o25Banner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const contentItems = [
     {
-      id: 'enterprise-ai-revolution';
-      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
-      description: 'Discover how Fortune 50o0 companies are achieving 80o0% ROI with revolutionary AI implementations.';
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough';
-      type: 'Blog Post';
+      id: 'enterprise-ai-revolution',
+      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+      description: 'Discover how Fortune 50o0 companies are achieving 80o0% ROI with revolutionary AI implementations.',
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
       metrics: {
-        roi: '80o0%';
-        savings: '$4.8B';
-        satisfaction: '99%'};
-      readingTime: '28 min read';
-      isNew: true};
+        roi: '80o0%',
+        savings: '$4.8B',
+        satisfaction: '99%'},
+      readingTime: '28 min read',
+      isNew: true},
     {
-      id: 'ai-transformation-success';
-      title: 'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story';
-      description: 'Real case study showing how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months.';
-      url: '/case-studies/ai-transformation-20o25-ultimate-success-story';
-      type: 'Case Study';
+      id: 'ai-transformation-success',
+      title: 'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story',
+      description: 'Real case study showing how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months.',
+      url: '/case-studies/ai-transformation-20o25-ultimate-success-story',
+      type: 'Case Study',
       metrics: {
-        roi: '80o0%';
-        savings: '$4.8B';
-        efficiency: '30o0%'};
-      readingTime: '22 min read';
-      isNew: true};
+        roi: '80o0%',
+        savings: '$4.8B',
+        efficiency: '30o0%'},
+      readingTime: '22 min read',
+      isNew: true},
     {
-      id: 'implementation-roadmap';
-      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
-      description: 'Complete step-by-step guide to achieving 80o0% ROI with AI implementation.';
-      url: '/resources/ai-implementation-ultimate-roadmap-20o25';
-      type: 'Resource Guide';
+      id: 'implementation-roadmap',
+      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',
+      description: 'Complete step-by-step guide to achieving 80o0% ROI with AI implementation.',
+      url: '/resources/ai-implementation-ultimate-roadmap-20o25',
+      type: 'Resource Guide',
       metrics: {
-        roi: '80o0%';
-        success_rate: '99%';
-        timeline: '18 months'};
-      readingTime: '35 min read';
+        roi: '80o0%',
+        success_rate: '99%',
+        timeline: '18 months'},
+      readingTime: '35 min read',
       isNew: true}
   ],
   useEffect(() => {
@@ -48,7 +48,7 @@ const UltimateContent20o25Banner = () => {
     return () => clearInterval(interval)}, [contentItems.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateContent20o25BannerDismissed', 'true')};
+    localStorage.setItem('ultimateContent20o25BannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimateContent20o25BannerDismissed'),
     if (dismissed === 'true') {
@@ -205,5 +205,5 @@ const UltimateContent20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent20o25Banner;
+    </div>)},
+export default UltimateContent20o25Banner,

@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function runGit(args, options ={}) {
@@ -48,22 +48,22 @@ function checkPm2Status() {
         line.includes('zion-auto-sync')),
       log(`Found ${redundancyProcesses.length} redundancy processes`),
       return {
-        healthy: true;
-        processCount: redundancyProcesses.length;
-        output: pm2Status.stdout};
+        healthy: true,
+        processCount: redundancyProcesses.length,
+        output: pm2Status.stdout},
     } else {
       log(`PM2 status check failed: ${pm2Status.stderr}`),
       return {
-        healthy: false;
-        processCount: 0;
-        error: pm2Status.stderr};
+        healthy: false,
+        processCount: 0,
+        error: pm2Status.stderr},
     }
   } catch (err) {
     log(`PM2 status check error: ${String(err)}`),
     return {
-      healthy: false;
-      processCount: 0;
-      error: String(err)};
+      healthy: false,
+      processCount: 0,
+      error: String(err)},
   }
 }
 ,
@@ -74,9 +74,9 @@ function checkRedundancyLogs() {
     if (!fs.existsSync(logsDir)) {
       log("Logs directory not found"),
       return {
-        healthy: false;
-        logCount: 0;
-        error: "logs-directory-missing"};
+        healthy: false,
+        logCount: 0,
+        error: "logs-directory-missing"},
     }
 ,
     const logFiles = fs.readdirSync(logsDir).filter(file =>,
@@ -89,19 +89,19 @@ function checkRedundancyLogs() {
         const stats = fs.statSync(logPath),
         const isRecent = (Date.now() - stats.mtime.getTime()) < (24 * 60 * 60 * 10o00), // 24 hours,
         logResults.push({
-          file: logFile;
-          exists: true;
-          size: stats.size;
-          lastModified: stats.mtime;
-          isRecent: isRecent;
+          file: logFile,
+          exists: true,
+          size: stats.size,
+          lastModified: stats.mtime,
+          isRecent: isRecent,
           healthy: stats.size > 0 && isRecent})} catch (err) {
         logResults.push({
-          file: logFile;
-          exists: false;
-          size: 0;
-          lastModified: null;
-          isRecent: false;
-          healthy: false;
+          file: logFile,
+          exists: false,
+          size: 0,
+          lastModified: null,
+          isRecent: false,
+          healthy: false,
           error: String(err)})}
     }
 ,
@@ -109,16 +109,16 @@ function checkRedundancyLogs() {
     const total = logResults.length,
     log(`Log check: ${healthy}/${total} log files healthy`),
     return {
-      total: total;
-      healthy: healthy;
-      results: logResults};
+      total: total,
+      healthy: healthy,
+      results: logResults},
   } catch (err) {
     log(`Log check error: ${String(err)}`),
     return {
-      total: 0;
-      healthy: 0;
-      results: [];
-      error: String(err)};
+      total: 0,
+      healthy: 0,
+      results: [],
+      error: String(err)},
   }
 }
 ,
@@ -126,11 +126,11 @@ function checkRedundancyReports() {
   log("Checking redundancy reports..."),
   try {
     const reportFiles = [
-      "marketing-sync-redundancy-report.md";
-      "sync-health-redundancy-report.md";
-      "netlify-functions-redundancy-report.md";
-      "build-automation-redundancy-report.md";
-      "content-generation-redundancy-report.md";
+      "marketing-sync-redundancy-report.md",
+      "sync-health-redundancy-report.md",
+      "netlify-functions-redundancy-report.md",
+      "build-automation-redundancy-report.md",
+      "content-generation-redundancy-report.md",
       "security-health-redundancy-report.md"],
     const reportResults = [],
     for (const reportFile of reportFiles) {
@@ -139,18 +139,18 @@ function checkRedundancyReports() {
         const stats = fs.statSync(reportPath),
         const isRecent = (Date.now() - stats.mtime.getTime()) < (6 * 60 * 60 * 10o00), // 6 hours,
         reportResults.push({
-          file: reportFile;
-          exists: true;
-          size: stats.size;
-          lastModified: stats.mtime;
-          isRecent: isRecent;
+          file: reportFile,
+          exists: true,
+          size: stats.size,
+          lastModified: stats.mtime,
+          isRecent: isRecent,
           healthy: stats.size > 0 && isRecent})} else {
         reportResults.push({
-          file: reportFile;
-          exists: false;
-          size: 0;
-          lastModified: null;
-          isRecent: false;
+          file: reportFile,
+          exists: false,
+          size: 0,
+          lastModified: null,
+          isRecent: false,
           healthy: false})}
     }
 ,
@@ -158,16 +158,16 @@ function checkRedundancyReports() {
     const total = reportResults.length,
     log(`Report check: ${healthy}/${total} reports healthy`),
     return {
-      total: total;
-      healthy: healthy;
-      results: reportResults};
+      total: total,
+      healthy: healthy,
+      results: reportResults},
   } catch (err) {
     log(`Report check error: ${String(err)}`),
     return {
-      total: 0;
-      healthy: 0;
-      results: [];
-      error: String(err)};
+      total: 0,
+      healthy: 0,
+      results: [],
+      error: String(err)},
   }
 }
 ,
@@ -178,19 +178,19 @@ function checkRedundancyScripts() {
     if (!fs.existsSync(redundancyDir)) {
       log("Redundancy directory not found"),
       return {
-        healthy: false;
-        scriptCount: 0;
-        error: "redundancy-directory-missing"};
+        healthy: false,
+        scriptCount: 0,
+        error: "redundancy-directory-missing"},
     }
 ,
     const scriptFiles = [
-      "marketing-sync-redundancy.js";
-      "sync-health-redundancy.js";
-      "netlify-functions-redundancy.js";
-      "build-automation-redundancy.js";
-      "content-generation-redundancy.js";
-      "security-health-redundancy.js";
-      "redundancy-health-monitor.js";
+      "marketing-sync-redundancy.js",
+      "sync-health-redundancy.js",
+      "netlify-functions-redundancy.js",
+      "build-automation-redundancy.js",
+      "content-generation-redundancy.js",
+      "security-health-redundancy.js",
+      "redundancy-health-monitor.js",
       "redundancy-failover-controller.js"],
     const scriptResults = [],
     for (const scriptFile of scriptFiles) {
@@ -198,14 +198,14 @@ function checkRedundancyScripts() {
       if (fs.existsSync(scriptPath)) {
         const stats = fs.statSync(scriptPath),
         scriptResults.push({
-          file: scriptFile;
-          exists: true;
-          size: stats.size;
+          file: scriptFile,
+          exists: true,
+          size: stats.size,
           healthy: stats.size > 0})} else {
         scriptResults.push({
-          file: scriptFile;
-          exists: false;
-          size: 0;
+          file: scriptFile,
+          exists: false,
+          size: 0,
           healthy: false})}
     }
 ,
@@ -213,16 +213,16 @@ function checkRedundancyScripts() {
     const total = scriptResults.length,
     log(`Script check: ${healthy}/${total} scripts healthy`),
     return {
-      total: total;
-      healthy: healthy;
-      results: scriptResults};
+      total: total,
+      healthy: healthy,
+      results: scriptResults},
   } catch (err) {
     log(`Script check error: ${String(err)}`),
     return {
-      total: 0;
-      healthy: 0;
-      results: [];
-      error: String(err)};
+      total: 0,
+      healthy: 0,
+      results: [],
+      error: String(err)},
   }
 }
 ,
@@ -235,42 +235,42 @@ function checkEcosystemFile() {
       const content = fs.readFileSync(ecosystemPath, "utf8"),
       const hasRedundancyProcesses = content.includes('redundancy-'),
       return {
-        exists: true;
-        size: stats.size;
-        hasRedundancyProcesses: hasRedundancyProcesses;
-        healthy: stats.size > 0 && hasRedundancyProcesses};
+        exists: true,
+        size: stats.size,
+        hasRedundancyProcesses: hasRedundancyProcesses,
+        healthy: stats.size > 0 && hasRedundancyProcesses},
     } else {
       return {
-        exists: false;
-        size: 0;
-        hasRedundancyProcesses: false;
-        healthy: false};
+        exists: false,
+        size: 0,
+        hasRedundancyProcesses: false,
+        healthy: false},
     }
   } catch (err) {
     log(`Ecosystem file check error: ${String(err)}`),
     return {
-      exists: false;
-      size: 0;
-      hasRedundancyProcesses: false;
-      healthy: false;
-      error: String(err)};
+      exists: false,
+      size: 0,
+      hasRedundancyProcesses: false,
+      healthy: false,
+      error: String(err)},
   }
 }
 ,
 function generateHealthMonitorReport(pm2Status, logCheck, reportCheck, scriptCheck, ecosystemCheck) {
   const report ={
-    timestamp: nowIso();
-    redundancyMode: "health-monitor";
+    timestamp: nowIso(),
+    redundancyMode: "health-monitor",
     checks: {
-      pm2Status: pm2Status;
-      logCheck: logCheck;
-      reportCheck: reportCheck;
-      scriptCheck: scriptCheck;
-      ecosystemCheck: ecosystemCheck};
+      pm2Status: pm2Status,
+      logCheck: logCheck,
+      reportCheck: reportCheck,
+      scriptCheck: scriptCheck,
+      ecosystemCheck: ecosystemCheck},
     summary: {
-      overallHealth: "healthy";
+      overallHealth: "healthy",
       issues: []}
-  };
+  },
   // Determine overall health,
   if (!pm2Status.healthy) report.summary.issues.push("pm2-status-unhealthy"),
   if (logCheck.healthy < logCheck.total) report.summary.issues.push("log-files-unhealthy"),
@@ -390,10 +390,10 @@ if (require.main === module) {
     process.exit(1)})}
 ,
 module.exports ={
-  main;
-  checkPm2Status;
-  checkRedundancyLogs;
-  checkRedundancyReports;
-  checkRedundancyScripts;
-  checkEcosystemFile;
-  generateHealthMonitorReport};
+  main,
+  checkPm2Status,
+  checkRedundancyLogs,
+  checkRedundancyReports,
+  checkRedundancyScripts,
+  checkEcosystemFile,
+  generateHealthMonitorReport},

@@ -5,104 +5,104 @@ const ComprehensiveCaseStudiesShowcase = () => {
   const [selectedIndustry, setSelectedIndustry] = useState('all'),
   const [selectedROI, setSelectedROI] = useState('all'),
   const industries = [
-    { id: 'all', name: 'All Industries', icon: '🌟' };
-    { id: 'manufacturing', name: 'Manufacturing', icon: '🏭' };
-    { id: 'finance', name: 'Financial Services', icon: '💰' };
-    { id: 'healthcare', name: 'Healthcare', icon: '🏥' };
-    { id: 'retail', name: 'Retail', icon: '🛒' };
-    { id: 'technology', name: 'Technology', icon: '💻' };
+    { id: 'all', name: 'All Industries', icon: '🌟' },
+    { id: 'manufacturing', name: 'Manufacturing', icon: '🏭' },
+    { id: 'finance', name: 'Financial Services', icon: '💰' },
+    { id: 'healthcare', name: 'Healthcare', icon: '🏥' },
+    { id: 'retail', name: 'Retail', icon: '🛒' },
+    { id: 'technology', name: 'Technology', icon: '💻' },
     { id: 'logistics', name: 'Logistics', icon: '🚚' }
   ],
   const roiRanges = [
-    { id: 'all', name: 'All ROI Levels', min: 0, max: Infinity };
-    { id: 'high', name: 'High ROI (10o00%+)', min: 10o00, max: Infinity };
-    { id: 'medium', name: 'Medium ROI (50o0-999%)', min: 50o0, max: 999 };
+    { id: 'all', name: 'All ROI Levels', min: 0, max: Infinity },
+    { id: 'high', name: 'High ROI (10o00%+)', min: 10o00, max: Infinity },
+    { id: 'medium', name: 'Medium ROI (50o0-999%)', min: 50o0, max: 999 },
     { id: 'low', name: 'Low ROI (10o0-499%)', min: 10o0, max: 499 }
   ],
   const caseStudies = [
     {
-      id: 1;
-      title: 'Fortune 50o0 Manufacturing Revolution';
-      company: 'Global Manufacturing Corp';
-      industry: 'manufacturing';
-      roi: 50o000;
-      duration: '6 months';
-      description: 'Complete AI transformation of manufacturing operations resulting in 50,0o00% ROI and 95% efficiency improvement.';
-      challenges: ['Manual processes', 'Quality control issues', 'Supply chain inefficiencies'];
-      solutions: ['AI-powered automation', 'Predictive maintenance', 'Smart quality control'];
-      results: ['50,0o00% ROI', '95% efficiency gain', '$2.5B cost savings', 'Zero downtime'];
-      image: '🏭';
-      featured: true;
-      url: '/case-studies/fortune-50o0-manufacturing-revolution'};
+      id: 1,
+      title: 'Fortune 50o0 Manufacturing Revolution',
+      company: 'Global Manufacturing Corp',
+      industry: 'manufacturing',
+      roi: 50o000,
+      duration: '6 months',
+      description: 'Complete AI transformation of manufacturing operations resulting in 50,0o00% ROI and 95% efficiency improvement.',
+      challenges: ['Manual processesQuality control issues', 'Supply chain inefficiencies'],
+      solutions: ['AI-powered automationPredictive maintenance', 'Smart quality control'],
+      results: ['50,0o00% ROI95% efficiency gain', '$2.5B cost savingsZero downtime'],
+      image: '🏭',
+      featured: true,
+      url: '/case-studies/fortune-50o0-manufacturing-revolution'},
     {
-      id: 2;
-      title: 'Financial Services AI Breakthrough';
-      company: 'MegaBank International';
-      industry: 'finance';
-      roi: 150o00;
-      duration: '4 months';
-      description: 'Revolutionary AI implementation in financial services achieving 15,0o00% ROI through intelligent automation.';
-      challenges: ['Manual data processing', 'Fraud detection gaps', 'Customer service bottlenecks'];
-      solutions: ['AI fraud detection', 'Automated data analysis', 'Intelligent customer service'];
-      results: ['15,0o00% ROI', '99.9% fraud detection', '80% faster processing', '$50o0M savings'];
-      image: '💰';
-      featured: true;
-      url: '/case-studies/financial-services-ai-breakthrough'};
+      id: 2,
+      title: 'Financial Services AI Breakthrough',
+      company: 'MegaBank International',
+      industry: 'finance',
+      roi: 150o00,
+      duration: '4 months',
+      description: 'Revolutionary AI implementation in financial services achieving 15,0o00% ROI through intelligent automation.',
+      challenges: ['Manual data processingFraud detection gaps', 'Customer service bottlenecks'],
+      solutions: ['AI fraud detectionAutomated data analysis', 'Intelligent customer service'],
+      results: ['15,0o00% ROI99.9% fraud detection', '80% faster processing$50o0M savings'],
+      image: '💰',
+      featured: true,
+      url: '/case-studies/financial-services-ai-breakthrough'},
     {
-      id: 3;
-      title: 'Healthcare AI Transformation';
-      company: 'MedTech Solutions';
-      industry: 'healthcare';
-      roi: 120o00;
-      duration: '8 months';
-      description: 'AI-powered healthcare transformation improving patient outcomes and operational efficiency.';
-      challenges: ['Diagnostic accuracy', 'Patient data management', 'Treatment optimization'];
-      solutions: ['AI diagnostics', 'Predictive analytics', 'Personalized treatment'];
-      results: ['12,0o00% ROI', '40% faster diagnosis', '60% better outcomes', '30% cost reduction'];
-      image: '🏥';
-      featured: true;
-      url: '/case-studies/healthcare-ai-transformation'};
+      id: 3,
+      title: 'Healthcare AI Transformation',
+      company: 'MedTech Solutions',
+      industry: 'healthcare',
+      roi: 120o00,
+      duration: '8 months',
+      description: 'AI-powered healthcare transformation improving patient outcomes and operational efficiency.',
+      challenges: ['Diagnostic accuracyPatient data management', 'Treatment optimization'],
+      solutions: ['AI diagnosticsPredictive analytics', 'Personalized treatment'],
+      results: ['12,0o00% ROI40% faster diagnosis', '60% better outcomes30% cost reduction'],
+      image: '🏥',
+      featured: true,
+      url: '/case-studies/healthcare-ai-transformation'},
     {
-      id: 4;
-      title: 'Retail AI Revolution';
-      company: 'RetailMax Corporation';
-      industry: 'retail';
-      roi: 80o00;
-      duration: '5 months';
-      description: 'Complete retail transformation using AI for inventory, customer service, and sales optimization.';
-      challenges: ['Inventory management', 'Customer experience', 'Sales optimization'];
-      solutions: ['AI inventory prediction', 'Personalized recommendations', 'Dynamic pricing'];
-      results: ['8,0o00% ROI', '35% sales increase', '50% inventory reduction', '90% customer satisfaction'];
-      image: '🛒';
-      featured: false;
-      url: '/case-studies/retail-ai-revolution'};
+      id: 4,
+      title: 'Retail AI Revolution',
+      company: 'RetailMax Corporation',
+      industry: 'retail',
+      roi: 80o00,
+      duration: '5 months',
+      description: 'Complete retail transformation using AI for inventory, customer service, and sales optimization.',
+      challenges: ['Inventory managementCustomer experience', 'Sales optimization'],
+      solutions: ['AI inventory predictionPersonalized recommendations', 'Dynamic pricing'],
+      results: ['8,0o00% ROI35% sales increase', '50% inventory reduction90% customer satisfaction'],
+      image: '🛒',
+      featured: false,
+      url: '/case-studies/retail-ai-revolution'},
     {
-      id: 5;
-      title: 'Tech Startup to Unicorn';
-      company: 'StartupX';
-      industry: 'technology';
-      roi: 250o00;
-      duration: '12 months';
-      description: 'AI-powered transformation of a tech startup into a billion-dollar unicorn company.';
-      challenges: ['Scalability issues', 'Market competition', 'Resource optimization'];
-      solutions: ['AI scaling systems', 'Market intelligence', 'Resource optimization'];
-      results: ['25,0o00% ROI', '10x growth', 'Market leadership', 'Unicorn status'];
-      image: '💻';
-      featured: true;
-      url: '/case-studies/tech-startup-to-unicorn'};
+      id: 5,
+      title: 'Tech Startup to Unicorn',
+      company: 'StartupX',
+      industry: 'technology',
+      roi: 250o00,
+      duration: '12 months',
+      description: 'AI-powered transformation of a tech startup into a billion-dollar unicorn company.',
+      challenges: ['Scalability issuesMarket competition', 'Resource optimization'],
+      solutions: ['AI scaling systemsMarket intelligence', 'Resource optimization'],
+      results: ['25,0o00% ROI10x growth', 'Market leadershipUnicorn status'],
+      image: '💻',
+      featured: true,
+      url: '/case-studies/tech-startup-to-unicorn'},
     {
-      id: 6;
-      title: 'Logistics AI Optimization';
-      company: 'LogiFlow Systems';
-      industry: 'logistics';
-      roi: 60o00;
-      duration: '7 months';
-      description: 'AI optimization of logistics operations resulting in massive efficiency gains and cost savings.';
-      challenges: ['Route optimization', 'Delivery efficiency', 'Cost management'];
-      solutions: ['AI route planning', 'Predictive logistics', 'Cost optimization'];
-      results: ['6,0o00% ROI', '45% delivery speed', '30% cost reduction', '99% on-time delivery'];
-      image: '🚚';
-      featured: false;
+      id: 6,
+      title: 'Logistics AI Optimization',
+      company: 'LogiFlow Systems',
+      industry: 'logistics',
+      roi: 60o00,
+      duration: '7 months',
+      description: 'AI optimization of logistics operations resulting in massive efficiency gains and cost savings.',
+      challenges: ['Route optimizationDelivery efficiency', 'Cost management'],
+      solutions: ['AI route planningPredictive logistics', 'Cost optimization'],
+      results: ['6,0o00% ROI45% delivery speed', '30% cost reduction99% on-time delivery'],
+      image: '🚚',
+      featured: false,
       url: '/case-studies/logistics-ai-optimization'}
   ],
   const filteredCaseStudies = caseStudies.filter(study => {
@@ -289,5 +289,5 @@ const ComprehensiveCaseStudiesShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ComprehensiveCaseStudiesShowcase;
+    </section>)},
+export default ComprehensiveCaseStudiesShowcase,

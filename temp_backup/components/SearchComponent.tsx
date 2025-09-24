@@ -19,76 +19,76 @@ const SearchComponent: React.FC = () => {
   // Sample search data - in a real app, this would come from an API,
   const searchData: SearchResult[] = [
     {
-      id: 'ai-ml';
-      title: 'AI & Machine Learning';
-      description: 'Advanced AI solutions for enterprise automation';
-      category: 'ai';
-      url: '/ai-services';
-      icon: Brain};
+      id: 'ai-ml',
+      title: 'AI & Machine Learning',
+      description: 'Advanced AI solutions for enterprise automation',
+      category: 'ai',
+      url: '/ai-services',
+      icon: Brain},
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing';
-      description: 'Next-generation computational power';
-      category: 'quantum';
-      url: '/quantum-computing';
-      icon: Cpu};
+      id: 'quantum-computing',
+      title: 'Quantum Computing',
+      description: 'Next-generation computational power',
+      category: 'quantum',
+      url: '/quantum-computing',
+      icon: Cpu},
     {
-      id: 'cybersecurity';
-      title: 'Cybersecurity';
-      description: 'Military-grade protection for digital assets';
-      category: 'security';
-      url: '/cybersecurity';
-      icon: Shield};
+      id: 'cybersecurity',
+      title: 'Cybersecurity',
+      description: 'Military-grade protection for digital assets',
+      category: 'security',
+      url: '/cybersecurity',
+      icon: Shield},
     {
-      id: 'cloud-infrastructure';
-      title: 'Cloud Infrastructure';
-      description: 'Scalable cloud solutions for growth';
-      category: 'cloud';
-      url: '/cloud-platform';
-      icon: Cloud};
+      id: 'cloud-infrastructure',
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud solutions for growth',
+      category: 'cloud',
+      url: '/cloud-platform',
+      icon: Cloud},
     {
-      id: 'data-analytics';
-      title: 'Data Analytics';
-      description: 'Transform data into actionable insights';
-      category: 'analytics';
-      url: '/data-analytics';
-      icon: BarChart3};
+      id: 'data-analytics',
+      title: 'Data Analytics',
+      description: 'Transform data into actionable insights',
+      category: 'analytics',
+      url: '/data-analytics',
+      icon: BarChart3},
     {
-      id: 'blockchain';
-      title: 'Blockchain Solutions';
-      description: 'Secure, transparent digital infrastructure';
-      category: 'blockchain';
-      url: '/blockchain-solutions';
-      icon: Lock};
+      id: 'blockchain',
+      title: 'Blockchain Solutions',
+      description: 'Secure, transparent digital infrastructure',
+      category: 'blockchain',
+      url: '/blockchain-solutions',
+      icon: Lock},
     {
-      id: 'quantum-ai';
-      title: 'Quantum AI Fusion';
-      description: 'Combining quantum computing with AI';
-      category: 'quantum';
-      url: '/quantum-ai-fusion';
-      icon: Brain};
+      id: 'quantum-ai',
+      title: 'Quantum AI Fusion',
+      description: 'Combining quantum computing with AI',
+      category: 'quantum',
+      url: '/quantum-ai-fusion',
+      icon: Brain},
     {
-      id: 'ai-automation';
-      title: 'AI Process Automation';
-      description: 'Automate complex business processes';
-      category: 'ai';
-      url: '/ai-automation-services';
+      id: 'ai-automation',
+      title: 'AI Process Automation',
+      description: 'Automate complex business processes',
+      category: 'ai',
+      url: '/ai-automation-services',
       icon: Brain}
   ],
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe };
-    { id: 'ai', name: 'AI & ML', icon: Brain };
-    { id: 'quantum', name: 'Quantum', icon: Cpu };
-    { id: 'security', name: 'Security', icon: Shield };
-    { id: 'cloud', name: 'Cloud', icon: Cloud };
-    { id: 'analytics', name: 'Analytics', icon: BarChart3 };
+    { id: 'all', name: 'All Services', icon: Globe },
+    { id: 'ai', name: 'AI & ML', icon: Brain },
+    { id: 'quantum', name: 'Quantum', icon: Cpu },
+    { id: 'security', name: 'Security', icon: Shield },
+    { id: 'cloud', name: 'Cloud', icon: Cloud },
+    { id: 'analytics', name: 'Analytics', icon: BarChart3 },
     { id: 'blockchain', name: 'Blockchain', icon: Lock }
   ],
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   useEffect(() => {
@@ -111,10 +111,10 @@ const SearchComponent: React.FC = () => {
     if (query.trim()) {
       // Handle search submission,
       // // // console.log('Searching for:', query)}
-  };
+  },
   const handleResultClick = (result: SearchResult) => {
     // Navigate to the result,
-    window.location.href = result.url};
+    window.location.href = result.url},
   return (
     <div className="relative" ref={searchRef}>,
       {/* Search Button */}
@@ -234,5 +234,5 @@ const SearchComponent: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default SearchComponent;
+    </div>)},
+export default SearchComponent,

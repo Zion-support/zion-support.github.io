@@ -22,7 +22,7 @@ export default function ExpoPage() {
         <div className='flex items-center justify-between'>,
           <h2 className='text-2xl font-semibold'>Agenda</h2>,
           <div className='flex gap-2 text-sm'>,
-            {['All', 'AI', 'DAO', 'Talent', 'Global'].map(track => (
+            {['AllAI', 'DAOTalent', 'Global'].map(track => (
               <button
                 key={track}
                 onClick={() => setActiveTrack(track as any)}

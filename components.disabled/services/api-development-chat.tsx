@@ -13,5 +13,5 @@ const ApiDevelopmentChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default ApiDevelopmentChat;
+    </div>)},
+export default ApiDevelopmentChat,

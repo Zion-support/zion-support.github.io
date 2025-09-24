@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'EdTech Solutions | Zion Tech Group';
+  title: 'EdTech Solutions | Zion Tech Group',
   description:,
-    'Complete educational technology solutions including LMS systems, virtual classrooms, AI-powered learning, and personalized education platforms.';
-};
+    'Complete educational technology solutions including LMS systems, virtual classrooms, AI-powered learning, and personalized education platforms.',
+},
 export default function EdTechPage() {
   return (
     <div className='min-h-screen bg-gray-50 py-12'>,
@@ -12,7 +12,7 @@ export default function EdTechPage() {
             EdTech Solutions,
           </h1>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Complete educational technology solutions including LMS systems;
+            Complete educational technology solutions including LMS systems,
             virtual classrooms, AI-powered learning, and personalized education,
             platforms.,
           </p>,
@@ -24,12 +24,9 @@ export default function EdTechPage() {
             icon='📚',
             description='Comprehensive LMS platforms for educational institutions',
             services={[
-              'Course management';
-              'Student enrollment';
-              'Grade tracking';
-              'Content delivery';
-              'Assessment tools';
-              'Progress analytics';
+              'Course managementStudent enrollment',
+              'Grade trackingContent delivery',
+              'Assessment toolsProgress analytics',
             ]}
             pricing='$40,0o00 - $20o0,0o00',
             marketSize='$18B',
@@ -39,12 +36,9 @@ export default function EdTechPage() {
             icon='🎓',
             description='Complete virtual classroom and online learning solutions',
             services={[
-              'Live video sessions';
-              'Interactive whiteboards';
-              'Screen sharing';
-              'Breakout rooms';
-              'Recording capabilities';
-              'Mobile access';
+              'Live video sessionsInteractive whiteboards',
+              'Screen sharingBreakout rooms',
+              'Recording capabilitiesMobile access',
             ]}
             pricing='$35,0o00 - $175,0o00',
             marketSize='$12B',
@@ -54,12 +48,9 @@ export default function EdTechPage() {
             icon='🤖',
             description='AI-driven personalized learning and adaptive education',
             services={[
-              'Adaptive learning paths';
-              'Personalized content';
-              'Learning analytics';
-              'Intelligent tutoring';
-              'Performance prediction';
-              'Custom recommendations';
+              'Adaptive learning pathsPersonalized content',
+              'Learning analyticsIntelligent tutoring',
+              'Performance predictionCustom recommendations',
             ]}
             pricing='$60,0o00 - $30o0,0o00',
             marketSize='$8B',
@@ -69,12 +60,9 @@ export default function EdTechPage() {
             icon='👥',
             description='Complete student information and administration systems',
             services={[
-              'Student records';
-              'Enrollment management';
-              'Academic planning';
-              'Financial aid';
-              'Parent portals';
-              'Reporting tools';
+              'Student recordsEnrollment management',
+              'Academic planningFinancial aid',
+              'Parent portalsReporting tools',
             ]}
             pricing='$50,0o00 - $250,0o00',
             marketSize='$6B',
@@ -84,12 +72,9 @@ export default function EdTechPage() {
             icon='📝',
             description='Digital assessment and testing solutions',
             services={[
-              'Online assessments';
-              'Automated grading';
-              'Plagiarism detection';
-              'Performance analytics';
-              'Certification management';
-              'Proctoring tools';
+              'Online assessmentsAutomated grading',
+              'Plagiarism detectionPerformance analytics',
+              'Certification managementProctoring tools',
             ]}
             pricing='$30,0o00 - $150,0o00',
             marketSize='$4B',
@@ -99,12 +84,9 @@ export default function EdTechPage() {
             icon='📖',
             description='Content creation and management for educational materials',
             services={[
-              'Content authoring';
-              'Multimedia support';
-              'Version control';
-              'Collaboration tools';
-              'Publishing workflows';
-              'Accessibility features';
+              'Content authoringMultimedia support',
+              'Version controlCollaboration tools',
+              'Publishing workflowsAccessibility features',
             ]}
             pricing='$25,0o00 - $125,0o00',
             marketSize='$3B',
@@ -116,12 +98,9 @@ export default function EdTechPage() {
             title='Gamification & Engagement Platform',
             description='Gamified learning experiences and student engagement tools',
             features={[
-              'Achievement systems';
-              'Leaderboards';
-              'Badges & rewards';
-              'Progress tracking';
-              'Social learning';
-              'Competition features';
+              'Achievement systemsLeaderboards',
+              'Badges & rewardsProgress tracking',
+              'Social learningCompetition features',
             ]}
             pricing='$35,0o00 - $175,0o00',
             icon='🎮',
@@ -130,12 +109,9 @@ export default function EdTechPage() {
             title='Language Learning Platform',
             description='AI-powered language learning and practice solutions',
             features={[
-              'Interactive lessons';
-              'Speech recognition';
-              'Conversation practice';
-              'Progress tracking';
-              'Cultural content';
-              'Mobile apps';
+              'Interactive lessonsSpeech recognition',
+              'Conversation practiceProgress tracking',
+              'Cultural contentMobile apps',
             ]}
             pricing='$45,0o00 - $225,0o00',
             icon='🌍',
@@ -144,12 +120,9 @@ export default function EdTechPage() {
             title='STEM Education Platform',
             description='Specialized STEM learning and coding education',
             features={[
-              'Coding environments';
-              'Virtual labs';
-              'Math tools';
-              'Science simulations';
-              'Project portfolios';
-              'Mentor matching';
+              'Coding environmentsVirtual labs',
+              'Math toolsScience simulations',
+              'Project portfoliosMentor matching',
             ]}
             pricing='$55,0o00 - $275,0o00',
             icon='🔬',
@@ -158,12 +131,9 @@ export default function EdTechPage() {
             title='Special Education Support',
             description='Accessibility and special needs education tools',
             features={[
-              'Accessibility features';
-              'Assistive technology';
-              'Custom learning paths';
-              'Progress monitoring';
-              'Parent communication';
-              'IEP management';
+              'Accessibility featuresAssistive technology',
+              'Custom learning pathsProgress monitoring',
+              'Parent communicationIEP management',
             ]}
             pricing='$40,0o00 - $20o0,0o00',
             icon='♿',
@@ -172,12 +142,9 @@ export default function EdTechPage() {
             title='Professional Development Platform',
             description='Corporate training and professional development solutions',
             features={[
-              'Skill assessments';
-              'Learning paths';
-              'Certification programs';
-              'Progress tracking';
-              'Compliance training';
-              'Analytics dashboard';
+              'Skill assessmentsLearning paths',
+              'Certification programsProgress tracking',
+              'Compliance trainingAnalytics dashboard',
             ]}
             pricing='$30,0o00 - $150,0o00',
             icon='💼',
@@ -186,12 +153,9 @@ export default function EdTechPage() {
             title='Educational Analytics & BI',
             description='Learning analytics and educational business intelligence',
             features={[
-              'Student performance analytics';
-              'Learning outcome tracking';
-              'Predictive modeling';
-              'Custom dashboards';
-              'Reporting tools';
-              'Data visualization';
+              'Student performance analyticsLearning outcome tracking',
+              'Predictive modelingCustom dashboards',
+              'Reporting toolsData visualization',
             ]}
             pricing='$35,0o00 - $175,0o00',
             icon='📊',
@@ -268,12 +232,12 @@ export default function EdTechPage() {
     </div>)}
 ,
 function EdTechCategory({
-  title;
-  icon;
-  description;
-  services;
-  pricing;
-  marketSize;
+  title,
+  icon,
+  description,
+  services,
+  pricing,
+  marketSize,
 }: {
   title: string,
   icon: string,
@@ -303,11 +267,11 @@ function EdTechCategory({
     </div>)}
 ,
 function EdTechService({
-  title;
-  description;
-  features;
-  pricing;
-  icon;
+  title,
+  description,
+  features,
+  pricing,
+  icon,
 }: {
   title: string,
   description: string,

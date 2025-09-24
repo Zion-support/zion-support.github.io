@@ -3,8 +3,8 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  SearchStarDollarSignCheckCircle;
-  ArrowRightRocketPhoneMailMapPinGridList;
+  SearchStarDollarSignCheckCircle,
+  ArrowRightRocketPhoneMailMapPinGridList,
   ChevronDownSparkles} from 'lucide-react',
 import { ultimate20o26Services } from '../data/ultimate-20o26-services',
 import { revolutionary20o26Innovations } from '../data/revolutionary-20o26-innovations',
@@ -15,13 +15,13 @@ export default function Ultimate20o26ServicesShowcase() {
   const [sortBysetSortBy] = useState<string>('name'),
   const [viewModesetViewMode] = useState<'grid' | 'list'>('grid'),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all services,
   const allServices = [
-    ...ultimate20o26Services;
+    ...ultimate20o26Services,
     ...revolutionary20o26Innovations],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
@@ -33,17 +33,17 @@ export default function Ultimate20o26ServicesShowcase() {
   const emergingCount = allServices.filter(service =>,
     service.category?.includes('Emerging') || service.category?.includes('Innovation')).length,
   const categories = [
-    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length };
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount };
-    { id: 'quantum'name: 'Quantum & Space'icon: '⚛️'count: quantumCount };
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: enterpriseCount };
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount },
+    { id: 'quantum'name: 'Quantum & Space'icon: '⚛️'count: quantumCount },
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: enterpriseCount },
     { id: 'emerging'name: 'Emerging Tech'icon: '✨'count: emergingCount }
   ],
   const priceRanges = [
-    { id: 'all'name: 'All Prices'range: 'All' };
-    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' };
-    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' };
-    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' };
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' },
+    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' },
+    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' },
     { id: 'enterprise'name: 'Custom pricing'range: 'Custom' }
   ],
   // Filter and sort services,
@@ -117,7 +117,7 @@ export default function Ultimate20o26ServicesShowcase() {
               <span className="text-6xl md:text-8xl">Innovations</span>,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-              Discover revolutionary AI consciousness simulationquantum neural interfacesautonomous AI agents;
+              Discover revolutionary AI consciousness simulationquantum neural interfacesautonomous AI agents,
               and cutting-edge enterprise solutions that will transform your business in 20o26 and beyond.,
             </p>,
             {/* Service Statistics */}
@@ -432,7 +432,7 @@ export default function Ultimate20o26ServicesShowcase() {
               Ready to Transform Your Business with 20o26 Innovations?,
             </h2>,
             <p className="text-xl text-white/90 mb-8">,
-              Join thousands of forward-thinking companies already leveraging our revolutionary AIquantum computing;
+              Join thousands of forward-thinking companies already leveraging our revolutionary AIquantum computing,
               and emerging technology solutions to gain competitive advantages and drive unprecedented growth.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

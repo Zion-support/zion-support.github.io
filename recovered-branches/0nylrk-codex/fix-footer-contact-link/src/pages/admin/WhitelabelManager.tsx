@@ -7,17 +7,17 @@ import {TenantsList} from "@/components/admin/whitelabel/TenantsList",
 import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
 import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
-import React, { useState } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm";
-import { TenantsList } from "@/components/admin/whitelabel/TenantsList";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { WhitelabelRequestForm } from "@/components/admin/whitelabel/WhitelabelRequestForm",
+import { TenantsList } from "@/components/admin/whitelabel/TenantsList",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
 import { SEO } from '@/components / SEO',
@@ -36,10 +36,10 @@ export default function WhitelabelManager() {
   // Check if user has admin role,
   const isAdmin = user?.role === "admin",
 export default function WhitelabelManager() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("tenants"),
   // Check if user has admin role,
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role === "admin",
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />}
   return (
@@ -53,8 +53,8 @@ export default function WhitelabelManager() {
       <Footer />,
     </>),
 export default function WhitelabelManager() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("tenants");
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("tenants"),
   // Check if user has admin role,
   const isAdmin = user?.role === "admin",
   if (!isAdmin) {
@@ -156,7 +156,7 @@ if ( {) {
                 </ul>,
                 <h3 > Admin Access</h3>,
                 <p>,
-                  You can assign tenant administrators who will have access to manage their white - label instance;
+                  You can assign tenant administrators who will have access to manage their white - label instance,
                   including content, users, and analytics. Tenant admins cannot access data from other tenants.,
                 </p>,
               </div>,

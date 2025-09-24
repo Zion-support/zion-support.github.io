@@ -167,5 +167,5 @@ const AI20o26ManufacturingSuccessBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26ManufacturingSuccessBanner;
+    </section>)},
+export default AI20o26ManufacturingSuccessBanner,

@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'micro-saas - Zion Tech Group';
-  description: 'Professional micro-saas solutions for your business needs.';
-  keywords: 'micro-saas, services, business, technology';
-};
+  title: 'micro-saas - Zion Tech Group',
+  description: 'Professional micro-saas solutions for your business needs.',
+  keywords: 'micro-saas, services, business, technology',
+},
 export default function MicroSaasPage() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AIImplementationGuideBanner: React.FC = () => {
   return (
@@ -102,10 +102,10 @@ const AIImplementationGuideBanner: React.FC = () => {
             </p>,
           </div>,
         </div>,
-        {/* 'What', 's Included */}
+        {/* 'Whats Included */}
         <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-8 mb-12'>,
           <h3 className='text-2xl font-bold text-center mb-8'>,
-            'What', 's Included in the Guide,
+            'Whats Included in the Guide,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-6'>,
             <div>,
@@ -190,5 +190,5 @@ const AIImplementationGuideBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AIImplementationGuideBanner;
+    </div>)},
+export default AIImplementationGuideBanner,

@@ -16,14 +16,14 @@ interface ProfileHeroProps {
   profileType: 'service' | 'talent'}
 ,
 export function ProfileHero({
-  name;
-  title;
-  avatarUrl;
-  coverImageUrl;
-  location;
-  rating;
-  reviewCount;
-  aiScore;
+  name,
+  title,
+  avatarUrl,
+  coverImageUrl,
+  location,
+  rating,
+  reviewCount,
+  aiScore,
   profileType}: ProfileHeroProps) {
   return (
     <div className="w-full overflow-hidden">,
@@ -52,7 +52,7 @@ export function ProfileHero({
                 <Badge
                   variant="outline",
                   className={cn(
-                    "ml-2 border-zion-purple/50 text-zion-cyan";
+                    "ml-2 border-zion-purple/50 text-zion-cyan",
                     profileType === 'service' ? "bg-zion-purple/10" : "bg-zion-cyan/10")}
                 >,
                   {profileType === 'service' ? 'Service Provider' : 'Talent'}

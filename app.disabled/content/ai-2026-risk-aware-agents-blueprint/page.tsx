@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Risk-Aware Agents Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Risk-Aware Agents Blueprint | Zion Tech Group',
   description:,
-    'Design policy-constrained, risk-scored agent workflows with continuous evals and guardrails for safe autonomy.';
-};
+    'Design policy-constrained, risk-scored agent workflows with continuous evals and guardrails for safe autonomy.',
+},
 export default function RiskAwareAgentsBlueprintPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

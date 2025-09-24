@@ -1,55 +1,55 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Zap;
-  Star;
-  TrendingUp;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Globe;
-  Shield;
+  ArrowRight,
+  Zap,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Shield,
 } from 'lucide-react',
 import Link from 'next/link',
 const UltraAdvancedHero20o26V2: React.FC = () => {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.2;
-      };
-    };
-  };
+        staggerChildren: 0.2
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 30, scale: 0.95 };
+    hidden: { opacity: 0, y: 30, scale: 0.95 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.8;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0.8,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   const floatingElements = [
-    { icon: '🚀', delay: 0, position: 'top-20 left-10' };
-    { icon: '⚡', delay: 1, position: 'top-40 right-20' };
-    { icon: '🌟', delay: 2, position: 'bottom-40 left-20' };
-    { icon: '💎', delay: 3, position: 'bottom-20 right-10' };
-    { icon: '🔮', delay: 4, position: 'top-1/2 left-1/4' };
-    { icon: '⚛️', delay: 5, position: 'top-1/2 right-1/4' };
+    { icon: '🚀', delay: 0, position: 'top-20 left-10' },
+    { icon: '⚡', delay: 1, position: 'top-40 right-20' },
+    { icon: '🌟', delay: 2, position: 'bottom-40 left-20' },
+    { icon: '💎', delay: 3, position: 'bottom-20 right-10' },
+    { icon: '🔮', delay: 4, position: 'top-1/2 left-1/4' },
+    { icon: '⚛️', delay: 5, position: 'top-1/2 right-1/4' },
   ],
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-black'>,
@@ -68,14 +68,14 @@ const UltraAdvancedHero20o26V2: React.FC = () => {
             key={index}
             className={`absolute ${element.position} text-4xl opacity-20`}
             animate={{
-              y: [0, -20, 0];
-              rotate: [0, 5, -5, 0];
+              y: [0, -20, 0],
+              rotate: [0, 5, -5, 0],
             }}
             transition={{
-              duration: 4;
-              delay: element.delay;
-              repeat: Infinity;
-              ease: 'easeInOut';
+              duration: 4,
+              delay: element.delay,
+              repeat: Infinity,
+              ease: 'easeInOut'
             }}
           >,
             {element.icon}
@@ -118,7 +118,7 @@ const UltraAdvancedHero20o26V2: React.FC = () => {
           <motion.p,
             variants={itemVariants}
             className='text-xl md: text-2xl lg:text-3xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-            Experience the future with our cutting-edge AI, quantum computing;
+            Experience the future with our cutting-edge AI, quantum computing,
             and IT services.,
             <span className='text-purple-40o0 font-semibold'>,
               {' '}
@@ -230,5 +230,5 @@ const UltraAdvancedHero20o26V2: React.FC = () => {
           />,
         </div>,
       </motion.div>,
-    </section>)};
-export default UltraAdvancedHero20o26V2;
+    </section>)},
+export default UltraAdvancedHero20o26V2,

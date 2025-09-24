@@ -2,22 +2,25 @@ import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
 import { realMarketServices } from '../../data/2024-real-market-services',
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',import {
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
+import {
 import { realMarketServices  } from '../../data/2024-real-market-services',
 import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
-import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',import {
+import { aiEmergingTechServices } from '../../data/2024-ai-emerging-tech-services',
+import {
 import { realMarketServices } from '../../data / 2024 - real - market - services',
-import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services',import {
+import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services',
+import {
 import { aiEmergingTechServices } from '../../data / 2024 - ai - emerging - tech - services',
 "use client",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -56,31 +59,31 @@ class ErrorBoundary extends React.Component {
   Search,
   Phone} from 'lucide-react',
   Star, CheckCircle, ArrowRight, TrendingUp, Users,
-  Star;
-  CheckCircle;
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Award;
-  Clock;
-  Zap;
-  Shield;
-  Brain;
-  Atom;
-  Rocket;
-  ShoppingCart;
-  Cpu;
-  Globe;
-  Lock;
-  Video;
-  Palette;
-  BarChart;
-  UserCheck;
-  FileText;
-  Heart;
-  Eye;
-  Search;
-  Phone;
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,
+  Phone,
 } from 'lucide-react',
   Star, CheckCircle, ArrowRight, TrendingUp, Users,
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,
@@ -165,71 +168,71 @@ const serviceCategories = [
     gradient: 'from-orange-500/20 to-pink-500/20'}],    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') |s.category.includes('Climate')),
     gradient: 'from-orange-500/20 to-pink-500/20'}
 ],
-  Star;
-  CheckCircle;
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Award;
-  Clock;
-  Zap;
-  Shield;
-  Brain;
-  Atom;
-  Rocket;
-  ShoppingCart;
-  Cpu;
-  Globe;
-  Lock;
-  Video;
-  Palette;
-  BarChart;
-  UserCheck;
-  FileText;
-  Heart;
-  Eye;
-  Search;
-  Phone;
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,
+  Phone,
 } from 'lucide-react',
   Star, CheckCircle, ArrowRight, TrendingUp, Users,
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,
   ShoppingCart, Cpu, Globe, Lock, Video, Palette,
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone} from 'lucide-react',
 const serviceCategories = [
-  Star;
-  CheckCircle;
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Award;
-  Clock;
-  Zap;
-  Shield;
-  Brain;
-  Atom;
-  Rocket;
-  ShoppingCart;
-  Cpu;
-  Globe;
-  Lock;
-  Video;
-  Palette;
-  BarChart;
-  UserCheck;
-  FileText;
-  Heart;
-  Eye;
-  Search;
-  Phone;
+  Star,
+  CheckCircle,
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
+  ShoppingCart,
+  Cpu,
+  Globe,
+  Lock,
+  Video,
+  Palette,
+  BarChart,
+  UserCheck,
+  FileText,
+  Heart,
+  Eye,
+  Search,
+  Phone,
 } from 'lucide-react',
-  Star, CheckCircle, ArrowRight, TrendingUp, Users;
+  Star, CheckCircle, ArrowRight, TrendingUp, Users,
   Award, Clock, Zap, Shield, Brain, Atom, Rocket,
   ShoppingCart, Cpu, Globe, Lock, Video, Palette,
   BarChart, UserCheck, FileText, Heart, Eye, Search, Phone} from 'lucide-react',
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
 }
 visible: {
   opacity: 1, transition: {
@@ -243,10 +246,10 @@ visible: {
 ,
 const service_categories = [
   {
-    id: 'ai - services';
-    title: ' Revolutionary AI Services';
-    description: 'Next - generation AI consciousness and creativity';
-    icon: Brain;
+    id: 'ai - services',
+    title: ' Revolutionary AI Services',
+    description: 'Next - generation AI consciousness and creativity',
+    icon: Brain
   }
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
@@ -262,11 +265,11 @@ const service_categories = [
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>,
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>,
       </div>}
-};
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  };
+},
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  },
         {/* Header */}
 ,
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-900 to-black relative overflow-hidden">,
       {/* Animated Background */}
@@ -279,11 +282,11 @@ const service_categories = [
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
         {/* Header */}
 ,
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
         {/* Header */}
 ,
         <motion.div,
@@ -300,22 +303,22 @@ const service_categories = [
             computing, and emerging technology solutions. Each service is,
             designed to transform your business and propel you into the future.,
           </p>,
-        stagger_children: 0.1;
-      };
+        stagger_children: 0.1
+      },
     }}
 ,
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 };
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: { opacity: 1, coordinate_y: 0 },        stagger_children: 0.1,
-    hidden: { opacity: 0, y: 20 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: 20 },
+    visible: { opacity: 1, y: 0 },
+  },
       <div className='absolute inset-0 overflow-hidden'>,
         <div className='absolute -top-40 -right-40 w-80 h-80 bg-gradient-to-br from-cyan-500/20 to-blue-500/20 rounded-full blur-3xl animate-pulse'></div>,
         <div className='absolute -bottom-40 -left-40 w-80 h-80 bg-gradient-to-tr from-purple-500/20 to-pink-500/20 rounded-full blur-3xl animate-pulse delay-1000'></div>,
         <div className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-gradient-to-r from-green-500/10 to-teal-500/10 rounded-full blur-3xl animate-pulse delay-500'></div>,
       </div>,
-      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  };
+      <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>        {/* Header */}  },
         {/* Header */}
 ,
   return (
@@ -342,9 +345,9 @@ const service_categories = [
             Discover our comprehensive suite of cutting - edge AI, quantum,
             computing, and emerging technology solutions. Each service is,
             designed to transform your business and propel you into the future.,
-          </p>};
+          </p>},
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
         {/* Header */}
 ,
         <motion.div,
@@ -394,12 +397,12 @@ const service_categories = [
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mt-12'>,
             {[
               {
-                label: 'Total Services';
-                value: allServices && allServices.length.toString();
-                icon: Rocket;
-              };
-              { label: 'Happy Customers', value: '50K+', icon: Users };
-              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle };
+                label: 'Total Services',
+                value: allServices && allServices.length.toString(),
+                icon: Rocket
+              },
+              { label: 'Happy Customers', value: '50K+', icon: Users },
+              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }].map((stat, index) => (        >,
           <h2 className="text-4xl md: text-5xl lg:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-blue-400 to-purple-400 bg-clip-text text-transparent mb-6">,
             Revolutionary Technology Services,
@@ -411,16 +414,16 @@ const service_categories = [
           {/* Stats */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mt-12">,
             {[
-              { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket };
-              { label: 'Happy Customers', value: '50K+', icon: Users };
-              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle };
+              { label: 'Total Services', value: allServices && allServices.length.toString(), icon: Rocket },
+              { label: 'Happy Customers', value: '50K+', icon: Users },
+              { label: 'Success Rate', value: '99 && 99.9%', icon: CheckCircle },
               { label: 'Global Reach', value: '45+ Countries', icon: Globe }
-                label: 'Total Services';
-                value: all_services.length.to_string ();
-                icon: Rocket;
-              };
-              { label: 'Happy Customers', value: '50K+', icon: Users };
-              { label: 'Success Rate', value: '99.9%', icon: CheckCircle };
+                label: 'Total Services',
+                value: all_services.length.to_string (),
+                icon: Rocket
+              },
+              { label: 'Happy Customers', value: '50K+', icon: Users },
+              { label: 'Success Rate', value: '99.9%', icon: CheckCircle },
             ].map((stat, index) => (
               <motion.div,
                 key={stat.label}

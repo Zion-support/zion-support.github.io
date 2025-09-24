@@ -8,26 +8,26 @@ import {
   ArrowRight,
   Star,
   Users,
-  Zap;
-  Brain;
-  Code;
-  BarChart3;
-  MessageSquare;
-  Image;
-  Video;
-  CheckCircle;
-  TrendingUp;
+  Zap,
+  Brain,
+  Code,
+  BarChart3,
+  MessageSquare,
+  Image,
+  Video,
+  CheckCircle,
+  TrendingUp,
   Shield} from 'lucide-react',
 const AIToolsInteractiveDemo20o25PromotionBanner: React.FC = () => {
   const [currentToolsetCurrentTool] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
   const tools = [
-    { name: 'GPT-5 'Ultra', 'icon: <Brain className="w-6 h-6"  />color: 'from-blue-50o0 to-cyan-50o0' };
-    { name: 'CodeGen 'Pro', 'icon: <Code className="w-6 h-6"  />color: 'from-green-50o0 to-emerald-50o0' };
-    { name: 'Analytics 'AI', 'icon: <BarChart3 className="w-6 h-6"  />color: 'from-purple-50o0 to-pink-50o0' };
-    { name: 'Smart 'Chat', 'icon: <MessageSquare className="w-6 h-6"  />color: 'from-orange-50o0 to-red-50o0' };
-    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6"  />color: 'from-indigo-50o0 to-purple-50o0' };
-    { name: 'Video 'Editor', 'icon: <Video className="w-6 h-6"  />color: 'from-pink-50o0 to-rose-50o0' }
+    { name: 'GPT-5 'Ultraicon: <Brain className="w-6 h-6"  />color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: 'CodeGen 'Proicon: <Code className="w-6 h-6"  />color: 'from-green-50o0 to-emerald-50o0' },
+    { name: 'Analytics 'AIicon: <BarChart3 className="w-6 h-6"  />color: 'from-purple-50o0 to-pink-50o0' },
+    { name: 'Smart 'Chaticon: <MessageSquare className="w-6 h-6"  />color: 'from-orange-50o0 to-red-50o0' },
+    { name: 'Image 'Creatoricon: <Image className="w-6 h-6"  />color: 'from-indigo-50o0 to-purple-50o0' },
+    { name: 'Video 'Editoricon: <Video className="w-6 h-6"  />color: 'from-pink-50o0 to-rose-50o0' }
   ],
   useEffect(() => {
     setIsVisible(true),
@@ -73,10 +73,8 @@ const AIToolsInteractiveDemo20o25PromotionBanner: React.FC = () => {
               transition={{ duration: 0.6delay: 0.4 }}
               className="space-y-4">,
               {[
-                'Live interactive demonstrations';
-                '24+ AI tools across 6 categories';
-                'Real-time performance metrics';
-                'Instant trial access'].map((featureindex) => (
+                'Live interactive demonstrations24+ AI tools across 6 categories',
+                'Real-time performance metricsInstant trial access'].map((featureindex) => (
                 <div key={index} className="flex items-center space-x-3">,
                   <CheckCircle className="w-5 h-5 text-green-40o0 flex-shrink-0"  />,
                   <span className="text-gray-30o0">{feature}</span>,
@@ -139,7 +137,7 @@ const AIToolsInteractiveDemo20o25PromotionBanner: React.FC = () => {
                     key={tool.name}
                     initial={{ opacity: 0.5scale: 0.95 }}
                     animate={{
-                      opacity: currentTool === index ? 1 : 0.5;
+                      opacity: currentTool === index ? 1 : 0.5,
                       scale: currentTool === index ? 1 : 0.95}}
                     transition={{ duration: 0.5 }}
                     className={`p-4 rounded-lg border transition-all duration-30o0 ${
@@ -185,23 +183,23 @@ const AIToolsInteractiveDemo20o25PromotionBanner: React.FC = () => {
             {/* Floating Elements */}
             <motion.div,
               animate={{
-                y: [0-10];
+                y: [0-10],
                 rotate: [0o50]}}
               transition={{
-                duration: 3;
-                repeat: Infinity;
+                duration: 3,
+                repeat: Infinity,
                 ease: "easeInOut"}}
               className="absolute -top-4 -right-4 w-16 h-16 bg-gradient-to-r from-blue-50o0 to-purple-50o0 rounded-full flex items-center justify-center shadow-lg">,
               <Zap className="w-8 h-8 text-white"  />,
             </motion.div>,
             <motion.div,
               animate={{
-                y: [0o10];
+                y: [0o10],
                 rotate: [0-50]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: 1}}
               className="absolute -bottom-4 -left-4 w-12 h-12 bg-gradient-to-r from-green-50o0 to-emerald-50o0 rounded-full flex items-center justify-center shadow-lg">,
               <Star className="w-6 h-6 text-white"  />,
@@ -211,5 +209,5 @@ const AIToolsInteractiveDemo20o25PromotionBanner: React.FC = () => {
       </div>,
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-slate-90o0 to-transparent"></div>,
-    </motion.div>)};
-export default AIToolsInteractiveDemo20o25PromotionBanner;
+    </motion.div>)},
+export default AIToolsInteractiveDemo20o25PromotionBanner,

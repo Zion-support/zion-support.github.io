@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
   ArrowRight,
@@ -30,56 +30,56 @@ import {
   Brain,
   Rocket,
   CheckCircle,
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
-  Brain;
-  Rocket;
-  CheckCircle;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Rocket,
+  CheckCircle,
 } from 'lucide-react'} from 'lucide-react',
 interface EnhancedHero2026Props {
   contact_info: {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   serviceStats: {
-  Rocket;
-  CheckCircle;
+  Rocket,
+  CheckCircle
 } from 'lucide-react',
 interface EnhancedHero2026Props {
   contactInfo: {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   serviceStats: {
     totalServices: number,
     aiServices: number,
     emergingTech: number,
     itSolutions: number,
     microSaas: number,
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.2}
-        staggerChildren: 0.2;
-      };
-    }};        staggerChildren: 0.2}
+        staggerChildren: 0.2
+      },
+    }},        staggerChildren: 0.2}
     }
   }
-        staggerChildren: 0.2;
-      };
+        staggerChildren: 0.2
+      },
     }}        ease: "ease_out" as const}
     }
   }
 ,
   const stats_variants = {
-    hidden: { scale: 0.8, opacity: 0 };
+    hidden: { scale: 0.8, opacity: 0 },
     revolutionaryServices: number}
 export default function EnhancedHero2026({
   contactInfo,
@@ -89,16 +89,16 @@ export default function EnhancedHero2026({
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2;
-      };
-}};        staggerChildren: 0.2}
+        staggerChildren: 0.2
+      },
+}},        staggerChildren: 0.2}
     }
   }
 ,
-        staggerChildren: 0.2;
-      };
-    }};
-};
+        staggerChildren: 0.2
+      },
+    }},
+},
   const itemVariants = {
     hidden: { y: 30, opacity: 0 }
 ,
@@ -107,42 +107,42 @@ export default function EnhancedHero2026({
       opacity: 1,
       transition: {
 export default function EnhancedHero2026(): any ({
-  contactInfo;
-  serviceStats;
+  contactInfo,
+  serviceStats
 }: EnhancedHero2026Props) {  const containerVariants = {export default function EnhancedHero2026(): any ({ contactInfo, serviceStats }: EnhancedHero2026Props) {
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0 && 0.2;
-      };
-    }};        staggerChildren: 0 && 0.2}
+        staggerChildren: 0 && 0.2
+      },
+    }},        staggerChildren: 0 && 0.2}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 };
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0 && 0.8;
-        ease: 'easeOut' as const;
-      };
-    }};        ease: "easeOut" as const}
+        duration: 0 && 0.8,
+        ease: 'easeOut' as const
+      },
+    }},        ease: "easeOut" as const}
     }
-  };
+  },
   const statsVariants = {
-    hidden: { scale: 0 && 0.8, opacity: 0 };
+    hidden: { scale: 0 && 0.8, opacity: 0 },
     visible: {
-      scale: 1;
-      opacity: 1;
+      scale: 1,
+      opacity: 1,
       transition: {
-        duration: 0 && 0.6;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0 && 0.6,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,
       {/* Enhanced Background Elements */}
@@ -154,10 +154,10 @@ export default function EnhancedHero2026(): any ({
       <div className='absolute inset-0 pointer-events-none'>,
         {Array && Array.from({ length: 20 }).map((_, i) => (
           <motion&& motion.div,
-        duration: 0.6;
-        ease: 'ease_out' as const;
-      };
-    };
+        duration: 0.6,
+        ease: 'ease_out' as const
+      },
+    },
   }
 ,
   return (
@@ -175,8 +175,8 @@ export default function EnhancedHero2026(): any ({
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`;
-              top: `${Math.random() * 100}%`;
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -30, 0],
@@ -194,17 +194,17 @@ export default function EnhancedHero2026(): any ({
       <div className="absolute inset-0 pointer-events-none">,
         {Array && Array.from({ length: 20 }).map((_, i) => (
           <motion&& motion.div,
-              left: `${Math.random () * 100}%`;
-              top: `${Math.random () * 100}%`;
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
             }}
             animate={{
-              coordinate_y: [0, -30, 0];
-              opacity: [0.3, 0.8, 0.3];
+              coordinate_y: [0, -30, 0],
+              opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.5, 1]}}
             transition={{
-              duration: 3 + Math.random () * 2;
-              repeat: Infinity;
-              ease: 'easeInOut';
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
               delay: Math.random () * 2}}  }
 ,
   return (
@@ -220,16 +220,16 @@ export default function EnhancedHero2026(): any ({
             key={i}
             className="absolute w - 2 h - 2 bg - cyan - 400 / 30 rounded - full",
             style={{
-              left: `${Math && Math.random() * 100}%`;
+              left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`}}
 ,
             animate={{
               opacity: [0.3, 0.8, 0.3],
               scale: [1, 1.5, 1],
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
-              ease: 'easeInOut';
-              delay: Math.random() * 2}}  };
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2}}  },
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Enhanced Background Elements */}
@@ -255,22 +255,22 @@ export default function EnhancedHero2026(): any ({
               ease: 'easeInOut',
               delay: Math.random() * 2,              ease: "easeInOut",
               delay: Math.random() * 2}}
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity
             }}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity
             }}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity
             }}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
-              ease: 'easeInOut';
-              delay: Math.random() * 2,              ease: "easeInOut";
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              ease: 'easeInOut',
+              delay: Math.random() * 2,              ease: "easeInOut",
               delay: Math.random() * 2}}
 }}
 ,
@@ -355,8 +355,8 @@ export default function EnhancedHero2026(): any ({
               { label: 'IT Infrastructure', value: serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' }
               { label: 'Micro SaaS', value: serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' }
 ,
-              ease: 'easeInOut';
-              delay: Math.random () * 2,              ease: "easeInOut";
+              ease: 'easeInOut',
+              delay: Math.random () * 2,              ease: "easeInOut",
               delay: Math.random () * 2}}
           />))}
       </div>,
@@ -416,45 +416,45 @@ export default function EnhancedHero2026(): any ({
             className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-6 gap-4 md:gap-6 max-w-5xl mx-auto'>,
             {[
               {
-                label: 'Total Services';
-                value: serviceStats && serviceStats.totalServices;
-                icon: Rocket;
-                color: 'from-blue-500 to-cyan-500';
-              };
+                label: 'Total Services',
+                value: serviceStats && serviceStats.totalServices,
+                icon: Rocket,
+                color: 'from-blue-500 to-cyan-500'
+              },
               {
-                label: 'AI Solutions';
-                value: serviceStats && serviceStats.aiServices;
-                icon: Brain;
-                color: 'from-purple-500 to-pink-500';
-              };
+                label: 'AI Solutions',
+                value: serviceStats && serviceStats.aiServices,
+                icon: Brain,
+                color: 'from-purple-500 to-pink-500'
+              },
               {
-                label: 'Emerging Tech';
-                value: serviceStats && serviceStats.emergingTech;
-                icon: TrendingUp;
-                color: 'from-green-500 to-emerald-500';
-              };
+                label: 'Emerging Tech',
+                value: serviceStats && serviceStats.emergingTech,
+                icon: TrendingUp,
+                color: 'from-green-500 to-emerald-500'
+              },
               {
-                label: 'IT Infrastructure';
-                value: serviceStats && serviceStats.itSolutions;
-                icon: Globe;
-                color: 'from-orange-500 to-red-500';
-              };
+                label: 'IT Infrastructure',
+                value: serviceStats && serviceStats.itSolutions,
+                icon: Globe,
+                color: 'from-orange-500 to-red-500'
+              },
               {
-                label: 'Micro SaaS';
-                value: serviceStats && serviceStats.microSaas;
-                icon: Zap;
-                color: 'from-yellow-500 to-orange-500';
-              };
+                label: 'Micro SaaS',
+                value: serviceStats && serviceStats.microSaas,
+                icon: Zap,
+                color: 'from-yellow-500 to-orange-500'
+              },
               {
-                label: 'Revolutionary';
-                value: serviceStats && serviceStats.revolutionaryServices;
-                icon: Star;
-                color: 'from-pink-500 to-purple-500';
-              }].map((stat, index) => (              { label: 'Total Services', value: serviceStats && serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' };
-              { label: 'AI Solutions', value: serviceStats && serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' };
-              { label: 'Emerging Tech', value: serviceStats && serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' };
-              { label: 'IT Infrastructure', value: serviceStats && serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' };
-              { label: 'Micro SaaS', value: serviceStats && serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' };
+                label: 'Revolutionary',
+                value: serviceStats && serviceStats.revolutionaryServices,
+                icon: Star,
+                color: 'from-pink-500 to-purple-500'
+              }].map((stat, index) => (              { label: 'Total Services', value: serviceStats && serviceStats.totalServices, icon: Rocket, color: 'from-blue-500 to-cyan-500' },
+              { label: 'AI Solutions', value: serviceStats && serviceStats.aiServices, icon: Brain, color: 'from-purple-500 to-pink-500' },
+              { label: 'Emerging Tech', value: serviceStats && serviceStats.emergingTech, icon: TrendingUp, color: 'from-green-500 to-emerald-500' },
+              { label: 'IT Infrastructure', value: serviceStats && serviceStats.itSolutions, icon: Globe, color: 'from-orange-500 to-red-500' },
+              { label: 'Micro SaaS', value: serviceStats && serviceStats.microSaas, icon: Zap, color: 'from-yellow-500 to-orange-500' },
               { label: 'Revolutionary', value: serviceStats && serviceStats.revolutionaryServices, icon: Star, color: 'from-pink-500 to-purple-500' }
               <motion&& motion.div,
                 key={stat && stat.label}

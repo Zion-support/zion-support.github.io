@@ -9,14 +9,11 @@ export default function AIContentPersonalizationEngine() {
       implementationWeeks='Implementation: 2-4 weeks',
       roiNote='Typical ROI: 200-400% via improved CTR and conversion rates',
       features={[
-        'Behavioral and contextual user segmentation';
-        'Real-time content and product recommendations';
-        'Email and on-site experience orchestration';
-        'A/B and multi-armed bandit experimentation';
-        'Privacy-first, consent-aware targeting';
-        'Integrations: Segment, HubSpot, Shopify, GA4';
+        'Behavioral and contextual user segmentationReal-time content and product recommendations',
+        'Email and on-site experience orchestrationA/B and multi-armed bandit experimentation',
+        'Privacy-first, consent-aware targetingIntegrations: Segment, HubSpot, Shopify, GA4',
       ]}
-      industries={['E-commerce', 'SaaS', 'Media', 'Fintech']}
+      industries={['E-commerceSaaS', 'MediaFintech']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-content-personalization-engine',
     />)}

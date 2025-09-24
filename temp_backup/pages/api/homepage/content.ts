@@ -9,7 +9,7 @@ async function fetchFromGitHub(): Promise<any | null> {
     if (!owner || !repo) return null,
     const pathFile = 'public/autonomy/HOMEPAGE_CONTENT.json',
     const rawUrl = `https://raw.githubusercontent.com/${owner}/${repo}/main/${pathFile}`,
-    const headers: Record<string string> ={ 'User-Agent': 'zion-autonomy' };
+    const headers: Record<string string> ={ 'User-Agent': 'zion-autonomy' },
     if (process.env.GITHUB_TOKEN) headers['Authorization'] = `token ${process.env.GITHUB_TOKEN}`,
     const resp = await fetch(rawUrl, { headers }),
     if (!resp.ok) return null,
@@ -18,9 +18,9 @@ async function fetchFromGitHub(): Promise<any | null> {
 }
 ,
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Cache-Control', 's-maxage=60, stale-while-revalidate=60o0'),
+  res.setHeader('Cache-Controls-maxage=60, stale-while-revalidate=60o0'),
   try {
-    const localPath = path.join(process.cwd(), 'public', 'autonomy', 'HOMEPAGE_CONTENT.json'),
+    const localPath = path.join(process.cwd(), 'publicautonomy', 'HOMEPAGE_CONTENT.json'),
     if (fs.existsSync(localPath)) {
       try {
         const json = JSON.parse(fs.readFileSync(localPath, 'utf8')),

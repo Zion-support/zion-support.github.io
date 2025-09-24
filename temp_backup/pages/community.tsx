@@ -1,257 +1,257 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Users;
-  MessageCircle;
-  Calendar;
-  Github;
-  Globe;
-  BookOpen;
-  Video;
-  Award;
-  Star;
-  ArrowRight;
-  Search;
-  Filter;
-  Clock;
-  Tag;
-  Download;
-  ExternalLink;
-  Terminal;
-  Code;
-  Play;
-  ChevronRight;
-  ChevronDown;
-  Heart;
-  Share2;
-  ThumbsUp;
-  MessageSquare;
-  UserPlus;
-  Brain;
-  Rocket;
-  Building;
+  Users,
+  MessageCircle,
+  Calendar,
+  Github,
+  Globe,
+  BookOpen,
+  Video,
+  Award,
+  Star,
+  ArrowRight,
+  Search,
+  Filter,
+  Clock,
+  Tag,
+  Download,
+  ExternalLink,
+  Terminal,
+  Code,
+  Play,
+  ChevronRight,
+  ChevronDown,
+  Heart,
+  Share2,
+  ThumbsUp,
+  MessageSquare,
+  UserPlus,
+  Brain,
+  Rocket,
+  Building,
 } from 'lucide-react',
 export default function CommunityPage() {
   const communityFeatures = [
     {
-      icon: <MessageCircle className='w-8 h-8' />;
-      title: 'Discussion Forums';
+      icon: <MessageCircle className='w-8 h-8' />,
+      title: 'Discussion Forums',
       description:,
-        'Join conversations about AI consciousness, quantum computing, and space technology';
-      count: '2.5k+';
-      color: 'from-blue-500 to-cyan-500';
-    };
+        'Join conversations about AI consciousness, quantum computing, and space technology',
+      count: '2.5k+',
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      icon: <Github className='w-8 h-8' />;
-      title: 'Open Source Projects';
+      icon: <Github className='w-8 h-8' />,
+      title: 'Open Source Projects',
       description:,
-        'Contribute to our open source initiatives and collaborate with developers worldwide';
-      count: '150+';
-      color: 'from-purple-500 to-pink-500';
-    };
+        'Contribute to our open source initiatives and collaborate with developers worldwide',
+      count: '150+',
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-      icon: <Calendar className='w-8 h-8' />;
-      title: 'Events & Meetups';
+      icon: <Calendar className='w-8 h-8' />,
+      title: 'Events & Meetups',
       description:,
-        'Attend virtual and in-person events, workshops, and networking sessions';
-      count: '25+';
-      color: 'from-green-500 to-emerald-500';
-    };
+        'Attend virtual and in-person events, workshops, and networking sessions',
+      count: '25+',
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      icon: <BookOpen className='w-8 h-8' />;
-      title: 'Knowledge Sharing';
+      icon: <BookOpen className='w-8 h-8' />,
+      title: 'Knowledge Sharing',
       description:,
-        'Share your expertise and learn from other community members';
-      count: '500+';
-      color: 'from-yellow-500 to-orange-500';
-    };
+        'Share your expertise and learn from other community members',
+      count: '500+',
+      color: 'from-yellow-500 to-orange-500'
+    },
   ],
   const upcomingEvents = [
     {
-      title: 'AI Consciousness Workshop 2025';
-      date: '2025-02-15';
-      time: '10:00 AM EST';
-      type: 'Virtual Workshop';
+      title: 'AI Consciousness Workshop 2025',
+      date: '2025-02-15',
+      time: '10:00 AM EST',
+      type: 'Virtual Workshop',
       description:,
-        'Hands-on workshop on implementing AI consciousness in enterprise applications';
-      attendees: 150;
-      speakers: ['Dr. Sarah Chen', 'Prof. Michael Rodriguez'];
-      tags: ['AI Consciousness', 'Workshop', 'Enterprise'];
-      featured: true;
-      color: 'from-purple-500 to-pink-500';
-    };
+        'Hands-on workshop on implementing AI consciousness in enterprise applications',
+      attendees: 150,
+      speakers: ['Dr. Sarah ChenProf. Michael Rodriguez'],
+      tags: ['AI ConsciousnessWorkshop', 'Enterprise'],
+      featured: true,
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-      title: 'Quantum Computing Meetup';
-      date: '2025-02-20';
-      time: '6:00 PM EST';
-      type: 'In-Person';
+      title: 'Quantum Computing Meetup',
+      date: '2025-02-20',
+      time: '6:00 PM EST',
+      type: 'In-Person',
       description:,
-        'Local meetup for quantum computing enthusiasts and professionals';
-      attendees: 45;
-      speakers: ['Dr. James Wilson', 'Alice Thompson'];
-      tags: ['Quantum Computing', 'Meetup', 'Networking'];
-      featured: false;
-      color: 'from-blue-500 to-cyan-500';
-    };
+        'Local meetup for quantum computing enthusiasts and professionals',
+      attendees: 45,
+      speakers: ['Dr. James WilsonAlice Thompson'],
+      tags: ['Quantum ComputingMeetup', 'Networking'],
+      featured: false,
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      title: 'Space Technology Summit';
-      date: '2025-03-01';
-      time: '9:00 AM EST';
-      type: 'Conference';
+      title: 'Space Technology Summit',
+      date: '2025-03-01',
+      time: '9:00 AM EST',
+      type: 'Conference',
       description:,
-        'Annual summit on space exploration technology and resource intelligence';
-      attendees: 300;
-      speakers: ['Dr. Elena Petrova', 'Commander David Kim'];
-      tags: ['Space Technology', 'Conference', 'Innovation'];
-      featured: true;
-      color: 'from-green-500 to-emerald-500';
-    };
+        'Annual summit on space exploration technology and resource intelligence',
+      attendees: 300,
+      speakers: ['Dr. Elena PetrovaCommander David Kim'],
+      tags: ['Space TechnologyConference', 'Innovation'],
+      featured: true,
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      title: 'Developer Hackathon';
-      date: '2025-03-15';
-      time: '48 Hours';
-      type: 'Hackathon';
+      title: 'Developer Hackathon',
+      date: '2025-03-15',
+      time: '48 Hours',
+      type: 'Hackathon',
       description:,
-        'Build innovative solutions using our AI consciousness and quantum computing APIs';
-      attendees: 200;
-      speakers: ['Tech Team', 'Community Leaders'];
-      tags: ['Hackathon', 'Development', 'Innovation'];
-      featured: false;
-      color: 'from-indigo-500 to-purple-500';
-    };
+        'Build innovative solutions using our AI consciousness and quantum computing APIs',
+      attendees: 200,
+      speakers: ['Tech TeamCommunity Leaders'],
+      tags: ['HackathonDevelopment', 'Innovation'],
+      featured: false,
+      color: 'from-indigo-500 to-purple-500'
+    },
   ],
   const forumCategories = [
     {
-      title: 'AI Consciousness';
+      title: 'AI Consciousness',
       description:,
-        'Discussions about AI consciousness, emotional intelligence, and self-aware systems';
-      topics: 1250;
-      posts: 8900;
-      members: 3400;
-      color: 'from-purple-500 to-pink-500';
-      icon: <Brain className='w-6 h-6' />;
-    };
+        'Discussions about AI consciousness, emotional intelligence, and self-aware systems',
+      topics: 1250,
+      posts: 8900,
+      members: 3400,
+      color: 'from-purple-500 to-pink-500',
+      icon: <Brain className='w-6 h-6' />
+    },
     {
-      title: 'Quantum Computing';
+      title: 'Quantum Computing',
       description:,
-        'Quantum algorithms, quantum hardware, and quantum-classical hybrid systems';
-      topics: 890;
-      posts: 5600;
-      members: 2100;
-      color: 'from-blue-500 to-cyan-500';
-      icon: <Rocket className='w-6 h-6' />;
-    };
+        'Quantum algorithms, quantum hardware, and quantum-classical hybrid systems',
+      topics: 890,
+      posts: 5600,
+      members: 2100,
+      color: 'from-blue-500 to-cyan-500',
+      icon: <Rocket className='w-6 h-6' />
+    },
     {
-      title: 'Space Technology';
+      title: 'Space Technology',
       description:,
-        'Space exploration, resource intelligence, and celestial body analysis';
-      topics: 650;
-      posts: 3200;
-      members: 1800;
-      color: 'from-green-500 to-emerald-500';
-      icon: <Globe className='w-6 h-6' />;
-    };
+        'Space exploration, resource intelligence, and celestial body analysis',
+      topics: 650,
+      posts: 3200,
+      members: 1800,
+      color: 'from-green-500 to-emerald-500',
+      icon: <Globe className='w-6 h-6' />
+    },
     {
-      title: 'Enterprise Solutions';
+      title: 'Enterprise Solutions',
       description:,
-        'Enterprise deployment, integration, and best practices for our services';
-      topics: 450;
-      posts: 2800;
-      members: 1200;
-      color: 'from-yellow-500 to-orange-500';
-      icon: <Building className='w-6 h-6' />;
-    };
+        'Enterprise deployment, integration, and best practices for our services',
+      topics: 450,
+      posts: 2800,
+      members: 1200,
+      color: 'from-yellow-500 to-orange-500',
+      icon: <Building className='w-6 h-6' />
+    },
     {
-      title: 'Development & APIs';
-      description: 'API integration, SDK usage, and development best practices';
-      topics: 780;
-      posts: 4200;
-      members: 2600;
-      color: 'from-indigo-500 to-purple-500';
-      icon: <Code className='w-6 h-6' />;
-    };
+      title: 'Development & APIs',
+      description: 'API integration, SDK usage, and development best practices',
+      topics: 780,
+      posts: 4200,
+      members: 2600,
+      color: 'from-indigo-500 to-purple-500',
+      icon: <Code className='w-6 h-6' />
+    },
     {
-      title: 'General Discussion';
+      title: 'General Discussion',
       description:,
-        'General community discussions, announcements, and off-topic conversations';
-      topics: 320;
-      posts: 1800;
-      members: 1500;
-      color: 'from-red-500 to-pink-500';
-      icon: <Users className='w-6 h-6' />;
-    };
+        'General community discussions, announcements, and off-topic conversations',
+      topics: 320,
+      posts: 1800,
+      members: 1500,
+      color: 'from-red-500 to-pink-500',
+      icon: <Users className='w-6 h-6' />
+    },
   ],
   const openSourceProjects = [
     {
-      name: 'AI Consciousness Framework';
+      name: 'AI Consciousness Framework',
       description:,
-        'Open source framework for implementing AI consciousness in applications';
-      language: 'Python';
-      stars: 1250;
-      forks: 320;
-      contributors: 45;
-      lastCommit: '2 days ago';
-      tags: ['AI Consciousness', 'Framework', 'Python'];
-      color: 'from-purple-500 to-pink-500';
-    };
+        'Open source framework for implementing AI consciousness in applications',
+      language: 'Python',
+      stars: 1250,
+      forks: 320,
+      contributors: 45,
+      lastCommit: '2 days ago',
+      tags: ['AI ConsciousnessFramework', 'Python'],
+      color: 'from-purple-500 to-pink-500'
+    },
     {
-      name: 'Quantum Computing Simulator';
+      name: 'Quantum Computing Simulator',
       description:,
-        'Local quantum computing simulator for development and testing';
-      language: 'JavaScript';
-      stars: 890;
-      forks: 180;
-      contributors: 28;
-      lastCommit: '1 week ago';
-      tags: ['Quantum Computing', 'Simulator', 'JavaScript'];
-      color: 'from-blue-500 to-cyan-500';
-    };
+        'Local quantum computing simulator for development and testing',
+      language: 'JavaScript',
+      stars: 890,
+      forks: 180,
+      contributors: 28,
+      lastCommit: '1 week ago',
+      tags: ['Quantum ComputingSimulator', 'JavaScript'],
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      name: 'Space Data Analyzer';
+      name: 'Space Data Analyzer',
       description:,
-        'Tools for analyzing space exploration data and resource mapping';
-      language: 'Python';
-      stars: 650;
-      forks: 120;
-      contributors: 22;
-      lastCommit: '3 days ago';
-      tags: ['Space Technology', 'Data Analysis', 'Python'];
-      color: 'from-green-500 to-emerald-500';
-    };
+        'Tools for analyzing space exploration data and resource mapping',
+      language: 'Python',
+      stars: 650,
+      forks: 120,
+      contributors: 22,
+      lastCommit: '3 days ago',
+      tags: ['Space TechnologyData Analysis', 'Python'],
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      name: 'Autonomous Systems Toolkit';
+      name: 'Autonomous Systems Toolkit',
       description:,
-        'Collection of tools for building and managing autonomous IT infrastructure';
-      language: 'Go';
-      stars: 420;
-      forks: 95;
-      contributors: 18;
-      lastCommit: '5 days ago';
-      tags: ['Autonomous Systems', 'Toolkit', 'Go'];
-      color: 'from-indigo-500 to-purple-500';
-    };
+        'Collection of tools for building and managing autonomous IT infrastructure',
+      language: 'Go',
+      stars: 420,
+      forks: 95,
+      contributors: 18,
+      lastCommit: '5 days ago',
+      tags: ['Autonomous SystemsToolkit', 'Go'],
+      color: 'from-indigo-500 to-purple-500'
+    },
   ],
   const communityStats = [
     {
-      label: 'Total Members';
-      value: '15,000+';
-      icon: <Users className='w-6 h-6' />;
-    };
+      label: 'Total Members',
+      value: '15,000+',
+      icon: <Users className='w-6 h-6' />
+    },
     {
-      label: 'Active Discussions';
-      value: '2,500+';
-      icon: <MessageCircle className='w-6 h-6' />;
-    };
+      label: 'Active Discussions',
+      value: '2,500+',
+      icon: <MessageCircle className='w-6 h-6' />
+    },
     {
-      label: 'Open Source Projects';
-      value: '150+';
-      icon: <Github className='w-6 h-6' />;
-    };
+      label: 'Open Source Projects',
+      value: '150+',
+      icon: <Github className='w-6 h-6' />
+    },
     {
-      label: 'Events This Year';
-      value: '25+';
-      icon: <Calendar className='w-6 h-6' />;
-    };
+      label: 'Events This Year',
+      value: '25+',
+      icon: <Calendar className='w-6 h-6' />
+    },
   ],
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -271,7 +271,7 @@ export default function CommunityPage() {
             </h1>,
             <p className='text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-8'>,
               Join our global community of innovators, developers, and,
-              technology enthusiasts building the future with AI consciousness;
+              technology enthusiasts building the future with AI consciousness,
               quantum computing, and space technology.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

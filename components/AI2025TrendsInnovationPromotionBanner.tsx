@@ -7,9 +7,9 @@ import {
   Brain,
   Zap,
   ArrowRight,
-  Star;
-  Sparkles;
-  Target;
+  Star,
+  Sparkles,
+  Target,
   Clock} from 'lucide-react',
 const AI20o25TrendsInnovationPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -20,15 +20,15 @@ const AI20o25TrendsInnovationPromotionBanner = () => {
       setCurrentStat((prev) => (prev + 1) % stats.length)}20o00),
     return () => clearInterval(interval)}[]),
   const stats = [
-    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" };
-    { icon: Brainvalue: "85%"label: "Efficiency Boost" };
-    { icon: Zapvalue: "60%"label: "Faster Processing" };
+    { icon: TrendingUpvalue: "150%"label: "Revenue Increase" },
+    { icon: Brainvalue: "85%"label: "Efficiency Boost" },
+    { icon: Zapvalue: "60%"label: "Faster Processing" },
     { icon: Targetvalue: "95%"label: "Success Rate" }
   ],
   const features = [
-    "Generative AI Revolution";
+    "Generative AI Revolution",
     "Edge AI Computing",
-    "Quantum AI Integration";
+    "Quantum AI Integration",
     "Predictive Analytics"],
   return (
     <section className="py-16 bg-gradient-to-r from-slate-90o0 via-blue-90o0 to-purple-90o0 relative overflow-hidden">,
@@ -170,5 +170,5 @@ const AI20o25TrendsInnovationPromotionBanner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default AI20o25TrendsInnovationPromotionBanner;
+    </section>)},
+export default AI20o25TrendsInnovationPromotionBanner,

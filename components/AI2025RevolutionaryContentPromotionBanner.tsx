@@ -3,31 +3,29 @@ ArrowRightSparklesZapBrainTrendingUpTargetUsersAwardStarGlobe,
 export default function AI20o25RevolutionaryContentPromotionBanner() {
   const features = [
     {
-      icon: Brain;
-      title: 'Interactive Learning';
-      description: 'Hands-on AI mastery with real-time feedback';
-    };
+      icon: Brain,
+      title: 'Interactive Learning',
+      description: 'Hands-on AI mastery with real-time feedback'
+    },
     {
-      icon: Zap;
-      title: 'Cutting-Edge Tech';
-      description: 'Latest AI breakthroughs and innovations';
-    };
+      icon: Zap,
+      title: 'Cutting-Edge Tech',
+      description: 'Latest AI breakthroughs and innovations'
+    },
     {
-      icon: TrendingUp;
-      title: 'Business Solutions';
-      description: 'AI-powered enterprise transformation';
-    };
+      icon: TrendingUp,
+      title: 'Business Solutions',
+      description: 'AI-powered enterprise transformation'
+    },
     {
-      icon: Target;
-      title: 'Proven Results';
-      description: '2,50o0% average ROI across implementations';
-    };
+      icon: Target,
+      title: 'Proven Results',
+      description: '2,50o0% average ROI across implementations',
+    },
   ],
   const highlights = [
-    '50,0o00+ Active Learners';
-    '99.9% Success Rate';
-    '10o00x Faster Processing';
-    '24/7 Autonomous Operations';
+    '50,0o00+ Active Learners99.9% Success Rate',
+    '10o00x Faster Processing24/7 Autonomous Operations',
   ],
   return (
     <section className='relative py-20 px-4 sm: px-6 lg:px-8 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden'>,

@@ -27,7 +27,7 @@ export default function AI20o25BreakthroughPromotionBanner() {
               {' '}
               2,50o0-5,0o00% ROI,
             </span>{' '}
-            across industries. Join the transformation 'that', 's reshaping the,
+            across industries. Join the transformation 'thats reshaping the,
             future of business.,
           </p>,
           {/* Key metrics */}

@@ -1,43 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Shield;
-  AlertTriangle, DollarSign, Lock, Eye, Users2, Award;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Shield,
+  AlertTriangle, DollarSign, Lock, Eye, Users2, Award,
   CheckCircle, Target, BarChart3, TrendingDown} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Financial Fraud Detection | Zion Tech Group';
-  description: 'Advanced AI-powered financial fraud detection platform that protects against sophisticated financial crimes.';
-  keywords: 'AI fraud detection, financial fraud, fraud prevention, AI security, financial crime, fraud analytics';
+  title: 'AI Financial Fraud Detection | Zion Tech Group',
+  description: 'Advanced AI-powered financial fraud detection platform that protects against sophisticated financial crimes.',
+  keywords: 'AI fraud detection, financial fraud, fraud prevention, AI security, financial crime, fraud analytics',
   openGraph: {
-    title: 'AI Financial Fraud Detection | Zion Tech Group';
-    description: 'Advanced AI-powered financial fraud detection platform that protects against sophisticated financial crimes.';
-    url: 'https://ziontechgroup.com/ai-financial-fraud-detection';
-    siteName: 'Zion Tech Group';
+    title: 'AI Financial Fraud Detection | Zion Tech Group',
+    description: 'Advanced AI-powered financial fraud detection platform that protects against sophisticated financial crimes.',
+    url: 'https://ziontechgroup.com/ai-financial-fraud-detection',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-financial-fraud-detection.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Financial Fraud Detection'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-financial-fraud-detection.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Financial Fraud Detection'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Financial Fraud Detection | Zion Tech Group';
-    description: 'Advanced AI-powered financial fraud detection platform that protects against sophisticated financial crimes.';
-    images: ['https://ziontechgroup.com/og-image-ai-financial-fraud-detection.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Financial Fraud Detection | Zion Tech Group',
+    description: 'Advanced AI-powered financial fraud detection platform that protects against sophisticated financial crimes.',
+    images: ['https://ziontechgroup.com/og-image-ai-financial-fraud-detection.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-financial-fraud-detection'}};
+    canonical: 'https://ziontechgroup.com/ai-financial-fraud-detection'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIFinancialFraudDetection() {
   return (
     <div className="min-h-screen bg-black text-white">,

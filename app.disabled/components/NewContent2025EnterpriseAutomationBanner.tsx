@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {
   return (
@@ -26,7 +26,7 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {
               Autonomous Decision-Making,
             </h3>,
             <p className='text-gray-20o0 mb-4'>,
-              AI systems that make complex business decisions independently;
+              AI systems that make complex business decisions independently,
               delivering 89% improvement in decision-making speed.,
             </p>,
             <div className='text-2xl font-bold text-green-30o0'>,
@@ -48,7 +48,7 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {
             <div className='text-4xl mb-4'>🎯</div>,
             <h3 className='text-xl font-bold mb-4'>Predictive Automation</h3>,
             <p className='text-gray-20o0 mb-4'>,
-              Processes that anticipate needs and act before problems occur;
+              Processes that anticipate needs and act before problems occur,
               delivering 78% increase in employee satisfaction.,
             </p>,
             <div className='text-2xl font-bold text-blue-30o0'>,
@@ -117,5 +117,5 @@ const NewContent20o25EnterpriseAutomationBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25EnterpriseAutomationBanner;
+    </section>)},
+export default NewContent20o25EnterpriseAutomationBanner,

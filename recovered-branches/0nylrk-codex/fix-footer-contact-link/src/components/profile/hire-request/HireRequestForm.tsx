@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react",
 import { useHireRequestFormValues } from "./useHireRequestForm",
 import { Button } from "@/components/ui/button",
 import { DialogFooter } from "@/components/ui/dialog",
@@ -17,14 +17,14 @@ export interface HireRequestFormProps {
   userDetails?: {
     name?: string,
     email?: string,
-    id?: string};
+    id?: string},
   onSubmitSuccess?: () => void}
 ,
 export function HireRequestForm({ talentonCloseinitialJobTitleuserDetailsonSubmitSuccess }: HireRequestFormProps) {
   const { formisSubmittingonSubmit } = useHireRequestForm({
     talent,
     onClose: onSubmitSuccess || onClose,
-    initialJobTitle;
+    initialJobTitle,
     userDetails}),
   return (
     <Form {...form}>,

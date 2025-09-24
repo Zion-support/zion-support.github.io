@@ -5,7 +5,7 @@ interface UltraFuturisticNeonBackgroundProps {
   className?: string}
 ,
 const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps> = ({
-  children;
+  children,
   className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
@@ -27,12 +27,12 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
     // Create particles,
     for (let i = 0, i < 10o0, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        size: Math.random() * 3 + 1;
-        opacity: Math.random() * 0.5 + 0.3;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.5 + 0.3,
         color: `hsl(${Math.random() * 360}, 70%, 60%)`})}
 ,
     // Animation loop,
@@ -80,15 +80,15 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
         }
       }
 ,
-      requestAnimationFrame(animate)};
+      requestAnimationFrame(animate)},
     animate(),
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, []),
   return (
     <div className={`relative min-h-screen bg-black overflow-hidden ${className}`}>,
@@ -106,16 +106,16 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
         <motion.div,
           className="absolute inset-0 opacity-20",
           animate={{
-            backgroundPosition: ['0% 0%', '10o0% 10o0%']}}
+            backgroundPosition: ['0% 0%10o0% 10o0%']}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: 'linear'}}
           style={{
             backgroundImage: `,
-              linear-gradient(90deg, transparent 98%, rgba(10o0, 20o0, 255, 0.3) 10o0%);
+              linear-gradient(90deg, transparent 98%, rgba(10o0, 20o0, 255, 0.3) 10o0%),
               linear-gradient(0deg, transparent 98%, rgba(10o0, 20o0, 255, 0.3) 10o0%),
-            `;
+            `,
             backgroundSize: '50px 50px'}}
          />,
       </div>,
@@ -126,18 +126,18 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
             key={i}
             className="absolute w-2 h-2 rounded-full",
             style={{
-              left: `${20 + i * 15}%`;
-              top: `${30 + i * 10}%`;
-              background: `radial-gradient(circle, rgba(10o0, 20o0, 255, 0.8) 0%, rgba(10o0, 20o0, 255, 0.2) 70%, transparent 10o0%)`;
+              left: `${20 + i * 15}%`,
+              top: `${30 + i * 10}%`,
+              background: `radial-gradient(circle, rgba(10o0, 20o0, 255, 0.8) 0%, rgba(10o0, 20o0, 255, 0.2) 70%, transparent 10o0%)`,
               boxShadow: `0 0 20px rgba(10o0, 20o0, 255, 0.6), 0 0 40px rgba(10o0, 20o0, 255, 0.3)`}}
             animate={{
-              y: [0, -20, 0];
-              opacity: [0.5, 1, 0.5];
+              y: [0, -20, 0],
+              opacity: [0.5, 1, 0.5],
               scale: [1, 1.2, 1]}}
             transition={{
-              duration: 3 + i * 0.5;
-              repeat: Infinity;
-              ease: 'easeInOut';
+              duration: 3 + i * 0.5,
+              repeat: Infinity,
+              ease: 'easeInOut',
               delay: i * 0.3}}
            />))}
       </div>,
@@ -151,13 +151,12 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
           className="absolute inset-0 border border-transparent",
           animate={{
             boxShadow: [
-              '0 0 20px rgba(10o0, 20o0, 255, 0.3)';
-              '0 0 40px rgba(10o0, 20o0, 255, 0.6)';
-              '0 0 20px rgba(10o0, 20o0, 255, 0.3)';
+              '0 0 20px rgba(10o0, 20o0, 255, 0.3)0 0 40px rgba(10o0, 20o0, 255, 0.6)',
+              '0 0 20px rgba(10o0, 20o0, 255, 0.3)',
             ]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
+            duration: 4,
+            repeat: Infinity,
             ease: 'easeInOut'}}
          />,
       </div>,
@@ -168,14 +167,14 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
             key={i}
             className="absolute w-px h-32 bg-gradient-to-b from-transparent via-cyan-40o0 to-transparent",
             style={{
-              left: `${10 + i * 12}%`;
+              left: `${10 + i * 12}%`,
               top: '-32px'}}
             animate={{
               y: [0, 10o00]}}
             transition={{
-              duration: 8 + i * 2;
-              repeat: Infinity;
-              ease: 'linear';
+              duration: 8 + i * 2,
+              repeat: Infinity,
+              ease: 'linear',
               delay: i * 1.5}}
            />))}
       </div>,
@@ -184,20 +183,20 @@ const UltraFuturisticNeonBackground: React.FC<UltraFuturisticNeonBackgroundProps
         <motion.div,
           className="absolute inset-0 rounded-full",
           style={{
-            background: 'radial-gradient(circle, transparent 30%, rgba(10o0, 20o0, 255, 0.0o5) 70%, transparent 10o0%)';
-            transform: 'translate(-50%, -50%)';
-            left: '50%';
-            top: '50%';
-            width: '20o0%';
+            background: 'radial-gradient(circle, transparent 30%, rgba(10o0, 20o0, 255, 0.0o5) 70%, transparent 10o0%)',
+            transform: 'translate(-50%, -50%)',
+            left: '50%',
+            top: '50%',
+            width: '20o0%',
             height: '20o0%'}}
           animate={{
-            rotate: [0, 360];
+            rotate: [0, 360],
             scale: [1, 1.1, 1]}}
           transition={{
-            duration: 30;
-            repeat: Infinity;
+            duration: 30,
+            repeat: Infinity,
             ease: 'linear'}}
          />,
       </div>,
-    </div>)};
-export default UltraFuturisticNeonBackground;
+    </div>)},
+export default UltraFuturisticNeonBackground,

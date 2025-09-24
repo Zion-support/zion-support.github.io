@@ -3,7 +3,7 @@ import Link from 'next/link',
 import { notFound } from 'next/navigation',
 import { blogPosts } from '../../../src/data/blog-posts.js',
 export default async function BlogPostPage({
-  params;
+  params,
 }: {
   params?: Promise<any>}) {
   // Support Next 15 PageProps where params may be a Promise,

@@ -3,55 +3,55 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 const featuredContent = [
   {
-    id: 1;
-    title: 'AI 20o26 Breakthrough Showcase';
-    description: 'Experience revolutionary AI 20o26 breakthrough technologies delivering unprecedented performance and transformation.';
-    href: '/ai-20o26-breakthrough-showcase';
-    image: '🚀';
-    gradient: 'from-slate-90o0 via-purple-90o0 to-slate-90o0';
-    badge: 'REVOLUTIONARY BREAKTHROUGH';
-    badgeColor: 'from-purple-50o0 to-pink-50o0';
-    features: ['15,0o00% ROI'10,0o00x Faster'99.7% Accuracy']};
+    id: 1,
+    title: 'AI 20o26 Breakthrough Showcase',
+    description: 'Experience revolutionary AI 20o26 breakthrough technologies delivering unprecedented performance and transformation.',
+    href: '/ai-20o26-breakthrough-showcase',
+    image: '🚀',
+    gradient: 'from-slate-90o0 via-purple-90o0 to-slate-90o0',
+    badge: 'REVOLUTIONARY BREAKTHROUGH',
+    badgeColor: 'from-purple-50o0 to-pink-50o0',
+    features: ['15,0o00% ROI'10,0o00x Faster'99.7% Accuracy']},
   {
-    id: 2;
-    title: 'Quantum Computing Solutions 20o26';
-    description: 'Discover breakthrough quantum computing solutions delivering unprecedented computational power and quantum supremacy.';
-    href: '/quantum-computing-solutions-20o26';
-    image: '⚛️';
-    gradient: 'from-indigo-90o0 via-purple-90o0 to-indigo-90o0';
-    badge: 'QUANTUM BREAKTHROUGH';
-    badgeColor: 'from-cyan-50o0 to-blue-50o0';
-    features: ['Unhackable Security'99.9% 'Accuracy', 'Exponential Speedup']};
+    id: 2,
+    title: 'Quantum Computing Solutions 20o26',
+    description: 'Discover breakthrough quantum computing solutions delivering unprecedented computational power and quantum supremacy.',
+    href: '/quantum-computing-solutions-20o26',
+    image: '⚛️',
+    gradient: 'from-indigo-90o0 via-purple-90o0 to-indigo-90o0',
+    badge: 'QUANTUM BREAKTHROUGH',
+    badgeColor: 'from-cyan-50o0 to-blue-50o0',
+    features: ['Unhackable Security'99.9% 'AccuracyExponential Speedup']},
   {
-    id: 3;
-    title: 'Advanced Automation Solutions 20o26';
-    description: 'Transform your business with revolutionary automation solutions delivering intelligent process automation.';
-    href: '/advanced-automation-solutions-20o26';
-    image: '🤖';
-    gradient: 'from-emerald-90o0 via-teal-90o0 to-emerald-90o0';
-    badge: 'AUTOMATION REVOLUTION';
-    badgeColor: 'from-emerald-50o0 to-teal-50o0';
-    features: ['10,0o00% ROI'95% Reduction'8,50o0% ROI']};
+    id: 3,
+    title: 'Advanced Automation Solutions 20o26',
+    description: 'Transform your business with revolutionary automation solutions delivering intelligent process automation.',
+    href: '/advanced-automation-solutions-20o26',
+    image: '🤖',
+    gradient: 'from-emerald-90o0 via-teal-90o0 to-emerald-90o0',
+    badge: 'AUTOMATION REVOLUTION',
+    badgeColor: 'from-emerald-50o0 to-teal-50o0',
+    features: ['10,0o00% ROI'95% Reduction'8,50o0% ROI']},
   {
-    id: 4;
-    title: 'Neural Interface Revolution 20o26';
-    description: 'Experience the future of human-AI collaboration with revolutionary neural interface technology.';
-    href: '/neural-interface-revolution-20o26';
-    image: '🧠';
-    gradient: 'from-violet-90o0 via-purple-90o0 to-violet-90o0';
-    badge: 'NEURAL BREAKTHROUGH';
-    badgeColor: 'from-violet-50o0 to-purple-50o0';
-    features: ['99.7% Accuracy'10o00x Enhancement'∞ Creativity']};
+    id: 4,
+    title: 'Neural Interface Revolution 20o26',
+    description: 'Experience the future of human-AI collaboration with revolutionary neural interface technology.',
+    href: '/neural-interface-revolution-20o26',
+    image: '🧠',
+    gradient: 'from-violet-90o0 via-purple-90o0 to-violet-90o0',
+    badge: 'NEURAL BREAKTHROUGH',
+    badgeColor: 'from-violet-50o0 to-purple-50o0',
+    features: ['99.7% Accuracy'10o00x Enhancement'∞ Creativity']},
   {
-    id: 5;
-    title: 'AI 20o27 Future Predictions';
-    description: 'Explore revolutionary AI predictions and breakthrough technologies that will reshape the world in 20o27.';
-    href: '/ai-20o27-future-predictions';
-    image: '🔮';
-    gradient: 'from-rose-90o0 via-pink-90o0 to-rose-90o0';
-    badge: 'FUTURE PREDICTIONS';
-    badgeColor: 'from-rose-50o0 to-pink-50o0';
-    features: ['99.9% AGI'1Mx 'Faster', 'True Consciousness']}
+    id: 5,
+    title: 'AI 20o27 Future Predictions',
+    description: 'Explore revolutionary AI predictions and breakthrough technologies that will reshape the world in 20o27.',
+    href: '/ai-20o27-future-predictions',
+    image: '🔮',
+    gradient: 'from-rose-90o0 via-pink-90o0 to-rose-90o0',
+    badge: 'FUTURE PREDICTIONS',
+    badgeColor: 'from-rose-50o0 to-pink-50o0',
+    features: ['99.9% AGI'1Mx 'FasterTrue Consciousness']}
 ],
 export default function FeaturedContentCarousel() {
   const [currentIndexsetCurrentIndex] = useState(0),
@@ -65,15 +65,15 @@ export default function FeaturedContentCarousel() {
     return () => clearInterval(interval)}[isAutoPlaying]),
   const goToSlide = (index: number) => {
     setCurrentIndex(index),
-    setIsAutoPlaying(false)};
+    setIsAutoPlaying(false)},
   const nextSlide = () => {
     setCurrentIndex((prevIndex) =>,
       prevIndex === featuredContent.length - 1 ? 0 : prevIndex + 1),
-    setIsAutoPlaying(false)};
+    setIsAutoPlaying(false)},
   const prevSlide = () => {
     setCurrentIndex((prevIndex =>,
       prevIndex === 0 ? featuredContent.length - 1 : prevIndex - 1)),
-    setIsAutoPlaying(false)};
+    setIsAutoPlaying(false)},
   const currentContent = featuredContent[currentIndex],
   return (
     <section className="relative py-16 bg-gradient-to-br from-gray-50 to-blue-50">,

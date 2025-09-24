@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Invoice Automation | Zion Tech Group';
+  title: 'Invoice Automation | Zion Tech Group',
   description:,
-    'AI-powered invoice processing, automated billing, and financial workflow automation to streamline your accounting operations.';
-};
+    'AI-powered invoice processing, automated billing, and financial workflow automation to streamline your accounting operations.',
+},
 export default function InvoiceAutomationPage() {
   return (
     <div className='animate-fade-in'>,
@@ -58,11 +58,9 @@ export default function InvoiceAutomationPage() {
               price='$39/month',
               description='Perfect for small businesses and freelancers',
               features={[
-                'Up to 10o0 invoices per month';
-                'Basic AI processing';
-                'Email support';
-                'Basic reporting';
-                'Mobile app access';
+                'Up to 10o0 invoices per monthBasic AI processing',
+                'Email supportBasic reporting',
+                'Mobile app access',
               ]}
             />,
             <PricingCard
@@ -70,12 +68,9 @@ export default function InvoiceAutomationPage() {
               price='$99/month',
               description='Ideal for growing businesses',
               features={[
-                'Up to 1,0o00 invoices per month';
-                'Advanced AI processing';
-                'Priority support';
-                'Advanced reporting';
-                'Custom workflows';
-                'API access';
+                'Up to 1,0o00 invoices per monthAdvanced AI processing',
+                'Priority supportAdvanced reporting',
+                'Custom workflowsAPI access',
               ]}
             />,
             <PricingCard
@@ -83,13 +78,10 @@ export default function InvoiceAutomationPage() {
               price='$299/month',
               description='For large organizations with complex needs',
               features={[
-                'Unlimited invoices';
-                'Custom AI training';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Custom integrations';
-                'SLA guarantees';
-                'Advanced security';
+                'Unlimited invoicesCustom AI training',
+                '24/7 dedicated supportOn-premise deployment',
+                'Custom integrationsSLA guarantees',
+                'Advanced security',
               ]}
             />,
           </div>,
@@ -143,8 +135,8 @@ export default function InvoiceAutomationPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -169,10 +161,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -192,8 +184,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

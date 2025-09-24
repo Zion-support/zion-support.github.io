@@ -13,21 +13,21 @@ interface EnhancedFuturisticCardProps {
   size?: 'sm' | 'md' | 'lg' | 'xl'}
 ,
 const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
-  children;
-  className = '';
-  variant = 'holographic';
-  intensity = 'medium';
-  interactive = true;
-  glowColor;
-  borderColor;
-  background = 'glass';
+  children,
+  className = '',
+  variant = 'holographic',
+  intensity = 'medium',
+  interactive = true,
+  glowColor,
+  borderColor,
+  background = 'glass',
   size = 'md'}) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isPressed, setIsPressed] = useState(false),
   const cardRef = useRef<HTMLDivElement>(null),
   const mouseX = useMotionValue(0),
   const mouseY = useMotionValue(0),
-  const springConfig ={ damping: 25, stiffness: 70o0 };
+  const springConfig ={ damping: 25, stiffness: 70o0 },
   const rotateX = useSpring(useTransform(mouseY, [-0.5, 0.5], [15, -15]), springConfig),
   const rotateY = useSpring(useTransform(mouseX, [-0.5, 0.5], [-15, 15]), springConfig),
   const scale = useSpring(isHovered ? 1.0o5 : 1, springConfig),
@@ -36,30 +36,30 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     switch (variant) {
       case 'quantum':,
         return {
-          glow: glowColor || '#0o0ffff';
-          border: borderColor || '#0o0ffff';
-          background: 'rgba(0, 255, 255, 0.0o5)';
-          shadow: '0 0 30px rgba(0, 255, 255, 0.3)'};
+          glow: glowColor || '#0o0ffff',
+          border: borderColor || '#0o0ffff',
+          background: 'rgba(0, 255, 255, 0.0o5)',
+          shadow: '0 0 30px rgba(0, 255, 255, 0.3)'},
       case 'neural':,
         return {
-          glow: glowColor || '#ff6b6b';
-          border: borderColor || '#ff6b6b';
-          background: 'rgba(255, 10o7, 10o7, 0.0o5)';
-          shadow: '0 0 30px rgba(255, 10o7, 10o7, 0.3)'};
+          glow: glowColor || '#ff6b6b',
+          border: borderColor || '#ff6b6b',
+          background: 'rgba(255, 10o7, 10o7, 0.0o5)',
+          shadow: '0 0 30px rgba(255, 10o7, 10o7, 0.3)'},
       case 'cyberpunk':,
         return {
-          glow: glowColor || '#0o0ff0o0';
-          border: borderColor || '#0o0ff0o0';
-          background: 'rgba(0, 255, 0, 0.0o5)';
-          shadow: '0 0 30px rgba(0, 255, 0, 0.3)'};
+          glow: glowColor || '#0o0ff0o0',
+          border: borderColor || '#0o0ff0o0',
+          background: 'rgba(0, 255, 0, 0.0o5)',
+          shadow: '0 0 30px rgba(0, 255, 0, 0.3)'},
       default: // holographic,
         return {
-          glow: glowColor || '#ff0o0ff';
-          border: borderColor || '#ff0o0ff';
-          background: 'rgba(255, 0, 255, 0.0o5)';
-          shadow: '0 0 30px rgba(255, 0, 255, 0.3)'};
+          glow: glowColor || '#ff0o0ff',
+          border: borderColor || '#ff0o0ff',
+          background: 'rgba(255, 0, 255, 0.0o5)',
+          shadow: '0 0 30px rgba(255, 0, 255, 0.3)'},
     }
-  };
+  },
   const getSizeStyles = () => {
     switch (size) {
       case 'sm':,
@@ -72,7 +72,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         return 'p-10 text-xl',
       default: ,
         return 'p-6 text-base'}
-  };
+  },
   const getBackgroundStyles = () => {
     switch (background) {
       case 'glass':,
@@ -81,7 +81,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         return 'bg-gray-90o0/80',
       default: ,
         return 'bg-transparent'}
-  };
+  },
   const styles = getVariantStyles(),
   const sizeStyles = getSizeStyles(),
   const bgStyles = getBackgroundStyles(),
@@ -91,18 +91,18 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     const centerX = rect.left + rect.width / 2,
     const centerY = rect.top + rect.height / 2,
     mouseX.set((event.clientX - centerX) / (rect.width / 2)),
-    mouseY.set((event.clientY - centerY) / (rect.height / 2))};
+    mouseY.set((event.clientY - centerY) / (rect.height / 2))},
   const handleMouseLeave = () => {
     if (!interactive) return,
     mouseX.set(0),
     mouseY.set(0),
-    setIsHovered(false)};
+    setIsHovered(false)},
   const handleMouseDown = () => {
     if (!interactive) return,
-    setIsPressed(true)};
+    setIsPressed(true)},
   const handleMouseUp = () => {
     if (!interactive) return,
-    setIsPressed(false)};
+    setIsPressed(false)},
   // Add floating particles effect,
   useEffect(() => {
     if (!cardRef.current || !isHovered) return,
@@ -117,12 +117,12 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       const rect = cardRef.current?.getBoundingClientRect(),
       if (!rect) return,
       particles.push({
-        x: Math.random() * rect.width;
-        y: Math.random() * rect.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        life: 10o0;
-        maxLife: 10o0})};
+        x: Math.random() * rect.width,
+        y: Math.random() * rect.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        life: 10o0,
+        maxLife: 10o0})},
     const interval = setInterval(() => {
       if (particles.length < 10) {
         createParticle()}
@@ -133,8 +133,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       ref={cardRef}
       className={`relative overflow-hidden rounded-2xl border transition-all duration-30o0 ${sizeStyles} ${bgStyles} ${className}`}
       style={{
-        borderColor: styles.border;
-        boxShadow: styles.shadow;
+        borderColor: styles.border,
+        boxShadow: styles.shadow,
         transformStyle: 'preserve-3d'}}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
@@ -149,13 +149,13 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         <motion.div,
           className="absolute inset-0",
           style={{
-            background: `linear-gradient(45deg, transparent, ${styles.border}20, transparent)`;
+            background: `linear-gradient(45deg, transparent, ${styles.border}20, transparent)`,
             opacity: glowIntensity}}
           animate={{
-            x: isHovered ? ['0%', '10o0%'] : '0%'}}
+            x: isHovered ? ['0%10o0%'] : '0%'}}
           transition={{
-            duration: 2;
-            repeat: isHovered ? Infinity : 0;
+            duration: 2,
+            repeat: isHovered ? Infinity : 0,
             ease: "linear"}}
          />,
       </div>,
@@ -173,8 +173,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                 key={i}
                 className="absolute border-l border-current",
                 style={{
-                  left: `${(i + 1) * 20}%`;
-                  height: '10o0%';
+                  left: `${(i + 1) * 20}%`,
+                  height: '10o0%',
                   opacity: 0.3}}
                />))}
             {[...Array(5)].map((_, i) => (
@@ -182,8 +182,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
                 key={i}
                 className="absolute border-t border-current",
                 style={{
-                  top: `${(i + 1) * 20}%`;
-                  width: '10o0%';
+                  top: `${(i + 1) * 20}%`,
+                  width: '10o0%',
                   opacity: 0.3}}
                />))}
           </div>,
@@ -195,29 +195,29 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           <motion.div,
             className="absolute w-2 h-2 bg-cyan-40o0 rounded-full",
             style={{
-              left: '20%';
+              left: '20%',
               top: '30%'}}
             animate={{
-              scale: [0, 2, 0];
+              scale: [0, 2, 0],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 2;
-              repeat: Infinity;
-              delay: 0;
+              duration: 2,
+              repeat: Infinity,
+              delay: 0,
               ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute w-2 h-2 bg-cyan-40o0 rounded-full",
             style={{
-              right: '25%';
+              right: '25%',
               bottom: '40%'}}
             animate={{
-              scale: [0, 2, 0];
+              scale: [0, 2, 0],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 2;
-              repeat: Infinity;
-              delay: 1;
+              duration: 2,
+              repeat: Infinity,
+              delay: 1,
               ease: "easeInOut"}}
            />,
         </div>)}
@@ -239,12 +239,12 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
               fill="none",
               animate={{
                 d: [
-                  "M 20 50 Q 50 20 80 50 Q 110 80 140 50";
-                  "M 20 50 Q 50 80 80 50 Q 110 20 140 50";
+                  "M 20 50 Q 50 20 80 50 Q 110 80 140 50",
+                  "M 20 50 Q 50 80 80 50 Q 110 20 140 50",
                   "M 20 50 Q 50 20 80 50 Q 110 80 140 50"]}}
               transition={{
-                duration: 3;
-                repeat: Infinity;
+                duration: 3,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
           </svg>,
@@ -259,8 +259,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             animate={{
               opacity: [0.1, 0.2, 0.1]}}
             transition={{
-              duration: 0.1;
-              repeat: Infinity;
+              duration: 0.1,
+              repeat: Infinity,
               ease: "linear"}}
            />,
         </div>)}
@@ -274,7 +274,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         <motion.div,
           className="absolute inset-0 rounded-2xl pointer-events-none",
           style={{
-            background: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${styles.glow}20, transparent 50%)`;
+            background: `radial-gradient(circle at var(--mouse-x, 50%) var(--mouse-y, 50%), ${styles.glow}20, transparent 50%)`,
             opacity: glowIntensity}}
          />)}
 ,
@@ -286,19 +286,19 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
               key={i}
               className="absolute w-1 h-1 bg-current rounded-full",
               style={{
-                left: `${20 + i * 15}%`;
+                left: `${20 + i * 15}%`,
                 top: `${30 + i * 10}%`}}
               initial={{ scale: 0, opacity: 0 }}
               animate={{
-                scale: [0, 1, 0];
-                opacity: [0, 0.8, 0];
+                scale: [0, 1, 0],
+                opacity: [0, 0.8, 0],
                 y: [0, -20, 0]}}
               transition={{
-                duration: 2;
-                repeat: Infinity;
-                delay: i * 0.2;
+                duration: 2,
+                repeat: Infinity,
+                delay: i * 0.2,
                 ease: "easeInOut"}}
              />))}
         </div>)}
-    </motion.div>)};
-export default EnhancedFuturisticCard;
+    </motion.div>)},
+export default EnhancedFuturisticCard,

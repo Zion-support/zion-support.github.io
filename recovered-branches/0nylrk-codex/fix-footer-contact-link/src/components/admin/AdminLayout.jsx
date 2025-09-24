@@ -1,9 +1,9 @@
 import { Link } from 'react-router-dom',
 const navItems = [
-  { title: 'Products', href: '/admin/products' };
-  { title: 'Services', href: '/admin/services' };
-  { title: 'Users', href: '/admin/users' };
-  { title: 'Reports', href: '/admin/reports' };
+  { title: 'Products', href: '/admin/products' },
+  { title: 'Services', href: '/admin/services' },
+  { title: 'Users', href: '/admin/users' },
+  { title: 'Reports', href: '/admin/reports' },
 ],
 export function AdminLayout({ children }) {
   return (
@@ -22,4 +22,4 @@ export function AdminLayout({ children }) {
       </aside>,
       <main className='flex-1 p-6 overflow-y-auto'>{children}</main>,
     </div>)}
-export default AdminLayout;
+export default AdminLayout,

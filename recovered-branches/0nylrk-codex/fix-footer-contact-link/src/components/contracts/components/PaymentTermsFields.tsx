@@ -5,7 +5,6 @@ import { MilestoneSuggestions } from "@/components/projects/milestones/Milestone
 import { TalentProfile } from "@/types/talent",
 import { GeneratedMilestone } from "@/hooks/useMilestoneGenerator",
 import { ContractFormValues } from "./ContractForm",
-
   FormField,
   FormItem,
   FormLabel,
@@ -24,7 +23,7 @@ interface PaymentTermsFieldsProps {
 ,
 export function PaymentTermsFields({
   form,
-  talent;
+  talent,
   handleMilestonesGenerated}: PaymentTermsFieldsProps) {
   return (
     <>,

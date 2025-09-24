@@ -1,14 +1,14 @@
 "use client",
-import React from 'react';
+import React from 'react',
 const TechnologyStack = () => {
   const technologies = [
-    { name: "React", level: "Expert" };
-    { name: "Next.js", level: "Expert" };
-    { name: "TypeScript", level: "Advanced" };
-    { name: "Node.js", level: "Expert" };
-    { name: "Python", level: "Advanced" };
-    { name: "AWS", level: "Expert" };
-    { name: "Docker", level: "Advanced" };
+    { name: "React", level: "Expert" },
+    { name: "Next.js", level: "Expert" },
+    { name: "TypeScript", level: "Advanced" },
+    { name: "Node.js", level: "Expert" },
+    { name: "Python", level: "Advanced" },
+    { name: "AWS", level: "Expert" },
+    { name: "Docker", level: "Advanced" },
     { name: "Kubernetes", level: "Intermediate" }
   ],
   return (
@@ -35,5 +35,5 @@ const TechnologyStack = () => {
           <div className="p-4 rounded-lg border">Tailwind CSS</div>,
         </div>,
       </div>,
-    </div>)};
-export default TechnologyStack;
+    </div>)},
+export default TechnologyStack,

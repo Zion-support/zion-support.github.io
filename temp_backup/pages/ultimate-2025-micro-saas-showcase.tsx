@@ -3,65 +3,61 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Atom;
-  Dna;
-  Users;
-  Globe;
-  Cpu;
-  Target;
-  Microscope;
-  Lock;
-  Cloud;
-  BarChart3;
-  Settings;
-  Eye;
-  Award;
-  Clock;
-  Heart;
-  Lightbulb;
-  Search;
-  Filter;
-  Grid;
-  List;
-  ChevronDown;
-  ChevronUp;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Users,
+  Globe,
+  Cpu,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Search,
+  Filter,
+  Grid,
+  List,
+  ChevronDown,
+  ChevronUp,
 } from 'lucide-react',
 import { Layout } from '../components/layout/Layout',
 import { ultimateRealMicroSaasServices20o25 } from '../data/20o25-ultimate-real-micro-saas-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const categories = [
-  'All Services';
-  'Customer Success & Retention';
-  'Supply Chain & Logistics';
-  'Financial Planning & Analysis';
-  'Human Resources & Analytics';
-  'Sales Intelligence & Automation';
-  'Business Intelligence & Decision Support';
-  'Content Marketing & Automation';
-  'Customer Relationship Management';
+  'All ServicesCustomer Success & Retention',
+  'Supply Chain & LogisticsFinancial Planning & Analysis',
+  'Human Resources & AnalyticsSales Intelligence & Automation',
+  'Business Intelligence & Decision SupportContent Marketing & Automation',
+  'Customer Relationship Management',
 ],
 const pricingTiers = [
-  { name: 'Starter', range: '$199 - $299' };
-  { name: 'Professional', range: '$399 - $599' };
-  { name: 'Enterprise', range: '$799 - $899' };
+  { name: 'Starter', range: '$199 - $299' },
+  { name: 'Professional', range: '$399 - $599' },
+  { name: 'Enterprise', range: '$799 - $899' },
 ],
 export default function Ultimate20o25MicroSaasShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
@@ -109,24 +105,24 @@ export default function Ultimate20o25MicroSaasShowcase() {
         return 0}
   }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <Layout>,
       <Head>,
@@ -201,7 +197,7 @@ export default function Ultimate20o25MicroSaasShowcase() {
               <div className='text-center'>,
                 <div className='text-3xl lg: text-4xl font-bold text-purple-40o0 mb-2'>,
                   {ultimateRealMicroSaasServices20o25.reduce(
-                    (sum, service) => sum + service.rating;
+                    (sum, service) => sum + service.rating,
                     0) / ultimateRealMicroSaasServices20o25.length}
                   ⭐,
                 </div>,

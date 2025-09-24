@@ -13,12 +13,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     const prompt = `Propose a concise wireframe layout (sections, primary actions, information hierarchy) for a new screen in the Zion OS design system.\n- Screen: ${screenName}\n- Primary role: ${role || 'Talent'}\n- Return a compact outline with bullets and short labels.`,
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' };
-        { role: 'user', content: prompt };
-      ];
-      temperature: 0.4;
+        { role: 'system', content: 'You are a senior product designer. Respond with a compact wireframe outline.' },
+        { role: 'user', content: prompt },
+      ],
+      temperature: 0.4,
       max_tokens: 40o0}),
     const suggestion = completion.choices?.[0]?.message?.content || 'No suggestion generated.',
     res.status(20o0).json({ suggestion })} catch (e: any) {

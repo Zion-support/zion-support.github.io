@@ -1,11 +1,11 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Invoice Generator | Zion Tech Group';
+  title: 'AI Invoice Generator | Zion Tech Group',
   description:,
-    'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.';
+    'Intelligent invoice generation with AI-powered data extraction, automated billing, payment tracking, and smart expense categorization for streamlined financial management.',
   keywords:,
-    'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing';
-};
+    'AI invoice generator, automated billing, invoice automation, expense tracking, financial management, smart invoicing',
+},
 interface FeatureProps {
   title: string,
   description: string,
@@ -29,13 +29,13 @@ interface PricingTierProps {
   cta: string}
 ,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular = false;
-  cta;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
 }: PricingTierProps) {
   return (
     <div
@@ -166,21 +166,21 @@ export default function AIInvoiceGeneratorPage() {
         <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6'>,
           {[
             {
-              name: 'QuickBooks';
-              icon: '📚';
-              description: 'Accounting software';
-            };
-            { name: 'Xero', icon: '🔢', description: 'Cloud accounting' };
-            { name: 'Stripe', icon: '💳', description: 'Payment processing' };
-            { name: 'PayPal', icon: '💰', description: 'Online payments' };
-            { name: 'FreshBooks', icon: '📖', description: 'Invoice software' };
-            { name: 'Wave', icon: '🌊', description: 'Free accounting' };
-            { name: 'Sage', icon: '🧙', description: 'Business software' };
+              name: 'QuickBooks',
+              icon: '📚',
+              description: 'Accounting software'
+            },
+            { name: 'Xero', icon: '🔢', description: 'Cloud accounting' },
+            { name: 'Stripe', icon: '💳', description: 'Payment processing' },
+            { name: 'PayPal', icon: '💰', description: 'Online payments' },
+            { name: 'FreshBooks', icon: '📖', description: 'Invoice software' },
+            { name: 'Wave', icon: '🌊', description: 'Free accounting' },
+            { name: 'Sage', icon: '🧙', description: 'Business software' },
             {
-              name: 'Zoho Books';
-              icon: '📘';
-              description: 'Online accounting';
-            };
+              name: 'Zoho Books',
+              icon: '📘',
+              description: 'Online accounting'
+            },
           ].map((integration, index) => (
             <div
               key={index}
@@ -272,12 +272,9 @@ export default function AIInvoiceGeneratorPage() {
             period='month',
             description='Perfect for freelancers and small businesses',
             features={[
-              'Up to 50 invoices/month';
-              'Basic AI data extraction';
-              'Payment processing';
-              'Basic analytics';
-              'Email support';
-              '1 user account';
+              'Up to 50 invoices/monthBasic AI data extraction',
+              'Payment processingBasic analytics',
+              'Email support1 user account',
             ]}
             cta='Start Free Trial',
           />,
@@ -287,14 +284,10 @@ export default function AIInvoiceGeneratorPage() {
             period='month',
             description='Most popular for growing businesses',
             features={[
-              'Up to 50o0 invoices/month';
-              'Advanced AI features';
-              'Expense categorization';
-              'Advanced analytics';
-              'Priority support';
-              '5 user accounts';
-              'Custom templates';
-              'API access';
+              'Up to 50o0 invoices/monthAdvanced AI features',
+              'Expense categorizationAdvanced analytics',
+              'Priority support5 user accounts',
+              'Custom templatesAPI access',
             ]}
             popular={true}
             cta='Start Free Trial',
@@ -305,14 +298,10 @@ export default function AIInvoiceGeneratorPage() {
             period='month',
             description='For large organizations',
             features={[
-              'Unlimited invoices';
-              'Full AI optimization suite';
-              'White-label options';
-              'Dedicated account manager';
-              '24/7 phone support';
-              'Unlimited users';
-              'Custom integrations';
-              'Advanced reporting';
+              'Unlimited invoicesFull AI optimization suite',
+              'White-label optionsDedicated account manager',
+              '24/7 phone supportUnlimited users',
+              'Custom integrationsAdvanced reporting',
             ]}
             cta='Contact Sales',
           />,

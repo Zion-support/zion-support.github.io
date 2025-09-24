@@ -1,10 +1,10 @@
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from '@/components/ui/table',
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
@@ -15,54 +15,54 @@ export function InvoiceHistory() {
   // Mock invoice data,
   const invoices = [
     {
-      id: 'INV-1234';
-      date: 'May 12025';
-      amount: '$1,999.00';
-      status: 'paid';
-      period: 'May 2025';
-    };
+      id: 'INV-1234',
+      date: 'May 12025',
+      amount: '$1,999.00',
+      status: 'paid',
+      period: 'May 2025'
+    },
     {
-      id: 'INV-1233';
-      date: 'Apr 12025';
-      amount: '$1,999.00';
-      status: 'paid';
-      period: 'Apr 2025';
-    };
+      id: 'INV-1233',
+      date: 'Apr 12025',
+      amount: '$1,999.00',
+      status: 'paid',
+      period: 'Apr 2025'
+    },
     {
-      id: 'INV-1232';
-      date: 'Mar 12025';
-      amount: '$1,999.00';
-      status: 'paid';
-      period: 'Mar 2025';
-    };
+      id: 'INV-1232',
+      date: 'Mar 12025',
+      amount: '$1,999.00',
+      status: 'paid',
+      period: 'Mar 2025'
+    },
     {
-      id: 'INV-1231';
-      date: 'Feb 12025';
-      amount: '$1,999.00';
-      status: 'paid';
-      period: 'Feb 2025';
-    };
+      id: 'INV-1231',
+      date: 'Feb 12025',
+      amount: '$1,999.00',
+      status: 'paid',
+      period: 'Feb 2025'
+    },
     {
-      id: 'INV-1230';
-      date: 'Jan 12025';
-      amount: '$1,999.00';
-      status: 'paid';
-      period: 'Jan 2025';
-    };
+      id: 'INV-1230',
+      date: 'Jan 12025',
+      amount: '$1,999.00',
+      status: 'paid',
+      period: 'Jan 2025'
+    },
     {
-      id: 'INV-1229';
-      date: 'Dec 12024';
-      amount: '$1,999.00';
-      status: 'paid';
-      period: 'Dec 2024';
-    };
+      id: 'INV-1229',
+      date: 'Dec 12024',
+      amount: '$1,999.00',
+      status: 'paid',
+      period: 'Dec 2024'
+    },
   ],
   const handleDownloadInvoice = (invoiceId: string) => {
     // In a real appthis would trigger a download of the invoice PDF,
     toast({
-      title: 'Downloading invoice';
-      description: `Downloading invoice ${invoiceId} as PDF.`;
-    })};
+      title: 'Downloading invoice',
+      description: `Downloading invoice ${invoiceId} as PDF.`,
+    })},
   const getBadgeForStatus = (status: string) => {
     switch (status) {
       case 'paid':,
@@ -73,7 +73,7 @@ export function InvoiceHistory() {
         return <Badge variant='destructive'>Overdue</Badge>,
       default:,
         return <Badge variant='outline'>{status}</Badge>}
-  };
+  },
   return (
     <div className='space-y-6'>,
       <div className='flex items-center justify-between'>,

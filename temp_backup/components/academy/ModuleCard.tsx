@@ -4,17 +4,17 @@ export type ModuleCardProps = {
   title: string,
   points: string[],
   isCompleted: boolean,
-  onComplete: (moduleId: string) => void};
+  onComplete: (moduleId: string) => void},
 export type QuizQuestion = {
   question: string,
   options: string[],
-  answerIndex: number};
+  answerIndex: number},
 export default function ModuleCard({
-  moduleId;
-  title;
-  points;
-  isCompleted;
-  onComplete;
+  moduleId,
+  title,
+  points,
+  isCompleted,
+  onComplete,
 }: ModuleCardProps) {
   const [isLoadingSummary, setIsLoadingSummary] = useState(false),
   const [summary, setSummary] = useState<string | null>(null),
@@ -30,12 +30,12 @@ export default function ModuleCard({
     setSummary(null),
     try {
       const res = await fetch('/api/academy/summarize', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          moduleTitle: title;
-          moduleContent: contentForAI;
-        });
+          moduleTitle: title,
+          moduleContent: contentForAI
+        }),
       }),
       const data = await res.json(),
       setSummary(data.summary || 'No summary available.')} catch (err) {
@@ -49,12 +49,12 @@ export default function ModuleCard({
     setScore(null),
     try {
       const res = await fetch('/api/academy/generate-quiz', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          moduleTitle: title;
-          moduleContent: contentForAI;
-        });
+          moduleTitle: title,
+          moduleContent: contentForAI
+        }),
       }),
       const data = await res.json(),
       setQuiz(data.questions || null)} catch (err) {

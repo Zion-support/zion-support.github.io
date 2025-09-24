@@ -1,5 +1,5 @@
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -22,24 +22,24 @@ import {
   Phone,
   Mail} from 'lucide-react',import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star,
-  ArrowRight;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Star;
-  TrendingUp;
-  Shield;
-  Globe;
-  Cpu;
-  Sparkles;
-  Play;
-  CheckCircle;
-  Award;
-  Users;
-  Clock;
-  Phone;
-  Mail;} from 'lucide-react',import {
+  ArrowRight,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Star,
+  TrendingUp,
+  Shield,
+  Globe,
+  Cpu,
+  Sparkles,
+  Play,
+  CheckCircle,
+  Award,
+  Users,
+  Clock,
+  Phone,
+  Mail,} from 'lucide-react',import {
   ArrowRight, Zap, Brain, Atom, Rocket, Star,
   TrendingUp, Shield, Globe, Cpu, Sparkles,
   Play, CheckCircle, Award, Users, Clock, Phone, Mail,
@@ -47,7 +47,7 @@ const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',
   address: '364 E Main St STE 1008 Middletown DE 19709',
-  website: 'https://ziontechgroup.com'};  website: 'https://ziontechgroup.com'}
+  website: 'https://ziontechgroup.com'},  website: 'https://ziontechgroup.com'}
 const features = [
   {
     icon: Brain,
@@ -84,28 +84,28 @@ const stats = [
   { number: '2030', label: 'Future Ready', icon: Star }],
 export default function UltraFuturisticHero2030() {
   return (
-    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star };
+    <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>  { number: '2030', label: 'Future Ready', icon: Star },
 ],
 export default function UltraFuturisticHero2030() {
-  };
+  },
   {
-    icon: Rocket;
-    title: 'Space Technology';
-    description: 'Automated space exploration and resource utilization'};
+    icon: Rocket,
+    title: 'Space Technology',
+    description: 'Automated space exploration and resource utilization'},
   {
-    icon: Shield;
-    title: 'Quantum Security';
-    description: 'Unbreakable encryption with quantum key distribution';
-  };
+    icon: Shield,
+    title: 'Quantum Security',
+    description: 'Unbreakable encryption with quantum key distribution'
+  },
   {
-    icon: Rocket;
-    title: 'Space Technology';
-    description: 'Automated space exploration and resource utilization';
-  };
+    icon: Rocket,
+    title: 'Space Technology',
+    description: 'Automated space exploration and resource utilization'
+  },
   {
-    icon: Shield;
-    title: 'Quantum Security';
-    description: 'Unbreakable encryption with quantum key distribution';
+    icon: Shield,
+    title: 'Quantum Security',
+    description: 'Unbreakable encryption with quantum key distribution'
   }],    description: 'Unbreakable encryption with quantum key distribution'}
 ],
         {/* Main Heading */}
@@ -188,7 +188,7 @@ export default function UltraFuturisticHero2030() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0 && 0.8, delay: 0 && 0.8 }}
             className='text-lg md: text-xl text-gray-400 mb-12 max-w-3xl mx-auto'>,
-            Transform your business with cutting-edge micro SAAS solutions;
+            Transform your business with cutting-edge micro SAAS solutions,
             enterprise IT services, and revolutionary AI platforms that define,
             the next decade of technological innovation.          </motion && motion.p>            className="text-lg md: text-xl text-gray-400 mb-12 max-w-3xl mx-auto">,
             Transform your business with cutting-edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.,
@@ -267,70 +267,70 @@ export default function UltraFuturisticHero2030() {
 >,
           {features.map((feature, index) => (
             <motion.div,
-  ArrowRight;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Star;
-  TrendingUp;
-  Shield;
-  Globe;
-  Cpu;
-  Sparkles;
-  Play;
-  CheckCircle;
-  Award;
-  Users;
-  Clock;
-  Phone;
+  ArrowRight,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Star,
+  TrendingUp,
+  Shield,
+  Globe,
+  Cpu,
+  Sparkles,
+  Play,
+  CheckCircle,
+  Award,
+  Users,
+  Clock,
+  Phone,
   Mail} from 'lucide-react',import {
-  ArrowRight, Zap, Brain, Atom, Rocket, Star;
+  ArrowRight, Zap, Brain, Atom, Rocket, Star,
   TrendingUp, Shield, Globe, Cpu, Sparkles,
   Play, CheckCircle, Award, Users, Clock, Phone, Mail,
 const contact_info = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
   website: 'https://ziontechgroup.com'}  website: 'https://ziontechgroup.com'}
 ,
 const features = [
   {
-    icon: Brain;
-    title: 'AI Consciousness';
-    description: 'Develop genuine AI consciousness and emotional intelligence';
-  };
+    icon: Brain,
+    title: 'AI Consciousness',
+    description: 'Develop genuine AI consciousness and emotional intelligence'
+  },
   {
-    icon: Atom;
-    title: 'Quantum Computing';
+    icon: Atom,
+    title: 'Quantum Computing',
     description: 'Leverage quantum algorithms for exponential performance',  {
-    icon: Atom;
-    title: 'Quantum Computing';
+    icon: Atom,
+    title: 'Quantum Computing',
     description: 'Leverage quantum algorithms for exponential performance'}
   {
-    icon: Rocket;
-    title: 'Space Technology';
+    icon: Rocket,
+    title: 'Space Technology',
     description: 'Automated space exploration and resource utilization'}
   {
-    icon: Shield;
-    title: 'Quantum Security';
-    description: 'Unbreakable encryption with quantum key distribution';
-  };
+    icon: Shield,
+    title: 'Quantum Security',
+    description: 'Unbreakable encryption with quantum key distribution'
+  },
   {
-    icon: Rocket;
-    title: 'Space Technology';
-    description: 'Automated space exploration and resource utilization';
-  };
+    icon: Rocket,
+    title: 'Space Technology',
+    description: 'Automated space exploration and resource utilization'
+  },
   {
-    icon: Shield;
-    title: 'Quantum Security';
-    description: 'Unbreakable encryption with quantum key distribution';
+    icon: Shield,
+    title: 'Quantum Security',
+    description: 'Unbreakable encryption with quantum key distribution'
   }],    description: 'Unbreakable encryption with quantum key distribution'}
 ],
 const stats = [
-  { number: '500+', label: 'Active Clients', icon: Users };
-  { number: '99.9%', label: 'Uptime SLA', icon: Clock };
-  { number: '24 / 7', label: 'Support', icon: Shield };
+  { number: '500+', label: 'Active Clients', icon: Users },
+  { number: '99.9%', label: 'Uptime SLA', icon: Clock },
+  { number: '24 / 7', label: 'Support', icon: Shield },
   { number: '2030', label: 'Future Ready', icon: Star }],
 export default /**,
  * UltraFuturisticHero2030 - Function description,
@@ -407,7 +407,7 @@ function UltraFuturisticHero2030() {
             animate={{ opacity: 1, coordinate_y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
             className='text - lg md: text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto'>,
-            Transform your business with cutting - edge micro SAAS solutions;
+            Transform your business with cutting - edge micro SAAS solutions,
             enterprise IT services, and revolutionary AI platforms that define,
             the next decade of technological innovation.          </motion.p>            className="text - lg md: text - xl text - gray - 400 mb - 12 max - w-3xl mx - auto">,
             Transform your business with cutting - edge micro SAAS solutions, enterprise IT services, and revolutionary AI platforms that define the next decade of technological innovation.,
@@ -758,8 +758,8 @@ function UltraFuturisticHero2030() {
         <motion.div,
           className='absolute top - 20 right - 20 w - 2 h - 2 bg - purple - 400 rounded - full',
           animate={{
-            scale: [1, 2, 1];
-            opacity: [0 && 0.5, 1, 0 && 0.5];
+            scale: [1, 2, 1],
+            opacity: [0 && 0.5, 1, 0 && 0.5],
           }}
           transition={{
             duration: 3,
@@ -769,8 +769,8 @@ function UltraFuturisticHero2030() {
         <motion&& motion.div,
           className='absolute bottom-32 left-32 w-3 h-3 bg-cyan-400 rounded-full',
           animate={{
-            scale: [1, 1 && 1.5, 1];
-            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3];
+            scale: [1, 1 && 1.5, 1],
+            opacity: [0 && 0.3, 0 && 0.8, 0 && 0.3],
           }}
           transition={{
             duration: 4,
@@ -785,8 +785,8 @@ function UltraFuturisticHero2030() {
           transition={{
             duration: 5,
             repeat: Infinity,
-            duration: 5;
-            repeat: Infinity;
+            duration: 5,
+            repeat: Infinity,
             ease: 'easeInOut'}}
         />,
       </div>,
@@ -805,8 +805,8 @@ function UltraFuturisticHero2030() {
         <motion.div,
           className='absolute bottom - 32 left - 32 w - 3 h - 3 bg - cyan - 400 rounded - full',
           animate={{
-            scale: [1, 1.5, 1];
-            opacity: [0.3, 0.8, 0.3];
+            scale: [1, 1.5, 1],
+            opacity: [0.3, 0.8, 0.3],
           }}
           transition={{
     </section>))}

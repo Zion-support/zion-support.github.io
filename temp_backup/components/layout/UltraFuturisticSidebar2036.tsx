@@ -1,177 +1,177 @@
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  X;
-  Home;
-  Globe;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Target;
-  Sparkles;
-  DollarSign;
-  BookOpen;
-  Building;
-  Users;
-  ChevronRight;
-  Zap;
-  Star;
-  TrendingUp;
-  Award;
-  Settings;
-  HelpCircle;
-  MessageCircle;
-  Phone;
-  Mail;
+  X,
+  Home,
+  Globe,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Sparkles,
+  DollarSign,
+  BookOpen,
+  Building,
+  Users,
+  ChevronRight,
+  Zap,
+  Star,
+  TrendingUp,
+  Award,
+  Settings,
+  HelpCircle,
+  MessageCircle,
+  Phone,
+  Mail,
 } from 'lucide-react',
 interface SidebarProps {
   isOpen: boolean,
   onClose: () => void}
 ,
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const sidebarSections = [
   {
-    title: 'Main';
-    icon: <Home className='w-5 h-5' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
+    title: 'Main',
+    icon: <Home className='w-5 h-5' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
     items: [
-      { name: 'Home', href: '/', icon: <Home className='w-4 h-4' /> };
+      { name: 'Home', href: '/', icon: <Home className='w-4 h-4' /> },
       {
-        name: 'All Services';
-        href: '/comprehensive-services-showcase-20o25';
-        icon: <Globe className='w-4 h-4' />;
-        badge: 'Showcase';
-      };
+        name: 'All Services',
+        href: '/comprehensive-services-showcase-20o25',
+        icon: <Globe className='w-4 h-4' />,
+        badge: 'Showcase'
+      },
       {
-        name: 'About Us';
-        href: '/about';
-        icon: <Building className='w-4 h-4' />;
-      };
+        name: 'About Us',
+        href: '/about',
+        icon: <Building className='w-4 h-4' />
+      },
       {
-        name: 'Contact';
-        href: '/contact';
-        icon: <Phone className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Contact',
+        href: '/contact',
+        icon: <Phone className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    title: 'Core Services';
-    icon: <Rocket className='w-5 h-5' />;
-    color: 'from-emerald-50o0 to-teal-50o0';
+    title: 'Core Services',
+    icon: <Rocket className='w-5 h-5' />,
+    color: 'from-emerald-50o0 to-teal-50o0',
     items: [
       {
-        name: 'Micro SAAS';
-        href: '/ultimate-real-micro-saas-showcase-20o25';
-        icon: <Rocket className='w-4 h-4' />;
-        badge: 'Hot';
-      };
+        name: 'Micro SAAS',
+        href: '/ultimate-real-micro-saas-showcase-20o25',
+        icon: <Rocket className='w-4 h-4' />,
+        badge: 'Hot'
+      },
       {
-        name: 'AI & Consciousness';
-        href: '/ai-services';
-        icon: <Brain className='w-4 h-4' />;
-        badge: 'New';
-      };
+        name: 'AI & Consciousness',
+        href: '/ai-services',
+        icon: <Brain className='w-4 h-4' />,
+        badge: 'New'
+      },
       {
-        name: 'Quantum & Emerging Tech';
-        href: '/quantum-services';
-        icon: <Atom className='w-4 h-4' />;
-        badge: 'Hot';
-      };
+        name: 'Quantum & Emerging Tech',
+        href: '/quantum-services',
+        icon: <Atom className='w-4 h-4' />,
+        badge: 'Hot'
+      },
       {
-        name: 'Enterprise IT';
-        href: '/enterprise-it';
-        icon: <Shield className='w-4 h-4' />;
-        badge: 'Enterprise';
-      };
-    ];
-  };
+        name: 'Enterprise IT',
+        href: '/enterprise-it',
+        icon: <Shield className='w-4 h-4' />,
+        badge: 'Enterprise'
+      },
+    ],
+  },
   {
-    title: 'Business Solutions';
-    icon: <Target className='w-5 h-5' />;
-    color: 'from-blue-50o0 to-indigo-50o0';
+    title: 'Business Solutions',
+    icon: <Target className='w-5 h-5' />,
+    color: 'from-blue-50o0 to-indigo-50o0',
     items: [
       {
-        name: 'Business Solutions';
-        href: '/business-solutions';
-        icon: <Target className='w-4 h-4' />;
-        badge: 'Business';
-      };
+        name: 'Business Solutions',
+        href: '/business-solutions',
+        icon: <Target className='w-4 h-4' />,
+        badge: 'Business'
+      },
       {
-        name: 'Innovations';
-        href: '/innovations';
-        icon: <Sparkles className='w-4 h-4' />;
-        badge: 'Innovation';
-      };
+        name: 'Innovations',
+        href: '/innovations',
+        icon: <Sparkles className='w-4 h-4' />,
+        badge: 'Innovation'
+      },
       {
-        name: 'Professional Services';
-        href: '/professional-services';
-        icon: <Users className='w-4 h-4' />;
-      };
+        name: 'Professional Services',
+        href: '/professional-services',
+        icon: <Users className='w-4 h-4' />
+      },
       {
-        name: 'Industry Solutions';
-        href: '/industry-real-services';
-        icon: <Building className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Industry Solutions',
+        href: '/industry-real-services',
+        icon: <Building className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    title: 'Resources';
-    icon: <BookOpen className='w-5 h-5' />;
-    color: 'from-yellow-50o0 to-orange-50o0';
+    title: 'Resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    color: 'from-yellow-50o0 to-orange-50o0',
     items: [
       {
-        name: 'Pricing';
-        href: '/pricing';
-        icon: <DollarSign className='w-4 h-4' />;
-        badge: 'Pricing';
-      };
+        name: 'Pricing',
+        href: '/pricing',
+        icon: <DollarSign className='w-4 h-4' />,
+        badge: 'Pricing'
+      },
       {
-        name: 'Documentation';
-        href: '/api-documentation-generator';
-        icon: <BookOpen className='w-4 h-4' />;
-      };
+        name: 'Documentation',
+        href: '/api-documentation-generator',
+        icon: <BookOpen className='w-4 h-4' />
+      },
       {
-        name: 'News & Updates';
-        href: '/news';
-        icon: <TrendingUp className='w-4 h-4' />;
-      };
+        name: 'News & Updates',
+        href: '/news',
+        icon: <TrendingUp className='w-4 h-4' />
+      },
       {
-        name: 'Support';
-        href: '/support';
-        icon: <HelpCircle className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Support',
+        href: '/support',
+        icon: <HelpCircle className='w-4 h-4' />
+      },
+    ],
+  },
 ],
 const quickActions = [
   {
-    name: 'Get Started';
-    href: '/contact';
-    icon: <Zap className='w-4 h-4' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-  };
+    name: 'Get Started',
+    href: '/contact',
+    icon: <Zap className='w-4 h-4' />,
+    color: 'from-purple-50o0 to-pink-50o0'
+  },
   {
-    name: 'View Pricing';
-    href: '/pricing';
-    icon: <DollarSign className='w-4 h-4' />;
-    color: 'from-yellow-50o0 to-orange-50o0';
-  };
+    name: 'View Pricing',
+    href: '/pricing',
+    icon: <DollarSign className='w-4 h-4' />,
+    color: 'from-yellow-50o0 to-orange-50o0'
+  },
   {
-    name: 'Contact Support';
-    href: '/support';
-    icon: <MessageCircle className='w-4 h-4' />;
-    color: 'from-green-50o0 to-emerald-50o0';
-  };
+    name: 'Contact Support',
+    href: '/support',
+    icon: <MessageCircle className='w-4 h-4' />,
+    color: 'from-green-50o0 to-emerald-50o0'
+  },
 ],
 export default function UltraFuturisticSidebar20o36({
-  isOpen;
-  onClose;
+  isOpen,
+  onClose,
 }: SidebarProps) {
   return (
     <AnimatePresence>,

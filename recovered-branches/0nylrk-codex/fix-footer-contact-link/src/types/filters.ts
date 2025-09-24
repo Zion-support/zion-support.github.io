@@ -16,7 +16,7 @@ export interface FilterSidebarProps {
     availability: boolean,
     region: boolean,
     experience: boolean,
-    price: boolean};
+    price: boolean},
   toggleSection: (sectionName: string) => void,
   sortOption: string,
   setSortOption: (option: string) => void,

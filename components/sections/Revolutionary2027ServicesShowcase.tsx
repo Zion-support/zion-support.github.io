@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-import Link from 'next/link',import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react',
 import Link from 'next/link',
-
+import { ArrowRight, Brain, Zap, Shield, Rocket, Sparkles, Star, TrendingUp, Globe, Cpu, Lock, Cloud, Atom, Microscope, Satellite, DollarSign, Factory, Earth, TestTube, Megaphone, Scale, Network } from 'lucide-react',
+import Link from 'next/link',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -46,28 +46,28 @@ class ErrorBoundary extends React.Component {
   Megaphone,
   Scale,
   Network,
-  ArrowRight;
-  Brain;
-  Zap;
-  Shield;
-  Rocket;
-  Sparkles;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Lock;
-  Cloud;
-  Atom;
-  Microscope;
-  Satellite;
-  DollarSign;
-  Factory;
-  Earth;
-  TestTube;
-  Megaphone;
-  Scale;
-  Network;
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  Atom,
+  Microscope,
+  Satellite,
+  DollarSign,
+  Factory,
+  Earth,
+  TestTube,
+  Megaphone,
+  Scale,
+  Network,
 } from 'lucide-react',
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
@@ -81,10 +81,8 @@ const Revolutionary2027ServicesShowcase = () => {
       color: 'from-purple-600 to-indigo-700',
       category: 'Quantum AI & Neuroscience',
       features: [
-        'Quantum consciousness simulation',
-        'Neural pattern recognition',
-        'Emotional intelligence modeling',
-        'Real-time brain-computer interface'],
+        'Quantum consciousness simulationNeural pattern recognition',
+        'Emotional intelligence modelingReal-time brain-computer interface'],
       marketSize: '$15B research market',
       growthRate: '300% annual growth'}
     {
@@ -98,10 +96,8 @@ const Revolutionary2027ServicesShowcase = () => {
       color: 'from-blue-600 to-cyan-700',
       category: 'Space Technology & AI',
       features: [
-        'Autonomous mining operations',
-        'Resource detection algorithms',
-        'Risk assessment AI',
-        'Mission planning automation'],
+        'Autonomous mining operationsResource detection algorithms',
+        'Risk assessment AIMission planning automation'],
       marketSize: '$3.8T space economy',
       growthRate: '400% annual growth'}
     {
@@ -115,10 +111,8 @@ const Revolutionary2027ServicesShowcase = () => {
       color: 'from-green-600 to-emerald-700',
       category: 'Biotechnology & Computing',
       features: [
-        'DNA-based computation',
-        'Molecular algorithm optimization',
-        'Real-time molecular analysis',
-        'Algorithm library (100+ algorithms)'],
+        'DNA-based computationMolecular algorithm optimization',
+        'Real-time molecular analysisAlgorithm library (100+ algorithms)'],
       marketSize: '$2.1T biotechnology market',
       growthRate: '250% annual growth'}
     {
@@ -132,10 +126,8 @@ const Revolutionary2027ServicesShowcase = () => {
       color: 'from-pink-600 to-rose-700',
       category: 'Metaverse & Holographics',
       features: [
-        '3D holographic rendering',
-        'Real-time 3D modeling',
-        'Holographic projection systems',
-        'AI-powered content generation'],
+        '3D holographic renderingReal-time 3D modeling',
+        'Holographic projection systemsAI-powered content generation'],
       marketSize: '$800B metaverse market',
       growthRate: '350% annual growth'}
     {
@@ -149,10 +141,8 @@ const Revolutionary2027ServicesShowcase = () => {
       color: 'from-red-600 to-orange-700',
       category: 'Healthcare & AI',
       features: [
-        'Autonomous diagnosis',
-        'Treatment recommendation AI',
-        'Continuous learning algorithms',
-        'Predictive health analytics'],
+        'Autonomous diagnosisTreatment recommendation AI',
+        'Continuous learning algorithmsPredictive health analytics'],
       marketSize: '$4.1T healthcare market',
       growthRate: '280% annual growth'}
     {
@@ -166,10 +156,8 @@ const Revolutionary2027ServicesShowcase = () => {
       color: 'from-indigo-600 to-purple-700',
       category: 'Quantum Security',
       features: [
-        'Quantum key distribution',
-        'Unbreakable encryption',
-        'Real-time threat detection',
-        'Zero-trust architecture'],
+        'Quantum key distributionUnbreakable encryption',
+        'Real-time threat detectionZero-trust architecture'],
       marketSize: '$500B cybersecurity market',
       growthRate: '500% annual growth'}
 ],
@@ -179,199 +167,187 @@ const Revolutionary2027ServicesShowcase = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1}
-    }};        staggerChildren: 0.1}
+    }},        staggerChildren: 0.1}
     }
   }
-        staggerChildren: 0.1;
-      };
-    }};
-};
+        staggerChildren: 0.1
+      },
+    }},
+},
   const itemVariants = {
     hidden: { opacity: 0, y: 20 }
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-  ArrowRight;
-  Brain;
-  Zap;
-  Shield;
-  Rocket;
-  Sparkles;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Lock;
-  Cloud;
-  Atom;
-  Microscope;
-  Satellite;
-  DollarSign;
-  Factory;
-  Earth;
-  TestTube;
-  Megaphone;
-  Scale;
-  Network;
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  Atom,
+  Microscope,
+  Satellite,
+  DollarSign,
+  Factory,
+  Earth,
+  TestTube,
+  Megaphone,
+  Scale,
+  Network
 } from 'lucide-react',
 const Revolutionary2027ServicesShowcase = () => {
   const featuredServices = [
     {
-      id: 'quantum-ai-consciousness-platform';
-      name: 'Quantum AI Consciousness Platform';
+      id: 'quantum-ai-consciousness-platform',
+      name: 'Quantum AI Consciousness Platform',
       description:,
-        'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.';
-      price: '$9,999';
-      icon: Brain;
-      color: 'from-purple-600 to-indigo-700';
-      category: 'Quantum AI & Neuroscience';
+        'Simulate human consciousness with quantum computing - the first platform to combine quantum computing with advanced AI for breakthrough neuroscience research.',
+      price: '$9,999',
+      icon: Brain,
+      color: 'from-purple-600 to-indigo-700',
+      category: 'Quantum AI & Neuroscience',
       features: [
-        'Quantum consciousness simulation';
-        'Neural pattern recognition';
-        'Emotional intelligence modeling';
-        'Real-time brain-computer interface';
-      ];
-      marketSize: '$15B research market';
-      growthRate: '300% annual growth';
-    };
+        'Quantum consciousness simulationNeural pattern recognition',
+        'Emotional intelligence modelingReal-time brain-computer interface',
+      ],
+      marketSize: '$15B research market',
+      growthRate: '300% annual growth'
+    },
     {
-      id: 'autonomous-space-mining-ai';
-      name: 'Autonomous Space Mining AI';
+      id: 'autonomous-space-mining-ai',
+      name: 'Autonomous Space Mining AI',
       description:,
-        'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.';
-      price: '$15,999';
-      period: '/month';
-      icon: Rocket;
-      color: 'from-blue-600 to-cyan-700';
-      category: 'Space Technology & AI';
+        'AI-powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.',
+      price: '$15,999',
+      period: '/month',
+      icon: Rocket,
+      color: 'from-blue-600 to-cyan-700',
+      category: 'Space Technology & AI',
       features: [
-        'Autonomous mining operations';
-        'Resource detection algorithms';
-        'Risk assessment AI';
-        'Mission planning automation';
-      ];
-      marketSize: '$3 && 3.8T space economy';
-      growthRate: '400% annual growth';
-    };
+        'Autonomous mining operationsResource detection algorithms',
+        'Risk assessment AIMission planning automation',
+      ],
+      marketSize: '$3 && 3.8T space economy',
+      growthRate: '400% annual growth'
+    },
     {
-      id: 'dna-computing-platform';
-      name: 'DNA Computing Platform';
+      id: 'dna-computing-platform',
+      name: 'DNA Computing Platform',
       description:,
-        'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.';
-      price: '$7,999';
-      period: '/month';
-      icon: TestTube;
-      color: 'from-green-600 to-emerald-700';
-      category: 'Biotechnology & Computing';
+        'Molecular computing for complex problem solving - use DNA-based computation to solve problems exponentially faster than traditional computers.',
+      price: '$7,999',
+      period: '/month',
+      icon: TestTube,
+      color: 'from-green-600 to-emerald-700',
+      category: 'Biotechnology & Computing',
       features: [
-        'DNA-based computation';
-        'Molecular algorithm optimization';
-        'Real-time molecular analysis';
-        'Algorithm library (100+ algorithms)';
-      ];
-      marketSize: '$2 && 2.1T biotechnology market';
-      growthRate: '250% annual growth';
-    };
+        'DNA-based computationMolecular algorithm optimization',
+        'Real-time molecular analysisAlgorithm library (100+ algorithms)',
+      ],
+      marketSize: '$2 && 2.1T biotechnology market',
+      growthRate: '250% annual growth'
+    },
     {
-      id: 'holographic-metaverse-platform';
-      name: 'Holographic Metaverse Platform';
+      id: 'holographic-metaverse-platform',
+      name: 'Holographic Metaverse Platform',
       description:,
-        'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.';
-      price: '$3,999';
-      period: '/month';
-      icon: Globe;
-      color: 'from-pink-600 to-rose-700';
-      category: 'Metaverse & Holographics';
+        'Create immersive 3D holographic experiences - build next-generation virtual worlds with realistic holographic projections.',
+      price: '$3,999',
+      period: '/month',
+      icon: Globe,
+      color: 'from-pink-600 to-rose-700',
+      category: 'Metaverse & Holographics',
       features: [
-        '3D holographic rendering';
-        'Real-time 3D modeling';
-        'Holographic projection systems';
-        'AI-powered content generation';
-      ];
-      marketSize: '$800B metaverse market';
-      growthRate: '350% annual growth';
-    };
+        '3D holographic renderingReal-time 3D modeling',
+        'Holographic projection systemsAI-powered content generation',
+      ],
+      marketSize: '$800B metaverse market',
+      growthRate: '350% annual growth'
+    },
     {
-      id: 'autonomous-healthcare-ai';
-      name: 'Autonomous Healthcare AI';
+      id: 'autonomous-healthcare-ai',
+      name: 'Autonomous Healthcare AI',
       description:,
-        'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.';
-      price: '$5,999';
-      period: '/month';
-      icon: Microscope;
-      color: 'from-red-600 to-orange-700';
-      category: 'Healthcare & AI';
+        'Self-learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.',
+      price: '$5,999',
+      period: '/month',
+      icon: Microscope,
+      color: 'from-red-600 to-orange-700',
+      category: 'Healthcare & AI',
       features: [
-        'Autonomous diagnosis';
-        'Treatment recommendation AI';
-        'Continuous learning algorithms';
-        'Predictive health analytics';
-      ];
-      marketSize: '$4 && 4.1T healthcare market';
-      growthRate: '280% annual growth';
-    };
+        'Autonomous diagnosisTreatment recommendation AI',
+        'Continuous learning algorithmsPredictive health analytics',
+      ],
+      marketSize: '$4 && 4.1T healthcare market',
+      growthRate: '280% annual growth'
+    },
     {
-      id: 'quantum-internet-security-gateway';
-      name: 'Quantum Internet Security Gateway';
+      id: 'quantum-internet-security-gateway',
+      name: 'Quantum Internet Security Gateway',
       description:,
-        'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.';
-      price: '$8,999';
-      period: '/month';
-      icon: Lock;
-      color: 'from-indigo-600 to-purple-700';
-      category: 'Quantum Security';
+        'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum-resistant algorithms.',
+      price: '$8,999',
+      period: '/month',
+      icon: Lock,
+      color: 'from-indigo-600 to-purple-700',
+      category: 'Quantum Security',
       features: [
-        'Quantum key distribution';
-        'Unbreakable encryption';
-        'Real-time threat detection';
-        'Zero-trust architecture';
-      ];
-      marketSize: '$500B cybersecurity market';
-      growthRate: '500% annual growth';
-    };
+        'Quantum key distributionUnbreakable encryption',
+        'Real-time threat detectionZero-trust architecture',
+      ],
+      marketSize: '$500B cybersecurity market',
+      growthRate: '500% annual growth'
+    },
   ],
   const categories = [
     {
-      name: 'Quantum AI Services';
-      count: '25+';
-      icon: Atom;
-      color: 'from-purple-500 to-indigo-600';
-    };
+      name: 'Quantum AI Services',
+      count: '25+',
+      icon: Atom,
+      color: 'from-purple-500 to-indigo-600'
+    },
     {
-      name: 'Space Technology';
-      count: '15+';
-      icon: Satellite;
-      color: 'from-blue-500 to-cyan-600';
-    };
+      name: 'Space Technology',
+      count: '15+',
+      icon: Satellite,
+      color: 'from-blue-500 to-cyan-600'
+    },
     {
-      name: 'Biotechnology';
-      count: '20+';
-      icon: TestTube;
-      color: 'from-green-500 to-emerald-600';
-    };
+      name: 'Biotechnology',
+      count: '20+',
+      icon: TestTube,
+      color: 'from-green-500 to-emerald-600'
+    },
     {
-      name: 'Emerging Tech';
-      count: '30+';
-      icon: Sparkles;
-      color: 'from-pink-500 to-rose-600';
-    }],    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' };
-    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' };
-    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' };
+      name: 'Emerging Tech',
+      count: '30+',
+      icon: Sparkles,
+      color: 'from-pink-500 to-rose-600'
+    }],    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from-purple-500 to-indigo-600' },
+    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from-blue-500 to-cyan-600' },
+    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from-green-500 to-emerald-600' },
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from-pink-500 to-rose-600' }
 ,
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0 && 0.1;
-      };
-    }};        staggerChildren: 0 && 0.1,
-        duration: 0.6;
+        staggerChildren: 0 && 0.1
+      },
+    }},        staggerChildren: 0 && 0.1,
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
       <div className='absolute inset-0 bg-gradient-to-b from-transparent via-purple-900/20 to-cyan-900/20'></div>,
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(139,92,246,0 && 0.1),transparent_50%)]'></div>,
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_80%_20%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>,
@@ -467,159 +443,147 @@ const Revolutionary2027ServicesShowcase = () => {
                   <service.icon className="w-8 h-8 text-white" />,
                 </div>,
       features: [
-        'Quantum consciousness simulation';
-        'Neural pattern recognition';
-        'Emotional intelligence modeling';
-        'Real - time brain - computer interface';
-      ];
-      market_size: '$15B research market';
-      growth_rate: '300% annual growth';
-    };
+        'Quantum consciousness simulationNeural pattern recognition',
+        'Emotional intelligence modelingReal - time brain - computer interface',
+      ],
+      market_size: '$15B research market',
+      growth_rate: '300% annual growth'
+    },
     {
-      id: 'autonomous - space - mining - ai';
-      name: 'Autonomous Space Mining AI';
+      id: 'autonomous - space - mining - ai',
+      name: 'Autonomous Space Mining AI',
       description:,
-        'AI - powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.';
-      price: '$15, 999';
-      period: '/month';
-      icon: Rocket;
-      color: 'from - blue - 600 to - cyan - 700';
-      category: 'Space Technology & AI';
+        'AI - powered autonomous mining operations in space - extract rare minerals from asteroids and celestial bodies without human intervention.',
+      price: '$15, 999',
+      period: '/month',
+      icon: Rocket,
+      color: 'from - blue - 600 to - cyan - 700',
+      category: 'Space Technology & AI',
       features: [
-        'Autonomous mining operations';
-        'Resource detection algorithms';
-        'Risk assessment AI';
-        'Mission planning automation';
-      ];
-      market_size: '$3.8T space economy';
-      growth_rate: '400% annual growth';
-    };
+        'Autonomous mining operationsResource detection algorithms',
+        'Risk assessment AIMission planning automation',
+      ],
+      market_size: '$3.8T space economy',
+      growth_rate: '400% annual growth'
+    },
     {
-      id: 'dna - computing - platform';
-      name: 'DNA Computing Platform';
+      id: 'dna - computing - platform',
+      name: 'DNA Computing Platform',
       description:,
-        'Molecular computing for complex problem solving - use DNA - based computation to solve problems exponentially faster than traditional computers.';
-      price: '$7, 999';
-      period: '/month';
-      icon: TestTube;
-      color: 'from - green - 600 to - emerald - 700';
-      category: 'Biotechnology & Computing';
+        'Molecular computing for complex problem solving - use DNA - based computation to solve problems exponentially faster than traditional computers.',
+      price: '$7, 999',
+      period: '/month',
+      icon: TestTube,
+      color: 'from - green - 600 to - emerald - 700',
+      category: 'Biotechnology & Computing',
       features: [
-        'DNA - based computation';
-        'Molecular algorithm optimization';
-        'Real - time molecular analysis';
-        'Algorithm library (100+ algorithms)';
-      ];
-      market_size: '$2.1T biotechnology market';
-      growth_rate: '250% annual growth';
-    };
+        'DNA - based computationMolecular algorithm optimization',
+        'Real - time molecular analysisAlgorithm library (100+ algorithms)',
+      ],
+      market_size: '$2.1T biotechnology market',
+      growth_rate: '250% annual growth'
+    },
     {
-      id: 'holographic - metaverse - platform';
-      name: 'Holographic Metaverse Platform';
+      id: 'holographic - metaverse - platform',
+      name: 'Holographic Metaverse Platform',
       description:,
-        'Create immersive 3D holographic experiences - build next - generation virtual worlds with realistic holographic projections.';
-      price: '$3, 999';
-      period: '/month';
-      icon: Globe;
-      color: 'from - pink - 600 to - rose - 700';
-      category: 'Metaverse & Holographics';
+        'Create immersive 3D holographic experiences - build next - generation virtual worlds with realistic holographic projections.',
+      price: '$3, 999',
+      period: '/month',
+      icon: Globe,
+      color: 'from - pink - 600 to - rose - 700',
+      category: 'Metaverse & Holographics',
       features: [
-        '3D holographic rendering';
-        'Real - time 3D modeling';
-        'Holographic projection systems';
-        'AI - powered content generation';
-      ];
-      market_size: '$800B metaverse market';
-      growth_rate: '350% annual growth';
-    };
+        '3D holographic renderingReal - time 3D modeling',
+        'Holographic projection systemsAI - powered content generation',
+      ],
+      market_size: '$800B metaverse market',
+      growth_rate: '350% annual growth'
+    },
     {
-      id: 'autonomous - healthcare - ai';
-      name: 'Autonomous Healthcare AI';
+      id: 'autonomous - healthcare - ai',
+      name: 'Autonomous Healthcare AI',
       description:,
-        'Self - learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.';
-      price: '$5, 999';
-      period: '/month';
-      icon: Microscope;
-      color: 'from - red - 600 to - orange - 700';
-      category: 'Healthcare & AI';
+        'Self - learning AI for autonomous healthcare decisions - make independent diagnoses and treatment recommendations without human intervention.',
+      price: '$5, 999',
+      period: '/month',
+      icon: Microscope,
+      color: 'from - red - 600 to - orange - 700',
+      category: 'Healthcare & AI',
       features: [
-        'Autonomous diagnosis';
-        'Treatment recommendation AI';
-        'Continuous learning algorithms';
-        'Predictive health analytics';
-      ];
-      market_size: '$4.1T healthcare market';
-      growth_rate: '280% annual growth';
-    };
+        'Autonomous diagnosisTreatment recommendation AI',
+        'Continuous learning algorithmsPredictive health analytics',
+      ],
+      market_size: '$4.1T healthcare market',
+      growth_rate: '280% annual growth'
+    },
     {
-      id: 'quantum - internet - security - gateway';
-      name: 'Quantum Internet Security Gateway';
+      id: 'quantum - internet - security - gateway',
+      name: 'Quantum Internet Security Gateway',
       description:,
-        'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum - resistant algorithms.';
-      price: '$8, 999';
-      period: '/month';
-      icon: Lock;
-      color: 'from - indigo - 600 to - purple - 700';
-      category: 'Quantum Security';
+        'Unbreakable encryption for the quantum internet - protect data transmission with quantum key distribution and quantum - resistant algorithms.',
+      price: '$8, 999',
+      period: '/month',
+      icon: Lock,
+      color: 'from - indigo - 600 to - purple - 700',
+      category: 'Quantum Security',
       features: [
-        'Quantum key distribution';
-        'Unbreakable encryption';
-        'Real - time threat detection';
-        'Zero - trust architecture';
-      ];
-      market_size: '$500B cybersecurity market';
-      growth_rate: '500% annual growth';
-    };
+        'Quantum key distributionUnbreakable encryption',
+        'Real - time threat detectionZero - trust architecture',
+      ],
+      market_size: '$500B cybersecurity market',
+      growth_rate: '500% annual growth'
+    },
   ],
   const categories = [
     {
-      name: 'Quantum AI Services';
-      count: '25+';
-      icon: Atom;
-      color: 'from - purple - 500 to - indigo - 600';
-    };
+      name: 'Quantum AI Services',
+      count: '25+',
+      icon: Atom,
+      color: 'from - purple - 500 to - indigo - 600'
+    },
     {
-      name: 'Space Technology';
-      count: '15+';
-      icon: Satellite;
-      color: 'from - blue - 500 to - cyan - 600';
-    };
+      name: 'Space Technology',
+      count: '15+',
+      icon: Satellite,
+      color: 'from - blue - 500 to - cyan - 600'
+    },
     {
-      name: 'Biotechnology';
-      count: '20+';
-      icon: TestTube;
-      color: 'from - green - 500 to - emerald - 600';
-    };
+      name: 'Biotechnology',
+      count: '20+',
+      icon: TestTube,
+      color: 'from - green - 500 to - emerald - 600'
+    },
     {
-      name: 'Emerging Tech';
-      count: '30+';
-      icon: Sparkles;
-      color: 'from - pink - 500 to - rose - 600';
-    }],    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from - purple - 500 to - indigo - 600' };
-    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from - blue - 500 to - cyan - 600' };
-    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from - green - 500 to - emerald - 600' };
+      name: 'Emerging Tech',
+      count: '30+',
+      icon: Sparkles,
+      color: 'from - pink - 500 to - rose - 600'
+    }],    { name: 'Quantum AI Services', count: '25+', icon: Atom, color: 'from - purple - 500 to - indigo - 600' },
+    { name: 'Space Technology', count: '15+', icon: Satellite, color: 'from - blue - 500 to - cyan - 600' },
+    { name: 'Biotechnology', count: '20+', icon: TestTube, color: 'from - green - 500 to - emerald - 600' },
     { name: 'Emerging Tech', count: '30+', icon: Sparkles, color: 'from - pink - 500 to - rose - 600' }
   const container_variants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        stagger_children: 0.1;
-      };
+        stagger_children: 0.1
+      },
     }}        stagger_children: 0.1}
     }
   }
 ,
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 };
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.6;
-        ease: 'ease_out' as const;
-      };
-    };
+        duration: 0.6,
+        ease: 'ease_out' as const
+      },
+    },
   return (
     <section className='py - 24 px - 4 sm: px - 6 lg:px - 8 relative overflow - hidden'>,
       {/* Enhanced Background Effects */}
@@ -642,7 +606,7 @@ const Revolutionary2027ServicesShowcase = () => {
             </span>,
           </h2>,
           <p className='text - xl md:text - 2xl text - gray - 300 max - w-4xl mx - auto leading - relaxed'>,
-            Experience the future of technology with our cutting - edge AI;
+            Experience the future of technology with our cutting - edge AI,
             quantum computing, and emerging technology services. Transform your,
             business with solutions that were once science fiction.          </p>        >,
           <h2 className="text - 5xl md: text - 6xl font - bold text - white mb - 8">,
@@ -920,6 +884,6 @@ const Revolutionary2027ServicesShowcase = () => {
         </motion && motion.div>,
       </div>,
     </section>)}
-};
-export default Revolutionary2027ServicesShowcase)};
+},
+export default Revolutionary2027ServicesShowcase)},
 )))))))

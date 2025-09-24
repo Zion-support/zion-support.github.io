@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function checkBuildHealth() {
@@ -38,23 +38,23 @@ function checkBuildHealth() {
     const outExists = fs.existsSync(outDir),
     // Check package.json scripts,
     const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")),
-    const buildScripts = packageJson.scripts || {};
+    const buildScripts = packageJson.scripts || {},
     // Check for build-related files,
     const hasBuildScript = !!buildScripts.build,
     const hasDevScript = !!buildScripts.dev,
     const hasStartScript = !!buildScripts.start,
     return {
       buildArtifacts: {
-        nextBuild: buildExists;
-        staticExport: outExists};
+        nextBuild: buildExists,
+        staticExport: outExists},
       scripts: {
-        build: hasBuildScript;
-        dev: hasDevScript;
-        start: hasStartScript};
-      timestamp: nowIso()};
+        build: hasBuildScript,
+        dev: hasDevScript,
+        start: hasStartScript},
+      timestamp: nowIso()},
   } catch (err) {
     log(`Build health check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -70,13 +70,13 @@ function checkDependencies() {
     const hasVulnerabilities = auditResult.status !== 0,
     return {
       dependencies: {
-        nodeModules: nodeModulesExists;
-        packageLock: packageLockExists;
-        hasVulnerabilities};
-      timestamp: nowIso()};
+        nodeModules: nodeModulesExists,
+        packageLock: packageLockExists,
+        hasVulnerabilities},
+      timestamp: nowIso()},
   } catch (err) {
     log(`Dependency check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -91,14 +91,14 @@ function checkGitStatus() {
     const hasRemote = remote.stdout.includes("origin"),
     return {
       git: {
-        hasChanges;
-        currentBranch;
-        hasRemote;
-        changesCount: status.stdout.split("\n").filter(line => line.trim()).length};
-      timestamp: nowIso()};
+        hasChanges,
+        currentBranch,
+        hasRemote,
+        changesCount: status.stdout.split("\n").filter(line => line.trim()).length},
+      timestamp: nowIso()},
   } catch (err) {
     log(`Git status check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -106,12 +106,12 @@ function checkFileSystem() {
   try {
     log("Checking file system..."),
     const criticalFiles = [
-      "package.json";
-      "next.config.js";
-      "tsconfig.json";
-      ".eslintrc.js";
+      "package.json",
+      "next.config.js",
+      "tsconfig.json",
+      ".eslintrc.js",
       "README.md"],
-    const fileStatus ={};
+    const fileStatus ={},
     for (const file of criticalFiles) {
       fileStatus[file] = fs.existsSync(path.join(process.cwd(), file))}
 ,
@@ -122,33 +122,33 @@ function checkFileSystem() {
     const logsDir = path.join(automationDir, "logs"),
     const logsExist = fs.existsSync(logsDir),
     return {
-      files: fileStatus;
+      files: fileStatus,
       directories: {
-        automation: automationExists;
-        logs: logsExist};
-      timestamp: nowIso()};
+        automation: automationExists,
+        logs: logsExist},
+      timestamp: nowIso()},
   } catch (err) {
     log(`File system check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
 function generateBuildReport(buildHealth, dependencies, gitStatus, fileSystem) {
   const timestamp = nowIso(),
   const report ={
-    timestamp;
-    redundancy: true;
-    source: "pm2-redundancy";
+    timestamp,
+    redundancy: true,
+    source: "pm2-redundancy",
     buildMonitor: {
-      buildHealth;
-      dependencies;
-      gitStatus;
-      fileSystem;
+      buildHealth,
+      dependencies,
+      gitStatus,
+      fileSystem,
       summary: {
-        overallHealth: "healthy";
+        overallHealth: "healthy",
         issues: []}
     }
-  };
+  },
   // Analyze overall health,
   if (buildHealth.error || dependencies.error || gitStatus.error || fileSystem.error) {
     report.buildMonitor.summary.overallHealth = "degraded"}
@@ -250,9 +250,9 @@ if (require.main === module) {
   main()}
 ,
 module.exports ={
-  main;
-  checkBuildHealth;
-  checkDependencies;
-  checkGitStatus;
-  checkFileSystem;
-  generateBuildReport};
+  main,
+  checkBuildHealth,
+  checkDependencies,
+  checkGitStatus,
+  checkFileSystem,
+  generateBuildReport},

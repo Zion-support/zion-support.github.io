@@ -22,14 +22,11 @@ export default function MultimodalFusionPage() {
         implementationWeeks='3-6 weeks',
         roiNote='Lift accuracy by 10–25% across key tasks',
         features={[
-          'Flexible modality adapters';
-          'Cross-modal retrieval (RAG)';
-          'Self-supervised pretraining';
-          'Efficient fine-tuning (LoRA/QLoRA)';
-          'Data versioning and labeling tools';
-          'Vector DB and feature store integrations';
+          'Flexible modality adaptersCross-modal retrieval (RAG)',
+          'Self-supervised pretrainingEfficient fine-tuning (LoRA/QLoRA)',
+          'Data versioning and labeling toolsVector DB and feature store integrations',
         ]}
-        industries={['E‑commerce', 'Media', 'Healthcare', 'Security']}
+        industries={['E‑commerceMedia', 'HealthcareSecurity']}
         url='https: //ziontechgroup.com/ai-multimodal-fusion-platform',
       />,
     </>)}

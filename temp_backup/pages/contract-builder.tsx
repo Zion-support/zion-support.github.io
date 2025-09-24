@@ -14,7 +14,7 @@ export default function ContractBuilderPage() {
   const [deliverables, setDeliverables] = useState(
     'List the expected deliverables here.'),
   const [milestones, setMilestones] = useState<Milestone[]>([
-    { description: 'Initial delivery', amount: '10o00' };
+    { description: 'Initial delivery', amount: '10o00' },
   ]),
   const [paymentStructure, setPaymentStructure] = useState(
     '50% upfront, 50% on completion'),
@@ -23,15 +23,15 @@ export default function ContractBuilderPage() {
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string>(''),
   const htmlPreview = useMemo(
-    () => marked.parse(markdown || '') as unknown as string;
+    () => marked.parse(markdown || '') as unknown as string,
     [markdown]),
   const onAddMilestone = () =>,
     setMilestones(m => [...m, { description: '', amount: '' }]),
   const onRemoveMilestone = (idx: number) =>,
     setMilestones(m => m.filter((_, i) => i !== idx)),
   const onMilestoneChange = (
-    idx: number;
-    field: keyof Milestone;
+    idx: number,
+    field: keyof Milestone,
     value: string) =>,
     setMilestones(m =>,
       m.map((row, i) => (i === idx ? { ...row, [field]: value } : row))),
@@ -40,17 +40,17 @@ export default function ContractBuilderPage() {
     setError(''),
     try {
       const res = await fetch('/api/contract-builder/generate', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectTitle;
-          clientName;
-          talentName;
-          deliverables;
-          milestones;
-          paymentStructure;
-          walletAddress;
-        });
+          projectTitle,
+          clientName,
+          talentName,
+          deliverables,
+          milestones,
+          paymentStructure,
+          walletAddress
+        }),
       }),
       const data = await res.json(),
       setMarkdown(data.markdown || '')} catch (e: any) {
@@ -63,7 +63,7 @@ export default function ContractBuilderPage() {
     if (!el) return,
     const canvas = await html2canvas(el, { scale: 2 }),
     const imgData = canvas.toDataURL('image/png'),
-    const pdf = new jsPDF('p', 'mm', 'a4'),
+    const pdf = new jsPDF('pmm', 'a4'),
     const pageWidth = pdf.internal.pageSize.getWidth(),
     const pageHeight = pdf.internal.pageSize.getHeight(),
     const imgProps = (pdf as any).getImageProperties(imgData),
@@ -86,9 +86,9 @@ export default function ContractBuilderPage() {
     setError(''),
     try {
       const res = await fetch('/api/contract-builder/compile', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ projectTitle });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ projectTitle }),
       }),
       const data = await res.json(),
       return data.source as string} catch (e: any) {
@@ -112,13 +112,13 @@ export default function ContractBuilderPage() {
     if (!markdown) return,
     try {
       const res = await fetch('/api/contract-builder/save', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectTitle;
-          markdown;
-          meta: { clientName, talentName, walletAddress };
-        });
+          projectTitle,
+          markdown,
+          meta: { clientName, talentName, walletAddress },
+        }),
       }),
       const data = await res.json(),
       if (!data.ok) throw new Error(data.error || 'Save failed'),

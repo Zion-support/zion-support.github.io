@@ -182,5 +182,5 @@ const RevolutionaryTechBanner20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTechBanner20o26;
+    </section>)},
+export default RevolutionaryTechBanner20o26,

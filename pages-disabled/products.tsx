@@ -2,241 +2,205 @@ import type { NextPage } from 'next.ts',
 import { Helmet } from 'react-helmet-async.ts',
 import { useState } from 'react.ts',
 import {
-  Brain;
-  Cloud;
-  Shield;
-  Globe;
-  Zap;
-  Database;
-  Smartphone;
-  Code;
-  Lock;
-  TrendingUp;
-  Rocket;
-  Cpu;
-  Network;
-  Palette;
-  BarChart3;
-  Sparkles;
-  Target;
-  Users;
-  CheckCircle;
+  Brain,
+  Cloud,
+  Shield,
+  Globe,
+  Zap,
+  Database,
+  Smartphone,
+  Code,
+  Lock,
+  TrendingUp,
+  Rocket,
+  Cpu,
+  Network,
+  Palette,
+  BarChart3,
+  Sparkles,
+  Target,
+  Users,
+  CheckCircle,
 } from 'lucide-react.ts',
 const Products: NextPage = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const productCategories = [
     {
-      id: 'all';
-      name: 'All Products';
-      icon: Rocket;
-      color: 'from-purple-60o0 to-pink-60o0';
-    };
+      id: 'all',
+      name: 'All Products',
+      icon: Rocket,
+      color: 'from-purple-60o0 to-pink-60o0'
+    },
     {
-      id: 'ai';
-      name: 'AI Solutions';
-      icon: Brain;
-      color: 'from-blue-60o0 to-cyan-60o0';
-    };
+      id: 'ai',
+      name: 'AI Solutions',
+      icon: Brain,
+      color: 'from-blue-60o0 to-cyan-60o0'
+    },
     {
-      id: 'saas';
-      name: 'SaaS Platforms';
-      icon: Cloud;
-      color: 'from-green-60o0 to-teal-60o0';
-    };
+      id: 'saas',
+      name: 'SaaS Platforms',
+      icon: Cloud,
+      color: 'from-green-60o0 to-teal-60o0'
+    },
     {
-      id: 'security';
-      name: 'Security Tools';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
-    };
+      id: 'security',
+      name: 'Security Tools',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0'
+    },
     {
-      id: 'analytics';
-      name: 'Analytics';
-      icon: BarChart3;
-      color: 'from-emerald-60o0 to-green-60o0';
-    };
+      id: 'analytics',
+      name: 'Analytics',
+      icon: BarChart3,
+      color: 'from-emerald-60o0 to-green-60o0'
+    },
     {
-      id: 'automation';
-      name: 'Automation';
-      icon: Zap;
-      color: 'from-yellow-60o0 to-orange-60o0';
-    };
+      id: 'automation',
+      name: 'Automation',
+      icon: Zap,
+      color: 'from-yellow-60o0 to-orange-60o0'
+    },
   ],
   const products = [
     {
-      id: 'zionai-content-studio';
-      name: 'ZionAI Content Studio';
-      category: 'ai';
-      tagline: 'AI-Powered Content Creation Platform';
+      id: 'zionai-content-studio',
+      name: 'ZionAI Content Studio',
+      category: 'ai',
+      tagline: 'AI-Powered Content Creation Platform',
       description:,
-        'Revolutionary AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns. Features advanced language models, content templates, and automated publishing workflows.';
-      price: '$299/month';
+        'Revolutionary AI platform that generates high-quality, SEO-optimized content for blogs, social media, and marketing campaigns. Features advanced language models, content templates, and automated publishing workflows.',
+      price: '$299/month',
       features: [
-        'AI Content Generation';
-        'SEO Optimization';
-        'Multi-Platform Publishing';
-        'Content Analytics';
-        'Brand Voice Customization';
-        'Plagiarism Detection';
-        'Social Media Integration';
-        'Automated Workflows';
-      ];
+        'AI Content GenerationSEO Optimization',
+        'Multi-Platform PublishingContent Analytics',
+        'Brand Voice CustomizationPlagiarism Detection',
+        'Social Media IntegrationAutomated Workflows',
+      ],
       benefits: [
-        '10x faster content creation';
-        'Improved SEO rankings';
-        'Consistent brand messaging';
-        'Reduced content costs';
-      ];
-      icon: Brain;
-      color: 'from-blue-60o0 to-cyan-60o0';
-      demoUrl: '/demo/zionai-content-studio';
-      pricingUrl: '/pricing/zionai-content-studio';
-    };
+        '10x faster content creationImproved SEO rankings',
+        'Consistent brand messagingReduced content costs',
+      ],
+      icon: Brain,
+      color: 'from-blue-60o0 to-cyan-60o0',
+      demoUrl: '/demo/zionai-content-studio',
+      pricingUrl: '/pricing/zionai-content-studio'
+    },
     {
-      id: 'smartlead-pro';
-      name: 'SmartLead Pro';
-      category: 'saas';
-      tagline: 'Intelligent Lead Generation & CRM';
+      id: 'smartlead-pro',
+      name: 'SmartLead Pro',
+      category: 'saas',
+      tagline: 'Intelligent Lead Generation & CRM',
       description:,
-        'Advanced lead generation platform with AI-powered scoring, automated follow-ups, and comprehensive CRM capabilities. Integrates with major marketing tools and provides actionable insights.';
-      price: '$199/month';
+        'Advanced lead generation platform with AI-powered scoring, automated follow-ups, and comprehensive CRM capabilities. Integrates with major marketing tools and provides actionable insights.',
+      price: '$199/month',
       features: [
-        'AI Lead Scoring';
-        'Automated Follow-ups';
-        'CRM Integration';
-        'Email Campaigns';
-        'Lead Analytics';
-        'Social Media Monitoring';
-        'A/B Testing';
-        'ROI Tracking';
-      ];
+        'AI Lead ScoringAutomated Follow-ups',
+        'CRM IntegrationEmail Campaigns',
+        'Lead AnalyticsSocial Media Monitoring',
+        'A/B TestingROI Tracking',
+      ],
       benefits: [
-        '3x higher conversion rates';
-        'Automated lead nurturing';
-        'Comprehensive reporting';
-        'Seamless integrations';
-      ];
-      icon: Target;
-      color: 'from-green-60o0 to-teal-60o0';
-      demoUrl: '/demo/smartlead-pro';
-      pricingUrl: '/pricing/smartlead-pro';
-    };
+        '3x higher conversion ratesAutomated lead nurturing',
+        'Comprehensive reportingSeamless integrations',
+      ],
+      icon: Target,
+      color: 'from-green-60o0 to-teal-60o0',
+      demoUrl: '/demo/smartlead-pro',
+      pricingUrl: '/pricing/smartlead-pro'
+    },
     {
-      id: 'codegenius-ai';
-      name: 'CodeGenius AI';
-      category: 'ai';
-      tagline: 'AI-Powered Code Generation & Review';
+      id: 'codegenius-ai',
+      name: 'CodeGenius AI',
+      category: 'ai',
+      tagline: 'AI-Powered Code Generation & Review',
       description:,
-        'Intelligent coding assistant that generates, reviews, and optimizes code across multiple programming languages. Features include automated testing, documentation generation, and performance optimization.';
-      price: '$399/month';
+        'Intelligent coding assistant that generates, reviews, and optimizes code across multiple programming languages. Features include automated testing, documentation generation, and performance optimization.',
+      price: '$399/month',
       features: [
-        'AI Code Generation';
-        'Code Review & Optimization';
-        'Automated Testing';
-        'Documentation Generation';
-        'Performance Analysis';
-        'Security Scanning';
-        'Multi-Language Support';
-        'Git Integration';
-      ];
+        'AI Code GenerationCode Review & Optimization',
+        'Automated TestingDocumentation Generation',
+        'Performance AnalysisSecurity Scanning',
+        'Multi-Language SupportGit Integration',
+      ],
       benefits: [
-        '50% faster development';
-        'Reduced bug rates';
-        'Improved code quality';
-        'Automated documentation';
-      ];
-      icon: Code;
-      color: 'from-purple-60o0 to-pink-60o0';
-      demoUrl: '/demo/codegenius-ai';
-      pricingUrl: '/pricing/codegenius-ai';
-    };
+        '50% faster developmentReduced bug rates',
+        'Improved code qualityAutomated documentation',
+      ],
+      icon: Code,
+      color: 'from-purple-60o0 to-pink-60o0',
+      demoUrl: '/demo/codegenius-ai',
+      pricingUrl: '/pricing/codegenius-ai'
+    },
     {
-      id: 'taskmaster-ai';
-      name: 'TaskMaster AI';
-      category: 'automation';
-      tagline: 'Intelligent Task Management & Automation';
+      id: 'taskmaster-ai',
+      name: 'TaskMaster AI',
+      category: 'automation',
+      tagline: 'Intelligent Task Management & Automation',
       description:,
-        'AI-driven project management platform that automates task assignment, tracks progress, and optimizes team workflows. Features intelligent scheduling, resource allocation, and predictive analytics.';
-      price: '$149/month';
+        'AI-driven project management platform that automates task assignment, tracks progress, and optimizes team workflows. Features intelligent scheduling, resource allocation, and predictive analytics.',
+      price: '$149/month',
       features: [
-        'AI Task Assignment';
-        'Workflow Automation';
-        'Resource Optimization';
-        'Progress Tracking';
-        'Team Collaboration';
-        'Time Management';
-        'Performance Analytics';
-        'Integration Hub';
-      ];
+        'AI Task AssignmentWorkflow Automation',
+        'Resource OptimizationProgress Tracking',
+        'Team CollaborationTime Management',
+        'Performance AnalyticsIntegration Hub',
+      ],
       benefits: [
-        '30% productivity increase';
-        'Automated task management';
-        'Better resource utilization';
-        'Improved team collaboration';
-      ];
-      icon: Zap;
-      color: 'from-yellow-60o0 to-orange-60o0';
-      demoUrl: '/demo/taskmaster-ai';
-      pricingUrl: '/pricing/taskmaster-ai';
-    };
+        '30% productivity increaseAutomated task management',
+        'Better resource utilizationImproved team collaboration',
+      ],
+      icon: Zap,
+      color: 'from-yellow-60o0 to-orange-60o0',
+      demoUrl: '/demo/taskmaster-ai',
+      pricingUrl: '/pricing/taskmaster-ai'
+    },
     {
-      id: 'secureshield-pro';
-      name: 'SecureShield Pro';
-      category: 'security';
-      tagline: 'Advanced Cybersecurity & Threat Detection';
+      id: 'secureshield-pro',
+      name: 'SecureShield Pro',
+      category: 'security',
+      tagline: 'Advanced Cybersecurity & Threat Detection',
       description:,
-        'Comprehensive cybersecurity platform with real-time threat detection, automated incident response, and compliance management. Protects against advanced persistent threats and provides detailed security analytics.';
-      price: '$499/month';
+        'Comprehensive cybersecurity platform with real-time threat detection, automated incident response, and compliance management. Protects against advanced persistent threats and provides detailed security analytics.',
+      price: '$499/month',
       features: [
-        'Real-time Threat Detection';
-        'Automated Incident Response';
-        'Compliance Management';
-        'Vulnerability Assessment';
-        'Security Analytics';
-        'Threat Intelligence';
-        'Penetration Testing';
-        'Security Training';
-      ];
+        'Real-time Threat DetectionAutomated Incident Response',
+        'Compliance ManagementVulnerability Assessment',
+        'Security AnalyticsThreat Intelligence',
+        'Penetration TestingSecurity Training',
+      ],
       benefits: [
-        '99.9% threat detection rate';
-        'Automated security responses';
-        'Regulatory compliance';
-        'Reduced security risks';
-      ];
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
-      demoUrl: '/demo/secureshield-pro';
-      pricingUrl: '/pricing/secureshield-pro';
-    };
+        '99.9% threat detection rateAutomated security responses',
+        'Regulatory complianceReduced security risks',
+      ],
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
+      demoUrl: '/demo/secureshield-pro',
+      pricingUrl: '/pricing/secureshield-pro'
+    },
     {
-      id: 'blockchainforge';
-      name: 'BlockchainForge';
-      category: 'saas';
-      tagline: 'Blockchain Development & Deployment Platform';
+      id: 'blockchainforge',
+      name: 'BlockchainForge',
+      category: 'saas',
+      tagline: 'Blockchain Development & Deployment Platform',
       description:,
-        'Comprehensive blockchain platform for building, testing, and deploying smart contracts and decentralized applications. Features include development tools, testing frameworks, and deployment automation.';
-      price: '$799/month';
+        'Comprehensive blockchain platform for building, testing, and deploying smart contracts and decentralized applications. Features include development tools, testing frameworks, and deployment automation.',
+      price: '$799/month',
       features: [
-        'Smart Contract Development';
-        'DApp Creation Tools';
-        'Testing Frameworks';
-        'Deployment Automation';
-        'Blockchain Analytics';
-        'Multi-Chain Support';
-        'Security Auditing';
-        'Developer SDKs';
-      ];
+        'Smart Contract DevelopmentDApp Creation Tools',
+        'Testing FrameworksDeployment Automation',
+        'Blockchain AnalyticsMulti-Chain Support',
+        'Security AuditingDeveloper SDKs',
+      ],
       benefits: [
-        'Faster blockchain development';
-        'Reduced deployment time';
-        'Enhanced security';
-        'Multi-chain compatibility';
-      ];
-      icon: Network;
-      color: 'from-violet-60o0 to-purple-60o0';
-      demoUrl: '/demo/blockchainforge';
-      pricingUrl: '/pricing/blockchainforge';
-    };
+        'Faster blockchain developmentReduced deployment time',
+        'Enhanced securityMulti-chain compatibility',
+      ],
+      icon: Network,
+      color: 'from-violet-60o0 to-purple-60o0',
+      demoUrl: '/demo/blockchainforge',
+      pricingUrl: '/pricing/blockchainforge'
+    },
   ],
   const filteredProducts =,
     activeCategory === 'all',
@@ -381,7 +345,7 @@ const Products: NextPage = () => {
               Enterprise Solutions,
             </h2>,
             <p className='text-xl mb-8 text-gray-30o0 max-w-3xl mx-auto'>,
-              Need custom enterprise solutions? We offer tailored development;
+              Need custom enterprise solutions? We offer tailored development,
               white-label options, and dedicated support for large,
               organizations.,
             </p>,
@@ -584,5 +548,5 @@ const Products: NextPage = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default Products;
+    </div>)},
+export default Products,

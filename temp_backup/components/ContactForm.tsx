@@ -15,24 +15,20 @@ interface ContactFormProps {
 ,
 const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) => {
   const [formData, setFormData] = useState<ContactFormData>({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''}),
   const [errors, setErrors] = useState<Partial<ContactFormData>>({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
   const services = [
-    'AI & Machine Learning';
-    'Quantum Computing';
-    'Space Technology';
-    'Cybersecurity';
-    'Cloud Solutions';
-    'Micro SaaS';
-    'Enterprise IT';
-    'Other'],
+    'AI & Machine LearningQuantum Computing',
+    'Space TechnologyCybersecurity',
+    'Cloud SolutionsMicro SaaS',
+    'Enterprise ITOther'],
   const validateField = useCallback((name: keyof ContactFormData, value: string): string => {
     switch (name) {
       case 'name': {
@@ -60,7 +56,7 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
     const error = validateField(name, formData[name]),
     setErrors(prev => ({ ...prev, [name]: error }))}, [validateField, formData]),
   const validateForm = useCallback((): boolean => {
-    const newErrors: Partial<ContactFormData> ={};
+    const newErrors: Partial<ContactFormData> ={},
     let isValid = true,
     Object.keys(formData).forEach((key) => {
       const fieldName = key as keyof ContactFormData,
@@ -74,14 +70,14 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
     // Clear error when user starts typing,
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }))}
-  };
+  },
   const handleBlur = (name: string) => {
     const error = validateField(name, formData[name]),
     if (error) {
       setErrors(prev => ({ ...prev, [name]: error }))}
-  };
+  },
   const validateForm = (): boolean => {
-    const newErrors: FormErrors ={};
+    const newErrors: FormErrors ={},
     Object.keys(formData).forEach(key => {
       const error = validateField(key, formData[key as keyof FormData]),
       if (error) {
@@ -100,11 +96,11 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       await new Promise(resolve => setTimeout(resolve, 20o00)),
       setSubmitStatus('success'),
       setFormData({
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
         message: ''}),
       // Reset success message after 5 seconds,
       setTimeout(() => setSubmitStatus('idle'), 50o00)} catch {
@@ -129,8 +125,8 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
       {/* Contact Information */}
       <div className="grid grid-cols-1 md: grid-cols-3 gap-6 mb-8">,
         {[
-          { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' };
-          { icon: Mail, label: 'Email', value: 'hello@ziontechgroup.com', href: 'mailto:hello@ziontechgroup.com' };
+          { icon: Phone, label: 'Phone', value: '+1 (555) 123-4567', href: 'tel:+15551234567' },
+          { icon: Mail, label: 'Email', value: 'hello@ziontechgroup.com', href: 'mailto:hello@ziontechgroup.com' },
           { icon: MapPin, label: 'Location', value: 'Global Operations', href: '#' }
         ].map((contact, index) => (
           <motion.a,
@@ -322,5 +318,5 @@ const ContactForm: React.FC<ContactFormProps> = ({ isReducedMotion = false }) =>
             </motion.div>)}
         </AnimatePresence>,
       </form>,
-    </motion.div>)};
+    </motion.div>)},
 export default ContactForm}

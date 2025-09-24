@@ -5,23 +5,23 @@ import { motion } from 'framer-motion',
 import {
   ArrowRight,
   Star,
-  Search;
-  Shield;
-  Globe;
-  TrendingUp;
-  Brain;
-  Atom;
-  Zap;
-  Cpu;
-  Cloud;
-  BarChart3;
-  Lock;
-  Rocket;
-  Eye;
-  Sparkles;
-  Target;
-  Users;
-  Award;
+  Search,
+  Shield,
+  Globe,
+  TrendingUp,
+  Brain,
+  Atom,
+  Zap,
+  Cpu,
+  Cloud,
+  BarChart3,
+  Lock,
+  Rocket,
+  Eye,
+  Sparkles,
+  Target,
+  Users,
+  Award,
   Clock} from 'lucide-react',
 import Link from 'next/link',
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
@@ -34,38 +34,38 @@ const Homepage2041: React.FC = () => {
     e.preventDefault(),
     if (searchQuery.trim()) {
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`}
-  };
+  },
   const featuredServices = [
-    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(03);
-    ...innovative2041ITServices.filter(s => s.popular).slice(02);
+    ...innovative2041MicroSaasServices.filter(s => s.popular).slice(03),
+    ...innovative2041ITServices.filter(s => s.popular).slice(02),
     ...innovative2041AIServices.filter(s => s.popular).slice(01)],
   const testimonials = [
     {
-      name: "Dr. Sarah Chen";
-      role: "Chief AI OfficerFutureTech Inc.";
-      company: "FutureTech Inc.";
-      content: "Zion Tech 'Group', 's AI consciousness evolution platform is revolutionary. 'We', 've achieved breakthroughs in ethical AI development that seemed impossible just months ago.";
-      rating: 5;
-      avatar: "👩‍💼"};
+      name: "Dr. Sarah Chen",
+      role: "Chief AI OfficerFutureTech Inc.",
+      company: "FutureTech Inc.",
+      content: "Zion Tech 'Groups AI consciousness evolution platform is revolutionary. 'We', 've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
+      rating: 5,
+      avatar: "👩‍💼"},
     {
-      name: "Marcus Rodriguez";
-      role: "VP Quantum ComputingQuantumCorp";
-      company: "QuantumCorp";
-      content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. 'We', 're now leading the industry in pharmaceutical innovation.";
-      rating: 5;
-      avatar: "👨‍💻"};
+      name: "Marcus Rodriguez",
+      role: "VP Quantum ComputingQuantumCorp",
+      company: "QuantumCorp",
+      content: "Their quantum bio-computing platform accelerated our drug discovery by 1000x. 'Were now leading the industry in pharmaceutical innovation.",
+      rating: 5,
+      avatar: "👨‍💻"},
     {
-      name: "Dr. Emily Watson";
-      role: "Research DirectorSpaceLabs";
-      company: "SpaceLabs";
-      content: "The space mining automation platform opened new frontiers in resource extraction. 'We', 're now mining asteroids with unprecedented efficiency.";
-      rating: 5;
+      name: "Dr. Emily Watson",
+      role: "Research DirectorSpaceLabs",
+      company: "SpaceLabs",
+      content: "The space mining automation platform opened new frontiers in resource extraction. 'We', 're now mining asteroids with unprecedented efficiency.",
+      rating: 5,
       avatar: "👩‍🔬"}
   ],
   const stats = [
-    { number: "500+"label: "Revolutionary Services"icon: Rocket };
-    { number: "50+"label: "Quantum Solutions"icon: Atom };
-    { number: "1000x"label: "Performance Boost"icon: Zap };
+    { number: "500+"label: "Revolutionary Services"icon: Rocket },
+    { number: "50+"label: "Quantum Solutions"icon: Atom },
+    { number: "1000x"label: "Performance Boost"icon: Zap },
     { number: "24/7"label: "AI Operations"icon: Brain }
   ],
   return (
@@ -88,17 +88,17 @@ const Homepage2041: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-400/40 rounded-full",
                   animate={{
-                    x: [060];
-                    y: [0-60];
-                    opacity: [0.70];
+                    x: [060],
+                    y: [0-60],
+                    opacity: [0.70],
                     scale: [0.510.5]}}
                   transition={{
-                    duration: 5 + i * 0.3;
-                    repeat: Infinity;
-                    delay: i * 0.2;
+                    duration: 5 + i * 0.3,
+                    repeat: Infinity,
+                    delay: i * 0.2,
                     ease: "easeInOut"}}
                   style={{
-                    left: `${Math.random() * 100}%`;
+                    left: `${Math.random() * 100}%`,
                     top: `${Math.random() * 100}%`}}
                 />))}
             </div>,
@@ -123,7 +123,7 @@ const Homepage2041: React.FC = () => {
               </h1>,
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-300 mb-12 max-w-5xl mx-auto leading-relaxed">,
                 Experience the revolution of technology with our cutting-edge 2041 services.,
-                From AI consciousness evolution to quantum space 'miningwe', 're redefining 'what', 's possible.,
+                From AI consciousness evolution to quantum space 'miningwere redefining 'what', 's possible.,
               </p>,
               {/* Search Bar */}
               <motion.div,
@@ -332,5 +332,5 @@ const Homepage2041: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage2041;
+    </Layout>)},
+export default Homepage2041,

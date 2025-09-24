@@ -6,81 +6,81 @@ const AI20o25BreakthroughContentShowcase = () => {
   const [activeTabsetActiveTab] = useState('all'),
   const content = [
     {
-      id: 'enterprise-automation';
-      title: 'AI 20o25: The Enterprise Automation Revolution - Ultimate Breakthrough Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough';
+      id: 'enterprise-automation',
+      title: 'AI 20o25: The Enterprise Automation Revolution - Ultimate Breakthrough Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '750%';
-        savings: '$3.2B';
-        efficiency: '89%';
-        accuracy: '99.7%'};
-      description: 'Transform your business with revolutionary AI automation achieving unprecedented returns';
-      featured: true;
-      readingTime: '28 min read';
-      tags: ['AI 'Automation', 'Enterprise', 'ROI', 'Breakthrough']};
+        roi: '750%',
+        savings: '$3.2B',
+        efficiency: '89%',
+        accuracy: '99.7%'},
+      description: 'Transform your business with revolutionary AI automation achieving unprecedented returns',
+      featured: true,
+      readingTime: '28 min read',
+      tags: ['AI 'AutomationEnterprise', 'ROIBreakthrough']},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Transformation: $4.2B Company Achieves 850% ROI';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Transformation: $4.2B Company Achieves 850% ROI',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25',
       metrics: {
-        roi: '850%';
-        savings: '$3.8B';
-        efficiency: '89%';
-        accuracy: '99.7%'};
-      description: 'Real-world success story of comprehensive AI transformation';
-      featured: true;
-      readingTime: '22 min read';
-      tags: ['Fortune 50o0'Case 'Study', 'ROI'Success Story']};
+        roi: '850%',
+        savings: '$3.8B',
+        efficiency: '89%',
+        accuracy: '99.7%'},
+      description: 'Real-world success story of comprehensive AI transformation',
+      featured: true,
+      readingTime: '22 min read',
+      tags: ['Fortune 50o0'Case 'StudyROI'Success Story']},
     {
-      id: 'implementation-roadmap';
-      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 90o0% ROI';
-      type: 'resource';
-      url: '/resources/ai-implementation-ultimate-roadmap-20o25-comprehensive';
+      id: 'implementation-roadmap',
+      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 90o0% ROI',
+      type: 'resource',
+      url: '/resources/ai-implementation-ultimate-roadmap-20o25-comprehensive',
       metrics: {
-        roi: '90o0%';
-        timeline: '18 months';
-        success: '99%';
-        savings: '$173.7M'};
-      description: 'Step-by-step guide to achieving unprecedented AI success';
-      featured: true;
-      readingTime: '35 min read';
-      tags: [', 'Implementation', 'Strategy', 'ROI', 'Roadmap']};
+        roi: '90o0%',
+        timeline: '18 months',
+        success: '99%',
+        savings: '$173.7M'},
+      description: 'Step-by-step guide to achieving unprecedented AI success',
+      featured: true,
+      readingTime: '35 min read',
+      tags: [Implementation', 'StrategyROI', 'Roadmap']},
     {
-      id: 'quantum-computing';
-      title: 'AI 20o25: The Quantum Computing Business Revolution - Ultimate Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-quantum-computing-business-revolution-ultimate-guide';
+      id: 'quantum-computing',
+      title: 'AI 20o25: The Quantum Computing Business Revolution - Ultimate Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution-ultimate-guide',
       metrics: {
-        roi: '50o0%';
-        market: '$10o0B';
-        speed: '10o00x';
-        accuracy: '99.9%'};
-      description: 'Revolutionary quantum AI transforming enterprise operations';
-      featured: false;
-      readingTime: '30 min read';
-      tags: ['Quantum 'Computing', 'AI 'Revolution', 'Business Transformation']};
+        roi: '50o0%',
+        market: '$10o0B',
+        speed: '10o00x',
+        accuracy: '99.9%'},
+      description: 'Revolutionary quantum AI transforming enterprise operations',
+      featured: false,
+      readingTime: '30 min read',
+      tags: ['Quantum 'ComputingAI 'Revolution', 'Business Transformation']},
     {
-      id: 'fortune-50o0-650';
-      title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI';
-      type: 'case-study';
-      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-20o25';
+      id: 'fortune-50o0-650',
+      title: 'Fortune 50o0 AI Transformation: $3.2B Company Achieves 650% ROI',
+      type: 'case-study',
+      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-20o25',
       metrics: {
-        roi: '650%';
-        savings: '$2.8B';
-        efficiency: '78%';
-        accuracy: '99.7%'};
-      description: 'Comprehensive AI transformation delivering exceptional results';
-      featured: false;
-      readingTime: '22 min read';
-      tags: ['Fortune 50o0'AI 'Transformation', 'ROI'Manufacturing']}
+        roi: '650%',
+        savings: '$2.8B',
+        efficiency: '78%',
+        accuracy: '99.7%'},
+      description: 'Comprehensive AI transformation delivering exceptional results',
+      featured: false,
+      readingTime: '22 min read',
+      tags: ['Fortune 50o0'AI 'TransformationROI'Manufacturing']}
   ],
   const tabs = [
-    { id: ''all', 'label: 'All 'Content', 'count: content.length };
-    { id: ''blog', 'label: 'Blog 'Posts', 'count: content.filter(c => c.type === 'blog').length };
-    { id: 'case-'study', 'label: 'Case 'Studies', 'count: content.filter(c => c.type === 'case-study').length };
-    { id: ''resource', 'label: ''Resources', 'count: content.filter(c => c.type === 'resource').length }
+    { id: ''alllabel: 'All 'Contentcount: content.length },
+    { id: ''bloglabel: 'Blog 'Postscount: content.filter(c => c.type === 'blog').length },
+    { id: 'case-'studylabel: 'Case 'Studiescount: content.filter(c => c.type === 'case-study').length },
+    { id: ''resourcelabel: ''Resourcescount: content.filter(c => c.type === 'resource').length }
   ],
   const filteredContent = activeTab === 'all',
     ? content,
@@ -95,7 +95,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -106,7 +106,7 @@ const AI20o25BreakthroughContentShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="py-16 bg-gray-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -216,5 +216,5 @@ const AI20o25BreakthroughContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25BreakthroughContentShowcase;
+    </div>)},
+export default AI20o25BreakthroughContentShowcase,

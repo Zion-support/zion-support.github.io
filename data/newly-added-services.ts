@@ -1,13 +1,13 @@
 export interface EnhancedService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  period?: string;
-  description: string;
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  period?: string,
+  description: string,
+  link: string,
+  category: string,
+  realImplementation: boolean
 }
 
 export const newlyAddedServices: EnhancedService[] = [
@@ -20,4 +20,4 @@ export const newlyAddedServices: EnhancedService[] = [
     description: 'Spin up a governed feature store with versioning and lineage.',
     link: 'https://ziontechgroup.com/services/managed-ml-feature-store-starter',
     category: 'AI & Data',
-    realImplementation: true}];
+    realImplementation: true}],

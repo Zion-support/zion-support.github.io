@@ -46,11 +46,11 @@ function handler() {
       metrics?.multiverse?.find ((m: any) => m.key === 'active_instances'),
         ?.value || 0,
     const summary = [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`;
-      `DAO engagement at ${voters}% voter participation with active delegates`;
-      `Token momentum: ${wallets} active wallets, daily volume around ${Number (tx).toLocaleString ()}`;
-      `Multiverse scale: ${instances} active sub - instances with cross - instance flows`;
-      `Treasury stable and contributors earning consistently across regions`;
+      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
+      `DAO engagement at ${voters}% voter participation with active delegates`,
+      `Token momentum: ${wallets} active wallets, daily volume around ${Number (tx).toLocaleString ()}`,
+      `Multiverse scale: ${instances} active sub - instances with cross - instance flows`,
+      `Treasury stable and contributors earning consistently across regions`,
     ],
     res.status (200).json ({ summary, timestamp: new Date ().toISOString () })} catch (e) {
     res.status (200).json ({ summary: [], error: 'Failed to compute summary' })}

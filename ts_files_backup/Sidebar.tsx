@@ -3,20 +3,20 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  X;
-  ChevronDown;
-  ChevronRight;
-  Home;
-  Briefcase;
-  Users;
-  Settings;
-  HelpCircle;
-  Phone;
-  Mail;
-  MapPin;
-  Building2;
-  User;
-  LogOut;
+  X,
+  ChevronDown,
+  ChevronRight,
+  Home,
+  Briefcase,
+  Users,
+  Settings,
+  HelpCircle,
+  Phone,
+  Mail,
+  MapPin,
+  Building2,
+  User,
+  LogOut,
   Search} from 'lucide-react',
 interface SidebarProps {
   isOpen: boolean,
@@ -24,29 +24,29 @@ interface SidebarProps {
 ,
 const navigationItems = [
   {
-    label: 'Home';
-    href: '/';
-    icon: Home};
+    label: 'Home',
+    href: '/',
+    icon: Home},
   {
-    label: 'Services';
-    href: '/services';
-    icon: Briefcase;
+    label: 'Services',
+    href: '/services',
+    icon: Briefcase,
     children: [
-      { label: 'AI Services', href: '/ai-services', icon: Briefcase };
-      { label: 'IT Services', href: '/it-services', icon: Settings };
+      { label: 'AI Services', href: '/ai-services', icon: Briefcase },
+      { label: 'IT Services', href: '/it-services', icon: Settings },
       { label: 'Cloud Services', href: '/cloud-services', icon: Building2 }
-    ]};
+    ]},
   {
-    label: 'About';
-    href: '/about';
-    icon: Users};
+    label: 'About',
+    href: '/about',
+    icon: Users},
   {
-    label: 'Contact';
-    href: '/contact';
-    icon: Phone};
+    label: 'Contact',
+    href: '/contact',
+    icon: Phone},
   {
-    label: 'Help';
-    href: '/help';
+    label: 'Help',
+    href: '/help',
     icon: HelpCircle}
 ],
 export function Sidebar({ isOpen, onClose }: SidebarProps) {
@@ -55,14 +55,14 @@ export function Sidebar({ isOpen, onClose }: SidebarProps) {
     setExpandedItems(prev =>,
       prev.includes(label),
         ? prev.filter(item => item !== label),
-        : [...prev, label])};
+        : [...prev, label])},
   useEffect(() => {
     if (isOpen) {
       document.body.style.overflow = 'hidden'} else {
       document.body.style.overflow = 'unset'}
 ,
     return () => {
-      document.body.style.overflow = 'unset'};
+      document.body.style.overflow = 'unset'},
   }, [isOpen]),
   return (
     <AnimatePresence>,

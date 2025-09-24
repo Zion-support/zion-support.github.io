@@ -31,7 +31,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -47,9 +47,9 @@ export default function Enhanced20o26ServicesShowcaseV3() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   // Combine all new services,
   const allServices: Service[] = [
-    ...innovative20o26MicroSaasServicesV3;
-    ...emergingTech20o26ServicesV3;
-    ...enterpriseIT20o26ServicesV3;
+    ...innovative20o26MicroSaasServicesV3,
+    ...emergingTech20o26ServicesV3,
+    ...enterpriseIT20o26ServicesV3,
     ...nextGenAI20o26ServicesV3],
   // Dynamic category counts,
   const aiCount = allServices.filter(service => service.category?.includes('AI')).length,
@@ -68,28 +68,28 @@ export default function Enhanced20o26ServicesShowcaseV3() {
   const creativeCount = allServices.filter(service => service.category?.includes('Creative')).length,
   const supplyChainCount = allServices.filter(service => service.category?.includes('Supply Chain')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount };
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount };
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount };
-    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount };
-    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount };
-    { id: 'biotech', name: 'Biotech & Healthcare', icon: '🧬', count: biotechCount };
-    { id: 'climate', name: 'Climate & Environment', icon: '🌍', count: climateCount };
-    { id: 'metaverse', name: 'Metaverse & 3D', icon: '🌐', count: metaverseCount };
-    { id: 'autonomous', name: 'Autonomous Systems', icon: '🤖', count: autonomousCount };
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: blockchainCount };
-    { id: 'devops', name: 'DevOps & Automation', icon: '🔧', count: devopsCount };
-    { id: 'legal', name: 'Legal Technology', icon: '⚖️', count: legalCount };
-    { id: 'creative', name: 'Creative AI', icon: '🎨', count: creativeCount };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
+    { id: 'emerging', name: 'Emerging Tech', icon: '🌟', count: emergingCount },
+    { id: 'space', name: 'Space Technology', icon: '🚀', count: spaceCount },
+    { id: 'biotech', name: 'Biotech & Healthcare', icon: '🧬', count: biotechCount },
+    { id: 'climate', name: 'Climate & Environment', icon: '🌍', count: climateCount },
+    { id: 'metaverse', name: 'Metaverse & 3D', icon: '🌐', count: metaverseCount },
+    { id: 'autonomous', name: 'Autonomous Systems', icon: '🤖', count: autonomousCount },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: blockchainCount },
+    { id: 'devops', name: 'DevOps & Automation', icon: '🔧', count: devopsCount },
+    { id: 'legal', name: 'Legal Technology', icon: '⚖️', count: legalCount },
+    { id: 'creative', name: 'Creative AI', icon: '🎨', count: creativeCount },
     { id: 'supply-chain', name: 'Supply Chain', icon: '📦', count: supplyChainCount }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $50o0/month', range: 'Under $50o0' };
-    { id: 'medium', name: '$50o0 - $2K/month', range: '$50o0 - $2K' };
-    { id: 'high', name: '$2K - $10K/month', range: '$2K - $10K' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $50o0/month', range: 'Under $50o0' },
+    { id: 'medium', name: '$50o0 - $2K/month', range: '$50o0 - $2K' },
+    { id: 'high', name: '$2K - $10K/month', range: '$2K - $10K' },
     { id: 'enterprise', name: 'Over $10K/month', range: 'Over $10K' }
   ],
   // Filter and sort services,
@@ -143,22 +143,22 @@ export default function Enhanced20o26ServicesShowcaseV3() {
 ,
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 relative overflow-hidden">,
       {/* Animated background elements */}

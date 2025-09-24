@@ -2,15 +2,15 @@ const winston = require('winston'),
 const fs = require('fs'),
 const path = require('path'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'performance-monitor' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'performance-monitor' },
   transports: [
-    new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/window.window.performance.log' });
+    new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/window.window.performance.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -20,8 +20,8 @@ class PerformanceMonitor {
   constructor(config ={}) {
     this.config ={
       checkInterval: 30o0000, // 5 minutes,
-      metricsFile: path.join(__dirname, 'performance-metrics.json');
-      ...config};
+      metricsFile: path.join(__dirname, 'performance-metrics.json'),
+      ...config},
     this.isRunning = false,
     this.metrics = []}
 ,
@@ -50,11 +50,11 @@ class PerformanceMonitor {
   async collectMetrics() {
     try {
       const metrics ={
-        timestamp: new Date().toISOString();
-        memory: await this.getMemoryUsage();
-        cpu: await this.getCpuUsage();
-        bundle: await this.getBundleMetrics();
-        build: await this.getBuildMetrics()};
+        timestamp: new Date().toISOString(),
+        memory: await this.getMemoryUsage(),
+        cpu: await this.getCpuUsage(),
+        bundle: await this.getBundleMetrics(),
+        build: await this.getBuildMetrics()},
       this.metrics.push(metrics),
       // Keep only last 10o0 metrics,
       if (this.metrics.length > 10o0) {
@@ -70,13 +70,13 @@ class PerformanceMonitor {
     try {
       const usage = process.memoryUsage(),
       return {
-        rss: usage.rss;
-        heapTotal: usage.heapTotal;
-        heapUsed: usage.heapUsed;
-        external: usage.external};
+        rss: usage.rss,
+        heapTotal: usage.heapTotal,
+        heapUsed: usage.heapUsed,
+        external: usage.external},
     } catch (error) {
       logger.error('Error getting memory usage:', error),
-      return {};
+      return {},
     }
   }
 ,
@@ -84,11 +84,11 @@ class PerformanceMonitor {
     try {
       const usage = process.cpuUsage(),
       return {
-        user: usage.user;
-        system: usage.system};
+        user: usage.user,
+        system: usage.system},
     } catch (error) {
       logger.error('Error getting CPU usage:', error),
-      return {};
+      return {},
     }
   }
 ,
@@ -97,22 +97,22 @@ class PerformanceMonitor {
       // Add proper error handling for bundle analysis,
       const bundleStats = await this.analyzeBundle(),
       if (!bundleStats) {
-        this.log('Warning: Could not analyze bundle, returning default metrics', 'warn'),
+        this.log('Warning: Could not analyze bundle, returning default metricswarn'),
         return {
-          totalSize: 0;
-          chunkCount: 0;
-          largestChunk: 0;
-          timestamp: new Date().toISOString()};
+          totalSize: 0,
+          chunkCount: 0,
+          largestChunk: 0,
+          timestamp: new Date().toISOString()},
       }
 ,
       return bundleStats} catch (error) {
       this.log(`Error getting bundle metrics: ${error.message}`, 'error'),
       return {
-        totalSize: 0;
-        chunkCount: 0;
-        largestChunk: 0;
-        timestamp: new Date().toISOString();
-        error: error.message};
+        totalSize: 0,
+        chunkCount: 0,
+        largestChunk: 0,
+        timestamp: new Date().toISOString(),
+        error: error.message},
     }
   }
 ,
@@ -126,10 +126,10 @@ class PerformanceMonitor {
       // This is a simplified bundle analysis,
       // In a real implementation, you'd analyze the actual bundle files,
       return {
-        totalSize: 0;
-        chunkCount: 0;
-        largestChunk: 0;
-        timestamp: new Date().toISOString()};
+        totalSize: 0,
+        chunkCount: 0,
+        largestChunk: 0,
+        timestamp: new Date().toISOString()},
     } catch (error) {
       logger.error('Error analyzing bundle:', error),
       return null}
@@ -139,12 +139,12 @@ class PerformanceMonitor {
     try {
       // Basic build metrics,
       return {
-        buildTime: 0;
-        buildSize: 0;
-        timestamp: new Date().toISOString()};
+        buildTime: 0,
+        buildSize: 0,
+        timestamp: new Date().toISOString()},
     } catch (error) {
       logger.error('Error getting build metrics:', error),
-      return {};
+      return {},
     }
   }
 ,
@@ -156,9 +156,9 @@ class PerformanceMonitor {
 ,
   async healthCheck() {
     return {
-      status: this.isRunning ? 'healthy' : 'stopped';
-      timestamp: new Date().toISOString();
-      metricsCount: this.metrics.length};
+      status: this.isRunning ? 'healthy' : 'stopped',
+      timestamp: new Date().toISOString(),
+      metricsCount: this.metrics.length},
   }
 ,
   sleep(ms) {

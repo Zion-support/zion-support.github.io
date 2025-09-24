@@ -1,11 +1,11 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Customer Support Automation | Zion Tech Group';
+  title: 'AI Customer Support Automation | Zion Tech Group',
   description:,
-    'Intelligent customer support automation with AI chatbots, ticket routing, sentiment analysis, and 24/7 multilingual support for enhanced customer experience.';
+    'Intelligent customer support automation with AI chatbots, ticket routing, sentiment analysis, and 24/7 multilingual support for enhanced customer experience.',
   keywords:,
-    'AI customer support, chatbot automation, ticket routing, sentiment analysis, multilingual support, customer service AI';
-};
+    'AI customer support, chatbot automation, ticket routing, sentiment analysis, multilingual support, customer service AI',
+},
 interface FeatureProps {
   title: string,
   description: string,
@@ -29,13 +29,13 @@ interface PricingTierProps {
   cta: string}
 ,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular = false;
-  cta;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
 }: PricingTierProps) {
   return (
     <div
@@ -165,18 +165,18 @@ export default function AICustomerSupportAutomationPage() {
         </div>,
         <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6'>,
           {[
-            { name: 'Zendesk', icon: '🎫', description: 'Ticket management' };
-            { name: 'Freshdesk', icon: '🆕', description: 'Support platform' };
-            { name: 'Intercom', icon: '💬', description: 'Customer messaging' };
-            { name: 'Salesforce', icon: '☁️', description: 'CRM integration' };
-            { name: 'Slack', icon: '💼', description: 'Team communication' };
+            { name: 'Zendesk', icon: '🎫', description: 'Ticket management' },
+            { name: 'Freshdesk', icon: '🆕', description: 'Support platform' },
+            { name: 'Intercom', icon: '💬', description: 'Customer messaging' },
+            { name: 'Salesforce', icon: '☁️', description: 'CRM integration' },
+            { name: 'Slack', icon: '💼', description: 'Team communication' },
             {
-              name: 'Microsoft Teams';
-              icon: '👥';
-              description: 'Collaboration';
-            };
-            { name: 'WhatsApp', icon: '📱', description: 'Messaging platform' };
-            { name: 'LiveChat', icon: '💻', description: 'Live support' };
+              name: 'Microsoft Teams',
+              icon: '👥',
+              description: 'Collaboration'
+            },
+            { name: 'WhatsApp', icon: '📱', description: 'Messaging platform' },
+            { name: 'LiveChat', icon: '💻', description: 'Live support' },
           ].map((integration, index) => (
             <div
               key={index}
@@ -266,12 +266,9 @@ export default function AICustomerSupportAutomationPage() {
             period='month',
             description='Perfect for small businesses',
             features={[
-              'Up to 1,0o00 conversations/month';
-              'Basic AI chatbot';
-              'Email support integration';
-              'Basic analytics';
-              '5 team members';
-              'Email support';
+              'Up to 1,0o00 conversations/monthBasic AI chatbot',
+              'Email support integrationBasic analytics',
+              '5 team membersEmail support',
             ]}
             cta='Start Free Trial',
           />,
@@ -281,14 +278,10 @@ export default function AICustomerSupportAutomationPage() {
             period='month',
             description='Most popular for growing businesses',
             features={[
-              'Up to 10,0o00 conversations/month';
-              'Advanced AI chatbot';
-              'Multi-channel support';
-              'Sentiment analysis';
-              'Smart ticket routing';
-              'Advanced analytics';
-              'Priority support';
-              '25 team members';
+              'Up to 10,0o00 conversations/monthAdvanced AI chatbot',
+              'Multi-channel supportSentiment analysis',
+              'Smart ticket routingAdvanced analytics',
+              'Priority support25 team members',
             ]}
             popular={true}
             cta='Start Free Trial',
@@ -299,15 +292,11 @@ export default function AICustomerSupportAutomationPage() {
             period='month',
             description='For large organizations',
             features={[
-              'Unlimited conversations';
-              'Custom AI training';
-              'Multilingual support';
-              'White-label options';
-              'Dedicated account manager';
-              '24/7 phone support';
-              'Custom integrations';
-              'Unlimited team members';
-              'API access';
+              'Unlimited conversationsCustom AI training',
+              'Multilingual supportWhite-label options',
+              'Dedicated account manager24/7 phone support',
+              'Custom integrationsUnlimited team members',
+              'API access',
             ]}
             cta='Contact Sales',
           />,

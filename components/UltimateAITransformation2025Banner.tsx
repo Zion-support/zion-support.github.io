@@ -35,7 +35,7 @@ const UltimateAITransformation20o25Banner = () => {
               Future-Ready,
             </h3>,
             <p className='text-teal-10o0'>,
-              Advanced AI systems designed for 'tomorrow', 's challenges,
+              Advanced AI systems designed for 'tomorrows challenges,
             </p>,
           </div>,
         </div>,
@@ -52,5 +52,5 @@ const UltimateAITransformation20o25Banner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAITransformation20o25Banner;
+    </div>)},
+export default UltimateAITransformation20o25Banner,

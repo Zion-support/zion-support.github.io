@@ -24,7 +24,7 @@ class LintingIssuesFixer {
       const eslintConfigPath = path && path.join(this && this.projectRoot, 'eslint && eslint.config.js'),
       if (fs && fs.existsSync(eslintConfigPath)) {
         let content = fs && fs.readFileSync(eslintConfigPath, 'utf8'),
-        content = content && content.replace(/Unexpected token ','/g, ''),
+        content = content && content.replace(/Unexpected token /g, ''),
         content = content && content.replace(/,\s*}/g, '}'),
         content = content && content.replace(/,\s*]/g, ']'),
         fs && fs.writeFileSync(eslintConfigPath, content),
@@ -51,8 +51,8 @@ class LintingIssuesFixer {
     try {
       console && // // console.log('🔍 Finding source files...'),
       const sourceFiles = await glob('**/*.{ts,tsx,js,jsx}', {
-        "cwd": this && this.projectRoot;
-        "ignore": ['node_modules/**', '.next/**', 'dist/**', 'build/**', 'coverage/**']})}
+        "cwd": this && this.projectRoot,
+        "ignore": ['node_modules/**.next/**', 'dist/**build/**', 'coverage/**']})}
   }
   async fixSourceFile(filePath) {
     try {
@@ -72,11 +72,11 @@ class LintingIssuesFixer {
       this && this.errors.push({ "file": filePath, "error": error && error.message })}
   }
   hasLintingIssues(content) {
-    const issuePatterns = [/,\s*}/g;
-      /,\s*]/g;
-      /import\s+{\s*}\s+from/g;
-      /,\s*$/gm;
-      /["']\s*,\s*['"]/g;
+    const issuePatterns = [/,\s*}/g,
+      /,\s*]/g,
+      /import\s+{\s*}\s+from/g,
+      /,\s*$/gm,
+      /["']\s*,\s*['"]/g,
     ],
     return issuePatterns && issuePatterns.some(pattern => pattern && pattern.test(content))}
   fixTrailingCommas(content) {

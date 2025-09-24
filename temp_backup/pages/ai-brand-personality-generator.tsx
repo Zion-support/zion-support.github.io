@@ -22,14 +22,11 @@ export default function BrandPersonalityPage() {
         implementationWeeks='1-2 weeks',
         roiNote='Improve brand consistency and content velocity',
         features={[
-          'Voice and tone modeling';
-          'Style guide extraction from samples';
-          'Guardrails and QA for on-brand output';
-          'Multi-channel templates and snippets';
-          'Brand compliance checks';
-          'Analytics on usage and quality';
+          'Voice and tone modelingStyle guide extraction from samples',
+          'Guardrails and QA for on-brand outputMulti-channel templates and snippets',
+          'Brand compliance checksAnalytics on usage and quality',
         ]}
-        industries={['Marketing', 'Brand', 'Agencies', 'SaaS']}
+        industries={['MarketingBrand', 'AgenciesSaaS']}
         url='https: //ziontechgroup.com/ai-brand-personality-generator',
       />,
     </>)}

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Social Media Scheduler | Zion Tech Group';
+  title: 'Social Media Scheduler | Zion Tech Group',
   description:,
-    'AI-powered social media management platform. Schedule, analyze, and optimize social media content across all platforms.';
-};
+    'AI-powered social media management platform. Schedule, analyze, and optimize social media content across all platforms.',
+},
 export default function SocialMediaSchedulerPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -12,7 +12,7 @@ export default function SocialMediaSchedulerPage() {
           Social Media Scheduler,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          AI-powered social media management platform that schedules, analyzes;
+          AI-powered social media management platform that schedules, analyzes,
           and optimizes social media content across all major platforms with,
           intelligent automation.,
         </p>,
@@ -21,31 +21,25 @@ export default function SocialMediaSchedulerPage() {
         <FeatureCard
           title='Content Management',
           details={[
-            'Multi-platform posting';
-            'Content calendar';
-            'Bulk upload & scheduling';
-            'Content library';
-            'Hashtag optimization';
+            'Multi-platform postingContent calendar',
+            'Bulk upload & schedulingContent library',
+            'Hashtag optimization',
           ]}
         />,
         <FeatureCard
           title='AI Optimization',
           details={[
-            'Optimal posting times';
-            'Content performance prediction';
-            'Audience engagement analysis';
-            'Trend identification';
-            'Content recommendation engine';
+            'Optimal posting timesContent performance prediction',
+            'Audience engagement analysisTrend identification',
+            'Content recommendation engine',
           ]}
         />,
         <FeatureCard
           title='Analytics & Insights',
           details={[
-            'Cross-platform analytics';
-            'Engagement tracking';
-            'ROI measurement';
-            'Competitor analysis';
-            'Custom reporting';
+            'Cross-platform analyticsEngagement tracking',
+            'ROI measurementCompetitor analysis',
+            'Custom reporting',
           ]}
         />,
       </div>,
@@ -97,22 +91,18 @@ function PricingSection() {
           name='Individual',
           price='$19/mo',
           features={[
-            '3 social media accounts';
-            '30 posts/month';
-            'Basic scheduling';
-            'Email support';
-            'Standard analytics';
+            '3 social media accounts30 posts/month',
+            'Basic schedulingEmail support',
+            'Standard analytics',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$79/mo',
           features={[
-            '10 social media accounts';
-            'Unlimited posts';
-            'AI optimization';
-            'Priority support';
-            'Advanced analytics & insights';
+            '10 social media accountsUnlimited posts',
+            'AI optimizationPriority support',
+            'Advanced analytics & insights',
           ]}
           featured={true}
         />,
@@ -120,21 +110,19 @@ function PricingSection() {
           name='Agency',
           price='$199/mo',
           features={[
-            'Unlimited accounts';
-            'Team collaboration';
-            'White-label solution';
-            'Dedicated support';
-            'Custom reporting & API access';
+            'Unlimited accountsTeam collaboration',
+            'White-label solutionDedicated support',
+            'Custom reporting & API access',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

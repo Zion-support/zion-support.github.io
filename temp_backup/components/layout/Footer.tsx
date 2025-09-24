@@ -1,67 +1,67 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { Mail, Smartphone, Building, Globe, Zap, Shield, Users } from 'lucide-react',
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const services = [
-    { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' };
-    { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' };
-    { name: 'Metaverse & VR/AR', href: '/services?category=Metaverse%20%26%20VR%2FAR' };
-    { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' };
-    { name: 'Quantum Computing', href: '/services?category=Quantum%20Computing' };
-    { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' };
-    { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' };
-    { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' };
+    { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
+    { name: 'Blockchain & Web3', href: '/services?category=Blockchain%20%26%20Web3' },
+    { name: 'Metaverse & VR/AR', href: '/services?category=Metaverse%20%26%20VR%2FAR' },
+    { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' },
+    { name: 'Quantum Computing', href: '/services?category=Quantum%20Computing' },
+    { name: 'Robotics & Automation', href: '/services?category=Robotics%20%26%20Automation' },
+    { name: 'Analytics & Business Intelligence', href: '/services?category=Analytics%20%26%20Business%20Intelligence' },
+    { name: 'Cloud & Infrastructure', href: '/services?category=Cloud%20%26%20Infrastructure' },
     { name: 'View All Services', href: '/services' }
   ],
   const solutions = [
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Cloud Platform', href: '/cloud-platform' };
-    { name: 'AI Assistant', href: '/ai-assistant' };
-    { name: 'Analytics', href: '/analytics' };
-    { name: 'Automation', href: '/automation' };
-    { name: 'Micro SaaS', href: '/micro-saas' };
-    { name: 'Resources', href: '/resources' };
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Cloud Platform', href: '/cloud-platform' },
+    { name: 'AI Assistant', href: '/ai-assistant' },
+    { name: 'Analytics', href: '/analytics' },
+    { name: 'Automation', href: '/automation' },
+    { name: 'Micro SaaS', href: '/micro-saas' },
+    { name: 'Resources', href: '/resources' },
     { name: 'Support', href: '/support' }
   ],
   const company = [
-    { name: 'About Us', href: '/about' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Contact', href: '/contact' };
-    { name: 'Pricing', href: '/pricing' };
-    { name: 'Get Quote', href: '/quote' };
-    { name: 'Book Demo', href: '/demo' };
-    { name: 'Live Chat', href: '/chat' };
-    { name: 'Privacy', href: '/privacy' };
-    { name: 'Terms', href: '/terms' };
+    { name: 'About Us', href: '/about' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Get Quote', href: '/quote' },
+    { name: 'Book Demo', href: '/demo' },
+    { name: 'Live Chat', href: '/chat' },
+    { name: 'Privacy', href: '/privacy' },
+    { name: 'Terms', href: '/terms' },
     { name: 'Cookies', href: '/cookies' }
   ],
   const resources = [
-    { name: 'Documentation', href: '/docs' };
-    { name: 'Resources', href: '/resources' };
-    { name: 'Support Center', href: '/support' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Contact', href: '/contact' };
-    { name: 'Pricing', href: '/pricing' };
+    { name: 'Documentation', href: '/docs' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Support Center', href: '/support' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' }
   ],
   const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' };
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' };
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' };
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' };
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup' };
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' },
+    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup' },
     { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup' }
   ],
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className="bg-black/95 backdrop-blur-2xl border-t border-white/20 relative overflow-hidden">,
       {/* Futuristic Background Elements */}
@@ -93,7 +93,7 @@ const Footer: React.FC = () => {
               </div>,
             </Link>,
             <p className="text-gray-40o0 mb-8 max-w-md leading-relaxed">,
-              The world&apos,s most advanced autonomous innovation hub delivering cutting-edge technology solutions;
+              The world&apos,s most advanced autonomous innovation hub delivering cutting-edge technology solutions,
               intelligent automation systems, and the future of cloud-native AI infrastructure.,
             </p>,
             {/* Contact Information */}
@@ -219,16 +219,16 @@ const Footer: React.FC = () => {
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-40",
             style={{
-              left: `${10 + i * 12}%`;
+              left: `${10 + i * 12}%`,
               bottom: `${20 + i * 8}%`}}
             animate={{
-              y: [0, -30, 0];
-              opacity: [0.4, 1, 0.4];
+              y: [0, -30, 0],
+              opacity: [0.4, 1, 0.4],
               scale: [1, 1.5, 1]}}
             transition={{
-              duration: 4 + i * 0.5;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 4 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 0.3}}
            />))}
       </div>,

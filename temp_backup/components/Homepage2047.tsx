@@ -2,11 +2,11 @@ import React, { useEffect, useState, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
-  ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon;
-  DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor;
-  Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon;
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
+  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
+  ChevronRight, ChevronLeft, ExternalLink, Users, Award, Clock, CheckCircle, Zap as ZapIcon,
+  DollarSign, BarChart3, Palette, Cloud, Network, ShoppingCart, Settings, Building, Monitor,
+  Layers, Globe2, Lock, Code, Server, Phone, Search, Filter, Grid, List, Eye as EyeIcon,
   ArrowUpRight, Star as StarIcon, Sparkles, Target as TargetIcon} from 'lucide-react',
 // Import our new innovative services,
 import { innovative20o25AIAutonomousEcosystemV2 } from '../data/20o25-innovative-ai-autonomous-ecosystem-v2',
@@ -31,25 +31,25 @@ const Homepage20o47: React.FC = () => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)}, 80o00),
     // Track mouse movement for parallax effects,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     // Animate consciousness level,
     const consciousnessInterval = setInterval(() => {
       setConsciousnessLevel(prev => Math.sin(Date.now() * 0.0o01) * 0.3 + 0.7)}, 10o0),
     // Track scroll position,
     const handleScroll = () => {
-      setScrollY(window.scrollY)};
+      setScrollY(window.scrollY)},
     window.addEventListener('mousemove', handleMouseMove),
     window.addEventListener('scroll', handleScroll),
     return () => {
       clearInterval(interval),
       clearInterval(consciousnessInterval),
       window.removeEventListener('mousemove', handleMouseMove),
-      window.removeEventListener('scroll', handleScroll)};
+      window.removeEventListener('scroll', handleScroll)},
   }, []),
   // Combine all innovative services,
   const allInnovativeServices = [
-    ...innovative20o25AIAutonomousEcosystemV2;
-    ...emergingTechBreakthroughs20o25V4;
+    ...innovative20o25AIAutonomousEcosystemV2,
+    ...emergingTechBreakthroughs20o25V4,
     ...innovative20o25ITInfrastructureV2],
   // Get featured services for rotation,
   const featuredServices = allInnovativeServices.slice(0, 6),
@@ -58,38 +58,38 @@ const Homepage20o47: React.FC = () => {
     if (selectedCategory === 'all') return allInnovativeServices,
     return allInnovativeServices.filter(service =>,
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||,
-      service.type.toLowerCase().includes(selectedCategory.toLowerCase()))};
+      service.type.toLowerCase().includes(selectedCategory.toLowerCase()))},
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', count: allInnovativeServices.length };
-    { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', count: innovative20o25AIAutonomousEcosystemV2.length };
-    { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0', count: emergingTechBreakthroughs20o25V4.length };
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', count: allInnovativeServices.length },
+    { id: 'ai', name: 'AI & Autonomous', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', count: innovative20o25AIAutonomousEcosystemV2.length },
+    { id: 'quantum', name: 'Quantum & Emerging', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0', count: emergingTechBreakthroughs20o25V4.length },
     { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-emerald-50o0 to-teal-50o0', count: innovative20o25ITInfrastructureV2.length }
   ],
   const features = [
-    { icon: Brain, title: "AI Autonomous Ecosystem 20o25", description: "Revolutionary autonomous AI solutions", href: "/20o25-innovative-services-showcase-v2", color: "from-purple-50o0 to-pink-50o0" };
-    { icon: Atom, title: "Quantum AI Neural Networks 20o25", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-20o25", color: "from-blue-50o0 to-cyan-50o0" };
-    { icon: Shield, title: "Quantum Cybersecurity Intelligence 20o25", description: "Quantum-resistant security with AI", href: "/quantum-cybersecurity-intelligence-platform-20o25", color: "from-red-50o0 to-orange-50o0" };
-    { icon: Rocket, title: "Space Resource Intelligence 20o25", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-20o25", color: "from-indigo-50o0 to-purple-50o0" };
-    { icon: Cpu, title: "Autonomous DevOps Intelligence 20o25", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-20o25", color: "from-emerald-50o0 to-teal-50o0" };
+    { icon: Brain, title: "AI Autonomous Ecosystem 20o25", description: "Revolutionary autonomous AI solutions", href: "/20o25-innovative-services-showcase-v2", color: "from-purple-50o0 to-pink-50o0" },
+    { icon: Atom, title: "Quantum AI Neural Networks 20o25", description: "Quantum-powered AI with consciousness", href: "/quantum-ai-neural-network-fusion-platform-20o25", color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Shield, title: "Quantum Cybersecurity Intelligence 20o25", description: "Quantum-resistant security with AI", href: "/quantum-cybersecurity-intelligence-platform-20o25", color: "from-red-50o0 to-orange-50o0" },
+    { icon: Rocket, title: "Space Resource Intelligence 20o25", description: "AI-powered space resource discovery", href: "/space-resource-intelligence-platform-20o25", color: "from-indigo-50o0 to-purple-50o0" },
+    { icon: Cpu, title: "Autonomous DevOps Intelligence 20o25", description: "AI-powered DevOps optimization", href: "/autonomous-devops-intelligence-platform-20o25", color: "from-emerald-50o0 to-teal-50o0" },
     { icon: Database, title: "Edge Computing Orchestration 20o25", description: "Edge computing optimization platform", href: "/edge-computing-orchestration-platform-20o25", color: "from-yellow-50o0 to-orange-50o0" }
   ],
   const stats = [
-    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star };
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp };
-    { number: "24/7", label: "AI Intelligence Available", icon: Brain };
+    { number: `${allInnovativeServices.length}+`, label: "Innovative Services", icon: Star },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+    { number: "24/7", label: "AI Intelligence Available", icon: Brain },
     { number: "30o0+", label: "Countries Served", icon: Globe }
   ],
   const fadeInUp ={
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black text-white overflow-hidden">,
       {/* Futuristic Background */}
@@ -370,5 +370,5 @@ const Homepage20o47: React.FC = () => {
       </section>,
       {/* Footer */}
       <UltraFuturisticFooter20o47  />,
-    </div>)};
-export default Homepage20o47;
+    </div>)},
+export default Homepage20o47,

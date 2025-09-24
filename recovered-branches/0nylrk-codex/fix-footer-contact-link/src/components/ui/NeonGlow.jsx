@@ -1,10 +1,10 @@
 import { cn } from '@/lib/utils',
 export function NeonGlow({
-  children;
-  color = 'zion-cyan';
-  intensity = 'medium';
-  className = '';
-  customColor;
+  children,
+  color = 'zion-cyan',
+  intensity = 'medium',
+  className = '',
+  customColor,
 }) {
   const getGlowStyles = () => {
     const baseColor =,
@@ -18,19 +18,19 @@ export function NeonGlow({
             : '#0o0d4ff'),
     const intensityMap = {
       low: {
-        textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`;
-        filter: `drop-shadow(0 0 2px ${baseColor})`;
-      };
+        textShadow: `0 0 5px ${baseColor}, 0 0 10px ${baseColor}`,
+        filter: `drop-shadow(0 0 2px ${baseColor})`,
+      },
       medium: {
-        textShadow: `0 0 10px ${baseColor}, 0 0 20px ${baseColor}, 0 0 30px ${baseColor}`;
-        filter: `drop-shadow(0 0 5px ${baseColor}) drop-shadow(0 0 10px ${baseColor})`;
-      };
+        textShadow: `0 0 10px ${baseColor}, 0 0 20px ${baseColor}, 0 0 30px ${baseColor}`,
+        filter: `drop-shadow(0 0 5px ${baseColor}) drop-shadow(0 0 10px ${baseColor})`,
+      },
       high: {
-        textShadow: `0 0 15px ${baseColor}, 0 0 30px ${baseColor}, 0 0 45px ${baseColor}, 0 0 60px ${baseColor}`;
-        filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`;
-      };
-    };
-    return intensityMap[intensity]};
+        textShadow: `0 0 15px ${baseColor}, 0 0 30px ${baseColor}, 0 0 45px ${baseColor}, 0 0 60px ${baseColor}`,
+        filter: `drop-shadow(0 0 8px ${baseColor}) drop-shadow(0 0 15px ${baseColor}) drop-shadow(0 0 25px ${baseColor})`,
+      },
+    },
+    return intensityMap[intensity]},
   const glowStyles = getGlowStyles(),
   return (
     <span

@@ -31,15 +31,10 @@ async function addSecurityHeaders() {
   const securityHeaders = `,
 // Security headers configuration,
 export const securityHeaders = {
-  'X-Frame-Options': 'DENY';
-  'X-Content-Type-Options': 'nosniff';
-  'X-XSS-Protection': '1, mode=block';
-  'Referrer-Policy': 'strict-origin-when-cross-origin';
-  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()';
-  'Strict-Transport-Security': 'max-age=31536000, includeSubDomains';
-};
+  'X-Frame-Options': 'DENYX-Content-Type-Options': 'nosniffX-XSS-Protection': '1, mode=blockReferrer-Policy': 'strict-origin-when-cross-originPermissions-Policy': 'camera=(), microphone=(), geolocation=()Strict-Transport-Security': 'max-age=31536000, includeSubDomains',
+},
 export const getSecurityHeaders = () => {
-  return securityHeaders};
+  return securityHeaders},
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   if (!fs.existsSync(utilsDir)) {
@@ -65,12 +60,12 @@ export class InputValidator {
   static validateURL(url: string): boolean {
     try {
       const parsedUrl = new URL(url),
-      return ['http:', 'https: '].includes(parsedUrl.protocol)} catch {
+      return ['http:https: '].includes(parsedUrl.protocol)} catch {
       return false}
   }
 ,
   static sanitizeHTML(input: string): string {
-    const allowedTags = ['p', 'br', 'strong', 'em', 'ul', 'ol', 'li'],
+    const allowedTags = ['pbr', 'strongem', 'ulol', 'li'],
     const allowedAttributes = ['href'],
     // Basic HTML sanitization (in production, use a library like DOMPurify),
     return input,
@@ -80,7 +75,7 @@ export class InputValidator {
 ,
   static validateCSV(input: string): boolean {
     // Check for potential CSV injection,
-    const dangerousChars = ['=', '+', '-', '@', '\\t', '\\r'],
+    const dangerousChars = ['=+', '-@', '\\t\\r'],
     return !dangerousChars.some(char => input.startsWith(char))}
 }
 `,
@@ -98,7 +93,7 @@ interface RateLimitEntry {
 export class RateLimiter {
   private requests: Map<string RateLimitEntry> = new Map(),
   constructor(
-    private maxRequests: number = 100;
+    private maxRequests: number = 100,
     private windowMs: number = 15 * 60 * 1000 // 15 minutes) {}
 ,
   isAllowed(identifier: string): boolean {
@@ -107,8 +102,8 @@ export class RateLimiter {
     if (!entry || now > entry.resetTime) {
       // Reset or create new entry,
       this.requests.set(identifier, {
-        count: 1;
-        resetTime: now + this.windowMs;
+        count: 1,
+        resetTime: now + this.windowMs
       }),
       return true}
 ,
@@ -180,57 +175,54 @@ async function addCSP() {
   const cspConfig = `,
 // Content Security Policy configuration,
 export const cspDirectives = {
-  'default-src': ["'self'"];
+  'default-src': ["'self'"],
   'script-src': [
-    "'self'";
+    "'self'",
     "'unsafe-inline'", // Required for Next.js,
-    'https://vercel.live';
-    'https://va.vercel-scripts.com';
-  ];
+    'https: //vercel.livehttps://va.vercel-scripts.com',
+  ],
   'style-src': [
-    "'self'";
+    "'self'",
     "'unsafe-inline'", // Required for styled-jsx,
-    'https://fonts.googleapis.com';
-  ];
+    'https: //fonts.googleapis.com',
+  ],
   'font-src': [
-    "'self'";
-    'https://fonts.gstatic.com';
-  ];
+    "'self'",
+    'https://fonts.gstatic.com',
+  ],
   'img-src': [
-    "'self'";
-    'data:';
-    'https:';
-    'blob:';
-  ];
+    "'self'",
+    'data:https:',
+    'blob:',
+  ],
   'connect-src': [
-    "'self'";
-    'https://api.vercel.com';
-    'https://vitals.vercel-insights.com';
-  ];
+    "'self'",
+    'https://api.vercel.comhttps://vitals.vercel-insights.com',
+  ],
   'frame-src': [
-    "'none'";
-  ];
+    "'none'",
+  ],
   'object-src': [
-    "'none'";
-  ];
+    "'none'",
+  ],
   'base-uri': [
-    "'self'";
-  ];
+    "'self'",
+  ],
   'form-action': [
-    "'self'";
-  ];
+    "'self'",
+  ],
   'frame-ancestors': [
-    "'none'";
-  ];
-  'upgrade-insecure-requests': [];
-};
+    "'none'",
+  ],
+  'upgrade-insecure-requests': []
+},
 export const generateCSP = (): string => {
   return Object.entries(cspDirectives),
     .map(([directive, sources]) => {
       if (sources.length === 0) {
         return directive}
       return \`\${directive} \${sources.join(' ')}\`}),
-    .join(', ')};
+    .join()},
 export const cspHeader = \`Content-Security-Policy: \${generateCSP()}\`,
 `,
   const utilsDir = path.join(__dirname, 'utils'),

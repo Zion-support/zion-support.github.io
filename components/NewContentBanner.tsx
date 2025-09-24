@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 interface ContentItem {
   title: string,
@@ -13,53 +13,53 @@ interface ContentItem {
 ,
 const hotContent: ContentItem[] = [
   {
-    title: 'AI Business Automation 20o25: Complete Implementation Guide';
+    title: 'AI Business Automation 20o25: Complete Implementation Guide',
     description:,
-      'Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 20o25.';
-    href: '/blog/ai-business-automation-20o25';
-    category: 'AI & Automation';
-    readTime: '12 min read';
-    isNew: true;
-    isHot: true;
-    icon: '🤖';
-    stats: '40% productivity boost';
-  };
+      'Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% and reduce costs by 60% in 20o25.',
+    href: '/blog/ai-business-automation-20o25',
+    category: 'AI & Automation',
+    readTime: '12 min read',
+    isNew: true,
+    isHot: true,
+    icon: '🤖',
+    stats: '40% productivity boost'
+  },
   {
-    title: 'AI Startup Funding Playbook 20o25: From Seed to Series A';
+    title: 'AI Startup Funding Playbook 20o25: From Seed to Series A',
     description:,
-      'Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI fundingwith real examples and pitch templates.';
-    href: '/blog/ai-startup-funding-playbook-20o25';
-    category: 'Startup Strategy';
-    readTime: '22 min read';
-    isNew: true;
-    isHot: true;
-    icon: '💰';
-    stats: '$47B+ funding insights';
-  };
+      'Master AI startup funding with our comprehensive playbook. Learn proven strategies to secure $47B+ in AI fundingwith real examples and pitch templates.',
+    href: '/blog/ai-startup-funding-playbook-20o25',
+    category: 'Startup Strategy',
+    readTime: '22 min read',
+    isNew: true,
+    isHot: true,
+    icon: '💰',
+    stats: '$47B+ funding insights'
+  },
   {
-    title: 'AI Financial Services Transformation: $50M Cost Savings Case Study';
+    title: 'AI Financial Services Transformation: $50M Cost Savings Case Study',
     description:,
-      'Discover how a leading financial services company achieved $50M cost savings and 30o0% efficiency gains through comprehensive AI transformation.';
-    href: '/case-studies/ai-financial-services-transformation-20o25';
-    category: 'Case Study';
-    readTime: '18 min read';
-    isNew: true;
-    isHot: true;
-    icon: '🏦';
-    stats: '$50M savings achieved';
-  };
+      'Discover how a leading financial services company achieved $50M cost savings and 30o0% efficiency gains through comprehensive AI transformation.',
+    href: '/case-studies/ai-financial-services-transformation-20o25',
+    category: 'Case Study',
+    readTime: '18 min read',
+    isNew: true,
+    isHot: true,
+    icon: '🏦',
+    stats: '$50M savings achieved'
+  },
   {
-    title: 'AI Implementation Master Guide 20o25: Complete 150-Page Playbook';
+    title: 'AI Implementation Master Guide 20o25: Complete 150-Page Playbook',
     description:,
-      'Master AI implementation with our comprehensive 150-page guide. Step-by-step frameworkcheckliststemplatesand proven strategies for successful AI transformation.';
-    href: '/resources/ai-implementation-master-guide-20o25';
-    category: 'Master Guide';
-    readTime: '150 pages';
-    isNew: true;
-    isHot: true;
-    icon: '📚';
-    stats: '50o0+ companies using this';
-  };
+      'Master AI implementation with our comprehensive 150-page guide. Step-by-step frameworkcheckliststemplatesand proven strategies for successful AI transformation.',
+    href: '/resources/ai-implementation-master-guide-20o25',
+    category: 'Master Guide',
+    readTime: '150 pages',
+    isNew: true,
+    isHot: true,
+    icon: '📚',
+    stats: '50o0+ companies using this'
+  },
 ],
 interface NewContentBannerProps {
   variant?: 'default' | 'gradient' | 'minimal',
@@ -67,9 +67,9 @@ interface NewContentBannerProps {
   maxItems?: number}
 ,
 const NewContentBanner: React.FC<NewContentBannerProps> = ({
-  variant = 'default';
-  showStats = true;
-  maxItems = 4;
+  variant = 'default',
+  showStats = true,
+  maxItems = 4
 }) => {
   const content = hotContent.slice(0, maxItems),
   const getVariantClasses = () => {
@@ -80,7 +80,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
         return 'bg-white border-2 border-blue-20o0 text-gray-90o0',
       default: ,
         return 'bg-gradient-to-r from-green-60o0 via-blue-60o0 to-purple-60o0 text-white relative overflow-hidden'}
-  };
+  },
   const getCardClasses = () => {
     switch (variant) {
       case 'gradient':,
@@ -89,7 +89,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
         return 'bg-gray-50 hover:bg-gray-10o0 border border-gray-20o0',
       default:,
         return 'bg-white bg-opacity-10 backdrop-blur-sm hover:bg-opacity-20 border border-white border-opacity-20'}
-  };
+  },
   const getTextClasses = () => {
     switch (variant) {
       case 'gradient':,
@@ -98,7 +98,7 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
         return 'text-gray-90o0',
       default: ,
         return 'text-white'}
-  };
+  },
   return (
     <section className={`py-20 ${getVariantClasses()}`}>,
       {variant !== 'minimal' && (
@@ -207,6 +207,6 @@ const NewContentBanner: React.FC<NewContentBannerProps> = ({
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default NewContentBanner;
-export { hotContent };
+    </section>)},
+export default NewContentBanner,
+export { hotContent },

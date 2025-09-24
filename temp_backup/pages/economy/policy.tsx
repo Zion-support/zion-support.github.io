@@ -1,27 +1,27 @@
-import fs from 'fs';
-import path from 'path';
-import EnhancedLayout from '../../components/layout/EnhancedLayout';
+import fs from 'fs',
+import path from 'path',
+import EnhancedLayout from '../../components/layout/EnhancedLayout',
 export async function getStaticProps() {
-  const recDir = path.join(process.cwd(), 'datapolicy', 'recommendations');
-  let latest: string | null = null;
-  let recommendation: any = null;
+  const recDir = path.join(process.cwd(), 'datapolicyrecommendations'),
+  let latest: string | null = null,
+  let recommendation: any = null,
   if (fs.existsSync(recDir)) {
-    const latestPath = path.join(recDir, 'latest.json');
+    const latestPath = path.join(recDir, 'latest.json'),
     if (fs.existsSync(latestPath)) {
       try { latest = JSON.parse(fs.readFileSync(latestPath, 'utf8')).latest} catch {}
     }
     if (latest) {
-      const p = path.join(recDir, `${latest}.json`);
+      const p = path.join(recDir, `${latest}.json`),
       if (fs.existsSync(p)) {
         try { recommendation = JSON.parse(fs.readFileSync(p, 'utf8'))} catch {}
       }
     }
   }
   // Find the newest proposal md,
-  const propDir = path.join(process.cwd(), 'docsgovernance', 'proposals');
-  let proposal: string | null = null;
+  const propDir = path.join(process.cwd(), 'docsgovernanceproposals'),
+  let proposal: string | null = null,
   if (fs.existsSync(propDir)) {
-    const files = fs.readdirSync(propDir).filter((f) => f.endsWith('.md')).sort().reverse();
+    const files = fs.readdirSync(propDir).filter((f) => f.endsWith('.md')).sort().reverse(),
     proposal = files[0] || null}
   return { props: { latest, recommendation, proposal } }}
 ,

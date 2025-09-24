@@ -95,7 +95,7 @@ export default function MLOpsBestPractices20o25() {
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Model Artifacts: </strong> Use model registries like,
-                  MLflow or Kubeflow to store and version model artifacts;
+                  MLflow or Kubeflow to store and version model artifacts,
                   including weights, configurations, and metadata.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
@@ -243,7 +243,7 @@ export default function MLOpsBestPractices20o25() {
                     TorchServe,
                   </li>,
                   <li>,
-                    • <strong>Batch processing:</strong> For high-throughput;
+                    • <strong>Batch processing: </strong> For high-throughput,
                     non-time-critical predictions,
                   </li>,
                   <li>,
@@ -263,7 +263,7 @@ export default function MLOpsBestPractices20o25() {
                   Governance and Compliance,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  As ML systems become more critical to business operations;
+                  As ML systems become more critical to business operations,
                   governance and compliance become increasingly important: ,
                 </p>,
                 <ul className='space-y-2 text-white/80 mb-6'>,

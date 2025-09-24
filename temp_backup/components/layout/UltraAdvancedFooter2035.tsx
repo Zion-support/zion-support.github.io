@@ -1,395 +1,395 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Mail;
-  Phone;
-  MapPin;
-  Globe;
-  Twitter;
-  Linkedin;
-  Facebook;
-  Instagram;
-  Youtube;
-  Github;
-  ArrowRight;
-  Star;
-  Shield;
-  Rocket;
-  Brain;
-  Atom;
-  DollarSign;
-  Users;
-  FileText;
-  HelpCircle;
-  Settings;
-  TrendingUp;
-  Award;
-  CheckCircle;
-  Clock;
-  Globe as GlobeIcon;
-  Cpu;
-  Database;
-  Lock;
-  Target;
-  BookOpen;
-  Heart;
-  Lightbulb;
-  Sparkles;
-  ArrowUpRight;
-  ChevronRight;
-  ArrowUp;
-  ExternalLink;
+  Zap,
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Star,
+  Shield,
+  Rocket,
+  Brain,
+  Atom,
+  DollarSign,
+  Users,
+  FileText,
+  HelpCircle,
+  Settings,
+  TrendingUp,
+  Award,
+  CheckCircle,
+  Clock,
+  Globe as GlobeIcon,
+  Cpu,
+  Database,
+  Lock,
+  Target,
+  BookOpen,
+  Heart,
+  Lightbulb,
+  Sparkles,
+  ArrowUpRight,
+  ChevronRight,
+  ArrowUp,
+  ExternalLink,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: 'AI & Consciousness';
-    icon: <Brain className='w-5 h-5 text-cyan-40o0' />;
-    color: 'from-cyan-50o0 to-blue-60o0';
+    title: 'AI & Consciousness',
+    icon: <Brain className='w-5 h-5 text-cyan-40o0' />,
+    color: 'from-cyan-50o0 to-blue-60o0',
     services: [
       {
-        name: 'AI Consciousness Evolution 20o30';
-        href: '/ai-consciousness-evolution-20o30';
-      };
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' };
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' };
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' };
-      { name: 'AI Education Platform', href: '/ai-education-platform' };
+        name: 'AI Consciousness Evolution 20o30',
+        href: '/ai-consciousness-evolution-20o30'
+      },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
+      { name: 'AI Education Platform', href: '/ai-education-platform' },
       {
-        name: 'AI Healthcare Diagnostics';
-        href: '/ai-healthcare-diagnostics-platform';
-      };
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' };
+        name: 'AI Healthcare Diagnostics',
+        href: '/ai-healthcare-diagnostics-platform'
+      },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       {
-        name: 'AI Sustainability Platform';
-        href: '/ai-sustainability-platform';
-      };
+        name: 'AI Sustainability Platform',
+        href: '/ai-sustainability-platform'
+      },
       {
-        name: 'AI Emotional Intelligence';
-        href: '/ai-emotional-intelligence-platform';
-      };
+        name: 'AI Emotional Intelligence',
+        href: '/ai-emotional-intelligence-platform'
+      },
       {
-        name: 'AI Legal Contract Analyzer';
-        href: '/ai-legal-contract-analyzer';
-      };
-    ];
-  };
+        name: 'AI Legal Contract Analyzer',
+        href: '/ai-legal-contract-analyzer'
+      },
+    ],
+  },
   {
-    title: 'Quantum & Emerging Tech';
-    icon: <Atom className='w-5 h-5 text-blue-40o0' />;
-    color: 'from-blue-50o0 to-purple-60o0';
+    title: 'Quantum & Emerging Tech',
+    icon: <Atom className='w-5 h-5 text-blue-40o0' />,
+    color: 'from-blue-50o0 to-purple-60o0',
     services: [
       {
-        name: 'Quantum AI Brain-Computer Interface';
-        href: '/quantum-ai-brain-computer-interface';
-      };
+        name: 'Quantum AI Brain-Computer Interface',
+        href: '/quantum-ai-brain-computer-interface'
+      },
       {
-        name: 'Quantum Financial Trading';
-        href: '/quantum-financial-trading-platform';
-      };
+        name: 'Quantum Financial Trading',
+        href: '/quantum-financial-trading-platform'
+      },
       {
-        name: 'Quantum Cybersecurity';
-        href: '/quantum-cybersecurity-platform';
-      };
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' };
+        name: 'Quantum Cybersecurity',
+        href: '/quantum-cybersecurity-platform'
+      },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
       {
-        name: 'Quantum Materials Discovery';
-        href: '/quantum-materials-discovery';
-      };
-      { name: 'Quantum Robotics', href: '/quantum-robotics' };
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security' };
-      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' };
+        name: 'Quantum Materials Discovery',
+        href: '/quantum-materials-discovery'
+      },
+      { name: 'Quantum Robotics', href: '/quantum-robotics' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization' },
       {
-        name: 'Quantum Cloud Infrastructure';
-        href: '/quantum-cloud-infrastructure';
-      };
-      { name: 'Quantum Networking', href: '/quantum-networking' };
-    ];
-  };
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure'
+      },
+      { name: 'Quantum Networking', href: '/quantum-networking' },
+    ],
+  },
   {
-    title: 'Space Technology';
-    icon: <Rocket className='w-5 h-5 text-purple-40o0' />;
-    color: 'from-purple-50o0 to-pink-60o0';
+    title: 'Space Technology',
+    icon: <Rocket className='w-5 h-5 text-purple-40o0' />,
+    color: 'from-purple-50o0 to-pink-60o0',
     services: [
-      { name: 'Space Mining AI Platform', href: '/space-mining-ai-platform' };
-      { name: 'Space Exploration AI', href: '/space-exploration-ai' };
-      { name: 'Satellite AI Management', href: '/satellite-ai-management' };
-      { name: 'Interplanetary Logistics', href: '/interplanetary-logistics' };
-      { name: 'Space Safety Systems', href: '/space-safety-systems' };
-    ];
-  };
+      { name: 'Space Mining AI Platform', href: '/space-mining-ai-platform' },
+      { name: 'Space Exploration AI', href: '/space-exploration-ai' },
+      { name: 'Satellite AI Management', href: '/satellite-ai-management' },
+      { name: 'Interplanetary Logistics', href: '/interplanetary-logistics' },
+      { name: 'Space Safety Systems', href: '/space-safety-systems' },
+    ],
+  },
   {
-    title: 'Financial Technology';
-    icon: <DollarSign className='w-5 h-5 text-green-40o0' />;
-    color: 'from-green-50o0 to-emerald-60o0';
+    title: 'Financial Technology',
+    icon: <DollarSign className='w-5 h-5 text-green-40o0' />,
+    color: 'from-green-50o0 to-emerald-60o0',
     services: [
       {
-        name: 'Quantum Financial Trading';
-        href: '/quantum-financial-trading-platform';
-      };
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' };
+        name: 'Quantum Financial Trading',
+        href: '/quantum-financial-trading-platform'
+      },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
       {
-        name: 'Blockchain Enterprise Platform';
-        href: '/blockchain-infrastructure-platform';
-      };
+        name: 'Blockchain Enterprise Platform',
+        href: '/blockchain-infrastructure-platform'
+      },
       {
-        name: 'Quantum Financial Security';
-        href: '/quantum-financial-security';
-      };
-      { name: 'AI Risk Assessment', href: '/ai-risk-assessment' };
-    ];
-  };
+        name: 'Quantum Financial Security',
+        href: '/quantum-financial-security'
+      },
+      { name: 'AI Risk Assessment', href: '/ai-risk-assessment' },
+    ],
+  },
   {
-    title: 'Content & Marketing';
-    icon: <BookOpen className='w-5 h-5 text-pink-40o0' />;
-    color: 'from-pink-50o0 to-rose-60o0';
+    title: 'Content & Marketing',
+    icon: <BookOpen className='w-5 h-5 text-pink-40o0' />,
+    color: 'from-pink-50o0 to-rose-60o0',
     services: [
       {
-        name: 'AI Autonomous Content Factory';
-        href: '/ai-autonomous-content-factory';
-      };
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' };
-      { name: 'SEO Automation Suite', href: '/seo-automation' };
-      { name: 'Social Media AI Manager', href: '/social-media-ai-manager' };
+        name: 'AI Autonomous Content Factory',
+        href: '/ai-autonomous-content-factory'
+      },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio' },
+      { name: 'SEO Automation Suite', href: '/seo-automation' },
+      { name: 'Social Media AI Manager', href: '/social-media-ai-manager' },
       {
-        name: 'Content Analytics Platform';
-        href: '/content-analytics-platform';
-      };
-    ];
-  };
+        name: 'Content Analytics Platform',
+        href: '/content-analytics-platform'
+      },
+    ],
+  },
   {
-    title: 'Cybersecurity';
-    icon: <Shield className='w-5 h-5 text-red-40o0' />;
-    color: 'from-red-50o0 to-orange-60o0';
+    title: 'Cybersecurity',
+    icon: <Shield className='w-5 h-5 text-red-40o0' />,
+    color: 'from-red-50o0 to-orange-60o0',
     services: [
       {
-        name: 'Quantum Cybersecurity Platform';
-        href: '/quantum-cybersecurity-platform';
-      };
+        name: 'Quantum Cybersecurity Platform',
+        href: '/quantum-cybersecurity-platform'
+      },
       {
-        name: 'Zero Trust Security Platform';
-        href: '/zero-trust-network-architecture';
-      };
-      { name: 'AI Threat Detection', href: '/ai-threat-detection' };
-      { name: 'Incident Automation Suite', href: '/incident-automation-suite' };
+        name: 'Zero Trust Security Platform',
+        href: '/zero-trust-network-architecture'
+      },
+      { name: 'AI Threat Detection', href: '/ai-threat-detection' },
+      { name: 'Incident Automation Suite', href: '/incident-automation-suite' },
       {
-        name: 'Security Compliance Manager';
-        href: '/security-compliance-manager';
-      };
-    ];
-  };
+        name: 'Security Compliance Manager',
+        href: '/security-compliance-manager'
+      },
+    ],
+  },
   {
-    title: 'Healthcare Technology';
-    icon: <Heart className='w-5 h-5 text-teal-40o0' />;
-    color: 'from-teal-50o0 to-cyan-60o0';
+    title: 'Healthcare Technology',
+    icon: <Heart className='w-5 h-5 text-teal-40o0' />,
+    color: 'from-teal-50o0 to-cyan-60o0',
     services: [
       {
-        name: 'AI Healthcare Diagnostics';
-        href: '/ai-healthcare-diagnostics-platform';
-      };
-      { name: 'AI Medical Imaging', href: '/ai-medical-imaging' };
-      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai' };
-      { name: 'Drug Discovery AI', href: '/drug-discovery-ai' };
+        name: 'AI Healthcare Diagnostics',
+        href: '/ai-healthcare-diagnostics-platform'
+      },
+      { name: 'AI Medical Imaging', href: '/ai-medical-imaging' },
+      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai' },
+      { name: 'Drug Discovery AI', href: '/drug-discovery-ai' },
       {
-        name: 'Healthcare Analytics Platform';
-        href: '/healthcare-analytics-platform';
-      };
-    ];
-  };
+        name: 'Healthcare Analytics Platform',
+        href: '/healthcare-analytics-platform'
+      },
+    ],
+  },
   {
-    title: 'Energy Technology';
-    icon: <Zap className='w-5 h-5 text-yellow-40o0' />;
-    color: 'from-yellow-50o0 to-orange-60o0';
+    title: 'Energy Technology',
+    icon: <Zap className='w-5 h-5 text-yellow-40o0' />,
+    color: 'from-yellow-50o0 to-orange-60o0',
     services: [
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' };
-      { name: 'Smart Grid AI', href: '/smart-grid-ai' };
-      { name: 'Renewable Energy AI', href: '/renewable-energy-ai' };
-      { name: 'Energy Storage AI', href: '/energy-storage-ai' };
-      { name: 'Climate Impact AI', href: '/climate-impact-ai' };
-    ];
-  };
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+      { name: 'Smart Grid AI', href: '/smart-grid-ai' },
+      { name: 'Renewable Energy AI', href: '/renewable-energy-ai' },
+      { name: 'Energy Storage AI', href: '/energy-storage-ai' },
+      { name: 'Climate Impact AI', href: '/climate-impact-ai' },
+    ],
+  },
   {
-    title: 'Education Technology';
-    icon: <BookOpen className='w-5 h-5 text-indigo-40o0' />;
-    color: 'from-indigo-50o0 to-purple-60o0';
+    title: 'Education Technology',
+    icon: <BookOpen className='w-5 h-5 text-indigo-40o0' />,
+    color: 'from-indigo-50o0 to-purple-60o0',
     services: [
-      { name: 'AI Education Platform', href: '/ai-education-platform' };
-      { name: 'Adaptive Learning AI', href: '/adaptive-learning-ai' };
-      { name: 'AI Tutoring System', href: '/ai-tutoring-system' };
-      { name: 'Educational Content AI', href: '/educational-content-ai' };
+      { name: 'AI Education Platform', href: '/ai-education-platform' },
+      { name: 'Adaptive Learning AI', href: '/adaptive-learning-ai' },
+      { name: 'AI Tutoring System', href: '/ai-tutoring-system' },
+      { name: 'Educational Content AI', href: '/educational-content-ai' },
       {
-        name: 'Learning Analytics Platform';
-        href: '/learning-analytics-platform';
-      };
-    ];
-  };
+        name: 'Learning Analytics Platform',
+        href: '/learning-analytics-platform'
+      },
+    ],
+  },
   {
-    title: 'Materials Science';
-    icon: <Target className='w-5 h-5 text-cyan-40o0' />;
-    color: 'from-cyan-50o0 to-blue-60o0';
+    title: 'Materials Science',
+    icon: <Target className='w-5 h-5 text-cyan-40o0' />,
+    color: 'from-cyan-50o0 to-blue-60o0',
     services: [
       {
-        name: 'Quantum Materials Discovery';
-        href: '/quantum-materials-discovery';
-      };
-      { name: 'Nanotechnology AI', href: '/nanotechnology-ai' };
-      { name: 'Biomaterials AI', href: '/biomaterials-ai' };
-      { name: 'Composite Materials AI', href: '/composite-materials-ai' };
-      { name: 'Materials Testing AI', href: '/materials-testing-ai' };
-    ];
-  };
+        name: 'Quantum Materials Discovery',
+        href: '/quantum-materials-discovery'
+      },
+      { name: 'Nanotechnology AI', href: '/nanotechnology-ai' },
+      { name: 'Biomaterials AI', href: '/biomaterials-ai' },
+      { name: 'Composite Materials AI', href: '/composite-materials-ai' },
+      { name: 'Materials Testing AI', href: '/materials-testing-ai' },
+    ],
+  },
 ],
 const companyLinks = [
-  { name: 'About Us', href: '/about', description: 'Our mission and vision' };
+  { name: 'About Us', href: '/about', description: 'Our mission and vision' },
   {
-    name: 'Leadership Team';
-    href: '/leadership';
-    description: 'Meet our executives';
-  };
-  { name: 'Careers', href: '/careers', description: 'Join our team' };
-  { name: 'News & Updates', href: '/news', description: 'Latest company news' };
+    name: 'Leadership Team',
+    href: '/leadership',
+    description: 'Meet our executives'
+  },
+  { name: 'Careers', href: '/careers', description: 'Join our team' },
+  { name: 'News & Updates', href: '/news', description: 'Latest company news' },
   {
-    name: 'Case Studies';
-    href: '/case-studies';
-    description: 'Success stories';
-  };
+    name: 'Case Studies',
+    href: '/case-studies',
+    description: 'Success stories'
+  },
   {
-    name: 'Partners';
-    href: '/partners';
-    description: 'Strategic partnerships';
-  };
+    name: 'Partners',
+    href: '/partners',
+    description: 'Strategic partnerships'
+  },
   {
-    name: 'Investors';
-    href: '/investors';
-    description: 'Investment information';
-  };
+    name: 'Investors',
+    href: '/investors',
+    description: 'Investment information'
+  },
   {
-    name: 'Research & Development';
-    href: '/research-development';
-    description: 'Innovation initiatives';
-  };
+    name: 'Research & Development',
+    href: '/research-development',
+    description: 'Innovation initiatives'
+  },
 ],
 const supportLinks = [
   {
-    name: 'Contact Support';
-    href: '/support';
-    description: 'Get help from our team';
-  };
+    name: 'Contact Support',
+    href: '/support',
+    description: 'Get help from our team'
+  },
   {
-    name: 'Documentation';
-    href: '/docs';
-    description: 'Technical documentation';
-  };
-  { name: 'API Reference', href: '/api', description: 'Developer resources' };
+    name: 'Documentation',
+    href: '/docs',
+    description: 'Technical documentation'
+  },
+  { name: 'API Reference', href: '/api', description: 'Developer resources' },
   {
-    name: 'Training & Certification';
-    href: '/training';
-    description: 'Skill development';
-  };
+    name: 'Training & Certification',
+    href: '/training',
+    description: 'Skill development'
+  },
   {
-    name: 'Community Forum';
-    href: '/community';
-    description: 'Connect with users';
-  };
-  { name: 'Status Page', href: '/status', description: 'Service status' };
+    name: 'Community Forum',
+    href: '/community',
+    description: 'Connect with users'
+  },
+  { name: 'Status Page', href: '/status', description: 'Service status' },
   {
-    name: 'Security Center';
-    href: '/security';
-    description: 'Security information';
-  };
+    name: 'Security Center',
+    href: '/security',
+    description: 'Security information'
+  },
   {
-    name: 'Compliance';
-    href: '/compliance';
-    description: 'Regulatory compliance';
-  };
+    name: 'Compliance',
+    href: '/compliance',
+    description: 'Regulatory compliance'
+  },
 ],
 const resourcesLinks = [
-  { name: 'Blog', href: '/blog', description: 'Industry insights' };
-  { name: 'Whitepapers', href: '/whitepapers', description: 'Research papers' };
-  { name: 'Webinars', href: '/webinars', description: 'Educational sessions' };
-  { name: 'Events', href: '/events', description: 'Upcoming events' };
-  { name: 'Podcast', href: '/podcast', description: 'Technology discussions' };
-  { name: 'Newsletter', href: '/newsletter', description: 'Stay updated' };
+  { name: 'Blog', href: '/blog', description: 'Industry insights' },
+  { name: 'Whitepapers', href: '/whitepapers', description: 'Research papers' },
+  { name: 'Webinars', href: '/webinars', description: 'Educational sessions' },
+  { name: 'Events', href: '/events', description: 'Upcoming events' },
+  { name: 'Podcast', href: '/podcast', description: 'Technology discussions' },
+  { name: 'Newsletter', href: '/newsletter', description: 'Stay updated' },
   {
-    name: 'Resource Library';
-    href: '/resources';
-    description: 'All resources';
-  };
-  { name: 'Glossary', href: '/glossary', description: 'Technical terms' };
+    name: 'Resource Library',
+    href: '/resources',
+    description: 'All resources'
+  },
+  { name: 'Glossary', href: '/glossary', description: 'Technical terms' },
 ],
 const socialLinks = [
   {
-    name: 'Twitter';
-    href: 'https://twitter.com/ziontechgroup';
-    icon: Twitter;
-    color: 'hover:text-blue-40o0';
-  };
+    name: 'Twitter',
+    href: 'https://twitter.com/ziontechgroup',
+    icon: Twitter,
+    color: 'hover:text-blue-40o0'
+  },
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com/company/ziontechgroup';
-    icon: Linkedin;
-    color: 'hover:text-blue-60o0';
-  };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin,
+    color: 'hover:text-blue-60o0'
+  },
   {
-    name: 'Facebook';
-    href: 'https://facebook.com/ziontechgroup';
-    icon: Facebook;
-    color: 'hover:text-blue-50o0';
-  };
+    name: 'Facebook',
+    href: 'https://facebook.com/ziontechgroup',
+    icon: Facebook,
+    color: 'hover:text-blue-50o0'
+  },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com/ziontechgroup';
-    icon: Instagram;
-    color: 'hover:text-pink-50o0';
-  };
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram,
+    color: 'hover:text-pink-50o0'
+  },
   {
-    name: 'YouTube';
-    href: 'https://youtube.com/ziontechgroup';
-    icon: Youtube;
-    color: 'hover:text-red-50o0';
-  };
+    name: 'YouTube',
+    href: 'https://youtube.com/ziontechgroup',
+    icon: Youtube,
+    color: 'hover:text-red-50o0'
+  },
   {
-    name: 'GitHub';
-    href: 'https://github.com/ziontechgroup';
-    icon: Github;
-    color: 'hover:text-gray-40o0';
-  };
+    name: 'GitHub',
+    href: 'https://github.com/ziontechgroup',
+    icon: Github,
+    color: 'hover:text-gray-40o0'
+  },
 ],
 const stats = [
   {
-    number: '15+';
-    label: 'Revolutionary Services';
-    icon: Star;
-    color: 'text-cyan-40o0';
-  };
+    number: '15+',
+    label: 'Revolutionary Services',
+    icon: Star,
+    color: 'text-cyan-40o0'
+  },
   {
-    number: '10o00%+';
-    label: 'Average ROI';
-    icon: TrendingUp;
-    color: 'text-purple-40o0';
-  };
+    number: '10o00%+',
+    label: 'Average ROI',
+    icon: TrendingUp,
+    color: 'text-purple-40o0'
+  },
   {
-    number: '99.9%';
-    label: 'Success Rate';
-    icon: Award;
-    color: 'text-green-40o0';
-  };
+    number: '99.9%',
+    label: 'Success Rate',
+    icon: Award,
+    color: 'text-green-40o0'
+  },
   {
-    number: '24/7';
-    label: 'Expert Support';
-    icon: Clock;
-    color: 'text-pink-40o0';
-  };
+    number: '24/7',
+    label: 'Expert Support',
+    icon: Clock,
+    color: 'text-pink-40o0'
+  },
 ],
 export default function UltraAdvancedFooter20o35() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className='bg-black text-white relative overflow-hidden'>,
       {/* Background Effects */}

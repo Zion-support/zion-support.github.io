@@ -9,14 +9,11 @@ export default function RetailTechnologySolutions() {
       implementationWeeks='Implementation: 4-8 weeks',
       roiNote='Increase conversion and cut operational costs',
       features={[
-        'AI demand sensing and inventory optimization';
-        'On-site and CRM personalization';
-        'Computer vision for store analytics';
-        'Omnichannel orchestration and fulfillment';
-        'Dynamic pricing and promotions';
-        'Integrations: Shopify, BigCommerce, Salesforce, Snowflake';
+        'AI demand sensing and inventory optimizationOn-site and CRM personalization',
+        'Computer vision for store analyticsOmnichannel orchestration and fulfillment',
+        'Dynamic pricing and promotionsIntegrations: Shopify, BigCommerce, Salesforce, Snowflake',
       ]}
-      industries={['Retail', 'CPG', 'E-commerce']}
+      industries={['RetailCPG', 'E-commerce']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/retail-technology-solutions',
     />)}

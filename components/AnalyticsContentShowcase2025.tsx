@@ -2,53 +2,53 @@ import Link from 'next/link',
 const AnalyticsContentShowcase20o25 = () => {
   const analyticsContent = [
     {
-      title: 'Advanced Data Visualization';
+      title: 'Advanced Data Visualization',
       description:,
-        'Interactive dashboards with 3D visualizations and real-time updates';
-      image: '📈';
-      link: '/analytics/visualization';
-      category: 'Visualization';
-    };
+        'Interactive dashboards with 3D visualizations and real-time updates',
+      image: '📈',
+      link: '/analytics/visualization',
+      category: 'Visualization'
+    },
     {
-      title: 'Machine Learning Pipelines';
+      title: 'Machine Learning Pipelines',
       description:,
-        'End-to-end ML pipelines for automated model training and deployment';
-      image: '🤖';
-      link: '/analytics/ml-pipelines';
-      category: 'Machine Learning';
-    };
+        'End-to-end ML pipelines for automated model training and deployment',
+      image: '🤖',
+      link: '/analytics/ml-pipelines',
+      category: 'Machine Learning'
+    },
     {
-      title: 'Business Intelligence Suite';
+      title: 'Business Intelligence Suite',
       description:,
-        'Comprehensive BI tools with natural language querying capabilities';
-      image: '💼';
-      link: '/analytics/business-intelligence';
-      category: 'Business Intelligence';
-    };
+        'Comprehensive BI tools with natural language querying capabilities',
+      image: '💼',
+      link: '/analytics/business-intelligence',
+      category: 'Business Intelligence'
+    },
     {
-      title: 'Data Governance Framework';
+      title: 'Data Governance Framework',
       description:,
-        'Enterprise-grade data governance with compliance and security controls';
-      image: '🛡️';
-      link: '/analytics/data-governance';
-      category: 'Governance';
-    };
+        'Enterprise-grade data governance with compliance and security controls',
+      image: '🛡️',
+      link: '/analytics/data-governance',
+      category: 'Governance'
+    },
     {
-      title: 'Real-Time Streaming Analytics';
+      title: 'Real-Time Streaming Analytics',
       description:,
-        'Process and analyze streaming data with Apache Kafka and Spark';
-      image: '🌊';
-      link: '/analytics/streaming';
-      category: 'Streaming';
-    };
+        'Process and analyze streaming data with Apache Kafka and Spark',
+      image: '🌊',
+      link: '/analytics/streaming',
+      category: 'Streaming'
+    },
     {
-      title: 'AI-Powered Data Quality';
+      title: 'AI-Powered Data Quality',
       description:,
-        'Automated data quality assessment and cleansing using AI algorithms';
-      image: '✨';
-      link: '/analytics/data-quality';
-      category: 'Data Quality';
-    };
+        'Automated data quality assessment and cleansing using AI algorithms',
+      image: '✨',
+      link: '/analytics/data-quality',
+      category: 'Data Quality'
+    },
   ],
   return (
     <section className='py-16 bg-gray-50'>,
@@ -92,5 +92,5 @@ const AnalyticsContentShowcase20o25 = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default AnalyticsContentShowcase20o25;
+    </section>)},
+export default AnalyticsContentShowcase20o25,

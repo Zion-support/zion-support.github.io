@@ -5,15 +5,15 @@ export type FiltersProps = {
   displayMode: DisplayMode,
   onDisplayModeChange: (mode: DisplayMode) => void,
   showPhotos: boolean,
-  onTogglePhotos: (show: boolean) => void};
-const ROLE_OPTIONS: RoleType[] = ['Admin', 'Lead', 'Builder', 'Delegate'],
+  onTogglePhotos: (show: boolean) => void},
+const ROLE_OPTIONS: RoleType[] = ['AdminLead', 'BuilderDelegate'],
 export default function Filters({
-  filters;
-  onChange;
-  displayMode;
-  onDisplayModeChange;
-  showPhotos;
-  onTogglePhotos;
+  filters,
+  onChange,
+  displayMode,
+  onDisplayModeChange,
+  showPhotos,
+  onTogglePhotos,
 }: FiltersProps) {
   return (
     <div className='flex flex-col gap-4 bg-gray-50 dark: bg-gray-90o0 p-4 rounded-xl border border-gray-20o0 dark:border-gray-80o0'>,

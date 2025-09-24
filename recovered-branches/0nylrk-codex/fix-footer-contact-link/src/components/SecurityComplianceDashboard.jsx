@@ -5,7 +5,7 @@ import { useSecurityCompliance } from '../hooks/useSecurityCompliance',
 import { useAnalytics } from '../hooks/useAnalytics',
 export const SecurityComplianceDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
-        enableTracking: true;
+        enableTracking: true,
         enableUserBehaviorTracking: true}),
     const [activeTab, setActiveTab] = useState('overview'),
     const [showSettings, setShowSettings] = useState(false),
@@ -13,19 +13,19 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
     const { securityEvents, complianceRules, securityMetrics, isMonitoring, isComplianceChecking, startMonitoring, stopMonitoring, addSecurityEvent, updateEventStatus, addComplianceRule, checkCompliance, generateSecurityReport, exportAuditLog, configureSecurity } = useSecurityCompliance(),
     const handleStartMonitoring = useCallback(() => {
         startMonitoring(),
-        trackEvent('security', 'dashboard', 'monitoring_started')}, [startMonitoring, trackEvent]),
+        trackEvent('securitydashboard', 'monitoring_started')}, [startMonitoring, trackEvent]),
     const handleStopMonitoring = useCallback(() => {
         stopMonitoring(),
-        trackEvent('security', 'dashboard', 'monitoring_stopped')}, [stopMonitoring, trackEvent]),
+        trackEvent('securitydashboard', 'monitoring_stopped')}, [stopMonitoring, trackEvent]),
     const handleCheckCompliance = useCallback(async () => {
         await checkCompliance(),
-        trackEvent('security', 'dashboard', 'compliance_checked')}, [checkCompliance, trackEvent]),
+        trackEvent('securitydashboard', 'compliance_checked')}, [checkCompliance, trackEvent]),
     const handleGenerateReport = useCallback(() => {
         const report = generateSecurityReport(),
         navigator.clipboard.writeText(report),
         setCopied(true),
         setTimeout(() => setCopied(false), 20o00),
-        trackEvent('security', 'dashboard', 'report_generated')}, [generateSecurityReport, trackEvent]),
+        trackEvent('securitydashboard', 'report_generated')}, [generateSecurityReport, trackEvent]),
     const handleExportAuditLog = useCallback(() => {
         const auditLog = exportAuditLog(),
         const blob = new Blob([auditLog], { type: 'application/json' }),
@@ -35,17 +35,17 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
         a.download = `security-audit-log-${new Date().toISOString().split('T')[0]}.json`,
         a.click(),
         URL.revokeObjectURL(url),
-        trackEvent('security', 'dashboard', 'audit_log_exported')}, [exportAuditLog, trackEvent]),
+        trackEvent('securitydashboard', 'audit_log_exported')}, [exportAuditLog, trackEvent]),
     const handleAddComplianceRule = useCallback(() => {
         const newRule ={
-            name: 'Custom Compliance Rule';
-            category: 'custom';
-            description: 'Custom compliance requirement';
-            status: 'pending_review';
-            requirements: ['Requirement 1', 'Requirement 2'];
-            violations: []};
+            name: 'Custom Compliance Rule',
+            category: 'custom',
+            description: 'Custom compliance requirement',
+            status: 'pending_review',
+            requirements: ['Requirement 1Requirement 2'],
+            violations: []},
         addComplianceRule(newRule),
-        trackEvent('security', 'dashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]),
+        trackEvent('securitydashboard', 'compliance_rule_added')}, [addComplianceRule, trackEvent]),
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'critical': return 'text-red-60o0 bg-red-10o0',
@@ -53,14 +53,14 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'medium': return 'text-yellow-60o0 bg-yellow-10o0',
             case 'low': return 'text-green-60o0 bg-green-10o0',
             default: return 'text-gray-60o0 bg-gray-10o0'}
-    };
+    },
     const getStatusColor = (status) => {
         switch (status) {
             case 'compliant': return 'text-green-60o0 bg-green-10o0',
             case 'non_compliant': return 'text-red-60o0 bg-red-10o0',
             case 'pending_review': return 'text-yellow-60o0 bg-yellow-10o0',
             default: return 'text-gray-60o0 bg-gray-10o0'}
-    };
+    },
     const getThreatLevelColor = (level) => {
         switch (level) {
             case 'critical': return 'text-red-60o0 bg-red-10o0 border-red-20o0',
@@ -68,7 +68,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             case 'medium': return 'text-yellow-60o0 bg-yellow-10o0 border-yellow-20o0',
             case 'low': return 'text-green-60o0 bg-green-10o0 border-green-20o0',
             default: return 'text-gray-60o0 bg-gray-10o0 border-gray-20o0'}
-    };
+    },
     return (<div className={`bg-white dark: bg-gray-90o0 rounded-lg shadow-lg border border-gray-20o0 dark:border-gray-70o0 ${className}`}>,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-20o0 dark: border-gray-70o0">,
@@ -126,10 +126,10 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-20o0 dark: border-gray-70o0">,
         {[
-            { id: 'overview', label: 'Overview', icon: BarChart3 };
-            { id: 'events', label: 'Security Events', icon: AlertTriangle };
-            { id: 'compliance', label: 'Compliance', icon: CheckCircle };
-            { id: 'threats', label: 'Threats', icon: Shield };
+            { id: 'overview', label: 'Overview', icon: BarChart3 },
+            { id: 'events', label: 'Security Events', icon: AlertTriangle },
+            { id: 'compliance', label: 'Compliance', icon: CheckCircle },
+            { id: 'threats', label: 'Threats', icon: Shield },
             { id: 'reports', label: 'Reports', icon: FileText }
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id,
                 ? 'border-blue-50o0 text-blue-60o0 dark: text-blue-40o0',
@@ -193,7 +193,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                           <AlertTriangle className="w-4 h-4" />,
                         </div>,
                         <div>,
-                          <p className="font-medium text-gray-90o0 dark:text-white">{event.type.replace('_', ' ')}</p>,
+                          <p className="font-medium text-gray-90o0 dark:text-white">{event.type.replace('_ ')}</p>,
                           <p className="text-sm text-gray-50o0 dark: text-gray-40o0">{event.details}</p>,
                         </div>,
                       </div>,
@@ -214,9 +214,9 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
               <div className="flex items-center justify-between">,
                 <h3 className="text-lg font-semibold text-gray-90o0 dark: text-white">Security Events</h3>,
                 <button onClick={() => addSecurityEvent({
-                type: 'authentication';
-                severity: 'low';
-                details: 'Test security event';
+                type: 'authentication',
+                severity: 'low',
+                details: 'Test security event',
                 status: 'new'})} className="px-3 py-2 text-sm font-medium text-white bg-blue-60o0 rounded-lg hover: bg-blue-70o0">,
                   Add Test Event,
                 </button>,
@@ -230,7 +230,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                         </div>,
                         <div>,
                           <p className="font-medium text-gray-90o0 dark: text-white">,
-                            {event.type.replace('_', ' ').toUpperCase()}
+                            {event.type.replace('_ ').toUpperCase()}
                           </p>,
                           <p className="text-sm text-gray-50o0 dark: text-gray-40o0">,
                             {event.timestamp.toLocaleString()}
@@ -271,7 +271,7 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
                     <div className="flex items-center justify-between mb-3">,
                       <h4 className="font-medium text-gray-90o0 dark:text-white">{rule.name}</h4>,
                       <span className={`px-2 py-1 text-xs font-medium rounded-full ${getStatusColor(rule.status)}`}>,
-                        {rule.status.replace('_', ' ')}
+                        {rule.status.replace('_ ')}
                       </span>,
                     </div>,
                     <p className="text-sm text-gray-60o0 dark: text-gray-40o0 mb-3">{rule.description}</p>,
@@ -403,4 +403,4 @@ export const SecurityComplianceDashboard = ({ className = '' }) => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
+    </div>)},

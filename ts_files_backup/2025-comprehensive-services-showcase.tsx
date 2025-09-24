@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO',
 const ComprehensiveServicesShowcase2025 = () => {
   return (
@@ -19,5 +19,5 @@ const ComprehensiveServicesShowcase2025 = () => {
           </p>,
         </div>,
       </section>,
-    </div>)};
-export default ComprehensiveServicesShowcase2025;
+    </div>)},
+export default ComprehensiveServicesShowcase2025,

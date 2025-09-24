@@ -1,182 +1,182 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Target;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ExternalLink;
-  Twitter;
-  Linkedin;
-  Github;
-  Facebook;
-  Instagram;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Users;
-  Award;
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Target,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ExternalLink,
+  Twitter,
+  Linkedin,
+  Github,
+  Facebook,
+  Instagram,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Award,
 } from 'lucide-react',
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const serviceCategories = [
     {
-      title: 'AI & Machine Learning';
-      icon: <Brain className='w-5 h-5' />;
-      color: 'from-purple-50o0 to-indigo-60o0';
+      title: 'AI & Machine Learning',
+      icon: <Brain className='w-5 h-5' />,
+      color: 'from-purple-50o0 to-indigo-60o0',
       services: [
         {
-          name: 'AI Consciousness Platform';
-          href: '/services/ai-consciousness-platform';
-        };
+          name: 'AI Consciousness Platform',
+          href: '/services/ai-consciousness-platform'
+        },
         {
-          name: 'Quantum Machine Learning';
-          href: '/services/quantum-machine-learning';
-        };
+          name: 'Quantum Machine Learning',
+          href: '/services/quantum-machine-learning'
+        },
         {
-          name: 'Autonomous AI Agents';
-          href: '/services/autonomous-ai-agents';
-        };
-        { name: 'AI Content Factory', href: '/services/ai-content-factory' };
-      ];
-    };
+          name: 'Autonomous AI Agents',
+          href: '/services/autonomous-ai-agents'
+        },
+        { name: 'AI Content Factory', href: '/services/ai-content-factory' },
+      ],
+    },
     {
-      title: 'Quantum Technology';
-      icon: <Atom className='w-5 h-5' />;
-      color: 'from-blue-50o0 to-cyan-60o0';
+      title: 'Quantum Technology',
+      icon: <Atom className='w-5 h-5' />,
+      color: 'from-blue-50o0 to-cyan-60o0',
       services: [
         {
-          name: 'Quantum Neural Interface';
-          href: '/services/quantum-neural-interface';
-        };
+          name: 'Quantum Neural Interface',
+          href: '/services/quantum-neural-interface'
+        },
         {
-          name: 'Quantum Financial Trading';
-          href: '/services/quantum-financial-trading';
-        };
+          name: 'Quantum Financial Trading',
+          href: '/services/quantum-financial-trading'
+        },
         {
-          name: 'Quantum Internet Protocol';
-          href: '/services/quantum-internet-protocol';
-        };
+          name: 'Quantum Internet Protocol',
+          href: '/services/quantum-internet-protocol'
+        },
         {
-          name: 'Quantum Sensors Network';
-          href: '/services/quantum-sensors-network';
-        };
-      ];
-    };
+          name: 'Quantum Sensors Network',
+          href: '/services/quantum-sensors-network'
+        },
+      ],
+    },
     {
-      title: 'Emerging Tech';
-      icon: <Rocket className='w-5 h-5' />;
-      color: 'from-green-50o0 to-emerald-60o0';
+      title: 'Emerging Tech',
+      icon: <Rocket className='w-5 h-5' />,
+      color: 'from-green-50o0 to-emerald-60o0',
       services: [
         {
-          name: 'Holographic Metaverse';
-          href: '/services/holographic-metaverse-platform';
-        };
+          name: 'Holographic Metaverse',
+          href: '/services/holographic-metaverse-platform'
+        },
         {
-          name: 'Neuromorphic Computing';
-          href: '/services/neuromorphic-computing';
-        };
+          name: 'Neuromorphic Computing',
+          href: '/services/neuromorphic-computing'
+        },
         {
-          name: 'Synthetic Biology';
-          href: '/services/synthetic-biology-platform';
-        };
+          name: 'Synthetic Biology',
+          href: '/services/synthetic-biology-platform'
+        },
         {
-          name: 'Brain-Computer Interface';
-          href: '/services/brain-computer-interface';
-        };
-      ];
-    };
+          name: 'Brain-Computer Interface',
+          href: '/services/brain-computer-interface'
+        },
+      ],
+    },
     {
-      title: 'Business Solutions';
-      icon: <Target className='w-5 h-5' />;
-      color: 'from-orange-50o0 to-red-60o0';
+      title: 'Business Solutions',
+      icon: <Target className='w-5 h-5' />,
+      color: 'from-orange-50o0 to-red-60o0',
       services: [
         {
-          name: 'Smart Inventory Manager';
-          href: '/services/smart-inventory-manager';
-        };
+          name: 'Smart Inventory Manager',
+          href: '/services/smart-inventory-manager'
+        },
         {
-          name: 'Customer Success Automation';
-          href: '/services/customer-success-automation';
-        };
-        { name: 'AI Sales Coach', href: '/services/ai-sales-coach' };
-        { name: 'Smart HR Assistant', href: '/services/smart-hr-assistant' };
-      ];
-    };
+          name: 'Customer Success Automation',
+          href: '/services/customer-success-automation'
+        },
+        { name: 'AI Sales Coach', href: '/services/ai-sales-coach' },
+        { name: 'Smart HR Assistant', href: '/services/smart-hr-assistant' },
+      ],
+    },
   ],
   const companyLinks = [
-    { name: 'About Us', href: '/about' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Careers', href: '/careers' };
-    { name: 'News & Updates', href: '/news' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Support', href: '/support' };
+    { name: 'About Us', href: '/about' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'News & Updates', href: '/news' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
   ],
   const resourceLinks = [
-    { name: 'Documentation', href: '/docs' };
-    { name: 'API Reference', href: '/api' };
-    { name: 'Developer Tools', href: '/developer-tools' };
-    { name: 'Integration Guides', href: '/integrations' };
-    { name: 'Best Practices', href: '/best-practices' };
-    { name: 'Community Forum', href: '/community' };
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Developer Tools', href: '/developer-tools' },
+    { name: 'Integration Guides', href: '/integrations' },
+    { name: 'Best Practices', href: '/best-practices' },
+    { name: 'Community Forum', href: '/community' },
   ],
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' };
-    { name: 'Terms of Service', href: '/terms' };
-    { name: 'Cookie Policy', href: '/cookies' };
-    { name: 'Security', href: '/security' };
-    { name: 'Compliance', href: '/compliance' };
-    { name: 'GDPR', href: '/gdpr' };
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
+    { name: 'GDPR', href: '/gdpr' },
   ],
   const socialLinks = [
     {
-      name: 'Twitter';
-      href: 'https://twitter.com/ziontechgroup';
-      icon: <Twitter className='w-5 h-5' />;
-    };
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: <Twitter className='w-5 h-5' />
+    },
     {
-      name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';
-      icon: <Linkedin className='w-5 h-5' />;
-    };
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: <Linkedin className='w-5 h-5' />
+    },
     {
-      name: 'GitHub';
-      href: 'https://github.com/ziontechgroup';
-      icon: <Github className='w-5 h-5' />;
-    };
+      name: 'GitHub',
+      href: 'https://github.com/ziontechgroup',
+      icon: <Github className='w-5 h-5' />
+    },
     {
-      name: 'Facebook';
-      href: 'https://facebook.com/ziontechgroup';
-      icon: <Facebook className='w-5 h-5' />;
-    };
+      name: 'Facebook',
+      href: 'https://facebook.com/ziontechgroup',
+      icon: <Facebook className='w-5 h-5' />
+    },
     {
-      name: 'Instagram';
-      href: 'https://instagram.com/ziontechgroup';
-      icon: <Instagram className='w-5 h-5' />;
-    };
+      name: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup',
+      icon: <Instagram className='w-5 h-5' />
+    },
   ],
   const stats = [
-    { label: 'Services', value: '50o0+', icon: <Zap className='w-6 h-6' /> };
-    { label: 'Clients', value: '10K+', icon: <Users className='w-6 h-6' /> };
+    { label: 'Services', value: '50o0+', icon: <Zap className='w-6 h-6' /> },
+    { label: 'Clients', value: '10K+', icon: <Users className='w-6 h-6' /> },
     {
-      label: 'ROI Average';
-      value: '80o0%';
-      icon: <TrendingUp className='w-6 h-6' />;
-    };
-    { label: 'Uptime', value: '99.9%', icon: <Star className='w-6 h-6' /> };
+      label: 'ROI Average',
+      value: '80o0%',
+      icon: <TrendingUp className='w-6 h-6' />
+    },
+    { label: 'Uptime', value: '99.9%', icon: <Star className='w-6 h-6' /> },
   ],
   return (
     <footer className='relative bg-gray-90o0 text-white overflow-hidden'>,
@@ -441,5 +441,5 @@ const EnhancedFooter: React.FC = () => {
           <span>Get Started</span>,
         </Link>,
       </motion.div>,
-    </footer>)};
-export default EnhancedFooter;
+    </footer>)},
+export default EnhancedFooter,

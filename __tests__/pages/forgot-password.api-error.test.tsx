@@ -1,4 +1,7 @@
-import React from react',import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',import axios from axios',import * as Sentry from @sentry/nextjs',import ForgotPasswordPage from ../../pages/forgot-password',
+import React from react',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',
+import axios from axios',import * as Sentry from @sentry/nextjs',
+import ForgotPasswordPage from ../../pages/forgot-password',
 jest.mock('axios'),jest.mock('@sentry/nextjs', () => ({'  captureException: jest.fn()})),
 jest.mock('next/link', () => {'  const MockLink = ({ children, href }: { children: React.ReactNode, href: string }) => (
     <a href={href}>{children}</a>),

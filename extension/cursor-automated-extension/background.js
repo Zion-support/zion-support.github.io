@@ -8,16 +8,16 @@ class CursorAutomatedBackground {
     this.improvements = [],
     this.activeTabs = new Set(),
     this.fileChanges = [],
-    this.performanceMetrics ={};
+    this.performanceMetrics ={},
     this.config ={
-      serverUrl: https://api.cursor.sh';
-      localPort: 30o08;
-      coordinationPort: 30o10;
+      serverUrl: https://api.cursor.sh',
+      localPort: 30o08,
+      coordinationPort: 30o10,
       syncInterval: 30o000, // 30 seconds,
       heartbeatInterval: 150o00, // 15 seconds,
       fileWatchInterval: 50o00, // 5 seconds,
-      maxFileChanges: 10o0;
-      maxImprovements: 50};
+      maxFileChanges: 10o0,
+      maxImprovements: 50},
     this.init()}
 ,
   generateComputerId() {
@@ -40,12 +40,12 @@ class CursorAutomatedBackground {
   async loadState() {
     try {
       const result = await chrome.storage.local.get([
-        isEnabled';
-        computerId';
-        connectionStatus';
-        lastSync';
-        improvements';
-        fileChanges';
+        isEnabled',
+        computerId',
+        connectionStatus',
+        lastSync',
+        improvements',
+        fileChanges',
         performanceMetrics]),
       this.isEnabled = result.isEnabled || false,
       this.computerId = result.computerId || this.computerId,
@@ -53,7 +53,7 @@ class CursorAutomatedBackground {
       this.lastSync = result.lastSync || null,
       this.improvements = result.improvements || [],
       this.fileChanges = result.fileChanges || [],
-      this.performanceMetrics = result.performanceMetrics || {};
+      this.performanceMetrics = result.performanceMetrics || {},
     } catch (error) {
       console.error('Failed to load state:', error)}
   }
@@ -61,12 +61,12 @@ class CursorAutomatedBackground {
   async saveState() {
     try {
       await chrome.storage.local.set({
-        isEnabled: this.isEnabled;
-        computerId: this.computerId;
-        connectionStatus: this.connectionStatus;
-        lastSync: this.lastSync;
-        improvements: this.improvements;
-        fileChanges: this.fileChanges;
+        isEnabled: this.isEnabled,
+        computerId: this.computerId,
+        connectionStatus: this.connectionStatus,
+        lastSync: this.lastSync,
+        improvements: this.improvements,
+        fileChanges: this.fileChanges,
         performanceMetrics: this.performanceMetrics})} catch (error) {
       console.error('Failed to save state:', error)}
   }
@@ -158,11 +158,11 @@ class CursorAutomatedBackground {
     switch (message.type) {
       case GET_STATUS':,
         sendResponse({
-          isEnabled: this.isEnabled;
-          connectionStatus: this.connectionStatus;
-          computerId: this.computerId;
-          activeTabs: this.activeTabs.size;
-          improvements: this.improvements.length;
+          isEnabled: this.isEnabled,
+          connectionStatus: this.connectionStatus,
+          computerId: this.computerId,
+          activeTabs: this.activeTabs.size,
+          improvements: this.improvements.length,
           lastSync: this.lastSync}),
         break,
       case TOGGLE_AUTOMATION':,
@@ -216,68 +216,68 @@ class CursorAutomatedBackground {
 ,
   isDevelopmentTab(url) {
     const developmentPatterns = [
-      localhost';
-      127.0.0.1';
-      github.com';
-      gitlab.com';
-      bitbucket.org';
-      stackoverflow.com';
-      developer.mozilla.org';
-      docs.';
-      api.';
-      dev.';
-      staging.';
+      localhost',
+      127.0.0.1',
+      github.com',
+      gitlab.com',
+      bitbucket.org',
+      stackoverflow.com',
+      developer.mozilla.org',
+      docs.',
+      api.',
+      dev.',
+      staging.',
       test.],
     return developmentPatterns.some((pattern) => url.includes(pattern))}
 ,
   trackDevelopmentActivity(tabId, tab) {
     const activity ={
-      type: 'development_activity';
-      tabId;
-      url: tab.url;
-      title: tab.title;
-      timestamp: Date.now();
-      computerId: this.computerId};
+      type: 'development_activity',
+      tabId,
+      url: tab.url,
+      title: tab.title,
+      timestamp: Date.now(),
+      computerId: this.computerId},
     this.addImprovement(activity)}
 ,
   trackActiveSession(tabId) {
     const session ={
-      type: 'active_session';
-      tabId;
-      timestamp: Date.now();
-      computerId: this.computerId};
+      type: 'active_session',
+      tabId,
+      timestamp: Date.now(),
+      computerId: this.computerId},
     this.addImprovement(session)}
 ,
   trackNavigation(details) {
     const navigation ={
-      type: 'navigation';
-      url: details.url;
-      tabId: details.tabId;
-      timestamp: Date.now();
-      computerId: this.computerId};
+      type: 'navigation',
+      url: details.url,
+      tabId: details.tabId,
+      timestamp: Date.now(),
+      computerId: this.computerId},
     this.addImprovement(navigation)}
 ,
   async sendHeartbeat() {
     if (!this.isEnabled) return,
     try {
       const heartbeat ={
-        computerId: this.computerId;
-        timestamp: Date.now();
-        activeTabs: this.activeTabs.size;
-        improvements: this.improvements.length;
-        connectionStatus: this.connectionStatus;
-        performance: this.performanceMetrics};
+        computerId: this.computerId,
+        timestamp: Date.now(),
+        activeTabs: this.activeTabs.size,
+        improvements: this.improvements.length,
+        connectionStatus: this.connectionStatus,
+        performance: this.performanceMetrics},
       // Send to local system,
       await fetch(`http: //localhost:${this.config.localPort}/heartbeat`, {
-        method: 'POST';
-        headers: { Content-Type': application/json' };
+        method: 'POST',
+        headers: { Content-Type': application/json' },
         body: JSON.stringify(heartbeat)}),
       // Send to coordination server,
       await fetch(
-        `http: //localhost:${this.config.coordinationPort}/heartbeat`;
+        `http: //localhost:${this.config.coordinationPort}/heartbeat`,
         {
-          method: 'POST';
-          headers: { Content-Type': application/json' };
+          method: 'POST',
+          headers: { Content-Type': application/json' },
           body: JSON.stringify(heartbeat)})} catch (error) {
       console.error('Heartbeat failed:', error)}
   }
@@ -286,18 +286,18 @@ class CursorAutomatedBackground {
     if (!this.isEnabled) return,
     try {
       const syncData ={
-        computerId: this.computerId;
-        timestamp: Date.now();
-        improvements: this.improvements;
-        fileChanges: this.fileChanges;
-        performance: this.performanceMetrics;
-        activeTabs: Array.from(this.activeTabs)};
+        computerId: this.computerId,
+        timestamp: Date.now(),
+        improvements: this.improvements,
+        fileChanges: this.fileChanges,
+        performance: this.performanceMetrics,
+        activeTabs: Array.from(this.activeTabs)},
       // Send to coordination server,
       const response = await fetch(
-        `http: //localhost:${this.config.coordinationPort}/sync`;
+        `http: //localhost:${this.config.coordinationPort}/sync`,
         {
-          method: 'POST';
-          headers: { Content-Type': application/json' };
+          method: 'POST',
+          headers: { Content-Type': application/json' },
           body: JSON.stringify(syncData)}),
       if (response.ok) {
         const data = await response.json(),
@@ -333,9 +333,9 @@ class CursorAutomatedBackground {
     // This would typically monitor file system changes,
     // For now, we'll simulate file change detection,
     const simulatedChanges = [
-      src/components/Button.tsx';
-      pages/index.tsx';
-      utils/helpers.js';
+      src/components/Button.tsx',
+      pages/index.tsx',
+      utils/helpers.js',
       styles/globals.css],
     if (Math.random() > 0.8) {
       // 20% chance of file change,
@@ -346,10 +346,10 @@ class CursorAutomatedBackground {
 ,
   trackFileChange(filename) {
     const fileChange ={
-      type: 'file_change';
-      filename;
-      timestamp: Date.now();
-      computerId: this.computerId};
+      type: 'file_change',
+      filename,
+      timestamp: Date.now(),
+      computerId: this.computerId},
     this.fileChanges.push(fileChange),
     this.addImprovement(fileChange),
     // Keep file changes list manageable,
@@ -361,29 +361,29 @@ class CursorAutomatedBackground {
     if (!this.isEnabled) return,
     // Collect performance metrics,
     this.performanceMetrics ={
-      timestamp: Date.now();
-      activeTabs: this.activeTabs.size;
-      improvements: this.improvements.length;
-      fileChanges: this.fileChanges.length;
-      memory: this.getMemoryUsage();
-      cpu: this.getCpuUsage()};
+      timestamp: Date.now(),
+      activeTabs: this.activeTabs.size,
+      improvements: this.improvements.length,
+      fileChanges: this.fileChanges.length,
+      memory: this.getMemoryUsage(),
+      cpu: this.getCpuUsage()},
     // Check for performance issues,
     this.checkPerformanceIssues()}
 ,
   getMemoryUsage() {
     // Simulate memory usage,
     return {
-      used: Math.random() * 10o0;
-      total: 10o0;
-      percentage: Math.random() * 10o0};
+      used: Math.random() * 10o0,
+      total: 10o0,
+      percentage: Math.random() * 10o0},
   }
 ,
   getCpuUsage() {
     // Simulate CPU usage,
     return {
-      user: Math.random() * 50;
-      system: Math.random() * 30;
-      total: Math.random() * 80};
+      user: Math.random() * 50,
+      system: Math.random() * 30,
+      total: Math.random() * 80},
   }
 ,
   checkPerformanceIssues() {
@@ -399,11 +399,11 @@ class CursorAutomatedBackground {
 ,
     if (issues.length > 0) {
       const performanceIssue ={
-        type: 'performance_issue';
-        issues;
-        metrics: this.performanceMetrics;
-        timestamp: Date.now();
-        computerId: this.computerId};
+        type: 'performance_issue',
+        issues,
+        metrics: this.performanceMetrics,
+        timestamp: Date.now(),
+        computerId: this.computerId},
       this.addImprovement(performanceIssue)}
   }
 ,
@@ -414,8 +414,8 @@ class CursorAutomatedBackground {
     try {
       // Send to local system,
       await fetch(`http: //localhost:${this.config.localPort}/improvement`, {
-        method: 'POST';
-        headers: { Content-Type': application/json' };
+        method: 'POST',
+        headers: { Content-Type': application/json' },
         body: JSON.stringify(improvement)}),
       // // console.log('✅ Improvement sent:', improvement.type)} catch (error) {
       console.error('Failed to send improvement:', error)}
@@ -439,17 +439,17 @@ class CursorAutomatedBackground {
       tabs.forEach((tab) => {
         chrome.tabs,
           .sendMessage(tab.id, {
-            type: 'AUTOMATION_TOGGLED';
+            type: 'AUTOMATION_TOGGLED',
             isEnabled: this.isEnabled}),
           .catch(() => {
             // Ignore errors for tabs that don't have content scripts})})})}
 ,
   sendQuickImprovement() {
     const quickImprovement ={
-      type: 'quick_improvement';
-      message: User requested quick improvement';
-      timestamp: Date.now();
-      computerId: this.computerId};
+      type: 'quick_improvement',
+      message: User requested quick improvement',
+      timestamp: Date.now(),
+      computerId: this.computerId},
     this.sendImprovement(quickImprovement)}
 }
 ,

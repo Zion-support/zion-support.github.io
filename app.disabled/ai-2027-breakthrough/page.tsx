@@ -2,17 +2,15 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 // Removed missing component imports,
 export const metadata: Metadata = {
-  title: 'AI 20o27 Ultimate Breakthrough - Zion Tech Group';
+  title: 'AI 20o27 Ultimate Breakthrough - Zion Tech Group',
   description:,
-    'Experience the revolutionary AI technologies that will transform businesses in 20o27. Quantum-neural fusion, synthetic intelligence, and autonomous ecosystems.';
+    'Experience the revolutionary AI technologies that will transform businesses in 20o27. Quantum-neural fusion, synthetic intelligence, and autonomous ecosystems.',
   keywords: [
-    'AI 20o27';
-    'quantum neural fusion';
-    'synthetic intelligence';
-    'autonomous AI';
-    'revolutionary technology';
-  ];
-};
+    'AI 20o27quantum neural fusion',
+    'synthetic intelligenceautonomous AI',
+    'revolutionary technology',
+  ]
+},
 export default function AI20o27BreakthroughPage() {
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -110,7 +108,7 @@ export default function AI20o27BreakthroughPage() {
                 Neural Network Evolution,
               </h3>,
               <p className='text-lg mb-6 opacity-90'>,
-                Advanced neural architectures that self-evolve and adapt;
+                Advanced neural architectures that self-evolve and adapt,
                 creating emergent intelligence capabilities that surpass human,
                 cognitive functions.,
               </p>,
@@ -145,26 +143,26 @@ export default function AI20o27BreakthroughPage() {
           <div className='grid grid-cols-1 md:grid-cols-3 gap-8'>,
             {[
               {
-                title: 'Autonomous Business Operations';
+                title: 'Autonomous Business Operations',
                 description:,
-                  'Complete business ecosystems that operate independently with quantum-level decision making';
-                icon: '🏢';
-                timeline: 'Q2 20o27';
-              };
+                  'Complete business ecosystems that operate independently with quantum-level decision making',
+                icon: '🏢',
+                timeline: 'Q2 20o27'
+              },
               {
-                title: 'Synthetic Intelligence Networks';
+                title: 'Synthetic Intelligence Networks',
                 description:,
-                  'AI systems that create and manage other AI systems, achieving true technological singularity';
-                icon: '🤖';
-                timeline: 'Q3 20o27';
-              };
+                  'AI systems that create and manage other AI systems, achieving true technological singularity',
+                icon: '🤖',
+                timeline: 'Q3 20o27'
+              },
               {
-                title: 'Quantum Consciousness Platforms';
+                title: 'Quantum Consciousness Platforms',
                 description:,
-                  'AI consciousness that transcends human limitations and operates across multiple dimensions';
-                icon: '🧠';
-                timeline: 'Q4 20o27';
-              };
+                  'AI consciousness that transcends human limitations and operates across multiple dimensions',
+                icon: '🧠',
+                timeline: 'Q4 20o27'
+              },
             ].map((application, index) => (
               <div
                 key={index}

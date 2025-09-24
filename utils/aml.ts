@@ -8,21 +8,21 @@ export type WatchlistMatch = {
   detailsUrl?: string}
 ,
 export type AmlCheckResult = {
-};
+},
 export type AmlCheckResult = {
   status: 'clear' | 'match' | 'review' | 'unknown',
   matches: WatchlistMatch[],
   checked_at: string, // ISO,
   provider: 'mock' | 'remote'}
 export interface AmlProvider {
-};
+},
 export interface AmlProvider {
   checkPerson(params: { fullLegalName: string, country: string, dob?: string }): Promise<AmlResult>,
   checkBusiness(params: { businessName: string, country: string }): Promise<AmlResult>}
 class MockAmlProvider implements AmlProvider {
     const name = params && params.fullLegalName.toLowerCase(),
     if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test name detected' } };
+      return { status: 'match', details: { reason: 'Test name detected' } },
 }
     return { status: 'clear' }
   }
@@ -30,7 +30,7 @@ class MockAmlProvider implements AmlProvider {
     // Mock implementation - in production, this would call a real AML service,
     const name = params && params.businessName.toLowerCase(),
     if (name && name.includes('test') || name && name.includes('demo')) {
-      return { status: 'match', details: { reason: 'Test business name detected' } };
+      return { status: 'match', details: { reason: 'Test business name detected' } },
 }
     return { status: 'clear' }
   }
@@ -40,16 +40,16 @@ class MockAmlProvider implements AmlProvider {
 export const amlManager = new AmlManager(),
 // Utility functions,
 export function createAmlCheck(
-  userId: string;
+  userId: string,
   checkType: AmlCheck['checkType']): Omit<AmlCheck 'id' | 'createdAt' | 'expiresAt'> {
   return {
-    userId;
-    checkType;
-    status: 'pending';
-    result: 'clear';
-    confidence: 0;
+    userId,
+    checkType,
+    status: 'pending',
+    result: 'clear',
+    confidence: 0,
     details: {}
-  };
+  },
 }
 export function generateAmlCheckId(): string {
   return `aml_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`}
@@ -57,10 +57,10 @@ export function isAmlCheckExpired(check: AmlCheck): boolean {
   return new Date(check.expiresAt) < new Date()}
 export function getRiskLevelColor(riskLevel: AmlProfile['riskLevel']): string {
   const colors = {
-    low: 'green';
-    medium: 'yellow';
-    high: 'orange';
-    critical: 'red'};
+    low: 'green',
+    medium: 'yellow',
+    high: 'orange',
+    critical: 'red'},
   return colors[riskLevel]}
   async check_person (params: { fullLegalName: string, country: string, dob?: string }): Promise < AmlResult> {
     // Mock implementation - in production, this would call a real AML service,

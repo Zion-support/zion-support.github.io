@@ -186,7 +186,7 @@ export default function EdgeComputingAutomation() {
                 Cloud Layer,
               </h3>,
               <p className='text-white/80 mb-6'>,
-                The cloud provides centralized management, long-term storage;
+                The cloud provides centralized management, long-term storage,
                 advanced analytics, and machine learning model training that can,
                 be deployed back to edge devices.,
               </p>,

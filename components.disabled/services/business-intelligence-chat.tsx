@@ -13,5 +13,5 @@ const BusinessIntelligenceChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default BusinessIntelligenceChat;
+    </div>)},
+export default BusinessIntelligenceChat,

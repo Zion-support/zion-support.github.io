@@ -17,31 +17,31 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const contentItems: ContentItem[] = [
     {
-      id: 'autonomous-enterprise-future';
-      title: 'AI 20o25: The Future of Autonomous Enterprise Systems - 40,0o00% ROI Revolution';
-      type: 'blog';
-      url: '/blog/ai-20o25-future-of-autonomous-enterprise-systems';
-      roi: '40,0o00%';
-      savings: '$750B+';
-      readingTime: '35 min read';
-      featured: true};
+      id: 'autonomous-enterprise-future',
+      title: 'AI 20o25: The Future of Autonomous Enterprise Systems - 40,0o00% ROI Revolution',
+      type: 'blog',
+      url: '/blog/ai-20o25-future-of-autonomous-enterprise-systems',
+      roi: '40,0o00%',
+      savings: '$750B+',
+      readingTime: '35 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-autonomous-success';
-      title: 'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-enterprise-40o000-roi-success';
-      roi: '40,0o00%';
-      savings: '$750B';
-      readingTime: '25 min read';
-      featured: true};
+      id: 'fortune-50o0-autonomous-success',
+      title: 'Fortune 50o0 Autonomous Enterprise Success: $750B Annual Savings - 40,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-enterprise-40o000-roi-success',
+      roi: '40,0o00%',
+      savings: '$750B',
+      readingTime: '25 min read',
+      featured: true},
     {
-      id: 'autonomous-enterprise-implementation-guide';
-      title: 'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI';
-      type: 'resource';
-      url: '/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi';
-      roi: '40,0o00%';
-      savings: '$750B+';
-      readingTime: '60 min read';
+      id: 'autonomous-enterprise-implementation-guide',
+      title: 'Autonomous Enterprise Implementation Guide 20o25: Complete Roadmap to 40,0o00% ROI',
+      type: 'resource',
+      url: '/resources/autonomous-enterprise-implementation-guide-20o25-40o000-roi',
+      roi: '40,0o00%',
+      savings: '$750B+',
+      readingTime: '60 min read',
       featured: true}
   ],
   // Check if banner was previously dismissed,
@@ -60,7 +60,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('autonomous-enterprise-banner-dismissed', 'true')};
+    localStorage.setItem('autonomous-enterprise-banner-dismissedtrue')},
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -71,7 +71,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -82,7 +82,7 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
         return 'Implementation Guide',
       default:,
         return 'Content'}
-  };
+  },
   if (!isVisible || isDismissed) {
     return null}
 ,
@@ -195,5 +195,5 @@ const AutonomousEnterprise20o25PromotionBanner: React.FC = () => {
           <div className="text-xs text-gray-30o0">Average ROI</div>,
         </div>,
       </div>,
-    </div>)};
-export default AutonomousEnterprise20o25PromotionBanner;
+    </div>)},
+export default AutonomousEnterprise20o25PromotionBanner,

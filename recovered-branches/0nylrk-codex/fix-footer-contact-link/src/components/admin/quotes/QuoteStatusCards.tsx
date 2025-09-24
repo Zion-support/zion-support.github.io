@@ -1,8 +1,8 @@
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-import React from "react";;
-import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 interface QuoteStatusCardsProps {
   status_counts: {
     new: number,
@@ -14,10 +14,10 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({
   statusCounts}) => {
 interface QuoteStatusCardsProps {
   statusCounts: {
-    new: number;
-    in_review: number;
-    responded: number;
-    accepted: number;
+    new: number,
+    in_review: number,
+    responded: number,
+    accepted: number,
     closed: number}
 }
 ,
@@ -90,13 +90,13 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
         </CardContent>,
       </Card>,
     </div>)}
-)};
+)},
 interface QuoteStatusCardsProps {
   statusCounts: {
-    new: number;
-    in_review: number;
-    responded: number;
-    accepted: number;
+    new: number,
+    in_review: number,
+    responded: number,
+    accepted: number,
     closed: number}
 }
 ,
@@ -115,7 +115,7 @@ export const QuoteStatusCards: React.FC<QuoteStatusCardsProps> = ({ statusCounts
     closed: number}
 }
 export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
-  status_counts;
+  status_counts
 }) => {
   return (
     <div className="grid grid - cols - 1 md: grid - cols - 2 lg:grid - cols - 5 gap - 4 mb - 8">,
@@ -181,6 +181,6 @@ export const QuoteStatusCards: React.FC < QuoteStatusCardsProps> = ({
           </p>,
         </CardContent>,
       </Card>,
-    </div>)};
-export default QuoteStatusCards;
+    </div>)},
+export default QuoteStatusCards,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

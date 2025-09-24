@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import { TALENT_PROFILES } from "../../data/talent",
 import type { TalentProfile } from "../../data/talent",
 type Props ={
   region?: string,
-  service?: string};
+  service?: string},
 function matchesRegion(profile: TalentProfile, region?: string): boolean {
   if (!region) return true,
   return profile.location.toLowerCase().includes(region.toLowerCase())}
@@ -41,7 +41,7 @@ function matchesService(profile: TalentProfileservice?: string) {
 ,
 export default function TalentGrid({ regionservice }: Props) {
   const items = React.useMemo(
-    () => TALENT_PROFILES.filter((p) => matchesRegion(pregion) && matchesService(pservice));
+    () => TALENT_PROFILES.filter((p) => matchesRegion(pregion) && matchesService(pservice)),
     [regionservice]),
   if (items.length === 0) {
     return <div className="text-sm text-gray-40o0">No matching talent found. Try broadening filters.</div>}

@@ -2,8 +2,8 @@ import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  ArrowRight, Star, Check, Zap, TrendingUp;
-  Brain, Atom, Shield, Rocket, Target;
+  ArrowRight, Star, Check, Zap, TrendingUp,
+  Brain, Atom, Shield, Rocket, Target,
   Clock, Users, Globe, Award, Sparkles} from 'lucide-react',
 import { AnimatePresence } from 'framer-motion',
 interface ServiceCardProps {
@@ -19,7 +19,7 @@ interface ServiceCardProps {
       currency: string,
       trialDays: number,
       setupTime: string,
-      enterprise: string};
+      enterprise: string},
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -42,7 +42,7 @@ interface ServiceCardProps {
     rating: number,
     reviews: number,
     marketSize: string,
-    growthRate: string};
+    growthRate: string},
   variant?: 'ai' | 'quantum' | 'automation' | 'consciousness' | 'cybersecurity' | 'blockchain'}
 ,
 export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai' }: ServiceCardProps) {
@@ -52,42 +52,42 @@ export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai
     switch (variant) {
       case 'consciousness':,
         return {
-          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0';
-          border: 'border-purple-50o0/30';
-          glow: 'shadow-purple-50o0/25';
-          accent: 'text-purple-40o0'};
+          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0',
+          border: 'border-purple-50o0/30',
+          glow: 'shadow-purple-50o0/25',
+          accent: 'text-purple-40o0'},
       case 'quantum':,
         return {
-          gradient: 'from-blue-50o0 via-cyan-50o0 to-teal-50o0';
-          border: 'border-blue-50o0/30';
-          glow: 'shadow-blue-50o0/25';
-          accent: 'text-blue-40o0'};
+          gradient: 'from-blue-50o0 via-cyan-50o0 to-teal-50o0',
+          border: 'border-blue-50o0/30',
+          glow: 'shadow-blue-50o0/25',
+          accent: 'text-blue-40o0'},
       case 'cybersecurity':,
         return {
-          gradient: 'from-red-50o0 via-orange-50o0 to-yellow-50o0';
-          border: 'border-red-50o0/30';
-          glow: 'shadow-red-50o0/25';
-          accent: 'text-red-40o0'};
+          gradient: 'from-red-50o0 via-orange-50o0 to-yellow-50o0',
+          border: 'border-red-50o0/30',
+          glow: 'shadow-red-50o0/25',
+          accent: 'text-red-40o0'},
       case 'blockchain':,
         return {
-          gradient: 'from-yellow-50o0 via-orange-50o0 to-red-50o0';
-          border: 'border-yellow-50o0/30';
-          glow: 'shadow-yellow-50o0/25';
-          accent: 'text-yellow-40o0'};
+          gradient: 'from-yellow-50o0 via-orange-50o0 to-red-50o0',
+          border: 'border-yellow-50o0/30',
+          glow: 'shadow-yellow-50o0/25',
+          accent: 'text-yellow-40o0'},
       case 'automation':,
         return {
-          gradient: 'from-green-50o0 via-emerald-50o0 to-teal-50o0';
-          border: 'border-green-50o0/30';
-          glow: 'shadow-green-50o0/25';
-          accent: 'text-green-40o0'};
+          gradient: 'from-green-50o0 via-emerald-50o0 to-teal-50o0',
+          border: 'border-green-50o0/30',
+          glow: 'shadow-green-50o0/25',
+          accent: 'text-green-40o0'},
       default: // ai,
         return {
-          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0';
-          border: 'border-purple-50o0/30';
-          glow: 'shadow-purple-50o0/25';
-          accent: 'text-purple-40o0'};
+          gradient: 'from-purple-50o0 via-pink-50o0 to-rose-50o0',
+          border: 'border-purple-50o0/30',
+          glow: 'shadow-purple-50o0/25',
+          accent: 'text-purple-40o0'},
     }
-  };
+  },
   const styles = getVariantStyles(),
   return (
     <motion.div,
@@ -95,7 +95,7 @@ export default function UltraFuturisticServiceCard20o38({ service, variant = 'ai
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{
-        scale: 1.0o2;
+        scale: 1.0o2,
         y: -5}}
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}

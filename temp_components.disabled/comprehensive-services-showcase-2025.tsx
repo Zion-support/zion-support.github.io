@@ -3,9 +3,9 @@ import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Filter, Grid3X3, List;
-  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings;
-  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3;
+  Search, Filter, Grid3X3, List,
+  Star, Users, TrendingUp, Zap, Brain, Atom, Shield, Rocket, Palette, BookOpen, Truck, DollarSign, Settings,
+  ArrowRight, ChevronDown, CheckCircle, Clock, Award, Target, Globe, Sparkles, Cpu, Lock, Cloud, BarChart3,
   Eye, Heart, Lightbulb, Palette as PaletteIcon, Code, Database, Shield as ShieldIcon, Globe as GlobeIcon, Zap as ZapIcon, Target as TargetIcon} from 'lucide-react',
 // Import service data,
 import { innovativeRealMicroSaasServices20o25 } from '../data/20o25-innovative-real-micro-saas-services',
@@ -31,40 +31,40 @@ interface Service {
 ,
 const allServices: Service[] = [
   ...innovativeRealMicroSaasServices20o25.map(service => ({
-    ...service;
-    category: 'Micro SAAS';
-    icon: <Rocket className="w-6 h-6"  />}));
+    ...service,
+    category: 'Micro SAAS',
+    icon: <Rocket className="w-6 h-6"  />})),
   ...innovativeAIServicesEnhanced20o25.map(service => ({
-    ...service;
-    category: 'AI & Consciousness';
-    icon: <Brain className="w-6 h-6"  />}));
+    ...service,
+    category: 'AI & Consciousness',
+    icon: <Brain className="w-6 h-6"  />})),
   ...innovativeITServicesEnhanced20o25.map(service => ({
-    ...service;
-    category: 'Enterprise IT';
-    icon: <Shield className="w-6 h-6"  />}));
+    ...service,
+    category: 'Enterprise IT',
+    icon: <Shield className="w-6 h-6"  />})),
   ...emergingTechServicesEnhanced20o25.map(service => ({
-    ...service;
-    category: 'Quantum & Emerging Tech';
+    ...service,
+    category: 'Quantum & Emerging Tech',
     icon: <Atom className="w-6 h-6"  />}))],
 const categories = [
-  { name: 'All Services', icon: <Globe className="w-5 h-5"  />, count: allServices.length };
-  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5"  />, count: innovativeRealMicroSaasServices20o25.length };
-  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5"  />, count: innovativeAIServicesEnhanced20o25.length };
-  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5"  />, count: innovativeITServicesEnhanced20o25.length };
+  { name: 'All Services', icon: <Globe className="w-5 h-5"  />, count: allServices.length },
+  { name: 'Micro SAAS', icon: <Rocket className="w-5 h-5"  />, count: innovativeRealMicroSaasServices20o25.length },
+  { name: 'AI & Consciousness', icon: <Brain className="w-5 h-5"  />, count: innovativeAIServicesEnhanced20o25.length },
+  { name: 'Enterprise IT', icon: <Shield className="w-5 h-5"  />, count: innovativeITServicesEnhanced20o25.length },
   { name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5"  />, count: emergingTechServicesEnhanced20o25.length }
 ],
 const priceRanges = [
-  { label: 'All Prices', value: 'all' };
-  { label: 'Under $50/month', value: 'under-50' };
-  { label: '$50 - $20o0/month', value: '50-20o0' };
-  { label: '$20o0 - $50o0/month', value: '20o0-50o0' };
+  { label: 'All Prices', value: 'all' },
+  { label: 'Under $50/month', value: 'under-50' },
+  { label: '$50 - $20o0/month', value: '50-20o0' },
+  { label: '$20o0 - $50o0/month', value: '20o0-50o0' },
   { label: 'Over $50o0/month', value: 'over-50o0' }
 ],
 const sortOptions = [
-  { label: 'Most Popular', value: 'popular' };
-  { label: 'Highest Rated', value: 'rating' };
-  { label: 'Newest', value: 'newest' };
-  { label: 'Price: Low to High', value: 'price-low' };
+  { label: 'Most Popular', value: 'popular' },
+  { label: 'Highest Rated', value: 'rating' },
+  { label: 'Newest', value: 'newest' },
+  { label: 'Price: Low to High', value: 'price-low' },
   { label: 'Price: High to Low', value: 'price-high' }
 ],
 export default function ComprehensiveServicesShowcase20o25() {
@@ -123,7 +123,7 @@ export default function ComprehensiveServicesShowcase20o25() {
       case 'Enterprise IT': return 'from-green-50o0 to-emerald-50o0',
       case 'Quantum & Emerging Tech': return 'from-orange-50o0 to-red-50o0',
       default: return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Micro SAAS': return <Rocket className="w-5 h-5"  />,
@@ -131,7 +131,7 @@ export default function ComprehensiveServicesShowcase20o25() {
       case 'Enterprise IT': return <Shield className="w-5 h-5"  />,
       case 'Quantum & Emerging Tech': return <Atom className="w-5 h-5"  />,
       default: return <Globe className="w-5 h-5"  />}
-  };
+  },
   return (
     <Layout>,
       <Head>,
@@ -153,15 +153,15 @@ export default function ComprehensiveServicesShowcase20o25() {
               key={i}
               className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-20",
               animate={{
-                x: [0, 10o0, 0];
-                y: [0, -10o0, 0];
+                x: [0, 10o0, 0],
+                y: [0, -10o0, 0],
                 opacity: [0.2, 0.8, 0.2]}}
               transition={{
-                duration: 10 + i * 2;
-                repeat: Infinity;
+                duration: 10 + i * 2,
+                repeat: Infinity,
                 delay: i * 0.5}}
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
              />))}
         </div>,
@@ -184,9 +184,9 @@ export default function ComprehensiveServicesShowcase20o25() {
             {/* Stats */}
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">,
               {[
-                { label: 'Total Services', value: allServices.length, icon: <Globe className="w-8 h-8"  /> };
-                { label: 'AI Solutions', value: innovativeAIServicesEnhanced20o25.length, icon: <Brain className="w-8 h-8"  /> };
-                { label: 'IT Services', value: innovativeITServicesEnhanced20o25.length, icon: <Shield className="w-8 h-8"  /> };
+                { label: 'Total Services', value: allServices.length, icon: <Globe className="w-8 h-8"  /> },
+                { label: 'AI Solutions', value: innovativeAIServicesEnhanced20o25.length, icon: <Brain className="w-8 h-8"  /> },
+                { label: 'IT Services', value: innovativeITServicesEnhanced20o25.length, icon: <Shield className="w-8 h-8"  /> },
                 { label: 'Emerging Tech', value: emergingTechServicesEnhanced20o25.length, icon: <Atom className="w-8 h-8"  /> }
               ].map((stat, index) => (
                 <motion.div,

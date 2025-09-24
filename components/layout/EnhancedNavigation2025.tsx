@@ -89,8 +89,8 @@
       </AnimatePresence>,
       {/* Spacer for fixed navigation */}
       <div className="h-20" />,
-    </>)};
-export default EnhancedNavigation2025;
+    </>)},
+export default EnhancedNavigation2025,
 =======,
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
@@ -105,41 +105,41 @@ export default function EnhancedNavigation2025() {
 		return () => window.removeEventListener('scroll', handleScroll)}, []),
 	const navigation = [
 		{
-			name: 'Services';
-			href: '/services';
+			name: 'Services',
+			href: '/services',
 			children: [
-				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' };
-				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' };
-				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' };
-				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' };
-				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' };
-			]};
+				{ name: 'AI Solutions', href: '/services/ai-solutions', description: 'Autonomous AI systems and workflows' },
+				{ name: 'Cloud & DevOps', href: '/services/cloud', description: 'Scalable infrastructure and automation' },
+				{ name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Zero-trust security frameworks' },
+				{ name: 'Data & Analytics', href: '/services/data', description: 'Data pipelines and ML ops' },
+				{ name: 'Micro SaaS', href: '/services/micro-saas', description: 'Rapid product development' },
+			]},
 		{
-			name: 'Solutions';
-			href: '/solutions';
+			name: 'Solutions',
+			href: '/solutions',
 			children: [
-				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' };
-				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' };
-				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' };
-				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' };
-			]};
+				{ name: 'Enterprise', href: '/solutions/enterprise', description: 'Large-scale implementations' },
+				{ name: 'SMB', href: '/solutions/smb', description: 'Small business focused' },
+				{ name: 'Startup', href: '/solutions/startup', description: 'Growth acceleration' },
+				{ name: 'Government', href: '/solutions/government', description: 'Public sector expertise' },
+			]},
 		{
-			name: 'Company';
-			href: '/about';
+			name: 'Company',
+			href: '/about',
 			children: [
-				{ name: 'About Us', href: '/about', description: 'Our story and mission' };
-				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' };
-				{ name: 'Careers', href: '/careers', description: 'Join our team' };
-				{ name: 'Contact', href: '/contact', description: 'Get in touch' };
-			]};
-		{ name: 'Blog', href: '/blog' };
-		{ name: 'Pricing', href: '/pricing' };
+				{ name: 'About Us', href: '/about', description: 'Our story and mission' },
+				{ name: 'Partners', href: '/partners', description: 'Strategic partnerships' },
+				{ name: 'Careers', href: '/careers', description: 'Join our team' },
+				{ name: 'Contact', href: '/contact', description: 'Get in touch' },
+			]},
+		{ name: 'Blog', href: '/blog' },
+		{ name: 'Pricing', href: '/pricing' },
 	],
 	const toggleDropdown = (name: string) => {
-		setActiveDropdown(activeDropdown === name ? null : name)};
+		setActiveDropdown(activeDropdown === name ? null : name)},
 	const closeMobileMenu = () => {
 		setIsOpen(false),
-		setActiveDropdown(null)};
+		setActiveDropdown(null)},
 	return (
 		<nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
 			isScrolled ? 'bg-black/90 backdrop-blur-md border-b border-gray-800/50' : 'bg-transparent'}`}>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { ResumeDocument } from '../../utils/types/resume',
 export default function ResumePreview({ doc }: { doc: ResumeDocument }) {
   return (

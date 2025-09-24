@@ -5,15 +5,15 @@ import { motion } from 'framer-motion',
 import {
   Wrench,
   Zap,
-  Star;
-  ArrowRight;
-  Play;
-  Download;
-  ExternalLink;
-  CheckCircle;
-  Cpu;
-  Shield;
-  Globe;
+  Star,
+  ArrowRight,
+  Play,
+  Download,
+  ExternalLink,
+  CheckCircle,
+  Cpu,
+  Shield,
+  Globe,
   Target} from 'lucide-react',
 const AI20o25ToolsUtilitiesPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -25,31 +25,31 @@ const AI20o25ToolsUtilitiesPromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const featuredTools = [
     {
-      name: "AI Code Assistant";
-      description: "Intelligent code completion and debugging";
-      rating: 4.9;
-      users: "50K+";
-      icon: Cpu;
-      color: "from-blue-50o0 to-cyan-50o0"};
+      name: "AI Code Assistant",
+      description: "Intelligent code completion and debugging",
+      rating: 4.9,
+      users: "50K+",
+      icon: Cpu,
+      color: "from-blue-50o0 to-cyan-50o0"},
     {
-      name: "Smart Analytics Dashboard";
-      description: "Real-time data visualization and insights";
-      rating: 4.8;
-      users: "25K+";
-      icon: Target;
-      color: "from-green-50o0 to-emerald-50o0"};
+      name: "Smart Analytics Dashboard",
+      description: "Real-time data visualization and insights",
+      rating: 4.8,
+      users: "25K+",
+      icon: Target,
+      color: "from-green-50o0 to-emerald-50o0"},
     {
-      name: "AI Security Scanner";
-      description: "Automated vulnerability detection";
-      rating: 4.9;
-      users: "15K+";
-      icon: Shield;
+      name: "AI Security Scanner",
+      description: "Automated vulnerability detection",
+      rating: 4.9,
+      users: "15K+",
+      icon: Shield,
       color: "from-red-50o0 to-pink-50o0"}
   ],
   const stats = [
-    { icon: Zapvalue: "10o0+"label: "AI Tools Available" };
-    { icon: Starvalue: "4.8"label: "Average Rating" };
-    { icon: Globevalue: "20o0K+"label: "Active Users" };
+    { icon: Zapvalue: "10o0+"label: "AI Tools Available" },
+    { icon: Starvalue: "4.8"label: "Average Rating" },
+    { icon: Globevalue: "20o0K+"label: "Active Users" },
     { icon: CheckCirclevalue: "99.9%"label: "Uptime" }
   ],
   return (
@@ -210,5 +210,5 @@ const AI20o25ToolsUtilitiesPromotionBanner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default AI20o25ToolsUtilitiesPromotionBanner;
+    </section>)},
+export default AI20o25ToolsUtilitiesPromotionBanner,

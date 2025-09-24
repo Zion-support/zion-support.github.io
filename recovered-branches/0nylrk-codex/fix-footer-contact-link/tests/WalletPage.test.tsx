@@ -5,12 +5,12 @@ import * as useWalletHook from '@/hooks/useWallet',
 describe('WalletPage'() => {
   it('renders balance heading'() => {
     vi.spyOn(useWalletHook'useWallet').mockReturnValue({
-      wallet: { user_id: '1'balance: 100updated_at: '' };
-      transactions: [];
-      loading: false;
-      fetchWallet: vi.fn();
-      fetchTransactions: vi.fn();
-      earnTokens: vi.fn();
+      wallet: { user_id: '1'balance: 100updated_at: '' },
+      transactions: [],
+      loading: false,
+      fetchWallet: vi.fn(),
+      fetchTransactions: vi.fn(),
+      earnTokens: vi.fn(),
       spendTokens: vi.fn()} as any),
     render(<WalletPage />),
     expect(

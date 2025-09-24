@@ -2,65 +2,65 @@ import Link from 'next/link',
 const AI20o25RevolutionaryContentShowcase = () => {
   const contentItems = [
     {
-      id: 1;
-      title: 'Quantum AI Processing';
+      id: 1,
+      title: 'Quantum AI Processing',
       description:,
-        'Revolutionary quantum computing integration with AI for exponential performance gains';
-      image: '🧠';
-      category: 'Quantum Computing';
-      readTime: '8 min read';
-      featured: true;
-    };
+        'Revolutionary quantum computing integration with AI for exponential performance gains',
+      image: '🧠',
+      category: 'Quantum Computing',
+      readTime: '8 min read',
+      featured: true
+    },
     {
-      id: 2;
-      title: 'Autonomous Business Operations';
+      id: 2,
+      title: 'Autonomous Business Operations',
       description:,
-        'Self-managing business systems that optimize operations without human intervention';
-      image: '🤖';
-      category: 'Automation';
-      readTime: '12 min read';
-      featured: true;
-    };
+        'Self-managing business systems that optimize operations without human intervention',
+      image: '🤖',
+      category: 'Automation',
+      readTime: '12 min read',
+      featured: true
+    },
     {
-      id: 3;
-      title: 'Neural Interface Technology';
+      id: 3,
+      title: 'Neural Interface Technology',
       description:,
-        'Direct brain-computer interfaces for enhanced human-AI collaboration';
-      image: '🔗';
-      category: 'Neural Interfaces';
-      readTime: '10 min read';
-      featured: false;
-    };
+        'Direct brain-computer interfaces for enhanced human-AI collaboration',
+      image: '🔗',
+      category: 'Neural Interfaces',
+      readTime: '10 min read',
+      featured: false
+    },
     {
-      id: 4;
-      title: 'Predictive Analytics Revolution';
+      id: 4,
+      title: 'Predictive Analytics Revolution',
       description:,
-        'Advanced predictive models that forecast business trends with 95% accuracy';
-      image: '📊';
-      category: 'Analytics';
-      readTime: '6 min read';
-      featured: false;
-    };
+        'Advanced predictive models that forecast business trends with 95% accuracy',
+      image: '📊',
+      category: 'Analytics',
+      readTime: '6 min read',
+      featured: false
+    },
     {
-      id: 5;
-      title: 'Synthetic Intelligence Systems';
+      id: 5,
+      title: 'Synthetic Intelligence Systems',
       description:,
-        'Next-generation AI that creates and manages its own synthetic data';
-      image: '🎭';
-      category: 'Synthetic AI';
-      readTime: '15 min read';
-      featured: true;
-    };
+        'Next-generation AI that creates and manages its own synthetic data',
+      image: '🎭',
+      category: 'Synthetic AI',
+      readTime: '15 min read',
+      featured: true
+    },
     {
-      id: 6;
-      title: 'Edge Computing AI';
+      id: 6,
+      title: 'Edge Computing AI',
       description:,
-        'Distributed AI processing at the edge for real-time decision making';
-      image: '⚡';
-      category: 'Edge Computing';
-      readTime: '9 min read';
-      featured: false;
-    };
+        'Distributed AI processing at the edge for real-time decision making',
+      image: '⚡',
+      category: 'Edge Computing',
+      readTime: '9 min read',
+      featured: false
+    },
   ],
   return (
     <section className='py-20 bg-gray-50'>,
@@ -122,5 +122,5 @@ const AI20o25RevolutionaryContentShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25RevolutionaryContentShowcase;
+    </section>)},
+export default AI20o25RevolutionaryContentShowcase,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Production Guardrails for Autonomous Agents';
+  title: 'AI 20o26: Production Guardrails for Autonomous Agents',
   description:,
-    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.';
-};
+    'Isolation domains, policy-as-code, eval gates, and telemetry to ship autonomous agents safely in production.',
+},
 export default function ProductionGuardrailsForAutonomousAgentsPage() {
   return (
     <main className='min-h-screen bg-white'>,

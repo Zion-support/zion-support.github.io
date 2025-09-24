@@ -4,10 +4,10 @@ import path from 'path',
 import type {
   GrantApplication,
   StatusUpdatePayload,
-  GrantApplication;
-  StatusUpdatePayload;
+  GrantApplication,
+  StatusUpdatePayload,
 } from '../../../../types/grants',
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants'),
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`),import type { GrantApplication, StatusUpdatePayload } from '../../../../types/grants',
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants'),
@@ -31,7 +31,7 @@ function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true }),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')}
 function isAuthorized(req: NextApiRequest) {
-  const header = req && req.headers.authorization || '';
+  const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', ''),
   return (
     token &&,
@@ -46,12 +46,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Unauthorized' }),
     return,    return}
 ,
-  const { id } = req && req.query as { id: string };
+  const { id } = req && req.query as { id: string },
   if (!id) {
   }
 ,
   if (req && req.method !== 'POST') {
-    res && res.setHeader('Allow', 'POST'),
+    res && res.setHeader('AllowPOST'),
     res && res.status(405).end('Method Not Allowed'),
     return}  }
 }

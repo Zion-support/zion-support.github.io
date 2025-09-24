@@ -2,9 +2,9 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check, Star, ArrowRight, Phone, Mail, MapPin;
-  Brain, Atom, Rocket, Target, Server, Building;
-  Shield, Globe, Zap, TrendingUp, Users, Award;
+  Check, Star, ArrowRight, Phone, Mail, MapPin,
+  Brain, Atom, Rocket, Target, Server, Building,
+  Shield, Globe, Zap, TrendingUp, Users, Award,
   DollarSign, Clock, Users as UsersIcon, Shield as ShieldIcon} from 'lucide-react',
 // Import all our new services,
 import { advancedAIAutomationPlatforms20o25 } from '../data/20o25-advanced-ai-automation-platforms',
@@ -12,10 +12,10 @@ import { innovativeITInfrastructureSolutions20o25 } from '../data/20o25-innovati
 import { specializedMicroSaasSolutions20o25 } from '../data/20o25-specialized-micro-saas-solutions',
 import { emergingTechnologyServices20o25 } from '../data/20o25-emerging-technology-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const PricingCard = ({ service, index }: { service: any, index: number }) => {
   const [isHovered, setIsHovered] = useState(false),
   return (
@@ -92,7 +92,7 @@ const PricingCard = ({ service, index }: { service: any, index: number }) => {
           </a>,
         </div>,
       </div>,
-    </motion.div>)};
+    </motion.div>)},
 const ServiceCategory = ({ title, services, icon: Icon, color, description }: {
   title: string,
   services: any[],

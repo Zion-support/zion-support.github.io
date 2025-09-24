@@ -5,9 +5,9 @@ export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: true;
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: true,
+      detailedReportOptions: { html: true },
+    })},
   // Check color contrast,
   checkColorContrast: async page => {
     const contrastIssues = await page.evaluate(() => {
@@ -22,15 +22,15 @@ export const a11yTestUtils = {
           // Add contrast calculation logic here}
       }),
       return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},
 export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: 'true';
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: 'true',
+      detailedReportOptions: { html: true },
+    })},
   checkColorContrast: async page => {
     const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
@@ -43,15 +43,15 @@ export const a11yTestUtils = {
         }
       }),
       return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},
 export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: true;
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: true,
+      detailedReportOptions: { html: true },
+    })},
   checkColorContrast: async page => {
     const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
@@ -64,15 +64,15 @@ export const a11yTestUtils = {
         }
       }),
       return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},
 export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: true;
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: true,
+      detailedReportOptions: { html: true },
+    })},
   checkColorContrast: async page => {
     const contrastIssues = await page.evaluate(() => {
       const elements = document.querySelectorAll('*'),
@@ -85,15 +85,15 @@ export const a11yTestUtils = {
         }
       }),
       return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},
 export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: 'true';
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: 'true',
+      detailedReportOptions: { html: true },
+    })},
   checkColorContrast: async page => {
     const contrastIssues =,
       (await page) &&,
@@ -109,15 +109,15 @@ export const a11yTestUtils = {
             }
           }),
         return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},
 export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: true;
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: true,
+      detailedReportOptions: { html: true },
+    })},
   checkColorContrast: async page => {
     const contrastIssues =,
       (await page) &&,
@@ -133,15 +133,15 @@ export const a11yTestUtils = {
             }
           }),
         return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},
 export const a11yTestUtils = {
   runA11yTests: async page => {
     await injectAxe(page),
     await checkA11y(page, null, {
-      detailedReport: true;
-      detailedReportOptions: { html: true };
-    })};
+      detailedReport: true,
+      detailedReportOptions: { html: true },
+    })},
   checkColorContrast: async page => {
     const contrastIssues =,
       (await page) &&,
@@ -157,5 +157,5 @@ export const a11yTestUtils = {
             }
           }),
         return issues}),
-    return contrastIssues};
-};
+    return contrastIssues},
+},

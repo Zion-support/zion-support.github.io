@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { ChevronRight, Home } from 'lucide-react',
 interface BreadcrumbItem {
@@ -11,8 +11,8 @@ interface BreadcrumbNavigationProps {
   className?: string}
 ,
 const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
-  items;
-  className = '';
+  items,
+  className = ''
 }) => {
   return (
     <nav
@@ -43,5 +43,5 @@ const BreadcrumbNavigation: React.FC<BreadcrumbNavigationProps> = ({
               <span className='text-gray-40o0'>{item.label}</span>)}
           </li>))}
       </ol>,
-    </nav>)};
-export default BreadcrumbNavigation;
+    </nav>)},
+export default BreadcrumbNavigation,

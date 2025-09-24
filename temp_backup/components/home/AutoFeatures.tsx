@@ -2,8 +2,8 @@ import Link from 'next/link',
 type Feature = {
   title: string,
   description: string,
-  cta?: { label: string, href: string };
-  tags?: string[]};
+  cta?: { label: string, href: string },
+  tags?: string[]},
 function loadFeatures(): Feature[] {
   try {
     // eslint-disable-next-line @typescript-eslint/no-var-requires,
@@ -11,15 +11,15 @@ function loadFeatures(): Feature[] {
     if (Array.isArray(data?.features)) return data.features as Feature[]} catch {}
   return [
     {
-      title: 'Autonomous Cloud Automation';
+      title: 'Autonomous Cloud Automation',
       description:,
-        'This site continually improves itself via orchestrators, factories, and CI workflows without human intervention.';
+        'This site continually improves itself via orchestrators, factories, and CI workflows without human intervention.',
       cta: {
-        label: 'See automations';
-        href: 'https://github.com/Zion-Holdings/zion.app/tree/main/automation';
-      };
-      tags: ['CI', 'Self-healing', 'Auto-discovery'];
-    };
+        label: 'See automations',
+        href: 'https://github.com/Zion-Holdings/zion.app/tree/main/automation'
+      },
+      tags: ['CISelf-healing', 'Auto-discovery'],
+    },
   ]}
 ,
 export default function AutoFeatures(): JSX.Element {
@@ -30,7 +30,7 @@ export default function AutoFeatures(): JSX.Element {
         What this project does for you,
       </h2>,
       <p className='text-white/70 mb-8 max-w-2xl'>,
-        Continuously updated by cloud automations: new ideas, UI improvements;
+        Continuously updated by cloud automations: new ideas, UI improvements,
         content sync, and error healing — all committed back to the repository.,
       </p>,
       <div className='grid gap-4 sm: grid-cols-2 lg:grid-cols-3'>,

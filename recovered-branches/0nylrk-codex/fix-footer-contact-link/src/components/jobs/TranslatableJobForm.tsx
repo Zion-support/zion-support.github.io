@@ -21,45 +21,45 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
   const [activeTabsetActiveTab] = useState<SupportedLanguage>(currentLanguage),
   // Form fields with translations,
   const [titlesetTitle] = useState<Record<SupportedLanguagestring>>({
-    en: "";
-    es: "";
-    pt: "";
+    en: "",
+    es: "",
+    pt: "",
     ar: ""}),
   const [descriptionsetDescription] = useState<Record<SupportedLanguagestring>>({
-    en: "";
-    es: "";
-    pt: "";
+    en: "",
+    es: "",
+    pt: "",
     ar: ""}),
   const [requirementsetRequirements] = useState<Record<SupportedLanguagestring>>({
-    en: "";
-    es: "";
-    pt: "";
+    en: "",
+    es: "",
+    pt: "",
     ar: ""}),
   const [budgetsetBudget] = useState(""),
   const [deadlinesetDeadline] = useState(""),
   // Handle text changes,
   const handleTitleChange = (value: string) => {
-    setTitle({ ...title[activeTab]: value })};
+    setTitle({ ...title[activeTab]: value })},
   const handleDescriptionChange = (value: string) => {
-    setDescription({ ...description[activeTab]: value })};
+    setDescription({ ...description[activeTab]: value })},
   const handleRequirementsChange = (value: string) => {
-    setRequirements({ ...requirements[activeTab]: value })};
+    setRequirements({ ...requirements[activeTab]: value })},
   // Handle form submission,
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     // Complete any missing translations with auto-translation,
     await ensureAllTranslations(),
     onSubmit({
-      title;
-      description;
-      requirements;
-      budget;
-      deadline})};
+      title,
+      description,
+      requirements,
+      budget,
+      deadline})},
   // Auto translate content when language tab changes,
   const handleTabChange = async (tab: SupportedLanguage) => {
     if (tab !== activeTab) {
       setActiveTab(tab)}
-  };
+  },
   // Auto translate function,
   const autoTranslate = async (field: 'title' | 'description' | 'requirements') => {
     let sourceLanguage: SupportedLanguage = 'en',
@@ -80,8 +80,8 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
 ,
     if (!content) {
       toast({
-        title: t('translation.no_content');
-        description: t('translation.add_content_first');
+        title: t('translation.no_content'),
+        description: t('translation.add_content_first'),
         variant: "destructive"}),
       return}
 ,
@@ -89,8 +89,8 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
       const { translationserror } = await translateContent(content'job'sourceLanguage),
       if (error) {
         toast({
-          title: t('translation.translation_failed');
-          description: error;
+          title: t('translation.translation_failed'),
+          description: error,
           variant: "destructive"}),
         return}
 ,
@@ -100,14 +100,14 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
         setRequirements(translations)}
 ,
       toast({
-        title: t('translation.translation_success');
+        title: t('translation.translation_success'),
         description: t('translation.content_translated')})} catch (error) {
       console.error(`Error translating ${field}:`error),
       toast({
-        title: t('translation.translation_failed');
-        description: error instanceof Error ? error.message : t('translation.unknown_error');
+        title: t('translation.translation_failed'),
+        description: error instanceof Error ? error.message : t('translation.unknown_error'),
         variant: "destructive"})}
-  };
+  },
   // Ensure all translations are available,
   const ensureAllTranslations = async () => {
     const promises = [],
@@ -127,7 +127,7 @@ export function TranslatableJobForm({ onSubmitisSubmitting = false }: Translatab
 ,
     if (promises.length) {
       await Promise.all(promises)}
-  };
+  },
   return (
     <form onSubmit={handleSubmit} className="space-y-6">,
       <div>,

@@ -15,7 +15,7 @@ const NewContent20o25CloudOptimizationBanner: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('cloud-optimization-banner-'dismissed', 'true')};
+    localStorage.setItem('cloud-optimization-banner-'dismissedtrue')},
   if (!isVisible || isDismissed) return null,
   return (
     <div className="relative bg-gradient-to-r from-blue-60o0 via-cyan-60o0 to-teal-60o0 text-white overflow-hidden">,
@@ -80,5 +80,5 @@ const NewContent20o25CloudOptimizationBanner: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25CloudOptimizationBanner;
+    </div>)},
+export default NewContent20o25CloudOptimizationBanner,

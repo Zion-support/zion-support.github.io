@@ -2,146 +2,134 @@ import type { NextPage } from 'next',
 import MainLayout from '../../components/layout/MainLayout',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Brain;
-  Zap;
-  Shield;
-  TrendingUp;
-  Users;
-  CheckCircle;
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  CheckCircle,
 } from 'lucide-react',
 const AIDevelopment: NextPage = () => {
   const aiServices = [
     {
-      title: 'Machine Learning Models';
+      title: 'Machine Learning Models',
       description:,
-        'Custom ML models for predictive analytics, pattern recognition, and automated decision-making.';
+        'Custom ML models for predictive analytics, pattern recognition, and automated decision-making.',
       features: [
-        'Predictive Analytics';
-        'Classification Models';
-        'Regression Analysis';
-        'Clustering Algorithms';
-      ];
-    };
+        'Predictive AnalyticsClassification Models',
+        'Regression AnalysisClustering Algorithms',
+      ]
+    },
     {
-      title: 'Natural Language Processing';
+      title: 'Natural Language Processing',
       description:,
-        'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.';
+        'Advanced NLP solutions for text analysis, sentiment analysis, and language understanding.',
       features: [
-        'Text Classification';
-        'Sentiment Analysis';
-        'Language Translation';
-        'Chatbots & Virtual Assistants';
-      ];
-    };
+        'Text ClassificationSentiment Analysis',
+        'Language TranslationChatbots & Virtual Assistants',
+      ]
+    },
     {
-      title: 'Computer Vision';
+      title: 'Computer Vision',
       description:,
-        'Image and video processing solutions for object detection, recognition, and analysis.';
+        'Image and video processing solutions for object detection, recognition, and analysis.',
       features: [
-        'Object Detection';
-        'Image Classification';
-        'Facial Recognition';
-        'Video Analytics';
-      ];
-    };
+        'Object DetectionImage Classification',
+        'Facial RecognitionVideo Analytics',
+      ]
+    },
     {
-      title: 'AI Chatbots';
+      title: 'AI Chatbots',
       description:,
-        'Intelligent conversational agents for customer service and business automation.';
+        'Intelligent conversational agents for customer service and business automation.',
       features: [
-        'Natural Conversations';
-        'Multi-language Support';
-        'Integration APIs';
-        'Analytics Dashboard';
-      ];
-    };
+        'Natural ConversationsMulti-language Support',
+        'Integration APIsAnalytics Dashboard',
+      ]
+    },
     {
-      title: 'Recommendation Systems';
+      title: 'Recommendation Systems',
       description:,
-        'Personalized recommendation engines for e-commerce and content platforms.';
+        'Personalized recommendation engines for e-commerce and content platforms.',
       features: [
-        'Product Recommendations';
-        'Content Personalization';
-        'Collaborative Filtering';
-        'A/B Testing';
-      ];
-    };
+        'Product RecommendationsContent Personalization',
+        'Collaborative FilteringA/B Testing',
+      ]
+    },
     {
-      title: 'Predictive Analytics';
+      title: 'Predictive Analytics',
       description:,
-        'Data-driven insights and forecasting for business intelligence and decision-making.';
+        'Data-driven insights and forecasting for business intelligence and decision-making.',
       features: [
-        'Sales Forecasting';
-        'Risk Assessment';
-        'Customer Behavior Analysis';
-        'Market Trends';
-      ];
-    };
+        'Sales ForecastingRisk Assessment',
+        'Customer Behavior AnalysisMarket Trends',
+      ]
+    },
   ],
   const benefits = [
     {
-      title: 'Increased Efficiency';
+      title: 'Increased Efficiency',
       description:,
-        'Automate repetitive tasks and processes to improve operational efficiency.';
-      icon: Zap;
-    };
+        'Automate repetitive tasks and processes to improve operational efficiency.',
+      icon: Zap
+    },
     {
-      title: 'Better Decision Making';
+      title: 'Better Decision Making',
       description:,
-        'Data-driven insights help make informed business decisions faster.';
-      icon: TrendingUp;
-    };
+        'Data-driven insights help make informed business decisions faster.',
+      icon: TrendingUp
+    },
     {
-      title: 'Enhanced Customer Experience';
+      title: 'Enhanced Customer Experience',
       description:,
-        'Personalized interactions and recommendations improve customer satisfaction.';
-      icon: Users;
-    };
+        'Personalized interactions and recommendations improve customer satisfaction.',
+      icon: Users
+    },
     {
-      title: 'Cost Reduction';
+      title: 'Cost Reduction',
       description:,
-        'Reduce operational costs through automation and optimization.';
-      icon: Shield;
-    };
+        'Reduce operational costs through automation and optimization.',
+      icon: Shield
+    },
   ],
   const process = [
     {
-      step: '0o1';
-      title: 'Data Assessment';
+      step: '0o1',
+      title: 'Data Assessment',
       description:,
-        'Evaluate your data quality, availability, and requirements for AI implementation.';
-    };
+        'Evaluate your data quality, availability, and requirements for AI implementation.',
+    },
     {
-      step: '0o2';
-      title: 'Model Design';
+      step: '0o2',
+      title: 'Model Design',
       description:,
-        'Design and architect the AI solution based on your specific business needs.';
-    };
+        'Design and architect the AI solution based on your specific business needs.',
+    },
     {
-      step: '0o3';
-      title: 'Development & Training';
+      step: '0o3',
+      title: 'Development & Training',
       description:,
-        'Develop and train AI models using your data and business logic.';
-    };
+        'Develop and train AI models using your data and business logic.',
+    },
     {
-      step: '0o4';
-      title: 'Testing & Validation';
+      step: '0o4',
+      title: 'Testing & Validation',
       description:,
-        'Thoroughly test and validate the AI solution to ensure accuracy and reliability.';
-    };
+        'Thoroughly test and validate the AI solution to ensure accuracy and reliability.',
+    },
     {
-      step: '0o5';
-      title: 'Deployment & Integration';
+      step: '0o5',
+      title: 'Deployment & Integration',
       description:,
-        'Deploy the AI solution and integrate it with your existing systems.';
-    };
+        'Deploy the AI solution and integrate it with your existing systems.',
+    },
     {
-      step: '0o6';
-      title: 'Monitoring & Optimization';
+      step: '0o6',
+      title: 'Monitoring & Optimization',
       description:,
-        'Continuously monitor performance and optimize the AI solution for better results.';
-    };
+        'Continuously monitor performance and optimize the AI solution for better results.',
+    },
   ],
   return (
     <MainLayout
@@ -157,7 +145,7 @@ const AIDevelopment: NextPage = () => {
             <h1 className='text-5xl font-bold mb-6'>AI Development Services</h1>,
             <p className='text-xl max-w-3xl mx-auto'>,
               Transform your business with cutting-edge artificial intelligence,
-              solutions. From machine learning models to intelligent chatbots;
+              solutions. From machine learning models to intelligent chatbots,
               we help you harness the power of AI to drive innovation and,
               growth.,
             </p>,
@@ -266,18 +254,12 @@ const AIDevelopment: NextPage = () => {
           </div>,
           <div className='grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8'>,
             {[
-              'TensorFlow';
-              'PyTorch';
-              'Scikit-learn';
-              'OpenAI';
-              'Hugging Face';
-              'AWS SageMaker';
-              'Google Cloud AI';
-              'Azure ML';
-              'Keras';
-              'Pandas';
-              'NumPy';
-              'NLTK';
+              'TensorFlowPyTorch',
+              'Scikit-learnOpenAI',
+              'Hugging FaceAWS SageMaker',
+              'Google Cloud AIAzure ML',
+              'KerasPandas',
+              'NumPyNLTK',
             ].map(tech => (
               <div
                 key={tech}
@@ -313,5 +295,5 @@ const AIDevelopment: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </MainLayout>)};
-export default AIDevelopment;
+    </MainLayout>)},
+export default AIDevelopment,

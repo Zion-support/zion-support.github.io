@@ -5,8 +5,8 @@ interface LoadingPageProps {
   fullScreen?: boolean}
 ,
 export default function LoadingPage({
-  message = 'Loading...';
-  fullScreen = true;
+  message = 'Loading...',
+  fullScreen = true,
 }: LoadingPageProps) {
   if (fullScreen) {
     return (

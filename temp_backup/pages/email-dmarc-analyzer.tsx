@@ -25,10 +25,8 @@ export default function EmailDmarcAnalyzerPage() {
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'DMARC aggregate/forensic reports';
-              'SPF/DKIM audits & DNS history';
-              'Provider insights & tips';
-              'Weekly deliverability scorecard';
+              'DMARC aggregate/forensic reportsSPF/DKIM audits & DNS history',
+              'Provider insights & tipsWeekly deliverability scorecard',
             ].map(f => (
               <div
                 key={f}

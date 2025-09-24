@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import EnhancedSEO from '../components/EnhancedSEO',
-import React from 'react';
+import React from 'react',
 import EnhancedSEOdynamic from '../components/EnhancedSEO.dynamic',
 describe('EnhancedSEO', () => {
   test('renders without crashing', () => {
@@ -13,7 +13,8 @@ describe('EnhancedSEO', () => {
     render(<EnhancedSEO  />)}),
   test('applies correct styling', () => {
     render(<EnhancedSEO  />)})}),
-const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import EnhancedSEOdynamic from "./components/EnhancedSEO.dynamic", describe("EnhancedSEOdynamic",() => { test("renders without crashing",() => { render(<EnhancedSEOdynamic  />), expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedSEOdynamic  />)}), test("handles user interactions",() => { render(<EnhancedSEOdynamic  />)}), test("applies correct styling",() => { render(<EnhancedSEOdynamic  />)})}),''",
+const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom",
+import EnhancedSEOdynamic from "./components/EnhancedSEO.dynamic", describe("EnhancedSEOdynamic",() => { test("renders without crashing",() => { render(<EnhancedSEOdynamic  />), expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedSEOdynamic  />)}), test("handles user interactions",() => { render(<EnhancedSEOdynamic  />)}), test("applies correct styling",() => { render(<EnhancedSEOdynamic  />)})}),''",
 ursor/add-new-services-and-deploy-updates-0o462,
 ursor/fix-syntax-push-and-merge-to-main-40de,
 describe('EnhancedSEOdynamic',
@@ -22,4 +23,5 @@ describe('EnhancedSEOdynamic',
   test('displays correct content',
   test('handles user interactions',
   test('applies correct styling',
-const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import EnhancedSEOdynamic from "./components/EnhancedSEO.dynamic", describe('EnhancedSEOdynamic', () => { test("renders without crashing",() => { render(<EnhancedSEOdynamic  />), expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedSEOdynamic  />)}), test("handles user interactions",() => { render(<EnhancedSEOdynamic  />)}), test("applies correct styling"})}))))))))
+const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom",
+import EnhancedSEOdynamic from "./components/EnhancedSEO.dynamic", describe('EnhancedSEOdynamic', () => { test("renders without crashing",() => { render(<EnhancedSEOdynamic  />), expect(screen.getByTestId("enhancedseo.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<EnhancedSEOdynamic  />)}), test("handles user interactions",() => { render(<EnhancedSEOdynamic  />)}), test("applies correct styling"})}))))))))

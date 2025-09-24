@@ -9,23 +9,23 @@ import {
   Target,
   TrendingUp,
   Users,
-  Globe;
-  ArrowRight;
-  Play;
-  BookOpen;
-  Code;
-  Lightbulb;
-  Star;
-  Award;
-  ChevronRight;
-  ExternalLink;
-  Sparkles;
-  Rocket;
-  Shield;
-  Database;
-  Network;
-  Microscope;
-  Atom;
+  Globe,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Code,
+  Lightbulb,
+  Star,
+  Award,
+  ChevronRight,
+  ExternalLink,
+  Sparkles,
+  Rocket,
+  Shield,
+  Database,
+  Network,
+  Microscope,
+  Atom,
   Layers} from 'lucide-react',
 interface InnovationItem {
   id: string,
@@ -43,7 +43,7 @@ interface InnovationItem {
     efficiency?: string,
     accuracy?: string,
     speed?: string,
-    cost?: string};
+    cost?: string},
 }
 ,
 const AIInnovationHub20o26: React.FC = () => {
@@ -51,127 +51,127 @@ const AIInnovationHub20o26: React.FC = () => {
   const [selectedInnovationsetSelectedInnovation] = useState<InnovationItem | null>(null),
   const [searchQuerysetSearchQuery] = useState(''),
   const categories = [
-    { id: ''all', 'name: 'All 'Innovations', 'icon: Globecount: 89color: 'blue' };
-    { id: 'ai-'core', 'name: 'AI 'Core', 'icon: Braincount: 32color: 'purple' };
-    { id: ''quantum', 'name: 'Quantum 'AI', 'icon: Atomcount: 18color: 'cyan' };
-    { id: ''neural', 'name: 'Neural 'Networks', 'icon: Networkcount: 24color: 'green' };
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcount: 15color: 'yellow' };
-    { id: ''robotics', 'name: ''Robotics', 'icon: Cpucount: 12color: 'red' };
-    { id: ''biotech', 'name: 'BioTech 'AI', 'icon: Microscopecount: 8color: 'pink' }
+    { id: ''allname: 'All 'Innovationsicon: Globecount: 89color: 'blue' },
+    { id: 'ai-'corename: 'AI 'Coreicon: Braincount: 32color: 'purple' },
+    { id: ''quantumname: 'Quantum 'AIicon: Atomcount: 18color: 'cyan' },
+    { id: ''neuralname: 'Neural 'Networksicon: Networkcount: 24color: 'green' },
+    { id: ''automationname: ''Automationicon: Zapcount: 15color: 'yellow' },
+    { id: ''roboticsname: ''Roboticsicon: Cpucount: 12color: 'red' },
+    { id: ''biotechname: 'BioTech 'AIicon: Microscopecount: 8color: 'pink' }
   ],
   const innovations: InnovationItem[] = [
     {
-      id: '1';
-      title: 'Consciousness-Level AI Architecture';
-      description: 'Revolutionary AI system that demonstrates self-awareness and meta-cognitive abilitiesrepresenting a breakthrough in artificial consciousness.';
-      category: 'ai-core';
-      impact: 'revolutionary';
-      timeline: 'Q2 20o26';
-      status: 'testing';
-      tags: [', 'Consciousness', 'Self-'Awareness', 'Meta-'Cognition', 'Breakthrough'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/consciousness-ai-architecture-20o26';
-      featured: true;
+      id: '1',
+      title: 'Consciousness-Level AI Architecture',
+      description: 'Revolutionary AI system that demonstrates self-awareness and meta-cognitive abilitiesrepresenting a breakthrough in artificial consciousness.',
+      category: 'ai-core',
+      impact: 'revolutionary',
+      timeline: 'Q2 20o26',
+      status: 'testing',
+      tags: [Consciousness', 'Self-'AwarenessMeta-'Cognition', 'Breakthrough'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/consciousness-ai-architecture-20o26',
+      featured: true,
       metrics: {
-        efficiency: '95%';
-        accuracy: '99.7%';
-        speed: '10x faster';
+        efficiency: '95%',
+        accuracy: '99.7%',
+        speed: '10x faster',
         cost: '60% reduction'}
-    };
+    },
     {
-      id: '2';
-      title: 'Quantum-Neural Fusion Processor';
-      description: 'First commercial quantum processor integrated with neural networksenabling unprecedented computational power and problem-solving capabilities.';
-      category: 'quantum';
-      impact: 'revolutionary';
-      timeline: 'Q3 20o26';
-      status: 'development';
-      tags: ['Quantum 'Computing', 'Neural 'Networks', 'Fusion'Processor'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/quantum-neural-fusion-processor-20o26';
-      featured: true;
+      id: '2',
+      title: 'Quantum-Neural Fusion Processor',
+      description: 'First commercial quantum processor integrated with neural networksenabling unprecedented computational power and problem-solving capabilities.',
+      category: 'quantum',
+      impact: 'revolutionary',
+      timeline: 'Q3 20o26',
+      status: 'development',
+      tags: ['Quantum 'ComputingNeural 'Networks', 'Fusion'Processor'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/quantum-neural-fusion-processor-20o26',
+      featured: true,
       metrics: {
-        efficiency: '10o00x faster';
-        accuracy: '99.9%';
-        speed: 'Quantum speedup';
+        efficiency: '10o00x faster',
+        accuracy: '99.9%',
+        speed: 'Quantum speedup',
         cost: '80% reduction'}
-    };
+    },
     {
-      id: '3';
-      title: 'Autonomous Business Operations AI';
-      description: 'Complete end-to-end business automation system that can manage entire operations without human intervention while maintaining ethical standards.';
-      category: 'automation';
-      impact: 'high';
-      timeline: 'Q1 20o26';
-      status: 'deployed';
-      tags: ['Business 'Automation', 'Autonomous', 'Operations', 'Ethical AI'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/autonomous-business-ai-20o26';
-      featured: false;
+      id: '3',
+      title: 'Autonomous Business Operations AI',
+      description: 'Complete end-to-end business automation system that can manage entire operations without human intervention while maintaining ethical standards.',
+      category: 'automation',
+      impact: 'high',
+      timeline: 'Q1 20o26',
+      status: 'deployed',
+      tags: ['Business 'AutomationAutonomous', 'OperationsEthical AI'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/autonomous-business-ai-20o26',
+      featured: false,
       metrics: {
-        efficiency: '90%';
-        accuracy: '98%';
-        speed: '24/7 operation';
+        efficiency: '90%',
+        accuracy: '98%',
+        speed: '24/7 operation',
         cost: '70% reduction'}
-    };
+    },
     {
-      id: '4';
-      title: 'Neural Interface Direct Communication';
-      description: 'Breakthrough technology enabling direct brain-to-computer communicationallowing thought-based control of digital systems.';
-      category: 'neural';
-      impact: 'revolutionary';
-      timeline: 'Q4 20o26';
-      status: 'research';
-      tags: ['Neural 'Interface', 'Brain-'Computer', 'Direct 'Communication', 'BCI'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/neural-interface-communication-20o26';
-      featured: true;
+      id: '4',
+      title: 'Neural Interface Direct Communication',
+      description: 'Breakthrough technology enabling direct brain-to-computer communicationallowing thought-based control of digital systems.',
+      category: 'neural',
+      impact: 'revolutionary',
+      timeline: 'Q4 20o26',
+      status: 'research',
+      tags: ['Neural 'InterfaceBrain-'Computer', 'Direct 'CommunicationBCI'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/neural-interface-communication-20o26',
+      featured: true,
       metrics: {
-        efficiency: '85%';
-        accuracy: '95%';
-        speed: 'Real-time';
+        efficiency: '85%',
+        accuracy: '95%',
+        speed: 'Real-time',
         cost: '50% reduction'}
-    };
+    },
     {
-      id: '5';
-      title: 'Self-Evolving Robotic Systems';
-      description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent robotics.';
-      category: 'robotics';
-      impact: 'high';
-      timeline: 'Q2 20o26';
-      status: 'testing';
-      tags: [', 'Robotics', 'Self-'Evolution', 'Autonomous 'Learning', 'Adaptation'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/self-evolving-robots-20o26';
-      featured: false;
+      id: '5',
+      title: 'Self-Evolving Robotic Systems',
+      description: 'Robots that can learnadaptand evolve their capabilities autonomouslyrepresenting the next generation of intelligent robotics.',
+      category: 'robotics',
+      impact: 'high',
+      timeline: 'Q2 20o26',
+      status: 'testing',
+      tags: [Robotics', 'Self-'EvolutionAutonomous 'Learning', 'Adaptation'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/self-evolving-robots-20o26',
+      featured: false,
       metrics: {
-        efficiency: '88%';
-        accuracy: '96%';
-        speed: 'Continuous learning';
+        efficiency: '88%',
+        accuracy: '96%',
+        speed: 'Continuous learning',
         cost: '65% reduction'}
-    };
+    },
     {
-      id: '6';
-      title: 'AI-Powered Drug Discovery Platform';
-      description: 'Revolutionary platform that uses AI to accelerate drug discoveryreducing development time from years to months.';
-      category: 'biotech';
-      impact: 'high';
-      timeline: 'Q3 20o26';
-      status: 'development';
-      tags: ['Drug 'Discovery', 'Biotech', 'Pharmaceutical', 'AI Platform'];
-      image: '/api/placeholder/60o0/40o0';
-      url: '/ai-drug-discovery-20o26';
-      featured: false;
+      id: '6',
+      title: 'AI-Powered Drug Discovery Platform',
+      description: 'Revolutionary platform that uses AI to accelerate drug discoveryreducing development time from years to months.',
+      category: 'biotech',
+      impact: 'high',
+      timeline: 'Q3 20o26',
+      status: 'development',
+      tags: ['Drug 'DiscoveryBiotech', 'PharmaceuticalAI Platform'],
+      image: '/api/placeholder/60o0/40o0',
+      url: '/ai-drug-discovery-20o26',
+      featured: false,
       metrics: {
-        efficiency: '95%';
-        accuracy: '97%';
-        speed: '10x faster';
+        efficiency: '95%',
+        accuracy: '97%',
+        speed: '10x faster',
         cost: '75% reduction'}
     }
   ],
   const filteredInnovations = innovations.filter(innovation => {
     const matchesCategory = activeCategory === 'all' || innovation.category === activeCategory,
-    const matchesSearch = searchQuery === ', ' ||,
+    const matchesSearch = searchQuery ===  ||,
       innovation.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       innovation.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       innovation.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -184,7 +184,7 @@ const AIInnovationHub20o26: React.FC = () => {
       case 'high': return 'bg-orange-10o0 text-orange-80o0',
       case 'revolutionary': return 'bg-red-10o0 text-red-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'research': return 'bg-purple-10o0 text-purple-80o0',
@@ -192,10 +192,10 @@ const AIInnovationHub20o26: React.FC = () => {
       case 'testing': return 'bg-yellow-10o0 text-yellow-80o0',
       case 'deployed': return 'bg-green-10o0 text-green-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData ? categoryData.icon : Globe};
+    return categoryData ? categoryData.icon : Globe},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
       {/* Header Section */}
@@ -462,5 +462,5 @@ const AIInnovationHub20o26: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default AIInnovationHub20o26;
+    </div>)},
+export default AIInnovationHub20o26,

@@ -1,7 +1,7 @@
-import React from 'react';
+import React from 'react',
 export class TestingSystem {
   static async testUserInteraction(
-    element: HTMLElement;
+    element: HTMLElement,
     action: 'click' | 'type' | 'hover') {
     switch (action) {
       case 'click':,

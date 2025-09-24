@@ -8,8 +8,8 @@ const path = require('path'),
  */,
 function fixMergeConflicts() {
   try {
-    let content = fs.readFileSync (file_path, 'utf8');
-    const original_content = content;
+    let content = fs.readFileSync (file_path, 'utf8'),
+    const original_content = content,
     // Remove merge conflict markers and keep HEAD version,
     content = content.replace (/[\s\S]*?,
     content = content.replace (/,

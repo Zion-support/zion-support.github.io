@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26 - Future AI Technologies | Zion Tech Group';
+  title: 'AI 20o26 - Future AI Technologies | Zion Tech Group',
   description:,
-    'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.';
+    'Explore the future of AI with revolutionary technologies, quantum computing, and next-generation artificial intelligence solutions.',
   keywords: [
-    'AI 20o26';
-    'future AI';
-    'quantum AI';
-    'revolutionary technology';
-    'artificial general intelligence';
-  ];
-};
+    'AI 20o26future AI',
+    'quantum AIrevolutionary technology',
+    'artificial general intelligence',
+  ]
+},
 export default function AI20o26Page() {
   return (
     <div className='min-h-screen bg-white'>,

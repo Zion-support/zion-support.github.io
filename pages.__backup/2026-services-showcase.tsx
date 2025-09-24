@@ -44,37 +44,37 @@ export default function Services20o26ShowcasePage() {
     if (serviceVariant.includes('api')) return 'quantum-advanced',
     if (serviceVariant.includes('integration')) return 'quantum-advanced',
     if (serviceVariant.includes('analytics')) return 'neural',
-    return 'default'};
+    return 'default'},
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all 20o26 services,
   const all20o26Services = [
-    ...innovative20o26MicroSaasV2Services;
-    ...emergingTech20o26ServicesV2;
+    ...innovative20o26MicroSaasV2Services,
+    ...emergingTech20o26ServicesV2,
     ...enterpriseIT20o26ServicesV2],
   // Enhanced categories for 20o26,
   const categories = [
-    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length };
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length };
-    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length };
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length };
+    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
     { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all20o26Services.filter(s => s.category.includes('SaaS')).length }
   ],
   const priceRanges = [
-    { id: 'all'name: 'All Prices'range: 'All' };
-    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' };
-    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' };
-    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' };
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' },
+    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' },
+    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' },
     { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ],
   const sortOptions = [
-    { id: 'name'name: 'Name A-Z' };
-    { id: 'price-low'name: 'Price Low to High' };
-    { id: 'price-high'name: 'Price High to Low' };
-    { id: 'popularity'name: 'Most Popular' };
+    { id: 'name'name: 'Name A-Z' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' },
+    { id: 'popularity'name: 'Most Popular' },
     { id: 'newest'name: 'Newest First' }
   ],
   // Filter and sort services,

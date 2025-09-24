@@ -2,10 +2,10 @@ import Link from 'next/link',
 export default function Footer() {
   const currentYear = new Date().getFullYear(),
   const footerLinks = [
-    { href: '/about', label: 'About' };
-    { href: '/services', label: 'Services' };
-    { href: '/blog', label: 'Blog' };
-    { href: '/contact', label: 'Contact' };
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/blog', label: 'Blog' },
+    { href: '/contact', label: 'Contact' },
   ],
   return (
     <footer className='bg-black/40 backdrop-blur-md border-t border-white/10'>,

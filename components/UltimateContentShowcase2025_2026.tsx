@@ -1,67 +1,67 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const UltimateContentShowcase20o25_20o26: React.FC = () => {
   const contentItems = [
     {
-      title: 'AI 20o25-20o26 Ultimate Business Transformation';
+      title: 'AI 20o25-20o26 Ultimate Business Transformation',
       description:,
-        'Complete guide to achieving 50,0o00% ROI with revolutionary AI technologies';
-      category: 'AI Revolution';
-      readTime: '15 min read';
-      featured: true;
-      image: '/images/ai-20o25-20o26-ultimate-business-transformation.jpg';
-      href: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution';
-    };
+        'Complete guide to achieving 50,0o00% ROI with revolutionary AI technologies',
+      category: 'AI Revolution',
+      readTime: '15 min read',
+      featured: true,
+      image: '/images/ai-20o25-20o26-ultimate-business-transformation.jpg',
+      href: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution'
+    },
     {
-      title: 'Fortune 50o0 Success: 50,0o00% ROI in 8 Months';
+      title: 'Fortune 50o0 Success: 50,0o00% ROI in 8 Months',
       description:,
-        'Real case study of how a manufacturing giant achieved unprecedented returns';
-      category: 'Case Study';
-      readTime: '12 min read';
-      featured: true;
-      image: '/images/fortune-50o0-ai-transformation-50o000-roi.jpg';
-      href: '/case-studies/ai-20o25-20o26-ultimate-transformation-50o000-roi-success-story';
-    };
+        'Real case study of how a manufacturing giant achieved unprecedented returns',
+      category: 'Case Study',
+      readTime: '12 min read',
+      featured: true,
+      image: '/images/fortune-50o0-ai-transformation-50o000-roi.jpg',
+      href: '/case-studies/ai-20o25-20o26-ultimate-transformation-50o000-roi-success-story'
+    },
     {
-      title: 'Neural Superintelligence: The Next Frontier';
+      title: 'Neural Superintelligence: The Next Frontier',
       description:,
-        'Exploring AI systems that think and reason at human-plus levels';
-      category: 'Technology';
-      readTime: '10 min read';
-      featured: false;
-      image: '/images/neural-superintelligence-20o25.jpg';
-      href: '/blog/neural-superintelligence-20o25-next-frontier';
-    };
+        'Exploring AI systems that think and reason at human-plus levels',
+      category: 'Technology',
+      readTime: '10 min read',
+      featured: false,
+      image: '/images/neural-superintelligence-20o25.jpg',
+      href: '/blog/neural-superintelligence-20o25-next-frontier'
+    },
     {
-      title: 'Quantum-Neural Fusion: Exponential Processing Power';
+      title: 'Quantum-Neural Fusion: Exponential Processing Power',
       description:,
-        'How quantum computing combined with neural networks creates breakthrough capabilities';
-      category: 'Technology';
-      readTime: '8 min read';
-      featured: false;
-      image: '/images/quantum-neural-fusion-20o25.jpg';
-      href: '/blog/quantum-neural-fusion-20o25-exponential-power';
-    };
+        'How quantum computing combined with neural networks creates breakthrough capabilities',
+      category: 'Technology',
+      readTime: '8 min read',
+      featured: false,
+      image: '/images/quantum-neural-fusion-20o25.jpg',
+      href: '/blog/quantum-neural-fusion-20o25-exponential-power'
+    },
     {
-      title: 'Autonomous Business Ecosystems: Self-Managing Operations';
+      title: 'Autonomous Business Ecosystems: Self-Managing Operations',
       description:,
-        'Revolutionary systems that optimize and manage themselves without human intervention';
-      category: 'Automation';
-      readTime: '11 min read';
-      featured: false;
-      image: '/images/autonomous-business-ecosystems-20o25.jpg';
-      href: '/blog/autonomous-business-ecosystems-20o25-self-managing';
-    };
+        'Revolutionary systems that optimize and manage themselves without human intervention',
+      category: 'Automation',
+      readTime: '11 min read',
+      featured: false,
+      image: '/images/autonomous-business-ecosystems-20o25.jpg',
+      href: '/blog/autonomous-business-ecosystems-20o25-self-managing'
+    },
     {
-      title: 'Synthetic Intelligence: AI That Creates and Innovates';
+      title: 'Synthetic Intelligence: AI That Creates and Innovates',
       description:,
-        'Next-generation AI agents that can create solutions and drive continuous improvement';
-      category: 'Innovation';
-      readTime: '9 min read';
-      featured: false;
-      image: '/images/synthetic-intelligence-20o25.jpg';
-      href: '/blog/synthetic-intelligence-20o25-ai-innovation';
-    };
+        'Next-generation AI agents that can create solutions and drive continuous improvement',
+      category: 'Innovation',
+      readTime: '9 min read',
+      featured: false,
+      image: '/images/synthetic-intelligence-20o25.jpg',
+      href: '/blog/synthetic-intelligence-20o25-ai-innovation'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -227,5 +227,5 @@ const UltimateContentShowcase20o25_20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentShowcase20o25_20o26;
+    </section>)},
+export default UltimateContentShowcase20o25_20o26,

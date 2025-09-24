@@ -9,11 +9,11 @@ export default function AiLegalDocumentAnalysis() {
 			implementationWeeks="2-3 weeks",
 			roiNote="Legal teams report 40o0% ROI from efficiency and risk reduction",
 			features={[
-				"AI contract analysis and review";
-				"Risk identification and assessment";
-				"Key clause extraction and suggestions";
-				"Compliance and policy checks";
-				"Playbooks and negotiation aids";
+				"AI contract analysis and review",
+				"Risk identification and assessment",
+				"Key clause extraction and suggestions",
+				"Compliance and policy checks",
+				"Playbooks and negotiation aids",
 				"Audit trails and redlines]}
 			]}
 			industries={["Legal", "Enterprise", "Procurement", "Compliance"]}

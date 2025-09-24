@@ -1,15 +1,15 @@
 import Layout from '../components/layout/Layout',
 import {
-  Zap;
-  Sparkles;
-  Target;
-  Clock;
-  CheckCircle;
-  Brain;
-  Settings;
-  Cpu;
-  Workflow;
-  Rocket;
+  Zap,
+  Sparkles,
+  Target,
+  Clock,
+  CheckCircle,
+  Brain,
+  Settings,
+  Cpu,
+  Workflow,
+  Rocket,
 } from 'lucide-react',
 export default function AIAutomation20o41() {
   return (
@@ -32,7 +32,7 @@ export default function AIAutomation20o41() {
                 <span className='text-white'>20o41</span>,
               </h1>,
               <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8'>,
-                Experience the future of automation with AI systems that learn;
+                Experience the future of automation with AI systems that learn,
                 adapt, and execute complex tasks with human-like intelligence,
                 and precision.,
               </p>,
@@ -62,47 +62,47 @@ export default function AIAutomation20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Cognitive Automation';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Cognitive Automation',
                   description:,
-                    'AI systems that understand context, make decisions, and learn from experience to automate complex cognitive tasks.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'AI systems that understand context, make decisions, and learn from experience to automate complex cognitive tasks.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Workflow className='w-8 h-8' />;
-                  title: 'Intelligent Workflows';
+                  icon: <Workflow className='w-8 h-8' />,
+                  title: 'Intelligent Workflows',
                   description:,
-                    'Self-optimizing workflows that automatically adjust and improve based on performance data and outcomes.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Self-optimizing workflows that automatically adjust and improve based on performance data and outcomes.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Cpu className='w-8 h-8' />;
-                  title: 'Process Intelligence';
+                  icon: <Cpu className='w-8 h-8' />,
+                  title: 'Process Intelligence',
                   description:,
-                    'Deep understanding of business processes that enables intelligent automation of end-to-end operations.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Deep understanding of business processes that enables intelligent automation of end-to-end operations.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Adaptive Learning';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Adaptive Learning',
                   description:,
-                    'Continuous learning systems that improve automation accuracy and efficiency over time.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Continuous learning systems that improve automation accuracy and efficiency over time.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Execution';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Execution',
                   description:,
-                    'Instant automation execution with real-time monitoring and adaptive response to changing conditions.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Instant automation execution with real-time monitoring and adaptive response to changing conditions.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Settings className='w-8 h-8' />;
-                  title: 'Self-Configuration';
+                  icon: <Settings className='w-8 h-8' />,
+                  title: 'Self-Configuration',
                   description:,
-                    'AI systems that automatically configure and optimize themselves for maximum performance and efficiency.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'AI systems that automatically configure and optimize themselves for maximum performance and efficiency.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -137,38 +137,38 @@ export default function AIAutomation20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'RPA Automation';
+                  name: 'RPA Automation',
                   description:,
-                    'Robotic process automation for repetitive tasks';
-                };
+                    'Robotic process automation for repetitive tasks',
+                },
                 {
-                  name: 'Cognitive Automation';
-                  description: 'AI-powered decision making and problem solving';
-                };
+                  name: 'Cognitive Automation',
+                  description: 'AI-powered decision making and problem solving'
+                },
                 {
-                  name: 'Process Automation';
-                  description: 'End-to-end business process automation';
-                };
+                  name: 'Process Automation',
+                  description: 'End-to-end business process automation'
+                },
                 {
-                  name: 'Data Automation';
-                  description: 'Automated data processing and analysis';
-                };
+                  name: 'Data Automation',
+                  description: 'Automated data processing and analysis'
+                },
                 {
-                  name: 'Customer Service';
-                  description: 'AI-powered customer support automation';
-                };
+                  name: 'Customer Service',
+                  description: 'AI-powered customer support automation'
+                },
                 {
-                  name: 'Marketing Automation';
-                  description: 'Intelligent marketing campaign automation';
-                };
+                  name: 'Marketing Automation',
+                  description: 'Intelligent marketing campaign automation'
+                },
                 {
-                  name: 'Sales Automation';
-                  description: 'Automated sales processes and lead management';
-                };
+                  name: 'Sales Automation',
+                  description: 'Automated sales processes and lead management'
+                },
                 {
-                  name: 'HR Automation';
-                  description: 'Human resources process automation';
-                };
+                  name: 'HR Automation',
+                  description: 'Human resources process automation'
+                },
               ].map((type, index) => (
                 <div
                   key={index}
@@ -196,55 +196,50 @@ export default function AIAutomation20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Process Analysis';
+                  phase: 'Process Analysis',
                   description:,
-                    'AI analyzes existing processes to identify automation opportunities and optimization potential';
+                    'AI analyzes existing processes to identify automation opportunities and optimization potential',
                   features: [
-                    'Process mapping';
-                    'Efficiency analysis';
-                    'Automation potential';
-                  ];
-                };
+                    'Process mappingEfficiency analysis',
+                    'Automation potential',
+                  ]
+                },
                 {
-                  phase: 'AI Design';
+                  phase: 'AI Design',
                   description:,
-                    'Intelligent design of automation workflows that optimize for efficiency and outcomes';
+                    'Intelligent design of automation workflows that optimize for efficiency and outcomes',
                   features: [
-                    'Workflow design';
-                    'Logic optimization';
-                    'Integration planning';
-                  ];
-                };
+                    'Workflow designLogic optimization',
+                    'Integration planning',
+                  ]
+                },
                 {
-                  phase: 'Implementation';
+                  phase: 'Implementation',
                   description:,
-                    'Seamless deployment of automation solutions with minimal disruption to operations';
+                    'Seamless deployment of automation solutions with minimal disruption to operations',
                   features: [
-                    'Phased rollout';
-                    'Testing & validation';
-                    'User training';
-                  ];
-                };
+                    'Phased rolloutTesting & validation',
+                    'User training',
+                  ]
+                },
                 {
-                  phase: 'Monitoring';
+                  phase: 'Monitoring',
                   description:,
-                    'Continuous monitoring and optimization of automated processes for maximum performance';
+                    'Continuous monitoring and optimization of automated processes for maximum performance',
                   features: [
-                    'Performance tracking';
-                    'Real-time alerts';
-                    'Continuous improvement';
-                  ];
-                };
+                    'Performance trackingReal-time alerts',
+                    'Continuous improvement',
+                  ]
+                },
                 {
-                  phase: 'Optimization';
+                  phase: 'Optimization',
                   description:,
-                    'AI-driven optimization that continuously improves automation efficiency and effectiveness';
+                    'AI-driven optimization that continuously improves automation efficiency and effectiveness',
                   features: [
-                    'Learning algorithms';
-                    'Performance tuning';
-                    'Adaptive optimization';
-                  ];
-                };
+                    'Learning algorithmsPerformance tuning',
+                    'Adaptive optimization',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -290,65 +285,59 @@ export default function AIAutomation20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'Automate production lines, quality control, and supply chain management with AI-powered robotics and systems.';
+                    'Automate production lines, quality control, and supply chain management with AI-powered robotics and systems.',
                   applications: [
-                    'Production automation';
-                    'Quality control';
-                    'Supply chain optimization';
-                  ];
-                };
+                    'Production automationQuality control',
+                    'Supply chain optimization',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Automate patient care, administrative processes, and medical diagnostics with intelligent AI systems.';
+                    'Automate patient care, administrative processes, and medical diagnostics with intelligent AI systems.',
                   applications: [
-                    'Patient monitoring';
-                    'Administrative tasks';
-                    'Diagnostic assistance';
-                  ];
-                };
+                    'Patient monitoringAdministrative tasks',
+                    'Diagnostic assistance',
+                  ]
+                },
                 {
-                  industry: 'Finance';
+                  industry: 'Finance',
                   description:,
-                    'Automate trading, risk assessment, and customer service with AI-powered financial automation.';
+                    'Automate trading, risk assessment, and customer service with AI-powered financial automation.',
                   applications: [
-                    'Trading automation';
-                    'Risk management';
-                    'Customer service';
-                  ];
-                };
+                    'Trading automationRisk management',
+                    'Customer service',
+                  ]
+                },
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'Automate inventory management, customer service, and marketing with intelligent retail automation.';
+                    'Automate inventory management, customer service, and marketing with intelligent retail automation.',
                   applications: [
-                    'Inventory management';
-                    'Customer support';
-                    'Marketing campaigns';
-                  ];
-                };
+                    'Inventory managementCustomer support',
+                    'Marketing campaigns',
+                  ]
+                },
                 {
-                  industry: 'Transportation';
+                  industry: 'Transportation',
                   description:,
-                    'Automate logistics, route optimization, and fleet management with AI transportation systems.';
+                    'Automate logistics, route optimization, and fleet management with AI transportation systems.',
                   applications: [
-                    'Logistics automation';
-                    'Route optimization';
-                    'Fleet management';
-                  ];
-                };
+                    'Logistics automationRoute optimization',
+                    'Fleet management',
+                  ]
+                },
                 {
-                  industry: 'Energy';
+                  industry: 'Energy',
                   description:,
-                    'Automate grid management, energy distribution, and maintenance with intelligent energy systems.';
+                    'Automate grid management, energy distribution, and maintenance with intelligent energy systems.',
                   applications: [
-                    'Grid automation';
-                    'Energy distribution';
-                    'Predictive maintenance';
-                  ];
-                };
+                    'Grid automationEnergy distribution',
+                    'Predictive maintenance',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -385,33 +374,33 @@ export default function AIAutomation20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Increased Efficiency';
+                  title: 'Increased Efficiency',
                   description:,
-                    'Automate repetitive tasks and optimize processes to achieve unprecedented levels of operational efficiency.';
-                  icon: <Zap className='w-8 h-8' />;
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Automate repetitive tasks and optimize processes to achieve unprecedented levels of operational efficiency.',
+                  icon: <Zap className='w-8 h-8' />,
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  title: 'Cost Reduction';
+                  title: 'Cost Reduction',
                   description:,
-                    'Reduce operational costs through automation while improving quality and consistency of outputs.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Reduce operational costs through automation while improving quality and consistency of outputs.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: '24/7 Operation';
+                  title: '24/7 Operation',
                   description:,
-                    'Enable round-the-clock operations with AI systems that never sleep and maintain consistent window.window.performance.';
-                  icon: <Clock className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Enable round-the-clock operations with AI systems that never sleep and maintain consistent window.window.performance.',
+                  icon: <Clock className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Scalability';
+                  title: 'Scalability',
                   description:,
-                    'Scale operations instantly without proportional increases in human resources or infrastructure.';
-                  icon: <Rocket className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Scale operations instantly without proportional increases in human resources or infrastructure.',
+                  icon: <Rocket className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

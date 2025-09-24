@@ -8,19 +8,19 @@ import {Button} from "@/components/ui/button",
 import {cn} from "@/lib/utils",
 import {ForumPost} from "@/types/community",
 import {ProfileBadge} from "@/components/profile/ProfileBadge",
-import { formatDistanceToNow } from "date-fns";
-import { Link } from "react-router-dom";
-import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { cn } from "@/lib/utils";
+import { formatDistanceToNow } from "date-fns",
+import { Link } from "react-router-dom",
+import { ThumbsUp, ThumbsDown, MessageSquare, Pin, Lock, CheckCircle } from "lucide-react",
+import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { cn } from "@/lib/utils",
 import { ForumPost } from "@/types/community",
 import { ProfileBadge } from "@/components/profile/ProfileBadge",
-import { ForumPost } from "@/types/community";
-import { ProfileBadge } from "@/components/profile/ProfileBadge";
-import { formatDistanceToNow } from "date-fns";
+import { ForumPost } from "@/types/community",
+import { ProfileBadge } from "@/components/profile/ProfileBadge",
+import { formatDistanceToNow } from "date-fns",
 interface PostCardProps {
   post: ForumPost,
   compact?: boolean}
@@ -32,8 +32,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
     <Card className={cn(
       "transition-shadow hover: shadow-md",
       post.isPinned && "border-zion-purple/50",
-      "transition-shadow hover:shadow-md";
-      post.isPinned && "border-zion-purple/50";
+      "transition-shadow hover: shadow-md",
+      post.isPinned && "border-zion-purple/50",
       post.isFeatured && "bg-zion-purple/5")}>,
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">,
         <Avatar className="h-10 w-10">,
@@ -59,15 +59,15 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
             {post.tags?.map(tag => (
               <Badge key={tag} variant="outline" className="bg-zion-purple/10 hover: bg-zion-purple/20">,
 interface PostCardProps {
-  post: ForumPost;
+  post: ForumPost,
   compact?: boolean}
 ,
 export const PostCard = ({ post, compact = false }: PostCardProps) => {
-  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true });
+  const timeAgo = formatDistanceToNow(new Date(post.createdAt), { addSuffix: true }),
   return (
     <Card className={cn(
-      "transition-shadow hover:shadow-md";
-      post.isPinned && "border-zion-purple/50";
+      "transition-shadow hover: shadow-md",
+      post.isPinned && "border-zion-purple/50",
       post.isFeatured && "bg-zion-purple/5")}>,
       <CardHeader className="flex flex-row items-start gap-4 space-y-0">,
         <Avatar className="h-10 w-10">,
@@ -125,8 +125,8 @@ export const PostCard = ({ post, compact = false }: PostCardProps) => {
 ,
       </CardFooter>,
     </Card>)}
-export default PostCard;
+export default PostCard,
       </CardFooter>,
-    </Card>)};
-export default PostCard;
+    </Card>)},
+export default PostCard,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}})))

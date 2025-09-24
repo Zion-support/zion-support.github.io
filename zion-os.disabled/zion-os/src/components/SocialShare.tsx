@@ -9,21 +9,21 @@ interface SocialShareProps {
 export function SocialShare({ urltitledescriptionclassName = "" }: SocialShareProps) {
   const [copiedsetCopied] = useState(false),
   const shareData ={
-    url;
-    title;
-    text: description || title};
+    url,
+    title,
+    text: description || title},
   const shareLinks ={
-    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`;
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`;
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`;
-    reddit: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`};
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(url)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(url)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(url)}`,
+    reddit: `https://reddit.com/submit?url=${encodeURIComponent(url)}&title=${encodeURIComponent(title)}`},
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(url),
       setCopied(true),
       setTimeout(() => setCopied(false)20o00)} catch (err) {
       console.error('Failed to copy: 'err)}
-  };
+  },
   return (
     <div className={`flex items-center gap-2 ${className}`}>,
       <span className="text-sm text-white/70">Share: </span>,

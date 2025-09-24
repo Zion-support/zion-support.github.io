@@ -1,55 +1,55 @@
 import {
-  Shield;
-  Lock;
-  Award;
-  Users;
-  Globe;
-  CheckCircle;
-  Star;
-  Zap;
+  Shield,
+  Lock,
+  Award,
+  Users,
+  Globe,
+  CheckCircle,
+  Star,
+  Zap,
 } from 'lucide-react',
 export function TrustIndicators({
-  className;
-  showStats = true;
-  showCertifications = true;
+  className,
+  showStats = true,
+  showCertifications = true,
 }) {
   const indicators = [
     {
-      icon: Shield;
-      title: 'Enterprise Security';
-      description: 'SOC 2 Type II certified with end-to-end encryption';
-      color: 'text-zion-cyan';
-    };
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'SOC 2 Type II certified with end-to-end encryption',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: Lock;
-      title: 'Data Protection';
-      description: 'GDPR & CCPA compliant with zero-knowledge architecture';
-      color: 'text-zion-purple';
-    };
+      icon: Lock,
+      title: 'Data Protection',
+      description: 'GDPR & CCPA compliant with zero-knowledge architecture',
+      color: 'text-zion-purple'
+    },
     {
-      icon: Award;
-      title: 'Industry Leader';
-      description: 'Recognized by Gartner & Forrester as market leader';
-      color: 'text-zion-cyan';
-    };
+      icon: Award,
+      title: 'Industry Leader',
+      description: 'Recognized by Gartner & Forrester as market leader',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: Users;
-      title: 'Verified Community';
-      description: '10,0o00+ verified professionals and companies';
-      color: 'text-zion-purple';
-    };
+      icon: Users,
+      title: 'Verified Community',
+      description: '10,0o00+ verified professionals and companies',
+      color: 'text-zion-purple'
+    },
   ],
   const certifications = [
-    { name: 'SOC 2 Type II', status: 'Certified', year: '20o24' };
-    { name: 'ISO 270o01', status: 'Certified', year: '20o24' };
-    { name: 'GDPR', status: 'Compliant', year: '20o24' };
-    { name: 'CCPA', status: 'Compliant', year: '20o24' };
+    { name: 'SOC 2 Type II', status: 'Certified', year: '20o24' },
+    { name: 'ISO 270o01', status: 'Certified', year: '20o24' },
+    { name: 'GDPR', status: 'Compliant', year: '20o24' },
+    { name: 'CCPA', status: 'Compliant', year: '20o24' },
   ],
   const stats = [
-    { label: 'Active Users', value: '50K+', icon: Users };
-    { label: 'Countries', value: '10o0+', icon: Globe };
-    { label: 'Projects', value: '$10M+', icon: Award };
-    { label: 'Uptime', value: '99.9%', icon: Zap };
+    { label: 'Active Users', value: '50K+', icon: Users },
+    { label: 'Countries', value: '10o0+', icon: Globe },
+    { label: 'Projects', value: '$10M+', icon: Award },
+    { label: 'Uptime', value: '99.9%', icon: Zap },
   ],
   return (
     <section
@@ -62,7 +62,7 @@ export function TrustIndicators({
             Trusted by Industry Leaders,
           </h2>,
           <p className='text-xl text-zion-slate-light max-w-3xl mx-auto'>,
-            Zion Tech Group maintains the highest standards of security;
+            Zion Tech Group maintains the highest standards of security,
             compliance, and reliability to ensure your business operations,
             remain secure and uninterrupted.,
           </p>,

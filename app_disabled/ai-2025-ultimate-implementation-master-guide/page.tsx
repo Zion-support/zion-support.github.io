@@ -5,7 +5,7 @@ export default function Page() {
       <h1>AI 2025 Ultimate Implementation Master Guide</h1>,
       <p>Content temporarily simplified to unblock build.</p>,
     </main>)}
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import { ArrowLeft, Calendar, User, Download, BookOpen, CheckCircle, Star, Zap, Brain, Target, Shield, TrendingUp } from 'lucide-react',
@@ -26,7 +26,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
             </span>,
           </h1>,
           <p className="text-xl text-indigo-100 mb-8 leading-relaxed">,
-            The most comprehensive AI implementation guide for 2025. Includes templates, checklists;
+            The most comprehensive AI implementation guide for 2025. Includes templates, checklists,
             best practices, and step-by-step strategies for successful AI transformation in any organization.,
           </p>,
           <div className="flex flex-wrap gap-4 text-sm">,
@@ -487,7 +487,7 @@ export default function AI2025UltimateImplementationMasterGuide() {
           <div className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-xl p-8 text-center mb-12">,
             <h2 className="text-3xl font-bold mb-4">Get Your Complete Toolkit</h2>,
             <p className="text-indigo-100 mb-8 text-lg">,
-              Download the complete AI 2025 Ultimate Implementation Master Guide with all templates;
+              Download the complete AI 2025 Ultimate Implementation Master Guide with all templates,
               checklists, and resources included.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

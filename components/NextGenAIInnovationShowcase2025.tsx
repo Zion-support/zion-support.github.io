@@ -10,73 +10,73 @@ import {
   Shield,
   Target,
   TrendingUp,
-  Users;
-  ArrowRight;
-  Play;
-  Star;
-  CheckCircle;
-  Lightbulb;
-  Rocket;
-  Globe;
+  Users,
+  ArrowRight,
+  Play,
+  Star,
+  CheckCircle,
+  Lightbulb,
+  Rocket,
+  Globe,
   Lock} from 'lucide-react',
 const NextGenAIInnovationShowcase20o25 = () => {
   const [activeFeaturesetActiveFeature] = useState(0),
   const [isPlayingsetIsPlaying] = useState(false),
   const innovations = [
     {
-      id: 'quantum-ai';
-      title: 'Quantum-AI Fusion Technology';
-      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power';
-      icon: Brain;
-      features: ['10o00x faster 'processing', 'Quantum neural 'networks', 'Breakthrough algorithms'];
-      impact: 'Transform entire industries';
-      color: 'from-purple-60o0 to-blue-60o0'};
+      id: 'quantum-ai',
+      title: 'Quantum-AI Fusion Technology',
+      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented processing power',
+      icon: Brain,
+      features: ['10o00x faster 'processingQuantum neural 'networks', 'Breakthrough algorithms'],
+      impact: 'Transform entire industries',
+      color: 'from-purple-60o0 to-blue-60o0'},
     {
-      id: 'neural-interfaces';
-      title: 'Neural Interface Revolution';
-      description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration';
-      icon: Network;
-      features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless integration'];
-      impact: 'Redefine human potential';
-      color: 'from-blue-60o0 to-cyan-60o0'};
+      id: 'neural-interfaces',
+      title: 'Neural Interface Revolution',
+      description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',
+      icon: Network,
+      features: ['Real-time thought 'processingEnhanced cognitive 'abilities', 'Seamless integration'],
+      impact: 'Redefine human potential',
+      color: 'from-blue-60o0 to-cyan-60o0'},
     {
-      id: 'autonomous-systems';
-      title: 'Autonomous Business Systems';
-      description: 'Self-managing AI systems that operate independently while maintaining peak performance';
-      icon: Cpu;
-      features: ['Self-'optimization', 'Predictive 'maintenance', 'Adaptive learning'];
-      impact: 'Revolutionize business operations';
-      color: 'from-green-60o0 to-emerald-60o0'};
+      id: 'autonomous-systems',
+      title: 'Autonomous Business Systems',
+      description: 'Self-managing AI systems that operate independently while maintaining peak performance',
+      icon: Cpu,
+      features: ['Self-'optimizationPredictive 'maintenance', 'Adaptive learning'],
+      impact: 'Revolutionize business operations',
+      color: 'from-green-60o0 to-emerald-60o0'},
     {
-      id: 'consciousness-ai';
-      title: 'Conscious AI Framework';
-      description: 'Advanced AI systems with genuine understanding and emotional intelligence';
-      icon: Lightbulb;
-      features: ['Emotional 'intelligence', 'Contextual 'understanding', 'Ethical decision making'];
-      impact: 'Create truly intelligent systems';
+      id: 'consciousness-ai',
+      title: 'Conscious AI Framework',
+      description: 'Advanced AI systems with genuine understanding and emotional intelligence',
+      icon: Lightbulb,
+      features: ['Emotional 'intelligenceContextual 'understanding', 'Ethical decision making'],
+      impact: 'Create truly intelligent systems',
       color: 'from-orange-60o0 to-red-60o0'}
   ],
   const stats = [
-    { number: '50o0%'label: 'Performance 'Increase', 'icon: TrendingUp };
-    { number: '99.9%'label: 'Accuracy 'Rate', 'icon: Target };
-    { number: '10'x', 'label: 'Faster 'Deployment', 'icon: Rocket };
-    { number: '24/7'label: 'Autonomous 'Operation', 'icon: Globe }
+    { number: '50o0%'label: 'Performance 'Increaseicon: TrendingUp },
+    { number: '99.9%'label: 'Accuracy 'Rateicon: Target },
+    { number: '10'xlabel: 'Faster 'Deploymenticon: Rocket },
+    { number: '24/7'label: 'Autonomous 'Operationicon: Globe }
   ],
   const testimonials = [
     {
-      name: 'Dr. Sarah Chen';
-      role: 'CTOTechCorp';
-      quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.';
-      rating: 5};
+      name: 'Dr. Sarah Chen',
+      role: 'CTOTechCorp',
+      quote: 'This technology has transformed our entire infrastructure. We\'re seeing unprecedented efficiency gains.',
+      rating: 5},
     {
-      name: 'Marcus Rodriguez';
-      role: 'CEOInnovateLabs';
-      quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.';
-      rating: 5};
+      name: 'Marcus Rodriguez',
+      role: 'CEOInnovateLabs',
+      quote: 'The neural interface technology is revolutionary. It\'s like having a supercomputer in your mind.',
+      rating: 5},
     {
-      name: 'Dr. Emily Watson';
-      role: 'AI Research Director';
-      quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.';
+      name: 'Dr. Emily Watson',
+      role: 'AI Research Director',
+      quote: 'The consciousness framework represents the future of AI. We\'re witnessing history in the making.',
       rating: 5}
   ],
   useEffect(() => {
@@ -317,5 +317,5 @@ const NextGenAIInnovationShowcase20o25 = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>)};
-export default NextGenAIInnovationShowcase20o25;
+    </div>)},
+export default NextGenAIInnovationShowcase20o25,

@@ -4,11 +4,11 @@ import { motion } from 'framer-motion',
 import {
   ShieldCheckCircleArrowRightStarPhoneMailMapPin,
   ZapSparklesLockCpuDatabaseCloudUsers,
-  BriefcaseBookOpenMessageCircleTrendingUp;
-  TargetLayersGlobeBrainAtomBuildingNetwork;
+  BriefcaseBookOpenMessageCircleTrendingUp,
+  TargetLayersGlobeBrainAtomBuildingNetwork,
   EyeKeyServerLockKeyholeFingerprintShieldCheck,
   BrainAtomRocketSparklesStarCheckCircle,
-  ArrowRightPhoneMailMapPinGlobeShield;
+  ArrowRightPhoneMailMapPinGlobeShield,
   UsersTrendingUpTargetZapEyeCpu,
-  DatabaseLockCloudBarChart3Settings;
+  DatabaseLockCloudBarChart3Settings,
   BookOpenGraduationCapAwardDollarSign}

@@ -1,19 +1,16 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o27 Global Enterprise Transformation: Ultimate Success Story';
+  title: 'AI 20o27 Global Enterprise Transformation: Ultimate Success Story',
   description:,
-    'Discover how a Fortune 50o0 company achieved $15+ billion ROI through comprehensive AI transformation using quantum neural networks and autonomous business systems.';
+    'Discover how a Fortune 50o0 company achieved $15+ billion ROI through comprehensive AI transformation using quantum neural networks and autonomous business systems.',
   keywords: [
-    'AI transformation';
-    'enterprise success';
-    'quantum AI';
-    'autonomous systems';
-    'ROI';
-    'Fortune 50o0';
-    'AI 20o27';
-  ];
-};
+    'AI transformationenterprise success',
+    'quantum AIautonomous systems',
+    'ROIFortune 50o0',
+    'AI 20o27',
+  ]
+},
 export default function AI20o27GlobalEnterpriseTransformationPage() {
   return (
     <div>,

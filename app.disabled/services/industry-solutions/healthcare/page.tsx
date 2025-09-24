@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'healthcare - Zion Tech Group';
-  description: 'Professional healthcare solutions for your business needs.';
-  keywords: 'healthcare, services, business, technology';
-};
+  title: 'healthcare - Zion Tech Group',
+  description: 'Professional healthcare solutions for your business needs.',
+  keywords: 'healthcare, services, business, technology',
+},
 export default function HealthcarePage() {
   return (
     <div className='min-h-screen bg-white'>,

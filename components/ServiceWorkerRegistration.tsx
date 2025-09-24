@@ -7,7 +7,7 @@ interface ServiceWorkerRegistrationProps {
   onUpdateInstalled?: () => void}
 ,
 const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
-  onUpdateAvailable;
+  onUpdateAvailable,
   onUpdateInstalled}) => {
   const [isInstalling, setIsInstalling] = useState(false),
   const [isUpdateAvailable, setIsUpdateAvailable] = useState(false),
@@ -46,7 +46,7 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       })} catch (error) {
       console.error('Service worker registration failed:', error),
       setError('Failed to register service worker')}
-  };
+  },
   const handleUpdate = async () => {
     if (!registration) return,
     setIsInstalling(true),
@@ -63,10 +63,10 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
       console.error('Update failed:', error),
       setError('Failed to update application')} finally {
       setIsInstalling(false)}
-  };
+  },
   const handleDismiss = () => {
     setIsUpdateAvailable(false),
-    setIsUpdateInstalled(false)};
+    setIsUpdateInstalled(false)},
   // Don't render anything if service worker is not supported,
   if (typeof window === 'undefined' || !('serviceWorker' in navigator)) {
     return null}
@@ -182,5 +182,5 @@ const ServiceWorkerRegistration: React.FC<ServiceWorkerRegistrationProps> = ({
             </div>,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default ServiceWorkerRegistration;
+    </AnimatePresence>)},
+export default ServiceWorkerRegistration,

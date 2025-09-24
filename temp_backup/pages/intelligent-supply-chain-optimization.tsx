@@ -15,29 +15,29 @@ export default function IntelligentSupplyChainOptimization() {
           <div className='mt-8 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
             {[
               {
-                title: 'Demand Forecasting';
-                desc: 'Hierarchical time series with promotions and seasonality, MAPE dashboards.';
-              };
+                title: 'Demand Forecasting',
+                desc: 'Hierarchical time series with promotions and seasonality, MAPE dashboards.',
+              },
               {
-                title: 'Inventory Optimization';
-                desc: 'Multi-echelon safety stock, reorder points, and service levels.';
-              };
+                title: 'Inventory Optimization',
+                desc: 'Multi-echelon safety stock, reorder points, and service levels.',
+              },
               {
-                title: 'Network Optimization';
-                desc: 'Facility location, route planning, and carrier selection with constraints.';
-              };
+                title: 'Network Optimization',
+                desc: 'Facility location, route planning, and carrier selection with constraints.',
+              },
               {
-                title: 'Anomaly Detection';
-                desc: 'Supplier risk, late shipments, and fraud detection with alerts.';
-              };
+                title: 'Anomaly Detection',
+                desc: 'Supplier risk, late shipments, and fraud detection with alerts.',
+              },
               {
-                title: 'What-if Simulations';
-                desc: 'Scenario testing for lead time, MOQ, demand spikes, and costs.';
-              };
+                title: 'What-if Simulations',
+                desc: 'Scenario testing for lead time, MOQ, demand spikes, and costs.',
+              },
               {
-                title: 'Integrations';
-                desc: 'ERP/WMS/TMS connectors and data lake exports.';
-              };
+                title: 'Integrations',
+                desc: 'ERP/WMS/TMS connectors and data lake exports.'
+              },
             ].map(f => (
               <div
                 key={f.title}

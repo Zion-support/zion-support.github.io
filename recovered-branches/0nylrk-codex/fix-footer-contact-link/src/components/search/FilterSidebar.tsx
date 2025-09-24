@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react",
 import {Button} from "@/components/ui/button",
 import {Checkbox} from "@/components/ui/checkbox",
 import {Filter, X, Star} from "lucide-react",
 import {FilterOptions} from "@/types/search",
-import React from "react";;
-import { Button } from "@/components/ui/button";
-import { Checkbox } from "@/components/ui/checkbox";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Checkbox } from "@/components/ui/checkbox",
 import { Filter, X, Star } from "lucide-react",
 import { FilterOptions } from "@/types/search",
-import { Filter, X, Star } from "lucide-react";
-import { FilterOptions } from "@/types/search";
+import { Filter, X, Star } from "lucide-react",
+import { FilterOptions } from "@/types/search",
 import React from './react',
 import { Button } from '@/components / ui / button',
 import { Checkbox } from '@/components / ui / checkbox',
@@ -29,10 +29,10 @@ export function FilterSidebar({
   onFilterChange,
   onRatingChange,
 export function FilterSidebar({
-  filters;
-  filterOptions;
-  onFilterChange;
-  onRatingChange;
+  filters,
+  filterOptions,
+  onFilterChange,
+  onRatingChange,
   onClearFilters}: FilterSidebarProps) {
   return (
     <div className="bg-zion-blue-dark rounded-lg border border-zion-blue-light p-4">,
@@ -50,13 +50,13 @@ export function FilterSidebar({
           className="border-zion-purple text-zion-purple hover:bg-zion-purple/10",
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[];
-    selectedLocations: string[];
-    selectedAvailability: string[];
-    selectedRating: number | null};
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
+    selectedProductTypes: string[],
+    selectedLocations: string[],
+    selectedAvailability: string[],
+    selectedRating: number | null},
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void}
 ,
 export function FilterSidebar(): any ({
@@ -65,10 +65,10 @@ export function FilterSidebar(): any ({
   onFilterChange,
   onRatingChange,
   onClearFilters}: FilterSidebarProps) {
-  return (};
-  filterOptions: FilterOptions;
-  onFilterChange: (filterType: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
+  return (},
+  filterOptions: FilterOptions,
+  onFilterChange: (filterType: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void}
 ,
   onClearFilters}: FilterSidebarProps) {
@@ -265,13 +265,13 @@ export function FilterSidebar(): any ({
 ,
 interface FilterSidebarProps {
   filters: {
-    selectedProductTypes: string[];
-    selected_locations: string[];
-    selected_availability: string[];
+    selectedProductTypes: string[],
+    selected_locations: string[],
+    selected_availability: string[],
     selected_rating: number | null}
-  filter_options: FilterOptions;
-  onFilterChange: (filter_type: string, value: string) => void;
-  onRatingChange: (rating: number | null) => void;
+  filter_options: FilterOptions,
+  onFilterChange: (filter_type: string, value: string) => void,
+  onRatingChange: (rating: number | null) => void,
   onClearFilters: () => void}
 export /**,
  * FilterSidebar - Function description,

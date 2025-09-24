@@ -9,39 +9,39 @@ export default function OrgChartPage() {
   const [displayMode, setDisplayMode] = useState<DisplayMode>('tree'),
   const [showPhotos, setShowPhotos] = useState<boolean>(true),
   const [data, setData] = useState<OrgData>({
-    founders: [];
-    coreTeam: [];
-    contributors: [];
-    delegates: [];
+    founders: [],
+    coreTeam: [],
+    contributors: [],
+    delegates: []
   }),
   useEffect(() => {
     const controller = new AbortController(),
     const fetchData = async () => {
       const qs = buildOrgQuery({
-        view: filters.view;
-        roleTypes: filters.roleTypes;
-        departments: filters.departments;
-        categories: filters.categories;
-        zones: filters.zones;
-        regions: filters.regions;
-        countries: filters.countries;
-        search: filters.search;
-        teamOnly: !!filters.teamOnly;
+        view: filters.view,
+        roleTypes: filters.roleTypes,
+        departments: filters.departments,
+        categories: filters.categories,
+        zones: filters.zones,
+        regions: filters.regions,
+        countries: filters.countries,
+        search: filters.search,
+        teamOnly: !!filters.teamOnly
       }),
       const res = await fetch(`/api/org${qs}`, { signal: controller.signal }),
       if (!res.ok) return,
       const json = (await res.json()) as OrgData,
-      setData(json)};
+      setData(json)},
     fetchData(),
     return () => controller.abort()}, [filters]),
   const gaps = useMemo(
     () =>,
       detectGaps(data, [
-        { department: 'Tech', region: 'Zion Africa' };
-        { department: 'Ops', region: 'Zion Africa' };
-        { department: 'Growth', region: 'Zion Africa' };
-        { department: 'Legal', region: 'Zion Africa' };
-      ]);
+        { department: 'Tech', region: 'Zion Africa' },
+        { department: 'Ops', region: 'Zion Africa' },
+        { department: 'Growth', region: 'Zion Africa' },
+        { department: 'Legal', region: 'Zion Africa' },
+      ]),
     [data]),
   return (
     <div className='space-y-6'>,

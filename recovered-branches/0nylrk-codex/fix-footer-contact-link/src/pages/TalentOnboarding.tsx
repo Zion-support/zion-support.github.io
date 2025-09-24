@@ -1,17 +1,17 @@
-import React from "react";
+import React from "react",
 import {TalentOnboardingForm} from "@/components/profile/TalentOnboardingForm",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
-import React from "react";;
-import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import React from "react",
+import { TalentOnboardingForm } from "@/components/profile/TalentOnboardingForm",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
 import React from './react',
 import { TalentOnboardingForm } from '@/components / profile / TalentOnboardingForm',
 import { Header } from '@/components / Header',
@@ -23,7 +23,7 @@ export default function TalentOnboarding() {
 export default function TalentOnboarding() {
   const { user, isLoading } = useAuth(),
 export default function TalentOnboarding() {
-  const { user, isLoading } = useAuth();
+  const { user, isLoading } = useAuth(),
   // If not authenticated, redirect to login,
   if (!isLoading && !user) {
     return <Navigate to="/login" replace />}

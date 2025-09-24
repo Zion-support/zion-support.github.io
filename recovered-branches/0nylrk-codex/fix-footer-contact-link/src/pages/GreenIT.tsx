@@ -4,25 +4,25 @@ import {Button} from "@/components/ui/button",
 import {Leaf, Server, Cloud} from "lucide-react",
 import {Link} from "react-router-dom",
 import {AppLayout} from "@/layout/AppLayout",
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Leaf, Server, Cloud } from "lucide-react";
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Leaf, Server, Cloud } from "lucide-react",
 import { Link } from "react-router-dom",
 import { AppLayout } from "@/layout/AppLayout",
-import { Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
+import { Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
 import { SEO } from '@/components / SEO',
 import { GradientHeading } from '@/components / GradientHeading',
 import { Button } from '@/components / ui / button',
 import { Leaf, Server, Cloud } from './lucide-react',
 import { Link } from './react-router-dom',
 import { AppLayout } from '@/layout / AppLayout',
-import { SEO } from "@/components/SEO";
+import { SEO } from "@/components/SEO",
 export default function GreenIT() {
   const greenITSolutions = [
     {
-      title: "Energy-Efficient Hardware";
+      title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
 export default function GreenIT() {
   const greenITSolutions = [
@@ -30,9 +30,9 @@ export default function GreenIT() {
       title: "Energy-Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
       icon: Server}
-      title: "Energy-Efficient Hardware";
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server};
+      title: "Energy-Efficient Hardware",
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+      icon: Server},
     {
       title: "Optimized Cooling Systems",
       description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
@@ -46,18 +46,18 @@ export default /**,
 function GreenIT() {
   const greenITSolutions = [
     {
-      title: "Energy - Efficient Hardware";
+      title: "Energy - Efficient Hardware",
       description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
-      icon: Server};
+      icon: Server},
     {
-      title: "Optimized Cooling Systems";
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.";
-      icon: Cloud};
+      title: "Optimized Cooling Systems",
+      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
+      icon: Cloud},
     {
-      title: "Renewable Energy Integration";
-      description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.";
+      title: "Renewable Energy Integration",
+      description: "Solutions for leveraging on - site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
-  ];
+  ],
   return (
     <AppLayout>,
       <SEO
@@ -158,15 +158,15 @@ function GreenIT() {
 export default function GreenIT() {
   const greenITSolutions = [
     {
-      title: "Energy-Efficient Hardware";
-      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.";
-      icon: Server};
+      title: "Energy-Efficient Hardware",
+      description: "Modern processors, storage solutions, and networking equipment delivering significant performance improvements while consuming less power.",
+      icon: Server},
     {
-      title: "Optimized Cooling Systems";
-      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.";
-      icon: Cloud};
+      title: "Optimized Cooling Systems",
+      description: "Advanced cooling technologies that reduce energy consumption while maintaining optimal operating temperatures.",
+      icon: Cloud},
     {
-      title: "Renewable Energy Integration";
+      title: "Renewable Energy Integration",
       description: "Solutions for leveraging on-site renewable generation or virtual power purchase agreements to offset carbon footprint.",
       icon: Leaf}
   ],

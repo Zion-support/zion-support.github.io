@@ -1,44 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  User;
-  Clock;
-  Share2;
-  BookOpen;
-  TrendingUp;
-  Zap;
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Share2,
+  BookOpen,
+  TrendingUp,
+  Zap,
 } from 'lucide-react',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: Edge Computing Revolution - Enterprise Transformation Guide';
+    'AI 20o25: Edge Computing Revolution - Enterprise Transformation Guide',
   description:,
-    'Discover how edge computing is revolutionizing enterprise AI in 20o25, enabling real-time decision-making and autonomous operations at unprecedented scale.';
+    'Discover how edge computing is revolutionizing enterprise AI in 20o25, enabling real-time decision-making and autonomous operations at unprecedented scale.',
   keywords: [
-    'Edge Computing';
-    'AI 20o25';
-    'Real-time AI';
-    'Enterprise Transformation';
-    'Autonomous Systems';
-  ];
+    'Edge ComputingAI 20o25',
+    'Real-time AIEnterprise Transformation',
+    'Autonomous Systems',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: Edge Computing Revolution - Enterprise Transformation Guide';
+      'AI 20o25: Edge Computing Revolution - Enterprise Transformation Guide',
     description:,
-      'Discover how edge computing is revolutionizing enterprise AI in 20o25, enabling real-time decision-making and autonomous operations at unprecedented scale.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how edge computing is revolutionizing enterprise AI in 20o25, enabling real-time decision-making and autonomous operations at unprecedented scale.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Edge Computing';
-      'AI 20o25';
-      'Real-time AI';
-      'Enterprise Transformation';
-      'Autonomous Systems';
-    ];
-  };
-};
+      'Edge ComputingAI 20o25',
+      'Real-time AIEnterprise Transformation',
+      'Autonomous Systems',
+    ]
+  },
+},
 export default function EdgeComputingRevolutionPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-blue-50'>,
@@ -88,11 +84,9 @@ export default function EdgeComputingRevolutionPage() {
           </p>,
           <div className='flex flex-wrap justify-center gap-4 mb-8'>,
             {[
-              'Edge Computing';
-              'AI 20o25';
-              'Real-time AI';
-              'Enterprise Transformation';
-              'Autonomous Systems';
+              'Edge ComputingAI 20o25',
+              'Real-time AIEnterprise Transformation',
+              'Autonomous Systems',
             ].map(tag => (
               <span
                 key={tag}
@@ -147,7 +141,7 @@ export default function EdgeComputingRevolutionPage() {
             </h3>,
             <p className='text-gray-70o0 mb-6'>,
               Edge computing represents the distributed computing paradigm that,
-              brings computation and data storage closer to the sources of data;
+              brings computation and data storage closer to the sources of data,
               enabling real-time processing and decision-making without relying,
               on centralized cloud infrastructure.,
             </p>,
@@ -232,7 +226,7 @@ export default function EdgeComputingRevolutionPage() {
                   Healthcare Transformation,
                 </h4>,
                 <p className='text-gray-60o0 text-sm'>,
-                  Point-of-care AI systems with real-time diagnostic assistance;
+                  Point-of-care AI systems with real-time diagnostic assistance,
                   patient monitoring, and emergency response optimization.,
                 </p>,
               </div>,

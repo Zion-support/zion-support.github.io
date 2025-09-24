@@ -14,7 +14,7 @@ interface ContentItem {
   metrics: {
     efficiency: string,
     accuracy: string,
-    timeline: string};
+    timeline: string},
 }
 ,
 const UltimateAutomationRevolutionShowcase: React.FC = () => {
@@ -22,59 +22,59 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
     'all' | 'blog' | 'case-study' | 'resource'>('all'),
   const contentItems: ContentItem[] = [
     {
-      id: 'ultimate-automation-revolution-50o000-roi';
+      id: 'ultimate-automation-revolution-50o000-roi',
       title:,
-        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
-      roi: '50,0o00%';
-      savings: '$2.5 Trillion';
-      readingTime: '45 min read';
-      featured: true;
+        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
+      roi: '50,0o00%',
+      savings: '$2.5 Trillion',
+      readingTime: '45 min read',
+      featured: true,
       description:,
-        'Comprehensive guide revealing how Fortune 50o0 companies are achieving unprecedented 50,0o00% ROI through next-generation autonomous systems, quantum-enhanced AI, and revolutionary automation frameworks.';
+        'Comprehensive guide revealing how Fortune 50o0 companies are achieving unprecedented 50,0o00% ROI through next-generation autonomous systems, quantum-enhanced AI, and revolutionary automation frameworks.',
       metrics: {
-        efficiency: '10,0o00%';
-        accuracy: '99.99%';
-        timeline: '6-12 months';
-      };
-    };
+        efficiency: '10,0o00%',
+        accuracy: '99.99%',
+        timeline: '6-12 months'
+      },
+    },
     {
-      id: 'fortune-50o0-ultimate-automation-50o000-roi';
+      id: 'fortune-50o0-ultimate-automation-50o000-roi',
       title:,
-        'Fortune 50o0 Ultimate Automation Success: $2.5 Trillion Annual Savings - 50,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-automation-50o000-roi-success-story';
-      roi: '50,0o00%';
-      savings: '$2.5 Trillion';
-      readingTime: '35 min read';
-      featured: true;
+        'Fortune 50o0 Ultimate Automation Success: $2.5 Trillion Annual Savings - 50,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-automation-50o000-roi-success-story',
+      roi: '50,0o00%',
+      savings: '$2.5 Trillion',
+      readingTime: '35 min read',
+      featured: true,
       description:,
-        'Real-world case study of TechGlobal Industries achieving the most remarkable automation transformation in business history, delivering 50,0o00% ROI within 18 months.';
+        'Real-world case study of TechGlobal Industries achieving the most remarkable automation transformation in business history, delivering 50,0o00% ROI within 18 months.',
       metrics: {
-        efficiency: '10,0o00%';
-        accuracy: '99.99%';
-        timeline: '18 months';
-      };
-    };
+        efficiency: '10,0o00%',
+        accuracy: '99.99%',
+        timeline: '18 months'
+      },
+    },
     {
-      id: 'ultimate-automation-implementation-guide-50o000-roi';
+      id: 'ultimate-automation-implementation-guide-50o000-roi',
       title:,
-        'Ultimate Automation Implementation Guide 20o25: Complete Roadmap to 50,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ultimate-automation-implementation-guide-50o000-roi';
-      roi: '50,0o00%';
-      savings: '$2.5 Trillion';
-      readingTime: '60 min read';
-      featured: true;
+        'Ultimate Automation Implementation Guide 20o25: Complete Roadmap to 50,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ultimate-automation-implementation-guide-50o000-roi',
+      roi: '50,0o00%',
+      savings: '$2.5 Trillion',
+      readingTime: '60 min read',
+      featured: true,
       description:,
-        'Complete implementation roadmap with step-by-step instructions, best practices, and proven strategies for achieving 50,0o00% ROI through revolutionary AI technologies.';
+        'Complete implementation roadmap with step-by-step instructions, best practices, and proven strategies for achieving 50,0o00% ROI through revolutionary AI technologies.',
       metrics: {
-        efficiency: '10,0o00%';
-        accuracy: '99.99%';
-        timeline: '18-24 months';
-      };
-    };
+        efficiency: '10,0o00%',
+        accuracy: '99.99%',
+        timeline: '18-24 months'
+      },
+    },
   ],
   const filteredItems =,
     selectedCategory === 'all',
@@ -90,7 +90,7 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -101,24 +101,24 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Articles';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Articles',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Guides';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Guides',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -303,5 +303,5 @@ const UltimateAutomationRevolutionShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAutomationRevolutionShowcase;
+    </section>)},
+export default UltimateAutomationRevolutionShowcase,

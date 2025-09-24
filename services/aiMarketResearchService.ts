@@ -11,7 +11,7 @@ export interface MarketTrend {
   trend_direction: 'rising' | 'falling' | 'stable',
   growth_rate: number,
   related_keywords: string[],
-  market_opportunity: 'high' | 'medium' | 'low';
+  market_opportunity: 'high' | 'medium' | 'low',
   timestamp: Date}
 ,
   id: string,
@@ -22,7 +22,7 @@ export interface MarketTrend {
   weaknesses: string[],
   opportunities: string[],
   threats: string[],
-  pricing_strategy: string;
+  pricing_strategy: string,
   feature_comparison: Record < string, boolean>,
   socialMediaPresence: Record < string, number>,
   last_updated: Date}
@@ -30,11 +30,11 @@ export interface MarketTrend {
   id: string,
   name: string,
   size: number,
-  growth_rate: number;
+  growth_rate: number,
   demographics: Record < string, any>,
   psychographics: Record < string, any>,
   buying_behavior: Record < string, any>,
-  pain_points: string[];
+  pain_points: string[],
   solutions: string[]}
 ,
   id: string,
@@ -46,14 +46,14 @@ export interface MarketTrend {
   growth_projection: number,
   recommendations: string[],
   data_sources: string[],
-  generated_at: Date;
+  generated_at: Date,
   expires_at: Date}
 ,
   industry: string,
   target_market: string,
   research_type: 'trends' | 'competitors' | 'segments' | 'comprehensive',
   timeframe: '7d' | '30d' | '90d' | '1y',
-  includeHistoricalData: boolean;
+  includeHistoricalData: boolean,
   custom_metrics?: string[]}
 ,
   success: boolean,
@@ -61,7 +61,7 @@ export interface MarketTrend {
     trends?: MarketTrend[],
     competitors?: CompetitorAnalysis[],
   constructor(apiKey: string, baseUrl: string = 'https://api && api.ziontechgroup.com') {
-    this && this.apiKey = apiKey;
+    this && this.apiKey = apiKey,
     this && this.baseUrl = baseUrl,
   estimatedROI: number}
 ,
@@ -71,10 +71,10 @@ export class AIMarketResearchService {
   async analyzeMarketTrends(request: MarketResearchRequest): Promise<MarketTrend[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/trends`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(request)}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -87,10 +87,10 @@ export class AIMarketResearchService {
   async analyzeCompetitors(request: MarketResearchRequest): Promise<CompetitorAnalysis[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/competitors`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(request)}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -103,10 +103,10 @@ export class AIMarketResearchService {
   async segmentMarket(request: MarketResearchRequest): Promise<MarketSegment[]> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/segments`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(request)}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -119,10 +119,10 @@ export class AIMarketResearchService {
   async generateComprehensiveReport(request: MarketResearchRequest): Promise<MarketReport> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/comprehensive`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify(request)}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -148,10 +148,10 @@ export class AIMarketResearchService {
   async exportReport(reportId: string, format: 'pdf' | 'csv' | 'excel'): Promise<string> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/export/${reportId}`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ format })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -164,10 +164,10 @@ export class AIMarketResearchService {
   async scheduleReport(request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise<string> {
     try {
       const response = await fetch(`${this && this.baseUrl}/api/market-research/schedule`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this && this.apiKey}`,
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON && JSON.stringify({ ...request, schedule })}),
       if (!response && response.ok) {
         throw new Error(`HTTP error! status: ${response && response.status}`)}
@@ -179,82 +179,82 @@ export class AIMarketResearchService {
   }
 }
 export const aiMarketResearchService = new AIMarketResearchService(process.env.MARKET_RESEARCH_API_KEY |'demo-key'),
-  id: string;
-  keyword: string;
-  searchVolume: number;
-  trendDirection: 'rising' | 'falling' | 'stable';
-  growthRate: number;
-  relatedKeywords: string[];
-  marketOpportunity: 'high' | 'medium' | 'low';
+  id: string,
+  keyword: string,
+  searchVolume: number,
+  trendDirection: 'rising' | 'falling' | 'stable',
+  growthRate: number,
+  relatedKeywords: string[],
+  marketOpportunity: 'high' | 'medium' | 'low',
   timestamp: Date}
 ,
 export interface CompetitorAnalysis {
-  id: string;
-  competitorName: string;
-  website: string;
-  marketShare: number;
-  strengths: string[];
-  weaknesses: string[];
-  opportunities: string[];
-  threats: string[];
-  pricingStrategy: string;
-  featureComparison: Record<string boolean>;
-  socialMediaPresence: Record<string number>;
+  id: string,
+  competitorName: string,
+  website: string,
+  marketShare: number,
+  strengths: string[],
+  weaknesses: string[],
+  opportunities: string[],
+  threats: string[],
+  pricingStrategy: string,
+  featureComparison: Record<string boolean>,
+  socialMediaPresence: Record<string number>,
   lastUpdated: Date}
 ,
 export interface MarketSegment {
-  id: string;
-  name: string;
-  size: number;
-  growthRate: number;
-  demographics: Record<string any>;
-  psychographics: Record<string any>;
-  buyingBehavior: Record<string any>;
-  painPoints: string[];
+  id: string,
+  name: string,
+  size: number,
+  growthRate: number,
+  demographics: Record<string any>,
+  psychographics: Record<string any>,
+  buyingBehavior: Record<string any>,
+  painPoints: string[],
   solutions: string[]}
 ,
 export interface MarketReport {
-  id: string;
-  title: string;
-  industry: string;
-  summary: string;
-  keyFindings: string[];
-  marketSize: number;
-  growthProjection: number;
-  recommendations: string[];
-  dataSources: string[];
-  generatedAt: Date;
+  id: string,
+  title: string,
+  industry: string,
+  summary: string,
+  keyFindings: string[],
+  marketSize: number,
+  growthProjection: number,
+  recommendations: string[],
+  dataSources: string[],
+  generatedAt: Date,
   expiresAt: Date}
 ,
 export interface MarketResearchRequest {
-  industry: string;
-  targetMarket: string;
-  researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive';
-  timeframe: '7d' | '30d' | '90d' | '1y';
-  includeHistoricalData: boolean;
+  industry: string,
+  targetMarket: string,
+  researchType: 'trends' | 'competitors' | 'segments' | 'comprehensive',
+  timeframe: '7d' | '30d' | '90d' | '1y',
+  includeHistoricalData: boolean,
   customMetrics?: string[]}
 ,
 export interface MarketResearchResponse {
-  success: boolean;
+  success: boolean,
   data: {
-    trends?: MarketTrend[];
-    competitors?: CompetitorAnalysis[];
-    segments?: MarketSegment[];
+    trends?: MarketTrend[],
+    competitors?: CompetitorAnalysis[],
+    segments?: MarketSegment[],
     report?: MarketReport}
   insights: string[],
   recommendations: string[],
-  next_steps: string[];
+  next_steps: string[],
   estimatedROI: number}
 export class AIMarketResearchService {
   private api_key: string,
-  private base_url: string;
+  private base_url: string,
   constructor (api_key: string, base_url: string = 'https://api.ziontechgroup.com') {
-    this.api_key = api_key;
+    this.api_key = api_key,
     this.base_url = base_url}
   async analyzeMarketTrends (request: MarketResearchRequest): Promise < MarketTrend[]> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / trends`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -271,7 +271,7 @@ if ( {) {
   async analyze_competitors (request: MarketResearchRequest): Promise < CompetitorAnalysis[]> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / competitors`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -288,7 +288,7 @@ if ( {) {
   async segment_market (request: MarketResearchRequest): Promise < MarketSegment[]> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / segments`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -305,7 +305,7 @@ if ( {) {
   async generateComprehensiveReport (request: MarketResearchRequest): Promise < MarketReport> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / comprehensive`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -336,7 +336,7 @@ if ( {) {
   async export_report (report_id: string, format: 'pdf' | 'csv' | 'excel'): Promise < string> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / export/${report_id}`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}
@@ -353,7 +353,7 @@ if ( {) {
   async schedule_report (request: MarketResearchRequest, schedule: 'daily' | 'weekly' | 'monthly'): Promise < string> {
     try {
       const response = await fetch (`${this.base_url}/api / market - research / schedule`, {
-        method: 'POST';
+        method: 'POST',
         headers: {
           'Authorization': `Bearer ${this.api_key}`,
           'Content - Type': 'application / json'}

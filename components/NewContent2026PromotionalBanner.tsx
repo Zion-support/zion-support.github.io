@@ -6,9 +6,9 @@ import {
   Bot,
   Zap,
   ArrowRight,
-  Star;
-  Sparkles;
-  TrendingUp;
+  Star,
+  Sparkles,
+  TrendingUp,
   Award} from 'lucide-react',
 const NewContent20o26PromotionalBanner = () => {
   return (
@@ -164,5 +164,5 @@ const NewContent20o26PromotionalBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o26PromotionalBanner;
+    </div>)},
+export default NewContent20o26PromotionalBanner,

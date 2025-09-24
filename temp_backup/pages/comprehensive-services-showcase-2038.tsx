@@ -2,7 +2,7 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search, Grid, List, Brain, Atom, Shield, Rocket;
+  Search, Grid, List, Brain, Atom, Shield, Rocket,
   ArrowRight, Check, Globe, Cpu, Cloud, Users, Target} from 'lucide-react',
 // Import our new innovative services,
 import { innovative20o38MicroSaasServices } from '../data/innovative-20o38-micro-saas-services',
@@ -17,73 +17,73 @@ const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
   if (service.price?.monthly) return `$${service.price.monthly}/month`,
-  return 'Contact for pricing'};
+  return 'Contact for pricing'},
 // Helper function to get service features,
 const getServiceFeatures = (service: any) => {
   if (service.features) return service.features,
   if (service.keyFeatures) return service.keyFeatures,
-  return []};
+  return []},
 // Helper function to get service description,
 const getServiceDescription = (service: any) => {
   if (service.description) return service.description,
   if (service.tagline) return service.tagline,
-  return 'No description available'};
+  return 'No description available'},
 // Create unified services array,
 const allServices = [
-  ...innovative20o38MicroSaasServices;
-  ...innovative20o38ITServices;
-  ...innovative20o38AIServices;
-  ...innovative20o37MicroSaasServices;
-  ...innovative20o37ITServices;
+  ...innovative20o38MicroSaasServices,
+  ...innovative20o38ITServices,
+  ...innovative20o38AIServices,
+  ...innovative20o37MicroSaasServices,
+  ...innovative20o37ITServices,
   ...innovative20o37AIServices],
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    icon: <Grid className="w-6 h-6"  />;
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of all services'};
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className="w-6 h-6"  />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of all services'},
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Rocket className="w-6 h-6"  />;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    description: 'Innovative micro SAAS solutions'};
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Rocket className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    description: 'Innovative micro SAAS solutions'},
   {
-    id: 'it-services';
-    name: 'IT Services';
-    icon: <Cpu className="w-6 h-6"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Advanced IT infrastructure and services'};
+    id: 'it-services',
+    name: 'IT Services',
+    icon: <Cpu className="w-6 h-6"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    description: 'Advanced IT infrastructure and services'},
   {
-    id: 'ai-services';
-    name: 'AI Services';
-    icon: <Brain className="w-6 h-6"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Cutting-edge AI and machine learning'};
+    id: 'ai-services',
+    name: 'AI Services',
+    icon: <Brain className="w-6 h-6"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    description: 'Cutting-edge AI and machine learning'},
   {
-    id: 'quantum-computing';
-    name: 'Quantum Computing';
-    icon: <Atom className="w-6 h-6"  />;
-    color: 'from-indigo-50o0 to-blue-50o0';
-    description: 'Quantum computing solutions'};
+    id: 'quantum-computing',
+    name: 'Quantum Computing',
+    icon: <Atom className="w-6 h-6"  />,
+    color: 'from-indigo-50o0 to-blue-50o0',
+    description: 'Quantum computing solutions'},
   {
-    id: 'space-technology';
-    name: 'Space Technology';
-    icon: <Globe className="w-6 h-6"  />;
-    color: 'from-orange-50o0 to-red-50o0';
-    description: 'Space exploration and technology'};
+    id: 'space-technology',
+    name: 'Space Technology',
+    icon: <Globe className="w-6 h-6"  />,
+    color: 'from-orange-50o0 to-red-50o0',
+    description: 'Space exploration and technology'},
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    icon: <Shield className="w-6 h-6"  />;
-    color: 'from-red-50o0 to-pink-50o0';
-    description: 'Advanced security solutions'};
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className="w-6 h-6"  />,
+    color: 'from-red-50o0 to-pink-50o0',
+    description: 'Advanced security solutions'},
   {
-    id: 'cloud-infrastructure';
-    name: 'Cloud Infrastructure';
-    icon: <Cloud className="w-6 h-6"  />;
-    color: 'from-blue-50o0 to-indigo-50o0';
+    id: 'cloud-infrastructure',
+    name: 'Cloud Infrastructure',
+    icon: <Cloud className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-indigo-50o0',
     description: 'Cloud computing and infrastructure'}
 ],
 const ComprehensiveServicesShowcase20o38: React.FC = () => {
@@ -120,9 +120,9 @@ const ComprehensiveServicesShowcase20o38: React.FC = () => {
         title="Comprehensive Services Showcase 20o38 - Zion Tech Group",
         description="Explore our revolutionary 20o38 services portfolio featuring cutting-edge AI, quantum computing, space technology, and innovative micro SAAS solutions.",
         keywords={[
-          '20o38 services', 'AI services', 'quantum computing', 'space technology';
-          'micro SAAS', 'IT services', 'Zion Tech Group', 'artificial intelligence';
-          'machine learning', 'enterprise solutions', 'technology consulting']}
+          '20o38 servicesAI services', 'quantum computingspace technology',
+          'micro SAASIT services', 'Zion Tech Groupartificial intelligence',
+          'machine learningenterprise solutions', 'technology consulting']}
        />,
       {/* Hero Section */}
       <section className="relative py-20 px-4 overflow-hidden">,

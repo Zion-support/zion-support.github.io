@@ -1,18 +1,20 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-import Link from 'next/link',import {
-import Link from 'next/link',import {
+import Link from 'next/link',
+import {
+import Link from 'next/link',
+import {
 import Link from 'next/link',
 "use client",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -37,35 +39,35 @@ class ErrorBoundary extends React.Component {
   Globe,
   ChevronDown} from 'lucide-react',
   Menu, X, Home, Brain, Cpu, Rocket,
-  Menu;
-  X;
-  Home;
-  Brain;
-  Cpu;
-  Rocket;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ChevronDown;
+  Menu,
+  X,
+  Home,
+  Brain,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ChevronDown,
 } from 'lucide-react',
   Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown} from 'lucide-react',
-  Menu, X, Home, Brain, Cpu, Rocket;
+  Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown} from 'lucide-react',
-  Menu;
-  X;
-  Home;
-  Brain;
-  Cpu;
-  Rocket;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ChevronDown;
+  Menu,
+  X,
+  Home,
+  Brain,
+  Cpu,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ChevronDown,
 } from 'lucide-react',
-  Menu, X, Home, Brain, Cpu, Rocket;
+  Menu, X, Home, Brain, Cpu, Rocket,
   Phone, Mail, MapPin, Globe, ChevronDown} from 'lucide-react',
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
@@ -112,12 +114,12 @@ class ErrorBoundary extends React.Component {
       name: 'Solutions',
       href: '/solutions',
       icon: Cpu,    {
-      name: 'Solutions';
-      href: '/solutions';
+      name: 'Solutions',
+      href: '/solutions',
       icon: Cpu}
     {
-      name: 'About';
-      href: '/about';
+      name: 'About',
+      href: '/about',
       icon: Globe}
     {
       name: 'Contact',
@@ -126,80 +128,80 @@ class ErrorBoundary extends React.Component {
 ,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 50)};
+      setIsScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 50)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
   const navigationItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: Home;
-    },    {      icon: Home};
+      name: 'Home',
+      href: '/',
+      icon: Home
+    },    {      icon: Home},
     {
-      name: 'Services';
-      href: '/services';
-      icon: Rocket;
+      name: 'Services',
+      href: '/services',
+      icon: Rocket,
       dropdown: [
         {
-          name: 'AI Services';
-          href: '/ai-services';
-          icon: Brain;
-          description: 'Revolutionary AI solutions';
-        };
+          name: 'AI Services',
+          href: '/ai-services',
+          icon: Brain,
+          description: 'Revolutionary AI solutions'
+        },
         {
-          name: 'IT Services';
-          href: '/it-services';
-          icon: Cpu;
-          description: 'Enterprise IT solutions';
-        };
+          name: 'IT Services',
+          href: '/it-services',
+          icon: Cpu,
+          description: 'Enterprise IT solutions'
+        },
         {
-          name: 'Micro SaaS';
-          href: '/micro-saas';
-          icon: Rocket;
-          description: 'Specialized software solutions';
-        };
+          name: 'Micro SaaS',
+          href: '/micro-saas',
+          icon: Rocket,
+          description: 'Specialized software solutions'
+        },
         {
-          name: 'Innovative Showcase';
-          href: '/innovative-services-showcase';
-          icon: Globe;
-          description: 'Cutting-edge technology';
-        };
-      ];
-    };
+          name: 'Innovative Showcase',
+          href: '/innovative-services-showcase',
+          icon: Globe,
+          description: 'Cutting-edge technology'
+        },
+      ],
+    },
     {
-      name: 'Solutions';
-      href: '/solutions';
+      name: 'Solutions',
+      href: '/solutions',
       icon: Cpu,    {
-      name: 'Solutions';
-      href: '/solutions';
-      icon: Cpu};
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Cpu},
     {
-      name: 'About';
-      href: '/about';
-      icon: Globe};
+      name: 'About',
+      href: '/about',
+      icon: Globe},
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: Phone;
-    };
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
+    },
     {
-      name: 'About';
-      href: '/about';
-      icon: Globe;
-    };
+      name: 'About',
+      href: '/about',
+      icon: Globe
+    },
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: Phone;
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone
     }],      icon: Phone}
   ],
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup && ziontechgroup.com'};    website: 'https://ziontechgroup && ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup && ziontechgroup.com'},    website: 'https://ziontechgroup && ziontechgroup.com'},
   return (
     <>,
       {/* Navigation Bar */}
@@ -755,12 +757,12 @@ class ErrorBoundary extends React.Component {
                     href='/contact',
                     whileTap={{ scale: 0.95 }}
                     onClick={() => setIsOpen(false)}
-};
+},
 export default Navigation)}
 export default Navigation)}
-};
-export default Navigation)};
-export default Navigation;
+},
+export default Navigation)},
+export default Navigation,
                           </div>,
                           <div className="pl - 4 space - y-2">,
                             {item.dropdown.map ((dropdown_item) => {
@@ -842,6 +844,6 @@ export default Navigation;
 export default Navigation)}
 ,
 export default Navigation)}
-};
+},
 export default Navigation)}
-export default Navigation;
+export default Navigation,

@@ -13,7 +13,7 @@ interface ShowcaseItem {
   stats: {
     roi: string,
     accuracy: string,
-    speed: string};
+    speed: string},
 }
 ,
 export default function AnimatedContentShowcase() {
@@ -21,87 +21,87 @@ export default function AnimatedContentShowcase() {
   const [isAnimatingsetIsAnimating] = useState(false),
   const showcaseItems: ShowcaseItem[] = [
     {
-      id: 'ai-20o25-breakthrough';
-      title: 'AI 20o25 Ultimate Breakthrough Revolution';
-      description: 'Experience the most revolutionary AI breakthrough in human history with quantum-AI fusion technology';
-      href: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'AI 20o25';
-      featured: true;
-      gradient: 'from-red-50o0 to-pink-50o0';
-      icon: '🚀';
+      id: 'ai-20o25-breakthrough',
+      title: 'AI 20o25 Ultimate Breakthrough Revolution',
+      description: 'Experience the most revolutionary AI breakthrough in human history with quantum-AI fusion technology',
+      href: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'AI 20o25',
+      featured: true,
+      gradient: 'from-red-50o0 to-pink-50o0',
+      icon: '🚀',
       stats: {
-        roi: '10,0o00%';
-        accuracy: '99.9%';
+        roi: '10,0o00%',
+        accuracy: '99.9%',
         speed: '10,0o00x'}
-    };
+    },
     {
-      id: 'quantum-computing-20o30';
-      title: 'Quantum Computing Breakthroughs 20o30';
-      description: 'Revolutionary quantum technologies that will reshape reality itself with error-corrected quantum computers';
-      href: '/quantum-computing-breakthroughs-20o30';
-      category: 'Quantum Computing';
-      featured: true;
-      gradient: 'from-cyan-50o0 to-purple-50o0';
-      icon: '⚛️';
+      id: 'quantum-computing-20o30',
+      title: 'Quantum Computing Breakthroughs 20o30',
+      description: 'Revolutionary quantum technologies that will reshape reality itself with error-corrected quantum computers',
+      href: '/quantum-computing-breakthroughs-20o30',
+      category: 'Quantum Computing',
+      featured: true,
+      gradient: 'from-cyan-50o0 to-purple-50o0',
+      icon: '⚛️',
       stats: {
-        roi: '∞';
-        accuracy: '99.99%';
+        roi: '∞',
+        accuracy: '99.99%',
         speed: '∞'}
-    };
+    },
     {
-      id: 'ai-20o26-automation';
-      title: 'AI 20o26 Advanced Automation Mastery';
-      description: 'Master the future of automation with autonomous operations and intelligent process automation';
-      href: '/ai-20o26-advanced-automation-mastery';
-      category: 'AI 20o26';
-      featured: true;
-      gradient: 'from-blue-50o0 to-purple-50o0';
-      icon: '🤖';
+      id: 'ai-20o26-automation',
+      title: 'AI 20o26 Advanced Automation Mastery',
+      description: 'Master the future of automation with autonomous operations and intelligent process automation',
+      href: '/ai-20o26-advanced-automation-mastery',
+      category: 'AI 20o26',
+      featured: true,
+      gradient: 'from-blue-50o0 to-purple-50o0',
+      icon: '🤖',
       stats: {
-        roi: '5,0o00%';
-        accuracy: '99.9%';
+        roi: '5,0o00%',
+        accuracy: '99.9%',
         speed: '10o00x'}
-    };
+    },
     {
-      id: 'ai-20o26-quantum-neural';
-      title: 'AI 20o26 Quantum-Neural Fusion';
-      description: 'Revolutionary fusion of quantum computing and neural networks for transcendent intelligence';
-      href: '/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough';
-      category: 'AI 20o26';
-      featured: false;
-      gradient: 'from-purple-50o0 to-pink-50o0';
-      icon: '🧠';
+      id: 'ai-20o26-quantum-neural',
+      title: 'AI 20o26 Quantum-Neural Fusion',
+      description: 'Revolutionary fusion of quantum computing and neural networks for transcendent intelligence',
+      href: '/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough',
+      category: 'AI 20o26',
+      featured: false,
+      gradient: 'from-purple-50o0 to-pink-50o0',
+      icon: '🧠',
       stats: {
-        roi: '15,0o00%';
-        accuracy: '99.7%';
+        roi: '15,0o00%',
+        accuracy: '99.7%',
         speed: '50,0o00x'}
-    };
+    },
     {
-      id: 'ai-20o27-predictions';
-      title: 'AI 20o27 Future Predictions';
-      description: 'Comprehensive predictions for the future of AI and technology with advanced forecasting models';
-      href: '/ai-20o27-future-predictions-revolutionary';
-      category: 'AI 20o27';
-      featured: false;
-      gradient: 'from-green-50o0 to-teal-50o0';
-      icon: '🔮';
+      id: 'ai-20o27-predictions',
+      title: 'AI 20o27 Future Predictions',
+      description: 'Comprehensive predictions for the future of AI and technology with advanced forecasting models',
+      href: '/ai-20o27-future-predictions-revolutionary',
+      category: 'AI 20o27',
+      featured: false,
+      gradient: 'from-green-50o0 to-teal-50o0',
+      icon: '🔮',
       stats: {
-        roi: '8,0o00%';
-        accuracy: '95%';
+        roi: '8,0o00%',
+        accuracy: '95%',
         speed: '50o0x'}
-    };
+    },
     {
-      id: 'ai-20o28-breakthrough';
-      title: 'AI 20o28 Revolutionary Breakthroughs';
-      description: 'Next-generation AI technologies and breakthrough innovations for the future';
-      href: '/ai-20o28-future-predictions-breakthrough';
-      category: 'AI 20o28';
-      featured: false;
-      gradient: 'from-orange-50o0 to-red-50o0';
-      icon: '🌟';
+      id: 'ai-20o28-breakthrough',
+      title: 'AI 20o28 Revolutionary Breakthroughs',
+      description: 'Next-generation AI technologies and breakthrough innovations for the future',
+      href: '/ai-20o28-future-predictions-breakthrough',
+      category: 'AI 20o28',
+      featured: false,
+      gradient: 'from-orange-50o0 to-red-50o0',
+      icon: '🌟',
       stats: {
-        roi: '12,0o00%';
-        accuracy: '98%';
+        roi: '12,0o00%',
+        accuracy: '98%',
         speed: '20o00x'}
     }
   ],
@@ -128,7 +128,7 @@ export default function AnimatedContentShowcase() {
             </span>,
           </h2>,
           <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-            Discover the most revolutionary AI and technology content 'that', 's transforming the world.,
+            Discover the most revolutionary AI and technology content 'thats transforming the world.,
           </p>,
         </div>,
         {/* Main Showcase */}

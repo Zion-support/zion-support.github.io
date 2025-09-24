@@ -17,10 +17,10 @@ interface ApplicationRowProps {
   onViewScore: (application: JobApplication) => void}
 ,
 export function ApplicationRow({
-  application;
-  processingId;
-  onViewApplication;
-  onStatusChange;
+  application,
+  processingId,
+  onViewApplication,
+  onStatusChange,
   onViewScore}: ApplicationRowProps) {
   return (
     <TableRow key={application.id}>,

@@ -1,7 +1,7 @@
 import Link from 'next/link',
 import { TalentProfile } from '@/utils/types/talent',
 export type TalentCardProps = {
-  talent: TalentProfile};
+  talent: TalentProfile},
 export default function TalentCard({ talent }: TalentCardProps) {
   const rateLabel = talent.requestQuote,
     ? 'Request Quote',

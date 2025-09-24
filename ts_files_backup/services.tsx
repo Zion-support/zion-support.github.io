@@ -42,29 +42,29 @@ import { enterpriseITServices } from '../data/enterprise-it-services',
 import { realVerifiedServices } from '../data/real-verified-services',
 "use client",
   SearchFilterStarUsersTrendingUp,
-  DollarSignClockCheckCircleArrowRight;
+  DollarSignClockCheckCircleArrowRight,
   BrainRocketDnaGlobeShieldWifi,
   PackageBotCarBuilding2MonitorCpu,
   ZapAtomDatabaseCloudLockCode} from 'lucide-react',
-  SearchGridList;
-  BrainAtomShieldTargetRocket;
-  ArrowRightCheckPaletteHeartTruckGraduationCap;
+  SearchGridList,
+  BrainAtomShieldTargetRocket,
+  ArrowRightCheckPaletteHeartTruckGraduationCap,
   UsersDollarSignSettingsTrendingUpBarChart3ChevronDown} from 'lucide-react',
 // Import all the new 2025 service data,
 // Import new innovative services,
 // Import existing services for comprehensive coverage,
 const allServices = [
-  ...realMicroSaasServices2025;
-  ...innovativeAIServices2025;
-  ...innovativeITServices2025;
-  ...emergingTechServices2025;
-  ...additionalRealServices2025;
+  ...realMicroSaasServices2025,
+  ...innovativeAIServices2025,
+  ...innovativeITServices2025,
+  ...emergingTechServices2025,
+  ...additionalRealServices2025,
   ...newInnovativeAIServices],
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories: Array<{
   id: string,
   title: string,
@@ -74,139 +74,139 @@ const serviceCategories: Array<{
   services: ServiceUnion[],
   gradient: string}> = [
   {
-    id: 'ai-consciousness';
-    title: '🧠 AI & Consciousness';
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms';
-    icon: Brain;
-    color: 'from-violet-500 to-purple-500';
-    services: [...innovativeAIServices2025];
-    gradient: 'from-violet-500/20 to-indigo-500/20'};
+    id: 'ai-consciousness',
+    title: '🧠 AI & Consciousness',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-500 to-purple-500',
+    services: [...innovativeAIServices2025],
+    gradient: 'from-violet-500/20 to-indigo-500/20'},
   {
-    id: 'quantum-emerging';
-    title: '⚛️ Quantum & Emerging Tech';
-    description: 'Quantum computingDNA computingand beyond';
-    icon: Atom;
-    color: 'from-indigo-500 to-blue-500';
-    services: [...emergingTechServices2025];
-    gradient: 'from-indigo-500/20 to-cyan-500/20'};
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computingDNA computingand beyond',
+    icon: Atom,
+    color: 'from-indigo-500 to-blue-500',
+    services: [...emergingTechServices2025],
+    gradient: 'from-indigo-500/20 to-cyan-500/20'},
   {
-    id: 'enterprise-it';
-    title: '🏙️ Enterprise IT';
-    description: 'Autonomous operations and zero-trust security';
-    icon: Shield;
-    color: 'from-blue-500 to-cyan-500';
-    services: [...innovativeITServices2025];
-    gradient: 'from-blue-500/20 to-teal-500/20'};
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Shield,
+    color: 'from-blue-500 to-cyan-500',
+    services: [...innovativeITServices2025],
+    gradient: 'from-blue-500/20 to-teal-500/20'},
   {
-    id: 'space-metaverse';
-    title: '🌌 Space & Metaverse';
-    description: 'Space miningmetaverse developmentand more';
-    icon: Rocket;
-    color: 'from-teal-500 to-emerald-500';
-    services: [...quantumSpaceServices];
-    gradient: 'from-teal-500/20 to-green-500/20'};
+    id: 'space-metaverse',
+    title: '🌌 Space & Metaverse',
+    description: 'Space miningmetaverse developmentand more',
+    icon: Rocket,
+    color: 'from-teal-500 to-emerald-500',
+    services: [...quantumSpaceServices],
+    gradient: 'from-teal-500/20 to-green-500/20'},
   {
-    id: 'micro-saas';
-    title: '🎯 Micro SAAS';
-    description: 'Innovative solutions for every business need';
-    icon: Target;
-    color: 'from-green-500 to-yellow-500';
-    services: [...realMicroSaasServices2025...enhancedRealMicroSaasServices];
-    gradient: 'from-green-500/20 to-orange-500/20'};
+    id: 'micro-saas',
+    title: '🎯 Micro SAAS',
+    description: 'Innovative solutions for every business need',
+    icon: Target,
+    color: 'from-green-500 to-yellow-500',
+    services: [...realMicroSaasServices2025...enhancedRealMicroSaasServices],
+    gradient: 'from-green-500/20 to-orange-500/20'},
   {
-    id: 'financial-technology';
-    title: '💰 Financial Technology';
-    description: 'Innovative fintechDeFiand financial services';
-    icon: TrendingUp;
-    color: 'from-green-500 to-emerald-500';
-    services: [...innovativeFinancialServices2025];
-    gradient: 'from-green-500/20 to-emerald-500/20'};
+    id: 'financial-technology',
+    title: '💰 Financial Technology',
+    description: 'Innovative fintechDeFiand financial services',
+    icon: TrendingUp,
+    color: 'from-green-500 to-emerald-500',
+    services: [...innovativeFinancialServices2025],
+    gradient: 'from-green-500/20 to-emerald-500/20'},
   {
-    id: 'healthcare-biotech';
-    title: '🏥 Healthcare & Biotech';
-    description: 'AI-powered healthcare and biotechnology solutions';
-    icon: Shield;
-    color: 'from-blue-500 to-indigo-500';
-    services: [...innovativeHealthcareServices2025];
-    gradient: 'from-blue-500/20 to-indigo-500/20'};
+    id: 'healthcare-biotech',
+    title: '🏥 Healthcare & Biotech',
+    description: 'AI-powered healthcare and biotechnology solutions',
+    icon: Shield,
+    color: 'from-blue-500 to-indigo-500',
+    services: [...innovativeHealthcareServices2025],
+    gradient: 'from-blue-500/20 to-indigo-500/20'},
   {
-    id: 'education-technology';
-    title: '🎓 Education Technology';
-    description: 'AI-powered learning and educational innovation';
-    icon: Brain;
-    color: 'from-purple-500 to-pink-500';
-    services: [...innovativeEducationServices2025];
-    gradient: 'from-purple-500/20 to-pink-500/20'};
+    id: 'education-technology',
+    title: '🎓 Education Technology',
+    description: 'AI-powered learning and educational innovation',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500',
+    services: [...innovativeEducationServices2025],
+    gradient: 'from-purple-500/20 to-pink-500/20'},
   {
-    id: 'sustainability-green-tech';
-    title: '🌱 Sustainability & Green Tech';
-    description: 'Environmental technology and sustainability solutions';
-    icon: Globe;
-    color: 'from-emerald-500 to-teal-500';
-    services: [...innovativeSustainabilityServices2025];
-    gradient: 'from-emerald-500/20 to-teal-500/20'};
+    id: 'sustainability-green-tech',
+    title: '🌱 Sustainability & Green Tech',
+    description: 'Environmental technology and sustainability solutions',
+    icon: Globe,
+    color: 'from-emerald-500 to-teal-500',
+    services: [...innovativeSustainabilityServices2025],
+    gradient: 'from-emerald-500/20 to-teal-500/20'},
   {
-    id: 'logistics-supply-chain';
-    title: '🚚 Logistics & Supply Chain';
-    description: 'Autonomous logistics and supply chain optimization';
-    icon: Rocket;
-    color: 'from-orange-500 to-red-500';
-    services: [...innovativeLogisticsServices2025];
-    gradient: 'from-orange-500/20 to-red-500/20'};
+    id: 'logistics-supply-chain',
+    title: '🚚 Logistics & Supply Chain',
+    description: 'Autonomous logistics and supply chain optimization',
+    icon: Rocket,
+    color: 'from-orange-500 to-red-500',
+    services: [...innovativeLogisticsServices2025],
+    gradient: 'from-orange-500/20 to-red-500/20'},
   {
-    id: 'research-development';
-    title: '🔬 Research & Development';
-    description: 'Breakthrough technologies and innovations';
-    icon: Microscope;
-    color: 'from-red-500 to-pink-500';
-    description: 'Advanced healthcare solutions'};
+    id: 'research-development',
+    title: '🔬 Research & Development',
+    description: 'Breakthrough technologies and innovations',
+    icon: Microscope,
+    color: 'from-red-500 to-pink-500',
+    description: 'Advanced healthcare solutions'},
   {
-    id: 'transportation-logistics';
-    name: 'Transportation & Logistics';
-    icon: <Truck className="w-6 h-6" />;
-    color: 'from-blue-500 to-cyan-500';
-    description: 'Smart transportation solutions'};
+    id: 'transportation-logistics',
+    name: 'Transportation & Logistics',
+    icon: <Truck className="w-6 h-6" />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Smart transportation solutions'},
   {
-    id: 'education-research';
-    name: 'Education & Research';
-    icon: <GraduationCap className="w-6 h-6" />;
-    color: 'from-yellow-500 to-orange-500';
-    description: 'Learning and research platforms'};
+    id: 'education-research',
+    name: 'Education & Research',
+    icon: <GraduationCap className="w-6 h-6" />,
+    color: 'from-yellow-500 to-orange-500',
+    description: 'Learning and research platforms'},
   {
-    id: 'customer-success';
-    name: 'Customer Success';
-    icon: <Users className="w-6 h-6" />;
-    color: 'from-blue-500 to-indigo-600';
-    description: 'AI-powered customer success and retention'};
+    id: 'customer-success',
+    name: 'Customer Success',
+    icon: <Users className="w-6 h-6" />,
+    color: 'from-blue-500 to-indigo-600',
+    description: 'AI-powered customer success and retention'},
   {
-    id: 'financial-technology';
-    name: 'Financial Technology';
-    icon: <DollarSign className="w-6 h-6" />;
-    color: 'from-green-500 to-emerald-600';
-    description: 'Quantum and AI-powered financial solutions'};
+    id: 'financial-technology',
+    name: 'Financial Technology',
+    icon: <DollarSign className="w-6 h-6" />,
+    color: 'from-green-500 to-emerald-600',
+    description: 'Quantum and AI-powered financial solutions'},
   {
-    id: 'devops-infrastructure';
-    name: 'DevOps & Infrastructure';
-    icon: <Settings className="w-6 h-6" />;
-    color: 'from-purple-500 to-pink-600';
-    description: 'AI-powered DevOps and infrastructure automation'};
+    id: 'devops-infrastructure',
+    name: 'DevOps & Infrastructure',
+    icon: <Settings className="w-6 h-6" />,
+    color: 'from-purple-500 to-pink-600',
+    description: 'AI-powered DevOps and infrastructure automation'},
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    icon: <Shield className="w-6 h-6" />;
-    color: 'from-red-500 to-pink-600';
-    description: 'Quantum-resistant security solutions'};
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className="w-6 h-6" />,
+    color: 'from-red-500 to-pink-600',
+    description: 'Quantum-resistant security solutions'},
   {
-    id: 'sales-marketing';
-    name: 'Sales & Marketing';
-    icon: <TrendingUp className="w-6 h-6" />;
-    color: 'from-orange-500 to-red-600';
-    description: 'AI-powered sales and marketing automation'};
+    id: 'sales-marketing',
+    name: 'Sales & Marketing',
+    icon: <TrendingUp className="w-6 h-6" />,
+    color: 'from-orange-500 to-red-600',
+    description: 'AI-powered sales and marketing automation'},
   {
-    id: 'data-analytics';
-    name: 'Data & Analytics';
-    icon: <BarChart3 className="w-6 h-6" />;
-    color: 'from-indigo-500 to-purple-600';
+    id: 'data-analytics',
+    name: 'Data & Analytics',
+    icon: <BarChart3 className="w-6 h-6" />,
+    color: 'from-indigo-500 to-purple-600',
     description: 'Quantum-powered data analytics and insights'}
 ],
 export default function ServicesPage() {
@@ -220,27 +220,27 @@ export default function ServicesPage() {
   const [sortBysetSortBy] = useState('name'),
   // Combine all services,
   const allServices = [
-    ...enhancedRealMicroSaasServices;
-    ...innovativeAIServices2029;
-    ...quantumSpaceInnovations2029;
-    ...enterpriseITInnovations2029;
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices2029,
+    ...quantumSpaceInnovations2029,
+    ...enterpriseITInnovations2029,
     ...innovativeMicroSaas2029,
 =======,
-    ...additionalEnhancedServices;
-    ...newRealServices;
-    ...industryRealServices;
-    ...professionalServices;
-    ...nextGenerationAIServices;
-    ...cuttingEdgeITServices;
-    ...innovativeMicroSaasV2Services;
-    ...marketValidatedServices;
-    ...emergingTechnologyServices;
-    ...comprehensiveITSolutions;
-    ...curatedMarketServices;
-    ...realMarketServices;
-    ...new2025Services;
-    ...newRealInnovations;
-    ...serviceExpansions2025;
+    ...additionalEnhancedServices,
+    ...newRealServices,
+    ...industryRealServices,
+    ...professionalServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...marketValidatedServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...curatedMarketServices,
+    ...realMarketServices,
+    ...new2025Services,
+    ...newRealInnovations,
+    ...serviceExpansions2025,
     ...realVerifiedServices],
   // Get unique services by ID,
   const uniqueServices = allServices.filter((serviceindexself) =>,
@@ -264,7 +264,7 @@ export default function ServicesPage() {
         case 'name':,
           return a.name.localeCompare(b.name),
         case 'price':,
-          return parseFloat(a.price.replace(/[^0-9.]/g', ')) - parseFloat(b.price.replace(/[^0-9.]/g', ')),
+          return parseFloat(a.price.replace(/[^0-9.]/g)) - parseFloat(b.price.replace(/[^0-9.]/g', ')),
         case 'popularity':,
           return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
         case 'rating':,
@@ -273,10 +273,10 @@ export default function ServicesPage() {
           return 0}
     }),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraFuturisticBackground2029>,
       <Head>,
@@ -557,7 +557,7 @@ export default function ServicesPage() {
                 <p className="text-gray-400">Try adjusting your search criteria or browse all services</p>,
                 <button
                   onClick={() => {
-                    setSearchTerm(', '),
+                    setSearchTerm(),
                     setSelectedCategory('All')}}
                   className="mt-4 px-6 py-2 bg-cyan-500 text-white rounded-lg hover: bg-cyan-600 transition-colors">,
                   Clear Filters,

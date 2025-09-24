@@ -1,10 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, X, Search, ChevronDown, ChevronRight;
-  Home, Briefcase, Users, BookOpen, Phone;
-  Zap, Shield, Brain, Rocket, Atom, Satellite;
-  Cloud, Database, Lock, ChartBar, Cpu, Globe;
+  Menu, X, Search, ChevronDown, ChevronRight,
+  Home, Briefcase, Users, BookOpen, Phone,
+  Zap, Shield, Brain, Rocket, Atom, Satellite,
+  Cloud, Database, Lock, ChartBar, Cpu, Globe,
   Target, Lightbulb, Code, Palette, Gamepad2} from 'lucide-react',
 import Link from 'next/link',
 // Type definitions for DOM elements,
@@ -18,124 +18,124 @@ interface NavigationItem {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    label: 'Home';
-    href: '/';
-    icon: <Home className="w-4 h-4"  />};
+    label: 'Home',
+    href: '/',
+    icon: <Home className="w-4 h-4"  />},
   {
-    label: 'Services';
-    href: '/services';
-    icon: <Briefcase className="w-4 h-4"  />;
-    description: 'Explore our comprehensive technology solutions';
+    label: 'Services',
+    href: '/services',
+    icon: <Briefcase className="w-4 h-4"  />,
+    description: 'Explore our comprehensive technology solutions',
     children: [
       {
-        label: 'AI & Machine Learning';
-        href: '/services?category=ai';
-        icon: <Brain className="w-4 h-4"  />;
-        description: 'Advanced AI solutions for enterprise'};
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai',
+        icon: <Brain className="w-4 h-4"  />,
+        description: 'Advanced AI solutions for enterprise'},
       {
-        label: 'Quantum Computing';
-        href: '/services?category=quantum';
-        icon: <Atom className="w-4 h-4"  />;
-        description: 'Next-generation quantum solutions'};
+        label: 'Quantum Computing',
+        href: '/services?category=quantum',
+        icon: <Atom className="w-4 h-4"  />,
+        description: 'Next-generation quantum solutions'},
       {
-        label: 'Space Technology';
-        href: '/services?category=space';
-        icon: <Satellite className="w-4 h-4"  />;
-        description: 'Innovative space tech applications'};
+        label: 'Space Technology',
+        href: '/services?category=space',
+        icon: <Satellite className="w-4 h-4"  />,
+        description: 'Innovative space tech applications'},
       {
-        label: 'Cybersecurity';
-        href: '/services?category=cyber';
-        icon: <Shield className="w-4 h-4"  />;
-        description: 'Enterprise-grade security solutions'};
+        label: 'Cybersecurity',
+        href: '/services?category=cyber',
+        icon: <Shield className="w-4 h-4"  />,
+        description: 'Enterprise-grade security solutions'},
       {
-        label: 'Cloud & DevOps';
-        href: '/services?category=cloud';
-        icon: <Cloud className="w-4 h-4"  />;
-        description: 'Scalable cloud infrastructure'};
+        label: 'Cloud & DevOps',
+        href: '/services?category=cloud',
+        icon: <Cloud className="w-4 h-4"  />,
+        description: 'Scalable cloud infrastructure'},
       {
-        label: 'FinTech Solutions';
-        href: '/services?category=fintech';
-        icon: <ChartBar className="w-4 h-4"  />;
-        description: 'Financial technology innovations'};
+        label: 'FinTech Solutions',
+        href: '/services?category=fintech',
+        icon: <ChartBar className="w-4 h-4"  />,
+        description: 'Financial technology innovations'},
       {
-        label: 'View All Services';
-        href: '/services';
-        icon: <Globe className="w-4 h-4"  />;
+        label: 'View All Services',
+        href: '/services',
+        icon: <Globe className="w-4 h-4"  />,
         description: 'Complete service portfolio'}
-    ]};
+    ]},
   {
-    label: 'Solutions';
-    href: '/solutions';
-    icon: <Target className="w-4 h-4"  />;
-    description: 'Industry-specific solutions and use cases';
+    label: 'Solutions',
+    href: '/solutions',
+    icon: <Target className="w-4 h-4"  />,
+    description: 'Industry-specific solutions and use cases',
     children: [
       {
-        label: 'Healthcare';
-        href: '/healthcare-solutions';
-        icon: <Users className="w-4 h-4"  />;
-        description: 'Medical technology solutions'};
+        label: 'Healthcare',
+        href: '/healthcare-solutions',
+        icon: <Users className="w-4 h-4"  />,
+        description: 'Medical technology solutions'},
       {
-        label: 'Finance';
-        href: '/financial-solutions';
-        icon: <ChartBar className="w-4 h-4"  />;
-        description: 'Fintech and banking solutions'};
+        label: 'Finance',
+        href: '/financial-solutions',
+        icon: <ChartBar className="w-4 h-4"  />,
+        description: 'Fintech and banking solutions'},
       {
-        label: 'Manufacturing';
-        href: '/manufacturing-solutions';
-        icon: <Cpu className="w-4 h-4"  />;
-        description: 'Industry 4.0 solutions'};
+        label: 'Manufacturing',
+        href: '/manufacturing-solutions',
+        icon: <Cpu className="w-4 h-4"  />,
+        description: 'Industry 4.0 solutions'},
       {
-        label: 'Retail';
-        href: '/retail-solutions';
-        icon: <Globe className="w-4 h-4"  />;
-        description: 'E-commerce and retail tech'};
+        label: 'Retail',
+        href: '/retail-solutions',
+        icon: <Globe className="w-4 h-4"  />,
+        description: 'E-commerce and retail tech'},
       {
-        label: 'Government';
-        href: '/government-solutions';
-        icon: <Shield className="w-4 h-4"  />;
+        label: 'Government',
+        href: '/government-solutions',
+        icon: <Shield className="w-4 h-4"  />,
         description: 'Public sector solutions'}
-    ]};
+    ]},
   {
-    label: 'About';
-    href: '/about';
-    icon: <Users className="w-4 h-4"  />;
-    description: 'Learn about our mission and team'};
+    label: 'About',
+    href: '/about',
+    icon: <Users className="w-4 h-4"  />,
+    description: 'Learn about our mission and team'},
   {
-    label: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className="w-4 h-4"  />;
-    description: 'Whitepapers, case studies, and insights';
+    label: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-4 h-4"  />,
+    description: 'Whitepapers, case studies, and insights',
     children: [
       {
-        label: 'Blog';
-        href: '/blog';
-        icon: <Lightbulb className="w-4 h-4"  />;
-        description: 'Industry insights and updates'};
+        label: 'Blog',
+        href: '/blog',
+        icon: <Lightbulb className="w-4 h-4"  />,
+        description: 'Industry insights and updates'},
       {
-        label: 'Case Studies';
-        href: '/case-studies';
-        icon: <Target className="w-4 h-4"  />;
-        description: 'Success stories and implementations'};
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <Target className="w-4 h-4"  />,
+        description: 'Success stories and implementations'},
       {
-        label: 'Whitepapers';
-        href: '/white-papers';
-        icon: <BookOpen className="w-4 h-4"  />;
-        description: 'In-depth research and analysis'};
+        label: 'Whitepapers',
+        href: '/white-papers',
+        icon: <BookOpen className="w-4 h-4"  />,
+        description: 'In-depth research and analysis'},
       {
-        label: 'Webinars';
-        href: '/webinars';
-        icon: <Users className="w-4 h-4"  />;
-        description: 'Educational content and training'};
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Users className="w-4 h-4"  />,
+        description: 'Educational content and training'},
       {
-        label: 'Documentation';
-        href: '/docs';
-        icon: <Code className="w-4 h-4"  />;
+        label: 'Documentation',
+        href: '/docs',
+        icon: <Code className="w-4 h-4"  />,
         description: 'Technical guides and APIs'}
-    ]};
+    ]},
   {
-    label: 'Contact';
-    href: '/contact';
-    icon: <Phone className="w-4 h-4"  />;
+    label: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-4 h-4"  />,
     description: 'Get in touch with our experts'}
 ],
 const UltraAdvancedFuturisticNavigation20o35: React.FC = () => {
@@ -152,7 +152,7 @@ const UltraAdvancedFuturisticNavigation20o35: React.FC = () => {
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle search,
@@ -162,20 +162,20 @@ const UltraAdvancedFuturisticNavigation20o35: React.FC = () => {
       router.push(`/services?search=${encodeURIComponent(searchQuery.trim())}`),
       setIsSearchOpen(false),
       setSearchQuery('')}
-  };
+  },
   // Handle keyboard navigation,
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsSearchOpen(false),
       setIsMobileMenuOpen(false),
       setActiveDropdown(null)}
-  };
+  },
   // Close dropdowns when clicking outside,
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Close mobile menu on route change,
@@ -378,5 +378,5 @@ const UltraAdvancedFuturisticNavigation20o35: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraAdvancedFuturisticNavigation20o35;
+    </nav>)},
+export default UltraAdvancedFuturisticNavigation20o35,

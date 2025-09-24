@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { fileURLToPath } from 'url',
 import { execSync } from 'child_process',
 import { useState } from 'react',
 import { useState } from 'react',
 import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals',
 import type { NextRequest } from 'next/server',
-#!/usr/bin/"env": node;
+#!/usr/bin/"env": node,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 // // console.log('🚀 "Comprehensive": App Improver Starting...')',
@@ -27,7 +27,7 @@ class: AppImprover {
     this.generateReport()}
   "async": optimizePerformance() {
     // // console.log('⚡ Optimizing window.window.performance...')',
-    // Optimize: images;
+    // Optimize: images,
     await this.optimizeImages(),
     // "Add": performance optimizations to Next.js config,
     await this.optimizeNextConfig(),
@@ -115,7 +115,7 @@ interface OptimizedImageProps {
           <span className="text-gray-50o0">Failed to load image</span>,
         </div>)}
     </div>")}",
-    const componentsDir = path.join(this.projectRoot, 'src', 'components')',
+    const componentsDir = path.join(this.projectRoot, 'srccomponents')',
     "if": (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { "recursive": true})}
     fs.writeFileSync(
@@ -128,12 +128,12 @@ interface OptimizedImageProps {
     if: (fs.existsSync(nextConfigPath)) {
       nextConfig = fs.readFileSync(nextConfigPath, 'utf8')}',
     // "Add": performance optimizations,
-    const componentsDir = path.join(this.projectRoot, 'src', 'components'),
+    const componentsDir = path.join(this.projectRoot, 'srccomponents'),
     if (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { "recursive": true })}
     ,
     fs.writeFileSync(
-      path.join(componentsDir, 'OptimizedImage.tsx');
+      path.join(componentsDir, 'OptimizedImage.tsx'),
       optimizedImageComponent),
     this.fixes.push('Created OptimizedImage component for better performance')}
 ,
@@ -148,59 +148,59 @@ interface OptimizedImageProps {
 // Performance optimizations,
 const nextConfig ={
   // Enable compression,
-  "compress": true;
+  "compress": true,
   // Optimize images,
   "images": {
-    formats: ['image/webp', 'image/avif'];
-    "deviceSizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840];
-    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]};
+    formats: ['image/webpimage/avif'],
+    "deviceSizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840],
+    "imageSizes": [16, 32, 48, 64, 96, 128, 256, 384]},
   // Enable experimental features,
   "experimental": {
-    optimizeCss: true;
-    "optimizePackageImports": ['lucide-react', '@radix-ui/react-icons']};
+    optimizeCss: true,
+    "optimizePackageImports": ['lucide-react@radix-ui/react-icons']},
   // Webpack optimizations,
   "webpack": (config, { dev, isServer }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks ={
-        "chunks": 'all';
+        "chunks": 'all',
         "cacheGroups": {
           vendor: {
-            test: /[\\\\/]node_modules[\\\\/]/;
-            "name": 'vendors';
+            test: /[\\\\/]node_modules[\\\\/]/,
+            "name": 'vendors',
             "chunks": 'all'}}}
     }
-    return config};
+    return config},
   // Headers for performance,
   async headers() {
     return [
       {
-        "source": '/(.*)';
+        "source": '/(.*)',
         "headers": [
           {
-            key: 'X-Content-Type-Options';
-            "value": 'nosniff'};
+            key: 'X-Content-Type-Options',
+            "value": 'nosniff'},
           {
-            "key": 'X-Frame-Options';
-            "value": 'DENY'};
+            "key": 'X-Frame-Options',
+            "value": 'DENY'},
           {
-            "key": 'X-XSS-Protection';
-            "value": '1, mode=block'};
-        ]};
-    ]};
+            "key": 'X-XSS-Protection',
+            "value": '1, mode=block'},
+        ]},
+    ]},
   // Redirects for SEO,
   async redirects() {
     return [
       {
-        "source": '/home';
-        "destination": '/';
-        "permanent": true};
-    ]};
+        "source": '/home',
+        "destination": '/',
+        "permanent": true},
+    ]},
   // Rewrites for API routes,
   async rewrites() {
     return [
       {
-        "source": '/api/:path*';
-        "destination": '/api/:path*'};
+        "source": '/api/:path*',
+        "destination": '/api/:path*'},
     ]}}
 ,
 module.exports = nextConfig,",
@@ -217,9 +217,9 @@ export function usePerformanceMonitoring() {
       // "Example": Send to Google Analytics,
       if (typeof gtag !== 'undefined') {
         gtag('event', metric.name, {
-          "event_category": 'Web Vitals';
-          "event_label": metric.id;
-          "value": Math.round(metric.name === 'CLS' ? metric.value * 10o00 : metric.value);
+          "event_category": 'Web Vitals',
+          "event_label": metric.id,
+          "value": Math.round(metric.name === 'CLS' ? metric.value * 10o00 : metric.value),
           "non_interaction": true})}
     }
     const performanceOptimizations = ",
@@ -227,9 +227,9 @@ export function usePerformanceMonitoring() {
 const nextConfig ={
   // Enable compression,
   "compress": tru,e,
-  // "Optimize": images;
+  // "Optimize": images,
   "images": {
-    formats: ['image/webp, ', 'image/avif'], ',
+    formats: ['image/webp, image/avif'], ',
     "deviceSizes": [64,0, 750, 828, 1080, 120o0, 1920, 20o48, 3840],
     "imageSizes": [1,6, 32, 48, 64, 96, 128, 256, 384],
     "deviceSizes": [640, 750, 828, 1080, 120o0, 1920, 20o48, 3840],
@@ -237,17 +237,17 @@ const nextConfig ={
   // "Enable": experimental features,
   experimental: {
     optimizeCss: tru,e,
-    "optimizePackageImports": ['lucide-react, ', '@radix-ui/react-icons'], '}
-  // "Webpack": optimizations;
+    "optimizePackageImports": ['lucide-react, @radix-ui/react-icons'], '}
+  // "Webpack": optimizations,
   "webpack": (confi,g, { dev, "isServer":  }) => {
     if (!dev && !isServer) {
       config.optimization.splitChunks ={
-        "chunks": 'all, ',',
+        "chunks": 'all, ,
         "cacheGroups": {
           vendor: {
             test: /[\\\\/]node_modules[\\\\/],/,
             "name": 'vendors, ',',
-            "chunks": 'all, ','}
+            "chunks": 'all, }
         }
       }
     }
@@ -258,27 +258,27 @@ const nextConfig ={
         "source": '/(.*), ',',
         "headers": [
           {
-            key: 'X-Content-Type-Options, ',',
+            key: 'X-Content-Type-Options, ,
             "value": 'nosniff, ','}
           {
-            "key": 'X-Frame-Options, ',',
+            "key": 'X-Frame-Options, ,
             "value": 'DENY, ','}
           {
-            "key": 'X-XSS-Protection, ',',
+            "key": 'X-XSS-Protection, ,
             "value": '1, mode=block, ','}
         ]}
     ]}
   // "Redirects": for SEO,
   async redirects() {
     return [{
-        source: '/home, ',',
+        source: '/home, ,
         "destination": '/, ',',
         "permanent": tru,e}
     ]}
   // "Rewrites": for API routes,
   async rewrites() {
     return [{
-        source: '/api/:path*, ',',
+        source: '/api/:path*, ,
         "destination": '/api/:path*, ','}
     ]}
 ,
@@ -295,7 +295,7 @@ module."exports": = nextConfig,",
       // "Example": Send: to Google Analytics,
       if (typeof gtag !== 'undefined') {',
         gtag('event, ', metric.name, {',
-          "event_category": 'Web: Vitals, ',',
+          "event_category": 'Web: Vitals, ,
           "event_label": metric.i,d,
           "value": Math.round(metric.name: === 'CLS' ? metric.value * 10o00 : metric.value), ',
           "non_interaction": tru,e})}
@@ -307,7 +307,7 @@ module."exports": = nextConfig,",
     getTTFB(sendToAnalytics)}, [])}
 "export": function reportWebVitals(metric) {
   // // console.log('Web Vitals:', metric)}",
-    const hooksDir = path.join(this.projectRoot, 'src', 'hooks')',
+    const hooksDir = path.join(this.projectRoot, 'srchooks')',
     "if": (!fs.existsSync(hooksDir)) {
       fs.mkdirSync(hooksDir, { "recursive": true})}
     fs.writeFileSync(
@@ -325,7 +325,7 @@ module."exports": = nextConfig,",
     this.improvements.push('Code: quality improvements applied')}',
   "async": createESLintConfig() {
     const eslintConfig = "module.exports ={
-  extends: ['next/core-web-vitals, ','',"eslint": recommended, ','',@typescript-eslint/recommended', ',
+  extends: ['next/core-web-vitals, ','',"eslint": recommended, ','',@typescript-eslint/recommended,
     if (!fs.existsSync(hooksDir)) {
       fs.mkdirSync(hooksDir, { "recursive": true })}
     fs.writeFileSync(',
@@ -344,21 +344,20 @@ module."exports": = nextConfig,",
   async createESLintConfig() {',
     const eslintConfig = "module.exports ={
   "extends": [",
-    'next/core-web-vitals';
-      '"eslint": recommended',
+    'next/core-web-vitals"eslint": recommended',
     '@typescript-eslint/recommended'],
-  parser: '@typescript-eslint/parser, ',',
+  parser: '@typescript-eslint/parser, ,
   "plugins": ['@typescript-eslint'], ',
   "rules": {
-    // Performance: rules;
-    'no-console': 'warn, ','',no-debugger': 'error', ',
+    // Performance: rules,
+    'no-console': 'warn, ','',no-debugger': 'error,
     // "Code": quality rules,
-    '@typescript-eslint/no-unused-vars': 'error', '',@typescript-eslint/no-explicit-any': 'warn', '',@typescript-eslint/prefer-const': 'error', ',
-    // "React": rules;
-    'react-hooks/exhaustive-deps': 'warn', '',react/no-unescaped-entities': 'off', ',
-    // "Accessibility": rules;
-    'jsx-a11y/alt-text': 'error', '',jsx-a11y/aria-props': 'error', '',jsx-a11y/aria-proptypes': 'error', '',jsx-a11y/aria-unsupported-elements': 'error', '',jsx-a11y/role-has-required-aria-props': 'error', '',jsx-a11y/role-supports-aria-props': 'error', '}
-  "ignorePatterns": ['node_modules/, ', '.next/', 'out/'], '}
+    '@typescript-eslint/no-unused-vars': 'error', '',@typescript-eslint/no-explicit-any': 'warn', '',@typescript-eslint/prefer-const': 'error,
+    // "React": rules,
+    'react-hooks/exhaustive-deps': 'warn', '',react/no-unescaped-entities': 'off,
+    // "Accessibility": rules,
+    'jsx-a11y/alt-text': 'error', '',jsx-a11y/aria-props': 'error', '',jsx-a11y/aria-proptypes': 'error', '',jsx-a11y/aria-unsupported-elements': 'error', '',jsx-a11y/role-has-required-aria-props': 'error', '',jsx-a11y/role-supports-aria-props': 'error}
+  "ignorePatterns": ['node_modules/, ', '.next/out/'], '}
   "ignorePatterns": ['node_modules/,.next/,out/']}",
     fs.writeFileSync(
       path.join(this.projectRoot, 'eslint.config.js'), ',
@@ -367,13 +366,13 @@ module."exports": = nextConfig,",
   "async": createPrettierConfig() {
     const prettierConfig = "module.exports ={
   semi: tru,e,
-  "trailingComma": 'es5, ',',
+  "trailingComma": 'es5, ,
   "singleQuote": tru,e,
   "printWidth": 8,0,
-  "tabWidth": 2;
+  "tabWidth": 2,
   "useTabs": fals,e,
   "endOfLine": 'lf, ',',
-  "arrowParens": 'avoid, ',',
+  "arrowParens": 'avoid, ,
   "bracketSpacing": tru,e,
   "jsxSingleQuote": tru,e,
   "quoteProps": 'as-needed, ',',
@@ -381,15 +380,15 @@ module."exports": = nextConfig,",
   async createPrettierConfig() {',
     const prettierConfig = "module.exports ={
   "semi": true,",
-  "trailingComma": 'es5';
-  "singleQuote": true;
-  "printWidth": 80;
-  "tabWidth": 2;
-  "useTabs": false;
-  "endOfLine": 'lf';
-  "arrowParens": 'avoid';
-  "bracketSpacing": true;
-  "jsxSingleQuote": true;
+  "trailingComma": 'es5',
+  "singleQuote": true,
+  "printWidth": 80,
+  "tabWidth": 2,
+  "useTabs": false,
+  "endOfLine": 'lf',
+  "arrowParens": 'avoid',
+  "bracketSpacing": true,
+  "jsxSingleQuote": true,
   "quoteProps": 'as-needed'}",
     fs.writeFileSync(
       path.join(this.projectRoot, '.prettierrc.js'), ',
@@ -424,32 +423,31 @@ module."exports": = nextConfig,",
     const securityMiddleware = "import { NextResponse } from 'next/server',
 "export": function middleware(request: NextRequest) {
   const response = NextResponse.next(),
-  // Security: headers;
-  response.headers.set('X-Content-Type-Options, ', 'nosniff')',
-  response.headers.set('X-Frame-Options', 'DENY')',
-  response.headers.set('X-XSS-Protection', '1, mode=block')',
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin')',
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()')',
+  // Security: headers,
+  response.headers.set('X-Content-Type-Options, nosniff')',
+  response.headers.set('X-Frame-OptionsDENY')',
+  response.headers.set('X-XSS-Protection1, mode=block')',
+  response.headers.set('Referrer-Policystrict-origin-when-cross-origin')',
+  response.headers.set('Permissions-Policycamera=(), microphone=(), geolocation=()')',
     this.fixes.push('Created Prettier configuration')}
   async updateTypeScriptConfig() {',
     const tsConfigPath = path.join(this.projectRoot, 'tsconfig.json'),
-    let tsConfig ={};
+    let tsConfig ={},
     if (fs.existsSync(tsConfigPath)) {',
       tsConfig = JSON.parse(fs.readFileSync(tsConfigPath, 'utf8'))}
     // Add strict TypeScript configuration,
     tsConfig.compilerOptions ={
       ...tsConfig.compilerOptions,
-      "strict": true;
-      "noImplicitAny": true;
-      "strictNullChecks": true;
-      "strictFunctionTypes": true;
-      "noImplicitReturns": true;
-      "noFallthroughCasesInSwitch": true;
-      "noUncheckedIndexedAccess": true;
-      "exactOptionalPropertyTypes": true};
+      "strict": true,
+      "noImplicitAny": true,
+      "strictNullChecks": true,
+      "strictFunctionTypes": true,
+      "noImplicitReturns": true,
+      "noFallthroughCasesInSwitch": true,
+      "noUncheckedIndexedAccess": true,
+      "exactOptionalPropertyTypes": true},
     fs.writeFileSync(tsConfigPath, JSON.stringify(tsConfig, null, 2)),
-    this.fixes.push(';
-      'Updated TypeScript configuration for strict type checking')}
+    this.fixes.push(Updated TypeScript configuration for strict type checking')}
   async enhanceSecurity() {',
     // // console.log('🔒 Enhancing security...'),
     // Create security headers middleware,
@@ -462,19 +460,19 @@ module."exports": = nextConfig,",
 export function middleware("request": NextRequest) {
   const response = NextResponse.next(),
   // Security headers',
-  response.headers.set('X-Content-Type-Options', 'nosniff'),
-  response.headers.set('X-Frame-Options', 'DENY'),
-  response.headers.set('X-XSS-Protection', '1, mode=block'),
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin'),
-  response.headers.set('Permissions-Policy', 'camera=(), microphone=(), geolocation=()),
+  response.headers.set('X-Content-Type-Optionsnosniff'),
+  response.headers.set('X-Frame-OptionsDENY'),
+  response.headers.set('X-XSS-Protection1, mode=block'),
+  response.headers.set('Referrer-Policystrict-origin-when-cross-origin'),
+  response.headers.set('Permissions-Policycamera=(), microphone=(), geolocation=()),
   // Content Security Policy,
   const csp = [',
-    "default-src 'self'",";
+    "default-src 'self'",",
       "script-src 'self' 'unsafe-eval' 'unsafe-inline'",",
-    "style-src 'self' 'unsafe-inline'",";
-      "img-src 'self' "data": http;
-    "s": ",";
-    "font-src 'self'",";
+    "style-src 'self' 'unsafe-inline'",",
+      "img-src 'self' "data": http,
+    "s": ",",
+    "font-src 'self'",",
       "connect-src 'self'",",
     "frame-ancestors 'none'","].join('')',
   // "Content": Security Policy,
@@ -488,14 +486,14 @@ export function middleware("request": NextRequest) {
   response.headers.set('Content-Security-Policy', csp)',
   "return": response}
 export const config ={
-  "matcher": ['/((?!api|_next/static|_next/image|favicon.ico).*), ',']}",
+  "matcher": ['/((?!api|_next/static|_next/image|favicon.ico).*), ]}",
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts')',
     fs.writeFileSync(middlewarePath, securityMiddleware),
     this.fixes.push('"Created": security middleware with CSP headers')}',
   "async": createEnvironmentValidation() {
     const envValidation = "import { z } from 'zod',
 const envSchema = z.object({
-  "NODE_ENV": z.enum(['development, ', 'production', 'test']), ',
+  "NODE_ENV": z.enum(['development, production', 'test']), ',
   "NEXT_PUBLIC_APP_URL": z.string().url(),
   DATABASE_URL: z.string().url().optional(),
   NEXTAUTH_SECRET: z.string().min(32).optional(),
@@ -503,8 +501,7 @@ const envSchema = z.object({
   response.headers.set('Content-Security-Policy', csp),
   return response}
 export const config ={
-  "matcher": [';
-      '/((?!api|_next/static|_next/image|favicon.ico).*)]}",
+  "matcher": [/((?!api|_next/static|_next/image|favicon.ico).*)]}",
 ",
     const middlewarePath = path.join(this.projectRoot, 'middleware.ts'),
     fs.writeFileSync(middlewarePath, securityMiddleware)',
@@ -512,14 +509,14 @@ export const config ={
   async createEnvironmentValidation() {',
     const envValidation = "import { z } from 'zod',
 const envSchema = z.object({',
-  "NODE_ENV": z.enum(['development', 'production', 'test']),
+  "NODE_ENV": z.enum(['developmentproduction', 'test']),
   "NEXT_PUBLIC_APP_URL": z.string().url(),
   DATABASE_URL: z.string().url().optional(),
   NEXTAUTH_SECRET: z.string().min(32).optional(),
   NEXTAUTH_URL: z.string().url().optional()}),
 "export": const env = envSchema.parse(process.env),
 export: type Env = z.infer<typeof envSchema>,",
-    const libDir = path.join(this.projectRoot, 'src', 'lib')',
+    const libDir = path.join(this.projectRoot, 'srclib')',
     "if": (!fs.existsSync(libDir)) {
       fs.mkdirSync(libDir, { "recursive": true})}
     fs.writeFileSync(
@@ -537,12 +534,12 @@ export: type Env = z.infer<typeof envSchema>,",
     this.improvements.push('SEO: optimizations applied')}',
   "async": createSEOComponent() {
     const seoComponent = "import Head from 'next/head',
-    const libDir = path.join(this.projectRoot, 'src', 'lib'),
+    const libDir = path.join(this.projectRoot, 'srclib'),
     if (!fs.existsSync(libDir)) {
       fs.mkdirSync(libDir, { "recursive": true })}
     ,
     fs.writeFileSync(
-      path.join(libDir, 'env.ts');
+      path.join(libDir, 'env.ts'),
       envValidation),
     this.fixes.push('Created environment validation schema')}
 ,
@@ -580,14 +577,14 @@ interface SEOProps {
   modifiedTime?: string}
 ,
 export default function SEO({
-  title = 'Zion Tech Group - Advanced Technology Solutions';
-  description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.';
-  image = '/og-image.jpg';
-  url;
-  type = 'website';
-  keywords = ['technology', 'AI', 'digital transformation', 'consulting'];
-  author = 'Zion Tech Group';
-  publishedTime;
+  title = 'Zion Tech Group - Advanced Technology Solutions',
+  description = 'Leading provider of cutting-edge technology solutions, AI services, and digital transformation consulting.',
+  image = '/og-image.jpg',
+  url,
+  type = 'website',
+  keywords = ['technologyAI', 'digital transformationconsulting'],
+  author = 'Zion Tech Group',
+  publishedTime,
   modifiedTime}: SEOProps) {
   const router = useRouter(),
   const canonicalUrl = url || \""https": //ziontechgroup.com\${router.asPath}\",
@@ -596,7 +593,7 @@ export default function SEO({
     <Head>,
       <title>{fullTitle}</title>,
       <meta name="description" content={description}  />,
-      <meta name="keywords" content={keywords.join(', ')}  />,
+      <meta name="keywords" content={keywords.join()}  />,
       <meta name="author" content={author}  />,
       <link rel="canonical" href={canonicalUrl}  />,
   "return": (
@@ -643,24 +640,24 @@ export default function SEO({
       <script
         type="application/ld+json",
         dangerouslySetInnerHTML={{
-          "__html": JSON.stringify({',@context': 'https://schema.org', ',@type': 'Organization';
-            "name": 'Zion Tech Group';
-            "url": 'https://ziontechgroup.com';
-            "logo": 'https://ziontechgroup.com/logo.png';
-            "description": description;
-            ...(publishedTime && { "datePublished": publishedTime });
-            ...(modifiedTime && { "dateModified": modifiedTime })});
-            "name": 'Zion Tech Group';
+          "__html": JSON.stringify({',@context': 'https://schema.org,@type': 'Organization',
+            "name": 'Zion Tech Group',
+            "url": 'https: //ziontechgroup.com',
+            "logo": 'https://ziontechgroup.com/logo.png',
+            "description": description,
+            ...(publishedTime && { "datePublished": publishedTime }),
+            ...(modifiedTime && { "dateModified": modifiedTime })}),
+            "name": 'Zion Tech Group',
             "url": 'http,
-    s://ziontechgroup.com';
+    s: //ziontechgroup.com',
             "logo": 'http,
-    s://ziontechgroup.com/logo.png';
-            "description": description;
+    s: //ziontechgroup.com/logo.png',
+            "description": description,
             ...(publishedTime && { "datePublished": publishedTime }),
             ...(modifiedTime && { "dateModified": modifiedTime })})}}
        />,
     </Head>')}",
-    const componentsDir = path.join(this.projectRoot, 'src', 'components')',
+    const componentsDir = path.join(this.projectRoot, 'srccomponents')',
     "if": (!fs.existsSync(componentsDir)) {
       fs.mkdirSync(componentsDir, { "recursive": true})}
     fs.writeFileSync(
@@ -670,7 +667,7 @@ export default function SEO({
   "async": createSitemapGenerator() {
     const sitemapGenerator = "export: async function generateSitemap() {
   const baseUrl = 'https: //ziontechgroup.com'',
-  const pages = ['/, ','',/about', '',/services', '',/contact', '',/blog', '',/careers', '],
+  const pages = ['/, ','',/about', '',/services', '',/contact', '',/blog', '',/careers],
   const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>",
 <"urlset": xmlns="http: //www.sitemaps.org/schemas/sitemap/0.9">",
 \${pages: .map(
@@ -679,7 +676,7 @@ export default function SEO({
       fs.mkdirSync(componentsDir, { "recursive": true })}
     ,
     fs.writeFileSync(
-      path.join(componentsDir, 'SEO.tsx');
+      path.join(componentsDir, 'SEO.tsx'),
       seoComponent),
     this.fixes.push('Created comprehensive SEO component')}
 ,
@@ -693,12 +690,12 @@ export default function SEO({
   </url>\"),
   .join('')}',
 </urlset>\",
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap)',
+  fs.writeFileSync(path.join(process.cwd(), 'publicsitemap.xml'), sitemap)',
   // // console.log('"Sitemap": generated successfully')}',
 "if": (require.main === module) {
     const sitemapGenerator = "export async function generateSitemap() {
   const baseUrl = 'https: //ziontechgroup.com',
-  const pages = [',/', ',/about', ',/services', ',/contact', ',/blog', ',/careers';
+  const pages = [',/,/about', ',/services,/contact', ',/blog,/careers',
   ],
   const sitemap = \"<?xml version="1.0" encoding="UTF-8"?>,
 <urlset xmlns=""http": //www.sitemaps.org/schemas/sitemap/0.9">,
@@ -713,13 +710,13 @@ export default function SEO({
   </url>\`),
   .join(')}
 </urlset>\",
-  fs.writeFileSync(path.join(process.cwd(), 'public', 'sitemap.xml'), sitemap),
+  fs.writeFileSync(path.join(process.cwd(), 'publicsitemap.xml'), sitemap),
   // // console.log('Sitemap generated successfully')}
 ,
 if (require.main === module) {
   generateSitemap()}",
     fs.writeFileSync(
-      path.join(this.projectRoot, 'scripts', 'generate-sitemap.js');
+      path.join(this.projectRoot, 'scriptsgenerate-sitemap.js'),
       sitemapGenerator),
     this.fixes.push('Created sitemap generator')}
 ,
@@ -739,7 +736,7 @@ Disallo,
 Disallo,
     w: /private/",
     fs.writeFileSync(",
-      path.join(this.projectRoot, 'public', 'robots.txt'),
+      path.join(this.projectRoot, 'publicrobots.txt'),
       robotsTxt)',
     this.fixes.push('Created robots.txt file')}
   async improveAccessibility() {',
@@ -756,7 +753,7 @@ export const focusElement = ("selector": string) => {
   if (element) {
     (element as HTMLElement).focus()}
 ,
-export const announceToScreenReader = ("message": string) => {",  const announcement = document.createElement('div')',  announcement.setAttribute('aria-live', 'polite')',  announcement.setAttribute('aria-atomic', 'true')',  announcement.className = 'sr-only'',  announcement.textContent = message',
+export const announceToScreenReader = ("message": string) => {",  const announcement = document.createElement('div')',  announcement.setAttribute('aria-livepolite')',  announcement.setAttribute('aria-atomictrue')',  announcement.className = 'sr-only'',  announcement.textContent = message',
   const announcement = document.createElement('div'),
   announcement.setAttribute('aria-live,polite'),
   announcement.setAttribute('aria-atomic,true'),

@@ -2,70 +2,70 @@ import React, { useState, useRef, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ChevronDown;
-  Menu;
-  X;
-  Search;
-  User;
-  Bell;
-  Settings;
-  LogOut;
-  Home;
-  Briefcase;
-  Users;
-  Globe;
-  Zap;
-  Cpu;
-  Brain;
-  Rocket;
-  Shield;
-  Database;
-  Server;
-  CpuIcon;
-  ZapIcon;
-  Truck;
-  BookOpen;
-  FileText;
-  Handshake;
-  Newspaper;
-  Grid;
-  Atom;
-  BarChart3;
-  Palette;
-  PaletteIcon;
-  GraduationCap;
-  HeartIcon;
-  DollarSign;
-  Target;
-  Network;
-  Cloud;
-  Layers;
-  Code;
-  MessageCircle;
-  TrendingUp;
-  Monitor;
-  Lock;
-  Building;
-  Phone;
-  Mail;
-  ArrowRight;
-  Star;
-  Sparkles;
-  Eye;
-  Fingerprint;
-  Satellite;
-  Telescope;
-  Microscope;
-  FlaskConical;
-  TargetIcon;
-  Globe2;
-  ShieldCheck;
-  LockKeyhole;
-  Wifi;
-  Bluetooth;
-  Radio;
-  SatelliteDish;
-  Orbit;
+  ChevronDown,
+  Menu,
+  X,
+  Search,
+  User,
+  Bell,
+  Settings,
+  LogOut,
+  Home,
+  Briefcase,
+  Users,
+  Globe,
+  Zap,
+  Cpu,
+  Brain,
+  Rocket,
+  Shield,
+  Database,
+  Server,
+  CpuIcon,
+  ZapIcon,
+  Truck,
+  BookOpen,
+  FileText,
+  Handshake,
+  Newspaper,
+  Grid,
+  Atom,
+  BarChart3,
+  Palette,
+  PaletteIcon,
+  GraduationCap,
+  HeartIcon,
+  DollarSign,
+  Target,
+  Network,
+  Cloud,
+  Layers,
+  Code,
+  MessageCircle,
+  TrendingUp,
+  Monitor,
+  Lock,
+  Building,
+  Phone,
+  Mail,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Eye,
+  Fingerprint,
+  Satellite,
+  Telescope,
+  Microscope,
+  FlaskConical,
+  TargetIcon,
+  Globe2,
+  ShieldCheck,
+  LockKeyhole,
+  Wifi,
+  Bluetooth,
+  Radio,
+  SatelliteDish,
+  Orbit,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -101,479 +101,479 @@ function normalizeHref(href: string): string {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Revolutionary Services 20o41';
-    href: '/services';
-    icon: <Rocket className='w-5 h-5' />;
-    description: 'Future-defining technology solutions';
-    badge: 'New 20o41';
-    category: 'services';
-    color: 'from-emerald-50o0 to-cyan-50o0';
+    name: 'Revolutionary Services 20o41',
+    href: '/services',
+    icon: <Rocket className='w-5 h-5' />,
+    description: 'Future-defining technology solutions',
+    badge: 'New 20o41',
+    category: 'services',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'All Services';
-        href: '/services';
-        description: 'Complete revolutionary services overview';
-        icon: <Grid className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete revolutionary services overview',
+        icon: <Grid className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Quantum AI Consciousness';
-        href: '/quantum-ai-consciousness-platform';
-        description: 'Next-generation AI consciousness with quantum computing';
-        icon: <Brain className='w-4 h-4' />;
-        color: 'from-purple-50o0 to-cyan-60o0';
-        featured: true;
-        price: '$2,999/month';
-        rating: 4.9;
-        reviews: 89;
-      };
+        name: 'Quantum AI Consciousness',
+        href: '/quantum-ai-consciousness-platform',
+        description: 'Next-generation AI consciousness with quantum computing',
+        icon: <Brain className='w-4 h-4' />,
+        color: 'from-purple-50o0 to-cyan-60o0',
+        featured: true,
+        price: '$2,999/month',
+        rating: 4.9,
+        reviews: 89
+      },
       {
-        name: 'Space Resource Intelligence';
-        href: '/space-resource-intelligence-platform';
-        description: 'AI-powered space resource discovery and mining';
-        icon: <Satellite className='w-4 h-4' />;
-        color: 'from-indigo-50o0 to-purple-60o0';
-        featured: true;
-        price: '$1,999/month';
-        rating: 4.8;
-        reviews: 56;
-      };
+        name: 'Space Resource Intelligence',
+        href: '/space-resource-intelligence-platform',
+        description: 'AI-powered space resource discovery and mining',
+        icon: <Satellite className='w-4 h-4' />,
+        color: 'from-indigo-50o0 to-purple-60o0',
+        featured: true,
+        price: '$1,999/month',
+        rating: 4.8,
+        reviews: 56
+      },
       {
-        name: 'Autonomous Business Intelligence';
-        href: '/autonomous-business-intelligence-20o40';
-        description: 'Fully autonomous business intelligence platform';
-        icon: <BarChart3 className='w-4 h-4' />;
-        color: 'from-emerald-50o0 to-teal-60o0';
-        featured: true;
-        price: '$1,499/month';
-        rating: 4.9;
-        reviews: 234;
-      };
+        name: 'Autonomous Business Intelligence',
+        href: '/autonomous-business-intelligence-20o40',
+        description: 'Fully autonomous business intelligence platform',
+        icon: <BarChart3 className='w-4 h-4' />,
+        color: 'from-emerald-50o0 to-teal-60o0',
+        featured: true,
+        price: '$1,499/month',
+        rating: 4.9,
+        reviews: 234
+      },
       {
-        name: 'Quantum Cybersecurity Future';
-        href: '/quantum-cybersecurity-future-20o40';
-        description: 'Future-proof cybersecurity with quantum resistance';
-        icon: <ShieldCheck className='w-4 h-4' />;
-        color: 'from-red-50o0 to-orange-60o0';
-        featured: true;
-        price: '$899/month';
-        rating: 4.8;
-        reviews: 187;
-      };
+        name: 'Quantum Cybersecurity Future',
+        href: '/quantum-cybersecurity-future-20o40',
+        description: 'Future-proof cybersecurity with quantum resistance',
+        icon: <ShieldCheck className='w-4 h-4' />,
+        color: 'from-red-50o0 to-orange-60o0',
+        featured: true,
+        price: '$899/month',
+        rating: 4.8,
+        reviews: 187
+      },
       {
-        name: 'Brain-Computer Interface';
-        href: '/brain-computer-interface-20o40';
-        description: 'Next-generation neural interface technology';
-        icon: <Brain className='w-4 h-4' />;
-        color: 'from-pink-50o0 to-purple-60o0';
-        featured: true;
-        price: '$3,999/month';
-        rating: 4.9;
-        reviews: 67;
-      };
+        name: 'Brain-Computer Interface',
+        href: '/brain-computer-interface-20o40',
+        description: 'Next-generation neural interface technology',
+        icon: <Brain className='w-4 h-4' />,
+        color: 'from-pink-50o0 to-purple-60o0',
+        featured: true,
+        price: '$3,999/month',
+        rating: 4.9,
+        reviews: 67
+      },
       {
-        name: 'AI Autonomous Research';
-        href: '/ai-autonomous-research-20o41';
-        description: 'Fully autonomous research platform';
-        icon: <Microscope className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-indigo-60o0';
-        price: '$2,499/month';
-        rating: 4.9;
-        reviews: 123;
-      };
+        name: 'AI Autonomous Research',
+        href: '/ai-autonomous-research-20o41',
+        description: 'Fully autonomous research platform',
+        icon: <Microscope className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-indigo-60o0',
+        price: '$2,499/month',
+        rating: 4.9,
+        reviews: 123
+      },
       {
-        name: 'Quantum Internet Security';
-        href: '/quantum-internet-security-20o41';
-        description: 'Quantum-secured internet infrastructure';
-        icon: <Globe2 className='w-4 h-4' />;
-        color: 'from-cyan-50o0 to-blue-60o0';
-        price: '$1,799/month';
-        rating: 4.8;
-        reviews: 89;
-      };
+        name: 'Quantum Internet Security',
+        href: '/quantum-internet-security-20o41',
+        description: 'Quantum-secured internet infrastructure',
+        icon: <Globe2 className='w-4 h-4' />,
+        color: 'from-cyan-50o0 to-blue-60o0',
+        price: '$1,799/month',
+        rating: 4.8,
+        reviews: 89
+      },
       {
-        name: 'AI Customer Success';
-        href: '/ai-customer-success-20o41';
-        description: 'Autonomous customer success platform';
-        icon: <TargetIcon className='w-4 h-4' />;
-        color: 'from-green-50o0 to-emerald-60o0';
-        price: '$599/month';
-        rating: 4.9;
-        reviews: 156;
-      };
+        name: 'AI Customer Success',
+        href: '/ai-customer-success-20o41',
+        description: 'Autonomous customer success platform',
+        icon: <TargetIcon className='w-4 h-4' />,
+        color: 'from-green-50o0 to-emerald-60o0',
+        price: '$599/month',
+        rating: 4.9,
+        reviews: 156
+      },
       {
-        name: 'AI Sales Intelligence';
-        href: '/ai-sales-intelligence-20o41';
-        description: 'Autonomous sales intelligence platform';
-        icon: <DollarSign className='w-4 h-4' />;
-        color: 'from-yellow-50o0 to-orange-60o0';
-        price: '$799/month';
-        rating: 4.8;
-        reviews: 234;
-      };
+        name: 'AI Sales Intelligence',
+        href: '/ai-sales-intelligence-20o41',
+        description: 'Autonomous sales intelligence platform',
+        icon: <DollarSign className='w-4 h-4' />,
+        color: 'from-yellow-50o0 to-orange-60o0',
+        price: '$799/month',
+        rating: 4.8,
+        reviews: 234
+      },
       {
-        name: 'Quantum Cloud Infrastructure';
-        href: '/quantum-cloud-infrastructure-20o41';
-        description: 'Quantum-powered cloud infrastructure';
-        icon: <Cloud className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-indigo-60o0';
-        price: '$1,299/month';
-        rating: 4.9;
-        reviews: 98;
-      };
-    ];
-  };
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure-20o41',
+        description: 'Quantum-powered cloud infrastructure',
+        icon: <Cloud className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-indigo-60o0',
+        price: '$1,299/month',
+        rating: 4.9,
+        reviews: 98
+      },
+    ],
+  },
   {
-    name: 'AI & Consciousness';
-    href: '/ai-services';
-    icon: <Brain className='w-5 h-5' />;
-    description: 'Revolutionary AI consciousness platforms';
-    badge: 'Featured';
-    category: 'ai';
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className='w-5 h-5' />,
+    description: 'Revolutionary AI consciousness platforms',
+    badge: 'Featured',
+    category: 'ai',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
-        name: 'Quantum AI Consciousness Platform';
-        href: '/quantum-ai-consciousness-platform';
-        description: 'Next-generation AI consciousness with quantum computing';
-        icon: <Brain className='w-4 h-4' />;
-        featured: true;
-        price: '$2,999/month';
-        rating: 4.9;
-        reviews: 89;
-      };
+        name: 'Quantum AI Consciousness Platform',
+        href: '/quantum-ai-consciousness-platform',
+        description: 'Next-generation AI consciousness with quantum computing',
+        icon: <Brain className='w-4 h-4' />,
+        featured: true,
+        price: '$2,999/month',
+        rating: 4.9,
+        reviews: 89
+      },
       {
-        name: 'AI Autonomous Ecosystem Manager';
-        href: '/ai-autonomous-ecosystem-manager';
-        description: 'Fully autonomous AI ecosystem management';
-        icon: <CpuIcon className='w-4 h-4' />;
-        featured: true;
-        price: '$399/month';
-        rating: 4.8;
-        reviews: 156;
-      };
+        name: 'AI Autonomous Ecosystem Manager',
+        href: '/ai-autonomous-ecosystem-manager',
+        description: 'Fully autonomous AI ecosystem management',
+        icon: <CpuIcon className='w-4 h-4' />,
+        featured: true,
+        price: '$399/month',
+        rating: 4.8,
+        reviews: 156
+      },
       {
-        name: 'AI Predictive Maintenance Platform';
-        href: '/ai-predictive-maintenance-platform';
-        description: 'Predict and prevent equipment failures';
-        icon: <Settings className='w-4 h-4' />;
-        featured: true;
-        price: '$299/month';
-        rating: 4.7;
-        reviews: 98;
-      };
+        name: 'AI Predictive Maintenance Platform',
+        href: '/ai-predictive-maintenance-platform',
+        description: 'Predict and prevent equipment failures',
+        icon: <Settings className='w-4 h-4' />,
+        featured: true,
+        price: '$299/month',
+        rating: 4.7,
+        reviews: 98
+      },
       {
-        name: 'AI Content Personalization Engine';
-        href: '/ai-content-personalization-engine';
-        description: 'Hyper-personalized content experiences';
-        icon: <Palette className='w-4 h-4' />;
-        featured: true;
-        price: '$199/month';
-        rating: 4.8;
-        reviews: 234;
-      };
+        name: 'AI Content Personalization Engine',
+        href: '/ai-content-personalization-engine',
+        description: 'Hyper-personalized content experiences',
+        icon: <Palette className='w-4 h-4' />,
+        featured: true,
+        price: '$199/month',
+        rating: 4.8,
+        reviews: 234
+      },
       {
-        name: 'AI Ethics & Governance Framework';
-        href: '/ai-ethics-governance-framework';
-        description: 'Comprehensive AI ethics and governance';
-        icon: <Shield className='w-4 h-4' />;
-        price: '$599/month';
-        rating: 4.9;
-        reviews: 67;
-      };
+        name: 'AI Ethics & Governance Framework',
+        href: '/ai-ethics-governance-framework',
+        description: 'Comprehensive AI ethics and governance',
+        icon: <Shield className='w-4 h-4' />,
+        price: '$599/month',
+        rating: 4.9,
+        reviews: 67
+      },
       {
-        name: 'AI Autonomous Research Assistant';
-        href: '/ai-autonomous-research-assistant';
-        description: 'Fully autonomous research platform';
-        icon: <BookOpen className='w-4 h-4' />;
-        price: '$799/month';
-        rating: 4.8;
-        reviews: 123;
-      };
+        name: 'AI Autonomous Research Assistant',
+        href: '/ai-autonomous-research-assistant',
+        description: 'Fully autonomous research platform',
+        icon: <BookOpen className='w-4 h-4' />,
+        price: '$799/month',
+        rating: 4.8,
+        reviews: 123
+      },
       {
-        name: 'AI Creativity Studio';
-        href: '/ai-creativity-studio';
-        description: 'AI-powered creative tools';
-        icon: <PaletteIcon className='w-4 h-4' />;
-        price: '$149/month';
-        rating: 4.7;
-        reviews: 189;
-      };
-    ];
-  };
+        name: 'AI Creativity Studio',
+        href: '/ai-creativity-studio',
+        description: 'AI-powered creative tools',
+        icon: <PaletteIcon className='w-4 h-4' />,
+        price: '$149/month',
+        rating: 4.7,
+        reviews: 189
+      },
+    ],
+  },
   {
-    name: 'Quantum & Space Tech';
-    href: '/quantum-space-tech';
-    icon: <Atom className='w-5 h-5' />;
-    description: 'Breakthrough quantum and space technologies';
-    badge: 'Cutting Edge';
-    category: 'quantum';
-    color: 'from-blue-50o0 to-cyan-50o0';
+    name: 'Quantum & Space Tech',
+    href: '/quantum-space-tech',
+    icon: <Atom className='w-5 h-5' />,
+    description: 'Breakthrough quantum and space technologies',
+    badge: 'Cutting Edge',
+    category: 'quantum',
+    color: 'from-blue-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'Quantum Neural Ecosystem 20o40';
-        href: '/quantum-neural-ecosystem-20o40';
-        description: 'Quantum-powered AI systems';
-        icon: <Atom className='w-4 h-4' />;
-        featured: true;
-        price: '$1,999/month';
-        rating: 4.9;
-        reviews: 78;
-      };
+        name: 'Quantum Neural Ecosystem 20o40',
+        href: '/quantum-neural-ecosystem-20o40',
+        description: 'Quantum-powered AI systems',
+        icon: <Atom className='w-4 h-4' />,
+        featured: true,
+        price: '$1,999/month',
+        rating: 4.9,
+        reviews: 78
+      },
       {
-        name: 'Space Resource Intelligence Platform';
-        href: '/space-resource-intelligence-platform';
-        description: 'AI-powered space resource discovery';
-        icon: <Satellite className='w-4 h-4' />;
-        featured: true;
-        price: '$1,999/month';
-        rating: 4.8;
-        reviews: 56;
-      };
+        name: 'Space Resource Intelligence Platform',
+        href: '/space-resource-intelligence-platform',
+        description: 'AI-powered space resource discovery',
+        icon: <Satellite className='w-4 h-4' />,
+        featured: true,
+        price: '$1,999/month',
+        rating: 4.8,
+        reviews: 56
+      },
       {
-        name: 'Quantum Cybersecurity Future 20o40';
-        href: '/quantum-cybersecurity-future-20o40';
-        description: 'Future-proof security';
-        icon: <ShieldCheck className='w-4 h-4' />;
-        featured: true;
-        price: '$899/month';
-        rating: 4.8;
-        reviews: 187;
-      };
+        name: 'Quantum Cybersecurity Future 20o40',
+        href: '/quantum-cybersecurity-future-20o40',
+        description: 'Future-proof security',
+        icon: <ShieldCheck className='w-4 h-4' />,
+        featured: true,
+        price: '$899/month',
+        rating: 4.8,
+        reviews: 187
+      },
       {
-        name: 'Brain-Computer Interface 20o40';
-        href: '/brain-computer-interface-20o40';
-        description: 'Neural interface technology';
-        icon: <Brain className='w-4 h-4' />;
-        featured: true;
-        price: '$3,999/month';
-        rating: 4.9;
-        reviews: 67;
-      };
+        name: 'Brain-Computer Interface 20o40',
+        href: '/brain-computer-interface-20o40',
+        description: 'Neural interface technology',
+        icon: <Brain className='w-4 h-4' />,
+        featured: true,
+        price: '$3,999/month',
+        rating: 4.9,
+        reviews: 67
+      },
       {
-        name: 'Quantum Internet Security 20o41';
-        href: '/quantum-internet-security-20o41';
-        description: 'Quantum-secured internet infrastructure';
-        icon: <Globe2 className='w-4 h-4' />;
-        price: '$1,799/month';
-        rating: 4.8;
-        reviews: 89;
-      };
+        name: 'Quantum Internet Security 20o41',
+        href: '/quantum-internet-security-20o41',
+        description: 'Quantum-secured internet infrastructure',
+        icon: <Globe2 className='w-4 h-4' />,
+        price: '$1,799/month',
+        rating: 4.8,
+        reviews: 89
+      },
       {
-        name: 'Quantum Cloud Infrastructure 20o41';
-        href: '/quantum-cloud-infrastructure-20o41';
-        description: 'Quantum-powered cloud infrastructure';
-        icon: <Cloud className='w-4 h-4' />;
-        price: '$1,299/month';
-        rating: 4.9;
-        reviews: 98;
-      };
+        name: 'Quantum Cloud Infrastructure 20o41',
+        href: '/quantum-cloud-infrastructure-20o41',
+        description: 'Quantum-powered cloud infrastructure',
+        icon: <Cloud className='w-4 h-4' />,
+        price: '$1,299/month',
+        rating: 4.9,
+        reviews: 98
+      },
       {
-        name: 'Space Mining Operations';
-        href: '/space-mining-operations';
-        description: 'Advanced space resource extraction';
-        icon: <Rocket className='w-4 h-4' />;
-        price: '$2,499/month';
-        rating: 4.7;
-        reviews: 45;
-      };
-    ];
-  };
+        name: 'Space Mining Operations',
+        href: '/space-mining-operations',
+        description: 'Advanced space resource extraction',
+        icon: <Rocket className='w-4 h-4' />,
+        price: '$2,499/month',
+        rating: 4.7,
+        reviews: 45
+      },
+    ],
+  },
   {
-    name: 'Business Solutions';
-    href: '/business-solutions';
-    icon: <Building className='w-5 h-5' />;
-    description: 'Enterprise-grade business solutions';
-    badge: 'Enterprise';
-    category: 'business';
-    color: 'from-green-50o0 to-emerald-50o0';
+    name: 'Business Solutions',
+    href: '/business-solutions',
+    icon: <Building className='w-5 h-5' />,
+    description: 'Enterprise-grade business solutions',
+    badge: 'Enterprise',
+    category: 'business',
+    color: 'from-green-50o0 to-emerald-50o0',
     children: [
       {
-        name: 'Autonomous Business Intelligence 20o40';
-        href: '/autonomous-business-intelligence-20o40';
-        description: 'Consciousness-driven insights';
-        icon: <BarChart3 className='w-4 h-4' />;
-        featured: true;
-        price: '$1,499/month';
-        rating: 4.9;
-        reviews: 234;
-      };
+        name: 'Autonomous Business Intelligence 20o40',
+        href: '/autonomous-business-intelligence-20o40',
+        description: 'Consciousness-driven insights',
+        icon: <BarChart3 className='w-4 h-4' />,
+        featured: true,
+        price: '$1,499/month',
+        rating: 4.9,
+        reviews: 234
+      },
       {
-        name: 'AI Customer Success 20o41';
-        href: '/ai-customer-success-20o41';
-        description: 'Autonomous customer success platform';
-        icon: <TargetIcon className='w-4 h-4' />;
-        featured: true;
-        price: '$599/month';
-        rating: 4.9;
-        reviews: 156;
-      };
+        name: 'AI Customer Success 20o41',
+        href: '/ai-customer-success-20o41',
+        description: 'Autonomous customer success platform',
+        icon: <TargetIcon className='w-4 h-4' />,
+        featured: true,
+        price: '$599/month',
+        rating: 4.9,
+        reviews: 156
+      },
       {
-        name: 'AI Sales Intelligence 20o41';
-        href: '/ai-sales-intelligence-20o41';
-        description: 'Autonomous sales intelligence platform';
-        icon: <DollarSign className='w-4 h-4' />;
-        featured: true;
-        price: '$799/month';
-        rating: 4.8;
-        reviews: 234;
-      };
+        name: 'AI Sales Intelligence 20o41',
+        href: '/ai-sales-intelligence-20o41',
+        description: 'Autonomous sales intelligence platform',
+        icon: <DollarSign className='w-4 h-4' />,
+        featured: true,
+        price: '$799/month',
+        rating: 4.8,
+        reviews: 234
+      },
       {
-        name: 'Enterprise Process Automation';
-        href: '/enterprise-process-automation';
-        description: 'Intelligent business process automation';
-        icon: <Zap className='w-4 h-4' />;
-        price: '$899/month';
-        rating: 4.7;
-        reviews: 167;
-      };
+        name: 'Enterprise Process Automation',
+        href: '/enterprise-process-automation',
+        description: 'Intelligent business process automation',
+        icon: <Zap className='w-4 h-4' />,
+        price: '$899/month',
+        rating: 4.7,
+        reviews: 167
+      },
       {
-        name: 'Digital Transformation Consulting';
-        href: '/digital-transformation-consulting';
-        description: 'Strategic digital transformation guidance';
-        icon: <TrendingUp className='w-4 h-4' />;
-        price: '$1,299/month';
-        rating: 4.8;
-        reviews: 89;
-      };
-    ];
-  };
+        name: 'Digital Transformation Consulting',
+        href: '/digital-transformation-consulting',
+        description: 'Strategic digital transformation guidance',
+        icon: <TrendingUp className='w-4 h-4' />,
+        price: '$1,299/month',
+        rating: 4.8,
+        reviews: 89
+      },
+    ],
+  },
   {
-    name: 'Research & Development';
-    href: '/research-development';
-    icon: <FlaskConical className='w-5 h-5' />;
-    description: 'Cutting-edge research and development';
-    badge: 'Innovation';
-    category: 'research';
-    color: 'from-orange-50o0 to-red-50o0';
+    name: 'Research & Development',
+    href: '/research-development',
+    icon: <FlaskConical className='w-5 h-5' />,
+    description: 'Cutting-edge research and development',
+    badge: 'Innovation',
+    category: 'research',
+    color: 'from-orange-50o0 to-red-50o0',
     children: [
       {
-        name: 'AI Autonomous Research 20o41';
-        href: '/ai-autonomous-research-20o41';
-        description: 'Fully autonomous research platform';
-        icon: <Microscope className='w-4 h-4' />;
-        featured: true;
-        price: '$2,499/month';
-        rating: 4.9;
-        reviews: 123;
-      };
+        name: 'AI Autonomous Research 20o41',
+        href: '/ai-autonomous-research-20o41',
+        description: 'Fully autonomous research platform',
+        icon: <Microscope className='w-4 h-4' />,
+        featured: true,
+        price: '$2,499/month',
+        rating: 4.9,
+        reviews: 123
+      },
       {
-        name: 'Quantum Materials Discovery';
-        href: '/quantum-materials-discovery';
-        description: 'AI-powered materials research';
-        icon: <Atom className='w-4 h-4' />;
-        price: '$1,799/month';
-        rating: 4.8;
-        reviews: 67;
-      };
+        name: 'Quantum Materials Discovery',
+        href: '/quantum-materials-discovery',
+        description: 'AI-powered materials research',
+        icon: <Atom className='w-4 h-4' />,
+        price: '$1,799/month',
+        rating: 4.8,
+        reviews: 67
+      },
       {
-        name: 'Space Technology Research';
-        href: '/space-technology-research';
-        description: 'Advanced space technology development';
-        icon: <Telescope className='w-4 h-4' />;
-        price: '$2,199/month';
-        rating: 4.7;
-        reviews: 45;
-      };
+        name: 'Space Technology Research',
+        href: '/space-technology-research',
+        description: 'Advanced space technology development',
+        icon: <Telescope className='w-4 h-4' />,
+        price: '$2,199/month',
+        rating: 4.7,
+        reviews: 45
+      },
       {
-        name: 'Biotechnology Innovation';
-        href: '/biotechnology-innovation';
-        description: 'Next-generation biotech solutions';
-        icon: <FlaskConical className='w-4 h-4' />;
-        price: '$1,599/month';
-        rating: 4.8;
-        reviews: 78;
-      };
-    ];
-  };
+        name: 'Biotechnology Innovation',
+        href: '/biotechnology-innovation',
+        description: 'Next-generation biotech solutions',
+        icon: <FlaskConical className='w-4 h-4' />,
+        price: '$1,599/month',
+        rating: 4.8,
+        reviews: 78
+      },
+    ],
+  },
   {
-    name: 'Company';
-    href: '/about';
-    icon: <Building className='w-5 h-5' />;
-    description: 'About Zion Tech Group';
-    category: 'company';
-    color: 'from-gray-50o0 to-slate-50o0';
+    name: 'Company',
+    href: '/about',
+    icon: <Building className='w-5 h-5' />,
+    description: 'About Zion Tech Group',
+    category: 'company',
+    color: 'from-gray-50o0 to-slate-50o0',
     children: [
-      { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> };
-      { name: 'Our Team', href: '/team', icon: <Users className='w-4 h-4' /> };
+      { name: 'About Us', href: '/about', icon: <Users className='w-4 h-4' /> },
+      { name: 'Our Team', href: '/team', icon: <Users className='w-4 h-4' /> },
       {
-        name: 'Careers';
-        href: '/careers';
-        icon: <Briefcase className='w-4 h-4' />;
-      };
+        name: 'Careers',
+        href: '/careers',
+        icon: <Briefcase className='w-4 h-4' />
+      },
       {
-        name: 'News & Updates';
-        href: '/news';
-        icon: <Newspaper className='w-4 h-4' />;
-      };
+        name: 'News & Updates',
+        href: '/news',
+        icon: <Newspaper className='w-4 h-4' />
+      },
       {
-        name: 'Case Studies';
-        href: '/case-studies';
-        icon: <FileText className='w-4 h-4' />;
-      };
+        name: 'Case Studies',
+        href: '/case-studies',
+        icon: <FileText className='w-4 h-4' />
+      },
       {
-        name: 'Partners';
-        href: '/partners';
-        icon: <Handshake className='w-4 h-4' />;
-      };
+        name: 'Partners',
+        href: '/partners',
+        icon: <Handshake className='w-4 h-4' />
+      },
       {
-        name: 'Investors';
-        href: '/investors';
-        icon: <DollarSign className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Investors',
+        href: '/investors',
+        icon: <DollarSign className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className='w-5 h-5' />;
-    description: 'Educational resources and tools';
-    category: 'resources';
-    color: 'from-indigo-50o0 to-purple-50o0';
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Educational resources and tools',
+    category: 'resources',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
       {
-        name: 'Documentation';
-        href: '/docs';
-        icon: <FileText className='w-4 h-4' />;
-      };
+        name: 'Documentation',
+        href: '/docs',
+        icon: <FileText className='w-4 h-4' />
+      },
       {
-        name: 'API Reference';
-        href: '/api';
-        icon: <Code className='w-4 h-4' />;
-      };
+        name: 'API Reference',
+        href: '/api',
+        icon: <Code className='w-4 h-4' />
+      },
       {
-        name: 'Tutorials';
-        href: '/tutorials';
-        icon: <GraduationCap className='w-4 h-4' />;
-      };
+        name: 'Tutorials',
+        href: '/tutorials',
+        icon: <GraduationCap className='w-4 h-4' />
+      },
       {
-        name: 'Webinars';
-        href: '/webinars';
-        icon: <Monitor className='w-4 h-4' />;
-      };
+        name: 'Webinars',
+        href: '/webinars',
+        icon: <Monitor className='w-4 h-4' />
+      },
       {
-        name: 'White Papers';
-        href: '/white-papers';
-        icon: <FileText className='w-4 h-4' />;
-      };
-      { name: 'Blog', href: '/blog', icon: <Newspaper className='w-4 h-4' /> };
+        name: 'White Papers',
+        href: '/white-papers',
+        icon: <FileText className='w-4 h-4' />
+      },
+      { name: 'Blog', href: '/blog', icon: <Newspaper className='w-4 h-4' /> },
       {
-        name: 'Support Center';
-        href: '/support';
-        icon: <MessageCircle className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Support Center',
+        href: '/support',
+        icon: <MessageCircle className='w-4 h-4' />
+      },
+    ],
+  },
 ],
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function UltraAdvancedFuturisticNavigation20o41({
-  onMenuToggle;
-  isMenuOpen;
+  onMenuToggle,
+  isMenuOpen,
 }: UltraAdvancedFuturisticNavigation20o41Props) {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const [searchQuery, setSearchQuery] = useState(''),
@@ -591,7 +591,7 @@ export default function UltraAdvancedFuturisticNavigation20o41({
         activeDropdown &&,
         !(event.target as Element).closest('.dropdown-container')) {
         setActiveDropdown(null)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [activeDropdown]),
   // Handle escape key,
@@ -600,17 +600,17 @@ export default function UltraAdvancedFuturisticNavigation20o41({
       if (event.key === 'Escape') {
         setActiveDropdown(null),
         setIsSearchOpen(false)}
-    };
+    },
     document.addEventListener('keydown', handleEscape),
     return () => document.removeEventListener('keydown', handleEscape)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     // Implement search functionality,
     // // console.log('Searching for:', searchQuery),
     setIsSearchOpen(false),
-    setSearchQuery('')};
+    setSearchQuery('')},
   return (
     <nav className='relative z-50 bg-black/80 backdrop-blur-xl border-b border-cyan-50o0/30'>,
       {/* Top Contact Bar */}

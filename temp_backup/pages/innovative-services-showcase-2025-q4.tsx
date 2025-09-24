@@ -2,27 +2,27 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Zap;
-  Shield;
-  Rocket;
-  Brain;
-  Atom;
-  Target;
-  Star;
-  TrendingUp;
-  Users;
-  Award;
-  Globe;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  ExternalLink;
-  Clock;
-  DollarSign;
-  Shield as SecurityIcon;
-  Search;
+  Check,
+  Zap,
+  Shield,
+  Rocket,
+  Brain,
+  Atom,
+  Target,
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  ExternalLink,
+  Clock,
+  DollarSign,
+  Shield as SecurityIcon,
+  Search,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovative20o25Q4MicroSaasServices } from '../data/innovative-20o25-q4-micro-saas-services',
@@ -32,47 +32,47 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> };
+    { id: 'all', name: 'All Services', icon: <Globe className='w-5 h-5' /> },
     {
-      id: 'micro-saas';
-      name: 'Micro SAAS';
-      icon: <Rocket className='w-5 h-5' />;
-    };
+      id: 'micro-saas',
+      name: 'Micro SAAS',
+      icon: <Rocket className='w-5 h-5' />
+    },
     {
-      id: 'it-services';
-      name: 'IT Services';
-      icon: <Shield className='w-5 h-5' />;
-    };
+      id: 'it-services',
+      name: 'IT Services',
+      icon: <Shield className='w-5 h-5' />
+    },
     {
-      id: 'ai-services';
-      name: 'AI Services';
-      icon: <Brain className='w-5 h-5' />;
-    };
+      id: 'ai-services',
+      name: 'AI Services',
+      icon: <Brain className='w-5 h-5' />
+    },
   ],
   const allServices = [
     ...innovative20o25Q4MicroSaasServices.map(service => ({
-      ...service;
-      category: 'micro-saas';
-    }));
+      ...service,
+      category: 'micro-saas'
+    })),
     ...innovative20o25Q4ITServices.map(service => ({
-      ...service;
-      category: 'it-services';
-    }));
+      ...service,
+      category: 'it-services'
+    })),
     ...innovative20o25Q4AIServices.map(service => ({
-      ...service;
-      category: 'ai-services';
-    }));
+      ...service,
+      category: 'ai-services'
+    })),
   ],
   // Helper function to get setup time from different service structures,
   const getSetupTime = (service: any) => {
     if (service.setupTime) return service.setupTime,
     if (service.price?.setupTime) return service.price.setupTime,
-    return 'Contact for details'};
+    return 'Contact for details'},
   // Helper function to get trial days from different service structures,
   const getTrialDays = (service: any) => {
     if (service.trialDays) return service.trialDays,
     if (service.price?.trialDays) return service.price.trialDays,
-    return null};
+    return null},
   const filteredServices = allServices.filter(service => {
     const matchesCategory =,
       activeCategory === 'all' || service.category === activeCategory,
@@ -82,36 +82,33 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {
       service.tagline.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch}),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <Layout>,
       <SEO
         title='Innovative Services Showcase Q4 20o25 | Zion Tech Group',
         description='Discover our cutting-edge micro SAAS, IT, and AI services for Q4 20o25. Transform your business with intelligent solutions, competitive pricing, and expert support.',
         keywords={[
-          'micro SAAS';
-          'IT services';
-          'AI services';
-          'business solutions';
-          'digital transformation';
-          'enterprise software';
+          'micro SAASIT services',
+          'AI servicesbusiness solutions',
+          'digital transformationenterprise software',
         ]}
       />,
       {/* Hero Section */}
@@ -131,7 +128,7 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {
             </h1>,
             <p className='text-xl md:text-2xl text-gray-20o0 mb-8 max-w-4xl mx-auto'>,
               Transform your business with our cutting-edge micro SAAS, IT,
-              infrastructure, and AI-powered solutions. Real implementations;
+              infrastructure, and AI-powered solutions. Real implementations,
               competitive pricing, and proven ROI.,
             </p>,
             <div className='flex flex-wrap justify-center gap-4 mb-8'>,
@@ -353,7 +350,7 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {
               Why Choose Zion Tech Group?,
             </h2>,
             <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-              We deliver real, market-validated solutions with proven ROI;
+              We deliver real, market-validated solutions with proven ROI,
               competitive pricing, and enterprise-grade support.,
             </p>,
           </div>,
@@ -448,5 +445,5 @@ const InnovativeServicesShowcase20o25Q4: React.FC = () => {
           </div>,
         </div>,
       </section>,
-    </Layout>)};
-export default InnovativeServicesShowcase20o25Q4;
+    </Layout>)},
+export default InnovativeServicesShowcase20o25Q4,

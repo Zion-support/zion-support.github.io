@@ -1,13 +1,13 @@
 import React, { useState, useCallback } from 'react',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  Zap;
-  Shield;
-  Brain;
-  Rocket;
-  ExternalLink;
+  ArrowRight,
+  Star,
+  Zap,
+  Shield,
+  Brain,
+  Rocket,
+  ExternalLink,
 } from 'lucide-react',
 import Link from 'next/link',
 interface ServiceCardProps {
@@ -22,14 +22,14 @@ interface ServiceCardProps {
     icon?: string,
     href?: string,
     isPopular?: boolean,
-    isNew?: boolean};
+    isNew?: boolean},
   index: number,
   isReducedMotion?: boolean}
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  service;
-  index;
-  isReducedMotion = false;
+  service,
+  index,
+  isReducedMotion = false
 }) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
@@ -45,33 +45,32 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
     setIsExpanded(prev => !prev)}, []),
   const getCategoryColor = useCallback((category: string) => {
     const colors: Record<string string> = {
-      AI: 'from-purple-40o0 to-pink-50o0';
-      Quantum: 'from-cyan-40o0 to-blue-50o0';
-      IT: 'from-emerald-40o0 to-teal-50o0';
-      'Micro SAAS': 'from-orange-40o0 to-red-50o0';
-      Cybersecurity: 'from-red-40o0 to-pink-50o0';
-      Space: 'from-indigo-40o0 to-purple-50o0';
-      Blockchain: 'from-yellow-40o0 to-orange-50o0';
-    };
+      AI: 'from-purple-40o0 to-pink-50o0',
+      Quantum: 'from-cyan-40o0 to-blue-50o0',
+      IT: 'from-emerald-40o0 to-teal-50o0Micro SAAS': 'from-orange-40o0 to-red-50o0',
+      Cybersecurity: 'from-red-40o0 to-pink-50o0',
+      Space: 'from-indigo-40o0 to-purple-50o0',
+      Blockchain: 'from-yellow-40o0 to-orange-50o0'
+    },
     return colors[category] || 'from-gray-40o0 to-gray-50o0'}, []),
   const getIcon = useCallback((category: string) => {
     const icons: Record<string React.ReactNode> = {
-      AI: <Brain className='w-6 h-6' />;
-      Quantum: <Zap className='w-6 h-6' />;
-      IT: <Shield className='w-6 h-6' />;
-      'Micro SAAS': <Rocket className='w-6 h-6' />;
-      Cybersecurity: <Shield className='w-6 h-6' />;
-      Space: <Rocket className='w-6 h-6' />;
-      Blockchain: <Zap className='w-6 h-6' />;
-    };
+      AI: <Brain className='w-6 h-6' />,
+      Quantum: <Zap className='w-6 h-6' />,
+      IT: <Shield className='w-6 h-6' />,
+      'Micro SAAS': <Rocket className='w-6 h-6' />,
+      Cybersecurity: <Shield className='w-6 h-6' />,
+      Space: <Rocket className='w-6 h-6' />,
+      Blockchain: <Zap className='w-6 h-6' />
+    },
     return icons[category] || <Star className='w-6 h-6' />}, []),
   return (
     <motion.div,
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{
-        duration: isReducedMotion ? 0.1 : 0.5;
-        delay: isReducedMotion ? 0 : index * 0.1;
+        duration: isReducedMotion ? 0.1 : 0.5,
+        delay: isReducedMotion ? 0 : index * 0.1
       }}
       whileHover={!isReducedMotion ? { y: -5 } : {}}
       onMouseEnter={handleMouseEnter}
@@ -200,5 +199,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
           animate={{ opacity: 1 }}
           className='absolute inset-0 bg-gradient-to-br from-cyan-40o0/5 to-blue-50o0/5 rounded-2xl pointer-events-none',
         />)}
-    </motion.div>)};
-export default ServiceCard;
+    </motion.div>)},
+export default ServiceCard,

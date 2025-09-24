@@ -81,5 +81,5 @@ const BusinessAutomationMastery20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default BusinessAutomationMastery20o26PromotionBanner;
+    </div>)},
+export default BusinessAutomationMastery20o26PromotionBanner,

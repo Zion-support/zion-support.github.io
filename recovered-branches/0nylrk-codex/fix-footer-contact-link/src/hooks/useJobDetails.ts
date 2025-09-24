@@ -28,11 +28,11 @@ export function useJobDetails(jobId: string | undefined) {
   useEffect(() => {
     loadJobDetails()}, [jobId]),
   return {
-    job;
-    isLoading;
-    error;
-    loadJobDetails;
-  };
+    job,
+    isLoading,
+    error,
+    loadJobDetails,
+  },
 }
 ,
-export default useJobDetails;
+export default useJobDetails,

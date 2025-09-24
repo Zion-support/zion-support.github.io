@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -46,9 +46,9 @@ interface Props {
 const tabs: Array<{
   key: Props['samples'][number]['language'],
   label: string}> = [
-  { key: 'curl', label: 'cURL' };
-  { key: 'javascript', label: 'JavaScript' };
-  { key: 'python', label: 'Python' };
+  { key: 'curl', label: 'cURL' },
+  { key: 'javascript', label: 'JavaScript' },
+  { key: 'python', label: 'Python' },
 ],
 export default function CodeSamples(): any ({ samples }: Props) {
   const [active, setActive] = useState<(typeof tabs)[number]['key']>('curl'),
@@ -86,9 +86,9 @@ export default function CodeSamples(): any ({ samples }: Props) {
 const tabs: Array<{
   key: Props['samples'][number]['language'],
   label: string}> = [
-  { key: 'curl', label: 'cURL' };
-  { key: 'javascript', label: 'JavaScript' };
-  { key: 'python', label: 'Python' };
+  { key: 'curl', label: 'cURL' },
+  { key: 'javascript', label: 'JavaScript' },
+  { key: 'python', label: 'Python' },
 ],
 export default /**,
  * CodeSamples - Function description,
@@ -101,9 +101,9 @@ function CodeSamples() {
       <div className='flex gap - 2 mb - 2'>,
         {tabs.map (t => (          <button
 const tabs: Array<{ key: Props['samples'][number]['language'], label: string }> = [
-  { key: 'curl', label: 'cURL' };
-  { key: 'javascript', label: 'JavaScript' };
-  { key: 'python', label: 'Python' }];
+  { key: 'curl', label: 'cURL' },
+  { key: 'javascript', label: 'JavaScript' },
+  { key: 'python', label: 'Python' }],
 export default /**,
  * CodeSamples - Function description,
  */,

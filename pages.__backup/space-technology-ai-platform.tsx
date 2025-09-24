@@ -9,36 +9,25 @@ import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFut
 import EnhancedNavigation20o26 from '../components/layout/EnhancedNavigation20o26',
 export default function SpaceTechnologyAIPlatform() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'AI-powered satellite operations';
-    'Autonomous space exploration';
-    'Space data analytics';
-    'Satellite constellation management';
-    'Space debris tracking';
-    'Real-time monitoring';
-    'Predictive maintenance';
-    'Mission planning tools';
-    'API access';
-    'Expert consultation'],
+    'AI-powered satellite operationsAutonomous space exploration',
+    'Space data analyticsSatellite constellation management',
+    'Space debris trackingReal-time monitoring',
+    'Predictive maintenanceMission planning tools',
+    'API accessExpert consultation'],
   const useCases = [
-    'Satellite operations';
-    'Space exploration';
-    'Earth observation';
-    'Space debris monitoring';
-    'Mission planning';
-    'Space research'],
+    'Satellite operationsSpace exploration',
+    'Earth observationSpace debris monitoring',
+    'Mission planningSpace research'],
   const integrations = [
-    'NASA APIs'ESA APIs'Satellite ground stations',
-    'GIS systems'Slack'Microsoft Teams'Custom applications'],
+    'NASA APIs'ESA APIs'Satellite ground stationsGIS systems'Slack'Microsoft Teams'Custom applications'],
   const competitors = [
-    'Maxar ($50o00-50o000/month)';
-    'Planet Labs ($10o00-10o000/month)';
-    'Airbus Defence ($10o000-10o0000/month)';
-    'Lockheed Martin'Boeing'Northrop Grumman'],
+    'Maxar ($50o00-50o000/month)Planet Labs ($10o00-10o000/month)',
+    'Airbus Defence ($10o000-10o0000/month)Lockheed Martin'Boeing'Northrop Grumman'],
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",

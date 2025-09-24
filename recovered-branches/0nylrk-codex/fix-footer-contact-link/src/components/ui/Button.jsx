@@ -1,57 +1,57 @@
-import React from 'react';
+import React from 'react',
 import { cva } from 'class-variance-authority',
 import { cn } from '../../lib/utils',
 const buttonVariants = cva(
-  'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-30o0 focus:outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
+  'inline-flex items-center justify-center rounded-lg font-medium transition-all duration-30o0 focus: outline-none focus:ring-2 focus:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none',
   {
     variants: {
       variant: {
         default:,
-          'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white hover:from-blue-70o0 hover:to-cyan-70o0 focus:ring-blue-50o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1';
+          'bg-gradient-to-r from-blue-60o0 to-cyan-60o0 text-white hover: from-blue-70o0 hover:to-cyan-70o0 focus:ring-blue-50o0 shadow-lg hover:shadow-xl transform hover:-translate-y-1',
         secondary:,
-          'bg-gray-80o0 text-white hover:bg-gray-70o0 focus:ring-gray-50o0 border border-gray-60o0 hover:border-gray-50o0';
+          'bg-gray-80o0 text-white hover: bg-gray-70o0 focus:ring-gray-50o0 border border-gray-60o0 hover:border-gray-50o0',
         outline:,
-          'border-2 border-blue-60o0 text-blue-60o0 hover:bg-blue-60o0 hover:text-white focus:ring-blue-50o0';
+          'border-2 border-blue-60o0 text-blue-60o0 hover: bg-blue-60o0 hover:text-white focus:ring-blue-50o0',
         ghost:,
-          'text-gray-30o0 hover:text-white hover:bg-gray-80o0 focus:ring-gray-50o0';
+          'text-gray-30o0 hover: text-white hover:bg-gray-80o0 focus:ring-gray-50o0',
         destructive:,
-          'bg-red-60o0 text-white hover:bg-red-70o0 focus:ring-red-50o0';
+          'bg-red-60o0 text-white hover: bg-red-70o0 focus:ring-red-50o0',
         success:,
-          'bg-green-60o0 text-white hover:bg-green-70o0 focus:ring-green-50o0';
+          'bg-green-60o0 text-white hover: bg-green-70o0 focus:ring-green-50o0',
         warning:,
-          'bg-yellow-60o0 text-white hover:bg-yellow-70o0 focus:ring-yellow-50o0';
-      };
+          'bg-yellow-60o0 text-white hover: bg-yellow-70o0 focus:ring-yellow-50o0'
+      },
       size: {
-        sm: 'h-8 px-3 text-sm';
-        md: 'h-10 px-4 text-sm';
-        lg: 'h-12 px-6 text-base';
-        xl: 'h-14 px-8 text-lg';
-      };
+        sm: 'h-8 px-3 text-sm',
+        md: 'h-10 px-4 text-sm',
+        lg: 'h-12 px-6 text-base',
+        xl: 'h-14 px-8 text-lg'
+      },
       fullWidth: {
-        true: 'w-full';
-        false: '';
-      };
-    };
+        true: 'w-full',
+        false: ''
+      },
+    },
     defaultVariants: {
-      variant: 'default';
-      size: 'md';
-      fullWidth: false;
-    };
+      variant: 'default',
+      size: 'md',
+      fullWidth: false
+    },
   }
 ),
 const Button = React.forwardRef(
   (
     {
-      className;
-      variant;
-      size;
-      fullWidth;
-      loading = false;
-      leftIcon;
-      rightIcon;
-      children;
-      disabled;
-      ...props};
+      className,
+      variant,
+      size,
+      fullWidth,
+      loading = false,
+      leftIcon,
+      rightIcon,
+      children,
+      disabled,
+      ...props},
     ref) => {
     return (
       <button
@@ -86,4 +86,4 @@ const Button = React.forwardRef(
       </button>)}
 ),
 Button.displayName = 'Button',
-export { Button, buttonVariants };
+export { Button, buttonVariants },

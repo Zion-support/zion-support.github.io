@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Dna;
-  Globe2;
-  CheckCircle;
-  TrendingUp;
+  ArrowRight,
+  Star,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Dna,
+  Globe2,
+  CheckCircle,
+  TrendingUp,
 } from 'lucide-react',
 import { futuristicAIServices20o29 } from '../../data/20o29-futuristic-ai-services',
 import { quantumInnovationServices20o29 } from '../../data/20o29-quantum-innovation-services',
@@ -20,45 +20,45 @@ import { metaverseInnovationServices20o29 } from '../../data/20o29-metaverse-inn
 export default function ServicesShowcase20o29() {
   const categories = [
     {
-      title: '🚀 20o29 Futuristic AI Services';
-      icon: Brain;
-      color: 'from-violet-60o0 to-purple-60o0';
-      services: futuristicAIServices20o29;
+      title: '🚀 20o29 Futuristic AI Services',
+      icon: Brain,
+      color: 'from-violet-60o0 to-purple-60o0',
+      services: futuristicAIServices20o29,
       description:,
-        'Next-generation artificial intelligence that reads emotions, orchestrates creativity, and predicts the future';
-    };
+        'Next-generation artificial intelligence that reads emotions, orchestrates creativity, and predicts the future',
+    },
     {
-      title: '⚛️ 20o29 Quantum Innovation';
-      icon: Atom;
-      color: 'from-indigo-60o0 to-blue-60o0';
-      services: quantumInnovationServices20o29;
+      title: '⚛️ 20o29 Quantum Innovation',
+      icon: Atom,
+      color: 'from-indigo-60o0 to-blue-60o0',
+      services: quantumInnovationServices20o29,
       description:,
-        'Quantum computing breakthroughs in finance, cybersecurity, drug discovery, and logistics';
-    };
+        'Quantum computing breakthroughs in finance, cybersecurity, drug discovery, and logistics',
+    },
     {
-      title: '🌌 20o29 Space Innovation';
-      icon: Rocket;
-      color: 'from-blue-60o0 to-cyan-60o0';
-      services: spaceInnovationServices20o29;
+      title: '🌌 20o29 Space Innovation',
+      icon: Rocket,
+      color: 'from-blue-60o0 to-cyan-60o0',
+      services: spaceInnovationServices20o29,
       description:,
-        'Revolutionary space technology including autonomous mining, weather prediction, and solar power';
-    };
+        'Revolutionary space technology including autonomous mining, weather prediction, and solar power',
+    },
     {
-      title: '🧬 20o29 Biotech Innovation';
-      icon: Dna;
-      color: 'from-emerald-60o0 to-teal-60o0';
-      services: biotechInnovationServices20o29;
+      title: '🧬 20o29 Biotech Innovation',
+      icon: Dna,
+      color: 'from-emerald-60o0 to-teal-60o0',
+      services: biotechInnovationServices20o29,
       description:,
-        'Cutting-edge biotechnology with DNA computing, synthetic biology, and brain-computer interfaces';
-    };
+        'Cutting-edge biotechnology with DNA computing, synthetic biology, and brain-computer interfaces',
+    },
     {
-      title: '🌐 20o29 Metaverse Innovation';
-      icon: Globe2;
-      color: 'from-orange-60o0 to-red-60o0';
-      services: metaverseInnovationServices20o29;
+      title: '🌐 20o29 Metaverse Innovation',
+      icon: Globe2,
+      color: 'from-orange-60o0 to-red-60o0',
+      services: metaverseInnovationServices20o29,
       description:,
-        'Next-generation digital reality with holographic communication and virtual economies';
-    };
+        'Next-generation digital reality with holographic communication and virtual economies',
+    },
   ],
   return (
     <section className='py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,

@@ -1,141 +1,120 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  BarChart3;
-  Eye;
-  Users;
-  MousePointer;
-  TrendingUp;
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Clock;
-  Award;
-  Star;
-  Globe;
-  Lock;
-  Cpu;
-  Database;
-  Monitor;
-  Smartphone;
-  Mail;
-  Phone;
-  MapPin;
-  DollarSign;
-  Zap;
-  Settings;
-  FileText;
-  MessageSquare;
-  PieChart;
+  BarChart3,
+  Eye,
+  Users,
+  MousePointer,
+  TrendingUp,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Monitor,
+  Smartphone,
+  Mail,
+  Phone,
+  MapPin,
+  DollarSign,
+  Zap,
+  Settings,
+  FileText,
+  MessageSquare,
+  PieChart,
   Activity} from 'lucide-react',
 export default function WebsiteAnalytics() {
   const title = 'Website Analytics for Small Businesses — Zion Tech Group',
   const description = 'Intuitive website analytics platform designed for small business owners. Get actionable insights without technical expertise.',
   const features = [
     {
-      title: 'User-Friendly Dashboard';
-      description: 'Simple, intuitive interface designed for non-technical users';
-      icon: Monitor;
+      title: 'User-Friendly Dashboard',
+      description: 'Simple, intuitive interface designed for non-technical users',
+      icon: Monitor,
       details: [
-        'Visual charts and graphs';
-        'Plain English explanations';
-        'One-click report generation';
-        'Mobile-responsive design';
-        'Customizable widgets';
-        'Drag-and-drop interface']};
+        'Visual charts and graphsPlain English explanations',
+        'One-click report generationMobile-responsive design',
+        'Customizable widgetsDrag-and-drop interface']},
     {
-      title: 'Traffic Analysis';
-      description: 'Comprehensive visitor behavior and traffic source insights';
-      icon: Users;
+      title: 'Traffic Analysis',
+      description: 'Comprehensive visitor behavior and traffic source insights',
+      icon: Users,
       details: [
-        'Real-time visitor tracking';
-        'Traffic source breakdown';
-        'Geographic visitor mapping';
-        'Device and browser analytics';
-        'Referral source tracking';
-        'Search engine performance']};
+        'Real-time visitor trackingTraffic source breakdown',
+        'Geographic visitor mappingDevice and browser analytics',
+        'Referral source trackingSearch engine performance']},
     {
-      title: 'Conversion Tracking';
-      description: 'Track and optimize your business goals and conversions';
-      icon: Target;
+      title: 'Conversion Tracking',
+      description: 'Track and optimize your business goals and conversions',
+      icon: Target,
       details: [
-        'Goal setting and tracking';
-        'E-commerce conversion analysis';
-        'Form submission tracking';
-        'Email signup monitoring';
-        'Phone call tracking';
-        'ROI measurement tools']};
+        'Goal setting and trackingE-commerce conversion analysis',
+        'Form submission trackingEmail signup monitoring',
+        'Phone call trackingROI measurement tools']},
     {
-      title: 'Marketing Performance';
-      description: 'Measure the effectiveness of your marketing campaigns';
-      icon: TrendingUp;
+      title: 'Marketing Performance',
+      description: 'Measure the effectiveness of your marketing campaigns',
+      icon: TrendingUp,
       details: [
-        'Campaign performance tracking';
-        'Social media analytics';
-        'Email marketing insights';
-        'Paid advertising ROI';
-        'Content performance analysis';
-        'A/B testing results']}
+        'Campaign performance trackingSocial media analytics',
+        'Email marketing insightsPaid advertising ROI',
+        'Content performance analysisA/B testing results']}
   ],
   const pricing = [
     {
-      name: 'Basic';
-      price: '$29';
-      period: '/month';
-      description: 'Perfect for small websites';
+      name: 'Basic',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small websites',
       features: [
-        'Up to 10,0o00 page views/month';
-        'Basic traffic analytics';
-        '5 goals tracking';
-        'Email support';
-        'Standard reports';
-        'Mobile app access'];
-      popular: false};
+        'Up to 10,0o00 page views/monthBasic traffic analytics',
+        '5 goals trackingEmail support',
+        'Standard reportsMobile app access'],
+      popular: false},
     {
-      name: 'Professional';
-      price: '$79';
-      period: '/month';
-      description: 'Ideal for growing businesses';
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10o0,0o00 page views/month';
-        'Advanced analytics';
-        'Unlimited goals tracking';
-        'Priority support';
-        'Custom reports';
-        'E-commerce tracking';
-        'API access'];
-      popular: true};
+        'Up to 10o0,0o00 page views/monthAdvanced analytics',
+        'Unlimited goals trackingPriority support',
+        'Custom reportsE-commerce tracking',
+        'API access'],
+      popular: true},
     {
-      name: 'Business';
-      price: '$199';
-      period: '/month';
-      description: 'For established businesses';
+      name: 'Business',
+      price: '$199',
+      period: '/month',
+      description: 'For established businesses',
       features: [
-        'Unlimited page views';
-        'Advanced segmentation';
-        'Custom dashboards';
-        'Dedicated support';
-        'White-label reports';
-        'Advanced integrations';
-        'SLA guarantee'];
+        'Unlimited page viewsAdvanced segmentation',
+        'Custom dashboardsDedicated support',
+        'White-label reportsAdvanced integrations',
+        'SLA guarantee'],
       popular: false}
   ],
   const benefits = [
     {
-      icon: Eye;
-      title: 'Easy to Understand';
-      description: 'No technical jargon - just clear, actionable insights in plain English'};
+      icon: Eye,
+      title: 'Easy to Understand',
+      description: 'No technical jargon - just clear, actionable insights in plain English'},
     {
-      icon: Zap;
-      title: 'Real-time Data';
-      description: 'Get instant updates on your website performance and visitor behavior'};
+      icon: Zap,
+      title: 'Real-time Data',
+      description: 'Get instant updates on your website performance and visitor behavior'},
     {
-      icon: Target;
-      title: 'Goal-Focused';
-      description: 'Track what matters most to your business with custom goal setting'};
+      icon: Target,
+      title: 'Goal-Focused',
+      description: 'Track what matters most to your business with custom goal setting'},
     {
-      icon: Smartphone;
-      title: 'Mobile Access';
+      icon: Smartphone,
+      title: 'Mobile Access',
       description: 'Monitor your analytics on-the-go with our mobile-optimized interface'}
   ],
   return (

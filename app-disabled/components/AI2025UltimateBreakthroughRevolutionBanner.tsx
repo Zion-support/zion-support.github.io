@@ -6,40 +6,40 @@ const AI20o25UltimateBreakthroughRevolutionBanner = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const content = [
     {
-      id: 'ai-20o25-20o26-ultimate-breakthrough-revolution';
-      title: 'AI 20o25-20o26: The Ultimate Breakthrough Revolution - Ultimate Guide to 15,0o00% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution-ultimate-guide';
+      id: 'ai-20o25-20o26-ultimate-breakthrough-revolution',
+      title: 'AI 20o25-20o26: The Ultimate Breakthrough Revolution - Ultimate Guide to 15,0o00% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution-ultimate-guide',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$150M+';
-        accuracy: '99.99%';
-        efficiency: '2,40o0%'};
-      description: 'Revolutionary AI technologies delivering unprecedented ROI through quantum-enhanced systems, neural superintelligence, and synthetic consciousness platforms.';
-      featured: true};
+        roi: '15,0o00%',
+        savings: '$150M+',
+        accuracy: '99.99%',
+        efficiency: '2,40o0%'},
+      description: 'Revolutionary AI technologies delivering unprecedented ROI through quantum-enhanced systems, neural superintelligence, and synthetic consciousness platforms.',
+      featured: true},
     {
-      id: 'fortune-50o0-ai-revolution-150o00-roi-success';
-      title: 'Fortune 50o0 AI Revolution Success: $150M Annual Savings - 15,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-revolution-150o00-roi-success-story';
+      id: 'fortune-50o0-ai-revolution-150o00-roi-success',
+      title: 'Fortune 50o0 AI Revolution Success: $150M Annual Savings - 15,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-revolution-150o00-roi-success-story',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$150M';
-        efficiency: '2,40o0%';
-        satisfaction: '99.8%'};
-      description: 'Global Manufacturing Solutions achieved unprecedented 15,0o00% ROI through next-generation AI implementation, transforming their entire operation.';
-      featured: true};
+        roi: '15,0o00%',
+        savings: '$150M',
+        efficiency: '2,40o0%',
+        satisfaction: '99.8%'},
+      description: 'Global Manufacturing Solutions achieved unprecedented 15,0o00% ROI through next-generation AI implementation, transforming their entire operation.',
+      featured: true},
     {
-      id: 'ai-revolution-implementation-ultimate-guide';
-      title: 'AI Revolution Implementation Ultimate Guide 20o25-20o26: Complete Roadmap to 15,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ai-revolution-implementation-ultimate-guide-20o25-20o26';
+      id: 'ai-revolution-implementation-ultimate-guide',
+      title: 'AI Revolution Implementation Ultimate Guide 20o25-20o26: Complete Roadmap to 15,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ai-revolution-implementation-ultimate-guide-20o25-20o26',
       metrics: {
-        roi: '15,0o00%';
-        timeline: '18-24 months';
-        success: '94%';
-        investment: '$5M-$20M'};
-      description: 'Comprehensive implementation guide providing Fortune 50o0 companies with proven roadmap to achieve revolutionary AI transformation results.';
+        roi: '15,0o00%',
+        timeline: '18-24 months',
+        success: '94%',
+        investment: '$5M-$20M'},
+      description: 'Comprehensive implementation guide providing Fortune 50o0 companies with proven roadmap to achieve revolutionary AI transformation results.',
       featured: true}
   ],
   useEffect(() => {
@@ -54,7 +54,7 @@ const AI20o25UltimateBreakthroughRevolutionBanner = () => {
   }, []),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ai-20o25-ultimate-breakthrough-revolution-banner-dismissed', 'true')};
+    localStorage.setItem('ai-20o25-ultimate-breakthrough-revolution-banner-dismissedtrue')},
   if (isDismissed) return null,
   const currentContent = content[currentSlide],
   return (
@@ -170,5 +170,5 @@ const AI20o25UltimateBreakthroughRevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateBreakthroughRevolutionBanner;
+    </div>)},
+export default AI20o25UltimateBreakthroughRevolutionBanner,

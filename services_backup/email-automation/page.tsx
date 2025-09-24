@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Email Automation Platform | Zion Tech Group';
+  title: 'Email Automation Platform | Zion Tech Group',
   description:,
-    'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.';
-};
+    'Build powerful email automation platforms with drip campaigns, personalization, and analytics. Professional email marketing solutions starting at $12k.',
+},
 export default function EmailAutomationPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function EmailAutomationPage() {
           Email Automation Platform,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build sophisticated email automation platforms with drip campaigns;
+          Build sophisticated email automation platforms with drip campaigns,
           personalization, and advanced analytics.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Campaign Management',
             details={[
-              'Visual email builder';
-              'Drip campaign sequences';
-              'A/B testing framework';
-              'Send time optimization';
-              'List segmentation';
-              'Template library';
-              'Mobile-responsive design';
+              'Visual email builderDrip campaign sequences',
+              'A/B testing frameworkSend time optimization',
+              'List segmentationTemplate library',
+              'Mobile-responsive design',
             ]}
           />,
           <Item
             title='Personalization & AI',
             details={[
-              'Dynamic content blocks';
-              'AI-powered subject lines';
-              'Behavioral triggers';
-              'Customer journey mapping';
-              'Predictive analytics';
-              'Smart recommendations';
-              'Real-time personalization';
+              'Dynamic content blocksAI-powered subject lines',
+              'Behavioral triggersCustomer journey mapping',
+              'Predictive analyticsSmart recommendations',
+              'Real-time personalization',
             ]}
           />,
           <Item
             title='Analytics & Insights',
             details={[
-              'Open & click tracking';
-              'Revenue attribution';
-              'Engagement scoring';
-              'Deliverability monitoring';
-              'ROI reporting';
-              'Heatmap analysis';
-              'Custom dashboards';
+              'Open & click trackingRevenue attribution',
+              'Engagement scoringDeliverability monitoring',
+              'ROI reportingHeatmap analysis',
+              'Custom dashboards',
             ]}
           />,
         </div>,
@@ -122,13 +113,10 @@ function Pricing() {
           price='$12k–$25k',
           duration='4–6 weeks',
           features={[
-            'Basic email builder';
-            'Drip campaigns';
-            'List management';
-            'Basic analytics';
-            'Template library';
-            'API integration';
-            'Email testing';
+            'Basic email builderDrip campaigns',
+            'List managementBasic analytics',
+            'Template libraryAPI integration',
+            'Email testing',
           ]}
         />,
         <Plan
@@ -136,13 +124,10 @@ function Pricing() {
           price='$25k–$50k',
           duration='6–10 weeks',
           features={[
-            'Everything in Starter';
-            'Advanced personalization';
-            'A/B testing suite';
-            'Behavioral triggers';
-            'Advanced analytics';
-            'CRM integration';
-            'White-label options';
+            'Everything in StarterAdvanced personalization',
+            'A/B testing suiteBehavioral triggers',
+            'Advanced analyticsCRM integration',
+            'White-label options',
           ]}
         />,
         <Plan
@@ -150,13 +135,10 @@ function Pricing() {
           price='$50k+',
           duration='8–12 weeks',
           features={[
-            'Everything in Professional';
-            'AI-powered features';
-            'Advanced segmentation';
-            'Custom integrations';
-            'Dedicated support';
-            'SLA guarantees';
-            'Custom development';
+            'Everything in ProfessionalAI-powered features',
+            'Advanced segmentationCustom integrations',
+            'Dedicated supportSLA guarantees',
+            'Custom development',
           ]}
         />,
       </div>,
@@ -184,10 +166,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

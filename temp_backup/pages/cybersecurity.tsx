@@ -1,38 +1,38 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Shield, Lock, Eye, Zap, Brain, Globe, Target, AlertTriangle } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function Cybersecurity() {
   const services = [
     {
-      icon: <Shield className="w-12 h-12 text-cyan-400" />;
-      title: "Zero Trust Security";
-      description: "Comprehensive zero trust network architecture and security platform";
-      href: "/zero-trust-security-platform"};
+      icon: <Shield className="w-12 h-12 text-cyan-400" />,
+      title: "Zero Trust Security",
+      description: "Comprehensive zero trust network architecture and security platform",
+      href: "/zero-trust-security-platform"},
     {
-      icon: <Lock className="w-12 h-12 text-blue-400" />;
-      title: "Vulnerability Assessment";
-      description: "Advanced penetration testing and security vulnerability analysis";
-      href: "/vulnerability-assessment-penetration-testing"};
+      icon: <Lock className="w-12 h-12 text-blue-400" />,
+      title: "Vulnerability Assessment",
+      description: "Advanced penetration testing and security vulnerability analysis",
+      href: "/vulnerability-assessment-penetration-testing"},
     {
-      icon: <Eye className="w-12 h-12 text-purple-400" />;
-      title: "SOC2 Compliance";
-      description: "Automated SOC2 compliance and evidence management";
-      href: "/soc2-compliance-automation"};
+      icon: <Eye className="w-12 h-12 text-purple-400" />,
+      title: "SOC2 Compliance",
+      description: "Automated SOC2 compliance and evidence management",
+      href: "/soc2-compliance-automation"},
     {
-      icon: <Zap className="w-12 h-12 text-green-400" />;
-      title: "Incident Response";
-      description: "AI-powered incident response and automation suite";
-      href: "/incident-automation-suite"};
+      icon: <Zap className="w-12 h-12 text-green-400" />,
+      title: "Incident Response",
+      description: "AI-powered incident response and automation suite",
+      href: "/incident-automation-suite"},
     {
-      icon: <Brain className="w-12 h-12 text-yellow-400" />;
-      title: "AI Security";
-      description: "Intelligent threat detection and security analytics";
-      href: "/quantum-cybersecurity-platform"};
+      icon: <Brain className="w-12 h-12 text-yellow-400" />,
+      title: "AI Security",
+      description: "Intelligent threat detection and security analytics",
+      href: "/quantum-cybersecurity-platform"},
     {
-      icon: <Globe className="w-12 h-12 text-pink-400" />;
-      title: "Cloud Security";
-      description: "Multi-cloud security and disaster recovery solutions";
+      icon: <Globe className="w-12 h-12 text-pink-400" />,
+      title: "Cloud Security",
+      description: "Multi-cloud security and disaster recovery solutions",
       href: "/multi-cloud-disaster-recovery"}
   ],
 export default function Cybersecurity() {
@@ -51,7 +51,7 @@ export default function Cybersecurity() {
                 Cybersecurity Solutions,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
-                Protecting your digital assets with cutting-edge cybersecurity solutions;
+                Protecting your digital assets with cutting-edge cybersecurity solutions,
                 zero trust architecture, and AI-powered threat detection systems.,
               </p>,
             </motion.div>,
@@ -111,6 +111,6 @@ export default function Cybersecurity() {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default CybersecurityPage;
+    </Layout>)},
+export default CybersecurityPage,
 }

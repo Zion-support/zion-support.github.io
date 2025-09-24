@@ -1,113 +1,110 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Resources - Zion Tech Group';
+  title: 'Resources - Zion Tech Group',
   description:,
-    'Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources.';
+    'Access our comprehensive library of AI guides, case studies, whitepapers, and technical resources.',
   keywords: [
-    'resources';
-    'AI guides';
-    'case studies';
-    'whitepapers';
-    'technical resources';
-    'downloads';
-  ];
-};
+    'resourcesAI guides',
+    'case studieswhitepapers',
+    'technical resourcesdownloads',
+  ]
+},
 export default function ResourcesPage() {
   const resources = [
     {
-      category: 'Success Stories';
+      category: 'Success Stories',
       items: [
         {
-          title: 'Fortune 50o0 AI Transformation: 80o0% ROI Success Story';
+          title: 'Fortune 50o0 AI Transformation: 80o0% ROI Success Story',
           description:,
-            'How a leading manufacturing company achieved unprecedented returns through AI transformation.';
-          type: 'Case Study';
-          link: '/blog/ai-20o25-ultimate-business-transformation-success-story';
-          featured: true;
-        };
+            'How a leading manufacturing company achieved unprecedented returns through AI transformation.',
+          type: 'Case Study',
+          link: '/blog/ai-20o25-ultimate-business-transformation-success-story',
+          featured: true
+        },
         {
-          title: 'Neural Interface Implementation: 50o0% Productivity Increase';
+          title: 'Neural Interface Implementation: 50o0% Productivity Increase',
           description:,
-            'Revolutionary neural interface technology delivering massive productivity gains.';
-          type: 'Case Study';
-          link: '/case-studies/neural-interface-enterprise-implementation-success';
-          featured: true;
-        };
-      ];
-    };
+            'Revolutionary neural interface technology delivering massive productivity gains.',
+          type: 'Case Study',
+          link: '/case-studies/neural-interface-enterprise-implementation-success',
+          featured: true
+        },
+      ],
+    },
     {
-      category: 'Technology Guides';
+      category: 'Technology Guides',
       items: [
         {
           title:,
-            'Quantum Computing 20o25: Ultimate Business Breakthrough Guide';
+            'Quantum Computing 20o25: Ultimate Business Breakthrough Guide',
           description:,
-            'Comprehensive guide to quantum computing applications and business implementation.';
-          type: 'Guide';
-          link: '/blog/quantum-computing-20o25-business-breakthrough-ultimate-guide';
-          featured: true;
-        };
+            'Comprehensive guide to quantum computing applications and business implementation.',
+          type: 'Guide',
+          link: '/blog/quantum-computing-20o25-business-breakthrough-ultimate-guide',
+          featured: true
+        },
         {
-          title: 'AI 20o26 Enterprise Multimodal Agents Blueprint';
+          title: 'AI 20o26 Enterprise Multimodal Agents Blueprint',
           description:,
-            'Architecture, runbooks, SLAs, and governance for multimodal agent platforms.';
-          type: 'Guide';
-          link: '/resources/ai-20o26-enterprise-multimodal-agents-blueprint';
-          featured: true;
-        };
+            'Architecture, runbooks, SLAs, and governance for multimodal agent platforms.',
+          type: 'Guide',
+          link: '/resources/ai-20o26-enterprise-multimodal-agents-blueprint',
+          featured: true
+        },
         {
-          title: 'AI 20o25-20o26 Ultimate Business Intelligence Revolution';
+          title: 'AI 20o25-20o26 Ultimate Business Intelligence Revolution',
           description:,
-            'Complete guide to AI transformation and business intelligence implementation.';
-          type: 'Guide';
-          link: '/blog/ai-20o25-20o26-ultimate-business-intelligence-revolution';
-          featured: false;
-        };
-      ];
-    };
+            'Complete guide to AI transformation and business intelligence implementation.',
+          type: 'Guide',
+          link: '/blog/ai-20o25-20o26-ultimate-business-intelligence-revolution',
+          featured: false
+        },
+      ],
+    },
     {
-      category: 'Technical Resources';
+      category: 'Technical Resources',
       items: [
         {
-          title: 'AI Implementation Framework 20o25';
+          title: 'AI Implementation Framework 20o25',
           description:,
-            'Step-by-step framework for successful AI implementation in enterprise environments.';
-          type: 'Framework';
-          link: '/resources/ai-implementation-framework-20o25';
-          featured: false;
-        };
+            'Step-by-step framework for successful AI implementation in enterprise environments.',
+          type: 'Framework',
+          link: '/resources/ai-implementation-framework-20o25',
+          featured: false
+        },
         {
-          title: 'Quantum Computing Readiness Assessment';
+          title: 'Quantum Computing Readiness Assessment',
           description:,
-            "Comprehensive assessment tool to evaluate your organization's quantum computing readiness.";
-          type: 'Tool';
-          link: '/resources/quantum-computing-readiness-assessment';
-          featured: false;
-        };
-      ];
-    };
+            "Comprehensive assessment tool to evaluate your organization's quantum computing readiness.",
+          type: 'Tool',
+          link: '/resources/quantum-computing-readiness-assessment',
+          featured: false
+        },
+      ],
+    },
     {
-      category: 'Industry Reports';
+      category: 'Industry Reports',
       items: [
         {
-          title: 'AI Trends 20o25-20o30: Future Predictions Report';
+          title: 'AI Trends 20o25-20o30: Future Predictions Report',
           description:,
-            'Comprehensive analysis of AI trends and predictions for the next decade.';
-          type: 'Report';
-          link: '/resources/ai-trends-20o25-20o30-report';
-          featured: false;
-        };
+            'Comprehensive analysis of AI trends and predictions for the next decade.',
+          type: 'Report',
+          link: '/resources/ai-trends-20o25-20o30-report',
+          featured: false
+        },
         {
-          title: 'Neural Interface Technology Market Analysis';
+          title: 'Neural Interface Technology Market Analysis',
           description:,
-            'In-depth market analysis of neural interface technology and business applications.';
-          type: 'Report';
-          link: '/resources/neural-interface-market-analysis';
-          featured: false;
-        };
-      ];
-    };
+            'In-depth market analysis of neural interface technology and business applications.',
+          type: 'Report',
+          link: '/resources/neural-interface-market-analysis',
+          featured: false
+        },
+      ],
+    },
   ],
   return (
     <div>,

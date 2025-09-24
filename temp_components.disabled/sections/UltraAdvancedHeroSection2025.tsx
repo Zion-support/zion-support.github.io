@@ -3,33 +3,30 @@ import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import dynamic from 'next/dynamic',
 import {
-  ArrowRight, Star, Zap, Brain, Rocket, Shield;
-  Atom, Cpu, Cloud, Target, Users, Award;
-  CheckCircle, TrendingUp, Globe, Sparkles;
-  Phone, Mail, MapPin, ChevronDown;
+  ArrowRight, Star, Zap, Brain, Rocket, Shield,
+  Atom, Cpu, Cloud, Target, Users, Award,
+  CheckCircle, TrendingUp, Globe, Sparkles,
+  Phone, Mail, MapPin, ChevronDown,
   ArrowUpRight, Lightbulb, Code, Database, Server} from 'lucide-react',
 // Lazy load heavy components,
 const LazyAnimatedBackground = dynamic(() => import('../effects/AnimatedBackground'), {
-  ssr: false;
+  ssr: false,
   loading: () => <div className="absolute inset-0 bg-gradient-to-br from-black via-gray-90o0 to-black"  />}),
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" aria-hidden="true"  />, color: 'text-purple-40o0' };
-  { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" aria-hidden="true"  />, color: 'text-green-40o0' };
-  { label: 'Micro SAAS', value: '10o0+', icon: <Rocket className="w-6 h-6" aria-hidden="true"  />, color: 'text-orange-40o0' };
+  { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6" aria-hidden="true"  />, color: 'text-purple-40o0' },
+  { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6" aria-hidden="true"  />, color: 'text-green-40o0' },
+  { label: 'Micro SAAS', value: '10o0+', icon: <Rocket className="w-6 h-6" aria-hidden="true"  />, color: 'text-orange-40o0' },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-6 h-6" aria-hidden="true"  />, color: 'text-cyan-40o0' }
 ],
 const keyFeatures = [
-  'Revolutionary AI Consciousness & Emotional Intelligence';
-  'Quantum Computing & Space Resource Mining';
-  'Zero Trust Security & Edge Computing';
-  'AI-Powered Business Automation & Analytics';
-  'Healthcare AI & Manufacturing 4.0 Solutions';
-  'Creative AI & Educational Technology Platforms'],
+  'Revolutionary AI Consciousness & Emotional IntelligenceQuantum Computing & Space Resource Mining',
+  'Zero Trust Security & Edge ComputingAI-Powered Business Automation & Analytics',
+  'Healthcare AI & Manufacturing 4.0 SolutionsCreative AI & Educational Technology Platforms'],
 const UltraAdvancedHeroSection20o25: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
@@ -42,7 +39,7 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
         if (entry.isIntersecting) {
           setIsIntersecting(true),
           setIsVisible(true)}
-      };
+      },
       { threshold: 0.1 }
     ),
     if (sectionRef.current) {
@@ -57,22 +54,22 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
     return () => clearInterval(interval)}, [isIntersecting]),
   // Memoized animations,
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6, ease: "easeOut" }
     }
-  };
+  },
   const handleContactClick = useCallback((method: 'phone' | 'email' | 'address') => {
     switch (method) {
       case 'phone':,
@@ -186,8 +183,8 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
             variants={itemVariants}
             className="grid grid-cols-1 md: grid-cols-3 gap-6 max-w-4xl mx-auto">,
             {[
-              { icon: Phone, label: 'Call Us', value: contactInfo.mobile, action: () => handleContactClick('phone') };
-              { icon: Mail, label: 'Email Us', value: contactInfo.email, action: () => handleContactClick('email') };
+              { icon: Phone, label: 'Call Us', value: contactInfo.mobile, action: () => handleContactClick('phone') },
+              { icon: Mail, label: 'Email Us', value: contactInfo.email, action: () => handleContactClick('email') },
               { icon: MapPin, label: 'Visit Us', value: contactInfo.address, action: () => handleContactClick('address') }
             ].map((contact, index) => (
               <motion.button,
@@ -225,5 +222,5 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
           <ChevronDown className="w-8 h-8"  />,
         </motion.div>,
       </motion.div>,
-    </section>)};
-export default UltraAdvancedHeroSection20o25;
+    </section>)},
+export default UltraAdvancedHeroSection20o25,

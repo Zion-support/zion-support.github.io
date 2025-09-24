@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {BillingDashboard} from "@/components/enterprise/billing/BillingDashboard",
@@ -6,16 +6,16 @@ import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
 import {SEO} from "@/components/SEO",
 import {ProtectedRoute} from "@/components/ProtectedRoute",
-import React from "react";;
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { BillingDashboard } from "@/components/enterprise/billing/BillingDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
 import React from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -35,10 +35,10 @@ export default function EnterpriseBilling() {
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />,
 export default function EnterpriseBilling() {
-  const { user } = useAuth();
+  const { user } = useAuth(),
   // Check if user has billing permissions,
   const hasBillingAccess = user?.role === "enterprise_admin" ||,
-                          (user?.permissions && user.permissions.includes('billing_access'));
+                          (user?.permissions && user.permissions.includes('billing_access')),
   if (!hasBillingAccess) {
     return <Navigate to="/unauthorized" />}
   return (

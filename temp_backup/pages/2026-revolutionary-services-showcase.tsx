@@ -3,9 +3,9 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle;
-  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles;
-  Target, Satellite, Globe, Cpu, Lock, Palette, Layers;
+  Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle,
+  ArrowRight, Rocket, Brain, Zap, Shield, Atom, Sparkles,
+  Target, Satellite, Globe, Cpu, Lock, Palette, Layers,
   Phone, Mail, MapPin, ExternalLink, Filter, Grid, List} from 'lucide-react',
 import { innovative20o26MicroSaasServicesV2 } from '../data/innovative-20o26-micro-saas-v2',
 import { emergingTech20o26ServicesV2 } from '../data/emerging-tech-20o26-v2',
@@ -19,7 +19,7 @@ export default function Revolutionary20o26ServicesShowcase() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   // Combine all 20o26 services,
   const all20o26Services = [
-    ...innovative20o26MicroSaasServicesV2;
+    ...innovative20o26MicroSaasServicesV2,
     ...emergingTech20o26ServicesV2],
   // Filter services based on search and category,
   const filteredServices = useMemo(() => {
@@ -67,31 +67,31 @@ export default function Revolutionary20o26ServicesShowcase() {
       return 0}),
     return filtered}, [searchTerm, selectedCategory, selectedPriceRange, sortBy, all20o26Services]),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: all20o26Services.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all20o26Services.filter(s => s.category.includes('AI')).length };
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length };
-    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all20o26Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length };
+    { id: 'all', name: 'All Services', icon: '🚀', count: all20o26Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: all20o26Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Space')).length },
+    { id: 'emerging', name: 'Emerging Technologies', icon: '✨', count: all20o26Services.filter(s => s.category.includes('Emerging') || s.category.includes('Technology')).length },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢', count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('Business')).length }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' };
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' };
-    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
+    { id: 'high', name: '$5K - $20K/month', range: '$5K - $20K' },
     { id: 'premium', name: '$20K+/month', range: '$20K+' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' };
-    { id: 'price-low', name: 'Price Low to High' };
-    { id: 'price-high', name: 'Price High to Low' };
-    { id: 'rating', name: 'Highest Rated' };
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Highest Rated' },
     { id: 'popularity', name: 'Most Popular' }
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",
@@ -413,7 +413,7 @@ export default function Revolutionary20o26ServicesShowcase() {
                 Ready to Lead the Future?,
               </h2>,
               <p className="text-gray-30o0 text-xl mb-8 leading-relaxed">,
-                Join the revolution with our cutting-edge 20o26 services. Transform your business;
+                Join the revolution with our cutting-edge 20o26 services. Transform your business,
                 accelerate innovation, and achieve unprecedented ROI with Zion Tech Group.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,

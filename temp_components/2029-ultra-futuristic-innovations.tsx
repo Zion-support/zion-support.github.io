@@ -9,10 +9,10 @@ import { cuttingEdge20o29Services } from '../data/20o29-cutting-edge-innovations
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services',
 export default function UltraFuturistic20o29InnovationsPage() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const all20o29Services = [...cuttingEdgeInnovations20o29...spaceColonization20o29Services],
   return (
     <>,
@@ -96,40 +96,40 @@ export default function UltraFuturistic20o29InnovationsPage() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  title: '🧠 AI Consciousness & Innovation';
-                  description: 'Revolutionary AI systems with human-like consciousness and reasoning capabilities';
-                  icon: Brain;
-                  color: 'from-purple-60o0 to-pink-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))};
+                  title: '🧠 AI Consciousness & Innovation',
+                  description: 'Revolutionary AI systems with human-like consciousness and reasoning capabilities',
+                  icon: Brain,
+                  color: 'from-purple-60o0 to-pink-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Consciousness') || s.category.includes('Business'))},
                 {
-                  title: '⚛️ Quantum & Neuroscience';
-                  description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities';
-                  icon: Atom;
-                  color: 'from-indigo-60o0 to-purple-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))};
+                  title: '⚛️ Quantum & Neuroscience',
+                  description: 'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
+                  icon: Atom,
+                  color: 'from-indigo-60o0 to-purple-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Neuroscience') || s.category.includes('Time'))},
                 {
-                  title: '🚀 Space Colonization & Mining';
-                  description: 'Automated space explorationcolonizationand resource extraction systems';
-                  icon: Rocket;
-                  color: 'from-red-60o0 to-orange-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))};
+                  title: '🚀 Space Colonization & Mining',
+                  description: 'Automated space explorationcolonizationand resource extraction systems',
+                  icon: Rocket,
+                  color: 'from-red-60o0 to-orange-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Space') || s.category.includes('Time'))},
                 {
-                  title: '🏠 Space Architecture & Energy';
-                  description: 'Advanced habitat design and space-based energy harvesting platforms';
-                  icon: Globe;
-                  color: 'from-green-60o0 to-teal-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))};
+                  title: '🏠 Space Architecture & Energy',
+                  description: 'Advanced habitat design and space-based energy harvesting platforms',
+                  icon: Globe,
+                  color: 'from-green-60o0 to-teal-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Architecture') || s.category.includes('Energy'))},
                 {
-                  title: '👁️ AI Reality Augmentation';
-                  description: 'Real-time AI-powered reality enhancement and content generation';
-                  icon: Eye;
-                  color: 'from-orange-60o0 to-red-60o0';
-                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Augmented Reality'))};
+                  title: '👁️ AI Reality Augmentation',
+                  description: 'Real-time AI-powered reality enhancement and content generation',
+                  icon: Eye,
+                  color: 'from-orange-60o0 to-red-60o0',
+                  services: cuttingEdge20o29Services.filter(s => s.category.includes('Augmented Reality'))},
                 {
-                  title: '⏰ Quantum Time Manipulation';
-                  description: 'Quantum-based time perception manipulation and optimization';
-                  icon: Timer;
-                  color: 'from-green-60o0 to-emerald-60o0';
+                  title: '⏰ Quantum Time Manipulation',
+                  description: 'Quantum-based time perception manipulation and optimization',
+                  icon: Timer,
+                  color: 'from-green-60o0 to-emerald-60o0',
                   services: cuttingEdge20o29Services.filter(s => s.category.includes('Time'))}
               ].map((categoryindex) => (
                 <motion.div,
@@ -185,9 +185,9 @@ export default function UltraFuturistic20o29InnovationsPage() {
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-4 gap-8">,
               {[
-                { label: 'Revolutionary Services'value: all20o29Services.filter(s => (s as any).innovationLevel === 'Revolutionary').lengthicon: Rocketcolor: 'from-purple-50o0 to-pink-50o0' };
-                { label: 'Patent Pending'value: all20o29Services.filter(s => (s as any).patentStatus === 'Patent Pending').lengthicon: Shieldcolor: 'from-blue-50o0 to-cyan-50o0' };
-                { label: 'Total Customers'value: all20o29Services.reduce((sums) => sum + s.customers0)icon: Starcolor: 'from-yellow-50o0 to-orange-50o0' };
+                { label: 'Revolutionary Services'value: all20o29Services.filter(s => (s as any).innovationLevel === 'Revolutionary').lengthicon: Rocketcolor: 'from-purple-50o0 to-pink-50o0' },
+                { label: 'Patent Pending'value: all20o29Services.filter(s => (s as any).patentStatus === 'Patent Pending').lengthicon: Shieldcolor: 'from-blue-50o0 to-cyan-50o0' },
+                { label: 'Total Customers'value: all20o29Services.reduce((sums) => sum + s.customers0)icon: Starcolor: 'from-yellow-50o0 to-orange-50o0' },
                 { label: 'Average Rating'value: (all20o29Services.reduce((sums) => sum + s.rating0) / all20o29Services.length).toFixed(1)icon: TrendingUpcolor: 'from-green-50o0 to-teal-50o0' }
               ].map((statindex) => (
                 <motion.div,

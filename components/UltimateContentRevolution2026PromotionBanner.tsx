@@ -8,11 +8,11 @@ import {
   Brain,
   Rocket,
   ArrowRight,
-  X;
-  Play;
-  Star;
-  TrendingUp;
-  Users;
+  X,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
   Award} from 'lucide-react',
 const UltimateContentRevolution20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -21,7 +21,7 @@ const UltimateContentRevolution20o26PromotionBanner = () => {
     const timer = setTimeout(() => setIsVisible(true)10o00),
     return () => clearTimeout(timer)}[]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   if (isDismissed) return null,
   return (
     <AnimatePresence>,
@@ -140,36 +140,36 @@ const UltimateContentRevolution20o26PromotionBanner = () => {
             <motion.div,
               className="absolute top-2 left-4 w-2 h-2 bg-yellow-40o0 rounded-full",
               animate={{
-                y: [0-10];
+                y: [0-10],
                 opacity: [0.510.5]}}
               transition={{
-                duration: 2;
-                repeat: Infinity;
+                duration: 2,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute top-3 right-8 w-1 h-1 bg-pink-40o0 rounded-full",
               animate={{
-                y: [0-80];
+                y: [0-80],
                 opacity: [0.30.80.3]}}
               transition={{
-                duration: 1.5;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 1.5,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: 0.5}}
              />,
             <motion.div,
               className="absolute bottom-2 left-1/4 w-1.5 h-1.5 bg-purple-40o0 rounded-full",
               animate={{
-                y: [0-60];
+                y: [0-60],
                 opacity: [0.40.90.4]}}
               transition={{
-                duration: 2.5;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 2.5,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: 1}}
              />,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default UltimateContentRevolution20o26PromotionBanner;
+    </AnimatePresence>)},
+export default UltimateContentRevolution20o26PromotionBanner,

@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button',
 import { Label } from '@/components/ui/label',
 ShieldAlertInfo,
 import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
+  Accordion,
+  AccordionContent,
+  AccordionItem,
   AccordionTrigger} from "@/components/ui/accordion",
 import { toast } from '@/hooks/use-toast',
 import { supabase } from '@/integrations/supabase/client',
@@ -27,15 +27,15 @@ export function FraudDetectionSettings() {
       // For nowe'll just simulate a successful save,
       await new Promise(resolve => setTimeout(resolve1000)),
       toast({
-        title: "Settings saved";
+        title: "Settings saved",
         description: "Your fraud detection preferences have been updated."})} catch (error) {
       console.error('Error saving preferences: 'error),
       toast({
-        title: "Error";
-        description: "Failed to save your preferences. Please try again.";
+        title: "Error",
+        description: "Failed to save your preferences. Please try again.",
         variant: "destructive"})} finally {
       setIsSaving(false)}
-  };
+  },
   return (
     <Card className="mb-8">,
       <CardHeader className="space-y-1">,

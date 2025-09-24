@@ -2,33 +2,33 @@ import Link from 'next/link',
 const UltimateAutonomousEnterpriseShowcase = () => {
   const features = [
     {
-      title: 'Autonomous Decision Making';
+      title: 'Autonomous Decision Making',
       description:,
-        'AI systems that make real-time business decisions without human intervention';
-      icon: '🤖';
-      impact: '99.8% Accuracy';
-    };
+        'AI systems that make real-time business decisions without human intervention',
+      icon: '🤖',
+      impact: '99.8% Accuracy'
+    },
     {
-      title: 'Self-Optimizing Operations';
+      title: 'Self-Optimizing Operations',
       description:,
-        'Systems that continuously optimize themselves for maximum efficiency';
-      icon: '⚡';
-      impact: '2,0o00% ROI';
-    };
+        'Systems that continuously optimize themselves for maximum efficiency',
+      icon: '⚡',
+      impact: '2,0o00% ROI',
+    },
     {
-      title: 'Predictive Maintenance';
+      title: 'Predictive Maintenance',
       description:,
-        'AI that predicts and prevents equipment failures before they occur';
-      icon: '🔮';
-      impact: '$5.2B+ Savings';
-    };
+        'AI that predicts and prevents equipment failures before they occur',
+      icon: '🔮',
+      impact: '$5.2B+ Savings'
+    },
     {
-      title: 'Intelligent Resource Allocation';
+      title: 'Intelligent Resource Allocation',
       description:,
-        'Dynamic allocation of resources based on real-time demand and optimization';
-      icon: '📊';
-      impact: '99.7% Efficiency';
-    };
+        'Dynamic allocation of resources based on real-time demand and optimization',
+      icon: '📊',
+      impact: '99.7% Efficiency'
+    },
   ],
   return (
     <div className='bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white py-20 px-4'>,
@@ -81,5 +81,5 @@ const UltimateAutonomousEnterpriseShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAutonomousEnterpriseShowcase;
+    </div>)},
+export default UltimateAutonomousEnterpriseShowcase,

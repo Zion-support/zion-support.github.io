@@ -7,7 +7,7 @@ const NewContentShowcase20o25Banner = () => {
         <div
           className='absolute inset-0',
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
         ></div>,
       </div>,
@@ -76,7 +76,7 @@ const NewContentShowcase20o25Banner = () => {
         {/* Key Highlights */}
         <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-2xl p-8 mb-12'>,
           <h3 className='text-2xl font-bold mb-6 text-center'>,
-            'What', 's New & Exciting,
+            'Whats New & Exciting,
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
             <div className='text-center'>,
@@ -122,5 +122,5 @@ const NewContentShowcase20o25Banner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default NewContentShowcase20o25Banner;
+    </section>)},
+export default NewContentShowcase20o25Banner,

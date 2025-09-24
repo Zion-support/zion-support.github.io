@@ -10,20 +10,20 @@ const fs = require('fs'),
 const path = require('path'),
 // Simple logger,
 const logger ={
-  info: (msg) => // // console.log(`[INFO] ${msg}`);
-  error: (msg) => console.error(`[ERROR] ${msg}`);
-  warn: (msg) => console.warn(`[WARN] ${msg}`);
-  debug: (msg) => // // console.log(`[DEBUG] ${msg}`)};
+  info: (msg) => // // console.log(`[INFO] ${msg}`),
+  error: (msg) => console.error(`[ERROR] ${msg}`),
+  warn: (msg) => console.warn(`[WARN] ${msg}`),
+  debug: (msg) => // // console.log(`[DEBUG] ${msg}`)},
 class SecurityScanner {
   constructor(config ={}) {
     this.config ={
-      name: 'SecurityScanner';
+      name: 'SecurityScanner',
       schedule: '0 */6 * * *', // Every 6 hours,
-      enabled: true;
+      enabled: true,
       autoFix: false, // Don't auto-fix by default,
-      severityThreshold: 'medium';
-      scanTypes: ['npm', 'code', 'secrets', 'dependencies'];
-      ...config};
+      severityThreshold: 'medium',
+      scanTypes: ['npmcode', 'secretsdependencies'],
+      ...config},
     this.scanHistory = [],
     this.vulnerabilities = [],
     this.lastStatus = 'idle',
@@ -34,13 +34,13 @@ class SecurityScanner {
     logger.info('🔒 Starting security scan...'),
     try {
       const scanResults ={
-        timestamp: new Date().toISOString();
-        npmVulnerabilities: [];
-        codeIssues: [];
-        secretsFound: [];
-        dependencyIssues: [];
+        timestamp: new Date().toISOString(),
+        npmVulnerabilities: [],
+        codeIssues: [],
+        secretsFound: [],
+        dependencyIssues: [],
         summary: {}
-      };
+      },
       // Run different types of scans,
       if (this.config.scanTypes.includes('npm')) {
         scanResults.npmVulnerabilities = await this.scanNpmVulnerabilities()}
@@ -85,19 +85,19 @@ class SecurityScanner {
     logger.info('📦 Scanning npm vulnerabilities...'),
     try {
       const output = execSync('npm audit --json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const audit = JSON.parse(output),
       const vulnerabilities = [],
       if (audit.vulnerabilities) {
         for (const [packageName, vuln] of Object.entries(audit.vulnerabilities)) {
           vulnerabilities.push({
-            type: 'npm';
-            package: packageName;
-            severity: vuln.severity || 'medium';
-            title: vuln.title || 'Unknown vulnerability';
-            description: vuln.description || 'No description available';
-            recommendation: vuln.recommendation || 'Update package';
+            type: 'npm',
+            package: packageName,
+            severity: vuln.severity || 'medium',
+            title: vuln.title || 'Unknown vulnerability',
+            description: vuln.description || 'No description available',
+            recommendation: vuln.recommendation || 'Update package',
             via: vuln.via || []})}
       }
 ,
@@ -123,7 +123,7 @@ class SecurityScanner {
     return issues}
 ,
   async findCodeFiles() {
-    const extensions = ['.js', '.jsx', '.ts', '.tsx', '.py', '.php', '.java', '.rb'],
+    const extensions = ['.js.jsx', '.ts.tsx', '.py.php', '.java.rb'],
     const files = [],
     const scanDirectory = async (dir) => {
       try {
@@ -133,7 +133,7 @@ class SecurityScanner {
           const stat = fs.statSync(fullPath),
           if (stat.isDirectory()) {
             // Skip node_modules, .git, etc.,
-            if (!['node_modules', '.git', 'dist', 'build', 'coverage'].includes(item)) {
+            if (!['node_modules.git', 'distbuild', 'coverage'].includes(item)) {
               await scanDirectory(fullPath)}
           } else if (stat.isFile()) {
             const ext = path.extname(item),
@@ -143,7 +143,7 @@ class SecurityScanner {
         }
       } catch (error) {
         logger.warn(`⚠️ Could not scan directory ${dir}: ${error.message}`)}
-    };
+    },
     await scanDirectory(process.cwd()),
     return files}
 ,
@@ -151,35 +151,35 @@ class SecurityScanner {
     const issues = [],
     // Check for hardcoded secrets,
     const secretPatterns = [
-      /password\s*=\s*['"][^'"]+['"]/gi;
-      /api_key\s*=\s*['"][^'"]+['"]/gi;
-      /secret\s*=\s*['"][^'"]+['"]/gi;
-      /token\s*=\s*['"][^'"]+['"]/gi;
+      /password\s*=\s*['"][^'"]+['"]/gi,
+      /api_key\s*=\s*['"][^'"]+['"]/gi,
+      /secret\s*=\s*['"][^'"]+['"]/gi,
+      /token\s*=\s*['"][^'"]+['"]/gi,
       /private_key\s*=\s*['"][^'"]+['"]/gi],
     secretPatterns.forEach((pattern, index) => {
       const matches = content.match(pattern),
       if (matches) {
         issues.push({
-          type: 'hardcoded_secret';
-          file: filePath;
-          line: this.findLineNumber(content, matches[0]);
-          severity: 'high';
-          description: 'Hardcoded secret found';
+          type: 'hardcoded_secret',
+          file: filePath,
+          line: this.findLineNumber(content, matches[0]),
+          severity: 'high',
+          description: 'Hardcoded secret found',
           recommendation: 'Move secrets to environment variables'})}
     }),
     // Check for SQL injection patterns,
     const sqlPatterns = [
-      /query\s*(\s*['"][^'"]*\${[^}]+}[^'"]*['"]/gi;
+      /query\s*(\s*['"][^'"]*\${[^}]+}[^'"]*['"]/gi,
       /execute\s*(\s*['"][^'"]*\${[^}]+}[^'"]*['"]/gi],
     sqlPatterns.forEach((pattern) => {
       const matches = content.match(pattern),
       if (matches) {
         issues.push({
-          type: 'sql_injection';
-          file: filePath;
-          line: this.findLineNumber(content, matches[0]);
-          severity: 'high';
-          description: 'Potential SQL injection';
+          type: 'sql_injection',
+          file: filePath,
+          line: this.findLineNumber(content, matches[0]),
+          severity: 'high',
+          description: 'Potential SQL injection',
           recommendation: 'Use parameterized queries'})}
     }),
     return issues}
@@ -198,11 +198,11 @@ class SecurityScanner {
     const secretPatterns = [
       /sk-[a-zA-Z0-9]{48}/g, // OpenAI API key,
       /pk-[a-zA-Z0-9]{48}/g, // OpenAI API key,
-      new RegExp(`${['g','h','p'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghp_),
-      new RegExp(`${['g','h','o'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (gho_),
-      new RegExp(`${['g','h','u'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghu_),
-      new RegExp(`${['g','h','s'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghs_),
-      new RegExp(`${['g','h','r'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghr_),
+      new RegExp(`${['gh','p'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghp_),
+      new RegExp(`${['gh','o'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (gho_),
+      new RegExp(`${['gh','u'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghu_),
+      new RegExp(`${['gh','s'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghs_),
+      new RegExp(`${['gh','r'].join('')}_[a-zA-Z0-9]{36}`,'g'), // GitHub token (ghr_),
       /[a-zA-Z0-9]{40}/g, // Generic 40-char token],
     const files = await this.findCodeFiles(),
     for (const file of files) {
@@ -212,12 +212,12 @@ class SecurityScanner {
           const matches = content.match(pattern),
           if (matches) {
                     secrets.push({
-          type: 'secret';
-          file: file;
-          pattern: pattern.source;
-          count: matches.length;
-          severity: 'critical';
-          description: 'Secret found in code';
+          type: 'secret',
+          file: file,
+          pattern: pattern.source,
+          count: matches.length,
+          severity: 'critical',
+          description: 'Secret found in code',
           recommendation: 'Remove secrets from code and use environment variables'})}
         })} catch (error) {
         logger.warn(`⚠️ Could not read file ${file}: ${error.message}`)}
@@ -231,8 +231,8 @@ class SecurityScanner {
     const issues = [],
     try {
       // Check package.json,
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
-      const dependencies ={ ...packageJson.dependencies, ...packageJson.devDependencies };
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
+      const dependencies ={ ...packageJson.dependencies, ...packageJson.devDependencies },
       // Check for old packages,
       const oldPackages = await this.checkForOldPackages(dependencies),
       issues.push(...oldPackages),
@@ -256,12 +256,12 @@ class SecurityScanner {
           const createdDate = new Date(data.time.created),
           if (createdDate < cutoffDate) {
             issues.push({
-              type: 'old_package';
-              package: packageName;
-              version: version;
-              created: data.time.created;
-              severity: 'medium';
-              description: 'Package is older than 2 years';
+              type: 'old_package',
+              package: packageName,
+              version: version,
+              created: data.time.created,
+              severity: 'medium',
+              description: 'Package is older than 2 years',
               recommendation: 'Consider updating to a newer version'})}
         }
       } catch (error) {
@@ -282,26 +282,26 @@ class SecurityScanner {
       scanResults.secretsFound.length +,
       scanResults.dependencyIssues.length,
     const severityCounts ={
-      critical: 0;
-      high: 0;
-      medium: 0;
-      low: 0};
+      critical: 0,
+      high: 0,
+      medium: 0,
+      low: 0},
     // Count by severity,
     [...scanResults.npmVulnerabilities, ...scanResults.codeIssues, ...scanResults.secretsFound, ...scanResults.dependencyIssues],
       .forEach(issue => {
         severityCounts[issue.severity] = (severityCounts[issue.severity] || 0) + 1}),
     return {
-      totalIssues;
-      severityCounts;
-      scanTypes: this.config.scanTypes;
-      timestamp: scanResults.timestamp};
+      totalIssues,
+      severityCounts,
+      scanTypes: this.config.scanTypes,
+      timestamp: scanResults.timestamp},
   }
 ,
   extractVulnerabilities(scanResults) {
     return [
-      ...scanResults.npmVulnerabilities;
-      ...scanResults.codeIssues;
-      ...scanResults.secretsFound;
+      ...scanResults.npmVulnerabilities,
+      ...scanResults.codeIssues,
+      ...scanResults.secretsFound,
       ...scanResults.dependencyIssues]}
 ,
   async handleHighSeverityIssues(issues) {
@@ -320,13 +320,13 @@ class SecurityScanner {
 ,
   async createSecurityReport(issues) {
     const report ={
-      timestamp: new Date().toISOString();
-      issues: issues;
+      timestamp: new Date().toISOString(),
+      issues: issues,
       summary: {
-        total: issues.length;
-        critical: issues.filter(i => i.severity === 'critical').length;
+        total: issues.length,
+        critical: issues.filter(i => i.severity === 'critical').length,
         high: issues.filter(i => i.severity === 'high').length}
-    };
+    },
     const reportPath = path.join(process.cwd(), 'security-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📄 Security report saved to ${reportPath}`)}
@@ -369,21 +369,21 @@ class SecurityScanner {
 ,
   async generateSecurityReport(scanResults) {
     const report ={
-      timestamp: scanResults.timestamp;
-      summary: scanResults.summary;
-      details: scanResults};
+      timestamp: scanResults.timestamp,
+      summary: scanResults.summary,
+      details: scanResults},
     const reportPath = path.join(process.cwd(), 'security-scan-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📄 Security scan report saved to ${reportPath}`)}
 ,
   getStatus() {
     return {
-      name: this.config.name;
-      status: this.lastStatus;
-      lastRun: this.lastRun;
-      lastError: this.lastError;
-      totalScans: this.scanHistory.length;
-      totalVulnerabilities: this.vulnerabilities.length};
+      name: this.config.name,
+      status: this.lastStatus,
+      lastRun: this.lastRun,
+      lastError: this.lastError,
+      totalScans: this.scanHistory.length,
+      totalVulnerabilities: this.vulnerabilities.length},
   }
 }
 ,

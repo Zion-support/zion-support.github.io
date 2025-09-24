@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import EnhancedNavigation from './EnhancedNavigation',
 import EnhancedFooter from './EnhancedFooter',
 import dynamic from 'next/dynamic',

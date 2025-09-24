@@ -27,41 +27,41 @@ import { professionalServices } from '../data/professional-services',
 import { realVerifiedServices } from '../data/real-verified-services',
 export default function DynamicServicePage() {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const service = useMemo(() => {
     if (!slug) return undefined,
     const all: any[] = ([] as any[]),
       .concat(
-        enhancedRealMicroSaasServices as any;
-        extraServices as any;
-        additionalEnhancedServices as any;
-        innovativeAIServices as any;
-        quantumSpaceServices as any;
-        enterpriseITServices as any;
-        newRealServices as any;
-        marketReadyServices as any;
-        realMarketServices as any;
-        new2025Services as any;
-        newRealInnovations as any;
-        emergingTechnologyServices as any;
-        comprehensiveITSolutions as any;
-        marketValidatedServices as any;
-        curatedMarketServices as any;
-        cuttingEdgeITServices as any;
-        nextGenerationAIServices as any;
-        nextGenAIServices as any;
-        industryRealServices as any;
-        professionalServices as any;
-        realEnterpriseServices2025 as any;
-        augmentedServicesBatch3 as any;
-        real2025Q3Additions as any;
-        realQ4Services2025 as any;
-        real2026Q1Additions as any;
+        enhancedRealMicroSaasServices as any,
+        extraServices as any,
+        additionalEnhancedServices as any,
+        innovativeAIServices as any,
+        quantumSpaceServices as any,
+        enterpriseITServices as any,
+        newRealServices as any,
+        marketReadyServices as any,
+        realMarketServices as any,
+        new2025Services as any,
+        newRealInnovations as any,
+        emergingTechnologyServices as any,
+        comprehensiveITSolutions as any,
+        marketValidatedServices as any,
+        curatedMarketServices as any,
+        cuttingEdgeITServices as any,
+        nextGenerationAIServices as any,
+        nextGenAIServices as any,
+        industryRealServices as any,
+        professionalServices as any,
+        realEnterpriseServices2025 as any,
+        augmentedServicesBatch3 as any,
+        real2025Q3Additions as any,
+        realQ4Services2025 as any,
+        real2026Q1Additions as any,
         ultimateFuturisticServices2025 as any),
     const byLink = all.find(s => {
       try {
         const url = new URL(s.link),
-        return url.pathname.replace(/^\/+|\/+$/g', ') === slug.replace(/^\/+|\/+$/g', ')} catch {
+        return url.pathname.replace(/^\/+|\/+$/g) === slug.replace(/^\/+|\/+$/g', ')} catch {
         return false}
     }),
     if (byLink) return byLink,
@@ -74,7 +74,7 @@ export default function DynamicServicePage() {
         <div className="min-h-screen pt-28 pb-20 px-4 sm: px-6 lg:px-8">,
           <div className="max-w-3xl mx-auto text-center">,
             <h1 className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-6">Service not found</h1>,
-            <p className="text-gray-300 mb-8">We 'couldn', 't find the service you were looking for. Explore all services below.</p>,
+            <p className="text-gray-300 mb-8">We 'couldnt find the service you were looking for. Explore all services below.</p>,
             <Button href="/services" variant="quantum" size="lg">Browse Services</Button>,
           </div>,
         </div>,
@@ -130,23 +130,23 @@ type Svc = typeof enhancedRealMicroSaasServices[number],
 function collectAllServices(): Svc[] {
   return enhancedRealMicroSaasServices,
     .concat(
-      extraServices as Svc[];
-      additionalEnhancedServices as Svc[];
-      innovativeAIServices as Svc[];
-      quantumSpaceServices as Svc[];
-      enterpriseITServices as Svc[];
-      newRealServices as Svc[];
-      marketReadyServices as Svc[];
-      nextGenerationAIServices as Svc[];
-      emergingTechnologyServices as Svc[];
-      comprehensiveITSolutions as Svc[];
-      marketValidatedServices as Svc[];
-      newRealInnovations as Svc[];
-      realMarketServices as Svc[];
+      extraServices as Svc[],
+      additionalEnhancedServices as Svc[],
+      innovativeAIServices as Svc[],
+      quantumSpaceServices as Svc[],
+      enterpriseITServices as Svc[],
+      newRealServices as Svc[],
+      marketReadyServices as Svc[],
+      nextGenerationAIServices as Svc[],
+      emergingTechnologyServices as Svc[],
+      comprehensiveITSolutions as Svc[],
+      marketValidatedServices as Svc[],
+      newRealInnovations as Svc[],
+      realMarketServices as Svc[],
       realVerifiedServices as unknown as Svc[])}
 ,
 function normalizeSlug(value: string): string {
-  return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ')}
+  return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g)}
 ,
 function extractRootSlugFromLink(link?: string): string | null {
   if (!link) return null,
@@ -169,7 +169,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
     const entries = fs.readdirSync(pagesDir{ withFileTypes: true }),
     for (const entry of entries) {
       if (entry.isFile() && /\.tsx?$/.test(entry.name)) {
-        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i', '),
+        const base = entry.name.replace(/\.(tsx|ts|jsx|js)$/i),
         if (base !== 'index' && base !== '[slug]' && !base.startsWith('_')) {
           staticSlugs.add(base.toLowerCase())}
       }
@@ -186,10 +186,10 @@ export const getStaticPaths: GetStaticPaths = async () => {
   // Exclude any slug that conflicts with an existing root page file,
   const uniqueNonConflicting = Array.from(candidateSlugs).filter((slug) => !staticSlugs.has(slug)),
   return {
-    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } }));
-    fallback: true};
-};
+    paths: uniqueNonConflicting.map((slug) => ({ params: { slug } })),
+    fallback: true},
+},
 export const getStaticProps: GetStaticProps = async ({ params }) => {
   // No dynamic fetching needed, the component resolves the service client-side.,
-  return { props: {} };
-};
+  return { props: {} },
+},

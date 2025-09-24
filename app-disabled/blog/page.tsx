@@ -14,55 +14,52 @@ export default function BlogPage() {
   const [isSubscribing, setIsSubscribing] = useState(false),
   const blogPosts = [
     {
-      title: 'AI 20o25: Multimodal Agents in the Enterprise';
-      slug: 'ai-20o25-multimodal-agents-in-the-enterprise';
-      excerpt: 'Explore how multimodal AI agents are revolutionizing enterprise operations in 20o25.';
-      date: '20o25-0o1-15';
-      readTime: '8 min read';
-      category: 'AI & Machine Learning'};
+      title: 'AI 20o25: Multimodal Agents in the Enterprise',
+      slug: 'ai-20o25-multimodal-agents-in-the-enterprise',
+      excerpt: 'Explore how multimodal AI agents are revolutionizing enterprise operations in 20o25.',
+      date: '20o25-0o1-15',
+      readTime: '8 min read',
+      category: 'AI & Machine Learning'},
     {
-      title: 'AI 20o26: Agent Observability Blueprint';
-      slug: 'ai-20o26-agent-observability-blueprint';
-      excerpt: 'A comprehensive guide to implementing observability for AI agents in production environments.';
-      date: '20o25-0o1-10';
-      readTime: '12 min read';
-      category: 'AI Operations'};
+      title: 'AI 20o26: Agent Observability Blueprint',
+      slug: 'ai-20o26-agent-observability-blueprint',
+      excerpt: 'A comprehensive guide to implementing observability for AI agents in production environments.',
+      date: '20o25-0o1-10',
+      readTime: '12 min read',
+      category: 'AI Operations'},
     {
-      title: 'AI 20o26: Agent Platform Operations';
-      slug: 'ai-20o26-agent-platform-operations';
-      excerpt: 'Best practices for managing and operating AI agent platforms at scale.';
-      date: '20o25-0o1-08';
-      readTime: '10 min read';
-      category: 'Platform Engineering'};
+      title: 'AI 20o26: Agent Platform Operations',
+      slug: 'ai-20o26-agent-platform-operations',
+      excerpt: 'Best practices for managing and operating AI agent platforms at scale.',
+      date: '20o25-0o1-08',
+      readTime: '10 min read',
+      category: 'Platform Engineering'},
     {
-      title: 'AI 20o26: Agent Platform SLOs Best Practices';
-      slug: 'ai-20o26-agent-platform-slos-best-practices';
-      excerpt: 'How to define and implement Service Level Objectives for AI agent platforms.';
-      date: '20o25-0o1-0o5';
-      readTime: '6 min read';
-      category: 'DevOps'};
+      title: 'AI 20o26: Agent Platform SLOs Best Practices',
+      slug: 'ai-20o26-agent-platform-slos-best-practices',
+      excerpt: 'How to define and implement Service Level Objectives for AI agent platforms.',
+      date: '20o25-0o1-0o5',
+      readTime: '6 min read',
+      category: 'DevOps'},
     {
-      title: 'AI 20o26: Agent Posture Management';
-      slug: 'ai-20o26-agent-posture-management';
-      excerpt: 'Managing security posture and compliance for AI agents across your organization.';
-      date: '20o25-0o1-0o3';
-      readTime: '9 min read';
-      category: 'Cybersecurity'};
+      title: 'AI 20o26: Agent Posture Management',
+      slug: 'ai-20o26-agent-posture-management',
+      excerpt: 'Managing security posture and compliance for AI agents across your organization.',
+      date: '20o25-0o1-0o3',
+      readTime: '9 min read',
+      category: 'Cybersecurity'},
     {
-      title: 'AI 20o26: Agentic Risk and Safety Playbook';
-      slug: 'ai-20o26-agentic-risk-and-safety-playbook';
-      excerpt: 'A comprehensive playbook for managing risks and ensuring safety in agentic AI systems.';
-      date: '20o25-0o1-0o1';
-      readTime: '15 min read';
+      title: 'AI 20o26: Agentic Risk and Safety Playbook',
+      slug: 'ai-20o26-agentic-risk-and-safety-playbook',
+      excerpt: 'A comprehensive playbook for managing risks and ensuring safety in agentic AI systems.',
+      date: '20o25-0o1-0o1',
+      readTime: '15 min read',
       category: 'Risk Management'}
   ],
   const categories = [
-    'All Posts';
-    'AI & Machine Learning';
-    'AI Operations';
-    'Platform Engineering';
-    'DevOps';
-    'Cybersecurity';
+    'All PostsAI & Machine Learning',
+    'AI OperationsPlatform Engineering',
+    'DevOpsCybersecurity',
     'Risk Management'],
   // Filter posts based on search term and category,
   const filteredPosts = blogPosts.filter(post => {
@@ -81,9 +78,9 @@ export default function BlogPage() {
     setNewsletterStatus(null),
     try {
       const response = await fetch('/api/newsletter', {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON.stringify({ email: newsletterEmail })}),
       const result = await response.json(),
       if (result.success) {

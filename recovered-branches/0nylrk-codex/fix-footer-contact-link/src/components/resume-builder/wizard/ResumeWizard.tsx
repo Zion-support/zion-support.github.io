@@ -23,7 +23,7 @@ export function ResumeWizard() {
     isLoading,
     error,
     resume,
-    fetchResume;
+    fetchResume,
     createResume} = useResume(),
   const [activeTabsetActiveTab] = useState('basic-info'),
   const [showNewResumeFormsetShowNewResumeForm] = useState(false),
@@ -38,19 +38,19 @@ export function ResumeWizard() {
     if (resumeId) {
       await fetchResume(resumeId),
       setShowNewResumeForm(false)}
-  };
+  },
   const nextStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),
     if (currentIndex < RESUME_STEPS.length - 1) {
       setActiveTab(RESUME_STEPS[currentIndex + 1].id)}
-  };
+  },
   const prevStep = () => {
     const currentIndex = RESUME_STEPS.findIndex(step => step.id === activeTab),
     if (currentIndex > 0) {
       setActiveTab(RESUME_STEPS[currentIndex - 1].id)}
-  };
+  },
   const handleResumeChange = (resumeId: string) => {
-    fetchResume(resumeId)};
+    fetchResume(resumeId)},
   if (isLoading) {
     return (
       <div className="flex justify-center items-center h-64">,

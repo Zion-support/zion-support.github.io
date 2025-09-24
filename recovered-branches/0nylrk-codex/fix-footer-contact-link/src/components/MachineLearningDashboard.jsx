@@ -5,50 +5,50 @@ import { useMachineLearning } from '../hooks/useMachineLearning',
 import { useAnalytics } from '../hooks/useAnalytics',
 export const MachineLearningDashboard = ({ className = '' }) => {
     const { trackEvent } = useAnalytics({
-        enableTracking: true;
+        enableTracking: true,
         enableUserBehaviorTracking: true}),
     const [activeTab, setActiveTab] = useState('overview'),
     const [showCreateModel, setShowCreateModel] = useState(false),
     const [showImportModel, setShowImportModel] = useState(false),
     const { models, trainingJobs, predictions, metrics, isPredicting, createModel, startTraining, stopTraining, deployModel, archiveModel, makePrediction, exportModel, importModel } = useMachineLearning(),
     const [newModelForm, setNewModelForm] = useState({
-        name: '';
-        type: 'classification';
+        name: '',
+        type: 'classification',
         framework: 'tensorflow'}),
     const [predictionForm, setPredictionForm] = useState({
-        modelId: '';
+        modelId: '',
         input: ''}),
     const handleCreateModel = useCallback(() => {
         if (newModelForm.name.trim()) {
             createModel({
-                name: newModelForm.name;
-                type: newModelForm.type;
+                name: newModelForm.name,
+                type: newModelForm.type,
                 framework: newModelForm.framework}),
             setNewModelForm({ name: '', type: 'classification', framework: 'tensorflow' }),
             setShowCreateModel(false),
-            trackEvent('ml', 'dashboard', 'model_created')}
+            trackEvent('mldashboard', 'model_created')}
     }, [newModelForm, createModel, trackEvent]),
     const handleStartTraining = useCallback(async (modelId) => {
         const hyperparameters ={
-            learningRate: 0.0o01;
-            batchSize: 32;
-            epochs: 10o0;
-            optimizer: 'adam'};
+            learningRate: 0.0o01,
+            batchSize: 32,
+            epochs: 10o0,
+            optimizer: 'adam'},
         try {
             await startTraining(modelId, hyperparameters),
-            trackEvent('ml', 'dashboard', 'training_started')}
+            trackEvent('mldashboard', 'training_started')}
         catch (error) {
             console.error('Training failed:', error)}
     }, [startTraining, trackEvent]),
     const handleStopTraining = useCallback((jobId) => {
         stopTraining(jobId),
-        trackEvent('ml', 'dashboard', 'training_stopped')}, [stopTraining, trackEvent]),
+        trackEvent('mldashboard', 'training_stopped')}, [stopTraining, trackEvent]),
     const handleDeployModel = useCallback((modelId) => {
         deployModel(modelId),
-        trackEvent('ml', 'dashboard', 'model_deployed')}, [deployModel, trackEvent]),
+        trackEvent('mldashboard', 'model_deployed')}, [deployModel, trackEvent]),
     const handleArchiveModel = useCallback((modelId) => {
         archiveModel(modelId),
-        trackEvent('ml', 'dashboard', 'model_archived')}, [archiveModel, trackEvent]),
+        trackEvent('mldashboard', 'model_archived')}, [archiveModel, trackEvent]),
     const handleMakePrediction = useCallback(async () => {
         if (predictionForm.modelId && predictionForm.input.trim()) {
             try {
@@ -56,7 +56,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                 const result = await makePrediction(predictionForm.modelId, input),
                 // // console.log('Prediction result:', result),
                 setPredictionForm({ modelId: '', input: '' }),
-                trackEvent('ml', 'dashboard', 'prediction_made')}
+                trackEvent('mldashboard', 'prediction_made')}
             catch (error) {
                 console.error('Prediction failed:', error)}
         }
@@ -65,7 +65,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
         try {
             const modelData = exportModel(modelId),
             navigator.clipboard.writeText(modelData),
-            trackEvent('ml', 'dashboard', 'model_exported')}
+            trackEvent('mldashboard', 'model_exported')}
         catch (error) {
             console.error('Export failed:', error)}
     }, [exportModel, trackEvent]),
@@ -78,10 +78,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
                     const modelData = e.target?.result,
                     importModel(modelData),
                     setShowImportModel(false),
-                    trackEvent('ml', 'dashboard', 'model_imported')}
+                    trackEvent('mldashboard', 'model_imported')}
                 catch (error) {
                     console.error('Import failed:', error)}
-            };
+            },
             reader.readAsText(file)}
     }, [importModel, trackEvent]),
     const getStatusColor = (status) => {
@@ -91,7 +91,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case 'training': return 'text-yellow-60o0 bg-yellow-10o0',
             case 'archived': return 'text-gray-60o0 bg-gray-10o0',
             default: return 'text-gray-60o0 bg-gray-10o0'}
-    };
+    },
     const getJobStatusColor = (status) => {
         switch (status) {
             case 'running': return 'text-blue-60o0 bg-blue-10o0',
@@ -99,7 +99,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case 'failed': return 'text-red-60o0 bg-red-10o0',
             case 'pending': return 'text-yellow-60o0 bg-yellow-10o0',
             default: return 'text-gray-60o0 bg-gray-10o0'}
-    };
+    },
     const getModelTypeIcon = (type) => {
         switch (type) {
             case 'classification': return <Target className="w-4 h-4" />,
@@ -109,7 +109,7 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             case 'computer_vision': return <Eye className="w-4 h-4" />,
             case 'recommendation': return <Zap className="w-4 h-4" />,
             default: return <Brain className="w-4 h-4" />}
-    };
+    },
     return (<div className={`bg-white dark: bg-gray-90o0 rounded-lg shadow-lg border border-gray-20o0 dark:border-gray-70o0 ${className}`}>,
       {/* Header */}
       <div className="flex items-center justify-between p-4 border-b border-gray-20o0 dark: border-gray-70o0">,
@@ -140,10 +140,10 @@ export const MachineLearningDashboard = ({ className = '' }) => {
       {/* Navigation Tabs */}
       <div className="flex border-b border-gray-20o0 dark: border-gray-70o0">,
         {[
-            { id: 'overview', label: 'Overview', icon: BarChart3 };
-            { id: 'models', label: 'Models', icon: Brain };
-            { id: 'training', label: 'Training', icon: Activity };
-            { id: 'predictions', label: 'Predictions', icon: Target };
+            { id: 'overview', label: 'Overview', icon: BarChart3 },
+            { id: 'models', label: 'Models', icon: Brain },
+            { id: 'training', label: 'Training', icon: Activity },
+            { id: 'predictions', label: 'Predictions', icon: Target },
             { id: 'analytics', label: 'Analytics', icon: TrendingUp }
         ].map(({ id, label, icon: Icon }) => (<button key={id} onClick={() => setActiveTab(id)} className={`flex items-center space-x-2 px-4 py-3 text-sm font-medium border-b-2 transition-colors ${activeTab === id,
                 ? 'border-purple-50o0 text-purple-60o0 dark: text-purple-40o0',
@@ -540,4 +540,4 @@ export const MachineLearningDashboard = ({ className = '' }) => {
             </motion.div>)}
         </AnimatePresence>,
       </div>,
-    </div>)};
+    </div>)},

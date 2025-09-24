@@ -1,35 +1,32 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  TagIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  TagIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide';
+    'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide',
   description:,
-    'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns. Complete guide to 10o0,0o00% ROI transformation.';
+    'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns. Complete guide to 10o0,0o00% ROI transformation.',
   keywords: [
-    'AI Revolution';
-    'Business Transformation';
-    'ROI';
-    'Fortune 50o0';
-    '10o0,0o00% ROI';
-    'Ultimate Breakthrough';
-  ];
+    'AI RevolutionBusiness Transformation',
+    'ROIFortune 50o0',
+    '10o0,0o00% ROIUltimate Breakthrough',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide';
+      'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide',
     description:,
-      'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI Revolution', 'Business Transformation', 'ROI', 'Fortune 50o0'];
-  };
-};
+      'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI RevolutionBusiness Transformation', 'ROIFortune 50o0'],
+  },
+},
 export default function UltimateBusinessRevolutionPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -172,7 +169,7 @@ export default function UltimateBusinessRevolutionPage() {
                 <strong>Accuracy</strong>: 99.97% decision accuracy in real-time,
               </li>,
               <li>,
-                <strong>Applications</strong>: Supply chain optimization;
+                <strong>Applications</strong>: Supply chain optimization,
                 financial modeling, predictive analytics,
               </li>,
               <li>,

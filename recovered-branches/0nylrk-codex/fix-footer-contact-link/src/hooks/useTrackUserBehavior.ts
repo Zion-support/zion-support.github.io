@@ -15,26 +15,26 @@ export function useTrackUserBehavior(componentName: string) {
         const buttonId = button?.id || '',
         const buttonText = button?.textContent || '',
         trackEvent('button_click', {
-          component: componentName;
-          elementId: buttonId;
-          text: buttonText;
+          component: componentName,
+          elementId: buttonId,
+          text: buttonText
         })}
-    };
+    },
     // Track form submissions,
     const trackFormSubmits = (e: Event) => {
       const target = e.target as HTMLFormElement,
       if (target.tagName === 'FORM') {
         const formId = target.id || '',
         trackEvent('form_submit', {
-          component: componentName;
-          elementId: formId;
+          component: componentName,
+          elementId: formId
         })}
-    };
+    },
     component.addEventListener('click', trackButtonClicks),
     component.addEventListener('submit', trackFormSubmits, true),
     return () => {
       component.removeEventListener('click', trackButtonClicks),
-      component.removeEventListener('submit', trackFormSubmits, true)};
+      component.removeEventListener('submit', trackFormSubmits, true)},
   }, [trackEvent, componentName]),
   return componentRef}
 ,

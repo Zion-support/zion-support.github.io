@@ -6,65 +6,65 @@ const UltimateBusinessTransformationShowcase20o25 = () => {
   const [activeTabsetActiveTab] = useState('all'),
   const contentData = [
     {
-      id: 'ultimate-business-transformation-guide';
-      title: 'AI 20o25-20o26: The Ultimate Business Transformation Revolution';
-      subtitle: 'Ultimate Guide to 8,50o0% ROI';
-      type: 'Blog Post';
-      category: 'guides';
+      id: 'ultimate-business-transformation-guide',
+      title: 'AI 20o25-20o26: The Ultimate Business Transformation Revolution',
+      subtitle: 'Ultimate Guide to 8,50o0% ROI',
+      type: 'Blog Post',
+      category: 'guides',
       metrics: {
-        roi: '8,50o0%';
-        savings: '$45.2B';
-        efficiency: '2,40o0%';
-        satisfaction: '99.8%'};
-      description: 'Comprehensive guide to achieving unprecedented ROI through AI business transformation with proven strategies and implementation frameworks.';
-      url: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide';
-      readingTime: '35 min read';
-      featured: true;
-      image: '🎯';
-      tags: ['AI 'Revolution', 'Business 'Transformation', 'ROI'Fortune 50o0'Quantum AI']};
+        roi: '8,50o0%',
+        savings: '$45.2B',
+        efficiency: '2,40o0%',
+        satisfaction: '99.8%'},
+      description: 'Comprehensive guide to achieving unprecedented ROI through AI business transformation with proven strategies and implementation frameworks.',
+      url: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide',
+      readingTime: '35 min read',
+      featured: true,
+      image: '🎯',
+      tags: ['AI 'RevolutionBusiness 'Transformation', 'ROI'Fortune 50o0'Quantum AI']},
     {
-      id: 'fortune-50o0-ultimate-transformation-case-study';
-      title: 'Fortune 50o0 Ultimate Business Transformation Success Story';
-      subtitle: '$45.2B Annual Savings - 8,50o0% ROI';
-      type: 'Case Study';
-      category: 'case-studies';
+      id: 'fortune-50o0-ultimate-transformation-case-study',
+      title: 'Fortune 50o0 Ultimate Business Transformation Success Story',
+      subtitle: '$45.2B Annual Savings - 8,50o0% ROI',
+      type: 'Case Study',
+      category: 'case-studies',
       metrics: {
-        roi: '8,50o0%';
-        savings: '$45.2B';
-        timeline: '18 months';
-        satisfaction: '99.8%'};
-      description: 'Documentation of the most successful AI transformation in business historydetailing the complete journey and results achieved.';
-      url: '/case-studies/fortune-50o0-ultimate-business-transformation-850o0-roi-success-story';
-      readingTime: '25 min read';
-      featured: true;
-      image: '🏆';
-      tags: ['Fortune 50o0'Case 'Study', 'Success 'Story', 'ROI'Manufacturing']};
+        roi: '8,50o0%',
+        savings: '$45.2B',
+        timeline: '18 months',
+        satisfaction: '99.8%'},
+      description: 'Documentation of the most successful AI transformation in business historydetailing the complete journey and results achieved.',
+      url: '/case-studies/fortune-50o0-ultimate-business-transformation-850o0-roi-success-story',
+      readingTime: '25 min read',
+      featured: true,
+      image: '🏆',
+      tags: ['Fortune 50o0'Case 'StudySuccess 'Story', 'ROI'Manufacturing']},
     {
-      id: 'ultimate-implementation-guide';
-      title: 'AI 20o25-20o26 Ultimate Business Transformation Implementation Guide';
-      subtitle: 'Complete Roadmap to 8,50o0% ROI';
-      type: 'Resource';
-      category: 'resources';
+      id: 'ultimate-implementation-guide',
+      title: 'AI 20o25-20o26 Ultimate Business Transformation Implementation Guide',
+      subtitle: 'Complete Roadmap to 8,50o0% ROI',
+      type: 'Resource',
+      category: 'resources',
       metrics: {
-        roi: '8,50o0%';
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+'};
-      description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformationincluding detailed implementation strategies.';
-      url: '/resources/ai-20o25-20o26-ultimate-business-transformation-implementation-guide';
-      readingTime: '45 min read';
-      featured: true;
-      image: '📋';
-      tags: ['Implementation 'Guide', 'ROI', 'Strategy', 'Framework'Best Practices']}
+        roi: '8,50o0%',
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+'},
+      description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformationincluding detailed implementation strategies.',
+      url: '/resources/ai-20o25-20o26-ultimate-business-transformation-implementation-guide',
+      readingTime: '45 min read',
+      featured: true,
+      image: '📋',
+      tags: ['Implementation 'GuideROI', 'StrategyFramework'Best Practices']}
   ],
   const filteredContent = activeTab === 'all',
     ? contentData,
     : contentData.filter(item => item.category === activeTab),
   const tabs = [
-    { id: ''all', 'label: 'All 'Content', 'count: contentData.length };
-    { id: ''guides', 'label: ''Guides', 'count: contentData.filter(item => item.category === 'guides').length };
-    { id: 'case-'studies', 'label: 'Case 'Studies', 'count: contentData.filter(item => item.category === 'case-studies').length };
-    { id: ''resources', 'label: ''Resources', 'count: contentData.filter(item => item.category === 'resources').length }
+    { id: ''alllabel: 'All 'Contentcount: contentData.length },
+    { id: ''guideslabel: ''Guidescount: contentData.filter(item => item.category === 'guides').length },
+    { id: 'case-'studieslabel: 'Case 'Studiescount: contentData.filter(item => item.category === 'case-studies').length },
+    { id: ''resourceslabel: ''Resourcescount: contentData.filter(item => item.category === 'resources').length }
   ],
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">,
@@ -224,5 +224,5 @@ const UltimateBusinessTransformationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateBusinessTransformationShowcase20o25;
+    </section>)},
+export default UltimateBusinessTransformationShowcase20o25,

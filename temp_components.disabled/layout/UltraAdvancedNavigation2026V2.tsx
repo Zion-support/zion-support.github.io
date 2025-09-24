@@ -2,16 +2,16 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Zap;
-  Brain;
-  Cloud;
-  Shield;
-  Rocket;
-  Phone;
-  Mail;
+  Menu,
+  X,
+  ChevronDown,
+  Zap,
+  Brain,
+  Cloud,
+  Shield,
+  Rocket,
+  Phone,
+  Mail,
   MapPin} from 'lucide-react',
 const UltraAdvancedNavigation20o26V2: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -19,40 +19,40 @@ const UltraAdvancedNavigation20o26V2: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const navigationItems = [
     {
-      name: 'Services';
-      href: '/services';
+      name: 'Services',
+      href: '/services',
       dropdown: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Advanced AI solutions' };
-        { name: 'IT Services', href: '/it-services', icon: Cloud, description: 'Comprehensive IT solutions' };
-        { name: 'Cybersecurity', href: '/security', icon: Shield, description: 'Enterprise security' };
-        { name: 'Quantum Computing', href: '/quantum-services', icon: Zap, description: 'Next-gen computing' };
-      ]};
+        { name: 'AI Services', href: '/ai-services', icon: Brain, description: 'Advanced AI solutions' },
+        { name: 'IT Services', href: '/it-services', icon: Cloud, description: 'Comprehensive IT solutions' },
+        { name: 'Cybersecurity', href: '/security', icon: Shield, description: 'Enterprise security' },
+        { name: 'Quantum Computing', href: '/quantum-services', icon: Zap, description: 'Next-gen computing' },
+      ]},
     {
-      name: 'Solutions';
-      href: '/solutions';
+      name: 'Solutions',
+      href: '/solutions',
       dropdown: [
-        { name: 'Enterprise Solutions', href: '/enterprise-it', icon: Shield, description: 'Large-scale deployments' };
-        { name: 'SaaS Platforms', href: '/micro-saas', icon: Cloud, description: 'Micro SaaS solutions' };
-        { name: 'Space Technology', href: '/space-tech', icon: Rocket, description: 'Space innovation' };
-        { name: 'Biotech AI', href: '/biotech-ai', icon: Brain, description: 'Healthcare AI' };
-      ]};
-    { name: 'Pricing', href: '/pricing' };
-    { name: 'Resources', href: '/resources' };
-    { name: 'About', href: '/about' };
+        { name: 'Enterprise Solutions', href: '/enterprise-it', icon: Shield, description: 'Large-scale deployments' },
+        { name: 'SaaS Platforms', href: '/micro-saas', icon: Cloud, description: 'Micro SaaS solutions' },
+        { name: 'Space Technology', href: '/space-tech', icon: Rocket, description: 'Space innovation' },
+        { name: 'Biotech AI', href: '/biotech-ai', icon: Brain, description: 'Healthcare AI' },
+      ]},
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ],
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   return (
     <motion.nav,
       initial={{ y: -10o0 }}
@@ -229,5 +229,5 @@ const UltraAdvancedNavigation20o26V2: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </motion.nav>)};
-export default UltraAdvancedNavigation20o26V2;
+    </motion.nav>)},
+export default UltraAdvancedNavigation20o26V2,

@@ -1,122 +1,122 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Globe;
-  Lock;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Star;
-  Users;
-  Award;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Palette;
-  Heart;
-  Target;
-  Sparkles;
-  Eye;
-  TrendingUp;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;
-  ExternalLink;
+  Zap,
+  Globe,
+  Lock,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Palette,
+  Heart,
+  Target,
+  Sparkles,
+  Eye,
+  TrendingUp,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ExternalLink,
 } from 'lucide-react',
 const UltraFuturisticFooter20o25: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Services';
+      title: 'Services',
       links: [
-        { label: 'AI & Machine Learning', href: '/ai-services' };
-        { label: 'Quantum Computing', href: '/quantum-computing' };
-        { label: 'Space Technology', href: '/space-tech' };
-        { label: 'Cybersecurity', href: '/cybersecurity' };
-        { label: 'Cloud Solutions', href: '/cloud-platform' };
-        { label: 'DevOps & Infrastructure', href: '/devops-infrastructure' };
-        { label: 'Data & Analytics', href: '/data-analytics' };
-        { label: 'View All Services', href: '/services' };
-      ];
-    };
+        { label: 'AI & Machine Learning', href: '/ai-services' },
+        { label: 'Quantum Computing', href: '/quantum-computing' },
+        { label: 'Space Technology', href: '/space-tech' },
+        { label: 'Cybersecurity', href: '/cybersecurity' },
+        { label: 'Cloud Solutions', href: '/cloud-platform' },
+        { label: 'DevOps & Infrastructure', href: '/devops-infrastructure' },
+        { label: 'Data & Analytics', href: '/data-analytics' },
+        { label: 'View All Services', href: '/services' },
+      ],
+    },
     {
-      title: 'Solutions';
+      title: 'Solutions',
       links: [
-        { label: 'Enterprise Solutions', href: '/enterprise-solutions' };
-        { label: 'SMB Solutions', href: '/smb-solutions' };
-        { label: 'Industry Solutions', href: '/industry-solutions' };
-        { label: 'Custom Development', href: '/custom-development' };
-        { label: 'Digital Transformation', href: '/digital-transformation' };
-        { label: 'Innovation Consulting', href: '/innovation-consulting' };
-      ];
-    };
+        { label: 'Enterprise Solutions', href: '/enterprise-solutions' },
+        { label: 'SMB Solutions', href: '/smb-solutions' },
+        { label: 'Industry Solutions', href: '/industry-solutions' },
+        { label: 'Custom Development', href: '/custom-development' },
+        { label: 'Digital Transformation', href: '/digital-transformation' },
+        { label: 'Innovation Consulting', href: '/innovation-consulting' },
+      ],
+    },
     {
-      title: 'Resources';
+      title: 'Resources',
       links: [
-        { label: 'Documentation', href: '/docs' };
-        { label: 'Blog & Insights', href: '/blog' };
-        { label: 'Case Studies', href: '/case-studies' };
-        { label: 'White Papers', href: '/white-papers' };
-        { label: 'Webinars', href: '/webinars' };
-        { label: 'Training & Certification', href: '/training' };
-      ];
-    };
+        { label: 'Documentation', href: '/docs' },
+        { label: 'Blog & Insights', href: '/blog' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/white-papers' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Training & Certification', href: '/training' },
+      ],
+    },
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { label: 'About Us', href: '/about' };
-        { label: 'Careers', href: '/careers' };
-        { label: 'Partners', href: '/partners' };
-        { label: 'News & Updates', href: '/news' };
-        { label: 'Contact', href: '/contact' };
-        { label: 'Support', href: '/support' };
-      ];
-    };
+        { label: 'About Us', href: '/about' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'Partners', href: '/partners' },
+        { label: 'News & Updates', href: '/news' },
+        { label: 'Contact', href: '/contact' },
+        { label: 'Support', href: '/support' },
+      ],
+    },
   ],
   const socialLinks = [
     {
-      icon: Facebook;
-      href: 'https://facebook.com/ziontechgroup';
-      label: 'Facebook';
-    };
+      icon: Facebook,
+      href: 'https://facebook.com/ziontechgroup',
+      label: 'Facebook'
+    },
     {
-      icon: Twitter;
-      href: 'https://twitter.com/ziontechgroup';
-      label: 'Twitter';
-    };
+      icon: Twitter,
+      href: 'https://twitter.com/ziontechgroup',
+      label: 'Twitter'
+    },
     {
-      icon: Linkedin;
-      href: 'https://linkedin.com/company/ziontechgroup';
-      label: 'LinkedIn';
-    };
+      icon: Linkedin,
+      href: 'https://linkedin.com/company/ziontechgroup',
+      label: 'LinkedIn'
+    },
     {
-      icon: Instagram;
-      href: 'https://instagram.com/ziontechgroup';
-      label: 'Instagram';
-    };
+      icon: Instagram,
+      href: 'https://instagram.com/ziontechgroup',
+      label: 'Instagram'
+    },
     {
-      icon: Youtube;
-      href: 'https://youtube.com/@ziontechgroup';
-      label: 'YouTube';
-    };
-    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' };
+      icon: Youtube,
+      href: 'https://youtube.com/@ziontechgroup',
+      label: 'YouTube'
+    },
+    { icon: Github, href: 'https://github.com/ziontechgroup', label: 'GitHub' },
   ],
   const contactInfo = {
-    phone: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    phone: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   return (
     <footer className='relative bg-gray-90o0 border-t border-gray-80o0/50 overflow-hidden'>,
       {/* Animated Background Elements */}
@@ -273,5 +273,5 @@ const UltraFuturisticFooter20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default UltraFuturisticFooter20o25;
+    </footer>)},
+export default UltraFuturisticFooter20o25,

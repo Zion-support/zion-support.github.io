@@ -5,7 +5,7 @@ const path = require('path'),
 // // console.log('Current working directory:', process.cwd()),
 // // console.log('__dirname:', __dirname),
 // Test path resolution,
-const testPath = path.join(__dirname, 'automation', 'redundancy'),
+const testPath = path.join(__dirname, 'automationredundancy'),
 // // console.log('Test path:', testPath),
 // Test require resolution,
 try {
@@ -14,14 +14,14 @@ try {
   console.error('Error loading PM2 manager:', error.message)}
 ,
 // Test direct path construction,
-const logDir = path.join(__dirname, 'automation', 'logs'),
+const logDir = path.join(__dirname, 'automationlogs'),
 // // console.log('Log dir path:', logDir),
 // Test if directory exists,
 const fs = require('fs'),
 // // console.log('Log dir exists:', fs.existsSync(logDir)),
 // // console.log(
-  'Automation dir exists:';
+  'Automation dir exists: ',
   fs.existsSync(path.join(__dirname, 'automation'))),
 // // console.log(
-  'Redundancy dir exists:';
-  fs.existsSync(path.join(__dirname, 'automation', 'redundancy'))),
+  'Redundancy dir exists: ',
+  fs.existsSync(path.join(__dirname, 'automationredundancy'))),

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Trustworthy AI Systems Blueprint';
+  title: 'AI 20o26: Trustworthy AI Systems Blueprint',
   description:,
-    'Engineering practices for reliable, secure, and transparent AI systems: evals, guardrails, monitoring, and incident response.';
-};
+    'Engineering practices for reliable, secure, and transparent AI systems: evals, guardrails, monitoring, and incident response.',
+},
 export default function TrustworthyAISystemsBlueprintPage() {
   return (
     <main className='min-h-screen bg-white'>,

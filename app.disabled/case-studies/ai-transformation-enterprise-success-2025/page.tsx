@@ -1,41 +1,39 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  Bookmark;
-  Share2;
-  Award;
-  TrendingUp;
-  DollarSign;
-  Users;
-  CheckCircle;
-  Star;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Bookmark,
+  Share2,
+  Award,
+  TrendingUp,
+  DollarSign,
+  Users,
+  CheckCircle,
+  Star,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months';
+  title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months',
   description:,
-    'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value and revolutionizing their operations.';
+    'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value and revolutionizing their operations.',
   keywords: [
-    'AI Transformation';
-    'ROI';
-    'Enterprise';
-    'Success Story';
-    'Fortune 50o0';
-  ];
+    'AI TransformationROI',
+    'EnterpriseSuccess Story',
+    'Fortune 50o0',
+  ],
   openGraph: {
-    title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months';
+    title: 'Enterprise AI Transformation Success: 340% ROI in 6 Months',
     description:,
-      'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI Transformation', 'ROI', 'Enterprise', 'Success Story'];
-  };
-};
+      'Discover how a Fortune 50o0 company achieved unprecedented success with AI transformation, generating $50M in value.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI TransformationROI', 'EnterpriseSuccess Story'],
+  },
+},
 export default function EnterpriseAISuccessCaseStudy() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -2,59 +2,59 @@ import Link from 'next/link',
 const AdvancedAutomationContentShowcase20o25 = () => {
   const automationContent = [
     {
-      title: 'Intelligent Document Processing';
+      title: 'Intelligent Document Processing',
       description:,
-        'AI-powered document extraction and processing with 99.5% accuracy';
-      image: '📄';
-      link: '/automation/document-processing';
-      category: 'Document AI';
-      roi: '40o0% ROI';
-    };
+        'AI-powered document extraction and processing with 99.5% accuracy',
+      image: '📄',
+      link: '/automation/document-processing',
+      category: 'Document AI',
+      roi: '40o0% ROI'
+    },
     {
-      title: 'Customer Service Automation';
+      title: 'Customer Service Automation',
       description:,
-        '24/7 intelligent chatbots and virtual assistants for customer support';
-      image: '💬';
-      link: '/automation/customer-service';
-      category: 'Customer Experience';
-      roi: '30o0% ROI';
-    };
+        '24/7 intelligent chatbots and virtual assistants for customer support',
+      image: '💬',
+      link: '/automation/customer-service',
+      category: 'Customer Experience',
+      roi: '30o0% ROI'
+    },
     {
-      title: 'Financial Process Automation';
+      title: 'Financial Process Automation',
       description:,
-        'Automated invoice processingexpense managementand financial reporting';
-      image: '💰';
-      link: '/automation/financial';
-      category: 'Finance';
-      roi: '50o0% ROI';
-    };
+        'Automated invoice processingexpense managementand financial reporting',
+      image: '💰',
+      link: '/automation/financial',
+      category: 'Finance',
+      roi: '50o0% ROI'
+    },
     {
-      title: 'Supply Chain Optimization';
+      title: 'Supply Chain Optimization',
       description:,
-        'Intelligent inventory management and supply chain automation';
-      image: '🚚';
-      link: '/automation/supply-chain';
-      category: 'Operations';
-      roi: '350% ROI';
-    };
+        'Intelligent inventory management and supply chain automation',
+      image: '🚚',
+      link: '/automation/supply-chain',
+      category: 'Operations',
+      roi: '350% ROI'
+    },
     {
-      title: 'HR Process Automation';
+      title: 'HR Process Automation',
       description:,
-        'Automated recruitmentonboardingand employee lifecycle management';
-      image: '👥';
-      link: '/automation/hr';
-      category: 'Human Resources';
-      roi: '250% ROI';
-    };
+        'Automated recruitmentonboardingand employee lifecycle management',
+      image: '👥',
+      link: '/automation/hr',
+      category: 'Human Resources',
+      roi: '250% ROI'
+    },
     {
-      title: 'Marketing Automation Suite';
+      title: 'Marketing Automation Suite',
       description:,
-        'AI-driven marketing campaigns and customer journey optimization';
-      image: '📢';
-      link: '/automation/marketing';
-      category: 'Marketing';
-      roi: '450% ROI';
-    };
+        'AI-driven marketing campaigns and customer journey optimization',
+      image: '📢',
+      link: '/automation/marketing',
+      category: 'Marketing',
+      roi: '450% ROI'
+    },
   ],
   return (
     <section className='py-16 bg-white'>,
@@ -120,5 +120,5 @@ const AdvancedAutomationContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AdvancedAutomationContentShowcase20o25;
+    </section>)},
+export default AdvancedAutomationContentShowcase20o25,

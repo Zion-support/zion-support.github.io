@@ -1,19 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Safe Tool Use Blueprint for Autonomous Agents';
+  title: 'AI 20o26: Safe Tool Use Blueprint for Autonomous Agents',
   description:,
-    'Designing permissioned tool use with policy-as-code, risk tiers, sandboxes, and runtime checks for enterprise agents.';
+    'Designing permissioned tool use with policy-as-code, risk tiers, sandboxes, and runtime checks for enterprise agents.',
   keywords: [
-    'autonomous agents';
-    'tool use';
-    'permissions';
-    'policy as code';
-    'guardrails';
-    'runtime checks';
-  ];
-};
+    'autonomous agentstool use',
+    'permissionspolicy as code',
+    'guardrailsruntime checks',
+  ]
+},
 const SafeToolUseBlueprint20o26: React.FC = () => {
   return (
     <div>,
@@ -43,7 +40,7 @@ const SafeToolUseBlueprint20o26: React.FC = () => {
             <h2>Risk-Tiered Permissions</h2>,
             <ul>,
               <li>,
-                Define tool classes by impact: read-only, write, external;
+                Define tool classes by impact: read-only, write, external,
                 financial.,
               </li>,
               <li>,
@@ -109,5 +106,5 @@ const SafeToolUseBlueprint20o26: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>)};
-export default SafeToolUseBlueprint20o26;
+    </div>)},
+export default SafeToolUseBlueprint20o26,

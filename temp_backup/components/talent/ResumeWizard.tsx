@@ -5,42 +5,39 @@ import TagInput from './TagInput',
 import PortfolioCard from './PortfolioCard',
 import ResumePreview from './ResumePreview',
 import {
-  ResumeDocument;
-  WorkExperience;
-  Education;
-  Certification;
-  PortfolioProject;
+  ResumeDocument,
+  WorkExperience,
+  Education,
+  Certification,
+  PortfolioProject,
 } from '../../utils/types/resume',
-  aiGenerateFromProfile;
-  aiImprove;
-  listResumes;
-  saveResume;
-  publishResume;
-  removeResume;
+  aiGenerateFromProfile,
+  aiImprove,
+  listResumes,
+  saveResume,
+  publishResume,
+  removeResume,
 } from '../../utils/api/resume',
 const steps = [
-  'Summary';
-  'Experience';
-  'Skills';
-  'Education';
-  'Certifications';
-  'Projects';
-  'Preview';
+  'SummaryExperience',
+  'SkillsEducation',
+  'CertificationsProjects',
+  'Preview',
 ],
 function emptyDoc(): ResumeDocument {
   const now = new Date().toISOString(),
   return {
-    id: uuidv4();
-    name: 'Untitled Resume';
-    personalSummary: '';
-    skills: [];
-    work: [];
-    certifications: [];
-    education: [];
-    projects: [];
-    createdAt: now;
-    updatedAt: now;
-  };
+    id: uuidv4(),
+    name: 'Untitled Resume',
+    personalSummary: '',
+    skills: [],
+    work: [],
+    certifications: [],
+    education: [],
+    projects: [],
+    createdAt: now,
+    updatedAt: now
+  },
 }
 ,
 export default function ResumeWizard() {
@@ -58,18 +55,18 @@ export default function ResumeWizard() {
     try {
       const ai = await aiGenerateFromProfile(),
       setDoc(d => ({
-        ...d;
-        personalSummary: ai.personalSummary ?? d.personalSummary;
-        skills: ai.skills ?? d.skills;
-        work: (ai.work as WorkExperience[]) ?? d.work;
-        education: (ai.education as Education[]) ?? d.education;
+        ...d,
+        personalSummary: ai.personalSummary ?? d.personalSummary,
+        skills: ai.skills ?? d.skills,
+        work: (ai.work as WorkExperience[]) ?? d.work,
+        education: (ai.education as Education[]) ?? d.education,
         certifications:,
-          (ai.certifications as Certification[]) ?? d.certifications;
-        projects: (ai.projects as PortfolioProject[]) ?? d.projects;
-        updatedAt: new Date().toISOString();
+          (ai.certifications as Certification[]) ?? d.certifications,
+        projects: (ai.projects as PortfolioProject[]) ?? d.projects,
+        updatedAt: new Date().toISOString()
       }))} finally {
       setLoading(false)}
-  };
+  },
   const improveField = async (
     field: 'summary' | 'work' | 'education' | 'certifications' | 'projects') => {
     setLoading(true),
@@ -77,24 +74,24 @@ export default function ResumeWizard() {
       const text = await aiImprove(field, doc),
       if (field === 'summary') setDoc(d => ({ ...d, personalSummary: text }))} finally {
       setLoading(false)}
-  };
+  },
   const upsert = async () => {
     setSaving(true),
     try {
       const saved = await saveResume({
-        ...doc;
-        updatedAt: new Date().toISOString();
+        ...doc,
+        updatedAt: new Date().toISOString()
       }),
       setDoc(saved),
       const list = await listResumes(),
       setAllDocs(list)} finally {
       setSaving(false)}
-  };
+  },
   const onNewVersion = () => setDoc(emptyDoc()),
   const onDelete = async (id: string) => {
     await removeResume(id),
     const list = await listResumes(),
-    setAllDocs(list)};
+    setAllDocs(list)},
   const onPublish = async () => {
     setSaving(true),
     try {
@@ -102,32 +99,32 @@ export default function ResumeWizard() {
       setDoc(published),
       alert('Resume added to your public profile.')} finally {
       setSaving(false)}
-  };
+  },
   const addExperience = () =>,
     setDoc(d => ({
-      ...d;
+      ...d,
       work: [
-        ...d.work;
-        { id: uuidv4(), jobTitle: '', company: '', description: '' };
-      ];
+        ...d.work,
+        { id: uuidv4(), jobTitle: '', company: '', description: '' },
+      ],
     })),
   const addEducation = () =>,
     setDoc(d => ({
-      ...d;
-      education: [...d.education, { id: uuidv4(), school: '' }] as Education[];
+      ...d,
+      education: [...d.education, { id: uuidv4(), school: '' }] as Education[],
     })),
   const addCertification = () =>,
     setDoc(d => ({
-      ...d;
-      certifications: [...d.certifications, { id: uuidv4(), name: '' }];
+      ...d,
+      certifications: [...d.certifications, { id: uuidv4(), name: '' }],
     })),
   const addProject = () =>,
     setDoc(d => ({
-      ...d;
+      ...d,
       projects: [
-        ...d.projects;
-        { id: uuidv4(), title: '', summary: '', technologies: [] };
-      ];
+        ...d.projects,
+        { id: uuidv4(), title: '', summary: '', technologies: [] },
+      ],
     })),
   const content = useMemo(() => {
     switch (current) {
@@ -185,7 +182,7 @@ export default function ResumeWizard() {
                       value={w.jobTitle}
                       onChange={e => {
                         const next = [...doc.work],
-                        next[idx] = { ...w, jobTitle: e.target.value };
+                        next[idx] = { ...w, jobTitle: e.target.value },
                         setDoc({ ...doc, work: next })}}
                     />,
                   </div>,
@@ -196,7 +193,7 @@ export default function ResumeWizard() {
                       value={w.company}
                       onChange={e => {
                         const next = [...doc.work],
-                        next[idx] = { ...w, company: e.target.value };
+                        next[idx] = { ...w, company: e.target.value },
                         setDoc({ ...doc, work: next })}}
                     />,
                   </div>,
@@ -210,7 +207,7 @@ export default function ResumeWizard() {
                       value={w.startDate || ''}
                       onChange={e => {
                         const next = [...doc.work],
-                        next[idx] = { ...w, startDate: e.target.value };
+                        next[idx] = { ...w, startDate: e.target.value },
                         setDoc({ ...doc, work: next })}}
                     />,
                   </div>,
@@ -222,7 +219,7 @@ export default function ResumeWizard() {
                       value={w.endDate || ''}
                       onChange={e => {
                         const next = [...doc.work],
-                        next[idx] = { ...w, endDate: e.target.value };
+                        next[idx] = { ...w, endDate: e.target.value },
                         setDoc({ ...doc, work: next })}}
                     />,
                   </div>,
@@ -243,7 +240,7 @@ export default function ResumeWizard() {
                     value={w.description}
                     onChange={e => {
                       const next = [...doc.work],
-                      next[idx] = { ...w, description: e.target.value };
+                      next[idx] = { ...w, description: e.target.value },
                       setDoc({ ...doc, work: next })}}
                   />,
                 </div>,
@@ -252,8 +249,8 @@ export default function ResumeWizard() {
                     className='text-sm text-red-60o0',
                     onClick={() =>,
                       setDoc({
-                        ...doc;
-                        work: doc.work.filter(x => x.id !== w.id);
+                        ...doc,
+                        work: doc.work.filter(x => x.id !== w.id)
                       })}
                   >,
                     Remove,
@@ -290,7 +287,7 @@ export default function ResumeWizard() {
                       value={e.school}
                       onChange={ev => {
                         const next = [...doc.education],
-                        next[idx] = { ...e, school: ev.target.value };
+                        next[idx] = { ...e, school: ev.target.value },
                         setDoc({ ...doc, education: next })}}
                     />,
                   </div>,
@@ -301,7 +298,7 @@ export default function ResumeWizard() {
                       value={e.degree || ''}
                       onChange={ev => {
                         const next = [...doc.education],
-                        next[idx] = { ...e, degree: ev.target.value };
+                        next[idx] = { ...e, degree: ev.target.value },
                         setDoc({ ...doc, education: next })}}
                     />,
                   </div>,
@@ -314,7 +311,7 @@ export default function ResumeWizard() {
                       value={e.field || ''}
                       onChange={ev => {
                         const next = [...doc.education],
-                        next[idx] = { ...e, field: ev.target.value };
+                        next[idx] = { ...e, field: ev.target.value },
                         setDoc({ ...doc, education: next })}}
                     />,
                   </div>,
@@ -326,7 +323,7 @@ export default function ResumeWizard() {
                       value={`${e.startDate || ''}${e.endDate ? ` – ${e.endDate}` : ''}`}
                       onChange={ev => {
                         const next = [...doc.education],
-                        next[idx] = { ...e, startDate: ev.target.value };
+                        next[idx] = { ...e, startDate: ev.target.value },
                         setDoc({ ...doc, education: next })}}
                     />,
                   </div>,
@@ -338,7 +335,7 @@ export default function ResumeWizard() {
                     value={e.description || ''}
                     onChange={ev => {
                       const next = [...doc.education],
-                      next[idx] = { ...e, description: ev.target.value };
+                      next[idx] = { ...e, description: ev.target.value },
                       setDoc({ ...doc, education: next })}}
                   />,
                 </div>,
@@ -347,8 +344,8 @@ export default function ResumeWizard() {
                     className='text-sm text-red-60o0',
                     onClick={() =>,
                       setDoc({
-                        ...doc;
-                        education: doc.education.filter(x => x.id !== e.id);
+                        ...doc,
+                        education: doc.education.filter(x => x.id !== e.id)
                       })}
                   >,
                     Remove,
@@ -373,7 +370,7 @@ export default function ResumeWizard() {
                     value={c.name}
                     onChange={ev => {
                       const next = [...doc.certifications],
-                      next[idx] = { ...c, name: ev.target.value };
+                      next[idx] = { ...c, name: ev.target.value },
                       setDoc({ ...doc, certifications: next })}}
                   />,
                 </div>,
@@ -384,7 +381,7 @@ export default function ResumeWizard() {
                     value={c.issuer || ''}
                     onChange={ev => {
                       const next = [...doc.certifications],
-                      next[idx] = { ...c, issuer: ev.target.value };
+                      next[idx] = { ...c, issuer: ev.target.value },
                       setDoc({ ...doc, certifications: next })}}
                   />,
                 </div>,
@@ -411,8 +408,8 @@ export default function ResumeWizard() {
                       window.prompt('Summary', proj.summary) || proj.summary,
                     const tech =,
                       window.prompt(
-                        'Technologies (comma separated)';
-                        proj.technologies.join(', ')) || proj.technologies.join(', '),
+                        'Technologies (comma separated)',
+                        proj.technologies.join()) || proj.technologies.join(', '),
                     const liveDemoUrl =,
                       window.prompt('Live demo URL', proj.liveDemoUrl || '') ||,
                       proj.liveDemoUrl,
@@ -421,33 +418,33 @@ export default function ResumeWizard() {
                       proj.githubUrl,
                     const screenshotUrl =,
                       window.prompt(
-                        'Screenshot URL';
+                        'Screenshot URL',
                         proj.screenshotUrl || '') || proj.screenshotUrl,
                     const assetUrl =,
                       window.prompt(
-                        'Asset URL (PDF or file)';
+                        'Asset URL (PDF or file)',
                         proj.assetUrl || '') || proj.assetUrl,
                     const next = doc.projects.map(x =>,
                       x.id === proj.id,
                         ? {
-                            ...proj;
-                            title;
-                            summary;
+                            ...proj,
+                            title,
+                            summary,
                             technologies: tech,
-                              .split(','),
+                              .split(),
                               .map(s => s.trim()),
-                              .filter(Boolean);
-                            liveDemoUrl: liveDemoUrl || undefined;
-                            githubUrl: githubUrl || undefined;
-                            screenshotUrl: screenshotUrl || undefined;
-                            assetUrl: assetUrl || undefined;
+                              .filter(Boolean),
+                            liveDemoUrl: liveDemoUrl || undefined,
+                            githubUrl: githubUrl || undefined,
+                            screenshotUrl: screenshotUrl || undefined,
+                            assetUrl: assetUrl || undefined
                           }
                         : x),
                     setDoc({ ...doc, projects: next })}}
                   onDelete={id =>,
                     setDoc({
-                      ...doc;
-                      projects: doc.projects.filter(x => x.id !== id);
+                      ...doc,
+                      projects: doc.projects.filter(x => x.id !== id)
                     })}
                 />))}
             </div>,

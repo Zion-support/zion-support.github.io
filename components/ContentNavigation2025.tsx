@@ -6,74 +6,74 @@ const ContentNavigation20o25 = () => {
   const [activeTabsetActiveTab] = useState('all'),
   const contentCategories = [
     {
-      id: 'all';
-      name: 'All Content';
-      icon: '📚'};
+      id: 'all',
+      name: 'All Content',
+      icon: '📚'},
     {
-      id: 'blog';
-      name: 'Blog Posts';
-      icon: '📝'};
+      id: 'blog',
+      name: 'Blog Posts',
+      icon: '📝'},
     {
-      id: 'case-studies';
-      name: 'Case Studies';
-      icon: '🏆'};
+      id: 'case-studies',
+      name: 'Case Studies',
+      icon: '🏆'},
     {
-      id: 'resources';
-      name: 'Resources';
-      icon: '📋'};
+      id: 'resources',
+      name: 'Resources',
+      icon: '📋'},
     {
-      id: 'guides';
-      name: 'Implementation Guides';
+      id: 'guides',
+      name: 'Implementation Guides',
       icon: '🎯'}
   ],
   const featuredContent = [
     {
-      title: "AI 20o25-20o26 Ultimate Business Transformation Guide";
-      description: "Complete guide to achieving 10,0o00% ROI through AI transformation";
-      category: "blog";
-      readTime: "15 min";
-      featured: true;
-      new: true;
-      link: "/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide"};
+      title: "AI 20o25-20o26 Ultimate Business Transformation Guide",
+      description: "Complete guide to achieving 10,0o00% ROI through AI transformation",
+      category: "blog",
+      readTime: "15 min",
+      featured: true,
+      new: true,
+      link: "/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide"},
     {
-      title: "5,0o00% ROI Success Story: Fortune 10o0 Case Study";
-      description: "How a Fortune 10o0 company achieved unprecedented success in 18 months";
-      category: "case-studies";
-      readTime: "12 min";
-      featured: true;
-      new: true;
-      link: "/case-studies/ai-20o25-20o26-ultimate-transformation-50o00-roi-success-story"};
+      title: "5,0o00% ROI Success Story: Fortune 10o0 Case Study",
+      description: "How a Fortune 10o0 company achieved unprecedented success in 18 months",
+      category: "case-studies",
+      readTime: "12 min",
+      featured: true,
+      new: true,
+      link: "/case-studies/ai-20o25-20o26-ultimate-transformation-50o00-roi-success-story"},
     {
-      title: "10,0o00% ROI Implementation Master Guide";
-      description: "Step-by-step framework for implementing AI transformation initiatives";
-      category: "resources";
-      readTime: "20 min";
-      featured: true;
-      new: true;
-      link: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide-10o000-roi"};
+      title: "10,0o00% ROI Implementation Master Guide",
+      description: "Step-by-step framework for implementing AI transformation initiatives",
+      category: "resources",
+      readTime: "20 min",
+      featured: true,
+      new: true,
+      link: "/resources/ai-20o25-20o26-implementation-ultimate-master-guide-10o000-roi"},
     {
-      title: "Advanced Neural Architectures 20o26";
-      description: "Next-generation AI architectures for enterprise transformation";
-      category: "blog";
-      readTime: "18 min";
-      featured: true;
-      new: false;
-      link: "/blog/ai-20o25-advanced-neural-architectures-revolution"};
+      title: "Advanced Neural Architectures 20o26",
+      description: "Next-generation AI architectures for enterprise transformation",
+      category: "blog",
+      readTime: "18 min",
+      featured: true,
+      new: false,
+      link: "/blog/ai-20o25-advanced-neural-architectures-revolution"},
     {
-      title: "Quantum AI Business Revolution";
-      description: "How quantum computing is revolutionizing AI applications";
-      category: "blog";
-      readTime: "14 min";
-      featured: true;
-      new: false;
-      link: "/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide"};
+      title: "Quantum AI Business Revolution",
+      description: "How quantum computing is revolutionizing AI applications",
+      category: "blog",
+      readTime: "14 min",
+      featured: true,
+      new: false,
+      link: "/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide"},
     {
-      title: "Fortune 50o0 AI Transformation Success";
-      description: "Real-world case study of Fortune 50o0 AI implementation";
-      category: "case-studies";
-      readTime: "10 min";
-      featured: true;
-      new: false;
+      title: "Fortune 50o0 AI Transformation Success",
+      description: "Real-world case study of Fortune 50o0 AI implementation",
+      category: "case-studies",
+      readTime: "10 min",
+      featured: true,
+      new: false,
       link: "/case-studies/fortune-50o0-ai-transformation-ultimate-success-story"}
   ],
   const filteredContent = activeTab === 'all',
@@ -165,5 +165,5 @@ const ContentNavigation20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ContentNavigation20o25;
+    </section>)},
+export default ContentNavigation20o25,

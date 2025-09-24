@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
@@ -9,34 +9,31 @@ import {
 import { innovative2025MicroSaasBatch } from '../data/innovative-2025-micro-saas-batch',
 const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
   const categories = [
-    { name: 'AI & 'Marketing', 'icon: Braincolor: 'from-purple-500 to-pink-500' };
-    { name: 'Quantum & 'Finance', 'icon: Atomcolor: 'from-cyan-500 to-blue-500' };
-    { name: 'Space 'Technology', 'icon: Rocketcolor: 'from-indigo-500 to-purple-500' };
-    { name: 'Metaverse & 'AI', 'icon: Globecolor: 'from-green-500 to-teal-500' };
-    { name: ''Cybersecurity', 'icon: Shieldcolor: 'from-red-500 to-orange-500' };
-    { name: 'Supply Chain & 'AI', 'icon: Factorycolor: 'from-yellow-500 to-orange-500' };
-    { name: 'Quantum & 'Healthcare', 'icon: Cpucolor: 'from-violet-500 to-purple-500' };
-    { name: 'AI & 'Creativity', 'icon: Palettecolor: 'from-pink-500 to-rose-500' };
-    { name: 'AI & 'Robotics', 'icon: Databasecolor: 'from-emerald-500 to-green-500' }
+    { name: 'AI & 'Marketingicon: Braincolor: 'from-purple-500 to-pink-500' },
+    { name: 'Quantum & 'Financeicon: Atomcolor: 'from-cyan-500 to-blue-500' },
+    { name: 'Space 'Technologyicon: Rocketcolor: 'from-indigo-500 to-purple-500' },
+    { name: 'Metaverse & 'AIicon: Globecolor: 'from-green-500 to-teal-500' },
+    { name: ''Cybersecurityicon: Shieldcolor: 'from-red-500 to-orange-500' },
+    { name: 'Supply Chain & 'AIicon: Factorycolor: 'from-yellow-500 to-orange-500' },
+    { name: 'Quantum & 'Healthcareicon: Cpucolor: 'from-violet-500 to-purple-500' },
+    { name: 'AI & 'Creativityicon: Palettecolor: 'from-pink-500 to-rose-500' },
+    { name: 'AI & 'Roboticsicon: Databasecolor: 'from-emerald-500 to-green-500' }
   ],
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.name === category),
-    return cat ? cat.icon : Star};
+    return cat ? cat.icon : Star},
   const getCategoryColor = (category: string) => {
     const cat = categories.find(c => c.name === category),
-    return cat ? cat.color : 'from-gray-500 to-gray-600'};
+    return cat ? cat.color : 'from-gray-500 to-gray-600'},
   return (
     <Layout>,
       <SEO
         title="2025 Innovative Services Showcase | Zion Tech Group",
         description="Discover our cutting-edge 2025 innovative micro SAAS servicesIT solutionsand AI platforms. Quantum computingspace technologyand autonomous systems.",
         keywords={[
-          'innovative services 2025';
-          'micro SAAS';
-          'quantum computing';
-          'space technology';
-          'AI platforms';
-          'autonomous systems']}
+          'innovative services 2025micro SAAS',
+          'quantum computingspace technology',
+          'AI platformsautonomous systems']}
       />,
       {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center px-4 relative overflow-hidden">,
@@ -287,5 +284,5 @@ const Comprehensive2025InnovativeServicesShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>)};
-export default Comprehensive2025InnovativeServicesShowcase;
+    </Layout>)},
+export default Comprehensive2025InnovativeServicesShowcase,

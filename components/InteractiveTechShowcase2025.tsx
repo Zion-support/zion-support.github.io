@@ -10,28 +10,28 @@ import {
   Code,
   Database,
   Cpu,
-  Network;
-  Zap;
-  Shield;
-  Cloud;
-  BarChart3;
-  Brain;
-  Eye;
-  MousePointer;
-  Keyboard;
-  Monitor;
-  Smartphone;
-  Tablet;
-  Globe;
-  Lock;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Sparkles;
-  Rocket;
-  Target;
-  TrendingUp;
-  Users;
+  Network,
+  Zap,
+  Shield,
+  Cloud,
+  BarChart3,
+  Brain,
+  Eye,
+  MousePointer,
+  Keyboard,
+  Monitor,
+  Smartphone,
+  Tablet,
+  Globe,
+  Lock,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Rocket,
+  Target,
+  TrendingUp,
+  Users,
   Award} from 'lucide-react',
 const InteractiveTechShowcase20o25 = () => {
   const [activeDemosetActiveDemo] = useState(0),
@@ -41,119 +41,95 @@ const InteractiveTechShowcase20o25 = () => {
     setIsVisible(true)}[]),
   const demos = [
     {
-      id: 'ai-automation';
-      title: 'AI Process Automation';
-      description: 'Watch our AI automatically optimize business processes in real-time';
-      icon: Brain;
-      color: 'from-blue-60o0 to-purple-60o0';
+      id: 'ai-automation',
+      title: 'AI Process Automation',
+      description: 'Watch our AI automatically optimize business processes in real-time',
+      icon: Brain,
+      color: 'from-blue-60o0 to-purple-60o0',
       features: [
-        'Real-time Process Analysis';
-        'Automated Decision Making';
-        'Intelligent Resource Allocation';
-        'Predictive Maintenance';
-        'Smart Workflow Optimization';
-        'Dynamic Performance Tuning'];
+        'Real-time Process AnalysisAutomated Decision Making',
+        'Intelligent Resource AllocationPredictive Maintenance',
+        'Smart Workflow OptimizationDynamic Performance Tuning'],
       metrics: [
-        { label: 'Process 'Speed', 'value: '10x 'Faster', 'trend: '+850%' };
-        { label: ''Accuracy', 'value: '99.7%'trend: '+15%' };
-        { label: 'Cost 'Savings', 'value: '$2.3'M', 'trend: '+340%' };
-        { label: ''Uptime', 'value: '99.9%'trend: '+25%' }
-      ];
+        { label: 'Process 'Speedvalue: '10x 'Fastertrend: '+850%' },
+        { label: ''Accuracyvalue: '99.7%'trend: '+15%' },
+        { label: 'Cost 'Savingsvalue: '$2.3'Mtrend: '+340%' },
+        { label: ''Uptimevalue: '99.9%'trend: '+25%' }
+      ],
       simulation: {
         steps: [
-          'Analyzing current processes...';
-          'Identifying optimization opportunities...';
-          'Implementing AI recommendations...';
-          'Monitoring performance improvements...';
-          'Scaling successful optimizations...';
-          'Generating ROI reports...'];
+          'Analyzing current processes...Identifying optimization opportunities...',
+          'Implementing AI recommendations...Monitoring performance improvements...',
+          'Scaling successful optimizations...Generating ROI reports...'],
         currentStep: 0}
-    };
+    },
     {
-      id: 'cybersecurity';
-      title: 'Advanced Threat Detection';
-      description: 'Experience our AI-powered security system detecting and neutralizing threats';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
+      id: 'cybersecurity',
+      title: 'Advanced Threat Detection',
+      description: 'Experience our AI-powered security system detecting and neutralizing threats',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
       features: [
-        'Real-time Threat Scanning';
-        'Behavioral Analysis';
-        'Automated Response';
-        'Zero-day Detection';
-        'Compliance Monitoring';
-        'Incident Forensics'];
+        'Real-time Threat ScanningBehavioral Analysis',
+        'Automated ResponseZero-day Detection',
+        'Compliance MonitoringIncident Forensics'],
       metrics: [
-        { label: 'Threats 'Blocked', 'value: '15,847'trend: '+95%' };
-        { label: 'Detection 'Time', 'value: '<2 'seconds', 'trend: '-80%' };
-        { label: 'False 'Positives', 'value: '0.1%'trend: '-90%' };
-        { label: 'System 'Uptime', 'value: '99.99%'trend: '+12%' }
-      ];
+        { label: 'Threats 'Blockedvalue: '15,847'trend: '+95%' },
+        { label: 'Detection 'Timevalue: '<2 'secondstrend: '-80%' },
+        { label: 'False 'Positivesvalue: '0.1%'trend: '-90%' },
+        { label: 'System 'Uptimevalue: '99.99%'trend: '+12%' }
+      ],
       simulation: {
         steps: [
-          'Scanning network traffic...';
-          'Analyzing user behavior...';
-          'Detecting suspicious patterns...';
-          'Classifying threat level...';
-          'Implementing countermeasures...';
-          'Logging security events...'];
+          'Scanning network traffic...Analyzing user behavior...',
+          'Detecting suspicious patterns...Classifying threat level...',
+          'Implementing countermeasures...Logging security events...'],
         currentStep: 0}
-    };
+    },
     {
-      id: 'cloud-optimization';
-      title: 'Cloud Performance Optimization';
-      description: 'See how our system automatically scales and optimizes cloud resources';
-      icon: Cloud;
-      color: 'from-green-60o0 to-teal-60o0';
+      id: 'cloud-optimization',
+      title: 'Cloud Performance Optimization',
+      description: 'See how our system automatically scales and optimizes cloud resources',
+      icon: Cloud,
+      color: 'from-green-60o0 to-teal-60o0',
       features: [
-        'Auto-scaling Infrastructure';
-        'Load Balancing';
-        'Resource Optimization';
-        'Cost Management';
-        'Performance Monitoring';
-        'Disaster Recovery'];
+        'Auto-scaling InfrastructureLoad Balancing',
+        'Resource OptimizationCost Management',
+        'Performance MonitoringDisaster Recovery'],
       metrics: [
-        { label: 'Performance 'Gain', 'value: '8'x', 'trend: '+70o0%' };
-        { label: 'Cost 'Reduction', 'value: '45%'trend: '+60%' };
-        { label: 'Response 'Time', 'value: '50'ms', 'trend: '-85%' };
-        { label: ''Availability', 'value: '99.99%'trend: '+18%' }
-      ];
+        { label: 'Performance 'Gainvalue: '8'xtrend: '+70o0%' },
+        { label: 'Cost 'Reductionvalue: '45%'trend: '+60%' },
+        { label: 'Response 'Timevalue: '50'mstrend: '-85%' },
+        { label: ''Availabilityvalue: '99.99%'trend: '+18%' }
+      ],
       simulation: {
         steps: [
-          'Monitoring resource usage...';
-          'Analyzing performance metrics...';
-          'Identifying bottlenecks...';
-          'Scaling resources...';
-          'Optimizing configurations...';
-          'Validating improvements...'];
+          'Monitoring resource usage...Analyzing performance metrics...',
+          'Identifying bottlenecks...Scaling resources...',
+          'Optimizing configurations...Validating improvements...'],
         currentStep: 0}
-    };
+    },
     {
-      id: 'data-analytics';
-      title: 'Real-time Data Analytics';
-      description: 'Watch our AI process millions of data points and generate insights instantly';
-      icon: BarChart3;
-      color: 'from-purple-60o0 to-pink-60o0';
+      id: 'data-analytics',
+      title: 'Real-time Data Analytics',
+      description: 'Watch our AI process millions of data points and generate insights instantly',
+      icon: BarChart3,
+      color: 'from-purple-60o0 to-pink-60o0',
       features: [
-        'Real-time Processing';
-        'Predictive Analytics';
-        'Custom Dashboards';
-        'Machine Learning';
-        'Data Visualization';
-        'Business Intelligence'];
+        'Real-time ProcessingPredictive Analytics',
+        'Custom DashboardsMachine Learning',
+        'Data VisualizationBusiness Intelligence'],
       metrics: [
-        { label: 'Data 'Processed', 'value: '1.2M/'sec', 'trend: '+50o0%' };
-        { label: 'Insight 'Accuracy', 'value: '98.5%'trend: '+22%' };
-        { label: 'Query 'Speed', 'value: '0.3's', 'trend: '-95%' };
-        { label: 'Storage 'Efficiency', 'value: '85%'trend: '+40%' }
-      ];
+        { label: 'Data 'Processedvalue: '1.2M/'sectrend: '+50o0%' },
+        { label: 'Insight 'Accuracyvalue: '98.5%'trend: '+22%' },
+        { label: 'Query 'Speedvalue: '0.3'strend: '-95%' },
+        { label: 'Storage 'Efficiencyvalue: '85%'trend: '+40%' }
+      ],
       simulation: {
         steps: [
-          'Ingesting data streams...';
-          'Cleaning and validating...';
-          'Running ML algorithms...';
-          'Generating insights...';
-          'Creating visualizations...';
-          'Updating dashboards...'];
+          'Ingesting data streams...Cleaning and validating...',
+          'Running ML algorithms...Generating insights...',
+          'Creating visualizations...Updating dashboards...'],
         currentStep: 0}
     }
   ],
@@ -165,23 +141,23 @@ const InteractiveTechShowcase20o25 = () => {
       return () => clearInterval(interval)}
   }[isPlayingactiveDemodemos]),
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   if (!isVisible) return null,
   return (
     <div className="relative bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20 overflow-hidden">,
@@ -374,5 +350,5 @@ const InteractiveTechShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default InteractiveTechShowcase20o25;
+    </div>)},
+export default InteractiveTechShowcase20o25,

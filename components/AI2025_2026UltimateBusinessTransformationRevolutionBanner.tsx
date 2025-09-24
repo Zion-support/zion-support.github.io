@@ -8,46 +8,46 @@ const AI20o25_20o26UltimateBusinessTransformationRevolutionBanner = () => {
   // Content showcase data,
   const contentShowcase = [
     {
-      id: 'ultimate-business-transformation-guide';
-      title: 'AI 20o25-20o26: The Ultimate Business Transformation Revolution';
-      subtitle: 'Ultimate Guide to 8,50o0% ROI';
-      type: 'Blog Post';
+      id: 'ultimate-business-transformation-guide',
+      title: 'AI 20o25-20o26: The Ultimate Business Transformation Revolution',
+      subtitle: 'Ultimate Guide to 8,50o0% ROI',
+      type: 'Blog Post',
       metrics: {
-        roi: '8,50o0%';
-        savings: '$45.2B';
-        efficiency: '2,40o0%';
-        satisfaction: '99.8%'};
-      description: 'Comprehensive guide to achieving unprecedented ROI through AI business transformation.';
-      url: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide';
-      readingTime: '35 min read';
-      featured: true};
+        roi: '8,50o0%',
+        savings: '$45.2B',
+        efficiency: '2,40o0%',
+        satisfaction: '99.8%'},
+      description: 'Comprehensive guide to achieving unprecedented ROI through AI business transformation.',
+      url: '/blog/ai-20o25-20o26-ultimate-business-transformation-revolution-ultimate-guide',
+      readingTime: '35 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-ultimate-transformation-case-study';
-      title: 'Fortune 50o0 Ultimate Business Transformation Success Story';
-      subtitle: '$45.2B Annual Savings - 8,50o0% ROI';
-      type: 'Case Study';
+      id: 'fortune-50o0-ultimate-transformation-case-study',
+      title: 'Fortune 50o0 Ultimate Business Transformation Success Story',
+      subtitle: '$45.2B Annual Savings - 8,50o0% ROI',
+      type: 'Case Study',
       metrics: {
-        roi: '8,50o0%';
-        savings: '$45.2B';
-        timeline: '18 months';
-        satisfaction: '99.8%'};
-      description: 'The most successful AI transformation in business history documented.';
-      url: '/case-studies/fortune-50o0-ultimate-business-transformation-850o0-roi-success-story';
-      readingTime: '25 min read';
-      featured: true};
+        roi: '8,50o0%',
+        savings: '$45.2B',
+        timeline: '18 months',
+        satisfaction: '99.8%'},
+      description: 'The most successful AI transformation in business history documented.',
+      url: '/case-studies/fortune-50o0-ultimate-business-transformation-850o0-roi-success-story',
+      readingTime: '25 min read',
+      featured: true},
     {
-      id: 'ultimate-implementation-guide';
-      title: 'AI 20o25-20o26 Ultimate Business Transformation Implementation Guide';
-      subtitle: 'Complete Roadmap to 8,50o0% ROI';
-      type: 'Resource';
+      id: 'ultimate-implementation-guide',
+      title: 'AI 20o25-20o26 Ultimate Business Transformation Implementation Guide',
+      subtitle: 'Complete Roadmap to 8,50o0% ROI',
+      type: 'Resource',
       metrics: {
-        roi: '8,50o0%';
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+'};
-      description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformation.';
-      url: '/resources/ai-20o25-20o26-ultimate-business-transformation-implementation-guide';
-      readingTime: '45 min read';
+        roi: '8,50o0%',
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+'},
+      description: 'Step-by-step roadmap for achieving unprecedented ROI through AI transformation.',
+      url: '/resources/ai-20o25-20o26-ultimate-business-transformation-implementation-guide',
+      readingTime: '45 min read',
       featured: true}
   ],
   // Auto-rotate slides,
@@ -63,7 +63,7 @@ const AI20o25_20o26UltimateBusinessTransformationRevolutionBanner = () => {
   }[]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai-20o25-20o26-ultimate-business-transformation-banner-'dismissed', 'true')};
+    localStorage.setItem('ai-20o25-20o26-ultimate-business-transformation-banner-'dismissedtrue')},
   const currentContent = contentShowcase[currentSlide],
   if (!isVisible) return null,
   return (
@@ -215,5 +215,5 @@ const AI20o25_20o26UltimateBusinessTransformationRevolutionBanner = () => {
           style={{ width: `${((currentSlide + 1) / contentShowcase.length) * 10o0}%` }}
          />,
       </div>,
-    </div>)};
-export default AI20o25_20o26UltimateBusinessTransformationRevolutionBanner;
+    </div>)},
+export default AI20o25_20o26UltimateBusinessTransformationRevolutionBanner,

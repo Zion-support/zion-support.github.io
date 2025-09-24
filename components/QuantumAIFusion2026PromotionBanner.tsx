@@ -26,7 +26,7 @@ export default function QuantumAIFusion20o26PromotionBanner() {
           <p className='text-xl md: text-2xl text-cyan-10o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Achieve{' '}
             <span className='text-yellow-40o0 font-bold'>15,0o00% ROI</span>{' '}
-            with the 'world', 's first,
+            with the 'worlds first,
             <span className='text-purple-30o0 font-bold'>,
               {' '}
               quantum-enhanced AI processing system,
@@ -49,7 +49,7 @@ export default function QuantumAIFusion20o26PromotionBanner() {
           </div>,
           {/* Description */}
           <p className='text-lg text-cyan-20o0 mb-10 max-w-3xl mx-auto'>,
-            The 'world', 's first successful integration of quantum computing,
+            The 'worlds first successful integration of quantum computing,
             with artificial intelligence delivering unprecedented processing,
             power and business transformation results that exceed all,
             expectations.,

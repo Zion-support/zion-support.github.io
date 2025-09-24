@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Evaluation Playground — Overview';
+  title: 'AI 20o26: Agent Evaluation Playground — Overview',
   description:,
-    'Why every agent platform needs a quick, safe way to prototype evaluations.';
-};
+    'Why every agent platform needs a quick, safe way to prototype evaluations.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -15,7 +15,7 @@ export default function Page() {
           AI 20o26: Agent Evaluation Playground — Overview,
         </h1>,
         <p className='text-gray-60o0 mt-3'>,
-          A lightweight approach to define scenarios, run evaluations locally;
+          A lightweight approach to define scenarios, run evaluations locally,
           and publish results to an evaluation hub with policy gates.,
         </p>,
       </div>,

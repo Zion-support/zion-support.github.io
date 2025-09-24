@@ -2,7 +2,7 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, CheckCircle, ExternalLink;
+  ArrowRight, CheckCircle, ExternalLink,
   Search, Grid, List, Star as StarIcon} from 'lucide-react',
 import EnhancedNavigation from '../components/layout/EnhancedNavigation',
 import EnhancedFooter from '../components/layout/EnhancedFooter',
@@ -13,19 +13,19 @@ export default function Comprehensive20o25ServicesShowcase() {
   const [selectedService, setSelectedService] = useState<string | null>(null),
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: enhancedMicroSaasServices.length };
-    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: enhancedMicroSaasServices.filter(s => s.category === 'AI & Machine Learning').length };
-    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: enhancedMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI').length };
-    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: enhancedMicroSaasServices.filter(s => s.category === 'Cybersecurity').length };
-    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: enhancedMicroSaasServices.filter(s => s.category === 'Space Technology').length };
-    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️', count: enhancedMicroSaasServices.filter(s => s.category === 'DevOps & Infrastructure').length };
-    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐', count: enhancedMicroSaasServices.filter(s => s.category === 'Edge Computing').length };
-    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: enhancedMicroSaasServices.filter(s => s.category === 'Healthcare AI').length };
-    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: enhancedMicroSaasServices.filter(s => s.category === 'Blockchain & DeFi').length };
-    { id: 'Legal Technology', name: 'Legal Tech', icon: '⚖️', count: enhancedMicroSaasServices.filter(s => s.category === 'Legal Technology').length };
-    { id: 'Autonomous Vehicles', name: 'Auto Tech', icon: '🚗', count: enhancedMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles').length };
-    { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length };
-    { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length };
+    { id: 'all', name: 'All Services', icon: '🚀', count: enhancedMicroSaasServices.length },
+    { id: 'AI & Machine Learning', name: 'AI & ML', icon: '🧠', count: enhancedMicroSaasServices.filter(s => s.category === 'AI & Machine Learning').length },
+    { id: 'Quantum Computing & AI', name: 'Quantum AI', icon: '⚛️', count: enhancedMicroSaasServices.filter(s => s.category === 'Quantum Computing & AI').length },
+    { id: 'Cybersecurity', name: 'Security', icon: '🛡️', count: enhancedMicroSaasServices.filter(s => s.category === 'Cybersecurity').length },
+    { id: 'Space Technology', name: 'Space Tech', icon: '🚀', count: enhancedMicroSaasServices.filter(s => s.category === 'Space Technology').length },
+    { id: 'DevOps & Infrastructure', name: 'DevOps', icon: '⚙️', count: enhancedMicroSaasServices.filter(s => s.category === 'DevOps & Infrastructure').length },
+    { id: 'Edge Computing', name: 'Edge Computing', icon: '🌐', count: enhancedMicroSaasServices.filter(s => s.category === 'Edge Computing').length },
+    { id: 'Healthcare AI', name: 'Healthcare', icon: '🏥', count: enhancedMicroSaasServices.filter(s => s.category === 'Healthcare AI').length },
+    { id: 'Blockchain & DeFi', name: 'Blockchain', icon: '🔗', count: enhancedMicroSaasServices.filter(s => s.category === 'Blockchain & DeFi').length },
+    { id: 'Legal Technology', name: 'Legal Tech', icon: '⚖️', count: enhancedMicroSaasServices.filter(s => s.category === 'Legal Technology').length },
+    { id: 'Autonomous Vehicles', name: 'Auto Tech', icon: '🚗', count: enhancedMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles').length },
+    { id: 'Climate Technology', name: 'Climate Tech', icon: '🌍', count: enhancedMicroSaasServices.filter(s => s.category === 'Climate Technology').length },
+    { id: 'Education Technology', name: 'EdTech', icon: '🎓', count: enhancedMicroSaasServices.filter(s => s.category === 'Education Technology').length },
     { id: 'Manufacturing Technology', name: 'Manufacturing', icon: '🏭', count: enhancedMicroSaasServices.filter(s => s.category === 'Manufacturing Technology').length }
   ],
   const filteredServices = enhancedMicroSaasServices,
@@ -50,11 +50,11 @@ export default function Comprehensive20o25ServicesShowcase() {
     }),
   const getCategoryIcon = (category: string) => {
     const categoryData = categories.find(cat => cat.id === category),
-    return categoryData?.icon || '🚀'};
+    return categoryData?.icon || '🚀'},
   const getAnnualPrice = (monthlyPrice: string) => {
     const price = parseFloat(monthlyPrice.replace('$', '')),
     const annualPrice = price * 12 * 0.8, // 20% discount for annual,
-    return `$${Math.round(annualPrice)}`};
+    return `$${Math.round(annualPrice)}`},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white overflow-hidden">,
       <Head>,
@@ -78,7 +78,7 @@ export default function Comprehensive20o25ServicesShowcase() {
               Comprehensive 20o25 Services,
             </h1>,
             <p className="text-xl md:text-2xl text-white/80 max-w-4xl mx-auto leading-relaxed mb-8">,
-              Discover our complete portfolio of revolutionary micro SAAS services, AI solutions;
+              Discover our complete portfolio of revolutionary micro SAAS services, AI solutions,
               quantum technologies, and cutting-edge IT services that are transforming industries.,
             </p>,
             {/* Stats */}

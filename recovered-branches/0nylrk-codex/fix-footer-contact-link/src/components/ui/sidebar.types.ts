@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 // This file fixes the ref type issues in sidebar components,
 // Export a placeholder to ensure the file is recognized as a module,
 export const SIDEBAR_REF_TYPE_FIX = true,
@@ -13,8 +13,8 @@ export type PolymorphicRef<T extends React.ElementType> = React.Ref<,
   React.ElementRef<T>>,
 // Helper for dealing with refs in complex situations,
 export type PolymorphicComponentProp<,
-  T extends React.ElementType;
-  Props = {};
+  T extends React.ElementType,
+  Props = {},
 > = React.PropsWithChildren<Props & { as?: T }>,
 // Safe ref casting helper type - this is the key to fixing our issues,
 // We need to use a type that is compatible with both Slot's ref and React's ref handling,
@@ -28,4 +28,4 @@ export type SidebarContext = {
   openMobile: boolean,
   setOpenMobile: (open: boolean) => void,
   isMobile: boolean,
-  toggleSidebar: () => void};
+  toggleSidebar: () => void},

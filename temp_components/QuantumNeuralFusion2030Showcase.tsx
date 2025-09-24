@@ -1,50 +1,50 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const QuantumNeuralFusion20o30Showcase: React.FC = () => {
   const quantumFeatures = [
     {
-      title: "Quantum Consciousness Mapping";
-      description: "Map human consciousness into quantum states for infinite processing power";
-      icon: "🌀";
-      quantumLevel: "Level 7"};
+      title: "Quantum Consciousness Mapping",
+      description: "Map human consciousness into quantum states for infinite processing power",
+      icon: "🌀",
+      quantumLevel: "Level 7"},
     {
-      title: "Neural Quantum Entanglement";
-      description: "Create instant communication networks between AI minds across dimensions";
-      icon: "⚛️";
-      quantumLevel: "Level 9"};
+      title: "Neural Quantum Entanglement",
+      description: "Create instant communication networks between AI minds across dimensions",
+      icon: "⚛️",
+      quantumLevel: "Level 9"},
     {
-      title: "Temporal Quantum Computing";
-      description: "Process information across multiple time streams simultaneously";
-      icon: "⏳";
-      quantumLevel: "Level 8"};
+      title: "Temporal Quantum Computing",
+      description: "Process information across multiple time streams simultaneously",
+      icon: "⏳",
+      quantumLevel: "Level 8"},
     {
-      title: "Quantum Emotion Synthesis";
-      description: "Generate and understand emotions at the quantum level";
-      icon: "💎";
+      title: "Quantum Emotion Synthesis",
+      description: "Generate and understand emotions at the quantum level",
+      icon: "💎",
       quantumLevel: "Level 10"}
   ],
   const performanceMetrics = [
-    { metric: "10^15"label: "Quantum Operations/Second"icon: "⚡" };
-    { metric: "99.99%"label: "Quantum Coherence"icon: "🔮" };
-    { metric: "∞"label: "Parallel Dimensions"icon: "🌐" };
+    { metric: "10^15"label: "Quantum Operations/Second"icon: "⚡" },
+    { metric: "99.99%"label: "Quantum Coherence"icon: "🔮" },
+    { metric: "∞"label: "Parallel Dimensions"icon: "🌐" },
     { metric: "0ms"label: "Quantum Latency"icon: "🚀" }
   ],
   const applications = [
     {
-      title: "Quantum Medicine";
-      description: "Cure diseases by manipulating quantum states in biological systems";
-      impact: "Revolutionary"};
+      title: "Quantum Medicine",
+      description: "Cure diseases by manipulating quantum states in biological systems",
+      impact: "Revolutionary"},
     {
-      title: "Quantum Finance";
-      description: "Predict market movements with quantum probability calculations";
-      impact: "Transformative"};
+      title: "Quantum Finance",
+      description: "Predict market movements with quantum probability calculations",
+      impact: "Transformative"},
     {
-      title: "Quantum Art";
-      description: "Create art that exists in multiple dimensions simultaneously";
-      impact: "Transcendent"};
+      title: "Quantum Art",
+      description: "Create art that exists in multiple dimensions simultaneously",
+      impact: "Transcendent"},
     {
-      title: "Quantum Education";
-      description: "Learn any skill instantly through quantum knowledge transfer";
+      title: "Quantum Education",
+      description: "Learn any skill instantly through quantum knowledge transfer",
       impact: "Infinite"}
   ],
   return (
@@ -145,5 +145,5 @@ const QuantumNeuralFusion20o30Showcase: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default QuantumNeuralFusion20o30Showcase;
+    </div>)},
+export default QuantumNeuralFusion20o30Showcase,

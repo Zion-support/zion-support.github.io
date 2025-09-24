@@ -9,7 +9,7 @@ class CursorSyncMetrics {
   constructor() {
     this.projectRoot = process.cwd(),
     this.metricsDir = path.join(__dirname, 'metrics'),
-    this.logFile = path.join(__dirname, 'logs', 'cursor-sync-cron.log'),
+    this.logFile = path.join(__dirname, 'logscursor-sync-cron.log'),
     this.metricsFile = path.join(this.metricsDir, 'cursor-sync-metrics.json'),
     this.ensureMetricsDirectory()}
 ,
@@ -25,14 +25,14 @@ class CursorSyncMetrics {
         console.error('Error loading metrics:', error.message)}
     }
     return {
-      totalSyncs: 0;
-      successfulSyncs: 0;
-      failedSyncs: 0;
-      lastSync: null;
-      averageSyncTime: 0;
-      errors: [];
+      totalSyncs: 0,
+      successfulSyncs: 0,
+      failedSyncs: 0,
+      lastSync: null,
+      averageSyncTime: 0,
+      errors: [],
       dailyStats: {}
-    };
+    },
   }
 ,
   saveMetrics(metrics) {
@@ -43,7 +43,7 @@ class CursorSyncMetrics {
 ,
   analyzeLogFile() {
     if (!fs.existsSync(this.logFile)) {
-      return { syncs: 0, errors: 0, lastSync: null };
+      return { syncs: 0, errors: 0, lastSync: null },
     }
 ,
     try {
@@ -62,10 +62,10 @@ class CursorSyncMetrics {
           errors++}
       }
 ,
-      return { syncs, errors, lastSync };
+      return { syncs, errors, lastSync },
     } catch (error) {
       console.error('Error analyzing log file:', error.message),
-      return { syncs: 0, errors: 0, lastSync: null };
+      return { syncs: 0, errors: 0, lastSync: null },
     }
   }
 ,
@@ -83,9 +83,9 @@ class CursorSyncMetrics {
     // Update daily stats,
     if (!metrics.dailyStats[today]) {
       metrics.dailyStats[today] ={
-        syncs: 0;
-        errors: 0;
-        timestamp: new Date().toISOString()};
+        syncs: 0,
+        errors: 0,
+        timestamp: new Date().toISOString()},
     }
 ,
     metrics.dailyStats[today].syncs += logAnalysis.syncs,
@@ -107,15 +107,15 @@ class CursorSyncMetrics {
   generateReport() {
     const metrics = this.loadMetrics(),
     const report ={
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       summary: {
-        totalSyncs: metrics.totalSyncs;
-        successfulSyncs: metrics.successfulSyncs;
-        failedSyncs: metrics.failedSyncs;
-        successRate: metrics.successRate + '%';
-        lastSync: metrics.lastSync};
-      dailyStats: metrics.dailyStats;
-      recommendations: this.generateRecommendations(metrics)};
+        totalSyncs: metrics.totalSyncs,
+        successfulSyncs: metrics.successfulSyncs,
+        failedSyncs: metrics.failedSyncs,
+        successRate: metrics.successRate + '%',
+        lastSync: metrics.lastSync},
+      dailyStats: metrics.dailyStats,
+      recommendations: this.generateRecommendations(metrics)},
     const reportFile = path.join(this.metricsDir, `cursor-sync-report-${new Date().toISOString().split('T')[0]}.json`),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
     // // console.log(`📄 Report generated: ${reportFile}`)}

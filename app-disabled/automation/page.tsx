@@ -1,9 +1,9 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata ={
-  title: 'Advanced Automation 20o25 - AI-Powered Business Automation | Zion Tech Group';
-  description: 'Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 30o0% with our AI-powered automation.';
-  keywords: ['automation', 'business automation', 'AI automation', 'process automation', 'intelligent automation']};
+  title: 'Advanced Automation 20o25 - AI-Powered Business Automation | Zion Tech Group',
+  description: 'Transform your business with intelligent automation solutions. Reduce costs by 60% while increasing productivity by 30o0% with our AI-powered automation.',
+  keywords: ['automationbusiness automation', 'AI automationprocess automation', 'intelligent automation']},
 export default function AutomationPage() {
   return (
     <div className="min-h-screen bg-white">,
@@ -20,7 +20,7 @@ export default function AutomationPage() {
             Advanced Automation 20o25,
           </h1>,
           <p className="text-xl md:text-2xl opacity-90 mb-8">,
-            Transform your business operations with intelligent automation that learns, adapts;
+            Transform your business operations with intelligent automation that learns, adapts,
             and scales. Reduce costs by 60% while increasing productivity by 30o0%.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,

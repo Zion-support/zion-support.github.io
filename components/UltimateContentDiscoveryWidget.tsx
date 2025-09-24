@@ -9,76 +9,76 @@ const UltimateContentDiscoveryWidget = () => {
   const [isExpanded, setIsExpanded] = useState(false),
   const contentItems = [
     {
-      id: 'ai-20o25-ultimate-automation-revolution';
-      title: 'AI 20o25: The Ultimate Automation Revolution';
-      description: 'Transform your business with 50,0o00% ROI through revolutionary AI automation';
-      category: 'AI Automation';
-      roi: '50,0o00%';
-      savings: '$2.8B+';
-      readingTime: '25 min read';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
-      tags: ['AI', 'Automation', 'ROI', 'Business Transformation'];
-      featured: true};
+      id: 'ai-20o25-ultimate-automation-revolution',
+      title: 'AI 20o25: The Ultimate Automation Revolution',
+      description: 'Transform your business with 50,0o00% ROI through revolutionary AI automation',
+      category: 'AI Automation',
+      roi: '50,0o00%',
+      savings: '$2.8B+',
+      readingTime: '25 min read',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
+      tags: ['AIAutomation', 'ROIBusiness Transformation'],
+      featured: true},
     {
-      id: 'fortune-50o0-ai-automation-success';
-      title: 'Fortune 50o0 AI Automation Success Story';
-      description: 'How TechGlobal Industries achieved $2.8B annual savings with 50,0o00% ROI';
-      category: 'Case Study';
-      roi: '50,0o00%';
-      savings: '$2.8B';
-      readingTime: '22 min read';
-      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story';
-      tags: ['Fortune 50o0', 'Success Story', 'ROI', 'Manufacturing'];
-      featured: true};
+      id: 'fortune-50o0-ai-automation-success',
+      title: 'Fortune 50o0 AI Automation Success Story',
+      description: 'How TechGlobal Industries achieved $2.8B annual savings with 50,0o00% ROI',
+      category: 'Case Study',
+      roi: '50,0o00%',
+      savings: '$2.8B',
+      readingTime: '22 min read',
+      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',
+      tags: ['Fortune 50o0Success Story', 'ROIManufacturing'],
+      featured: true},
     {
-      id: 'ai-20o25-consciousness-revolution';
-      title: 'AI 20o25: The Consciousness Revolution';
-      description: 'Ultimate business breakthrough guide to 50,0o00% ROI through consciousness AI';
-      category: 'AI Revolution';
-      roi: '50,0o00%';
-      savings: '$1.2T';
-      readingTime: '45 min read';
-      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough';
-      tags: ['Consciousness AI', 'Breakthrough', 'ROI', 'Revolution'];
-      featured: true};
+      id: 'ai-20o25-consciousness-revolution',
+      title: 'AI 20o25: The Consciousness Revolution',
+      description: 'Ultimate business breakthrough guide to 50,0o00% ROI through consciousness AI',
+      category: 'AI Revolution',
+      roi: '50,0o00%',
+      savings: '$1.2T',
+      readingTime: '45 min read',
+      url: '/blog/ai-20o25-consciousness-revolution-ultimate-business-breakthrough',
+      tags: ['Consciousness AIBreakthrough', 'ROIRevolution'],
+      featured: true},
     {
-      id: 'ai-20o25-singularity-breakthrough';
-      title: 'AI 20o25: The Singularity Breakthrough';
-      description: 'Ultimate guide to 10o0,0o00% ROI through AI singularity achievement';
-      category: 'AI Revolution';
-      roi: '10o0,0o00%';
-      savings: '$2.5T';
-      readingTime: '50 min read';
-      url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide';
-      tags: ['AI Singularity', 'Breakthrough', 'ROI', 'Revolution'];
-      featured: true};
+      id: 'ai-20o25-singularity-breakthrough',
+      title: 'AI 20o25: The Singularity Breakthrough',
+      description: 'Ultimate guide to 10o0,0o00% ROI through AI singularity achievement',
+      category: 'AI Revolution',
+      roi: '10o0,0o00%',
+      savings: '$2.5T',
+      readingTime: '50 min read',
+      url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide',
+      tags: ['AI SingularityBreakthrough', 'ROIRevolution'],
+      featured: true},
     {
-      id: 'quantum-neural-fusion-revolution';
-      title: 'AI 20o25: The Quantum-Neural Fusion Revolution';
-      description: 'Ultimate breakthrough guide to 25,0o00% ROI through quantum-neural fusion';
-      category: 'Quantum AI';
-      roi: '25,0o00%';
-      savings: '$50o0B+';
-      readingTime: '35 min read';
-      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough';
-      tags: ['Quantum Computing', 'Neural Networks', 'ROI', 'Fusion'];
-      featured: true};
+      id: 'quantum-neural-fusion-revolution',
+      title: 'AI 20o25: The Quantum-Neural Fusion Revolution',
+      description: 'Ultimate breakthrough guide to 25,0o00% ROI through quantum-neural fusion',
+      category: 'Quantum AI',
+      roi: '25,0o00%',
+      savings: '$50o0B+',
+      readingTime: '35 min read',
+      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough',
+      tags: ['Quantum ComputingNeural Networks', 'ROIFusion'],
+      featured: true},
     {
-      id: 'ai-business-intelligence-revolution';
-      title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
-      description: 'Ultimate guide to 18,0o00% ROI through advanced business intelligence';
-      category: 'Business Intelligence';
-      roi: '18,0o00%';
-      savings: '$89.2B+';
-      readingTime: '35 min read';
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
-      tags: ['Business Intelligence', 'Analytics', 'ROI', 'Data'];
+      id: 'ai-business-intelligence-revolution',
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',
+      description: 'Ultimate guide to 18,0o00% ROI through advanced business intelligence',
+      category: 'Business Intelligence',
+      roi: '18,0o00%',
+      savings: '$89.2B+',
+      readingTime: '35 min read',
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      tags: ['Business IntelligenceAnalytics', 'ROIData'],
       featured: true}
   ],
-  const categories = ['all', 'AI Automation', 'Case Study', 'AI Revolution', 'Quantum AI', 'Business Intelligence'],
+  const categories = ['allAI Automation', 'Case StudyAI Revolution', 'Quantum AIBusiness Intelligence'],
   const roiRanges = [
-    { id: 'all', label: 'All ROI' };
-    { id: 'high', label: '50,0o00%+' };
+    { id: 'all', label: 'All ROI' },
+    { id: 'high', label: '50,0o00%+' },
     { id: 'ultra', label: '10o0,0o00%+' }
   ],
   const filteredContent = contentItems.filter(item => {
@@ -87,8 +87,8 @@ const UltimateContentDiscoveryWidget = () => {
                          item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
     const matchesROI = selectedROI === 'all' ||,
-                      (selectedROI === 'high' && parseInt(item.roi.replace(/,/g, ', ')) >= 50o000) ||,
-                      (selectedROI === 'ultra' && parseInt(item.roi.replace(/,/g, ', ')) >= 10o0000),
+                      (selectedROI === 'high' && parseInt(item.roi.replace(/,/g, )) >= 50o000) ||,
+                      (selectedROI === 'ultra' && parseInt(item.roi.replace(/,/g, )) >= 10o0000),
     return matchesSearch && matchesCategory && matchesROI}),
   return (
     <div className="bg-gradient-to-br from-purple-50 to-blue-50 py-16">,
@@ -279,7 +279,7 @@ const UltimateContentDiscoveryWidget = () => {
             </p>,
             <button
               onClick={() => {
-                setSearchTerm(', '),
+                setSearchTerm(),
                 setSelectedCategory('all'),
                 setSelectedROI('all')}}
               className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors">,
@@ -290,7 +290,7 @@ const UltimateContentDiscoveryWidget = () => {
         {/* Call to Action */}
         <div className="text-center mt-12">,
           <div className="bg-gradient-to-r from-purple-60o0 to-blue-60o0 rounded-2xl p-8 text-white">,
-            <h3 className="text-2xl font-bold mb-4">'Can', 't Find What 'You', 're Looking For?</h3>,
+            <h3 className="text-2xl font-bold mb-4">'Cant Find What 'You', 're Looking For?</h3>,
             <p className="text-xl mb-6 opacity-90">,
               Our AI experts can help you discover the perfect content for your specific needs,
             </p>,
@@ -302,5 +302,5 @@ const UltimateContentDiscoveryWidget = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContentDiscoveryWidget;
+    </div>)},
+export default UltimateContentDiscoveryWidget,

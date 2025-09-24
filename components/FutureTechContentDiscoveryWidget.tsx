@@ -5,76 +5,76 @@ export default function FutureTechContentDiscoveryWidget() {
   const [activeCategorysetActiveCategory] = useState('all'),
   const contentCategories ={
     all: {
-      name: 'All Future Tech';
-      icon: '🚀';
-      color: 'from-purple-60o0 to-blue-60o0'};
+      name: 'All Future Tech',
+      icon: '🚀',
+      color: 'from-purple-60o0 to-blue-60o0'},
     singularity: {
-      name: 'Singularity 20o35';
-      icon: '🧠';
-      color: 'from-purple-60o0 to-indigo-60o0'};
+      name: 'Singularity 20o35',
+      icon: '🧠',
+      color: 'from-purple-60o0 to-indigo-60o0'},
     quantum: {
-      name: 'Quantum AI';
-      icon: '⚛️';
-      color: 'from-cyan-60o0 to-emerald-60o0'};
+      name: 'Quantum AI',
+      icon: '⚛️',
+      color: 'from-cyan-60o0 to-emerald-60o0'},
     neural: {
-      name: 'Neural Interfaces';
-      icon: '🔗';
+      name: 'Neural Interfaces',
+      icon: '🔗',
       color: 'from-violet-60o0 to-fuchsia-60o0'}
-  };
+  },
   const futureTechContent = [
     {
-      id: 1;
-      title: 'AI 20o35: The Singularity Breakthrough';
-      description: 'Witness the most profound technological breakthrough in human history as artificial intelligence achieves consciousness parity.';
-      category: 'singularity';
-      url: '/ai-20o35-singularity-breakthrough';
-      image: '🧠';
-      features: ['Consciousness 'Evolution', 'Neural 'Integration', 'Quantum Consciousness'];
-      gradient: 'from-purple-80o0 to-indigo-80o0'};
+      id: 1,
+      title: 'AI 20o35: The Singularity Breakthrough',
+      description: 'Witness the most profound technological breakthrough in human history as artificial intelligence achieves consciousness parity.',
+      category: 'singularity',
+      url: '/ai-20o35-singularity-breakthrough',
+      image: '🧠',
+      features: ['Consciousness 'EvolutionNeural 'Integration', 'Quantum Consciousness'],
+      gradient: 'from-purple-80o0 to-indigo-80o0'},
     {
-      id: 2;
-      title: 'Quantum AI Fusion 20o30';
-      description: 'Experience the convergence of quantum computing and artificial intelligence that will unlock unprecedented computational power.';
-      category: 'quantum';
-      url: '/quantum-ai-fusion-20o30';
-      image: '⚛️';
-      features: ['Quantum 'Supremacy', 'AI 'Evolution', 'Future Computing'];
-      gradient: 'from-cyan-80o0 to-emerald-80o0'};
+      id: 2,
+      title: 'Quantum AI Fusion 20o30',
+      description: 'Experience the convergence of quantum computing and artificial intelligence that will unlock unprecedented computational power.',
+      category: 'quantum',
+      url: '/quantum-ai-fusion-20o30',
+      image: '⚛️',
+      features: ['Quantum 'SupremacyAI 'Evolution', 'Future Computing'],
+      gradient: 'from-cyan-80o0 to-emerald-80o0'},
     {
-      id: 3;
-      title: 'Neural Interface Revolution 20o35';
-      description: 'Breakthrough neural interface technology enabling seamless communication between human consciousness and AI systems.';
-      category: 'neural';
-      url: '/neural-interface-revolution-20o35';
-      image: '🔗';
-      features: ['Neural 'Enhancement', 'Consciousness 'Bridge', 'Direct Thought Control'];
-      gradient: 'from-violet-80o0 to-fuchsia-80o0'};
+      id: 3,
+      title: 'Neural Interface Revolution 20o35',
+      description: 'Breakthrough neural interface technology enabling seamless communication between human consciousness and AI systems.',
+      category: 'neural',
+      url: '/neural-interface-revolution-20o35',
+      image: '🔗',
+      features: ['Neural 'EnhancementConsciousness 'Bridge', 'Direct Thought Control'],
+      gradient: 'from-violet-80o0 to-fuchsia-80o0'},
     {
-      id: 4;
-      title: 'AI 20o26: Advanced Automation Revolution';
-      description: 'Next-generation AI automation systems that will transform every industry and create unprecedented efficiency.';
-      category: 'singularity';
-      url: '/ai-20o26-advanced-automation-revolution';
-      image: '🤖';
-      features: ['Autonomous 'Systems', 'Smart 'Automation', 'Industry Transformation'];
-      gradient: 'from-blue-80o0 to-purple-80o0'};
+      id: 4,
+      title: 'AI 20o26: Advanced Automation Revolution',
+      description: 'Next-generation AI automation systems that will transform every industry and create unprecedented efficiency.',
+      category: 'singularity',
+      url: '/ai-20o26-advanced-automation-revolution',
+      image: '🤖',
+      features: ['Autonomous 'SystemsSmart 'Automation', 'Industry Transformation'],
+      gradient: 'from-blue-80o0 to-purple-80o0'},
     {
-      id: 5;
-      title: 'Quantum Computing Solutions 20o26';
-      description: 'Revolutionary quantum computing solutions that will solve complex problems in seconds that would take years.';
-      category: 'quantum';
-      url: '/quantum-computing-solutions-20o26';
-      image: '⚡';
-      features: ['Quantum 'Processing', 'Complex Problem 'Solving', 'Exponential Speed'];
-      gradient: 'from-teal-80o0 to-cyan-80o0'};
+      id: 5,
+      title: 'Quantum Computing Solutions 20o26',
+      description: 'Revolutionary quantum computing solutions that will solve complex problems in seconds that would take years.',
+      category: 'quantum',
+      url: '/quantum-computing-solutions-20o26',
+      image: '⚡',
+      features: ['Quantum 'ProcessingComplex Problem 'Solving', 'Exponential Speed'],
+      gradient: 'from-teal-80o0 to-cyan-80o0'},
     {
-      id: 6;
-      title: 'Brain-Computer Interface 20o30';
-      description: 'Direct neural interfaces that will enable telepathic communication and enhanced cognitive abilities.';
-      category: 'neural';
-      url: '/brain-computer-interface-20o30';
-      image: '🧬';
-      features: ['Telepathic 'Communication', 'Enhanced 'Cognition', 'Neural Enhancement'];
+      id: 6,
+      title: 'Brain-Computer Interface 20o30',
+      description: 'Direct neural interfaces that will enable telepathic communication and enhanced cognitive abilities.',
+      category: 'neural',
+      url: '/brain-computer-interface-20o30',
+      image: '🧬',
+      features: ['Telepathic 'CommunicationEnhanced 'Cognition', 'Neural Enhancement'],
       gradient: 'from-purple-80o0 to-pink-80o0'}
   ],
   const filteredContent = activeCategory === 'all',

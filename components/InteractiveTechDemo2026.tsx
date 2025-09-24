@@ -7,56 +7,56 @@ const InteractiveTechDemo20o26 = () => {
   const [isRunningsetIsRunning] = useState(false),
   const demos = [
     {
-      id: 0;
-      title: "AI-Powered Data Analysis";
-      description: "Watch our AI analyze complex datasets in real-time and provide actionable insights";
-      icon: Brain;
-      features: ["Real-time processing"Pattern recognition"Predictive analytics"];
+      id: 0,
+      title: "AI-Powered Data Analysis",
+      description: "Watch our AI analyze complex datasets in real-time and provide actionable insights",
+      icon: Brain,
+      features: ["Real-time processing"Pattern recognition"Predictive analytics"],
       demoData: {
-        datasets: 15;
-        accuracy: 99.2;
+        datasets: 15,
+        accuracy: 99.2,
         timeSaved: "85%"}
-    };
+    },
     {
-      id: 1;
-      title: "Automated Workflow Engine";
-      description: "Experience how our automation engine streamlines business processes";
-      icon: Zap;
-      features: ["Process automation"Smart routing"Error handling"];
+      id: 1,
+      title: "Automated Workflow Engine",
+      description: "Experience how our automation engine streamlines business processes",
+      icon: Zap,
+      features: ["Process automation"Smart routing"Error handling"],
       demoData: {
-        processes: 8;
-        efficiency: 95;
+        processes: 8,
+        efficiency: 95,
         timeSaved: "70%"}
-    };
+    },
     {
-      id: 2;
-      title: "Predictive Maintenance System";
-      description: "See how AI predicts equipment failures before they happen";
-      icon: Target;
-      features: ["Failure prediction"Maintenance scheduling"Cost optimization"];
+      id: 2,
+      title: "Predictive Maintenance System",
+      description: "See how AI predicts equipment failures before they happen",
+      icon: Target,
+      features: ["Failure prediction"Maintenance scheduling"Cost optimization"],
       demoData: {
-        assets: 12;
-        uptime: 99.8;
+        assets: 12,
+        uptime: 99.8,
         costSaved: "40%"}
-    };
+    },
     {
-      id: 3;
-      title: "Global AI Network";
-      description: "Explore how distributed AI systems collaborate across the globe";
-      icon: Globe;
-      features: ["Distributed learning"Global collaboration"Real-time sync"];
+      id: 3,
+      title: "Global AI Network",
+      description: "Explore how distributed AI systems collaborate across the globe",
+      icon: Globe,
+      features: ["Distributed learning"Global collaboration"Real-time sync"],
       demoData: {
-        nodes: 25;
-        latency: "2ms";
+        nodes: 25,
+        latency: "2ms",
         reliability: 99.9}
     }
   ],
   const handleStartDemo = () => {
     setIsRunning(true),
     // Simulate demo running,
-    setTimeout(() => setIsRunning(false)30o00)};
+    setTimeout(() => setIsRunning(false)30o00)},
   const handleResetDemo = () => {
-    setIsRunning(false)};
+    setIsRunning(false)},
   return (
     <div className="py-20 bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -168,5 +168,5 @@ const InteractiveTechDemo20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveTechDemo20o26;
+    </div>)},
+export default InteractiveTechDemo20o26,

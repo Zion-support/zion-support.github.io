@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -22,14 +22,14 @@ class PerformanceChecker {
         this.projectRoot = process.cwd()}
 ,
     loadConfig() {
-        const configPath = path.join(__dirname, '..', 'config.json'),
+        const configPath = path.join(__dirname, '..config.json'),
         if (fs.existsSync(configPath)) {
             return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
         return {
-            performanceThreshold: 80;
-            bundleSizeLimit: '2MB';
-            memoryLimit: '512MB';
-            cpuLimit: 80};
+            performanceThreshold: 80,
+            bundleSizeLimit: '2MB',
+            memoryLimit: '512MB',
+            cpuLimit: 80},
     }
 ,
     ensureLogDirectory() {
@@ -45,7 +45,7 @@ class PerformanceChecker {
 ,
             // Get bundle size information,
             const bundleStats = execSync('npx next-bundle-analyzer --json', {
-                encoding: 'utf8';
+                encoding: 'utf8',
                 stdio: 'pipe'}),
             const stats = JSON.parse(bundleStats),
             const totalSize = stats.totalSize,
@@ -102,17 +102,17 @@ class PerformanceChecker {
         try {
             this.log('Generating performance report...'),
             const report ={
-                timestamp: new Date().toISOString();
-                bundleSize: await this.checkBundleSize();
-                buildTime: await this.checkBuildTime();
-                testPerformance: await this.checkTestPerformance();
-                memoryUsage: await this.checkMemoryUsage();
+                timestamp: new Date().toISOString(),
+                bundleSize: await this.checkBundleSize(),
+                buildTime: await this.checkBuildTime(),
+                testPerformance: await this.checkTestPerformance(),
+                memoryUsage: await this.checkMemoryUsage(),
                 thresholds: {
-                    bundleSizeLimit: this.config.bundleSizeLimit;
-                    buildTimeLimit: '60s';
-                    testTimeLimit: '30s';
+                    bundleSizeLimit: this.config.bundleSizeLimit,
+                    buildTimeLimit: '60s',
+                    testTimeLimit: '30s',
                     memoryLimit: this.config.memoryLimit}
-            };
+            },
 }
     }
 }

@@ -3,10 +3,10 @@ import Link from 'next/link',
 const HeroSection: React.FC = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0),
   const animatedTexts = [
-    "Autonomous Innovation Hub";
-    "AI-Powered Solutions";
-    "Future-Ready Technology";
-    "Digital Transformation";
+    "Autonomous Innovation Hub",
+    "AI-Powered Solutions",
+    "Future-Ready Technology",
+    "Digital Transformation",
     "Smart Automation"],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -62,8 +62,8 @@ const HeroSection: React.FC = () => {
         {/* Stats Section */}
         <div className="grid grid-cols-1 md: grid-cols-3 gap-8 max-w-4xl mx-auto">,
           {[
-            { number: "50o0+", label: "Projects Delivered", icon: "🚀" };
-            { number: "50+", label: "Enterprise Clients", icon: "🏢" };
+            { number: "50o0+", label: "Projects Delivered", icon: "🚀" },
+            { number: "50+", label: "Enterprise Clients", icon: "🏢" },
             { number: "99.9%", label: "Uptime Guarantee", icon: "⚡" }
           ].map((stat, index) => (
             <div
@@ -92,24 +92,24 @@ const HeroSection: React.FC = () => {
       {/* Floating Tech Icons */}
       <div className="absolute inset-0 pointer-events-none">,
         {[
-          { icon: "🤖", x: "10%", y: "20%", delay: "0s" };
-          { icon: "⚡", x: "85%", y: "15%", delay: "1s" };
-          { icon: "🔮", x: "15%", y: "80%", delay: "2s" };
-          { icon: "🚀", x: "80%", y: "75%", delay: "3s" };
-          { icon: "💻", x: "50%", y: "10%", delay: "4s" };
+          { icon: "🤖", x: "10%", y: "20%", delay: "0s" },
+          { icon: "⚡", x: "85%", y: "15%", delay: "1s" },
+          { icon: "🔮", x: "15%", y: "80%", delay: "2s" },
+          { icon: "🚀", x: "80%", y: "75%", delay: "3s" },
+          { icon: "💻", x: "50%", y: "10%", delay: "4s" },
           { icon: "🌐", x: "50%", y: "90%", delay: "5s" }
         ].map((item, index) => (
           <div
             key={index}
             className="absolute text-2xl md: text-3xl opacity-20 animate-float",
             style={{
-              left: item.x;
-              top: item.y;
-              animationDelay: item.delay;
+              left: item.x,
+              top: item.y,
+              animationDelay: item.delay,
               animationDuration: '6s'}}
           >,
             {item.icon}
           </div>))}
       </div>,
-    </section>)};
-export default HeroSection;
+    </section>)},
+export default HeroSection,

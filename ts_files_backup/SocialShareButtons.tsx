@@ -4,15 +4,15 @@ interface SocialShareButtonsProps {
   description: string}
 ,
 export default function SocialShareButtons({
-  urltitledescription;
+  urltitledescription,
 }: SocialShareButtonsProps) {
   const shareUrl =,
     typeof window !== 'undefined' ? window.location.origin + url : '',
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}`;
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`;
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`;
-  };
+    twitter: `https://twitter.com/intent/tweet?text=${encodeURIComponent(title)}&url=${encodeURIComponent(shareUrl)}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(shareUrl)}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(shareUrl)}`,
+  },
   return (
     <section className='py-8 bg-white border-t border-gray-20o0'>,
       <div className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8'>,

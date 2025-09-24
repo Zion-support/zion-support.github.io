@@ -60,5 +60,5 @@ const UltimateAIRevolution20o25Banner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAIRevolution20o25Banner;
+    </div>)},
+export default UltimateAIRevolution20o25Banner,

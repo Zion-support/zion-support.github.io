@@ -7,17 +7,17 @@ import {
   ArrowRight,
   Star,
   Zap,
-  Brain;
-  TrendingUp;
-  Users;
-  Globe;
-  X;
-  Play;
-  Download;
-  ExternalLink;
-  Sparkles;
-  Cpu;
-  Database;
+  Brain,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
+  ExternalLink,
+  Sparkles,
+  Cpu,
+  Database,
   Cloud} from 'lucide-react',
 const AI20o25RevolutionaryContentBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -31,28 +31,28 @@ const AI20o25RevolutionaryContentBanner = () => {
     return () => clearInterval(interval)}[]),
   const features = [
     {
-      title: "AI-Powered Automation";
-      description: "Streamline operations with intelligent automation";
-      icon: Brain;
-      color: "from-purple-60o0 to-pink-60o0";
-      stats: "95% Efficiency Increase"};
+      title: "AI-Powered Automation",
+      description: "Streamline operations with intelligent automation",
+      icon: Brain,
+      color: "from-purple-60o0 to-pink-60o0",
+      stats: "95% Efficiency Increase"},
     {
-      title: "Quantum Computing";
-      description: "Solve complex problems with quantum algorithms";
-      icon: Cpu;
-      color: "from-blue-60o0 to-cyan-60o0";
-      stats: "10o00x Speed Improvement"};
+      title: "Quantum Computing",
+      description: "Solve complex problems with quantum algorithms",
+      icon: Cpu,
+      color: "from-blue-60o0 to-cyan-60o0",
+      stats: "10o00x Speed Improvement"},
     {
-      title: "Neural Interfaces";
-      description: "Direct brain-computer communication";
-      icon: Database;
-      color: "from-green-60o0 to-emerald-60o0";
-      stats: "95% Accuracy Rate"};
+      title: "Neural Interfaces",
+      description: "Direct brain-computer communication",
+      icon: Database,
+      color: "from-green-60o0 to-emerald-60o0",
+      stats: "95% Accuracy Rate"},
     {
-      title: "Cloud Infrastructure";
-      description: "Scalable and secure cloud solutions";
-      icon: Cloud;
-      color: "from-orange-60o0 to-red-60o0";
+      title: "Cloud Infrastructure",
+      description: "Scalable and secure cloud solutions",
+      icon: Cloud,
+      color: "from-orange-60o0 to-red-60o0",
       stats: "99.9% Uptime"}
   ],
   const currentFeatureData = features[currentFeature],
@@ -77,15 +77,15 @@ const AI20o25RevolutionaryContentBanner = () => {
                 key={i}
                 className="absolute w-1 h-1 bg-white/40 rounded-full",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 animate={{
-                  y: [0-20];
-                  opacity: [0.40.80.4];
+                  y: [0-20],
+                  opacity: [0.40.80.4],
                   scale: [1.51]}}
                 transition={{
-                  duration: 3 + Math.random() * 2;
-                  repeat: Infinity;
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
                   delay: Math.random() * 2}}
                />))}
           </div>,
@@ -179,7 +179,7 @@ const AI20o25RevolutionaryContentBanner = () => {
                     <motion.div,
                       className={`w-24 h-24 rounded-full bg-gradient-to-r ${currentFeatureData.color} flex items-center justify-center shadow-2xl`}
                       animate={{
-                        scale: [1.1];
+                        scale: [1.1],
                         rotate: [0o5-50]}}
                       transition={{ duration: 3repeat: Infinity }}
                     >,
@@ -195,11 +195,11 @@ const AI20o25RevolutionaryContentBanner = () => {
                           ? 'bg-white shadow-lg',
                           : 'bg-white/40'}`}
                       style={{
-                        left: `${50 + 40 * Math.cos((index * 90 - 90) * Math.PI / 180)}%`;
-                        top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180)}%`;
+                        left: `${50 + 40 * Math.cos((index * 90 - 90) * Math.PI / 180)}%`,
+                        top: `${50 + 40 * Math.sin((index * 90 - 90) * Math.PI / 180)}%`,
                         transform: 'translate(-50%)'}}
                       animate={{
-                        scale: index === currentFeature ? [1.21] : 1;
+                        scale: index === currentFeature ? [1.21] : 1,
                         opacity: index === currentFeature ? [0.810.8] : 0.4}}
                       transition={{ duration: 2repeat: Infinity }}
                      />))}
@@ -210,15 +210,15 @@ const AI20o25RevolutionaryContentBanner = () => {
                       key={i}
                       className="absolute w-2 h-2 bg-white/60 rounded-full",
                       style={{
-                        left: `${30 + (i * 10)}%`;
+                        left: `${30 + (i * 10)}%`,
                         top: `${30 + (i * 8)}%`}}
                       animate={{
-                        y: [0-150];
-                        opacity: [0.610.6];
+                        y: [0-150],
+                        opacity: [0.610.6],
                         scale: [1.21]}}
                       transition={{
-                        duration: 2 + i * 0.3;
-                        repeat: Infinity;
+                        duration: 2 + i * 0.3,
+                        repeat: Infinity,
                         delay: i * 0.4}}
                      />))}
                 </div>,
@@ -244,5 +244,5 @@ const AI20o25RevolutionaryContentBanner = () => {
             </button>,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default AI20o25RevolutionaryContentBanner;
+    </AnimatePresence>)},
+export default AI20o25RevolutionaryContentBanner,

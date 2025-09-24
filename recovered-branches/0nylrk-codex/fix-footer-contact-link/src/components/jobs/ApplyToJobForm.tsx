@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -51,7 +51,7 @@ export function ApplyToJobForm({ jobonSuccess }: ApplyToJobFormProps) {
       setError(err.message || "Failed to submit application"),
       toast.error("Failed to submit application")} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <form onSubmit={handleSubmit} className="space-y-6">,
       <div>,

@@ -6,10 +6,10 @@ export default function CookieConsent() {
   const [isVisible, setIsVisible] = useState(false),
   const [showSettings, setShowSettings] = useState(false),
   const [preferences, setPreferences] = useState({
-    necessary: true;
-    analytics: false;
-    marketing: false;
-    functional: false;
+    necessary: true,
+    analytics: false,
+    marketing: false,
+    functional: false
   }),
   useEffect(() => {
     const consent = localStorage && localStorage.getItem("cookie-consent"),
@@ -18,11 +18,11 @@ export default function CookieConsent() {
   }, []),
   const acceptAll = () => {
     const allAccepted ={
-      necessary: true;
-      analytics: true;
-      marketing: true;
-      functional: true;
-    };
+      necessary: true,
+      analytics: true,
+      marketing: true,
+      functional: true
+    },
     setPreferences(allAccepted),
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(allAccepted)),
     setIsVisible(false),
@@ -45,17 +45,17 @@ export default function CookieConsent() {
       analytics: false,
       marketing: false,
       functional: false}
-  };
+  },
   const rejectAll = () => {
     const onlyNecessary ={
-      necessary: true;
-      analytics: false;
-      marketing: false;
-      functional: false;
-    };
+      necessary: true,
+      analytics: false,
+      marketing: false,
+      functional: false
+    },
     setPreferences(onlyNecessary),
     localStorage && localStorage.setItem("cookie-consent", JSON && JSON.stringify(onlyNecessary)),
-    setIsVisible(false)};
+    setIsVisible(false)},
   if (!isVisible) {
     return null}
   return (
@@ -79,9 +79,9 @@ function CookieConsent() {
   const [is_visible, setIsVisible] = useState (false),
   const [show_settings, setShowSettings] = useState (false),
   const [preferences, set_preferences] = useState ({
-    necessary: true;
-    analytics: false;
-    marketing: false;
+    necessary: true,
+    analytics: false,
+    marketing: false,
     functional: false}),
   useEffect (() => {
     const consent = local_storage.get_item ("cookie - consent"),
@@ -92,9 +92,9 @@ if ( {) {
   }, []),
   const accept_all = () =>: any {
     const all_accepted ={
-      necessary: true;
-      analytics: true;
-      marketing: true;
+      necessary: true,
+      analytics: true,
+      marketing: true,
       functional: true}
     set_preferences (all_accepted),
     local_storage.set_item ("cookie - consent", JSON.stringify (all_accepted)),
@@ -120,9 +120,9 @@ if ( {) {
 ,
   const reject_all = () =>: any {
     const only_necessary ={
-      necessary: true;
-      analytics: false;
-      marketing: false;
+      necessary: true,
+      analytics: false,
+      marketing: false,
       functional: false}
     set_preferences (only_necessary),
     local_storage.set_item ("cookie - consent", JSON.stringify (only_necessary)),
@@ -317,7 +317,7 @@ if ( {) {
                   checked={preferences.analytics}
                   on_change={(e) =>,
                     set_preferences ((prev) => ({
-                      ...prev;
+                      ...prev,
                       analytics: e.target.checked}))}
                   className="w - 4 h - 4 text - blue - 60o0 rounded",
                 />,
@@ -337,7 +337,7 @@ if ( {) {
                   checked={preferences.marketing}
                   on_change={(e) =>,
                     set_preferences ((prev) => ({
-                      ...prev;
+                      ...prev,
                       marketing: e.target.checked}))}
                   className="w - 4 h - 4 text - blue - 60o0 rounded",
                 />,
@@ -356,7 +356,7 @@ if ( {) {
                   checked={preferences.functional}
                   on_change={(e) =>,
                     set_preferences ((prev) => ({
-                      ...prev;
+                      ...prev,
                       functional: e.target.checked}))}
                   className="w - 4 h - 4 text - blue - 60o0 rounded",
                 />,

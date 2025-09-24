@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function runGit(args, options ={}) {
@@ -37,45 +37,45 @@ async function postLinkedInUpdate() {
   const canonicalUrl = "https: //ziontechgroup.com",
   if (!accessToken || !authorUrn) {
     log("LinkedIn env missing, skipping LinkedIn post."),
-    return { ok: false, skipped: true, platform: "linkedin" };
+    return { ok: false, skipped: true, platform: "linkedin" },
   }
 ,
   const body ={
-    author: authorUrn;
-    lifecycleState: "PUBLISHED";
+    author: authorUrn,
+    lifecycleState: "PUBLISHED",
     specificContent: {
       "com.linkedin.ugc.ShareContent": {
         shareCommentary: {
-          text: `🚀 Redundancy Sync: Marketing automation running locally. Explore updates → ${canonicalUrl}`};
-        shareMediaCategory: "ARTICLE";
+          text: `🚀 Redundancy Sync: Marketing automation running locally. Explore updates → ${canonicalUrl}`},
+        shareMediaCategory: "ARTICLE",
         media: [
           {
-            status: "READY";
-            originalUrl: canonicalUrl;
+            status: "READY",
+            originalUrl: canonicalUrl,
             title: { text: "Zion Tech Group" }
           }
         ]}
-    };
+    },
     visibility: { "com.linkedin.ugc.MemberNetworkVisibility": "PUBLIC" }
-  };
+  },
   try {
     const res = await fetch("https://api.linkedin.com/v2/ugcPosts", {
-      method: "POST";
+      method: "POST",
       headers: {
-        "Authorization": `Bearer ${accessToken}`;
-        "X-Restli-Protocol-Version": "2.0.0";
-        "Content-Type": "application/json"};
+        "Authorization": `Bearer ${accessToken}`,
+        "X-Restli-Protocol-Version": "2.0.0",
+        "Content-Type": "application/json"},
       body: JSON.stringify(body)}),
     if (!res.ok) {
       const text = await res.text(),
       log(`LinkedIn post failed (${res.status}): ${text}`),
-      return { ok: false, platform: "linkedin", status: res.status };
+      return { ok: false, platform: "linkedin", status: res.status },
     }
     log("LinkedIn post published via redundancy."),
-    return { ok: true, platform: "linkedin" };
+    return { ok: true, platform: "linkedin" },
   } catch (err) {
     log(`LinkedIn post error: ${String(err)}`),
-    return { ok: false, platform: "linkedin", error: String(err) };
+    return { ok: false, platform: "linkedin", error: String(err) },
   }
 }
 ,
@@ -85,48 +85,48 @@ async function postInstagramUpdate() {
   const canonicalUrl = "https: //ziontechgroup.com",
   if (!igUserId || !igAccessToken) {
     log("Instagram env missing, skipping Instagram post."),
-    return { ok: false, skipped: true, platform: "instagram" };
+    return { ok: false, skipped: true, platform: "instagram" },
   }
 ,
   const caption = `🚀 Redundancy Sync: Marketing automation running locally. Explore: ${canonicalUrl}`,
   try {
     const createRes = await fetch(`https: //graph.facebook.com/v19.0/${encodeURIComponent(igUserId)}/media?access_token=${encodeURIComponent(igAccessToken)}`, {
-      method: "POST";
-      headers: { "Content-Type": "application/x-www-form-urlencoded" };
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({ caption })}),
     const createJson = await createRes.json(),
     if (!createRes.ok || !createJson.id) {
       log(`Instagram media create failed (${createRes.status}): ${JSON.stringify(createJson)}`),
-      return { ok: false, platform: "instagram", status: createRes.status };
+      return { ok: false, platform: "instagram", status: createRes.status },
     }
 ,
     const publishRes = await fetch(`https: //graph.facebook.com/v19.0/${encodeURIComponent(igUserId)}/media_publish?access_token=${encodeURIComponent(igAccessToken)}`, {
-      method: "POST";
-      headers: { "Content-Type": "application/x-www-form-urlencoded" };
+      method: "POST",
+      headers: { "Content-Type": "application/x-www-form-urlencoded" },
       body: new URLSearchParams({ creation_id: createJson.id })}),
     const publishJson = await publishRes.json(),
     if (!publishRes.ok) {
       log(`Instagram publish failed (${publishRes.status}): ${JSON.stringify(publishJson)}`),
-      return { ok: false, platform: "instagram", status: publishRes.status };
+      return { ok: false, platform: "instagram", status: publishRes.status },
     }
     log("Instagram post published via redundancy."),
-    return { ok: true, platform: "instagram" };
+    return { ok: true, platform: "instagram" },
   } catch (err) {
     log(`Instagram post error: ${String(err)}`),
-    return { ok: false, platform: "instagram", error: String(err) };
+    return { ok: false, platform: "instagram", error: String(err) },
   }
 }
 ,
 async function generateMarketingReport() {
   const timestamp = nowIso(),
   const report ={
-    timestamp;
-    redundancy: true;
-    source: "pm2-redundancy";
+    timestamp,
+    redundancy: true,
+    source: "pm2-redundancy",
     marketing: {
-      linkedin: await postLinkedInUpdate();
+      linkedin: await postLinkedInUpdate(),
       instagram: await postInstagramUpdate()}
-  };
+  },
   const reportPath = path.join(process.cwd(), "marketing-sync-redundancy-report.md"),
   const reportContent = `# Marketing Sync Redundancy Report,
 Generated: ${timestamp}
@@ -183,4 +183,4 @@ async function main() {
 if (require.main === module) {
   main()}
 ,
-module.exports ={ main, postLinkedInUpdate, postInstagramUpdate, generateMarketingReport };
+module.exports ={ main, postLinkedInUpdate, postInstagramUpdate, generateMarketingReport },

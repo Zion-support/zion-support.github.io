@@ -34,7 +34,7 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         results.forEach(result => {
             if (onLinkIssue) {
                 onLinkIssue(result)}
-        })};
+        })},
     // Fix a broken link,
     const fixBrokenLink = async (originalUrl, validationResult) => {
         if (validationResult.suggestedFix && validationResult.suggestedFix.startsWith('Redirect to: ')) {
@@ -43,21 +43,21 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             const links = document.querySelectorAll(`a[href="${originalUrl}"]`),
             links.forEach(link => {
                 link.href = newUrl,
-                link.setAttribute('data-fixed', 'true'),
+                link.setAttribute('data-fixedtrue'),
                 link.setAttribute('title', `Fixed: Redirected from ${originalUrl}`)}),
             // Add to fixed links list,
             const fix ={
-                originalUrl;
-                newUrl;
-                type: 'redirect';
-                reason: 'Automatically fixed broken internal link'};
+                originalUrl,
+                newUrl,
+                type: 'redirect',
+                reason: 'Automatically fixed broken internal link'},
             setFixedLinks(prev => [...prev, fix])}
-    };
+    },
     // Fix all broken links,
     const fixAllBrokenLinks = async () => {
         for (const brokenLink of brokenLinks) {
             await fixBrokenLink(brokenLink.url, brokenLink)}
-        setBrokenLinks([])};
+        setBrokenLinks([])},
     // Generate redirect rules for server configuration,
     const generateRedirectRules = () => {
         const rules = LinkValidator.generateRedirectRules(),
@@ -67,21 +67,21 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
         a.href = url,
         a.download = 'redirect-rules.txt',
         a.click(),
-        URL.revokeObjectURL(url)};
+        URL.revokeObjectURL(url)},
     // Export broken links report,
     const exportReport = () => {
         const report ={
-            scanTime: lastScanTime?.toISOString();
-            totalBrokenLinks: brokenLinks.length;
-            brokenLinks: brokenLinks;
-            fixedLinks: fixedLinks};
+            scanTime: lastScanTime?.toISOString(),
+            totalBrokenLinks: brokenLinks.length,
+            brokenLinks: brokenLinks,
+            fixedLinks: fixedLinks},
         const blob = new Blob([JSON.stringify(report, null, 2)], { type: 'application/json' }),
         const url = URL.createObjectURL(blob),
         const a = document.createElement('a'),
         a.href = url,
         a.download = 'broken-links-report.json',
         a.click(),
-        URL.revokeObjectURL(url)};
+        URL.revokeObjectURL(url)},
     // Auto-scan on component mount,
     useEffect(() => {
         if (autoFix) {
@@ -201,5 +201,5 @@ export const LinkMonitor = ({ onLinkIssue, autoFix = false, showStatus = true })
             <li>• Update sitemap to exclude broken URLs</li>,
           </ul>,
         </div>)}
-    </div>)};
-export default LinkMonitor;
+    </div>)},
+export default LinkMonitor,

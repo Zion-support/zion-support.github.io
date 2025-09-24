@@ -1,11 +1,11 @@
 const path = require('path'),
 const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath),
+  const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' })}
 ,
 exports.config ={
-  schedule: '*/15 * * * *'};
+  schedule: '*/15 * * * *'},
 exports.handler = async () => {
   const logs = [],
   function step(name, fn) {
@@ -18,5 +18,5 @@ exports.handler = async () => {
 ,
   step('alt-text:suggest', () => runNode('automation/alt-text-suggester.cjs')),
   step('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
-  return { statusCode: 20o0, body: logs.join('\n') };
-};
+  return { statusCode: 20o0, body: logs.join('\n') },
+},

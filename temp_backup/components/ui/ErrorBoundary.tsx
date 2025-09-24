@@ -1,14 +1,14 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react',
 import { motion } from 'framer-motion',
 import {
-  AlertTriangle;
-  RefreshCw;
-  Home;
-  ArrowLeft;
-  Bug;
-  FileText;
-  Phone;
-  Mail;
+  AlertTriangle,
+  RefreshCw,
+  Home,
+  ArrowLeft,
+  Bug,
+  FileText,
+  Phone,
+  Mail,
 } from 'lucide-react',
 interface Props {
   children: ReactNode,
@@ -25,24 +25,24 @@ class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props),
     this.state = {
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: '';
-    };
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    },
   }
 ,
   static getDerivedStateFromError(error: Error): Partial<State> {
     return {
-      hasError: true;
-      error;
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`;
-    };
+      hasError: true,
+      error,
+      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`,
+    },
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      errorInfo;
+      errorInfo
     }),
     // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {
@@ -61,50 +61,50 @@ class ErrorBoundary extends Component<Props State> {
     try {
       // You can integrate with services like Sentry, LogRocket, etc.,
       const errorData = {
-        errorId: this.state.errorId;
-        message: error.message;
-        stack: error.stack;
-        componentStack: errorInfo.componentStack;
-        timestamp: new Date().toISOString();
-        url: window.location.href;
-        userAgent: navigator.userAgent;
+        errorId: this.state.errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        url: window.location.href,
+        userAgent: navigator.userAgent,
         viewport: {
-          width: window.innerWidth;
-          height: window.innerHeight;
-        };
-      };
+          width: window.innerWidth,
+          height: window.innerHeight
+        },
+      },
       // Example: Send to your error logging service,
       // fetch('/api/error-log', {
-      //   method: 'POST';
-      //   headers: { 'Content-Type': 'application/json' };
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorData),
       // }),
       // // console.log('Error logged:', errorData)} catch (logError) {
       console.warn('Failed to log error:', logError)}
-  };
+  },
   private handleRetry = () => {
     this.setState({
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: '';
-    })};
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''
+    })},
   private handleGoHome = () => {
-    window.location.href = '/'};
+    window.location.href = '/'},
   private handleGoBack = () => {
-    window.history.back()};
+    window.history.back()},
   private handleReportError = () => {
     const errorData = {
-      errorId: this.state.errorId;
-      message: this.state.error?.message;
-      stack: this.state.error?.stack;
-      componentStack: this.state.errorInfo?.componentStack;
-      url: window.location.href;
-      timestamp: new Date().toISOString();
-    };
+      errorId: this.state.errorId,
+      message: this.state.error?.message,
+      stack: this.state.error?.stack,
+      componentStack: this.state.errorInfo?.componentStack,
+      url: window.location.href,
+      timestamp: new Date().toISOString()
+    },
     const emailBody = `Error Report\n\nError ID: ${errorData.errorId}\nMessage: ${errorData.message}\nURL: ${errorData.url}\nTimestamp: ${errorData.timestamp}\n\nStack Trace: \n${errorData.stack}\n\nComponent Stack: \n${errorData.componentStack}`,
     const mailtoLink = `mailto: kleber@ziontechgroup.com?subject=Error Report - ${errorData.errorId}&body=${encodeURIComponent(emailBody)}`,
-    window.open(mailtoLink)};
+    window.open(mailtoLink)},
   render() {
     if (this.state.hasError) {
       // Custom fallback UI,
@@ -239,4 +239,4 @@ class ErrorBoundary extends Component<Props State> {
     return this.props.children}
 }
 ,
-export default ErrorBoundary;
+export default ErrorBoundary,

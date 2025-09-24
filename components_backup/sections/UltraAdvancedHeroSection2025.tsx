@@ -2,29 +2,26 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  ArrowRight, Star, Zap, Brain, Rocket, Shield;
-  Atom, Cpu, Cloud, Target, Users, Award;
-  CheckCircle, TrendingUp, Globe, Sparkles;
-  Phone, Mail, MapPin, ChevronDown;
+  ArrowRight, Star, Zap, Brain, Rocket, Shield,
+  Atom, Cpu, Cloud, Target, Users, Award,
+  CheckCircle, TrendingUp, Globe, Sparkles,
+  Phone, Mail, MapPin, ChevronDown,
   ArrowUpRight, Lightbulb, Code, Database, Server} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6"  />, color: 'text-purple-40o0' };
-  { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6"  />, color: 'text-green-40o0' };
-  { label: 'Micro SAAS', value: '10o0+', icon: <Rocket className="w-6 h-6"  />, color: 'text-orange-40o0' };
+  { label: 'AI Services', value: '50+', icon: <Brain className="w-6 h-6"  />, color: 'text-purple-40o0' },
+  { label: 'Quantum Solutions', value: '25+', icon: <Atom className="w-6 h-6"  />, color: 'text-green-40o0' },
+  { label: 'Micro SAAS', value: '10o0+', icon: <Rocket className="w-6 h-6"  />, color: 'text-orange-40o0' },
   { label: 'Success Rate', value: '99.9%', icon: <Award className="w-6 h-6"  />, color: 'text-cyan-40o0' }
 ],
 const keyFeatures = [
-  'Revolutionary AI Consciousness & Emotional Intelligence';
-  'Quantum Computing & Space Resource Mining';
-  'Zero Trust Security & Edge Computing';
-  'AI-Powered Business Automation & Analytics';
-  'Healthcare AI & Manufacturing 4.0 Solutions';
-  'Creative AI & Educational Technology Platforms'],
+  'Revolutionary AI Consciousness & Emotional IntelligenceQuantum Computing & Space Resource Mining',
+  'Zero Trust Security & Edge ComputingAI-Powered Business Automation & Analytics',
+  'Healthcare AI & Manufacturing 4.0 SolutionsCreative AI & Educational Technology Platforms'],
 const UltraAdvancedHeroSection20o25: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVisible, setIsVisible] = useState(false),
@@ -35,7 +32,7 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % keyFeatures.length)}, 30o00),
     return () => clearInterval(interval)}, [shouldReduceMotion]),
-  const fadeInUp = shouldReduceMotion ? {} : { initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8 } };
+  const fadeInUp = shouldReduceMotion ? {} : { initial: { opacity: 0, y: 30 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8 } },
   const fadeInUpDelayed = (delay: number) => (shouldReduceMotion ? {} : { initial: { opacity: 0, y: 20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.8, delay } }),
   const simpleFadeIn = (delay = 0) => (shouldReduceMotion ? {} : { initial: { opacity: 0 }, animate: { opacity: 1 }, transition: { duration: 1, delay } }),
   return (
@@ -55,9 +52,9 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
             className="w-full h-full",
             style={{
               backgroundImage: `,
-                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+                linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px),
-              `;
+              `,
               backgroundSize: '10o0px 10o0px'}}
            />,
         </div>,
@@ -214,5 +211,5 @@ const UltraAdvancedHeroSection20o25: React.FC = () => {
             </motion.a>,
           </>)}
       </div>,
-    </section>)};
-export default UltraAdvancedHeroSection20o25;
+    </section>)},
+export default UltraAdvancedHeroSection20o25,

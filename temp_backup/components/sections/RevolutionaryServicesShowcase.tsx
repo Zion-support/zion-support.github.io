@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { revolutionaryMicroSaasServices } from '../../data/revolutionary-micro-saas-services',
 import RevolutionaryServiceCard from '../ui/RevolutionaryServiceCard',
@@ -9,37 +9,37 @@ interface RevolutionaryServicesShowcaseProps {
   category?: string}
 ,
 const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps> = ({
-  title = "Revolutionary Micro SAAS Services";
-  subtitle = "Experience the future of business automation with cutting-edge AI, quantum computing, and autonomous technologies";
-  maxServices = 12;
+  title = "Revolutionary Micro SAAS Services",
+  subtitle = "Experience the future of business automation with cutting-edge AI, quantum computing, and autonomous technologies",
+  maxServices = 12,
   category}) => {
   const filteredServices = category,
     ? revolutionaryMicroSaasServices.filter(service => service.category.includes(category)),
     : revolutionaryMicroSaasServices,
   const displayedServices = filteredServices.slice(0, maxServices),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const sectionVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         ease: "easeOut"}
     }
-  };
+  },
   const getVariantForService = (index: number): 'default' | 'holographic' | 'quantum' | 'neural' | 'cyberpunk' => {
     const variants: Array<'default' | 'holographic' | 'quantum' | 'neural' | 'cyberpunk'> = [
-      'quantum', 'holographic', 'neural', 'cyberpunk', 'default'],
-    return variants[index % variants.length]};
+      'quantumholographic', 'neuralcyberpunk', 'default'],
+    return variants[index % variants.length]},
   return (
     <section className="relative py-20 overflow-hidden">,
       {/* Background effects */}
@@ -49,23 +49,23 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
         <motion.div,
           className="absolute top-20 right-20 w-64 h-64 border border-cyan-40o0/20 rounded-full",
           animate={{
-            scale: [1, 1.2, 1];
-            opacity: [0.1, 0.3, 0.1];
+            scale: [1, 1.2, 1],
+            opacity: [0.1, 0.3, 0.1],
             rotate: [0, 180, 360]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 left-20 w-48 h-48 border border-purple-40o0/20 rotate-45",
           animate={{
-            scale: [1, 1.3, 1];
-            opacity: [0.1, 0.2, 0.1];
+            scale: [1, 1.3, 1],
+            opacity: [0.1, 0.2, 0.1],
             rotate: [45, 225, 40o5]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
          />,
       </div>,
@@ -187,5 +187,5 @@ const RevolutionaryServicesShowcase: React.FC<RevolutionaryServicesShowcaseProps
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default RevolutionaryServicesShowcase;
+    </section>)},
+export default RevolutionaryServicesShowcase,

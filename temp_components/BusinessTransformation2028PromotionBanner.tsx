@@ -8,11 +8,11 @@ import {
   Building2,
   Brain,
   Zap,
-  Target;
-  X;
-  PlayCircle;
-  Users;
-  Award;
+  Target,
+  X,
+  PlayCircle,
+  Users,
+  Award,
   BarChart3} from 'lucide-react',
 const BusinessTransformation20o28PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -26,30 +26,30 @@ const BusinessTransformation20o28PromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const metrics = [
     {
-      icon: TrendingUp;
-      value: '50o0%+';
-      label: 'Average ROI';
-      color: 'text-green-40o0'};
+      icon: TrendingUp,
+      value: '50o0%+',
+      label: 'Average ROI',
+      color: 'text-green-40o0'},
     {
-      icon: DollarSign;
-      value: '$2.5M';
-      label: 'Average Savings';
-      color: 'text-blue-40o0'};
+      icon: DollarSign,
+      value: '$2.5M',
+      label: 'Average Savings',
+      color: 'text-blue-40o0'},
     {
-      icon: BarChart3;
-      value: '30o0%';
-      label: 'Efficiency Gain';
-      color: 'text-purple-40o0'};
+      icon: BarChart3,
+      value: '30o0%',
+      label: 'Efficiency Gain',
+      color: 'text-purple-40o0'},
     {
-      icon: Users;
-      value: '10K+';
-      label: 'Businesses Transformed';
+      icon: Users,
+      value: '10K+',
+      label: 'Businesses Transformed',
       color: 'text-cyan-40o0'}
   ],
   const solutions = [
-    { icon: Brainlabel: 'AI Automation' };
-    { icon: Zaplabel: 'Quantum Optimization' };
-    { icon: Targetlabel: 'Neural Business' };
+    { icon: Brainlabel: 'AI Automation' },
+    { icon: Zaplabel: 'Quantum Optimization' },
+    { icon: Targetlabel: 'Neural Business' },
     { icon: Building2label: 'Future Operations' }
   ],
   if (isDismissed) return null,
@@ -145,5 +145,5 @@ const BusinessTransformation20o28PromotionBanner = () => {
           {/* Bottom Accent */}
           <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-blue-50o0 via-purple-50o0 to-cyan-50o0"></div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default BusinessTransformation20o28PromotionBanner;
+    </AnimatePresence>)},
+export default BusinessTransformation20o28PromotionBanner,

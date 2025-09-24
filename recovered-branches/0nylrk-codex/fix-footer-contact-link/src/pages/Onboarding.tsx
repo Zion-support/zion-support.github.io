@@ -16,13 +16,13 @@ export default function Onboarding() {
   const [currentStep, setCurrentStep] = useState(0),
   const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
   const navigate = useNavigate(),
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
 export default function Onboarding() {
-  const { user, updateProfile, isLoading } = useAuth();
-  const [currentStep, setCurrentStep] = useState(0);
-  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null);
-  const navigate = useNavigate();
+  const { user, updateProfile, isLoading } = useAuth(),
+  const [currentStep, setCurrentStep] = useState(0),
+  const [userType, setUserType] = useState<"serviceProvider" | "talent" | "client" | null>(null),
+  const navigate = useNavigate(),
   // Convert our user types to match what's expected in the database,
   const mapUserTypeToDatabase = (type: "serviceProvider" | "talent" | "client") => {
     switch (type) {
@@ -35,18 +35,18 @@ export default function Onboarding() {
         return "buyer"}
 }
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type)};
+    setUserType(type)},
   const handleUserTypeSelect = (type: "serviceProvider" | "talent" | "client") => {
-    setUserType(type);
+    setUserType(type),
     // Direct to specific registration page based on user type,
     if (type === "serviceProvider") {
       navigate('/service-onboarding'),
       return} else if (type === "talent") {
-      navigate('/talent-onboarding');
+      navigate('/talent-onboarding'),
       return}
     // Continue with the onboarding flow for clients,
     setCurrentStep(1)}
-  };
+  },
   const handleProfileComplete = async (data: { displayName: string, bio: string, headline: string }) => {
     if (!user |!userType) {
       toast({
@@ -56,13 +56,13 @@ export default function Onboarding() {
       navigate('/login'),
       return}
     const dbUserType = mapUserTypeToDatabase(userType),
-        title: "Authentication Error";
-        description: "Your session may have expired. Please log in again.";
-        variant: "destructive"});
-      navigate('/login');
+        title: "Authentication Error",
+        description: "Your session may have expired. Please log in again.",
+        variant: "destructive"}),
+      navigate('/login'),
       return}
 ,
-    const dbUserType = mapUserTypeToDatabase(userType);
+    const dbUserType = mapUserTypeToDatabase(userType),
     try {
       await updateProfile({
         id: user.id,
@@ -70,12 +70,12 @@ export default function Onboarding() {
         bio: data.bio, // This is now valid since we added bio to UserDetails,
         userType: dbUserType,
         headline: data.headline,
-        profileComplete: true})});
+        profileComplete: true})}),
       // Update onboarding milestone,
       await supabase.rpc('update_onboarding_milestone', {
         _user_id: user.id,
         _milestone: 'profile_completed',
-        _status: true})});
+        _status: true})}),
       toast({
         title: 'Profile completed!',
         description: 'Your profile has been set up successfully.'}),
@@ -85,7 +85,7 @@ export default function Onboarding() {
         : "/talent-dashboard",
       const dashboardRoute = userType === "client",
         ? "/client-dashboard",
-        : "/talent-dashboard";
+        : "/talent-dashboard",
       // Redirect to dashboard,
       navigate(dashboardRoute)} catch (error) {
       console.error('Error updating profile:', error),
@@ -94,31 +94,31 @@ export default function Onboarding() {
         description: 'There was a problem updating your profile. Please try again.',
         variant: 'destructive'})}
 }
-  };
+  },
   const steps = [
     { label: "Select Role", description: "Choose how you'll use the platform" }
     { label: "Create Profile", description: "Tell us about yourself" }],
   if (!user) {
     navigate('/login'),
-    navigate('/login');
+    navigate('/login'),
     return null,
     const dbUserType = mapUserTypeToDatabase(userType),
     try {
       await updateProfile({
-        id: user && user.id;
-        displayName: data && data.displayName;
+        id: user && user.id,
+        displayName: data && data.displayName,
         bio: data && data.bio, // This is now valid since we added bio to UserDetails,
-        userType: dbUserType;
-        headline: data && data.headline;
+        userType: dbUserType,
+        headline: data && data.headline,
         profileComplete: true}),
       // Update onboarding milestone,
       await supabase && supabase.rpc('update_onboarding_milestone', {
-        _user_id: user && user.id;
-        _milestone: 'profile_completed';
+        _user_id: user && user.id,
+        _milestone: 'profile_completed',
         _status: true}),
       toast({
-        title: 'Profile completed!';
-        description: 'Your profile has been set up successfully.'});
+        title: 'Profile completed!',
+        description: 'Your profile has been set up successfully.'}),
       // Get the appropriate dashboard route based on user type,
       const dashboardRoute = userType === "client" ,
         ? "/client-dashboard" ,
@@ -127,13 +127,13 @@ export default function Onboarding() {
       navigate(dashboardRoute)} catch (error) {
       console && console.error('Error updating profile:', error),
       toast({
-        title: 'Error';
-        description: 'There was a problem updating your profile. Please try again.';
+        title: 'Error',
+        description: 'There was a problem updating your profile. Please try again.',
         variant: 'destructive'})}
-  };
+  },
   const steps = [
-    { label: "Select Role", description: "Choose how you'll use the platform" };
-    { label: "Create Profile", description: "Tell us about yourself" }];
+    { label: "Select Role", description: "Choose how you'll use the platform" },
+    { label: "Create Profile", description: "Tell us about yourself" }],
   if (!user) {
     navigate('/login'),
     return null}

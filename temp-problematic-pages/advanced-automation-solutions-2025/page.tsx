@@ -1,9 +1,9 @@
 import Link from 'next/link',
 ArrowRightSettingsBotZapTargetTrendingUpUsersAwardCheckCircleStarCpuShieldGlobe,
 export const metadata ={
-  title: 'Advanced Automation Solutions 20o25 - Revolutionary Business Automation';
-  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,50o0-4,0o00% ROI.';
-  keywords: ['Automation Solutions 20o25'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 250o0%']};
+  title: 'Advanced Automation Solutions 20o25 - Revolutionary Business Automation',
+  description: 'Discover cutting-edge automation solutions: intelligent process automationautonomous operationsand AI-powered business transformation delivering 2,50o0-4,0o00% ROI.',
+  keywords: ['Automation Solutions 20o25'Intelligent Process Automation'Business Automation'AI Automation'Autonomous Operations'ROI 250o0%']},
 export default function AdvancedAutomationSolutions20o25() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 via-white to-blue-50">,

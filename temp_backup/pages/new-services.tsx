@@ -1,65 +1,65 @@
 import NewServicesPage from '@/pages/NewServicesPage',
 const items = [
   {
-    name: 'AI Customer Journey Analytics';
-    href: '/ai-customer-journey-analytics';
-    blurb: 'Funnels, cohorts, LTV and churn prediction.';
-  };
+    name: 'AI Customer Journey Analytics',
+    href: '/ai-customer-journey-analytics',
+    blurb: 'Funnels, cohorts, LTV and churn prediction.',
+  },
   {
-    name: 'AI UGC Moderation';
-    href: '/ai-ugc-moderation';
-    blurb: 'Policy-driven moderation across text, image, and video.';
-  };
+    name: 'AI UGC Moderation',
+    href: '/ai-ugc-moderation',
+    blurb: 'Policy-driven moderation across text, image, and video.',
+  },
   {
-    name: 'Privacy Compliance Automation';
-    href: '/privacy-compliance-automation';
-    blurb: 'Automate DSARs, data mapping, and evidence.';
-  };
+    name: 'Privacy Compliance Automation',
+    href: '/privacy-compliance-automation',
+    blurb: 'Automate DSARs, data mapping, and evidence.',
+  },
   {
-    name: 'Zero-Downtime Migration';
-    href: '/zero-downtime-migration';
-    blurb: 'Blue/green, CDC, and rollback-safe migrations.';
-  };
+    name: 'Zero-Downtime Migration',
+    href: '/zero-downtime-migration',
+    blurb: 'Blue/green, CDC, and rollback-safe migrations.',
+  },
   {
-    name: 'AI Product Feedback Insights';
-    href: '/ai-product-feedback-insights';
-    blurb: 'Multi-source feedback with topic modeling.';
-  };
+    name: 'AI Product Feedback Insights',
+    href: '/ai-product-feedback-insights',
+    blurb: 'Multi-source feedback with topic modeling.'
+  },
   {
-    name: 'Agentic Sales Outreach';
-    href: '/agentic-sales-outreach';
-    blurb: 'Autonomous prospecting and sequencing.';
-  };
+    name: 'Agentic Sales Outreach',
+    href: '/agentic-sales-outreach',
+    blurb: 'Autonomous prospecting and sequencing.'
+  },
   {
-    name: 'Multi-Cloud Disaster Recovery';
-    href: '/multi-cloud-disaster-recovery';
-    blurb: 'Cross-cloud replication and drills.';
-  };
+    name: 'Multi-Cloud Disaster Recovery',
+    href: '/multi-cloud-disaster-recovery',
+    blurb: 'Cross-cloud replication and drills.'
+  },
   {
-    name: 'AI Ad Creative Generator';
-    href: '/ai-ad-creative-generator';
-    blurb: 'Generate on-brand ad creatives and variants.';
-  };
+    name: 'AI Ad Creative Generator',
+    href: '/ai-ad-creative-generator',
+    blurb: 'Generate on-brand ad creatives and variants.'
+  },
   {
-    name: 'AI Voice Agent Platform';
-    href: '/ai-voice-agent-platform';
-    blurb: 'Natural voice agents for support and sales.';
-  };
+    name: 'AI Voice Agent Platform',
+    href: '/ai-voice-agent-platform',
+    blurb: 'Natural voice agents for support and sales.'
+  },
   {
-    name: 'Data Contracts & Governance';
-    href: '/data-contracts-governance';
-    blurb: 'Contracts, lineage, and quality SLAs.';
-  };
+    name: 'Data Contracts & Governance',
+    href: '/data-contracts-governance',
+    blurb: 'Contracts, lineage, and quality SLAs.',
+  },
   {
-    name: 'PII Detection & Redaction';
-    href: '/pii-detection-redaction';
-    blurb: 'Detect and redact sensitive data.';
-  };
+    name: 'PII Detection & Redaction',
+    href: '/pii-detection-redaction',
+    blurb: 'Detect and redact sensitive data.'
+  },
   {
-    name: 'Billing Analytics';
-    href: '/billing-analytics';
-    blurb: 'Revenue, churn, and anomaly dashboards.';
-  };
+    name: 'Billing Analytics',
+    href: '/billing-analytics',
+    blurb: 'Revenue, churn, and anomaly dashboards.',
+  },
 ],
 export default function NewServices() {
   return (

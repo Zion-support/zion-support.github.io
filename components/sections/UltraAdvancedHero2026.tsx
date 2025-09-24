@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
 import { quantumSpaceTechServices2026 } from '../../data/2026-quantum-space-tech-services',
 import { metaverseDigitalRealityServices2026 } from '../../data/2026-metaverse-digital-reality-services',
@@ -12,10 +12,10 @@ import { metaverseDigitalRealityServices2026 } from '../../data / 2026 - metaver
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -30,7 +30,7 @@ export default function UltraAdvancedHero2026() {
   const contactInfo = {
     phone: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
-    address: '364 E Main St STE 1008 Middletown DE 19709'};
+    address: '364 E Main St STE 1008 Middletown DE 19709'},
   const containerVariants = {
     hidden: { opacity: 0 }
   ArrowRight,
@@ -45,18 +45,18 @@ export default function UltraAdvancedHero2026() {
   Phone,
   Mail,
   MapPin,
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Rocket;
-  Globe;
-  Sparkles;
-  CheckCircle;
-  Phone;
-  Mail;
-  MapPin;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Sparkles,
+  CheckCircle,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 export default /**,
  * UltraAdvancedHero2026 - Function description,
@@ -67,8 +67,8 @@ function UltraAdvancedHero2026() {
     quantumSpaceTechServices2026.length +,
     metaverseDigitalRealityServices2026.length,
   const contact_info = {
-    phone: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'}import { aiAutonomousServices2026 } from '../../data / 2026 - ai - autonomous - services',
 export default /**,
  * UltraAdvancedHero2026 - Function description,
@@ -76,16 +76,16 @@ export default /**,
 function UltraAdvancedHero2026() {
   const total_services = aiAutonomousServices2026.length + quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026.length,
   const contact_info = {
-    phone: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709'}
 ,
   const container_variants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
       opacity: 1,
       transition: {
-  };
+  },
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
@@ -95,24 +95,24 @@ function UltraAdvancedHero2026() {
         duration: 0.8}
     }
   }
-        duration: 0.8;
-      };
-    };
+        duration: 0.8
+      },
+    },
 export default function UltraAdvancedHero2026() {
   const totalServices =,
     aiAutonomousServices2026 && aiAutonomousServices2026.length +,
     quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length +,
     metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length,
   const contactInfo = {
-    phone: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709'};import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'},import { aiAutonomousServices2026 } from '../../data/2026-ai-autonomous-services',
 export default function UltraAdvancedHero2026() {
   const totalServices = aiAutonomousServices2026 && aiAutonomousServices2026.length + quantumSpaceTechServices2026 && quantumSpaceTechServices2026.length + metaverseDigitalRealityServices2026 && metaverseDigitalRealityServices2026.length,
   const contactInfo = {
-    phone: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709'};
+    phone: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709'},
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,
       {/* Enhanced Background Effects */}
@@ -183,21 +183,21 @@ export default function UltraAdvancedHero2026() {
           <motion&& motion.div,
             variants={itemVariants}
 ,
-        stagger_children: 0.1;
-      };
+        stagger_children: 0.1
+      },
     }}        stagger_children: 0.1}
     }
   }
 ,
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 30 };
+    hidden: { opacity: 0, coordinate_y: 30 },
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.8;
-      };
-    };
+        duration: 0.8
+      },
+    },
   }
 ,
   return (
@@ -296,7 +296,7 @@ export default function UltraAdvancedHero2026() {
             <div className='text-center p-4 bg-gradient-to-br from-green-800/20 to-green-900/20 backdrop-blur-xl border border-green-500/20 rounded-2xl'>,
               <div className='text-3xl font-bold text-green-400'>∞</div>,
               <div className='text-gray-300 text-sm'>Possibilities</div>            </div>,
-          </motion && motion.div>};
+          </motion && motion.div>},
           {/* Key Benefits */}
           <motion&& motion.div  }
   return (
@@ -828,8 +828,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
       <div className='absolute inset-0 pointer-events-none'>,
         <motion&& motion.div,
           animate={{
-            coordinate_y: [0, -20, 0];
-            rotate: [0, 5, 0];
+            coordinate_y: [0, -20, 0],
+            rotate: [0, 5, 0],
           }}
           transition={{
             duration: 6,
@@ -847,8 +847,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
         </motion.div>,
         <motion.div,
           animate={{
-            coordinate_y: [0, 20, 0];
-            rotate: [0, -5, 0];
+            coordinate_y: [0, 20, 0],
+            rotate: [0, -5, 0],
           }}
           transition={{
             duration: 8,
@@ -866,8 +866,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
         </motion.div>,
         <motion.div,
           animate={{
-            coordinate_y: [0, -15, 0];
-            rotate: [0, 3, 0];
+            coordinate_y: [0, -15, 0],
+            rotate: [0, 3, 0],
           }}
           transition={{
             duration: 7,
@@ -885,8 +885,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
         </motion.div>,
         <motion.div,
           animate={{
-            coordinate_y: [0, 15, 0];
-            rotate: [0, -3, 0];
+            coordinate_y: [0, 15, 0],
+            rotate: [0, -3, 0],
           }}
           transition={{
             duration: 9,
@@ -947,8 +947,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             coordinate_y: [0, -20, 0],
             rotate: [0, 5, 0]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute top - 20 right - 20 text - 6xl opacity - 20">,
         </motion.div>,
@@ -957,8 +957,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             coordinate_y: [0, 20, 0],
             rotate: [0, -5, 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute bottom - 20 left - 20 text - 6xl opacity - 20">,
         </motion.div>,
@@ -967,8 +967,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             coordinate_y: [0, -15, 0],
             rotate: [0, 3, 0]}}
           transition={{
-            duration: 7;
-            repeat: Infinity;
+            duration: 7,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute top - 1/3 left - 10 text - 5xl opacity - 20">,
         </motion.div>,
@@ -977,8 +977,8 @@ className='flex flex-col sm:flex-row items-center justify-center space-y-4 sm:sp
             coordinate_y: [0, 15, 0],
             rotate: [0, -3, 0]}}
           transition={{
-            duration: 9;
-            repeat: Infinity;
+            duration: 9,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute bottom - 1/3 right - 10 text - 5xl opacity - 20">,
         </motion.div>,

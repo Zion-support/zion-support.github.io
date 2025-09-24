@@ -2,59 +2,59 @@ import Link from 'next/link',
 const NeuralNetworksContentShowcase20o25 = () => {
   const neuralContent = [
     {
-      title: 'Deep Learning Fundamentals';
+      title: 'Deep Learning Fundamentals',
       description:,
-        'Master the core concepts of deep learning with hands-on tutorials and projects';
-      image: '📚';
-      link: '/neural-networks/deep-learning';
-      category: 'Tutorials';
-      level: 'Beginner';
-    };
+        'Master the core concepts of deep learning with hands-on tutorials and projects',
+      image: '📚',
+      link: '/neural-networks/deep-learning',
+      category: 'Tutorials',
+      level: 'Beginner'
+    },
     {
-      title: 'Advanced Architectures';
+      title: 'Advanced Architectures',
       description:,
-        'Explore cutting-edge neural network architectures like GPTBERTand Vision Transformers';
-      image: '🏗️';
-      link: '/neural-networks/architectures';
-      category: 'Advanced';
-      level: 'Expert';
-    };
+        'Explore cutting-edge neural network architectures like GPTBERTand Vision Transformers',
+      image: '🏗️',
+      link: '/neural-networks/architectures',
+      category: 'Advanced',
+      level: 'Expert'
+    },
     {
-      title: 'Neural Network Optimization';
+      title: 'Neural Network Optimization',
       description:,
-        'Learn techniques to optimize neural networks for better performance and efficiency';
-      image: '⚡';
-      link: '/neural-networks/optimization';
-      category: 'Optimization';
-      level: 'Intermediate';
-    };
+        'Learn techniques to optimize neural networks for better performance and efficiency',
+      image: '⚡',
+      link: '/neural-networks/optimization',
+      category: 'Optimization',
+      level: 'Intermediate'
+    },
     {
-      title: 'Real-World Applications';
+      title: 'Real-World Applications',
       description:,
-        'See how neural networks are applied in healthcarefinanceand autonomous systems';
-      image: '🌍';
-      link: '/neural-networks/applications';
-      category: 'Applications';
-      level: 'All Levels';
-    };
+        'See how neural networks are applied in healthcarefinanceand autonomous systems',
+      image: '🌍',
+      link: '/neural-networks/applications',
+      category: 'Applications',
+      level: 'All Levels'
+    },
     {
-      title: 'Neural Network Visualization';
+      title: 'Neural Network Visualization',
       description:,
-        'Tools and techniques for visualizing and understanding neural network behavior';
-      image: '📊';
-      link: '/neural-networks/visualization';
-      category: 'Tools';
-      level: 'Intermediate';
-    };
+        'Tools and techniques for visualizing and understanding neural network behavior',
+      image: '📊',
+      link: '/neural-networks/visualization',
+      category: 'Tools',
+      level: 'Intermediate'
+    },
     {
-      title: 'Custom Network Design';
+      title: 'Custom Network Design',
       description:,
-        'Build custom neural networks from scratch for specific use cases';
-      image: '🛠️';
-      link: '/neural-networks/custom-design';
-      category: 'Development';
-      level: 'Advanced';
-    };
+        'Build custom neural networks from scratch for specific use cases',
+      image: '🛠️',
+      link: '/neural-networks/custom-design',
+      category: 'Development',
+      level: 'Advanced'
+    },
   ],
   return (
     <section className='py-16 bg-gradient-to-br from-orange-50 to-red-50'>,
@@ -119,5 +119,5 @@ const NeuralNetworksContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NeuralNetworksContentShowcase20o25;
+    </section>)},
+export default NeuralNetworksContentShowcase20o25,

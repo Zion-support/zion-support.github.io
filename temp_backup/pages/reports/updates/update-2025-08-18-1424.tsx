@@ -11,10 +11,10 @@ export default function UpdatePage() {
         <meta property="og:description" content="Innovative, useful guidance to improve observability and uptime."  />,
         <meta name="twitter: card" content="summary_large_image"  />,
         <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org";
-          "@type": "Article";
-          "headline": "${title}";
-          "description": "${subtitle}";
+          "@context": "https: //schema.org",
+          "@type": "Article",
+          "headline": "${title}",
+          "description": "${subtitle}",
           "author": { "@type": "Organization", "name": "Zion Tech Group" }
         })}</script>,
       </Head>,

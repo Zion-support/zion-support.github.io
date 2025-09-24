@@ -3,16 +3,14 @@ import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
   title:,
-    'AI 20o26: Hyperautomation Business Playbook - Complete Implementation Guide';
+    'AI 20o26: Hyperautomation Business Playbook - Complete Implementation Guide',
   description:,
-    'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.';
+    'A comprehensive playbook to design, deploy, and scale AI-driven hyperautomation across the enterprise.',
   keywords: [
-    'hyperautomation';
-    'AI automation';
-    'business transformation';
-    'enterprise AI';
-  ];
-};
+    'hyperautomationAI automation',
+    'business transformationenterprise AI',
+  ]
+},
 export default function AI20o26HyperautomationPlaybook() {
   return (
     <ErrorBoundary>,

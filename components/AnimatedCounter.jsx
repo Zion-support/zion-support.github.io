@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react',
 import { motion, useInView } from 'framer-motion',
 const AnimatedCounter = ({
-  end;
-  duration = 2;
-  prefix = '';
-  suffix = '';
-  className = '';
+  end,
+  duration = 2,
+  prefix = '',
+  suffix = '',
+  className = '',
   delay = 0}) => {
   const [count, setCount] = useState(0),
   const ref = useRef(null),
@@ -24,7 +24,7 @@ const AnimatedCounter = ({
           setCount(currentCount),
           if (progress < 1) {
             requestAnimationFrame(animate)}
-        };
+        },
         requestAnimationFrame(animate)}, delay * 1000),
       return () => clearTimeout(timer)}
   }, [isInView, end, duration, delay]),
@@ -37,5 +37,5 @@ const AnimatedCounter = ({
       transition={{ duration: 0.6, delay }}
     >,
       {prefix}{count.toLocaleString()}{suffix}
-    </motion.span>)};
-export default AnimatedCounter;
+    </motion.span>)},
+export default AnimatedCounter,

@@ -4,8 +4,8 @@ ZapTrendingUpClockShield,
 const PerformanceOptimizedBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [statsetStats] = useState({
-    loadTime: 0;
-    performance: 0;
+    loadTime: 0,
+    performance: 0,
     uptime: 0}),
   useEffect(() => {
     // Simulate performance metrics,
@@ -18,24 +18,24 @@ const PerformanceOptimizedBanner = () => {
     return () => clearInterval(interval)}[]),
   const features = [
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: "Lightning Fast";
-      description: "Sub-20o0ms load times";
-      value: `${Math.round(stats.loadTime)}ms`};
+      icon: <Zap className="w-6 h-6"  />,
+      title: "Lightning Fast",
+      description: "Sub-20o0ms load times",
+      value: `${Math.round(stats.loadTime)}ms`},
     {
-      icon: <TrendingUp className="w-6 h-6"  />;
-      title: "High Performance";
-      description: "Optimized for speed";
-      value: `${Math.round(stats.performance)}%`};
+      icon: <TrendingUp className="w-6 h-6"  />,
+      title: "High Performance",
+      description: "Optimized for speed",
+      value: `${Math.round(stats.performance)}%`},
     {
-      icon: <Clock className="w-6 h-6"  />;
-      title: "99.9% Uptime";
-      description: "Reliable service";
-      value: `${stats.uptime.toFixed(1)}%`};
+      icon: <Clock className="w-6 h-6"  />,
+      title: "99.9% Uptime",
+      description: "Reliable service",
+      value: `${stats.uptime.toFixed(1)}%`},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: "Secure & Fast";
-      description: "Enterprise-grade security";
+      icon: <Shield className="w-6 h-6"  />,
+      title: "Secure & Fast",
+      description: "Enterprise-grade security",
       value: "10o0%"}
   ],
   return (
@@ -71,5 +71,5 @@ const PerformanceOptimizedBanner = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default PerformanceOptimizedBanner;
+    </div>)},
+export default PerformanceOptimizedBanner,

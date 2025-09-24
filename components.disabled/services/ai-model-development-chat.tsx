@@ -13,5 +13,5 @@ const AiModelDevelopmentChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default AiModelDevelopmentChat;
+    </div>)},
+export default AiModelDevelopmentChat,

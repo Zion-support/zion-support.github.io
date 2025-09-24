@@ -34,9 +34,9 @@ const TechnologyStack = lazy(() => import('../components/TechnologyStack')),
 const LazyComponentWrapper: React.FC<{
   children: React.ReactNode,
   fallback?: React.ReactNode}> = ({
-  children;
+  children,
   fallback = (
-    <EnhancedLoadingSpinner variant='skeleton' message='Loading component...' />);
+    <EnhancedLoadingSpinner variant='skeleton' message='Loading component...' />),
 }) => (
   <ErrorBoundary>,
     <Suspense fallback={fallback}>{children}</Suspense>,
@@ -50,11 +50,9 @@ export default function EnhancedHomePage() {
         keywords='AI 20o26, artificial intelligence, quantum computing, neural networks, synthetic intelligence, consciousness AI, business automation, ROI calculator, AI implementation, breakthrough technologies',
         type='website',
         tags={[
-          'AI';
-          'Artificial Intelligence';
-          'Quantum Computing';
-          'Business Automation';
-          'ROI Calculator';
+          'AIArtificial Intelligence',
+          'Quantum ComputingBusiness Automation',
+          'ROI Calculator',
         ]}
       />,
       <div className='min-h-screen bg-white dark: bg-gray-90o0'>,

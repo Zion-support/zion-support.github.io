@@ -4,7 +4,7 @@ import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   ArrowRightPlayStarUsersAwardTrendingUpBrainShieldRocket,
-  Loader2ChevronDownZapGlobeTargetLightbulbCodeDatabase;
+  Loader2ChevronDownZapGlobeTargetLightbulbCodeDatabase,
   CloudLockChartBarCpuAtomSatelliteGamepad2Palette} from 'lucide-react',
 import UltraFuturisticBackground2035 from './ui/UltraFuturisticBackground2035',
 import UltraFuturisticServiceCard2035 from './ui/UltraFuturisticServiceCard2035',
@@ -37,38 +37,38 @@ const Homepage2035: React.FC = () => {
       setIsVisible(true)}800),
     return () => clearTimeout(timer)}[]),
   const fadeInUp = {
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6ease: "easeOut" }
-  };
+  },
   const staggerContainer = {
     animate: {
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const backgroundVariants = {
-    initial: { opacity: 0scale: 0.8 };
+    initial: { opacity: 0scale: 0.8 },
     animate: {
       opacity: 1,
-      scale: 1;
+      scale: 1,
       transition: { duration: 1.5ease: "easeOut" as const }
     }
-  };
+  },
   const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: <Globe className="w-5 h-5" /> };
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: <Brain className="w-5 h-5" /> };
-    { id: ''it', 'name: 'IT 'Enterprise', 'icon: <Cpu className="w-5 h-5" /> };
-    { id: ''quantum', 'name: 'Quantum 'Tech', 'icon: <Atom className="w-5 h-5" /> };
-    { id: ''space', 'name: 'Space 'Tech', 'icon: <Satellite className="w-5 h-5" /> };
-    { id: ''cyber', 'name: ''Cybersecurity', 'icon: <Shield className="w-5 h-5" /> };
-    { id: ''cloud', 'name: 'Cloud & 'DevOps', 'icon: <Cloud className="w-5 h-5" /> };
-    { id: ''fintech', 'name: ''FinTech', 'icon: <ChartBar className="w-5 h-5" /> }
+    { id: ''allname: 'All 'Servicesicon: <Globe className="w-5 h-5" /> },
+    { id: ''ainame: 'AI & 'MLicon: <Brain className="w-5 h-5" /> },
+    { id: ''itname: 'IT 'Enterpriseicon: <Cpu className="w-5 h-5" /> },
+    { id: ''quantumname: 'Quantum 'Techicon: <Atom className="w-5 h-5" /> },
+    { id: ''spacename: 'Space 'Techicon: <Satellite className="w-5 h-5" /> },
+    { id: ''cybername: ''Cybersecurityicon: <Shield className="w-5 h-5" /> },
+    { id: ''cloudname: 'Cloud & 'DevOpsicon: <Cloud className="w-5 h-5" /> },
+    { id: ''fintechname: ''FinTechicon: <ChartBar className="w-5 h-5" /> }
   ],
   const allServices = [
-    ...innovative2025MicroSaasBatch;
-    ...innovative2025ITEnterpriseBatch;
+    ...innovative2025MicroSaasBatch,
+    ...innovative2025ITEnterpriseBatch,
     ...innovative2025AIServicesBatch],
   const filteredServices = activeCategory === 'all',
     ? allServices,
@@ -127,9 +127,9 @@ const Homepage2035: React.FC = () => {
               transition={{ duration: 0.8delay: 0.2 }}
               className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,
               {[
-                { icon: <Users className="w-8 h-8" />value: '50K+'label: 'Happy Clients' };
-                { icon: <Star className="w-8 h-8" />value: '4.9'label: 'Average Rating' };
-                { icon: <Award className="w-8 h-8" />value: '200+'label: 'Services' };
+                { icon: <Users className="w-8 h-8" />value: '50K+'label: 'Happy Clients' },
+                { icon: <Star className="w-8 h-8" />value: '4.9'label: 'Average Rating' },
+                { icon: <Award className="w-8 h-8" />value: '200+'label: 'Services' },
                 { icon: <TrendingUp className="w-8 h-8" />value: '99.9%'label: 'Uptime' }
               ].map((statindex) => (
                 <motion.div,
@@ -234,28 +234,28 @@ const Homepage2035: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-12 h-12" />;
-                  title: 'AI-Powered Solutions';
-                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'};
+                  icon: <Brain className="w-12 h-12" />,
+                  title: 'AI-Powered Solutions',
+                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'},
                 {
-                  icon: <Shield className="w-12 h-12" />;
-                  title: 'Enterprise Security';
-                  description: 'Military-grade security protocols and compliance standards to protect your business'};
+                  icon: <Shield className="w-12 h-12" />,
+                  title: 'Enterprise Security',
+                  description: 'Military-grade security protocols and compliance standards to protect your business'},
                 {
-                  icon: <Rocket className="w-12 h-12" />;
-                  title: 'Space Technology';
-                  description: 'Pioneering space tech solutions for the next generation of innovation'};
+                  icon: <Rocket className="w-12 h-12" />,
+                  title: 'Space Technology',
+                  description: 'Pioneering space tech solutions for the next generation of innovation'},
                 {
-                  icon: <Atom className="w-12 h-12" />;
-                  title: 'Quantum Computing';
-                  description: 'Access to quantum computing power for complex problem-solving'};
+                  icon: <Atom className="w-12 h-12" />,
+                  title: 'Quantum Computing',
+                  description: 'Access to quantum computing power for complex problem-solving'},
                 {
-                  icon: <Cloud className="w-12 h-12" />;
-                  title: 'Cloud-Native';
-                  description: 'Built for the cloud with scalabilityreliabilityand performance in mind'};
+                  icon: <Cloud className="w-12 h-12" />,
+                  title: 'Cloud-Native',
+                  description: 'Built for the cloud with scalabilityreliabilityand performance in mind'},
                 {
-                  icon: <Target className="w-12 h-12" />;
-                  title: 'Results-Driven';
+                  icon: <Target className="w-12 h-12" />,
+                  title: 'Results-Driven',
                   description: 'Focused on delivering measurable business outcomes and ROI'}
               ].map((featureindex) => (
                 <motion.div,
@@ -308,5 +308,5 @@ const Homepage2035: React.FC = () => {
           </div>,
         </section>,
       </UltraFuturisticBackground2035>,
-    </Layout>)};
-export default Homepage2035;
+    </Layout>)},
+export default Homepage2035,

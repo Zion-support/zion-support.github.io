@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Brain, Cpu, Rocket, Sparkles, Zap, TrendingUp } from 'lucide-react',
 import Button from '../ui/Button',
@@ -15,47 +15,47 @@ interface RevolutionaryHeroProps {
     icon: React.ReactNode}>}
 ,
 const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
-  title = "Revolutionary Micro SAAS Services";
-  subtitle = "Next-Generation AI, Quantum Computing & Autonomous Solutions";
-  description = "Transform your business with cutting-edge micro SAAS services powered by revolutionary AI, quantum computing, and autonomous technologies. Experience the future of business automation today.";
-  ctaText = "Explore Revolutionary Services";
-  ctaLink = "/services";
+  title = "Revolutionary Micro SAAS Services",
+  subtitle = "Next-Generation AI, Quantum Computing & Autonomous Solutions",
+  description = "Transform your business with cutting-edge micro SAAS services powered by revolutionary AI, quantum computing, and autonomous technologies. Experience the future of business automation today.",
+  ctaText = "Explore Revolutionary Services",
+  ctaLink = "/services",
   stats = [
-    { value: '20o0+', label: 'Revolutionary Services', color: 'text-cyan-40o0', icon: <Cpu className="w-6 h-6"  /> };
-    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-40o0', icon: <Zap className="w-6 h-6"  /> };
-    { value: '30+', label: 'Day Free Trials', color: 'text-blue-40o0', icon: <Rocket className="w-6 h-6"  /> };
-    { value: '24/7', label: 'AI Support', color: 'text-green-40o0', icon: <Brain className="w-6 h-6"  /> };
-    { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-40o0', icon: <Sparkles className="w-6 h-6"  /> };
+    { value: '20o0+', label: 'Revolutionary Services', color: 'text-cyan-40o0', icon: <Cpu className="w-6 h-6"  /> },
+    { value: '99.99%', label: 'Uptime Guarantee', color: 'text-fuchsia-40o0', icon: <Zap className="w-6 h-6"  /> },
+    { value: '30+', label: 'Day Free Trials', color: 'text-blue-40o0', icon: <Rocket className="w-6 h-6"  /> },
+    { value: '24/7', label: 'AI Support', color: 'text-green-40o0', icon: <Brain className="w-6 h-6"  /> },
+    { value: '$25B+', label: 'Combined Market Value', color: 'text-yellow-40o0', icon: <Sparkles className="w-6 h-6"  /> },
     { value: '80o0%+', label: 'Average ROI', color: 'text-purple-40o0', icon: <TrendingUp className="w-6 h-6"  /> }
   ]}) => {
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.2;
+        staggerChildren: 0.2,
         delayChildren: 0.3}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         ease: "easeOut"}
     }
-  };
+  },
   const floatingVariants ={
     float: {
-      y: [-10, 10, -10];
+      y: [-10, 10, -10],
       transition: {
-        duration: 3;
-        repeat: Infinity;
+        duration: 3,
+        repeat: Infinity,
         ease: "easeInOut"}
     }
-  };
+  },
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Quantum particle background */}
@@ -67,16 +67,16 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-60",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              scale: [1, 1.5, 1];
-              opacity: [0.6, 1, 0.6];
-              x: [0, Math.random() * 10o0 - 50];
+              scale: [1, 1.5, 1],
+              opacity: [0.6, 1, 0.6],
+              x: [0, Math.random() * 10o0 - 50],
               y: [0, Math.random() * 10o0 - 50]}}
             transition={{
-              duration: Math.random() * 5 + 5;
-              repeat: Infinity;
+              duration: Math.random() * 5 + 5,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />))}
       </div>,
@@ -200,9 +200,9 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
               initial={{ pathLength: 0, opacity: 0 }}
               animate={{ pathLength: 1, opacity: [0, 0.5, 0] }}
               transition={{
-                duration: 3;
-                repeat: Infinity;
-                delay: i * 0.5;
+                duration: 3,
+                repeat: Infinity,
+                delay: i * 0.5,
                 ease: "easeInOut"}}
              />))}
         </svg>,
@@ -213,8 +213,8 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
         animate={{
           y: [0, 10, 0]}}
         transition={{
-          duration: 2;
-          repeat: Infinity;
+          duration: 2,
+          repeat: Infinity,
           ease: "easeInOut"}}
       >,
         <div className="w-6 h-10 border-2 border-cyan-40o0/50 rounded-full flex justify-center">,
@@ -223,11 +223,11 @@ const RevolutionaryHero: React.FC<RevolutionaryHeroProps> = ({
             animate={{
               y: [0, 12, 0]}}
             transition={{
-              duration: 2;
-              repeat: Infinity;
+              duration: 2,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
         </div>,
       </motion.div>,
-    </section>)};
-export default RevolutionaryHero;
+    </section>)},
+export default RevolutionaryHero,

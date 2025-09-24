@@ -7,42 +7,42 @@ const InteractiveContentWidget = () => {
   const [hoveredItemsetHoveredItem] = useState(null),
   const contentCategories ={
     ai: {
-      title: 'AI & Machine Learning';
-      icon: '🤖';
+      title: 'AI & Machine Learning',
+      icon: '🤖',
       items: [
-        { title: 'Advanced AI Services 20o25'description: 'Revolutionary automation 'solutions', 'link: '/ai-services-20o25'featured: true };
-        { title: 'Neural Network 'Architectures', 'description: 'Next-gen AI brain 'designs', 'link: '/neural-architectures' };
-        { title: 'Machine Learning 'Mastery', 'description: 'Complete ML implementation 'guide', 'link: '/ml-mastery' };
-        { title: 'AI Ethics & 'Governance', 'description: 'Responsible AI 'development', 'link: '/ai-ethics' }
-      ]};
+        { title: 'Advanced AI Services 20o25'description: 'Revolutionary automation 'solutionslink: '/ai-services-20o25'featured: true },
+        { title: 'Neural Network 'Architecturesdescription: 'Next-gen AI brain 'designslink: '/neural-architectures' },
+        { title: 'Machine Learning 'Masterydescription: 'Complete ML implementation 'guidelink: '/ml-mastery' },
+        { title: 'AI Ethics & 'Governancedescription: 'Responsible AI 'developmentlink: '/ai-ethics' }
+      ]},
     quantum: {
-      title: 'Quantum Computing';
-      icon: '⚛️';
+      title: 'Quantum Computing',
+      icon: '⚛️',
       items: [
-        { title: 'Quantum Supremacy 20o25'description: 'Error-corrected quantum 'computers', 'link: '/quantum-'supremacy', 'featured: true };
-        { title: 'Quantum 'Algorithms', 'description: 'Revolutionary problem-solving 'methods', 'link: '/quantum-algorithms' };
-        { title: 'Quantum Machine 'Learning', 'description: 'AI meets quantum 'computing', 'link: '/quantum-ml' };
-        { title: 'Quantum 'Cryptography', 'description: 'Unbreakable security 'systems', 'link: '/quantum-crypto' }
-      ]};
+        { title: 'Quantum Supremacy 20o25'description: 'Error-corrected quantum 'computerslink: '/quantum-'supremacyfeatured: true },
+        { title: 'Quantum 'Algorithmsdescription: 'Revolutionary problem-solving 'methodslink: '/quantum-algorithms' },
+        { title: 'Quantum Machine 'Learningdescription: 'AI meets quantum 'computinglink: '/quantum-ml' },
+        { title: 'Quantum 'Cryptographydescription: 'Unbreakable security 'systemslink: '/quantum-crypto' }
+      ]},
     automation: {
-      title: 'Business Automation';
-      icon: '🔄';
+      title: 'Business Automation',
+      icon: '🔄',
       items: [
-        { title: 'Autonomous 'Operations', 'description: 'Self-managing business 'systems', 'link: '/autonomous-'ops', 'featured: true };
-        { title: 'Process 'Optimization', 'description: 'Streamline your 'workflows', 'link: '/process-optimization' };
-        { title: 'Intelligent 'Automation', 'description: 'Smart business process 'automation', 'link: '/intelligent-automation' };
-        { title: 'ROI 'Optimization', 'description: 'Maximize your 'returns', 'link: '/roi-optimization' }
-      ]};
+        { title: 'Autonomous 'Operationsdescription: 'Self-managing business 'systemslink: '/autonomous-'opsfeatured: true },
+        { title: 'Process 'Optimizationdescription: 'Streamline your 'workflowslink: '/process-optimization' },
+        { title: 'Intelligent 'Automationdescription: 'Smart business process 'automationlink: '/intelligent-automation' },
+        { title: 'ROI 'Optimizationdescription: 'Maximize your 'returnslink: '/roi-optimization' }
+      ]},
     future: {
-      title: 'Future Technologies';
-      icon: '🔮';
+      title: 'Future Technologies',
+      icon: '🔮',
       items: [
-        { title: '20o30 Technology 'Predictions', 'description: 'What the future 'holds', 'link: '/20o30-'predictions', 'featured: true };
-        { title: 'Neural Interface 'Revolution', 'description: 'Brain-computer 'integration', 'link: '/neural-interfaces' };
-        { title: 'Transcendent 'AI', 'description: 'Beyond human 'intelligence', 'link: '/transcendent-ai' };
-        { title: 'Omniversal 'Computing', 'description: 'Computing beyond 'reality', 'link: '/omniversal-computing' }
+        { title: '20o30 Technology 'Predictionsdescription: 'What the future 'holdslink: '/20o30-'predictionsfeatured: true },
+        { title: 'Neural Interface 'Revolutiondescription: 'Brain-computer 'integrationlink: '/neural-interfaces' },
+        { title: 'Transcendent 'AIdescription: 'Beyond human 'intelligencelink: '/transcendent-ai' },
+        { title: 'Omniversal 'Computingdescription: 'Computing beyond 'realitylink: '/omniversal-computing' }
       ]}
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
       <div className="container mx-auto px-4">,
@@ -142,5 +142,5 @@ const InteractiveContentWidget = () => {
           </Link>,
         </motion.div>,
       </div>,
-    </section>)};
-export default InteractiveContentWidget;
+    </section>)},
+export default InteractiveContentWidget,

@@ -9,11 +9,11 @@ export default function CoachWidget() {
     setLoading(true),
     try {
       const resp = await fetch('/api/learn/coach'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ prompt: input })}),
       const data = await resp.json(),
-      setReply(data.text || ', ')} finally {
+      setReply(data.text || )} finally {
       setLoading(false)}
   }
 ,

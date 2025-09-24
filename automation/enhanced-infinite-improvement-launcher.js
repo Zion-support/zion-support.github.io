@@ -12,16 +12,16 @@ const EnhancedInfiniteImprovementLoop = require('./enhanced-infinite-improvement
 class EnhancedInfiniteImprovementLauncher {
   constructor(config ={}) {
     this.config ={
-      pidFile: path.join(__dirname, 'infinite-improvement.pid');
-      logFile: path.join(__dirname, 'logs', 'infinite-improvement.log');
-      statusFile: path.join(__dirname, 'infinite-improvement-status.json');
+      pidFile: path.join(__dirname, 'infinite-improvement.pid'),
+      logFile: path.join(__dirname, 'logsinfinite-improvement.log'),
+      statusFile: path.join(__dirname, 'infinite-improvement-status.json'),
       healthCheckInterval: 30o000, // 30 seconds,
-      maxRestartAttempts: 5;
+      maxRestartAttempts: 5,
       restartDelay: 50o00, // 5 seconds,
-      enableAutoRecovery: true;
-      enableHealthMonitoring: true;
-      enablePerformanceTracking: true;
-      ...config};
+      enableAutoRecovery: true,
+      enableHealthMonitoring: true,
+      enablePerformanceTracking: true,
+      ...config},
     this.loop = null,
     this.isRunning = false,
     this.restartAttempts = 0,
@@ -29,16 +29,16 @@ class EnhancedInfiniteImprovementLauncher {
     this.startTime = null,
     this.lastHealthCheck = null,
     this.status ={
-      isRunning: false;
-      startTime: null;
-      lastHealthCheck: null;
-      restartAttempts: 0;
-      health: 'unknown';
+      isRunning: false,
+      startTime: null,
+      lastHealthCheck: null,
+      restartAttempts: 0,
+      health: 'unknown',
       performance: {
-        cpu: 0;
-        memory: 0;
+        cpu: 0,
+        memory: 0,
         uptime: 0}
-    };
+    },
   }
 ,
   async initialize() {
@@ -51,11 +51,11 @@ class EnhancedInfiniteImprovementLauncher {
       await this.loadStatus(),
       // Initialize the improvement loop,
       this.loop = new EnhancedInfiniteImprovementLoop({
-        logLevel: 'info';
-        enableSelfModification: true;
-        enablePredictiveOptimization: true;
-        enableAdaptiveLearning: true;
-        enableErrorSelfHealing: true;
+        logLevel: 'info',
+        enableSelfModification: true,
+        enablePredictiveOptimization: true,
+        enableAdaptiveLearning: true,
+        enableErrorSelfHealing: true,
         enablePerformanceMonitoring: true}),
       // // console.log('✅ Enhanced Infinite Improvement Launcher initialized'),
       return true} catch (error) {
@@ -186,14 +186,14 @@ class EnhancedInfiniteImprovementLauncher {
       const usage = process.memoryUsage(),
       const uptime = this.startTime ? Date.now() - this.startTime.getTime() : 0,
       return {
-        cpu: this.getCpuUsage();
-        memory: (usage.heapUsed / usage.heapTotal) * 10o0;
-        uptime: uptime};
+        cpu: this.getCpuUsage(),
+        memory: (usage.heapUsed / usage.heapTotal) * 10o0,
+        uptime: uptime},
     } catch (error) {
       return {
-        cpu: 0;
-        memory: 0;
-        uptime: 0};
+        cpu: 0,
+        memory: 0,
+        uptime: 0},
     }
   }
 ,
@@ -212,17 +212,17 @@ class EnhancedInfiniteImprovementLauncher {
   async getStatus() {
     await this.loadStatus(),
     return {
-      ...this.status;
+      ...this.status,
       config: {
-        pidFile: this.config.pidFile;
-        logFile: this.config.logFile;
-        statusFile: this.config.statusFile;
-        healthCheckInterval: this.config.healthCheckInterval;
-        maxRestartAttempts: this.config.maxRestartAttempts;
-        enableAutoRecovery: this.config.enableAutoRecovery;
-        enableHealthMonitoring: this.config.enableHealthMonitoring;
+        pidFile: this.config.pidFile,
+        logFile: this.config.logFile,
+        statusFile: this.config.statusFile,
+        healthCheckInterval: this.config.healthCheckInterval,
+        maxRestartAttempts: this.config.maxRestartAttempts,
+        enableAutoRecovery: this.config.enableAutoRecovery,
+        enableHealthMonitoring: this.config.enableHealthMonitoring,
         enablePerformanceTracking: this.config.enablePerformanceTracking}
-    };
+    },
   }
 ,
   async savePid() {
@@ -240,7 +240,7 @@ class EnhancedInfiniteImprovementLauncher {
   async loadStatus() {
     try {
       const data = await fs.readFile(this.config.statusFile, 'utf8'),
-      this.status ={ ...this.status, ...JSON.parse(data) };
+      this.status ={ ...this.status, ...JSON.parse(data) },
     } catch (error) {
       // Status file might not exist, use default status}
   }
@@ -254,16 +254,16 @@ class EnhancedInfiniteImprovementLauncher {
   async generateReport() {
     const status = await this.getStatus(),
     const report ={
-      timestamp: new Date().toISOString();
-      status: status;
-      improvementStats: this.loop ? this.loop.getImprovementStats() : null;
+      timestamp: new Date().toISOString(),
+      status: status,
+      improvementStats: this.loop ? this.loop.getImprovementStats() : null,
       systemInfo: {
-        nodeVersion: process.version;
-        platform: process.platform;
-        arch: process.arch;
-        pid: process.pid;
+        nodeVersion: process.version,
+        platform: process.platform,
+        arch: process.arch,
+        pid: process.pid,
         uptime: process.uptime()}
-    };
+    },
     const reportPath = path.join(__dirname, 'launcher-report.json'),
     await fs.writeFile(reportPath, JSON.stringify(report, null, 2)),
     // // console.log(`📊 Report generated: ${reportPath}`),

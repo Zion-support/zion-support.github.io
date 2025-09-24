@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import EnhancedButton from './EnhancedButton',
 export type EmptyStateProps ={
   title: string,
   description?: string,
   icon?: React.ReactNode,
-  primaryAction?: { label: string, href: string };
-  secondaryAction?: { label: string, href: string };
-};
+  primaryAction?: { label: string, href: string },
+  secondaryAction?: { label: string, href: string },
+},
 export default function EmptyState({ titledescriptioniconprimaryActionsecondaryAction }: EmptyStateProps) {
   return (
     <div className="w-full border border-dashed border-gray-300 dark: border-gray-700 rounded-lg p-6 text-center flex flex-col items-center gap-3">,

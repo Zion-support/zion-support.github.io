@@ -8,24 +8,24 @@ export default function Header() {
   const router = useRouter(),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigation = [
-    { name: 'Product', href: '#', hasDropdown: true };
-    { name: 'Solutions', href: '/services' };
-    { name: 'Micro SaaS', href: '/micro-saas-services' };
-    { name: 'Resources', href: '/resources' };
-    { name: 'Company', href: '/about' };
-    { name: 'Pricing', href: '/pricing' };
-    { name: 'Compare', href: '/pricing-comparison' };
+    { name: 'Product', href: '#', hasDropdown: true },
+    { name: 'Solutions', href: '/services' },
+    { name: 'Micro SaaS', href: '/micro-saas-services' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Company', href: '/about' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Compare', href: '/pricing-comparison' },
   ],
   const productDropdown = [
-    { name: 'AI Code Assistant', href: '/ai-assistant', description: 'Intelligent code completion and suggestions' };
-    { name: 'Cloud Platform', href: '/cloud-platform', description: 'Scalable cloud infrastructure' };
-    { name: 'Automation Hub', href: '/automation', description: 'AI-powered workflow automation' };
-    { name: 'Analytics', href: '/analytics', description: 'Real-time insights and reporting' };
-    { name: 'Micro SaaS Services', href: '/micro-saas-services', description: 'Professional business solutions' };
+    { name: 'AI Code Assistant', href: '/ai-assistant', description: 'Intelligent code completion and suggestions' },
+    { name: 'Cloud Platform', href: '/cloud-platform', description: 'Scalable cloud infrastructure' },
+    { name: 'Automation Hub', href: '/automation', description: 'AI-powered workflow automation' },
+    { name: 'Analytics', href: '/analytics', description: 'Real-time insights and reporting' },
+    { name: 'Micro SaaS Services', href: '/micro-saas-services', description: 'Professional business solutions' },
   ],
   const isActive = (href: string) => router.pathname === href,
   return (

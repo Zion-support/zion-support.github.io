@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const UltimateBusinessRevolution20o25Banner: React.FC = () => {
   return (
@@ -195,5 +195,5 @@ const UltimateBusinessRevolution20o25Banner: React.FC = () => {
         <div className='absolute bottom-1/4 left-1/3 w-1.5 h-1.5 bg-cyan-40o0 rounded-full animate-ping delay-10o00'></div>,
         <div className='absolute top-1/2 right-1/3 w-1 h-1 bg-yellow-40o0 rounded-full animate-ping delay-150o0'></div>,
       </div>,
-    </section>)};
-export default UltimateBusinessRevolution20o25Banner;
+    </section>)},
+export default UltimateBusinessRevolution20o25Banner,

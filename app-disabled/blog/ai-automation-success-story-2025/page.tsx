@@ -2,26 +2,23 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'AI Automation Success Story: 50o0% ROI Achievement | Zion Tech Group';
+  title: 'AI Automation Success Story: 50o0% ROI Achievement | Zion Tech Group',
   description:,
-    'Discover how a Fortune 50o0 company achieved 50o0% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.';
+    'Discover how a Fortune 50o0 company achieved 50o0% ROI through intelligent AI automation, reducing operational costs by 60% and increasing productivity by 340%.',
   keywords: [
-    'AI automation';
-    'ROI';
-    'enterprise';
-    'success story';
-    'productivity';
-    'cost reduction';
-  ];
+    'AI automationROI',
+    'enterprisesuccess story',
+    'productivitycost reduction',
+  ],
   openGraph: {
-    title: 'AI Automation Success Story: 50o0% ROI Achievement';
+    title: 'AI Automation Success Story: 50o0% ROI Achievement',
     description:,
-      'Fortune 50o0 company achieves 50o0% ROI through intelligent automation';
-    type: 'article';
-    publishedTime: '20o25-0o1-14';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Fortune 50o0 company achieves 50o0% ROI through intelligent automation',
+    type: 'article',
+    publishedTime: '20o25-0o1-14',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function AIAutomationSuccessStoryPage() {
   return (
     <div className='min-h-screen bg-white'>,

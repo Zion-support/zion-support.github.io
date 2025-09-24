@@ -18,5 +18,5 @@ const TheRiseOfEdgeComputingInIotApplicationsChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default TheRiseOfEdgeComputingInIotApplicationsChat;
+    </div>)},
+export default TheRiseOfEdgeComputingInIotApplicationsChat,

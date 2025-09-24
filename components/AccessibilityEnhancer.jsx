@@ -54,17 +54,17 @@ export default function AccessibilityEnhancer() {
         modals.forEach(modal => {
           if (modal.style.display !== 'none') {
             modal.style.display = 'none',
-            modal.setAttribute('aria-hidden', 'true')}
+            modal.setAttribute('aria-hiddentrue')}
         })}
-    };
+    },
     // Focus management,
     const handleFocusIn = e => {
       const target = e.target,
       if (target.matches('a, button, input, textarea, select, [tabindex]')) {
         target.classList.add('focus-visible')}
-    };
+    },
     const handleFocusOut = e => {
-      e.target.classList.remove('focus-visible')};
+      e.target.classList.remove('focus-visible')},
     document.addEventListener('keydown', handleKeyDown),
     document.addEventListener('focusin', handleFocusIn),
     document.addEventListener('focusout', handleFocusOut),
@@ -95,7 +95,7 @@ export default function AccessibilityEnhancer() {
       document.removeEventListener('focusout', handleFocusOut),
       if (skipLink.parentNode) {
         skipLink.parentNode.removeChild(skipLink)}
-    };
+    },
   }, []),
   const accessibilityControls = (
     <div className='accessibility-controls fixed bottom-4 right-4 z-50 bg-white shadow-lg rounded-lg p-4 space-y-2'>,

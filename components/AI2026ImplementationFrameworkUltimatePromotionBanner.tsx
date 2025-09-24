@@ -172,8 +172,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {
               </div>,
               <h4 className='text-lg font-bold mb-2'>Readiness Assessment</h4>,
               <p className='text-purple-10o0 text-sm'>,
-                Comprehensive diagnostic tool to evaluate your 'organization';
-                's AI readiness,
+                Comprehensive diagnostic tool to evaluate your 'organizations AI readiness,
               </p>,
             </div>,
             <div className='bg-white bg-opacity-10 backdrop-blur-sm rounded-xl p-6 border border-white border-opacity-20 text-center'>,
@@ -293,7 +292,7 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {
                 </div>,
               </div>,
               <p className='text-purple-10o0 text-sm'>,
-                "Following the 'framework', 's structured approach enabled us to,
+                "Following the 'frameworks structured approach enabled us to,
                 implement AI solutions with confidence and measurable results.",
               </p>,
             </div>,
@@ -365,5 +364,5 @@ const AI20o26ImplementationFrameworkUltimatePromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26ImplementationFrameworkUltimatePromotionBanner;
+    </section>)},
+export default AI20o26ImplementationFrameworkUltimatePromotionBanner,

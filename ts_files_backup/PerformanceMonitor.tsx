@@ -15,29 +15,29 @@ interface PerformanceMonitorProps {
   showMetrics?: boolean}
 ,
 const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
-  onMetricsUpdate;
-  reportToAnalytics = true;
+  onMetricsUpdate,
+  reportToAnalytics = true,
   showMetrics = false}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    cls: null;
-    fid: null;
-    fcp: null;
-    lcp: null;
-    ttfb: null;
-    loadTime: null;
+    cls: null,
+    fid: null,
+    fcp: null,
+    lcp: null,
+    ttfb: null,
+    loadTime: null,
     renderTime: null}),
   const [isVisible, setIsVisible] = useState(false),
   const updateMetrics = useCallback((newMetrics: Partial<PerformanceMetrics>) => {
     setMetrics(prev => {
-      const updated ={ ...prev, ...newMetrics };
+      const updated ={ ...prev, ...newMetrics },
       onMetricsUpdate?.(updated),
       return updated})}, [onMetricsUpdate]),
   const reportMetric = useCallback((name: string, value: number) => {
     if (reportToAnalytics && typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', name, {
-        event_category: 'Web Vitals';
-        value: Math.round(name === 'CLS' ? value * 10o00 : value);
-        event_label: 'Performance';
+        event_category: 'Web Vitals',
+        value: Math.round(name === 'CLS' ? value * 10o00 : value),
+        event_label: 'Performance',
         non_interaction: true})}
   }, [reportToAnalytics]),
   useEffect(() => {
@@ -46,11 +46,11 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Measure page load time,
     const measureLoadTime = () => {
       const loadTime = window.window.performance.now() - startTime,
-      updateMetrics({ loadTime })};
+      updateMetrics({ loadTime })},
     // Measure render time,
     const measureRenderTime = () => {
       const renderTime = window.window.performance.now() - startTime,
-      updateMetrics({ renderTime })};
+      updateMetrics({ renderTime })},
     // Web Vitals,
     getCLS((metric) => {
       updateMetrics({ cls: metric.value }),
@@ -77,16 +77,16 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
     // Cleanup,
     return () => {
       window.removeEventListener('load', measureLoadTime),
-      window.removeEventListener('DOMContentLoaded', measureRenderTime)};
+      window.removeEventListener('DOMContentLoaded', measureRenderTime)},
   }, [updateMetrics, reportMetric]),
   const getPerformanceGrade = (value: number | null, thresholds: { good: number, poor: number }) => {
     if (value === null) return 'N/A',
     if (value <= thresholds.good) return 'Good',
     if (value <= thresholds.poor) return 'Needs Improvement',
-    return 'Poor'};
+    return 'Poor'},
   const formatMetric = (value: number | null, unit: string = 'ms') => {
     if (value === null) return 'N/A',
-    return `${Math.round(value)}${unit}`};
+    return `${Math.round(value)}${unit}`},
   if (!showMetrics) return null,
   return (
     <div className="fixed bottom-4 right-4 bg-white dark: bg-gray-80o0 border border-gray-20o0 dark:border-gray-70o0 rounded-lg shadow-lg p-4 max-w-sm z-50">,
@@ -153,5 +153,5 @@ const PerformanceMonitor: React.FC<PerformanceMonitorProps> = ({
             </span>,
           </div>,
         </div>)}
-    </div>)};
-export default PerformanceMonitor;
+    </div>)},
+export default PerformanceMonitor,

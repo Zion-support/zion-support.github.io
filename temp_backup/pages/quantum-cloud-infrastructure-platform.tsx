@@ -27,12 +27,9 @@ export default function QuantumCloudInfrastructurePlatform() {
           </header>,
           <section className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
             {[
-              'PQC-ready encryption and key management';
-              'Zero-trust network segmentation';
-              'Confidential compute and runtime attestation';
-              'Observability and compliance built-in';
-              'Managed deployments and migration playbooks';
-              'From $3,500/mo';
+              'PQC-ready encryption and key managementZero-trust network segmentation',
+              'Confidential compute and runtime attestationObservability and compliance built-in',
+              'Managed deployments and migration playbooksFrom $3,500/mo',
             ].map(f => (
               <div
                 key={f}

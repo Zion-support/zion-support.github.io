@@ -12,7 +12,7 @@ export default function ComponentPlayground() {
   const handleFormSubmit = data => {
     setFormData(data),
     alert('Form submitted! Check console for data.'),
-    // // console.log('Form data:', data)};
+    // // console.log('Form data:', data)},
   return (
     <div className='min-h-screen bg-slate-950 text-white'>,
       <Head>,

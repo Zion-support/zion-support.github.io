@@ -25,30 +25,30 @@ const AutomationWorkflowEngine = lazy(() => import('./AutomationWorkflowEngine')
 const EnterpriseDataManagement = lazy(() => import('./EnterpriseDataManagement')),
 const APIManagementSystem = lazy(() => import('./APIManagementSystem')),
 export const metadata ={
-  title: 'Zion Tech Group - AI & Technology Solutions | 40o0% ROI Guaranteed';
-  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 40o0% ROI results.';
+  title: 'Zion Tech Group - AI & Technology Solutions | 40o0% ROI Guaranteed',
+  description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services with proven 40o0% ROI results.',
   keywords: [
-    'AI automation', 'cloud computing', 'micro SaaS', 'technology consulting';
-    'enterprise solutions', 'digital transformation', 'AI ROI', 'quantum AI';
-    'AI implementation', 'business automation', 'AI consulting'];
+    'AI automationcloud computing', 'micro SaaStechnology consulting',
+    'enterprise solutionsdigital transformation', 'AI ROIquantum AI',
+    'AI implementationbusiness automation', 'AI consulting'],
   openGraph: {
-    title: 'Zion Tech Group - AI & Technology Solutions';
-    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.';
-    type: 'website';
-    url: 'https://zion.app';
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.',
+    type: 'website',
+    url: 'https://zion.app',
     images: [
       {
-        url: 'https://zion.app/images/zion-tech-group-og.jpg';
-        width: 120o0;
-        height: 630;
+        url: 'https://zion.app/images/zion-tech-group-og.jpg',
+        width: 120o0,
+        height: 630,
         alt: 'Zion Tech Group - AI Solutions'}
-    ]};
+    ]},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Zion Tech Group - AI & Technology Solutions';
-    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.';
+    card: 'summary_large_image',
+    title: 'Zion Tech Group - AI & Technology Solutions',
+    description: 'Transform your business with cutting-edge AI solutions. 40o0% ROI guaranteed.',
     images: ['https://zion.app/images/zion-tech-group-twitter.jpg']}
-};
+},
 const HomePageOptimized = () => {
   return (
     <>,
@@ -69,7 +69,7 @@ const HomePageOptimized = () => {
                 <span className="block text-yellow-40o0">AI-Powered Solutions</span>,
               </h1>,
               <p className="text-xl md:text-2xl mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Achieve <strong>40o0% ROI in 90 days</strong> with our proven AI automation;
+                Achieve <strong>40o0% ROI in 90 days</strong> with our proven AI automation,
                 cloud infrastructure, and micro SaaS solutions. Join 50o0+ companies already transforming their operations.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
@@ -213,26 +213,26 @@ const HomePageOptimized = () => {
           <StructuredData
             type="Organization",
             data={{
-              name: "Zion Tech Group";
-              description: "Transforming businesses through cutting-edge technology solutions";
-              url: "https://zion.app";
-              logo: "https://zion.app/images/zion-tech-group-logo.png";
+              name: "Zion Tech Group",
+              description: "Transforming businesses through cutting-edge technology solutions",
+              url: "https://zion.app",
+              logo: "https://zion.app/images/zion-tech-group-logo.png",
               sameAs: [
-                "https://twitter.com/ZionTechGroup";
+                "https://twitter.com/ZionTechGroup",
                 "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
           <StructuredData
             type="WebSite",
             data={{
-              name: "Zion Tech Group";
-              url: "https://zion.app";
+              name: "Zion Tech Group",
+              url: "https://zion.app",
               potentialAction: {
-                "@type": "SearchAction";
-                "target": "https: //zion.app/search?q={search_term_string}";
+                "@type": "SearchAction",
+                "target": "https: //zion.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"}
             }} ,
            />,
         </Suspense>,
       </div>,
-    </>)};
-export default HomePageOptimized;
+    </>)},
+export default HomePageOptimized,

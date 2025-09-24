@@ -20,27 +20,27 @@ export function QuoteRequestForm() {
   const [currentStepsetCurrentStep] = useState<QuoteRequestSteps>("service"),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [formDatasetFormData] = useState<QuoteFormData>({
-    serviceType: "";
-    serviceCategory: "";
-    specificItem: null;
-    projectName: "";
-    projectDescription: "";
-    startDate: undefined;
-    endDate: undefined;
-    timeline: "flexible";
+    serviceType: "",
+    serviceCategory: "",
+    specificItem: null,
+    projectName: "",
+    projectDescription: "",
+    startDate: undefined,
+    endDate: undefined,
+    timeline: "flexible",
     budget: {
-      amount: 0;
-      type: "fixed"};
+      amount: 0,
+      type: "fixed"},
     contactInfo: {
-      name: "";
-      email: "";
-      phone: "";
+      name: "",
+      email: "",
+      phone: "",
       company: ""}
   }),
   const updateFormData = (data: Partial<QuoteFormData>) => {
     setFormData(prev => ({
-      ...prev;
-      ...data}))};
+      ...prev,
+      ...data}))},
   const handleNext = () => {
     switch (currentStep) {
       case "service":,
@@ -57,7 +57,7 @@ export function QuoteRequestForm() {
         break,
       default: ,
         break}
-  };
+  },
   const handleBack = () => {
     switch (currentStep) {
       case "details":,
@@ -74,7 +74,7 @@ export function QuoteRequestForm() {
         break,
       default: ,
         break}
-  };
+  },
   const handleSubmit = async () => {
     setIsSubmitting(true),
     try {
@@ -83,16 +83,16 @@ export function QuoteRequestForm() {
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve1500)),
       toast({
-        title: "Quote Request Submitted";
+        title: "Quote Request Submitted",
         description: "We've received your request and will get back to you soon."}),
       // Redirect to confirmation page or homepage,
       navigate("/")} catch (error) {
       toast({
-        title: "Submission Failed";
-        description: "There was an error submitting your request. Please try again.";
+        title: "Submission Failed",
+        description: "There was an error submitting your request. Please try again.",
         variant: "destructive"})} finally {
       setIsSubmitting(false)}
-  };
+  },
   const renderStepContent = () => {
     switch (currentStep) {
       case "service":,
@@ -107,7 +107,7 @@ export function QuoteRequestForm() {
         return <SummaryStep formData={formData} updateFormData={updateFormData} />,
       default: ,
         return null}
-  };
+  },
   return (
     <div className="container mx-auto px-4 py-12">,
       <div className="max-w-3xl mx-auto">,

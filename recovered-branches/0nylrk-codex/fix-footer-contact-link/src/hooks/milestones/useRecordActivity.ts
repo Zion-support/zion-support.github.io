@@ -4,26 +4,26 @@ import { MilestoneActivity } from './types',
 export const useRecordActivity = () => {
   const { user } = useAuth(),
   const recordMilestoneActivity = async (
-    milestoneId: string;
-    action: string;
-    previousStatus: string | null;
-    newStatus: string;
+    milestoneId: string,
+    action: string,
+    previousStatus: string | null,
+    newStatus: string,
     comment?: string) => {
     if (!user) return null,
     try {
       const { data, error } = await supabase,
         .from('milestone_activities'),
         .insert({
-          milestone_id: milestoneId;
-          user_id: user.id;
-          action;
-          previous_status: previousStatus;
-          new_status: newStatus;
-          comment;
+          milestone_id: milestoneId,
+          user_id: user.id,
+          action,
+          previous_status: previousStatus,
+          new_status: newStatus,
+          comment
         }),
         .select(
           `,
-          *;
+          *,
           created_by_profile:profiles!user_id(display_name, avatar_url),
         `),
         .single(),
@@ -31,8 +31,8 @@ export const useRecordActivity = () => {
       return data} catch (err: any) {
       console.error('Error recording activity:', err),
       return null}
-  };
+  },
   return {
-    recordMilestoneActivity;
-  };
-};
+    recordMilestoneActivity,
+  },
+},

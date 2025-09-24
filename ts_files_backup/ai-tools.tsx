@@ -9,169 +9,157 @@ import {
   Code,
   FileText,
   Zap,
-  Star;
-  ExternalLink;
-  CheckCircle;
-  TrendingUp;
+  Star,
+  ExternalLink,
+  CheckCircle,
+  TrendingUp,
   Shield} from 'lucide-react',
 export default function AiToolsPage() {
   const aiTools = [
     {
-      icon: <Brain className="w-8 h-8 text-white" />;
-      title: 'ChatGPT Plus';
-      description: 'Advanced AI chatbot with enhanced reasoningweb browsingand plugin capabilities for professional use.';
+      icon: <Brain className="w-8 h-8 text-white" />,
+      title: 'ChatGPT Plus',
+      description: 'Advanced AI chatbot with enhanced reasoningweb browsingand plugin capabilities for professional use.',
       features: [
-        'Advanced reasoning & analysis';
-        'Web browsing & real-time info';
-        'Plugin ecosystem access';
-        'Code generation & debugging';
-        'Professional writing assistance'];
-      pricing: '$20/month';
-      marketPrice: '$20/month';
-      website: 'https://chat.openai.com';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-      textColor: 'text-green-400';
-      gradient: 'from-green-400 to-emerald-500';
-      popular: true;
-      category: 'Conversational AI'};
+        'Advanced reasoning & analysisWeb browsing & real-time info',
+        'Plugin ecosystem accessCode generation & debugging',
+        'Professional writing assistance'],
+      pricing: '$20/month',
+      marketPrice: '$20/month',
+      website: 'https://chat.openai.com',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      textColor: 'text-green-400',
+      gradient: 'from-green-400 to-emerald-500',
+      popular: true,
+      category: 'Conversational AI'},
     {
-      icon: <Image className="w-8 h-8 text-white" />;
-      title: 'Midjourney';
-      description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.';
+      icon: <Image className="w-8 h-8 text-white" />,
+      title: 'Midjourney',
+      description: 'State-of-the-art AI image generation with exceptional quality and artistic control for creative professionals.',
       features: [
-        'High-quality image generation';
-        'Artistic style control';
-        'Commercial usage rights';
-        'Community features';
-        'Advanced prompting system'];
-      pricing: '$10-30/month';
-      marketPrice: '$10-30/month';
-      website: 'https://midjourney.com';
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600';
-      textColor: 'text-purple-400';
-      gradient: 'from-purple-400 to-pink-500';
-      popular: true;
-      category: 'Image Generation'};
+        'High-quality image generationArtistic style control',
+        'Commercial usage rightsCommunity features',
+        'Advanced prompting system'],
+      pricing: '$10-30/month',
+      marketPrice: '$10-30/month',
+      website: 'https://midjourney.com',
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+      textColor: 'text-purple-400',
+      gradient: 'from-purple-400 to-pink-500',
+      popular: true,
+      category: 'Image Generation'},
     {
-      icon: <Code className="w-8 h-8 text-white" />;
-      title: 'GitHub Copilot';
-      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.';
+      icon: <Code className="w-8 h-8 text-white" />,
+      title: 'GitHub Copilot',
+      description: 'AI-powered code completion and generation that understands your codebase and suggests intelligent solutions.',
       features: [
-        'Intelligent code completion';
-        'Multi-language support';
-        'IDE integration';
-        'Code explanation';
-        'Security vulnerability detection'];
-      pricing: '$10/month';
-      marketPrice: '$10-20/month';
-      website: 'https://github.com/features/copilot';
-      color: 'bg-gradient-to-br from-gray-500 to-black';
-      textColor: 'text-gray-400';
-      gradient: 'from-gray-400 to-black';
-      popular: true;
-      category: 'Code Generation'};
+        'Intelligent code completionMulti-language support',
+        'IDE integrationCode explanation',
+        'Security vulnerability detection'],
+      pricing: '$10/month',
+      marketPrice: '$10-20/month',
+      website: 'https://github.com/features/copilot',
+      color: 'bg-gradient-to-br from-gray-500 to-black',
+      textColor: 'text-gray-400',
+      gradient: 'from-gray-400 to-black',
+      popular: true,
+      category: 'Code Generation'},
     {
-      icon: <Video className="w-8 h-8 text-white" />;
-      title: 'Runway ML';
-      description: 'Professional AI video generation and editing tools for filmmakersmarketersand content creators.';
+      icon: <Video className="w-8 h-8 text-white" />,
+      title: 'Runway ML',
+      description: 'Professional AI video generation and editing tools for filmmakersmarketersand content creators.',
       features: [
-        'AI video generation';
-        'Video editing tools';
-        'Motion tracking';
-        'Green screen removal';
-        'Professional workflows'];
-      pricing: '$12-76/month';
-      marketPrice: '$15-100/month';
-      website: 'https://runwayml.com';
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600';
-      textColor: 'text-blue-400';
-      gradient: 'from-blue-400 to-indigo-500';
-      popular: false;
-      category: 'Video Generation'};
+        'AI video generationVideo editing tools',
+        'Motion trackingGreen screen removal',
+        'Professional workflows'],
+      pricing: '$12-76/month',
+      marketPrice: '$15-100/month',
+      website: 'https://runwayml.com',
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
+      textColor: 'text-blue-400',
+      gradient: 'from-blue-400 to-indigo-500',
+      popular: false,
+      category: 'Video Generation'},
     {
-      icon: <MessageSquare className="w-8 h-8 text-white" />;
-      title: 'Claude Pro';
-      description: 'Anthropic\'s advanced AI assistant with superior reasoninganalysisand document processing capabilities.';
+      icon: <MessageSquare className="w-8 h-8 text-white" />,
+      title: 'Claude Pro',
+      description: 'Anthropic\'s advanced AI assistant with superior reasoninganalysisand document processing capabilities.',
       features: [
-        'Advanced reasoning abilities';
-        'Document analysis';
-        'Code generation';
-        'Creative writing';
-        'Research assistance'];
-      pricing: '$20/month';
-      marketPrice: '$20/month';
-      website: 'https://claude.ai';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
-      textColor: 'text-orange-400';
-      gradient: 'from-orange-400 to-red-500';
-      popular: false;
-      category: 'Conversational AI'};
+        'Advanced reasoning abilitiesDocument analysis',
+        'Code generationCreative writing',
+        'Research assistance'],
+      pricing: '$20/month',
+      marketPrice: '$20/month',
+      website: 'https://claude.ai',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      textColor: 'text-orange-400',
+      gradient: 'from-orange-400 to-red-500',
+      popular: false,
+      category: 'Conversational AI'},
     {
-      icon: <FileText className="w-8 h-8 text-white" />;
-      title: 'Jasper AI';
-      description: 'AI-powered content creation platform for marketerswritersand businesses with enterprise features.';
+      icon: <FileText className="w-8 h-8 text-white" />,
+      title: 'Jasper AI',
+      description: 'AI-powered content creation platform for marketerswritersand businesses with enterprise features.',
       features: [
-        'Content generation';
-        'Brand voice training';
-        'SEO optimization';
-        'Team collaboration';
-        'Enterprise integrations'];
-      pricing: '$39-125/month';
-      marketPrice: '$40-150/month';
-      website: 'https://jasper.ai';
-      color: 'bg-gradient-to-br from-teal-500 to-cyan-600';
-      textColor: 'text-teal-400';
-      gradient: 'from-teal-400 to-cyan-500';
-      popular: false;
+        'Content generationBrand voice training',
+        'SEO optimizationTeam collaboration',
+        'Enterprise integrations'],
+      pricing: '$39-125/month',
+      marketPrice: '$40-150/month',
+      website: 'https://jasper.ai',
+      color: 'bg-gradient-to-br from-teal-500 to-cyan-600',
+      textColor: 'text-teal-400',
+      gradient: 'from-teal-400 to-cyan-500',
+      popular: false,
       category: 'Content Creation'}
   ],
   const aiMarketStats = [
     {
-      title: 'AI Market Size';
-      value: '$136.6B';
-      growth: '+37% YoY';
-      description: 'Global AI market value in 2024'};
+      title: 'AI Market Size',
+      value: '$136.6B',
+      growth: '+37% YoY',
+      description: 'Global AI market value in 2024'},
     {
-      title: 'AI Adoption Rate';
-      value: '35%';
-      growth: '+12% YoY';
-      description: 'Businesses actively using AI tools'};
+      title: 'AI Adoption Rate',
+      value: '35%',
+      growth: '+12% YoY',
+      description: 'Businesses actively using AI tools'},
     {
-      title: 'AI Investment';
-      value: '$93.5B';
-      growth: '+28% YoY';
-      description: 'Global AI investment in 2024'};
+      title: 'AI Investment',
+      value: '$93.5B',
+      growth: '+28% YoY',
+      description: 'Global AI investment in 2024'},
     {
-      title: 'AI Productivity Gain';
-      value: '40%';
-      growth: '+15% YoY';
+      title: 'AI Productivity Gain',
+      value: '40%',
+      growth: '+15% YoY',
       description: 'Average productivity improvement'}
   ],
   const aiCategories = [
     {
-      name: 'Conversational AI';
-      description: 'Chatbotsvirtual assistantsand language models';
-      tools: 3;
-      avgPrice: '$20/month'};
+      name: 'Conversational AI',
+      description: 'Chatbotsvirtual assistantsand language models',
+      tools: 3,
+      avgPrice: '$20/month'},
     {
-      name: 'Image Generation';
-      description: 'AI-powered artdesignand visual content creation';
-      tools: 1;
-      avgPrice: '$20/month'};
+      name: 'Image Generation',
+      description: 'AI-powered artdesignand visual content creation',
+      tools: 1,
+      avgPrice: '$20/month'},
     {
-      name: 'Code Generation';
-      description: 'AI-assisted programming and development tools';
-      tools: 1;
-      avgPrice: '$10/month'};
+      name: 'Code Generation',
+      description: 'AI-assisted programming and development tools',
+      tools: 1,
+      avgPrice: '$10/month'},
     {
-      name: 'Video Generation';
-      description: 'AI video creation and editing tools';
-      tools: 1;
-      avgPrice: '$44/month'};
+      name: 'Video Generation',
+      description: 'AI video creation and editing tools',
+      tools: 1,
+      avgPrice: '$44/month'},
     {
-      name: 'Content Creation';
-      description: 'AI-powered writing and content generation';
-      tools: 1;
+      name: 'Content Creation',
+      description: 'AI-powered writing and content generation',
+      tools: 1,
       avgPrice: '$82/month'}
   ],
   return (

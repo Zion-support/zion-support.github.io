@@ -19,5 +19,5 @@ const AiPoweredMarketplacesTheFutureOfDigitalCommerceChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat;
+    </div>)},
+export default AiPoweredMarketplacesTheFutureOfDigitalCommerceChat,

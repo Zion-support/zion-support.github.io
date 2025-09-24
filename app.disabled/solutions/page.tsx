@@ -1,69 +1,64 @@
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'Solutions - Zion Tech Group';
-  description: 'Comprehensive technology solutions for your business needs.';
-  keywords: 'solutions, technology, business, AI, automation';
-};
+  title: 'Solutions - Zion Tech Group',
+  description: 'Comprehensive technology solutions for your business needs.',
+  keywords: 'solutions, technology, business, AI, automation',
+},
 export default function SolutionsPage() {
   const solutions = [
     {
-      title: 'AI-Powered Automation';
+      title: 'AI-Powered Automation',
       description:,
-        'Streamline your operations with intelligent automation solutions.';
-      icon: '🤖';
+        'Streamline your operations with intelligent automation solutions.',
+      icon: '🤖',
       features: [
-        'Process Automation';
-        'Intelligent Workflows';
-        'Predictive Analytics';
-      ];
-    };
+        'Process AutomationIntelligent Workflows',
+        'Predictive Analytics',
+      ]
+    },
     {
-      title: 'Micro SaaS Development';
-      description: 'Build and scale your software-as-a-service business.';
-      icon: '💼';
+      title: 'Micro SaaS Development',
+      description: 'Build and scale your software-as-a-service business.',
+      icon: '💼',
       features: [
-        'Custom SaaS Solutions';
-        'Scalable Architecture';
-        'Revenue Optimization';
-      ];
-    };
+        'Custom SaaS SolutionsScalable Architecture',
+        'Revenue Optimization',
+      ]
+    },
     {
-      title: 'Enterprise IT Services';
+      title: 'Enterprise IT Services',
       description:,
-        'Complete IT infrastructure and support for large organizations.';
-      icon: '🏢';
+        'Complete IT infrastructure and support for large organizations.',
+      icon: '🏢',
       features: [
-        'Infrastructure Management';
-        'Security Solutions';
-        '24/7 Support';
-      ];
-    };
+        'Infrastructure ManagementSecurity Solutions',
+        '24/7 Support',
+      ]
+    },
     {
-      title: 'Data Analytics';
-      description: 'Transform your data into actionable business insights.';
-      icon: '📊';
+      title: 'Data Analytics',
+      description: 'Transform your data into actionable business insights.',
+      icon: '📊',
       features: [
-        'Data Visualization';
-        'Predictive Modeling';
-        'Business Intelligence';
-      ];
-    };
+        'Data VisualizationPredictive Modeling',
+        'Business Intelligence',
+      ]
+    },
     {
-      title: 'Cloud Migration';
-      description: 'Seamlessly move your infrastructure to the cloud.';
-      icon: '☁️';
-      features: ['Cloud Strategy', 'Migration Planning', 'Cost Optimization'];
-    };
+      title: 'Cloud Migration',
+      description: 'Seamlessly move your infrastructure to the cloud.',
+      icon: '☁️',
+      features: ['Cloud StrategyMigration Planning', 'Cost Optimization'],
+    },
     {
-      title: 'Cybersecurity';
-      description: 'Protect your business with advanced security solutions.';
-      icon: '🔒';
+      title: 'Cybersecurity',
+      description: 'Protect your business with advanced security solutions.',
+      icon: '🔒',
       features: [
-        'Threat Detection';
-        'Security Audits';
-        'Compliance Management';
-      ];
-    };
+        'Threat DetectionSecurity Audits',
+        'Compliance Management',
+      ]
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 via-indigo-50 to-purple-50'>,

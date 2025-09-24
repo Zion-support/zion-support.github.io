@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Emerging Technologies | Zion Tech Group';
+  title: 'Emerging Technologies | Zion Tech Group',
   description:,
-    'Cutting-edge solutions in Quantum Computing, IoT, AR/VR, Edge Computing, and other emerging technologies for next-generation applications.';
-};
+    'Cutting-edge solutions in Quantum Computing, IoT, AR/VR, Edge Computing, and other emerging technologies for next-generation applications.',
+},
 export default function EmergingTechPage() {
   return (
     <div className='animate-fade-in'>,
@@ -26,12 +26,9 @@ export default function EmergingTechPage() {
               title='Quantum Computing',
               description='Harness the power of quantum mechanics for complex problem solving',
               features={[
-                'Quantum algorithm development';
-                'Quantum simulation';
-                'Quantum machine learning';
-                'Quantum cryptography';
-                'Quantum optimization';
-                'Hardware integration';
+                'Quantum algorithm developmentQuantum simulation',
+                'Quantum machine learningQuantum cryptography',
+                'Quantum optimizationHardware integration',
               ]}
               price='Starting at $50k',
               icon='⚛️',
@@ -40,12 +37,9 @@ export default function EmergingTechPage() {
               title='Internet of Things (IoT)',
               description='Connect and manage smart devices across your ecosystem',
               features={[
-                'IoT device development';
-                'Sensor integration';
-                'Edge computing';
-                'Real-time analytics';
-                'Device management';
-                'Security protocols';
+                'IoT device developmentSensor integration',
+                'Edge computingReal-time analytics',
+                'Device managementSecurity protocols',
               ]}
               price='Starting at $20k',
               icon='🌐',
@@ -54,12 +48,9 @@ export default function EmergingTechPage() {
               title='Augmented & Virtual Reality',
               description='Immersive experiences that transform user interaction',
               features={[
-                'AR/VR application development';
-                '3D modeling';
-                'Spatial computing';
-                'Gesture recognition';
-                'Cross-platform deployment';
-                'Performance optimization';
+                'AR/VR application development3D modeling',
+                'Spatial computingGesture recognition',
+                'Cross-platform deploymentPerformance optimization',
               ]}
               price='Starting at $25k',
               icon='🥽',
@@ -68,12 +59,9 @@ export default function EmergingTechPage() {
               title='Edge Computing',
               description='Process data closer to the source for faster, more efficient operations',
               features={[
-                'Edge infrastructure design';
-                'Distributed processing';
-                'Real-time analytics';
-                'Low-latency applications';
-                'Edge AI deployment';
-                'Network optimization';
+                'Edge infrastructure designDistributed processing',
+                'Real-time analyticsLow-latency applications',
+                'Edge AI deploymentNetwork optimization',
               ]}
               price='Starting at $18k',
               icon='⚡',
@@ -82,12 +70,9 @@ export default function EmergingTechPage() {
               title='5G & Network Innovation',
               description='Next-generation connectivity solutions for ultra-fast communication',
               features={[
-                '5G network design';
-                'Network slicing';
-                'Ultra-low latency';
-                'Massive IoT support';
-                'Edge integration';
-                'Performance optimization';
+                '5G network designNetwork slicing',
+                'Ultra-low latencyMassive IoT support',
+                'Edge integrationPerformance optimization',
               ]}
               price='Starting at $30k',
               icon='📡',
@@ -96,12 +81,9 @@ export default function EmergingTechPage() {
               title='Digital Twins',
               description='Create virtual replicas of physical systems for simulation and optimization',
               features={[
-                'Digital twin development';
-                'Real-time synchronization';
-                'Predictive modeling';
-                'Simulation environments';
-                'Data integration';
-                'Analytics dashboards';
+                'Digital twin developmentReal-time synchronization',
+                'Predictive modelingSimulation environments',
+                'Data integrationAnalytics dashboards',
               ]}
               price='Starting at $35k',
               icon='🔄',
@@ -117,12 +99,9 @@ export default function EmergingTechPage() {
               title='Blockchain & Web3',
               description='Decentralized solutions for the next generation of the internet',
               features={[
-                'Smart contract development';
-                'DeFi protocols';
-                'NFT marketplaces';
-                'DAO governance';
-                'Cross-chain integration';
-                'Security auditing';
+                'Smart contract developmentDeFi protocols',
+                'NFT marketplacesDAO governance',
+                'Cross-chain integrationSecurity auditing',
               ]}
               price='Starting at $22k',
               icon='⛓️',
@@ -131,12 +110,9 @@ export default function EmergingTechPage() {
               title='Computer Vision',
               description='Advanced image and video processing with AI capabilities',
               features={[
-                'Object detection';
-                'Facial recognition';
-                'Image classification';
-                'Video analytics';
-                'Real-time processing';
-                'Custom model training';
+                'Object detectionFacial recognition',
+                'Image classificationVideo analytics',
+                'Real-time processingCustom model training',
               ]}
               price='Starting at $16k',
               icon='👁️',
@@ -145,12 +121,9 @@ export default function EmergingTechPage() {
               title='Natural Language Processing',
               description='Intelligent text and speech processing solutions',
               features={[
-                'Text analysis';
-                'Sentiment analysis';
-                'Language translation';
-                'Speech recognition';
-                'Chatbot development';
-                'Content generation';
+                'Text analysisSentiment analysis',
+                'Language translationSpeech recognition',
+                'Chatbot developmentContent generation',
               ]}
               price='Starting at $14k',
               icon='🗣️',
@@ -159,12 +132,9 @@ export default function EmergingTechPage() {
               title='Robotics & Automation',
               description='Intelligent robots and automated systems for various industries',
               features={[
-                'Robot programming';
-                'Automation workflows';
-                'Sensor integration';
-                'Machine learning';
-                'Safety systems';
-                'Human-robot interaction';
+                'Robot programmingAutomation workflows',
+                'Sensor integrationMachine learning',
+                'Safety systemsHuman-robot interaction',
               ]}
               price='Starting at $40k',
               icon='🤖',
@@ -173,12 +143,9 @@ export default function EmergingTechPage() {
               title='Biometric Systems',
               description='Secure authentication and identification solutions',
               features={[
-                'Fingerprint recognition';
-                'Iris scanning';
-                'Voice authentication';
-                'Behavioral analysis';
-                'Multi-modal systems';
-                'Privacy protection';
+                'Fingerprint recognitionIris scanning',
+                'Voice authenticationBehavioral analysis',
+                'Multi-modal systemsPrivacy protection',
               ]}
               price='Starting at $19k',
               icon='🔐',
@@ -187,12 +154,9 @@ export default function EmergingTechPage() {
               title='Green Technology',
               description='Sustainable and environmentally friendly technology solutions',
               features={[
-                'Energy optimization';
-                'Carbon tracking';
-                'Sustainable computing';
-                'Green data centers';
-                'Renewable integration';
-                'Environmental monitoring';
+                'Energy optimizationCarbon tracking',
+                'Sustainable computingGreen data centers',
+                'Renewable integrationEnvironmental monitoring',
               ]}
               price='Starting at $17k',
               icon='🌱',
@@ -205,11 +169,11 @@ export default function EmergingTechPage() {
     </div>)}
 ,
 function ServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -248,11 +212,9 @@ function Pricing() {
           price='$8k–$15k',
           duration='2–3 weeks',
           features={[
-            'Emerging tech evaluation';
-            'ROI analysis';
-            'Implementation roadmap';
-            'Risk assessment';
-            'Technology selection';
+            'Emerging tech evaluationROI analysis',
+            'Implementation roadmapRisk assessment',
+            'Technology selection',
           ]}
           popular={false}
         />,
@@ -261,11 +223,9 @@ function Pricing() {
           price='$25k–$60k',
           duration='6–12 weeks',
           features={[
-            'MVP development';
-            'Technology validation';
-            'Performance testing';
-            'User feedback';
-            'Scalability planning';
+            'MVP developmentTechnology validation',
+            'Performance testingUser feedback',
+            'Scalability planning',
           ]}
           popular={true}
         />,
@@ -274,11 +234,9 @@ function Pricing() {
           price='$75k+',
           duration='12–24 weeks',
           features={[
-            'Production deployment';
-            'Integration services';
-            'Team training';
-            'Ongoing support';
-            'Performance optimization';
+            'Production deploymentIntegration services',
+            'Team trainingOngoing support',
+            'Performance optimization',
           ]}
           popular={false}
         />,
@@ -286,11 +244,11 @@ function Pricing() {
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

@@ -1,9 +1,9 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain, Rocket, Atom, Cpu, Target;
-  ArrowRight, Star, Zap, Users, Award, Globe, Search;
-  ExternalLink, Sparkles, Eye;
+  Brain, Rocket, Atom, Cpu, Target,
+  ArrowRight, Star, Zap, Users, Award, Globe, Search,
+  ExternalLink, Sparkles, Eye,
   Clock, CheckCircle, TrendingUp, DollarSign, Phone} from 'lucide-react',
 // Import service data,
 import { advancedFuturisticMicroSaasServices20o25 } from '../../data/20o25-advanced-futuristic-micro-saas',
@@ -22,22 +22,22 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
   const [viewMode, setViewMode] = useState('grid'),
   // Combine all services,
   const allServices = [
-    ...advancedFuturisticMicroSaasServices20o25;
-    ...cuttingEdgeAIInnovations20o25;
-    ...innovativeRealMicroSaasServices20o25;
-    ...innovativeAIServicesEnhanced20o25;
-    ...innovativeITServicesEnhanced20o25;
-    ...emergingTechServicesEnhanced20o25;
-    ...advancedAIAutomationServices;
-    ...advancedITInfrastructureServices20o25;
+    ...advancedFuturisticMicroSaasServices20o25,
+    ...cuttingEdgeAIInnovations20o25,
+    ...innovativeRealMicroSaasServices20o25,
+    ...innovativeAIServicesEnhanced20o25,
+    ...innovativeITServicesEnhanced20o25,
+    ...emergingTechServicesEnhanced20o25,
+    ...advancedAIAutomationServices,
+    ...advancedITInfrastructureServices20o25,
     ...innovativeBusinessSolutions20o25],
   // Categories,
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"  />, count: allServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length };
-    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length };
-    { id: 'it', name: 'IT & Infrastructure', icon: <Cpu className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length };
-    { id: 'saas', name: 'Micro SAAS', icon: <Rocket className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('SAAS') || s.category.includes('Business')).length };
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"  />, count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
+    { id: 'quantum', name: 'Quantum & Emerging Tech', icon: <Atom className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
+    { id: 'it', name: 'IT & Infrastructure', icon: <Cpu className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: 'saas', name: 'Micro SAAS', icon: <Rocket className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('SAAS') || s.category.includes('Business')).length },
     { id: 'automation', name: 'Automation', icon: <Zap className="w-5 h-5"  />, count: allServices.filter(s => s.category.includes('Automation')).length }
   ],
   // Filter and sort services,
@@ -75,10 +75,10 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
           return 0}
     }),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <section className="relative bg-black text-white py-20 overflow-hidden">,
       {/* Background effects */}
@@ -90,15 +90,15 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
           className="absolute inset-0 opacity-5",
           style={{
             backgroundImage: `,
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
-            `;
+            `,
             backgroundSize: '20o0px 20o0px'}}
           animate={{
-            backgroundPosition: ['0px 0px', '20o0px 20o0px']}}
+            backgroundPosition: ['0px 0px20o0px 20o0px']}}
           transition={{
-            duration: 40;
-            repeat: Infinity;
+            duration: 40,
+            repeat: Infinity,
             ease: "linear"}}
          />,
       </div>,
@@ -132,9 +132,9 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-16">,
           {[
-            { value: allServices.length.toString(), label: 'Total Services', icon: <Target className="w-6 h-6"  />, color: 'text-cyan-40o0' };
-            { value: '50o0+', label: 'Happy Clients', icon: <Users className="w-6 h-6"  />, color: 'text-purple-40o0' };
-            { value: '99.9%', label: 'Success Rate', icon: <Award className="w-6 h-6"  />, color: 'text-green-40o0' };
+            { value: allServices.length.toString(), label: 'Total Services', icon: <Target className="w-6 h-6"  />, color: 'text-cyan-40o0' },
+            { value: '50o0+', label: 'Happy Clients', icon: <Users className="w-6 h-6"  />, color: 'text-purple-40o0' },
+            { value: '99.9%', label: 'Success Rate', icon: <Award className="w-6 h-6"  />, color: 'text-green-40o0' },
             { value: '30o0%', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6"  />, color: 'text-pink-40o0' }
           ].map((stat, index) => (
             <motion.div,
@@ -410,5 +410,5 @@ const UltraAdvancedServicesShowcase20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default UltraAdvancedServicesShowcase20o25;
+    </section>)},
+export default UltraAdvancedServicesShowcase20o25,

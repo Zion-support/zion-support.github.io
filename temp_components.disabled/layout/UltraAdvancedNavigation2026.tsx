@@ -2,22 +2,22 @@ import React, { useState, useEffect, useRef } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  User;
-  Settings;
-  LogOut;
-  Rocket;
-  Brain;
-  Shield;
-  Cloud;
-  Zap;
-  Star;
-  Globe;
-  Phone;
-  Mail;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Rocket,
+  Brain,
+  Shield,
+  Cloud,
+  Zap,
+  Star,
+  Globe,
+  Phone,
+  Mail,
   MapPin} from 'lucide-react',
 interface UltraAdvancedNavigation20o26Props {
   className?: string}
@@ -31,75 +31,75 @@ const UltraAdvancedNavigation20o26: React.FC<UltraAdvancedNavigation20o26Props> 
   const navRef = useRef<HTMLDivElement>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setActiveDropdown(null)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const navigationItems = [
     {
-      name: 'Services';
-      href: '/services';
-      icon: Rocket;
+      name: 'Services',
+      href: '/services',
+      icon: Rocket,
       dropdown: [
-        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: Brain, color: 'from-blue-50o0 to-purple-60o0' };
-        { name: 'Quantum Computing', href: '/services?category=quantum', icon: Zap, color: 'from-purple-50o0 to-pink-60o0' };
-        { name: 'Enterprise IT', href: '/services?category=enterprise', icon: Shield, color: 'from-green-50o0 to-blue-60o0' };
-        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: Cloud, color: 'from-orange-50o0 to-red-60o0' };
+        { name: 'AI & Machine Learning', href: '/services?category=ai', icon: Brain, color: 'from-blue-50o0 to-purple-60o0' },
+        { name: 'Quantum Computing', href: '/services?category=quantum', icon: Zap, color: 'from-purple-50o0 to-pink-60o0' },
+        { name: 'Enterprise IT', href: '/services?category=enterprise', icon: Shield, color: 'from-green-50o0 to-blue-60o0' },
+        { name: 'Micro SaaS', href: '/services?category=micro-saas', icon: Cloud, color: 'from-orange-50o0 to-red-60o0' },
         { name: 'Emerging Tech', href: '/services?category=emerging', icon: Star, color: 'from-indigo-50o0 to-purple-60o0' }
-      ]};
+      ]},
     {
-      name: 'Solutions';
-      href: '/solutions';
-      icon: Shield;
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Shield,
       dropdown: [
-        { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap, color: 'from-purple-50o0 to-pink-60o0' };
-        { name: 'Cloud Infrastructure', href: '/solutions/cloud-infrastructure', icon: Cloud, color: 'from-blue-50o0 to-indigo-60o0' };
-        { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-60o0' };
+        { name: 'Digital Transformation', href: '/solutions/digital-transformation', icon: Zap, color: 'from-purple-50o0 to-pink-60o0' },
+        { name: 'Cloud Infrastructure', href: '/solutions/cloud-infrastructure', icon: Cloud, color: 'from-blue-50o0 to-indigo-60o0' },
+        { name: 'Cybersecurity', href: '/solutions/cybersecurity', icon: Shield, color: 'from-red-50o0 to-orange-60o0' },
         { name: 'Data Analytics', href: '/solutions/data-analytics', icon: Brain, color: 'from-green-50o0 to-blue-60o0' }
-      ]};
+      ]},
     {
-      name: 'Pricing';
-      href: '/pricing';
-      icon: Star};
+      name: 'Pricing',
+      href: '/pricing',
+      icon: Star},
     {
-      name: 'Resources';
-      href: '/resources';
-      icon: Globe;
+      name: 'Resources',
+      href: '/resources',
+      icon: Globe,
       dropdown: [
-        { name: 'Blog', href: '/blog', icon: Brain, color: 'from-blue-50o0 to-purple-60o0' };
-        { name: 'Case Studies', href: '/case-studies', icon: Star, color: 'from-green-50o0 to-blue-60o0' };
-        { name: 'Documentation', href: '/docs', icon: Shield, color: 'from-red-50o0 to-orange-60o0' };
+        { name: 'Blog', href: '/blog', icon: Brain, color: 'from-blue-50o0 to-purple-60o0' },
+        { name: 'Case Studies', href: '/case-studies', icon: Star, color: 'from-green-50o0 to-blue-60o0' },
+        { name: 'Documentation', href: '/docs', icon: Shield, color: 'from-red-50o0 to-orange-60o0' },
         { name: 'API Reference', href: '/api', icon: Zap, color: 'from-purple-50o0 to-pink-60o0' }
-      ]};
+      ]},
     {
-      name: 'Company';
-      href: '/about';
-      icon: User;
+      name: 'Company',
+      href: '/about',
+      icon: User,
       dropdown: [
-        { name: 'About Us', href: '/about', icon: User, color: 'from-blue-50o0 to-purple-60o0' };
-        { name: 'Careers', href: '/careers', icon: Star, color: 'from-green-50o0 to-blue-60o0' };
-        { name: 'Contact', href: '/contact', icon: Phone, color: 'from-red-50o0 to-orange-60o0' };
+        { name: 'About Us', href: '/about', icon: User, color: 'from-blue-50o0 to-purple-60o0' },
+        { name: 'Careers', href: '/careers', icon: Star, color: 'from-green-50o0 to-blue-60o0' },
+        { name: 'Contact', href: '/contact', icon: Phone, color: 'from-red-50o0 to-orange-60o0' },
         { name: 'News', href: '/news', icon: Globe, color: 'from-indigo-50o0 to-purple-60o0' }
       ]}
   ],
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     if (searchQuery.trim()) {
       window.location.href = `/services?search=${encodeURIComponent(searchQuery)}`}
-  };
+  },
   return (
     <nav
       ref={navRef}
@@ -348,5 +348,5 @@ const UltraAdvancedNavigation20o26: React.FC<UltraAdvancedNavigation20o26Props> 
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraAdvancedNavigation20o26;
+    </nav>)},
+export default UltraAdvancedNavigation20o26,

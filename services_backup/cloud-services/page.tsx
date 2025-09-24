@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Cloud Services | Zion Tech Group';
+  title: 'Cloud Services | Zion Tech Group',
   description:,
-    'Comprehensive cloud solutions including migration, architecture, optimization, and management. AWS, Azure, GCP expertise with cost optimization and security.';
-};
+    'Comprehensive cloud solutions including migration, architecture, optimization, and management. AWS, Azure, GCP expertise with cost optimization and security.',
+},
 export default function CloudServicesPage() {
   return (
     <div className='animate-fade-in'>,
@@ -25,12 +25,9 @@ export default function CloudServicesPage() {
             title='Cloud Migration & Strategy',
             description='Complete cloud migration planning and execution across all major platforms',
             features={[
-              'Migration assessment';
-              'Cloud strategy';
-              'Data migration';
-              'Application migration';
-              'Testing & validation';
-              'Go-live support';
+              'Migration assessmentCloud strategy',
+              'Data migrationApplication migration',
+              'Testing & validationGo-live support',
             ]}
             price='$25k–$10o0k',
             icon='🚀',
@@ -39,12 +36,9 @@ export default function CloudServicesPage() {
             title='AWS Cloud Solutions',
             description='Amazon Web Services implementation, optimization, and management',
             features={[
-              'EC2 & ECS setup';
-              'RDS & DynamoDB';
-              'Lambda functions';
-              'CloudFormation';
-              'Cost optimization';
-              'Security hardening';
+              'EC2 & ECS setupRDS & DynamoDB',
+              'Lambda functionsCloudFormation',
+              'Cost optimizationSecurity hardening',
             ]}
             price='$20k–$80k',
             icon='☁️',
@@ -53,12 +47,9 @@ export default function CloudServicesPage() {
             title='Microsoft Azure Services',
             description='Azure cloud architecture, development, and management solutions',
             features={[
-              'Azure VMs & AKS';
-              'Azure SQL & CosmosDB';
-              'Azure Functions';
-              'ARM templates';
-              'DevOps integration';
-              'Hybrid cloud';
+              'Azure VMs & AKSAzure SQL & CosmosDB',
+              'Azure FunctionsARM templates',
+              'DevOps integrationHybrid cloud',
             ]}
             price='$22k–$85k',
             icon='🔵',
@@ -67,12 +58,9 @@ export default function CloudServicesPage() {
             title='Google Cloud Platform',
             description='GCP implementation and optimization for scalable applications',
             features={[
-              'Compute Engine & GKE';
-              'Cloud SQL & Firestore';
-              'Cloud Functions';
-              'Terraform';
-              'BigQuery';
-              'AI/ML services';
+              'Compute Engine & GKECloud SQL & Firestore',
+              'Cloud FunctionsTerraform',
+              'BigQueryAI/ML services',
             ]}
             price='$20k–$75k',
             icon='🔍',
@@ -81,12 +69,9 @@ export default function CloudServicesPage() {
             title='Multi-Cloud Architecture',
             description='Hybrid and multi-cloud solutions for maximum flexibility and resilience',
             features={[
-              'Multi-cloud strategy';
-              'Hybrid cloud design';
-              'Cross-cloud migration';
-              'Disaster recovery';
-              'Cost optimization';
-              'Governance';
+              'Multi-cloud strategyHybrid cloud design',
+              'Cross-cloud migrationDisaster recovery',
+              'Cost optimizationGovernance',
             ]}
             price='$35k–$120k',
             icon='🌐',
@@ -95,12 +80,9 @@ export default function CloudServicesPage() {
             title='Cloud Security & Compliance',
             description='Comprehensive cloud security implementation and compliance management',
             features={[
-              'Security architecture';
-              'Identity & access management';
-              'Data encryption';
-              'Compliance auditing';
-              'Threat detection';
-              'Security monitoring';
+              'Security architectureIdentity & access management',
+              'Data encryptionCompliance auditing',
+              'Threat detectionSecurity monitoring',
             ]}
             price='$30k–$90k',
             icon='🔒',
@@ -109,12 +91,9 @@ export default function CloudServicesPage() {
             title='Cloud Cost Optimization',
             description='Intelligent cloud spending optimization and cost management',
             features={[
-              'Cost analysis';
-              'Resource optimization';
-              'Reserved instances';
-              'Auto-scaling';
-              'Budget alerts';
-              'Cost forecasting';
+              'Cost analysisResource optimization',
+              'Reserved instancesAuto-scaling',
+              'Budget alertsCost forecasting',
             ]}
             price='$15k–$45k',
             icon='💰',
@@ -123,12 +102,9 @@ export default function CloudServicesPage() {
             title='Serverless Architecture',
             description='Serverless application development and deployment',
             features={[
-              'Lambda/Azure Functions';
-              'API Gateway';
-              'Event-driven architecture';
-              'Microservices';
-              'Auto-scaling';
-              'Cost optimization';
+              'Lambda/Azure FunctionsAPI Gateway',
+              'Event-driven architectureMicroservices',
+              'Auto-scalingCost optimization',
             ]}
             price='$18k–$60k',
             icon='⚡',
@@ -137,12 +113,9 @@ export default function CloudServicesPage() {
             title='Cloud DevOps & CI/CD',
             description='Cloud-native DevOps implementation with automated pipelines',
             features={[
-              'CI/CD pipelines';
-              'Infrastructure as Code';
-              'Container orchestration';
-              'Monitoring & logging';
-              'Deployment automation';
-              'GitOps';
+              'CI/CD pipelinesInfrastructure as Code',
+              'Container orchestrationMonitoring & logging',
+              'Deployment automationGitOps',
             ]}
             price='$25k–$70k',
             icon='🔄',
@@ -157,34 +130,25 @@ export default function CloudServicesPage() {
           <Item
             title='Cloud Platforms',
             details={[
-              'Amazon Web Services (AWS) - EC2, S3, Lambda, RDS, ECS, EKS';
-              'Microsoft Azure - VMs, App Service, SQL Database, AKS, Functions';
-              'Google Cloud Platform - Compute Engine, Cloud SQL, GKE, BigQuery';
-              'Multi-cloud and hybrid cloud architecture design';
-              'Cloud platform selection and migration strategy';
-              'Cloud-native application development and deployment';
+              'Amazon Web Services (AWS) - EC2, S3, Lambda, RDS, ECS, EKSMicrosoft Azure - VMs, App Service, SQL Database, AKS, Functions',
+              'Google Cloud Platform - Compute Engine, Cloud SQL, GKE, BigQueryMulti-cloud and hybrid cloud architecture design',
+              'Cloud platform selection and migration strategyCloud-native application development and deployment',
             ]}
           />,
           <Item
             title='Cloud Infrastructure',
             details={[
-              'Virtual machines and container orchestration (Kubernetes)';
-              'Serverless computing and function-as-a-service';
-              'Database services and data warehousing solutions';
-              'Content delivery networks (CDN) and edge computing';
-              'Load balancing and auto-scaling configuration';
-              'Disaster recovery and backup solutions';
+              'Virtual machines and container orchestration (Kubernetes)Serverless computing and function-as-a-service',
+              'Database services and data warehousing solutionsContent delivery networks (CDN) and edge computing',
+              'Load balancing and auto-scaling configurationDisaster recovery and backup solutions',
             ]}
           />,
           <Item
             title='Cloud Management',
             details={[
-              'Cloud cost optimization and resource management';
-              'Security implementation and compliance management';
-              'Monitoring, logging, and observability solutions';
-              'DevOps and CI/CD pipeline implementation';
-              'Infrastructure as Code (Terraform, CloudFormation)';
-              '24/7 cloud support and managed services';
+              'Cloud cost optimization and resource managementSecurity implementation and compliance management',
+              'Monitoring, logging, and observability solutionsDevOps and CI/CD pipeline implementation',
+              'Infrastructure as Code (Terraform, CloudFormation)24/7 cloud support and managed services',
             ]}
           />,
         </div>,
@@ -194,11 +158,11 @@ export default function CloudServicesPage() {
     </div>)}
 ,
 function CloudServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -245,12 +209,9 @@ function Pricing() {
           price='$8k–$20k',
           duration='2–3 weeks',
           features={[
-            'Current infrastructure analysis';
-            'Cloud readiness assessment';
-            'Cost analysis and optimization';
-            'Security and compliance review';
-            'Migration strategy development';
-            'Technology recommendations';
+            'Current infrastructure analysisCloud readiness assessment',
+            'Cost analysis and optimizationSecurity and compliance review',
+            'Migration strategy developmentTechnology recommendations',
           ]}
         />,
         <Plan
@@ -258,12 +219,9 @@ function Pricing() {
           price='$40k–$150k',
           duration='8–16 weeks',
           features={[
-            'Complete cloud migration';
-            'Application modernization';
-            'Data migration and validation';
-            'Security implementation';
-            'Performance optimization';
-            'Training and documentation';
+            'Complete cloud migrationApplication modernization',
+            'Data migration and validationSecurity implementation',
+            'Performance optimizationTraining and documentation',
           ]}
         />,
         <Plan
@@ -271,22 +229,19 @@ function Pricing() {
           price='$5k–$15k/mo',
           duration='Ongoing',
           features={[
-            '24/7 cloud monitoring';
-            'Performance optimization';
-            'Cost management';
-            'Security updates';
-            'Backup and disaster recovery';
-            'Monthly health reports';
+            '24/7 cloud monitoringPerformance optimization',
+            'Cost managementSecurity updates',
+            'Backup and disaster recoveryMonthly health reports',
           ]}
         />,
       </div>,
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

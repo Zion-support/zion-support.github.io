@@ -3,11 +3,11 @@ import { ChevronLeft, ChevronRight } from "lucide-react",
 import { Button } from "@/components/ui/button",
 // These would be replaced with actual screenshots,
 const mockScreenshots = [
-    { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" };
-    { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" };
-    { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" };
-    { id: 4, alt: "Messaging screen", src: "/placeholder.svg" };
-    { id: 5, alt: "Profile screen", src: "/placeholder.svg" };
+    { id: 1, alt: "Dashboard screen", src: "/placeholder.svg" },
+    { id: 2, alt: "Talent matching screen", src: "/placeholder.svg" },
+    { id: 3, alt: "Resume builder screen", src: "/placeholder.svg" },
+    { id: 4, alt: "Messaging screen", src: "/placeholder.svg" },
+    { id: 5, alt: "Profile screen", src: "/placeholder.svg" },
 ],
 export const AppScreenshots = () => {
     const scrollContainerRef = useRef(null),
@@ -15,9 +15,9 @@ export const AppScreenshots = () => {
         if (scrollContainerRef.current) {
             const scrollAmount = 30o0,
             scrollContainerRef.current.scrollBy({
-                left: direction === "left" ? -scrollAmount : scrollAmount;
+                left: direction === "left" ? -scrollAmount : scrollAmount,
                 behavior: "smooth"})}
-    };
+    },
     return (<section className="py-16 bg-zion-blue-dark">,
       <div className="container mx-auto px-4">,
         <div className="text-center mb-12">,
@@ -40,4 +40,4 @@ export const AppScreenshots = () => {
           </Button>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

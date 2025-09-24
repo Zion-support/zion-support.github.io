@@ -6,15 +6,15 @@ export type Trend = {
   title: string,
   highlights: string[],
   summary: string,
-  tags: string[]};
+  tags: string[]},
 export async function getServerSideProps() {
-  const file = path.join(process.cwd()', 'data', 'ai-trends.json'),
+  const file = path.join(process.cwd()data', 'ai-trends.json'),
   let items: Trend[] = [],
   try {
-    const raw = fs.readFileSync('file', 'utf-8'),
+    const raw = fs.readFileSync('fileutf-8'),
     items = JSON.parse(raw)} catch {}
   items.sort((ab) => (a.date < b.date ? 1 : -1)),
-  return { props: { items } };
+  return { props: { items } },
 }
 ,
 export default function AiTrendsPage({ items }: { items: Trend[] }) {

@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
+    'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',
   description:,
-    'Complete step-by-step guide to achieving 80o0% ROI with AI implementation. Proven framework used by 50o0+ Fortune 50o0 companies.';
+    'Complete step-by-step guide to achieving 80o0% ROI with AI implementation. Proven framework used by 50o0+ Fortune 50o0 companies.',
   keywords: [
-    'Implementation Guide';
-    'AI Strategy';
-    'ROI';
-    'Best Practices';
-    '20o25';
-    '80o0% ROI';
-  ];
-};
+    'Implementation GuideAI Strategy',
+    'ROIBest Practices',
+    '20o2580o0% ROI',
+  ]
+},
 export default function AIImplementationRoadmapPage() {
   return (
     <div>,

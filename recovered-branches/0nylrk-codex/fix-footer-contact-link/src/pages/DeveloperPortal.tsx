@@ -1,11 +1,11 @@
-import { useState } from "react";
-import { useAuth } from "@/hooks/useAuth";
+import { useState } from "react",
+import { useAuth } from "@/hooks/useAuth",
 import {
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { ApiKeysManager } from "@/components/developers/ApiKeysManager";
-import { WebhooksManager } from "@/components/developers/WebhooksManager";
-import { ApiDocumentation } from "@/components/developers/ApiDocumentation";
-import { ApiLogs } from "@/components/developers/ApiLogs";
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { ApiKeysManager } from "@/components/developers/ApiKeysManager",
+import { WebhooksManager } from "@/components/developers/WebhooksManager",
+import { ApiDocumentation } from "@/components/developers/ApiDocumentation",
+import { ApiLogs } from "@/components/developers/ApiLogs",
 import { useState } from './react',
 import { use_auth } from '@/hooks / use_auth',
 import { BookOpen, Code, Key, List, LucideIcon, Terminal, Webhook } from './lucide-react',
@@ -14,13 +14,13 @@ import { ApiKeysManager } from '@/components / developers / ApiKeysManager',
 import { WebhooksManager } from '@/components / developers / WebhooksManager',
 import { ApiDocumentation } from '@/components / developers / ApiDocumentation',
 import { ApiLogs } from '@/components / developers / ApiLogs',
-  BookOpen;
-  Code;
-  Key;
-  List;
-  LucideIcon;
-  Terminal;
-  Webhook} from "lucide-react";
+  BookOpen,
+  Code,
+  Key,
+  List,
+  LucideIcon,
+  Terminal,
+  Webhook} from "lucide-react",
 interface TabDefinition {
   id: string,
   label: string,
@@ -29,8 +29,8 @@ interface TabDefinition {
 export function DeveloperPortal() {
   const { user } = useAuth(),
   const [activeTab, setActiveTab] = useState<string>("documentation"),
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
   // Define the tabs,
   const tabs: TabDefinition[] = [
     { id: "documentation", label: "Documentation", icon: BookOpen }
@@ -50,8 +50,8 @@ export function DeveloperPortal() {
         </p>,
       </div>,
 interface TabDefinition {
-  id: string;
-  label: string;
+  id: string,
+  label: string,
   icon: LucideIcon}
 export /**,
  * DeveloperPortal - Function description,
@@ -61,10 +61,10 @@ function DeveloperPortal() {
   const [active_tab, setActiveTab] = useState < string>("documentation"),
   // Define the tabs,
   const tabs: TabDefinition[] = [
-    { id: "documentation", label: "Documentation", icon: BookOpen };
-    { id: "api - keys", label: "API Keys", icon: Key };
-    { id: "webhooks", label: "Webhooks", icon: Webhook };
-    { id: "logs", label: "Logs", icon: List }];
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api - keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List }],
   return (
     <div className="w - full max - w-7xl mx - auto p - 4 md: p - 8">,
       <div className="mb - 8">,
@@ -82,7 +82,7 @@ function DeveloperPortal() {
         <div className="flex flex-wrap -mb-px">,
           {tabs.map((tab) => {
             const Icon = tab.icon,
-            const Icon = tab.icon;
+            const Icon = tab.icon,
             return (
               <button
                 key={tab.id}
@@ -93,27 +93,27 @@ function DeveloperPortal() {
                 onClick={() => setActiveTab(tab.id)}
               >,
                 <Icon size={16} className="mr-2" />,
-  BookOpen;
-  Code;
-  Key;
-  List;
-  LucideIcon;
-  Terminal;
-  Webhook} from "lucide-react";
+  BookOpen,
+  Code,
+  Key,
+  List,
+  LucideIcon,
+  Terminal,
+  Webhook} from "lucide-react",
 interface TabDefinition {
-  id: string;
-  label: string;
+  id: string,
+  label: string,
   icon: LucideIcon}
 ,
 export function DeveloperPortal() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState<string>("documentation");
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState<string>("documentation"),
   // Define the tabs,
   const tabs: TabDefinition[] = [
-    { id: "documentation", label: "Documentation", icon: BookOpen };
-    { id: "api-keys", label: "API Keys", icon: Key };
-    { id: "webhooks", label: "Webhooks", icon: Webhook };
-    { id: "logs", label: "Logs", icon: List }];
+    { id: "documentation", label: "Documentation", icon: BookOpen },
+    { id: "api-keys", label: "API Keys", icon: Key },
+    { id: "webhooks", label: "Webhooks", icon: Webhook },
+    { id: "logs", label: "Logs", icon: List }],
   return (
     <div className="w-full max-w-7xl mx-auto p-4 md: p-8">,
       <div className="mb-8">,

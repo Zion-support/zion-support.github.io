@@ -12,11 +12,9 @@ serve(async req => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', {
       headers: {
-        'Access-Control-Allow-Origin': '*';
-        'Access-Control-Allow-Methods': 'POST, OPTIONS';
-        'Access-Control-Allow-Headers':,
-          'authorization, x-client-info, apikey, content-type';
-      };
+        'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'POST, OPTIONSAccess-Control-Allow-Headers':,
+          'authorization, x-client-info, apikey, content-type',
+      },
     })}
 ,
   const url = new URL(req.url),
@@ -24,7 +22,7 @@ serve(async req => {
   const { userId, amount, reason } = (await req.json()) as TokenRequest,
   if (!userId || !amount) {
     return new Response(JSON.stringify({ error: 'Missing parameters' }), {
-      status: 400;
+      status: 400
     })}
 ,
   if (action === 'earn') {
@@ -32,12 +30,12 @@ serve(async req => {
     return await changeBalance(userId, -Math.abs(amount), 'burn', reason)}
 ,
   return new Response(JSON.stringify({ error: 'Invalid action' }), {
-    status: 400;
+    status: 400
   })}),
 async function changeBalance(
-  userId: string;
-  delta: number;
-  type: 'earn' | 'burn';
+  userId: string,
+  delta: number,
+  type: 'earn' | 'burn',
   reason?: string) {
   const { data: wallet, error: walletError } = await supabase,
     .from('wallets'),
@@ -46,7 +44,7 @@ async function changeBalance(
     .single(),
   if (walletError && walletError.code !== 'PGRST116') {
     return new Response(JSON.stringify({ error: walletError.message }), {
-      status: 500;
+      status: 500
     })}
 ,
   let balance = wallet?.balance || 0,
@@ -59,27 +57,27 @@ async function changeBalance(
       .eq('user_id', userId),
     if (error),
       return new Response(JSON.stringify({ error: error.message }), {
-        status: 500;
+        status: 500
       })} else {
     const { error } = await supabase,
       .from('wallets'),
       .insert({ user_id: userId, balance }),
     if (error),
       return new Response(JSON.stringify({ error: error.message }), {
-        status: 500;
+        status: 500
       })}
 ,
   const { error: txError } = await supabase.from('token_transactions').insert({
-    user_id: userId;
-    amount: Math.abs(delta);
-    transaction_type: type;
-    reason;
+    user_id: userId,
+    amount: Math.abs(delta),
+    transaction_type: type,
+    reason
   }),
   if (txError),
     return new Response(JSON.stringify({ error: txError.message }), {
-      status: 500;
+      status: 500
     }),
   return new Response(JSON.stringify({ success: true, balance }), {
-    status: 200;
+    status: 200
   })}
 ,

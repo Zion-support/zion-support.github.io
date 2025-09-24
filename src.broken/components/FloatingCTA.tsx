@@ -2,37 +2,37 @@ import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import { Button } from '@/components/ui/button',
 import {
-  MessageCircle;
-  X;
-  ChevronUp;
-  Phone;
-  Mail;
-  MessageSquare;
+  MessageCircle,
+  X,
+  ChevronUp,
+  Phone,
+  Mail,
+  MessageSquare,
 } from 'lucide-react',
 import { Link } from 'react-router-dom',
 export function FloatingCTA() {
   const [isExpanded, setIsExpanded] = useState(false),
   const toggleExpanded = () => {
-    setIsExpanded(!isExpanded)};
+    setIsExpanded(!isExpanded)},
   const quickActions = [
     {
-      icon: <Phone className='w-5 h-5' />;
-      label: 'Call Support';
-      action: 'tel:+1-800-ZION-TECH';
-      color: 'bg-zion-cyan hover:bg-zion-cyan-light';
-    };
+      icon: <Phone className='w-5 h-5' />,
+      label: 'Call Support',
+      action: 'tel:+1-800-ZION-TECH',
+      color: 'bg-zion-cyan hover:bg-zion-cyan-light'
+    },
     {
-      icon: <Mail className='w-5 h-5' />;
-      label: 'Email Us';
-      action: 'mailto:support@ziontechgroup.com';
-      color: 'bg-zion-purple hover:bg-zion-purple-light';
-    };
+      icon: <Mail className='w-5 h-5' />,
+      label: 'Email Us',
+      action: 'mailto:support@ziontechgroup.com',
+      color: 'bg-zion-purple hover:bg-zion-purple-light'
+    },
     {
-      icon: <MessageSquare className='w-5 h-5' />;
-      label: 'Live Chat';
-      action: '/contact';
-      color: 'bg-zion-blue hover:bg-zion-blue-light';
-    };
+      icon: <MessageSquare className='w-5 h-5' />,
+      label: 'Live Chat',
+      action: '/contact',
+      color: 'bg-zion-blue hover:bg-zion-blue-light'
+    },
   ],
   return (
     <div className='fixed bottom-6 right-6 z-50'>,

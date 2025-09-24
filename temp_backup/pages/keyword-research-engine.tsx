@@ -9,16 +9,12 @@ export default function KeywordResearchEngine() {
       implementationWeeks='Instant setup',
       roiNote='Publish smarter content and reduce CAC with targeted intent',
       features={[
-        'Keyword discovery and intent classification';
-        'SERP analysis and difficulty scoring';
-        'Topic clustering and content briefs';
-        'Long-tail and questions mining';
-        'Exports to CMS and editors';
-        'Competitor comparisons and tracking';
-        'International and locale support';
-        'API and CSV export';
+        'Keyword discovery and intent classificationSERP analysis and difficulty scoring',
+        'Topic clustering and content briefsLong-tail and questions mining',
+        'Exports to CMS and editorsCompetitor comparisons and tracking',
+        'International and locale supportAPI and CSV export',
       ]}
-      industries={['Content Publishers', 'E-commerce', 'Agencies', 'SMBs']}
+      industries={['Content PublishersE-commerce', 'AgenciesSMBs']}
       canonical='https: //ziontechgroup.com/keyword-research-engine',
     />)}
 ,

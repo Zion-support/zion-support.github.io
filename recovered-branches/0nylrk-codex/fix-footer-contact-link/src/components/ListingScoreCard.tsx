@@ -21,16 +21,16 @@ export function ListingScoreCard({
   description,
   image,
   category,
-  tags;
+  tags,
   author,
-  authorImage;
-  aiScore = 0;
-  rating = 0;
-  reviewCount = 0;
+  authorImage,
+  aiScore = 0,
+  rating = 0,
+  reviewCount = 0,
   className}: ListingScoreCardProps) {
   return (
     <div className={cn(
-      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover:border-zion-purple/50 transition-all duration-300 group";
+      "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue-dark hover: border-zion-purple/50 transition-all duration-300 group",
       className)}>,
       {image && (
         <div className="h-48 w-full overflow-hidden">,

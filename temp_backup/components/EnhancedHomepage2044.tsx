@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback, Suspense, lazy, useMemo } from
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
+  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
   CheckCircle, Users, Award, Clock, Search, Menu, X} from 'lucide-react',
 import EnhancedSEO from './EnhancedSEO',
 // Import our new revolutionary services,
@@ -55,17 +55,17 @@ const OptimizedBackground = React.memo(() => {
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]",
             animate={{
-              x: [0, 150, 0];
-              y: [0, -150, 0];
-              opacity: [0, 1, 0];
+              x: [0, 150, 0],
+              y: [0, -150, 0],
+              opacity: [0, 1, 0],
               scale: [0, 1.5, 0]}}
             transition={{
-              duration: 8 + i * 0.3;
-              repeat: Infinity as any;
-              delay: i * 0.2;
+              duration: 8 + i * 0.3,
+              repeat: Infinity as any,
+              delay: i * 0.2,
               ease: "easeInOut"}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,
@@ -88,7 +88,7 @@ const EnhancedHomepage20o44: React.FC = () => {
     setIsReducedMotion(mediaQuery.matches),
     // Check for mobile device,
     const checkMobile = () => {
-      setIsMobile(window.innerWidth < 768)};
+      setIsMobile(window.innerWidth < 768)},
     checkMobile(),
     window.addEventListener('resize', checkMobile),
     // Auto-rotate featured services (only if no reduced motion and not mobile),
@@ -100,11 +100,11 @@ const EnhancedHomepage20o44: React.FC = () => {
     return () => window.removeEventListener('resize', checkMobile)}, [isMobile]),
   // Combine all revolutionary services,
   const allRevolutionaryServices = useMemo(() => [
-    ...revolutionary20o44AdvancedMicroSaas;
-    ...revolutionary20o44ITServices;
-    ...revolutionary20o44AIServices;
-    ...revolutionary20o45AdvancedMicroSaas;
-    ...revolutionary20o45ITServices;
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
+    ...revolutionary20o44AIServices,
+    ...revolutionary20o45AdvancedMicroSaas,
+    ...revolutionary20o45ITServices,
     ...revolutionary20o45AIServices], []),
   // Get featured services for rotation,
   const featuredServices = useMemo(() =>,
@@ -124,25 +124,25 @@ const EnhancedHomepage20o44: React.FC = () => {
 ,
     return filtered}, [allRevolutionaryServices, selectedCategory, searchQuery]),
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0' };
-    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0' };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0' };
-    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-50o0 to-purple-50o0' };
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0' },
+    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0' },
+    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-50o0 to-purple-50o0' },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-50o0 to-teal-50o0' }
   ],
   const features = [
-    { icon: Brain, title: "AI Consciousness Evolution 20o44", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-20o44", color: "from-purple-50o0 to-pink-50o0" };
-    { icon: Atom, title: "Quantum Neural Networks 20o44", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-20o44", color: "from-blue-50o0 to-cyan-50o0" };
-    { icon: Shield, title: "Quantum Cybersecurity 20o44", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-20o44", color: "from-red-50o0 to-orange-50o0" };
-    { icon: Rocket, title: "Space Resource Intelligence 20o44", description: "AI-powered space exploration with consciousness", href: "/space-resource-intelligence-20o44", color: "from-indigo-50o0 to-purple-50o0" };
-    { icon: Cpu, title: "Autonomous Business Intelligence 20o44", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-20o44", color: "from-emerald-50o0 to-teal-50o0" };
+    { icon: Brain, title: "AI Consciousness Evolution 20o44", description: "Next-generation AI consciousness with emotional intelligence", href: "/ai-consciousness-evolution-20o44", color: "from-purple-50o0 to-pink-50o0" },
+    { icon: Atom, title: "Quantum Neural Networks 20o44", description: "Quantum-powered AI with consciousness integration", href: "/quantum-neural-network-platform-20o44", color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Shield, title: "Quantum Cybersecurity 20o44", description: "Quantum-resistant security with AI consciousness", href: "/quantum-cybersecurity-platform-20o44", color: "from-red-50o0 to-orange-50o0" },
+    { icon: Rocket, title: "Space Resource Intelligence 20o44", description: "AI-powered space exploration with consciousness", href: "/space-resource-intelligence-20o44", color: "from-indigo-50o0 to-purple-50o0" },
+    { icon: Cpu, title: "Autonomous Business Intelligence 20o44", description: "Fully autonomous AI business intelligence", href: "/ai-autonomous-business-intelligence-20o44", color: "from-emerald-50o0 to-teal-50o0" },
     { icon: Database, title: "Quantum Cloud Infrastructure 20o44", description: "Quantum-powered cloud with consciousness", href: "/quantum-cloud-infrastructure-20o44", color: "from-yellow-50o0 to-orange-50o0" }
   ],
   const stats = [
-    { number: "20o00+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" };
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" };
-    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always here to help" };
+    { number: "20o00+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions" },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance" },
+    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always here to help" },
     { number: "20o0+", label: "Countries Served", icon: Globe, description: "Global reach" }
   ],
   const handleGetStarted = useCallback(() => {
@@ -159,40 +159,40 @@ const EnhancedHomepage20o44: React.FC = () => {
     // Search functionality can be enhanced here}, []),
   // Enhanced animations with reduced motion support,
   const fadeInUp ={
-    initial: isReducedMotion ? {} : { opacity: 0, y: 20 };
-    animate: isReducedMotion ? {} : { opacity: 1, y: 0 };
+    initial: isReducedMotion ? {} : { opacity: 0, y: 20 },
+    animate: isReducedMotion ? {} : { opacity: 1, y: 0 },
     transition: isReducedMotion ? {} : { duration: 0.6, ease: "easeOut" as const }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: isReducedMotion ? 0 : 0.1}
     }
-  };
+  },
   // Add structured data for SEO,
   const structuredData ={
-    "@context": "https://schema.org";
-    "@type": "Organization";
-    "name": "Zion Tech Group";
-    "description": "Pioneering the future with revolutionary 20o44 technology solutions including AI consciousness, quantum computing, and space technology.";
-    "url": "https://ziontechgroup.com";
-    "logo": "https://ziontechgroup.com/logo.png";
+    "@context": "https: //schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Pioneering the future with revolutionary 20o44 technology solutions including AI consciousness, quantum computing, and space technology.",
+    "url": "https: //ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
-      "@type": "ContactPoint";
-      "telephone": "+1-30o2-464-0950";
-      "contactType": "customer service";
-      "email": "kleber@ziontechgroup.com"};
+      "@type": "ContactPoint",
+      "telephone": "+1-30o2-464-0950",
+      "contactType": "customer service",
+      "email": "kleber@ziontechgroup.com"},
     "address": {
-      "@type": "PostalAddress";
-      "streetAddress": "364 E Main St STE 10o08";
-      "addressLocality": "Middletown";
-      "addressRegion": "DE";
-      "postalCode": "19709";
-      "addressCountry": "US"};
+      "@type": "PostalAddress",
+      "streetAddress": "364 E Main St STE 10o08",
+      "addressLocality": "Middletown",
+      "addressRegion": "DE",
+      "postalCode": "19709",
+      "addressCountry": "US"},
     "sameAs": [
-      "https://linkedin.com/company/ziontechgroup";
-      "https://twitter.com/ziontechgroup";
-      "https: //github.com/ziontechgroup"]};
+      "https: //linkedin.com/company/ziontechgroup",
+      "https://twitter.com/ziontechgroup",
+      "https: //github.com/ziontechgroup"]},
   return (
     <>,
       <EnhancedSEO
@@ -236,7 +236,7 @@ const EnhancedHomepage20o44: React.FC = () => {
                   Zion Tech Group,
                 </h1>,
                 <p className="text-lg md:text-xl lg:text-2xl xl:text-3xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                  Pioneering the future of technology with revolutionary AI consciousness;
+                  Pioneering the future of technology with revolutionary AI consciousness,
                   quantum computing, and autonomous solutions that transform businesses.,
                 </p>,
                 <div className="flex flex-col sm: flex-row gap-6 justify-center items-center mb-12">,
@@ -348,7 +348,7 @@ const EnhancedHomepage20o44: React.FC = () => {
                   Revolutionary 20o44 Technology,
                 </h2>,
                 <p className="text-lg md:text-xl text-gray-30o0 max-w-3xl mx-auto">,
-                  Experience the future with our cutting-edge AI consciousness, quantum computing;
+                  Experience the future with our cutting-edge AI consciousness, quantum computing,
                   and autonomous solutions that redefine what's possible.,
                 </p>,
               </motion.div>,
@@ -553,5 +553,5 @@ const EnhancedHomepage20o44: React.FC = () => {
           </section>,
         </main>,
       </Layout>,
-    </>)};
-export default EnhancedHomepage20o44;
+    </>)},
+export default EnhancedHomepage20o44,

@@ -3,27 +3,24 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group';
+    'Neural Interface Revolution: Brain-Computer Interfaces in Business | Zion Tech Group',
   description:,
-    'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.';
+    'Explore groundbreaking case studies of neural interface implementations in business, from enhanced productivity to accessibility solutions, and discover the future of human-computer interaction.',
   keywords: [
-    'neural interfaces';
-    'BCI';
-    'brain-computer interface';
-    'innovation';
-    'future technology';
-    'productivity';
-    'accessibility';
-  ];
+    'neural interfacesBCI',
+    'brain-computer interfaceinnovation',
+    'future technologyproductivity',
+    'accessibility',
+  ],
   openGraph: {
-    title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business';
+    title: 'Neural Interface Revolution: Brain-Computer Interfaces in Business',
     description:,
-      'Brain-computer interfaces transforming business operations and productivity';
-    type: 'article';
-    publishedTime: '20o25-0o1-14';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Brain-computer interfaces transforming business operations and productivity',
+    type: 'article',
+    publishedTime: '20o25-0o1-14',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function NeuralInterfaceRevolutionPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -66,7 +63,7 @@ export default function NeuralInterfaceRevolutionPage() {
         <div className='prose prose-lg max-w-none'>,
           <h2>The Dawn of Neural Interfaces</h2>,
           <p>,
-            Neural interfaces, also known as brain-computer interfaces (BCIs);
+            Neural interfaces, also known as brain-computer interfaces (BCIs),
             represent the next frontier in human-computer interaction. These,
             revolutionary technologies are already transforming how businesses,
             operate, enhancing productivity, and creating new possibilities for,
@@ -580,7 +577,7 @@ export default function NeuralInterfaceRevolutionPage() {
           <p>,
             Neural interfaces are not science fiction—they're a reality that's,
             transforming businesses today. Companies that embrace this,
-            technology will have unprecedented advantages in productivity;
+            technology will have unprecedented advantages in productivity,
             accessibility, and human-machine collaboration.,
           </p>,
           <div className='bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white p-8 rounded-xl my-8 text-center'>,

@@ -21,12 +21,12 @@ interface NeonGlowProps {
 ,
 // Enhanced Neon Glow Component with consciousness and quantum effects,
 const NeonGlow: React.FC<NeonGlowProps> = ({
-  children;
-  color;
-  intensity;
-  spread = 20;
-  className = '';
-  consciousness = 0;
+  children,
+  color,
+  intensity,
+  spread = 20,
+  className = '',
+  consciousness = 0,
   quantumState = 0}) => {
   const baseColor = color,
   const glowColor = color + '80',
@@ -51,16 +51,16 @@ const NeonGlow: React.FC<NeonGlowProps> = ({
         {children}
       </div>,
       {children}
-    </div>)};
+    </div>)},
 // Main Enhanced Neon Effects Component,
 export default function UltraAdvancedNeonEffects20o46({
-  children;
-  variant = 'quantum-consciousness';
-  intensity = 'medium';
-  interactive = true;
-  className = '';
-  consciousness = 0.5;
-  pulseRate = 20o00;
+  children,
+  variant = 'quantum-consciousness',
+  intensity = 'medium',
+  interactive = true,
+  className = '',
+  consciousness = 0.5,
+  pulseRate = 20o00,
   quantumState = 0}: NeonEffectProps) {
   const [isHovered, setIsHovered] = useState(false),
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
@@ -71,7 +71,7 @@ export default function UltraAdvancedNeonEffects20o46({
   useEffect(() => {
     if (!interactive) return,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     window.addEventListener('mousemove', handleMouseMove),
     return () => window.removeEventListener('mousemove', handleMouseMove)}, [interactive]),
   // Enhanced pulse effect for consciousness and quantum states,
@@ -89,7 +89,7 @@ export default function UltraAdvancedNeonEffects20o46({
         clearInterval(pulseRef.current)}
       if (quantumRef.current) {
         clearInterval(quantumRef.current)}
-    };
+    },
   }, [variant, pulseRate]),
   const getNeonStyles = () => {
     const baseIntensity = intensity === 'low' ? 1 : intensity === 'medium' ? 1.5 : 2,
@@ -99,162 +99,162 @@ export default function UltraAdvancedNeonEffects20o46({
       case 'quantum-consciousness':,
         return {
           textShadow: `,
-            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8);
-            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6);
-            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4);
-            0 0 ${40 * consciousnessMultiplier}px rgba(139, 92, 246, 0.2);
-            0 0 ${50 * consciousnessMultiplier}px rgba(139, 92, 246, 0.1);
-            0 0 ${15 * quantumMultiplier}px rgba(6, 182, 212, 0.8);
-            0 0 ${25 * quantumMultiplier}px rgba(6, 182, 212, 0.6);
+            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8),
+            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6),
+            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4),
+            0 0 ${40 * consciousnessMultiplier}px rgba(139, 92, 246, 0.2),
+            0 0 ${50 * consciousnessMultiplier}px rgba(139, 92, 246, 0.1),
+            0 0 ${15 * quantumMultiplier}px rgba(6, 182, 212, 0.8),
+            0 0 ${25 * quantumMultiplier}px rgba(6, 182, 212, 0.6),
             0 0 ${35 * quantumMultiplier}px rgba(6, 182, 212, 0.4),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8);
-            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6);
-            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4);
+            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8),
+            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6),
+            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4),
             inset 0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.2),
-          `};
+          `},
       case 'quantum-holographic':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4);
-            0 0 ${40 * baseIntensity}px rgba(6, 182, 212, 0.2);
-            0 0 ${15 * quantumMultiplier}px rgba(236, 72, 153, 0.8);
+            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4),
+            0 0 ${40 * baseIntensity}px rgba(6, 182, 212, 0.2),
+            0 0 ${15 * quantumMultiplier}px rgba(236, 72, 153, 0.8),
             0 0 ${25 * quantumMultiplier}px rgba(236, 72, 153, 0.6),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.2),
-          `};
+          `},
       case 'consciousness':,
         return {
           textShadow: `,
-            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8);
-            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6);
-            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4);
-            0 0 ${40 * consciousnessMultiplier}px rgba(139, 92, 246, 0.2);
+            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8),
+            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6),
+            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4),
+            0 0 ${40 * consciousnessMultiplier}px rgba(139, 92, 246, 0.2),
             0 0 ${50 * consciousnessMultiplier}px rgba(139, 92, 246, 0.1),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8);
-            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6);
-            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4);
+            0 0 ${10 * consciousnessMultiplier}px rgba(139, 92, 246, 0.8),
+            0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.6),
+            0 0 ${30 * consciousnessMultiplier}px rgba(139, 92, 246, 0.4),
             inset 0 0 ${20 * consciousnessMultiplier}px rgba(139, 92, 246, 0.2),
-          `};
+          `},
       case 'quantum':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4);
-            0 0 ${40 * baseIntensity}px rgba(6, 182, 212, 0.2);
-            0 0 ${15 * quantumMultiplier}px rgba(6, 182, 212, 0.8);
+            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4),
+            0 0 ${40 * baseIntensity}px rgba(6, 182, 212, 0.2),
+            0 0 ${15 * quantumMultiplier}px rgba(6, 182, 212, 0.8),
             0 0 ${25 * quantumMultiplier}px rgba(6, 182, 212, 0.6),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(6, 182, 212, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(6, 182, 212, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(6, 182, 212, 0.2),
-          `};
+          `},
       case 'holographic':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(236, 72, 153, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(236, 72, 153, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(236, 72, 153, 0.4);
-            0 0 ${40 * baseIntensity}px rgba(236, 72, 153, 0.2);
-            0 0 ${15 * baseIntensity}px rgba(16, 185, 129, 0.8);
+            0 0 ${10 * baseIntensity}px rgba(236, 72, 153, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(236, 72, 153, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(236, 72, 153, 0.4),
+            0 0 ${40 * baseIntensity}px rgba(236, 72, 153, 0.2),
+            0 0 ${15 * baseIntensity}px rgba(16, 185, 129, 0.8),
             0 0 ${25 * baseIntensity}px rgba(16, 185, 129, 0.6),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(236, 72, 153, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(236, 72, 153, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(236, 72, 153, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(236, 72, 153, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(236, 72, 153, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(236, 72, 153, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(236, 72, 153, 0.2),
-          `};
+          `},
       case 'cyberpunk':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(255, 0, 85, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(255, 0, 85, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(255, 0, 85, 0.4);
-            0 0 ${40 * baseIntensity}px rgba(255, 0, 85, 0.2);
-            0 0 ${15 * baseIntensity}px rgba(0, 255, 255, 0.8);
+            0 0 ${10 * baseIntensity}px rgba(255, 0, 85, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(255, 0, 85, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(255, 0, 85, 0.4),
+            0 0 ${40 * baseIntensity}px rgba(255, 0, 85, 0.2),
+            0 0 ${15 * baseIntensity}px rgba(0, 255, 255, 0.8),
             0 0 ${25 * baseIntensity}px rgba(0, 255, 255, 0.6),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(255, 0, 85, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(255, 0, 85, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(255, 0, 85, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(255, 0, 85, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(255, 0, 85, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(255, 0, 85, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(255, 0, 85, 0.2),
-          `};
+          `},
       case 'neon':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(255, 0, 128, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(255, 0, 128, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(255, 0, 128, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(255, 0, 128, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(255, 0, 128, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(255, 0, 128, 0.4),
             0 0 ${40 * baseIntensity}px rgba(255, 0, 128, 0.2),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(255, 0, 128, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(255, 0, 128, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(255, 0, 128, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(255, 0, 128, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(255, 0, 128, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(255, 0, 128, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(255, 0, 128, 0.2),
-          `};
+          `},
       case 'glitch':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(255, 0, 255, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(255, 0, 255, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(255, 0, 255, 0.4);
-            0 0 ${40 * baseIntensity}px rgba(255, 0, 255, 0.2);
-            2px 0 0 rgba(255, 0, 255, 0.8);
+            0 0 ${10 * baseIntensity}px rgba(255, 0, 255, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(255, 0, 255, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(255, 0, 255, 0.4),
+            0 0 ${40 * baseIntensity}px rgba(255, 0, 255, 0.2),
+            2px 0 0 rgba(255, 0, 255, 0.8),
             -2px 0 0 rgba(0, 255, 255, 0.8),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(255, 0, 255, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(255, 0, 255, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(255, 0, 255, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(255, 0, 255, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(255, 0, 255, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(255, 0, 255, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(255, 0, 255, 0.2),
-          `};
+          `},
       case 'neural':,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(16, 185, 129, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(16, 185, 129, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(16, 185, 129, 0.4);
-            0 0 ${40 * baseIntensity}px rgba(16, 185, 129, 0.2);
-            0 0 ${15 * baseIntensity}px rgba(139, 92, 246, 0.8);
+            0 0 ${10 * baseIntensity}px rgba(16, 185, 129, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(16, 185, 129, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(16, 185, 129, 0.4),
+            0 0 ${40 * baseIntensity}px rgba(16, 185, 129, 0.2),
+            0 0 ${15 * baseIntensity}px rgba(139, 92, 246, 0.8),
             0 0 ${25 * baseIntensity}px rgba(139, 92, 246, 0.6),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(16, 185, 129, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(16, 185, 129, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(16, 185, 129, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(16, 185, 129, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(16, 185, 129, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(16, 185, 129, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(16, 185, 129, 0.2),
-          `};
+          `},
       default: ,
         return {
           textShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(139, 92, 246, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(139, 92, 246, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(139, 92, 246, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(139, 92, 246, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(139, 92, 246, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(139, 92, 246, 0.4),
             0 0 ${40 * baseIntensity}px rgba(139, 92, 246, 0.2),
-          `;
+          `,
           boxShadow: `,
-            0 0 ${10 * baseIntensity}px rgba(139, 92, 246, 0.8);
-            0 0 ${20 * baseIntensity}px rgba(139, 92, 246, 0.6);
-            0 0 ${30 * baseIntensity}px rgba(139, 92, 246, 0.4);
+            0 0 ${10 * baseIntensity}px rgba(139, 92, 246, 0.8),
+            0 0 ${20 * baseIntensity}px rgba(139, 92, 246, 0.6),
+            0 0 ${30 * baseIntensity}px rgba(139, 92, 246, 0.4),
             inset 0 0 ${20 * baseIntensity}px rgba(139, 92, 246, 0.2),
-          `};
+          `},
     }
-  };
+  },
   const neonStyles = getNeonStyles(),
   return (
     <motion.div,
@@ -262,15 +262,15 @@ export default function UltraAdvancedNeonEffects20o46({
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       animate={{
-        scale: isHovered ? 1.0o5 : 1;
-        rotateY: isHovered ? 5 : 0;
+        scale: isHovered ? 1.0o5 : 1,
+        rotateY: isHovered ? 5 : 0,
         rotateX: isHovered ? 5 : 0}}
       transition={{
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeInOut"}}
       style={{
-        ...neonStyles;
-        transformStyle: 'preserve-3d';
+        ...neonStyles,
+        transformStyle: 'preserve-3d',
         perspective: '10o00px'}}
     >,
       {/* Enhanced Neon Glow with consciousness and quantum effects */}
@@ -288,14 +288,14 @@ export default function UltraAdvancedNeonEffects20o46({
           <motion.div,
             className="absolute inset-0 rounded-lg",
             style={{
-              background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`;
+              background: `radial-gradient(circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(6, 182, 212, 0.1) 0%, transparent 50%)`,
               opacity: 0.3}}
             animate={{
-              scale: [1, 1.2, 1];
+              scale: [1, 1.2, 1],
               opacity: [0.3, 0.6, 0.3]}}
             transition={{
-              duration: 2;
-              repeat: Infinity;
+              duration: 2,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
         </div>)}

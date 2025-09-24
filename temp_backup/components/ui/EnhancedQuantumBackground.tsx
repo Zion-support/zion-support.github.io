@@ -6,8 +6,8 @@ interface EnhancedQuantumBackgroundProps {
   variant?: 'default' | 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}
 ,
 const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
-  children;
-  intensity = 1.0;
+  children,
+  intensity = 1.0,
   variant = 'default'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -18,7 +18,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Quantum particle system,
@@ -33,24 +33,24 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
       color: string,
       type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk'}> = [],
     const colors ={
-      quantum: ['#0o0ffff', '#0o080ff', '#80o00ff', '#ff0o080'];
-      holographic: ['#ff0o0ff', '#80o00ff', '#0o080ff', '#0o0ffff'];
-      neural: ['#0o0ff80', '#80ff0o0', '#ff80o00', '#ff0o080'];
-      cyberpunk: ['#ff0o000', '#ff80o00', '#ffff0o0', '#80ff0o0']};
+      quantum: ['#0o0ffff#0o080ff', '#80o00ff#ff0o080'],
+      holographic: ['#ff0o0ff#80o00ff', '#0o080ff#0o0ffff'],
+      neural: ['#0o0ff80#80ff0o0', '#ff80o00#ff0o080'],
+      cyberpunk: ['#ff0o000#ff80o00', '#ffff0o0#80ff0o0']},
     const createParticle = () => {
       const type = variant === 'default' ? 'quantum' : variant,
       const colorSet = colors[type],
       return {
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * intensity;
-        vy: (Math.random() - 0.5) * 2 * intensity;
-        size: Math.random() * 3 * intensity + 1;
-        life: Math.random() * 10o0;
-        maxLife: 10o0;
-        color: colorSet[Math.floor(Math.random() * colorSet.length)];
-        type};
-    };
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * intensity,
+        vy: (Math.random() - 0.5) * 2 * intensity,
+        size: Math.random() * 3 * intensity + 1,
+        life: Math.random() * 10o0,
+        maxLife: 10o0,
+        color: colorSet[Math.floor(Math.random() * colorSet.length)],
+        type},
+    },
     // Initialize particles,
     for (let i = 0, i < 10o0 * intensity, i++) {
       particles.push(createParticle())}
@@ -172,13 +172,13 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
           ctx.stroke()}
       }
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [intensity, variant]),
   return (
     <div className="relative min-h-screen w-full overflow-hidden">,
@@ -194,8 +194,8 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
         <div
           className="absolute inset-0 opacity-30",
           style={{
-            background: `radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.3) 0%, transparent 50%);
-                         radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%);
+            background: `radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.3) 0%, transparent 50%),
+                         radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.3) 0%, transparent 50%),
                          radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.3) 0%, transparent 50%)`}}
          />,
         {/* Quantum field effects */}
@@ -209,7 +209,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
           <div
             className="absolute inset-0 opacity-10",
             style={{
-              background: `linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 10o0%);
+              background: `linear-gradient(90deg, transparent 0%, rgba(255, 0, 255, 0.1) 50%, transparent 10o0%),
                            linear-gradient(0deg, transparent 0%, rgba(0, 255, 255, 0.1) 50%, transparent 10o0%)`}}
            />)}
 ,
@@ -218,7 +218,7 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
           <div
             className="absolute inset-0 opacity-15",
             style={{
-              background: `radial-gradient(circle at 30% 70%, rgba(0, 255, 128, 0.2) 0%, transparent 40%);
+              background: `radial-gradient(circle at 30% 70%, rgba(0, 255, 128, 0.2) 0%, transparent 40%),
                            radial-gradient(circle at 70% 30%, rgba(128, 255, 0, 0.2) 0%, transparent 40%)`}}
            />)}
 ,
@@ -235,36 +235,36 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full",
           animate={{
-            scale: [1, 1.2, 1];
-            rotate: [0, 180, 360];
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
             opacity: [0.1, 0.3, 0.1]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 transform rotate-45",
           animate={{
-            scale: [1, 1.5, 1];
-            rotate: [45, 225, 40o5];
+            scale: [1, 1.5, 1],
+            rotate: [45, 225, 40o5],
             opacity: [0.1, 0.4, 0.1]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/20 rounded-full",
           animate={{
-            scale: [1, 0.8, 1];
-            rotate: [0, -180, -360];
+            scale: [1, 0.8, 1],
+            rotate: [0, -180, -360],
             opacity: [0.1, 0.2, 0.1]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 12,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 4}}
          />,
       </div>,
@@ -272,5 +272,5 @@ const EnhancedQuantumBackground: React.FC<EnhancedQuantumBackgroundProps> = ({
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default EnhancedQuantumBackground;
+    </div>)},
+export default EnhancedQuantumBackground,

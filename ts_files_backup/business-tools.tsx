@@ -5,218 +5,218 @@ ExternalLinkCheckStarZapUsersGlobeBarChart3BotCloudLockDatabaseCodePaletteSearch
 export default function BusinessToolsPage() {
   const businessTools = [
     {
-      category: 'Project Management';
+      category: 'Project Management',
       tools: [
         {
-          name: 'Notion';
-          description: 'All-in-one workspace for notesdocsprojectsand team collaboration.';
-          features: [', 'Templates', 'Database 'views', 'Real-time 'editing', 'Integrations'Team spaces'];
-          pricing: 'Free - $8/month';
-          website: 'https://notion.so';
-          icon: <FileText className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-gray-800 to-black';
-          popular: true};
+          name: 'Notion',
+          description: 'All-in-one workspace for notesdocsprojectsand team collaboration.',
+          features: [Templates', 'Database 'viewsReal-time 'editing', 'Integrations'Team spaces'],
+          pricing: 'Free - $8/month',
+          website: 'https://notion.so',
+          icon: <FileText className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-gray-800 to-black',
+          popular: true},
         {
-          name: 'Asana';
-          description: 'Work management platform for teams to organizetrackand manage their work.';
-          features: ['Task 'management', 'Project 'timelines', 'Team 'collaboration', 'Workflow 'automation', 'Reporting'];
-          pricing: 'Free - $10.99/month';
-          website: 'https://asana.com';
-          icon: <CheckCircle className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-pink-500 to-red-600'};
+          name: 'Asana',
+          description: 'Work management platform for teams to organizetrackand manage their work.',
+          features: ['Task 'managementProject 'timelines', 'Team 'collaborationWorkflow 'automation', 'Reporting'],
+          pricing: 'Free - $10.99/month',
+          website: 'https://asana.com',
+          icon: <CheckCircle className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-pink-500 to-red-600'},
         {
-          name: 'Monday.com';
-          description: 'Visual project management platform with customizable workflows and automation.';
-          features: ['Visual 'boards', 'Automation'Time 'tracking', 'Integrations'Analytics'];
-          pricing: '$8/month - $16/month';
-          website: 'https://monday.com';
-          icon: <Calendar className="w-6 h-6" />;
+          name: 'Monday.com',
+          description: 'Visual project management platform with customizable workflows and automation.',
+          features: ['Visual 'boardsAutomation'Time 'trackingIntegrations'Analytics'],
+          pricing: '$8/month - $16/month',
+          website: 'https://monday.com',
+          icon: <Calendar className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-red-500 to-pink-600'}
-      ]};
+      ]},
     {
-      category: 'Communication & Collaboration';
+      category: 'Communication & Collaboration',
       tools: [
         {
-          name: 'Slack';
-          description: 'Team communication platform for modern businesses with channels and integrations.';
-          features: [', 'Channels', 'Direct 'messages', 'File 'sharing', 'Integrations'Search'];
-          pricing: 'Free - $7.25/month';
-          website: 'https://slack.com';
-          icon: <MessageSquare className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600';
-          popular: true};
+          name: 'Slack',
+          description: 'Team communication platform for modern businesses with channels and integrations.',
+          features: [Channels', 'Direct 'messagesFile 'sharing', 'Integrations'Search'],
+          pricing: 'Free - $7.25/month',
+          website: 'https://slack.com',
+          icon: <MessageSquare className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+          popular: true},
         {
-          name: 'Microsoft Teams';
-          description: 'Unified communication platform with chatvideo meetingsand file collaboration.';
-          features: [', 'Chat', 'Video 'meetings', 'File 'sharing', 'Office 'integration', 'Security'];
-          pricing: 'Free - $6/month';
-          website: 'https://teams.microsoft.com';
-          icon: <Users className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'};
+          name: 'Microsoft Teams',
+          description: 'Unified communication platform with chatvideo meetingsand file collaboration.',
+          features: [Chat', 'Video 'meetingsFile 'sharing', 'Office 'integrationSecurity'],
+          pricing: 'Free - $6/month',
+          website: 'https://teams.microsoft.com',
+          icon: <Users className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'},
         {
-          name: 'Zoom';
-          description: 'Video conferencing platform for meetingswebinarsand team collaboration.';
-          features: ['HD 'video', 'Screen 'sharing', 'Recording', 'Webinars', 'Breakout rooms'];
-          pricing: 'Free - $14.99/month';
-          website: 'https://zoom.us';
-          icon: <Video className="w-6 h-6" />;
+          name: 'Zoom',
+          description: 'Video conferencing platform for meetingswebinarsand team collaboration.',
+          features: ['HD 'videoScreen 'sharing', 'RecordingWebinars', 'Breakout rooms'],
+          pricing: 'Free - $14.99/month',
+          website: 'https://zoom.us',
+          icon: <Video className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-blue-500 to-cyan-600'}
-      ]};
+      ]},
     {
-      category: 'Marketing & Sales';
+      category: 'Marketing & Sales',
       tools: [
         {
-          name: 'HubSpot';
-          description: 'All-in-one inbound marketingsalesand customer service platform.';
-          features: [', 'CRM', 'Email 'marketing', 'Lead 'generation', 'Analytics'Automation'];
-          pricing: 'Free - $45/month';
-          website: 'https://hubspot.com';
-          icon: <Target className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-orange-500 to-red-600';
-          popular: true};
+          name: 'HubSpot',
+          description: 'All-in-one inbound marketingsalesand customer service platform.',
+          features: [CRM', 'Email 'marketingLead 'generation', 'Analytics'Automation'],
+          pricing: 'Free - $45/month',
+          website: 'https://hubspot.com',
+          icon: <Target className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-orange-500 to-red-600',
+          popular: true},
         {
-          name: 'Mailchimp';
-          description: 'Email marketing platform for growing businesses and creators.';
-          features: ['Email 'templates', 'Automation', 'Analytics', 'Audience 'segmentation', 'A/B testing'];
-          pricing: 'Free - $13/month';
-          website: 'https://mailchimp.com';
-          icon: <Mail className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-yellow-500 to-orange-600'};
+          name: 'Mailchimp',
+          description: 'Email marketing platform for growing businesses and creators.',
+          features: ['Email 'templatesAutomation', 'AnalyticsAudience 'segmentation', 'A/B testing'],
+          pricing: 'Free - $13/month',
+          website: 'https://mailchimp.com',
+          icon: <Mail className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-yellow-500 to-orange-600'},
         {
-          name: 'Salesforce';
-          description: 'Customer relationship management platform for saleserviceand marketing.';
-          features: ['Sales 'CRM', 'Service 'cloud', 'Marketing 'automation', 'Analytics'AppExchange'];
-          pricing: '$25/month - $300/month';
-          website: 'https://salesforce.com';
-          icon: <TrendingUp className="w-6 h-6" />;
+          name: 'Salesforce',
+          description: 'Customer relationship management platform for saleserviceand marketing.',
+          features: ['Sales 'CRMService 'cloud', 'Marketing 'automationAnalytics'AppExchange'],
+          pricing: '$25/month - $300/month',
+          website: 'https://salesforce.com',
+          icon: <TrendingUp className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-blue-500 to-indigo-600'}
-      ]};
+      ]},
     {
-      category: 'Finance & Accounting';
+      category: 'Finance & Accounting',
       tools: [
         {
-          name: 'QuickBooks';
-          description: 'Small business accounting software for invoicingexpensesand financial reporting.';
-          features: [', 'Invoicing', 'Expense 'tracking', 'Financial 'reports', 'Tax 'preparation', 'Bank integration'];
-          pricing: '$30/month - $200/month';
-          website: 'https://quickbooks.intuit.com';
-          icon: <CreditCard className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-          popular: true};
+          name: 'QuickBooks',
+          description: 'Small business accounting software for invoicingexpensesand financial reporting.',
+          features: [Invoicing', 'Expense 'trackingFinancial 'reports', 'Tax 'preparationBank integration'],
+          pricing: '$30/month - $200/month',
+          website: 'https://quickbooks.intuit.com',
+          icon: <CreditCard className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+          popular: true},
         {
-          name: 'Stripe';
-          description: 'Payment processing platform for internet businesses.';
-          features: ['Global 'payments', 'Subscription 'billing', 'Fraud 'prevention', 'Developer 'APIs', 'Analytics'];
-          pricing: '2.9% + 30¢ per transaction';
-          website: 'https://stripe.com';
-          icon: <CreditCard className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-purple-500 to-blue-600'};
+          name: 'Stripe',
+          description: 'Payment processing platform for internet businesses.',
+          features: ['Global 'paymentsSubscription 'billing', 'Fraud 'preventionDeveloper 'APIs', 'Analytics'],
+          pricing: '2.9% + 30¢ per transaction',
+          website: 'https://stripe.com',
+          icon: <CreditCard className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-purple-500 to-blue-600'},
         {
-          name: 'Xero';
-          description: 'Cloud-based accounting software for small businesses and accountants.';
-          features: ['Bank 'reconciliation', 'Invoicing'Expense 'claims', 'Multi-'currency', 'Payroll'];
-          pricing: '$13/month - $70/month';
-          website: 'https://xero.com';
-          icon: <ChartBar className="w-6 h-6" />;
+          name: 'Xero',
+          description: 'Cloud-based accounting software for small businesses and accountants.',
+          features: ['Bank 'reconciliationInvoicing'Expense 'claimsMulti-'currency', 'Payroll'],
+          pricing: '$13/month - $70/month',
+          website: 'https://xero.com',
+          icon: <ChartBar className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-blue-500 to-cyan-600'}
-      ]};
+      ]},
     {
-      category: 'Design & Creative';
+      category: 'Design & Creative',
       tools: [
         {
-          name: 'Figma';
-          description: 'Collaborative interface design tool for teams building digital products.';
-          features: ['Real-time 'collaboration', 'Design 'systems', 'Prototyping'Developer 'handoff', 'Plugins'];
-          pricing: 'Free - $12/month';
-          website: 'https://figma.com';
-          icon: <Palette className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-purple-500 to-pink-600';
-          popular: true};
+          name: 'Figma',
+          description: 'Collaborative interface design tool for teams building digital products.',
+          features: ['Real-time 'collaborationDesign 'systems', 'Prototyping'Developer 'handoffPlugins'],
+          pricing: 'Free - $12/month',
+          website: 'https://figma.com',
+          icon: <Palette className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-purple-500 to-pink-600',
+          popular: true},
         {
-          name: 'Canva';
-          description: 'Create professional designs with drag-and-drop simplicity.';
-          features: ['Templates 'library', 'Stock 'photos', 'Brand 'kit', 'Team 'collaboration', 'Video editing'];
-          pricing: 'Free - $12.99/month';
-          website: 'https://canva.com';
-          icon: <Image className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'};
+          name: 'Canva',
+          description: 'Create professional designs with drag-and-drop simplicity.',
+          features: ['Templates 'libraryStock 'photos', 'Brand 'kitTeam 'collaboration', 'Video editing'],
+          pricing: 'Free - $12.99/month',
+          website: 'https://canva.com',
+          icon: <Image className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-blue-500 to-cyan-600'},
         {
-          name: 'Adobe Creative Cloud';
-          description: 'Complete creative software suite for designphotographyand video.';
-          features: [', 'Photoshop', 'Illustrator', 'InDesign', 'Premiere 'Pro', 'After Effects'];
-          pricing: '$52.99/month';
-          website: 'https://adobe.com/creativecloud';
-          icon: <Palette className="w-6 h-6" />;
+          name: 'Adobe Creative Cloud',
+          description: 'Complete creative software suite for designphotographyand video.',
+          features: [Photoshop', 'IllustratorInDesign', 'Premiere 'ProAfter Effects'],
+          pricing: '$52.99/month',
+          website: 'https://adobe.com/creativecloud',
+          icon: <Palette className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-orange-500 to-red-600'}
-      ]};
+      ]},
     {
-      category: 'Analytics & Business Intelligence';
+      category: 'Analytics & Business Intelligence',
       tools: [
         {
-          name: 'Google Analytics';
-          description: 'Free web analytics service that tracks and reports website traffic.';
-          features: ['Real-time 'data', 'Audience 'insights', 'Conversion 'tracking', 'E-'commerce', 'Goals'];
-          pricing: 'Free';
-          website: 'https://analytics.google.com';
-          icon: <BarChart3 className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-green-600';
-          popular: true};
+          name: 'Google Analytics',
+          description: 'Free web analytics service that tracks and reports website traffic.',
+          features: ['Real-time 'dataAudience 'insights', 'Conversion 'trackingE-'commerce', 'Goals'],
+          pricing: 'Free',
+          website: 'https://analytics.google.com',
+          icon: <BarChart3 className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-blue-500 to-green-600',
+          popular: true},
         {
-          name: 'Tableau';
-          description: 'Data visualization and business intelligence platform for analytics.';
-          features: ['Interactive 'dashboards', 'Data 'blending', 'Real-time 'analytics', 'Mobile 'support', 'Collaboration'];
-          pricing: '$70/month - $35/month';
-          website: 'https://tableau.com';
-          icon: <ChartBar className="w-6 h-6" />;
-          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'};
+          name: 'Tableau',
+          description: 'Data visualization and business intelligence platform for analytics.',
+          features: ['Interactive 'dashboardsData 'blending', 'Real-time 'analyticsMobile 'support', 'Collaboration'],
+          pricing: '$70/month - $35/month',
+          website: 'https://tableau.com',
+          icon: <ChartBar className="w-6 h-6" />,
+          color: 'bg-gradient-to-br from-blue-500 to-indigo-600'},
         {
-          name: 'Mixpanel';
-          description: 'Product analytics platform for understanding user behavior and product usage.';
-          features: ['Event 'tracking', 'Funnel 'analysis', 'Cohort 'analysis', 'A/B 'testing', 'Real-time data'];
-          pricing: 'Free - $25/month';
-          website: 'https://mixpanel.com';
-          icon: <TrendingUp className="w-6 h-6" />;
+          name: 'Mixpanel',
+          description: 'Product analytics platform for understanding user behavior and product usage.',
+          features: ['Event 'trackingFunnel 'analysis', 'Cohort 'analysisA/B 'testing', 'Real-time data'],
+          pricing: 'Free - $25/month',
+          website: 'https://mixpanel.com',
+          icon: <TrendingUp className="w-6 h-6" />,
           color: 'bg-gradient-to-br from-purple-500 to-pink-600'}
       ]}
   ],
   const businessInsights = [
     {
-      title: 'Remote Work Tools';
-      description: 'Essential tools for distributed teams and hybrid work environments.';
-      trend: '📈 Growing Demand';
-      color: 'text-green-400'};
+      title: 'Remote Work Tools',
+      description: 'Essential tools for distributed teams and hybrid work environments.',
+      trend: '📈 Growing Demand',
+      color: 'text-green-400'},
     {
-      title: 'AI-Powered Solutions';
-      description: 'Business tools leveraging AI for automation and intelligent insights.';
-      trend: '🚀 High Growth';
-      color: 'text-blue-400'};
+      title: 'AI-Powered Solutions',
+      description: 'Business tools leveraging AI for automation and intelligent insights.',
+      trend: '🚀 High Growth',
+      color: 'text-blue-400'},
     {
-      title: 'Cloud-Native Platforms';
-      description: 'Business applications built for scalability and global accessibility.';
-      trend: '☁️ Mainstream';
-      color: 'text-cyan-400'};
+      title: 'Cloud-Native Platforms',
+      description: 'Business applications built for scalability and global accessibility.',
+      trend: '☁️ Mainstream',
+      color: 'text-cyan-400'},
     {
-      title: 'Security & Compliance';
-      description: 'Tools ensuring data protection and regulatory compliance.';
-      trend: '🔒 Critical';
+      title: 'Security & Compliance',
+      description: 'Tools ensuring data protection and regulatory compliance.',
+      trend: '🔒 Critical',
       color: 'text-orange-400'}
   ],
   const productivityTips = [
     {
-      title: 'Start with Free Tiers';
-      description: 'Most tools offer free versions to test before committing to paid plans.';
-      icon: <CheckCircle className="w-6 h-6 text-green-400" />};
+      title: 'Start with Free Tiers',
+      description: 'Most tools offer free versions to test before committing to paid plans.',
+      icon: <CheckCircle className="w-6 h-6 text-green-400" />},
     {
-      title: 'Focus on Integration';
-      description: 'Choose tools that work well together to avoid data silos and manual work.';
-      icon: <Cog className="w-6 h-6 text-blue-400" />};
+      title: 'Focus on Integration',
+      description: 'Choose tools that work well together to avoid data silos and manual work.',
+      icon: <Cog className="w-6 h-6 text-blue-400" />},
     {
-      title: 'Measure ROI';
-      description: 'Track how each tool improves your team\'s productivity and business outcomes.';
-      icon: <ChartBar className="w-6 h-6 text-purple-400" />};
+      title: 'Measure ROI',
+      description: 'Track how each tool improves your team\'s productivity and business outcomes.',
+      icon: <ChartBar className="w-6 h-6 text-purple-400" />},
     {
-              title: 'Train Your Team';
-        description: 'Invest in proper training to maximize the value of your chosen tools.';
+              title: 'Train Your Team',
+        description: 'Invest in proper training to maximize the value of your chosen tools.',
         icon: <Users className="w-6 h-6 text-orange-400" />}
   ],
   return (

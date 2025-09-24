@@ -25,7 +25,7 @@ export const MobileEmailCapture = () => {
             enqueueSnackbar(error?.response?.data?.message || error.message, { variant: 'error' })}
         finally {
             setIsSubmitting(false)}
-    };
+    },
     return (<section className="py-16 bg-gradient-to-r from-zion-blue-dark to-zion-purple/30">,
       <div className="container mx-auto px-4">,
         <div className="max-w-3xl mx-auto text-center">,
@@ -46,4 +46,4 @@ export const MobileEmailCapture = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

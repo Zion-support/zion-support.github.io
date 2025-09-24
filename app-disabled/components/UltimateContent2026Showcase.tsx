@@ -6,222 +6,222 @@ const UltimateContent20o26Showcase = () => {
   const content = [
     // Synthetic Intelligence Content,
     {
-      id: 'synthetic-intelligence-revolution';
-      title: 'AI 20o26: The Synthetic Intelligence Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 2,50o0% ROI';
+      id: 'synthetic-intelligence-revolution',
+      title: 'AI 20o26: The Synthetic Intelligence Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 2,50o0% ROI',
       description:,
-        'Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through next-generation synthetic intelligence systems.';
+        'Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through next-generation synthetic intelligence systems.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$18.7B';
-        accuracy: '99.97%';
-        efficiency: '1,80o0%';
-      };
-      url: '/blog/ai-20o26-synthetic-intelligence-revolution-ultimate-breakthrough';
-      type: 'blog';
-      category: 'synthetic-intelligence';
-      readingTime: '30 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,50o0%',
+        savings: '$18.7B',
+        accuracy: '99.97%',
+        efficiency: '1,80o0%',
+      },
+      url: '/blog/ai-20o26-synthetic-intelligence-revolution-ultimate-breakthrough',
+      type: 'blog',
+      category: 'synthetic-intelligence',
+      readingTime: '30 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'fortune-50o0-synthetic-intelligence-success';
-      title: 'Fortune 50o0 Synthetic Intelligence Success';
-      subtitle: '$18.7B Annual Savings - 2,50o0% ROI Success Story';
+      id: 'fortune-50o0-synthetic-intelligence-success',
+      title: 'Fortune 50o0 Synthetic Intelligence Success',
+      subtitle: '$18.7B Annual Savings - 2,50o0% ROI Success Story',
       description:,
-        'A Fortune 10o0 global technology conglomerate achieved unprecedented success through synthetic intelligence implementation.';
+        'A Fortune 10o0 global technology conglomerate achieved unprecedented success through synthetic intelligence implementation.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$18.7B';
-        timeline: '18 months';
-        success: '99.7%';
-      };
-      url: '/case-studies/fortune-50o0-synthetic-intelligence-transformation-250o0-roi-success-story';
-      type: 'case-study';
-      category: 'synthetic-intelligence';
-      readingTime: '20 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,50o0%',
+        savings: '$18.7B',
+        timeline: '18 months',
+        success: '99.7%'
+      },
+      url: '/case-studies/fortune-50o0-synthetic-intelligence-transformation-250o0-roi-success-story',
+      type: 'case-study',
+      category: 'synthetic-intelligence',
+      readingTime: '20 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'synthetic-intelligence-implementation-guide';
-      title: 'Synthetic Intelligence Implementation Guide';
-      subtitle: 'Complete Roadmap to 2,50o0% ROI';
+      id: 'synthetic-intelligence-implementation-guide',
+      title: 'Synthetic Intelligence Implementation Guide',
+      subtitle: 'Complete Roadmap to 2,50o0% ROI',
       description:,
-        'Complete roadmap for implementing synthetic intelligence systems in enterprise environments.';
+        'Complete roadmap for implementing synthetic intelligence systems in enterprise environments.',
       metrics: {
-        roi: '2,50o0%';
-        success: '99.7%';
-        timeline: '18 months';
-        companies: '1,20o0+';
-      };
-      url: '/resources/synthetic-intelligence-implementation-ultimate-guide-20o26';
-      type: 'resource';
-      category: 'synthetic-intelligence';
-      readingTime: '35 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,50o0%',
+        success: '99.7%',
+        timeline: '18 months',
+        companies: '1,20o0+',
+      },
+      url: '/resources/synthetic-intelligence-implementation-ultimate-guide-20o26',
+      type: 'resource',
+      category: 'synthetic-intelligence',
+      readingTime: '35 min read',
+      isNew: true,
+      featured: true
+    },
     // Quantum Computing Content,
     {
-      id: 'quantum-ai-business-revolution';
-      title: 'AI 20o26: The Quantum AI Business Revolution';
-      subtitle: '$10o0B Market Transformation';
+      id: 'quantum-ai-business-revolution',
+      title: 'AI 20o26: The Quantum AI Business Revolution',
+      subtitle: '$10o0B Market Transformation',
       description:,
-        'The quantum AI business revolution is transforming enterprise operations with 40o0-60o0% ROI.';
+        'The quantum AI business revolution is transforming enterprise operations with 40o0-60o0% ROI.',
       metrics: {
-        roi: '40o0-60o0%';
-        market: '$10o0B';
-        speed: '1,20o0%';
-        accuracy: '99.97%';
-      };
-      url: '/blog/ai-20o26-quantum-ai-business-revolution';
-      type: 'blog';
-      category: 'quantum-computing';
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '40o0-60o0%',
+        market: '$10o0B',
+        speed: '1,20o0%',
+        accuracy: '99.97%'
+      },
+      url: '/blog/ai-20o26-quantum-ai-business-revolution',
+      type: 'blog',
+      category: 'quantum-computing',
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'quantum-ai-fortune-50o0-transformation';
-      title: 'Fortune 50o0 Quantum AI Transformation';
-      subtitle: '$2.8B Annual Savings in 6 Months';
+      id: 'quantum-ai-fortune-50o0-transformation',
+      title: 'Fortune 50o0 Quantum AI Transformation',
+      subtitle: '$2.8B Annual Savings in 6 Months',
       description:,
-        'A Fortune 50o0 manufacturing company achieved 567% ROI and $2.8B in annual savings.';
+        'A Fortune 50o0 manufacturing company achieved 567% ROI and $2.8B in annual savings.',
       metrics: {
-        savings: '$2.8B';
-        roi: '567%';
-        efficiency: '156%';
-        uptime: '99.2%';
-      };
-      url: '/case-studies/quantum-ai-fortune-50o0-transformation-20o26';
-      type: 'case-study';
-      category: 'quantum-computing';
-      readingTime: '18 min read';
-      isNew: true;
-      featured: true;
-    };
+        savings: '$2.8B',
+        roi: '567%',
+        efficiency: '156%',
+        uptime: '99.2%'
+      },
+      url: '/case-studies/quantum-ai-fortune-50o0-transformation-20o26',
+      type: 'case-study',
+      category: 'quantum-computing',
+      readingTime: '18 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'quantum-ai-implementation-guide';
-      title: 'Quantum AI Implementation Guide 20o26';
-      subtitle: 'From Strategy to 567% ROI';
+      id: 'quantum-ai-implementation-guide',
+      title: 'Quantum AI Implementation Guide 20o26',
+      subtitle: 'From Strategy to 567% ROI',
       description:,
-        'Complete roadmap for implementing quantum AI systems in enterprise environments.';
+        'Complete roadmap for implementing quantum AI systems in enterprise environments.',
       metrics: {
-        roi: '567%';
-        timeframe: '6 months';
-        phases: '3 phases';
-        payback: '3.8 months';
-      };
-      url: '/resources/quantum-ai-implementation-guide-20o26';
-      type: 'resource';
-      category: 'quantum-computing';
-      readingTime: '28 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '567%',
+        timeframe: '6 months',
+        phases: '3 phases',
+        payback: '3.8 months'
+      },
+      url: '/resources/quantum-ai-implementation-guide-20o26',
+      type: 'resource',
+      category: 'quantum-computing',
+      readingTime: '28 min read',
+      isNew: true,
+      featured: true
+    },
     // Neural Interface Content,
     {
-      id: 'neural-interface-revolution-20o26';
-      title: 'AI 20o26: The Neural Interface Revolution';
-      subtitle: 'Enterprise Breakthrough Guide';
+      id: 'neural-interface-revolution-20o26',
+      title: 'AI 20o26: The Neural Interface Revolution',
+      subtitle: 'Enterprise Breakthrough Guide',
       description:,
-        'Neural interface technology is revolutionizing enterprise operations with 1,20o0% ROI.';
+        'Neural interface technology is revolutionizing enterprise operations with 1,20o0% ROI.',
       metrics: {
-        roi: '1,20o0%';
-        accuracy: '99.9%';
-        savings: '$2.8B';
-        efficiency: '40o0%';
-      };
-      url: '/blog/ai-20o26-neural-interface-revolution-enterprise-breakthrough';
-      type: 'blog';
-      category: 'neural-interfaces';
-      readingTime: '22 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '1,20o0%',
+        accuracy: '99.9%',
+        savings: '$2.8B',
+        efficiency: '40o0%'
+      },
+      url: '/blog/ai-20o26-neural-interface-revolution-enterprise-breakthrough',
+      type: 'blog',
+      category: 'neural-interfaces',
+      readingTime: '22 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'fortune-50o0-neural-interface-transformation';
-      title: 'Fortune 50o0 Neural Interface Transformation';
-      subtitle: '$2.8B Annual Savings - 1,20o0% ROI Success Story';
+      id: 'fortune-50o0-neural-interface-transformation',
+      title: 'Fortune 50o0 Neural Interface Transformation',
+      subtitle: '$2.8B Annual Savings - 1,20o0% ROI Success Story',
       description:,
-        'A Fortune 50o0 company achieved 1,20o0% ROI through neural interface implementation.';
+        'A Fortune 50o0 company achieved 1,20o0% ROI through neural interface implementation.',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        efficiency: '40o0%';
-        accuracy: '99.9%';
-      };
-      url: '/case-studies/fortune-50o0-neural-interface-transformation-20o26-ultimate-success';
-      type: 'case-study';
-      category: 'neural-interfaces';
-      readingTime: '15 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        efficiency: '40o0%',
+        accuracy: '99.9%'
+      },
+      url: '/case-studies/fortune-50o0-neural-interface-transformation-20o26-ultimate-success',
+      type: 'case-study',
+      category: 'neural-interfaces',
+      readingTime: '15 min read',
+      isNew: true,
+      featured: true
+    },
     // Autonomous Systems Content,
     {
-      id: 'autonomous-systems-revolution-20o26';
-      title: 'AI 20o26: Next-Generation Autonomous Systems Revolution';
-      subtitle: 'Ultimate Guide to 1,20o0% ROI';
+      id: 'autonomous-systems-revolution-20o26',
+      title: 'AI 20o26: Next-Generation Autonomous Systems Revolution',
+      subtitle: 'Ultimate Guide to 1,20o0% ROI',
       description:,
-        'Next-generation autonomous systems are transforming enterprise operations with unprecedented efficiency.';
+        'Next-generation autonomous systems are transforming enterprise operations with unprecedented efficiency.',
       metrics: {
-        roi: '1,20o0%';
-        uptime: '99.9%';
-        costReduction: '85%';
-        productivity: '40o0%';
-      };
-      url: '/blog/ai-20o26-next-generation-autonomous-systems-revolution';
-      type: 'blog';
-      category: 'autonomous-systems';
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '1,20o0%',
+        uptime: '99.9%',
+        costReduction: '85%',
+        productivity: '40o0%'
+      },
+      url: '/blog/ai-20o26-next-generation-autonomous-systems-revolution',
+      type: 'blog',
+      category: 'autonomous-systems',
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'ai-transformation-20o26-ultimate-success';
-      title: 'AI Transformation 20o26: Ultimate Success Story';
-      subtitle: '$75M Annual Savings - 1,50o0% ROI';
+      id: 'ai-transformation-20o26-ultimate-success',
+      title: 'AI Transformation 20o26: Ultimate Success Story',
+      subtitle: '$75M Annual Savings - 1,50o0% ROI',
       description:,
-        'A Fortune 50o0 company achieved 1,50o0% ROI through comprehensive AI transformation.';
+        'A Fortune 50o0 company achieved 1,50o0% ROI through comprehensive AI transformation.',
       metrics: {
-        roi: '1,50o0%';
-        savings: '$75M';
-        timeline: '8 months';
-        automation: '95%';
-      };
-      url: '/case-studies/ai-transformation-20o26-ultimate-success-story';
-      type: 'case-study';
-      category: 'autonomous-systems';
-      readingTime: '20 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '1,50o0%',
+        savings: '$75M',
+        timeline: '8 months',
+        automation: '95%'
+      },
+      url: '/case-studies/ai-transformation-20o26-ultimate-success-story',
+      type: 'case-study',
+      category: 'autonomous-systems',
+      readingTime: '20 min read',
+      isNew: true,
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'synthetic-intelligence';
-      name: 'Synthetic Intelligence';
+      id: 'synthetic-intelligence',
+      name: 'Synthetic Intelligence',
       count: content.filter(c => c.category === 'synthetic-intelligence'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'quantum-computing';
-      name: 'Quantum Computing';
-      count: content.filter(c => c.category === 'quantum-computing').length;
-    };
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      count: content.filter(c => c.category === 'quantum-computing').length
+    },
     {
-      id: 'neural-interfaces';
-      name: 'Neural Interfaces';
-      count: content.filter(c => c.category === 'neural-interfaces').length;
-    };
+      id: 'neural-interfaces',
+      name: 'Neural Interfaces',
+      count: content.filter(c => c.category === 'neural-interfaces').length
+    },
     {
-      id: 'autonomous-systems';
-      name: 'Autonomous Systems';
-      count: content.filter(c => c.category === 'autonomous-systems').length;
-    };
+      id: 'autonomous-systems',
+      name: 'Autonomous Systems',
+      count: content.filter(c => c.category === 'autonomous-systems').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -237,7 +237,7 @@ const UltimateContent20o26Showcase = () => {
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'synthetic-intelligence':,
@@ -250,7 +250,7 @@ const UltimateContent20o26Showcase = () => {
         return 'from-orange-50o0 to-red-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -395,5 +395,5 @@ const UltimateContent20o26Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent20o26Showcase;
+    </div>)},
+export default UltimateContent20o26Showcase,

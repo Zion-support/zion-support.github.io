@@ -1,41 +1,41 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
   User, Search, Eye, Heart, ShoppingCart} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Customer Intelligence Platform | Zion Tech Group';
-  description: 'Revolutionary AI-powered customer intelligence platform that provides deep insights into customer behavior and preferences.';
-  keywords: 'AI customer intelligence, customer analytics, customer insights, AI analytics, customer behavior, customer data';
+  title: 'AI Customer Intelligence Platform | Zion Tech Group',
+  description: 'Revolutionary AI-powered customer intelligence platform that provides deep insights into customer behavior and preferences.',
+  keywords: 'AI customer intelligence, customer analytics, customer insights, AI analytics, customer behavior, customer data',
   openGraph: {
-    title: 'AI Customer Intelligence Platform | Zion Tech Group';
-    description: 'Revolutionary AI-powered customer intelligence platform that provides deep insights into customer behavior and preferences.';
-    url: 'https://ziontechgroup.com/ai-customer-intelligence-platform';
-    siteName: 'Zion Tech Group';
+    title: 'AI Customer Intelligence Platform | Zion Tech Group',
+    description: 'Revolutionary AI-powered customer intelligence platform that provides deep insights into customer behavior and preferences.',
+    url: 'https://ziontechgroup.com/ai-customer-intelligence-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-customer-intelligence-platform.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Customer Intelligence Platform'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-customer-intelligence-platform.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Customer Intelligence Platform'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Customer Intelligence Platform | Zion Tech Group';
-    description: 'Revolutionary AI-powered customer intelligence platform that provides deep insights into customer behavior and preferences.';
-    images: ['https://ziontechgroup.com/og-image-ai-customer-intelligence-platform.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Customer Intelligence Platform | Zion Tech Group',
+    description: 'Revolutionary AI-powered customer intelligence platform that provides deep insights into customer behavior and preferences.',
+    images: ['https://ziontechgroup.com/og-image-ai-customer-intelligence-platform.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-customer-intelligence-platform'}};
+    canonical: 'https://ziontechgroup.com/ai-customer-intelligence-platform'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AICustomerIntelligencePlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -79,7 +79,7 @@ export default function AICustomerIntelligencePlatform() {
               Revolutionary Customer Intelligence,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of customer intelligence from data collection to insights;
+              Our AI platform handles every aspect of customer intelligence from data collection to insights,
               continuously learning and optimizing for maximum customer understanding and engagement.,
             </p>,
           </div>,

@@ -1,14 +1,14 @@
-import React from 'react';
-export default function CostAwareRoutingLiveEvalsPage() {;
+import React from 'react',
+export default function CostAwareRoutingLiveEvalsPage() {,
   return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-24 pb-24'>
         <p className='text-sm text-blue-3000'>Blueprint • 2025-09-15</p>
         <h1 className='mt-2 text-3xl font-bold tracking-tight text-white sm: text-4xl'>
-          Cost-Aware Routing with Live Evals;
+          Cost-Aware Routing with Live Evals,
         </h1>
-        <p className='mt-4 text-lg leading-8 text-gray-3000'>;,
-          Combine offline evals with canary live tests to continuously optimize: quality, latency, and cost.;
+        <p className='mt-4 text-lg leading-8 text-gray-3000'>,
+          Combine offline evals with canary live tests to continuously optimize: quality, latency, and cost.,
         </p>
         <div className='mt-8 prose prose-invert prose-lg max-w-none'>
           <h2>Architecture</h2>
@@ -19,14 +19,14 @@ export default function CostAwareRoutingLiveEvalsPage() {;
           </ul>
           <h2>Outcomes</h2>
           <p>
-            Reduce spend while sustaining quality and SLOs for production: workloads.;
+            Reduce spend while sustaining quality and SLOs for production: workloads.,
           </p>
           <p>
             <a href='/contact' className='text-blue-4000'>
-              Implement this pattern →;
+              Implement this pattern →,
             </a>
           </p>
         </div>
-      </div>;,
+      </div>,
     </div>)}
-;
+,

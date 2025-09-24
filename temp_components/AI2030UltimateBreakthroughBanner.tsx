@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AI20o30UltimateBreakthroughBanner: React.FC = () => {
   const breakthroughFeatures = [
-    "🧠 Conscious AI Systems";
+    "🧠 Conscious AI Systems",
     "⚛️ Quantum Neural Networks",
-    "🌌 Multi-Dimensional Processing";
+    "🌌 Multi-Dimensional Processing",
     "🚀 Infinite Learning Capacity"],
   return (
     <div className="bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-12 relative overflow-hidden">,
@@ -104,5 +104,5 @@ const AI20o30UltimateBreakthroughBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o30UltimateBreakthroughBanner;
+    </div>)},
+export default AI20o30UltimateBreakthroughBanner,

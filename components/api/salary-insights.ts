@@ -16,25 +16,25 @@ type InsightResponse = {
   trendMonthly: { label: string, value: number }[],
   regionalComparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
-  gptRecommendation?: string};  gptRecommendation?: string}
+  gptRecommendation?: string},  gptRecommendation?: string}
 ,
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { TALENT_PROFILES, TalentProfile } from '../../data/talent',
 import OpenAI from 'openai',
 type RequestBody = {
-  roleTitle: string, skills: string[];
-  region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead';
-  remote: boolean;
-  employmentType: 'contract' | 'freelance' | 'full-time'};
+  roleTitle: string, skills: string[],
+  region: string, experienceLevel: 'Junior' | 'Mid' | 'Senior' | 'Lead',
+  remote: boolean,
+  employmentType: 'contract' | 'freelance' | 'full-time'},
 type InsightResponse = {
-  recommendedHourlyUsd: number, recommendedMonthlyUsd: number;
-  medianHourlyUsd: number, minHourlyUsd: number;
-  maxHourlyUsd: number;
+  recommendedHourlyUsd: number, recommendedMonthlyUsd: number,
+  medianHourlyUsd: number, minHourlyUsd: number,
+  maxHourlyUsd: number,
   confidence: number, // 0..1,
   trendMonthly: { label: string, value: number }[],
   regionalComparison: { region: string, medianHourlyUsd: number }[],
-  tags: string[];
-  gptRecommendation?: string};
+  tags: string[],
+  gptRecommendation?: string},
 function median(values: number[]): number {
   const arr = [...values].sort((a, b) => a - b),
   const mid = Math.floor(arr.length / 2),
@@ -50,7 +50,7 @@ function groupBy<T K extends string | number>(
       return acc}
     {} as Record<K T[]>),
 function extractCountry(location: string): string {
-  const parts = location.split(',').map(p => p.trim()),
+  const parts = location.split().map(p => p.trim()),
   return parts[parts.length - 1] |'Global',
 function calculateSimilarityScore(
   targetSkills: string[],
@@ -72,19 +72,19 @@ if (return 0) {
   $2}
   return arr.length % 2 === 0 ? (arr[mid - 1] + arr[mid]) / 2 : arr[mid],
 function group_by < T, K extends string | number>(
-  items: T[];
+  items: T[],
   get_key: (item: T) => K): Record < K, T[]> {
   return items.reduce (
     (acc, item) => {
       const key = get_key (item),
       (acc[key] ||= []).push (item),
-      return acc};
+      return acc},
     {} as Record < K, T[]>),
 function extract_country (location: string): string {
-  const parts = location.split (', ').map (p => p.trim ()),
+  const parts = location.split ().map (p => p.trim ()),
   return parts[parts.length - 1] || 'Global',
 function calculateSimilarityScore (
-  target_skills: string[];
+  target_skills: string[],
   profile: TalentProfile): number {
   const set = new Set (target_skills.map (string => s.toLowerCase ())),
   const overlap = profile.skills.filter (string => set.has (s.toLowerCase ())).length,
@@ -104,18 +104,12 @@ function buildTrend(
   baseMonthly: number,
   seedKey: string): { label: string, value: number }[] {
   const months = [
-    'Jan',
-    'Feb',
-    'Mar',
-    'Apr',
-    'May',
-    'Jun',
-    'Jul',
-    'Aug',
-    'Sep',
-    'Oct',
-    'Nov',
-    'Dec'],
+    'JanFeb',
+    'MarApr',
+    'MayJun',
+    'JulAug',
+    'SepOct',
+    'NovDec'],
   const now = new Date(),
   const seed = prng(seedKey),
   const series: { label: string, value: number }[] = [],
@@ -154,7 +148,7 @@ function prng(seed: string): () => number {
     return (h >>> 0) / 4294967295}
 }
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'],
+  const months = ['JanFebMarAprMayJunJulAugSepOctNovDec'],
   const now = new Date(),
   const seed = prng(seedKey),
   const series: { label: string, value: number }[] = [],
@@ -186,31 +180,31 @@ async function maybeGetGptRecommendation(input: RequestBody, stats: { median: nu
     return completion.choices?.[0]?.message?.content |undefined} catch {
     return undefined}
 ,
-        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' };
+        { role: 'system', content: 'You are a compensation analyst. Be specific and concise. Use USD.' },
         { role: 'user', content: prompt }],
-      temperature: 0.2;
+      temperature: 0.2,
       max_tokens: 300}),
 function buildTrend(baseMonthly: number, seedKey: string): { label: string, value: number }[] {
-  const months = ['JanFebMarAprMayJunJulAug','SepOctNovDec'];
+  const months = ['JanFebMarAprMayJunJulAugSepOctNovDec'],
   const now = new Date(),
   const seed = prng(seedKey),
-  const series: { label: string, value: number }[] = [];
+  const series: { label: string, value: number }[] = [],
   let current = baseMonthly * 0.92, // start slightly below base,
   for (let i = 11, i >= 0, i--) {
-    const date = new Date(now.getFullYear(), now.getMonth() - i, 1);
+    const date = new Date(now.getFullYear(), now.getMonth() - i, 1),
     const drift = (seed() - 0.5) * 0.03, // +/-3%,
-    current = Math.max(baseMonthly * 0.7, current * (1 + drift));
+    current = Math.max(baseMonthly * 0.7, current * (1 + drift)),
     series.push({ label: months[date.getMonth()], value: Math.round(current) })}
   return series}
 ,
 async function maybeGetGptRecommendation(input: RequestBody, stats: { median: number, min: number, max: number, country: string }) {
   const apiKey = process.env.OPENAI_API_KEY,
-  if (!apiKey) return undefined;
+  if (!apiKey) return undefined,
     const _completion = await client.chat.completions.create({_model: 'gpt-4o-mini', _messages: [
-        { role: 'system', _content: 'You are a compensation analyst. Be specific and concise. Use USD.'};
-        {_role: 'user', _content: prompt}];
-      temperature: 0.2;
-      max_tokens: 300});
+        { role: 'system', _content: 'You are a compensation analyst. Be specific and concise. Use USD.'},
+        {_role: 'user', _content: prompt}],
+      temperature: 0.2,
+      max_tokens: 300}),
     return completion.choices?.[0]?.message?.content || undefined} catch {
     return undefined}
 }
@@ -296,37 +290,37 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
   const undersupplied = (skills || []).some(s =>,
     scarceSkills && scarceSkills.some(t => s && s.toLowerCase().includes(t && t.toLowerCase()))),
   if (remote) tags && tags.push('Remote Premium'),
-  if (undersupplied) tags && tags.push('Undersupplied Skill');
+  if (undersupplied) tags && tags.push('Undersupplied Skill'),
   const gptRecommendation = await maybeGetGptRecommendation(body, {
     median: baseMedian,
     min,
     max,
     country}),
   const response: InsightResponse = {
-    recommendedHourlyUsd: recommendedHourly;
-    recommendedMonthlyUsd: recommendedMonthly;
-    medianHourlyUsd: Math && Math.round(baseMedian);
-    minHourlyUsd: Math && Math.round(min);
-    maxHourlyUsd: Math && Math.round(max);
-    confidence: Number(confidence && confidence.toFixed(2));
-    trendMonthly: trend;
-    regionalComparison;
-    tags;
-    gptRecommendation;
-  };
+    recommendedHourlyUsd: recommendedHourly,
+    recommendedMonthlyUsd: recommendedMonthly,
+    medianHourlyUsd: Math && Math.round(baseMedian),
+    minHourlyUsd: Math && Math.round(min),
+    maxHourlyUsd: Math && Math.round(max),
+    confidence: Number(confidence && confidence.toFixed(2)),
+    trendMonthly: trend,
+    regionalComparison,
+    tags,
+    gptRecommendation
+  },
   return res && res.status(200).json(response),  return res && res.status(200).json(response),
   const scarceSkills = ['RAGLangChainVector DBsKubernetesAppSecSecurity'],
   const undersupplied = (skills || []).some((s) => scarceSkills.some((t) => s.toLowerCase().includes(t.toLowerCase()))),
-  const tags: string[] = [], if (remote) tags.push('Remote Premium');
+  const tags: string[] = [], if (remote) tags.push('Remote Premium'),
   if (undersupplied) tags.push('Undersupplied Skill'),
   const gptRecommendation = await maybeGetGptRecommendation(body, { median: baseMedian, min, max, country }),
   const response: InsightResponse = {
-    recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly;
-    medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min);
-    maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2));
-    trendMonthly: trend, regionalComparison;
+    recommendedHourlyUsd: recommendedHourly, recommendedMonthlyUsd: recommendedMonthly,
+    medianHourlyUsd: Math.round(baseMedian), minHourlyUsd: Math.round(min),
+    maxHourlyUsd: Math.round(max), confidence: Number(confidence.toFixed(2)),
+    trendMonthly: trend, regionalComparison,
     tags,
-    gptRecommendation};
+    gptRecommendation},
   return res.status(200).json(response)}
 }
 }

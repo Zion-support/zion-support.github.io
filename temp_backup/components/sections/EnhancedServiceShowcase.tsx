@@ -1,8 +1,8 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, ExternalLink, Star, Users, TrendingUp;
-  Shield, Zap, Brain, Rocket, Dna, Globe, Cpu;
+  ArrowRight, ExternalLink, Star, Users, TrendingUp,
+  Shield, Zap, Brain, Rocket, Dna, Globe, Cpu,
   CheckCircle, Clock, DollarSign, Target} from 'lucide-react',
 import { innovativeAIServices } from '../../data/innovative-ai-services',
 import { quantumSpaceServices } from '../../data/quantum-space-services',
@@ -47,7 +47,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -62,9 +62,9 @@ interface EnhancedServiceShowcaseProps {
   showStats?: boolean}
 ,
 const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
-  services;
-  title = "Revolutionary 20o29 Services";
-  subtitle = "Cutting-edge technology solutions that transform businesses";
+  services,
+  title = "Revolutionary 20o29 Services",
+  subtitle = "Cutting-edge technology solutions that transform businesses",
   showStats = true}) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -95,23 +95,23 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
     }),
     .slice(0, maxServices),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut"}
     }
-  };
+  },
   const featuredServices = services.filter(service => service.popular).slice(0, 6),
   const regularServices = services.filter(service => !service.popular).slice(0, 12),
   return (
@@ -170,7 +170,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
                   <div className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden">,
                     {/* Background Pattern */}
                     <div className="absolute inset-0 rounded-2xl overflow-hidden">,
-                      <div className={`absolute inset-0 bg-gradient-to-r ${service.color.replace('from-', 'from-').replace('to-', 'to-')}/20 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0`}  />,
+                      <div className={`absolute inset-0 bg-gradient-to-r ${service.color.replace('from-from-').replace('to-to-')}/20 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0`}  />,
                       <div className="absolute inset-0 bg-gradient-to-br from-transparent via-white/5 to-transparent opacity-0 group-hover: opacity-10o0 transition-opacity duration-70o0"  />,
                     </div>,
                     {/* Popular Badge */}
@@ -270,7 +270,7 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
               <div className="relative bg-black/60 backdrop-blur-xl border border-white/10 rounded-xl p-4 overflow-hidden hover: border-cyan-40o0/30 transition-all duration-30o0">,
                 {/* Background Pattern */}
                 <div className="absolute inset-0 rounded-xl overflow-hidden">,
-                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color.replace('from-', 'from-').replace('to-', 'to-')}/10 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0`}  />,
+                  <div className={`absolute inset-0 bg-gradient-to-r ${service.color.replace('from-from-').replace('to-to-')}/10 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0`}  />,
                 </div>,
                 {/* Service Content */}
                 <div className="relative z-10">,
@@ -340,5 +340,5 @@ const EnhancedServiceShowcase: React.FC<EnhancedServiceShowcaseProps> = ({
             </div>,
           </motion.div>)}
       </div>,
-    </section>)};
-export default EnhancedServiceShowcase;
+    </section>)},
+export default EnhancedServiceShowcase,

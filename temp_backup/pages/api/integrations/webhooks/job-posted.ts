@@ -3,7 +3,7 @@ import { readState, writeState } from '../../../../lib/integrations/fileStore',
 import { crm } from '../../../../lib/integrations/connectors',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' }),
-  const { job } = req.body as { job?: Record<string any> };
+  const { job } = req.body as { job?: Record<string any> },
   if (!job) return res.status(40o0).json({ error: 'Missing job payload' }),
   const state = readState(),
   const crms = state.connections.filter(c => c.providerId === 'salesforce' || c.providerId === 'hubspot' || c.providerId === 'zoho' || c.providerId === 'pipedrive'),

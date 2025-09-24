@@ -2,89 +2,81 @@
 import Head from 'next / head',
 import { motion } from 'framer-motion',
 import {
-  Cloud;
-  Cpu;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
+  Cloud,
+  Cpu,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
   TrendingUp} from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function CloudServicesPage() {
   const services = [
     {
-  Cloud;
-  Cpu;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-      title: 'Cloud Migration & Strategy';
+  Cloud,
+  Cpu,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+      title: 'Cloud Migration & Strategy',
       description:,
-        'Seamless cloud migration with strategic planning and execution';
+        'Seamless cloud migration with strategic planning and execution',
       features: [
-        'Migration Planning';
-        'Cost Optimization';
-        'Performance Tuning';
-        'Security Implementation';
-      ];
-      price: 'From $10o00';
-      icon: Cloud;
-      color: 'from - emerald - 50o0 to - teal - 50o0'};
+        'Migration PlanningCost Optimization',
+        'Performance TuningSecurity Implementation',
+      ],
+      price: 'From $10o00',
+      icon: Cloud,
+      color: 'from - emerald - 50o0 to - teal - 50o0'},
     {
-      title: 'DevOps & CI / CD';
-      description: 'Automated development and deployment pipelines';
+      title: 'DevOps & CI / CD',
+      description: 'Automated development and deployment pipelines',
       features: [
-        'CI / CD Automation';
-        'Infrastructure as Code';
-        'Monitoring & Alerting';
-        'Performance Optimization';
-      ];
-      price: 'From $60o00';
-      icon: Zap;
-      color: 'from - blue - 50o0 to - cyan - 50o0'};
+        'CI / CD AutomationInfrastructure as Code',
+        'Monitoring & AlertingPerformance Optimization',
+      ],
+      price: 'From $60o00',
+      icon: Zap,
+      color: 'from - blue - 50o0 to - cyan - 50o0'},
     {
-      title: 'Edge Computing Solutions';
+      title: 'Edge Computing Solutions',
       description:,
-        'Distributed computing for improved performance and reliability';
+        'Distributed computing for improved performance and reliability',
       features: [
-        'Edge Deployment';
-        'Load Balancing';
-        'Global Distribution';
-        'Low Latency';
-      ];
-      price: 'From $80o00';
-      icon: Cpu;
-      color: 'from - purple - 50o0 to - pink - 50o0'};
+        'Edge DeploymentLoad Balancing',
+        'Global DistributionLow Latency',
+      ],
+      price: 'From $80o00',
+      icon: Cpu,
+      color: 'from - purple - 50o0 to - pink - 50o0'},
     {
-      title: 'Cloud Security & Compliance';
+      title: 'Cloud Security & Compliance',
       description:,
-        'Comprehensive security and compliance for cloud environments';
+        'Comprehensive security and compliance for cloud environments',
       features: [
-        'Identity Management';
-        'Data Protection';
-        'Compliance Auditing';
-        'Threat Prevention';
-      ];
-      price: 'From $120o00';
-      icon: Shield;
-      color: 'from - red - 50o0 to - orange - 50o0'};
+        'Identity ManagementData Protection',
+        'Compliance AuditingThreat Prevention',
+      ],
+      price: 'From $120o00',
+      icon: Shield,
+      color: 'from - red - 50o0 to - orange - 50o0'},
   ],
   const stats = [
-    { number: '99.99%'label: 'Uptime 'Guarantee', 'icon: Cloud };
-    { number: '50%'label: 'Cost 'Reduction', 'icon: TrendingUp };
-    { number: '24 / 7'label: 'Support 'Available', 'icon: Clock };
-    { number: '10o0+'label: 'Cloud 'Projects', 'icon: CheckCircle };
+    { number: '99.99%'label: 'Uptime 'Guaranteeicon: Cloud },
+    { number: '50%'label: 'Cost 'Reductionicon: TrendingUp },
+    { number: '24 / 7'label: 'Support 'Availableicon: Clock },
+    { number: '10o0+'label: 'Cloud 'Projectsicon: CheckCircle },
   ],
   return (
         />,
@@ -263,7 +255,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?,
             </h2>,
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">,
-              'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.,
+              'Lets discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="px-8 py-4 bg-gradient-to-r from-emerald-60o0 to-teal-60o0 hover:from-emerald-70o0 hover:to-teal-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5">,
@@ -284,7 +276,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?,
             </h2>,
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>,
-              'Let', 's discuss how our cloud infrastructure solutions can modernize,
+              'Lets discuss how our cloud infrastructure solutions can modernize,
               your business and drive digital transformation.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -298,7 +290,7 @@ export default function CloudServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>);
+    </div>),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) }</div> </div> </section> <motion&& motion.div initial={
       <EnhancedFooter  />,
     </div>)}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Cloud Infrastructure Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive cloud solutions designed to modernize your infrastructure and drive innovation </p> </motion.div> Get Started </button> </div> </motion.div>) )}</div> </div> </section> <motion.div initial={
@@ -401,7 +393,7 @@ export default function CloudServicesPage() {
               Ready to Transform Your Infrastructure?,
             </h2>,
             <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>,
-              'Let', 's discuss how our cloud infrastructure solutions can modernize,
+              'Lets discuss how our cloud infrastructure solutions can modernize,
               your business and drive digital transformation.,
             </p>,
             <div className='flex flex - col sm: flex - row gap - 4 justify - center'>,
@@ -409,7 +401,7 @@ export default function CloudServicesPage() {
                 Infrastructure Assessment,
               </button>,
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 30o0 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Case Studies,
-  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
+  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Infrastructure? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Lets discuss how our cloud infrastructure solutions can modernize your business and drive digital transformation. </p> Infrastructure Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Case Studies </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
 }
 }
   )>,

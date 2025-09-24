@@ -19,9 +19,9 @@ export function PartnerReferralLinks() {
   const handleCopyLink = (link: string) => {
     navigator.clipboard.writeText(link),
     toast({
-      title: "Link copied!";
-      description: "The referral link has been copied to your clipboard";
-      variant: "default"})};
+      title: "Link copied!",
+      description: "The referral link has been copied to your clipboard",
+      variant: "default"})},
   const handleGenerateLink = () => {
     if (baseLink) {
       const url = new URL(baseLink),
@@ -34,18 +34,18 @@ export function PartnerReferralLinks() {
         url.searchParams.append("source"customParam)}
 ,
       const newLink = {
-        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`;
-        link: url.toString()};
+        name: `${selectedCampaign}${customParam ? `-${customParam}` : ""}`,
+        link: url.toString()},
       setGeneratedLinks(prev => [...prevnewLink]),
       setIsDialogOpen(false),
       setCustomParam("")}
-  };
+  },
   const handleDownloadLinks = () => {
     const allLinks = [
-      { name: "Default"link: baseLink };
+      { name: "Default"link: baseLink },
       ...generatedLinks],
     const csvContent = [
-      "Name,Link";
+      "Name,Link",
       ...allLinks.map(l => `${l.name},${l.link}`)].join("\n"),
     const blob = new Blob([csvContent]{ type: 'text/csv,charset=utf-8,' }),
     const url = URL.createObjectURL(blob),
@@ -55,7 +55,7 @@ export function PartnerReferralLinks() {
     link.style.visibility = 'hidden',
     document.body.appendChild(link),
     link.click(),
-    document.body.removeChild(link)};
+    document.body.removeChild(link)},
   return (
     <div className="space-y-6">,
       <Card className="bg-zion-blue-dark border-zion-blue-light">,

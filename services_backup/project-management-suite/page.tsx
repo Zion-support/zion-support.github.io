@@ -1,4 +1,4 @@
-export const metadata = { title: 'Project Management Suite | Zion Tech Group' };
+export const metadata = { title: 'Project Management Suite | Zion Tech Group' },
 export default function ProjectManagementSuitePage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -16,36 +16,27 @@ export default function ProjectManagementSuitePage() {
         <FeatureCard
           title='Project Planning & Tracking',
           features={[
-            'Gantt charts & timeline management';
-            'Task dependencies & critical path analysis';
-            'Resource allocation & capacity planning';
-            'Milestone tracking & progress monitoring';
-            'Risk assessment & mitigation planning';
-            'Budget tracking & cost management';
+            'Gantt charts & timeline managementTask dependencies & critical path analysis',
+            'Resource allocation & capacity planningMilestone tracking & progress monitoring',
+            'Risk assessment & mitigation planningBudget tracking & cost management',
           ]}
           icon='📋',
         />,
         <FeatureCard
           title='Team Collaboration',
           features={[
-            'Real-time team communication';
-            'File sharing & document management';
-            'Comment threads & @mentions';
-            'Video conferencing integration';
-            'Team calendars & scheduling';
-            'Activity feeds & notifications';
+            'Real-time team communicationFile sharing & document management',
+            'Comment threads & @mentionsVideo conferencing integration',
+            'Team calendars & schedulingActivity feeds & notifications',
           ]}
           icon='👥',
         />,
         <FeatureCard
           title='AI-Powered Insights',
           features={[
-            'Predictive project completion times';
-            'Resource optimization recommendations';
-            'Risk prediction & early warnings';
-            'Performance analytics & reporting';
-            'Automated status updates';
-            'Smart task prioritization';
+            'Predictive project completion timesResource optimization recommendations',
+            'Risk prediction & early warningsPerformance analytics & reporting',
+            'Automated status updatesSmart task prioritization',
           ]}
           icon='🤖',
         />,
@@ -98,9 +89,9 @@ export default function ProjectManagementSuitePage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -130,12 +121,9 @@ function PricingSection() {
           price='$29/mo',
           duration='Up to 10 users',
           features={[
-            'Basic project management';
-            'Task tracking & assignments';
-            'Team collaboration tools';
-            'Mobile app access';
-            'Basic reporting';
-            'Email support';
+            'Basic project managementTask tracking & assignments',
+            'Team collaboration toolsMobile app access',
+            'Basic reportingEmail support',
           ]}
           popular={false}
         />,
@@ -144,13 +132,10 @@ function PricingSection() {
           price='$79/mo',
           duration='Up to 50 users',
           features={[
-            'Everything in Starter';
-            'Advanced Gantt charts';
-            'Resource management';
-            'Time tracking & billing';
-            'Advanced analytics';
-            'API access & integrations';
-            'Priority support';
+            'Everything in StarterAdvanced Gantt charts',
+            'Resource managementTime tracking & billing',
+            'Advanced analyticsAPI access & integrations',
+            'Priority support',
           ]}
           popular={true}
         />,
@@ -159,13 +144,10 @@ function PricingSection() {
           price='$199/mo',
           duration='Unlimited users',
           features={[
-            'Everything in Professional';
-            'AI-powered insights';
-            'Custom workflows';
-            'Advanced security & compliance';
-            'Dedicated account manager';
-            'Custom integrations';
-            '24/7 phone support';
+            'Everything in ProfessionalAI-powered insights',
+            'Custom workflowsAdvanced security & compliance',
+            'Dedicated account managerCustom integrations',
+            '24/7 phone support',
           ]}
           popular={false}
         />,
@@ -173,11 +155,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

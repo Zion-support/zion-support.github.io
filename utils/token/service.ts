@@ -1,10 +1,10 @@
 
 export function getConfig() {
   return {
-    tokenName: 'Zion Token';
-    tokenSymbol: 'ZION';
-    decimals: 18;
-    totalSupply: 1000000};
+    tokenName: 'Zion Token',
+    tokenSymbol: 'ZION',
+    decimals: 18,
+    totalSupply: 1000000},
 export interface TokenTransaction {
   id: string,
   userId: string,
@@ -30,12 +30,12 @@ export function issueTokens(userId: string, amount: number, reason: string): Tok
     reason,
     timestamp: Date.now()}
 ,
-    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
-    userId;
-    amount;
-    type: 'issue';
-    reason;
-    timestamp: Date.now()};
+    id: `tx_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
+    userId,
+    amount,
+    type: 'issue',
+    reason,
+    timestamp: Date.now()},
   transactions.push(transaction),
   return transaction}
 export function redeemTokens(userId: string, amount: number, reason: string): TokenTransaction {
@@ -45,22 +45,22 @@ export function redeemTokens(userId: string, amount: number, reason: string): To
     amount: -amount, // Negative for redemption,
 export function issue_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
-    user_id;
-    amount;
-    type: 'issue';
-    reason;
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
+    amount,
+    type: 'issue',
+    reason,
     timestamp: Date.now ()}
 ,
   transactions.push (transaction),
   return transaction}
 export function redeem_tokens (user_id: string, amount: number, reason: string): TokenTransaction {
   const transaction: TokenTransaction = {
-    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`;
-    user_id;
+    id: `tx_${Date.now ()}_${Math.random ().to_string (36).substr (2, 9)}`,
+    user_id,
     amount: -amount, // Negative for redemption,
-    type: 'redeem';
-    reason;
+    type: 'redeem',
+    reason,
     timestamp: Date.now ()}
 ,
   transactions.push (transaction),
@@ -70,9 +70,9 @@ export function redeem_tokens (user_id: string, amount: number, reason: string):
 ,
 export function getConfig() {
   return {
-    enabled: true;
-    rate: 1 && 1.0;
-    maxPerDay: 1000};
+    enabled: true,
+    rate: 1 && 1.0,
+    maxPerDay: 1000},
 }
 export function setConfig(
   partial: Partial<ReturnType<typeof getConfig>>): void {

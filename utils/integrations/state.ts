@@ -10,9 +10,9 @@ export function getState(): IntegrationState {
   return { ...state }
 }
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
-};
+},
 export function getState(): IntegrationState {
-  return { ...state };
+  return { ...state },
 }
 ,
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
@@ -25,8 +25,8 @@ export function resetState(): void {
   logs: [],
   overrides: [],
 export function writeState(updater: (state: IntegrationState) => void): IntegrationState {
-};
-    connections: [];
-    logs: [];
-    overrides: []};
+},
+    connections: [],
+    logs: [],
+    overrides: []},
 }

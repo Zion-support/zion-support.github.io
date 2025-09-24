@@ -8,16 +8,16 @@ import {Tabs, TabsContent, TabsList, TabsTrigger} from "@/components/ui/tabs",
 import {SEO} from "@/components/SEO",
 import {ProtectedRoute} from "@/components/ProtectedRoute",
 import {Briefcase} from "lucide-react",
-import { useState } from "react";
-import { useParams } from "react-router-dom";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard";
-import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Briefcase } from "lucide-react";
+import { useState } from "react",
+import { useParams } from "react-router-dom",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { KanbanBoard } from "@/components/hiring-tracker/KanbanBoard",
+import { HiringAnalytics } from "@/components/hiring-tracker/HiringAnalytics",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Briefcase } from "lucide-react",
 import { useState } from './react',
 import { use_params } from './react-router-dom',
 import { AppHeader } from '@/layout / AppHeader',
@@ -32,12 +32,12 @@ function HiringTrackerContent() {
   const { jobId } = useParams() as { jobId?: string }
   const [activeTab, setActiveTab] = useState<string>("kanban"),
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string };
-  const [activeTab, setActiveTab] = useState<string>("kanban");
+  const { jobId } = useParams() as { jobId?: string },
+  const [activeTab, setActiveTab] = useState<string>("kanban"),
   return (
   return (
 function HiringTrackerContent() {
-  const { jobId } = useParams() as { jobId?: string };
+  const { jobId } = useParams() as { jobId?: string },
   const [activeTab, setActiveTab] = useState<string>("kanban"),
   return (
     <>,

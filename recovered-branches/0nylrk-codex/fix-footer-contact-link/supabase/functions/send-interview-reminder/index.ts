@@ -2,10 +2,9 @@ import { serve } from 'https: //deno.land/std@0.190.0/http/server.ts',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2',
 import { Resend } from 'npm: resend@2.0.0',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 const resend = new Resend(Deno.env.get('RESEND_API_KEY')),
 const supabaseUrl = Deno.env.get('SUPABASE_URL') || '',
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') || '',
@@ -24,11 +23,11 @@ serve(async req => {
       .from('interviews'),
       .select(
         `,
-        *;
-        clients:client_id(*);
+        *,
+        clients: client_id(*),
         talents: talent_id(*),
       `),
-      .eq('status', 'confirmed'),
+      .eq('statusconfirmed'),
       .gte('scheduled_date', now.toISOString()),
       .lt('scheduled_date', thirtyMinutesFromNow.toISOString()),
       .is('reminder_sent', null),
@@ -48,9 +47,9 @@ serve(async req => {
         if (clientEmail) {
           try {
             await resend.emails.send({
-              from: 'Zion Marketplace <onboarding@resend.dev>';
-              to: [clientEmail];
-              subject: `Your interview with ${talentName} is starting soon!`;
+              from: 'Zion Marketplace <onboarding@resend.dev>',
+              to: [clientEmail],
+              subject: `Your interview with ${talentName} is starting soon!`,
               html: `,
                 <h1>Interview Reminder</h1>,
                 <p>Your scheduled interview with ${talentName} is starting in 30 minutes.</p>,
@@ -58,11 +57,11 @@ serve(async req => {
                 <p><strong>Duration: </strong> ${interview.duration_minutes} minutes</p>,
                 ${interview.meeting_link ? `<p><strong>Meeting Link: </strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>,
-              `;
+              `,
             }),
             results.push(`Reminder sent to client: ${clientEmail}`)} catch (emailError) {
             console.error(
-              `Error sending reminder to client ${clientEmail}:`;
+              `Error sending reminder to client ${clientEmail}:`,
               emailError)}
         }
 ,
@@ -72,9 +71,9 @@ serve(async req => {
         if (talentEmail) {
           try {
             await resend.emails.send({
-              from: 'Zion Marketplace <onboarding@resend.dev>';
-              to: [talentEmail];
-              subject: `Your interview with ${clientName} is starting soon!`;
+              from: 'Zion Marketplace <onboarding@resend.dev>',
+              to: [talentEmail],
+              subject: `Your interview with ${clientName} is starting soon!`,
               html: `,
                 <h1>Interview Reminder</h1>,
                 <p>Your scheduled interview with ${clientName} is starting in 30 minutes.</p>,
@@ -82,11 +81,11 @@ serve(async req => {
                 <p><strong>Duration: </strong> ${interview.duration_minutes} minutes</p>,
                 ${interview.meeting_link ? `<p><strong>Meeting Link: </strong> <a href="${interview.meeting_link}">${interview.meeting_link}</a></p>` : ''}
                 <p>Please be ready on time!</p>,
-              `;
+              `,
             }),
             results.push(`Reminder sent to talent: ${talentEmail}`)} catch (emailError) {
             console.error(
-              `Error sending reminder to talent ${talentEmail}:`;
+              `Error sending reminder to talent ${talentEmail}:`,
               emailError)}
         }
 ,
@@ -98,12 +97,12 @@ serve(async req => {
     }
 ,
     return new Response(JSON.stringify({ success: true, results }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
-      status: 200;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 200
     })} catch (error) {
     console.error('Error in send-interview-reminder function:', error),
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
-      status: 500;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 500
     })}
 }),

@@ -2,43 +2,33 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Link as LinkIcon, ArrowRight, CheckCircle, Star, TrendingUp;
-  Shield, Zap, Users, Globe, Database;
+  Link as LinkIcon, ArrowRight, CheckCircle, Star, TrendingUp,
+  Shield, Zap, Users, Globe, Database,
   Phone, Mail, MapPin, Rocket, Sparkles} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import EnhancedNavigation20o26 from '../components/layout/EnhancedNavigation20o26',
 export default function BlockchainInfrastructurePlatform20o26() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'Multi-chain support (Ethereum, Polygon, Solana)';
-    'Smart contract development tools';
-    'Enterprise security & compliance';
-    'Scalable infrastructure';
-    'API access & SDKs';
-    'Real-time monitoring';
-    'Custom blockchain networks';
-    'Integration marketplace';
-    '24/7 support';
-    'Expert consultation'],
+    'Multi-chain support (Ethereum, Polygon, Solana)Smart contract development tools',
+    'Enterprise security & complianceScalable infrastructure',
+    'API access & SDKsReal-time monitoring',
+    'Custom blockchain networksIntegration marketplace',
+    '24/7 supportExpert consultation'],
   const useCases = [
-    'Supply chain tracking';
-    'Digital identity management';
-    'Financial transactions';
-    'Asset tokenization';
-    'Voting systems';
-    'Data integrity'],
+    'Supply chain trackingDigital identity management',
+    'Financial transactionsAsset tokenization',
+    'Voting systemsData integrity'],
   const integrations = [
-    'Salesforce', 'SAP', 'Oracle', 'Microsoft Dynamics';
-    'Slack', 'Microsoft Teams', 'Zapier', 'Custom APIs'],
+    'SalesforceSAP', 'OracleMicrosoft Dynamics',
+    'SlackMicrosoft Teams', 'ZapierCustom APIs'],
   const competitors = [
-    'Alchemy ($0-30o00/month)';
-    'Infura ($0-10o00/month)';
-    'QuickNode ($0-20o00/month)';
-    'Chainstack', 'Blockdaemon', 'ConsenSys'],
+    'Alchemy ($0-30o00/month)Infura ($0-10o00/month)',
+    'QuickNode ($0-20o00/month)Chainstack', 'BlockdaemonConsenSys'],
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",

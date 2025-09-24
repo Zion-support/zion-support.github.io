@@ -5,8 +5,8 @@ export default function Analytics() {
     // Google Analytics 4,
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('config', process.env.NEXT_PUBLIC_GA_ID, {
-        page_title: document.title;
-        page_location: window.location.href;
+        page_title: document.title,
+        page_location: window.location.href
       })}
   }, []),
   return (
@@ -23,10 +23,10 @@ export default function Analytics() {
             window.dataLayer = window.dataLayer || [],
             function gtag(){dataLayer.push(arguments)}
             gtag('js', new Date()),
-            gtag('config', '${process.env.NEXT_PUBLIC_GA_ID}', {
-              page_title: document.title;
+            gtag('config${process.env.NEXT_PUBLIC_GA_ID}', {
+              page_title: document.title,
               page_location: window.location.href}),
-          `;
+          `,
         }}
       />,
     </>)}

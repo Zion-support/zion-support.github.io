@@ -7,165 +7,165 @@ export default function AIGlossaryPage() {
   const glossaryData = {
     'AI Fundamentals': [
       {
-        term: 'Artificial Intelligence (AI)';
+        term: 'Artificial Intelligence (AI)',
         definition:,
-          'The simulation of human intelligence in machines that are programmed to think and learn like humans.';
+          'The simulation of human intelligence in machines that are programmed to think and learn like humans.',
         examples:,
-          'Machine learning, natural language processing, computer vision';
-      };
+          'Machine learning, natural language processing, computer vision',
+      },
       {
-        term: 'Machine Learning (ML)';
+        term: 'Machine Learning (ML)',
         definition:,
-          'A subset of AI that enables systems to automatically learn and improve from experience without being explicitly programmed.';
-        examples: 'Predictive models, recommendation systems, fraud detection';
-      };
+          'A subset of AI that enables systems to automatically learn and improve from experience without being explicitly programmed.',
+        examples: 'Predictive models, recommendation systems, fraud detection',
+      },
       {
-        term: 'Deep Learning';
+        term: 'Deep Learning',
         definition:,
-          'A subset of machine learning that uses neural networks with multiple layers to model and understand complex patterns.';
-        examples: 'Image recognition, speech processing, autonomous vehicles';
-      };
+          'A subset of machine learning that uses neural networks with multiple layers to model and understand complex patterns.',
+        examples: 'Image recognition, speech processing, autonomous vehicles',
+      },
       {
-        term: 'Neural Network';
+        term: 'Neural Network',
         definition:,
-          'A computing system inspired by biological neural networks, consisting of interconnected nodes that process information.';
-        examples: 'Convolutional neural networks, recurrent neural networks';
-      };
-    ];
+          'A computing system inspired by biological neural networks, consisting of interconnected nodes that process information.',
+        examples: 'Convolutional neural networks, recurrent neural networks',
+      },
+    ],
     'Automation & RPA': [
       {
-        term: 'Robotic Process Automation (RPA)';
+        term: 'Robotic Process Automation (RPA)',
         definition:,
-          'Technology that uses software robots to automate repetitive, rule-based digital tasks.';
-        examples: 'Data entry, invoice processing, customer service responses';
-      };
+          'Technology that uses software robots to automate repetitive, rule-based digital tasks.',
+        examples: 'Data entry, invoice processing, customer service responses',
+      },
       {
-        term: 'Workflow Automation';
+        term: 'Workflow Automation',
         definition:,
-          'The automation of business processes and workflows to improve efficiency and reduce manual intervention.';
-        examples: 'Approval processes, document routing, task assignments';
-      };
+          'The automation of business processes and workflows to improve efficiency and reduce manual intervention.',
+        examples: 'Approval processes, document routing, task assignments',
+      },
       {
-        term: 'Intelligent Process Automation (IPA)';
+        term: 'Intelligent Process Automation (IPA)',
         definition:,
-          'Combines RPA with AI capabilities to handle more complex, cognitive tasks.';
-        examples: 'Document analysis, decision making, process optimization';
-      };
+          'Combines RPA with AI capabilities to handle more complex, cognitive tasks.',
+        examples: 'Document analysis, decision making, process optimization',
+      },
       {
-        term: 'Business Process Management (BPM)';
+        term: 'Business Process Management (BPM)',
         definition:,
-          "A systematic approach to making an organization's workflow more effective, efficient, and capable of adapting to changing environments.";
-        examples: 'Process modeling, optimization, monitoring';
-      };
-    ];
+          "A systematic approach to making an organization's workflow more effective, efficient, and capable of adapting to changing environments.",
+        examples: 'Process modeling, optimization, monitoring',
+      },
+    ],
     'Data & Analytics': [
       {
-        term: 'Big Data';
+        term: 'Big Data',
         definition:,
-          'Extremely large datasets that can be analyzed computationally to reveal patterns, trends, and associations.';
-        examples: 'Social media data, sensor data, transaction records';
-      };
+          'Extremely large datasets that can be analyzed computationally to reveal patterns, trends, and associations.',
+        examples: 'Social media data, sensor data, transaction records',
+      },
       {
-        term: 'Data Mining';
+        term: 'Data Mining',
         definition:,
-          'The process of discovering patterns and relationships in large datasets using statistical and machine learning techniques.';
+          'The process of discovering patterns and relationships in large datasets using statistical and machine learning techniques.',
         examples:,
-          'Market basket analysis, customer segmentation, fraud detection';
-      };
+          'Market basket analysis, customer segmentation, fraud detection',
+      },
       {
-        term: 'Predictive Analytics';
+        term: 'Predictive Analytics',
         definition:,
-          'The use of statistical techniques and machine learning to analyze current and historical facts to make predictions about future events.';
-        examples: 'Sales forecasting, risk assessment, demand planning';
-      };
+          'The use of statistical techniques and machine learning to analyze current and historical facts to make predictions about future events.',
+        examples: 'Sales forecasting, risk assessment, demand planning',
+      },
       {
-        term: 'Business Intelligence (BI)';
+        term: 'Business Intelligence (BI)',
         definition:,
-          'Technologies, tools, and practices for collecting, integrating, analyzing, and presenting business information.';
-        examples: 'Dashboards, reports, data visualization';
-      };
-    ];
+          'Technologies, tools, and practices for collecting, integrating, analyzing, and presenting business information.',
+        examples: 'Dashboards, reports, data visualization',
+      },
+    ],
     'Cloud & Infrastructure': [
       {
-        term: 'Cloud Computing';
+        term: 'Cloud Computing',
         definition:,
-          'The delivery of computing services over the internet, including servers, storage, databases, networking, and software.';
-        examples: 'AWS, Azure, Google Cloud Platform';
-      };
+          'The delivery of computing services over the internet, including servers, storage, databases, networking, and software.',
+        examples: 'AWS, Azure, Google Cloud Platform',
+      },
       {
-        term: 'Edge Computing';
+        term: 'Edge Computing',
         definition:,
-          'A distributed computing paradigm that brings computation and data storage closer to the location where it is needed.';
-        examples: 'IoT devices, autonomous vehicles, smart cities';
-      };
+          'A distributed computing paradigm that brings computation and data storage closer to the location where it is needed.',
+        examples: 'IoT devices, autonomous vehicles, smart cities',
+      },
       {
-        term: 'Containerization';
+        term: 'Containerization',
         definition:,
-          'A lightweight alternative to full machine virtualization that involves encapsulating an application and its dependencies.';
-        examples: 'Docker, Kubernetes, microservices';
-      };
+          'A lightweight alternative to full machine virtualization that involves encapsulating an application and its dependencies.',
+        examples: 'Docker, Kubernetes, microservices',
+      },
       {
-        term: 'Serverless Computing';
+        term: 'Serverless Computing',
         definition:,
-          'A cloud computing execution model where the cloud provider automatically manages the allocation of machine resources.';
-        examples: 'AWS Lambda, Azure Functions, Google Cloud Functions';
-      };
-    ];
+          'A cloud computing execution model where the cloud provider automatically manages the allocation of machine resources.',
+        examples: 'AWS Lambda, Azure Functions, Google Cloud Functions',
+      },
+    ],
     'AI Ethics & Governance': [
       {
-        term: 'Algorithmic Bias';
+        term: 'Algorithmic Bias',
         definition:,
-          'Systematic and repeatable errors in a computer system that create unfair outcomes, such as privileging one arbitrary group of users over others.';
+          'Systematic and repeatable errors in a computer system that create unfair outcomes, such as privileging one arbitrary group of users over others.',
         examples:,
-          'Discriminatory hiring algorithms, biased loan approval systems';
-      };
+          'Discriminatory hiring algorithms, biased loan approval systems',
+      },
       {
-        term: 'Explainable AI (XAI)';
+        term: 'Explainable AI (XAI)',
         definition:,
-          'AI systems that can explain their reasoning, decision-making processes, and recommendations in human-understandable terms.';
+          'AI systems that can explain their reasoning, decision-making processes, and recommendations in human-understandable terms.',
         examples:,
-          'Interpretable machine learning models, transparent decision systems';
-      };
+          'Interpretable machine learning models, transparent decision systems',
+      },
       {
-        term: 'AI Governance';
+        term: 'AI Governance',
         definition:,
-          'The framework of rules, policies, and procedures that ensure AI systems are developed and deployed responsibly.';
-        examples: 'Ethics committees, compliance frameworks, audit procedures';
-      };
+          'The framework of rules, policies, and procedures that ensure AI systems are developed and deployed responsibly.',
+        examples: 'Ethics committees, compliance frameworks, audit procedures',
+      },
       {
-        term: 'Responsible AI';
+        term: 'Responsible AI',
         definition:,
-          'The practice of designing, developing, and deploying AI systems in a way that is ethical, transparent, and accountable.';
-        examples: 'Fairness testing, privacy protection, human oversight';
-      };
-    ];
+          'The practice of designing, developing, and deploying AI systems in a way that is ethical, transparent, and accountable.',
+        examples: 'Fairness testing, privacy protection, human oversight',
+      },
+    ],
     'Emerging Technologies': [
       {
-        term: 'Quantum Computing';
+        term: 'Quantum Computing',
         definition:,
-          'A type of computation that harnesses quantum mechanical phenomena to process information in ways that classical computers cannot.';
-        examples: 'Cryptography, optimization problems, drug discovery';
-      };
+          'A type of computation that harnesses quantum mechanical phenomena to process information in ways that classical computers cannot.',
+        examples: 'Cryptography, optimization problems, drug discovery',
+      },
       {
-        term: 'Generative AI';
+        term: 'Generative AI',
         definition:,
-          'AI systems that can generate new content, such as text, images, audio, or video, based on training data.';
-        examples: 'ChatGPT, DALL-E, music generation systems';
-      };
+          'AI systems that can generate new content, such as text, images, audio, or video, based on training data.',
+        examples: 'ChatGPT, DALL-E, music generation systems',
+      },
       {
-        term: 'Computer Vision';
+        term: 'Computer Vision',
         definition:,
-          'A field of AI that trains computers to interpret and understand visual information from the world.';
-        examples: 'Facial recognition, object detection, medical imaging';
-      };
+          'A field of AI that trains computers to interpret and understand visual information from the world.',
+        examples: 'Facial recognition, object detection, medical imaging',
+      },
       {
-        term: 'Natural Language Processing (NLP)';
+        term: 'Natural Language Processing (NLP)',
         definition:,
-          'A branch of AI that helps computers understand, interpret, and manipulate human language.';
-        examples: 'Chatbots, language translation, sentiment analysis';
-      };
-    ];
-  };
+          'A branch of AI that helps computers understand, interpret, and manipulate human language.',
+        examples: 'Chatbots, language translation, sentiment analysis',
+      },
+    ],
+  },
   const allTerms = Object.values(glossaryData).flat(),
   const filteredTerms = allTerms.filter(term => {
     const matchesSearch =,

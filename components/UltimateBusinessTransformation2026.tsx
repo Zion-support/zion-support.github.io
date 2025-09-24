@@ -7,64 +7,64 @@ const UltimateBusinessTransformation20o26 = () => {
   const [activeTransformationsetActiveTransformation] = useState(0),
   const transformations = [
     {
-      title: 'AI-Powered Automation';
-      description: 'Complete business process automation with 99.9% accuracy';
-      icon: Zap;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      title: 'AI-Powered Automation',
+      description: 'Complete business process automation with 99.9% accuracy',
+      icon: Zap,
+      color: 'from-blue-50o0 to-cyan-50o0',
       metrics: {
-        efficiency: '95%';
-        costReduction: '80%';
-        timeSaved: '40 hours/week'};
-      benefits: ['Automated 'Workflows', 'Smart Decision 'Making', 'Predictive Analytics']};
+        efficiency: '95%',
+        costReduction: '80%',
+        timeSaved: '40 hours/week'},
+      benefits: ['Automated 'WorkflowsSmart Decision 'Making', 'Predictive Analytics']},
     {
-      title: 'Digital Transformation';
-      description: 'Complete digital overhaul of business operations';
-      icon: Target;
-      color: 'from-purple-50o0 to-pink-50o0';
+      title: 'Digital Transformation',
+      description: 'Complete digital overhaul of business operations',
+      icon: Target,
+      color: 'from-purple-50o0 to-pink-50o0',
       metrics: {
-        efficiency: '90%';
-        costReduction: '70%';
-        timeSaved: '35 hours/week'};
-      benefits: ['Cloud 'Migration', 'API 'Integration', 'Data Analytics']};
+        efficiency: '90%',
+        costReduction: '70%',
+        timeSaved: '35 hours/week'},
+      benefits: ['Cloud 'MigrationAPI 'Integration', 'Data Analytics']},
     {
-      title: 'Customer Experience Revolution';
-      description: '360-degree customer experience transformation';
-      icon: Users;
-      color: 'from-green-50o0 to-emerald-50o0';
+      title: 'Customer Experience Revolution',
+      description: '360-degree customer experience transformation',
+      icon: Users,
+      color: 'from-green-50o0 to-emerald-50o0',
       metrics: {
-        efficiency: '85%';
-        costReduction: '60%';
-        timeSaved: '30 hours/week'};
-      benefits: [', 'Personalization', 'Omnichannel'Real-time Support']};
+        efficiency: '85%',
+        costReduction: '60%',
+        timeSaved: '30 hours/week'},
+      benefits: [Personalization', 'Omnichannel'Real-time Support']},
     {
-      title: 'Data-Driven Intelligence';
-      description: 'Advanced analytics and business intelligence systems';
-      icon: BarChart3;
-      color: 'from-orange-50o0 to-red-50o0';
+      title: 'Data-Driven Intelligence',
+      description: 'Advanced analytics and business intelligence systems',
+      icon: BarChart3,
+      color: 'from-orange-50o0 to-red-50o0',
       metrics: {
-        efficiency: '88%';
-        costReduction: '75%';
-        timeSaved: '25 hours/week'};
-      benefits: ['Predictive 'Modeling', 'Real-time 'Insights', 'Automated Reporting']}
+        efficiency: '88%',
+        costReduction: '75%',
+        timeSaved: '25 hours/week'},
+      benefits: ['Predictive 'ModelingReal-time 'Insights', 'Automated Reporting']}
   ],
   const successStories = [
     {
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      transformation: 'AI-Powered Automation';
-      results: '30o0% ROI in 6 months';
-      testimonial: 'The transformation was incredible. We automated 90% of our processes and saw immediate results.'};
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      transformation: 'AI-Powered Automation',
+      results: '30o0% ROI in 6 months',
+      testimonial: 'The transformation was incredible. We automated 90% of our processes and saw immediate results.'},
     {
-      company: 'Global Manufacturing Inc';
-      industry: 'Manufacturing';
-      transformation: 'Digital Transformation';
-      results: '50o0% efficiency increase';
-      testimonial: 'Our production capacity doubled while reducing costs by 60%.'};
+      company: 'Global Manufacturing Inc',
+      industry: 'Manufacturing',
+      transformation: 'Digital Transformation',
+      results: '50o0% efficiency increase',
+      testimonial: 'Our production capacity doubled while reducing costs by 60%.'},
     {
-      company: 'RetailMax';
-      industry: 'Retail';
-      transformation: 'Customer Experience Revolution';
-      results: '40o0% customer satisfaction';
+      company: 'RetailMax',
+      industry: 'Retail',
+      transformation: 'Customer Experience Revolution',
+      results: '40o0% customer satisfaction',
       testimonial: 'Customer retention increased by 20o0% and sales grew by 150%.'}
   ],
   useEffect(() => {
@@ -87,9 +87,9 @@ const UltimateBusinessTransformation20o26 = () => {
             key={i}
             className="absolute w-2 h-2 bg-green-40o0/40 rounded-full animate-pulse",
             style={{
-              left: `${Math.random() * 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
-              animationDelay: `${Math.random() * 4}s`;
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
+              animationDelay: `${Math.random() * 4}s`,
               animationDuration: `${3 + Math.random() * 2}s`}}
            />))}
       </div>,
@@ -248,5 +248,5 @@ const UltimateBusinessTransformation20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateBusinessTransformation20o26;
+    </div>)},
+export default UltimateBusinessTransformation20o26,

@@ -1,39 +1,35 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  UserIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
-  title: 'AI 20o25 Ultimate Business Revolution: Complete Implementation Guide';
+  title: 'AI 20o25 Ultimate Business Revolution: Complete Implementation Guide',
   description:,
-    'Discover the complete roadmap for implementing AI-driven business transformation in 20o25. Learn from Fortune 50o0 success stories and get actionable strategies for 10o00%+ ROI.';
+    'Discover the complete roadmap for implementing AI-driven business transformation in 20o25. Learn from Fortune 50o0 success stories and get actionable strategies for 10o00%+ ROI.',
   keywords: [
-    'AI 20o25';
-    'Business Transformation';
-    'AI Implementation';
-    'ROI';
-    'Enterprise AI';
-  ];
+    'AI 20o25Business Transformation',
+    'AI ImplementationROI',
+    'Enterprise AI',
+  ],
   openGraph: {
     title:,
-      'AI 20o25 Ultimate Business Revolution: Complete Implementation Guide';
+      'AI 20o25 Ultimate Business Revolution: Complete Implementation Guide',
     description:,
-      'Discover the complete roadmap for implementing AI-driven business transformation in 20o25. Learn from Fortune 50o0 success stories and get actionable strategies for 10o00%+ ROI.';
-    type: 'article';
-    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover the complete roadmap for implementing AI-driven business transformation in 20o25. Learn from Fortune 50o0 success stories and get actionable strategies for 10o00%+ ROI.',
+    type: 'article',
+    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI 20o25';
-      'Business Transformation';
-      'AI Implementation';
-      'ROI';
-      'Enterprise AI';
-    ];
-  };
-};
+      'AI 20o25Business Transformation',
+      'AI ImplementationROI',
+      'Enterprise AI',
+    ]
+  },
+},
 export default function BlogPost() {
   return (
     <div className='min-h-screen bg-white'>,

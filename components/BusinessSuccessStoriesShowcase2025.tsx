@@ -7,17 +7,17 @@ import {
   Users,
   DollarSign,
   Clock,
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  ExternalLink;
-  Play;
-  BarChart3;
-  Zap;
-  Shield;
-  Globe;
-  Award;
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  ExternalLink,
+  Play,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
+  Award,
   Quote} from 'lucide-react',
 const BusinessSuccessStoriesShowcase20o25 = () => {
   const [activeStorysetActiveStory] = useState(0),
@@ -27,103 +27,103 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
     return () => clearTimeout(timer)}[]),
   const successStories = [
     {
-      id: 'techcorp';
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      logo: 'TC';
-      challenge: 'Struggling with manual data processing and slow decision-making processes';
-      solution: 'Implemented AI-powered analytics and automation systems';
+      id: 'techcorp',
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      logo: 'TC',
+      challenge: 'Struggling with manual data processing and slow decision-making processes',
+      solution: 'Implemented AI-powered analytics and automation systems',
       results: {
-        revenue: '+340%';
-        efficiency: '+280%';
-        costReduction: '-65%';
-        timeSaved: '2,40o0 hours/month'};
+        revenue: '+340%',
+        efficiency: '+280%',
+        costReduction: '-65%',
+        timeSaved: '2,40o0 hours/month'},
       testimonial: {
-        name: 'Sarah Johnson';
-        role: 'CEOTechCorp Solutions';
-        content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.';
-        rating: 5};
+        name: 'Sarah Johnson',
+        role: 'CEOTechCorp Solutions',
+        content: 'Zion Tech Group transformed our entire operation. The AI solutions they implemented increased our revenue by 340% and reduced operational costs by 65%. The ROI was evident within the first quarter.',
+        rating: 5},
       metrics: [
-        { label: 'Revenue 'Growth', 'value: '340%'icon: TrendingUpcolor: 'text-green-60o0' };
-        { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-blue-60o0' };
-        { label: 'Cost 'Reduction', 'value: '65%'icon: DollarSigncolor: 'text-red-60o0' };
-        { label: 'Time 'Saved', 'value: '2,40o0'h', 'icon: Clockcolor: 'text-purple-60o0' }
-      ]};
+        { label: 'Revenue 'Growthvalue: '340%'icon: TrendingUpcolor: 'text-green-60o0' },
+        { label: 'Efficiency 'Gainvalue: '280%'icon: Zapcolor: 'text-blue-60o0' },
+        { label: 'Cost 'Reductionvalue: '65%'icon: DollarSigncolor: 'text-red-60o0' },
+        { label: 'Time 'Savedvalue: '2,40o0'hicon: Clockcolor: 'text-purple-60o0' }
+      ]},
     {
-      id: 'retailmax';
-      company: 'RetailMax';
-      industry: 'E-commerce';
-      logo: 'RM';
-      challenge: 'Low conversion rates and poor customer experience leading to declining sales';
-      solution: 'Deployed AI-powered personalization and customer service automation';
+      id: 'retailmax',
+      company: 'RetailMax',
+      industry: 'E-commerce',
+      logo: 'RM',
+      challenge: 'Low conversion rates and poor customer experience leading to declining sales',
+      solution: 'Deployed AI-powered personalization and customer service automation',
       results: {
-        revenue: '+520%';
-        efficiency: '+180%';
-        costReduction: '-45%';
-        timeSaved: '1,80o0 hours/month'};
+        revenue: '+520%',
+        efficiency: '+180%',
+        costReduction: '-45%',
+        timeSaved: '1,80o0 hours/month'},
       testimonial: {
-        name: 'Michael Chen';
-        role: 'CTORetailMax';
-        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.';
-        rating: 5};
+        name: 'Michael Chen',
+        role: 'CTORetailMax',
+        content: 'The AI personalization engine they built increased our conversion rates by 520%. Our customers love the personalized experienceand we\'ve seen a dramatic improvement in customer satisfaction.',
+        rating: 5},
       metrics: [
-        { label: 'Revenue 'Growth', 'value: '520%'icon: TrendingUpcolor: 'text-green-60o0' };
-        { label: 'Conversion 'Rate', 'value: '180%'icon: Targetcolor: 'text-blue-60o0' };
-        { label: 'Cost 'Reduction', 'value: '45%'icon: DollarSigncolor: 'text-red-60o0' };
-        { label: 'Time 'Saved', 'value: '1,80o0'h', 'icon: Clockcolor: 'text-purple-60o0' }
-      ]};
+        { label: 'Revenue 'Growthvalue: '520%'icon: TrendingUpcolor: 'text-green-60o0' },
+        { label: 'Conversion 'Ratevalue: '180%'icon: Targetcolor: 'text-blue-60o0' },
+        { label: 'Cost 'Reductionvalue: '45%'icon: DollarSigncolor: 'text-red-60o0' },
+        { label: 'Time 'Savedvalue: '1,80o0'hicon: Clockcolor: 'text-purple-60o0' }
+      ]},
     {
-      id: 'healthcareplus';
-      company: 'HealthcarePlus';
-      industry: 'Healthcare';
-      logo: 'HP';
-      challenge: 'Manual patient data processing and inefficient appointment scheduling';
-      solution: 'Implemented AI-driven patient management and automated scheduling systems';
+      id: 'healthcareplus',
+      company: 'HealthcarePlus',
+      industry: 'Healthcare',
+      logo: 'HP',
+      challenge: 'Manual patient data processing and inefficient appointment scheduling',
+      solution: 'Implemented AI-driven patient management and automated scheduling systems',
       results: {
-        revenue: '+280%';
-        efficiency: '+320%';
-        costReduction: '-55%';
-        timeSaved: '3,20o0 hours/month'};
+        revenue: '+280%',
+        efficiency: '+320%',
+        costReduction: '-55%',
+        timeSaved: '3,20o0 hours/month'},
       testimonial: {
-        name: 'Dr. Emily Rodriguez';
-        role: 'Medical DirectorHealthcarePlus';
-        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.';
-        rating: 5};
+        name: 'Dr. Emily Rodriguez',
+        role: 'Medical DirectorHealthcarePlus',
+        content: 'The AI patient management system has revolutionized our practice. We can now serve 320% more patients with the same resourcesand patient satisfaction has never been higher.',
+        rating: 5},
       metrics: [
-        { label: 'Revenue 'Growth', 'value: '280%'icon: TrendingUpcolor: 'text-green-60o0' };
-        { label: 'Patient 'Capacity', 'value: '320%'icon: Userscolor: 'text-blue-60o0' };
-        { label: 'Cost 'Reduction', 'value: '55%'icon: DollarSigncolor: 'text-red-60o0' };
-        { label: 'Time 'Saved', 'value: '3,20o0'h', 'icon: Clockcolor: 'text-purple-60o0' }
-      ]};
+        { label: 'Revenue 'Growthvalue: '280%'icon: TrendingUpcolor: 'text-green-60o0' },
+        { label: 'Patient 'Capacityvalue: '320%'icon: Userscolor: 'text-blue-60o0' },
+        { label: 'Cost 'Reductionvalue: '55%'icon: DollarSigncolor: 'text-red-60o0' },
+        { label: 'Time 'Savedvalue: '3,20o0'hicon: Clockcolor: 'text-purple-60o0' }
+      ]},
     {
-      id: 'financeflow';
-      company: 'FinanceFlow';
-      industry: 'Financial Services';
-      logo: 'FF';
-      challenge: 'Complex financial data analysis and compliance reporting taking too long';
-      solution: 'Deployed AI-powered financial analytics and automated compliance systems';
+      id: 'financeflow',
+      company: 'FinanceFlow',
+      industry: 'Financial Services',
+      logo: 'FF',
+      challenge: 'Complex financial data analysis and compliance reporting taking too long',
+      solution: 'Deployed AI-powered financial analytics and automated compliance systems',
       results: {
-        revenue: '+450%';
-        efficiency: '+40o0%';
-        costReduction: '-70%';
-        timeSaved: '4,10o0 hours/month'};
+        revenue: '+450%',
+        efficiency: '+40o0%',
+        costReduction: '-70%',
+        timeSaved: '4,10o0 hours/month'},
       testimonial: {
-        name: 'David Kim';
-        role: 'CFOFinanceFlow';
-        content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 40o0% faster and ensure 10o0% compliance with regulations. The accuracy is remarkable.';
-        rating: 5};
+        name: 'David Kim',
+        role: 'CFOFinanceFlow',
+        content: 'The AI financial analytics platform has been a game-changer. We can now process complex financial data 40o0% faster and ensure 10o0% compliance with regulations. The accuracy is remarkable.',
+        rating: 5},
       metrics: [
-        { label: 'Revenue 'Growth', 'value: '450%'icon: TrendingUpcolor: 'text-green-60o0' };
-        { label: 'Processing 'Speed', 'value: '40o0%'icon: Zapcolor: 'text-blue-60o0' };
-        { label: 'Cost 'Reduction', 'value: '70%'icon: DollarSigncolor: 'text-red-60o0' };
-        { label: 'Time 'Saved', 'value: '4,10o0'h', 'icon: Clockcolor: 'text-purple-60o0' }
+        { label: 'Revenue 'Growthvalue: '450%'icon: TrendingUpcolor: 'text-green-60o0' },
+        { label: 'Processing 'Speedvalue: '40o0%'icon: Zapcolor: 'text-blue-60o0' },
+        { label: 'Cost 'Reductionvalue: '70%'icon: DollarSigncolor: 'text-red-60o0' },
+        { label: 'Time 'Savedvalue: '4,10o0'hicon: Clockcolor: 'text-purple-60o0' }
       ]}
   ],
   const overallStats = [
-    { number: '50o0+'label: 'Successful 'Projects', 'icon: CheckCircle };
-    { number: '99.9%'label: 'Client 'Satisfaction', 'icon: Star };
-    { number: '350%'label: 'Average 'ROI', 'icon: TrendingUp };
-    { number: '50+'label: 'Countries 'Served', 'icon: Globe }
+    { number: '50o0+'label: 'Successful 'Projectsicon: CheckCircle },
+    { number: '99.9%'label: 'Client 'Satisfactionicon: Star },
+    { number: '350%'label: 'Average 'ROIicon: TrendingUp },
+    { number: '50+'label: 'Countries 'Servedicon: Globe }
   ],
   if (!isVisible) return null,
   return (
@@ -290,5 +290,5 @@ const BusinessSuccessStoriesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default BusinessSuccessStoriesShowcase20o25;
+    </div>)},
+export default BusinessSuccessStoriesShowcase20o25,

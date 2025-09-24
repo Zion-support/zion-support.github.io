@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useState } from 'react',
 import { DialogContentDialogHeaderDialogTitleDialogFooter } from "@/components/ui/dialog",
@@ -22,21 +22,21 @@ interface ServiceQuoteModalProps {
   service: ProductListing | null}
 ,
 const BUDGET_RANGES = [
-  { label: "Less than $5,000"value: "0-5000" };
-  { label: "$5,000 - $10,000"value: "5000-10000" };
-  { label: "$10,000 - $25,000"value: "10000-25000" };
-  { label: "$25,000 - $50,000"value: "25000-50000" };
+  { label: "Less than $5,000"value: "0-5000" },
+  { label: "$5,000 - $10,000"value: "5000-10000" },
+  { label: "$10,000 - $25,000"value: "10000-25000" },
+  { label: "$25,000 - $50,000"value: "25000-50000" },
   { label: "$50,000+"value: "50000+" }],
 const TIMELINE_OPTIONS = [
-  { label: "Less than 1 month"value: "lt-1month" };
-  { label: "1-3 months"value: "1-3months" };
-  { label: "3-6 months"value: "3-6months" };
+  { label: "Less than 1 month"value: "lt-1month" },
+  { label: "1-3 months"value: "1-3months" },
+  { label: "3-6 months"value: "3-6months" },
   { label: "6+ months"value: "6+months" }],
 export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModalProps) {
   const [formDatasetFormData] = useState({
-    description: '';
-    email: '';
-    budget: BUDGET_RANGES[0].value;
+    description: '',
+    email: '',
+    budget: BUDGET_RANGES[0].value,
     timeframe: TIMELINE_OPTIONS[0].value}),
   const [startDatesetStartDate] = useState<Date | undefined>(new Date()),
   const [endDatesetEndDate] = useState<Date | undefined>(undefined),
@@ -44,7 +44,7 @@ export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModal
   const [isSubmittingsetIsSubmitting] = useState(false),
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { namevalue } = e.target,
-    setFormData(prev => ({ ...prev[name]: value }))};
+    setFormData(prev => ({ ...prev[name]: value }))},
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -53,43 +53,43 @@ export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModal
       const { dataerror } = await supabase.functions.invoke('process-quote'{
         body: {
           service: service ? {
-            id: service.id;
-            title: service.title;
-            category: service.category} : null;
+            id: service.id,
+            title: service.title,
+            category: service.category} : null,
           quoteDetails: {
-            ...formData;
-            startDate: startDate?.toISOString();
+            ...formData,
+            startDate: startDate?.toISOString(),
             endDate: endDate?.toISOString()}
         }
       }),
       if (error) throw error,
       // Show success message,
       toast({
-        title: "Quote Request Submitted!";
+        title: "Quote Request Submitted!",
         description: "We've sent your request to the service provider. They will contact you soon."}),
       // Close the modal and reset form,
       onOpenChange(false),
       setFormData({
-        description: '';
-        email: '';
-        budget: BUDGET_RANGES[0].value;
+        description: '',
+        email: '',
+        budget: BUDGET_RANGES[0].value,
         timeframe: TIMELINE_OPTIONS[0].value}),
       setStartDate(new Date()),
       setEndDate(undefined),
       setCurrentStep('details')} catch (error) {
       console.error("Error submitting quote: "error),
       toast({
-        title: "Error";
-        description: "There was an error submitting your quote request. Please try again.";
+        title: "Error",
+        description: "There was an error submitting your quote request. Please try again.",
         variant: "destructive"})} finally {
       setIsSubmitting(false)}
-  };
+  },
   const nextStep = () => {
     if (currentStep === 'details') setCurrentStep('timeline'),
-    else if (currentStep === 'timeline') setCurrentStep('contact')};
+    else if (currentStep === 'timeline') setCurrentStep('contact')},
   const prevStep = () => {
     if (currentStep === 'timeline') setCurrentStep('details'),
-    else if (currentStep === 'contact') setCurrentStep('timeline')};
+    else if (currentStep === 'contact') setCurrentStep('timeline')},
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>,
       <DialogContent className="bg-zion-blue border-zion-blue-light text-white sm: max-w-[600px]">,
@@ -166,7 +166,7 @@ export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModal
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full";
+                          "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white")}
                       >,
                         <CalendarIcon className="mr-2 h-4 w-4" />,
@@ -191,7 +191,7 @@ export function ServiceQuoteModal({ openonOpenChangeservice }: ServiceQuoteModal
                       <Button
                         variant={"outline"}
                         className={cn(
-                          "justify-start text-left font-normal w-full";
+                          "justify-start text-left font-normal w-full",
                           "bg-zion-blue-dark border-zion-blue-light text-white")}
                       >,
                         <CalendarIcon className="mr-2 h-4 w-4" />,

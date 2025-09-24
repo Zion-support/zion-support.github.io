@@ -6,7 +6,7 @@ export function FooterNewsletter() {
     e.preventDefault(),
     // Here you would typically send the email to your newsletter service,
     setIsSubscribed(true),
-    setEmail('')};
+    setEmail('')},
   if (isSubscribed) {
     return (
       <div className='text-green-40o0 text-sm'>Thank you for subscribing!</div>)}

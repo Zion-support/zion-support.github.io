@@ -9,14 +9,14 @@ class  {
     try {
       const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -26,20 +26,13 @@ const fs = require('fs').promises,
 const path = require('path'),
   const automationDir = __dirname,
   const files = [
-    'core/IntelligentAutomationOrchestrator.js';
-    'core/AutonomousAutomationManager.js';
-    'core/TaskScheduler.js';
-    'core/NotificationManager.js';
-    'core/AnomalyDetector.js';
-    'core/ReportGenerator.js';
-    'netlify-monitor.js';
-    'netlify-error-fixer.js';
-    'netlify-build-automation.js';
-    'performance/monitor.js';
-    'performance/frontend-fix.js';
-    'continuous-improvement/enhanced-automation.js';
-    'continuous-improvement/monitor.js';
-    'continuous-improvement/improve.js';
+    'core/IntelligentAutomationOrchestrator.jscore/AutonomousAutomationManager.js',
+    'core/TaskScheduler.jscore/NotificationManager.js',
+    'core/AnomalyDetector.jscore/ReportGenerator.js',
+    'netlify-monitor.jsnetlify-error-fixer.js',
+    'netlify-build-automation.jsperformance/monitor.js',
+    'performance/frontend-fix.jscontinuous-improvement/enhanced-automation.js',
+    'continuous-improvement/monitor.jscontinuous-improvement/improve.js',
     'tasks/DependencyUpdater.js'],
   for (const file of files) {
     const filePath = path.join(automationDir, file),

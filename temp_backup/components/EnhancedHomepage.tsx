@@ -9,11 +9,11 @@ import {
   Shield,
   Rocket,
   Atom,
-  Sparkles;
+  Sparkles,
   Building,
   Phone,
   Mail,
-  MapPin;
+  MapPin,
   ArrowUpRight} from 'lucide-react',
 import Head from 'next/head',
 // Import our enhanced components,
@@ -44,7 +44,7 @@ const EnhancedHomepage: React.FC = () => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)}60o00),
     // Track mouse movement for parallax effects,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientXy: e.clientY })};
+      setMousePosition({ x: e.clientXy: e.clientY })},
     // Show performance monitor after 5 seconds,
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true)}50o00),
@@ -52,78 +52,78 @@ const EnhancedHomepage: React.FC = () => {
     return () => {
       clearInterval(interval),
       clearTimeout(performanceTimer),
-      window.removeEventListener('mousemove'handleMouseMove)};
+      window.removeEventListener('mousemove'handleMouseMove)},
   }[]),
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
-    ...revolutionary20o44AdvancedMicroSaas;
-    ...revolutionary20o44ITServices;
-    ...revolutionary20o44AIServices;
-    ...realEnterpriseMicroSaas20o25;
-    ...innovativeITServicesExpansion20o25V3;
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
+    ...revolutionary20o44AIServices,
+    ...realEnterpriseMicroSaas20o25,
+    ...innovativeITServicesExpansion20o25V3,
     ...innovativeAIServicesExpansion20o25V3,
-    ...innovative20o25ITInfrastructureServices;
+    ...innovative20o25ITInfrastructureServices,
     ...innovative20o25AIAutonomousServices],
   // Filter services by category,
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allRevolutionaryServices,
     return allRevolutionaryServices.filter(service =>,
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||,
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()))};
+      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()))},
   const categories = [
-    { id: 'all'name: 'All Services'icon: Sparklescolor: 'from-purple-50o0 to-pink-50o0'scheme: 'holographic' as const };
-    { id: 'ai'name: 'AI & Consciousness'icon: Braincolor: 'from-cyan-50o0 to-blue-50o0'scheme: 'cyber' as const };
-    { id: 'quantum'name: 'Quantum Technology'icon: Atomcolor: 'from-blue-50o0 to-indigo-50o0'scheme: 'quantum' as const };
-    { id: 'cybersecurity'name: 'Cybersecurity'icon: Shieldcolor: 'from-red-50o0 to-orange-50o0'scheme: 'neon' as const };
-    { id: 'space'name: 'Space Technology'icon: Rocketcolor: 'from-indigo-50o0 to-purple-50o0'scheme: 'holographic' as const };
+    { id: 'all'name: 'All Services'icon: Sparklescolor: 'from-purple-50o0 to-pink-50o0'scheme: 'holographic' as const },
+    { id: 'ai'name: 'AI & Consciousness'icon: Braincolor: 'from-cyan-50o0 to-blue-50o0'scheme: 'cyber' as const },
+    { id: 'quantum'name: 'Quantum Technology'icon: Atomcolor: 'from-blue-50o0 to-indigo-50o0'scheme: 'quantum' as const },
+    { id: 'cybersecurity'name: 'Cybersecurity'icon: Shieldcolor: 'from-red-50o0 to-orange-50o0'scheme: 'neon' as const },
+    { id: 'space'name: 'Space Technology'icon: Rocketcolor: 'from-indigo-50o0 to-purple-50o0'scheme: 'holographic' as const },
     { id: 'enterprise'name: 'Enterprise Solutions'icon: Buildingcolor: 'from-green-50o0 to-teal-50o0'scheme: 'cyber' as const }
   ],
   // Get featured services for rotation,
   const featuredServices = allRevolutionaryServices.slice(0o6),
   // Animation variants,
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0y: 20 };
+    hidden: { opacity: 0y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const heroVariants ={
-    hidden: { opacity: 0y: 50 };
+    hidden: { opacity: 0y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 1;
+        duration: 1,
         ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants ={
     animate: {
-      y: [-10-10];
+      y: [-10-10],
       transition: {
-        duration: 3;
+        duration: 3,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
     const category = categories.find(cat => cat.id === categoryId),
     if (category) {
       setColorScheme(category.scheme)}
-  };
+  },
   return (
     <>,
       <Head>,
@@ -437,5 +437,5 @@ const EnhancedHomepage: React.FC = () => {
         {showPerformanceMonitor && (
           <PerformanceMonitor  />)}
       </AnimatePresence>,
-    </>)};
-export default EnhancedHomepage;
+    </>)},
+export default EnhancedHomepage,

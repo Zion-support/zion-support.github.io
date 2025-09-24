@@ -1,12 +1,12 @@
 import React, { useState, useEffect } from 'react',
 import { motion, useScroll, useTransform } from 'framer-motion',
 import {
-  ArrowRight, Star, Zap, Brain, Rocket, Shield;
-  Atom, Cpu, Cloud, Target, Users, Award;
-  CheckCircle, TrendingUp, Globe, Sparkles;
-  Phone, Mail, MapPin, ChevronDown;
-  ArrowUpRight, Lightbulb, Code, Database, Server;
-  Network, Palette, GraduationCap, DollarSign, Heart;
+  ArrowRight, Star, Zap, Brain, Rocket, Shield,
+  Atom, Cpu, Cloud, Target, Users, Award,
+  CheckCircle, TrendingUp, Globe, Sparkles,
+  Phone, Mail, MapPin, ChevronDown,
+  ArrowUpRight, Lightbulb, Code, Database, Server,
+  Network, Palette, GraduationCap, DollarSign, Heart,
   DollarSign as Finance, Factory as Manufacturing, Scale as Legal} from 'lucide-react',
 import Link from 'next/link',
 import PerformanceOptimizer from '../layout/PerformanceOptimizer',
@@ -18,36 +18,36 @@ const EnhancedHeroSection20o25: React.FC = () => {
   const opacity = useTransform(scrollY, [0, 30o0], [1, 0.3]),
   const features = [
     {
-      icon: <Brain className="w-8 h-8"  />;
-      title: 'AI-First Approach';
-      description: 'Leading-edge AI consciousness and emotional intelligence';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      icon: <Brain className="w-8 h-8"  />,
+      title: 'AI-First Approach',
+      description: 'Leading-edge AI consciousness and emotional intelligence',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      icon: <Atom className="w-8 h-8"  />;
-      title: 'Quantum Innovation';
-      description: 'Breakthrough quantum computing solutions';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      icon: <Atom className="w-8 h-8"  />,
+      title: 'Quantum Innovation',
+      description: 'Breakthrough quantum computing solutions',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      icon: <Shield className="w-8 h-8"  />;
-      title: 'Enterprise Security';
-      description: 'Zero-trust architecture and quantum-secured infrastructure';
-      color: 'from-blue-50o0 to-indigo-50o0'};
+      icon: <Shield className="w-8 h-8"  />,
+      title: 'Enterprise Security',
+      description: 'Zero-trust architecture and quantum-secured infrastructure',
+      color: 'from-blue-50o0 to-indigo-50o0'},
     {
-      icon: <Rocket className="w-8 h-8"  />;
-      title: 'Rapid Deployment';
-      description: 'Micro SAAS solutions that deploy in minutes';
+      icon: <Rocket className="w-8 h-8"  />,
+      title: 'Rapid Deployment',
+      description: 'Micro SAAS solutions that deploy in minutes',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const stats = [
-    { number: '99.9%', label: 'Uptime SLA', icon: <CheckCircle className="w-5 h-5"  /> };
-    { number: '50o0+', label: 'Enterprise Clients', icon: <Users className="w-5 h-5"  /> };
-    { number: '24/7', label: 'Support', icon: <Shield className="w-5 h-5"  /> };
+    { number: '99.9%', label: 'Uptime SLA', icon: <CheckCircle className="w-5 h-5"  /> },
+    { number: '50o0+', label: 'Enterprise Clients', icon: <Users className="w-5 h-5"  /> },
+    { number: '24/7', label: 'Support', icon: <Shield className="w-5 h-5"  /> },
     { number: '15+', label: 'Years Experience', icon: <Award className="w-5 h-5"  /> }
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'},
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length)}, 30o00),
@@ -242,5 +242,5 @@ const EnhancedHeroSection20o25: React.FC = () => {
           </motion.div>,
         </motion.div>,
       </section>,
-    </PerformanceOptimizer>)};
-export default EnhancedHeroSection20o25;
+    </PerformanceOptimizer>)},
+export default EnhancedHeroSection20o25,

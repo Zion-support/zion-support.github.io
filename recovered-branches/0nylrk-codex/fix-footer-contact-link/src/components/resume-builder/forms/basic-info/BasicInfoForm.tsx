@@ -18,24 +18,24 @@ export interface BasicInfoFormProps {
   onComplete?: () => void}
 ,
 export function BasicInfoForm({
-  resumeId;
-  initialData = {};
-  onSave;
-  skills = [];
-  yearsExperience = 0;
+  resumeId,
+  initialData = {},
+  onSave,
+  skills = [],
+  yearsExperience = 0,
   onComplete}: BasicInfoFormProps) {
   const form = useForm<BasicInfoFormData>({
-    resolver: zodResolver(basicInfoSchema);
+    resolver: zodResolver(basicInfoSchema),
     defaultValues: {
-      fullName: "";
-      title: "";
-      email: "";
-      phone: "";
-      location: "";
-      website: "";
-      linkedin: "";
-      github: "";
-      hourlyRate: 0;
+      fullName: "",
+      title: "",
+      email: "",
+      phone: "",
+      location: "",
+      website: "",
+      linkedin: "",
+      github: "",
+      hourlyRate: 0,
       ...initialData}}),
   useEffect(() => {
     if (initialData) {
@@ -48,7 +48,7 @@ export function BasicInfoForm({
     onSave(data),
     if (onComplete) {
       onComplete()}
-  };
+  },
   return (
     <Form {...form}>,
       <form onSubmit={form.handleSubmit(handleSubmit)} className="space-y-6">,

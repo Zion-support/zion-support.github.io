@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AI20o25_20o26UltimateTransformation50o000ROIPromotionBanner: React.FC =,
   () => {
@@ -93,5 +93,5 @@ const AI20o25_20o26UltimateTransformation50o000ROIPromotionBanner: React.FC =,
         <div className='absolute top-1/2 right-20 text-3xl opacity-10 animate-float delay-20o00'>,
           🚀,
         </div>,
-      </section>)};
-export default AI20o25_20o26UltimateTransformation50o000ROIPromotionBanner;
+      </section>)},
+export default AI20o25_20o26UltimateTransformation50o000ROIPromotionBanner,

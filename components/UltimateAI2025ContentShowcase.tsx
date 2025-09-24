@@ -6,96 +6,96 @@ const UltimateAI20o25ContentShowcase = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-transformation-guide';
-      type: 'blog';
-      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution - Ultimate Breakthrough Guide to 5,0o00% ROI';
-      description: 'The complete framework that has enabled Fortune 50o0 companies to achieve 5,0o00% ROI within 18 monthsgenerating $15.8 billion in annual savings.';
-      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough-20o25';
+      id: 'ultimate-transformation-guide',
+      type: 'blog',
+      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution - Ultimate Breakthrough Guide to 5,0o00% ROI',
+      description: 'The complete framework that has enabled Fortune 50o0 companies to achieve 5,0o00% ROI within 18 monthsgenerating $15.8 billion in annual savings.',
+      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough-20o25',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.8B+';
-        efficiency: '2,40o0%';
-        satisfaction: '99.7%'};
-      readingTime: '35 min read';
-      featured: true;
-      category: 'transformation'};
+        roi: '5,0o00%',
+        savings: '$15.8B+',
+        efficiency: '2,40o0%',
+        satisfaction: '99.7%'},
+      readingTime: '35 min read',
+      featured: true,
+      category: 'transformation'},
     {
-      id: 'fortune-50o0-success-story';
-      type: 'case-study';
-      title: 'Fortune 50o0 Ultimate AI Transformation: $15.8B Annual Savings - 5,0o00% ROI Ultimate Success Story';
-      description: 'Discover how a Fortune 50o0 manufacturing company achieved unprecedented results through comprehensive AI transformation in just 18 months.';
-      url: '/case-studies/fortune-50o0-ultimate-ai-transformation-50o00-roi-ultimate-success-story';
+      id: 'fortune-50o0-success-story',
+      type: 'case-study',
+      title: 'Fortune 50o0 Ultimate AI Transformation: $15.8B Annual Savings - 5,0o00% ROI Ultimate Success Story',
+      description: 'Discover how a Fortune 50o0 manufacturing company achieved unprecedented results through comprehensive AI transformation in just 18 months.',
+      url: '/case-studies/fortune-50o0-ultimate-ai-transformation-50o00-roi-ultimate-success-story',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.8B';
-        timeline: '18 months';
-        uptime: '99.9%'};
-      readingTime: '25 min read';
-      featured: true;
-      category: 'case-study'};
+        roi: '5,0o00%',
+        savings: '$15.8B',
+        timeline: '18 months',
+        uptime: '99.9%'},
+      readingTime: '25 min read',
+      featured: true,
+      category: 'case-study'},
     {
-      id: 'implementation-master-guide';
-      type: 'resource';
-      title: 'AI 20o25 Ultimate Transformation Implementation Master Guide: Complete Roadmap to 5,0o00% ROI';
-      description: 'The comprehensive 45-minute implementation guide that reveals the exact framework used by Fortune 50o0 companies to achieve extraordinary results.';
-      url: '/resources/ai-20o25-ultimate-transformation-implementation-master-guide-50o00-roi';
+      id: 'implementation-master-guide',
+      type: 'resource',
+      title: 'AI 20o25 Ultimate Transformation Implementation Master Guide: Complete Roadmap to 5,0o00% ROI',
+      description: 'The comprehensive 45-minute implementation guide that reveals the exact framework used by Fortune 50o0 companies to achieve extraordinary results.',
+      url: '/resources/ai-20o25-ultimate-transformation-implementation-master-guide-50o00-roi',
       metrics: {
-        roi: '5,0o00%';
-        guide: '45 min';
-        success: '94%';
-        projects: '50o0+'};
-      readingTime: '45 min read';
-      featured: true;
-      category: 'implementation'};
+        roi: '5,0o00%',
+        guide: '45 min',
+        success: '94%',
+        projects: '50o0+'},
+      readingTime: '45 min read',
+      featured: true,
+      category: 'implementation'},
     {
-      id: 'quantum-ai-revolution';
-      type: 'blog';
-      title: 'AI 20o25: The Quantum AI Business Revolution - $10o0B Market Transformation';
-      description: 'Explore how quantum AI is revolutionizing business operations with 1,20o0% speed improvements and 99.97% accuracy in Fortune 50o0 companies.';
-      url: '/blog/ai-20o25-quantum-computing-business-revolution';
+      id: 'quantum-ai-revolution',
+      type: 'blog',
+      title: 'AI 20o25: The Quantum AI Business Revolution - $10o0B Market Transformation',
+      description: 'Explore how quantum AI is revolutionizing business operations with 1,20o0% speed improvements and 99.97% accuracy in Fortune 50o0 companies.',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution',
       metrics: {
-        roi: '1,20o0%';
-        market: '$10o0B';
-        accuracy: '99.97%';
-        speed: '1,20o0%'};
-      readingTime: '20 min read';
-      featured: false;
-      category: 'innovation'};
+        roi: '1,20o0%',
+        market: '$10o0B',
+        accuracy: '99.97%',
+        speed: '1,20o0%'},
+      readingTime: '20 min read',
+      featured: false,
+      category: 'innovation'},
     {
-      id: 'autonomous-enterprise';
-      type: 'blog';
-      title: 'AI 20o25: The Ultimate Autonomous Enterprise Revolution - Ultimate Breakthrough Guide to 8,50o0% ROI';
-      description: 'Learn how to build fully autonomous enterprises that achieve 8,50o0% ROI with 99.7% operational autonomy and $45.2B in annual savings.';
-      url: '/blog/ai-20o25-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough';
+      id: 'autonomous-enterprise',
+      type: 'blog',
+      title: 'AI 20o25: The Ultimate Autonomous Enterprise Revolution - Ultimate Breakthrough Guide to 8,50o0% ROI',
+      description: 'Learn how to build fully autonomous enterprises that achieve 8,50o0% ROI with 99.7% operational autonomy and $45.2B in annual savings.',
+      url: '/blog/ai-20o25-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '8,50o0%';
-        savings: '$45.2B+';
-        efficiency: '3,20o0%';
-        autonomy: '99.7%'};
-      readingTime: '35 min read';
-      featured: false;
-      category: 'transformation'};
+        roi: '8,50o0%',
+        savings: '$45.2B+',
+        efficiency: '3,20o0%',
+        autonomy: '99.7%'},
+      readingTime: '35 min read',
+      featured: false,
+      category: 'transformation'},
     {
-      id: 'neural-architectures';
-      type: 'blog';
-      title: 'AI 20o26: The Advanced Neural Architectures Revolution - Ultimate Breakthrough Guide to 5,0o00% ROI';
-      description: 'Discover next-generation neural architectures that are enabling Fortune 50o0 companies to achieve 5,0o00% ROI with $18.2B in annual savings.';
-      url: '/blog/ai-20o26-advanced-neural-architectures-revolution-ultimate-breakthrough';
+      id: 'neural-architectures',
+      type: 'blog',
+      title: 'AI 20o26: The Advanced Neural Architectures Revolution - Ultimate Breakthrough Guide to 5,0o00% ROI',
+      description: 'Discover next-generation neural architectures that are enabling Fortune 50o0 companies to achieve 5,0o00% ROI with $18.2B in annual savings.',
+      url: '/blog/ai-20o26-advanced-neural-architectures-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$18.2B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.98%'};
-      readingTime: '32 min read';
-      featured: false;
+        roi: '5,0o00%',
+        savings: '$18.2B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.98%'},
+      readingTime: '32 min read',
+      featured: false,
       category: 'innovation'}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: content.length };
-    { id: ''transformation', 'name: ''Transformation', 'count: content.filter(c => c.category === 'transformation').length };
-    { id: 'case-'study', 'name: 'Case 'Studies', 'count: content.filter(c => c.category === 'case-study').length };
-    { id: ''implementation', 'name: ''Implementation', 'count: content.filter(c => c.category === 'implementation').length };
-    { id: ''innovation', 'name: ''Innovation', 'count: content.filter(c => c.category === 'innovation').length }
+    { id: ''allname: 'All 'Contentcount: content.length },
+    { id: ''transformationname: ''Transformationcount: content.filter(c => c.category === 'transformation').length },
+    { id: 'case-'studyname: 'Case 'Studiescount: content.filter(c => c.category === 'case-study').length },
+    { id: ''implementationname: ''Implementationcount: content.filter(c => c.category === 'implementation').length },
+    { id: ''innovationname: ''Innovationcount: content.filter(c => c.category === 'innovation').length }
   ],
   const filteredContent = activeCategory === 'all',
     ? content,
@@ -232,5 +232,5 @@ const UltimateAI20o25ContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAI20o25ContentShowcase;
+    </div>)},
+export default UltimateAI20o25ContentShowcase,

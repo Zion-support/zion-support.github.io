@@ -4,11 +4,11 @@ import { DisputeStatus } from "@/types/disputes",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
   TableRow} from "@/components/ui/table",
 import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
@@ -16,7 +16,7 @@ import { ShieldAlert } from "lucide-react",
 import { Link } from "react-router-dom",
 type DisputesListProps = {
   disputes: Dispute[],
-  isLoading: boolean};
+  isLoading: boolean},
 export function DisputesList({ disputesisLoading }: DisputesListProps) {
   const [statusFiltersetStatusFilter] = useState<DisputeStatus | "all">("all"),
   const filteredDisputes = statusFilter === "all",
@@ -34,7 +34,7 @@ export function DisputesList({ disputesisLoading }: DisputesListProps) {
         return "outline",
       default:,
         return "default"}
-  };
+  },
   if (isLoading) {
     return (
       <div className="space-y-4">,

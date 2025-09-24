@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import i18n from 'i18next',
 import { initReactI18next } from 'react-i18next',
 import LanguageDetector from 'i18next-browser-languagedetector',
@@ -13,23 +13,23 @@ i18n,
   .init({
     resources: {
       'en-US': {
-        translation: enTranslation};
+        translation: enTranslation},
       'es-ES': {
         translation: esTranslation}
-    };
+    },
     fallbackLng: 'en-US', // Default language,
-    debug: process.env.NODE_ENV === 'development';
+    debug: process.env.NODE_ENV === 'development',
     interpolation: {
-      escapeValue: false, // React already escapes by default};
+      escapeValue: false, // React already escapes by default},
     // Performance optimizations,
-    load: 'languageOnly';
+    load: 'languageOnly',
     cleanCode: true, // Clean up language codes,
     nonExplicitSupportedLngs: false, // Don't auto-detect non-explicit languages,
     initImmediate: false, // Initialize synchronously to avoid missing key warnings,
     detection: {
-      order: ['cookie', 'localStorage', 'navigator'];
-      lookupCookie: 'zion_language';
-      lookupLocalStorage: 'zion_language';
+      order: ['cookielocalStorage', 'navigator'],
+      lookupCookie: 'zion_language',
+      lookupLocalStorage: 'zion_language',
       caches: ['cookie']}}),
   .catch(error => {
     logErrorToProduction('Error initializing i18next or its detector:', { data: error }),
@@ -46,5 +46,5 @@ i18n,
   safeStorage.setItem('zion_language', lng),
   // If user is authenticated, save language preference to profile,
   // This will be implemented in the LanguageContext}),
-export default i18n;
+export default i18n,
 }

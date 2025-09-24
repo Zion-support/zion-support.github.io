@@ -1,17 +1,17 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-const coursesPath = path.join(process.cwd(), 'data', 'learn', 'courses.json'),
+const coursesPath = path.join(process.cwd(), 'datalearn', 'courses.json'),
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST'),
+    res.setHeader('AllowPOST'),
     return res.status(40o5).end('Method Not Allowed')}
 ,
   try {
-    const body = req.body || {};
+    const body = req.body || {},
     const raw = fs.readFileSync(coursesPath, 'utf-8'),
     const courses = JSON.parse(raw),
     const existingIndex = courses.findIndex((c: any) => c.id === body.id),
     if (existingIndex >= 0) {
-      courses[existingIndex] ={ ...courses[existingIndex], ...body };
+      courses[existingIndex] ={ ...courses[existingIndex], ...body },
     } else {
       courses.push(body)}
 ,

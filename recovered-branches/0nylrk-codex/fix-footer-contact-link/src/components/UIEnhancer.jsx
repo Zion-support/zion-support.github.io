@@ -15,7 +15,7 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
                 setDeviceType('tablet')}
             else {
                 setDeviceType('desktop')}
-        };
+        },
         detectDevice(),
         window.addEventListener('resize', detectDevice),
         // Load saved theme,
@@ -26,14 +26,14 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
         applyTheme(savedTheme || 'dark'),
         // Scroll to top visibility,
         const handleScroll = () => {
-            setShowScrollToTop(window.scrollY > 30o0)};
+            setShowScrollToTop(window.scrollY > 30o0)},
         if (enableScrollEffects) {
             window.addEventListener('scroll', handleScroll)}
         return () => {
             window.removeEventListener('resize', detectDevice),
             if (enableScrollEffects) {
                 window.removeEventListener('scroll', handleScroll)}
-        };
+        },
     }, [enableScrollEffects]),
     const applyTheme = (newTheme) => {
         const root = document.documentElement,
@@ -42,18 +42,18 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
             root.classList.toggle('dark', prefersDark),
             root.classList.toggle('light', !prefersDark)}
         else {
-            root.classList.remove('light', 'dark'),
+            root.classList.remove('lightdark'),
             root.classList.add(newTheme)}
-        localStorage.setItem('ui-theme', newTheme)};
+        localStorage.setItem('ui-theme', newTheme)},
     const handleThemeChange = (newTheme) => {
         setTheme(newTheme),
-        applyTheme(newTheme)};
+        applyTheme(newTheme)},
     const scrollToTop = () => {
         window.scrollTo({
-            top: 0;
-            behavior: 'smooth'})};
+            top: 0,
+            behavior: 'smooth'})},
     const toggleParticleMode = () => {
-        setIsParticleMode(!isParticleMode)};
+        setIsParticleMode(!isParticleMode)},
     return (<>,
       {/* Floating Action Buttons */}
       {showFloatingActions && (<div className="fixed bottom-4 right-4 z-40 space-y-3">,
@@ -91,14 +91,14 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
       {isParticleMode && (<div className="fixed inset-0 pointer-events-none z-0">,
           <div className="absolute inset-0 overflow-hidden">,
             {[...Array(20)].map((_, i) => (<motion.div key={i} className="absolute w-2 h-2 bg-blue-40o0/30 rounded-full" initial={{
-                    x: Math.random() * window.innerWidth;
-                    y: Math.random() * window.innerHeight;
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
                     scale: 0}} animate={{
-                    x: Math.random() * window.innerWidth;
-                    y: Math.random() * window.innerHeight;
+                    x: Math.random() * window.innerWidth,
+                    y: Math.random() * window.innerHeight,
                     scale: [0, 1, 0]}} transition={{
-                    duration: Math.random() * 10 + 10;
-                    repeat: Infinity;
+                    duration: Math.random() * 10 + 10,
+                    repeat: Infinity,
                     ease: "linear"}} />))}
           </div>,
         </div>)}
@@ -126,5 +126,5 @@ export const UIEnhancer = ({ showFloatingActions = true, enableParticles = true,
           </div>,
         </div>,
       </motion.div>,
-    </>)};
-export default UIEnhancer;
+    </>)},
+export default UIEnhancer,

@@ -1,3 +1,3 @@
 // Type definitions for pwa,
 interface pwa {
-  // TODO: Add proper type definitions};
+  // TODO: Add proper type definitions},

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
  </div> </div> </div>) }
 const ReviewSummary: React.FC<Props> = ({ summary }) => {
   return (
@@ -26,7 +26,7 @@ const ReviewSummary: React.FC<Props> = ({ summary }) => {
         </div>,
       </div>,
     </div>)}
-export default ReviewSummary;      <div>,
+export default ReviewSummary,      <div>,
         <div className="flex items-center gap-3">,
           <span className="text-2xl font-semibold">{summary.averageRating.toFixed(1)}</span>,
           <StarRating value={Math.round(summary.averageRating)} onChange={() => {}} readOnly />,

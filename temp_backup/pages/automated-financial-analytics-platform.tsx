@@ -1,99 +1,99 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Palette;
-  Type;
-  User;
-  Search;
-  Eye;
-  Heart;
-  ShoppingCart;
-  Code;
-  Database;
-  Globe;
-  Shield;
-  Cpu;
-  Users2;
-  Award;
-  CheckCircle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Lock;
-  DollarSign;
-  TrendingDown;
-  PieChart;
-  LineChart;
-  Activity;
-  Calculator;
-  Wallet;
-  CreditCard;
-  PiggyBank;
-  Building;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Cpu,
+  Users2,
+  Award,
+  CheckCircle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Lock,
+  DollarSign,
+  TrendingDown,
+  PieChart,
+  LineChart,
+  Activity,
+  Calculator,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'Automated Financial Analytics Platform | Zion Tech Group';
+  title: 'Automated Financial Analytics Platform | Zion Tech Group',
   description:,
-    'AI-powered financial analytics platform for automated insights, risk assessment, and investment optimization.';
+    'AI-powered financial analytics platform for automated insights, risk assessment, and investment optimization.',
   keywords:,
-    'financial analytics, automated analytics, AI finance, risk assessment, investment optimization, financial insights';
+    'financial analytics, automated analytics, AI finance, risk assessment, investment optimization, financial insights',
   openGraph: {
-    title: 'Automated Financial Analytics Platform | Zion Tech Group';
+    title: 'Automated Financial Analytics Platform | Zion Tech Group',
     description:,
-      'AI-powered financial analytics platform for automated insights, risk assessment, and investment optimization.';
-    url: 'https://ziontechgroup.com/automated-financial-analytics-platform';
-    siteName: 'Zion Tech Group';
+      'AI-powered financial analytics platform for automated insights, risk assessment, and investment optimization.',
+    url: 'https://ziontechgroup.com/automated-financial-analytics-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-financial-analytics.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'Automated Financial Analytics Platform';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-financial-analytics.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Automated Financial Analytics Platform'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'Automated Financial Analytics Platform | Zion Tech Group';
+    card: 'summary_large_image',
+    title: 'Automated Financial Analytics Platform | Zion Tech Group',
     description:,
-      'AI-powered financial analytics platform for automated insights, risk assessment, and investment optimization.';
-    images: ['https://ziontechgroup.com/og-image-financial-analytics.jpg'];
-  };
+      'AI-powered financial analytics platform for automated insights, risk assessment, and investment optimization.',
+    images: ['https://ziontechgroup.com/og-image-financial-analytics.jpg']
+  },
   alternates: {
     canonical:,
-      'https://ziontechgroup.com/automated-financial-analytics-platform';
-  };
-};
+      'https: //ziontechgroup.com/automated-financial-analytics-platform'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function AutomatedFinancialAnalyticsPlatform() {
   return (
     <div className='min-h-screen bg-black text-white'>,

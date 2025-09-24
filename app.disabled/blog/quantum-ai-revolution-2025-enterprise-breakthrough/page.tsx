@@ -1,29 +1,27 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  ShareIcon;
-  BookmarkIcon;
+  ArrowLeftIcon,
+  ShareIcon,
+  BookmarkIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide | Zion Tech Group';
+    'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide | Zion Tech Group',
   description:,
-    'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.';
+    'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',
   keywords: [
-    'Quantum Computing';
-    'AI Revolution';
-    'Enterprise Technology';
-    'Quantum AI';
-    'Future Computing';
-  ];
+    'Quantum ComputingAI Revolution',
+    'Enterprise TechnologyQuantum AI',
+    'Future Computing',
+  ],
   openGraph: {
-    title: 'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide';
+    title: 'Quantum AI Revolution 20o25: Enterprise Breakthrough Guide',
     description:,
-      'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.';
-    images: ['/images/quantum-ai-revolution-20o25.jpg'];
-  };
-};
+      'Discover how quantum computing and AI are revolutionizing enterprise operations. Complete guide to quantum AI implementation, benefits, and future opportunities.',
+    images: ['/images/quantum-ai-revolution-20o25.jpg']
+  },
+},
 export default function QuantumAIRevolution20o25Guide() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -48,7 +46,7 @@ export default function QuantumAIRevolution20o25Guide() {
           </h1>,
           <p className='text-xl opacity-90 mb-8 leading-relaxed'>,
             Discover how quantum computing and AI are revolutionizing enterprise,
-            operations. Complete guide to quantum AI implementation, benefits;
+            operations. Complete guide to quantum AI implementation, benefits,
             and future opportunities.,
           </p>,
           <div className='flex flex-wrap gap-4 text-sm'>,

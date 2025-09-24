@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 declare module 'cmdk',
 declare module '@radix-ui/react-context-menu',
 declare module 'vaul',
@@ -218,13 +218,13 @@ declare module 'lucide-react' {
   export const X: LucideIcon,
   export const XCircle: LucideIcon,
   export const Zap: LucideIcon,
-  const icons: { [key: string]: LucideIcon };
+  const icons: { [key: string]: LucideIcon },
   export default icons}
 declare module 'child_process',
 declare module 'date-fns',
 declare module 'jspdf' {
   export const jsPDF: any,
-  export default jsPDF;
+  export default jsPDF,
 }
 declare module '@hookform/resolvers/zod',
 declare module '@radix-ui/react-accordion',
@@ -268,7 +268,7 @@ declare module 'react-hook-form' {
     string,
   export type Control<TFieldValues extends FieldValues = FieldValues> = any,
   export interface UseFormReturn<,
-    TFieldValues extends FieldValues = FieldValues;
+    TFieldValues extends FieldValues = FieldValues,
   > {
     control: Control<TFieldValues>,
     handleSubmit: any,
@@ -281,8 +281,8 @@ declare module 'react-hook-form' {
   export function useFieldArray<TFieldValues extends FieldValues = FieldValues>(
     options: any): any,
   export interface ControllerProps<,
-    TFieldValues extends FieldValues = FieldValues;
-    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>;
+    TFieldValues extends FieldValues = FieldValues,
+    TName extends FieldPath<TFieldValues> = FieldPath<TFieldValues>,
   > {
     name: TName,
     control?: Control<TFieldValues>,
@@ -292,14 +292,14 @@ declare module 'react-hook-form' {
 ,
   export const Controller: ComponentType<ControllerProps<any any>>,
   export interface FormProviderProps<,
-    TFieldValues extends FieldValues = FieldValues;
+    TFieldValues extends FieldValues = FieldValues,
   > {
     children?: ReactNode,
     [key: string]: any}
 ,
   export const FormProvider: ComponentType<FormProviderProps<any>>,
   export function useFormContext<,
-    TFieldValues extends FieldValues = FieldValues;
+    TFieldValues extends FieldValues = FieldValues,
   >(): UseFormReturn<TFieldValues>}
 declare module 'react-i18next',
 declare module 'react-dom/client',

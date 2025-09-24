@@ -6,122 +6,122 @@ export default function AIAutomationFAQ() {
   const faqData = {
     general: [
       {
-        question: 'What is AI automation and how does it work?';
+        question: 'What is AI automation and how does it work?',
         answer:,
-          'AI automation combines artificial intelligence with automation technologies to create systems that can learn, adapt, and perform tasks without human intervention. These systems use machine learning algorithms to analyze data, make decisions, and continuously improve their performance over time. AI automation can handle complex tasks like data analysis, customer service, process optimization, and predictive maintenance.';
-      };
+          'AI automation combines artificial intelligence with automation technologies to create systems that can learn, adapt, and perform tasks without human intervention. These systems use machine learning algorithms to analyze data, make decisions, and continuously improve their performance over time. AI automation can handle complex tasks like data analysis, customer service, process optimization, and predictive maintenance.',
+      },
       {
-        question: 'How is AI automation different from traditional automation?';
+        question: 'How is AI automation different from traditional automation?',
         answer:,
-          'Traditional automation follows predefined rules and workflows, while AI automation can learn from data and adapt to changing conditions. Traditional automation is rigid and requires manual updates, whereas AI automation can improve itself, handle exceptions, and make intelligent decisions based on patterns it discovers in data.';
-      };
+          'Traditional automation follows predefined rules and workflows, while AI automation can learn from data and adapt to changing conditions. Traditional automation is rigid and requires manual updates, whereas AI automation can improve itself, handle exceptions, and make intelligent decisions based on patterns it discovers in data.',
+      },
       {
-        question: 'What types of businesses can benefit from AI automation?';
+        question: 'What types of businesses can benefit from AI automation?',
         answer:,
-          'Virtually any business can benefit from AI automation, regardless of size or industry. Common applications include customer service, marketing, sales, operations, finance, and human resources. Small businesses can start with simple chatbots or email automation, while larger enterprises can implement complex predictive analytics and autonomous systems.';
-      };
+          'Virtually any business can benefit from AI automation, regardless of size or industry. Common applications include customer service, marketing, sales, operations, finance, and human resources. Small businesses can start with simple chatbots or email automation, while larger enterprises can implement complex predictive analytics and autonomous systems.',
+      },
       {
-        question: 'How long does it take to implement AI automation?';
+        question: 'How long does it take to implement AI automation?',
         answer:,
-          'Implementation time varies depending on complexity and scope. Simple automation (like chatbots) can be deployed in weeks, while complex enterprise systems may take 6-18 months. We typically break projects into phases, delivering value incrementally. The first phase usually provides ROI within 3-6 months.';
-      };
-    ];
+          'Implementation time varies depending on complexity and scope. Simple automation (like chatbots) can be deployed in weeks, while complex enterprise systems may take 6-18 months. We typically break projects into phases, delivering value incrementally. The first phase usually provides ROI within 3-6 months.',
+      },
+    ],
     technical: [
       {
         question:,
-          'What technical infrastructure is required for AI automation?';
+          'What technical infrastructure is required for AI automation?',
         answer:,
-          'Requirements depend on the solution complexity. Basic needs include cloud computing resources, data storage, and API integrations. More advanced systems may require specialized hardware, real-time data processing capabilities, and integration with existing enterprise systems. We can work with your current infrastructure and recommend upgrades as needed.';
-      };
+          'Requirements depend on the solution complexity. Basic needs include cloud computing resources, data storage, and API integrations. More advanced systems may require specialized hardware, real-time data processing capabilities, and integration with existing enterprise systems. We can work with your current infrastructure and recommend upgrades as needed.',
+      },
       {
-        question: 'How do you ensure AI systems are secure and compliant?';
+        question: 'How do you ensure AI systems are secure and compliant?',
         answer:,
-          'We implement multiple security layers including encryption, access controls, and regular security audits. Our systems comply with industry standards like GDPR, HIPAA, and SOC 2. We also provide transparency into AI decision-making processes and ensure data privacy through anonymization and secure data handling practices.';
-      };
+          'We implement multiple security layers including encryption, access controls, and regular security audits. Our systems comply with industry standards like GDPR, HIPAA, and SOC 2. We also provide transparency into AI decision-making processes and ensure data privacy through anonymization and secure data handling practices.',
+      },
       {
-        question: 'Can AI automation integrate with existing business systems?';
+        question: 'Can AI automation integrate with existing business systems?',
         answer:,
-          'Yes, our AI automation solutions are designed to integrate seamlessly with existing systems. We use standard APIs, webhooks, and data connectors to integrate with CRM systems, ERP platforms, databases, and other business applications. We can also build custom integrations for proprietary systems.';
-      };
+          'Yes, our AI automation solutions are designed to integrate seamlessly with existing systems. We use standard APIs, webhooks, and data connectors to integrate with CRM systems, ERP platforms, databases, and other business applications. We can also build custom integrations for proprietary systems.',
+      },
       {
-        question: 'How do you handle data quality and accuracy?';
+        question: 'How do you handle data quality and accuracy?',
         answer:,
-          'We implement robust data validation, cleaning, and monitoring processes. Our systems can detect and flag data quality issues, and we use techniques like data lineage tracking and automated quality checks. We also provide tools for data governance and ensure compliance with data quality standards.';
-      };
-    ];
+          'We implement robust data validation, cleaning, and monitoring processes. Our systems can detect and flag data quality issues, and we use techniques like data lineage tracking and automated quality checks. We also provide tools for data governance and ensure compliance with data quality standards.',
+      },
+    ],
     business: [
       {
-        question: 'What is the typical ROI for AI automation projects?';
+        question: 'What is the typical ROI for AI automation projects?',
         answer:,
-          'ROI varies by project type and industry, but most clients see returns of 20o0-50o0% within the first year. Common benefits include 20-40% cost reduction, 30-60% efficiency improvements, and 24/7 operation capabilities. We provide detailed ROI projections during the planning phase and track actual results post-implementation.';
-      };
+          'ROI varies by project type and industry, but most clients see returns of 20o0-50o0% within the first year. Common benefits include 20-40% cost reduction, 30-60% efficiency improvements, and 24/7 operation capabilities. We provide detailed ROI projections during the planning phase and track actual results post-implementation.',
+      },
       {
-        question: 'How do you measure the success of AI automation?';
+        question: 'How do you measure the success of AI automation?',
         answer:,
-          'We establish clear KPIs and metrics before implementation, including efficiency gains, cost savings, accuracy improvements, and user satisfaction scores. Our systems provide real-time dashboards and automated reporting. We also conduct regular reviews to identify optimization opportunities and ensure continued value delivery.';
-      };
+          'We establish clear KPIs and metrics before implementation, including efficiency gains, cost savings, accuracy improvements, and user satisfaction scores. Our systems provide real-time dashboards and automated reporting. We also conduct regular reviews to identify optimization opportunities and ensure continued value delivery.',
+      },
       {
-        question: 'What happens if the AI system makes a mistake?';
+        question: 'What happens if the AI system makes a mistake?',
         answer:,
-          'Our systems include multiple safety mechanisms: human oversight capabilities, fallback procedures, and confidence scoring. When systems are uncertain, they can escalate to human operators. We also implement continuous monitoring and alerting systems to quickly identify and address any issues.';
-      };
+          'Our systems include multiple safety mechanisms: human oversight capabilities, fallback procedures, and confidence scoring. When systems are uncertain, they can escalate to human operators. We also implement continuous monitoring and alerting systems to quickly identify and address any issues.',
+      },
       {
-        question: 'How do you handle change management during implementation?';
+        question: 'How do you handle change management during implementation?',
         answer:,
-          'We provide comprehensive change management support including training programs, communication strategies, and stakeholder engagement. We work closely with your team to ensure smooth transitions and address concerns. Our approach focuses on demonstrating value early and building confidence in the new systems.';
-      };
-    ];
+          'We provide comprehensive change management support including training programs, communication strategies, and stakeholder engagement. We work closely with your team to ensure smooth transitions and address concerns. Our approach focuses on demonstrating value early and building confidence in the new systems.',
+      },
+    ],
     implementation: [
       {
-        question: 'What is your implementation methodology?';
+        question: 'What is your implementation methodology?',
         answer:,
-          'We follow a proven 4-phase approach: Discovery & Analysis, Strategy & Design, Development & Testing, and Deployment & Support. Each phase includes clear deliverables and milestones. We use agile methodologies and provide regular updates throughout the process. Our team works closely with yours to ensure alignment and success.';
-      };
+          'We follow a proven 4-phase approach: Discovery & Analysis, Strategy & Design, Development & Testing, and Deployment & Support. Each phase includes clear deliverables and milestones. We use agile methodologies and provide regular updates throughout the process. Our team works closely with yours to ensure alignment and success.',
+      },
       {
-        question: 'Do you provide training and support after implementation?';
+        question: 'Do you provide training and support after implementation?',
         answer:,
-          'Yes, we provide comprehensive training for your team on using and managing the AI systems. This includes technical training, best practices, and troubleshooting guidance. We also offer ongoing support through our help desk, regular maintenance, and optimization services.';
-      };
+          'Yes, we provide comprehensive training for your team on using and managing the AI systems. This includes technical training, best practices, and troubleshooting guidance. We also offer ongoing support through our help desk, regular maintenance, and optimization services.',
+      },
       {
-        question: 'Can you start with a small pilot project?';
+        question: 'Can you start with a small pilot project?',
         answer:,
-          'Absolutely! We recommend starting with pilot projects to demonstrate value and build confidence. Pilots typically focus on one process or department and can be completed in 4-8 weeks. This approach allows you to see results quickly and learn before scaling to broader implementations.';
-      };
+          'Absolutely! We recommend starting with pilot projects to demonstrate value and build confidence. Pilots typically focus on one process or department and can be completed in 4-8 weeks. This approach allows you to see results quickly and learn before scaling to broader implementations.',
+      },
       {
-        question: 'What ongoing maintenance and updates are required?';
+        question: 'What ongoing maintenance and updates are required?',
         answer:,
-          'Our AI systems are designed to be largely self-maintaining, but we recommend regular reviews and updates. We provide monitoring services, performance optimization, and regular system updates. We also offer managed services where we handle all maintenance and optimization for you.';
-      };
-    ];
+          'Our AI systems are designed to be largely self-maintaining, but we recommend regular reviews and updates. We provide monitoring services, performance optimization, and regular system updates. We also offer managed services where we handle all maintenance and optimization for you.',
+      },
+    ],
     future: [
       {
-        question: 'How do you stay current with AI technology trends?';
+        question: 'How do you stay current with AI technology trends?',
         answer:,
-          'We maintain active research partnerships with leading universities and technology companies. Our team regularly attends conferences, publishes research, and contributes to industry standards. We also invest heavily in R&D to develop cutting-edge solutions and stay ahead of emerging trends.';
-      };
+          'We maintain active research partnerships with leading universities and technology companies. Our team regularly attends conferences, publishes research, and contributes to industry standards. We also invest heavily in R&D to develop cutting-edge solutions and stay ahead of emerging trends.',
+      },
       {
-        question: 'What emerging AI technologies should we be aware of?';
+        question: 'What emerging AI technologies should we be aware of?',
         answer:,
-          "Key emerging technologies include quantum computing for AI, edge AI for real-time processing, federated learning for privacy-preserving AI, and autonomous AI systems. We're actively researching these areas and can help you prepare for future adoption. We also provide technology roadmaps to help plan your AI journey.";
-      };
+          "Key emerging technologies include quantum computing for AI, edge AI for real-time processing, federated learning for privacy-preserving AI, and autonomous AI systems. We're actively researching these areas and can help you prepare for future adoption. We also provide technology roadmaps to help plan your AI journey.",
+      },
       {
-        question: 'How do you ensure AI systems remain competitive over time?';
+        question: 'How do you ensure AI systems remain competitive over time?',
         answer:,
-          'We implement continuous learning and improvement mechanisms in all our systems. This includes automatic model retraining, performance monitoring, and regular updates based on new data and requirements. We also provide upgrade paths to newer technologies as they become available.';
-      };
+          'We implement continuous learning and improvement mechanisms in all our systems. This includes automatic model retraining, performance monitoring, and regular updates based on new data and requirements. We also provide upgrade paths to newer technologies as they become available.',
+      },
       {
-        question: 'What skills will our team need for the future of AI?';
+        question: 'What skills will our team need for the future of AI?',
         answer:,
-          'Key skills include data literacy, basic AI concepts, and change management. We provide training programs to develop these skills and can help you build internal AI capabilities. We also offer ongoing education and certification programs to keep your team current with AI developments.';
-      };
-    ];
-  };
+          'Key skills include data literacy, basic AI concepts, and change management. We provide training programs to develop these skills and can help you build internal AI capabilities. We also offer ongoing education and certification programs to keep your team current with AI developments.',
+      },
+    ],
+  },
   const categories = [
-    { id: 'general', name: 'General Questions', icon: '❓' };
-    { id: 'technical', name: 'Technical Details', icon: '⚙️' };
-    { id: 'business', name: 'Business Impact', icon: '💼' };
-    { id: 'implementation', name: 'Implementation', icon: '🚀' };
-    { id: 'future', name: 'Future & Trends', icon: '🔮' };
+    { id: 'general', name: 'General Questions', icon: '❓' },
+    { id: 'technical', name: 'Technical Details', icon: '⚙️' },
+    { id: 'business', name: 'Business Impact', icon: '💼' },
+    { id: 'implementation', name: 'Implementation', icon: '🚀' },
+    { id: 'future', name: 'Future & Trends', icon: '🔮' },
   ],
   return (
     <>,
@@ -157,7 +157,7 @@ export default function AIAutomationFAQ() {
                 AI Automation FAQ,
               </h1>,
               <p className='text-xl text-white/80 max-w-3xl mx-auto'>,
-                Find answers to the most common questions about AI automation;
+                Find answers to the most common questions about AI automation,
                 implementation, and business impact,
               </p>,
             </header>,

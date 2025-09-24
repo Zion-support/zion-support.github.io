@@ -3,45 +3,45 @@ import { Link } from 'react-router-dom',
 import { BriefcaseHardDriveLightbulbUsers } from 'lucide-react',
 const categories = [
   {
-    title: 'Services';
-    description: 'On-demand IT supportconsultingdevelopmentand more';
-    icon: <Briefcase className='w-10 h-10' />;
-    link: '/services';
-    color: 'from-purple-500 to-indigo-600';
-  };
+    title: 'Services',
+    description: 'On-demand IT supportconsultingdevelopmentand more',
+    icon: <Briefcase className='w-10 h-10' />,
+    link: '/services',
+    color: 'from-purple-500 to-indigo-600'
+  },
   {
-    title: 'Talents';
-    description: 'Connect with AI expertsdevelopersand tech specialists';
-    icon: <Users className='w-10 h-10' />;
-    link: '/talent';
-    color: 'from-cyan-500 to-blue-600';
-  };
+    title: 'Talents',
+    description: 'Connect with AI expertsdevelopersand tech specialists',
+    icon: <Users className='w-10 h-10' />,
+    link: '/talent',
+    color: 'from-cyan-500 to-blue-600'
+  },
   {
-    title: 'Equipment';
-    description: 'Rent or buy specialized hardwareserversand devices';
-    icon: <HardDrive className='w-10 h-10' />;
-    link: '/equipment';
-    color: 'from-amber-500 to-orange-600';
-  };
+    title: 'Equipment',
+    description: 'Rent or buy specialized hardwareserversand devices',
+    icon: <HardDrive className='w-10 h-10' />,
+    link: '/equipment',
+    color: 'from-amber-500 to-orange-600'
+  },
   {
-    title: 'Innovation';
-    description: 'Discover cutting-edge solutions and tech breakthroughs';
-    icon: <Lightbulb className='w-10 h-10' />;
-    link: '/category/innovation';
-    color: 'from-emerald-500 to-green-600';
-  };
+    title: 'Innovation',
+    description: 'Discover cutting-edge solutions and tech breakthroughs',
+    icon: <Lightbulb className='w-10 h-10' />,
+    link: '/category/innovation',
+    color: 'from-emerald-500 to-green-600'
+  },
 ],
 const specialServices = [
   {
-    title: 'IT Onsite Services';
-    link: '/it-onsite-services';
-  };
+    title: 'IT Onsite Services',
+    link: '/it-onsite-services'
+  },
 ],
 interface CategoriesSectionProps {
   showTitle?: boolean}
 ,
 export function CategoriesSection({
-  showTitle = true;
+  showTitle = true,
 }: CategoriesSectionProps) {
   return (
     <section className='py-20 bg-zion-blue'>,

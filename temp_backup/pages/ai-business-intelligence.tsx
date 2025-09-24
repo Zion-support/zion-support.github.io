@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin, Rocket, BarChart3, Brain, Database, Users, Target } from 'lucide-react',
@@ -8,41 +8,28 @@ import { Layout } from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 export default function AIBusinessIntelligencePage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'Real-time data analytics dashboard';
-    'AI-powered predictive modeling';
-    'Automated report generation';
-    'Natural language query interface';
-    'Advanced data visualization';
-    'Custom KPI tracking';
-    'Multi-source data integration';
-    'Role-based access control';
-    'Mobile-responsive design';
-    'API for custom integrations'],
+    'Real-time data analytics dashboardAI-powered predictive modeling',
+    'Automated report generationNatural language query interface',
+    'Advanced data visualizationCustom KPI tracking',
+    'Multi-source data integrationRole-based access control',
+    'Mobile-responsive designAPI for custom integrations'],
   const useCases = [
-    'Sales performance analysis';
-    'Customer behavior insights';
-    'Financial forecasting';
-    'Operational efficiency tracking';
+    'Sales performance analysisCustomer behavior insights',
+    'Financial forecastingOperational efficiency tracking',
     'Market trend analysis'],
   const integrations = [
-    'Salesforce';
-    'HubSpot';
-    'Slack';
-    'Microsoft Teams';
-    'Zapier';
-    'Google Analytics'],
+    'SalesforceHubSpot',
+    'SlackMicrosoft Teams',
+    'ZapierGoogle Analytics'],
   const technology = [
-    'React';
-    'Node.js';
-    'Python';
-    'TensorFlow';
-    'PostgreSQL';
-    'Redis';
+    'ReactNode.js',
+    'PythonTensorFlow',
+    'PostgreSQLRedis',
     'AWS'],
   return (
     <Layout>,
@@ -204,7 +191,7 @@ export default function AIBusinessIntelligencePage() {
                   <div className="text-5xl font-bold text-blue-400 mb-2">$299</div>,
                   <div className="text-gray-400 text-xl mb-6">per month</div>,
                   <p className="text-gray-300 mb-8 max-w-2xl mx-auto">,
-                    Professional AI-powered business intelligence platform with real-time analytics;
+                    Professional AI-powered business intelligence platform with real-time analytics,
                     predictive modeling, and comprehensive reporting capabilities.,
                   </p>,
                   <div className="grid grid-cols-1 md: grid-cols-2 gap-6 mb-8 text-left">,

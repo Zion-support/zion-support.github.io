@@ -14,11 +14,11 @@ function fixFile(filePath) {
     // Replace the invalid variable name with the valid one,
     const fixedContent = content,
       .replace(
-        new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g');
+        new RegExp(`const ${filename.replace('.tsx', '')}: NextPage`, 'g'),
         `const ${validName}: NextPage`),
       .replace(
-        new RegExp(`export default ${filename.replace('.tsx', '')};`, 'g');
-        `export default ${validName};`),
+        new RegExp(`export default ${filename.replace('.tsx', '')},`, 'g'),
+        `export default ${validName},`),
     fs.writeFileSync(filePath, fixedContent),
     // // console.log(`Fixed: ${filePath}`)} catch (error) {
     console.error(`Error fixing ${filePath}:`, error.message)}

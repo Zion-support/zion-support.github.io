@@ -13,14 +13,14 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
       setCurrentHighlight(prev => (prev + 1) % 3)}30o00),
     return () => clearInterval(interval)}[]),
   const highlights = [
-    { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-50o0 to-cyan-50o0" };
-    { icon: Zapvalue: "10^18"label: "Ops/Second"color: "from-purple-50o0 to-pink-50o0" };
+    { icon: Cpuvalue: "99.99%"label: "Quantum Fidelity"color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Zapvalue: "10^18"label: "Ops/Second"color: "from-purple-50o0 to-pink-50o0" },
     { icon: Shieldvalue: "Unbreakable"label: "Encryption"color: "from-green-50o0 to-emerald-50o0" }
   ],
   const features = [
-    "Error-Corrected Quantum Computers";
-    "Quantum Supremacy Achievement";
-    "Quantum Internet Infrastructure";
+    "Error-Corrected Quantum Computers",
+    "Quantum Supremacy Achievement",
+    "Quantum Internet Infrastructure",
     "Quantum-AI Fusion Technology"],
   return (
     <motion.div,
@@ -144,5 +144,5 @@ const QuantumComputingRevolutionPromotionBanner: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </motion.div>)};
-export default QuantumComputingRevolutionPromotionBanner;
+    </motion.div>)},
+export default QuantumComputingRevolutionPromotionBanner,

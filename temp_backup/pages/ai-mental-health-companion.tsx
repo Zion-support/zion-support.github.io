@@ -22,14 +22,11 @@ export default function MentalHealthCompanionPage() {
         implementationWeeks='1-2 weeks',
         roiNote='Improve engagement and outcomes while reducing clinician workload',
         features={[
-          'CBT and mindfulness exercises';
-          'Mood tracking and journaling';
-          'Clinician collaboration portal';
-          'Crisis detection and hotline routing';
-          'PHI minimization and encryption';
-          'Mobile-first with offline support';
+          'CBT and mindfulness exercisesMood tracking and journaling',
+          'Clinician collaboration portalCrisis detection and hotline routing',
+          'PHI minimization and encryptionMobile-first with offline support',
         ]}
-        industries={['Healthcare', 'Employers', 'Universities']}
+        industries={['HealthcareEmployers', 'Universities']}
         url='https: //ziontechgroup.com/ai-mental-health-companion',
       />,
     </>)}

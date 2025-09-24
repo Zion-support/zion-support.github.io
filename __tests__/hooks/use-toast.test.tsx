@@ -1,12 +1,13 @@
-import { toast } from @/hooks/use-toast',import { vi } from vitest',
+import { toast } from @/hooks/use-toast',
+import { vi } from vitest',
 // Mock sonner,
 vi.mock('sonner', () => ({'  toast: {
-    error: vi.fn();
-    success: vi.fn();
-    info: vi.fn();
-    warning: vi.fn();
-    loading: vi.fn();
-    custom: vi.fn();
+    error: vi.fn(),
+    success: vi.fn(),
+    info: vi.fn(),
+    warning: vi.fn(),
+    loading: vi.fn(),
+    custom: vi.fn(),
     dismiss: vi.fn()}
 })),
 // Mock logError as it's called by the destructive toast'vi.mock('@/utils/logError', () => ({'  logError: vi.fn(() => mocked-trace-id')})),
@@ -16,7 +17,7 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     warning: vi.Mock,
     loading: vi.Mock,
     custom: vi.Mock,
-    dismiss: vi.Mock};
+    dismiss: vi.Mock},
   beforeEach(() => {
     vi.clearAllMocks(),
     // Reset the deduplication internal state for each test,
@@ -25,8 +26,8 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
   it('should call sonnerToast.error with a Retry button when onRetry is provided for destructive variant', () => {'    const mockOnRetry = vi.fn(), // Changed vi.fn to vi.fn,
     const title = Error Title',    const description = Something went wrong.',
     toast({
-      variant: destructive',      title;
-      description;
+      variant: destructive',      title,
+      description,
       onRetry: mockOnRetry}),
     expect(sonnerToast.error).toHaveBeenCalledTimes(1),
     const [message, options] = (sonnerToast.error as vi.Mock).mock.calls[0], // Changed vi.Mock to vi.Mock,
@@ -46,7 +47,7 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
    it('should call sonnerToast.error with a generic action when action prop is provided and onRetry is not', () => {'    const mockActionOnClick = vi.fn(), // Changed vi.fn to vi.fn,
     const title = Error With Generic Action',    const actionLabel = Custom Action',
     toast({
-      variant: destructive',      title;
+      variant: destructive',      title,
       action: { label: actionLabel, onClick: mockActionOnClick }
     }),
     expect(sonnerToast.error).toHaveBeenCalledTimes(1),
@@ -62,8 +63,8 @@ describe('useToast', () => {'  const sonnerToast = vi.mocked(vi.importMock('sonn
     const mockActionOnClick = vi.fn(), // Changed vi.fn to vi.fn,
     const title = Error With Both Actions',    const actionLabel = Generic Action',
     toast({
-      variant: destructive',      title;
-      action: { label: actionLabel, onClick: mockActionOnClick };
+      variant: destructive',      title,
+      action: { label: actionLabel, onClick: mockActionOnClick },
       onRetry: mockOnRetry}),
     expect(sonnerToast.error).toHaveBeenCalledTimes(1),
     const [message, options] = (sonnerToast.error as vi.Mock).mock.calls[0], // Changed vi.Mock to vi.Mock,

@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Reliability Engineering for Agents | Zion Tech Group';
+  title: 'AI 20o26: Reliability Engineering for Agents | Zion Tech Group',
   description:,
-    'Engineering reliable autonomous agents with SLOs, chaos testing, and progressive delivery guarded by evals.';
+    'Engineering reliable autonomous agents with SLOs, chaos testing, and progressive delivery guarded by evals.',
   keywords: [
-    'reliability engineering';
-    'SLOs';
-    'chaos testing';
-    'evals';
-    'progressive delivery';
-  ];
-};
+    'reliability engineeringSLOs',
+    'chaos testingevals',
+    'progressive delivery',
+  ]
+},
 const ReliabilityEngineeringForAgents20o26: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -68,5 +66,5 @@ const ReliabilityEngineeringForAgents20o26: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default ReliabilityEngineeringForAgents20o26;
+    </div>)},
+export default ReliabilityEngineeringForAgents20o26,

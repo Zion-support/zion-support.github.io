@@ -52,5 +52,5 @@ const NewContent20o25EnterpriseAutomationBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25EnterpriseAutomationBanner;
+    </div>)},
+export default NewContent20o25EnterpriseAutomationBanner,

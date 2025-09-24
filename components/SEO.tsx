@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import type { ReactNode } from 'react',
 interface SEOHeadProps {
@@ -14,24 +14,21 @@ interface SEOHeadProps {
   children?: ReactNode}
 ,
 export default function SEOHead({
-  title = 'Zion Tech Group - Advanced AI and Technology Solutions';
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.';
+  title = 'Zion Tech Group - Advanced AI and Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and cybersecurity solutions. Enterprise-grade technology that drives innovation and growth.',
   keywords = [
-    'AI';
-    'artificial intelligence';
-    'cloud services';
-    'cybersecurity';
-    'technology solutions';
-    'enterprise software';
-    'digital transformation';
-  ];
-  canonical;
-  ogImage = '/og-image.jpg';
-  ogType = 'website';
-  twitterCard = 'summary_large_image';
-  noIndex = false;
-  structuredData;
-  children;
+    'AIartificial intelligence',
+    'cloud servicescybersecurity',
+    'technology solutionsenterprise software',
+    'digital transformation',
+  ],
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  noIndex = false,
+  structuredData,
+  children,
 }: SEOHeadProps) {
   const fullTitle = title.includes('Zion Tech Group'),
     ? title,
@@ -42,7 +39,7 @@ export default function SEOHead({
     <Head>,
       <title>{fullTitle}</title>,
       <meta name='description' content={description} />,
-      <meta name='keywords' content={keywords.join(', ')} />,
+      <meta name='keywords' content={keywords.join()} />,
       {canonicalUrl && <link rel='canonical' href={canonicalUrl} />}
       {noIndex && <meta name='robots' content='noindex,nofollow' />}
 ,

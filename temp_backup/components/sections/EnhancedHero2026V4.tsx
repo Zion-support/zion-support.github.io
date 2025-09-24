@@ -1,42 +1,42 @@
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Rocket;
-  Brain;
-  Sparkles;
-  CheckCircle;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Rocket,
+  Brain,
+  Sparkles,
+  CheckCircle,
 } from 'lucide-react',
 import Button from '../ui/Button',
 export default function EnhancedHero20o26V4() {
   const features = [
     {
-      icon: Brain;
-      text: 'AI-Powered Solutions';
-      color: 'from-purple-40o0 to-pink-40o0';
-    };
+      icon: Brain,
+      text: 'AI-Powered Solutions',
+      color: 'from-purple-40o0 to-pink-40o0'
+    },
     {
-      icon: Zap;
-      text: 'Quantum Technology';
-      color: 'from-blue-40o0 to-cyan-40o0';
-    };
+      icon: Zap,
+      text: 'Quantum Technology',
+      color: 'from-blue-40o0 to-cyan-40o0'
+    },
     {
-      icon: Rocket;
-      text: '20o26 Innovation';
-      color: 'from-green-40o0 to-emerald-40o0';
-    };
+      icon: Rocket,
+      text: '20o26 Innovation',
+      color: 'from-green-40o0 to-emerald-40o0'
+    },
     {
-      icon: Star;
-      text: 'Industry Leading';
-      color: 'from-yellow-40o0 to-orange-40o0';
-    };
+      icon: Star,
+      text: 'Industry Leading',
+      color: 'from-yellow-40o0 to-orange-40o0'
+    },
   ],
   const stats = [
-    { number: '10o00+', label: 'Services & Solutions', icon: Sparkles };
-    { number: '10o00%', label: 'ROI Guarantee', icon: TrendingUp };
-    { number: '24/7', label: 'Support Available', icon: CheckCircle };
+    { number: '10o00+', label: 'Services & Solutions', icon: Sparkles },
+    { number: '10o00%', label: 'ROI Guarantee', icon: TrendingUp },
+    { number: '24/7', label: 'Support Available', icon: CheckCircle },
   ],
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,

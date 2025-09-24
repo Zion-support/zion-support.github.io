@@ -1,419 +1,419 @@
 import Link from 'next/link',
 import Layout from '../components/Layout',
 import {
-  ArrowRight;
-  Brain;
-  Cloud;
-  Shield;
-  Zap;
-  Database;
-  Server;
-  Lock;
-  BarChart3;
-  Users;
-  Globe;
-  Code;
-  CheckCircle;
-  Star;
-  TrendingUp;
-  Clock;
-  Award;
-  Mail;
-  Calendar;
-  Settings;
-  Eye;
-  MessageSquare;
-  Palette;
-  Bot;
-  Cpu;
-  Link2;
-  Wifi;
-  HardDrive;
-  Monitor;
-  Activity;
-  Terminal;
-  CreditCard;
-  Smartphone;
-  FileText;
-  Search;
-  Filter;
-  Download;
-  Upload;
-  Send;
-  Phone;
-  DollarSign;
-  Target;
-  Lightbulb;
-  Rocket;
-  Layers;
-  Workflow;
-  GitBranch;
-  Database2;
-  Network;
-  Headphones;
-  Video;
-  Image;
-  File;
-  Folder;
-  Bookmark;
-  Tag;
-  Bell;
-  AlertTriangle;
-  CheckCircle2;
-  XCircle;
-  Info;
-  HelpCircle;
-  ExternalLink;
-  ChevronRight;
-  Play;
-  Pause;
-  Stop;
-  RefreshCw;
-  RotateCcw;
-  Maximize;
-  Minimize;
-  Plus;
-  Minus;
-  Edit;
-  Trash2;
-  Copy;
-  Share;
-  Heart;
-  ThumbsUp;
-  MessageCircle;
-  User;
-  UserPlus;
-  UserCheck;
-  UserX;
-  Users2;
-  UserCog;
-  ShieldCheck;
-  Key;
-  Fingerprint;
-  LockKeyhole;
-  EyeOff;
-  AlertCircle;
-  CheckSquare;
-  Square;
-  Radio;
-  ToggleLeft;
-  ToggleRight;
-  Sliders;
-  SlidersHorizontal;
-  ToggleLeft2;
-  ToggleRight2;
-  Volume2;
-  VolumeX;
-  Mic;
-  MicOff;
-  Camera;
-  CameraOff;
-  MapPin;
-  Navigation;
-  Compass;
-  Map;
-  Globe2;
-  WifiOff;
-  Signal;
-  SignalHigh;
-  SignalLow;
-  SignalZero;
-  Battery;
-  BatteryLow;
-  BatteryMedium;
-  BatteryHigh;
-  BatteryFull;
-  Power;
-  PowerOff;
-  Zap2;
-  Flashlight;
-  FlashlightOff;
-  Sun;
-  Moon;
-  Sunrise;
-  Sunset;
-  CloudRain;
-  CloudSnow;
-  CloudLightning;
-  Wind;
-  Thermometer;
-  Droplets;
-  Umbrella;
-  TreePine;
-  Leaf;
-  Flower;
-  Bug;
-  Fish;
-  Bird;
-  Cat;
-  Dog;
-  Heart2;
-  Smile;
-  Frown;
-  Meh;
-  Laugh;
-  Angry;
-  Surprised;
-  Confused;
-  Kiss;
-  Wink;
-  Tongue;
-  ThumbsDown;
-  Clap;
-  PartyPopper;
-  Gift;
-  Cake;
-  Coffee;
-  Pizza;
-  Apple;
-  Banana;
-  Carrot;
-  Cherry;
-  Grape;
-  Lemon;
-  Orange;
-  Peach;
-  Pear;
-  Pineapple;
-  Strawberry;
-  Watermelon;
-  Egg;
-  Milk;
-  Bread;
-  Cheese;
-  Fish2;
-  Meat;
-  Cookie;
-  IceCream;
-  Lollipop;
-  Candy;
-  Chocolate;
-  Donut;
-  Popcorn;
-  HotDog;
-  Hamburger;
-  Sandwich;
-  Taco;
-  Burrito;
-  Salad;
-  Soup;
-  Noodles;
-  Rice;
-  Spaghetti;
-  Lasagna;
-  Steak;
-  Chicken;
-  Turkey;
-  Bacon;
-  Sausage;
-  Shrimp;
-  Lobster;
-  Crab;
-  Octopus;
-  Squid;
-  Snail;
-  Butterfly;
-  Bee;
-  Ant;
-  Spider;
-  Scorpion;
-  Snake;
-  Lizard;
-  Frog;
-  Turtle;
-  Whale;
-  Dolphin;
-  Shark;
-  Penguin;
-  Owl;
-  Eagle;
-  Hawk;
-  Parrot;
-  Peacock;
-  Flamingo;
-  Swan;
-  Duck;
-  Goose;
-  Chicken2;
-  Rooster;
-  Turkey2;
-  Rabbit;
-  Hamster;
-  Mouse;
-  Rat;
-  Squirrel;
-  Chipmunk;
-  Beaver;
-  Raccoon;
-  Fox;
-  Wolf;
-  Bear;
-  Lion;
-  Tiger;
-  Leopard;
-  Cheetah;
-  Jaguar;
-  Panther;
-  Lynx;
-  Cougar;
-  Elephant;
-  Giraffe;
-  Zebra;
-  Horse;
-  Cow;
-  Pig;
-  Sheep;
-  Goat;
-  Deer;
-  Moose;
-  Elk;
-  Bison;
-  Buffalo;
-  Camel;
-  Llama;
-  Alpaca;
-  Kangaroo;
-  Koala;
-  Panda;
-  Sloth;
-  Monkey;
-  Gorilla;
-  Chimpanzee;
-  Orangutan;
-  Baboon;
-  Lemur;
-  Hedgehog;
-  Porcupine;
-  Armadillo;
-  Platypus;
-  Opossum;
-  Skunk;
-  Badger;
-  Wolverine;
-  Otter;
-  Seal;
-  Walrus;
-  PolarBear;
-  GrizzlyBear;
-  BlackBear;
-  Panda2;
-  RedPanda;
-  Meerkat;
-  Mongoose;
-  Ferret;
-  Weasel;
-  Stoat;
-  Ermine;
-  Mink;
-  Marten;
-  Fisher;
-  Wolverine2;
-  Badger2;
-  HoneyBadger;
-  Civet;
-  Genet;
-  Binturong;
-  Kinkajou;
-  Coati;
-  Raccoon2;
-  Ringtail;
-  Cacomistle;
-  Olingo;
-  Kinkajou2;
-  Potto;
-  Loris;
-  Galago;
-  Tarsier;
-  AyeAye;
-  Indri;
-  Sifaka;
-  Lemur2;
-  RingTailedLemur;
-  MouseLemur;
-  DwarfLemur;
-  SportiveLemur;
-  WoollyLemur;
-  RuffedLemur;
-  BrownLemur;
-  BlackLemur;
-  RedRuffedLemur;
-  WhiteRuffedLemur;
-  BlueEyedBlackLemur;
-  MongooseLemur;
-  CrownedLemur;
-  SanfordLemur;
-  RedBellyLemur;
-  GrayMouseLemur;
-  GoldenBrownMouseLemur;
-  PygmyMouseLemur;
-  CoquerelSifaka;
-  VerreauxSifaka;
-  DiademedSifaka;
-  SilkySifaka;
-  PerrierSifaka;
-  MilneEdwardsSifaka;
-  DeckenSifaka;
-  CrownedSifaka;
-  TattersallSifaka;
-  VonDerDeckenSifaka;
-  Propithecus;
-  IndriIndri;
-  Avahi;
-  Lepilemur;
-  Hapalemur;
-  Prolemur;
-  Varecia;
-  Eulemur;
-  Lemur;
-  Microcebus;
-  Mirza;
-  Allocebus;
-  Phaner;
-  Cheirogaleus;
-  Microcebus2;
-  Mirza2;
-  Allocebus2;
-  Phaner2;
-  Cheirogaleus2;
-  Microcebus3;
-  Mirza3;
-  Allocebus3;
-  Phaner3;
-  Cheirogaleus3;
-  Microcebus4;
-  Mirza4;
-  Allocebus4;
-  Phaner4;
-  Cheirogaleus4;
-  Microcebus5;
-  Mirza5;
-  Allocebus5;
-  Phaner5;
-  Cheirogaleus5;
-  Microcebus6;
-  Mirza6;
-  Allocebus6;
-  Phaner6;
-  Cheirogaleus6;
-  Microcebus7;
-  Mirza7;
-  Allocebus7;
-  Phaner7;
-  Cheirogaleus7;
-  Microcebus8;
-  Mirza8;
-  Allocebus8;
-  Phaner8;
-  Cheirogaleus8;
-  Microcebus9;
-  Mirza9;
-  Allocebus9;
-  Phaner9;
-  Cheirogaleus9;
-  Microcebus10;
-  Mirza10;
-  Allocebus10;
-  Phaner10;
+  ArrowRight,
+  Brain,
+  Cloud,
+  Shield,
+  Zap,
+  Database,
+  Server,
+  Lock,
+  BarChart3,
+  Users,
+  Globe,
+  Code,
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Clock,
+  Award,
+  Mail,
+  Calendar,
+  Settings,
+  Eye,
+  MessageSquare,
+  Palette,
+  Bot,
+  Cpu,
+  Link2,
+  Wifi,
+  HardDrive,
+  Monitor,
+  Activity,
+  Terminal,
+  CreditCard,
+  Smartphone,
+  FileText,
+  Search,
+  Filter,
+  Download,
+  Upload,
+  Send,
+  Phone,
+  DollarSign,
+  Target,
+  Lightbulb,
+  Rocket,
+  Layers,
+  Workflow,
+  GitBranch,
+  Database2,
+  Network,
+  Headphones,
+  Video,
+  Image,
+  File,
+  Folder,
+  Bookmark,
+  Tag,
+  Bell,
+  AlertTriangle,
+  CheckCircle2,
+  XCircle,
+  Info,
+  HelpCircle,
+  ExternalLink,
+  ChevronRight,
+  Play,
+  Pause,
+  Stop,
+  RefreshCw,
+  RotateCcw,
+  Maximize,
+  Minimize,
+  Plus,
+  Minus,
+  Edit,
+  Trash2,
+  Copy,
+  Share,
+  Heart,
+  ThumbsUp,
+  MessageCircle,
+  User,
+  UserPlus,
+  UserCheck,
+  UserX,
+  Users2,
+  UserCog,
+  ShieldCheck,
+  Key,
+  Fingerprint,
+  LockKeyhole,
+  EyeOff,
+  AlertCircle,
+  CheckSquare,
+  Square,
+  Radio,
+  ToggleLeft,
+  ToggleRight,
+  Sliders,
+  SlidersHorizontal,
+  ToggleLeft2,
+  ToggleRight2,
+  Volume2,
+  VolumeX,
+  Mic,
+  MicOff,
+  Camera,
+  CameraOff,
+  MapPin,
+  Navigation,
+  Compass,
+  Map,
+  Globe2,
+  WifiOff,
+  Signal,
+  SignalHigh,
+  SignalLow,
+  SignalZero,
+  Battery,
+  BatteryLow,
+  BatteryMedium,
+  BatteryHigh,
+  BatteryFull,
+  Power,
+  PowerOff,
+  Zap2,
+  Flashlight,
+  FlashlightOff,
+  Sun,
+  Moon,
+  Sunrise,
+  Sunset,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
+  Wind,
+  Thermometer,
+  Droplets,
+  Umbrella,
+  TreePine,
+  Leaf,
+  Flower,
+  Bug,
+  Fish,
+  Bird,
+  Cat,
+  Dog,
+  Heart2,
+  Smile,
+  Frown,
+  Meh,
+  Laugh,
+  Angry,
+  Surprised,
+  Confused,
+  Kiss,
+  Wink,
+  Tongue,
+  ThumbsDown,
+  Clap,
+  PartyPopper,
+  Gift,
+  Cake,
+  Coffee,
+  Pizza,
+  Apple,
+  Banana,
+  Carrot,
+  Cherry,
+  Grape,
+  Lemon,
+  Orange,
+  Peach,
+  Pear,
+  Pineapple,
+  Strawberry,
+  Watermelon,
+  Egg,
+  Milk,
+  Bread,
+  Cheese,
+  Fish2,
+  Meat,
+  Cookie,
+  IceCream,
+  Lollipop,
+  Candy,
+  Chocolate,
+  Donut,
+  Popcorn,
+  HotDog,
+  Hamburger,
+  Sandwich,
+  Taco,
+  Burrito,
+  Salad,
+  Soup,
+  Noodles,
+  Rice,
+  Spaghetti,
+  Lasagna,
+  Steak,
+  Chicken,
+  Turkey,
+  Bacon,
+  Sausage,
+  Shrimp,
+  Lobster,
+  Crab,
+  Octopus,
+  Squid,
+  Snail,
+  Butterfly,
+  Bee,
+  Ant,
+  Spider,
+  Scorpion,
+  Snake,
+  Lizard,
+  Frog,
+  Turtle,
+  Whale,
+  Dolphin,
+  Shark,
+  Penguin,
+  Owl,
+  Eagle,
+  Hawk,
+  Parrot,
+  Peacock,
+  Flamingo,
+  Swan,
+  Duck,
+  Goose,
+  Chicken2,
+  Rooster,
+  Turkey2,
+  Rabbit,
+  Hamster,
+  Mouse,
+  Rat,
+  Squirrel,
+  Chipmunk,
+  Beaver,
+  Raccoon,
+  Fox,
+  Wolf,
+  Bear,
+  Lion,
+  Tiger,
+  Leopard,
+  Cheetah,
+  Jaguar,
+  Panther,
+  Lynx,
+  Cougar,
+  Elephant,
+  Giraffe,
+  Zebra,
+  Horse,
+  Cow,
+  Pig,
+  Sheep,
+  Goat,
+  Deer,
+  Moose,
+  Elk,
+  Bison,
+  Buffalo,
+  Camel,
+  Llama,
+  Alpaca,
+  Kangaroo,
+  Koala,
+  Panda,
+  Sloth,
+  Monkey,
+  Gorilla,
+  Chimpanzee,
+  Orangutan,
+  Baboon,
+  Lemur,
+  Hedgehog,
+  Porcupine,
+  Armadillo,
+  Platypus,
+  Opossum,
+  Skunk,
+  Badger,
+  Wolverine,
+  Otter,
+  Seal,
+  Walrus,
+  PolarBear,
+  GrizzlyBear,
+  BlackBear,
+  Panda2,
+  RedPanda,
+  Meerkat,
+  Mongoose,
+  Ferret,
+  Weasel,
+  Stoat,
+  Ermine,
+  Mink,
+  Marten,
+  Fisher,
+  Wolverine2,
+  Badger2,
+  HoneyBadger,
+  Civet,
+  Genet,
+  Binturong,
+  Kinkajou,
+  Coati,
+  Raccoon2,
+  Ringtail,
+  Cacomistle,
+  Olingo,
+  Kinkajou2,
+  Potto,
+  Loris,
+  Galago,
+  Tarsier,
+  AyeAye,
+  Indri,
+  Sifaka,
+  Lemur2,
+  RingTailedLemur,
+  MouseLemur,
+  DwarfLemur,
+  SportiveLemur,
+  WoollyLemur,
+  RuffedLemur,
+  BrownLemur,
+  BlackLemur,
+  RedRuffedLemur,
+  WhiteRuffedLemur,
+  BlueEyedBlackLemur,
+  MongooseLemur,
+  CrownedLemur,
+  SanfordLemur,
+  RedBellyLemur,
+  GrayMouseLemur,
+  GoldenBrownMouseLemur,
+  PygmyMouseLemur,
+  CoquerelSifaka,
+  VerreauxSifaka,
+  DiademedSifaka,
+  SilkySifaka,
+  PerrierSifaka,
+  MilneEdwardsSifaka,
+  DeckenSifaka,
+  CrownedSifaka,
+  TattersallSifaka,
+  VonDerDeckenSifaka,
+  Propithecus,
+  IndriIndri,
+  Avahi,
+  Lepilemur,
+  Hapalemur,
+  Prolemur,
+  Varecia,
+  Eulemur,
+  Lemur,
+  Microcebus,
+  Mirza,
+  Allocebus,
+  Phaner,
+  Cheirogaleus,
+  Microcebus2,
+  Mirza2,
+  Allocebus2,
+  Phaner2,
+  Cheirogaleus2,
+  Microcebus3,
+  Mirza3,
+  Allocebus3,
+  Phaner3,
+  Cheirogaleus3,
+  Microcebus4,
+  Mirza4,
+  Allocebus4,
+  Phaner4,
+  Cheirogaleus4,
+  Microcebus5,
+  Mirza5,
+  Allocebus5,
+  Phaner5,
+  Cheirogaleus5,
+  Microcebus6,
+  Mirza6,
+  Allocebus6,
+  Phaner6,
+  Cheirogaleus6,
+  Microcebus7,
+  Mirza7,
+  Allocebus7,
+  Phaner7,
+  Cheirogaleus7,
+  Microcebus8,
+  Mirza8,
+  Allocebus8,
+  Phaner8,
+  Cheirogaleus8,
+  Microcebus9,
+  Mirza9,
+  Allocebus9,
+  Phaner9,
+  Cheirogaleus9,
+  Microcebus10,
+  Mirza10,
+  Allocebus10,
+  Phaner10,
   Cheirogaleus10} from 'lucide-react',
 import PageTransition from '../src/components/PageTransition',
 export default function InnovativeMicroSaaS() {
@@ -421,423 +421,375 @@ export default function InnovativeMicroSaaS() {
   const description = 'Cutting-edge micro SaaS solutions, AI-powered tools, and innovative IT services for modern businesses.',
   const microSaaSServices = [
     {
-      id: 'ai-email-responder';
-      title: 'AI-Powered Email Responder';
-      description: 'Intelligent email automation that categorizes, prioritizes, and responds to emails with 95% accuracy';
-      icon: Mai l;
-      category: 'AI Automation';
+      id: 'ai-email-responder',
+      title: 'AI-Powered Email Responder',
+      description: 'Intelligent email automation that categorizes, prioritizes, and responds to emails with 95% accuracy',
+      icon: Mai l,
+      category: 'AI Automation',
       features: [
-        'Smart email categorization and prioritization';
-        'Automated response generation with human-like quality';
-        'Sentiment analysis and urgency detection';
-        'Integration with all major email platforms';
-        'Custom response templates and workflows';
-        'Real-time analytics and performance metrics'];
+        'Smart email categorization and prioritizationAutomated response generation with human-like quality',
+        'Sentiment analysis and urgency detectionIntegration with all major email platforms',
+        'Custom response templates and workflowsReal-time analytics and performance metrics'],
       pricing: {
-        starter: '$29/month';
-        professional: '$79/month';
-        enterprise: '$199/month'};
-      delivery: '2-3 weeks';
-      benefits: 'Reduce email response time by 80% and improve customer satisfaction by 60%';
-      roi: 'Expected ROI: 30 0-50o0% within 3 months';
-      marketPrice: '$30-50/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$29/month',
+        professional: '$79/month',
+        enterprise: '$199/month'},
+      delivery: '2-3 weeks',
+      benefits: 'Reduce email response time by 80% and improve customer satisfaction by 60%',
+      roi: 'Expected ROI: 30 0-50o0% within 3 months',
+      marketPrice: '$30-50/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'mobile-survey-tool';
-      title: 'Mobile-First Survey Platform';
-      description: 'Advanced survey creation tool with adaptive questioning and real-time analytics';
-      icon: MessageSquar e;
-      category: 'Data Collection';
+      id: 'mobile-survey-tool',
+      title: 'Mobile-First Survey Platform',
+      description: 'Advanced survey creation tool with adaptive questioning and real-time analytics',
+      icon: MessageSquar e,
+      category: 'Data Collection',
       features: [
-        'Adaptive questioning based on responses';
-        'Mobile-optimized interface with offline capability';
-        'Real-time analytics and data visualization';
-        'Advanced branching logic and conditional questions';
-        'Multi-language support and accessibility features';
-        'Integration with CRM and marketing tools'];
+        'Adaptive questioning based on responsesMobile-optimized interface with offline capability',
+        'Real-time analytics and data visualizationAdvanced branching logic and conditional questions',
+        'Multi-language support and accessibility featuresIntegration with CRM and marketing tools'],
       pricing: {
-        starter: '$19/month';
-        professional: '$49/month';
-        enterprise: '$129/month'};
-      delivery: '3-4 weeks';
-      benefits: 'Increase survey completion rates by 150% and improve data quality by 70%';
-      roi: 'Expected ROI: 25 0-40o0% within 4 months';
-      marketPrice: '$20-40/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$19/month',
+        professional: '$49/month',
+        enterprise: '$129/month'},
+      delivery: '3-4 weeks',
+      benefits: 'Increase survey completion rates by 150% and improve data quality by 70%',
+      roi: 'Expected ROI: 25 0-40o0% within 4 months',
+      marketPrice: '$20-40/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'productivity-planner';
-      title: 'AI Productivity Planner';
-      description: 'Industry-specific productivity platform with intelligent task management and goal tracking';
-      icon: Targe t;
-      category: 'Productivity';
+      id: 'productivity-planner',
+      title: 'AI Productivity Planner',
+      description: 'Industry-specific productivity platform with intelligent task management and goal tracking',
+      icon: Targe t,
+      category: 'Productivity',
       features: [
-        'AI-powered task prioritization and scheduling';
-        'Industry-specific templates and workflows';
-        'Goal tracking with predictive analytics';
-        'Team collaboration and project management';
-        'Time tracking and productivity insights';
-        'Integration with popular productivity tools'];
+        'AI-powered task prioritization and schedulingIndustry-specific templates and workflows',
+        'Goal tracking with predictive analyticsTeam collaboration and project management',
+        'Time tracking and productivity insightsIntegration with popular productivity tools'],
       pricing: {
-        starter: '$24/month';
-        professional: '$59/month';
-        enterprise: '$149/month'};
-      delivery: '4-5 weeks';
-      benefits: 'Increase productivity by 20o0% and reduce project completion time by 45%';
-      roi: 'Expected ROI: 35 0-550% within 5 months';
-      marketPrice: '$25-45/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$24/month',
+        professional: '$59/month',
+        enterprise: '$149/month'},
+      delivery: '4-5 weeks',
+      benefits: 'Increase productivity by 20o0% and reduce project completion time by 45%',
+      roi: 'Expected ROI: 35 0-550% within 5 months',
+      marketPrice: '$25-45/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'event-management';
-      title: 'Smart Event Management Suite';
-      description: 'Comprehensive event planning platform with AI-powered optimization and guest management';
-      icon: Calenda r;
-      category: 'Event Management';
+      id: 'event-management',
+      title: 'Smart Event Management Suite',
+      description: 'Comprehensive event planning platform with AI-powered optimization and guest management',
+      icon: Calenda r,
+      category: 'Event Management',
       features: [
-        'AI-powered event optimization and recommendations';
-        'Automated guest management and RSVP tracking';
-        'Dynamic pricing and ticket sales management';
-        'Real-time event analytics and feedback collection';
-        'Integration with social media and marketing tools';
-        'Mobile app for attendees and organizers'];
+        'AI-powered event optimization and recommendationsAutomated guest management and RSVP tracking',
+        'Dynamic pricing and ticket sales managementReal-time event analytics and feedback collection',
+        'Integration with social media and marketing toolsMobile app for attendees and organizers'],
       pricing: {
-        starter: '$49/month';
-        professional: '$129/month';
-        enterprise: '$299/month'};
-      delivery: '6-8 weeks';
-      benefits: 'Increase event attendance by 120% and reduce planning time by 65%';
-      roi: 'Expected ROI: 40 0-60o0% within 6 months';
-      marketPrice: '$50-10o0/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$49/month',
+        professional: '$129/month',
+        enterprise: '$299/month'},
+      delivery: '6-8 weeks',
+      benefits: 'Increase event attendance by 120% and reduce planning time by 65%',
+      roi: 'Expected ROI: 40 0-60o0% within 6 months',
+      marketPrice: '$50-10o0/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'content-creation-ai';
-      title: 'AI Content Creation Studio';
-      description: 'Multi-format content generation platform with brand consistency and optimization';
-      icon: FileTex t;
-      category: 'Content Marketing';
+      id: 'content-creation-ai',
+      title: 'AI Content Creation Studio',
+      description: 'Multi-format content generation platform with brand consistency and optimization',
+      icon: FileTex t,
+      category: 'Content Marketing',
       features: [
-        'Multi-format content generation (text, images, videos)';
-        'Brand voice consistency across all content';
-        'SEO optimization and keyword integration';
-        'Content calendar and scheduling automation';
-        'Performance analytics and optimization suggestions';
-        'Team collaboration and approval workflows'];
+        'Multi-format content generation (text, images, videos)Brand voice consistency across all content',
+        'SEO optimization and keyword integrationContent calendar and scheduling automation',
+        'Performance analytics and optimization suggestionsTeam collaboration and approval workflows'],
       pricing: {
-        starter: '$39/month';
-        professional: '$99/month';
-        enterprise: '$249/month'};
-      delivery: '5-7 weeks';
-      benefits: 'Reduce content creation time by 75% and increase engagement by 180%';
-      roi: 'Expected ROI: 30 0-50o0% within 4 months';
-      marketPrice: '$40-80/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$39/month',
+        professional: '$99/month',
+        enterprise: '$249/month'},
+      delivery: '5-7 weeks',
+      benefits: 'Reduce content creation time by 75% and increase engagement by 180%',
+      roi: 'Expected ROI: 30 0-50o0% within 4 months',
+      marketPrice: '$40-80/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'customer-support-platform';
-      title: 'AI Customer Support Suite';
-      description: 'Intelligent helpdesk platform with automated ticket management and chatbot integration';
-      icon: Headphone s;
-      category: 'Customer Support';
+      id: 'customer-support-platform',
+      title: 'AI Customer Support Suite',
+      description: 'Intelligent helpdesk platform with automated ticket management and chatbot integration',
+      icon: Headphone s,
+      category: 'Customer Support',
       features: [
-        'AI-powered ticket categorization and routing';
-        'Intelligent chatbot with natural language processing';
-        'Knowledge base automation and maintenance';
-        'Multi-channel support (email, chat, phone, social)';
-        'Customer satisfaction tracking and analytics';
-        'Integration with CRM and business tools'];
+        'AI-powered ticket categorization and routingIntelligent chatbot with natural language processing',
+        'Knowledge base automation and maintenanceMulti-channel support (email, chat, phone, social)',
+        'Customer satisfaction tracking and analyticsIntegration with CRM and business tools'],
       pricing: {
-        starter: '$49/month';
-        professional: '$129/month';
-        enterprise: '$299/month'};
-      delivery: '4-6 weeks';
-      benefits: 'Reduce response time by 85% and increase customer satisfaction by 90%';
-      roi: 'Expected ROI: 25 0-40o0% within 3 months';
-      marketPrice: '$50-10o0/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$49/month',
+        professional: '$129/month',
+        enterprise: '$299/month'},
+      delivery: '4-6 weeks',
+      benefits: 'Reduce response time by 85% and increase customer satisfaction by 90%',
+      roi: 'Expected ROI: 25 0-40o0% within 3 months',
+      marketPrice: '$50-10o0/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'affiliate-tracking';
-      title: 'Affiliate Marketing Tracker';
-      description: 'Advanced affiliate management platform with automated tracking and commission calculations';
-      icon: Link 2;
-      category: 'Marketing';
+      id: 'affiliate-tracking',
+      title: 'Affiliate Marketing Tracker',
+      description: 'Advanced affiliate management platform with automated tracking and commission calculations',
+      icon: Link 2,
+      category: 'Marketing',
       features: [
-        'Automated affiliate link generation and tracking';
-        'Real-time commission calculations and payouts';
-        'Performance analytics and conversion tracking';
-        'Fraud detection and prevention systems';
-        'Multi-tier affiliate program management';
-        'Integration with e-commerce and payment platforms'];
+        'Automated affiliate link generation and trackingReal-time commission calculations and payouts',
+        'Performance analytics and conversion trackingFraud detection and prevention systems',
+        'Multi-tier affiliate program managementIntegration with e-commerce and payment platforms'],
       pricing: {
-        starter: '$29/month';
-        professional: '$79/month';
-        enterprise: '$199/month'};
-      delivery: '3-5 weeks';
-      benefits: 'Increase affiliate conversions by 150% and reduce fraud by 95%';
-      roi: 'Expected ROI: 40 0-70o0% within 4 months';
-      marketPrice: '$30-60/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$29/month',
+        professional: '$79/month',
+        enterprise: '$199/month'},
+      delivery: '3-5 weeks',
+      benefits: 'Increase affiliate conversions by 150% and reduce fraud by 95%',
+      roi: 'Expected ROI: 40 0-70o0% within 4 months',
+      marketPrice: '$30-60/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'website-analytics';
-      title: 'Small Business Analytics Dashboard';
-      description: 'User-friendly analytics platform designed specifically for small business owners';
-      icon: BarChart 3;
-      category: 'Analytics';
+      id: 'website-analytics',
+      title: 'Small Business Analytics Dashboard',
+      description: 'User-friendly analytics platform designed specifically for small business owners',
+      icon: BarChart 3,
+      category: 'Analytics',
       features: [
-        'Simplified analytics without technical complexity';
-        'Actionable insights and recommendations';
-        'Custom dashboard creation and sharing';
-        'Automated reporting and alerts';
-        'Integration with Google Analytics and social media';
-        'Mobile app for on-the-go insights'];
+        'Simplified analytics without technical complexityActionable insights and recommendations',
+        'Custom dashboard creation and sharingAutomated reporting and alerts',
+        'Integration with Google Analytics and social mediaMobile app for on-the-go insights'],
       pricing: {
-        starter: '$19/month';
-        professional: '$49/month';
-        enterprise: '$99/month'};
-      delivery: '2-4 weeks';
-      benefits: 'Improve decision-making speed by 30o0% and increase ROI by 20o0%';
-      roi: 'Expected ROI: 25 0-40o0% within 3 months';
-      marketPrice: '$20-40/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$19/month',
+        professional: '$49/month',
+        enterprise: '$99/month'},
+      delivery: '2-4 weeks',
+      benefits: 'Improve decision-making speed by 30o0% and increase ROI by 20o0%',
+      roi: 'Expected ROI: 25 0-40o0% within 3 months',
+      marketPrice: '$20-40/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'it-helpdesk';
-      title: 'IT Helpdesk Management System';
-      description: 'Comprehensive IT service management platform for managed service providers';
-      icon: Setting s;
-      category: 'IT Management';
+      id: 'it-helpdesk',
+      title: 'IT Helpdesk Management System',
+      description: 'Comprehensive IT service management platform for managed service providers',
+      icon: Setting s,
+      category: 'IT Management',
       features: [
-        'Automated ticket routing and prioritization';
-        'SLA tracking and compliance monitoring';
-        'Client portal with self-service options';
-        'Asset management and inventory tracking';
-        'Remote desktop and support tools integration';
-        'Comprehensive reporting and analytics'];
+        'Automated ticket routing and prioritizationSLA tracking and compliance monitoring',
+        'Client portal with self-service optionsAsset management and inventory tracking',
+        'Remote desktop and support tools integrationComprehensive reporting and analytics'],
       pricing: {
-        starter: '$49/month';
-        professional: '$129/month';
-        enterprise: '$299/month'};
-      delivery: '5-7 weeks';
-      benefits: 'Reduce ticket resolution time by 70% and improve client satisfaction by 85%';
-      roi: 'Expected ROI: 30 0-50o0% within 6 months';
-      marketPrice: '$50-10o0/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$49/month',
+        professional: '$129/month',
+        enterprise: '$299/month'},
+      delivery: '5-7 weeks',
+      benefits: 'Reduce ticket resolution time by 70% and improve client satisfaction by 85%',
+      roi: 'Expected ROI: 30 0-50o0% within 6 months',
+      marketPrice: '$50-10o0/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'ecommerce-returns';
-      title: 'E-Commerce Return Management';
-      description: 'Automated return processing platform with intelligent fraud detection';
-      icon: RotateCc w;
-      category: 'E-Commerce';
+      id: 'ecommerce-returns',
+      title: 'E-Commerce Return Management',
+      description: 'Automated return processing platform with intelligent fraud detection',
+      icon: RotateCc w,
+      category: 'E-Commerce',
       features: [
-        'Automated return request processing';
-        'Intelligent fraud detection and prevention';
-        'Return label generation and tracking';
-        'Inventory management and restocking automation';
-        'Customer communication and status updates';
-        'Analytics and return pattern analysis'];
+        'Automated return request processingIntelligent fraud detection and prevention',
+        'Return label generation and trackingInventory management and restocking automation',
+        'Customer communication and status updatesAnalytics and return pattern analysis'],
       pricing: {
-        starter: '$29/month';
-        professional: '$79/month';
-        enterprise: '$199/month'};
-      delivery: '3-5 weeks';
-      benefits: 'Reduce return processing time by 80% and decrease fraud by 90%';
-      roi: 'Expected ROI: 35 0-550% within 4 months';
-      marketPrice: '$30-60/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$29/month',
+        professional: '$79/month',
+        enterprise: '$199/month'},
+      delivery: '3-5 weeks',
+      benefits: 'Reduce return processing time by 80% and decrease fraud by 90%',
+      roi: 'Expected ROI: 35 0-550% within 4 months',
+      marketPrice: '$30-60/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
     }
   ],
   const aiServices = [
     {
-      id: 'ai-chatbot-platform';
-      title: 'Conversational AI Platform';
-      description: 'Advanced chatbot development platform with natural language understanding';
-      icon: Bo t;
-      category: 'AI Development';
+      id: 'ai-chatbot-platform',
+      title: 'Conversational AI Platform',
+      description: 'Advanced chatbot development platform with natural language understanding',
+      icon: Bo t,
+      category: 'AI Development',
       features: [
-        'Natural language processing and understanding';
-        'Multi-channel deployment (web, mobile, social)';
-        'Custom training with your business data';
-        'Sentiment analysis and emotion detection';
-        'Integration with CRM and business systems';
-        'Analytics and conversation optimization'];
+        'Natural language processing and understandingMulti-channel deployment (web, mobile, social)',
+        'Custom training with your business dataSentiment analysis and emotion detection',
+        'Integration with CRM and business systemsAnalytics and conversation optimization'],
       pricing: {
-        starter: '$99/month';
-        professional: '$299/month';
-        enterprise: '$799/month'};
-      delivery: '4-6 weeks';
-      benefits: 'Reduce customer service costs by 60% and improve response time by 95%';
-      roi: 'Expected ROI: 40 0-80o0% within 6 months';
-      marketPrice: '$10o0-30o0/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$99/month',
+        professional: '$299/month',
+        enterprise: '$799/month'},
+      delivery: '4-6 weeks',
+      benefits: 'Reduce customer service costs by 60% and improve response time by 95%',
+      roi: 'Expected ROI: 40 0-80o0% within 6 months',
+      marketPrice: '$10o0-30o0/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'ai-data-analytics';
-      title: 'AI-Powered Data Analytics';
-      description: 'Intelligent data analysis platform with predictive modeling and insights';
-      icon: Brai n;
-      category: 'AI Analytics';
+      id: 'ai-data-analytics',
+      title: 'AI-Powered Data Analytics',
+      description: 'Intelligent data analysis platform with predictive modeling and insights',
+      icon: Brai n,
+      category: 'AI Analytics',
       features: [
-        'Automated data analysis and pattern recognition';
-        'Predictive modeling and forecasting';
-        'Natural language query interface';
-        'Real-time insights and recommendations';
-        'Custom dashboard creation';
-        'Integration with existing data sources'];
+        'Automated data analysis and pattern recognitionPredictive modeling and forecasting',
+        'Natural language query interfaceReal-time insights and recommendations',
+        'Custom dashboard creationIntegration with existing data sources'],
       pricing: {
-        starter: '$199/month';
-        professional: '$599/month';
-        enterprise: '$1,499/month'};
-      delivery: '6-8 weeks';
-      benefits: 'Accelerate data insights by 50o0% and improve decision accuracy by 80%';
-      roi: 'Expected ROI: 60 0-10o00% within 8 months';
-      marketPrice: '$20o0-50o0/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$199/month',
+        professional: '$599/month',
+        enterprise: '$1,499/month'},
+      delivery: '6-8 weeks',
+      benefits: 'Accelerate data insights by 50o0% and improve decision accuracy by 80%',
+      roi: 'Expected ROI: 60 0-10o00% within 8 months',
+      marketPrice: '$20o0-50o0/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'ai-process-automation';
-      title: 'Intelligent Process Automation';
-      description: 'AI-driven workflow automation with cognitive decision making';
-      icon: Workflo w;
-      category: 'Process Automation';
+      id: 'ai-process-automation',
+      title: 'Intelligent Process Automation',
+      description: 'AI-driven workflow automation with cognitive decision making',
+      icon: Workflo w,
+      category: 'Process Automation',
       features: [
-        'Cognitive process automation with decision making';
-        'Document processing and data extraction';
-        'Workflow optimization and learning';
-        'Exception handling and escalation';
-        'Integration with enterprise systems';
-        'Performance monitoring and optimization'];
+        'Cognitive process automation with decision makingDocument processing and data extraction',
+        'Workflow optimization and learningException handling and escalation',
+        'Integration with enterprise systemsPerformance monitoring and optimization'],
       pricing: {
-        starter: '$299/month';
-        professional: '$899/month';
-        enterprise: '$2,499/month'};
-      delivery: '8-12 weeks';
-      benefits: 'Reduce manual work by 90% and improve process efficiency by 30o0%';
-      roi: 'Expected ROI: 50 0-90o0% within 10 months';
-      marketPrice: '$30o0-80o0/month';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$299/month',
+        professional: '$899/month',
+        enterprise: '$2,499/month'},
+      delivery: '8-12 weeks',
+      benefits: 'Reduce manual work by 90% and improve process efficiency by 30o0%',
+      roi: 'Expected ROI: 50 0-90o0% within 10 months',
+      marketPrice: '$30o0-80o0/month',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
     }
   ],
   const itServices = [
     {
-      id: 'cloud-migration';
-      title: 'Cloud Migration & Optimization';
-      description: 'Comprehensive cloud migration services with cost optimization';
-      icon: Clou d;
-      category: 'Cloud Services';
+      id: 'cloud-migration',
+      title: 'Cloud Migration & Optimization',
+      description: 'Comprehensive cloud migration services with cost optimization',
+      icon: Clou d,
+      category: 'Cloud Services',
       features: [
-        'Automated cloud migration planning and execution';
-        'Cost optimization and resource management';
-        'Security and compliance implementation';
-        'Performance monitoring and optimization';
-        'Disaster recovery and backup solutions';
-        '24/7 cloud infrastructure management'];
+        'Automated cloud migration planning and executionCost optimization and resource management',
+        'Security and compliance implementationPerformance monitoring and optimization',
+        'Disaster recovery and backup solutions24/7 cloud infrastructure management'],
       pricing: {
-        starter: '$2,999/project';
-        professional: '$9,999/project';
-        enterprise: '$24,999/project'};
-      delivery: '4-8 weeks';
-      benefits: 'Reduce infrastructure costs by 40% and improve scalability by 20o0%';
-      roi: 'Expected ROI: 30 0-60o0% within 12 months';
-      marketPrice: '$3,0o00-25,0o00/project';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$2,999/project',
+        professional: '$9,999/project',
+        enterprise: '$24,999/project'},
+      delivery: '4-8 weeks',
+      benefits: 'Reduce infrastructure costs by 40% and improve scalability by 20o0%',
+      roi: 'Expected ROI: 30 0-60o0% within 12 months',
+      marketPrice: '$3,0o00-25,0o00/project',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'cybersecurity-audit';
-      title: 'Cybersecurity Assessment & Implementation';
-      description: 'Comprehensive security audit and implementation services';
-      icon: Shiel d;
-      category: 'Cybersecurity';
+      id: 'cybersecurity-audit',
+      title: 'Cybersecurity Assessment & Implementation',
+      description: 'Comprehensive security audit and implementation services',
+      icon: Shiel d,
+      category: 'Cybersecurity',
       features: [
-        'Comprehensive security vulnerability assessment';
-        'Penetration testing and ethical hacking';
-        'Security framework implementation (ISO 270o01, NIST)';
-        'Incident response planning and training';
-        'Security monitoring and threat detection';
-        'Compliance audit and certification support'];
+        'Comprehensive security vulnerability assessmentPenetration testing and ethical hacking',
+        'Security framework implementation (ISO 270o01, NIST)Incident response planning and training',
+        'Security monitoring and threat detectionCompliance audit and certification support'],
       pricing: {
-        starter: '$4,999/assessment';
-        professional: '$14,999/implementation';
-        enterprise: '$39,999/comprehensive'};
-      delivery: '6-12 weeks';
-      benefits: 'Reduce security risks by 95% and ensure compliance with industry standards';
-      roi: 'Expected ROI: 20 0-40o0% within 18 months';
-      marketPrice: '$5,0o00-40,0o00/project';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$4,999/assessment',
+        professional: '$14,999/implementation',
+        enterprise: '$39,999/comprehensive'},
+      delivery: '6-12 weeks',
+      benefits: 'Reduce security risks by 95% and ensure compliance with industry standards',
+      roi: 'Expected ROI: 20 0-40o0% within 18 months',
+      marketPrice: '$5,0o00-40,0o00/project',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
-    };
+    },
     {
-      id: 'devops-transformation';
-      title: 'DevOps Transformation Services';
-      description: 'Complete DevOps implementation with CI/CD pipeline optimization';
-      icon: GitBranc h;
-      category: 'DevOps';
+      id: 'devops-transformation',
+      title: 'DevOps Transformation Services',
+      description: 'Complete DevOps implementation with CI/CD pipeline optimization',
+      icon: GitBranc h,
+      category: 'DevOps',
       features: [
-        'CI/CD pipeline design and implementation';
-        'Infrastructure as Code (IaC) setup';
-        'Container orchestration and microservices';
-        'Monitoring and observability implementation';
-        'Team training and best practices';
-        'Performance optimization and scaling'];
+        'CI/CD pipeline design and implementationInfrastructure as Code (IaC) setup',
+        'Container orchestration and microservicesMonitoring and observability implementation',
+        'Team training and best practicesPerformance optimization and scaling'],
       pricing: {
-        starter: '$7,999/transformation';
-        professional: '$19,999/comprehensive';
-        enterprise: '$49,999/enterprise'};
-      delivery: '8-16 weeks';
-      benefits: 'Reduce deployment time by 80% and improve system reliability by 90%';
-      roi: 'Expected ROI: 40 0-80o0% within 15 months';
-      marketPrice: '$8,0o00-50,0o00/project';
-      link: 'https://ziontechgroup.com/contact';
+        starter: '$7,999/transformation',
+        professional: '$19,999/comprehensive',
+        enterprise: '$49,999/enterprise'},
+      delivery: '8-16 weeks',
+      benefits: 'Reduce deployment time by 80% and improve system reliability by 90%',
+      roi: 'Expected ROI: 40 0-80o0% within 15 months',
+      marketPrice: '$8,0o00-50,0o00/project',
+      link: 'https://ziontechgroup.com/contact',
       contact: {
-        phone: '+1 30o2 464 0950';
+        phone: '+1 30o2 464 0950',
         email: 'kleber@ziontechgroup.com'}
     }
   ],

@@ -1,75 +1,75 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
-  Mail;
-  Phone;
-  MapPin;
-  Send;
-  CheckCircle;
-  AlertCircle;
-  User;
-  Building;
-  MessageSquare;
-  Globe;
-  Clock;
-  Star;
+  Mail,
+  Phone,
+  MapPin,
+  Send,
+  CheckCircle,
+  AlertCircle,
+  User,
+  Building,
+  MessageSquare,
+  Globe,
+  Clock,
+  Star,
 } from 'lucide-react',
 const EnhancedContactForm: React.FC = () => {
   const [formData, setFormData] = useState({
-    firstName: '';
-    lastName: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
-    message: '';
-    budget: '';
-    timeline: '';
-    howDidYouHear: '';
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
+    message: '',
+    budget: '',
+    timeline: '',
+    howDidYouHear: ''
   }),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isSubmitted, setIsSubmitted] = useState(false),
   const [errors, setErrors] = useState<Record<string string>>({}),
   const services = [
     {
-      value: 'ai-business-intelligence';
-      label: 'AI Business Intelligence';
-      icon: '🤖';
-    };
+      value: 'ai-business-intelligence',
+      label: 'AI Business Intelligence',
+      icon: '🤖'
+    },
     {
-      value: 'quantum-cybersecurity';
-      label: 'Quantum Cybersecurity';
-      icon: '🔒';
-    };
+      value: 'quantum-cybersecurity',
+      label: 'Quantum Cybersecurity',
+      icon: '🔒'
+    },
     {
-      value: 'edge-computing';
-      label: 'Edge Computing Orchestration';
-      icon: '⚡';
-    };
+      value: 'edge-computing',
+      label: 'Edge Computing Orchestration',
+      icon: '⚡'
+    },
     {
-      value: 'space-technology';
-      label: 'Space Technology Innovation';
-      icon: '🚀';
-    };
+      value: 'space-technology',
+      label: 'Space Technology Innovation',
+      icon: '🚀'
+    },
     {
-      value: 'neural-interfaces';
-      label: 'Neural Interface Development';
-      icon: '🧠';
-    };
-    { value: 'custom-solution', label: 'Custom Solution', icon: '⚙️' };
+      value: 'neural-interfaces',
+      label: 'Neural Interface Development',
+      icon: '🧠'
+    },
+    { value: 'custom-solution', label: 'Custom Solution', icon: '⚙️' },
   ],
   const budgets = [
-    { value: 'under-10k', label: 'Under $10,000' };
-    { value: '10k-50k', label: '$10,000 - $50,000' };
-    { value: '50k-100k', label: '$50,000 - $100,000' };
-    { value: '100k-500k', label: '$100,000 - $500,000' };
-    { value: 'over-500k', label: 'Over $500,000' };
+    { value: 'under-10k', label: 'Under $10,000' },
+    { value: '10k-50k', label: '$10,000 - $50,000' },
+    { value: '50k-100k', label: '$50,000 - $100,000' },
+    { value: '100k-500k', label: '$100,000 - $500,000' },
+    { value: 'over-500k', label: 'Over $500,000' },
   ],
   const timelines = [
-    { value: 'immediate', label: 'Immediate (1-2 months)' };
-    { value: 'quarter', label: 'This Quarter (3-6 months)' };
-    { value: 'year', label: 'This Year (6-12 months)' };
-    { value: 'flexible', label: 'Flexible Timeline' };
+    { value: 'immediate', label: 'Immediate (1-2 months)' },
+    { value: 'quarter', label: 'This Quarter (3-6 months)' },
+    { value: 'year', label: 'This Year (6-12 months)' },
+    { value: 'flexible', label: 'Flexible Timeline' },
   ],
   const handleInputChange = (
     e: React.ChangeEvent<,
@@ -79,9 +79,9 @@ const EnhancedContactForm: React.FC = () => {
     // Clear error when user starts typing,
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }))}
-  };
+  },
   const validateForm = () => {
-    const newErrors: Record<string string> = {};
+    const newErrors: Record<string string> = {},
     if (!formData.firstName.trim()),
       newErrors.firstName = 'First name is required',
     if (!formData.lastName.trim()) newErrors.lastName = 'Last name is required',
@@ -92,7 +92,7 @@ const EnhancedContactForm: React.FC = () => {
       newErrors.company = 'Company name is required',
     if (!formData.message.trim()) newErrors.message = 'Message is required',
     setErrors(newErrors),
-    return Object.keys(newErrors).length === 0};
+    return Object.keys(newErrors).length === 0},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     if (!validateForm()) return,
@@ -104,45 +104,45 @@ const EnhancedContactForm: React.FC = () => {
       // // console.log('Form submitted:', formData),
       setIsSubmitted(true),
       setFormData({
-        firstName: '';
-        lastName: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
-        message: '';
-        budget: '';
-        timeline: '';
-        howDidYouHear: '';
+        firstName: '',
+        lastName: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+        budget: '',
+        timeline: '',
+        howDidYouHear: ''
       })} catch (error) {
       console.error('Error submitting form:', error)} finally {
       setIsSubmitting(false)}
-  };
+  },
   const contactInfo = [
     {
-      icon: Mail;
-      title: 'Email Us';
-      description: 'Get in touch via email';
-      value: 'kleber@ziontechgroup.com';
-      href: 'mailto:kleber@ziontechgroup.com';
-      color: 'from-blue-500 to-cyan-500';
-    };
+      icon: Mail,
+      title: 'Email Us',
+      description: 'Get in touch via email',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
+      color: 'from-blue-500 to-cyan-500'
+    },
     {
-      icon: Phone;
-      title: 'Call Us';
-      description: 'Speak with our experts';
-      value: '+1 (555) 123-4567';
-      href: 'tel:+15551234567';
-      color: 'from-green-500 to-emerald-500';
-    };
+      icon: Phone,
+      title: 'Call Us',
+      description: 'Speak with our experts',
+      value: '+1 (555) 123-4567',
+      href: 'tel:+15551234567',
+      color: 'from-green-500 to-emerald-500'
+    },
     {
-      icon: MapPin;
-      title: 'Visit Us';
-      description: 'Our headquarters';
-      value: 'San Francisco, CA';
-      href: '#';
-      color: 'from-purple-500 to-pink-500';
-    };
+      icon: MapPin,
+      title: 'Visit Us',
+      description: 'Our headquarters',
+      value: 'San Francisco, CA',
+      href: '#',
+      color: 'from-purple-500 to-pink-500'
+    },
   ],
   if (isSubmitted) {
     return (
@@ -557,5 +557,5 @@ const EnhancedContactForm: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default EnhancedContactForm;
+    </div>)},
+export default EnhancedContactForm,

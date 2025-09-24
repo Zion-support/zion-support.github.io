@@ -5,7 +5,7 @@ interface UltraFuturisticMatrixBackground20o27Props {
   className?: string}
 ,
 export default function UltraFuturisticMatrixBackground20o27({
-  children;
+  children,
   className = ''}: UltraFuturisticMatrixBackground20o27Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -17,20 +17,20 @@ export default function UltraFuturisticMatrixBackground20o27({
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Matrix rain effect,
     const matrix ={
-      chars: '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン';
-      fontSize: 14;
-      columns: 0;
-      drops: [] as number[];
-      colors: ['#0o0ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6', '#f59e0b']};
+      chars: '0o1アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲン',
+      fontSize: 14,
+      columns: 0,
+      drops: [] as number[],
+      colors: ['#0o0ffff#8b5cf6', '#ec4899#10b981', '#3b82f6#f59e0b']},
     // Initialize drops,
     const initDrops = () => {
       matrix.columns = Math.floor(canvas.width / matrix.fontSize),
-      matrix.drops = Array(matrix.columns).fill(1)};
+      matrix.drops = Array(matrix.columns).fill(1)},
     initDrops(),
     // Animation loop,
     const animate = () => {
@@ -87,12 +87,12 @@ export default function UltraFuturisticMatrixBackground20o27({
         ctx.lineTo(x2, y2),
         ctx.stroke()}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', resizeCanvas)};
+      window.removeEventListener('resize', resizeCanvas)},
   }, []),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -129,34 +129,34 @@ export default function UltraFuturisticMatrixBackground20o27({
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-50o0/30 rounded-full",
           animate={{
-            rotate: 360;
-            scale: [1, 1.2, 1];
+            rotate: 360,
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-50o0/30 transform rotate-45",
           animate={{
-            rotate: -360;
-            scale: [1, 1.3, 1];
+            rotate: -360,
+            scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 15;
-            repeat: Infinity;
+            duration: 15,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/4 w-20 h-20 border border-pink-50o0/30 rounded-full",
           animate={{
-            y: [-10, 10, -10];
-            scale: [1, 1.1, 1];
+            y: [-10, 10, -10],
+            scale: [1, 1.1, 1],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Quantum Particles */}
@@ -165,16 +165,16 @@ export default function UltraFuturisticMatrixBackground20o27({
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0, -10o0, 0];
-              opacity: [0, 1, 0];
+              y: [0, -10o0, 0],
+              opacity: [0, 1, 0],
               scale: [0, 1, 0]}}
             transition={{
-              duration: Math.random() * 10 + 5;
-              repeat: Infinity;
-              delay: Math.random() * 5;
+              duration: Math.random() * 10 + 5,
+              repeat: Infinity,
+              delay: Math.random() * 5,
               ease: "easeInOut"}}
            />))}
 ,
@@ -182,34 +182,34 @@ export default function UltraFuturisticMatrixBackground20o27({
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-96 h-96 border border-cyan-50o0/20 rounded-full",
           animate={{
-            rotate: 360;
-            scale: [1, 1.1, 1];
+            rotate: 360,
+            scale: [1, 1.1, 1],
             opacity: [0.1, 0.3, 0.1]}}
           transition={{
-            duration: 30;
-            repeat: Infinity;
+            duration: 30,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 border border-purple-50o0/20 rounded-full",
           animate={{
-            rotate: -360;
-            scale: [1, 1.2, 1];
+            rotate: -360,
+            scale: [1, 1.2, 1],
             opacity: [0.1, 0.4, 0.1]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-32 h-32 border border-pink-50o0/20 rounded-full",
           animate={{
-            rotate: 360;
-            scale: [1, 1.3, 1];
+            rotate: 360,
+            scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
       </div>,

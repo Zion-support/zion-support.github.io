@@ -14,35 +14,35 @@ export default function ServicesShowcase2027() {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const services = [
     {
-      id: 'ai-automation-2027';
-      name: 'AI Automation 2027';
-      description: 'Next-generation AI automation with quantum-enhanced processing and neural interfaces.';
-      icon: Brain;
-      category: 'ai';
-      features: ['Quantum AI 'Processing', 'Neural Interface 'Integration', 'Predictive Automation'];
-      pricing: 'Starting at $299/month'};
+      id: 'ai-automation-2027',
+      name: 'AI Automation 2027',
+      description: 'Next-generation AI automation with quantum-enhanced processing and neural interfaces.',
+      icon: Brain,
+      category: 'ai',
+      features: ['Quantum AI 'ProcessingNeural Interface 'Integration', 'Predictive Automation'],
+      pricing: 'Starting at $299/month'},
     {
-      id: 'quantum-security-2027';
-      name: 'Quantum Security 2027';
-      description: 'Revolutionary quantum encryption and AI-powered threat detection systems.';
-      icon: Shield;
-      category: 'security';
-      features: ['Quantum 'Encryption', 'AI Threat 'Detection', 'Zero Trust Architecture'];
-      pricing: 'Starting at $499/month'};
+      id: 'quantum-security-2027',
+      name: 'Quantum Security 2027',
+      description: 'Revolutionary quantum encryption and AI-powered threat detection systems.',
+      icon: Shield,
+      category: 'security',
+      features: ['Quantum 'EncryptionAI Threat 'Detection', 'Zero Trust Architecture'],
+      pricing: 'Starting at $499/month'},
     {
-      id: 'advanced-infrastructure-2027';
-      name: 'Advanced Infrastructure 2027';
-      description: 'Cutting-edge cloud infrastructure with AI optimization and autonomous management.';
-      icon: Zap;
-      category: 'infrastructure';
-      features: ['AI 'Optimization', 'Autonomous 'Scaling', 'Real-time Monitoring'];
+      id: 'advanced-infrastructure-2027',
+      name: 'Advanced Infrastructure 2027',
+      description: 'Cutting-edge cloud infrastructure with AI optimization and autonomous management.',
+      icon: Zap,
+      category: 'infrastructure',
+      features: ['AI 'OptimizationAutonomous 'Scaling', 'Real-time Monitoring'],
       pricing: 'Starting at $199/month'}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Services', 'icon: Globe };
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: Brain };
-    { id: ''security', 'name: ''Security', 'icon: Shield };
-    { id: ''infrastructure', 'name: ''Infrastructure', 'icon: Zap }
+    { id: ''allname: 'All 'Servicesicon: Globe },
+    { id: ''ainame: 'AI & 'MLicon: Brain },
+    { id: ''securityname: ''Securityicon: Shield },
+    { id: ''infrastructurename: ''Infrastructureicon: Zap }
   ],
   const filteredServices = services.filter(service => {
     const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,

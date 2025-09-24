@@ -6,7 +6,7 @@ type Category = {
   id: string,
   slug: string,
   name: string,
-  isAdminOnly?: boolean};
+  isAdminOnly?: boolean},
 type Thread = {
   id: string,
   categoryId: string,
@@ -22,14 +22,14 @@ type Thread = {
   isLocked: boolean,
   isFeatured: boolean,
   createdAt: string,
-  updatedAt: string};
+  updatedAt: string},
 const fetchJson = async (url: string, opts?: RequestInit) => {
   const res = await fetch(url, {
-    ...opts;
-    headers: { 'Content-Type': 'application/json', ...(opts?.headers || {}) };
+    ...opts,
+    headers: { 'Content-Type': 'application/json', ...(opts?.headers || {}) },
   }),
   if (!res.ok) throw new Error(await res.text()),
-  return res.json()};
+  return res.json()},
 export default function CommunityPage() {
   const [categories, setCategories] = useState<Category[]>([]),
   const [activeCategory, setActiveCategory] = useState<string | undefined>(
@@ -56,31 +56,29 @@ export default function CommunityPage() {
   const normal = useMemo(() => threads.filter(t => !t.isPinned), [threads]),
   const submitNewThread = async () => {
     const payload = {
-      categoryId: activeCategory;
-      title: newThread.title.trim();
-      body: newThread.body.trim();
+      categoryId: activeCategory,
+      title: newThread.title.trim(),
+      body: newThread.body.trim(),
       tags: newThread.tags,
-        .split(','),
+        .split(),
         .map(s => s.trim()),
-        .filter(Boolean);
-    };
+        .filter(Boolean),
+    },
     if (!payload.title || !payload.body) return,
     // Demo auth: set a cookie if not present via fetch header, users can override with real auth headers,
     await fetchJson('/api/community/threads', {
-      method: 'POST';
-      body: JSON.stringify(payload);
+      method: 'POST',
+      body: JSON.stringify(payload),
       headers: {
-        'x-user-id': 'demo-user';
-        'x-user-name': 'Demo User';
-        'x-user-role': 'Talent';
-      };
+        'x-user-id': 'demo-userx-user-name': 'Demo Userx-user-role': 'Talent'
+      },
     }),
     setShowNewThread(false),
     setNewThread({ title: '', body: '', tags: '' }),
     // refresh,
     const d = await fetchJson(
       `/api/community/threads?categoryId=${encodeURIComponent(activeCategory!)}&sort=${sort}`),
-    setThreads(d.threads)};
+    setThreads(d.threads)},
   return (
     <EnhancedLayout>,
       <Head>,

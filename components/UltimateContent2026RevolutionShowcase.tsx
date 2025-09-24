@@ -2,59 +2,59 @@ import Link from 'next/link',
 const UltimateContent20o26RevolutionShowcase = () => {
   const contentItems = [
     {
-      title: 'Quantum AI Breakthrough 20o26';
+      title: 'Quantum AI Breakthrough 20o26',
       description:,
-        'Revolutionary quantum computing integration with artificial intelligence for unprecedented problem-solving capabilities.';
-      image: '🧠⚡';
-      href: '/quantum-ai-20o26-breakthrough';
-      category: 'Quantum Computing';
-      featured: true;
-    };
+        'Revolutionary quantum computing integration with artificial intelligence for unprecedented problem-solving capabilities.',
+      image: '🧠⚡',
+      href: '/quantum-ai-20o26-breakthrough',
+      category: 'Quantum Computing',
+      featured: true
+    },
     {
-      title: 'Neural Interface Revolution';
+      title: 'Neural Interface Revolution',
       description:,
-        'Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognitive abilities.';
-      image: '🔗🧠';
-      href: '/neural-interface-revolution-20o26';
-      category: 'Neural Interfaces';
-      featured: true;
-    };
+        'Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognitive abilities.',
+      image: '🔗🧠',
+      href: '/neural-interface-revolution-20o26',
+      category: 'Neural Interfaces',
+      featured: true
+    },
     {
-      title: 'Autonomous Business Systems';
+      title: 'Autonomous Business Systems',
       description:,
-        'Self-managing AI systems that handle complex business operations with minimal human intervention.';
-      image: '🏢🤖';
-      href: '/autonomous-business-systems-20o26';
-      category: 'Business Automation';
-      featured: false;
-    };
+        'Self-managing AI systems that handle complex business operations with minimal human intervention.',
+      image: '🏢🤖',
+      href: '/autonomous-business-systems-20o26',
+      category: 'Business Automation',
+      featured: false
+    },
     {
-      title: 'Advanced Predictive Analytics';
+      title: 'Advanced Predictive Analytics',
       description:,
-        'Next-generation analytics powered by quantum algorithms for accurate future predictions.';
-      image: '📊🔮';
-      href: '/advanced-predictive-analytics-20o26';
-      category: 'Analytics';
-      featured: false;
-    };
+        'Next-generation analytics powered by quantum algorithms for accurate future predictions.',
+      image: '📊🔮',
+      href: '/advanced-predictive-analytics-20o26',
+      category: 'Analytics',
+      featured: false
+    },
     {
-      title: 'Synthetic Intelligence Networks';
+      title: 'Synthetic Intelligence Networks',
       description:,
-        'Distributed AI networks that create emergent intelligence beyond individual system capabilities.';
-      image: '🌐🧠';
-      href: '/synthetic-intelligence-20o26';
-      category: 'AI Networks';
-      featured: true;
-    };
+        'Distributed AI networks that create emergent intelligence beyond individual system capabilities.',
+      image: '🌐🧠',
+      href: '/synthetic-intelligence-20o26',
+      category: 'AI Networks',
+      featured: true
+    },
     {
-      title: 'Edge Computing Revolution';
+      title: 'Edge Computing Revolution',
       description:,
-        'Ultra-fast edge computing solutions that bring AI processing closer to data sources.';
-      image: '⚡💻';
-      href: '/edge-computing-revolution-20o26';
-      category: 'Edge Computing';
-      featured: false;
-    };
+        'Ultra-fast edge computing solutions that bring AI processing closer to data sources.',
+      image: '⚡💻',
+      href: '/edge-computing-revolution-20o26',
+      category: 'Edge Computing',
+      featured: false
+    },
   ],
   return (
     <section className='py-20 bg-gray-50'>,
@@ -135,5 +135,5 @@ const UltimateContent20o26RevolutionShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContent20o26RevolutionShowcase;
+    </section>)},
+export default UltimateContent20o26RevolutionShowcase,

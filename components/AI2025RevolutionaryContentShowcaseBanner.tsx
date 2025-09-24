@@ -77,5 +77,5 @@ const AI20o25RevolutionaryContentShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25RevolutionaryContentShowcaseBanner;
+    </section>)},
+export default AI20o25RevolutionaryContentShowcaseBanner,

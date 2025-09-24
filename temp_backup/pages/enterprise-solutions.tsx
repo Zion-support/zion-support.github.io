@@ -1,58 +1,58 @@
 import { motion } from 'framer-motion',
 import {
-  Building;
-  Shield;
-  Globe;
-  Brain;
-  Zap;
-  Users;
-  Target;
-  Award;
+  Building,
+  Shield,
+  Globe,
+  Brain,
+  Zap,
+  Users,
+  Target,
+  Award,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function EnterpriseSolutions() {
   const solutions = [
     {
-      icon: <Building className='w-12 h-12 text-cyan-40o0' />;
-      title: 'Enterprise AI Platform';
+      icon: <Building className='w-12 h-12 text-cyan-40o0' />,
+      title: 'Enterprise AI Platform',
       description:,
-        'Comprehensive AI solutions for enterprise-scale operations and decision making';
-      href: '/ai-powered-decision-engine';
-    };
+        'Comprehensive AI solutions for enterprise-scale operations and decision making',
+      href: '/ai-powered-decision-engine'
+    },
     {
-      icon: <Shield className='w-12 h-12 text-blue-40o0' />;
-      title: 'Enterprise Security';
+      icon: <Shield className='w-12 h-12 text-blue-40o0' />,
+      title: 'Enterprise Security',
       description:,
-        'Zero trust architecture and comprehensive cybersecurity solutions';
-      href: '/zero-trust-security-platform';
-    };
+        'Zero trust architecture and comprehensive cybersecurity solutions',
+      href: '/zero-trust-security-platform'
+    },
     {
-      icon: <Globe className='w-12 h-12 text-purple-40o0' />;
-      title: 'Multi-Cloud Infrastructure';
+      icon: <Globe className='w-12 h-12 text-purple-40o0' />,
+      title: 'Multi-Cloud Infrastructure',
       description:,
-        'Scalable, secure multi-cloud infrastructure and disaster recovery';
-      href: '/multi-cloud-disaster-recovery';
-    };
+        'Scalable, secure multi-cloud infrastructure and disaster recovery',
+      href: '/multi-cloud-disaster-recovery'
+    },
     {
-      icon: <Brain className='w-12 h-12 text-green-40o0' />;
-      title: 'Data Analytics Platform';
+      icon: <Brain className='w-12 h-12 text-green-40o0' />,
+      title: 'Data Analytics Platform',
       description:,
-        'Enterprise-grade analytics and business intelligence solutions';
-      href: '/intelligent-hr-analytics-platform';
-    };
+        'Enterprise-grade analytics and business intelligence solutions',
+      href: '/intelligent-hr-analytics-platform'
+    },
     {
-      icon: <Zap className='w-12 h-12 text-yellow-40o0' />;
-      title: 'Process Automation';
-      description: 'End-to-end business process automation and optimization';
-      href: '/ai-autonomous-business-operations';
-    };
+      icon: <Zap className='w-12 h-12 text-yellow-40o0' />,
+      title: 'Process Automation',
+      description: 'End-to-end business process automation and optimization',
+      href: '/ai-autonomous-business-operations'
+    },
     {
-      icon: <Users className='w-12 h-12 text-pink-40o0' />;
-      title: 'Enterprise Collaboration';
+      icon: <Users className='w-12 h-12 text-pink-40o0' />,
+      title: 'Enterprise Collaboration',
       description:,
-        'Advanced collaboration tools and workflow management systems';
-      href: '/incident-automation-suite';
-    };
+        'Advanced collaboration tools and workflow management systems',
+      href: '/incident-automation-suite'
+    },
   ],
   return (
     <Layout>,

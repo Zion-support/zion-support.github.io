@@ -27,13 +27,13 @@ export function ApiDocsHub() {
       icon: Zap,
       path: "/developers/docs/samples",
       color: "from-yellow-500 to-orange-500"}
-      title: "Sample Code";
+      title: "Sample Code",
       description: "Examples in JavaScript, Python, and Node.js">>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-      title: "Sample Code";
-      description: "Examples in JavaScript, Python, and Node.js";
-      icon: Zap;
-      path: "/developers/docs/samples";
-      color: "from-yellow-500 to-orange-500"};
+      title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
     {
       title: "Error Codes & Rate Limits",
       description: "Understanding API errors and rate limiting",
@@ -72,11 +72,11 @@ export function ApiDocsHub() {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -89,7 +89,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-import React from "react";
+import React from "react",
 import {Link} from "react-router-dom",
 import {ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap} from "lucide-react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
@@ -102,42 +102,42 @@ import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
         </div>,
       </div>,
     </ApiDocsLayout>)}
-export default ApiDocsHub;
-import React from "react";;
-import { Link } from "react-router-dom";
-import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react";
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
+export default ApiDocsHub,
+import React from "react",
+import { Link } from "react-router-dom",
+import { ArrowRight, BookOpen, Code, Webhook, AlertCircle, Zap } from "lucide-react",
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 export function ApiDocsHub() {
   const sections = [
     {
-      title: "Getting Started";
-      description: "Learn how to authenticate and make your first API request";
-      icon: BookOpen;
-      path: "/developers/docs/getting-started";
-      color: "from-blue-500 to-cyan-500"};
+      title: "Getting Started",
+      description: "Learn how to authenticate and make your first API request",
+      icon: BookOpen,
+      path: "/developers/docs/getting-started",
+      color: "from-blue-500 to-cyan-500"},
     {
-      title: "API Reference";
-      description: "Detailed documentation for all available endpoints";
-      icon: Code;
-      path: "/developers/docs/reference";
-      color: "from-purple-500 to-pink-500"};
+      title: "API Reference",
+      description: "Detailed documentation for all available endpoints",
+      icon: Code,
+      path: "/developers/docs/reference",
+      color: "from-purple-500 to-pink-500"},
     {
-      title: "Webhooks";
-      description: "Subscribe to events and receive real-time updates";
-      icon: Webhook;
-      path: "/developers/docs/webhooks";
-      color: "from-green-500 to-emerald-500"};
+      title: "Webhooks",
+      description: "Subscribe to events and receive real-time updates",
+      icon: Webhook,
+      path: "/developers/docs/webhooks",
+      color: "from-green-500 to-emerald-500"},
     {
-      title: "Sample Code";
-      description: "Examples in JavaScript, Python, and Node.js";
-      icon: Zap;
-      path: "/developers/docs/samples";
-      color: "from-yellow-500 to-orange-500"};
+      title: "Sample Code",
+      description: "Examples in JavaScript, Python, and Node.js",
+      icon: Zap,
+      path: "/developers/docs/samples",
+      color: "from-yellow-500 to-orange-500"},
     {
-      title: "Error Codes & Rate Limits";
-      description: "Understanding API errors and rate limiting";
-      icon: AlertCircle;
-      path: "/developers/docs/errors";
+      title: "Error Codes & Rate Limits",
+      description: "Understanding API errors and rate limiting",
+      icon: AlertCircle,
+      path: "/developers/docs/errors",
       color: "from-red-500 to-rose-500"}],
   return (
     <ApiDocsLayout>,
@@ -147,15 +147,15 @@ export function ApiDocsHub() {
           Welcome to the Zion AI Marketplace API documentation. Here you'll find comprehensive guides and documentation to help you start working with our API as quickly as possible.,
         </p>,
         <div className="grid gap-6 md: grid-cols-2">,
-      icon: Zap;
-      path: "/developers / docs / samples";
-      color: "from - yellow - 500 to - orange - 500"};
+      icon: Zap,
+      path: "/developers / docs / samples",
+      color: "from - yellow - 500 to - orange - 500"},
     {
-      title: "Error Codes & Rate Limits";
-      description: "Understanding API errors and rate limiting";
-      icon: AlertCircle;
-      path: "/developers / docs / errors";
-      color: "from - red - 500 to - rose - 500"}];
+      title: "Error Codes & Rate Limits",
+      description: "Understanding API errors and rate limiting",
+      icon: AlertCircle,
+      path: "/developers / docs / errors",
+      color: "from - red - 500 to - rose - 500"}],
   return (
     <ApiDocsLayout>,
       <div className="max - w-4xl">,
@@ -194,7 +194,7 @@ export function ApiDocsHub() {
         </div>,
       </div>,
     </ApiDocsLayout>)}
-export default ApiDocsHub;
+export default ApiDocsHub,
           {sections.map((section) => (
             <Link
               key={section.path} >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))))

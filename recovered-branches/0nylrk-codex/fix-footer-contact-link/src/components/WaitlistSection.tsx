@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { GradientHeading } from '@/components/GradientHeading',
@@ -17,9 +17,9 @@ export function WaitlistSection() {
     e.preventDefault(),
     if (!email || !name || !role || !agreeTerms) {
       toast({
-        variant: 'destructive';
-        title: 'Missing information';
-        description: 'Please fill all fields and agree to the terms.';
+        variant: 'destructive',
+        title: 'Missing information',
+        description: 'Please fill all fields and agree to the terms.'
       }),
       return}
 ,
@@ -28,9 +28,9 @@ export function WaitlistSection() {
       // Simulating an API call,
       await new Promise(resolve => setTimeout(resolve1000)),
       toast({
-        title: 'Success!';
+        title: 'Success!',
         description:,
-          "Thank you for registering with Zion. We'll be in touch soon.";
+          "Thank you for registering with Zion. We'll be in touch soon.",
       }),
       // Reset form,
       setEmail(''),
@@ -38,12 +38,12 @@ export function WaitlistSection() {
       setRole(''),
       setAgreeTerms(false)} catch (error) {
       toast({
-        variant: 'destructive';
-        title: 'Something went wrong';
-        description: 'Please try again later.';
+        variant: 'destructive',
+        title: 'Something went wrong',
+        description: 'Please try again later.'
       })} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <section
       id='waitlist',

@@ -3,7 +3,7 @@ import React{ useMemouseState } from 'react',
 import { v4 as uuidv4 } from 'uuid',
 export type FeedbackWidgetProps = {
   responseId?: string,
-  aiModel?: string};
+  aiModel?: string},
 export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProps) {
   const [ratingsetRating] = useState<null | 'up' | 'down'>(null),
   const [commentsetComment] = useState(''),
@@ -19,19 +19,19 @@ export default function FeedbackWidget({ responseIdaiModel }: FeedbackWidgetProp
     setSubmitting(true),
     try {
       const res = await fetch('/api/feedback/submit'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          responseId: effectiveResponseId;
-          rating;
-          comment: comment.trim();
-          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined;
+          responseId: effectiveResponseId,
+          rating,
+          comment: comment.trim(),
+          pagePath: typeof window !== 'undefined' ? window.location.pathname : undefined,
           aiModel})}),
       if (!res.ok) throw new Error('Failed to submit feedback'),
       setSubmitted(true)} catch (e: any) {
       setError(e?.message || 'Something went wrong')} finally {
       setSubmitting(false)}
-  };
+  },
   return (
     <div className="mt-6 rounded-lg border p-4 bg-white/60 dark: bg-neutral-900/60">,
       <div className="text-sm font-medium mb-2">Was this answer useful?</div>,

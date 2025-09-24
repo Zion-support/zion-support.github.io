@@ -1,17 +1,17 @@
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  GraduationCap;
-  Brain;
-  Globe;
-  Shield;
-  Zap;
-  Cpu;
-  Users;
-  CheckCircle;
-  ArrowRight;
-  BarChart3;
-  BookOpen;
+  GraduationCap,
+  Brain,
+  Globe,
+  Shield,
+  Zap,
+  Cpu,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  BookOpen,
 } from 'lucide-react',
 export default function EducationSolutions() {
   return (
@@ -69,7 +69,7 @@ export default function EducationSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Intelligent learning platform with personalized curriculum;
+                  Intelligent learning platform with personalized curriculum,
                   adaptive assessments, and interactive content delivery.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -183,7 +183,7 @@ export default function EducationSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Comprehensive administrative platform for student management;
+                  Comprehensive administrative platform for student management,
                   course scheduling, and institutional operations.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,

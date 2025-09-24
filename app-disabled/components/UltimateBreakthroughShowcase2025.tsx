@@ -2,96 +2,96 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Clock;
-  Users;
-  Award;
-  ArrowRight;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Clock,
+  Users,
+  Award,
+  ArrowRight,
 } from 'lucide-react',
 const UltimateBreakthroughShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'enterprise-ai-revolution';
-      title: 'AI 20o25: The Enterprise AI Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 10o00% ROI';
+      id: 'enterprise-ai-revolution',
+      title: 'AI 20o25: The Enterprise AI Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 10o00% ROI',
       description:,
-        'Discover how Fortune 50o0 companies are achieving unprecedented 10o00% ROI with revolutionary AI implementations. Complete guide to enterprise AI transformation.';
-      type: 'blog';
-      category: 'ai-revolution';
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough';
-      featured: true;
+        'Discover how Fortune 50o0 companies are achieving unprecedented 10o00% ROI with revolutionary AI implementations. Complete guide to enterprise AI transformation.',
+      type: 'blog',
+      category: 'ai-revolution',
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough',
+      featured: true,
       metrics: {
-        roi: '10o00%';
-        savings: '$5.2B';
-        accuracy: '99.9%';
-        efficiency: '340%';
-      };
-      readingTime: '25 min read';
-      tags: ['AI Revolution', 'Enterprise', 'ROI', 'Breakthrough'];
-    };
+        roi: '10o00%',
+        savings: '$5.2B',
+        accuracy: '99.9%',
+        efficiency: '340%'
+      },
+      readingTime: '25 min read',
+      tags: ['AI RevolutionEnterprise', 'ROIBreakthrough'],
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Transformation Success';
-      subtitle: '$5.2B Annual Savings with 1,0o00% ROI';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Transformation Success',
+      subtitle: '$5.2B Annual Savings with 1,0o00% ROI',
       description:,
-        'How a $75B manufacturing giant achieved unprecedented 1,0o00% ROI and $5.2B annual savings in just 18 months. Complete case study with implementation details.';
-      type: 'case-study';
-      category: 'success-story';
-      url: '/case-studies/fortune-50o0-ai-transformation-10o00-percent-roi-ultimate-success';
-      featured: true;
+        'How a $75B manufacturing giant achieved unprecedented 1,0o00% ROI and $5.2B annual savings in just 18 months. Complete case study with implementation details.',
+      type: 'case-study',
+      category: 'success-story',
+      url: '/case-studies/fortune-50o0-ai-transformation-10o00-percent-roi-ultimate-success',
+      featured: true,
       metrics: {
-        roi: '10o00%';
-        savings: '$5.2B';
-        timeline: '18 months';
-        efficiency: '340%';
-      };
-      readingTime: '22 min read';
-      tags: ['Case Study', 'Fortune 50o0', 'ROI', 'Success Story'];
-    };
+        roi: '10o00%',
+        savings: '$5.2B',
+        timeline: '18 months',
+        efficiency: '340%'
+      },
+      readingTime: '22 min read',
+      tags: ['Case StudyFortune 50o0', 'ROISuccess Story'],
+    },
     {
-      id: 'implementation-roadmap';
-      title: 'AI 20o25 Implementation Ultimate Roadmap';
-      subtitle: 'From Strategy to 1,0o00% ROI in 18 Months';
+      id: 'implementation-roadmap',
+      title: 'AI 20o25 Implementation Ultimate Roadmap',
+      subtitle: 'From Strategy to 1,0o00% ROI in 18 Months',
       description:,
-        'Complete step-by-step roadmap to achieve 1,0o00% ROI with AI transformation. Proven framework used by Fortune 50o0 companies to achieve unprecedented success.';
-      type: 'resource';
-      category: 'implementation';
-      url: '/resources/ai-20o25-implementation-ultimate-roadmap-10o00-percent-roi';
-      featured: true;
+        'Complete step-by-step roadmap to achieve 1,0o00% ROI with AI transformation. Proven framework used by Fortune 50o0 companies to achieve unprecedented success.',
+      type: 'resource',
+      category: 'implementation',
+      url: '/resources/ai-20o25-implementation-ultimate-roadmap-10o00-percent-roi',
+      featured: true,
       metrics: {
-        roi: '10o00%';
-        timeline: '18 months';
-        success: '99%';
-        value: '$19.1B';
-      };
-      readingTime: '45 min read';
-      tags: ['Implementation Guide', 'Strategy', 'ROI', 'Roadmap'];
-    };
+        roi: '10o00%',
+        timeline: '18 months',
+        success: '99%',
+        value: '$19.1B'
+      },
+      readingTime: '45 min read',
+      tags: ['Implementation GuideStrategy', 'ROIRoadmap'],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'ai-revolution';
-      label: 'AI Revolution';
+      id: 'ai-revolution',
+      label: 'AI Revolution',
       count: contentItems.filter(item => item.category === 'ai-revolution'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'success-story';
-      label: 'Success Stories';
+      id: 'success-story',
+      label: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-story'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'implementation';
-      label: 'Implementation';
+      id: 'implementation',
+      label: 'Implementation',
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length;
-    };
+        .length,
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -107,7 +107,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
         return <ArrowRight className='w-5 h-5' />,
       default:,
         return <Star className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -118,7 +118,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -192,7 +192,7 @@ const UltimateBreakthroughShowcase20o25 = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   <div className='flex items-center text-gray-50o0 text-sm'>,
@@ -279,5 +279,5 @@ const UltimateBreakthroughShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateBreakthroughShowcase20o25;
+    </section>)},
+export default UltimateBreakthroughShowcase20o25,

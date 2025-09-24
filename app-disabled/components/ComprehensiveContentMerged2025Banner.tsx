@@ -68,7 +68,7 @@ const ComprehensiveContentMerged20o25Banner = () => {
               Ultimate Autonomous Enterprise Revolution,
             </h3>,
             <p className='text-sm opacity-80 mb-6 leading-relaxed'>,
-              Complete guide to transforming businesses into fully autonomous;
+              Complete guide to transforming businesses into fully autonomous,
               self-optimizing enterprises.,
             </p>,
             <div className='flex items-center justify-between'>,
@@ -239,5 +239,5 @@ const ComprehensiveContentMerged20o25Banner = () => {
         <div className='absolute bottom-1/3 left-1/3 w-3 h-3 bg-blue-40o0 rounded-full opacity-40 animate-bounce'></div>,
         <div className='absolute bottom-1/4 right-1/6 w-2 h-2 bg-indigo-40o0 rounded-full opacity-70 animate-ping'></div>,
       </div>,
-    </section>)};
-export default ComprehensiveContentMerged20o25Banner;
+    </section>)},
+export default ComprehensiveContentMerged20o25Banner,

@@ -1,36 +1,36 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  BookOpen;
-  GraduationCap;
-  Award;
-  Users;
-  Clock;
-  Star;
-  Play;
-  Video;
-  FileText;
-  Code;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  ExternalLink;
-  Download;
-  Calendar;
-  MapPin;
-  DollarSign;
-  Globe;
-  Zap;
-  Target;
-  Lightbulb;
-  MessageCircle;
-  Phone;
-  Mail;
+  Search,
+  BookOpen,
+  GraduationCap,
+  Award,
+  Users,
+  Clock,
+  Star,
+  Play,
+  Video,
+  FileText,
+  Code,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  ExternalLink,
+  Download,
+  Calendar,
+  MapPin,
+  DollarSign,
+  Globe,
+  Zap,
+  Target,
+  Lightbulb,
+  MessageCircle,
+  Phone,
+  Mail,
 } from 'lucide-react',
 import Link from 'next/link',
 export default function Training() {
@@ -39,193 +39,181 @@ export default function Training() {
   const [selectedLevel, setSelectedLevel] = useState('all'),
   const categories = [
     {
-      id: 'all';
-      name: 'All Courses';
-      count: 25;
-      icon: <BookOpen className='w-5 h-5' />;
-    };
+      id: 'all',
+      name: 'All Courses',
+      count: 25,
+      icon: <BookOpen className='w-5 h-5' />
+    },
     {
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      count: 8;
-      icon: <Brain className='w-5 h-5' />;
-    };
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      count: 8,
+      icon: <Brain className='w-5 h-5' />
+    },
     {
-      id: 'quantum';
-      name: 'Quantum Computing';
-      count: 6;
-      icon: <Atom className='w-5 h-5' />;
-    };
+      id: 'quantum',
+      name: 'Quantum Computing',
+      count: 6,
+      icon: <Atom className='w-5 h-5' />
+    },
     {
-      id: 'cybersecurity';
-      name: 'Cybersecurity';
-      count: 5;
-      icon: <Shield className='w-5 h-5' />;
-    };
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      count: 5,
+      icon: <Shield className='w-5 h-5' />
+    },
     {
-      id: 'cloud';
-      name: 'Cloud & DevOps';
-      count: 4;
-      icon: <Rocket className='w-5 h-5' />;
-    };
+      id: 'cloud',
+      name: 'Cloud & DevOps',
+      count: 4,
+      icon: <Rocket className='w-5 h-5' />
+    },
     {
-      id: 'development';
-      name: 'Development';
-      count: 2;
-      icon: <Code className='w-5 h-5' />;
-    };
+      id: 'development',
+      name: 'Development',
+      count: 2,
+      icon: <Code className='w-5 h-5' />
+    },
   ],
   const levels = [
-    { id: 'all', name: 'All Levels', count: 25 };
-    { id: 'beginner', name: 'Beginner', count: 10 };
-    { id: 'intermediate', name: 'Intermediate', count: 8 };
-    { id: 'advanced', name: 'Advanced', count: 7 };
+    { id: 'all', name: 'All Levels', count: 25 },
+    { id: 'beginner', name: 'Beginner', count: 10 },
+    { id: 'intermediate', name: 'Intermediate', count: 8 },
+    { id: 'advanced', name: 'Advanced', count: 7 },
   ],
   const courses = [
     {
-      id: 1;
-      title: 'AI Consciousness Evolution Fundamentals';
-      category: 'ai';
-      level: 'beginner';
+      id: 1,
+      title: 'AI Consciousness Evolution Fundamentals',
+      category: 'ai',
+      level: 'beginner',
       description:,
-        'Learn the basics of AI consciousness and how to build systems with genuine awareness.';
-      duration: '8 weeks';
-      hours: '40 hours';
-      price: '$999';
-      instructor: 'Dr. Sarah Chen';
-      rating: 4.9;
-      students: 1250;
-      featured: true;
-      format: 'Online + Live Sessions';
-      certification: 'AI Consciousness Specialist';
+        'Learn the basics of AI consciousness and how to build systems with genuine awareness.',
+      duration: '8 weeks',
+      hours: '40 hours',
+      price: '$999',
+      instructor: 'Dr. Sarah Chen',
+      rating: 4.9,
+      students: 1250,
+      featured: true,
+      format: 'Online + Live Sessions',
+      certification: 'AI Consciousness Specialist',
       topics: [
-        'Introduction to AI Consciousness';
-        'Neural Network Fundamentals';
-        'Emotional Intelligence in AI';
-        'Ethical AI Development';
-        'Practical Applications';
-      ];
-    };
+        'Introduction to AI ConsciousnessNeural Network Fundamentals',
+        'Emotional Intelligence in AIEthical AI Development',
+        'Practical Applications',
+      ]
+    },
     {
-      id: 2;
-      title: 'Advanced Quantum Computing';
-      category: 'quantum';
-      level: 'advanced';
+      id: 2,
+      title: 'Advanced Quantum Computing',
+      category: 'quantum',
+      level: 'advanced',
       description:,
-        'Master quantum algorithms and quantum-AI convergence for real-world applications.';
-      duration: '12 weeks';
-      hours: '60 hours';
-      price: '$1,499';
-      instructor: 'Dr. James Kim';
-      rating: 4.8;
-      students: 850;
-      featured: true;
-      format: 'Online + Lab Access';
-      certification: 'Quantum Computing Expert';
+        'Master quantum algorithms and quantum-AI convergence for real-world applications.',
+      duration: '12 weeks',
+      hours: '60 hours',
+      price: '$1,499',
+      instructor: 'Dr. James Kim',
+      rating: 4.8,
+      students: 850,
+      featured: true,
+      format: 'Online + Lab Access',
+      certification: 'Quantum Computing Expert',
       topics: [
-        'Quantum Mechanics Fundamentals';
-        'Quantum Algorithms';
-        'Quantum Machine Learning';
-        'Quantum Error Correction';
-        'Quantum-AI Integration';
-      ];
-    };
+        'Quantum Mechanics FundamentalsQuantum Algorithms',
+        'Quantum Machine LearningQuantum Error Correction',
+        'Quantum-AI Integration',
+      ]
+    },
     {
-      id: 3;
-      title: 'Zero Trust Security Implementation';
-      category: 'cybersecurity';
-      level: 'intermediate';
+      id: 3,
+      title: 'Zero Trust Security Implementation',
+      category: 'cybersecurity',
+      level: 'intermediate',
       description:,
-        'Implement comprehensive zero trust security architectures for enterprise environments.';
-      duration: '6 weeks';
-      hours: '30 hours';
-      price: '$799';
-      instructor: 'Marcus Rodriguez';
-      rating: 4.7;
-      students: 1100;
-      featured: false;
-      format: 'Online + Hands-on Labs';
-      certification: 'Zero Trust Security Professional';
+        'Implement comprehensive zero trust security architectures for enterprise environments.',
+      duration: '6 weeks',
+      hours: '30 hours',
+      price: '$799',
+      instructor: 'Marcus Rodriguez',
+      rating: 4.7,
+      students: 1100,
+      featured: false,
+      format: 'Online + Hands-on Labs',
+      certification: 'Zero Trust Security Professional',
       topics: [
-        'Zero Trust Principles';
-        'Identity & Access Management';
-        'Network Security';
-        'Data Protection';
-        'Compliance & Governance';
-      ];
-    };
+        'Zero Trust PrinciplesIdentity & Access Management',
+        'Network SecurityData Protection',
+        'Compliance & Governance',
+      ]
+    },
     {
-      id: 4;
-      title: 'AI-Powered DevOps Automation';
-      category: 'cloud';
-      level: 'intermediate';
+      id: 4,
+      title: 'AI-Powered DevOps Automation',
+      category: 'cloud',
+      level: 'intermediate',
       description:,
-        'Automate your DevOps workflows with AI and machine learning techniques.';
-      duration: '5 weeks';
-      hours: '25 hours';
-      price: '$699';
-      instructor: 'Dr. Sarah Chen';
-      rating: 4.6;
-      students: 950;
-      featured: false;
-      format: 'Online + Practical Projects';
-      certification: 'AI DevOps Engineer';
+        'Automate your DevOps workflows with AI and machine learning techniques.',
+      duration: '5 weeks',
+      hours: '25 hours',
+      price: '$699',
+      instructor: 'Dr. Sarah Chen',
+      rating: 4.6,
+      students: 950,
+      featured: false,
+      format: 'Online + Practical Projects',
+      certification: 'AI DevOps Engineer',
       topics: [
-        'DevOps Fundamentals';
-        'AI Integration in CI/CD';
-        'Automated Testing';
-        'Performance Optimization';
-        'Monitoring & Observability';
-      ];
-    };
+        'DevOps FundamentalsAI Integration in CI/CD',
+        'Automated TestingPerformance Optimization',
+        'Monitoring & Observability',
+      ]
+    },
     {
-      id: 5;
-      title: 'Quantum Internet Security';
-      category: 'quantum';
-      level: 'advanced';
+      id: 5,
+      title: 'Quantum Internet Security',
+      category: 'quantum',
+      level: 'advanced',
       description:,
-        'Build quantum-resistant security protocols for the future internet.';
-      duration: '10 weeks';
-      hours: '50 hours';
-      price: '$1,299';
-      instructor: 'Dr. James Kim';
-      rating: 4.9;
-      students: 650;
-      featured: false;
-      format: 'Online + Research Projects';
-      certification: 'Quantum Security Specialist';
+        'Build quantum-resistant security protocols for the future internet.',
+      duration: '10 weeks',
+      hours: '50 hours',
+      price: '$1,299',
+      instructor: 'Dr. James Kim',
+      rating: 4.9,
+      students: 650,
+      featured: false,
+      format: 'Online + Research Projects',
+      certification: 'Quantum Security Specialist',
       topics: [
-        'Quantum Cryptography';
-        'Post-Quantum Algorithms';
-        'Quantum Key Distribution';
-        'Network Security';
-        'Future-Proofing';
-      ];
-    };
+        'Quantum CryptographyPost-Quantum Algorithms',
+        'Quantum Key DistributionNetwork Security',
+        'Future-Proofing',
+      ]
+    },
     {
-      id: 6;
-      title: 'AI Ethics & Governance';
-      category: 'ai';
-      level: 'intermediate';
+      id: 6,
+      title: 'AI Ethics & Governance',
+      category: 'ai',
+      level: 'intermediate',
       description:,
-        'Develop ethical AI systems and governance frameworks for responsible AI deployment.';
-      duration: '4 weeks';
-      hours: '20 hours';
-      price: '$599';
-      instructor: 'Dr. Sarah Chen';
-      rating: 4.8;
-      students: 800;
-      featured: false;
-      format: 'Online + Case Studies';
-      certification: 'AI Ethics Professional';
+        'Develop ethical AI systems and governance frameworks for responsible AI deployment.',
+      duration: '4 weeks',
+      hours: '20 hours',
+      price: '$599',
+      instructor: 'Dr. Sarah Chen',
+      rating: 4.8,
+      students: 800,
+      featured: false,
+      format: 'Online + Case Studies',
+      certification: 'AI Ethics Professional',
       topics: [
-        'AI Ethics Principles';
-        'Bias & Fairness';
-        'Transparency & Explainability';
-        'Privacy & Security';
-        'Regulatory Compliance';
-      ];
-    };
+        'AI Ethics PrinciplesBias & Fairness',
+        'Transparency & ExplainabilityPrivacy & Security',
+        'Regulatory Compliance',
+      ]
+    },
   ],
   const filteredCourses = courses.filter(course => {
     const matchesSearch =,
@@ -241,30 +229,30 @@ export default function Training() {
   const regularCourses = filteredCourses.filter(course => !course.featured),
   const certificationPrograms = [
     {
-      name: 'AI Consciousness Specialist';
+      name: 'AI Consciousness Specialist',
       description:,
-        'Master the fundamentals of AI consciousness and emotional intelligence';
-      duration: '6 months';
-      courses: 4;
-      price: '$2,999';
-      level: 'Advanced';
-    };
+        'Master the fundamentals of AI consciousness and emotional intelligence',
+      duration: '6 months',
+      courses: 4,
+      price: '$2,999',
+      level: 'Advanced'
+    },
     {
-      name: 'Quantum Computing Expert';
-      description: 'Comprehensive quantum computing and quantum-AI convergence';
-      duration: '8 months';
-      courses: 5;
-      price: '$3,999';
-      level: 'Advanced';
-    };
+      name: 'Quantum Computing Expert',
+      description: 'Comprehensive quantum computing and quantum-AI convergence',
+      duration: '8 months',
+      courses: 5,
+      price: '$3,999',
+      level: 'Advanced'
+    },
     {
-      name: 'Cybersecurity Professional';
-      description: 'Complete cybersecurity and zero trust implementation';
-      duration: '4 months';
-      courses: 3;
-      price: '$1,999';
-      level: 'Intermediate';
-    };
+      name: 'Cybersecurity Professional',
+      description: 'Complete cybersecurity and zero trust implementation',
+      duration: '4 months',
+      courses: 3,
+      price: '$1,999',
+      level: 'Intermediate'
+    },
   ],
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -750,4 +738,4 @@ export default function Training() {
       </section>,
     </div>)}
 ,
-export default Training;
+export default Training,

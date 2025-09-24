@@ -12,53 +12,53 @@ interface CountrySelectorProps {
 ,
 const onsiteServicePricing: CountryPricing[] = [
   {
-    country: 'United States';
-    currency: 'USD';
-    multiplier: 1.0;
-    pricePerIncident: 150;
-  };
+    country: 'United States',
+    currency: 'USD',
+    multiplier: 1.0,
+    pricePerIncident: 150
+  },
   {
-    country: 'Canada';
-    currency: 'CAD';
-    multiplier: 1.35;
-    pricePerIncident: 203;
-  };
+    country: 'Canada',
+    currency: 'CAD',
+    multiplier: 1.35,
+    pricePerIncident: 203
+  },
   {
-    country: 'United Kingdom';
-    currency: 'GBP';
-    multiplier: 0.79;
-    pricePerIncident: 119;
-  };
+    country: 'United Kingdom',
+    currency: 'GBP',
+    multiplier: 0.79,
+    pricePerIncident: 119
+  },
   {
-    country: 'Germany';
-    currency: 'EUR';
-    multiplier: 0.92;
-    pricePerIncident: 138;
-  };
+    country: 'Germany',
+    currency: 'EUR',
+    multiplier: 0.92,
+    pricePerIncident: 138
+  },
   {
-    country: 'France';
-    currency: 'EUR';
-    multiplier: 0.92;
-    pricePerIncident: 138;
-  };
+    country: 'France',
+    currency: 'EUR',
+    multiplier: 0.92,
+    pricePerIncident: 138
+  },
   {
-    country: 'Australia';
-    currency: 'AUD';
-    multiplier: 1.52;
-    pricePerIncident: 228;
-  };
+    country: 'Australia',
+    currency: 'AUD',
+    multiplier: 1.52,
+    pricePerIncident: 228
+  },
   {
-    country: 'Japan';
-    currency: 'JPY';
-    multiplier: 150;
-    pricePerIncident: 22500;
-  };
+    country: 'Japan',
+    currency: 'JPY',
+    multiplier: 150,
+    pricePerIncident: 22500
+  },
   {
-    country: 'Singapore';
-    currency: 'SGD';
-    multiplier: 1.35;
-    pricePerIncident: 203;
-  };
+    country: 'Singapore',
+    currency: 'SGD',
+    multiplier: 1.35,
+    pricePerIncident: 203
+  },
 ],
 export default function CountrySelector({ selectedCountry, onCountrySelect }: CountrySelectorProps) {
   const [isOpen, setIsOpen] = useState(false),
@@ -66,7 +66,7 @@ export default function CountrySelector({ selectedCountry, onCountrySelect }: Co
     const selectedCountry = onsiteServicePricing.find(c => c.country === countryName),
     if (selectedCountry) {
       onCountrySelect(selectedCountry)}
-    setIsOpen(false)};
+    setIsOpen(false)},
   return (
     <div className="relative">,
       <button

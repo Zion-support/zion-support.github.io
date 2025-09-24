@@ -9,17 +9,17 @@ import {
   Zap,
   Shield,
   Globe,
-  ArrowRight;
-  Download;
-  ExternalLink;
-  CheckCircle;
-  Star;
-  Lightbulb;
-  Target;
-  BarChart3;
-  Settings;
-  Monitor;
-  Smartphone;
+  ArrowRight,
+  Download,
+  ExternalLink,
+  CheckCircle,
+  Star,
+  Lightbulb,
+  Target,
+  BarChart3,
+  Settings,
+  Monitor,
+  Smartphone,
   Laptop} from 'lucide-react',
 const InteractiveTechShowcase20o26 = () => {
   const [activeDemosetActiveDemo] = useState(0),
@@ -29,92 +29,84 @@ const InteractiveTechShowcase20o26 = () => {
     setIsVisible(true)}[]),
   const demos = [
     {
-      id: 'ai-assistant';
-      title: 'AI Assistant Demo';
-      description: 'Experience our advanced AI assistant in action';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
+      id: 'ai-assistant',
+      title: 'AI Assistant Demo',
+      description: 'Experience our advanced AI assistant in action',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0',
       features: [
-        'Natural language processing';
-        'Real-time responses';
-        'Context awareness';
-        'Multi-language support'];
-      demoUrl: '/demos/ai-assistant';
-      duration: '2 min';
-      difficulty: 'Beginner'};
+        'Natural language processingReal-time responses',
+        'Context awarenessMulti-language support'],
+      demoUrl: '/demos/ai-assistant',
+      duration: '2 min',
+      difficulty: 'Beginner'},
     {
-      id: 'automation-workflow';
-      title: 'Automation Workflow';
-      description: 'See how complex processes are automated';
-      icon: Zap;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      id: 'automation-workflow',
+      title: 'Automation Workflow',
+      description: 'See how complex processes are automated',
+      icon: Zap,
+      color: 'from-blue-50o0 to-cyan-50o0',
       features: [
-        'Visual workflow builder';
-        'Drag-and-drop interface';
-        'Real-time monitoring';
-        'Error handling'];
-      demoUrl: '/demos/automation';
-      duration: '3 min';
-      difficulty: 'Intermediate'};
+        'Visual workflow builderDrag-and-drop interface',
+        'Real-time monitoringError handling'],
+      demoUrl: '/demos/automation',
+      duration: '3 min',
+      difficulty: 'Intermediate'},
     {
-      id: 'security-dashboard';
-      title: 'Security Dashboard';
-      description: 'Monitor threats and security in real-time';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
+      id: 'security-dashboard',
+      title: 'Security Dashboard',
+      description: 'Monitor threats and security in real-time',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0',
       features: [
-        'Threat detection';
-        'Real-time alerts';
-        'Security analytics';
-        'Compliance monitoring'];
-      demoUrl: '/demos/security';
-      duration: '4 min';
-      difficulty: 'Advanced'};
+        'Threat detectionReal-time alerts',
+        'Security analyticsCompliance monitoring'],
+      demoUrl: '/demos/security',
+      duration: '4 min',
+      difficulty: 'Advanced'},
     {
-      id: 'global-analytics';
-      title: 'Global Analytics';
-      description: 'Comprehensive business intelligence platform';
-      icon: Globe;
-      color: 'from-green-50o0 to-emerald-50o0';
+      id: 'global-analytics',
+      title: 'Global Analytics',
+      description: 'Comprehensive business intelligence platform',
+      icon: Globe,
+      color: 'from-green-50o0 to-emerald-50o0',
       features: [
-        'Real-time data visualization';
-        'Predictive analytics';
-        'Custom dashboards';
-        'Export capabilities'];
-      demoUrl: '/demos/analytics';
-      duration: '5 min';
+        'Real-time data visualizationPredictive analytics',
+        'Custom dashboardsExport capabilities'],
+      demoUrl: '/demos/analytics',
+      duration: '5 min',
       difficulty: 'Intermediate'}
   ],
   const tools = [
     {
-      name: 'ROI Calculator';
-      description: 'Calculate your potential return on investment';
-      icon: BarChart3;
-      category: 'Business Tools';
-      popularity: 95};
+      name: 'ROI Calculator',
+      description: 'Calculate your potential return on investment',
+      icon: BarChart3,
+      category: 'Business Tools',
+      popularity: 95},
     {
-      name: 'AI Code Generator';
-      description: 'Generate code with AI assistance';
-      icon: Code;
-      category: 'Development';
-      popularity: 88};
+      name: 'AI Code Generator',
+      description: 'Generate code with AI assistance',
+      icon: Code,
+      category: 'Development',
+      popularity: 88},
     {
-      name: 'Security Scanner';
-      description: 'Scan your systems for vulnerabilities';
-      icon: Shield;
-      category: 'Security';
-      popularity: 92};
+      name: 'Security Scanner',
+      description: 'Scan your systems for vulnerabilities',
+      icon: Shield,
+      category: 'Security',
+      popularity: 92},
     {
-      name: 'Performance Monitor';
-      description: 'Monitor system performance in real-time';
-      icon: Monitor;
-      category: 'Monitoring';
+      name: 'Performance Monitor',
+      description: 'Monitor system performance in real-time',
+      icon: Monitor,
+      category: 'Monitoring',
       popularity: 87}
   ],
   const platforms = [
-    { name: ''Web', 'icon: Laptopstatus: 'Available' };
-    { name: ''Mobile', 'icon: Smartphonestatus: 'Available' };
-    { name: ''Desktop', 'icon: Monitorstatus: 'Coming Soon' }
+    { name: ''Webicon: Laptopstatus: 'Available' },
+    { name: ''Mobileicon: Smartphonestatus: 'Available' },
+    { name: ''Desktopicon: Monitorstatus: 'Coming Soon' }
   ],
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0">,
@@ -352,5 +344,5 @@ const InteractiveTechShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default InteractiveTechShowcase20o26;
+    </div>)},
+export default InteractiveTechShowcase20o26,

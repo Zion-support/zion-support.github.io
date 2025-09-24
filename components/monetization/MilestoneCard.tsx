@@ -9,10 +9,8 @@ type Props = {
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
     milestoneId: string) => Promise<void> | void}
 const statusSteps = [
-  'Pending',
-  'In Progress',
-  'Submitted',
-  'Approved',
+  'PendingIn Progress',
+  'SubmittedApproved',
   'Paid'] as const,
 export default function MilestoneCard({
   milestone,
@@ -22,10 +20,10 @@ export default function MilestoneCard({
   milestone: Milestone,
   project_id: string,
   role: 'client' | 'talent' | 'admin',
-  milestone;
-  projectId;
-  role;
-  onAction;
+  milestone,
+  projectId,
+  role,
+  onAction,
 }: Props) {
   const [expanded, setExpanded] = useState(false),
   const currentIndex = statusSteps.findIndex(s => s === milestone.status),
@@ -34,20 +32,18 @@ export default function MilestoneCard({
   const canTalentSubmit =,
     (role === 'talent' |role === 'admin') &&,
   onAction: (
-    action: 'in_progress' | 'submitted' | 'approved' | 'paid';
-    milestoneId: string) => Promise<void> | void};
+    action: 'in_progress' | 'submitted' | 'approved' | 'paid',
+    milestoneId: string) => Promise<void> | void},
 const statusSteps = [
-  'Pending';
-  'In Progress';
-  'Submitted';
-  'Approved';
-  'Paid';
+  'PendingIn Progress',
+  'SubmittedApproved',
+  'Paid',
 ] as const,
 export default function MilestoneCard(): any ({
-  milestone;
-  projectId;
-  role;
-  onAction;
+  milestone,
+  projectId,
+  role,
+  onAction,
 }: Props) {
   const [expanded, setExpanded] = useState(false),
   const currentIndex = statusSteps && statusSteps.findIndex(s => s === milestone && milestone.status),
@@ -77,16 +73,14 @@ type Props = {
     action: 'in_progress' | 'submitted' | 'approved' | 'paid',
     milestoneId: string) => Promise<void> | void}
 const statusSteps = [
-  'Pending',
-  'In Progress',
-  'Submitted',
-  'Approved',
+  'PendingIn Progress',
+  'SubmittedApproved',
   'Paid'] as const,
 export default function MilestoneCard({
-  milestone;
-  projectId;
-  role;
-  onAction;
+  milestone,
+  projectId,
+  role,
+  onAction,
 }: Props) {
   const [expanded, setExpanded] = useState(false),
   const currentIndex = statusSteps.findIndex(s => s === milestone.status),
@@ -116,10 +110,10 @@ export default function MilestoneCard({
       </div>,
       <div className='mt-3'>,
         <div className='flex items-center gap-2'>type Props = {
-  milestone: Milestone;
-  projectId: string;
-  role: 'client' | 'talent' | 'admin';
-  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void};
+  milestone: Milestone,
+  projectId: string,
+  role: 'client' | 'talent' | 'admin',
+  onAction: (action: 'in_progress' | 'submitted' | 'approved' | 'paid', milestoneId: string) => Promise<void> | void},
 const statusSteps = ['PendingIn ProgressSubmittedApprovedPaid'] as const,
 export default function MilestoneCard(): any ({ milestone, projectId, role, onAction }: Props) {
   const [expanded, setExpanded] = useState(false),

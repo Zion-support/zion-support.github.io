@@ -4,7 +4,7 @@ interface NewsletterSignupProps {
   variant?: 'default' | 'compact' | 'hero',
   className?: string}
 ,
-export default function NewsletterSignup({ variant = ', 'default', 'className = ', ' }: NewsletterSignupProps) {
+export default function NewsletterSignup({ variant = default', 'className =  }: NewsletterSignupProps) {
   const [emailsetEmail] = useState(''),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [isSubscribedsetIsSubscribed] = useState(false),
@@ -15,7 +15,7 @@ export default function NewsletterSignup({ variant = ', 'default', 'className = 
     await new Promise(resolve => setTimeout(resolve10o00)),
     setIsSubscribed(true),
     setIsSubmitting(false),
-    setEmail(', ')};
+    setEmail()},
   if (isSubscribed) {
     return (
       <div className={`text-center p-6 bg-green-50 border border-green-20o0 rounded-lg ${className}`}>,

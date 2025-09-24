@@ -9,52 +9,49 @@ import {
   TrendingUp,
   Eye,
   Heart,
-  Share2;
-  Download;
-  Edit;
-  Plus;
-  Search;
-  Filter;
-  Calendar;
-  Tag;
-  Globe;
-  Zap;
-  Brain;
-  Cpu;
-  Database;
-  Cloud;
-  Shield;
-  CheckCircle;
-  ArrowRight;
-  RefreshCw;
-  Target;
-  Activity;
-  Star;
+  Share2,
+  Download,
+  Edit,
+  Plus,
+  Search,
+  Filter,
+  Calendar,
+  Tag,
+  Globe,
+  Zap,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  RefreshCw,
+  Target,
+  Activity,
+  Star,
   Clock} from 'lucide-react',
 const AdvancedContentManagementSystemPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const features = [
-    'Advanced Content Analytics';
-    'Real-Time Performance Tracking';
-    'Automated Content Optimization';
-    'Multi-Platform Publishing';
-    'AI-Powered Content Suggestions';
-    'Collaborative Workflow Management'],
+    'Advanced Content AnalyticsReal-Time Performance Tracking',
+    'Automated Content OptimizationMulti-Platform Publishing',
+    'AI-Powered Content SuggestionsCollaborative Workflow Management'],
   const stats = [
-    { value: '1,247'label: 'Content 'Items', 'icon: Database };
-    { value: '2.8M+'label: 'Total 'Views', 'icon: Eye };
-    { value: '156K+'label: ''Engagements', 'icon: Heart };
-    { value: '5.5%'label: 'Avg. 'Rate', 'icon: TrendingUp }
+    { value: '1,247'label: 'Content 'Itemsicon: Database },
+    { value: '2.8M+'label: 'Total 'Viewsicon: Eye },
+    { value: '156K+'label: ''Engagementsicon: Heart },
+    { value: '5.5%'label: 'Avg. 'Rateicon: TrendingUp }
   ],
   const contentTypes = [
-    { icon: Globelabel: 'Blog 'Posts', 'count: '342'color: 'green' };
-    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' };
-    { icon: Brainlabel: ''Tutorials', 'count: '289'color: 'orange' };
-    { icon: Cpulabel: ''Research', 'count: '123'color: 'cyan' };
-    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' };
-    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
+    { icon: Globelabel: 'Blog 'Postscount: '342'color: 'green' },
+    { icon: Targetlabel: 'Case 'Studiescount: '156'color: 'purple' },
+    { icon: Brainlabel: ''Tutorialscount: '289'color: 'orange' },
+    { icon: Cpulabel: ''Researchcount: '123'color: 'cyan' },
+    { icon: Activitylabel: ''Videoscount: '89'color: 'red' },
+    { icon: Shieldlabel: ''Whitepaperscount: '78'color: 'indigo' }
   ],
   return (
     <div className="relative overflow-hidden bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-indigo-60o0">,
@@ -184,5 +181,5 @@ const AdvancedContentManagementSystemPromotionBanner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AdvancedContentManagementSystemPromotionBanner;
+    </div>)},
+export default AdvancedContentManagementSystemPromotionBanner,

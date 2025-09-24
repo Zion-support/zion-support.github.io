@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { SEO  } from '@/components/SEO',
 import { AppHeader  } from '@/layout/AppHeader',
 import { Footer  } from '@/components/Footer',
@@ -9,12 +9,12 @@ import {AppHeader} from '@/layout/AppHeader',
 import {Footer} from '@/components/Footer',
 import {DisputeDashboard} from '@/components/disputes',
 import {ProtectedRoute} from '@/components/ProtectedRoute',
-import React from 'react';;
-import { SEO } from '@/components/SEO';
-import { AppHeader } from '@/layout/AppHeader';
-import { Footer } from '@/components/Footer';
-import { DisputeDashboard } from '@/components/disputes';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
+import React from 'react',
+import { SEO } from '@/components/SEO',
+import { AppHeader } from '@/layout/AppHeader',
+import { Footer } from '@/components/Footer',
+import { DisputeDashboard } from '@/components/disputes',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
 import {SEO} from '@/components / SEO',
 import {AppHeader} from '@/layout / AppHeader',
 import {Footer} from '@/components / Footer',
@@ -60,5 +60,5 @@ function DisputesPage() {
       </>,
     </ProtectedRoute>)}
 ,
-export default DisputesPage;
+export default DisputesPage,
 =======>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))})

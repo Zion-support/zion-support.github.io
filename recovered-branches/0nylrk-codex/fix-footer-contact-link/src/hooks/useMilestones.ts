@@ -1,6 +1,6 @@
 export { useMilestones } from './milestones/useMilestones',
 export type {
-  Milestone;
-  MilestoneStatus;
-  MilestoneActivity;
+  Milestone,
+  MilestoneStatus,
+  MilestoneActivity,
 } from './milestones/types',

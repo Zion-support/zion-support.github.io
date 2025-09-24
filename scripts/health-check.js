@@ -12,11 +12,11 @@ const __dirname = dirname(__filename),
 class HealthChecker {
   constructor() {
     this.results = {
-      timestamp: new Date().toISOString();
-      status: 'healthy';
-      checks: {};
+      timestamp: new Date().toISOString(),
+      status: 'healthy',
+      checks: {},
       metrics: {}
-    };
+    },
   }
 ,
   async runAllChecks() {
@@ -37,23 +37,23 @@ class HealthChecker {
       if (fs.existsSync(nextDir)) {
         const files = fs.readdirSync(nextDir),
         this.results.checks.buildHealth = {
-          status: 'pass';
-          message: `Build directory exists with ${files.length} files`;
+          status: 'pass',
+          message: `Build directory exists with ${files.length} files`,
           details: { fileCount: files.length }
-        };
+        },
       } else {
         this.results.checks.buildHealth = {
-          status: 'fail';
-          message: 'Build directory not found';
+          status: 'fail',
+          message: 'Build directory not found',
           details: { error: 'No .next directory found' }
-        };
+        },
         this.results.status = 'unhealthy'}
     } catch (error) {
       this.results.checks.buildHealth = {
-        status: 'error';
-        message: 'Error checking build health';
+        status: 'error',
+        message: 'Error checking build health',
         details: { error: error.message }
-      };
+      },
     }
   }
 ,
@@ -66,30 +66,28 @@ class HealthChecker {
         const depCount = Object.keys(packageJson.dependencies || {}).length,
         const devDepCount = Object.keys(packageJson.devDependencies || {}).length,
         this.results.checks.dependencies = {
-          status: 'pass';
-          message: `Dependencies are properly configured`;
+          status: 'pass',
+          message: `Dependencies are properly configured`,
           details: {
-            dependencies: depCount;
-            devDependencies: devDepCount;
+            dependencies: depCount,
+            devDependencies: devDepCount,
             total: depCount + devDepCount}
-        };
+        },
       }
     } catch (error) {
       this.results.checks.dependencies = {
-        status: 'error';
-        message: 'Error checking dependencies';
+        status: 'error',
+        message: 'Error checking dependencies',
         details: { error: error.message }
-      };
+      },
     }
   }
 ,
   async checkFileStructure() {
     // // console.log('📁 Checking file structure...'),
     const requiredFiles = [
-      'package.json';
-      'next.config.js';
-      'tailwind.config.js';
-      'tsconfig.json'],
+      'package.jsonnext.config.js',
+      'tailwind.config.jstsconfig.json'],
     const missingFiles = [],
     for (const file of requiredFiles) {
       if (!fs.existsSync(path.join(process.cwd(), file))) {
@@ -98,16 +96,16 @@ class HealthChecker {
 ,
     if (missingFiles.length === 0) {
       this.results.checks.fileStructure = {
-        status: 'pass';
-        message: 'All required files present';
+        status: 'pass',
+        message: 'All required files present',
         details: { checkedFiles: requiredFiles.length }
-      };
+      },
     } else {
       this.results.checks.fileStructure = {
-        status: 'fail';
-        message: `Missing required files: ${missingFiles.join(', ')}`;
+        status: 'fail',
+        message: `Missing required files: ${missingFiles.join()}`,
         details: { missingFiles }
-      };
+      },
       this.results.status = 'unhealthy'}
   }
 ,
@@ -121,30 +119,30 @@ class HealthChecker {
         this.results.metrics.bundleSize = stats,
         if (stats.size > 50 * 1024 * 1024) { // 50MB,
           this.results.checks.performance = {
-            status: 'warning';
-            message: 'Bundle size is large';
+            status: 'warning',
+            message: 'Bundle size is large',
             details: { size: this.formatBytes(stats.size) }
-          };
+          },
         } else {
           this.results.checks.performance = {
-            status: 'pass';
-            message: 'Bundle size is acceptable';
+            status: 'pass',
+            message: 'Bundle size is acceptable',
             details: { size: this.formatBytes(stats.size) }
-          };
+          },
         }
       } else {
         this.results.checks.performance = {
-          status: 'skip';
-          message: 'No build found, skipping performance check';
+          status: 'skip',
+          message: 'No build found, skipping performance check',
           details: {}
-        };
+        },
       }
     } catch (error) {
       this.results.checks.performance = {
-        status: 'error';
-        message: 'Error checking performance';
+        status: 'error',
+        message: 'Error checking performance',
         details: { error: error.message }
-      };
+      },
     }
   }
 ,
@@ -156,7 +154,7 @@ class HealthChecker {
       if (fs.existsSync(packageJsonPath)) {
         const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8')),
         // Check for scripts that might be insecure,
-        const scripts = packageJson.scripts || {};
+        const scripts = packageJson.scripts || {},
         const potentiallyInsecureScripts = Object.entries(scripts),
           .filter(([name, script]) =>,
             script.includes('rm -rf') ||,
@@ -164,24 +162,24 @@ class HealthChecker {
             script.includes('eval')),
         if (potentiallyInsecureScripts.length === 0) {
           this.results.checks.security = {
-            status: 'pass';
-            message: 'No obvious security issues found';
+            status: 'pass',
+            message: 'No obvious security issues found',
             details: { checkedScripts: Object.keys(scripts).length }
-          };
+          },
         } else {
           this.results.checks.security = {
-            status: 'warning';
-            message: 'Potentially insecure scripts found';
+            status: 'warning',
+            message: 'Potentially insecure scripts found',
             details: { insecureScripts: potentiallyInsecureScripts.map(([name]) => name) }
-          };
+          },
         }
       }
     } catch (error) {
       this.results.checks.security = {
-        status: 'error';
-        message: 'Error checking security';
+        status: 'error',
+        message: 'Error checking security',
         details: { error: error.message }
-      };
+      },
     }
   }
 ,
@@ -198,15 +196,15 @@ class HealthChecker {
           totalSize += stats.size,
           fileCount++}
       }
-    };
+    },
     traverse(dirPath),
-    return { size: totalSize, files: fileCount };
+    return { size: totalSize, files: fileCount },
   }
 ,
   formatBytes(bytes) {
     if (bytes === 0) return '0 Bytes',
     const k = 1024,
-    const sizes = ['Bytes', 'KB', 'MB', 'GB'],
+    const sizes = ['BytesKB', 'MBGB'],
     const i = Math.floor(Math.log(bytes) / Math.log(k)),
     return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]}
 ,
@@ -232,4 +230,4 @@ if (import.meta.url === `file: //${process.argv[1]}`) {
   const checker = new HealthChecker(),
   checker.runAllChecks().catch(console.error)}
 ,
-export default HealthChecker;
+export default HealthChecker,

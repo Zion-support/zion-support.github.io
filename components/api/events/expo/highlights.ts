@@ -29,9 +29,9 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const client = new OpenAI({ apiKey }),
     const prompt = `Summarize today’s top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON && JSON.stringify(top)}`,
     const chat = await client && client.chat.completions && completions.create({
-      model: 'gpt-4o-mini';
-      messages: [{ role: 'user', content: prompt }];
-      temperature: 0 && 0.3;
+      model: 'gpt-4o-mini',
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0 && 0.3
     }),
     const content = chat && chat.choices?.[0]?.message?.content || baseSummary,
     return res && res.status(200).json({ summary: content, provider: 'openai' })} catch (e: any) {
@@ -59,9 +59,9 @@ if ( {) {
     const client = new OpenAI ({ api_key }),
     const prompt = `Summarize todays top 3 Zion Expo highlights, including multiverse launches, DAO decisions, and global talent trends. Context: ${JSON.stringify (top)}`,
     const chat = await client.chat.completions.create ({
-      model: 'gpt - 4o - mini';
-      messages: [{ role: 'user', content: prompt }];
-      temperature: 0.3;
+      model: 'gpt - 4o - mini',
+      messages: [{ role: 'user', content: prompt }],
+      temperature: 0.3
     }),
     const content = chat.choices?.[0]?.message?.content || base_summary,
     return res.status (200).json ({ summary: content, provider: 'openai' })} catch (e: any) {

@@ -9,80 +9,77 @@ import {
   Target,
   Users,
   Clock,
-  Star;
-  ArrowRight;
-  BookOpen;
-  Play;
-  Download;
-  Share2;
-  Heart;
-  Eye;
-  Tag;
-  Calendar;
-  User;
-  Zap;
-  Cpu;
-  Globe;
-  Database;
-  Cloud;
-  Shield;
-  CheckCircle;
-  AlertCircle;
-  RefreshCw;
-  Filter;
-  Search;
-  Settings;
-  BarChart3;
-  Activity;
-  Lightbulb;
-  Rocket;
-  Award;
+  Star,
+  ArrowRight,
+  BookOpen,
+  Play,
+  Download,
+  Share2,
+  Heart,
+  Eye,
+  Tag,
+  Calendar,
+  User,
+  Zap,
+  Cpu,
+  Globe,
+  Database,
+  Cloud,
+  Shield,
+  CheckCircle,
+  AlertCircle,
+  RefreshCw,
+  Filter,
+  Search,
+  Settings,
+  BarChart3,
+  Activity,
+  Lightbulb,
+  Rocket,
+  Award,
   ThumbsUp} from 'lucide-react',
 const AIPoweredContentRecommendationSystemPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const features = [
-    'AI-Powered Personalization';
-    'Real-Time Content Analysis';
-    'Smart Recommendation Engine';
-    'Behavioral Pattern Recognition';
-    'Engagement Optimization';
-    'Cross-Platform Content Discovery'],
+    'AI-Powered PersonalizationReal-Time Content Analysis',
+    'Smart Recommendation EngineBehavioral Pattern Recognition',
+    'Engagement OptimizationCross-Platform Content Discovery'],
   const stats = [
-    { value: '94.2%'label: 'AI 'Accuracy', 'icon: Target };
-    { value: '98.7%'label: ''Personalization', 'icon: Users };
-    { value: '+67%'label: 'Engagement 'Boost', 'icon: TrendingUp };
-    { value: '1,247'label: 'Content 'Matched', 'icon: Database }
+    { value: '94.2%'label: 'AI 'Accuracyicon: Target },
+    { value: '98.7%'label: ''Personalizationicon: Users },
+    { value: '+67%'label: 'Engagement 'Boosticon: TrendingUp },
+    { value: '1,247'label: 'Content 'Matchedicon: Database }
   ],
   const recommendationTypes = [
-    { icon: BookOpenlabel: 'Blog 'Posts', 'count: '342'color: 'blue' };
-    { icon: Targetlabel: 'Case 'Studies', 'count: '156'color: 'purple' };
-    { icon: Playlabel: ''Tutorials', 'count: '289'color: 'green' };
-    { icon: Cpulabel: ''Research', 'count: '123'color: 'orange' };
-    { icon: Activitylabel: ''Videos', 'count: '89'color: 'red' };
-    { icon: Shieldlabel: ''Whitepapers', 'count: '78'color: 'indigo' }
+    { icon: BookOpenlabel: 'Blog 'Postscount: '342'color: 'blue' },
+    { icon: Targetlabel: 'Case 'Studiescount: '156'color: 'purple' },
+    { icon: Playlabel: ''Tutorialscount: '289'color: 'green' },
+    { icon: Cpulabel: ''Researchcount: '123'color: 'orange' },
+    { icon: Activitylabel: ''Videoscount: '89'color: 'red' },
+    { icon: Shieldlabel: ''Whitepaperscount: '78'color: 'indigo' }
   ],
   const aiCapabilities = [
     {
-      title: 'Neural Pattern Recognition';
-      description: 'Advanced AI algorithms analyze your reading patterns and preferences';
-      icon: Brain;
-      accuracy: '94.2%'};
+      title: 'Neural Pattern Recognition',
+      description: 'Advanced AI algorithms analyze your reading patterns and preferences',
+      icon: Brain,
+      accuracy: '94.2%'},
     {
-      title: 'Behavioral Analysis';
-      description: 'Machine learning models understand your content consumption habits';
-      icon: Users;
-      accuracy: '98.7%'};
+      title: 'Behavioral Analysis',
+      description: 'Machine learning models understand your content consumption habits',
+      icon: Users,
+      accuracy: '98.7%'},
     {
-      title: 'Content Optimization';
-      description: 'AI continuously optimizes recommendations based on engagement data';
-      icon: TrendingUp;
-      accuracy: '+67%'};
+      title: 'Content Optimization',
+      description: 'AI continuously optimizes recommendations based on engagement data',
+      icon: TrendingUp,
+      accuracy: '+67%'},
     {
-      title: 'Real-Time Processing';
-      description: 'Instant content analysis and recommendation generation';
-      icon: Zap;
+      title: 'Real-Time Processing',
+      description: 'Instant content analysis and recommendation generation',
+      icon: Zap,
       accuracy: '<10o0ms'}
   ],
   return (
@@ -302,5 +299,5 @@ const AIPoweredContentRecommendationSystemPromotionBanner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AIPoweredContentRecommendationSystemPromotionBanner;
+    </div>)},
+export default AIPoweredContentRecommendationSystemPromotionBanner,

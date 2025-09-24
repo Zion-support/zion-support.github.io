@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 ArrowRightClockTagStarSparkles,
 interface BannerItem {
@@ -21,67 +21,67 @@ interface EnhancedContentBannerProps {
   className?: string}
 ,
 const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
-  title;
-  subtitle;
-  items;
-  ctaText;
-  ctaHref;
-  variant = 'gradient';
-  colorScheme = 'blue';
-  className = ', ';
+  title,
+  subtitle,
+  items,
+  ctaText,
+  ctaHref,
+  variant = 'gradient',
+  colorScheme = 'blue',
+  className = ,
 }) => {
   const getColorClasses = (scheme: string) => {
     switch (scheme) {
       case 'blue':,
         return {
-          gradient: 'from-blue-60o0 to-purple-60o0';
-          solid: 'bg-blue-60o0';
-          outline: 'border-blue-60o0 text-blue-60o0';
-          accent: 'text-blue-10o0';
-          hover: 'hover:from-blue-70o0 hover:to-purple-70o0';
-        };
+          gradient: 'from-blue-60o0 to-purple-60o0',
+          solid: 'bg-blue-60o0',
+          outline: 'border-blue-60o0 text-blue-60o0',
+          accent: 'text-blue-10o0',
+          hover: 'hover:from-blue-70o0 hover:to-purple-70o0'
+        },
       case 'green':,
         return {
-          gradient: 'from-green-60o0 to-emerald-60o0';
-          solid: 'bg-green-60o0';
-          outline: 'border-green-60o0 text-green-60o0';
-          accent: 'text-green-10o0';
-          hover: 'hover:from-green-70o0 hover:to-emerald-70o0';
-        };
+          gradient: 'from-green-60o0 to-emerald-60o0',
+          solid: 'bg-green-60o0',
+          outline: 'border-green-60o0 text-green-60o0',
+          accent: 'text-green-10o0',
+          hover: 'hover:from-green-70o0 hover:to-emerald-70o0'
+        },
       case 'purple':,
         return {
-          gradient: 'from-purple-60o0 to-pink-60o0';
-          solid: 'bg-purple-60o0';
-          outline: 'border-purple-60o0 text-purple-60o0';
-          accent: 'text-purple-10o0';
-          hover: 'hover:from-purple-70o0 hover:to-pink-70o0';
-        };
+          gradient: 'from-purple-60o0 to-pink-60o0',
+          solid: 'bg-purple-60o0',
+          outline: 'border-purple-60o0 text-purple-60o0',
+          accent: 'text-purple-10o0',
+          hover: 'hover:from-purple-70o0 hover:to-pink-70o0'
+        },
       case 'orange':,
         return {
-          gradient: 'from-orange-60o0 to-red-60o0';
-          solid: 'bg-orange-60o0';
-          outline: 'border-orange-60o0 text-orange-60o0';
-          accent: 'text-orange-10o0';
-          hover: 'hover:from-orange-70o0 hover:to-red-70o0';
-        };
+          gradient: 'from-orange-60o0 to-red-60o0',
+          solid: 'bg-orange-60o0',
+          outline: 'border-orange-60o0 text-orange-60o0',
+          accent: 'text-orange-10o0',
+          hover: 'hover:from-orange-70o0 hover:to-red-70o0'
+        },
       case 'red':,
         return {
-          gradient: 'from-red-60o0 to-pink-60o0';
-          solid: 'bg-red-60o0';
-          outline: 'border-red-60o0 text-red-60o0';
-          accent: 'text-red-10o0';
-          hover: 'hover:from-red-70o0 hover:to-pink-70o0';
-        };
+          gradient: 'from-red-60o0 to-pink-60o0',
+          solid: 'bg-red-60o0',
+          outline: 'border-red-60o0 text-red-60o0',
+          accent: 'text-red-10o0',
+          hover: 'hover:from-red-70o0 hover:to-pink-70o0'
+        },
       default: ,
         return {
-          gradient: 'from-blue-60o0 to-purple-60o0';
-          solid: 'bg-blue-60o0';
-          outline: 'border-blue-60o0 text-blue-60o0';
-          accent: 'text-blue-10o0';
-          hover: 'hover:from-blue-70o0 hover:to-purple-70o0';
-        };
+          gradient: 'from-blue-60o0 to-purple-60o0',
+          solid: 'bg-blue-60o0',
+          outline: 'border-blue-60o0 text-blue-60o0',
+          accent: 'text-blue-10o0',
+          hover: 'hover:from-blue-70o0 hover:to-purple-70o0'
+        },
     }
-  };
+  },
   const colors = getColorClasses(colorScheme),
   const getVariantClasses = () => {
     switch (variant) {
@@ -93,7 +93,7 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
         return `border-2 ${colors.outline} bg-white`,
       default:  ,
         return `bg-gradient-to-r ${colors.gradient} text-white`}
-  };
+  },
   return (
     <section className={`py-16 ${className}`}>,
       <div className='container mx-auto px-4'>,
@@ -172,5 +172,5 @@ const EnhancedContentBanner: React.FC<EnhancedContentBannerProps> = ({
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedContentBanner;
+    </section>)},
+export default EnhancedContentBanner,

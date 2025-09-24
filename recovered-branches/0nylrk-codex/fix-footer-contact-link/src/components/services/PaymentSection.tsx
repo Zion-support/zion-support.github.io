@@ -2,12 +2,12 @@ import {MapPin} from "lucide-react",
 import {PaymentButton} from "@/components/transactions/PaymentButton",
 import {CountryPricing} from "@/data/onsiteServicePricing",
 import {toast} from "@/hooks/use-toast",
-import { MapPin } from "lucide-react";
-import { PaymentButton } from "@/components/transactions/PaymentButton";
+import { MapPin } from "lucide-react",
+import { PaymentButton } from "@/components/transactions/PaymentButton",
 import { CountryPricing } from "@/data/onsiteServicePricing",
 import { toast } from "@/hooks/use-toast",
-import { CountryPricing } from "@/data/onsiteServicePricing";
-import { toast } from "@/hooks/use-toast";
+import { CountryPricing } from "@/data/onsiteServicePricing",
+import { toast } from "@/hooks/use-toast",
 interface PaymentSectionProps {
   selected_country: CountryPricing}
 ,
@@ -17,9 +17,9 @@ interface PaymentSectionProps {
       description:,
         "You'll be redirected to our secure payment portal momentarily."})}
 ,
-      title: "Processing your request";
-      description: "You'll be redirected to our secure payment portal momentarily."})};
-      description: "You'll be redirected to our secure payment portal momentarily."})};
+      title: "Processing your request",
+      description: "You'll be redirected to our secure payment portal momentarily."})},
+      description: "You'll be redirected to our secure payment portal momentarily."})},
   return (
     <div className="text-center">,
       <p className="text-zion-slate-light mb-2">Selected Country</p>,
@@ -36,7 +36,7 @@ export function PaymentSection({ selectedCountry }: PaymentSectionProps) {
   const handlePaymentInitiated = () => {
     toast({
       title: "Processing your request",
-      description: "You'll be redirected to our secure payment portal momentarily."})};
+      description: "You'll be redirected to our secure payment portal momentarily."})},
   return (
     <div className="text-center">,
       <p className="text-zion-slate-light mb-2">Selected Country</p>,
@@ -57,8 +57,8 @@ export function PaymentSection(): any ({ selectedCountry }: PaymentSectionProps)
   // Handle successful payment,
   const handlePaymentInitiated = () => {
     toast({
-      title: "Processing your request";
-      description: "You'll be redirected to our secure payment portal momentarily."})};
+      title: "Processing your request",
+      description: "You'll be redirected to our secure payment portal momentarily."})},
   return (
     <div className="text-center">,
       <p className="text-zion-slate-light mb-2">Selected Country</p>,
@@ -98,8 +98,8 @@ function PaymentSection() {
   // Handle successful payment,
   const handlePaymentInitiated = () =>: any {
     toast ({
-      title: "Processing your request";
+      title: "Processing your request",
       description:,
-        "You'll be redirected to our secure payment portal momentarily.";
+        "You'll be redirected to our secure payment portal momentarily.",
     })}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

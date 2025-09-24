@@ -16,46 +16,46 @@ interface DemoFormData {
   message: string}
 ,
 const industries = [
-  ', 'Technology', 'Healthcare', 'Finance', 'Manufacturing', 'Retail', 'Education', 'Government', 'Other'],
+  Technology', 'HealthcareFinance', 'ManufacturingRetail', 'EducationGovernment', 'Other'],
 const companySizes = [
   '1-10 employees'11-50 employees'51-20o0 employees'20o1-10o00 employees'10o00+ employees'],
 const interests = [
-  'AI 'Automation', 'Cybersecurity'Cloud 'Solutions', 'Data 'Analytics', 'Digital 'Transformation', 'Process Optimization'],
+  'AI 'AutomationCybersecurity'Cloud 'SolutionsData 'Analytics', 'Digital 'TransformationProcess Optimization'],
 const timeSlots = [
   '9: 0o0 AM'10:0o0 AM'11:0o0 AM'1:0o0 PM'2:0o0 PM'3:0o0 PM'4:0o0 PM'],
 export default function InteractiveDemoRequest() {
   const [isOpen, setIsOpen] = useState(false),
   const [currentStep, setCurrentStep] = useState(1),
   const [formData, setFormData] = useState<DemoFormData>({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    role: '';
-    companySize: '';
-    industry: '';
-    interests: [];
-    preferredDate: '';
-    preferredTime: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    role: '',
+    companySize: '',
+    industry: '',
+    interests: [],
+    preferredDate: '',
+    preferredTime: '',
     message: ''}),
   const [isSubmittedsetIsSubmitted] = useState(false),
   const handleInputChange = (field: keyof DemoFormDatavalue: string | string[]) => {
-    setFormData(prev => ({ ...prev[field]: value }))};
+    setFormData(prev => ({ ...prev[field]: value }))},
   const handleInterestToggle = (interest: string) => {
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       interests: prev.interests.includes(interest),
         ? prev.interests.filter(i => i !== interest),
-        : [...prev.interestsinterest]}))};
+        : [...prev.interestsinterest]}))},
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Here you would typically send the data to your backend,
     // // console.log('Demo request submitted:'formData),
-    setIsSubmitted(true)};
+    setIsSubmitted(true)},
   const nextStep = () => {
-    if (currentStep < 3) setCurrentStep(currentStep + 1)};
+    if (currentStep < 3) setCurrentStep(currentStep + 1)},
   const prevStep = () => {
-    if (currentStep > 1) setCurrentStep(currentStep - 1)};
+    if (currentStep > 1) setCurrentStep(currentStep - 1)},
   return (
     <>,
       {/* Floating Demo Button */}
@@ -153,7 +153,7 @@ export default function InteractiveDemoRequest() {
                                 type="text",
                                 required,
                                 value={formData.name}
-                                onChange={(e) => handleInputChange(', 'name', 'e.target.value)}
+                                onChange={(e) => handleInputChange(name', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="John Doe",
                               />,
@@ -164,7 +164,7 @@ export default function InteractiveDemoRequest() {
                                 type="email",
                                 required,
                                 value={formData.email}
-                                onChange={(e) => handleInputChange(', 'email', 'e.target.value)}
+                                onChange={(e) => handleInputChange(email', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="john@company.com",
                               />,
@@ -176,7 +176,7 @@ export default function InteractiveDemoRequest() {
                               <input
                                 type="tel",
                                 value={formData.phone}
-                                onChange={(e) => handleInputChange(', 'phone', 'e.target.value)}
+                                onChange={(e) => handleInputChange(phone', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="+1 (555) 123-4567",
                               />,
@@ -187,7 +187,7 @@ export default function InteractiveDemoRequest() {
                                 type="text",
                                 required,
                                 value={formData.role}
-                                onChange={(e) => handleInputChange(', 'role', 'e.target.value)}
+                                onChange={(e) => handleInputChange(role', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                                 placeholder="CTOCEOetc.",
                               />,
@@ -210,7 +210,7 @@ export default function InteractiveDemoRequest() {
                               type="text",
                               required,
                               value={formData.company}
-                              onChange={(e) => handleInputChange(', 'company', 'e.target.value)}
+                              onChange={(e) => handleInputChange(company', 'e.target.value)}
                               className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                               placeholder="Your Company",
                             />,
@@ -221,7 +221,7 @@ export default function InteractiveDemoRequest() {
                               <select
                                 required,
                                 value={formData.companySize}
-                                onChange={(e) => handleInputChange(', 'companySize', 'e.target.value)}
+                                onChange={(e) => handleInputChange(companySize', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                                 <option value="">Select size</option>,
                                 {companySizes.map(size => (
@@ -233,7 +233,7 @@ export default function InteractiveDemoRequest() {
                               <select
                                 required,
                                 value={formData.industry}
-                                onChange={(e) => handleInputChange(', 'industry', 'e.target.value)}
+                                onChange={(e) => handleInputChange(industry', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                                 <option value="">Select industry</option>,
                                 {industries.map(industry => (
@@ -276,7 +276,7 @@ export default function InteractiveDemoRequest() {
                                 type="date",
                                 required,
                                 value={formData.preferredDate}
-                                onChange={(e) => handleInputChange(', 'preferredDate', 'e.target.value)}
+                                onChange={(e) => handleInputChange(preferredDate', 'e.target.value)}
                                 min={new Date().toISOString().split('T')[0]}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                               />,
@@ -286,7 +286,7 @@ export default function InteractiveDemoRequest() {
                               <select
                                 required,
                                 value={formData.preferredTime}
-                                onChange={(e) => handleInputChange(', 'preferredTime', 'e.target.value)}
+                                onChange={(e) => handleInputChange(preferredTime', 'e.target.value)}
                                 className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent">,
                                 <option value="">Select time</option>,
                                 {timeSlots.map(time => (
@@ -298,7 +298,7 @@ export default function InteractiveDemoRequest() {
                             <label className="block text-sm font-medium text-gray-70o0 mb-2">Additional Message</label>,
                             <textarea
                               value={formData.message}
-                              onChange={(e) => handleInputChange(', 'message', 'e.target.value)}
+                              onChange={(e) => handleInputChange(message', 'e.target.value)}
                               rows={4}
                               className="w-full px-4 py-3 border border-gray-30o0 rounded-lg focus: ring-2 focus:ring-blue-50o0 focus:border-transparent",
                               placeholder="Tell us about your specific needs or questions...",

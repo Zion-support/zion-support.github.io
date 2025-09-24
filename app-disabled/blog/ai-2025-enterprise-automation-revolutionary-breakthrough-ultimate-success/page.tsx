@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o25: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,50o0% ROI';
+    'AI 20o25: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,50o0% ROI',
   description:,
-    'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI automation. Complete implementation guide with real-world success stories.';
+    'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI automation. Complete implementation guide with real-world success stories.',
   keywords: [
-    'AI Automation';
-    'Enterprise';
-    'ROI';
-    'Revolutionary Breakthrough';
-    '20o25';
-    'Fortune 50o0';
-  ];
-};
+    'AI AutomationEnterprise',
+    'ROIRevolutionary Breakthrough',
+    '20o25Fortune 50o0',
+  ]
+},
 export default function AI20o25EnterpriseAutomationRevolutionaryBreakthroughPage() {
   return (
     <>,

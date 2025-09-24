@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Star, Check, Zap, TrendingUp, Shield, Brain, Atom, Rocket } from 'lucide-react',
 interface Service {
@@ -11,7 +11,7 @@ interface Service {
     yearly?: number,
     currency?: string,
     trialDays?: number,
-    setupTime?: string};
+    setupTime?: string},
   period?: string,
   pricing?: any,
   features: string[],
@@ -34,83 +34,83 @@ const UltraFuturisticServiceCard20o26: React.FC<ServiceCardProps> = ({ service, 
     switch (variant) {
       case 'ai':,
         return {
-          gradient: 'from-purple-60o0 via-pink-60o0 to-purple-70o0';
-          borderColor: 'border-purple-40o0/30';
-          textColor: 'text-purple-40o0';
-          iconBg: 'bg-purple-50o0/20';
-          iconBorder: 'border-purple-40o0/30'};
+          gradient: 'from-purple-60o0 via-pink-60o0 to-purple-70o0',
+          borderColor: 'border-purple-40o0/30',
+          textColor: 'text-purple-40o0',
+          iconBg: 'bg-purple-50o0/20',
+          iconBorder: 'border-purple-40o0/30'},
       case 'quantum':,
         return {
-          gradient: 'from-cyan-60o0 via-blue-60o0 to-cyan-70o0';
-          borderColor: 'border-cyan-40o0/30';
-          textColor: 'text-cyan-40o0';
-          iconBg: 'bg-cyan-50o0/20';
-          iconBorder: 'border-cyan-40o0/30'};
+          gradient: 'from-cyan-60o0 via-blue-60o0 to-cyan-70o0',
+          borderColor: 'border-cyan-40o0/30',
+          textColor: 'text-cyan-40o0',
+          iconBg: 'bg-cyan-50o0/20',
+          iconBorder: 'border-cyan-40o0/30'},
       case 'space':,
         return {
-          gradient: 'from-indigo-60o0 via-purple-60o0 to-indigo-70o0';
-          borderColor: 'border-indigo-40o0/30';
-          textColor: 'text-indigo-40o0';
-          iconBg: 'bg-indigo-50o0/20';
-          iconBorder: 'border-indigo-40o0/30'};
+          gradient: 'from-indigo-60o0 via-purple-60o0 to-indigo-70o0',
+          borderColor: 'border-indigo-40o0/30',
+          textColor: 'text-indigo-40o0',
+          iconBg: 'bg-indigo-50o0/20',
+          iconBorder: 'border-indigo-40o0/30'},
       case 'cybersecurity':,
         return {
-          gradient: 'from-red-60o0 via-orange-60o0 to-red-70o0';
-          borderColor: 'border-red-40o0/30';
-          textColor: 'text-red-40o0';
-          iconBg: 'bg-red-50o0/20';
-          iconBorder: 'border-red-40o0/30'};
+          gradient: 'from-red-60o0 via-orange-60o0 to-red-70o0',
+          borderColor: 'border-red-40o0/30',
+          textColor: 'text-red-40o0',
+          iconBg: 'bg-red-50o0/20',
+          iconBorder: 'border-red-40o0/30'},
       case 'enterprise':,
         return {
-          gradient: 'from-indigo-60o0 via-purple-60o0 to-indigo-70o0';
-          borderColor: 'border-indigo-40o0/30';
-          textColor: 'text-indigo-40o0';
-          iconBg: 'bg-indigo-50o0/20';
-          iconBorder: 'border-indigo-40o0/30'};
+          gradient: 'from-indigo-60o0 via-purple-60o0 to-indigo-70o0',
+          borderColor: 'border-indigo-40o0/30',
+          textColor: 'text-indigo-40o0',
+          iconBg: 'bg-indigo-50o0/20',
+          iconBorder: 'border-indigo-40o0/30'},
       case 'automation':,
         return {
-          gradient: 'from-green-60o0 via-emerald-60o0 to-green-70o0';
-          borderColor: 'border-green-40o0/30';
-          textColor: 'text-green-40o0';
-          iconBg: 'bg-green-50o0/20';
-          iconBorder: 'border-green-40o0/30'};
+          gradient: 'from-green-60o0 via-emerald-60o0 to-green-70o0',
+          borderColor: 'border-green-40o0/30',
+          textColor: 'text-green-40o0',
+          iconBg: 'bg-green-50o0/20',
+          iconBorder: 'border-green-40o0/30'},
       case 'it':,
         return {
-          gradient: 'from-blue-60o0 via-indigo-60o0 to-blue-70o0';
-          borderColor: 'border-blue-40o0/30';
-          textColor: 'text-blue-40o0';
-          iconBg: 'bg-blue-50o0/20';
-          iconBorder: 'border-blue-40o0/30'};
+          gradient: 'from-blue-60o0 via-indigo-60o0 to-blue-70o0',
+          borderColor: 'border-blue-40o0/30',
+          textColor: 'text-blue-40o0',
+          iconBg: 'bg-blue-50o0/20',
+          iconBorder: 'border-blue-40o0/30'},
       case 'emerging':,
         return {
-          gradient: 'from-yellow-60o0 via-orange-60o0 to-yellow-70o0';
-          borderColor: 'border-yellow-40o0/30';
-          textColor: 'text-yellow-40o0';
-          iconBg: 'bg-yellow-50o0/20';
-          iconBorder: 'border-yellow-40o0/30'};
+          gradient: 'from-yellow-60o0 via-orange-60o0 to-yellow-70o0',
+          borderColor: 'border-yellow-40o0/30',
+          textColor: 'text-yellow-40o0',
+          iconBg: 'bg-yellow-50o0/20',
+          iconBorder: 'border-yellow-40o0/30'},
       case 'premium':,
         return {
-          gradient: 'from-amber-60o0 via-yellow-60o0 to-amber-70o0';
-          borderColor: 'border-amber-40o0/30';
-          textColor: 'text-amber-40o0';
-          iconBg: 'bg-amber-50o0/20';
-          iconBorder: 'border-amber-40o0/30'};
+          gradient: 'from-amber-60o0 via-yellow-60o0 to-amber-70o0',
+          borderColor: 'border-amber-40o0/30',
+          textColor: 'text-amber-40o0',
+          iconBg: 'bg-amber-50o0/20',
+          iconBorder: 'border-amber-40o0/30'},
       default: ,
         return {
-          gradient: 'from-gray-60o0 via-gray-70o0 to-gray-80o0';
-          borderColor: 'border-gray-40o0/30';
-          textColor: 'text-gray-40o0';
-          iconBg: 'bg-gray-50o0/20';
-          iconBorder: 'border-gray-40o0/30'};
+          gradient: 'from-gray-60o0 via-gray-70o0 to-gray-80o0',
+          borderColor: 'border-gray-40o0/30',
+          textColor: 'text-gray-40o0',
+          iconBg: 'bg-gray-50o0/20',
+          iconBorder: 'border-gray-40o0/30'},
     }
-  };
+  },
   const styles = getVariantStyles(),
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return Brain,
     if (category.includes('Quantum')) return Atom,
     if (category.includes('Space')) return Rocket,
     if (category.includes('Cybersecurity')) return Shield,
-    return TrendingUp};
+    return TrendingUp},
   const CategoryIcon = getCategoryIcon(service.category),
   return (
     <motion.div,
@@ -180,7 +180,7 @@ const UltraFuturisticServiceCard20o26: React.FC<ServiceCardProps> = ({ service, 
             </div>,
             {service.competitors && (
               <div className="text-xs text-gray-50o0">,
-                Competes with: {service.competitors.slice(0, 2).join(', ')}
+                Competes with: {service.competitors.slice(0, 2).join()}
               </div>)}
           </div>)}
 ,
@@ -229,4 +229,4 @@ const UltraFuturisticServiceCard20o26: React.FC<ServiceCardProps> = ({ service, 
       </div>,
     </motion.div>)}),
 UltraFuturisticServiceCard20o26.displayName = 'UltraFuturisticServiceCard20o26',
-export default UltraFuturisticServiceCard20o26;
+export default UltraFuturisticServiceCard20o26,

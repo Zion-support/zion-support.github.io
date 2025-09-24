@@ -9,12 +9,12 @@ import {
   TrendingUp,
   ArrowRight,
   Play,
-  CheckCircle;
-  Sparkles;
-  Rocket;
-  Brain;
-  Cpu;
-  Globe;
+  CheckCircle,
+  Sparkles,
+  Rocket,
+  Brain,
+  Cpu,
+  Globe,
   Shield} from 'lucide-react',
 const UltimateContentPromotionBanner20o25_20o26 = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
@@ -26,31 +26,31 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      id: 'ai-20o25-breakthrough';
-      title: 'AI 20o25 Revolutionary Breakthroughs';
-      subtitle: 'Experience the Future of Artificial Intelligence';
-      description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.';
-      features: ['Neural Consciousness 'AI', 'Quantum-Neural 'Fusion', 'Autonomous Data Intelligence'];
-      cta: 'Explore AI 20o25';
-      gradient: 'from-blue-60o0 via-purple-60o0 to-pink-60o0';
-      icon: Brain};
+      id: 'ai-20o25-breakthrough',
+      title: 'AI 20o25 Revolutionary Breakthroughs',
+      subtitle: 'Experience the Future of Artificial Intelligence',
+      description: 'Discover cutting-edge AI solutions that will transform your business operations and unlock unprecedented growth opportunities.',
+      features: ['Neural Consciousness 'AIQuantum-Neural 'Fusion', 'Autonomous Data Intelligence'],
+      cta: 'Explore AI 20o25',
+      gradient: 'from-blue-60o0 via-purple-60o0 to-pink-60o0',
+      icon: Brain},
     {
-      id: 'ai-20o26-vision';
-      title: 'AI 20o26 Future Vision';
-      subtitle: 'Prepare for the Next Decade of Innovation';
-      description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.';
-      features: ['Global AI 'Ecosystem', 'Space-Age 'Computing', 'Conscious AI Beings'];
-      cta: 'Discover AI 20o26';
-      gradient: 'from-emerald-60o0 via-cyan-60o0 to-blue-60o0';
-      icon: Globe};
+      id: 'ai-20o26-vision',
+      title: 'AI 20o26 Future Vision',
+      subtitle: 'Prepare for the Next Decade of Innovation',
+      description: 'Get ahead of the curve with our advanced AI technologies designed for the future of business and technology.',
+      features: ['Global AI 'EcosystemSpace-Age 'Computing', 'Conscious AI Beings'],
+      cta: 'Discover AI 20o26',
+      gradient: 'from-emerald-60o0 via-cyan-60o0 to-blue-60o0',
+      icon: Globe},
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing Revolution';
-      subtitle: 'Unlock Infinite Computational Power';
-      description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.';
-      features: ['Quantum 'Supremacy', 'Exponential 'Speed', 'Unlimited Scalability'];
-      cta: 'Learn More';
-      gradient: 'from-purple-60o0 via-pink-60o0 to-red-60o0';
+      id: 'quantum-computing',
+      title: 'Quantum Computing Revolution',
+      subtitle: 'Unlock Infinite Computational Power',
+      description: 'Harness the power of quantum computing to solve complex problems and accelerate your digital transformation.',
+      features: ['Quantum 'SupremacyExponential 'Speed', 'Unlimited Scalability'],
+      cta: 'Learn More',
+      gradient: 'from-purple-60o0 via-pink-60o0 to-red-60o0',
       icon: Cpu}
   ],
   const currentSlideData = slides[currentSlide],
@@ -65,15 +65,15 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                opacity: [0o10];
-                scale: [0o10];
+                opacity: [0o10],
+                scale: [0o10],
                 y: [0-20]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
+                duration: 4,
+                repeat: Infinity,
                 delay: Math.random() * 4}}
              />))}
         </div>,
@@ -188,14 +188,14 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
                     key={i}
                     className="absolute w-4 h-4 bg-white/20 rounded-full",
                     style={{
-                      left: `${20 + (i * 15)}%`;
+                      left: `${20 + (i * 15)}%`,
                       top: `${30 + (i * 10)}%`}}
                     animate={{
-                      y: [0-20];
+                      y: [0-20],
                       opacity: [0.310.3]}}
                     transition={{
-                      duration: 3;
-                      repeat: Infinity;
+                      duration: 3,
+                      repeat: Infinity,
                       delay: i * 0.5}}
                    />))}
               </div>,
@@ -224,5 +224,5 @@ const UltimateContentPromotionBanner20o25_20o26 = () => {
           transition={{ duration: 5repeat: Infinityease: "linear" }}
          />,
       </div>,
-    </div>)};
-export default UltimateContentPromotionBanner20o25_20o26;
+    </div>)},
+export default UltimateContentPromotionBanner20o25_20o26,

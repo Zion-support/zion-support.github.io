@@ -1,4 +1,4 @@
-export const metadata = { title: 'AI Analytics Platform | Zion Tech Group' };
+export const metadata = { title: 'AI Analytics Platform | Zion Tech Group' },
 export default function AIAnalyticsPlatformPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -16,36 +16,27 @@ export default function AIAnalyticsPlatformPage() {
         <FeatureCard
           title='Data Integration & Processing',
           features={[
-            'Connect to 10o0+ data sources';
-            'Real-time data ingestion & ETL';
-            'Data cleaning & transformation';
-            'Data quality monitoring';
-            'Automated data pipelines';
-            'Cloud & on-premise support';
+            'Connect to 10o0+ data sourcesReal-time data ingestion & ETL',
+            'Data cleaning & transformationData quality monitoring',
+            'Automated data pipelinesCloud & on-premise support',
           ]}
           icon='📊',
         />,
         <FeatureCard
           title='AI-Powered Analytics',
           features={[
-            'Predictive modeling & forecasting';
-            'Anomaly detection & alerts';
-            'Natural language query interface';
-            'Automated insight generation';
-            'Machine learning model deployment';
-            'Custom algorithm development';
+            'Predictive modeling & forecastingAnomaly detection & alerts',
+            'Natural language query interfaceAutomated insight generation',
+            'Machine learning model deploymentCustom algorithm development',
           ]}
           icon='🧠',
         />,
         <FeatureCard
           title='Visualization & Reporting',
           features={[
-            'Interactive dashboards & charts';
-            'Automated report generation';
-            'Mobile-responsive design';
-            'Real-time data visualization';
-            'Custom KPI tracking';
-            'Scheduled report delivery';
+            'Interactive dashboards & chartsAutomated report generation',
+            'Mobile-responsive designReal-time data visualization',
+            'Custom KPI trackingScheduled report delivery',
           ]}
           icon='📈',
         />,
@@ -98,9 +89,9 @@ export default function AIAnalyticsPlatformPage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -130,12 +121,9 @@ function PricingSection() {
           price='$199/mo',
           duration='Up to 5 users',
           features={[
-            'Basic data visualization';
-            '5 data source connections';
-            'Standard reporting';
-            'Email support';
-            'Mobile app access';
-            'Basic AI insights';
+            'Basic data visualization5 data source connections',
+            'Standard reportingEmail support',
+            'Mobile app accessBasic AI insights',
           ]}
           popular={false}
         />,
@@ -144,13 +132,10 @@ function PricingSection() {
           price='$499/mo',
           duration='Up to 25 users',
           features={[
-            'Everything in Starter Analytics';
-            'Advanced AI & ML models';
-            'Unlimited data sources';
-            'Custom dashboards';
-            'API access & integrations';
-            'Predictive analytics';
-            'Priority support';
+            'Everything in Starter AnalyticsAdvanced AI & ML models',
+            'Unlimited data sourcesCustom dashboards',
+            'API access & integrationsPredictive analytics',
+            'Priority support',
           ]}
           popular={true}
         />,
@@ -159,13 +144,10 @@ function PricingSection() {
           price='$1,299/mo',
           duration='Unlimited users',
           features={[
-            'Everything in Professional Analytics';
-            'Custom AI model development';
-            'Advanced security & compliance';
-            'Dedicated data scientist';
-            'Custom integrations';
-            'White-label options';
-            '24/7 phone support';
+            'Everything in Professional AnalyticsCustom AI model development',
+            'Advanced security & complianceDedicated data scientist',
+            'Custom integrationsWhite-label options',
+            '24/7 phone support',
           ]}
           popular={false}
         />,
@@ -173,11 +155,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

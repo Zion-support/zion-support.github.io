@@ -1,82 +1,76 @@
 import { motion } from 'framer-motion',
 import {
-  Rocket, Globe, Satellite, Users, Shield, Zap, Target;
-  Sparkles, Star, ArrowRight, Building, Cpu, Database;
+  Rocket, Globe, Satellite, Users, Shield, Zap, Target,
+  Sparkles, Star, ArrowRight, Building, Cpu, Database,
   Network, Server, Monitor, Smartphone, Camera, Gamepad2} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 export default function SpaceColonizationServices() {
   const services = [
     {
-      icon: <Rocket className="w-8 h-8"  />;
-      title: 'Habitat Design & Construction';
-      description: 'Advanced space habitat solutions for sustainable human presence in space';
-      features: ['Modular habitat systems', 'Life support integration', 'Radiation protection', 'Expandable structures']};
+      icon: <Rocket className="w-8 h-8"  />,
+      title: 'Habitat Design & Construction',
+      description: 'Advanced space habitat solutions for sustainable human presence in space',
+      features: ['Modular habitat systemsLife support integration', 'Radiation protectionExpandable structures']},
     {
-      icon: <Globe className="w-8 h-8"  />;
-      title: 'Life Support Systems';
-      description: 'Comprehensive life support and environmental control for space colonies';
-      features: ['Oxygen generation', 'Water recycling', 'Waste management', 'Climate control']};
+      icon: <Globe className="w-8 h-8"  />,
+      title: 'Life Support Systems',
+      description: 'Comprehensive life support and environmental control for space colonies',
+      features: ['Oxygen generationWater recycling', 'Waste managementClimate control']},
     {
-      icon: <Satellite className="w-8 h-8"  />;
-      title: 'Space Infrastructure';
-      description: 'Critical infrastructure development for space colonization projects';
-      features: ['Power systems', 'Communication networks', 'Transportation hubs', 'Resource processing']};
+      icon: <Satellite className="w-8 h-8"  />,
+      title: 'Space Infrastructure',
+      description: 'Critical infrastructure development for space colonization projects',
+      features: ['Power systemsCommunication networks', 'Transportation hubsResource processing']},
     {
-      icon: <Users className="w-8 h-8"  />;
-      title: 'Colony Management';
-      description: 'AI-powered systems for managing space colony operations and logistics';
-      features: ['Resource allocation', 'Population management', 'Emergency response', 'Growth planning']};
+      icon: <Users className="w-8 h-8"  />,
+      title: 'Colony Management',
+      description: 'AI-powered systems for managing space colony operations and logistics',
+      features: ['Resource allocationPopulation management', 'Emergency responseGrowth planning']},
     {
-      icon: <Shield className="w-8 h-8"  />;
-      title: 'Safety & Security';
-      description: 'Advanced safety systems and protocols for space colony protection';
-      features: ['Radiation shielding', 'Emergency protocols', 'Health monitoring', 'Risk assessment']};
+      icon: <Shield className="w-8 h-8"  />,
+      title: 'Safety & Security',
+      description: 'Advanced safety systems and protocols for space colony protection',
+      features: ['Radiation shieldingEmergency protocols', 'Health monitoringRisk assessment']},
     {
-      icon: <Zap className="w-8 h-8"  />;
-      title: 'Energy Solutions';
-      description: 'Sustainable energy generation and distribution for space colonies';
-      features: ['Solar power systems', 'Nuclear power', 'Energy storage', 'Grid management']}
+      icon: <Zap className="w-8 h-8"  />,
+      title: 'Energy Solutions',
+      description: 'Sustainable energy generation and distribution for space colonies',
+      features: ['Solar power systemsNuclear power', 'Energy storageGrid management']}
   ],
   const technologies = [
     {
-      category: 'Advanced Materials';
+      category: 'Advanced Materials',
       items: [
-        'Radiation-resistant composites';
-        'Self-healing materials';
-        'Lightweight structures';
-        'Thermal management systems']};
+        'Radiation-resistant compositesSelf-healing materials',
+        'Lightweight structuresThermal management systems']},
     {
-      category: 'AI & Automation';
+      category: 'AI & Automation',
       items: [
-        'Autonomous colony management';
-        'Predictive maintenance';
-        'Resource optimization';
-        'Emergency response systems']};
+        'Autonomous colony managementPredictive maintenance',
+        'Resource optimizationEmergency response systems']},
     {
-      category: 'Biotechnology';
+      category: 'Biotechnology',
       items: [
-        'Closed-loop ecosystems';
-        'Food production systems';
-        'Medical facilities';
-        'Genetic adaptation research']}
+        'Closed-loop ecosystemsFood production systems',
+        'Medical facilitiesGenetic adaptation research']}
   ],
   const phases = [
     {
-      phase: 'Phase 1: Planning & Design';
-      description: 'Comprehensive planning and architectural design for space colonies';
-      duration: '6-12 months';
-      deliverables: ['Feasibility studies', 'Architectural designs', 'Resource planning', 'Risk assessment']};
+      phase: 'Phase 1: Planning & Design',
+      description: 'Comprehensive planning and architectural design for space colonies',
+      duration: '6-12 months',
+      deliverables: ['Feasibility studiesArchitectural designs', 'Resource planningRisk assessment']},
     {
-      phase: 'Phase 2: Prototype Development';
-      description: 'Development and testing of critical systems and components';
-      duration: '12-18 months';
-      deliverables: ['System prototypes', 'Testing protocols', 'Performance validation', 'Safety certification']};
+      phase: 'Phase 2: Prototype Development',
+      description: 'Development and testing of critical systems and components',
+      duration: '12-18 months',
+      deliverables: ['System prototypesTesting protocols', 'Performance validationSafety certification']},
     {
-      phase: 'Phase 3: Implementation';
-      description: 'Full-scale deployment and construction of space colony infrastructure';
-      duration: '24-36 months';
-      deliverables: ['Infrastructure deployment', 'System integration', 'Operational testing', 'Colony activation']}
+      phase: 'Phase 3: Implementation',
+      description: 'Full-scale deployment and construction of space colony infrastructure',
+      duration: '24-36 months',
+      deliverables: ['Infrastructure deploymentSystem integration', 'Operational testingColony activation']}
   ],
   return (
     <Layout>,
@@ -105,7 +99,7 @@ export default function SpaceColonizationServices() {
               Services,
             </h1>,
             <p className="text-xl lg: text-2xl text-gray-30o0 mb-8 leading-relaxed">,
-              Building the future of humanity in space with cutting-edge technology;
+              Building the future of humanity in space with cutting-edge technology,
               sustainable solutions, and AI-powered colony management systems,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

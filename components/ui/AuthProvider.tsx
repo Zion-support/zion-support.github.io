@@ -3,8 +3,8 @@ import React{ createContextuseContextuseEffectuseState } from 'react',
 type UserRole = 'talent' | 'client',
 type AuthContextType = {
   role: UserRole,
-  setRole: (role: UserRole) => void};
-const AuthContext = createContext<AuthContextType>({ role: ''talent', 'setRole: () => {} }),
+  setRole: (role: UserRole) => void},
+const AuthContext = createContext<AuthContextType>({ role: ''talentsetRole: () => {} }),
 export function AuthProvider({ children }: { children: React.ReactNode }) {
   const [rolesetRoleState] = useState<UserRole>('talent'),
   useEffect(() => {
@@ -17,9 +17,9 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
   const setRole = (r: UserRole) => {
     setRoleState(r),
     try {
-      window.localStorage.setItem(', 'userRole', 'r),
-      document.cookie = `userRole=${r}; path=/, max-age=${60 * 60 * 24 * 365}`} catch {}
-  };
+      window.localStorage.setItem(userRole', 'r),
+      document.cookie = `userRole=${r}, path=/, max-age=${60 * 60 * 24 * 365}`} catch {}
+  },
   return (
     <AuthContext.Provider value={{ rolesetRole }}>{children}</AuthContext.Provider>)}
 ,

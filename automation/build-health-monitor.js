@@ -11,7 +11,7 @@ class BuildHealthMonitor {
     this.errorCount = 0,
     this.fixCount = 0,
     this.monitoring = false,
-    this.logFile = path.join(this.projectRoot, 'logs', 'build-health.log'),
+    this.logFile = path.join(this.projectRoot, 'logsbuild-health.log'),
     // Ensure logs directory exists,
     this.ensureLogsDirectory(),
     // Initialize monitoring,
@@ -76,31 +76,31 @@ class BuildHealthMonitor {
     // Check for Next.js imports,
     if (await this.hasNextJSImports()) {
       issues.push({
-        type: 'nextjs_imports';
-        severity: 'high';
+        type: 'nextjs_imports',
+        severity: 'high',
         description: 'Next.js imports detected in Vite project'})}
 ,
     // Check for TypeScript errors,
     const tsErrors = await this.checkTypeScriptErrors(),
     if (tsErrors.length > 0) {
       issues.push({
-        type: 'typescript_errors';
-        severity: 'medium';
-        description: `${tsErrors.length} TypeScript errors found`;
+        type: 'typescript_errors',
+        severity: 'medium',
+        description: `${tsErrors.length} TypeScript errors found`,
         details: tsErrors})}
 ,
     // Check for missing dependencies,
     if (await this.hasMissingDependencies()) {
       issues.push({
-        type: 'missing_dependencies';
-        severity: 'high';
+        type: 'missing_dependencies',
+        severity: 'high',
         description: 'Missing critical dependencies detected'})}
 ,
     // Check for build configuration issues,
     if (await this.hasBuildConfigIssues()) {
       issues.push({
-        type: 'build_config';
-        severity: 'medium';
+        type: 'build_config',
+        severity: 'medium',
         description: 'Build configuration issues detected'})}
 ,
     return issues}
@@ -108,7 +108,7 @@ class BuildHealthMonitor {
   async hasNextJSImports() {
     try {
       const result = execSync(
-        `find src -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" \) -exec grep -l "next/" {} \,`;
+        `find src -type f \( -name "*.tsx" -o -name "*.ts" -o -name "*.jsx" -o -name "*.js" \) -exec grep -l "next/" {} \,`,
         { cwd: this.projectRoot, encoding: 'utf8' }
       ),
       return result.trim().length > 0} catch (error) {
@@ -118,8 +118,8 @@ class BuildHealthMonitor {
   async checkTypeScriptErrors() {
     try {
       const result = execSync('npx tsc --noEmit', {
-        cwd: this.projectRoot;
-        encoding: 'utf8';
+        cwd: this.projectRoot,
+        encoding: 'utf8',
         stdio: 'pipe'}),
       return []} catch (error) {
       // Parse TypeScript errors from stderr,
@@ -134,7 +134,7 @@ class BuildHealthMonitor {
   async hasMissingDependencies() {
     try {
       // Check if key dependencies exist,
-      const requiredDeps = ['vite', '@vitejs/plugin-react', 'react', 'react-dom'],
+      const requiredDeps = ['vite@vitejs/plugin-react', 'reactreact-dom'],
       for (const dep of requiredDeps) {
         try {
           require.resolve(dep)} catch (e) {
@@ -191,7 +191,7 @@ class BuildHealthMonitor {
       const fixScript = path.join(this.projectRoot, 'fix_all_nextjs_imports.js'),
       if (fs.existsSync(fixScript)) {
         execSync(`node ${fixScript}`, {
-          cwd: this.projectRoot;
+          cwd: this.projectRoot,
           stdio: 'inherit'})} else {
         // Run inline fix,
         await this.runInlineNextJSFix()}
@@ -203,14 +203,14 @@ class BuildHealthMonitor {
     this.log('Running inline Next.js import fixes...'),
     const replacements = [
       {
-        pattern: /import\s+Link\s+from\s+['"]next\/link['"],?/g;
-        replacement: 'import { Link } from \'react-router-dom\','};
+        pattern: /import\s+Link\s+from\s+['"]next\/link['"],?/g,
+        replacement: 'import { Link } from \'react-router-dom\},
       {
-        pattern: /import\s+{\s*useRouter\s*}\s+from\s+['"]next\/router['"],?/g;
-        replacement: 'import { useNavigate } from \'react-router-dom\','};
+        pattern: /import\s+{\s*useRouter\s*}\s+from\s+['"]next\/router['"],?/g,
+        replacement: 'import { useNavigate } from \'react-router-dom\},
       {
-        pattern: /import\s+Head\s+from\s+['"]next\/head['"],?/g;
-        replacement: 'import { Helmet } from \'react-helmet-async\','}
+        pattern: /import\s+Head\s+from\s+['"]next\/head['"],?/g,
+        replacement: 'import { Helmet } from \'react-helmet-async\}
     ],
     const files = this.findSourceFiles(),
     let fixedCount = 0,
@@ -239,7 +239,7 @@ class BuildHealthMonitor {
     // For now, just log the errors - full fix would require more complex logic,
     this.log(`Found ${errors.length} TypeScript errors that need manual attention`),
     // Create a report file,
-    const reportPath = path.join(this.projectRoot, 'logs', 'typescript-errors-report.txt'),
+    const reportPath = path.join(this.projectRoot, 'logstypescript-errors-report.txt'),
     const reportContent = `TypeScript Errors Report - ${new Date().toISOString()}\n\n${errors.join('\n')}\n`,
     try {
       fs.writeFileSync(reportPath, reportContent),
@@ -251,7 +251,7 @@ class BuildHealthMonitor {
     this.log('Installing missing dependencies...'),
     try {
       execSync('npm install', {
-        cwd: this.projectRoot;
+        cwd: this.projectRoot,
         stdio: 'inherit'}),
       this.log('Dependencies installed successfully')} catch (error) {
       throw new Error(`Dependency installation failed: ${error.message}`)}
@@ -279,49 +279,49 @@ class BuildHealthMonitor {
 import react from '@vitejs/plugin-react',
 import { resolve } from 'path',
 export default defineConfig({
-  plugins: [react()];
+  plugins: [react()],
   resolve: {
     alias: {
-      '@': resolve(__dirname, 'src');
-      '@components': resolve(__dirname, 'src/components');
-      '@pages': resolve(__dirname, 'src/pages');
-      '@layout': resolve(__dirname, 'src/layout');
-      '@utils': resolve(__dirname, 'src/utils');
-      '@hooks': resolve(__dirname, 'src/hooks');
-      '@types': resolve(__dirname, 'src/types');
-      '@assets': resolve(__dirname, 'src/assets');
-      '@styles': resolve(__dirname, 'src/styles');
-      '@data': resolve(__dirname, 'src/data');
-      '@services': resolve(__dirname, 'src/services');
-      '@context': resolve(__dirname, 'src/context');
+      '@': resolve(__dirname, 'src'),
+      '@components': resolve(__dirname, 'src/components'),
+      '@pages': resolve(__dirname, 'src/pages'),
+      '@layout': resolve(__dirname, 'src/layout'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@hooks': resolve(__dirname, 'src/hooks'),
+      '@types': resolve(__dirname, 'src/types'),
+      '@assets': resolve(__dirname, 'src/assets'),
+      '@styles': resolve(__dirname, 'src/styles'),
+      '@data': resolve(__dirname, 'src/data'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@context': resolve(__dirname, 'src/context'),
       '@constants': resolve(__dirname, 'src/constants')}
-  };
+  },
   build: {
-    target: 'esnext';
-    minify: 'terser';
-    sourcemap: false;
+    target: 'esnext',
+    minify: 'terser',
+    sourcemap: false,
     rollupOptions: {
       output: {
         manualChunks: {
-          'react-vendor': ['react', 'react-dom'];
-          'router-vendor': ['react-router-dom'];
-          'ui-vendor': ['framer-motion', 'lucide-react'];
-          'utils-vendor': ['date-fns', 'clsx', 'tailwind-merge'];
-          'form-vendor': ['react-hook-form', '@hookform/resolvers', 'zod']}
+          'react-vendor': ['reactreact-dom'],
+          'router-vendor': ['react-router-dom'],
+          'ui-vendor': ['framer-motionlucide-react'],
+          'utils-vendor': ['date-fnsclsx', 'tailwind-merge'],
+          'form-vendor': ['react-hook-form@hookform/resolvers', 'zod']}
       }
     }
-  };
+  },
   server: {
-    port: 30o00;
-    host: true;
-    open: true};
+    port: 30o00,
+    host: true,
+    open: true},
   preview: {
-    port: 4173;
+    port: 4173,
     host: true}
 })`}
 ,
   findSourceFiles() {
-    const extensions = ['.ts', '.tsx', '.js', '.jsx'],
+    const extensions = ['.ts.tsx', '.js.jsx'],
     const files = [],
     function traverse(dir) {
       const items = fs.readdirSync(dir),
@@ -329,7 +329,7 @@ export default defineConfig({
         const fullPath = path.join(dir, item),
         const stat = fs.statSync(fullPath),
         if (stat.isDirectory()) {
-          if (!['node_modules', '.git', 'dist', 'build', '.next'].includes(item)) {
+          if (!['node_modules.git', 'distbuild', '.next'].includes(item)) {
             traverse(fullPath)}
         } else if (extensions.some(ext => item.endsWith(ext))) {
           files.push(fullPath)}
@@ -351,8 +351,8 @@ export default defineConfig({
     try {
       const startTime = Date.now(),
       execSync('npm run build', {
-        cwd: this.projectRoot;
-        stdio: 'pipe';
+        cwd: this.projectRoot,
+        stdio: 'pipe',
         timeout: 30o0000 // 5 minutes}),
       const buildTime = Date.now() - startTime,
       this.lastBuildTime = Date.now(),
@@ -368,9 +368,9 @@ export default defineConfig({
   }
 ,
   async triggerBuildAlert() {
-    this.log('Build consistently failing, triggering alert...', 'WARN'),
+    this.log('Build consistently failing, triggering alert...WARN'),
     // Create alert file,
-    const alertPath = path.join(this.projectRoot, 'logs', 'build-alert.txt'),
+    const alertPath = path.join(this.projectRoot, 'logsbuild-alert.txt'),
     const alertContent = `BUILD ALERT - ${new Date().toISOString()}\n\nBuild has failed ${this.errorCount} times consecutively.\nManual intervention required.\n\nCheck logs for details.`,
     try {
       fs.writeFileSync(alertPath, alertContent),
@@ -407,10 +407,8 @@ export default defineConfig({
   async checkFileIntegrity() {
     this.log('Checking file integrity...'),
     const criticalFiles = [
-      'package.json';
-      'vite.config.ts';
-      'tsconfig.json';
-      'src/main.tsx';
+      'package.jsonvite.config.ts',
+      'tsconfig.jsonsrc/main.tsx',
       'index.html'],
     for (const file of criticalFiles) {
       const filePath = path.join(this.projectRoot, file),
@@ -423,19 +421,17 @@ export default defineConfig({
     this.log('Checking dependency health...'),
     try {
       execSync('npm audit', {
-        cwd: this.projectRoot;
+        cwd: this.projectRoot,
         stdio: 'pipe'}),
       this.log('No security vulnerabilities found')} catch (error) {
-      this.log('Security vulnerabilities detected, consider running npm audit fix', 'WARN')}
+      this.log('Security vulnerabilities detected, consider running npm audit fixWARN')}
   }
 ,
   async cleanupTemporaryFiles() {
     this.log('Cleaning up temporary files...'),
     const tempPatterns = [
-      '*.tmp';
-      '*.temp';
-      '*.log.old';
-      '*.backup.*'],
+      '*.tmp*.temp',
+      '*.log.old*.backup.*'],
     // Implementation would depend on specific cleanup needs,
     this.log('Temporary file cleanup completed')}
 ,
@@ -463,11 +459,11 @@ export default defineConfig({
     this.log('Checking for dependency updates...'),
     try {
       execSync('npm outdated', {
-        cwd: this.projectRoot;
+        cwd: this.projectRoot,
         stdio: 'pipe'}),
       this.log('Dependency update check completed')} catch (error) {
       // npm outdated returns non-zero if there are outdated packages,
-      this.log('Some dependencies may be outdated', 'INFO')}
+      this.log('Some dependencies may be outdatedINFO')}
   }
 ,
   async optimizeBuildConfig() {
@@ -478,11 +474,11 @@ export default defineConfig({
 ,
   getStats() {
     return {
-      errorCount: this.errorCount;
-      fixCount: this.fixCount;
-      lastBuildTime: this.lastBuildTime;
-      monitoring: this.monitoring;
-      uptime: process.uptime()};
+      errorCount: this.errorCount,
+      fixCount: this.fixCount,
+      lastBuildTime: this.lastBuildTime,
+      monitoring: this.monitoring,
+      uptime: process.uptime()},
   }
 ,
   async stop() {

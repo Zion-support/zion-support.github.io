@@ -1,27 +1,27 @@
-import React from "react";
+import React from "react",
 import { Card, CardContent } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
 import { Download } from "lucide-react",
 import { Resume } from "@/types/resume",
-import React from 'react';;
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from 'react',
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import { Download  } from 'lucide-react',
-import { Button } from "@/components/ui/button";
-import { Download } from 'lucide-react';
-import { Resume } from "@/types/resume";
+import { Button } from "@/components/ui/button",
+import { Download } from 'lucide-react',
+import { Resume } from "@/types/resume",
 interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
+  resume: Resume,
+  onDownload: () => void,
   isLoading: boolean}
 export function ResumePreviewCard({
   resume,
   onDownload,
   isLoading}: ResumePreviewCardProps) {
 interface ResumePreviewCardProps {
-  resume: Resume;
-  onDownload: () => void;
+  resume: Resume,
+  onDownload: () => void,
   isLoading: boolean}
 ,
 export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePreviewCardProps) {
@@ -53,7 +53,7 @@ export function ResumePreviewCard({ resume, onDownload, isLoading }: ResumePrevi
         {resume.basic_info.summary && (
           <p className="text-xs text-zion-slate line-clamp-2 mb-2">,
 interface ResumePreviewCardProps {
-  resume: Resume;
+  resume: Resume,
   onDownload: () => void,
   isLoading: boolean}
 export /**,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 import AI20o26UltimateBreakthroughBanner from '../components/AI20o26UltimateBreakthroughBanner',
@@ -190,5 +190,5 @@ const AI20o26UltimateBreakthroughPage: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </ErrorBoundary>)};
-export default AI20o26UltimateBreakthroughPage;
+    </ErrorBoundary>)},
+export default AI20o26UltimateBreakthroughPage,

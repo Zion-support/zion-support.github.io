@@ -7,8 +7,8 @@ function runGitCommand(command, options = {}) {
     try {
         // // console.log(`Running: git ${command}`),
         const result = execSync(`git ${command}`, {
-            encoding: 'utf8';
-            cwd: '/workspace';
+            encoding: 'utf8',
+            cwd: '/workspace',
             ...options}),
         return result} catch (error) {
         // // console.log(`⚠️ Git command failed: ${error.message}`),
@@ -21,17 +21,17 @@ function resolvePerformanceReportConflicts() {
         // // console.log('📊 No performance-report.json found, creating new one...'),
         const defaultReport = [
             {
-                "timestamp": new Date().toISOString();
-                "buildTime": 0;
-                "bundleSize": "0M";
-                "pageCount": 0;
+                "timestamp": new Date().toISOString(),
+                "buildTime": 0,
+                "bundleSize": "0M",
+                "pageCount": 0,
                 "performance": {
-                    "buildTime": 0;
-                    "timestamp": new Date().toISOString();
+                    "buildTime": 0,
+                    "timestamp": new Date().toISOString(),
                     "optimizations": {
-                        "cssOptimization": false;
-                        "compression": false;
-                        "minification": true;
+                        "cssOptimization": false,
+                        "compression": false,
+                        "minification": true,
                         "staticExport": true}
                 }
             }

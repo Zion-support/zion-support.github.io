@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react',
-type Issue ={ type: string, message: string, snippet?: string };
-type Entry ={ file: string, issues: Issue[] };
-type Audit ={ summary: { generatedAt: string, filesScanned: number, filesWithIssues: number, totalIssues: number } | null, results: Entry[] };
+type Issue ={ type: string, message: string, snippet?: string },
+type Entry ={ file: string, issues: Issue[] },
+type Audit ={ summary: { generatedAt: string, filesScanned: number, filesWithIssues: number, totalIssues: number } | null, results: Entry[] },
 export default function SeoAutomation() {
   const [audit, setAudit] = useState<Audit>({ summary: null, results: [] }),
   useEffect(() => {

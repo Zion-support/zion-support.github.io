@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useQuery } from "@tanstack/react-query",
 import { supabase } from "@/integrations/supabase/client",
@@ -11,7 +11,7 @@ type TimeRange = '7d' | '30d' | '90d' | '365d',
 export function UserBehaviorStats() {
   const [timeRangesetTimeRange] = useState<TimeRange>('7d'),
   const { data: behaviorDataisLoading } = useQuery({
-    queryKey: ['user-behavior-data'timeRange];
+    queryKey: ['user-behavior-data'timeRange],
     queryFn: async () => {
       // Convert timeRange to days,
       const days = parseInt(timeRange.replace('d'')),
@@ -29,15 +29,15 @@ export function UserBehaviorStats() {
           .gte('created_at'startDate.toISOString()),
         if (manualError) throw manualError,
         // Process data to count events by type and date,
-        const eventsByDate: Record<stringnumber>> = {};
+        const eventsByDate: Record<stringnumber>> = {},
         manualData?.forEach(event => {
           const date = new Date(event.created_at).toISOString().split('T')[0],
-          if (!eventsByDate[date]) eventsByDate[date] = {};
+          if (!eventsByDate[date]) eventsByDate[date] = {},
           if (!eventsByDate[date][event.event_type]) eventsByDate[date][event.event_type] = 0,
           eventsByDate[date][event.event_type]++}),
         // Convert to array format for the chart,
         return Object.entries(eventsByDate).map(([datevents]) => ({
-          date;
+          date,
           ...events}))}
 ,
       return data || []}
@@ -49,13 +49,13 @@ export function UserBehaviorStats() {
     behaviorData.forEach(item => {
       Object.keys(item).forEach(key => {
         if (key !== 'date') allKeys.add(key)})}),
-    return Array.from(allKeys)};
+    return Array.from(allKeys)},
   // Format event type names for better display,
   const formatEventType = (type: string) => {
     return type,
       .split('_'),
       .map(word => word.charAt(0).toUpperCase() + word.slice(1)),
-      .join(' ')};
+      .join(' ')},
   return (
     <div className="space-y-6">,
       <div className="grid grid-cols-1 md: grid-cols-3 gap-4">,

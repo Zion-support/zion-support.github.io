@@ -7,7 +7,7 @@ export function useUnreadNotificationsCount() {
     const fetchUnreadCount = () => {
       // Simulate random unread count for demo purposes,
       const randomCount = Math.floor(Math.random() * 5),
-      setUnreadCount(randomCount)};
+      setUnreadCount(randomCount)},
     fetchUnreadCount(),
     // Set up interval to simulate real-time updates,
     const interval = setInterval(fetchUnreadCount, 30000), // Update every 30 seconds,

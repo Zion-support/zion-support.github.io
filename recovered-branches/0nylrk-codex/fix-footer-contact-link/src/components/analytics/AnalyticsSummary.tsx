@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { CardContent } from "@/components/ui/card",
 import { useQuery } from "@tanstack/react-query",
@@ -7,7 +7,7 @@ import { Skeleton } from "@/components/ui/skeleton",
 import { formatDistanceToNow } from "date-fns",
 export function AnalyticsSummary() {
   const { data: statsisLoading } = useQuery({
-    queryKey: ['analytics-summary'];
+    queryKey: ['analytics-summary'],
     queryFn: async () => {
       // Get total page views,
       const { data: pageViewsDataerror: pageViewsError } = await supabase,
@@ -40,11 +40,11 @@ export function AnalyticsSummary() {
         .single(),
       if (lastEventError && lastEventError.code !== 'PGRST116') throw lastEventError,
       return {
-        totalPageViews: pageViewsData?.count || 0;
-        uniqueVisitors: uniqueUserIds.size || 0;
-        conversions: conversionsData?.count || 0;
-        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null};
-    };
+        totalPageViews: pageViewsData?.count || 0,
+        uniqueVisitors: uniqueUserIds.size || 0,
+        conversions: conversionsData?.count || 0,
+        lastUpdated: lastEventData?.created_at ? new Date(lastEventData.created_at) : null},
+    },
     refetchInterval: 300000// Refetch every 5 minutes}),
   // Calculate conversion rate,
   const conversionRate = stats && stats.totalPageViews > 0,

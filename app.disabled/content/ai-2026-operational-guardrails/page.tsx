@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Operational Guardrails';
+  title: 'AI 20o26: Operational Guardrails',
   description:,
-    'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.';
-};
+    'Practical guardrails for runtime safety, governance, and reliability across autonomous AI operations.',
+},
 export default function OperationalGuardrails20o26Page() {
   return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

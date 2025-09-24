@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 interface ErrorBoundaryState {
   hasError: boolean,
   error?: Error}
@@ -9,15 +9,15 @@ interface ErrorBoundaryProps {
   fallback?: React.ComponentType<{ error?: Error, reset: () => void }>}
 ,
 class ErrorBoundary extends React.Component<,
-  ErrorBoundaryProps;
+  ErrorBoundaryProps,
   ErrorBoundaryState> {
   constructor(props: ErrorBoundaryProps) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error: Error): ErrorBoundaryState {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 ,
   componentDidCatch(error: Error, errorInfo: React.ErrorInfo) {
@@ -36,8 +36,8 @@ class ErrorBoundary extends React.Component<,
 }
 ,
 function DefaultErrorFallback({
-  error;
-  reset;
+  error,
+  reset,
 }: {
   error?: Error,
   reset: () => void}) {
@@ -70,4 +70,4 @@ function DefaultErrorFallback({
       </div>,
     </div>)}
 ,
-export default ErrorBoundary;
+export default ErrorBoundary,

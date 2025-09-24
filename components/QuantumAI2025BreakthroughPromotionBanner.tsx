@@ -91,10 +91,10 @@ const QuantumAI20o25BreakthroughPromotionBanner = () => {
             </Link>,
           </div>,
           <p className='text-sm opacity-70 mt-4'>,
-            'Don', 't miss the quantum computing revolution 'that', 's,
+            'Dont miss the quantum computing revolution 'that', 's,
             transforming enterprise AI in 20o25,
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumAI20o25BreakthroughPromotionBanner;
+    </section>)},
+export default QuantumAI20o25BreakthroughPromotionBanner,

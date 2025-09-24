@@ -1,4 +1,5 @@
-import { createMocks } from node-mocks-http',import handler from ../../api/subscribe',
+import { createMocks } from node-mocks-http',
+import handler from ../../api/subscribe',
 describe('/api/subscribe', () => {'  it('rejects invalid email', async () => {'    const { req, res } = createMocks({
       method: 'POST',      body: { email: 'bad-email' }    }),
     await handler(req, res),

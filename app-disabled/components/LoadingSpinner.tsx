@@ -1,10 +1,10 @@
 'use client',
 type LoadingSpinnerProps = {
   size?: 'sm' | 'md' | 'lg',
-  text?: string};
+  text?: string},
 export default function LoadingSpinner({
-  size = 'md';
-  text;
+  size = 'md',
+  text,
 }: LoadingSpinnerProps) {
   const dimension =,
     size === 'lg' ? 'h-8 w-8' : size === 'sm' ? 'h-4 w-4' : 'h-6 w-6',

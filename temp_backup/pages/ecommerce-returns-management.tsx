@@ -9,16 +9,12 @@ export default function EcommerceReturnsManagement() {
       implementationWeeks='1-2 weeks',
       roiNote='Lower support load by 25–40% and improve repeat purchases',
       features={[
-        'Self-service returns portal and RMA workflows';
-        'Automated label generation and tracking';
-        'Refunds, exchanges, and store credit rules';
-        'Fraud checks and policy enforcement';
-        'Email/SMS notifications and status updates';
-        'E-commerce integrations (Shopify, WooCommerce, BigCommerce)';
-        'Warehouse and 3PL integrations';
-        'Analytics on returns reasons and costs';
+        'Self-service returns portal and RMA workflowsAutomated label generation and tracking',
+        'Refunds, exchanges, and store credit rulesFraud checks and policy enforcement',
+        'Email/SMS notifications and status updatesE-commerce integrations (Shopify, WooCommerce, BigCommerce)',
+        'Warehouse and 3PL integrationsAnalytics on returns reasons and costs',
       ]}
-      industries={['E-commerce', 'Retail', 'Marketplaces']}
+      industries={['E-commerceRetail', 'Marketplaces']}
       canonical='https: //ziontechgroup.com/ecommerce-returns-management',
     />)}
 ,

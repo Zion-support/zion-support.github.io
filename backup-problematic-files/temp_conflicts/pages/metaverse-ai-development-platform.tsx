@@ -11,11 +11,11 @@ import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micr
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -27,24 +27,24 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Sparkles;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Sparkles;
-  Star;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
+  Star,
 } from "lucide-react",
 export default function MetaverseAIPlatformPage() {
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>,
-    s && s.link.endsWith("/metaverse-ai-development-platform");
+    s && s.link.endsWith("/metaverse-ai-development-platform"),
 ),
   if (!service) return null,
   return (
@@ -108,12 +108,12 @@ export default function MetaverseAIPlatformPage() {
                 href="/contact",
                 variant="quantum",
                 size="lg",
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Sparkles;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Sparkles,
   Star} from './lucide-react',
 export default /**,
  * MetaverseAIPlatformPage - Function description,

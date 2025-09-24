@@ -31,7 +31,7 @@ export default function QuantumCloudInfrastructurePage() {
                 Overview,
               </h2>,
               <p className='text-slate-30o0'>,
-                Quantum compute accelerators, advanced security protocols;
+                Quantum compute accelerators, advanced security protocols,
                 real-time monitoring, cost optimization, DR, and,
                 compliance—delivered as managed foundations.,
               </p>,

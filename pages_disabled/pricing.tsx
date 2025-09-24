@@ -1,77 +1,67 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  CheckCircle;
-  X;
-  ArrowRight;
-  Star;
-  Zap;
-  Shield;
-  Users;
+  CheckCircle,
+  X,
+  ArrowRight,
+  Star,
+  Zap,
+  Shield,
+  Users,
   BarChart3} from 'lucide-react',
 const plans = [
   {
-    name: 'Starter';
-    price: '$99';
-    period: 'per month';
-    description: 'Perfect for small businesses getting started';
+    name: 'Starter',
+    price: '$99',
+    period: 'per month',
+    description: 'Perfect for small businesses getting started',
     features: [
-      'Basic AI integration';
-      'Cloud hosting';
-      'Email support';
-      'Standard security';
-      'Basic analytics'];
+      'Basic AI integrationCloud hosting',
+      'Email supportStandard security',
+      'Basic analytics'],
     limitations: [
-      'Limited customization';
-      'No priority support'];
-    popular: false};
+      'Limited customizationNo priority support'],
+    popular: false},
   {
-    name: 'Professional';
-    price: '$299';
-    period: 'per month';
-    description: 'Ideal for growing businesses';
+    name: 'Professional',
+    price: '$299',
+    period: 'per month',
+    description: 'Ideal for growing businesses',
     features: [
-      'Advanced AI capabilities';
-      'Custom integrations';
-      'Priority support';
-      'Enhanced security';
-      'Advanced analytics';
-      'API access';
-      'Custom branding'];
-    limitations: [];
-    popular: true};
+      'Advanced AI capabilitiesCustom integrations',
+      'Priority supportEnhanced security',
+      'Advanced analyticsAPI access',
+      'Custom branding'],
+    limitations: [],
+    popular: true},
   {
-    name: 'Enterprise';
-    price: 'Custom';
-    period: 'contact us';
-    description: 'For large organizations with complex needs';
+    name: 'Enterprise',
+    price: 'Custom',
+    period: 'contact us',
+    description: 'For large organizations with complex needs',
     features: [
-      'Full AI suite';
-      'Custom development';
-      '24/7 dedicated support';
-      'Enterprise security';
-      'Custom analytics';
-      'Unlimited integrations';
-      'White-label solutions';
-      'Dedicated account manager'];
-    limitations: [];
+      'Full AI suiteCustom development',
+      '24/7 dedicated supportEnterprise security',
+      'Custom analyticsUnlimited integrations',
+      'White-label solutionsDedicated account manager'],
+    limitations: [],
     popular: false}
 ],
 const addOns = [
   {
-    name: 'Additional Storage';
-    price: '$10';
-    period: 'per 10o0GB/month';
-    description: 'Extra cloud storage for your data'};
+    name: 'Additional Storage',
+    price: '$10',
+    period: 'per 10o0GB/month',
+    description: 'Extra cloud storage for your data'},
   {
-    name: 'Premium Support';
-    price: '$50';
-    period: 'per month';
-    description: '24/7 priority support and faster response times'};
+    name: 'Premium Support',
+    price: '$50',
+    period: 'per month',
+    description: '24/7 priority support and faster response times'},
   {
-    name: 'Custom Integrations';
-    price: '$20o0';
-    period: 'per integration';
+    name: 'Custom Integrations',
+    price: '$20o0',
+    period: 'per integration',
     description: 'Custom API integrations with third-party services'}
 ],
 export default function Pricing() {

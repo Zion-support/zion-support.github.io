@@ -100,7 +100,7 @@ export default function QuantumComputingRevolution20o26Banner() {
               impossible problems,
             </p>,
             <p className='mt-1'>,
-              Exclusive quantum solutions from Zion Tech 'Group', 's research,
+              Exclusive quantum solutions from Zion Tech 'Groups research,
               division,
             </p>,
           </div>,

@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react',
 import { Feature } from '../../types/roadmap',
 import RoadmapCard from './RoadmapCard',
 type Props ={
   features: Feature[],
   onUpvote: (feature: Feature) => void,
-  onFollow: (feature: Feature) => void};
+  onFollow: (feature: Feature) => void},
 export default function RoadmapBoard({ features, onUpvote, onFollow }: Props) {
   const groups: Record<string Feature[]> ={
-    Planned: [];
-    'In Progress': [];
-    Completed: []};
+    Planned: [],
+    'In Progress': [],
+    Completed: []},
   for (const f of features) {
     if (f.status === 'Planned') groups.Planned.push(f),
     else if (f.status === 'In Progress') groups['In Progress'].push(f),

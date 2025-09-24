@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import UltraAdvancedFuturisticBackgroundV2 from './UltraAdvancedFuturisticBackgroundV2',
 interface UltraAdvancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high' | 'extreme',

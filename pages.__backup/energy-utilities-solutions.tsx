@@ -1,10 +1,10 @@
 import Head from 'next/head',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const contactInfo ={
-	mobile: '+1 30o2 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 10o08 Middletown DE 19709';
-	website: 'https://ziontechgroup.com'};
+	mobile: '+1 30o2 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 10o08 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'},
 const ext = (url: string) => (
 	<a className="text-cyan-40o0 underline" href={url} target="_blank" rel="noopener noreferrer">{url.replace('https: //'')}</a>),
 export default function EnergyUtilitiesSolutionsPage() {

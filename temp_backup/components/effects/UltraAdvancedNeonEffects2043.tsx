@@ -19,11 +19,11 @@ interface NeonGlowProps {
 ,
 // Enhanced Neon Glow Component with consciousness effects,
 const NeonGlow: React.FC<NeonGlowProps> = ({
-  children;
-  color;
-  intensity;
-  spread = 20;
-  className = '';
+  children,
+  color,
+  intensity,
+  spread = 20,
+  className = '',
   consciousness = 0}) => {
   const baseColor = color,
   const glowColor = color + '80',
@@ -46,15 +46,15 @@ const NeonGlow: React.FC<NeonGlowProps> = ({
         {children}
       </div>,
       {children}
-    </div>)};
+    </div>)},
 // Main Enhanced Neon Effects Component,
 export default function UltraAdvancedNeonEffects20o43({
-  children;
-  variant = 'consciousness';
-  intensity = 'medium';
-  interactive = true;
-  className = '';
-  consciousness = 0.5;
+  children,
+  variant = 'consciousness',
+  intensity = 'medium',
+  interactive = true,
+  className = '',
+  consciousness = 0.5,
   pulseRate = 20o00}: NeonEffectProps) {
   const [isHovered, setIsHovered] = useState(false),
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
@@ -63,7 +63,7 @@ export default function UltraAdvancedNeonEffects20o43({
   useEffect(() => {
     if (!interactive) return,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     window.addEventListener('mousemove', handleMouseMove),
     return () => window.removeEventListener('mousemove', handleMouseMove)}, [interactive]),
   // Enhanced pulse effect for consciousness,
@@ -75,76 +75,76 @@ export default function UltraAdvancedNeonEffects20o43({
     return () => {
       if (pulseRef.current) {
         clearInterval(pulseRef.current)}
-    };
+    },
   }, [variant, pulseRate]),
   const getNeonStyles = () => {
     const baseStyles ={
       consciousness: {
-        primary: '#ff0o080';
-        secondary: '#0o0ffff';
-        accent: '#ffff0o0';
-        glow: '#ff0o080';
-        border: '#ff0o080';
-        neural: '#ff1493';
-        quantum: '#0o0ffff'};
+        primary: '#ff0o080',
+        secondary: '#0o0ffff',
+        accent: '#ffff0o0',
+        glow: '#ff0o080',
+        border: '#ff0o080',
+        neural: '#ff1493',
+        quantum: '#0o0ffff'},
       'quantum-neon': {
-        primary: '#0o0ffff';
-        secondary: '#ff0o0ff';
-        accent: '#ffff0o0';
-        glow: '#0o0ffff';
-        border: '#0o0ffff';
-        neural: '#ff1493';
-        quantum: '#80o00ff'};
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff',
+        neural: '#ff1493',
+        quantum: '#80o00ff'},
       cyberpunk: {
-        primary: '#ff0o066';
-        secondary: '#0o0ffff';
-        accent: '#ff660o0';
-        glow: '#ff0o066';
-        border: '#ff0o066';
-        neural: '#ff1493';
-        quantum: '#80o00ff'};
+        primary: '#ff0o066',
+        secondary: '#0o0ffff',
+        accent: '#ff660o0',
+        glow: '#ff0o066',
+        border: '#ff0o066',
+        neural: '#ff1493',
+        quantum: '#80o00ff'},
       holographic: {
-        primary: '#ff1493';
-        secondary: '#0o0bfff';
-        accent: '#ffd70o0';
-        glow: '#ff1493';
-        border: '#ff1493';
-        neural: '#ff1493';
-        quantum: '#80o00ff'};
+        primary: '#ff1493',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
+        glow: '#ff1493',
+        border: '#ff1493',
+        neural: '#ff1493',
+        quantum: '#80o00ff'},
       quantum: {
-        primary: '#0o0ffff';
-        secondary: '#ff0o0ff';
-        accent: '#ffff0o0';
-        glow: '#0o0ffff';
-        border: '#0o0ffff';
-        neural: '#ff1493';
-        quantum: '#80o00ff'};
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff',
+        neural: '#ff1493',
+        quantum: '#80o00ff'},
       neon: {
-        primary: '#0o0ff0o0';
-        secondary: '#ff0o0ff';
-        accent: '#ffff0o0';
-        glow: '#0o0ff0o0';
-        border: '#0o0ff0o0';
-        neural: '#ff1493';
-        quantum: '#80o00ff'};
+        primary: '#0o0ff0o0',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ff0o0',
+        border: '#0o0ff0o0',
+        neural: '#ff1493',
+        quantum: '#80o00ff'},
       neural: {
-        primary: '#ff1493';
-        secondary: '#0o0bfff';
-        accent: '#ffd70o0';
-        glow: '#ff1493';
-        border: '#ff1493';
-        neural: '#ff1493';
-        quantum: '#80o00ff'};
+        primary: '#ff1493',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
+        glow: '#ff1493',
+        border: '#ff1493',
+        neural: '#ff1493',
+        quantum: '#80o00ff'},
       glitch: {
-        primary: '#ff0o000';
-        secondary: '#0o0ff0o0';
-        accent: '#0o000ff';
-        glow: '#ff0o000';
-        border: '#ff0o000';
-        neural: '#ff1493';
+        primary: '#ff0o000',
+        secondary: '#0o0ff0o0',
+        accent: '#0o000ff',
+        glow: '#ff0o000',
+        border: '#ff0o000',
+        neural: '#ff1493',
         quantum: '#80o00ff'}
-    };
-    return baseStyles[variant] || baseStyles.consciousness};
+    },
+    return baseStyles[variant] || baseStyles.consciousness},
   const styles = getNeonStyles(),
   const intensityMultiplier = intensity === 'low' ? 0.5 : intensity === 'medium' ? 1 : 1.5,
   const consciousnessMultiplier = consciousness * intensityMultiplier,
@@ -152,12 +152,12 @@ export default function UltraAdvancedNeonEffects20o43({
   const getPulseEffect = () => {
     if (variant === 'consciousness' || variant === 'quantum-neon') {
       return {
-        scale: 1 + (Math.sin(pulseState * 0.1) * 0.0o5 * consciousnessMultiplier);
-        opacity: 0.8 + (Math.sin(pulseState * 0.1) * 0.2 * consciousnessMultiplier);
-        filter: `hue-rotate(${pulseState * 3.6}deg)`};
+        scale: 1 + (Math.sin(pulseState * 0.1) * 0.0o5 * consciousnessMultiplier),
+        opacity: 0.8 + (Math.sin(pulseState * 0.1) * 0.2 * consciousnessMultiplier),
+        filter: `hue-rotate(${pulseState * 3.6}deg)`},
     }
-    return {};
-  };
+    return {},
+  },
   // Neural network effect for consciousness variant,
   const renderNeuralEffect = () => {
     if (variant === 'consciousness' || variant === 'neural') {
@@ -168,21 +168,21 @@ export default function UltraAdvancedNeonEffects20o43({
               key={i}
               className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                scale: [0, 1, 0];
-                opacity: [0, 0.8, 0];
-                x: [0, (Math.random() - 0.5) * 50];
+                scale: [0, 1, 0],
+                opacity: [0, 0.8, 0],
+                x: [0, (Math.random() - 0.5) * 50],
                 y: [0, (Math.random() - 0.5) * 50]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
-                delay: i * 0.3;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: i * 0.3,
                 ease: "easeInOut"}}
              />))}
         </div>)}
-    return null};
+    return null},
   // Quantum field effect,
   const renderQuantumField = () => {
     if (variant === 'quantum-neon' || variant === 'quantum') {
@@ -192,17 +192,16 @@ export default function UltraAdvancedNeonEffects20o43({
             className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-purple-50o0/5",
             animate={{
               background: [
-                'radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)';
-                'radial-gradient(circle at 80% 80%, rgba(128, 0, 255, 0.1) 0%, transparent 50%)';
-                'radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)';
+                'radial-gradient(circle at 20% 20%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)radial-gradient(circle at 80% 80%, rgba(128, 0, 255, 0.1) 0%, transparent 50%)',
+                'radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)',
               ]}}
             transition={{
-              duration: 8;
-              repeat: Infinity;
+              duration: 8,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
         </div>)}
-    return null};
+    return null},
   return (
     <motion.div,
       className={`relative ${className}`}
@@ -210,11 +209,11 @@ export default function UltraAdvancedNeonEffects20o43({
       onMouseLeave={() => setIsHovered(false)}
       animate={getPulseEffect()}
       style={{
-        '--neon-primary': styles.primary;
-        '--neon-secondary': styles.secondary;
-        '--neon-accent': styles.accent;
-        '--neon-glow': styles.glow;
-        '--neon-border': styles.border;
+        '--neon-primary': styles.primary,
+        '--neon-secondary': styles.secondary,
+        '--neon-accent': styles.accent,
+        '--neon-glow': styles.glow,
+        '--neon-border': styles.border,
         '--consciousness-intensity': consciousnessMultiplier} as React.CSSProperties}
     >,
       {/* Enhanced neon glow with consciousness */}
@@ -251,18 +250,18 @@ export default function UltraAdvancedNeonEffects20o43({
               key={i}
               className="absolute inset-0 border border-current rounded-full",
               style={{
-                borderColor: styles.primary + '40';
-                left: `${i * 10}px`;
-                top: `${i * 10}px`;
-                right: `${i * 10}px`;
+                borderColor: styles.primary + '40',
+                left: `${i * 10}px`,
+                top: `${i * 10}px`,
+                right: `${i * 10}px`,
                 bottom: `${i * 10}px`}}
               animate={{
-                scale: [1, 1.2, 1];
+                scale: [1, 1.2, 1],
                 opacity: [0.3, 0.1, 0.3]}}
               transition={{
-                duration: 4 + i * 0.5;
-                repeat: Infinity;
-                delay: i * 0.3;
+                duration: 4 + i * 0.5,
+                repeat: Infinity,
+                delay: i * 0.3,
                 ease: "easeInOut"}}
              />))}
         </div>)}
@@ -272,20 +271,20 @@ export default function UltraAdvancedNeonEffects20o43({
         className="absolute inset-0 rounded-lg pointer-events-none",
         style={{
           boxShadow: `,
-            0 0 ${20 * intensityMultiplier}px ${styles.primary}40;
-            0 0 ${40 * intensityMultiplier}px ${styles.primary}20;
-            0 0 ${60 * intensityMultiplier}px ${styles.primary}10;
+            0 0 ${20 * intensityMultiplier}px ${styles.primary}40,
+            0 0 ${40 * intensityMultiplier}px ${styles.primary}20,
+            0 0 ${60 * intensityMultiplier}px ${styles.primary}10,
             inset 0 0 ${10 * intensityMultiplier}px ${styles.primary}20,
-          `;
+          `,
           border: `1px solid ${styles.primary}60`}}
         animate={{
           boxShadow: [
-            `0 0 ${20 * intensityMultiplier}px ${styles.primary}40, 0 0 ${40 * intensityMultiplier}px ${styles.primary}20, 0 0 ${60 * intensityMultiplier}px ${styles.primary}10, inset 0 0 ${10 * intensityMultiplier}px ${styles.primary}20`;
-            `0 0 ${25 * intensityMultiplier}px ${styles.primary}60, 0 0 ${50 * intensityMultiplier}px ${styles.primary}30, 0 0 ${75 * intensityMultiplier}px ${styles.primary}15, inset 0 0 ${15 * intensityMultiplier}px ${styles.primary}30`;
+            `0 0 ${20 * intensityMultiplier}px ${styles.primary}40, 0 0 ${40 * intensityMultiplier}px ${styles.primary}20, 0 0 ${60 * intensityMultiplier}px ${styles.primary}10, inset 0 0 ${10 * intensityMultiplier}px ${styles.primary}20`,
+            `0 0 ${25 * intensityMultiplier}px ${styles.primary}60, 0 0 ${50 * intensityMultiplier}px ${styles.primary}30, 0 0 ${75 * intensityMultiplier}px ${styles.primary}15, inset 0 0 ${15 * intensityMultiplier}px ${styles.primary}30`,
             `0 0 ${20 * intensityMultiplier}px ${styles.primary}40, 0 0 ${40 * intensityMultiplier}px ${styles.primary}20, 0 0 ${60 * intensityMultiplier}px ${styles.primary}10, inset 0 0 ${10 * intensityMultiplier}px ${styles.primary}20`]}}
         transition={{
-          duration: 2;
-          repeat: Infinity;
+          duration: 2,
+          repeat: Infinity,
           ease: "easeInOut"}}
        />,
     </motion.div>)}

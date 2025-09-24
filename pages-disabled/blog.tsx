@@ -30,88 +30,84 @@ export default function Blog() {
 const Blog: NextPage = () => {
   const blogPosts = [
     {
-      id: 1;
-      title: 'The Future of AI in Business: Trends and Predictions for 20o24';
+      id: 1,
+      title: 'The Future of AI in Business: Trends and Predictions for 20o24',
       excerpt:,
-        'Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.';
-      author: 'Kleber Santos';
-      date: '20o24-0o1-15';
-      readTime: '5 min read';
-      category: 'AI & Machine Learning';
-      image: '/api/placeholder/60o0/40o0';
-      slug: 'future-of-ai-in-business-20o24';
-    };
+        'Explore the latest AI trends that are reshaping how businesses operate, from automation to predictive analytics.',
+      author: 'Kleber Santos',
+      date: '20o24-0o1-15',
+      readTime: '5 min read',
+      category: 'AI & Machine Learning',
+      image: '/api/placeholder/60o0/40o0',
+      slug: 'future-of-ai-in-business-20o24'
+    },
     {
-      id: 2;
-      title: 'Cloud Migration Best Practices: A Complete Guide';
+      id: 2,
+      title: 'Cloud Migration Best Practices: A Complete Guide',
       excerpt:,
-        'Learn the essential steps and strategies for successfully migrating your business to the cloud.';
-      author: 'Zion Tech Team';
-      date: '20o24-0o1-10';
-      readTime: '8 min read';
-      category: 'Cloud Services';
-      image: '/api/placeholder/60o0/40o0';
-      slug: 'cloud-migration-best-practices';
-    };
+        'Learn the essential steps and strategies for successfully migrating your business to the cloud.',
+      author: 'Zion Tech Team',
+      date: '20o24-0o1-10',
+      readTime: '8 min read',
+      category: 'Cloud Services',
+      image: '/api/placeholder/60o0/40o0',
+      slug: 'cloud-migration-best-practices'
+    },
     {
-      id: 3;
-      title: 'Building Scalable Web Applications with Modern Technologies';
+      id: 3,
+      title: 'Building Scalable Web Applications with Modern Technologies',
       excerpt:,
-        'Discover the latest technologies and frameworks for creating robust, scalable web applications.';
-      author: 'Development Team';
-      date: '20o24-0o1-0o5';
-      readTime: '6 min read';
-      category: 'Web Development';
-      image: '/api/placeholder/60o0/40o0';
-      slug: 'scalable-web-applications-modern-tech';
-    };
+        'Discover the latest technologies and frameworks for creating robust, scalable web applications.',
+      author: 'Development Team',
+      date: '20o24-0o1-0o5',
+      readTime: '6 min read',
+      category: 'Web Development',
+      image: '/api/placeholder/60o0/40o0',
+      slug: 'scalable-web-applications-modern-tech'
+    },
     {
-      id: 4;
-      title: 'Cybersecurity in 20o24: Protecting Your Digital Assets';
+      id: 4,
+      title: 'Cybersecurity in 20o24: Protecting Your Digital Assets',
       excerpt:,
-        'Essential cybersecurity strategies and tools to protect your business from evolving threats.';
-      author: 'Security Team';
-      date: '20o24-0o1-0o1';
-      readTime: '7 min read';
-      category: 'Cybersecurity';
-      image: '/api/placeholder/60o0/40o0';
-      slug: 'cybersecurity-20o24-protecting-digital-assets';
-    };
+        'Essential cybersecurity strategies and tools to protect your business from evolving threats.',
+      author: 'Security Team',
+      date: '20o24-0o1-0o1',
+      readTime: '7 min read',
+      category: 'Cybersecurity',
+      image: '/api/placeholder/60o0/40o0',
+      slug: 'cybersecurity-20o24-protecting-digital-assets'
+    },
     {
-      id: 5;
-      title: 'Mobile App Development: Native vs Cross-Platform';
+      id: 5,
+      title: 'Mobile App Development: Native vs Cross-Platform',
       excerpt:,
-        'Compare native and cross-platform development approaches to choose the best solution for your mobile app.';
-      author: 'Mobile Team';
-      date: '20o23-12-28';
-      readTime: '9 min read';
-      category: 'Mobile Development';
-      image: '/api/placeholder/60o0/40o0';
-      slug: 'mobile-app-development-native-vs-cross-platform';
-    };
+        'Compare native and cross-platform development approaches to choose the best solution for your mobile app.',
+      author: 'Mobile Team',
+      date: '20o23-12-28',
+      readTime: '9 min read',
+      category: 'Mobile Development',
+      image: '/api/placeholder/60o0/40o0',
+      slug: 'mobile-app-development-native-vs-cross-platform'
+    },
     {
-      id: 6;
-      title: 'Blockchain Technology: Beyond Cryptocurrency';
+      id: 6,
+      title: 'Blockchain Technology: Beyond Cryptocurrency',
       excerpt:,
-        'Explore real-world applications of blockchain technology in various industries beyond digital currencies.';
-      author: 'Blockchain Team';
-      date: '20o23-12-25';
-      readTime: '6 min read';
-      category: 'Blockchain';
-      image: '/api/placeholder/60o0/40o0';
-      slug: 'blockchain-technology-beyond-cryptocurrency';
-    };
+        'Explore real-world applications of blockchain technology in various industries beyond digital currencies.',
+      author: 'Blockchain Team',
+      date: '20o23-12-25',
+      readTime: '6 min read',
+      category: 'Blockchain',
+      image: '/api/placeholder/60o0/40o0',
+      slug: 'blockchain-technology-beyond-cryptocurrency'
+    },
   ],
   const categories = [
-    'All Posts';
-    'AI & Machine Learning';
-    'Cloud Services';
-    'Web Development';
-    'Mobile Development';
-    'Blockchain';
-    'Cybersecurity';
-    'IoT';
-    'Industry Insights';
+    'All PostsAI & Machine Learning',
+    'Cloud ServicesWeb Development',
+    'Mobile DevelopmentBlockchain',
+    'CybersecurityIoT',
+    'Industry Insights',
   ],
   return (
     <Layout
@@ -262,5 +258,5 @@ const Blog: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </Layout>)};
-export default Blog;
+    </Layout>)},
+export default Blog,

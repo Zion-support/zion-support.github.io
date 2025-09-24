@@ -1,9 +1,9 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import {
 import { addJSON, publishManifesto, OFFWORLD_TOPICS } from '@/utils/offworld/ipfs',
-  addJSON;
-  publishManifesto;
-  OFFWORLD_TOPICS;
+  addJSON,
+  publishManifesto,
+  OFFWORLD_TOPICS,
 } from '@/utils/offworld/ipfs',
   addJSON,
   publishManifesto,
@@ -31,7 +31,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(200).json({ cid, provider })}
     if (req && req.method === 'POST' && action === 'broadcast') {
       const ok = await publishManifesto(
-        OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto;
+        OFFWORLD_TOPICS && OFFWORLD_TOPICS.manifesto,
         body?.message || ''),
       return res && res.status(200).json({ ok })}
     return res && res.status(400).json({ error: 'Unsupported action' })} catch (e: any) {

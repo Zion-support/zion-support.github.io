@@ -18,12 +18,12 @@ class AutomationDashboard {
     this.processes = new Map(),
     this.alerts = [],
     this.metrics ={
-      totalProcesses: 0;
-      onlineProcesses: 0;
-      stoppedProcesses: 0;
-      totalMemory: 0;
-      totalCPU: 0;
-      averageResponseTime: 0};
+      totalProcesses: 0,
+      onlineProcesses: 0,
+      stoppedProcesses: 0,
+      totalMemory: 0,
+      totalCPU: 0,
+      averageResponseTime: 0},
     this.setupMiddleware(),
     this.setupRoutes(),
     this.setupSocketIO(),
@@ -81,12 +81,12 @@ class AutomationDashboard {
 ,
   setupRoutes() {
     this.app.get('/', (req, res) => {
-      res.sendFile(path.join(__dirname, 'dashboard-ui', 'index.html'))}),
+      res.sendFile(path.join(__dirname, 'dashboard-uiindex.html'))}),
     this.app.get('/health', (req, res) => {
       res.json({
-        status: 'healthy';
-        timestamp: new Date().toISOString();
-        uptime: process.uptime();
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        uptime: process.uptime(),
         version: '1.0.0'})})}
 ,
   setupSocketIO() {
@@ -139,16 +139,16 @@ class AutomationDashboard {
       this.metrics.totalCPU = 0,
       processes.forEach(process => {
         const processInfo ={
-          id: process.pm_id;
-          name: process.name;
-          status: process.pm2_env.status;
-          memory: process.monit.memory;
-          cpu: process.monit.cpu;
-          uptime: process.pm2_env.pm_uptime;
-          restartCount: process.pm2_env.restart_time;
-          instances: process.pm2_env.instances;
-          version: process.pm2_env.version;
-          lastUpdate: new Date().toISOString()};
+          id: process.pm_id,
+          name: process.name,
+          status: process.pm2_env.status,
+          memory: process.monit.memory,
+          cpu: process.monit.cpu,
+          uptime: process.pm2_env.pm_uptime,
+          restartCount: process.pm2_env.restart_time,
+          instances: process.pm2_env.instances,
+          version: process.pm2_env.version,
+          lastUpdate: new Date().toISOString()},
         this.processes.set(process.name, processInfo),
         if (process.pm2_env.status === 'online') {
           this.metrics.onlineProcesses++} else {
@@ -168,41 +168,41 @@ class AutomationDashboard {
       // Memory usage alert,
       if (process.memory > 10o0 * 10o24 * 10o24) { // 10o0MB,
         newAlerts.push({
-          id: `memory-${name}-${Date.now()}`;
-          type: 'warning';
-          process: name;
-          message: `High memory usage: ${Math.round(process.memory / 10o24 / 10o24)}MB`;
-          timestamp: new Date().toISOString();
+          id: `memory-${name}-${Date.now()}`,
+          type: 'warning',
+          process: name,
+          message: `High memory usage: ${Math.round(process.memory / 10o24 / 10o24)}MB`,
+          timestamp: new Date().toISOString(),
           severity: 'medium'})}
 ,
       // CPU usage alert,
       if (process.cpu > 80) { // 80%,
         newAlerts.push({
-          id: `cpu-${name}-${Date.now()}`;
-          type: 'warning';
-          process: name;
-          message: `High CPU usage: ${process.cpu}%`;
-          timestamp: new Date().toISOString();
+          id: `cpu-${name}-${Date.now()}`,
+          type: 'warning',
+          process: name,
+          message: `High CPU usage: ${process.cpu}%`,
+          timestamp: new Date().toISOString(),
           severity: 'medium'})}
 ,
       // Process stopped alert,
       if (process.status === 'stopped') {
         newAlerts.push({
-          id: `stopped-${name}-${Date.now()}`;
-          type: 'error';
-          process: name;
-          message: `Process ${name} is stopped`;
-          timestamp: new Date().toISOString();
+          id: `stopped-${name}-${Date.now()}`,
+          type: 'error',
+          process: name,
+          message: `Process ${name} is stopped`,
+          timestamp: new Date().toISOString(),
           severity: 'high'})}
 ,
       // High restart count alert,
       if (process.restartCount > 10) {
         newAlerts.push({
-          id: `restart-${name}-${Date.now()}`;
-          type: 'warning';
-          process: name;
-          message: `High restart count: ${process.restartCount}`;
-          timestamp: new Date().toISOString();
+          id: `restart-${name}-${Date.now()}`,
+          type: 'warning',
+          process: name,
+          message: `High restart count: ${process.restartCount}`,
+          timestamp: new Date().toISOString(),
           severity: 'medium'})}
     }),
     // Add new alerts,

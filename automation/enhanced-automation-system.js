@@ -1,14 +1,14 @@
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -22,7 +22,7 @@ const crypto = require('crypto'),
 class EnhancedAutomationSystem {
   constructor() {
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'enhanced-automation.log'),
+    this.logFile = path.join(__dirname, 'logsenhanced-automation.log'),
     this.ensureLogDirectory()}
 ,
   loadConfig() {
@@ -30,9 +30,9 @@ class EnhancedAutomationSystem {
     if (fs.existsSync(configPath)) {
       return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
     return {
-      enableLogging: true;
-      maxRetries: 3;
-      timeout: 30o000};
+      enableLogging: true,
+      maxRetries: 3,
+      timeout: 30o000},
   }
 ,
   ensureLogDirectory() {

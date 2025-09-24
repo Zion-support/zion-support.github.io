@@ -5,80 +5,80 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentPieces = [
     {
-      id: 'ai-analytics-revolution';
+      id: 'ai-analytics-revolution',
       title:,
-        'AI 20o25: The Advanced Analytics Revolution - Ultimate Enterprise Guide';
+        'AI 20o25: The Advanced Analytics Revolution - Ultimate Enterprise Guide',
       description:,
-        'Discover how Fortune 50o0 companies are achieving 60o0% ROI with next-generation AI analytics. Complete implementation guide with real success stories.';
-      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide';
-      type: 'blog';
-      category: 'AI Analytics';
+        'Discover how Fortune 50o0 companies are achieving 60o0% ROI with next-generation AI analytics. Complete implementation guide with real success stories.',
+      url: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide',
+      type: 'blog',
+      category: 'AI Analytics',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        speed: '340%';
-      };
-      readTime: '18 min read';
-      featured: true;
-      isNew: true;
-    };
+        roi: '60o0%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        speed: '340%'
+      },
+      readTime: '18 min read',
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'fortune-50o0-analytics-case';
+      id: 'fortune-50o0-analytics-case',
       title:,
-        'Fortune 50o0 AI Analytics Transformation: $2.8B Annual Savings with 60o0% ROI';
+        'Fortune 50o0 AI Analytics Transformation: $2.8B Annual Savings with 60o0% ROI',
       description:,
-        'How a $20o0B Fortune 50o0 company achieved 60o0% ROI and $2.8B annual savings through advanced AI analytics implementation.';
-      url: '/case-studies/fortune-50o0-ai-analytics-transformation-60o0-percent-roi';
-      type: 'case-study';
-      category: 'Success Stories';
+        'How a $20o0B Fortune 50o0 company achieved 60o0% ROI and $2.8B annual savings through advanced AI analytics implementation.',
+      url: '/case-studies/fortune-50o0-ai-analytics-transformation-60o0-percent-roi',
+      type: 'case-study',
+      category: 'Success Stories',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8B';
-        uptime: '99.7%';
-        adoption: '95%';
-      };
-      readTime: '15 min read';
-      featured: true;
-      isNew: true;
-    };
+        roi: '60o0%',
+        savings: '$2.8B',
+        uptime: '99.7%',
+        adoption: '95%'
+      },
+      readTime: '15 min read',
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'ai-analytics-implementation-guide';
+      id: 'ai-analytics-implementation-guide',
       title:,
-        'AI Analytics Implementation Master Guide 20o25: From Strategy to 60o0% ROI';
+        'AI Analytics Implementation Master Guide 20o25: From Strategy to 60o0% ROI',
       description:,
-        'Complete step-by-step guide to implementing AI analytics in your organization. Achieve 60o0% ROI with proven strategies and frameworks.';
-      url: '/resources/ai-analytics-implementation-master-guide-20o25';
-      type: 'resource';
-      category: 'Implementation';
+        'Complete step-by-step guide to implementing AI analytics in your organization. Achieve 60o0% ROI with proven strategies and frameworks.',
+      url: '/resources/ai-analytics-implementation-master-guide-20o25',
+      type: 'resource',
+      category: 'Implementation',
       metrics: {
-        roi: '60o0%';
-        success: '94%';
-        timeline: '18 months';
-        adoption: '95%';
-      };
-      readTime: '25 min read';
-      featured: true;
-      isNew: true;
-    };
+        roi: '60o0%',
+        success: '94%',
+        timeline: '18 months',
+        adoption: '95%'
+      },
+      readTime: '25 min read',
+      featured: true,
+      isNew: true
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentPieces.length };
+    { id: 'all', label: 'All Content', count: contentPieces.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentPieces.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentPieces.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentPieces.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentPieces.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentPieces.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentPieces.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -94,7 +94,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
         return '📋',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -105,7 +105,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -125,7 +125,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
             <span className='font-bold text-green-60o0'>,
               $2.8B annual savings,
             </span>{' '}
-            with advanced AI analytics. Complete guides, real success stories;
+            with advanced AI analytics. Complete guides, real success stories,
             and implementation frameworks.,
           </p>,
           {/* Success Metrics */}
@@ -203,7 +203,7 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
                           {value}
                         </div>,
                         <div className='text-xs text-gray-50o0 capitalize'>,
-                          {key.replace('_', ' ')}
+                          {key.replace('_ ')}
                         </div>,
                       </div>))}
                 </div>,
@@ -257,5 +257,5 @@ const AI20o25AnalyticsContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25AnalyticsContentShowcase;
+    </section>)},
+export default AI20o25AnalyticsContentShowcase,

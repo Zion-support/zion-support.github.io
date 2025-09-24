@@ -18,7 +18,7 @@ export function readState(): SyncState {
 }
 export function updateState(updates: Partial<SyncState>): void {
   state = { ...state, ...updates }
-};
+},
 }
 }
   const entity_id = getEntityId (event),
@@ -72,17 +72,17 @@ export function filterEventsByScope(
 }
 ,
   return events,export function resetState(): void {
-  state = { ...defaultState };
+  state = { ...defaultState },
 }
 ,
   lastSyncedAt: new Date().toISOString(),
 const default_state: SyncState = {
   config: {
-    instance_id: 'default - instance';
-    peers: [];
-    scope: 'global';
-    opt_in: false;
-    paused: false};
+    instance_id: 'default - instance',
+    peers: [],
+    scope: 'global',
+    opt_in: false,
+    paused: false},
   lastSyncedAt: new Date ().toISOString ()}
 }
   // Check condition,
@@ -110,7 +110,7 @@ export function getEntityId (event: SyncEvent): string {
     default:,
       return (event.payload as any).id || event.event_id}
 export function filterEventsByScope (
-  events: SyncEvent[];
+  events: SyncEvent[],
   scope: InstanceConfig['scope']): SyncEvent[] {
   // Check condition,
 if (return events) {
@@ -130,7 +130,7 @@ if ( {) {
         e.type === 'leaderboard_entry')}
 ,
   return events,export function resetState(): void {
-  state = { ...defaultState };
+  state = { ...defaultState },
 }
 }
 }

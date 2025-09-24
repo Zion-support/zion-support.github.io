@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, X, Search, ChevronDown, ChevronRight;
-  Home, Briefcase, Users, BookOpen, Phone;
+  Menu, X, Search, ChevronDown, ChevronRight,
+  Home, Briefcase, Users, BookOpen, Phone,
   Globe, Zap, Shield, Brain, Rocket, Sparkles, DollarSign} from 'lucide-react',
 // Define Node type for DOM event handling,
 type Node = HTMLElement | null,
@@ -30,180 +30,180 @@ function normalizeHref(href: string): string {
 // Enhanced navigation items with better organization,
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Micro SAAS Services';
-    href: '/services';
-    icon: <Rocket className="w-5 h-5"  />;
-    description: 'Professional micro SAAS solutions for modern businesses';
-    badge: 'New 20o25';
-    category: 'micro-saas';
-    color: 'from-emerald-50o0 to-cyan-50o0';
+    name: 'Micro SAAS Services',
+    href: '/services',
+    icon: <Rocket className="w-5 h-5"  />,
+    description: 'Professional micro SAAS solutions for modern businesses',
+    badge: 'New 20o25',
+    category: 'micro-saas',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'All Micro SAAS Services';
-        href: '/services';
-        description: 'Complete overview of all micro SAAS solutions';
-        icon: <Grid className="w-4 h-4"  />;
-        featured: true};
+        name: 'All Micro SAAS Services',
+        href: '/services',
+        description: 'Complete overview of all micro SAAS solutions',
+        icon: <Grid className="w-4 h-4"  />,
+        featured: true},
       {
-        name: 'AI Content Optimizer Pro';
-        href: '/ai-content-optimizer-pro';
-        description: 'AI-powered content optimization for maximum engagement';
-        icon: <Brain className="w-4 h-4"  />;
-        color: 'from-purple-50o0 to-pink-50o0';
-        featured: true};
+        name: 'AI Content Optimizer Pro',
+        href: '/ai-content-optimizer-pro',
+        description: 'AI-powered content optimization for maximum engagement',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0',
+        featured: true},
       {
-        name: 'Smart Inventory Manager';
-        href: '/smart-inventory-manager';
-        description: 'Intelligent inventory tracking and optimization';
-        icon: <Package className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'Smart Inventory Manager',
+        href: '/smart-inventory-manager',
+        description: 'Intelligent inventory tracking and optimization',
+        icon: <Package className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        label: 'Cybersecurity';
-        href: '/services?category=cybersecurity';
-        icon: <Shield className="w-4 h-4"  />;
-        description: 'Enterprise-grade security solutions'};
+        label: 'Cybersecurity',
+        href: '/services?category=cybersecurity',
+        icon: <Shield className="w-4 h-4"  />,
+        description: 'Enterprise-grade security solutions'},
       {
-        label: 'Cloud Platform';
-        href: '/cloud-platform';
-        icon: <Cpu className="w-4 h-4"  />;
-        description: 'Scalable cloud infrastructure'};
+        label: 'Cloud Platform',
+        href: '/cloud-platform',
+        icon: <Cpu className="w-4 h-4"  />,
+        description: 'Scalable cloud infrastructure'},
       {
-        label: 'Space Technology';
-        href: '/space-tech';
-        icon: <Rocket className="w-4 h-4"  />;
-        description: 'Innovative space tech applications'};
+        label: 'Space Technology',
+        href: '/space-tech',
+        icon: <Rocket className="w-4 h-4"  />,
+        description: 'Innovative space tech applications'},
       {
-        label: 'Q4 20o25 Innovation';
-        href: '/innovative-20o25-q4-showcase';
-        icon: <Sparkles className="w-4 h-4"  />;
-        description: 'Latest revolutionary services'};
+        label: 'Q4 20o25 Innovation',
+        href: '/innovative-20o25-q4-showcase',
+        icon: <Sparkles className="w-4 h-4"  />,
+        description: 'Latest revolutionary services'},
       {
-        label: 'Pricing Guide';
-        href: '/comprehensive-pricing-20o25-q4';
-        icon: <DollarSign className="w-4 h-4"  />;
-        description: 'Comprehensive pricing for all services'};
+        label: 'Pricing Guide',
+        href: '/comprehensive-pricing-20o25-q4',
+        icon: <DollarSign className="w-4 h-4"  />,
+        description: 'Comprehensive pricing for all services'},
       {
-        label: 'Cybersecurity';
-        href: '/cybersecurity';
-        icon: <Shield className="w-4 h-4"  />;
-        description: 'Enterprise-grade security solutions'};
+        label: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: <Shield className="w-4 h-4"  />,
+        description: 'Enterprise-grade security solutions'},
       {
-        label: 'Cloud Platform';
-        href: '/cloud-platform';
-        icon: <Globe className="w-4 h-4"  />;
+        label: 'Cloud Platform',
+        href: '/cloud-platform',
+        icon: <Globe className="w-4 h-4"  />,
         description: 'Scalable cloud infrastructure'}
-    ]};
+    ]},
   {
-    label: 'Industries';
-    href: '#';
-    icon: <Building className="w-4 h-4"  />;
-    description: 'Solutions for specific industries';
+    label: 'Industries',
+    href: '#',
+    icon: <Building className="w-4 h-4"  />,
+    description: 'Solutions for specific industries',
     children: [
       {
-        label: 'Healthcare';
-        href: '/healthcare-solutions';
-        icon: <Heart className="w-4 h-4"  />;
-        description: 'Medical technology solutions'};
+        label: 'Healthcare',
+        href: '/healthcare-solutions',
+        icon: <Heart className="w-4 h-4"  />,
+        description: 'Medical technology solutions'},
       {
-        label: 'Financial Services';
-        href: '/financial-solutions';
-        icon: <DollarSign className="w-4 h-4"  />;
-        description: 'Fintech and banking solutions'};
+        label: 'Financial Services',
+        href: '/financial-solutions',
+        icon: <DollarSign className="w-4 h-4"  />,
+        description: 'Fintech and banking solutions'},
       {
-        label: 'Manufacturing';
-        href: '/manufacturing-ai-solutions';
-        icon: <Factory className="w-4 h-4"  />;
-        description: 'Industry 4.0 AI solutions'};
+        label: 'Manufacturing',
+        href: '/manufacturing-ai-solutions',
+        icon: <Factory className="w-4 h-4"  />,
+        description: 'Industry 4.0 AI solutions'},
       {
-        label: 'Government';
-        href: '/government-technology-solutions';
-        icon: <Building className="w-4 h-4"  />;
-        description: 'Public sector technology'};
+        label: 'Government',
+        href: '/government-technology-solutions',
+        icon: <Building className="w-4 h-4"  />,
+        description: 'Public sector technology'},
       {
-        label: 'Education';
-        href: '/education-technology-solutions';
-        icon: <GraduationCap className="w-4 h-4"  />;
+        label: 'Education',
+        href: '/education-technology-solutions',
+        icon: <GraduationCap className="w-4 h-4"  />,
         description: 'EdTech solutions'}
-    ]};
+    ]},
   {
-    label: 'Company';
-    href: '#';
-    icon: <Users className="w-4 h-4"  />;
-    description: 'Learn about our mission and team';
+    label: 'Company',
+    href: '#',
+    icon: <Users className="w-4 h-4"  />,
+    description: 'Learn about our mission and team',
     children: [
       {
-        label: 'About Us';
-        href: '/about';
-        icon: <Users className="w-4 h-4"  />;
-        description: 'Our mission and values'};
+        label: 'About Us',
+        href: '/about',
+        icon: <Users className="w-4 h-4"  />,
+        description: 'Our mission and values'},
       {
-        label: 'Case Studies';
-        href: '/case-studies';
-        icon: <TrendingUp className="w-4 h-4"  />;
-        description: 'Success stories and results'};
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <TrendingUp className="w-4 h-4"  />,
+        description: 'Success stories and results'},
       {
-        label: 'Careers';
-        href: '/careers';
-        icon: <Users className="w-4 h-4"  />;
-        description: 'Join our team'};
+        label: 'Careers',
+        href: '/careers',
+        icon: <Users className="w-4 h-4"  />,
+        description: 'Join our team'},
       {
-        label: 'News';
-        href: '/news';
-        icon: <Newspaper className="w-4 h-4"  />;
+        label: 'News',
+        href: '/news',
+        icon: <Newspaper className="w-4 h-4"  />,
         description: 'Latest company updates'}
-    ]};
+    ]},
   {
-    label: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className="w-4 h-4"  />;
-    description: 'Whitepapers, case studies, and insights';
+    label: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className="w-4 h-4"  />,
+    description: 'Whitepapers, case studies, and insights',
     children: [
       {
-        label: 'Blog';
-        href: '/blog';
-        icon: <BookOpen className="w-4 h-4"  />;
-        description: 'Latest insights and updates'};
+        label: 'Blog',
+        href: '/blog',
+        icon: <BookOpen className="w-4 h-4"  />,
+        description: 'Latest insights and updates'},
       {
-        label: 'Case Studies';
-        href: '/case-studies';
-        icon: <Briefcase className="w-4 h-4"  />;
-        description: 'Success stories and results'};
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <Briefcase className="w-4 h-4"  />,
+        description: 'Success stories and results'},
       {
-        label: 'White Papers';
-        href: '/white-papers';
-        icon: <BookOpen className="w-4 h-4"  />;
+        label: 'White Papers',
+        href: '/white-papers',
+        icon: <BookOpen className="w-4 h-4"  />,
         description: 'In-depth research and analysis'}
-    ]};
+    ]},
   {
-    label: 'Company';
-    href: '#';
-    icon: <Users className="w-4 h-4"  />;
-    description: 'Company information and opportunities';
+    label: 'Company',
+    href: '#',
+    icon: <Users className="w-4 h-4"  />,
+    description: 'Company information and opportunities',
     children: [
       {
-        label: 'Careers';
-        href: '/careers';
-        icon: <Briefcase className="w-4 h-4"  />;
-        description: 'Join our team'};
+        label: 'Careers',
+        href: '/careers',
+        icon: <Briefcase className="w-4 h-4"  />,
+        description: 'Join our team'},
       {
-        label: 'News';
-        href: '/news';
-        icon: <Globe className="w-4 h-4"  />;
+        label: 'News',
+        href: '/news',
+        icon: <Globe className="w-4 h-4"  />,
         description: 'Company updates and announcements'}
-    ]};
+    ]},
   {
-    label: 'Contact';
-    href: '/contact';
-    icon: <Phone className="w-5 h-5"  />;
-    description: 'Get in touch with our team';
-    category: 'company';
+    label: 'Contact',
+    href: '/contact',
+    icon: <Phone className="w-5 h-5"  />,
+    description: 'Get in touch with our team',
+    category: 'company',
     color: 'from-green-50o0 to-emerald-50o0'}
 ],
 const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)};
+      setIsScrolled(window.scrollY > 10)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle click outside search,
@@ -211,7 +211,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as HTMLElement)) {
         setIsSearchOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Handle click outside mobile menu,
@@ -219,7 +219,7 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (mobileMenuRef.current && !mobileMenuRef.current.contains(event.target as HTMLElement)) {
         setIsMobileMenuOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Handle search,
@@ -229,14 +229,14 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
       router.push(`/services?search=${encodeURIComponent(searchQuery.trim())}`),
       setIsSearchOpen(false),
       setSearchQuery('')}
-  };
+  },
   // Handle keyboard navigation,
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'Escape') {
       setIsSearchOpen(false),
       setIsMobileMenuOpen(false),
       setActiveDropdown(null)}
-  };
+  },
   // Close mobile menu on route change,
   useEffect(() => {
     setIsMobileMenuOpen(false),
@@ -261,17 +261,17 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
                 key={i}
                 className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-blue-50o0 rounded-full",
                 animate={{
-                  x: [0, 10o0, 0];
-                  y: [0, -10o0, 0];
-                  opacity: [0, 0.6, 0];
+                  x: [0, 10o0, 0],
+                  y: [0, -10o0, 0],
+                  opacity: [0, 0.6, 0],
                   scale: [0, 1, 0]}}
                 transition={{
-                  duration: 8 + i * 0.5;
-                  repeat: -1;
-                  delay: i * 0.3;
+                  duration: 8 + i * 0.5,
+                  repeat: -1,
+                  delay: i * 0.3,
                   ease: "easeInOut"}}
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                />))}
           </>)}
@@ -498,5 +498,5 @@ const UltraAdvancedFuturisticNavigation20o25: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </motion.nav>)};
-export default UltraAdvancedFuturisticNavigation20o25;
+    </motion.nav>)},
+export default UltraAdvancedFuturisticNavigation20o25,

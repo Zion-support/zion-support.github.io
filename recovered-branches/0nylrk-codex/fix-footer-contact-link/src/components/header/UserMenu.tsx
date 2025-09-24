@@ -17,10 +17,10 @@ export function UserMenu() {
     try {
       await logout()} catch (error) {
       toast({
-        title: "Error signing out";
-        description: "There was an error signing you out. Please try again.";
+        title: "Error signing out",
+        description: "There was an error signing you out. Please try again.",
         variant: "destructive"})}
-  };
+  },
   if (!user) {
     return (
       <div className="hidden md: flex items-center space-x-4">,

@@ -11,11 +11,11 @@ import { enhancedRealMicroSaasServices  } from '../data / enhanced - real - micr
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -27,24 +27,24 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Brain;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Brain;
-  Star;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Brain,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Brain,
+  Star,
 } from "lucide-react",
 export default function QuantumAIBCIPage() {
   const service = enhancedRealMicroSaasServices && enhancedRealMicroSaasServices.find((s) =>,
-    s && s.link.endsWith("/quantum-ai-brain-computer-interface");
+    s && s.link.endsWith("/quantum-ai-brain-computer-interface"),
 ),
   if (!service) return null,
   return (
@@ -106,12 +106,12 @@ export default function QuantumAIBCIPage() {
                 href="/contact",
                 variant="quantum",
                 size="lg",
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Brain;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Brain,
   Star} from './lucide-react',
 export default /**,
  * QuantumAIBCIPage - Function description,

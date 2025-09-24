@@ -1,21 +1,21 @@
 import React, { useState, useMemo } from 'react',
 import { motion } from 'framer-motion',
 import {
-  Lightbulb;
-  Rocket;
-  Brain;
-  Zap;
-  TrendingUp;
-  Star;
-  Users;
-  Globe;
-  CheckCircle;
-  Cpu;
-  Atom;
-  Satellite;
-  Dna;
-  Shield;
-  Leaf;
+  Lightbulb,
+  Rocket,
+  Brain,
+  Zap,
+  TrendingUp,
+  Star,
+  Users,
+  Globe,
+  CheckCircle,
+  Cpu,
+  Atom,
+  Satellite,
+  Dna,
+  Shield,
+  Leaf,
 } from 'lucide-react',
 import { Card, CardContent, CardHeader, CardTitle } from './ui/card',
 import { Button } from './ui/button',
@@ -30,192 +30,169 @@ const AdvancedServiceInnovationHub = () => {
   // Mock data - in real app this would come from API,
   const innovationTrends = [
     {
-      id: 'quantum-supremacy';
-      title: 'Quantum Supremacy & Commercialization';
+      id: 'quantum-supremacy',
+      title: 'Quantum Supremacy & Commercialization',
       description:,
-        'The transition from quantum research to practical commercial applications across industries.';
-      category: 'quantum';
-      impact: 'High';
-      timeline: '20o25-20o30';
-      adoption: 85;
-      investment: '$50B+';
-      keyPlayers: ['IBM', 'Google', 'Microsoft', 'Startups'];
+        'The transition from quantum research to practical commercial applications across industries.',
+      category: 'quantum',
+      impact: 'High',
+      timeline: '20o25-20o30',
+      adoption: 85,
+      investment: '$50B+',
+      keyPlayers: ['IBMGoogle', 'MicrosoftStartups'],
       technologies: [
-        'Quantum Computing';
-        'Quantum Algorithms';
-        'Quantum Software';
-      ];
-      status: 'Emerging';
-    };
+        'Quantum ComputingQuantum Algorithms',
+        'Quantum Software',
+      ],
+      status: 'Emerging'
+    },
     {
-      id: 'ai-consciousness';
-      title: 'AI Consciousness & General Intelligence';
+      id: 'ai-consciousness',
+      title: 'AI Consciousness & General Intelligence',
       description:,
-        'Development of self-aware AI systems with human-like reasoning and consciousness.';
-      category: 'ai';
-      impact: 'High';
-      timeline: '20o30-20o40';
-      adoption: 45;
-      investment: '$10o0B+';
-      keyPlayers: ['OpenAI', 'Anthropic', 'Research Labs', 'Universities'];
-      technologies: ['AI Consciousness', 'General AI', 'Neural Networks'];
-      status: 'Emerging';
-    };
+        'Development of self-aware AI systems with human-like reasoning and consciousness.',
+      category: 'ai',
+      impact: 'High',
+      timeline: '20o30-20o40',
+      adoption: 45,
+      investment: '$10o0B+',
+      keyPlayers: ['OpenAIAnthropic', 'Research LabsUniversities'],
+      technologies: ['AI ConsciousnessGeneral AI', 'Neural Networks'],
+      status: 'Emerging'
+    },
     {
-      id: 'space-mining';
-      title: 'Space Mining & Resource Extraction';
+      id: 'space-mining',
+      title: 'Space Mining & Resource Extraction',
       description:,
-        'Commercial extraction of valuable resources from asteroids and celestial bodies.';
-      category: 'space-tech';
-      impact: 'High';
-      timeline: '20o30-20o40';
-      adoption: 30;
-      investment: '$20o0B+';
-      keyPlayers: ['SpaceX', 'Blue Origin', 'Asteroid Mining Companies'];
+        'Commercial extraction of valuable resources from asteroids and celestial bodies.',
+      category: 'space-tech',
+      impact: 'High',
+      timeline: '20o30-20o40',
+      adoption: 30,
+      investment: '$20o0B+',
+      keyPlayers: ['SpaceXBlue Origin', 'Asteroid Mining Companies'],
       technologies: [
-        'Space Robotics';
-        'Resource Processing';
-        'Space Logistics';
-      ];
-      status: 'Emerging';
-    };
+        'Space RoboticsResource Processing',
+        'Space Logistics',
+      ],
+      status: 'Emerging'
+    },
     {
-      id: 'fusion-energy';
-      title: 'Fusion Energy Commercialization';
+      id: 'fusion-energy',
+      title: 'Fusion Energy Commercialization',
       description:,
-        'Breakthrough in controlled nuclear fusion for unlimited clean energy.';
-      category: 'green-tech';
-      impact: 'High';
-      timeline: '20o30-20o40';
-      adoption: 60;
-      investment: '$50o0B+';
-      keyPlayers: ['ITER', 'Private Fusion Companies', 'Government Labs'];
+        'Breakthrough in controlled nuclear fusion for unlimited clean energy.',
+      category: 'green-tech',
+      impact: 'High',
+      timeline: '20o30-20o40',
+      adoption: 60,
+      investment: '$50o0B+',
+      keyPlayers: ['ITERPrivate Fusion Companies', 'Government Labs'],
       technologies: [
-        'Fusion Physics';
-        'Plasma Confinement';
-        'Energy Conversion';
-      ];
-      status: 'Growing';
-    };
+        'Fusion PhysicsPlasma Confinement',
+        'Energy Conversion',
+      ],
+      status: 'Growing'
+    },
     {
-      id: 'synthetic-biology';
-      title: 'Synthetic Biology Revolution';
+      id: 'synthetic-biology',
+      title: 'Synthetic Biology Revolution',
       description:,
-        'Engineering of custom organisms and biological systems for industrial applications.';
-      category: 'biotech-ai';
-      impact: 'High';
-      timeline: '20o25-20o35';
-      adoption: 70;
-      investment: '$150B+';
+        'Engineering of custom organisms and biological systems for industrial applications.',
+      category: 'biotech-ai',
+      impact: 'High',
+      timeline: '20o25-20o35',
+      adoption: 70,
+      investment: '$150B+',
       keyPlayers: [
-        'Ginkgo Bioworks';
-        'Twist Bioscience';
-        'Research Institutions';
-      ];
+        'Ginkgo BioworksTwist Bioscience',
+        'Research Institutions',
+      ],
       technologies: [
-        'DNA Programming';
-        'Genetic Engineering';
-        'Bio-Manufacturing';
-      ];
-      status: 'Growing';
-    };
+        'DNA ProgrammingGenetic Engineering',
+        'Bio-Manufacturing',
+      ],
+      status: 'Growing'
+    },
     {
-      id: 'brain-computer-interfaces';
-      title: 'Brain-Computer Interface Revolution';
+      id: 'brain-computer-interfaces',
+      title: 'Brain-Computer Interface Revolution',
       description:,
-        'Direct neural control of computers and digital systems for enhanced human capabilities.';
-      category: 'biotech-ai';
-      impact: 'High';
-      timeline: '20o30-20o40';
-      adoption: 40;
-      investment: '$80B+';
-      keyPlayers: ['Neuralink', 'Kernel', 'Medical Device Companies'];
-      technologies: ['Neural Interfaces', 'Signal Processing', 'AI/ML'];
-      status: 'Emerging';
-    };
+        'Direct neural control of computers and digital systems for enhanced human capabilities.',
+      category: 'biotech-ai',
+      impact: 'High',
+      timeline: '20o30-20o40',
+      adoption: 40,
+      investment: '$80B+',
+      keyPlayers: ['NeuralinkKernel', 'Medical Device Companies'],
+      technologies: ['Neural InterfacesSignal Processing', 'AI/ML'],
+      status: 'Emerging'
+    },
   ],
   const futureRoadmap = [
     {
-      id: 'quantum-internet';
-      title: 'Quantum Internet Infrastructure';
+      id: 'quantum-internet',
+      title: 'Quantum Internet Infrastructure',
       description:,
-        'Global quantum internet enabling ultra-secure, instant communication worldwide.';
-      timeline: '20o30-20o40';
+        'Global quantum internet enabling ultra-secure, instant communication worldwide.',
+      timeline: '20o30-20o40',
       milestones: [
-        'Quantum network prototypes';
-        'Inter-city quantum links';
-        'Global quantum backbone';
-        'Consumer quantum internet';
-      ];
+        'Quantum network prototypesInter-city quantum links',
+        'Global quantum backboneConsumer quantum internet',
+      ],
       challenges: [
-        'Quantum entanglement over long distances';
-        'Infrastructure costs';
-        'Technical complexity';
-        'Regulatory frameworks';
-      ];
+        'Quantum entanglement over long distancesInfrastructure costs',
+        'Technical complexityRegulatory frameworks',
+      ],
       opportunities: [
-        'Unbreakable security';
-        'Instant global communication';
-        'Quantum computing access';
-        'New business models';
-      ];
-      investment: '$20o0B+';
-      category: 'quantum';
-    };
+        'Unbreakable securityInstant global communication',
+        'Quantum computing accessNew business models',
+      ],
+      investment: '$20o0B+',
+      category: 'quantum'
+    },
     {
-      id: 'space-colonization';
-      title: 'Space Colonization & Settlement';
+      id: 'space-colonization',
+      title: 'Space Colonization & Settlement',
       description:,
-        'Establishment of permanent human settlements on Mars and other celestial bodies.';
-      timeline: '20o40-20o60';
+        'Establishment of permanent human settlements on Mars and other celestial bodies.',
+      timeline: '20o40-20o60',
       milestones: [
-        'Mars mission planning';
-        'Habitat construction';
-        'Sustainable life support';
-        'Self-sufficient colonies';
-      ];
+        'Mars mission planningHabitat construction',
+        'Sustainable life supportSelf-sufficient colonies',
+      ],
       challenges: [
-        'Life support systems';
-        'Radiation protection';
-        'Resource sustainability';
-        'Human psychology';
-      ];
+        'Life support systemsRadiation protection',
+        'Resource sustainabilityHuman psychology',
+      ],
       opportunities: [
-        'New human civilization';
-        'Resource expansion';
-        'Scientific research';
-        'Economic growth';
-      ];
-      investment: '$1T+';
-      category: 'space-tech';
-    };
+        'New human civilizationResource expansion',
+        'Scientific researchEconomic growth',
+      ],
+      investment: '$1T+',
+      category: 'space-tech'
+    },
     {
-      id: 'ai-governance';
-      title: 'AI Governance & Regulation';
+      id: 'ai-governance',
+      title: 'AI Governance & Regulation',
       description:,
-        'Comprehensive frameworks for responsible AI development and deployment.';
-      timeline: '20o25-20o35';
+        'Comprehensive frameworks for responsible AI development and deployment.',
+      timeline: '20o25-20o35',
       milestones: [
-        'Ethical AI frameworks';
-        'Regulatory standards';
-        'Global AI governance';
-        'AI safety protocols';
-      ];
+        'Ethical AI frameworksRegulatory standards',
+        'Global AI governanceAI safety protocols',
+      ],
       challenges: [
-        'International coordination';
-        'Technology evolution';
-        'Balancing innovation and safety';
-        'Stakeholder alignment';
-      ];
+        'International coordinationTechnology evolution',
+        'Balancing innovation and safetyStakeholder alignment',
+      ],
       opportunities: [
-        'Responsible AI development';
-        'Public trust building';
-        'Innovation guidance';
-        'Global cooperation';
-      ];
-      investment: '$50B+';
-      category: 'ai';
-    };
+        'Responsible AI developmentPublic trust building',
+        'Innovation guidanceGlobal cooperation',
+      ],
+      investment: '$50B+',
+      category: 'ai'
+    },
   ],
   const filteredTrends = useMemo(() => {
     return innovationTrends.filter(trend => {
@@ -239,7 +216,7 @@ const AdvancedServiceInnovationHub = () => {
         return 'bg-green-10o0 text-green-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getStatusColor = status => {
     switch (status) {
       case 'Emerging':,
@@ -252,7 +229,7 @@ const AdvancedServiceInnovationHub = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getCategoryIcon = category => {
     switch (category) {
       case 'quantum':,
@@ -267,30 +244,30 @@ const AdvancedServiceInnovationHub = () => {
         return <Dna className='w-5 h-5' />,
       default: ,
         return <Cpu className='w-5 h-5' />}
-  };
+  },
   const categories = [
-    { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4' /> };
+    { id: 'all', name: 'All Categories', icon: <Globe className='w-4 h-4' /> },
     {
-      id: 'quantum';
-      name: 'Quantum Technology';
-      icon: <Atom className='w-4 h-4' />;
-    };
+      id: 'quantum',
+      name: 'Quantum Technology',
+      icon: <Atom className='w-4 h-4' />
+    },
     {
-      id: 'ai';
-      name: 'Artificial Intelligence';
-      icon: <Brain className='w-4 h-4' />;
-    };
+      id: 'ai',
+      name: 'Artificial Intelligence',
+      icon: <Brain className='w-4 h-4' />
+    },
     {
-      id: 'space-tech';
-      name: 'Space Technology';
-      icon: <Satellite className='w-4 h-4' />;
-    };
+      id: 'space-tech',
+      name: 'Space Technology',
+      icon: <Satellite className='w-4 h-4' />
+    },
     {
-      id: 'green-tech';
-      name: 'Green Technology';
-      icon: <Leaf className='w-4 h-4' />;
-    };
-    { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4' /> };
+      id: 'green-tech',
+      name: 'Green Technology',
+      icon: <Leaf className='w-4 h-4' />
+    },
+    { id: 'biotech-ai', name: 'Biotech AI', icon: <Dna className='w-4 h-4' /> },
   ],
   return (
     <div className='max-w-7xl mx-auto p-6'>,
@@ -311,7 +288,7 @@ const AdvancedServiceInnovationHub = () => {
             </p>,
           </div>,
           <div className='flex gap-2'>,
-            {['trends', 'roadmap', 'insights'].map(mode => (
+            {['trendsroadmap', 'insights'].map(mode => (
               <Button
                 key={mode}
                 variant={viewMode === mode ? 'default' : 'outline'}
@@ -799,8 +776,7 @@ const AdvancedServiceInnovationHub = () => {
               className='bg-white text-zion-purple hover:bg-zion-slate-light',
               onClick={() =>,
                 window.open(
-                  'mailto:kleber@ziontechgroup.com?subject=Innovation Strategy Consultation';
-                  '_blank')}
+                  'mailto: kleber@ziontechgroup.com?subject=Innovation Strategy Consultation_blank')}
             >,
               <Users className='w-5 h-5 mr-2' />,
               Get Innovation Strategy,
@@ -808,7 +784,7 @@ const AdvancedServiceInnovationHub = () => {
             <Button
               variant='outline',
               className='border-white text-white hover: bg-white hover:text-zion-purple',
-              onClick={() => window.open('tel:+130o24640950', '_blank')}
+              onClick={() => window.open('tel:+130o24640950_blank')}
             >,
               <Zap className='w-5 h-5 mr-2' />,
               Speak with an Expert,
@@ -816,5 +792,5 @@ const AdvancedServiceInnovationHub = () => {
           </div>,
         </div>,
       </motion.div>,
-    </div>)};
-export default AdvancedServiceInnovationHub;
+    </div>)},
+export default AdvancedServiceInnovationHub,

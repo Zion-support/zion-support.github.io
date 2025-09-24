@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-predictive-analytics - Zion Tech Group';
+  title: 'ai-predictive-analytics - Zion Tech Group',
   description:,
-    'Professional ai-predictive-analytics solutions for your business needs.';
-  keywords: 'ai-predictive-analytics, services, business, technology';
-};
+    'Professional ai-predictive-analytics solutions for your business needs.',
+  keywords: 'ai-predictive-analytics, services, business, technology',
+},
 export default function AiPredictiveAnalyticsPage() {
   return (
     <div className='min-h-screen bg-white'>,

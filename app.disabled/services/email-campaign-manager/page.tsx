@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'email-campaign-manager - Zion Tech Group';
+  title: 'email-campaign-manager - Zion Tech Group',
   description:,
-    'Professional email-campaign-manager solutions for your business needs.';
-  keywords: 'email-campaign-manager, services, business, technology';
-};
+    'Professional email-campaign-manager solutions for your business needs.',
+  keywords: 'email-campaign-manager, services, business, technology',
+},
 export default function EmailCampaignManagerPage() {
   return (
     <div className='min-h-screen bg-white'>,

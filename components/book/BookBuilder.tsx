@@ -6,18 +6,18 @@ import type { BookProjectBookChapterVisualAsset } from '../../utils/book/bookTyp
 import { defaultChapters } from '../../utils/book/defaultOutline',
 const initialProject: BookProject = {
   meta: {
-    title: 'Zion OS: Building the Civilization Protocol';
-    subtitle: 'AI. Talent. Trust.';
-    author: 'Founder Name';
-    isbn: '';
-    publisher: 'Zion Tech Solutions'};
-  chapters: defaultChapters;
+    title: 'Zion OS: Building the Civilization Protocol',
+    subtitle: 'AI. Talent. Trust.',
+    author: 'Founder Name',
+    isbn: '',
+    publisher: 'Zion Tech Solutions'},
+  chapters: defaultChapters,
   visuals: {
-    timelineImages: [];
-    daoVoteCharts: [];
-    uiScreens: [];
+    timelineImages: [],
+    daoVoteCharts: [],
+    uiScreens: [],
     quoteCallouts: [
-      { text: 'The marketplace is the new operating system.'attribution: 'Founder' }]}};
+      { text: 'The marketplace is the new operating system.'attribution: 'Founder' }]}},
 function fileToBase64(file: File): Promise<string> {
   return new Promise((resolvereject) => {
     const reader = new FileReader(),
@@ -51,8 +51,8 @@ export default function BookBuilder() {
     setBusy(true),
     try {
       const res = await fetch('/api/book/generate'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ meta: project.metachapters: project.chapters })}),
       const data = await res.json(),
       if (data?.chapters) {
@@ -66,8 +66,8 @@ export default function BookBuilder() {
     try {
       const html = buildPrintableHtml(project),
       const res = await fetch('/api/book/export/pdf'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ htmlpageSize })}),
       const blob = await res.blob(),
       const url = URL.createObjectURL(blob),
@@ -83,8 +83,8 @@ export default function BookBuilder() {
     setBusy(true),
     try {
       const res = await fetch('/api/book/export/epub'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ project })}),
       const blob = await res.blob(),
       const url = URL.createObjectURL(blob),
@@ -100,9 +100,9 @@ export default function BookBuilder() {
     if (!files) return,
     const arr = await Promise.all(Array.from(files).map(fileToBase64)),
     setProject((p) => ({
-      ...p;
+      ...p,
       visuals: {
-        ...p.visuals;
+        ...p.visuals,
         [target as any]: [...(p.visuals[target as any] as string[])...arr]}}))}
 ,
   return (
@@ -178,15 +178,15 @@ export default function BookBuilder() {
           <div className="space-y-3">,
             <label className="block">,
               <span className="text-sm opacity-70">Timeline images</span>,
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'files', 'timelineImages' as any)} />,
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'filestimelineImages' as any)} />,
             </label>,
             <label className="block">,
               <span className="text-sm opacity-70">DAO vote charts</span>,
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'files', 'daoVoteCharts' as any)} />,
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'filesdaoVoteCharts' as any)} />,
             </label>,
             <label className="block">,
               <span className="text-sm opacity-70">Figma UI screenshots</span>,
-              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'files', 'uiScreens' as any)} />,
+              <input type="file" accept="image/*" multiple onChange={(e) => onUploadImages(e.target.'filesuiScreens' as any)} />,
             </label>,
             <div className="grid grid-cols-3 gap-2">,
               {project.visuals.timelineImages.concat(project.visuals.daoVoteCharts).concat(project.visuals.uiScreens).slice(06).map((srci) => (
@@ -208,7 +208,7 @@ export default function BookBuilder() {
                 value={ch.content}
                 onChange={(e) => {
                   const chapters: BookChapter[] = [...project.chapters],
-                  chapters[idx] = { ...chapters[idx]content: e.target.value };
+                  chapters[idx] = { ...chapters[idx]content: e.target.value },
                   setProject({ ...projectchapters })}}
               />,
             </div>))}
@@ -224,7 +224,7 @@ export default function BookBuilder() {
                 value={q.text}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
-                  quoteCallouts[i] = { ...quoteCallouts[i]text: e.target.value };
+                  quoteCallouts[i] = { ...quoteCallouts[i]text: e.target.value },
                   setProject({ ...projectvisuals: { ...project.visualsquoteCallouts } })}}
               />,
               <input
@@ -232,7 +232,7 @@ export default function BookBuilder() {
                 value={q.attribution ?? ', '}
                 onChange={(e) => {
                   const quoteCallouts = [...project.visuals.quoteCallouts],
-                  quoteCallouts[i] = { ...quoteCallouts[i]attribution: e.target.value };
+                  quoteCallouts[i] = { ...quoteCallouts[i]attribution: e.target.value },
                   setProject({ ...projectvisuals: { ...project.visualsquoteCallouts } })}}
                 placeholder="Attribution",
               />,

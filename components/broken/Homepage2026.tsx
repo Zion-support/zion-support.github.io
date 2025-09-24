@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import Layout from './layout/Layout',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   ArrowRightStar,
-  BrainAtomShieldZapTrendingUpGlobeMapPin;
+  BrainAtomShieldZapTrendingUpGlobeMapPin,
   UsersBuildingRocketCheckCirclePhoneMail} from 'lucide-react',
 const Homepage2026: React.FC = () => {
   return (
@@ -372,5 +372,5 @@ const Homepage2026: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage2026;
+    </Layout>)},
+export default Homepage2026,

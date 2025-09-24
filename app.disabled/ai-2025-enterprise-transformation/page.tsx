@@ -1,17 +1,15 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o25 Enterprise Transformation - Complete Business Revolution';
+  title: 'AI 20o25 Enterprise Transformation - Complete Business Revolution',
   description:,
-    'Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.';
+    'Transform your enterprise with AI 20o25 technologies. Complete digital transformation, intelligent automation, and revolutionary business processes.',
   keywords: [
-    'AI enterprise transformation 20o25';
-    'digital transformation';
-    'enterprise AI';
-    'business automation';
-    'AI consulting';
-  ];
-};
+    'AI enterprise transformation 20o25digital transformation',
+    'enterprise AIbusiness automation',
+    'AI consulting',
+  ]
+},
 export default function AI20o25EnterpriseTransformationPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-indigo-90o0'>,

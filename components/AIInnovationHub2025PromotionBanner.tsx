@@ -9,27 +9,27 @@ import {
   Target,
   ArrowRight,
   Star,
-  TrendingUp;
-  Users;
-  Shield;
-  Globe;
-  X;
-  Play;
-  Download;
-  Search;
-  Grid;
-  List;
-  Crown;
-  Gem;
-  Sparkles;
-  CheckCircle;
-  Award;
-  Code;
-  Settings;
-  Wrench;
-  Eye;
-  BarChart3;
-  MessageCircle;
+  TrendingUp,
+  Users,
+  Shield,
+  Globe,
+  X,
+  Play,
+  Download,
+  Search,
+  Grid,
+  List,
+  Crown,
+  Gem,
+  Sparkles,
+  CheckCircle,
+  Award,
+  Code,
+  Settings,
+  Wrench,
+  Eye,
+  BarChart3,
+  MessageCircle,
   Building} from 'lucide-react',
 const AIInnovationHub20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -43,49 +43,49 @@ const AIInnovationHub20o25PromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const innovations = [
     {
-      icon: Brain;
-      title: 'Neural Architecture Search';
-      description: 'Automated discovery of optimal neural networks';
-      category: 'AI Core';
-      color: 'from-purple-50o0 to-pink-50o0';
-      rating: 4.9;
-      downloads: '50K+'};
+      icon: Brain,
+      title: 'Neural Architecture Search',
+      description: 'Automated discovery of optimal neural networks',
+      category: 'AI Core',
+      color: 'from-purple-50o0 to-pink-50o0',
+      rating: 4.9,
+      downloads: '50K+'},
     {
-      icon: Zap;
-      title: 'Quantum Neural Networks';
-      description: 'Hybrid quantum-classical neural networks';
-      category: 'Quantum AI';
-      color: 'from-blue-50o0 to-cyan-50o0';
-      rating: 4.8;
-      downloads: '25K+'};
+      icon: Zap,
+      title: 'Quantum Neural Networks',
+      description: 'Hybrid quantum-classical neural networks',
+      category: 'Quantum AI',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      rating: 4.8,
+      downloads: '25K+'},
     {
-      icon: Shield;
-      title: 'Federated Learning';
-      description: 'Privacy-preserving distributed ML';
-      category: 'Privacy AI';
-      color: 'from-green-50o0 to-emerald-50o0';
-      rating: 4.7;
-      downloads: '75K+'};
+      icon: Shield,
+      title: 'Federated Learning',
+      description: 'Privacy-preserving distributed ML',
+      category: 'Privacy AI',
+      color: 'from-green-50o0 to-emerald-50o0',
+      rating: 4.7,
+      downloads: '75K+'},
     {
-      icon: Rocket;
-      title: 'Edge AI Computing';
-      description: 'Ultra-low latency distributed processing';
-      category: 'Future Tech';
-      color: 'from-orange-50o0 to-red-50o0';
-      rating: 4.7;
+      icon: Rocket,
+      title: 'Edge AI Computing',
+      description: 'Ultra-low latency distributed processing',
+      category: 'Future Tech',
+      color: 'from-orange-50o0 to-red-50o0',
+      rating: 4.7,
       downloads: '35K+'}
   ],
   const categories = [
-    { name: 'AI Core 'Technologies', 'count: '150+'icon: Brain };
-    { name: 'Business AI 'Solutions', 'count: '80+'icon: Target };
-    { name: 'Future 'Technologies', 'count: '45+'icon: Rocket };
-    { name: 'Tools & 'Utilities', 'count: '120+'icon: Wrench }
+    { name: 'AI Core 'Technologiescount: '150+'icon: Brain },
+    { name: 'Business AI 'Solutionscount: '80+'icon: Target },
+    { name: 'Future 'Technologiescount: '45+'icon: Rocket },
+    { name: 'Tools & 'Utilitiescount: '120+'icon: Wrench }
   ],
   const stats = [
-    { number: '40o0+'label: 'AI 'Innovations', 'icon: Brain };
-    { number: '1M+'label: ''Downloads', 'icon: Download };
-    { number: '4.8'label: 'Average 'Rating', 'icon: Star };
-    { number: '50+'label: ''Categories', 'icon: Grid }
+    { number: '40o0+'label: 'AI 'Innovationsicon: Brain },
+    { number: '1M+'label: ''Downloadsicon: Download },
+    { number: '4.8'label: 'Average 'Ratingicon: Star },
+    { number: '50+'label: ''Categoriesicon: Grid }
   ],
   if (isDismissed) return null,
   return (
@@ -224,10 +224,10 @@ const AIInnovationHub20o25PromotionBanner = () => {
                       {/* Feature Grid */}
                       <div className="grid grid-cols-2 gap-4 mb-6">,
                         {[
-                          { icon: Brainlabel: 'Neural 'Networks', 'color: 'from-purple-50o0 to-pink-50o0' };
-                          { icon: Zaplabel: 'Quantum 'AI', 'color: 'from-blue-50o0 to-cyan-50o0' };
-                          { icon: Shieldlabel: 'Privacy 'AI', 'color: 'from-green-50o0 to-emerald-50o0' };
-                          { icon: Rocketlabel: 'Edge 'Computing', 'color: 'from-orange-50o0 to-red-50o0' }
+                          { icon: Brainlabel: 'Neural 'Networkscolor: 'from-purple-50o0 to-pink-50o0' },
+                          { icon: Zaplabel: 'Quantum 'AIcolor: 'from-blue-50o0 to-cyan-50o0' },
+                          { icon: Shieldlabel: 'Privacy 'AIcolor: 'from-green-50o0 to-emerald-50o0' },
+                          { icon: Rocketlabel: 'Edge 'Computingcolor: 'from-orange-50o0 to-red-50o0' }
                         ].map((featureindex) => (
                           <div key={index} className={`bg-gradient-to-r ${feature.color} rounded-xl p-4 text-center`}>,
                             <feature.icon className="w-6 h-6 text-white mx-auto mb-2"  />,
@@ -237,10 +237,8 @@ const AIInnovationHub20o25PromotionBanner = () => {
                       {/* Quick Stats */}
                       <div className="space-y-3">,
                         {[
-                          '40o0+ AI Innovations';
-                          '1M+ Downloads';
-                          '4.8/5 Average Rating';
-                          '50+ Categories'].map((statindex) => (
+                          '40o0+ AI Innovations1M+ Downloads',
+                          '4.8/5 Average Rating50+ Categories'].map((statindex) => (
                           <div key={index} className="flex items-center">,
                             <CheckCircle className="w-4 h-4 text-green-40o0 mr-3 flex-shrink-0"  />,
                             <span className="text-gray-30o0 text-sm">{stat}</span>,
@@ -274,5 +272,5 @@ const AIInnovationHub20o25PromotionBanner = () => {
           {/* Bottom Gradient */}
           <div className="h-2 bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-purple-60o0"  />,
         </motion.div>)}
-    </AnimatePresence>)};
-export default AIInnovationHub20o25PromotionBanner;
+    </AnimatePresence>)},
+export default AIInnovationHub20o25PromotionBanner,

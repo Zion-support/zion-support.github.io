@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react',
 import {
-  CheckCircle;
-  XCircle;
-  AlertTriangle;
-  ExternalLink;
+  CheckCircle,
+  XCircle,
+  AlertTriangle,
+  ExternalLink,
 } from 'lucide-react',
 const LinkHealthChecker = ({ links, className = '' }) => {
   const [linkStatuses, setLinkStatuses] = useState([]),
@@ -14,50 +14,50 @@ const LinkHealthChecker = ({ links, className = '' }) => {
       // Check if it's an external link,
       if (url.startsWith('http') && !url.includes('ziontechgroup.com')) {
         return {
-          url;
-          status: 'external';
-          responseTime: Date.now() - startTime;
-        };
+          url,
+          status: 'external',
+          responseTime: Date.now() - startTime
+        },
       }
       // Check if it's a mailto or tel link,
       if (url.startsWith('mailto: ') || url.startsWith('tel:')) {
         return {
-          url;
-          status: 'healthy';
-          responseTime: Date.now() - startTime;
-        };
+          url,
+          status: 'healthy',
+          responseTime: Date.now() - startTime
+        },
       }
       // For internal links, we'll assume they're healthy since they're part of our app,
       if (url.startsWith('/') || url.includes('ziontechgroup.com')) {
         return {
-          url;
-          status: 'healthy';
-          responseTime: Date.now() - startTime;
-        };
+          url,
+          status: 'healthy',
+          responseTime: Date.now() - startTime
+        },
       }
       // For external links, we could implement actual health checking,
       // For now, we'll mark them as external,
       return {
-        url;
-        status: 'external';
-        responseTime: Date.now() - startTime;
-      };
+        url,
+        status: 'external',
+        responseTime: Date.now() - startTime
+      },
     } catch (error) {
       return {
-        url;
-        status: 'broken';
-        responseTime: Date.now() - startTime;
-        error: error instanceof Error ? error.message : 'Unknown error';
-      };
+        url,
+        status: 'broken',
+        responseTime: Date.now() - startTime,
+        error: error instanceof Error ? error.message : 'Unknown error'
+      },
     }
-  };
+  },
   const checkAllLinks = async () => {
     setIsChecking(true),
     setLinkStatuses(links.map(link => ({ url: link.url, status: 'checking' }))),
     const statuses = await Promise.all(
       links.map(link => checkLinkHealth(link.url))),
     setLinkStatuses(statuses),
-    setIsChecking(false)};
+    setIsChecking(false)},
   useEffect(() => {
     // Auto-check links when component mounts,
     checkAllLinks()}, [links]),
@@ -74,7 +74,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
           <AlertTriangle className='w-5 h-5 text-yellow-50o0 animate-pulse' />),
       default: ,
         return <AlertTriangle className='w-5 h-5 text-gray-50o0' />}
-  };
+  },
   const getStatusText = status => {
     switch (status) {
       case 'healthy':,
@@ -87,7 +87,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         return 'Checking...',
       default: ,
         return 'Unknown'}
-  };
+  },
   const getStatusColor = status => {
     switch (status) {
       case 'healthy':,
@@ -100,7 +100,7 @@ const LinkHealthChecker = ({ links, className = '' }) => {
         return 'text-yellow-50o0',
       default: ,
         return 'text-gray-50o0'}
-  };
+  },
   const healthyCount = linkStatuses.filter(s => s.status === 'healthy').length,
   const brokenCount = linkStatuses.filter(s => s.status === 'broken').length,
   const externalCount = linkStatuses.filter(
@@ -209,5 +209,5 @@ const LinkHealthChecker = ({ links, className = '' }) => {
             excellent health.,
           </p>,
         </div>)}
-    </div>)};
-export default LinkHealthChecker;
+    </div>)},
+export default LinkHealthChecker,

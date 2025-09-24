@@ -9,8 +9,8 @@ export const useUpdateMilestone = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
   const updateMilestoneStatus = async (
-    milestoneId: string;
-    newStatus: MilestoneStatus;
+    milestoneId: string,
+    newStatus: MilestoneStatus,
     comment?: string) => {
     if (!user) return false,
     try {
@@ -32,10 +32,10 @@ export const useUpdateMilestone = () => {
       if (error) throw error,
       // Create activity record,
       await recordMilestoneActivity(
-        milestoneId;
-        'status_changed';
-        previousStatus;
-        newStatus;
+        milestoneId,
+        'status_changed',
+        previousStatus,
+        newStatus,
         comment),
       toast.success(`Milestone status changed to ${newStatus}`),
       return true} catch (err: any) {
@@ -43,9 +43,9 @@ export const useUpdateMilestone = () => {
       toast.error('Failed to update status: ' + err.message),
       return false} finally {
       setIsSubmitting(false)}
-  };
+  },
   const updateMilestone = async (
-    milestoneId: string;
+    milestoneId: string,
     data: Partial<Milestone>) => {
     if (!user) return false,
     try {
@@ -57,21 +57,20 @@ export const useUpdateMilestone = () => {
       if (error) throw error,
       // Create activity record,
       await recordMilestoneActivity(
-        milestoneId;
-        'updated';
-        null;
-        'updated';
-        'Milestone details updated'),
+        milestoneId,
+        'updated',
+        null,
+        'updatedMilestone details updated'),
       toast.success('Milestone updated successfully'),
       return true} catch (err: any) {
       console.error('Error updating milestone:', err),
       toast.error('Failed to update milestone: ' + err.message),
       return false} finally {
       setIsSubmitting(false)}
-  };
+  },
   return {
-    updateMilestoneStatus;
-    updateMilestone;
-    isSubmitting;
-  };
-};
+    updateMilestoneStatus,
+    updateMilestone,
+    isSubmitting,
+  },
+},

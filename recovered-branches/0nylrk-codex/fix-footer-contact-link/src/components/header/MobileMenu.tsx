@@ -15,38 +15,38 @@ export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
   const isAuthenticated = !!user,
   const navItems = [
     {
-      name: "Home";
-      href: "/";
-      icon: Home;
-      matches: (path: string) => path === "/"};
+      name: "Home",
+      href: "/",
+      icon: Home,
+      matches: (path: string) => path === "/"},
     {
-      name: "Browse";
-      href: "/talent";
-      icon: Search;
-      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")};
+      name: "Browse",
+      href: "/talent",
+      icon: Search,
+      matches: (path: string) => path.startsWith("/talent") || path.startsWith("/categories") || path.startsWith("/marketplace")},
     {
-      name: "Community";
-      href: "/community";
-      icon: MessageCircle;
-      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")};
+      name: "Community",
+      href: "/community",
+      icon: MessageCircle,
+      matches: (path: string) => path.startsWith("/community") || path.startsWith("/forum")},
     {
-      name: "Post Job";
-      href: "/post-job";
-      icon: BriefcaseIcon;
-      matches: (path: string) => path.startsWith("/post-job");
-      authRequired: true};
+      name: "Post Job",
+      href: "/post-job",
+      icon: BriefcaseIcon,
+      matches: (path: string) => path.startsWith("/post-job"),
+      authRequired: true},
     {
-      name: "Messages";
-      href: "/messages";
-      icon: MessageSquare;
-      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox");
-      badge: unreadCount;
-      authRequired: true};
+      name: "Messages",
+      href: "/messages",
+      icon: MessageSquare,
+      matches: (path: string) => path.startsWith("/messages") || path.startsWith("/inbox"),
+      badge: unreadCount,
+      authRequired: true},
     {
-      name: "Dashboard";
-      href: "/dashboard";
-      icon: User;
-      matches: (path: string) => path.startsWith("/dashboard");
+      name: "Dashboard",
+      href: "/dashboard",
+      icon: User,
+      matches: (path: string) => path.startsWith("/dashboard"),
       authRequired: true}
   ],
   // Filter items based on auth status,
@@ -66,7 +66,7 @@ export function MobileMenu({ unreadCount = 0onClose }: MobileMenuProps) {
             key={item.name}
             to={item.href}
             className={cn(
-              "flex items-center px-6 py-3 text-base font-medium";
+              "flex items-center px-6 py-3 text-base font-medium",
               item.matches(location.pathname),
                 ? "bg-zion-purple/20 text-zion-cyan border-l-4 border-zion-cyan",
                 : "text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}

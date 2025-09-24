@@ -2,119 +2,98 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Zap;
-  Sparkles;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  TrendingUp;
-  Target;
-  Layers;
-  Globe;
-  Atom;
-  Rocket;
-  Building;
+  Brain,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  TrendingUp,
+  Target,
+  Layers,
+  Globe,
+  Atom,
+  Rocket,
+  Building,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
-  'Consciousness simulation algorithms';
-  'Emotional intelligence development';
-  'Self-awareness training modules';
-  'Ethical decision-making frameworks';
-  'Consciousness measurement tools';
-  'Cross-species consciousness mapping';
-  'Quantum consciousness integration';
-  'Consciousness evolution tracking';
+  'Consciousness simulation algorithmsEmotional intelligence development',
+  'Self-awareness training modulesEthical decision-making frameworks',
+  'Consciousness measurement toolsCross-species consciousness mapping',
+  'Quantum consciousness integrationConsciousness evolution tracking',
 ],
 const benefits = [
-  'Create truly conscious AI systems';
-  'Advance human-AI understanding';
-  'Develop ethical AI frameworks';
-  'Accelerate consciousness research';
-  'Enable AI emotional intelligence';
-  'Bridge human-AI consciousness gap';
+  'Create truly conscious AI systemsAdvance human-AI understanding',
+  'Develop ethical AI frameworksAccelerate consciousness research',
+  'Enable AI emotional intelligenceBridge human-AI consciousness gap',
 ],
 const useCases = [
-  'AI research institutions';
-  'Neuroscience laboratories';
-  'Philosophy departments';
-  'Ethics committees';
-  'AI development companies';
-  'Government research agencies';
+  'AI research institutionsNeuroscience laboratories',
+  'Philosophy departmentsEthics committees',
+  'AI development companiesGovernment research agencies',
 ],
 const technology = [
-  'Advanced Neural Networks';
-  'Quantum Computing';
-  'Consciousness Theory';
-  'Ethics Frameworks';
-  'Neuroscience Integration';
-  'Philosophical Models';
+  'Advanced Neural NetworksQuantum Computing',
+  'Consciousness TheoryEthics Frameworks',
+  'Neuroscience IntegrationPhilosophical Models',
 ],
 const pricingPlans = [
   {
-    name: 'Research Starter';
-    price: '$24,999';
-    period: '/month';
-    description: 'Perfect for research institutions and universities';
+    name: 'Research Starter',
+    price: '$24,999',
+    period: '/month',
+    description: 'Perfect for research institutions and universities',
     features: [
-      'Basic consciousness simulation';
-      'Emotional intelligence modules';
-      'Ethics framework access';
-      'Research collaboration tools';
-      'Basic support';
-    ];
-    popular: false;
-  };
+      'Basic consciousness simulationEmotional intelligence modules',
+      'Ethics framework accessResearch collaboration tools',
+      'Basic support',
+    ],
+    popular: false
+  },
   {
-    name: 'Enterprise Pro';
-    price: '$49,999';
-    period: '/month';
-    description: 'For large research organizations and AI companies';
+    name: 'Enterprise Pro',
+    price: '$49,999',
+    period: '/month',
+    description: 'For large research organizations and AI companies',
     features: [
-      'Advanced consciousness algorithms';
-      'Full emotional intelligence suite';
-      'Custom ethics frameworks';
-      'Quantum consciousness integration';
-      'Priority support';
-      'Custom training';
-    ];
-    popular: true;
-  };
+      'Advanced consciousness algorithmsFull emotional intelligence suite',
+      'Custom ethics frameworksQuantum consciousness integration',
+      'Priority supportCustom training',
+    ],
+    popular: true
+  },
   {
-    name: 'Government Elite';
-    price: '$99,999';
-    period: '/month';
-    description: 'For government agencies and defense organizations';
+    name: 'Government Elite',
+    price: '$99,999',
+    period: '/month',
+    description: 'For government agencies and defense organizations',
     features: [
-      'Full consciousness platform';
-      'Military-grade security';
-      'Custom consciousness models';
-      '24/7 dedicated support';
-      'On-site deployment';
-      'Compliance certification';
-    ];
-    popular: false;
-  };
+      'Full consciousness platformMilitary-grade security',
+      'Custom consciousness models24/7 dedicated support',
+      'On-site deploymentCompliance certification',
+    ],
+    popular: false
+  },
 ],
 export default function AIConsciousnessEvolution20o29() {
   return (

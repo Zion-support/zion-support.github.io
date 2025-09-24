@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Evaluation Playbooks | Zion Tech Group';
+  title: 'AI 20o26: Evaluation Playbooks | Zion Tech Group',
   description:,
-    'Operational playbooks to evaluate autonomous agents: scenarios, metrics, red teaming, and CI/CD gates.';
-};
+    'Operational playbooks to evaluate autonomous agents: scenarios, metrics, red teaming, and CI/CD gates.',
+},
 export default function EvaluationPlaybooks20o26() {
   return (
     <main className='min-h-screen bg-white'>,

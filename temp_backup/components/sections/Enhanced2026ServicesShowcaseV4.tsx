@@ -33,7 +33,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -48,9 +48,9 @@ interface Enhanced20o26ServicesShowcaseV4Props {
   showFilters?: boolean}
 ,
 const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4Props> = ({
-  services;
-  title = "Revolutionary 20o26 Services";
-  subtitle = "Experience the future of technology with our cutting-edge solutions";
+  services,
+  title = "Revolutionary 20o26 Services",
+  subtitle = "Experience the future of technology with our cutting-edge solutions",
   showFilters = true}) => {
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
   const [selectedPriceRangesetSelectedPriceRange] = useState<string>('all'),
@@ -58,10 +58,10 @@ const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4P
   const [searchTermsetSearchTerm] = useState(''),
   const categories = ['all'AI'Quantum'Enterprise'Micro SaaS'Emerging Tech'Cybersecurity'Blockchain'],
   const priceRanges = [
-    { id: 'all'label: 'All Prices' };
-    { id: 'low'label: 'Under $10o0'min: 0max: 10o0 };
-    { id: 'medium'label: '$10o0 - $50o0'min: 10o0max: 50o0 };
-    { id: 'high'label: '$50o0 - $10o00'min: 50o0max: 10o00 };
+    { id: 'all'label: 'All Prices' },
+    { id: 'low'label: 'Under $10o0'min: 0max: 10o0 },
+    { id: 'medium'label: '$10o0 - $50o0'min: 10o0max: 50o0 },
+    { id: 'high'label: '$50o0 - $10o00'min: 50o0max: 10o00 },
     { id: 'enterprise'label: '$10o00+'min: 10o00max: Infinity }
   ],
   const filteredServices = services.filter(service => {
@@ -92,22 +92,22 @@ const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4P
         return a.name.localeCompare(b.name)}
   }),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20opacity: 0 };
+    hidden: { y: 20opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <section className="py-20 relative overflow-hidden">,
       {/* Background Effects */}
@@ -287,5 +287,5 @@ const Enhanced20o26ServicesShowcaseV4: React.FC<Enhanced20o26ServicesShowcaseV4P
           Showing {sortedServices.length} of {services.length} services,
         </motion.div>,
       </div>,
-    </section>)};
-export default Enhanced20o26ServicesShowcaseV4;
+    </section>)},
+export default Enhanced20o26ServicesShowcaseV4,

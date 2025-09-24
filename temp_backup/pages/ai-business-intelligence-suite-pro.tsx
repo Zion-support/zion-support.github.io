@@ -1,161 +1,132 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Users;
-  TrendingUp;
-  Brain;
-  BarChart3;
-  Database;
-  Zap;
-  Shield;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Cpu;
-  Lock;
-  Eye;
-  Settings;
-  Target;
-  Microscope;
-  Award;
-  Clock;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
+  Brain,
+  BarChart3,
+  Database,
+  Zap,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  Eye,
+  Settings,
+  Target,
+  Microscope,
+  Award,
+  Clock,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
-  'AI-powered data discovery and insights';
-  'Natural language query interface';
-  'Predictive analytics and forecasting';
-  'Real-time dashboards and alerts';
-  'Advanced data visualization';
-  'Multi-source data integration';
-  'Role-based access control';
-  'Automated report generation';
-  'Mobile-responsive design';
-  'Custom AI model training';
-  'Data quality monitoring';
-  'Performance optimization';
+  'AI-powered data discovery and insightsNatural language query interface',
+  'Predictive analytics and forecastingReal-time dashboards and alerts',
+  'Advanced data visualizationMulti-source data integration',
+  'Role-based access controlAutomated report generation',
+  'Mobile-responsive designCustom AI model training',
+  'Data quality monitoringPerformance optimization',
 ],
 const benefits = [
   {
-    title: 'Increase Data-Driven Decisions';
-    description: 'Improve decision making by 40-60% with AI-powered insights';
-    icon: Brain;
-    color: 'text-cyan-40o0';
-  };
+    title: 'Increase Data-Driven Decisions',
+    description: 'Improve decision making by 40-60% with AI-powered insights',
+    icon: Brain,
+    color: 'text-cyan-40o0'
+  },
   {
-    title: 'Natural Language Queries';
-    description: 'Ask questions in plain English and get instant answers';
-    icon: BarChart3;
-    color: 'text-blue-40o0';
-  };
+    title: 'Natural Language Queries',
+    description: 'Ask questions in plain English and get instant answers',
+    icon: BarChart3,
+    color: 'text-blue-40o0'
+  },
   {
-    title: 'Predictive Analytics';
-    description: 'Forecast trends and outcomes with machine learning';
-    icon: TrendingUp;
-    color: 'text-green-40o0';
-  };
+    title: 'Predictive Analytics',
+    description: 'Forecast trends and outcomes with machine learning',
+    icon: TrendingUp,
+    color: 'text-green-40o0'
+  },
   {
-    title: 'Real-Time Monitoring';
-    description: 'Get instant alerts and updates on critical metrics';
-    icon: Eye;
-    color: 'text-purple-40o0';
-  };
+    title: 'Real-Time Monitoring',
+    description: 'Get instant alerts and updates on critical metrics',
+    icon: Eye,
+    color: 'text-purple-40o0'
+  },
 ],
 const useCases = [
-  'Business performance monitoring';
-  'Predictive analytics';
-  'Executive reporting';
-  'Customer behavior analysis';
-  'Market trend analysis';
-  'Operational efficiency';
-  'Risk assessment';
-  'Competitive intelligence';
+  'Business performance monitoringPredictive analytics',
+  'Executive reportingCustomer behavior analysis',
+  'Market trend analysisOperational efficiency',
+  'Risk assessmentCompetitive intelligence',
 ],
 const technology = [
-  'Python & TensorFlow';
-  'React & Node.js';
-  'PostgreSQL & Redis';
-  'Machine Learning';
-  'Natural Language Processing';
-  'Data Visualization';
-  'Cloud Infrastructure';
-  'API Integration';
+  'Python & TensorFlowReact & Node.js',
+  'PostgreSQL & RedisMachine Learning',
+  'Natural Language ProcessingData Visualization',
+  'Cloud InfrastructureAPI Integration',
 ],
 const integrations = [
-  'Salesforce';
-  'HubSpot';
-  'Google Analytics';
-  'AWS Services';
-  'Azure Services';
-  'Google Cloud';
-  'Database Systems';
-  'Custom APIs';
+  'SalesforceHubSpot',
+  'Google AnalyticsAWS Services',
+  'Azure ServicesGoogle Cloud',
+  'Database SystemsCustom APIs',
 ],
 const pricing = [
   {
-    name: 'Starter';
-    price: '$299';
-    period: '/month';
+    name: 'Starter',
+    price: '$299',
+    period: '/month',
     description:,
-      'Perfect for small teams getting started with AI-powered analytics';
+      'Perfect for small teams getting started with AI-powered analytics',
     features: [
-      'Up to 5 users';
-      'Basic AI insights';
-      'Standard dashboards';
-      'Email support';
-      'Data connectors (5)';
-      'Monthly reports';
-    ];
-    popular: false;
-  };
+      'Up to 5 usersBasic AI insights',
+      'Standard dashboardsEmail support',
+      'Data connectors (5)Monthly reports',
+    ],
+    popular: false
+  },
   {
-    name: 'Professional';
-    price: '$599';
-    period: '/month';
+    name: 'Professional',
+    price: '$599',
+    period: '/month',
     description:,
-      'Advanced features for growing businesses with complex data needs';
+      'Advanced features for growing businesses with complex data needs',
     features: [
-      'Up to 25 users';
-      'Advanced AI insights';
-      'Custom dashboards';
-      'Priority support';
-      'Data connectors (25)';
-      'Real-time alerts';
-      'Custom AI models';
-      'API access';
-    ];
-    popular: true;
-  };
+      'Up to 25 usersAdvanced AI insights',
+      'Custom dashboardsPriority support',
+      'Data connectors (25)Real-time alerts',
+      'Custom AI modelsAPI access',
+    ],
+    popular: true
+  },
   {
-    name: 'Enterprise';
-    price: '$1,299';
-    period: '/month';
+    name: 'Enterprise',
+    price: '$1,299',
+    period: '/month',
     description:,
-      'Full-scale solution for large enterprises with unlimited requirements';
+      'Full-scale solution for large enterprises with unlimited requirements',
     features: [
-      'Unlimited users';
-      'Enterprise AI insights';
-      'Custom visualizations';
-      '24/7 support';
-      'Unlimited connectors';
-      'Advanced security';
-      'Custom integrations';
-      'Dedicated account manager';
-    ];
-    popular: false;
-  };
+      'Unlimited usersEnterprise AI insights',
+      'Custom visualizations24/7 support',
+      'Unlimited connectorsAdvanced security',
+      'Custom integrationsDedicated account manager',
+    ],
+    popular: false
+  },
 ],
 export default function AIBusinessIntelligenceSuitePro() {
   return (
@@ -195,7 +166,7 @@ export default function AIBusinessIntelligenceSuitePro() {
               <p className='text-xl text-gray-30o0 mb-8'>,
                 Transform raw data into actionable insights with AI-powered,
                 analytics. Enterprise-grade BI platform that combines,
-                traditional analytics with AI capabilities, predictive modeling;
+                traditional analytics with AI capabilities, predictive modeling,
                 and natural language querying.,
               </p>,
               {/* Key Stats */}

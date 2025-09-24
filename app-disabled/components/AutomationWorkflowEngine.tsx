@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const AutomationWorkflowEngine: React.FC = () => {
   return (
     <div className='py-16 bg-gray-50'>,
@@ -12,5 +12,5 @@ const AutomationWorkflowEngine: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default AutomationWorkflowEngine;
+    </div>)},
+export default AutomationWorkflowEngine,

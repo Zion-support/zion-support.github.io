@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -25,22 +25,22 @@ class AutonomousOrchestrator {
     this.restartDelay = 10o000, // 10 seconds,
     this.scripts = [
       {
-        name: 'efficient-improvement-system';
-        path: 'automation/efficient-improvement-system.js';
-        args: [];
-        autoRestart: true;
-        memoryLimit: 512};
+        name: 'efficient-improvement-system',
+        path: 'automation/efficient-improvement-system.js',
+        args: [],
+        autoRestart: true,
+        memoryLimit: 512},
       {
-        name: 'syntax-fixer';
-        path: 'automation/syntax-fixer.js';
-        args: [];
-        autoRestart: true;
-        memoryLimit: 256};
+        name: 'syntax-fixer',
+        path: 'automation/syntax-fixer.js',
+        args: [],
+        autoRestart: true,
+        memoryLimit: 256},
       {
-        name: 'monitor-system';
-        path: 'automation/monitor-improvement-system.js';
-        args: ['monitor'];
-        autoRestart: true;
+        name: 'monitor-system',
+        path: 'automation/monitor-improvement-system.js',
+        args: ['monitor'],
+        autoRestart: true,
         memoryLimit: 128}
     ],
     this.projectRoot = process.cwd(),
@@ -79,10 +79,10 @@ class AutonomousOrchestrator {
         logger.info(`⚠️ Script ${script.path} not found.`),
         return}
       const proc = spawn('node', [script.path, ...script.args], {
-        stdio: ['ignore', ignore', ignore'];
-        detached: false;
+        stdio: ['ignore', ignore', ignore'],
+        detached: false,
         env: {
-          ...process.env;
+          ...process.env,
           NODE_OPTIONS: `--max-old-space-size=${script.memoryLimit}`}
       }),
       proc.on('exit', (code, signal) => {
@@ -92,8 +92,8 @@ class AutonomousOrchestrator {
         logger.error(`❌ ${script.name} error:`, error.message),
         this.handleProcessExit(script)}),
       this.processes.set(script.name, {
-        process: proc;
-        script;
+        process: proc,
+        script,
         restartCount: 0}),
       logger.info(`✅ ${script.name} started (PID: ${proc.pid})`)} catch (error) {
       logger.error(`❌ Failed to start ${script.name}:`, error.message)}
@@ -137,14 +137,14 @@ class AutonomousOrchestrator {
 ,
   getStatus() {
     const status ={
-      isRunning: this.isRunning;
-      processes: {};
-      totalProcesses: this.processes.size};
+      isRunning: this.isRunning,
+      processes: {},
+      totalProcesses: this.processes.size},
     for (const [name, procInfo] of this.processes) {
       status.processes[name] ={
-        pid: procInfo.process.pid;
-        restartCount: procInfo.restartCount;
-        isAlive: !procInfo.process.killed};
+        pid: procInfo.process.pid,
+        restartCount: procInfo.restartCount,
+        isAlive: !procInfo.process.killed},
     }
     return status}
 }

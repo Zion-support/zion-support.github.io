@@ -7,7 +7,7 @@ import { SignupCheckResult } from './types',
  * Check for suspicious signup patterns,
  */,
 export const checkSignupPatterns = async (
-  email: string;
+  email: string,
   ipAddress?: string): Promise<SignupCheckResult> => {
   const reasons: string[] = [],
   // Check email against suspicious patterns,
@@ -31,6 +31,6 @@ export const checkSignupPatterns = async (
   }
 ,
   return {
-    isSuspicious: reasons.length > 0;
-    reasons};
-};
+    isSuspicious: reasons.length > 0,
+    reasons},
+},

@@ -13,5 +13,5 @@ const CloudArchitectureChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default CloudArchitectureChat;
+    </div>)},
+export default CloudArchitectureChat,

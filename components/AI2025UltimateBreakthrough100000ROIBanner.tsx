@@ -7,43 +7,43 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const breakthroughContent = [
     {
-      id: 'ultimate-breakthrough-revolution';
-      title: 'AI 20o25: The Ultimate Breakthrough Revolution';
-      subtitle: '10o0,0o00% ROI Guide - Complete Implementation';
-      type: 'blog';
+      id: 'ultimate-breakthrough-revolution',
+      title: 'AI 20o25: The Ultimate Breakthrough Revolution',
+      subtitle: '10o0,0o00% ROI Guide - Complete Implementation',
+      type: 'blog',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T+';
-        efficiency: '99.99%';
-        timeline: '18 months'};
-      description: 'The most significant technological advancement in human history, delivering unprecedented returns that exceed 10o0,0o00% for forward-thinking enterprises.';
-      url: '/blog/ai-20o25-ultimate-breakthrough-revolution-10o0000-roi';
-      featured: true};
+        roi: '10o0,0o00%',
+        savings: '$2.5T+',
+        efficiency: '99.99%',
+        timeline: '18 months'},
+      description: 'The most significant technological advancement in human history, delivering unprecedented returns that exceed 10o0,0o00% for forward-thinking enterprises.',
+      url: '/blog/ai-20o25-ultimate-breakthrough-revolution-10o0000-roi',
+      featured: true},
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 AI Breakthrough Success';
-      subtitle: '$2.5 Trillion Annual Savings - 10o0,0o00% ROI';
-      type: 'case-study';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 AI Breakthrough Success',
+      subtitle: '$2.5 Trillion Annual Savings - 10o0,0o00% ROI',
+      type: 'case-study',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T';
-        company: 'TechGlobal Industries';
-        timeline: '18 months'};
-      description: 'TechGlobal Industries achieved unprecedented success through AI 20o25 Ultimate Breakthrough Revolution technologies, resulting in 10o0,0o00% ROI and $2.5 trillion in annual savings.';
-      url: '/case-studies/fortune-50o0-ai-breakthrough-10o0000-roi-success-story';
-      featured: true};
+        roi: '10o0,0o00%',
+        savings: '$2.5T',
+        company: 'TechGlobal Industries',
+        timeline: '18 months'},
+      description: 'TechGlobal Industries achieved unprecedented success through AI 20o25 Ultimate Breakthrough Revolution technologies, resulting in 10o0,0o00% ROI and $2.5 trillion in annual savings.',
+      url: '/case-studies/fortune-50o0-ai-breakthrough-10o0000-roi-success-story',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'Ultimate Breakthrough Implementation Guide';
-      subtitle: 'Complete Roadmap to 10o0,0o00% ROI';
-      type: 'resource';
+      id: 'implementation-guide',
+      title: 'Ultimate Breakthrough Implementation Guide',
+      subtitle: 'Complete Roadmap to 10o0,0o00% ROI',
+      type: 'resource',
       metrics: {
-        roi: '10o0,0o00%';
-        guide: 'Complete';
-        timeline: '18 months';
-        success: '99.7%'};
-      description: 'Comprehensive implementation guide providing a complete roadmap for achieving 10o0,0o00% ROI through the AI 20o25 Ultimate Breakthrough Revolution.';
-      url: '/resources/ai-20o25-ultimate-breakthrough-implementation-guide-10o0000-roi';
+        roi: '10o0,0o00%',
+        guide: 'Complete',
+        timeline: '18 months',
+        success: '99.7%'},
+      description: 'Comprehensive implementation guide providing a complete roadmap for achieving 10o0,0o00% ROI through the AI 20o25 Ultimate Breakthrough Revolution.',
+      url: '/resources/ai-20o25-ultimate-breakthrough-implementation-guide-10o0000-roi',
       featured: true}
   ],
   useEffect(() => {
@@ -52,7 +52,7 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-ultimate-breakthrough-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-ultimate-breakthrough-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25-ultimate-breakthrough-banner-dismissed'),
     if (dismissed === 'true') {
@@ -168,5 +168,5 @@ const AI20o25UltimateBreakthrough10o0000ROIBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateBreakthrough10o0000ROIBanner;
+    </div>)},
+export default AI20o25UltimateBreakthrough10o0000ROIBanner,

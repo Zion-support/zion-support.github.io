@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import {
-  CpuChipIcon;
-  BoltIcon;
-  ShieldCheckIcon;
-  ChartBarIcon;
-  ArrowRightIcon;
-  SparklesIcon;
+  CpuChipIcon,
+  BoltIcon,
+  ShieldCheckIcon,
+  ChartBarIcon,
+  ArrowRightIcon,
+  SparklesIcon,
 } from '@heroicons/react/24/outline',
 const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {
   return (
@@ -118,7 +118,7 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {
               </div>,
               <h4 className='text-xl font-bold mb-2'>Manufacturing</h4>,
               <p className='text-gray-30o0 text-sm'>,
-                Quantum optimization for supply chains, production scheduling;
+                Quantum optimization for supply chains, production scheduling,
                 and quality control with 45% efficiency gains.,
               </p>,
             </div>,
@@ -175,5 +175,5 @@ const QuantumAIRevolution20o25PromotionalBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumAIRevolution20o25PromotionalBanner;
+    </section>)},
+export default QuantumAIRevolution20o25PromotionalBanner,

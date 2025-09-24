@@ -2,9 +2,9 @@ import React, { useEffect, useState, useCallback, Suspense, lazy } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
-  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity;
-  Users, Building, Cloud, Code, Palette, Lightbulb, Award, Clock, CheckCircle, ArrowUpRight;
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
+  Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, Zap, Eye, Heart, Infinity,
+  Users, Building, Cloud, Code, Palette, Lightbulb, Award, Clock, CheckCircle, ArrowUpRight,
   DollarSign, Package, Search, Heart as HeartIcon, Code as CodeIcon, Phone, Mail, MapPin} from 'lucide-react',
 import Head from 'next/head',
 // Import our new revolutionary services,
@@ -33,57 +33,57 @@ const EnhancedHomepage20o45V2: React.FC = () => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)}, 60o00),
     // Track mouse movement for parallax effects,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     window.addEventListener('mousemove', handleMouseMove),
     return () => {
       clearInterval(interval),
-      window.removeEventListener('mousemove', handleMouseMove)};
+      window.removeEventListener('mousemove', handleMouseMove)},
   }, []),
   // Combine all innovative services,
   const allInnovativeServices = [
-    ...innovativeMicroSaasServices20o25V2;
-    ...innovativeITServices20o25V2;
+    ...innovativeMicroSaasServices20o25V2,
+    ...innovativeITServices20o25V2,
     ...innovativeAIServices20o25V2],
   // Filter services by category,
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allInnovativeServices,
     return allInnovativeServices.filter(service =>,
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||,
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()))};
+      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()))},
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', count: allInnovativeServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', count: innovativeAIServices20o25V2.length };
-    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-blue-50o0 to-indigo-50o0', count: innovativeITServices20o25V2.length };
-    { id: 'saas', name: 'Micro SAAS', icon: Building, color: 'from-emerald-50o0 to-teal-50o0', count: innovativeMicroSaasServices20o25V2.length };
-    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-indigo-50o0 to-purple-50o0', count: allInnovativeServices.filter(s => s.category.includes('Quantum')).length };
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', count: allInnovativeServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', count: innovativeAIServices20o25V2.length },
+    { id: 'it', name: 'IT Infrastructure', icon: Cpu, color: 'from-blue-50o0 to-indigo-50o0', count: innovativeITServices20o25V2.length },
+    { id: 'saas', name: 'Micro SAAS', icon: Building, color: 'from-emerald-50o0 to-teal-50o0', count: innovativeMicroSaasServices20o25V2.length },
+    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-indigo-50o0 to-purple-50o0', count: allInnovativeServices.filter(s => s.category.includes('Quantum')).length },
     { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0', count: allInnovativeServices.filter(s => s.category.includes('Security')).length }
   ],
   const features = [
-    { icon: Brain, title: "AI Content Creation Suite", description: "Create engaging content 10x faster with AI-powered tools", href: "/ai-content-creation-suite", color: "from-purple-50o0 to-pink-50o0" };
-    { icon: Users, title: "Intelligent Customer Success Platform", description: "Predict and prevent churn with AI-powered insights", href: "/intelligent-customer-success-platform", color: "from-blue-50o0 to-cyan-50o0" };
-    { icon: DollarSign, title: "Automated Financial Planning", description: "AI-powered financial planning for individuals and businesses", href: "/automated-financial-planning-assistant", color: "from-emerald-50o0 to-teal-50o0" };
-    { icon: Shield, title: "Quantum-Safe Cybersecurity", description: "Future-proof security against quantum computing threats", href: "/quantum-safe-cybersecurity-platform", color: "from-red-50o0 to-orange-50o0" };
-    { icon: Code, title: "Autonomous DevOps Intelligence", description: "AI-powered DevOps automation and optimization", href: "/autonomous-devops-intelligence-platform", color: "from-blue-50o0 to-indigo-50o0" };
+    { icon: Brain, title: "AI Content Creation Suite", description: "Create engaging content 10x faster with AI-powered tools", href: "/ai-content-creation-suite", color: "from-purple-50o0 to-pink-50o0" },
+    { icon: Users, title: "Intelligent Customer Success Platform", description: "Predict and prevent churn with AI-powered insights", href: "/intelligent-customer-success-platform", color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: DollarSign, title: "Automated Financial Planning", description: "AI-powered financial planning for individuals and businesses", href: "/automated-financial-planning-assistant", color: "from-emerald-50o0 to-teal-50o0" },
+    { icon: Shield, title: "Quantum-Safe Cybersecurity", description: "Future-proof security against quantum computing threats", href: "/quantum-safe-cybersecurity-platform", color: "from-red-50o0 to-orange-50o0" },
+    { icon: Code, title: "Autonomous DevOps Intelligence", description: "AI-powered DevOps automation and optimization", href: "/autonomous-devops-intelligence-platform", color: "from-blue-50o0 to-indigo-50o0" },
     { icon: Atom, title: "Quantum AI Hybrid Computing", description: "Combine quantum computing with AI for breakthrough solutions", href: "/quantum-ai-hybrid-computing-platform", color: "from-indigo-50o0 to-purple-50o0" }
   ],
   const stats = [
-    { number: "50o00+", label: "Innovative Services", icon: Star };
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp };
-    { number: "24/7", label: "AI Support Available", icon: Brain };
+    { number: "50o00+", label: "Innovative Services", icon: Star },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+    { number: "24/7", label: "AI Support Available", icon: Brain },
     { number: "30o0+", label: "Countries Served", icon: Globe }
   ],
   const fadeInUp ={
-    initial: { opacity: 0, y: 30 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6 }
-  };
+  },
   const staggerContainer ={
-    initial: {};
+    initial: {},
     animate: {
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   return (
     <>,
       <Head>,
@@ -105,14 +105,14 @@ const EnhancedHomepage20o45V2: React.FC = () => {
                 key={i}
                 className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-60",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 animate={{
-                  y: [0, -20, 0];
+                  y: [0, -20, 0],
                   opacity: [0.6, 1, 0.6]}}
                 transition={{
-                  duration: 3 + Math.random() * 2;
-                  repeat: Infinity as any;
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity as any,
                   delay: Math.random() * 2}}
                />))}
           </div>,
@@ -457,5 +457,5 @@ const EnhancedHomepage20o45V2: React.FC = () => {
           </section>,
         </div>,
       </div>,
-    </>)};
-export default EnhancedHomepage20o45V2;
+    </>)},
+export default EnhancedHomepage20o45V2,

@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 const NewContent2025UltimateBanner: React.FC = () => {
   return (
     <section className='bg-gradient-to-r from-purple-900 via-blue-900 to-indigo-900 text-white py-16'>,
@@ -11,5 +11,5 @@ const NewContent2025UltimateBanner: React.FC = () => {
           Experience our latest AI innovations and insights.,
         </p>,
       </div>,
-    </section>)};
-export default NewContent2025UltimateBanner;
+    </section>)},
+export default NewContent2025UltimateBanner,

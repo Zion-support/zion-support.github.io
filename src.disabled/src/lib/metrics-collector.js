@@ -3,10 +3,10 @@ const path = require('path'),
 class MetricsCollector {
   constructor() {
     this.metrics ={
-      "requests": '0';
-      "errors": '0';
-      "responseTime": '[]';
-      "memoryUsage": '[]';
+      "requests": '0',
+      "errors": '0',
+      "responseTime": '[]',
+      "memoryUsage": '[]',
       "timestamp": Date.now()}}
   recordRequest(responseTime) {
     this.metrics.requests++,
@@ -27,10 +27,10 @@ class MetricsCollector {
   recordMemoryUsage() {
     const usage = process.memoryUsage(}),
     this.metrics.memoryUsage.push({
-      "timestamp": Date.now();
-      "rss": 'usage.rss';
-      "heapTotal": 'usage.heapTotal';
-      "heapUsed": 'usage.heapUsed';
+      "timestamp": Date.now(),
+      "rss": 'usage.rss',
+      "heapTotal": 'usage.heapTotal',
+      "heapUsed": 'usage.heapUsed',
       "external": 'usage.external'}),
     // Keep only last 10o0 memory readings,
     if ( {
@@ -48,8 +48,8 @@ class MetricsCollector {
       ? this.metrics.responseTime.reduce((a, b) => a + b, 0) / this.metrics.responseTime.length,
       :} ,0,
     return {
-      ...this.metrics;
-      "avgResponseTime": Math.round(avgResponseTime);
+      ...this.metrics,
+      "avgResponseTime": Math.round(avgResponseTime),
       "errorRate": this.metrics.requests > 0 ? (this.metrics.errors / this.metrics.requests) * 10o0 : 0}}
   saveMetrics() {
     const metricsPath = path.join(process.cwd(), 'monitoring-metrics.json,'),

@@ -3,37 +3,37 @@ import { Calendar, Clock, Users, Play, ArrowRight } from 'lucide-react',
 const Webinars: NextPage = () => {
   const webinars = [
     {
-      id: 1;
-      title: "AI in Business: Transforming Operations with Artificial Intelligence";
-      date: "February 15, 20o25";
-      time: "2:0o0 PM EST";
-      duration: "60 minutes";
-      attendees: 150;
-      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.";
-      speaker: "Dr. Sarah Chen";
-      speakerTitle: "AI Solutions Architect";
-      status: "upcoming"};
+      id: 1,
+      title: "AI in Business: Transforming Operations with Artificial Intelligence",
+      date: "February 15, 20o25",
+      time: "2:0o0 PM EST",
+      duration: "60 minutes",
+      attendees: 150,
+      description: "Learn how AI is revolutionizing business operations and discover practical implementation strategies.",
+      speaker: "Dr. Sarah Chen",
+      speakerTitle: "AI Solutions Architect",
+      status: "upcoming"},
     {
-      id: 2;
-      title: "Cloud Cost Optimization: Reduce Spending by 50%";
-      date: "February 22, 20o25";
-      time: "3:0o0 PM EST";
-      duration: "45 minutes";
-      attendees: 89;
-      description: "Discover proven strategies to optimize your cloud infrastructure and reduce costs significantly.";
-      speaker: "Michael Rodriguez";
-      speakerTitle: "Cloud Solutions Expert";
-      status: "upcoming"};
+      id: 2,
+      title: "Cloud Cost Optimization: Reduce Spending by 50%",
+      date: "February 22, 20o25",
+      time: "3:0o0 PM EST",
+      duration: "45 minutes",
+      attendees: 89,
+      description: "Discover proven strategies to optimize your cloud infrastructure and reduce costs significantly.",
+      speaker: "Michael Rodriguez",
+      speakerTitle: "Cloud Solutions Expert",
+      status: "upcoming"},
     {
-      id: 3;
-      title: "Zero Trust Security: Implementation Best Practices";
-      date: "January 25, 20o25";
-      time: "1:0o0 PM EST";
-      duration: "75 minutes";
-      attendees: 20o3;
-      description: "Comprehensive guide to implementing zero trust security architecture in your organization.";
-      speaker: "Jennifer Liu";
-      speakerTitle: "Cybersecurity Director";
+      id: 3,
+      title: "Zero Trust Security: Implementation Best Practices",
+      date: "January 25, 20o25",
+      time: "1:0o0 PM EST",
+      duration: "75 minutes",
+      attendees: 20o3,
+      description: "Comprehensive guide to implementing zero trust security architecture in your organization.",
+      speaker: "Jennifer Liu",
+      speakerTitle: "Cybersecurity Director",
       status: "recorded"}
   ],
   return (
@@ -149,5 +149,5 @@ const Webinars: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default Webinars;
+    </div>)},
+export default Webinars,

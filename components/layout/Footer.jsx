@@ -2,9 +2,9 @@ import Link from 'next/link',
 const Footer = () => {
   const currentYear = new Date().getFullYear(),
   const footerLinks = [
-    { href: '/about', label: 'About' };
-    { href: '/contact', label: 'Contact' };
-    { href: '/services', label: 'Services' };
+    { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
+    { href: '/services', label: 'Services' },
   ],
   return (
     <footer className='bg-black/40 backdrop-blur-md border-t border-white/10'>,
@@ -22,5 +22,5 @@ const Footer = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default Footer;
+    </footer>)},
+export default Footer,

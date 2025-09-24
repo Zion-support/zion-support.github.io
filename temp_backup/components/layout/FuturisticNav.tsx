@@ -8,59 +8,59 @@ export default function FuturisticNav() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navItems = [
-    { name: 'Home', href: '/' };
+    { name: 'Home', href: '/' },
     {
-      name: 'Services';
-      href: '/services';
+      name: 'Services',
+      href: '/services',
       dropdown: [
-        { name: 'AI & Automation', href: '/services#ai' };
-        { name: 'Cloud Infrastructure', href: '/services#cloud' };
-        { name: 'Security & Compliance', href: '/services#security' };
-        { name: 'Data Analytics', href: '/services#analytics' };
-        { name: 'DevOps & CI/CD', href: '/services#devops' };
-        { name: 'Digital Transformation', href: '/services#digital' };
-      ];
-    };
+        { name: 'AI & Automation', href: '/services#ai' },
+        { name: 'Cloud Infrastructure', href: '/services#cloud' },
+        { name: 'Security & Compliance', href: '/services#security' },
+        { name: 'Data Analytics', href: '/services#analytics' },
+        { name: 'DevOps & CI/CD', href: '/services#devops' },
+        { name: 'Digital Transformation', href: '/services#digital' },
+      ],
+    },
     {
-      name: 'Micro SaaS';
-      href: '/micro-saas';
+      name: 'Micro SaaS',
+      href: '/micro-saas',
       dropdown: [
         {
-          name: 'Content & Marketing';
-          href: '/micro-saas?category=Content+%26+Marketing';
-        };
+          name: 'Content & Marketing',
+          href: '/micro-saas?category=Content+%26+Marketing'
+        },
         {
-          name: 'Development & DevOps';
-          href: '/micro-saas?category=Development+%26+DevOps';
-        };
-        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' };
+          name: 'Development & DevOps',
+          href: '/micro-saas?category=Development+%26+DevOps'
+        },
+        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' },
         {
-          name: 'Analytics & Data';
-          href: '/micro-saas?category=Analytics+%26+Data';
-        };
+          name: 'Analytics & Data',
+          href: '/micro-saas?category=Analytics+%26+Data'
+        },
         {
-          name: 'AI & Machine Learning';
-          href: '/micro-saas?category=AI+%26+Machine+Learning';
-        };
+          name: 'AI & Machine Learning',
+          href: '/micro-saas?category=AI+%26+Machine+Learning'
+        },
         {
-          name: 'Emerging Technologies';
-          href: '/micro-saas?category=Emerging+Technologies';
-        };
-      ];
-    };
-    { name: 'Pricing', href: '/pricing' };
-    { name: 'About', href: '/about' };
-    { name: 'Contact', href: '/contact' };
+          name: 'Emerging Technologies',
+          href: '/micro-saas?category=Emerging+Technologies'
+        },
+      ],
+    },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ],
   const contactInfo = {
-    phone: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08, Middletown, DE 19709';
-  };
+    phone: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08, Middletown, DE 19709',
+  },
   return (
     <>,
       {/* Top contact bar */}

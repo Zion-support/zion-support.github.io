@@ -10,10 +10,10 @@ export default function ChatbotWidget() {
   const [input, setInput] = useState(''),
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
-      role: 'assistant';
+      role: 'assistant',
       content:,
-        'Hi! I can help you find talent, services, or equipment, guide you to publish listings, or answer questions about Zion. How can I help?';
-    };
+        'Hi! I can help you find talent, services, or equipment, guide you to publish listings, or answer questions about Zion. How can I help?',
+    },
   ]),
   const [loading, setLoading] = useState(false),
   const [sessionId] = useState<string>(
@@ -32,12 +32,12 @@ export default function ChatbotWidget() {
     setLoading(true),
     try {
       const res = await fetch('/api/chat/ask', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          sessionId;
-          messages: next.map(m => ({ role: m.role, content: m.content }));
-        });
+          sessionId,
+          messages: next.map(m => ({ role: m.role, content: m.content })),
+        }),
       }),
       const data = await res.json(),
       const reply = data.text || 'Sorry, I could not respond right now.',
@@ -46,18 +46,18 @@ export default function ChatbotWidget() {
       try {
         const db = getDb(),
         await addDoc(collection(db, 'zion_chat_client_logs'), {
-          sessionId;
-          user: text;
-          assistant: reply;
-          ts: Date.now();
+          sessionId,
+          user: text,
+          assistant: reply,
+          ts: Date.now()
         })} catch {}
     } catch (e: any) {
       setMessages(prev => [
-        ...prev;
+        ...prev,
         {
-          role: 'assistant';
-          content: 'There was an error. Please try again or use Talk to Human.';
-        };
+          role: 'assistant',
+          content: 'There was an error. Please try again or use Talk to Human.'
+        },
       ])} finally {
       setLoading(false)}
   }
@@ -67,24 +67,24 @@ export default function ChatbotWidget() {
       [...messages].reverse().find(m => m.role === 'user')?.content || '',
     try {
       await fetch('/api/chat/escalate', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ sessionId, message: lastUser });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ sessionId, message: lastUser }),
       }),
       setMessages(prev => [
-        ...prev;
+        ...prev,
         {
-          role: 'assistant';
-          content: 'A human will contact you shortly via our live support.';
-        };
+          role: 'assistant',
+          content: 'A human will contact you shortly via our live support.'
+        },
       ])} catch {
       setMessages(prev => [
-        ...prev;
+        ...prev,
         {
-          role: 'assistant';
+          role: 'assistant',
           content:,
-            'Failed to reach a human right now. Please email support@zion.com.';
-        };
+            'Failed to reach a human right now. Please email support@zion.com.',
+        },
       ])}
   }
 ,

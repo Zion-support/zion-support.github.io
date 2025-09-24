@@ -1,24 +1,24 @@
-import React from 'react';;
-import type { GetServerSideProps } from 'next';
-import path from 'path';
-import fs from 'fs';
-import DocsLayout from '../../../components/docs/DocsLayout';
-import CodeBlock from '../../../components/docs/CodeBlock';
+import React from 'react',
+import type { GetServerSideProps } from 'next',
+import path from 'path',
+import fs from 'fs',
+import DocsLayout from '../../../components/docs/DocsLayout',
+import CodeBlock from '../../../components/docs/CodeBlock',
 export type Section ={
-  id: string;
-  title: string;
-  html?: string;
-  code?: { language?: string, content: string }[]};
+  id: string,
+  title: string,
+  html?: string,
+  code?: { language?: string, content: string }[]},
 type DocsContent ={
-  title: string;
-  sections: Section[]};
+  title: string,
+  sections: Section[]},
 type PageProps ={
-  docs: DocsContent};
+  docs: DocsContent},
 export const getServerSideProps: GetServerSideProps<PageProps> = async () => {
-  const contentPath = path.join(process.cwd(), 'datadocs', 'content.json');
-  const raw = fs.readFileSync(contentPath, 'utf8');
-  const docs = JSON.parse(raw) as DocsContent;
-  return { props: { docs } }};
+  const contentPath = path.join(process.cwd(), 'datadocscontent.json'),
+  const raw = fs.readFileSync(contentPath, 'utf8'),
+  const docs = JSON.parse(raw) as DocsContent,
+  return { props: { docs } }},
 export default function ApiDocsPage({ docs }: PageProps) {
   return (
     <DocsLayout title={docs.title} nav={docs.sections.map((s) => ({ id: s.id, title: s.title }))}>,

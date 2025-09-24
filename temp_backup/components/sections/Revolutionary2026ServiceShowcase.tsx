@@ -8,13 +8,13 @@ export default function Revolutionary20o26ServiceShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [hoveredService, setHoveredService] = useState<string | null>(null),
   const allServices = [
-    ...revolutionary20o26MicroSaasServices;
-    ...revolutionary20o26ITServices;
+    ...revolutionary20o26MicroSaasServices,
+    ...revolutionary20o26ITServices,
     ...revolutionary20o26AIServices],
   const categories = [
-    { id: 'all', name: 'All Revolutionary Services', icon: '🚀', count: allServices.length };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: revolutionary20o26MicroSaasServices.length };
-    { id: 'it', name: 'IT Services', icon: '🏢', count: revolutionary20o26ITServices.length };
+    { id: 'all', name: 'All Revolutionary Services', icon: '🚀', count: allServices.length },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: revolutionary20o26MicroSaasServices.length },
+    { id: 'it', name: 'IT Services', icon: '🏢', count: revolutionary20o26ITServices.length },
     { id: 'ai', name: 'AI Services', icon: '🧠', count: revolutionary20o26AIServices.length }
   ],
   const filteredServices = selectedCategory === 'all',
@@ -25,34 +25,34 @@ export default function Revolutionary20o26ServiceShowcase() {
         if (selectedCategory === 'ai') return revolutionary20o26AIServices.includes(service),
         return true}),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20, scale: 0.95 };
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.5;
+        duration: 0.5,
         ease: "easeOut" as const}
     }
-  };
+  },
   const cardVariants ={
-    initial: { scale: 1, rotateY: 0 };
+    initial: { scale: 1, rotateY: 0 },
     hover: {
-      scale: 1.0o5;
-      rotateY: 5;
+      scale: 1.0o5,
+      rotateY: 5,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut" as const}
     }
-  };
+  },
   return (
     <section className="py-20 px-4 relative overflow-hidden">,
       {/* Background Effects */}

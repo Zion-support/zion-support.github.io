@@ -8,14 +8,14 @@ type UserWithProfile = UserProfile | UserDetails | null,
  * Hook to handle message operations,
  */,
 export function useMessages(
-  user: UserWithProfile;
-  activeConversation: Conversation | null;
-  activeMessages: Message[];
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
-  conversations: Conversation[];
-  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void;
-  setUnreadCount: (updater: (prev: number) => number) => void;
-  setIsLoading: (loading: boolean) => void;
+  user: UserWithProfile,
+  activeConversation: Conversation | null,
+  activeMessages: Message[],
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,
+  conversations: Conversation[],
+  setConversations: (updater: (prev: Conversation[]) => Conversation[]) => void,
+  setUnreadCount: (updater: (prev: number) => number) => void,
+  setIsLoading: (loading: boolean) => void,
   fetchConversations: () => Promise<void>) {
   /**,
    * Fetch messages for a conversation,
@@ -40,7 +40,7 @@ export function useMessages(
     } catch (error) {
       console.error('Error fetching messages:', error)} finally {
       setIsLoading(false)}
-  };
+  },
   /**,
    * Send a message to an existing conversation,
    */,
@@ -55,12 +55,12 @@ export function useMessages(
       const { data, error } = await supabase,
         .from('messages'),
         .insert({
-          conversation_id: conversationId;
-          sender_id: user.id;
-          recipient_id: conversation.user_id;
-          content;
-          created_at: new Date().toISOString();
-          read: false;
+          conversation_id: conversationId,
+          sender_id: user.id,
+          recipient_id: conversation.user_id,
+          content,
+          created_at: new Date().toISOString(),
+          read: false
         }),
         .select('*'),
         .single(),
@@ -75,11 +75,11 @@ export function useMessages(
       return data} catch (error) {
       console.error('Error sending message:', error),
       toast({
-        title: 'Failed to send message';
-        description: 'Please try again later';
-        variant: 'destructive';
+        title: 'Failed to send message',
+        description: 'Please try again later',
+        variant: 'destructive'
       })}
-  };
+  },
   /**,
    * Mark messages as read,
    */,
@@ -106,14 +106,14 @@ export function useMessages(
         const updatedConversations = conversations.map(conv =>,
           conv.id === conversationId ? { ...conv, unread_count: 0 } : conv),
         return updatedConversations.reduce(
-          (total, conv) => total + (conv.unread_count || 0);
+          (total, conv) => total + (conv.unread_count || 0),
           0)})} catch (error) {
       console.error('Error marking messages as read:', error)}
-  };
+  },
   return {
-    loadMessages;
-    sendMessage;
-    markAsRead;
-  };
+    loadMessages,
+    sendMessage,
+    markAsRead,
+  },
 }
 ,

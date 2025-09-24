@@ -7,15 +7,11 @@ const { execSync } = require('child_process'),
 const fs = require('fs'),
 const path = require('path'),
 const scripts = [
-  'auto-fix-watcher.js';
-  'auto-run-all.js';
-  'automation/index.js';
-  'automation/test-system.js';
-  'automation/autonomous-system.js';
-  'automation/automation-manager.js'],
+  'auto-fix-watcher.jsauto-run-all.js',
+  'automation/index.jsautomation/test-system.js',
+  'automation/autonomous-system.jsautomation/automation-manager.js'],
 const shellScripts = [
-  'start-automation.sh';
-  'stop-automation.sh';
+  'start-automation.shstop-automation.sh',
   'start-autonomous-automation.sh'],
 async function testScript(scriptPath) {
   try {
@@ -24,9 +20,9 @@ async function testScript(scriptPath) {
     if (!fs.existsSync(scriptPath)) {
       // // console.log(`❌ ${scriptPath} not found`),
       return {
-        script: scriptPath;
-        status: 'NOT_FOUND';
-        error: 'File not found'};
+        script: scriptPath,
+        status: 'NOT_FOUND',
+        error: 'File not found'},
     }
 ,
     // Check syntax for JS files,
@@ -34,13 +30,13 @@ async function testScript(scriptPath) {
       try {
         execSync(`node -c ${scriptPath}`, { stdio: 'pipe' }),
         // // console.log(`✅ ${scriptPath} syntax OK`),
-        return { script: scriptPath, status: 'PASS', error: null };
+        return { script: scriptPath, status: 'PASS', error: null },
       } catch (error) {
         // // console.log(`❌ ${scriptPath} syntax error: ${error.message}`),
         return {
-          script: scriptPath;
-          status: 'SYNTAX_ERROR';
-          error: error.message};
+          script: scriptPath,
+          status: 'SYNTAX_ERROR',
+          error: error.message},
       }
     }
 ,
@@ -50,27 +46,27 @@ async function testScript(scriptPath) {
         const stats = fs.statSync(scriptPath),
         if (stats.mode & 0o111) {
           // // console.log(`✅ ${scriptPath} is executable`),
-          return { script: scriptPath, status: 'PASS', error: null };
+          return { script: scriptPath, status: 'PASS', error: null },
         } else {
           // // console.log(
             `⚠️ ${scriptPath} is not executable, making it executable...`),
           fs.chmodSync(scriptPath, 0o755),
           // // console.log(`✅ ${scriptPath} made executable`),
-          return { script: scriptPath, status: 'PASS', error: null };
+          return { script: scriptPath, status: 'PASS', error: null },
         }
       } catch (error) {
         // // console.log(`❌ ${scriptPath} error: ${error.message}`),
-        return { script: scriptPath, status: 'ERROR', error: error.message };
+        return { script: scriptPath, status: 'ERROR', error: error.message },
       }
     }
 ,
     return {
-      script: scriptPath;
-      status: 'UNKNOWN';
-      error: 'Unknown file type'};
+      script: scriptPath,
+      status: 'UNKNOWN',
+      error: 'Unknown file type'},
   } catch (error) {
     // // console.log(`❌ ${scriptPath} test failed: ${error.message}`),
-    return { script: scriptPath, status: 'FAIL', error: error.message };
+    return { script: scriptPath, status: 'FAIL', error: error.message },
   }
 }
 ,
@@ -79,18 +75,18 @@ async function testAutomationSystem() {
   try {
     // Test the automation system directly,
     const result = execSync('cd automation && npm test', {
-      encoding: 'utf8';
+      encoding: 'utf8',
       stdio: 'pipe'}),
     if (result.includes('All tests passed')) {
       // // console.log('✅ Automation system tests passed'),
-      return { status: 'PASS', error: null };
+      return { status: 'PASS', error: null },
     } else {
       // // console.log('❌ Automation system tests failed'),
-      return { status: 'FAIL', error: 'Tests failed' };
+      return { status: 'FAIL', error: 'Tests failed' },
     }
   } catch (error) {
     // // console.log(`❌ Automation system test failed: ${error.message}`),
-    return { status: 'FAIL', error: error.message };
+    return { status: 'FAIL', error: error.message },
   }
 }
 ,
@@ -111,8 +107,8 @@ async function main() {
   // Test automation system,
   const automationResult = await testAutomationSystem(),
   results.push({
-    script: 'automation-system';
-    status: automationResult.status;
+    script: 'automation-system',
+    status: automationResult.status,
     error: automationResult.error}),
   // Print results,
   // // console.log('\n' + '='.repeat(60)),

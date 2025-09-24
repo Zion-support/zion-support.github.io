@@ -11,12 +11,12 @@ import {Tabs, TabsList, TabsTrigger, TabsContent} from '@/components/ui/tabs',
 import {BadgeDollarSign} from 'lucide-react',
 export default function WalletPage() {
   const { wallet, transactions, loading } = useWallet(),
-import { useWallet } from '@/hooks/useWallet';
-import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card';
-import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { BadgeDollarSign } from 'lucide-react';
+import { useWallet } from '@/hooks/useWallet',
+import { Card, CardContent, CardHeader, CardTitle, CardDescription } from '@/components/ui/card',
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs',
+import { BadgeDollarSign } from 'lucide-react',
 export default function WalletPage() {
-  const { wallet, transactions, loading } = useWallet();
+  const { wallet, transactions, loading } = useWallet(),
   return (
     <div className="container max-w-4xl py-10">,
       <h1 className="text-3xl font-bold mb-6 flex items-center gap-2">,

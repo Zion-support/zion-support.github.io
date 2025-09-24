@@ -1,46 +1,46 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
   Wifi, HardDrive, Database, Cloud, Smartphone} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Autonomous IT Operations | Zion Tech Group';
-  description: 'AI-powered autonomous IT operations platform for automated infrastructure management and system optimization.';
-  keywords: 'autonomous IT operations, AI IT management, infrastructure automation, system monitoring, IT optimization';
+  title: 'Autonomous IT Operations | Zion Tech Group',
+  description: 'AI-powered autonomous IT operations platform for automated infrastructure management and system optimization.',
+  keywords: 'autonomous IT operations, AI IT management, infrastructure automation, system monitoring, IT optimization',
   openGraph: {
-    title: 'Autonomous IT Operations | Zion Tech Group';
-    description: 'AI-powered autonomous IT operations platform for automated infrastructure management and system optimization.';
-    url: 'https://ziontechgroup.com/autonomous-it-operations';
-    siteName: 'Zion Tech Group';
+    title: 'Autonomous IT Operations | Zion Tech Group',
+    description: 'AI-powered autonomous IT operations platform for automated infrastructure management and system optimization.',
+    url: 'https://ziontechgroup.com/autonomous-it-operations',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-it-operations.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Autonomous IT Operations'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-it-operations.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Autonomous IT Operations'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Autonomous IT Operations | Zion Tech Group';
-    description: 'AI-powered autonomous IT operations platform for automated infrastructure management and system optimization.';
-    images: ['https://ziontechgroup.com/og-image-it-operations.jpg']};
+    card: 'summary_large_image',
+    title: 'Autonomous IT Operations | Zion Tech Group',
+    description: 'AI-powered autonomous IT operations platform for automated infrastructure management and system optimization.',
+    images: ['https://ziontechgroup.com/og-image-it-operations.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/autonomous-it-operations'}};
+    canonical: 'https://ziontechgroup.com/autonomous-it-operations'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AutonomousITOperations() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -57,7 +57,7 @@ export default function AutonomousITOperations() {
               Autonomous IT Operations,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              Transform your IT infrastructure with AI-powered automation that handles monitoring;
+              Transform your IT infrastructure with AI-powered automation that handles monitoring,
               maintenance, and optimization autonomously for maximum efficiency and reliability.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

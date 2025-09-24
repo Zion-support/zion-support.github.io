@@ -1,15 +1,15 @@
 import Layout from '../components/layout/Layout',
 import {
-  Shield;
-  Sparkles;
-  Zap;
-  Target;
-  Lock;
-  Clock;
-  CheckCircle;
-  Brain;
-  Eye;
-  AlertTriangle;
+  Shield,
+  Sparkles,
+  Zap,
+  Target,
+  Lock,
+  Clock,
+  CheckCircle,
+  Brain,
+  Eye,
+  AlertTriangle,
 } from 'lucide-react',
 export default function AICybersecurity20o41() {
   return (
@@ -63,47 +63,47 @@ export default function AICybersecurity20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Predictive Threat Intelligence';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Predictive Threat Intelligence',
                   description:,
-                    'AI systems that analyze patterns and predict cyber threats before they materialize, enabling proactive defense.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'AI systems that analyze patterns and predict cyber threats before they materialize, enabling proactive defense.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Eye className='w-8 h-8' />;
-                  title: 'Behavioral Analysis';
+                  icon: <Eye className='w-8 h-8' />,
+                  title: 'Behavioral Analysis',
                   description:,
-                    'Advanced AI that monitors user and system behavior to detect anomalies and potential security breaches.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Advanced AI that monitors user and system behavior to detect anomalies and potential security breaches.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Response';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Response',
                   description:,
-                    'Instant threat detection and automated response systems that neutralize attacks in milliseconds.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Instant threat detection and automated response systems that neutralize attacks in milliseconds.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Lock className='w-8 h-8' />;
-                  title: 'Zero Trust Architecture';
+                  icon: <Lock className='w-8 h-8' />,
+                  title: 'Zero Trust Architecture',
                   description:,
-                    'AI-powered zero trust security that continuously verifies every access attempt and connection.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'AI-powered zero trust security that continuously verifies every access attempt and connection.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <AlertTriangle className='w-8 h-8' />;
-                  title: 'Threat Hunting';
+                  icon: <AlertTriangle className='w-8 h-8' />,
+                  title: 'Threat Hunting',
                   description:,
-                    'Proactive AI systems that actively search for and eliminate hidden threats within your network.';
-                  color: 'from-purple-50o0 to-indigo-50o0';
-                };
+                    'Proactive AI systems that actively search for and eliminate hidden threats within your network.',
+                  color: 'from-purple-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Adaptive Defense';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Adaptive Defense',
                   description:,
-                    'Self-learning security systems that adapt and evolve to counter new and emerging threats.';
-                  color: 'from-cyan-50o0 to-blue-50o0';
-                };
+                    'Self-learning security systems that adapt and evolve to counter new and emerging threats.',
+                  color: 'from-cyan-50o0 to-blue-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -138,37 +138,37 @@ export default function AICybersecurity20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Network Security';
-                  description: 'AI-powered firewall and intrusion detection';
-                };
+                  name: 'Network Security',
+                  description: 'AI-powered firewall and intrusion detection'
+                },
                 {
-                  name: 'Endpoint Protection';
-                  description: 'Advanced endpoint security and monitoring';
-                };
+                  name: 'Endpoint Protection',
+                  description: 'Advanced endpoint security and monitoring'
+                },
                 {
-                  name: 'Cloud Security';
-                  description: 'Comprehensive cloud infrastructure protection';
-                };
+                  name: 'Cloud Security',
+                  description: 'Comprehensive cloud infrastructure protection'
+                },
                 {
-                  name: 'Application Security';
-                  description: 'AI-driven application vulnerability scanning';
-                };
+                  name: 'Application Security',
+                  description: 'AI-driven application vulnerability scanning'
+                },
                 {
-                  name: 'Data Protection';
-                  description: 'Encryption and data loss prevention';
-                };
+                  name: 'Data Protection',
+                  description: 'Encryption and data loss prevention'
+                },
                 {
-                  name: 'Identity Management';
-                  description: 'Multi-factor authentication and access control';
-                };
+                  name: 'Identity Management',
+                  description: 'Multi-factor authentication and access control'
+                },
                 {
-                  name: 'Incident Response';
-                  description: 'Automated threat response and recovery';
-                };
+                  name: 'Incident Response',
+                  description: 'Automated threat response and recovery'
+                },
                 {
-                  name: 'Compliance';
-                  description: 'Regulatory compliance and audit support';
-                };
+                  name: 'Compliance',
+                  description: 'Regulatory compliance and audit support'
+                },
               ].map((layer, index) => (
                 <div
                   key={index}
@@ -196,55 +196,50 @@ export default function AICybersecurity20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Threat Detection';
+                  phase: 'Threat Detection',
                   description:,
-                    'AI systems continuously monitor networks, systems, and applications for potential security threats';
+                    'AI systems continuously monitor networks, systems, and applications for potential security threats',
                   features: [
-                    'Pattern recognition';
-                    'Anomaly detection';
-                    'Threat intelligence';
-                  ];
-                };
+                    'Pattern recognitionAnomaly detection',
+                    'Threat intelligence',
+                  ]
+                },
                 {
-                  phase: 'Risk Assessment';
+                  phase: 'Risk Assessment',
                   description:,
-                    'Intelligent analysis of detected threats to assess risk levels and prioritize response actions';
+                    'Intelligent analysis of detected threats to assess risk levels and prioritize response actions',
                   features: [
-                    'Risk scoring';
-                    'Impact analysis';
-                    'Priority ranking';
-                  ];
-                };
+                    'Risk scoringImpact analysis',
+                    'Priority ranking',
+                  ]
+                },
                 {
-                  phase: 'Automated Response';
+                  phase: 'Automated Response',
                   description:,
-                    'Instant automated response to neutralize threats and prevent security breaches';
+                    'Instant automated response to neutralize threats and prevent security breaches',
                   features: [
-                    'Threat isolation';
-                    'Attack blocking';
-                    'System protection';
-                  ];
-                };
+                    'Threat isolationAttack blocking',
+                    'System protection',
+                  ]
+                },
                 {
-                  phase: 'Incident Analysis';
+                  phase: 'Incident Analysis',
                   description:,
-                    'Deep analysis of security incidents to understand attack vectors and improve defenses';
+                    'Deep analysis of security incidents to understand attack vectors and improve defenses',
                   features: [
-                    'Forensic analysis';
-                    'Attack reconstruction';
-                    'Vulnerability identification';
-                  ];
-                };
+                    'Forensic analysisAttack reconstruction',
+                    'Vulnerability identification',
+                  ]
+                },
                 {
-                  phase: 'Continuous Learning';
+                  phase: 'Continuous Learning',
                   description:,
-                    'AI systems learn from every incident to improve threat detection and response capabilities';
+                    'AI systems learn from every incident to improve threat detection and response capabilities',
                   features: [
-                    'Pattern learning';
-                    'Adaptive defense';
-                    'Threat evolution';
-                  ];
-                };
+                    'Pattern learningAdaptive defense',
+                    'Threat evolution',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -290,65 +285,59 @@ export default function AICybersecurity20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  threat: 'Malware & Ransomware';
+                  threat: 'Malware & Ransomware',
                   description:,
-                    'AI-powered detection and prevention of advanced malware, ransomware, and zero-day threats.';
+                    'AI-powered detection and prevention of advanced malware, ransomware, and zero-day threats.',
                   protection: [
-                    'Behavioral analysis';
-                    'Sandboxing';
-                    'Real-time scanning';
-                  ];
-                };
+                    'Behavioral analysisSandboxing',
+                    'Real-time scanning',
+                  ]
+                },
                 {
-                  threat: 'Phishing & Social Engineering';
+                  threat: 'Phishing & Social Engineering',
                   description:,
-                    'Intelligent detection of sophisticated phishing attempts and social engineering attacks.';
+                    'Intelligent detection of sophisticated phishing attempts and social engineering attacks.',
                   protection: [
-                    'URL analysis';
-                    'Content filtering';
-                    'User education';
-                  ];
-                };
+                    'URL analysisContent filtering',
+                    'User education',
+                  ]
+                },
                 {
-                  threat: 'Advanced Persistent Threats';
+                  threat: 'Advanced Persistent Threats',
                   description:,
-                    'Detection and neutralization of sophisticated, long-term cyber espionage campaigns.';
+                    'Detection and neutralization of sophisticated, long-term cyber espionage campaigns.',
                   protection: [
-                    'Threat hunting';
-                    'Network monitoring';
-                    'Incident response';
-                  ];
-                };
+                    'Threat huntingNetwork monitoring',
+                    'Incident response',
+                  ]
+                },
                 {
-                  threat: 'DDoS Attacks';
+                  threat: 'DDoS Attacks',
                   description:,
-                    'Real-time protection against distributed denial-of-service attacks and network flooding.';
+                    'Real-time protection against distributed denial-of-service attacks and network flooding.',
                   protection: [
-                    'Traffic analysis';
-                    'Rate limiting';
-                    'Traffic filtering';
-                  ];
-                };
+                    'Traffic analysisRate limiting',
+                    'Traffic filtering',
+                  ]
+                },
                 {
-                  threat: 'Insider Threats';
+                  threat: 'Insider Threats',
                   description:,
-                    'Detection of malicious activities and data exfiltration by internal users.';
+                    'Detection of malicious activities and data exfiltration by internal users.',
                   protection: [
-                    'Behavioral monitoring';
-                    'Access control';
-                    'Data loss prevention';
-                  ];
-                };
+                    'Behavioral monitoringAccess control',
+                    'Data loss prevention',
+                  ]
+                },
                 {
-                  threat: 'Supply Chain Attacks';
+                  threat: 'Supply Chain Attacks',
                   description:,
-                    'Protection against attacks targeting third-party vendors and software dependencies.';
+                    'Protection against attacks targeting third-party vendors and software dependencies.',
                   protection: [
-                    'Vendor assessment';
-                    'Code analysis';
-                    'Dependency scanning';
-                  ];
-                };
+                    'Vendor assessmentCode analysis',
+                    'Dependency scanning',
+                  ]
+                },
               ].map((threat, index) => (
                 <div
                   key={index}
@@ -389,33 +378,33 @@ export default function AICybersecurity20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Proactive Protection';
+                  title: 'Proactive Protection',
                   description:,
-                    'Predict and prevent threats before they can cause damage or compromise your systems.';
-                  icon: <Shield className='w-8 h-8' />;
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Predict and prevent threats before they can cause damage or compromise your systems.',
+                  icon: <Shield className='w-8 h-8' />,
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  title: '24/7 Monitoring';
+                  title: '24/7 Monitoring',
                   description:,
-                    'Continuous security monitoring and protection that never sleeps or takes breaks.';
-                  icon: <Eye className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Continuous security monitoring and protection that never sleeps or takes breaks.',
+                  icon: <Eye className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Reduced False Positives';
+                  title: 'Reduced False Positives',
                   description:,
-                    'AI-powered analysis that significantly reduces false alarms and alert fatigue.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'AI-powered analysis that significantly reduces false alarms and alert fatigue.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Cost Savings';
+                  title: 'Cost Savings',
                   description:,
-                    'Prevent costly security breaches and reduce the need for extensive incident response.';
-                  icon: <Lock className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-indigo-50o0';
-                };
+                    'Prevent costly security breaches and reduce the need for extensive incident response.',
+                  icon: <Lock className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-indigo-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

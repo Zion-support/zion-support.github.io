@@ -7,43 +7,43 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const content = [
     {
-      id: 'ultimate-enterprise-transformation';
-      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution';
-      subtitle: '20,0o00% ROI - The Highest Documented ROI in Enterprise AI History';
-      description: 'Transform your Fortune 50o0 company with revolutionary AI systems that have generated $20o0B+ in annual savings across 1,0o00+ implementations.';
+      id: 'ultimate-enterprise-transformation',
+      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution',
+      subtitle: '20,0o00% ROI - The Highest Documented ROI in Enterprise AI History',
+      description: 'Transform your Fortune 50o0 company with revolutionary AI systems that have generated $20o0B+ in annual savings across 1,0o00+ implementations.',
       metrics: {
-        roi: '20,0o00%';
-        savings: '$20o0B+';
-        accuracy: '99.99%';
-        efficiency: '5,0o00%'};
-      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough';
-      type: 'blog';
-      featured: true};
+        roi: '20,0o00%',
+        savings: '$20o0B+',
+        accuracy: '99.99%',
+        efficiency: '5,0o00%'},
+      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough',
+      type: 'blog',
+      featured: true},
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 Ultimate Success: $20o0B Annual Savings';
-      subtitle: '20,0o00% ROI Success Story - Complete Case Study';
-      description: 'How a Fortune 50 manufacturing leader achieved the highest ROI in enterprise AI history through revolutionary transformation.';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 Ultimate Success: $20o0B Annual Savings',
+      subtitle: '20,0o00% ROI Success Story - Complete Case Study',
+      description: 'How a Fortune 50 manufacturing leader achieved the highest ROI in enterprise AI history through revolutionary transformation.',
       metrics: {
-        roi: '20,0o00%';
-        savings: '$20o0B';
-        timeline: '18 months';
-        satisfaction: '99.8%'};
-      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-20o000-roi-success-story';
-      type: 'case-study';
-      featured: true};
+        roi: '20,0o00%',
+        savings: '$20o0B',
+        timeline: '18 months',
+        satisfaction: '99.8%'},
+      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-20o000-roi-success-story',
+      type: 'case-study',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'Complete Implementation Guide: 20,0o00% ROI Roadmap';
-      subtitle: 'The Definitive Guide to Revolutionary AI Transformation';
-      description: 'Step-by-step roadmap to implementing AI systems that deliver unprecedented business results and market domination.';
+      id: 'implementation-guide',
+      title: 'Complete Implementation Guide: 20,0o00% ROI Roadmap',
+      subtitle: 'The Definitive Guide to Revolutionary AI Transformation',
+      description: 'Step-by-step roadmap to implementing AI systems that deliver unprecedented business results and market domination.',
       metrics: {
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+';
-        guide: '60 min read'};
-      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide';
-      type: 'resource';
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+',
+        guide: '60 min read'},
+      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide',
+      type: 'resource',
       featured: true}
   ],
   useEffect(() => {
@@ -52,7 +52,7 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
     return () => clearInterval(timer)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-ultimate-enterprise-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-ultimate-enterprise-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25-ultimate-enterprise-banner-dismissed'),
     if (dismissed === 'true') {
@@ -162,5 +162,5 @@ const AI20o25UltimateEnterpriseTransformationBanner = () => {
           <X className="w-6 h-6"  />,
         </button>,
       </div>,
-    </div>)};
-export default AI20o25UltimateEnterpriseTransformationBanner;
+    </div>)},
+export default AI20o25UltimateEnterpriseTransformationBanner,

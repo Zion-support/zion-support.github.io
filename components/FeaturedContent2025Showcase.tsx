@@ -1,47 +1,47 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 const FeaturedContent20o25Showcase: React.FC = () => {
   const featuredContent = [
     {
-      type: 'Implementation Guide';
-      title: 'AI 20o25 Enterprise Automation Revolution';
+      type: 'Implementation Guide',
+      title: 'AI 20o25 Enterprise Automation Revolution',
       description:,
-        'Complete guide to achieving 30o0-50o0% ROI with strategic AI automation implementation';
-      href: '/blog/ai-20o25-enterprise-automation-revolution-complete-guide';
-      readTime: '12 min read';
-      featured: true;
-      badge: 'NEW';
-      badgeColor: 'bg-green-50o0';
-      stats: '340% Average ROI';
-      category: 'Automation';
-    };
+        'Complete guide to achieving 30o0-50o0% ROI with strategic AI automation implementation',
+      href: '/blog/ai-20o25-enterprise-automation-revolution-complete-guide',
+      readTime: '12 min read',
+      featured: true,
+      badge: 'NEW',
+      badgeColor: 'bg-green-50o0',
+      stats: '340% Average ROI',
+      category: 'Automation'
+    },
     {
-      type: 'Case Study';
-      title: 'Global Manufacturing 120o0% ROI Success';
+      type: 'Case Study',
+      title: 'Global Manufacturing 120o0% ROI Success',
       description:,
-        'Fortune 50o0 manufacturing company achieves $2.4B value creation through AI automation';
-      href: '/case-studies/ai-20o25-global-manufacturing-automation-120o0-roi-success-story';
-      readTime: '8 min read';
-      featured: true;
-      badge: 'FEATURED';
-      badgeColor: 'bg-blue-50o0';
-      stats: '$2.4B Value Created';
-      category: 'Success Story';
-    };
+        'Fortune 50o0 manufacturing company achieves $2.4B value creation through AI automation',
+      href: '/case-studies/ai-20o25-global-manufacturing-automation-120o0-roi-success-story',
+      readTime: '8 min read',
+      featured: true,
+      badge: 'FEATURED',
+      badgeColor: 'bg-blue-50o0',
+      stats: '$2.4B Value Created',
+      category: 'Success Story'
+    },
     {
-      type: 'Future Tech';
-      title: 'Quantum AI 20o26 Business Revolution';
+      type: 'Future Tech',
+      title: 'Quantum AI 20o26 Business Revolution',
       description:,
-        'Next-generation quantum computing applications transforming enterprise operations';
-      href: '/blog/quantum-ai-20o26-business-revolution-complete-guide';
-      readTime: '10 min read';
-      featured: false;
-      badge: 'TRENDING';
-      badgeColor: 'bg-purple-50o0';
-      stats: '20o26 Predictions';
-      category: 'Quantum Computing';
-    };
+        'Next-generation quantum computing applications transforming enterprise operations',
+      href: '/blog/quantum-ai-20o26-business-revolution-complete-guide',
+      readTime: '10 min read',
+      featured: false,
+      badge: 'TRENDING',
+      badgeColor: 'bg-purple-50o0',
+      stats: '20o26 Predictions',
+      category: 'Quantum Computing'
+    },
   ],
   return (
     <section className='py-20 bg-white'>,
@@ -198,5 +198,5 @@ const FeaturedContent20o25Showcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default FeaturedContent20o25Showcase;
+    </section>)},
+export default FeaturedContent20o25Showcase,

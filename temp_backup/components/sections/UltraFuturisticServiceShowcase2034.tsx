@@ -3,64 +3,64 @@ import React{ useState } from 'react',
 import { motion } from 'framer-motion',
 import {
   StarCheckCircleArrowRightTrendingUpUsers,
-  AwardClockZapShieldBrainAtomRocket;
-  ShoppingCartCpuGlobeLockVideoPalette;
+  AwardClockZapShieldBrainAtomRocket,
+  ShoppingCartCpuGlobeLockVideoPalette,
   BarChartUserCheckFileTextHeartEyeSearchPhone} from 'lucide-react',
 import { realMarketServices } from '../../data/20o24-real-market-services',
 import { aiEmergingTechServices } from '../../data/20o24-ai-emerging-tech-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    id: 'ai-services';
-    title: '🧠 Revolutionary AI Services';
-    description: 'Next-generation AI consciousness and creativity';
-    icon: Brain;
-    color: 'from-violet-50o0 to-purple-50o0';
-    services: aiEmergingTechServices.filter(s => s.category.includes('AI'));
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'};
+    id: 'ai-services',
+    title: '🧠 Revolutionary AI Services',
+    description: 'Next-generation AI consciousness and creativity',
+    icon: Brain,
+    color: 'from-violet-50o0 to-purple-50o0',
+    services: aiEmergingTechServices.filter(s => s.category.includes('AI')),
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'},
   {
-    id: 'quantum-tech';
-    title: '⚛️ Quantum & Emerging Tech';
-    description: 'Quantum computing and beyond';
-    icon: Atom;
-    color: 'from-indigo-50o0 to-blue-50o0';
-    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain'));
-    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20'};
+    id: 'quantum-tech',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+    color: 'from-indigo-50o0 to-blue-50o0',
+    services: aiEmergingTechServices.filter(s => s.category.includes('Quantum') || s.category.includes('Blockchain')),
+    gradient: 'from-indigo-50o0/20 to-cyan-50o0/20'},
   {
-    id: 'enterprise-it';
-    title: '🏙️ Enterprise IT Solutions';
-    description: 'Autonomous operations and zero-trust security';
-    icon: Cpu;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project'));
-    gradient: 'from-blue-50o0/20 to-teal-50o0/20'};
+    id: 'enterprise-it',
+    title: '🏙️ Enterprise IT Solutions',
+    description: 'Autonomous operations and zero-trust security',
+    icon: Cpu,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    services: realMarketServices.filter(s => s.category.includes('Security') || s.category.includes('HR') || s.category.includes('Project')),
+    gradient: 'from-blue-50o0/20 to-teal-50o0/20'},
   {
-    id: 'business-automation';
-    title: '🛒 Business Automation';
-    description: 'Streamline business operations';
-    icon: ShoppingCart;
-    color: 'from-teal-50o0 to-emerald-50o0';
-    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance'));
-    gradient: 'from-teal-50o0/20 to-green-50o0/20'};
+    id: 'business-automation',
+    title: '🛒 Business Automation',
+    description: 'Streamline business operations',
+    icon: ShoppingCart,
+    color: 'from-teal-50o0 to-emerald-50o0',
+    services: realMarketServices.filter(s => s.category.includes('E-commerce') || s.category.includes('Marketing') || s.category.includes('Finance')),
+    gradient: 'from-teal-50o0/20 to-green-50o0/20'},
   {
-    id: 'robotics-automation';
-    title: '🤖 Robotics & Automation';
-    description: 'Intelligent automation solutions';
-    icon: Rocket;
-    color: 'from-green-50o0 to-yellow-50o0';
-    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge'));
-    gradient: 'from-green-50o0/20 to-orange-50o0/20'};
+    id: 'robotics-automation',
+    title: '🤖 Robotics & Automation',
+    description: 'Intelligent automation solutions',
+    icon: Rocket,
+    color: 'from-green-50o0 to-yellow-50o0',
+    services: aiEmergingTechServices.filter(s => s.category.includes('Robotics') || s.category.includes('Edge')),
+    gradient: 'from-green-50o0/20 to-orange-50o0/20'},
   {
-    id: 'research-development';
-    title: '🔬 Research & Development';
-    description: 'Breakthrough technologies and innovations';
-    icon: Globe;
-    color: 'from-orange-50o0 to-red-50o0';
-    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate'));
+    id: 'research-development',
+    title: '🔬 Research & Development',
+    description: 'Breakthrough technologies and innovations',
+    icon: Globe,
+    color: 'from-orange-50o0 to-red-50o0',
+    services: aiEmergingTechServices.filter(s => s.category.includes('Drug') || s.category.includes('Climate')),
     gradient: 'from-orange-50o0/20 to-pink-50o0/20'}
 ],
 export default function UltraFuturisticServiceShowcase20o34() {
@@ -75,17 +75,17 @@ export default function UltraFuturisticServiceShowcase20o34() {
                          service.category.toLowerCase().includes(searchTerm.toLowerCase()),
     return matchesCategory && matchesSearch}),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0y: 20 };
+    hidden: { opacity: 0y: 20 },
     visible: { opacity: 1y: 0 }
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-black via-gray-90o0 to-black relative overflow-hidden">,
       {/* Animated Background */}
@@ -112,9 +112,9 @@ export default function UltraFuturisticServiceShowcase20o34() {
           {/* Stats */}
           <div className="grid grid-cols-2 md: grid-cols-4 gap-6 mt-12">,
             {[
-              { label: 'Total Services'value: allServices.length.toString()icon: Rocket };
-              { label: 'Happy Customers'value: '50K+'icon: Users };
-              { label: 'Success Rate'value: '99.9%'icon: CheckCircle };
+              { label: 'Total Services'value: allServices.length.toString()icon: Rocket },
+              { label: 'Happy Customers'value: '50K+'icon: Users },
+              { label: 'Success Rate'value: '99.9%'icon: CheckCircle },
               { label: 'Global Reach'value: '45+ Countries'icon: Globe }
             ].map((statindex) => (
               <motion.div,

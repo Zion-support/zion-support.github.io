@@ -13,23 +13,23 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {toast} from "sonner",
 import {supabase} from "@/integrations/supabase/client",
 import {Switch} from "@/components/ui/switch",
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Button } from "@/components/ui/button";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { toast } from "sonner";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
+import { Button } from "@/components/ui/button",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { toast } from "sonner",
 import { supabase } from "@/integrations/supabase/client",
 import { Switch } from "@/components/ui/switch",
-import { supabase } from "@/integrations/supabase/client";
-import { Switch } from "@/components/ui/switch";
+import { supabase } from "@/integrations/supabase/client",
+import { Switch } from "@/components/ui/switch",
 import React, { useState } from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -58,11 +58,11 @@ import { Switch } from '@/components / ui / switch',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -84,9 +84,9 @@ export default function TenantOnboarding() {
   const [activeTab, setActiveTab] = useState("company"),
   const [isSubmitting, setIsSubmitting] = useState(false),
 export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("company"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
     brand_name: "",
     subdomain: "",
@@ -98,23 +98,23 @@ export default function TenantOnboarding() {
     custom_domain: "",
     is_co_branded: true,
   const [formData, setFormData] = useState({
-    brand_name: "";
-    subdomain: "";
-    logo_url: "";
-    primary_color: "#9b87f5";
-    theme_preset: "light";
-    company_size: "";
-    industry: "";
-    custom_domain: "";
+    brand_name: "",
+    subdomain: "",
+    logo_url: "",
+    primary_color: "#9b87f5",
+    theme_preset: "light",
+    company_size: "",
+    industry: "",
+    custom_domain: "",
     is_co_branded: true}),
   // Check if user has admin role,
-  const isAdmin = user?.role === "admin"});
+  const isAdmin = user?.role === "admin"}),
   // Check if user has admin role,
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role === "admin",
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />}
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
+    const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))}
   const handleSelectChange = (name: string, value: string) => {
     setFormData(prev => ({ ...prev, [name]: value }))}
@@ -125,23 +125,23 @@ export default function TenantOnboarding() {
     setIsSubmitting(true),
     try {
       // Generate subdomain if not provided,
-      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '')};
+      const subdomain = formData.subdomain |formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '')},
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))};
+    setFormData(prev => ({ ...prev, [name]: value }))},
   const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))};
+    setFormData(prev => ({ ...prev, [name]: checked }))},
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     try {
       // Generate subdomain if not provided,
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       // Create landing page copy,
       const landingPageCopy = {
         headline: "AI Hiring Assistant",
         subtitle: `Find the best talent for your ${formData.industry |"company"}`,
         cta: "Get Started"}
-      };
+      },
       // Submit to Supabase,
       const { data, error } = await supabase,
         .from('whitelabel_tenants'),
@@ -162,10 +162,10 @@ export default function TenantOnboarding() {
       if (error) throw error,
       toast.success("Tenant created successfully!", {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`}),
-        .single();
-      if (error) throw error;
+        .single(),
+      if (error) throw error,
       toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`});
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`}),
       // Reset form,
       setFormData({
         brand_name: "",
@@ -180,12 +180,12 @@ export default function TenantOnboarding() {
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", {
         description: error.message,
-      console.error("Error creating tenant:", error);
+      console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", {
         description: error.message})} finally {
       setIsSubmitting(false)}
 }
-  };
+  },
   return (
     <>,
       <SEO
@@ -211,14 +211,14 @@ function TenantOnboarding() {
   const [is_submitting, setIsSubmitting] = useState (false),
   const [form_data, setFormData] = useState ({
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-    brand_name: "";
-    subdomain: "";
-    logo_url: "";
-    primary_color: "#9b87f5";
-    theme_preset: "light";
-    company_size: "";
-    industry: "";
-    custom_domain: "";
+    brand_name: "",
+    subdomain: "",
+    logo_url: "",
+    primary_color: "#9b87f5",
+    theme_preset: "light",
+    company_size: "",
+    industry: "",
+    custom_domain: "",
     is_co_branded: true}),
   // Check if user has admin role,
   const is_admin = user?.role === "admin",
@@ -238,30 +238,30 @@ if ( {) {
 ,
   const handle_submit = async (e: React.FormEvent) => {
     e.prevent_default (),
-    setIsSubmitting (true);
+    setIsSubmitting (true),
     try {
       // Generate subdomain if not provided,
       const subdomain = form_data.subdomain || form_data.brand_name.toLowerCase ().replace (/[^a - z0 - 9]/g, ''),
       // Create landing page copy,
       const landingPageCopy = {
-        headline: "AI Hiring Assistant";
-        subtitle: `Find the best talent for your ${form_data.industry || "company"}`;
+        headline: "AI Hiring Assistant",
+        subtitle: `Find the best talent for your ${form_data.industry || "company"}`,
         cta: "Get Started"}
 ,
       // Submit to Supabase,
       const { data, error } = await supabase,
         .from ('whitelabel_tenants'),
         .insert ({
-          brand_name: form_data.brand_name;
-          subdomain: subdomain;
-          custom_domain: form_data.custom_domain || null;
-          primary_color: form_data.primary_color;
-          logo_url: form_data.logo_url || null;
-          theme_preset: form_data.theme_preset;
-          landing_page_copy: landingPageCopy;
-          is_active: true;
-          account_manager_id: user.id;
-          dns_verified: false;
+          brand_name: form_data.brand_name,
+          subdomain: subdomain,
+          custom_domain: form_data.custom_domain || null,
+          primary_color: form_data.primary_color,
+          logo_url: form_data.logo_url || null,
+          theme_preset: form_data.theme_preset,
+          landing_page_copy: landingPageCopy,
+          is_active: true,
+          account_manager_id: user.id,
+          dns_verified: false,
           email_template_override: null}),
         .select ('id, brand_name, subdomain'),
         .single (),
@@ -272,14 +272,14 @@ if (throw error) {
         description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`}),
       // Reset form,
       setFormData ({
-        brand_name: "";
-        subdomain: "";
-        logo_url: "";
-        primary_color: "#9b87f5";
-        theme_preset: "light";
-        company_size: "";
-        industry: "";
-        custom_domain: "";
+        brand_name: "",
+        subdomain: "",
+        logo_url: "",
+        primary_color: "#9b87f5",
+        theme_preset: "light",
+        company_size: "",
+        industry: "",
+        custom_domain: "",
         is_co_branded: true})} catch (error: any) {
       console.error ("Error creating tenant:", error),
       toast.error ("Failed to create tenant", {
@@ -508,78 +508,78 @@ if (throw error) {
       <Footer />,
     </>),
 export default function TenantOnboarding() {
-  const { user } = useAuth();
-  const [activeTab, setActiveTab] = useState("company");
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const { user } = useAuth(),
+  const [activeTab, setActiveTab] = useState("company"),
+  const [isSubmitting, setIsSubmitting] = useState(false),
   const [formData, setFormData] = useState({
-    brand_name: "";
-    subdomain: "";
-    logo_url: "";
-    primary_color: "#9b87f5";
-    theme_preset: "light";
-    company_size: "";
-    industry: "";
-    custom_domain: "";
-    is_co_branded: true});
+    brand_name: "",
+    subdomain: "",
+    logo_url: "",
+    primary_color: "#9b87f5",
+    theme_preset: "light",
+    company_size: "",
+    industry: "",
+    custom_domain: "",
+    is_co_branded: true}),
   // Check if user has admin role,
-  const isAdmin = user?.role === "admin";
+  const isAdmin = user?.role === "admin",
   if (!isAdmin) {
     return <Navigate to="/unauthorized" />}
 ,
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))};
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value }))},
   const handleSelectChange = (name: string, value: string) => {
-    setFormData(prev => ({ ...prev, [name]: value }))};
+    setFormData(prev => ({ ...prev, [name]: value }))},
   const handleSwitchChange = (name: string, checked: boolean) => {
-    setFormData(prev => ({ ...prev, [name]: checked }))};
+    setFormData(prev => ({ ...prev, [name]: checked }))},
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
+    e.preventDefault(),
+    setIsSubmitting(true),
     try {
       // Generate subdomain if not provided,
-      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, '');
+      const subdomain = formData.subdomain || formData.brand_name.toLowerCase().replace(/[^a-z0-9]/g, ''),
       // Create landing page copy,
       const landingPageCopy = {
-        headline: "AI Hiring Assistant";
-        subtitle: `Find the best talent for your ${formData.industry || "company"}`;
-        cta: "Get Started"};
+        headline: "AI Hiring Assistant",
+        subtitle: `Find the best talent for your ${formData.industry || "company"}`,
+        cta: "Get Started"},
       // Submit to Supabase,
       const { data, error } = await supabase,
         .from('whitelabel_tenants'),
         .insert({
-          brand_name: formData.brand_name;
-          subdomain: subdomain;
-          custom_domain: formData.custom_domain || null;
-          primary_color: formData.primary_color;
-          logo_url: formData.logo_url || null;
-          theme_preset: formData.theme_preset;
-          landing_page_copy: landingPageCopy;
-          is_active: true;
-          account_manager_id: user.id;
-          dns_verified: false;
+          brand_name: formData.brand_name,
+          subdomain: subdomain,
+          custom_domain: formData.custom_domain || null,
+          primary_color: formData.primary_color,
+          logo_url: formData.logo_url || null,
+          theme_preset: formData.theme_preset,
+          landing_page_copy: landingPageCopy,
+          is_active: true,
+          account_manager_id: user.id,
+          dns_verified: false,
           email_template_override: null}),
         .select('id, brand_name, subdomain'),
-        .single();
-      if (error) throw error;
+        .single(),
+      if (error) throw error,
       toast.success("Tenant created successfully!", {
-        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`});
+        description: `${data.brand_name} is now available at ${data.subdomain}.ziontechmarketplace.com`}),
       // Reset form,
       setFormData({
-        brand_name: "";
-        subdomain: "";
-        logo_url: "";
-        primary_color: "#9b87f5";
-        theme_preset: "light";
-        company_size: "";
-        industry: "";
-        custom_domain: "";
+        brand_name: "",
+        subdomain: "",
+        logo_url: "",
+        primary_color: "#9b87f5",
+        theme_preset: "light",
+        company_size: "",
+        industry: "",
+        custom_domain: "",
         is_co_branded: true})} catch (error: any) {
       console.error("Error creating tenant:", error),
       toast.error("Failed to create tenant", {
         description: error.message})} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <>,
       <SEO

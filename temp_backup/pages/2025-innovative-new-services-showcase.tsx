@@ -3,56 +3,51 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Star;
-  Users;
-  Award;
-  TrendingUp;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Eye;
-  Heart;
-  Brain;
-  Shield;
-  Rocket;
-  Zap;
-  Globe;
-  Cpu;
-  Target;
-  CheckCircle;
-  Clock;
-  DollarSign;
-  Users as UsersIcon;
+  Star,
+  Users,
+  Award,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Eye,
+  Heart,
+  Brain,
+  Shield,
+  Rocket,
+  Zap,
+  Globe,
+  Cpu,
+  Target,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Users as UsersIcon,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovativeNewServices20o25 } from '../data/20o25-innovative-new-services',
 import { emergingTechBreakthroughs20o25 } from '../data/20o25-emerging-tech-breakthroughs',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const allServices = [
-  ...innovativeNewServices20o25;
-  ...emergingTechBreakthroughs20o25;
+  ...innovativeNewServices20o25,
+  ...emergingTechBreakthroughs20o25,
 ],
 const categories = [
-  'All Services';
-  'AI & Intelligence';
-  'Quantum Technology';
-  'Space Technology';
-  'Neural Technology';
-  'Blockchain';
-  'Metaverse';
-  'Healthcare';
-  'Edge Computing';
-  'Autonomous Systems';
+  'All ServicesAI & Intelligence',
+  'Quantum TechnologySpace Technology',
+  'Neural TechnologyBlockchain',
+  'MetaverseHealthcare',
+  'Edge ComputingAutonomous Systems',
 ],
 export default function InnovativeNewServicesShowcase20o25() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -85,24 +80,24 @@ export default function InnovativeNewServicesShowcase20o25() {
         return 0}
   }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <Layout>,
       <Head>,

@@ -8,21 +8,17 @@ export default function SuggestFeaturePage() {
   const [tags, setTags] = useState<RoadmapTag[]>([]),
   const [submitting, setSubmitting] = useState(false),
   const allTags: RoadmapTag[] = [
-    'AI';
-    'Trust';
-    'Token';
-    'DAO';
-    'Infra';
-    'Community';
-    'UX';
-    'Security';
+    'AITrust',
+    'TokenDAO',
+    'InfraCommunity',
+    'UXSecurity'
   ],
   async function submit() {
     setSubmitting(true),
     await fetch('/api/roadmap/suggest', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ title, description, etaQuarter, tags });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title, description, etaQuarter, tags }),
     }),
     setSubmitting(false),
     router.push('/roadmap')}

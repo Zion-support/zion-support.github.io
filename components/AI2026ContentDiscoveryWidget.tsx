@@ -2,38 +2,38 @@ import Link from 'next/link',
 export default function AI20o26ContentDiscoveryWidget() {
   const featuredContent = [
     {
-      title: 'Advanced Automation Mastery';
+      title: 'Advanced Automation Mastery',
       description:,
-        'Master cutting-edge AI automation techniques for enterprise transformation';
-      href: '/ai-20o26-advanced-automation-mastery';
-      icon: '🤖';
-      category: 'Automation';
-      color: 'emerald';
-    };
+        'Master cutting-edge AI automation techniques for enterprise transformation',
+      href: '/ai-20o26-advanced-automation-mastery',
+      icon: '🤖',
+      category: 'Automation',
+      color: 'emerald'
+    },
     {
-      title: 'Neural Interface Revolution';
-      description: 'Explore revolutionary brain-computer interface technology';
-      href: '/ai-20o26-neural-interface-revolution';
-      icon: '🧠';
-      category: 'Neural Tech';
-      color: 'purple';
-    };
+      title: 'Neural Interface Revolution',
+      description: 'Explore revolutionary brain-computer interface technology',
+      href: '/ai-20o26-neural-interface-revolution',
+      icon: '🧠',
+      category: 'Neural Tech',
+      color: 'purple'
+    },
     {
-      title: 'Breakthrough Content Showcase';
-      description: 'Discover revolutionary AI breakthroughs and case studies';
-      href: '/ai-20o26-breakthrough-content-showcase';
-      icon: '🚀';
-      category: 'Showcase';
-      color: 'blue';
-    };
+      title: 'Breakthrough Content Showcase',
+      description: 'Discover revolutionary AI breakthroughs and case studies',
+      href: '/ai-20o26-breakthrough-content-showcase',
+      icon: '🚀',
+      category: 'Showcase',
+      color: 'blue'
+    },
     {
-      title: 'AI Innovation Hub';
-      description: 'Access cutting-edge AI tools and resources';
-      href: '/ai-innovation-hub';
-      icon: '💡';
-      category: 'Innovation';
-      color: 'indigo';
-    };
+      title: 'AI Innovation Hub',
+      description: 'Access cutting-edge AI tools and resources',
+      href: '/ai-innovation-hub',
+      icon: '💡',
+      category: 'Innovation',
+      color: 'indigo'
+    },
   ],
   return (
     <div className='bg-gradient-to-br from-gray-50 to-blue-50 py-16 px-4'>,

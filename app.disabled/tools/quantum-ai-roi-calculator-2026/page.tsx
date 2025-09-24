@@ -4,16 +4,16 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export default function QuantumAIROICalculator20o26() {
   const [inputs, setInputs] = useState({
-    currentRevenue: 10o0000000;
-    currentEfficiency: 70;
-    currentCosts: 50o000000;
-    quantumInvestment: 10o000000;
+    currentRevenue: 10o0000000,
+    currentEfficiency: 70,
+    currentCosts: 50o000000,
+    quantumInvestment: 10o000000,
     implementationTime: 18}),
   const [results, setResults] = useState({
-    efficiencyGain: 0;
-    costSavings: 0;
-    revenueIncrease: 0;
-    totalROI: 0;
+    efficiencyGain: 0,
+    costSavings: 0,
+    revenueIncrease: 0,
+    totalROI: 0,
     paybackPeriod: 0}),
   const calculateROI = () => {
     const efficiencyGain = 80, // 80% efficiency improvement,
@@ -23,13 +23,13 @@ export default function QuantumAIROICalculator20o26() {
     const totalROI = ((totalBenefits - inputs.quantumInvestment) / inputs.quantumInvestment) * 10o0,
     const paybackPeriod = inputs.quantumInvestment / (totalBenefits / 12),
     setResults({
-      efficiencyGain;
-      costSavings;
-      revenueIncrease;
-      totalROI;
-      paybackPeriod})};
+      efficiencyGain,
+      costSavings,
+      revenueIncrease,
+      totalROI,
+      paybackPeriod})},
   const handleInputChange = (field: string, value: number) => {
-    setInputs(prev => ({ ...prev, [field]: value }))};
+    setInputs(prev => ({ ...prev, [field]: value }))},
   return (
     <div className="min-h-screen bg-gray-50">,
       <SEO

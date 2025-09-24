@@ -5,81 +5,81 @@ export default function InteractiveContentDiscovery20o27() {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [searchQuerysetSearchQuery] = useState(''),
   const contentCategories = [
-    { id: ''all', 'label: 'All 'Content', 'icon: '📚' };
-    { id: 'ai-20o26'label: 'AI 20o26'icon: '🚀' };
-    { id: 'ai-20o27'label: 'AI 20o27'icon: '🔮' };
-    { id: 'quantum'label: 'Quantum Computing'icon: '⚛️' };
-    { id: 'neural'label: 'Neural Interfaces'icon: '🧠' };
-    { id: 'automation'label: 'Automation'icon: '🤖' };
-    { id: 'case-studies'label: 'Case Studies'icon: '📊' };
+    { id: ''alllabel: 'All 'Contenticon: '📚' },
+    { id: 'ai-20o26'label: 'AI 20o26'icon: '🚀' },
+    { id: 'ai-20o27'label: 'AI 20o27'icon: '🔮' },
+    { id: 'quantum'label: 'Quantum Computing'icon: '⚛️' },
+    { id: 'neural'label: 'Neural Interfaces'icon: '🧠' },
+    { id: 'automation'label: 'Automation'icon: '🤖' },
+    { id: 'case-studies'label: 'Case Studies'icon: '📊' },
     { id: 'predictions'label: 'Predictions'icon: '🔮' }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'AI 20o26 Quantum Neural Fusion Breakthrough';
-      description: 'Revolutionary breakthrough combining quantum computing with neural networksachieving 15,0o00% ROI.';
-      category: 'ai-20o26';
-      tags: [', 'quantum', 'neural'breakthrough'];
-      roi: '15,0o00%';
-      accuracy: '99.7%';
-      type: 'blog';
-      url: '/blog/ai-20o26-quantum-neural-fusion-breakthrough';
-      featured: true};
+      id: 1,
+      title: 'AI 20o26 Quantum Neural Fusion Breakthrough',
+      description: 'Revolutionary breakthrough combining quantum computing with neural networksachieving 15,0o00% ROI.',
+      category: 'ai-20o26',
+      tags: [quantum', 'neural'breakthrough'],
+      roi: '15,0o00%',
+      accuracy: '99.7%',
+      type: 'blog',
+      url: '/blog/ai-20o26-quantum-neural-fusion-breakthrough',
+      featured: true},
     {
-      id: 2;
-      title: 'AI 20o27 Neural Synthesis Predictions';
-      description: 'Comprehensive analysis of neural synthesis technology predictions for 20o27.';
-      category: 'ai-20o27';
-      tags: [', 'neural', 'predictions'synthesis'];
-      roi: '8,0o00%';
-      accuracy: '99.7%';
-      type: 'blog';
-      url: '/blog/ai-20o27-neural-synthesis-breakthrough';
-      featured: true};
+      id: 2,
+      title: 'AI 20o27 Neural Synthesis Predictions',
+      description: 'Comprehensive analysis of neural synthesis technology predictions for 20o27.',
+      category: 'ai-20o27',
+      tags: [neural', 'predictions'synthesis'],
+      roi: '8,0o00%',
+      accuracy: '99.7%',
+      type: 'blog',
+      url: '/blog/ai-20o27-neural-synthesis-breakthrough',
+      featured: true},
     {
-      id: 3;
-      title: 'Quantum Computing Solutions 20o26';
-      description: 'Advanced quantum computing solutions achieving 10,0o00x faster processing speeds.';
-      category: 'quantum';
-      tags: [', 'quantum', 'computing'breakthrough'];
-      roi: '12,0o00%';
-      accuracy: '99.9%';
-      type: 'services';
-      url: '/quantum-computing-solutions';
-      featured: false};
+      id: 3,
+      title: 'Quantum Computing Solutions 20o26',
+      description: 'Advanced quantum computing solutions achieving 10,0o00x faster processing speeds.',
+      category: 'quantum',
+      tags: [quantum', 'computing'breakthrough'],
+      roi: '12,0o00%',
+      accuracy: '99.9%',
+      type: 'services',
+      url: '/quantum-computing-solutions',
+      featured: false},
     {
-      id: 4;
-      title: 'Neural Interface Healthcare Success';
-      description: '95% patient recovery rates achieved through neural interface technology.';
-      category: 'neural';
-      tags: [', 'neural', 'healthcare'success'];
-      roi: '3,0o00%';
-      accuracy: '95%';
-      type: 'case-study';
-      url: '/case-studies/ai-20o26-neural-interface-healthcare-breakthrough';
-      featured: true};
+      id: 4,
+      title: 'Neural Interface Healthcare Success',
+      description: '95% patient recovery rates achieved through neural interface technology.',
+      category: 'neural',
+      tags: [neural', 'healthcare'success'],
+      roi: '3,0o00%',
+      accuracy: '95%',
+      type: 'case-study',
+      url: '/case-studies/ai-20o26-neural-interface-healthcare-breakthrough',
+      featured: true},
     {
-      id: 5;
-      title: 'Autonomous Manufacturing Revolution';
-      description: 'Fully autonomous manufacturing systems achieving 8,50o0% ROI and 99.9% efficiency.';
-      category: 'automation';
-      tags: [', 'automation', 'manufacturing'autonomous'];
-      roi: '8,50o0%';
-      accuracy: '99.9%';
-      type: 'case-study';
-      url: '/case-studies/ai-20o26-autonomous-manufacturing-revolution';
-      featured: false};
+      id: 5,
+      title: 'Autonomous Manufacturing Revolution',
+      description: 'Fully autonomous manufacturing systems achieving 8,50o0% ROI and 99.9% efficiency.',
+      category: 'automation',
+      tags: [automation', 'manufacturing'autonomous'],
+      roi: '8,50o0%',
+      accuracy: '99.9%',
+      type: 'case-study',
+      url: '/case-studies/ai-20o26-autonomous-manufacturing-revolution',
+      featured: false},
     {
-      id: 6;
-      title: 'AI 20o27 Future Predictions Analysis';
-      description: 'Comprehensive analysis of AI trends and breakthrough predictions for 20o27.';
-      category: 'predictions';
-      tags: [', 'predictions', 'future'analysis'];
-      roi: 'N/A';
-      accuracy: '95%';
-      type: 'blog';
-      url: '/ai-20o27-future-predictions-revolutionary';
+      id: 6,
+      title: 'AI 20o27 Future Predictions Analysis',
+      description: 'Comprehensive analysis of AI trends and breakthrough predictions for 20o27.',
+      category: 'predictions',
+      tags: [predictions', 'future'analysis'],
+      roi: 'N/A',
+      accuracy: '95%',
+      type: 'blog',
+      url: '/ai-20o27-future-predictions-revolutionary',
       featured: true}
   ],
   const filteredContent = contentItems.filter(item => {
@@ -95,7 +95,7 @@ export default function InteractiveContentDiscovery20o27() {
       case 'Advanced': return 'bg-orange-10o0 text-orange-80o0',
       case 'Expert': return 'bg-red-10o0 text-red-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="py-16 px-4 sm: px-6 lg:px-8 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto">,
@@ -146,7 +146,7 @@ export default function InteractiveContentDiscovery20o27() {
               <label className="block text-sm font-medium text-gray-70o0 mb-3">Filter by Tags</label>,
               <div className="flex flex-wrap gap-2">,
                 <button
-                  onClick={() => setSelectedTag(', ')}
+                  onClick={() => setSelectedTag()}
                   className={`px-4 py-2 rounded-full text-sm font-medium transition-all duration-20o0 ${
                     selectedTag === ', ' ? 'bg-purple-50o0 text-white' : 'bg-gray-10o0 text-gray-70o0 hover: bg-gray-20o0'}`}
                 >,
@@ -172,9 +172,9 @@ export default function InteractiveContentDiscovery20o27() {
                 {(searchTerm || selectedCategory !== 'all' || selectedTag) && (
                   <button
                     onClick={() => {
-                      setSearchTerm(', '),
+                      setSearchTerm(),
                       setSelectedCategory('all'),
-                      setSelectedTag(', ')}}
+                      setSelectedTag()}}
                     className="text-sm text-purple-60o0 hover: text-purple-80o0 font-medium">,
                     Clear Filters,
                   </button>)}
@@ -245,7 +245,7 @@ export default function InteractiveContentDiscovery20o27() {
                 onClick={() => {
                   setSearchTerm(', '),
                   setSelectedCategory('all'),
-                  setSelectedTag(', ')}}
+                  setSelectedTag()}}
                 className="px-6 py-2 bg-purple-50o0 text-white rounded-lg hover: bg-purple-60o0 transition-colors">,
                 Clear All Filters,
               </button>,
@@ -274,5 +274,5 @@ export default function InteractiveContentDiscovery20o27() {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default InteractiveContentDiscovery20o27;
+    </div>)},
+export default InteractiveContentDiscovery20o27,

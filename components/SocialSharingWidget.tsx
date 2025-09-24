@@ -5,19 +5,19 @@ interface SocialSharingWidgetProps {
   hashtags?: string[]}
 ,
 export default function SocialSharingWidget({
-  titledescriptionurlhashtags = [];
+  titledescriptionurlhashtags = [],
 }: SocialSharingWidgetProps) {
   const encodedTitle = encodeURIComponent(title),
   const encodedDescription = encodeURIComponent(description),
   const encodedUrl = encodeURIComponent(url),
   const hashtagString = hashtags.map(tag => `#${tag}`).join(' '),
   const shareLinks = {
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&hashtags=${hashtags.join(',')}`;
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-    reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`;
-    email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${url}`;
-  };
+    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&hashtags=${hashtags.join()}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+    email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${url}`,
+  },
   return (
     <div className='bg-gradient-to-r from-purple-50 to-indigo-50 rounded-lg p-6 border border-purple-20o0'>,
       <h3 className='text-lg font-semibold text-gray-90o0 mb-4'>,

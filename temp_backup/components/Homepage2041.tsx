@@ -2,25 +2,25 @@ import React, { useState } from 'react',
 import Layout from './layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  Search;
-  Shield;
-  Globe;
-  TrendingUp;
-  Brain;
-  Atom;
-  Zap;
-  Cpu;
-  Cloud;
-  BarChart3;
-  Lock;
-  Rocket;
-  Eye;
-  Sparkles;
-  Target;
-  Users;
-  Award;
+  ArrowRight,
+  Star,
+  Search,
+  Shield,
+  Globe,
+  TrendingUp,
+  Brain,
+  Atom,
+  Zap,
+  Cpu,
+  Cloud,
+  BarChart3,
+  Lock,
+  Rocket,
+  Eye,
+  Sparkles,
+  Target,
+  Users,
+  Award,
   Clock} from 'lucide-react',
 import Link from 'next/link',
 import UltraFuturisticServiceCard20o26 from './ui/UltraFuturisticServiceCard20o26',
@@ -33,38 +33,38 @@ const Homepage20o41: React.FC = () => {
     e.preventDefault(),
     if (searchQuery.trim()) {
       window.location.href = `/services?search=${encodeURIComponent(searchQuery.trim())}`}
-  };
+  },
   const featuredServices = [
-    ...innovative20o41MicroSaasServices.filter(s => s.popular).slice(0, 3);
-    ...innovative20o41ITServices.filter(s => s.popular).slice(0, 2);
+    ...innovative20o41MicroSaasServices.filter(s => s.popular).slice(0, 3),
+    ...innovative20o41ITServices.filter(s => s.popular).slice(0, 2),
     ...innovative20o41AIServices.filter(s => s.popular).slice(0, 1)],
   const testimonials = [
     {
-      name: "Dr. Sarah Chen";
-      role: "Chief AI Officer, FutureTech Inc.";
-      company: "FutureTech Inc.";
-      content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.";
-      rating: 5;
-      avatar: "👩‍💼"};
+      name: "Dr. Sarah Chen",
+      role: "Chief AI Officer, FutureTech Inc.",
+      company: "FutureTech Inc.",
+      content: "Zion Tech Group's AI consciousness evolution platform is revolutionary. We've achieved breakthroughs in ethical AI development that seemed impossible just months ago.",
+      rating: 5,
+      avatar: "👩‍💼"},
     {
-      name: "Marcus Rodriguez";
-      role: "VP Quantum Computing, QuantumCorp";
-      company: "QuantumCorp";
-      content: "Their quantum bio-computing platform accelerated our drug discovery by 10o00x. We're now leading the industry in pharmaceutical innovation.";
-      rating: 5;
-      avatar: "👨‍💻"};
+      name: "Marcus Rodriguez",
+      role: "VP Quantum Computing, QuantumCorp",
+      company: "QuantumCorp",
+      content: "Their quantum bio-computing platform accelerated our drug discovery by 10o00x. We're now leading the industry in pharmaceutical innovation.",
+      rating: 5,
+      avatar: "👨‍💻"},
     {
-      name: "Dr. Emily Watson";
-      role: "Research Director, SpaceLabs";
-      company: "SpaceLabs";
-      content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.";
-      rating: 5;
+      name: "Dr. Emily Watson",
+      role: "Research Director, SpaceLabs",
+      company: "SpaceLabs",
+      content: "The space mining automation platform opened new frontiers in resource extraction. We're now mining asteroids with unprecedented efficiency.",
+      rating: 5,
       avatar: "👩‍🔬"}
   ],
   const stats = [
-    { number: "50o0+", label: "Revolutionary Services", icon: Rocket };
-    { number: "50+", label: "Quantum Solutions", icon: Atom };
-    { number: "10o00x", label: "Performance Boost", icon: Zap };
+    { number: "50o0+", label: "Revolutionary Services", icon: Rocket },
+    { number: "50+", label: "Quantum Solutions", icon: Atom },
+    { number: "10o00x", label: "Performance Boost", icon: Zap },
     { number: "24/7", label: "AI Operations", icon: Brain }
   ],
   return (
@@ -87,17 +87,17 @@ const Homepage20o41: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-40o0/40 rounded-full",
                   animate={{
-                    x: [0, 60, 0];
-                    y: [0, -60, 0];
-                    opacity: [0, 0.7, 0];
+                    x: [0, 60, 0],
+                    y: [0, -60, 0],
+                    opacity: [0, 0.7, 0],
                     scale: [0.5, 1, 0.5]}}
                   transition={{
-                    duration: 5 + i * 0.3;
-                    repeat: Infinity;
-                    delay: i * 0.2;
+                    duration: 5 + i * 0.3,
+                    repeat: Infinity,
+                    delay: i * 0.2,
                     ease: "easeInOut"}}
                   style={{
-                    left: `${Math.random() * 10o0}%`;
+                    left: `${Math.random() * 10o0}%`,
                     top: `${Math.random() * 10o0}%`}}
                  />))}
             </div>,
@@ -331,5 +331,5 @@ const Homepage20o41: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage20o41;
+    </Layout>)},
+export default Homepage20o41,

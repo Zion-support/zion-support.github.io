@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
   Phone,
@@ -28,21 +28,21 @@ import {
   Github,
   Linkedin,
   ExternalLink} from 'lucide-react',import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react',
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Github;
-  Linkedin;
-  ExternalLink;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Github,
+  Linkedin,
+  ExternalLink,
 } from 'lucide-react',import { Phone, Mail, MapPin, Globe, Github, Linkedin, ExternalLink } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'},
 export default function NeoFuturisticFooter() {
-  return (  website: 'https://ziontechgroup && ziontechgroup.com'};
+  return (  website: 'https://ziontechgroup && ziontechgroup.com'},
 const contactInfo = {
   mobile: '+1 302 464 0950',
   email: 'kleber@ziontechgroup.com',

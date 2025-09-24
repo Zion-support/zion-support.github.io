@@ -9,14 +9,11 @@ export default function EnergyUtilitiesSolutions() {
       implementationWeeks='Implementation: 6-10 weeks',
       roiNote='Lower SAIDI/SAIFI and O&M costs',
       features={[
-        'Load and price forecasting';
-        'Predictive maintenance for assets';
-        'DER orchestration and flexibility';
-        'Outage prediction and crew dispatch';
-        'Regulatory reporting and analytics';
-        'Integrations: OSIsoft PI, SCADA, ESRI, Snowflake';
+        'Load and price forecastingPredictive maintenance for assets',
+        'DER orchestration and flexibilityOutage prediction and crew dispatch',
+        'Regulatory reporting and analyticsIntegrations: OSIsoft PI, SCADA, ESRI, Snowflake',
       ]}
-      industries={['Utilities', 'Renewables', 'Oil & Gas']}
+      industries={['UtilitiesRenewables', 'Oil & Gas']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/energy-utilities-solutions',
     />)}

@@ -3,7 +3,7 @@ interface TalentCardAvailabilityProps {
   availabilityType: string}
 ,
 export function TalentCardAvailability({
-  availabilityType;
+  availabilityType,
 }: TalentCardAvailabilityProps) {
   // Format availability status,
   const getAvailabilityColor = (status: string) => {
@@ -16,7 +16,7 @@ export function TalentCardAvailability({
         return 'bg-blue-50o0/20 text-blue-40o0',
       default:,
         return 'bg-gray-50o0/20 text-gray-40o0'}
-  };
+  },
   // Format availability label,
   const getAvailabilityLabel = (status: string) => {
     switch (status) {
@@ -28,7 +28,7 @@ export function TalentCardAvailability({
         return 'Project',
       default:,
         return status}
-  };
+  },
   return (
     <div
       className={`flex items-center gap-1 px-2 py-0.5 rounded-full text-xs ${getAvailabilityColor(availabilityType)}`}

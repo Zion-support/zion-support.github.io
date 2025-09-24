@@ -2,23 +2,23 @@ import React, { useState, useEffect } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  ArrowRight;
-  Check;
-  Shield;
-  Target;
-  Sparkles;
-  DollarSign;
-  Users;
-  Building;
+  Search,
+  Grid,
+  List,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  ArrowRight,
+  Check,
+  Shield,
+  Target,
+  Sparkles,
+  DollarSign,
+  Users,
+  Building,
 } from 'lucide-react',
 // Import all service data,
 import { innovativeMicroSaasServices2036 } from '../data/innovative-2036-micro-saas-services',
@@ -29,100 +29,100 @@ import { innovativeAIServices } from '../data/innovative-ai-services',
 import { enterpriseITServices } from '../data/enterprise-it-services',
 import { emergingTechServices } from '../data/emerging-tech-services',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 // Create unified services array,
 const allServices = [
-  ...innovativeMicroSaasServices2036;
-  ...innovative2036ITServices;
-  ...newlyAddedServices;
-  ...realMicroSaasServices;
-  ...innovativeAIServices;
-  ...enterpriseITServices;
-  ...emergingTechServices;
+  ...innovativeMicroSaasServices2036,
+  ...innovative2036ITServices,
+  ...newlyAddedServices,
+  ...realMicroSaasServices,
+  ...innovativeAIServices,
+  ...enterpriseITServices,
+  ...emergingTechServices,
 ],
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    icon: <Grid className='w-6 h-6' />;
-    color: 'from-gray-500 to-slate-500';
-    description: 'Complete portfolio of all services';
-  };
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-500 to-slate-500',
+    description: 'Complete portfolio of all services'
+  },
   {
-    id: 'ai-consciousness';
-    name: 'AI & Consciousness';
-    icon: <Brain className='w-6 h-6' />;
-    color: 'from-purple-500 to-pink-500';
-    description: 'AI consciousness and emotional intelligence';
-  };
+    id: 'ai-consciousness',
+    name: 'AI & Consciousness',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'AI consciousness and emotional intelligence'
+  },
   {
-    id: 'quantum';
-    name: 'Quantum Technology';
-    icon: <Atom className='w-6 h-6' />;
-    color: 'from-blue-500 to-cyan-500';
-    description: 'Quantum computing and security';
-  };
+    id: 'quantum',
+    name: 'Quantum Technology',
+    icon: <Atom className='w-6 h-6' />,
+    color: 'from-blue-500 to-cyan-500',
+    description: 'Quantum computing and security'
+  },
   {
-    id: 'space-tech';
-    name: 'Space Technology';
-    icon: <Rocket className='w-6 h-6' />;
-    color: 'from-purple-500 to-pink-500';
-    description: 'Space exploration and resource mining';
-  };
+    id: 'space-tech',
+    name: 'Space Technology',
+    icon: <Rocket className='w-6 h-6' />,
+    color: 'from-purple-500 to-pink-500',
+    description: 'Space exploration and resource mining'
+  },
   {
-    id: 'autonomous';
-    name: 'Autonomous Systems';
-    icon: <Zap className='w-6 h-6' />;
-    color: 'from-green-500 to-emerald-500';
-    description: 'AI-powered autonomous operations';
-  };
+    id: 'autonomous',
+    name: 'Autonomous Systems',
+    icon: <Zap className='w-6 h-6' />,
+    color: 'from-green-500 to-emerald-500',
+    description: 'AI-powered autonomous operations'
+  },
   {
-    id: 'emerging';
-    name: 'Emerging Tech';
-    icon: <Sparkles className='w-6 h-6' />;
-    color: 'from-yellow-500 to-orange-500';
-    description: 'Cutting-edge technologies';
-  };
+    id: 'emerging',
+    name: 'Emerging Tech',
+    icon: <Sparkles className='w-6 h-6' />,
+    color: 'from-yellow-500 to-orange-500',
+    description: 'Cutting-edge technologies'
+  },
   {
-    id: 'enterprise-it';
-    name: 'Enterprise IT';
-    icon: <Building className='w-6 h-6' />;
-    color: 'from-indigo-500 to-purple-500';
-    description: 'Enterprise solutions and infrastructure';
-  };
+    id: 'enterprise-it',
+    name: 'Enterprise IT',
+    icon: <Building className='w-6 h-6' />,
+    color: 'from-indigo-500 to-purple-500',
+    description: 'Enterprise solutions and infrastructure'
+  },
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    icon: <Shield className='w-6 h-6' />;
-    color: 'from-red-500 to-pink-500';
-    description: 'Security and compliance solutions';
-  };
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className='w-6 h-6' />,
+    color: 'from-red-500 to-pink-500',
+    description: 'Security and compliance solutions'
+  },
   {
-    id: 'business';
-    name: 'Business Solutions';
-    icon: <Target className='w-6 h-6' />;
-    color: 'from-teal-500 to-cyan-500';
-    description: 'Business automation and optimization';
-  };
+    id: 'business',
+    name: 'Business Solutions',
+    icon: <Target className='w-6 h-6' />,
+    color: 'from-teal-500 to-cyan-500',
+    description: 'Business automation and optimization'
+  },
 ],
 const sortOptions = [
-  { id: 'popular', name: 'Most Popular', icon: <Star className='w-4 h-4' /> };
-  { id: 'newest', name: 'Newest', icon: <TrendingUp className='w-4 h-4' /> };
+  { id: 'popular', name: 'Most Popular', icon: <Star className='w-4 h-4' /> },
+  { id: 'newest', name: 'Newest', icon: <TrendingUp className='w-4 h-4' /> },
   {
-    id: 'price-low';
-    name: 'Price: Low to High';
-    icon: <DollarSign className='w-4 h-4' />;
-  };
+    id: 'price-low',
+    name: 'Price: Low to High',
+    icon: <DollarSign className='w-4 h-4' />
+  },
   {
-    id: 'price-high';
-    name: 'Price: High to Low';
-    icon: <DollarSign className='w-4 h-4' />;
-  };
-  { id: 'rating', name: 'Highest Rated', icon: <Star className='w-4 h-4' /> };
+    id: 'price-high',
+    name: 'Price: High to Low',
+    icon: <DollarSign className='w-4 h-4' />
+  },
+  { id: 'rating', name: 'Highest Rated', icon: <Star className='w-4 h-4' /> },
 ],
 export default function ComprehensiveServicesShowcase2036() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -193,15 +193,15 @@ export default function ComprehensiveServicesShowcase2036() {
       return 'Contact for pricing'}
     if (service.price?.monthly) return `$${service.price.monthly}/month`,
     if (service.price) return service.price,
-    return 'Contact for pricing'};
+    return 'Contact for pricing'},
   const getServiceFeatures = (service: any) => {
     if (service.features) return service.features,
     if (service.keyFeatures) return service.keyFeatures,
-    return []};
+    return []},
   const getServiceDescription = (service: any) => {
     if (service.description) return service.description,
     if (service.tagline) return service.tagline,
-    return 'No description available'};
+    return 'No description available'},
   return (
     <div className='min-h-screen bg-gradient-to-br from-black via-gray-900 to-black'>,
       <Head>,

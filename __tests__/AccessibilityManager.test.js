@@ -1,8 +1,8 @@
-import React from 'react';',
+import React from 'react,
 import '@testing-library/jest-dom',',
-import AccessibilityManager from '../components/AccessibilityManager',',describe('AccessibilityManager', () => {'}
+import AccessibilityManager from '../components/AccessibilityManager,describe('AccessibilityManager', () => {'}
 import _React from 'react',
-import AccessibilityManager from '../components/AccessibilityManager',',
+import AccessibilityManager from '../components/AccessibilityManager,
 ursor/automate-test-improve-and-merge-code-646c,
   test('renders without crashing', () => {'}
     render(<AccessibilityManager  />),expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument()'}),test('displays correct content', () => {'}
@@ -28,12 +28,12 @@ describe('AccessibilityManager', () => {',
   test('handles user interactions', () => {',
   test('applies correct styling', () => {',
 ursor/automate-test-improve-and-merge-code-646c,
-    render(<AccessibilityManager  />);
-    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument(),'});
+    render(<AccessibilityManager  />),
+    expect(screen.getByTestId('accessibilitymanager')).toBeInTheDocument(),'}),
   test('displays correct content', () => {'}
-    render(<AccessibilityManager  />)});
+    render(<AccessibilityManager  />)}),
   test('handles user interactions', () => {'}
-    render(<AccessibilityManager  />)});
+    render(<AccessibilityManager  />)}),
   test('applies correct styling', () => {'}
     render(<AccessibilityManager  />)})})}),
 '',

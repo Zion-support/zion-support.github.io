@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'api-development - Zion Tech Group';
+  title: 'api-development - Zion Tech Group',
   description:,
-    'Professional api-development solutions for your business needs.';
-  keywords: 'api-development, services, business, technology';
-};
+    'Professional api-development solutions for your business needs.',
+  keywords: 'api-development, services, business, technology',
+},
 export default function ApiDevelopmentPage() {
   return (
     <div className='min-h-screen bg-white'>,

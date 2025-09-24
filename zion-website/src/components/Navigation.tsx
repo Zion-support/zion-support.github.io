@@ -1,17 +1,17 @@
-"use client";
-import { useState } from "react";
-import { Dialog } from "@headlessui/react";
-import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+"use client",
+import { useState } from "react",
+import { Dialog } from "@headlessui/react",
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline",
 
 const navigation = [
 	{ name: "Solutions", href: "/solutions" },
 	{ name: "Services", href: "/services" },
 	{ name: "Blog", href: "/blog" },
 	{ name: "Updates", href: "/updates" }
-];
+],
 
 export default function Navigation() {
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+	const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
 
 	return (
 		<header className="fixed inset-x-0 top-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
@@ -101,5 +101,5 @@ export default function Navigation() {
 				</Dialog.Panel>
 			</Dialog>
 		</header>
-	);
+	),
 }

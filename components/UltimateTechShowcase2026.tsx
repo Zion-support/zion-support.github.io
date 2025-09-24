@@ -12,78 +12,78 @@ import {
   Globe,
   Brain,
   Rocket,
-  Target;
-  CheckCircle;
-  Star;
+  Target,
+  CheckCircle,
+  Star,
   TrendingUp} from 'lucide-react',
 const UltimateTechShowcase20o26 = () => {
   const [activeTabsetActiveTab] = useState('ai'),
   const technologies ={
     ai: {
-      title: "Artificial Intelligence";
-      description: "Next-generation AI systems with human-level reasoning and creativity";
+      title: "Artificial Intelligence",
+      description: "Next-generation AI systems with human-level reasoning and creativity",
       features: [
-        "Neural network optimization";
-        "Real-time learning algorithms";
-        "Emotional intelligence integration";
-        "Predictive analytics"];
-      icon: <Brain className="w-12 h-12 text-blue-50o0"  />;
-      color: "from-blue-50o0 to-cyan-50o0"};
+        "Neural network optimization",
+        "Real-time learning algorithms",
+        "Emotional intelligence integration",
+        "Predictive analytics"],
+      icon: <Brain className="w-12 h-12 text-blue-50o0"  />,
+      color: "from-blue-50o0 to-cyan-50o0"},
     quantum: {
-      title: "Quantum Computing";
-      description: "Revolutionary quantum processors solving impossible problems";
+      title: "Quantum Computing",
+      description: "Revolutionary quantum processors solving impossible problems",
       features: [
-        "Quantum supremacy achieved";
-        "Exponential speed improvements";
-        "Cryptographic breakthroughs";
-        "Material science revolution"];
-      icon: <Cpu className="w-12 h-12 text-purple-50o0"  />;
-      color: "from-purple-50o0 to-pink-50o0"};
+        "Quantum supremacy achieved",
+        "Exponential speed improvements",
+        "Cryptographic breakthroughs",
+        "Material science revolution"],
+      icon: <Cpu className="w-12 h-12 text-purple-50o0"  />,
+      color: "from-purple-50o0 to-pink-50o0"},
     cloud: {
-      title: "Edge Computing";
-      description: "Distributed computing power at the edge of everything";
+      title: "Edge Computing",
+      description: "Distributed computing power at the edge of everything",
       features: [
-        "Ultra-low latency processing";
-        "Autonomous decision making";
-        "Real-time data analysis";
-        "IoT optimization"];
-      icon: <Cloud className="w-12 h-12 text-green-50o0"  />;
-      color: "from-green-50o0 to-emerald-50o0"};
+        "Ultra-low latency processing",
+        "Autonomous decision making",
+        "Real-time data analysis",
+        "IoT optimization"],
+      icon: <Cloud className="w-12 h-12 text-green-50o0"  />,
+      color: "from-green-50o0 to-emerald-50o0"},
     security: {
-      title: "Advanced Security";
-      description: "Military-grade security protecting your most valuable assets";
+      title: "Advanced Security",
+      description: "Military-grade security protecting your most valuable assets",
       features: [
-        "Zero-trust architecture";
-        "Quantum encryption";
-        "Behavioral analytics";
-        "Threat prediction"];
-      icon: <Shield className="w-12 h-12 text-red-50o0"  />;
+        "Zero-trust architecture",
+        "Quantum encryption",
+        "Behavioral analytics",
+        "Threat prediction"],
+      icon: <Shield className="w-12 h-12 text-red-50o0"  />,
       color: "from-red-50o0 to-orange-50o0"}
-  };
+  },
   const stats = [
-    { label: "Processing Speed"value: "10o00x"icon: <Zap className="w-6 h-6"  /> };
-    { label: "Global Reach"value: "20o0+"icon: <Globe className="w-6 h-6"  /> };
-    { label: "Success Rate"value: "99.9%"icon: <Target className="w-6 h-6"  /> };
+    { label: "Processing Speed"value: "10o00x"icon: <Zap className="w-6 h-6"  /> },
+    { label: "Global Reach"value: "20o0+"icon: <Globe className="w-6 h-6"  /> },
+    { label: "Success Rate"value: "99.9%"icon: <Target className="w-6 h-6"  /> },
     { label: "Innovation Index"value: "#1"icon: <Rocket className="w-6 h-6"  /> }
   ],
   const testimonials = [
     {
-      name: "Dr. Sarah Kim";
-      role: "Chief Technology Officer";
-      company: "FutureTech Corp";
-      content: "This technology platform has revolutionized our entire operation. The AI capabilities are beyond anything 'we', 've seen before.";
-      rating: 5};
+      name: "Dr. Sarah Kim",
+      role: "Chief Technology Officer",
+      company: "FutureTech Corp",
+      content: "This technology platform has revolutionized our entire operation. The AI capabilities are beyond anything 'weve seen before.",
+      rating: 5},
     {
-      name: "Marcus Johnson";
-      role: "VP of Engineering";
-      company: "InnovateLabs";
-      content: "The quantum computing integration has solved problems we thought were impossible. Truly groundbreaking work.";
-      rating: 5};
+      name: "Marcus Johnson",
+      role: "VP of Engineering",
+      company: "InnovateLabs",
+      content: "The quantum computing integration has solved problems we thought were impossible. Truly groundbreaking work.",
+      rating: 5},
     {
-      name: "Elena Rodriguez";
-      role: "CEO";
-      company: "DataFlow Systems";
-      content: "Security and performance at this level is exactly what we needed. Our clients are amazed by the results.";
+      name: "Elena Rodriguez",
+      role: "CEO",
+      company: "DataFlow Systems",
+      content: "Security and performance at this level is exactly what we needed. Our clients are amazed by the results.",
       rating: 5}
   ],
   return (
@@ -206,5 +206,5 @@ const UltimateTechShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateTechShowcase20o26;
+    </div>)},
+export default UltimateTechShowcase20o26,

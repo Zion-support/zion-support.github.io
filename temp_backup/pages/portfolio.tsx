@@ -1,141 +1,130 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Cloud;
-  BarChart3;
-  ArrowRight;
-  ExternalLink;
-  Star;
-  Users;
-  Clock;
-  TrendingUp;
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Cloud,
+  BarChart3,
+  ArrowRight,
+  ExternalLink,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
 } from 'lucide-react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
 export default function PortfolioPage() {
   const projects = [
     {
-      title: 'AI-Powered Financial Analytics Platform';
+      title: 'AI-Powered Financial Analytics Platform',
       description:,
-        'Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling';
-      category: 'AI & Machine Learning';
-      client: 'Fortune 50o0 Financial Institution';
-      technologies: ['Python', 'TensorFlow', 'React', 'AWS', 'PostgreSQL'];
+        'Revolutionary financial analytics platform using advanced AI algorithms for real-time market analysis and predictive modeling',
+      category: 'AI & Machine Learning',
+      client: 'Fortune 50o0 Financial Institution',
+      technologies: ['PythonTensorFlow', 'ReactAWS', 'PostgreSQL'],
       results: [
-        '40% improvement in prediction accuracy';
-        'Real-time processing of 1M+ data points';
-        'ROI of 30o0% in first year';
-      ];
-      image: '/api/placeholder/60o0/40o0';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        '40% improvement in prediction accuracyReal-time processing of 1M+ data points',
+        'ROI of 30o0% in first year',
+      ],
+      image: '/api/placeholder/60o0/40o0',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'Quantum Cryptography Security System';
+      title: 'Quantum Cryptography Security System',
       description:,
-        'Next-generation security system implementing quantum-resistant cryptography for enterprise-level protection';
-      category: 'Quantum Computing';
-      client: 'Global Cybersecurity Firm';
-      technologies: ['Qiskit', 'Python', 'Rust', 'Docker', 'Kubernetes'];
+        'Next-generation security system implementing quantum-resistant cryptography for enterprise-level protection',
+      category: 'Quantum Computing',
+      client: 'Global Cybersecurity Firm',
+      technologies: ['QiskitPython', 'RustDocker', 'Kubernetes'],
       results: [
-        '99.99% security guarantee';
-        'Quantum-resistant encryption';
-        'Zero security breaches';
-      ];
-      image: '/api/placeholder/60o0/40o0';
-      icon: Atom;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        '99.99% security guaranteeQuantum-resistant encryption',
+        'Zero security breaches',
+      ],
+      image: '/api/placeholder/60o0/40o0',
+      icon: Atom,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Edge Computing IoT Platform';
+      title: 'Edge Computing IoT Platform',
       description:,
-        'Distributed IoT platform with edge computing capabilities for real-time data processing and analytics';
-      category: 'Cloud Infrastructure';
-      client: 'Manufacturing Conglomerate';
+        'Distributed IoT platform with edge computing capabilities for real-time data processing and analytics',
+      category: 'Cloud Infrastructure',
+      client: 'Manufacturing Conglomerate',
       technologies: [
-        'Kubernetes';
-        'TensorFlow Lite';
-        'MQTT';
-        'InfluxDB';
-        'Grafana';
-      ];
+        'KubernetesTensorFlow Lite',
+        'MQTTInfluxDB',
+        'Grafana',
+      ],
       results: [
-        '50% reduction in latency';
-        'Real-time monitoring of 10K+ devices';
-        'Cost savings of $2M annually';
-      ];
-      image: '/api/placeholder/60o0/40o0';
-      icon: Cloud;
-      color: 'from-emerald-50o0 to-teal-50o0';
-    };
+        '50% reduction in latencyReal-time monitoring of 10K+ devices',
+        'Cost savings of $2M annually',
+      ],
+      image: '/api/placeholder/60o0/40o0',
+      icon: Cloud,
+      color: 'from-emerald-50o0 to-teal-50o0'
+    },
     {
-      title: 'Predictive Healthcare Analytics';
+      title: 'Predictive Healthcare Analytics',
       description:,
-        'AI-driven healthcare analytics platform for early disease detection and treatment optimization';
-      category: 'Data Analytics';
-      client: 'Healthcare Network';
-      technologies: ['Python', 'Scikit-learn', 'React', 'MongoDB', 'Redis'];
+        'AI-driven healthcare analytics platform for early disease detection and treatment optimization',
+      category: 'Data Analytics',
+      client: 'Healthcare Network',
+      technologies: ['PythonScikit-learn', 'ReactMongoDB', 'Redis'],
       results: [
-        'Early detection rate improved by 60%';
-        'Treatment success rate increased by 35%';
-        'Cost reduction of 25%';
-      ];
-      image: '/api/placeholder/60o0/40o0';
-      icon: BarChart3;
-      color: 'from-indigo-50o0 to-purple-50o0';
-    };
+        'Early detection rate improved by 60%Treatment success rate increased by 35%',
+        'Cost reduction of 25%',
+      ],
+      image: '/api/placeholder/60o0/40o0',
+      icon: BarChart3,
+      color: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      title: 'Zero-Trust Security Architecture';
+      title: 'Zero-Trust Security Architecture',
       description:,
-        'Comprehensive zero-trust security implementation for enterprise network protection';
-      category: 'Cybersecurity';
-      client: 'Technology Corporation';
-      technologies: ['OAuth 2.0', 'JWT', 'React', 'Node.js', 'PostgreSQL'];
+        'Comprehensive zero-trust security implementation for enterprise network protection',
+      category: 'Cybersecurity',
+      client: 'Technology Corporation',
+      technologies: ['OAuth 2.0JWT', 'ReactNode.js', 'PostgreSQL'],
       results: [
-        '10o0% security compliance';
-        'Zero unauthorized access';
-        '24/7 threat monitoring';
-      ];
-      image: '/api/placeholder/60o0/40o0';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
-    };
+        '10o0% security complianceZero unauthorized access',
+        '24/7 threat monitoring',
+      ],
+      image: '/api/placeholder/60o0/40o0',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0'
+    },
     {
-      title: 'Digital Transformation Platform';
+      title: 'Digital Transformation Platform',
       description:,
-        'End-to-end digital transformation solution for legacy system modernization';
-      category: 'Digital Transformation';
-      client: 'Retail Chain';
-      technologies: ['React', 'Node.js', 'MongoDB', 'AWS', 'Docker'];
+        'End-to-end digital transformation solution for legacy system modernization',
+      category: 'Digital Transformation',
+      client: 'Retail Chain',
+      technologies: ['ReactNode.js', 'MongoDBAWS', 'Docker'],
       results: [
-        '80% faster deployment';
-        'Customer satisfaction increased by 45%';
-        'Operational costs reduced by 30%';
-      ];
-      image: '/api/placeholder/60o0/40o0';
-      icon: Rocket;
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+        '80% faster deploymentCustomer satisfaction increased by 45%',
+        'Operational costs reduced by 30%',
+      ],
+      image: '/api/placeholder/60o0/40o0',
+      icon: Rocket,
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
   ],
   const stats = [
-    { number: '50o0+', label: 'Projects Delivered', icon: Rocket };
-    { number: '50+', label: 'Enterprise Clients', icon: Users };
-    { number: '99.9%', label: 'Client Satisfaction', icon: Star };
-    { number: '250o0%', label: 'Average ROI', icon: TrendingUp };
+    { number: '50o0+', label: 'Projects Delivered', icon: Rocket },
+    { number: '50+', label: 'Enterprise Clients', icon: Users },
+    { number: '99.9%', label: 'Client Satisfaction', icon: Star },
+    { number: '250o0%', label: 'Average ROI', icon: TrendingUp },
   ],
   const categories = [
-    'All';
-    'AI & Machine Learning';
-    'Quantum Computing';
-    'Cybersecurity';
-    'Cloud Infrastructure';
-    'Data Analytics';
-    'Digital Transformation';
+    'AllAI & Machine Learning',
+    'Quantum ComputingCybersecurity',
+    'Cloud InfrastructureData Analytics',
+    'Digital Transformation',
   ],
   const [selectedCategory, setSelectedCategory] = React.useState('All'),
   const filteredProjects =,

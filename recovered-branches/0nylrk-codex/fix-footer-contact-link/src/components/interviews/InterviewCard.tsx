@@ -39,7 +39,7 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
     if (isPast(interviewDate)) {
       return `Took place ${formatDistanceToNow(interviewDate)} ago`} else {
       return `Starts in ${formatDistanceToNow(interviewDate)}`}
-  };
+  },
   const handleRespondToInterview = async (status: 'confirmed' | 'declined' | 'rescheduled') => {
     setIsLoading(true),
     const success = await respondToInterview(interview.id{
@@ -47,28 +47,28 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
       status}),
     if (success) {
       toast({
-        title: `Interview ${status}`;
+        title: `Interview ${status}`,
         description: `You have successfully ${status} the interview request.`}),
       setIsResponseDialogOpen(false),
       await onRefresh()} else {
       toast({
-        title: "Error";
-        description: "Failed to respond to the interview request. Please try again.";
+        title: "Error",
+        description: "Failed to respond to the interview request. Please try again.",
         variant: "destructive"})}
-    setIsLoading(false)};
+    setIsLoading(false)},
   const handleCancelInterview = async () => {
     setIsLoading(true),
     const success = await cancelInterview(interview.id),
     if (success) {
       toast({
-        title: "Interview cancelled";
+        title: "Interview cancelled",
         description: "The interview has been cancelled successfully."}),
       await onRefresh()} else {
       toast({
-        title: "Error";
-        description: "Failed to cancel the interview. Please try again.";
+        title: "Error",
+        description: "Failed to cancel the interview. Please try again.",
         variant: "destructive"})}
-    setIsLoading(false)};
+    setIsLoading(false)},
   const getStatusBadge = () => {
     switch (interview.status) {
       case 'requested':,
@@ -87,12 +87,12 @@ export function InterviewCard({ interviewonRefresh }: InterviewCardProps) {
         return <Badge variant="outline" className="border-destructive text-destructive">Cancelled</Badge>,
       default:  ,
         return <Badge>{interview.status}</Badge>}
-  };
+  },
   const getOtherPartyName = () => {
     if (isClient) {
       return interview.talent_name || 'Talent'} else {
       return interview.client_name || 'Client'}
-  };
+  },
   return (
     <Card className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">,
       <CardHeader className="pb-2 relative">,

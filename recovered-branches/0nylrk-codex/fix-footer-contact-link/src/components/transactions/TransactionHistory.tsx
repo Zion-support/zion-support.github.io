@@ -24,9 +24,9 @@ interface Transaction {
   refunded_at?: string,
   cancelled_at?: string,
   provider?: {
-    display_name?: string};
+    display_name?: string},
   service?: {
-    title?: string};
+    title?: string},
 }
 ,
 export function TransactionHistory() {
@@ -34,15 +34,15 @@ export function TransactionHistory() {
   const { toast } = useToast(),
   const [filtersetFilter] = useState<'all' | 'pending' | 'completed' | 'escrow'>('all'),
   const { data: transactionsisLoadingerrorefetch } = useQuery({
-    queryKey: ['transactions'user?.idfilter];
+    queryKey: ['transactions'user?.idfilter],
     queryFn: async () => {
       if (!user) return [],
       // Build the query based on filters,
       let query = supabase,
         .from('transactions'),
         .select(`,
-          *;
-          provider:profiles!provider_id(display_name);
+          *,
+          provider: profiles!provider_id(display_name),
           service: services(title),
         `),
         .or(`user_id.eq.${user.id},provider_id.eq.${user.id}`),
@@ -54,7 +54,7 @@ export function TransactionHistory() {
       query = query.order('created_at'{ ascending: false }),
       const { dataerror } = await query,
       if (error) throw error,
-      return data as Transaction[]};
+      return data as Transaction[]},
     enabled: !!user}),
   const handleManageTransaction = async (transactionId: stringaction: 'release' | 'refund' | 'cancel') => {
     try {
@@ -63,15 +63,15 @@ export function TransactionHistory() {
       }),
       if (error) throw error,
       toast({
-        title: "Success";
+        title: "Success",
         description: data.message || "Transaction updated successfully"}),
       refetch()} catch (error) {
       console.error("Error managing transaction: "error),
       toast({
-        title: "Error";
-        description: error.message || "Failed to update transaction";
+        title: "Error",
+        description: error.message || "Failed to update transaction",
         variant: "destructive"})}
-  };
+  },
   const getStatusBadge = (status: stringinEscrow: boolean) => {
     switch(status) {
       case 'pending':,
@@ -102,11 +102,11 @@ export function TransactionHistory() {
           <Badge variant="outline" className="bg-gray-500/20 text-gray-500 border-gray-500">,
             <AlertCircle className="w-3 h-3 mr-1" /> Unknown,
           </Badge>)}
-  };
+  },
   const formatCurrency = (amount: numbercurrency: string) => {
     return new Intl.NumberFormat('en-US'{
-      style: 'currency';
-      currency: currency.toUpperCase()}).format(amount)};
+      style: 'currency',
+      currency: currency.toUpperCase()}).format(amount)},
   if (error) {
     return (
       <div className="bg-zion-blue-dark p-6 rounded-lg border border-zion-blue-light">,

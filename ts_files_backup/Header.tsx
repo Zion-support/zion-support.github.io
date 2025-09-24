@@ -2,30 +2,30 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  Menu;
-  X;
-  Phone;
-  Mail;
-  MapPin;
-  Brain;
-  Network;
-  Cloud;
+  Menu,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Network,
+  Cloud,
   ArrowRight} from 'lucide-react',
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false),
   const toggleMenu = () => {
-    setIsMenuOpen(!isMenuOpen)};
+    setIsMenuOpen(!isMenuOpen)},
   const navigation = [
-    { name: 'Home', href: '/' };
+    { name: 'Home', href: '/' },
     {
-      name: 'Services';
-      href: '/services';
+      name: 'Services',
+      href: '/services',
       submenu: [
-        { name: 'AI Services', href: '/ai-services', icon: Brain };
-        { name: 'IT Services', href: '/it-services', icon: Network };
+        { name: 'AI Services', href: '/ai-services', icon: Brain },
+        { name: 'IT Services', href: '/it-services', icon: Network },
         { name: 'Micro SAAS', href: '/micro-saas', icon: Cloud }
-      ]};
-    { name: 'About', href: '/about' };
+      ]},
+    { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' }
   ],
   return (

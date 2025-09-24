@@ -1,124 +1,108 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 UsersBriefcaseAwardMapPinClockCheckCircleArrowRightStarGlobeTarget,
 import Layout from '../components/Layout',
 const positions = [
   {
-    title: 'Senior Full Stack Developer';
-    department: 'Engineering';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '5+ years';
-    salary: '$80,0o00 - $120,0o00';
-    description: 'Lead development of our micro SaaS platforms and AI-powered solutions.';
+    title: 'Senior Full Stack Developer',
+    department: 'Engineering',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '5+ years',
+    salary: '$80,0o00 - $120,0o00',
+    description: 'Lead development of our micro SaaS platforms and AI-powered solutions.',
     requirements: [
-      'ReactNext.jsNode.js expertise';
-      'Cloud architecture experience';
-      'AI/ML integration knowledge';
-      'Team leadership skills'];
+      'ReactNext.jsNode.js expertiseCloud architecture experience',
+      'AI/ML integration knowledgeTeam leadership skills'],
     benefits: [
-      'Competitive salary';
-      'Health insurance';
-      'Remote work options';
-      'Professional development']};
+      'Competitive salaryHealth insurance',
+      'Remote work optionsProfessional development']},
   {
-    title: 'AI/ML Engineer';
-    department: 'AI Research';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '3+ years';
-    salary: '$90,0o00 - $140,0o00';
-    description: 'Develop and implement cutting-edge AI solutions for our clients.';
+    title: 'AI/ML Engineer',
+    department: 'AI Research',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '3+ years',
+    salary: '$90,0o00 - $140,0o00',
+    description: 'Develop and implement cutting-edge AI solutions for our clients.',
     requirements: [
-      'PythonTensorFlowPyTorch';
-      'Machine learning algorithms';
-      'Data science background';
-      'Cloud AI services experience'];
+      'PythonTensorFlowPyTorchMachine learning algorithms',
+      'Data science backgroundCloud AI services experience'],
     benefits: [
-      'Top-tier compensation';
-      'Research opportunities';
-      'Conference attendance';
-      'Stock options']};
+      'Top-tier compensationResearch opportunities',
+      'Conference attendanceStock options']},
   {
-    title: 'DevOps Engineer';
-    department: 'Infrastructure';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '4+ years';
-    salary: '$85,0o00 - $130,0o00';
-    description: 'Manage and optimize our cloud infrastructure and deployment pipelines.';
+    title: 'DevOps Engineer',
+    department: 'Infrastructure',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '4+ years',
+    salary: '$85,0o00 - $130,0o00',
+    description: 'Manage and optimize our cloud infrastructure and deployment pipelines.',
     requirements: [
-      'AWSAzureGCP expertise';
-      'DockerKubernetes';
-      'CI/CD pipeline design';
-      'Monitoring and security'];
+      'AWSAzureGCP expertiseDockerKubernetes',
+      'CI/CD pipeline designMonitoring and security'],
     benefits: [
-      'Flexible schedule';
-      'Learning budget';
-      'Certification support';
-      'Performance bonuses']};
+      'Flexible scheduleLearning budget',
+      'Certification supportPerformance bonuses']},
   {
-    title: 'Product Manager';
-    department: 'Product';
-    location: 'Remote / MiddletownDE';
-    type: 'Full-time';
-    experience: '4+ years';
-    salary: '$95,0o00 - $135,0o00';
-    description: 'Drive product strategy and roadmap for our technology solutions.';
+    title: 'Product Manager',
+    department: 'Product',
+    location: 'Remote / MiddletownDE',
+    type: 'Full-time',
+    experience: '4+ years',
+    salary: '$95,0o00 - $135,0o00',
+    description: 'Drive product strategy and roadmap for our technology solutions.',
     requirements: [
-      'Product management experience';
-      'Technical background';
-      'User research skills';
-      'Strategic thinking'];
+      'Product management experienceTechnical background',
+      'User research skillsStrategic thinking'],
     benefits: [
-      'Leadership opportunities';
-      'Equity participation';
-      'Travel opportunities';
-      'Mentorship program']}
+      'Leadership opportunitiesEquity participation',
+      'Travel opportunitiesMentorship program']}
 ],
 const benefits = [
   {
-    title: 'Competitive Compensation';
-    description: 'Above-market salaries with performance bonuses';
-    icon: Award};
+    title: 'Competitive Compensation',
+    description: 'Above-market salaries with performance bonuses',
+    icon: Award},
   {
-    title: 'Health & Wellness';
-    description: 'Comprehensive healthdentaland vision coverage';
-    icon: CheckCircle};
+    title: 'Health & Wellness',
+    description: 'Comprehensive healthdentaland vision coverage',
+    icon: CheckCircle},
   {
-    title: 'Remote Work';
-    description: 'Flexible remote work options with home office stipend';
-    icon: Globe};
+    title: 'Remote Work',
+    description: 'Flexible remote work options with home office stipend',
+    icon: Globe},
   {
-    title: 'Professional Growth';
-    description: 'Learning budgetconferencesand career development';
-    icon: Target};
+    title: 'Professional Growth',
+    description: 'Learning budgetconferencesand career development',
+    icon: Target},
   {
-    title: 'Work-Life Balance';
-    description: 'Flexible hoursunlimited PTOand mental health support';
-    icon: Clock};
+    title: 'Work-Life Balance',
+    description: 'Flexible hoursunlimited PTOand mental health support',
+    icon: Clock},
   {
-    title: 'Team Culture';
-    description: 'Collaborative environment with regular team events';
+    title: 'Team Culture',
+    description: 'Collaborative environment with regular team events',
     icon: Users}
 ],
 const values = [
   {
-    title: 'Innovation';
-    description: 'We encourage creative thinking and cutting-edge solutions';
-    icon: Star};
+    title: 'Innovation',
+    description: 'We encourage creative thinking and cutting-edge solutions',
+    icon: Star},
   {
-    title: 'Collaboration';
-    description: 'We believe in the power of teamwork and shared success';
-    icon: Users};
+    title: 'Collaboration',
+    description: 'We believe in the power of teamwork and shared success',
+    icon: Users},
   {
-    title: 'Excellence';
-    description: 'We strive for the highest quality in everything we do';
-    icon: Award};
+    title: 'Excellence',
+    description: 'We strive for the highest quality in everything we do',
+    icon: Award},
   {
-    title: 'Growth';
-    description: 'We invest in our people and their professional development';
+    title: 'Growth',
+    description: 'We invest in our people and their professional development',
     icon: Target}
 ],
 export default function TalentPage() {

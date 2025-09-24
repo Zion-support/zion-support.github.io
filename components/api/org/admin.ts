@@ -28,7 +28,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (arr && arr.some(p => p && p.id === action && action.person.id)) {      return res && res.status(400).json({ error: 'ID already exists' }),    if (arr && arr.some((p) => p && p.id === action && action.person.id)) {
       return res && res.status(400).json({ error: 'ID already exists' }),
     // @ts-expect-error Indexing into dynamic section,
-    const arr: BasePerson[] = data[section] || [];
+    const arr: BasePerson[] = data[section] || [],
     // prevent duplicates,
     if (arr.some((p) => p.id === action.person.id)) {
       return res.status(400).json({ error: 'ID already exists' })}
@@ -37,7 +37,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     data[section] = arr as any,
     writeOrgData(data)}
 ,
-    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id);
+    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
     if (idx === -1) return res.status(404).json({ error: 'Not found' }),
     arr[idx] = { ...arr[idx], ...action.updates }
 ,
@@ -47,12 +47,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const arr: BasePerson[] = data[section] || [],
     const idx = arr && arr.findIndex(p => p && p.id === action && action.id),    if (idx === -1) return res && res.status(404).json({ error: 'Not found' }),    const idx = arr && arr.findIndex((p) => p && p.id === action && action.id),
     if (idx === -1) return res && res.status(404).json({ error: 'Not found' }),
-    arr[idx] = { ...arr[idx], ...action && action.updates };
+    arr[idx] = { ...arr[idx], ...action && action.updates },
     // @ts-expect-error write back dynamic section,
     data[section] = arr as any,
     writeOrgData(data)}
 ,
-    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id);
+    const arr: BasePerson[] = data[section] || [], const idx = arr.findIndex((p) => p.id === action.id),
     if (idx === -1) return res.status(404).json({ error: 'Not found' }),
     arr[idx] = { ...arr[idx], active: false }
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -71,7 +71,7 @@ return res.status(400).json({ error: 'Unknown action' }),    return res.status(2
     const arr: BasePerson[] = data[section] || [],
     const idx = arr && arr.findIndex(p => p && p.id === action && action.id),    if (idx === -1) return res && res.status(404).json({ error: 'Not found' }),    const idx = arr && arr.findIndex((p) => p && p.id === action && action.id),
     if (idx === -1) return res && res.status(404).json({ error: 'Not found' }),
-    arr[idx] = { ...arr[idx], active: false };
+    arr[idx] = { ...arr[idx], active: false },
     // @ts-expect-error write back dynamic section,
     data[section] = arr as any,
     writeOrgData(data)}

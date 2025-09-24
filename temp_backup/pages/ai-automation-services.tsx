@@ -2,279 +2,257 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Brain;
-  Code;
-  Shield;
-  Users;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Clock;
-  Target;
-  Cpu;
-  Rocket;
-  Globe;
-  BarChart3;
-  Settings;
+  Zap,
+  Brain,
+  Code,
+  Shield,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Clock,
+  Target,
+  Cpu,
+  Rocket,
+  Globe,
+  BarChart3,
+  Settings,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices20o25 } from '../data/20o25-advanced-ai-automation-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceHighlights = [
   {
-    title: 'AI Code Generation';
+    title: 'AI Code Generation',
     description:,
-      'Generate production-ready code across multiple languages with AI intelligence';
-    icon: Code;
-    color: 'from-emerald-50o0 to-teal-60o0';
+      'Generate production-ready code across multiple languages with AI intelligence',
+    icon: Code,
+    color: 'from-emerald-50o0 to-teal-60o0',
     features: [
-      'Multi-language support';
-      'Security scanning';
-      'Performance optimization';
-      'Team collaboration';
-    ];
-  };
+      'Multi-language supportSecurity scanning',
+      'Performance optimizationTeam collaboration',
+    ]
+  },
   {
-    title: 'DevOps Automation';
+    title: 'DevOps Automation',
     description:,
-      'Intelligent automation for modern DevOps workflows with predictive analytics';
-    icon: Cpu;
-    color: 'from-purple-50o0 to-indigo-60o0';
+      'Intelligent automation for modern DevOps workflows with predictive analytics',
+    icon: Cpu,
+    color: 'from-purple-50o0 to-indigo-60o0',
     features: [
-      'CI/CD optimization';
-      'Self-healing infrastructure';
-      'Cost optimization';
-      'Multi-cloud support';
-    ];
-  };
+      'CI/CD optimizationSelf-healing infrastructure',
+      'Cost optimizationMulti-cloud support',
+    ]
+  },
   {
-    title: 'Customer Support AI';
+    title: 'Customer Support AI',
     description:,
-      'Transform customer support with intelligent automation and sentiment analysis';
-    icon: Users;
-    color: 'from-blue-50o0 to-cyan-60o0';
+      'Transform customer support with intelligent automation and sentiment analysis',
+    icon: Users,
+    color: 'from-blue-50o0 to-cyan-60o0',
     features: [
-      'Intelligent chatbots';
-      'Multi-language support';
-      'Predictive resolution';
-      '24/7 availability';
-    ];
-  };
+      'Intelligent chatbotsMulti-language support',
+      'Predictive resolution24/7 availability',
+    ]
+  },
   {
-    title: 'Marketing Automation';
+    title: 'Marketing Automation',
     description:,
-      'AI-powered marketing automation with predictive analytics and optimization';
-    icon: BarChart3;
-    color: 'from-pink-50o0 to-rose-60o0';
+      'AI-powered marketing automation with predictive analytics and optimization',
+    icon: BarChart3,
+    color: 'from-pink-50o0 to-rose-60o0',
     features: [
-      'Campaign optimization';
-      'Customer personalization';
-      'ROI tracking';
-      'Multi-channel automation';
-    ];
-  };
+      'Campaign optimizationCustomer personalization',
+      'ROI trackingMulti-channel automation',
+    ]
+  },
   {
-    title: 'Sales Intelligence';
+    title: 'Sales Intelligence',
     description:,
-      'Boost sales performance with AI-powered insights and predictive analytics';
-    icon: TrendingUp;
-    color: 'from-yellow-50o0 to-orange-60o0';
+      'Boost sales performance with AI-powered insights and predictive analytics',
+    icon: TrendingUp,
+    color: 'from-yellow-50o0 to-orange-60o0',
     features: [
-      'Lead scoring';
-      'Sales forecasting';
-      'Customer insights';
-      'Performance optimization';
-    ];
-  };
+      'Lead scoringSales forecasting',
+      'Customer insightsPerformance optimization',
+    ]
+  },
 ],
 const benefits = [
   {
-    title: '80% Reduction in Manual Work';
-    description: 'Automate repetitive tasks and focus on high-value activities';
-    icon: Zap;
-    color: 'text-emerald-40o0';
-  };
+    title: '80% Reduction in Manual Work',
+    description: 'Automate repetitive tasks and focus on high-value activities',
+    icon: Zap,
+    color: 'text-emerald-40o0'
+  },
   {
-    title: '30o0% ROI Improvement';
+    title: '30o0% ROI Improvement',
     description:,
-      'Significant returns through increased efficiency and productivity';
-    icon: TrendingUp;
-    color: 'text-blue-40o0';
-  };
+      'Significant returns through increased efficiency and productivity',
+    icon: TrendingUp,
+    color: 'text-blue-40o0'
+  },
   {
-    title: '24/7 Operation';
-    description: 'Round-the-clock automation without human intervention';
-    icon: Clock;
-    color: 'text-purple-40o0';
-  };
+    title: '24/7 Operation',
+    description: 'Round-the-clock automation without human intervention',
+    icon: Clock,
+    color: 'text-purple-40o0'
+  },
   {
-    title: 'Real-time Insights';
-    description: 'Instant analytics and decision-making support';
-    icon: BarChart3;
-    color: 'text-pink-40o0';
-  };
+    title: 'Real-time Insights',
+    description: 'Instant analytics and decision-making support',
+    icon: BarChart3,
+    color: 'text-pink-40o0'
+  },
 ],
 export default function AIAutomationServices() {
   const services = [
     {
-      title: 'Intelligent Process Automation';
+      title: 'Intelligent Process Automation',
       description:,
-        'Transform manual workflows into intelligent, self-optimizing processes that learn and improve over time.';
+        'Transform manual workflows into intelligent, self-optimizing processes that learn and improve over time.',
       features: [
-        'Workflow automation with AI decision-making';
-        'Process optimization and continuous improvement';
-        'Integration with existing enterprise systems';
-        'Real-time monitoring and analytics';
-      ];
-      icon: '🤖';
-      category: 'Core Services';
-    };
+        'Workflow automation with AI decision-makingProcess optimization and continuous improvement',
+        'Integration with existing enterprise systemsReal-time monitoring and analytics',
+      ],
+      icon: '🤖',
+      category: 'Core Services'
+    },
     {
-      title: 'AI-Powered Content Generation';
+      title: 'AI-Powered Content Generation',
       description:,
-        'Create high-quality, engaging content at scale using advanced natural language processing and generation.';
+        'Create high-quality, engaging content at scale using advanced natural language processing and generation.',
       features: [
-        'Automated content creation and curation';
-        'Multi-language content generation';
-        'SEO-optimized content strategies';
-        'Content performance analytics';
-      ];
-      icon: '✍️';
-      category: 'Content Services';
-    };
+        'Automated content creation and curationMulti-language content generation',
+        'SEO-optimized content strategiesContent performance analytics',
+      ],
+      icon: '✍️',
+      category: 'Content Services'
+    },
     {
-      title: 'Predictive Analytics & Forecasting';
+      title: 'Predictive Analytics & Forecasting',
       description:,
-        'Leverage machine learning to predict trends, identify opportunities, and make data-driven decisions.';
+        'Leverage machine learning to predict trends, identify opportunities, and make data-driven decisions.',
       features: [
-        'Advanced predictive modeling';
-        'Real-time data analysis';
-        'Custom forecasting algorithms';
-        'Actionable insights and recommendations';
-      ];
-      icon: '📊';
-      category: 'Analytics Services';
-    };
+        'Advanced predictive modelingReal-time data analysis',
+        'Custom forecasting algorithmsActionable insights and recommendations',
+      ],
+      icon: '📊',
+      category: 'Analytics Services'
+    },
     {
-      title: 'Autonomous Customer Service';
+      title: 'Autonomous Customer Service',
       description:,
-        'Provide 24/7 customer support with intelligent chatbots and automated response systems.';
+        'Provide 24/7 customer support with intelligent chatbots and automated response systems.',
       features: [
-        'Natural language understanding';
-        'Multi-channel support integration';
-        'Escalation to human agents';
-        'Continuous learning and improvement';
-      ];
-      icon: '💬';
-      category: 'Customer Experience';
-    };
+        'Natural language understandingMulti-channel support integration',
+        'Escalation to human agentsContinuous learning and improvement',
+      ],
+      icon: '💬',
+      category: 'Customer Experience'
+    },
     {
-      title: 'Smart Supply Chain Management';
+      title: 'Smart Supply Chain Management',
       description:,
-        'Optimize supply chain operations with AI-driven demand forecasting and inventory management.';
+        'Optimize supply chain operations with AI-driven demand forecasting and inventory management.',
       features: [
-        'Demand prediction and planning';
-        'Inventory optimization';
-        'Supplier performance monitoring';
-        'Risk assessment and mitigation';
-      ];
-      icon: '🚚';
-      category: 'Operations';
-    };
+        'Demand prediction and planningInventory optimization',
+        'Supplier performance monitoringRisk assessment and mitigation',
+      ],
+      icon: '🚚',
+      category: 'Operations'
+    },
     {
-      title: 'Cybersecurity Automation';
+      title: 'Cybersecurity Automation',
       description:,
-        'Protect your systems with intelligent threat detection and automated response capabilities.';
+        'Protect your systems with intelligent threat detection and automated response capabilities.',
       features: [
-        'Real-time threat monitoring';
-        'Automated incident response';
-        'Behavioral analysis';
-        'Compliance monitoring and reporting';
-      ];
-      icon: '🔒';
-      category: 'Security';
-    };
+        'Real-time threat monitoringAutomated incident response',
+        'Behavioral analysisCompliance monitoring and reporting',
+      ],
+      icon: '🔒',
+      category: 'Security'
+    },
   ],
   const industries = [
     {
-      name: 'Healthcare';
+      name: 'Healthcare',
       description:,
-        'AI automation for patient care, diagnosis, and administrative processes.';
-      icon: '🏥';
-    };
+        'AI automation for patient care, diagnosis, and administrative processes.',
+      icon: '🏥'
+    },
     {
-      name: 'Finance';
+      name: 'Finance',
       description:,
-        'Automated trading, risk assessment, and fraud detection systems.';
-      icon: '💳';
-    };
+        'Automated trading, risk assessment, and fraud detection systems.',
+      icon: '💳'
+    },
     {
-      name: 'Manufacturing';
+      name: 'Manufacturing',
       description:,
-        'Smart factories with predictive maintenance and quality control.';
-      icon: '🏭';
-    };
+        'Smart factories with predictive maintenance and quality control.',
+      icon: '🏭'
+    },
     {
-      name: 'Retail';
+      name: 'Retail',
       description:,
-        'Personalized shopping experiences and inventory optimization.';
-      icon: '🛍️';
-    };
+        'Personalized shopping experiences and inventory optimization.',
+      icon: '🛍️'
+    },
     {
-      name: 'Transportation';
-      description: 'Route optimization and autonomous vehicle systems.';
-      icon: '🚗';
-    };
+      name: 'Transportation',
+      description: 'Route optimization and autonomous vehicle systems.',
+      icon: '🚗'
+    },
     {
-      name: 'Energy';
-      description: 'Smart grid management and renewable energy optimization.';
-      icon: '⚡';
-    };
+      name: 'Energy',
+      description: 'Smart grid management and renewable energy optimization.',
+      icon: '⚡'
+    },
   ],
   const benefits = [
     {
-      title: 'Increased Efficiency';
+      title: 'Increased Efficiency',
       description:,
-        'Reduce manual tasks by up to 80% while improving accuracy and consistency.';
-      icon: '⚡';
-    };
+        'Reduce manual tasks by up to 80% while improving accuracy and consistency.',
+      icon: '⚡'
+    },
     {
-      title: 'Cost Reduction';
+      title: 'Cost Reduction',
       description:,
-        'Lower operational costs through automation and optimization of resource allocation.';
-      icon: '💰';
-    };
+        'Lower operational costs through automation and optimization of resource allocation.',
+      icon: '💰'
+    },
     {
-      title: '24/7 Operation';
+      title: '24/7 Operation',
       description:,
-        'Enable continuous operation without human intervention or downtime.';
-      icon: '🌙';
-    };
+        'Enable continuous operation without human intervention or downtime.',
+      icon: '🌙'
+    },
     {
-      title: 'Scalability';
+      title: 'Scalability',
       description:,
-        'Easily scale operations up or down based on demand and business needs.';
-      icon: '📈';
-    };
+        'Easily scale operations up or down based on demand and business needs.',
+      icon: '📈'
+    },
     {
-      title: 'Data-Driven Insights';
+      title: 'Data-Driven Insights',
       description:,
-        'Gain valuable insights from automated data analysis and pattern recognition.';
-      icon: '🔍';
-    };
+        'Gain valuable insights from automated data analysis and pattern recognition.',
+      icon: '🔍'
+    },
     {
-      title: 'Competitive Advantage';
+      title: 'Competitive Advantage',
       description:,
-        'Stay ahead of the competition with cutting-edge AI automation capabilities.';
-      icon: '🏆';
-    };
+        'Stay ahead of the competition with cutting-edge AI automation capabilities.',
+      icon: '🏆'
+    },
   ],
   return (
     <Layout>,

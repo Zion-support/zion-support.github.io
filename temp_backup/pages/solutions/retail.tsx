@@ -1,17 +1,17 @@
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  ShoppingCart;
-  Globe;
-  Brain;
-  Shield;
-  Zap;
-  Cpu;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  BarChart3;
-  Users;
+  ShoppingCart,
+  Globe,
+  Brain,
+  Shield,
+  Zap,
+  Cpu,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  BarChart3,
+  Users,
 } from 'lucide-react',
 export default function RetailSolutions() {
   return (
@@ -108,7 +108,7 @@ export default function RetailSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Advanced customer analytics platform with behavioral insights;
+                  Advanced customer analytics platform with behavioral insights,
                   predictive modeling, and personalized marketing automation.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -184,7 +184,7 @@ export default function RetailSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Intelligent supply chain optimization with demand forecasting;
+                  Intelligent supply chain optimization with demand forecasting,
                   inventory management, and logistics automation.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,
@@ -260,7 +260,7 @@ export default function RetailSolutions() {
                   </h3>,
                 </div>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Intelligent customer service platform with AI chatbots;
+                  Intelligent customer service platform with AI chatbots,
                   automated support, and personalized assistance.,
                 </p>,
                 <ul className='space-y-2 mb-6'>,

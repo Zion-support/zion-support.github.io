@@ -3,23 +3,23 @@ import React, { useState, useEffect, useCallback, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Globe;
-  Brain;
-  Rocket;
-  Shield;
-  Cpu;
-  Database;
-  Atom;
-  Target;
-  Star;
-  Sparkles;
-  Zap;
-  Eye;
-  Heart;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Globe,
+  Brain,
+  Rocket,
+  Shield,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Eye,
+  Heart,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -39,114 +39,114 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
   // Navigation items with enhanced structure,
   const navigationItems: NavigationItem[] = [
     {
-      name: 'AI & Consciousness';
-      href: '/ai-consciousness';
-      icon: Brain;
-      description: 'Revolutionary AI consciousness evolution';
+      name: 'AI & Consciousness',
+      href: '/ai-consciousness',
+      icon: Brain,
+      description: 'Revolutionary AI consciousness evolution',
       subItems: [
         {
-          name: 'AI Consciousness 20o44';
-          href: '/ai-consciousness-evolution-20o44';
-          icon: Brain;
-          description: 'Next-generation AI consciousness';
-        };
+          name: 'AI Consciousness 20o44',
+          href: '/ai-consciousness-evolution-20o44',
+          icon: Brain,
+          description: 'Next-generation AI consciousness'
+        },
         {
-          name: 'Quantum Neural Networks';
-          href: '/quantum-neural-network-platform-20o44';
-          icon: Atom;
-          description: 'Quantum-powered AI networks';
-        };
+          name: 'Quantum Neural Networks',
+          href: '/quantum-neural-network-platform-20o44',
+          icon: Atom,
+          description: 'Quantum-powered AI networks'
+        },
         {
-          name: 'Autonomous Intelligence';
-          href: '/ai-autonomous-business-intelligence-20o44';
-          icon: Cpu;
-          description: 'Fully autonomous AI systems';
-        };
-      ];
-    };
+          name: 'Autonomous Intelligence',
+          href: '/ai-autonomous-business-intelligence-20o44',
+          icon: Cpu,
+          description: 'Fully autonomous AI systems'
+        },
+      ],
+    },
     {
-      name: 'Quantum Technology';
-      href: '/quantum-technology';
-      icon: Atom;
-      description: 'Quantum computing and cryptography';
+      name: 'Quantum Technology',
+      href: '/quantum-technology',
+      icon: Atom,
+      description: 'Quantum computing and cryptography',
       subItems: [
         {
-          name: 'Quantum Cybersecurity';
-          href: '/quantum-cybersecurity-platform-20o44';
-          icon: Shield;
-          description: 'Quantum-resistant security';
-        };
+          name: 'Quantum Cybersecurity',
+          href: '/quantum-cybersecurity-platform-20o44',
+          icon: Shield,
+          description: 'Quantum-resistant security'
+        },
         {
-          name: 'Quantum Cloud';
-          href: '/quantum-cloud-infrastructure-20o44';
-          icon: Database;
-          description: 'Quantum-powered cloud infrastructure';
-        };
+          name: 'Quantum Cloud',
+          href: '/quantum-cloud-infrastructure-20o44',
+          icon: Database,
+          description: 'Quantum-powered cloud infrastructure'
+        },
         {
-          name: 'Quantum Networks';
-          href: '/quantum-network-platform-20o44';
-          icon: Globe;
-          description: 'Quantum communication networks';
-        };
-      ];
-    };
+          name: 'Quantum Networks',
+          href: '/quantum-network-platform-20o44',
+          icon: Globe,
+          description: 'Quantum communication networks'
+        },
+      ],
+    },
     {
-      name: 'Space Technology';
-      href: '/space-technology';
-      icon: Rocket;
-      description: 'Space exploration and resource intelligence';
+      name: 'Space Technology',
+      href: '/space-technology',
+      icon: Rocket,
+      description: 'Space exploration and resource intelligence',
       subItems: [
         {
-          name: 'Space Resource Intelligence';
-          href: '/space-resource-intelligence-20o44';
-          icon: Target;
-          description: 'AI-powered space exploration';
-        };
+          name: 'Space Resource Intelligence',
+          href: '/space-resource-intelligence-20o44',
+          icon: Target,
+          description: 'AI-powered space exploration'
+        },
         {
-          name: 'Satellite Networks';
-          href: '/satellite-network-platform-20o44';
-          icon: Globe;
-          description: 'Advanced satellite systems';
-        };
+          name: 'Satellite Networks',
+          href: '/satellite-network-platform-20o44',
+          icon: Globe,
+          description: 'Advanced satellite systems'
+        },
         {
-          name: 'Space Analytics';
-          href: '/space-analytics-platform-20o44';
-          icon: Star;
-          description: 'Space data analysis';
-        };
-      ];
-    };
+          name: 'Space Analytics',
+          href: '/space-analytics-platform-20o44',
+          icon: Star,
+          description: 'Space data analysis'
+        },
+      ],
+    },
     {
-      name: 'Business Solutions';
-      href: '/business-solutions';
-      icon: Target;
-      description: 'Enterprise transformation solutions';
+      name: 'Business Solutions',
+      href: '/business-solutions',
+      icon: Target,
+      description: 'Enterprise transformation solutions',
       subItems: [
         {
-          name: 'Business Intelligence';
-          href: '/business-intelligence-platform-20o44';
-          icon: Cpu;
-          description: 'AI-powered business insights';
-        };
+          name: 'Business Intelligence',
+          href: '/business-intelligence-platform-20o44',
+          icon: Cpu,
+          description: 'AI-powered business insights'
+        },
         {
-          name: 'Digital Transformation';
-          href: '/digital-transformation-20o44';
-          icon: Zap;
-          description: 'Complete business transformation';
-        };
+          name: 'Digital Transformation',
+          href: '/digital-transformation-20o44',
+          icon: Zap,
+          description: 'Complete business transformation'
+        },
         {
-          name: 'Innovation Labs';
-          href: '/innovation-labs-20o44';
-          icon: Sparkles;
-          description: 'R&D and innovation centers';
-        };
-      ];
-    };
+          name: 'Innovation Labs',
+          href: '/innovation-labs-20o44',
+          icon: Sparkles,
+          description: 'R&D and innovation centers'
+        },
+      ],
+    },
   ],
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle outside clicks for mobile menu,
@@ -156,19 +156,19 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
         mobileMenuRef.current &&,
         !mobileMenuRef.current.contains(event.target as Node)) {
         setIsMobileMenuOpen(false)}
-    };
+    },
     if (isMobileMenuOpen) {
       document.addEventListener('mousedown', handleClickOutside),
       document.body.style.overflow = 'hidden'}
 ,
     return () => {
       document.removeEventListener('mousedown', handleClickOutside),
-      document.body.style.overflow = 'unset'};
+      document.body.style.overflow = 'unset'},
   }, [isMobileMenuOpen]),
   // Handle dropdown interactions,
   const handleDropdownToggle = useCallback(
     (itemName: string) => {
-      setActiveDropdown(activeDropdown === itemName ? null : itemName)};
+      setActiveDropdown(activeDropdown === itemName ? null : itemName)},
     [activeDropdown]),
   // Handle search functionality,
   const handleSearch = useCallback((query: string) => {
@@ -181,7 +181,7 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
       if (event.key === 'Enter' || event.key === ' ') {
         event.preventDefault(),
         action()}
-    };
+    },
     []),
   // Close mobile menu,
   const closeMobileMenu = useCallback(() => {
@@ -387,5 +387,5 @@ const UltraFuturisticNavigation20o40: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraFuturisticNavigation20o40;
+    </nav>)},
+export default UltraFuturisticNavigation20o40,

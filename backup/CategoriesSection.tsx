@@ -3,53 +3,53 @@ import { Link } from 'react-router-dom',
 import { Briefcase, HardDrive, Lightbulb, Users } from 'lucide-react',
 const categories = [
   {
-    title: 'Services';
-    description: 'On-demand IT support, consulting, development, and more';
-    icon: <Briefcase className='w-10 h-10' />;
-    link: '/services';
-    color: 'from-purple-50o0 to-indigo-60o0';
-  };
+    title: 'Services',
+    description: 'On-demand IT support, consulting, development, and more',
+    icon: <Briefcase className='w-10 h-10' />,
+    link: '/services',
+    color: 'from-purple-50o0 to-indigo-60o0'
+  },
   {
-    title: 'Talents';
-    description: 'Connect with AI experts, developers, and tech specialists';
-    icon: <Users className='w-10 h-10' />;
-    link: '/talent';
-    color: 'from-cyan-50o0 to-blue-60o0';
-  };
+    title: 'Talents',
+    description: 'Connect with AI experts, developers, and tech specialists',
+    icon: <Users className='w-10 h-10' />,
+    link: '/talent',
+    color: 'from-cyan-50o0 to-blue-60o0'
+  },
   {
-    title: 'Equipment';
-    description: 'Rent or buy specialized hardware, servers, and devices';
-    icon: <HardDrive className='w-10 h-10' />;
-    link: '/equipment';
-    color: 'from-amber-50o0 to-orange-60o0';
-  };
+    title: 'Equipment',
+    description: 'Rent or buy specialized hardware, servers, and devices',
+    icon: <HardDrive className='w-10 h-10' />,
+    link: '/equipment',
+    color: 'from-amber-50o0 to-orange-60o0'
+  },
   {
-    title: 'Innovation';
-    description: 'Discover cutting-edge solutions and tech breakthroughs';
-    icon: <Lightbulb className='w-10 h-10' />;
-    link: '/category/innovation';
-    color: 'from-emerald-50o0 to-green-60o0';
-  };
+    title: 'Innovation',
+    description: 'Discover cutting-edge solutions and tech breakthroughs',
+    icon: <Lightbulb className='w-10 h-10' />,
+    link: '/category/innovation',
+    color: 'from-emerald-50o0 to-green-60o0'
+  },
 ],
 const specialServices = [
   {
-    title: 'IT Onsite Services';
-    link: '/it-onsite-services';
-  };
+    title: 'IT Onsite Services',
+    link: '/it-onsite-services'
+  },
   {
-    title: 'Comprehensive Services';
-    link: '/comprehensive-services';
-  };
+    title: 'Comprehensive Services',
+    link: '/comprehensive-services'
+  },
   {
-    title: 'Services Comparison';
-    link: '/services-comparison';
-  };
+    title: 'Services Comparison',
+    link: '/services-comparison'
+  },
 ],
 interface CategoriesSectionProps {
   showTitle?: boolean}
 ,
 export function CategoriesSection({
-  showTitle = true;
+  showTitle = true,
 }: CategoriesSectionProps) {
   return (
     <section className='py-20 bg-zion-blue'>,
@@ -58,7 +58,7 @@ export function CategoriesSection({
           <div className='text-center mb-16'>,
             <GradientHeading>Explore Categories</GradientHeading>,
             <p className='text-zion-slate-light text-lg mt-4 max-w-2xl mx-auto'>,
-              Discover our comprehensive ecosystem of tech services, talent;
+              Discover our comprehensive ecosystem of tech services, talent,
               equipment, and innovation,
             </p>,
           </div>)}

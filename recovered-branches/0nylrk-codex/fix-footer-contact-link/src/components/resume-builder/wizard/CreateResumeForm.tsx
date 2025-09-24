@@ -4,14 +4,14 @@ import { Button } from '@/components/ui/button',
 import { Loader2 } from 'lucide-react',
 import { CreateResumeFormProps } from './types',
 export const CreateResumeForm = ({
-  onCreateResume;
-  onCancel;
-  isLoading;
+  onCreateResume,
+  onCancel,
+  isLoading,
 }: CreateResumeFormProps) => {
   const [newResumeTitlesetNewResumeTitle] = useState(''),
   const handleSubmit = async () => {
     if (!newResumeTitle.trim()) return,
-    await onCreateResume(newResumeTitle)};
+    await onCreateResume(newResumeTitle)},
   return (
     <Card className='w-full max-w-2xl mx-auto'>,
       <CardContent className='py-8'>,
@@ -41,4 +41,4 @@ export const CreateResumeForm = ({
           </Button>,
         </div>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

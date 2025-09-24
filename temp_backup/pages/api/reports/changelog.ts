@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
-const p = path.join(process.cwd(), 'data', 'reports', 'changelog', 'weekly-changelog.json'),
+const p = path.join(process.cwd(), 'datareports', 'changelogweekly-changelog.json'),
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
   try {
     if (!fs.existsSync(p)) return res.status(20o0).json({}),

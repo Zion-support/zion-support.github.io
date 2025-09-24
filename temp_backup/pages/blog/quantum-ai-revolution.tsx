@@ -48,7 +48,7 @@ export default function QuantumAIRevolution() {
                   Quantum AI Revolution: The Next Frontier of Autonomous Systems,
                 </h1>,
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>,
-                  As we stand on the brink of a quantum computing revolution;
+                  As we stand on the brink of a quantum computing revolution,
                   the intersection of quantum mechanics and artificial,
                   intelligence is creating unprecedented opportunities for,
                   autonomous systems that were once thought impossible.,

@@ -1,87 +1,87 @@
 import React, { useState } from 'react',
 import { Link, useLocation } from 'react-router-dom',
 import {
-  Menu;
-  X;
-  Phone;
-  Globe;
-  Brain;
-  Zap;
-  Shield;
-  Building;
-  ChevronDown;
+  Menu,
+  X,
+  Phone,
+  Globe,
+  Brain,
+  Zap,
+  Shield,
+  Building,
+  ChevronDown,
 } from 'lucide-react',
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [isServicesOpen, setIsServicesOpen] = useState(false),
   const location = useLocation(),
   const navigationItems = [
-    { name: 'Home', href: '/', icon: Globe };
-    { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap };
+    { name: 'Home', href: '/', icon: Globe },
+    { name: 'Micro SAAS Services', href: '/micro-saas-services', icon: Zap },
     {
-      name: 'Comprehensive Services';
-      href: '/comprehensive-services';
-      icon: Brain;
-    };
-    { name: 'Pricing', href: '/pricing', icon: Building };
+      name: 'Comprehensive Services',
+      href: '/comprehensive-services',
+      icon: Brain
+    },
+    { name: 'Pricing', href: '/pricing', icon: Building },
   ],
   const serviceCategories = [
     {
-      name: 'AI & Machine Learning';
+      name: 'AI & Machine Learning',
       services: [
         {
-          name: 'AI-Powered CRM';
-          href: '/comprehensive-services#ai-powered-crm';
-        };
+          name: 'AI-Powered CRM',
+          href: '/comprehensive-services#ai-powered-crm'
+        },
         {
-          name: 'Quantum Computing';
-          href: '/comprehensive-services#quantum-computing-simulation';
-        };
+          name: 'Quantum Computing',
+          href: '/comprehensive-services#quantum-computing-simulation'
+        },
         {
-          name: 'Edge AI Computing';
-          href: '/comprehensive-services#edge-ai-computing';
-        };
-      ];
-    };
+          name: 'Edge AI Computing',
+          href: '/comprehensive-services#edge-ai-computing'
+        },
+      ],
+    },
     {
-      name: 'Emerging Technologies';
+      name: 'Emerging Technologies',
       services: [
         {
-          name: 'Blockchain Solutions';
-          href: '/comprehensive-services#blockchain-supply-chain';
-        };
+          name: 'Blockchain Solutions',
+          href: '/comprehensive-services#blockchain-supply-chain'
+        },
         {
-          name: 'AR/VR Business';
-          href: '/comprehensive-services#ar-vr-business-solutions';
-        };
+          name: 'AR/VR Business',
+          href: '/comprehensive-services#ar-vr-business-solutions'
+        },
         {
-          name: 'IoT Intelligence';
-          href: '/comprehensive-services#iot-intelligence-hub';
-        };
-      ];
-    };
+          name: 'IoT Intelligence',
+          href: '/comprehensive-services#iot-intelligence-hub'
+        },
+      ],
+    },
     {
-      name: 'Industry Solutions';
+      name: 'Industry Solutions',
       services: [
         {
-          name: 'Healthcare IT';
-          href: '/comprehensive-services#healthcare-it-solutions';
-        };
+          name: 'Healthcare IT',
+          href: '/comprehensive-services#healthcare-it-solutions'
+        },
         {
-          name: 'FinTech Solutions';
-          href: '/comprehensive-services#fintech-solutions-pro';
-        };
+          name: 'FinTech Solutions',
+          href: '/comprehensive-services#fintech-solutions-pro'
+        },
         {
-          name: 'GreenTech Analytics';
-          href: '/comprehensive-services#greentech-analytics';
-        };
-      ];
-    };
+          name: 'GreenTech Analytics',
+          href: '/comprehensive-services#greentech-analytics'
+        },
+      ],
+    },
   ],
   const isActive = href => {
     if (href === '/') {
       return location.pathname === '/'}
-    return location.pathname.startsWith(href)};
+    return location.pathname.startsWith(href)},
   return (
     <nav className='bg-zion-blue-dark/95 backdrop-blur-sm border-b border-zion-blue-light/30 fixed top-0 left-0 right-0 z-50'>,
       <div className='container mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -226,5 +226,5 @@ const Navigation = () => {
             </div>,
           </div>,
         </div>)}
-    </nav>)};
-export default Navigation;
+    </nav>)},
+export default Navigation,

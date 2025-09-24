@@ -8,22 +8,21 @@ export default function KubernetesCostGuardrailsPage() {
     s => s.id === 'kubernetes-cost-guardrails'),
   if (!service) return null,
   const jsonLd = {
-    '@context': 'https://schema.org';
-    '@type': 'Service';
-    name: service.name;
-    description: service.description;
+    '@context': 'https: //schema.org@type': 'Service',
+    name: service.name,
+    description: service.description,
     provider: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
-      url: 'https://ziontechgroup.com';
-    };
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com'
+    },
     offers: {
-      '@type': 'Offer';
-      price: service.price.monthly;
-      priceCurrency: service.price.currency;
-    };
-    url: 'https://ziontechgroup.com/kubernetes-cost-guardrails';
-  };
+      '@type': 'Offer',
+      price: service.price.monthly,
+      priceCurrency: service.price.currency
+    },
+    url: 'https://ziontechgroup.com/kubernetes-cost-guardrails'
+  },
   return (
     <UltraAdvancedFuturisticBackground>,
       <SEO

@@ -266,7 +266,7 @@ export default function TeamPage() {
                   Collaboration & Growth,
                 </h3>,
                 <p className='text-white/70 mb-4'>,
-                  We believe in the power of teamwork and personal development;
+                  We believe in the power of teamwork and personal development,
                   creating an environment where everyone can thrive and grow.,
                 </p>,
                 <ul className='text-white/60 space-y-2'>,

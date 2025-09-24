@@ -9,13 +9,13 @@ const MAX_RETRIES = 3,
 const TIMEOUT = 60000, // 60 seconds per operation,
 // Statistics tracking,
 const stats = {
-  totalBranches: 0;
-  processed: 0;
-  merged: 0;
-  conflictsResolved: 0;
-  failed: 0;
-  skipped: 0;
-  startTime: Date.now()};
+  totalBranches: 0,
+  processed: 0,
+  merged: 0,
+  conflictsResolved: 0,
+  failed: 0,
+  skipped: 0,
+  startTime: Date.now()},
 // Logging system,
 function log(message, level = 'INFO') {
   const timestamp = new Date().toISOString(),
@@ -29,13 +29,13 @@ function safeGitCommand(command, description, options = {}) {
   try {
     log(`📝 ${description}...`),
     const result = execSync(command, {
-      encoding: 'utf8';
-      stdio: options.stdio || 'pipe';
+      encoding: 'utf8',
+      stdio: options.stdio || 'pipe',
       timeout: options.timeout || TIMEOUT}),
-    return { success: true, output: result };
+    return { success: true, output: result },
   } catch (error) {
     log(`⚠️  ${description} failed: ${error.message}`, 'WARN'),
-    return { success: false, error: error.message };
+    return { success: false, error: error.message },
   }
 }
 // Check for merge conflicts,
@@ -148,7 +148,7 @@ function mergeBranch(branchName, retryCount = 0) {
 function getAllBranches() {
   log('📋 Fetching all remote branches...'),
   // Fetch all remote branches,
-  safeGitCommand('git fetch --all', 'Fetching all remote branches'),
+  safeGitCommand('git fetch --allFetching all remote branches'),
   // Get all remote branches,
   const branchesOutput = execSync('git branch -r', { encoding: 'utf8' }),
   const allBranches = branchesOutput,
@@ -167,22 +167,22 @@ function syncWithRemoteMain() {
   // Ensure we're on main,
   const currentBranch = execSync('git branch --show-current', { encoding: 'utf8' }).trim(),
   if (currentBranch !== 'main') {
-    safeGitCommand('git checkout main', 'Switching to main branch')}
+    safeGitCommand('git checkout mainSwitching to main branch')}
   // Pull latest changes,
-  const pullResult = safeGitCommand('git pull origin main --no-rebase', 'Pulling latest changes from main'),
+  const pullResult = safeGitCommand('git pull origin main --no-rebasePulling latest changes from main'),
   if (!pullResult.success) {
-    log('⚠️  Pull failed, attempting to resolve conflicts...', 'WARN'),
+    log('⚠️  Pull failed, attempting to resolve conflicts...WARN'),
     if (hasMergeConflicts()) {
       log('🔧 Resolving conflicts from pull...'),
       resolveConflictsAcceptOurs(),
-      const commitResult = safeGitCommand('git commit --no-edit', 'Committing pull resolution'),
+      const commitResult = safeGitCommand('git commit --no-editCommitting pull resolution'),
       if (commitResult.success) {
         log('✅ Successfully resolved pull conflicts'),
         return true}
     }
     // If still failing, try reset to remote,
-    log('⚠️  Attempting to reset to remote main...', 'WARN'),
-    const resetResult = safeGitCommand('git reset --hard origin/main', 'Resetting to remote main'),
+    log('⚠️  Attempting to reset to remote main...WARN'),
+    const resetResult = safeGitCommand('git reset --hard origin/mainResetting to remote main'),
     return resetResult.success}
   return true}
 // Process branches in batches,
@@ -212,7 +212,7 @@ async function processBranchesInBatches(allBranches) {
     }
     // Commit batch progress,
     if (stats.merged > 0) {
-      safeGitCommand('git add .', 'Staging all changes'),
+      safeGitCommand('git add .Staging all changes'),
       safeGitCommand(`git commit -m "Batch ${batchIndex + 1}: Merged ${batch.length} branches"`, 'Committing batch progress')}
   }
 }
@@ -221,36 +221,36 @@ function finalizeMerges() {
   log('🎯 Finalizing all merges...'),
   // Check for any remaining conflicts,
   if (hasMergeConflicts()) {
-    log('⚠️  Some conflicts remain, attempting final resolution...', 'WARN'),
+    log('⚠️  Some conflicts remain, attempting final resolution...WARN'),
     resolveConflictsAcceptOurs(),
     removeConflictMarkers(),
-    const finalCommit = safeGitCommand('git commit --no-edit', 'Final conflict resolution commit'),
+    const finalCommit = safeGitCommand('git commit --no-editFinal conflict resolution commit'),
     if (finalCommit.success) {
       log('✅ Final conflicts resolved')}
   }
   // Push all changes,
   log('🚀 Pushing all merged changes to remote...'),
-  const pushResult = safeGitCommand('git push origin main', 'Pushing to remote main'),
+  const pushResult = safeGitCommand('git push origin mainPushing to remote main'),
   if (pushResult.success) {
     log('✅ Successfully pushed all merged changes to remote')} else {
-    log('❌ Failed to push changes to remote', 'ERROR')}
+    log('❌ Failed to push changes to remoteERROR')}
 }
 // Generate final report,
 function generateReport() {
   const elapsed = (Date.now() - stats.startTime) / 1000,
   const successRate = stats.totalBranches > 0 ? (stats.merged / stats.totalBranches * 100).toFixed(2) : 0,
   const report = {
-    timestamp: new Date().toISOString();
+    timestamp: new Date().toISOString(),
     summary: {
-      totalBranches: stats.totalBranches;
-      processed: stats.processed;
-      merged: stats.merged;
-      conflictsResolved: stats.conflictsResolved;
-      failed: stats.failed;
-      skipped: stats.skipped;
-      successRate: `${successRate}%`;
+      totalBranches: stats.totalBranches,
+      processed: stats.processed,
+      merged: stats.merged,
+      conflictsResolved: stats.conflictsResolved,
+      failed: stats.failed,
+      skipped: stats.skipped,
+      successRate: `${successRate}%`,
       elapsedTime: `${Math.round(elapsed)}s`}
-  };
+  },
   const reportFile = path.join(__dirname, 'merge-report.json'),
   fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
   log('\n🎉 MERGE OPERATION COMPLETED!'),
@@ -269,7 +269,7 @@ async function main() {
     log('🎯 Starting comprehensive PR merge operation...'),
     // Step 1: Sync with remote main,
     if (!syncWithRemoteMain()) {
-      log('❌ Failed to sync with remote main', 'ERROR'),
+      log('❌ Failed to sync with remote mainERROR'),
       return}
     // Step 2: Get all branches,
     const allBranches = getAllBranches(),

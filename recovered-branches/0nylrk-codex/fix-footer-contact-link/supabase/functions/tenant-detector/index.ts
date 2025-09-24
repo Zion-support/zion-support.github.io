@@ -10,11 +10,8 @@ interface TenantInfo {
   theme_preset: string}
 ,
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Methods': 'GET, POST, OPTIONS';
-  'Access-Control-Allow-Headers': 'Content-Type, Authorization, x-client-info';
-  'Access-Control-Max-Age': '86400';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Methods': 'GET, POST, OPTIONSAccess-Control-Allow-Headers': 'Content-Type, Authorization, x-client-infoAccess-Control-Max-Age': '86400',
+},
 // Initialize Supabase client,
 const supabaseUrl = Deno.env.get('SUPABASE_URL'),
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY'),
@@ -26,8 +23,8 @@ serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
     return new Response(null, {
-      status: 204;
-      headers: corsHeaders;
+      status: 204,
+      headers: corsHeaders
     })}
 ,
   try {
@@ -39,7 +36,7 @@ serve(async req => {
     const hostname =,
       hostnameParam ||,
       (forwardedHost,
-        ? forwardedHost.split(',')[0].trim().split(':')[0],
+        ? forwardedHost.split()[0].trim().split(':')[0],
         : null) ||,
       url.hostname,
     if (!hostname && !subdomainParam) {
@@ -74,7 +71,7 @@ serve(async req => {
         const subdomain = hostname.split('.')[0],
         if (
           subdomain &&,
-          !['www', 'app', 'local', 'localhost'].includes(subdomain)) {
+          !['wwwapp', 'locallocalhost'].includes(subdomain)) {
           const subdomainResult = await supabase,
             .from('whitelabel_tenants'),
             .select(
@@ -91,28 +88,28 @@ serve(async req => {
 ,
     return new Response(
       JSON.stringify({
-        tenant: tenantInfo;
-        status: 'success';
-      });
+        tenant: tenantInfo,
+        status: 'success'
+      }),
       {
         headers: {
-          'Content-Type': 'application/json';
-          ...corsHeaders;
-        };
+          'Content-Type': 'application/json',
+          ...corsHeaders
+        },
       }
     )} catch (error) {
     console.error('Tenant detector error:', error),
     return new Response(
       JSON.stringify({
-        error: error.message || 'Internal server error';
-        status: 'error';
-      });
+        error: error.message || 'Internal server error',
+        status: 'error'
+      }),
       {
-        status: 500;
+        status: 500,
         headers: {
-          'Content-Type': 'application/json';
-          ...corsHeaders;
-        };
+          'Content-Type': 'application/json',
+          ...corsHeaders
+        },
       }
     )}
 }),

@@ -9,155 +9,153 @@ const UltimateContentRevolutionShowcase = () => {
     setIsVisible(true)}, []),
   const features = [
     {
-      icon: '🧠';
-      title: 'Quantum-Neural Fusion';
-      description: 'Revolutionary AI processing that combines quantum computing with neural networks for unprecedented speed and accuracy.';
-      stats: '10o00x faster processing'};
-      icon: '🎯';
-      title: 'Autonomous Content Creation';
-      description: 'AI systems that independently generate, optimize, and distribute content without human intervention.';
+      icon: '🧠',
+      title: 'Quantum-Neural Fusion',
+      description: 'Revolutionary AI processing that combines quantum computing with neural networks for unprecedented speed and accuracy.',
+      stats: '10o00x faster processing'},
+      icon: '🎯',
+      title: 'Autonomous Content Creation',
+      description: 'AI systems that independently generate, optimize, and distribute content without human intervention.',
       stats: '98% automation rate',
-      icon: '🌍';
-      title: 'Global Multilingual Support';
-      description: 'Seamlessly create and adapt content for 47 countries and 23 languages with cultural context awareness.';
+      icon: '🌍',
+      title: 'Global Multilingual Support',
+      description: 'Seamlessly create and adapt content for 47 countries and 23 languages with cultural context awareness.',
       stats: '47 countries, 23 languages',
-      icon: '📈';
-      title: 'Real-time Optimization';
-      description: 'Continuous performance monitoring and automatic content optimization based on audience behavior.';
+      icon: '📈',
+      title: 'Real-time Optimization',
+      description: 'Continuous performance monitoring and automatic content optimization based on audience behavior.',
       stats: '2,50o0% engagement increase',
-      icon: '🔒';
-      title: 'Enterprise Security';
-      description: 'Bank-grade security with end-to-end encryption and compliance with global data protection standards.';
+      icon: '🔒',
+      title: 'Enterprise Security',
+      description: 'Bank-grade security with end-to-end encryption and compliance with global data protection standards.',
       stats: '99.9% security uptime',
-      icon: '⚡';
-      title: 'Edge Computing Integration';
-      description: 'Global content delivery network with edge computing for instant performance worldwide.';
+      icon: '⚡',
+      title: 'Edge Computing Integration',
+      description: 'Global content delivery network with edge computing for instant performance worldwide.',
       stats: '50ms global response time'}
   ],
   const caseStudies = [
-      company: 'Global Tech Corporation';
-      industry: 'Technology';
-      roi: '5,0o00%';
-      duration: '6 months';
-      description: 'Fortune 50o0 company achieved 5,0o00% ROI with complete content automation across 47 countries.';
+      company: 'Global Tech Corporation',
+      industry: 'Technology',
+      roi: '5,0o00%',
+      duration: '6 months',
+      description: 'Fortune 50o0 company achieved 5,0o00% ROI with complete content automation across 47 countries.',
       link: '/case-studies/ai-20o25-ultimate-content-revolution-50o00-roi-success',
-      company: 'Healthcare Innovation Leader';
-      industry: 'Healthcare';
-      roi: '2,0o00%';
-      duration: '4 months';
-      description: 'Leading healthcare company transformed patient engagement with AI-powered content personalization.';
+      company: 'Healthcare Innovation Leader',
+      industry: 'Healthcare',
+      roi: '2,0o00%',
+      duration: '4 months',
+      description: 'Leading healthcare company transformed patient engagement with AI-powered content personalization.',
       link: '/case-studies/ai-20o25-healthcare-transformation-ultimate-success',
-      company: 'Manufacturing Giant';
-      industry: 'Manufacturing';
-      roi: '3,50o0%';
-      duration: '8 months';
-      description: 'Global manufacturer automated content creation for 23 languages with zero human intervention.';
+      company: 'Manufacturing Giant',
+      industry: 'Manufacturing',
+      roi: '3,50o0%',
+      duration: '8 months',
+      description: 'Global manufacturer automated content creation for 23 languages with zero human intervention.',
       link: '/case-studies/ai-20o25-manufacturing-transformation-ultimate-success',
   const testimonials = [
-      quote: "The AI 20o25 Ultimate Content Revolution Platform has completely transformed our business. 'We', 've achieved a 5,0o00% ROI in just 6 months, and our content now reaches audiences in 47 countries with zero additional effort.";
-      author: "Sarah Johnson";
-      position: "CMO, Global Tech Corporation";
+      quote: "The AI 20o25 Ultimate Content Revolution Platform has completely transformed our business. 'Weve achieved a 5,0o00% ROI in just 6 months, and our content now reaches audiences in 47 countries with zero additional effort.",
+      author: "Sarah Johnson",
+      position: "CMO, Global Tech Corporation",
       company: "Fortune 50o0",
-      quote: "This is the future of content creation. The quantum-neural fusion technology is unlike anything 'we', 've seen before. Our engagement rates have increased by 2,50o0%.";
-      author: "Michael Chen";
-      position: "VP of Marketing, Tech Innovations Inc.";
+      quote: "This is the future of content creation. The quantum-neural fusion technology is unlike anything 'we', 've seen before. Our engagement rates have increased by 2,50o0%.",
+      author: "Michael Chen",
+      position: "VP of Marketing, Tech Innovations Inc.",
       company: "Fortune 10o00",
-      quote: "The autonomous content creation capabilities have freed up our team to focus on strategy while the AI handles all routine content. 'It', 's revolutionary.";
-      author: "Emily Rodriguez";
-      position: "Head of Content, Digital Solutions Ltd.";
+      quote: "The autonomous content creation capabilities have freed up our team to focus on strategy while the AI handles all routine content. 'Its revolutionary.",
+      author: "Emily Rodriguez",
+      position: "Head of Content, Digital Solutions Ltd.",
       company: "Enterprise",
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentPieces = [
-      id: 'ai-content-revolution-blog';
-      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI Guide';
-      type: 'Blog Post';
-      category: 'blog';
-      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough';
+      id: 'ai-content-revolution-blog',
+      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI Guide',
+      type: 'Blog Post',
+      category: 'blog',
+      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
-        speed: '1,20o0%';
-        accuracy: '99.9%'};
-      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.';
-      readingTime: '35 min read';
+        roi: '25,0o00%',
+        savings: '$50o0B+',
+        speed: '1,20o0%',
+        accuracy: '99.9%'},
+      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.',
+      readingTime: '35 min read',
       featured: true,
-      id: 'fortune-50o0-content-success';
-      title: 'Fortune 50o0 AI Content Success: $50o0B Annual Savings - 25,0o00% ROI';
-      type: 'Case Study';
-      category: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story';
-        savings: '$50o0B';
-        timeline: '18 months';
-      description: 'How TechGlobal Industries achieved extraordinary results with AI content revolution.';
-      readingTime: '25 min read';
-      id: 'content-implementation-guide';
-      title: 'AI Content Revolution Implementation Guide: Complete Roadmap to 25,0o00% ROI';
-      type: 'Implementation Guide';
-      category: 'resource';
-      url: '/resources/ai-content-revolution-implementation-guide-20o25';
-        success: '99.7%';
+      id: 'fortune-50o0-content-success',
+      title: 'Fortune 50o0 AI Content Success: $50o0B Annual Savings - 25,0o00% ROI',
+      type: 'Case Study',
+      category: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story',
+        savings: '$50o0B',
+        timeline: '18 months',
+      description: 'How TechGlobal Industries achieved extraordinary results with AI content revolution.',
+      readingTime: '25 min read',
+      id: 'content-implementation-guide',
+      title: 'AI Content Revolution Implementation Guide: Complete Roadmap to 25,0o00% ROI',
+      type: 'Implementation Guide',
+      category: 'resource',
+      url: '/resources/ai-content-revolution-implementation-guide-20o25',
+        success: '99.7%',
         guide: 'Complete',
-      description: 'The definitive guide to transforming your content strategy with revolutionary AI technologies.';
-      readingTime: '45 min read';
-      id: 'ai-automation-roi-calculator';
-      title: 'AI Automation ROI Calculator: Measure Your Investment Returns';
-      type: 'Tool';
-      category: 'tool';
-      url: '/tools/ai-automation-roi-calculator';
-        roi: '340%';
-        users: '10,0o00+';
-        accuracy: '99.8%';
+      description: 'The definitive guide to transforming your content strategy with revolutionary AI technologies.',
+      readingTime: '45 min read',
+      id: 'ai-automation-roi-calculator',
+      title: 'AI Automation ROI Calculator: Measure Your Investment Returns',
+      type: 'Tool',
+      category: 'tool',
+      url: '/tools/ai-automation-roi-calculator',
+        roi: '340%',
+        users: '10,0o00+',
+        accuracy: '99.8%',
         savings: '$2.8B+',
-      description: 'Calculate your potential ROI with our advanced AI automation calculator.';
-      readingTime: '5 min read';
+      description: 'Calculate your potential ROI with our advanced AI automation calculator.',
+      readingTime: '5 min read',
       featured: false,
-      id: 'content-strategy-consultation';
-      title: 'AI Content Strategy Consultation: Personalized Implementation Plan';
-      type: 'Service';
-      category: 'service';
-      url: '/services/ai-content-strategy-consultation';
-        clients: '50o0+';
+      id: 'content-strategy-consultation',
+      title: 'AI Content Strategy Consultation: Personalized Implementation Plan',
+      type: 'Service',
+      category: 'service',
+      url: '/services/ai-content-strategy-consultation',
+        clients: '50o0+',
         satisfaction: '98%',
-      description: 'Get personalized AI content strategy consultation from our experts.';
-      readingTime: '60 min session';
-      id: 'content-performance-analytics';
-      title: 'AI Content Performance Analytics: Real-time Optimization Dashboard';
-      type: 'Platform';
-      category: 'platform';
-      url: '/platforms/content-performance-analytics';
-        roi: '450%';
-        accuracy: '99.7%';
-        speed: 'Real-time';
+      description: 'Get personalized AI content strategy consultation from our experts.',
+      readingTime: '60 min session',
+      id: 'content-performance-analytics',
+      title: 'AI Content Performance Analytics: Real-time Optimization Dashboard',
+      type: 'Platform',
+      category: 'platform',
+      url: '/platforms/content-performance-analytics',
+        roi: '450%',
+        accuracy: '99.7%',
+        speed: 'Real-time',
         insights: '1,0o00+',
-      description: 'Monitor and optimize your content performance with our advanced analytics platform.';
-      readingTime: '10 min setup';
+      description: 'Monitor and optimize your content performance with our advanced analytics platform.',
+      readingTime: '10 min setup',
   const categories = [
-    { id: 'all', name: 'All Content', count: contentPieces.length };
-    { id: 'blog', name: 'Blog Posts', count: contentPieces.filter(item => item.category === 'blog').length };
-    { id: 'case-study', name: 'Case Studies', count: contentPieces.filter(item => item.category === 'case-study').length };
-    { id: 'resource', name: 'Resources', count: contentPieces.filter(item => item.category === 'resource').length };
-    { id: 'tool', name: 'Tools', count: contentPieces.filter(item => item.category === 'tool').length };
-    { id: 'service', name: 'Services', count: contentPieces.filter(item => item.category === 'service').length };
+    { id: 'all', name: 'All Content', count: contentPieces.length },
+    { id: 'blog', name: 'Blog Posts', count: contentPieces.filter(item => item.category === 'blog').length },
+    { id: 'case-study', name: 'Case Studies', count: contentPieces.filter(item => item.category === 'case-study').length },
+    { id: 'resource', name: 'Resources', count: contentPieces.filter(item => item.category === 'resource').length },
+    { id: 'tool', name: 'Tools', count: contentPieces.filter(item => item.category === 'tool').length },
+    { id: 'service', name: 'Services', count: contentPieces.filter(item => item.category === 'service').length },
     { id: 'platform', name: 'Platforms', count: contentPieces.filter(item => item.category === 'platform').length }
   const filteredContent = activeCategory === 'all',
     ? contentPieces,
     : contentPieces.filter(item => item.category === activeCategory),
   const getCategoryIcon = (category: string) => {
     const icons ={
-      blog: '📝';
-      'case-study': '📊';
-      resource: '📚';
-      tool: '🛠️';
-      service: '🎯';
-      platform: '💻'};
-    return icons[category as keyof typeof icons] || '📄'};
+      blog: '📝case-study': '📊',
+      resource: '📚',
+      tool: '🛠️',
+      service: '🎯',
+      platform: '💻'},
+    return icons[category as keyof typeof icons] || '📄'},
   const getCategoryColor = (category: string) => {
     const colors ={
-      blog: 'bg-blue-10o0 text-blue-80o0';
-      'case-study': 'bg-green-10o0 text-green-80o0';
-      resource: 'bg-purple-10o0 text-purple-80o0';
-      tool: 'bg-orange-10o0 text-orange-80o0';
-      service: 'bg-pink-10o0 text-pink-80o0';
+      blog: 'bg-blue-10o0 text-blue-80o0case-study': 'bg-green-10o0 text-green-80o0',
+      resource: 'bg-purple-10o0 text-purple-80o0',
+      tool: 'bg-orange-10o0 text-orange-80o0',
+      service: 'bg-pink-10o0 text-pink-80o0',
       platform: 'bg-indigo-10o0 text-indigo-80o0',
     return colors[category as keyof typeof colors] || 'bg-gray-10o0 text-gray-80o0',
   return (
@@ -172,7 +170,7 @@ const UltimateContentRevolutionShowcase = () => {
             AI 20o25 Ultimate Content Revolution,
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">,
-            Experience the breakthrough technology 'that', 's transforming businesses worldwide with,
+            Experience the breakthrough technology 'thats transforming businesses worldwide with,
             unprecedented efficiency and results.,
           </p>,
         </div>,
@@ -180,8 +178,8 @@ const UltimateContentRevolutionShowcase = () => {
         <div className="mb-12">,
           <div className="flex flex-wrap justify-center gap-4 mb-8">,
             {[
-              { id: 'features', label: 'Revolutionary Features', icon: '⚡' };
-              { id: 'cases', label: 'Success Stories', icon: '🏆' };
+              { id: 'features', label: 'Revolutionary Features', icon: '⚡' },
+              { id: 'cases', label: 'Success Stories', icon: '🏆' },
               { id: 'testimonials', label: 'Client Testimonials', icon: '💬' }
             ].map((tab) => (
               <button
@@ -343,6 +341,6 @@ const UltimateContentRevolutionShowcase = () => {
                 className="border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-purple-60o0 transition-colors",
                 View All Resources,
       </div>,
-    </section>)};
-export default UltimateContentRevolutionShowcase;
+    </section>)},
+export default UltimateContentRevolutionShowcase,
 }}}}}}}}))))))))]]]]

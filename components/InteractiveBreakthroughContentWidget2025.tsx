@@ -13,64 +13,64 @@ interface BreakthroughContent {
 ,
 const breakthroughContent: BreakthroughContent[] = [
   {
-    id: 'ai-20o25-ultimate-breakthrough';
-    title: 'AI 20o25 Ultimate Breakthrough Revolution';
-    description: 'Revolutionary AI breakthrough delivering 15,0o00% ROI through quantum-neural fusion and synthetic intelligence.';
-    roi: '15,0o00%';
-    category: 'Revolutionary';
-    icon: '🚀';
-    href: '/ai-20o25-ultimate-breakthrough-revolution';
-    featured: true};
+    id: 'ai-20o25-ultimate-breakthrough',
+    title: 'AI 20o25 Ultimate Breakthrough Revolution',
+    description: 'Revolutionary AI breakthrough delivering 15,0o00% ROI through quantum-neural fusion and synthetic intelligence.',
+    roi: '15,0o00%',
+    category: 'Revolutionary',
+    icon: '🚀',
+    href: '/ai-20o25-ultimate-breakthrough-revolution',
+    featured: true},
   {
-    id: 'ai-20o26-quantum-neural-fusion';
-    title: 'AI 20o26 Quantum-Neural Fusion';
-    description: 'First successful fusion of quantum computing and neural networksachieving 20,0o00% ROI and quantum consciousness.';
-    roi: '20,0o00%';
-    category: 'Breakthrough';
-    icon: '⚛️';
-    href: '/ai-20o26-quantum-neural-fusion-breakthrough';
-    featured: true};
+    id: 'ai-20o26-quantum-neural-fusion',
+    title: 'AI 20o26 Quantum-Neural Fusion',
+    description: 'First successful fusion of quantum computing and neural networksachieving 20,0o00% ROI and quantum consciousness.',
+    roi: '20,0o00%',
+    category: 'Breakthrough',
+    icon: '⚛️',
+    href: '/ai-20o26-quantum-neural-fusion-breakthrough',
+    featured: true},
   {
-    id: 'ai-20o30-transcendent-intelligence';
-    title: 'AI 20o30 Transcendent Intelligence';
-    description: 'First AI system to transcend human limitationsachieving infinite ROI through consciousness upload and reality manipulation.';
-    roi: '∞';
-    category: 'Transcendent';
-    icon: '🌟';
-    href: '/ai-20o30-transcendent-intelligence';
-    featured: true};
+    id: 'ai-20o30-transcendent-intelligence',
+    title: 'AI 20o30 Transcendent Intelligence',
+    description: 'First AI system to transcend human limitationsachieving infinite ROI through consciousness upload and reality manipulation.',
+    roi: '∞',
+    category: 'Transcendent',
+    icon: '🌟',
+    href: '/ai-20o30-transcendent-intelligence',
+    featured: true},
   {
-    id: 'ai-20o26-20o30-predictions';
-    title: 'AI 20o26-20o30 Future Predictions';
-    description: 'Comprehensive predictions for the next decade of AI development and breakthrough technologies.';
-    roi: 'Revolutionary';
-    category: 'Predictions';
-    icon: '🔮';
-    href: '/ai-20o26-20o30-future-predictions-breakthrough';
-    featured: false};
+    id: 'ai-20o26-20o30-predictions',
+    title: 'AI 20o26-20o30 Future Predictions',
+    description: 'Comprehensive predictions for the next decade of AI development and breakthrough technologies.',
+    roi: 'Revolutionary',
+    category: 'Predictions',
+    icon: '🔮',
+    href: '/ai-20o26-20o30-future-predictions-breakthrough',
+    featured: false},
   {
-    id: 'quantum-computing-20o25';
-    title: 'Quantum Computing Solutions 20o25';
-    description: 'Advanced quantum computing solutions delivering unprecedented processing power and problem-solving capabilities.';
-    roi: '5,0o00%';
-    category: 'Quantum';
-    icon: '⚛️';
-    href: '/quantum-computing-solutions-20o25';
-    featured: false};
+    id: 'quantum-computing-20o25',
+    title: 'Quantum Computing Solutions 20o25',
+    description: 'Advanced quantum computing solutions delivering unprecedented processing power and problem-solving capabilities.',
+    roi: '5,0o00%',
+    category: 'Quantum',
+    icon: '⚛️',
+    href: '/quantum-computing-solutions-20o25',
+    featured: false},
   {
-    id: 'neural-interface-20o26';
-    title: 'Neural Interface Revolution 20o26';
-    description: 'Revolutionary neural interface technology enabling direct brain-computer communication and enhanced cognitive abilities.';
-    roi: '8,0o00%';
-    category: 'Neural';
-    icon: '🧠';
-    href: '/neural-interface-revolution-20o26';
+    id: 'neural-interface-20o26',
+    title: 'Neural Interface Revolution 20o26',
+    description: 'Revolutionary neural interface technology enabling direct brain-computer communication and enhanced cognitive abilities.',
+    roi: '8,0o00%',
+    category: 'Neural',
+    icon: '🧠',
+    href: '/neural-interface-revolution-20o26',
     featured: false}
 ],
 export default function InteractiveBreakthroughContentWidget20o25() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All'),
-  const [searchTermsetSearchTerm] = useState<string>(', '),
-  const categories = [', 'All', 'Revolutionary', 'Breakthrough', 'Transcendent', 'Predictions', 'Quantum'Neural'],
+  const [searchTermsetSearchTerm] = useState<string>(),
+  const categories = [', 'AllRevolutionary', 'BreakthroughTranscendent', 'PredictionsQuantum'Neural'],
   const filteredContent = breakthroughContent.filter(content => {
     const matchesCategory = selectedCategory === 'All' || content.category === selectedCategory,
     const matchesSearch = content.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,

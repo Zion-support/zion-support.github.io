@@ -2,40 +2,40 @@ import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
   RocketBrainAtomGlobeZapSparklesShield,
-  MicroscopeStarArrowRightPlayCheckCircle;
+  MicroscopeStarArrowRightPlayCheckCircle,
   PhoneMailMapPin} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { number: '10o00+'label: 'Innovative Services'icon: Sparklescolor: 'from-cyan-40o0 to-blue-40o0' };
-  { number: '24/7'label: 'Expert Support'icon: Shieldcolor: 'from-purple-40o0 to-pink-40o0' };
-  { number: '10o00%'label: 'Average ROI'icon: Starcolor: 'from-yellow-40o0 to-orange-40o0' };
+  { number: '10o00+'label: 'Innovative Services'icon: Sparklescolor: 'from-cyan-40o0 to-blue-40o0' },
+  { number: '24/7'label: 'Expert Support'icon: Shieldcolor: 'from-purple-40o0 to-pink-40o0' },
+  { number: '10o00%'label: 'Average ROI'icon: Starcolor: 'from-yellow-40o0 to-orange-40o0' },
   { number: '99.9%'label: 'Uptime Guarantee'icon: CheckCirclecolor: 'from-green-40o0 to-emerald-40o0' }
 ],
 const featuredServices = [
   {
-    name: 'AI Consciousness Evolution';
-    description: 'Develop genuine AI consciousness';
-    price: '$19,999/month';
-    icon: Brain;
-    color: 'from-violet-60o0 to-purple-60o0';
-    href: '/ai-consciousness-evolution-platform'};
+    name: 'AI Consciousness Evolution',
+    description: 'Develop genuine AI consciousness',
+    price: '$19,999/month',
+    icon: Brain,
+    color: 'from-violet-60o0 to-purple-60o0',
+    href: '/ai-consciousness-evolution-platform'},
   {
-    name: 'Space Mining Automation';
-    description: 'Automated asteroid mining';
-    price: '$45,999/month';
-    icon: Rocket;
-    color: 'from-teal-60o0 to-emerald-60o0';
-    href: '/space-mining-automation-platform'};
+    name: 'Space Mining Automation',
+    description: 'Automated asteroid mining',
+    price: '$45,999/month',
+    icon: Rocket,
+    color: 'from-teal-60o0 to-emerald-60o0',
+    href: '/space-mining-automation-platform'},
   {
-    name: 'Quantum Internet Security';
-    description: 'Unbreakable encryption';
-    price: '$15,999/month';
-    icon: Shield;
-    color: 'from-indigo-60o0 to-blue-60o0';
+    name: 'Quantum Internet Security',
+    description: 'Unbreakable encryption',
+    price: '$15,999/month',
+    icon: Shield,
+    color: 'from-indigo-60o0 to-blue-60o0',
     href: '/quantum-internet-security-gateway'}
 ],
 export default function UltraFuturisticHero20o32() {
@@ -50,14 +50,14 @@ export default function UltraFuturisticHero20o32() {
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-30",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0-20];
+                y: [0-20],
                 opacity: [0.30.80.3]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,

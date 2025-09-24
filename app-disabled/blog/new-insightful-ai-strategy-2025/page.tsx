@@ -1,35 +1,33 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  Lightbulb;
-  TrendingUp;
-  CheckCircle;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Lightbulb,
+  TrendingUp,
+  CheckCircle,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'AI Strategy 20o25: 7 Practical Plays for Immediate Impact';
+  title: 'AI Strategy 20o25: 7 Practical Plays for Immediate Impact',
   description:,
-    'A concise, actionable AI strategy for 20o25 with seven practical plays any enterprise can start this quarter.';
+    'A concise, actionable AI strategy for 20o25 with seven practical plays any enterprise can start this quarter.',
   keywords: [
-    'AI Strategy';
-    'Enterprise AI';
-    'Implementation';
-    '20o25';
-    'Playbook';
-  ];
+    'AI StrategyEnterprise AI',
+    'Implementation20o25',
+    'Playbook',
+  ],
   openGraph: {
-    title: 'AI Strategy 20o25: 7 Practical Plays for Immediate Impact';
+    title: 'AI Strategy 20o25: 7 Practical Plays for Immediate Impact',
     description:,
-      'A concise, actionable AI strategy for 20o25 with seven practical plays any enterprise can start this quarter.';
-    type: 'article';
-    publishedTime: '20o25-09-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['AI Strategy', 'Enterprise AI', 'Playbook'];
-  };
-};
+      'A concise, actionable AI strategy for 20o25 with seven practical plays any enterprise can start this quarter.',
+    type: 'article',
+    publishedTime: '20o25-09-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['AI StrategyEnterprise AI', 'Playbook'],
+  },
+},
 export default function AIPracticalStrategy20o25() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -67,33 +65,33 @@ export default function AIPracticalStrategy20o25() {
         <div className='grid grid-cols-1 md: grid-cols-2 gap-6 mb-10'>,
           {[
             {
-              title: 'Customer Service Copilots';
-              desc: 'Deploy agent-assisted support to reduce handle time and increase CSAT.';
-            };
+              title: 'Customer Service Copilots',
+              desc: 'Deploy agent-assisted support to reduce handle time and increase CSAT.'
+            },
             {
-              title: 'Sales Enablement Copilots';
-              desc: 'Generate proposals, summaries, and next steps directly in CRM.';
-            };
+              title: 'Sales Enablement Copilots',
+              desc: 'Generate proposals, summaries, and next steps directly in CRM.',
+            },
             {
-              title: 'Finance Reconciliation';
-              desc: 'Automate invoice matching, variance detection, and anomaly alerts.';
-            };
+              title: 'Finance Reconciliation',
+              desc: 'Automate invoice matching, variance detection, and anomaly alerts.',
+            },
             {
-              title: 'Marketing Content Engine';
-              desc: 'Create on-brand assets with governance and approval workflows.';
-            };
+              title: 'Marketing Content Engine',
+              desc: 'Create on-brand assets with governance and approval workflows.'
+            },
             {
-              title: 'Ops Automation';
-              desc: 'Triage tickets, update runbooks, and trigger remediations.';
-            };
+              title: 'Ops Automation',
+              desc: 'Triage tickets, update runbooks, and trigger remediations.',
+            },
             {
-              title: 'Data Quality Guardrails';
-              desc: 'Establish lineage, PII controls, and evaluation harnesses.';
-            };
+              title: 'Data Quality Guardrails',
+              desc: 'Establish lineage, PII controls, and evaluation harnesses.',
+            },
             {
-              title: 'Search & Knowledge';
-              desc: 'Enterprise RAG with citations, feedback loops, and analytics.';
-            };
+              title: 'Search & Knowledge',
+              desc: 'Enterprise RAG with citations, feedback loops, and analytics.',
+            },
           ].map(item => (
             <div
               key={item.title}
@@ -114,29 +112,26 @@ export default function AIPracticalStrategy20o25() {
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,
             {[
               {
-                phase: '30 Days';
+                phase: '30 Days',
                 items: [
-                  'Choose 2 plays';
-                  'Set measurable KPIs';
-                  'Stand up eval harness';
-                ];
-              };
+                  'Choose 2 playsSet measurable KPIs',
+                  'Stand up eval harness',
+                ]
+              },
               {
-                phase: '60 Days';
+                phase: '60 Days',
                 items: [
-                  'Ship pilots';
-                  'Instrument analytics';
-                  'Train core users';
-                ];
-              };
+                  'Ship pilotsInstrument analytics',
+                  'Train core users',
+                ]
+              },
               {
-                phase: '90 Days';
+                phase: '90 Days',
                 items: [
-                  'Scale what works';
-                  'De-risk compliance';
-                  'Budget next wave';
-                ];
-              };
+                  'Scale what worksDe-risk compliance',
+                  'Budget next wave',
+                ]
+              },
             ].map(col => (
               <div key={col.phase} className='bg-white border rounded-xl p-6'>,
                 <h3 className='font-bold text-gray-90o0 mb-3'>{col.phase}</h3>,
@@ -156,10 +151,10 @@ export default function AIPracticalStrategy20o25() {
           </h2>,
           <div className='grid grid-cols-1 md: grid-cols-4 gap-6'>,
             {[
-              { metric: '20-40%', label: 'AHT reduction' };
-              { metric: '15-25%', label: 'Win rate lift' };
-              { metric: '30-50%', label: 'Ops costs saved' };
-              { metric: '2-5x', label: 'Content throughput' };
+              { metric: '20-40%', label: 'AHT reduction' },
+              { metric: '15-25%', label: 'Win rate lift' },
+              { metric: '30-50%', label: 'Ops costs saved' },
+              { metric: '2-5x', label: 'Content throughput' },
             ].map(m => (
               <div
                 key={m.label}

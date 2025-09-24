@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-type StaleReport ={ generatedAt: string | null, staleCount: number, items: { file: string, lastModified: string }[] };
+type StaleReport ={ generatedAt: string | null, staleCount: number, items: { file: string, lastModified: string }[] },
 export default function StaleAutomation() {
   const [report, setReport] = useState<StaleReport>({ generatedAt: null, staleCount: 0, items: [] }),
   useEffect(() => {

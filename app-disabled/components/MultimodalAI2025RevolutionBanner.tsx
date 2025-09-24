@@ -21,46 +21,46 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
     return () => clearInterval(interval)}, [isAutoPlaying]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('multimodal-ai-20o25-banner-dismissed', 'true')};
+    localStorage.setItem('multimodal-ai-20o25-banner-dismissedtrue')},
   const multimodalContent = [
     {
-      id: 'multimodal-breakthrough';
-      title: 'AI 20o25: Multimodal Intelligence Revolution';
-      subtitle: '750% ROI Through Unified Text, Image, Audio & Video Processing';
-      description: 'Fortune 50o0 companies achieve unprecedented results with multimodal AI that processes all data types simultaneously.';
+      id: 'multimodal-breakthrough',
+      title: 'AI 20o25: Multimodal Intelligence Revolution',
+      subtitle: '750% ROI Through Unified Text, Image, Audio & Video Processing',
+      description: 'Fortune 50o0 companies achieve unprecedented results with multimodal AI that processes all data types simultaneously.',
       metrics: {
-        roi: '750%';
-        savings: '$4.2B';
-        accuracy: '99.7%';
-        speed: '340%'};
-      link: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-breakthrough';
-      icon: Brain;
-      color: 'from-purple-60o0 to-indigo-60o0'};
+        roi: '750%',
+        savings: '$4.2B',
+        accuracy: '99.7%',
+        speed: '340%'},
+      link: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-breakthrough',
+      icon: Brain,
+      color: 'from-purple-60o0 to-indigo-60o0'},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 Success Story';
-      subtitle: '$6.8B Company Achieves 750% ROI in 18 Months';
-      description: 'TechGlobal Corp transformed operations through multimodal AI, delivering $234M annual savings and 98.7% customer satisfaction.';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Success Story',
+      subtitle: '$6.8B Company Achieves 750% ROI in 18 Months',
+      description: 'TechGlobal Corp transformed operations through multimodal AI, delivering $234M annual savings and 98.7% customer satisfaction.',
       metrics: {
-        roi: '750%';
-        savings: '$234M';
-        satisfaction: '98.7%';
-        efficiency: '67%'};
-      link: '/case-studies/fortune-50o0-multimodal-ai-transformation-750-roi-success';
-      icon: TrendingUp;
-      color: 'from-blue-60o0 to-cyan-60o0'};
+        roi: '750%',
+        savings: '$234M',
+        satisfaction: '98.7%',
+        efficiency: '67%'},
+      link: '/case-studies/fortune-50o0-multimodal-ai-transformation-750-roi-success',
+      icon: TrendingUp,
+      color: 'from-blue-60o0 to-cyan-60o0'},
     {
-      id: 'implementation-guide';
-      title: 'Complete Implementation Guide';
-      subtitle: 'Master Guide: Strategy to 750% ROI in 18 Months';
-      description: 'Step-by-step roadmap with technical architecture, ROI frameworks, and real-world success strategies for enterprise transformation.';
+      id: 'implementation-guide',
+      title: 'Complete Implementation Guide',
+      subtitle: 'Master Guide: Strategy to 750% ROI in 18 Months',
+      description: 'Step-by-step roadmap with technical architecture, ROI frameworks, and real-world success strategies for enterprise transformation.',
       metrics: {
-        roi: '750%';
-        timeline: '18 months';
-        success: '98%';
-        phases: '3 phases'};
-      link: '/resources/ai-20o25-multimodal-implementation-master-guide';
-      icon: CheckCircle;
+        roi: '750%',
+        timeline: '18 months',
+        success: '98%',
+        phases: '3 phases'},
+      link: '/resources/ai-20o25-multimodal-implementation-master-guide',
+      icon: CheckCircle,
       color: 'from-green-60o0 to-emerald-60o0'}
   ],
   const currentContent = multimodalContent[currentSlide],
@@ -167,7 +167,7 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
                         <motion.div,
                           className="absolute top-4 left-1/2 transform -translate-x-1/2",
                           animate={{
-                            scale: [1, 1.1, 1];
+                            scale: [1, 1.1, 1],
                             opacity: [0.7, 1, 0.7]}}
                           transition={{ duration: 2, repeat: Infinity }}
                         >,
@@ -180,7 +180,7 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
                         <motion.div,
                           className="absolute top-1/2 right-4 transform -translate-y-1/2",
                           animate={{
-                            scale: [1, 1.1, 1];
+                            scale: [1, 1.1, 1],
                             opacity: [0.7, 1, 0.7]}}
                           transition={{ duration: 2, repeat: Infinity, delay: 0.5 }}
                         >,
@@ -193,7 +193,7 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
                         <motion.div,
                           className="absolute bottom-4 left-1/2 transform -translate-x-1/2",
                           animate={{
-                            scale: [1, 1.1, 1];
+                            scale: [1, 1.1, 1],
                             opacity: [0.7, 1, 0.7]}}
                           transition={{ duration: 2, repeat: Infinity, delay: 1 }}
                         >,
@@ -206,7 +206,7 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
                         <motion.div,
                           className="absolute top-1/2 left-4 transform -translate-y-1/2",
                           animate={{
-                            scale: [1, 1.1, 1];
+                            scale: [1, 1.1, 1],
                             opacity: [0.7, 1, 0.7]}}
                           transition={{ duration: 2, repeat: Infinity, delay: 1.5 }}
                         >,
@@ -299,5 +299,5 @@ const MultimodalAI20o25RevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default MultimodalAI20o25RevolutionBanner;
+    </AnimatePresence>)},
+export default MultimodalAI20o25RevolutionBanner,

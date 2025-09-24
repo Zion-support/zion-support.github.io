@@ -8,52 +8,52 @@ const ComprehensiveServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all'),
     const [selectedService, setSelectedService] = useState(null),
     const allServices = [
-        ...comprehensiveMicroSaasServices20o25;
-        ...innovativeITAIServices20o25;
-        ...expandedInnovativeServices20o25;
-        ...emergingTechInnovationServices20o25;
+        ...comprehensiveMicroSaasServices20o25,
+        ...innovativeITAIServices20o25,
+        ...expandedInnovativeServices20o25,
+        ...emergingTechInnovationServices20o25,
         ...enterpriseITInnovationServices20o25],
     const categories = [
-        { id: 'all', name: 'All Services', count: allServices.length };
-        { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length };
-        { id: 'ai-customer-service', name: 'AI Customer Service', count: allServices.filter(s => s.category.includes('Customer Service')).length };
-        { id: 'data-analytics-bi', name: 'Data Analytics & BI', count: allServices.filter(s => s.category.includes('Analytics') || s.category.includes('BI')).length };
-        { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length };
-        { id: 'ai-social-media', name: 'AI Social Media', count: allServices.filter(s => s.category.includes('Social Media')).length };
-        { id: 'ai-supply-chain', name: 'AI Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length };
-        { id: 'ai-hr-recruitment', name: 'AI HR & Recruitment', count: allServices.filter(s => s.category.includes('HR') || s.category.includes('Recruitment')).length };
-        { id: 'ai-finance-accounting', name: 'AI Finance & Accounting', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Accounting')).length };
-        { id: 'quantum-computing-ai', name: 'Quantum Computing & AI', count: allServices.filter(s => s.category.includes('Quantum')).length };
-        { id: 'autonomous-ai-ml', name: 'Autonomous AI & ML', count: allServices.filter(s => s.category.includes('Autonomous')).length };
-        { id: 'edge-computing-ai', name: 'Edge Computing & AI', count: allServices.filter(s => s.category.includes('Edge')).length };
-        { id: 'ai-cybersecurity', name: 'AI Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length };
-        { id: 'blockchain-ai', name: 'Blockchain & AI', count: allServices.filter(s => s.category.includes('Blockchain')).length };
-        { id: 'autonomous-devops', name: 'Autonomous DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length };
-        { id: 'ai-data-governance', name: 'AI Data Governance', count: allServices.filter(s => s.category.includes('Data Governance')).length };
-        { id: 'ai-api-management', name: 'AI API Management', count: allServices.filter(s => s.category.includes('API Management')).length };
-        { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length };
-        { id: 'ai-legal-compliance', name: 'AI Legal & Compliance', count: allServices.filter(s => s.category.includes('Legal') || s.category.includes('Compliance')).length };
-        { id: 'quantum-security-communication', name: 'Quantum Security & Communication', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Security') || s.category.includes('Communication'))).length };
-        { id: 'ai-healthcare-diagnostics', name: 'AI Healthcare & Diagnostics', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Diagnostics')).length };
-        { id: 'autonomous-supply-chain-logistics', name: 'Autonomous Supply Chain & Logistics', count: allServices.filter(s => s.category.includes('Supply Chain') || s.category.includes('Logistics')).length };
-        { id: 'blockchain-digital-identity', name: 'Blockchain & Digital Identity', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Digital Identity')).length };
-        { id: 'ai-finance-trading', name: 'AI Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length };
-        { id: 'space-technology-innovation', name: 'Space Technology & Innovation', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Innovation')).length };
-        { id: 'metaverse-virtual-reality', name: 'Metaverse & Virtual Reality', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('Virtual Reality')).length };
-        { id: 'sustainable-energy-green-tech', name: 'Sustainable Energy & Green Tech', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Green Tech')).length };
-        { id: 'advanced-robotics-automation', name: 'Advanced Robotics & Automation', count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length };
-        { id: 'quantum-internet-networking', name: 'Quantum Internet & Networking', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Internet') || s.category.includes('Networking'))).length };
-        { id: 'climate-tech-sustainability', name: 'Climate Tech & Sustainability', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length };
-        { id: 'autonomous-vehicles-transportation', name: 'Autonomous Vehicles & Transportation', count: allServices.filter(s => s.category.includes('Vehicle') || s.category.includes('Transportation')).length };
-        { id: 'brain-computer-interface-neuroscience', name: 'Brain-Computer Interface & Neuroscience', count: allServices.filter(s => s.category.includes('Brain-Computer') || s.category.includes('Neuroscience')).length };
-        { id: 'synthetic-biology-biotechnology', name: 'Synthetic Biology & Biotechnology', count: allServices.filter(s => s.category.includes('Biology') || s.category.includes('Biotechnology')).length };
-        { id: 'enterprise-data-analytics', name: 'Enterprise Data & Analytics', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Data') || s.category.includes('Analytics'))).length };
-        { id: 'multi-cloud-infrastructure', name: 'Multi-Cloud & Infrastructure', count: allServices.filter(s => s.category.includes('Multi-Cloud') || s.category.includes('Infrastructure')).length };
-        { id: 'enterprise-api-integration', name: 'Enterprise API & Integration', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('API') || s.category.includes('Integration'))).length };
-        { id: 'enterprise-itsm', name: 'Enterprise IT Service Management', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('IT Service Management')).length };
-        { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length };
-        { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length };
-        { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length };
+        { id: 'all', name: 'All Services', count: allServices.length },
+        { id: 'ai-content-marketing', name: 'AI Content & Marketing', count: allServices.filter(s => s.category.includes('Content') || s.category.includes('Marketing')).length },
+        { id: 'ai-customer-service', name: 'AI Customer Service', count: allServices.filter(s => s.category.includes('Customer Service')).length },
+        { id: 'data-analytics-bi', name: 'Data Analytics & BI', count: allServices.filter(s => s.category.includes('Analytics') || s.category.includes('BI')).length },
+        { id: 'ai-sales-crm', name: 'AI Sales & CRM', count: allServices.filter(s => s.category.includes('Sales') || s.category.includes('CRM')).length },
+        { id: 'ai-social-media', name: 'AI Social Media', count: allServices.filter(s => s.category.includes('Social Media')).length },
+        { id: 'ai-supply-chain', name: 'AI Supply Chain', count: allServices.filter(s => s.category.includes('Supply Chain')).length },
+        { id: 'ai-hr-recruitment', name: 'AI HR & Recruitment', count: allServices.filter(s => s.category.includes('HR') || s.category.includes('Recruitment')).length },
+        { id: 'ai-finance-accounting', name: 'AI Finance & Accounting', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Accounting')).length },
+        { id: 'quantum-computing-ai', name: 'Quantum Computing & AI', count: allServices.filter(s => s.category.includes('Quantum')).length },
+        { id: 'autonomous-ai-ml', name: 'Autonomous AI & ML', count: allServices.filter(s => s.category.includes('Autonomous')).length },
+        { id: 'edge-computing-ai', name: 'Edge Computing & AI', count: allServices.filter(s => s.category.includes('Edge')).length },
+        { id: 'ai-cybersecurity', name: 'AI Cybersecurity', count: allServices.filter(s => s.category.includes('Cybersecurity')).length },
+        { id: 'blockchain-ai', name: 'Blockchain & AI', count: allServices.filter(s => s.category.includes('Blockchain')).length },
+        { id: 'autonomous-devops', name: 'Autonomous DevOps', count: allServices.filter(s => s.category.includes('DevOps')).length },
+        { id: 'ai-data-governance', name: 'AI Data Governance', count: allServices.filter(s => s.category.includes('Data Governance')).length },
+        { id: 'ai-api-management', name: 'AI API Management', count: allServices.filter(s => s.category.includes('API Management')).length },
+        { id: 'autonomous-cloud-migration', name: 'Autonomous Cloud Migration', count: allServices.filter(s => s.category.includes('Cloud Migration')).length },
+        { id: 'ai-legal-compliance', name: 'AI Legal & Compliance', count: allServices.filter(s => s.category.includes('Legal') || s.category.includes('Compliance')).length },
+        { id: 'quantum-security-communication', name: 'Quantum Security & Communication', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Security') || s.category.includes('Communication'))).length },
+        { id: 'ai-healthcare-diagnostics', name: 'AI Healthcare & Diagnostics', count: allServices.filter(s => s.category.includes('Healthcare') || s.category.includes('Diagnostics')).length },
+        { id: 'autonomous-supply-chain-logistics', name: 'Autonomous Supply Chain & Logistics', count: allServices.filter(s => s.category.includes('Supply Chain') || s.category.includes('Logistics')).length },
+        { id: 'blockchain-digital-identity', name: 'Blockchain & Digital Identity', count: allServices.filter(s => s.category.includes('Blockchain') || s.category.includes('Digital Identity')).length },
+        { id: 'ai-finance-trading', name: 'AI Finance & Trading', count: allServices.filter(s => s.category.includes('Finance') || s.category.includes('Trading')).length },
+        { id: 'space-technology-innovation', name: 'Space Technology & Innovation', count: allServices.filter(s => s.category.includes('Space') || s.category.includes('Innovation')).length },
+        { id: 'metaverse-virtual-reality', name: 'Metaverse & Virtual Reality', count: allServices.filter(s => s.category.includes('Metaverse') || s.category.includes('Virtual Reality')).length },
+        { id: 'sustainable-energy-green-tech', name: 'Sustainable Energy & Green Tech', count: allServices.filter(s => s.category.includes('Energy') || s.category.includes('Green Tech')).length },
+        { id: 'advanced-robotics-automation', name: 'Advanced Robotics & Automation', count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length },
+        { id: 'quantum-internet-networking', name: 'Quantum Internet & Networking', count: allServices.filter(s => s.category.includes('Quantum') && (s.category.includes('Internet') || s.category.includes('Networking'))).length },
+        { id: 'climate-tech-sustainability', name: 'Climate Tech & Sustainability', count: allServices.filter(s => s.category.includes('Climate') || s.category.includes('Sustainability')).length },
+        { id: 'autonomous-vehicles-transportation', name: 'Autonomous Vehicles & Transportation', count: allServices.filter(s => s.category.includes('Vehicle') || s.category.includes('Transportation')).length },
+        { id: 'brain-computer-interface-neuroscience', name: 'Brain-Computer Interface & Neuroscience', count: allServices.filter(s => s.category.includes('Brain-Computer') || s.category.includes('Neuroscience')).length },
+        { id: 'synthetic-biology-biotechnology', name: 'Synthetic Biology & Biotechnology', count: allServices.filter(s => s.category.includes('Biology') || s.category.includes('Biotechnology')).length },
+        { id: 'enterprise-data-analytics', name: 'Enterprise Data & Analytics', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Data') || s.category.includes('Analytics'))).length },
+        { id: 'multi-cloud-infrastructure', name: 'Multi-Cloud & Infrastructure', count: allServices.filter(s => s.category.includes('Multi-Cloud') || s.category.includes('Infrastructure')).length },
+        { id: 'enterprise-api-integration', name: 'Enterprise API & Integration', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('API') || s.category.includes('Integration'))).length },
+        { id: 'enterprise-itsm', name: 'Enterprise IT Service Management', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('IT Service Management')).length },
+        { id: 'enterprise-security-soc', name: 'Enterprise Security & SOC', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Security') || s.category.includes('SOC'))).length },
+        { id: 'enterprise-governance', name: 'Enterprise Data Governance', count: allServices.filter(s => s.category.includes('Enterprise') && s.category.includes('Data Governance')).length },
+        { id: 'enterprise-workflow-automation', name: 'Enterprise Workflow & Automation', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Workflow') || s.category.includes('Automation'))).length },
         { id: 'enterprise-digital-twin-iot', name: 'Enterprise Digital Twin & IoT', count: allServices.filter(s => s.category.includes('Enterprise') && (s.category.includes('Digital Twin') || s.category.includes('IoT'))).length }
     ],
     const filteredServices = selectedCategory === 'all',
@@ -64,36 +64,36 @@ const ComprehensiveServicesShowcase = () => {
                 return true,
             // Handle special category mappings,
             const categoryMappings ={
-                'ai-legal-compliance': ['Legal', 'Compliance'];
-                'quantum-security-communication': ['Quantum', 'Security', 'Communication'];
-                'ai-healthcare-diagnostics': ['Healthcare', 'Diagnostics'];
-                'autonomous-supply-chain-logistics': ['Supply Chain', 'Logistics'];
-                'blockchain-digital-identity': ['Blockchain', 'Digital Identity'];
-                'ai-finance-trading': ['Finance', 'Trading'];
-                'space-technology-innovation': ['Space', 'Innovation'];
-                'metaverse-virtual-reality': ['Metaverse', 'Virtual Reality'];
-                'sustainable-energy-green-tech': ['Energy', 'Green Tech'];
-                'advanced-robotics-automation': ['Robotics', 'Automation'];
-                'quantum-internet-networking': ['Quantum', 'Internet', 'Networking'];
-                'climate-tech-sustainability': ['Climate', 'Sustainability'];
-                'autonomous-vehicles-transportation': ['Vehicle', 'Transportation'];
-                'brain-computer-interface-neuroscience': ['Brain-Computer', 'Neuroscience'];
-                'synthetic-biology-biotechnology': ['Biology', 'Biotechnology'];
-                'enterprise-data-analytics': ['Enterprise', 'Data', 'Analytics'];
-                'multi-cloud-infrastructure': ['Multi-Cloud', 'Infrastructure'];
-                'enterprise-api-integration': ['Enterprise', 'API', 'Integration'];
-                'enterprise-itsm': ['Enterprise', 'IT Service Management'];
-                'enterprise-security-soc': ['Enterprise', 'Security', 'SOC'];
-                'enterprise-governance': ['Enterprise', 'Data Governance'];
-                'enterprise-workflow-automation': ['Enterprise', 'Workflow', 'Automation'];
-                'enterprise-digital-twin-iot': ['Enterprise', 'Digital Twin', 'IoT']};
+                'ai-legal-compliance': ['LegalCompliance'],
+                'quantum-security-communication': ['QuantumSecurity', 'Communication'],
+                'ai-healthcare-diagnostics': ['HealthcareDiagnostics'],
+                'autonomous-supply-chain-logistics': ['Supply ChainLogistics'],
+                'blockchain-digital-identity': ['BlockchainDigital Identity'],
+                'ai-finance-trading': ['FinanceTrading'],
+                'space-technology-innovation': ['SpaceInnovation'],
+                'metaverse-virtual-reality': ['MetaverseVirtual Reality'],
+                'sustainable-energy-green-tech': ['EnergyGreen Tech'],
+                'advanced-robotics-automation': ['RoboticsAutomation'],
+                'quantum-internet-networking': ['QuantumInternet', 'Networking'],
+                'climate-tech-sustainability': ['ClimateSustainability'],
+                'autonomous-vehicles-transportation': ['VehicleTransportation'],
+                'brain-computer-interface-neuroscience': ['Brain-ComputerNeuroscience'],
+                'synthetic-biology-biotechnology': ['BiologyBiotechnology'],
+                'enterprise-data-analytics': ['EnterpriseData', 'Analytics'],
+                'multi-cloud-infrastructure': ['Multi-CloudInfrastructure'],
+                'enterprise-api-integration': ['EnterpriseAPI', 'Integration'],
+                'enterprise-itsm': ['EnterpriseIT Service Management'],
+                'enterprise-security-soc': ['EnterpriseSecurity', 'SOC'],
+                'enterprise-governance': ['EnterpriseData Governance'],
+                'enterprise-workflow-automation': ['EnterpriseWorkflow', 'Automation'],
+                'enterprise-digital-twin-iot': ['EnterpriseDigital Twin', 'IoT']},
             const targetKeywords = categoryMappings[selectedCategory] || [category.name],
-            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' & ', ' ').replace('AI ', '').replace('Autonomous ', '')))}),
+            return targetKeywords.some(keyword => service.category.toLowerCase().includes(keyword.toLowerCase().replace(' &  ').replace('AI ', '').replace('Autonomous ', '')))}),
     const fadeInUp ={
-        initial: { opacity: 0, y: 60 };
-        animate: { opacity: 1, y: 0 };
+        initial: { opacity: 0, y: 60 },
+        animate: { opacity: 1, y: 0 },
         transition: { duration: 0.6 }
-    };
+    },
     const filteredServices = selectedCategory === 'all',
         ? COMPREHENSIVE_SERVICES,
         : COMPREHENSIVE_SERVICES.filter(service => service.category === selectedCategory),
@@ -110,7 +110,7 @@ const ComprehensiveServicesShowcase = () => {
             <span className="text-white">Comprehensive Tech Solutions</span>,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-12">,
-            Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions;
+            Discover our cutting-edge collection of AI-powered micro SAAS services, innovative IT solutions,
             emerging technology innovations, enterprise services, quantum computing solutions, and revolutionary,
             technology platforms designed to transform your business operations across all industries.,
           </p>,
@@ -137,169 +137,169 @@ const ComprehensiveServicesShowcase = () => {
                 {category.icon} {category.name}
               </TabsTrigger>))}
           </TabsList>,
-import {Brain;
-            Shield;
-            Cloud;
-            Database;
-            Users;
-            Globe;
-            Zap;
-            Target;
-            TrendingUp;
-            Atom;
-            Link;
-            Leaf;
-            Rocket;
-            Package;
-            ArrowRight;
-            CheckCircle;
-            Star;
+import {Brain,
+            Shield,
+            Cloud,
+            Database,
+            Users,
+            Globe,
+            Zap,
+            Target,
+            TrendingUp,
+            Atom,
+            Link,
+            Leaf,
+            Rocket,
+            Package,
+            ArrowRight,
+            CheckCircle,
+            Star,
             Award} from 'lucide-react',
 export const ComprehensiveServicesShowcase: React.FC = () => {}
   const [activeCategory, setActiveCategory] = useState('all'),
   const serviceCategories = [
-    {id}: 'all', name: 'All Services', icon: Star };
-    {id}: 'ai', name: 'AI & ML', icon: Brain };
-    {id}: 'quantum', name: 'Quantum Computing', icon: Atom };
-    {id}: 'security', name: 'Cybersecurity', icon: Shield };
-    {id}: 'cloud', name: 'Cloud & DevOps', icon: Cloud };
-    {id}: 'blockchain', name: 'Blockchain & Web3', icon: LinkIcon };
-    {id}: 'enterprise', name: 'Enterprise IT', icon: Users };
-    {id}: 'green', name: 'Green IT', icon: Leaf };
-    {id}: 'space', name: 'Space Tech', icon: Rocket };
+    {id}: 'all', name: 'All Services', icon: Star },
+    {id}: 'ai', name: 'AI & ML', icon: Brain },
+    {id}: 'quantum', name: 'Quantum Computing', icon: Atom },
+    {id}: 'security', name: 'Cybersecurity', icon: Shield },
+    {id}: 'cloud', name: 'Cloud & DevOps', icon: Cloud },
+    {id}: 'blockchain', name: 'Blockchain & Web3', icon: LinkIcon },
+    {id}: 'enterprise', name: 'Enterprise IT', icon: Users },
+    {id}: 'green', name: 'Green IT', icon: Leaf },
+    {id}: 'space', name: 'Space Tech', icon: Rocket },
     {id}: 'saas', name: 'MicroSAAS', icon: Package }
   ],
   const services = [
-    {id}: 'ai-solutions';
-      title: 'AI Solutions';
-      category: 'ai';
-      description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.';
-      icon: Brain;
-      features: ['Predictive Analytics', 'Natural Language Processing', 'Computer Vision', 'AI Automation'];
-      benefits: ['40% efficiency gains', 'Intelligent decision making', 'Scalable AI infrastructure'];
-      color: 'from-purple-50o0 to-pink-50o0';
-      href: '/services/ai-solutions'};
-    {id}: 'quantum-computing';
-      title: 'Quantum Computing';
-      category: 'quantum';
-      description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.';
-      icon: Atom;
-      features: ['Quantum Algorithms', 'Optimization Problems', 'Cryptography', 'Simulation'];
-      benefits: ['Exponential speedup', 'Complex problem solving', 'Future-proof technology'];
-      color: 'from-indigo-50o0 to-purple-50o0';
-      href: '/services/quantum-computing'};
-    {id}: 'cybersecurity';
-      title: 'Cybersecurity';
-      category: 'security';
-      description: 'Advanced security solutions with AI-powered threat detection and prevention.';
-      icon: Shield;
-      features: ['Threat Detection', 'Incident Response', 'Compliance Management', 'Security Audits'];
-      benefits: ['Real-time protection', 'Proactive defense', 'Compliance assurance'];
-      color: 'from-red-50o0 to-orange-50o0';
-      href: '/services/cybersecurity'};
-    {id}: 'cloud-devops';
-      title: 'Cloud & DevOps';
-      category: 'cloud';
-      description: 'Scalable cloud infrastructure and DevOps automation for modern applications.';
-      icon: Cloud;
-      features: ['Cloud Migration', 'DevOps Automation', 'Container Orchestration', 'Infrastructure as Code'];
-      benefits: ['Scalable infrastructure', 'Faster deployment', 'Cost optimization'];
-      color: 'from-blue-50o0 to-cyan-50o0';
-      href: '/services/cloud-devops'};
-    {id}: 'blockchain-web3';
-      title: 'Blockchain & Web3';
-      category: 'blockchain';
-      description: 'Decentralized technology solutions for the next generation of digital applications.';
-      icon: LinkIcon;
-      features: ['Smart Contracts', 'DeFi Solutions', 'NFT Platforms', 'Supply Chain'];
-      benefits: ['Transparency', 'Security', 'Innovation'];
-      color: 'from-green-50o0 to-emerald-50o0';
-      href: '/services/blockchain-web3'};
-    {id}: 'enterprise-it';
-      title: 'Enterprise IT';
-      category: 'enterprise';
-      description: 'Comprehensive IT solutions for large organizations and enterprises.';
-      icon: Users;
-      features: ['IT Infrastructure', 'Data Management', 'System Integration', 'Digital Transformation'];
-      benefits: ['Enterprise-grade solutions', 'Scalable architecture', '24/7 support'];
-      color: 'from-slate-50o0 to-gray-50o0';
-      href: '/services/enterprise-it'};
-    {id}: 'green-it';
-      title: 'Green IT';
-      category: 'green';
-      description: 'Sustainable technology solutions for environmentally conscious businesses.';
-      icon: Leaf;
-      features: ['Energy Efficiency', 'Sustainable Infrastructure', 'Carbon Reduction', 'Green Computing'];
-      benefits: ['Environmental impact', 'Cost savings', 'Sustainability compliance'];
-      color: 'from-green-50o0 to-teal-50o0';
-      href: '/services/green-it'};
-    {id}: 'space-tech';
-      title: 'Space Technology';
-      category: 'space';
-      description: 'Advanced space technology solutions for satellite systems and space exploration.';
-      icon: Rocket;
-      features: ['Satellite Systems', 'Space Data Analytics', 'Space Cybersecurity', 'Orbital Solutions'];
-      benefits: ['Innovation leadership', 'Advanced technology', 'Space expertise'];
-      color: 'from-violet-50o0 to-purple-50o0';
-      href: '/services/space-tech'};
-    {id}: 'microsaas';
-      title: 'MicroSAAS Development';
-      category: 'saas';
-      description: 'Custom software-as-a-service solutions for niche markets and specific business needs.';
-      icon: Package;
-      features: ['Custom Development', 'Scalable Architecture', 'API Integration', 'User Management'];
-      benefits: ['Custom solutions', 'Scalable business model', 'Recurring revenue'];
-      color: 'from-orange-50o0 to-red-50o0';
+    {id}: 'ai-solutions',
+      title: 'AI Solutions',
+      category: 'ai',
+      description: 'Comprehensive artificial intelligence and machine learning solutions for business transformation.',
+      icon: Brain,
+      features: ['Predictive AnalyticsNatural Language Processing', 'Computer VisionAI Automation'],
+      benefits: ['40% efficiency gainsIntelligent decision making', 'Scalable AI infrastructure'],
+      color: 'from-purple-50o0 to-pink-50o0',
+      href: '/services/ai-solutions'},
+    {id}: 'quantum-computing',
+      title: 'Quantum Computing',
+      category: 'quantum',
+      description: 'Cutting-edge quantum computing solutions for complex problem solving and optimization.',
+      icon: Atom,
+      features: ['Quantum AlgorithmsOptimization Problems', 'CryptographySimulation'],
+      benefits: ['Exponential speedupComplex problem solving', 'Future-proof technology'],
+      color: 'from-indigo-50o0 to-purple-50o0',
+      href: '/services/quantum-computing'},
+    {id}: 'cybersecurity',
+      title: 'Cybersecurity',
+      category: 'security',
+      description: 'Advanced security solutions with AI-powered threat detection and prevention.',
+      icon: Shield,
+      features: ['Threat DetectionIncident Response', 'Compliance ManagementSecurity Audits'],
+      benefits: ['Real-time protectionProactive defense', 'Compliance assurance'],
+      color: 'from-red-50o0 to-orange-50o0',
+      href: '/services/cybersecurity'},
+    {id}: 'cloud-devops',
+      title: 'Cloud & DevOps',
+      category: 'cloud',
+      description: 'Scalable cloud infrastructure and DevOps automation for modern applications.',
+      icon: Cloud,
+      features: ['Cloud MigrationDevOps Automation', 'Container OrchestrationInfrastructure as Code'],
+      benefits: ['Scalable infrastructureFaster deployment', 'Cost optimization'],
+      color: 'from-blue-50o0 to-cyan-50o0',
+      href: '/services/cloud-devops'},
+    {id}: 'blockchain-web3',
+      title: 'Blockchain & Web3',
+      category: 'blockchain',
+      description: 'Decentralized technology solutions for the next generation of digital applications.',
+      icon: LinkIcon,
+      features: ['Smart ContractsDeFi Solutions', 'NFT PlatformsSupply Chain'],
+      benefits: ['TransparencySecurity', 'Innovation'],
+      color: 'from-green-50o0 to-emerald-50o0',
+      href: '/services/blockchain-web3'},
+    {id}: 'enterprise-it',
+      title: 'Enterprise IT',
+      category: 'enterprise',
+      description: 'Comprehensive IT solutions for large organizations and enterprises.',
+      icon: Users,
+      features: ['IT InfrastructureData Management', 'System IntegrationDigital Transformation'],
+      benefits: ['Enterprise-grade solutionsScalable architecture', '24/7 support'],
+      color: 'from-slate-50o0 to-gray-50o0',
+      href: '/services/enterprise-it'},
+    {id}: 'green-it',
+      title: 'Green IT',
+      category: 'green',
+      description: 'Sustainable technology solutions for environmentally conscious businesses.',
+      icon: Leaf,
+      features: ['Energy EfficiencySustainable Infrastructure', 'Carbon ReductionGreen Computing'],
+      benefits: ['Environmental impactCost savings', 'Sustainability compliance'],
+      color: 'from-green-50o0 to-teal-50o0',
+      href: '/services/green-it'},
+    {id}: 'space-tech',
+      title: 'Space Technology',
+      category: 'space',
+      description: 'Advanced space technology solutions for satellite systems and space exploration.',
+      icon: Rocket,
+      features: ['Satellite SystemsSpace Data Analytics', 'Space CybersecurityOrbital Solutions'],
+      benefits: ['Innovation leadershipAdvanced technology', 'Space expertise'],
+      color: 'from-violet-50o0 to-purple-50o0',
+      href: '/services/space-tech'},
+    {id}: 'microsaas',
+      title: 'MicroSAAS Development',
+      category: 'saas',
+      description: 'Custom software-as-a-service solutions for niche markets and specific business needs.',
+      icon: Package,
+      features: ['Custom DevelopmentScalable Architecture', 'API IntegrationUser Management'],
+      benefits: ['Custom solutionsScalable business model', 'Recurring revenue'],
+      color: 'from-orange-50o0 to-red-50o0',
       href: '/services/microsaas'}
   ],
   const solutions = [
-    {id}: 'ai-autonomous-business';
-      title: 'AI Autonomous Business';
-      description: 'AI-powered autonomous systems for business operations and decision making.';
-      icon: Brain;
-      category: 'ai';
-      href: '/solutions/ai-autonomous-business'};
-    {id}: 'ai-autonomous-research';
-      title: 'AI Autonomous Research';
-      description: 'AI systems for accelerating scientific research and discovery processes.';
-      icon: Brain;
-      category: 'ai';
-      href: '/solutions/ai-autonomous-research'};
-    {id}: 'ai-autonomous-ecosystem';
-      title: 'AI Autonomous Ecosystem';
-      description: 'Integrated AI ecosystem for unified business intelligence and automation.';
-      icon: Brain;
-      category: 'ai';
-      href: '/solutions/ai-autonomous-ecosystem'};
-    {id}: 'quantum-neural-networks';
-      title: 'Quantum Neural Networks';
-      description: 'Quantum-enhanced neural networks for advanced AI applications.';
-      icon: Atom;
-      category: 'quantum';
-      href: '/solutions/quantum-neural-networks'};
-    {id}: 'quantum-edge-computing';
-      title: 'Quantum Edge Computing';
-      description: 'Quantum computing power at the edge for real-time applications.';
-      icon: Atom;
-      category: 'quantum';
-      href: '/solutions/quantum-edge-computing'};
-    {id}: 'ai-powered-security';
-      title: 'AI Powered Security';
-      description: 'Intelligent security systems with AI-driven threat detection.';
-      icon: Shield;
-      category: 'security';
-      href: '/solutions/ai-powered-security'};
-    {id}: 'ai-content-generation';
-      title: 'AI Content Generation';
-      description: 'AI-powered content creation and management solutions.';
-      icon: Brain;
-      category: 'ai';
-      href: '/solutions/ai-content-generation'};
-    {id}: 'ai-business-intelligence';
-      title: 'AI Business Intelligence';
-      description: 'Advanced analytics and insights powered by artificial intelligence.';
-      icon: Brain;
-      category: 'ai';
+    {id}: 'ai-autonomous-business',
+      title: 'AI Autonomous Business',
+      description: 'AI-powered autonomous systems for business operations and decision making.',
+      icon: Brain,
+      category: 'ai',
+      href: '/solutions/ai-autonomous-business'},
+    {id}: 'ai-autonomous-research',
+      title: 'AI Autonomous Research',
+      description: 'AI systems for accelerating scientific research and discovery processes.',
+      icon: Brain,
+      category: 'ai',
+      href: '/solutions/ai-autonomous-research'},
+    {id}: 'ai-autonomous-ecosystem',
+      title: 'AI Autonomous Ecosystem',
+      description: 'Integrated AI ecosystem for unified business intelligence and automation.',
+      icon: Brain,
+      category: 'ai',
+      href: '/solutions/ai-autonomous-ecosystem'},
+    {id}: 'quantum-neural-networks',
+      title: 'Quantum Neural Networks',
+      description: 'Quantum-enhanced neural networks for advanced AI applications.',
+      icon: Atom,
+      category: 'quantum',
+      href: '/solutions/quantum-neural-networks'},
+    {id}: 'quantum-edge-computing',
+      title: 'Quantum Edge Computing',
+      description: 'Quantum computing power at the edge for real-time applications.',
+      icon: Atom,
+      category: 'quantum',
+      href: '/solutions/quantum-edge-computing'},
+    {id}: 'ai-powered-security',
+      title: 'AI Powered Security',
+      description: 'Intelligent security systems with AI-driven threat detection.',
+      icon: Shield,
+      category: 'security',
+      href: '/solutions/ai-powered-security'},
+    {id}: 'ai-content-generation',
+      title: 'AI Content Generation',
+      description: 'AI-powered content creation and management solutions.',
+      icon: Brain,
+      category: 'ai',
+      href: '/solutions/ai-content-generation'},
+    {id}: 'ai-business-intelligence',
+      title: 'AI Business Intelligence',
+      description: 'Advanced analytics and insights powered by artificial intelligence.',
+      icon: Brain,
+      category: 'ai',
       href: '/solutions/ai-business-intelligence'}
   ],
   const filteredServices = activeCategory === 'all',
@@ -517,7 +517,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
             Ready to Transform Your Business?,
           </h2>,
           <p className="text-xl text-gray-30o0 mb-10 leading-relaxed">,
-            Contact us today to discuss how our innovative micro SAAS services can drive growth;
+            Contact us today to discuss how our innovative micro SAAS services can drive growth,
             efficiency, and competitive advantage for your organization.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-6 justify-center">,
@@ -537,7 +537,7 @@ export const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>,
         </div>,
       </></div>,
-    </div>))};
+    </div>))},
 }
 ,
 interface ServiceCardProps {service}: any,
@@ -632,37 +632,37 @@ function ServiceCard({service, getCategoryIcon}: ServiceCardProps) {}
                 </a>,
 import React, {useState, useMemo, useCallback, useEffect} from 'react',
 import {motion, AnimatePresence} from 'framer-motion',
-import {Search;
-            Filter;
-            Star;
-            TrendingUp;
-            Zap;
-            Shield;
-            Brain;
-            Globe;
-            ArrowRight;
-            CheckCircle;
-            DollarSign;
-            Clock;
-            Users;
-            Target;
-            Sparkles;
-            Eye;
-            Heart;
-            Share2;
-            Download;
-            Play;
-            BookOpen;
-            Code;
-            Database;
-            Cloud;
-            Lock;
-            Rocket;
-            Lightbulb;
-            Cpu;
-            Network;
-            Smartphone;
-            Monitor;
+import {Search,
+            Filter,
+            Star,
+            TrendingUp,
+            Zap,
+            Shield,
+            Brain,
+            Globe,
+            ArrowRight,
+            CheckCircle,
+            DollarSign,
+            Clock,
+            Users,
+            Target,
+            Sparkles,
+            Eye,
+            Heart,
+            Share2,
+            Download,
+            Play,
+            BookOpen,
+            Code,
+            Database,
+            Cloud,
+            Lock,
+            Rocket,
+            Lightbulb,
+            Cpu,
+            Network,
+            Smartphone,
+            Monitor,
             Server} from 'lucide-react',
 import {INNOVATIVE_MICRO_SAAS_SERVICES, INNOVATIVE_SERVICE_CATEGORIES, InnovativeMicroSaasService} from '../data/innovativeMicroSaasServices',
 interface ServiceCardProps {service}: InnovativeMicroSaasService,
@@ -674,41 +674,30 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
   const [isHovered, setIsHovered] = useState(false),
   const [isLiked, setIsLiked] = useState(false),
   const getCategoryIcon = useCallback((category: string) => {}
-    const iconMap: {[key]}: string]: React.ReactNode } ={'AI & Business Intelligence'}: <Brain className="w-5 h-5" />;
-      'Cybersecurity': <Shield className="w-5 h-5" />;
-      'DevOps & Cloud': <Cloud className="w-5 h-5" />;
-      'Blockchain & Web3': <Globe className="w-5 h-5" />;
-      'IoT & Edge Computing': <Target className="w-5 h-5" />;
-      'Digital Marketing': <TrendingUp className="w-5 h-5" />;
-      'Virtual Reality': <Sparkles className="w-5 h-5" />;
-      'Infrastructure': <Server className="w-5 h-5" />;
-      'Quantum Computing': <Cpu className="w-5 h-5" />;
-      'Machine Learning': <Network className="w-5 h-5" />;
-      'Mobile Development': <Smartphone className="w-5 h-5" />;
-      'Web Development': <Monitor className="w-5 h-5" />};
+    const iconMap: {[key]}: string]: React.ReactNode } ={'AI & Business Intelligence'}: <Brain className="w-5 h-5" />,
+      'Cybersecurity': <Shield className="w-5 h-5" />,
+      'DevOps & Cloud': <Cloud className="w-5 h-5" />,
+      'Blockchain & Web3': <Globe className="w-5 h-5" />,
+      'IoT & Edge Computing': <Target className="w-5 h-5" />,
+      'Digital Marketing': <TrendingUp className="w-5 h-5" />,
+      'Virtual Reality': <Sparkles className="w-5 h-5" />,
+      'Infrastructure': <Server className="w-5 h-5" />,
+      'Quantum Computing': <Cpu className="w-5 h-5" />,
+      'Machine Learning': <Network className="w-5 h-5" />,
+      'Mobile Development': <Smartphone className="w-5 h-5" />,
+      'Web Development': <Monitor className="w-5 h-5" />},
     return iconMap[category] || <Star className="w-5 h-5" />}, []),
   const getCategoryColor = useCallback((category: string) => {}
-    const colorMap: {[key]}: string]: string } ={'AI & Business Intelligence'}: 'from-purple-50o0 to-pink-50o0';
-      'Cybersecurity': 'from-red-50o0 to-orange-50o0';
-      'DevOps & Cloud': 'from-blue-50o0 to-cyan-50o0';
-      'Blockchain & Web3': 'from-green-50o0 to-emerald-50o0';
-      'IoT & Edge Computing': 'from-yellow-50o0 to-orange-50o0';
-      'Digital Marketing': 'from-indigo-50o0 to-purple-50o0';
-      'Virtual Reality': 'from-pink-50o0 to-rose-50o0';
-      'Infrastructure': 'from-gray-50o0 to-slate-50o0';
-      'Quantum Computing': 'from-violet-50o0 to-purple-50o0';
-      'Machine Learning': 'from-blue-50o0 to-indigo-50o0';
-      'Mobile Development': 'from-green-50o0 to-blue-50o0';
-      'Web Development': 'from-orange-50o0 to-red-50o0'};
+    const colorMap: {[key]}: string]: string } ={'AI & Business Intelligence'}: 'from-purple-50o0 to-pink-50o0Cybersecurity': 'from-red-50o0 to-orange-50o0DevOps & Cloud': 'from-blue-50o0 to-cyan-50o0Blockchain & Web3': 'from-green-50o0 to-emerald-50o0IoT & Edge Computing': 'from-yellow-50o0 to-orange-50o0Digital Marketing': 'from-indigo-50o0 to-purple-50o0Virtual Reality': 'from-pink-50o0 to-rose-50o0Infrastructure': 'from-gray-50o0 to-slate-50o0Quantum Computing': 'from-violet-50o0 to-purple-50o0Machine Learning': 'from-blue-50o0 to-indigo-50o0Mobile Development': 'from-green-50o0 to-blue-50o0Web Development': 'from-orange-50o0 to-red-50o0'},
     return colorMap[category] || 'from-blue-50o0 to-purple-50o0'}, []),
-  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+  const handleLike = useCallback((e: React.MouseEvent) => {e.stopPropagation()},
     setIsLiked(!isLiked)}, [isLiked]),
-  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()};
+  const handleShare = useCallback((e: React.MouseEvent) => {e.stopPropagation()},
     if (navigator.share) {navigator.share({
-            title: service.title;
-            text: service.description;
-            url: service.websiteUrl})};
-    } else {navigator.clipboard.writeText(service.websiteUrl)};
+            title: service.title,
+            text: service.description,
+            url: service.websiteUrl})},
+    } else {navigator.clipboard.writeText(service.websiteUrl)},
     }
   }, [service]),
   if (viewMode === 'grid') {}
@@ -873,7 +862,7 @@ const ServiceCard: React.FC<ServiceCardProps> = ({service, index, viewMode, onSe
           </div>,
         </div>,
       </div>,
-    </motion.div>)};
+    </motion.div>)},
 const ComprehensiveServicesShowcase: React.FC = () => {}
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
@@ -893,7 +882,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
         service.category.toLowerCase().includes(searchLower))}
 ,
     // Filter by category,
-    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)};
+    if (selectedCategory !== 'all') {filtered = filtered.filter(service => service.category === selectedCategory)},
     }
 ,
     // Sort services,
@@ -911,18 +900,18 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           return 0}
     }),
     return filtered}, [searchTerm, selectedCategory, sortBy]),
-  const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)};
+  const handleServiceClick = useCallback((service: InnovativeMicroSaasService) => {setSelectedService(service)},
     // You can add navigation logic here,
     // // console.log('Service clicked:', service)}, []),
-  const clearFilters = useCallback(() => {setSearchTerm('')};
+  const clearFilters = useCallback(() => {setSearchTerm('')},
     setSelectedCategory('all'),
     setSortBy('rating')}, []),
   // Keyboard navigation support,
   useEffect(() => {}
     const handleKeyDown = (e: KeyboardEvent) => {}
-      if (e.key === 'Escape') {setSelectedService(null)};
+      if (e.key === 'Escape') {setSelectedService(null)},
       }
-    };
+    },
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)}, []),
   return (
@@ -1032,7 +1021,7 @@ const ComprehensiveServicesShowcase: React.FC = () => {}
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default ComprehensiveServicesShowcase;
-    </></></></></></></></>)};
+    </div>)},
+export default ComprehensiveServicesShowcase,
+    </></></></></></></></>)},
 )

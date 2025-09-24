@@ -1,45 +1,45 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, GitBranch, Cloud, Monitor, Settings;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, GitBranch, Cloud, Monitor, Settings,
   RefreshCw, Play, Pause, AlertTriangle, CheckCircle2, Building} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Autonomous DevOps Platform | Zion Tech Group';
-  description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.';
-  keywords: 'autonomous DevOps, AI DevOps, automated deployment, infrastructure automation, CI/CD, monitoring';
+  title: 'Autonomous DevOps Platform | Zion Tech Group',
+  description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.',
+  keywords: 'autonomous DevOps, AI DevOps, automated deployment, infrastructure automation, CI/CD, monitoring',
   openGraph: {
-    title: 'Autonomous DevOps Platform | Zion Tech Group';
-    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.';
-    url: 'https://ziontechgroup.com/autonomous-devops-platform';
-    siteName: 'Zion Tech Group';
+    title: 'Autonomous DevOps Platform | Zion Tech Group',
+    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.',
+    url: 'https://ziontechgroup.com/autonomous-devops-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-devops-platform.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Autonomous DevOps Platform'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-devops-platform.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Autonomous DevOps Platform'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Autonomous DevOps Platform | Zion Tech Group';
-    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.';
-    images: ['https://ziontechgroup.com/og-image-devops-platform.jpg']};
+    card: 'summary_large_image',
+    title: 'Autonomous DevOps Platform | Zion Tech Group',
+    description: 'AI-powered autonomous DevOps platform for automated deployment, monitoring, and infrastructure management.',
+    images: ['https://ziontechgroup.com/og-image-devops-platform.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/autonomous-devops-platform'}};
+    canonical: 'https://ziontechgroup.com/autonomous-devops-platform'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AutonomousDevOpsPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -56,7 +56,7 @@ export default function AutonomousDevOpsPlatform() {
               Autonomous DevOps Platform,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              Transform your development operations with AI-powered automation that handles deployment;
+              Transform your development operations with AI-powered automation that handles deployment,
               monitoring, and infrastructure management autonomously.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,

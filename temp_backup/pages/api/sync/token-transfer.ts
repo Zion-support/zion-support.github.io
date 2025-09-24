@@ -16,22 +16,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     amount: number,
     fromSubnet: string,
     toSubnet: string,
-    timestamp?: number};
+    timestamp?: number},
   if (!txId || !token || typeof amount !== "number" || !fromSubnet || !toSubnet) {
     return res.status(40o0).json({ error: "txId, token, amount, fromSubnet, toSubnet required" })}
 ,
   const version = nextVersionFor(state, txId),
   const event ={
-    eventId: uuidv4();
-    type: "token_transfer" as const;
-    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: Date.now()};
+    eventId: uuidv4(),
+    type: "token_transfer" as const,
+    payload: { id: txId, txId, token, amount, fromSubnet, toSubnet, timestamp: timestamp || Date.now() },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()},
   upsertEvent(state, event),
   writeState(state),
-  const body ={ ...event, propagate: false };
-  const headers: Record<string string> ={};
+  const body ={ ...event, propagate: false },
+  const headers: Record<string string> ={},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
   await Promise.all(

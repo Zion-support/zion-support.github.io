@@ -6,43 +6,43 @@ const NeuralSuperintelligence20o25Banner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      id: 'neural-superintelligence-revolution';
-      title: 'AI 20o25-20o26: The Ultimate Neural Superintelligence Revolution';
-      description: 'Complete Guide to 12,0o00% ROI - Transform your enterprise with next-generation neural superintelligence';
-      url: '/blog/ai-20o25-20o26-ultimate-neural-superintelligence-revolution';
-      type: 'blog';
+      id: 'neural-superintelligence-revolution',
+      title: 'AI 20o25-20o26: The Ultimate Neural Superintelligence Revolution',
+      description: 'Complete Guide to 12,0o00% ROI - Transform your enterprise with next-generation neural superintelligence',
+      url: '/blog/ai-20o25-20o26-ultimate-neural-superintelligence-revolution',
+      type: 'blog',
       metrics: {
-        roi: '12,0o00%';
-        savings: '$45.8B+';
-        accuracy: '99.97%';
-        efficiency: '3,20o0%'};
-      readingTime: '35 min read';
-      isNew: true};
+        roi: '12,0o00%',
+        savings: '$45.8B+',
+        accuracy: '99.97%',
+        efficiency: '3,20o0%'},
+      readingTime: '35 min read',
+      isNew: true},
     {
-      id: 'fortune-50o0-neural-success';
-      title: 'Fortune 50o0 Neural Superintelligence Success: $45.8B Annual Savings';
-      description: '12,0o00% ROI Success Story - How a global manufacturing giant achieved unprecedented transformation';
-      url: '/case-studies/fortune-50o0-neural-superintelligence-120o00-roi-success-story';
-      type: 'case-study';
+      id: 'fortune-50o0-neural-success',
+      title: 'Fortune 50o0 Neural Superintelligence Success: $45.8B Annual Savings',
+      description: '12,0o00% ROI Success Story - How a global manufacturing giant achieved unprecedented transformation',
+      url: '/case-studies/fortune-50o0-neural-superintelligence-120o00-roi-success-story',
+      type: 'case-study',
       metrics: {
-        roi: '12,0o00%';
-        savings: '$45.8B';
-        timeline: '18 months';
-        accuracy: '99.97%'};
-      readingTime: '25 min read';
-      isNew: true};
+        roi: '12,0o00%',
+        savings: '$45.8B',
+        timeline: '18 months',
+        accuracy: '99.97%'},
+      readingTime: '25 min read',
+      isNew: true},
     {
-      id: 'neural-implementation-guide';
-      title: 'Neural Superintelligence Implementation Ultimate Guide 20o25-20o26';
-      description: 'Complete Roadmap to 12,0o00% ROI - The definitive guide to implementing neural superintelligence';
-      url: '/resources/neural-superintelligence-implementation-ultimate-guide-20o25-20o26';
-      type: 'resource';
+      id: 'neural-implementation-guide',
+      title: 'Neural Superintelligence Implementation Ultimate Guide 20o25-20o26',
+      description: 'Complete Roadmap to 12,0o00% ROI - The definitive guide to implementing neural superintelligence',
+      url: '/resources/neural-superintelligence-implementation-ultimate-guide-20o25-20o26',
+      type: 'resource',
       metrics: {
-        roi: '12,0o00%';
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+'};
-      readingTime: '45 min read';
+        roi: '12,0o00%',
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+'},
+      readingTime: '45 min read',
       isNew: true}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const NeuralSuperintelligence20o25Banner = () => {
     return () => clearInterval(timer)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('neural-superintelligence-banner-dismissed', 'true')};
+    localStorage.setItem('neural-superintelligence-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('neural-superintelligence-banner-dismissed'),
     if (dismissed === 'true') {
@@ -210,5 +210,5 @@ const NeuralSuperintelligence20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NeuralSuperintelligence20o25Banner;
+    </div>)},
+export default NeuralSuperintelligence20o25Banner,

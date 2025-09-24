@@ -3,14 +3,10 @@ const path = require('path'),
 // // console.log('🔍 Verifying completion of all tasks...'),
 // Check if all required files exist,
 const requiredFiles = [
-    'pages/index.js';
-    'components/ModernLoadingSpinner.jsx';
-    'components/EnhancedErrorBoundary.jsx';
-    'components/AnimatedCounter.jsx';
-    'components/InteractiveCard.jsx';
-    'components/ModernHero.jsx';
-    'package.json';
-    'next.config.js';
+    'pages/index.jscomponents/ModernLoadingSpinner.jsx',
+    'components/EnhancedErrorBoundary.jsxcomponents/AnimatedCounter.jsx',
+    'components/InteractiveCard.jsxcomponents/ModernHero.jsx',
+    'package.jsonnext.config.js',
     'netlify.toml'],
 // // console.log('📁 Checking required files...'),
 let allFilesExist = true,
@@ -22,7 +18,7 @@ requiredFiles.forEach(file => {
 }),
 // Check for merge conflicts,
 // // console.log('\n🔧 Checking for merge conflicts...'),
-const filesToCheck = ['pages', 'components', 'package.json'],
+const filesToCheck = ['pagescomponents', 'package.json'],
 let hasConflicts = false,
 filesToCheck.forEach(dir => {
     const dirPath = path.join('/workspace', dir),

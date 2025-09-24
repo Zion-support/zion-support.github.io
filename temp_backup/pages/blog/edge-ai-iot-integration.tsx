@@ -66,7 +66,7 @@ export default function EdgeAIIoTIntegration() {
                   where data is generated and decisions need to be made.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
-                  At Zion Tech Group, we're at the forefront of this revolution;
+                  At Zion Tech Group, we're at the forefront of this revolution,
                   developing edge AI systems that can process data locally while,
                   maintaining the intelligence and sophistication of cloud-based,
                   solutions.,
@@ -145,7 +145,7 @@ export default function EdgeAIIoTIntegration() {
                       Hardware Optimization,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      Specialized edge computing hardware including GPUs, TPUs;
+                      Specialized edge computing hardware including GPUs, TPUs,
                       and neuromorphic chips optimized for AI workloads in,
                       resource-constrained environments.,
                     </p>,
@@ -291,7 +291,7 @@ export default function EdgeAIIoTIntegration() {
                 <ul className='space-y-2 text-white/80 mb-6'>,
                   <li>• Model compression and quantization techniques</li>,
                   <li>,
-                    • Efficient neural network architectures (MobileNet;
+                    • Efficient neural network architectures (MobileNet,
                     EfficientNet),
                   </li>,
                   <li>,
@@ -424,7 +424,7 @@ export default function EdgeAIIoTIntegration() {
                   </ol>,
                 </div>,
                 <p className='text-white/90 mb-4'>,
-                  We work closely with our clients throughout this process;
+                  We work closely with our clients throughout this process,
                   ensuring that edge AI solutions are tailored to their specific,
                   needs and integrated seamlessly with existing systems.,
                 </p>,

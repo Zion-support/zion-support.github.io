@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../../components/SEO',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, Clock, Users, Phone, Mail, MapPin, Brain, Atom, Globe, Rocket, Target, Microscope, TrendingUp, Zap, Shield } from 'lucide-react',
@@ -13,46 +13,46 @@ import { innovativeMicroSaasServices2030 } from '../../data/2030-innovative-micr
 import { researchDevelopmentServices2030 } from '../../data/2030-research-development',
 export default function FuturisticServices2030Page() {
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const serviceCategories = [
     {
-      title: '🚀 Futuristic AI Services 2030';
-      icon: Brain;
-      color: 'from-cyan-500 to-blue-500';
-      services: futuristicAIServices2030;
-      description: 'ArrowRight-generation AI consciousness and autonomous systems'};
+      title: '🚀 Futuristic AI Services 2030',
+      icon: Brain,
+      color: 'from-cyan-500 to-blue-500',
+      services: futuristicAIServices2030,
+      description: 'ArrowRight-generation AI consciousness and autonomous systems'},
     {
-      title: '⚛️ Quantum & Emerging Tech 2030';
-      icon: Atom;
-      color: 'from-purple-500 to-indigo-500';
-      services: quantumEmergingTechServices2030;
-      description: 'Quantum computing and breakthrough technologies'};
+      title: '⚛️ Quantum & Emerging Tech 2030',
+      icon: Atom,
+      color: 'from-purple-500 to-indigo-500',
+      services: quantumEmergingTechServices2030,
+      description: 'Quantum computing and breakthrough technologies'},
     {
-      title: '🏢 Enterprise IT Solutions 2030';
-      icon: Globe;
-      color: 'from-blue-500 to-cyan-500';
-      services: enterpriseITSolutions2030;
-      description: 'Autonomous enterprise infrastructure and operations'};
+      title: '🏢 Enterprise IT Solutions 2030',
+      icon: Globe,
+      color: 'from-blue-500 to-cyan-500',
+      services: enterpriseITSolutions2030,
+      description: 'Autonomous enterprise infrastructure and operations'},
     {
-      title: '🌌 Space & Metaverse Tech 2030';
-      icon: Rocket;
-      color: 'from-emerald-500 to-green-500';
-      services: spaceMetaverseTechServices2030;
-      description: 'Space exploration and digital reality platforms'};
+      title: '🌌 Space & Metaverse Tech 2030',
+      icon: Rocket,
+      color: 'from-emerald-500 to-green-500',
+      services: spaceMetaverseTechServices2030,
+      description: 'Space exploration and digital reality platforms'},
     {
-      title: '🎯 Innovative Micro SAAS 2030';
-      icon: Target;
-      color: 'from-yellow-500 to-orange-500';
-      services: innovativeMicroSaasServices2030;
-      description: 'Cutting-edge micro solutions and platforms'};
+      title: '🎯 Innovative Micro SAAS 2030',
+      icon: Target,
+      color: 'from-yellow-500 to-orange-500',
+      services: innovativeMicroSaasServices2030,
+      description: 'Cutting-edge micro solutions and platforms'},
     {
-      title: '🔬 Research & Development 2030';
-      icon: Microscope;
-      color: 'from-red-500 to-pink-500';
-      services: researchDevelopmentServices2030;
+      title: '🔬 Research & Development 2030',
+      icon: Microscope,
+      color: 'from-red-500 to-pink-500',
+      services: researchDevelopmentServices2030,
       description: 'Breakthrough research and development solutions'}
   ],
   return (
@@ -62,7 +62,7 @@ export default function FuturisticServices2030Page() {
         description="Experience the future with our revolutionary 2030 technology services. From AI consciousness to space mining, quantum computing to metaverse development - we're building tomorrow's solutions today.",
         url="https: //ziontechgroup.com/services/2030-futuristic-services/",
         section="2030 Futuristic Services",
-        tags={['AI Consciousness', 'Quantum Computing', 'Space Mining', 'Metaverse Development', 'Biotechnology']}
+        tags={['AI ConsciousnessQuantum Computing', 'Space MiningMetaverse Development', 'Biotechnology']}
       />,
       <UltraFuturisticBackground2031>,
         {/* Ultra Advanced Navigation */}
@@ -111,9 +111,9 @@ export default function FuturisticServices2030Page() {
             {/* Stats */}
             <div className="grid grid-cols-1 md: grid-cols-4 gap-8 mb-16">,
               {[
-                { icon: Users, label: 'Active Customers', value: '2,847+', color: 'text-cyan-400' };
-                { icon: TrendingUp, label: 'Success Rate', value: '99.8%', color: 'text-emerald-400' };
-                { icon: Zap, label: 'Innovation Level', value: 'Revolutionary', color: 'text-purple-400' };
+                { icon: Users, label: 'Active Customers', value: '2,847+', color: 'text-cyan-400' },
+                { icon: TrendingUp, label: 'Success Rate', value: '99.8%', color: 'text-emerald-400' },
+                { icon: Zap, label: 'Innovation Level', value: 'Revolutionary', color: 'text-purple-400' },
                 { icon: Shield, label: 'Security Rating', value: 'Quantum-Safe', color: 'text-pink-400' }
               ].map((stat, index) => (
                 <motion.div,

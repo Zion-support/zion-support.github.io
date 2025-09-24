@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {
-  title: 'Web Application Development | Zion Tech Group';
+  title: 'Web Application Development | Zion Tech Group',
   description:,
-    'Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.';
-};
+    'Build powerful web applications with modern technologies. Responsive, scalable, and secure solutions for all business needs.',
+},
 export default function WebApplicationDevelopmentPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -11,35 +11,29 @@ export default function WebApplicationDevelopmentPage() {
         Web Application Development,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Build powerful web applications with modern technologies. Responsive;
+        Build powerful web applications with modern technologies. Responsive,
         scalable, and secure solutions for all business needs.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
         <FeatureCard
           title='Frontend Development',
           features={[
-            'React/Vue.js/Angular';
-            'Responsive design';
-            'Progressive Web Apps';
-            'Performance optimization';
+            'React/Vue.js/AngularResponsive design',
+            'Progressive Web AppsPerformance optimization',
           ]}
         />,
         <FeatureCard
           title='Backend Development',
           features={[
-            'Node.js/Python/Java';
-            'RESTful APIs';
-            'Database design';
-            'Cloud deployment';
+            'Node.js/Python/JavaRESTful APIs',
+            'Database designCloud deployment',
           ]}
         />,
         <FeatureCard
           title='Full-Stack Solutions',
           features={[
-            'End-to-end development';
-            'Database integration';
-            'Third-party APIs';
-            'Maintenance & support';
+            'End-to-end developmentDatabase integration',
+            'Third-party APIsMaintenance & support',
           ]}
         />,
       </div>,
@@ -115,8 +109,8 @@ export default function WebApplicationDevelopmentPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -142,21 +136,17 @@ function Pricing() {
           name='Basic Website',
           price='$9,999',
           features={[
-            'Simple web application';
-            'Basic functionality';
-            'Responsive design';
-            '2 months development';
+            'Simple web applicationBasic functionality',
+            'Responsive design2 months development',
           ]}
         />,
         <Plan
           name='Professional App',
           price='$24,999',
           features={[
-            'Advanced features';
-            'Custom design';
-            'Database integration';
-            '4 months development';
-            '3 months support';
+            'Advanced featuresCustom design',
+            'Database integration4 months development',
+            '3 months support',
           ]}
           popular={true}
         />,
@@ -164,21 +154,19 @@ function Pricing() {
           name='Enterprise Solution',
           price='$59,999+',
           features={[
-            'Complex functionality';
-            'Custom backend';
-            'Advanced integrations';
-            'Dedicated team';
-            '6+ months development';
+            'Complex functionalityCustom backend',
+            'Advanced integrationsDedicated team',
+            '6+ months development',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

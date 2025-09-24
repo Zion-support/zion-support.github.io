@@ -1,143 +1,122 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  MessageSquare;
-  Bot;
-  Users;
-  Headphones;
-  Zap;
-  Target;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Clock;
-  Award;
-  Star;
-  Globe;
-  Lock;
-  Cpu;
-  Database;
-  Monitor;
-  Smartphone;
-  Mail;
-  Phone;
-  MapPin;
-  DollarSign;
-  Eye;
-  Settings;
-  FileText;
-  BarChart3;
-  Calendar;
-  Search;
+  MessageSquare,
+  Bot,
+  Users,
+  Headphones,
+  Zap,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Monitor,
+  Smartphone,
+  Mail,
+  Phone,
+  MapPin,
+  DollarSign,
+  Eye,
+  Settings,
+  FileText,
+  BarChart3,
+  Calendar,
+  Search,
   Bell} from 'lucide-react',
 export default function CustomerSupportPlatform() {
   const title = 'Customer Support & Helpdesk Solutions — Zion Tech Group',
   const description = 'Comprehensive customer support platform with AI chatbots, ticket management, live chat, and knowledge base creation.',
   const features = [
     {
-      title: 'AI-Powered Chatbots';
-      description: 'Intelligent chatbots that provide instant customer support 24/7';
-      icon: Bot;
+      title: 'AI-Powered Chatbots',
+      description: 'Intelligent chatbots that provide instant customer support 24/7',
+      icon: Bot,
       details: [
-        'Natural language processing';
-        'Multi-language support';
-        'Context-aware conversations';
-        'Escalation to human agents';
-        'Integration with CRM systems';
-        'Custom bot personality training']};
+        'Natural language processingMulti-language support',
+        'Context-aware conversationsEscalation to human agents',
+        'Integration with CRM systemsCustom bot personality training']},
     {
-      title: 'Ticket Management System';
-      description: 'Streamlined ticket creation, tracking, and resolution workflow';
-      icon: MessageSquare;
+      title: 'Ticket Management System',
+      description: 'Streamlined ticket creation, tracking, and resolution workflow',
+      icon: MessageSquare,
       details: [
-        'Automated ticket routing';
-        'Priority-based categorization';
-        'SLA tracking and alerts';
-        'Team collaboration tools';
-        'Custom ticket fields';
-        'Bulk operations and automation']};
+        'Automated ticket routingPriority-based categorization',
+        'SLA tracking and alertsTeam collaboration tools',
+        'Custom ticket fieldsBulk operations and automation']},
     {
-      title: 'Live Chat Support';
-      description: 'Real-time customer communication with advanced features';
-      icon: Headphones;
+      title: 'Live Chat Support',
+      description: 'Real-time customer communication with advanced features',
+      icon: Headphones,
       details: [
-        'Multi-channel chat integration';
-        'Screen sharing and co-browsing';
-        'Chat history and transcripts';
-        'Proactive chat invitations';
-        'Mobile app for agents';
-        'Chat analytics and reporting']};
+        'Multi-channel chat integrationScreen sharing and co-browsing',
+        'Chat history and transcriptsProactive chat invitations',
+        'Mobile app for agentsChat analytics and reporting']},
     {
-      title: 'Knowledge Base Builder';
-      description: 'Create and manage comprehensive self-service documentation';
-      icon: FileText;
+      title: 'Knowledge Base Builder',
+      description: 'Create and manage comprehensive self-service documentation',
+      icon: FileText,
       details: [
-        'Drag-and-drop article editor';
-        'Search functionality';
-        'Category and tag organization';
-        'Version control and history';
-        'Multi-language support';
-        'Analytics and feedback collection']}
+        'Drag-and-drop article editorSearch functionality',
+        'Category and tag organizationVersion control and history',
+        'Multi-language supportAnalytics and feedback collection']}
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$49';
-      period: '/month';
-      description: 'Perfect for small teams';
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 3 agents';
-        'Unlimited tickets';
-        'Basic chatbot';
-        'Email support';
-        'Knowledge base';
-        'Basic reporting'];
-      popular: false};
+        'Up to 3 agentsUnlimited tickets',
+        'Basic chatbotEmail support',
+        'Knowledge baseBasic reporting'],
+      popular: false},
     {
-      name: 'Professional';
-      price: '$149';
-      period: '/month';
-      description: 'Ideal for growing businesses';
+      name: 'Professional',
+      price: '$149',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10 agents';
-        'Advanced chatbot';
-        'Live chat support';
-        'Priority support';
-        'Advanced reporting';
-        'API access';
-        'Custom branding'];
-      popular: true};
+        'Up to 10 agentsAdvanced chatbot',
+        'Live chat supportPriority support',
+        'Advanced reportingAPI access',
+        'Custom branding'],
+      popular: true},
     {
-      name: 'Enterprise';
-      price: '$399';
-      period: '/month';
-      description: 'For large organizations';
+      name: 'Enterprise',
+      price: '$399',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        'Unlimited agents';
-        'AI-powered automation';
-        'Advanced analytics';
-        'Dedicated support';
-        'Custom integrations';
-        'White-label options';
-        'SLA guarantee'];
+        'Unlimited agentsAI-powered automation',
+        'Advanced analyticsDedicated support',
+        'Custom integrationsWhite-label options',
+        'SLA guarantee'],
       popular: false}
   ],
   const benefits = [
     {
-      icon: Zap;
-      title: 'Reduce Response Time by 80%';
-      description: 'AI chatbots provide instant responses, reducing customer wait times significantly'};
+      icon: Zap,
+      title: 'Reduce Response Time by 80%',
+      description: 'AI chatbots provide instant responses, reducing customer wait times significantly'},
     {
-      icon: Users;
-      title: 'Improve Customer Satisfaction';
-      description: 'Comprehensive support tools help resolve issues faster and more effectively'};
+      icon: Users,
+      title: 'Improve Customer Satisfaction',
+      description: 'Comprehensive support tools help resolve issues faster and more effectively'},
     {
-      icon: BarChart3;
-      title: 'Gain Actionable Insights';
-      description: 'Detailed analytics help you understand customer needs and optimize support processes'};
+      icon: BarChart3,
+      title: 'Gain Actionable Insights',
+      description: 'Detailed analytics help you understand customer needs and optimize support processes'},
     {
-      icon: Target;
-      title: 'Scale Efficiently';
+      icon: Target,
+      title: 'Scale Efficiently',
       description: 'Automation and AI help you handle more customers without proportionally increasing staff'}
   ],
   return (
@@ -160,7 +139,7 @@ export default function CustomerSupportPlatform() {
               Complete Customer Support & Helpdesk Solution,
             </h1>,
             <p className="mt-6 text-lg leading-8 text-gray-60o0">,
-              Transform your customer service with our comprehensive platform featuring AI chatbots;
+              Transform your customer service with our comprehensive platform featuring AI chatbots,
               ticket management, live chat, and knowledge base creation.,
             </p>,
             <div className="mt-8 flex items-center justify-center gap-x-6">,

@@ -30,14 +30,14 @@ export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationSco
         return "bg-orange-100 text-orange-800",
       default:,
         return "bg-gray-100 text-gray-800"}
-  };
+  },
   // Trigger the scoring process,
   const handleScore = async () => {
     try {
       setIsScoring(true),
       // Call the trigger_resume_scoring function,
       const { error } = await supabase.rpc(
-        'trigger_resume_scoring';
+        'trigger_resume_scoring',
         { application_id: application.id }
       ),
       if (error) throw error,
@@ -66,11 +66,11 @@ export function ApplicationScoreCard({ applicationScoreUpdated }: ApplicationSco
           setTimeout(checkScore3000)} else {
           setIsScoring(false),
           toast.info("Scoring is taking longer than expected. Check back later.")}
-      };
+      },
       setTimeout(checkScore3000)} catch (error: any) {
       setIsScoring(false),
       toast.error(`Failed to score resume: ${error.message}`)}
-  };
+  },
   // Render the score result or button to score,
   return (
     <Card className="overflow-hidden">,

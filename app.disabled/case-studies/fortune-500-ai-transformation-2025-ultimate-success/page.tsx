@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o25: Fortune 50o0 $1.8B Revenue Transformation | Zion Tech Group';
+    'AI 20o25: Fortune 50o0 $1.8B Revenue Transformation | Zion Tech Group',
   description:,
-    'The ultimate Fortune 50o0 transformation success story. How a Fortune 50o0 company generated $1.8 billion in additional revenue through comprehensive AI implementation.';
+    'The ultimate Fortune 50o0 transformation success story. How a Fortune 50o0 company generated $1.8 billion in additional revenue through comprehensive AI implementation.',
   keywords: [
-    'Fortune 50o0 transformation';
-    'AI transformation';
-    'enterprise AI';
-    'digital transformation';
-    'AI ROI';
-    'Fortune 50o0';
-  ];
-};
+    'Fortune 50o0 transformationAI transformation',
+    'enterprise AIdigital transformation',
+    'AI ROIFortune 50o0',
+  ]
+},
 export default function EnterpriseTransformationPage() {
   return (
     <div className='min-h-screen bg-white'>,

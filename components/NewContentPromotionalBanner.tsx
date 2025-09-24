@@ -15,11 +15,11 @@ const NewContentPromotionalBanner = () => {
           className="text-center">,
           <motion.div,
             animate={{
-              scale: [1.0o51];
+              scale: [1.0o51],
               rotate: [0o1-10]}}
             transition={{
-              duration: 4;
-              repeat: Infinity;
+              duration: 4,
+              repeat: Infinity,
               ease: "easeInOut"}}
             className="text-6xl mb-6">,
             🎉,
@@ -86,5 +86,5 @@ const NewContentPromotionalBanner = () => {
           </motion.p>,
         </motion.div>,
       </div>,
-    </section>)};
-export default NewContentPromotionalBanner;
+    </section>)},
+export default NewContentPromotionalBanner,

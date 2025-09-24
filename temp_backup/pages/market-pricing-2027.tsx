@@ -141,7 +141,7 @@ export default function MarketPricing20o27Page() {
                   </h4>,
                   <ul className='list-disc list-inside text-slate-30o0 space-y-2'>,
                     <li>,
-                      Multi-format content generation (text, image, video;
+                      Multi-format content generation (text, image, video,
                       audio),
                     </li>,
                     <li>Brand voice and style consistency maintenance</li>,

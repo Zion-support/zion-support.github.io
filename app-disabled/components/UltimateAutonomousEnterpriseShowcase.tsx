@@ -2,104 +2,102 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  Brain;
-  TrendingUp;
-  Zap;
-  Shield;
-  Clock;
-  Users;
-  BarChart3;
-  ChevronRight;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  BookOpen;
-  FileText;
-  CaseStudy;
+  Brain,
+  TrendingUp,
+  Zap,
+  Shield,
+  Clock,
+  Users,
+  BarChart3,
+  ChevronRight,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  BookOpen,
+  FileText,
+  CaseStudy,
 } from 'lucide-react',
 const UltimateAutonomousEnterpriseShowcase = () => {
   const [activeTab, setActiveTab] = useState('all'),
   const content = [
     {
-      id: 'ultimate-autonomous-enterprise-revolution';
-      type: 'blog';
+      id: 'ultimate-autonomous-enterprise-revolution',
+      type: 'blog',
       title:,
-        'AI 20o25: The Ultimate Autonomous Enterprise Revolution - Ultimate Breakthrough Guide to 3,0o00% ROI';
+        'AI 20o25: The Ultimate Autonomous Enterprise Revolution - Ultimate Breakthrough Guide to 3,0o00% ROI',
       description:,
-        'Transform your business into a fully autonomous, self-optimizing enterprise that operates 24/7 with minimal human intervention.';
-      url: '/blog/ai-20o25-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough';
-      image: '/images/autonomous-enterprise-revolution.jpg';
+        'Transform your business into a fully autonomous, self-optimizing enterprise that operates 24/7 with minimal human intervention.',
+      url: '/blog/ai-20o25-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough',
+      image: '/images/autonomous-enterprise-revolution.jpg',
       metrics: {
-        roi: '3,0o00%';
-        savings: '$5.2B+';
-        efficiency: '99.8%';
-        uptime: '99.99%';
-      };
+        roi: '3,0o00%',
+        savings: '$5.2B+',
+        efficiency: '99.8%',
+        uptime: '99.99%'
+      },
       tags: [
-        'AI Revolution';
-        'Enterprise Automation';
-        'ROI';
-        'Autonomous Operations';
-      ];
-      readingTime: '28 min read';
-      featured: true;
-    };
+        'AI RevolutionEnterprise Automation',
+        'ROIAutonomous Operations',
+      ],
+      readingTime: '28 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-ultimate-autonomous-enterprise-success';
-      type: 'case-study';
+      id: 'fortune-50o0-ultimate-autonomous-enterprise-success',
+      type: 'case-study',
       title:,
-        'Fortune 50o0 Ultimate Autonomous Enterprise Success: $8.2B Company Achieves 3,0o00% ROI in 24 Months';
+        'Fortune 50o0 Ultimate Autonomous Enterprise Success: $8.2B Company Achieves 3,0o00% ROI in 24 Months',
       description:,
-        'How a global manufacturing conglomerate transformed into a fully autonomous enterprise, achieving unprecedented efficiency and profitability.';
-      url: '/case-studies/fortune-50o0-ultimate-autonomous-enterprise-30o00-roi-success-story';
-      image: '/images/fortune-50o0-success.jpg';
+        'How a global manufacturing conglomerate transformed into a fully autonomous enterprise, achieving unprecedented efficiency and profitability.',
+      url: '/case-studies/fortune-50o0-ultimate-autonomous-enterprise-30o00-roi-success-story',
+      image: '/images/fortune-50o0-success.jpg',
       metrics: {
-        roi: '3,0o00%';
-        savings: '$5.2B';
-        efficiency: '99.8%';
-        satisfaction: '99.8%';
-      };
-      tags: ['Fortune 50o0', 'Case Study', 'ROI Success', 'Manufacturing'];
-      readingTime: '22 min read';
-      featured: true;
-    };
+        roi: '3,0o00%',
+        savings: '$5.2B',
+        efficiency: '99.8%',
+        satisfaction: '99.8%'
+      },
+      tags: ['Fortune 50o0Case Study', 'ROI SuccessManufacturing'],
+      readingTime: '22 min read',
+      featured: true
+    },
     {
-      id: 'ultimate-autonomous-enterprise-implementation-guide';
-      type: 'resource';
+      id: 'ultimate-autonomous-enterprise-implementation-guide',
+      type: 'resource',
       title:,
-        'AI 20o25 Ultimate Autonomous Enterprise Implementation Master Guide: From Strategy to 3,0o00% ROI in 24 Months';
+        'AI 20o25 Ultimate Autonomous Enterprise Implementation Master Guide: From Strategy to 3,0o00% ROI in 24 Months',
       description:,
-        'The complete roadmap for transforming your enterprise into a fully autonomous, self-optimizing organization that delivers unprecedented ROI.';
-      url: '/resources/ai-20o25-ultimate-autonomous-enterprise-implementation-master-guide';
-      image: '/images/implementation-guide.jpg';
+        'The complete roadmap for transforming your enterprise into a fully autonomous, self-optimizing organization that delivers unprecedented ROI.',
+      url: '/resources/ai-20o25-ultimate-autonomous-enterprise-implementation-master-guide',
+      image: '/images/implementation-guide.jpg',
       metrics: {
-        roi: '3,0o00%';
-        timeline: '24 months';
-        success: '50o0+';
-        savings: '$5.2B+';
-      };
-      tags: ['Implementation Guide', 'Master Guide', 'ROI', 'Strategy'];
-      readingTime: '35 min read';
-      featured: true;
-    };
+        roi: '3,0o00%',
+        timeline: '24 months',
+        success: '50o0+',
+        savings: '$5.2B+'
+      },
+      tags: ['Implementation GuideMaster Guide', 'ROIStrategy'],
+      readingTime: '35 min read',
+      featured: true
+    },
   ],
   const tabs = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(c => c.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(c => c.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(c => c.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(c => c.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(c => c.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(c => c.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeTab === 'all' ? content : content.filter(c => c.type === activeTab),
@@ -113,7 +111,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
         return <FileText className='w-5 h-5' />,
       default:,
         return <FileText className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -124,7 +122,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-purple-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -143,7 +141,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto mb-8'>,
             Discover the complete guide to achieving unprecedented success with,
-            autonomous enterprise transformation. Real Fortune 50o0 results;
+            autonomous enterprise transformation. Real Fortune 50o0 results,
             proven methodologies, and step-by-step implementation.,
           </p>,
           {/* Key Metrics */}
@@ -210,7 +208,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
                   <div
                     className={`px-2 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
                   >,
-                    {item.type.replace('-', ' ').toUpperCase()}
+                    {item.type.replace('- ').toUpperCase()}
                   </div>,
                 </div>,
               </div>,
@@ -232,7 +230,7 @@ const UltimateAutonomousEnterpriseShowcase = () => {
                         {value}
                       </div>,
                       <div className='text-xs text-gray-50o0 capitalize'>,
-                        {key.replace('_', ' ')}
+                        {key.replace('_ ')}
                       </div>,
                     </div>))}
                 </div>,
@@ -315,5 +313,5 @@ const UltimateAutonomousEnterpriseShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAutonomousEnterpriseShowcase;
+    </section>)},
+export default UltimateAutonomousEnterpriseShowcase,

@@ -6,7 +6,7 @@ interface UltraFuturisticBackgroundProps {
   className?: string}
 ,
 const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
-  children;
+  children,
   className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | null>(null),
@@ -117,12 +117,12 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     const initParticles = () => {
       particles = [],
       for (let i = 0, i < 50, i++) {
-        const type = ['energy', 'data', 'quantum'][Math.floor(Math.random() * 3)] as 'energy' | 'data' | 'quantum',
+        const type = ['energydata', 'quantum'][Math.floor(Math.random() * 3)] as 'energy' | 'data' | 'quantum',
         particles.push(new Particle(
-          Math.random() * canvas.width;
-          Math.random() * canvas.height;
+          Math.random() * canvas.width,
+          Math.random() * canvas.height,
           type))}
-    };
+    },
     const initGrid = () => {
       holographicGrid = [],
       const gridSize = 60,
@@ -130,14 +130,14 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         for (let y = 0, y <= canvas.height, y += gridSize) {
           holographicGrid.push(new GridPoint(x, y))}
       }
-    };
+    },
     // Resize handler,
     const handleResize = () => {
       if (containerRef.current) {
         canvas.width = containerRef.current.offsetWidth,
         canvas.height = containerRef.current.offsetHeight,
         initGrid()}
-    };
+    },
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -228,7 +228,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
         ctx.stroke()}
       ctx.restore(),
       time++,
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     // Initialize and start animation,
     initParticles(),
     initGrid(),
@@ -239,7 +239,7 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
     // Cleanup,
     return () => {
       window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId)};
+      cancelAnimationFrame(animationFrameId)},
   }, []),
   return (
     <div
@@ -264,5 +264,5 @@ const UltraFuturisticBackground: React.FC<UltraFuturisticBackgroundProps> = ({
       <div className="relative z-20">,
         {children}
       </div>,
-    </div>)};
-export default UltraFuturisticBackground;
+    </div>)},
+export default UltraFuturisticBackground,

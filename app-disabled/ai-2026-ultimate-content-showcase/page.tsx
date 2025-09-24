@@ -1,18 +1,15 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
-  title: 'AI 20o26 Ultimate Content Showcase - Zion Tech Group';
+  title: 'AI 20o26 Ultimate Content Showcase - Zion Tech Group',
   description:,
-    'Explore the most comprehensive collection of AI 20o26 content: Quantum Computing, Enterprise Automation, Neural Interfaces, and Autonomous Systems.';
+    'Explore the most comprehensive collection of AI 20o26 content: Quantum Computing, Enterprise Automation, Neural Interfaces, and Autonomous Systems.',
   keywords: [
-    'AI 20o26';
-    'quantum computing';
-    'enterprise automation';
-    'neural interfaces';
-    'autonomous systems';
-    'AI research';
-  ];
-};
+    'AI 20o26quantum computing',
+    'enterprise automationneural interfaces',
+    'autonomous systemsAI research',
+  ]
+},
 export default function AI20o26UltimateContentShowcase() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white'>,
@@ -55,7 +52,7 @@ export default function AI20o26UltimateContentShowcase() {
               </div>,
               <p className='text-lg opacity-90 mb-6 leading-relaxed'>,
                 Revolutionary quantum computing breakthroughs that will achieve,
-                supremacy and transform every aspect of artificial intelligence;
+                supremacy and transform every aspect of artificial intelligence,
                 from neural networks to optimization algorithms.,
               </p>,
               <div className='grid grid-cols-2 gap-4 mb-6'>,

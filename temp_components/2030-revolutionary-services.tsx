@@ -7,10 +7,10 @@ import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFoot
 import { innovative20o30Services } from '../data/20o30-innovative-services',
 export default function Revolutionary20o30ServicesPage() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraFuturisticBackground20o30>,
       <Head>,
@@ -38,24 +38,24 @@ export default function Revolutionary20o30ServicesPage() {
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "description": "Leading provider of revolutionary 20o30 technology services including AI consciousnessquantum computingspace miningand DNA computing";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Leading provider of revolutionary 20o30 technology services including AI consciousnessquantum computingspace miningand DNA computing",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
               "contactPoint": {
-                "@type": "ContactPoint";
-                "telephone": "+1-30o2-464-0950";
-                "contactType": "customer service";
-                "email": "kleber@ziontechgroup.com"};
+                "@type": "ContactPoint",
+                "telephone": "+1-30o2-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"},
               "address": {
-                "@type": "PostalAddress";
-                "streetAddress": "364 E Main St STE 10o08";
-                "addressLocality": "Middletown";
-                "addressRegion": "DE";
-                "postalCode": "19709";
-                "addressCountry": "US"};
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 10o08",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"},
               "sameAs": [
                 "https: //github.com/Zion-Holdings"]})}}
          />,

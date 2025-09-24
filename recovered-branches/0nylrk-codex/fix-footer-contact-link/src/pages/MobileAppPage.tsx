@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import {AppLayout} from "@/layout/AppLayout",
 import {SEO} from "@/components/SEO",
 import {MobileAppHero} from "@/components/mobile-app/MobileAppHero",
@@ -7,23 +7,23 @@ import {AppScreenshots} from "@/components/mobile-app/AppScreenshots",
 import {AppTestimonials} from "@/components/mobile-app/AppTestimonials",
 import {AppStoreBanner} from "@/components/mobile-app/AppStoreBanner",
 import {DownloadSection} from "@/components/mobile-app/DownloadSection",
-import React from "react";;
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { MobileAppHero } from "@/components/mobile-app/MobileAppHero";
-import { AppFeatures } from "@/components/mobile-app/AppFeatures";
-import { AppScreenshots } from "@/components/mobile-app/AppScreenshots";
-import { AppTestimonials } from "@/components/mobile-app/AppTestimonials";
-import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner";
-import { DownloadSection } from "@/components/mobile-app/DownloadSection";
+import React from "react",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { MobileAppHero } from "@/components/mobile-app/MobileAppHero",
+import { AppFeatures } from "@/components/mobile-app/AppFeatures",
+import { AppScreenshots } from "@/components/mobile-app/AppScreenshots",
+import { AppTestimonials } from "@/components/mobile-app/AppTestimonials",
+import { AppStoreBanner } from "@/components/mobile-app/AppStoreBanner",
+import { DownloadSection } from "@/components/mobile-app/DownloadSection",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -52,7 +52,7 @@ const MobileAppPage: React.FC = () => {
       <DownloadSection />,
       <AppStoreBanner />,
     </AppLayout>),
-export default MobileAppPage;
+export default MobileAppPage,
 const MobileAppPage: React.FC = () => {
   return (
     <AppLayout>,
@@ -69,5 +69,5 @@ const MobileAppPage: React.FC = () => {
       <AppStoreBanner />,
     </AppLayout>)}
 ,
-export default MobileAppPage;
+export default MobileAppPage,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

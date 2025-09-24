@@ -3,7 +3,7 @@
 const path = require('path'),
 const { spawnSync } = require('child_process'),
 function runNode(relPath, args = []) {
-  const abs = path.resolve(__dirname, '..', '..', relPath),
+  const abs = path.resolve(__dirname, '....', relPath),
   return spawnSync('node', [abs, ...args], { stdio: 'pipe', encoding: 'utf8' }),
 exports.config ={
   schedule: '*/30 * * * *'}

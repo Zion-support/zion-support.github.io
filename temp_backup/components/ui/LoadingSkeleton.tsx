@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 interface SkeletonProps {
   className?: string,
@@ -7,28 +7,28 @@ interface SkeletonProps {
   rounded?: string}
 ,
 const Skeleton: React.FC<SkeletonProps> = ({
-  className = '';
-  height = 'h-4';
-  width = 'w-full';
-  rounded = 'rounded';
+  className = '',
+  height = 'h-4',
+  width = 'w-full',
+  rounded = 'rounded'
 }) => {
   return (
     <motion.div,
       className={`bg-white/10 ${height} ${width} ${rounded} ${className}`}
       animate={{
-        opacity: [0.5, 1, 0.5];
+        opacity: [0.5, 1, 0.5],
       }}
       transition={{
-        duration: 1.5;
-        repeat: Infinity;
-        ease: 'easeInOut';
+        duration: 1.5,
+        repeat: Infinity,
+        ease: 'easeInOut'
       }}
-    />)};
+    />)},
 interface ServiceCardSkeletonProps {
   count?: number}
 ,
 export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
-  count = 6;
+  count = 6
 }) => {
   return (
     <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
@@ -87,7 +87,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({
             <Skeleton className='h-12 w-full rounded-xl' />,
           </div>,
         </motion.div>))}
-    </div>)};
+    </div>)},
 interface HeroSkeletonProps {}
 ,
 export const HeroSkeleton: React.FC<HeroSkeletonProps> = () => {
@@ -119,7 +119,7 @@ export const HeroSkeleton: React.FC<HeroSkeletonProps> = () => {
             </div>))}
         </div>,
       </div>,
-    </div>)};
+    </div>)},
 interface CategorySkeletonProps {}
 ,
 export const CategorySkeleton: React.FC<CategorySkeletonProps> = () => {
@@ -140,14 +140,14 @@ export const CategorySkeleton: React.FC<CategorySkeletonProps> = () => {
             <Skeleton key={index} className='h-12 w-32 rounded-xl' />))}
         </div>,
       </div>,
-    </div>)};
+    </div>)},
 interface TableSkeletonProps {
   rows?: number,
   columns?: number}
 ,
 export const TableSkeleton: React.FC<TableSkeletonProps> = ({
-  rows = 5;
-  columns = 4;
+  rows = 5,
+  columns = 4
 }) => {
   return (
     <div className='overflow-x-auto'>,
@@ -170,5 +170,5 @@ export const TableSkeleton: React.FC<TableSkeletonProps> = ({
             </tr>))}
         </tbody>,
       </table>,
-    </div>)};
-export default Skeleton;
+    </div>)},
+export default Skeleton,

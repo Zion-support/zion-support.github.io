@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -26,38 +26,38 @@ class TotalControlImprovementSystem extends EventEmitter {
     this.improvements = [],
     this.errors = [],
     this.stats ={
-      cycles: 0;
-      improvements: 0;
-      errors: 0;
-      startTime: null;
-      lastCycle: null;
-      totalFilesAnalyzed: 0;
-      totalIssuesFixed: 0};
+      cycles: 0,
+      improvements: 0,
+      errors: 0,
+      startTime: null,
+      lastCycle: null,
+      totalFilesAnalyzed: 0,
+      totalIssuesFixed: 0},
     this.config ={
       cycleInterval: 150o00, // 15 seconds,
-      maxConcurrentImprovements: 5;
-      autoCommit: true;
-      autoPush: true;
-      backupBeforeChanges: true;
+      maxConcurrentImprovements: 5,
+      autoCommit: true,
+      autoPush: true,
+      backupBeforeChanges: true,
       improvementTypes: [
-        code-quality';
-        performance';
-        security';
-        accessibility';
-        seo';
-        testing';
-        documentation';
-        dependencies';
-        build-optimization';
-        error-handling';
-        type-safety';
-        bundle-optimization];
+        code-quality',
+        performance',
+        security',
+        accessibility',
+        seo',
+        testing',
+        documentation',
+        dependencies',
+        build-optimization',
+        error-handling',
+        type-safety',
+        bundle-optimization],
       priorityLevels: {
-        critical: ['security', build-errors'];
-        high: ['performance', accessibility'];
-        medium: ['code-quality', testing'];
+        critical: ['security', build-errors'],
+        high: ['performance', accessibility'],
+        medium: ['code-quality', testing'],
         low: ['documentation', seo']}
-    };
+    },
     this.projectRoot = process.cwd(),
     this.dashboardPort = 30o02}
 ,
@@ -113,8 +113,8 @@ class TotalControlImprovementSystem extends EventEmitter {
         await this.sleep(this.config.cycleInterval)} catch (error) {
         logger.error(`❌ Error in cycle ${this.cycleCount}:`, error.message),
         this.errors.push({
-          cycle: this.cycleCount;
-          error: error.message;
+          cycle: this.cycleCount,
+          error: error.message,
           timestamp: new Date().toISOString()}),
         this.stats.errors++,
         // Wait before retrying,
@@ -125,19 +125,19 @@ class TotalControlImprovementSystem extends EventEmitter {
   async comprehensiveAnalysis() {
     logger.info('🔍 Running comprehensive analysis...'),
     const analysis ={
-      timestamp: new Date().toISOString();
-      files: await this.analyzeFiles();
-      dependencies: await this.analyzeDependencies();
-      performance: await this.analyzePerformance();
-      security: await this.analyzeSecurity();
-      quality: await this.analyzeCodeQuality();
-      tests: await this.analyzeTests();
-      accessibility: await this.analyzeAccessibility();
-      seo: await this.analyzeSEO();
-      build: await this.analyzeBuild();
-      bundle: await this.analyzeBundle();
-      errors: await this.analyzeErrors();
-      types: await this.analyzeTypeSafety()};
+      timestamp: new Date().toISOString(),
+      files: await this.analyzeFiles(),
+      dependencies: await this.analyzeDependencies(),
+      performance: await this.analyzePerformance(),
+      security: await this.analyzeSecurity(),
+      quality: await this.analyzeCodeQuality(),
+      tests: await this.analyzeTests(),
+      accessibility: await this.analyzeAccessibility(),
+      seo: await this.analyzeSEO(),
+      build: await this.analyzeBuild(),
+      bundle: await this.analyzeBundle(),
+      errors: await this.analyzeErrors(),
+      types: await this.analyzeTypeSafety()},
     return analysis}
 ,
   async analyzeFiles() {
@@ -152,17 +152,17 @@ class TotalControlImprovementSystem extends EventEmitter {
             if (stat.isDirectory() && !item.startsWith('.') && item !== 'node_modules') {
               walkDir(fullPath)} else if (stat.isFile() && this.isRelevantFile(fullPath)) {
               files.push({
-                path: fullPath;
-                size: stat.size;
-                modified: stat.mtime;
-                type: path.extname(fullPath);
+                path: fullPath,
+                size: stat.size,
+                modified: stat.mtime,
+                type: path.extname(fullPath),
                 hasIssues: this.hasFileIssues(fullPath)})}
           } catch (error) {
             // Skip files that can't be accessed}
         }
       } catch (error) {
         // Skip directories that can't be accessed}
-    };
+    },
     walkDir(this.projectRoot),
     this.stats.totalFilesAnalyzed = files.length,
     return files}
@@ -183,15 +183,15 @@ class TotalControlImprovementSystem extends EventEmitter {
 ,
   async analyzeDependencies() {
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const outdated = execSync('npm outdated --json', { stdio: 'pipe' }).toString(),
       return {
-        dependencies: packageJson.dependencies || {};
-        devDependencies: packageJson.devDependencies || {};
-        outdated: JSON.parse(outdated || {});
-        vulnerabilities: await this.checkVulnerabilities()};
+        dependencies: packageJson.dependencies || {},
+        devDependencies: packageJson.devDependencies || {},
+        outdated: JSON.parse(outdated || {}),
+        vulnerabilities: await this.checkVulnerabilities()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -199,7 +199,7 @@ class TotalControlImprovementSystem extends EventEmitter {
     try {
       const audit = execSync('npm audit --json', { stdio: 'pipe' }).toString(),
       return JSON.parse(audit)} catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -209,10 +209,10 @@ class TotalControlImprovementSystem extends EventEmitter {
       execSync('npm run build', { stdio: 'pipe' }),
       const buildTime = Date.now() - startTime,
       return {
-        buildTime;
-        timestamp: new Date().toISOString()};
+        buildTime,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -226,10 +226,10 @@ class TotalControlImprovementSystem extends EventEmitter {
         /secret\s*[:=]\s*['"][^'"]+['"]/""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]),
       securityIssues.push(...files.map(f => ({ type: 'hardcoded_secret', file: f }))),
       return {
-        issues: securityIssues;
-        audit: await this.checkVulnerabilities()};
+        issues: securityIssues,
+        audit: await this.checkVulnerabilities()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -238,11 +238,11 @@ class TotalControlImprovementSystem extends EventEmitter {
       const lintResult = execSync('npm run lint 2>&1', { stdio: 'pipe' }).toString(),
       const todos = await this.findFilesWithPatterns([/TODO|FIXME|HACK|BUG/]),
       return {
-        lintIssues: lintResult;
-        todos: todos.length;
-        timestamp: new Date().toISOString()};
+        lintIssues: lintResult,
+        todos: todos.length,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -250,11 +250,11 @@ class TotalControlImprovementSystem extends EventEmitter {
     try {
       const testResult = execSync('npm test 2>&1', { stdio: 'pipe' }).toString(),
       return {
-        result: testResult;
-        coverage: await this.getTestCoverage();
-        timestamp: new Date().toISOString()};
+        result: testResult,
+        coverage: await this.getTestCoverage(),
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -262,7 +262,7 @@ class TotalControlImprovementSystem extends EventEmitter {
     try {
       const coverage = execSync('npm run test:coverage 2>&1', { stdio: 'pipe' }).toString(),
       return coverage} catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -272,10 +272,10 @@ class TotalControlImprovementSystem extends EventEmitter {
         /role\s*[:=]\s*['"][^'"]*['"]/,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
         /aria-\w+\s*[:=]\s*['"][^'"]*['"]/""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]),
       return {
-        issues: accessibilityIssues;
-        timestamp: new Date().toISOString()};
+        issues: accessibilityIssues,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -286,10 +286,10 @@ class TotalControlImprovementSystem extends EventEmitter {
         /meta\s+name\s*[:=]\s*['"]keywords['"]/,"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
         /title\s*[:=]\s*['"][^'"]*['"]/""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""]),
       return {
-        issues: seoIssues;
-        timestamp: new Date().toISOString()};
+        issues: seoIssues,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -297,11 +297,11 @@ class TotalControlImprovementSystem extends EventEmitter {
     try {
       const buildResult = execSync('npm run build 2>&1', { stdio: 'pipe' }).toString(),
       return {
-        success: !buildResult.includes('Error');
-        output: buildResult;
-        timestamp: new Date().toISOString()};
+        success: !buildResult.includes('Error'),
+        output: buildResult,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -309,11 +309,11 @@ class TotalControlImprovementSystem extends EventEmitter {
     try {
       const bundleResult = execSync('npm run bundle:analyze 2>&1', { stdio: 'pipe' }).toString(),
       return {
-        size: this.extractBundleSize(bundleResult);
-        output: bundleResult;
-        timestamp: new Date().toISOString()};
+        size: this.extractBundleSize(bundleResult),
+        output: bundleResult,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -324,29 +324,29 @@ class TotalControlImprovementSystem extends EventEmitter {
   async analyzeErrors() {
     try {
       const errorFiles = await this.findFilesWithPatterns([
-        /console\.error/;
-        /throw new Error/;
+        /console\.error/,
+        /throw new Error/,
         /process\.exit/]),
       return {
-        errorFiles: errorFiles.length;
-        timestamp: new Date().toISOString()};
+        errorFiles: errorFiles.length,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
   async analyzeTypeSafety() {
     try {
       const typeIssues = await this.findFilesWithPatterns([
-        /any\s*[:=]/;
-        /unknown\s*[:=]/;
-        /@ts-ignore/;
+        /any\s*[:=]/,
+        /unknown\s*[:=]/,
+        /@ts-ignore/,
         /@ts-nocheck/]),
       return {
-        issues: typeIssues.length;
-        timestamp: new Date().toISOString()};
+        issues: typeIssues.length,
+        timestamp: new Date().toISOString()},
     } catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -376,7 +376,7 @@ class TotalControlImprovementSystem extends EventEmitter {
         }
       } catch (error) {
         // Skip directories that can't be accessed}
-    };
+    },
     walkDir(this.projectRoot),
     return files}
 ,
@@ -386,68 +386,68 @@ class TotalControlImprovementSystem extends EventEmitter {
     // Critical improvements,
     if (analysis.security.issues && analysis.security.issues.length > 0) {
       improvements.push({
-        type: 'security';
-        priority: 'critical';
-        description: `Fix ${analysis.security.issues.length} security issues`;
+        type: 'security',
+        priority: 'critical',
+        description: `Fix ${analysis.security.issues.length} security issues`,
         action: fix-security})}
 ,
     if (!analysis.build.success) {
       improvements.push({
-        type: 'build-errors';
-        priority: 'critical';
-        description: Fix build errors';
+        type: 'build-errors',
+        priority: 'critical',
+        description: Fix build errors',
         action: fix-build})}
 ,
     // High priority improvements,
     if (analysis.window.window.performance.buildTime > 30o000) {
       improvements.push({
-        type: 'performance';
-        priority: 'high';
-        description: Optimize build performance';
+        type: 'performance',
+        priority: 'high',
+        description: Optimize build performance',
         action: optimize-build})}
 ,
     if (analysis.accessibility.issues && analysis.accessibility.issues.length > 0) {
       improvements.push({
-        type: 'accessibility';
-        priority: 'high';
-        description: `Fix ${analysis.accessibility.issues.length} accessibility issues`;
+        type: 'accessibility',
+        priority: 'high',
+        description: `Fix ${analysis.accessibility.issues.length} accessibility issues`,
         action: fix-accessibility})}
 ,
     // Medium priority improvements,
     if (analysis.quality.todos > 0) {
       improvements.push({
-        type: 'code-quality';
-        priority: 'medium';
-        description: `Address ${analysis.quality.todos} TODO/FIXME comments`;
+        type: 'code-quality',
+        priority: 'medium',
+        description: `Address ${analysis.quality.todos} TODO/FIXME comments`,
         action: fix-todos})}
 ,
     if (analysis.tests.result && analysis.tests.result.includes('FAIL')) {
       improvements.push({
-        type: 'testing';
-        priority: 'medium';
-        description: Fix failing tests';
+        type: 'testing',
+        priority: 'medium',
+        description: Fix failing tests',
         action: fix-tests})}
 ,
     if (analysis.dependencies.outdated && Object.keys(analysis.dependencies.outdated).length > 0) {
       improvements.push({
-        type: 'dependencies';
-        priority: 'medium';
-        description: Update outdated dependencies';
+        type: 'dependencies',
+        priority: 'medium',
+        description: Update outdated dependencies',
         action: update-dependencies})}
 ,
     // Low priority improvements,
     if (analysis.seo.issues && analysis.seo.issues.length > 0) {
       improvements.push({
-        type: 'seo';
-        priority: 'low';
-        description: `Fix ${analysis.seo.issues.length} SEO issues`;
+        type: 'seo',
+        priority: 'low',
+        description: `Fix ${analysis.seo.issues.length} SEO issues`,
         action: fix-seo})}
 ,
     if (analysis.types.issues > 0) {
       improvements.push({
-        type: 'type-safety';
-        priority: 'low';
-        description: `Fix ${analysis.types.issues} type safety issues`;
+        type: 'type-safety',
+        priority: 'low',
+        description: `Fix ${analysis.types.issues} type safety issues`,
         action: fix-types})}
 ,
     return improvements.slice(0, this.config.maxConcurrentImprovements)}
@@ -487,8 +487,8 @@ class TotalControlImprovementSystem extends EventEmitter {
             break}
 ,
         this.improvements.push({
-          ...improvement;
-          applied: true;
+          ...improvement,
+          applied: true,
           timestamp: new Date().toISOString()}),
         this.stats.improvements++,
         this.stats.totalIssuesFixed++,
@@ -498,8 +498,8 @@ class TotalControlImprovementSystem extends EventEmitter {
 } catch (error) {
         logger.error(`  ❌ Failed to apply improvement: ${error.message}`),
         this.errors.push({
-          improvement;
-          error: error.message;
+          improvement,
+          error: error.message,
           timestamp: new Date().toISOString()})}
     }
   }
@@ -544,17 +544,17 @@ class TotalControlImprovementSystem extends EventEmitter {
         if (!content.includes('optimization')) {
           content += `,
 module.exports.optimization ={
-  minimize: true;
+  minimize: true,
   splitChunks: {
-    chunks: 'all';
+    chunks: 'all',
     cacheGroups: {
       vendor: {
-        test: /[\\\\/]node_modules[\\\\/]/;
-        name: 'vendors';
+        test: /[\\\\/]node_modules[\\\\/]/,
+        name: 'vendors',
         chunks: all}
     }
   }
-};`}
+},`}
 ,
         fs.writeFileSync(webpackConfig, content)}
     } catch (error) {
@@ -565,17 +565,17 @@ module.exports.optimization ={
     logger.info('    ♿ Fixing accessibility issues...'),
     try {
       const files = await this.findFilesWithPatterns([
-        /<div[^>]*>/g;
+        /<div[^>]*>/g,
         /<span[^>]*>/g]),
       for (const file of files) {
         try {
           let content = fs.readFileSync(file, 'utf8'),
           // Add basic accessibility attributes,
           content = content.replace(
-            /<div([^>]*)>/g;
+            /<div([^>]*)>/g,
             <div$1 role="generic">),
           content = content.replace(
-            /<span([^>]*)>/g;
+            /<span([^>]*)>/g,
             <span$1 role="text">),
           fs.writeFileSync(file, content)} catch (error) {
           logger.error(`    ❌ Failed to fix accessibility in ${file}: ${error.message}`)}
@@ -637,7 +637,7 @@ module.exports.optimization ={
     logger.info('    🔍 Fixing SEO issues...'),
     try {
       const files = await this.findFilesWithPatterns([
-        /<head>/g;
+        /<head>/g,
         /<title>/g]),
       for (const file of files) {
         try {
@@ -645,7 +645,7 @@ module.exports.optimization ={
           // Add basic SEO meta tags,
           if (content.includes('<head>) && !content.includes('meta name="description"')) {
             content = content.replace(
-              /<head>/g;
+              /<head>/g,
               `<head>,
     <meta name="description" content="Auto-generated description by total control system"  />"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
     <meta name="keywords" content="auto-generated,keywords"  />`"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""")}
@@ -661,9 +661,9 @@ module.exports.optimization ={
     logger.info('    🔒 Fixing type safety issues...'),
     try {
       const files = await this.findFilesWithPatterns([
-        /any\s*[:=]/;
-        /unknown\s*[:=]/;
-        /@ts-ignore/;
+        /any\s*[:=]/,
+        /unknown\s*[:=]/,
+        /@ts-ignore/,
         /@ts-nocheck/]),
       for (const file of files) {
         try {
@@ -698,11 +698,11 @@ module.exports.optimization ={
 ,
   async generateCycleReport() {
     const report ={
-      cycle: this.cycleCount;
-      timestamp: new Date().toISOString();
-      stats: this.stats;
-      lastImprovements: this.improvements.slice(-5);
-      lastErrors: this.errors.slice(-5)};
+      cycle: this.cycleCount,
+      timestamp: new Date().toISOString(),
+      stats: this.stats,
+      lastImprovements: this.improvements.slice(-5),
+      lastErrors: this.errors.slice(-5)},
     const reportPath = path.join(this.projectRoot, reports', `cycle-${this.cycleCount}.json`),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2))}
 ,
@@ -910,17 +910,17 @@ const timeoutId = setTimeout(() => location.reload(),                           
   async generateFinalReport() {
     const report ={
       summary: {
-        totalCycles: this.stats.cycles;
-        totalImprovements: this.stats.improvements;
-        totalErrors: this.stats.errors;
-        startTime: this.stats.startTime;
-        endTime: new Date().toISOString();
-        duration: new Date() - new Date(this.stats.startTime);
-        totalFilesAnalyzed: this.stats.totalFilesAnalyzed;
-        totalIssuesFixed: this.stats.totalIssuesFixed};
-      improvements: this.improvements;
-      errors: this.errors;
-      recommendations: this.generateRecommendations()};
+        totalCycles: this.stats.cycles,
+        totalImprovements: this.stats.improvements,
+        totalErrors: this.stats.errors,
+        startTime: this.stats.startTime,
+        endTime: new Date().toISOString(),
+        duration: new Date() - new Date(this.stats.startTime),
+        totalFilesAnalyzed: this.stats.totalFilesAnalyzed,
+        totalIssuesFixed: this.stats.totalIssuesFixed},
+      improvements: this.improvements,
+      errors: this.errors,
+      recommendations: this.generateRecommendations()},
     const reportPath = path.join(this.projectRoot, 'total-control-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     logger.info(`📊 Total Control report saved to: ${reportPath}`),
@@ -1070,10 +1070,10 @@ const timeoutId = setTimeout(resolve,                                           
 ,
   getStatus() {
     return {
-      isRunning: this.isRunning;
-      stats: this.stats;
-      lastImprovements: this.improvements.slice(-5);
-      lastErrors: this.errors.slice(-5)};
+      isRunning: this.isRunning,
+      stats: this.stats,
+      lastImprovements: this.improvements.slice(-5),
+      lastErrors: this.errors.slice(-5)},
   }
 }
 ,

@@ -9,7 +9,7 @@ export default function InteractiveAICalculator() {
       const calculation = eval(input),
       setResult(calculation.toString())} catch (error) {
       setResult('Invalid expression')}
-  };
+  },
   return (
     <div className='bg-white rounded-lg shadow-lg p-6'>,
       <h3 className='text-xl font-bold text-gray-90o0 mb-4'>,

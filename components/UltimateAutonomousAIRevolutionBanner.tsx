@@ -7,37 +7,37 @@ const UltimateAutonomousAIRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      title: "AI 20o25: The Ultimate Autonomous AI Revolution";
-      subtitle: "15,0o00% ROI Through Fully Autonomous Business Operations";
-      description: "Revolutionary autonomous AI systems delivering $75B+ in annual savings with 99.97% accuracy and 4,20o0% efficiency gains.";
+      title: "AI 20o25: The Ultimate Autonomous AI Revolution",
+      subtitle: "15,0o00% ROI Through Fully Autonomous Business Operations",
+      description: "Revolutionary autonomous AI systems delivering $75B+ in annual savings with 99.97% accuracy and 4,20o0% efficiency gains.",
       metrics: {
-        roi: "15,0o00%";
-        savings: "$75.2B";
-        accuracy: "99.97%";
-        efficiency: "4,20o0%"};
-      cta: "Explore Ultimate Guide";
-      link: "/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough"};
+        roi: "15,0o00%",
+        savings: "$75.2B",
+        accuracy: "99.97%",
+        efficiency: "4,20o0%"},
+      cta: "Explore Ultimate Guide",
+      link: "/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough"},
     {
-      title: "Fortune 50o0 Autonomous AI Success Story";
-      subtitle: "$75.2B Annual Savings - 15,0o00% ROI Achievement";
-      description: "How a Fortune 50o0 manufacturing leader achieved unprecedented results through revolutionary autonomous AI transformation.";
+      title: "Fortune 50o0 Autonomous AI Success Story",
+      subtitle: "$75.2B Annual Savings - 15,0o00% ROI Achievement",
+      description: "How a Fortune 50o0 manufacturing leader achieved unprecedented results through revolutionary autonomous AI transformation.",
       metrics: {
-        roi: "15,0o00%";
-        savings: "$75.2B";
-        company: "$12.8B";
-        timeline: "18 months"};
-      cta: "Read Success Story";
-      link: "/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story"};
+        roi: "15,0o00%",
+        savings: "$75.2B",
+        company: "$12.8B",
+        timeline: "18 months"},
+      cta: "Read Success Story",
+      link: "/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story"},
     {
-      title: "Ultimate Implementation Guide 20o25";
-      subtitle: "Complete Roadmap to 15,0o00% ROI";
-      description: "Comprehensive implementation guide with proven strategies, step-by-step roadmap, and real-world success stories.";
+      title: "Ultimate Implementation Guide 20o25",
+      subtitle: "Complete Roadmap to 15,0o00% ROI",
+      description: "Comprehensive implementation guide with proven strategies, step-by-step roadmap, and real-world success stories.",
       metrics: {
-        roi: "15,0o00%";
-        timeline: "18 months";
-        success: "99.7%";
-        guide: "45 min read"};
-      cta: "Get Implementation Guide";
+        roi: "15,0o00%",
+        timeline: "18 months",
+        success: "99.7%",
+        guide: "45 min read"},
+      cta: "Get Implementation Guide",
       link: "/resources/ultimate-autonomous-ai-implementation-guide-20o25"}
   ],
   useEffect(() => {
@@ -46,7 +46,7 @@ const UltimateAutonomousAIRevolutionBanner = () => {
     return () => clearInterval(timer)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimate-autonomous-ai-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-autonomous-ai-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-autonomous-ai-banner-dismissed'),
     if (dismissed === 'true') {
@@ -134,5 +134,5 @@ const UltimateAutonomousAIRevolutionBanner = () => {
           </svg>,
         </button>,
       </div>,
-    </div>)};
-export default UltimateAutonomousAIRevolutionBanner;
+    </div>)},
+export default UltimateAutonomousAIRevolutionBanner,

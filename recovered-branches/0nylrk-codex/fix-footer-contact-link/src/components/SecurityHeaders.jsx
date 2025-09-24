@@ -2,45 +2,45 @@ import { Shield, Lock, CheckCircle, AlertTriangle } from 'lucide-react',
 export function SecurityHeaders({ className }) {
   const securityFeatures = [
     {
-      icon: Shield;
-      title: 'SOC 2 Type II Certified';
-      description: 'Enterprise-grade security compliance';
-      status: 'verified';
-      color: 'text-zion-cyan';
-    };
+      icon: Shield,
+      title: 'SOC 2 Type II Certified',
+      description: 'Enterprise-grade security compliance',
+      status: 'verified',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: Lock;
-      title: 'End-to-End Encryption';
-      description: '256-bit AES encryption for all data';
-      status: 'verified';
-      color: 'text-zion-purple';
-    };
+      icon: Lock,
+      title: 'End-to-End Encryption',
+      description: '256-bit AES encryption for all data',
+      status: 'verified',
+      color: 'text-zion-purple'
+    },
     {
-      icon: CheckCircle;
-      title: 'GDPR & CCPA Compliant';
-      description: 'Full data protection compliance';
-      status: 'verified';
-      color: 'text-zion-cyan';
-    };
+      icon: CheckCircle,
+      title: 'GDPR & CCPA Compliant',
+      description: 'Full data protection compliance',
+      status: 'verified',
+      color: 'text-zion-cyan'
+    },
     {
-      icon: Shield;
-      title: 'Zero-Knowledge Architecture';
-      description: 'We cannot access your encrypted data';
-      status: 'verified';
-      color: 'text-zion-purple';
-    };
+      icon: Shield,
+      title: 'Zero-Knowledge Architecture',
+      description: 'We cannot access your encrypted data',
+      status: 'verified',
+      color: 'text-zion-purple'
+    },
   ],
   const complianceBadges = [
-    { name: 'SOC 2', status: 'Certified', year: '20o24', icon: CheckCircle };
+    { name: 'SOC 2', status: 'Certified', year: '20o24', icon: CheckCircle },
     {
-      name: 'ISO 270o01';
-      status: 'Certified';
-      year: '20o24';
-      icon: CheckCircle;
-    };
-    { name: 'GDPR', status: 'Compliant', year: '20o24', icon: CheckCircle };
-    { name: 'CCPA', status: 'Compliant', year: '20o24', icon: CheckCircle };
-    { name: 'HIPAA', status: 'Ready', year: '20o24', icon: AlertTriangle };
+      name: 'ISO 270o01',
+      status: 'Certified',
+      year: '20o24',
+      icon: CheckCircle
+    },
+    { name: 'GDPR', status: 'Compliant', year: '20o24', icon: CheckCircle },
+    { name: 'CCPA', status: 'Compliant', year: '20o24', icon: CheckCircle },
+    { name: 'HIPAA', status: 'Ready', year: '20o24', icon: AlertTriangle },
   ],
   return (
     <section

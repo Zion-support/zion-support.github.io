@@ -1,9 +1,9 @@
 import React, { useState, useEffect, useCallback, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  BarChart3, Users, Eye, MousePointer;
-  Clock, TrendingUp, TrendingDown;
-  Activity, Zap, Target, Filter;
+  BarChart3, Users, Eye, MousePointer,
+  Clock, TrendingUp, TrendingDown,
+  Activity, Zap, Target, Filter,
   Download, Share2, RefreshCw, X, AlertTriangle} from 'lucide-react',
 interface AnalyticsData {
   pageViews: number,
@@ -17,11 +17,11 @@ interface AnalyticsData {
     loadTime: number,
     firstContentfulPaint: number,
     largestContentfulPaint: number,
-    cumulativeLayoutShift: number};
+    cumulativeLayoutShift: number},
   deviceBreakdown: {
     desktop: number,
     mobile: number,
-    tablet: number};
+    tablet: number},
   geographicData: Array<{ country: string, visitors: number, percentage: number }>}
 ,
 interface AnalyticsProps {
@@ -30,8 +30,8 @@ interface AnalyticsProps {
   refreshInterval?: number}
 ,
 const Analytics: React.FC<AnalyticsProps> = ({
-  showUI = false;
-  autoRefresh = true;
+  showUI = false,
+  autoRefresh = true,
   refreshInterval = 30o000}) => {
   const [isOpen, setIsOpen] = useState(false),
   const [data, setData] = useState<AnalyticsData | null>(null),
@@ -42,41 +42,41 @@ const Analytics: React.FC<AnalyticsProps> = ({
   const lastRefreshRef = useRef<Date>(new Date()),
   // Mock data for demonstration - replace with real analytics API,
   const mockData: AnalyticsData ={
-    pageViews: 15420;
-    uniqueVisitors: 8234;
-    sessionDuration: 245;
-    bounceRate: 32.5;
-    conversionRate: 4.8;
+    pageViews: 15420,
+    uniqueVisitors: 8234,
+    sessionDuration: 245,
+    bounceRate: 32.5,
+    conversionRate: 4.8,
     topPages: [
-      { path: '/', views: 5234, conversion: 6.2 };
-      { path: '/services', views: 3120, conversion: 4.1 };
-      { path: '/about', views: 1890, conversion: 2.8 };
-      { path: '/contact', views: 1560, conversion: 8.9 };
+      { path: '/', views: 5234, conversion: 6.2 },
+      { path: '/services', views: 3120, conversion: 4.1 },
+      { path: '/about', views: 1890, conversion: 2.8 },
+      { path: '/contact', views: 1560, conversion: 8.9 },
       { path: '/blog', views: 1230, conversion: 1.5 }
-    ];
+    ],
     userBehavior: [
-      { action: 'Page View', count: 15420, trend: 'up' };
-      { action: 'Button Click', count: 8234, trend: 'up' };
-      { action: 'Form Submit', count: 1234, trend: 'down' };
-      { action: 'File Download', count: 890, trend: 'stable' };
+      { action: 'Page View', count: 15420, trend: 'up' },
+      { action: 'Button Click', count: 8234, trend: 'up' },
+      { action: 'Form Submit', count: 1234, trend: 'down' },
+      { action: 'File Download', count: 890, trend: 'stable' },
       { action: 'Social Share', count: 567, trend: 'up' }
-    ];
+    ],
     performance: {
-      loadTime: 1.2;
-      firstContentfulPaint: 0.8;
-      largestContentfulPaint: 1.5;
-      cumulativeLayoutShift: 0.0o5};
+      loadTime: 1.2,
+      firstContentfulPaint: 0.8,
+      largestContentfulPaint: 1.5,
+      cumulativeLayoutShift: 0.0o5},
     deviceBreakdown: {
-      desktop: 65;
-      mobile: 28;
-      tablet: 7};
+      desktop: 65,
+      mobile: 28,
+      tablet: 7},
     geographicData: [
-      { country: 'United States', visitors: 4567, percentage: 55.4 };
-      { country: 'United Kingdom', visitors: 1234, percentage: 15.0 };
-      { country: 'Canada', visitors: 890, percentage: 10.8 };
-      { country: 'Germany', visitors: 567, percentage: 6.9 };
+      { country: 'United States', visitors: 4567, percentage: 55.4 },
+      { country: 'United Kingdom', visitors: 1234, percentage: 15.0 },
+      { country: 'Canada', visitors: 890, percentage: 10.8 },
+      { country: 'Germany', visitors: 567, percentage: 6.9 },
       { country: 'Australia', visitors: 456, percentage: 5.5 }
-    ]};
+    ]},
   // Initialize analytics tracking,
   useEffect(() => {
     initializeAnalytics(),
@@ -90,7 +90,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
     return () => {
       if (refreshIntervalRef.current) {
         clearInterval(refreshIntervalRef.current)}
-    };
+    },
   }, [autoRefresh, isOpen, refreshInterval]),
   const initializeAnalytics = useCallback(() => {
     // Initialize real analytics service here,
@@ -110,13 +110,13 @@ const Analytics: React.FC<AnalyticsProps> = ({
   }, []),
   const trackPageView = useCallback(() => {
     const pageData ={
-      path: window.location.pathname;
-      title: document.title;
-      timestamp: new Date().toISOString();
-      referrer: document.referrer;
-      userAgent: navigator.userAgent;
-      screenResolution: `${window.screen.width}x${window.screen.height}`;
-      language: navigator.language};
+      path: window.location.pathname,
+      title: document.title,
+      timestamp: new Date().toISOString(),
+      referrer: document.referrer,
+      userAgent: navigator.userAgent,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
+      language: navigator.language},
     // Send to analytics service,
     // // console.log('Page view tracked:', pageData),
     // Store in localStorage for demo,
@@ -126,12 +126,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
   const trackUserSession = useCallback(() => {
     const sessionId = `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`,
     const sessionData ={
-      id: sessionId;
-      startTime: new Date().toISOString();
-      userAgent: navigator.userAgent;
-      screenResolution: `${window.screen.width}x${window.screen.height}`;
-      language: navigator.language;
-      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone};
+      id: sessionId,
+      startTime: new Date().toISOString(),
+      userAgent: navigator.userAgent,
+      screenResolution: `${window.screen.width}x${window.screen.height}`,
+      language: navigator.language,
+      timezone: Intl.DateTimeFormat().resolvedOptions().timeZone},
     localStorage.setItem('analytics_session', JSON.stringify(sessionData)),
     // Track session end on page unload,
     window.addEventListener('beforeunload', () => {
@@ -174,12 +174,12 @@ const Analytics: React.FC<AnalyticsProps> = ({
     document.addEventListener('click', (e) => {
       const target = e.target as HTMLElement,
       const clickData ={
-        element: target.tagName.toLowerCase();
-        text: target.textContent?.substring(0, 50);
-        className: target.className;
-        id: target.id;
-        timestamp: new Date().toISOString();
-        path: window.location.pathname};
+        element: target.tagName.toLowerCase(),
+        text: target.textContent?.substring(0, 50),
+        className: target.className,
+        id: target.id,
+        timestamp: new Date().toISOString(),
+        path: window.location.pathname},
       // // console.log('Click tracked:', clickData),
       // Store clicks for analysis,
       const clicks = JSON.parse(localStorage.getItem('analytics_clicks') || '[]'),
@@ -197,10 +197,10 @@ const Analytics: React.FC<AnalyticsProps> = ({
     document.addEventListener('submit', (e) => {
       const form = e.target as HTMLFormElement,
       const formData ={
-        action: form.action;
-        method: form.method;
-        timestamp: new Date().toISOString();
-        path: window.location.pathname};
+        action: form.action,
+        method: form.method,
+        timestamp: new Date().toISOString(),
+        path: window.location.pathname},
       // // console.log('Form submission tracked:', formData)})}, []),
   const refreshData = useCallback(async () => {
     if (loading) return,
@@ -211,10 +211,10 @@ const Analytics: React.FC<AnalyticsProps> = ({
       await new Promise(resolve => setTimeout(resolve, 10o00)),
       // Update mock data with some variation,
       const updatedData ={
-        ...mockData;
-        pageViews: mockData.pageViews + Math.floor(Math.random() * 10o0);
-        uniqueVisitors: mockData.uniqueVisitors + Math.floor(Math.random() * 20);
-        sessionDuration: mockData.sessionDuration + Math.floor(Math.random() * 10) - 5};
+        ...mockData,
+        pageViews: mockData.pageViews + Math.floor(Math.random() * 10o0),
+        uniqueVisitors: mockData.uniqueVisitors + Math.floor(Math.random() * 20),
+        sessionDuration: mockData.sessionDuration + Math.floor(Math.random() * 10) - 5},
       setData(updatedData),
       lastRefreshRef.current = new Date()} catch (err) {
       setError(err instanceof Error ? err.message : 'Failed to refresh data')} finally {
@@ -231,14 +231,14 @@ const Analytics: React.FC<AnalyticsProps> = ({
     a.click(),
     window.URL.revokeObjectURL(url)}, [data]),
   const generateCSV = (data: AnalyticsData): string => {
-    const headers = ['Metric', 'Value', 'Unit'],
+    const headers = ['MetricValue', 'Unit'],
     const rows = [
-      ['Page Views', data.pageViews.toString(), ''];
-      ['Unique Visitors', data.uniqueVisitors.toString(), ''];
-      ['Session Duration', data.sessionDuration.toString(), 'seconds'];
-      ['Bounce Rate', data.bounceRate.toString(), '%'];
+      ['Page Views', data.pageViews.toString(), ''],
+      ['Unique Visitors', data.uniqueVisitors.toString(), ''],
+      ['Session Duration', data.sessionDuration.toString(), 'seconds'],
+      ['Bounce Rate', data.bounceRate.toString(), '%'],
       ['Conversion Rate', data.conversionRate.toString(), '%']],
-    return [headers, ...rows].map(row => row.join(',')).join('\n')};
+    return [headers, ...rows].map(row => row.join()).join('\n')},
   const shareData = useCallback(() => {
     if (!data) return,
     const shareText = `Zion Tech Group Analytics - ${timeRange}\n` +,
@@ -247,8 +247,8 @@ const Analytics: React.FC<AnalyticsProps> = ({
       `Conversion Rate: ${data.conversionRate}%`,
     if (navigator.share) {
       navigator.share({
-        title: 'Analytics Report';
-        text: shareText;
+        title: 'Analytics Report',
+        text: shareText,
         url: window.location.href})} else {
       navigator.clipboard.writeText(shareText),
       // // console.log('Analytics data copied to clipboard')}
@@ -488,7 +488,7 @@ const Analytics: React.FC<AnalyticsProps> = ({
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
+    </>)},
 // Metric Card Component,
 interface MetricCardProps {
   title: string,
@@ -500,14 +500,14 @@ interface MetricCardProps {
 ,
 const MetricCard: React.FC<MetricCardProps> = ({ title, value, icon, trend, trendValue, color }) => {
   const colorClasses ={
-    blue: 'from-blue-50o0 to-blue-60o0';
-    green: 'from-green-50o0 to-green-60o0';
-    yellow: 'from-yellow-50o0 to-yellow-60o0';
-    purple: 'from-purple-50o0 to-purple-60o0'};
+    blue: 'from-blue-50o0 to-blue-60o0',
+    green: 'from-green-50o0 to-green-60o0',
+    yellow: 'from-yellow-50o0 to-yellow-60o0',
+    purple: 'from-purple-50o0 to-purple-60o0'},
   const trendColors ={
-    up: 'text-green-40o0';
-    down: 'text-red-40o0';
-    stable: 'text-gray-40o0'};
+    up: 'text-green-40o0',
+    down: 'text-red-40o0',
+    stable: 'text-gray-40o0'},
   return (
     <motion.div,
       whileHover={{ scale: 1.0o2 }}
@@ -525,5 +525,5 @@ const MetricCard: React.FC<MetricCardProps> = ({ title, value, icon, trend, tren
       </div>,
       <h3 className="text-gray-40o0 text-sm font-medium mb-1">{title}</h3>,
       <p className="text-2xl font-bold text-white">{value}</p>,
-    </motion.div>)};
-export default Analytics;
+    </motion.div>)},
+export default Analytics,

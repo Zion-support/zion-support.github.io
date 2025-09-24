@@ -7,10 +7,10 @@ interface UltraQuantumMatrixBackgroundProps {
   children: React.ReactNode}
 ,
 export default function UltraQuantumMatrixBackground({
-  intensity = 'medium';
-  colorScheme = 'quantum';
-  particleCount = 150;
-  animationSpeed = 1.0;
+  intensity = 'medium',
+  colorScheme = 'quantum',
+  particleCount = 150,
+  animationSpeed = 1.0,
   children}: UltraQuantumMatrixBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -19,30 +19,30 @@ export default function UltraQuantumMatrixBackground({
     switch (colorScheme) {
       case 'neon':,
         return {
-          primary: '#0o0ffff';
-          secondary: '#ff0o0ff';
-          accent: '#ffff0o0';
-          background: '#0a0a0a'};
+          primary: '#0o0ffff',
+          secondary: '#ff0o0ff',
+          accent: '#ffff0o0',
+          background: '#0a0a0a'},
       case 'cosmic':,
         return {
-          primary: '#4f46e5';
-          secondary: '#7c3aed';
-          accent: '#ec4899';
-          background: '#0f0f23'};
+          primary: '#4f46e5',
+          secondary: '#7c3aed',
+          accent: '#ec4899',
+          background: '#0f0f23'},
       case 'cyber':,
         return {
-          primary: '#10b981';
-          secondary: '#f59e0b';
-          accent: '#ef4444';
-          background: '#111827'};
+          primary: '#10b981',
+          secondary: '#f59e0b',
+          accent: '#ef4444',
+          background: '#111827'},
       default: // quantum,
         return {
-          primary: '#0o6b6d4';
-          secondary: '#8b5cf6';
-          accent: '#ec4899';
-          background: '#0f172a'};
+          primary: '#0o6b6d4',
+          secondary: '#8b5cf6',
+          accent: '#ec4899',
+          background: '#0f172a'},
     }
-  };
+  },
   const colors = getColorScheme(),
   useEffect(() => {
     const canvas = canvasRef.current,
@@ -52,7 +52,7 @@ export default function UltraQuantumMatrixBackground({
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -73,7 +73,7 @@ export default function UltraQuantumMatrixBackground({
         this.size = Math.random() * 3 + 1,
         this.opacity = Math.random() * 0.8 + 0.2,
         this.color = [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)],
-        this.type = ['matrix', 'quantum', 'energy'][Math.floor(Math.random() * 3)] as any}
+        this.type = ['matrixquantum', 'energy'][Math.floor(Math.random() * 3)] as any}
 ,
       update() {
         this.x += this.vx,
@@ -206,14 +206,14 @@ export default function UltraQuantumMatrixBackground({
       particles.forEach(particle => {
         particle.update(),
         particle.draw()}),
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     // Cleanup,
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [intensity, colorScheme, particleCount, animationSpeed, colors]),
   return (
     <div className="relative min-h-screen">,
@@ -226,7 +226,7 @@ export default function UltraQuantumMatrixBackground({
       <div
         className="fixed inset-0 pointer-events-none",
         style={{
-          background: `radial-gradient(circle at 20% 80%, ${colors.primary}10 0%, transparent 50%), radial-gradient(circle at 80% 20%, ${colors.secondary}10 0%, transparent 50%), radial-gradient(circle at 40% 40%, ${colors.accent}10 0%, transparent 50%)`;
+          background: `radial-gradient(circle at 20% 80%, ${colors.primary}10 0%, transparent 50%), radial-gradient(circle at 80% 20%, ${colors.secondary}10 0%, transparent 50%), radial-gradient(circle at 40% 40%, ${colors.accent}10 0%, transparent 50%)`,
           zIndex: -1}}
        />,
       {/* Content */}

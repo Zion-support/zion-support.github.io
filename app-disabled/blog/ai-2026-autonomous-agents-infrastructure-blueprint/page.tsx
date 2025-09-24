@@ -62,5 +62,5 @@ const AutonomousAgentsInfrastructureBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousAgentsInfrastructureBlueprint20o26;
+    </div>)},
+export default AutonomousAgentsInfrastructureBlueprint20o26,

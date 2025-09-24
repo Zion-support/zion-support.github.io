@@ -1,49 +1,49 @@
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import {
-  Menu;
-  X;
-  Zap;
-  Globe;
-  Bot;
-  Cloud;
-  Shield;
-  Sparkles;
-  Rocket;
-  Cpu;
-  Database;
-  Brain;
-  Atom;
-  Eye;
-  Lock;
-  BarChart3;
-  Users;
-  Target;
-  TrendingUp;
-  Star;
-  Award;
-  ZapIcon;
-  CloudIcon;
-  BotIcon;
-  ShieldIcon;
-  GlobeIcon;
-  CpuIcon;
-  DatabaseIcon;
-  BrainIcon;
-  AtomIcon;
-  EyeIcon;
-  LockIcon;
-  BarChart3Icon;
-  UsersIcon;
-  TargetIcon;
-  TrendingUpIcon;
-  StarIcon;
-  AwardIcon;
-  DollarSign;
-  FlaskConical;
-  Leaf;
-  Factory;
-  ShieldCheck;
+  Menu,
+  X,
+  Zap,
+  Globe,
+  Bot,
+  Cloud,
+  Shield,
+  Sparkles,
+  Rocket,
+  Cpu,
+  Database,
+  Brain,
+  Atom,
+  Eye,
+  Lock,
+  BarChart3,
+  Users,
+  Target,
+  TrendingUp,
+  Star,
+  Award,
+  ZapIcon,
+  CloudIcon,
+  BotIcon,
+  ShieldIcon,
+  GlobeIcon,
+  CpuIcon,
+  DatabaseIcon,
+  BrainIcon,
+  AtomIcon,
+  EyeIcon,
+  LockIcon,
+  BarChart3Icon,
+  UsersIcon,
+  TargetIcon,
+  TrendingUpIcon,
+  StarIcon,
+  AwardIcon,
+  DollarSign,
+  FlaskConical,
+  Leaf,
+  Factory,
+  ShieldCheck,
 } from 'lucide-react',
 const FuturisticNavbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -55,28 +55,28 @@ const FuturisticNavbar: React.FC = () => {
   useEffect(() => {
     if (!isClient) return,
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)};
+      setScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, [isClient]),
   const navItems = [
-    { name: 'Home', href: '/', icon: <Zap className='w-4 h-4' /> };
+    { name: 'Home', href: '/', icon: <Zap className='w-4 h-4' /> },
     {
-      name: 'Services';
-      href: '/services';
-      icon: <Cloud className='w-4 h-4' />;
-    };
+      name: 'Services',
+      href: '/services',
+      icon: <Cloud className='w-4 h-4' />
+    },
     {
-      name: 'AI & Quantum';
-      href: '/services?category=AI%20%26%20Machine%20Learning';
-      icon: <Bot className='w-4 h-4' />;
-    };
+      name: 'AI & Quantum',
+      href: '/services?category=AI%20%26%20Machine%20Learning',
+      icon: <Bot className='w-4 h-4' />
+    },
     {
-      name: 'Blockchain';
-      href: '/services?category=Blockchain%20%26%20Web3';
-      icon: <Globe className='w-4 h-4' />;
-    };
-    { name: 'Pricing', href: '/pricing', icon: <Shield className='w-4 h-4' /> };
-    { name: 'Contact', href: '/contact', icon: <Zap className='w-4 h-4' /> };
+      name: 'Blockchain',
+      href: '/services?category=Blockchain%20%26%20Web3',
+      icon: <Globe className='w-4 h-4' />
+    },
+    { name: 'Pricing', href: '/pricing', icon: <Shield className='w-4 h-4' /> },
+    { name: 'Contact', href: '/contact', icon: <Zap className='w-4 h-4' /> },
   ],
   const [activeSubmenu, setActiveSubmenu] = useState<string | null>(null),
   return (
@@ -220,4 +220,4 @@ const FuturisticNavbar: React.FC = () => {
             </div>,
           </div>,
         </div>)}
-    </nav>)};
+    </nav>)},

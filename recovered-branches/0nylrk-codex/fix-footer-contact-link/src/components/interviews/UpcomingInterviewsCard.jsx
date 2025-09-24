@@ -26,7 +26,7 @@ export function UpcomingInterviewsCard() {
                 console.error("Error loading upcoming interviews:", error)}
             finally {
                 setIsLoading(false)}
-        };
+        },
         loadInterviews()}, []),
     if (isLoading) {
         return (<Card className="bg-zion-blue-dark/40 border-zion-blue-light">,

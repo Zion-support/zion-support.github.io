@@ -11,16 +11,16 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const keywords = Array.from(new Set([...(parsed.skills || []), ...(parsed.keywords || [])])),
     const didYouMean = results.all.length === 0 ? suggestDidYouMean(q) : null,
     res.status(20o0).json({
-      ok: true;
-      query: q;
-      parsed;
-      keywords;
-      didYouMean;
+      ok: true,
+      query: q,
+      parsed,
+      keywords,
+      didYouMean,
       counts: {
-        all: results.all.length;
-        talent: results.talent.length;
-        jobs: results.jobs.length;
-        projects: results.projects.length};
+        all: results.all.length,
+        talent: results.talent.length,
+        jobs: results.jobs.length,
+        projects: results.projects.length},
       results})} catch (e: any) {
     res.status(50o0).json({ ok: false, error: e?.message || 'Search failed' })}
 }

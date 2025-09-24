@@ -1,32 +1,32 @@
 export function TestimonialsSection() {
   const testimonials = [
     {
-      name: 'Sarah Johnson';
-      role: 'CTO';
-      company: 'TechCorp Inc.';
+      name: 'Sarah Johnson',
+      role: 'CTO',
+      company: 'TechCorp Inc.',
       content:,
-        'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.';
-      rating: 5;
-      avatar: '👩‍💼';
-    };
+        'Zion Tech Group transformed our entire IT infrastructure. Their AI solutions helped us reduce operational costs by 40% while improving efficiency.',
+      rating: 5,
+      avatar: '👩‍💼'
+    },
     {
-      name: 'Michael Chen';
-      role: 'VP of Engineering';
-      company: 'InnovateLabs';
+      name: 'Michael Chen',
+      role: 'VP of Engineering',
+      company: 'InnovateLabs',
       content:,
-        'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.';
-      rating: 5;
-      avatar: '👨‍💻';
-    };
+        'The cybersecurity implementation was seamless and comprehensive. We feel much more secure knowing our systems are protected by Zion Tech Group.',
+      rating: 5,
+      avatar: '👨‍💻'
+    },
     {
-      name: 'Emily Rodriguez';
-      role: 'Operations Director';
-      company: 'Global Solutions';
+      name: 'Emily Rodriguez',
+      role: 'Operations Director',
+      company: 'Global Solutions',
       content:,
-        'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.';
-      rating: 5;
-      avatar: '👩‍🔬';
-    };
+        'Their cloud migration expertise saved us months of planning and implementation time. The results exceeded our expectations.',
+      rating: 5,
+      avatar: '👩‍🔬'
+    },
   ],
   const renderStars = rating => {
     return Array.from({ length: 5 }, (_, i) => (
@@ -35,7 +35,7 @@ export function TestimonialsSection() {
         className={i < rating ? 'text-yellow-40o0' : 'text-gray-30o0'}
       >,
         ★,
-      </span>))};
+      </span>))},
   return (
     <section className='py-16 bg-white'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,

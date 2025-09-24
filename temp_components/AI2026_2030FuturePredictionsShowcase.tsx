@@ -234,5 +234,5 @@ const AI20o26_20o30FuturePredictionsShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26_20o30FuturePredictionsShowcase;
+    </section>)},
+export default AI20o26_20o30FuturePredictionsShowcase,

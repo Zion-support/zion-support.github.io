@@ -33,8 +33,8 @@ export default function PerformanceOptimizations() {
               window.addEventListener('load'() => {
                 const perfData = window.window.performance.getEntriesByType('navigation')[0],
                 if (perfData) {
-                  // // console.log('Page Load Time:'perfData.loadEventEnd - perfData.'loadEventStart', 'ms'),
-                  // // console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.'domContentLoadedEventStart', 'ms')}
+                  // // console.log('Page Load Time:'perfData.loadEventEnd - perfData.'loadEventStartms'),
+                  // // console.log('DOM Content Loaded:'perfData.domContentLoadedEventEnd - perfData.'domContentLoadedEventStartms')}
               })}
 ,
             // Lazy loading for images,
@@ -49,7 +49,7 @@ export default function PerformanceOptimizations() {
                 })}),
               document.querySelectorAll('img[data-src]').forEach(img => {
                 imageObserver.observe(img)})}
-          `;
+          `,
         }}
       />,
     </>)}

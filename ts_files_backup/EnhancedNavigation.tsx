@@ -2,27 +2,27 @@ import React, { useState, useEffect, useRef } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Globe;
-  Brain;
-  Shield;
-  Rocket;
-  Cpu;
-  Database;
-  Atom;
-  Users;
-  Award;
-  BookOpen;
-  Phone;
-  Search;
-  Bell;
-  User;
-  Settings;
-  LogOut;
-  Sun;
-  Moon;
+  Menu,
+  X,
+  ChevronDown,
+  Globe,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Users,
+  Award,
+  BookOpen,
+  Phone,
+  Search,
+  Bell,
+  User,
+  Settings,
+  LogOut,
+  Sun,
+  Moon,
 } from 'lucide-react',
 const EnhancedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -35,26 +35,26 @@ const EnhancedNavigation: React.FC = () => {
   const searchRef = useRef<HTMLInputElement>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     const handleClickOutside = (event: MouseEvent) => {
       if (
         dropdownRef.current &&,
         !dropdownRef.current.contains(event.target as Node)) {
         setActiveDropdown(null)}
-    };
+    },
     const handleEscape = (event: KeyboardEvent) => {
       if (event.key === 'Escape') {
         setActiveDropdown(null),
         setIsOpen(false),
         setShowSearch(false)}
-    };
+    },
     window.addEventListener('scroll', handleScroll),
     document.addEventListener('mousedown', handleClickOutside),
     document.addEventListener('keydown', handleEscape),
     return () => {
       window.removeEventListener('scroll', handleScroll),
       document.removeEventListener('mousedown', handleClickOutside),
-      document.removeEventListener('keydown', handleEscape)};
+      document.removeEventListener('keydown', handleEscape)},
   }, []),
   useEffect(() => {
     if (showSearch && searchRef.current) {
@@ -62,82 +62,82 @@ const EnhancedNavigation: React.FC = () => {
   }, [showSearch]),
   const services = [
     {
-      name: 'All Services';
-      href: '/comprehensive-2025-services-showcase';
-      icon: Globe;
-      description: 'Complete collection of innovative services';
-      badge: 'New';
-    };
+      name: 'All Services',
+      href: '/comprehensive-2025-services-showcase',
+      icon: Globe,
+      description: 'Complete collection of innovative services',
+      badge: 'New'
+    },
     {
-      name: 'AI Business Intelligence';
-      href: 'https://ziontechgroup.com/ai-business-intelligence';
-      icon: Brain;
-      description: 'AI-powered analytics and insights';
-      badge: 'Popular';
-    };
+      name: 'AI Business Intelligence',
+      href: 'https://ziontechgroup.com/ai-business-intelligence',
+      icon: Brain,
+      description: 'AI-powered analytics and insights',
+      badge: 'Popular'
+    },
     {
-      name: 'Quantum Cybersecurity';
-      href: 'https://ziontechgroup.com/quantum-cybersecurity';
-      icon: Shield;
-      description: 'Quantum-resistant security solutions';
-      badge: 'Enterprise';
-    };
+      name: 'Quantum Cybersecurity',
+      href: 'https://ziontechgroup.com/quantum-cybersecurity',
+      icon: Shield,
+      description: 'Quantum-resistant security solutions',
+      badge: 'Enterprise'
+    },
     {
-      name: 'Edge Computing';
-      href: 'https://ziontechgroup.com/edge-computing-orchestration';
-      icon: Cpu;
-      description: 'Edge orchestration and IoT management';
-      badge: 'Innovative';
-    };
+      name: 'Edge Computing',
+      href: 'https://ziontechgroup.com/edge-computing-orchestration',
+      icon: Cpu,
+      description: 'Edge orchestration and IoT management',
+      badge: 'Innovative'
+    },
     {
-      name: 'Space Technology';
-      href: 'https://ziontechgroup.com/space-technology';
-      icon: Rocket;
-      description: 'Space exploration and satellite tech';
-      badge: 'Premium';
-    };
+      name: 'Space Technology',
+      href: 'https://ziontechgroup.com/space-technology',
+      icon: Rocket,
+      description: 'Space exploration and satellite tech',
+      badge: 'Premium'
+    },
     {
-      name: 'Pricing';
-      href: '/pricing-2025';
-      icon: Award;
-      description: 'Transparent pricing for all services';
-    };
+      name: 'Pricing',
+      href: '/pricing-2025',
+      icon: Award,
+      description: 'Transparent pricing for all services'
+    },
   ],
   const company = [
     {
-      name: 'About Us';
-      href: '/about';
-      icon: Users;
-      description: 'Learn about our mission and team';
-    };
+      name: 'About Us',
+      href: '/about',
+      icon: Users,
+      description: 'Learn about our mission and team'
+    },
     {
-      name: 'Our Work';
-      href: '/portfolio';
-      icon: Award;
-      description: 'See our latest projects and achievements';
-    };
+      name: 'Our Work',
+      href: '/portfolio',
+      icon: Award,
+      description: 'See our latest projects and achievements'
+    },
     {
-      name: 'Blog & Insights';
-      href: '/blog';
-      icon: BookOpen;
-      description: 'Stay updated with industry trends';
-    };
+      name: 'Blog & Insights',
+      href: '/blog',
+      icon: BookOpen,
+      description: 'Stay updated with industry trends'
+    },
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: Phone;
-      description: 'Get in touch with our experts';
-    };
+      name: 'Contact',
+      href: '/contact',
+      icon: Phone,
+      description: 'Get in touch with our experts'
+    },
   ],
   const toggleDropdown = (dropdown: string) => {
-    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)};
+    setActiveDropdown(activeDropdown === dropdown ? null : dropdown)},
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
     setIsOpen(false),
-    setShowSearch(false)};
+    setShowSearch(false)},
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode),
-    // Here you would typically update the theme context or localStorage};
+    // Here you would typically update the theme context or localStorage},
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
     if (searchQuery.trim()) {
@@ -145,7 +145,7 @@ const EnhancedNavigation: React.FC = () => {
       // // console.log('Searching for:', searchQuery),
       setSearchQuery(''),
       setShowSearch(false)}
-  };
+  },
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
@@ -465,5 +465,5 @@ const EnhancedNavigation: React.FC = () => {
             </motion.div>)}
         </AnimatePresence>,
       </div>,
-    </nav>)};
-export default EnhancedNavigation;
+    </nav>)},
+export default EnhancedNavigation,

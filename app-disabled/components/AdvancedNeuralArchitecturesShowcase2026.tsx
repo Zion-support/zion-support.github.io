@@ -2,88 +2,88 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Clock;
-  Users;
-  Award;
-  CheckCircle;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Clock,
+  Users,
+  Award,
+  CheckCircle,
 } from 'lucide-react',
 const AdvancedNeuralArchitecturesShowcase20o26 = () => {
   const [activeTab, setActiveTab] = useState('all'),
   const content = [
     {
-      id: 'neural-architectures-revolution';
-      title: 'AI 20o25: Advanced Neural Architectures Revolution';
-      type: 'blog';
+      id: 'neural-architectures-revolution',
+      title: 'AI 20o25: Advanced Neural Architectures Revolution',
+      type: 'blog',
       description:,
-        '2,80o0% ROI Through Next-Generation Intelligence - Fortune 50o0 companies achieving $4.2B in annual savings with 99.7% accuracy';
+        '2,80o0% ROI Through Next-Generation Intelligence - Fortune 50o0 companies achieving $4.2B in annual savings with 99.7% accuracy',
       metrics: {
-        roi: '2,80o0%';
-        savings: '$4.2B';
-        accuracy: '99.7%';
-        timeline: '8 months';
-      };
-      tags: ['Neural Architectures', 'ROI', 'Fortune 50o0', 'AI Revolution'];
-      link: '/blog/ai-20o25-advanced-neural-architectures-revolution';
-      readingTime: '25 min read';
-      featured: true;
-    };
+        roi: '2,80o0%',
+        savings: '$4.2B',
+        accuracy: '99.7%',
+        timeline: '8 months'
+      },
+      tags: ['Neural ArchitecturesROI', 'Fortune 50o0AI Revolution'],
+      link: '/blog/ai-20o25-advanced-neural-architectures-revolution',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 Success: $4.2B Annual Savings';
-      type: 'case-study';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Success: $4.2B Annual Savings',
+      type: 'case-study',
       description:,
-        'How Global Manufacturing Corp achieved 2,80o0% ROI in just 8 months with Advanced Neural Architectures';
+        'How Global Manufacturing Corp achieved 2,80o0% ROI in just 8 months with Advanced Neural Architectures',
       metrics: {
-        roi: '2,80o0%';
-        savings: '$4.2B';
-        timeline: '8 months';
-        efficiency: '156%';
-      };
-      tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story'];
-      link: '/case-studies/fortune-50o0-advanced-neural-architectures-280o0-roi-success';
-      readingTime: '18 min read';
-      featured: true;
-    };
+        roi: '2,80o0%',
+        savings: '$4.2B',
+        timeline: '8 months',
+        efficiency: '156%'
+      },
+      tags: ['Case StudyFortune 50o0', 'ManufacturingSuccess Story'],
+      link: '/case-studies/fortune-50o0-advanced-neural-architectures-280o0-roi-success',
+      readingTime: '18 min read',
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      title: 'Implementation Guide: Complete Roadmap';
-      type: 'resource';
+      id: 'implementation-guide',
+      title: 'Implementation Guide: Complete Roadmap',
+      type: 'resource',
       description:,
-        'Comprehensive implementation framework based on 1,20o0+ successful deployments with step-by-step guidance';
+        'Comprehensive implementation framework based on 1,20o0+ successful deployments with step-by-step guidance',
       metrics: {
-        deployments: '1,20o0+';
-        success: '99.7%';
-        timeline: '35 min';
-        framework: 'Complete';
-      };
-      tags: ['Implementation', 'Guide', 'Framework', 'Best Practices'];
-      link: '/resources/advanced-neural-architectures-implementation-guide-20o25';
-      readingTime: '35 min read';
-      featured: true;
-    };
+        deployments: '1,20o0+',
+        success: '99.7%',
+        timeline: '35 min',
+        framework: 'Complete'
+      },
+      tags: ['ImplementationGuide', 'FrameworkBest Practices'],
+      link: '/resources/advanced-neural-architectures-implementation-guide-20o25',
+      readingTime: '35 min read',
+      featured: true
+    },
   ],
   const tabs = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeTab === 'all',
@@ -99,7 +99,7 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
         return <Shield className='w-5 h-5' />,
       default:,
         return <Star className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -110,7 +110,7 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
         return 'from-green-50o0 to-green-60o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -194,7 +194,7 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
                   <div className='flex items-center space-x-2 text-white'>,
                     {getTypeIcon(item.type)}
                     <span className='font-semibold capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -290,5 +290,5 @@ const AdvancedNeuralArchitecturesShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AdvancedNeuralArchitecturesShowcase20o26;
+    </section>)},
+export default AdvancedNeuralArchitecturesShowcase20o26,

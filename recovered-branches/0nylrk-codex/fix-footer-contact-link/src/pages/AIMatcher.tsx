@@ -7,18 +7,18 @@ import {AIMatchmaker} from "@/components/AIMatchmaker",
 import {Select, SelectValue, SelectTrigger, SelectContent, SelectItem} from "@/components/ui/select",
 import {toast} from "@/hooks/use-toast",
 import {MatchResult} from "@/lib/ai-matchmaking",
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { GradientHeading } from "@/components/GradientHeading";
-import { AIMatchmaker } from "@/components/AIMatchmaker";
-import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select";
+import { useState } from "react",
+import { useNavigate } from "react-router-dom",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { GradientHeading } from "@/components/GradientHeading",
+import { AIMatchmaker } from "@/components/AIMatchmaker",
+import { Select, SelectValue, SelectTrigger, SelectContent, SelectItem } from "@/components/ui/select",
 import { toast } from "@/hooks/use-toast",
 import { MatchResult } from "@/lib/ai-matchmaking",
-import { toast } from "@/hooks/use-toast";
-import { MatchResult } from "@/lib/ai-matchmaking";
-import { toast } from "@/hooks/use-toast";
+import { toast } from "@/hooks/use-toast",
+import { MatchResult } from "@/lib/ai-matchmaking",
+import { toast } from "@/hooks/use-toast",
 import { useState } from './react',
 import { use_navigate } from './react-router-dom',
 import { Header } from '@/components / Header',
@@ -41,12 +41,12 @@ export default function AIMatcherPage() {
     if (category.includes("talent") |category === "engineering" |,
         category === "data science" |category === "development") {
 export default function AIMatcherPage() {
-  const navigate = useNavigate();
-  const [selectedCategory, setSelectedCategory] = useState<string>("all");
+  const navigate = useNavigate(),
+  const [selectedCategory, setSelectedCategory] = useState<string>("all"),
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category,
-    let itemType = "service";
-    const category = match.item.category.toLowerCase();
+    let itemType = "service",
+    const category = match.item.category.toLowerCase(),
     if (category.includes("talent") || category === "engineering" ||,
         category === "data science" || category === "development") {
       itemType = "talent"} else if (category.includes("equipment") |category === "hardware") {
@@ -60,7 +60,7 @@ export default function AIMatcherPage() {
         serviceType: itemType,
         specificItem: match.item}
     })}
-};
+},
   return (
     <>,
       <Header />,
@@ -109,21 +109,21 @@ export default function AIMatcherPage() {
   const handleMatchSelect = (match: MatchResult) => {
     // Get the item type from the category,
     let itemType = "service",
-    const category = match && match.item.category && category.toLowerCase();
+    const category = match && match.item.category && category.toLowerCase(),
     if (category && category.includes("talent") || category === "engineering" || ,
         category === "data science" || category === "development") {
       itemType = "talent"} else if (category && category.includes("equipment") || category === "hardware") {
       itemType = "equipment"}
 ,
     toast({
-      title: "Match Selected";
-      description: `You've selected ${match && match.item.title}`});
+      title: "Match Selected",
+      description: `You've selected ${match && match.item.title}`}),
     // Navigate to the quote request page with the selected item,
     navigate("/request-quote", {
       state: {
-        serviceType: itemType;
+        serviceType: itemType,
         specificItem: match && match.item}
-    })};
+    })},
   return (
     <>,
       <Header />,
@@ -164,7 +164,7 @@ function AIMatcherPage() {
   const handleMatchSelect = (match: MatchResult) =>: any {
     // Get the item type from the category,
     let item_type = "service",
-    const category = match.item.category.toLowerCase ();
+    const category = match.item.category.toLowerCase (),
     // Check condition,
 if (|| category === "engineering" ||) {
   $2}
@@ -174,12 +174,12 @@ if (|| category === "hardware") {) {
   $2}
       item_type = "equipment"}
     toast ({
-      title: "Match Selected";
-      description: `You've selected ${match.item.title}`});
+      title: "Match Selected",
+      description: `You've selected ${match.item.title}`}),
     // Navigate to the quote request page with the selected item,
     navigate ("/request - quote", {
       state: {
-        service_type: item_type;
+        service_type: item_type,
         specific_item: match.item}
     })}
 ,
@@ -221,5 +221,5 @@ if (|| category === "hardware") {) {
       </div>,
       <Footer />,
     </>)}
-,
+
 }}}}

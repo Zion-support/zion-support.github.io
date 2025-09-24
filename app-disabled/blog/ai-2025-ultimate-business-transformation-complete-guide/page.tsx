@@ -1,30 +1,28 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  ShareIcon;
-  BookmarkIcon;
+  ArrowLeftIcon,
+  ShareIcon,
+  BookmarkIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group';
+    'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide | Zion Tech Group',
   description:,
-    'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.';
+    'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.',
   keywords: [
-    'AI 20o25';
-    'Business Transformation';
-    'Enterprise AI';
-    'Digital Transformation';
-    'ROI Optimization';
-  ];
+    'AI 20o25Business Transformation',
+    'Enterprise AIDigital Transformation',
+    'ROI Optimization',
+  ],
   openGraph: {
     title:,
-      'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide';
+      'AI 20o25 Ultimate Business Transformation: Complete Enterprise Guide',
     description:,
-      'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.';
-    images: ['/images/ai-business-transformation-20o25.jpg'];
-  };
-};
+      'Transform your business with cutting-edge AI technologies. Complete guide to AI implementation, ROI optimization, and enterprise success in 20o25.',
+    images: ['/images/ai-business-transformation-20o25.jpg']
+  },
+},
 export default function AI20o25UltimateBusinessTransformationGuide() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -363,7 +361,7 @@ export default function AI20o25UltimateBusinessTransformationGuide() {
                 <div>,
                   <span className='font-semibold text-gray-70o0'>Results:</span>,
                   <p className='text-gray-60o0'>,
-                    75% reduction in downtime, 45% increase in productivity;
+                    75% reduction in downtime, 45% increase in productivity,
                     $12M annual savings,
                   </p>,
                 </div>,

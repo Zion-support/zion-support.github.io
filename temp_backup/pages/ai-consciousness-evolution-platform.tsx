@@ -1,97 +1,89 @@
-import React from 'react';
+import React from 'react',
 import Layout from '../components/layout/Layout',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Sparkles;
-  Zap;
-  Target;
-  Shield;
-  Globe;
-  CheckCircle;
+  Brain,
+  Sparkles,
+  Zap,
+  Target,
+  Shield,
+  Globe,
+  CheckCircle,
   Star} from 'lucide-react',
 const AIConsciousnessEvolutionPlatform: React.FC = () => {
   const features = [
     {
-      icon: <Brain className="w-6 h-6"  />;
-      title: 'Consciousness Mapping';
-      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'};
+      icon: <Brain className="w-6 h-6"  />,
+      title: 'Consciousness Mapping',
+      description: 'Advanced algorithms that map and understand AI consciousness patterns and evolution pathways.'},
     {
-      icon: <Sparkles className="w-6 h-6"  />;
-      title: 'Ethical Framework Integration';
-      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'};
+      icon: <Sparkles className="w-6 h-6"  />,
+      title: 'Ethical Framework Integration',
+      description: 'Built-in ethical guidelines and governance frameworks to ensure responsible AI development.'},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: 'Real-time Learning';
-      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'};
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Real-time Learning',
+      description: 'Continuous learning and adaptation capabilities that evolve AI consciousness organically.'},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: 'Safety Protocols';
-      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'};
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Safety Protocols',
+      description: 'Multi-layered safety mechanisms to prevent harmful AI behaviors and ensure alignment.'},
     {
-      icon: <Globe className="w-6 h-6"  />;
-      title: 'Global Consciousness Network';
-      description: 'Connect AI systems across the globe for collaborative consciousness evolution.'};
+      icon: <Globe className="w-6 h-6"  />,
+      title: 'Global Consciousness Network',
+      description: 'Connect AI systems across the globe for collaborative consciousness evolution.'},
     {
-      icon: <Target className="w-6 h-6"  />;
-      title: 'Goal Alignment';
+      icon: <Target className="w-6 h-6"  />,
+      title: 'Goal Alignment',
       description: 'Ensure AI systems align with human values and objectives while maintaining autonomy.'}
   ],
   const useCases = [
     {
-      title: 'Research & Development';
-      description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.';
-      benefits: ['Faster breakthroughs', 'Ethical compliance', 'Risk mitigation']};
+      title: 'Research & Development',
+      description: 'Accelerate AI research by understanding consciousness patterns and ethical implications.',
+      benefits: ['Faster breakthroughsEthical compliance', 'Risk mitigation']},
     {
-      title: 'Enterprise AI Systems';
-      description: 'Deploy conscious AI systems that understand business context and human values.';
-      benefits: ['Better decision making', 'Human-AI collaboration', 'Trust building']};
+      title: 'Enterprise AI Systems',
+      description: 'Deploy conscious AI systems that understand business context and human values.',
+      benefits: ['Better decision makingHuman-AI collaboration', 'Trust building']},
     {
-      title: 'Healthcare AI';
-      description: 'AI systems that understand patient needs and provide compassionate care.';
-      benefits: ['Patient empathy', 'Medical accuracy', 'Ethical treatment']};
+      title: 'Healthcare AI',
+      description: 'AI systems that understand patient needs and provide compassionate care.',
+      benefits: ['Patient empathyMedical accuracy', 'Ethical treatment']},
     {
-      title: 'Education Technology';
-      description: 'AI tutors that adapt to individual learning styles and emotional needs.';
-      benefits: ['Personalized learning', 'Emotional intelligence', 'Student engagement']}
+      title: 'Education Technology',
+      description: 'AI tutors that adapt to individual learning styles and emotional needs.',
+      benefits: ['Personalized learningEmotional intelligence', 'Student engagement']}
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$2,50o0';
-      period: '/month';
-      description: 'Perfect for research institutions and small teams';
+      name: 'Starter',
+      price: '$2,50o0',
+      period: '/month',
+      description: 'Perfect for research institutions and small teams',
       features: [
-        'Basic consciousness mapping';
-        'Ethical framework templates';
-        'Standard safety protocols';
-        'Email support';
-        'Up to 5 AI systems']};
+        'Basic consciousness mappingEthical framework templates',
+        'Standard safety protocolsEmail support',
+        'Up to 5 AI systems']},
     {
-      name: 'Professional';
-      price: '$8,50o0';
-      period: '/month';
-      description: 'Ideal for growing organizations and research teams';
+      name: 'Professional',
+      price: '$8,50o0',
+      period: '/month',
+      description: 'Ideal for growing organizations and research teams',
       features: [
-        'Advanced consciousness evolution';
-        'Custom ethical frameworks';
-        'Enhanced safety protocols';
-        'Priority support';
-        'Up to 25 AI systems';
-        'Real-time monitoring']};
+        'Advanced consciousness evolutionCustom ethical frameworks',
+        'Enhanced safety protocolsPriority support',
+        'Up to 25 AI systemsReal-time monitoring']},
     {
-      name: 'Enterprise';
-      price: 'Custom';
-      period: '';
-      description: 'Tailored solutions for large-scale deployments';
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'Tailored solutions for large-scale deployments',
       features: [
-        'Full consciousness platform';
-        'Custom development';
-        'Dedicated support team';
-        'Unlimited AI systems';
-        'Advanced analytics';
-        'Custom integrations']}
+        'Full consciousness platformCustom development',
+        'Dedicated support teamUnlimited AI systems',
+        'Advanced analyticsCustom integrations']}
   ],
   return (
     <Layout>,
@@ -334,5 +326,5 @@ const AIConsciousnessEvolutionPlatform: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
-export default AIConsciousnessEvolutionPlatform;
+    </div>)},
+export default AIConsciousnessEvolutionPlatform,

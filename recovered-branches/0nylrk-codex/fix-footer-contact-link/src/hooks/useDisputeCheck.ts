@@ -40,13 +40,13 @@ export function useDisputeCheck(projectId?: string, milestoneId?: string) {
         setDisputeStatus(null),
         setDisputeId(null)} finally {
         setIsLoading(false)}
-    };
+    },
     checkDispute()}, [projectId, milestoneId]),
   return {
-    isUnderDispute;
-    disputeStatus;
-    disputeId;
-    isLoading;
-  };
+    isUnderDispute,
+    disputeStatus,
+    disputeId,
+    isLoading,
+  },
 }
 ,

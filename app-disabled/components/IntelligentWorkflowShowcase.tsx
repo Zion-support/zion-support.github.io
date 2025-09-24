@@ -1,152 +1,144 @@
 'use client',
 import React, { useState } from 'react',
 import {
-  ArrowRight;
-  Star;
-  Clock;
-  TrendingUp;
-  Users;
-  Award;
-  CheckCircle;
-  Zap;
-  ArrowRight;
+  ArrowRight,
+  Star,
+  Clock,
+  TrendingUp,
+  Users,
+  Award,
+  CheckCircle,
+  Zap,
+  ArrowRight,
 } from 'lucide-react',
 const IntelligentWorkflowShowcase = () => {
   const [activeTab, setActiveTab] = useState('all'),
   const content = [
     {
-      id: 'advanced-automation-revolution';
-      title: 'AI 20o25: The Advanced Automation Revolution';
-      subtitle: 'Ultimate Guide to 750% ROI';
+      id: 'advanced-automation-revolution',
+      title: 'AI 20o25: The Advanced Automation Revolution',
+      subtitle: 'Ultimate Guide to 750% ROI',
       description:,
-        'Discover how Fortune 50o0 companies are achieving 750% ROI through advanced AI automation.';
+        'Discover how Fortune 50o0 companies are achieving 750% ROI through advanced AI automation.',
       metrics: {
-        roi: '750%';
-        savings: '$8.2M annually';
-        efficiency: '340%';
-        satisfaction: '99.2%';
-      };
-      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-guide';
-      type: 'blog';
-      category: 'automation';
-      readingTime: '28 min read';
-      featured: true;
-      tags: ['AI Automation', 'Advanced Technology', 'ROI', 'Fortune 50o0'];
-    };
+        roi: '750%',
+        savings: '$8.2M annually',
+        efficiency: '340%',
+        satisfaction: '99.2%'
+      },
+      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-guide',
+      type: 'blog',
+      category: 'automation',
+      readingTime: '28 min read',
+      featured: true,
+      tags: ['AI AutomationAdvanced Technology', 'ROIFortune 50o0'],
+    },
     {
-      id: 'intelligent-workflow-revolution';
-      title: 'AI 20o25: The Intelligent Workflow Revolution';
-      subtitle: 'Ultimate Guide to 90o0% ROI';
+      id: 'intelligent-workflow-revolution',
+      title: 'AI 20o25: The Intelligent Workflow Revolution',
+      subtitle: 'Ultimate Guide to 90o0% ROI',
       description:,
-        'Discover how intelligent workflows are transforming business operations with 90o0% ROI.';
+        'Discover how intelligent workflows are transforming business operations with 90o0% ROI.',
       metrics: {
-        roi: '90o0%';
-        savings: '$12.3M annually';
-        efficiency: '560%';
-        satisfaction: '99.5%';
-      };
-      url: '/blog/ai-20o25-intelligent-workflow-revolution-ultimate-guide';
-      type: 'blog';
-      category: 'workflow';
-      readingTime: '25 min read';
-      featured: true;
+        roi: '90o0%',
+        savings: '$12.3M annually',
+        efficiency: '560%',
+        satisfaction: '99.5%'
+      },
+      url: '/blog/ai-20o25-intelligent-workflow-revolution-ultimate-guide',
+      type: 'blog',
+      category: 'workflow',
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Intelligent Workflows';
-        'AI Automation';
-        'Business Process';
-        'ROI';
-      ];
-    };
+        'Intelligent WorkflowsAI Automation',
+        'Business ProcessROI',
+      ]
+    },
     {
-      id: 'fortune-50o0-advanced-automation';
-      title: 'Fortune 50o0 Advanced Automation Success';
-      subtitle: '$3.2B Company Achieves 750% ROI in 10 Months';
+      id: 'fortune-50o0-advanced-automation',
+      title: 'Fortune 50o0 Advanced Automation Success',
+      subtitle: '$3.2B Company Achieves 750% ROI in 10 Months',
       description:,
-        'How a Fortune 50o0 manufacturing company transformed operations with advanced AI automation.';
+        'How a Fortune 50o0 manufacturing company transformed operations with advanced AI automation.',
       metrics: {
-        roi: '750%';
-        savings: '$12.8M annually';
-        efficiency: '450%';
-        satisfaction: '99.2%';
-      };
-      url: '/case-studies/fortune-50o0-advanced-automation-750-roi-success';
-      type: 'case-study';
-      category: 'automation';
-      readingTime: '18 min read';
-      featured: true;
+        roi: '750%',
+        savings: '$12.8M annually',
+        efficiency: '450%',
+        satisfaction: '99.2%'
+      },
+      url: '/case-studies/fortune-50o0-advanced-automation-750-roi-success',
+      type: 'case-study',
+      category: 'automation',
+      readingTime: '18 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Advanced Automation';
-        'Manufacturing';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'Advanced AutomationManufacturing',
+      ]
+    },
     {
-      id: 'global-enterprise-workflow';
-      title: 'Global Enterprise Intelligent Workflow Success';
-      subtitle: '$4.1B Company Achieves 90o0% ROI in 8 Months';
+      id: 'global-enterprise-workflow',
+      title: 'Global Enterprise Intelligent Workflow Success',
+      subtitle: '$4.1B Company Achieves 90o0% ROI in 8 Months',
       description:,
-        'How a global enterprise transformed operations with intelligent workflow automation.';
+        'How a global enterprise transformed operations with intelligent workflow automation.',
       metrics: {
-        roi: '90o0%';
-        savings: '$18.7M annually';
-        efficiency: '560%';
-        satisfaction: '99.5%';
-      };
-      url: '/case-studies/global-enterprise-intelligent-workflow-90o0-roi-success';
-      type: 'case-study';
-      category: 'workflow';
-      readingTime: '20 min read';
-      featured: true;
+        roi: '90o0%',
+        savings: '$18.7M annually',
+        efficiency: '560%',
+        satisfaction: '99.5%'
+      },
+      url: '/case-studies/global-enterprise-intelligent-workflow-90o0-roi-success',
+      type: 'case-study',
+      category: 'workflow',
+      readingTime: '20 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'Global Enterprise';
-        'Intelligent Workflows';
-        'Financial Services';
-      ];
-    };
+        'Case StudyGlobal Enterprise',
+        'Intelligent WorkflowsFinancial Services',
+      ]
+    },
     {
-      id: 'advanced-automation-master-guide';
-      title: 'AI 20o25 Advanced Automation Implementation Master Guide';
-      subtitle: 'From Strategy to 750% ROI';
+      id: 'advanced-automation-master-guide',
+      title: 'AI 20o25 Advanced Automation Implementation Master Guide',
+      subtitle: 'From Strategy to 750% ROI',
       description:,
-        'Complete implementation guide for advanced AI automation. Achieve 750% ROI within 12 months.';
+        'Complete implementation guide for advanced AI automation. Achieve 750% ROI within 12 months.',
       metrics: {
-        roi: '750%';
-        success_rate: '94%';
-        implementation_time: '12 months';
-        average_savings: '$8.2M annually';
-      };
-      url: '/resources/ai-20o25-advanced-automation-implementation-master-guide';
-      type: 'resource';
-      category: 'automation';
-      readingTime: '35 min read';
-      featured: true;
+        roi: '750%',
+        success_rate: '94%',
+        implementation_time: '12 months',
+        average_savings: '$8.2M annually'
+      },
+      url: '/resources/ai-20o25-advanced-automation-implementation-master-guide',
+      type: 'resource',
+      category: 'automation',
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Advanced Automation';
-        'AI Strategy';
-        'ROI';
-      ];
-    };
+        'Implementation GuideAdvanced Automation',
+        'AI StrategyROI',
+      ]
+    },
   ],
   const tabs = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'automation';
-      label: 'Advanced Automation';
-      count: content.filter(item => item.category === 'automation').length;
-    };
+      id: 'automation',
+      label: 'Advanced Automation',
+      count: content.filter(item => item.category === 'automation').length
+    },
     {
-      id: 'workflow';
-      label: 'Intelligent Workflows';
-      count: content.filter(item => item.category === 'workflow').length;
-    };
+      id: 'workflow',
+      label: 'Intelligent Workflows',
+      count: content.filter(item => item.category === 'workflow').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
   ],
   const filteredContent =,
     activeTab === 'all',
@@ -165,7 +157,7 @@ const IntelligentWorkflowShowcase = () => {
         return <Award className='w-4 h-4' />,
       default:,
         return <Star className='w-4 h-4' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -176,7 +168,7 @@ const IntelligentWorkflowShowcase = () => {
         return 'from-purple-50o0 to-violet-50o0',
       default:,
         return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -252,7 +244,7 @@ const IntelligentWorkflowShowcase = () => {
                       {getTypeIcon(item.type)}
                     </div>,
                     <span className='text-sm font-medium text-gray-60o0 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   <div className='flex items-center gap-2'>,
@@ -338,5 +330,5 @@ const IntelligentWorkflowShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default IntelligentWorkflowShowcase;
+    </section>)},
+export default IntelligentWorkflowShowcase,

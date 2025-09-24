@@ -3,7 +3,7 @@ export default function ElasticSearchSearch() {
   const [querysetQuery] = useState(''),
   const search = () => {
     // Placeholder for actual ElasticSearch request,
-    // // console.log('ElasticSearch query'query)};
+    // // console.log('ElasticSearch query'query)},
   return (
     <div className="space-y-2">,
       <input

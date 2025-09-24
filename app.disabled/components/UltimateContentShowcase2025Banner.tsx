@@ -11,7 +11,7 @@ interface ContentItem {
     roi: string,
     savings: string,
     satisfaction?: string,
-    efficiency?: string};
+    efficiency?: string},
   readingTime: string,
   featured: boolean}
 ,
@@ -20,35 +20,35 @@ const UltimateContentShowcase20o25Banner: React.FC = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const featuredContent: ContentItem[] = [
     {
-      id: 'ultimate-automation-revolution';
+      id: 'ultimate-automation-revolution',
       title:,
-        'AI 20o25: The Ultimate Automation Revolution - Complete Enterprise Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-complete-guide';
+        'AI 20o25: The Ultimate Automation Revolution - Complete Enterprise Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-complete-guide',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        satisfaction: '98%';
-        efficiency: '340%';
-      };
-      readingTime: '18 min read';
-      featured: true;
-    };
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        satisfaction: '98%',
+        efficiency: '340%'
+      },
+      readingTime: '18 min read',
+      featured: true
+    },
     {
-      id: '10o00-percent-roi-success';
+      id: '10o00-percent-roi-success',
       title:,
-        'AI Transformation Ultimate Success: $2.8B Company Achieves 1,0o00% ROI';
-      type: 'case-study';
-      url: '/case-studies/ai-transformation-10o00-percent-roi-ultimate-success-story';
+        'AI Transformation Ultimate Success: $2.8B Company Achieves 1,0o00% ROI',
+      type: 'case-study',
+      url: '/case-studies/ai-transformation-10o00-percent-roi-ultimate-success-story',
       metrics: {
-        roi: '1,0o00%';
-        savings: '$280M';
-        satisfaction: '99.8%';
-        efficiency: '78%';
-      };
-      readingTime: '15 min read';
-      featured: true;
-    };
+        roi: '1,0o00%',
+        savings: '$280M',
+        satisfaction: '99.8%',
+        efficiency: '78%'
+      },
+      readingTime: '15 min read',
+      featured: true
+    },
   ],
   if (isDismissed) return null,
   return (
@@ -133,5 +133,5 @@ const UltimateContentShowcase20o25Banner: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContentShowcase20o25Banner;
+    </div>)},
+export default UltimateContentShowcase20o25Banner,

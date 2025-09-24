@@ -388,5 +388,5 @@ const AI20o26GlobalTransformation80o0ROISuccessBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26GlobalTransformation80o0ROISuccessBanner;
+    </section>)},
+export default AI20o26GlobalTransformation80o0ROISuccessBanner,

@@ -1,43 +1,43 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
-  ChevronDown;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Cpu;
-  Shield;
-  Rocket;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  Atom;
-  Sparkles;
-  Target;
-  Users;
-  Eye;
-  Heart;
-  Code;
-  Palette;
-  Search;
-  Mail;
-  MessageCircle;
-  Calendar;
-  BarChart3;
-  Lightbulb;
-  Globe2;
-  Satellite;
-  Microscope;
-  Flask;
-  ShieldCheck;
-  Zap as ZapIcon;
-  Cpu as CpuIcon;
-  Brain as BrainIcon;
-  Rocket as RocketIcon;
-  Star as StarIcon;
-  TrendingUp as TrendingUpIcon;
+  ChevronDown,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Cpu,
+  Shield,
+  Rocket,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  Atom,
+  Sparkles,
+  Target,
+  Users,
+  Eye,
+  Heart,
+  Code,
+  Palette,
+  Search,
+  Mail,
+  MessageCircle,
+  Calendar,
+  BarChart3,
+  Lightbulb,
+  Globe2,
+  Satellite,
+  Microscope,
+  Flask,
+  ShieldCheck,
+  Zap as ZapIcon,
+  Cpu as CpuIcon,
+  Brain as BrainIcon,
+  Rocket as RocketIcon,
+  Star as StarIcon,
+  TrendingUp as TrendingUpIcon,
 } from 'lucide-react',
 import UltraFuturisticServiceCard from '../ui/UltraFuturisticServiceCard',
 interface Service {
@@ -71,7 +71,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -86,94 +86,59 @@ interface Revolutionary20o26ServicesShowcaseProps {
   maxServices?: number}
 ,
 const categoryIcons: { [key: string]: React.ComponentType<any> } = {
-  'AI Consciousness & Ethics': BrainIcon;
-  'AI Multimodal': Eye;
-  'AI Autonomous Systems': Target;
-  'AI Quantum Computing': Atom;
-  'AI Emotional Intelligence': Heart;
-  'AI Creative': Palette;
-  'AI Predictive Analytics': BarChart3;
-  'AI Quantum ML': CpuIcon;
-  'AI Research': Microscope;
-  'Zero Trust Security': ShieldCheck;
-  'Edge Computing': Globe;
-  '5G Networks': Satellite;
-  'Quantum Computing': Atom;
-  'Autonomous IT': ZapIcon;
-  'Neuromorphic Computing': BrainIcon;
-  'DNA Computing': Flask;
-  'Photonic Computing': Lightbulb;
-  'Holographic Technology': Eye;
-  'AI Branding': Palette;
-  'Holographic Events': Eye;
-  'AI Transcription': MessageCircle;
-  'AI Mental Health': Heart;
-  'AI Personalization': Target;
-  'AI Customer Experience': Users;
-  'AI Social Media': Globe2;
-  'AI Email Marketing': Mail;
-  'AI SEO': Search;
-  'Space Technology': RocketIcon;
-  'Space Safety': Shield;
-  'Quantum Space': Atom;
-  'Space Weather': StarIcon;
-  'Autonomous Space': Target;
-  'Space Tourism': Users;
-  'Space Agriculture': Globe;
-  'Space Energy': ZapIcon;
-  'Space Research': Microscope;
-};
+  'AI Consciousness & Ethics': BrainIcon,
+  'AI Multimodal': Eye,
+  'AI Autonomous Systems': Target,
+  'AI Quantum Computing': Atom,
+  'AI Emotional Intelligence': Heart,
+  'AI Creative': Palette,
+  'AI Predictive Analytics': BarChart3,
+  'AI Quantum ML': CpuIcon,
+  'AI Research': Microscope,
+  'Zero Trust Security': ShieldCheck,
+  'Edge Computing': Globe,
+  '5G Networks': Satellite,
+  'Quantum Computing': Atom,
+  'Autonomous IT': ZapIcon,
+  'Neuromorphic Computing': BrainIcon,
+  'DNA Computing': Flask,
+  'Photonic Computing': Lightbulb,
+  'Holographic Technology': Eye,
+  'AI Branding': Palette,
+  'Holographic Events': Eye,
+  'AI Transcription': MessageCircle,
+  'AI Mental Health': Heart,
+  'AI Personalization': Target,
+  'AI Customer Experience': Users,
+  'AI Social Media': Globe2,
+  'AI Email Marketing': Mail,
+  'AI SEO': Search,
+  'Space Technology': RocketIcon,
+  'Space Safety': Shield,
+  'Quantum Space': Atom,
+  'Space Weather': StarIcon,
+  'Autonomous Space': Target,
+  'Space Tourism': Users,
+  'Space Agriculture': Globe,
+  'Space Energy': ZapIcon,
+  'Space Research': Microscope,
+},
 const categoryColors: { [key: string]: string } = {
-  'AI Consciousness & Ethics': 'from-indigo-50o0 to-purple-60o0';
-  'AI Multimodal': 'from-blue-50o0 to-cyan-60o0';
-  'AI Autonomous Systems': 'from-green-50o0 to-emerald-60o0';
-  'AI Quantum Computing': 'from-purple-50o0 to-pink-60o0';
-  'AI Emotional Intelligence': 'from-pink-50o0 to-rose-60o0';
-  'AI Creative': 'from-yellow-50o0 to-orange-60o0';
-  'AI Predictive Analytics': 'from-indigo-50o0 to-blue-60o0';
-  'AI Quantum ML': 'from-purple-50o0 to-indigo-60o0';
-  'AI Research': 'from-teal-50o0 to-green-60o0';
-  'Zero Trust Security': 'from-red-50o0 to-pink-60o0';
-  'Edge Computing': 'from-blue-50o0 to-cyan-60o0';
-  '5G Networks': 'from-green-50o0 to-emerald-60o0';
-  'Quantum Computing': 'from-purple-50o0 to-pink-60o0';
-  'Autonomous IT': 'from-blue-50o0 to-indigo-60o0';
-  'Neuromorphic Computing': 'from-indigo-50o0 to-purple-60o0';
-  'DNA Computing': 'from-green-50o0 to-teal-60o0';
-  'Photonic Computing': 'from-yellow-50o0 to-orange-60o0';
-  'Holographic Technology': 'from-pink-50o0 to-rose-60o0';
-  'AI Branding': 'from-purple-50o0 to-pink-60o0';
-  'Holographic Events': 'from-pink-50o0 to-rose-60o0';
-  'AI Transcription': 'from-blue-50o0 to-cyan-60o0';
-  'AI Mental Health': 'from-green-50o0 to-emerald-60o0';
-  'AI Personalization': 'from-indigo-50o0 to-purple-60o0';
-  'AI Customer Experience': 'from-teal-50o0 to-green-60o0';
-  'AI Social Media': 'from-blue-50o0 to-indigo-60o0';
-  'AI Email Marketing': 'from-orange-50o0 to-red-60o0';
-  'AI SEO': 'from-green-50o0 to-teal-60o0';
-  'Space Technology': 'from-purple-50o0 to-indigo-60o0';
-  'Space Safety': 'from-blue-50o0 to-cyan-60o0';
-  'Quantum Space': 'from-green-50o0 to-emerald-60o0';
-  'Space Weather': 'from-yellow-50o0 to-orange-60o0';
-  'Autonomous Space': 'from-indigo-50o0 to-purple-60o0';
-  'Space Tourism': 'from-pink-50o0 to-rose-60o0';
-  'Space Agriculture': 'from-green-50o0 to-teal-60o0';
-  'Space Energy': 'from-yellow-50o0 to-orange-60o0';
-  'Space Research': 'from-indigo-50o0 to-blue-60o0';
-};
+  'AI Consciousness & Ethics': 'from-indigo-50o0 to-purple-60o0AI Multimodal': 'from-blue-50o0 to-cyan-60o0AI Autonomous Systems': 'from-green-50o0 to-emerald-60o0AI Quantum Computing': 'from-purple-50o0 to-pink-60o0AI Emotional Intelligence': 'from-pink-50o0 to-rose-60o0AI Creative': 'from-yellow-50o0 to-orange-60o0AI Predictive Analytics': 'from-indigo-50o0 to-blue-60o0AI Quantum ML': 'from-purple-50o0 to-indigo-60o0AI Research': 'from-teal-50o0 to-green-60o0Zero Trust Security': 'from-red-50o0 to-pink-60o0Edge Computing': 'from-blue-50o0 to-cyan-60o05G Networks': 'from-green-50o0 to-emerald-60o0Quantum Computing': 'from-purple-50o0 to-pink-60o0Autonomous IT': 'from-blue-50o0 to-indigo-60o0Neuromorphic Computing': 'from-indigo-50o0 to-purple-60o0DNA Computing': 'from-green-50o0 to-teal-60o0Photonic Computing': 'from-yellow-50o0 to-orange-60o0Holographic Technology': 'from-pink-50o0 to-rose-60o0AI Branding': 'from-purple-50o0 to-pink-60o0Holographic Events': 'from-pink-50o0 to-rose-60o0AI Transcription': 'from-blue-50o0 to-cyan-60o0AI Mental Health': 'from-green-50o0 to-emerald-60o0AI Personalization': 'from-indigo-50o0 to-purple-60o0AI Customer Experience': 'from-teal-50o0 to-green-60o0AI Social Media': 'from-blue-50o0 to-indigo-60o0AI Email Marketing': 'from-orange-50o0 to-red-60o0AI SEO': 'from-green-50o0 to-teal-60o0Space Technology': 'from-purple-50o0 to-indigo-60o0Space Safety': 'from-blue-50o0 to-cyan-60o0Quantum Space': 'from-green-50o0 to-emerald-60o0Space Weather': 'from-yellow-50o0 to-orange-60o0Autonomous Space': 'from-indigo-50o0 to-purple-60o0Space Tourism': 'from-pink-50o0 to-rose-60o0Space Agriculture': 'from-green-50o0 to-teal-60o0Space Energy': 'from-yellow-50o0 to-orange-60o0Space Research': 'from-indigo-50o0 to-blue-60o0',
+},
 export default function Revolutionary20o26ServicesShowcase({
-  services;
-  title = 'Revolutionary 20o26 Services';
-  subtitle = 'Experience the future of technology with our cutting-edge AI, quantum, and space solutions';
-  maxServices = 12;
+  services,
+  title = 'Revolutionary 20o26 Services',
+  subtitle = 'Experience the future of technology with our cutting-edge AI, quantum, and space solutions',
+  maxServices = 12,
 }: Revolutionary20o26ServicesShowcaseProps) {
   const [selectedCategory, setSelectedCategory] = useState<string>('All'),
   const [sortBy, setSortBy] = useState<,
     'popular' | 'price' | 'rating' | 'newest'>('popular'),
   // Get unique categories,
   const categories = [
-    'All';
-    ...Array.from(new Set(services.map(s => s.category)));
+    'All',
+    ...Array.from(new Set(services.map(s => s.category))),
   ],
   // Filter and sort services,
   const filteredServices = services,
@@ -186,8 +151,8 @@ export default function Revolutionary20o26ServicesShowcase({
           return b.popular ? 1 : -1,
         case 'price':,
           return (
-            parseFloat(a.price.replace('$', '').replace(',', '')) -,
-            parseFloat(b.price.replace('$', '').replace(',', ''))),
+            parseFloat(a.price.replace('$', '').replace(, '')) -,
+            parseFloat(b.price.replace('$', '').replace(, ''))),
         case 'rating':,
           return b.rating - a.rating,
         case 'newest':,
@@ -198,25 +163,25 @@ export default function Revolutionary20o26ServicesShowcase({
     }),
     .slice(0, maxServices),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut'
+      },
+    },
+  },
   return (
     <section className='relative z-10 py-20 px-4 sm: px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,

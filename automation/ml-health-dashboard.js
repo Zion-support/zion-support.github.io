@@ -12,10 +12,10 @@ const url = require('url'),
 class MLHealthDashboard {
   constructor() {
     this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs', 'ml-health-dashboard.log'),
-    this.mlModelFile = path.join(this.projectRoot, 'logs', 'ml-health-model.json'),
-    this.healthDataFile = path.join(this.projectRoot, 'logs', 'health-data.json'),
-    this.predictionsFile = path.join(this.projectRoot, 'logs', 'health-predictions.json'),
+    this.logFile = path.join(this.projectRoot, 'logsml-health-dashboard.log'),
+    this.mlModelFile = path.join(this.projectRoot, 'logsml-health-model.json'),
+    this.healthDataFile = path.join(this.projectRoot, 'logshealth-data.json'),
+    this.predictionsFile = path.join(this.projectRoot, 'logshealth-predictions.json'),
     this.ensureLogsDirectory(),
     this.loadMLModel(),
     this.loadHealthData(),
@@ -46,22 +46,22 @@ class MLHealthDashboard {
       if (fs.existsSync(this.mlModelFile)) {
         this.mlModel = JSON.parse(fs.readFileSync(this.mlModelFile, 'utf8'))} else {
         this.mlModel ={
-          version: '1.0.0';
-          lastTrained: new Date().toISOString();
-          accuracy: 0.85;
-          features: ['build_success_rate', 'test_coverage', 'code_complexity', 'dependency_health'];
-          predictions: {};
-          recommendations: []};
+          version: '1.0.0',
+          lastTrained: new Date().toISOString(),
+          accuracy: 0.85,
+          features: ['build_success_ratetest_coverage', 'code_complexitydependency_health'],
+          predictions: {},
+          recommendations: []},
       }
     } catch (error) {
       this.log(`Failed to load ML model: ${error.message}`, 'ERROR'),
       this.mlModel ={
-        version: '1.0.0';
-        lastTrained: new Date().toISOString();
-        accuracy: 0.85;
-        features: ['build_success_rate', 'test_coverage', 'code_complexity', 'dependency_health'];
-        predictions: {};
-        recommendations: []};
+        version: '1.0.0',
+        lastTrained: new Date().toISOString(),
+        accuracy: 0.85,
+        features: ['build_success_ratetest_coverage', 'code_complexitydependency_health'],
+        predictions: {},
+        recommendations: []},
     }
   }
 ,
@@ -70,18 +70,18 @@ class MLHealthDashboard {
       if (fs.existsSync(this.healthDataFile)) {
         this.healthData = JSON.parse(fs.readFileSync(this.healthDataFile, 'utf8'))} else {
         this.healthData ={
-          metrics: [];
-          trends: {};
-          alerts: [];
-          lastUpdated: new Date().toISOString()};
+          metrics: [],
+          trends: {},
+          alerts: [],
+          lastUpdated: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load health data: ${error.message}`, 'ERROR'),
       this.healthData ={
-        metrics: [];
-        trends: {};
-        alerts: [];
-        lastUpdated: new Date().toISOString()};
+        metrics: [],
+        trends: {},
+        alerts: [],
+        lastUpdated: new Date().toISOString()},
     }
   }
 ,
@@ -115,13 +115,13 @@ class MLHealthDashboard {
     this.log('Performing comprehensive health assessment...'),
     try {
       const assessment ={
-        timestamp: new Date().toISOString();
-        buildHealth: await this.assessBuildHealth();
-        codeQuality: await this.assessCodeQuality();
-        dependencyHealth: await this.assessDependencyHealth();
-        testHealth: await this.assessTestHealth();
-        performanceHealth: await this.assessPerformanceHealth();
-        securityHealth: await this.assessSecurityHealth()};
+        timestamp: new Date().toISOString(),
+        buildHealth: await this.assessBuildHealth(),
+        codeQuality: await this.assessCodeQuality(),
+        dependencyHealth: await this.assessDependencyHealth(),
+        testHealth: await this.assessTestHealth(),
+        performanceHealth: await this.assessPerformanceHealth(),
+        securityHealth: await this.assessSecurityHealth()},
       // Calculate overall health score,
       const overallScore = this.calculateOverallHealthScore(assessment),
       assessment.overallScore = overallScore,
@@ -152,14 +152,14 @@ class MLHealthDashboard {
       // Check for build warnings/errors,
       const buildIssues = await this.detectBuildIssues(),
       return {
-        score: successRate * 10o0;
-        successRate: successRate;
-        buildTimeTrend: buildTimeTrend;
-        issues: buildIssues;
-        level: successRate > 0.9 ? 'EXCELLENT' : successRate > 0.8 ? 'GOOD' : successRate > 0.6 ? 'FAIR' : 'POOR'};
+        score: successRate * 10o0,
+        successRate: successRate,
+        buildTimeTrend: buildTimeTrend,
+        issues: buildIssues,
+        level: successRate > 0.9 ? 'EXCELLENT' : successRate > 0.8 ? 'GOOD' : successRate > 0.6 ? 'FAIR' : 'POOR'},
     } catch (error) {
       this.log(`Build health assessment failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN', issues: [] };
+      return { score: 0, level: 'UNKNOWN', issues: [] },
     }
   }
 ,
@@ -171,14 +171,14 @@ class MLHealthDashboard {
       const documentationScore = await this.calculateDocumentationScore(),
       const overallScore = (lintResults.score + complexityScore + documentationScore) / 3,
       return {
-        score: overallScore;
-        lint: lintResults;
-        complexity: complexityScore;
-        documentation: documentationScore;
-        level: overallScore > 80 ? 'EXCELLENT' : overallScore > 60 ? 'GOOD' : overallScore > 40 ? 'FAIR' : 'POOR'};
+        score: overallScore,
+        lint: lintResults,
+        complexity: complexityScore,
+        documentation: documentationScore,
+        level: overallScore > 80 ? 'EXCELLENT' : overallScore > 60 ? 'GOOD' : overallScore > 40 ? 'FAIR' : 'POOR'},
     } catch (error) {
       this.log(`Code quality assessment failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' };
+      return { score: 0, level: 'UNKNOWN' },
     }
   }
 ,
@@ -197,14 +197,14 @@ class MLHealthDashboard {
       score -= circularDeps.length * 15, // -15 points per circular dependency,
       score = Math.max(0, score),
       return {
-        score: score;
-        outdatedCount: outdatedDeps.length;
-        vulnerabilities: securityAudit.vulnerabilities;
-        circularDependencies: circularDeps.length;
-        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'};
+        score: score,
+        outdatedCount: outdatedDeps.length,
+        vulnerabilities: securityAudit.vulnerabilities,
+        circularDependencies: circularDeps.length,
+        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'},
     } catch (error) {
       this.log(`Dependency health assessment failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' };
+      return { score: 0, level: 'UNKNOWN' },
     }
   }
 ,
@@ -218,14 +218,14 @@ class MLHealthDashboard {
       const testFailures = await this.getTestFailures(),
       const score = coverage.percentage * 0.7 + (testExecution.success ? 30 : 0),
       return {
-        score: score;
-        coverage: coverage.percentage;
-        executionSuccess: testExecution.success;
-        failures: testFailures.length;
-        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'};
+        score: score,
+        coverage: coverage.percentage,
+        executionSuccess: testExecution.success,
+        failures: testFailures.length,
+        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'},
     } catch (error) {
       this.log(`Test health assessment failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' };
+      return { score: 0, level: 'UNKNOWN' },
     }
   }
 ,
@@ -239,14 +239,14 @@ class MLHealthDashboard {
       const runtimePerformance = await this.analyzeRuntimePerformance(),
       const score = this.calculatePerformanceScore(bundleSize, buildPerformance, runtimePerformance),
       return {
-        score: score;
-        bundleSize: bundleSize;
-        buildTime: buildPerformance.averageTime;
-        runtimeMetrics: runtimePerformance;
-        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'};
+        score: score,
+        bundleSize: bundleSize,
+        buildTime: buildPerformance.averageTime,
+        runtimeMetrics: runtimePerformance,
+        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'},
     } catch (error) {
       this.log(`Performance health assessment failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' };
+      return { score: 0, level: 'UNKNOWN' },
     }
   }
 ,
@@ -265,25 +265,25 @@ class MLHealthDashboard {
       score -= securityAudit.low * 5, // -5 points per low vulnerability,
       score = Math.max(0, score),
       return {
-        score: score;
-        vulnerabilities: securityAudit;
-        knownIssues: knownVulnerabilities;
-        bestPractices: securityBestPractices;
-        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'};
+        score: score,
+        vulnerabilities: securityAudit,
+        knownIssues: knownVulnerabilities,
+        bestPractices: securityBestPractices,
+        level: score > 80 ? 'EXCELLENT' : score > 60 ? 'GOOD' : score > 40 ? 'FAIR' : 'POOR'},
     } catch (error) {
       this.log(`Security health assessment failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN' };
+      return { score: 0, level: 'UNKNOWN' },
     }
   }
 ,
   calculateOverallHealthScore(assessment) {
     const weights ={
-      buildHealth: 0.25;
-      codeQuality: 0.25;
-      dependencyHealth: 0.2;
-      testHealth: 0.15;
-      performanceHealth: 0.1;
-      securityHealth: 0.0o5};
+      buildHealth: 0.25,
+      codeQuality: 0.25,
+      dependencyHealth: 0.2,
+      testHealth: 0.15,
+      performanceHealth: 0.1,
+      securityHealth: 0.0o5},
     let totalScore = 0,
     let totalWeight = 0,
     for (const [category, weight] of Object.entries(weights)) {
@@ -304,9 +304,9 @@ class MLHealthDashboard {
   updateHealthTrends() {
     if (this.healthData.metrics.length < 2) return,
     const recentMetrics = this.healthData.metrics.slice(-10),
-    const trends ={};
+    const trends ={},
     // Calculate trends for each health category,
-    const categories = ['buildHealth', 'codeQuality', 'dependencyHealth', 'testHealth', 'performanceHealth', 'securityHealth'],
+    const categories = ['buildHealthcodeQuality', 'dependencyHealthtestHealth', 'performanceHealthsecurityHealth'],
     for (const category of categories) {
       const scores = recentMetrics.map(m => m[category]?.score || 0),
       trends[category] = this.calculateTrend(scores)}
@@ -330,21 +330,21 @@ class MLHealthDashboard {
     // Check for critical issues,
     if (assessment.overallScore < 40) {
       alerts.push({
-        level: 'CRITICAL';
-        message: 'Project health is critically low. Immediate attention required.';
-        category: 'overall';
+        level: 'CRITICAL',
+        message: 'Project health is critically low. Immediate attention required.',
+        category: 'overall',
         timestamp: new Date().toISOString()})}
 ,
     // Check individual categories,
-    const categories = ['buildHealth', 'codeQuality', 'dependencyHealth', 'testHealth', 'performanceHealth', 'securityHealth'],
+    const categories = ['buildHealthcodeQuality', 'dependencyHealthtestHealth', 'performanceHealthsecurityHealth'],
     for (const category of categories) {
       const health = assessment[category],
       if (health && health.level === 'POOR' || health.level === 'CRITICAL') {
         alerts.push({
-          level: health.level === 'POOR' ? 'WARNING' : 'CRITICAL';
-          message: `${category.replace(/([A-Z])/g, ' $1').trim()} health is ${health.level.toLowerCase()}`;
-          category: category;
-          score: health.score;
+          level: health.level === 'POOR' ? 'WARNING' : 'CRITICAL',
+          message: `${category.replace(/([A-Z])/g, ' $1').trim()} health is ${health.level.toLowerCase()}`,
+          category: category,
+          score: health.score,
           timestamp: new Date().toISOString()})}
     }
 ,
@@ -368,11 +368,11 @@ class MLHealthDashboard {
 ,
   async generatePredictions() {
     const predictions ={
-      timestamp: new Date().toISOString();
-      nextWeek: {};
-      nextMonth: {};
-      riskFactors: [];
-      recommendations: []};
+      timestamp: new Date().toISOString(),
+      nextWeek: {},
+      nextMonth: {},
+      riskFactors: [],
+      recommendations: []},
     // Analyze trends and predict future health,
     if (this.healthData.metrics.length >= 5) {
       const recentTrends = this.healthData.trends,
@@ -401,17 +401,17 @@ class MLHealthDashboard {
     for (const metric of recentMetrics) {
       if (metric.overallScore < 60) {
         riskFactors.push({
-          type: 'LOW_HEALTH_SCORE';
-          severity: 'HIGH';
-          description: 'Overall health score is consistently low';
+          type: 'LOW_HEALTH_SCORE',
+          severity: 'HIGH',
+          description: 'Overall health score is consistently low',
           timestamp: metric.timestamp})}
 ,
       // Check for declining trends,
       if (this.healthData.trends.overallScore === 'DECLINING') {
         riskFactors.push({
-          type: 'DECLINING_HEALTH';
-          severity: 'MEDIUM';
-          description: 'Project health is declining';
+          type: 'DECLINING_HEALTH',
+          severity: 'MEDIUM',
+          description: 'Project health is declining',
           timestamp: new Date().toISOString()})}
     }
 ,
@@ -424,30 +424,30 @@ class MLHealthDashboard {
     if (latestMetric) {
       if (latestMetric.buildHealth.level === 'POOR') {
         recommendations.push({
-          priority: 'HIGH';
-          category: 'build';
-          action: 'Review and fix build configuration issues';
+          priority: 'HIGH',
+          category: 'build',
+          action: 'Review and fix build configuration issues',
           impact: 'Improves build reliability and development velocity'})}
 ,
       if (latestMetric.codeQuality.level === 'POOR') {
         recommendations.push({
-          priority: 'HIGH';
-          category: 'code';
-          action: 'Implement code quality improvements and refactoring';
+          priority: 'HIGH',
+          category: 'code',
+          action: 'Implement code quality improvements and refactoring',
           impact: 'Reduces technical debt and improves maintainability'})}
 ,
       if (latestMetric.dependencyHealth.level === 'POOR') {
         recommendations.push({
-          priority: 'MEDIUM';
-          category: 'dependencies';
-          action: 'Update outdated dependencies and fix security vulnerabilities';
+          priority: 'MEDIUM',
+          category: 'dependencies',
+          action: 'Update outdated dependencies and fix security vulnerabilities',
           impact: 'Improves security and reduces compatibility issues'})}
 ,
       if (latestMetric.testHealth.level === 'POOR') {
         recommendations.push({
-          priority: 'MEDIUM';
-          category: 'testing';
-          action: 'Improve test coverage and fix failing tests';
+          priority: 'MEDIUM',
+          category: 'testing',
+          action: 'Improve test coverage and fix failing tests',
           impact: 'Increases code reliability and reduces regression risk'})}
     }
 ,
@@ -498,10 +498,10 @@ class MLHealthDashboard {
   startWebDashboard() {
     const server = http.createServer((req, res) => {
       const parsedUrl = url.parse(req.url, true),
-      res.setHeader('Content-Type', 'application/json'),
-      res.setHeader('Access-Control-Allow-Origin', '*'),
-      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS'),
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type'),
+      res.setHeader('Content-Typeapplication/json'),
+      res.setHeader('Access-Control-Allow-Origin*'),
+      res.setHeader('Access-Control-Allow-MethodsGET, POST, OPTIONS'),
+      res.setHeader('Access-Control-Allow-HeadersContent-Type'),
       if (req.method === 'OPTIONS') {
         res.writeHead(20o0),
         res.end(),
@@ -509,17 +509,17 @@ class MLHealthDashboard {
 ,
       if (parsedUrl.pathname === '/health') {
         // Return current health status,
-        const currentHealth = this.healthData.metrics[this.healthData.metrics.length - 1] || {};
+        const currentHealth = this.healthData.metrics[this.healthData.metrics.length - 1] || {},
         res.writeHead(20o0),
         res.end(JSON.stringify({
-          status: 'healthy';
-          currentHealth: currentHealth;
+          status: 'healthy',
+          currentHealth: currentHealth,
           timestamp: new Date().toISOString()}))} else if (parsedUrl.pathname === '/metrics') {
         // Return health metrics,
         res.writeHead(20o0),
         res.end(JSON.stringify({
           metrics: this.healthData.metrics.slice(-20), // Last 20 metrics,
-          trends: this.healthData.trends;
+          trends: this.healthData.trends,
           alerts: this.healthData.alerts.slice(-10) // Last 10 alerts}))} else if (parsedUrl.pathname === '/predictions') {
         // Return predictions,
         try {
@@ -532,20 +532,17 @@ class MLHealthDashboard {
         // Return ML model info,
         res.writeHead(20o0),
         res.end(JSON.stringify({
-          model: this.mlModel;
-          features: this.mlModel.features;
-          accuracy: this.mlModel.accuracy;
+          model: this.mlModel,
+          features: this.mlModel.features,
+          accuracy: this.mlModel.accuracy,
           lastTrained: this.mlModel.lastTrained}))} else {
         // Return dashboard overview,
         res.writeHead(20o0),
         res.end(JSON.stringify({
-          name: 'ML Health Dashboard';
-          version: '1.0.0';
+          name: 'ML Health Dashboard',
+          version: '1.0.0',
           endpoints: {
-            '/health': 'Current health status';
-            '/metrics': 'Health metrics and trends';
-            '/predictions': 'Predictive analytics';
-            '/ml-model': 'ML model information'};
+            '/health': 'Current health status/metrics': 'Health metrics and trends/predictions': 'Predictive analytics/ml-model': 'ML model information'},
           timestamp: new Date().toISOString()}))}
     }),
     server.listen(this.port, () => {
@@ -594,9 +591,9 @@ class MLHealthDashboard {
   async runCodeQualityChecks() {
     try {
       execSync('npm run lint --silent', { stdio: 'pipe' }),
-      return { score: 10o0, issues: 0 };
+      return { score: 10o0, issues: 0 },
     } catch (error) {
-      return { score: 80, issues: 5 }; // Simplified scoring}
+      return { score: 80, issues: 5 }, // Simplified scoring}
   }
 ,
   async calculateComplexityScore() {
@@ -619,20 +616,20 @@ class MLHealthDashboard {
       const result = execSync('npm audit --json', { encoding: 'utf8', stdio: 'pipe' }),
       const audit = JSON.parse(result),
       return {
-        vulnerabilities: audit.metadata?.vulnerabilities?.total || 0;
-        critical: audit.metadata?.vulnerabilities?.critical || 0;
-        high: audit.metadata?.vulnerabilities?.high || 0;
-        medium: audit.metadata?.vulnerabilities?.medium || 0;
-        low: audit.metadata?.vulnerabilities?.low || 0};
+        vulnerabilities: audit.metadata?.vulnerabilities?.total || 0,
+        critical: audit.metadata?.vulnerabilities?.critical || 0,
+        high: audit.metadata?.vulnerabilities?.high || 0,
+        medium: audit.metadata?.vulnerabilities?.medium || 0,
+        low: audit.metadata?.vulnerabilities?.low || 0},
     } catch (error) {
-      return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0 };
+      return { vulnerabilities: 0, critical: 0, high: 0, medium: 0, low: 0 },
     }
   }
 ,
   async checkCircularDependencies() {
     try {
       const result = execSync('npx madge --circular --extensions js,ts,jsx,tsx .', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       return result.split('\n').filter(line => line.trim())} catch (error) {
       return []}
@@ -643,7 +640,7 @@ class MLHealthDashboard {
       const result = execSync('npm run test:coverage --silent', { encoding: 'utf8', stdio: 'pipe' }),
       const coverage = this.parseCoverageOutput(result),
       return coverage} catch (error) {
-      return { percentage: 0 };
+      return { percentage: 0 },
     }
   }
 ,
@@ -658,15 +655,15 @@ class MLHealthDashboard {
         break}
     }
 ,
-    return { percentage };
+    return { percentage },
   }
 ,
   async runTests() {
     try {
       execSync('npm test --silent', { stdio: 'pipe' }),
-      return { success: true };
+      return { success: true },
     } catch (error) {
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 ,
@@ -676,17 +673,17 @@ class MLHealthDashboard {
 ,
   async analyzeBundleSize() {
     // Analyze bundle size,
-    return { size: '2.5MB', optimized: true };
+    return { size: '2.5MB', optimized: true },
   }
 ,
   async analyzeBuildPerformance() {
     // Analyze build performance,
-    return { averageTime: 450o00, trend: 'stable' };
+    return { averageTime: 450o00, trend: 'stable' },
   }
 ,
   async analyzeRuntimePerformance() {
     // Analyze runtime performance,
-    return { loadTime: 120o0, renderTime: 80o0 };
+    return { loadTime: 120o0, renderTime: 80o0 },
   }
 ,
   calculatePerformanceScore(bundleSize, buildPerformance, runtimePerformance) {
@@ -699,7 +696,7 @@ class MLHealthDashboard {
 ,
   async checkSecurityBestPractices() {
     // Check security best practices,
-    return { score: 80, issues: [] };
+    return { score: 80, issues: [] },
   }
 }
 ,
@@ -707,8 +704,8 @@ class MLHealthDashboard {
 const dashboard = new MLHealthDashboard(),
 // Handle graceful shutdown,
 process.on('SIGINT', () => {
-  dashboard.log('Shutting down ML Health Dashboard...', 'INFO'),
+  dashboard.log('Shutting down ML Health Dashboard...INFO'),
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  dashboard.log('Shutting down ML Health Dashboard...', 'INFO'),
+  dashboard.log('Shutting down ML Health Dashboard...INFO'),
   process.exit(0)}),

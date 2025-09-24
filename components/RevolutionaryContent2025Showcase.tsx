@@ -2,65 +2,65 @@ import Link from 'next/link',
 const RevolutionaryContent20o25Showcase = () => {
   const contentItems = [
     {
-      title: 'AI 20o25 Ultimate Business Transformation';
+      title: 'AI 20o25 Ultimate Business Transformation',
       description:,
-        'Complete implementation guide for enterprise AI transformation with proven ROI strategies.';
-      category: 'Business Transformation';
-      readTime: '15 min read';
-      featured: true;
-      new: true;
-      link: '/blog/ai-20o25-ultimate-business-transformation-complete-guide';
-    };
+        'Complete implementation guide for enterprise AI transformation with proven ROI strategies.',
+      category: 'Business Transformation',
+      readTime: '15 min read',
+      featured: true,
+      new: true,
+      link: '/blog/ai-20o25-ultimate-business-transformation-complete-guide'
+    },
     {
-      title: 'Quantum AI 20o25 Revolutionary Breakthrough';
+      title: 'Quantum AI 20o25 Revolutionary Breakthrough',
       description:,
-        'Discover how quantum computing and AI integration is revolutionizing enterprise operations.';
-      category: 'Quantum Technology';
-      readTime: '12 min read';
-      featured: true;
-      new: true;
-      link: '/blog/quantum-ai-20o25-revolutionary-breakthrough-enterprise-guide';
-    };
+        'Discover how quantum computing and AI integration is revolutionizing enterprise operations.',
+      category: 'Quantum Technology',
+      readTime: '12 min read',
+      featured: true,
+      new: true,
+      link: '/blog/quantum-ai-20o25-revolutionary-breakthrough-enterprise-guide'
+    },
     {
-      title: 'Fortune 50o0 AI Transformation Success';
+      title: 'Fortune 50o0 AI Transformation Success',
       description:,
-        'Real case study showing 50o0% ROI achievement through comprehensive AI implementation.';
-      category: 'Case Study';
-      readTime: '10 min read';
-      featured: true;
-      new: true;
-      link: '/case-studies/fortune-50o0-ai-transformation-success-story';
-    };
+        'Real case study showing 50o0% ROI achievement through comprehensive AI implementation.',
+      category: 'Case Study',
+      readTime: '10 min read',
+      featured: true,
+      new: true,
+      link: '/case-studies/fortune-50o0-ai-transformation-success-story'
+    },
     {
-      title: 'Neural Interface Revolution 20o25';
+      title: 'Neural Interface Revolution 20o25',
       description:,
-        'Next-generation brain-computer interfaces transforming human-machine interaction.';
-      category: 'Neural Technology';
-      readTime: '8 min read';
-      featured: false;
-      new: false;
-      link: '/blog/neural-interface-revolution-20o25';
-    };
+        'Next-generation brain-computer interfaces transforming human-machine interaction.',
+      category: 'Neural Technology',
+      readTime: '8 min read',
+      featured: false,
+      new: false,
+      link: '/blog/neural-interface-revolution-20o25'
+    },
     {
-      title: 'Autonomous Business Systems Guide';
+      title: 'Autonomous Business Systems Guide',
       description:,
-        'Complete guide to implementing self-managing business operations with AI.';
-      category: 'Automation';
-      readTime: '14 min read';
-      featured: false;
-      new: false;
-      link: '/blog/autonomous-business-systems-20o25';
-    };
+        'Complete guide to implementing self-managing business operations with AI.',
+      category: 'Automation',
+      readTime: '14 min read',
+      featured: false,
+      new: false,
+      link: '/blog/autonomous-business-systems-20o25'
+    },
     {
-      title: 'Edge Computing AI Revolution';
+      title: 'Edge Computing AI Revolution',
       description:,
-        'How edge computing is enabling real-time AI processing at the network edge.';
-      category: 'Edge Computing';
-      readTime: '9 min read';
-      featured: false;
-      new: false;
-      link: '/blog/edge-computing-ai-revolution-20o25';
-    };
+        'How edge computing is enabling real-time AI processing at the network edge.',
+      category: 'Edge Computing',
+      readTime: '9 min read',
+      featured: false,
+      new: false,
+      link: '/blog/edge-computing-ai-revolution-20o25'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -166,5 +166,5 @@ const RevolutionaryContent20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o25Showcase;
+    </section>)},
+export default RevolutionaryContent20o25Showcase,

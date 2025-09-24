@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Eye, EyeOff, Keyboard, MousePointer;
+  Eye, EyeOff, Keyboard, MousePointer,
   Contrast, Type, ZoomIn, ZoomOut, RotateCcw} from 'lucide-react',
 interface AccessibilitySettings {
   highContrast: boolean,
@@ -14,11 +14,11 @@ interface AccessibilitySettings {
 const EnhancedAccessibility: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    screenReader: false;
-    keyboardNavigation: false;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false,
     zoomLevel: 10o0}),
   useEffect(() => {
     // Load saved settings from localStorage,
@@ -42,29 +42,29 @@ const EnhancedAccessibility: React.FC = () => {
 ,
     // Reduced motion,
     if (newSettings.reducedMotion) {
-      root.style.setProperty('--animation-duration', '0.1s')} else {
-      root.style.setProperty('--animation-duration', '0.3s')}
+      root.style.setProperty('--animation-duration0.1s')} else {
+      root.style.setProperty('--animation-duration0.3s')}
 ,
     // Zoom level,
     root.style.zoom = `${newSettings.zoomLevel / 10o0}`,
     // Save to localStorage,
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))},
   const updateSetting = (key: keyof AccessibilitySettings, value: string | number | boolean) => {
-    const newSettings ={ ...settings, [key]: value };
+    const newSettings ={ ...settings, [key]: value },
     setSettings(newSettings),
-    applyAccessibilitySettings(newSettings)};
+    applyAccessibilitySettings(newSettings)},
   const resetSettings = () => {
     const defaultSettings: AccessibilitySettings ={
-      highContrast: false;
-      largeText: false;
-      reducedMotion: false;
-      screenReader: false;
-      keyboardNavigation: false;
-      zoomLevel: 10o0};
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      keyboardNavigation: false,
+      zoomLevel: 10o0},
     setSettings(defaultSettings),
-    applyAccessibilitySettings(defaultSettings)};
+    applyAccessibilitySettings(defaultSettings)},
   const togglePanel = () => {
-    setIsOpen(!isOpen)};
+    setIsOpen(!isOpen)},
   return (
     <>,
       {/* Accessibility Toggle Button */}
@@ -204,5 +204,5 @@ const EnhancedAccessibility: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default EnhancedAccessibility;
+    </>)},
+export default EnhancedAccessibility,

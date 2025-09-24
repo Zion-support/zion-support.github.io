@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {
   return (
@@ -117,5 +117,5 @@ const QuantumNeuralBreakthroughBanner20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumNeuralBreakthroughBanner20o26;
+    </section>)},
+export default QuantumNeuralBreakthroughBanner20o26,

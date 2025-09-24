@@ -65,5 +65,5 @@ const AI20o25NextGenInnovationBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25NextGenInnovationBanner;
+    </section>)},
+export default AI20o25NextGenInnovationBanner,

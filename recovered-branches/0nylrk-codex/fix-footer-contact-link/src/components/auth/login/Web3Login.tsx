@@ -22,7 +22,7 @@ export function Web3Login() {
         description: error.message || "Failed to connect wallet"}),
       console.error("Web3 login error: "error)} finally {
       setIsLoading(false)}
-  };
+  },
   return (
     <Button
       type="button",

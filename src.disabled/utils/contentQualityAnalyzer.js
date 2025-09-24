@@ -14,7 +14,7 @@
       "metaDescription": metaDescriptio,n,
       "images": image,s,
       "links": link,s,
-      "score": 0;
+      "score": 0,
       "issues": [],
       recommendations: []}
 ,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 interface ServiceLandingTemplateProps {
   title: string,
   description: string,
@@ -8,12 +8,12 @@ interface ServiceLandingTemplateProps {
   ctaLink?: string}
 ,
 const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
-  title;
-  description;
-  features;
-  benefits;
-  ctaText = 'Get Started';
-  ctaLink = '/contact';
+  title,
+  description,
+  features,
+  benefits,
+  ctaText = 'Get Started',
+  ctaLink = '/contact'
 }) => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -85,5 +85,5 @@ const ServiceLandingTemplate: React.FC<ServiceLandingTemplateProps> = ({
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default ServiceLandingTemplate;
+    </div>)},
+export default ServiceLandingTemplate,

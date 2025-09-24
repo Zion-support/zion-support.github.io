@@ -2,76 +2,76 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  Star;
-  Check;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Globe;
-  Cloud;
-  Network;
+  Search,
+  Grid,
+  List,
+  Star,
+  Check,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Globe,
+  Cloud,
+  Network,
 } from 'lucide-react',
 // Import our new service data,
 import { innovative20o25Q4NewServices } from '../data/innovative-20o25-q4-new-services',
 import { emergingTech20o25Innovations } from '../data/emerging-tech-20o25-innovations',
 const contact = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 // Combine all services,
 const allServices = [
-  ...innovative20o25Q4NewServices;
-  ...emergingTech20o25Innovations;
+  ...innovative20o25Q4NewServices,
+  ...emergingTech20o25Innovations,
 ],
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    icon: <Grid className='w-6 h-6' />;
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of innovative services';
-  };
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of innovative services'
+  },
   {
-    id: 'ai-business';
-    name: 'AI & Business';
-    icon: <Brain className='w-6 h-6' />;
-    color: 'from-blue-50o0 to-purple-50o0';
-    description: 'AI-powered business solutions and intelligence';
-  };
+    id: 'ai-business',
+    name: 'AI & Business',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-blue-50o0 to-purple-50o0',
+    description: 'AI-powered business solutions and intelligence'
+  },
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    icon: <Shield className='w-6 h-6' />;
-    color: 'from-red-50o0 to-orange-50o0';
-    description: 'Advanced security and threat intelligence';
-  };
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className='w-6 h-6' />,
+    color: 'from-red-50o0 to-orange-50o0',
+    description: 'Advanced security and threat intelligence'
+  },
   {
-    id: 'cloud-devops';
-    name: 'Cloud & DevOps';
-    icon: <Cloud className='w-6 h-6' />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Cloud optimization and autonomous DevOps';
-  };
+    id: 'cloud-devops',
+    name: 'Cloud & DevOps',
+    icon: <Cloud className='w-6 h-6' />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    description: 'Cloud optimization and autonomous DevOps'
+  },
   {
-    id: 'emerging-tech';
-    name: 'Emerging Tech';
-    icon: <Atom className='w-6 h-6' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Space technology, quantum computing, and more';
-  };
+    id: 'emerging-tech',
+    name: 'Emerging Tech',
+    icon: <Atom className='w-6 h-6' />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    description: 'Space technology, quantum computing, and more',
+  },
   {
-    id: 'blockchain-iot';
-    name: 'Blockchain & IoT';
-    icon: <Network className='w-6 h-6' />;
-    color: 'from-indigo-50o0 to-purple-50o0';
-    description: 'Blockchain solutions and IoT platforms';
-  };
+    id: 'blockchain-iot',
+    name: 'Blockchain & IoT',
+    icon: <Network className='w-6 h-6' />,
+    color: 'from-indigo-50o0 to-purple-50o0',
+    description: 'Blockchain solutions and IoT platforms'
+  },
 ],
 export default function ServicesAdvertising20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -106,7 +106,7 @@ export default function ServicesAdvertising20o25() {
               </span>,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
-              Transform your business with our cutting-edge micro SAAS services;
+              Transform your business with our cutting-edge micro SAAS services,
               AI-powered solutions, and emerging technology platforms. Stay,
               ahead of the competition with Zion Tech Group.,
             </p>,

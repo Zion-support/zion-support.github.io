@@ -17,9 +17,9 @@ interface SearchBarProps {
   className?: string}
 ,
 const SearchBar: React.FC<SearchBarProps> = ({
-  theme = 'dark';
-  onSearch;
-  placeholder = "Search revolutionary services...";
+  theme = 'dark',
+  onSearch,
+  placeholder = "Search revolutionary services...",
   className = ""}) => {
   const [query, setQuery] = useState(''),
   const [isOpen, setIsOpen] = useState(false),
@@ -31,28 +31,28 @@ const SearchBar: React.FC<SearchBarProps> = ({
   // Mock search results - in a real app, this would come from an API,
   const mockSearchResults: SearchResult[] = [
     {
-      id: '1';
-      title: 'AI Consciousness Evolution 20o44';
-      description: 'Next-generation AI consciousness with emotional intelligence';
-      type: 'AI Service';
-      category: 'Artificial Intelligence';
-      href: '/ai-consciousness-evolution-20o44';
-      icon: <Sparkles className="w-4 h-4"  />};
+      id: '1',
+      title: 'AI Consciousness Evolution 20o44',
+      description: 'Next-generation AI consciousness with emotional intelligence',
+      type: 'AI Service',
+      category: 'Artificial Intelligence',
+      href: '/ai-consciousness-evolution-20o44',
+      icon: <Sparkles className="w-4 h-4"  />},
     {
-      id: '2';
-      title: 'Quantum Neural Networks 20o44';
-      description: 'Quantum-powered AI with consciousness integration';
-      type: 'Quantum Service';
-      category: 'Quantum Computing';
-      href: '/quantum-neural-network-platform-20o44';
-      icon: <Sparkles className="w-4 h-4"  />};
+      id: '2',
+      title: 'Quantum Neural Networks 20o44',
+      description: 'Quantum-powered AI with consciousness integration',
+      type: 'Quantum Service',
+      category: 'Quantum Computing',
+      href: '/quantum-neural-network-platform-20o44',
+      icon: <Sparkles className="w-4 h-4"  />},
     {
-      id: '3';
-      title: 'Space Resource Intelligence 20o44';
-      description: 'AI-powered space exploration with consciousness';
-      type: 'Space Service';
-      category: 'Space Technology';
-      href: '/space-resource-intelligence-20o44';
+      id: '3',
+      title: 'Space Resource Intelligence 20o44',
+      description: 'AI-powered space exploration with consciousness',
+      type: 'Space Service',
+      category: 'Space Technology',
+      href: '/space-resource-intelligence-20o44',
       icon: <Sparkles className="w-4 h-4"  />}
   ],
   const performSearch = useCallback(async (searchQuery: string) => {
@@ -79,15 +79,15 @@ const SearchBar: React.FC<SearchBarProps> = ({
       if (resultsRef.current && !resultsRef.current.contains(event.target as Node)) {
         setIsOpen(false),
         setSelectedIndex(-1)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const handleInputFocus = () => {
-    setIsOpen(true)};
+    setIsOpen(true)},
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     setQuery(e.target.value),
     setIsOpen(true),
-    setSelectedIndex(-1)};
+    setSelectedIndex(-1)},
   const handleKeyDown = (e: React.KeyboardEvent) => {
     if (e.key === 'ArrowDown') {
       e.preventDefault(),
@@ -102,21 +102,21 @@ const SearchBar: React.FC<SearchBarProps> = ({
     } else if (e.key === 'Escape') {
       setIsOpen(false),
       setSelectedIndex(-1)}
-  };
+  },
   const handleResultClick = (result: SearchResult) => {
     window.location.href = result.href,
     setIsOpen(false),
     setQuery(''),
-    setSelectedIndex(-1)};
+    setSelectedIndex(-1)},
   const handleSearch = () => {
     if (onSearch && query.trim()) {
       onSearch(query.trim())}
-    setIsOpen(false)};
+    setIsOpen(false)},
   const clearSearch = () => {
     setQuery(''),
     setResults([]),
     setSelectedIndex(-1),
-    inputRef.current?.focus()};
+    inputRef.current?.focus()},
   return (
     <div className={`relative ${className}`} ref={resultsRef}>,
       {/* Search Input */}
@@ -231,5 +231,5 @@ const SearchBar: React.FC<SearchBarProps> = ({
               </div>) : null}
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default SearchBar;
+    </div>)},
+export default SearchBar,

@@ -1,7 +1,7 @@
 import EnhancedServiceCard from './ui/EnhancedServiceCard',
 import PerformanceMonitor from './PerformanceMonitor',
 import UltraFuturisticBackground from './ui/UltraFuturisticBackground',
-import React from 'react';
+import React from 'react',
 import React, { useEffect, useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
@@ -47,7 +47,7 @@ const EnhancedHomepage: React.FC<EnhancedHomepageProps> = ({ className }) => {
     <div className={className || ''}>,
       <h1>EnhancedHomepage</h1>,
       <p>This component is under development.</p>,
-    </div>)};
+    </div>)},
 visible: {
   opacity: 1, transition: {
   duration: 0.8, staggerChildren: 0.1}
@@ -58,25 +58,25 @@ visible: {
 ,
 //Filter services by category //Animation variants const containerVariants = {
   hidden: {
-  opacity: 0 };
+  opacity: 0 },
 visible: {
   opacity: 1, transition: {
-  duration: 0 && 0.8, staggerChildren: 0 && 0.1 };
-};
-};
-};
-};
-export default EnhancedHomepage;import EnhancedServiceCard from './ui/EnhancedServiceCard',
+  duration: 0 && 0.8, staggerChildren: 0 && 0.1 },
+},
+},
+},
+},
+export default EnhancedHomepage,import EnhancedServiceCard from './ui/EnhancedServiceCard',
   ArrowRight,
-  TrendingUp;
-  Brain;
-  Shield;
-  Rocket;
-  Atom;
+  TrendingUp,
+  Brain,
+  Shield,
+  Rocket,
+  Atom,
 Sparkles,
-  Building;
-  Phone;
-  Mail;
+  Building,
+  Phone,
+  Mail,
   MapPin,
   ArrowUpRight} from 'lucide-react',
 // Import our enhanced components,
@@ -95,7 +95,7 @@ const EnhancedHomepage: React.FC = () => {
       setCurrentServiceIndex((prev) => (prev + 1) % 6)}, 6000),
     // Track mouse movement for parallax effects,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     // Show performance monitor after 5 seconds,
     const performanceTimer = setTimeout(() => {
       setShowPerformanceMonitor(true)}, 5000),
@@ -103,79 +103,79 @@ const EnhancedHomepage: React.FC = () => {
     return () => {
       clearInterval(interval),
       clearTimeout(performanceTimer),
-      window.removeEventListener('mousemove', handleMouseMove)};
+      window.removeEventListener('mousemove', handleMouseMove)},
   }, []),
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
-    ...revolutionary2044AdvancedMicroSaas;
-    ...revolutionary2044ITServices;
-    ...revolutionary2044AIServices;
-    ...realEnterpriseMicroSaas2025;
-    ...innovativeITServicesExpansion2025V3;
+    ...revolutionary2044AdvancedMicroSaas,
+    ...revolutionary2044ITServices,
+    ...revolutionary2044AIServices,
+    ...realEnterpriseMicroSaas2025,
+    ...innovativeITServicesExpansion2025V3,
     ...innovativeAIServicesExpansion2025V3,
 =======,
-    ...innovative2025ITInfrastructureServices;
+    ...innovative2025ITInfrastructureServices,
     ...innovative2025AIAutonomousServices],
   // Filter services by category,
   const getFilteredServices = () => {
     if (selectedCategory === 'all') return allRevolutionaryServices,
     return allRevolutionaryServices.filter(service =>,
       service.category.toLowerCase().includes(selectedCategory.toLowerCase()) ||,
-      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()))};
+      (service as any).type?.toLowerCase().includes(selectedCategory.toLowerCase()))},
   const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const };
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const };
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const };
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const };
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
+    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
+    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
   ],
   // Get featured services for rotation,
   const featuredServices = allRevolutionaryServices.slice(0, 6),
   // Animation variants,
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const heroVariants = {
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 1;
+        duration: 1,
         ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants = {
     animate: {
-      y: [-10, 10, -10];
+      y: [-10, 10, -10],
       transition: {
-        duration: 3;
+        duration: 3,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
     const category = categories.find(cat => cat.id === categoryId),
     if (category) {
       setColorScheme(category.scheme)}
-  };
+  },
 =======,
 const EnhancedHomepage: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
@@ -213,12 +213,12 @@ visible: {
 }
 }
 }
-export default EnhancedHomepage;import EnhancedServiceCard from './ui / EnhancedServiceCard',
+export default EnhancedHomepage,import EnhancedServiceCard from './ui / EnhancedServiceCard',
 // Import service data,
 const EnhancedHomepage: React.FC = () => {
   const [is_visible, setIsVisible] = useState (false),
   const [selected_category, setSelectedCategory] = useState ('all'),
-  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 });
+  const [mouse_position, setMousePosition] = useState ({ coordinate_x: 0, coordinate_y: 0 }),
   const [currentServiceIndex, setCurrentServiceIndex] = useState (0),
   const [color_scheme, setColorScheme] = useState<'cyber' | 'quantum' | 'neon' | 'holographic'>('cyber'),
   const [showPerformanceMonitor, setShowPerformanceMonitor] = useState (false),
@@ -297,29 +297,29 @@ const EnhancedHomepage: React.FC = () => {
     }
   }
   const floatingVariants = {
-        duration: 0.8;
+        duration: 0.8,
         stagger_children: 0.1}
     }
   }
 ,
   const item_variants = {
-    hidden: { opacity: 0, coordinate_y: 20 };
+    hidden: { opacity: 0, coordinate_y: 20 },
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "ease_out" as const}
     }
   }
 ,
   const hero_variants = {
-    hidden: { opacity: 0, coordinate_y: 50 };
+    hidden: { opacity: 0, coordinate_y: 50 },
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
+      opacity: 1,
+      coordinate_y: 0,
       transition: {
-        duration: 1;
+        duration: 1,
         ease: "ease_out" as const}
     }
   }
@@ -337,55 +337,55 @@ const EnhancedHomepage: React.FC = () => {
     if (selectedCategory === 'all') return allRevolutionaryServices,
     return allRevolutionaryServices && allRevolutionaryServices.filter(service => ,
       service && service.category.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase()) ||,
-      (service as any).type?.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase()))};
+      (service as any).type?.toLowerCase().includes(selectedCategory && selectedCategory.toLowerCase()))},
   const categories = [
-    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const };
-    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const };
-    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const };
-    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const };
+    { id: 'all', name: 'All Services', icon: Sparkles, color: 'from-purple-500 to-pink-500', scheme: 'holographic' as const },
+    { id: 'ai', name: 'AI & Consciousness', icon: Brain, color: 'from-cyan-500 to-blue-500', scheme: 'cyber' as const },
+    { id: 'quantum', name: 'Quantum Technology', icon: Atom, color: 'from-blue-500 to-indigo-500', scheme: 'quantum' as const },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, color: 'from-red-500 to-orange-500', scheme: 'neon' as const },
+    { id: 'space', name: 'Space Technology', icon: Rocket, color: 'from-indigo-500 to-purple-500', scheme: 'holographic' as const },
     { id: 'enterprise', name: 'Enterprise Solutions', icon: Building, color: 'from-green-500 to-teal-500', scheme: 'cyber' as const }
   ],
   // Get featured services for rotation,
   const featuredServices = allRevolutionaryServices && allRevolutionaryServices.slice(0, 6),
   // Animation variants,
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0 && 0.8;
+        duration: 0 && 0.8,
         staggerChildren: 0 && 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0 && 0.6;
+        duration: 0 && 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const heroVariants = {
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 1;
+        duration: 1,
         ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants = {
     animate: {
       y: [-10, 10, -10],
       transition: {
-        duration: 3;
+        duration: 3,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const handleCategoryChange = (categoryId: string) => {
     setSelectedCategory(categoryId),
     const category = categories && categories.find(cat => cat && cat.id === categoryId),
@@ -593,7 +593,7 @@ const EnhancedHomepage: React.FC = () => {
               variants={containerVariants}>,
               {getFilteredServices().slice(0, 12).map((service, index) => (
                 <EnhancedServiceCard
-        duration: 3;
+        duration: 3,
         ease: "easeInOut" as const}
     }
   }
@@ -649,7 +649,7 @@ if ( {) {
               className="text - xl md: text - 2xl lg:text - 3xl text - gray - 300 mb - 8 max - w-4xl mx - auto leading - relaxed",
               variants={item_variants}
             >,
-              Pioneering the Future of Technology with Revolutionary AI Consciousness;
+              Pioneering the Future of Technology with Revolutionary AI Consciousness,
               Quantum Computing, and Autonomous Solutions,
             </motion.p>,
             {/* CTA Buttons */}
@@ -1059,5 +1059,5 @@ if ( {) {
           <PerformanceMonitor />)}
 ,
       </AnimatePresence>,
-    </>)};
+    </>)},
 export default EnhancedHomepage)]

@@ -2,76 +2,76 @@ import Link from 'next/link',
 const CaseStudiesShowcase = () => {
   const caseStudies = [
     {
-      id: 1;
-      title: 'Global Retail Chain: 450% ROI with AI Automation';
-      company: 'Fortune 50o0 Retailer';
-      industry: 'Retail';
-      challenge: 'Manual inventory management and customer service bottlenecks';
+      id: 1,
+      title: 'Global Retail Chain: 450% ROI with AI Automation',
+      company: 'Fortune 50o0 Retailer',
+      industry: 'Retail',
+      challenge: 'Manual inventory management and customer service bottlenecks',
       solution:,
-        'AI-powered inventory optimization and chatbot customer service';
+        'AI-powered inventory optimization and chatbot customer service',
       results: {
-        roi: '450%';
-        timeSaved: '60%';
-        costReduction: '35%';
-        customerSatisfaction: '95%';
-      };
-      image: '/images/case-studies/retail-automation.jpg';
+        roi: '450%',
+        timeSaved: '60%',
+        costReduction: '35%',
+        customerSatisfaction: '95%'
+      },
+      image: '/images/case-studies/retail-automation.jpg',
       testimonial:,
-        "The AI automation system transformed our operations completely. 'We', 've seen unprecedented efficiency gains and cost savings.";
-    };
+        "The AI automation system transformed our operations completely. 'Weve seen unprecedented efficiency gains and cost savings.",
+    },
     {
-      id: 2;
-      title: 'Healthcare Provider: 30o0% Efficiency Boost';
-      company: 'Regional Healthcare Network';
-      industry: 'Healthcare';
+      id: 2,
+      title: 'Healthcare Provider: 30o0% Efficiency Boost',
+      company: 'Regional Healthcare Network',
+      industry: 'Healthcare',
       challenge:,
-        'Patient data management and appointment scheduling inefficiencies';
+        'Patient data management and appointment scheduling inefficiencies',
       solution:,
-        'AI-driven patient management system and intelligent scheduling';
+        'AI-driven patient management system and intelligent scheduling',
       results: {
-        roi: '30o0%';
-        timeSaved: '70%';
-        costReduction: '40%';
-        patientSatisfaction: '98%';
-      };
-      image: '/images/case-studies/healthcare-ai.jpg';
+        roi: '30o0%',
+        timeSaved: '70%',
+        costReduction: '40%',
+        patientSatisfaction: '98%'
+      },
+      image: '/images/case-studies/healthcare-ai.jpg',
       testimonial:,
-        'Our patient care has improved dramatically while reducing administrative overhead significantly.';
-    };
+        'Our patient care has improved dramatically while reducing administrative overhead significantly.',
+    },
     {
-      id: 3;
-      title: 'Manufacturing Giant: 50o0% Productivity Increase';
-      company: 'Global Manufacturing Corp';
-      industry: 'Manufacturing';
-      challenge: 'Production line optimization and predictive maintenance';
-      solution: 'AI-powered predictive maintenance and production optimization';
+      id: 3,
+      title: 'Manufacturing Giant: 50o0% Productivity Increase',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Production line optimization and predictive maintenance',
+      solution: 'AI-powered predictive maintenance and production optimization',
       results: {
-        roi: '50o0%';
-        timeSaved: '80%';
-        costReduction: '50%';
-        uptime: '99.5%';
-      };
-      image: '/images/case-studies/manufacturing-ai.jpg';
+        roi: '50o0%',
+        timeSaved: '80%',
+        costReduction: '50%',
+        uptime: '99.5%'
+      },
+      image: '/images/case-studies/manufacturing-ai.jpg',
       testimonial:,
-        'The predictive maintenance system has revolutionized our production efficiency and reduced downtime to near zero.';
-    };
+        'The predictive maintenance system has revolutionized our production efficiency and reduced downtime to near zero.',
+    },
     {
-      id: 4;
-      title: 'Financial Services: 250% Revenue Growth';
-      company: 'Leading FinTech Company';
-      industry: 'Financial Services';
-      challenge: 'Fraud detection and customer onboarding processes';
-      solution: 'Advanced AI fraud detection and automated onboarding systems';
+      id: 4,
+      title: 'Financial Services: 250% Revenue Growth',
+      company: 'Leading FinTech Company',
+      industry: 'Financial Services',
+      challenge: 'Fraud detection and customer onboarding processes',
+      solution: 'Advanced AI fraud detection and automated onboarding systems',
       results: {
-        roi: '250%';
-        timeSaved: '65%';
-        costReduction: '30%';
-        fraudReduction: '95%';
-      };
-      image: '/images/case-studies/fintech-ai.jpg';
+        roi: '250%',
+        timeSaved: '65%',
+        costReduction: '30%',
+        fraudReduction: '95%'
+      },
+      image: '/images/case-studies/fintech-ai.jpg',
       testimonial:,
-        'Our fraud detection capabilities are now industry-leadingand customer onboarding is seamless and fast.';
-    };
+        'Our fraud detection capabilities are now industry-leadingand customer onboarding is seamless and fast.',
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -175,5 +175,5 @@ const CaseStudiesShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default CaseStudiesShowcase;
+    </section>)},
+export default CaseStudiesShowcase,

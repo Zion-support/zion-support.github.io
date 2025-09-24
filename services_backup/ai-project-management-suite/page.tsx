@@ -1,11 +1,11 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Project Management Suite | Zion Tech Group';
+  title: 'AI Project Management Suite | Zion Tech Group',
   description:,
-    'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.';
+    'Intelligent project management with AI-powered task automation, resource optimization, risk prediction, and smart scheduling for enhanced team productivity.',
   keywords:,
-    'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI';
-};
+    'AI project management, task automation, resource optimization, risk prediction, team productivity, project planning AI',
+},
 interface FeatureProps {
   title: string,
   description: string,
@@ -29,13 +29,13 @@ interface PricingTierProps {
   cta: string}
 ,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular = false;
-  cta;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
 }: PricingTierProps) {
   return (
     <div
@@ -91,7 +91,7 @@ export default function AIProjectManagementSuitePage() {
           AI Project Management Suite,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto'>,
-          Transform your project management with AI-powered automation;
+          Transform your project management with AI-powered automation,
           intelligent resource allocation, and predictive analytics. Boost team,
           productivity and project success rates.,
         </p>,
@@ -165,18 +165,18 @@ export default function AIProjectManagementSuitePage() {
         </div>,
         <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-4 gap-6'>,
           {[
-            { name: 'Jira', icon: '🎫', description: 'Issue tracking' };
-            { name: 'Asana', icon: '📋', description: 'Task management' };
-            { name: 'Trello', icon: '📌', description: 'Kanban boards' };
-            { name: 'Monday.com', icon: '📅', description: 'Work management' };
-            { name: 'Slack', icon: '💬', description: 'Team communication' };
+            { name: 'Jira', icon: '🎫', description: 'Issue tracking' },
+            { name: 'Asana', icon: '📋', description: 'Task management' },
+            { name: 'Trello', icon: '📌', description: 'Kanban boards' },
+            { name: 'Monday.com', icon: '📅', description: 'Work management' },
+            { name: 'Slack', icon: '💬', description: 'Team communication' },
             {
-              name: 'Microsoft Teams';
-              icon: '👥';
-              description: 'Collaboration';
-            };
-            { name: 'GitHub', icon: '🐙', description: 'Code management' };
-            { name: 'Figma', icon: '🎨', description: 'Design collaboration' };
+              name: 'Microsoft Teams',
+              icon: '👥',
+              description: 'Collaboration'
+            },
+            { name: 'GitHub', icon: '🐙', description: 'Code management' },
+            { name: 'Figma', icon: '🎨', description: 'Design collaboration' },
           ].map((integration, index) => (
             <div
               key={index}
@@ -270,12 +270,9 @@ export default function AIProjectManagementSuitePage() {
             period='month',
             description='Perfect for small teams',
             features={[
-              'Up to 10 team members';
-              'Basic AI task automation';
-              'Project templates';
-              'Basic analytics';
-              'Email support';
-              '5 active projects';
+              'Up to 10 team membersBasic AI task automation',
+              'Project templatesBasic analytics',
+              'Email support5 active projects',
             ]}
             cta='Start Free Trial',
           />,
@@ -285,14 +282,10 @@ export default function AIProjectManagementSuitePage() {
             period='month',
             description='Most popular for growing teams',
             features={[
-              'Up to 50 team members';
-              'Advanced AI features';
-              'Resource optimization';
-              'Risk prediction';
-              'Advanced analytics';
-              'Priority support';
-              'Unlimited projects';
-              'API access';
+              'Up to 50 team membersAdvanced AI features',
+              'Resource optimizationRisk prediction',
+              'Advanced analyticsPriority support',
+              'Unlimited projectsAPI access',
             ]}
             popular={true}
             cta='Start Free Trial',
@@ -303,14 +296,10 @@ export default function AIProjectManagementSuitePage() {
             period='month',
             description='For large organizations',
             features={[
-              'Unlimited team members';
-              'Full AI optimization suite';
-              'Custom AI training';
-              'White-label options';
-              'Dedicated account manager';
-              '24/7 phone support';
-              'Custom integrations';
-              'Advanced reporting';
+              'Unlimited team membersFull AI optimization suite',
+              'Custom AI trainingWhite-label options',
+              'Dedicated account manager24/7 phone support',
+              'Custom integrationsAdvanced reporting',
             ]}
             cta='Contact Sales',
           />,

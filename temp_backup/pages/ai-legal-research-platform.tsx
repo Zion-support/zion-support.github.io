@@ -1,50 +1,44 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Scale, Search, TrendingUp, Shield, Zap, Target;
-  CheckCircle, Star, Globe, Lock, Smartphone, Monitor;
+  Scale, Search, TrendingUp, Shield, Zap, Target,
+  CheckCircle, Star, Globe, Lock, Smartphone, Monitor,
   Award, MessageCircle, Cpu} from 'lucide-react',
 export default function AILegalResearchPlatform() {
   const features = [
     {
-      icon: <Scale className="w-6 h-6"  />;
-      title: 'Legal Research Automation';
-      description: 'AI-powered legal research that analyzes case law, statutes, and legal precedents with unprecedented speed and accuracy.'};
+      icon: <Scale className="w-6 h-6"  />,
+      title: 'Legal Research Automation',
+      description: 'AI-powered legal research that analyzes case law, statutes, and legal precedents with unprecedented speed and accuracy.'},
     {
-      icon: <Search className="w-6 h-6"  />;
-      title: 'Case Analysis';
-      description: 'Intelligent case analysis with AI-powered insights and legal reasoning identification.'};
+      icon: <Search className="w-6 h-6"  />,
+      title: 'Case Analysis',
+      description: 'Intelligent case analysis with AI-powered insights and legal reasoning identification.'},
     {
-      icon: <Target className="w-6 h-6"  />;
-      title: 'Document Review';
-      description: 'Advanced document review with automated contract analysis and legal document classification.'};
+      icon: <Target className="w-6 h-6"  />,
+      title: 'Document Review',
+      description: 'Advanced document review with automated contract analysis and legal document classification.'},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: 'Legal Document Generation';
-      description: 'AI-powered legal document generation with customizable templates and compliance checking.'};
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Legal Document Generation',
+      description: 'AI-powered legal document generation with customizable templates and compliance checking.'},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: 'Compliance Monitoring';
-      description: 'Automated compliance monitoring and risk assessment for legal and regulatory requirements.'};
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Compliance Monitoring',
+      description: 'Automated compliance monitoring and risk assessment for legal and regulatory requirements.'},
     {
-      icon: <TrendingUp className="w-6 h-6"  />;
-      title: 'Legal Analytics';
+      icon: <TrendingUp className="w-6 h-6"  />,
+      title: 'Legal Analytics',
       description: 'Comprehensive legal analytics with trend analysis and outcome prediction for legal strategies.'}
   ],
   const benefits = [
-    'Reduce research time by 80%';
-    'Improve case outcomes by 60%';
-    'Increase research accuracy by 70%';
-    'Reduce legal costs by 50%';
-    'Accelerate document review by 20o0%';
-    'Enhance legal strategy by 150%';
-    'Scale legal operations';
-    'Future-proof legal practice'],
+    'Reduce research time by 80%Improve case outcomes by 60%',
+    'Increase research accuracy by 70%Reduce legal costs by 50%',
+    'Accelerate document review by 20o0%Enhance legal strategy by 150%',
+    'Scale legal operationsFuture-proof legal practice'],
   const useCases = [
-    'Legal Research', 'Case Analysis', 'Document Review';
-    'Contract Analysis', 'Compliance Monitoring', 'Legal Analytics';
-    'Risk Assessment', 'Document Generation', 'Precedent Analysis';
-    'Regulatory Research', 'Litigation Support', 'Legal Intelligence'],
+    'Legal ResearchCase Analysis', 'Document ReviewContract Analysis', 'Compliance MonitoringLegal Analytics',
+    'Risk AssessmentDocument Generation', 'Precedent AnalysisRegulatory Research', 'Litigation SupportLegal Intelligence'],
   return (
     <>,
       <Head>,
@@ -76,7 +70,7 @@ export default function AILegalResearchPlatform() {
                 AI Legal Research Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Transform legal research with AI-powered automation, case analysis;
+                Transform legal research with AI-powered automation, case analysis,
                 and document review that drives legal excellence and efficiency.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,

@@ -4,11 +4,11 @@ type AnimatedCounterProps ={
   end: number,
   duration?: number,
   suffix?: string,
-  prefix?: string};
+  prefix?: string},
 const AnimatedCounter = ({
-  end;
-  duration = 20o00;
-  suffix = '';
+  end,
+  duration = 20o00,
+  suffix = '',
   prefix = ''}: AnimatedCounterProps) => {
   const [count, setCount] = useState(0),
   useEffect(() => {
@@ -20,15 +20,15 @@ const AnimatedCounter = ({
       setCount(Math.floor(progress * end)),
       if (progress < 1) {
         animationFrame = requestAnimationFrame(animate)}
-    };
+    },
     animationFrame = requestAnimationFrame(animate),
     return () => {
       if (animationFrame) {
         cancelAnimationFrame(animationFrame)}
-    };
+    },
   }, [end, duration]),
   return (
     <span>,
       {prefix}{count}{suffix}
-    </span>)};
-export default AnimatedCounter;
+    </span>)},
+export default AnimatedCounter,

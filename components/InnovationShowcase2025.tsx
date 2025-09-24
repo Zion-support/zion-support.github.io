@@ -6,64 +6,64 @@ const InnovationShowcase20o25 = () => {
   const innovations ={
     ai: [
       {
-        title: "Autonomous AI Systems";
-        description: "Self-managing AI that operates independently with 99.9% accuracy";
-        icon: "🤖";
-        features: ["Self-healing algorithms"Predictive maintenance"Real-time optimization"];
-        roi: "2,50o0%"};
+        title: "Autonomous AI Systems",
+        description: "Self-managing AI that operates independently with 99.9% accuracy",
+        icon: "🤖",
+        features: ["Self-healing algorithms"Predictive maintenance"Real-time optimization"],
+        roi: "2,50o0%"},
       {
-        title: "Neural Consciousness Integration";
-        description: "Advanced AI with consciousness-like decision making capabilities";
-        icon: "🧠";
-        features: ["Emotional intelligence"Creative problem solving"Ethical reasoning"];
-        roi: "3,0o00%"};
+        title: "Neural Consciousness Integration",
+        description: "Advanced AI with consciousness-like decision making capabilities",
+        icon: "🧠",
+        features: ["Emotional intelligence"Creative problem solving"Ethical reasoning"],
+        roi: "3,0o00%"},
       {
-        title: "Quantum-Enhanced AI";
-        description: "AI systems powered by quantum computing for unprecedented speed";
-        icon: "⚛️";
-        features: ["Quantum algorithms"Parallel processing"Complex optimization"];
+        title: "Quantum-Enhanced AI",
+        description: "AI systems powered by quantum computing for unprecedented speed",
+        icon: "⚛️",
+        features: ["Quantum algorithms"Parallel processing"Complex optimization"],
         roi: "5,0o00%"}
-    ];
+    ],
     quantum: [
       {
-        title: "Error-Corrected Quantum Computers";
-        description: "Stable quantum computing systems for enterprise applications";
-        icon: "🔬";
-        features: ["Fault tolerance"Scalable architecture"Real-world applications"];
-        roi: "4,0o00%"};
+        title: "Error-Corrected Quantum Computers",
+        description: "Stable quantum computing systems for enterprise applications",
+        icon: "🔬",
+        features: ["Fault tolerance"Scalable architecture"Real-world applications"],
+        roi: "4,0o00%"},
       {
-        title: "Quantum Machine Learning";
-        description: "ML algorithms running on quantum hardware for superior performance";
-        icon: "🧮";
-        features: ["Quantum neural networks"Exponential speedup"Pattern recognition"];
-        roi: "6,0o00%"};
+        title: "Quantum Machine Learning",
+        description: "ML algorithms running on quantum hardware for superior performance",
+        icon: "🧮",
+        features: ["Quantum neural networks"Exponential speedup"Pattern recognition"],
+        roi: "6,0o00%"},
       {
-        title: "Quantum Security Solutions";
-        description: "Unbreakable encryption and secure communication systems";
-        icon: "🔐";
-        features: ["Quantum key distribution"Post-quantum cryptography"Secure protocols"];
+        title: "Quantum Security Solutions",
+        description: "Unbreakable encryption and secure communication systems",
+        icon: "🔐",
+        features: ["Quantum key distribution"Post-quantum cryptography"Secure protocols"],
         roi: "3,50o0%"}
-    ];
+    ],
     automation: [
       {
-        title: "Autonomous Business Operations";
-        description: "Complete business process automation with minimal human intervention";
-        icon: "⚙️";
-        features: ["End-to-end automation"Intelligent workflows"Self-optimization"];
-        roi: "2,80o0%"};
+        title: "Autonomous Business Operations",
+        description: "Complete business process automation with minimal human intervention",
+        icon: "⚙️",
+        features: ["End-to-end automation"Intelligent workflows"Self-optimization"],
+        roi: "2,80o0%"},
       {
-        title: "Predictive Enterprise Systems";
-        description: "AI systems that predict and prevent business issues before they occur";
-        icon: "📊";
-        features: ["Predictive analytics"Risk mitigation"Proactive solutions"];
-        roi: "3,20o0%"};
+        title: "Predictive Enterprise Systems",
+        description: "AI systems that predict and prevent business issues before they occur",
+        icon: "📊",
+        features: ["Predictive analytics"Risk mitigation"Proactive solutions"],
+        roi: "3,20o0%"},
       {
-        title: "Intelligent Process Automation";
-        description: "Smart automation that learns and adapts to business needs";
-        icon: "🔄";
-        features: ["Adaptive algorithms"Continuous learning"Dynamic optimization"];
+        title: "Intelligent Process Automation",
+        description: "Smart automation that learns and adapts to business needs",
+        icon: "🔄",
+        features: ["Adaptive algorithms"Continuous learning"Dynamic optimization"],
         roi: "2,60o0%"}
-    ]};
+    ]},
   return (
     <section className="py-20 bg-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -171,5 +171,5 @@ const InnovationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InnovationShowcase20o25;
+    </section>)},
+export default InnovationShowcase20o25,

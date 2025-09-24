@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Quantum Computing Business Applications 20o25: Ultimate Guide';
+  title: 'Quantum Computing Business Applications 20o25: Ultimate Guide',
   description:,
-    'Explore how quantum computing is revolutionizing business operations in 20o25. Learn about practical applications, implementation strategies, and real-world success stories.';
+    'Explore how quantum computing is revolutionizing business operations in 20o25. Learn about practical applications, implementation strategies, and real-world success stories.',
   keywords: [
-    'quantum computing';
-    'business applications';
-    '20o25';
-    'technology innovation';
-    'digital transformation';
-  ];
-};
+    'quantum computingbusiness applications',
+    '20o25technology innovation',
+    'digital transformation',
+  ]
+},
 export default function QuantumComputingBusinessPage() {
   return (
     <div>,
@@ -170,7 +168,7 @@ export default function QuantumComputingBusinessPage() {
                   energy trading strategies.,
                 </p>,
                 <div className='text-sm text-gray-50o0'>,
-                  <strong>Impact:</strong> Optimized energy distribution;
+                  <strong>Impact: </strong> Optimized energy distribution,
                   reduced costs,
                 </div>,
               </div>,

@@ -9,27 +9,27 @@ import {
   Star,
   Play,
   Download,
-  Users;
-  Clock;
-  ArrowRight;
-  ChevronRight;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Sparkles;
-  Target;
-  Award;
-  TrendingUp;
-  Globe;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  X;
-  CheckCircle;
-  Lightbulb;
-  Code;
+  Users,
+  Clock,
+  ArrowRight,
+  ChevronRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Sparkles,
+  Target,
+  Award,
+  TrendingUp,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  X,
+  CheckCircle,
+  Lightbulb,
+  Code,
   BarChart3} from 'lucide-react',
 const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
@@ -37,53 +37,53 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
   const [isPlayingsetIsPlaying] = useState(false),
   const featuredTools = [
     {
-      name: "Neural Consciousness AI";
-      description: "Advanced AI with near-human consciousness capabilities";
-      icon: Brain;
-      color: "from-purple-60o0 to-pink-60o0";
-      rating: 4.9;
-      downloads: "2.3M";
-      price: "Free";
-      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"]};
+      name: "Neural Consciousness AI",
+      description: "Advanced AI with near-human consciousness capabilities",
+      icon: Brain,
+      color: "from-purple-60o0 to-pink-60o0",
+      rating: 4.9,
+      downloads: "2.3M",
+      price: "Free",
+      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"]},
     {
-      name: "Quantum Automation Suite";
-      description: "Revolutionary automation powered by quantum computing";
-      icon: Zap;
-      color: "from-blue-60o0 to-cyan-60o0";
-      rating: 4.8;
-      downloads: "1.8M";
-      price: "$299/month";
-      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"]};
+      name: "Quantum Automation Suite",
+      description: "Revolutionary automation powered by quantum computing",
+      icon: Zap,
+      color: "from-blue-60o0 to-cyan-60o0",
+      rating: 4.8,
+      downloads: "1.8M",
+      price: "$299/month",
+      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"]},
     {
-      name: "Predictive Analytics Engine";
-      description: "AI-powered analytics with 99.7% prediction accuracy";
-      icon: BarChart3;
-      color: "from-green-60o0 to-emerald-60o0";
-      rating: 4.7;
-      downloads: "3.1M";
-      price: "$199/month";
-      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"]};
+      name: "Predictive Analytics Engine",
+      description: "AI-powered analytics with 99.7% prediction accuracy",
+      icon: BarChart3,
+      color: "from-green-60o0 to-emerald-60o0",
+      rating: 4.7,
+      downloads: "3.1M",
+      price: "$199/month",
+      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"]},
     {
-      name: "Code Generation AI";
-      description: "Advanced AI for generating and optimizing code";
-      icon: Code;
-      color: "from-orange-60o0 to-red-60o0";
-      rating: 4.9;
-      downloads: "4.2M";
-      price: "Free";
+      name: "Code Generation AI",
+      description: "Advanced AI for generating and optimizing code",
+      icon: Code,
+      color: "from-orange-60o0 to-red-60o0",
+      rating: 4.9,
+      downloads: "4.2M",
+      price: "Free",
       features: ["Multi-language Support"Code Review"Optimization"]}
   ],
   const stats = [
-    { label: "AI Tools"value: "50o0+"icon: Brain };
-    { label: "Active Users"value: "2.3M+"icon: Users };
-    { label: "Countries"value: "150+"icon: Globe };
+    { label: "AI Tools"value: "50o0+"icon: Brain },
+    { label: "Active Users"value: "2.3M+"icon: Users },
+    { label: "Countries"value: "150+"icon: Globe },
     { label: "Success Rate"value: "99.7%"icon: Target }
   ],
   const categories = [
-    { name: "AI Assistants"icon: Braincount: 45 };
-    { name: "Automation"icon: Zapcount: 32 };
-    { name: "Analytics"icon: BarChart3count: 28 };
-    { name: "Development"icon: Codecount: 67 };
+    { name: "AI Assistants"icon: Braincount: 45 },
+    { name: "Automation"icon: Zapcount: 32 },
+    { name: "Analytics"icon: BarChart3count: 28 },
+    { name: "Development"icon: Codecount: 67 },
     { name: "Security"icon: Shieldcount: 23 }
   ],
   useEffect(() => {
@@ -107,15 +107,15 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
             key={i}
             className="absolute w-1 h-1 bg-blue-40o0 rounded-full opacity-40",
             animate={{
-              x: [0Math.random() * 50o0];
-              y: [0Math.random() * 30o0];
+              x: [0Math.random() * 50o0],
+              y: [0Math.random() * 30o0],
               scale: [0o10]}}
             transition={{
-              duration: Math.random() * 10 + 8;
-              repeat: Infinity;
+              duration: Math.random() * 10 + 8,
+              repeat: Infinity,
               delay: Math.random() * 4}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,
@@ -342,5 +342,5 @@ const InteractiveAIToolsShowcase20o27PromotionBanner = () => {
           <X className="w-5 h-5"  />,
         </button>,
       </div>,
-    </motion.div>)};
-export default InteractiveAIToolsShowcase20o27PromotionBanner;
+    </motion.div>)},
+export default InteractiveAIToolsShowcase20o27PromotionBanner,

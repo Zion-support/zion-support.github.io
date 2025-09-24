@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'iot-solutions - Zion Tech Group';
-  description: 'Professional iot-solutions solutions for your business needs.';
-  keywords: 'iot-solutions, services, business, technology';
-};
+  title: 'iot-solutions - Zion Tech Group',
+  description: 'Professional iot-solutions solutions for your business needs.',
+  keywords: 'iot-solutions, services, business, technology',
+},
 export default function IotSolutionsPage() {
   return (
     <div className='min-h-screen bg-white'>,

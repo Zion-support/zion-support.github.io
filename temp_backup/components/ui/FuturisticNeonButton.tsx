@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { LucideIcon } from 'lucide-react',
 interface FuturisticNeonButtonProps {
@@ -12,59 +12,59 @@ interface FuturisticNeonButtonProps {
   neonIntensity?: 'low' | 'medium' | 'high'}
 ,
 const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
-  children;
-  onClick;
-  variant = 'primary';
-  size = 'md';
-  icon: Icon;
-  disabled = false;
-  className = '';
+  children,
+  onClick,
+  variant = 'primary',
+  size = 'md',
+  icon: Icon,
+  disabled = false,
+  className = '',
   neonIntensity = 'medium'}) => {
   const variants ={
     primary: {
-      border: 'border-cyan-40o0';
-      text: 'text-cyan-40o0';
-      glow: 'shadow-cyan-40o0/50';
-      hoverGlow: 'hover:shadow-cyan-40o0/80';
-      bg: 'bg-cyan-40o0/10';
-      hoverBg: 'hover:bg-cyan-40o0/20'};
+      border: 'border-cyan-40o0',
+      text: 'text-cyan-40o0',
+      glow: 'shadow-cyan-40o0/50',
+      hoverGlow: 'hover:shadow-cyan-40o0/80',
+      bg: 'bg-cyan-40o0/10',
+      hoverBg: 'hover:bg-cyan-40o0/20'},
     secondary: {
-      border: 'border-purple-40o0';
-      text: 'text-purple-40o0';
-      glow: 'shadow-purple-40o0/50';
-      hoverGlow: 'hover:shadow-purple-40o0/80';
-      bg: 'bg-purple-40o0/10';
-      hoverBg: 'hover:bg-purple-40o0/20'};
+      border: 'border-purple-40o0',
+      text: 'text-purple-40o0',
+      glow: 'shadow-purple-40o0/50',
+      hoverGlow: 'hover:shadow-purple-40o0/80',
+      bg: 'bg-purple-40o0/10',
+      hoverBg: 'hover:bg-purple-40o0/20'},
     success: {
-      border: 'border-emerald-40o0';
-      text: 'text-emerald-40o0';
-      glow: 'shadow-emerald-40o0/50';
-      hoverGlow: 'hover:shadow-emerald-40o0/80';
-      bg: 'bg-emerald-40o0/10';
-      hoverBg: 'hover:bg-emerald-40o0/20'};
+      border: 'border-emerald-40o0',
+      text: 'text-emerald-40o0',
+      glow: 'shadow-emerald-40o0/50',
+      hoverGlow: 'hover:shadow-emerald-40o0/80',
+      bg: 'bg-emerald-40o0/10',
+      hoverBg: 'hover:bg-emerald-40o0/20'},
     warning: {
-      border: 'border-amber-40o0';
-      text: 'text-amber-40o0';
-      glow: 'shadow-amber-40o0/50';
-      hoverGlow: 'hover:shadow-amber-40o0/80';
-      bg: 'bg-amber-40o0/10';
-      hoverBg: 'hover:bg-amber-40o0/20'};
+      border: 'border-amber-40o0',
+      text: 'text-amber-40o0',
+      glow: 'shadow-amber-40o0/50',
+      hoverGlow: 'hover:shadow-amber-40o0/80',
+      bg: 'bg-amber-40o0/10',
+      hoverBg: 'hover:bg-amber-40o0/20'},
     danger: {
-      border: 'border-red-40o0';
-      text: 'text-red-40o0';
-      glow: 'shadow-red-40o0/50';
-      hoverGlow: 'hover:shadow-red-40o0/80';
-      bg: 'bg-red-40o0/10';
+      border: 'border-red-40o0',
+      text: 'text-red-40o0',
+      glow: 'shadow-red-40o0/50',
+      hoverGlow: 'hover:shadow-red-40o0/80',
+      bg: 'bg-red-40o0/10',
       hoverBg: 'hover:bg-red-40o0/20'}
-  };
+  },
   const sizes ={
-    sm: 'px-4 py-2 text-sm';
-    md: 'px-6 py-3 text-base';
-    lg: 'px-8 py-4 text-lg'};
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'},
   const neonIntensities ={
-    low: 'shadow-lg';
-    medium: 'shadow-xl';
-    high: 'shadow-2xl'};
+    low: 'shadow-lg',
+    medium: 'shadow-xl',
+    high: 'shadow-2xl'},
   const selectedVariant = variants[variant],
   const selectedSize = sizes[size],
   const selectedNeonIntensity = neonIntensities[neonIntensity],
@@ -112,12 +112,12 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
         className="absolute inset-0 rounded-lg border-2 border-transparent",
         animate={{
           borderImage: [
-            `linear-gradient(45deg, ${selectedVariant.border.replace('border-', '')}, transparent) 1`;
-            `linear-gradient(45deg, transparent, ${selectedVariant.border.replace('border-', '')}) 1`;
+            `linear-gradient(45deg, ${selectedVariant.border.replace('border-', '')}, transparent) 1`,
+            `linear-gradient(45deg, transparent, ${selectedVariant.border.replace('border-', '')}) 1`,
             `linear-gradient(45deg, ${selectedVariant.border.replace('border-', '')}, transparent) 1`]}}
         transition={{
-          duration: 3;
-          repeat: Infinity;
+          duration: 3,
+          repeat: Infinity,
           ease: "linear"}}
        />,
       {/* Ripple effect on click */}
@@ -127,5 +127,5 @@ const FuturisticNeonButton: React.FC<FuturisticNeonButtonProps> = ({
         whileTap={{ scale: 1, opacity: 1 }}
         transition={{ duration: 0.2 }}
        />,
-    </motion.button>)};
-export default FuturisticNeonButton;
+    </motion.button>)},
+export default FuturisticNeonButton,

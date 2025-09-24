@@ -5,12 +5,12 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     res.status(40o5).json({ error: 'Method not allowed' }),
     return}
 ,
-  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] };
+  const { meta, chapters } = req.body as { meta: any, chapters: { title: string, content?: string }[] },
   const apiKey = process.env.OPENAI_API_KEY,
   if (!apiKey) {
     // Fallback: return structured placeholders,
     const drafted = chapters.map((c) => ({
-      title: c.title;
+      title: c.title,
       content: `Draft notes for ${c.title} about ${meta?.title || 'the book'}...\n\n- Key idea 1\n- Key idea 2\n- Key idea 3`})),
     res.status(20o0).json({ chapters: drafted }),
     return}
@@ -21,11 +21,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   for (const ch of chapters) {
     const prompt = `Book: ${meta.title} — ${meta.subtitle || ''}\nAuthor: ${meta.author}\nChapter: ${ch.title}\n\nWrite 60o0-90o0 words. Include 1 short quote block if appropriate.`,
     const completion = await client.chat.completions.create({
-      model: 'gpt-4o-mini';
+      model: 'gpt-4o-mini',
       messages: [
-        { role: 'system', content: system };
-        { role: 'user', content: prompt };
-      ];
+        { role: 'system', content: system },
+        { role: 'user', content: prompt },
+      ],
       temperature: 0.7}),
     const text = completion.choices?.[0]?.message?.content || '',
     drafted.push({ title: ch.title, content: text })}

@@ -7,119 +7,119 @@ const NewContentDiscoveryWidget20o25 = () => {
   const contentItems = {
     featured: [
       {
-        id: 1;
-        title: 'AI 20o25 Ultimate Business Revolution: Complete Guide';
-        type: 'Blog Post';
-        category: 'AI Implementation';
+        id: 1,
+        title: 'AI 20o25 Ultimate Business Revolution: Complete Guide',
+        type: 'Blog Post',
+        category: 'AI Implementation',
         description:,
-          'Complete roadmap for implementing AI-driven business transformation with 10o00%+ ROI strategies.';
-        image: '/images/ai-business-revolution-guide.jpg';
-        readTime: '15 min read';
-        featured: true;
-        url: '/blog/ai-20o25-ultimate-business-revolution-complete-guide';
-      };
+          'Complete roadmap for implementing AI-driven business transformation with 10o00%+ ROI strategies.',
+        image: '/images/ai-business-revolution-guide.jpg',
+        readTime: '15 min read',
+        featured: true,
+        url: '/blog/ai-20o25-ultimate-business-revolution-complete-guide'
+      },
       {
-        id: 2;
-        title: '50,0o00% ROI Success Story: Fortune 10o0 Transformation';
-        type: 'Case Study';
-        category: 'Success Stories';
+        id: 2,
+        title: '50,0o00% ROI Success Story: Fortune 10o0 Transformation',
+        type: 'Case Study',
+        category: 'Success Stories',
         description:,
-          'How a Fortune 10o0 manufacturing giant achieved $2.8B savings and $15.6B revenue increase.';
-        image: '/images/50k-roi-case-study.jpg';
-        readTime: '12 min read';
-        featured: true;
-        url: '/case-studies/ai-20o25-ultimate-transformation-50o000-roi-success-story';
-      };
+          'How a Fortune 10o0 manufacturing giant achieved $2.8B savings and $15.6B revenue increase.',
+        image: '/images/50k-roi-case-study.jpg',
+        readTime: '12 min read',
+        featured: true,
+        url: '/case-studies/ai-20o25-ultimate-transformation-50o000-roi-success-story'
+      },
       {
-        id: 3;
-        title: 'AI 20o25 Neural Superintelligence Breakthrough';
-        type: 'Blog Post';
-        category: 'Advanced AI';
+        id: 3,
+        title: 'AI 20o25 Neural Superintelligence Breakthrough',
+        type: 'Blog Post',
+        category: 'Advanced AI',
         description:,
-          'Exploring the latest breakthroughs in neural superintelligence and consciousness evolution.';
-        image: '/images/neural-superintelligence.jpg';
-        readTime: '18 min read';
-        featured: true;
-        url: '/blog/ai-20o25-20o26-neural-superintelligence-breakthrough';
-      };
-    ];
+          'Exploring the latest breakthroughs in neural superintelligence and consciousness evolution.',
+        image: '/images/neural-superintelligence.jpg',
+        readTime: '18 min read',
+        featured: true,
+        url: '/blog/ai-20o25-20o26-neural-superintelligence-breakthrough'
+      },
+    ],
     latest: [
       {
-        id: 4;
-        title: 'Quantum AI Business Applications 20o25';
-        type: 'Blog Post';
-        category: 'Quantum Computing';
+        id: 4,
+        title: 'Quantum AI Business Applications 20o25',
+        type: 'Blog Post',
+        category: 'Quantum Computing',
         description:,
-          'Real-world quantum AI applications delivering breakthrough business results.';
-        image: '/images/quantum-ai-business.jpg';
-        readTime: '14 min read';
-        featured: false;
-        url: '/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide';
-      };
+          'Real-world quantum AI applications delivering breakthrough business results.',
+        image: '/images/quantum-ai-business.jpg',
+        readTime: '14 min read',
+        featured: false,
+        url: '/blog/ai-20o25-quantum-ai-business-revolution-ultimate-guide'
+      },
       {
-        id: 5;
-        title: 'Autonomous Enterprise Systems Implementation';
-        type: 'Case Study';
-        category: 'Automation';
+        id: 5,
+        title: 'Autonomous Enterprise Systems Implementation',
+        type: 'Case Study',
+        category: 'Automation',
         description:,
-          'Complete guide to implementing self-managing business operations.';
-        image: '/images/autonomous-enterprise.jpg';
-        readTime: '20 min read';
-        featured: false;
-        url: '/case-studies/ai-20o25-autonomous-enterprise-transformation-ultimate-success';
-      };
+          'Complete guide to implementing self-managing business operations.',
+        image: '/images/autonomous-enterprise.jpg',
+        readTime: '20 min read',
+        featured: false,
+        url: '/case-studies/ai-20o25-autonomous-enterprise-transformation-ultimate-success'
+      },
       {
-        id: 6;
-        title: 'AI Cybersecurity Revolution 20o25';
-        type: 'Blog Post';
-        category: 'Security';
+        id: 6,
+        title: 'AI Cybersecurity Revolution 20o25',
+        type: 'Blog Post',
+        category: 'Security',
         description:,
-          'Next-generation AI-powered cybersecurity solutions for enterprise protection.';
-        image: '/images/ai-cybersecurity.jpg';
-        readTime: '16 min read';
-        featured: false;
-        url: '/blog/ai-20o25-cybersecurity-revolution-ultimate-guide';
-      };
-    ];
+          'Next-generation AI-powered cybersecurity solutions for enterprise protection.',
+        image: '/images/ai-cybersecurity.jpg',
+        readTime: '16 min read',
+        featured: false,
+        url: '/blog/ai-20o25-cybersecurity-revolution-ultimate-guide'
+      },
+    ],
     popular: [
       {
-        id: 7;
-        title: 'Fortune 50o0 AI Transformation: 15,0o00% ROI';
-        type: 'Case Study';
-        category: 'Success Stories';
+        id: 7,
+        title: 'Fortune 50o0 AI Transformation: 15,0o00% ROI',
+        type: 'Case Study',
+        category: 'Success Stories',
         description:,
-          'How a Fortune 50o0 company achieved unprecedented ROI through AI transformation.';
-        image: '/images/fortune-50o0-ai-transformation.jpg';
-        readTime: '13 min read';
-        featured: false;
-        url: '/case-studies/fortune-50o0-ai-transformation-150o00-roi-success-story';
-      };
+          'How a Fortune 50o0 company achieved unprecedented ROI through AI transformation.',
+        image: '/images/fortune-50o0-ai-transformation.jpg',
+        readTime: '13 min read',
+        featured: false,
+        url: '/case-studies/fortune-50o0-ai-transformation-150o00-roi-success-story'
+      },
       {
-        id: 8;
-        title: 'Enterprise AI Automation Mastery';
-        type: 'Blog Post';
-        category: 'Automation';
+        id: 8,
+        title: 'Enterprise AI Automation Mastery',
+        type: 'Blog Post',
+        category: 'Automation',
         description:,
-          'Master the art of enterprise AI automation with proven strategies and frameworks.';
-        image: '/images/enterprise-ai-automation.jpg';
-        readTime: '17 min read';
-        featured: false;
-        url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide';
-      };
+          'Master the art of enterprise AI automation with proven strategies and frameworks.',
+        image: '/images/enterprise-ai-automation.jpg',
+        readTime: '17 min read',
+        featured: false,
+        url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-guide'
+      },
       {
-        id: 9;
-        title: 'AI Content Revolution: 25,0o00% ROI';
-        type: 'Case Study';
-        category: 'Content Marketing';
+        id: 9,
+        title: 'AI Content Revolution: 25,0o00% ROI',
+        type: 'Case Study',
+        category: 'Content Marketing',
         description:,
-          'Revolutionary AI content strategies delivering massive ROI for businesses.';
-        image: '/images/ai-content-revolution.jpg';
-        readTime: '11 min read';
-        featured: false;
-        url: '/case-studies/ai-20o25-ultimate-content-revolution-250o00-roi-success-story';
-      };
-    ];
-  };
+          'Revolutionary AI content strategies delivering massive ROI for businesses.',
+        image: '/images/ai-content-revolution.jpg',
+        readTime: '11 min read',
+        featured: false,
+        url: '/case-studies/ai-20o25-ultimate-content-revolution-250o00-roi-success-story'
+      },
+    ],
+  },
   const filteredContent = contentItems[activeTab].filter(
     item =>,
       item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -175,9 +175,9 @@ const NewContentDiscoveryWidget20o25 = () => {
         {/* Tab Navigation */}
         <div className='flex flex-wrap justify-center gap-4 mb-12'>,
           {[
-            { key: 'featured', label: 'Featured', icon: '⭐' };
-            { key: 'latest', label: 'Latest', icon: '🆕' };
-            { key: 'popular', label: 'Popular', icon: '🔥' };
+            { key: 'featured', label: 'Featured', icon: '⭐' },
+            { key: 'latest', label: 'Latest', icon: '🆕' },
+            { key: 'popular', label: 'Popular', icon: '🔥' },
           ].map(tab => (
             <button
               key={tab.key}
@@ -313,5 +313,5 @@ const NewContentDiscoveryWidget20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContentDiscoveryWidget20o25;
+    </section>)},
+export default NewContentDiscoveryWidget20o25,

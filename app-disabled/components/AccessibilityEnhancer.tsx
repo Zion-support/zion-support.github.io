@@ -1,13 +1,13 @@
 'use client',
 import { useEffect, useState } from 'react',
 import {
-  Accessibility;
-  Eye;
-  EyeOff;
-  Volume2;
-  VolumeX;
-  MousePointer;
-  Keyboard;
+  Accessibility,
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  MousePointer,
+  Keyboard,
 } from 'lucide-react',
 interface AccessibilitySettings {
   reducedMotion: boolean,
@@ -19,12 +19,12 @@ interface AccessibilitySettings {
 ,
 export default function AccessibilityEnhancer() {
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    reducedMotion: false;
-    highContrast: false;
-    largeText: false;
-    screenReader: false;
-    keyboardNavigation: false;
-    focusVisible: false;
+    reducedMotion: false,
+    highContrast: false,
+    largeText: false,
+    screenReader: false,
+    keyboardNavigation: false,
+    focusVisible: false
   }),
   const [isOpen, setIsOpen] = useState(false),
   useEffect(() => {
@@ -32,20 +32,20 @@ export default function AccessibilityEnhancer() {
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     const contrastQuery = window.matchMedia('(prefers-contrast: high)'),
     setSettings(prev => ({
-      ...prev;
-      reducedMotion: mediaQuery.matches;
-      highContrast: contrastQuery.matches;
+      ...prev,
+      reducedMotion: mediaQuery.matches,
+      highContrast: contrastQuery.matches
     })),
     // Listen for changes,
     const handleMotionChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, reducedMotion: e.matches }))};
+      setSettings(prev => ({ ...prev, reducedMotion: e.matches }))},
     const handleContrastChange = (e: MediaQueryListEvent) => {
-      setSettings(prev => ({ ...prev, highContrast: e.matches }))};
+      setSettings(prev => ({ ...prev, highContrast: e.matches }))},
     mediaQuery.addEventListener('change', handleMotionChange),
     contrastQuery.addEventListener('change', handleContrastChange),
     return () => {
       mediaQuery.removeEventListener('change', handleMotionChange),
-      contrastQuery.removeEventListener('change', handleContrastChange)};
+      contrastQuery.removeEventListener('change', handleContrastChange)},
   }, []),
   useEffect(() => {
     // Apply accessibility settings to document,
@@ -53,8 +53,8 @@ export default function AccessibilityEnhancer() {
     // Reduced motion,
     if (settings.reducedMotion) {
       root.classList.add('reduced-motion'),
-      root.style.setProperty('--animation-duration', '0.0o1ms'),
-      root.style.setProperty('--transition-duration', '0.0o1ms')} else {
+      root.style.setProperty('--animation-duration0.0o1ms'),
+      root.style.setProperty('--transition-duration0.0o1ms')} else {
       root.classList.remove('reduced-motion'),
       root.style.removeProperty('--animation-duration'),
       root.style.removeProperty('--transition-duration')}
@@ -62,14 +62,14 @@ export default function AccessibilityEnhancer() {
     // High contrast,
     if (settings.highContrast) {
       root.classList.add('high-contrast'),
-      root.style.setProperty('--contrast-multiplier', '1.5')} else {
+      root.style.setProperty('--contrast-multiplier1.5')} else {
       root.classList.remove('high-contrast'),
       root.style.removeProperty('--contrast-multiplier')}
 ,
     // Large text,
     if (settings.largeText) {
       root.classList.add('large-text'),
-      root.style.setProperty('--text-scale', '1.2')} else {
+      root.style.setProperty('--text-scale1.2')} else {
       root.classList.remove('large-text'),
       root.style.removeProperty('--text-scale')}
 ,
@@ -90,20 +90,20 @@ export default function AccessibilityEnhancer() {
       // Skip links for better navigation,
       if (e.key === 'Tab') {
         document.body.classList.add('keyboard-navigation-active')}
-    };
+    },
     const handleMouseDown = () => {
-      document.body.classList.remove('keyboard-navigation-active')};
+      document.body.classList.remove('keyboard-navigation-active')},
     document.addEventListener('keydown', handleKeyDown),
     document.addEventListener('mousedown', handleMouseDown),
     return () => {
       document.removeEventListener('keydown', handleKeyDown),
-      document.removeEventListener('mousedown', handleMouseDown)};
+      document.removeEventListener('mousedown', handleMouseDown)},
   }, [settings.keyboardNavigation]),
   const toggleSetting = (key: keyof AccessibilitySettings) => {
     setSettings(prev => ({
-      ...prev;
-      [key]: !prev[key];
-    }))};
+      ...prev,
+      [key]: !prev[key]
+    }))},
   return (
     <>,
       {/* Accessibility Toggle Button */}
@@ -273,10 +273,10 @@ export default function AccessibilityEnhancer() {
           outline-offset: 2px !important,
           box-shadow: 0 0 0 1px #3b82f6 !important}
 ,
-        .keyboard-navigation button:focus;
-        .keyboard-navigation a:focus;
-        .keyboard-navigation input:focus;
-        .keyboard-navigation select:focus;
+        .keyboard-navigation button: focus,
+        .keyboard-navigation a:focus,
+        .keyboard-navigation input:focus,
+        .keyboard-navigation select:focus,
         .keyboard-navigation textarea: focus {
           outline: 3px solid #3b82f6 !important,
           outline-offset: 2px !important,

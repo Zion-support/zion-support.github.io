@@ -1,11 +1,11 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group';
+  title: 'AI Social Media Scheduler | Zion Tech Group',
   description:,
-    'Intelligent social media scheduling tool with AI-powered content optimization, hashtag suggestions, and optimal posting times for maximum engagement.';
+    'Intelligent social media scheduling tool with AI-powered content optimization, hashtag suggestions, and optimal posting times for maximum engagement.',
   keywords:,
-    'AI social media scheduler, social media automation, content optimization, hashtag suggestions, social media management, AI posting';
-};
+    'AI social media scheduler, social media automation, content optimization, hashtag suggestions, social media management, AI posting',
+},
 interface FeatureProps {
   title: string,
   description: string,
@@ -29,13 +29,13 @@ interface PricingTierProps {
   cta: string}
 ,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular = false;
-  cta;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular = false,
+  cta,
 }: PricingTierProps) {
   return (
     <div
@@ -91,7 +91,7 @@ export default function AISocialMediaSchedulerPage() {
           AI Social Media Scheduler,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto'>,
-          Automate your social media presence with AI-powered scheduling;
+          Automate your social media presence with AI-powered scheduling,
           content optimization, and engagement analytics. Post at the perfect,
           time with the perfect content.,
         </p>,
@@ -165,17 +165,17 @@ export default function AISocialMediaSchedulerPage() {
         <div className='grid grid-cols-2 md: grid-cols-3 lg:grid-cols-5 gap-6'>,
           {[
             {
-              name: 'Instagram';
-              icon: '📷';
-              color: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0';
-            };
-            { name: 'Facebook', icon: '👥', color: 'bg-blue-60o0' };
-            { name: 'Twitter', icon: '🐦', color: 'bg-blue-40o0' };
-            { name: 'LinkedIn', icon: '💼', color: 'bg-blue-70o0' };
-            { name: 'TikTok', icon: '🎵', color: 'bg-black' };
-            { name: 'YouTube', icon: '📺', color: 'bg-red-60o0' };
-            { name: 'Pinterest', icon: '📌', color: 'bg-red-50o0' };
-            { name: 'Snapchat', icon: '👻', color: 'bg-yellow-40o0' };
+              name: 'Instagram',
+              icon: '📷',
+              color: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0'
+            },
+            { name: 'Facebook', icon: '👥', color: 'bg-blue-60o0' },
+            { name: 'Twitter', icon: '🐦', color: 'bg-blue-40o0' },
+            { name: 'LinkedIn', icon: '💼', color: 'bg-blue-70o0' },
+            { name: 'TikTok', icon: '🎵', color: 'bg-black' },
+            { name: 'YouTube', icon: '📺', color: 'bg-red-60o0' },
+            { name: 'Pinterest', icon: '📌', color: 'bg-red-50o0' },
+            { name: 'Snapchat', icon: '👻', color: 'bg-yellow-40o0' },
           ].map((platform, index) => (
             <div
               key={index}
@@ -267,12 +267,9 @@ export default function AISocialMediaSchedulerPage() {
             period='month',
             description='Perfect for individuals and small businesses',
             features={[
-              'Up to 5 social accounts';
-              '30 posts per month';
-              'Basic AI content generation';
-              'Optimal timing suggestions';
-              'Basic analytics';
-              'Email support';
+              'Up to 5 social accounts30 posts per month',
+              'Basic AI content generationOptimal timing suggestions',
+              'Basic analyticsEmail support',
             ]}
             cta='Start Free Trial',
           />,
@@ -282,14 +279,10 @@ export default function AISocialMediaSchedulerPage() {
             period='month',
             description='Most popular for growing businesses',
             features={[
-              'Up to 15 social accounts';
-              'Unlimited posts';
-              'Advanced AI content generation';
-              'Hashtag optimization';
-              'Content recycling';
-              'Advanced analytics';
-              'Priority support';
-              'Team collaboration';
+              'Up to 15 social accountsUnlimited posts',
+              'Advanced AI content generationHashtag optimization',
+              'Content recyclingAdvanced analytics',
+              'Priority supportTeam collaboration',
             ]}
             popular={true}
             cta='Start Free Trial',
@@ -300,15 +293,11 @@ export default function AISocialMediaSchedulerPage() {
             period='month',
             description='For agencies and large organizations',
             features={[
-              'Unlimited social accounts';
-              'Unlimited posts';
-              'Full AI optimization suite';
-              'White-label options';
-              'Custom AI training';
-              'Dedicated account manager';
-              '24/7 phone support';
-              'API access';
-              'Custom reporting';
+              'Unlimited social accountsUnlimited posts',
+              'Full AI optimization suiteWhite-label options',
+              'Custom AI trainingDedicated account manager',
+              '24/7 phone supportAPI access',
+              'Custom reporting',
             ]}
             cta='Contact Sales',
           />,

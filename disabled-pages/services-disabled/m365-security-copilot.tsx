@@ -32,7 +32,7 @@ export default function M365SecurityCopilot(...args: any[]): any {
           <li>Executive reporting and compliance mappings</li>,
         </ul>,
         <div className='mt-6 text-sm text-white/70'>,
-          Average market pricing: $3,0o00–$12,0o00 fixed for implementation;
+          Average market pricing: $3,0o00–$12,0o00 fixed for implementation,
           $1,0o00–$4,0o00/mo managed.,
         </div>,
         <div className='mt-8 flex gap-3'>,

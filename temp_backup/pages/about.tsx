@@ -3,44 +3,44 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import {
-  Mail;
-  Phone;
-  MapPin;
-  ShieldCheck;
-  Rocket;
-  Sparkles;
-  Globe;
-  Cpu;
-  Brain;
+  Mail,
+  Phone,
+  MapPin,
+  ShieldCheck,
+  Rocket,
+  Sparkles,
+  Globe,
+  Cpu,
+  Brain,
 } from 'lucide-react',
 export default function AboutPage() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const pillars = [
     {
-      title: 'AI-first Engineering';
-      icon: <Brain className='w-6 h-6' />;
-      desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.';
-    };
+      title: 'AI-first Engineering',
+      icon: <Brain className='w-6 h-6' />,
+      desc: 'LLM apps, RAG, guardrails, evals and AI observability from day one.',
+    },
     {
-      title: 'Platform and SRE';
-      icon: <ShieldCheck className='w-6 h-6' />;
-      desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.';
-    };
+      title: 'Platform and SRE',
+      icon: <ShieldCheck className='w-6 h-6' />,
+      desc: 'GitOps, IaC, SLOs, incident automation, cost and compliance by default.',
+    },
     {
-      title: 'Quantum R&D';
-      icon: <Cpu className='w-6 h-6' />;
-      desc: 'Exploratory quantum workloads with pragmatic business outcomes.';
-    };
+      title: 'Quantum R&D',
+      icon: <Cpu className='w-6 h-6' />,
+      desc: 'Exploratory quantum workloads with pragmatic business outcomes.'
+    },
     {
-      title: 'Global Delivery';
-      icon: <Globe className='w-6 h-6' />;
-      desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.';
-    };
+      title: 'Global Delivery',
+      icon: <Globe className='w-6 h-6' />,
+      desc: 'Secure, reliable delivery with 24/7 support and 99.99% uptime.',
+    },
   ],
   return (
     <UltraFuturisticBackground variant='holographic' intensity='high'>,

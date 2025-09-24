@@ -18,97 +18,97 @@ export default function Analytics({ gaId = 'G-XXXXXXXXXX' }: AnalyticsProps) {
     // Initialize gtag,
     window.gtag = function () {
       (window.gtag as any).q = (window.gtag as any).q || [],
-      (window.gtag as any).q.push(arguments)};
+      (window.gtag as any).q.push(arguments)},
     window.gtag('js', new Date()),
     window.gtag('config', gaId, {
-      page_title: document.title;
-      page_location: window.location.href;
+      page_title: document.title,
+      page_location: window.location.href
     }),
     // Track page views,
     const trackPageView = () => {
       if (window.gtag) {
         window.gtag('config', gaId, {
-          page_title: document.title;
-          page_location: window.location.href;
+          page_title: document.title,
+          page_location: window.location.href
         })}
-    };
+    },
     // Track page views on route changes,
     const handleRouteChange = () => {
-      trackPageView()};
+      trackPageView()},
     // Listen for popstate events (back/forward navigation),
     window.addEventListener('popstate', handleRouteChange),
     // Track initial page view,
     trackPageView(),
     return () => {
-      window.removeEventListener('popstate', handleRouteChange)};
+      window.removeEventListener('popstate', handleRouteChange)},
   }, [gaId]),
   // Track custom events,
   const trackEvent = (
-    action: string;
-    category: string;
-    label?: string;
+    action: string,
+    category: string,
+    label?: string,
     value?: number) => {
     if (window.gtag) {
       window.gtag('event', action, {
-        event_category: category;
-        event_label: label;
-        value: value;
+        event_category: category,
+        event_label: label,
+        value: value
       })}
-  };
+  },
   // Track form submissions,
   const trackFormSubmission = (formName: string) => {
-    trackEvent('form_submit', 'engagement', formName)};
+    trackEvent('form_submitengagement', formName)},
   // Track button clicks,
   const trackButtonClick = (buttonName: string) => {
-    trackEvent('click', 'engagement', buttonName)};
+    trackEvent('clickengagement', buttonName)},
   // Track service page views,
   const trackServiceView = (serviceName: string) => {
-    trackEvent('view_service', 'engagement', serviceName)};
+    trackEvent('view_serviceengagement', serviceName)},
   // Track contact interactions,
   const trackContactInteraction = (interactionType: string) => {
-    trackEvent('contact_interaction', 'engagement', interactionType)};
+    trackEvent('contact_interactionengagement', interactionType)},
   return null}
 ,
 // Export tracking functions for use in other components,
 export const analytics = {
   trackEvent: (
-    action: string;
-    category: string;
-    label?: string;
+    action: string,
+    category: string,
+    label?: string,
     value?: number) => {
     if (typeof window !== 'undefined' && window.gtag) {
       window.gtag('event', action, {
-        event_category: category;
-        event_label: label;
-        value: value;
+        event_category: category,
+        event_label: label,
+        value: value
       })}
-  };
+  },
   trackFormSubmission: (formName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'form_submit', {
-        event_category: 'engagement';
-        event_label: formName;
+      window.gtag('eventform_submit', {
+        event_category: 'engagement',
+        event_label: formName
       })}
-  };
+  },
   trackButtonClick: (buttonName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'click', {
-        event_category: 'engagement';
-        event_label: buttonName;
+      window.gtag('eventclick', {
+        event_category: 'engagement',
+        event_label: buttonName
       })}
-  };
+  },
   trackServiceView: (serviceName: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'view_service', {
-        event_category: 'engagement';
-        event_label: serviceName;
+      window.gtag('eventview_service', {
+        event_category: 'engagement',
+        event_label: serviceName
       })}
-  };
+  },
   trackContactInteraction: (interactionType: string) => {
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'contact_interaction', {
-        event_category: 'engagement';
-        event_label: interactionType;
+      window.gtag('eventcontact_interaction', {
+        event_category: 'engagement',
+        event_label: interactionType
       })}
-  };
-};
+  },
+},

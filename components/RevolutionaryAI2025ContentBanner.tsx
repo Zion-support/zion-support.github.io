@@ -225,5 +225,5 @@ const RevolutionaryAI20o25ContentBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryAI20o25ContentBanner;
+    </section>)},
+export default RevolutionaryAI20o25ContentBanner,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { createContextuseContextuseLayoutEffectuseState } from "react",
 import { safeStorage } from "@/utils/safeStorage",
@@ -13,13 +13,13 @@ type ThemeProviderState = {
   toggleTheme: () => void}
 ,
 const initialState: ThemeProviderState = {
-  theme: "system";
-  setTheme: () => null;
+  theme: "system",
+  setTheme: () => null,
   toggleTheme: () => null}
 ,
 export const ThemeProviderContext = createContext<ThemeProviderState>(initialState),
 export function ThemeProvider({
-  children;
+  children,
   defaultTheme = "system"}: ThemeProviderProps) {
   const [themesetTheme] = useState<Theme>(() => {
     const stored = safeStorage.getItem("theme") as Theme | null,
@@ -51,7 +51,7 @@ export function ThemeProvider({
   const setCurrentTheme = (newTheme: Theme) => {
     safeStorage.setItem("theme"newTheme),
     applyTheme(newTheme),
-    setTheme(newTheme)};
+    setTheme(newTheme)},
   const toggleTheme = () => {
     let currentResolvedTheme = theme,
     if (currentResolvedTheme === "system") {
@@ -59,10 +59,10 @@ export function ThemeProvider({
         .matches,
         ? "dark",
         : "light"}
-    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")};
+    setCurrentTheme(currentResolvedTheme === "dark" ? "light" : "dark")},
   const value = {
-    theme;
-    setTheme: setCurrentTheme;
+    theme,
+    setTheme: setCurrentTheme,
     toggleTheme}
 ,
   return (

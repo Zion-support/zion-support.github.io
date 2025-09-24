@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'social-media-automation - Zion Tech Group';
+  title: 'social-media-automation - Zion Tech Group',
   description:,
-    'Professional social-media-automation solutions for your business needs.';
-  keywords: 'social-media-automation, services, business, technology';
-};
+    'Professional social-media-automation solutions for your business needs.',
+  keywords: 'social-media-automation, services, business, technology',
+},
 export default function SocialMediaAutomationPage() {
   return (
     <div className='min-h-screen bg-white'>,

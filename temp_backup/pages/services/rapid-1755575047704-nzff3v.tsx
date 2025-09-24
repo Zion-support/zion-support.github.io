@@ -51,7 +51,7 @@ export default function ServicePage() {
         <section className='mb-8'>,
           <h2 className='text-2xl font-bold mb-4'>🎯 What We Deliver</h2>,
           <p className='text-white/80'>,
-            Our comprehensive approach includes strategy development;
+            Our comprehensive approach includes strategy development,
             implementation, training, and ongoing support to ensure your success,
             with ai-powered analytics.,
           </p>,

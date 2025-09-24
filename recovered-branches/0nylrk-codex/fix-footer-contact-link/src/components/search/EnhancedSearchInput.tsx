@@ -3,13 +3,13 @@ import {Search, X} from "lucide-react",
 import {Input} from "@/components/ui/input",
 import {AutocompleteSuggestions} from "@/components/search/AutocompleteSuggestions",
 import {SearchSuggestion} from "@/types/search",
-import React, { useState, useEffect, useRef } from "react";
-import { Search, X } from "lucide-react";
-import { Input } from "@/components/ui/input";
+import React, { useState, useEffect, useRef } from "react",
+import { Search, X } from "lucide-react",
+import { Input } from "@/components/ui/input",
 import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
 import { SearchSuggestion } from "@/types/search",
-import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions";
-import { SearchSuggestion } from "@/types/search";
+import { AutocompleteSuggestions } from "@/components/search/AutocompleteSuggestions",
+import { SearchSuggestion } from "@/types/search",
 import React, { useState, useEffect, useRef } from './react',
 import { Search, X } from './lucide-react',
 import { Input } from '@/components / ui / input',
@@ -29,22 +29,22 @@ export function EnhancedSearchInput(): any ({
   const inputRef = useRef<HTMLInputElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
 interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
+  value: string,
+  onChange: (value: string) => void,
+  placeholder?: string,
   searchSuggestions: SearchSuggestion[]}
 ,
 export function EnhancedSearchInput({
   value,
 export function EnhancedSearchInput({
-  value;
-  onChange;
-  placeholder = "Search...";
+  value,
+  onChange,
+  placeholder = "Search...",
   searchSuggestions}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isFocused, setIsFocused] = useState(false),
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const containerRef = useRef<HTMLDivElement>(null),
   // Filter suggestions based on input value,
   useEffect(() => {
     if (!value) {
@@ -73,35 +73,35 @@ export function EnhancedSearchInput({
     inputRef.current?.blur()}
 ,
 interface EnhancedSearchInputProps {
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
+  value: string,
+  onChange: (value: string) => void,
+  placeholder?: string,
   searchSuggestions: SearchSuggestion[]}
 ,
 export function EnhancedSearchInput({
-  value;
-  onChange;
-  placeholder = "Search...";
+  value,
+  onChange,
+  placeholder = "Search...",
   searchSuggestions}: EnhancedSearchInputProps) {
-  const [isFocused, setIsFocused] = useState(false);
-  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]);
-  const inputRef = useRef<HTMLInputElement>(null);
-  const containerRef = useRef<HTMLDivElement>(null);
+  const [isFocused, setIsFocused] = useState(false),
+  const [filteredSuggestions, setFilteredSuggestions] = useState<SearchSuggestion[]>([]),
+  const inputRef = useRef<HTMLInputElement>(null),
+  const containerRef = useRef<HTMLDivElement>(null),
   // Filter suggestions based on input value,
   useEffect(() => {
     if (!value) {
       // Show recent searches when input is empty,
-      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent'));
+      setFilteredSuggestions(searchSuggestions.filter(s => s.type === 'recent')),
       return}
 ,
     const filtered = searchSuggestions.filter(suggestion =>,
-      suggestion.text.toLowerCase().includes(value.toLowerCase()));
+      suggestion.text.toLowerCase().includes(value.toLowerCase())),
     // Sort suggestions to prioritize those that start with the search term,
     filtered.sort((a, b) => {
-      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0;
-      return aStartsWith - bStartsWith});
-    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions}, [value, searchSuggestions]);
+      const aStartsWith = a.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,
+      const bStartsWith = b.text.toLowerCase().startsWith(value.toLowerCase()) ? -1 : 0,
+      return aStartsWith - bStartsWith}),
+    setFilteredSuggestions(filtered.slice(0, 8)), // Limit to 8 suggestions}, [value, searchSuggestions]),
   // Handle clicks outside the component to close suggestions,
   useEffect(() => {
     function handleClickOutside(event: MouseEvent) {
@@ -113,7 +113,7 @@ export function EnhancedSearchInput({
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion),
     setIsFocused(false),
-    inputRef.current?.blur()};
+    inputRef.current?.blur()},
   return (
     <div className="relative w-full" ref={containerRef}>,
       <div className="relative">,
@@ -146,8 +146,8 @@ export function EnhancedSearchInput({
     return () => document && document.removeEventListener("mousedown", handleClickOutside)}, []),
   const handleSelectSuggestion = (suggestion: string) => {
     onChange(suggestion),
-    setIsFocused(false);
-    inputRef && inputRef.current?.blur()};
+    setIsFocused(false),
+    inputRef && inputRef.current?.blur()},
   return (
     <div className="relative w-full" ref={containerRef}>,
       <div className="relative">,
@@ -157,12 +157,12 @@ export function EnhancedSearchInput({
         <Input
           ref={inputRef}
           type="text",
-    document.addEventListener("mousedown", handleClickOutside);
-    return () => document.removeEventListener("mousedown", handleClickOutside)}, []);
+    document.addEventListener("mousedown", handleClickOutside),
+    return () => document.removeEventListener("mousedown", handleClickOutside)}, []),
   const handleSelectSuggestion = (suggestion: string) => {
-    onChange(suggestion);
+    onChange(suggestion),
     setIsFocused(false),
-    inputRef.current?.blur()};
+    inputRef.current?.blur()},
   return (
     <div className="relative w-full" ref={containerRef}>,
       <div className="relative">,
@@ -198,8 +198,8 @@ export function EnhancedSearchInput({
     </div>)}
 ,
 interface EnhancedSearchInputProps {
-  value: string;
-  on_change: (value: string) => void;
+  value: string,
+  on_change: (value: string) => void,
   placeholder?: string,
   search_suggestions: SearchSuggestion[]}
 export /**,
@@ -240,7 +240,7 @@ function handleClickOutside() {
     return () => document.removeEventListener ("mousedown", handleClickOutside)}, []),
   const handleSelectSuggestion = (suggestion: string) =>: any {
     on_change (suggestion),
-    setIsFocused (false);
+    setIsFocused (false),
     input_ref.current?.blur ()}
 ,
   return (

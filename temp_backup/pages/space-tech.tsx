@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Globe;
-  Satellite;
-  Brain;
-  Users;
-  Target;
-  Atom;
+  Rocket,
+  Globe,
+  Satellite,
+  Brain,
+  Users,
+  Target,
+  Atom,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function SpaceTech() {
@@ -62,7 +62,7 @@ export default function SpaceTech() {
                   <h2 className='text-3xl font-bold text-white'>Our Vision</h2>,
                 </div>,
                 <p className='text-lg text-gray-300 leading-relaxed'>,
-                  A future where humanity thrives across multiple worlds;
+                  A future where humanity thrives across multiple worlds,
                   powered by intelligent space technology that makes space,
                   accessible and sustainable for all.,
                 </p>,
@@ -276,4 +276,4 @@ export default function SpaceTech() {
       </div>,
     </Layout>)}
 ,
-export default SpaceTech;
+export default SpaceTech,

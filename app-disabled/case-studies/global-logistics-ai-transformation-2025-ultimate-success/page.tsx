@@ -1,44 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  User;
-  Clock;
-  Share2;
-  TrendingUp;
-  Zap;
-  DollarSign;
-  Users;
-  Globe;
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Share2,
+  TrendingUp,
+  Zap,
+  DollarSign,
+  Users,
+  Globe,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story';
+  title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story',
   description:,
-    'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.';
+    'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.',
   keywords: [
-    'Logistics';
-    'Supply Chain';
-    'AI Transformation';
-    'ROI Success';
-    'Enterprise AI';
-  ];
+    'LogisticsSupply Chain',
+    'AI TransformationROI Success',
+    'Enterprise AI',
+  ],
   openGraph: {
-    title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story';
+    title: 'Global Logistics AI Transformation 20o25: Ultimate Success Story',
     description:,
-      'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how a Fortune 50o0 logistics company achieved 340% ROI through comprehensive AI transformation, revolutionizing supply chain operations and customer satisfaction.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Logistics';
-      'Supply Chain';
-      'AI Transformation';
-      'ROI Success';
-      'Enterprise AI';
-    ];
-  };
-};
+      'LogisticsSupply Chain',
+      'AI TransformationROI Success',
+      'Enterprise AI',
+    ]
+  },
+},
 export default function LogisticsTransformationPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-green-50'>,
@@ -88,11 +84,9 @@ export default function LogisticsTransformationPage() {
           </p>,
           <div className='flex flex-wrap justify-center gap-4 mb-8'>,
             {[
-              'Logistics';
-              'Supply Chain';
-              'AI Transformation';
-              'ROI Success';
-              'Enterprise AI';
+              'LogisticsSupply Chain',
+              'AI TransformationROI Success',
+              'Enterprise AI',
             ].map(tag => (
               <span
                 key={tag}
@@ -236,7 +230,7 @@ export default function LogisticsTransformationPage() {
                 Phase 1: Foundation and Assessment (Months 1-3),
               </h3>,
               <p className='text-blue-80o0 mb-4'>,
-                Comprehensive analysis of current capabilities, infrastructure;
+                Comprehensive analysis of current capabilities, infrastructure,
                 and AI readiness assessment across all operational areas.,
               </p>,
               <ul className='text-blue-80o0 space-y-2'>,
@@ -428,7 +422,7 @@ export default function LogisticsTransformationPage() {
                 Ready to Achieve Similar Results?,
               </h3>,
               <p className='text-green-10o0 mb-6'>,
-                This case study demonstrates that with proper planning;
+                This case study demonstrates that with proper planning,
                 execution, and commitment, AI transformation can deliver,
                 exceptional results that transform not just operations, but,
                 entire business models and market positions.,

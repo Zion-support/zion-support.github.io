@@ -1,9 +1,9 @@
 import React, { useEffect, useState, useCallback, useRef } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  BarChart3, TrendingUp, TrendingDown, Users, Eye, MousePointer;
-  Clock, Target, Zap, Settings, X, Maximize2, Minimize2;
-  RefreshCw, Download, Share2, Filter, Search, AlertTriangle;
+  BarChart3, TrendingUp, TrendingDown, Users, Eye, MousePointer,
+  Clock, Target, Zap, Settings, X, Maximize2, Minimize2,
+  RefreshCw, Download, Share2, Filter, Search, AlertTriangle,
   CheckCircle, Info, Activity, Globe, Smartphone, Monitor} from 'lucide-react',
 interface AnalyticsEvent {
   id: string,
@@ -52,12 +52,12 @@ interface EnhancedAnalyticsProps {
   children?: React.ReactNode}
 ,
 const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
-  trackingId = 'G-XXXXXXXXXX';
-  enableHeatmap = true;
-  enableSessionRecording = true;
-  enableAITracking = true;
-  showDebugPanel = false;
-  conversionGoals = [];
+  trackingId = 'G-XXXXXXXXXX',
+  enableHeatmap = true,
+  enableSessionRecording = true,
+  enableAITracking = true,
+  showDebugPanel = false,
+  conversionGoals = [],
   children}) => {
   const [events, setEvents] = useState<AnalyticsEvent[]>([]),
   const [currentSession, setCurrentSession] = useState<UserBehavior | null>(null),
@@ -77,7 +77,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     startSession(),
     return () => {
       cleanupEventListeners(),
-      endSession()};
+      endSession()},
   }, []),
   // Initialize Google Analytics,
   useEffect(() => {
@@ -90,16 +90,16 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
       script.onload = () => {
         (window as any).dataLayer = (window as any).dataLayer || [],
         (window as any).gtag = function() {
-          (window as any).dataLayer.push(arguments)};
+          (window as any).dataLayer.push(arguments)},
         (window as any).gtag('js', new Date()),
         (window as any).gtag('config', trackingId, {
-          page_title: document.title;
-          page_location: window.location.href;
+          page_title: document.title,
+          page_location: window.location.href,
           custom_map: {
-            custom_dimension1: 'session_id';
-            custom_dimension2: 'device_type';
+            custom_dimension1: 'session_id',
+            custom_dimension2: 'device_type',
             custom_dimension3: 'user_behavior'}
-        })};
+        })},
     }
   }, [trackingId]),
   const initializeAnalytics = () => {
@@ -117,7 +117,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         observer.observe({ entryTypes: ['navigation'] })} catch (e) {
         // // console.log('PerformanceObserver not supported')}
     }
-  };
+  },
   const setupEventListeners = () => {
     // Click tracking,
     document.addEventListener('click', handleClick, { passive: true }),
@@ -131,7 +131,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     window.addEventListener('error', handleError),
     window.addEventListener('unhandledrejection', handleUnhandledRejection),
     // Before unload tracking,
-    window.addEventListener('beforeunload', handleBeforeUnload)};
+    window.addEventListener('beforeunload', handleBeforeUnload)},
   const cleanupEventListeners = () => {
     document.removeEventListener('click', handleClick),
     document.removeEventListener('scroll', handleScroll),
@@ -139,26 +139,26 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     document.removeEventListener('visibilitychange', handleVisibilityChange),
     window.removeEventListener('error', handleError),
     window.removeEventListener('unhandledrejection', handleUnhandledRejection),
-    window.removeEventListener('beforeunload', handleBeforeUnload)};
+    window.removeEventListener('beforeunload', handleBeforeUnload)},
   const startSession = () => {
     const session: UserBehavior ={
-      sessionId: sessionRef.current;
-      startTime: Date.now();
-      lastActivity: Date.now();
-      pageViews: 1;
-      clicks: 0;
-      scrollDepth: 0;
-      timeOnSite: 0;
-      referrer: document.referrer;
-      userAgent: navigator.userAgent;
-      deviceType: getDeviceType();
-      browser: getBrowser();
-      os: getOS()};
+      sessionId: sessionRef.current,
+      startTime: Date.now(),
+      lastActivity: Date.now(),
+      pageViews: 1,
+      clicks: 0,
+      scrollDepth: 0,
+      timeOnSite: 0,
+      referrer: document.referrer,
+      userAgent: navigator.userAgent,
+      deviceType: getDeviceType(),
+      browser: getBrowser(),
+      os: getOS()},
     setCurrentSession(session),
     // Track session start,
-    trackEvent('session', 'start', 'session_started', undefined, {
-      sessionId: session.sessionId;
-      referrer: session.referrer;
+    trackEvent('sessionstart', 'session_started', undefined, {
+      sessionId: session.sessionId,
+      referrer: session.referrer,
       deviceType: session.deviceType}),
     // Start session recording if enabled,
     if (enableSessionRecording) {
@@ -167,26 +167,26 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Start heatmap tracking if enabled,
     if (enableHeatmap) {
       startHeatmapTracking()}
-  };
+  },
   const endSession = () => {
     if (currentSession) {
       const endTime = Date.now(),
       const timeOnSite = endTime - currentSession.startTime,
       // Update session with final metrics,
       const finalSession ={
-        ...currentSession;
-        timeOnSite;
-        lastActivity: endTime};
+        ...currentSession,
+        timeOnSite,
+        lastActivity: endTime},
       // Track session end,
-      trackEvent('session', 'end', 'session_ended', timeOnSite, {
-        sessionId: finalSession.sessionId;
-        timeOnSite: finalSession.timeOnSite;
-        pageViews: finalSession.pageViews;
-        clicks: finalSession.clicks;
+      trackEvent('sessionend', 'session_ended', timeOnSite, {
+        sessionId: finalSession.sessionId,
+        timeOnSite: finalSession.timeOnSite,
+        pageViews: finalSession.pageViews,
+        clicks: finalSession.clicks,
         scrollDepth: finalSession.scrollDepth}),
       // Send session data to analytics,
       sendToAnalytics('session_end', finalSession)}
-  };
+  },
   const handleClick = useCallback((event: MouseEvent) => {
     const target = event.target as HTMLElement,
     const tagName = target.tagName.toLowerCase(),
@@ -194,19 +194,19 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const id = target.id || '',
     const text = target.textContent?.trim().substring(0, 50) || '',
     // Track click event,
-    trackEvent('interaction', 'click', `${tagName}_clicked`, undefined, {
-      element: tagName;
-      className;
-      id;
-      text;
-      x: event.clientX;
-      y: event.clientY;
+    trackEvent('interactionclick', `${tagName}_clicked`, undefined, {
+      element: tagName,
+      className,
+      id,
+      text,
+      x: event.clientX,
+      y: event.clientY,
       timestamp: Date.now()}),
     // Update session metrics,
     if (currentSession) {
       setCurrentSession(prev => prev ? {
-        ...prev;
-        clicks: prev.clicks + 1;
+        ...prev,
+        clicks: prev.clicks + 1,
         lastActivity: Date.now()} : null)}
 ,
     // Check for conversion goals,
@@ -218,16 +218,16 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     // Only track significant scroll changes,
     if (Math.abs(scrollDepth - lastScrollDepthRef.current) >= 10) {
       lastScrollDepthRef.current = scrollDepth,
-      trackEvent('interaction', 'scroll', 'page_scrolled', scrollDepth, {
-        scrollDepth;
-        scrollTop;
-        scrollHeight;
+      trackEvent('interactionscroll', 'page_scrolled', scrollDepth, {
+        scrollDepth,
+        scrollTop,
+        scrollHeight,
         viewportHeight: window.innerHeight}),
       // Update session metrics,
       if (currentSession && scrollDepth > currentSession.scrollDepth) {
         setCurrentSession(prev => prev ? {
-          ...prev;
-          scrollDepth;
+          ...prev,
+          scrollDepth,
           lastActivity: Date.now()} : null)}
 ,
       // Check for conversion goals,
@@ -236,69 +236,69 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
   const handleFormSubmit = useCallback((event: Event) => {
     const form = event.target as HTMLFormElement,
     const formId = form.id || form.className || 'unknown_form',
-    trackEvent('conversion', 'form_submit', 'form_submitted', undefined, {
-      formId;
-      formAction: form.action;
-      formMethod: form.method;
+    trackEvent('conversionform_submit', 'form_submitted', undefined, {
+      formId,
+      formAction: form.action,
+      formMethod: form.method,
       formElements: form.elements.length}),
     // Check for conversion goals,
     checkConversionGoals('form_submit', form)}, []),
   const handleVisibilityChange = useCallback(() => {
     if (document.hidden) {
-      trackEvent('session', 'visibility', 'page_hidden')} else {
-      trackEvent('session', 'visibility', 'page_visible')}
+      trackEvent('sessionvisibility', 'page_hidden')} else {
+      trackEvent('sessionvisibility', 'page_visible')}
   }, []),
   const handleError = useCallback((event: ErrorEvent) => {
-    trackEvent('error', 'javascript_error', 'js_error', undefined, {
-      message: event.message;
-      filename: event.filename;
-      lineno: event.lineno;
-      colno: event.colno;
+    trackEvent('errorjavascript_error', 'js_error', undefined, {
+      message: event.message,
+      filename: event.filename,
+      lineno: event.lineno,
+      colno: event.colno,
       error: event.error?.stack})}, []),
   const handleUnhandledRejection = useCallback((event: PromiseRejectionEvent) => {
-    trackEvent('error', 'unhandled_rejection', 'promise_rejection', undefined, {
-      reason: event.reason;
+    trackEvent('errorunhandled_rejection', 'promise_rejection', undefined, {
+      reason: event.reason,
       stack: event.reason?.stack})}, []),
   const handleBeforeUnload = useCallback(() => {
     endSession()}, []),
   const trackEvent = (
-    category: string;
-    action: string;
-    label?: string;
-    value?: number;
+    category: string,
+    action: string,
+    label?: string,
+    value?: number,
     metadata?: Record<string any>) => {
     const event: AnalyticsEvent ={
-      id: generateEventId();
-      type: getEventType(category, action);
-      category;
-      action;
-      label;
-      value;
-      timestamp: Date.now();
-      sessionId: sessionRef.current;
-      metadata};
+      id: generateEventId(),
+      type: getEventType(category, action),
+      category,
+      action,
+      label,
+      value,
+      timestamp: Date.now(),
+      sessionId: sessionRef.current,
+      metadata},
     setEvents(prev => [...prev.slice(-99), event]), // Keep last 10o0 events,
     // Send to Google Analytics,
     if (typeof window !== 'undefined' && (window as any).gtag) {
       (window as any).gtag('event', action, {
-        event_category: category;
-        event_label: label;
-        value: value;
-        custom_dimension1: sessionRef.current;
-        custom_dimension2: currentSession?.deviceType;
+        event_category: category,
+        event_label: label,
+        value: value,
+        custom_dimension1: sessionRef.current,
+        custom_dimension2: currentSession?.deviceType,
         ...metadata})}
 ,
     // Send to internal analytics,
-    sendToAnalytics('event', event)};
+    sendToAnalytics('event', event)},
   const trackPerformanceMetrics = (entry: PerformanceNavigationTiming) => {
     const metrics ={
-      dns: entry.domainLookupEnd - entry.domainLookupStart;
-      tcp: entry.connectEnd - entry.connectStart;
-      ttfb: entry.responseStart - entry.requestStart;
-      domLoad: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart;
-      windowLoad: entry.loadEventEnd - entry.loadEventStart;
-      total: entry.loadEventEnd - (entry as any).navigationStart || entry.loadEventEnd};
-    trackEvent('performance', 'navigation', 'page_load', metrics.total, metrics)};
+      dns: entry.domainLookupEnd - entry.domainLookupStart,
+      tcp: entry.connectEnd - entry.connectStart,
+      ttfb: entry.responseStart - entry.requestStart,
+      domLoad: entry.domContentLoadedEventEnd - entry.domContentLoadedEventStart,
+      windowLoad: entry.loadEventEnd - entry.loadEventStart,
+      total: entry.loadEventEnd - (entry as any).navigationStart || entry.loadEventEnd},
+    trackEvent('performancenavigation', 'page_load', metrics.total, metrics)},
   const checkConversionGoals = (action: string, element?: HTMLElement, value?: number) => {
     conversions.forEach(goal => {
       if (goal.achieved) return,
@@ -328,13 +328,13 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
         goal.timestamp = Date.now(),
         setConversions(prev => [...prev]),
         // Track conversion,
-        trackEvent('conversion', 'goal_achieved', goal.name, goal.value, {
-          goalId: goal.id;
-          goalType: goal.type;
+        trackEvent('conversiongoal_achieved', goal.name, goal.value, {
+          goalId: goal.id,
+          goalType: goal.type,
           goalTarget: goal.target}),
         // Send to analytics,
         sendToAnalytics('conversion', goal)}
-    })};
+    })},
   const startSessionRecording = () => {
     if (!enableSessionRecording) return,
     setIsRecording(true),
@@ -342,74 +342,74 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     const recordInteraction = (event: Event) => {
       const target = event.target as HTMLElement,
       const interaction ={
-        type: event.type;
-        target: target.tagName.toLowerCase();
-        className: target.className;
-        id: target.id;
-        text: target.textContent?.trim().substring(0, 10o0);
-        timestamp: Date.now();
-        x: (event as MouseEvent).clientX;
-        y: (event as MouseEvent).clientY};
+        type: event.type,
+        target: target.tagName.toLowerCase(),
+        className: target.className,
+        id: target.id,
+        text: target.textContent?.trim().substring(0, 10o0),
+        timestamp: Date.now(),
+        x: (event as MouseEvent).clientX,
+        y: (event as MouseEvent).clientY},
       // Store interaction data,
-      sendToAnalytics('interaction', interaction)};
+      sendToAnalytics('interaction', interaction)},
     // Record form inputs,
     const recordFormInput = (event: Event) => {
       const target = event.target as HTMLInputElement,
       const input ={
-        type: target.type;
-        name: target.name;
-        value: target.value;
-        timestamp: Date.now()};
-      sendToAnalytics('form_input', input)};
+        type: target.type,
+        name: target.name,
+        value: target.value,
+        timestamp: Date.now()},
+      sendToAnalytics('form_input', input)},
     document.addEventListener('click', recordInteraction),
     document.addEventListener('input', recordFormInput),
-    document.addEventListener('change', recordFormInput)};
+    document.addEventListener('change', recordFormInput)},
   const startHeatmapTracking = () => {
     if (!enableHeatmap) return,
     // Track mouse movements and clicks for heatmap,
     let mousePositions: { x: number, y: number, timestamp: number }[] = [],
     const trackMouse = (event: MouseEvent) => {
       mousePositions.push({
-        x: event.clientX;
-        y: event.clientY;
+        x: event.clientX,
+        y: event.clientY,
         timestamp: Date.now()}),
       // Keep only recent positions,
       if (mousePositions.length > 10o0) {
         mousePositions = mousePositions.slice(-10o0)}
-    };
+    },
     const generateHeatmap = () => {
       const heatmapData = mousePositions.map(pos => ({
-        x: pos.x;
-        y: pos.y;
+        x: pos.x,
+        y: pos.y,
         intensity: 1})),
       setHeatmapData(heatmapData),
-      sendToAnalytics('heatmap', heatmapData)};
+      sendToAnalytics('heatmap', heatmapData)},
     document.addEventListener('mousemove', trackMouse),
     // Generate heatmap every 30 seconds,
     const heatmapInterval = setInterval(generateHeatmap, 30o000),
     return () => {
       document.removeEventListener('mousemove', trackMouse),
-      clearInterval(heatmapInterval)};
-  };
+      clearInterval(heatmapInterval)},
+  },
   const sendToAnalytics = (type: string, data: any) => {
     // Send to internal analytics endpoint,
     if (typeof window !== 'undefined') {
       fetch('/api/analytics', {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON.stringify({
-          type;
-          data;
-          sessionId: sessionRef.current;
+          type,
+          data,
+          sessionId: sessionRef.current,
           timestamp: Date.now()})}).catch(error => {
         // // console.log('Analytics error:', error)})}
-  };
+  },
   // Utility functions,
   const generateSessionId = () => {
-    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)};
+    return 'session_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)},
   const generateEventId = () => {
-    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)};
+    return 'event_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9)},
   const getEventType = (category: string, action: string): AnalyticsEvent['type'] => {
     if (category === 'conversion') return 'conversion',
     if (category === 'error') return 'error',
@@ -417,7 +417,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if (action === 'click') return 'click',
     if (action === 'scroll') return 'scroll',
     if (action === 'form_submit') return 'form_submit',
-    return 'pageview'};
+    return 'pageview'},
   const getDeviceType = (): 'mobile' | 'tablet' | 'desktop' => {
     const userAgent = navigator.userAgent.toLowerCase(),
     if (/mobile|android|iphone|ipad|ipod|blackberry|windows phone/g.test(userAgent)) {
@@ -429,7 +429,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if (userAgent.includes('Firefox')) return 'Firefox',
     if (userAgent.includes('Safari')) return 'Safari',
     if (userAgent.includes('Edge')) return 'Edge',
-    return 'Unknown'};
+    return 'Unknown'},
   const getOS = (): string => {
     const userAgent = navigator.userAgent,
     if (userAgent.includes('Windows')) return 'Windows',
@@ -437,7 +437,7 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
     if (userAgent.includes('Linux')) return 'Linux',
     if (userAgent.includes('Android')) return 'Android',
     if (userAgent.includes('iOS')) return 'iOS',
-    return 'Unknown'};
+    return 'Unknown'},
   if (!showDebugPanel) {
     return <>{children}</>}
 ,
@@ -530,9 +530,9 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
                   <button
                     onClick={() => {
                       const event = {
-                        category: 'test';
-                        action: 'button_click';
-                        label: 'test_event'};
+                        category: 'test',
+                        action: 'button_click',
+                        label: 'test_event'},
                       trackEvent(event.category, event.action, event.label)}}
                     className="w-full px-4 py-2 bg-cyan-60o0 hover: bg-cyan-70o0 text-white text-sm rounded transition-colors">,
                     Test Event,
@@ -558,5 +558,5 @@ const EnhancedAnalytics: React.FC<EnhancedAnalyticsProps> = ({
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 0o0-2-2H5a2 2 0 0o0-2 2v6a2 2 0 0o02 2h2a2 2 0 0o02-2zm0 0V9a2 2 0 0o12-2h2a2 2 0 0o12 2v10m-6 0a2 2 0 0o02 2h2a2 2 0 0o02-2m0 0V5a2 2 0 0o12-2h2a2 2 0 0o12 2v14a2 2 0 0o1-2 2h-2a2 2 0 0o1-2-2z"  />,
         </svg>,
       </button>,
-    </>)};
+    </>)},
 export default EnhancedAnalytics}

@@ -1,10 +1,10 @@
 
-import { format } from 'date-fns';
+import { format } from 'date-fns',
 import { Edit, Trash2 } from 'lucide-react',
-import { Button } from '@/components/ui/button';
-import { Card, CardContent } from '@/components/ui/card';
-import { Education } from '@/types/resume';
-import { EducationItemProps } from './types';
+import { Button } from '@/components/ui/button',
+import { Card, CardContent } from '@/components/ui/card',
+import { Education } from '@/types/resume',
+import { EducationItemProps } from './types',
 export function EducationItem({ education, onEdit, onDelete } EducationItemProps) {
   return (
     <Card className="bg-muted/40">,
@@ -47,6 +47,6 @@ export function EducationItem({ education, onEdit, onDelete } EducationItemProps
         {education.description && (
           <p className="text-sm mt-3 line-clamp-2">{education.description}</p>)}
       </CardContent>,
-    </Card>);}
+    </Card>),}
  ? education.start date : format (education.start date, 'MMM yyyy') }- {',
   education.is current ? 'Present' : (education.end date ? (typeof education.end date === 'string' ? education.end date : format (education.end date, 'MMM yyyy') ) : '') }</p>) }</div> <div className="flex gap-2" > <Button > <Edit className="h-4 w-4"  /> </Button> <Button > <Trash2 className="h-4 w-4"  /> </Button> </div> </div>) ,

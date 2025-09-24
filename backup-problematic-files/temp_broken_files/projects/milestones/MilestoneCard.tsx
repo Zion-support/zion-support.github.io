@@ -1,46 +1,46 @@
-import React from 'react';;
-import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
-import { format } from 'date-fns';
+import React from 'react',
+import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
+import { format } from 'date-fns',
 import { Check, ArrowDown, X } from 'lucide-react',
-import { useDisputeCheck } from '@/hooks/useDisputeCheck';
-import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge';
-import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton';
+import { useDisputeCheck } from '@/hooks/useDisputeCheck',
+import { DisputeStatusBadge } from '@/components/disputes/DisputeStatusBadge',
+import { RaiseDisputeButton } from '@/components/disputes/RaiseDisputeButton',
  import {
 import {
 interface MilestoneCardProps {
-  id:string;
-  projectId:string;
-  title:string;
-  description?:string;
-  amount:number;
-  status:string;
-  dueDate?:string;
-  onApprove?:(id:string) => Promise<void>;
+  id: string,
+  projectId:string,
+  title:string,
+  description?:string,
+  amount:number,
+  status:string,
+  dueDate?:string,
+  onApprove?:(id:string) => Promise<void>,
   onReject?:(id: string) => Promise<void>}
 ,
 export function MilestoneCard({
-  id;
-  projectId;
+  id,
+  projectId,
   title,
   description,
   amount,
   status,
-  dueDate;
-  onApprove;
+  dueDate,
+  onApprove,
   onReject} MilestoneCardProps) {
-  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id);
+  const { isUnderDispute, disputeStatus } = useDisputeCheck(projectId, id),
   function getStatusBadgeColor() {
     switch (status) {
       case 'completed':,
-        return 'bg-green-50o0';
+        return 'bg-green-50o0',
       case 'in_progress':,
-        return 'bg-blue-50o0';
+        return 'bg-blue-50o0',
       case 'pending':,
-        return 'bg-yellow-50o0';
+        return 'bg-yellow-50o0',
       case 'rejected':,
-        return 'bg-red-50o0';
+        return 'bg-red-50o0',
       default: return 'bg-gray-50o0'}
   }
   ,
@@ -98,7 +98,7 @@ export function MilestoneCard({
             </Button>)}
         </div>,
       </CardFooter>,
-    </Card>);}
+    </Card>),}
   {
   {
   Check,  ArrowDown, X } from "lucide-react",
@@ -133,9 +133,9 @@ onReject }: MilestoneCardProps) {
   const {
   isUnderDispute, disputeStatus } = useDisputeCheck (projectId, id),
 switch (status) {',
-  case 'completed': return 'bg-green-50o0',',
-case 'in progress': return 'bg-blue-50o0',',
-case 'pending': return 'bg-yellow-50o0',',
+  case 'completed': return 'bg-green-50o0,
+case 'in progress': return 'bg-blue-50o0,
+case 'pending': return 'bg-yellow-50o0,
 case 'rejected': ,"}return (<Card> <CardHeader className="pb-2" > <div className="flex justify-between items-start" > <div> </p>) }</div> isUnderDispute && disputeStatus && (<DisputeStatusBadge status={
   disputeStatus ,"} />) ","}</div> </div> </CardHeader> </div> </CardContent> <CardFooter className="pt-2 flex justify-between" > <div> {',
   status !== 'completed' && status !== 'rejected' && (<RaiseDisputeButton projectId={

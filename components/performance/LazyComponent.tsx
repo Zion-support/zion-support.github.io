@@ -5,11 +5,11 @@ interface LazyComponentProps {
   [key: string]: any}
 ,
 export const LazyComponent: React.FC<LazyComponentProps> = ({
-  component;
-  fallback = <div>Loading...</div>;
+  component,
+  fallback = <div>Loading...</div>,
   ...props}) => {
   const LazyLoadedComponent = lazy(component),
   return (
     <Suspense fallback={fallback}>,
       <LazyLoadedComponent {...props} />,
-    </Suspense>)};
+    </Suspense>)},

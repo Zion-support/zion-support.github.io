@@ -2,14 +2,14 @@ import { GradientHeading } from '@/components/GradientHeading',
 import { Button } from '@/components/ui/button',
 import { Card, CardContent, CardFooter } from '@/components/ui/card',
 export const ServiceLandingTemplate = ({
-  title;
-  subtitle;
-  heroImage;
-  description;
-  benefits;
-  testimonials;
-  ctaText;
-  ctaLink;
+  title,
+  subtitle,
+  heroImage,
+  description,
+  benefits,
+  testimonials,
+  ctaText,
+  ctaLink,
 }) => {
   return (
     <div className='bg-background text-white'>,
@@ -98,4 +98,4 @@ export const ServiceLandingTemplate = ({
           <a href={ctaLink}>{ctaText}</a>,
         </Button>,
       </section>,
-    </div>)};
+    </div>)},

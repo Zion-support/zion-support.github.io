@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 export const metadata = {
-  title: 'Mobile App Development | Zion Tech Group';
+  title: 'Mobile App Development | Zion Tech Group',
   description:,
-    'Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.';
-};
+    'Create stunning mobile apps for iOS and Android with our expert development team. Native, cross-platform, and hybrid solutions.',
+},
 export default function MobileAppDevelopmentPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -18,28 +18,22 @@ export default function MobileAppDevelopmentPage() {
         <FeatureCard
           title='Native Development',
           features={[
-            'iOS Swift/Objective-C';
-            'Android Kotlin/Java';
-            'Platform-specific features';
-            'Optimal performance';
+            'iOS Swift/Objective-CAndroid Kotlin/Java',
+            'Platform-specific featuresOptimal performance',
           ]}
         />,
         <FeatureCard
           title='Cross-Platform',
           features={[
-            'React Native';
-            'Flutter development';
-            'Xamarin solutions';
-            'Code sharing';
+            'React NativeFlutter development',
+            'Xamarin solutionsCode sharing',
           ]}
         />,
         <FeatureCard
           title='App Services',
           features={[
-            'UI/UX design';
-            'Backend integration';
-            'App store deployment';
-            'Maintenance & updates';
+            'UI/UX designBackend integration',
+            'App store deploymentMaintenance & updates',
           ]}
         />,
       </div>,
@@ -118,8 +112,8 @@ export default function MobileAppDevelopmentPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -145,21 +139,17 @@ function Pricing() {
           name='MVP App',
           price='$19,999',
           features={[
-            'Basic functionality';
-            'Simple UI/UX';
-            '1 platform (iOS or Android)';
-            '2 months development';
+            'Basic functionalitySimple UI/UX',
+            '1 platform (iOS or Android)2 months development',
           ]}
         />,
         <Plan
           name='Professional App',
           price='$49,999',
           features={[
-            'Advanced features';
-            'Custom UI/UX design';
-            'Both platforms';
-            'Backend integration';
-            '4 months development';
+            'Advanced featuresCustom UI/UX design',
+            'Both platformsBackend integration',
+            '4 months development',
           ]}
           popular={true}
         />,
@@ -167,21 +157,19 @@ function Pricing() {
           name='Enterprise App',
           price='$99,999+',
           features={[
-            'Complex functionality';
-            'Custom backend';
-            'Advanced integrations';
-            'Dedicated team';
-            '6+ months development';
+            'Complex functionalityCustom backend',
+            'Advanced integrationsDedicated team',
+            '6+ months development',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

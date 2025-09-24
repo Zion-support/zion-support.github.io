@@ -1,55 +1,55 @@
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Zap;
-  Brain;
-  Target;
-  Users;
-  Globe;
-  Shield;
-  TrendingUp;
+  Rocket,
+  Zap,
+  Brain,
+  Target,
+  Users,
+  Globe,
+  Shield,
+  TrendingUp,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function StartupSolutions() {
   const solutions = [
     {
-      icon: <Rocket className='w-12 h-12 text-cyan-40o0' />;
-      title: 'Micro-SaaS Platform';
+      icon: <Rocket className='w-12 h-12 text-cyan-40o0' />,
+      title: 'Micro-SaaS Platform',
       description:,
-        'Rapid development and deployment of micro-SaaS applications';
-      href: '/micro-saas';
-    };
+        'Rapid development and deployment of micro-SaaS applications',
+      href: '/micro-saas'
+    },
     {
-      icon: <Zap className='w-12 h-12 text-blue-40o0' />;
-      title: 'AI-Powered MVP';
-      description: 'Fast-track your MVP with AI and automation solutions';
-      href: '/ai-powered-decision-engine';
-    };
+      icon: <Zap className='w-12 h-12 text-blue-40o0' />,
+      title: 'AI-Powered MVP',
+      description: 'Fast-track your MVP with AI and automation solutions',
+      href: '/ai-powered-decision-engine'
+    },
     {
-      icon: <Brain className='w-12 h-12 text-purple-40o0' />;
-      title: 'MLOps Starter';
+      icon: <Brain className='w-12 h-12 text-purple-40o0' />,
+      title: 'MLOps Starter',
       description:,
-        'Production-ready machine learning infrastructure for startups';
-      href: '/mlops-starter';
-    };
+        'Production-ready machine learning infrastructure for startups',
+      href: '/mlops-starter'
+    },
     {
-      icon: <Target className='w-12 h-12 text-green-40o0' />;
-      title: 'Growth Automation';
-      description: 'Automate customer acquisition and growth processes';
-      href: '/ai-autonomous-business-operations';
-    };
+      icon: <Target className='w-12 h-12 text-green-40o0' />,
+      title: 'Growth Automation',
+      description: 'Automate customer acquisition and growth processes',
+      href: '/ai-autonomous-business-operations'
+    },
     {
-      icon: <Users className='w-12 h-12 text-yellow-40o0' />;
-      title: 'Customer Analytics';
-      description: 'Understand your users with advanced analytics and insights';
-      href: '/intelligent-hr-analytics-platform';
-    };
+      icon: <Users className='w-12 h-12 text-yellow-40o0' />,
+      title: 'Customer Analytics',
+      description: 'Understand your users with advanced analytics and insights',
+      href: '/intelligent-hr-analytics-platform'
+    },
     {
-      icon: <Globe className='w-12 h-12 text-pink-40o0' />;
-      title: 'Cloud Infrastructure';
-      description: 'Scalable cloud infrastructure that grows with your startup';
-      href: '/multi-cloud-disaster-recovery';
-    };
+      icon: <Globe className='w-12 h-12 text-pink-40o0' />,
+      title: 'Cloud Infrastructure',
+      description: 'Scalable cloud infrastructure that grows with your startup',
+      href: '/multi-cloud-disaster-recovery'
+    },
   ],
   return (
     <Layout>,

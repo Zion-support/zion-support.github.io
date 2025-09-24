@@ -6,20 +6,20 @@ interface UltraFuturisticHeroProps {
 ,
 export default function UltraFuturisticHero({ className = '' }: UltraFuturisticHeroProps) {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const heroStats = [
-    { label: 'Services', value: '80o0+', icon: Rocket, color: 'from-cyan-50o0 to-blue-60o0' };
-    { label: 'ROI', value: '10o00%', icon: TrendingUp, color: 'from-green-50o0 to-emerald-60o0' };
-    { label: 'Uptime', value: '99.9%', icon: Shield, color: 'from-purple-50o0 to-pink-60o0' };
+    { label: 'Services', value: '80o0+', icon: Rocket, color: 'from-cyan-50o0 to-blue-60o0' },
+    { label: 'ROI', value: '10o00%', icon: TrendingUp, color: 'from-green-50o0 to-emerald-60o0' },
+    { label: 'Uptime', value: '99.9%', icon: Shield, color: 'from-purple-50o0 to-pink-60o0' },
     { label: 'Support', value: '24/7', icon: Zap, color: 'from-orange-50o0 to-red-60o0' }
   ],
   const floatingIcons = [
-    { icon: Brain, color: 'text-purple-40o0', position: 'top-20 left-20', delay: 0 };
-    { icon: Atom, color: 'text-cyan-40o0', position: 'top-32 right-32', delay: 0.5 };
-    { icon: Globe, color: 'text-green-40o0', position: 'bottom-32 left-32', delay: 1 };
+    { icon: Brain, color: 'text-purple-40o0', position: 'top-20 left-20', delay: 0 },
+    { icon: Atom, color: 'text-cyan-40o0', position: 'top-32 right-32', delay: 0.5 },
+    { icon: Globe, color: 'text-green-40o0', position: 'bottom-32 left-32', delay: 1 },
     { icon: Cpu, color: 'text-pink-40o0', position: 'bottom-20 right-20', delay: 1.5 }
   ],
   return (

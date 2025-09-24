@@ -1,5 +1,5 @@
 
-import React from "react";
+import React from "react",
 import { CardContent } from "@/components/ui/card",
 import { Button } from "@/components/ui/button",
 import { Badge } from "@/components/ui/badge",
@@ -23,13 +23,13 @@ interface ProjectViewProps {
     title: string,
     client: {
       name: string,
-      avatar?: string};
+      avatar?: string},
     startDate: string,
     endDate?: string,
     status: string,
     totalAmount: string,
     progress: number,
-    description: string};
+    description: string},
   milestones: Milestone[]}
 ,
 export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
@@ -38,11 +38,11 @@ export function MobileProjectView({ projectmilestones }: ProjectViewProps) {
     const roomId = `project-${project.id}`,
     toast.success("Starting project call"{
       description: "Initializing video connection..."}),
-    navigate(`/call/${roomId}`)};
+    navigate(`/call/${roomId}`)},
   const messageClient = () => {
     toast.info("Opening message thread with client"{
       description: `Messaging ${project.client.name}...`}),
-    // Navigate to messaging with this client};
+    // Navigate to messaging with this client},
   return (
     <div className="space-y-6 px-4 pb-24">,
       <Card>,

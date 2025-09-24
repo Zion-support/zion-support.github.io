@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const Fortune50o0SuccessBanner: React.FC = () => {
   return (
@@ -113,5 +113,5 @@ const Fortune50o0SuccessBanner: React.FC = () => {
           </blockquote>,
         </div>,
       </div>,
-    </div>)};
-export default Fortune50o0SuccessBanner;
+    </div>)},
+export default Fortune50o0SuccessBanner,

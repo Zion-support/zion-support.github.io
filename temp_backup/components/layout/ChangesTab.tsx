@@ -1,10 +1,10 @@
 import React, { useState, useEffect } from 'react',
 import {
-  gitService;
-  GitStatus;
-  GitBranch;
-  GitRemote;
-  GitCommit;
+  gitService,
+  GitStatus,
+  GitBranch,
+  GitRemote,
+  GitCommit,
 } from '../../services/gitService',
 interface RepositoryInfo {
   name: string,
@@ -29,10 +29,10 @@ const ChangesTab = () => {
       try {
         const [status, branchesData, remotesData, commitsData] =,
           await Promise.all([
-            gitService.getStatus();
-            gitService.getBranches();
-            gitService.getRemotes();
-            gitService.getCommitHistory(10);
+            gitService.getStatus(),
+            gitService.getBranches(),
+            gitService.getRemotes(),
+            gitService.getCommitHistory(10),
           ]),
         setGitStatus(status),
         setBranches(branchesData),
@@ -47,14 +47,14 @@ const ChangesTab = () => {
           repoStatus = 'dirty'}
 ,
         setRepositoryInfo({
-          name: 'zion.app';
-          remote: 'origin';
-          status: repoStatus;
+          name: 'zion.app',
+          remote: 'origin',
+          status: repoStatus
         })} catch (error) {
         // Handle error silently or implement proper error handling,
         console.warn('Failed to fetch Git data:', error)} finally {
         setIsLoading(false)}
-    };
+    },
     fetchGitData()}, []),
   const getStatusColor = (status: RepositoryInfo['status']) => {
     switch (status) {
@@ -70,7 +70,7 @@ const ChangesTab = () => {
         return 'text-red-40o0',
       default:,
         return 'text-gray-40o0'}
-  };
+  },
   const getStatusIcon = (status: RepositoryInfo['status']) => {
     switch (status) {
       case 'clean':,
@@ -85,7 +85,7 @@ const ChangesTab = () => {
         return '🔄',
       default:,
         return '❓'}
-  };
+  },
   const handleStageFile = async (filePath: string) => {
     try {
       await gitService.stageFile(filePath),
@@ -94,7 +94,7 @@ const ChangesTab = () => {
       setGitStatus(newStatus)} catch (error) {
       // Handle error silently or implement proper error handling,
       console.warn('Failed to stage file:', error)}
-  };
+  },
   const handleUnstageFile = async (filePath: string) => {
     try {
       await gitService.unstageFile(filePath),
@@ -103,7 +103,7 @@ const ChangesTab = () => {
       setGitStatus(newStatus)} catch (error) {
       // Handle error silently or implement proper error handling,
       console.warn('Failed to unstage file:', error)}
-  };
+  },
   const handleCommitChanges = async () => {
     if (!commitMessage.trim()) return,
     try {
@@ -112,14 +112,14 @@ const ChangesTab = () => {
       setShowCommitModal(false),
       // Refresh data,
       const [newStatus, newCommits] = await Promise.all([
-        gitService.getStatus();
-        gitService.getCommitHistory(10);
+        gitService.getStatus(),
+        gitService.getCommitHistory(10),
       ]),
       setGitStatus(newStatus),
       setCommitHistory(newCommits)} catch (error) {
       // Handle error silently or implement proper error handling,
       console.warn('Failed to commit changes:', error)}
-  };
+  },
   const handlePushChanges = async () => {
     try {
       await gitService.pushToRemote(),
@@ -128,20 +128,20 @@ const ChangesTab = () => {
       setGitStatus(newStatus)} catch (error) {
       // Handle error silently or implement proper error handling,
       console.warn('Failed to push changes:', error)}
-  };
+  },
   const handlePullChanges = async () => {
     try {
       await gitService.pullFromRemote(),
       // Refresh data,
       const [newStatus, newBranches] = await Promise.all([
-        gitService.getStatus();
-        gitService.getBranches();
+        gitService.getStatus(),
+        gitService.getBranches(),
       ]),
       setGitStatus(newStatus),
       setBranches(newBranches)} catch (error) {
       // Handle error silently or implement proper error handling,
       console.warn('Failed to pull changes:', error)}
-  };
+  },
   if (isLoading) {
     return (
       <div className='min-h-screen bg-gray-90o0 text-white p-8'>,
@@ -178,10 +178,10 @@ const ChangesTab = () => {
         {/* Navigation Tabs */}
         <div className='flex space-x-1 mb-6 bg-gray-80o0 p-1 rounded-lg'>,
           {[
-            { id: 'changes', label: 'Changes', icon: '📝' };
-            { id: 'history', label: 'History', icon: '📚' };
-            { id: 'branches', label: 'Branches', icon: '🌿' };
-            { id: 'remotes', label: 'Remotes', icon: '🌐' };
+            { id: 'changes', label: 'Changes', icon: '📝' },
+            { id: 'history', label: 'History', icon: '📚' },
+            { id: 'branches', label: 'Branches', icon: '🌿' },
+            { id: 'remotes', label: 'Remotes', icon: '🌐' },
           ].map(tab => (
             <button
               key={tab.id}
@@ -356,7 +356,7 @@ const ChangesTab = () => {
                         </div>,
                         {commit.files.length > 0 && (
                           <div className='text-gray-40o0 text-xs mt-2'>,
-                            Files: {commit.files.join(', ')}
+                            Files: {commit.files.join()}
                           </div>)}
                       </div>,
                     </div>))}
@@ -491,5 +491,5 @@ const ChangesTab = () => {
             </div>,
           </div>,
         </div>)}
-    </div>)};
-export default ChangesTab;
+    </div>)},
+export default ChangesTab,

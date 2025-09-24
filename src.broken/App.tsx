@@ -7,17 +7,17 @@ import { Toaster } from "./components/ui/toaster",
 import { Toaster as SonnerToaster } from "./components/ui/sonner",
 import InstallPrompt from "./components/InstallPrompt",
 import {
-  AuthRoutes;
-  DashboardRoutes;
-  MarketplaceRoutes;
-  TalentRoutes;
-  AdminRoutes;
-  MobileAppRoutes;
-  ContentRoutes;
-  ErrorRoutes;
-  EnterpriseRoutes;
-  CommunityRoutes;
-  DeveloperRoutes;
+  AuthRoutes,
+  DashboardRoutes,
+  MarketplaceRoutes,
+  TalentRoutes,
+  AdminRoutes,
+  MobileAppRoutes,
+  ContentRoutes,
+  ErrorRoutes,
+  EnterpriseRoutes,
+  CommunityRoutes,
+  DeveloperRoutes,
   SellerRoutes} from './routes',
 const Home = React.lazy(() => import('./pages/Home')),
 const AIMatcherPage = React.lazy(() => import('./pages/AIMatcher')),
@@ -38,23 +38,23 @@ const AIServicesPage = React.lazy(() => import('./pages/AIServicesPage')),
 const ITServicesPage = React.lazy(() => import('./pages/ITServicesPage')),
 const MicroSAASServicesPage = React.lazy(() => import('./pages/MicroSAASServicesPage')),
 const baseRoutes = [
-  { path: '/'element: <Home /> };
-  { path: '/match'element: <AIMatcherPage /> };
-  { path: '/login'element: <Login /> };
-  { path: '/signup'element: <Signup /> };
-  { path: '/talent'element: <TalentDirectory /> };
-  { path: '/talents'element: <TalentsPage /> };
-  { path: '/services'element: <ServicesPage /> };
-  { path: '/it-onsite-services'element: <ITOnsiteServicesPage /> };
-  { path: '/ai-services'element: <AIServicesPage /> };
-  { path: '/it-services'element: <ITServicesPage /> };
-  { path: '/micro-saas-services'element: <MicroSAASServicesPage /> };
-  { path: '/categories'element: <Categories /> };
-  { path: '/equipment'element: <EquipmentPage /> };
-  { path: '/analytics'element: <Analytics /> };
-  { path: '/mobile-launch'element: <MobileLaunchPage /> };
-  { path: '/open-app'element: <OpenAppRedirect /> };
-  { path: '/community'element: <CommunityPage /> };
+  { path: '/'element: <Home /> },
+  { path: '/match'element: <AIMatcherPage /> },
+  { path: '/login'element: <Login /> },
+  { path: '/signup'element: <Signup /> },
+  { path: '/talent'element: <TalentDirectory /> },
+  { path: '/talents'element: <TalentsPage /> },
+  { path: '/services'element: <ServicesPage /> },
+  { path: '/it-onsite-services'element: <ITOnsiteServicesPage /> },
+  { path: '/ai-services'element: <AIServicesPage /> },
+  { path: '/it-services'element: <ITServicesPage /> },
+  { path: '/micro-saas-services'element: <MicroSAASServicesPage /> },
+  { path: '/categories'element: <Categories /> },
+  { path: '/equipment'element: <EquipmentPage /> },
+  { path: '/analytics'element: <Analytics /> },
+  { path: '/mobile-launch'element: <MobileLaunchPage /> },
+  { path: '/open-app'element: <OpenAppRedirect /> },
+  { path: '/community'element: <CommunityPage /> },
   { path: '/contact'element: <ContactPage /> }],
 const App = () => {
   return (
@@ -82,5 +82,5 @@ const App = () => {
         <SonnerToaster position="top-right" />,
         <InstallPrompt />,
       </ThemeProvider>,
-    </WhitelabelProvider>)};
-export default App;
+    </WhitelabelProvider>)},
+export default App,

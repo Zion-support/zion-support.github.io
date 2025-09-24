@@ -95,7 +95,7 @@ export default function AIPoweredBusinessIntelligence() {
                 <p className='text-white/90 mb-4'>,
                   Machine learning algorithms are at the heart of modern,
                   AI-powered BI systems. These algorithms can learn from,
-                  historical data to identify trends, predict future outcomes;
+                  historical data to identify trends, predict future outcomes,
                   and provide recommendations for business optimization.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
@@ -127,7 +127,7 @@ export default function AIPoweredBusinessIntelligence() {
                       Reinforcement Learning,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      Optimizing business processes through trial and error;
+                      Optimizing business processes through trial and error,
                       continuously improving decision-making strategies over,
                       time.,
                     </p>,
@@ -167,7 +167,7 @@ export default function AIPoweredBusinessIntelligence() {
                     data,
                   </li>,
                   <li>,
-                    • Extract insights from unstructured text data like emails;
+                    • Extract insights from unstructured text data like emails,
                     social media, and documents,
                   </li>,
                   <li>,
@@ -261,7 +261,7 @@ export default function AIPoweredBusinessIntelligence() {
                 <p className='text-white/90 mb-4'>,
                   While AI-powered BI offers tremendous benefits, successful,
                   implementation requires careful planning and consideration of,
-                  several key factors. Organizations must address data quality;
+                  several key factors. Organizations must address data quality,
                   privacy concerns, and change management to maximize the value,
                   of their AI investments.,
                 </p>,
@@ -324,7 +324,7 @@ export default function AIPoweredBusinessIntelligence() {
                 <p className='text-white/90 mb-4'>,
                   Organizations that embrace these technologies early will be,
                   well-positioned to gain competitive advantages in their,
-                  respective markets. The key is to start with a clear strategy;
+                  respective markets. The key is to start with a clear strategy,
                   invest in the right technologies, and build a culture that,
                   embraces data-driven decision-making.,
                 </p>,
@@ -338,12 +338,12 @@ export default function AIPoweredBusinessIntelligence() {
                   shift in how organizations approach data analysis and,
                   decision-making. By combining the power of artificial,
                   intelligence with traditional BI capabilities, organizations,
-                  can gain unprecedented insights into their operations;
+                  can gain unprecedented insights into their operations,
                   customers, and markets.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   At Zion Tech Group, we're committed to helping organizations,
-                  navigate this transformation, providing the tools, expertise;
+                  navigate this transformation, providing the tools, expertise,
                   and support needed to build effective AI-powered BI systems.,
                   The future of business intelligence is intelligent, and the,
                   time to embrace it is now.,

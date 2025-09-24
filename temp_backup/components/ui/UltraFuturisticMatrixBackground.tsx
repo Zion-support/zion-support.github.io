@@ -22,7 +22,7 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
         const rect = containerRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
         canvas.height = rect.height}
-    };
+    },
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle class for quantum effects,
@@ -224,11 +224,11 @@ export default function UltraFuturisticMatrixBackground({ children, className = 
         }
       }
 ,
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
-      cancelAnimationFrame(animationFrameId)};
+      cancelAnimationFrame(animationFrameId)},
   }, []),
   return (
     <div ref={containerRef} className={`relative min-h-screen ${className}`}>,

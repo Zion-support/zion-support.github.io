@@ -9,7 +9,7 @@ export default function EnhancedDemoPage() {
           </h1>,
           <p className='text-xl text-gray-60o0 dark:text-gray-40o0 max-w-3xl mx-auto'>,
             Experience all the advanced components and features in action. This,
-            page demonstrates performance optimization, AI content generation;
+            page demonstrates performance optimization, AI content generation,
             analytics, and interactive tools.,
           </p>,
         </div>,

@@ -1,7 +1,7 @@
 import React{ forwardRef } from 'react',
 export type ResumeData = {
   name: string,
-  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string };
+  contact?: { email?: string, phone?: string, location?: string, website?: string, linkedin?: string, github?: string },
   summary?: string,
   skills?: string[],
   technologies?: string[],
@@ -22,17 +22,17 @@ export type ResumeData = {
     title: string,
     description?: string,
     link?: string,
-    technologies?: string[]}>};
+    technologies?: string[]}>},
 export type ResumePreviewProps = {
   data: ResumeData,
   theme?: 'light' | 'dark',
-  maxPortfolioItems?: number};
+  maxPortfolioItems?: number},
 const SectionTitle: React.FC<{ children: React.ReactNode }> = ({ children }) => (
   <h2 className="text-lg font-semibold tracking-wide text-gray-800 dark: text-gray-100 border-b border-gray-200 dark:border-gray-700 pb-1">,
     {children}
   </h2>),
 export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
-  ({ datatheme = ', 'light', 'maxPortfolioItems = 3 }ref) => {
+  ({ datatheme = light', 'maxPortfolioItems = 3 }ref) => {
     const portfolioItems = (data.portfolio || []).slice(0Math.max(0maxPortfolioItems)),
     return (
       <div
@@ -99,7 +99,7 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
                       <div className="text-xs text-gray-600 dark: text-gray-300">,
                         {(role.start || role.end) && (
                           <span>,
-                            {role.start || ', '}
+                            {role.start || }
                             {role.end ? ` – ${role.end}` : ''}
                           </span>)}
                         {role.location ? ` • ${role.location}` : ''}
@@ -173,5 +173,5 @@ export const ResumePreview = forwardRef<HTMLDivElementResumePreviewProps>(
       </div>)}
 ),
 ResumePreview.displayName = 'ResumePreview',
-export default ResumePreview;
+export default ResumePreview,
 }))

@@ -1,10 +1,10 @@
 export const metadata = {
-  title: 'Healthcare IT Solutions | Zion Tech Group';
+  title: 'Healthcare IT Solutions | Zion Tech Group',
   description:,
-    'HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.';
+    'HIPAA-compliant healthcare technology solutions including telemedicine platforms, medical imaging systems, patient data management, and healthcare AI applications.',
   keywords:,
-    'healthcare IT, HIPAA compliance, telemedicine, medical imaging, healthcare AI, patient data management, healthcare software';
-};
+    'healthcare IT, HIPAA compliance, telemedicine, medical imaging, healthcare AI, patient data management, healthcare software',
+},
 export default function HealthcareSolutionsPage() {
   return (
     <div className='animate-fade-in'>,
@@ -13,7 +13,7 @@ export default function HealthcareSolutionsPage() {
           Healthcare IT Solutions,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-4xl mx-auto leading-relaxed'>,
-          HIPAA-compliant technology solutions that improve patient care;
+          HIPAA-compliant technology solutions that improve patient care,
           streamline operations, and enhance healthcare delivery. Built with,
           security, compliance, and scalability in mind.,
         </p>,
@@ -27,12 +27,9 @@ export default function HealthcareSolutionsPage() {
             title='Telemedicine Platform',
             description='Complete virtual care solution with video consultations, appointment scheduling, and patient management',
             features={[
-              'Video consultations';
-              'Appointment scheduling';
-              'Patient records';
-              'Prescription management';
-              'HIPAA compliance';
-              'Mobile app';
+              'Video consultationsAppointment scheduling',
+              'Patient recordsPrescription management',
+              'HIPAA complianceMobile app',
             ]}
             price='$25,0o00-75,0o00',
             icon='🏥',
@@ -41,12 +38,9 @@ export default function HealthcareSolutionsPage() {
             title='Medical Imaging AI',
             description='AI-powered medical image analysis for faster and more accurate diagnoses',
             features={[
-              'X-ray analysis';
-              'MRI interpretation';
-              'CT scan analysis';
-              'AI diagnostics';
-              'Integration APIs';
-              'Radiologist tools';
+              'X-ray analysisMRI interpretation',
+              'CT scan analysisAI diagnostics',
+              'Integration APIsRadiologist tools',
             ]}
             price='$40,0o00-120,0o00',
             icon='🔬',
@@ -55,12 +49,9 @@ export default function HealthcareSolutionsPage() {
             title='Patient Portal System',
             description='Comprehensive patient engagement platform with health records and communication tools',
             features={[
-              'Health records';
-              'Appointment booking';
-              'Prescription refills';
-              'Lab results';
-              'Secure messaging';
-              'Health tracking';
+              'Health recordsAppointment booking',
+              'Prescription refillsLab results',
+              'Secure messagingHealth tracking',
             ]}
             price='$15,0o00-45,0o00',
             icon='👤',
@@ -69,12 +60,9 @@ export default function HealthcareSolutionsPage() {
             title='Electronic Health Records (EHR)',
             description='Modern EHR system with interoperability and advanced analytics capabilities',
             features={[
-              'Patient records';
-              'Clinical notes';
-              'Medication tracking';
-              'Interoperability';
-              'Analytics dashboard';
-              'Mobile access';
+              'Patient recordsClinical notes',
+              'Medication trackingInteroperability',
+              'Analytics dashboardMobile access',
             ]}
             price='$50,0o00-150,0o00',
             icon='📋',
@@ -83,12 +71,9 @@ export default function HealthcareSolutionsPage() {
             title='Healthcare Analytics Platform',
             description='Advanced analytics for population health, outcomes tracking, and operational efficiency',
             features={[
-              'Population health';
-              'Outcomes tracking';
-              'Cost analysis';
-              'Quality metrics';
-              'Predictive analytics';
-              'Reporting tools';
+              'Population healthOutcomes tracking',
+              'Cost analysisQuality metrics',
+              'Predictive analyticsReporting tools',
             ]}
             price='$30,0o00-80,0o00',
             icon='📊',
@@ -97,12 +82,9 @@ export default function HealthcareSolutionsPage() {
             title='Pharmacy Management System',
             description='Complete pharmacy operations management with inventory and prescription tracking',
             features={[
-              'Inventory management';
-              'Prescription tracking';
-              'Insurance verification';
-              'Patient profiles';
-              'Reporting';
-              'Compliance tools';
+              'Inventory managementPrescription tracking',
+              'Insurance verificationPatient profiles',
+              'ReportingCompliance tools',
             ]}
             price='$20,0o00-60,0o00',
             icon='💊',
@@ -111,12 +93,9 @@ export default function HealthcareSolutionsPage() {
             title='Healthcare AI Chatbot',
             description='Intelligent patient support with symptom checking and appointment scheduling',
             features={[
-              'Symptom checking';
-              'Appointment scheduling';
-              'Medication reminders';
-              'Health education';
-              'Triage assistance';
-              'Multi-language';
+              'Symptom checkingAppointment scheduling',
+              'Medication remindersHealth education',
+              'Triage assistanceMulti-language',
             ]}
             price='$12,0o00-35,0o00',
             icon='🤖',
@@ -125,12 +104,9 @@ export default function HealthcareSolutionsPage() {
             title='Remote Patient Monitoring',
             description='IoT-based patient monitoring with real-time health data collection and alerts',
             features={[
-              'Vital signs monitoring';
-              'Wearable integration';
-              'Alert systems';
-              'Data visualization';
-              'Provider dashboard';
-              'Mobile app';
+              'Vital signs monitoringWearable integration',
+              'Alert systemsData visualization',
+              'Provider dashboardMobile app',
             ]}
             price='$35,0o00-90,0o00',
             icon='📱',
@@ -139,12 +115,9 @@ export default function HealthcareSolutionsPage() {
             title='Healthcare Compliance Management',
             description='Automated compliance monitoring for HIPAA, HITECH, and other healthcare regulations',
             features={[
-              'HIPAA compliance';
-              'Audit trails';
-              'Risk assessment';
-              'Policy management';
-              'Training modules';
-              'Incident reporting';
+              'HIPAA complianceAudit trails',
+              'Risk assessmentPolicy management',
+              'Training modulesIncident reporting',
             ]}
             price='$18,0o00-50,0o00',
             icon='⚖️',
@@ -187,11 +160,9 @@ export default function HealthcareSolutionsPage() {
             title='Diagnostic AI',
             description='Machine learning models for medical diagnosis and treatment recommendations',
             applications={[
-              'Radiology';
-              'Pathology';
-              'Cardiology';
-              'Dermatology';
-              'Ophthalmology';
+              'RadiologyPathology',
+              'CardiologyDermatology',
+              'Ophthalmology',
             ]}
             icon='🧠',
           />,
@@ -199,11 +170,9 @@ export default function HealthcareSolutionsPage() {
             title='Predictive Analytics',
             description='AI-powered prediction of patient outcomes and health risks',
             applications={[
-              'Readmission risk';
-              'Sepsis prediction';
-              'Fall risk';
-              'Medication adherence';
-              'Chronic disease management';
+              'Readmission riskSepsis prediction',
+              'Fall riskMedication adherence',
+              'Chronic disease management',
             ]}
             icon='📈',
           />,
@@ -211,10 +180,8 @@ export default function HealthcareSolutionsPage() {
             title='Natural Language Processing',
             description='AI for processing clinical notes and extracting meaningful insights',
             applications={[
-              'Clinical documentation';
-              'Coding assistance';
-              'Quality measures';
-              'Research data extraction';
+              'Clinical documentationCoding assistance',
+              'Quality measuresResearch data extraction',
             ]}
             icon='💬',
           />,
@@ -289,11 +256,11 @@ export default function HealthcareSolutionsPage() {
     </div>)}
 ,
 function HealthcareServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -323,9 +290,9 @@ function HealthcareServiceCard({
     </div>)}
 ,
 function ComplianceCard({
-  title;
-  description;
-  icon;
+  title,
+  description,
+  icon,
 }: {
   title: string,
   description: string,
@@ -338,10 +305,10 @@ function ComplianceCard({
     </div>)}
 ,
 function AICard({
-  title;
-  description;
-  applications;
-  icon;
+  title,
+  description,
+  applications,
+  icon,
 }: {
   title: string,
   description: string,
@@ -361,9 +328,9 @@ function AICard({
     </div>)}
 ,
 function ProcessStep({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,
@@ -378,9 +345,9 @@ function ProcessStep({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
-  icon;
+  title,
+  description,
+  icon,
 }: {
   title: string,
   description: string,
@@ -403,11 +370,9 @@ function Pricing() {
           name='Compliance Assessment',
           price='$5k–$15k',
           features={[
-            'HIPAA audit';
-            'Risk assessment';
-            'Compliance roadmap';
-            'Security review';
-            'Recommendations';
+            'HIPAA auditRisk assessment',
+            'Compliance roadmapSecurity review',
+            'Recommendations',
           ]}
           popular={false}
         />,
@@ -415,11 +380,9 @@ function Pricing() {
           name='Solution Development',
           price='$25k–$10o0k',
           features={[
-            'Custom development';
-            'HIPAA compliance';
-            'Integration';
-            'Testing';
-            'Training';
+            'Custom developmentHIPAA compliance',
+            'IntegrationTesting',
+            'Training',
           ]}
           popular={true}
         />,
@@ -427,11 +390,9 @@ function Pricing() {
           name='Managed Services',
           price='$3k+/mo',
           features={[
-            '24/7 monitoring';
-            'Compliance management';
-            'Updates';
-            'Support';
-            'Security';
+            '24/7 monitoringCompliance management',
+            'UpdatesSupport',
+            'Security',
           ]}
           popular={false}
         />,
@@ -439,10 +400,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular;
+  name,
+  price,
+  features,
+  popular,
 }: {
   name: string,
   price: string,
@@ -484,7 +445,7 @@ function CTASection() {
         Ready to Transform Healthcare with Technology?,
       </h3>,
       <p className='text-gray-60o0 mb-6 max-w-2xl mx-auto'>,
-        Let's discuss your healthcare technology needs and create a compliant;
+        Let's discuss your healthcare technology needs and create a compliant,
         secure solution that improves patient care and operational efficiency.,
         Our healthcare IT experts are ready to help.,
       </p>,

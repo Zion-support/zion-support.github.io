@@ -10,24 +10,24 @@ import {
   List,
   Star,
   Clock,
-  TrendingUp;
-  ArrowRight;
-  Play;
-  Download;
-  Bookmark;
-  Share2;
-  Eye;
-  Heart;
-  MessageCircle;
-  Zap;
-  Brain;
-  Cpu;
-  Globe;
-  Rocket;
-  Shield;
-  Target;
-  Users;
-  ChevronDown;
+  TrendingUp,
+  ArrowRight,
+  Play,
+  Download,
+  Bookmark,
+  Share2,
+  Eye,
+  Heart,
+  MessageCircle,
+  Zap,
+  Brain,
+  Cpu,
+  Globe,
+  Rocket,
+  Shield,
+  Target,
+  Users,
+  ChevronDown,
   X} from 'lucide-react',
 const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
   const [searchQuerysetSearchQuery] = useState(''),
@@ -40,110 +40,110 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
   useEffect(() => {
     setIsVisible(true)}[]),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Gridcount: 156 };
-    { id: 'ai-20o25'name: 'AI 20o25'icon: Braincount: 42 };
-    { id: 'ai-20o26'name: 'AI 20o26'icon: Cpucount: 38 };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: Zapcount: 24 };
-    { id: ''automation', 'name: ''Automation', 'icon: Targetcount: 32 };
-    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcount: 20 }
+    { id: ''allname: 'All 'Contenticon: Gridcount: 156 },
+    { id: 'ai-20o25'name: 'AI 20o25'icon: Braincount: 42 },
+    { id: 'ai-20o26'name: 'AI 20o26'icon: Cpucount: 38 },
+    { id: ''quantumname: 'Quantum 'Computingicon: Zapcount: 24 },
+    { id: ''automationname: ''Automationicon: Targetcount: 32 },
+    { id: 'future-'techname: 'Future 'Techicon: Rocketcount: 20 }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'Neural Consciousness AI: The Future is Here';
-      description: 'Explore the revolutionary AI systems that possess self-awareness and emotional intelligencetransforming how we interact with technology.';
-      category: 'ai-20o25';
-      type: 'article';
-      readTime: '8 min read';
-      views: 1250o0;
-      likes: 892;
-      comments: 156;
-      trending: true;
-      featured: true;
-      image: '/api/placeholder/40o0/250';
-      author: 'Dr. Sarah Chen';
-      publishedAt: '20o25-0o1-15';
-      tags: [', 'AI', 'Consciousness'Neural 'Networks', 'Future Tech']};
+      id: 1,
+      title: 'Neural Consciousness AI: The Future is Here',
+      description: 'Explore the revolutionary AI systems that possess self-awareness and emotional intelligencetransforming how we interact with technology.',
+      category: 'ai-20o25',
+      type: 'article',
+      readTime: '8 min read',
+      views: 1250o0,
+      likes: 892,
+      comments: 156,
+      trending: true,
+      featured: true,
+      image: '/api/placeholder/40o0/250',
+      author: 'Dr. Sarah Chen',
+      publishedAt: '20o25-0o1-15',
+      tags: [AI', 'Consciousness'Neural 'NetworksFuture Tech']},
     {
-      id: 2;
-      title: 'Quantum-Neural Fusion: Computing Revolution';
-      description: 'Discover how quantum computing and neural networks are merging to create unprecedented computational power and intelligence.';
-      category: 'quantum';
-      type: 'video';
-      readTime: '15 min watch';
-      views: 890o0;
-      likes: 654;
-      comments: 89;
-      trending: true;
-      featured: false;
-      image: '/api/placeholder/40o0/250';
-      author: 'Prof. Michael Rodriguez';
-      publishedAt: '20o25-0o1-12';
-      tags: ['Quantum 'Computing', 'Neural 'Networks', 'AI'Technology']};
+      id: 2,
+      title: 'Quantum-Neural Fusion: Computing Revolution',
+      description: 'Discover how quantum computing and neural networks are merging to create unprecedented computational power and intelligence.',
+      category: 'quantum',
+      type: 'video',
+      readTime: '15 min watch',
+      views: 890o0,
+      likes: 654,
+      comments: 89,
+      trending: true,
+      featured: false,
+      image: '/api/placeholder/40o0/250',
+      author: 'Prof. Michael Rodriguez',
+      publishedAt: '20o25-0o1-12',
+      tags: ['Quantum 'ComputingNeural 'Networks', 'AI'Technology']},
     {
-      id: 3;
-      title: 'AI 20o26: Global Ecosystem Vision';
-      description: 'A comprehensive look at how AI will create a global ecosystem connecting businessesindividualsand machines worldwide.';
-      category: 'ai-20o26';
-      type: 'interactive';
-      readTime: '12 min explore';
-      views: 1560o0;
-      likes: 120o0;
-      comments: 234;
-      trending: false;
-      featured: true;
-      image: '/api/placeholder/40o0/250';
-      author: 'AI Research Team';
-      publishedAt: '20o25-0o1-10';
-      tags: ['AI 20o26'Global 'Ecosystem', 'Future 'Vision', 'Technology']};
+      id: 3,
+      title: 'AI 20o26: Global Ecosystem Vision',
+      description: 'A comprehensive look at how AI will create a global ecosystem connecting businessesindividualsand machines worldwide.',
+      category: 'ai-20o26',
+      type: 'interactive',
+      readTime: '12 min explore',
+      views: 1560o0,
+      likes: 120o0,
+      comments: 234,
+      trending: false,
+      featured: true,
+      image: '/api/placeholder/40o0/250',
+      author: 'AI Research Team',
+      publishedAt: '20o25-0o1-10',
+      tags: ['AI 20o26'Global 'EcosystemFuture 'Vision', 'Technology']},
     {
-      id: 4;
-      title: 'Autonomous Business Operations 20o25';
-      description: 'Learn how AI is enabling fully autonomous business operationsfrom decision-making to customer service.';
-      category: 'automation';
-      type: 'guide';
-      readTime: '20 min read';
-      views: 780o0;
-      likes: 567;
-      comments: 123;
-      trending: false;
-      featured: false;
-      image: '/api/placeholder/40o0/250';
-      author: 'Business AI Team';
-      publishedAt: '20o25-0o1-08';
-      tags: [', 'Automation', 'Business', 'AI', 'Operations']};
+      id: 4,
+      title: 'Autonomous Business Operations 20o25',
+      description: 'Learn how AI is enabling fully autonomous business operationsfrom decision-making to customer service.',
+      category: 'automation',
+      type: 'guide',
+      readTime: '20 min read',
+      views: 780o0,
+      likes: 567,
+      comments: 123,
+      trending: false,
+      featured: false,
+      image: '/api/placeholder/40o0/250',
+      author: 'Business AI Team',
+      publishedAt: '20o25-0o1-08',
+      tags: [Automation', 'BusinessAI', 'Operations']},
     {
-      id: 5;
-      title: 'Space-Age AI Computing Systems';
-      description: 'Explore AI systems designed for space exploration and interplanetary communication.';
-      category: 'future-tech';
-      type: 'article';
-      readTime: '10 min read';
-      views: 1120o0;
-      likes: 789;
-      comments: 145;
-      trending: true;
-      featured: false;
-      image: '/api/placeholder/40o0/250';
-      author: 'Space Tech Division';
-      publishedAt: '20o25-0o1-0o5';
-      tags: [', 'Space', 'AI', 'Computing', 'Future Tech']};
+      id: 5,
+      title: 'Space-Age AI Computing Systems',
+      description: 'Explore AI systems designed for space exploration and interplanetary communication.',
+      category: 'future-tech',
+      type: 'article',
+      readTime: '10 min read',
+      views: 1120o0,
+      likes: 789,
+      comments: 145,
+      trending: true,
+      featured: false,
+      image: '/api/placeholder/40o0/250',
+      author: 'Space Tech Division',
+      publishedAt: '20o25-0o1-0o5',
+      tags: [Space', 'AIComputing', 'Future Tech']},
     {
-      id: 6;
-      title: 'Conscious AI Beings: The Next Frontier';
-      description: 'Understanding AI entities with full consciousness and creative capabilities.';
-      category: 'ai-20o26';
-      type: 'video';
-      readTime: '18 min watch';
-      views: 980o0;
-      likes: 723;
-      comments: 167;
-      trending: false;
-      featured: true;
-      image: '/api/placeholder/40o0/250';
-      author: 'Consciousness Research Lab';
-      publishedAt: '20o25-0o1-0o3';
-      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy']}
+      id: 6,
+      title: 'Conscious AI Beings: The Next Frontier',
+      description: 'Understanding AI entities with full consciousness and creative capabilities.',
+      category: 'ai-20o26',
+      type: 'video',
+      readTime: '18 min watch',
+      views: 980o0,
+      likes: 723,
+      comments: 167,
+      trending: false,
+      featured: true,
+      image: '/api/placeholder/40o0/250',
+      author: 'Consciousness Research Lab',
+      publishedAt: '20o25-0o1-0o3',
+      tags: [Consciousness', 'AIFuture', 'Philosophy']}
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -168,10 +168,10 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
       case 'interactive': return Zap,
       case 'guide': return Bookmark,
       default: return Eye}
-  };
+  },
   const getCategoryIcon = (categoryId) => {
     const category = categories.find(cat => cat.id === categoryId),
-    return category ? category.icon : Grid};
+    return category ? category.icon : Grid},
   return (
     <div className="w-full max-w-7xl mx-auto p-6">,
       {/* Header */}
@@ -478,5 +478,5 @@ const InteractiveContentDiscoveryWidget20o25_20o26 = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default InteractiveContentDiscoveryWidget20o25_20o26;
+    </div>)},
+export default InteractiveContentDiscoveryWidget20o25_20o26,

@@ -9,20 +9,20 @@ import {
   Shield,
   BarChart3,
   Users,
-  Target;
-  Rocket;
-  Award;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Database;
-  Lightbulb;
-  Settings;
-  Play;
-  Download;
+  Target,
+  Rocket,
+  Award,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Database,
+  Lightbulb,
+  Settings,
+  Play,
+  Download,
   ExternalLink} from 'lucide-react',
 const ComprehensiveAIServicesShowcase20o25 = () => {
   const [activeServicesetActiveService] = useState(0),
@@ -31,150 +31,126 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
     setIsVisible(true)}[]),
   const services = [
     {
-      id: 'ai-automation';
-      title: 'AI-Powered Business Automation';
-      description: 'Transform your business operations with intelligent automation that learns and adapts to your needs.';
-      icon: <Settings className="w-8 h-8"  />;
+      id: 'ai-automation',
+      title: 'AI-Powered Business Automation',
+      description: 'Transform your business operations with intelligent automation that learns and adapts to your needs.',
+      icon: <Settings className="w-8 h-8"  />,
       features: [
-        'Workflow automation with 90% efficiency gain';
-        'Intelligent document processing';
-        'Predictive maintenance scheduling';
-        'Automated customer service responses';
-        'Real-time decision making support'];
+        'Workflow automation with 90% efficiency gainIntelligent document processing',
+        'Predictive maintenance schedulingAutomated customer service responses',
+        'Real-time decision making support'],
       benefits: [
-        'Reduce operational costs by 60%';
-        'Increase productivity by 30o0%';
-        'Eliminate human error in routine tasks';
-        '24/7 automated operations'];
-      pricing: 'Starting at $299/month';
-      category: 'Automation';
-      rating: 4.9;
-      clients: 250o0;
-      link: '/services/ai-automation'};
+        'Reduce operational costs by 60%Increase productivity by 30o0%',
+        'Eliminate human error in routine tasks24/7 automated operations'],
+      pricing: 'Starting at $299/month',
+      category: 'Automation',
+      rating: 4.9,
+      clients: 250o0,
+      link: '/services/ai-automation'},
     {
-      id: 'predictive-analytics';
-      title: 'Advanced Predictive Analytics';
-      description: 'Harness the power of AI to predict future trendscustomer behaviorand business outcomes.';
-      icon: <BarChart3 className="w-8 h-8"  />;
+      id: 'predictive-analytics',
+      title: 'Advanced Predictive Analytics',
+      description: 'Harness the power of AI to predict future trendscustomer behaviorand business outcomes.',
+      icon: <BarChart3 className="w-8 h-8"  />,
       features: [
-        '95% accurate market predictions';
-        'Customer behavior analysis';
-        'Sales forecasting with confidence intervals';
-        'Risk assessment and mitigation';
-        'Real-time data processing'];
+        '95% accurate market predictionsCustomer behavior analysis',
+        'Sales forecasting with confidence intervalsRisk assessment and mitigation',
+        'Real-time data processing'],
       benefits: [
-        'Increase revenue by 40%';
-        'Reduce risk exposure by 70%';
-        'Optimize inventory management';
-        'Improve customer retention'];
-      pricing: 'Starting at $499/month';
-      category: 'Analytics';
-      rating: 4.8;
-      clients: 180o0;
-      link: '/services/predictive-analytics'};
+        'Increase revenue by 40%Reduce risk exposure by 70%',
+        'Optimize inventory managementImprove customer retention'],
+      pricing: 'Starting at $499/month',
+      category: 'Analytics',
+      rating: 4.8,
+      clients: 180o0,
+      link: '/services/predictive-analytics'},
     {
-      id: 'ai-content-generation';
-      title: 'Intelligent Content Generation';
-      description: 'Create high-qualityengaging content at scale with our advanced AI content generation platform.';
-      icon: <Lightbulb className="w-8 h-8"  />;
+      id: 'ai-content-generation',
+      title: 'Intelligent Content Generation',
+      description: 'Create high-qualityengaging content at scale with our advanced AI content generation platform.',
+      icon: <Lightbulb className="w-8 h-8"  />,
       features: [
-        'Multi-format content creation';
-        'Brand voice consistency';
-        'SEO optimization';
-        'Multi-language support';
-        'Content performance tracking'];
+        'Multi-format content creationBrand voice consistency',
+        'SEO optimizationMulti-language support',
+        'Content performance tracking'],
       benefits: [
-        'Reduce content creation time by 80%';
-        'Increase engagement by 150%';
-        'Maintain consistent brand voice';
-        'Scale content production infinitely'];
-      pricing: 'Starting at $199/month';
-      category: 'Content';
-      rating: 4.7;
-      clients: 320o0;
-      link: '/services/ai-content-generation'};
+        'Reduce content creation time by 80%Increase engagement by 150%',
+        'Maintain consistent brand voiceScale content production infinitely'],
+      pricing: 'Starting at $199/month',
+      category: 'Content',
+      rating: 4.7,
+      clients: 320o0,
+      link: '/services/ai-content-generation'},
     {
-      id: 'ai-security';
-      title: 'AI-Powered Cybersecurity';
-      description: 'Protect your business with advanced AI-driven security solutions that adapt to emerging threats.';
-      icon: <Shield className="w-8 h-8"  />;
+      id: 'ai-security',
+      title: 'AI-Powered Cybersecurity',
+      description: 'Protect your business with advanced AI-driven security solutions that adapt to emerging threats.',
+      icon: <Shield className="w-8 h-8"  />,
       features: [
-        'Real-time threat detection';
-        'Automated incident response';
-        'Behavioral analysis';
-        'Zero-day attack prevention';
-        'Compliance monitoring'];
+        'Real-time threat detectionAutomated incident response',
+        'Behavioral analysisZero-day attack prevention',
+        'Compliance monitoring'],
       benefits: [
-        'Reduce security incidents by 95%';
-        'Automated 24/7 monitoring';
-        'Faster threat response times';
-        'Compliance assurance'];
-      pricing: 'Starting at $799/month';
-      category: 'Security';
-      rating: 4.9;
-      clients: 120o0;
-      link: '/services/ai-security'};
+        'Reduce security incidents by 95%Automated 24/7 monitoring',
+        'Faster threat response timesCompliance assurance'],
+      pricing: 'Starting at $799/month',
+      category: 'Security',
+      rating: 4.9,
+      clients: 120o0,
+      link: '/services/ai-security'},
     {
-      id: 'ai-customer-service';
-      title: 'Intelligent Customer Service';
-      description: 'Deliver exceptional customer experiences with AI-powered chatbots and support systems.';
-      icon: <Users className="w-8 h-8"  />;
+      id: 'ai-customer-service',
+      title: 'Intelligent Customer Service',
+      description: 'Deliver exceptional customer experiences with AI-powered chatbots and support systems.',
+      icon: <Users className="w-8 h-8"  />,
       features: [
-        'Natural language processing';
-        'Multi-channel support';
-        'Sentiment analysis';
-        'Escalation management';
-        'Performance analytics'];
+        'Natural language processingMulti-channel support',
+        'Sentiment analysisEscalation management',
+        'Performance analytics'],
       benefits: [
-        'Improve customer satisfaction by 85%';
-        'Reduce support costs by 50%';
-        '24/7 availability';
-        'Faster resolution times'];
-      pricing: 'Starting at $149/month';
-      category: 'Customer Service';
-      rating: 4.6;
-      clients: 410o0;
-      link: '/services/ai-customer-service'};
+        'Improve customer satisfaction by 85%Reduce support costs by 50%',
+        '24/7 availabilityFaster resolution times'],
+      pricing: 'Starting at $149/month',
+      category: 'Customer Service',
+      rating: 4.6,
+      clients: 410o0,
+      link: '/services/ai-customer-service'},
     {
-      id: 'ai-data-analysis';
-      title: 'Advanced Data Analysis';
-      description: 'Unlock insights from your data with powerful AI-driven analysis and visualization tools.';
-      icon: <Database className="w-8 h-8"  />;
+      id: 'ai-data-analysis',
+      title: 'Advanced Data Analysis',
+      description: 'Unlock insights from your data with powerful AI-driven analysis and visualization tools.',
+      icon: <Database className="w-8 h-8"  />,
       features: [
-        'Automated data processing';
-        'Pattern recognition';
-        'Predictive modeling';
-        'Interactive dashboards';
-        'Custom reporting'];
+        'Automated data processingPattern recognition',
+        'Predictive modelingInteractive dashboards',
+        'Custom reporting'],
       benefits: [
-        'Discover hidden insights';
-        'Make data-driven decisions';
-        'Reduce analysis time by 90%';
-        'Improve accuracy of predictions'];
-      pricing: 'Starting at $399/month';
-      category: 'Data Analysis';
-      rating: 4.8;
-      clients: 220o0;
+        'Discover hidden insightsMake data-driven decisions',
+        'Reduce analysis time by 90%Improve accuracy of predictions'],
+      pricing: 'Starting at $399/month',
+      category: 'Data Analysis',
+      rating: 4.8,
+      clients: 220o0,
       link: '/services/ai-data-analysis'}
   ],
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   return (
     <motion.section,
       initial="hidden",
@@ -393,5 +369,5 @@ const ComprehensiveAIServicesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>)};
-export default ComprehensiveAIServicesShowcase20o25;
+    </motion.section>)},
+export default ComprehensiveAIServicesShowcase20o25,

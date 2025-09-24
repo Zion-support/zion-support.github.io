@@ -3,74 +3,74 @@ import Link from 'next/link',
 export default function AISolutionsPage() {
   const aiSolutions = [
     {
-      id: 'machine-learning';
-      title: 'Machine Learning Solutions';
-      description: 'Custom ML models for predictive analyticspattern recognitionand intelligent decision making.';
-      features: ['Predictive 'Analytics', 'Pattern 'Recognition', 'Anomaly 'Detection', 'Recommendation Systems'];
-      icon: '🧠';
-      category: 'Core AI';
-      complexity: 'Advanced'};
+      id: 'machine-learning',
+      title: 'Machine Learning Solutions',
+      description: 'Custom ML models for predictive analyticspattern recognitionand intelligent decision making.',
+      features: ['Predictive 'AnalyticsPattern 'Recognition', 'Anomaly 'DetectionRecommendation Systems'],
+      icon: '🧠',
+      category: 'Core AI',
+      complexity: 'Advanced'},
     {
-      id: 'natural-language-processing';
-      title: 'Natural Language Processing';
-      description: 'Advanced NLP solutions for text analysisentiment analysisand language understanding.';
-      features: ['Text 'Analysis', 'Sentiment 'Analysis', 'Language 'Translation', 'Chatbot Development'];
-      icon: '💬';
-      category: 'Language AI';
-      complexity: 'Advanced'};
+      id: 'natural-language-processing',
+      title: 'Natural Language Processing',
+      description: 'Advanced NLP solutions for text analysisentiment analysisand language understanding.',
+      features: ['Text 'AnalysisSentiment 'Analysis', 'Language 'TranslationChatbot Development'],
+      icon: '💬',
+      category: 'Language AI',
+      complexity: 'Advanced'},
     {
-      id: 'computer-vision';
-      title: 'Computer Vision';
-      description: 'Computer vision solutions for image recognitionobject detectionand visual analytics.';
-      features: ['Image 'Recognition', 'Object 'Detection', 'Facial 'Recognition', 'Quality Control'];
-      icon: '👁️';
-      category: 'Visual AI';
-      complexity: 'Advanced'};
+      id: 'computer-vision',
+      title: 'Computer Vision',
+      description: 'Computer vision solutions for image recognitionobject detectionand visual analytics.',
+      features: ['Image 'RecognitionObject 'Detection', 'Facial 'RecognitionQuality Control'],
+      icon: '👁️',
+      category: 'Visual AI',
+      complexity: 'Advanced'},
     {
-      id: 'autonomous-systems';
-      title: 'Autonomous Systems';
-      description: 'Self-operating systems that can make decisions and take actions independently.';
-      features: ['Decision 'Making', 'Self-'Learning', 'Adaptive 'Behavior', 'Continuous Improvement'];
-      icon: '🤖';
-      category: 'Autonomy';
-      complexity: 'Expert'};
+      id: 'autonomous-systems',
+      title: 'Autonomous Systems',
+      description: 'Self-operating systems that can make decisions and take actions independently.',
+      features: ['Decision 'MakingSelf-'Learning', 'Adaptive 'BehaviorContinuous Improvement'],
+      icon: '🤖',
+      category: 'Autonomy',
+      complexity: 'Expert'},
     {
-      id: 'predictive-analytics';
-      title: 'Predictive Analytics';
-      description: 'Data-driven insights that help predict future trends and behaviors.';
-      features: ['Trend 'Analysis', 'Risk 'Assessment', 'Forecasting'Behavioral Prediction'];
-      icon: '📊';
-      category: 'Analytics';
-      complexity: 'Intermediate'};
+      id: 'predictive-analytics',
+      title: 'Predictive Analytics',
+      description: 'Data-driven insights that help predict future trends and behaviors.',
+      features: ['Trend 'AnalysisRisk 'Assessment', 'Forecasting'Behavioral Prediction'],
+      icon: '📊',
+      category: 'Analytics',
+      complexity: 'Intermediate'},
     {
-      id: 'ai-automation';
-      title: 'AI-Powered Automation';
-      description: 'Intelligent automation that learns and improves over time.';
-      features: ['Process 'Automation', 'Workflow 'Optimization', 'Intelligent 'Routing', 'Adaptive Workflows'];
-      icon: '⚡';
-      category: 'Automation';
+      id: 'ai-automation',
+      title: 'AI-Powered Automation',
+      description: 'Intelligent automation that learns and improves over time.',
+      features: ['Process 'AutomationWorkflow 'Optimization', 'Intelligent 'RoutingAdaptive Workflows'],
+      icon: '⚡',
+      category: 'Automation',
       complexity: 'Intermediate'}
   ],
   const useCases = [
     {
-      industry: 'Manufacturing';
-      solutions: ['Quality 'Control', 'Predictive 'Maintenance', 'Supply Chain Optimization'];
-      icon: '🏭'};
+      industry: 'Manufacturing',
+      solutions: ['Quality 'ControlPredictive 'Maintenance', 'Supply Chain Optimization'],
+      icon: '🏭'},
     {
-      industry: 'Healthcare';
-      solutions: ['Diagnostic 'Support', 'Patient Care 'Optimization', 'Drug Discovery'];
-      icon: '🏥'};
+      industry: 'Healthcare',
+      solutions: ['Diagnostic 'SupportPatient Care 'Optimization', 'Drug Discovery'],
+      icon: '🏥'},
     {
-      industry: 'Finance';
-      solutions: ['Fraud 'Detection', 'Risk 'Assessment', 'Algorithmic Trading'];
-      icon: '💳'};
+      industry: 'Finance',
+      solutions: ['Fraud 'DetectionRisk 'Assessment', 'Algorithmic Trading'],
+      icon: '💳'},
     {
-      industry: 'Retail';
-      solutions: ['Customer 'Segmentation', 'Inventory 'Management', 'Personalized Marketing'];
+      industry: 'Retail',
+      solutions: ['Customer 'SegmentationInventory 'Management', 'Personalized Marketing'],
       icon: '🛍️'}
   ],
   const technologies = [
-    ', 'TensorFlow', 'PyTorch'Scikit-'learn', 'OpenAI 'GPT', 'BERT', 'YOLO', 'Keras'Pandas'],
+    TensorFlow', 'PyTorch'Scikit-'learnOpenAI 'GPT', 'BERTYOLO', 'Keras'Pandas'],
   return (
     <>,
       <Head>,

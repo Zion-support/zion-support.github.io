@@ -7,56 +7,56 @@ const UltimateContent20o25RevolutionaryBanner = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const featuredContent = [
     {
-      id: 'enterprise-ai-revolution';
-      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+      id: 'enterprise-ai-revolution',
+      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        satisfaction: '98%';
-        projects: '50o0+'};
-      description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with revolutionary AI implementations.';
-      readingTime: '18 min read';
-      featured: true};
+        roi: '50o0%',
+        savings: '$2.8B',
+        satisfaction: '98%',
+        projects: '50o0+'},
+      description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with revolutionary AI implementations.',
+      readingTime: '18 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-transformation';
-      title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months';
-      type: 'Case Study';
-      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25';
+      id: 'fortune-50o0-transformation',
+      title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months',
+      type: 'Case Study',
+      url: '/case-studies/fortune-50o0-ai-transformation-ultimate-success-20o25',
       metrics: {
-        roi: '567%';
-        savings: '$2.8B';
-        satisfaction: '99.2%';
-        timeline: '18 months'};
-      description: 'How a $50B manufacturing giant achieved 567% ROI with revolutionary AI implementation.';
-      readingTime: '22 min read';
-      featured: true};
+        roi: '567%',
+        savings: '$2.8B',
+        satisfaction: '99.2%',
+        timeline: '18 months'},
+      description: 'How a $50B manufacturing giant achieved 567% ROI with revolutionary AI implementation.',
+      readingTime: '22 min read',
+      featured: true},
     {
-      id: 'quantum-computing-revolution';
-      title: 'AI 20o25: The Quantum Computing Business Revolution - $10o0B Market Transformation';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-quantum-computing-business-revolution';
+      id: 'quantum-computing-revolution',
+      title: 'AI 20o25: The Quantum Computing Business Revolution - $10o0B Market Transformation',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution',
       metrics: {
-        roi: '1,20o0%';
-        market: '$10o0B';
-        accuracy: '99.97%';
-        speed: '1,20o0%'};
-      description: 'Discover how quantum computing is revolutionizing business operations with 1,20o0% processing speed improvements.';
-      readingTime: '20 min read';
-      featured: true};
+        roi: '1,20o0%',
+        market: '$10o0B',
+        accuracy: '99.97%',
+        speed: '1,20o0%'},
+      description: 'Discover how quantum computing is revolutionizing business operations with 1,20o0% processing speed improvements.',
+      readingTime: '20 min read',
+      featured: true},
     {
-      id: 'implementation-ultimate-guide';
-      title: 'AI Implementation Ultimate Guide 20o25: From Strategy to 50o0% ROI - Complete Edition';
-      type: 'Resource';
-      url: '/resources/ai-implementation-ultimate-guide-20o25-complete';
+      id: 'implementation-ultimate-guide',
+      title: 'AI Implementation Ultimate Guide 20o25: From Strategy to 50o0% ROI - Complete Edition',
+      type: 'Resource',
+      url: '/resources/ai-implementation-ultimate-guide-20o25-complete',
       metrics: {
-        roi: '50o0%+';
-        success: '94%';
-        timeline: '18 months';
-        projects: '50o0+'};
-      description: 'Complete step-by-step guide to AI implementation with proven frameworks and actionable strategies.';
-      readingTime: '35 min read';
+        roi: '50o0%+',
+        success: '94%',
+        timeline: '18 months',
+        projects: '50o0+'},
+      description: 'Complete step-by-step guide to AI implementation with proven frameworks and actionable strategies.',
+      readingTime: '35 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -70,11 +70,11 @@ const UltimateContent20o25RevolutionaryBanner = () => {
     return () => clearInterval(interval)}, [featuredContent.length]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ultimateContent20o25RevolutionaryBanner_dismissed', 'true')};
+    localStorage.setItem('ultimateContent20o25RevolutionaryBanner_dismissedtrue')},
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredContent.length)};
+    setCurrentSlide((prev) => (prev + 1) % featuredContent.length)},
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)};
+    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)},
   if (isDismissed) return null,
   const currentContent = featuredContent[currentSlide],
   return (
@@ -267,5 +267,5 @@ const UltimateContent20o25RevolutionaryBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent20o25RevolutionaryBanner;
+    </div>)},
+export default UltimateContent20o25RevolutionaryBanner,

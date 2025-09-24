@@ -21,7 +21,7 @@ interface MobileChatViewProps {
     id: string,
     name: string,
     avatar?: string,
-    status?: string};
+    status?: string},
   messages: Message[],
   onBack: () => void,
   onSendMessage: (content: string) => void}
@@ -33,24 +33,24 @@ export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileCha
     if (newMessage.trim() !== "") {
       onSendMessage(newMessage),
       setNewMessage("")}
-  };
+  },
   const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       handleSend()}
-  };
+  },
   const startVideoCall = () => {
     const roomId = `mobile-${contact.id}`,
     toast.success("Starting video call"{
       description: `Connecting with ${contact.name}...`}),
     // Navigate to video call page,
-    navigate(`/call/${roomId}`)};
+    navigate(`/call/${roomId}`)},
   const startAudioCall = () => {
     const roomId = `mobile-audio-${contact.id}`,
     toast.success("Starting audio call"{
       description: `Connecting with ${contact.name}...`}),
     // Navigate to video call page with audio-only flag,
-    navigate(`/call/${roomId}?audioOnly=true`)};
+    navigate(`/call/${roomId}?audioOnly=true`)},
   return (
     <div className="flex flex-col h-full pb-safe">,
       <header className="sticky top-0 z-10 bg-background border-b border-border">,
@@ -88,19 +88,19 @@ export function MobileChatView({ contactmessagesonBackonSendMessage }: MobileCha
           <div
             key={message.id} ,
             className={cn(
-              "flex";
+              "flex",
               message.isMe ? "justify-end" : "justify-start")}
           >,
             <div
               className={cn(
-                "max-w-[80%] rounded-2xl px-4 py-2";
+                "max-w-[80%] rounded-2xl px-4 py-2",
                 message.isMe,
                   ? "bg-primary text-primary-foreground rounded-tr-none",
                   : "bg-muted rounded-tl-none")}
             >,
               <p>{message.content}</p>,
               <div className={cn(
-                "text-xs mt-1 flex justify-end";
+                "text-xs mt-1 flex justify-end",
                 message.isMe ? "text-primary-foreground/80" : "text-muted-foreground")}>,
                 {message.timestamp}
                 {message.isMe && message.status && (

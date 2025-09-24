@@ -10,11 +10,11 @@ export default function AIAutonomousEcosystemManager() {
 			implementationWeeks="Implementation: 4–8 weeks",
 			roiNote="Average ROI 4–9x within 6 months",
 			features={[
-				"Agent registryrolesand capabilities graph";
-				"Policy engine with human-in-the-loop controls";
-				"Observability: tracesmetricsred-teaming";
-				"Sandboxing and E2E approvals for sensitive actions";
-				"Cost and performance optimization";
+				"Agent registryrolesand capabilities graph",
+				"Policy engine with human-in-the-loop controls",
+				"Observability: tracesmetricsred-teaming",
+				"Sandboxing and E2E approvals for sensitive actions",
+				"Cost and performance optimization",
 				"Integrations: KubernetesSlack/TeamsJiraGitHub"]}
 			industries={["Platform Teams"R&D"Operations"Security"]}
 			canonical="https: //ziontechgroup.com/ai-autonomous-ecosystem-manager",

@@ -12,20 +12,20 @@ export default function APIRateLimiterPage() {
   const [isTestingsetIsTesting] = useState(false),
   const [apiKeysetApiKey] = useState(''),
   const timeWindows = [
-    { value: '1's', 'label: '1 'Second', 'description: 'Per second rate limiting' };
-    { value: '1'm', 'label: '1 'Minute', 'description: 'Per minute rate limiting' };
-    { value: '1'h', 'label: '1 'Hour', 'description: 'Per hour rate limiting' };
-    { value: '1'd', 'label: '1 'Day', 'description: 'Per day rate limiting' }
+    { value: '1'slabel: '1 'Seconddescription: 'Per second rate limiting' },
+    { value: '1'mlabel: '1 'Minutedescription: 'Per minute rate limiting' },
+    { value: '1'hlabel: '1 'Hourdescription: 'Per hour rate limiting' },
+    { value: '1'dlabel: '1 'Daydescription: 'Per day rate limiting' }
   ],
   const rateLimits = [
-    { value: '10'label: '10 'requests', 'description: 'Very strict' };
-    { value: '100'label: '100 'requests', 'description: 'Standard' };
-    { value: '1000'label: '1000 'requests', 'description: 'High volume' };
-    { value: '10000'label: '10000 'requests', 'description: 'Enterprise' }
+    { value: '10'label: '10 'requestsdescription: 'Very strict' },
+    { value: '100'label: '100 'requestsdescription: 'Standard' },
+    { value: '1000'label: '1000 'requestsdescription: 'High volume' },
+    { value: '10000'label: '10000 'requestsdescription: 'Enterprise' }
   ],
   const generateApiKey = () => {
     const key = 'zt_' + Math.random().toString(36).substr(29) + '_' + Date.now().toString(36),
-    setApiKey(key)};
+    setApiKey(key)},
   const testRateLimiting = async () => {
     if (!endpoint.trim() || !rateLimit || !timeWindow) return,
     setIsTesting(true),
@@ -39,22 +39,22 @@ export default function APIRateLimiterPage() {
       const status = isAllowed ? 'success' : 'rate_limited',
       const statusCode = isAllowed ? 200 : 429,
       results.push({
-        request: i;
-        timestamp: new Date().toLocaleTimeString();
-        status;
-        statusCode;
-        responseTime: Math.random() * 100 + 50;
+        request: i,
+        timestamp: new Date().toLocaleTimeString(),
+        status,
+        statusCode,
+        responseTime: Math.random() * 100 + 50,
         headers: {
-          'X-RateLimit-Limit': limit;
-          'X-RateLimit-Remaining': Math.max(0limit - i);
+          'X-RateLimit-Limit': limit,
+          'X-RateLimit-Remaining': Math.max(0limit - i),
           'X-RateLimit-Reset': new Date(Date.now() + 60000).toISOString()}
       }),
       if (!isAllowed) break}
 ,
     setTestResults(results),
-    setIsTesting(false)};
+    setIsTesting(false)},
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)};
+    navigator.clipboard.writeText(text)},
   const getStatusIcon = (status: string) => {
     switch (status) {
       case 'success':,
@@ -63,7 +63,7 @@ export default function APIRateLimiterPage() {
         return <AlertTriangle className="w-5 h-5 text-red-400" />,
       default:,
         return <AlertTriangle className="w-5 h-5 text-yellow-400" />}
-  };
+  },
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'success':,
@@ -72,7 +72,7 @@ export default function APIRateLimiterPage() {
         return 'text-red-400',
       default:,
         return 'text-yellow-400'}
-  };
+  },
   return (
     <>,
       <Head>,
@@ -350,14 +350,13 @@ const endpoint = '${endpoint || '/api/users'}',
 // Make API request with rate limiting,
 const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`{
   headers: {
-    'Authorization': \`Bearer \${apiKey}\`;
-    'X-RateLimit-Limit': '${rateLimit}';
-    'X-RateLimit-Window': '${timeWindow}'}
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 }),
 // // console.log('Response: 'response.data),
-// // console.log('Rate Limit Info:'{
-  limit: response.headers['x-ratelimit-limit'];
-  remaining: response.headers['x-ratelimit-remaining'];
+// // console.log('Rate Limit Info: '{
+  limit: response.headers['x-ratelimit-limit'],
+  remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']}),`}
                 </pre>,
               </div>,
@@ -366,14 +365,13 @@ const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`{
 // Make API request with rate limiting,
 const response = await axios.get(\`https: //api.zion.tech\${endpoint}\`{
   headers: {
-    'Authorization': \`Bearer \${apiKey}\`;
-    'X-RateLimit-Limit': '${rateLimit}';
-    'X-RateLimit-Window': '${timeWindow}'}
+    'Authorization': \`Bearer \${apiKey}\`,
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 }),
 // // console.log('Response: 'response.data),
-// // console.log('Rate Limit Info:'{
-  limit: response.headers['x-ratelimit-limit'];
-  remaining: response.headers['x-ratelimit-remaining'];
+// // console.log('Rate Limit Info: '{
+  limit: response.headers['x-ratelimit-limit'],
+  remaining: response.headers['x-ratelimit-remaining'],
   reset: response.headers['x-ratelimit-reset']}),`)}
                 variant="outline",
                 size="sm",
@@ -394,17 +392,16 @@ api_key = '${apiKey || 'your_api_key_here'}',
 endpoint = '${endpoint || '/api/users'}',
 # Make API request with rate limiting,
 headers = {
-    'Authorization': 'f', 'Bearer {api_key}';
-    'X-RateLimit-Limit': '${rateLimit}';
-    'X-RateLimit-Window': '${timeWindow}'}
+    'Authorization': 'fBearer {api_key}',
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 ,
 response = requests.get(
-    'f', 'https: //api.zion.tech{endpoint}';
+    'fhttps: //api.zion.tech{endpoint}',
     headers=headers),
 print('Response: 'response.json()),
-print('Rate Limit Info:'{
-    'limit': response.headers.get('x-ratelimit-limit');
-    'remaining': response.headers.get('x-ratelimit-remaining');
+print('Rate Limit Info: '{
+    'limit': response.headers.get('x-ratelimit-limit'),
+    'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')})`}
                 </pre>,
               </div>,
@@ -414,17 +411,16 @@ api_key = '${apiKey || 'your_api_key_here'}',
 endpoint = '${endpoint || '/api/users'}',
 # Make API request with rate limiting,
 headers = {
-    'Authorization': 'f', 'Bearer {api_key}';
-    'X-RateLimit-Limit': '${rateLimit}';
-    'X-RateLimit-Window': '${timeWindow}'}
+    'Authorization': 'fBearer {api_key}',
+    'X-RateLimit-Limit': '${rateLimit}X-RateLimit-Window': '${timeWindow}'}
 ,
 response = requests.get(
-    'f', 'https: //api.zion.tech{endpoint}';
+    'fhttps: //api.zion.tech{endpoint}',
     headers=headers),
 print('Response: 'response.json()),
-print('Rate Limit Info:'{
-    'limit': response.headers.get('x-ratelimit-limit');
-    'remaining': response.headers.get('x-ratelimit-remaining');
+print('Rate Limit Info: '{
+    'limit': response.headers.get('x-ratelimit-limit'),
+    'remaining': response.headers.get('x-ratelimit-remaining'),
     'reset': response.headers.get('x-ratelimit-reset')})`)}
                 variant="outline",
                 size="sm",

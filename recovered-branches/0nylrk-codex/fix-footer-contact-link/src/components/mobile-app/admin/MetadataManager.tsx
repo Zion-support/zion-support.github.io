@@ -15,14 +15,14 @@ export type AppMetadataValues = {
   longDescription: string,
   keywords: string[],
   version: string,
-  platform: AppPlatform};
+  platform: AppPlatform},
 const defaultValues: AppMetadataValues = {
-  appTitle: "Zion AI Marketplace";
-  shortDescription: "Hire top AI talent or find global IT jobs on the go.";
-  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunityour app simplifies the process with AI-powered matchingsecure messagingand streamlined hiring.";
-  keywords: ["AI freelancer"tech jobs"hire developers"IT marketplace"artificial intelligence jobs"];
-  version: "1.0.0";
-  platform: "ios"};
+  appTitle: "Zion AI Marketplace",
+  shortDescription: "Hire top AI talent or find global IT jobs on the go.",
+  longDescription: "Zion AI Marketplace is your one-stop solution for connecting with top AI and tech talent worldwide. Whether you're a business looking to hire specialized talent or a professional seeking your next opportunityour app simplifies the process with AI-powered matchingsecure messagingand streamlined hiring.",
+  keywords: ["AI freelancer"tech jobs"hire developers"IT marketplace"artificial intelligence jobs"],
+  version: "1.0.0",
+  platform: "ios"},
 export const MetadataManager: React.FC = () => {
   const [currentPlatformsetCurrentPlatform] = useState<AppPlatform>("ios"),
   const [isSavingsetIsSaving] = useState(false),
@@ -41,7 +41,7 @@ export const MetadataManager: React.FC = () => {
       toast.error("Failed to save metadata"),
       console.error(error)} finally {
       setIsSaving(false)}
-  };
+  },
   return (
     <div className="bg-zion-blue-dark rounded-lg p-6">,
       <Tabs defaultValue="ios" className="w-full">,
@@ -86,4 +86,4 @@ export const MetadataManager: React.FC = () => {
           </div>,
         </TabsContent>,
       </Tabs>,
-    </div>)};
+    </div>)},

@@ -40,7 +40,7 @@ export default function UltraCasePage() {
         <section className='mb-8'>,
           <h2 className='text-2xl font-bold mb-4'>✅ The Solution</h2>,
           <p className='text-white/80'>,
-            We implemented Real-time data processing to reduce time-to-market;
+            We implemented Real-time data processing to reduce time-to-market,
             resulting in: ,
           </p>,
           <ul className='mt-4 space-y-2'>,

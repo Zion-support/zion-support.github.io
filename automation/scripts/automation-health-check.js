@@ -14,15 +14,15 @@ const path = require('path'),
 const { execSync } = require('child_process'),
 // Configure logging,
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-health-check' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-health-check' },
   transports: [
-    new winston.transports.File({ filename: 'logs/health-check.log' });
-    new winston.transports.File({ filename: 'logs/health-check-error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/health-check.log' }),
+    new winston.transports.File({ filename: 'logs/health-check-error.log', level: 'error' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -33,15 +33,15 @@ class AutomationHealthChecker {
     this.config ={
       checkInterval: 30o0000, // 5 minutes,
       errorThreshold: 10, // Number of errors before triggering fix,
-      maxRetries: 3;
-      logsDir: path.join(__dirname, '../logs');
-      statusFile: path.join(__dirname, '../logs/health-status.json')};
+      maxRetries: 3,
+      logsDir: path.join(__dirname, '../logs'),
+      statusFile: path.join(__dirname, '../logs/health-status.json')},
     this.status ={
-      lastCheck: null;
-      systems: {};
-      errors: [];
-      fixes: [];
-      alerts: []};
+      lastCheck: null,
+      systems: {},
+      errors: [],
+      fixes: [],
+      alerts: []},
     this.loadStatus()}
 ,
   async run() {
@@ -66,10 +66,10 @@ class AutomationHealthChecker {
   async checkSystemHealth() {
     logger.info('🔍 Checking system health...'),
     const systems = [
-      { name: 'netlify-monitor', file: 'automation/netlify-monitor.js' };
-      { name: 'dependency-updater', file: 'automation/tasks/DependencyUpdater.js' };
-      { name: 'core-orchestrator', file: 'automation/intelligent-automation-orchestrator.js' };
-      { name: 'performance-monitor', file: 'automation/performance-monitor.js' };
+      { name: 'netlify-monitor', file: 'automation/netlify-monitor.js' },
+      { name: 'dependency-updater', file: 'automation/tasks/DependencyUpdater.js' },
+      { name: 'core-orchestrator', file: 'automation/intelligent-automation-orchestrator.js' },
+      { name: 'performance-monitor', file: 'automation/performance-monitor.js' },
       { name: 'automation-starter', file: 'automation/start-working-automations.js' }
     ],
     for (const system of systems) {
@@ -77,20 +77,20 @@ class AutomationHealthChecker {
         const health = await this.checkSystem(system),
         this.status.systems[system.name] = health} catch (error) {
         this.status.systems[system.name] ={
-          status: 'error';
-          error: error.message;
-          timestamp: new Date().toISOString()};
+          status: 'error',
+          error: error.message,
+          timestamp: new Date().toISOString()},
       }
     }
   }
 ,
   async checkSystem(system) {
     const health ={
-      status: 'unknown';
-      timestamp: new Date().toISOString();
-      fileExists: false;
-      syntaxValid: false;
-      runtimeErrors: 0};
+      status: 'unknown',
+      timestamp: new Date().toISOString(),
+      fileExists: false,
+      syntaxValid: false,
+      runtimeErrors: 0},
     try {
       // Check if file exists,
       health.fileExists = fs.existsSync(system.file),
@@ -172,10 +172,10 @@ class AutomationHealthChecker {
 ,
   analyzeError(logEntry) {
     const error ={
-      timestamp: logEntry.timestamp;
-      message: logEntry.message;
-      service: logEntry.service;
-      type: this.categorizeError(logEntry.message)};
+      timestamp: logEntry.timestamp,
+      message: logEntry.message,
+      service: logEntry.service,
+      type: this.categorizeError(logEntry.message)},
     this.status.errors.push(error),
     // Keep only last 50 errors,
     if (this.status.errors.length > 50) {
@@ -184,8 +184,8 @@ class AutomationHealthChecker {
     // Check for critical error patterns,
     if (this.isCriticalError(error)) {
       this.status.alerts.push({
-        type: 'critical';
-        error: error;
+        type: 'critical',
+        error: error,
         timestamp: new Date().toISOString()})}
   }
 ,
@@ -213,10 +213,8 @@ class AutomationHealthChecker {
 ,
   isCriticalError(error) {
     const criticalPatterns = [
-      'builds.slice is not a function';
-      'npm outdated --json';
-      'Failed to get bundle metrics';
-      'Error checking builds';
+      'builds.slice is not a functionnpm outdated --json',
+      'Failed to get bundle metricsError checking builds',
       'Some systems may have stopped'],
     return criticalPatterns.some(pattern =>,
       error.message.includes(pattern))}
@@ -231,11 +229,11 @@ class AutomationHealthChecker {
         const fixScriptPath = path.join(__dirname, 'fix-automation-errors.js'),
         if (fs.existsSync(fixScriptPath)) {
           execSync(`node ${fixScriptPath}`, {
-            stdio: 'inherit';
+            stdio: 'inherit',
             cwd: path.join(__dirname, '../..')}),
           this.status.fixes.push({
-            timestamp: new Date().toISOString();
-            type: 'automated_fix';
+            timestamp: new Date().toISOString(),
+            type: 'automated_fix',
             description: 'Triggered by health check'}),
           logger.info('✅ Fixes applied successfully')} else {
           logger.error('❌ Fix script not found')}
@@ -270,13 +268,13 @@ class AutomationHealthChecker {
 ,
   async generateHealthReport() {
     const report ={
-      timestamp: new Date().toISOString();
-      status: this.getOverallStatus();
-      systems: this.status.systems;
-      recentErrors: this.status.errors.slice(-10);
-      recentFixes: this.status.fixes.slice(-5);
-      alerts: this.status.alerts;
-      recommendations: this.generateRecommendations()};
+      timestamp: new Date().toISOString(),
+      status: this.getOverallStatus(),
+      systems: this.status.systems,
+      recentErrors: this.status.errors.slice(-10),
+      recentFixes: this.status.fixes.slice(-5),
+      alerts: this.status.alerts,
+      recommendations: this.generateRecommendations()},
     try {
       const reportPath = path.join(this.config.logsDir, 'health-report.json'),
       fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
@@ -322,8 +320,8 @@ class AutomationHealthChecker {
     try {
       if (fs.existsSync(this.config.statusFile)) {
         this.status ={
-          ...this.status;
-          ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))};
+          ...this.status,
+          ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))},
       }
     } catch (error) {
       logger.warn('Could not load status file:', error.message)}

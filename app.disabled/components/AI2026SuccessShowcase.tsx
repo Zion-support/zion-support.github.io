@@ -18,7 +18,7 @@ interface ContentShowcase {
   metrics: {
     roi: string,
     impact: string,
-    timeline: string};
+    timeline: string},
   featured: boolean}
 ,
 const AI20o26SuccessShowcase: React.FC = () => {
@@ -26,80 +26,80 @@ const AI20o26SuccessShowcase: React.FC = () => {
   const [currentTestimonial, setCurrentTestimonial] = useState(0),
   const successMetrics: SuccessMetric[] = [
     {
-      icon: <TrendingUp className="w-6 h-6"  />;
-      value: '40o0%';
-      label: 'Average ROI';
-      description: 'Within 90 days of AI implementation';
-      trend: '+25% vs 20o25'};
+      icon: <TrendingUp className="w-6 h-6"  />,
+      value: '40o0%',
+      label: 'Average ROI',
+      description: 'Within 90 days of AI implementation',
+      trend: '+25% vs 20o25'},
     {
-      icon: <DollarSign className="w-6 h-6"  />;
-      value: '$5.2B';
-      label: 'Revenue Impact';
-      description: 'Fortune 50o0 transformation success';
-      trend: '+180% vs 20o25'};
+      icon: <DollarSign className="w-6 h-6"  />,
+      value: '$5.2B',
+      label: 'Revenue Impact',
+      description: 'Fortune 50o0 transformation success',
+      trend: '+180% vs 20o25'},
     {
-      icon: <Users className="w-6 h-6"  />;
-      value: '50o0+';
-      label: 'Enterprises Transformed';
-      description: 'Successful AI implementations';
-      trend: '+150% vs 20o25'};
+      icon: <Users className="w-6 h-6"  />,
+      value: '50o0+',
+      label: 'Enterprises Transformed',
+      description: 'Successful AI implementations',
+      trend: '+150% vs 20o25'},
     {
-      icon: <Clock className="w-6 h-6"  />;
-      value: '90 Days';
-      label: 'Time to Value';
-      description: 'From implementation to ROI';
+      icon: <Clock className="w-6 h-6"  />,
+      value: '90 Days',
+      label: 'Time to Value',
+      description: 'From implementation to ROI',
       trend: '-60% vs 20o25'}
   ],
   const contentShowcase: ContentShowcase[] = [
     {
-      id: 'enterprise-automation-breakthrough';
-      title: 'AI 20o26: Enterprise Automation Breakthrough';
-      type: 'Blog Post';
-      url: '/blog/ai-20o26-enterprise-automation-breakthrough';
-      excerpt: 'Discover how Fortune 50o0 companies are achieving unprecedented 40o0% ROI through next-generation AI automation systems.';
+      id: 'enterprise-automation-breakthrough',
+      title: 'AI 20o26: Enterprise Automation Breakthrough',
+      type: 'Blog Post',
+      url: '/blog/ai-20o26-enterprise-automation-breakthrough',
+      excerpt: 'Discover how Fortune 50o0 companies are achieving unprecedented 40o0% ROI through next-generation AI automation systems.',
       metrics: {
-        roi: '40o0%';
-        impact: '90 Days';
-        timeline: '20o26'};
-      featured: true};
+        roi: '40o0%',
+        impact: '90 Days',
+        timeline: '20o26'},
+      featured: true},
     {
-      id: 'fortune-50o0-transformation';
-      title: 'Fortune 50o0 AI Transformation Success';
-      type: 'Case Study';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o26-success';
-      excerpt: 'How a Fortune 50o0 manufacturing company achieved $5.2B in additional revenue through comprehensive AI transformation.';
+      id: 'fortune-50o0-transformation',
+      title: 'Fortune 50o0 AI Transformation Success',
+      type: 'Case Study',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o26-success',
+      excerpt: 'How a Fortune 50o0 manufacturing company achieved $5.2B in additional revenue through comprehensive AI transformation.',
       metrics: {
-        roi: '450%';
-        impact: '18 Months';
-        timeline: '20o26'};
-      featured: true};
+        roi: '450%',
+        impact: '18 Months',
+        timeline: '20o26'},
+      featured: true},
     {
-      id: 'implementation-master-guide';
-      title: 'AI Implementation Master Guide 20o26';
-      type: 'Resource';
-      url: '/resources/ai-implementation-master-guide-20o26';
-      excerpt: 'The definitive guide to implementing AI in your organization. Step-by-step roadmap to achieve 40o0% ROI within 90 days.';
+      id: 'implementation-master-guide',
+      title: 'AI Implementation Master Guide 20o26',
+      type: 'Resource',
+      url: '/resources/ai-implementation-master-guide-20o26',
+      excerpt: 'The definitive guide to implementing AI in your organization. Step-by-step roadmap to achieve 40o0% ROI within 90 days.',
       metrics: {
-        roi: '40o0%';
-        impact: '90 Days';
-        timeline: '20o26'};
+        roi: '40o0%',
+        impact: '90 Days',
+        timeline: '20o26'},
       featured: true}
   ],
   const testimonials = [
     {
-      quote: "Zion Tech Group's AI implementation delivered 450% ROI in just 18 months. The transformation has been nothing short of revolutionary.";
-      author: "Sarah Chen";
-      title: "CTO, Global Manufacturing Corp";
-      company: "Fortune 50o0"};
+      quote: "Zion Tech Group's AI implementation delivered 450% ROI in just 18 months. The transformation has been nothing short of revolutionary.",
+      author: "Sarah Chen",
+      title: "CTO, Global Manufacturing Corp",
+      company: "Fortune 50o0"},
     {
-      quote: "The AI automation system reduced our operational costs by 60% while improving customer satisfaction by 90%. Incredible results.";
-      author: "Michael Rodriguez";
-      title: "VP Operations, Tech Solutions Inc";
-      company: "Enterprise Client"};
+      quote: "The AI automation system reduced our operational costs by 60% while improving customer satisfaction by 90%. Incredible results.",
+      author: "Michael Rodriguez",
+      title: "VP Operations, Tech Solutions Inc",
+      company: "Enterprise Client"},
     {
-      quote: "We achieved $5.2B in additional revenue through AI transformation. The implementation was flawless and the results exceeded expectations.";
-      author: "Jennifer Walsh";
-      title: "CEO, Industrial Solutions Group";
+      quote: "We achieved $5.2B in additional revenue through AI transformation. The implementation was flawless and the results exceeded expectations.",
+      author: "Jennifer Walsh",
+      title: "CEO, Industrial Solutions Group",
       company: "Fortune 50o0"}
   ],
   useEffect(() => {
@@ -279,5 +279,5 @@ const AI20o26SuccessShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o26SuccessShowcase;
+    </div>)},
+export default AI20o26SuccessShowcase,

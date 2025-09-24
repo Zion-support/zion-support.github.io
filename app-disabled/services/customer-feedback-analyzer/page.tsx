@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'customer-feedback-analyzer - Zion Tech Group';
+  title: 'customer-feedback-analyzer - Zion Tech Group',
   description:,
-    'Professional customer-feedback-analyzer solutions for your business needs.';
-  keywords: 'customer-feedback-analyzer, services, business, technology';
-};
+    'Professional customer-feedback-analyzer solutions for your business needs.',
+  keywords: 'customer-feedback-analyzer, services, business, technology',
+},
 export default function CustomerFeedbackAnalyzerPage() {
   return (
     <div className='min-h-screen bg-white'>,

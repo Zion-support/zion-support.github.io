@@ -12,7 +12,7 @@ export default function ServiceCard({ service, onSelect }) {
   const handleClick = () => {
     if (onSelect) {
       onSelect(service.id)}
-  };
+  },
   const handleSave = e => {
     e.stopPropagation(),
     if (!user) {
@@ -22,10 +22,10 @@ export default function ServiceCard({ service, onSelect }) {
       return}
     dispatch(addToWishlist({ id: service.id, type: 'service', data: service })),
     fetch(`${getApiUrl()}/wishlist`, {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ id: service.id, type: 'service' });
-    }).catch(() => {})};
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ id: service.id, type: 'service' }),
+    }).catch(() => {})},
   return (
     <div
       data-testid={`service-card-${service.id}`}

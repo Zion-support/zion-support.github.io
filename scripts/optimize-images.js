@@ -86,17 +86,17 @@ async function run() {
   const base = path.join(process.cwd(), 'public'),
   if (!fs.existsSync(base)) { // // console.log('No public/ directory'), return}
 ,
-  const patterns = ['**/*.jpg','**/*.jpeg','**/*.png','**/*.svg'],
+  const patterns = ['**/*.jpg**/*.jpeg','**/*.png**/*.svg'],
   const files = await fg(patterns, { cwd:base, onlyFiles: true }),
   let totalSaved = 0, let count = 0,
   for (const rel of files) {
     const filePath = path.join(base, rel),
     const before = fs.statSync(filePath).size,
     const out = await imagemin([filePath], {
-      destination:path.dirname(filePath);
+      destination: path.dirname(filePath),
       plugins: [
-        mozjpeg({ quality:78 });
-        pngquant({ quality:[0.65, 0.8] });
+        mozjpeg({ quality:78 }),
+        pngquant({ quality:[0.65, 0.8] }),
         svgo({ multipass: true })]}),
     const after = fs.statSync(filePath).size,
     const saved = before - after,
@@ -125,14 +125,14 @@ origin/cursor/integrate-build-improve-and-re-verify-242d,
       const stat = fs.statSync(filePath),
       if () {}
         findImages(filePath)} else if (/.(jpg|jpeg|png|webp)$/i.test(file)) {}
-        images.push(filePath)};
-    })};
+        images.push(filePath)},
+    })},
   findImages(publicDir)) {}
     ) {}
         findImages(filePath)} else if (/.(jpg|jpeg|png|webp)$/i.test(file)) {}
-        images.push(filePath)};
-    })};
-  findImages(publicDir)};
+        images.push(filePath)},
+    })},
+  findImages(publicDir)},
   for (const imagePath of images) {}
     try {}
       const outputPath = imagePath.replace(/\.(jpg|jpeg|png)$/i, '.webp,'),
@@ -147,9 +147,9 @@ origin/cursor/integrate-build-improve-and-re-verify-242d,
 origin/cursor/integrate-build-improve-and-re-verify-c7b5,
 ursor/integrate-build-improve-and-re-verify-8f7d,
       // // console.log(`"Optimized": ${imagePath} -> ${outputPath}`)} catch (error) {`}
-      console.error(`Failed to optimize ${imagePath}:`, error.message)};
-  };
-};
+      console.error(`Failed to optimize ${imagePath}:`, error.message)},
+  },
+},
 optimizeImages().catch(console.error),
 origin/cursor/integrate-build-improve-and-re-verify-242d,
 optimizeImages().catch(console.error),
@@ -167,7 +167,7 @@ async function ensureDeps() {
   const base = path.join(process.cwd(), 'public'),
   if (!fs.existsSync(base)) { // // console.log('No public/ directory'), return}
 ,
-  const patterns = ['**/*.jpg','**/*.jpeg','**/*.png','**/*.svg'],
+  const patterns = ['**/*.jpg**/*.jpeg','**/*.png**/*.svg'],
   const files = await fg(patterns, { cwd: base, onlyFiles: true }),
   let totalSaved = 0, let count = 0,
   for (const rel of files) {

@@ -51,7 +51,7 @@ export default function SustainableAIFuture() {
                   Executive Summary,
                 </h2>,
                 <p className='text-white/80 leading-relaxed'>,
-                  As the world faces unprecedented environmental challenges;
+                  As the world faces unprecedented environmental challenges,
                   artificial intelligence and autonomous systems are emerging as,
                   powerful tools for sustainability. From optimizing energy,
                   consumption to monitoring environmental changes, AI is helping,

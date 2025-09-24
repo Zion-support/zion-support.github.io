@@ -1,9 +1,9 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata ={
-  title: 'AI 20o26 Breakthrough Revolutionary Content - Zion Tech Group';
-  description: 'Experience the future of AI with our revolutionary 20o26 breakthrough content. Quantum-neural fusionconsciousness integrationand transcendent intelligence delivering infinite possibilities.';
-  keywords: 'AI 20o26 breakthroughrevolutionary contentquantum neural fusionconsciousness integrationtranscendent intelligencefuture AI'};
+  title: 'AI 20o26 Breakthrough Revolutionary Content - Zion Tech Group',
+  description: 'Experience the future of AI with our revolutionary 20o26 breakthrough content. Quantum-neural fusionconsciousness integrationand transcendent intelligence delivering infinite possibilities.',
+  keywords: 'AI 20o26 breakthroughrevolutionary contentquantum neural fusionconsciousness integrationtranscendent intelligencefuture AI'},
 export default function AI20o26BreakthroughRevolutionaryContent() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-cyan-90o0 via-blue-90o0 to-purple-90o0 text-white">,

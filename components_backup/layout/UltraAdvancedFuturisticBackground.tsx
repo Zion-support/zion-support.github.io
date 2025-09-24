@@ -14,7 +14,7 @@ export default function UltraAdvancedFuturisticBackground() {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Enhanced particle system with quantum effects,
@@ -37,106 +37,106 @@ export default function UltraAdvancedFuturisticBackground() {
       // Quantum particles (cyan/blue with entanglement),
       for (let i = 0, i < 60, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.8;
-          vy: (Math.random() - 0.5) * 0.8;
-          size: Math.random() * 3 + 2;
-          opacity: Math.random() * 0.9 + 0.1;
-          color: `hsl(${180 + Math.random() * 40}, 80%, 70%)`;
-          type: 'quantum';
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.8,
+          vy: (Math.random() - 0.5) * 0.8,
+          size: Math.random() * 3 + 2,
+          opacity: Math.random() * 0.9 + 0.1,
+          color: `hsl(${180 + Math.random() * 40}, 80%, 70%)`,
+          type: 'quantum',
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          connections: [],
           glow: Math.random() * 0.5 + 0.5})}
 ,
       // Neural particles (purple/pink with consciousness),
       for (let i = 0, i < 50, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.6;
-          vy: (Math.random() - 0.5) * 0.6;
-          size: Math.random() * 2 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
-          color: `hsl(${280 + Math.random() * 40}, 80%, 70%)`;
-          type: 'neural';
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.6,
+          vy: (Math.random() - 0.5) * 0.6,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: `hsl(${280 + Math.random() * 40}, 80%, 70%)`,
+          type: 'neural',
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          connections: [],
           glow: Math.random() * 0.6 + 0.4})}
 ,
       // Energy particles (green/emerald with power),
       for (let i = 0, i < 40, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.7;
-          vy: (Math.random() - 0.5) * 0.7;
-          size: Math.random() * 4 + 3;
-          opacity: Math.random() * 0.9 + 0.1;
-          color: `hsl(${140 + Math.random() * 40}, 80%, 70%)`;
-          type: 'energy';
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.7,
+          vy: (Math.random() - 0.5) * 0.7,
+          size: Math.random() * 4 + 3,
+          opacity: Math.random() * 0.9 + 0.1,
+          color: `hsl(${140 + Math.random() * 40}, 80%, 70%)`,
+          type: 'energy',
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          connections: [],
           glow: Math.random() * 0.7 + 0.3})}
 ,
       // Data particles (white/blue with information),
       for (let i = 0, i < 80, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 1.0;
-          vy: (Math.random() - 0.5) * 1.0;
-          size: Math.random() * 1.5 + 0.5;
-          opacity: Math.random() * 0.7 + 0.3;
-          color: `hsl(${20o0 + Math.random() * 40}, 80%, 90%)`;
-          type: 'data';
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 1.0,
+          vy: (Math.random() - 0.5) * 1.0,
+          size: Math.random() * 1.5 + 0.5,
+          opacity: Math.random() * 0.7 + 0.3,
+          color: `hsl(${20o0 + Math.random() * 40}, 80%, 90%)`,
+          type: 'data',
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          connections: [],
           glow: Math.random() * 0.4 + 0.2})}
 ,
       // Consciousness particles (golden with awareness),
       for (let i = 0, i < 25, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.4;
-          vy: (Math.random() - 0.5) * 0.4;
-          size: Math.random() * 5 + 4;
-          opacity: Math.random() * 0.9 + 0.1;
-          color: `hsl(${45 + Math.random() * 30}, 90%, 70%)`;
-          type: 'consciousness';
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.4,
+          vy: (Math.random() - 0.5) * 0.4,
+          size: Math.random() * 5 + 4,
+          opacity: Math.random() * 0.9 + 0.1,
+          color: `hsl(${45 + Math.random() * 30}, 90%, 70%)`,
+          type: 'consciousness',
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          connections: [],
           glow: Math.random() * 0.8 + 0.2})}
 ,
       // Neon particles (bright with glow effects),
       for (let i = 0, i < 35, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.9;
-          vy: (Math.random() - 0.5) * 0.9;
-          size: Math.random() * 2.5 + 1.5;
-          opacity: Math.random() * 0.9 + 0.1;
-          color: `hsl(${320 + Math.random() * 40}, 10o0%, 80%)`;
-          type: 'neon';
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.9,
+          vy: (Math.random() - 0.5) * 0.9,
+          size: Math.random() * 2.5 + 1.5,
+          opacity: Math.random() * 0.9 + 0.1,
+          color: `hsl(${320 + Math.random() * 40}, 10o0%, 80%)`,
+          type: 'neon',
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          connections: [],
           glow: Math.random() * 0.9 + 0.1})}
-    };
+    },
     // Initialize particles,
     initParticles(),
     // Animation loop with enhanced effects,
     const animate = () => {
       // Clear canvas with gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2),
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)'),
       gradient.addColorStop(0.5, 'rgba(10, 10, 30, 0.9)'),
@@ -173,7 +173,7 @@ export default function UltraAdvancedFuturisticBackground() {
         // Add glow effect,
         const glowSize = particle.size * (2 + particle.glow * 3),
         const glowGradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0;
+          particle.x, particle.y, 0,
           particle.x, particle.y, glowSize),
         // Enhanced glow colors based on particle type,
         let glowColor = particle.color,
@@ -290,12 +290,12 @@ export default function UltraAdvancedFuturisticBackground() {
         ctx.stroke(),
         ctx.restore()}
 ,
-      requestAnimationFrame(animate)};
+      requestAnimationFrame(animate)},
     // Start animation,
     animate(),
     // Cleanup,
     return () => {
-      window.removeEventListener('resize', resizeCanvas)};
+      window.removeEventListener('resize', resizeCanvas)},
   }, [isClient]),
   if (!isClient) return null,
   return (
@@ -314,8 +314,8 @@ export default function UltraAdvancedFuturisticBackground() {
           animate={{
             y: [0, '10o0vh', 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         {/* Corner accent lines */}
@@ -327,11 +327,11 @@ export default function UltraAdvancedFuturisticBackground() {
         <motion.div,
           className="absolute top-1/4 left-10 text-xs text-cyan-40o0 opacity-20 font-mono",
           animate={{
-            y: [0, -20, 0];
+            y: [0, -20, 0],
             opacity: [0.2, 0.4, 0.2]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
+            duration: 4,
+            repeat: Infinity,
             ease: "easeInOut"}}
         >,
           0o1: 0o1:0o1:0o1,
@@ -339,11 +339,11 @@ export default function UltraAdvancedFuturisticBackground() {
         <motion.div,
           className="absolute top-3/4 right-10 text-xs text-purple-40o0 opacity-20 font-mono",
           animate={{
-            y: [0, 20, 0];
+            y: [0, 20, 0],
             opacity: [0.2, 0.4, 0.2]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
         >,
           QUANTUM: ACTIVE,

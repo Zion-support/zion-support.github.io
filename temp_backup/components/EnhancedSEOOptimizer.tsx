@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react',
 import Head from 'next/head',
 import {
-  Search, Globe, Share2, TrendingUp;
-  Eye, Users, BarChart3, Target;
+  Search, Globe, Share2, TrendingUp,
+  Eye, Users, BarChart3, Target,
   CheckCircle, AlertTriangle, Info, X} from 'lucide-react',
 interface SEOData {
   title: string,
@@ -15,11 +15,11 @@ interface SEOData {
     twitter: {
       card: string,
       site: string,
-      creator: string};
+      creator: string},
     facebook: {
       appId: string,
-      type: string};
-  };
+      type: string},
+  },
 }
 ,
 interface SEOAnalysis {
@@ -32,20 +32,20 @@ interface SEOAnalysis {
     keywords: boolean,
     ogImage: boolean,
     canonical: boolean,
-    structuredData: boolean};
+    structuredData: boolean},
 }
 ,
 const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
   const [analysis, setAnalysis] = useState<SEOAnalysis>({
-    score: 0;
-    issues: [];
-    recommendations: [];
+    score: 0,
+    issues: [],
+    recommendations: [],
     metaTags: {
-      title: false;
-      description: false;
-      keywords: false;
-      ogImage: false;
-      canonical: false;
+      title: false,
+      description: false,
+      keywords: false,
+      ogImage: false,
+      canonical: false,
       structuredData: false}
   }),
   const [showAnalysis, setShowAnalysis] = useState(false),
@@ -103,28 +103,28 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
       score -= 5}
 ,
     setAnalysis({
-      score: Math.max(0, score);
-      issues;
-      recommendations;
+      score: Math.max(0, score),
+      issues,
+      recommendations,
       metaTags: {
-        title: seoData.title.length >= 30 && seoData.title.length <= 60;
-        description: seoData.description.length >= 120 && seoData.description.length <= 160;
-        keywords: seoData.keywords.length >= 3;
-        ogImage: !!seoData.ogImage;
-        canonical: !!seoData.canonicalUrl;
+        title: seoData.title.length >= 30 && seoData.title.length <= 60,
+        description: seoData.description.length >= 120 && seoData.description.length <= 160,
+        keywords: seoData.keywords.length >= 3,
+        ogImage: !!seoData.ogImage,
+        canonical: !!seoData.canonicalUrl,
         structuredData: !!seoData.structuredData}
-    })};
+    })},
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-40o0',
     if (score >= 80) return 'text-yellow-40o0',
     if (score >= 70) return 'text-orange-40o0',
-    return 'text-red-40o0'};
+    return 'text-red-40o0'},
   const getScoreGrade = (score: number) => {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B',
     if (score >= 70) return 'C',
     if (score >= 60) return 'D',
-    return 'F'};
+    return 'F'},
   return (
     <>,
       {/* SEO Analysis Button */}
@@ -236,7 +236,7 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
                   <div>,
                     <span className="text-gray-30o0">Keywords: </span>,
                     <p className="text-white font-mono text-xs">,
-                      {seoData.keywords.join(', ')}
+                      {seoData.keywords.join()}
                     </p>,
                   </div>,
                 </div>,
@@ -375,5 +375,5 @@ const EnhancedSEOOptimizer: React.FC<{ seoData: SEOData }> = ({ seoData }) => {
         <link rel="dns-prefetch" href="//cdn.ziontechgroup.com"  />,
         <link rel="dns-prefetch" href="//api.ziontechgroup.com"  />,
       </Head>,
-    </>)};
-export default EnhancedSEOOptimizer;
+    </>)},
+export default EnhancedSEOOptimizer,

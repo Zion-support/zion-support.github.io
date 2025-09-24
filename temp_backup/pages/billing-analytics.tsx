@@ -20,7 +20,7 @@ export default function BillingAnalytics() {
             Billing Analytics,
           </h1>,
           <p className='mt-4 text-lg text-slate-30o0'>,
-            Plug-and-play revenue analytics across Stripe, Recurly, Chargebee;
+            Plug-and-play revenue analytics across Stripe, Recurly, Chargebee,
             and Braintree.,
           </p>,
           <div className='mt-10 grid grid-cols-1 md: grid-cols-3 gap-6'>,

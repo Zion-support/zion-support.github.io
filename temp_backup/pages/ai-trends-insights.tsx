@@ -3,221 +3,176 @@ import Link from 'next/link',
 export default function AITrendsInsights() {
   const currentTrends = [
     {
-      title: 'Edge AI Computing';
+      title: 'Edge AI Computing',
       description:,
-        'Moving AI processing closer to data sources for faster response times and reduced latency';
-      impact: 'High';
-      adoption: 'Growing';
-      timeline: '20o25-20o26';
+        'Moving AI processing closer to data sources for faster response times and reduced latency',
+      impact: 'High',
+      adoption: 'Growing',
+      timeline: '20o25-20o26',
       benefits: [
-        'Reduced latency';
-        'Lower bandwidth costs';
-        'Enhanced privacy';
-        'Real-time processing';
-      ];
+        'Reduced latencyLower bandwidth costs',
+        'Enhanced privacyReal-time processing',
+      ],
       challenges: [
-        'Limited processing power';
-        'Battery constraints';
-        'Security concerns';
-      ];
-    };
+        'Limited processing powerBattery constraints',
+        'Security concerns',
+      ]
+    },
     {
-      title: 'Federated Learning';
+      title: 'Federated Learning',
       description:,
-        'Training AI models across decentralized data sources without sharing raw data';
-      impact: 'Medium';
-      adoption: 'Emerging';
-      timeline: '20o25-20o27';
+        'Training AI models across decentralized data sources without sharing raw data',
+      impact: 'Medium',
+      adoption: 'Emerging',
+      timeline: '20o25-20o27',
       benefits: [
-        'Privacy preservation';
-        'Reduced data transfer';
-        'Collaborative learning';
-        'Regulatory compliance';
-      ];
+        'Privacy preservationReduced data transfer',
+        'Collaborative learningRegulatory compliance',
+      ],
       challenges: [
-        'Communication overhead';
-        'Model convergence';
-        'Quality assurance';
-      ];
-    };
+        'Communication overheadModel convergence',
+        'Quality assurance',
+      ]
+    },
     {
-      title: 'AutoML & No-Code AI';
+      title: 'AutoML & No-Code AI',
       description:,
-        'Automated machine learning tools enabling non-experts to build AI solutions';
-      impact: 'High';
-      adoption: 'Rapid';
-      timeline: '20o24-20o26';
+        'Automated machine learning tools enabling non-experts to build AI solutions',
+      impact: 'High',
+      adoption: 'Rapid',
+      timeline: '20o24-20o26',
       benefits: [
-        'Democratized AI';
-        'Faster development';
-        'Reduced costs';
-        'Wider adoption';
-      ];
+        'Democratized AIFaster development',
+        'Reduced costsWider adoption',
+      ],
       challenges: [
-        'Limited customization';
-        'Quality control';
-        'Over-reliance on automation';
-      ];
-    };
+        'Limited customizationQuality control',
+        'Over-reliance on automation',
+      ]
+    },
     {
-      title: 'Quantum AI Integration';
+      title: 'Quantum AI Integration',
       description:,
-        'Combining quantum computing with AI for solving complex optimization problems';
-      impact: 'Very High';
-      adoption: 'Early Stage';
-      timeline: '20o26-20o30';
+        'Combining quantum computing with AI for solving complex optimization problems',
+      impact: 'Very High',
+      adoption: 'Early Stage',
+      timeline: '20o26-20o30',
       benefits: [
-        'Exponential speedup';
-        'New algorithm possibilities';
-        'Breakthrough applications';
-      ];
+        'Exponential speedupNew algorithm possibilities',
+        'Breakthrough applications',
+      ],
       challenges: [
-        'Technical complexity';
-        'High costs';
-        'Limited availability';
-      ];
-    };
+        'Technical complexityHigh costs',
+        'Limited availability',
+      ]
+    },
   ],
   const industryInsights = [
     {
-      industry: 'Healthcare';
+      industry: 'Healthcare',
       trends: [
-        'AI-powered diagnostics';
-        'Drug discovery acceleration';
-        'Personalized medicine';
-        'Predictive analytics';
-      ];
+        'AI-powered diagnosticsDrug discovery acceleration',
+        'Personalized medicinePredictive analytics',
+      ],
       challenges: [
-        'Regulatory compliance';
-        'Data privacy';
-        'Clinical validation';
-        'Integration complexity';
-      ];
+        'Regulatory complianceData privacy',
+        'Clinical validationIntegration complexity',
+      ],
       opportunities: [
-        'Improved patient outcomes';
-        'Cost reduction';
-        'Early disease detection';
-        'Treatment optimization';
-      ];
-    };
+        'Improved patient outcomesCost reduction',
+        'Early disease detectionTreatment optimization',
+      ]
+    },
     {
-      industry: 'Manufacturing';
+      industry: 'Manufacturing',
       trends: [
-        'Predictive maintenance';
-        'Quality control automation';
-        'Supply chain optimization';
-        'Digital twins';
-      ];
+        'Predictive maintenanceQuality control automation',
+        'Supply chain optimizationDigital twins',
+      ],
       challenges: [
-        'Legacy system integration';
-        'Workforce training';
-        'Cybersecurity risks';
-        'ROI demonstration';
-      ];
+        'Legacy system integrationWorkforce training',
+        'Cybersecurity risksROI demonstration',
+      ],
       opportunities: [
-        'Increased efficiency';
-        'Reduced downtime';
-        'Cost savings';
-        'Competitive advantage';
-      ];
-    };
+        'Increased efficiencyReduced downtime',
+        'Cost savingsCompetitive advantage',
+      ]
+    },
     {
-      industry: 'Finance';
+      industry: 'Finance',
       trends: [
-        'Fraud detection';
-        'Risk assessment';
-        'Algorithmic trading';
-        'Customer service automation';
-      ];
+        'Fraud detectionRisk assessment',
+        'Algorithmic tradingCustomer service automation',
+      ],
       challenges: [
-        'Regulatory requirements';
-        'Data security';
-        'Model interpretability';
-        'Bias mitigation';
-      ];
+        'Regulatory requirementsData security',
+        'Model interpretabilityBias mitigation',
+      ],
       opportunities: [
-        'Enhanced security';
-        'Better risk management';
-        'Improved customer experience';
-        'Operational efficiency';
-      ];
-    };
+        'Enhanced securityBetter risk management',
+        'Improved customer experienceOperational efficiency',
+      ]
+    },
     {
-      industry: 'Transportation';
+      industry: 'Transportation',
       trends: [
-        'Autonomous vehicles';
-        'Traffic optimization';
-        'Predictive maintenance';
-        'Route planning';
-      ];
+        'Autonomous vehiclesTraffic optimization',
+        'Predictive maintenanceRoute planning',
+      ],
       challenges: [
-        'Safety regulations';
-        'Infrastructure requirements';
-        'Public acceptance';
-        'Liability concerns';
-      ];
+        'Safety regulationsInfrastructure requirements',
+        'Public acceptanceLiability concerns',
+      ],
       opportunities: [
-        'Reduced accidents';
-        'Lower emissions';
-        'Improved efficiency';
-        'New business models';
-      ];
-    };
+        'Reduced accidentsLower emissions',
+        'Improved efficiencyNew business models',
+      ]
+    },
   ],
   const futurePredictions = [
     {
-      year: '20o25';
+      year: '20o25',
       predictions: [
-        'Widespread adoption of edge AI in IoT devices';
-        'AutoML becomes standard in enterprise AI development';
-        'AI-powered cybersecurity becomes essential';
-        'Quantum AI shows first practical applications';
-      ];
-    };
+        'Widespread adoption of edge AI in IoT devicesAutoML becomes standard in enterprise AI development',
+        'AI-powered cybersecurity becomes essentialQuantum AI shows first practical applications',
+      ]
+    },
     {
-      year: '20o26';
+      year: '20o26',
       predictions: [
-        'Federated learning becomes mainstream for privacy-sensitive applications';
-        'AI-generated content reaches human-quality levels';
-        'Autonomous systems handle 30% of routine business operations';
-        'Quantum AI demonstrates commercial viability';
-      ];
-    };
+        'Federated learning becomes mainstream for privacy-sensitive applicationsAI-generated content reaches human-quality levels',
+        'Autonomous systems handle 30% of routine business operationsQuantum AI demonstrates commercial viability',
+      ]
+    },
     {
-      year: '20o27';
+      year: '20o27',
       predictions: [
-        'AI automation reaches 50% of knowledge work';
-        'Personal AI assistants become ubiquitous';
-        'AI-driven scientific discoveries accelerate dramatically';
-        'Quantum AI transforms optimization industries';
-      ];
-    };
+        'AI automation reaches 50% of knowledge workPersonal AI assistants become ubiquitous',
+        'AI-driven scientific discoveries accelerate dramaticallyQuantum AI transforms optimization industries',
+      ]
+    },
     {
-      year: '20o30';
+      year: '20o30',
       predictions: [
-        'AI automation handles 80% of repetitive tasks';
-        'Human-AI collaboration becomes the norm';
-        'AI systems achieve general intelligence in specific domains';
-        'Quantum AI enables breakthroughs in materials science and drug discovery';
-      ];
-    };
+        'AI automation handles 80% of repetitive tasksHuman-AI collaboration becomes the norm',
+        'AI systems achieve general intelligence in specific domainsQuantum AI enables breakthroughs in materials science and drug discovery',
+      ]
+    },
   ],
   const marketData = {
-    globalMarketSize: '$1.8T';
-    growthRate: '37.3%';
+    globalMarketSize: '$1.8T',
+    growthRate: '37.3%',
     keyDrivers: [
-      'Digital transformation';
-      'Cost optimization';
-      'Competitive pressure';
-      'Regulatory requirements';
-    ];
+      'Digital transformationCost optimization',
+      'Competitive pressureRegulatory requirements',
+    ],
     regionalBreakdown: [
-      { region: 'North America', share: '42%', growth: '35.2%' };
-      { region: 'Europe', share: '28%', growth: '38.1%' };
-      { region: 'Asia Pacific', share: '25%', growth: '41.7%' };
-      { region: 'Rest of World', share: '5%', growth: '33.8%' };
-    ];
-  };
+      { region: 'North America', share: '42%', growth: '35.2%' },
+      { region: 'Europe', share: '28%', growth: '38.1%' },
+      { region: 'Asia Pacific', share: '25%', growth: '41.7%' },
+      { region: 'Rest of World', share: '5%', growth: '33.8%' },
+    ],
+  },
   return (
     <>,
       <Head>,
@@ -252,7 +207,7 @@ export default function AITrendsInsights() {
               </h1>,
               <p className='text-xl text-white/80 max-w-4xl mx-auto'>,
                 Navigate the rapidly evolving landscape of AI automation with,
-                our comprehensive analysis of current trends, industry insights;
+                our comprehensive analysis of current trends, industry insights,
                 and future predictions. Stay ahead of the competition with,
                 data-driven intelligence.,
               </p>,

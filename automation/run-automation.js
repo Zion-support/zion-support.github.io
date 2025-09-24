@@ -20,7 +20,7 @@ class AutomationRunner {
     const configPath = path.join(__dirname, 'automation-config.json'),
     if (fs.existsSync(configPath)) {
       return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
-    return { gitManager: { enabled: true } };
+    return { gitManager: { enabled: true } },
   }
 ,
   log(message, level = 'info') {
@@ -38,16 +38,16 @@ class AutomationRunner {
   async executeCommand(command, options ={}) {
     try {
       const result = execSync(command, {
-        cwd: this.projectRoot;
-        encoding: 'utf8';
+        cwd: this.projectRoot,
+        encoding: 'utf8',
         maxBuffer: 10o24 * 10o24 * 10, // 10MB buffer,
         ...options}),
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       return {
-        success: false;
-        error: error.message;
-        output: error.stdout || ''};
+        success: false,
+        error: error.message,
+        output: error.stdout || ''},
     }
   }
 ,
@@ -73,14 +73,14 @@ class AutomationRunner {
         unstaged.push(file)} else {
         staged.push(file)}
     }),
-    return { staged, unstaged, untracked };
+    return { staged, unstaged, untracked },
   }
 ,
   async commit(message) {
     this.log('📝 Committing changes...'),
     const result = await this.executeCommand(`git commit -m "${message}"`),
     if (result.success) {
-      this.log('✅ Changes committed successfully', 'success'),
+      this.log('✅ Changes committed successfullysuccess'),
       return true} else {
       this.log(`❌ Failed to commit: ${result.error}`, 'error'),
       return false}
@@ -90,7 +90,7 @@ class AutomationRunner {
     this.log('🚀 Pushing to remote...'),
     const result = await this.executeCommand('git push'),
     if (result.success) {
-      this.log('✅ Changes pushed successfully', 'success'),
+      this.log('✅ Changes pushed successfullysuccess'),
       return true} else {
       this.log(`❌ Failed to push: ${result.error}`, 'error'),
       return false}
@@ -101,7 +101,7 @@ class AutomationRunner {
     this.log(`📦 Staging ${files.length} files...`),
     const result = await this.executeCommand(`git add ${files.join(' ')}`),
     if (result.success) {
-      this.log('✅ Files staged successfully', 'success'),
+      this.log('✅ Files staged successfullysuccess'),
       return true} else {
       this.log(`❌ Failed to stage files: ${result.error}`, 'error'),
       return false}
@@ -111,10 +111,10 @@ class AutomationRunner {
     this.log('🔧 Running lint fixes...'),
     const result = await this.executeCommand('npm run lint -- --fix'),
     if (result.success) {
-      this.log('✅ Lint fixes applied', 'success'),
+      this.log('✅ Lint fixes appliedsuccess'),
       return true} else {
       this.log(
-        `⚠️ Lint fixes completed with warnings: ${result.output}`;
+        `⚠️ Lint fixes completed with warnings: ${result.output}`,
         'warn'),
       return true, // Still consider it successful}
   }
@@ -123,10 +123,10 @@ class AutomationRunner {
     this.log('🎨 Running code formatting...'),
     const result = await this.executeCommand('npm run format'),
     if (result.success) {
-      this.log('✅ Code formatted successfully', 'success'),
+      this.log('✅ Code formatted successfullysuccess'),
       return true} else {
       this.log(
-        `⚠️ Formatting completed with warnings: ${result.output}`;
+        `⚠️ Formatting completed with warnings: ${result.output}`,
         'warn'),
       return true, // Still consider it successful}
   }
@@ -136,12 +136,12 @@ class AutomationRunner {
     const status = await this.getGitStatus(),
     if (!status) return false,
     const allFiles = [
-      ...status.staged;
-      ...status.unstaged;
-      ...status.untracked;
+      ...status.staged,
+      ...status.unstaged,
+      ...status.untracked,
     ],
     if (allFiles.length === 0) {
-      this.log('📭 No changes to commit', 'warn'),
+      this.log('📭 No changes to commitwarn'),
       return true}
 ,
     // Stage all files,
@@ -193,9 +193,8 @@ class AutomationRunner {
     const success = await this.quickCommit(),
     if (success) {
       this.log(
-        '🎉 Complete automation sequence finished successfully!';
-        'success')} else {
-      this.log('❌ Automation sequence encountered errors', 'error')}
+        '🎉 Complete automation sequence finished successfully!success')} else {
+      this.log('❌ Automation sequence encountered errorserror')}
 ,
     return success}
 ,
@@ -255,9 +254,9 @@ async function main() {
         const status = await runner.getGitStatus(),
         if (status) {
           const allFiles = [
-            ...status.staged;
-            ...status.unstaged;
-            ...status.untracked;
+            ...status.staged,
+            ...status.unstaged,
+            ...status.untracked,
           ],
           if (allFiles.length > 0) {
             await runner.stageFiles(allFiles),

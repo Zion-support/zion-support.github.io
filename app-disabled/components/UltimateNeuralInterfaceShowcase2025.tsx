@@ -5,78 +5,78 @@ const UltimateNeuralInterfaceShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'neural-interface-revolution';
-      title: 'AI 20o25-20o26: The Ultimate Neural Interface Revolution';
+      id: 'neural-interface-revolution',
+      title: 'AI 20o25-20o26: The Ultimate Neural Interface Revolution',
       description:,
-        'Breakthrough Guide to 2,80o0% ROI through direct brain-computer interfaces that are transforming Fortune 50o0 operations worldwide.';
-      type: 'blog';
-      category: 'revolution';
-      url: '/blog/ai-20o25-20o26-ultimate-neural-interface-revolution-breakthrough';
+        'Breakthrough Guide to 2,80o0% ROI through direct brain-computer interfaces that are transforming Fortune 50o0 operations worldwide.',
+      type: 'blog',
+      category: 'revolution',
+      url: '/blog/ai-20o25-20o26-ultimate-neural-interface-revolution-breakthrough',
       metrics: {
-        roi: '2,80o0%';
-        savings: '$3.2B';
-        accuracy: '99.7%';
-        efficiency: '450%';
-      };
-      readingTime: '30 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,80o0%',
+        savings: '$3.2B',
+        accuracy: '99.7%',
+        efficiency: '450%'
+      },
+      readingTime: '30 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'fortune-50o0-neural-success';
-      title: 'Fortune 50o0 Neural Interface Success Story';
+      id: 'fortune-50o0-neural-success',
+      title: 'Fortune 50o0 Neural Interface Success Story',
       description:,
-        '$3.2B Annual Savings - 2,80o0% ROI Transformation. Real-world case study of a Fortune 50o0 manufacturing leader achieving unprecedented success.';
-      type: 'case-study';
-      category: 'success';
-      url: '/case-studies/fortune-50o0-neural-interface-transformation-280o0-roi-success-story';
+        '$3.2B Annual Savings - 2,80o0% ROI Transformation. Real-world case study of a Fortune 50o0 manufacturing leader achieving unprecedented success.',
+      type: 'case-study',
+      category: 'success',
+      url: '/case-studies/fortune-50o0-neural-interface-transformation-280o0-roi-success-story',
       metrics: {
-        roi: '2,80o0%';
-        savings: '$3.2B';
-        timeline: '18 months';
-        satisfaction: '99.7%';
-      };
-      readingTime: '20 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,80o0%',
+        savings: '$3.2B',
+        timeline: '18 months',
+        satisfaction: '99.7%'
+      },
+      readingTime: '20 min read',
+      isNew: true,
+      featured: true
+    },
     {
-      id: 'neural-interface-implementation-guide';
-      title: 'Neural Interface Implementation Ultimate Guide';
+      id: 'neural-interface-implementation-guide',
+      title: 'Neural Interface Implementation Ultimate Guide',
       description:,
-        'Complete Roadmap to 2,80o0% ROI - 20o25-20o26 Edition. Step-by-step implementation framework for enterprise neural interface deployment.';
-      type: 'resource';
-      category: 'implementation';
-      url: '/resources/neural-interface-implementation-ultimate-guide-20o25-20o26';
+        'Complete Roadmap to 2,80o0% ROI - 20o25-20o26 Edition. Step-by-step implementation framework for enterprise neural interface deployment.',
+      type: 'resource',
+      category: 'implementation',
+      url: '/resources/neural-interface-implementation-ultimate-guide-20o25-20o26',
       metrics: {
-        roi: '2,80o0%';
-        timeline: '18 months';
-        success: '99.7%';
-        projects: '1,0o00+';
-      };
-      readingTime: '35 min read';
-      isNew: true;
-      featured: true;
-    };
+        roi: '2,80o0%',
+        timeline: '18 months',
+        success: '99.7%',
+        projects: '1,0o00+',
+      },
+      readingTime: '35 min read',
+      isNew: true,
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'revolution';
-      name: 'Revolution';
-      count: contentItems.filter(item => item.category === 'revolution').length;
-    };
+      id: 'revolution',
+      name: 'Revolution',
+      count: contentItems.filter(item => item.category === 'revolution').length
+    },
     {
-      id: 'success';
-      name: 'Success Stories';
-      count: contentItems.filter(item => item.category === 'success').length;
-    };
+      id: 'success',
+      name: 'Success Stories',
+      count: contentItems.filter(item => item.category === 'success').length
+    },
     {
-      id: 'implementation';
-      name: 'Implementation';
+      id: 'implementation',
+      name: 'Implementation',
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length;
-    };
+        .length,
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -259,5 +259,5 @@ const UltimateNeuralInterfaceShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateNeuralInterfaceShowcase20o25;
+    </section>)},
+export default UltimateNeuralInterfaceShowcase20o25,

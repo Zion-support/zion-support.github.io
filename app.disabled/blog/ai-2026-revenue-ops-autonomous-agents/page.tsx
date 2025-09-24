@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI 20o26: Revenue Ops with Autonomous Agents';
+  title: 'AI 20o26: Revenue Ops with Autonomous Agents',
   description:,
-    'Pipeline generation, deal acceleration, and expansion using governed agent workflows with eval-gated upgrades.';
-};
+    'Pipeline generation, deal acceleration, and expansion using governed agent workflows with eval-gated upgrades.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -11,7 +11,7 @@ export default function Page() {
       </h1>,
       <p className='mt-4 text-gray-70o0'>,
         revenue agents automate outreach, routing, and follow-up while,
-        respecting policy-as-code constraints. Learn how to instrument, govern;
+        respecting policy-as-code constraints. Learn how to instrument, govern,
         and scale responsibly.,
       </p>,
       <h2 className='mt-8 text-2xl font-semibold text-gray-90o0'>,

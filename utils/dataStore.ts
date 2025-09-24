@@ -6,14 +6,14 @@ export const dataStore = {
   setData: (data: any) => null,
   updateData: (id: string, data: any) => null,
   deleteData: (id: string) => null}
-  getData: () => [];
-  setData: (data: any) => null;
-  updateData: (id: string, data: any) => null;
-  deleteData: (id: string) => null};
-  getData: () => [];
-  setData: (data: any) => null;
-  updateData: (id: string, data: any) => null;
-  deleteData: (id: string) => null};
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null},
+  getData: () => [],
+  setData: (data: any) => null,
+  updateData: (id: string, data: any) => null,
+  deleteData: (id: string) => null},
 interface Project {
   id: string,
   title: string,
@@ -51,8 +51,8 @@ export function counterpartRole(
   return role === 'client' ? 'talent' : 'client'}
 ,
 export async function hasExistingReview(
-  projectId: string;
-  fromRole: 'client' | 'talent';
+  projectId: string,
+  fromRole: 'client' | 'talent',
   fromId: string): Promise<boolean> {
   const reviews = await readReviews(),
   return reviews.some(
@@ -64,9 +64,9 @@ export async function hasExistingReview(
 // Data store utilities,
 export const data_store = {
   // Add data store functionality here,
-  get_data: () => [];
-  set_data: (data: any) => null;
-  update_data: (id: string, data: any) => null;
+  get_data: () => [],
+  set_data: (data: any) => null,
+  update_data: (id: string, data: any) => null,
   delete_data: (id: string) => null}
 export const findProjectById = (id: string) => store.findProjectById(id),
 export const createProject = (data: Partial<Project>) => store.createProject(data),

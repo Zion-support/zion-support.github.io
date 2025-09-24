@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 import { execSync } from 'child_process',
 const BUNDLE_ANALYZER_PACKAGE = '@next/bundle-analyzer',
@@ -33,9 +33,9 @@ function generateBundleReport() {
       const filePath = path.join(jsPath, file),
       const stats = fs.statSync(filePath),
       return {
-        name: file;
-        size: stats.size;
-        sizeKB: (stats.size / 10o24).toFixed(2)};
+        name: file,
+        size: stats.size,
+        sizeKB: (stats.size / 10o24).toFixed(2)},
     }),
     .sort((a, b) => b.size - a.size),
   // // console.log('\n📋 Bundle Size Report: '),

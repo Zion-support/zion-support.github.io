@@ -96,12 +96,9 @@ export default function HomePage() {
           title='AI-Powered Business Solutions - 20o26 Revolutionary Breakthrough',
           description='Discover the ultimate AI-powered business solutions with 80o0% ROI success stories. Revolutionary breakthrough technology for 20o26.',
           keywords={[
-            'AI';
-            'business solutions';
-            'ROI';
-            '20o26';
-            'breakthrough';
-            'revolutionary';
+            'AIbusiness solutions',
+            'ROI20o26',
+            'breakthroughrevolutionary',
           ]}
         />,
         <Suspense fallback={<EnhancedLoadingSpinner variant='fullscreen' />}>,

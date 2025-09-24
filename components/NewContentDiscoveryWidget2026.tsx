@@ -8,98 +8,98 @@ import {
   Atom,
   Bot,
   Zap,
-  TrendingUp;
-  Star;
-  ArrowRight;
-  Clock;
-  Users;
-  Award;
-  Lightbulb;
-  Shield;
-  Globe;
+  TrendingUp,
+  Star,
+  ArrowRight,
+  Clock,
+  Users,
+  Award,
+  Lightbulb,
+  Shield,
+  Globe,
   Cpu} from 'lucide-react',
 const NewContentDiscoveryWidget20o26 = () => {
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const contentItems = [
     {
-      id: 1;
-      title: "AI 20o26 Breakthrough Showcase";
-      description: "Discover revolutionary AI breakthroughs including quantum-enhanced neural networks and transcendent intelligence platforms.";
-      category: "ai-breakthroughs";
-      icon: <Brain className="h-6 w-6"  />;
-      url: "/ai-20o26-breakthrough-showcase";
-      tags: ["AI"Neural Networks"Quantum AI"Transcendent Intelligence"];
-      readTime: "8 min read";
-      featured: true;
+      id: 1,
+      title: "AI 20o26 Breakthrough Showcase",
+      description: "Discover revolutionary AI breakthroughs including quantum-enhanced neural networks and transcendent intelligence platforms.",
+      category: "ai-breakthroughs",
+      icon: <Brain className="h-6 w-6"  />,
+      url: "/ai-20o26-breakthrough-showcase",
+      tags: ["AI"Neural Networks"Quantum AI"Transcendent Intelligence"],
+      readTime: "8 min read",
+      featured: true,
       stats: { views: "25K"rating: 4.9 }
-    };
+    },
     {
-      id: 2;
-      title: "Quantum Computing Solutions 20o26";
-      description: "Explore error-corrected quantum computersquantum machine learningand quantum-AI fusion technologies.";
-      category: "quantum-computing";
-      icon: <Atom className="h-6 w-6"  />;
-      url: "/quantum-computing-solutions-20o26";
-      tags: ["Quantum Computing"Error Correction"Quantum ML"Quantum Internet"];
-      readTime: "12 min read";
-      featured: true;
+      id: 2,
+      title: "Quantum Computing Solutions 20o26",
+      description: "Explore error-corrected quantum computersquantum machine learningand quantum-AI fusion technologies.",
+      category: "quantum-computing",
+      icon: <Atom className="h-6 w-6"  />,
+      url: "/quantum-computing-solutions-20o26",
+      tags: ["Quantum Computing"Error Correction"Quantum ML"Quantum Internet"],
+      readTime: "12 min read",
+      featured: true,
       stats: { views: "18K"rating: 4.8 }
-    };
+    },
     {
-      id: 3;
-      title: "Advanced Automation Solutions 20o26";
-      description: "Revolutionary automation systems including intelligent process automation and autonomous business systems.";
-      category: "automation";
-      icon: <Bot className="h-6 w-6"  />;
-      url: "/advanced-automation-solutions-20o26";
-      tags: ["Automation"Process Automation"Autonomous Systems"Workflow AI"];
-      readTime: "10 min read";
-      featured: true;
+      id: 3,
+      title: "Advanced Automation Solutions 20o26",
+      description: "Revolutionary automation systems including intelligent process automation and autonomous business systems.",
+      category: "automation",
+      icon: <Bot className="h-6 w-6"  />,
+      url: "/advanced-automation-solutions-20o26",
+      tags: ["Automation"Process Automation"Autonomous Systems"Workflow AI"],
+      readTime: "10 min read",
+      featured: true,
       stats: { views: "22K"rating: 4.9 }
-    };
+    },
     {
-      id: 4;
-      title: "Quantum-AI Fusion Breakthroughs";
-      description: "Hybrid systems combining quantum computing with artificial intelligence for unprecedented capabilities.";
-      category: "quantum-computing";
-      icon: <Cpu className="h-6 w-6"  />;
-      url: "/quantum-ai-fusion-20o26-breakthrough";
-      tags: ["Quantum AI"Hybrid Systems"Computational Power"AI Enhancement"];
-      readTime: "15 min read";
-      featured: false;
+      id: 4,
+      title: "Quantum-AI Fusion Breakthroughs",
+      description: "Hybrid systems combining quantum computing with artificial intelligence for unprecedented capabilities.",
+      category: "quantum-computing",
+      icon: <Cpu className="h-6 w-6"  />,
+      url: "/quantum-ai-fusion-20o26-breakthrough",
+      tags: ["Quantum AI"Hybrid Systems"Computational Power"AI Enhancement"],
+      readTime: "15 min read",
+      featured: false,
       stats: { views: "12K"rating: 4.7 }
-    };
+    },
     {
-      id: 5;
-      title: "Autonomous Business Intelligence";
-      description: "Self-evolving business intelligence systems that make decisions and optimize operations autonomously.";
-      category: "ai-breakthroughs";
-      icon: <Lightbulb className="h-6 w-6"  />;
-      url: "/autonomous-business-intelligence-20o26";
-      tags: ["Business Intelligence"Autonomous Systems"Decision Making"Self-Evolution"];
-      readTime: "9 min read";
-      featured: false;
+      id: 5,
+      title: "Autonomous Business Intelligence",
+      description: "Self-evolving business intelligence systems that make decisions and optimize operations autonomously.",
+      category: "ai-breakthroughs",
+      icon: <Lightbulb className="h-6 w-6"  />,
+      url: "/autonomous-business-intelligence-20o26",
+      tags: ["Business Intelligence"Autonomous Systems"Decision Making"Self-Evolution"],
+      readTime: "9 min read",
+      featured: false,
       stats: { views: "15K"rating: 4.6 }
-    };
+    },
     {
-      id: 6;
-      title: "Quantum Security Revolution";
-      description: "Unbreakable quantum cryptography and quantum key distribution systems for ultimate security.";
-      category: "quantum-computing";
-      icon: <Shield className="h-6 w-6"  />;
-      url: "/quantum-security-revolution-20o26";
-      tags: ["Quantum Security"Cryptography"Key Distribution"Unbreakable Encryption"];
-      readTime: "11 min read";
-      featured: false;
+      id: 6,
+      title: "Quantum Security Revolution",
+      description: "Unbreakable quantum cryptography and quantum key distribution systems for ultimate security.",
+      category: "quantum-computing",
+      icon: <Shield className="h-6 w-6"  />,
+      url: "/quantum-security-revolution-20o26",
+      tags: ["Quantum Security"Cryptography"Key Distribution"Unbreakable Encryption"],
+      readTime: "11 min read",
+      featured: false,
       stats: { views: "8K"rating: 4.8 }
     }
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: <Globe className="h-4 w-4"  /> };
-    { id: 'ai-'breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: <Brain className="h-4 w-4"  /> };
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: <Atom className="h-4 w-4"  /> };
-    { id: ''automation', 'name: ''Automation', 'icon: <Bot className="h-4 w-4"  /> }
+    { id: ''allname: 'All 'Contenticon: <Globe className="h-4 w-4"  /> },
+    { id: 'ai-'breakthroughsname: 'AI 'Breakthroughsicon: <Brain className="h-4 w-4"  /> },
+    { id: 'quantum-'computingname: 'Quantum 'Computingicon: <Atom className="h-4 w-4"  /> },
+    { id: ''automationname: ''Automationicon: <Bot className="h-4 w-4"  /> }
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -279,5 +279,5 @@ const NewContentDiscoveryWidget20o26 = () => {
           <ArrowRight className="h-4 w-4 ml-2"  />,
         </Link>,
       </div>,
-    </div>)};
-export default NewContentDiscoveryWidget20o26;
+    </div>)},
+export default NewContentDiscoveryWidget20o26,

@@ -1,151 +1,151 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  ArrowUp;
-  Brain;
-  Atom;
-  Shield;
-  Target;
-  Cpu;
-  Database;
-  Twitter;
-  Linkedin;
-  Github;
-  Youtube;
-  Facebook;
-  Instagram;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  ArrowUp,
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Cpu,
+  Database,
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,
+  Facebook,
+  Instagram,
 } from 'lucide-react',
 const EnhancedFooter20o45: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const serviceCategories = [
     {
-      title: 'AI & Machine Learning';
-      icon: Brain;
+      title: 'AI & Machine Learning',
+      icon: Brain,
       services: [
         {
-          name: 'AI-Powered Business Intelligence';
-          href: '/ai-powered-business-intelligence-platform';
-        };
+          name: 'AI-Powered Business Intelligence',
+          href: '/ai-powered-business-intelligence-platform'
+        },
         {
-          name: 'Intelligent Customer Service AI';
-          href: '/intelligent-customer-service-ai';
-        };
+          name: 'Intelligent Customer Service AI',
+          href: '/intelligent-customer-service-ai'
+        },
         {
-          name: 'AI-Powered Marketing Automation';
-          href: '/ai-powered-marketing-automation';
-        };
+          name: 'AI-Powered Marketing Automation',
+          href: '/ai-powered-marketing-automation'
+        },
         {
-          name: 'Intelligent Document Processing AI';
-          href: '/intelligent-document-processing-ai';
-        };
-      ];
-    };
+          name: 'Intelligent Document Processing AI',
+          href: '/intelligent-document-processing-ai'
+        },
+      ],
+    },
     {
-      title: 'IT Infrastructure';
-      icon: Cpu;
+      title: 'IT Infrastructure',
+      icon: Cpu,
       services: [
         {
-          name: 'Quantum-Ready Cloud Infrastructure';
-          href: '/quantum-ready-cloud-infrastructure';
-        };
+          name: 'Quantum-Ready Cloud Infrastructure',
+          href: '/quantum-ready-cloud-infrastructure'
+        },
         {
-          name: 'Intelligent DevOps Automation';
-          href: '/intelligent-devops-automation-platform';
-        };
+          name: 'Intelligent DevOps Automation',
+          href: '/intelligent-devops-automation-platform'
+        },
         {
-          name: 'Advanced Cybersecurity Intelligence';
-          href: '/advanced-cybersecurity-intelligence';
-        };
+          name: 'Advanced Cybersecurity Intelligence',
+          href: '/advanced-cybersecurity-intelligence'
+        },
         {
-          name: 'Intelligent Data Management';
-          href: '/intelligent-data-management-platform';
-        };
-      ];
-    };
+          name: 'Intelligent Data Management',
+          href: '/intelligent-data-management-platform'
+        },
+      ],
+    },
     {
-      title: 'Micro SAAS Solutions';
-      icon: Target;
+      title: 'Micro SAAS Solutions',
+      icon: Target,
       services: [
         {
-          name: 'AI Customer Success Platform';
-          href: '/ai-customer-success-platform';
-        };
+          name: 'AI Customer Success Platform',
+          href: '/ai-customer-success-platform'
+        },
         {
-          name: 'Intelligent Project Management';
-          href: '/intelligent-project-management-suite';
-        };
+          name: 'Intelligent Project Management',
+          href: '/intelligent-project-management-suite'
+        },
         {
-          name: 'Smart Content Marketing';
-          href: '/smart-content-marketing-automation';
-        };
+          name: 'Smart Content Marketing',
+          href: '/smart-content-marketing-automation'
+        },
         {
-          name: 'Intelligent E-commerce Analytics';
-          href: '/intelligent-ecommerce-analytics-platform';
-        };
-      ];
-    };
+          name: 'Intelligent E-commerce Analytics',
+          href: '/intelligent-ecommerce-analytics-platform'
+        },
+      ],
+    },
   ],
   const quickLinks = [
-    { name: 'Home', href: '/' };
-    { name: 'Services', href: '/enhanced-services' };
-    { name: 'Solutions', href: '/solutions' };
-    { name: 'About', href: '/about' };
-    { name: 'Contact', href: '/contact' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Support', href: '/support' };
-    { name: 'Privacy Policy', href: '/privacy' };
-    { name: 'Terms of Service', href: '/terms' };
+    { name: 'Home', href: '/' },
+    { name: 'Services', href: '/enhanced-services' },
+    { name: 'Solutions', href: '/solutions' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Support', href: '/support' },
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
   ],
   const socialLinks = [
     {
-      name: 'LinkedIn';
-      icon: Linkedin;
-      href: 'https://linkedin.com/company/ziontechgroup';
-      color: 'hover:text-blue-40o0';
-    };
+      name: 'LinkedIn',
+      icon: Linkedin,
+      href: 'https://linkedin.com/company/ziontechgroup',
+      color: 'hover:text-blue-40o0'
+    },
     {
-      name: 'Twitter';
-      icon: Twitter;
-      href: 'https://twitter.com/ziontechgroup';
-      color: 'hover:text-blue-40o0';
-    };
+      name: 'Twitter',
+      icon: Twitter,
+      href: 'https://twitter.com/ziontechgroup',
+      color: 'hover:text-blue-40o0'
+    },
     {
-      name: 'GitHub';
-      icon: Github;
-      href: 'https://github.com/ziontechgroup';
-      color: 'hover:text-gray-40o0';
-    };
+      name: 'GitHub',
+      icon: Github,
+      href: 'https://github.com/ziontechgroup',
+      color: 'hover:text-gray-40o0'
+    },
     {
-      name: 'YouTube';
-      icon: Youtube;
-      href: 'https://youtube.com/@ziontechgroup';
-      color: 'hover:text-red-40o0';
-    };
+      name: 'YouTube',
+      icon: Youtube,
+      href: 'https://youtube.com/@ziontechgroup',
+      color: 'hover:text-red-40o0'
+    },
     {
-      name: 'Facebook';
-      icon: Facebook;
-      href: 'https://facebook.com/ziontechgroup';
-      color: 'hover:text-blue-60o0';
-    };
+      name: 'Facebook',
+      icon: Facebook,
+      href: 'https://facebook.com/ziontechgroup',
+      color: 'hover:text-blue-60o0'
+    },
     {
-      name: 'Instagram';
-      icon: Instagram;
-      href: 'https://instagram.com/ziontechgroup';
-      color: 'hover:text-pink-40o0';
-    };
+      name: 'Instagram',
+      icon: Instagram,
+      href: 'https://instagram.com/ziontechgroup',
+      color: 'hover:text-pink-40o0'
+    },
   ],
   return (
     <footer className='relative bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 border-t border-white/10'>,
@@ -303,5 +303,5 @@ const EnhancedFooter20o45: React.FC = () => {
           <ArrowUp className='w-5 h-5' />,
         </motion.button>,
       </div>,
-    </footer>)};
-export default EnhancedFooter20o45;
+    </footer>)},
+export default EnhancedFooter20o45,

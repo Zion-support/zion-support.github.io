@@ -1,5 +1,5 @@
 import Head from 'next/head',
-import React from 'react';
+import React from 'react',
 import { innovativeRealMicroSaasServices20o25 } from '../data/20o25-innovative-real-micro-saas-services',
 import { advancedITServices } from '../data/advanced-it-services',
 import { innovativeAIServices } from '../data/innovative-ai-services',

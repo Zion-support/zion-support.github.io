@@ -1,45 +1,45 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import EmailValidatorDemo from '../components/demos/EmailValidatorDemo';
-import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo';
-import UrlShortenerDemo from '../components/demos/UrlShortenerDemo';
-import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo';
-import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import EmailValidatorDemo from '../components/demos/EmailValidatorDemo',
+import PasswordStrengthDemo from '../components/demos/PasswordStrengthDemo',
+import UrlShortenerDemo from '../components/demos/UrlShortenerDemo',
+import TextAnalyzerDemo from '../components/demos/TextAnalyzerDemo',
+import { Mail, Lock, Link, FileText, CheckCircle, Zap, BarChart3, Code, Play } from 'lucide-react',
 export default function DemosPage() {
-  const [activeDemo, setActiveDemo] = useState<string>('email-validator');
+  const [activeDemo, setActiveDemo] = useState<string>('email-validator'),
   const demos = [
     {
-      id: 'email-validator';
-      title: 'Email Validator Pro';
-      description: 'Advanced email validation with domain checking and deliverability scoring';
-      icon: <Mail className="w-6 h-6"  />;
-      color: 'from-blue-50o0 to-cyan-60o0';
-      component: <EmailValidatorDemo  />};
+      id: 'email-validator',
+      title: 'Email Validator Pro',
+      description: 'Advanced email validation with domain checking and deliverability scoring',
+      icon: <Mail className="w-6 h-6"  />,
+      color: 'from-blue-50o0 to-cyan-60o0',
+      component: <EmailValidatorDemo  />},
     {
-      id: 'password-strength';
-      title: 'Password Strength Analyzer';
-      description: 'Comprehensive password security analysis with entropy calculation';
-      icon: <Lock className="w-6 h-6"  />;
-      color: 'from-green-50o0 to-emerald-60o0';
-      component: <PasswordStrengthDemo  />};
+      id: 'password-strength',
+      title: 'Password Strength Analyzer',
+      description: 'Comprehensive password security analysis with entropy calculation',
+      icon: <Lock className="w-6 h-6"  />,
+      color: 'from-green-50o0 to-emerald-60o0',
+      component: <PasswordStrengthDemo  />},
     {
-      id: 'url-shortener';
-      title: 'Smart URL Shortener';
-      description: 'Professional URL shortening with analytics and custom codes';
-      icon: <Link className="w-6 h-6"  />;
-      color: 'from-purple-50o0 to-pink-60o0';
-      component: <UrlShortenerDemo  />};
+      id: 'url-shortener',
+      title: 'Smart URL Shortener',
+      description: 'Professional URL shortening with analytics and custom codes',
+      icon: <Link className="w-6 h-6"  />,
+      color: 'from-purple-50o0 to-pink-60o0',
+      component: <UrlShortenerDemo  />},
     {
-      id: 'text-analyzer';
-      title: 'Text Analysis Suite';
-      description: 'Advanced text analysis with readability and sentiment analysis';
-      icon: <FileText className="w-6 h-6"  />;
-      color: 'from-orange-50o0 to-red-60o0';
+      id: 'text-analyzer',
+      title: 'Text Analysis Suite',
+      description: 'Advanced text analysis with readability and sentiment analysis',
+      icon: <FileText className="w-6 h-6"  />,
+      color: 'from-orange-50o0 to-red-60o0',
       component: <TextAnalyzerDemo  />}
-  ];
-  const activeDemoData = demos.find(demo => demo.id === activeDemo);
+  ],
+  const activeDemoData = demos.find(demo => demo.id === activeDemo),
   return (
     <>,
       <Head>,

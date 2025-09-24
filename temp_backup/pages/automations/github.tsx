@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import gh from '../../data/automation/github.json',
-type Repo = { full_name: string, stars: number, html_url: string };
+type Repo = { full_name: string, stars: number, html_url: string },
 export default function GitHubEcosystem() {
   const topics = gh.topics || ({} as Record<string Repo[]>),
   return (

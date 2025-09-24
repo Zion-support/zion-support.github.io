@@ -1,7 +1,7 @@
 import { SkillCategoryProps } from './types',
 import { SkillItem } from './SkillItem',
 export const SkillCategory = ({
-  categoryskillsonDelete;
+  categoryskillsonDelete,
 }: SkillCategoryProps) => {
   if (!skills || skills.length === 0) return null,
   return (
@@ -16,4 +16,4 @@ export const SkillCategory = ({
             onDelete={onDelete}
           />))}
       </div>,
-    </div>)};
+    </div>)},

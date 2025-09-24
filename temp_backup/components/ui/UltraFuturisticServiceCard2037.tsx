@@ -32,7 +32,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -45,7 +45,7 @@ interface UltraFuturisticServiceCard20o37Props {
   variant?: 'ai' | 'quantum' | 'automation' | 'cybersecurity' | 'edge' | 'neuromorphic' | 'ai-futuristic' | 'blockchain-futuristic' | 'metaverse-futuristic' | 'iot-futuristic' | 'quantum-futuristic' | 'automation-futuristic' | 'cybersecurity-futuristic' | 'edge-futuristic' | 'neuromorphic-futuristic'}
 ,
 export default function UltraFuturisticServiceCard20o37({
-  service;
+  service,
   variant = 'ai'}: UltraFuturisticServiceCard20o37Props) {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
@@ -54,66 +54,66 @@ export default function UltraFuturisticServiceCard20o37({
       case 'quantum':,
       case 'quantum-futuristic':,
         return {
-          gradient: 'from-purple-60o0 via-indigo-60o0 to-cyan-60o0';
-          border: 'border-purple-50o0/50';
-          glow: 'shadow-purple-50o0/30';
-          accent: 'text-purple-40o0'};
+          gradient: 'from-purple-60o0 via-indigo-60o0 to-cyan-60o0',
+          border: 'border-purple-50o0/50',
+          glow: 'shadow-purple-50o0/30',
+          accent: 'text-purple-40o0'},
       case 'automation':,
       case 'automation-futuristic':,
         return {
-          gradient: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
-          border: 'border-blue-50o0/50';
-          glow: 'shadow-blue-50o0/30';
-          accent: 'text-blue-40o0'};
+          gradient: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+          border: 'border-blue-50o0/50',
+          glow: 'shadow-blue-50o0/30',
+          accent: 'text-blue-40o0'},
       case 'cybersecurity':,
       case 'cybersecurity-futuristic':,
         return {
-          gradient: 'from-red-60o0 via-orange-60o0 to-yellow-60o0';
-          border: 'border-red-50o0/50';
-          glow: 'shadow-red-50o0/30';
-          accent: 'text-red-40o0'};
+          gradient: 'from-red-60o0 via-orange-60o0 to-yellow-60o0',
+          border: 'border-red-50o0/50',
+          glow: 'shadow-red-50o0/30',
+          accent: 'text-red-40o0'},
       case 'edge':,
       case 'edge-futuristic':,
         return {
-          gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0';
-          border: 'border-green-50o0/50';
-          glow: 'shadow-green-50o0/30';
-          accent: 'text-green-40o0'};
+          gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+          border: 'border-green-50o0/50',
+          glow: 'shadow-green-50o0/30',
+          accent: 'text-green-40o0'},
       case 'neuromorphic':,
       case 'neuromorphic-futuristic':,
         return {
-          gradient: 'from-pink-60o0 via-rose-60o0 to-purple-60o0';
-          border: 'border-pink-50o0/50';
-          glow: 'shadow-pink-50o0/30';
-          accent: 'text-pink-40o0'};
+          gradient: 'from-pink-60o0 via-rose-60o0 to-purple-60o0',
+          border: 'border-pink-50o0/50',
+          glow: 'shadow-pink-50o0/30',
+          accent: 'text-pink-40o0'},
       case 'blockchain-futuristic':,
         return {
-          gradient: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0';
-          border: 'border-blue-50o0/50';
-          glow: 'shadow-blue-50o0/30';
-          accent: 'text-blue-40o0'};
+          gradient: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0',
+          border: 'border-blue-50o0/50',
+          glow: 'shadow-blue-50o0/30',
+          accent: 'text-blue-40o0'},
       case 'metaverse-futuristic':,
         return {
-          gradient: 'from-cyan-60o0 via-blue-60o0 to-purple-60o0';
-          border: 'border-cyan-50o0/50';
-          glow: 'shadow-cyan-50o0/30';
-          accent: 'text-cyan-40o0'};
+          gradient: 'from-cyan-60o0 via-blue-60o0 to-purple-60o0',
+          border: 'border-cyan-50o0/50',
+          glow: 'shadow-cyan-50o0/30',
+          accent: 'text-cyan-40o0'},
       case 'iot-futuristic':,
         return {
-          gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0';
-          border: 'border-green-50o0/50';
-          glow: 'shadow-green-50o0/30';
-          accent: 'text-green-40o0'};
+          gradient: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+          border: 'border-green-50o0/50',
+          glow: 'shadow-green-50o0/30',
+          accent: 'text-green-40o0'},
       case 'ai':,
       case 'ai-futuristic':,
       default: ,
         return {
-          gradient: 'from-cyan-60o0 via-blue-60o0 to-indigo-60o0';
-          border: 'border-cyan-50o0/50';
-          glow: 'shadow-cyan-50o0/30';
-          accent: 'text-cyan-40o0'};
+          gradient: 'from-cyan-60o0 via-blue-60o0 to-indigo-60o0',
+          border: 'border-cyan-50o0/50',
+          glow: 'shadow-cyan-50o0/30',
+          accent: 'text-cyan-40o0'},
     }
-  };
+  },
   const styles = getVariantStyles(),
   return (
     <motion.div,
@@ -302,16 +302,16 @@ export default function UltraFuturisticServiceCard20o37({
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
               initial={{
-                x: Math.random() * 10o0;
-                y: Math.random() * 10o0;
+                x: Math.random() * 10o0,
+                y: Math.random() * 10o0,
                 opacity: 0}}
               animate={{
-                x: Math.random() * 10o0;
-                y: Math.random() * 10o0;
+                x: Math.random() * 10o0,
+                y: Math.random() * 10o0,
                 opacity: [0, 1, 0]}}
               transition={{
-                duration: 2;
-                repeat: Infinity;
+                duration: 2,
+                repeat: Infinity,
                 delay: i * 0.2}}
              />))}
         </div>)}

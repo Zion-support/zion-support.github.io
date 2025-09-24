@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { render, screen, waitFor } from '@testing-library/react',
 import { MemoryRouter } from 'react-router-dom',
 import TalentDirectory from '@/pages/TalentDirectory',
 // Mock child components and hooks,
 jest.mock('@/components/talent/FilterSidebar', () => ({
   FilterSidebar: (props: any) => (
-    <div data-testid='filter-sidebar'>Filter Sidebar</div>);
+    <div data-testid='filter-sidebar'>Filter Sidebar</div>)
 })),
 jest.mock('@/components/talent/TalentResults', () => ({
   TalentResults: (props: any) => (
@@ -16,27 +16,27 @@ jest.mock('@/components/talent/TalentResults', () => ({
         </div>))}
       {props.totalCount === 0 && !props.isLoading && (
         <div>No results based on filters</div>)}
-    </div>);
+    </div>),
 })),
 jest.mock('@/components/talent/TalentSkeleton', () => ({
-  TalentSkeleton: () => <div data-testid='talent-skeleton'>Loading...</div>;
+  TalentSkeleton: () => <div data-testid='talent-skeleton'>Loading...</div>
 })),
 jest.mock('@/components/talent/ErrorBanner', () => ({
   ErrorBanner: (props: any) => (
-    <div data-testid='error-banner'>{props.msg}</div>);
+    <div data-testid='error-banner'>{props.msg}</div>),
 })),
 jest.mock(
-  '@/components/GlobalErrorBoundary';
+  '@/components/GlobalErrorBoundary',
   () =>,
     ({ children }: { children: React.ReactNode }) => <>{children}</>),
 jest.mock('@/hooks/useAuth', () => ({
-  useAuth: () => ({ user: { id: 'test-user' }, isAuthenticated: true });
+  useAuth: () => ({ user: { id: 'test-user' }, isAuthenticated: true }),
 })),
 // Mock fetch API (used by useTalentData via useTalentDirectory),
 global.fetch = jest.fn(() =>,
   Promise.resolve({
-    ok: true;
-    json: () => Promise.resolve({ talents: [], total: 0 });
+    ok: true,
+    json: () => Promise.resolve({ talents: [], total: 0 }),
   })) as jest.Mock,
 describe('TalentDirectory Page', () => {
   beforeEach(() => {
@@ -44,8 +44,8 @@ describe('TalentDirectory Page', () => {
     jest.clearAllMocks(),
     (global.fetch as jest.Mock).mockImplementation(() =>,
       Promise.resolve({
-        ok: true;
-        json: () => Promise.resolve({ talents: [], total: 0 });
+        ok: true,
+        json: () => Promise.resolve({ talents: [], total: 0 }),
       }))}),
   it('renders without throwing errors and displays a heading', async () => {
     render(
@@ -56,17 +56,17 @@ describe('TalentDirectory Page', () => {
       expect(
         screen.getByText(/AI & Tech Talent Directory/i)).toBeInTheDocument()}),
     expect(global.fetch).toHaveBeenCalledWith(
-      expect.stringContaining('/api/talent');
+      expect.stringContaining('/api/talent'),
       expect.any(Object))}),
   it('displays talent profiles when API returns data', async () => {
     const mockTalents = [
-      { id: '1', name: 'John Doe', title: 'AI Developer' };
-      { id: '2', name: 'Jane Smith', title: 'Data Scientist' };
+      { id: '1', name: 'John Doe', title: 'AI Developer' },
+      { id: '2', name: 'Jane Smith', title: 'Data Scientist' },
     ],
     (global.fetch as jest.Mock).mockImplementationOnce(() =>,
       Promise.resolve({
-        ok: true;
-        json: () => Promise.resolve({ talents: mockTalents, total: 2 });
+        ok: true,
+        json: () => Promise.resolve({ talents: mockTalents, total: 2 }),
       })),
     render(
       <MemoryRouter>,
@@ -79,8 +79,8 @@ describe('TalentDirectory Page', () => {
   it('renders empty state when API returns no talent profiles', async () => {
     (global.fetch as jest.Mock).mockImplementationOnce(() =>,
       Promise.resolve({
-        ok: true;
-        json: () => Promise.resolve({ talents: [], total: 0 });
+        ok: true,
+        json: () => Promise.resolve({ talents: [], total: 0 }),
       })),
     render(
       <MemoryRouter>,
@@ -107,8 +107,8 @@ describe('TalentDirectory Page', () => {
     // 3. Resolve the fetch promise (simulating API response),
     resolveFetchPromise!({
       // Use non-null assertion as it's guaranteed to be set,
-      ok: true;
-      json: () => Promise.resolve({ talents: [], total: 0 });
+      ok: true,
+      json: () => Promise.resolve({ talents: [], total: 0 }),
     }),
     // 4. Wait for updates and assert skeleton is gone and empty message is now visible,
     await waitFor(() => {
@@ -120,9 +120,9 @@ describe('TalentDirectory Page', () => {
   it('handles API error when fetching talent profiles', async () => {
     (global.fetch as jest.Mock).mockImplementationOnce(() =>,
       Promise.resolve({
-        ok: false;
-        statusText: 'Server Error';
-        json: () => Promise.resolve({ message: 'Failed to fetch talent' });
+        ok: false,
+        statusText: 'Server Error',
+        json: () => Promise.resolve({ message: 'Failed to fetch talent' }),
       })),
     render(
       <MemoryRouter>,

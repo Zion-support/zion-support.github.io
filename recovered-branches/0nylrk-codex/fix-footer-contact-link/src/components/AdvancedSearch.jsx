@@ -1,69 +1,69 @@
 import React, { useState, useEffect, useRef } from 'react',
 import {
-  Search;
-  Sparkles;
-  Filter;
-  TrendingUp;
-  Clock;
-  Star;
+  Search,
+  Sparkles,
+  Filter,
+  TrendingUp,
+  Clock,
+  Star,
 } from 'lucide-react',
 const mockSuggestions = [
   {
-    id: '1';
-    text: 'AI Development Services';
-    type: 'service';
-    relevance: 95;
-    category: 'AI & ML';
-  };
+    id: '1',
+    text: 'AI Development Services',
+    type: 'service',
+    relevance: 95,
+    category: 'AI & ML'
+  },
   {
-    id: '2';
-    text: 'Cloud Infrastructure';
-    type: 'service';
-    relevance: 88;
-    category: 'DevOps';
-  };
+    id: '2',
+    text: 'Cloud Infrastructure',
+    type: 'service',
+    relevance: 88,
+    category: 'DevOps'
+  },
   {
-    id: '3';
-    text: 'React Native Apps';
-    type: 'technology';
-    relevance: 82;
-    category: 'Mobile';
-  };
+    id: '3',
+    text: 'React Native Apps',
+    type: 'technology',
+    relevance: 82,
+    category: 'Mobile'
+  },
   {
-    id: '4';
-    text: 'Blockchain Solutions';
-    type: 'trending';
-    relevance: 90;
-    category: 'Web3';
-  };
+    id: '4',
+    text: 'Blockchain Solutions',
+    type: 'trending',
+    relevance: 90,
+    category: 'Web3'
+  },
   {
-    id: '5';
-    text: 'Data Analytics';
-    type: 'service';
-    relevance: 85;
-    category: 'Data Science';
-  };
+    id: '5',
+    text: 'Data Analytics',
+    type: 'service',
+    relevance: 85,
+    category: 'Data Science'
+  },
   {
-    id: '6';
-    text: 'Cybersecurity';
-    type: 'trending';
-    relevance: 92;
-    category: 'Security';
-  };
+    id: '6',
+    text: 'Cybersecurity',
+    type: 'trending',
+    relevance: 92,
+    category: 'Security'
+  },
   {
-    id: '7';
-    text: 'Machine Learning';
-    type: 'technology';
-    relevance: 87;
-    category: 'AI & ML';
-  };
+    id: '7',
+    text: 'Machine Learning',
+    type: 'technology',
+    relevance: 87,
+    category: 'AI & ML'
+  },
   {
-    id: '8';
-    text: 'Web Development';
-    type: 'service';
-    relevance: 80;
-    category: 'Frontend';
-  };
+    id: '8',
+    text: 'Web Development',
+    type: 'service',
+    relevance: 80,
+    category: 'Frontend'
+  },
 ],
 export function AdvancedSearch() {
   const [query, setQuery] = useState(''),
@@ -73,20 +73,16 @@ export function AdvancedSearch() {
   const [showSuggestions, setShowSuggestions] = useState(false),
   const searchRef = useRef(null),
   const categories = [
-    'AI & ML';
-    'DevOps';
-    'Mobile';
-    'Web3';
-    'Data Science';
-    'Security';
-    'Frontend';
-    'Backend';
+    'AI & MLDevOps',
+    'MobileWeb3',
+    'Data ScienceSecurity',
+    'FrontendBackend',
   ],
   useEffect(() => {
     const handleClickOutside = event => {
       if (searchRef.current && !searchRef.current.contains(event.target)) {
         setShowSuggestions(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   useEffect(() => {
@@ -106,14 +102,14 @@ export function AdvancedSearch() {
   const handleSuggestionClick = suggestion => {
     setQuery(suggestion.text),
     setShowSuggestions(false),
-    // Here you would typically trigger a search};
+    // Here you would typically trigger a search},
   const toggleFilter = category => {
     setSelectedFilters(prev =>,
       prev.includes(category),
         ? prev.filter(f => f !== category),
-        : [...prev, category])};
+        : [...prev, category])},
   const clearFilters = () => {
-    setSelectedFilters([])};
+    setSelectedFilters([])},
   const getSuggestionIcon = type => {
     switch (type) {
       case 'service':,
@@ -126,7 +122,7 @@ export function AdvancedSearch() {
         return <Clock className='w-4 h-4 text-zion-gold' />,
       default: ,
         return <Search className='w-4 h-4 text-zion-slate' />}
-  };
+  },
   const getSuggestionColor = type => {
     switch (type) {
       case 'service':,
@@ -139,7 +135,7 @@ export function AdvancedSearch() {
         return 'bg-zion-gold/10 border-zion-gold/20',
       default: ,
         return 'bg-zion-slate/10 border-zion-slate/20'}
-  };
+  },
   return (
     <div className='relative w-full max-w-2xl mx-auto' ref={searchRef}>,
       {/* Search Input */}

@@ -11,22 +11,22 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(40o3).json({ error: "Sync disabled for this instance" })}
 ,
   const { fromDAO, toDAO, resolutionId, decision, timestamp } = req.body as {
-    fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number};
+    fromDAO: string, toDAO: string, resolutionId: string, decision: "endorse" | "reject", timestamp?: number},
   if (!fromDAO || !toDAO || !resolutionId || !decision) {
     return res.status(40o0).json({ error: "fromDAO, toDAO, resolutionId, decision required" })}
 ,
   const version = nextVersionFor(state, resolutionId),
   const event ={
-    eventId: uuidv4();
-    type: "dao_endorsement" as const;
-    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: Date.now()};
+    eventId: uuidv4(),
+    type: "dao_endorsement" as const,
+    payload: { id: resolutionId, fromDAO, toDAO, resolutionId, decision, timestamp: timestamp || Date.now() },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: Date.now()},
   upsertEvent(state, event),
   writeState(state),
-  const body ={ ...event, propagate: false };
-  const headers: Record<string string> ={};
+  const body ={ ...event, propagate: false },
+  const headers: Record<string string> ={},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
   await Promise.all(

@@ -12,19 +12,19 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
       return dateObj.toLocaleDateString(),
     case 'medium':,
       return dateObj.toLocaleDateString(undefined, {
-        year: 'numeric';
-        month: 'short';
+        year: 'numeric',
+        month: 'short',
         day: 'numeric'}),
     case 'long':,
       return dateObj.toLocaleDateString(undefined, {
-        year: 'numeric';
-        month: 'long';
+        year: 'numeric',
+        month: 'long',
         day: 'numeric'}),
     case 'full':,
       return dateObj.toLocaleDateString(undefined, {
-        weekday: 'long';
-        year: 'numeric';
-        month: 'long';
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
         day: 'numeric'}),
     case 'relative':,
       // Simple relative time (today, yesterday, or date),
@@ -38,7 +38,7 @@ export const formatDate = (date: Date | string | number, format: string = 'mediu
         return dateObj.toLocaleDateString()}
     default: ,
       return dateObj.toLocaleDateString()}
-};
+},
 /**,
  * Format a date to show how long ago it was,
  * @param date Date to format,
@@ -68,4 +68,4 @@ export const timeAgo = (date: Date | string | number): string => {
   if (interval >= 1) {
     return interval === 1 ? '1 minute ago' : `${interval} minutes ago`}
 ,
-  return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`};
+  return seconds <= 5 ? 'just now' : `${Math.floor(seconds)} seconds ago`},

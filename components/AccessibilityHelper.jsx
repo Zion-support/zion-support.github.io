@@ -13,10 +13,10 @@ export default function AccessibilityHelper() {
             mainContent.scrollIntoView()}
         }
       }
-    };
+    },
     document.addEventListener('keydown', handleKeyDown),
     return () => {
-      document.removeEventListener('keydown', handleKeyDown)};
+      document.removeEventListener('keydown', handleKeyDown)},
   }, []),
   return (
     <>,

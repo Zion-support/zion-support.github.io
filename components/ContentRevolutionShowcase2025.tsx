@@ -2,32 +2,32 @@ import Link from 'next/link',
 export default function ContentRevolutionShowcase20o25() {
   const contentItems = [
     {
-      title: 'AI 20o25 Ultimate Content Strategy';
+      title: 'AI 20o25 Ultimate Content Strategy',
       description:,
-        'Master revolutionary content marketing with quantum intelligence and autonomous generation.';
-      href: '/blog/ai-20o25-ultimate-content-strategy';
-      type: 'Strategy Guide';
-      roi: '5,0o00%';
-      icon: '📊';
-    };
+        'Master revolutionary content marketing with quantum intelligence and autonomous generation.',
+      href: '/blog/ai-20o25-ultimate-content-strategy',
+      type: 'Strategy Guide',
+      roi: '5,0o00%',
+      icon: '📊'
+    },
     {
-      title: 'Content Revolution Success Story';
+      title: 'Content Revolution Success Story',
       description:,
-        'Fortune 50o0 companies achieve 5,0o00% ROI with AI content revolution strategies.';
-      href: '/case-studies/ai-20o25-content-revolution-success';
-      type: 'Case Study';
-      roi: '5,0o00%';
-      icon: '🏆';
-    };
+        'Fortune 50o0 companies achieve 5,0o00% ROI with AI content revolution strategies.',
+      href: '/case-studies/ai-20o25-content-revolution-success',
+      type: 'Case Study',
+      roi: '5,0o00%',
+      icon: '🏆'
+    },
     {
-      title: 'Content Mastery Toolkit';
+      title: 'Content Mastery Toolkit',
       description:,
-        'Complete implementation guide with templatesframeworksand optimization tools.';
-      href: '/resources/ai-20o25-content-mastery-toolkit';
-      type: 'Toolkit';
-      roi: '5,0o00%';
-      icon: '🛠️';
-    };
+        'Complete implementation guide with templatesframeworksand optimization tools.',
+      href: '/resources/ai-20o25-content-mastery-toolkit',
+      type: 'Toolkit',
+      roi: '5,0o00%',
+      icon: '🛠️'
+    },
   ],
   return (
     <div className='bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 rounded-2xl p-8 mb-12'>,
@@ -39,7 +39,7 @@ export default function ContentRevolutionShowcase20o25() {
           AI 20o25 Content Revolution,
         </h2>,
         <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
-          Discover the ultimate content strategy 'that', 's transforming,
+          Discover the ultimate content strategy 'thats transforming,
           businesses worldwide with,
           <span className='text-yellow-40o0 font-bold'> 5,0o00% ROI</span> and,
           revolutionary AI technology.,

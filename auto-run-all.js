@@ -8,19 +8,15 @@ const glob = require('glob'),
 // === CONFIGURATION ===,
 // Directories to watch,
 const WATCH_DIRS = [
-  path.join(__dirname, 'components');
-  path.join(__dirname, 'automation');
-  path.join(__dirname, 'backend');
-  path.join(__dirname, 'scripts');
+  path.join(__dirname, 'components'),
+  path.join(__dirname, 'automation'),
+  path.join(__dirname, 'backend'),
+  path.join(__dirname, 'scripts'),
 ],
 // File types and their interpreters,
 const FILE_TYPES = {
-  '.ts': 'ts-node';
-  '.tsx': 'ts-node';
-  '.js': 'node';
-  '.sh': 'bash';
-  '.py': 'python3';
-};
+  '.ts': 'ts-node.tsx': 'ts-node.js': 'node.sh': 'bash.py': 'python3',
+},
 // Glob pattern for all supported file types,
 const FILE_GLOB = '**/*.{ts,tsx,js,sh,py}',
 // Helper to get file extension,
@@ -47,24 +43,24 @@ function startOrRestartFile(filePath) {
     try {
       fs.chmodSync(absPath, 0o755)} catch (e) {
       console.warn(
-        `[auto-run-all] Could not chmod +x for ${filePath}:`;
+        `[auto-run-all] Could not chmod +x for ${filePath}:`,
         e.message)}
   }
   pm2.start(
     {
-      name: procName;
-      script: absPath;
-      interpreter;
-      watch: false;
-      autorestart: true;
-    };
+      name: procName,
+      script: absPath,
+      interpreter,
+      watch: false,
+      autorestart: true
+    },
     err => {
       if (err) {
         // If already exists, restart,
         pm2.restart(procName, restartErr => {
           if (restartErr) {
             console.error(
-              `[auto-run-all] Failed to start/restart ${filePath}:`;
+              `[auto-run-all] Failed to start/restart ${filePath}:`,
               restartErr.message)} else {
             // // console.log(`[auto-run-all] Restarted: ${filePath}`)}
         })} else {
@@ -100,10 +96,10 @@ pm2.connect(err => {
       files.forEach(startOrRestartFile)})}),
   // Watch for changes in all directories,
   const watcher = chokidar.watch(
-    WATCH_DIRS.map(dir => path.join(dir, FILE_GLOB));
+    WATCH_DIRS.map(dir => path.join(dir, FILE_GLOB)),
     {
-      ignoreInitial: true;
-      awaitWriteFinish: true;
+      ignoreInitial: true,
+      awaitWriteFinish: true
     }
   ),
   watcher,

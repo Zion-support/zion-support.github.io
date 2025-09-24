@@ -6,104 +6,104 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs',
 import { Badge } from '@/components/ui/badge',
 import { Search, Filter } from 'lucide-react',
 import { SEO } from '@/components/SEO',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card',
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue;
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
 } from '@/components/ui/select',
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from '@/components/ui/table',
 // Mock data for support requests,
 const MOCK_SUPPORT_REQUESTS = [
   {
-    id: 'SR-10o01';
-    user: 'john.doe@example.com';
-    userId: 'user-123';
-    issue: 'Cannot access account after password reset';
-    status: 'open';
-    priority: 'high';
-    createdAt: '20o23-12-15T14:30:0o0Z';
-    lastUpdated: '20o23-12-15T15:45:0o0Z';
-    category: 'authentication';
-  };
+    id: 'SR-10o01',
+    user: 'john.doe@example.com',
+    userId: 'user-123',
+    issue: 'Cannot access account after password reset',
+    status: 'open',
+    priority: 'high',
+    createdAt: '20o23-12-15T14:30:0o0Z',
+    lastUpdated: '20o23-12-15T15:45:0o0Z',
+    category: 'authentication'
+  },
   {
-    id: 'SR-10o02';
-    user: 'sarah.smith@company.co';
-    userId: 'user-456';
-    issue: 'Payment failed but funds were deducted';
-    status: 'in-progress';
-    priority: 'high';
-    createdAt: '20o23-12-14T09:15:0o0Z';
-    lastUpdated: '20o23-12-15T13:20:0o0Z';
-    category: 'billing';
-  };
+    id: 'SR-10o02',
+    user: 'sarah.smith@company.co',
+    userId: 'user-456',
+    issue: 'Payment failed but funds were deducted',
+    status: 'in-progress',
+    priority: 'high',
+    createdAt: '20o23-12-14T09:15:0o0Z',
+    lastUpdated: '20o23-12-15T13:20:0o0Z',
+    category: 'billing'
+  },
   {
-    id: 'SR-10o03';
-    user: 'tech.guru@startup.io';
-    userId: 'user-789';
-    issue: 'Unable to download invoice PDF';
-    status: 'open';
-    priority: 'medium';
-    createdAt: '20o23-12-15T11:0o0:0o0Z';
-    lastUpdated: '20o23-12-15T11:0o0:0o0Z';
-    category: 'billing';
-  };
+    id: 'SR-10o03',
+    user: 'tech.guru@startup.io',
+    userId: 'user-789',
+    issue: 'Unable to download invoice PDF',
+    status: 'open',
+    priority: 'medium',
+    createdAt: '20o23-12-15T11:0o0:0o0Z',
+    lastUpdated: '20o23-12-15T11:0o0:0o0Z',
+    category: 'billing'
+  },
   {
-    id: 'SR-10o04';
-    user: 'developer@codelab.dev';
-    userId: 'user-235';
-    issue: 'API integration documentation is outdated';
-    status: 'open';
-    priority: 'low';
-    createdAt: '20o23-12-13T16:45:0o0Z';
-    lastUpdated: '20o23-12-13T16:45:0o0Z';
-    category: 'api';
-  };
+    id: 'SR-10o04',
+    user: 'developer@codelab.dev',
+    userId: 'user-235',
+    issue: 'API integration documentation is outdated',
+    status: 'open',
+    priority: 'low',
+    createdAt: '20o23-12-13T16:45:0o0Z',
+    lastUpdated: '20o23-12-13T16:45:0o0Z',
+    category: 'api'
+  },
   {
-    id: 'SR-10o05';
-    user: 'maria.rodriguez@design.co';
-    userId: 'user-567';
-    issue: 'Dispute with freelancer over delivered work quality';
-    status: 'in-progress';
-    priority: 'high';
-    createdAt: '20o23-12-12T10:30:0o0Z';
-    lastUpdated: '20o23-12-15T09:15:0o0Z';
-    category: 'disputes';
-  };
+    id: 'SR-10o05',
+    user: 'maria.rodriguez@design.co',
+    userId: 'user-567',
+    issue: 'Dispute with freelancer over delivered work quality',
+    status: 'in-progress',
+    priority: 'high',
+    createdAt: '20o23-12-12T10:30:0o0Z',
+    lastUpdated: '20o23-12-15T09:15:0o0Z',
+    category: 'disputes'
+  },
   {
-    id: 'SR-10o06';
-    user: 'alex.wong@datacompany.com';
-    userId: 'user-890';
-    issue: 'Profile verification pending for over 7 days';
-    status: 'resolved';
-    priority: 'medium';
-    createdAt: '20o23-12-08T13:20:0o0Z';
-    lastUpdated: '20o23-12-15T08:30:0o0Z';
-    category: 'verification';
-  };
+    id: 'SR-10o06',
+    user: 'alex.wong@datacompany.com',
+    userId: 'user-890',
+    issue: 'Profile verification pending for over 7 days',
+    status: 'resolved',
+    priority: 'medium',
+    createdAt: '20o23-12-08T13:20:0o0Z',
+    lastUpdated: '20o23-12-15T08:30:0o0Z',
+    category: 'verification'
+  },
   {
-    id: 'SR-10o07';
-    user: 'jamie.taylor@tech.org';
-    userId: 'user-345';
-    issue: 'Cannot upload portfolio images';
-    status: 'resolved';
-    priority: 'medium';
-    createdAt: '20o23-12-10T15:10:0o0Z';
-    lastUpdated: '20o23-12-13T11:25:0o0Z';
-    category: 'profile';
-  };
+    id: 'SR-10o07',
+    user: 'jamie.taylor@tech.org',
+    userId: 'user-345',
+    issue: 'Cannot upload portfolio images',
+    status: 'resolved',
+    priority: 'medium',
+    createdAt: '20o23-12-10T15:10:0o0Z',
+    lastUpdated: '20o23-12-13T11:25:0o0Z',
+    category: 'profile'
+  },
 ],
 export default function SupportRequests() {
   const [searchQuery, setSearchQuery] = useState(''),
@@ -141,13 +141,13 @@ export default function SupportRequests() {
     setSearchQuery(''),
     setStatusFilter(null),
     setPriorityFilter(null),
-    setCategoryFilter(null)};
+    setCategoryFilter(null)},
   return (
     (
       <SEO
         title='Support Requests | Admin Dashboard',
         description='Manage and track user support requests and issues',
-      />);
+      />),
     (
       <div className='container mx-auto px-4 py-8'>,
         <div className='flex flex-col md: flex-row items-start md:items-center justify-between mb-8'>,

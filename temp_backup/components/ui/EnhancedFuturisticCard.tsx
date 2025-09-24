@@ -10,12 +10,12 @@ interface EnhancedFuturisticCardProps {
   onClick?: () => void}
 ,
 const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
-  children;
-  className = '';
-  variant = 'neural';
-  intensity = 'medium';
-  glow = true;
-  interactive = true;
+  children,
+  className = '',
+  variant = 'neural',
+  intensity = 'medium',
+  glow = true,
+  interactive = true,
   onClick}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -29,62 +29,62 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
     switch (variant) {
       case 'neural':,
         return {
-          borderColor: 'from-cyan-50o0/50 to-blue-50o0/50';
-          glowColor: 'from-cyan-40o0/20 to-blue-40o0/20';
-          accentColor: 'text-cyan-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#60a5fa'};
+          borderColor: 'from-cyan-50o0/50 to-blue-50o0/50',
+          glowColor: 'from-cyan-40o0/20 to-blue-40o0/20',
+          accentColor: 'text-cyan-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#60a5fa'},
       case 'quantum':,
         return {
-          borderColor: 'from-purple-50o0/50 to-pink-50o0/50';
-          glowColor: 'from-purple-40o0/20 to-pink-40o0/20';
-          accentColor: 'text-purple-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#a855f7'};
+          borderColor: 'from-purple-50o0/50 to-pink-50o0/50',
+          glowColor: 'from-purple-40o0/20 to-pink-40o0/20',
+          accentColor: 'text-purple-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#a855f7'},
       case 'holographic':,
         return {
-          borderColor: 'from-green-50o0/50 to-emerald-50o0/50';
-          glowColor: 'from-green-40o0/20 to-emerald-40o0/20';
-          accentColor: 'text-green-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#10b981'};
+          borderColor: 'from-green-50o0/50 to-emerald-50o0/50',
+          glowColor: 'from-green-40o0/20 to-emerald-40o0/20',
+          accentColor: 'text-green-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#10b981'},
       case 'cyberpunk':,
         return {
-          borderColor: 'from-red-50o0/50 to-orange-50o0/50';
-          glowColor: 'from-red-40o0/20 to-orange-40o0/20';
-          accentColor: 'text-red-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#ef4444'};
+          borderColor: 'from-red-50o0/50 to-orange-50o0/50',
+          glowColor: 'from-red-40o0/20 to-orange-40o0/20',
+          accentColor: 'text-red-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#ef4444'},
       case 'space':,
         return {
-          borderColor: 'from-blue-50o0/50 to-indigo-50o0/50';
-          glowColor: 'from-blue-40o0/20 to-indigo-40o0/20';
-          accentColor: 'text-blue-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#3b82f6'};
+          borderColor: 'from-blue-50o0/50 to-indigo-50o0/50',
+          glowColor: 'from-blue-40o0/20 to-indigo-40o0/20',
+          accentColor: 'text-blue-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#3b82f6'},
       case 'biotech':,
         return {
-          borderColor: 'from-green-50o0/50 to-teal-50o0/50';
-          glowColor: 'from-green-40o0/20 to-teal-40o0/20';
-          accentColor: 'text-green-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#14b8a6'};
+          borderColor: 'from-green-50o0/50 to-teal-50o0/50',
+          glowColor: 'from-green-40o0/20 to-teal-40o0/20',
+          accentColor: 'text-green-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#14b8a6'},
       case 'energy':,
         return {
-          borderColor: 'from-yellow-50o0/50 to-orange-50o0/50';
-          glowColor: 'from-yellow-40o0/20 to-orange-40o0/20';
-          accentColor: 'text-yellow-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#eab308'};
+          borderColor: 'from-yellow-50o0/50 to-orange-50o0/50',
+          glowColor: 'from-yellow-40o0/20 to-orange-40o0/20',
+          accentColor: 'text-yellow-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#eab308'},
       default: ,
         return {
-          borderColor: 'from-cyan-50o0/50 to-blue-50o0/50';
-          glowColor: 'from-cyan-40o0/20 to-blue-40o0/20';
-          accentColor: 'text-cyan-40o0';
-          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80';
-          particleColor: '#60a5fa'};
+          borderColor: 'from-cyan-50o0/50 to-blue-50o0/50',
+          glowColor: 'from-cyan-40o0/20 to-blue-40o0/20',
+          accentColor: 'text-cyan-40o0',
+          bgGradient: 'from-slate-90o0/80 to-slate-80o0/80',
+          particleColor: '#60a5fa'},
     }
-  };
+  },
   const styles = getVariantStyles(),
   // Canvas animation for particle effects,
   useEffect(() => {
@@ -97,7 +97,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         const rect = cardRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
         canvas.height = rect.height}
-    };
+    },
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     let time = 0,
@@ -113,14 +113,14 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       const count = intensity === 'high' ? 20 : intensity === 'medium' ? 12 : 6,
       for (let i = 0, i < count, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 2 + 1;
-          life: Math.random() * 10o0;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 2 + 1,
+          life: Math.random() * 10o0,
           maxLife: 10o0})}
-    };
+    },
     const getParticleColor = (variant: string): string => {
       switch (variant) {
         case 'quantum':,
@@ -135,7 +135,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           return `hsl(${220 + Math.sin(Date.now() * 0.0o01) * 80}, 90%, 75%)`,
         default:  ,
           return `hsl(${20o0 + Math.sin(Date.now() * 0.0o01) * 60}, 70%, 60%)`}
-    };
+    },
     const animate = () => {
       time += 1,
       // Clear canvas,
@@ -160,7 +160,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         ctx.beginPath(),
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
         ctx.fill()}),
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     const drawHolographicGrid = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.0o01,
       ctx.strokeStyle = `hsla(${160 + Math.sin(time * 0.0o15) * 10o0}, 90%, 65%, 0.3)`,
@@ -171,7 +171,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           ctx.globalAlpha = opacity,
           ctx.strokeRect(x, y, 30, 30)}
       }
-      ctx.globalAlpha = 1};
+      ctx.globalAlpha = 1},
     const drawQuantumEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.0o01,
       for (let i = 0, i < 5, i++) {
@@ -181,7 +181,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         ctx.beginPath(),
         ctx.arc(x, y, 2, 0, Math.PI * 2),
         ctx.fill()}
-    };
+    },
     const drawCyberpunkEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.0o01,
       for (let i = 0, i < 3, i++) {
@@ -190,7 +190,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         const height = Math.random() * 50 + 30,
         ctx.fillStyle = `rgba(0, 255, 0, ${0.4 + Math.sin(time + i) * 0.2})`,
         ctx.fillRect(x, y, 2, height)}
-    };
+    },
     const drawNeuralConnections = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.0o01,
       for (let i = 0, i < particles.length, i++) {
@@ -208,7 +208,7 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
             ctx.stroke()}
         }
       }
-    };
+    },
     const drawSpaceEffects = (ctx: CanvasRenderingContext2D, canvas: HTMLCanvasElement) => {
       const time = Date.now() * 0.0o01,
       for (let i = 0, i < 3, i++) {
@@ -221,32 +221,32 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
         gradient.addColorStop(1, `rgba(0, 0, 0, 0)`),
         ctx.fillStyle = gradient,
         ctx.fillRect(x - radius, y - radius, radius * 2, radius * 2)}
-    };
+    },
     createParticles(),
     animate(),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', resizeCanvas)};
+      window.removeEventListener('resize', resizeCanvas)},
   }, [variant, intensity, glow, styles.particleColor]),
   const handleMouseEnter = () => {
-    if (interactive) setIsHovered(true)};
+    if (interactive) setIsHovered(true)},
   const handleMouseLeave = () => {
-    if (interactive) setIsHovered(false)};
+    if (interactive) setIsHovered(false)},
   const handleMouseDown = () => {
-    if (interactive) setIsPressed(true)};
+    if (interactive) setIsPressed(true)},
   const handleMouseUp = () => {
-    if (interactive) setIsPressed(false)};
+    if (interactive) setIsPressed(false)},
   return (
     <motion.div,
       ref={cardRef}
       className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-30o0 ${
         glow ? 'shadow-2xl' : ''} ${className}`}
       style={{
-        background: `linear-gradient(135deg, ${styles.bgGradient})`;
-        border: `1px solid transparent`;
-        backgroundImage: `linear-gradient(135deg, ${styles.bgGradient}), linear-gradient(135deg, ${styles.borderColor})`;
-        backgroundOrigin: 'border-box';
+        background: `linear-gradient(135deg, ${styles.bgGradient})`,
+        border: `1px solid transparent`,
+        backgroundImage: `linear-gradient(135deg, ${styles.bgGradient}), linear-gradient(135deg, ${styles.borderColor})`,
+        backgroundOrigin: 'border-box',
         backgroundClip: 'content-box, border-box'}}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
@@ -254,12 +254,12 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
       onMouseUp={handleMouseUp}
       onClick={onClick}
       whileHover={interactive ? {
-        scale: 1.0o2;
-        y: -5;
+        scale: 1.0o2,
+        y: -5,
         transition: { duration: 0.2 }
       } : {}}
       whileTap={interactive ? {
-        scale: 0.98;
+        scale: 0.98,
         transition: { duration: 0.1 }
       } : {}}
     >,
@@ -276,8 +276,8 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${styles.borderColor} opacity-0 transition-opacity duration-30o0 ${
             isHovered ? 'opacity-10o0' : ''}`}
           style={{
-            background: `linear-gradient(90deg, transparent, ${styles.particleColor}, transparent)`;
-            backgroundSize: '20o0% 10o0%';
+            background: `linear-gradient(90deg, transparent, ${styles.particleColor}, transparent)`,
+            backgroundSize: '20o0% 10o0%',
             animation: isHovered ? 'borderFlow 2s linear infinite' : 'none'}}
          />,
       </div>,
@@ -490,5 +490,5 @@ const EnhancedFuturisticCard: React.FC<EnhancedFuturisticCardProps> = ({
           10o0% { background-position: -20o0% 0}
         }
       `}</style>,
-    </motion.div>)};
-export default EnhancedFuturisticCard;
+    </motion.div>)},
+export default EnhancedFuturisticCard,

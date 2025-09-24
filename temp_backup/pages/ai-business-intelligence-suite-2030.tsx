@@ -1,36 +1,36 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  BarChart3;
-  TrendingUp;
-  Brain;
-  Zap;
-  Shield;
-  Users;
-  CheckCircle;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Database;
-  Cpu;
-  Cloud;
-  Lock;
-  Eye;
-  Target;
-  BarChart;
-  PieChart;
-  LineChart;
-  Activity;
-  Calendar;
-  FileText;
-  Search;
-  Filter;
-  Download;
-  Share2;
-  Settings;
+  BarChart3,
+  TrendingUp,
+  Brain,
+  Zap,
+  Shield,
+  Users,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Database,
+  Cpu,
+  Cloud,
+  Lock,
+  Eye,
+  Target,
+  BarChart,
+  PieChart,
+  LineChart,
+  Activity,
+  Calendar,
+  FileText,
+  Search,
+  Filter,
+  Download,
+  Share2,
+  Settings,
 } from 'lucide-react',
 import Link from 'next/link',
 import UltraFuturisticBackground20o30 from '../components/ui/UltraFuturisticBackground20o30',
@@ -38,45 +38,32 @@ import UltraFuturisticNavigation20o30 from '../components/layout/UltraFuturistic
 import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFooter20o30',
 export default function AIBusinessIntelligenceSuite20o30() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const features = [
-    'Real-time data visualization and dashboards';
-    'AI-powered predictive analytics';
-    'Automated report generation';
-    'Natural language query interface';
-    'Advanced machine learning models';
-    'Multi-source data integration';
-    'Custom KPI tracking';
-    'Mobile-responsive design';
-    'API access for custom integrations';
-    'White-label solutions available';
+    'Real-time data visualization and dashboardsAI-powered predictive analytics',
+    'Automated report generationNatural language query interface',
+    'Advanced machine learning modelsMulti-source data integration',
+    'Custom KPI trackingMobile-responsive design',
+    'API access for custom integrationsWhite-label solutions available',
   ],
   const useCases = [
-    'Sales performance tracking';
-    'Marketing campaign analysis';
-    'Financial reporting';
-    'Operational efficiency';
-    'Customer behavior analysis';
-    'Risk assessment';
+    'Sales performance trackingMarketing campaign analysis',
+    'Financial reportingOperational efficiency',
+    'Customer behavior analysisRisk assessment',
   ],
   const integrations = [
-    'Salesforce';
-    'HubSpot';
-    'Shopify';
-    'QuickBooks';
-    'Google Analytics';
-    'Slack';
+    'SalesforceHubSpot',
+    'ShopifyQuickBooks',
+    'Google AnalyticsSlack',
   ],
   const competitors = [
-    'Tableau ($70-150/month)';
-    'Power BI ($9.99-20/month)';
-    'Looker ($30o00+/month)';
-    'QlikView (enterprise pricing)';
-    'Sisense (enterprise pricing)';
+    'Tableau ($70-150/month)Power BI ($9.99-20/month)',
+    'Looker ($30o00+/month)QlikView (enterprise pricing)',
+    'Sisense (enterprise pricing)',
   ],
   return (
     <>,
@@ -150,7 +137,7 @@ export default function AIBusinessIntelligenceSuite20o30() {
                 </h1>,
                 <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
                   Next-generation AI-powered business analytics and insights.,
-                  Transform your business with real-time data visualization;
+                  Transform your business with real-time data visualization,
                   predictive analytics, and automated reporting powered by,
                   advanced machine learning.,
                 </p>,
@@ -249,7 +236,7 @@ export default function AIBusinessIntelligenceSuite20o30() {
                 </h2>,
                 <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
                   Competitive with Tableau ($70-150), Power BI ($9.99-20), and,
-                  Looker ($30o00+). Our advantage: Better AI-powered insights;
+                  Looker ($30o00+). Our advantage: Better AI-powered insights,
                   real-time analytics, and significantly lower cost.,
                 </p>,
               </motion.div>,

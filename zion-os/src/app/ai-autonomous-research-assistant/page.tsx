@@ -1,15 +1,15 @@
-export default function AIAutonomousResearchAssistantPage() {;
+export default function AIAutonomousResearchAssistantPage() {,
   return (
     <div className='min-h-screen bg-white'>
       <section className='py-20'>
         <div className='max-w-5xl mx-auto px-4'>
           <h1 className='text-4xl md: text-5xl font-bold mb-4'>
-            AI Autonomous Research Assistant;
+            AI Autonomous Research Assistant,
           </h1>
-          <p className='text-lg text-gray-7000'>;,
-            Accelerate research with agents for discovery, synthesis, and: reporting.;
+          <p className='text-lg text-gray-7000'>,
+            Accelerate research with agents for discovery, synthesis, and: reporting.,
           </p>
         </div>
-      </section>;,
+      </section>,
     </div>)}
-;
+,

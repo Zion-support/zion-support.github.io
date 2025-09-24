@@ -1,157 +1,157 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Palette;
-  Type;
-  User;
-  Search;
-  Eye;
-  Heart;
-  ShoppingCart;
-  Code;
-  Database;
-  Globe;
-  Shield;
-  Cpu;
-  Users2;
-  Award;
-  CheckCircle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Lock;
-  Server;
-  Network;
-  Monitor;
-  Settings;
-  RefreshCw;
-  Play;
-  Pause;
-  AlertTriangle;
-  CheckCircle2;
-  Building;
-  Wifi;
-  HardDrive;
-  Cloud;
-  Smartphone;
-  Link;
-  Blocks;
-  Wallet;
-  CreditCard;
-  PiggyBank;
-  Building2;
-  Activity;
-  Waves;
-  Zap;
-  BrainCircuit;
-  CpuIcon;
-  MonitorHeart;
-  Film;
-  Headphones;
-  Camera;
-  Gamepad2;
-  Tv;
-  Radio;
-  Factory;
-  Cog;
-  Gauge;
-  Wrench;
-  Settings2;
-  CpuIcon2;
-  Calendar;
-  Clock;
-  Target;
-  Users2;
-  FileText2;
-  PieChart;
-  Atom;
-  Cpu;
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  Shield;
-  Globe;
-  Database;
-  Network;
-  Building;
-  Users;
-  Globe;
-  Shield;
-  Cpu;
-  Award;
-  CheckCircle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Lock;
-  Server;
-  Cloud;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Cpu,
+  Users2,
+  Award,
+  CheckCircle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Lock,
+  Server,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Play,
+  Pause,
+  AlertTriangle,
+  CheckCircle2,
+  Building,
+  Wifi,
+  HardDrive,
+  Cloud,
+  Smartphone,
+  Link,
+  Blocks,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building2,
+  Activity,
+  Waves,
+  Zap,
+  BrainCircuit,
+  CpuIcon,
+  MonitorHeart,
+  Film,
+  Headphones,
+  Camera,
+  Gamepad2,
+  Tv,
+  Radio,
+  Factory,
+  Cog,
+  Gauge,
+  Wrench,
+  Settings2,
+  CpuIcon2,
+  Calendar,
+  Clock,
+  Target,
+  Users2,
+  FileText2,
+  PieChart,
+  Atom,
+  Cpu,
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  Shield,
+  Globe,
+  Database,
+  Network,
+  Building,
+  Users,
+  Globe,
+  Shield,
+  Cpu,
+  Award,
+  CheckCircle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Lock,
+  Server,
+  Cloud,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions';
+  title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions',
   description:,
-    'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.';
+    'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.',
   keywords:,
-    'Zion Tech Group, quantum AI, autonomous systems, AI technology, quantum computing, artificial intelligence, technology solutions';
+    'Zion Tech Group, quantum AI, autonomous systems, AI technology, quantum computing, artificial intelligence, technology solutions',
   openGraph: {
-    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions';
+    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions',
     description:,
-      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.';
-    url: 'https://ziontechgroup.com';
-    siteName: 'Zion Tech Group';
+      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.',
+    url: 'https://ziontechgroup.com',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-zion-tech-group.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'Zion Tech Group';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-zion-tech-group.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Zion Tech Group'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions';
+    card: 'summary_large_image',
+    title: 'Zion Tech Group | Revolutionary Quantum AI Technology Solutions',
     description:,
-      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.';
-    images: ['https://ziontechgroup.com/og-image-zion-tech-group.jpg'];
-  };
+      'Leading provider of quantum-powered AI solutions, autonomous systems, and cutting-edge technology platforms for the future.',
+    images: ['https://ziontechgroup.com/og-image-zion-tech-group.jpg']
+  },
   alternates: {
-    canonical: 'https://ziontechgroup.com';
-  };
-};
+    canonical: 'https://ziontechgroup.com'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function ZionTechGroup() {
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -199,7 +199,7 @@ export default function ZionTechGroup() {
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
               We are a forward-thinking technology company dedicated to pushing,
-              the boundaries of what's possible through quantum computing;
+              the boundaries of what's possible through quantum computing,
               artificial intelligence, and autonomous systems.,
             </p>,
           </div>,
@@ -463,7 +463,7 @@ export default function ZionTechGroup() {
               Why Choose Zion Tech Group?,
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-              We stand apart through our commitment to innovation, excellence;
+              We stand apart through our commitment to innovation, excellence,
               and transformative results.,
             </p>,
           </div>,

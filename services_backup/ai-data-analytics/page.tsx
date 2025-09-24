@@ -1,6 +1,6 @@
 export const metadata ={
-  title: 'AI Data Analytics Platform | Zion Tech Group';
-  description: 'Advanced AI-powered data analytics with predictive modeling, real-time insights, and automated reporting. Transform raw data into actionable business intelligence.'};
+  title: 'AI Data Analytics Platform | Zion Tech Group',
+  description: 'Advanced AI-powered data analytics with predictive modeling, real-time insights, and automated reporting. Transform raw data into actionable business intelligence.'},
 export default function AIDataAnalyticsPage() {
   return (
     <div className="max-w-6xl mx-auto px-4 py-8">,
@@ -10,7 +10,7 @@ export default function AIDataAnalyticsPage() {
           AI Data Analytics Platform,
         </h1>,
         <p className="text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto">,
-          Transform your data into actionable insights with AI-powered analytics, predictive modeling;
+          Transform your data into actionable insights with AI-powered analytics, predictive modeling,
           and automated reporting. Make data-driven decisions with confidence and speed.,
         </p>,
         <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -35,9 +35,9 @@ export default function AIDataAnalyticsPage() {
             title="Predictive Analytics",
             description="AI-powered forecasting and trend analysis to predict future outcomes with high accuracy.",
             features={[
-              "Machine learning models";
-              "Time series forecasting";
-              "Anomaly detection";
+              "Machine learning models",
+              "Time series forecasting",
+              "Anomaly detection",
               "Risk assessment"]}
            />,
           <FeatureCard
@@ -45,9 +45,9 @@ export default function AIDataAnalyticsPage() {
             title="Real-time Dashboards",
             description="Interactive dashboards with live data visualization and customizable metrics.",
             features={[
-              "Live data streaming";
-              "Interactive charts";
-              "Custom metrics";
+              "Live data streaming",
+              "Interactive charts",
+              "Custom metrics",
               "Mobile-responsive design"]}
            />,
           <FeatureCard
@@ -55,9 +55,9 @@ export default function AIDataAnalyticsPage() {
             title="Automated Insights",
             description="AI automatically identifies patterns, trends, and anomalies in your data.",
             features={[
-              "Pattern recognition";
-              "Trend identification";
-              "Anomaly detection";
+              "Pattern recognition",
+              "Trend identification",
+              "Anomaly detection",
               "Automated alerts"]}
            />,
           <FeatureCard
@@ -65,9 +65,9 @@ export default function AIDataAnalyticsPage() {
             title="Advanced Visualizations",
             description="Create stunning visualizations with AI-suggested chart types and layouts.",
             features={[
-              "AI-suggested visualizations";
-              "Custom chart types";
-              "3D data modeling";
+              "AI-suggested visualizations",
+              "Custom chart types",
+              "3D data modeling",
               "Interactive exploration"]}
            />,
           <FeatureCard
@@ -75,9 +75,9 @@ export default function AIDataAnalyticsPage() {
             title="Natural Language Queries",
             description="Ask questions about your data in plain English and get instant answers.",
             features={[
-              "Voice queries";
-              "Text-based questions";
-              "Context understanding";
+              "Voice queries",
+              "Text-based questions",
+              "Context understanding",
               "Multi-language support"]}
            />,
           <FeatureCard
@@ -85,9 +85,9 @@ export default function AIDataAnalyticsPage() {
             title="Automated Reporting",
             description="Generate comprehensive reports automatically with AI-powered insights and recommendations.",
             features={[
-              "Scheduled reports";
-              "Custom templates";
-              "Executive summaries";
+              "Scheduled reports",
+              "Custom templates",
+              "Executive summaries",
               "Action recommendations"]}
            />,
         </div>,
@@ -102,10 +102,10 @@ export default function AIDataAnalyticsPage() {
             period="month",
             description="Perfect for small teams and startups",
             features={[
-              "Up to 10 data sources";
-              "Basic AI analytics";
-              "Standard visualizations";
-              "Email support";
+              "Up to 10 data sources",
+              "Basic AI analytics",
+              "Standard visualizations",
+              "Email support",
               "5 user accounts"]}
             popular={false}
            />,
@@ -115,11 +115,11 @@ export default function AIDataAnalyticsPage() {
             period="month",
             description="Ideal for growing businesses",
             features={[
-              "Up to 50 data sources";
-              "Advanced AI features";
-              "Custom visualizations";
-              "Priority support";
-              "25 user accounts";
+              "Up to 50 data sources",
+              "Advanced AI features",
+              "Custom visualizations",
+              "Priority support",
+              "25 user accounts",
               "API access"]}
             popular={true}
            />,
@@ -129,11 +129,11 @@ export default function AIDataAnalyticsPage() {
             period="month",
             description="For large organizations",
             features={[
-              "Unlimited data sources";
-              "Custom AI training";
-              "White-label solution";
-              "24/7 dedicated support";
-              "Unlimited users";
+              "Unlimited data sources",
+              "Custom AI training",
+              "White-label solution",
+              "24/7 dedicated support",
+              "Unlimited users",
               "On-premise deployment"]}
             popular={false}
            />,

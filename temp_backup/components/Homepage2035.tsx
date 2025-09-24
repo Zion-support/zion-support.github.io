@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database;
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
+  Loader2, ChevronDown, Zap, Globe, Target, Lightbulb, Code, Database,
   Cloud, Lock, ChartBar, Cpu, Atom, Satellite, Gamepad2, Palette} from 'lucide-react',
 import UltraFuturisticBackground20o35 from './ui/UltraFuturisticBackground20o35',
 import UltraFuturisticServiceCard20o35 from './ui/UltraFuturisticServiceCard20o35',
@@ -36,38 +36,38 @@ const Homepage20o35: React.FC = () => {
       setIsVisible(true)}, 80o0),
     return () => clearTimeout(timer)}, []),
   const fadeInUp ={
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const backgroundVariants ={
-    initial: { opacity: 0, scale: 0.8 };
+    initial: { opacity: 0, scale: 0.8 },
     animate: {
-      opacity: 1;
-      scale: 1;
+      opacity: 1,
+      scale: 1,
       transition: { duration: 1.5, ease: "easeOut" as const }
     }
-  };
+  },
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"  /> };
-    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5"  /> };
-    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5"  /> };
-    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5"  /> };
-    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5"  /> };
-    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5"  /> };
-    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5"  /> };
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"  /> },
+    { id: 'ai', name: 'AI & ML', icon: <Brain className="w-5 h-5"  /> },
+    { id: 'it', name: 'IT Enterprise', icon: <Cpu className="w-5 h-5"  /> },
+    { id: 'quantum', name: 'Quantum Tech', icon: <Atom className="w-5 h-5"  /> },
+    { id: 'space', name: 'Space Tech', icon: <Satellite className="w-5 h-5"  /> },
+    { id: 'cyber', name: 'Cybersecurity', icon: <Shield className="w-5 h-5"  /> },
+    { id: 'cloud', name: 'Cloud & DevOps', icon: <Cloud className="w-5 h-5"  /> },
     { id: 'fintech', name: 'FinTech', icon: <ChartBar className="w-5 h-5"  /> }
   ],
   const allServices = [
-    ...innovative20o25MicroSaasBatch;
-    ...innovative20o25ITEnterpriseBatch;
+    ...innovative20o25MicroSaasBatch,
+    ...innovative20o25ITEnterpriseBatch,
     ...innovative20o25AIServicesBatch],
   const filteredServices = activeCategory === 'all',
     ? allServices,
@@ -126,9 +126,9 @@ const Homepage20o35: React.FC = () => {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,
               {[
-                { icon: <Users className="w-8 h-8"  />, value: '50K+', label: 'Happy Clients' };
-                { icon: <Star className="w-8 h-8"  />, value: '4.9', label: 'Average Rating' };
-                { icon: <Award className="w-8 h-8"  />, value: '20o0+', label: 'Services' };
+                { icon: <Users className="w-8 h-8"  />, value: '50K+', label: 'Happy Clients' },
+                { icon: <Star className="w-8 h-8"  />, value: '4.9', label: 'Average Rating' },
+                { icon: <Award className="w-8 h-8"  />, value: '20o0+', label: 'Services' },
                 { icon: <TrendingUp className="w-8 h-8"  />, value: '99.9%', label: 'Uptime' }
               ].map((stat, index) => (
                 <motion.div,
@@ -233,28 +233,28 @@ const Homepage20o35: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-12 h-12"  />;
-                  title: 'AI-Powered Solutions';
-                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'};
+                  icon: <Brain className="w-12 h-12"  />,
+                  title: 'AI-Powered Solutions',
+                  description: 'Leverage the latest AI and machine learning technologies for intelligent automation and insights'},
                 {
-                  icon: <Shield className="w-12 h-12"  />;
-                  title: 'Enterprise Security';
-                  description: 'Military-grade security protocols and compliance standards to protect your business'};
+                  icon: <Shield className="w-12 h-12"  />,
+                  title: 'Enterprise Security',
+                  description: 'Military-grade security protocols and compliance standards to protect your business'},
                 {
-                  icon: <Rocket className="w-12 h-12"  />;
-                  title: 'Space Technology';
-                  description: 'Pioneering space tech solutions for the next generation of innovation'};
+                  icon: <Rocket className="w-12 h-12"  />,
+                  title: 'Space Technology',
+                  description: 'Pioneering space tech solutions for the next generation of innovation'},
                 {
-                  icon: <Atom className="w-12 h-12"  />;
-                  title: 'Quantum Computing';
-                  description: 'Access to quantum computing power for complex problem-solving'};
+                  icon: <Atom className="w-12 h-12"  />,
+                  title: 'Quantum Computing',
+                  description: 'Access to quantum computing power for complex problem-solving'},
                 {
-                  icon: <Cloud className="w-12 h-12"  />;
-                  title: 'Cloud-Native';
-                  description: 'Built for the cloud with scalability, reliability, and performance in mind'};
+                  icon: <Cloud className="w-12 h-12"  />,
+                  title: 'Cloud-Native',
+                  description: 'Built for the cloud with scalability, reliability, and performance in mind'},
                 {
-                  icon: <Target className="w-12 h-12"  />;
-                  title: 'Results-Driven';
+                  icon: <Target className="w-12 h-12"  />,
+                  title: 'Results-Driven',
                   description: 'Focused on delivering measurable business outcomes and ROI'}
               ].map((feature, index) => (
                 <motion.div,
@@ -307,5 +307,5 @@ const Homepage20o35: React.FC = () => {
           </div>,
         </section>,
       </UltraFuturisticBackground20o35>,
-    </Layout>)};
-export default Homepage20o35;
+    </Layout>)},
+export default Homepage20o35,

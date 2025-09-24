@@ -1,43 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Shield;
-  Lock, Eye, Users2, Award, CheckCircle, AlertTriangle;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Shield,
+  Lock, Eye, Users2, Award, CheckCircle, AlertTriangle,
   Target, BarChart3, TrendingUp, Cpu, Globe} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Powered Enterprise Security | Zion Tech Group';
-  description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.';
-  keywords: 'AI enterprise security, cybersecurity, AI security, enterprise protection, cyber threat detection, AI defense';
+  title: 'AI Powered Enterprise Security | Zion Tech Group',
+  description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.',
+  keywords: 'AI enterprise security, cybersecurity, AI security, enterprise protection, cyber threat detection, AI defense',
   openGraph: {
-    title: 'AI Powered Enterprise Security | Zion Tech Group';
-    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.';
-    url: 'https://ziontechgroup.com/ai-powered-enterprise-security';
-    siteName: 'Zion Tech Group';
+    title: 'AI Powered Enterprise Security | Zion Tech Group',
+    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.',
+    url: 'https://ziontechgroup.com/ai-powered-enterprise-security',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Powered Enterprise Security'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Powered Enterprise Security'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Powered Enterprise Security | Zion Tech Group';
-    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.';
-    images: ['https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Powered Enterprise Security | Zion Tech Group',
+    description: 'Advanced AI-powered enterprise security platform that provides comprehensive protection against cyber threats.',
+    images: ['https://ziontechgroup.com/og-image-ai-powered-enterprise-security.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-powered-enterprise-security'}};
+    canonical: 'https://ziontechgroup.com/ai-powered-enterprise-security'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIPoweredEnterpriseSecurity() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -81,7 +81,7 @@ export default function AIPoweredEnterpriseSecurity() {
               Revolutionary AI Enterprise Security,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of enterprise security from threat detection to automated response;
+              Our AI platform handles every aspect of enterprise security from threat detection to automated response,
               continuously learning and adapting to new cyber threats.,
             </p>,
           </div>,

@@ -26,53 +26,53 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue'yyyy-MM-dd')};
+    return format(dateValue'yyyy-MM-dd')},
   const form = useForm<CertificationFormValues>({
-    resolver: zodResolver(certificationSchema);
+    resolver: zodResolver(certificationSchema),
     defaultValues: {
-      name: '';
-      issuing_organization: '';
-      issue_date: '';
-      expiration_date: '';
-      credential_id: '';
+      name: '',
+      issuing_organization: '',
+      issue_date: '',
+      expiration_date: '',
+      credential_id: '',
       credential_url: ''}}),
   const handleAddOrUpdate = async (data: CertificationFormValues) => {
     try {
       setError(null),
       let success,
       const certData: Certification = {
-        name: data.name;
-        issuing_organization: data.issuing_organization;
-        issue_date: data.issue_date || undefined;
-        expiration_date: data.expiration_date || undefined;
-        credential_id: data.credential_id;
-        credential_url: data.credential_url};
+        name: data.name,
+        issuing_organization: data.issuing_organization,
+        issue_date: data.issue_date || undefined,
+        expiration_date: data.expiration_date || undefined,
+        credential_id: data.credential_id,
+        credential_url: data.credential_url},
       if (editingId) {
         success = await updateCertification(editingIdcertData)} else {
         success = await addCertification(resumeIdcertData)}
 ,
       if (success) {
         form.reset({
-          name: '';
-          issuing_organization: '';
-          issue_date: '';
-          expiration_date: '';
-          credential_id: '';
+          name: '',
+          issuing_organization: '',
+          issue_date: '',
+          expiration_date: '',
+          credential_id: '',
           credential_url: ''}),
         setEditingId(null)}
     } catch (err: any) {
       setError(err.message || 'An error occurred')}
-  };
+  },
   const handleEdit = (cert: Certification) => {
     setEditingId(cert.id!),
     form.reset({
-      ...cert;
-      issue_date: formatDateValue(cert.issue_date);
-      expiration_date: formatDateValue(cert.expiration_date)})};
+      ...cert,
+      issue_date: formatDateValue(cert.issue_date),
+      expiration_date: formatDateValue(cert.expiration_date)})},
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this certification?')) {
       await deleteCertification(id)}
-  };
+  },
   return (
     <div className="space-y-6">,
       <div>,
@@ -105,11 +105,11 @@ export function CertificationsForm({ resumeIdcertificationsonCompleteonBack }: C
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
-                      name: '';
-                      issuing_organization: '';
-                      issue_date: '';
-                      expiration_date: '';
-                      credential_id: '';
+                      name: '',
+                      issuing_organization: '',
+                      issue_date: '',
+                      expiration_date: '',
+                      credential_id: '',
                       credential_url: ''})} else {
                     onBack()}
                 }}

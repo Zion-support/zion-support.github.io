@@ -3,34 +3,26 @@ export type ServiceSelectionStepProps = {
   value: QuoteFormData,
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
-  onNext: () => void};
+  onNext: () => void},
 const SERVICE_OPTIONS = [
-  'Web Development';
-  'Mobile Apps';
-  'AI/ML';
-  'UI/UX Design';
-  'Cloud & DevOps';
-  'Data Engineering';
+  'Web DevelopmentMobile Apps',
+  'AI/MLUI/UX Design',
+  'Cloud & DevOpsData Engineering',
 ],
 const TALENT_OPTIONS = [
-  'Frontend Engineer';
-  'Backend Engineer';
-  'Full-Stack Engineer';
-  'Product Designer';
-  'Data Scientist';
-  'Project Manager';
+  'Frontend EngineerBackend Engineer',
+  'Full-Stack EngineerProduct Designer',
+  'Data ScientistProject Manager',
 ],
 const EQUIPMENT_OPTIONS = [
-  'GPU Servers';
-  'Test Devices';
-  'Cameras / Audio';
-  'Staging Environment';
-  'Other Specialized Hardware';
+  'GPU ServersTest Devices',
+  'Cameras / AudioStaging Environment',
+  'Other Specialized Hardware',
 ],
 export default function ServiceSelectionStep({
-  value;
-  onChange;
-  onNext;
+  value,
+  onChange,
+  onNext,
 }: ServiceSelectionStepProps) {
   function toggleItem(list: string[], item: string): string[] {
     return list.includes(item) ? list.filter(i => i !== item) : [...list, item]}
@@ -54,14 +46,14 @@ export default function ServiceSelectionStep({
                 type='button',
                 onClick={() =>,
                   onChange(prev => ({
-                    ...prev;
-                    serviceTypes: toggleItem(prev.serviceTypes, opt);
+                    ...prev,
+                    serviceTypes: toggleItem(prev.serviceTypes, opt),
                   }))}
                 className={[
-                  'px-3 py-1 rounded-full border text-sm';
+                  'px-3 py-1 rounded-full border text-sm',
                   value.serviceTypes.includes(opt),
                     ? 'bg-indigo-60o0 text-white border-indigo-60o0',
-                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0';
+                    : 'bg-transparent border-gray-30o0 dark: border-gray-70o0'
                 ].join(' ')}
               >,
                 {opt}
@@ -77,14 +69,14 @@ export default function ServiceSelectionStep({
                 type='button',
                 onClick={() =>,
                   onChange(prev => ({
-                    ...prev;
-                    talentRoles: toggleItem(prev.talentRoles, opt);
+                    ...prev,
+                    talentRoles: toggleItem(prev.talentRoles, opt),
                   }))}
                 className={[
-                  'px-3 py-1 rounded-full border text-sm';
+                  'px-3 py-1 rounded-full border text-sm',
                   value.talentRoles.includes(opt),
                     ? 'bg-indigo-60o0 text-white border-indigo-60o0',
-                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0';
+                    : 'bg-transparent border-gray-30o0 dark: border-gray-70o0'
                 ].join(' ')}
               >,
                 {opt}
@@ -100,14 +92,14 @@ export default function ServiceSelectionStep({
                 type='button',
                 onClick={() =>,
                   onChange(prev => ({
-                    ...prev;
-                    equipmentNeeds: toggleItem(prev.equipmentNeeds, opt);
+                    ...prev,
+                    equipmentNeeds: toggleItem(prev.equipmentNeeds, opt),
                   }))}
                 className={[
-                  'px-3 py-1 rounded-full border text-sm';
+                  'px-3 py-1 rounded-full border text-sm',
                   value.equipmentNeeds.includes(opt),
                     ? 'bg-indigo-60o0 text-white border-indigo-60o0',
-                    : 'bg-transparent border-gray-30o0 dark:border-gray-70o0';
+                    : 'bg-transparent border-gray-30o0 dark: border-gray-70o0'
                 ].join(' ')}
               >,
                 {opt}

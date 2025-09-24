@@ -1,17 +1,16 @@
-import React from 'react';;
-import Head from 'next/head';
-import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import { Phone, Mail, MapPin, Check, ArrowRight, Eye } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import Button from '../components/ui/Button',
 export default function HolographicAICommunicationPage() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'},
   const features = [
-    'AI-powered 3D holographic projectionReal-time holographic rendering';
-    'Multi-user holographic meetingsGesture and voice control';
-    'Cross-platform WebXR supportEnterprise-grade security'];
+    'AI-powered 3D holographic projectionReal-time holographic renderingMulti-user holographic meetingsGesture and voice control',
+    'Cross-platform WebXR supportEnterprise-grade security'],
   return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,

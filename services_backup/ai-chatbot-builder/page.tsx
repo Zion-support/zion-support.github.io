@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Chatbot Builder | Zion Tech Group';
+  title: 'AI Chatbot Builder | Zion Tech Group',
   description:,
-    'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.';
-};
+    'Build intelligent chatbots with no-code platform. Custom AI assistants for customer support, sales, and engagement.',
+},
 export default function AIChatbotBuilderPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function AIChatbotBuilderPage() {
         <FeatureCard
           title='No-Code Builder',
           details={[
-            'Drag-and-drop interface';
-            'Pre-built conversation flows';
-            'Multi-language support';
-            'Visual flow designer';
-            'Template library';
+            'Drag-and-drop interfacePre-built conversation flows',
+            'Multi-language supportVisual flow designer',
+            'Template library',
           ]}
         />,
         <FeatureCard
           title='AI Intelligence',
           details={[
-            'GPT-4 integration';
-            'Context-aware responses';
-            'Sentiment analysis';
-            'Intent recognition';
-            'Learning from conversations';
+            'GPT-4 integrationContext-aware responses',
+            'Sentiment analysisIntent recognition',
+            'Learning from conversations',
           ]}
         />,
         <FeatureCard
           title='Integration & Analytics',
           details={[
-            'CRM integration (Salesforce, HubSpot)';
-            'Live chat handoff';
-            'Conversation analytics';
-            'Performance metrics';
-            'A/B testing tools';
+            'CRM integration (Salesforce, HubSpot)Live chat handoff',
+            'Conversation analyticsPerformance metrics',
+            'A/B testing tools',
           ]}
         />,
       </div>,
@@ -96,22 +90,18 @@ function PricingSection() {
           name='Starter',
           price='$29/mo',
           features={[
-            'Up to 1,0o00 conversations/month';
-            'Basic AI responses';
-            'Email support';
-            'Standard integrations';
-            'Basic analytics';
+            'Up to 1,0o00 conversations/monthBasic AI responses',
+            'Email supportStandard integrations',
+            'Basic analytics',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$99/mo',
           features={[
-            'Up to 10,0o00 conversations/month';
-            'Advanced AI with context';
-            'Priority support';
-            'All integrations';
-            'Advanced analytics & A/B testing';
+            'Up to 10,0o00 conversations/monthAdvanced AI with context',
+            'Priority supportAll integrations',
+            'Advanced analytics & A/B testing',
           ]}
           featured={true}
         />,
@@ -119,21 +109,19 @@ function PricingSection() {
           name='Enterprise',
           price='$299/mo',
           features={[
-            'Unlimited conversations';
-            'Custom AI training';
-            'Dedicated support';
-            'White-label solution';
-            'Custom integrations & SLA';
+            'Unlimited conversationsCustom AI training',
+            'Dedicated supportWhite-label solution',
+            'Custom integrations & SLA',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

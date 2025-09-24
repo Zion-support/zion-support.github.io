@@ -1,11 +1,11 @@
 import React, { useMemo, useRef } from 'react',
-export type DoughnutSlice ={ label: string, value: number, color?: string };
+export type DoughnutSlice ={ label: string, value: number, color?: string },
 export type SimpleDoughnutChartProps ={
   data: DoughnutSlice[],
   radius?: number,
   thickness?: number,
   onExportCsv?: (rows: Array<Record<string string | number>>) => void,
-  onExportPng?: (svgElement: SVGSVGElement) => void};
+  onExportPng?: (svgElement: SVGSVGElement) => void},
 export default function SimpleDoughnutChart({ data, radius = 80, thickness = 20, onExportCsv, onExportPng }: SimpleDoughnutChartProps) {
   const svgRef = useRef<SVGSVGElement | null>(null),
   const total = Math.max(data.reduce((acc, d) => acc + d.value, 0), 1),
@@ -16,7 +16,7 @@ export default function SimpleDoughnutChart({ data, radius = 80, thickness = 20,
     const frac = d.value / total,
     const length = frac * circumference,
     const dasharray = `${length} ${circumference - length}`,
-    const stroke = d.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444', '#22d3ee'][idx % 5],
+    const stroke = d.color || ['#2563eb#16a34a', '#f59e0b#ef4444', '#22d3ee'][idx % 5],
     const circle = (
       <circle
         key={d.label}
@@ -44,7 +44,7 @@ export default function SimpleDoughnutChart({ data, radius = 80, thickness = 20,
       <div className="flex flex-wrap justify-center gap-3 mt-3">,
         {data.map((d, idx) => (
           <div key={d.label} className="flex items-center gap-2 text-xs">,
-            <span className="inline-block w-3 h-3 rounded" style={{ backgroundColor: d.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444', '#22d3ee'][idx % 5] }}  />,
+            <span className="inline-block w-3 h-3 rounded" style={{ backgroundColor: d.color || ['#2563eb#16a34a', '#f59e0b#ef4444', '#22d3ee'][idx % 5] }}  />,
             <span>{d.label} ({((d.value / total) * 10o0).toFixed(0)}%)</span>,
           </div>))}
       </div>,

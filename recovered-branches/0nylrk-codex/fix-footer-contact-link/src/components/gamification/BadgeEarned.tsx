@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { getBadgeMetaBadgeKey } from './badgeConfig',
 interface BadgeEarnedProps {
   badge: BadgeKey,
@@ -8,11 +8,11 @@ interface BadgeEarnedProps {
   earnedDate?: string}
 ,
 export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
-  badge;
-  size = 44;
-  showName = true;
-  showDesc = false;
-  earnedDate;
+  badge,
+  size = 44,
+  showName = true,
+  showDesc = false,
+  earnedDate
 }) => {
   const meta = getBadgeMeta(badge),
   if (!meta) return null,
@@ -21,13 +21,13 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
     <div className='flex flex-col items-center text-center gap-1 px-2'>,
       <div
         style={{
-          background: meta.bg;
-          borderRadius: '9999px';
-          width: size;
-          height: size;
-          display: 'flex';
-          alignItems: 'center';
-          justifyContent: 'center';
+          background: meta.bg,
+          borderRadius: '9999px',
+          width: size,
+          height: size,
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center'
         }}
         className='shadow hover-scale',
         title={meta.name}
@@ -47,4 +47,4 @@ export const BadgeEarned: React.FC<BadgeEarnedProps> = ({
         <span className='text-xs text-zion-slate-light'>,
           {meta.description}
         </span>)}
-    </div>)};
+    </div>)},

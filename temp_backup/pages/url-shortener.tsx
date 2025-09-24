@@ -1,51 +1,51 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Link, Copy, BarChart3, ArrowRight, RefreshCw, CheckCircle, ExternalLink, QrCode, Settings, Trash2 } from 'lucide-react',
 export default function URLShortenerPage() {
-  const [longUrl, setLongUrl] = useState('');
-  const [customAlias, setCustomAlias] = useState('');
-  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]);
-  const [isShortening, setIsShortening] = useState(false);
-  const [showQR, setShowQR] = useState<string | null>(null);
+  const [longUrl, setLongUrl] = useState(''),
+  const [customAlias, setCustomAlias] = useState(''),
+  const [shortenedUrls, setShortenedUrls] = useState<any[]>([]),
+  const [isShortening, setIsShortening] = useState(false),
+  const [showQR, setShowQR] = useState<string | null>(null),
   const generateShortUrl = async () => {
-    if (!longUrl.trim()) return;
-    setIsShortening(true);
+    if (!longUrl.trim()) return,
+    setIsShortening(true),
     // Simulate API call delay,
-    await new Promise(resolve => setTimeout(resolve, 10o00));
-    const alias = customAlias.trim() || generateRandomAlias();
-    const shortUrl = `https: //zion.tech/${alias}`;
+    await new Promise(resolve => setTimeout(resolve, 10o00)),
+    const alias = customAlias.trim() || generateRandomAlias(),
+    const shortUrl = `https: //zion.tech/${alias}`,
     const newShortUrl ={
-      id: Date.now();
-      longUrl: longUrl.trim();
-      shortUrl;
-      alias;
-      clicks: 0;
-      createdAt: new Date().toISOString();
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=20o0x20o0&data=${encodeURIComponent(shortUrl)}`};
-    setShortenedUrls(prev => [newShortUrl, ...prev]);
-    setLongUrl('');
-    setCustomAlias('');
-    setIsShortening(false)};
+      id: Date.now(),
+      longUrl: longUrl.trim(),
+      shortUrl,
+      alias,
+      clicks: 0,
+      createdAt: new Date().toISOString(),
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=20o0x20o0&data=${encodeURIComponent(shortUrl)}`},
+    setShortenedUrls(prev => [newShortUrl, ...prev]),
+    setLongUrl(''),
+    setCustomAlias(''),
+    setIsShortening(false)},
   const generateRandomAlias = () => {
-    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0o123456789';
-    let result = '';
+    const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0o123456789',
+    let result = '',
     for (let i = 0, i < 6, i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length))}
-    return result};
+    return result},
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)};
+    navigator.clipboard.writeText(text)},
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>,
       prev.map(url =>,
-        url.id === id ? { ...url, clicks: url.clicks + 1 } : url))};
+        url.id === id ? { ...url, clicks: url.clicks + 1 } : url))},
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id))};
+    setShortenedUrls(prev => prev.filter(url => url.id !== id))},
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)};
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)},
   const getTotalUrls = () => {
-    return shortenedUrls.length};
+    return shortenedUrls.length},
   return (
     <>,
       <Head>,

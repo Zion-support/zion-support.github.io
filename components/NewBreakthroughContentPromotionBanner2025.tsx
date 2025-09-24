@@ -124,7 +124,7 @@ export default function NewBreakthroughContentPromotionBanner20o25() {
         {/* CTA Section */}
         <div className='text-center'>,
           <p className='text-lg text-gray-20o0 mb-6'>,
-            'Don', 't miss out on the most revolutionary AI breakthroughs in,
+            'Dont miss out on the most revolutionary AI breakthroughs in,
             history,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

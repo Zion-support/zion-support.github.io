@@ -18,35 +18,35 @@ export default function URLShortenerPage() {
     const alias = customAlias.trim() || generateRandomAlias(),
     const shortUrl = `https: //zion.tech/${alias}`,
     const newShortUrl = {
-      id: Date.now();
-      longUrl: longUrl.trim();
-      shortUrl;
-      alias;
-      clicks: 0;
-      createdAt: new Date().toISOString();
-      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`};
+      id: Date.now(),
+      longUrl: longUrl.trim(),
+      shortUrl,
+      alias,
+      clicks: 0,
+      createdAt: new Date().toISOString(),
+      qrCode: `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(shortUrl)}`},
     setShortenedUrls(prev => [newShortUrl...prev]),
-    setLongUrl(', '),
+    setLongUrl(),
     setCustomAlias(', '),
-    setIsShortening(false)};
+    setIsShortening(false)},
   const generateRandomAlias = () => {
     const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789',
     let result = ', ',
     for (let i = 0, i < 6, i++) {
       result += chars.charAt(Math.floor(Math.random() * chars.length))}
-    return result};
+    return result},
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)};
+    navigator.clipboard.writeText(text)},
   const incrementClicks = (id: number) => {
     setShortenedUrls(prev =>,
       prev.map(url =>,
-        url.id === id ? { ...urlclicks: url.clicks + 1 } : url))};
+        url.id === id ? { ...urlclicks: url.clicks + 1 } : url))},
   const deleteUrl = (id: number) => {
-    setShortenedUrls(prev => prev.filter(url => url.id !== id))};
+    setShortenedUrls(prev => prev.filter(url => url.id !== id))},
   const getTotalClicks = () => {
-    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)};
+    return shortenedUrls.reduce((sum, url) => sum + url.clicks, 0)},
   const getTotalUrls = () => {
-    return shortenedUrls.length};
+    return shortenedUrls.length},
   return (
     <>,
       <Head>,

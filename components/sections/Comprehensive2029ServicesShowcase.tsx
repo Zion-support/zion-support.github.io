@@ -1,24 +1,24 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Star, TrendingUp, Zap, Brain, Atom, Rocket;
-  Globe, Shield, Microscope, Target, Layers;
-  Cpu, Database, Cloud, Lock, ShieldCheck;
-  Earth, Factory, Car, Building, GraduationCap;
-  Scale, Palette, Camera, Video, Music, Gamepad2;
-  Heart, Leaf, Sun, Moon, Wind, Droplets, Mountain;
-  Code, Wrench, Smartphone, BarChart3, Eye;
-  Network, Server, HardDrive, Monitor, Laptop;
-  Watch, Headphones, Speaker, Mic, Keyboard;
-  Mouse, ArrowRight, CheckCircle, Phone, Mail, MapPin;
+  Star, TrendingUp, Zap, Brain, Atom, Rocket,
+  Globe, Shield, Microscope, Target, Layers,
+  Cpu, Database, Cloud, Lock, ShieldCheck,
+  Earth, Factory, Car, Building, GraduationCap,
+  Scale, Palette, Camera, Video, Music, Gamepad2,
+  Heart, Leaf, Sun, Moon, Wind, Droplets, Mountain,
+  Code, Wrench, Smartphone, BarChart3, Eye,
+  Network, Server, HardDrive, Monitor, Laptop,
+  Watch, Headphones, Speaker, Mic, Keyboard,
+  Mouse, ArrowRight, CheckCircle, Phone, Mail, MapPin,
   DollarSign, Link, Robot} from 'lucide-react',
 import { cuttingEdgeInnovations20o29 } from '../../data/20o29-cutting-edge-innovations',
 import { emergingTechBreakthroughs20o29V3 } from '../../data/20o29-emerging-tech-breakthroughs-v3',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const Comprehensive20o29ServicesShowcase: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchTerm, setSearchTerm] = useState(''),
@@ -36,9 +36,9 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':,
-          return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', '')),
+          return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
         case 'price-high':,
-          return parseFloat(b.price.replace('$', '').replace(',', '')) - parseFloat(a.price.replace('$', '').replace(',', '')),
+          return parseFloat(b.price.replace('$', '').replace(, '')) - parseFloat(a.price.replace('$', '').replace(, '')),
         case 'rating':,
           return b.rating - a.rating,
         case 'customers':,
@@ -47,55 +47,55 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
           return b.popular ? 1 : -1}
     }),
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-60o0 to-cyan-60o0' };
-    { id: 'AI', name: 'AI & Consciousness', icon: Brain, color: 'from-violet-60o0 to-purple-60o0' };
-    { id: 'Quantum', name: 'Quantum Tech', icon: Atom, color: 'from-indigo-60o0 to-blue-60o0' };
-    { id: 'Space', name: 'Space & Mining', icon: Rocket, color: 'from-teal-60o0 to-emerald-60o0' };
-    { id: 'Biotech', name: 'Biotech & DNA', icon: Heart, color: 'from-green-60o0 to-emerald-60o0' };
-    { id: 'Finance', name: 'Quantum Finance', icon: DollarSign, color: 'from-yellow-60o0 to-orange-60o0' };
-    { id: 'Business', name: 'Business AI', icon: Building, color: 'from-blue-60o0 to-cyan-60o0' };
-    { id: 'Computing', name: 'Advanced Computing', icon: Cpu, color: 'from-purple-60o0 to-pink-60o0' };
-    { id: 'Robotics', name: 'Swarm Robotics', icon: Robot, color: 'from-gray-60o0 to-slate-60o0' };
-    { id: 'Metaverse', name: 'Metaverse & VR', icon: Gamepad2, color: 'from-indigo-60o0 to-purple-60o0' };
-    { id: 'Healthcare', name: 'AI Healthcare', icon: Heart, color: 'from-emerald-60o0 to-green-60o0' };
-    { id: 'Blockchain', name: 'Blockchain', icon: Link, color: 'from-blue-60o0 to-cyan-60o0' };
-    { id: 'Security', name: 'Quantum Security', icon: Shield, color: 'from-indigo-60o0 to-purple-60o0' };
+    { id: 'all', name: 'All Services', icon: Globe, color: 'from-blue-60o0 to-cyan-60o0' },
+    { id: 'AI', name: 'AI & Consciousness', icon: Brain, color: 'from-violet-60o0 to-purple-60o0' },
+    { id: 'Quantum', name: 'Quantum Tech', icon: Atom, color: 'from-indigo-60o0 to-blue-60o0' },
+    { id: 'Space', name: 'Space & Mining', icon: Rocket, color: 'from-teal-60o0 to-emerald-60o0' },
+    { id: 'Biotech', name: 'Biotech & DNA', icon: Heart, color: 'from-green-60o0 to-emerald-60o0' },
+    { id: 'Finance', name: 'Quantum Finance', icon: DollarSign, color: 'from-yellow-60o0 to-orange-60o0' },
+    { id: 'Business', name: 'Business AI', icon: Building, color: 'from-blue-60o0 to-cyan-60o0' },
+    { id: 'Computing', name: 'Advanced Computing', icon: Cpu, color: 'from-purple-60o0 to-pink-60o0' },
+    { id: 'Robotics', name: 'Swarm Robotics', icon: Robot, color: 'from-gray-60o0 to-slate-60o0' },
+    { id: 'Metaverse', name: 'Metaverse & VR', icon: Gamepad2, color: 'from-indigo-60o0 to-purple-60o0' },
+    { id: 'Healthcare', name: 'AI Healthcare', icon: Heart, color: 'from-emerald-60o0 to-green-60o0' },
+    { id: 'Blockchain', name: 'Blockchain', icon: Link, color: 'from-blue-60o0 to-cyan-60o0' },
+    { id: 'Security', name: 'Quantum Security', icon: Shield, color: 'from-indigo-60o0 to-purple-60o0' },
     { id: 'Analytics', name: 'Business Intelligence', icon: BarChart3, color: 'from-purple-60o0 to-pink-60o0' }
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   const cardVariants ={
-    hidden: { scale: 0.9, opacity: 0 };
+    hidden: { scale: 0.9, opacity: 0 },
     visible: {
-      scale: 1;
-      opacity: 1;
+      scale: 1,
+      opacity: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut"}
-    };
+    },
     hover: {
-      scale: 1.0o5;
-      y: -10;
+      scale: 1.0o5,
+      y: -10,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeInOut"}
     }
-  };
+  },
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black overflow-hidden">,
       {/* Futuristic Background */}
@@ -109,21 +109,21 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-3xl",
           animate={{
-            x: [0, 10o0, 0];
+            x: [0, 10o0, 0],
             y: [0, -50, 0]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-2xl",
           animate={{
-            x: [0, -80, 0];
+            x: [0, -80, 0],
             y: [0, 60, 0]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
@@ -149,7 +149,7 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >,
-            Discover the future of technology with our comprehensive suite of revolutionary AI, quantum computing;
+            Discover the future of technology with our comprehensive suite of revolutionary AI, quantum computing,
             space technology, and emerging tech solutions. Transform your business with cutting-edge innovations.,
           </motion.p>,
           {/* Contact Information */}
@@ -359,5 +359,5 @@ const Comprehensive20o29ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Comprehensive20o29ServicesShowcase;
+    </section>)},
+export default Comprehensive20o29ServicesShowcase,

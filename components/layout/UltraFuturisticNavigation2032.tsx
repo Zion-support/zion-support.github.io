@@ -1,5 +1,5 @@
 "use client",
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -84,85 +84,85 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;
-  MenuIcon;
-  CloseIcon;
-  ChevronRightIcon;} from 'lucide-react',import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,
+  MenuIcon,
+  CloseIcon,
+  ChevronRightIcon,} from 'lucide-react',import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
@@ -172,10 +172,10 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye,
   Network, Server, HardDrive, Monitor} from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
     title: ' AI & Consciousness 2030',
@@ -189,45 +189,45 @@ const serviceCategories = [
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
   MenuIcon, CloseIcon, ChevronRightIcon,
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'},  website: 'https://ziontechgroup && ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: '🧠 AI & Consciousness 2030';
-    icon: BrainIcon;
-    color: 'from-violet-600 via-purple-600 to-indigo-600';
-    description: 'Next-generation AI consciousness and emotional intelligence';
+    title: '🧠 AI & Consciousness 2030',
+    icon: BrainIcon,
+    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    description: 'Next-generation AI consciousness and emotional intelligence',
     services: [
       {
-        name: 'AI Consciousness Evolution Platform';
-        href: '/ai-consciousness-evolution-platform';
-        description: 'Develop genuine AI consciousness';
-        price: '$19,999/month';
-      };
+        name: 'AI Consciousness Evolution Platform',
+        href: '/ai-consciousness-evolution-platform',
+        description: 'Develop genuine AI consciousness',
+        price: '$19,999/month',
+      },
       {
-        name: 'AI Emotional Intelligence Platform';
-        href: '/ai-emotional-intelligence-platform';
-        description: 'Real-time emotion analysis and response';
-        price: '$3,999/month';
-      };
+        name: 'AI Emotional Intelligence Platform',
+        href: '/ai-emotional-intelligence-platform',
+        description: 'Real-time emotion analysis and response',
+        price: '$3,999/month',
+      },
       {
-        name: 'AI Creativity Orchestrator';
-        href: '/ai-creativity-orchestrator';
-        description: 'Multi-model creativity fusion';
-        price: '$5,999/month';
-      };
+        name: 'AI Creativity Orchestrator',
+        href: '/ai-creativity-orchestrator',
+        description: 'Multi-model creativity fusion',
+        price: '$5,999/month',
+      },
       {
-        name: 'AI Autonomous Business Manager';
-        href: '/ai-autonomous-business-manager';
-        description: 'Fully autonomous business operations';
-        price: '$12,999/month';
-      };
-    ];
-  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+        name: 'AI Autonomous Business Manager',
+        href: '/ai-autonomous-business-manager',
+        description: 'Fully autonomous business operations',
+        price: '$12,999/month',
+      },
+    ],
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
 ]}
     title: ' Quantum & Emerging Tech 2030',
@@ -378,8 +378,8 @@ const serviceCategories = [
     ]}],      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
       { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' }
       { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' }
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
     ]}
     title: '⚛️ Quantum & Emerging Tech 2030',
@@ -532,15 +532,15 @@ const serviceCategories = [
       { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' }
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]}
-        name: 'Synthetic Biology Automation Platform';
-        href: '/synthetic-biology-automation-platform';
-        description: 'Automate biology research';
-        price: '$3,999/month';
-      };
-    ];
-  }],      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' };
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' };
-      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' };
+        name: 'Synthetic Biology Automation Platform',
+        href: '/synthetic-biology-automation-platform',
+        description: 'Automate biology research',
+        price: '$3,999/month',
+      },
+    ],
+  }],      { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' },
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform', description: 'Direct neural interface', price: '$1,299/month' },
+      { name: 'Quantum Machine Learning Platform', href: '/quantum-machine-learning-platform', description: 'Quantum-enhanced ML', price: '$2,999/month' },
       { name: 'Synthetic Biology Automation Platform', href: '/synthetic-biology-automation-platform', description: 'Automate biology research', price: '$3,999/month' }
     ]}
 ,
@@ -564,11 +564,11 @@ const companyLinks = [
 ],
 const mainNavigation = [
 const company_links = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'News', href: '/news' };
-  { name: 'Partners', href: '/partners' };
-  { name: 'Support', href: '/support' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
 ],
 export default function UltraFuturisticNavigation2032() {
   const [isOpen, setIsOpen] = useState(false),
@@ -582,21 +582,21 @@ export default function UltraFuturisticNavigation2032() {
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll),
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Layers };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp };
-  { name: 'Blog', href: '/blog', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Layers },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case-studies', icon: TrendingUp },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }],  { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
 const companyLinks = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'News', href: '/news' };
-  { name: 'Partners', href: '/partners' };
-  { name: 'Support', href: '/support' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
   { name: 'Status', href: '/status' }],  { name: 'Status', href: '/status' }
 ],
   const [isOpen, setIsOpen] = useState(false),
@@ -604,9 +604,9 @@ const companyLinks = [
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 20)};
+      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 20)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
   const toggleMenu = () => setIsOpen(!isOpen),

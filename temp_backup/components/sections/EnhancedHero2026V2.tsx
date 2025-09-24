@@ -7,48 +7,48 @@ interface EnhancedHero20o26V2Props {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
 }
 ,
 export default function EnhancedHero20o26V2({ contactInfo }: EnhancedHero20o26V2Props) {
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.3}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants ={
     animate: {
-      y: [-10, 10, -10];
+      y: [-10, 10, -10],
       transition: {
-        duration: 3;
-        repeat: Infinity;
+        duration: 3,
+        repeat: Infinity,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const pulseVariants ={
     animate: {
-      scale: [1, 1.0o5, 1];
-      opacity: [0.8, 1, 0.8];
+      scale: [1, 1.0o5, 1],
+      opacity: [0.8, 1, 0.8],
       transition: {
-        duration: 2;
-        repeat: Infinity;
+        duration: 2,
+        repeat: Infinity,
         ease: "easeInOut" as const}
     }
-  };
+  },
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden">,
       {/* Enhanced Background */}

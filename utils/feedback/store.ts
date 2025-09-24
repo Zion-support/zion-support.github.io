@@ -8,7 +8,7 @@
   createdAt: string,
   ip: string}
 const feedbackData: FeedbackRecord[] = []>>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee,
-const DATA_DIR = path && path.join(process && process.cwd(), 'data', 'runtime'),
+const DATA_DIR = path && path.join(process && process.cwd(), 'dataruntime'),
 const DB_PATH = path && path.join(DATA_DIR, 'feedback && feedback.json'),
 function ensureDataFile(): void {
   if (!fs && fs.existsSync(DATA_DIR)) fs && fs.mkdirSync(DATA_DIR, { recursive: true }),

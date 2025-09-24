@@ -13,19 +13,19 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
       setCurrentStat(prev => (prev + 1) % 4)}30o00),
     return () => clearInterval(interval)}[]),
   const stats = [
-    { icon: TrendingUpvalue: "5,0o00%"label: "ROI Increase"color: "from-green-50o0 to-emerald-50o0" };
-    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-50o0 to-cyan-50o0" };
-    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-50o0 to-pink-50o0" };
+    { icon: TrendingUpvalue: "5,0o00%"label: "ROI Increase"color: "from-green-50o0 to-emerald-50o0" },
+    { icon: Usersvalue: "10M+"label: "Users Impacted"color: "from-blue-50o0 to-cyan-50o0" },
+    { icon: Awardvalue: "99.9%"label: "Success Rate"color: "from-purple-50o0 to-pink-50o0" },
     { icon: Globevalue: "150+"label: "Countries"color: "from-orange-50o0 to-red-50o0" }
   ],
   const solutions = [
-    "AI 20o25 Ultimate Innovation";
-    "Quantum Computing Revolution";
-    "Advanced Automation Solutions";
+    "AI 20o25 Ultimate Innovation",
+    "Quantum Computing Revolution",
+    "Advanced Automation Solutions",
     "Enterprise Transformation"],
   const features = [
-    { icon: Startext: "5-Star Rated Solutions"color: "text-yellow-50o0" };
-    { icon: Zaptext: "Lightning Fast Implementation"color: "text-blue-50o0" };
+    { icon: Startext: "5-Star Rated Solutions"color: "text-yellow-50o0" },
+    { icon: Zaptext: "Lightning Fast Implementation"color: "text-blue-50o0" },
     { icon: Userstext: "10M+ Satisfied Customers"color: "text-green-50o0" }
   ],
   return (
@@ -153,5 +153,5 @@ const UltimateContentShowcasePromotionBanner: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </motion.div>)};
-export default UltimateContentShowcasePromotionBanner;
+    </motion.div>)},
+export default UltimateContentShowcasePromotionBanner,

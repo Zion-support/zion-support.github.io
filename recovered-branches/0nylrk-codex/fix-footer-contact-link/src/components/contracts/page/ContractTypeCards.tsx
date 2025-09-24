@@ -6,7 +6,7 @@ interface ContractTypeCardsProps {
   onSmartClick: () => void}
 ,
 export function ContractTypeCards({
-  onStandardClickonSmartClick;
+  onStandardClickonSmartClick,
 }: ContractTypeCardsProps) {
   return (
     <div className='grid md: grid-cols-2 gap-6 mb-10'>,

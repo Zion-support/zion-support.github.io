@@ -1,5 +1,5 @@
-'use client';
-import { siteUpdates } from '../../data/updates';
+'use client',
+import { siteUpdates } from '../../data/updates',
 
 export default function UpdatesPage() {
   return (
@@ -52,5 +52,5 @@ export default function UpdatesPage() {
         </div>
       </div>
     </div>
-  );
+  ),
 }

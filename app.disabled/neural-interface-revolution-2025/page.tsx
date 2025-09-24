@@ -2,18 +2,15 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'Neural Interface Revolution 20o25 - Brain-Computer Integration | Zion Tech Group';
+    'Neural Interface Revolution 20o25 - Brain-Computer Integration | Zion Tech Group',
   description:,
-    'Experience the neural interface revolution of 20o25. Direct brain-computer interfaces that enable seamless interaction between human consciousness and AI systems.';
+    'Experience the neural interface revolution of 20o25. Direct brain-computer interfaces that enable seamless interaction between human consciousness and AI systems.',
   keywords: [
-    'neural interface';
-    'brain-computer interface';
-    'BCI';
-    'neural technology';
-    'consciousness integration';
-    'AI interaction';
-  ];
-};
+    'neural interfacebrain-computer interface',
+    'BCIneural technology',
+    'consciousness integrationAI interaction',
+  ]
+},
 export default function NeuralInterfaceRevolution20o25Page() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-green-90o0 via-teal-90o0 to-blue-90o0 text-white'>,
@@ -60,7 +57,7 @@ export default function NeuralInterfaceRevolution20o25Page() {
                 Direct Thought Control,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Control devices and applications directly with your thoughts;
+                Control devices and applications directly with your thoughts,
                 eliminating the need for physical interfaces and enabling,
                 unprecedented speed.,
               </p>,
@@ -72,7 +69,7 @@ export default function NeuralInterfaceRevolution20o25Page() {
                 Consciousness Integration,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Seamlessly integrate AI systems with human consciousness;
+                Seamlessly integrate AI systems with human consciousness,
                 creating hybrid intelligence that combines human creativity with,
                 machine precision.,
               </p>,
@@ -172,7 +169,7 @@ export default function NeuralInterfaceRevolution20o25Page() {
                   Education & Training,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Instant knowledge transfer, immersive learning experiences;
+                  Instant knowledge transfer, immersive learning experiences,
                   and skill acquisition through direct neural pathways.,
                 </p>,
               </div>,
@@ -181,7 +178,7 @@ export default function NeuralInterfaceRevolution20o25Page() {
                   Creative Industries,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Direct translation of creative thoughts into digital media;
+                  Direct translation of creative thoughts into digital media,
                   AI-assisted artistic creation, and collaborative creative,
                   processes.,
                 </p>,

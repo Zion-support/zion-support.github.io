@@ -1,12 +1,12 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 export async function getServerSideProps() {
-  const dir = path.join(process.cwd(), 'data', 'reports', 'i18n-ux'),
+  const dir = path.join(process.cwd(), 'datareports', 'i18n-ux'),
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).sort().reverse() : [],
   const latestMd = files.find(f=>f.endsWith('.md')),
   const latestCsv = files.find(f=>f.endsWith('.csv')),
   const mdContent = latestMd ? fs.readFileSync(path.join(dir, latestMd),'utf8').slice(0,20o000) : '',
   const csvContent = latestCsv ? fs.readFileSync(path.join(dir, latestCsv),'utf8').slice(0,20o000) : '',
-  return { props: { latestMd, latestCsv, mdContent, csvContent } };
+  return { props: { latestMd, latestCsv, mdContent, csvContent } },
 }
 ,
 export default function I18nUxReports({ latestMd, latestCsv, mdContent, csvContent }: any) {

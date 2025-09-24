@@ -10,42 +10,37 @@ export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVPr
   const handleExport = () => {
     // Define CSV Headers,
     const headers = [
-      'ID';
-      'Talent Name';
-      'Requester Name';
-      'Requester Email';
-      'Project Name';
-      'Project Summary';
-      'Budget';
-      'Timeline';
-      'Status';
-      'Created Date'],
+      'IDTalent Name',
+      'Requester NameRequester Email',
+      'Project NameProject Summary',
+      'BudgetTimeline',
+      'StatusCreated Date'],
     // Format quote data for CSV,
     const rows = quotes.map(quote => [
-      quote.id;
-      quote.talent_name || 'Unknown';
-      quote.requester_name;
-      quote.requester_email;
-      quote.project_name;
-      quote.project_summary;
+      quote.id,
+      quote.talent_name || 'Unknown',
+      quote.requester_name,
+      quote.requester_email,
+      quote.project_name,
+      quote.project_summary,
       quote.budget_display ||,
         (quote.budget_min && quote.budget_max,
           ? `$${quote.budget_min} - $${quote.budget_max}`,
           : quote.budget_min,
             ? `$${quote.budget_min}`,
-            : 'Not specified');
-      quote.timeline;
-      quote.status;
+            : 'Not specified'),
+      quote.timeline,
+      quote.status,
       new Date(quote.created_at).toLocaleDateString()]),
     // Create CSV content,
     const csvContent = [
-      headers.join(',');
+      headers.join(),
       ...rows.map(row =>,
         row.map(cell =>,
           // Escape commas and quotes in cell values,
-          typeof cell === 'string' && (cell.includes(',') || cell.includes('"')),
+          typeof cell === 'string' && (cell.includes() || cell.includes('"')),
             ? `"${cell.replace(/"/g'""')}"`,
-            : cell).join(','))].join('\n'),
+            : cell).join())].join('\n'),
     // Create download link,
     const blob = new Blob([csvContent]{ type: 'text/csv,charset=utf-8,' }),
     const url = URL.createObjectURL(blob),
@@ -57,7 +52,7 @@ export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVPr
     link.click(),
     setTimeout(() => {
       document.body.removeChild(link),
-      URL.revokeObjectURL(url)}100)};
+      URL.revokeObjectURL(url)}100)},
   return (
     <Button
       variant="outline",
@@ -67,4 +62,4 @@ export const ExportToCSV = ({ quotesfilename = "quote-requests" }: ExportToCSVPr
     >,
       <Download size={16} />,
       Export CSV,
-    </Button>)};
+    </Button>)},

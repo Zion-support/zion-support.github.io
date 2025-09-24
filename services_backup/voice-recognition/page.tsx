@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Voice Recognition Solutions | Zion Tech Group';
+  title: 'Voice Recognition Solutions | Zion Tech Group',
   description:,
-    'Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.';
-};
+    'Transform speech into actionable data with advanced voice recognition, speech-to-text, and voice command processing.',
+},
 export default function VoiceRecognitionPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -10,35 +10,29 @@ export default function VoiceRecognitionPage() {
         Voice Recognition Solutions,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Transform speech into actionable data with advanced voice recognition;
+        Transform speech into actionable data with advanced voice recognition,
         speech-to-text, and voice command processing.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
         <FeatureCard
           title='Speech-to-Text',
           features={[
-            'Real-time transcription';
-            'Multi-language support';
-            'Noise cancellation';
-            'Speaker identification';
+            'Real-time transcriptionMulti-language support',
+            'Noise cancellationSpeaker identification',
           ]}
         />,
         <FeatureCard
           title='Voice Commands',
           features={[
-            'Voice control systems';
-            'Command processing';
-            'Intent recognition';
-            'Custom wake words';
+            'Voice control systemsCommand processing',
+            'Intent recognitionCustom wake words',
           ]}
         />,
         <FeatureCard
           title='Voice Analytics',
           features={[
-            'Emotion detection';
-            'Speaker verification';
-            'Call analytics';
-            'Quality assessment';
+            'Emotion detectionSpeaker verification',
+            'Call analyticsQuality assessment',
           ]}
         />,
       </div>,
@@ -112,8 +106,8 @@ export default function VoiceRecognitionPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -139,21 +133,17 @@ function Pricing() {
           name='Starter',
           price='$2,499/mo',
           features={[
-            'Basic speech-to-text';
-            'Up to 10o0 hours/month';
-            'Standard support';
-            'Cloud deployment';
+            'Basic speech-to-textUp to 10o0 hours/month',
+            'Standard supportCloud deployment',
           ]}
         />,
         <Plan
           name='Professional',
           price='$6,999/mo',
           features={[
-            'Advanced voice recognition';
-            'Up to 1,0o00 hours/month';
-            'Custom model training';
-            'Priority support';
-            'API access';
+            'Advanced voice recognitionUp to 1,0o00 hours/month',
+            'Custom model trainingPriority support',
+            'API access',
           ]}
           popular={true}
         />,
@@ -161,21 +151,19 @@ function Pricing() {
           name='Enterprise',
           price='$17,999/mo',
           features={[
-            'Unlimited processing';
-            'Custom voice models';
-            'On-premise deployment';
-            'Dedicated support';
-            'White-label solution';
+            'Unlimited processingCustom voice models',
+            'On-premise deploymentDedicated support',
+            'White-label solution',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

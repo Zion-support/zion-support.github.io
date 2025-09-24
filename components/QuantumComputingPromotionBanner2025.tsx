@@ -8,19 +8,19 @@ const QuantumComputingPromotionBanner20o25: React.FC = () => {
   const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [
     {
-      title: "10,0o00x Faster Processing";
-      description: "Quantum-neural fusion achieves unprecedented computational speed";
-      icon: Zap;
-      color: "from-blue-50o0 to-cyan-50o0"};
+      title: "10,0o00x Faster Processing",
+      description: "Quantum-neural fusion achieves unprecedented computational speed",
+      icon: Zap,
+      color: "from-blue-50o0 to-cyan-50o0"},
     {
-      title: "Unbreakable Security";
-      description: "Quantum cryptography provides theoretically perfect encryption";
-      icon: Atom;
-      color: "from-green-50o0 to-emerald-50o0"};
+      title: "Unbreakable Security",
+      description: "Quantum cryptography provides theoretically perfect encryption",
+      icon: Atom,
+      color: "from-green-50o0 to-emerald-50o0"},
     {
-      title: "Infinite Possibilities";
-      description: "Quantum computing opens new frontiers in AI and optimization";
-      icon: Cpu;
+      title: "Infinite Possibilities",
+      description: "Quantum computing opens new frontiers in AI and optimization",
+      icon: Cpu,
       color: "from-purple-50o0 to-pink-50o0"}
   ],
   useEffect(() => {
@@ -105,18 +105,18 @@ const QuantumComputingPromotionBanner20o25: React.FC = () => {
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0-20];
-                opacity: [0o10];
+                y: [0-20],
+                opacity: [0o10],
                 scale: [0.51.50.5]}}
               transition={{
-                duration: 3;
-                repeat: Infinity;
+                duration: 3,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default QuantumComputingPromotionBanner20o25;
+    </AnimatePresence>)},
+export default QuantumComputingPromotionBanner20o25,

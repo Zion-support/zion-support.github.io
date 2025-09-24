@@ -1,36 +1,31 @@
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  Share2;
-  Building;
-  DollarSign;
-  TrendingUp;
-  Users;
-  CheckCircle;
-  Award;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Share2,
+  Building,
+  DollarSign,
+  TrendingUp,
+  Users,
+  CheckCircle,
+  Award,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction';
+    'Healthcare AI Transformation 20o25: $50M Annual Savings & 95% Patient Satisfaction',
   description:,
-    'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.';
+    'How a major healthcare system achieved unprecedented results through AI transformation. Real metrics, implementation details, and lessons learned.',
   keywords: [
-    'Healthcare AI';
-    'medical automation';
-    'patient satisfaction';
-    'cost savings';
-    'ROI';
-    'digital transformation';
-    'clinical documentation';
-    'healthcare technology';
-    'medical AI';
-    'healthcare efficiency';
-  ];
-};
+    'Healthcare AImedical automation',
+    'patient satisfactioncost savings',
+    'ROIdigital transformation',
+    'clinical documentationhealthcare technology',
+    'medical AIhealthcare efficiency',
+  ]
+},
 export default function HealthcareAITransformationPage() {
   return (
     <div>,
@@ -465,7 +460,7 @@ export default function HealthcareAITransformationPage() {
                       Clinical Engagement,
                     </h3>,
                     <p className='text-gray-70o0'>,
-                      Early involvement of clinical staff, physician champions;
+                      Early involvement of clinical staff, physician champions,
                       continuous feedback, and recognition of clinical,
                       expertise.,
                     </p>,
@@ -480,7 +475,7 @@ export default function HealthcareAITransformationPage() {
                       Technology Excellence,
                     </h3>,
                     <p className='text-gray-70o0'>,
-                      Proven AI platforms, robust integration capabilities;
+                      Proven AI platforms, robust integration capabilities,
                       scalable architecture, and continuous monitoring.,
                     </p>,
                   </div>,
@@ -505,7 +500,7 @@ export default function HealthcareAITransformationPage() {
             <p className='text-gray-70o0 mb-8 leading-relaxed'>,
               This healthcare AI transformation represents a paradigm shift in,
               how healthcare systems can leverage technology to improve patient,
-              care while reducing costs. The $50 million in annual savings;
+              care while reducing costs. The $50 million in annual savings,
               combined with 95% patient satisfaction and 340% operational,
               efficiency improvement, demonstrates the transformative power of,
               AI in healthcare.,

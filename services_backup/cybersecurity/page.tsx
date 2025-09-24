@@ -1,10 +1,10 @@
 export const metadata = {
-  title: 'Cybersecurity Services | Zion Tech Group';
+  title: 'Cybersecurity Services | Zion Tech Group',
   description:,
-    'Comprehensive cybersecurity services including penetration testing, security audits, compliance management, and incident response for enterprise protection.';
+    'Comprehensive cybersecurity services including penetration testing, security audits, compliance management, and incident response for enterprise protection.',
   keywords:,
-    'cybersecurity, penetration testing, security audit, compliance, incident response, vulnerability assessment, security consulting';
-};
+    'cybersecurity, penetration testing, security audit, compliance, incident response, vulnerability assessment, security consulting',
+},
 export default function CybersecurityPage() {
   return (
     <div className='animate-fade-in'>,
@@ -27,12 +27,9 @@ export default function CybersecurityPage() {
             title='Security Assessment & Auditing',
             description='Comprehensive security evaluation and vulnerability assessment',
             features={[
-              'Penetration testing';
-              'Vulnerability scanning';
-              'Security audit';
-              'Risk assessment';
-              'Compliance review';
-              'Remediation planning';
+              'Penetration testingVulnerability scanning',
+              'Security auditRisk assessment',
+              'Compliance reviewRemediation planning',
             ]}
             price='$15k–$50k',
             icon='🔍',
@@ -41,12 +38,9 @@ export default function CybersecurityPage() {
             title='Threat Detection & Response',
             description='Advanced threat detection and incident response capabilities',
             features={[
-              'SIEM implementation';
-              'Threat hunting';
-              'Incident response';
-              'Forensic analysis';
-              'Malware analysis';
-              'Threat intelligence';
+              'SIEM implementationThreat hunting',
+              'Incident responseForensic analysis',
+              'Malware analysisThreat intelligence',
             ]}
             price='$25k–$80k',
             icon='🛡️',
@@ -55,12 +49,9 @@ export default function CybersecurityPage() {
             title='Identity & Access Management',
             description='Secure identity management and access control solutions',
             features={[
-              'IAM implementation';
-              'Multi-factor authentication';
-              'Single sign-on';
-              'Privileged access';
-              'Identity governance';
-              'Compliance reporting';
+              'IAM implementationMulti-factor authentication',
+              'Single sign-onPrivileged access',
+              'Identity governanceCompliance reporting',
             ]}
             price='$20k–$60k',
             icon='🔐',
@@ -69,12 +60,9 @@ export default function CybersecurityPage() {
             title='Network Security & Firewall',
             description='Network protection and firewall management services',
             features={[
-              'Firewall configuration';
-              'Network segmentation';
-              'Intrusion detection';
-              'VPN setup';
-              'Traffic monitoring';
-              'Security policies';
+              'Firewall configurationNetwork segmentation',
+              'Intrusion detectionVPN setup',
+              'Traffic monitoringSecurity policies',
             ]}
             price='$18k–$55k',
             icon='🌐',
@@ -83,12 +71,9 @@ export default function CybersecurityPage() {
             title='Data Protection & Encryption',
             description='Data security and encryption implementation',
             features={[
-              'Data classification';
-              'Encryption at rest';
-              'Encryption in transit';
-              'Key management';
-              'Data loss prevention';
-              'Backup security';
+              'Data classificationEncryption at rest',
+              'Encryption in transitKey management',
+              'Data loss preventionBackup security',
             ]}
             price='$22k–$70k',
             icon='🔒',
@@ -97,12 +82,9 @@ export default function CybersecurityPage() {
             title='Compliance & Governance',
             description='Regulatory compliance and security governance frameworks',
             features={[
-              'SOC 2 compliance';
-              'GDPR compliance';
-              'HIPAA compliance';
-              'ISO 270o01';
-              'Policy development';
-              'Audit support';
+              'SOC 2 complianceGDPR compliance',
+              'HIPAA complianceISO 270o01',
+              'Policy developmentAudit support',
             ]}
             price='$30k–$10o0k',
             icon='📋',
@@ -111,12 +93,9 @@ export default function CybersecurityPage() {
             title='Security Awareness Training',
             description='Employee security training and phishing simulation',
             features={[
-              'Security training';
-              'Phishing simulation';
-              'Awareness campaigns';
-              'Policy training';
-              'Incident reporting';
-              'Compliance tracking';
+              'Security trainingPhishing simulation',
+              'Awareness campaignsPolicy training',
+              'Incident reportingCompliance tracking',
             ]}
             price='$8k–$25k',
             icon='🎓',
@@ -125,12 +104,9 @@ export default function CybersecurityPage() {
             title='Cloud Security & DevSecOps',
             description='Cloud security implementation and secure development practices',
             features={[
-              'Cloud security assessment';
-              'DevSecOps integration';
-              'Container security';
-              'API security';
-              'Infrastructure security';
-              'Compliance automation';
+              'Cloud security assessmentDevSecOps integration',
+              'Container securityAPI security',
+              'Infrastructure securityCompliance automation',
             ]}
             price='$25k–$75k',
             icon='☁️',
@@ -139,12 +115,9 @@ export default function CybersecurityPage() {
             title='Managed Security Services',
             description='24/7 security monitoring and management',
             features={[
-              '24/7 monitoring';
-              'Threat detection';
-              'Incident response';
-              'Security updates';
-              'Vulnerability management';
-              'Monthly reports';
+              '24/7 monitoringThreat detection',
+              'Incident responseSecurity updates',
+              'Vulnerability managementMonthly reports',
             ]}
             price='$5k–$15k/mo',
             icon='📊',
@@ -159,34 +132,25 @@ export default function CybersecurityPage() {
           <Item
             title='Assessment & Planning',
             details={[
-              'Comprehensive security assessment and risk analysis';
-              'Current security posture evaluation and gap identification';
-              'Regulatory compliance requirements analysis';
-              'Security strategy development and roadmap creation';
-              'Budget planning and resource allocation';
-              'Stakeholder alignment and security awareness';
+              'Comprehensive security assessment and risk analysisCurrent security posture evaluation and gap identification',
+              'Regulatory compliance requirements analysisSecurity strategy development and roadmap creation',
+              'Budget planning and resource allocationStakeholder alignment and security awareness',
             ]}
           />,
           <Item
             title='Implementation & Deployment',
             details={[
-              'Security technology selection and implementation';
-              'Policy development and procedure establishment';
-              'Security controls deployment and configuration';
-              'Integration with existing systems and processes';
-              'Testing and validation of security measures';
-              'Documentation and knowledge transfer';
+              'Security technology selection and implementationPolicy development and procedure establishment',
+              'Security controls deployment and configurationIntegration with existing systems and processes',
+              'Testing and validation of security measuresDocumentation and knowledge transfer',
             ]}
           />,
           <Item
             title='Monitoring & Optimization',
             details={[
-              'Continuous security monitoring and threat detection';
-              'Regular security assessments and vulnerability management';
-              'Incident response and forensic analysis';
-              'Security awareness training and education';
-              'Compliance monitoring and reporting';
-              'Ongoing optimization and improvement';
+              'Continuous security monitoring and threat detectionRegular security assessments and vulnerability management',
+              'Incident response and forensic analysisSecurity awareness training and education',
+              'Compliance monitoring and reportingOngoing optimization and improvement',
             ]}
           />,
         </div>,
@@ -233,11 +197,11 @@ export default function CybersecurityPage() {
     </div>)}
 ,
 function CyberServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -267,9 +231,9 @@ function CyberServiceCard({
     </div>)}
 ,
 function CybersecurityProcessStep({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,
@@ -284,8 +248,8 @@ function CybersecurityProcessStep({
     </div>)}
 ,
 function CybersecurityTechStack({
-  title;
-  technologies;
+  title,
+  technologies,
 }: {
   title: string,
   technologies: string[]}) {
@@ -303,10 +267,10 @@ function CybersecurityTechStack({
     </div>)}
 ,
 function IndustrySecurity({
-  title;
-  description;
-  solutions;
-  icon;
+  title,
+  description,
+  solutions,
+  icon,
 }: {
   title: string,
   description: string,
@@ -352,12 +316,9 @@ function Pricing() {
           price='$10k–$30k',
           duration='2–4 weeks',
           features={[
-            'Security audit and assessment';
-            'Vulnerability scanning';
-            'Penetration testing';
-            'Risk analysis report';
-            'Remediation recommendations';
-            'Compliance review';
+            'Security audit and assessmentVulnerability scanning',
+            'Penetration testingRisk analysis report',
+            'Remediation recommendationsCompliance review',
           ]}
         />,
         <Plan
@@ -365,12 +326,9 @@ function Pricing() {
           price='$50k–$150k',
           duration='8–16 weeks',
           features={[
-            'Security technology implementation';
-            'Policy and procedure development';
-            'Security controls deployment';
-            'Integration and testing';
-            'Staff training';
-            'Documentation and handover';
+            'Security technology implementationPolicy and procedure development',
+            'Security controls deploymentIntegration and testing',
+            'Staff trainingDocumentation and handover',
           ]}
         />,
         <Plan
@@ -378,22 +336,19 @@ function Pricing() {
           price='$8k–$20k/mo',
           duration='Ongoing',
           features={[
-            '24/7 security monitoring';
-            'Threat detection and response';
-            'Vulnerability management';
-            'Security updates and patches';
-            'Incident response';
-            'Monthly security reports';
+            '24/7 security monitoringThreat detection and response',
+            'Vulnerability managementSecurity updates and patches',
+            'Incident responseMonthly security reports',
           ]}
         />,
       </div>,
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

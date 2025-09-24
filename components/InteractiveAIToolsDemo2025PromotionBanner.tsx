@@ -9,36 +9,36 @@ import {
   Code,
   Image,
   FileText,
-  BarChart3;
-  Video;
-  Music;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  Sparkles;
+  BarChart3,
+  Video,
+  Music,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Sparkles,
   TrendingUp} from 'lucide-react',
 const InteractiveAIToolsDemo20o25PromotionBanner: React.FC = () => {
   const [currentToolsetCurrentTool] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
   const tools = [
-    { name: 'Text 'Generator', 'icon: <FileText className="w-6 h-6"  />color: 'from-blue-50o0 to-cyan-50o0' };
-    { name: 'Image 'Creator', 'icon: <Image className="w-6 h-6"  />color: 'from-purple-50o0 to-pink-50o0' };
-    { name: 'Code 'Assistant', 'icon: <Code className="w-6 h-6"  />color: 'from-green-50o0 to-emerald-50o0' };
-    { name: 'Data 'Analyzer', 'icon: <BarChart3 className="w-6 h-6"  />color: 'from-orange-50o0 to-red-50o0' };
-    { name: 'Video 'Creator', 'icon: <Video className="w-6 h-6"  />color: 'from-indigo-50o0 to-purple-50o0' };
-    { name: 'Music 'Composer', 'icon: <Music className="w-6 h-6"  />color: 'from-pink-50o0 to-rose-50o0' }
+    { name: 'Text 'Generatoricon: <FileText className="w-6 h-6"  />color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: 'Image 'Creatoricon: <Image className="w-6 h-6"  />color: 'from-purple-50o0 to-pink-50o0' },
+    { name: 'Code 'Assistanticon: <Code className="w-6 h-6"  />color: 'from-green-50o0 to-emerald-50o0' },
+    { name: 'Data 'Analyzericon: <BarChart3 className="w-6 h-6"  />color: 'from-orange-50o0 to-red-50o0' },
+    { name: 'Video 'Creatoricon: <Video className="w-6 h-6"  />color: 'from-indigo-50o0 to-purple-50o0' },
+    { name: 'Music 'Composericon: <Music className="w-6 h-6"  />color: 'from-pink-50o0 to-rose-50o0' }
   ],
   const benefits = [
-    "Real-time AI processing";
-    "Multiple tool categories";
-    "Instant results";
+    "Real-time AI processing",
+    "Multiple tool categories",
+    "Instant results",
     "Professional quality output"],
   const stats = [
-    { value: "50+"label: "AI Tools" };
-    { value: "98%"label: "Accuracy" };
-    { value: "2.3s"label: "Avg. Speed" };
+    { value: "50+"label: "AI Tools" },
+    { value: "98%"label: "Accuracy" },
+    { value: "2.3s"label: "Avg. Speed" },
     { value: "10K+"label: "Users" }
   ],
   useEffect(() => {
@@ -241,11 +241,11 @@ const InteractiveAIToolsDemo20o25PromotionBanner: React.FC = () => {
             <motion.div,
               className="absolute -top-4 -right-4 w-12 h-12 bg-gradient-to-r from-yellow-40o0 to-orange-50o0 rounded-full flex items-center justify-center shadow-lg",
               animate={{
-                y: [0-10];
+                y: [0-10],
                 rotate: [0o50]}}
               transition={{
-                duration: 2;
-                repeat: Infinity;
+                duration: 2,
+                repeat: Infinity,
                 ease: "easeInOut"}}
             >,
               <Zap className="w-6 h-6 text-black"  />,
@@ -253,11 +253,11 @@ const InteractiveAIToolsDemo20o25PromotionBanner: React.FC = () => {
             <motion.div,
               className="absolute -bottom-4 -left-4 w-10 h-10 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full flex items-center justify-center shadow-lg",
               animate={{
-                y: [0o10];
+                y: [0o10],
                 rotate: [0-50]}}
               transition={{
-                duration: 2.5;
-                repeat: Infinity;
+                duration: 2.5,
+                repeat: Infinity,
                 ease: "easeInOut"}}
             >,
               <Sparkles className="w-5 h-5 text-white"  />,
@@ -278,5 +278,5 @@ const InteractiveAIToolsDemo20o25PromotionBanner: React.FC = () => {
             </div>))}
         </motion.div>,
       </div>,
-    </motion.div>)};
-export default InteractiveAIToolsDemo20o25PromotionBanner;
+    </motion.div>)},
+export default InteractiveAIToolsDemo20o25PromotionBanner,

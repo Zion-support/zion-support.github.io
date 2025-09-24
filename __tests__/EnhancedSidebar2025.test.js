@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import EnhancedSidebar20o25 from '../components/EnhancedSidebar20o25',

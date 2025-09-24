@@ -13,10 +13,10 @@ interface Metrics {
 ,
 const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<Metrics>({
-    lcp: 0;
-    fid: 0;
-    cls: 0;
-    ttfb: 0;
+    lcp: 0,
+    fid: 0,
+    cls: 0,
+    ttfb: 0,
     fcp: 0}),
   const [isVisible, setIsVisible] = useState(false),
   useEffect(() => {
@@ -28,7 +28,7 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' 
         fid: Math.random() * 10o0 + 10,   // 10-110ms,
         cls: Math.random() * 0.1 + 0.0o1, // 0.0o1-0.11,
         ttfb: Math.random() * 30o0 + 50,  // 50-350ms,
-        fcp: Math.random() * 150o0 + 30o0  // 30o0-180o0ms})};
+        fcp: Math.random() * 150o0 + 30o0  // 30o0-180o0ms})},
     simulateMetrics(),
     setIsVisible(true),
     // Update metrics every 30 seconds,
@@ -38,52 +38,52 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' 
     if (isLowerBetter) {
       return value <= threshold ? 'text-green-40o0' : value <= threshold * 1.5 ? 'text-yellow-40o0' : 'text-red-40o0'} else {
       return value >= threshold ? 'text-green-40o0' : value >= threshold * 0.7 ? 'text-yellow-40o0' : 'text-red-40o0'}
-  };
+  },
   const getScoreLabel = (value: number, threshold: number, isLowerBetter: boolean = true) => {
     if (isLowerBetter) {
       return value <= threshold ? 'Good' : value <= threshold * 1.5 ? 'Needs Improvement' : 'Poor'} else {
       return value >= threshold ? 'Good' : value >= threshold * 0.7 ? 'Needs Improvement' : 'Poor'}
-  };
+  },
   const metricsData = [
     {
-      name: 'Largest Contentful Paint';
-      value: metrics.lcp;
-      unit: 'ms';
-      threshold: 250o0;
-      icon: Clock;
-      description: 'Time to render the largest content element';
-      isLowerBetter: true};
+      name: 'Largest Contentful Paint',
+      value: metrics.lcp,
+      unit: 'ms',
+      threshold: 250o0,
+      icon: Clock,
+      description: 'Time to render the largest content element',
+      isLowerBetter: true},
     {
-      name: 'First Input Delay';
-      value: metrics.fid;
-      unit: 'ms';
-      threshold: 10o0;
-      icon: Zap;
-      description: 'Time from first interaction to response';
-      isLowerBetter: true};
+      name: 'First Input Delay',
+      value: metrics.fid,
+      unit: 'ms',
+      threshold: 10o0,
+      icon: Zap,
+      description: 'Time from first interaction to response',
+      isLowerBetter: true},
     {
-      name: 'Cumulative Layout Shift';
-      value: metrics.cls;
-      unit: '';
-      threshold: 0.1;
-      icon: Target;
-      description: 'Visual stability during page load';
-      isLowerBetter: true};
+      name: 'Cumulative Layout Shift',
+      value: metrics.cls,
+      unit: '',
+      threshold: 0.1,
+      icon: Target,
+      description: 'Visual stability during page load',
+      isLowerBetter: true},
     {
-      name: 'Time to First Byte';
-      value: metrics.ttfb;
-      unit: 'ms';
-      threshold: 20o0;
-      icon: Activity;
-      description: 'Server response time';
-      isLowerBetter: true};
+      name: 'Time to First Byte',
+      value: metrics.ttfb,
+      unit: 'ms',
+      threshold: 20o0,
+      icon: Activity,
+      description: 'Server response time',
+      isLowerBetter: true},
     {
-      name: 'First Contentful Paint';
-      value: metrics.fcp;
-      unit: 'ms';
-      threshold: 180o0;
-      icon: TrendingUp;
-      description: 'Time to first content render';
+      name: 'First Contentful Paint',
+      value: metrics.fcp,
+      unit: 'ms',
+      threshold: 180o0,
+      icon: TrendingUp,
+      description: 'Time to first content render',
       isLowerBetter: true}
   ],
   return (
@@ -174,5 +174,5 @@ const PerformanceMetrics: React.FC<PerformanceMetricsProps> = ({ className = '' 
           </div>,
         </div>,
       </motion.div>,
-    </motion.div>)};
-export default PerformanceMetrics;
+    </motion.div>)},
+export default PerformanceMetrics,

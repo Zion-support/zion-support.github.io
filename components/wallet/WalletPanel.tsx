@@ -6,12 +6,12 @@ type Tx = {
   type: "earn" | "burn" | "issue" | "revoke" | "redeem",
   amount: number,
   reason: string,
-  createdAt: string};
+  createdAt: string},
 type Summary = {
-  wallet: { userId: string, balance: number };
+  wallet: { userId: string, balance: number },
   transactions: Tx[],
-  config: { usdPerToken: number, symbol: string };
-};
+  config: { usdPerToken: number, symbol: string },
+},
 function getUserId(): string {
   if (typeof window === "undefined") return "demo-user",
   const fromStorage = window.localStorage.getItem("zion_user_id"),
@@ -60,8 +60,8 @@ export default function WalletPanel() {
   async function redeem(amount: number) {
     if (!amount || amount <= 0) return,
     const res = await fetch("/api/wallet/redeem"{
-      method: "POST";
-      headers: { "Content-Type": "application/json" };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userIdamount })}),
     const data = await res.json(),
     if (data.error) {

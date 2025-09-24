@@ -19,9 +19,9 @@ export function ContractPreview({
   generatedContract,
   status = 'ready',
   onDeploy,
-  onSign;
-  onClose;
-  deployStatus;
+  onSign,
+  onClose,
+  deployStatus,
   deploymentInfo}: ContractPreviewProps) {
   // Use either contractContent or generatedContractwhichever is provided,
   const displayContent = contractContent || generatedContract || "",

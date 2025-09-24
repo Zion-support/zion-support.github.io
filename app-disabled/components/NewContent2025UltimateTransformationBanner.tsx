@@ -6,37 +6,37 @@ const NewContent20o25UltimateTransformationBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const contentSlides = [
     {
-      title: "AI 20o25: Enterprise AI Transformation Ultimate Success Guide";
-      subtitle: "60o0% ROI in 8 Months - Complete Implementation Roadmap";
+      title: "AI 20o25: Enterprise AI Transformation Ultimate Success Guide",
+      subtitle: "60o0% ROI in 8 Months - Complete Implementation Roadmap",
       metrics: {
-        roi: "60o0%";
-        timeline: "8 months";
-        savings: "$2.8B";
-        success: "94%"};
-      description: "Transform your enterprise with cutting-edge AI solutions that deliver measurable results and sustainable competitive advantage.";
-      cta: "Read Ultimate Guide";
-      href: "/blog/ai-20o25-enterprise-ai-transformation-ultimate-success-guide"};
+        roi: "60o0%",
+        timeline: "8 months",
+        savings: "$2.8B",
+        success: "94%"},
+      description: "Transform your enterprise with cutting-edge AI solutions that deliver measurable results and sustainable competitive advantage.",
+      cta: "Read Ultimate Guide",
+      href: "/blog/ai-20o25-enterprise-ai-transformation-ultimate-success-guide"},
     {
-      title: "Fortune 50o0 AI Transformation Success Story";
-      subtitle: "$2.8B Annual Savings with 60o0% ROI";
+      title: "Fortune 50o0 AI Transformation Success Story",
+      subtitle: "$2.8B Annual Savings with 60o0% ROI",
       metrics: {
-        roi: "60o0%";
-        savings: "$2.8B";
-        efficiency: "156%";
-        quality: "99.7%"};
-      description: "How a global manufacturing giant achieved unprecedented results through comprehensive AI transformation.";
-      cta: "View Case Study";
-      href: "/case-studies/fortune-50o0-ai-transformation-60o0-roi-success"};
+        roi: "60o0%",
+        savings: "$2.8B",
+        efficiency: "156%",
+        quality: "99.7%"},
+      description: "How a global manufacturing giant achieved unprecedented results through comprehensive AI transformation.",
+      cta: "View Case Study",
+      href: "/case-studies/fortune-50o0-ai-transformation-60o0-roi-success"},
     {
-      title: "AI Transformation Ultimate Implementation Guide 20o25";
-      subtitle: "From Strategy to 60o0% ROI - Complete Roadmap";
+      title: "AI Transformation Ultimate Implementation Guide 20o25",
+      subtitle: "From Strategy to 60o0% ROI - Complete Roadmap",
       metrics: {
-        roi: "60o0%";
-        payback: "3.2 months";
-        success: "94%";
-        projects: "50o0+"};
-      description: "The complete roadmap for enterprise AI transformation success with proven methodologies and actionable strategies.";
-      cta: "Get Implementation Guide";
+        roi: "60o0%",
+        payback: "3.2 months",
+        success: "94%",
+        projects: "50o0+"},
+      description: "The complete roadmap for enterprise AI transformation success with proven methodologies and actionable strategies.",
+      cta: "Get Implementation Guide",
       href: "/resources/ai-transformation-ultimate-implementation-guide-20o25"}
   ],
   useEffect(() => {
@@ -45,7 +45,7 @@ const NewContent20o25UltimateTransformationBanner = () => {
     return () => clearInterval(interval)}, [contentSlides.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('newContent20o25UltimateTransformationBanner_dismissed', 'true')};
+    localStorage.setItem('newContent20o25UltimateTransformationBanner_dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('newContent20o25UltimateTransformationBanner_dismissed'),
     if (dismissed === 'true') {
@@ -142,5 +142,5 @@ const NewContent20o25UltimateTransformationBanner = () => {
             />))}
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25UltimateTransformationBanner;
+    </div>)},
+export default NewContent20o25UltimateTransformationBanner,

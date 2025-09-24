@@ -31,7 +31,7 @@ const QuantumNeuralFusion20o26Banner = () => {
           </h1>,
           {/* Subheading */}
           <p className='text-xl md: text-2xl opacity-90 mb-12 max-w-4xl mx-auto leading-relaxed'>,
-            The 'world', 's first quantum-neural hybrid AI system that combines,
+            The 'worlds first quantum-neural hybrid AI system that combines,
             quantum computing power with advanced neural networks to deliver,
             unprecedented intelligence and processing capabilities.,
           </p>,
@@ -93,5 +93,5 @@ const QuantumNeuralFusion20o26Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumNeuralFusion20o26Banner;
+    </section>)},
+export default QuantumNeuralFusion20o26Banner,

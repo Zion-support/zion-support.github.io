@@ -24,7 +24,7 @@ export default function ContractBuilderPage() {
   const [contract, setContract] = useState<string>(''),
   useEffect(() => {
     if (!router.isReady) return,
-    const { talent, project } = router.query as { talent?: string, project?: string };
+    const { talent, project } = router.query as { talent?: string, project?: string },
     if (talent && !talentName) setTalentName(decodeURIComponent(talent)),
     if (project && !projectName) setProjectName(decodeURIComponent(project))}, [router.isReady, router.query, talentName, projectName]),
   const canSubmit = useMemo(() => {
@@ -43,40 +43,40 @@ export default function ContractBuilderPage() {
     setContract(''),
     try {
       const body ={
-        talentName;
-        projectName;
-        scopeSummary;
-        startDate: startDate?.toISOString().slice(0, 10);
-        endDate: endDate?.toISOString().slice(0, 10);
+        talentName,
+        projectName,
+        scopeSummary,
+        startDate: startDate?.toISOString().slice(0, 10),
+        endDate: endDate?.toISOString().slice(0, 10),
         payment: ,
           paymentType === 'hourly',
             ? {
-                type: 'hourly';
-                currency;
-                hourlyRate;
-                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined;
+                type: 'hourly',
+                currency,
+                hourlyRate,
+                weeklyHourCap: typeof weeklyHourCap === 'number' ? weeklyHourCap : undefined,
                 paymentSchedule}
             : {
-                type: 'fixed';
-                currency;
-                totalAmount: fixedAmount;
-                milestoneSummary: milestoneSummary || undefined;
-                paymentSchedule};
+                type: 'fixed',
+                currency,
+                totalAmount: fixedAmount,
+                milestoneSummary: milestoneSummary || undefined,
+                paymentSchedule},
         clauses: {
-          nda;
-          ipTransfer};
-        governingLaw;
-        revisionRounds};
+          nda,
+          ipTransfer},
+        governingLaw,
+        revisionRounds},
       const res = await fetch('/api/ai-contract', {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON.stringify(body)}),
       if (!res.ok) {
         const data = await res.json().catch(() => ({})),
         throw new Error(data?.error || `Request failed: ${res.status}`)}
 ,
-      const data = (await res.json()) as { contract: string };
+      const data = (await res.json()) as { contract: string },
       setContract(data.contract)} catch (e: any) {
       setError(e?.message || 'Failed to generate contract')} finally {
       setLoading(false)}

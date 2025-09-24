@@ -1,10 +1,10 @@
 import React from './react',
 import { Button  } from '@/components / ui / button',
 import { Eye, Info, AlertTriangle, Ban  } from './lucide-react',
-import React from "react";;
-import { Button } from "@/components/ui/button";
-import { Eye, Info, AlertTriangle, Ban } from "lucide-react";
-import React from "react";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
+import React from "react",
 import { Button } from "@/components/ui/button",
 import { Eye, Info, AlertTriangle, Ban } from "lucide-react",
 interface ActionButtonsProps {
@@ -14,16 +14,16 @@ interface ActionButtonsProps {
     flagId: string,
     action: "warning" | "suspension" | "ban" | "ignore") => void,
 interface ActionButtonsProps {
-  flagId: string;
-  status: string;
+  flagId: string,
+  status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 export const ActionButtons: React.FC<ActionButtonsProps> = ({
   flagId,
   status,
   onAction}) => {
 interface ActionButtonsProps {
-  flagId: string;
-  status: string;
+  flagId: string,
+  status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 ,
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -90,8 +90,8 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
 ,
     </div>),
 interface ActionButtonsProps {
-  flagId: string;
-  status: string;
+  flagId: string,
+  status: string,
   onAction: (flagId: string, action: 'warning' | 'suspension' | 'ban' | 'ignore') => void}
 ,
 export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, onAction }) => {
@@ -141,14 +141,12 @@ export const ActionButtons: React.FC<ActionButtonsProps> = ({ flagId, status, on
           Ignore,
         </Button>)}
     </div>),
-  on_action: (
-    flag_id: string;
-    action: "warning" | "suspension" | "ban" | "ignore";
-  ) => void}
+  on_action: (flag_id: string,
+    action: "warning" | "suspension" | "ban" | "ignore") => void}
 export const ActionButtons: React.FC < ActionButtonsProps> = ({
-  flag_id;
-  status;
-  on_action;
+  flag_id,
+  status,
+  on_action
 }) => {
   return (
     <div className="flex space - x-2">,
@@ -196,5 +194,5 @@ export const ActionButtons: React.FC < ActionButtonsProps> = ({
           Ignore,
         </Button>)}
     </div>)}
-};
+},
 }

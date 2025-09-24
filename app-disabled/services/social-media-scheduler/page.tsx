@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'social-media-scheduler - Zion Tech Group';
+  title: 'social-media-scheduler - Zion Tech Group',
   description:,
-    'Professional social-media-scheduler solutions for your business needs.';
-  keywords: 'social-media-scheduler, services, business, technology';
-};
+    'Professional social-media-scheduler solutions for your business needs.',
+  keywords: 'social-media-scheduler, services, business, technology',
+},
 export default function SocialMediaSchedulerPage() {
   return (
     <div className='min-h-screen bg-white'>,

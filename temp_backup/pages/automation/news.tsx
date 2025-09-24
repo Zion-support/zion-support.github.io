@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react',
 import Link from 'next/link',
-type Digest ={ slug: string, route: string, createdAt: number, items: number };
+type Digest ={ slug: string, route: string, createdAt: number, items: number },
 export default function NewsAutomation() {
   const [digests, setDigests] = useState<Digest[]>([]),
   useEffect(() => {

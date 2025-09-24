@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Secure Agent Architecture | Zion Tech Group';
+  title: 'AI 20o26: Secure Agent Architecture | Zion Tech Group',
   description:,
-    'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 20o26.';
-};
+    'Zero-trust design, capability-scoped tools, and runtime guardrails for secure enterprise AI agents in 20o26.',
+},
 export default function SecureAgentArchitecture20o26Page() {
   return (
     <main className='min-h-screen bg-white'>,

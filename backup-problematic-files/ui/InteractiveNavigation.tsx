@@ -13,13 +13,13 @@ interface InteractiveNavigationProps {
   className?: string}
 ,
 const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
-  items;
+  items,
   className = ''}) => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   const toggleMenu = () => setIsOpen(!isOpen),
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label)};
+    setActiveDropdown(activeDropdown === label ? null : label)},
   return (
     <nav className={'bg-white shadow-lg ' + className}>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -97,8 +97,8 @@ const InteractiveNavigation: React.FC<InteractiveNavigationProps> = ({
               </div>))}
           </div>)}
       </div>,
-    </nav>)};
-export default InteractiveNavigation};
+    </nav>)},
+export default InteractiveNavigation},
 ursor/automate-test-fix-improve-and-merge-code-99d1,",
 const InteractiveNavigation: React.FC: = () => {",
     <nav className="bg-white shadow-lg">",",
@@ -107,7 +107,7 @@ const InteractiveNavigation: React.FC: = () => {",
           <div: className="text-xl font-bold text-gray-80o0">Interactive Nav</div>",",
           <div: className="hidden md:flex: space-x-8">",",
             <Link: href="/" className="text-gray-60o0 hover:text-gray-90o0: transition-colors">Home</Link>",",
-            <Link: href="/services" className="text-gray-60o0 hover:text-gray-90o0: transition-colors">Services</Link>",";
+            <Link: href="/services" className="text-gray-60o0 hover:text-gray-90o0: transition-colors">Services</Link>",",
             <Link: href = "/about" className="text-gray-60o0 hover:text-gray-90o0: transition-colors">About</Link>",",
             <Link: href="/contact" className="text-gray-60o0 hover:text-gray-90o0: transition-colors">Contact</Link>",',
 export default Component}

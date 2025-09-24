@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Analytics Dashboard Platform | Zion Tech Group';
+  title: 'Analytics Dashboard Platform | Zion Tech Group',
   description:,
-    'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.';
-};
+    'Build powerful analytics dashboards with real-time data visualization, custom metrics, and business intelligence. Professional analytics solutions starting at $16k.',
+},
 export default function AnalyticsDashboardPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function AnalyticsDashboardPage() {
           Analytics Dashboard Platform,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build powerful analytics dashboards with real-time data visualization;
+          Build powerful analytics dashboards with real-time data visualization,
           custom metrics, and business intelligence tools.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Data Visualization',
             details={[
-              'Interactive charts & graphs';
-              'Real-time data updates';
-              'Custom dashboard builder';
-              'Drag-and-drop interface';
-              'Multiple chart types';
-              'Responsive design';
-              'Export capabilities';
+              'Interactive charts & graphsReal-time data updates',
+              'Custom dashboard builderDrag-and-drop interface',
+              'Multiple chart typesResponsive design',
+              'Export capabilities',
             ]}
           />,
           <Item
             title='Data Integration',
             details={[
-              'API connections';
-              'Database integration';
-              'CSV/Excel import';
-              'Real-time streaming';
-              'Data transformation';
-              'ETL pipelines';
-              'Data validation';
+              'API connectionsDatabase integration',
+              'CSV/Excel importReal-time streaming',
+              'Data transformationETL pipelines',
+              'Data validation',
             ]}
           />,
           <Item
             title='Business Intelligence',
             details={[
-              'Custom KPI tracking';
-              'Automated alerts';
-              'Trend analysis';
-              'Predictive analytics';
-              'Cohort analysis';
-              'A/B testing insights';
-              'ROI calculations';
+              'Custom KPI trackingAutomated alerts',
+              'Trend analysisPredictive analytics',
+              'Cohort analysisA/B testing insights',
+              'ROI calculations',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$16k–$32k',
           duration='6–10 weeks',
           features={[
-            'Basic dashboard builder';
-            '5 data sources';
-            'Standard chart types';
-            'Export functionality';
-            'User management';
-            'Mobile responsive';
-            'Basic support';
+            'Basic dashboard builder5 data sources',
+            'Standard chart typesExport functionality',
+            'User managementMobile responsive',
+            'Basic support',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$32k–$65k',
           duration='10–16 weeks',
           features={[
-            'Everything in Basic';
-            'Advanced visualizations';
-            'Real-time data';
-            'Custom metrics';
-            'API integrations';
-            'White-label options';
-            'Priority support';
+            'Everything in BasicAdvanced visualizations',
+            'Real-time dataCustom metrics',
+            'API integrationsWhite-label options',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$65k+',
           duration='14–22 weeks',
           features={[
-            'Everything in Professional';
-            'Custom development';
-            'Advanced security';
-            'Multi-tenant architecture';
-            'Dedicated support';
-            'SLA guarantees';
-            'On-premise deployment';
+            'Everything in ProfessionalCustom development',
+            'Advanced securityMulti-tenant architecture',
+            'Dedicated supportSLA guarantees',
+            'On-premise deployment',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

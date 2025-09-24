@@ -1,5 +1,5 @@
 import { BlogPost } from '@/utils/types/blog',
-const DATA_DIR = path.resolve(process.cwd(), 'data', 'blog'),
+const DATA_DIR = path.resolve(process.cwd(), 'datablog'),
 const POSTS_PATH = path.resolve(DATA_DIR, 'posts.json'),
 function ensureStore(): void {
   if (!fs.existsSync(DATA_DIR)) {
@@ -56,7 +56,7 @@ export function listAllTags(): string[] {
   return Array.from(new Set(readPosts().flatMap(p => p.tags || [])))}
 ,
 export function incrementMetric(
-  id: string;
+  id: string,
   metric: keyof BlogPost['metrics']): BlogPost | undefined {
   const posts = readPosts(),
   const idx = posts.findIndex(p => p.id === id),

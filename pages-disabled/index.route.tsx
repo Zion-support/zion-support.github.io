@@ -6,36 +6,36 @@ import { motion } from 'framer-motion',
 export default function Home() {
   const features = [
     {
-      icon: Zap;
-      title: 'Micro SaaS Solutions';
-      description: 'Ready-to-deploy SaaS platforms for common business needs';
-      href: '/services#micro-saas';
-    };
+      icon: Zap,
+      title: 'Micro SaaS Solutions',
+      description: 'Ready-to-deploy SaaS platforms for common business needs',
+      href: '/services#micro-saas'
+    },
     {
-      icon: Brain;
-      title: 'AI & Machine Learning';
+      icon: Brain,
+      title: 'AI & Machine Learning',
       description:,
-        'Custom AI solutions to automate and optimize your operations';
-      href: '/services#ai-solutions';
-    };
+        'Custom AI solutions to automate and optimize your operations',
+      href: '/services#ai-solutions'
+    },
     {
-      icon: Cloud;
-      title: 'Cloud Architecture';
-      description: 'Scalable cloud solutions and migration strategies';
-      href: '/services#cloud-solutions';
-    };
+      icon: Cloud,
+      title: 'Cloud Architecture',
+      description: 'Scalable cloud solutions and migration strategies',
+      href: '/services#cloud-solutions'
+    },
     {
-      icon: Shield;
-      title: 'Cybersecurity';
-      description: 'Zero Trust implementation and security hardening';
-      href: '/services#cybersecurity';
-    };
+      icon: Shield,
+      title: 'Cybersecurity',
+      description: 'Zero Trust implementation and security hardening',
+      href: '/services#cybersecurity'
+    },
   ],
   const stats = [
-    { number: '50+', label: 'Projects Delivered' };
-    { number: '24/7', label: 'Support Available' };
-    { number: '99.9%', label: 'Uptime SLA' };
-    { number: '48hrs', label: 'Response Time' };
+    { number: '50+', label: 'Projects Delivered' },
+    { number: '24/7', label: 'Support Available' },
+    { number: '99.9%', label: 'Uptime SLA' },
+    { number: '48hrs', label: 'Response Time' },
   ],
   return (
     <ModernLayout

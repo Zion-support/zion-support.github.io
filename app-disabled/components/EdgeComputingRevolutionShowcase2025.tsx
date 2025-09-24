@@ -2,60 +2,56 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Zap;
-  Shield;
-  DollarSign;
-  Clock;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
+  ArrowRight,
+  Zap,
+  Shield,
+  DollarSign,
+  Clock,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
 } from 'lucide-react',
 const EdgeComputingRevolutionShowcase20o25 = () => {
   const [activeTab, setActiveTab] = useState('overview'),
   const content = [
     {
-      id: 'overview';
-      title: 'Edge Computing Revolution';
-      subtitle: '450% ROI with 67% Latency Reduction';
+      id: 'overview',
+      title: 'Edge Computing Revolution',
+      subtitle: '450% ROI with 67% Latency Reduction',
       description:,
-        'Discover how edge computing is transforming AI deployment with 450% ROI, 67% latency reduction, and 89% cost savings.';
+        'Discover how edge computing is transforming AI deployment with 450% ROI, 67% latency reduction, and 89% cost savings.',
       metrics: [
-        { label: 'ROI', value: '450%', icon: TrendingUp };
-        { label: 'Latency Reduction', value: '67%', icon: Zap };
-        { label: 'Cost Savings', value: '$2.3M', icon: DollarSign };
-        { label: 'Uptime', value: '99.7%', icon: Clock };
-      ];
+        { label: 'ROI', value: '450%', icon: TrendingUp },
+        { label: 'Latency Reduction', value: '67%', icon: Zap },
+        { label: 'Cost Savings', value: '$2.3M', icon: DollarSign },
+        { label: 'Uptime', value: '99.7%', icon: Clock },
+      ],
       features: [
-        'Sub-10ms response time for critical applications';
-        '89% reduction in data transmission costs';
-        '45% improvement in energy efficiency';
-        '78% reduction in data exposure';
-      ];
-      cta: 'Read Ultimate Guide';
-      link: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide';
-    };
+        'Sub-10ms response time for critical applications89% reduction in data transmission costs',
+        '45% improvement in energy efficiency78% reduction in data exposure',
+      ],
+      cta: 'Read Ultimate Guide',
+      link: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide'
+    },
     {
-      id: 'case-study';
-      title: 'Manufacturing Success Story';
-      subtitle: '$9.4M Annual Savings with 520% ROI';
+      id: 'case-study',
+      title: 'Manufacturing Success Story',
+      subtitle: '$9.4M Annual Savings with 520% ROI',
       description:,
-        'How a global automotive manufacturer achieved 520% ROI and $9.4M annual savings through edge computing implementation.';
+        'How a global automotive manufacturer achieved 520% ROI and $9.4M annual savings through edge computing implementation.',
       metrics: [
-        { label: 'ROI', value: '520%', icon: TrendingUp };
-        { label: 'Annual Savings', value: '$9.4M', icon: DollarSign };
-        { label: 'Quality Speed', value: '2 seconds', icon: Zap };
-        { label: 'Efficiency', value: '45%', icon: TrendingUp };
-      ];
+        { label: 'ROI', value: '520%', icon: TrendingUp },
+        { label: 'Annual Savings', value: '$9.4M', icon: DollarSign },
+        { label: 'Quality Speed', value: '2 seconds', icon: Zap },
+        { label: 'Efficiency', value: '45%', icon: TrendingUp },
+      ],
       features: [
-        '78% reduction in latency for quality control';
-        '67% improvement in production efficiency';
-        '89% reduction in bandwidth costs';
-        '95% improvement in real-time decision making';
-      ];
-      cta: 'View Case Study';
-      link: '/case-studies/ai-20o25-edge-computing-manufacturing-success-520-roi';
-    };
+        '78% reduction in latency for quality control67% improvement in production efficiency',
+        '89% reduction in bandwidth costs95% improvement in real-time decision making',
+      ],
+      cta: 'View Case Study',
+      link: '/case-studies/ai-20o25-edge-computing-manufacturing-success-520-roi'
+    },
   ],
   const currentContent =,
     content.find(item => item.id === activeTab) || content[0],
@@ -264,5 +260,5 @@ const EdgeComputingRevolutionShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EdgeComputingRevolutionShowcase20o25;
+    </section>)},
+export default EdgeComputingRevolutionShowcase20o25,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Code Reviewer | Zion Tech Group';
+  title: 'AI Code Reviewer | Zion Tech Group',
   description:,
-    'Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.';
-};
+    'Automated code review and quality analysis powered by AI. Improve code quality, catch bugs early, and maintain coding standards.',
+},
 export default function AICodeReviewerPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function AICodeReviewerPage() {
               period='per month',
               description='Perfect for small teams and individual developers',
               features={[
-                'Up to 5 repositories';
-                'Basic code analysis';
-                'Standard bug detection';
-                'Email support';
-                'GitHub/GitLab integration';
+                'Up to 5 repositoriesBasic code analysis',
+                'Standard bug detectionEmail support',
+                'GitHub/GitLab integration',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function AICodeReviewerPage() {
               period='per month',
               description='Ideal for growing teams and mid-size projects',
               features={[
-                'Up to 25 repositories';
-                'Advanced AI analysis';
-                'Custom rules engine';
-                'Priority support';
-                'All integrations';
-                'Team analytics dashboard';
+                'Up to 25 repositoriesAdvanced AI analysis',
+                'Custom rules enginePriority support',
+                'All integrationsTeam analytics dashboard',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function AICodeReviewerPage() {
               period='per month',
               description='For large organizations with complex needs',
               features={[
-                'Unlimited repositories';
-                'Advanced security scanning';
-                'Custom AI model training';
-                'Dedicated support';
-                'On-premise deployment';
-                'Custom integrations';
+                'Unlimited repositoriesAdvanced security scanning',
+                'Custom AI model trainingDedicated support',
+                'On-premise deploymentCustom integrations',
               ]}
               popular={false}
             />,
@@ -154,9 +146,9 @@ export default function AICodeReviewerPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -171,12 +163,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  plan,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   plan: string,
   price: string,
@@ -208,9 +200,9 @@ function PricingCard({
     </div>)}
 ,
 function StepCard({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,

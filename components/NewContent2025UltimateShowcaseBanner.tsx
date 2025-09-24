@@ -11,32 +11,32 @@ const NewContent20o25UltimateShowcaseBanner = () => {
     return () => clearInterval(interval)}, []),
   const slides = [
     {
-      title: "Neural Superintelligence Breakthrough";
-      subtitle: "Revolutionary AI achieving human-level consciousness";
-      roi: "2,40o0%";
-      icon: "🧠";
-      color: "from-purple-60o0 to-indigo-60o0";
-      features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"]};
+      title: "Neural Superintelligence Breakthrough",
+      subtitle: "Revolutionary AI achieving human-level consciousness",
+      roi: "2,40o0%",
+      icon: "🧠",
+      color: "from-purple-60o0 to-indigo-60o0",
+      features: ["Consciousness AI", "Neural Networks", "Cognitive Computing"]},
     {
-      title: "Quantum-Neural Fusion Revolution";
-      subtitle: "Merging quantum computing with neural networks";
-      roi: "5,0o00%";
-      icon: "⚛️";
-      color: "from-blue-60o0 to-cyan-60o0";
-      features: ["Quantum AI", "Neural Processing", "Advanced Computing"]};
+      title: "Quantum-Neural Fusion Revolution",
+      subtitle: "Merging quantum computing with neural networks",
+      roi: "5,0o00%",
+      icon: "⚛️",
+      color: "from-blue-60o0 to-cyan-60o0",
+      features: ["Quantum AI", "Neural Processing", "Advanced Computing"]},
     {
-      title: "Autonomous Business Ecosystems";
-      subtitle: "Self-managing business systems with minimal human intervention";
-      roi: "8,0o00%";
-      icon: "🤖";
-      color: "from-green-60o0 to-emerald-60o0";
-      features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"]};
+      title: "Autonomous Business Ecosystems",
+      subtitle: "Self-managing business systems with minimal human intervention",
+      roi: "8,0o00%",
+      icon: "🤖",
+      color: "from-green-60o0 to-emerald-60o0",
+      features: ["Autonomous Operations", "Self-Healing Systems", "Intelligent Automation"]},
     {
-      title: "Synthetic Intelligence Revolution";
-      subtitle: "AI systems that create, modify, and improve themselves";
-      roi: "10,0o00%";
-      icon: "🔬";
-      color: "from-orange-60o0 to-red-60o0";
+      title: "Synthetic Intelligence Revolution",
+      subtitle: "AI systems that create, modify, and improve themselves",
+      roi: "10,0o00%",
+      icon: "🔬",
+      color: "from-orange-60o0 to-red-60o0",
       features: ["Self-Improving AI", "Synthetic Intelligence", "Evolutionary Computing"]}
   ],
   const currentSlideData = slides[currentSlide],
@@ -176,9 +176,9 @@ const NewContent20o25UltimateShowcaseBanner = () => {
             </h3>,
             <div className="grid grid-cols-2 md: grid-cols-4 gap-6">,
               {[
-                { name: "AI Trends", icon: "📈", count: "150+" };
-                { name: "Case Studies", icon: "📊", count: "75+" };
-                { name: "Implementation", icon: "🛠️", count: "10o0+" };
+                { name: "AI Trends", icon: "📈", count: "150+" },
+                { name: "Case Studies", icon: "📊", count: "75+" },
+                { name: "Implementation", icon: "🛠️", count: "10o0+" },
                 { name: "Tools & Calculators", icon: "💰", count: "50+" }
               ].map((category, index) => (
                 <div key={index} className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 text-center hover: bg-white/20 transition-colors">,
@@ -190,5 +190,5 @@ const NewContent20o25UltimateShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25UltimateShowcaseBanner;
+    </div>)},
+export default NewContent20o25UltimateShowcaseBanner,

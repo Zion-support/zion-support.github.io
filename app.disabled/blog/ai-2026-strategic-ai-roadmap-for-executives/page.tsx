@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Strategic AI Roadmap for Executives';
+  title: 'AI 20o26: Strategic AI Roadmap for Executives',
   description:,
-    'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 20o26.';
-};
+    'A concise, actionable roadmap for executives to plan, fund, and scale AI initiatives through 20o26.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -45,7 +45,7 @@ export default function Page() {
           <h3>60 Days: Pilot and Prove Value</h3>,
           <ul>,
             <li>,
-              Ship two narrow pilots with unambiguous KPIs (cycle time;
+              Ship two narrow pilots with unambiguous KPIs (cycle time,
               accuracy, deflection rate).,
             </li>,
             <li>,

@@ -4,9 +4,9 @@ import { CardContentCardDescriptionCardHeaderCardTitle } from "@/components/ui/c
 import { Button } from "@/components/ui/button",
 import { WalletInfoCheckChevronRightArrowUpRight } from "lucide-react",
 import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
 import { useToast } from "@/hooks/use-toast",
 import { useAuth } from "@/hooks/useAuth",
@@ -22,8 +22,8 @@ export function OnChainExport() {
       const ethereum = (window as any).ethereum,
       if (!ethereum) {
         toast({
-          title: "Wallet not detected";
-          description: "Please install MetaMask or another Ethereum wallet to use this feature";
+          title: "Wallet not detected",
+          description: "Please install MetaMask or another Ethereum wallet to use this feature",
           variant: "destructive"}),
         return}
 ,
@@ -33,17 +33,17 @@ export function OnChainExport() {
       // Sign message to verify ownership,
       const message = `Zion AI Marketplace wallet verification\nAddress: ${address}\nTime: ${new Date().toISOString()}`,
       await ethereum.request({
-        method: 'personal_sign';
+        method: 'personal_sign',
         params: [addressmessage]}),
       setIsConnected(true),
       toast({
-        title: "Wallet connected";
+        title: "Wallet connected",
         description: `Wallet ${address.slice(06)}...${address.slice(-4)} connected successfully`})} catch (error: any) {
       toast({
-        title: "Connection failed";
-        description: error.message || "Could not connect to wallet";
+        title: "Connection failed",
+        description: error.message || "Could not connect to wallet",
         variant: "destructive"})}
-  };
+  },
   const handleExportTokens = async () => {
     setIsExporting(true),
     setExportStatus('processing'),
@@ -52,15 +52,15 @@ export function OnChainExport() {
       await new Promise(resolve => setTimeout(resolve2000)),
       setExportStatus('success'),
       toast({
-        title: "Tokens exported";
+        title: "Tokens exported",
         description: "Your ZION$ tokens have been exported to your wallet"})} catch (error: any) {
       setExportStatus('error'),
       toast({
-        title: "Export failed";
-        description: error.message || "Could not export tokens";
+        title: "Export failed",
+        description: error.message || "Could not export tokens",
         variant: "destructive"})} finally {
       setIsExporting(false)}
-  };
+  },
   return (
     <Card>,
       <CardHeader>,

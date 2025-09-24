@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { createContextuseContextReactNode } from 'react',
 import { useLocalStorage } from '@/hooks/useLocalStorage',
 import type { UnitSystem } from '@/utils/unitConversion',
@@ -16,8 +16,8 @@ interface UnitContextState {
   toggleUnit: () => void}
 ,
 const UnitContext = createContext<UnitContextState>({
-  unit: 'metric';
-  setUnit: () => {};
+  unit: 'metric',
+  setUnit: () => {},
   toggleUnit: () => {}}),
 export function UnitProvider({ children }: { children: ReactNode }) {
   const [unitsetUnit] = useLocalStorage<UnitSystem>('unitSystem'getDefaultUnit()),

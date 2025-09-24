@@ -1,4 +1,4 @@
-export default function Page() {;
+export default function Page() {,
   return (
     <div className='bg-black min-h-screen'>
       <div className='mx-auto max-w-3xl px-6 pt-28 pb-24 lg: px-8'>
@@ -8,8 +8,8 @@ export default function Page() {;
         </h1>
         <p className='mt-2 text-gray-4000'>2025-09-15</p>
         <div className='prose prose-invert mt-8'>
-          <p>;,
-            Threat-model prompts, enforce guardrails, and prevent prompt: injection with patterns tested in production. Includes: policy-as-code checks and sandboxing strategies.;
+          <p>,
+            Threat-model prompts, enforce guardrails, and prevent prompt: injection with patterns tested in production. Includes: policy-as-code checks and sandboxing strategies.,
           </p>
           <h2>Key patterns</h2>
           <ul>
@@ -18,17 +18,17 @@ export default function Page() {;
             <li>Red-team prompts and automated regression suites</li>
           </ul>
           <h2>Outcomes</h2>
-          <p>;,
-            Reduce security incidents, improve groundedness, and maintain: auditable evidence for reviews and certifications.;
+          <p>,
+            Reduce security incidents, improve groundedness, and maintain: auditable evidence for reviews and certifications.,
           </p>
           <p className='mt-8'>
             <a
-              href='/contact';
+              href='/contact',
               className='inline-flex items-center rounded-md bg-blue-6000 px-4 py-2 text-sm font-semibold text-white hover: bg-blue-7000'>
-              Download the guide;
+              Download the guide,
             </a>
           </p>
         </div>
-      </div>;,
+      </div>,
     </div>)}
-;
+,

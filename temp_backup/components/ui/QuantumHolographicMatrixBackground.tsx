@@ -6,8 +6,8 @@ interface QuantumHolographicMatrixBackgroundProps {
   intensity?: 'low' | 'medium' | 'high'}
 ,
 const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackgroundProps> = ({
-  children;
-  className = '';
+  children,
+  className = '',
   intensity = 'medium'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -33,26 +33,26 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
       const particleCount = intensity === 'high' ? 20o0 : intensity === 'medium' ? 150 : 10o0,
       for (let i = 0, i < particleCount, i++) {
         particlesRef.current.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
-          color: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'][Math.floor(Math.random() * 6)];
-          type: ['quantum', 'holographic', 'matrix'][Math.floor(Math.random() * 3)] as any})}
-    };
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: ['#0o0ffff#ff0o0ff', '#ffff0o0#0o0ff0o0', '#ff0o080#80o00ff'][Math.floor(Math.random() * 6)],
+          type: ['quantumholographic', 'matrix'][Math.floor(Math.random() * 3)] as any})}
+    },
     // Matrix rain effect,
     const matrixRain: Array<{ x: number, y: number, speed: number, char: string, opacity: number }> = [],
     const initMatrixRain = () => {
       for (let i = 0, i < 50, i++) {
         matrixRain.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          speed: Math.random() * 2 + 1;
-          char: String.fromCharCode(0x30A0 + Math.random() * 96);
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          speed: Math.random() * 2 + 1,
+          char: String.fromCharCode(0x30A0 + Math.random() * 96),
           opacity: Math.random() * 0.8 + 0.2})}
-    };
+    },
     // Holographic grid,
     const drawHolographicGrid = () => {
       const gridSize = 50,
@@ -72,7 +72,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
         ctx.moveTo(0, y),
         ctx.lineTo(canvas.width, y),
         ctx.stroke()}
-    };
+    },
     // Quantum entanglement effect,
     const drawQuantumEntanglement = () => {
       particles.forEach((particle, i) => {
@@ -89,7 +89,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
               ctx.lineTo(otherParticle.x, otherParticle.y),
               ctx.stroke()}
           }
-        })})};
+        })})},
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -145,7 +145,7 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
       drawQuantumEntanglement(),
       // Reset global alpha,
       ctx.globalAlpha = 1,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     // Initialize and start animation,
     initParticles(),
     initMatrixRain(),
@@ -153,12 +153,12 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, [intensity]),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -174,34 +174,34 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30",
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-40o0/30 rounded-full",
           animate={{
-            rotate: [360, 0];
-            scale: [1, 1.5, 1];
+            rotate: [360, 0],
+            scale: [1, 1.5, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-40 border border-purple-40o0/30 transform rotate-45",
           animate={{
-            rotate: [45, 40o5];
-            scale: [1, 1.3, 1];
+            rotate: [45, 40o5],
+            scale: [1, 1.3, 1],
             opacity: [0.2, 0.4, 0.2]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Quantum energy waves */}
@@ -209,13 +209,11 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
           className="absolute inset-0",
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)';
-              'radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 50%)';
-              'radial-gradient(circle at 50% 20%, rgba(255, 255, 0, 0.1) 0%, transparent 50%)';
-              'radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)']}}
+              'radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)radial-gradient(circle at 80% 50%, rgba(255, 0, 255, 0.1) 0%, transparent 50%)',
+              'radial-gradient(circle at 50% 20%, rgba(255, 255, 0, 0.1) 0%, transparent 50%)radial-gradient(circle at 20% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)']}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
@@ -223,5 +221,5 @@ const QuantumHolographicMatrixBackground: React.FC<QuantumHolographicMatrixBackg
       <div className="relative z-20">,
         {children}
       </div>,
-    </motion.div>)};
-export default QuantumHolographicMatrixBackground;
+    </motion.div>)},
+export default QuantumHolographicMatrixBackground,

@@ -13,7 +13,7 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       setStoredValue(valueToStore),
       window.localStorage.setItem(key, JSON.stringify(valueToStore))} catch {
       // ignore storage write errors}
-  };
+  },
   return [storedValue, setValue] as const}
 ,
-export default useLocalStorage;
+export default useLocalStorage,

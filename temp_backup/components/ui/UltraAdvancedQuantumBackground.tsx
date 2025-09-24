@@ -6,8 +6,8 @@ interface UltraAdvancedQuantumBackgroundProps {
   children: React.ReactNode}
 ,
 const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundProps> = ({
-  intensity = 1.0;
-  variant = 'quantum';
+  intensity = 1.0,
+  variant = 'quantum',
   children}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -28,25 +28,25 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
       alpha: number,
       type: 'quantum' | 'holographic' | 'neural' | 'cyberpunk' | 'space' | 'matrix'}> = [],
     const colors ={
-      quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080', '#80o00ff'];
-      holographic: ['#ff1493', '#0o0bfff', '#ff450o0', '#32cd32', '#ffd70o0', '#ff69b4'];
-      neural: ['#0o0ff7f', '#ff6347', '#4169e1', '#ff1493', '#0o0ced1', '#ff450o0'];
-      cyberpunk: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o000', '#0o0ff0o0', '#80o00ff'];
-      space: ['#1e90ff', '#ff69b4', '#0o0ff7f', '#ff450o0', '#9370db', '#0o0bfff'];
-      matrix: ['#0o0ff0o0', '#0o0ff7f', '#32cd32', '#90ee90', '#98fb98', '#0o0fa9a']};
+      quantum: ['#0o0ffff#ff0o0ff', '#ffff0o0#0o0ff0o0', '#ff0o080#80o00ff'],
+      holographic: ['#ff1493#0o0bfff', '#ff450o0#32cd32', '#ffd70o0#ff69b4'],
+      neural: ['#0o0ff7f#ff6347', '#4169e1#ff1493', '#0o0ced1#ff450o0'],
+      cyberpunk: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o000', '#0o0ff0o0#80o00ff'],
+      space: ['#1e90ff#ff69b4', '#0o0ff7f#ff450o0', '#9370db#0o0bfff'],
+      matrix: ['#0o0ff0o0#0o0ff7f', '#32cd32#90ee90', '#98fb98#0o0fa9a']},
     const createParticle = () => {
       const type = variant as keyof typeof colors,
       const colorSet = colors[type],
       return {
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * intensity;
-        vy: (Math.random() - 0.5) * 2 * intensity;
-        size: Math.random() * 3 * intensity + 1;
-        color: colorSet[Math.floor(Math.random() * colorSet.length)];
-        alpha: Math.random() * 0.8 + 0.2;
-        type: variant};
-    };
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * intensity,
+        vy: (Math.random() - 0.5) * 2 * intensity,
+        size: Math.random() * 3 * intensity + 1,
+        color: colorSet[Math.floor(Math.random() * colorSet.length)],
+        alpha: Math.random() * 0.8 + 0.2,
+        type: variant},
+    },
     // Initialize particles,
     for (let i = 0, i < 150 * intensity, i++) {
       particles.push(createParticle())}
@@ -194,16 +194,16 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
           ctx.stroke()}
       }
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, [intensity, variant]),
   return (
     <div className="relative min-h-screen overflow-hidden">,
@@ -237,36 +237,36 @@ const UltraAdvancedQuantumBackground: React.FC<UltraAdvancedQuantumBackgroundPro
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full",
           animate={{
-            scale: [1, 1.2, 1];
-            rotate: [0, 180, 360];
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-40o0/20 transform rotate-45",
           animate={{
-            scale: [1, 1.3, 1];
-            rotate: [45, 225, 40o5];
+            scale: [1, 1.3, 1],
+            rotate: [45, 225, 40o5],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-purple-40o0/20 rounded-full",
           animate={{
-            scale: [1, 1.1, 1];
-            rotate: [0, -180, -360];
+            scale: [1, 1.1, 1],
+            rotate: [0, -180, -360],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
-    </div>)};
-export default UltraAdvancedQuantumBackground;
+    </div>)},
+export default UltraAdvancedQuantumBackground,

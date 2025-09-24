@@ -8,17 +8,17 @@ class Script {
     try {
       const winston = require('winston'),
       const logger = winston.createLogger({
-        level: 'info';
+        level: 'info',
         format: winston.format.combine(
-          winston.format.timestamp();
-          winston.format.errors({ stack: true });
-          winston.format.json());
-        defaultMeta: { service: 'automation-script' };
+          winston.format.timestamp(),
+          winston.format.errors({ stack: true }),
+          winston.format.json()),
+        defaultMeta: { service: 'automation-script' },
         transports: [
           new winston.transports.File({
-            filename: 'logs/error.log';
-            level: 'error'});
-          new winston.transports.File({ filename: 'logs/combined.log' });
+            filename: 'logs/error.log',
+            level: 'error'}),
+          new winston.transports.File({ filename: 'logs/combined.log' }),
         ]}),
       if (process.env.NODE_ENV !== 'production') {
         logger.add(

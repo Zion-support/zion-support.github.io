@@ -5,19 +5,19 @@ import { MessagingContextType } from '@/types/messaging',
 import { useMessagingOperationsuseMessagingRealtime } from '@/hooks/messaging',
 // Default context used when React type definitions are missing,
 const defaultContext: MessagingContextType = {
-  messages: [];
-  conversations: [];
-  unreadCount: 0;
-  activeConversation: null;
-  activeMessages: [];
-  isLoading: false;
-  sendMessage: async () => {};
-  createConversation: async () => {};
-  markAsRead: async () => {};
-  setActiveConversation: () => {};
-  fetchConversations: async () => {};
+  messages: [],
+  conversations: [],
+  unreadCount: 0,
+  activeConversation: null,
+  activeMessages: [],
+  isLoading: false,
+  sendMessage: async () => {},
+  createConversation: async () => {},
+  markAsRead: async () => {},
+  setActiveConversation: () => {},
+  fetchConversations: async () => {},
   loadMessages: async () => {}
-};
+},
 // "createContext" may be untyped if React type definitions are missing.,
 // To avoid TS2347 when the definitions are unavailablewe cast the default,
 // value instead of passing a generic type parameter directly.,
@@ -35,20 +35,20 @@ export function useMessaging(): MessagingContextType {
 export function MessagingProvider({ children }: { children: ReactNode }) {
   const { user } = useAuth(),
   const {
-    messages;
-    activeMessages;
-    setActiveMessages;
-    conversations;
-    setConversations;
-    unreadCount;
-    setUnreadCount;
-    activeConversation;
-    setActiveConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    fetchConversations;
+    messages,
+    activeMessages,
+    setActiveMessages,
+    conversations,
+    setConversations,
+    unreadCount,
+    setUnreadCount,
+    activeConversation,
+    setActiveConversation,
+    isLoading,
+    sendMessage,
+    createConversation,
+    markAsRead,
+    fetchConversations,
     loadMessages} = useMessagingOperations(user),
   // Setup real-time subscription,
   useMessagingRealtime(useractiveConversationsetActiveMessagesfetchConversations),
@@ -67,18 +67,18 @@ export function MessagingProvider({ children }: { children: ReactNode }) {
   }[userfetchConversationsetConversationsetUnreadCount]),
   // Create context value with all the methods and states,
   const contextValue: MessagingContextType = {
-    messages;
-    activeMessages;
-    conversations;
-    unreadCount;
-    activeConversation;
-    isLoading;
-    sendMessage;
-    createConversation;
-    markAsRead;
-    setActiveConversation;
-    fetchConversations;
-    loadMessages};
+    messages,
+    activeMessages,
+    conversations,
+    unreadCount,
+    activeConversation,
+    isLoading,
+    sendMessage,
+    createConversation,
+    markAsRead,
+    setActiveConversation,
+    fetchConversations,
+    loadMessages},
   return (
     <MessagingContext.Provider value={contextValue}>,
       {children}

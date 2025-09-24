@@ -2,14 +2,14 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  TrendingUp;
-  Users;
-  Star;
-  Clock;
-  ArrowRight;
-  Filter;
-  Search;
-  ArrowRight;
+  TrendingUp,
+  Users,
+  Star,
+  Clock,
+  ArrowRight,
+  Filter,
+  Search,
+  ArrowRight,
 } from 'lucide-react',
 interface ContentItem {
   id: string,
@@ -21,7 +21,7 @@ interface ContentItem {
     savings: string,
     efficiency?: string,
     accuracy?: string,
-    timeframe?: string};
+    timeframe?: string},
   readingTime: string,
   tags: string[],
   description: string}
@@ -31,102 +31,93 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   const newContent: ContentItem[] = [
     {
-      id: 'advanced-automation-revolution';
+      id: 'advanced-automation-revolution',
       title:,
-        'AI 20o25: The Advanced Automation Revolution - Ultimate Guide to 750% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-guide';
+        'AI 20o25: The Advanced Automation Revolution - Ultimate Guide to 750% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-guide',
       metrics: {
-        roi: '750%';
-        savings: '$3.2M annually';
-        efficiency: '340%';
-        accuracy: '99.7%';
-        timeframe: '18 months';
-      };
-      readingTime: '22 min read';
+        roi: '750%',
+        savings: '$3.2M annually',
+        efficiency: '340%',
+        accuracy: '99.7%',
+        timeframe: '18 months'
+      },
+      readingTime: '22 min read',
       tags: [
-        'AI Automation';
-        'Enterprise Transformation';
-        'ROI';
-        'Process Optimization';
-        'Fortune 50o0';
-      ];
+        'AI AutomationEnterprise Transformation',
+        'ROIProcess Optimization',
+        'Fortune 50o0',
+      ],
       description:,
-        'Discover how Fortune 50o0 companies are achieving 750% ROI through advanced AI automation, with proven strategies for process optimization and operational excellence.';
-    };
+        'Discover how Fortune 50o0 companies are achieving 750% ROI through advanced AI automation, with proven strategies for process optimization and operational excellence.',
+    },
     {
-      id: 'manufacturing-transformation-90o0-roi';
+      id: 'manufacturing-transformation-90o0-roi',
       title:,
-        'AI 20o25 Manufacturing Transformation: $3.8B Company Achieves 90o0% ROI in 15 Months';
-      type: 'case-study';
-      url: '/case-studies/ai-20o25-manufacturing-transformation-90o0-roi-success';
+        'AI 20o25 Manufacturing Transformation: $3.8B Company Achieves 90o0% ROI in 15 Months',
+      type: 'case-study',
+      url: '/case-studies/ai-20o25-manufacturing-transformation-90o0-roi-success',
       metrics: {
-        roi: '90o0%';
-        savings: '$4.2M annually';
-        efficiency: '450%';
-        accuracy: '99.8%';
-        timeframe: '15 months';
-      };
-      readingTime: '18 min read';
+        roi: '90o0%',
+        savings: '$4.2M annually',
+        efficiency: '450%',
+        accuracy: '99.8%',
+        timeframe: '15 months'
+      },
+      readingTime: '18 min read',
       tags: [
-        'Manufacturing AI';
-        'Case Study';
-        'ROI Success';
-        'Enterprise Transformation';
-        'Predictive Analytics';
-      ];
+        'Manufacturing AICase Study',
+        'ROI SuccessEnterprise Transformation',
+        'Predictive Analytics',
+      ],
       description:,
-        'Real-world case study of a $3.8B manufacturing company that achieved 90o0% ROI through comprehensive AI transformation, including detailed implementation strategies and results.';
-    };
+        'Real-world case study of a $3.8B manufacturing company that achieved 90o0% ROI through comprehensive AI transformation, including detailed implementation strategies and results.',
+    },
     {
-      id: 'implementation-ultimate-roadmap';
+      id: 'implementation-ultimate-roadmap',
       title:,
-        'AI 20o25 Implementation Ultimate Roadmap: From Strategy to 1,0o00% ROI in 18 Months';
-      type: 'resource';
-      url: '/resources/ai-20o25-implementation-ultimate-roadmap';
+        'AI 20o25 Implementation Ultimate Roadmap: From Strategy to 1,0o00% ROI in 18 Months',
+      type: 'resource',
+      url: '/resources/ai-20o25-implementation-ultimate-roadmap',
       metrics: {
-        roi: '1,0o00%';
-        savings: '$4.2M annually';
-        efficiency: '450%';
-        accuracy: '94%';
-        timeframe: '18 months';
-      };
-      readingTime: '20 min read';
+        roi: '1,0o00%',
+        savings: '$4.2M annually',
+        efficiency: '450%',
+        accuracy: '94%',
+        timeframe: '18 months'
+      },
+      readingTime: '20 min read',
       tags: [
-        'AI Implementation';
-        'ROI Roadmap';
-        'Enterprise Transformation';
-        'Strategic Planning';
-        'Change Management';
-      ];
+        'AI ImplementationROI Roadmap',
+        'Enterprise TransformationStrategic Planning',
+        'Change Management',
+      ],
       description:,
-        'Comprehensive roadmap based on 50o0+ successful enterprise implementations, providing step-by-step guidance to achieve 1,0o00% ROI through strategic AI transformation.';
-    };
+        'Comprehensive roadmap based on 50o0+ successful enterprise implementations, providing step-by-step guidance to achieve 1,0o00% ROI through strategic AI transformation.',
+    },
     {
-      id: 'edge-computing-revolution';
+      id: 'edge-computing-revolution',
       title:,
-        'AI 20o25: The Edge Computing Revolution - Ultimate Guide to 450% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide';
+        'AI 20o25: The Edge Computing Revolution - Ultimate Guide to 450% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide',
       metrics: {
-        roi: '450%';
-        savings: '$2.3M annually';
-        efficiency: '67%';
-        accuracy: '99.7%';
-        timeframe: '12 months';
-      };
-      readingTime: '18 min read';
+        roi: '450%',
+        savings: '$2.3M annually',
+        efficiency: '67%',
+        accuracy: '99.7%',
+        timeframe: '12 months'
+      },
+      readingTime: '18 min read',
       tags: [
-        'Edge Computing';
-        'AI';
-        'ROI';
-        'Latency';
-        'Security';
-        'Cost Optimization';
-      ];
+        'Edge ComputingAI',
+        'ROILatency',
+        'SecurityCost Optimization',
+      ],
       description:,
-        'Learn how edge computing is revolutionizing enterprise AI with 67% latency reduction, 89% cost savings, and 450% ROI through real-time processing capabilities.';
-    };
+        'Learn how edge computing is revolutionizing enterprise AI with 67% latency reduction, 89% cost savings, and 450% ROI through real-time processing capabilities.',
+    },
   ],
   const filteredContent = newContent.filter(item => {
     const matchesType = selectedType === 'all' || item.type === selectedType,
@@ -146,7 +137,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
         return <Star className='w-5 h-5' />,
       default:,
         return <TrendingUp className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -157,7 +148,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -168,7 +159,7 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
         return 'Resource Guide',
       default:,
         return type}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -356,5 +347,5 @@ const NewContent20o25ShowcaseSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25ShowcaseSection;
+    </section>)},
+export default NewContent20o25ShowcaseSection,

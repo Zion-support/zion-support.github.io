@@ -1,7 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  MessageCircle, X, Send, Bot, User, Phone, Mail;
+  MessageCircle, X, Send, Bot, User, Phone, Mail,
   Clock, CheckCircle, AlertCircle, Minimize2, Maximize2} from 'lucide-react',
 interface ChatMessage {
   id: string,
@@ -18,9 +18,9 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
   const [isMinimized, setIsMinimized] = useState(false),
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
-      id: '1';
-      type: 'bot';
-      content: 'Hello! I\'m your AI assistant from Zion Tech Group. How can I help you today?';
+      id: '1',
+      type: 'bot',
+      content: 'Hello! I\'m your AI assistant from Zion Tech Group. How can I help you today?',
       timestamp: new Date()}
   ]),
   const [inputValue, setInputValue] = useState(''),
@@ -28,7 +28,7 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
   useEffect(() => {
     scrollToBottom()}, [messages]),
   useEffect(() => {
@@ -38,28 +38,28 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
   const handleSendMessage = async () => {
     if (!inputValue.trim()) return,
     const userMessage: ChatMessage ={
-      id: Date.now().toString();
-      type: 'user';
-      content: inputValue;
-      timestamp: new Date();
-      status: 'sending'};
+      id: Date.now().toString(),
+      type: 'user',
+      content: inputValue,
+      timestamp: new Date(),
+      status: 'sending'},
     setMessages(prev => [...prev, userMessage]),
     setInputValue(''),
     setIsTyping(true),
     // Simulate AI response,
     setTimeout(() => {
       const botResponse: ChatMessage ={
-        id: (Date.now() + 1).toString();
-        type: 'bot';
-        content: generateAIResponse(inputValue);
-        timestamp: new Date()};
+        id: (Date.now() + 1).toString(),
+        type: 'bot',
+        content: generateAIResponse(inputValue),
+        timestamp: new Date()},
       setMessages(prev => [
         ...prev.map(msg =>,
           msg.id === userMessage.id,
             ? { ...msg, status: 'sent' as const }
-            : msg);
+            : msg),
         botResponse]),
-      setIsTyping(false)}, 10o00 + Math.random() * 20o00)};
+      setIsTyping(false)}, 10o00 + Math.random() * 20o00)},
   const generateAIResponse = (userInput: string): string => {
     const input = userInput.toLowerCase(),
     if (input.includes('pricing') || input.includes('cost')) {
@@ -70,27 +70,23 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
       return 'You can reach our team at kleber@ziontechgroup.com or call us at +1-30o2-464-0950. We\'re available 24/7 for enterprise clients. How can I assist you further?'} else if (input.includes('demo') || input.includes('trial')) {
       return 'Absolutely! We offer free demos and trials of our services. I can schedule a personalized demo for you. What service would you like to see in action?'} else {
       const responses = [
-        'That\'s a great question! Let me connect you with our expert team.';
-        'I\'d be happy to help with that. Could you provide more details?';
-        'That\'s exactly what we specialize in! Let me show you our solutions.';
-        'Great inquiry! We have several options that might be perfect for you.';
+        'That\'s a great question! Let me connect you with our expert team.I\'d be happy to help with that. Could you provide more details?',
+        'That\'s exactly what we specialize in! Let me show you our solutions.Great inquiry! We have several options that might be perfect for you.',
         'I\'m here to help! Let me get you the information you need.'],
       return responses[Math.floor(Math.random() * responses.length)]}
-  };
+  },
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       handleSendMessage()}
-  };
+  },
   const quickReplies = [
-    'Tell me about AI services';
-    'What are your pricing options?';
-    'Show me quantum computing solutions';
-    'I need space technology info';
+    'Tell me about AI servicesWhat are your pricing options?',
+    'Show me quantum computing solutionsI need space technology info',
     'Schedule a demo'],
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
-    setTimeout(() => handleSendMessage(), 10o0)};
+    setTimeout(() => handleSendMessage(), 10o0)},
   return (
     <>,
       {/* Chat Toggle Button */}
@@ -244,5 +240,5 @@ const RealTimeChatSupport: React.FC<ChatSupportProps> = ({ className = '' }) => 
               </>)}
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default RealTimeChatSupport;
+    </>)},
+export default RealTimeChatSupport,

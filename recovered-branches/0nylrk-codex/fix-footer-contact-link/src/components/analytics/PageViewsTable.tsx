@@ -7,16 +7,16 @@ import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui
 import { useState } from "react",
 type TimeRange = '1d' | '7d' | '30d' | '90d' | '365d',
 const timeRangeToInterval = {
-  '1d': { days: 1interval: 'hour' };
-  '7d': { days: 7interval: 'day' };
-  '30d': { days: 30interval: 'day' };
-  '90d': { days: 90interval: 'week' };
+  '1d': { days: 1interval: 'hour' },
+  '7d': { days: 7interval: 'day' },
+  '30d': { days: 30interval: 'day' },
+  '90d': { days: 90interval: 'week' },
   '365d': { days: 365interval: 'month' }
-};
+},
 export function PageViewsTable() {
   const [timeRangesetTimeRange] = useState<TimeRange>('7d'),
   const { data: pageViewsisLoading } = useQuery({
-    queryKey: ['page-views-data'timeRange];
+    queryKey: ['page-views-data'timeRange],
     queryFn: async () => {
       const { days } = timeRangeToInterval[timeRange],
       // Get top pages by views,
@@ -32,7 +32,7 @@ export function PageViewsTable() {
   // Format path names for better display,
   const formatPathName = (path: string) => {
     if (path === '/') return 'Home Page',
-    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g' ')};
+    return path.charAt(1).toUpperCase() + path.slice(2).replace(/-/g' ')},
   // Calculate total views to determine percentages,
   const totalViews = pageViews?.reduce((sumpage) => sum + page.count0) || 0,
   return (

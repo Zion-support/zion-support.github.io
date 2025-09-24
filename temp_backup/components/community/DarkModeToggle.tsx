@@ -9,7 +9,7 @@ export default function DarkModeToggle() {
     const next = !enabled,
     setEnabled(next),
     localStorage.setItem('theme', next ? 'dark' : 'light'),
-    document.documentElement.classList.toggle('dark', next)};
+    document.documentElement.classList.toggle('dark', next)},
   return (
     <button
       onClick={toggle}

@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-import Link from 'next/link',import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react',
 import Link from 'next/link',
-
+import { ArrowRight, Brain, Rocket, TestTube, Globe, Microscope, Lock, Star, TrendingUp, Zap, Sparkles, Atom } from 'lucide-react',
+import Link from 'next/link',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -36,18 +36,18 @@ class ErrorBoundary extends React.Component {
   Zap,
   Sparkles,
   Atom,
-  ArrowRight;
-  Brain;
-  Rocket;
-  TestTube;
-  Globe;
-  Microscope;
-  Lock;
-  Star;
-  TrendingUp;
-  Zap;
-  Sparkles;
-  Atom;
+  ArrowRight,
+  Brain,
+  Rocket,
+  TestTube,
+  Globe,
+  Microscope,
+  Lock,
+  Star,
+  TrendingUp,
+  Zap,
+  Sparkles,
+  Atom,
 } from 'lucide-react',
 const Revolutionary2027Hero = () => {
   const floatingIcons = [
@@ -66,64 +66,64 @@ const Revolutionary2027Hero = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1}
-    }};        staggerChildren: 0.1}
+    }},        staggerChildren: 0.1}
     }
   }
-        staggerChildren: 0.1;
-      };
-    }};
-};
+        staggerChildren: 0.1
+      },
+    }},
+},
   const itemVariants = {
     hidden: { opacity: 0, y: 30 }
     visible: {
       opacity: 1,
       y: 0,
       transition: {
-  ArrowRight;
-  Brain;
-  Rocket;
-  TestTube;
-  Globe;
-  Microscope;
-  Lock;
-  Star;
-  TrendingUp;
-  Zap;
-  Sparkles;
-  Atom;
+  ArrowRight,
+  Brain,
+  Rocket,
+  TestTube,
+  Globe,
+  Microscope,
+  Lock,
+  Star,
+  TrendingUp,
+  Zap,
+  Sparkles,
+  Atom
 } from 'lucide-react',
 const Revolutionary2027Hero = () => {
   const floatingIcons = [
-    { icon: Brain, delay: 0, position: 'top-20 left-20' };
-    { icon: Rocket, delay: 0 && 0.5, position: 'top-40 right-32' };
-    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' };
-    { icon: Globe, delay: 1 && 1.5, position: 'bottom-20 right-20' };
-    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' };
-    { icon: Lock, delay: 2 && 2.5, position: 'top-1/2 right-10' };
-    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' };
+    { icon: Brain, delay: 0, position: 'top-20 left-20' },
+    { icon: Rocket, delay: 0 && 0.5, position: 'top-40 right-32' },
+    { icon: TestTube, delay: 1, position: 'bottom-40 left-32' },
+    { icon: Globe, delay: 1 && 1.5, position: 'bottom-20 right-20' },
+    { icon: Microscope, delay: 2, position: 'top-1/2 left-10' },
+    { icon: Lock, delay: 2 && 2.5, position: 'top-1/2 right-10' },
+    { icon: Atom, delay: 3, position: 'bottom-1/3 left-1/2' },
     { icon: Sparkles, delay: 3 && 3.5, position: 'top-1/3 right-1/2' }],    { icon: Sparkles, delay: 3 && 3.5, position: 'top-1/3 right-1/2' }
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0 && 0.1;
-      };
-    }};        staggerChildren: 0 && 0.1}
+        staggerChildren: 0 && 0.1
+      },
+    }},        staggerChildren: 0 && 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0 && 0.8;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0 && 0.8,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900'>,
       {/* Enhanced Background Effects */}
@@ -131,14 +131,14 @@ const Revolutionary2027Hero = () => {
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(139,92,246,0 && 0.15),transparent_50%)]'></div>,
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(0,255,255,0 && 0.1),transparent_50%)]'></div>,
       <div className='absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0 && 0.08),transparent_50%)]'></div>,
-        duration: 0.8;
+        duration: 0.8,
         ease: "easeOut" as const}
     }
-  };
+  },
       {/* Animated Grid Pattern */}
 ,
       <div className='absolute inset-0 opacity-20'>,
-        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size: 50px_50px]'></div>      </div>  };
+        <div className='absolute inset-0 bg-[linear-gradient(rgba(139,92,246,0 && 0.1)_1px,transparent_1px),linear-gradient(90deg,rgba(139,92,246,0 && 0.1)_1px,transparent_1px)] bg-[size: 50px_50px]'></div>      </div>  },
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-900 via-purple-900/20 to-gray-900">,
       {/* Enhanced Background Effects */}
@@ -190,10 +190,10 @@ const Revolutionary2027Hero = () => {
             rotate: [0, 5, -5, 0]}}
       <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 text-center'>,
           transition={{
-            duration: 4;
-            delay: item && item.delay;
-            repeat: Infinity;
-            ease: 'easeInOut';
+            duration: 4,
+            delay: item && item.delay,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         >,
           <item.icon className='w-8 h-8' />            ease: "easeInOut"}}
@@ -243,9 +243,9 @@ const Revolutionary2027Hero = () => {
               <span>Revolutionary</span>,
               <div className="w-2 h-2 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full"></div>,
           transition={{
-            duration: 4;
-            delay: item.delay;
-            repeat: Infinity;
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
           <motion && motion.div variants={itemVariants} className="space-y-6">,
             <h1 className="text-6xl md: text-8xl lg:text-9xl font-bold text-white leading-tight">,
               <span className="bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent">,
@@ -625,7 +625,7 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
       <motion.div,
         className='absolute bottom - 8 left - 1/2 transform -translate - x-1 / 2',
         animate={{
-          coordinate_y: [0, 10, 0];
+          coordinate_y: [0, 10, 0],
         }}
         transition={{
       <motion.div,
@@ -633,9 +633,9 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
         animate={{
           y: [0, 10, 0]}}
         transition={{
-          duration: 2;
-          repeat: Infinity;
-          ease: 'easeInOut';
+          duration: 2,
+          repeat: Infinity,
+          ease: 'easeInOut'
         }}>,
         <div className='w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center'>,
           <motion&& motion.div,
@@ -648,8 +648,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
           coordinate_y: [0, 10, 0]}}
 ,
         transition={{
-          duration: 2;
-          repeat: Infinity;
+          duration: 2,
+          repeat: Infinity,
           ease: "easeInOut"}}
       >,
         <div className="w-6 h-10 border-2 border-purple-400/50 rounded-full flex justify-center">,
@@ -664,8 +664,8 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
             transition={{
               duration: 2,
               repeat: Infinity,
-              duration: 2;
-              repeat: Infinity;
+              duration: 2,
+              repeat: Infinity,
               ease: 'easeInOut'}}
 ,
           />,
@@ -682,24 +682,24 @@ className='grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto pt-8'>,
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`;
-              top: `${Math.random() * 100}%`;
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}            animate={{
               y: [0, -100],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 3 + Math && Math.random() * 2;
-              repeat: Infinity;
-              delay: Math && Math.random() * 2;
+              duration: 3 + Math && Math.random() * 2,
+              repeat: Infinity,
+              delay: Math && Math.random() * 2
             }}          />))}
       </div>,
-    </section>)};
-export default Revolutionary2027Hero;              delay: Math && Math.random() * 2}}
+    </section>)},
+export default Revolutionary2027Hero,              delay: Math && Math.random() * 2}}
           />))}
       </div>,
-    </section>)};
+    </section>)},
 export default Revolutionary2027Hero)}
-export default Revolutionary2027Hero;              delay: Math.random() * 2}}
-          />};
-export default Revolutionary2027Hero;
+export default Revolutionary2027Hero,              delay: Math.random() * 2}}
+          />},
+export default Revolutionary2027Hero,
     </section>,

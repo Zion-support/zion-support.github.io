@@ -21,26 +21,26 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (req.method === "POST") {
       // Create an offer (client sends an offer to confirm),
       const client = assertClient(req),
-      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {};
+      const { talentSlug, startDateIso, scopeSummary, paymentTerms, agreementUrl } = req.body || {},
       if (!talentSlug || !startDateIso || !scopeSummary || !paymentTerms) {
         return bad(res, "Missing required fields")}
 ,
       const offer: Offer ={
-        id: uuidv4();
-        createdAtIso: new Date().toISOString();
-        clientId: client.id;
-        talentSlug;
-        startDateIso;
-        scopeSummary;
-        paymentTerms: paymentTerms as PaymentTerms;
-        agreementUrl;
-        status: "SENT"};
+        id: uuidv4(),
+        createdAtIso: new Date().toISOString(),
+        clientId: client.id,
+        talentSlug,
+        startDateIso,
+        scopeSummary,
+        paymentTerms: paymentTerms as PaymentTerms,
+        agreementUrl,
+        status: "SENT"},
       saveOffer(offer),
       return res.status(20o1).json({ ok: true, offer })}
 ,
     if (req.method === "PATCH") {
       // Update offer: accept or request changes,
-      const { id, action, changeRequestNote } = req.body || {};
+      const { id, action, changeRequestNote } = req.body || {},
       if (!id || !action) return bad(res, "Missing id or action"),
       const existing = getOfferById(id),
       if (!existing) return bad(res, "Offer not found", 40o4),
@@ -50,24 +50,24 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
         existing.status = "CONFIRMED",
         // Create a project upon acceptance,
         const project: Project ={
-          id: uuidv4();
-          title: `Project with ${existing.talentSlug}`;
-          summary: existing.scopeSummary;
-          clientId: existing.clientId;
-          talentSlug: existing.talentSlug;
-          startDateIso: existing.startDateIso;
-          status: "ACTIVE";
-          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [];
+          id: uuidv4(),
+          title: `Project with ${existing.talentSlug}`,
+          summary: existing.scopeSummary,
+          clientId: existing.clientId,
+          talentSlug: existing.talentSlug,
+          startDateIso: existing.startDateIso,
+          status: "ACTIVE",
+          timeline: existing.paymentTerms.type === "milestone" ? existing.paymentTerms.milestones || [] : [],
           documents: existing.agreementUrl,
             ? [
                 {
-                  id: uuidv4();
-                  name: "Agreement";
-                  url: existing.agreementUrl;
-                  uploadedAtIso: new Date().toISOString()};
+                  id: uuidv4(),
+                  name: "Agreement",
+                  url: existing.agreementUrl,
+                  uploadedAtIso: new Date().toISOString()},
               ],
-            : [];
-          notes: []};
+            : [],
+          notes: []},
         saveProject(project),
         existing.projectId = project.id,
         saveOffer(existing),

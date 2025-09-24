@@ -9,13 +9,13 @@ interface MilestoneCreatorProps {
   projectType?: string}
 ,
 export function MilestoneCreator({
-  onSubmit;
-  isSubmitting;
-  onCancel;
-  projectScope;
-  projectStartDate;
-  projectEndDate;
-  projectType;
+  onSubmit,
+  isSubmitting,
+  onCancel,
+  projectScope,
+  projectStartDate,
+  projectEndDate,
+  projectType,
 }: MilestoneCreatorProps) {
   return (
     <AddMilestoneForm

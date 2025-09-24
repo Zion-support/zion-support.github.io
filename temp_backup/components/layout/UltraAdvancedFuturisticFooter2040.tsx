@@ -1,115 +1,115 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Globe;
-  Mail;
-  Phone;
-  MapPin;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  ArrowRight;
-  Star;
-  Sparkles;
-  Infinity;
-  Zap;
-  ShieldCheck;
-  TrendingUp;
-  Award;
-  Eye;
-  Car;
-  TestTube;
-  Globe as PlanetIcon;
-  Lock;
-  Palette;
-  Heart;
-  Truck;
-  Cpu;
-  Users;
-  Building;
-  Target;
-  FileText;
-  Video;
-  Handshake;
-  BookOpen;
-  Code;
-  BarChart3;
-  Lightbulb;
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Globe,
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Infinity,
+  Zap,
+  ShieldCheck,
+  TrendingUp,
+  Award,
+  Eye,
+  Car,
+  TestTube,
+  Globe as PlanetIcon,
+  Lock,
+  Palette,
+  Heart,
+  Truck,
+  Cpu,
+  Users,
+  Building,
+  Target,
+  FileText,
+  Video,
+  Handshake,
+  BookOpen,
+  Code,
+  BarChart3,
+  Lightbulb,
   Settings} from 'lucide-react',
 const UltraAdvancedFuturisticFooter20o40: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: "Revolutionary Services";
+      title: "Revolutionary Services",
       links: [
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml", icon: Brain };
-        { name: "Quantum Computing", href: "/services?category=quantum", icon: Atom };
-        { name: "Space Technology", href: "/services?category=space-tech", icon: Rocket };
-        { name: "Cybersecurity", href: "/services?category=cybersecurity", icon: Shield };
-        { name: "Emerging Tech", href: "/services?category=emerging-tech", icon: Lightbulb };
-        { name: "Holographic & VR", href: "/services?category=holographic", icon: Eye };
-        { name: "Autonomous Systems", href: "/services?category=autonomous", icon: Car };
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml", icon: Brain },
+        { name: "Quantum Computing", href: "/services?category=quantum", icon: Atom },
+        { name: "Space Technology", href: "/services?category=space-tech", icon: Rocket },
+        { name: "Cybersecurity", href: "/services?category=cybersecurity", icon: Shield },
+        { name: "Emerging Tech", href: "/services?category=emerging-tech", icon: Lightbulb },
+        { name: "Holographic & VR", href: "/services?category=holographic", icon: Eye },
+        { name: "Autonomous Systems", href: "/services?category=autonomous", icon: Car },
         { name: "Synthetic Biology", href: "/services?category=synthetic-biology", icon: TestTube }
-      ]};
+      ]},
     {
-      title: "Industry Solutions";
+      title: "Industry Solutions",
       links: [
-        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart };
-        { name: "Finance", href: "/solutions/finance", icon: BarChart3 };
-        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Settings };
-        { name: "Logistics", href: "/solutions/logistics", icon: Truck };
-        { name: "Education", href: "/solutions/education", icon: BookOpen };
-        { name: "Government", href: "/solutions/government", icon: Building };
-        { name: "Retail", href: "/solutions/retail", icon: Target };
+        { name: "Healthcare", href: "/solutions/healthcare", icon: Heart },
+        { name: "Finance", href: "/solutions/finance", icon: BarChart3 },
+        { name: "Manufacturing", href: "/solutions/manufacturing", icon: Settings },
+        { name: "Logistics", href: "/solutions/logistics", icon: Truck },
+        { name: "Education", href: "/solutions/education", icon: BookOpen },
+        { name: "Government", href: "/solutions/government", icon: Building },
+        { name: "Retail", href: "/solutions/retail", icon: Target },
         { name: "Energy", href: "/solutions/energy", icon: Zap }
-      ]};
+      ]},
     {
-      title: "Resources & Support";
+      title: "Resources & Support",
       links: [
-        { name: "Documentation", href: "/docs", icon: FileText };
-        { name: "API Reference", href: "/api", icon: Code };
-        { name: "Case Studies", href: "/case-studies", icon: BarChart3 };
-        { name: "White Papers", href: "/white-papers", icon: FileText };
-        { name: "Webinars", href: "/webinars", icon: Video };
-        { name: "Training", href: "/training", icon: Users };
-        { name: "Support", href: "/support", icon: ShieldCheck };
+        { name: "Documentation", href: "/docs", icon: FileText },
+        { name: "API Reference", href: "/api", icon: Code },
+        { name: "Case Studies", href: "/case-studies", icon: BarChart3 },
+        { name: "White Papers", href: "/white-papers", icon: FileText },
+        { name: "Webinars", href: "/webinars", icon: Video },
+        { name: "Training", href: "/training", icon: Users },
+        { name: "Support", href: "/support", icon: ShieldCheck },
         { name: "Status", href: "/status", icon: TrendingUp }
-      ]};
+      ]},
     {
-      title: "Company";
+      title: "Company",
       links: [
-        { name: "About Us", href: "/about", icon: Building };
-        { name: "Leadership", href: "/leadership", icon: Users };
-        { name: "Careers", href: "/careers", icon: Target };
-        { name: "News", href: "/news", icon: FileText };
-        { name: "Partners", href: "/partners", icon: Handshake };
-        { name: "Investors", href: "/investors", icon: TrendingUp };
-        { name: "Contact", href: "/contact", icon: Mail };
+        { name: "About Us", href: "/about", icon: Building },
+        { name: "Leadership", href: "/leadership", icon: Users },
+        { name: "Careers", href: "/careers", icon: Target },
+        { name: "News", href: "/news", icon: FileText },
+        { name: "Partners", href: "/partners", icon: Handshake },
+        { name: "Investors", href: "/investors", icon: TrendingUp },
+        { name: "Contact", href: "/contact", icon: Mail },
         { name: "Locations", href: "/locations", icon: MapPin }
       ]}
   ],
   const socialLinks = [
-    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-40o0" };
-    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-40o0" };
-    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-40o0" };
+    { name: "LinkedIn", href: "https://linkedin.com/company/ziontechgroup", icon: Linkedin, color: "hover:text-blue-40o0" },
+    { name: "Twitter", href: "https://twitter.com/ziontechgroup", icon: Twitter, color: "hover:text-blue-40o0" },
+    { name: "GitHub", href: "https://github.com/ziontechgroup", icon: Github, color: "hover:text-gray-40o0" },
     { name: "YouTube", href: "https://youtube.com/@ziontechgroup", icon: Youtube, color: "hover:text-red-40o0" }
   ],
   const contactInfo ={
-    phone: "+1 30o2 464 0950";
-    email: "kleber@ziontechgroup.com";
-    address: "364 E Main St STE 10o08, Middletown, DE 19709"};
+    phone: "+1 30o2 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 10o08, Middletown, DE 19709"},
   const certifications = [
-    "SOC 2 Type II Certified";
-    "ISO 270o01 Compliant";
-    "GDPR Compliant";
-    "HIPAA Compliant";
-    "NIST Framework";
+    "SOC 2 Type II Certified",
+    "ISO 270o01 Compliant",
+    "GDPR Compliant",
+    "HIPAA Compliant",
+    "NIST Framework",
     "Zero Trust Architecture"],
   return (
     <footer className="relative bg-black/90 backdrop-blur-xl border-t border-cyan-40o0/20 overflow-hidden">,
@@ -293,17 +293,17 @@ const UltraAdvancedFuturisticFooter20o40: React.FC = () => {
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0/30 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
               animationDelay: `${Math.random() * 3}s`}}
             animate={{
-              scale: [0, 1, 0];
+              scale: [0, 1, 0],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 4;
-              repeat: -1;
+              duration: 4,
+              repeat: -1,
               delay: Math.random() * 3}}
            />))}
       </div>,
-    </footer>)};
-export default UltraAdvancedFuturisticFooter20o40;
+    </footer>)},
+export default UltraAdvancedFuturisticFooter20o40,

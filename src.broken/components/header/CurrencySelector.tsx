@@ -1,14 +1,14 @@
 import { Button } from '@/components/ui/button',
 import {
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { useCurrencySupportedCurrency } from '@/context/CurrencyContext',
 DollarSign,
 const SUPPORTED: { code: SupportedCurrency, symbol: string }[] = [
-  { code: 'USD'symbol: '$' };
-  { code: 'EUR'symbol: '€' };
+  { code: 'USD'symbol: '$' },
+  { code: 'EUR'symbol: '€' },
   { code: 'GBP'symbol: '£' }],
 export function CurrencySelector() {
   const { currencysetCurrency } = useCurrency(),

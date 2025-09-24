@@ -1,61 +1,61 @@
 import React, {
-  useState;
-  useEffect;
-  useCallback;
-  useMemo;
-  useRef;
+  useState,
+  useEffect,
+  useCallback,
+  useMemo,
+  useRef,
 } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  Search;
-  ChevronDown;
-  Phone;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  Home;
-  Briefcase;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cloud;
-  Target;
-  Building;
-  Users;
-  BookOpen;
-  FileText;
-  Video;
-  Code;
-  Zap;
-  Star;
-  Sparkles;
-  Globe;
-  Cpu;
-  Database;
-  Eye;
-  Heart;
-  Infinity;
-  TrendingUp;
-  Palette;
-  Layers;
-  Grid;
-  BarChart3;
-  Settings;
-  HelpCircle;
-  MessageCircle;
-  Calendar;
-  Award;
-  Lightbulb;
-  Play;
-  DollarSign;
-  GraduationCap;
-  Mail;
-  MapPin;
-  ShoppingBag;
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Phone,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  Home,
+  Briefcase,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cloud,
+  Target,
+  Building,
+  Users,
+  BookOpen,
+  FileText,
+  Video,
+  Code,
+  Zap,
+  Star,
+  Sparkles,
+  Globe,
+  Cpu,
+  Database,
+  Eye,
+  Heart,
+  Infinity,
+  TrendingUp,
+  Palette,
+  Layers,
+  Grid,
+  BarChart3,
+  Settings,
+  HelpCircle,
+  MessageCircle,
+  Calendar,
+  Award,
+  Lightbulb,
+  Play,
+  DollarSign,
+  GraduationCap,
+  Mail,
+  MapPin,
+  ShoppingBag,
 } from 'lucide-react',
 import Link from 'next/link',
 // Define Node type for DOM event handling,
@@ -74,189 +74,189 @@ interface NavigationItem {
 // Enhanced navigation items with better organization,
 const navigationItems: NavigationItem[] = [
   {
-    label: 'Home';
-    href: '/';
-    icon: <Home className='w-4 h-4' />;
-    neonColor: 'shadow-cyan-40o0/50';
-    category: 'main';
-  };
+    label: 'Home',
+    href: '/',
+    icon: <Home className='w-4 h-4' />,
+    neonColor: 'shadow-cyan-40o0/50',
+    category: 'main'
+  },
   {
-    label: 'Services';
-    href: '/services';
-    icon: <Briefcase className='w-4 h-4' />;
-    description: 'Explore our comprehensive technology solutions';
-    badge: 'New';
-    neonColor: 'shadow-blue-40o0/50';
-    category: 'main';
+    label: 'Services',
+    href: '/services',
+    icon: <Briefcase className='w-4 h-4' />,
+    description: 'Explore our comprehensive technology solutions',
+    badge: 'New',
+    neonColor: 'shadow-blue-40o0/50',
+    category: 'main',
     children: [
       {
-        label: 'AI & Machine Learning';
-        href: '/services?category=ai-ml';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Advanced AI solutions for enterprise';
-        featured: true;
-        neonColor: 'shadow-purple-40o0/50';
-        category: 'ai';
-      };
+        label: 'AI & Machine Learning',
+        href: '/services?category=ai-ml',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Advanced AI solutions for enterprise',
+        featured: true,
+        neonColor: 'shadow-purple-40o0/50',
+        category: 'ai'
+      },
       {
-        label: 'Quantum Computing';
-        href: '/services?category=quantum';
-        icon: <Atom className='w-4 h-4' />;
-        description: 'Next-generation quantum solutions';
-        featured: true;
-        neonColor: 'shadow-indigo-40o0/50';
-        category: 'quantum';
-      };
+        label: 'Quantum Computing',
+        href: '/services?category=quantum',
+        icon: <Atom className='w-4 h-4' />,
+        description: 'Next-generation quantum solutions',
+        featured: true,
+        neonColor: 'shadow-indigo-40o0/50',
+        category: 'quantum'
+      },
       {
-        label: 'Cybersecurity';
-        href: '/services?category=cybersecurity';
-        icon: <Shield className='w-4 h-4' />;
-        description: 'Advanced security solutions';
-        featured: true;
-        neonColor: 'shadow-red-40o0/50';
-        category: 'security';
-      };
+        label: 'Cybersecurity',
+        href: '/services?category=cybersecurity',
+        icon: <Shield className='w-4 h-4' />,
+        description: 'Advanced security solutions',
+        featured: true,
+        neonColor: 'shadow-red-40o0/50',
+        category: 'security'
+      },
       {
-        label: 'Micro SAAS';
-        href: '/services?category=micro-saas';
-        icon: <Building className='w-4 h-4' />;
-        description: 'Innovative business solutions';
-        featured: true;
-        neonColor: 'shadow-emerald-40o0/50';
-        category: 'saas';
-      };
+        label: 'Micro SAAS',
+        href: '/services?category=micro-saas',
+        icon: <Building className='w-4 h-4' />,
+        description: 'Innovative business solutions',
+        featured: true,
+        neonColor: 'shadow-emerald-40o0/50',
+        category: 'saas'
+      },
       {
-        label: 'IT Infrastructure';
-        href: '/services?category=it-infrastructure';
-        icon: <Cpu className='w-4 h-4' />;
-        description: 'Enterprise IT solutions';
-        neonColor: 'shadow-blue-40o0/50';
-        category: 'it';
-      };
+        label: 'IT Infrastructure',
+        href: '/services?category=it-infrastructure',
+        icon: <Cpu className='w-4 h-4' />,
+        description: 'Enterprise IT solutions',
+        neonColor: 'shadow-blue-40o0/50',
+        category: 'it'
+      },
       {
-        label: 'Edge Computing';
-        href: '/services?category=edge-computing';
-        icon: <Cloud className='w-4 h-4' />;
-        description: 'Distributed computing solutions';
-        neonColor: 'shadow-green-40o0/50';
-        category: 'edge';
-      };
-    ];
-  };
+        label: 'Edge Computing',
+        href: '/services?category=edge-computing',
+        icon: <Cloud className='w-4 h-4' />,
+        description: 'Distributed computing solutions',
+        neonColor: 'shadow-green-40o0/50',
+        category: 'edge'
+      },
+    ],
+  },
   {
-    label: 'Solutions';
-    href: '/solutions';
-    icon: <Target className='w-4 h-4' />;
-    description: 'Industry-specific solutions';
-    neonColor: 'shadow-emerald-40o0/50';
-    category: 'main';
+    label: 'Solutions',
+    href: '/solutions',
+    icon: <Target className='w-4 h-4' />,
+    description: 'Industry-specific solutions',
+    neonColor: 'shadow-emerald-40o0/50',
+    category: 'main',
     children: [
       {
-        label: 'Financial Services';
-        href: '/solutions/financial';
-        icon: <DollarSign className='w-4 h-4' />;
-        description: 'Banking and fintech solutions';
-        neonColor: 'shadow-green-40o0/50';
-      };
+        label: 'Financial Services',
+        href: '/solutions/financial',
+        icon: <DollarSign className='w-4 h-4' />,
+        description: 'Banking and fintech solutions',
+        neonColor: 'shadow-green-40o0/50'
+      },
       {
-        label: 'Healthcare';
-        href: '/solutions/healthcare';
-        icon: <Heart className='w-4 h-4' />;
-        description: 'Healthcare technology solutions';
-        neonColor: 'shadow-red-40o0/50';
-      };
+        label: 'Healthcare',
+        href: '/solutions/healthcare',
+        icon: <Heart className='w-4 h-4' />,
+        description: 'Healthcare technology solutions',
+        neonColor: 'shadow-red-40o0/50'
+      },
       {
-        label: 'Manufacturing';
-        href: '/solutions/manufacturing';
-        icon: <Settings className='w-4 h-4' />;
-        description: 'Industrial automation solutions';
-        neonColor: 'shadow-blue-40o0/50';
-      };
+        label: 'Manufacturing',
+        href: '/solutions/manufacturing',
+        icon: <Settings className='w-4 h-4' />,
+        description: 'Industrial automation solutions',
+        neonColor: 'shadow-blue-40o0/50'
+      },
       {
-        label: 'Retail';
-        href: '/solutions/retail';
-        icon: <ShoppingBag className='w-4 h-4' />;
-        description: 'Retail technology solutions';
-        neonColor: 'shadow-purple-40o0/50';
-      };
-    ];
-  };
+        label: 'Retail',
+        href: '/solutions/retail',
+        icon: <ShoppingBag className='w-4 h-4' />,
+        description: 'Retail technology solutions',
+        neonColor: 'shadow-purple-40o0/50'
+      },
+    ],
+  },
   {
-    label: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className='w-4 h-4' />;
-    description: 'Knowledge and learning resources';
-    neonColor: 'shadow-purple-40o0/50';
-    category: 'main';
+    label: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-4 h-4' />,
+    description: 'Knowledge and learning resources',
+    neonColor: 'shadow-purple-40o0/50',
+    category: 'main',
     children: [
       {
-        label: 'Documentation';
-        href: '/docs';
-        icon: <FileText className='w-4 h-4' />;
-        description: 'Technical documentation';
-        neonColor: 'shadow-blue-40o0/50';
-      };
+        label: 'Documentation',
+        href: '/docs',
+        icon: <FileText className='w-4 h-4' />,
+        description: 'Technical documentation',
+        neonColor: 'shadow-blue-40o0/50'
+      },
       {
-        label: 'Blog';
-        href: '/blog';
-        icon: <FileText className='w-4 h-4' />;
-        description: 'Latest insights and updates';
-        neonColor: 'shadow-green-40o0/50';
-      };
+        label: 'Blog',
+        href: '/blog',
+        icon: <FileText className='w-4 h-4' />,
+        description: 'Latest insights and updates',
+        neonColor: 'shadow-green-40o0/50'
+      },
       {
-        label: 'Webinars';
-        href: '/webinars';
-        icon: <Video className='w-4 h-4' />;
-        description: 'Educational webinars';
-        neonColor: 'shadow-purple-40o0/50';
-      };
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Video className='w-4 h-4' />,
+        description: 'Educational webinars',
+        neonColor: 'shadow-purple-40o0/50'
+      },
       {
-        label: 'Training';
-        href: '/training';
-        icon: <GraduationCap className='w-4 h-4' />;
-        description: 'Professional training programs';
-        neonColor: 'shadow-orange-40o0/50';
-      };
-    ];
-  };
+        label: 'Training',
+        href: '/training',
+        icon: <GraduationCap className='w-4 h-4' />,
+        description: 'Professional training programs',
+        neonColor: 'shadow-orange-40o0/50'
+      },
+    ],
+  },
   {
-    label: 'Company';
-    href: '/about';
-    icon: <Building className='w-4 h-4' />;
-    description: 'About Zion Tech Group';
-    neonColor: 'shadow-gray-40o0/50';
-    category: 'main';
+    label: 'Company',
+    href: '/about',
+    icon: <Building className='w-4 h-4' />,
+    description: 'About Zion Tech Group',
+    neonColor: 'shadow-gray-40o0/50',
+    category: 'main',
     children: [
       {
-        label: 'About Us';
-        href: '/about';
-        icon: <Users className='w-4 h-4' />;
-        description: 'Our story and mission';
-        neonColor: 'shadow-blue-40o0/50';
-      };
+        label: 'About Us',
+        href: '/about',
+        icon: <Users className='w-4 h-4' />,
+        description: 'Our story and mission',
+        neonColor: 'shadow-blue-40o0/50'
+      },
       {
-        label: 'Team';
-        href: '/team';
-        icon: <Users className='w-4 h-4' />;
-        description: 'Meet our leadership team';
-        neonColor: 'shadow-green-40o0/50';
-      };
+        label: 'Team',
+        href: '/team',
+        icon: <Users className='w-4 h-4' />,
+        description: 'Meet our leadership team',
+        neonColor: 'shadow-green-40o0/50'
+      },
       {
-        label: 'Careers';
-        href: '/careers';
-        icon: <Briefcase className='w-4 h-4' />;
-        description: 'Join our team';
-        neonColor: 'shadow-purple-40o0/50';
-      };
+        label: 'Careers',
+        href: '/careers',
+        icon: <Briefcase className='w-4 h-4' />,
+        description: 'Join our team',
+        neonColor: 'shadow-purple-40o0/50'
+      },
       {
-        label: 'Contact';
-        href: '/contact';
-        icon: <MessageCircle className='w-4 h-4' />;
-        description: 'Get in touch with us';
-        neonColor: 'shadow-cyan-40o0/50';
-      };
-    ];
-  };
+        label: 'Contact',
+        href: '/contact',
+        icon: <MessageCircle className='w-4 h-4' />,
+        description: 'Get in touch with us',
+        neonColor: 'shadow-cyan-40o0/50'
+      },
+    ],
+  },
 ],
 const UltraFuturisticNavigation20o45V2: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -269,7 +269,7 @@ const UltraFuturisticNavigation20o45V2: React.FC = () => {
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle search click outside,
@@ -279,7 +279,7 @@ const UltraFuturisticNavigation20o45V2: React.FC = () => {
         searchRef.current &&,
         !searchRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Handle search,
@@ -289,19 +289,19 @@ const UltraFuturisticNavigation20o45V2: React.FC = () => {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`),
       setIsSearchOpen(false),
       setSearchQuery('')}
-  };
+  },
   // Handle navigation item click,
   const handleNavItemClick = (href: string) => {
     router.push(href),
     setIsOpen(false),
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   // Handle dropdown toggle,
   const toggleDropdown = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label)};
+    setActiveDropdown(activeDropdown === label ? null : label)},
   // Close mobile menu,
   const closeMobileMenu = () => {
     setIsOpen(false),
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   return (
     <>,
       {/* Top Contact Bar */}
@@ -538,5 +538,5 @@ const UltraFuturisticNavigation20o45V2: React.FC = () => {
       </nav>,
       {/* Spacer for fixed navigation */}
       <div className='h-20' />,
-    </>)};
-export default UltraFuturisticNavigation20o45V2;
+    </>)},
+export default UltraFuturisticNavigation20o45V2,

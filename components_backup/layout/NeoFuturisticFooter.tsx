@@ -1,251 +1,251 @@
 import Link from 'next/link',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Sparkles;
-  Brain;
-  Atom;
-  Shield;
-  DollarSign;
-  FileText;
-  BarChart3;
-  MessageSquare;
-  Truck;
-  Users;
-  Database;
-  Cpu;
-  Cloud;
-  Play;
-  Search;
-  ShieldCheck;
-  TrendingUp;
-  Rocket;
-  Zap;
-  Check;
-  Star;
-  Clock;
-  Target;
-  Building;
-  Award;
-  ChartBar;
-  Lock;
-  Smartphone;
-  Palette;
-  Calendar;
-  CreditCard;
-  Settings;
-  Code;
-  BookOpen;
-  Activity;
-  Bot;
-  ChevronRight as ChevronRightIcon;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;
-  ExternalLink;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  DollarSign,
+  FileText,
+  BarChart3,
+  MessageSquare,
+  Truck,
+  Users,
+  Database,
+  Cpu,
+  Cloud,
+  Play,
+  Search,
+  ShieldCheck,
+  TrendingUp,
+  Rocket,
+  Zap,
+  Check,
+  Star,
+  Clock,
+  Target,
+  Building,
+  Award,
+  ChartBar,
+  Lock,
+  Smartphone,
+  Palette,
+  Calendar,
+  CreditCard,
+  Settings,
+  Code,
+  BookOpen,
+  Activity,
+  Bot,
+  ChevronRight as ChevronRightIcon,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ExternalLink,
 } from 'lucide-react',
 import Button from '../ui/Button',
 export default function NeoFuturisticFooter() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const serviceCategories = [
     {
-      name: 'Quantum Computing & AI';
+      name: 'Quantum Computing & AI',
       services: [
         {
-          name: 'Quantum AI Platform';
-          href: '/services?category=Quantum Computing';
-        };
+          name: 'Quantum AI Platform',
+          href: '/services?category=Quantum Computing'
+        },
         {
-          name: 'Quantum Optimization';
-          href: '/services?category=Quantum Computing';
-        };
+          name: 'Quantum Optimization',
+          href: '/services?category=Quantum Computing'
+        },
         {
-          name: 'Quantum Simulation';
-          href: '/services?category=Quantum Computing';
-        };
-      ];
-    };
+          name: 'Quantum Simulation',
+          href: '/services?category=Quantum Computing'
+        },
+      ],
+    },
     {
-      name: 'Autonomous Systems';
+      name: 'Autonomous Systems',
       services: [
         {
-          name: 'AI Content Creation';
-          href: '/services?category=AI & Machine Learning';
-        };
+          name: 'AI Content Creation',
+          href: '/services?category=AI & Machine Learning'
+        },
         {
-          name: 'ML Model Training';
-          href: '/services?category=AI & Machine Learning';
-        };
+          name: 'ML Model Training',
+          href: '/services?category=AI & Machine Learning'
+        },
         {
-          name: 'AI Analytics';
-          href: '/services?category=AI & Machine Learning';
-        };
-      ];
-    };
+          name: 'AI Analytics',
+          href: '/services?category=AI & Machine Learning'
+        },
+      ],
+    },
     {
-      name: 'Healthcare & Biotechnology';
+      name: 'Healthcare & Biotechnology',
       services: [
-        { name: 'Quantum Security', href: '/services?category=Cybersecurity' };
+        { name: 'Quantum Security', href: '/services?category=Cybersecurity' },
         {
-          name: 'AI Threat Detection';
-          href: '/services?category=Cybersecurity';
-        };
+          name: 'AI Threat Detection',
+          href: '/services?category=Cybersecurity'
+        },
         {
-          name: 'Zero Trust Security';
-          href: '/services?category=Cybersecurity';
-        };
-      ];
-    };
+          name: 'Zero Trust Security',
+          href: '/services?category=Cybersecurity'
+        },
+      ],
+    },
     {
-      name: 'Space Technology';
+      name: 'Space Technology',
       services: [
         {
-          name: 'Space Technology Platform';
-          link: 'https://ziontechgroup.com/space-technology';
-        };
+          name: 'Space Technology Platform',
+          link: 'https://ziontechgroup.com/space-technology'
+        },
         {
-          name: 'Satellite Management';
-          link: 'https://ziontechgroup.com/satellite-management';
-        };
+          name: 'Satellite Management',
+          link: 'https://ziontechgroup.com/satellite-management'
+        },
         {
-          name: 'Space Data Analytics';
-          link: 'https://ziontechgroup.com/space-analytics';
-        };
-      ];
-    };
+          name: 'Space Data Analytics',
+          link: 'https://ziontechgroup.com/space-analytics'
+        },
+      ],
+    },
     {
-      name: 'Metaverse & VR/AR';
+      name: 'Metaverse & VR/AR',
       services: [
         {
-          name: 'Metaverse Development Platform';
-          link: 'https://ziontechgroup.com/metaverse-platform';
-        };
+          name: 'Metaverse Development Platform',
+          link: 'https://ziontechgroup.com/metaverse-platform'
+        },
         {
-          name: 'VR/AR Solutions';
-          link: 'https://ziontechgroup.com/vr-ar-solutions';
-        };
+          name: 'VR/AR Solutions',
+          link: 'https://ziontechgroup.com/vr-ar-solutions'
+        },
         {
-          name: '3D World Building';
-          link: 'https://ziontechgroup.com/3d-world-building';
-        };
-      ];
-    };
+          name: '3D World Building',
+          link: 'https://ziontechgroup.com/3d-world-building'
+        },
+      ],
+    },
     {
-      name: 'Financial Technology';
+      name: 'Financial Technology',
       services: [
         {
-          name: 'Quantum Finance Platform';
-          link: 'https://ziontechgroup.com/quantum-finance';
-        };
+          name: 'Quantum Finance Platform',
+          link: 'https://ziontechgroup.com/quantum-finance'
+        },
         {
-          name: 'AI Trading Platform';
-          link: 'https://ziontechgroup.com/ai-trading';
-        };
+          name: 'AI Trading Platform',
+          link: 'https://ziontechgroup.com/ai-trading'
+        },
         {
-          name: 'Risk Management AI';
-          link: 'https://ziontechgroup.com/risk-management';
-        };
-      ];
-    };
+          name: 'Risk Management AI',
+          link: 'https://ziontechgroup.com/risk-management'
+        },
+      ],
+    },
   ],
   const marketInsights = [
     {
-      metric: '$8.5B';
-      label: 'Quantum Finance Market';
-      growth: '450% annually';
-    };
+      metric: '$8.5B',
+      label: 'Quantum Finance Market',
+      growth: '450% annually'
+    },
     {
-      metric: '$12.3B';
-      label: 'Autonomous Manufacturing';
-      growth: '320% annually';
-    };
+      metric: '$12.3B',
+      label: 'Autonomous Manufacturing',
+      growth: '320% annually'
+    },
     {
-      metric: '$6.8B';
-      label: 'Quantum Cybersecurity';
-      growth: '380% annually';
-    };
-    { metric: '$4.2B', label: 'Space Technology', growth: '290% annually' };
+      metric: '$6.8B',
+      label: 'Quantum Cybersecurity',
+      growth: '380% annually'
+    },
+    { metric: '$4.2B', label: 'Space Technology', growth: '290% annually' },
     {
-      metric: '$3.6B';
-      label: 'Metaverse Development';
-      growth: '40o0% annually';
-    };
-    { metric: '$3.2B', label: 'Biomedical AI', growth: '20o0% annually' };
+      metric: '$3.6B',
+      label: 'Metaverse Development',
+      growth: '40o0% annually'
+    },
+    { metric: '$3.2B', label: 'Biomedical AI', growth: '20o0% annually' },
   ],
   const companyLinks = [
-    { name: 'About Us', href: '/about' };
-    { name: 'Our Mission', href: '/mission' };
-    { name: 'Leadership Team', href: '/team' };
-    { name: 'Careers', href: '/careers' };
-    { name: 'News & Updates', href: '/news' };
-    { name: 'Press Kit', href: '/press' };
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Mission', href: '/mission' },
+    { name: 'Leadership Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'News & Updates', href: '/news' },
+    { name: 'Press Kit', href: '/press' },
   ],
   const resourceLinks = [
-    { name: 'Documentation', href: '/docs' };
-    { name: 'API Reference', href: '/api' };
-    { name: 'Blog & Insights', href: '/blog' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Support Center', href: '/support' };
-    { name: 'Community Forum', href: '/community' };
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Blog & Insights', href: '/blog' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Support Center', href: '/support' },
+    { name: 'Community Forum', href: '/community' },
   ],
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' };
-    { name: 'Terms of Service', href: '/terms' };
-    { name: 'Cookie Policy', href: '/cookies' };
-    { name: 'GDPR Compliance', href: '/gdpr' };
-    { name: 'Security', href: '/security' };
-    { name: 'Compliance', href: '/compliance' };
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'GDPR Compliance', href: '/gdpr' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
   ],
   const socialLinks = [
     {
-      name: 'Facebook';
-      href: 'https://ziontechgroup.com';
-      icon: <Facebook className='w-5 h-5' />;
-    };
+      name: 'Facebook',
+      href: 'https://ziontechgroup.com',
+      icon: <Facebook className='w-5 h-5' />
+    },
     {
-      name: 'Twitter';
-      href: 'https://ziontechgroup.com';
-      icon: <Twitter className='w-5 h-5' />;
-    };
+      name: 'Twitter',
+      href: 'https://ziontechgroup.com',
+      icon: <Twitter className='w-5 h-5' />
+    },
     {
-      name: 'LinkedIn';
-      href: 'https://ziontechgroup.com';
-      icon: <Linkedin className='w-5 h-5' />;
-    };
+      name: 'LinkedIn',
+      href: 'https://ziontechgroup.com',
+      icon: <Linkedin className='w-5 h-5' />
+    },
     {
-      name: 'Instagram';
-      href: 'https://ziontechgroup.com';
-      icon: <Instagram className='w-5 h-5' />;
-    };
+      name: 'Instagram',
+      href: 'https://ziontechgroup.com',
+      icon: <Instagram className='w-5 h-5' />
+    },
     {
-      name: 'YouTube';
-      href: 'https://ziontechgroup.com';
-      icon: <Youtube className='w-5 h-5' />;
-    };
+      name: 'YouTube',
+      href: 'https://ziontechgroup.com',
+      icon: <Youtube className='w-5 h-5' />
+    },
     {
-      name: 'GitHub';
-      href: 'https://ziontechgroup.com';
-      icon: <Github className='w-5 h-5' />;
-    };
+      name: 'GitHub',
+      href: 'https://ziontechgroup.com',
+      icon: <Github className='w-5 h-5' />
+    },
   ],
   const stats = [
-    { number: '50o0+', label: 'Revolutionary Services' };
-    { number: '21', label: 'Day Free Trials' };
-    { number: '99.9%', label: 'Uptime Guarantee' };
-    { number: '24/7', label: 'AI-Powered Support' };
-    { number: '50+', label: 'Countries Served' };
-    { number: '1M+', label: 'Happy Users' };
+    { number: '50o0+', label: 'Revolutionary Services' },
+    { number: '21', label: 'Day Free Trials' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '24/7', label: 'AI-Powered Support' },
+    { number: '50+', label: 'Countries Served' },
+    { number: '1M+', label: 'Happy Users' },
   ],
   return (
     <footer className='bg-black/90 backdrop-blur-xl border-t border-gray-70o0/50'>,

@@ -2,36 +2,36 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search;
-  Filter;
-  Grid;
-  List;
-  ArrowRight;
-  ChevronRight;
-  Brain;
-  Shield;
-  Rocket;
-  Cpu;
-  Database;
-  Atom;
-  Target;
-  Star;
-  Sparkles;
-  Zap;
-  Users;
-  Award;
-  Clock;
-  CheckCircle;
-  Globe;
-  Code;
-  Server;
-  TrendingUp;
-  BarChart3;
-  Cloud;
-  Network;
-  Lightbulb;
-  Flame;
-  Zap as ZapIcon;
+  Search,
+  Filter,
+  Grid,
+  List,
+  ArrowRight,
+  ChevronRight,
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Target,
+  Star,
+  Sparkles,
+  Zap,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Globe,
+  Code,
+  Server,
+  TrendingUp,
+  BarChart3,
+  Cloud,
+  Network,
+  Lightbulb,
+  Flame,
+  Zap as ZapIcon,
 } from 'lucide-react',
 import SmartHeader from '../components/SmartHeader',
 import SmartFooter from '../components/SmartFooter',
@@ -41,140 +41,140 @@ export default function ExplorePage() {
   const [sortBy, setSortBy] = useState('popularity'),
   const categories = [
     {
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
       description:,
-        'Revolutionary AI consciousness and machine learning solutions';
-      color: 'from-purple-50o0 to-pink-50o0';
-      serviceCount: 25;
-      featured: true;
-    };
+        'Revolutionary AI consciousness and machine learning solutions',
+      color: 'from-purple-50o0 to-pink-50o0',
+      serviceCount: 25,
+      featured: true
+    },
     {
-      id: 'quantum';
-      name: 'Quantum Computing';
-      icon: Atom;
-      description: 'Quantum-powered computing and consciousness simulation';
-      color: 'from-blue-50o0 to-cyan-50o0';
-      serviceCount: 18;
-      featured: true;
-    };
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: Atom,
+      description: 'Quantum-powered computing and consciousness simulation',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      serviceCount: 18,
+      featured: true
+    },
     {
-      id: 'cybersecurity';
-      name: 'Cybersecurity';
-      icon: Shield;
-      description: 'Quantum-resistant security and AI threat detection';
-      color: 'from-red-50o0 to-orange-50o0';
-      serviceCount: 22;
-      featured: true;
-    };
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: Shield,
+      description: 'Quantum-resistant security and AI threat detection',
+      color: 'from-red-50o0 to-orange-50o0',
+      serviceCount: 22,
+      featured: true
+    },
     {
-      id: 'cloud';
-      name: 'Cloud & DevOps';
-      icon: Cloud;
-      description: 'Autonomous DevOps and cloud infrastructure';
-      color: 'from-emerald-50o0 to-teal-50o0';
-      serviceCount: 20;
-      featured: false;
-    };
+      id: 'cloud',
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      description: 'Autonomous DevOps and cloud infrastructure',
+      color: 'from-emerald-50o0 to-teal-50o0',
+      serviceCount: 20,
+      featured: false
+    },
     {
-      id: 'edge';
-      name: 'Edge Computing';
-      icon: Network;
-      description: 'Edge computing orchestration and IoT management';
-      color: 'from-yellow-50o0 to-orange-50o0';
-      serviceCount: 15;
-      featured: false;
-    };
+      id: 'edge',
+      name: 'Edge Computing',
+      icon: Network,
+      description: 'Edge computing orchestration and IoT management',
+      color: 'from-yellow-50o0 to-orange-50o0',
+      serviceCount: 15,
+      featured: false
+    },
     {
-      id: 'space';
-      name: 'Space Technology';
-      icon: Rocket;
-      description: 'Space exploration and resource optimization';
-      color: 'from-indigo-50o0 to-purple-50o0';
-      serviceCount: 12;
-      featured: true;
-    };
+      id: 'space',
+      name: 'Space Technology',
+      icon: Rocket,
+      description: 'Space exploration and resource optimization',
+      color: 'from-indigo-50o0 to-purple-50o0',
+      serviceCount: 12,
+      featured: true
+    },
     {
-      id: 'biotech';
-      name: 'Biotechnology';
-      icon: ZapIcon;
-      description: 'Neural interfaces and biomedical innovations';
-      color: 'from-pink-50o0 to-rose-50o0';
-      serviceCount: 16;
-      featured: false;
-    };
+      id: 'biotech',
+      name: 'Biotechnology',
+      icon: ZapIcon,
+      description: 'Neural interfaces and biomedical innovations',
+      color: 'from-pink-50o0 to-rose-50o0',
+      serviceCount: 16,
+      featured: false
+    },
     {
-      id: 'blockchain';
-      name: 'Blockchain';
-      icon: Code;
-      description: 'AI-powered blockchain governance and DeFi';
-      color: 'from-green-50o0 to-emerald-50o0';
-      serviceCount: 14;
-      featured: false;
-    };
+      id: 'blockchain',
+      name: 'Blockchain',
+      icon: Code,
+      description: 'AI-powered blockchain governance and DeFi',
+      color: 'from-green-50o0 to-emerald-50o0',
+      serviceCount: 14,
+      featured: false
+    },
     {
-      id: 'automation';
-      name: 'Automation';
-      icon: Zap;
-      description: 'Business process automation and AI agents';
-      color: 'from-cyan-50o0 to-blue-50o0';
-      serviceCount: 19;
-      featured: false;
-    };
+      id: 'automation',
+      name: 'Automation',
+      icon: Zap,
+      description: 'Business process automation and AI agents',
+      color: 'from-cyan-50o0 to-blue-50o0',
+      serviceCount: 19,
+      featured: false
+    },
     {
-      id: 'fintech';
-      name: 'Financial Technology';
-      icon: TrendingUp;
-      description: 'Quantum financial trading and AI analytics';
-      color: 'from-emerald-50o0 to-green-50o0';
-      serviceCount: 17;
-      featured: false;
-    };
+      id: 'fintech',
+      name: 'Financial Technology',
+      icon: TrendingUp,
+      description: 'Quantum financial trading and AI analytics',
+      color: 'from-emerald-50o0 to-green-50o0',
+      serviceCount: 17,
+      featured: false
+    },
   ],
   const featuredServices = [
     {
-      id: 'ai-consciousness-evolution';
-      title: 'AI Consciousness Evolution';
-      category: 'ai';
+      id: 'ai-consciousness-evolution',
+      title: 'AI Consciousness Evolution',
+      category: 'ai',
       description:,
-        'Revolutionary AI consciousness platform with emotional intelligence';
-      status: 'beta';
-      price: '$1,999/month';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Revolutionary AI consciousness platform with emotional intelligence',
+      status: 'beta',
+      price: '$1,999/month',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      id: 'quantum-neural-networks';
-      title: 'Quantum Neural Networks';
-      category: 'quantum';
+      id: 'quantum-neural-networks',
+      title: 'Quantum Neural Networks',
+      category: 'quantum',
       description:,
-        'Quantum-powered AI with advanced consciousness capabilities';
-      status: 'beta';
-      price: '$1,299/month';
-      icon: Atom;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'Quantum-powered AI with advanced consciousness capabilities',
+      status: 'beta',
+      price: '$1,299/month',
+      icon: Atom,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      id: 'quantum-cybersecurity';
-      title: 'Quantum Cybersecurity';
-      category: 'cybersecurity';
-      description: 'Future-proof security with quantum-resistant encryption';
-      status: 'active';
-      price: '$799/month';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
-    };
+      id: 'quantum-cybersecurity',
+      title: 'Quantum Cybersecurity',
+      category: 'cybersecurity',
+      description: 'Future-proof security with quantum-resistant encryption',
+      status: 'active',
+      price: '$799/month',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0'
+    },
     {
-      id: 'space-technology';
-      title: 'Space Technology Innovation';
-      category: 'space';
-      description: 'AI-powered space exploration and resource optimization';
-      status: 'beta';
-      price: '$2,499/month';
-      icon: Rocket;
-      color: 'from-indigo-50o0 to-purple-50o0';
-    };
+      id: 'space-technology',
+      title: 'Space Technology Innovation',
+      category: 'space',
+      description: 'AI-powered space exploration and resource optimization',
+      status: 'beta',
+      price: '$2,499/month',
+      icon: Rocket,
+      color: 'from-indigo-50o0 to-purple-50o0'
+    },
   ],
   // Filter categories based on search,
   const filteredCategories = categories.filter(category => {
@@ -464,53 +464,53 @@ export default function ExplorePage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                icon: Brain;
-                title: 'AI Consciousness';
+                icon: Brain,
+                title: 'AI Consciousness',
                 description:,
-                  'The evolution of AI towards true consciousness and emotional intelligence';
-                trend: 'Rising';
-                color: 'from-purple-50o0 to-pink-50o0';
-              };
+                  'The evolution of AI towards true consciousness and emotional intelligence',
+                trend: 'Rising',
+                color: 'from-purple-50o0 to-pink-50o0'
+              },
               {
-                icon: Atom;
-                title: 'Quantum Supremacy';
+                icon: Atom,
+                title: 'Quantum Supremacy',
                 description:,
-                  'Breakthroughs in quantum computing and quantum AI applications';
-                trend: 'Breakthrough';
-                color: 'from-blue-50o0 to-cyan-50o0';
-              };
+                  'Breakthroughs in quantum computing and quantum AI applications',
+                trend: 'Breakthrough',
+                color: 'from-blue-50o0 to-cyan-50o0'
+              },
               {
-                icon: Shield;
-                title: 'Quantum Security';
+                icon: Shield,
+                title: 'Quantum Security',
                 description:,
-                  'Quantum-resistant cryptography and AI-powered threat detection';
-                trend: 'Critical';
-                color: 'from-red-50o0 to-orange-50o0';
-              };
+                  'Quantum-resistant cryptography and AI-powered threat detection',
+                trend: 'Critical',
+                color: 'from-red-50o0 to-orange-50o0'
+              },
               {
-                icon: Rocket;
-                title: 'Space Innovation';
+                icon: Rocket,
+                title: 'Space Innovation',
                 description:,
-                  'AI-powered space exploration and resource optimization';
-                trend: 'Emerging';
-                color: 'from-indigo-50o0 to-purple-50o0';
-              };
+                  'AI-powered space exploration and resource optimization',
+                trend: 'Emerging',
+                color: 'from-indigo-50o0 to-purple-50o0'
+              },
               {
-                icon: ZapIcon;
-                title: 'Neural Interfaces';
+                icon: ZapIcon,
+                title: 'Neural Interfaces',
                 description:,
-                  'Brain-computer interfaces and neural augmentation';
-                trend: 'Experimental';
-                color: 'from-pink-50o0 to-rose-50o0';
-              };
+                  'Brain-computer interfaces and neural augmentation',
+                trend: 'Experimental',
+                color: 'from-pink-50o0 to-rose-50o0'
+              },
               {
-                icon: TrendingUp;
-                title: 'Autonomous Systems';
+                icon: TrendingUp,
+                title: 'Autonomous Systems',
                 description:,
-                  'Self-improving AI systems and autonomous business operations';
-                trend: 'Growing';
-                color: 'from-emerald-50o0 to-green-50o0';
-              };
+                  'Self-improving AI systems and autonomous business operations',
+                trend: 'Growing',
+                color: 'from-emerald-50o0 to-green-50o0'
+              },
             ].map((trend, index) => (
               <motion.div,
                 key={trend.title}

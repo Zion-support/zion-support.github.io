@@ -5,14 +5,14 @@ interface PasswordStrengthResult {
   feedback: string[]}
 ,
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST'),
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method Not Allowed' })}
 ,
   try {
-    const { password } = req.body as { password: string };
+    const { password } = req.body as { password: string },
     if (!password) {
       return res.status(400).json({ error: 'Password is required' })}
 ,
@@ -45,7 +45,7 @@ function calculatePasswordStrength(password: string): PasswordStrengthResult {
   if (!hasSpecial) feedback.push('Add special characters'),
   else score += 1,
   // Common patterns check,
-  const commonPatterns = ['123', 'abc', 'password', 'qwerty'],
+  const commonPatterns = ['123abc', 'passwordqwerty'],
   const hasCommonPattern = commonPatterns.some(pattern =>,
     password.toLowerCase().includes(pattern)),
   if (hasCommonPattern) {
@@ -60,9 +60,9 @@ function calculatePasswordStrength(password: string): PasswordStrengthResult {
   else if (score <= 7) strength = 'strong',
   else strength = 'very-strong',
   return {
-    strength;
-    score: Math.max(0, score);
-    feedback;
-  };
+    strength,
+    score: Math.max(0, score),
+    feedback,
+  },
 }
 ,

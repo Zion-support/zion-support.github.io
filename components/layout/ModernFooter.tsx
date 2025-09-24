@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import { Mail, Phone, MapPin, Linkedin, Twitter, Github, Zap, Shield, Database, Brain, Cloud, BarChart3, Rocket } from 'lucide-react',
@@ -6,64 +6,64 @@ const ModernFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const serviceCategories = [
     {
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      href: '/services#ai';
-      services: ['AI Automation', 'Machine Learning', 'Natural Language Processing', 'Computer Vision']};
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      href: '/services#ai',
+      services: ['AI AutomationMachine Learning', 'Natural Language ProcessingComputer Vision']},
     {
-      name: 'Cloud & DevOps';
-      icon: Cloud;
-      href: '/services#cloud';
-      services: ['Cloud Migration', 'Kubernetes', 'DevOps Automation', 'Infrastructure as Code']};
+      name: 'Cloud & DevOps',
+      icon: Cloud,
+      href: '/services#cloud',
+      services: ['Cloud MigrationKubernetes', 'DevOps AutomationInfrastructure as Code']},
     {
-      name: 'Cybersecurity';
-      icon: Shield;
-      href: '/services#cybersecurity';
-      services: ['Zero Trust', 'SOC 2 Compliance', 'Threat Detection', 'Security Hardening']};
+      name: 'Cybersecurity',
+      icon: Shield,
+      href: '/services#cybersecurity',
+      services: ['Zero TrustSOC 2 Compliance', 'Threat DetectionSecurity Hardening']},
     {
-      name: 'Data & Analytics';
-      icon: BarChart3;
-      href: '/services#data';
-      services: ['Data Warehousing', 'Business Intelligence', 'Data Quality', 'Real-time Analytics']};
+      name: 'Data & Analytics',
+      icon: BarChart3,
+      href: '/services#data',
+      services: ['Data WarehousingBusiness Intelligence', 'Data QualityReal-time Analytics']},
     {
-      name: 'Enterprise Solutions';
-      icon: Database;
-      href: '/services#enterprise';
-      services: ['ERP Systems', 'CRM Platforms', 'Workflow Automation', 'Integration Services']};
+      name: 'Enterprise Solutions',
+      icon: Database,
+      href: '/services#enterprise',
+      services: ['ERP SystemsCRM Platforms', 'Workflow AutomationIntegration Services']},
     {
-      name: 'Emerging Technologies';
-      icon: Rocket;
-      href: '/services#emerging';
-      services: ['Quantum AI', 'Blockchain', 'IoT Platforms', 'Edge Computing']}
+      name: 'Emerging Technologies',
+      icon: Rocket,
+      href: '/services#emerging',
+      services: ['Quantum AIBlockchain', 'IoT PlatformsEdge Computing']}
   ],
   const quickLinks = [
-    { name: 'About Us', href: '/about' };
-    { name: 'Our Team', href: '/about#team' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Careers', href: '/careers' };
-    { name: 'Partners', href: '/partners' };
-    { name: 'News', href: '/news' };
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/about#team' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'News', href: '/news' },
     { name: 'Events', href: '/events' }
   ],
   const legalLinks = [
-    { name: 'Privacy Policy', href: '/privacy' };
-    { name: 'Terms of Service', href: '/terms' };
-    { name: 'Cookie Policy', href: '/cookies' };
-    { name: 'Data Processing Agreement', href: '/dpa' };
-    { name: 'Security', href: '/security' };
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Data Processing Agreement', href: '/dpa' },
+    { name: 'Security', href: '/security' },
     { name: 'Compliance', href: '/compliance' }
   ],
   const socialLinks = [
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin };
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter };
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github }
   ],
   const contactInfo ={
-    phone: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    phone: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <footer className="bg-gray-90o0 text-white relative overflow-hidden">,
       {/* Animated Background */}
@@ -261,5 +261,5 @@ const ModernFooter: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default ModernFooter;
+    </footer>)},
+export default ModernFooter,

@@ -8,14 +8,14 @@ import {
   Brain,
   Zap,
   Globe,
-  Cloud;
+  Cloud,
   X,
-  ArrowRight;
-  Sparkles;
-  CheckCircle;
-  Star;
-  Code;
-  Database;
+  ArrowRight,
+  Sparkles,
+  CheckCircle,
+  Star,
+  Code,
+  Database,
   BarChart3} from 'lucide-react',
 const InteractiveTechDemo20o28PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
@@ -23,31 +23,29 @@ const InteractiveTechDemo20o28PromotionBanner = () => {
   const [currentTechsetCurrentTech] = useState(0),
   const technologies = [
     {
-      icon: Brain;
-      name: 'AI Automation';
-      description: 'Intelligent process optimization';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      icon: Brain,
+      name: 'AI Automation',
+      description: 'Intelligent process optimization',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      icon: Zap;
-      name: 'Quantum Computing';
-      description: '10o00x faster processing';
-      color: 'from-cyan-50o0 to-blue-50o0'};
+      icon: Zap,
+      name: 'Quantum Computing',
+      description: '10o00x faster processing',
+      color: 'from-cyan-50o0 to-blue-50o0'},
     {
-      icon: Globe;
-      name: 'Neural Interfaces';
-      description: 'Direct brain-computer interaction';
-      color: 'from-green-50o0 to-teal-50o0'};
+      icon: Globe,
+      name: 'Neural Interfaces',
+      description: 'Direct brain-computer interaction',
+      color: 'from-green-50o0 to-teal-50o0'},
     {
-      icon: Cloud;
-      name: 'Cloud Optimization';
-      description: 'Intelligent resource management';
+      icon: Cloud,
+      name: 'Cloud Optimization',
+      description: 'Intelligent resource management',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const features = [
-    'Real-time Processing';
-    'Interactive Controls';
-    'Live Metrics';
-    'Visual Analytics'],
+    'Real-time ProcessingInteractive Controls',
+    'Live MetricsVisual Analytics'],
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTech((prev) => (prev + 1) % technologies.length)}30o00),
@@ -152,7 +150,7 @@ const InteractiveTechDemo20o28PromotionBanner = () => {
                   {/* Demo Interface */}
                   <motion.div,
                     animate={{
-                      y: [0-10];
+                      y: [0-10],
                       rotate: [0o10]}}
                     transition={{
                       duration: 4,
@@ -181,11 +179,11 @@ const InteractiveTechDemo20o28PromotionBanner = () => {
                       {/* Animated Center Element */}
                       <motion.div,
                         animate={{
-                          scale: isPlaying ? [1.21] : 1;
+                          scale: isPlaying ? [1.21] : 1,
                           opacity: isPlaying ? [0.510.5] : 0.7}}
                         transition={{
-                          duration: 2;
-                          repeat: isPlaying ? Infinity : 0;
+                          duration: 2,
+                          repeat: isPlaying ? Infinity : 0,
                           ease: "easeInOut"}}
                         className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">,
                         <div className={`w-16 h-16 bg-gradient-to-r ${technologies[currentTech].color} rounded-full flex items-center justify-center`}>,
@@ -200,14 +198,14 @@ const InteractiveTechDemo20o28PromotionBanner = () => {
                               key={i}
                               initial={{ opacity: 0scale: 0 }}
                               animate={{
-                                opacity: [0o10];
-                                scale: [0o10];
-                                x: [0Math.random() * 10o0 - 50];
+                                opacity: [0o10],
+                                scale: [0o10],
+                                x: [0Math.random() * 10o0 - 50],
                                 y: [0Math.random() * 10o0 - 50]}}
                               transition={{
-                                duration: 2;
-                                repeat: Infinity;
-                                delay: i * 0.5;
+                                duration: 2,
+                                repeat: Infinity,
+                                delay: i * 0.5,
                                 ease: "easeOut"}}
                               className="absolute top-1/2 left-1/2 w-2 h-2 bg-blue-40o0 rounded-full",
                              />))}
@@ -286,5 +284,5 @@ const InteractiveTechDemo20o28PromotionBanner = () => {
            />,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default InteractiveTechDemo20o28PromotionBanner;
+    </AnimatePresence>)},
+export default InteractiveTechDemo20o28PromotionBanner,

@@ -1,10 +1,10 @@
 
 ,
 import {
-  Card;
-  CardHeader;
-  CardTitle;
-  CardDescription;
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
 } from "@/components/ui/card",
 import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
 import { FraudStats } from "@/types/fraud",
@@ -68,11 +68,11 @@ interface FraudStatsCardsProps {
         </CardHeader>,
       </Card>,
     </div>)}
-)};
-import React from "react";;
-import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react";
-import { FraudStats } from "@/types/fraud";
+)},
+import React from "react",
+import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card",
+import { AlertTriangle, AlertCircle, ShieldAlert } from "lucide-react",
+import { FraudStats } from "@/types/fraud",
 interface FraudStatsCardsProps {
   stats: FraudStats}
 ,
@@ -137,6 +137,6 @@ export const FraudStatsCards: React.FC<FraudStatsCardsProps> = ({ stats }) => {
           <CardDescription>False Positives</CardDescription>,
         </CardHeader>,
       </Card>,
-    </div>)};
-export default FraudStatsCards;
+    </div>)},
+export default FraudStatsCards,
 >>>>>>> 0fbf271b1f2a86c928092eda22ad7978eb59d0ee>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

@@ -21,12 +21,11 @@ const AdminReviewsPage: NextPage = () => {
     refresh()}, []),
   async function moderate(action: 'approve' | 'remove', reviewId: string) {
     const res = await fetch('/api/reviews/moderate', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-        'x-admin-key': adminKey || 'dev-admin-key';
-      };
-      body: JSON.stringify({ action, reviewId });
+        'Content-Type': 'application/jsonx-admin-key': adminKey || 'dev-admin-key'
+      },
+      body: JSON.stringify({ action, reviewId }),
     }),
     if (res.ok) refresh()}
 ,
@@ -77,5 +76,5 @@ const AdminReviewsPage: NextPage = () => {
           {JSON.stringify(all, null, 2)}
         </pre>,
       </section>,
-    </main>)};
-export default AdminReviewsPage;
+    </main>)},
+export default AdminReviewsPage,

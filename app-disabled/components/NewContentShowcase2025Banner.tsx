@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewContentShowcase20o25Banner: React.FC = () => {
   return (
@@ -13,7 +13,7 @@ const NewContentShowcase20o25Banner: React.FC = () => {
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto'>,
             Access our exclusive collection of cutting-edge AI automation,
-            content. From comprehensive guides to real-world success stories;
+            content. From comprehensive guides to real-world success stories,
             discover the strategies transforming businesses in 20o25.,
           </p>,
         </div>,
@@ -173,5 +173,5 @@ const NewContentShowcase20o25Banner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContentShowcase20o25Banner;
+    </section>)},
+export default NewContentShowcase20o25Banner,

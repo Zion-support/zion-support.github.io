@@ -2,10 +2,9 @@ import 'https: //deno.land/x/xhr@0.1.0/mod.ts',
 import { serve } from 'https: //deno.land/std@0.168.0/http/server.ts',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
@@ -56,25 +55,25 @@ serve(async req => {
 ,
     // Call OpenAI API,
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        Authorization: `Bearer ${openAiKey}`;
-        'Content-Type': 'application/json';
-      };
+        Authorization: `Bearer ${openAiKey}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
           {
-            role: 'system';
-            content: systemPrompt;
-          };
+            role: 'system',
+            content: systemPrompt
+          },
           {
-            role: 'user';
-            content: userPrompt;
-          };
-        ];
-        temperature: 0.7;
-      });
+            role: 'user',
+            content: userPrompt
+          },
+        ],
+        temperature: 0.7
+      }),
     }),
     if (!response.ok) {
       const errorData = await response.json(),
@@ -84,20 +83,20 @@ serve(async req => {
     const enhancedContent = data.choices[0].message.content,
     return new Response(
       JSON.stringify({
-        enhancedContent;
-      });
+        enhancedContent,
+      }),
       {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )} catch (error) {
     console.error('Error in ai-content-enhancer function:', error),
     return new Response(
       JSON.stringify({
-        error: error.message;
-      });
+        error: error.message
+      }),
       {
-        status: 500;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )}
 }),

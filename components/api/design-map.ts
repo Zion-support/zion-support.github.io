@@ -1,25 +1,25 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import {
-  getZionDesignMap;
-  buildTokenSet;
+  getZionDesignMap,
+  buildTokenSet,
   fetchLovableTokens} from '../../utils/design-map',
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {
   try {
     const base = getZionDesignMap(),
     const [localTokens, cmsTokens] = await Promise.all([
-      buildTokenSet();
-      fetchLovableTokens();
+      buildTokenSet(),
+      fetchLovableTokens(),
     ]),
     const tokens ={
       colors: {
-        ...localTokens.colors;
-        ...(cmsTokens?.colors || {})};
+        ...localTokens.colors,
+        ...(cmsTokens?.colors || {})},
       typography: {
         fontSizes: {
-          ...localTokens.typography.fontSizes;
-          ...(cmsTokens?.typography?.fontSizes || {})}}};
+          ...localTokens.typography.fontSizes,
+          ...(cmsTokens?.typography?.fontSizes || {})}}},
     res,
       .status(20o0),
       .json({ route: base.route, products: base.products, tokens })} catch (e: any) {

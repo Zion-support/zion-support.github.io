@@ -2,22 +2,22 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  Globe;
-  ArrowRight;
-  Rocket;
-  DollarSign;
-  Mail;
-  Phone;
-  MapPin;
-  Sparkles;
-  Brain;
-  Atom;
-  Crown;
-  Infinity;
-  Shield;
-  Microscope;
+  Check,
+  Star,
+  Globe,
+  ArrowRight,
+  Rocket,
+  DollarSign,
+  Mail,
+  Phone,
+  MapPin,
+  Sparkles,
+  Brain,
+  Atom,
+  Crown,
+  Infinity,
+  Shield,
+  Microscope,
 } from 'lucide-react',
 import Link from 'next/link',
 import { ultimate2026Services } from '../data/ultimate-2026-services',
@@ -26,192 +26,162 @@ export default function Revolutionary2026Pricing() {
   const [billingCycle, setBillingCycle] = useState<'monthly' | 'yearly'>(
     'monthly'),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   // Combine all services,
   const allServices = [
-    ...ultimate2026Services;
-    ...revolutionary2026Innovations;
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations,
   ],
   // Enhanced service categories with pricing,
   const serviceCategories = [
     {
-      name: 'AI Consciousness & Neural Interfaces';
-      description: 'Revolutionary AI and brain-computer interface solutions';
+      name: 'AI Consciousness & Neural Interfaces',
+      description: 'Revolutionary AI and brain-computer interface solutions',
       services: [
-        'AI Consciousness Simulation';
-        'Quantum Neural Interface';
-        'Autonomous AI Agents';
-      ];
-      avgPrice: '$4,399/month';
-      savings: 'Save 70-90% vs. competitors';
-      icon: Brain;
-      color: 'from-purple-600 to-pink-600';
-    };
+        'AI Consciousness SimulationQuantum Neural Interface',
+        'Autonomous AI Agents',
+      ],
+      avgPrice: '$4,399/month',
+      savings: 'Save 70-90% vs. competitors',
+      icon: Brain,
+      color: 'from-purple-600 to-pink-600'
+    },
     {
-      name: 'Quantum Computing & Space Technology';
-      description: 'Quantum-powered solutions and space technology platforms';
+      name: 'Quantum Computing & Space Technology',
+      description: 'Quantum-powered solutions and space technology platforms',
       services: [
-        'Quantum Internet Infrastructure';
-        'Space Debris Management';
-        'Quantum AI Cybersecurity';
-      ];
-      avgPrice: '$6,999/month';
-      savings: 'Save 80-95% vs. competitors';
-      icon: Atom;
-      color: 'from-blue-600 to-cyan-600';
-    };
+        'Quantum Internet InfrastructureSpace Debris Management',
+        'Quantum AI Cybersecurity',
+      ],
+      avgPrice: '$6,999/month',
+      savings: 'Save 80-95% vs. competitors',
+      icon: Atom,
+      color: 'from-blue-600 to-cyan-600'
+    },
     {
-      name: 'Metaverse & Holographic Development';
-      description: 'Immersive 3D and virtual reality experiences';
+      name: 'Metaverse & Holographic Development',
+      description: 'Immersive 3D and virtual reality experiences',
       services: [
-        'Holographic Metaverse Platform';
-        'AI Content Creation';
-        'Metaverse AI Development';
-      ];
-      avgPrice: '$1,999/month';
-      savings: 'Save 60-80% vs. competitors';
-      icon: Globe;
-      color: 'from-green-600 to-emerald-600';
-    };
+        'Holographic Metaverse PlatformAI Content Creation',
+        'Metaverse AI Development',
+      ],
+      avgPrice: '$1,999/month',
+      savings: 'Save 60-80% vs. competitors',
+      icon: Globe,
+      color: 'from-green-600 to-emerald-600'
+    },
     {
-      name: 'Enterprise IT & Infrastructure';
-      description: 'Advanced enterprise solutions and infrastructure';
+      name: 'Enterprise IT & Infrastructure',
+      description: 'Advanced enterprise solutions and infrastructure',
       services: [
-        'Zero Trust Architecture';
-        'Edge Computing Orchestration';
-        '5G Private Networks';
-      ];
-      avgPrice: 'Custom pricing';
-      savings: 'Save 50-70% vs. competitors';
-      icon: Shield;
-      color: 'from-red-600 to-orange-600';
-    };
+        'Zero Trust ArchitectureEdge Computing Orchestration',
+        '5G Private Networks',
+      ],
+      avgPrice: 'Custom pricing',
+      savings: 'Save 50-70% vs. competitors',
+      icon: Shield,
+      color: 'from-red-600 to-orange-600'
+    },
     {
-      name: 'Healthcare & Climate AI';
-      description: 'AI-powered healthcare and environmental solutions';
+      name: 'Healthcare & Climate AI',
+      description: 'AI-powered healthcare and environmental solutions',
       services: [
-        'AI Healthcare Companion';
-        'AI Climate Prediction';
-        'Autonomous Manufacturing';
-      ];
-      avgPrice: '$2,199/month';
-      savings: 'Save 65-85% vs. competitors';
-      icon: Microscope;
-      color: 'from-teal-600 to-cyan-600';
-    };
+        'AI Healthcare CompanionAI Climate Prediction',
+        'Autonomous Manufacturing',
+      ],
+      avgPrice: '$2,199/month',
+      savings: 'Save 65-85% vs. competitors',
+      icon: Microscope,
+      color: 'from-teal-600 to-cyan-600'
+    },
   ],
   // Enhanced pricing tiers with comprehensive offerings,
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for startups and small businesses';
-      price: billingCycle === 'monthly' ? 99 : 79;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Starter',
+      description: 'Perfect for startups and small businesses',
+      price: billingCycle === 'monthly' ? 99 : 79,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 100+ Core Services';
-        'Basic AI Integration';
-        'Standard Support (24/7)';
-        '30-Day Free Trial';
-        'Basic Analytics Dashboard';
-        'Email Support';
-        '99.5% Uptime Guarantee';
-        'Standard Security Features';
-        'API Access (1000 calls/month)';
-        'Community Forum Access';
-      ];
-      icon: <Sparkles className='w-8 h-8' />;
-      variant: 'quantum' as const;
-      popular: false;
-      cta: 'Start Free Trial';
-      highlight: false;
-    };
+        'Access to 100+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeStandard Security Features',
+        'API Access (1000 calls/month)Community Forum Access',
+      ],
+      icon: <Sparkles className='w-8 h-8' />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      highlight: false
+    },
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses and teams';
-      price: billingCycle === 'monthly' ? 299 : 239;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 299 : 239,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 200+ Advanced Services';
-        'Advanced AI & Quantum Solutions';
-        'Priority Support (24/7)';
-        '60-Day Free Trial';
-        'Advanced Analytics & Reporting';
-        'Phone & Email Support';
-        '99.9% Uptime Guarantee';
-        'Enhanced Security Features';
-        'API Access (10,000 calls/month)';
-        'Dedicated Account Manager';
-        'Custom Integrations';
-        'Team Collaboration Tools';
-      ];
-      icon: <Rocket className='w-8 h-8' />;
-      variant: 'ai-futuristic' as const;
-      popular: true;
-      cta: 'Start Free Trial';
-      highlight: true;
-    };
+        'Access to 200+ Advanced ServicesAdvanced AI & Quantum Solutions',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics & ReportingPhone & Email Support',
+        '99.9% Uptime GuaranteeEnhanced Security Features',
+        'API Access (10,000 calls/month)Dedicated Account Manager',
+        'Custom IntegrationsTeam Collaboration Tools',
+      ],
+      icon: <Rocket className='w-8 h-8' />,
+      variant: 'ai-futuristic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      highlight: true
+    },
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: billingCycle === 'monthly' ? 999 : 799;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 999 : 799,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to All 300+ Services';
-        'Full AI & Quantum Suite';
-        'Premium Support (24/7)';
-        '90-Day Free Trial';
-        'Enterprise Analytics & BI';
-        'Dedicated Support Team';
-        '99.99% Uptime Guarantee';
-        'Enterprise Security & Compliance';
-        'Unlimited API Access';
-        'Custom Development';
-        'White-label Solutions';
-        'Advanced Integration Support';
-        'SLA Guarantees';
-        'On-site Implementation';
-      ];
-      icon: <Crown className='w-8 h-8' />;
-      variant: 'enterprise-futuristic' as const;
-      popular: false;
-      cta: 'Contact Sales';
-      highlight: false;
-    };
+        'Access to All 300+ ServicesFull AI & Quantum Suite',
+        'Premium Support (24/7)90-Day Free Trial',
+        'Enterprise Analytics & BIDedicated Support Team',
+        '99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Unlimited API AccessCustom Development',
+        'White-label SolutionsAdvanced Integration Support',
+        'SLA GuaranteesOn-site Implementation',
+      ],
+      icon: <Crown className='w-8 h-8' />,
+      variant: 'enterprise-futuristic' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      highlight: false
+    },
     {
-      name: 'Custom';
-      description: 'Tailored solutions for unique requirements';
-      price: 'Custom';
-      period: '';
-      savings: 'Tailored pricing';
+      name: 'Custom',
+      description: 'Tailored solutions for unique requirements',
+      price: 'Custom',
+      period: '',
+      savings: 'Tailored pricing',
       features: [
-        'Fully Customized Solutions';
-        'Dedicated Development Team';
-        '24/7 Premium Support';
-        'Custom Trial Period';
-        'Enterprise-grade Infrastructure';
-        'Custom Security Protocols';
-        '99.99%+ Uptime Guarantee';
-        'Full Compliance & Certification';
-        'Unlimited Customization';
-        'Dedicated Infrastructure';
-        'Custom SLA Agreements';
-        'On-site Training & Support';
-        'Long-term Partnership';
-        'Exclusive Technology Access';
-      ];
-      icon: <Infinity className='w-8 h-8' />;
-      variant: 'quantum-futuristic' as const;
-      popular: false;
-      cta: 'Contact Sales';
-      highlight: false;
-    };
+        'Fully Customized SolutionsDedicated Development Team',
+        '24/7 Premium SupportCustom Trial Period',
+        'Enterprise-grade InfrastructureCustom Security Protocols',
+        '99.99%+ Uptime GuaranteeFull Compliance & Certification',
+        'Unlimited CustomizationDedicated Infrastructure',
+        'Custom SLA AgreementsOn-site Training & Support',
+        'Long-term PartnershipExclusive Technology Access',
+      ],
+      icon: <Infinity className='w-8 h-8' />,
+      variant: 'quantum-futuristic' as const,
+      popular: false,
+      cta: 'Contact Sales',
+      highlight: false
+    },
   ],
   // Popular services showcase,
   const popularServices = allServices,

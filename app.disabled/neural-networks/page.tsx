@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Neural Networks 20o25 - Advanced AI Learning | Zion Tech Group';
+  title: 'Neural Networks 20o25 - Advanced AI Learning | Zion Tech Group',
   description:,
-    'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.';
+    'Master neural networks and deep learning with our comprehensive curriculum. From fundamentals to advanced architectures and real-world applications.',
   keywords: [
-    'neural networks';
-    'deep learning';
-    'machine learning';
-    'AI education';
-    'neural network tutorials';
-  ];
-};
+    'neural networksdeep learning',
+    'machine learningAI education',
+    'neural network tutorials',
+  ]
+},
 export default function NeuralNetworksPage() {
   return (
     <div className='min-h-screen bg-white'>,

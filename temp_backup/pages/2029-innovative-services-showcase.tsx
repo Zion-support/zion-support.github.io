@@ -2,15 +2,15 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Atom;
-  Target;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
+  Brain,
+  Atom,
+  Target,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
@@ -18,36 +18,36 @@ import { aiAutonomousEcosystemServices20o29 } from '../data/20o29-ai-autonomous-
 import { emergingTechBreakthroughServices20o29 } from '../data/20o29-emerging-tech-breakthroughs',
 import { practicalBusinessSolutionServices20o29 } from '../data/20o29-practical-business-solutions',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function InnovativeServicesShowcase20o29() {
   const allServices = [
-    ...aiAutonomousEcosystemServices20o29;
-    ...emergingTechBreakthroughServices20o29;
-    ...practicalBusinessSolutionServices20o29;
+    ...aiAutonomousEcosystemServices20o29,
+    ...emergingTechBreakthroughServices20o29,
+    ...practicalBusinessSolutionServices20o29,
   ],
   const serviceCategories = [
     {
-      title: '🚀 AI Autonomous Ecosystem';
-      icon: Brain;
-      color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
-      services: aiAutonomousEcosystemServices20o29;
-    };
+      title: '🚀 AI Autonomous Ecosystem',
+      icon: Brain,
+      color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
+      services: aiAutonomousEcosystemServices20o29
+    },
     {
-      title: '⚛️ Emerging Tech Breakthroughs';
-      icon: Atom;
-      color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
-      services: emergingTechBreakthroughServices20o29;
-    };
+      title: '⚛️ Emerging Tech Breakthroughs',
+      icon: Atom,
+      color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
+      services: emergingTechBreakthroughServices20o29
+    },
     {
-      title: '🎯 Practical Business Solutions';
-      icon: Target;
-      color: 'from-cyan-60o0 via-teal-60o0 to-emerald-60o0';
-      services: practicalBusinessSolutionServices20o29;
-    };
+      title: '🎯 Practical Business Solutions',
+      icon: Target,
+      color: 'from-cyan-60o0 via-teal-60o0 to-emerald-60o0',
+      services: practicalBusinessSolutionServices20o29
+    },
   ],
   return (
     <>,

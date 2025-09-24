@@ -2,35 +2,35 @@ import Link from 'next/link',
 const RevolutionaryContent20o26PromotionBanner = () => {
   const contentItems = [
     {
-      title: 'AI 20o26 Breakthrough Predictions';
+      title: 'AI 20o26 Breakthrough Predictions',
       description:,
-        'Discover the most revolutionary AI breakthroughs that will transform industries';
-      readTime: '8 min read';
-      category: 'AI Innovation';
-      link: '/blog/ai-20o26-breakthrough-predictions';
-    };
+        'Discover the most revolutionary AI breakthroughs that will transform industries',
+      readTime: '8 min read',
+      category: 'AI Innovation',
+      link: '/blog/ai-20o26-breakthrough-predictions'
+    },
     {
-      title: 'Quantum AI Implementation Success';
-      description: 'How a Fortune 50o0 company achieved 50o00% ROI in 6 months';
-      readTime: '12 min read';
-      category: 'Case Study';
-      link: '/case-studies/quantum-ai-implementation-success';
-    };
+      title: 'Quantum AI Implementation Success',
+      description: 'How a Fortune 50o0 company achieved 50o00% ROI in 6 months',
+      readTime: '12 min read',
+      category: 'Case Study',
+      link: '/case-studies/quantum-ai-implementation-success'
+    },
     {
-      title: 'Neural Interface Revolution';
-      description: 'The future of human-computer interaction is here';
-      readTime: '6 min read';
-      category: 'Technology';
-      link: '/neural-interface-revolution-20o26';
-    };
+      title: 'Neural Interface Revolution',
+      description: 'The future of human-computer interaction is here',
+      readTime: '6 min read',
+      category: 'Technology',
+      link: '/neural-interface-revolution-20o26'
+    },
     {
-      title: 'Autonomous Business Systems';
+      title: 'Autonomous Business Systems',
       description:,
-        'Self-managing organizations that run 24/7 without human intervention';
-      readTime: '10 min read';
-      category: 'Business';
-      link: '/autonomous-business-systems-20o26';
-    };
+        'Self-managing organizations that run 24/7 without human intervention',
+      readTime: '10 min read',
+      category: 'Business',
+      link: '/autonomous-business-systems-20o26'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white'>,
@@ -162,5 +162,5 @@ const RevolutionaryContent20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o26PromotionBanner;
+    </section>)},
+export default RevolutionaryContent20o26PromotionBanner,

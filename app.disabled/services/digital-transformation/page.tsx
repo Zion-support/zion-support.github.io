@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'digital-transformation - Zion Tech Group';
+  title: 'digital-transformation - Zion Tech Group',
   description:,
-    'Professional digital-transformation solutions for your business needs.';
-  keywords: 'digital-transformation, services, business, technology';
-};
+    'Professional digital-transformation solutions for your business needs.',
+  keywords: 'digital-transformation, services, business, technology',
+},
 export default function DigitalTransformationPage() {
   return (
     <div className='min-h-screen bg-white'>,

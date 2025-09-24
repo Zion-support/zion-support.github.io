@@ -4,7 +4,7 @@ export const useAccessibility = () => {
     const context = useContext(AccessibilityContext),
     if (!context) {
         throw new Error('useAccessibility must be used within an AccessibilityProvider')}
-    return context};
+    return context},
 export const AccessibilityProvider = ({ children }) => {
     const [isHighContrast, setIsHighContrast] = useState(false),
     const [isReducedMotion, setIsReducedMotion] = useState(false),
@@ -29,7 +29,7 @@ export const AccessibilityProvider = ({ children }) => {
         contrastQuery.addEventListener('change', handleContrastChange),
         return () => {
             motionQuery.removeEventListener('change', handleMotionChange),
-            contrastQuery.removeEventListener('change', handleContrastChange)};
+            contrastQuery.removeEventListener('change', handleContrastChange)},
     }, []),
     // Apply accessibility classes to body,
     useEffect(() => {
@@ -69,23 +69,23 @@ export const AccessibilityProvider = ({ children }) => {
                         firstElement.focus()}
                 }
             }
-        };
+        },
         element.addEventListener('keydown', handleKeyDown),
         firstElement.focus(),
         return () => {
-            element.removeEventListener('keydown', handleKeyDown)};
-    };
+            element.removeEventListener('keydown', handleKeyDown)},
+    },
     // Screen reader announcements,
     const announceToScreenReader = (message) => {
         const announcement = document.createElement('div'),
-        announcement.setAttribute('aria-live', 'polite'),
-        announcement.setAttribute('aria-atomic', 'true'),
+        announcement.setAttribute('aria-livepolite'),
+        announcement.setAttribute('aria-atomictrue'),
         announcement.className = 'sr-only',
         announcement.textContent = message,
         document.body.appendChild(announcement),
         // Remove after announcement,
         setTimeout(() => {
-            document.body.removeChild(announcement)}, 10o00)};
+            document.body.removeChild(announcement)}, 10o00)},
     // Keyboard shortcuts,
     useEffect(() => {
         const handleKeyDown = (e) => {
@@ -104,24 +104,24 @@ export const AccessibilityProvider = ({ children }) => {
                 e.preventDefault(),
                 toggleLargeText(),
                 announceToScreenReader(`Large text ${isLargeText ? 'disabled' : 'enabled'}`)}
-        };
+        },
         document.addEventListener('keydown', handleKeyDown),
         return () => document.removeEventListener('keydown', handleKeyDown)}, [isHighContrast, isReducedMotion, isLargeText]),
     const toggleHighContrast = () => setIsHighContrast(prev => !prev),
     const toggleReducedMotion = () => setIsReducedMotion(prev => !prev),
     const toggleLargeText = () => setIsLargeText(prev => !prev),
     const value ={
-        isHighContrast;
-        isReducedMotion;
-        isLargeText;
-        toggleHighContrast;
-        toggleReducedMotion;
-        toggleLargeText;
-        focusTrap;
-        announceToScreenReader};
+        isHighContrast,
+        isReducedMotion,
+        isLargeText,
+        toggleHighContrast,
+        toggleReducedMotion,
+        toggleLargeText,
+        focusTrap,
+        announceToScreenReader},
     return (<AccessibilityContext.Provider value={value}>,
       {children}
-    </AccessibilityContext.Provider>)};
+    </AccessibilityContext.Provider>)},
 // Accessibility toolbar component,
 export const AccessibilityToolbar = () => {
     const { isHighContrast, isReducedMotion, isLargeText, toggleHighContrast, toggleReducedMotion, toggleLargeText} = useAccessibility(),
@@ -150,9 +150,9 @@ export const AccessibilityToolbar = () => {
           <p>Ctrl/Cmd + L: Large Text</p>,
         </div>,
       </div>,
-    </div>)};
+    </div>)},
 // Skip to main content link,
 export const SkipToMainContent = () => {
     return (<a href="#main-content" className="sr-only focus: not-sr-only focus:absolute focus:top-4 focus:left-4 bg-zion-cyan text-zion-blue-dark px-4 py-2 rounded-lg font-medium z-50 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-zion-blue-dark">,
       Skip to main content,
-    </a>)};
+    </a>)},

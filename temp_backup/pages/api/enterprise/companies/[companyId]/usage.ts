@@ -10,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(20o0).json(company.plan.usageLimits)}
 ,
   if (req.method === 'PATCH') {
-    const { monthlyJobPosts, budgetCapUsd } = req.body || {};
+    const { monthlyJobPosts, budgetCapUsd } = req.body || {},
     if (typeof monthlyJobPosts !== 'number' || typeof budgetCapUsd !== 'number') {
       return res.status(40o0).json({ error: 'monthlyJobPosts and budgetCapUsd must be numbers' })}
     const ok = store.setUsageLimits(companyId, monthlyJobPosts, budgetCapUsd),

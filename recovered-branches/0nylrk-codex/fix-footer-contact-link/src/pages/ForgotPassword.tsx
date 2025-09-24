@@ -10,23 +10,23 @@ import {Input} from "@/components/ui/input",
 import {Form, FormControl, FormField, FormItem, FormLabel, FormMessage} from "@/components/ui/form",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
-import { useState } from "react";
-import { Link } from "react-router-dom";
-import { useForm, type UseFormReturn } from "react-hook-form";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { z } from "zod";
-import { Mail } from "lucide-react";
-import { useAuth } from "@/hooks/useAuth";
+import { useState } from "react",
+import { Link } from "react-router-dom",
+import { useForm, type UseFormReturn } from "react-hook-form",
+import { zodResolver } from "@hookform/resolvers/zod",
+import { z } from "zod",
+import { Mail } from "lucide-react",
+import { useAuth } from "@/hooks/useAuth",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useState } from "react";
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useState } from "react",
 import { useState } from './react',
 import { Link } from './react-router-dom',
 import { use_form, type, UseFormReturn } from './react - hook - form',
@@ -44,13 +44,13 @@ import { Footer } from '@/components / Footer',
   FormField,
   FormItem,
   FormLabel,
-  FormMessage} from "@/components/ui/form";
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+  FormMessage} from "@/components/ui/form",
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
 // Form validation schema,
 const forgotPasswordSchema = z.object({
   email: z.string().email("Please enter a valid email")}),
@@ -58,14 +58,14 @@ type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
-  email: z.string().email("Please enter a valid email")});
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+  email: z.string().email("Please enter a valid email")}),
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 export default function ForgotPassword() {
   const { resetPassword, isLoading } = useAuth(),
   const [submitted, setSubmitted] = useState(false),
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
+  const { resetPassword, isLoading } = useAuth(),
+  const [submitted, setSubmitted] = useState(false),
   // Initialize react-hook-form,
   const form = useForm({
     resolver: zodResolver(forgotPasswordSchema),
@@ -75,7 +75,7 @@ export default function ForgotPassword() {
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
     setSubmitted(true)}
-  };
+  },
   return (
     <>,
       <Header />,
@@ -145,28 +145,28 @@ export default function ForgotPassword() {
                     </div>,
                   </form>,
                 </Form>,
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
 // Form validation schema,
 const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")});
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+  email: z.string().email("Please enter a valid email")}),
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
+  const { resetPassword, isLoading } = useAuth(),
+  const [submitted, setSubmitted] = useState(false),
   // Initialize react-hook-form,
   const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema);
+    resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,
   // Form submission handler,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
-    setSubmitted(true)};
+    setSubmitted(true)},
   return (
     <>,
       <Header />,
@@ -233,7 +233,7 @@ export default function ForgotPassword() {
                         to="/login",
 // Form validation schema,
 const forgotPasswordSchema = z.object ({
-  email: z.string ().email ("Please enter a valid email")});
+  email: z.string ().email ("Please enter a valid email")}),
 type ForgotPasswordFormValues = z.infer < typeof forgotPasswordSchema>,
 export default /**,
  * ForgotPassword - Function description,
@@ -243,12 +243,12 @@ function ForgotPassword() {
   const [submitted, set_submitted] = useState (false),
   // Initialize react - hook - form,
   const form = use_form ({
-    resolver: zod_resolver (forgotPasswordSchema);
+    resolver: zod_resolver (forgotPasswordSchema),
     default_values: {
-      email: ""}}) as UseFormReturn < ForgotPasswordFormValues>;
+      email: ""}}) as UseFormReturn < ForgotPasswordFormValues>,
   // Form submission handler,
   const on_submit = async (data: ForgotPasswordFormValues) => {
-    await reset_password (data.email);
+    await reset_password (data.email),
     set_submitted (true)}
 ,
   return (
@@ -375,28 +375,28 @@ function ForgotPassword() {
       <Footer />,
     </>)}
 ,
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage} from "@/components/ui/form";
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage} from "@/components/ui/form",
 // Form validation schema,
 const forgotPasswordSchema = z.object({
-  email: z.string().email("Please enter a valid email")});
-type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>;
+  email: z.string().email("Please enter a valid email")}),
+type ForgotPasswordFormValues = z.infer<typeof forgotPasswordSchema>,
 export default function ForgotPassword() {
-  const { resetPassword, isLoading } = useAuth();
-  const [submitted, setSubmitted] = useState(false);
+  const { resetPassword, isLoading } = useAuth(),
+  const [submitted, setSubmitted] = useState(false),
   // Initialize react-hook-form,
   const form = useForm({
-    resolver: zodResolver(forgotPasswordSchema);
+    resolver: zodResolver(forgotPasswordSchema),
     defaultValues: {
-      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>;
+      email: ""}}) as UseFormReturn<ForgotPasswordFormValues>,
   // Form submission handler,
   const onSubmit = async (data: ForgotPasswordFormValues) => {
     await resetPassword(data.email),
-    setSubmitted(true)};
+    setSubmitted(true)},
   return (
     <>,
       <Header />,

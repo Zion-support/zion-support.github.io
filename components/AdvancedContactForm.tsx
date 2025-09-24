@@ -16,29 +16,29 @@ interface FormData {
 ,
 const AdvancedContactForm: React.FC = () => {
   const [formDatasetFormData] = useState<FormData>({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    industry: '';
-    companySize: '';
-    budget: '';
-    timeline: '';
-    interests: [];
-    message: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    industry: '',
+    companySize: '',
+    budget: '',
+    timeline: '',
+    interests: [],
+    message: '',
     priority: ''}),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>) => {
     const { namevalue } = e.target,
-    setFormData(prev => ({ ...prev[name]: value }))};
+    setFormData(prev => ({ ...prev[name]: value }))},
   const handleCheckboxChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { valuechecked } = e.target,
     setFormData(prev => ({
-      ...prev;
+      ...prev,
       interests: checked,
         ? [...prev.interestsvalue],
-        : prev.interests.filter(interest => interest !== value)}))};
+        : prev.interests.filter(interest => interest !== value)}))},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -49,29 +49,25 @@ const AdvancedContactForm: React.FC = () => {
       // // console.log('Form submitted:'formData),
       setSubmitStatus('success'),
       setFormData({
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        industry: '';
-        companySize: '';
-        budget: '';
-        timeline: '';
-        interests: [];
-        message: '';
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        industry: '',
+        companySize: '',
+        budget: '',
+        timeline: '',
+        interests: [],
+        message: '',
         priority: ''})} catch (error) {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
-  };
+  },
   const interestOptions = [
-    'AI Automation';
-    'Cloud Infrastructure';
-    'Micro SaaS Development';
-    'Data Analytics';
-    'Predictive Maintenance';
-    'Customer Service AI';
-    'Process Optimization';
-    'Security Automation'],
+    'AI AutomationCloud Infrastructure',
+    'Micro SaaS DevelopmentData Analytics',
+    'Predictive MaintenanceCustomer Service AI',
+    'Process OptimizationSecurity Automation'],
   if (submitStatus === 'success') {
     return (
       <div className="bg-white rounded-xl shadow-lg p-8 text-center">,
@@ -94,7 +90,7 @@ const AdvancedContactForm: React.FC = () => {
           Get Your Free AI Transformation Consultation,
         </h3>,
         <p className="text-gray-60o0">,
-          Tell us about your business challenges and 'we', 'll provide personalized AI automation recommendations.,
+          Tell us about your business challenges and 'well provide personalized AI automation recommendations.,
         </p>,
       </div>,
       <form onSubmit={handleSubmit} className="space-y-6">,
@@ -315,5 +311,5 @@ const AdvancedContactForm: React.FC = () => {
           </p>,
         </div>,
       </form>,
-    </div>)};
-export default AdvancedContactForm;
+    </div>)},
+export default AdvancedContactForm,

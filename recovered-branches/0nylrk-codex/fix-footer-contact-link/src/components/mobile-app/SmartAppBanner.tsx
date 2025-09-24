@@ -11,10 +11,10 @@ interface SmartAppBannerProps {
   delay?: number, // Delay in milliseconds before showing the banner}
 ,
 export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
-  appName = "Zion Marketplace";
-  appIconSrc;
-  appStoreUrl = "/download";
-  googlePlayUrl = "/download";
+  appName = "Zion Marketplace",
+  appIconSrc,
+  appStoreUrl = "/download",
+  googlePlayUrl = "/download",
   delay = 1500}) => {
   const [isVisiblesetIsVisible] = useState(false),
   const isMobile = useIsMobile(),
@@ -27,10 +27,10 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
   }[isMobiledelay]),
   const dismissBanner = () => {
     setIsVisible(false),
-    localStorage.setItem("smartBannerDismissed"true")};
+    localStorage.setItem("smartBannerDismissed"true")},
   const resetBanner = () => {
     localStorage.removeItem("smartBannerDismissed"),
-    setIsVisible(true)};
+    setIsVisible(true)},
   // Only render on mobile devices,
   if (!isMobile || !isVisible) {
     return process.env.NODE_ENV === 'development' ? (
@@ -65,4 +65,4 @@ export const SmartAppBanner: React.FC<SmartAppBannerProps> = ({
           </button>,
         </div>,
       </div>,
-    </div>)};
+    </div>)},

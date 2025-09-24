@@ -2,11 +2,11 @@ import React, { useState, useEffect, useRef } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, X, Search, ChevronDown, Zap, Globe, Lock;
-  Phone, Mail, MapPin, ArrowRight, Star, Users, Award;
-  Brain, Rocket, Shield, Cpu, Database, Cloud, Palette;
-  Sparkles, Target, BarChart3, Lightbulb, Code, Server;
-  Network, ShieldCheck, BrainCircuit, Atom, Satellite;
+  Menu, X, Search, ChevronDown, Zap, Globe, Lock,
+  Phone, Mail, MapPin, ArrowRight, Star, Users, Award,
+  Brain, Rocket, Shield, Cpu, Database, Cloud, Palette,
+  Sparkles, Target, BarChart3, Lightbulb, Code, Server,
+  Network, ShieldCheck, BrainCircuit, Atom, Satellite,
   Heart, Clock, Briefcase, FileText, Video} from 'lucide-react',
 interface NavigationItem {
   label: string,
@@ -19,207 +19,207 @@ interface NavigationItem {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    label: 'Home';
-    href: '/';
-    icon: <Zap className="w-4 h-4"  />};
+    label: 'Home',
+    href: '/',
+    icon: <Zap className="w-4 h-4"  />},
   {
-    label: 'AI & Machine Learning';
+    label: 'AI & Machine Learning',
     children: [
       {
-        label: 'Quantum Neural Interfaces';
-        href: '/quantum-neural-interface-platform-20o46';
-        icon: <Brain className="w-4 h-4"  />;
-        description: 'Revolutionary brain-computer interfaces';
-        badge: 'Revolutionary';
-        featured: true};
+        label: 'Quantum Neural Interfaces',
+        href: '/quantum-neural-interface-platform-20o46',
+        icon: <Brain className="w-4 h-4"  />,
+        description: 'Revolutionary brain-computer interfaces',
+        badge: 'Revolutionary',
+        featured: true},
       {
-        label: 'Autonomous AI Enterprise';
-        href: '/autonomous-ai-enterprise-orchestrator-20o46';
-        icon: <Brain className="w-4 h-4"  />;
-        description: 'Fully autonomous business management';
-        badge: 'Hot';
-        featured: true};
+        label: 'Autonomous AI Enterprise',
+        href: '/autonomous-ai-enterprise-orchestrator-20o46',
+        icon: <Brain className="w-4 h-4"  />,
+        description: 'Fully autonomous business management',
+        badge: 'Hot',
+        featured: true},
       {
-        label: 'Quantum Emotion Intelligence';
-        href: '/quantum-emotion-intelligence-platform-20o46';
-        icon: <Heart className="w-4 h-4"  />;
-        description: 'Advanced emotion recognition and response';
-        badge: 'New'};
+        label: 'Quantum Emotion Intelligence',
+        href: '/quantum-emotion-intelligence-platform-20o46',
+        icon: <Heart className="w-4 h-4"  />,
+        description: 'Advanced emotion recognition and response',
+        badge: 'New'},
       {
-        label: 'Autonomous AI Research';
-        href: '/autonomous-ai-research-assistant-20o46';
-        icon: <Lightbulb className="w-4 h-4"  />;
-        description: 'Fully autonomous scientific research';
-        badge: 'Trending'};
+        label: 'Autonomous AI Research',
+        href: '/autonomous-ai-research-assistant-20o46',
+        icon: <Lightbulb className="w-4 h-4"  />,
+        description: 'Fully autonomous scientific research',
+        badge: 'Trending'},
       {
-        label: 'Quantum Creative AI';
-        href: '/quantum-creative-ai-platform-20o46';
-        icon: <Palette className="w-4 h-4"  />;
-        description: 'Revolutionary creative content generation';
-        badge: 'Innovative'};
+        label: 'Quantum Creative AI',
+        href: '/quantum-creative-ai-platform-20o46',
+        icon: <Palette className="w-4 h-4"  />,
+        description: 'Revolutionary creative content generation',
+        badge: 'Innovative'},
       {
-        label: 'View All AI Services';
-        href: '/ai-services';
-        icon: <ArrowRight className="w-4 h-4"  />;
+        label: 'View All AI Services',
+        href: '/ai-services',
+        icon: <ArrowRight className="w-4 h-4"  />,
         description: 'Complete AI service portfolio'}
-    ]};
+    ]},
   {
-    label: 'IT & Infrastructure';
+    label: 'IT & Infrastructure',
     children: [
       {
-        label: 'Quantum Space Computing';
-        href: '/quantum-space-computing-infrastructure-20o46';
-        icon: <Satellite className="w-4 h-4"  />;
-        description: 'Space-based quantum computing infrastructure';
-        badge: 'Revolutionary';
-        featured: true};
+        label: 'Quantum Space Computing',
+        href: '/quantum-space-computing-infrastructure-20o46',
+        icon: <Satellite className="w-4 h-4"  />,
+        description: 'Space-based quantum computing infrastructure',
+        badge: 'Revolutionary',
+        featured: true},
       {
-        label: 'Autonomous Cybersecurity';
-        href: '/autonomous-cybersecurity-orchestrator-20o46';
-        icon: <Shield className="w-4 h-4"  />;
-        description: 'Fully autonomous security management';
-        badge: 'Hot';
-        featured: true};
+        label: 'Autonomous Cybersecurity',
+        href: '/autonomous-cybersecurity-orchestrator-20o46',
+        icon: <Shield className="w-4 h-4"  />,
+        description: 'Fully autonomous security management',
+        badge: 'Hot',
+        featured: true},
       {
-        label: 'Quantum Cloud Hybrid';
-        href: '/quantum-cloud-hybrid-platform-20o46';
-        icon: <Cloud className="w-4 h-4"  />;
-        description: 'Quantum-enhanced hybrid cloud platform';
-        badge: 'New'};
+        label: 'Quantum Cloud Hybrid',
+        href: '/quantum-cloud-hybrid-platform-20o46',
+        icon: <Cloud className="w-4 h-4"  />,
+        description: 'Quantum-enhanced hybrid cloud platform',
+        badge: 'New'},
       {
-        label: 'Autonomous DevOps';
-        href: '/autonomous-devops-intelligence-platform-20o46';
-        icon: <Code className="w-4 h-4"  />;
-        description: 'Fully autonomous DevOps management';
-        badge: 'Trending'};
+        label: 'Autonomous DevOps',
+        href: '/autonomous-devops-intelligence-platform-20o46',
+        icon: <Code className="w-4 h-4"  />,
+        description: 'Fully autonomous DevOps management',
+        badge: 'Trending'},
       {
-        label: 'Quantum Data Center';
-        href: '/quantum-data-center-optimization-20o46';
-        icon: <Server className="w-4 h-4"  />;
-        description: 'Quantum data center optimization';
-        badge: 'Innovative'};
+        label: 'Quantum Data Center',
+        href: '/quantum-data-center-optimization-20o46',
+        icon: <Server className="w-4 h-4"  />,
+        description: 'Quantum data center optimization',
+        badge: 'Innovative'},
       {
-        label: 'View All IT Services';
-        href: '/it-services';
-        icon: <ArrowRight className="w-4 h-4"  />;
+        label: 'View All IT Services',
+        href: '/it-services',
+        icon: <ArrowRight className="w-4 h-4"  />,
         description: 'Complete IT service portfolio'}
-    ]};
+    ]},
   {
-    label: 'Micro SAAS Solutions';
+    label: 'Micro SAAS Solutions',
     children: [
       {
-        label: 'Quantum Sustainability';
-        href: '/quantum-sustainability-optimizer-20o46';
-        icon: <Globe className="w-4 h-4"  />;
-        description: 'Quantum sustainability optimization';
-        badge: 'Revolutionary';
-        featured: true};
+        label: 'Quantum Sustainability',
+        href: '/quantum-sustainability-optimizer-20o46',
+        icon: <Globe className="w-4 h-4"  />,
+        description: 'Quantum sustainability optimization',
+        badge: 'Revolutionary',
+        featured: true},
       {
-        label: 'Autonomous HR Intelligence';
-        href: '/autonomous-hr-intelligence-suite-20o46';
-        icon: <Users className="w-4 h-4"  />;
-        description: 'Fully autonomous HR management';
-        badge: 'Hot';
-        featured: true};
+        label: 'Autonomous HR Intelligence',
+        href: '/autonomous-hr-intelligence-suite-20o46',
+        icon: <Users className="w-4 h-4"  />,
+        description: 'Fully autonomous HR management',
+        badge: 'Hot',
+        featured: true},
       {
-        label: 'Quantum Financial Intelligence';
-        href: '/quantum-financial-intelligence-platform-20o46';
-        icon: <BarChart3 className="w-4 h-4"  />;
-        description: 'Quantum financial management';
-        badge: 'New'};
+        label: 'Quantum Financial Intelligence',
+        href: '/quantum-financial-intelligence-platform-20o46',
+        icon: <BarChart3 className="w-4 h-4"  />,
+        description: 'Quantum financial management',
+        badge: 'New'},
       {
-        label: 'Autonomous Supply Chain';
-        href: '/autonomous-supply-chain-orchestrator-20o46';
-        icon: <Network className="w-4 h-4"  />;
-        description: 'Fully autonomous supply chain management';
-        badge: 'Trending'};
+        label: 'Autonomous Supply Chain',
+        href: '/autonomous-supply-chain-orchestrator-20o46',
+        icon: <Network className="w-4 h-4"  />,
+        description: 'Fully autonomous supply chain management',
+        badge: 'Trending'},
       {
-        label: 'Quantum Customer Experience';
-        href: '/quantum-customer-experience-optimizer-20o46';
-        icon: <Target className="w-4 h-4"  />;
-        description: 'Quantum customer experience optimization';
-        badge: 'Innovative'};
+        label: 'Quantum Customer Experience',
+        href: '/quantum-customer-experience-optimizer-20o46',
+        icon: <Target className="w-4 h-4"  />,
+        description: 'Quantum customer experience optimization',
+        badge: 'Innovative'},
       {
-        label: 'View All Micro SAAS';
-        href: '/micro-saas';
-        icon: <ArrowRight className="w-4 h-4"  />;
+        label: 'View All Micro SAAS',
+        href: '/micro-saas',
+        icon: <ArrowRight className="w-4 h-4"  />,
         description: 'Complete micro SAAS portfolio'}
-    ]};
+    ]},
   {
-    label: 'Innovative 20o46 Services';
-    href: '/innovative-20o46-futuristic-services-showcase';
-    icon: <Rocket className="w-4 h-4"  />;
-    badge: 'Revolutionary'};
+    label: 'Innovative 20o46 Services',
+    href: '/innovative-20o46-futuristic-services-showcase',
+    icon: <Rocket className="w-4 h-4"  />,
+    badge: 'Revolutionary'},
   {
-    label: 'Solutions';
+    label: 'Solutions',
     children: [
       {
-        label: 'Enterprise Solutions';
-        href: '/enterprise-solutions';
-        icon: <Server className="w-4 h-4"  />;
-        description: 'Large-scale enterprise solutions'};
+        label: 'Enterprise Solutions',
+        href: '/enterprise-solutions',
+        icon: <Server className="w-4 h-4"  />,
+        description: 'Large-scale enterprise solutions'},
       {
-        label: 'Startup Solutions';
-        href: '/startup-solutions';
-        icon: <Rocket className="w-4 h-4"  />;
-        description: 'Innovative startup solutions'};
+        label: 'Startup Solutions',
+        href: '/startup-solutions',
+        icon: <Rocket className="w-4 h-4"  />,
+        description: 'Innovative startup solutions'},
       {
-        label: 'Government Solutions';
-        href: '/government-solutions';
-        icon: <Shield className="w-4 h-4"  />;
-        description: 'Secure government solutions'};
+        label: 'Government Solutions',
+        href: '/government-solutions',
+        icon: <Shield className="w-4 h-4"  />,
+        description: 'Secure government solutions'},
       {
-        label: 'Healthcare Solutions';
-        href: '/healthcare-solutions';
-        icon: <Heart className="w-4 h-4"  />;
+        label: 'Healthcare Solutions',
+        href: '/healthcare-solutions',
+        icon: <Heart className="w-4 h-4"  />,
         description: 'Advanced healthcare solutions'}
-    ]};
+    ]},
   {
-    label: 'About';
+    label: 'About',
     children: [
       {
-        label: 'Our Mission';
-        href: '/mission';
-        icon: <Target className="w-4 h-4"  />;
-        description: 'Learn about our mission and vision'};
+        label: 'Our Mission',
+        href: '/mission',
+        icon: <Target className="w-4 h-4"  />,
+        description: 'Learn about our mission and vision'},
       {
-        label: 'Leadership Team';
-        href: '/team';
-        icon: <Users className="w-4 h-4"  />;
-        description: 'Meet our leadership team'};
+        label: 'Leadership Team',
+        href: '/team',
+        icon: <Users className="w-4 h-4"  />,
+        description: 'Meet our leadership team'},
       {
-        label: 'Company History';
-        href: '/history';
-        icon: <Clock className="w-4 h-4"  />;
-        description: 'Our journey and milestones'};
+        label: 'Company History',
+        href: '/history',
+        icon: <Clock className="w-4 h-4"  />,
+        description: 'Our journey and milestones'},
       {
-        label: 'Careers';
-        href: '/careers';
-        icon: <Briefcase className="w-4 h-4"  />;
+        label: 'Careers',
+        href: '/careers',
+        icon: <Briefcase className="w-4 h-4"  />,
         description: 'Join our revolutionary team'}
-    ]};
+    ]},
   {
-    label: 'Resources';
+    label: 'Resources',
     children: [
       {
-        label: 'Blog & Insights';
-        href: '/blog';
-        icon: <Lightbulb className="w-4 h-4"  />;
-        description: 'Latest insights and trends'};
+        label: 'Blog & Insights',
+        href: '/blog',
+        icon: <Lightbulb className="w-4 h-4"  />,
+        description: 'Latest insights and trends'},
       {
-        label: 'Case Studies';
-        href: '/case-studies';
-        icon: <BarChart3 className="w-4 h-4"  />;
-        description: 'Success stories and results'};
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <BarChart3 className="w-4 h-4"  />,
+        description: 'Success stories and results'},
       {
-        label: 'White Papers';
-        href: '/white-papers';
-        icon: <FileText className="w-4 h-4"  />;
-        description: 'In-depth research and analysis'};
+        label: 'White Papers',
+        href: '/white-papers',
+        icon: <FileText className="w-4 h-4"  />,
+        description: 'In-depth research and analysis'},
       {
-        label: 'Webinars';
-        href: '/webinars';
-        icon: <Video className="w-4 h-4"  />;
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Video className="w-4 h-4"  />,
         description: 'Educational webinars and events'}
     ]}
 ],
@@ -234,7 +234,7 @@ const UltraFuturisticNavigation20o46: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (navRef.current && !navRef.current.contains(event.target as Node)) {
         setActiveDropdown(null)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Close mobile menu on route change,
@@ -242,7 +242,7 @@ const UltraFuturisticNavigation20o46: React.FC = () => {
     setIsOpen(false),
     setActiveDropdown(null)}, [router.asPath]),
   const handleDropdownToggle = (label: string) => {
-    setActiveDropdown(activeDropdown === label ? null : label)};
+    setActiveDropdown(activeDropdown === label ? null : label)},
   const renderDropdown = (items: NavigationItem[], isMobile: boolean = false) => (
     <AnimatePresence>,
       {items.map((item) => (
@@ -472,5 +472,5 @@ const UltraFuturisticNavigation20o46: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraFuturisticNavigation20o46;
+    </nav>)},
+export default UltraFuturisticNavigation20o46,

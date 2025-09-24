@@ -1,5 +1,5 @@
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -25,37 +25,38 @@ import {
   Github,
   Youtube,
   Instagram} from 'lucide-react',import {
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  Microscope;
-  Zap;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  BarChart3;
-  Twitter;
-  Linkedin;
-  Github;
-  Youtube;
-  Instagram;} from 'lucide-react',import {
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Zap,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,
+  Instagram,} from 'lucide-react',
+import {
   Phone, Mail, MapPin, Star, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, Microscope,
   Zap, Globe, Database, Lock, Cloud, BarChart3,
   Twitter, Linkedin, Github, Youtube, Instagram} from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
     title: 'AI & Consciousness',
@@ -64,10 +65,10 @@ const serviceCategories = [
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -76,132 +77,132 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>}
     return this.props.children}
 }
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  Microscope;
-  Zap;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  BarChart3;
-  Twitter;
-  Linkedin;
-  Github;
-  Youtube;
-  Instagram;} from 'lucide-react',import {
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Zap,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,
+  Instagram,} from 'lucide-react',import {
   Phone, Mail, MapPin, Star, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, Microscope,
   Zap, Globe, Database, Lock, Cloud, BarChart3,
   Twitter, Linkedin, Github, Youtube, Instagram,
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'},  website: 'https://ziontechgroup && ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: 'AI & Consciousness';
-    icon: Brain;
+    title: 'AI & Consciousness',
+    icon: Brain,
     services: [
       {
-        name: 'AI Consciousness Evolution';
-        href: '/ai-consciousness-evolution-2029';
-      };
-      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' };
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-2029'
+      },
+      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
       {
-        name: 'Multimodal AI Orchestrator';
-        href: '/multimodal-ai-orchestrator';
-      };
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' };
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' };
-    ];
-  },  {      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' };
-      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' };
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' };
+        name: 'Multimodal AI Orchestrator',
+        href: '/multimodal-ai-orchestrator'
+      },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' },
+    ],
+  },  {      { name: 'Quantum AI Fusion', href: '/quantum-ai-fusion' },
+      { name: 'Multimodal AI Orchestrator', href: '/multimodal-ai-orchestrator' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem' },
       { name: 'AI Ethics & Governance', href: '/ai-ethics-governance' }
-    ]};
+    ]},
   {
-    title: 'Quantum & Emerging Tech';
-    icon: Atom;
+    title: 'Quantum & Emerging Tech',
+    icon: Atom,
     services: [
-      { name: 'Space Mining Platform', href: '/space-mining-platform' };
-      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' };
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' };
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' };
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' };
-    ];
+      { name: 'Space Mining Platform', href: '/space-mining-platform' },
+      { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing' },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' },
+    ],
   },  {
-    title: 'Enterprise IT';
-    icon: Shield;
+    title: 'Enterprise IT',
+    icon: Shield,
     services: [      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai' }
-    ]};
+    ]},
   {
-    title: 'Enterprise IT';
-    icon: Shield;
+    title: 'Enterprise IT',
+    icon: Shield,
     services: [
       {
-        name: 'Quantum Cloud Infrastructure';
-        href: '/quantum-cloud-infrastructure';
-      };
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure'
+      },
       {
-        name: 'Edge Computing Orchestrator';
-        href: '/edge-computing-orchestrator';
-      };
+        name: 'Edge Computing Orchestrator',
+        href: '/edge-computing-orchestrator'
+      },
       {
-        name: 'Zero Trust Security Platform';
-        href: '/zero-trust-security-platform';
-      };
+        name: 'Zero Trust Security Platform',
+        href: '/zero-trust-security-platform'
+      },
       {
-        name: 'Blockchain Enterprise Platform';
-        href: '/blockchain-enterprise-platform';
-      };
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' };
-    ];
-  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' };
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' };
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' };
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' };
+        name: 'Blockchain Enterprise Platform',
+        href: '/blockchain-enterprise-platform'
+      },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops' },
+    ],
+  },  {      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure' },
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestrator' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-enterprise-platform' },
       { name: 'AI-Powered DevOps', href: '/ai-powered-devops' }
-    ]};
+    ]},
   {
-    title: 'Micro SAAS';
-    icon: Target;
+    title: 'Micro SAAS',
+    icon: Target,
     services: [
-      { name: 'AI Content Factory Pro', href: '/ai-content-factory' };
-      { name: 'Quantum CRM Suite', href: '/quantum-crm' };
-      { name: 'CyberShield Pro', href: '/cyber-shield-pro' };
-      { name: 'DataVault Hub', href: '/data-vault-hub' };
+      { name: 'AI Content Factory Pro', href: '/ai-content-factory' },
+      { name: 'Quantum CRM Suite', href: '/quantum-crm' },
+      { name: 'CyberShield Pro', href: '/cyber-shield-pro' },
+      { name: 'DataVault Hub', href: '/data-vault-hub' },
       { name: 'DevOps Automation Studio', href: '/devops-automation-studio' }
     ],
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  Microscope;
-  Zap;
-  Globe;
-  Database;
-  Lock;
-  Cloud;
-  BarChart3;
-  Twitter;
-  Linkedin;
-  Github;
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Zap,
+  Globe,
+  Database,
+  Lock,
+  Cloud,
+  BarChart3,
+  Twitter,
+  Linkedin,
+  Github,
 const companyLinks = [
   { name: 'About Us', href: '/about' }
   { name: 'Careers', href: '/careers' }
@@ -625,9 +626,9 @@ const EnhancedFooter2025: React.FC = () => {
         </div>,
       </div>,
     </footer>)}
-};
-export default EnhancedFooter2025;
-export default EnhancedFooter2025;
-export default EnhancedFooter2025;
-export default EnhancedFooter2025;
+},
+export default EnhancedFooter2025,
+export default EnhancedFooter2025,
+export default EnhancedFooter2025,
+export default EnhancedFooter2025,
 }}}}}}))))))))))

@@ -1,34 +1,34 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  PlusIcon;
-  XMarkIcon;
-  ChatBubbleLeftRightIcon;
-  PhoneIcon;
-  EnvelopeIcon;
+  PlusIcon,
+  XMarkIcon,
+  ChatBubbleLeftRightIcon,
+  PhoneIcon,
+  EnvelopeIcon,
 } from '@heroicons/react/24/outline',
 const FloatingActionButton = ({ className = '' }) => {
   const [isOpen, setIsOpen] = useState(false),
   const toggleMenu = () => setIsOpen(!isOpen),
   const actionItems = [
     {
-      icon: ChatBubbleLeftRightIcon;
-      label: 'Live Chat';
-      action: () => window.open('https://ziontechgroup.com/chat', '_blank');
-      color: 'bg-green-50o0 hover:bg-green-60o0';
-    };
+      icon: ChatBubbleLeftRightIcon,
+      label: 'Live Chat',
+      action: () => window.open('https://ziontechgroup.com/chat_blank'),
+      color: 'bg-green-50o0 hover:bg-green-60o0'
+    },
     {
-      icon: PhoneIcon;
-      label: 'Call Us';
-      action: () => window.open('tel:+1-555-0o123', '_self');
-      color: 'bg-blue-50o0 hover:bg-blue-60o0';
-    };
+      icon: PhoneIcon,
+      label: 'Call Us',
+      action: () => window.open('tel:+1-555-0o123_self'),
+      color: 'bg-blue-50o0 hover:bg-blue-60o0'
+    },
     {
-      icon: EnvelopeIcon;
-      label: 'Email';
-      action: () => window.open('mailto:info@ziontechgroup.com', '_self');
-      color: 'bg-purple-50o0 hover:bg-purple-60o0';
-    };
+      icon: EnvelopeIcon,
+      label: 'Email',
+      action: () => window.open('mailto:info@ziontechgroup.com_self'),
+      color: 'bg-purple-50o0 hover:bg-purple-60o0'
+    },
   ],
   return (
     <div className={`fixed bottom-6 right-6 z-50 ${className}`}>,
@@ -94,5 +94,5 @@ const FloatingActionButton = ({ className = '' }) => {
             </motion.div>)}
         </AnimatePresence>,
       </motion.button>,
-    </div>)};
-export default FloatingActionButton;
+    </div>)},
+export default FloatingActionButton,

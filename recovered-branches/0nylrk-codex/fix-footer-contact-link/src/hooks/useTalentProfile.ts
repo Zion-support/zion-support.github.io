@@ -40,8 +40,8 @@ export function useTalentProfile(id: string | undefined) {
         console.error("Error fetching profile:", err),
         setError("Failed to load profile data"),
         setIsLoading(false)}
-    };
+    },
     fetchProfile()}, [id]),
-  return { profile, isLoading, error, mockProfileData };
+  return { profile, isLoading, error, mockProfileData },
 }
 ,

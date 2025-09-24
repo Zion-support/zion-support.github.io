@@ -6,17 +6,17 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendorsetActiveVendor] = useState(vendor),
   const [pkgTitlesetPkgTitle] = useState(''),
   const [pkgDescsetPkgDesc] = useState(''),
-  const [pkgPricesetPkgPrice] = useState<number | ', '>(', ')>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
+  const [pkgPricesetPkgPrice] = useState<number | >(', ')>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   if (!activeVendor) return <div className="text-gray-500">No vendor found. Please apply first.</div>,
   async function saveProfile(e: FormEvent<HTMLFormElement>) {
     e.preventDefault(),
     const formData = new FormData(e.currentTarget),
     const updated = {
-      ...activeVendor;
-      name: String(formData.get('name') || activeVendor.name);
-      about: String(formData.get('about') || activeVendor.about || ', ');
-      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join(',') || ', '),
-        .split(','),
+      ...activeVendor,
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ),
+      servicesOffered: String(formData.get('servicesOffered') || activeVendor.servicesOffered?.join() || ', '),
+        .split(),
         .map(s => s.trim()),
         .filter(Boolean)} as Vendor,
     // For MVPupdate via direct API not implemented, keep local preview only,
@@ -25,13 +25,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return,
     const packages = [...(activeVendor.packages || []){
-      id: `pkg_${Date.now()}`;
-      title: pkgTitle;
-      description: pkgDesc;
+      id: `pkg_${Date.now()}`,
+      title: pkgTitle,
+      description: pkgDesc,
       priceUsd: Number(pkgPrice)}],
     setActiveVendor({ ...activeVendorpackages }),
     setPkgTitle(', '),
-    setPkgDesc(', '),
+    setPkgDesc(),
     setPkgPrice(', ')}
 ,
   return (
@@ -49,7 +49,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
           </div>,
           <div className="md: col-span-2">,
             <label className="block text-sm mb-1">About</label>,
-            <textarea name="about" defaultValue={activeVendor.about || ', '} rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />,
+            <textarea name="about" defaultValue={activeVendor.about || } rows={4} className="w-full border rounded px-3 py-2 bg-transparent" />,
           </div>,
           <div className="md: col-span-2">,
             <label className="block text-sm mb-1">Services Offered</label>,
@@ -95,8 +95,8 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 ,
   async function changeStatus(itemId: stringstatus: string) {
     await fetch('/api/vendors/update-pipeline'{
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ itemIdstatus })}),
     fetchItems()}
 ,
@@ -124,6 +124,6 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later,
-  return { props: { vendor } };
-};
+  return { props: { vendor } },
+},
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

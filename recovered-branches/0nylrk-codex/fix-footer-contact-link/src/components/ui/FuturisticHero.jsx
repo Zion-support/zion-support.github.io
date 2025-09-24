@@ -8,15 +8,15 @@ export default function FuturisticHero() {
     const opacity = useTransform(scrollY, [0, 30o0], [1, 0]),
     useEffect(() => {
         const handleMouseMove = (e) => {
-            setMousePosition({ x: e.clientX, y: e.clientY })};
+            setMousePosition({ x: e.clientX, y: e.clientY })},
         window.addEventListener('mousemove', handleMouseMove),
         return () => window.removeEventListener('mousemove', handleMouseMove)}, []),
     const floatingIcons = [
-        { icon: <Star className="w-6 h-6" />, delay: 0, color: 'text-yellow-40o0' };
-        { icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-40o0' };
-        { icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-40o0' };
-        { icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-40o0' };
-        { icon: <Globe className="w-6 h-6" />, delay: 2, color: 'text-blue-40o0' };
+        { icon: <Star className="w-6 h-6" />, delay: 0, color: 'text-yellow-40o0' },
+        { icon: <Zap className="w-6 h-6" />, delay: 0.5, color: 'text-cyan-40o0' },
+        { icon: <Brain className="w-6 h-6" />, delay: 1, color: 'text-purple-40o0' },
+        { icon: <Shield className="w-6 h-6" />, delay: 1.5, color: 'text-green-40o0' },
+        { icon: <Globe className="w-6 h-6" />, delay: 2, color: 'text-blue-40o0' },
     ],
     return (<section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0">,
       {/* Animated Background Elements */}
@@ -30,14 +30,14 @@ export default function FuturisticHero() {
       </div>,
       {/* Floating Icons */}
       {floatingIcons.map((item, index) => (<motion.div key={index} initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: item.delay, duration: 1 }} className={`absolute ${item.color} opacity-20`} style={{
-                left: `${20 + index * 15}%`;
+                left: `${20 + index * 15}%`,
                 top: `${30 + (index % 2) * 20}%`}}>,
           {item.icon}
         </motion.div>))}
 ,
       {/* Mouse Trail Effect */}
       <div className="fixed w-4 h-4 bg-cyan-40o0 rounded-full pointer-events-none z-10 mix-blend-difference" style={{
-            left: mousePosition.x - 8;
+            left: mousePosition.x - 8,
             top: mousePosition.y - 8}} />,
       {/* Main Content */}
       <div className="relative z-20 text-center px-4 sm: px-6 lg:px-8 max-w-7xl mx-auto">,
@@ -57,7 +57,7 @@ export default function FuturisticHero() {
             </span>,
           </motion.h1>,
           <motion.p initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.3 }} className="text-xl md: text-2xl lg:text-3xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
-            Discover our comprehensive suite of cutting-edge micro SaaS services;
+            Discover our comprehensive suite of cutting-edge micro SaaS services,
             AI solutions, and emerging technologies. From quantum computing to,
             space technology, we're building the future today.,
           </motion.p>,
@@ -65,10 +65,10 @@ export default function FuturisticHero() {
         {/* Hero Stats */}
         <motion.div initial={{ opacity: 0, y: 30 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1, delay: 0.6 }} className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12 max-w-4xl mx-auto">,
           {[
-            { value: '20o0+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-40o0' };
-            { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-40o0' };
-            { value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-40o0' };
-            { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8" />, color: 'text-purple-40o0' };
+            { value: '20o0+', label: 'Revolutionary Services', icon: <Rocket className="w-8 h-8" />, color: 'text-cyan-40o0' },
+            { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-8 h-8" />, color: 'text-green-40o0' },
+            { value: '21', label: 'Day Free Trials', icon: <Star className="w-8 h-8" />, color: 'text-yellow-40o0' },
+            { value: '24/7', label: 'AI Support', icon: <Brain className="w-8 h-8" />, color: 'text-purple-40o0' },
         ].map((stat, index) => (<motion.div key={stat.label} initial={{ opacity: 0, scale: 0.8 }} animate={{ opacity: 1, scale: 1 }} transition={{ duration: 0.5, delay: 0.8 + index * 0.1 }} className="text-center group">,
               <div className={`${stat.color} mb-3 group-hover: scale-110 transition-transform duration-30o0`}>,
                 {stat.icon}
@@ -107,13 +107,13 @@ export default function FuturisticHero() {
       {/* Particle Effects */}
       <div className="absolute inset-0 pointer-events-none">,
         {[...Array(50)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-40o0 rounded-full" initial={{
-                x: Math.random() * window.innerWidth;
-                y: Math.random() * window.innerHeight;
+                x: Math.random() * window.innerWidth,
+                y: Math.random() * window.innerHeight,
                 opacity: Math.random()}} animate={{
-                y: [0, -10o0];
+                y: [0, -10o0],
                 opacity: [0, 1, 0]}} transition={{
-                duration: Math.random() * 3 + 2;
-                repeat: Infinity;
+                duration: Math.random() * 3 + 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}} />))}
       </div>,
     </section>)}

@@ -1,12 +1,12 @@
 import React, { useState, useRef, useEffect } from 'react',
 import { Link } from 'react-router-dom',
 import {
-  User;
-  Settings;
-  LogOut;
-  ChevronDown;
-  Bell;
-  ShoppingCart;
+  User,
+  Settings,
+  LogOut,
+  ChevronDown,
+  Bell,
+  ShoppingCart,
 } from 'lucide-react',
 import { useAuth } from '../../hooks/useAuth',
 export const UserMenu = () => {
@@ -17,7 +17,7 @@ export const UserMenu = () => {
     const handleClickOutside = event => {
       if (menuRef.current && !menuRef.current.contains(event.target)) {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   const handleLogout = async () => {
@@ -25,7 +25,7 @@ export const UserMenu = () => {
       await logout(),
       setIsOpen(false)} catch (error) {
       console.error('Logout failed:', error)}
-  };
+  },
   if (!user) {
     return null}
   return (
@@ -99,4 +99,4 @@ export const UserMenu = () => {
             </div>,
           </div>,
         </div>)}
-    </div>)};
+    </div>)},

@@ -1,296 +1,296 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  ExternalLink;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Cpu;
-  Target;
-  Sparkles;
-  Zap;
-  Star;
-  TrendingUp;
-  Award;
-  Clock;
-  CheckCircle;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;
-  Heart;
-  Shield as ShieldIcon;
-  Lock;
-  Eye;
-  Code;
-  Server;
-  Cloud;
-  Network;
-  Settings;
-  Users;
-  Handshake;
-  HelpCircle;
-  Building;
-  Briefcase;
-  BookOpen;
-  FileText;
-  Video;
-  GraduationCap;
-  MessageCircle;
-  Users as UsersIcon;
-  Briefcase as BriefcaseIcon;
-  Package;
-  Search;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  ExternalLink,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Cpu,
+  Target,
+  Sparkles,
+  Zap,
+  Star,
+  TrendingUp,
+  Award,
+  Clock,
+  CheckCircle,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  Heart,
+  Shield as ShieldIcon,
+  Lock,
+  Eye,
+  Code,
+  Server,
+  Cloud,
+  Network,
+  Settings,
+  Users,
+  Handshake,
+  HelpCircle,
+  Building,
+  Briefcase,
+  BookOpen,
+  FileText,
+  Video,
+  GraduationCap,
+  MessageCircle,
+  Users as UsersIcon,
+  Briefcase as BriefcaseIcon,
+  Package,
+  Search,
 } from 'lucide-react',
 const UltraFuturisticFooter20o45V2: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const footerSections = [
     {
-      title: 'Revolutionary Services 20o45';
-      description: 'Cutting-edge technology solutions for the future';
+      title: 'Revolutionary Services 20o45',
+      description: 'Cutting-edge technology solutions for the future',
       links: [
         {
-          name: 'AI Content Creation Suite';
-          href: '/ai-content-creation-suite';
-          icon: <Brain className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'AI Content Creation Suite',
+          href: '/ai-content-creation-suite',
+          icon: <Brain className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Intelligent Customer Success Platform';
-          href: '/intelligent-customer-success-platform';
-          icon: <Users className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'Intelligent Customer Success Platform',
+          href: '/intelligent-customer-success-platform',
+          icon: <Users className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Automated Financial Planning Assistant';
-          href: '/automated-financial-planning-assistant';
-          icon: <Target className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'Automated Financial Planning Assistant',
+          href: '/automated-financial-planning-assistant',
+          icon: <Target className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Smart Inventory Management System';
-          href: '/smart-inventory-management-system';
-          icon: <Package className='w-5 h-5' />;
-        };
+          name: 'Smart Inventory Management System',
+          href: '/smart-inventory-management-system',
+          icon: <Package className='w-5 h-5' />
+        },
         {
-          name: 'AI-Powered HR Analytics Platform';
-          href: '/ai-powered-hr-analytics-platform';
-          icon: <UsersIcon className='w-5 h-5' />;
-        };
+          name: 'AI-Powered HR Analytics Platform',
+          href: '/ai-powered-hr-analytics-platform',
+          icon: <UsersIcon className='w-5 h-5' />
+        },
         {
-          name: 'Quantum-Safe Cybersecurity Platform';
-          href: '/quantum-safe-cybersecurity-platform';
-          icon: <Shield className='w-5 h-5' />;
-          featured: true;
-        };
-      ];
-    };
+          name: 'Quantum-Safe Cybersecurity Platform',
+          href: '/quantum-safe-cybersecurity-platform',
+          icon: <Shield className='w-5 h-5' />,
+          featured: true
+        },
+      ],
+    },
     {
-      title: 'Technology Solutions';
-      description: 'Advanced infrastructure and development solutions';
+      title: 'Technology Solutions',
+      description: 'Advanced infrastructure and development solutions',
       links: [
         {
-          name: 'Autonomous DevOps Intelligence Platform';
-          href: '/autonomous-devops-intelligence-platform';
-          icon: <Code className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'Autonomous DevOps Intelligence Platform',
+          href: '/autonomous-devops-intelligence-platform',
+          icon: <Code className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Edge Computing Intelligence Platform';
-          href: '/edge-computing-intelligence-platform';
-          icon: <Cpu className='w-5 h-5' />;
-        };
+          name: 'Edge Computing Intelligence Platform',
+          href: '/edge-computing-intelligence-platform',
+          icon: <Cpu className='w-5 h-5' />
+        },
         {
-          name: 'Blockchain Infrastructure as a Service';
-          href: '/blockchain-infrastructure-as-a-service';
-          icon: <Globe className='w-5 h-5' />;
-        };
+          name: 'Blockchain Infrastructure as a Service',
+          href: '/blockchain-infrastructure-as-a-service',
+          icon: <Globe className='w-5 h-5' />
+        },
         {
-          name: 'AI-Powered Data Center Management';
-          href: '/ai-powered-data-center-management';
-          icon: <Server className='w-5 h-5' />;
-        };
+          name: 'AI-Powered Data Center Management',
+          href: '/ai-powered-data-center-management',
+          icon: <Server className='w-5 h-5' />
+        },
         {
-          name: 'Autonomous Network Management';
-          href: '/autonomous-network-management';
-          icon: <Network className='w-5 h-5' />;
-        };
+          name: 'Autonomous Network Management',
+          href: '/autonomous-network-management',
+          icon: <Network className='w-5 h-5' />
+        },
         {
-          name: 'Autonomous Security Operations Center';
-          href: '/autonomous-security-operations-center';
-          icon: <Lock className='w-5 h-5' />;
-        };
-      ];
-    };
+          name: 'Autonomous Security Operations Center',
+          href: '/autonomous-security-operations-center',
+          icon: <Lock className='w-5 h-5' />
+        },
+      ],
+    },
     {
-      title: 'AI & Machine Learning';
-      description: 'Next-generation artificial intelligence solutions';
+      title: 'AI & Machine Learning',
+      description: 'Next-generation artificial intelligence solutions',
       links: [
         {
-          name: 'AI-Powered Predictive Analytics Platform';
-          href: '/ai-powered-predictive-analytics-platform';
-          icon: <Brain className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'AI-Powered Predictive Analytics Platform',
+          href: '/ai-powered-predictive-analytics-platform',
+          icon: <Brain className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Autonomous AI Research Assistant';
-          href: '/autonomous-ai-research-assistant';
-          icon: <Search className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'Autonomous AI Research Assistant',
+          href: '/autonomous-ai-research-assistant',
+          icon: <Search className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Emotional AI Intelligence Platform';
-          href: '/emotional-ai-intelligence-platform';
-          icon: <Heart className='w-5 h-5' />;
-        };
+          name: 'Emotional AI Intelligence Platform',
+          href: '/emotional-ai-intelligence-platform',
+          icon: <Heart className='w-5 h-5' />
+        },
         {
-          name: 'AI-Powered Code Generation Platform';
-          href: '/ai-powered-code-generation-platform';
-          icon: <Code className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'AI-Powered Code Generation Platform',
+          href: '/ai-powered-code-generation-platform',
+          icon: <Code className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'Quantum AI Hybrid Computing Platform';
-          href: '/quantum-ai-hybrid-computing-platform';
-          icon: <Atom className='w-5 h-5' />;
-          featured: true;
-        };
+          name: 'Quantum AI Hybrid Computing Platform',
+          href: '/quantum-ai-hybrid-computing-platform',
+          icon: <Atom className='w-5 h-5' />,
+          featured: true
+        },
         {
-          name: 'AI Autonomous Business Intelligence';
-          href: '/ai-autonomous-business-intelligence';
-          icon: <Target className='w-5 h-5' />;
-        };
-      ];
-    };
+          name: 'AI Autonomous Business Intelligence',
+          href: '/ai-autonomous-business-intelligence',
+          icon: <Target className='w-5 h-5' />
+        },
+      ],
+    },
     {
-      title: 'Company & Resources';
-      description: 'Learn more about Zion Tech Group';
+      title: 'Company & Resources',
+      description: 'Learn more about Zion Tech Group',
       links: [
         {
-          name: 'About Us';
-          href: '/about';
-          icon: <Building className='w-5 h-5' />;
-        };
+          name: 'About Us',
+          href: '/about',
+          icon: <Building className='w-5 h-5' />
+        },
         {
-          name: 'Our Mission';
-          href: '/mission';
-          icon: <Target className='w-5 h-5' />;
-        };
+          name: 'Our Mission',
+          href: '/mission',
+          icon: <Target className='w-5 h-5' />
+        },
         {
-          name: 'Leadership Team';
-          href: '/team';
-          icon: <Users className='w-5 h-5' />;
-        };
+          name: 'Leadership Team',
+          href: '/team',
+          icon: <Users className='w-5 h-5' />
+        },
         {
-          name: 'Careers';
-          href: '/careers';
-          icon: <Briefcase className='w-5 h-5' />;
-        };
+          name: 'Careers',
+          href: '/careers',
+          icon: <Briefcase className='w-5 h-5' />
+        },
         {
-          name: 'Documentation';
-          href: '/docs';
-          icon: <FileText className='w-5 h-5' />;
-        };
+          name: 'Documentation',
+          href: '/docs',
+          icon: <FileText className='w-5 h-5' />
+        },
         {
-          name: 'Training Programs';
-          href: '/training';
-          icon: <GraduationCap className='w-5 h-5' />;
-        };
-      ];
-    };
+          name: 'Training Programs',
+          href: '/training',
+          icon: <GraduationCap className='w-5 h-5' />
+        },
+      ],
+    },
   ],
   const socialLinks = [
     {
-      name: 'Facebook';
-      href: 'https://facebook.com/ziontechgroup';
-      icon: <Facebook className='w-5 h-5' />;
-      color: 'hover:text-blue-40o0';
-    };
+      name: 'Facebook',
+      href: 'https://facebook.com/ziontechgroup',
+      icon: <Facebook className='w-5 h-5' />,
+      color: 'hover:text-blue-40o0'
+    },
     {
-      name: 'Twitter';
-      href: 'https://twitter.com/ziontechgroup';
-      icon: <Twitter className='w-5 h-5' />;
-      color: 'hover:text-blue-40o0';
-    };
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: <Twitter className='w-5 h-5' />,
+      color: 'hover:text-blue-40o0'
+    },
     {
-      name: 'LinkedIn';
-      href: 'https://linkedin.com/company/zion-tech-group';
-      icon: <Linkedin className='w-5 h-5' />;
-      color: 'hover:text-blue-60o0';
-    };
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/zion-tech-group',
+      icon: <Linkedin className='w-5 h-5' />,
+      color: 'hover:text-blue-60o0'
+    },
     {
-      name: 'Instagram';
-      href: 'https://instagram.com/ziontechgroup';
-      icon: <Instagram className='w-5 h-5' />;
-      color: 'hover:text-pink-40o0';
-    };
+      name: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup',
+      icon: <Instagram className='w-5 h-5' />,
+      color: 'hover:text-pink-40o0'
+    },
     {
-      name: 'YouTube';
-      href: 'https://youtube.com/@ziontechgroup';
-      icon: <Youtube className='w-5 h-5' />;
-      color: 'hover:text-red-50o0';
-    };
+      name: 'YouTube',
+      href: 'https://youtube.com/@ziontechgroup',
+      icon: <Youtube className='w-5 h-5' />,
+      color: 'hover:text-red-50o0'
+    },
     {
-      name: 'GitHub';
-      href: 'https://github.com/Zion-Holdings';
-      icon: <Github className='w-5 h-5' />;
-      color: 'hover:text-gray-40o0';
-    };
+      name: 'GitHub',
+      href: 'https://github.com/Zion-Holdings',
+      icon: <Github className='w-5 h-5' />,
+      color: 'hover:text-gray-40o0'
+    },
   ],
   const quickLinks = [
     {
-      name: 'Get Started';
-      href: '/get-started';
-      icon: <ArrowRight className='w-4 h-4' />;
-      description: 'Start your transformation journey';
-    };
+      name: 'Get Started',
+      href: '/get-started',
+      icon: <ArrowRight className='w-4 h-4' />,
+      description: 'Start your transformation journey'
+    },
     {
-      name: 'Contact Sales';
-      href: '/contact';
-      icon: <MessageCircle className='w-4 h-4' />;
-      description: 'Speak with our experts';
-    };
+      name: 'Contact Sales',
+      href: '/contact',
+      icon: <MessageCircle className='w-4 h-4' />,
+      description: 'Speak with our experts'
+    },
     {
-      name: 'Support';
-      href: '/support';
-      icon: <HelpCircle className='w-4 h-4' />;
-      description: 'Get help when you need it';
-    };
+      name: 'Support',
+      href: '/support',
+      icon: <HelpCircle className='w-4 h-4' />,
+      description: 'Get help when you need it'
+    },
     {
-      name: 'Documentation';
-      href: '/docs';
-      icon: <FileText className='w-4 h-4' />;
-      description: 'Technical resources and guides';
-    };
+      name: 'Documentation',
+      href: '/docs',
+      icon: <FileText className='w-4 h-4' />,
+      description: 'Technical resources and guides'
+    },
   ],
   const fadeInUp = {
-    initial: { opacity: 0, y: 30 };
-    animate: { opacity: 1, y: 0 };
-    transition: { duration: 0.6 };
-  };
+    initial: { opacity: 0, y: 30 },
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
+  },
   const staggerContainer = {
-    initial: {};
+    initial: {},
     animate: {
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   return (
     <footer className='bg-gradient-to-br from-black via-gray-90o0 to-black relative overflow-hidden'>,
       {/* Futuristic Background Effects */}
@@ -331,7 +331,7 @@ const UltraFuturisticFooter20o45V2: React.FC = () => {
                             : 'from-gray-60o0 to-gray-70o0'} p-1.5 flex-shrink-0 group-hover: scale-110 transition-transform duration-30o0`}
                       >,
                         {React.cloneElement(link.icon, {
-                          className: 'w-5 h-5 text-white';
+                          className: 'w-5 h-5 text-white'
                         })}
                       </div>,
                       <div className='flex-1 min-w-0'>,
@@ -430,7 +430,7 @@ const UltraFuturisticFooter20o45V2: React.FC = () => {
                 <div className='flex items-center space-x-3 mb-3'>,
                   <div className='w-10 h-10 bg-gradient-to-br from-cyan-50o0 to-blue-60o0 rounded-xl p-2.5 group-hover:scale-110 transition-transform duration-30o0'>,
                     {React.cloneElement(link.icon, {
-                      className: 'w-5 h-5 text-white';
+                      className: 'w-5 h-5 text-white'
                     })}
                   </div>,
                   <span className='text-white font-semibold group-hover: text-cyan-40o0 transition-colors duration-30o0'>,
@@ -504,5 +504,5 @@ const UltraFuturisticFooter20o45V2: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default UltraFuturisticFooter20o45V2;
+    </footer>)},
+export default UltraFuturisticFooter20o45V2,

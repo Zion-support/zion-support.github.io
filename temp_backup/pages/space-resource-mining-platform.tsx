@@ -1,50 +1,44 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Rocket, Zap, Target, Shield, TrendingUp, Globe;
-  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor;
+  Rocket, Zap, Target, Shield, TrendingUp, Globe,
+  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor,
   Award, MessageCircle, Cpu} from 'lucide-react',
 export default function SpaceResourceMiningPlatform() {
   const features = [
     {
-      icon: <Rocket className="w-6 h-6"  />;
-      title: 'Space Mining Operations';
-      description: 'Advanced space mining operations with autonomous spacecraft and resource extraction systems.'};
+      icon: <Rocket className="w-6 h-6"  />,
+      title: 'Space Mining Operations',
+      description: 'Advanced space mining operations with autonomous spacecraft and resource extraction systems.'},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: 'Resource Mapping';
-      description: 'AI-powered resource mapping and identification across asteroids, moons, and planetary bodies.'};
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Resource Mapping',
+      description: 'AI-powered resource mapping and identification across asteroids, moons, and planetary bodies.'},
     {
-      icon: <Target className="w-6 h-6"  />;
-      title: 'Autonomous Extraction';
-      description: 'Fully autonomous resource extraction with robotic systems and AI-driven operations.'};
+      icon: <Target className="w-6 h-6"  />,
+      title: 'Autonomous Extraction',
+      description: 'Fully autonomous resource extraction with robotic systems and AI-driven operations.'},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: 'Safety Protocols';
-      description: 'Advanced safety protocols and risk management for space mining operations.'};
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Safety Protocols',
+      description: 'Advanced safety protocols and risk management for space mining operations.'},
     {
-      icon: <TrendingUp className="w-6 h-6"  />;
-      title: 'Resource Processing';
-      description: 'In-space resource processing and refinement for immediate use or transport to Earth.'};
+      icon: <TrendingUp className="w-6 h-6"  />,
+      title: 'Resource Processing',
+      description: 'In-space resource processing and refinement for immediate use or transport to Earth.'},
     {
-      icon: <Globe className="w-6 h-6"  />;
-      title: 'Logistics Management';
+      icon: <Globe className="w-6 h-6"  />,
+      title: 'Logistics Management',
       description: 'Comprehensive logistics management for space mining operations and resource transportation.'}
   ],
   const benefits = [
-    'Access unlimited space resources';
-    'Reduce Earth resource dependency by 80%';
-    'Enable space colonization by 20o30';
-    'Create new economic opportunities';
-    'Accelerate space exploration by 50o0%';
-    'Enable sustainable resource extraction';
-    'Scale space operations globally';
-    'Future-proof resource security'],
+    'Access unlimited space resourcesReduce Earth resource dependency by 80%',
+    'Enable space colonization by 20o30Create new economic opportunities',
+    'Accelerate space exploration by 50o0%Enable sustainable resource extraction',
+    'Scale space operations globallyFuture-proof resource security'],
   const useCases = [
-    'Asteroid Mining', 'Lunar Operations', 'Planetary Mining';
-    'Resource Mapping', 'Autonomous Extraction', 'Space Logistics';
-    'Resource Processing', 'Safety Management', 'Colonization Support';
-    'Economic Development', 'Space Infrastructure', 'Resource Security'],
+    'Asteroid MiningLunar Operations', 'Planetary MiningResource Mapping', 'Autonomous ExtractionSpace Logistics',
+    'Resource ProcessingSafety Management', 'Colonization SupportEconomic Development', 'Space InfrastructureResource Security'],
   return (
     <>,
       <Head>,
@@ -76,7 +70,7 @@ export default function SpaceResourceMiningPlatform() {
                 Space Resource Mining Platform,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Pioneer space resource mining with AI-powered operations;
+                Pioneer space resource mining with AI-powered operations,
                 autonomous extraction, and resource mapping across the solar system.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,

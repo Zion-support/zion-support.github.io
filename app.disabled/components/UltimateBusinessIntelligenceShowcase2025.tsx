@@ -5,98 +5,92 @@ const UltimateBusinessIntelligenceShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const content = [
     {
-      id: 'ultimate-business-intelligence-revolution';
+      id: 'ultimate-business-intelligence-revolution',
       title:,
-        'AI 20o25: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,0o00% ROI';
+        'AI 20o25: The Ultimate Business Intelligence Revolution - Ultimate Breakthrough Guide to 30,0o00% ROI',
       description:,
-        'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.';
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
-      type: 'Blog Post';
-      category: 'blog';
+        'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'blog',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$750B+';
-        accuracy: '99.99%';
-        speed: '5,0o00% faster';
-      };
-      readingTime: '35 min read';
-      featured: true;
+        roi: '30,0o00%',
+        savings: '$750B+',
+        accuracy: '99.99%',
+        speed: '5,0o00% faster',
+      },
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Business Intelligence';
-        'ROI';
-        'Fortune 50o0';
-        '30,0o00% ROI';
-      ];
-    };
+        'AI RevolutionBusiness Intelligence',
+        'ROIFortune 50o0',
+        '30,0o00% ROI',
+      ],
+    },
     {
-      id: 'fortune-50o0-business-intelligence-success';
+      id: 'fortune-50o0-business-intelligence-success',
       title:,
-        'Fortune 50o0 Ultimate Business Intelligence Success: $750B Annual Savings - 30,0o00% ROI Success Story';
+        'Fortune 50o0 Ultimate Business Intelligence Success: $750B Annual Savings - 30,0o00% ROI Success Story',
       description:,
-        'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.';
-      url: '/case-studies/fortune-50o0-ultimate-business-intelligence-30o000-roi-success-story';
-      type: 'Case Study';
-      category: 'case-study';
+        'How a $15.2B manufacturing giant achieved unprecedented business intelligence transformation with AI-powered analytics and decision-making systems.',
+      url: '/case-studies/fortune-50o0-ultimate-business-intelligence-30o000-roi-success-story',
+      type: 'Case Study',
+      category: 'case-study',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$750B';
-        company: '$15.2B';
-        timeline: '18 months';
-      };
-      readingTime: '25 min read';
-      featured: true;
+        roi: '30,0o00%',
+        savings: '$750B',
+        company: '$15.2B',
+        timeline: '18 months'
+      },
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'Success Story';
-        '30,0o00% ROI';
-        'Manufacturing';
-        'Case Study';
-      ];
-    };
+        'Fortune 50o0Success Story',
+        '30,0o00% ROIManufacturing',
+        'Case Study',
+      ],
+    },
     {
-      id: 'business-intelligence-implementation-guide';
+      id: 'business-intelligence-implementation-guide',
       title:,
-        'AI 20o25 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,0o00% ROI';
+        'AI 20o25 Ultimate Business Intelligence Implementation Guide: Complete Roadmap to 30,0o00% ROI',
       description:,
-        'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.';
-      url: '/resources/ai-20o25-ultimate-business-intelligence-implementation-guide';
-      type: 'Implementation Guide';
-      category: 'resource';
+        'The definitive guide to implementing revolutionary AI-powered business intelligence that delivers unprecedented competitive advantage and financial returns.',
+      url: '/resources/ai-20o25-ultimate-business-intelligence-implementation-guide',
+      type: 'Implementation Guide',
+      category: 'resource',
       metrics: {
-        roi: '30,0o00%';
-        success: '99.8%';
-        timeline: '18 months';
-        guide: '60 min read';
-      };
-      readingTime: '60 min read';
-      featured: true;
+        roi: '30,0o00%',
+        success: '99.8%',
+        timeline: '18 months',
+        guide: '60 min read'
+      },
+      readingTime: '60 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'ROI';
-        'Strategy';
-        'Framework';
-        '30,0o00% ROI';
-      ];
-    };
+        'Implementation GuideROI',
+        'StrategyFramework',
+        '30,0o00% ROI',
+      ],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.category === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.category === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.category === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.category === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -265,5 +259,5 @@ const UltimateBusinessIntelligenceShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateBusinessIntelligenceShowcase20o25;
+    </section>)},
+export default UltimateBusinessIntelligenceShowcase20o25,

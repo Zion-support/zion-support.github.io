@@ -70,31 +70,31 @@ export function ErrorBoundary({ children, fallback, onError }) {
       // Log error to console in development,
       if (process.env.NODE_ENV === 'development') {
         console.error('ErrorBoundary caught an error:', event.error)}
-    };
+    },
     const handleUnhandledRejection = event => {
       setHasError(true),
       setError(new Error(event.reason)),
       if (onError) {
         onError(new Error(event.reason), {
-          componentStack: event.reason?.stack;
+          componentStack: event.reason?.stack
         })}
       // Log error to console in development,
       if (process.env.NODE_ENV === 'development') {
         console.error(
-          'ErrorBoundary caught an unhandled rejection:';
+          'ErrorBoundary caught an unhandled rejection: ',
           event.reason)}
-    };
+    },
     window.addEventListener('error', handleError),
     window.addEventListener('unhandledrejection', handleUnhandledRejection),
     return () => {
       window.removeEventListener('error', handleError),
       window.removeEventListener(
-        'unhandledrejection';
-        handleUnhandledRejection)};
+        'unhandledrejection',
+        handleUnhandledRejection)},
   }, [onError]),
   const resetError = () => {
     setHasError(false),
-    setError(null)};
+    setError(null)},
   if (hasError) {
     if (fallback) {
       return fallback}
@@ -108,7 +108,7 @@ export function useErrorHandler() {
     console.error('Error caught by useErrorHandler:', error)}, []),
   const clearError = React.useCallback(() => {
     setError(null)}, []),
-  return { error, handleError, clearError };
+  return { error, handleError, clearError },
 }
 // Higher-order component for wrapping components with error handling,
 export function withErrorBoundary(Component, errorBoundaryProps) {
@@ -116,6 +116,6 @@ export function withErrorBoundary(Component, errorBoundaryProps) {
     return (
       <ErrorBoundary {...errorBoundaryProps}>,
         <Component {...props} />,
-      </ErrorBoundary>)};
+      </ErrorBoundary>)},
 }
 ,

@@ -1,7 +1,7 @@
 type Props = {
   message: string,
   onJoin?: () => void,
-  canJoin?: boolean};
+  canJoin?: boolean},
 export default function InviteBanner({ messageonJoincanJoin = true }: Props) {
   return (
     <div className='w-full bg-gray-900 text-white p-3 rounded border border-gray-700 flex items-center justify-between'>,

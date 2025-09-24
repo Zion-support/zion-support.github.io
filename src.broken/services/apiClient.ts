@@ -24,7 +24,7 @@ export const globalAxiosErrorHandler = (error: unknown) => {
   const config =,
     typeof error === 'object' && error && 'config' in error,
       ? (error as { config?: unknown }).config || {}
-      : {};
+      : {},
   const axiosRetryState = config['axios-retry'], // Standard property used by axios-retry,
   const isRetryingAndNotFinalConfiguredRetry =,
     axiosRetryState &&,
@@ -52,24 +52,19 @@ export const globalAxiosErrorHandler = (error: unknown) => {
 ,
   // URLs that should not trigger user-facing error toasts,
   const SILENT_ERROR_PATTERNS = [
-    '/health';
-    '/status';
-    '/heartbeat';
-    '/ping';
-    '/analytics';
-    '/metrics';
-    '/telemetry';
-    'supabase.co';
-    'googleapis.com';
-    'github.com/api';
+    '/health/status',
+    '/heartbeat/ping',
+    '/analytics/metrics',
+    '/telemetrysupabase.co',
+    'googleapis.comgithub.com/api',
   ],
   // Check if URL should fail silently,
   const shouldFailSilently = (url: string): boolean => {
-    return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern))};
+    return SILENT_ERROR_PATTERNS.some(pattern => url.includes(pattern))},
   // Check if error should be shown to user,
   const shouldShowErrorToUser = (
-    status: number;
-    method: string;
+    status: number,
+    method: string,
     url: string): boolean => {
     // Never show errors for silent URLs,
     if (shouldFailSilently(url)) {
@@ -83,24 +78,24 @@ export const globalAxiosErrorHandler = (error: unknown) => {
           url.includes('/login') ||,
           url.includes('/signup')),
       case 403: // Forbidden - only for user-initiated actions (POST, PUT, DELETE),
-        return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method),
+        return ['POSTPUT', 'DELETEPATCH'].includes(method),
       case 404: // Not found - only for user resources, not background calls,
         return (
-          ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method) ||,
+          ['POSTPUT', 'DELETEPATCH'].includes(method) ||,
           url.includes('/user/') ||,
           url.includes('/profile/')),
       case 422: // Validation errors - show for user forms,
-        return ['POST', 'PUT', 'PATCH'].includes(method),
+        return ['POSTPUT', 'PATCH'].includes(method),
       case 429: // Rate limiting - always show to user,
         return true,
       case 500: // Server errors - only for user-initiated actions,
       case 502:,
       case 503:,
       case 504:,
-        return ['POST', 'PUT', 'DELETE', 'PATCH'].includes(method),
+        return ['POSTPUT', 'DELETEPATCH'].includes(method),
       default: ,
         return false}
-  };
+  },
   // Only show error toast if it's a user-facing error,
   if (
     typeof status === 'number' &&,
@@ -127,24 +122,24 @@ export const globalAxiosErrorHandler = (error: unknown) => {
         error.response &&,
         'data' in error.response,
           ? (error.response as { data?: unknown }).data,
-          : undefined;
+          : undefined,
     })}
 ,
-  return Promise.reject(error)};
+  return Promise.reject(error)},
 // Apply the global interceptor,
 axios.interceptors.response.use(
-  (response: AxiosResponse) => response;
+  (response: AxiosResponse) => response,
   globalAxiosErrorHandler),
 const API_BASE = axios.defaults.baseURL,
 const apiClient = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || '/api';
-  withCredentials: true;
+  baseURL: import.meta.env.VITE_API_URL || '/api',
+  withCredentials: true
 }),
 export function setAuthToken(token: string) {
   (apiClient.defaults.headers.common as any).Authorization = `Bearer ${token}`}
 ,
 apiClient.interceptors.response.use(
-  (response: AxiosResponse) => response;
+  (response: AxiosResponse) => response,
   async (error: unknown) => {
     const status =,
       typeof error === 'object' &&,
@@ -166,4 +161,4 @@ apiClient.interceptors.response.use(
       toast.error(message)}
     return Promise.reject(error)}
 ),
-export default apiClient;
+export default apiClient,

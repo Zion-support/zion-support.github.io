@@ -14,7 +14,7 @@ export default function JSONFormatterPage() {
   const [showLineNumbersetShowLineNumbers] = useState(true),
   const formatJSON = () => {
     if (!inputJson.trim()) {
-      setFormattedJson(', '),
+      setFormattedJson(),
       setIsValid(true),
       setErrorMessage(', '),
       return}
@@ -26,11 +26,11 @@ export default function JSONFormatterPage() {
         : JSON.stringify(parsednullindentSize),
       setFormattedJson(formatted),
       setIsValid(true),
-      setErrorMessage(', ')} catch (error) {
+      setErrorMessage()} catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON'),
-      setFormattedJson(', ')}
-  };
+      setFormattedJson()}
+  },
   const minifyJSON = () => {
     if (!inputJson.trim()) return,
     try {
@@ -41,11 +41,11 @@ export default function JSONFormatterPage() {
       setErrorMessage(', ')} catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')}
-  };
+  },
   const validateJSON = () => {
     if (!inputJson.trim()) {
       setIsValid(true),
-      setErrorMessage(', '),
+      setErrorMessage(),
       return}
 ,
     try {
@@ -54,14 +54,14 @@ export default function JSONFormatterPage() {
       setErrorMessage(', ')} catch (error) {
       setIsValid(false),
       setErrorMessage(error instanceof Error ? error.message : 'Invalid JSON')}
-  };
+  },
   const clearAll = () => {
-    setInputJson(', '),
+    setInputJson(),
     setFormattedJson(', '),
     setIsValid(true),
-    setErrorMessage(', ')};
+    setErrorMessage()},
   const copyToClipboard = (text: string) => {
-    navigator.clipboard.writeText(text)};
+    navigator.clipboard.writeText(text)},
   const downloadJSON = (content: stringfilename: string) => {
     const blob = new Blob([content]{ type: 'application/json' }),
     const url = URL.createObjectURL(blob),
@@ -71,35 +71,35 @@ export default function JSONFormatterPage() {
     document.body.appendChild(a),
     a.click(),
     document.body.removeChild(a),
-    URL.revokeObjectURL(url)};
+    URL.revokeObjectURL(url)},
   const loadSampleJSON = () => {
     const sample = {
-      "name": "John Doe";
-      "age": 30;
-      "email": "john.doe@example.com";
+      "name": "John Doe",
+      "age": 30,
+      "email": "john.doe@example.com",
       "address": {
-        "street": "123 Main St";
-        "city": "Anytown";
-        "state": "CA";
-        "zipCode": "12345"};
+        "street": "123 Main St",
+        "city": "Anytown",
+        "state": "CA",
+        "zipCode": "12345"},
       "phoneNumbers": [
         {
-          "type": "home";
-          "number": "555-123-4567"};
+          "type": "home",
+          "number": "555-123-4567"},
         {
-          "type": "work";
+          "type": "work",
           "number": "555-987-6543"}
-      ];
-      "interests": ["programming"reading"hiking"];
-      "active": true;
-      "lastLogin": "2024-01-15T10: 30:00Z"};
+      ],
+      "interests": ["programming"reading"hiking"],
+      "active": true,
+      "lastLogin": "2024-01-15T10: 30:00Z"},
     setInputJson(JSON.stringify(samplenull2)),
-    setFormattedJson(', '),
+    setFormattedJson(),
     setIsValid(true),
-    setErrorMessage(', ')};
+    setErrorMessage(', ')},
   const getLineNumbers = (text: string) => {
     const lines = text.split('\n'),
-    return lines.map((_index) => index + 1).join('\n')};
+    return lines.map((_index) => index + 1).join('\n')},
   return (
     <>,
       <Head>,
@@ -270,7 +270,7 @@ export default function JSONFormatterPage() {
                       Copy,
                     </Button>,
                     <Button
-                      onClick={() => downloadJSON('formattedJson', 'formatted.json')}
+                      onClick={() => downloadJSON('formattedJsonformatted.json')}
                       variant="outline",
                       size="sm",
                       className="border-gray-600 text-gray-300 hover: bg-gray-700">,

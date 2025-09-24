@@ -8,19 +8,19 @@ import {
   DollarSign,
   Clock,
   Target,
-  BarChart3;
-  Zap;
-  Brain;
-  Shield;
-  Globe;
-  Award;
-  ChevronRight;
-  Play;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Building2;
-  PieChart;
+  BarChart3,
+  Zap,
+  Brain,
+  Shield,
+  Globe,
+  Award,
+  ChevronRight,
+  Play,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Building2,
+  PieChart,
   LineChart} from 'lucide-react',
 const BusinessTransformation20o25Showcase = () => {
   const [activeSectionsetActiveSection] = useState('overview'),
@@ -29,88 +29,88 @@ const BusinessTransformation20o25Showcase = () => {
     setIsVisible(true)}[]),
   const transformationData ={
     overview: {
-      title: 'Business Transformation Overview';
-      icon: Building2;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      title: 'Business Transformation Overview',
+      icon: Building2,
+      color: 'from-blue-50o0 to-cyan-50o0',
       metrics: [
-        { label: 'Revenue 'Increase', 'value: '340%'icon: DollarSigncolor: 'text-green-40o0' };
-        { label: 'Cost 'Reduction', 'value: '65%'icon: TrendingUpcolor: 'text-blue-40o0' };
-        { label: 'Efficiency 'Gain', 'value: '280%'icon: Zapcolor: 'text-yellow-40o0' };
-        { label: 'Customer 'Satisfaction', 'value: '98%'icon: Starcolor: 'text-purple-40o0' }
-      ]};
+        { label: 'Revenue 'Increasevalue: '340%'icon: DollarSigncolor: 'text-green-40o0' },
+        { label: 'Cost 'Reductionvalue: '65%'icon: TrendingUpcolor: 'text-blue-40o0' },
+        { label: 'Efficiency 'Gainvalue: '280%'icon: Zapcolor: 'text-yellow-40o0' },
+        { label: 'Customer 'Satisfactionvalue: '98%'icon: Starcolor: 'text-purple-40o0' }
+      ]},
     automation: {
-      title: 'Process Automation';
-      icon: Zap;
-      color: 'from-green-50o0 to-emerald-50o0';
+      title: 'Process Automation',
+      icon: Zap,
+      color: 'from-green-50o0 to-emerald-50o0',
       metrics: [
-        { label: 'Tasks 'Automated', 'value: '15,0o00+'icon: Targetcolor: 'text-green-40o0' };
-        { label: 'Time 'Saved', 'value: '2,40o0 'hrs', 'icon: Clockcolor: 'text-blue-40o0' };
-        { label: 'Error 'Reduction', 'value: '95%'icon: Shieldcolor: 'text-red-40o0' };
-        { label: 'ROI 'Achieved', 'value: '450%'icon: BarChart3color: 'text-yellow-40o0' }
-      ]};
+        { label: 'Tasks 'Automatedvalue: '15,0o00+'icon: Targetcolor: 'text-green-40o0' },
+        { label: 'Time 'Savedvalue: '2,40o0 'hrsicon: Clockcolor: 'text-blue-40o0' },
+        { label: 'Error 'Reductionvalue: '95%'icon: Shieldcolor: 'text-red-40o0' },
+        { label: 'ROI 'Achievedvalue: '450%'icon: BarChart3color: 'text-yellow-40o0' }
+      ]},
     ai: {
-      title: 'AI Integration';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
+      title: 'AI Integration',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0',
       metrics: [
-        { label: 'AI Models 'Deployed', 'value: '25+'icon: Braincolor: 'text-purple-40o0' };
-        { label: 'Decision 'Speed', 'value: '10x 'Faster', 'icon: Zapcolor: 'text-yellow-40o0' };
-        { label: 'Prediction 'Accuracy', 'value: '94%'icon: Targetcolor: 'text-green-40o0' };
-        { label: 'Data 'Processing', 'value: '1M+ 'Records', 'icon: BarChart3color: 'text-blue-40o0' }
-      ]};
+        { label: 'AI Models 'Deployedvalue: '25+'icon: Braincolor: 'text-purple-40o0' },
+        { label: 'Decision 'Speedvalue: '10x 'Fastericon: Zapcolor: 'text-yellow-40o0' },
+        { label: 'Prediction 'Accuracyvalue: '94%'icon: Targetcolor: 'text-green-40o0' },
+        { label: 'Data 'Processingvalue: '1M+ 'Recordsicon: BarChart3color: 'text-blue-40o0' }
+      ]},
     global: {
-      title: 'Global Expansion';
-      icon: Globe;
-      color: 'from-orange-50o0 to-red-50o0';
+      title: 'Global Expansion',
+      icon: Globe,
+      color: 'from-orange-50o0 to-red-50o0',
       metrics: [
-        { label: 'Markets 'Entered', 'value: '12'icon: Globecolor: 'text-orange-40o0' };
-        { label: 'Revenue 'Growth', 'value: '180%'icon: TrendingUpcolor: 'text-green-40o0' };
-        { label: 'Team 'Expansion', 'value: '30o0%'icon: Userscolor: 'text-blue-40o0' };
-        { label: 'Market 'Share', 'value: '15%'icon: PieChartcolor: 'text-purple-40o0' }
+        { label: 'Markets 'Enteredvalue: '12'icon: Globecolor: 'text-orange-40o0' },
+        { label: 'Revenue 'Growthvalue: '180%'icon: TrendingUpcolor: 'text-green-40o0' },
+        { label: 'Team 'Expansionvalue: '30o0%'icon: Userscolor: 'text-blue-40o0' },
+        { label: 'Market 'Sharevalue: '15%'icon: PieChartcolor: 'text-purple-40o0' }
       ]}
-  };
+  },
   const sections = Object.entries(transformationData).map(([keydata]) => ({
-    key;
+    key,
     ...data})),
   const successStories = [
     {
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      challenge: 'Manual data processing causing 40% delays';
-      solution: 'AI-powered automation system';
-      results: '95% faster processing60% cost reduction';
-      revenue: '+$2.3M';
-      icon: Building2};
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'Manual data processing causing 40% delays',
+      solution: 'AI-powered automation system',
+      results: '95% faster processing60% cost reduction',
+      revenue: '+$2.3M',
+      icon: Building2},
     {
-      company: 'Global Manufacturing Inc';
-      industry: 'Manufacturing';
-      challenge: 'Supply chain inefficiencies';
-      solution: 'Predictive analytics and automation';
-      results: '80% reduction in downtime45% cost savings';
-      revenue: '+$5.7M';
-      icon: Building2};
+      company: 'Global Manufacturing Inc',
+      industry: 'Manufacturing',
+      challenge: 'Supply chain inefficiencies',
+      solution: 'Predictive analytics and automation',
+      results: '80% reduction in downtime45% cost savings',
+      revenue: '+$5.7M',
+      icon: Building2},
     {
-      company: 'Financial Services Group';
-      industry: 'Finance';
-      challenge: 'Manual compliance reporting';
-      solution: 'AI-driven compliance automation';
-      results: '99% accuracy70% time reduction';
-      revenue: '+$1.8M';
+      company: 'Financial Services Group',
+      industry: 'Finance',
+      challenge: 'Manual compliance reporting',
+      solution: 'AI-driven compliance automation',
+      results: '99% accuracy70% time reduction',
+      revenue: '+$1.8M',
       icon: Building2}
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  };
+  },
   if (!isVisible) return null,
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20">,
@@ -267,5 +267,5 @@ const BusinessTransformation20o25Showcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default BusinessTransformation20o25Showcase;
+    </div>)},
+export default BusinessTransformation20o25Showcase,

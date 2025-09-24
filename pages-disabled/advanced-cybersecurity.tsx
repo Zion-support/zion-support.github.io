@@ -4,32 +4,32 @@ export default function AdvancedCybersecurityServices() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [sortBy, setSortBy] = useState<string>('innovation'),
   const categories = [
-    { id: 'all', name: 'All Security', color: 'from-blue-50o0 to-purple-60o0' };
+    { id: 'all', name: 'All Security', color: 'from-blue-50o0 to-purple-60o0' },
     {
-      id: 'AI Security';
-      name: 'AI Security';
-      color: 'from-purple-50o0 to-pink-60o0';
-    };
+      id: 'AI Security',
+      name: 'AI Security',
+      color: 'from-purple-50o0 to-pink-60o0'
+    },
     {
-      id: 'Quantum Security';
-      name: 'Quantum Security';
-      color: 'from-indigo-50o0 to-blue-60o0';
-    };
+      id: 'Quantum Security',
+      name: 'Quantum Security',
+      color: 'from-indigo-50o0 to-blue-60o0'
+    },
     {
-      id: 'Network Security';
-      name: 'Network Security';
-      color: 'from-green-50o0 to-teal-60o0';
-    };
+      id: 'Network Security',
+      name: 'Network Security',
+      color: 'from-green-50o0 to-teal-60o0'
+    },
     {
-      id: 'Endpoint Security';
-      name: 'Endpoint Security';
-      color: 'from-orange-50o0 to-red-60o0';
-    };
+      id: 'Endpoint Security',
+      name: 'Endpoint Security',
+      color: 'from-orange-50o0 to-red-60o0'
+    },
     {
-      id: 'Cloud Security';
-      name: 'Cloud Security';
-      color: 'from-yellow-50o0 to-orange-60o0';
-    };
+      id: 'Cloud Security',
+      name: 'Cloud Security',
+      color: 'from-yellow-50o0 to-orange-60o0'
+    },
   ],
   const data: any[] = [],
   const filteredServices = data.filter(service => {
@@ -43,8 +43,8 @@ export default function AdvancedCybersecurityServices() {
     switch (sortBy) {
       case 'price':,
         return (
-          parseInt(a.price.replace('$', '').replace(',', '')) -,
-          parseInt(b.price.replace('$', '').replace(',', ''))),
+          parseInt(a.price.replace('$', '').replace(, '')) -,
+          parseInt(b.price.replace('$', '').replace(, ''))),
       case 'innovation':,
         return (b.rating || 0) - (a.rating || 0),
       case 'popularity':,
@@ -66,7 +66,7 @@ export default function AdvancedCybersecurityServices() {
         return '☁️',
       default:,
         return '🛡️'}
-  };
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-70o0'>,
       <div className='relative z-10 container mx-auto px-4 py-8'>,
@@ -82,29 +82,29 @@ export default function AdvancedCybersecurityServices() {
         <div className='grid grid-cols-1 md:grid-cols-4 gap-6 mb-12'>,
           {[
             {
-              icon: '🛡️';
-              label: 'Threats Blocked';
-              value: '99.9%';
-              color: 'from-green-50o0 to-emerald-60o0';
-            };
+              icon: '🛡️',
+              label: 'Threats Blocked',
+              value: '99.9%',
+              color: 'from-green-50o0 to-emerald-60o0'
+            },
             {
-              icon: '👁️';
-              label: '24/7 Monitoring';
-              value: 'Always On';
-              color: 'from-blue-50o0 to-cyan-60o0';
-            };
+              icon: '👁️',
+              label: '24/7 Monitoring',
+              value: 'Always On',
+              color: 'from-blue-50o0 to-cyan-60o0'
+            },
             {
-              icon: '🔒';
-              label: 'Encryption';
-              value: 'AES-256';
-              color: 'from-purple-50o0 to-indigo-60o0';
-            };
+              icon: '🔒',
+              label: 'Encryption',
+              value: 'AES-256',
+              color: 'from-purple-50o0 to-indigo-60o0'
+            },
             {
-              icon: '🧠';
-              label: 'AI Detection';
-              value: '10x Faster';
-              color: 'from-orange-50o0 to-red-60o0';
-            };
+              icon: '🧠',
+              label: 'AI Detection',
+              value: '10x Faster',
+              color: 'from-orange-50o0 to-red-60o0'
+            },
           ].map((stat, index) => (
             <div
               key={index}

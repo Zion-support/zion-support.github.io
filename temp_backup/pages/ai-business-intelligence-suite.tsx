@@ -1,77 +1,63 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  BarChart3;
-  Brain;
-  Database;
-  Users;
-  Target;
-  BarChart;
-  PieChart;
-  Activity;
-  Eye;
-  Lock;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  BarChart3,
+  Brain,
+  Database,
+  Users,
+  Target,
+  BarChart,
+  PieChart,
+  Activity,
+  Eye,
+  Lock,
 } from 'lucide-react',
 import Button from '../components/ui/Button',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
 export default function AIBusinessIntelligenceSuite() {
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const features = [
-    'Real-time data analysis and visualization';
-    'AI-powered trend prediction and forecasting';
-    'Automated report generation and scheduling';
-    'Custom dashboard builder with drag-and-drop';
-    'Multi-source data integration (CRM, ERP, Analytics)';
-    'Natural language query interface';
-    'Predictive analytics and machine learning models';
-    'Mobile-responsive dashboards';
-    'Role-based access control and security';
-    'API access for custom integrations';
+    'Real-time data analysis and visualizationAI-powered trend prediction and forecasting',
+    'Automated report generation and schedulingCustom dashboard builder with drag-and-drop',
+    'Multi-source data integration (CRM, ERP, Analytics)Natural language query interface',
+    'Predictive analytics and machine learning modelsMobile-responsive dashboards',
+    'Role-based access control and securityAPI access for custom integrations',
   ],
   const useCases = [
-    'Sales performance analysis';
-    'Customer behavior insights';
-    'Financial forecasting';
-    'Marketing ROI optimization';
-    'Operational efficiency tracking';
+    'Sales performance analysisCustomer behavior insights',
+    'Financial forecastingMarketing ROI optimization',
+    'Operational efficiency tracking',
   ],
   const integrations = [
-    'Salesforce';
-    'HubSpot';
-    'Google Analytics';
-    'Shopify';
-    'QuickBooks';
-    'Slack';
-    'Microsoft Teams';
+    'SalesforceHubSpot',
+    'Google AnalyticsShopify',
+    'QuickBooksSlack',
+    'Microsoft Teams',
   ],
   const technology = [
-    'Python';
-    'TensorFlow';
-    'React';
-    'Node.js';
-    'PostgreSQL';
-    'Redis';
-    'AWS';
-    'Docker';
+    'PythonTensorFlow',
+    'ReactNode.js',
+    'PostgreSQLRedis',
+    'AWSDocker',
   ],
   return (
     <UltraAdvancedFuturisticBackground>,
@@ -152,7 +138,7 @@ export default function AIBusinessIntelligenceSuite() {
                 transition={{ duration: 0.8, delay: 0.5 }}
                 className='text-lg md: text-xl text-gray-400 mb-12 max-w-3xl mx-auto leading-relaxed'>,
                 Advanced AI-powered business intelligence platform that,
-                automatically analyzes your business data, identifies trends;
+                automatically analyzes your business data, identifies trends,
                 and provides actionable recommendations for growth and,
                 optimization.,
               </motion.p>,

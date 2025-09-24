@@ -15,15 +15,15 @@ content = content.replace(serviceRegex, (match, p1, p2) => {
   // Create tags based on category,
   let tags = [],
   if (category.includes('AI') || category.includes('Autonomous')) {
-    tags = ['AI', 'Automation', 'Machine Learning', 'Innovation']} else if (category.includes('Quantum')) {
-    tags = ['Quantum Computing', 'AI', 'Research', 'Innovation']} else if (category.includes('Blockchain')) {
-    tags = ['Blockchain', 'Web3', 'Decentralized', 'Innovation']} else if (category.includes('Cybersecurity')) {
-    tags = ['Cybersecurity', 'Privacy', 'Compliance', 'Security']} else if (category.includes('Healthcare') || category.includes('Biotech')) {
-    tags = ['Healthcare', 'Biotech', 'AI', 'Research']} else if (category.includes('Education') || category.includes('Learning')) {
-    tags = ['Education', 'Learning', 'AI', 'Personalization']} else {
-    tags = ['Technology', 'Innovation', 'Digital', 'Solutions']}
+    tags = ['AIAutomation', 'Machine LearningInnovation']} else if (category.includes('Quantum')) {
+    tags = ['Quantum ComputingAI', 'ResearchInnovation']} else if (category.includes('Blockchain')) {
+    tags = ['BlockchainWeb3', 'DecentralizedInnovation']} else if (category.includes('Cybersecurity')) {
+    tags = ['CybersecurityPrivacy', 'ComplianceSecurity']} else if (category.includes('Healthcare') || category.includes('Biotech')) {
+    tags = ['HealthcareBiotech', 'AIResearch']} else if (category.includes('Education') || category.includes('Learning')) {
+    tags = ['EducationLearning', 'AIPersonalization']} else {
+    tags = ['TechnologyInnovation', 'DigitalSolutions']}
 ,
-  return `${p1}\n    tags: [${tags.map(tag => `'${tag}'`).join(', ')}],${p2}`}),
+  return `${p1}\n    tags: [${tags.map(tag => `'${tag}'`).join()}],${p2}`}),
 // Write the file back,
 fs.writeFileSync(filePath, content, 'utf8'),
 // // console.log(

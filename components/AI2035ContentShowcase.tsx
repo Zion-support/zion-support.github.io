@@ -1,102 +1,102 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 ArrowRightBrainZapTargetUsersClockTrendingUp,
 const AI20o35ContentShowcase: React.FC = () => {
   const featuredContent = [
     {
-      title: "AI 20o35 Future Predictions";
-      description: "Revolutionary AI breakthroughs that will reshape reality by 20o35";
-      href: "/ai-20o35-future-predictions";
-      badge: "BREAKTHROUGH";
-      icon: "🔮";
-      gradient: "from-purple-50o0 to-blue-50o0";
-      textColor: "text-purple-60o0";
-      bgColor: "from-purple-50 to-blue-50"};
+      title: "AI 20o35 Future Predictions",
+      description: "Revolutionary AI breakthroughs that will reshape reality by 20o35",
+      href: "/ai-20o35-future-predictions",
+      badge: "BREAKTHROUGH",
+      icon: "🔮",
+      gradient: "from-purple-50o0 to-blue-50o0",
+      textColor: "text-purple-60o0",
+      bgColor: "from-purple-50 to-blue-50"},
     {
-      title: "AI Implementation Mastery 20o35";
-      description: "Complete mastery guide for implementing AI 20o35 technologies";
-      href: "/ai-implementation-mastery-20o35";
-      badge: "MASTERY";
-      icon: "🎯";
-      gradient: "from-green-50o0 to-emerald-50o0";
-      textColor: "text-green-60o0";
-      bgColor: "from-green-50 to-emerald-50"};
+      title: "AI Implementation Mastery 20o35",
+      description: "Complete mastery guide for implementing AI 20o35 technologies",
+      href: "/ai-implementation-mastery-20o35",
+      badge: "MASTERY",
+      icon: "🎯",
+      gradient: "from-green-50o0 to-emerald-50o0",
+      textColor: "text-green-60o0",
+      bgColor: "from-green-50 to-emerald-50"},
     {
-      title: "Neural Interface Future 20o35";
-      description: "Advanced neural interface technologies and consciousness transfer";
-      href: "/neural-interface-future-20o35";
-      badge: "REVOLUTIONARY";
-      icon: "🧠";
-      gradient: "from-indigo-50o0 to-purple-50o0";
-      textColor: "text-indigo-60o0";
-      bgColor: "from-indigo-50 to-purple-50"};
+      title: "Neural Interface Future 20o35",
+      description: "Advanced neural interface technologies and consciousness transfer",
+      href: "/neural-interface-future-20o35",
+      badge: "REVOLUTIONARY",
+      icon: "🧠",
+      gradient: "from-indigo-50o0 to-purple-50o0",
+      textColor: "text-indigo-60o0",
+      bgColor: "from-indigo-50 to-purple-50"},
     {
-      title: "Quantum AI Revolution 20o35";
-      description: "Quantum-powered AI systems and reality engineering";
-      href: "/quantum-ai-revolution-20o35";
-      badge: "QUANTUM";
-      icon: "⚛️";
-      gradient: "from-blue-50o0 to-cyan-50o0";
-      textColor: "text-blue-60o0";
+      title: "Quantum AI Revolution 20o35",
+      description: "Quantum-powered AI systems and reality engineering",
+      href: "/quantum-ai-revolution-20o35",
+      badge: "QUANTUM",
+      icon: "⚛️",
+      gradient: "from-blue-50o0 to-cyan-50o0",
+      textColor: "text-blue-60o0",
       bgColor: "from-blue-50 to-cyan-50"}
   ],
   const breakthroughFeatures = [
     {
-      title: "Consciousness Transfer";
-      description: "Seamless human-AI consciousness merger";
-      icon: "🧠";
-      benefit: "10,0o00x faster processing"};
+      title: "Consciousness Transfer",
+      description: "Seamless human-AI consciousness merger",
+      icon: "🧠",
+      benefit: "10,0o00x faster processing"},
     {
-      title: "Matter Manipulation";
-      description: "Molecular-level reality engineering";
-      icon: "⚛️";
-      benefit: "Infinite resource creation"};
+      title: "Matter Manipulation",
+      description: "Molecular-level reality engineering",
+      icon: "⚛️",
+      benefit: "Infinite resource creation"},
     {
-      title: "Dimension Transcendence";
-      description: "Multi-dimensional AI networks";
-      icon: "🌌";
-      benefit: "Unlimited computational power"};
+      title: "Dimension Transcendence",
+      description: "Multi-dimensional AI networks",
+      icon: "🌌",
+      benefit: "Unlimited computational power"},
     {
-      title: "Universal Transformation";
-      description: "Reality-altering capabilities";
-      icon: "🌍";
+      title: "Universal Transformation",
+      description: "Reality-altering capabilities",
+      icon: "🌍",
       benefit: "Infinite ROI achievement",
-      title: 'AI 20o35 Future Predictions';
-      description: 'Explore groundbreaking predictions for AI development through 20o35including quantum AIneural interfacesand autonomous systems.';
-      image: '/api/placeholder/40o0/250';
-      category: 'Predictions';
-      readTime: '15 min read';
-      trending: true;
-      href: '/ai-20o35-future-predictions';
-      features: ['Quantum AI 'Revolution', 'Neural 'Interfaces', 'Autonomous 'Systems', 'AI Safety']};
+      title: 'AI 20o35 Future Predictions',
+      description: 'Explore groundbreaking predictions for AI development through 20o35including quantum AIneural interfacesand autonomous systems.',
+      image: '/api/placeholder/40o0/250',
+      category: 'Predictions',
+      readTime: '15 min read',
+      trending: true,
+      href: '/ai-20o35-future-predictions',
+      features: ['Quantum AI 'RevolutionNeural 'Interfaces', 'Autonomous 'SystemsAI Safety']},
     {
-      title: 'AI Implementation Mastery 20o35';
-      description: 'Master the implementation of cutting-edge AI systems for 20o35. Learn quantum AIneural interfacesand autonomous system deployment.';
-      image: '/api/placeholder/40o0/250';
-      category: 'Mastery Program';
-      readTime: '12 months';
-      trending: true;
-      href: '/ai-implementation-mastery-20o35';
-      features: ['Quantum AI 'Implementation', 'Neural Interface 'Development', 'Autonomous 'Systems', 'AI Safety & Governance']}
+      title: 'AI Implementation Mastery 20o35',
+      description: 'Master the implementation of cutting-edge AI systems for 20o35. Learn quantum AIneural interfacesand autonomous system deployment.',
+      image: '/api/placeholder/40o0/250',
+      category: 'Mastery Program',
+      readTime: '12 months',
+      trending: true,
+      href: '/ai-implementation-mastery-20o35',
+      features: ['Quantum AI 'ImplementationNeural Interface 'Development', 'Autonomous 'SystemsAI Safety & Governance']}
   ],
   const upcomingContent = [
     {
-      title: 'Quantum AI Development Guide';
-      description: 'Complete guide to building quantum-enhanced AI systems';
-      category: 'Development';
-      eta: 'Coming Soon';
-      icon: <Brain className="h-5 w-5"  />};
+      title: 'Quantum AI Development Guide',
+      description: 'Complete guide to building quantum-enhanced AI systems',
+      category: 'Development',
+      eta: 'Coming Soon',
+      icon: <Brain className="h-5 w-5"  />},
     {
-      title: 'Neural Interface Prototyping';
-      description: 'Hands-on tutorial for brain-computer interfaces';
-      category: 'Tutorial';
-      eta: 'Next Week';
-      icon: <Zap className="h-5 w-5"  />};
+      title: 'Neural Interface Prototyping',
+      description: 'Hands-on tutorial for brain-computer interfaces',
+      category: 'Tutorial',
+      eta: 'Next Week',
+      icon: <Zap className="h-5 w-5"  />},
     {
-      title: 'Autonomous System Architecture';
-      description: 'Design patterns for self-managing AI systems';
-      category: 'Architecture';
-      eta: 'In Development';
+      title: 'Autonomous System Architecture',
+      description: 'Design patterns for self-managing AI systems',
+      category: 'Architecture',
+      eta: 'In Development',
       icon: <Target className="h-5 w-5"  />}
   ],
   return (
@@ -338,5 +338,5 @@ const AI20o35ContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},
 export default AI20o35ContentShowcase}))

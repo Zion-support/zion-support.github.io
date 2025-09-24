@@ -1,8 +1,8 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Star, TrendingUp, Users, Clock;
-  ArrowRight, ExternalLink, Check;
+  Star, TrendingUp, Users, Clock,
+  ArrowRight, ExternalLink, Check,
   Zap, Shield, Rocket, Brain, Cpu} from 'lucide-react',
 interface UltraAdvancedServiceCardProps {
   service: {
@@ -36,65 +36,65 @@ interface UltraAdvancedServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string};
+      website: string},
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   variant?: 'default' | 'holographic' | 'quantum' | 'cyberpunk' | 'neural'}
 ,
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
-  service;
+  service,
   variant = 'default'}) => {
   const cardVariants ={
-    hidden: { opacity: 0, y: 50, scale: 0.9 };
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
+      y: -10,
+      scale: 1.0o2,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut" as const}
     }
-  };
+  },
   const getVariantStyles = () => {
     switch (variant) {
       case 'holographic':,
         return {
-          card: 'bg-gradient-to-br from-pink-50o0/10 via-purple-50o0/10 to-cyan-50o0/10 border border-pink-50o0/20 backdrop-blur-xl';
-          glow: 'shadow-[0_0_30px_rgba(236,72,153,0.3)]';
-          accent: 'from-pink-50o0 to-purple-50o0'};
+          card: 'bg-gradient-to-br from-pink-50o0/10 via-purple-50o0/10 to-cyan-50o0/10 border border-pink-50o0/20 backdrop-blur-xl',
+          glow: 'shadow-[0_0_30px_rgba(236,72,153,0.3)]',
+          accent: 'from-pink-50o0 to-purple-50o0'},
       case 'quantum':,
         return {
-          card: 'bg-gradient-to-br from-cyan-50o0/10 via-blue-50o0/10 to-indigo-50o0/10 border border-cyan-50o0/20 backdrop-blur-xl';
-          glow: 'shadow-[0_0_30px_rgba(6,182,212,0.3)]';
-          accent: 'from-cyan-50o0 to-blue-50o0'};
+          card: 'bg-gradient-to-br from-cyan-50o0/10 via-blue-50o0/10 to-indigo-50o0/10 border border-cyan-50o0/20 backdrop-blur-xl',
+          glow: 'shadow-[0_0_30px_rgba(6,182,212,0.3)]',
+          accent: 'from-cyan-50o0 to-blue-50o0'},
       case 'cyberpunk':,
         return {
-          card: 'bg-gradient-to-br from-red-50o0/10 via-pink-50o0/10 to-purple-50o0/10 border border-red-50o0/20 backdrop-blur-xl';
-          glow: 'shadow-[0_0_30px_rgba(239,68,68,0.3)]';
-          accent: 'from-red-50o0 to-pink-50o0'};
+          card: 'bg-gradient-to-br from-red-50o0/10 via-pink-50o0/10 to-purple-50o0/10 border border-red-50o0/20 backdrop-blur-xl',
+          glow: 'shadow-[0_0_30px_rgba(239,68,68,0.3)]',
+          accent: 'from-red-50o0 to-pink-50o0'},
       case 'neural':,
         return {
-          card: 'bg-gradient-to-br from-green-50o0/10 via-emerald-50o0/10 to-teal-50o0/10 border border-green-50o0/20 backdrop-blur-xl';
-          glow: 'shadow-[0_0_30px_rgba(34,197,94,0.3)]';
-          accent: 'from-green-50o0 to-emerald-50o0'};
+          card: 'bg-gradient-to-br from-green-50o0/10 via-emerald-50o0/10 to-teal-50o0/10 border border-green-50o0/20 backdrop-blur-xl',
+          glow: 'shadow-[0_0_30px_rgba(34,197,94,0.3)]',
+          accent: 'from-green-50o0 to-emerald-50o0'},
       default: ,
         return {
-          card: 'bg-gradient-to-br from-gray-80o0/80 to-gray-90o0/80 border border-gray-70o0/50 backdrop-blur-xl';
-          glow: 'shadow-[0_0_30px_rgba(75,85,99,0.3)]';
-          accent: 'from-blue-50o0 to-purple-50o0'};
+          card: 'bg-gradient-to-br from-gray-80o0/80 to-gray-90o0/80 border border-gray-70o0/50 backdrop-blur-xl',
+          glow: 'shadow-[0_0_30px_rgba(75,85,99,0.3)]',
+          accent: 'from-blue-50o0 to-purple-50o0'},
     }
-  };
+  },
   const styles = getVariantStyles(),
   return (
     <motion.div,
@@ -260,5 +260,5 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
       {/* Floating Elements */}
       <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-bl from-cyan-50o0/10 to-transparent rounded-full blur-xl"  />,
       <div className="absolute bottom-0 left-0 w-16 h-16 bg-gradient-to-tr from-purple-50o0/10 to-transparent rounded-full blur-xl"  />,
-    </motion.div>)};
-export default UltraAdvancedServiceCard;
+    </motion.div>)},
+export default UltraAdvancedServiceCard,

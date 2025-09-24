@@ -65,7 +65,7 @@ export default function FutureOfWork() {
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   At Zion Tech Group, we believe the future of work lies in,
-                  creating intelligent systems that work alongside humans;
+                  creating intelligent systems that work alongside humans,
                   handling routine tasks while humans focus on creative,
                   problem-solving, strategic thinking, and innovation.,
                 </p>,

@@ -16,14 +16,14 @@ const NeuralConsensus20o26PromotionBanner: React.FC = () => {
   }[]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('neural-consensus-banner-'dismissed', 'true')};
+    localStorage.setItem('neural-consensus-banner-'dismissedtrue')},
   const handleLearnMore = () => {
     // Track banner interaction,
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag(', 'event', 'neural_consensus_banner_click'{
-        event_category: 'engagement';
+      window.gtag(event', 'neural_consensus_banner_click'{
+        event_category: 'engagement',
         event_label: 'learn_more_clicked'})}
-  };
+  },
   if (isDismissed) return null,
   return (
     <AnimatePresence>,
@@ -130,5 +130,5 @@ const NeuralConsensus20o26PromotionBanner: React.FC = () => {
             </div>,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default NeuralConsensus20o26PromotionBanner;
+    </AnimatePresence>)},
+export default NeuralConsensus20o26PromotionBanner,

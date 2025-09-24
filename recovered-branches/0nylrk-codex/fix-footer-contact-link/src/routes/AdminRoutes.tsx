@@ -77,5 +77,5 @@ const AdminRoutes = () => {
             <IntegrationsPage />,
           </ProtectedRoute>}
       />,
-    </Routes>)};
-export default AdminRoutes;
+    </Routes>)},
+export default AdminRoutes,

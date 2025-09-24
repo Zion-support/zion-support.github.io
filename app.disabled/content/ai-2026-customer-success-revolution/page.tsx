@@ -1,17 +1,15 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
-  title: 'AI 20o26: Customer Success Revolution - Zion Tech Group';
+  title: 'AI 20o26: Customer Success Revolution - Zion Tech Group',
   description:,
-    'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.';
+    'Transform your customer success with AI-powered predictive analytics, proactive support, and personalized experiences that drive retention and growth.',
   keywords: [
-    'AI customer success';
-    'predictive analytics';
-    'customer retention';
-    'AI support';
-    'customer experience';
-  ];
-};
+    'AI customer successpredictive analytics',
+    'customer retentionAI support',
+    'customer experience',
+  ]
+},
 export default function AI20o26CustomerSuccessRevolution() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -146,7 +144,7 @@ export default function AI20o26CustomerSuccessRevolution() {
               Intelligent Health Scoring,
             </h3>,
             <p className='text-gray-70o0 mb-4'>,
-              Real-time customer health scores that combine usage metrics;
+              Real-time customer health scores that combine usage metrics,
               support interactions, and business outcomes to provide actionable,
               insights for customer success teams.,
             </p>,

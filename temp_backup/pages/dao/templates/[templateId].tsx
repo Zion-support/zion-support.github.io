@@ -8,7 +8,7 @@ function TextArea(props: any) {
 ,
 export default function ZgpDraftPage() {
   const router = useRouter(),
-  const { templateId } = router.query as { templateId: string };
+  const { templateId } = router.query as { templateId: string },
   const [template, setTemplate] = useState<any>(null),
   const [title, setTitle] = useState(''),
   const [summary, setSummary] = useState(''),
@@ -16,9 +16,8 @@ export default function ZgpDraftPage() {
   const [specificationImpact, setSpecificationImpact] = useState(''),
   const [codeModuleAffected, setCodeModuleAffected] = useState(''),
   const [votingOptions, setVotingOptions] = useState<string[]>([
-    'For';
-    'Against';
-    'Abstain';
+    'ForAgainst',
+    'Abstain',
   ]),
   const [fundingAmount, setFundingAmount] = useState<number | ''>(''),
   const [fundingCurrency, setFundingCurrency] = useState('ZION'),
@@ -29,7 +28,7 @@ export default function ZgpDraftPage() {
   const fundingNeeded = useMemo(() => {
     if (fundingAmount === '' || Number.isNaN(Number(fundingAmount))),
       return null,
-    return { amount: Number(fundingAmount), currency: fundingCurrency };
+    return { amount: Number(fundingAmount), currency: fundingCurrency },
   }, [fundingAmount, fundingCurrency]),
   useEffect(() => {
     if (!templateId) return,
@@ -45,17 +44,17 @@ export default function ZgpDraftPage() {
           setSpecificationImpact(t.defaults.specificationImpact || ''),
           setCodeModuleAffected(t.defaults.codeModuleAffected || ''),
           setVotingOptions(
-            t.defaults.votingOptions || ['For', 'Against', 'Abstain'])}
+            t.defaults.votingOptions || ['ForAgainst', 'Abstain'])}
       })}, [templateId]),
   async function handleAutofill() {
     if (!template) return,
     const r = await fetch('/api/zgp/autofill', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ templateId: template.id, brief });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ templateId: template.id, brief }),
     }),
     const data = await r.json(),
-    const s = data.suggestion || {};
+    const s = data.suggestion || {},
     if (s.summary) setSummary(s.summary),
     if (s.motivation) setMotivation(s.motivation),
     if (s.specificationImpact) setSpecificationImpact(s.specificationImpact),
@@ -65,9 +64,9 @@ export default function ZgpDraftPage() {
   async function handleReview() {
     const text = [title, summary, motivation, specificationImpact].join('\n\n'),
     const r = await fetch('/api/zgp/review', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ text });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ text }),
     }),
     const data = await r.json(),
     setReview(data.review || '')}
@@ -77,27 +76,27 @@ export default function ZgpDraftPage() {
     setSaving(true),
     try {
       const r = await fetch('/api/zgp/proposals', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          templateId: template.id;
-          title;
-          summary;
-          motivation;
-          specificationImpact;
-          codeModuleAffected;
-          votingOptions;
-          fundingNeeded;
-        });
+          templateId: template.id,
+          title,
+          summary,
+          motivation,
+          specificationImpact,
+          codeModuleAffected,
+          votingOptions,
+          fundingNeeded
+        }),
       }),
       const data = await r.json(),
       if (data.proposal) {
         if (status === 'submitted') {
           // Immediately update status to submitted as a new version,
           await fetch(`/api/zgp/proposals/${data.proposal.id}`, {
-            method: 'PUT';
-            headers: { 'Content-Type': 'application/json' };
-            body: JSON.stringify({ status: 'submitted' });
+            method: 'PUT',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ status: 'submitted' }),
           })}
         setProposal(data.proposal)}
     } finally {
@@ -163,7 +162,7 @@ export default function ZgpDraftPage() {
           <div>,
             <label className='font-medium'>Voting Options</label>,
             <input
-              value={votingOptions.join(', ')}
+              value={votingOptions.join()}
               onChange={e =>,
                 setVotingOptions(
                   e.target.value,

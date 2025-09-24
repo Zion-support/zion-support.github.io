@@ -30,7 +30,7 @@ export interface EndpointSpec {
   rateLimits?: RateLimitInfo[],
   errors?: ErrorCode[],
   tags?: string[],
-  versions: string[], // e.g., ['v1'] or ['v1','v2']}
+  versions: string[], // e.g., ['v1'] or ['v1v2']}
 ,
 export interface SectionSpec {
   id: string,

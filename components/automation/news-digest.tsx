@@ -1,16 +1,16 @@
 import fs from 'fs',
 import path from 'path',
-type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] };
+type NewsItem = { source: string, title: string, url: string, summary: string, tags: string[] },
 export async function getServerSideProps() {
-  const file = path.join(process.cwd()', 'data', 'news-digest.json'),
+  const file = path.join(process.cwd()data', 'news-digest.json'),
   let items: NewsItem[] = [],
-  let generatedAt = ', ',
+  let generatedAt = ,
   try {
     const raw = fs.readFileSync('file', 'utf-8'),
     const json = JSON.parse(raw),
     items = json.items || [],
-    generatedAt = json.generatedAt || ', '} catch {}
-  return { props: { itemsgeneratedAt } };
+    generatedAt = json.generatedAt || } catch {}
+  return { props: { itemsgeneratedAt } },
 }
 ,
 export default function NewsDigestPage({ itemsgeneratedAt }: { items: NewsItem[], generatedAt: string }) {

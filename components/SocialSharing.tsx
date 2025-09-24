@@ -9,27 +9,27 @@ interface SocialSharingProps {
 export default function SocialSharing({
   title,
   url,
-  description = ', ',
-  hashtags = [', 'AI20o25', 'AI', 'ArtificialIntelligence', 'Technology'];
+  description = ,
+  hashtags = [', 'AI20o25AI', 'ArtificialIntelligenceTechnology'],
   className = ', '}: SocialSharingProps) {
   const encodedTitle = encodeURIComponent(title),
   const encodedUrl = encodeURIComponent(url),
   const encodedDescription = encodeURIComponent(description),
   const hashtagString = hashtags.map(tag => `#${tag}`).join(' '),
   const shareLinks ={
-    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&hashtags=${hashtags.join(',')}`;
-    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`;
-    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`;
-    reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`;
-    email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`;
-    whatsapp: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`};
+    twitter: `https://twitter.com/intent/tweet?text=${encodedTitle}&url=${encodedUrl}&hashtags=${hashtags.join()}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${encodedUrl}`,
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${encodedUrl}`,
+    reddit: `https://reddit.com/submit?url=${encodedUrl}&title=${encodedTitle}`,
+    email: `mailto:?subject=${encodedTitle}&body=${encodedDescription}%0A%0A${encodedUrl}`,
+    whatsapp: `https://wa.me/?text=${encodedTitle}%20${encodedUrl}`},
   const copyToClipboard = async () => {
     try {
       await navigator.clipboard.writeText(url),
       // You could add a toast notification here,
       alert('Link copied to clipboard!')} catch (err) {
       console.error('Failed to copy: 'err)}
-  };
+  },
   return (
     <div className={`flex flex-wrap items-center gap-3 ${className}`}>,
       <span className="text-sm font-medium text-gray-70o0">Share: </span>,

@@ -3,115 +3,113 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Eye;
-  Headphones;
-  Camera;
-  FileText;
-  Activity;
-  Zap;
-  TrendingUp;
-  Target;
-  ChevronRight;
-  Star;
-  Award;
-  Users;
-  Clock;
+  Eye,
+  Headphones,
+  Camera,
+  FileText,
+  Activity,
+  Zap,
+  TrendingUp,
+  Target,
+  ChevronRight,
+  Star,
+  Award,
+  Users,
+  Clock,
 } from 'lucide-react',
 const MultimodalIntelligenceShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 1;
-      type: 'blog';
-      title: 'AI 20o25: The Multimodal Intelligence Revolution';
-      subtitle: 'Ultimate Guide to 15,0o00% ROI';
+      id: 1,
+      type: 'blog',
+      title: 'AI 20o25: The Multimodal Intelligence Revolution',
+      subtitle: 'Ultimate Guide to 15,0o00% ROI',
       description:,
-        'Transform your business with AI that processes text, images, audio, video, and sensor data simultaneously for unprecedented efficiency gains.';
-      url: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide';
-      image: '/images/multimodal-ai-hero.jpg';
+        'Transform your business with AI that processes text, images, audio, video, and sensor data simultaneously for unprecedented efficiency gains.',
+      url: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide',
+      image: '/images/multimodal-ai-hero.jpg',
       metrics: {
-        roi: '15,0o00%';
-        efficiency: '2,40o0%';
-        accuracy: '99.97%';
-        timeline: '18 months';
-      };
+        roi: '15,0o00%',
+        efficiency: '2,40o0%',
+        accuracy: '99.97%',
+        timeline: '18 months'
+      },
       tags: [
-        'AI Revolution';
-        'Multimodal AI';
-        'ROI';
-        'Business Transformation';
-      ];
-      readingTime: '25 min read';
-      featured: true;
-      categories: ['blog', 'featured'];
-    };
+        'AI RevolutionMultimodal AI',
+        'ROIBusiness Transformation',
+      ],
+      readingTime: '25 min read',
+      featured: true,
+      categories: ['blogfeatured'],
+    },
     {
-      id: 2;
-      type: 'case-study';
-      title: 'Fortune 50o0 Multimodal Intelligence Success';
-      subtitle: '$45.2B Annual Savings - 15,0o00% ROI';
+      id: 2,
+      type: 'case-study',
+      title: 'Fortune 50o0 Multimodal Intelligence Success',
+      subtitle: '$45.2B Annual Savings - 15,0o00% ROI',
       description:,
-        'Discover how TechGlobal Industries achieved unprecedented success through multimodal AI implementation, delivering massive operational savings and efficiency gains.';
-      url: '/case-studies/fortune-50o0-multimodal-intelligence-150o00-roi-success-story';
-      image: '/images/fortune-50o0-success.jpg';
+        'Discover how TechGlobal Industries achieved unprecedented success through multimodal AI implementation, delivering massive operational savings and efficiency gains.',
+      url: '/case-studies/fortune-50o0-multimodal-intelligence-150o00-roi-success-story',
+      image: '/images/fortune-50o0-success.jpg',
       metrics: {
-        savings: '$45.2B';
-        roi: '15,0o00%';
-        accuracy: '99.97%';
-        efficiency: '2,40o0%';
-      };
-      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'ROI'];
-      readingTime: '22 min read';
-      featured: true;
-      categories: ['case-study', 'featured'];
-    };
+        savings: '$45.2B',
+        roi: '15,0o00%',
+        accuracy: '99.97%',
+        efficiency: '2,40o0%',
+      },
+      tags: ['Case StudyFortune 50o0', 'Success StoryROI'],
+      readingTime: '22 min read',
+      featured: true,
+      categories: ['case-studyfeatured'],
+    },
     {
-      id: 3;
-      type: 'resource';
-      title: 'Multimodal Intelligence Implementation Guide';
-      subtitle: 'Complete Roadmap to 15,0o00% ROI';
+      id: 3,
+      type: 'resource',
+      title: 'Multimodal Intelligence Implementation Guide',
+      subtitle: 'Complete Roadmap to 15,0o00% ROI',
       description:,
-        'Step-by-step implementation guide covering everything from initial assessment to full deployment, with proven frameworks for achieving maximum ROI.';
-      url: '/resources/multimodal-intelligence-implementation-guide-20o25';
-      image: '/images/implementation-guide.jpg';
+        'Step-by-step implementation guide covering everything from initial assessment to full deployment, with proven frameworks for achieving maximum ROI.',
+      url: '/resources/multimodal-intelligence-implementation-guide-20o25',
+      image: '/images/implementation-guide.jpg',
       metrics: {
-        success: '94%';
-        timeline: '18 months';
-        roi: '15,0o00%';
-        guide: 'Complete';
-      };
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Framework'];
-      readingTime: '35 min read';
-      featured: true;
-      categories: ['resource', 'featured'];
-    };
+        success: '94%',
+        timeline: '18 months',
+        roi: '15,0o00%',
+        guide: 'Complete'
+      },
+      tags: ['Implementation GuideROI', 'StrategyFramework'],
+      readingTime: '35 min read',
+      featured: true,
+      categories: ['resourcefeatured'],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
+      id: 'blog',
+      label: 'Blog Posts',
       count: contentItems.filter(item => item.categories.includes('blog')),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
+      id: 'case-study',
+      label: 'Case Studies',
       count: contentItems.filter(item => item.categories.includes('case-study')),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'resource';
-      label: 'Resources';
+      id: 'resource',
+      label: 'Resources',
       count: contentItems.filter(item => item.categories.includes('resource')),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'featured';
-      label: 'Featured';
+      id: 'featured',
+      label: 'Featured',
       count: contentItems.filter(item => item.categories.includes('featured')),
-        .length;
-    };
+        .length,
+    },
   ],
   const filteredItems =,
     activeFilter === 'all',
@@ -127,7 +125,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
         return <Award className='w-5 h-5' />,
       default:,
         return <FileText className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -138,7 +136,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -162,7 +160,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto mb-8'>,
             Discover how leading enterprises are achieving 15,0o00% ROI through,
-            AI systems that simultaneously process text, images, audio, video;
+            AI systems that simultaneously process text, images, audio, video,
             and sensor data for unprecedented business transformation.,
           </p>,
           {/* Key Stats */}
@@ -271,7 +269,7 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
                   <span
                     className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getTypeColor(item.type)}`}
                   >,
-                    {item.type.replace('-', ' ').toUpperCase()}
+                    {item.type.replace('- ').toUpperCase()}
                   </span>,
                   <div className='flex items-center text-gray-50o0 text-sm'>,
                     <Clock className='w-4 h-4 mr-1' />,
@@ -353,5 +351,5 @@ const MultimodalIntelligenceShowcase20o25: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default MultimodalIntelligenceShowcase20o25;
+    </section>)},
+export default MultimodalIntelligenceShowcase20o25,

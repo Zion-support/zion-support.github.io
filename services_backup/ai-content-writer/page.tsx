@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Content Writer | Zion Tech Group';
+  title: 'AI Content Writer | Zion Tech Group',
   description:,
-    'AI-powered content creation platform. Generate blog posts, social media content, and marketing copy with advanced AI.';
-};
+    'AI-powered content creation platform. Generate blog posts, social media content, and marketing copy with advanced AI.',
+},
 export default function AIContentWriterPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function AIContentWriterPage() {
         <FeatureCard
           title='Content Generation',
           details={[
-            'Blog posts & articles';
-            'Social media content';
-            'Email marketing copy';
-            'Product descriptions';
-            'SEO-optimized content';
+            'Blog posts & articlesSocial media content',
+            'Email marketing copyProduct descriptions',
+            'SEO-optimized content',
           ]}
         />,
         <FeatureCard
           title='AI Features',
           details={[
-            'GPT-4 powered writing';
-            'Brand voice training';
-            'Tone adjustment';
-            'Plagiarism detection';
-            'Content optimization';
+            'GPT-4 powered writingBrand voice training',
+            'Tone adjustmentPlagiarism detection',
+            'Content optimization',
           ]}
         />,
         <FeatureCard
           title='Workflow & Collaboration',
           details={[
-            'Content calendar';
-            'Team collaboration';
-            'Approval workflows';
-            'Version control';
-            'Performance analytics';
+            'Content calendarTeam collaboration',
+            'Approval workflowsVersion control',
+            'Performance analytics',
           ]}
         />,
       </div>,
@@ -96,22 +90,18 @@ function PricingSection() {
           name='Creator',
           price='$19/mo',
           features={[
-            '50 AI-generated articles/month';
-            'Basic templates';
-            'Standard AI models';
-            'Email support';
-            'Basic analytics';
+            '50 AI-generated articles/monthBasic templates',
+            'Standard AI modelsEmail support',
+            'Basic analytics',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$79/mo',
           features={[
-            '20o0 AI-generated articles/month';
-            'Advanced templates & customization';
-            'GPT-4 access';
-            'Priority support';
-            'Team collaboration (5 users)';
+            '20o0 AI-generated articles/monthAdvanced templates & customization',
+            'GPT-4 accessPriority support',
+            'Team collaboration (5 users)',
           ]}
           featured={true}
         />,
@@ -119,21 +109,19 @@ function PricingSection() {
           name='Agency',
           price='$199/mo',
           features={[
-            'Unlimited articles';
-            'Custom brand voice training';
-            'White-label solution';
-            'Dedicated account manager';
-            'Advanced analytics & reporting';
+            'Unlimited articlesCustom brand voice training',
+            'White-label solutionDedicated account manager',
+            'Advanced analytics & reporting',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

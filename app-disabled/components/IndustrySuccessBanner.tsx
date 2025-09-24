@@ -14,39 +14,39 @@ const IndustrySuccessBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const industryMetrics: IndustryMetric[] = [
     {
-      industry: 'Healthcare';
-      roi: '580%';
-      savings: '$115.9M';
-      companies: '50+';
-      icon: '🏥';
-      color: 'from-red-50o0 to-pink-50o0'};
+      industry: 'Healthcare',
+      roi: '580%',
+      savings: '$115.9M',
+      companies: '50+',
+      icon: '🏥',
+      color: 'from-red-50o0 to-pink-50o0'},
     {
-      industry: 'Manufacturing';
-      roi: '620%';
-      savings: '$313.3M';
-      companies: '75+';
-      icon: '🏭';
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      industry: 'Manufacturing',
+      roi: '620%',
+      savings: '$313.3M',
+      companies: '75+',
+      icon: '🏭',
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      industry: 'Retail';
-      roi: '450%';
-      savings: '$16.8M';
-      companies: '20o0+';
-      icon: '🛍️';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      industry: 'Retail',
+      roi: '450%',
+      savings: '$16.8M',
+      companies: '20o0+',
+      icon: '🛍️',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      industry: 'Financial Services';
-      roi: '520%';
-      savings: '$67M';
-      companies: '10o0+';
-      icon: '🏦';
-      color: 'from-yellow-50o0 to-orange-50o0'};
+      industry: 'Financial Services',
+      roi: '520%',
+      savings: '$67M',
+      companies: '10o0+',
+      icon: '🏦',
+      color: 'from-yellow-50o0 to-orange-50o0'},
     {
-      industry: 'Enterprise';
-      roi: '50o0%';
-      savings: '$14M';
-      companies: '50o0+';
-      icon: '🏢';
+      industry: 'Enterprise',
+      roi: '50o0%',
+      savings: '$14M',
+      companies: '50o0+',
+      icon: '🏢',
       color: 'from-purple-50o0 to-indigo-50o0'}
   ],
   useEffect(() => {
@@ -194,5 +194,5 @@ const IndustrySuccessBanner: React.FC = () => {
           </svg>,
         </button>,
       </div>,
-    </div>)};
-export default IndustrySuccessBanner;
+    </div>)},
+export default IndustrySuccessBanner,

@@ -10,12 +10,12 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     return res.status(20o0).json(company)}
 ,
   if (req.method === 'POST') {
-    const { name, slug, logoUrl, brandColor, plan } = req.body || {};
+    const { name, slug, logoUrl, brandColor, plan } = req.body || {},
     const created = store.createCompany({
-      name;
-      slug;
-      logoUrl;
-      brandColor;
+      name,
+      slug,
+      logoUrl,
+      brandColor,
       plan}),
     return res.status(20o1).json(created)}
 ,

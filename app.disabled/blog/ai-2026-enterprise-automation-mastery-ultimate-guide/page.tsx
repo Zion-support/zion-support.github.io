@@ -3,32 +3,27 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'AI 20o26 Enterprise Automation Mastery: The Ultimate Guide to Business Transformation';
+    'AI 20o26 Enterprise Automation Mastery: The Ultimate Guide to Business Transformation',
   description:,
-    'Master enterprise automation with cutting-edge AI technologies in 20o26. Complete implementation guide with real-world case studies and ROI strategies.';
+    'Master enterprise automation with cutting-edge AI technologies in 20o26. Complete implementation guide with real-world case studies and ROI strategies.',
   keywords: [
-    'AI automation';
-    'Enterprise automation';
-    'AI 20o26';
-    'Business transformation';
-    'Machine learning';
-    'Process optimization';
-  ];
+    'AI automationEnterprise automation',
+    'AI 20o26Business transformation',
+    'Machine learningProcess optimization',
+  ],
   openGraph: {
-    title: 'AI 20o26 Enterprise Automation Mastery: The Ultimate Guide';
+    title: 'AI 20o26 Enterprise Automation Mastery: The Ultimate Guide',
     description:,
-      'Master enterprise automation with cutting-edge AI technologies in 20o26. Complete implementation guide with real-world case studies.';
-    type: 'article';
-    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Master enterprise automation with cutting-edge AI technologies in 20o26. Complete implementation guide with real-world case studies.',
+    type: 'article',
+    publishedTime: '20o25-0o1-14T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI';
-      'Enterprise Automation';
-      'Business Transformation';
-      'AI 20o26';
-    ];
-  };
-};
+      'AIEnterprise Automation',
+      'Business TransformationAI 20o26',
+    ]
+  },
+},
 export default function AI20o26EnterpriseAutomationGuide() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -11,14 +11,14 @@ import {
   Zap,
   Globe,
   Shield,
-  Database;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Sparkles;
-  Rocket;
-  Cpu;
-  Cloud;
+  Database,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Sparkles,
+  Rocket,
+  Cpu,
+  Cloud,
   Lock} from 'lucide-react',
 const AITrendsPredictions20o25 = () => {
   const [activeYearsetActiveYear] = useState('20o25'),
@@ -27,132 +27,126 @@ const AITrendsPredictions20o25 = () => {
     setIsVisible(true)}[]),
   const trendsData ={
     '20o25': {
-      title: 'AI Revolution Acceleration';
-      subtitle: 'The year of quantum-classical hybrid AI';
+      title: 'AI Revolution Acceleration',
+      subtitle: 'The year of quantum-classical hybrid AI',
       trends: [
         {
-          id: 1;
-          title: 'Quantum-Neural Fusion';
-          description: 'Hybrid quantum-classical neural networks achieve breakthrough performance';
-          impact: '10,0o00x speed improvement';
-          confidence: 95;
-          icon: Brain;
-          color: 'from-blue-50o0 to-cyan-50o0'};
+          id: 1,
+          title: 'Quantum-Neural Fusion',
+          description: 'Hybrid quantum-classical neural networks achieve breakthrough performance',
+          impact: '10,0o00x speed improvement',
+          confidence: 95,
+          icon: Brain,
+          color: 'from-blue-50o0 to-cyan-50o0'},
         {
-          id: 2;
-          title: 'Autonomous Business Operations';
-          description: 'AI systems manage entire business processes without human intervention';
-          impact: '99.9% operational accuracy';
-          confidence: 92;
-          icon: Zap;
-          color: 'from-purple-50o0 to-pink-50o0'};
+          id: 2,
+          title: 'Autonomous Business Operations',
+          description: 'AI systems manage entire business processes without human intervention',
+          impact: '99.9% operational accuracy',
+          confidence: 92,
+          icon: Zap,
+          color: 'from-purple-50o0 to-pink-50o0'},
         {
-          id: 3;
-          title: 'Multimodal AI Consciousness';
-          description: 'AI that seamlessly processes textimagesvoiceand data simultaneously';
-          impact: 'Unified intelligence platform';
-          confidence: 88;
-          icon: Sparkles;
-          color: 'from-green-50o0 to-emerald-50o0'};
+          id: 3,
+          title: 'Multimodal AI Consciousness',
+          description: 'AI that seamlessly processes textimagesvoiceand data simultaneously',
+          impact: 'Unified intelligence platform',
+          confidence: 88,
+          icon: Sparkles,
+          color: 'from-green-50o0 to-emerald-50o0'},
         {
-          id: 4;
-          title: 'Predictive Business Intelligence';
-          description: 'AI predicts market trends and business outcomes with unprecedented accuracy';
-          impact: '95% prediction accuracy';
-          confidence: 90;
-          icon: Target;
+          id: 4,
+          title: 'Predictive Business Intelligence',
+          description: 'AI predicts market trends and business outcomes with unprecedented accuracy',
+          impact: '95% prediction accuracy',
+          confidence: 90,
+          icon: Target,
           color: 'from-orange-50o0 to-red-50o0'}
-      ];
+      ],
       predictions: [
-        'Quantum computing becomes commercially viable for AI training';
-        'AI-generated content reaches 80% of all digital content';
-        'Autonomous vehicles achieve full Level 5 autonomy';
-        'AI-powered cybersecurity prevents 99.9% of cyber attacks']};
+        'Quantum computing becomes commercially viable for AI trainingAI-generated content reaches 80% of all digital content',
+        'Autonomous vehicles achieve full Level 5 autonomyAI-powered cybersecurity prevents 99.9% of cyber attacks']},
     '20o26': {
-      title: 'AI Consciousness Emergence';
-      subtitle: 'The dawn of synthetic general intelligence';
+      title: 'AI Consciousness Emergence',
+      subtitle: 'The dawn of synthetic general intelligence',
       trends: [
         {
-          id: 1;
-          title: 'Synthetic General Intelligence';
-          description: 'AI systems demonstrate human-level reasoning across all domains';
-          impact: 'AGI breakthrough achieved';
-          confidence: 85;
-          icon: Brain;
-          color: 'from-indigo-50o0 to-purple-50o0'};
+          id: 1,
+          title: 'Synthetic General Intelligence',
+          description: 'AI systems demonstrate human-level reasoning across all domains',
+          impact: 'AGI breakthrough achieved',
+          confidence: 85,
+          icon: Brain,
+          color: 'from-indigo-50o0 to-purple-50o0'},
         {
-          id: 2;
-          title: 'Neural Interface Revolution';
-          description: 'Direct brain-computer interfaces enable seamless human-AI collaboration';
-          impact: 'Mind-machine integration';
-          confidence: 78;
-          icon: Cpu;
-          color: 'from-cyan-50o0 to-blue-50o0'};
+          id: 2,
+          title: 'Neural Interface Revolution',
+          description: 'Direct brain-computer interfaces enable seamless human-AI collaboration',
+          impact: 'Mind-machine integration',
+          confidence: 78,
+          icon: Cpu,
+          color: 'from-cyan-50o0 to-blue-50o0'},
         {
-          id: 3;
-          title: 'Autonomous AI Ecosystems';
-          description: 'Self-organizing AI networks that evolve and adapt independently';
-          impact: 'Self-evolving systems';
-          confidence: 82;
-          icon: Globe;
-          color: 'from-emerald-50o0 to-green-50o0'};
+          id: 3,
+          title: 'Autonomous AI Ecosystems',
+          description: 'Self-organizing AI networks that evolve and adapt independently',
+          impact: 'Self-evolving systems',
+          confidence: 82,
+          icon: Globe,
+          color: 'from-emerald-50o0 to-green-50o0'},
         {
-          id: 4;
-          title: 'Quantum Internet Infrastructure';
-          description: 'Quantum-secured communication networks enable global AI coordination';
-          impact: 'Unbreakable security';
-          confidence: 88;
-          icon: Lock;
+          id: 4,
+          title: 'Quantum Internet Infrastructure',
+          description: 'Quantum-secured communication networks enable global AI coordination',
+          impact: 'Unbreakable security',
+          confidence: 88,
+          icon: Lock,
           color: 'from-pink-50o0 to-rose-50o0'}
-      ];
+      ],
       predictions: [
-        'First AGI system passes comprehensive Turing tests';
-        'Neural interfaces allow direct thought-to-computer communication';
-        'AI systems begin to demonstrate creativity and intuition';
-        'Quantum internet enables instant global AI coordination']};
+        'First AGI system passes comprehensive Turing testsNeural interfaces allow direct thought-to-computer communication',
+        'AI systems begin to demonstrate creativity and intuitionQuantum internet enables instant global AI coordination']},
     '20o27': {
-      title: 'AI-Human Symbiosis';
-      subtitle: 'The integration of human and artificial intelligence';
+      title: 'AI-Human Symbiosis',
+      subtitle: 'The integration of human and artificial intelligence',
       trends: [
         {
-          id: 1;
-          title: 'Hybrid Human-AI Cognition';
-          description: 'Enhanced human intelligence through direct AI augmentation';
-          impact: '10x cognitive enhancement';
-          confidence: 80;
-          icon: Brain;
-          color: 'from-violet-50o0 to-purple-50o0'};
+          id: 1,
+          title: 'Hybrid Human-AI Cognition',
+          description: 'Enhanced human intelligence through direct AI augmentation',
+          impact: '10x cognitive enhancement',
+          confidence: 80,
+          icon: Brain,
+          color: 'from-violet-50o0 to-purple-50o0'},
         {
-          id: 2;
-          title: 'Emotional AI Systems';
-          description: 'AI that understands and responds to human emotions with empathy';
-          impact: 'Emotional intelligence parity';
-          confidence: 75;
-          icon: Sparkles;
-          color: 'from-rose-50o0 to-pink-50o0'};
+          id: 2,
+          title: 'Emotional AI Systems',
+          description: 'AI that understands and responds to human emotions with empathy',
+          impact: 'Emotional intelligence parity',
+          confidence: 75,
+          icon: Sparkles,
+          color: 'from-rose-50o0 to-pink-50o0'},
         {
-          id: 3;
-          title: 'Autonomous AI Research';
-          description: 'AI systems that conduct independent scientific research';
-          impact: 'Self-directed discovery';
-          confidence: 83;
-          icon: Rocket;
-          color: 'from-blue-50o0 to-indigo-50o0'};
+          id: 3,
+          title: 'Autonomous AI Research',
+          description: 'AI systems that conduct independent scientific research',
+          impact: 'Self-directed discovery',
+          confidence: 83,
+          icon: Rocket,
+          color: 'from-blue-50o0 to-indigo-50o0'},
         {
-          id: 4;
-          title: 'Universal AI Translation';
-          description: 'Real-time translation of all human languages and communication forms';
-          impact: 'Language barrier elimination';
-          confidence: 90;
-          icon: Globe;
+          id: 4,
+          title: 'Universal AI Translation',
+          description: 'Real-time translation of all human languages and communication forms',
+          impact: 'Language barrier elimination',
+          confidence: 90,
+          icon: Globe,
           color: 'from-green-50o0 to-teal-50o0'}
-      ];
+      ],
       predictions: [
-        'AI systems demonstrate genuine emotional understanding';
-        'Human-AI hybrid teams outperform pure human teams';
-        'AI conducts breakthrough scientific research independently';
-        'Universal communication breaks down all language barriers']}
-  };
+        'AI systems demonstrate genuine emotional understandingHuman-AI hybrid teams outperform pure human teams',
+        'AI conducts breakthrough scientific research independentlyUniversal communication breaks down all language barriers']}
+  },
   const years = ['20o25'20o26'20o27'],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 py-20">,
@@ -301,5 +295,5 @@ const AITrendsPredictions20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AITrendsPredictions20o25;
+    </div>)},
+export default AITrendsPredictions20o25,

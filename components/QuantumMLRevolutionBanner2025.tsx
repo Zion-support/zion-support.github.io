@@ -94,5 +94,5 @@ const QuantumMLRevolutionBanner20o25 = () => {
       <div className="absolute top-40 right-20 w-6 h-6 bg-purple-40o0 rounded-full animate-pulse delay-10o00"></div>,
       <div className="absolute bottom-20 left-20 w-3 h-3 bg-blue-40o0 rounded-full animate-pulse delay-20o00"></div>,
       <div className="absolute bottom-40 right-10 w-5 h-5 bg-indigo-40o0 rounded-full animate-pulse delay-50o0"></div>,
-    </section>)};
-export default QuantumMLRevolutionBanner20o25;
+    </section>)},
+export default QuantumMLRevolutionBanner20o25,

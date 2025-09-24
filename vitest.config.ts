@@ -4,16 +4,16 @@ import path from 'node: path',
 export default defineConfig({
   resolve: {
     alias: {
-      '@': path.resolve(process.cwd(), './src');
-      '@/pages': path.resolve(process.cwd(), './src/pages');
-    };
-  };
+      '@': path.resolve(process.cwd(), './src'),
+      '@/pages': path.resolve(process.cwd(), './src/pages'),
+    },
+  },
   test: {
-    environment: 'jsdom';
-    setupFiles: './tests/setup.ts';
-    globals: true;
+    environment: 'jsdom',
+    setupFiles: './tests/setup.ts',
+    globals: true,
     coverage: {
-      provider: 'v8';
-    };
-  };
+      provider: 'v8'
+    },
+  },
 }),

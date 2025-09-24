@@ -24,7 +24,7 @@ export default function UltimateContentShowcaseBanner20o25() {
             </span>,
           </h1>,
           <p className="text-xl md:text-2xl text-gray-30o0 max-w-5xl mx-auto leading-relaxed mb-8">,
-            Discover our latest breakthrough content featuring Neural Consciousness, $15B ROI success stories;
+            Discover our latest breakthrough content featuring Neural Consciousness, $15B ROI success stories,
             and complete autonomous business transformation guides. Get exclusive access to the future of AI.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center mb-8">,

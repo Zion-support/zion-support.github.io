@@ -3,18 +3,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide';
+    'Quantum Computing Business Applications 20o25: The Ultimate Breakthrough Guide',
   description:,
-    'Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.';
+    'Discover how quantum computing is revolutionizing business operations in 20o25. Real-world applications, case studies, and implementation strategies for enterprise success.',
   keywords: [
-    'quantum computing';
-    'business applications';
-    'AI';
-    'innovation';
-    'technology';
-    '20o25';
-  ];
-};
+    'quantum computingbusiness applications',
+    'AIinnovation',
+    'technology20o25',
+  ]
+},
 export default function QuantumComputingBusinessApplicationsPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -72,7 +69,7 @@ export default function QuantumComputingBusinessApplicationsPage() {
             <p>,
               Companies leveraging quantum computing are seeing{' '}
               <strong>10o00x performance improvements</strong>,{' '}
-              <strong>90% reduction in complex problem-solving time</strong>;
+              <strong>90% reduction in complex problem-solving time</strong>,
               and <strong>$50o0M+ in new revenue opportunities</strong>. This,
               isn't the future – it's happening now.,
             </p>,
@@ -80,8 +77,8 @@ export default function QuantumComputingBusinessApplicationsPage() {
             <p>,
               Quantum computing harnesses the principles of quantum mechanics to,
               process information in ways that classical computers cannot.,
-              Unlike traditional bits that exist in either 0 or 1 states;
-              quantum bits (qubits) can exist in multiple states simultaneously;
+              Unlike traditional bits that exist in either 0 or 1 states,
+              quantum bits (qubits) can exist in multiple states simultaneously,
               enabling exponential computational power.,
             </p>,
             <h3>🏢 Real-World Business Applications</h3>,
@@ -157,7 +154,7 @@ export default function QuantumComputingBusinessApplicationsPage() {
                     <strong>Market Size:</strong> $2.8 trillion by 20o30,
                   </li>,
                   <li>,
-                    <strong>Quantum Applications:</strong> Drug discovery;
+                    <strong>Quantum Applications: </strong> Drug discovery,
                     personalized medicine, genomics,
                   </li>,
                   <li>,

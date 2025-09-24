@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
 import {
 import { Button } from "@/components/ui/button",
@@ -6,45 +6,45 @@ import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
 import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
 import { formatDate } from "@/utils/dateUtils",
 import {formatDate} from "@/utils/dateUtils",
-import React from "react";;
-import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge";
-import type { QuoteRequest, QuoteStatus } from "@/types/quotes";
-import { formatDate } from "@/utils/dateUtils";
+import React from "react",
+import { Eye, MoreHorizontal, Archive, Trash2 } from "lucide-react",
+import { Button } from "@/components/ui/button",
+import { QuoteStatusBadge } from "@/components/quotes/QuoteStatusBadge",
+import type { QuoteRequest, QuoteStatus } from "@/types/quotes",
+import { formatDate } from "@/utils/dateUtils",
   Table,
   TableBody,
   TableCell,
   TableHead,
   TableHeader,
-  TableRow} from "@/components/ui/table";
+  TableRow} from "@/components/ui/table",
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface QuotesTableProps {
   isArchived?: boolean,
   isLoading: boolean,
   updateStatus: (id: string, status: QuoteStatus) => void,
   toggleArchive: (id: string, isArchived: boolean) => void,
   deleteQuote: (id: string) => void,
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface QuotesTableProps {
-  quotes: QuoteRequest[];
-  isArchived?: boolean;
-  isLoading: boolean;
-  updateStatus: (id: string, status: QuoteStatus) => void;
-  toggleArchive: (id: string, isArchived: boolean) => void;
-  deleteQuote: (id: string) => void;
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void}
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   onViewDetails}) => {
@@ -91,7 +91,7 @@ interface QuotesTableProps {
                   <div className="text - sm text - zion - slate - light truncate max - w-[200px]">,
                     {quote.project_summary}
 ,
-  deleteQuote;
+  deleteQuote,
   onViewDetails}) => {
   return (
     <div className="overflow-x-auto">,
@@ -187,31 +187,31 @@ interface QuotesTableProps {
                           </DropdownMenuItem>,
                         </DropdownMenuContent>,
                       </DropdownMenu>,
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface QuotesTableProps {
-  quotes: QuoteRequest[];
-  isArchived?: boolean;
-  isLoading: boolean;
-  updateStatus: (id: string, status: QuoteStatus) => void;
-  toggleArchive: (id: string, isArchived: boolean) => void;
-  deleteQuote: (id: string) => void;
+  quotes: QuoteRequest[],
+  isArchived?: boolean,
+  isLoading: boolean,
+  updateStatus: (id: string, status: QuoteStatus) => void,
+  toggleArchive: (id: string, isArchived: boolean) => void,
+  deleteQuote: (id: string) => void,
   onViewDetails: (quote: QuoteRequest) => void}
 ,
 export const QuotesTable: React.FC<QuotesTableProps> = ({
-  quotes;
-  isArchived = false;
-  isLoading;
-  updateStatus;
-  toggleArchive;
+  quotes,
+  isArchived = false,
+  isLoading,
+  updateStatus,
+  toggleArchive,
   deleteQuote,
   onViewDetails}) => {
   return (
@@ -357,5 +357,5 @@ export const QuotesTable: React.FC<QuotesTableProps> = ({
 ,
         </TableBody>,
       </Table>,
-    </div>)>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4};
+    </div>)>>>>>>> 4b01bbd5bc5a9373450c5efad91d38fbaa54fdb4>>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4},
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))))

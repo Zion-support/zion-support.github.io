@@ -12,28 +12,28 @@ interface ContentPreview {
 ,
 const contentPreviews: ContentPreview[] = [
   {
-    title: "AI 20o25 Ultimate Breakthrough Revolution";
-    description: "Revolutionary AI breakthrough delivering 5,0o00% ROI with autonomous operations and quantum-enhanced intelligence.";
-    href: "/ai-20o25-ultimate-breakthrough-revolution";
-    badge: "BREAKTHROUGH";
-    badgeColor: "from-red-50o0 to-pink-50o0";
-    icon: "🚀";
-    roi: "5,0o00% ROI"};
+    title: "AI 20o25 Ultimate Breakthrough Revolution",
+    description: "Revolutionary AI breakthrough delivering 5,0o00% ROI with autonomous operations and quantum-enhanced intelligence.",
+    href: "/ai-20o25-ultimate-breakthrough-revolution",
+    badge: "BREAKTHROUGH",
+    badgeColor: "from-red-50o0 to-pink-50o0",
+    icon: "🚀",
+    roi: "5,0o00% ROI"},
   {
-    title: "Quantum Computing Solutions 20o26";
-    description: "Revolutionary quantum computing solutions with error-corrected quantum computers and quantum supremacy.";
-    href: "/quantum-computing-solutions-20o26";
-    badge: "REVOLUTIONARY";
-    badgeColor: "from-cyan-50o0 to-blue-50o0";
-    icon: "⚛️";
-    roi: "15,0o00% ROI"};
+    title: "Quantum Computing Solutions 20o26",
+    description: "Revolutionary quantum computing solutions with error-corrected quantum computers and quantum supremacy.",
+    href: "/quantum-computing-solutions-20o26",
+    badge: "REVOLUTIONARY",
+    badgeColor: "from-cyan-50o0 to-blue-50o0",
+    icon: "⚛️",
+    roi: "15,0o00% ROI"},
   {
-    title: "AI 20o26-20o30 Future Predictions";
-    description: "Revolutionary predictions for AI development from 20o26 to 20o30 with breakthrough insights.";
-    href: "/ai-20o26-20o30-future-predictions-breakthrough";
-    badge: "FUTURE";
-    badgeColor: "from-purple-50o0 to-pink-50o0";
-    icon: "🔮";
+    title: "AI 20o26-20o30 Future Predictions",
+    description: "Revolutionary predictions for AI development from 20o26 to 20o30 with breakthrough insights.",
+    href: "/ai-20o26-20o30-future-predictions-breakthrough",
+    badge: "FUTURE",
+    badgeColor: "from-purple-50o0 to-pink-50o0",
+    icon: "🔮",
     roi: "25,0o00% ROI"}
 ],
 export default function NewsletterSignupWithPreviews() {
@@ -46,7 +46,7 @@ export default function NewsletterSignupWithPreviews() {
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
     setIsSubscribed(true),
-    setIsLoading(false)};
+    setIsLoading(false)},
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-br from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16">,
@@ -56,7 +56,7 @@ export default function NewsletterSignupWithPreviews() {
             Welcome to the Revolution!,
           </h2>,
           <p className="text-xl text-gray-30o0 mb-8">,
-            'You', 're now subscribed to our revolutionary AI insights newsletter. Get ready for breakthrough content delivered directly to your inbox.,
+            'Youre now subscribed to our revolutionary AI insights newsletter. Get ready for breakthrough content delivered directly to your inbox.,
           </p>,
           <div className="bg-gradient-to-r from-green-80o0/50 to-emerald-80o0/50 p-6 rounded-xl border border-green-50o0/30">,
             <h3 className="text-2xl font-bold mb-4 text-green-40o0">'What', 's Next?</h3>,

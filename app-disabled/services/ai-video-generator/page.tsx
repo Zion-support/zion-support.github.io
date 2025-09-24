@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-video-generator - Zion Tech Group';
+  title: 'ai-video-generator - Zion Tech Group',
   description:,
-    'Professional ai-video-generator solutions for your business needs.';
-  keywords: 'ai-video-generator, services, business, technology';
-};
+    'Professional ai-video-generator solutions for your business needs.',
+  keywords: 'ai-video-generator, services, business, technology',
+},
 export default function AiVideoGeneratorPage() {
   return (
     <div className='min-h-screen bg-white'>,

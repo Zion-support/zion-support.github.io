@@ -1,43 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, GraduationCap;
-  BookOpen, Lightbulb, Brain, Zap, Users2, Award;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, GraduationCap,
+  BookOpen, Lightbulb, Brain, Zap, Users2, Award,
   Clock, Target, BarChart3} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Education Platform Pro | Zion Tech Group';
-  description: 'Revolutionary AI-powered education platform that provides personalized learning experiences and intelligent educational content.';
-  keywords: 'AI education platform, personalized learning, AI tutoring, educational technology, adaptive learning, online education';
+  title: 'AI Education Platform Pro | Zion Tech Group',
+  description: 'Revolutionary AI-powered education platform that provides personalized learning experiences and intelligent educational content.',
+  keywords: 'AI education platform, personalized learning, AI tutoring, educational technology, adaptive learning, online education',
   openGraph: {
-    title: 'AI Education Platform Pro | Zion Tech Group';
-    description: 'Revolutionary AI-powered education platform that provides personalized learning experiences and intelligent educational content.';
-    url: 'https://ziontechgroup.com/ai-education-platform-pro';
-    siteName: 'Zion Tech Group';
+    title: 'AI Education Platform Pro | Zion Tech Group',
+    description: 'Revolutionary AI-powered education platform that provides personalized learning experiences and intelligent educational content.',
+    url: 'https://ziontechgroup.com/ai-education-platform-pro',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-education-platform-pro.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Education Platform Pro'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-education-platform-pro.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Education Platform Pro'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Education Platform Pro | Zion Tech Group';
-    description: 'Revolutionary AI-powered education platform that provides personalized learning experiences and intelligent educational content.';
-    images: ['https://ziontechgroup.com/og-image-ai-education-platform-pro.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Education Platform Pro | Zion Tech Group',
+    description: 'Revolutionary AI-powered education platform that provides personalized learning experiences and intelligent educational content.',
+    images: ['https://ziontechgroup.com/og-image-ai-education-platform-pro.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-education-platform-pro'}};
+    canonical: 'https://ziontechgroup.com/ai-education-platform-pro'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIEducationPlatformPro() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -54,7 +54,7 @@ export default function AIEducationPlatformPro() {
               AI Education Platform Pro,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              The world's most advanced AI education platform that provides personalized learning experiences;
+              The world's most advanced AI education platform that provides personalized learning experiences,
               intelligent content creation, and adaptive learning paths for students of all ages and levels.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -81,7 +81,7 @@ export default function AIEducationPlatformPro() {
               Revolutionary AI Education Platform,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of education from content creation to personalized learning;
+              Our AI platform handles every aspect of education from content creation to personalized learning,
               continuously adapting to each student's unique needs and learning style.,
             </p>,
           </div>,

@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -29,11 +29,11 @@ const axios = require('axios'),
 class CursorAutomatedCommunication {
   constructor(config ={}) {
     this.config ={
-      apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh';
-      apiKey: config.apiKey || process.env.CURSOR_API_KEY;
-      projectPath: config.projectPath || process.cwd();
-      autoCommit: config.autoCommit !== false;
-      ...config};
+      apiEndpoint: config.apiEndpoint || 'https://api.cursor.sh',
+      apiKey: config.apiKey || process.env.CURSOR_API_KEY,
+      projectPath: config.projectPath || process.cwd(),
+      autoCommit: config.autoCommit !== false,
+      ...config},
     this.isRunning = false,
     this.communicationHistory = []}
 ,
@@ -105,8 +105,8 @@ class CursorAutomatedCommunication {
         const issues = this.analyzeFile(content, file),
         if (issues.length > 0) {
           improvements.push({
-            file;
-            issues;
+            file,
+            issues,
             type: code_quality})}
       }
     } catch (error) {
@@ -152,20 +152,20 @@ class CursorAutomatedCommunication {
     // Check for common issues,
     if (content.includes('logger.info(') && !filePath.includes('test')) {
       issues.push({
-        type: 'debug_code';
-        message: Console.log statements found in production code';
+        type: 'debug_code',
+        message: Console.log statements found in production code',
         severity: low})}
 ,
     if (content.includes('TODO') || content.includes('FIXME')) {
       issues.push({
-        type: 'todo_items';
-        message: TODO/FIXME comments found';
+        type: 'todo_items',
+        message: TODO/FIXME comments found',
         severity: medium})}
 ,
     if (content.includes('var ) && !content.includes('var _')) {
       issues.push({
-        type: 'var_usage';
-        message: var keyword used instead of const/let';
+        type: 'var_usage',
+        message: var keyword used instead of const/let',
         severity: medium})}
 ,
     return issues}
@@ -173,11 +173,11 @@ class CursorAutomatedCommunication {
   async suggestImprovement(improvement) {
     try {
       const suggestion ={
-        timestamp: new Date().toISOString();
-        file: improvement.file;
-        issues: improvement.issues;
-        type: improvement.type;
-        suggestion: this.generateSuggestion(improvement)};
+        timestamp: new Date().toISOString(),
+        file: improvement.file,
+        issues: improvement.issues,
+        type: improvement.type,
+        suggestion: this.generateSuggestion(improvement)},
       this.communicationHistory.push(suggestion),
       logger.info(`💡 Suggestion for ${improvement.file}:`),
       logger.info(`   ${suggestion.suggestion}`),
@@ -190,9 +190,9 @@ class CursorAutomatedCommunication {
 ,
   generateSuggestion(improvement) {
     const suggestions ={
-      debug_code: Consider removing console.log statements for production';
-      todo_items: Address TODO/FIXME comments to improve code quality';
-      var_usage: Replace var with const or let for better scoping};
+      debug_code: Consider removing console.log statements for production',
+      todo_items: Address TODO/FIXME comments to improve code quality',
+      var_usage: Replace var with const or let for better scoping},
     return improvement.issues.map(issue =>,
       suggestions[issue.type] || `Fix ${issue.type}: ${issue.message}`).join(')}
 ,
@@ -202,14 +202,14 @@ class CursorAutomatedCommunication {
       // This would integrate with Cursor API to apply changes,
       // For now, we'll just log the improvement,
       const result ={
-        success: true;
-        file: improvement.file;
-        changes: improvement.issues.length;
-        timestamp: new Date().toISOString()};
+        success: true,
+        file: improvement.file,
+        changes: improvement.issues.length,
+        timestamp: new Date().toISOString()},
       logger.info(`✅ Improvement applied: ${result.changes} changes`),
       return result} catch (error) {
       logger.error('Error applying improvement:', error),
-      return { success: false, error: error.message };
+      return { success: false, error: error.message },
     }
   }
 ,
@@ -229,13 +229,13 @@ class CursorAutomatedCommunication {
 ,
   async runComprehensiveAnalysis() {
     const analysis ={
-      timestamp: new Date().toISOString();
-      improvements: [];
+      timestamp: new Date().toISOString(),
+      improvements: [],
       metrics: {
-        filesAnalyzed: 0;
-        issuesFound: 0;
+        filesAnalyzed: 0,
+        issuesFound: 0,
         suggestionsGenerated: 0}
-    };
+    },
     try {
       const files = await this.getSourceFiles(),
       analysis.metrics.filesAnalyzed = files.length,
@@ -245,8 +245,8 @@ class CursorAutomatedCommunication {
         if (issues.length > 0) {
           analysis.metrics.issuesFound += issues.length,
           analysis.improvements.push({
-            file;
-            issues;
+            file,
+            issues,
             type: comprehensive})}
       }
 ,
@@ -261,11 +261,11 @@ class CursorAutomatedCommunication {
 ,
   getStatus() {
     return {
-      isRunning: this.isRunning;
-      communicationHistory: this.communicationHistory.length;
+      isRunning: this.isRunning,
+      communicationHistory: this.communicationHistory.length,
       lastActivity: this.communicationHistory.length > 0,
         ? this.communicationHistory[this.communicationHistory.length - 1].timestamp,
-        : null};
+        : null},
   }
 }
 ,

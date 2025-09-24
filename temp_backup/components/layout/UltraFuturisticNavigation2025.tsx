@@ -2,33 +2,33 @@ import React, { useState, useEffect, useRef } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  Search;
-  ChevronDown;
-  Zap;
-  Globe;
-  Lock;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Star;
-  Users;
-  Award;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Palette;
-  Heart;
-  Target;
-  Sparkles;
-  Eye;
-  TrendingUp;
+  Menu,
+  X,
+  Search,
+  ChevronDown,
+  Zap,
+  Globe,
+  Lock,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Star,
+  Users,
+  Award,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Palette,
+  Heart,
+  Target,
+  Sparkles,
+  Eye,
+  TrendingUp,
 } from 'lucide-react',
 interface NavigationItem {
   label: string,
@@ -40,183 +40,183 @@ interface NavigationItem {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    label: 'Home';
-    href: '/';
-    icon: <Zap className='w-4 h-4' />;
-  };
+    label: 'Home',
+    href: '/',
+    icon: <Zap className='w-4 h-4' />
+  },
   {
-    label: 'Services';
+    label: 'Services',
     children: [
       {
-        label: 'AI & Machine Learning';
-        href: '/ai-services';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Advanced AI solutions for enterprise';
-        badge: 'Hot';
-      };
+        label: 'AI & Machine Learning',
+        href: '/ai-services',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Advanced AI solutions for enterprise',
+        badge: 'Hot'
+      },
       {
-        label: 'Quantum Computing';
-        href: '/quantum-computing';
-        icon: <Atom className='w-4 h-4' />;
-        description: 'Next-generation quantum solutions';
-        badge: 'New';
-      };
+        label: 'Quantum Computing',
+        href: '/quantum-computing',
+        icon: <Atom className='w-4 h-4' />,
+        description: 'Next-generation quantum solutions',
+        badge: 'New'
+      },
       {
-        label: 'Space Technology';
-        href: '/space-tech';
-        icon: <Rocket className='w-4 h-4' />;
-        description: 'Innovative space solutions';
-        badge: 'Future';
-      };
+        label: 'Space Technology',
+        href: '/space-tech',
+        icon: <Rocket className='w-4 h-4' />,
+        description: 'Innovative space solutions',
+        badge: 'Future'
+      },
       {
-        label: 'Cybersecurity';
-        href: '/cybersecurity';
-        icon: <Shield className='w-4 h-4' />;
-        description: 'Enterprise security solutions';
-        badge: 'Secure';
-      };
+        label: 'Cybersecurity',
+        href: '/cybersecurity',
+        icon: <Shield className='w-4 h-4' />,
+        description: 'Enterprise security solutions',
+        badge: 'Secure'
+      },
       {
-        label: 'Cloud Solutions';
-        href: '/cloud-platform';
-        icon: <Cloud className='w-4 h-4' />;
-        description: 'Scalable cloud infrastructure';
-        badge: 'Scalable';
-      };
+        label: 'Cloud Solutions',
+        href: '/cloud-platform',
+        icon: <Cloud className='w-4 h-4' />,
+        description: 'Scalable cloud infrastructure',
+        badge: 'Scalable'
+      },
       {
-        label: 'DevOps & Infrastructure';
-        href: '/devops-infrastructure';
-        icon: <Cpu className='w-4 h-4' />;
-        description: 'Modern DevOps practices';
-        badge: 'Fast';
-      };
+        label: 'DevOps & Infrastructure',
+        href: '/devops-infrastructure',
+        icon: <Cpu className='w-4 h-4' />,
+        description: 'Modern DevOps practices',
+        badge: 'Fast'
+      },
       {
-        label: 'Data & Analytics';
-        href: '/data-analytics';
-        icon: <Database className='w-4 h-4' />;
-        description: 'Data-driven insights';
-        badge: 'Smart';
-      };
+        label: 'Data & Analytics',
+        href: '/data-analytics',
+        icon: <Database className='w-4 h-4' />,
+        description: 'Data-driven insights',
+        badge: 'Smart'
+      },
       {
-        label: 'Innovative 20o25 Services';
-        href: '/innovative-20o25-services-showcase';
-        icon: <Sparkles className='w-4 h-4' />;
-        description: 'Cutting-edge 20o25 technology solutions';
-        badge: '20o25';
-      };
+        label: 'Innovative 20o25 Services',
+        href: '/innovative-20o25-services-showcase',
+        icon: <Sparkles className='w-4 h-4' />,
+        description: 'Cutting-edge 20o25 technology solutions',
+        badge: '20o25'
+      },
       {
-        label: 'Innovative 20o40 Services';
-        href: '/innovative-20o40-futuristic-services-showcase';
-        icon: <Eye className='w-4 h-4' />;
-        description: 'Futuristic 20o40 technology solutions';
-        badge: '20o40';
-      };
+        label: 'Innovative 20o40 Services',
+        href: '/innovative-20o40-futuristic-services-showcase',
+        icon: <Eye className='w-4 h-4' />,
+        description: 'Futuristic 20o40 technology solutions',
+        badge: '20o40'
+      },
       {
-        label: 'View All Services';
-        href: '/services';
-        icon: <ArrowRight className='w-4 h-4' />;
-        description: 'Complete service portfolio';
-      };
-    ];
-  };
+        label: 'View All Services',
+        href: '/services',
+        icon: <ArrowRight className='w-4 h-4' />,
+        description: 'Complete service portfolio'
+      },
+    ],
+  },
   {
-    label: 'Solutions';
+    label: 'Solutions',
     children: [
       {
-        label: 'Enterprise Solutions';
-        href: '/enterprise-solutions';
-        icon: <Users className='w-4 h-4' />;
-        description: 'Large-scale enterprise implementations';
-      };
+        label: 'Enterprise Solutions',
+        href: '/enterprise-solutions',
+        icon: <Users className='w-4 h-4' />,
+        description: 'Large-scale enterprise implementations'
+      },
       {
-        label: 'SMB Solutions';
-        href: '/smb-solutions';
-        icon: <Target className='w-4 h-4' />;
-        description: 'Small and medium business solutions';
-      };
+        label: 'SMB Solutions',
+        href: '/smb-solutions',
+        icon: <Target className='w-4 h-4' />,
+        description: 'Small and medium business solutions'
+      },
       {
-        label: 'Industry Solutions';
-        href: '/industry-solutions';
-        icon: <TrendingUp className='w-4 h-4' />;
-        description: 'Industry-specific technology solutions';
-      };
+        label: 'Industry Solutions',
+        href: '/industry-solutions',
+        icon: <TrendingUp className='w-4 h-4' />,
+        description: 'Industry-specific technology solutions'
+      },
       {
-        label: 'Custom Development';
-        href: '/custom-development';
-        icon: <Palette className='w-4 h-4' />;
-        description: 'Tailored solutions for your needs';
-      };
-    ];
-  };
+        label: 'Custom Development',
+        href: '/custom-development',
+        icon: <Palette className='w-4 h-4' />,
+        description: 'Tailored solutions for your needs'
+      },
+    ],
+  },
   {
-    label: 'Resources';
+    label: 'Resources',
     children: [
       {
-        label: 'Documentation';
-        href: '/docs';
-        icon: <Database className='w-4 h-4' />;
-        description: 'Technical documentation and guides';
-      };
+        label: 'Documentation',
+        href: '/docs',
+        icon: <Database className='w-4 h-4' />,
+        description: 'Technical documentation and guides'
+      },
       {
-        label: 'Blog & Insights';
-        href: '/blog';
-        icon: <TrendingUp className='w-4 h-4' />;
-        description: 'Latest insights and industry trends';
-      };
+        label: 'Blog & Insights',
+        href: '/blog',
+        icon: <TrendingUp className='w-4 h-4' />,
+        description: 'Latest insights and industry trends'
+      },
       {
-        label: 'Case Studies';
-        href: '/case-studies';
-        icon: <Star className='w-4 h-4' />;
-        description: 'Success stories and implementations';
-      };
+        label: 'Case Studies',
+        href: '/case-studies',
+        icon: <Star className='w-4 h-4' />,
+        description: 'Success stories and implementations'
+      },
       {
-        label: 'White Papers';
-        href: '/white-papers';
-        icon: <Eye className='w-4 h-4' />;
-        description: 'In-depth research and analysis';
-      };
+        label: 'White Papers',
+        href: '/white-papers',
+        icon: <Eye className='w-4 h-4' />,
+        description: 'In-depth research and analysis'
+      },
       {
-        label: 'Webinars';
-        href: '/webinars';
-        icon: <Globe className='w-4 h-4' />;
-        description: 'Educational webinars and training';
-      };
-    ];
-  };
+        label: 'Webinars',
+        href: '/webinars',
+        icon: <Globe className='w-4 h-4' />,
+        description: 'Educational webinars and training'
+      },
+    ],
+  },
   {
-    label: 'Company';
+    label: 'Company',
     children: [
       {
-        label: 'About Us';
-        href: '/about';
-        icon: <Users className='w-4 h-4' />;
-        description: 'Learn about our mission and team';
-      };
+        label: 'About Us',
+        href: '/about',
+        icon: <Users className='w-4 h-4' />,
+        description: 'Learn about our mission and team'
+      },
       {
-        label: 'Careers';
-        href: '/careers';
-        icon: <Heart className='w-4 h-4' />;
-        description: 'Join our innovative team';
-      };
+        label: 'Careers',
+        href: '/careers',
+        icon: <Heart className='w-4 h-4' />,
+        description: 'Join our innovative team'
+      },
       {
-        label: 'Partners';
-        href: '/partners';
-        icon: <Star className='w-4 h-4' />;
-        description: 'Strategic partnerships and alliances';
-      };
+        label: 'Partners',
+        href: '/partners',
+        icon: <Star className='w-4 h-4' />,
+        description: 'Strategic partnerships and alliances'
+      },
       {
-        label: 'News & Updates';
-        href: '/news';
-        icon: <TrendingUp className='w-4 h-4' />;
-        description: 'Company news and announcements';
-      };
+        label: 'News & Updates',
+        href: '/news',
+        icon: <TrendingUp className='w-4 h-4' />,
+        description: 'Company news and announcements'
+      },
       {
-        label: 'Contact';
-        href: '/contact';
-        icon: <Phone className='w-4 h-4' />;
-        description: 'Get in touch with our team';
-      };
-    ];
-  };
+        label: 'Contact',
+        href: '/contact',
+        icon: <Phone className='w-4 h-4' />,
+        description: 'Get in touch with our team'
+      },
+    ],
+  },
 ],
 const UltraFuturisticNavigation20o25: React.FC = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
@@ -231,7 +231,7 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle click outside mobile menu,
@@ -241,7 +241,7 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
         mobileMenuRef.current &&,
         !mobileMenuRef.current.contains(event.target as Node)) {
         setIsMobileMenuOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Handle search,
@@ -251,7 +251,7 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
         searchRef.current &&,
         !searchRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Focus search input when opened,
@@ -265,11 +265,11 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`),
       setIsSearchOpen(false),
       setSearchQuery('')}
-  };
+  },
   const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen)};
+    setIsMobileMenuOpen(!isMobileMenuOpen)},
   const closeMobileMenu = () => {
-    setIsMobileMenuOpen(false)};
+    setIsMobileMenuOpen(false)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
@@ -490,5 +490,5 @@ const UltraFuturisticNavigation20o25: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraFuturisticNavigation20o25;
+    </nav>)},
+export default UltraFuturisticNavigation20o25,

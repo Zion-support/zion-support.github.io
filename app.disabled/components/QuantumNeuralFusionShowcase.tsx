@@ -5,77 +5,77 @@ const QuantumNeuralFusionShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const content = [
     {
-      id: 'quantum-neural-fusion-revolution';
-      title: 'AI 20o25: The Quantum-Neural Fusion Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 25,0o00% ROI';
+      id: 'quantum-neural-fusion-revolution',
+      title: 'AI 20o25: The Quantum-Neural Fusion Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 25,0o00% ROI',
       description:,
-        'The convergence of quantum computing and neural networks is creating unprecedented business opportunities that are reshaping entire industries.';
-      type: 'blog';
-      category: 'breakthrough';
+        'The convergence of quantum computing and neural networks is creating unprecedented business opportunities that are reshaping entire industries.',
+      type: 'blog',
+      category: 'breakthrough',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
-        accuracy: '99.99%';
-        speed: '10,0o00x';
-      };
-      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough';
-      readingTime: '35 min read';
-      featured: true;
-    };
+        roi: '25,0o00%',
+        savings: '$50o0B+',
+        accuracy: '99.99%',
+        speed: '10,0o00x',
+      },
+      url: '/blog/ai-20o25-quantum-neural-fusion-revolution-ultimate-breakthrough',
+      readingTime: '35 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-quantum-neural-fusion-success';
-      title: 'Fortune 50o0 Quantum-Neural Fusion Success';
-      subtitle: '$50o0B Annual Savings - 25,0o00% ROI Success Story';
+      id: 'fortune-50o0-quantum-neural-fusion-success',
+      title: 'Fortune 50o0 Quantum-Neural Fusion Success',
+      subtitle: '$50o0B Annual Savings - 25,0o00% ROI Success Story',
       description:,
-        'How a leading technology conglomerate achieved unprecedented success through Quantum-Neural Fusion implementation.';
-      type: 'case-study';
-      category: 'success-story';
+        'How a leading technology conglomerate achieved unprecedented success through Quantum-Neural Fusion implementation.',
+      type: 'case-study',
+      category: 'success-story',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B';
-        accuracy: '99.99%';
-        efficiency: '340%';
-      };
-      url: '/case-studies/fortune-50o0-quantum-neural-fusion-250o00-roi-success-story';
-      readingTime: '25 min read';
-      featured: true;
-    };
+        roi: '25,0o00%',
+        savings: '$50o0B',
+        accuracy: '99.99%',
+        efficiency: '340%'
+      },
+      url: '/case-studies/fortune-50o0-quantum-neural-fusion-250o00-roi-success-story',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'quantum-neural-fusion-implementation-guide';
-      title: 'Quantum-Neural Fusion Implementation Ultimate Guide';
-      subtitle: 'Complete Roadmap to 25,0o00% ROI';
+      id: 'quantum-neural-fusion-implementation-guide',
+      title: 'Quantum-Neural Fusion Implementation Ultimate Guide',
+      subtitle: 'Complete Roadmap to 25,0o00% ROI',
       description:,
-        'The definitive guide to implementing Quantum-Neural Fusion technology for maximum business impact.';
-      type: 'resource';
-      category: 'implementation';
+        'The definitive guide to implementing Quantum-Neural Fusion technology for maximum business impact.',
+      type: 'resource',
+      category: 'implementation',
       metrics: {
-        roi: '25,0o00%';
-        timeline: '18 months';
-        success: '94%';
-        guide: '60 min read';
-      };
-      url: '/resources/quantum-neural-fusion-implementation-ultimate-guide-20o25';
-      readingTime: '60 min read';
-      featured: true;
-    };
+        roi: '25,0o00%',
+        timeline: '18 months',
+        success: '94%',
+        guide: '60 min read'
+      },
+      url: '/resources/quantum-neural-fusion-implementation-ultimate-guide-20o25',
+      readingTime: '60 min read',
+      featured: true
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'breakthrough';
-      label: 'Breakthrough';
-      count: content.filter(item => item.category === 'breakthrough').length;
-    };
+      id: 'breakthrough',
+      label: 'Breakthrough',
+      count: content.filter(item => item.category === 'breakthrough').length
+    },
     {
-      id: 'success-story';
-      label: 'Success Stories';
-      count: content.filter(item => item.category === 'success-story').length;
-    };
+      id: 'success-story',
+      label: 'Success Stories',
+      count: content.filter(item => item.category === 'success-story').length
+    },
     {
-      id: 'implementation';
-      label: 'Implementation';
-      count: content.filter(item => item.category === 'implementation').length;
-    };
+      id: 'implementation',
+      label: 'Implementation',
+      count: content.filter(item => item.category === 'implementation').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -127,7 +127,7 @@ const QuantumNeuralFusionShowcase = () => {
           </svg>),
       default: ,
         return null}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -138,7 +138,7 @@ const QuantumNeuralFusionShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -298,5 +298,5 @@ const QuantumNeuralFusionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default QuantumNeuralFusionShowcase;
+    </div>)},
+export default QuantumNeuralFusionShowcase,

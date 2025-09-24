@@ -1,6 +1,6 @@
-import React from 'react';
+import React from 'react',
 // Hook for useReactId,
 export const useUseReactId: unknown = () => {
   // TODO: Implement hook logic,
-  return {};
-};
+  return {},
+},

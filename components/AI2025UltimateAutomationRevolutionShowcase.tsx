@@ -1,84 +1,83 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const AI20o25UltimateAutomationRevolutionShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ultimate-automation-revolution';
+      id: 'ultimate-automation-revolution',
       title:,
-        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough';
-      type: 'blog';
-      category: 'automation';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
+        'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough',
+      type: 'blog',
+      category: 'automation',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B+';
-        efficiency: '2,50o0%';
-        accuracy: '99.97%';
-      };
+        roi: '50,0o00%',
+        savings: '$2.8B+',
+        efficiency: '2,50o0%',
+        accuracy: '99.97%'
+      },
       description:,
-        'Transform your business with revolutionary AI automation that delivers unprecedented returns';
-      readingTime: '25 min read';
-      featured: true;
-    };
+        'Transform your business with revolutionary AI automation that delivers unprecedented returns',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success-story';
+      id: 'fortune-50o0-success-story',
       title:,
-        'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI';
-      type: 'case-study';
-      category: 'success-story';
-      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story';
+        'Fortune 50o0 AI Automation Success: $2.8B Annual Savings - 50,0o00% ROI',
+      type: 'case-study',
+      category: 'success-story',
+      url: '/case-studies/fortune-50o0-ai-automation-50o000-roi-success-story',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        accuracy: '99.97%';
-      };
+        roi: '50,0o00%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        accuracy: '99.97%'
+      },
       description:,
-        'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation';
-      readingTime: '22 min read';
-      featured: true;
-    };
+        'How TechGlobal Industries achieved unprecedented ROI through comprehensive AI automation',
+      readingTime: '22 min read',
+      featured: true
+    },
     {
-      id: 'implementation-ultimate-guide';
+      id: 'implementation-ultimate-guide',
       title:,
-        'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI';
-      type: 'resource';
-      category: 'implementation';
-      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi';
+        'AI Automation Implementation Ultimate Guide: Complete Roadmap to 50,0o00% ROI',
+      type: 'resource',
+      category: 'implementation',
+      url: '/resources/ai-automation-implementation-ultimate-guide-50o000-roi',
       metrics: {
-        roi: '50,0o00%';
-        success: '94%';
-        timeline: '12-18 months';
-        guide: 'Complete';
-      };
+        roi: '50,0o00%',
+        success: '94%',
+        timeline: '12-18 months',
+        guide: 'Complete'
+      },
       description:,
-        'The definitive guide to achieving unprecedented returns through revolutionary AI automation';
-      readingTime: '45 min read';
-      featured: true;
-    };
+        'The definitive guide to achieving unprecedented returns through revolutionary AI automation',
+      readingTime: '45 min read',
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'automation';
-      name: 'AI Automation';
-      count: contentItems.filter(item => item.category === 'automation').length;
-    };
+      id: 'automation',
+      name: 'AI Automation',
+      count: contentItems.filter(item => item.category === 'automation').length
+    },
     {
-      id: 'success-story';
-      name: 'Success Stories';
+      id: 'success-story',
+      name: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-story'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'implementation';
-      name: 'Implementation';
+      id: 'implementation',
+      name: 'Implementation',
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length;
-    };
+        .length,
+    },
   ],
   const filteredItems =,
     selectedCategory === 'all',
@@ -94,7 +93,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -105,7 +104,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -158,7 +157,7 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
                   >,
                     {getTypeIcon(item.type)}{' '}
-                    {item.type.replace('-', ' ').toUpperCase()}
+                    {item.type.replace('- ').toUpperCase()}
                   </span>,
                   <span className='text-sm text-gray-50o0'>,
                     {item.readingTime}
@@ -281,5 +280,5 @@ const AI20o25UltimateAutomationRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25UltimateAutomationRevolutionShowcase;
+    </section>)},
+export default AI20o25UltimateAutomationRevolutionShowcase,

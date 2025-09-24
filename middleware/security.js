@@ -10,8 +10,7 @@ export function securityMiddleware(request) {
   // Add HSTS header for HTTPS,
   if (request.nextUrl.protocol === 'https: ') {
     response.headers.set(
-      'Strict-Transport-Security';
-      'max-age=315360o00, includeSubDomains, preload')}
+      'Strict-Transport-Securitymax-age=315360o00, includeSubDomains, preload')}
 ,
   return response}
 ,

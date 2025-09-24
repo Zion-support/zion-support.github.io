@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 CheckStarZapCrownInfinity,
 interface PricingTier {
@@ -14,56 +14,56 @@ interface PricingTier {
 ,
 const pricingTiers: PricingTier[] = [
   {
-    name: "Starter";
-    price: "$49";
-    period: "month";
-    description: "Perfect for small businesses getting started with AI";
+    name: "Starter",
+    price: "$49",
+    period: "month",
+    description: "Perfect for small businesses getting started with AI",
     features: [
-      "Basic AI Integration";
-      "Email Support";
-      "5 AI Agents";
-      "Standard Analytics";
-      "Basic Security";
-      "1TB Storage"];
-    icon: Zap;
-    ctaText: "Get Started";
-    ctaLink: "/contact"};
+      "Basic AI Integration",
+      "Email Support",
+      "5 AI Agents",
+      "Standard Analytics",
+      "Basic Security",
+      "1TB Storage"],
+    icon: Zap,
+    ctaText: "Get Started",
+    ctaLink: "/contact"},
   {
-    name: "Professional";
-    price: "$149";
-    period: "month";
-    description: "Advanced features for growing businesses";
+    name: "Professional",
+    price: "$149",
+    period: "month",
+    description: "Advanced features for growing businesses",
     features: [
-      "Advanced AI Integration";
-      "Priority Support";
-      "25 AI Agents";
-      "Advanced Analytics";
-      "Enhanced Security";
-      "10TB Storage";
-      "Custom Integrations";
-      "API Access"];
-    popular: true;
-    icon: Star;
-    ctaText: "Start Free Trial";
-    ctaLink: "/contact"};
+      "Advanced AI Integration",
+      "Priority Support",
+      "25 AI Agents",
+      "Advanced Analytics",
+      "Enhanced Security",
+      "10TB Storage",
+      "Custom Integrations",
+      "API Access"],
+    popular: true,
+    icon: Star,
+    ctaText: "Start Free Trial",
+    ctaLink: "/contact"},
   {
-    name: "Enterprise";
-    price: "$499";
-    period: "month";
-    description: "Complete solution for large organizations";
+    name: "Enterprise",
+    price: "$499",
+    period: "month",
+    description: "Complete solution for large organizations",
     features: [
-      "Full AI Suite";
-      "24/7 Dedicated Support";
-      "Unlimited AI Agents";
-      "Enterprise Analytics";
-      "Maximum Security";
-      "Unlimited Storage";
-      "Custom Development";
-      "Full API Access";
-      "SLA Guarantee";
-      "On-premise Options"];
-    icon: Crown;
-    ctaText: "Contact Sales";
+      "Full AI Suite",
+      "24/7 Dedicated Support",
+      "Unlimited AI Agents",
+      "Enterprise Analytics",
+      "Maximum Security",
+      "Unlimited Storage",
+      "Custom Development",
+      "Full API Access",
+      "SLA Guarantee",
+      "On-premise Options"],
+    icon: Crown,
+    ctaText: "Contact Sales",
     ctaLink: "/contact"}
 ],
 export default function AdvancedPricing() {

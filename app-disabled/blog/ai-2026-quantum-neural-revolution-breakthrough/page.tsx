@@ -1,30 +1,27 @@
 import Link from 'next/link',
 import {
-  Zap;
-  TrendingUp;
-  CheckCircle;
-  DollarSign;
-  Clock;
-  Users;
-  Brain;
-  Circle;
-  Award;
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  DollarSign,
+  Clock,
+  Users,
+  Brain,
+  Circle,
+  Award,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o26: The Quantum Neural Revolution Reshaping Enterprise Computing';
+    'AI 20o26: The Quantum Neural Revolution Reshaping Enterprise Computing',
   description:,
-    'Discover how quantum neural networks are delivering 10,0o00x faster processing and 99.97% accuracy in enterprise computing. Learn from real success stories and implementation strategies.';
+    'Discover how quantum neural networks are delivering 10,0o00x faster processing and 99.97% accuracy in enterprise computing. Learn from real success stories and implementation strategies.',
   keywords: [
-    'quantum AI';
-    'quantum computing';
-    'neural networks';
-    'enterprise computing';
-    'quantum optimization';
-    'AI breakthrough';
-  ];
-};
+    'quantum AIquantum computing',
+    'neural networksenterprise computing',
+    'quantum optimizationAI breakthrough',
+  ]
+},
 export default function QuantumNeuralRevolutionPage() {
   return (
     <div className='min-h-screen bg-white'>,

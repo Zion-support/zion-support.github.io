@@ -15,15 +15,15 @@ import {useIsMobile} from '@/hooks / use - mobile',
 import {toast} from 'sonner',
 import {Button} from '@/components/ui/button',
 import {useNavigate} from 'react-router-dom',
-import React, { useEffect, useState } from 'react';
-import { MessageSquare, Video } from 'lucide-react';
-import { useMessaging } from '@/context/MessagingContext';
-import { ProtectedRoute } from '@/components/ProtectedRoute';
-import { ConversationsList, ConversationDetailView } from '@/components/messaging';
-import { useIsMobile } from '@/hooks/use-mobile';
-import { toast } from 'sonner';
-import { Button } from '@/components/ui/button';
-import { useNavigate } from 'react-router-dom';
+import React, { useEffect, useState } from 'react',
+import { MessageSquare, Video } from 'lucide-react',
+import { useMessaging } from '@/context/MessagingContext',
+import { ProtectedRoute } from '@/components/ProtectedRoute',
+import { ConversationsList, ConversationDetailView } from '@/components/messaging',
+import { useIsMobile } from '@/hooks/use-mobile',
+import { toast } from 'sonner',
+import { Button } from '@/components/ui/button',
+import { useNavigate } from 'react-router-dom',
 export default function MessagingInbox() {
   const {
     conversations,
@@ -35,25 +35,25 @@ export default function MessagingInbox() {
     conversations,
 export default function MessagingInbox() {
   const {
-    conversations;
-    activeConversation;
-    setActiveConversation;
-    markAsRead;
-    fetchConversations;
-    isLoading} = useMessaging();
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+    conversations,
+    activeConversation,
+    setActiveConversation,
+    markAsRead,
+    fetchConversations,
+    isLoading} = useMessaging(),
+  const isMobile = useIsMobile(),
+  const navigate = useNavigate(),
+  const [activeCall, setActiveCall] = useState<string | null>(null),
   useEffect(() => {
     // Fetch conversations when component mounts,
     const loadData = async () => {
       try {
         await fetch_conversations ()} catch (error) {
-        console.error("Failed to load conversations:", error);
+        console.error("Failed to load conversations:", error),
         toast.error("Failed to load messages. Please try again.")}
 }
-    loadData()}, [fetchConversations])};
-    loadData()}, [fetchConversations]);
+    loadData()}, [fetchConversations])},
+    loadData()}, [fetchConversations]),
   const startVideoCall = () => {
     if (!activeConversation) {
       toast.error("Please select a conversation first"),
@@ -67,13 +67,13 @@ export default function MessagingInbox() {
     // Navigate to video call page,
     navigate(`/call/${roomId}`)}
 ,
-    const roomId = `msg-${activeConversation.id}`;
-    setActiveCall(roomId);
+    const roomId = `msg-${activeConversation.id}`,
+    setActiveCall(roomId),
     // Show toast notification,
     toast.success("Starting video call", {
       description: "Initializing video call connection..."}),
     // Navigate to video call page,
-    navigate(`/call/${roomId}`)};
+    navigate(`/call/${roomId}`)},
   return (
     <ProtectedRoute>,
       <div className="min-h-screen bg-zion-blue">,
@@ -101,15 +101,15 @@ export default function MessagingInbox() {
                 <ConversationsList
 export default function MessagingInbox() {
   const {
-    conversations;
-    activeConversation;
-    setActiveConversation;
-    markAsRead;
-    fetchConversations;
-    isLoading} = useMessaging();
-  const isMobile = useIsMobile();
-  const navigate = useNavigate();
-  const [activeCall, setActiveCall] = useState<string | null>(null);
+    conversations,
+    activeConversation,
+    setActiveConversation,
+    markAsRead,
+    fetchConversations,
+    isLoading} = useMessaging(),
+  const isMobile = useIsMobile(),
+  const navigate = useNavigate(),
+  const [activeCall, setActiveCall] = useState<string | null>(null),
   useEffect(() => {
     // Fetch conversations when component mounts,
     const loadData = async () => {
@@ -117,7 +117,7 @@ export default function MessagingInbox() {
         await fetchConversations()} catch (error) {
         console && console.error("Failed to load conversations:", error),
         toast && toast.error("Failed to load messages. Please try again.")}
-    };
+    },
     loadData()}, [fetchConversations]),
   const startVideoCall = () => {
     if (!activeConversation) {
@@ -130,7 +130,7 @@ export default function MessagingInbox() {
     toast && toast.success("Starting video call", {
       description: "Initializing video call connection..."}),
     // Navigate to video call page,
-    navigate(`/call/${roomId}`)};
+    navigate(`/call/${roomId}`)},
   return (
     <ProtectedRoute>,
       <div className="min-h-screen bg-zion-blue">,

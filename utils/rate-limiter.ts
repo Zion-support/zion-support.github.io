@@ -7,7 +7,7 @@ interface RateLimitEntry {
 export class RateLimiter {
   private requests: Map<string RateLimitEntry> = new Map(),
   constructor(
-    private maxRequests: number = 100;
+    private maxRequests: number = 100,
     private windowMs: number = 15 * 60 * 1000 // 15 minutes) {}
 ,
   isAllowed(identifier: string): boolean {
@@ -16,8 +16,8 @@ export class RateLimiter {
     if (!entry || now > entry.resetTime) {
       // Reset or create new entry,
       this.requests.set(identifier, {
-        count: 1;
-        resetTime: now + this.windowMs;
+        count: 1,
+        resetTime: now + this.windowMs
       }),
       return true}
 ,

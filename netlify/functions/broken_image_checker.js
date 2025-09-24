@@ -17,7 +17,7 @@ exports.handler = async function(event, context) {
     const repo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
-    const routes = ['/', '/services', '/products', '/blog'],
+    const routes = ['//services', '/products/blog'],
     const images = new Set(),
     for (const route of routes) {
       try {
@@ -34,8 +34,8 @@ exports.handler = async function(event, context) {
         results.push({ url, status: 0, ok: false, error: String(e) })}
     }
 ,
-    const payload ={ origin, generatedAt: new Date().toISOString(), results };
-    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    const payload ={ origin, generatedAt: new Date().toISOString(), results },
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) },
     const path = 'data/broken-images.json',
     // Fetch existing sha,
     let sha = undefined,
@@ -50,13 +50,13 @@ exports.handler = async function(event, context) {
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT';
-      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/json', 'Accept': 'application/vnd.github+json', 'User-Agent': 'zion-autobot' };
+      method: 'PUT',
+      headers: { 'Authorization': `token ${token}`, 'Content-Type': 'application/jsonAccept': 'application/vnd.github+jsonUser-Agent': 'zion-autobot' },
       body: JSON.stringify({ message: 'chore(automation): update broken image report', content: b64, branch, sha })}),
     const jsonCommit = await resCommit.json(),
-    if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) },
   }
-};
+},

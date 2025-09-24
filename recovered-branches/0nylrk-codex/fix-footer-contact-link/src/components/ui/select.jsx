@@ -1,9 +1,9 @@
 export function Select({
-  children;
-  className = '';
-  value;
-  onValueChange;
-  disabled = false;
+  children,
+  className = '',
+  value,
+  onValueChange,
+  disabled = false,
 }) {
   const baseClasses = `,
     flex h-10 w-full items-center justify-between rounded-md border,

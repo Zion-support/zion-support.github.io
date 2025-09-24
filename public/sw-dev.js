@@ -2,14 +2,10 @@
 const CACHE_NAME = 'zion-tech-group-dev-v1',
 // Files to cache in development,
 const STATIC_FILES = [
-  '/';
-  '/index.html';
-  '/favicon.svg';
-  '/favicon.ico';
-  '/og-image.svg';
-  '/manifest.json';
-  '/offline.html';
-  '/vite.svg'],
+  '//index.html',
+  '/favicon.svg/favicon.ico',
+  '/og-image.svg/manifest.json',
+  '/offline.html/vite.svg'],
 // Install event - cache static files,
 self.addEventListener('install', (event) => {
   event.waitUntil(

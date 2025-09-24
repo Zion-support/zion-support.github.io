@@ -2,162 +2,162 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-  BookOpen, MessageCircle, Star, TrendingUp, Target;
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
-  Earth, Factory, Car, Building, GraduationCap, Scale;
-  Palette, Camera, Video, Music, Gamepad2, Heart;
-  Leaf, Sun, Moon, Wind, Droplets, Mountain;
-  Code, Wrench, Smartphone, BarChart3, Eye, Zap as ZapIcon;
-  Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon;
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Microscope, DollarSign, Home, Users, Briefcase,
+  BookOpen, MessageCircle, Star, TrendingUp, Target,
+  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
+  Earth, Factory, Car, Building, GraduationCap, Scale,
+  Palette, Camera, Video, Music, Gamepad2, Heart,
+  Leaf, Sun, Moon, Wind, Droplets, Mountain,
+  Code, Wrench, Smartphone, BarChart3, Eye, Zap as ZapIcon,
+  Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon,
   ArrowRight} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: '🚀 20o28-20o29 Futuristic Innovations';
-    icon: Rocket;
-    color: 'from-violet-60o0 to-purple-60o0';
-    description: 'Beyond the future of technology';
+    title: '🚀 20o28-20o29 Futuristic Innovations',
+    icon: Rocket,
+    color: 'from-violet-60o0 to-purple-60o0',
+    description: 'Beyond the future of technology',
     services: [
-      { name: 'Neural Interface Platform', href: '/neural-interface-platform-20o29', description: 'Direct brain-to-computer communication', price: '$15,999/month' };
-      { name: 'Quantum Biotech Synthesis', href: '/quantum-biotech-synthesis-20o29', description: 'Quantum-powered drug discovery', price: '$12,999/month' };
-      { name: 'Autonomous Space Mining', href: '/autonomous-space-mining-20o29', description: 'Asteroid resource extraction', price: '$45,999/month' };
+      { name: 'Neural Interface Platform', href: '/neural-interface-platform-20o29', description: 'Direct brain-to-computer communication', price: '$15,999/month' },
+      { name: 'Quantum Biotech Synthesis', href: '/quantum-biotech-synthesis-20o29', description: 'Quantum-powered drug discovery', price: '$12,999/month' },
+      { name: 'Autonomous Space Mining', href: '/autonomous-space-mining-20o29', description: 'Asteroid resource extraction', price: '$45,999/month' },
       { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol-20o29', description: 'Unbreakable quantum communication', price: '$32,999/month' }
-    ]};
+    ]},
   {
-    title: '🤖 Advanced AI & Autonomous Systems';
-    icon: Brain;
-    color: 'from-emerald-60o0 to-teal-60o0';
-    description: 'Next-generation AI solutions';
+    title: '🤖 Advanced AI & Autonomous Systems',
+    icon: Brain,
+    color: 'from-emerald-60o0 to-teal-60o0',
+    description: 'Next-generation AI solutions',
     services: [
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Genuine emotional understanding', price: '$8,999/month' };
-      { name: 'AI Creative Intelligence Suite', href: '/ai-creative-intelligence-suite', description: 'Revolutionary creative AI', price: '$12,999/month' };
-      { name: 'AI Predictive Innovation Platform', href: '/ai-predictive-innovation-platform', description: 'Future trend prediction', price: '$18,999/month' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Genuine emotional understanding', price: '$8,999/month' },
+      { name: 'AI Creative Intelligence Suite', href: '/ai-creative-intelligence-suite', description: 'Revolutionary creative AI', price: '$12,999/month' },
+      { name: 'AI Predictive Innovation Platform', href: '/ai-predictive-innovation-platform', description: 'Future trend prediction', price: '$18,999/month' },
       { name: 'AI Autonomous Cybersecurity Platform', href: '/ai-autonomous-cybersecurity', description: 'Self-learning security', price: '$14,999/month' }
-    ]};
+    ]},
   {
-    title: '⚛️ Quantum & Space Technology';
-    icon: Atom;
-    color: 'from-indigo-60o0 to-blue-60o0';
-    description: 'Quantum computing and beyond';
+    title: '⚛️ Quantum & Space Technology',
+    icon: Atom,
+    color: 'from-indigo-60o0 to-blue-60o0',
+    description: 'Quantum computing and beyond',
     services: [
-      { name: 'Quantum Biological Computing Platform', href: '/quantum-biological-computing', description: 'Quantum-enhanced biotechnology', price: '$19,999/month' };
-      { name: 'Quantum Energy Optimization Platform', href: '/quantum-energy-optimization', description: 'Quantum energy systems', price: '$22,999/month' };
-      { name: 'Quantum Metaverse Platform', href: '/quantum-metaverse-platform', description: 'Quantum virtual worlds', price: '$16,999/month' };
+      { name: 'Quantum Biological Computing Platform', href: '/quantum-biological-computing', description: 'Quantum-enhanced biotechnology', price: '$19,999/month' },
+      { name: 'Quantum Energy Optimization Platform', href: '/quantum-energy-optimization', description: 'Quantum energy systems', price: '$22,999/month' },
+      { name: 'Quantum Metaverse Platform', href: '/quantum-metaverse-platform', description: 'Quantum virtual worlds', price: '$16,999/month' },
       { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable internet security', price: '$3,999/month' }
-    ]};
+    ]},
   {
-    title: '🏙️ Smart City & Infrastructure';
-    icon: Building;
-    color: 'from-blue-60o0 to-cyan-60o0';
-    description: 'Intelligent urban solutions';
+    title: '🏙️ Smart City & Infrastructure',
+    icon: Building,
+    color: 'from-blue-60o0 to-cyan-60o0',
+    description: 'Intelligent urban solutions',
     services: [
-      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai-20o29', description: 'Self-optimizing factories', price: '$34,999/month' };
-      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management-20o29', description: 'IoT and AI urban optimization', price: '$5,999/month' };
-      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform-20o29', description: 'Virtual manufacturing replicas', price: '$4,999/month' };
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai-20o29', description: 'Self-optimizing factories', price: '$34,999/month' },
+      { name: 'Smart City Infrastructure Management', href: '/smart-city-infrastructure-management-20o29', description: 'IoT and AI urban optimization', price: '$5,999/month' },
+      { name: 'Digital Twin Manufacturing Platform', href: '/digital-twin-manufacturing-platform-20o29', description: 'Virtual manufacturing replicas', price: '$4,999/month' },
       { name: 'IoT Energy Management System', href: '/iot-energy-management-system-20o29', description: 'Smart energy optimization', price: '$1,999/month' }
-    ]};
+    ]},
   {
-    title: '🌍 Metaverse & Digital Reality';
-    icon: Globe;
-    color: 'from-purple-60o0 via-pink-60o0 to-rose-60o0';
-    description: 'Virtual worlds and experiences';
+    title: '🌍 Metaverse & Digital Reality',
+    icon: Globe,
+    color: 'from-purple-60o0 via-pink-60o0 to-rose-60o0',
+    description: 'Virtual worlds and experiences',
     services: [
-      { name: 'Quantum Metaverse Platform', href: '/quantum-metaverse-platform-20o29', description: 'Quantum-enhanced virtual worlds', price: '$4,999/month' };
-      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform-20o29', description: '3D holographic events', price: '$2,999/month' };
-      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform-20o29', description: 'Multi-sensory AI experiences', price: '$3,999/month' };
+      { name: 'Quantum Metaverse Platform', href: '/quantum-metaverse-platform-20o29', description: 'Quantum-enhanced virtual worlds', price: '$4,999/month' },
+      { name: 'Virtual Event Hologram Platform', href: '/virtual-event-hologram-platform-20o29', description: '3D holographic events', price: '$2,999/month' },
+      { name: 'AI Multimodal Fusion Platform', href: '/ai-multimodal-fusion-platform-20o29', description: 'Multi-sensory AI experiences', price: '$3,999/month' },
       { name: 'AI Brand Personality Generator', href: '/ai-brand-personality-generator-20o29', description: 'AI-powered brand development', price: '$2,999/month' }
-    ]};
+    ]},
   {
-    title: '🔬 Biotechnology & Research';
-    icon: Microscope;
-    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0';
-    description: 'Advanced biotech solutions';
+    title: '🔬 Biotechnology & Research',
+    icon: Microscope,
+    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+    description: 'Advanced biotech solutions',
     services: [
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform-20o29', description: 'Molecular information processing', price: '$29,999/month' };
-      { name: 'Biotech AI Research Platform', href: '/biotech-ai-research-platform-20o29', description: 'AI-powered biotech research', price: '$3,999/month' };
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion-20o29', description: 'Intelligent mental health support', price: '$1,999/month' };
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform-20o29', description: 'Molecular information processing', price: '$29,999/month' },
+      { name: 'Biotech AI Research Platform', href: '/biotech-ai-research-platform-20o29', description: 'AI-powered biotech research', price: '$3,999/month' },
+      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion-20o29', description: 'Intelligent mental health support', price: '$1,999/month' },
       { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro-20o29', description: 'Real-time meeting transcription', price: '$1,999/month' }
-    ]};
+    ]},
   {
-    title: '🚗 Autonomous & Mobility';
-    icon: Car;
-    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0';
-    description: 'Self-driving and smart transportation';
+    title: '🚗 Autonomous & Mobility',
+    icon: Car,
+    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
+    description: 'Self-driving and smart transportation',
     services: [
-      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-20o29', description: 'Level 5 autonomous driving', price: '$39,999/month' };
-      { name: 'Smart Traffic Management', href: '/smart-traffic-management-20o29', description: 'AI-powered traffic optimization', price: '$8,999/month' };
-      { name: 'Drone Delivery Network', href: '/drone-delivery-network-20o29', description: 'Autonomous delivery system', price: '$12,999/month' };
+      { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-20o29', description: 'Level 5 autonomous driving', price: '$39,999/month' },
+      { name: 'Smart Traffic Management', href: '/smart-traffic-management-20o29', description: 'AI-powered traffic optimization', price: '$8,999/month' },
+      { name: 'Drone Delivery Network', href: '/drone-delivery-network-20o29', description: 'Autonomous delivery system', price: '$12,999/month' },
       { name: 'Electric Vehicle Optimization', href: '/electric-vehicle-optimization-20o29', description: 'Smart EV management', price: '$6,999/month' }
-    ]};
+    ]},
   {
-    title: '💰 Financial Technology';
-    icon: DollarSign;
-    color: 'from-yellow-60o0 via-orange-60o0 to-red-60o0';
-    description: 'Next-gen financial solutions';
+    title: '💰 Financial Technology',
+    icon: DollarSign,
+    color: 'from-yellow-60o0 via-orange-60o0 to-red-60o0',
+    description: 'Next-gen financial solutions',
     services: [
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-20o29', description: 'Quantum-powered trading', price: '$38,999/month' };
-      { name: 'AI Risk Management Platform', href: '/ai-risk-management-20o29', description: 'Intelligent risk assessment', price: '$22,999/month' };
-      { name: 'Blockchain Financial Platform', href: '/blockchain-financial-20o29', description: 'Decentralized finance', price: '$18,999/month' };
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-20o29', description: 'Quantum-powered trading', price: '$38,999/month' },
+      { name: 'AI Risk Management Platform', href: '/ai-risk-management-20o29', description: 'Intelligent risk assessment', price: '$22,999/month' },
+      { name: 'Blockchain Financial Platform', href: '/blockchain-financial-20o29', description: 'Decentralized finance', price: '$18,999/month' },
       { name: 'AI Fraud Detection', href: '/ai-fraud-detection-20o29', description: 'Real-time fraud prevention', price: '$14,999/month' }
-    ]};
+    ]},
   {
-    title: '🎨 Creative & Media AI';
-    icon: Palette;
-    color: 'from-pink-60o0 via-purple-60o0 to-indigo-60o0';
-    description: 'AI-powered creative tools';
+    title: '🎨 Creative & Media AI',
+    icon: Palette,
+    color: 'from-pink-60o0 via-purple-60o0 to-indigo-60o0',
+    description: 'AI-powered creative tools',
     services: [
-      { name: 'AI Video Editing Platform', href: '/ai-video-editing-20o29', description: 'Professional video automation', price: '$3,499/month' };
-      { name: 'AI Content Generation', href: '/ai-content-generation-20o29', description: 'Automated content creation', price: '$2,499/month' };
-      { name: 'AI Music Composition', href: '/ai-music-composition-20o29', description: 'Intelligent music creation', price: '$2,999/month' };
+      { name: 'AI Video Editing Platform', href: '/ai-video-editing-20o29', description: 'Professional video automation', price: '$3,499/month' },
+      { name: 'AI Content Generation', href: '/ai-content-generation-20o29', description: 'Automated content creation', price: '$2,499/month' },
+      { name: 'AI Music Composition', href: '/ai-music-composition-20o29', description: 'Intelligent music creation', price: '$2,999/month' },
       { name: 'AI Design Assistant', href: '/ai-design-assistant-20o29', description: 'Smart design automation', price: '$1,999/month' }
-    ]};
+    ]},
   {
-    title: '🏥 Healthcare & Wellness';
-    icon: Heart;
-    color: 'from-red-60o0 via-pink-60o0 to-purple-60o0';
-    description: 'Advanced healthcare solutions';
+    title: '🏥 Healthcare & Wellness',
+    icon: Heart,
+    color: 'from-red-60o0 via-pink-60o0 to-purple-60o0',
+    description: 'Advanced healthcare solutions',
     services: [
-      { name: 'AI Healthcare Diagnosis', href: '/ai-healthcare-diagnosis-20o29', description: '99.8% accurate diagnosis', price: '$28,999/month' };
-      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion-20o29', description: '24/7 mental health support', price: '$1,999/month' };
-      { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-20o29', description: 'Intelligent remote healthcare', price: '$9,999/month' };
+      { name: 'AI Healthcare Diagnosis', href: '/ai-healthcare-diagnosis-20o29', description: '99.8% accurate diagnosis', price: '$28,999/month' },
+      { name: 'AI Mental Health Companion', href: '/ai-mental-health-companion-20o29', description: '24/7 mental health support', price: '$1,999/month' },
+      { name: 'Telemedicine AI Platform', href: '/telemedicine-ai-20o29', description: 'Intelligent remote healthcare', price: '$9,999/month' },
       { name: 'AI Drug Discovery Platform', href: '/ai-drug-discovery-20o29', description: 'Accelerated pharmaceutical research', price: '$24,999/month' }
-    ]};
+    ]},
   {
-    title: '🌱 Sustainability & Green Tech';
-    icon: Leaf;
-    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0';
-    description: 'Environmental solutions';
+    title: '🌱 Sustainability & Green Tech',
+    icon: Leaf,
+    color: 'from-green-60o0 via-emerald-60o0 to-teal-60o0',
+    description: 'Environmental solutions',
     services: [
-      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-20o29', description: '99.9% accurate climate modeling', price: '$16,999/month' };
-      { name: 'Smart Energy Management', href: '/smart-energy-management-20o29', description: 'AI-powered energy optimization', price: '$8,999/month' };
-      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking-20o29', description: 'Real-time environmental monitoring', price: '$4,999/month' };
+      { name: 'AI Climate Prediction', href: '/ai-climate-prediction-20o29', description: '99.9% accurate climate modeling', price: '$16,999/month' },
+      { name: 'Smart Energy Management', href: '/smart-energy-management-20o29', description: 'AI-powered energy optimization', price: '$8,999/month' },
+      { name: 'Carbon Footprint Tracking', href: '/carbon-footprint-tracking-20o29', description: 'Real-time environmental monitoring', price: '$4,999/month' },
       { name: 'Renewable Energy Optimization', href: '/renewable-energy-optimization-20o29', description: 'Smart renewable integration', price: '$12,999/month' }
-    ]};
+    ]},
   {
-    title: '🔒 Cybersecurity & Privacy';
-    icon: Shield;
-    color: 'from-gray-60o0 via-slate-60o0 to-zinc-60o0';
-    description: 'Advanced security solutions';
+    title: '🔒 Cybersecurity & Privacy',
+    icon: Shield,
+    color: 'from-gray-60o0 via-slate-60o0 to-zinc-60o0',
+    description: 'Advanced security solutions',
     services: [
-      { name: 'Quantum Cybersecurity Fortress', href: '/quantum-cybersecurity-fortress-20o29', description: 'Future-proof security', price: '$1,599/month' };
-      { name: 'AI Threat Detection', href: '/ai-threat-detection-20o29', description: 'Intelligent security monitoring', price: '$3,999/month' };
-      { name: 'Zero-Trust Security Platform', href: '/zero-trust-security-20o29', description: 'Advanced access control', price: '$5,999/month' };
+      { name: 'Quantum Cybersecurity Fortress', href: '/quantum-cybersecurity-fortress-20o29', description: 'Future-proof security', price: '$1,599/month' },
+      { name: 'AI Threat Detection', href: '/ai-threat-detection-20o29', description: 'Intelligent security monitoring', price: '$3,999/month' },
+      { name: 'Zero-Trust Security Platform', href: '/zero-trust-security-20o29', description: 'Advanced access control', price: '$5,999/month' },
       { name: 'Privacy Protection AI', href: '/privacy-protection-ai-20o29', description: 'Automated privacy compliance', price: '$2,999/month' }
     ]}
 ],
 const navigationItems = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
 export default function UltraFuturisticNavigation20o29() {
@@ -165,9 +165,9 @@ export default function UltraFuturisticNavigation20o29() {
   const [activeCategory, setActiveCategory] = useState<string | null>(null),
   const [isScrolled, setIsScrolled] = useState(false),
   const handleCategoryHover = (categoryTitle: string) => {
-    setActiveCategory(categoryTitle)};
+    setActiveCategory(categoryTitle)},
   const handleCategoryLeave = () => {
-    setActiveCategory(null)};
+    setActiveCategory(null)},
   const filteredCategories = serviceCategories.filter(category =>,
     category.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
     category.services.some(service =>,

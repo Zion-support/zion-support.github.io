@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata ={
-title: 'Blockchain Services | Zion Tech Group';
-  description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.';
-  keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'};
+title: 'Blockchain Services | Zion Tech Group',
+  description: 'Comprehensive blockchain development services including smart contracts, DeFi protocols, NFT platforms, and enterprise blockchain solutions.',
+  keywords: 'blockchain development, smart contracts, DeFi, NFT, Web3, cryptocurrency, enterprise blockchain, dApp development'},
 export default function BlockchainPage() {
   return (
 <div className="animate-fade-in">,
@@ -185,15 +185,15 @@ export default function BlockchainPage() {
       <CTASection  />,
     </div>)}
 ,
-title: 'Blockchain Solutions | Zion Tech Group';
-  description: 'Comprehensive blockchain development services including smart contracts, DeFi applications, NFT platforms, and enterprise blockchain solutions.'};
+title: 'Blockchain Solutions | Zion Tech Group',
+  description: 'Comprehensive blockchain development services including smart contracts, DeFi applications, NFT platforms, and enterprise blockchain solutions.'},
 export default function BlockchainPage() {
   return (
     <div className="animate-fade-in">,
       <section className="mb-16">,
         <h1 className="text-4xl font-bold text-gray-90o0 mb-6">Blockchain Solutions</h1>,
         <p className="text-xl text-gray-60o0 mb-8 max-w-3xl">,
-          Build the future with blockchain technology. From smart contracts to DeFi applications;
+          Build the future with blockchain technology. From smart contracts to DeFi applications,
           we create secure, scalable blockchain solutions that drive innovation and value.,
         </p>,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-12">,
@@ -315,10 +315,10 @@ export default function BlockchainPage() {
             price="$5k–$15k",
             duration="1–3 weeks",
             features={[
-              "Code review";
-              "Security analysis";
-              "Gas optimization";
-              "Test coverage";
+              "Code review",
+              "Security analysis",
+              "Gas optimization",
+              "Test coverage",
               "Audit report"]}
             recommended={false}
            />,
@@ -327,10 +327,10 @@ export default function BlockchainPage() {
             price="$25k–$75k",
             duration="4–12 weeks",
             features={[
-              "Smart contracts";
-              "Frontend development";
-              "Backend integration";
-              "Testing & deployment";
+              "Smart contracts",
+              "Frontend development",
+              "Backend integration",
+              "Testing & deployment",
               "Documentation"]}
             recommended={true}
            />,
@@ -339,10 +339,10 @@ export default function BlockchainPage() {
             price="$50k+",
             duration="8+ weeks",
             features={[
-              "Custom blockchain";
-              "Enterprise integration";
-              "Security & compliance";
-              "Training & support";
+              "Custom blockchain",
+              "Enterprise integration",
+              "Security & compliance",
+              "Training & support",
               "Ongoing maintenance"]}
             recommended={false}
            />,

@@ -32,7 +32,7 @@ export const analyzeContent = (content: string): AnalysisResult => {
     reasons.push('Suspicious punctuation pattern')}
 ,
   return {
-    isSuspicious: reasons.length > 0;
-    reasons;
-  };
-};
+    isSuspicious: reasons.length > 0,
+    reasons
+  },
+},

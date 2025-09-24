@@ -16,5 +16,5 @@ const DatabaseAdministrationChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default DatabaseAdministrationChat;
+    </div>)},
+export default DatabaseAdministrationChat,

@@ -14,8 +14,8 @@ export default function Revolutionary2027ServicesShowcase() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
   const allServices = [
-    ...revolutionary2027AIServices;
-    ...revolutionary2027ITServices;
+    ...revolutionary2027AIServices,
+    ...revolutionary2027ITServices,
     ...revolutionary2027MicroSaasServices],
   // Dynamic category counts,
   const aiCount = allServices.filter(service => service.category.includes('AI')).length,
@@ -24,25 +24,25 @@ export default function Revolutionary2027ServicesShowcase() {
   const microSaasCount = allServices.filter(service => service.category.includes('Micro SaaS') || service.category.includes('Marketing') || service.category.includes('Legal') || service.category.includes('Health')).length,
   const holographicCount = allServices.filter(service => service.category.includes('Holographic')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount };
-    { id: 'quantum', name: 'Quantum Services', icon: '⚛️', count: quantumCount };
-    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Services', icon: '⚛️', count: quantumCount },
+    { id: 'it', name: 'IT Infrastructure', icon: '⚙️', count: itCount },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'holographic', name: 'Holographic', icon: '🎭', count: holographicCount }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'under-500', name: 'Under $500', range: 'Under $500' };
-    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' };
-    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'under-500', name: 'Under $500', range: 'Under $500' },
+    { id: '500-2000', name: '$500 - $2,000', range: '$500 - $2,000' },
+    { id: '2000-10000', name: '$2,000 - $10,000', range: '$2,000 - $10,000' },
     { id: 'over-10000', name: 'Over $10,000', range: 'Over $10,000' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name' };
-    { id: 'price', name: 'Price' };
-    { id: 'rating', name: 'Rating' };
-    { id: 'customers', name: 'Customers' };
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customers' },
     { id: 'launchDate', name: 'Launch Date' }
   ],
   const filteredServices = useMemo(() => {
@@ -90,10 +90,10 @@ export default function Revolutionary2027ServicesShowcase() {
     }),
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraQuantumHolographicBackground intensity={2.0}>,
       <Head>,

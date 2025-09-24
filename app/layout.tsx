@@ -11,7 +11,7 @@ export const metadata = {
     template: '%s | Zion Tech Group'},
   description:
     'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting', 'Digital Transformation'],
+  keywords: ['AITechnology', 'CloudCybersecurity', 'Micro SaaSConsulting', 'Digital Transformation'],
   authors: [{ name: 'Zion Tech Group' }],
   creator: 'Zion Tech Group',
   publisher: 'Zion Tech Group',
@@ -42,8 +42,7 @@ export const metadata = {
       index: true,
       follow: true,
       'max-video-preview': -1,
-      'max-image-preview': 'large',
-      'max-snippet': -1}},
+      'max-image-preview': 'largemax-snippet': -1}},
   verification: { google: 'your-google-verification-code' }}
 
 export default function RootLayout({ children }: { children: ReactNode }) {

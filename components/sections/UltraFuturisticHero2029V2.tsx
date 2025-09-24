@@ -3,37 +3,37 @@ import { ArrowRight, Star, TrendingUp, Zap, Shield, Brain, Atom, Rocket, Target,
 import Link from 'next/link',
 import Button from '../ui/Button',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { label: 'Services Delivered', value: '50o0+', icon: CheckCircle };
-  { label: 'Client Satisfaction', value: '99.2%', icon: Star };
-  { label: 'ROI Improvement', value: '30o0%+', icon: TrendingUp };
+  { label: 'Services Delivered', value: '50o0+', icon: CheckCircle },
+  { label: 'Client Satisfaction', value: '99.2%', icon: Star },
+  { label: 'ROI Improvement', value: '30o0%+', icon: TrendingUp },
   { label: 'Global Reach', value: '50+ Countries', icon: Target }
 ],
 const featuredServices = [
   {
-    name: 'AI Business Predictor Pro';
-    description: '95% accuracy business predictions with quantum-enhanced AI';
-    price: '$2,999/month';
-    href: '/ai-business-predictor-pro';
-    icon: Brain;
-    color: 'from-purple-60o0 via-pink-60o0 to-rose-60o0'};
+    name: 'AI Business Predictor Pro',
+    description: '95% accuracy business predictions with quantum-enhanced AI',
+    price: '$2,999/month',
+    href: '/ai-business-predictor-pro',
+    icon: Brain,
+    color: 'from-purple-60o0 via-pink-60o0 to-rose-60o0'},
   {
-    name: 'Quantum Secure Communication';
-    description: 'Unbreakable quantum encryption for enterprise';
-    price: '$8,999/month';
-    href: '/quantum-secure-communication-enterprise';
-    icon: Shield;
-    color: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0'};
+    name: 'Quantum Secure Communication',
+    description: 'Unbreakable quantum encryption for enterprise',
+    price: '$8,999/month',
+    href: '/quantum-secure-communication-enterprise',
+    icon: Shield,
+    color: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0'},
   {
-    name: 'Space Mining Operations';
-    description: 'Automated asteroid mining and resource extraction';
-    price: '$75,999/month';
-    href: '/space-mining-operations-platform';
-    icon: Rocket;
+    name: 'Space Mining Operations',
+    description: 'Automated asteroid mining and resource extraction',
+    price: '$75,999/month',
+    href: '/space-mining-operations-platform',
+    icon: Rocket,
     color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0'}
 ],
 export default function UltraFuturisticHero20o29V2() {
@@ -44,31 +44,31 @@ export default function UltraFuturisticHero20o29V2() {
         {/* Floating Orbs */}
         <motion.div,
           animate={{
-            x: [0, 10o0, 0];
+            x: [0, 10o0, 0],
             y: [0, -10o0, 0]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-3xl",
          />,
         <motion.div,
           animate={{
-            x: [0, -150, 0];
+            x: [0, -150, 0],
             y: [0, 10o0, 0]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
           className="absolute top-40 right-20 w-40 h-40 bg-gradient-to-r from-blue-50o0/20 to-cyan-50o0/20 rounded-full blur-3xl",
          />,
         <motion.div,
           animate={{
-            x: [0, 10o0, 0];
+            x: [0, 10o0, 0],
             y: [0, -150, 0]}}
           transition={{
-            duration: 30;
-            repeat: Infinity;
+            duration: 30,
+            repeat: Infinity,
             ease: "linear"}}
           className="absolute bottom-20 left-1/2 w-36 h-36 bg-gradient-to-r from-green-50o0/20 to-yellow-50o0/20 rounded-full blur-3xl",
          />,
@@ -108,7 +108,7 @@ export default function UltraFuturisticHero20o29V2() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.4 }}
           className="text-xl md: text-2xl text-purple-20o0 mb-12 max-w-4xl mx-auto leading-relaxed">,
-          Experience the future of technology with our cutting-edge AI consciousness platforms;
+          Experience the future of technology with our cutting-edge AI consciousness platforms,
           quantum computing solutions, and space mining operations.,
           <span className="text-purple-30o0 font-semibold"> 95% accuracy, 30o0% ROI improvement, and 99.2% client satisfaction.</span>,
         </motion.p>,

@@ -5,7 +5,7 @@ export default function AnimatedBackground() {
         className='absolute -inset-[20%] opacity-40 blur-3xl animate-[bgflow_20s_linear_infinite]',
         style={{
           background:,
-            'radial-gradient(60o0px at 0% 0%#22d3ee 0%transparent 60%)radial-gradient(60o0px at 10o0% 0%#a78bfa 0%transparent 60%)radial-gradient(60o0px at 0% 10o0%#34d399 0%transparent 60%)radial-gradient(60o0px at 10o0% 10o0%#f472b6 0%transparent 60%)';
+            'radial-gradient(60o0px at 0% 0%#22d3ee 0%transparent 60%)radial-gradient(60o0px at 10o0% 0%#a78bfa 0%transparent 60%)radial-gradient(60o0px at 0% 10o0%#34d399 0%transparent 60%)radial-gradient(60o0px at 10o0% 10o0%#f472b6 0%transparent 60%)',
         }}
       />,
       <style jsx global>{`,

@@ -32,7 +32,7 @@ export const useNotificationOperations = (
         if (error) throw error,
         await fetchNotifications()} catch (err) {
         console.error('Error marking notification as read:', err)}
-    };
+    },
     [userId, fetchNotifications]),
   const markAllAsRead = useCallback(async () => {
     if (!userId) return,
@@ -58,7 +58,7 @@ export const useNotificationOperations = (
         if (error) throw error,
         await fetchNotifications()} catch (err) {
         console.error('Error dismissing notification:', err)}
-    };
+    },
     [userId, fetchNotifications]),
   const filteredNotifications = notifications.filter(notification => {
     switch (filter) {
@@ -75,15 +75,15 @@ export const useNotificationOperations = (
   }),
   const unreadCount = notifications.filter(n => !n.read).length,
   return {
-    notifications;
-    filteredNotifications;
-    unreadCount;
-    loading;
-    filter;
-    markAsRead;
-    markAllAsRead;
-    dismissNotification;
-    setFilter;
-    fetchNotifications;
-  };
-};
+    notifications,
+    filteredNotifications,
+    unreadCount,
+    loading,
+    filter,
+    markAsRead,
+    markAllAsRead,
+    dismissNotification,
+    setFilter,
+    fetchNotifications,
+  },
+},

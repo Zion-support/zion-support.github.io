@@ -1,52 +1,52 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const SuccessStoriesShowcase: React.FC = () => {
   const stories = [
     {
-      company: 'Fortune 50o0 Tech Company';
-      industry: 'Technology';
-      challenge: 'Manual data processing causing 40% efficiency loss';
-      solution: 'AI-powered automation system';
+      company: 'Fortune 50o0 Tech Company',
+      industry: 'Technology',
+      challenge: 'Manual data processing causing 40% efficiency loss',
+      solution: 'AI-powered automation system',
       results: {
-        efficiency: '+340%';
-        cost: '-60%';
-        time: '-75%';
-      };
+        efficiency: '+340%',
+        cost: '-60%',
+        time: '-75%'
+      },
       testimonial:,
-        'Zion Tech Group transformed our operations. The AI automation system increased our efficiency by 340% and reduced costs by 60%.';
-      author: 'Sarah Chen, CTO';
-      logo: '🏢';
-    };
+        'Zion Tech Group transformed our operations. The AI automation system increased our efficiency by 340% and reduced costs by 60%.',
+      author: 'Sarah Chen, CTO',
+      logo: '🏢'
+    },
     {
-      company: 'Global Manufacturing Corp';
-      industry: 'Manufacturing';
-      challenge: 'Predictive maintenance failures costing $2M annually';
-      solution: 'Quantum-neural predictive analytics';
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Predictive maintenance failures costing $2M annually',
+      solution: 'Quantum-neural predictive analytics',
       results: {
-        efficiency: '+280%';
-        cost: '-45%';
-        time: '-80%';
-      };
+        efficiency: '+280%',
+        cost: '-45%',
+        time: '-80%'
+      },
       testimonial:,
-        'The predictive analytics system prevented equipment failures before they happened, saving us millions annually.';
-      author: 'Michael Rodriguez, VP Operations';
-      logo: '🏭';
-    };
+        'The predictive analytics system prevented equipment failures before they happened, saving us millions annually.',
+      author: 'Michael Rodriguez, VP Operations',
+      logo: '🏭'
+    },
     {
-      company: 'Financial Services Inc';
-      industry: 'Finance';
-      challenge: 'Fraud detection accuracy at only 78%';
-      solution: 'Advanced AI security monitoring';
+      company: 'Financial Services Inc',
+      industry: 'Finance',
+      challenge: 'Fraud detection accuracy at only 78%',
+      solution: 'Advanced AI security monitoring',
       results: {
-        efficiency: '+420%';
-        cost: '-55%';
-        time: '-90%';
-      };
+        efficiency: '+420%',
+        cost: '-55%',
+        time: '-90%'
+      },
       testimonial:,
-        "Our fraud detection accuracy improved to 99.8% with Zion's AI security system. Game-changing technology.";
-      author: 'Jennifer Park, Chief Risk Officer';
-      logo: '🏦';
-    };
+        "Our fraud detection accuracy improved to 99.8% with Zion's AI security system. Game-changing technology.",
+      author: 'Jennifer Park, Chief Risk Officer',
+      logo: '🏦'
+    },
   ],
   return (
     <section className='py-20 bg-white'>,
@@ -146,5 +146,5 @@ const SuccessStoriesShowcase: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default SuccessStoriesShowcase;
+    </section>)},
+export default SuccessStoriesShowcase,

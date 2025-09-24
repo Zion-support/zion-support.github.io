@@ -1,30 +1,27 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI';
+    'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI',
   description:,
-    'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation, resulting in $2.8 billion in annual savings.';
+    'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation, resulting in $2.8 billion in annual savings.',
   keywords: [
-    'Case Study';
-    'Fortune 50o0';
-    'Digital Transformation';
-    'ROI';
-    'Success Story';
-    '30,0o00% ROI';
-  ];
+    'Case StudyFortune 50o0',
+    'Digital TransformationROI',
+    'Success Story30,0o00% ROI',
+  ],
   openGraph: {
     title:,
-      'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI';
+      'Fortune 50o0 Digital Transformation Success: $2.8B Annual Savings - 30,0o00% ROI',
     description:,
-      'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Case Study', 'Fortune 50o0', 'Digital Transformation', 'ROI'];
-  };
-};
+      'Learn how a Fortune 50o0 manufacturing company achieved 30,0o00% ROI through strategic AI implementation.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Case StudyFortune 50o0', 'Digital TransformationROI'],
+  },
+},
 export default function Fortune50o0DigitalTransformationSuccessPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -199,7 +196,7 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {
                   Phase 1: Foundation (Months 1-6),
                 </h4>,
                 <p className='text-blue-70o0'>,
-                  AI readiness assessment, data infrastructure modernization;
+                  AI readiness assessment, data infrastructure modernization,
                   team training and development, pilot project implementation,
                 </p>,
               </div>,
@@ -208,7 +205,7 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {
                   Phase 2: Core Implementation (Months 7-18),
                 </h4>,
                 <p className='text-purple-70o0'>,
-                  Production line automation, predictive maintenance systems;
+                  Production line automation, predictive maintenance systems,
                   quality control AI, supply chain optimization,
                 </p>,
               </div>,
@@ -217,7 +214,7 @@ export default function Fortune50o0DigitalTransformationSuccessPage() {
                   Phase 3: Advanced Features (Months 19-24),
                 </h4>,
                 <p className='text-indigo-70o0'>,
-                  Autonomous production systems, real-time optimization;
+                  Autonomous production systems, real-time optimization,
                   advanced analytics, continuous learning,
                 </p>,
               </div>,

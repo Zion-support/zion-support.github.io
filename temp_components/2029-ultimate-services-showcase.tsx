@@ -4,10 +4,10 @@ import Link from 'next/link',
 import { motionAnimatePresence } from 'framer-motion',
 import {
   RocketBrainAtomGlobeZapSparklesShield,
-  TargetCrownStarTrendingUpArrowRight;
-  CheckCircleDollarSignUsersClockAwardZap as ZapIcon;
-  SearchPhoneMailMapPinHeartLeafCarGraduationCapScale;
-  BuildingFactoryCameraVideoMusicGamepad2Eye;
+  TargetCrownStarTrendingUpArrowRight,
+  CheckCircleDollarSignUsersClockAwardZap as ZapIcon,
+  SearchPhoneMailMapPinHeartLeafCarGraduationCapScale,
+  BuildingFactoryCameraVideoMusicGamepad2Eye,
   Globe2SatelliteDnaBatteryGamepadCpu as CpuIcon} from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
@@ -20,25 +20,25 @@ export default function UltimateServicesShowcase20o29() {
   const [searchTermsetSearchTerm] = useState(''),
   const [selectedPriceRangesetSelectedPriceRange] = useState('all'),
   const allServices = [
-    ...cuttingEdge20o28MicroSaas;
-    ...practicalBusinessSolutions20o28;
-    ...advancedAIAutonomousServices20o28;
+    ...cuttingEdge20o28MicroSaas,
+    ...practicalBusinessSolutions20o28,
+    ...advancedAIAutonomousServices20o28,
     ...quantumSpaceInnovations20o28],
   const categories = [
-    { id: 'all'name: '🚀 All Services'icon: Rocketcount: allServices.lengthcolor: 'from-violet-60o0 to-purple-60o0' };
-    { id: 'cutting-edge'name: '⚡ Cutting-Edge'icon: Zapcount: cuttingEdge20o28MicroSaas.lengthcolor: 'from-cyan-60o0 to-blue-60o0' };
-    { id: 'business'name: '🎯 Business Solutions'icon: Targetcount: practicalBusinessSolutions20o28.lengthcolor: 'from-green-60o0 to-emerald-60o0' };
-    { id: 'ai-autonomous'name: '🤖 AI & Autonomous'icon: Braincount: advancedAIAutonomousServices20o28.lengthcolor: 'from-emerald-60o0 to-teal-60o0' };
-    { id: 'quantum-space'name: '⚛️ Quantum & Space'icon: Atomcount: quantumSpaceInnovations20o28.lengthcolor: 'from-indigo-60o0 to-blue-60o0' };
-    { id: 'ai'name: '🧠 AI & ML'icon: Braincount: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).lengthcolor: 'from-pink-60o0 to-rose-60o0' };
-    { id: 'quantum'name: '🔮 Quantum Tech'icon: Atomcount: allServices.filter(s => s.category.some(c => c.includes('Quantum'))).lengthcolor: 'from-purple-60o0 to-violet-60o0' };
+    { id: 'all'name: '🚀 All Services'icon: Rocketcount: allServices.lengthcolor: 'from-violet-60o0 to-purple-60o0' },
+    { id: 'cutting-edge'name: '⚡ Cutting-Edge'icon: Zapcount: cuttingEdge20o28MicroSaas.lengthcolor: 'from-cyan-60o0 to-blue-60o0' },
+    { id: 'business'name: '🎯 Business Solutions'icon: Targetcount: practicalBusinessSolutions20o28.lengthcolor: 'from-green-60o0 to-emerald-60o0' },
+    { id: 'ai-autonomous'name: '🤖 AI & Autonomous'icon: Braincount: advancedAIAutonomousServices20o28.lengthcolor: 'from-emerald-60o0 to-teal-60o0' },
+    { id: 'quantum-space'name: '⚛️ Quantum & Space'icon: Atomcount: quantumSpaceInnovations20o28.lengthcolor: 'from-indigo-60o0 to-blue-60o0' },
+    { id: 'ai'name: '🧠 AI & ML'icon: Braincount: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).lengthcolor: 'from-pink-60o0 to-rose-60o0' },
+    { id: 'quantum'name: '🔮 Quantum Tech'icon: Atomcount: allServices.filter(s => s.category.some(c => c.includes('Quantum'))).lengthcolor: 'from-purple-60o0 to-violet-60o0' },
     { id: 'enterprise'name: '🏢 Enterprise'icon: Shieldcount: allServices.filter(s => s.category.some(c => c.includes('Enterprise'))).lengthcolor: 'from-blue-60o0 to-cyan-60o0' }
   ],
   const priceRanges = [
-    { id: 'all'name: 'All Prices'range: 'All' };
-    { id: 'low'name: 'Under $5K'range: 'Under $5,0o00' };
-    { id: 'medium'name: '$5K - $15K'range: '$5,0o00 - $15,0o00' };
-    { id: 'high'name: '$15K - $30K'range: '$15,0o00 - $30,0o00' };
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $5K'range: 'Under $5,0o00' },
+    { id: 'medium'name: '$5K - $15K'range: '$5,0o00 - $15,0o00' },
+    { id: 'high'name: '$15K - $30K'range: '$15,0o00 - $30,0o00' },
     { id: 'premium'name: 'Over $30K'range: 'Over $30,0o00' }
   ],
   const filteredServices = allServices.filter(service => {
@@ -60,27 +60,27 @@ export default function UltimateServicesShowcase20o29() {
       (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g'')) >= 30o000),
     return matchesCategory && matchesSearch && matchesPrice}),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0y: 20 };
+    hidden: { opacity: 0y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <>,
       <Head>,

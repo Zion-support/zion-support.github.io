@@ -1,134 +1,131 @@
-import React from 'react';;
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
-import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
+import { Check, X, Star, TrendingUp, DollarSign, Zap } from 'lucide-react',
 export default function PricingComparisonPage() {
   const serviceComparisons = [
     {
-      service: 'AI Content Generator';
+      service: 'AI Content Generator',
       zionPricing: {
-        starter: '$19/month';
-        professional: '$49/month';
-        enterprise: '$199/month'};
+        starter: '$19/month',
+        professional: '$49/month',
+        enterprise: '$199/month'},
       competitors: [
         {
-          name: 'Jasper AI';
-          pricing: '$39/month';
-          rating: '4.8/5';
-          pros: ['Excellent templatesGood AI quality', 'Wide integrations'];
-          cons: ['Higher pricingLimited customization', 'No unlimited plan'];
-          savings: 'Save $20/month with Zion'};
+          name: 'Jasper AI',
+          pricing: '$39/month',
+          rating: '4.8/5',
+          pros: ['Excellent templatesGood AI qualityWide integrations'],
+          cons: ['Higher pricingLimited customizationNo unlimited plan'],
+          savings: 'Save $20/month with Zion'},
         {
-          name: 'Copy.ai';
-          pricing: '$36/month';
-          rating: '4.6/5';
-          pros: ['Unlimited wordsGood value', 'Simple interface'];
-          cons: ['Basic featuresLimited templates', 'No advanced SEO'];
-          savings: 'Save $17/month with Zion'};
+          name: 'Copy.ai',
+          pricing: '$36/month',
+          rating: '4.6/5',
+          pros: ['Unlimited wordsGood valueSimple interface'],
+          cons: ['Basic featuresLimited templatesNo advanced SEO'],
+          savings: 'Save $17/month with Zion'},
         {
-          name: 'Writesonic';
-          pricing: '$19/month';
-          rating: '4.4/5';
-          pros: ['AffordableGood for beginners', 'Basic features'];
-          cons: ['Limited featuresBasic AI models', 'No team features'];
+          name: 'Writesonic',
+          pricing: '$19/month',
+          rating: '4.4/5',
+          pros: ['AffordableGood for beginnersBasic features'],
+          cons: ['Limited featuresBasic AI modelsNo team features'],
           savings: 'Same price, better features'}
-      ];
+      ],
       features: [
-        'AI-powered content generationMultiple content formats';
-        'SEO optimizationTeam collaboration';
-        'API accessCustom templates'];
-      color: 'from-purple-50o0 to-indigo-60o0';
-      icon: '🤖'};
+        'AI-powered content generationMultiple content formatsSEO optimizationTeam collaboration',
+        'API accessCustom templates'],
+      color: 'from-purple-50o0 to-indigo-60o0',
+      icon: '🤖'},
     {
-      service: 'Cloud Monitoring';
+      service: 'Cloud Monitoring',
       zionPricing: {
-        starter: '$29/month';
-        professional: '$99/month';
-        enterprise: '$299/month'};
+        starter: '$29/month',
+        professional: '$99/month',
+        enterprise: '$299/month'},
       competitors: [
         {
-          name: 'Datadog';
-          pricing: '$15/host/month';
-          rating: '4.7/5';
-          pros: ['Comprehensive featuresGreat integrations', 'Advanced analytics'];
-          cons: ['Very expensiveComplex pricing', 'Steep learning curve'];
-          savings: 'Save $121/month for 10 servers'};
+          name: 'Datadog',
+          pricing: '$15/host/month',
+          rating: '4.7/5',
+          pros: ['Comprehensive featuresGreat integrationsAdvanced analytics'],
+          cons: ['Very expensiveComplex pricingSteep learning curve'],
+          savings: 'Save $121/month for 10 servers'},
         {
-          name: 'New Relic';
-          pricing: '$99/user/month';
-          rating: '4.5/5';
-          pros: ['Good APMUser-based pricing', 'Reliable'];
-          cons: ['Expensive for teamsLimited server monitoring', 'Complex setup'];
-          savings: 'Save $396/month for 5 users'};
+          name: 'New Relic',
+          pricing: '$99/user/month',
+          rating: '4.5/5',
+          pros: ['Good APMUser-based pricingReliable'],
+          cons: ['Expensive for teamsLimited server monitoringComplex setup'],
+          savings: 'Save $396/month for 5 users'},
         {
-          name: 'Prometheus + Grafana';
-          pricing: 'Free';
-          rating: '4.3/5';
-          pros: ['Completely freeHighly customizable', 'Open source'];
-          cons: ['Requires DevOps expertiseNo managed service', 'Maintenance overhead'];
+          name: 'Prometheus + Grafana',
+          pricing: 'Free',
+          rating: '4.3/5',
+          pros: ['Completely freeHighly customizableOpen source'],
+          cons: ['Requires DevOps expertiseNo managed serviceMaintenance overhead'],
           savings: 'Professional service for $29/month'}
-      ];
+      ],
       features: [
-        'Real-time monitoringMulti-cloud support';
-        'AI-powered alertingAdvanced analytics';
-        'Custom dashboardsAPI access'];
-      color: 'from-green-50o0 to-emerald-60o0';
-      icon: '☁️'};
+        'Real-time monitoringMulti-cloud supportAI-powered alertingAdvanced analytics',
+        'Custom dashboardsAPI access'],
+      color: 'from-green-50o0 to-emerald-60o0',
+      icon: '☁️'},
     {
-      service: 'DevOps Automation';
+      service: 'DevOps Automation',
       zionPricing: {
-        starter: '$39/month';
-        professional: '$129/month';
-        enterprise: '$399/month'};
+        starter: '$39/month',
+        professional: '$129/month',
+        enterprise: '$399/month'},
       competitors: [
         {
-          name: 'GitHub Actions';
-          pricing: 'Free + $0.0o08/min';
-          rating: '4.6/5';
-          pros: ['GitHub nativeGood free tier', 'Wide adoption'];
-          cons: ['Expensive for teamsLimited features', 'Complex pricing'];
-          savings: 'Save $20o0+/month for active teams'};
+          name: 'GitHub Actions',
+          pricing: 'Free + $0.0o08/min',
+          rating: '4.6/5',
+          pros: ['GitHub nativeGood free tierWide adoption'],
+          cons: ['Expensive for teamsLimited featuresComplex pricing'],
+          savings: 'Save $20o0+/month for active teams'},
         {
-          name: 'GitLab CI/CD';
-          pricing: '$19/user/month';
-          rating: '4.4/5';
-          pros: ['Integrated platformGood CI/CD', 'Unlimited repos'];
-          cons: ['User-based pricingLimited integrations', 'Higher cost for teams'];
-          savings: 'Save $56/month for 5 users'};
+          name: 'GitLab CI/CD',
+          pricing: '$19/user/month',
+          rating: '4.4/5',
+          pros: ['Integrated platformGood CI/CDUnlimited repos'],
+          cons: ['User-based pricingLimited integrationsHigher cost for teams'],
+          savings: 'Save $56/month for 5 users'},
         {
-          name: 'Jenkins';
-          pricing: 'Free';
-          rating: '4.2/5';
-          pros: ['Completely freeHighly customizable', 'Open source'];
-          cons: ['Requires maintenanceNo managed service', 'Complex setup'];
+          name: 'Jenkins',
+          pricing: 'Free',
+          rating: '4.2/5',
+          pros: ['Completely freeHighly customizableOpen source'],
+          cons: ['Requires maintenanceNo managed serviceComplex setup'],
           savings: 'Professional service for $39/month'}
-      ];
+      ],
       features: [
-        'CI/CD pipelinesInfrastructure as Code';
-        'Security automationMulti-cloud deployment';
-        'Team collaborationCustom integrations'];
-      color: 'from-blue-50o0 to-cyan-60o0';
+        'CI/CD pipelinesInfrastructure as CodeSecurity automationMulti-cloud deployment',
+        'Team collaborationCustom integrations'],
+      color: 'from-blue-50o0 to-cyan-60o0',
       icon: '🚀'}
-  ];
+  ],
   const marketInsights = [
     {
-      insight: 'Zion services are 30-60% more affordable than market leaders';
-      icon: <DollarSign className="w-6 h-6"  />;
-      color: 'text-green-40o0'};
+      insight: 'Zion services are 30-60% more affordable than market leaders',
+      icon: <DollarSign className="w-6 h-6"  />,
+      color: 'text-green-40o0'},
     {
-      insight: 'All plans include free trials and no hidden fees';
-      icon: <Check className="w-6 h-6"  />;
-      color: 'text-blue-40o0'};
+      insight: 'All plans include free trials and no hidden fees',
+      icon: <Check className="w-6 h-6"  />,
+      color: 'text-blue-40o0'},
     {
-      insight: 'Professional features at startup-friendly prices';
-      icon: <Zap className="w-6 h-6"  />;
-      color: 'text-purple-40o0'};
+      insight: 'Professional features at startup-friendly prices',
+      icon: <Zap className="w-6 h-6"  />,
+      color: 'text-purple-40o0'},
     {
-      insight: 'Enterprise-grade reliability without enterprise pricing';
-      icon: <Star className="w-6 h-6"  />;
+      insight: 'Enterprise-grade reliability without enterprise pricing',
+      icon: <Star className="w-6 h-6"  />,
       color: 'text-yellow-40o0'}
-  ];
+  ],
   return (
     <>,
       <Head>,

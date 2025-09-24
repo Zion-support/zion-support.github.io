@@ -2,21 +2,20 @@ import { serve } from 'https: //deno.land/std@0.190.0/http/server.ts',
 import Stripe from 'https://esm.sh/stripe@14.21.0',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.45.0',
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   if (req.method === 'OPTIONS') {
     return new Response(null, { headers: corsHeaders })}
 ,
   const supabaseClient = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '';
+    Deno.env.get('SUPABASE_URL') ?? '',
     Deno.env.get('SUPABASE_ANON_KEY') ?? ''),
   // Create service client for admin operations,
   const supabaseAdmin = createClient(
-    Deno.env.get('SUPABASE_URL') ?? '';
-    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '';
+    Deno.env.get('SUPABASE_URL') ?? '',
+    Deno.env.get('SUPABASE_SERVICE_ROLE_KEY') ?? '',
     { auth: { persistSession: false } }
   ),
   try {
@@ -24,13 +23,13 @@ serve(async req => {
     const authHeader = req.headers.get('Authorization')!,
     const token = authHeader.replace('Bearer ', ''),
     const {
-      data: { user };
+      data: { user },
     } = await supabaseClient.auth.getUser(token),
     if (!user?.id) throw new Error('User not authenticated'),
     // Get request data,
     const {
-      transactionId;
-      action, // 'release', 'refund', 'cancel'} = await req.json(),
+      transactionId,
+      action, // 'releaserefund', 'cancel'} = await req.json(),
     if (!transactionId) {
       throw new Error('Transaction ID is required')}
 ,
@@ -51,7 +50,7 @@ serve(async req => {
       throw new Error('You are not authorized to manage this transaction')}
 ,
     const stripe = new Stripe(Deno.env.get('STRIPE_SECRET_KEY') || '', {
-      apiVersion: '2023-10-16';
+      apiVersion: '2023-10-16'
     }),
     let result,
     switch (action) {
@@ -65,12 +64,12 @@ serve(async req => {
         await supabaseAdmin,
           .from('transactions'),
           .update({
-            status: 'completed';
-            in_escrow: false;
-            completed_at: new Date().toISOString();
+            status: 'completed',
+            in_escrow: false,
+            completed_at: new Date().toISOString()
           }),
           .eq('id', transactionId),
-        result = { message: 'Funds released from escrow' };
+        result = { message: 'Funds released from escrow' },
         break,
       case 'refund':,
         // Check if transaction can be refunded,
@@ -86,21 +85,21 @@ serve(async req => {
             transaction.stripe_session_id),
           if (session.payment_intent) {
             const refund = await stripe.refunds.create({
-              payment_intent: session.payment_intent.toString();
-              reason: 'requested_by_customer';
+              payment_intent: session.payment_intent.toString(),
+              reason: 'requested_by_customer'
             }),
             // Update transaction status,
             await supabaseAdmin,
               .from('transactions'),
               .update({
-                status: 'refunded';
-                refunded_at: new Date().toISOString();
-                refund_id: refund.id;
+                status: 'refunded',
+                refunded_at: new Date().toISOString(),
+                refund_id: refund.id
               }),
               .eq('id', transactionId)}
         }
 ,
-        result = { message: 'Refund processed successfully' };
+        result = { message: 'Refund processed successfully' },
         break,
       case 'cancel':,
         // Only allow cancellation for pending transactions,
@@ -111,22 +110,22 @@ serve(async req => {
         await supabaseAdmin,
           .from('transactions'),
           .update({
-            status: 'cancelled';
-            cancelled_at: new Date().toISOString();
+            status: 'cancelled',
+            cancelled_at: new Date().toISOString()
           }),
           .eq('id', transactionId),
-        result = { message: 'Transaction cancelled successfully' };
+        result = { message: 'Transaction cancelled successfully' },
         break,
       default: ,
         throw new Error('Invalid action')}
 ,
     return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
-      status: 200;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 200
     })} catch (error) {
     console.error('Transaction management error:', error.message),
     return new Response(JSON.stringify({ error: error.message }), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
-      status: 500;
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
+      status: 500
     })}
 }),

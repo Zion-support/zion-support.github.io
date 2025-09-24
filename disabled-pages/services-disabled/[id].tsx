@@ -1,7 +1,7 @@
 import { GetStaticPaths, GetStaticProps } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
-import React from 'react';
+import React from 'react',
 import { innovativeRealMicroSaasServices20o25 } from '../../data/20o25-innovative-real-micro-saas-services',
 import { advancedITServices } from '../../data/advanced-it-services',
 import { innovativeAIServices } from '../../data/innovative-ai-services',
@@ -22,28 +22,28 @@ interface ServiceItem {
 ,
 function collectAllServices(): ServiceItem[] {
   const arrays: any[] = [
-    innovativeRealMicroSaasServices20o25;
-    advancedITServices;
-    innovativeAIServices;
-    addedMicroSaaS20o25;
-    addedITServices20o25;
-    addedAIServices20o25;
+    innovativeRealMicroSaasServices20o25,
+    advancedITServices,
+    innovativeAIServices,
+    addedMicroSaaS20o25,
+    addedITServices20o25,
+    addedAIServices20o25
   ],
   const map = new Map<string ServiceItem>(),
   for (const arr of arrays) {
     for (const item of arr) {
       if (item && item.id && !map.has(item.id)) {
         map.set(item.id, {
-          id: item.id;
-          name: item.name;
-          tagline: item.tagline;
-          price: item.price;
-          period: item.period;
-          description: item.description;
-          features: Array.isArray(item.features) ? item.features : [];
-          icon: item.icon;
-          color: item.color;
-          textColor: item.textColor;
+          id: item.id,
+          name: item.name,
+          tagline: item.tagline,
+          price: item.price,
+          period: item.period,
+          description: item.description,
+          features: Array.isArray(item.features) ? item.features : [],
+          icon: item.icon,
+          color: item.color,
+          textColor: item.textColor
         })}
     }
   }
@@ -52,17 +52,17 @@ function collectAllServices(): ServiceItem[] {
 export const getStaticPaths: GetStaticPaths = async () => {
   const services = collectAllServices(),
   const paths = services.map(s => ({ params: { id: s.id } })),
-  return { paths, fallback: false };
-};
+  return { paths, fallback: false },
+},
 export const getStaticProps: GetStaticProps = async context => {
   const id = context.params?.id as string,
   const services = collectAllServices(),
   const service = services.find(s => s.id === id) || null,
   if (!service) {
-    return { notFound: true };
+    return { notFound: true },
   }
-  return { props: { service } };
-};
+  return { props: { service } },
+},
 export default function ServiceDetail({ service }: { service: ServiceItem }) {
   const title = `${service.name} — Zion Tech Group`,
   const description = service.tagline || 'Zion Tech Group Service',

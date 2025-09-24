@@ -24,8 +24,8 @@ export default function TokenIntegrationsPage() {
 ,
   async function runOperator() {
     const res = await fetch('/api/operator/suggest-chain'{
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ regionstakeUsd: stake })}),
     const data = await res.json(),
     setSuggestion(data)}

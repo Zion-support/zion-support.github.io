@@ -3,145 +3,133 @@ import Link from 'next/link',
 export default function SolutionsPage() {
   const industrySolutions = [
     {
-      industry: 'Healthcare';
-      description: 'AI-powered diagnosticspatient care optimizationand secure health data management';
+      industry: 'Healthcare',
+      description: 'AI-powered diagnosticspatient care optimizationand secure health data management',
       solutions: [
-        'AI Diagnostic Assistant';
-        'Patient Care Optimization';
-        'Health Data Security';
-        'Medical Imaging AI';
-        'Drug Discovery Platform'];
-      icon: '🏥';
-      color: 'from-green-50o0 to-emerald-60o0'};
+        'AI Diagnostic AssistantPatient Care Optimization',
+        'Health Data SecurityMedical Imaging AI',
+        'Drug Discovery Platform'],
+      icon: '🏥',
+      color: 'from-green-50o0 to-emerald-60o0'},
     {
-      industry: 'Finance';
-      description: 'Quantum-powered trading algorithmsfraud detectionand risk management';
+      industry: 'Finance',
+      description: 'Quantum-powered trading algorithmsfraud detectionand risk management',
       solutions: [
-        'Quantum Trading Algorithms';
-        'AI Fraud Detection';
-        'Risk Management Systems';
-        'Regulatory Compliance';
-        'Portfolio Optimization'];
-      icon: '💼';
-      color: 'from-blue-50o0 to-cyan-60o0'};
+        'Quantum Trading AlgorithmsAI Fraud Detection',
+        'Risk Management SystemsRegulatory Compliance',
+        'Portfolio Optimization'],
+      icon: '💼',
+      color: 'from-blue-50o0 to-cyan-60o0'},
     {
-      industry: 'Manufacturing';
-      description: 'Smart manufacturingpredictive maintenanceand supply chain optimization';
+      industry: 'Manufacturing',
+      description: 'Smart manufacturingpredictive maintenanceand supply chain optimization',
       solutions: [
-        'Predictive Maintenance';
-        'Supply Chain Optimization';
-        'Quality Control AI';
-        'Energy Management';
-        'Production Planning'];
-      icon: '🏭';
-      color: 'from-orange-50o0 to-red-60o0'};
+        'Predictive MaintenanceSupply Chain Optimization',
+        'Quality Control AIEnergy Management',
+        'Production Planning'],
+      icon: '🏭',
+      color: 'from-orange-50o0 to-red-60o0'},
     {
-      industry: 'Retail & E-commerce';
-      description: 'Personalized shopping experiencesinventory managementand customer analytics';
+      industry: 'Retail & E-commerce',
+      description: 'Personalized shopping experiencesinventory managementand customer analytics',
       solutions: [
-        'Personalized Recommendations';
-        'Inventory Management';
-        'Customer Analytics';
-        'Demand Forecasting';
-        'Customer Service AI'];
-      icon: '🛍️';
-      color: 'from-purple-50o0 to-pink-60o0'};
+        'Personalized RecommendationsInventory Management',
+        'Customer AnalyticsDemand Forecasting',
+        'Customer Service AI'],
+      icon: '🛍️',
+      color: 'from-purple-50o0 to-pink-60o0'},
     {
-      industry: 'Education';
-      description: 'Adaptive learning platformstudent performance analyticsand virtual classrooms';
+      industry: 'Education',
+      description: 'Adaptive learning platformstudent performance analyticsand virtual classrooms',
       solutions: [
-        'Adaptive Learning';
-        'Student Analytics';
-        'Virtual Classrooms';
-        'Content Personalization';
-        'Assessment Automation'];
-      icon: '🎓';
-      color: 'from-indigo-50o0 to-blue-60o0'};
+        'Adaptive LearningStudent Analytics',
+        'Virtual ClassroomsContent Personalization',
+        'Assessment Automation'],
+      icon: '🎓',
+      color: 'from-indigo-50o0 to-blue-60o0'},
     {
-      industry: 'Transportation & Logistics';
-      description: 'Route optimizationfleet managementand predictive logistics';
+      industry: 'Transportation & Logistics',
+      description: 'Route optimizationfleet managementand predictive logistics',
       solutions: [
-        'Route Optimization';
-        'Fleet Management';
-        'Predictive Logistics';
-        'Traffic Analysis';
-        'Supply Chain Visibility'];
-      icon: '🚚';
+        'Route OptimizationFleet Management',
+        'Predictive LogisticsTraffic Analysis',
+        'Supply Chain Visibility'],
+      icon: '🚚',
       color: 'from-yellow-50o0 to-orange-60o0'}
   ],
   const technologySolutions = [
     {
-      category: 'AI & Machine Learning';
-      description: 'Advanced artificial intelligence solutions for business automation and decision-making';
+      category: 'AI & Machine Learning',
+      description: 'Advanced artificial intelligence solutions for business automation and decision-making',
       solutions: [
         {
-          name: 'AI Decision Engine';
-          description: 'Intelligent decision-making systems for complex business scenarios';
-          features: ['Real-time Analysis'Predictive Modeling'Automated Decision Making']};
+          name: 'AI Decision Engine',
+          description: 'Intelligent decision-making systems for complex business scenarios',
+          features: ['Real-time Analysis'Predictive Modeling'Automated Decision Making']},
         {
-          name: 'Natural Language Processing';
-          description: 'Advanced text and speech processing capabilities';
-          features: ['Text Analysis'Sentiment Analysis'Language Translation']};
+          name: 'Natural Language Processing',
+          description: 'Advanced text and speech processing capabilities',
+          features: ['Text Analysis'Sentiment Analysis'Language Translation']},
         {
-          name: 'Computer Vision';
-          description: 'Image and video analysis for automation and quality control';
+          name: 'Computer Vision',
+          description: 'Image and video analysis for automation and quality control',
           features: ['Object Detection'Quality Control'Process Automation']}
-      ]};
+      ]},
     {
-      category: 'Quantum Computing';
-      description: 'Next-generation quantum computing solutions for complex optimization problems';
+      category: 'Quantum Computing',
+      description: 'Next-generation quantum computing solutions for complex optimization problems',
       solutions: [
         {
-          name: 'Quantum Optimization';
-          description: 'Solve complex optimization problems with quantum algorithms';
-          features: ['Supply Chain Optimization'Financial Modeling'Logistics Planning']};
+          name: 'Quantum Optimization',
+          description: 'Solve complex optimization problems with quantum algorithms',
+          features: ['Supply Chain Optimization'Financial Modeling'Logistics Planning']},
         {
-          name: 'Quantum Machine Learning';
-          description: 'Enhanced machine learning with quantum computing power';
-          features: ['Quantum Neural Networks'Enhanced Pattern Recognition'Faster Training']};
+          name: 'Quantum Machine Learning',
+          description: 'Enhanced machine learning with quantum computing power',
+          features: ['Quantum Neural Networks'Enhanced Pattern Recognition'Faster Training']},
         {
-          name: 'Quantum Cryptography';
-          description: 'Unbreakable encryption using quantum principles';
+          name: 'Quantum Cryptography',
+          description: 'Unbreakable encryption using quantum principles',
           features: ['Quantum Key Distribution'Secure Communication'Future-Proof Security']}
-      ]};
+      ]},
     {
-      category: 'Cloud & Infrastructure';
-      description: 'Scalable cloud-native platforms and infrastructure solutions';
+      category: 'Cloud & Infrastructure',
+      description: 'Scalable cloud-native platforms and infrastructure solutions',
       solutions: [
         {
-          name: 'Multi-Cloud Management';
-          description: 'Unified management across multiple cloud providers';
-          features: ['Cost Optimization'Performance Monitoring'Security Management']};
+          name: 'Multi-Cloud Management',
+          description: 'Unified management across multiple cloud providers',
+          features: ['Cost Optimization'Performance Monitoring'Security Management']},
         {
-          name: 'Serverless Architecture';
-          description: 'Modern serverless computing for scalable applications';
-          features: ['Auto-scaling'Pay-per-use'Reduced Maintenance']};
+          name: 'Serverless Architecture',
+          description: 'Modern serverless computing for scalable applications',
+          features: ['Auto-scaling'Pay-per-use'Reduced Maintenance']},
         {
-          name: 'Edge Computing';
-          description: 'Distributed computing for low-latency applications';
+          name: 'Edge Computing',
+          description: 'Distributed computing for low-latency applications',
           features: ['Local Processing'Reduced Latency'Bandwidth Optimization']}
       ]}
   ],
   const useCases = [
     {
-      title: 'Customer Service Automation';
-      description: 'AI-powered chatbots and virtual assistants that provide 24/7 customer support';
-      benefits: ['24/7 Availability'Instant Response'Cost Reduction'Improved Satisfaction'];
-      industries: ['Retail'Healthcare'Finance'Technology']};
+      title: 'Customer Service Automation',
+      description: 'AI-powered chatbots and virtual assistants that provide 24/7 customer support',
+      benefits: ['24/7 Availability'Instant Response'Cost Reduction'Improved Satisfaction'],
+      industries: ['Retail'Healthcare'Finance'Technology']},
     {
-      title: 'Predictive Analytics';
-      description: 'Forecast trends and behaviors to make proactive business decisions';
-      benefits: ['Risk Mitigation'Opportunity Identification'Resource Optimization'Competitive Advantage'];
-      industries: ['Manufacturing'Finance'Healthcare'Transportation']};
+      title: 'Predictive Analytics',
+      description: 'Forecast trends and behaviors to make proactive business decisions',
+      benefits: ['Risk Mitigation'Opportunity Identification'Resource Optimization'Competitive Advantage'],
+      industries: ['Manufacturing'Finance'Healthcare'Transportation']},
     {
-      title: 'Cybersecurity Enhancement';
-      description: 'Advanced threat detection and prevention using AI and quantum technologies';
-      benefits: ['Real-time Protection'Threat Intelligence'Compliance Assurance'Incident Response'];
-      industries: ['All Industries'Government'Finance'Healthcare']};
+      title: 'Cybersecurity Enhancement',
+      description: 'Advanced threat detection and prevention using AI and quantum technologies',
+      benefits: ['Real-time Protection'Threat Intelligence'Compliance Assurance'Incident Response'],
+      industries: ['All Industries'Government'Finance'Healthcare']},
     {
-      title: 'Process Automation';
-      description: 'Streamline operations and reduce manual work through intelligent automation';
-      benefits: ['Efficiency Gains'Error Reduction'Cost Savings'Scalability'];
+      title: 'Process Automation',
+      description: 'Streamline operations and reduce manual work through intelligent automation',
+      benefits: ['Efficiency Gains'Error Reduction'Cost Savings'Scalability'],
       industries: ['Manufacturing'Finance'Healthcare'Retail']}
   ],
   return (

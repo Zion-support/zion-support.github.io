@@ -20,15 +20,13 @@ export default function GitHubComplianceBotPage() {
             GitHub Compliance Bot,
           </h1>,
           <p className='text-slate-300'>,
-            Automated repo checks for SOC 2/ISO controls, branch protections;
+            Automated repo checks for SOC 2/ISO controls, branch protections,
             CODEOWNERS, secrets scanning, licenses, and drift alerts.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'Policy-as-code checks';
-              'Branch protection enforcement';
-              'Secrets scanning alerts';
-              'Weekly report & scorecard';
+              'Policy-as-code checksBranch protection enforcement',
+              'Secrets scanning alertsWeekly report & scorecard',
             ].map(f => (
               <div
                 key={f}

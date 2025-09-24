@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { SEO } from '../components/SEO',
 const Contact: React.FC = () => {
   return (
@@ -24,5 +24,5 @@ const Contact: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </>)};
-export default Contact;
+    </>)},
+export default Contact,

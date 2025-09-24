@@ -2,40 +2,40 @@ import React, { useState, useEffect, useCallback, useRef } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  Shield;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Grid;
-  Heart;
-  Database;
-  Cpu;
-  Palette;
-  Cloud;
-  Network;
-  TrendingUp;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Search;
-  User;
-  Lock;
-  Zap;
-  Users;
-  BookOpen;
-  FileText;
-  Video;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Search,
+  User,
+  Lock,
+  Zap,
+  Users,
+  BookOpen,
+  FileText,
+  Video,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -64,181 +64,181 @@ function normalizeHref(href: string): string {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Services';
-    href: '/services';
-    icon: <Rocket className='w-5 h-5' />;
-    description: 'Comprehensive technology solutions';
-    category: 'services';
-    color: 'from-emerald-50o0 to-cyan-50o0';
+    name: 'Services',
+    href: '/services',
+    icon: <Rocket className='w-5 h-5' />,
+    description: 'Comprehensive technology solutions',
+    category: 'services',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'All Services';
-        href: '/services';
-        description: 'Complete services overview';
-        icon: <Grid className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete services overview',
+        icon: <Grid className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'AI & Machine Learning';
-        href: '/ai-services';
-        description: 'AI-powered solutions and platforms';
-        icon: <Brain className='w-4 h-4' />;
-        color: 'from-purple-50o0 to-pink-50o0';
-        featured: true;
-      };
+        name: 'AI & Machine Learning',
+        href: '/ai-services',
+        description: 'AI-powered solutions and platforms',
+        icon: <Brain className='w-4 h-4' />,
+        color: 'from-purple-50o0 to-pink-50o0',
+        featured: true
+      },
       {
-        name: 'Quantum Computing';
-        href: '/quantum-services';
-        description: 'Quantum-powered solutions';
-        icon: <Atom className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-cyan-50o0';
-        featured: true;
-      };
+        name: 'Quantum Computing',
+        href: '/quantum-services',
+        description: 'Quantum-powered solutions',
+        icon: <Atom className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-cyan-50o0',
+        featured: true
+      },
       {
-        name: 'Cybersecurity';
-        href: '/cybersecurity';
-        description: 'Advanced security solutions';
-        icon: <Shield className='w-4 h-4' />;
-        color: 'from-red-50o0 to-orange-50o0';
-      };
+        name: 'Cybersecurity',
+        href: '/cybersecurity',
+        description: 'Advanced security solutions',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-50o0 to-orange-50o0'
+      },
       {
-        name: 'Space Technology';
-        href: '/space-technology';
-        description: 'Space exploration solutions';
-        icon: <Rocket className='w-4 h-4' />;
-        color: 'from-indigo-50o0 to-purple-50o0';
-      };
+        name: 'Space Technology',
+        href: '/space-technology',
+        description: 'Space exploration solutions',
+        icon: <Rocket className='w-4 h-4' />,
+        color: 'from-indigo-50o0 to-purple-50o0'
+      },
       {
-        name: 'Cloud & Infrastructure';
-        href: '/cloud-infrastructure';
-        description: 'Cloud and infrastructure services';
-        icon: <Cloud className='w-4 h-4' />;
-        color: 'from-green-50o0 to-emerald-50o0';
-      };
-    ];
-  };
+        name: 'Cloud & Infrastructure',
+        href: '/cloud-infrastructure',
+        description: 'Cloud and infrastructure services',
+        icon: <Cloud className='w-4 h-4' />,
+        color: 'from-green-50o0 to-emerald-50o0'
+      },
+    ],
+  },
   {
-    name: 'Solutions';
-    href: '/solutions';
-    icon: <Target className='w-5 h-5' />;
-    description: 'Industry-specific solutions';
-    category: 'solutions';
-    color: 'from-blue-50o0 to-indigo-50o0';
+    name: 'Solutions',
+    href: '/solutions',
+    icon: <Target className='w-5 h-5' />,
+    description: 'Industry-specific solutions',
+    category: 'solutions',
+    color: 'from-blue-50o0 to-indigo-50o0',
     children: [
       {
-        name: 'Enterprise Solutions';
-        href: '/enterprise-solutions';
-        description: 'Large enterprise technology solutions';
-        icon: <Building className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'Enterprise Solutions',
+        href: '/enterprise-solutions',
+        description: 'Large enterprise technology solutions',
+        icon: <Building className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Startup Solutions';
-        href: '/startup-solutions';
-        description: 'Technology solutions for startups';
-        icon: <Zap className='w-4 h-4' />;
-        color: 'from-yellow-50o0 to-orange-50o0';
-      };
+        name: 'Startup Solutions',
+        href: '/startup-solutions',
+        description: 'Technology solutions for startups',
+        icon: <Zap className='w-4 h-4' />,
+        color: 'from-yellow-50o0 to-orange-50o0'
+      },
       {
-        name: 'Government Solutions';
-        href: '/government-solutions';
-        description: 'Government and public sector solutions';
-        icon: <Shield className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-cyan-50o0';
-      };
-    ];
-  };
+        name: 'Government Solutions',
+        href: '/government-solutions',
+        description: 'Government and public sector solutions',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-cyan-50o0'
+      },
+    ],
+  },
   {
-    name: 'Company';
-    href: '/about';
-    icon: <Users className='w-5 h-5' />;
-    description: 'About Zion Tech Group';
-    category: 'company';
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'Company',
+    href: '/about',
+    icon: <Users className='w-5 h-5' />,
+    description: 'About Zion Tech Group',
+    category: 'company',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
-        name: 'About Us';
-        href: '/about';
-        description: 'Learn about our company';
-        icon: <Target className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'About Us',
+        href: '/about',
+        description: 'Learn about our company',
+        icon: <Target className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Careers';
-        href: '/careers';
-        description: 'Join our team';
-        icon: <Users className='w-4 h-4' />;
-        color: 'from-green-50o0 to-emerald-50o0';
-      };
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-50o0 to-emerald-50o0'
+      },
       {
-        name: 'News';
-        href: '/news';
-        description: 'Latest company news';
-        icon: <Globe className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-cyan-50o0';
-      };
+        name: 'News',
+        href: '/news',
+        description: 'Latest company news',
+        icon: <Globe className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-cyan-50o0'
+      },
       {
-        name: 'Case Studies';
-        href: '/case-studies';
-        description: 'Success stories';
-        icon: <BarChart3 className='w-4 h-4' />;
-        color: 'from-orange-50o0 to-red-50o0';
-      };
-    ];
-  };
+        name: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories',
+        icon: <BarChart3 className='w-4 h-4' />,
+        color: 'from-orange-50o0 to-red-50o0'
+      },
+    ],
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className='w-5 h-5' />;
-    description: 'Knowledge and resources';
-    category: 'resources';
-    color: 'from-green-50o0 to-emerald-50o0';
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Knowledge and resources',
+    category: 'resources',
+    color: 'from-green-50o0 to-emerald-50o0',
     children: [
       {
-        name: 'Blog';
-        href: '/blog';
-        description: 'Technology insights and updates';
-        icon: <FileText className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'Blog',
+        href: '/blog',
+        description: 'Technology insights and updates',
+        icon: <FileText className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Documentation';
-        href: '/docs';
-        description: 'Technical documentation';
-        icon: <BookOpen className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-cyan-50o0';
-      };
+        name: 'Documentation',
+        href: '/docs',
+        description: 'Technical documentation',
+        icon: <BookOpen className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-cyan-50o0'
+      },
       {
-        name: 'Webinars';
-        href: '/webinars';
-        description: 'Educational webinars';
-        icon: <Video className='w-4 h-4' />;
-        color: 'from-purple-50o0 to-pink-50o0';
-      };
-    ];
-  };
+        name: 'Webinars',
+        href: '/webinars',
+        description: 'Educational webinars',
+        icon: <Video className='w-4 h-4' />,
+        color: 'from-purple-50o0 to-pink-50o0'
+      },
+    ],
+  },
   {
-    name: 'Pricing';
-    href: '/pricing';
-    icon: <DollarSign className='w-5 h-5' />;
-    description: 'Transparent pricing plans';
-    category: 'pricing';
-    color: 'from-green-50o0 to-emerald-50o0';
-  };
+    name: 'Pricing',
+    href: '/pricing',
+    icon: <DollarSign className='w-5 h-5' />,
+    description: 'Transparent pricing plans',
+    category: 'pricing',
+    color: 'from-green-50o0 to-emerald-50o0'
+  },
   {
-    name: 'Contact';
-    href: '/contact';
-    icon: <Mail className='w-5 h-5' />;
-    description: 'Get in touch with us';
-    category: 'contact';
-    color: 'from-cyan-50o0 to-blue-50o0';
-  };
+    name: 'Contact',
+    href: '/contact',
+    icon: <Mail className='w-5 h-5' />,
+    description: 'Get in touch with us',
+    category: 'contact',
+    color: 'from-cyan-50o0 to-blue-50o0'
+  },
 ],
 const contactInfo = {
-  phone: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-};
+  phone: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709'
+},
 const ImprovedNavigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
@@ -250,7 +250,7 @@ const ImprovedNavigation: React.FC = () => {
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle click outside search,
@@ -260,7 +260,7 @@ const ImprovedNavigation: React.FC = () => {
         searchRef.current &&,
         !searchRef.current.contains(event.target as Node)) {
         setIsSearchOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Handle click outside mobile menu,
@@ -270,7 +270,7 @@ const ImprovedNavigation: React.FC = () => {
         mobileMenuRef.current &&,
         !mobileMenuRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   // Close mobile menu on route change,
@@ -279,7 +279,7 @@ const ImprovedNavigation: React.FC = () => {
     setActiveDropdown(null)}, []),
   const handleDropdownToggle = useCallback(
     (itemName: string) => {
-      setActiveDropdown(activeDropdown === itemName ? null : itemName)};
+      setActiveDropdown(activeDropdown === itemName ? null : itemName)},
     [activeDropdown]),
   const handleSearch = useCallback((query: string) => {
     setSearchQuery(query),
@@ -293,7 +293,7 @@ const ImprovedNavigation: React.FC = () => {
         // Handle search submission,
         // // console.log('Search submitted:', searchQuery),
         setIsSearchOpen(false)}
-    };
+    },
     [searchQuery]),
   return (
     <>,
@@ -624,5 +624,5 @@ const ImprovedNavigation: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default ImprovedNavigation;
+    </>)},
+export default ImprovedNavigation,

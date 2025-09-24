@@ -1,8 +1,8 @@
-import React from 'react';',
+import React from 'react,
 import '@testing-library/jest-dom',',
-import Button from '../components/Button',',describe('Button', () => {'}
+import Button from '../components/Button,describe('Button', () => {'}
 import _React from 'react',
-import Button from '../components/Button',',
+import Button from '../components/Button,
 ursor/automate-test-improve-and-merge-code-646c,
   test('renders without crashing', () => {'}
     render(<Button  />),expect(screen.getByTestId('button')).toBeInTheDocument()'}),test('displays correct content', () => {'}
@@ -28,12 +28,12 @@ describe('Button', () => {',
   test('handles user interactions', () => {',
   test('applies correct styling', () => {',
 ursor/automate-test-improve-and-merge-code-646c,
-    render(<Button  />);
-    expect(screen.getByTestId('button')).toBeInTheDocument(),'});
+    render(<Button  />),
+    expect(screen.getByTestId('button')).toBeInTheDocument(),'}),
   test('displays correct content', () => {'}
-    render(<Button  />)});
+    render(<Button  />)}),
   test('handles user interactions', () => {'}
-    render(<Button  />)});
+    render(<Button  />)}),
   test('applies correct styling', () => {'}
     render(<Button  />)})})}),
 '',

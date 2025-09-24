@@ -1,7 +1,7 @@
 import Link from 'next/link',
 import { ServiceProvider } from '../../data/providers/providers',
 export type ProviderCardProps = {
-  provider: ServiceProvider};
+  provider: ServiceProvider},
 export default function ProviderCard({ provider }: ProviderCardProps) {
   return (
     <div className='enhanced-card enhanced-hover border border-gray-10o0 dark: border-gray-80o0'>,

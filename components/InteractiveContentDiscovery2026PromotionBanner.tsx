@@ -7,28 +7,28 @@ const InteractiveContentDiscovery20o26PromotionBanner = () => {
   const [currentContentsetCurrentContent] = useState(0),
   const contentTypes = [
     {
-      title: 'AI Guides';
-      description: 'Complete implementation guides';
-      icon: BookOpen;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      count: 342};
+      title: 'AI Guides',
+      description: 'Complete implementation guides',
+      icon: BookOpen,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      count: 342},
     {
-      title: 'Interactive Demos';
-      description: 'Hands-on experiences';
-      icon: Play;
-      color: 'from-purple-50o0 to-pink-50o0';
-      count: 156};
+      title: 'Interactive Demos',
+      description: 'Hands-on experiences',
+      icon: Play,
+      color: 'from-purple-50o0 to-pink-50o0',
+      count: 156},
     {
-      title: 'Case Studies';
-      description: 'Real-world success stories';
-      icon: TrendingUp;
-      color: 'from-green-50o0 to-emerald-50o0';
-      count: 134};
+      title: 'Case Studies',
+      description: 'Real-world success stories',
+      icon: TrendingUp,
+      color: 'from-green-50o0 to-emerald-50o0',
+      count: 134},
     {
-      title: 'Tutorials';
-      description: 'Step-by-step learning';
-      icon: Download;
-      color: 'from-orange-50o0 to-red-50o0';
+      title: 'Tutorials',
+      description: 'Step-by-step learning',
+      icon: Download,
+      color: 'from-orange-50o0 to-red-50o0',
       count: 289}
   ],
   useEffect(() => {
@@ -50,9 +50,9 @@ const InteractiveContentDiscovery20o26PromotionBanner = () => {
             key={i}
             className="absolute w-1 h-1 bg-indigo-40o0/40 rounded-full animate-pulse",
             style={{
-              left: `${Math.random() * 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
-              animationDelay: `${Math.random() * 3}s`;
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
+              animationDelay: `${Math.random() * 3}s`,
               animationDuration: `${2 + Math.random() * 3}s`}}
            />))}
       </div>,
@@ -165,5 +165,5 @@ const InteractiveContentDiscovery20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveContentDiscovery20o26PromotionBanner;
+    </div>)},
+export default InteractiveContentDiscovery20o26PromotionBanner,

@@ -8,11 +8,11 @@ import { Input } from '@/components/ui/input',
 import { Checkbox } from '@/components/ui/checkbox',
 import { format } from 'date-fns',
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from '@/components/ui/form',
 import { WorkExperience } from '@/types/resume',
 Loader2EditTrash2,
@@ -22,12 +22,12 @@ import { CardContent } from '@/components/ui/card',
 import { AIEnhancementButton } from '@/components/resume-builder/forms/AIEnhancementButton',
 // Define schema for form validation,
 const workExperienceSchema = z.object({
-  company_name: z.string().min(1'Company name is required');
-  role_title: z.string().min(1'Job title is required');
-  start_date: z.string().min(1'Start date is required');
-  end_date: z.string().optional();
-  is_current: z.boolean().default(false);
-  description: z.string().optional();
+  company_name: z.string().min(1'Company name is required'),
+  role_title: z.string().min(1'Job title is required'),
+  start_date: z.string().min(1'Start date is required'),
+  end_date: z.string().optional(),
+  is_current: z.boolean().default(false),
+  description: z.string().optional(),
   location: z.string().optional()}),
 type WorkExperienceFormValues = z.infer<typeof workExperienceSchema>,
 interface WorkExperienceFormProps {
@@ -44,15 +44,15 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
   const formatDateValue = (dateValue: string | Date | undefined): string => {
     if (!dateValue) return '',
     if (typeof dateValue === 'string') return dateValue,
-    return format(dateValue'yyyy-MM-dd')};
+    return format(dateValue'yyyy-MM-dd')},
   const form = useForm<WorkExperienceFormValues>({
-    resolver: zodResolver(workExperienceSchema);
+    resolver: zodResolver(workExperienceSchema),
     defaultValues: {
-      company_name: '';
-      role_title: '';
-      start_date: format(new Date()'yyyy-MM-dd');
-      is_current: false;
-      description: '';
+      company_name: '',
+      role_title: '',
+      start_date: format(new Date()'yyyy-MM-dd'),
+      is_current: false,
+      description: '',
       location: ''}}),
   const handleAddOrUpdate = async (data: WorkExperienceFormValues) => {
     try {
@@ -62,38 +62,38 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
         company_name: data.company_name// Required field,
         role_title: data.role_title// Required field,
         start_date: data.start_date// Required field,
-        end_date: data.is_current ? undefined : (data.end_date || undefined);
-        is_current: data.is_current;
-        description: data.description;
-        location: data.location};
+        end_date: data.is_current ? undefined : (data.end_date || undefined),
+        is_current: data.is_current,
+        description: data.description,
+        location: data.location},
       if (editingId) {
         success = await updateWorkExperience(editingIdexperienceData)} else {
         success = await addWorkExperience(resumeIdexperienceData)}
 ,
       if (success) {
         form.reset({
-          company_name: '';
-          role_title: '';
-          start_date: format(new Date()'yyyy-MM-dd');
-          is_current: false;
-          description: '';
+          company_name: '',
+          role_title: '',
+          start_date: format(new Date()'yyyy-MM-dd'),
+          is_current: false,
+          description: '',
           location: ''}),
         setEditingId(null)}
     } catch (err: any) {
       setError(err.message || 'An error occurred')}
-  };
+  },
   const handleEdit = (work: WorkExperience) => {
     setEditingId(work.id!),
     form.reset({
-      ...work;
-      start_date: formatDateValue(work.start_date);
-      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})};
+      ...work,
+      start_date: formatDateValue(work.start_date),
+      end_date: work.end_date && !work.is_current ? formatDateValue(work.end_date) : undefined})},
   const handleDelete = async (id: string) => {
     if (confirm('Are you sure you want to delete this work experience?')) {
       await deleteWorkExperience(id)}
-  };
+  },
   const handleEnhanceDescription = (enhancedContent: string) => {
-    form.setValue('description'enhancedContent)};
+    form.setValue('description'enhancedContent)},
   return (
     <div className="space-y-6">,
       <div>,
@@ -278,11 +278,11 @@ export function WorkExperienceForm({ resumeIdworkExperiencesonCompleteonBack }: 
                   if (editingId) {
                     setEditingId(null),
                     form.reset({
-                      company_name: '';
-                      role_title: '';
-                      start_date: format(new Date()'yyyy-MM-dd');
-                      is_current: false;
-                      description: '';
+                      company_name: '',
+                      role_title: '',
+                      start_date: format(new Date()'yyyy-MM-dd'),
+                      is_current: false,
+                      description: '',
                       location: ''})} else {
                     onBack()}
                 }}

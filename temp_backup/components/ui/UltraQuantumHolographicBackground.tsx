@@ -5,7 +5,7 @@ interface UltraQuantumHolographicBackgroundProps {
   intensity?: number}
 ,
 const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgroundProps> = ({
-  children;
+  children,
   intensity = 1.0}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -25,9 +25,9 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       type: 'quantum' | 'holographic' | 'energy'}> = [],
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     const createParticle = () => {
-      const types = ['quantum', 'holographic', 'energy'] as const,
+      const types = ['quantumholographic', 'energy'] as const,
       const type = types[Math.floor(Math.random() * types.length)],
       let color: string,
       switch (type) {
@@ -42,30 +42,30 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
           break}
 ,
       return {
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * intensity;
-        vy: (Math.random() - 0.5) * 2 * intensity;
-        size: Math.random() * 3 * intensity + 1;
-        opacity: Math.random() * 0.8 + 0.2;
-        color;
-        type};
-    };
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * intensity,
+        vy: (Math.random() - 0.5) * 2 * intensity,
+        size: Math.random() * 3 * intensity + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color,
+        type},
+    },
     const initParticles = () => {
       particles = [],
       const particleCount = Math.floor(10o0 * intensity),
       for (let i = 0, i < particleCount, i++) {
         particles.push(createParticle())}
-    };
+    },
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2),
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),
       gradient.addColorStop(0.3, 'rgba(20, 20, 40, 0.6)'),
@@ -159,7 +159,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         ctx.lineTo(canvas.width, y),
         ctx.stroke()}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     resizeCanvas(),
     initParticles(),
     animate(),
@@ -168,7 +168,7 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [intensity]),
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">,
@@ -188,39 +188,39 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 bg-gradient-to-br from-cyan-50o0/20 to-blue-50o0/20 rounded-full blur-xl",
           animate={{
-            scale: [1, 1.2, 1];
-            opacity: [0.3, 0.6, 0.3];
-            x: [0, 20, 0];
+            scale: [1, 1.2, 1],
+            opacity: [0.3, 0.6, 0.3],
+            x: [0, 20, 0],
             y: [0, -20, 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20 rounded-full blur-xl",
           animate={{
-            scale: [1, 1.3, 1];
-            opacity: [0.4, 0.7, 0.4];
-            x: [0, -15, 0];
+            scale: [1, 1.3, 1],
+            opacity: [0.4, 0.7, 0.4],
+            x: [0, -15, 0],
             y: [0, 15, 0]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-28 h-28 bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 rounded-full blur-xl",
           animate={{
-            scale: [1, 1.1, 1];
-            opacity: [0.3, 0.5, 0.3];
-            x: [0, 25, 0];
+            scale: [1, 1.1, 1],
+            opacity: [0.3, 0.5, 0.3],
+            x: [0, 25, 0],
             y: [0, -25, 0]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 10,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 4}}
          />,
       </div>,
@@ -233,24 +233,24 @@ const UltraQuantumHolographicBackground: React.FC<UltraQuantumHolographicBackgro
         <motion.div,
           className="absolute top-1/2 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-40o0/30 to-transparent",
           animate={{
-            scaleX: [0, 1, 0];
+            scaleX: [0, 1, 0],
             opacity: [0, 0.5, 0]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
+            duration: 4,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-1/3 right-0 w-1 h-full bg-gradient-to-b from-transparent via-purple-40o0/30 to-transparent",
           animate={{
-            scaleY: [0, 1, 0];
+            scaleY: [0, 1, 0],
             opacity: [0, 0.4, 0]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 6,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1}}
          />,
       </div>,
-    </div>)};
-export default UltraQuantumHolographicBackground;
+    </div>)},
+export default UltraQuantumHolographicBackground,

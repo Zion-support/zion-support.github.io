@@ -2,86 +2,86 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Phone, Mail, MapPin, Globe, Brain, Rocket, Atom, Shield, Cpu;
-  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, Mail as MailIcon;
-  Phone as PhoneIcon, MapPin as MapPinIcon, Clock, Users, Award, Star;
+  ArrowRight, Phone, Mail, MapPin, Globe, Brain, Rocket, Atom, Shield, Cpu,
+  Twitter, Linkedin, Facebook, Instagram, Youtube, Github, Mail as MailIcon,
+  Phone as PhoneIcon, MapPin as MapPinIcon, Clock, Users, Award, Star,
   ChevronRight, ExternalLink, Heart, Zap, Sparkles, Infinity, Target} from 'lucide-react',
 const UltraFuturisticFooter20o47: React.FC = () => {
   const [email, setEmail] = useState(''),
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Innovative Services 20o25';
-      icon: <Rocket className="w-5 h-5"  />;
-      color: 'from-emerald-50o0 to-cyan-50o0';
+      title: 'Innovative Services 20o25',
+      icon: <Rocket className="w-5 h-5"  />,
+      color: 'from-emerald-50o0 to-cyan-50o0',
       links: [
-        { name: 'AI Autonomous Ecosystem', href: '/20o25-innovative-services-showcase-v2' };
-        { name: 'Quantum & Emerging Tech', href: '/20o25-innovative-services-showcase-v2' };
-        { name: 'IT Infrastructure V2', href: '/20o25-innovative-services-showcase-v2' };
+        { name: 'AI Autonomous Ecosystem', href: '/20o25-innovative-services-showcase-v2' },
+        { name: 'Quantum & Emerging Tech', href: '/20o25-innovative-services-showcase-v2' },
+        { name: 'IT Infrastructure V2', href: '/20o25-innovative-services-showcase-v2' },
         { name: 'Space Technology', href: '/space-technology' }
-      ]};
+      ]},
     {
-      title: 'Revolutionary Services 20o46';
-      icon: <Sparkles className="w-5 h-5"  />;
-      color: 'from-purple-50o0 to-pink-50o0';
+      title: 'Revolutionary Services 20o46',
+      icon: <Sparkles className="w-5 h-5"  />,
+      color: 'from-purple-50o0 to-pink-50o0',
       links: [
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-20o46' };
-        { name: 'Quantum AI Neural Networks', href: '/quantum-ai-neural-network-platform-20o46' };
-        { name: 'Autonomous Business Intelligence', href: '/autonomous-ai-business-intelligence-platform-20o46' };
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-20o46' },
+        { name: 'Quantum AI Neural Networks', href: '/quantum-ai-neural-network-platform-20o46' },
+        { name: 'Autonomous Business Intelligence', href: '/autonomous-ai-business-intelligence-platform-20o46' },
         { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-intelligence-platform-20o46' }
-      ]};
+      ]},
     {
-      title: 'Core Solutions';
-      icon: <Target className="w-5 h-5"  />;
-      color: 'from-blue-50o0 to-indigo-50o0';
+      title: 'Core Solutions',
+      icon: <Target className="w-5 h-5"  />,
+      color: 'from-blue-50o0 to-indigo-50o0',
       links: [
-        { name: 'AI Services', href: '/ai-services' };
-        { name: 'IT Infrastructure', href: '/it-infrastructure' };
-        { name: 'Cybersecurity', href: '/cybersecurity' };
+        { name: 'AI Services', href: '/ai-services' },
+        { name: 'IT Infrastructure', href: '/it-infrastructure' },
+        { name: 'Cybersecurity', href: '/cybersecurity' },
         { name: 'Business Solutions', href: '/business-solutions' }
-      ]};
+      ]},
     {
-      title: 'Company';
-      icon: <Users className="w-5 h-5"  />;
-      color: 'from-yellow-50o0 to-orange-50o0';
+      title: 'Company',
+      icon: <Users className="w-5 h-5"  />,
+      color: 'from-yellow-50o0 to-orange-50o0',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Our Team', href: '/team' };
-        { name: 'Careers', href: '/careers' };
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
         { name: 'Contact', href: '/contact' }
       ]}
   ],
   const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-40o0' };
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-60o0' };
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-50o0' };
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-50o0' };
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-50o0' };
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter, color: 'hover:text-blue-40o0' },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: Linkedin, color: 'hover:text-blue-60o0' },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: Facebook, color: 'hover:text-blue-50o0' },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: Instagram, color: 'hover:text-pink-50o0' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: Youtube, color: 'hover:text-red-50o0' },
     { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github, color: 'hover:text-gray-40o0' }
   ],
   const stats = [
-    { number: '50o00+', label: 'Innovative Services', icon: Star };
-    { number: '99.99%', label: 'Uptime Guarantee', icon: Zap };
-    { number: '24/7', label: 'AI Intelligence', icon: Brain };
+    { number: '50o00+', label: 'Innovative Services', icon: Star },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: Zap },
+    { number: '24/7', label: 'AI Intelligence', icon: Brain },
     { number: '30o0+', label: 'Countries Served', icon: Globe }
   ],
   const handleNewsletterSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     // Handle newsletter subscription,
     // // console.log('Newsletter subscription:', email),
-    setEmail('')};
+    setEmail('')},
   const fadeInUp ={
-    initial: { opacity: 0, y: 60 };
-    whileInView: { opacity: 1, y: 0 };
-    viewport: { once: true };
+    initial: { opacity: 0, y: 60 },
+    whileInView: { opacity: 1, y: 0 },
+    viewport: { once: true },
     transition: { duration: 0.6 }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   return (
     <footer className="relative bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 text-white overflow-hidden">,
       {/* Background Effects */}
@@ -282,35 +282,35 @@ const UltraFuturisticFooter20o47: React.FC = () => {
         <motion.div,
           className="absolute top-20 right-20 w-2 h-2 bg-cyan-40o0 rounded-full",
           animate={{
-            scale: [1, 2, 1];
+            scale: [1, 2, 1],
             opacity: [0.5, 1, 0.5]}}
           transition={{
-            duration: 3;
-            repeat: Infinity as any;
+            duration: 3,
+            repeat: Infinity as any,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-40 left-32 w-1 h-1 bg-blue-40o0 rounded-full",
           animate={{
-            scale: [1, 3, 1];
+            scale: [1, 3, 1],
             opacity: [0.3, 1, 0.3]}}
           transition={{
-            duration: 4;
-            repeat: Infinity as any;
-            ease: "easeInOut";
+            duration: 4,
+            repeat: Infinity as any,
+            ease: "easeInOut",
             delay: 1}}
          />,
         <motion.div,
           className="absolute top-1/2 left-1/4 w-1 h-1 bg-purple-40o0 rounded-full",
           animate={{
-            scale: [1, 2, 1];
+            scale: [1, 2, 1],
             opacity: [0.4, 1, 0.4]}}
           transition={{
-            duration: 5;
-            repeat: Infinity as any;
-            ease: "easeInOut";
+            duration: 5,
+            repeat: Infinity as any,
+            ease: "easeInOut",
             delay: 2}}
          />,
       </div>,
-    </footer>)};
-export default UltraFuturisticFooter20o47;
+    </footer>)},
+export default UltraFuturisticFooter20o47,

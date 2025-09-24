@@ -12,60 +12,60 @@ interface ContentItem {
 ,
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-20o25-20o26-breakthrough';
-    title: 'AI 20o25-20o26 Ultimate Breakthrough';
-    description: 'Revolutionary AI technologies that will reshape industries and transform business operations.';
-    category: 'AI Breakthrough';
-    url: '/ai-20o25-20o26-ultimate-breakthrough';
-    featured: true;
-    tags: [', 'AI', 'Breakthrough'20o25'20o26'Neural Networks']};
+    id: 'ai-20o25-20o26-breakthrough',
+    title: 'AI 20o25-20o26 Ultimate Breakthrough',
+    description: 'Revolutionary AI technologies that will reshape industries and transform business operations.',
+    category: 'AI Breakthrough',
+    url: '/ai-20o25-20o26-ultimate-breakthrough',
+    featured: true,
+    tags: [AI', 'Breakthrough'20o25'20o26'Neural Networks']},
   {
-    id: 'quantum-ai-20o26';
-    title: 'Quantum AI 20o26 Breakthrough';
-    description: 'Harness quantum computing power to unlock exponential AI capabilities and solve complex problems.';
-    category: 'Quantum AI';
-    url: '/quantum-ai-20o26-breakthrough';
-    featured: true;
-    tags: [', 'Quantum', 'AI'Computing'20o26'Revolution']};
+    id: 'quantum-ai-20o26',
+    title: 'Quantum AI 20o26 Breakthrough',
+    description: 'Harness quantum computing power to unlock exponential AI capabilities and solve complex problems.',
+    category: 'Quantum AI',
+    url: '/quantum-ai-20o26-breakthrough',
+    featured: true,
+    tags: [Quantum', 'AI'Computing'20o26'Revolution']},
   {
-    id: 'neural-architectures-20o26';
-    title: 'Advanced Neural Architectures 20o26';
-    description: 'Next-generation neural networks with self-optimizing capabilities and multi-modal learning.';
-    category: 'Neural Networks';
-    url: '/advanced-neural-architectures-20o26';
-    featured: true;
-    tags: [', 'Neural', 'Architecture'20o26', 'Learning', 'AI']};
+    id: 'neural-architectures-20o26',
+    title: 'Advanced Neural Architectures 20o26',
+    description: 'Next-generation neural networks with self-optimizing capabilities and multi-modal learning.',
+    category: 'Neural Networks',
+    url: '/advanced-neural-architectures-20o26',
+    featured: true,
+    tags: [Neural', 'Architecture'20o26Learning', 'AI']},
   {
-    id: 'ai-automation';
-    title: 'AI Automation Solutions';
-    description: 'Intelligent automation solutions that streamline operations and boost productivity.';
-    category: 'Automation';
-    url: '/services/ai-automation';
-    featured: false;
-    tags: [', 'Automation', 'AI', 'Productivity', 'Solutions']};
+    id: 'ai-automation',
+    title: 'AI Automation Solutions',
+    description: 'Intelligent automation solutions that streamline operations and boost productivity.',
+    category: 'Automation',
+    url: '/services/ai-automation',
+    featured: false,
+    tags: [Automation', 'AIProductivity', 'Solutions']},
   {
-    id: 'cloud-infrastructure';
-    title: 'Cloud Infrastructure';
-    description: 'Scalablesecure cloud solutions designed to support your business growth.';
-    category: 'Cloud';
-    url: '/services/cloud-infrastructure';
-    featured: false;
-    tags: [', 'Cloud', 'Infrastructure', 'Scalable', 'Security']};
+    id: 'cloud-infrastructure',
+    title: 'Cloud Infrastructure',
+    description: 'Scalablesecure cloud solutions designed to support your business growth.',
+    category: 'Cloud',
+    url: '/services/cloud-infrastructure',
+    featured: false,
+    tags: [Cloud', 'InfrastructureScalable', 'Security']},
   {
-    id: 'micro-saas';
-    title: 'Micro SaaS Solutions';
-    description: 'Custom micro SaaS applications that solve specific business challenges.';
-    category: 'SaaS';
-    url: '/services/micro-saas';
-    featured: false;
-    tags: [', 'SaaS', 'Micro', 'Custom', 'Solutions']}
+    id: 'micro-saas',
+    title: 'Micro SaaS Solutions',
+    description: 'Custom micro SaaS applications that solve specific business challenges.',
+    category: 'SaaS',
+    url: '/services/micro-saas',
+    featured: false,
+    tags: [SaaS', 'MicroCustom', 'Solutions']}
 ],
 export default function InteractiveContentDiscoveryWidget20o26() {
   const [selectedCategorysetSelectedCategory] = useState<string>('All'),
-  const [searchTermsetSearchTerm] = useState<string>(', '),
+  const [searchTermsetSearchTerm] = useState<string>(),
   const [filteredContentsetFilteredContent] = useState<ContentItem[]>(contentItems),
   const [isVisiblesetIsVisible] = useState(false),
-  const categories = [', 'All', 'AI 'Breakthrough', 'Quantum 'AI', 'Neural 'Networks', 'Automation', 'Cloud', 'SaaS'],
+  const categories = [', 'AllAI 'Breakthrough', 'Quantum 'AINeural 'Networks', 'AutomationCloud', 'SaaS'],
   useEffect(() => {
     let filtered = contentItems,
     if (selectedCategory !== 'All') {

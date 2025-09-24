@@ -9,34 +9,34 @@ import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/c
 import {Zap, ChevronLeft, ChevronRight} from "lucide-react",
 import {Badge} from "@/components/ui/badge",
 import {Card, CardContent} from "@/components/ui/card",
-import React, { useState } from "react";
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Label } from "@/components/ui/label";
+import React, { useState } from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Label } from "@/components/ui/label",
 import {
-import { Zap, ChevronLeft, ChevronRight } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent } from "@/components/ui/card";
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select";
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
+import { Zap, ChevronLeft, ChevronRight } from "lucide-react",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent } from "@/components/ui/card",
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from "@/components/ui/select",
+type JobPostStep = "details" | "requirements" | "budget" | "preview",
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
 export function MobileJobPost() {
-  const [currentStep, setCurrentStep] = useState<JobPostStep>("details");
+  const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   const goToNextStep = () => {
     if (currentStep === "details") {
       setCurrentStep("requirements")} else if (currentStep === "requirements") {
       setCurrentStep("budget")} else if (currentStep === "budget") {
       setCurrentStep("preview")}
 }
-  };
+  },
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")} else if (currentStep === "budget") {
@@ -45,13 +45,13 @@ export function MobileJobPost() {
 ,
   const renderStepContent = () => {
     switch (currentStep) {
-      case "details": return <DetailsStep />;
+      case "details": return <DetailsStep />,
       case "requirements":,
-        return <RequirementsStep />;
+        return <RequirementsStep />,
       case "budget":,
-        return <BudgetStep />;
+        return <BudgetStep />,
       case "preview":,
-        return <PreviewStep />;
+        return <PreviewStep />,
       default: ,
         return <DetailsStep />}
 ,
@@ -153,12 +153,12 @@ function RequirementsStep() {
         <Textarea
           id="description",
           placeholder="Describe the job role and responsibilities",
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
-  SelectValue} from "@/components/ui/select";
-type JobPostStep = "details" | "requirements" | "budget" | "preview";
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue} from "@/components/ui/select",
+type JobPostStep = "details" | "requirements" | "budget" | "preview",
 export function MobileJobPost() {
   const [currentStep, setCurrentStep] = useState<JobPostStep>("details"),
   const goToNextStep = () => {
@@ -166,13 +166,13 @@ export function MobileJobPost() {
       setCurrentStep("requirements")} else if (currentStep === "requirements") {
       setCurrentStep("budget")} else if (currentStep === "budget") {
       setCurrentStep("preview")}
-  };
+  },
   const goToPrevStep = () => {
     if (currentStep === "requirements") {
       setCurrentStep("details")} else if (currentStep === "budget") {
       setCurrentStep("requirements")} else if (currentStep === "preview") {
       setCurrentStep("budget")}
-  };
+  },
   const renderStepContent = () => {
     switch (currentStep) {
       case "details": return <DetailsStep />,
@@ -184,7 +184,7 @@ export function MobileJobPost() {
         return <PreviewStep />,
       default: ,
         return <DetailsStep />}
-};
+},
   return (
     <div className="min-h-screen flex flex-col">,
       <MobileHeader
@@ -277,11 +277,11 @@ function DetailsStep() {
 ,
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"]);
-  const [newSkill, setNewSkill] = useState("");
+    "React", "TypeScript", "Node.js"]),
+  const [newSkill, setNewSkill] = useState(""),
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]);
+      setSkills([...skills, newSkill]),
       setNewSkill("")}
 }
 ,
@@ -403,9 +403,9 @@ function DetailsStep() {
     </div>)}
 /**,
  * RequirementsStep - Function description,
- */};
+ */},
   const removeSkill = (skill: string) => {
-    setSkills(skills.filter(s => s !== skill))};
+    setSkills(skills.filter(s => s !== skill))},
   return (
     <div className="space-y-4">,
       <h2 className="text-lg font-medium">Job Requirements</h2>,
@@ -456,15 +456,15 @@ function DetailsStep() {
                 className="ml-1 rounded-full hover:bg-background/20 p-1",
 function RequirementsStep() {
   const [skills, setSkills] = useState<string[]>([
-    "React", "TypeScript", "Node.js"]);
-  const [newSkill, setNewSkill] = useState("");
+    "React", "TypeScript", "Node.js"]),
+  const [newSkill, setNewSkill] = useState(""),
   const addSkill = () => {
     if (newSkill && !skills.includes(newSkill)) {
-      setSkills([...skills, newSkill]);
+      setSkills([...skills, newSkill]),
       setNewSkill("")}
-};
+},
   const removeSkill = (skill: string) => {
-    setSkills(skills && skills.filter(s => s !== skill))};
+    setSkills(skills && skills.filter(s => s !== skill))},
   return (
     <div className="space-y-4">,
       <h2 className="text-lg font-medium">Job Requirements</h2>,

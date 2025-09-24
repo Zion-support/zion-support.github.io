@@ -12,20 +12,20 @@ import {CommunityUser, ForumPost, Badge, as, BadgeType} from "@/types/community"
 import PostCard from "@/components/community/PostCard",
 import UserBadges from "@/components/community/UserBadges",
 import ReputationDisplay from "@/components/community/ReputationDisplay",
-import { useState, useEffect } from "react";
-import { useParams, Link } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { formatDistanceToNow } from "date-fns";
-import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community";
-import PostCard from "@/components/community/PostCard";
-import UserBadges from "@/components/community/UserBadges";
-import ReputationDisplay from "@/components/community/ReputationDisplay";
+import { useState, useEffect } from "react",
+import { useParams, Link } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
+import { Badge } from "@/components/ui/badge",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { formatDistanceToNow } from "date-fns",
+import { CommunityUser, ForumPost, Badge as BadgeType } from "@/types/community",
+import PostCard from "@/components/community/PostCard",
+import UserBadges from "@/components/community/UserBadges",
+import ReputationDisplay from "@/components/community/ReputationDisplay",
 // Mock user data,
 const mockUser: CommunityUser = {
   id: "user1",
@@ -42,14 +42,14 @@ const mockUser: CommunityUser = {
       description: "Provided 10 accepted answers",
       icon: "Award",
       color: "#10B981"}
-    };
+    },
     {
       id: "badge2",
       name: "Top Contributor",
       description: "Among the top 5% of contributors",
       icon: "Trophy",
       color: "#F59E0B"}
-    };
+    },
     {
       id: "badge3",
       name: "First Post",
@@ -57,27 +57,27 @@ const mockUser: CommunityUser = {
       icon: "Star",
       color: "#6366F1"}
 ],
-  is_verified: true;
+  is_verified: true,
   is_moderator: false}
 ,
 // Mock posts by this user,
 const user_posts: ForumPost[] = [
   {
-    id: "1";
-    title: "Best practices for AI model fine - tuning";
-    content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...";
-    author_id: "user1";
-    author_name: "Alex Johnson";
-    author_avatar: "https://i.pravatar.cc / 150?img = 3";
-    author_role: "Verified Talent";
-    category_id: "ai - tools";
+    id: "1",
+    title: "Best practices for AI model fine - tuning",
+    content: "I've been working on fine - tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+    author_id: "user1",
+    author_name: "Alex Johnson",
+    author_avatar: "https://i.pravatar.cc / 150?img = 3",
+    author_role: "Verified Talent",
+    category_id: "ai - tools",
     tags: ["machine - learning", "fine - tuning", "gpt"],
-    created_at: "2025 - 04 - 01T12:00:00Z";
-    updated_at: "2025 - 04 - 01T12:00:00Z";
-    upvotes: 48;
-    downvotes: 2;
-    reply_count: 12;
-    is_answered: true;
+    created_at: "2025 - 04 - 01T12:00:00Z",
+    updated_at: "2025 - 04 - 01T12:00:00Z",
+    upvotes: 48,
+    downvotes: 2,
+    reply_count: 12,
+    is_answered: true,
     is_featured: true}
   {
     id: "11",
@@ -114,9 +114,9 @@ export default function CommunityProfilePage() {
   const { userId } = useParams(),
   const [user, setUser] = useState<CommunityUser | null>(null),
   const [isLoading, setIsLoading] = useState(true),
-  const [posts, setPosts] = useState<ForumPost[]>([])];
-  isVerified: true;
-  isModerator: false};
+  const [posts, setPosts] = useState<ForumPost[]>([])],
+  isVerified: true,
+  isModerator: false},
 // Mock posts by this user,
 const userPosts: ForumPost[] = [
   {
@@ -134,23 +134,23 @@ const userPosts: ForumPost[] = [
     upvotes: 24,
     downvotes: 0,
     replyCount: 6}
-];
+],
 export default function CommunityProfilePage() {
   const { userId } = useParams(),
   const [user, setUser] = useState<CommunityUser | null>(null),
   const [isLoading, setIsLoading] = useState(true),
   const [posts, setPosts] = useState<ForumPost[]>([]),
 export default function CommunityProfilePage() {
-  const { userId } = useParams();
-  const [user, setUser] = useState<CommunityUser | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [posts, setPosts] = useState<ForumPost[]>([]);
+  const { userId } = useParams(),
+  const [user, setUser] = useState<CommunityUser | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [posts, setPosts] = useState<ForumPost[]>([]),
   useEffect(() => {
     // In a real app, we would fetch the user data here,
     // For now, we'll just use the mock data,
-    setUser(mockUser);
-    setPosts(userPosts);
-    setIsLoading(false)}, [userId])}, [userId]);
+    setUser(mockUser),
+    setPosts(userPosts),
+    setIsLoading(false)}, [userId])}, [userId]),
   if (isLoading) {
     return (
       <AppLayout>,
@@ -176,83 +176,83 @@ export default function CommunityProfilePage() {
       <SEO
 // Mock user data,
 const mockUser: CommunityUser = {
-  id: "user1";
-  name: "Alex Johnson";
-  avatar: "https://i && i.pravatar.cc/150?img=3";
-  role: "Verified Talent";
-  reputation: 325;
-  postCount: 14;
-  replyCount: 47;
+  id: "user1",
+  name: "Alex Johnson",
+  avatar: "https://i && i.pravatar.cc/150?img=3",
+  role: "Verified Talent",
+  reputation: 325,
+  postCount: 14,
+  replyCount: 47,
   badges: [
     {
-      id: "badge1";
-      name: "Answer Hero";
-      description: "Provided 10 accepted answers";
-      icon: "Award";
-      color: "#10B981"};
+      id: "badge1",
+      name: "Answer Hero",
+      description: "Provided 10 accepted answers",
+      icon: "Award",
+      color: "#10B981"},
     {
-      id: "badge2";
-      name: "Top Contributor";
-      description: "Among the top 5% of contributors";
-      icon: "Trophy";
-      color: "#F59E0B"};
+      id: "badge2",
+      name: "Top Contributor",
+      description: "Among the top 5% of contributors",
+      icon: "Trophy",
+      color: "#F59E0B"},
     {
-      id: "badge3";
-      name: "First Post";
-      description: "Created your first forum post";
-      icon: "Star";
+      id: "badge3",
+      name: "First Post",
+      description: "Created your first forum post",
+      icon: "Star",
       color: "#6366F1"}
   ],
-  isVerified: true;
-  isModerator: false};
+  isVerified: true,
+  isModerator: false},
 // Mock posts by this user,
 const userPosts: ForumPost[] = [
   {
-    id: "1";
-    title: "Best practices for AI model fine-tuning";
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...";
-    authorId: "user1";
-    authorName: "Alex Johnson";
-    authorAvatar: "https://i && i.pravatar.cc/150?img=3";
-    authorRole: "Verified Talent";
-    categoryId: "ai-tools";
+    id: "1",
+    title: "Best practices for AI model fine-tuning",
+    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+    authorId: "user1",
+    authorName: "Alex Johnson",
+    authorAvatar: "https://i && i.pravatar.cc/150?img=3",
+    authorRole: "Verified Talent",
+    categoryId: "ai-tools",
     tags: ["machine-learning", "fine-tuning", "gpt"],
-    createdAt: "2025-04-01T12:00:00Z";
-    updatedAt: "2025-04-01T12:00:00Z";
-    upvotes: 48;
-    downvotes: 2;
-    replyCount: 12;
-    isAnswered: true;
-    isFeatured: true};
+    createdAt: "2025-04-01T12:00:00Z",
+    updatedAt: "2025-04-01T12:00:00Z",
+    upvotes: 48,
+    downvotes: 2,
+    replyCount: 12,
+    isAnswered: true,
+    isFeatured: true},
   {
-    id: "11";
-    title: "How to structure an AI prompt for best results";
+    id: "11",
+    title: "How to structure an AI prompt for best results",
     content: "After experimenting with different prompt formats, I've found these patterns to work consistently better...",
-    authorId: "user1";
-    authorName: "Alex Johnson";
-    authorAvatar: "https://i && i.pravatar.cc/150?img=3";
-    authorRole: "Verified Talent";
-    categoryId: "ai-tools";
+    authorId: "user1",
+    authorName: "Alex Johnson",
+    authorAvatar: "https://i && i.pravatar.cc/150?img=3",
+    authorRole: "Verified Talent",
+    categoryId: "ai-tools",
     tags: ["prompts", "techniques", "optimization"],
-    createdAt: "2025-03-20T14:25:00Z";
-    updatedAt: "2025-03-20T14:25:00Z";
-    upvotes: 36;
-    downvotes: 1;
-    replyCount: 8};
+    createdAt: "2025-03-20T14:25:00Z",
+    updatedAt: "2025-03-20T14:25:00Z",
+    upvotes: 36,
+    downvotes: 1,
+    replyCount: 8},
   {
-    id: "12";
-    title: "Setting up effective monitoring for AI systems";
-    content: "Here's my approach to monitoring AI systems in production environments...";
-    authorId: "user1";
-    authorName: "Alex Johnson";
-    authorAvatar: "https://i && i.pravatar.cc/150?img=3";
-    authorRole: "Verified Talent";
-    categoryId: "project-help";
+    id: "12",
+    title: "Setting up effective monitoring for AI systems",
+    content: "Here's my approach to monitoring AI systems in production environments...",
+    authorId: "user1",
+    authorName: "Alex Johnson",
+    authorAvatar: "https://i && i.pravatar.cc/150?img=3",
+    authorRole: "Verified Talent",
+    categoryId: "project-help",
     tags: ["monitoring", "production", "devops"],
-    createdAt: "2025-03-12T09:30:00Z";
-    updatedAt: "2025-03-12T09:30:00Z";
-    upvotes: 24;
-    downvotes: 0;
+    createdAt: "2025-03-12T09:30:00Z",
+    updatedAt: "2025-03-12T09:30:00Z",
+    upvotes: 24,
+    downvotes: 0,
     replyCount: 6}
 ],
 export default function CommunityProfilePage() {
@@ -559,31 +559,31 @@ export default function CommunityProfilePage() {
                         </div>,
                         <div>,
                           <p>Answer was accepted in <Link to="/community/post/15" className="text-zion-purple hover: underline">How to optimize RAG systems for better results</Link></p>,
-    author_id: "user1";
-    author_name: "Alex Johnson";
-    author_avatar: "https://i.pravatar.cc / 150?img = 3";
-    author_role: "Verified Talent";
-    category_id: "ai - tools";
+    author_id: "user1",
+    author_name: "Alex Johnson",
+    author_avatar: "https://i.pravatar.cc / 150?img = 3",
+    author_role: "Verified Talent",
+    category_id: "ai - tools",
     tags: ["prompts", "techniques", "optimization"],
-    created_at: "2025 - 03 - 20T14:25:00Z";
-    updated_at: "2025 - 03 - 20T14:25:00Z";
-    upvotes: 36;
-    downvotes: 1;
+    created_at: "2025 - 03 - 20T14:25:00Z",
+    updated_at: "2025 - 03 - 20T14:25:00Z",
+    upvotes: 36,
+    downvotes: 1,
     reply_count: 8}
   {
-    id: "12";
-    title: "Setting up effective monitoring for AI systems";
-    content: "Here's my approach to monitoring AI systems in production environments...";
-    author_id: "user1";
-    author_name: "Alex Johnson";
-    author_avatar: "https://i.pravatar.cc / 150?img = 3";
-    author_role: "Verified Talent";
-    category_id: "project - help";
+    id: "12",
+    title: "Setting up effective monitoring for AI systems",
+    content: "Here's my approach to monitoring AI systems in production environments...",
+    author_id: "user1",
+    author_name: "Alex Johnson",
+    author_avatar: "https://i.pravatar.cc / 150?img = 3",
+    author_role: "Verified Talent",
+    category_id: "project - help",
     tags: ["monitoring", "production", "devops"],
-    created_at: "2025 - 03 - 12T09:30:00Z";
-    updated_at: "2025 - 03 - 12T09:30:00Z";
-    upvotes: 24;
-    downvotes: 0;
+    created_at: "2025 - 03 - 12T09:30:00Z",
+    updated_at: "2025 - 03 - 12T09:30:00Z",
+    upvotes: 24,
+    downvotes: 0,
     reply_count: 6}
 ],
 export default /**,

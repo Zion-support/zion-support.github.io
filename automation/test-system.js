@@ -9,14 +9,14 @@ class  {
     try {
       const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -37,9 +37,9 @@ const SecurityScanner = require('./tasks/SecurityScanner'),
 const CodeQualityEnforcer = require('./tasks/CodeQualityEnforcer'),
 const StaleCleaner = require('./tasks/StaleCleaner'),
   const results ={
-    passed: 0;
-    failed: 0;
-    tests: []};
+    passed: 0,
+    failed: 0,
+    tests: []},
   try {
     // Test 1: Core Components Instantiation,
     logger.info('\n1️⃣ Testing core components instantiation...'),
@@ -53,8 +53,8 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     results.tests.push({ name: 'TaskScheduler', status: 'PASS' }),
     results.passed++,
     const automationManager = new AutonomousAutomationManager({
-      notificationManager;
-      anomalyDetector;
+      notificationManager,
+      anomalyDetector,
       taskScheduler}),
     results.tests.push({ name: 'AutonomousAutomationManager', status: 'PASS' }),
     results.passed++,
@@ -107,7 +107,7 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     logger.info('\n5️⃣ Testing notification system...'),
     try {
       await notificationManager.sendNotification(
-        Test notification from automation system';
+        Test notification from automation system',
         { priority: 'medium', category: 'info', taskName: 'test' }
       ),
       results.tests.push({ name: Notification System', status: 'PASS' }),
@@ -121,11 +121,11 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     logger.info('\n6️⃣ Testing report generation...'),
     try {
       const reportData ={
-        tasks: {};
-        anomalies: [];
-        notifications: [];
+        tasks: {},
+        anomalies: [],
+        notifications: [],
         systemMetrics: { cpuLoad: 0.5, memoryUsage: 0.6 }
-      };
+      },
       const report = await reportGenerator.generateReport('daily', reportData),
       if (report && report.content) {
         results.tests.push({ name: Report Generation', status: 'PASS' }),
@@ -143,17 +143,17 @@ const StaleCleaner = require('./tasks/StaleCleaner'),
     logger.info('\n7️⃣ Testing orchestrator integration...'),
     try {
       const config ={
-        autonomous: { enabled: true, selfHealing: true };
-        monitoring: { enabled: false };
-        reporting: { enabled: false };
-        dashboard: { enabled: false };
+        autonomous: { enabled: true, selfHealing: true },
+        monitoring: { enabled: false },
+        reporting: { enabled: false },
+        dashboard: { enabled: false },
         tasks: {
-          dependencyUpdater: { enabled: false };
-          securityScanner: { enabled: false };
-          codeQualityEnforcer: { enabled: false };
+          dependencyUpdater: { enabled: false },
+          securityScanner: { enabled: false },
+          codeQualityEnforcer: { enabled: false },
           staleCleaner: { enabled: false }
         }
-      };
+      },
       const orchestrator = new IntelligentAutomationOrchestrator(config),
       await orchestrator.initialize(),
       results.tests.push({ name: Orchestrator Integration', status: 'PASS' }),
@@ -213,7 +213,7 @@ if (require.main === module) {
     logger.error('❌ Test suite failed:', error),
     process.exit(1)})}
 ,
-module.exports ={ testComponents };
+module.exports ={ testComponents },
 // Graceful shutdown handling,
 process.on('SIGINT', () => {
   // // console.log('\n🛑 Received SIGINT, shutting down gracefully...'),

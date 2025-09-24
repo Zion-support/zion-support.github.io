@@ -35,7 +35,7 @@ export default function Page() {
           </p>,
           <h2>Overview</h2>,
           <p>,
-            Focus: techcrunch, pebble, newsroomupdated, automatically, multiple;
+            Focus: techcrunch, pebble, newsroomupdated, automatically, multiple,
             sources.,
           </p>,
           <h2>Steps</h2>,

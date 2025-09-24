@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'email-marketing-automation - Zion Tech Group';
+  title: 'email-marketing-automation - Zion Tech Group',
   description:,
-    'Professional email-marketing-automation solutions for your business needs.';
-  keywords: 'email-marketing-automation, services, business, technology';
-};
+    'Professional email-marketing-automation solutions for your business needs.',
+  keywords: 'email-marketing-automation, services, business, technology',
+},
 export default function EmailMarketingAutomationPage() {
   return (
     <div className='min-h-screen bg-white'>,

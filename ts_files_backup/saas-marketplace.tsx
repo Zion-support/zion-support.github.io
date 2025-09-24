@@ -1,5 +1,5 @@
 "use client",
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
@@ -13,175 +13,151 @@ import {
   TrendingUp,
   Code,
   Database,
-  Cloud;
-  ArrowRight;
-  Star;
-  Check;
+  Cloud,
+  ArrowRight,
+  Star,
+  Check,
   ExternalLink} from 'lucide-react',
 export default function SaaSMarketplacePage() {
   const microSaasServices = [
     {
-      name: 'Zapier';
-      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.';
-      category: 'Automation';
-      pricing: 'Free - $19.99/month';
-      rating: 4.8;
-      users: '2M+';
-      icon: <Zap className="w-8 h-8 text-orange-400" />;
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
+      name: 'Zapier',
+      description: 'Automate workflows between 5000+ apps with no code required. Connect your favorite tools and automate repetitive tasks.',
+      category: 'Automation',
+      pricing: 'Free - $19.99/month',
+      rating: 4.8,
+      users: '2M+',
+      icon: <Zap className="w-8 h-8 text-orange-400" />,
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
       features: [
-        '5000+ app integrations';
-        'Visual workflow builder';
-        'Multi-step automations';
-        'Scheduled triggers';
-        'Error handling';
-        'Team collaboration'];
-      website: 'https://zapier.com';
-      useCase: 'Perfect for businesses looking to automate customer supportmarketingand sales processes.';
-      pros: ['Easy to 'use', 'Extensive 'integrations', 'Reliable'Great support'];
-      cons: ['Can get 'expensive', 'Limited customization']};
+        '5000+ app integrationsVisual workflow builder',
+        'Multi-step automationsScheduled triggers',
+        'Error handlingTeam collaboration'],
+      website: 'https://zapier.com',
+      useCase: 'Perfect for businesses looking to automate customer supportmarketingand sales processes.',
+      pros: ['Easy to 'useExtensive 'integrations', 'Reliable'Great support'],
+      cons: ['Can get 'expensiveLimited customization']},
     {
-      name: 'Notion';
-      description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.';
-      category: 'Productivity';
-      pricing: 'Free - $8/month';
-      rating: 4.7;
-      users: '20M+';
-      icon: <Code className="w-8 h-8 text-gray-400" />;
-      color: 'bg-gradient-to-br from-gray-500 to-gray-700';
+      name: 'Notion',
+      description: 'All-in-one workspace for notesdocsprojectsand team collaboration. Organize everything in one place.',
+      category: 'Productivity',
+      pricing: 'Free - $8/month',
+      rating: 4.7,
+      users: '20M+',
+      icon: <Code className="w-8 h-8 text-gray-400" />,
+      color: 'bg-gradient-to-br from-gray-500 to-gray-700',
       features: [
-        'Note-taking & docs';
-        'Project management';
-        'Team collaboration';
-        'Database & tables';
-        'Templates library';
-        'API integration'];
-      website: 'https://notion.so';
-      useCase: 'Ideal for teams that need a flexible workspace for documentationproject managementand knowledge sharing.';
-      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'];
-      cons: ['Learning 'curve', 'Limited offline access']};
+        'Note-taking & docsProject management',
+        'Team collaborationDatabase & tables',
+        'Templates libraryAPI integration'],
+      website: 'https://notion.so',
+      useCase: 'Ideal for teams that need a flexible workspace for documentationproject managementand knowledge sharing.',
+      pros: ['Highly 'flexibleBeautiful 'interface', 'Great 'templatesFree tier'],
+      cons: ['Learning 'curveLimited offline access']},
     {
-      name: 'Stripe';
-      description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.';
-      category: 'Payments';
-      pricing: '2.9% + 30¢ per transaction';
-      rating: 4.9;
-      users: '1M+';
-      icon: <Shield className="w-8 h-8 text-blue-400" />;
-      color: 'bg-gradient-to-br from-blue-500 to-indigo-600';
+      name: 'Stripe',
+      description: 'Complete payment processing platform for online businesses. Accept paymentsmanage subscriptionsand handle compliance.',
+      category: 'Payments',
+      pricing: '2.9% + 30¢ per transaction',
+      rating: 4.9,
+      users: '1M+',
+      icon: <Shield className="w-8 h-8 text-blue-400" />,
+      color: 'bg-gradient-to-br from-blue-500 to-indigo-600',
       features: [
-        'Global payment methods';
-        'Subscription billing';
-        'Fraud protection';
-        'Compliance tools';
-        'Developer-friendly API';
-        'Analytics dashboard'];
-      website: 'https://stripe.com';
-      useCase: 'Essential for any online business that needs to accept paymentsespecially SaaS companies and e-commerce.';
-      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'];
-      cons: ['Higher fees than some 'alternatives', 'Complex for beginners']};
+        'Global payment methodsSubscription billing',
+        'Fraud protectionCompliance tools',
+        'Developer-friendly APIAnalytics dashboard'],
+      website: 'https://stripe.com',
+      useCase: 'Essential for any online business that needs to accept paymentsespecially SaaS companies and e-commerce.',
+      pros: ['Developer-'friendlyGlobal 'reach', 'Excellent 'docsReliable'],
+      cons: ['Higher fees than some 'alternativesComplex for beginners']},
     {
-      name: 'Intercom';
-      description: 'Customer messaging platform that helps businesses build better customer relationships through personalizedmessenger-based experiences.';
-      category: 'Customer Support';
-      pricing: '$39 - $999/month';
-      rating: 4.6;
-      users: '25K+';
-      icon: <Users className="w-8 h-8 text-green-400" />;
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
+      name: 'Intercom',
+      description: 'Customer messaging platform that helps businesses build better customer relationships through personalizedmessenger-based experiences.',
+      category: 'Customer Support',
+      pricing: '$39 - $999/month',
+      rating: 4.6,
+      users: '25K+',
+      icon: <Users className="w-8 h-8 text-green-400" />,
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
       features: [
-        'Live chat';
-        'Customer messaging';
-        'Help desk';
-        'User onboarding';
-        'Analytics & reporting';
-        'Integration ecosystem'];
-      website: 'https://intercom.com';
-      useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.';
-      pros: ['Great 'UX', 'Powerful 'features', 'Good 'integrations', 'Mobile apps'];
-      cons: [', 'Expensive', 'Complex 'pricing', 'Can be overwhelming']};
+        'Live chatCustomer messaging',
+        'Help deskUser onboarding',
+        'Analytics & reportingIntegration ecosystem'],
+      website: 'https://intercom.com',
+      useCase: 'Perfect for SaaS companies and online businesses that want to provide excellent customer support and user engagement.',
+      pros: ['Great 'UXPowerful 'features', 'Good 'integrationsMobile apps'],
+      cons: [', 'ExpensiveComplex 'pricing', 'Can be overwhelming']},
     {
-      name: 'Mixpanel';
-      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.';
-      category: 'Analytics';
-      pricing: 'Free - $25/month';
-      rating: 4.5;
-      users: '26K+';
-      icon: <BarChart3 className="w-8 h-8 text-purple-400" />;
-      color: 'bg-gradient-to-br from-purple-500 to-pink-600';
+      name: 'Mixpanel',
+      description: 'Product analytics platform that helps you understand how users interact with your product and make data-driven decisions.',
+      category: 'Analytics',
+      pricing: 'Free - $25/month',
+      rating: 4.5,
+      users: '26K+',
+      icon: <BarChart3 className="w-8 h-8 text-purple-400" />,
+      color: 'bg-gradient-to-br from-purple-500 to-pink-600',
       features: [
-        'User behavior tracking';
-        'Funnel analysis';
-        'A/B testing';
-        'Real-time data';
-        'Custom events';
-        'Mobile analytics'];
-      website: 'https://mixpanel.com';
-      useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.';
-      pros: ['Powerful 'analytics', 'Real-time 'data', 'Good 'documentation', 'Flexible'];
-      cons: ['Complex 'setup', 'Expensive at 'scale', 'Steep learning curve']};
+        'User behavior trackingFunnel analysis',
+        'A/B testingReal-time data',
+        'Custom eventsMobile analytics'],
+      website: 'https://mixpanel.com',
+      useCase: 'Essential for product teams that need to understand user behavioroptimize conversion funnelsand make data-driven decisions.',
+      pros: ['Powerful 'analyticsReal-time 'data', 'Good 'documentationFlexible'],
+      cons: ['Complex 'setupExpensive at 'scale', 'Steep learning curve']},
     {
-      name: 'MongoDB Atlas';
-      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.';
-      category: 'Database';
-      pricing: 'Free - $57/month';
-      rating: 4.7;
-      users: '35K+';
-      icon: <Database className="w-8 h-8 text-green-400" />;
-      color: 'bg-gradient-to-br from-green-500 to-teal-600';
+      name: 'MongoDB Atlas',
+      description: 'Fully managed cloud database service that offers the best of MongoDB with zero operational overhead.',
+      category: 'Database',
+      pricing: 'Free - $57/month',
+      rating: 4.7,
+      users: '35K+',
+      icon: <Database className="w-8 h-8 text-green-400" />,
+      color: 'bg-gradient-to-br from-green-500 to-teal-600',
       features: [
-        'Fully managed MongoDB';
-        'Global clusters';
-        'Auto-scaling';
-        'Backup & recovery';
-        'Security & compliance';
-        'Monitoring & alerting'];
-      website: 'https://mongodb.com/atlas';
-      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructurespecially for modern web applications.';
-      pros: ['Fully 'managed', 'Global 'distribution', 'Auto-'scaling', 'Good free tier'];
-      cons: ['Can be 'expensive', 'Vendor lock-'in', 'Limited customization']};
+        'Fully managed MongoDBGlobal clusters',
+        'Auto-scalingBackup & recovery',
+        'Security & complianceMonitoring & alerting'],
+      website: 'https://mongodb.com/atlas',
+      useCase: 'Perfect for developers who want to use MongoDB without managing infrastructurespecially for modern web applications.',
+      pros: ['Fully 'managedGlobal 'distribution', 'Auto-'scalingGood free tier'],
+      cons: ['Can be 'expensiveVendor lock-'in', 'Limited customization']},
     {
-      name: 'Vercel';
-      description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.';
-      category: 'Hosting';
-      pricing: 'Free - $20/month';
-      rating: 4.8;
-      users: '100K+';
-      icon: <Cloud className="w-8 h-8 text-black" />;
-      color: 'bg-gradient-to-br from-gray-800 to-black';
+      name: 'Vercel',
+      description: 'Platform for deploying and hosting frontend applications with automatic scalinglobal CDNand zero configuration.',
+      category: 'Hosting',
+      pricing: 'Free - $20/month',
+      rating: 4.8,
+      users: '100K+',
+      icon: <Cloud className="w-8 h-8 text-black" />,
+      color: 'bg-gradient-to-br from-gray-800 to-black',
       features: [
-        'Zero-config deployment';
-        'Global CDN';
-        'Automatic scaling';
-        'Git integration';
-        'Preview deployments';
-        'Edge functions'];
-      website: 'https://vercel.com';
-      useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent window.window.performance.';
-      pros: ['Zero 'config', 'Excellent 'performance', 'Great 'DX', 'Free tier'];
-      cons: ['Limited backend 'features', 'Can be expensive for high traffic']};
+        'Zero-config deploymentGlobal CDN',
+        'Automatic scalingGit integration',
+        'Preview deploymentsEdge functions'],
+      website: 'https://vercel.com',
+      useCase: 'Ideal for frontend developers and teams that want to deploy modern web applications quickly with excellent window.window.performance.',
+      pros: ['Zero 'configExcellent 'performance', 'Great 'DXFree tier'],
+      cons: ['Limited backend 'featuresCan be expensive for high traffic']},
     {
-      name: 'Linear';
-      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.';
-      category: 'Project Management';
-      pricing: 'Free - $8/month';
-      rating: 4.9;
-      users: '10K+';
-      icon: <TrendingUp className="w-8 h-8 text-blue-400" />;
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
+      name: 'Linear',
+      description: 'Issue tracking tool built for high-performance teams. Streamline your workflows and ship better products faster.',
+      category: 'Project Management',
+      pricing: 'Free - $8/month',
+      rating: 4.9,
+      users: '10K+',
+      icon: <TrendingUp className="w-8 h-8 text-blue-400" />,
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
       features: [
-        'Issue tracking';
-        'Roadmap planning';
-        'Team collaboration';
-        'Git integration';
-        'Automated workflows';
-        'Mobile apps'];
-      website: 'https://linear.app';
-      useCase: 'Perfect for software development teams that need a fastintuitive issue tracking and project management tool.';
-      pros: ['Lightning 'fast', 'Beautiful 'design', 'Great keyboard 'shortcuts', 'Git integration'];
-      cons: ['Limited 'reporting', 'No time 'tracking', 'Smaller ecosystem']}
+        'Issue trackingRoadmap planning',
+        'Team collaborationGit integration',
+        'Automated workflowsMobile apps'],
+      website: 'https://linear.app',
+      useCase: 'Perfect for software development teams that need a fastintuitive issue tracking and project management tool.',
+      pros: ['Lightning 'fastBeautiful 'design', 'Great keyboard 'shortcutsGit integration'],
+      cons: ['Limited 'reportingNo time 'tracking', 'Smaller ecosystem']}
   ],
-  const categories = [', 'All', 'Automation', 'Productivity', 'Payments'Customer 'Support', 'Analytics', 'Database', 'Hosting'Project Management'],
+  const categories = [All', 'AutomationProductivity', 'Payments'Customer 'SupportAnalytics', 'DatabaseHosting'Project Management'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
   const filteredServices = selectedCategory === 'All',
     ? microSaasServices,

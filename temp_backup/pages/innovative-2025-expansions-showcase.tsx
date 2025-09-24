@@ -12,25 +12,19 @@ function toSlug(value: string) {
     .replace(/(^-|-$)/g, '')}
 ,
 const categories = [
-  'AI & Data';
-  'Developer Tools';
-  'Cloud & FinOps';
-  'Observability';
-  'Quality & Monitoring';
-  'Cybersecurity';
-  'Supply Chain';
-  'Financial Services';
-  'Healthcare';
-  'Manufacturing';
-  'Retail';
-  'Energy';
-  'IT Services';
+  'AI & DataDeveloper Tools',
+  'Cloud & FinOpsObservability',
+  'Quality & MonitoringCybersecurity',
+  'Supply ChainFinancial Services',
+  'HealthcareManufacturing',
+  'RetailEnergy',
+  'IT Services',
 ],
 export default function Innovative20o25ExpansionsShowcase() {
   const allServices = [
-    ...innovativeMicroSaasServices;
-    ...innovativeITServices;
-    ...innovativeAIServices;
+    ...innovativeMicroSaasServices,
+    ...innovativeITServices,
+    ...innovativeAIServices,
   ],
   // Group services by category,
   const servicesByCategory = categories.reduce(
@@ -41,7 +35,7 @@ export default function Innovative20o25ExpansionsShowcase() {
           service.category,
             .toLowerCase(),
             .includes(category.toLowerCase().replace(/\s+/g, ''))),
-      return acc};
+      return acc},
     {} as Record<string any[]>),
   // Get featured services (marked as popular),
   const featuredServices = allServices,
@@ -60,13 +54,10 @@ export default function Innovative20o25ExpansionsShowcase() {
         title='Innovative 20o25 Services & Solutions - Zion Tech Group',
         description='Discover our cutting-edge innovative services including AI-powered solutions, enterprise IT services, and revolutionary micro SAAS platforms designed for 20o25 and beyond.',
         keywords={[
-          'AI services';
-          'IT services';
-          'micro SAAS';
-          'enterprise solutions';
-          'innovation 20o25';
-          'digital transformation';
-          'automation';
+          'AI servicesIT services',
+          'micro SAASenterprise solutions',
+          'innovation 20o25digital transformation',
+          'automation',
         ]}
       />,
       <UltraFuturisticBackground>,

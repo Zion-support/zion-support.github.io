@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'team-collaboration-hub - Zion Tech Group';
+  title: 'team-collaboration-hub - Zion Tech Group',
   description:,
-    'Professional team-collaboration-hub solutions for your business needs.';
-  keywords: 'team-collaboration-hub, services, business, technology';
-};
+    'Professional team-collaboration-hub solutions for your business needs.',
+  keywords: 'team-collaboration-hub, services, business, technology',
+},
 export default function TeamCollaborationHubPage() {
   return (
     <div className='min-h-screen bg-white'>,

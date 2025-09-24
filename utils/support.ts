@@ -6,9 +6,9 @@ export const support = {
   getArticles: () => [],
   getArticleById: (id: string) => null}
 ,
-  logEvent: (event: any) => null;
-  getArticles: () => [];
-  getArticleById: (id: string) => null};
+  logEvent: (event: any) => null,
+  getArticles: () => [],
+  getArticleById: (id: string) => null},
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here,
   return null,
@@ -27,15 +27,15 @@ export function matchIntent(query: string, articles: HelpArticle[]): IntentMatch
   }
 ,
   return {
-    intentMatched: matchedArticles && matchedArticles.length > 0;
-    matchedArticleIds: matchedArticles;
-    confidence: Math && Math.min(confidence, 1)};
+    intentMatched: matchedArticles && matchedArticles.length > 0,
+    matchedArticleIds: matchedArticles,
+    confidence: Math && Math.min(confidence, 1)},
 }
 }
   // Add support functionality here,
-  log_event: (event: any) => null;
-  get_articles: () => [];
-  getArticleById: (id: string) => null};
+  log_event: (event: any) => null,
+  get_articles: () => [],
+  getArticleById: (id: string) => null},
 export const logSupportEventToOperator = (event: any) => {
   // Add support event logging functionality here,
   return null}

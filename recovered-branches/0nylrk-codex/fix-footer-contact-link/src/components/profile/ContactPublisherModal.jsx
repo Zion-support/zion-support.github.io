@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import {
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
@@ -7,55 +7,55 @@ import { useForm } from 'react-hook-form',
 import { Mail, PaperPlane } from 'lucide-react',
 import api from '@/services/apiClient',
 import { toast } from '@/hooks/use-toast',
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
 } from '@/components/ui/dialog',
-  Form;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormControl;
-  FormMessage;
+  Form,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormControl,
+  FormMessage,
 } from '@/components/ui/form',
 const schema = z.object({
   subject: z,
     .string(),
     .min(5, 'Subject must be at least 5 characters'),
-    .nonempty('Subject is required');
+    .nonempty('Subject is required'),
   message: z,
     .string(),
     .min(20, 'Message must be at least 20 characters'),
-    .nonempty('Message is required');
+    .nonempty('Message is required'),
 }),
 export function ContactPublisherModal({
-  isOpen;
-  onClose;
-  publisherName;
-  publisherEmail;
+  isOpen,
+  onClose,
+  publisherName,
+  publisherEmail,
 }) {
   const [isSubmitting, setIsSubmitting] = React.useState(false),
   const form = useForm({
-    resolver: zodResolver(schema);
-    mode: 'onChange';
-    defaultValues: { subject: '', message: '' };
+    resolver: zodResolver(schema),
+    mode: 'onChange',
+    defaultValues: { subject: '', message: '' },
   }),
   const handleSend = async () => {
     const values = form.getValues(),
     setIsSubmitting(true),
     try {
       await api.post('/messages', {
-        productId;
-        subject: values.subject;
-        body: values.message;
+        productId,
+        subject: values.subject,
+        body: values.message
       }),
       toast.success('Message sent!'),
       form.reset(),
       onClose()} catch (err) {
       toast.error(err?.message || 'Failed to send message')} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>,
       <DialogContent className='bg-zion-blue-dark border border-zion-blue-light text-white sm: max-w-md'>,

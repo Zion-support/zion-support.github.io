@@ -19,9 +19,9 @@ interface MobileConversationListProps {
   onSelectConversation: (id: string) => void}
 ,
 export function MobileConversationList({
-  conversations;
-  activeConversation;
-  onSelectConversation;
+  conversations,
+  activeConversation,
+  onSelectConversation,
 }: MobileConversationListProps) {
   return (
     <div className='space-y-4'>,
@@ -52,7 +52,7 @@ export function MobileConversationList({
           <div
             key={conversation.id}
             className={cn(
-              'px-4';
+              'px-4',
               activeConversation === conversation.id && 'bg-primary/5')}
             onClick={() => onSelectConversation(conversation.id)}
           >,

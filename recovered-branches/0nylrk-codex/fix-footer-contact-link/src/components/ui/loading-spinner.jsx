@@ -1,29 +1,29 @@
 import { motion } from 'framer-motion',
 import { cn } from '@/lib/utils',
 export function LoadingSpinner({
-  size = 'md';
-  variant = 'default';
-  className = '';
-  text;
+  size = 'md',
+  variant = 'default',
+  className = '',
+  text,
 }) {
   const sizeClasses = {
-    sm: 'w-4 h-4';
-    md: 'w-6 h-6';
-    lg: 'w-8 h-8';
-    xl: 'w-12 h-12';
-  };
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  },
   const variantClasses = {
-    default: 'text-zion-cyan';
-    primary: 'text-zion-blue';
-    secondary: 'text-zion-purple';
-    white: 'text-white';
-  };
+    default: 'text-zion-cyan',
+    primary: 'text-zion-blue',
+    secondary: 'text-zion-purple',
+    white: 'text-white'
+  },
   return (
     <div className={cn('flex flex-col items-center gap-3', className)}>,
       <motion.div,
         className={cn(
-          'animate-spin rounded-full border-2 border-current border-t-transparent';
-          sizeClasses[size];
+          'animate-spin rounded-full border-2 border-current border-t-transparent',
+          sizeClasses[size],
           variantClasses[variant])}
         role='status',
         aria-label='Loading'>,

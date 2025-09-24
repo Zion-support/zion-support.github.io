@@ -2,9 +2,9 @@ import { useState, useMemo } from 'react',
 import { ProductListing } from '@/types/listings',
 import { SearchSuggestion, FilterOptions } from '@/types/search',
 import {
-  generateSearchSuggestions;
-  generateFilterOptions;
-  MARKETPLACE_LISTINGS;
+  generateSearchSuggestions,
+  generateFilterOptions,
+  MARKETPLACE_LISTINGS,
 } from '@/data/marketplaceData',
 export function useMarketplaceSearch() {
   // Search state,
@@ -18,10 +18,10 @@ export function useMarketplaceSearch() {
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
   // Generate search suggestions and filter options,
   const searchSuggestions: SearchSuggestion[] = useMemo(
-    () => generateSearchSuggestions();
+    () => generateSearchSuggestions(),
     []),
   const filterOptions: FilterOptions = useMemo(
-    () => generateFilterOptions();
+    () => generateFilterOptions(),
     []),
   // Filter listings based on current search query and filters,
   const filteredListings = useMemo(() => {
@@ -56,11 +56,11 @@ export function useMarketplaceSearch() {
         matchesLocation &&,
         matchesAvailability &&,
         matchesRating)})}, [
-    searchQuery;
-    selectedProductTypes;
-    selectedLocations;
-    selectedAvailability;
-    selectedRating;
+    searchQuery,
+    selectedProductTypes,
+    selectedLocations,
+    selectedAvailability,
+    selectedRating,
   ]),
   // Handle filter changes,
   const handleFilterChange = (filterType: string, value: string) => {
@@ -85,27 +85,27 @@ export function useMarketplaceSearch() {
         break,
       default: ,
         break}
-  };
+  },
   // Clear all filters,
   const clearAllFilters = () => {
     setSearchQuery(''),
     setSelectedProductTypes([]),
     setSelectedLocations([]),
     setSelectedAvailability([]),
-    setSelectedRating(null)};
+    setSelectedRating(null)},
   return {
-    searchQuery;
-    setSearchQuery;
-    searchSuggestions;
-    selectedProductTypes;
-    selectedLocations;
-    selectedAvailability;
-    selectedRating;
-    setSelectedRating;
-    filteredListings;
-    handleFilterChange;
-    clearAllFilters;
-    filterOptions;
-  };
+    searchQuery,
+    setSearchQuery,
+    searchSuggestions,
+    selectedProductTypes,
+    selectedLocations,
+    selectedAvailability,
+    selectedRating,
+    setSelectedRating,
+    filteredListings,
+    handleFilterChange,
+    clearAllFilters,
+    filterOptions,
+  },
 }
 ,

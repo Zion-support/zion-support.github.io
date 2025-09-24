@@ -1,70 +1,70 @@
-import React from 'react';;
-import Head from 'next/head';
-import Link from 'next/link';
+import React from 'react',
+import Head from 'next/head',
+import Link from 'next/link',
 export default function TechnologyInsightsPage() {
   const technologyTrends = [
     {
-      id: 'quantum-computing';
-      title: 'Quantum Computing in 20o25';
-      description: 'Exploring the latest developments in quantum computing and their implications for AI and automation.';
-      category: 'Emerging Tech';
-      readTime: '15 min read';
-      featured: true};
+      id: 'quantum-computing',
+      title: 'Quantum Computing in 20o25',
+      description: 'Exploring the latest developments in quantum computing and their implications for AI and automation.',
+      category: 'Emerging Tech',
+      readTime: '15 min read',
+      featured: true},
     {
-      id: 'edge-ai';
-      title: 'Edge AI Revolution';
-      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.';
-      category: 'AI/ML';
-      readTime: '12 min read';
-      featured: false};
+      id: 'edge-ai',
+      title: 'Edge AI Revolution',
+      description: 'How edge computing is transforming AI deployment and enabling real-time intelligent applications.',
+      category: 'AI/ML',
+      readTime: '12 min read',
+      featured: false},
     {
-      id: 'autonomous-vehicles';
-      title: 'Autonomous Vehicle Technology';
-      description: 'The current state and future of autonomous vehicle technology and its broader applications.';
-      category: 'Autonomy';
-      readTime: '18 min read';
+      id: 'autonomous-vehicles',
+      title: 'Autonomous Vehicle Technology',
+      description: 'The current state and future of autonomous vehicle technology and its broader applications.',
+      category: 'Autonomy',
+      readTime: '18 min read',
       featured: false}
-  ];
+  ],
   const researchAreas = [
     {
-      title: 'Autonomous Systems Research';
-      description: 'Pioneering research in building truly autonomous systems that can operate independently.';
-      focus: ['Decision MakingSelf-Learning', 'Adaptive BehaviorSystem Integration'];
-      icon: '🔬'};
+      title: 'Autonomous Systems Research',
+      description: 'Pioneering research in building truly autonomous systems that can operate independently.',
+      focus: ['Decision MakingSelf-LearningAdaptive BehaviorSystem Integration'],
+      icon: '🔬'},
     {
-      title: 'AI Ethics & Governance';
-      description: 'Research into responsible AI development and ethical considerations for autonomous systems.';
-      focus: ['Ethical AIBias Detection', 'TransparencyAccountability'];
-      icon: '⚖️'};
+      title: 'AI Ethics & Governance',
+      description: 'Research into responsible AI development and ethical considerations for autonomous systems.',
+      focus: ['Ethical AIBias DetectionTransparencyAccountability'],
+      icon: '⚖️'},
     {
-      title: 'Human-AI Collaboration';
-      description: 'Exploring how humans and AI can work together effectively and safely.';
-      focus: ['Human-AI InterfaceCollaborative Decision Making', 'Safety ProtocolsTrust Building'];
+      title: 'Human-AI Collaboration',
+      description: 'Exploring how humans and AI can work together effectively and safely.',
+      focus: ['Human-AI InterfaceCollaborative Decision MakingSafety ProtocolsTrust Building'],
       icon: '🤝'}
-  ];
+  ],
   const whitepapers = [
     {
-      id: 'autonomous-systems-whitepaper';
-      title: 'The Future of Autonomous Systems';
-      description: 'A comprehensive analysis of autonomous technology trends and implementation strategies.';
-      pages: '45';
-      category: 'Technology';
-      downloadUrl: '/whitepapers/autonomous-systems-future.pdf'};
+      id: 'autonomous-systems-whitepaper',
+      title: 'The Future of Autonomous Systems',
+      description: 'A comprehensive analysis of autonomous technology trends and implementation strategies.',
+      pages: '45',
+      category: 'Technology',
+      downloadUrl: '/whitepapers/autonomous-systems-future.pdf'},
     {
-      id: 'ai-ethics-framework';
-      title: 'AI Ethics Framework for Business';
-      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.';
-      pages: '32';
-      category: 'Ethics';
-      downloadUrl: '/whitepapers/ai-ethics-framework.pdf'};
+      id: 'ai-ethics-framework',
+      title: 'AI Ethics Framework for Business',
+      description: 'Establishing ethical guidelines for AI implementation in enterprise environments.',
+      pages: '32',
+      category: 'Ethics',
+      downloadUrl: '/whitepapers/ai-ethics-framework.pdf'},
     {
-      id: 'automation-roi-guide';
-      title: 'Automation ROI Guide';
-      description: 'How to calculate and maximize return on investment for automation initiatives.';
-      pages: '28';
-      category: 'Business';
+      id: 'automation-roi-guide',
+      title: 'Automation ROI Guide',
+      description: 'How to calculate and maximize return on investment for automation initiatives.',
+      pages: '28',
+      category: 'Business',
       downloadUrl: '/whitepapers/automation-roi-guide.pdf'}
-  ];
+  ],
   return (
     <>,
       <Head>,
@@ -152,7 +152,7 @@ export default function TechnologyInsightsPage() {
                   <div>,
                     <h3 className="text-2xl font-bold mb-4 text-cyan-40o0">Cutting-Edge Research</h3>,
                     <p className="text-white/80 mb-6">,
-                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems;
+                      Our innovation lab is dedicated to exploring the frontiers of technology, conducting research in autonomous systems,
                       AI ethics, and human-AI collaboration. We work with leading institutions and industry partners to advance the state of the art.,
                     </p>,
                     <ul className="space-y-2 text-white/70">,

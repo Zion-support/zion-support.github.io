@@ -2,115 +2,115 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-  BookOpen, MessageCircle, Star, TrendingUp, Target;
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
-  Earth, Factory, Car, Building, GraduationCap, Scale;
-  Palette, Camera, Video, Music, Gamepad2, Heart;
-  Leaf, Sun, Moon, Wind, Droplets, Mountain;
-  Code, Wrench, Smartphone, BarChart3, Eye;
-  Network, Server, HardDrive, Monitor;
-  Laptop, Watch, Headphones, Speaker, Mic;
-  Keyboard, Mouse, CpuIcon, DatabaseIcon;
-  CloudIcon, LockIcon, ShieldIcon, GlobeIcon;
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Microscope, DollarSign, Home, Users, Briefcase,
+  BookOpen, MessageCircle, Star, TrendingUp, Target,
+  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
+  Earth, Factory, Car, Building, GraduationCap, Scale,
+  Palette, Camera, Video, Music, Gamepad2, Heart,
+  Leaf, Sun, Moon, Wind, Droplets, Mountain,
+  Code, Wrench, Smartphone, BarChart3, Eye,
+  Network, Server, HardDrive, Monitor,
+  Laptop, Watch, Headphones, Speaker, Mic,
+  Keyboard, Mouse, CpuIcon, DatabaseIcon,
+  CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: '🚀 20o31 Revolutionary AI Services';
-    icon: BrainIcon;
-    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
-    description: 'Next-generation AI consciousness and creativity';
+    title: '🚀 20o31 Revolutionary AI Services',
+    icon: BrainIcon,
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
+    description: 'Next-generation AI consciousness and creativity',
     services: [
-      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
       { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: '$299/month' }
-    ]};
+    ]},
   {
-    title: '⚛️ 20o31 Quantum & Emerging Tech';
-    icon: AtomIcon;
-    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
-    description: 'Quantum computing and beyond';
+    title: '⚛️ 20o31 Quantum & Emerging Tech',
+    icon: AtomIcon,
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
+    description: 'Quantum computing and beyond',
     services: [
-      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' };
-      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' };
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/month' };
+      { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway', description: 'Unbreakable quantum encryption', price: '$15,999/month' },
+      { name: 'Biotech DNA Computing Platform', href: '/biotech-dna-computing-platform', description: 'DNA-based computation', price: '$25,999/month' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform', description: 'Quantum-powered trading algorithms', price: '$35,999/month' },
       { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio', description: 'Quantum-enhanced creativity', price: '$1,999/month' }
-    ]};
+    ]},
   {
-    title: '🏙️ 20o31 Enterprise IT Solutions';
-    icon: CpuIcon;
-    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
-    description: 'Autonomous enterprise infrastructure';
+    title: '🏙️ 20o31 Enterprise IT Solutions',
+    icon: CpuIcon,
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    description: 'Autonomous enterprise infrastructure',
     services: [
-      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' };
-      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' };
-      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' };
+      { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform', description: 'Fully autonomous DevOps', price: '$799/month' },
+      { name: 'Zero Trust Network Architecture', href: '/zero-trust-network-architecture', description: 'Never trust, always verify', price: '$599/month' },
+      { name: 'Edge Computing Orchestration', href: '/edge-computing-orchestration', description: 'Distributed edge computing', price: '$449/month' },
       { name: 'AI-Powered IT Operations Center', href: '/ai-it-operations-center', description: 'Intelligent IT operations', price: '$699/month' }
-    ]};
+    ]},
   {
-    title: '🌌 20o31 Space & Metaverse Tech';
-    icon: Rocket;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0';
-    description: 'Space exploration and digital reality';
+    title: '🌌 20o31 Space & Metaverse Tech',
+    icon: Rocket,
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
+    description: 'Space exploration and digital reality',
     services: [
-      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' };
-      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' };
-      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' };
+      { name: 'Space Mining Automation Platform', href: '/space-mining-automation-platform', description: 'Automated asteroid mining', price: '$45,999/month' },
+      { name: 'Metaverse Development Platform', href: '/metaverse-development-platform', description: 'Build immersive virtual worlds', price: '$499/month' },
+      { name: 'AI Predictive Health Analytics', href: '/ai-predictive-health-analytics', description: 'Predictive health outcomes', price: '$7,999/month' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$12,999/month' }
-    ]};
+    ]},
   {
-    title: '🎯 20o31 Innovative Micro SAAS';
-    icon: Target;
-    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0';
-    description: 'Cutting-edge micro solutions';
+    title: '🎯 20o31 Innovative Micro SAAS',
+    icon: Target,
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
+    description: 'Cutting-edge micro solutions',
     services: [
-      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' };
-      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' };
-      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' };
+      { name: 'AI Business Intelligence Suite', href: '/ai-business-intelligence-suite', description: 'Intelligent business insights', price: '$299/month' },
+      { name: 'AI Customer Success Automation', href: '/ai-customer-success-automation', description: 'Automate customer success', price: '$199/month' },
+      { name: 'Blockchain Supply Chain Transparency', href: '/blockchain-supply-chain-transparency', description: 'End-to-end traceability', price: '$399/month' },
       { name: 'AI SEO Optimization Platform', href: '/ai-seo-optimization-platform', description: 'AI-powered SEO optimization', price: '$249/month' }
-    ]};
+    ]},
   {
-    title: '🔬 20o31 Research & Development';
-    icon: Microscope;
-    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0';
-    description: 'Breakthrough research solutions';
+    title: '🔬 20o31 Research & Development',
+    icon: Microscope,
+    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
+    description: 'Breakthrough research solutions',
     services: [
-      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$1,299/month' };
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,599/month' };
-      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' };
+      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$1,299/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,599/month' },
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' },
       { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
-    ]};
+    ]},
   {
-    title: '🎬 20o31 Content & Media';
-    icon: Video;
-    color: 'from-pink-60o0 via-rose-60o0 to-red-60o0';
-    description: 'AI-powered content creation';
+    title: '🎬 20o31 Content & Media',
+    icon: Video,
+    color: 'from-pink-60o0 via-rose-60o0 to-red-60o0',
+    description: 'AI-powered content creation',
     services: [
-      { name: 'AI Video Editing Platform', href: '/ai-video-editing-platform', description: 'Professional video editing', price: '$179/month' };
-      { name: 'AI Website Personalization Engine', href: '/ai-website-personalization-engine', description: 'Personalize every visitor', price: '$349/month' };
-      { name: 'AI Sales Automation Platform', href: '/ai-sales-automation-platform', description: 'Automate sales processes', price: '$399/month' };
+      { name: 'AI Video Editing Platform', href: '/ai-video-editing-platform', description: 'Professional video editing', price: '$179/month' },
+      { name: 'AI Website Personalization Engine', href: '/ai-website-personalization-engine', description: 'Personalize every visitor', price: '$349/month' },
+      { name: 'AI Sales Automation Platform', href: '/ai-sales-automation-platform', description: 'Automate sales processes', price: '$399/month' },
       { name: 'AI HR Recruitment Platform', href: '/ai-hr-recruitment-platform', description: 'Streamline hiring', price: '$299/month' }
     ]}
 ],
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: '20o30 Services', href: '/services/20o30-futuristic-services', icon: Rocket };
-  { name: 'AI Solutions', href: '/ai-services', icon: Brain };
-  { name: 'IT Solutions', href: '/it-services', icon: Cpu };
-  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom };
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: '20o30 Services', href: '/services/20o30-futuristic-services', icon: Rocket },
+  { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+  { name: 'IT Solutions', href: '/it-services', icon: Cpu },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Resources', href: '/resources', icon: BookOpen }
 ],
 export default function UltraFuturisticNavigation20o31() {
@@ -119,7 +119,7 @@ export default function UltraFuturisticNavigation20o31() {
   const [scrolled, setScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 50)};
+      setScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   return (

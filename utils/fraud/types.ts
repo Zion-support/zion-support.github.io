@@ -16,11 +16,11 @@ export interface AdminAction {
   case_id: string,
   type: AdminActionType,
   admin_id: string,
-  reason: string;
+  reason: string,
   details: Record < string, any>,
   created_at: string,
   executed_at?: string,
-  status: 'pending' | 'executed' | 'failed';
+  status: 'pending' | 'executed' | 'failed'
 }
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
 export interface FraudDetectionResult {
@@ -34,19 +34,19 @@ export interface FraudDetectionConfig {
   rules: {
     suspiciousActivity: {
       enabled: boolean,
-      threshold: number;
+      threshold: number
     }
     fake_profile: {
       enabled: boolean,
-      threshold: number;
+      threshold: number
     }
     payment_fraud: {
       enabled: boolean,
-      threshold: number;
+      threshold: number
     }
     spam: {
       enabled: boolean,
-      threshold: number;
+      threshold: number
     }
   }
   auto_actions: {

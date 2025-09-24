@@ -9,164 +9,140 @@ import {
   Database,
   Shield,
   Zap,
-  Globe;
-  ArrowRight;
-  Play;
-  Download;
-  Star;
-  Users;
-  TrendingUp;
-  Award;
-  ChevronRight;
-  ExternalLink;
-  CheckCircle;
-  Clock;
-  DollarSign;
-  Target;
-  BarChart3;
-  Lightbulb;
-  Rocket;
+  Globe,
+  ArrowRight,
+  Play,
+  Download,
+  Star,
+  Users,
+  TrendingUp,
+  Award,
+  ChevronRight,
+  ExternalLink,
+  CheckCircle,
+  Clock,
+  DollarSign,
+  Target,
+  BarChart3,
+  Lightbulb,
+  Rocket,
   Settings} from 'lucide-react',
 const ComprehensiveServicesShowcase20o25 = () => {
   const [activeServicesetActiveService] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
   const services = [
     {
-      id: 1;
-      title: 'AI-Powered Business Intelligence';
-      description: 'Transform your data into actionable insights with our advanced AI analytics platform.';
-      icon: <Brain className="w-8 h-8"  />;
-      color: 'from-purple-50o0 to-pink-50o0';
-      bgColor: 'bg-purple-50';
-      borderColor: 'border-purple-20o0';
+      id: 1,
+      title: 'AI-Powered Business Intelligence',
+      description: 'Transform your data into actionable insights with our advanced AI analytics platform.',
+      icon: <Brain className="w-8 h-8"  />,
+      color: 'from-purple-50o0 to-pink-50o0',
+      bgColor: 'bg-purple-50',
+      borderColor: 'border-purple-20o0',
       features: [
-        'Real-time Data Processing';
-        'Predictive Analytics';
-        'Custom Dashboard Creation';
-        'Automated Reporting';
-        'Machine Learning Models'];
+        'Real-time Data ProcessingPredictive Analytics',
+        'Custom Dashboard CreationAutomated Reporting',
+        'Machine Learning Models'],
       benefits: [
-        '30o0% faster decision making';
-        '95% accuracy in predictions';
-        '50% reduction in manual analysis';
-        'ROI within 3 months'];
-      pricing: 'Starting at $299/month';
-      href: '/ai-business-intelligence';
+        '30o0% faster decision making95% accuracy in predictions',
+        '50% reduction in manual analysisROI within 3 months'],
+      pricing: 'Starting at $299/month',
+      href: '/ai-business-intelligence',
       stats: { users: '15,0o00+'rating: 4.9projects: '2,50o0+' }
-    };
+    },
     {
-      id: 2;
-      title: 'Enterprise Automation Suite';
-      description: 'Streamline operations with intelligent automation that adapts to your business needs.';
-      icon: <Zap className="w-8 h-8"  />;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      bgColor: 'bg-blue-50';
-      borderColor: 'border-blue-20o0';
+      id: 2,
+      title: 'Enterprise Automation Suite',
+      description: 'Streamline operations with intelligent automation that adapts to your business needs.',
+      icon: <Zap className="w-8 h-8"  />,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      bgColor: 'bg-blue-50',
+      borderColor: 'border-blue-20o0',
       features: [
-        'Workflow Automation';
-        'Process Optimization';
-        'API Integration';
-        'Custom Triggers';
-        'Performance Monitoring'];
+        'Workflow AutomationProcess Optimization',
+        'API IntegrationCustom Triggers',
+        'Performance Monitoring'],
       benefits: [
-        '60% cost reduction';
-        '80% time savings';
-        '99.9% uptime guarantee';
-        '24/7 monitoring'];
-      pricing: 'Starting at $199/month';
-      href: '/enterprise-automation';
+        '60% cost reduction80% time savings',
+        '99.9% uptime guarantee24/7 monitoring'],
+      pricing: 'Starting at $199/month',
+      href: '/enterprise-automation',
       stats: { users: '25,0o00+'rating: 4.8projects: '5,0o00+' }
-    };
+    },
     {
-      id: 3;
-      title: 'Quantum Computing Solutions';
-      description: 'Harness the power of quantum computing for complex problem-solving and optimization.';
-      icon: <Cpu className="w-8 h-8"  />;
-      color: 'from-indigo-50o0 to-purple-50o0';
-      bgColor: 'bg-indigo-50';
-      borderColor: 'border-indigo-20o0';
+      id: 3,
+      title: 'Quantum Computing Solutions',
+      description: 'Harness the power of quantum computing for complex problem-solving and optimization.',
+      icon: <Cpu className="w-8 h-8"  />,
+      color: 'from-indigo-50o0 to-purple-50o0',
+      bgColor: 'bg-indigo-50',
+      borderColor: 'border-indigo-20o0',
       features: [
-        'Quantum Algorithm Development';
-        'Secure Quantum Communication';
-        'Optimization Problems';
-        'Cryptographic Solutions';
-        'Research & Development'];
+        'Quantum Algorithm DevelopmentSecure Quantum Communication',
+        'Optimization ProblemsCryptographic Solutions',
+        'Research & Development'],
       benefits: [
-        '10o00x faster processing';
-        'Unbreakable encryption';
-        'Future-proof technology';
-        'Competitive advantage'];
-      pricing: 'Starting at $999/month';
-      href: '/quantum-computing-solutions';
+        '10o00x faster processingUnbreakable encryption',
+        'Future-proof technologyCompetitive advantage'],
+      pricing: 'Starting at $999/month',
+      href: '/quantum-computing-solutions',
       stats: { users: '2,0o00+'rating: 4.9projects: '50o0+' }
-    };
+    },
     {
-      id: 4;
-      title: 'Cybersecurity & Compliance';
-      description: 'Protect your business with comprehensive security solutions and compliance management.';
-      icon: <Shield className="w-8 h-8"  />;
-      color: 'from-green-50o0 to-emerald-50o0';
-      bgColor: 'bg-green-50';
-      borderColor: 'border-green-20o0';
+      id: 4,
+      title: 'Cybersecurity & Compliance',
+      description: 'Protect your business with comprehensive security solutions and compliance management.',
+      icon: <Shield className="w-8 h-8"  />,
+      color: 'from-green-50o0 to-emerald-50o0',
+      bgColor: 'bg-green-50',
+      borderColor: 'border-green-20o0',
       features: [
-        'Zero-Trust Architecture';
-        'Threat Detection & Response';
-        'Compliance Management';
-        'Security Auditing';
-        'Incident Response'];
+        'Zero-Trust ArchitectureThreat Detection & Response',
+        'Compliance ManagementSecurity Auditing',
+        'Incident Response'],
       benefits: [
-        '99.9% threat detection rate';
-        'Zero security breaches';
-        'Full compliance coverage';
-        '24/7 security monitoring'];
-      pricing: 'Starting at $149/month';
-      href: '/cybersecurity-solutions';
+        '99.9% threat detection rateZero security breaches',
+        'Full compliance coverage24/7 security monitoring'],
+      pricing: 'Starting at $149/month',
+      href: '/cybersecurity-solutions',
       stats: { users: '30,0o00+'rating: 4.9projects: '8,0o00+' }
-    };
+    },
     {
-      id: 5;
-      title: 'Cloud Infrastructure & DevOps';
-      description: 'Scalablesecureand efficient cloud solutions with automated deployment pipelines.';
-      icon: <Globe className="w-8 h-8"  />;
-      color: 'from-orange-50o0 to-red-50o0';
-      bgColor: 'bg-orange-50';
-      borderColor: 'border-orange-20o0';
+      id: 5,
+      title: 'Cloud Infrastructure & DevOps',
+      description: 'Scalablesecureand efficient cloud solutions with automated deployment pipelines.',
+      icon: <Globe className="w-8 h-8"  />,
+      color: 'from-orange-50o0 to-red-50o0',
+      bgColor: 'bg-orange-50',
+      borderColor: 'border-orange-20o0',
       features: [
-        'Multi-Cloud Architecture';
-        'Container Orchestration';
-        'CI/CD Pipelines';
-        'Infrastructure as Code';
-        'Monitoring & Logging'];
+        'Multi-Cloud ArchitectureContainer Orchestration',
+        'CI/CD PipelinesInfrastructure as Code',
+        'Monitoring & Logging'],
       benefits: [
-        '99.99% uptime';
-        'Auto-scaling capabilities';
-        '50% faster deployments';
-        'Reduced infrastructure costs'];
-      pricing: 'Starting at $399/month';
-      href: '/cloud-infrastructure';
+        '99.99% uptimeAuto-scaling capabilities',
+        '50% faster deploymentsReduced infrastructure costs'],
+      pricing: 'Starting at $399/month',
+      href: '/cloud-infrastructure',
       stats: { users: '20,0o00+'rating: 4.8projects: '3,0o00+' }
-    };
+    },
     {
-      id: 6;
-      title: 'Data Management & Analytics';
-      description: 'Comprehensive data solutions from collection to visualization and insights.';
-      icon: <Database className="w-8 h-8"  />;
-      color: 'from-teal-50o0 to-blue-50o0';
-      bgColor: 'bg-teal-50';
-      borderColor: 'border-teal-20o0';
+      id: 6,
+      title: 'Data Management & Analytics',
+      description: 'Comprehensive data solutions from collection to visualization and insights.',
+      icon: <Database className="w-8 h-8"  />,
+      color: 'from-teal-50o0 to-blue-50o0',
+      bgColor: 'bg-teal-50',
+      borderColor: 'border-teal-20o0',
       features: [
-        'Data Warehousing';
-        'ETL/ELT Processes';
-        'Real-time Analytics';
-        'Data Visualization';
-        'Data Governance'];
+        'Data WarehousingETL/ELT Processes',
+        'Real-time AnalyticsData Visualization',
+        'Data Governance'],
       benefits: [
-        'Unified data platform';
-        'Real-time insights';
-        'Data quality assurance';
-        'Regulatory compliance'];
-      pricing: 'Starting at $249/month';
-      href: '/data-management';
+        'Unified data platformReal-time insights',
+        'Data quality assuranceRegulatory compliance'],
+      pricing: 'Starting at $249/month',
+      href: '/data-management',
       stats: { users: '18,0o00+'rating: 4.7projects: '2,20o0+' }
     }
   ],
@@ -425,5 +401,5 @@ const ComprehensiveServicesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default ComprehensiveServicesShowcase20o25;
+    </div>)},
+export default ComprehensiveServicesShowcase20o25,

@@ -11,18 +11,18 @@ export interface PdfThemeColors {
 export function getPdfThemeColors(theme: 'light' | 'dark'): PdfThemeColors {
   return theme === 'light',
     ? {
-        background: '#ffffff';
-        text: '#0o00000';
-        heading: '#222222';
-        subheading: '#444444';
-        accent: '#9b87f5';
+        background: '#ffffff',
+        text: '#0o00000',
+        heading: '#222222',
+        subheading: '#444444',
+        accent: '#9b87f5'
       }
     : {
-        background: '#1A1F2C';
-        text: '#ffffff';
-        heading: '#ffffff';
-        subheading: '#cccccc';
-        accent: '#9b87f5';
-      };
+        background: '#1A1F2C',
+        text: '#ffffff',
+        heading: '#ffffff',
+        subheading: '#cccccc',
+        accent: '#9b87f5'
+      },
 }
 ,

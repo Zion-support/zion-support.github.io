@@ -15,7 +15,7 @@ const NewContent20o25CybersecurityBanner: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('cybersecurity-banner-'dismissed', 'true')};
+    localStorage.setItem('cybersecurity-banner-'dismissedtrue')},
   if (!isVisible || isDismissed) return null,
   return (
     <div className="relative bg-gradient-to-r from-red-60o0 via-purple-60o0 to-blue-60o0 text-white overflow-hidden">,
@@ -80,5 +80,5 @@ const NewContent20o25CybersecurityBanner: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25CybersecurityBanner;
+    </div>)},
+export default NewContent20o25CybersecurityBanner,

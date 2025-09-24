@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import {
-  Brain;
-  BarChart3;
-  TrendingUp;
-  Target;
-  Zap;
-  Users;
-  Globe;
-  Shield;
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Target,
+  Zap,
+  Users,
+  Globe,
+  Shield,
 } from 'lucide-react',
 const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
   return (
@@ -42,7 +42,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
             </h1>,
             <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
               Transform raw data into actionable intelligence with our,
-              AI-powered business intelligence platform. Make smarter decisions;
+              AI-powered business intelligence platform. Make smarter decisions,
               faster.,
             </p>,
           </div>,
@@ -174,7 +174,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
                   Financial Intelligence,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Revenue analysis, cost optimization, profitability insights;
+                  Revenue analysis, cost optimization, profitability insights,
                   and financial forecasting.,
                 </p>,
               </div>,
@@ -183,7 +183,7 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
                   Operational Intelligence,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Process optimization, efficiency metrics, resource allocation;
+                  Process optimization, efficiency metrics, resource allocation,
                   and performance tracking.,
                 </p>,
               </div>,
@@ -597,5 +597,5 @@ const AIPoweredBusinessIntelligencePlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default AIPoweredBusinessIntelligencePlatformPage;
+    </>)},
+export default AIPoweredBusinessIntelligencePlatformPage,

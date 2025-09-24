@@ -5,11 +5,11 @@ import { Button } from './button',
 export function AccessibilityPanel({ enabled = true, className = "", onSettingsChange }) {
     const [isOpen, setIsOpen] = useState(false),
     const [settings, setSettings] = useState({
-        highContrast: false;
-        largeText: false;
-        reducedMotion: false;
-        screenReader: false;
-        fontSize: 16;
+        highContrast: false,
+        largeText: false,
+        reducedMotion: false,
+        screenReader: false,
+        fontSize: 16,
         colorBlindMode: 'normal'}),
     // Apply accessibility settings to document,
     useEffect(() => {
@@ -28,9 +28,9 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
             root.style.fontSize = '16px'}
         // Reduced motion,
         if (settings.reducedMotion) {
-            root.style.setProperty('--reduced-motion', 'reduce')}
+            root.style.setProperty('--reduced-motionreduce')}
         else {
-            root.style.setProperty('--reduced-motion', 'no-preference')}
+            root.style.setProperty('--reduced-motionno-preference')}
         // Font size,
         root.style.setProperty('--font-size', `${settings.fontSize}px`),
         // Color blind mode,
@@ -55,18 +55,18 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     // Toggle settings,
     const toggleSetting = useCallback((key, value) => {
         const newSettings ={
-            ...settings;
-            [key]: value !== undefined ? value : !settings[key]};
+            ...settings,
+            [key]: value !== undefined ? value : !settings[key]},
         saveSettings(newSettings)}, [settings, saveSettings]),
     // Reset to defaults,
     const resetSettings = useCallback(() => {
         const defaults ={
-            highContrast: false;
-            largeText: false;
-            reducedMotion: false;
-            screenReader: false;
-            fontSize: 16;
-            colorBlindMode: 'normal'};
+            highContrast: false,
+            largeText: false,
+            reducedMotion: false,
+            screenReader: false,
+            fontSize: 16,
+            colorBlindMode: 'normal'},
         saveSettings(defaults)}, [saveSettings]),
     // Font size controls,
     const increaseFontSize = useCallback(() => {
@@ -77,8 +77,8 @@ export function AccessibilityPanel({ enabled = true, className = "", onSettingsC
     const announceToScreenReader = useCallback((message) => {
         if (settings.screenReader) {
             const announcement = document.createElement('div'),
-            announcement.setAttribute('aria-live', 'polite'),
-            announcement.setAttribute('aria-atomic', 'true'),
+            announcement.setAttribute('aria-livepolite'),
+            announcement.setAttribute('aria-atomictrue'),
             announcement.className = 'sr-only',
             announcement.textContent = message,
             document.body.appendChild(announcement),

@@ -11,7 +11,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { userId, action, reason } = req.body as {
       userId?: string,
       action?: 'approve' | 'reject' | 'needs_more_info',
-      reason?: string};
+      reason?: string},
     if (!userId || !action),
       return res.status(40o0).json({ error: 'Missing userId or action' }),
     const profile = db[userId],
@@ -22,9 +22,9 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     if (action === 'needs_more_info') profile.status = 'needs_more_info',
     profile.lastUpdatedAt = now,
     profile.auditTrail.push({
-      at: now;
-      by: 'admin';
-      action: `admin_${action}`;
+      at: now,
+      by: 'admin',
+      action: `admin_${action}`,
       details: reason ? { reason } : undefined}),
     db[userId] = profile,
     save(db),

@@ -9,13 +9,13 @@ export default function AiCustomerServicePlatform() {
 			implementationWeeks="2-4 hours",
 			roiNote="Organizations report ~3x ROI via deflection and faster resolutions",
 			features={[
-				"AI chatbots with retrieval-augmented answers";
-				"Ticket classification, routing, and summarization";
-				"Auto-drafting of replies and macros";
-				"Multilingual support and tone control";
-				"Help center content generation and refresh";
-				"Integrations: Zendesk, Freshdesk, Intercom, Salesforce";
-				"Voice IVR handoff and call summarization";
+				"AI chatbots with retrieval-augmented answers",
+				"Ticket classification, routing, and summarization",
+				"Auto-drafting of replies and macros",
+				"Multilingual support and tone control",
+				"Help center content generation and refresh",
+				"Integrations: Zendesk, Freshdesk, Intercom, Salesforce",
+				"Voice IVR handoff and call summarization",
 				"Workflow analytics and CSAT tracking]}
 			]}
 			industries={["E-commerce", "SaaS", "Telecom", "Financial Services"]}

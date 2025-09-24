@@ -1,7 +1,7 @@
 import { ChainConfig } from '../../utils/chains',
 export default function ChainBadge({
-  chain;
-  selected = false;
+  chain,
+  selected = false,
 }: {
   chain: ChainConfig,
   selected?: boolean}) {

@@ -1,75 +1,75 @@
-import React from 'react';;
-import SEO from '../components/SEO';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import { motion } from 'framer-motion',
 import {
-  Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Star, TrendingUp, Users;
-  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin} from 'lucide-react';
+  Brain, Atom, Shield, Target, Rocket,
+  ArrowRight, Check, Star, TrendingUp, Users,
+  Globe, Zap, Lock, Cloud, Smartphone, Building, Phone, Mail, MapPin} from 'lucide-react',
 // Import our new 20o25 V2 innovative services,
-import { innovativeMicroSaas20o25ExpansionV2 } from '../data/20o25-innovative-micro-saas-expansion-v2';
-import { innovativeITServices20o25ExpansionV2 } from '../data/20o25-innovative-it-services-expansion-v2';
-import { innovativeAIServices20o25ExpansionV2 } from '../data/20o25-innovative-ai-services-expansion-v2';
-import { industrySpecificSolutions20o25V2 } from '../data/20o25-industry-specific-solutions-v2';
-import { emergingTechBreakthroughs20o25V2 } from '../data/20o25-emerging-tech-breakthroughs-v2';
+import { innovativeMicroSaas20o25ExpansionV2 } from '../data/20o25-innovative-micro-saas-expansion-v2',
+import { innovativeITServices20o25ExpansionV2 } from '../data/20o25-innovative-it-services-expansion-v2',
+import { innovativeAIServices20o25ExpansionV2 } from '../data/20o25-innovative-ai-services-expansion-v2',
+import { industrySpecificSolutions20o25V2 } from '../data/20o25-industry-specific-solutions-v2',
+import { emergingTechBreakthroughs20o25V2 } from '../data/20o25-emerging-tech-breakthroughs-v2',
 const fadeInUp ={
-  initial: { opacity: 0, y: 20 };
-  animate: { opacity: 1, y: 0 };
+  initial: { opacity: 0, y: 20 },
+  animate: { opacity: 1, y: 0 },
   transition: { duration: 0.6 }
-};
+},
 const staggerContainer ={
   animate: {
     transition: {
       staggerChildren: 0.1}
   }
-};
+},
 export default function ComprehensiveServicesShowcase20o25V2() {
   const allNewServices = [
-    ...innovativeMicroSaas20o25ExpansionV2;
-    ...innovativeITServices20o25ExpansionV2;
-    ...innovativeAIServices20o25ExpansionV2;
-    ...industrySpecificSolutions20o25V2;
-    ...emergingTechBreakthroughs20o25V2];
+    ...innovativeMicroSaas20o25ExpansionV2,
+    ...innovativeITServices20o25ExpansionV2,
+    ...innovativeAIServices20o25ExpansionV2,
+    ...industrySpecificSolutions20o25V2,
+    ...emergingTechBreakthroughs20o25V2],
   const serviceCategories = [
     {
-      id: 'micro-saas';
-      name: 'Innovative Micro SAAS';
-      icon: <Smartphone className="w-8 h-8"  />;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      services: innovativeMicroSaas20o25ExpansionV2;
-      description: 'Cutting-edge micro SAAS solutions for modern businesses'};
+      id: 'micro-saas',
+      name: 'Innovative Micro SAAS',
+      icon: <Smartphone className="w-8 h-8"  />,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      services: innovativeMicroSaas20o25ExpansionV2,
+      description: 'Cutting-edge micro SAAS solutions for modern businesses'},
     {
-      id: 'it-infrastructure';
-      name: 'IT Infrastructure Services';
-      icon: <Cloud className="w-8 h-8"  />;
-      color: 'from-purple-50o0 to-pink-50o0';
-      services: innovativeITServices20o25ExpansionV2;
-      description: 'Advanced IT infrastructure and security solutions'};
+      id: 'it-infrastructure',
+      name: 'IT Infrastructure Services',
+      icon: <Cloud className="w-8 h-8"  />,
+      color: 'from-purple-50o0 to-pink-50o0',
+      services: innovativeITServices20o25ExpansionV2,
+      description: 'Advanced IT infrastructure and security solutions'},
     {
-      id: 'ai-services';
-      name: 'AI & Machine Learning';
-      icon: <Brain className="w-8 h-8"  />;
-      color: 'from-green-50o0 to-emerald-50o0';
-      services: innovativeAIServices20o25ExpansionV2;
-      description: 'Intelligent AI solutions for business transformation'};
+      id: 'ai-services',
+      name: 'AI & Machine Learning',
+      icon: <Brain className="w-8 h-8"  />,
+      color: 'from-green-50o0 to-emerald-50o0',
+      services: innovativeAIServices20o25ExpansionV2,
+      description: 'Intelligent AI solutions for business transformation'},
     {
-      id: 'industry-solutions';
-      name: 'Industry Solutions';
-      icon: <Building className="w-8 h-8"  />;
-      color: 'from-orange-50o0 to-red-50o0';
-      services: industrySpecificSolutions20o25V2;
-      description: 'Specialized solutions for specific industries'};
+      id: 'industry-solutions',
+      name: 'Industry Solutions',
+      icon: <Building className="w-8 h-8"  />,
+      color: 'from-orange-50o0 to-red-50o0',
+      services: industrySpecificSolutions20o25V2,
+      description: 'Specialized solutions for specific industries'},
     {
-      id: 'emerging-tech';
-      name: 'Emerging Technology';
-      icon: <Atom className="w-8 h-8"  />;
-      color: 'from-indigo-50o0 to-purple-50o0';
-      services: emergingTechBreakthroughs20o25V2;
+      id: 'emerging-tech',
+      name: 'Emerging Technology',
+      icon: <Atom className="w-8 h-8"  />,
+      color: 'from-indigo-50o0 to-purple-50o0',
+      services: emergingTechBreakthroughs20o25V2,
       description: 'Breakthrough technologies of the future'}
-  ];
+  ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <SEO
@@ -96,7 +96,7 @@ export default function ComprehensiveServicesShowcase20o25V2() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
           >,
-            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS;
+            Experience the future of technology with our revolutionary portfolio of innovative micro SAAS,
             IT infrastructure, AI services, industry solutions, and emerging technology breakthroughs.,
           </motion.p>,
           <motion.div,

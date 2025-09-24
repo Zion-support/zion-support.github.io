@@ -15,12 +15,12 @@ export class InputValidator {
   static validateURL(url: string): boolean {
     try {
       const parsedUrl = new URL(url),
-      return ['http:', 'https: '].includes(parsedUrl.protocol)} catch {
+      return ['http:https: '].includes(parsedUrl.protocol)} catch {
       return false}
   }
 ,
   static sanitizeHTML(input: string): string {
-    const allowedTags = ['p', 'br', 'strong', 'em', 'ul', 'ol', 'li'],
+    const allowedTags = ['pbr', 'strongem', 'ulol', 'li'],
     const allowedAttributes = ['href'],
     // Basic HTML sanitization (in production, use a library like DOMPurify),
     return input,
@@ -30,7 +30,7 @@ export class InputValidator {
 ,
   static validateCSV(input: string): boolean {
     // Check for potential CSV injection,
-    const dangerousChars = ['=', '+', '-', '@', '\t', '\r'],
+    const dangerousChars = ['=+', '-@', '\t\r'],
     return !dangerousChars.some(char => input.startsWith(char))}
 }
 ,

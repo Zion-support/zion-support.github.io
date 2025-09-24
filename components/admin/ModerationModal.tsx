@@ -3,17 +3,17 @@ import React, { useState } from 'react',
 export type ModerationModalProps = {
   flag: any | null,
   onAction: (
-    action: 'approve' | 'remove' | 'warn' | 'ban';
+    action: 'approve' | 'remove' | 'warn' | 'ban',
     adminNotes?: string) => Promise<void>,
 export default function ModerationModal(): any ({
-  flag;
-  onClose;
-  onAction;
+  flag,
+  onClose,
+  onAction,
 }: ModerationModalProps) {
 export default function ModerationModal({
-  flag;
-  onClose;
-  onAction;
+  flag,
+  onClose,
+  onAction,
 }: ModerationModalProps) {
   const [adminNotes, setAdminNotes] = useState(''),
   if (!flag) return null,
@@ -117,7 +117,7 @@ export default function ModerationModal({
     </div>)}
   on_close: () => void,
   on_action: (
-    action: 'approve' | 'remove' | 'warn' | 'ban';
+    action: 'approve' | 'remove' | 'warn' | 'ban',
     admin_notes?: string) => Promise < void>,
 export default /**,
  * ModerationModal - Function description,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 /**,
  * Cursor Sync Automation System,
@@ -13,7 +13,7 @@ class CursorSyncAutomation {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'cursor-sync.log'),
+    this.logFile = path.join(__dirname, 'logscursor-sync.log'),
     this.ensureLogDirectory(),
     this.lastSyncTime = this.getLastSyncTime(),
     this.syncInterval = 60o000, // 1 minute,
@@ -25,37 +25,27 @@ class CursorSyncAutomation {
     if (fs.existsSync(configPath)) {
       return JSON.parse(fs.readFileSync(configPath, 'utf8'))}
     return {
-      enabled: true;
-      autoCommit: true;
-      autoPush: true;
-      autoPull: true;
-      branch: 'main';
-      commitMessageTemplate: '🔄 Auto-sync: {description}';
-      maxCommitSize: 50;
-      enableLogging: true;
-      syncInterval: 60o000;
+      enabled: true,
+      autoCommit: true,
+      autoPush: true,
+      autoPull: true,
+      branch: 'main',
+      commitMessageTemplate: '🔄 Auto-sync: {description}',
+      maxCommitSize: 50,
+      enableLogging: true,
+      syncInterval: 60o000,
       excludePatterns: [
-        'node_modules/**';
-        '.next/**';
-        'dist/**';
-        'build/**';
-        '.git/**';
-        '*.log';
-        '*.tmp';
-        '*.cache'];
+        'node_modules/**.next/**',
+        'dist/**build/**',
+        '.git/***.log',
+        '*.tmp*.cache'],
       includePatterns: [
-        'src/**/*';
-        'pages/**/*';
-        'components/**/*';
-        'styles/**/*';
-        'public/**/*';
-        'automation/**/*';
-        '*.json';
-        '*.md';
-        '*.ts';
-        '*.tsx';
-        '*.js';
-        '*.jsx']};
+        'src/**/*pages/**/*',
+        'components/**/*styles/**/*',
+        'public/**/*automation/**/*',
+        '*.json*.md',
+        '*.ts*.tsx',
+        '*.js*.jsx']},
   }
 ,
   ensureLogDirectory() {
@@ -79,7 +69,7 @@ class CursorSyncAutomation {
   }
 ,
   getLastSyncTime() {
-    const syncTimeFile = path.join(__dirname, 'logs', 'last-sync-time.json'),
+    const syncTimeFile = path.join(__dirname, 'logslast-sync-time.json'),
     if (fs.existsSync(syncTimeFile)) {
       try {
         const data = JSON.parse(fs.readFileSync(syncTimeFile, 'utf8')),
@@ -89,14 +79,14 @@ class CursorSyncAutomation {
     return new Date(0)}
 ,
   updateLastSyncTime() {
-    const syncTimeFile = path.join(__dirname, 'logs', 'last-sync-time.json'),
-    const data ={ lastSync: new Date().toISOString() };
+    const syncTimeFile = path.join(__dirname, 'logslast-sync-time.json'),
+    const data ={ lastSync: new Date().toISOString() },
     fs.writeFileSync(syncTimeFile, JSON.stringify(data, null, 2))}
 ,
   async checkGitStatus() {
     try {
       const status = execSync('git status --porcelain', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         cwd: this.projectRoot}),
       return status.trim().split('\n').filter(line => line.length > 0)} catch (error) {
       this.log(`Error checking git status: ${error.message}`, 'error'),
@@ -107,11 +97,11 @@ class CursorSyncAutomation {
     try {
       // Fetch latest changes,
       execSync('git fetch origin', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       // Check if we're behind remote,
       const behind = execSync('git rev-list HEAD..origin/main --count', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         cwd: this.projectRoot}).trim(),
       return parseInt(behind) > 0} catch (error) {
       this.log(`Error checking remote changes: ${error.message}`, 'warn'),
@@ -123,7 +113,7 @@ class CursorSyncAutomation {
     try {
       this.log('Pulling latest changes from remote...'),
       execSync('git pull origin main', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log('✅ Successfully pulled changes'),
       return true} catch (error) {
@@ -136,7 +126,7 @@ class CursorSyncAutomation {
       if (files.length === 0) return true,
       // Stage all changes,
       execSync('git add .', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log(`Staged ${files.length} changed files`),
       return true} catch (error) {
@@ -152,7 +142,7 @@ class CursorSyncAutomation {
     return `chore(sync): auto-sync ${description} (${files.length} files) - ${timestamp}`}
 ,
   analyzeFileTypes(files) {
-    const types ={};
+    const types ={},
     files.forEach(file => {
       const ext = path.extname(file),
       const type = this.getFileType(ext),
@@ -161,30 +151,20 @@ class CursorSyncAutomation {
 ,
   getFileType(ext) {
     const typeMap ={
-      '.ts': 'TypeScript';
-      '.tsx': 'TypeScript React';
-      '.js': 'JavaScript';
-      '.jsx': 'JavaScript React';
-      '.css': 'CSS';
-      '.scss': 'SCSS';
-      '.json': 'Configuration';
-      '.md': 'Documentation';
-      '.html': 'HTML';
-      '.py': 'Python';
-      '.sh': 'Shell Script'};
+      '.ts': 'TypeScript.tsx': 'TypeScript React.js': 'JavaScript.jsx': 'JavaScript React.css': 'CSS.scss': 'SCSS.json': 'Configuration.md': 'Documentation.html': 'HTML.py': 'Python.sh': 'Shell Script'},
     return typeMap[ext] || ext.slice(1).toUpperCase()}
 ,
   generateDescription(fileTypes) {
     const descriptions = [],
     for (const [type, count] of Object.entries(fileTypes)) {
       descriptions.push(`${count} ${type} file${count > 1 ? 's' : ''}`)}
-    return descriptions.join(', ')}
+    return descriptions.join()}
 ,
   async commitChanges(message) {
     if (!this.config.autoCommit) return true,
     try {
       execSync(`git commit -m "${message}"`, {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log(`✅ Committed: ${message}`),
       return true} catch (error) {
@@ -197,7 +177,7 @@ class CursorSyncAutomation {
     try {
       this.log('Pushing changes to remote...'),
       execSync('git push origin main', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.projectRoot}),
       this.log('✅ Successfully pushed changes'),
       return true} catch (error) {
@@ -209,17 +189,17 @@ class CursorSyncAutomation {
     try {
       // Check for merge conflicts,
       const status = execSync('git status --porcelain', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         cwd: this.projectRoot}),
       if (status.includes('UU') || status.includes('AA')) {
         this.log('⚠️ Merge conflicts detected, attempting to resolve...'),
         // Abort current merge,
         execSync('git merge --abort', {
-          stdio: 'pipe';
+          stdio: 'pipe',
           cwd: this.projectRoot}),
         // Reset to clean state,
         execSync('git reset --hard HEAD', {
-          stdio: 'pipe';
+          stdio: 'pipe',
           cwd: this.projectRoot}),
         this.log('✅ Conflicts resolved by resetting to clean state'),
         return true}
@@ -251,7 +231,7 @@ class CursorSyncAutomation {
       // Stage changes,
       const staged = await this.stageChanges(changedFiles),
       if (!staged) {
-        this.log('Failed to stage changes', 'error'),
+        this.log('Failed to stage changeserror'),
         return false}
 ,
       // Generate commit message,
@@ -259,13 +239,13 @@ class CursorSyncAutomation {
       // Commit changes,
       const committed = await this.commitChanges(commitMessage),
       if (!committed) {
-        this.log('Failed to commit changes', 'error'),
+        this.log('Failed to commit changeserror'),
         return false}
 ,
       // Push changes,
       const pushed = await this.pushChanges(),
       if (!pushed) {
-        this.log('Failed to push changes', 'error'),
+        this.log('Failed to push changeserror'),
         return false}
 ,
       this.updateLastSyncTime(),
@@ -287,7 +267,7 @@ class CursorSyncAutomation {
         await this.sleep(this.retryDelay)}
     }
 ,
-    this.log('All retry attempts failed', 'error'),
+    this.log('All retry attempts failederror'),
     return false}
 ,
   sleep(ms) {

@@ -1,122 +1,101 @@
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  Link2;
-  BarChart3;
-  Shield;
-  Users;
-  Zap;
-  Target;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Clock;
-  Award;
-  Star;
-  Globe;
-  Lock;
-  Cpu;
-  Database;
-  Monitor;
-  Smartphone;
-  Mail;
-  Phone;
-  MapPin;
-  DollarSign;
-  Eye;
-  Settings;
-  FileText;
+  Link2,
+  BarChart3,
+  Shield,
+  Users,
+  Zap,
+  Target,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Clock,
+  Award,
+  Star,
+  Globe,
+  Lock,
+  Cpu,
+  Database,
+  Monitor,
+  Smartphone,
+  Mail,
+  Phone,
+  MapPin,
+  DollarSign,
+  Eye,
+  Settings,
+  FileText,
   MessageSquare} from 'lucide-react',
 export default function AffiliateMarketingTracking() {
   const title = 'Affiliate Marketing Tracking Software — Zion Tech Group',
   const description = 'Advanced affiliate marketing tracking platform with fraud detection, cross-device attribution, and automated commission payouts.',
   const features = [
     {
-      title: 'Advanced Attribution Tracking';
-      description: 'Cross-device and cross-platform attribution with 99.9% accuracy';
-      icon: Target;
+      title: 'Advanced Attribution Tracking',
+      description: 'Cross-device and cross-platform attribution with 99.9% accuracy',
+      icon: Target,
       details: [
-        'Multi-touch attribution modeling';
-        'Cross-device user journey tracking';
-        'Real-time conversion attribution';
-        'Custom attribution windows';
-        'Fraud detection and prevention';
-        'Cookie-less tracking solutions']};
+        'Multi-touch attribution modelingCross-device user journey tracking',
+        'Real-time conversion attributionCustom attribution windows',
+        'Fraud detection and preventionCookie-less tracking solutions']},
     {
-      title: 'Commission Management';
-      description: 'Automated commission calculation and payout processing';
-      icon: DollarSign;
+      title: 'Commission Management',
+      description: 'Automated commission calculation and payout processing',
+      icon: DollarSign,
       details: [
-        'Flexible commission structures';
-        'Automated payout scheduling';
-        'Multi-currency support';
-        'Tax reporting and compliance';
-        'Performance-based bonuses';
-        'Real-time earnings tracking']};
+        'Flexible commission structuresAutomated payout scheduling',
+        'Multi-currency supportTax reporting and compliance',
+        'Performance-based bonusesReal-time earnings tracking']},
     {
-      title: 'Fraud Detection & Prevention';
-      description: 'AI-powered fraud detection with real-time monitoring';
-      icon: Shield;
+      title: 'Fraud Detection & Prevention',
+      description: 'AI-powered fraud detection with real-time monitoring',
+      icon: Shield,
       details: [
-        'Machine learning fraud algorithms';
-        'Real-time risk scoring';
-        'IP and device fingerprinting';
-        'Click fraud detection';
-        'Bot traffic filtering';
-        'Chargeback prevention']};
+        'Machine learning fraud algorithmsReal-time risk scoring',
+        'IP and device fingerprintingClick fraud detection',
+        'Bot traffic filteringChargeback prevention']},
     {
-      title: 'Analytics & Reporting';
-      description: 'Comprehensive analytics dashboard with actionable insights';
-      icon: BarChart3;
+      title: 'Analytics & Reporting',
+      description: 'Comprehensive analytics dashboard with actionable insights',
+      icon: BarChart3,
       details: [
-        'Real-time performance metrics';
-        'Custom report builder';
-        'ROI and LTV calculations';
-        'A/B testing capabilities';
-        'Export to popular BI tools';
-        'White-label reporting']}
+        'Real-time performance metricsCustom report builder',
+        'ROI and LTV calculationsA/B testing capabilities',
+        'Export to popular BI toolsWhite-label reporting']}
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$299';
-      period: '/month';
-      description: 'Perfect for small businesses';
+      name: 'Starter',
+      price: '$299',
+      period: '/month',
+      description: 'Perfect for small businesses',
       features: [
-        'Up to 10,0o00 clicks/month';
-        'Basic fraud detection';
-        'Standard reporting';
-        'Email support';
-        '1 admin user';
-        'Basic integrations'];
-      popular: false};
+        'Up to 10,0o00 clicks/monthBasic fraud detection',
+        'Standard reportingEmail support',
+        '1 admin userBasic integrations'],
+      popular: false},
     {
-      name: 'Professional';
-      price: '$799';
-      period: '/month';
-      description: 'Ideal for growing businesses';
+      name: 'Professional',
+      price: '$799',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10o0,0o00 clicks/month';
-        'Advanced fraud detection';
-        'Custom reporting';
-        'Priority support';
-        '5 admin users';
-        'API access';
-        'White-label options'];
-      popular: true};
+        'Up to 10o0,0o00 clicks/monthAdvanced fraud detection',
+        'Custom reportingPriority support',
+        '5 admin usersAPI access',
+        'White-label options'],
+      popular: true},
     {
-      name: 'Enterprise';
-      price: 'Custom';
-      period: '';
-      description: 'For large-scale operations';
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large-scale operations',
       features: [
-        'Unlimited clicks';
-        'AI-powered fraud prevention';
-        'Custom analytics';
-        'Dedicated support';
-        'Unlimited users';
-        'Custom integrations';
-        'SLA guarantee'];
+        'Unlimited clicksAI-powered fraud prevention',
+        'Custom analyticsDedicated support',
+        'Unlimited usersCustom integrations',
+        'SLA guarantee'],
       popular: false}
   ],
   return (
@@ -139,7 +118,7 @@ export default function AffiliateMarketingTracking() {
               Advanced Affiliate Marketing Tracking Software,
             </h1>,
             <p className="mt-6 text-lg leading-8 text-gray-60o0">,
-              Maximize your affiliate program ROI with our comprehensive tracking platform featuring fraud detection;
+              Maximize your affiliate program ROI with our comprehensive tracking platform featuring fraud detection,
               cross-device attribution, and automated commission management.,
             </p>,
             <div className="mt-8 flex items-center justify-center gap-x-6">,

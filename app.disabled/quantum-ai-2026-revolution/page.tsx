@@ -1,17 +1,15 @@
 import SEO from '../../components/SEO',
 import Link from 'next/link',
 export const metadata = {
-  title: 'Quantum AI 20o26 Revolution - The Future of Computing';
+  title: 'Quantum AI 20o26 Revolution - The Future of Computing',
   description:,
-    'Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.';
+    'Explore the revolutionary quantum AI technologies of 20o26. Quantum computing, neural interfaces, and synthetic intelligence that will reshape the world.',
   keywords: [
-    'quantum AI 20o26';
-    'quantum computing';
-    'neural interfaces';
-    'synthetic intelligence';
-    'AI revolution 20o26';
-  ];
-};
+    'quantum AI 20o26quantum computing',
+    'neural interfacessynthetic intelligence',
+    'AI revolution 20o26',
+  ]
+},
 export default function QuantumAI20o26RevolutionPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0'>,

@@ -19,10 +19,10 @@ import services from '@/data/services/services.json',
 CheckMailMapPinPhoneExternalLink,
 type Service = typeof enhancedRealMicroSaasServices[number],
 const contactInfo = {
-	mobile: '+1 302 464 0950';
-	email: 'kleber@ziontechgroup.com';
-	address: '364 E Main St STE 1008 Middletown DE 19709';
-	website: 'https://ziontechgroup.com'};
+	mobile: '+1 302 464 0950',
+	email: 'kleber@ziontechgroup.com',
+	address: '364 E Main St STE 1008 Middletown DE 19709',
+	website: 'https://ziontechgroup.com'},
 function getPriceValue(price: Service['price']): string {
 	if (price && typeof price === 'object' && 'monthly' in price) {
 		return price.monthly.toString()}
@@ -45,7 +45,7 @@ function getAllServices(): Service[] {
 		.concat(newVerifiedServicesQ22025 as unknown as Service[])}
 ,
 function toSlug(value: string): string {
-	return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g', ')}
+	return value.toLowerCase().replace(/[^a-z0-9]+/g'-').replace(/(^-|-$)/g)}
 ,
 function extractServiceSlugFromLink(link: string): string | null {
 	try {
@@ -62,10 +62,8 @@ export async function getStaticPaths() {
 	const slugs = new Set<string>(),
 	// Define static service slugs that should not be handled by this dynamic route,
 	const staticServiceSlugs = [
-		'ai-evaluation-orchestrator';
-		'ai-support-triage-router',
-		'ai-code-review-assistant-pro';
-		'ai-revenue-forecasting-copilot'],
+		'ai-evaluation-orchestratorai-support-triage-router',
+		'ai-code-review-assistant-proai-revenue-forecasting-copilot'],
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available,
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
@@ -82,27 +80,27 @@ export async function getStaticPaths() {
 	}
 ,
 	return {
-		paths: Array.from(slugs).map((slug) => ({ params: { slug } }));
-		fallback: false};
+		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
+		fallback: false},
 }
 ,
 export async function getStaticProps({ params }: { params: { slug: string } }) {
 	const services = getAllServices(),
-	const incomingSlug = (params?.slug || ', ').replace(/^\/+|\/+$/g', '),
+	const incomingSlug = (params?.slug || ).replace(/^\/+|\/+$/g', '),
 	let service: Service | undefined = services.find((s) => {
 		if (!s.link) return false,
 		const fromLink = extractServiceSlugFromLink(s.link),
 		return fromLink === incomingSlug}),
 	if (!service) {
-		service = services.find((s) => toSlug(s.id || ', ') === incomingSlug || toSlug(s.name || ', ') === incomingSlug)}
+		service = services.find((s) => toSlug(s.id || ) === incomingSlug || toSlug(s.name || ', ') === incomingSlug)}
 ,
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true },
 	}
 ,
 	return {
 		props: { service }
-	};
+	},
 }
 ,
 export default function ServiceDetailPage({ service }: { service: Service }) {
@@ -117,22 +115,22 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify(
 							{
-								"@context": "https://schema.org";
-								"@type": "Service";
-								name: service.name;
-								description: service.tagline || service.description;
-								url: service.link;
+								"@context": "https://schema.org",
+								"@type": "Service",
+								name: service.name,
+								description: service.tagline || service.description,
+								url: service.link,
 								provider: {
-									"@type": "Organization";
-									name: "Zion Tech Group";
-									url: "https://ziontechgroup.com"};
+									"@type": "Organization",
+									name: "Zion Tech Group",
+									url: "https://ziontechgroup.com"},
 								offers: {
-									"@type": "Offer";
-									        price: "99";
-									priceCurrency: "USD";
+									"@type": "Offer",
+									        price: "99",
+									priceCurrency: "USD",
 									availability: "https://schema.org/InStock"}
-							};
-							null;
+							},
+							null,
 							2)}}
 				/>,
 			</Head>,
@@ -193,7 +191,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 						<div className="p-6 bg-black/40 border border-gray-700/50 rounded-lg">,
 							<h3 className="text-white font-semibold mb-3">Contact</h3>,
 							<div className="space-y-3 text-sm">,
-								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g', ')}`} className="hover: underline">{contactInfo.mobile}</a></div>,
+								<div className="flex items-center gap-2 text-cyan-400"><Phone className="w-4 h-4" /><a href={`tel:${contactInfo.mobile.replace(/[^+\\d]/g)}`} className="hover: underline">{contactInfo.mobile}</a></div>,
 								<div className="flex items-center gap-2 text-purple-400"><Mail className="w-4 h-4" /><a href={`mailto: ${contactInfo.email}`} className="hover: underline">{contactInfo.email}</a></div>,
 								<div className="flex items-center gap-2 text-green-400"><MapPin className="w-4 h-4" /><a href={`https: //maps.google.com/?q=${encodeURIComponent(contactInfo.address)}`} target="_blank" rel="noopener noreferrer" className="hover: underline">{contactInfo.address}</a></div>,
 							</div>,
@@ -215,7 +213,7 @@ export default function ServiceDetailPage({ service }: { service: Service }) {
 		</Layout>),
 const ServiceDetail: NextPage = () => {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const items = services as any[],
   const service = items.find((s) => s.slug === slug),
   if (!service) {
@@ -257,7 +255,7 @@ const ServiceDetail: NextPage = () => {
           <Link href="/services"><a className="text-sm text-blue-600 hover:underline">Back to Services</a></Link>,
         </aside>,
       </div>,
-    </EnhancedLayout>)};
-export default ServiceDetail;
+    </EnhancedLayout>)},
+export default ServiceDetail,
 =======}
 ,

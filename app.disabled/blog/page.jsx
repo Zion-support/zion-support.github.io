@@ -2,71 +2,71 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI & Technology Blog - Latest Insights & Breakthroughs | Zion Tech Group';
+    'AI & Technology Blog - Latest Insights & Breakthroughs | Zion Tech Group',
   description:,
-    'Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies.';
-};
+    'Discover the latest insights in AI, quantum computing, neural interfaces, and enterprise transformation. Expert analysis, case studies, and breakthrough technologies.',
+},
 const BlogPage = () => {
   const featuredPosts = [
     {
-      title: 'AI 20o26: Agent Risk Maturity Matrix';
+      title: 'AI 20o26: Agent Risk Maturity Matrix',
       description:,
-        'Benchmark and uplift agent safety across policy, evals, telemetry, and operations.';
-      slug: 'ai-20o26-agent-risk-maturity-matrix';
-      category: 'AI Governance';
-      date: '20o25-09-15';
-      featured: true;
-      image: '/images/agent-risk-maturity-20o26.jpg';
-    };
+        'Benchmark and uplift agent safety across policy, evals, telemetry, and operations.',
+      slug: 'ai-20o26-agent-risk-maturity-matrix',
+      category: 'AI Governance',
+      date: '20o25-09-15',
+      featured: true,
+      image: '/images/agent-risk-maturity-20o26.jpg'
+    },
     {
       title:,
-        'AI 20o26: Real-Time Retrieval Architectures — Low-Latency, High-Trust RAG';
+        'AI 20o26: Real-Time Retrieval Architectures — Low-Latency, High-Trust RAG',
       description:,
-        'Sub-20o0ms p95 retrieval with grounding, verification, and continuous evaluations.';
-      slug: 'ai-20o26-real-time-retrieval-architectures';
-      category: 'AI Infrastructure';
-      date: '20o25-09-15';
-      featured: true;
-      image: '/images/real-time-rag-20o26.jpg';
-    };
+        'Sub-20o0ms p95 retrieval with grounding, verification, and continuous evaluations.',
+      slug: 'ai-20o26-real-time-retrieval-architectures',
+      category: 'AI Infrastructure',
+      date: '20o25-09-15',
+      featured: true,
+      image: '/images/real-time-rag-20o26.jpg'
+    },
     {
       title:,
-        'AI 20o26: Agents‑On‑Call Automation — Eval‑Gated Incident Response';
+        'AI 20o26: Agents‑On‑Call Automation — Eval‑Gated Incident Response',
       description:,
-        'Autonomous triage and guided mitigation with policy-as-code guardrails and SLOs.';
-      slug: 'ai-20o26-agents-oncall-automation';
-      category: 'Operations';
-      date: '20o25-09-15';
-      featured: true;
-      image: '/images/agents-oncall-20o26.jpg';
-    };
+        'Autonomous triage and guided mitigation with policy-as-code guardrails and SLOs.',
+      slug: 'ai-20o26-agents-oncall-automation',
+      category: 'Operations',
+      date: '20o25-09-15',
+      featured: true,
+      image: '/images/agents-oncall-20o26.jpg'
+    },
     {
-      title: 'AI 20o26: Eval‑Driven Release Engineering — Deep Dive';
+      title: 'AI 20o26: Eval‑Driven Release Engineering — Deep Dive',
       description:,
-        'Wire objective evals into CI/CD, canaries, and runtime with auto‑rollback.';
-      slug: 'ai-20o26-eval-driven-release-engineering-deep-dive';
-      category: 'Reliability';
-      date: '20o25-09-15';
-      featured: true;
-      image: '/images/eval-driven-release-deep-dive.jpg';
-    };
+        'Wire objective evals into CI/CD, canaries, and runtime with auto‑rollback.',
+      slug: 'ai-20o26-eval-driven-release-engineering-deep-dive',
+      category: 'Reliability',
+      date: '20o25-09-15',
+      featured: true,
+      image: '/images/eval-driven-release-deep-dive.jpg'
+    },
     {
-      title: 'AI 20o26: Agentic Observability Operating Model';
+      title: 'AI 20o26: Agentic Observability Operating Model',
       description:,
-        'Traces, evals, and policy signals to operate autonomous agents with confidence.';
-      slug: 'ai-20o26-agentic-observability-operating-model';
-      category: 'Observability';
-      date: '20o25-09-15';
-      featured: true;
-      image: '/images/agentic-observability-20o26.jpg';
-    };
+        'Traces, evals, and policy signals to operate autonomous agents with confidence.',
+      slug: 'ai-20o26-agentic-observability-operating-model',
+      category: 'Observability',
+      date: '20o25-09-15',
+      featured: true,
+      image: '/images/agentic-observability-20o26.jpg'
+    },
   ],
   const categories = [
-    { name: 'AI Revolution', count: 25, color: 'bg-blue-50o0' };
-    { name: 'Quantum Computing', count: 15, color: 'bg-purple-50o0' };
-    { name: 'Neural Interfaces', count: 12, color: 'bg-green-50o0' };
-    { name: 'Enterprise AI', count: 18, color: 'bg-orange-50o0' };
-    { name: 'Future Tech', count: 20, color: 'bg-pink-50o0' };
+    { name: 'AI Revolution', count: 25, color: 'bg-blue-50o0' },
+    { name: 'Quantum Computing', count: 15, color: 'bg-purple-50o0' },
+    { name: 'Neural Interfaces', count: 12, color: 'bg-green-50o0' },
+    { name: 'Enterprise AI', count: 18, color: 'bg-orange-50o0' },
+    { name: 'Future Tech', count: 20, color: 'bg-pink-50o0' },
   ],
   return (
     <div>,
@@ -177,5 +177,5 @@ const BlogPage = () => {
           </div>,
         </section>,
       </div>,
-    </div>)};
-export default BlogPage;
+    </div>)},
+export default BlogPage,

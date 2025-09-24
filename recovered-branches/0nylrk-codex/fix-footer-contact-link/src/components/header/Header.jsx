@@ -21,20 +21,20 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
     const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
     const [isScrolled, setIsScrolled] = useState(false),
     const searchSuggestions = generateSearchSuggestions(),
-    // If we have a white-label tenant and no specific customTheme is provided;
+    // If we have a white-label tenant and no specific customTheme is provided,
     // use the tenant's primary color,
     const effectiveTheme = customTheme || (isWhitelabel ? {
-        primaryColor;
+        primaryColor,
         backgroundColor: '#0o00000', // Default dark background,
         textColor: '#ffffff', // Default light text} : undefined),
     const headerStyle = effectiveTheme ? {
-        backgroundColor: effectiveTheme.backgroundColor;
-        color: effectiveTheme.textColor;
-        borderColor: `${effectiveTheme.primaryColor}20`} : {};
+        backgroundColor: effectiveTheme.backgroundColor,
+        color: effectiveTheme.textColor,
+        borderColor: `${effectiveTheme.primaryColor}20`} : {},
     // Handle scroll effect,
     useEffect(() => {
         const handleScroll = () => {
-            setIsScrolled(window.scrollY > 20)};
+            setIsScrolled(window.scrollY > 20)},
         window.addEventListener('scroll', handleScroll),
         return () => window.removeEventListener('scroll', handleScroll)}, []),
     const handleSubmit = (e) => {
@@ -42,9 +42,9 @@ export function Header({ hideLogin = false, customLogo, customTheme }) {
         if (query.trim()) {
             navigate(`/search?q=${encodeURIComponent(query)}`),
             setQuery("")}
-    };
+    },
     const toggleMobileMenu = () => {
-        setIsMobileMenuOpen(!isMobileMenuOpen)};
+        setIsMobileMenuOpen(!isMobileMenuOpen)},
     return (<header className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-purple-dark/95 to-zion-slate-dark/95 backdrop-blur-md shadow-lg shadow-zion-purple/10" className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-gradient-to-r from-zion-blue-dark/95 via-zion-slate-dark/95 to-zion-blue-dark/95 backdrop-blur-xl shadow-2xl shadow-zion-purple/10" className="sticky top-0 z-50 w-full border-b border-zion-purple/20 bg-zion-blue-dark/90 backdrop-blur-md neon-pulse" style={headerStyle}>,
       {/* Animated background pattern */}
       <div className="absolute inset-0 bg-[url('data: image/svg+xml,base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMC4wMiI+PGNpcmNsZSBjeD0iMzAiIGN5PSIzMCIgcj0iMiIvPjwvZz48L2c+PC9zdmc+')] opacity-30" />,

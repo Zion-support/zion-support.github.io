@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card',
 import { AnalyticsChart } from '@/components/analytics/AnalyticsChart',
 interface ConversionAnalysisProps {
@@ -7,7 +7,7 @@ interface ConversionAnalysisProps {
   onTimeRangeChange: (range: string) => void}
 ,
 export function ConversionAnalysisChart({
-  datatimeRangeonTimeRangeChange;
+  datatimeRangeonTimeRangeChange,
 }: ConversionAnalysisProps) {
   const dataKeys =,
     data && data.length > 0,

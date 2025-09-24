@@ -36,16 +36,16 @@ interface SimpleService {
 ,
 // Mock service data for now to fix build issues,
 const mockService: SimpleService = {
-  id: 'default-service';
-  name: 'Service Not Found';
-  description: 'This service is currently being updated. Please contact us for more information.';
-  price: 'Contact Us';
-  period: '';
-  features: ['Service under development'];
-  useCases: ['Contact sales team'];
-  integrations: ['Coming soon'];
-  link: '/contact';
-  category: 'General'};
+  id: 'default-service',
+  name: 'Service Not Found',
+  description: 'This service is currently being updated. Please contact us for more information.',
+  price: 'Contact Us',
+  period: '',
+  features: ['Service under development'],
+  useCases: ['Contact sales team'],
+  integrations: ['Coming soon'],
+  link: '/contact',
+  category: 'General'},
 		.concat(realEnterpriseServices2025 as unknown as Service[]),
 		.concat(verifiedRealServices2025Batch2 as unknown as Service[]),
 		.concat(realMarketAugmentations2025 as unknown as Service[]),
@@ -73,10 +73,8 @@ export async function getStaticPaths() {
 	const slugs = new Set<string>(),
 	// Define static service slugs that should not be handled by this dynamic route,
 	const staticServiceSlugs = [
-		'ai-evaluation-orchestrator';
-		'ai-support-triage-router';
-		'ai-code-review-assistant-pro';
-		'ai-revenue-forecasting-copilot'],
+		'ai-evaluation-orchestratorai-support-triage-router',
+		'ai-code-review-assistant-proai-revenue-forecasting-copilot'],
 	for (const s of services) {
 		// Prefer explicit link under /services/* when available,
 		const fromLink = s.link ? extractServiceSlugFromLink(s.link) : null,
@@ -93,8 +91,8 @@ export async function getStaticPaths() {
 	}
 ,
 	return {
-		paths: Array.from(slugs).map((slug) => ({ params: { slug } }));
-		fallback: false};
+		paths: Array.from(slugs).map((slug) => ({ params: { slug } })),
+		fallback: false},
         <div className="text-center mb-10">,
           <h1 className="text-4xl md: text-6xl font-bold bg-gradient-to-r from-cyan-400 via-purple-400 to-pink-400 bg-clip-text text-transparent mb-4">,
             {service.name}
@@ -229,12 +227,12 @@ export async function getStaticProps({ params }: { params: { slug: string } }) {
 		service = services.find((s) => toSlug(s.id || '') === incomingSlug || toSlug(s.name || '') === incomingSlug)}
 ,
 	if (!service) {
-		return { notFound: true };
+		return { notFound: true },
 	}
 ,
 	return {
 		props: { service }
-	};
+	},
 }
 ,
 export default function ServiceDetailPage({ service }: { service: Service }) {

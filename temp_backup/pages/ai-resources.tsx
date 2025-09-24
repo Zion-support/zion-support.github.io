@@ -3,176 +3,176 @@ import Link from 'next/link',
 export default function AIResources() {
   const resources = [
     {
-      category: 'Getting Started';
+      category: 'Getting Started',
       items: [
         {
-          title: 'AI Automation Fundamentals';
+          title: 'AI Automation Fundamentals',
           description:,
-            'Essential concepts and principles for understanding AI automation';
-          type: 'Guide';
-          duration: '30 min read';
-          level: 'Beginner';
-          link: '#';
-        };
+            'Essential concepts and principles for understanding AI automation',
+          type: 'Guide',
+          duration: '30 min read',
+          level: 'Beginner',
+          link: '#'
+        },
         {
-          title: 'Business Process Mapping';
-          description: 'How to identify and map processes for automation';
-          type: 'Template';
-          duration: '45 min';
-          level: 'Beginner';
-          link: '#';
-        };
+          title: 'Business Process Mapping',
+          description: 'How to identify and map processes for automation',
+          type: 'Template',
+          duration: '45 min',
+          level: 'Beginner',
+          link: '#'
+        },
         {
-          title: 'ROI Calculator for AI Projects';
+          title: 'ROI Calculator for AI Projects',
           description:,
-            'Calculate potential returns on AI automation investments';
-          type: 'Tool';
-          duration: '15 min';
-          level: 'Beginner';
-          link: '#';
-        };
-      ];
-    };
+            'Calculate potential returns on AI automation investments',
+          type: 'Tool',
+          duration: '15 min',
+          level: 'Beginner',
+          link: '#'
+        },
+      ],
+    },
     {
-      category: 'Implementation';
+      category: 'Implementation',
       items: [
         {
-          title: 'AI Project Planning Guide';
+          title: 'AI Project Planning Guide',
           description:,
-            'Step-by-step guide to planning successful AI automation projects';
-          type: 'Guide';
-          duration: '60 min read';
-          level: 'Intermediate';
-          link: '#';
-        };
+            'Step-by-step guide to planning successful AI automation projects',
+          type: 'Guide',
+          duration: '60 min read',
+          level: 'Intermediate',
+          link: '#'
+        },
         {
-          title: 'Change Management Strategies';
+          title: 'Change Management Strategies',
           description:,
-            'Managing organizational change during AI implementation';
-          type: 'Guide';
-          duration: '45 min read';
-          level: 'Intermediate';
-          link: '#';
-        };
+            'Managing organizational change during AI implementation',
+          type: 'Guide',
+          duration: '45 min read',
+          level: 'Intermediate',
+          link: '#'
+        },
         {
-          title: 'Integration Best Practices';
+          title: 'Integration Best Practices',
           description:,
-            'Seamlessly integrating AI systems with existing infrastructure';
-          type: 'Guide';
-          duration: '40 min read';
-          level: 'Intermediate';
-          link: '#';
-        };
-      ];
-    };
+            'Seamlessly integrating AI systems with existing infrastructure',
+          type: 'Guide',
+          duration: '40 min read',
+          level: 'Intermediate',
+          link: '#'
+        },
+      ],
+    },
     {
-      category: 'Advanced Topics';
+      category: 'Advanced Topics',
       items: [
         {
-          title: 'Machine Learning Model Selection';
-          description: 'Choosing the right ML models for your automation needs';
-          type: 'Guide';
-          duration: '90 min read';
-          level: 'Advanced';
-          link: '#';
-        };
+          title: 'Machine Learning Model Selection',
+          description: 'Choosing the right ML models for your automation needs',
+          type: 'Guide',
+          duration: '90 min read',
+          level: 'Advanced',
+          link: '#'
+        },
         {
-          title: 'AI Ethics and Governance';
-          description: 'Establishing ethical frameworks for AI systems';
-          type: 'Guide';
-          duration: '60 min read';
-          level: 'Advanced';
-          link: '#';
-        };
+          title: 'AI Ethics and Governance',
+          description: 'Establishing ethical frameworks for AI systems',
+          type: 'Guide',
+          duration: '60 min read',
+          level: 'Advanced',
+          link: '#'
+        },
         {
-          title: 'Scalability and Performance';
-          description: 'Optimizing AI systems for enterprise-scale operations';
-          type: 'Guide';
-          duration: '75 min read';
-          level: 'Advanced';
-          link: '#';
-        };
-      ];
-    };
+          title: 'Scalability and Performance',
+          description: 'Optimizing AI systems for enterprise-scale operations',
+          type: 'Guide',
+          duration: '75 min read',
+          level: 'Advanced',
+          link: '#'
+        },
+      ],
+    },
   ],
   const tools = [
     {
-      name: 'AI Readiness Assessment';
-      description: "Evaluate your organization's readiness for AI automation";
-      category: 'Assessment';
-      icon: '📊';
-    };
+      name: 'AI Readiness Assessment',
+      description: "Evaluate your organization's readiness for AI automation",
+      category: 'Assessment',
+      icon: '📊'
+    },
     {
-      name: 'Process Automation Calculator';
-      description: 'Calculate potential time and cost savings from automation';
-      category: 'Calculator';
-      icon: '🧮';
-    };
+      name: 'Process Automation Calculator',
+      description: 'Calculate potential time and cost savings from automation',
+      category: 'Calculator',
+      icon: '🧮'
+    },
     {
-      name: 'AI Vendor Comparison Matrix';
-      description: 'Compare different AI solution providers and platforms';
-      category: 'Template';
-      icon: '⚖️';
-    };
+      name: 'AI Vendor Comparison Matrix',
+      description: 'Compare different AI solution providers and platforms',
+      category: 'Template',
+      icon: '⚖️'
+    },
     {
-      name: 'Implementation Timeline Generator';
-      description: 'Create realistic timelines for AI automation projects';
-      category: 'Generator';
-      icon: '📅';
-    };
+      name: 'Implementation Timeline Generator',
+      description: 'Create realistic timelines for AI automation projects',
+      category: 'Generator',
+      icon: '📅'
+    },
   ],
   const caseStudies = [
     {
-      title: 'Healthcare Process Automation';
-      industry: 'Healthcare';
-      challenge: 'Manual patient scheduling and administrative processes';
-      solution: 'AI-powered scheduling system with predictive analytics';
+      title: 'Healthcare Process Automation',
+      industry: 'Healthcare',
+      challenge: 'Manual patient scheduling and administrative processes',
+      solution: 'AI-powered scheduling system with predictive analytics',
       results:,
-        '40% reduction in scheduling errors, 60% faster patient processing';
-      roi: '280%';
-    };
+        '40% reduction in scheduling errors, 60% faster patient processing',
+      roi: '280%'
+    },
     {
-      title: 'Manufacturing Quality Control';
-      industry: 'Manufacturing';
-      challenge: 'Inconsistent quality control and high defect rates';
-      solution: 'Computer vision-based quality inspection system';
-      results: '95% defect detection rate, 30% reduction in waste';
-      roi: '320%';
-    };
+      title: 'Manufacturing Quality Control',
+      industry: 'Manufacturing',
+      challenge: 'Inconsistent quality control and high defect rates',
+      solution: 'Computer vision-based quality inspection system',
+      results: '95% defect detection rate, 30% reduction in waste',
+      roi: '320%'
+    },
     {
-      title: 'Financial Services Compliance';
-      industry: 'Finance';
-      challenge: 'Manual compliance monitoring and reporting';
-      solution: 'Automated compliance monitoring with real-time alerts';
-      results: '90% faster compliance reporting, 10o0% audit trail';
-      roi: '250%';
-    };
+      title: 'Financial Services Compliance',
+      industry: 'Finance',
+      challenge: 'Manual compliance monitoring and reporting',
+      solution: 'Automated compliance monitoring with real-time alerts',
+      results: '90% faster compliance reporting, 10o0% audit trail',
+      roi: '250%'
+    },
   ],
   const events = [
     {
-      title: 'AI Automation Summit 20o25';
-      date: 'March 15-17, 20o25';
-      location: 'Virtual Event';
+      title: 'AI Automation Summit 20o25',
+      date: 'March 15-17, 20o25',
+      location: 'Virtual Event',
       description:,
-        'Join industry leaders and experts for three days of insights on AI automation trends and best practices.';
-      type: 'Conference';
-    };
+        'Join industry leaders and experts for three days of insights on AI automation trends and best practices.',
+      type: 'Conference'
+    },
     {
-      title: 'AI Implementation Workshop';
-      date: 'February 28, 20o25';
-      location: 'San Francisco, CA';
+      title: 'AI Implementation Workshop',
+      date: 'February 28, 20o25',
+      location: 'San Francisco, CA',
       description:,
-        'Hands-on workshop covering practical aspects of implementing AI automation in your organization.';
-      type: 'Workshop';
-    };
+        'Hands-on workshop covering practical aspects of implementing AI automation in your organization.',
+      type: 'Workshop'
+    },
     {
-      title: 'AI Ethics Roundtable';
-      date: 'March 8, 20o25';
-      location: 'Virtual Event';
+      title: 'AI Ethics Roundtable',
+      date: 'March 8, 20o25',
+      location: 'Virtual Event',
       description:,
-        'Interactive discussion on ethical considerations and governance frameworks for AI systems.';
-      type: 'Roundtable';
-    };
+        'Interactive discussion on ethical considerations and governance frameworks for AI systems.',
+      type: 'Roundtable'
+    },
   ],
   return (
     <>,

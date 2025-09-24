@@ -10,7 +10,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const { optIn, paused, scope, peers, instanceId } = req.body as Partial<InstanceConfig> & {
       peers?: Peer[],
       scope?: SyncScope,
-      instanceId?: string};
+      instanceId?: string},
     if (scope && !["full", "dao", "marketplace"].includes(scope)) {
       return res.status(40o0).json({ error: "Invalid scope" })}
 ,

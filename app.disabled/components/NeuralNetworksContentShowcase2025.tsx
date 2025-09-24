@@ -3,112 +3,112 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Award;
-  BookOpen;
-  Zap;
-  TrendingUp;
-  Clock;
-  Users;
-  Brain;
+  Brain,
+  Award,
+  BookOpen,
+  Zap,
+  TrendingUp,
+  Clock,
+  Users,
+  Brain,
 } from 'lucide-react',
 const NeuralNetworksContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'neural-networks-breakthrough';
-      title: 'AI 20o25: Advanced Neural Networks Enterprise Breakthrough';
+      id: 'neural-networks-breakthrough',
+      title: 'AI 20o25: Advanced Neural Networks Enterprise Breakthrough',
       description:,
-        'Achieve 450% ROI with cutting-edge neural network architectures. Transform your enterprise with quantum-enhanced AI systems.';
-      url: '/blog/ai-20o25-advanced-neural-networks-enterprise-breakthrough';
-      type: 'blog';
-      category: 'technology';
+        'Achieve 450% ROI with cutting-edge neural network architectures. Transform your enterprise with quantum-enhanced AI systems.',
+      url: '/blog/ai-20o25-advanced-neural-networks-enterprise-breakthrough',
+      type: 'blog',
+      category: 'technology',
       metrics: {
-        roi: '450%';
-        accuracy: '99.7%';
-        savings: '$2.8B';
-        speed: '340%';
-      };
-      icon: Brain;
-      gradient: 'from-purple-60o0 to-indigo-60o0';
-      readingTime: '15 min read';
-      featured: true;
-    };
+        roi: '450%',
+        accuracy: '99.7%',
+        savings: '$2.8B',
+        speed: '340%'
+      },
+      icon: Brain,
+      gradient: 'from-purple-60o0 to-indigo-60o0',
+      readingTime: '15 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 Success: $2.8B Annual Savings with Neural Networks';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Success: $2.8B Annual Savings with Neural Networks',
       description:,
-        'Discover how a Fortune 50o0 company achieved 567% ROI and $2.8B in annual savings through advanced neural network implementation.';
-      url: '/case-studies/ai-20o25-advanced-neural-networks-fortune-50o0-success-story';
-      type: 'case-study';
-      category: 'success-story';
+        'Discover how a Fortune 50o0 company achieved 567% ROI and $2.8B in annual savings through advanced neural network implementation.',
+      url: '/case-studies/ai-20o25-advanced-neural-networks-fortune-50o0-success-story',
+      type: 'case-study',
+      category: 'success-story',
       metrics: {
-        savings: '$2.8B';
-        roi: '567%';
-        efficiency: '340%';
-        satisfaction: '99.2%';
-      };
-      icon: Award;
-      gradient: 'from-green-60o0 to-emerald-60o0';
-      readingTime: '12 min read';
-      featured: true;
-    };
+        savings: '$2.8B',
+        roi: '567%',
+        efficiency: '340%',
+        satisfaction: '99.2%'
+      },
+      icon: Award,
+      gradient: 'from-green-60o0 to-emerald-60o0',
+      readingTime: '12 min read',
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      title: 'Complete Implementation Guide: Advanced Neural Networks 20o25';
+      id: 'implementation-guide',
+      title: 'Complete Implementation Guide: Advanced Neural Networks 20o25',
       description:,
-        'Master the complete roadmap to neural network success. From strategy to 450% ROI in 18 months.';
-      url: '/resources/ai-20o25-advanced-neural-networks-implementation-guide';
-      type: 'resource';
-      category: 'guide';
+        'Master the complete roadmap to neural network success. From strategy to 450% ROI in 18 months.',
+      url: '/resources/ai-20o25-advanced-neural-networks-implementation-guide',
+      type: 'resource',
+      category: 'guide',
       metrics: {
-        roi: '450%';
-        timeline: '18 months';
-        success: '98%';
-        projects: '50o0+';
-      };
-      icon: BookOpen;
-      gradient: 'from-orange-60o0 to-red-60o0';
-      readingTime: '25 min read';
-      featured: true;
-    };
+        roi: '450%',
+        timeline: '18 months',
+        success: '98%',
+        projects: '50o0+'
+      },
+      icon: BookOpen,
+      gradient: 'from-orange-60o0 to-red-60o0',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'edge-computing-revolution';
-      title: 'AI 20o25 Edge Computing Revolution: Enterprise Breakthrough';
+      id: 'edge-computing-revolution',
+      title: 'AI 20o25 Edge Computing Revolution: Enterprise Breakthrough',
       description:,
-        'Achieve 340% faster processing with edge AI solutions. 99.9% uptime and $1.8B in cumulative savings.';
-      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough';
-      type: 'blog';
-      category: 'technology';
+        'Achieve 340% faster processing with edge AI solutions. 99.9% uptime and $1.8B in cumulative savings.',
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',
+      type: 'blog',
+      category: 'technology',
       metrics: {
-        speed: '340%';
-        uptime: '99.9%';
-        savings: '$1.8B';
-        efficiency: '67%';
-      };
-      icon: Zap;
-      gradient: 'from-cyan-60o0 to-blue-60o0';
-      readingTime: '14 min read';
-      featured: false;
-    };
+        speed: '340%',
+        uptime: '99.9%',
+        savings: '$1.8B',
+        efficiency: '67%'
+      },
+      icon: Zap,
+      gradient: 'from-cyan-60o0 to-blue-60o0',
+      readingTime: '14 min read',
+      featured: false
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'technology';
-      name: 'Technology';
-      count: content.filter(item => item.category === 'technology').length;
-    };
+      id: 'technology',
+      name: 'Technology',
+      count: content.filter(item => item.category === 'technology').length
+    },
     {
-      id: 'success-story';
-      name: 'Success Stories';
-      count: content.filter(item => item.category === 'success-story').length;
-    };
+      id: 'success-story',
+      name: 'Success Stories',
+      count: content.filter(item => item.category === 'success-story').length
+    },
     {
-      id: 'guide';
-      name: 'Implementation Guides';
-      count: content.filter(item => item.category === 'guide').length;
-    };
+      id: 'guide',
+      name: 'Implementation Guides',
+      count: content.filter(item => item.category === 'guide').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -322,5 +322,5 @@ const NeuralNetworksContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NeuralNetworksContentShowcase20o25;
+    </section>)},
+export default NeuralNetworksContentShowcase20o25,

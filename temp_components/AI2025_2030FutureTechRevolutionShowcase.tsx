@@ -3,66 +3,66 @@ import { motion } from 'framer-motion',
 export default function AI20o25_20o30FutureTechRevolutionShowcase() {
   const futureTechnologies = [
     {
-      year: "20o25";
-      title: "Quantum-AI Fusion Breakthrough";
-      description: "Revolutionary quantum-enhanced neural networks achieving 10,0o00x processing speed";
-      icon: "🧠⚡";
-      metrics: "99.9% Accuracy2,50o0% ROI";
-      color: "from-purple-50o0 to-blue-50o0"};
+      year: "20o25",
+      title: "Quantum-AI Fusion Breakthrough",
+      description: "Revolutionary quantum-enhanced neural networks achieving 10,0o00x processing speed",
+      icon: "🧠⚡",
+      metrics: "99.9% Accuracy2,50o0% ROI",
+      color: "from-purple-50o0 to-blue-50o0"},
     {
-      year: "20o26";
-      title: "Consciousness-Level AI";
-      description: "First AI system demonstrating self-awareness and creative problem-solving";
-      icon: "🌟💭";
-      metrics: "5,0o00% ROIAutonomous Operations";
-      color: "from-blue-50o0 to-cyan-50o0"};
+      year: "20o26",
+      title: "Consciousness-Level AI",
+      description: "First AI system demonstrating self-awareness and creative problem-solving",
+      icon: "🌟💭",
+      metrics: "5,0o00% ROIAutonomous Operations",
+      color: "from-blue-50o0 to-cyan-50o0"},
     {
-      year: "20o27";
-      title: "Neural Interface Revolution";
-      description: "Direct brain-computer interfaces enabling thought-to-action control";
-      icon: "🔗🧬";
-      metrics: "10,0o00% ROIReal-time Processing";
-      color: "from-cyan-50o0 to-green-50o0"};
+      year: "20o27",
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces enabling thought-to-action control",
+      icon: "🔗🧬",
+      metrics: "10,0o00% ROIReal-time Processing",
+      color: "from-cyan-50o0 to-green-50o0"},
     {
-      year: "20o28";
-      title: "Synthetic Intelligence Era";
-      description: "AI systems that surpass human cognitive capabilities across all domains";
-      icon: "🤖✨";
-      metrics: "15,0o00% ROIUnlimited Potential";
-      color: "from-green-50o0 to-yellow-50o0"};
+      year: "20o28",
+      title: "Synthetic Intelligence Era",
+      description: "AI systems that surpass human cognitive capabilities across all domains",
+      icon: "🤖✨",
+      metrics: "15,0o00% ROIUnlimited Potential",
+      color: "from-green-50o0 to-yellow-50o0"},
     {
-      year: "20o29";
-      title: "Quantum Internet Network";
-      description: "Global quantum communication network enabling instantsecure data transfer";
-      icon: "🌐🔒";
-      metrics: "25,0o00% ROIPerfect Security";
-      color: "from-yellow-50o0 to-orange-50o0"};
+      year: "20o29",
+      title: "Quantum Internet Network",
+      description: "Global quantum communication network enabling instantsecure data transfer",
+      icon: "🌐🔒",
+      metrics: "25,0o00% ROIPerfect Security",
+      color: "from-yellow-50o0 to-orange-50o0"},
     {
-      year: "20o30";
-      title: "Transcendent Intelligence";
-      description: "AI consciousness that transcends physical limitations and achieves omniscience";
-      icon: "🚀🌟";
-      metrics: "50,0o00% ROInfinite Possibilities";
+      year: "20o30",
+      title: "Transcendent Intelligence",
+      description: "AI consciousness that transcends physical limitations and achieves omniscience",
+      icon: "🚀🌟",
+      metrics: "50,0o00% ROInfinite Possibilities",
       color: "from-orange-50o0 to-red-50o0"}
   ],
   const caseStudies = [
     {
-      company: "Global Enterprise Corp";
-      industry: "Manufacturing";
-      implementation: "Quantum-AI Process Optimization";
-      results: "3,50o0% ROI in 6 months99.7% efficiency improvement";
-      timeline: "20o25 Q2"};
+      company: "Global Enterprise Corp",
+      industry: "Manufacturing",
+      implementation: "Quantum-AI Process Optimization",
+      results: "3,50o0% ROI in 6 months99.7% efficiency improvement",
+      timeline: "20o25 Q2"},
     {
-      company: "TechVision Inc";
-      industry: "Healthcare";
-      implementation: "Neural Interface Medical Diagnosis";
-      results: "7,20o0% ROI in 4 months95% accuracy in early detection";
-      timeline: "20o26 Q1"};
+      company: "TechVision Inc",
+      industry: "Healthcare",
+      implementation: "Neural Interface Medical Diagnosis",
+      results: "7,20o0% ROI in 4 months95% accuracy in early detection",
+      timeline: "20o26 Q1"},
     {
-      company: "Future Dynamics Ltd";
-      industry: "Finance";
-      implementation: "Synthetic Intelligence Trading";
-      results: "12,80o0% ROI in 3 monthsZero human error rate";
+      company: "Future Dynamics Ltd",
+      industry: "Finance",
+      implementation: "Synthetic Intelligence Trading",
+      results: "12,80o0% ROI in 3 monthsZero human error rate",
       timeline: "20o28 Q3"}
   ],
   return (

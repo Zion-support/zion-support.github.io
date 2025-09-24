@@ -5,11 +5,11 @@ import { motion } from 'framer-motion',
 MailPhoneMapPinSendCheckCircleAlertCircle,
 const ContactForm: React.FC = () => {
   const [formDatasetFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<,
@@ -18,8 +18,8 @@ const ContactForm: React.FC = () => {
   const [submitStatusetSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData;
-      [e.target.name]: e.target.value})};
+      ...formData,
+      [e.target.name]: e.target.value})},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -28,38 +28,35 @@ const ContactForm: React.FC = () => {
       await new Promise(resolve => setTimeout(resolve2000)),
       setSubmitStatus('success'),
       setFormData({
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
         message: ''})} catch (error) {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
-  };
+  },
   const services = [
-    'AI Development';
-    'Cloud Architecture';
-    'Digital Transformation';
-    'IoT Platforms';
-    'Blockchain Solutions';
-    'Data Analytics';
+    'AI DevelopmentCloud Architecture',
+    'Digital TransformationIoT Platforms',
+    'Blockchain SolutionsData Analytics',
     'Other'],
   const contactInfo = [
     {
-      icon: Mail;
-      title: 'Email Us';
-      content: 'contact@ziontechgroup.com';
-      href: 'mailto:contact@ziontechgroup.com'};
+      icon: Mail,
+      title: 'Email Us',
+      content: 'contact@ziontechgroup.com',
+      href: 'mailto:contact@ziontechgroup.com'},
     {
-      icon: Phone;
-      title: 'Call Us';
-      content: '+1 (555) 123-4567';
-      href: 'tel:+15551234567'};
+      icon: Phone,
+      title: 'Call Us',
+      content: '+1 (555) 123-4567',
+      href: 'tel:+15551234567'},
     {
-      icon: MapPin;
-      title: 'Visit Us';
-      content: '123 Tech StreetInnovation CityIC 12345';
+      icon: MapPin,
+      title: 'Visit Us',
+      content: '123 Tech StreetInnovation CityIC 12345',
       href: '#'}
   ],
   return (
@@ -298,5 +295,5 @@ const ContactForm: React.FC = () => {
           </motion.div>,
         </div>,
       </div>,
-    </section>)};
-export default ContactForm;
+    </section>)},
+export default ContactForm,

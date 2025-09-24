@@ -2,39 +2,39 @@ import React, { useState, useMemo } from 'react.ts',
 import { motion } from 'framer-motion.ts',
 import { Link } from 'react-router-dom.ts',
 import {
-  CheckCircle;
-  Star;
-  Zap;
-  Shield;
-  TrendingUp;
-  Brain;
-  Server;
-  Globe;
-  ArrowRight;
-  Mail;
-  Phone;
-  MapPin;
-  ExternalLink;
-  DollarSign;
-  CreditCard;
-  Wallet;
-  Coins;
-  PiggyBank;
-  Calculator;
-  BarChart3;
-  Target;
-  Award;
-  Users;
-  Clock;
-  Calendar;
-  Check;
-  X;
-  Crown;
-  Rocket;
-  Cpu;
-  Lock;
-  Heart;
-  Sparkles;
+  CheckCircle,
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  Brain,
+  Server,
+  Globe,
+  ArrowRight,
+  Mail,
+  Phone,
+  MapPin,
+  ExternalLink,
+  DollarSign,
+  CreditCard,
+  Wallet,
+  Coins,
+  PiggyBank,
+  Calculator,
+  BarChart3,
+  Target,
+  Award,
+  Users,
+  Clock,
+  Calendar,
+  Check,
+  X,
+  Crown,
+  Rocket,
+  Cpu,
+  Lock,
+  Heart,
+  Sparkles,
 } from 'lucide-react.ts',
 import { INNOVATIVE_SERVICES_20o25 } from '@/data/innovativeServices20o25',
 import { SEO } from '@/components/SEO',
@@ -48,7 +48,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
         acc.push(service.category)}
       return acc}, [] as string[]),
     return ['all', ...cats]}, [services]),
-  const pricingModels = ['all', 'monthly', 'annual', 'enterprise'],
+  const pricingModels = ['allmonthly', 'annualenterprise'],
   const filteredServices = useMemo(() => {
     let filtered = services,
     if (selectedCategory !== 'all') {
@@ -78,7 +78,7 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
         return Rocket,
       default:,
         return Zap}
-  };
+  },
   const getCategoryColor = (category: anystring) => {
     switch (category) {
       case 'AI & Analytics':,
@@ -97,94 +97,82 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
         return 'from-indigo-60o0 to-purple-60o0',
       default:,
         return 'from-gray-60o0 to-slate-60o0'}
-  };
+  },
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for small businesses and startups';
-      price: 299;
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: 299,
       features: [
-        'Basic AI features';
-        'Email support';
-        'Up to 5 users';
-        'Standard integrations';
-        'Community forum access';
-        'Basic analytics';
-        'Mobile app access';
-      ];
-      color: 'from-cyan-50o0 to-blue-60o0';
-      popular: false;
-      bestFor: 'Small businesses, startups, individual professionals';
-    };
+        'Basic AI featuresEmail support',
+        'Up to 5 usersStandard integrations',
+        'Community forum accessBasic analytics',
+        'Mobile app access',
+      ],
+      color: 'from-cyan-50o0 to-blue-60o0',
+      popular: false,
+      bestFor: 'Small businesses, startups, individual professionals',
+    },
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses and teams';
-      price: 999;
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: 999,
       features: [
-        'Advanced AI capabilities';
-        'Priority support';
-        'Up to 25 users';
-        'Advanced integrations';
-        'API access';
-        'Custom branding';
-        'Advanced analytics dashboard';
-        'White-label options';
-        'Training and onboarding';
-      ];
-      color: 'from-purple-50o0 to-pink-60o0';
-      popular: true;
-      bestFor: 'Growing businesses, mid-size companies, agencies';
-    };
+        'Advanced AI capabilitiesPriority support',
+        'Up to 25 usersAdvanced integrations',
+        'API accessCustom branding',
+        'Advanced analytics dashboardWhite-label options',
+        'Training and onboarding',
+      ],
+      color: 'from-purple-50o0 to-pink-60o0',
+      popular: true,
+      bestFor: 'Growing businesses, mid-size companies, agencies',
+    },
     {
-      name: 'Enterprise';
-      description: 'For large organizations with complex needs';
-      price: 2999;
+      name: 'Enterprise',
+      description: 'For large organizations with complex needs',
+      price: 2999,
       features: [
-        'Full AI suite access';
-        '24/7 dedicated support';
-        'Unlimited users';
-        'Custom integrations';
-        'White-label solutions';
-        'Advanced security features';
-        'SLA guarantees';
-        'Dedicated account manager';
-        'Custom development';
-        'On-premise deployment options';
-      ];
-      color: 'from-indigo-50o0 to-purple-60o0';
-      popular: false;
-      bestFor: 'Large enterprises, government agencies, Fortune 50o0 companies';
-    };
+        'Full AI suite access24/7 dedicated support',
+        'Unlimited usersCustom integrations',
+        'White-label solutionsAdvanced security features',
+        'SLA guaranteesDedicated account manager',
+        'Custom developmentOn-premise deployment options',
+      ],
+      color: 'from-indigo-50o0 to-purple-60o0',
+      popular: false,
+      bestFor: 'Large enterprises, government agencies, Fortune 50o0 companies',
+    },
   ],
   const marketInsights = [
     {
-      title: 'AI Services Market';
-      value: '$29.9B';
-      growth: '+32.4%';
-      description: 'Expected market size by 20o25';
-      color: 'from-purple-50o0 to-pink-60o0';
-    };
+      title: 'AI Services Market',
+      value: '$29.9B',
+      growth: '+32.4%',
+      description: 'Expected market size by 20o25',
+      color: 'from-purple-50o0 to-pink-60o0'
+    },
     {
-      title: 'Cloud Services Market';
-      value: '$832.1B';
-      growth: '+17.5%';
-      description: 'Global cloud market value';
-      color: 'from-blue-50o0 to-cyan-60o0';
-    };
+      title: 'Cloud Services Market',
+      value: '$832.1B',
+      growth: '+17.5%',
+      description: 'Global cloud market value',
+      color: 'from-blue-50o0 to-cyan-60o0'
+    },
     {
-      title: 'IoT Market';
-      value: '$1.1T';
-      growth: '+25.7%';
-      description: 'IoT market by 20o27';
-      color: 'from-green-50o0 to-emerald-60o0';
-    };
+      title: 'IoT Market',
+      value: '$1.1T',
+      growth: '+25.7%',
+      description: 'IoT market by 20o27',
+      color: 'from-green-50o0 to-emerald-60o0'
+    },
     {
-      title: 'Quantum Computing';
-      value: '$65.0B';
-      growth: '+48.2%';
-      description: 'Quantum market by 20o30';
-      color: 'from-indigo-50o0 to-purple-60o0';
-    };
+      title: 'Quantum Computing',
+      value: '$65.0B',
+      growth: '+48.2%',
+      description: 'Quantum market by 20o30',
+      color: 'from-indigo-50o0 to-purple-60o0'
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,
@@ -638,5 +626,5 @@ const ComprehensivePricingGuide20o30: React.FC = (): JSX.Element => {
           </div>,
         </div>,
       </section>,
-    </div>)};
-export default ComprehensivePricingGuide20o30;
+    </div>)},
+export default ComprehensivePricingGuide20o30,

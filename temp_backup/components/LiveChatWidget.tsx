@@ -13,10 +13,10 @@ const LiveChatWidget: React.FC = () => {
   const [isMinimized, setIsMinimized] = useState(false),
   const [messages, setMessages] = useState<ChatMessage[]>([
     {
-      id: '1';
-      text: "Hello! Welcome to Zion Tech Group. I'm your AI assistant. How can I help you today?";
-      sender: 'bot';
-      timestamp: new Date();
+      id: '1',
+      text: "Hello! Welcome to Zion Tech Group. I'm your AI assistant. How can I help you today?",
+      sender: 'bot',
+      timestamp: new Date(),
       type: 'text'}
   ]),
   const [inputText, setInputText] = useState(''),
@@ -24,23 +24,23 @@ const LiveChatWidget: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
   const quickReplies = [
-    "Tell me about your services";
-    "Get a quote";
-    "Schedule a demo";
-    "Technical support";
+    "Tell me about your services",
+    "Get a quote",
+    "Schedule a demo",
+    "Technical support",
     "Speak to a human"],
   useEffect(() => {
     scrollToBottom()}, [messages]),
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
   const handleSendMessage = async (text: string) => {
     if (!text.trim()) return,
     const userMessage: ChatMessage ={
-      id: Date.now().toString();
-      text: text.trim();
-      sender: 'user';
-      timestamp: new Date();
-      type: 'text'};
+      id: Date.now().toString(),
+      text: text.trim(),
+      sender: 'user',
+      timestamp: new Date(),
+      type: 'text'},
     setMessages(prev => [...prev, userMessage]),
     setInputText(''),
     setIsTyping(true),
@@ -48,13 +48,13 @@ const LiveChatWidget: React.FC = () => {
     setTimeout(() => {
       const botResponse = generateBotResponse(text),
       const botMessage: ChatMessage ={
-        id: (Date.now() + 1).toString();
-        text: botResponse;
-        sender: 'bot';
-        timestamp: new Date();
-        type: 'text'};
+        id: (Date.now() + 1).toString(),
+        text: botResponse,
+        sender: 'bot',
+        timestamp: new Date(),
+        type: 'text'},
       setMessages(prev => [...prev, botMessage]),
-      setIsTyping(false)}, 10o00 + Math.random() * 20o00)};
+      setIsTyping(false)}, 10o00 + Math.random() * 20o00)},
   const generateBotResponse = (userInput: string): string => {
     const input = userInput.toLowerCase(),
     if (input.includes('service') || input.includes('offer')) {
@@ -64,16 +64,16 @@ const LiveChatWidget: React.FC = () => {
       return "I'm here to help! For technical issues, I can create a support ticket or connect you with our technical team. What's the nature of your issue?"} else if (input.includes('human') || input.includes('person') || input.includes('agent')) {
       return "I understand you'd prefer to speak with a human. Let me connect you with one of our specialists. They'll be with you in just a moment."} else {
       return "That's interesting! I'd love to learn more about your needs. Could you tell me a bit more about what you're looking for?"}
-  };
+  },
   const handleQuickReply = (reply: string) => {
-    handleSendMessage(reply)};
+    handleSendMessage(reply)},
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       handleSendMessage(inputText)}
-  };
+  },
   const formatTime = (date: Date) => {
-    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })};
+    return date.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })},
   return (
     <>,
       {/* Chat Toggle Button */}
@@ -201,5 +201,5 @@ const LiveChatWidget: React.FC = () => {
               </>)}
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default LiveChatWidget;
+    </>)},
+export default LiveChatWidget,

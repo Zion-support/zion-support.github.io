@@ -10,11 +10,11 @@ interface PerformanceOptimizationOptions {
 ,
 export function usePerformanceOptimization(options: PerformanceOptimizationOptions ={}) {
   const {
-    enableIntersectionObserver = true;
-    enableResourceHints = true;
-    enablePrefetching = true;
-    enableLazyLoading = true;
-    enableDebouncing = true;
+    enableIntersectionObserver = true,
+    enableResourceHints = true,
+    enablePrefetching = true,
+    enableLazyLoading = true,
+    enableDebouncing = true,
     debounceDelay = 30o0} = options,
   const observersRef = useRef<Map<string IntersectionObserver>>(new Map()),
   const timeoutRefsRef = useRef<Map<string NodeJS.Timeout>>(new Map()),
@@ -22,12 +22,12 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
   useEffect(() => {
     if (!enableIntersectionObserver || typeof window === 'undefined') return,
     const createObserver = (
-      callback: IntersectionObserverCallback;
+      callback: IntersectionObserverCallback,
       options: IntersectionObserverInit ={}
     ): IntersectionObserver => {
       return new IntersectionObserver(callback, {
-        rootMargin: '50px';
-        threshold: 0.1;
+        rootMargin: '50px',
+        threshold: 0.1,
         ...options})}
 ,
     // Lazy load images,
@@ -88,22 +88,20 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
 ,
     // Preconnect to external domains,
     const externalDomains = [
-      'https://fonts.googleapis.com';
-      'https://fonts.gstatic.com';
+      'https: //fonts.googleapis.comhttps://fonts.gstatic.com'
     ],
     externalDomains.forEach((domain) => {
       addResourceHint(domain, 'preconnect')}),
     // DNS prefetch for external resources,
     const dnsDomains = [
-      'https://www.google-analytics.com';
-      'https://www.googletagmanager.com';
+      'https: //www.google-analytics.comhttps://www.googletagmanager.com'
     ],
     dnsDomains.forEach((domain) => {
       addResourceHint(domain, 'dns-prefetch')})}, [enableResourceHints]),
   // Debounced function utility,
   const debounce = useCallback(
     <T extends (...args: any[]) => any>(
-      func: T;
+      func: T,
       delay: number = debounceDelay): ((...args: Parameters<T>) => void) => {
       return (...args: Parameters<T>) => {
         const timeoutId = `debounce_${func.name}_${Date.now()}`,
@@ -117,12 +115,12 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
           func(...args),
           timeoutRefsRef.current.delete(func.name)}, delay),
         timeoutRefsRef.current.set(func.name, timeout)}
-    };
+    },
     [debounceDelay]),
   // Throttled function utility,
   const throttle = useCallback(
     <T extends (...args: any[]) => any>(
-      func: T;
+      func: T,
       delay: number = debounceDelay): ((...args: Parameters<T>) => void) => {
       let lastCall = 0,
       return (...args: Parameters<T>) => {
@@ -131,7 +129,7 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
           lastCall = now,
           func(...args)}
       }
-    };
+    },
     [debounceDelay]),
   // Performance monitoring utilities,
   const measurePerformance = useCallback((name: string, fn: () => void) => {
@@ -145,9 +143,9 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
     // // console.log(`Performance: ${name} took ${(end - start).toFixed(2)}ms`),
     // Send to analytics if available,
     if ((window as any).gtag) {
-      (window as any).gtag('event', 'performance_measure', {
-        event_category: 'Performance';
-        event_label: name;
+      (window as any).gtag('eventperformance_measure', {
+        event_category: 'Performance',
+        event_label: name,
         value: Math.round(end - start)})}
   }, []),
   // Memory usage monitoring,
@@ -172,9 +170,9 @@ export function usePerformanceOptimization(options: PerformanceOptimizationOptio
       observersRef.current.clear()}
   }, []),
   return {
-    debounce;
-    throttle;
-    measurePerformance;
+    debounce,
+    throttle,
+    measurePerformance,
     getMemoryUsage}
 }
 ,

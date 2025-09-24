@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket;
-  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart;
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket,
+  Loader2, ChevronDown, Zap, Globe, Lock, Cpu, Database, Cloud, Palette, Heart,
   Phone, Mail, MapPin, Search, Grid, List, Atom, Target, Sparkles} from 'lucide-react',
 import Link from 'next/link',
 // Import our new innovative services,
@@ -45,7 +45,7 @@ const Homepage20o45: React.FC = () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               setActiveSection(entry.target.id)}
-          })};
+          })},
         { threshold: 0.3, rootMargin: '-10o0px' }
       ),
       const sections = document.querySelectorAll('section[id]'),
@@ -53,31 +53,28 @@ const Homepage20o45: React.FC = () => {
       return () => observer.disconnect()}
   }, []),
   const fadeInUp ={
-    initial: { opacity: 0, y: 60 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 60 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.6, ease: "easeOut" }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const backgroundVariants ={
-    initial: { opacity: 0, scale: 0.8 };
-    animate: { opacity: 1, scale: 1 };
+    initial: { opacity: 0, scale: 0.8 },
+    animate: { opacity: 1, scale: 1 },
     transition: { duration: 1.2, ease: "easeOut" }
-  };
+  },
   const getColorClasses = (index: number) => {
     const colors = [
-      'from-cyan-40o0 to-blue-50o0';
-      'from-purple-40o0 to-pink-50o0';
-      'from-emerald-40o0 to-teal-50o0';
-      'from-orange-40o0 to-red-50o0';
-      'from-indigo-40o0 to-purple-50o0';
-      'from-yellow-40o0 to-orange-50o0'],
-    return colors[index % colors.length]};
+      'from-cyan-40o0 to-blue-50o0from-purple-40o0 to-pink-50o0',
+      'from-emerald-40o0 to-teal-50o0from-orange-40o0 to-red-50o0',
+      'from-indigo-40o0 to-purple-50o0from-yellow-40o0 to-orange-50o0'],
+    return colors[index % colors.length]},
   if (isLoading) {
     return (
       <div className="min-h-screen bg-black flex items-center justify-center">,
@@ -97,34 +94,34 @@ const Homepage20o45: React.FC = () => {
             <motion.div,
               className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-lg",
               animate={{
-                rotate: [0, 360];
-                scale: [1, 1.1, 1];
+                rotate: [0, 360],
+                scale: [1, 1.1, 1],
                 opacity: [0.3, 0.6, 0.3]}}
               transition={{
-                duration: 8;
-                repeat: Infinity;
+                duration: 8,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 rounded-full",
               animate={{
-                rotate: [360, 0];
-                scale: [1, 1.2, 1];
+                rotate: [360, 0],
+                scale: [1, 1.2, 1],
                 opacity: [0.3, 0.7, 0.3]}}
               transition={{
-                duration: 6;
-                repeat: Infinity;
+                duration: 6,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
             <motion.div,
               className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/20 transform rotate-45",
               animate={{
-                rotate: [45, 40o5];
-                scale: [1, 1.15, 1];
+                rotate: [45, 40o5],
+                scale: [1, 1.15, 1],
                 opacity: [0.3, 0.5, 0.3]}}
               transition={{
-                duration: 10;
-                repeat: Infinity;
+                duration: 10,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
           </div>,
@@ -212,40 +209,40 @@ const Homepage20o45: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-12 h-12"  />;
-                  title: "AI & Consciousness";
-                  description: "Revolutionary AI platforms with emotional intelligence and autonomous operations";
-                  color: "from-cyan-40o0 to-blue-50o0";
-                  href: "/ai-services"};
+                  icon: <Brain className="w-12 h-12"  />,
+                  title: "AI & Consciousness",
+                  description: "Revolutionary AI platforms with emotional intelligence and autonomous operations",
+                  color: "from-cyan-40o0 to-blue-50o0",
+                  href: "/ai-services"},
                 {
-                  icon: <Atom className="w-12 h-12"  />;
-                  title: "Quantum Technology";
-                  description: "Breakthrough quantum computing solutions for next-generation applications";
-                  color: "from-purple-40o0 to-pink-50o0";
-                  href: "/quantum-services"};
+                  icon: <Atom className="w-12 h-12"  />,
+                  title: "Quantum Technology",
+                  description: "Breakthrough quantum computing solutions for next-generation applications",
+                  color: "from-purple-40o0 to-pink-50o0",
+                  href: "/quantum-services"},
                 {
-                  icon: <Rocket className="w-12 h-12"  />;
-                  title: "Space Technology";
-                  description: "Advanced space exploration and resource management platforms";
-                  color: "from-emerald-40o0 to-teal-50o0";
-                  href: "/space-technology"};
+                  icon: <Rocket className="w-12 h-12"  />,
+                  title: "Space Technology",
+                  description: "Advanced space exploration and resource management platforms",
+                  color: "from-emerald-40o0 to-teal-50o0",
+                  href: "/space-technology"},
                 {
-                  icon: <Shield className="w-12 h-12"  />;
-                  title: "Enterprise Solutions";
-                  description: "Advanced infrastructure and security solutions for modern enterprises";
-                  color: "from-orange-40o0 to-red-50o0";
-                  href: "/enterprise-solutions"};
+                  icon: <Shield className="w-12 h-12"  />,
+                  title: "Enterprise Solutions",
+                  description: "Advanced infrastructure and security solutions for modern enterprises",
+                  color: "from-orange-40o0 to-red-50o0",
+                  href: "/enterprise-solutions"},
                 {
-                  icon: <Target className="w-12 h-12"  />;
-                  title: "Micro SAAS";
-                  description: "Innovative business solutions that drive growth and efficiency";
-                  color: "from-indigo-40o0 to-purple-50o0";
-                  href: "/micro-saas"};
+                  icon: <Target className="w-12 h-12"  />,
+                  title: "Micro SAAS",
+                  description: "Innovative business solutions that drive growth and efficiency",
+                  color: "from-indigo-40o0 to-purple-50o0",
+                  href: "/micro-saas"},
                 {
-                  icon: <Sparkles className="w-12 h-12"  />;
-                  title: "Emerging Tech";
-                  description: "Cutting-edge technologies that define the future of innovation";
-                  color: "from-yellow-40o0 to-orange-50o0";
+                  icon: <Sparkles className="w-12 h-12"  />,
+                  title: "Emerging Tech",
+                  description: "Cutting-edge technologies that define the future of innovation",
+                  color: "from-yellow-40o0 to-orange-50o0",
                   href: "/emerging-tech"}
               ].map((service, index) => (
                 <motion.div,
@@ -373,5 +370,5 @@ const Homepage20o45: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default Homepage20o45;
+    </Layout>)},
+export default Homepage20o45,

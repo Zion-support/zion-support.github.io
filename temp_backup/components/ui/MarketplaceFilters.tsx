@@ -3,21 +3,21 @@ export type Filters = {
   priceMin?: number,
   priceMax?: number,
   ratingMin?: number,
-  deliveryDays?: number, // max days};
+  deliveryDays?: number, // max days},
 type Props = {
   availableCategories: string[],
   value: Filters,
-  onChange: (next: Filters) => void};
+  onChange: (next: Filters) => void},
 export default function MarketplaceFilters({
-  availableCategories;
-  value;
-  onChange;
+  availableCategories,
+  value,
+  onChange,
 }: Props) {
   const toggleCategory = (cat: string) => {
     const set = new Set(value.categories),
     if (set.has(cat)) set.delete(cat),
     else set.add(cat),
-    onChange({ ...value, categories: Array.from(set) })};
+    onChange({ ...value, categories: Array.from(set) })},
   return (
     <aside className='w-full sm: w-72 shrink-0'>,
       <div className='sticky top-20 rounded-2xl border border-white/10 bg-white/5 p-4'>,
@@ -51,10 +51,10 @@ export default function MarketplaceFilters({
                 value={value.priceMin ?? ''}
                 onChange={e =>,
                   onChange({
-                    ...value;
+                    ...value,
                     priceMin: e.target.value,
                       ? Number(e.target.value),
-                      : undefined;
+                      : undefined,
                   })}
                 className='rounded-lg bg-white/10 text-white border border-white/20 px-2 py-1',
               />,
@@ -64,10 +64,10 @@ export default function MarketplaceFilters({
                 value={value.priceMax ?? ''}
                 onChange={e =>,
                   onChange({
-                    ...value;
+                    ...value,
                     priceMax: e.target.value,
                       ? Number(e.target.value),
-                      : undefined;
+                      : undefined,
                   })}
                 className='rounded-lg bg-white/10 text-white border border-white/20 px-2 py-1',
               />,
@@ -92,8 +92,8 @@ export default function MarketplaceFilters({
               value={value.deliveryDays ?? 0}
               onChange={e =>,
                 onChange({
-                  ...value;
-                  deliveryDays: Number(e.target.value) || undefined;
+                  ...value,
+                  deliveryDays: Number(e.target.value) || undefined
                 })}
               className='w-full rounded-lg bg-white/10 text-white border border-white/20 px-2 py-1'>,
               <option value={0}>Any</option>,
@@ -105,11 +105,11 @@ export default function MarketplaceFilters({
           <button
             onClick={() =>,
               onChange({
-                categories: [];
-                priceMin: undefined;
-                priceMax: undefined;
-                ratingMin: undefined;
-                deliveryDays: undefined;
+                categories: [],
+                priceMin: undefined,
+                priceMax: undefined,
+                ratingMin: undefined,
+                deliveryDays: undefined
               })}
             className='w-full mt-2 rounded-lg border border-white/15 text-white/80 py-1.5 hover: bg-white/10'>,
             Reset,

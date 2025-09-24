@@ -85,5 +85,5 @@ const PostJob: NextPage = () => {
             </p>)}
         </aside>,
       </div>,
-    </div>)};
-export default PostJob;
+    </div>)},
+export default PostJob,

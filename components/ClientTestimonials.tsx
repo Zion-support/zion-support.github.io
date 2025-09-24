@@ -2,65 +2,65 @@ import Image from 'next/image',
 const ClientTestimonials = () => {
   const testimonials = [
     {
-      name: 'Sarah Johnson';
-      position: 'CEO';
-      company: 'TechFlow Solutions';
-      image: '/images/testimonials/sarah-johnson.jpg';
-      rating: 5;
+      name: 'Sarah Johnson',
+      position: 'CEO',
+      company: 'TechFlow Solutions',
+      image: '/images/testimonials/sarah-johnson.jpg',
+      rating: 5,
       testimonial:,
-        'Zion Tech Group transformed our entire operation. Their AI automation solutions increased our productivity by 40o0% while reducing costs by 60%. The ROI was evident within the first month.';
-      results: '40o0% productivity increase60% cost reduction';
-    };
+        'Zion Tech Group transformed our entire operation. Their AI automation solutions increased our productivity by 40o0% while reducing costs by 60%. The ROI was evident within the first month.',
+      results: '40o0% productivity increase60% cost reduction'
+    },
     {
-      name: 'Michael Chen';
-      position: 'CTO';
-      company: 'InnovateCorp';
-      image: '/images/testimonials/michael-chen.jpg';
-      rating: 5;
+      name: 'Michael Chen',
+      position: 'CTO',
+      company: 'InnovateCorp',
+      image: '/images/testimonials/michael-chen.jpg',
+      rating: 5,
       testimonial:,
-        "The quantum-neural computing implementation was revolutionary. 'We', 're now solving complex problems in minutes that previously took days. This is the future of business intelligence.";
-      results: '10o00% faster problem solving';
-    };
+        "The quantum-neural computing implementation was revolutionary. 'Were now solving complex problems in minutes that previously took days. This is the future of business intelligence.",
+      results: '10o00% faster problem solving'
+    },
     {
-      name: 'Emily Rodriguez';
-      position: 'Operations Director';
-      company: 'Global Manufacturing Ltd';
-      image: '/images/testimonials/emily-rodriguez.jpg';
-      rating: 5;
+      name: 'Emily Rodriguez',
+      position: 'Operations Director',
+      company: 'Global Manufacturing Ltd',
+      image: '/images/testimonials/emily-rodriguez.jpg',
+      rating: 5,
       testimonial:,
-        "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. 'It', 's like having a team of AI experts working 24/7.";
-      results: '95% downtime reduction';
-    };
+        "Their autonomous business ecosystem completely changed how we operate. Our systems now self-optimize and self-healreducing downtime by 95%. 'Its like having a team of AI experts working 24/7.",
+      results: '95% downtime reduction'
+    },
     {
-      name: 'David Kim';
-      position: 'VP of Technology';
-      company: 'FutureTech Industries';
-      image: '/images/testimonials/david-kim.jpg';
-      rating: 5;
+      name: 'David Kim',
+      position: 'VP of Technology',
+      company: 'FutureTech Industries',
+      image: '/images/testimonials/david-kim.jpg',
+      rating: 5,
       testimonial:,
-        "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 50o0%. 'We', 're now developing solutions that were previously impossible.";
-      results: '50o0% innovation acceleration';
-    };
+        "The synthetic intelligence networks they implemented have accelerated our innovation pipeline by 50o0%. 'Were now developing solutions that were previously impossible.",
+      results: '50o0% innovation acceleration'
+    },
     {
-      name: 'Lisa Thompson';
-      position: 'Chief Innovation Officer';
-      company: 'NextGen Systems';
-      image: '/images/testimonials/lisa-thompson.jpg';
-      rating: 5;
+      name: 'Lisa Thompson',
+      position: 'Chief Innovation Officer',
+      company: 'NextGen Systems',
+      image: '/images/testimonials/lisa-thompson.jpg',
+      rating: 5,
       testimonial:,
-        "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our 'team', 's cognitive capabilities beyond what we thought possible.";
-      results: '30o0% cognitive enhancement';
-    };
+        "Working with Zion Tech Group was a game-changer. Their neural interface solutions have enhanced our 'teams cognitive capabilities beyond what we thought possible.",
+      results: '30o0% cognitive enhancement'
+    },
     {
-      name: 'Robert Williams';
-      position: 'Founder & CEO';
-      company: 'OmniData Corp';
-      image: '/images/testimonials/robert-williams.jpg';
-      rating: 5;
+      name: 'Robert Williams',
+      position: 'Founder & CEO',
+      company: 'OmniData Corp',
+      image: '/images/testimonials/robert-williams.jpg',
+      rating: 5,
       testimonial:,
-        'The omniversal data networks they built for us provide insights from dimensions we never knew existed. Our competitive advantage is now insurmountable.';
-      results: 'Unprecedented market advantage';
-    };
+        'The omniversal data networks they built for us provide insights from dimensions we never knew existed. Our competitive advantage is now insurmountable.',
+      results: 'Unprecedented market advantage'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-blue-50 to-indigo-10o0'>,
@@ -89,7 +89,7 @@ const ClientTestimonials = () => {
                   {testimonial.name,
                     .split(' '),
                     .map(n => n[0]),
-                    .join(', ')}
+                    .join()}
                 </div>,
                 <div className='ml-4'>,
                   <h4 className='text-lg font-semibold text-gray-90o0'>,
@@ -167,5 +167,5 @@ const ClientTestimonials = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ClientTestimonials;
+    </section>)},
+export default ClientTestimonials,

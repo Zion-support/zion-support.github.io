@@ -1,56 +1,56 @@
 import {
-  Zap;
-  Brain;
-  Shield;
-  Cloud;
-  Database;
-  Users;
-  ArrowRight;
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Database,
+  Users,
+  ArrowRight,
 } from 'lucide-react',
 export const QuickAccess = () => {
   const quickLinks = [
     {
-      title: 'AI Solutions';
-      description: 'Transform your business with AI';
-      icon: Brain;
-      href: '/services/ai-solutions';
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+      title: 'AI Solutions',
+      description: 'Transform your business with AI',
+      icon: Brain,
+      href: '/services/ai-solutions',
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'Cybersecurity';
-      description: 'Protect your digital assets';
-      icon: Shield;
-      href: '/services/cybersecurity';
-      color: 'from-red-50o0 to-orange-50o0';
-    };
+      title: 'Cybersecurity',
+      description: 'Protect your digital assets',
+      icon: Shield,
+      href: '/services/cybersecurity',
+      color: 'from-red-50o0 to-orange-50o0'
+    },
     {
-      title: 'Cloud & DevOps';
-      description: 'Scale your infrastructure';
-      icon: Cloud;
-      href: '/services/cloud-devops';
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+      title: 'Cloud & DevOps',
+      description: 'Scale your infrastructure',
+      icon: Cloud,
+      href: '/services/cloud-devops',
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Data Analytics';
-      description: 'Unlock insights from data';
-      icon: Database;
-      href: '/solutions/ai-business-intelligence';
-      color: 'from-green-50o0 to-teal-50o0';
-    };
+      title: 'Data Analytics',
+      description: 'Unlock insights from data',
+      icon: Database,
+      href: '/solutions/ai-business-intelligence',
+      color: 'from-green-50o0 to-teal-50o0'
+    },
     {
-      title: 'Team & Talent';
-      description: 'Find expert professionals';
-      icon: Users;
-      href: '/team';
-      color: 'from-indigo-50o0 to-purple-50o0';
-    };
+      title: 'Team & Talent',
+      description: 'Find expert professionals',
+      icon: Users,
+      href: '/team',
+      color: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      title: 'Get Started';
-      description: 'Start your project today';
-      icon: Zap;
-      href: '/contact';
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+      title: 'Get Started',
+      description: 'Start your project today',
+      icon: Zap,
+      href: '/contact',
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
   ],
   return (
     <section className='py-16 bg-slate-80o0/30'>,
@@ -94,4 +94,4 @@ export const QuickAccess = () => {
           </a>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

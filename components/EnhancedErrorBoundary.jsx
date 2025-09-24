@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 class EnhancedErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false, error: null, errorInfo: null };
+    this.state = { hasError: false, error: null, errorInfo: null },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error: error;
+      error: error,
       errorInfo: errorInfo}),
     // Log error to analytics or error reporting service,
     if (typeof window !== 'undefined' && window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.toString();
+      window.gtag('eventexception', {
+        description: error.toString(),
         fatal: false})}
   }
 ,
@@ -73,4 +73,4 @@ class EnhancedErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-export default EnhancedErrorBoundary;
+export default EnhancedErrorBoundary,

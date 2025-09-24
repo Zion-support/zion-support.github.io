@@ -14,15 +14,15 @@ const path = require('path'),
 const { spawn } = require('child_process'),
 // Configure logging,
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-monitor' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-monitor' },
   transports: [
-    new winston.transports.File({ filename: 'logs/monitor.log' });
-    new winston.transports.File({ filename: 'logs/monitor-error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/monitor.log' }),
+    new winston.transports.File({ filename: 'logs/monitor-error.log', level: 'error' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -33,18 +33,18 @@ class AutomationMonitor {
     this.config ={
       healthCheckInterval: 30o0000, // 5 minutes,
       fixCheckInterval: 90o0000,    // 15 minutes,
-      maxConsecutiveFailures: 3;
-      logsDir: path.join(__dirname, '../logs');
-      statusFile: path.join(__dirname, '../logs/monitor-status.json')};
+      maxConsecutiveFailures: 3,
+      logsDir: path.join(__dirname, '../logs'),
+      statusFile: path.join(__dirname, '../logs/monitor-status.json')},
     this.status ={
-      isRunning: false;
-      startTime: null;
-      lastHealthCheck: null;
-      lastFixCheck: null;
-      consecutiveFailures: 0;
-      totalHealthChecks: 0;
-      totalFixes: 0;
-      errors: []};
+      isRunning: false,
+      startTime: null,
+      lastHealthCheck: null,
+      lastFixCheck: null,
+      consecutiveFailures: 0,
+      totalHealthChecks: 0,
+      totalFixes: 0,
+      errors: []},
     this.healthCheckProcess = null,
     this.fixProcess = null,
     this.loadStatus()}
@@ -91,15 +91,15 @@ class AutomationMonitor {
         logger.error('❌ Health check error:', error),
         this.status.consecutiveFailures++,
         this.status.errors.push({
-          timestamp: new Date().toISOString();
-          type: 'health_check_error';
+          timestamp: new Date().toISOString(),
+          type: 'health_check_error',
           error: error.message}),
         this.saveStatus()}
 ,
       // Schedule next health check,
       if (this.status.isRunning) {
         setTimeout(runHealthCheck, this.config.healthCheckInterval)}
-    };
+    },
     // Start the first health check,
     runHealthCheck()}
 ,
@@ -120,15 +120,15 @@ class AutomationMonitor {
         this.saveStatus()} catch (error) {
         logger.error('❌ Fix check error:', error),
         this.status.errors.push({
-          timestamp: new Date().toISOString();
-          type: 'fix_check_error';
+          timestamp: new Date().toISOString(),
+          type: 'fix_check_error',
           error: error.message}),
         this.saveStatus()}
 ,
       // Schedule next fix check,
       if (this.status.isRunning) {
         setTimeout(runFixCheck, this.config.fixCheckInterval)}
-    };
+    },
     // Start the first fix check,
     runFixCheck()}
 ,
@@ -187,15 +187,15 @@ class AutomationMonitor {
     process.on('uncaughtException', (error) => {
       logger.error('❌ Uncaught exception:', error),
       this.status.errors.push({
-        timestamp: new Date().toISOString();
-        type: 'uncaught_exception';
+        timestamp: new Date().toISOString(),
+        type: 'uncaught_exception',
         error: error.message}),
       this.saveStatus()}),
     process.on('unhandledRejection', (reason, promise) => {
       logger.error('❌ Unhandled rejection:', reason),
       this.status.errors.push({
-        timestamp: new Date().toISOString();
-        type: 'unhandled_rejection';
+        timestamp: new Date().toISOString(),
+        type: 'unhandled_rejection',
         error: reason.toString()}),
       this.saveStatus()})}
 ,
@@ -215,17 +215,17 @@ class AutomationMonitor {
 ,
   getStatus() {
     return {
-      ...this.status;
-      uptime: this.status.startTime ? Date.now() - new Date(this.status.startTime).getTime() : 0;
-      isHealthy: this.status.consecutiveFailures < this.config.maxConsecutiveFailures};
+      ...this.status,
+      uptime: this.status.startTime ? Date.now() - new Date(this.status.startTime).getTime() : 0,
+      isHealthy: this.status.consecutiveFailures < this.config.maxConsecutiveFailures},
   }
 ,
   loadStatus() {
     try {
       if (fs.existsSync(this.config.statusFile)) {
         this.status ={
-          ...this.status;
-          ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))};
+          ...this.status,
+          ...JSON.parse(fs.readFileSync(this.config.statusFile, 'utf8'))},
       }
     } catch (error) {
       logger.warn('Could not load status file:', error.message)}

@@ -1,36 +1,36 @@
-import React from 'react';
+import React from 'react',
 const TechnologyStack: React.FC = () => {
   const technologies = [
     {
-      name: 'Next.js';
-      category: 'Framework';
-      description: 'React framework for production';
-    };
+      name: 'Next.js',
+      category: 'Framework',
+      description: 'React framework for production'
+    },
     {
-      name: 'React';
-      category: 'Library';
-      description: 'JavaScript library for building user interfaces';
-    };
+      name: 'React',
+      category: 'Library',
+      description: 'JavaScript library for building user interfaces'
+    },
     {
-      name: 'TypeScript';
-      category: 'Language';
-      description: 'Typed superset of JavaScript';
-    };
+      name: 'TypeScript',
+      category: 'Language',
+      description: 'Typed superset of JavaScript'
+    },
     {
-      name: 'Tailwind CSS';
-      category: 'Styling';
-      description: 'Utility-first CSS framework';
-    };
+      name: 'Tailwind CSS',
+      category: 'Styling',
+      description: 'Utility-first CSS framework'
+    },
     {
-      name: 'Node.js';
-      category: 'Runtime';
-      description: 'JavaScript runtime for server-side development';
-    };
+      name: 'Node.js',
+      category: 'Runtime',
+      description: 'JavaScript runtime for server-side development'
+    },
     {
-      name: 'AI/ML';
-      category: 'Technology';
-      description: 'Artificial Intelligence and Machine Learning';
-    };
+      name: 'AI/ML',
+      category: 'Technology',
+      description: 'Artificial Intelligence and Machine Learning'
+    },
   ],
   return (
     <section className='py-16 bg-gray-50'>,
@@ -49,5 +49,5 @@ const TechnologyStack: React.FC = () => {
             </div>))}
         </div>,
       </div>,
-    </section>)};
-export default TechnologyStack;
+    </section>)},
+export default TechnologyStack,

@@ -6,9 +6,9 @@ import { toast } from '@/hooks/use-toast',
 // Allow either UserProfile or UserDetails,
 type UserWithProfile = UserProfile | UserDetails | null,
 export function useMessagingRealtime(
-  user: UserWithProfile;
-  activeConversation: Conversation | null;
-  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void;
+  user: UserWithProfile,
+  activeConversation: Conversation | null,
+  setActiveMessages: (updater: (prev: Message[]) => Message[]) => void,
   fetchConversations: () => Promise<void>) {
   // Setup real-time subscription when user is logged in,
   useEffect(() => {
@@ -17,13 +17,13 @@ export function useMessagingRealtime(
     const subscription = supabase,
       .channel('messages'),
       .on(
-        'postgres_changes';
+        'postgres_changes',
         {
-          event: 'INSERT';
-          schema: 'public';
-          table: 'messages';
-          filter: `recipient_id=eq.${user.id}`;
-        };
+          event: 'INSERT',
+          schema: 'public',
+          table: 'messages',
+          filter: `recipient_id=eq.${user.id}`,
+        },
         payload => {
           // Update messages if the conversation is selected,
           if (
@@ -35,14 +35,14 @@ export function useMessagingRealtime(
           fetchConversations(),
           // Show toast notification for new message,
           toast({
-            title: `New message from ${payload.new.sender_name || 'Someone'}`;
+            title: `New message from ${payload.new.sender_name || 'Someone'}`,
             description:,
               payload.new.content.substring(0, 50) +,
-              (payload.new.content.length > 50 ? '...' : '');
+              (payload.new.content.length > 50 ? '...' : ''),
           })}
       ),
       .subscribe(),
     return () => {
-      supabase.removeChannel(subscription)};
+      supabase.removeChannel(subscription)},
   }, [user, activeConversation, fetchConversations, setActiveMessages])}
 ,

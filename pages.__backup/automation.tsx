@@ -2,24 +2,24 @@ import Head from 'next/head',
 export default function AutomationPage() {
   const automationFeatures = [
     {
-      title: "Autonomous Cloud Management";
-      description: "Self-managing cloud infrastructure that monitorscalesand optimizes automatically.";
-      icon: "☁️";
-      benefits: ["24/7 monitoring"Auto-scaling"Cost optimization"]};
+      title: "Autonomous Cloud Management",
+      description: "Self-managing cloud infrastructure that monitorscalesand optimizes automatically.",
+      icon: "☁️",
+      benefits: ["24/7 monitoring"Auto-scaling"Cost optimization"]},
     {
-      title: "AI Content Generation";
-      description: "Automated content creation that learns from your brand and generates relevant material.";
-      icon: "✍️";
-      benefits: ["SEO optimization"Brand consistency"Scalable content"]};
+      title: "AI Content Generation",
+      description: "Automated content creation that learns from your brand and generates relevant material.",
+      icon: "✍️",
+      benefits: ["SEO optimization"Brand consistency"Scalable content"]},
     {
-      title: "Intelligent DevOps";
-      description: "Self-healing CI/CD pipelines that detect and fix issues automatically.";
-      icon: "🔄";
-      benefits: ["Error detection"Auto-fixing"Deployment optimization"]};
+      title: "Intelligent DevOps",
+      description: "Self-healing CI/CD pipelines that detect and fix issues automatically.",
+      icon: "🔄",
+      benefits: ["Error detection"Auto-fixing"Deployment optimization"]},
     {
-      title: "Smart Security";
-      description: "Proactive security systems that identify and respond to threats in real-time.";
-      icon: "🔒";
+      title: "Smart Security",
+      description: "Proactive security systems that identify and respond to threats in real-time.",
+      icon: "🔒",
       benefits: ["Threat detection"Auto-response"Vulnerability scanning"]}
   ],
   return (

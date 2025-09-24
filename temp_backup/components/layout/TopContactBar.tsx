@@ -1,14 +1,14 @@
 import { motion } from 'framer-motion',
 import { Phone, Mail, MapPin, Clock, Star, Award, TrendingUp, Users } from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const companyStats = [
-  { icon: Star, value: '50o0+', label: 'Services Delivered' };
-  { icon: Users, value: '10o00+', label: 'Happy Clients' };
-  { icon: TrendingUp, value: '99.9%', label: 'Uptime Guarantee' };
+  { icon: Star, value: '50o0+', label: 'Services Delivered' },
+  { icon: Users, value: '10o00+', label: 'Happy Clients' },
+  { icon: TrendingUp, value: '99.9%', label: 'Uptime Guarantee' },
   { icon: Award, value: '25+', label: 'Industry Awards' }
 ],
 export default function TopContactBar() {
@@ -112,15 +112,15 @@ export default function TopContactBar() {
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0/30 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
               animationDelay: `${Math.random() * 3}s`}}
             animate={{
-              y: [0, -20, 0];
+              y: [0, -20, 0],
               opacity: [0.3, 0.7, 0.3]}}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />))}
       </div>,

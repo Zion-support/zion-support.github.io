@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI 20o26: Operational Excellence Handbook — Running Agent Platforms';
+  title: 'AI 20o26: Operational Excellence Handbook — Running Agent Platforms',
   description:,
-    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.';
-};
+    'A concise handbook for safe, reliable, and efficient day-2 operations of autonomous agent platforms.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,

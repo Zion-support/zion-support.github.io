@@ -1,14 +1,14 @@
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -32,15 +32,15 @@ class TodoQueueManager extends EventEmitter {
   constructor(config ={}) {
     super(),
     this.config ={
-      dataDir: config.dataDir || './data';
-      todoFile: config.todoFile || './data/todos.json';
-      queueFile: config.queueFile || './data/queue.json';
-      projectsFile: config.projectsFile || './data/projects.json';
-      autoAssign: config.autoAssign !== false;
-      autoPrioritize: config.autoPrioritize !== false;
-      maxQueueSize: config.maxQueueSize || 20o0;
-      maxTodosPerProject: config.maxTodosPerProject || 50;
-      ...config};
+      dataDir: config.dataDir || './data',
+      todoFile: config.todoFile || './data/todos.json',
+      queueFile: config.queueFile || './data/queue.json',
+      projectsFile: config.projectsFile || './data/projects.json',
+      autoAssign: config.autoAssign !== false,
+      autoPrioritize: config.autoPrioritize !== false,
+      maxQueueSize: config.maxQueueSize || 20o0,
+      maxTodosPerProject: config.maxTodosPerProject || 50,
+      ...config},
     this.isRunning = false,
     this.todos = new Map(),
     this.queue = [],
@@ -89,7 +89,7 @@ class TodoQueueManager extends EventEmitter {
       // Load projects,
       try {
         const projectsData = await fs.readFile(
-          this.config.projectsFile;
+          this.config.projectsFile,
           'utf8'),
         const projects = JSON.parse(projectsData),
         this.projects = new Map(Object.entries(projects)),
@@ -142,21 +142,21 @@ class TodoQueueManager extends EventEmitter {
 ,
   async addTodo(todoData) {
     const todo ={
-      id: this.generateId();
-      title: todoData.title || 'Untitled Todo';
-      description: todoData.description || '';
-      priority: todoData.priority || 'medium';
-      category: todoData.category || 'general';
-      project: todoData.project || 'default';
-      assignee: todoData.assignee || null;
-      status: 'pending';
-      createdAt: new Date().toISOString();
-      updatedAt: new Date().toISOString();
-      dueDate: todoData.dueDate || null;
-      tags: todoData.tags || [];
-      source: todoData.source || 'manual';
-      chatId: todoData.chatId || null;
-      ...todoData};
+      id: this.generateId(),
+      title: todoData.title || 'Untitled Todo',
+      description: todoData.description || '',
+      priority: todoData.priority || 'medium',
+      category: todoData.category || 'general',
+      project: todoData.project || 'default',
+      assignee: todoData.assignee || null,
+      status: 'pending',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      dueDate: todoData.dueDate || null,
+      tags: todoData.tags || [],
+      source: todoData.source || 'manual',
+      chatId: todoData.chatId || null,
+      ...todoData},
     // Auto-assign if enabled,
     if (this.config.autoAssign && !todo.assignee) {
       todo.assignee = this.getOptimalAssignee(todo)}
@@ -173,21 +173,21 @@ class TodoQueueManager extends EventEmitter {
 ,
   async addToQueue(itemData) {
     const item ={
-      id: this.generateId();
-      title: itemData.title || 'Untitled Queue Item';
-      description: itemData.description || '';
-      type: itemData.type || 'task';
-      category: itemData.category || 'general';
-      project: itemData.project || 'default';
-      priority: itemData.priority || 'medium';
-      status: 'queued';
-      createdAt: new Date().toISOString();
-      updatedAt: new Date().toISOString();
-      source: itemData.source || 'manual';
-      chatId: itemData.chatId || null;
-      dependencies: itemData.dependencies || [];
-      estimatedTime: itemData.estimatedTime || null;
-      ...itemData};
+      id: this.generateId(),
+      title: itemData.title || 'Untitled Queue Item',
+      description: itemData.description || '',
+      type: itemData.type || 'task',
+      category: itemData.category || 'general',
+      project: itemData.project || 'default',
+      priority: itemData.priority || 'medium',
+      status: 'queued',
+      createdAt: new Date().toISOString(),
+      updatedAt: new Date().toISOString(),
+      source: itemData.source || 'manual',
+      chatId: itemData.chatId || null,
+      dependencies: itemData.dependencies || [],
+      estimatedTime: itemData.estimatedTime || null,
+      ...itemData},
     // Check queue size limit,
     if (this.queue.length >= this.config.maxQueueSize) {
       logger.warn('⚠️ Queue is full, removing lowest priority item'),
@@ -204,7 +204,7 @@ class TodoQueueManager extends EventEmitter {
     logger.info(`🔄 Processing ${this.queue.length} items in queue...`),
     // Sort by priority and creation time,
     this.queue.sort((a, b) => {
-      const priorityOrder ={ critical: 0, high: 1, medium: 2, low: 3 };
+      const priorityOrder ={ critical: 0, high: 1, medium: 2, low: 3 },
       const aPriority = priorityOrder[a.priority] || 2,
       const bPriority = priorityOrder[b.priority] || 2,
       if (aPriority !== bPriority) {
@@ -237,14 +237,14 @@ class TodoQueueManager extends EventEmitter {
       // Convert to todo if actionable,
       if (this.isActionable(item)) {
         const todo = await this.addTodo({
-          title: item.title;
-          description: item.description;
-          priority: item.priority;
-          category: item.category;
-          project: item.project;
-          type: item.type;
-          source: 'queue_processing';
-          chatId: item.chatId;
+          title: item.title,
+          description: item.description,
+          priority: item.priority,
+          category: item.category,
+          project: item.project,
+          type: item.type,
+          source: 'queue_processing',
+          chatId: item.chatId,
           estimatedTime: item.estimatedTime}),
         item.status = 'converted',
         item.convertedTo = todo.id} else {
@@ -259,11 +259,9 @@ class TodoQueueManager extends EventEmitter {
 ,
   isActionable(item) {
     const actionableTypes = [
-      'task';
-      'bug';
-      'feature';
-      'improvement';
-      'refactor';
+      'taskbug',
+      'featureimprovement',
+      'refactor',
     ],
     return actionableTypes.includes(item.type)}
 ,
@@ -272,7 +270,7 @@ class TodoQueueManager extends EventEmitter {
     const assignees = Array.from(this.assignees),
     if (assignees.length === 0) return null,
     // Find assignee with least pending todos,
-    const assigneeWorkload ={};
+    const assigneeWorkload ={},
     for (const assignee of assignees) {
       assigneeWorkload[assignee] = 0}
 ,
@@ -344,7 +342,7 @@ class TodoQueueManager extends EventEmitter {
 ,
   removeLowestPriorityItem() {
     if (this.queue.length === 0) return,
-    const priorityOrder ={ critical: 0, high: 1, medium: 2, low: 3 };
+    const priorityOrder ={ critical: 0, high: 1, medium: 2, low: 3 },
     let lowestIndex = 0,
     let lowestPriority = 3,
     for (let i = 0, i < this.queue.length, i++) {
@@ -359,80 +357,80 @@ class TodoQueueManager extends EventEmitter {
 ,
   async generateReport() {
     const report ={
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       todos: {
-        total: this.todos.size;
-        byPriority: this.getTodosByPriority();
-        byStatus: this.getTodosByStatus();
-        byCategory: this.getTodosByCategory();
-        byProject: this.getTodosByProject();
-        byAssignee: this.getTodosByAssignee()};
+        total: this.todos.size,
+        byPriority: this.getTodosByPriority(),
+        byStatus: this.getTodosByStatus(),
+        byCategory: this.getTodosByCategory(),
+        byProject: this.getTodosByProject(),
+        byAssignee: this.getTodosByAssignee()},
       queue: {
-        total: this.queue.length;
-        byType: this.getQueueByType();
-        byStatus: this.getQueueByStatus();
-        byPriority: this.getQueueByPriority()};
+        total: this.queue.length,
+        byType: this.getQueueByType(),
+        byStatus: this.getQueueByStatus(),
+        byPriority: this.getQueueByPriority()},
       projects: {
-        total: this.projects.size;
-        list: Array.from(this.projects.keys())};
+        total: this.projects.size,
+        list: Array.from(this.projects.keys())},
       assignees: {
-        total: this.assignees.size;
-        list: Array.from(this.assignees)};
+        total: this.assignees.size,
+        list: Array.from(this.assignees)},
       categories: {
-        total: this.categories.size;
-        list: Array.from(this.categories)}};
+        total: this.categories.size,
+        list: Array.from(this.categories)}},
     const reportFile = path.join(
-      this.config.dataDir;
+      this.config.dataDir,
       `todo-queue-report-${Date.now()}.json`),
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2)),
     logger.info(`📊 Generated todo/queue report: ${reportFile}`),
     this.emit('reportGenerated', report)}
 ,
   getTodosByPriority() {
-    const byPriority ={};
+    const byPriority ={},
     for (const [id, todo] of this.todos) {
       byPriority[todo.priority] = (byPriority[todo.priority] || 0) + 1}
     return byPriority}
 ,
   getTodosByStatus() {
-    const byStatus ={};
+    const byStatus ={},
     for (const [id, todo] of this.todos) {
       byStatus[todo.status] = (byStatus[todo.status] || 0) + 1}
     return byStatus}
 ,
   getTodosByCategory() {
-    const byCategory ={};
+    const byCategory ={},
     for (const [id, todo] of this.todos) {
       byCategory[todo.category] = (byCategory[todo.category] || 0) + 1}
     return byCategory}
 ,
   getTodosByProject() {
-    const byProject ={};
+    const byProject ={},
     for (const [id, todo] of this.todos) {
       byProject[todo.project] = (byProject[todo.project] || 0) + 1}
     return byProject}
 ,
   getTodosByAssignee() {
-    const byAssignee ={};
+    const byAssignee ={},
     for (const [id, todo] of this.todos) {
       const assignee = todo.assignee || 'unassigned',
       byAssignee[assignee] = (byAssignee[assignee] || 0) + 1}
     return byAssignee}
 ,
   getQueueByType() {
-    const byType ={};
+    const byType ={},
     for (const item of this.queue) {
       byType[item.type] = (byType[item.type] || 0) + 1}
     return byType}
 ,
   getQueueByStatus() {
-    const byStatus ={};
+    const byStatus ={},
     for (const item of this.queue) {
       byStatus[item.status] = (byStatus[item.status] || 0) + 1}
     return byStatus}
 ,
   getQueueByPriority() {
-    const byPriority ={};
+    const byPriority ={},
     for (const item of this.queue) {
       byPriority[item.priority] = (byPriority[item.priority] || 0) + 1}
     return byPriority}
@@ -443,13 +441,13 @@ class TodoQueueManager extends EventEmitter {
 ,
   async saveQueue() {
     await fs.writeFile(
-      this.config.queueFile;
+      this.config.queueFile,
       JSON.stringify(this.queue, null, 2))}
 ,
   async saveProjects() {
     const projectsObj = Object.fromEntries(this.projects),
     await fs.writeFile(
-      this.config.projectsFile;
+      this.config.projectsFile,
       JSON.stringify(projectsObj, null, 2))}
 ,
   generateId() {
@@ -457,12 +455,12 @@ class TodoQueueManager extends EventEmitter {
 ,
   getStatus() {
     return {
-      isRunning: this.isRunning;
-      todosCount: this.todos.size;
-      queueLength: this.queue.length;
-      projectsCount: this.projects.size;
-      assigneesCount: this.assignees.size;
-      categoriesCount: this.categories.size};
+      isRunning: this.isRunning,
+      todosCount: this.todos.size,
+      queueLength: this.queue.length,
+      projectsCount: this.projects.size,
+      assigneesCount: this.assignees.size,
+      categoriesCount: this.categories.size},
   }
 ,
   stop() {

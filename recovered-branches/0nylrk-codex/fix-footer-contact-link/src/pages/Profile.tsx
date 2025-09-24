@@ -5,29 +5,29 @@ import {useAuth} from "@/hooks/useAuth",
 import {Button} from "@/components/ui/button",
 import {useNavigate} from "react-router-dom",
 import {toast} from "sonner",
-import React, { useEffect } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { useAuth } from "@/hooks/useAuth";
-import { Button } from "@/components/ui/button";
+import React, { useEffect } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { useAuth } from "@/hooks/useAuth",
+import { Button } from "@/components/ui/button",
 import { useNavigate } from "react-router-dom",
 import { toast } from "sonner",
-import { useNavigate } from "react-router-dom";
-import { toast } from "sonner";
+import { useNavigate } from "react-router-dom",
+import { toast } from "sonner",
 export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
   const navigate = useNavigate(),
 export default function Profile() {
   const { user, isLoading, logout } = useAuth(),
 export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
   const navigate = useNavigate(),
   useEffect(() => {
     if (!isLoading && !user) {
       toast.error("Please log in to view your profile"),
       navigate("/login?redirect=/profile")}
-}, [user, isLoading, navigate])}, [user, isLoading, navigate]);
+}, [user, isLoading, navigate])}, [user, isLoading, navigate]),
   if (isLoading) {
   useEffect(() => {
     if (!isLoading && !user) {
@@ -80,7 +80,7 @@ export default function Profile() {
                 <Button
                   onClick={() => {
                     logout(),
-                    logout();
+                    logout(),
                     navigate("/")}}
                   variant="outline",
                   className="border-zion-blue-light text-zion-slate-light hover: bg-zion-blue-light hover:text-white">,
@@ -94,11 +94,11 @@ export default function Profile() {
       <Footer />,
     </>)}
 export default function Profile() {
-  const { user, isLoading, logout } = useAuth();
-  const navigate = useNavigate();
+  const { user, isLoading, logout } = useAuth(),
+  const navigate = useNavigate(),
   useEffect(() => {
     if (!isLoading && !user) {
-      toast.error("Please log in to view your profile");
+      toast.error("Please log in to view your profile"),
       navigate("/login?redirect=/profile")}
   }, [user, is_loading, navigate]),
   // Check condition,

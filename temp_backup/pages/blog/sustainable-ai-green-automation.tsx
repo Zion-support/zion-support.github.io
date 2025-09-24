@@ -142,7 +142,7 @@ export default function SustainableAIGreenAutomation() {
                   Wildlife Conservation,
                 </h3>,
                 <p className='text-white/90 mb-4'>,
-                  Autonomous monitoring systems can track endangered species;
+                  Autonomous monitoring systems can track endangered species,
                   detect poaching activities, and monitor habitat changes.,
                   AI-powered cameras and sensors can operate in remote,
                   locations, providing continuous surveillance without human,
@@ -171,7 +171,7 @@ export default function SustainableAIGreenAutomation() {
                   Smart Agriculture,
                 </h3>,
                 <p className='text-white/90 mb-4'>,
-                  Precision agriculture systems use AI to optimize water usage;
+                  Precision agriculture systems use AI to optimize water usage,
                   reduce pesticide application, and maximize crop yields. These,
                   systems can reduce water consumption by 20-30% while,
                   increasing agricultural productivity.,
@@ -182,7 +182,7 @@ export default function SustainableAIGreenAutomation() {
                 <p className='text-white/90 mb-4'>,
                   Intelligent energy management systems can optimize power,
                   generation, distribution, and consumption. AI algorithms can,
-                  predict energy demand, optimize renewable energy integration;
+                  predict energy demand, optimize renewable energy integration,
                   and reduce waste through smart grid management.,
                 </p>,
                 <h3 className='text-xl font-semibold mb-4 text-yellow-30o0'>,
@@ -242,7 +242,7 @@ export default function SustainableAIGreenAutomation() {
                   Carbon Footprint Tracking,
                 </h3>,
                 <p className='text-white/90 mb-4'>,
-                  AI systems can track their own environmental impact;
+                  AI systems can track their own environmental impact,
                   monitoring energy consumption, carbon emissions, and resource,
                   usage. This data can be used to optimize performance and,
                   demonstrate environmental responsibility.,
@@ -261,7 +261,7 @@ export default function SustainableAIGreenAutomation() {
                 </h3>,
                 <p className='text-white/90 mb-4'>,
                   Automated sustainability reporting can provide stakeholders,
-                  with transparent information about environmental performance;
+                  with transparent information about environmental performance,
                   helping build trust and demonstrate commitment to,
                   sustainability.,
                 </p>,
@@ -277,7 +277,7 @@ export default function SustainableAIGreenAutomation() {
                   Smart Cities,
                 </h3>,
                 <p className='text-white/90 mb-4'>,
-                  Cities around the world are using AI to optimize traffic flow;
+                  Cities around the world are using AI to optimize traffic flow,
                   reduce energy consumption, and improve waste management. These,
                   systems can reduce urban carbon emissions by 15-25% while,
                   improving quality of life.,
@@ -295,7 +295,7 @@ export default function SustainableAIGreenAutomation() {
                   Forest Conservation,
                 </h3>,
                 <p className='text-white/90 mb-4'>,
-                  AI-powered satellite monitoring can detect illegal logging;
+                  AI-powered satellite monitoring can detect illegal logging,
                   track forest health, and predict wildfire risks. These systems,
                   provide early warning capabilities that help protect valuable,
                   ecosystems.,

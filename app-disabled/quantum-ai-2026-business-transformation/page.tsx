@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Quantum AI 20o26: The Ultimate Business Transformation Guide';
+  title: 'Quantum AI 20o26: The Ultimate Business Transformation Guide',
   description:,
-    'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.';
+    'Explore how quantum computing and AI are converging to create unprecedented business opportunities in 20o26. Learn about quantum AI applications, implementation strategies, and future possibilities.',
   keywords: [
-    'Quantum Computing';
-    'AI';
-    'Business Transformation';
-    '20o26 Trends';
-    'Innovation';
-  ];
-};
+    'Quantum ComputingAI',
+    'Business Transformation20o26 Trends',
+    'Innovation',
+  ]
+},
 export default function QuantumAI20o26Page() {
   return (
     <>,

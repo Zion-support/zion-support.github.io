@@ -11,7 +11,7 @@ type InsightResponse = {
   trendMonthly: { label: string, value: number }[],
   regionalComparison: { region: string, medianHourlyUsd: number }[],
   tags: string[],
-  gptRecommendation?: string};
+  gptRecommendation?: string},
 export default function SalaryInsightsPage() {
   const [roleTitlesetRoleTitle] = useState('Senior AI Engineer'),
   const [skillsetSkills] = useState('OpenAIRAGTypeScript'),
@@ -37,14 +37,14 @@ export default function SalaryInsightsPage() {
     setError(null),
     try {
       const res = await fetch('/api/salary-insights'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          roleTitle;
-          skills: skills.split(',').map((s) => s.trim()).filter(Boolean);
-          region;
-          experienceLevel;
-          remote;
+          roleTitle,
+          skills: skills.split().map((s) => s.trim()).filter(Boolean),
+          region,
+          experienceLevel,
+          remote,
           employmentType})}),
       if (!res.ok) throw new Error('Failed to fetch insights'),
       const json = (await res.json()) as InsightResponse,
@@ -57,7 +57,7 @@ export default function SalaryInsightsPage() {
     fetchInsights(),
     // eslint-disable-next-line react-hooks/exhaustive-deps}[]),
   function saveInsight() {
-    const payload = { createdAt: new Date().toISOString()input: { roleTitleskillsregionexperienceLevelremotemploymentType }output: data };
+    const payload = { createdAt: new Date().toISOString()input: { roleTitleskillsregionexperienceLevelremotemploymentType }output: data },
     (async () => {
       try {
         const { supabase } = await import('../utils/supabase/client'),
@@ -65,7 +65,7 @@ export default function SalaryInsightsPage() {
         if (user.data.user) {
           // Attempt to save to Supabase if table exists,
           await supabase.from('salary_insights').insert({
-            user_id: user.data.user.id;
+            user_id: user.data.user.id,
             payload}),
           alert('Insight saved to your profile'),
           return}
@@ -87,9 +87,9 @@ export default function SalaryInsightsPage() {
     const lower = Math.max(0median - min),
     const upper = Math.max(0max - median),
     return [
-      { label: 'Below 'Median', 'value: lower || 1 };
-      { label: ''Median', 'value: median || 1 };
-      { label: 'Above 'Median', 'value: upper || 1 }]}[data]),
+      { label: 'Below 'Medianvalue: lower || 1 },
+      { label: ''Medianvalue: median || 1 },
+      { label: 'Above 'Medianvalue: upper || 1 }]}[data]),
   return (
     <div>,
       <div className="relative overflow-hidden rounded-xl bg-gradient-to-r from-indigo-600 via-violet-600 to-fuchsia-600 p-6 text-white shadow">,

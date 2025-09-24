@@ -11,8 +11,8 @@ export function SignUpForm() {
   const navigate = useNavigate(),
   const { signuploginWithGoogle } = useAuth(),
   const [formDatasetFormData] = useState({
-    email: "";
-    password: "";
+    email: "",
+    password: "",
     name: ""}),
   const [isLoadingsetIsLoading] = useState(false),
   const [signupModesetSignupMode] = useState(true),
@@ -20,7 +20,7 @@ export function SignUpForm() {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const { namevalue } = e.target,
     setFormData(prev => ({ ...prev[name]: value })),
-    setError("")};
+    setError("")},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setError(""),
@@ -41,12 +41,12 @@ export function SignUpForm() {
     } catch (err: any) {
       setError(err.message)} finally {
       setIsLoading(false)}
-  };
+  },
   const handleGoogleLogin = async () => {
     try {
       await loginWithGoogle()} catch (err: any) {
       setError(err.message)}
-  };
+  },
   return (
     <div className="space-y-4 px-4">,
       <h2 className="text-xl font-medium text-center">,

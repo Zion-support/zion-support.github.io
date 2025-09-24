@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
   CheckCircle,
@@ -38,24 +38,25 @@ import {
   Target,
   Award,
   Phone,
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
-  Brain;
-  Database;
-  Cloud;
-  Lock;
-  Rocket;
-  Users;
-  DollarSign;
-  Target;
-  Award;
-  Phone;
-} from 'lucide-react',import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025',import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react',
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  Rocket,
+  Users,
+  DollarSign,
+  Target,
+  Award,
+  Phone,
+} from 'lucide-react',import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025',
+import { CheckCircle, ArrowRight, Star, TrendingUp, Zap, Shield, Globe, Brain, Database, Cloud, Lock, Rocket, Users, DollarSign, Target, Award, Phone } from 'lucide-react',
 import { advancedAIAutomation2025 } from '../../data/advanced-ai-automation-2025',
 import { advancedCybersecurity2025 } from '../../data/advanced-cybersecurity-2025',
 import { blockchainWeb32025 } from '../../data/blockchain-web3-2025',
@@ -109,46 +110,46 @@ const ComprehensiveServicesShowcase2025 = () => {
       gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'}],      description: 'Advanced learning and educational technology',
     {
-      title: 'AI & Automation Services';
-      icon: Brain;
-      services: advancedAIAutomation2025;
-      gradient: 'from-purple-600 via-pink-600 to-blue-600';
-      description: 'Cutting-edge AI solutions that transform business operations'};
+      title: 'AI & Automation Services',
+      icon: Brain,
+      services: advancedAIAutomation2025,
+      gradient: 'from-purple-600 via-pink-600 to-blue-600',
+      description: 'Cutting-edge AI solutions that transform business operations'},
     {
-      title: 'Cybersecurity & Security';
-      icon: Shield;
-      services: advancedCybersecurity2025;
-      gradient: 'from-red-600 via-orange-600 to-yellow-600';
-      description: 'Advanced security solutions for the digital age'};
+      title: 'Cybersecurity & Security',
+      icon: Shield,
+      services: advancedCybersecurity2025,
+      gradient: 'from-red-600 via-orange-600 to-yellow-600',
+      description: 'Advanced security solutions for the digital age'},
     {
-      title: 'Blockchain & Web3';
-      icon: Globe;
-      services: blockchainWeb32025;
-      gradient: 'from-green-600 via-teal-600 to-cyan-600';
-      description: 'Next-generation blockchain and decentralized solutions'};
+      title: 'Blockchain & Web3',
+      icon: Globe,
+      services: blockchainWeb32025,
+      gradient: 'from-green-600 via-teal-600 to-cyan-600',
+      description: 'Next-generation blockchain and decentralized solutions'},
     {
-      title: 'IoT & Edge Computing';
-      icon: Cloud;
-      services: iotEdgeComputing2025;
-      gradient: 'from-blue-600 via-indigo-600 to-purple-600';
-      description: 'Smart connected solutions for the Internet of Things'};
+      title: 'IoT & Edge Computing',
+      icon: Cloud,
+      services: iotEdgeComputing2025,
+      gradient: 'from-blue-600 via-indigo-600 to-purple-600',
+      description: 'Smart connected solutions for the Internet of Things'},
     {
-      title: 'Healthcare & Biotechnology';
-      icon: Target;
-      services: healthcareBiotech2025;
-      gradient: 'from-pink-600 via-rose-600 to-red-600';
-      description: 'Innovative healthcare and biotech solutions'};
+      title: 'Healthcare & Biotechnology',
+      icon: Target,
+      services: healthcareBiotech2025,
+      gradient: 'from-pink-600 via-rose-600 to-red-600',
+      description: 'Innovative healthcare and biotech solutions'},
     {
-      title: 'Fintech & Financial';
-      icon: DollarSign;
-      services: fintechFinancial2025;
-      gradient: 'from-emerald-600 via-green-600 to-teal-600';
-      description: 'Revolutionary financial technology solutions'};
+      title: 'Fintech & Financial',
+      icon: DollarSign,
+      services: fintechFinancial2025,
+      gradient: 'from-emerald-600 via-green-600 to-teal-600',
+      description: 'Revolutionary financial technology solutions'},
     {
-      title: 'Education & E - Learning';
-      icon: Award;
-      services: educationElearning2025;
-      gradient: 'from-amber-600 via-yellow-600 to-orange-600';
+      title: 'Education & E - Learning',
+      icon: Award,
+      services: educationElearning2025,
+      gradient: 'from-amber-600 via-yellow-600 to-orange-600',
       description: 'Advanced learning and educational technology'}
   ],
   const containerVariants = {
@@ -157,7 +158,7 @@ const ComprehensiveServicesShowcase2025 = () => {
       opacity: 1,
       transition: {
         staggerChildren: 0.1}
-    }};        staggerChildren: 0.1}
+    }},        staggerChildren: 0.1}
     }
   }
   const itemVariants = {
@@ -169,19 +170,19 @@ const ComprehensiveServicesShowcase2025 = () => {
         duration: 0.5}
     }
   }
-        duration: 0.5;
-      };
-    };
+        duration: 0.5
+      },
+    },
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0 && 0.1;
-      };
-    }};        staggerChildren: 0 && 0.1}
+        staggerChildren: 0 && 0.1
+      },
+    }},        staggerChildren: 0 && 0.1}
     }
-  };
+  },
   return (
     <section className='relative py-20 bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 overflow-hidden'>,
       {/* Animated Background Elements */}
@@ -230,30 +231,30 @@ const ComprehensiveServicesShowcase2025 = () => {
 ,
               {/* Category Header */}
 ,
-      gradient: 'from - amber - 600 via - yellow - 600 to - orange - 600';
-      description: 'Advanced learning and educational technology';
+      gradient: 'from - amber - 600 via - yellow - 600 to - orange - 600',
+      description: 'Advanced learning and educational technology'
     }],      description: 'Advanced learning and educational technology'}
   ],
   const container_variants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        stagger_children: 0.1;
-      };
+        stagger_children: 0.1
+      },
     }}        stagger_children: 0.1}
     }
   }
 ,
   const item_variants = {
-    hidden: { coordinate_y: 20, opacity: 0 };
+    hidden: { coordinate_y: 20, opacity: 0 },
     visible: {
-      coordinate_y: 0;
-      opacity: 1;
+      coordinate_y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
+        duration: 0.5
+      },
+    },
   }
 ,
   return (
@@ -613,12 +614,12 @@ const ComprehensiveServicesShowcase2025 = () => {
                 <Rocket className="w-5 h-5 ml-2" />,
               </a>,
               <a
-                href="tel:+13024640950"};
+                href="tel:+13024640950"},
 export default ComprehensiveServicesShowcase2025)}
 export default ComprehensiveServicesShowcase2025)}
-};
-export default ComprehensiveServicesShowcase2025)};
-export default ComprehensiveServicesShowcase2025;
+},
+export default ComprehensiveServicesShowcase2025)},
+export default ComprehensiveServicesShowcase2025,
                       </p>,
                     </div>,
                     {/* Features */}
@@ -795,6 +796,6 @@ export default ComprehensiveServicesShowcase2025;
 export default ComprehensiveServicesShowcase2025)}
 ,
 export default ComprehensiveServicesShowcase2025)}
-};
+},
 export default ComprehensiveServicesShowcase2025)}
-export default ComprehensiveServicesShowcase2025;
+export default ComprehensiveServicesShowcase2025,

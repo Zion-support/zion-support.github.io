@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Meeting Assistant | Zion Tech Group';
+  title: 'AI Meeting Assistant | Zion Tech Group',
   description:,
-    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.';
-};
+    'Transform your meetings with AI-powered transcription, action items, and intelligent insights. Never miss important details again.',
+},
 export default function AIMeetingAssistantPage() {
   return (
     <div className='animate-fade-in'>,
@@ -12,7 +12,7 @@ export default function AIMeetingAssistantPage() {
           AI Meeting Assistant,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Transform your meetings with AI-powered transcription, action items;
+          Transform your meetings with AI-powered transcription, action items,
           and intelligent insights. Never miss important details and make every,
           meeting more productive.,
         </p>,
@@ -64,11 +64,9 @@ export default function AIMeetingAssistantPage() {
               period='per month',
               description='Perfect for individuals and small teams',
               features={[
-                'Up to 10 hours/month';
-                'Basic transcription';
-                'Action item extraction';
-                'Meeting summaries';
-                'Email support';
+                'Up to 10 hours/monthBasic transcription',
+                'Action item extractionMeeting summaries',
+                'Email support',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function AIMeetingAssistantPage() {
               period='per month',
               description='Ideal for growing teams and departments',
               features={[
-                'Up to 50 hours/month';
-                'Advanced AI features';
-                'Meeting analytics';
-                'Custom integrations';
-                'Priority support';
-                'Team collaboration';
+                'Up to 50 hours/monthAdvanced AI features',
+                'Meeting analyticsCustom integrations',
+                'Priority supportTeam collaboration',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function AIMeetingAssistantPage() {
               period='per month',
               description='For large organizations with advanced needs',
               features={[
-                'Unlimited hours';
-                'Custom AI models';
-                'Advanced analytics';
-                '24/7 support';
-                'Custom integrations';
-                'Compliance features';
+                'Unlimited hoursCustom AI models',
+                'Advanced analytics24/7 support',
+                'Custom integrationsCompliance features',
               ]}
               popular={false}
             />,
@@ -198,9 +190,9 @@ export default function AIMeetingAssistantPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -215,12 +207,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  title;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   title: string,
   price: string,
@@ -267,9 +259,9 @@ function PlatformCard({ name, icon }: { name: string, icon: string }) {
     </div>)}
 ,
 function UseCaseCard({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,

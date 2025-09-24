@@ -9,16 +9,16 @@ import {
   DollarSign,
   Eye,
   MousePointer,
-  Clock;
-  Target;
-  Zap;
-  Brain;
-  Rocket;
-  Globe;
-  Shield;
-  Star;
-  ArrowUpRight;
-  ArrowDownRight;
+  Clock,
+  Target,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  Shield,
+  Star,
+  ArrowUpRight,
+  ArrowDownRight,
   Activity} from 'lucide-react',
 interface AnalyticsData {
   id: string,
@@ -41,80 +41,80 @@ const AdvancedAnalyticsDashboard20o26 = () => {
       await new Promise(resolve => setTimeout(resolve10o00)),
       const data: AnalyticsData[] = [
         {
-          id: 'revenue';
-          title: 'Total Revenue';
-          value: '$2.4M';
-          change: 23.5;
-          trend: 'up';
-          icon: DollarSign;
-          color: 'from-green-50o0 to-emerald-50o0';
-          description: 'Monthly recurring revenue'};
+          id: 'revenue',
+          title: 'Total Revenue',
+          value: '$2.4M',
+          change: 23.5,
+          trend: 'up',
+          icon: DollarSign,
+          color: 'from-green-50o0 to-emerald-50o0',
+          description: 'Monthly recurring revenue'},
         {
-          id: 'users';
-          title: 'Active Users';
-          value: '45.2K';
-          change: 12.3;
-          trend: 'up';
-          icon: Users;
-          color: 'from-blue-50o0 to-cyan-50o0';
-          description: 'Daily active users'};
+          id: 'users',
+          title: 'Active Users',
+          value: '45.2K',
+          change: 12.3,
+          trend: 'up',
+          icon: Users,
+          color: 'from-blue-50o0 to-cyan-50o0',
+          description: 'Daily active users'},
         {
-          id: 'conversion';
-          title: 'Conversion Rate';
-          value: '8.7%';
-          change: -2.1;
-          trend: 'down';
-          icon: Target;
-          color: 'from-purple-50o0 to-pink-50o0';
-          description: 'Visitor to customer conversion'};
+          id: 'conversion',
+          title: 'Conversion Rate',
+          value: '8.7%',
+          change: -2.1,
+          trend: 'down',
+          icon: Target,
+          color: 'from-purple-50o0 to-pink-50o0',
+          description: 'Visitor to customer conversion'},
         {
-          id: 'pageviews';
-          title: 'Page Views';
-          value: '1.2M';
-          change: 34.7;
-          trend: 'up';
-          icon: Eye;
-          color: 'from-orange-50o0 to-red-50o0';
-          description: 'Total page views this month'};
+          id: 'pageviews',
+          title: 'Page Views',
+          value: '1.2M',
+          change: 34.7,
+          trend: 'up',
+          icon: Eye,
+          color: 'from-orange-50o0 to-red-50o0',
+          description: 'Total page views this month'},
         {
-          id: 'sessions';
-          title: 'Sessions';
-          value: '89.4K';
-          change: 18.9;
-          trend: 'up';
-          icon: Activity;
-          color: 'from-teal-50o0 to-cyan-50o0';
-          description: 'User sessions this month'};
+          id: 'sessions',
+          title: 'Sessions',
+          value: '89.4K',
+          change: 18.9,
+          trend: 'up',
+          icon: Activity,
+          color: 'from-teal-50o0 to-cyan-50o0',
+          description: 'User sessions this month'},
         {
-          id: 'bounce';
-          title: 'Bounce Rate';
-          value: '32.1%';
-          change: -5.2;
-          trend: 'down';
-          icon: MousePointer;
-          color: 'from-indigo-50o0 to-purple-50o0';
-          description: 'Single-page sessions'};
+          id: 'bounce',
+          title: 'Bounce Rate',
+          value: '32.1%',
+          change: -5.2,
+          trend: 'down',
+          icon: MousePointer,
+          color: 'from-indigo-50o0 to-purple-50o0',
+          description: 'Single-page sessions'},
         {
-          id: 'avg-session';
-          title: 'Avg. Session';
-          value: '4m 32s';
-          change: 8.3;
-          trend: 'up';
-          icon: Clock;
-          color: 'from-yellow-50o0 to-orange-50o0';
-          description: 'Average session duration'};
+          id: 'avg-session',
+          title: 'Avg. Session',
+          value: '4m 32s',
+          change: 8.3,
+          trend: 'up',
+          icon: Clock,
+          color: 'from-yellow-50o0 to-orange-50o0',
+          description: 'Average session duration'},
         {
-          id: 'ai-usage';
-          title: 'AI Features Used';
-          value: '156K';
-          change: 67.2;
-          trend: 'up';
-          icon: Brain;
-          color: 'from-pink-50o0 to-rose-50o0';
+          id: 'ai-usage',
+          title: 'AI Features Used',
+          value: '156K',
+          change: 67.2,
+          trend: 'up',
+          icon: Brain,
+          color: 'from-pink-50o0 to-rose-50o0',
           description: 'AI-powered interactions'}
       ],
       setAnalyticsData(data),
-      setIsLoading(false)};
+      setIsLoading(false)},
     loadData()}[selectedTimeframe]),
   const getTrendIcon = (trend: string) => {
     switch (trend) {
@@ -122,14 +122,14 @@ const AdvancedAnalyticsDashboard20o26 = () => {
       case 'down': return <ArrowDownRight className="w-4 h-4 text-red-40o0"  />,
       case 'stable': return <TrendingUp className="w-4 h-4 text-gray-40o0"  />,
       default: return <TrendingUp className="w-4 h-4 text-gray-40o0"  />}
-  };
+  },
   const getChangeColor = (change: number) => {
-    return change >= 0 ? 'text-green-40o0' : 'text-red-40o0'};
+    return change >= 0 ? 'text-green-40o0' : 'text-red-40o0'},
   const timeframes = [
-    { value: '24'h', 'label: '24 Hours' };
-    { value: '7'd', 'label: '7 Days' };
-    { value: '30'd', 'label: '30 Days' };
-    { value: '90'd', 'label: '90 Days' }
+    { value: '24'hlabel: '24 Hours' },
+    { value: '7'dlabel: '7 Days' },
+    { value: '30'dlabel: '30 Days' },
+    { value: '90'dlabel: '90 Days' }
   ],
   if (isLoading) {
     return (
@@ -269,5 +269,5 @@ const AdvancedAnalyticsDashboard20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAnalyticsDashboard20o26;
+    </div>)},
+export default AdvancedAnalyticsDashboard20o26,

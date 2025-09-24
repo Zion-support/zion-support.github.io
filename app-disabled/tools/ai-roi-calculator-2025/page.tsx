@@ -2,34 +2,34 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  Calculator;
-  DollarSign;
-  TrendingUp;
-  ArrowRight;
-  Clock;
+  Calculator,
+  DollarSign,
+  TrendingUp,
+  ArrowRight,
+  Clock,
 } from 'lucide-react',
 export default function AI2026ROICalculator() {
   const [inputs, setInputs] = useState({
-    annualRevenue: '';
-    employees: '';
-    currentEfficiency: '';
-    expectedEfficiency: '';
-    implementationCost: '';
-    maintenanceCost: '';
-    trainingCost: '';
+    annualRevenue: '',
+    employees: '',
+    currentEfficiency: '',
+    expectedEfficiency: '',
+    implementationCost: '',
+    maintenanceCost: '',
+    trainingCost: ''
   }),
   const [results, setResults] = useState({
-    annualSavings: 0;
-    totalCosts: 0;
-    netBenefit: 0;
-    roi: 0;
-    paybackPeriod: 0;
+    annualSavings: 0,
+    totalCosts: 0,
+    netBenefit: 0,
+    roi: 0,
+    paybackPeriod: 0
   }),
   const handleInputChange = (field: string, value: string) => {
     setInputs(prev => ({
-      ...prev;
-      [field]: value;
-    }))};
+      ...prev,
+      [field]: value
+    }))},
   const calculateROI = () => {
     const revenue = parseFloat(inputs.annualRevenue) || 0,
     const currentEff = parseFloat(inputs.currentEfficiency) || 0,
@@ -44,13 +44,13 @@ export default function AI2026ROICalculator() {
     const roi = totalCosts > 0 ? (netBenefit / totalCosts) * 100 : 0,
     const paybackPeriod =,
       annualSavings > 0 ? (totalCosts / annualSavings) * 12 : 0,
-    setResults({ annualSavings, totalCosts, netBenefit, roi, paybackPeriod })};
+    setResults({ annualSavings, totalCosts, netBenefit, roi, paybackPeriod })},
   const formatCurrency = (amount: number) =>,
     new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0;
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0
     }).format(amount),
   const formatPercentage = (value: number) => `${value.toFixed(1)}%`,
   return (

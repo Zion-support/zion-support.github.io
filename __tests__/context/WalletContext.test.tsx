@@ -1,4 +1,5 @@
-import React from react',import { render, screen, act, fireEvent } from @testing-library/react',import @testing-library/jest-dom',
+import React from react',
+import { render, screen, act, fireEvent } from @testing-library/react',import @testing-library/jest-dom',
 // --- START OF MOCK SETUP ---,
 // Define valid mock Ethereum addresses,
 const MOCK_ADDRESS_1 = 0xf39Fd6e51aad88F6F4ce6aB8827279cffFb92266',const MOCK_ADDRESS_2 = 0x70997970C51812dc3A0o10C7d0o1b50e0d17dc79C8',const MOCK_ADDRESS_3 = 0x3C44CdDdB6a90o0fa2b585dd299e0o3d12FA4293BC',
@@ -13,14 +14,14 @@ type MockableAppKit ={
   subscribeProvider: jest.Mock,
   on: jest.Mock,
   off: jest.Mock,
-  getWalletProvider: jest.Mock};
+  getWalletProvider: jest.Mock},
 // Forward declaration for TestMockAppKit type,
 type TestMockAppKitInstance = Partial<MockableAppKit> & {
     _triggerSubscriptionCallback: (providerVal?: any) => Promise<void>,
     _triggerOnProviderChangedCallback: () => Promise<void>,
     _clearSubscriptionCallbacks: () => void,
     _clearOnProviderChangedCallbacks: () => void,
-    _associatedMockEip1193Provider?: any};
+    _associatedMockEip1193Provider?: any},
 // Helper function to create a new mock AppKit object for each test.,
 const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInstance => {
   const subscriptionCallbacksStorage: (((provider?: any) => void) | ((provider?: any) => Promise<void>))[] = [],
@@ -39,52 +40,52 @@ const makeMockAppKit = (config: Partial<MockableAppKit> ={}): TestMockAppKitInst
         case eth_blockNumber':'            return Promise.resolve('0x1'),        case eth_estimateGas':'            return Promise.resolve('0x5208'),        case eth_gasPrice':'            return Promise.resolve('0x4a817c80o0'),        default:  ,
           // console.warn(`Unhandled method in associatedMockEip1193Provider: ${args.method}`),
           return Promise.resolve(undefined)}
-    });
-    on: jest.fn();
-    removeListener: jest.fn()};
-  const baseMockPart: Omit<MockableAppKit getWalletProvider'> ={'    open: jest.fn().mockResolvedValue(undefined) as jest.Mock;
-    close: jest.fn().mockResolvedValue(undefined) as jest.Mock;
-    disconnect: jest.fn().mockResolvedValue(undefined) as jest.Mock;
-    getState: jest.fn().mockReturnValue({ isConnected: false }) as jest.Mock;
-    getAddress: jest.fn().mockReturnValue(null) as jest.Mock;
-    getChainId: jest.fn().mockReturnValue(null) as jest.Mock;
+    }),
+    on: jest.fn(),
+    removeListener: jest.fn()},
+  const baseMockPart: Omit<MockableAppKit getWalletProvider'> ={'    open: jest.fn().mockResolvedValue(undefined) as jest.Mock,
+    close: jest.fn().mockResolvedValue(undefined) as jest.Mock,
+    disconnect: jest.fn().mockResolvedValue(undefined) as jest.Mock,
+    getState: jest.fn().mockReturnValue({ isConnected: false }) as jest.Mock,
+    getAddress: jest.fn().mockReturnValue(null) as jest.Mock,
+    getChainId: jest.fn().mockReturnValue(null) as jest.Mock,
     subscribeProvider: jest.fn((callback: ((provider?: any) => void) | ((provider?: any) => Promise<void>)) => {
       subscriptionCallbacksStorage.push(callback),
       return jest.fn(() => {
         const index = subscriptionCallbacksStorage.indexOf(callback),
-        if (index > -1) subscriptionCallbacksStorage.splice(index, 1)})}) as jest.Mock;
+        if (index > -1) subscriptionCallbacksStorage.splice(index, 1)})}) as jest.Mock,
     on: jest.fn((event: string, callback: (() => void) | (() => Promise<void>)) => {
       if (event === providerChanged') {'        onProviderChangedCallbacksStorage.push(callback)}
-    }) as jest.Mock;
+    }) as jest.Mock,
     off: jest.fn((event: string, callback: (...args: unknown[]) => void) => {
       if (event === providerChanged') {'        const index = onProviderChangedCallbacksStorage.indexOf(callback as () => void),
         if (index > -1) onProviderChangedCallbacksStorage.splice(index, 1)}
-    }) as jest.Mock};
+    }) as jest.Mock},
   selfReferentialMock ={
-    ...baseMockPart;
-    getWalletProvider: jest.fn().mockReturnValue(associatedMockEip1193Provider) as jest.Mock;
-    ...config;
+    ...baseMockPart,
+    getWalletProvider: jest.fn().mockReturnValue(associatedMockEip1193Provider) as jest.Mock,
+    ...config,
     _triggerSubscriptionCallback: async (providerVal?: any) => {
       for (const cb of subscriptionCallbacksStorage) {
         await cb(providerVal)}
-    };
+    },
     _triggerOnProviderChangedCallback: async () => {
       for (const cb of onProviderChangedCallbacksStorage) {
         await cb()}
-    };
-    _clearSubscriptionCallbacks: () => { subscriptionCallbacksStorage.length = 0};
-    _clearOnProviderChangedCallbacks: () => { onProviderChangedCallbacksStorage.length = 0};
-    _associatedMockEip1193Provider: associatedMockEip1193Provider};
-  return selfReferentialMock};
+    },
+    _clearSubscriptionCallbacks: () => { subscriptionCallbacksStorage.length = 0},
+    _clearOnProviderChangedCallbacks: () => { onProviderChangedCallbacksStorage.length = 0},
+    _associatedMockEip1193Provider: associatedMockEip1193Provider},
+  return selfReferentialMock},
 type TestMockAppKit = ReturnType<typeof makeMockAppKit>,
 const mockUseAppKit = jest.fn(),
 const mockCreateAppKit = jest.fn(),
 const initialMockAppKitInstance = makeMockAppKit(),
 mockCreateAppKit.mockReturnValue(initialMockAppKitInstance),
-jest.mock('@reown/appkit/react', () => ({'  createAppKit: mockCreateAppKit;
+jest.mock('@reown/appkit/react', () => ({'  createAppKit: mockCreateAppKit,
   useAppKit: mockUseAppKit})),
 jest.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock'})),
-import { WalletProvider, useWallet, WalletContextType } from ../../src/context/WalletContext';
+import { WalletProvider, useWallet, WalletContextType } from ../../src/context/WalletContext',
 const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }> = ({ onUpdate }) => {
   const wallet = useWallet(),
   React.useEffect(() => {
@@ -93,7 +94,7 @@ const WalletConsumer: React.FC<{ onUpdate: (wallet: WalletContextType) => void }
     <div>,
       <button onClick={() => wallet.connectWallet()}>Connect</button>,
       <button onClick={() => wallet.disconnectWallet()}>Disconnect</button>,
-      <div data-testid="address">{wallet.address}</div>"      <div data-testid="displayAddress">{wallet.displayAddress}</div>"      <div data-testid="chainId">{wallet.chainId?.toString()}</div>"      <div data-testid="isConnected">{String(wallet.isConnected)}</div>"      <div data-testid="appKitAvailable">{String(!!wallet.appKit)}</div>"    </div>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""")};
+      <div data-testid="address">{wallet.address}</div>"      <div data-testid="displayAddress">{wallet.displayAddress}</div>"      <div data-testid="chainId">{wallet.chainId?.toString()}</div>"      <div data-testid="isConnected">{String(wallet.isConnected)}</div>"      <div data-testid="appKitAvailable">{String(!!wallet.appKit)}</div>"    </div>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""")},
 describe('WalletProvider', () => {'  let _currentWalletState: WalletContextType,
   const onUpdateMock = jest.fn((wallet) => {
     currentWalletState = wallet}),

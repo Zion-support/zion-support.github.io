@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 import {
-  Globe;
-  Users;
-  Zap;
-  Shield;
-  Eye;
-  Cpu;
-  Palette;
-  Rocket;
+  Globe,
+  Users,
+  Zap,
+  Shield,
+  Eye,
+  Cpu,
+  Palette,
+  Rocket,
 } from 'lucide-react',
 const MetaverseDigitalRealityPlatformPage: React.FC = () => {
   return (
@@ -114,7 +114,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {
                     Avatar System,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Customizable digital identities with realistic animations;
+                    Customizable digital identities with realistic animations,
                     expressions, and body language for authentic interactions.,
                   </p>,
                 </div>,
@@ -143,7 +143,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {
                     Content Creation,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Built-in tools for creating and sharing 3D content;
+                    Built-in tools for creating and sharing 3D content,
                     animations, and interactive experiences.,
                   </p>,
                 </div>,
@@ -191,7 +191,7 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {
                   Education & Training,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Interactive learning environments for virtual classrooms;
+                  Interactive learning environments for virtual classrooms,
                   simulations, and hands-on training experiences.,
                 </p>,
               </div>,
@@ -422,5 +422,5 @@ const MetaverseDigitalRealityPlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default MetaverseDigitalRealityPlatformPage;
+    </>)},
+export default MetaverseDigitalRealityPlatformPage,

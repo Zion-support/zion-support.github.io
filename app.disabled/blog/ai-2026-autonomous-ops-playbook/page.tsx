@@ -54,5 +54,5 @@ const AutonomousOpsPlaybook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousOpsPlaybook20o26;
+    </div>)},
+export default AutonomousOpsPlaybook20o26,

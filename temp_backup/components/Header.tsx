@@ -88,5 +88,5 @@ const Header = () => {
             </div>,
           </div>)}
       </nav>,
-    </header>)};
-export default Header;
+    </header>)},
+export default Header,

@@ -3,100 +3,94 @@ import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
 import {
-  Cloud;
-  Server;
-  Database;
-  Shield;
-  Zap;
-  Globe;
-  CheckCircle;
-  ArrowRight;
-  Users;
-  BarChart3;
-  Lock;
-  Settings;
+  Cloud,
+  Server,
+  Database,
+  Shield,
+  Zap,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Users,
+  BarChart3,
+  Lock,
+  Settings,
 } from 'lucide-react',
 export default function CloudPlatforms() {
   const features = [
     {
-      icon: Cloud;
-      title: 'Multi-Cloud Strategy';
+      icon: Cloud,
+      title: 'Multi-Cloud Strategy',
       description:,
-        'Seamlessly integrate and manage workloads across AWS, Azure, and Google Cloud platforms.';
+        'Seamlessly integrate and manage workloads across AWS, Azure, and Google Cloud platforms.',
       benefits: [
-        'Cost optimization';
-        'Vendor independence';
-        'Enhanced reliability';
-      ];
-    };
+        'Cost optimizationVendor independence',
+        'Enhanced reliability',
+      ]
+    },
     {
-      icon: Server;
-      title: 'Infrastructure as Code';
+      icon: Server,
+      title: 'Infrastructure as Code',
       description:,
-        'Automate infrastructure provisioning and management with Terraform, Ansible, and CloudFormation.';
-      benefits: ['Consistent deployments', 'Version control', 'Rapid scaling'];
-    };
+        'Automate infrastructure provisioning and management with Terraform, Ansible, and CloudFormation.',
+      benefits: ['Consistent deploymentsVersion control', 'Rapid scaling'],
+    },
     {
-      icon: Database;
-      title: 'Managed Database Services';
+      icon: Database,
+      title: 'Managed Database Services',
       description:,
-        'Fully managed database solutions with automated backups, scaling, and monitoring.';
-      benefits: ['High availability', 'Auto-scaling', '24/7 monitoring'];
-    };
+        'Fully managed database solutions with automated backups, scaling, and monitoring.',
+      benefits: ['High availabilityAuto-scaling', '24/7 monitoring'],
+    },
     {
-      icon: Shield;
-      title: 'Security & Compliance';
+      icon: Shield,
+      title: 'Security & Compliance',
       description:,
-        'Enterprise-grade security with compliance frameworks including SOC 2, HIPAA, and GDPR.';
-      benefits: ['Data encryption', 'Access controls', 'Audit trails'];
-    };
+        'Enterprise-grade security with compliance frameworks including SOC 2, HIPAA, and GDPR.',
+      benefits: ['Data encryptionAccess controls', 'Audit trails'],
+    },
     {
-      icon: Zap;
-      title: 'Auto-Scaling';
+      icon: Zap,
+      title: 'Auto-Scaling',
       description:,
-        'Dynamic resource allocation based on demand to optimize performance and costs.';
+        'Dynamic resource allocation based on demand to optimize performance and costs.',
       benefits: [
-        'Cost efficiency';
-        'Performance optimization';
-        'Zero downtime';
-      ];
-    };
+        'Cost efficiencyPerformance optimization',
+        'Zero downtime',
+      ]
+    },
     {
-      icon: Globe;
-      title: 'Global CDN';
+      icon: Globe,
+      title: 'Global CDN',
       description:,
-        'Content delivery network for fast, reliable access to your applications worldwide.';
-      benefits: ['Low latency', 'High availability', 'Global reach'];
-    };
+        'Content delivery network for fast, reliable access to your applications worldwide.',
+      benefits: ['Low latencyHigh availability', 'Global reach'],
+    },
   ],
   const platforms = [
     {
-      name: 'Amazon Web Services (AWS)';
-      description: 'Comprehensive cloud services with global infrastructure';
-      services: ['EC2', 'S3', 'RDS', 'Lambda', 'CloudFront'];
-    };
+      name: 'Amazon Web Services (AWS)',
+      description: 'Comprehensive cloud services with global infrastructure',
+      services: ['EC2S3', 'RDSLambda', 'CloudFront'],
+    },
     {
-      name: 'Microsoft Azure';
-      description: 'Enterprise-focused cloud platform with hybrid capabilities';
+      name: 'Microsoft Azure',
+      description: 'Enterprise-focused cloud platform with hybrid capabilities',
       services: [
-        'Virtual Machines';
-        'Blob Storage';
-        'SQL Database';
-        'Functions';
-        'CDN';
-      ];
-    };
+        'Virtual MachinesBlob Storage',
+        'SQL DatabaseFunctions',
+        'CDN',
+      ]
+    },
     {
-      name: 'Google Cloud Platform';
-      description: 'AI and machine learning focused cloud services';
+      name: 'Google Cloud Platform',
+      description: 'AI and machine learning focused cloud services',
       services: [
-        'Compute Engine';
-        'Cloud Storage';
-        'Cloud SQL';
-        'Cloud Functions';
-        'Cloud CDN';
-      ];
-    };
+        'Compute EngineCloud Storage',
+        'Cloud SQLCloud Functions',
+        'Cloud CDN',
+      ]
+    },
   ],
   return (
     <>,

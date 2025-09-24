@@ -1,121 +1,121 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function ComprehensiveContentShowcase2026() {
   return null}
 const ComprehensiveContentShowcase20o26 = () => {
   const [activeTab, setActiveTab] = useState('all'),
   const contentItems = [
     {
-      id: 'enterprise-automation-breakthrough';
-      type: 'blog';
+      id: 'enterprise-automation-breakthrough',
+      type: 'blog',
       title:,
-        'AI 20o26: Enterprise Automation Breakthrough - 40o0% ROI in 90 Days';
+        'AI 20o26: Enterprise Automation Breakthrough - 40o0% ROI in 90 Days',
       excerpt:,
-        'Discover how Fortune 50o0 companies are achieving unprecedented 40o0% ROI through next-generation AI automation systems. Real case studies, implementation strategies, and proven frameworks.';
-      url: '/blog/ai-20o26-enterprise-automation-breakthrough';
-      readTime: '18 min read';
-      featured: true;
-      icon: TrendingUp;
-      category: 'Enterprise AI';
-      tags: ['AI', 'Enterprise Automation', 'ROI', 'Business Transformation'];
-      stats: { roi: '40o0%', timeframe: '90 days', wordCount: '8,50o0' };
-      publishDate: '20o25-0o1-17';
-    };
+        'Discover how Fortune 50o0 companies are achieving unprecedented 40o0% ROI through next-generation AI automation systems. Real case studies, implementation strategies, and proven frameworks.',
+      url: '/blog/ai-20o26-enterprise-automation-breakthrough',
+      readTime: '18 min read',
+      featured: true,
+      icon: TrendingUp,
+      category: 'Enterprise AI',
+      tags: ['AIEnterprise Automation', 'ROIBusiness Transformation'],
+      stats: { roi: '40o0%', timeframe: '90 days', wordCount: '8,50o0' },
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'fortune-50o0-transformation';
-      type: 'case-study';
-      title: 'Fortune 50o0 AI Transformation: $50M Annual Savings in 6 Months';
+      id: 'fortune-50o0-transformation',
+      type: 'case-study',
+      title: 'Fortune 50o0 AI Transformation: $50M Annual Savings in 6 Months',
       excerpt:,
-        'How a Fortune 50o0 manufacturing company achieved $50M in annual savings through comprehensive AI transformation. Detailed implementation timeline, challenges overcome, and lessons learned.';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o26';
-      readTime: '15 min read';
-      featured: true;
-      icon: DollarSign;
-      category: 'Success Story';
-      tags: ['Case Study', 'Fortune 50o0', 'AI Transformation', 'Cost Savings'];
-      stats: { savings: '$50M', timeframe: '6 months', employees: '50,0o00+' };
-      publishDate: '20o25-0o1-17';
-    };
+        'How a Fortune 50o0 manufacturing company achieved $50M in annual savings through comprehensive AI transformation. Detailed implementation timeline, challenges overcome, and lessons learned.',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o26',
+      readTime: '15 min read',
+      featured: true,
+      icon: DollarSign,
+      category: 'Success Story',
+      tags: ['Case StudyFortune 50o0', 'AI TransformationCost Savings'],
+      stats: { savings: '$50M', timeframe: '6 months', employees: '50,0o00+' },
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'ai-implementation-master-guide';
-      type: 'resource';
+      id: 'ai-implementation-master-guide',
+      type: 'resource',
       title:,
-        'AI Implementation Master Guide 20o26: Complete Framework for Enterprise Success';
+        'AI Implementation Master Guide 20o26: Complete Framework for Enterprise Success',
       excerpt:,
-        'The definitive guide to implementing AI in enterprise environments. Step-by-step framework, best practices, common pitfalls, and proven strategies for achieving 30o0%+ ROI.';
-      url: '/resources/ai-implementation-master-guide-20o26';
-      readTime: '45 min read';
-      featured: true;
-      icon: BookOpen;
-      category: 'Implementation Guide';
-      tags: ['Implementation Guide', 'AI', 'Enterprise', 'Best Practices'];
-      stats: { roi: '30o0%+', pages: '50+', frameworks: '10+' };
-      publishDate: '20o25-0o1-17';
-    };
+        'The definitive guide to implementing AI in enterprise environments. Step-by-step framework, best practices, common pitfalls, and proven strategies for achieving 30o0%+ ROI.',
+      url: '/resources/ai-implementation-master-guide-20o26',
+      readTime: '45 min read',
+      featured: true,
+      icon: BookOpen,
+      category: 'Implementation Guide',
+      tags: ['Implementation GuideAI', 'EnterpriseBest Practices'],
+      stats: { roi: '30o0%+', pages: '50+', frameworks: '10+' },
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'autonomous-systems-revolution';
-      type: 'blog';
-      title: 'AI 20o25: The Next Generation Autonomous Systems Revolution';
+      id: 'autonomous-systems-revolution',
+      type: 'blog',
+      title: 'AI 20o25: The Next Generation Autonomous Systems Revolution',
       excerpt:,
-        'Explore the revolutionary impact of autonomous AI systems on business operations, featuring real-world implementations and ROI analysis.';
-      url: '/blog/ai-20o25-next-generation-autonomous-systems-revolution';
-      readTime: '12 min read';
-      featured: false;
-      icon: Zap;
-      category: 'Autonomous AI';
-      tags: ['AI', 'Autonomous Systems', 'Business Transformation'];
-      stats: { roi: '340%', efficiency: '30o0%' };
-      publishDate: '20o25-0o1-17';
-    };
+        'Explore the revolutionary impact of autonomous AI systems on business operations, featuring real-world implementations and ROI analysis.',
+      url: '/blog/ai-20o25-next-generation-autonomous-systems-revolution',
+      readTime: '12 min read',
+      featured: false,
+      icon: Zap,
+      category: 'Autonomous AI',
+      tags: ['AIAutonomous Systems', 'Business Transformation'],
+      stats: { roi: '340%', efficiency: '30o0%' },
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'global-enterprise-success';
-      type: 'case-study';
+      id: 'global-enterprise-success',
+      type: 'case-study',
       title:,
-        'Global Enterprise AI Transformation: $2.8B Ultimate Success Story';
+        'Global Enterprise AI Transformation: $2.8B Ultimate Success Story',
       excerpt:,
-        'Comprehensive case study of a global enterprise achieving $2.8B in value through strategic AI implementation across all business units.';
-      url: '/case-studies/global-enterprise-ai-transformation-20o25-ultimate-success';
-      readTime: '10 min read';
-      featured: false;
-      icon: Award;
-      category: 'Global Success';
-      tags: ['Case Study', 'AI Transformation', 'Enterprise', 'Success Story'];
-      stats: { value: '$2.8B', units: '40+ countries' };
-      publishDate: '20o25-0o1-17';
-    };
+        'Comprehensive case study of a global enterprise achieving $2.8B in value through strategic AI implementation across all business units.',
+      url: '/case-studies/global-enterprise-ai-transformation-20o25-ultimate-success',
+      readTime: '10 min read',
+      featured: false,
+      icon: Award,
+      category: 'Global Success',
+      tags: ['Case StudyAI Transformation', 'EnterpriseSuccess Story'],
+      stats: { value: '$2.8B', units: '40+ countries' },
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'autonomous-systems-guide';
-      type: 'resource';
-      title: 'AI 20o25 Autonomous Systems Implementation Master Guide';
+      id: 'autonomous-systems-guide',
+      type: 'resource',
+      title: 'AI 20o25 Autonomous Systems Implementation Master Guide',
       excerpt:,
-        'Complete implementation guide for autonomous AI systems, covering strategy, technology selection, and deployment best practices.';
-      url: '/resources/ai-20o25-autonomous-systems-implementation-master-guide';
-      readTime: '25 min read';
-      featured: false;
-      icon: Target;
-      category: 'Implementation Guide';
-      tags: ['Implementation Guide', 'AI', 'Best Practices', 'ROI'];
-      stats: { steps: '50+', tools: '15+' };
-      publishDate: '20o25-0o1-17';
-    };
+        'Complete implementation guide for autonomous AI systems, covering strategy, technology selection, and deployment best practices.',
+      url: '/resources/ai-20o25-autonomous-systems-implementation-master-guide',
+      readTime: '25 min read',
+      featured: false,
+      icon: Target,
+      category: 'Implementation Guide',
+      tags: ['Implementation GuideAI', 'Best PracticesROI'],
+      stats: { steps: '50+', tools: '15+' },
+      publishDate: '20o25-0o1-17'
+    },
   ],
   const tabs = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeTab === 'all',
@@ -131,7 +131,7 @@ const ComprehensiveContentShowcase20o26 = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -142,7 +142,7 @@ const ComprehensiveContentShowcase20o26 = () => {
         return 'Resource Guide',
       default:,
         return 'Content'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'Enterprise AI':,
@@ -157,7 +157,7 @@ const ComprehensiveContentShowcase20o26 = () => {
         return Users,
       default:,
         return FileText}
-  };
+  },
   return (
     <div className='py-20 bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -387,5 +387,5 @@ const ComprehensiveContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default ComprehensiveContentShowcase20o26;
+    </div>)},
+export default ComprehensiveContentShowcase20o26,

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-chatbot-builder - Zion Tech Group';
+  title: 'ai-chatbot-builder - Zion Tech Group',
   description:,
-    'Professional ai-chatbot-builder solutions for your business needs.';
-  keywords: 'ai-chatbot-builder, services, business, technology';
-};
+    'Professional ai-chatbot-builder solutions for your business needs.',
+  keywords: 'ai-chatbot-builder, services, business, technology',
+},
 export default function AiChatbotBuilderPage() {
   return (
     <div className='min-h-screen bg-white'>,

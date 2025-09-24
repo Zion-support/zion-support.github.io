@@ -1,7 +1,7 @@
 "use client",
 import type { NextPage } from 'next',
 import Head from 'next/head',
-import React from 'react';
+import React from 'react',
 import SEO from '../../components/SEO',
 import UltraFuturisticBackground from '../../components/ui/UltraFuturisticBackground',
 import Card from '../../components/ui/Card',
@@ -20,12 +20,12 @@ import { verified2025Additions } from '../../data/verified-2025-additions',
 import { realServicesQ12025 } from '../../data/real-services-q1-2025',
 import { newVerifiedServicesQ22025 } from '../../data/real-verified-services-q2-2025',
 const mapLocalToServiceItem = (item: any): ServiceItem => ({
-  slug: item.slug;
-  title: item.name;
-  description: item.description;
-  provider: 'Zion Provider';
-  priceRangeUSD: item.priceRangeUSD;
-  categories: [item.category];
+  slug: item.slug,
+  title: item.name,
+  description: item.description,
+  provider: 'Zion Provider',
+  priceRangeUSD: item.priceRangeUSD,
+  categories: [item.category],
   rating: Math.round((3.8 + Math.random() * 1.2) * 10) / 10}),
 const ServicesPage: NextPage = () => {
   const [servicesetServices] = React.useState<ServiceItem[]>([]),
@@ -36,38 +36,26 @@ const ServicesPage: NextPage = () => {
 export default function ServicesIndexPage() {
   const all = (enhancedRealMicroSaasServices as unknown[]),
     .concat(
-      extraServices as any[];
-      additionalEnhancedServices as any[];
-      newlyAddedServices as any[];
-      curatedMarketServices as any[];
-      realMarketServices as any[];
-      new2025Services as any[];
-      marketValidatedServices as any[];
-      moreRealServices2025 as any[];
-      realOperationalServices as any[];
-      verified2025Additions as any[];
-      realServicesQ12025 as any[];
+      extraServices as any[],
+      additionalEnhancedServices as any[],
+      newlyAddedServices as any[],
+      curatedMarketServices as any[],
+      realMarketServices as any[],
+      new2025Services as any[],
+      marketValidatedServices as any[],
+      moreRealServices2025 as any[],
+      realOperationalServices as any[],
+      verified2025Additions as any[],
+      realServicesQ12025 as any[],
       newVerifiedServicesQ22025 as any[]),
-  const byCategory: Record<stringunknown[]> = {};
+  const byCategory: Record<stringunknown[]> = {},
   for (const c of categories) byCategory[c] = [],
   // Normalize various category labels into our main buckets,
   const categoryAliases: Record<string> = {
-    'AI & Data': 'AI & Data';
-    'AI & Machine Learning': 'AI & Data';
-    'GenAI': 'AI & Data';
-    'Cloud & FinOps': 'Cloud & FinOps';
-    'Cloud & Data': 'Cloud & FinOps';
-    'Platform Engineering': 'Cloud & FinOps';
-    'Observability': 'Observability';
-    'Observability & Telemetry': 'Observability';
-    'Quality & Monitoring': 'Quality & Monitoring';
-    'Security & Reliability': 'Quality & Monitoring';
-    'Security & Compliance': 'Quality & Monitoring';
-    'Developer Tools': 'Developer Tools';
-    'Growth & Marketing': 'Developer Tools'};
+    'AI & Data': 'AI & DataAI & Machine Learning': 'AI & DataGenAI': 'AI & DataCloud & FinOps': 'Cloud & FinOpsCloud & Data': 'Cloud & FinOpsPlatform Engineering': 'Cloud & FinOpsObservability': 'ObservabilityObservability & Telemetry': 'ObservabilityQuality & Monitoring': 'Quality & MonitoringSecurity & Reliability': 'Quality & MonitoringSecurity & Compliance': 'Quality & MonitoringDeveloper Tools': 'Developer ToolsGrowth & Marketing': 'Developer Tools'},
   for (const s of all) {
-    const service = s as { category?: string };
-    const rawCat = (service.category || ', ').trim(),
+    const service = s as { category?: string },
+    const rawCat = (service.category || ).trim(),
     const mapped = categoryAliases[rawCat] || (categories.includes(rawCat) ? rawCat : 'Developer Tools'),
     byCategory[mapped].push(s)}
 ,
@@ -91,21 +79,21 @@ export default function ServicesIndexPage() {
     return Array.from(set)}[services]),
   const handleRequestQuote = (service: ServiceItem) => {
     setSelected(service),
-    setModalOpen(true)};
+    setModalOpen(true)},
   const handleSubmit = async (values: QuoteFormValues) => {
     const res = await fetch('/api/quote-request'{
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        service: values.serviceTitle;
-        description: values.projectDescription;
-        timeline: { start: values.timelineStartend: values.timelineEnd };
-        budgetRange: values.budgetRange;
+        service: values.serviceTitle,
+        description: values.projectDescription,
+        timeline: { start: values.timelineStartend: values.timelineEnd },
+        budgetRange: values.budgetRange,
         email: values.email})}),
     if (!res.ok) {
       const err = await res.json().catch(() => ({})),
       throw new Error(err?.message || 'Failed to submit')}
-  };
+  },
   return (
     <UltraFuturisticBackground variant="quantum" intensity={1.5}>,
       <Head>,
@@ -134,6 +122,6 @@ export default function ServicesIndexPage() {
         service={selected}
         onSubmit={handleSubmit}
       />,
-    </div>)};
-export default ServicesPage;
+    </div>)},
+export default ServicesPage,
 }

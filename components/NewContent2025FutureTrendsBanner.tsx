@@ -59,5 +59,5 @@ const NewContent20o25FutureTrendsBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25FutureTrendsBanner;
+    </div>)},
+export default NewContent20o25FutureTrendsBanner,

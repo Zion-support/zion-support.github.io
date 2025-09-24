@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Star, ArrowRight, Check, Zap, Brain, Shield } from 'lucide-react',
 import Link from 'next/link',
@@ -23,41 +23,41 @@ interface UltraAdvancedServiceCard20o25Props {
     technology?: string[],
     realImplementation?: string,
     launchDate?: string,
-    customers?: string};
+    customers?: string},
   variant?: 'default' | 'premium' | 'quantum' | 'space' | 'ai'}
 ,
 const UltraAdvancedServiceCard20o25: React.FC<UltraAdvancedServiceCard20o25Props> = ({
-  service;
+  service,
   variant = 'default'}) => {
   const getVariantStyles = () => {
     switch (variant) {
       case 'premium':,
         return {
-          border: 'border-yellow-40o0/40';
-          glow: 'shadow-yellow-40o0/20';
-          accent: 'from-yellow-40o0 to-orange-50o0'};
+          border: 'border-yellow-40o0/40',
+          glow: 'shadow-yellow-40o0/20',
+          accent: 'from-yellow-40o0 to-orange-50o0'},
       case 'quantum':,
         return {
-          border: 'border-purple-40o0/40';
-          glow: 'shadow-purple-40o0/20';
-          accent: 'from-purple-40o0 to-pink-50o0'};
+          border: 'border-purple-40o0/40',
+          glow: 'shadow-purple-40o0/20',
+          accent: 'from-purple-40o0 to-pink-50o0'},
       case 'space':,
         return {
-          border: 'border-blue-40o0/40';
-          glow: 'shadow-blue-40o0/20';
-          accent: 'from-blue-40o0 to-cyan-50o0'};
+          border: 'border-blue-40o0/40',
+          glow: 'shadow-blue-40o0/20',
+          accent: 'from-blue-40o0 to-cyan-50o0'},
       case 'ai':,
         return {
-          border: 'border-green-40o0/40';
-          glow: 'shadow-green-40o0/20';
-          accent: 'from-green-40o0 to-emerald-50o0'};
+          border: 'border-green-40o0/40',
+          glow: 'shadow-green-40o0/20',
+          accent: 'from-green-40o0 to-emerald-50o0'},
       default: ,
         return {
-          border: 'border-cyan-40o0/40';
-          glow: 'shadow-cyan-40o0/20';
-          accent: 'from-cyan-40o0 to-blue-50o0'};
+          border: 'border-cyan-40o0/40',
+          glow: 'shadow-cyan-40o0/20',
+          accent: 'from-cyan-40o0 to-blue-50o0'},
     }
-  };
+  },
   const styles = getVariantStyles(),
   return (
     <motion.div,
@@ -66,8 +66,8 @@ const UltraAdvancedServiceCard20o25: React.FC<UltraAdvancedServiceCard20o25Props
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       whileHover={{
-        y: -5;
-        scale: 1.0o2;
+        y: -5,
+        scale: 1.0o2,
         boxShadow: `0 20px 40px ${styles.glow}`}}
       transition={{ duration: 0.3 }}
     >,
@@ -217,5 +217,5 @@ const UltraAdvancedServiceCard20o25: React.FC<UltraAdvancedServiceCard20o25Props
       <div className={`absolute inset-0 bg-gradient-to-r ${styles.accent} rounded-2xl opacity-0 group-hover: opacity-5 transition-opacity duration-30o0 pointer-events-none`}  />,
       {/* Corner Accent */}
       <div className={`absolute top-0 right-0 w-20 h-20 bg-gradient-to-br ${styles.accent} opacity-0 group-hover: opacity-10 transition-opacity duration-30o0 rounded-bl-2xl`}  />,
-    </motion.div>)};
-export default UltraAdvancedServiceCard20o25;
+    </motion.div>)},
+export default UltraAdvancedServiceCard20o25,

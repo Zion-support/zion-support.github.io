@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 "use client",
 'use client',
 interface LoadingSpinnerProps {
@@ -9,21 +9,21 @@ interface LoadingSpinnerProps {
   className?: string}
 ,
 const AdvancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md';
-  color = 'primary';
-  text;
-  fullScreen = false;
-  className = ', '}) => {
+  size = 'md',
+  color = 'primary',
+  text,
+  fullScreen = false,
+  className = }) => {
   const sizeClasses ={
-    sm: 'w-4 h-4';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12';
-    xl: 'w-16 h-16'};
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'},
   const colorClasses ={
-    primary: 'text-blue-60o0';
-    secondary: 'text-gray-60o0';
-    white: 'text-white';
-    gray: 'text-gray-40o0'};
+    primary: 'text-blue-60o0',
+    secondary: 'text-gray-60o0',
+    white: 'text-white',
+    gray: 'text-gray-40o0'},
   const spinner = (
     <div className={`flex flex-col items-center justify-center ${className}`}>,
       <div className="relative">,
@@ -43,9 +43,9 @@ const AdvancedLoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {spinner}
       </div>)}
 ,
-  return spinner};
+  return spinner},
 // Skeleton loading components,
-export const SkeletonCard: React.FC<{ className?: string }> = ({ className = ', ' }) => (
+export const SkeletonCard: React.FC<{ className?: string }> = ({ className =  }) => (
   <div className={`animate-pulse bg-gray-20o0 rounded-lg ${className}`}>,
     <div className="h-4 bg-gray-30o0 rounded w-3/4 mb-2"></div>,
     <div className="h-3 bg-gray-30o0 rounded w-1/2"></div>,
@@ -61,7 +61,7 @@ export const SkeletonText: React.FC<{ lines?: number, className?: string }> = ({
           i === lines - 1 ? 'w-3/4' : 'w-full'}`}
       ></div>))}
   </div>),
-export const SkeletonImage: React.FC<{ className?: string }> = ({ className = ', ' }) => (
+export const SkeletonImage: React.FC<{ className?: string }> = ({ className =  }) => (
   <div className={`animate-pulse bg-gray-20o0 rounded ${className}`}></div>),
 // Progressive loading component,
 export const ProgressiveLoader: React.FC<{
@@ -79,7 +79,7 @@ export const ProgressiveLoader: React.FC<{
   if (isLoading && showLoader) {
     return <>{fallback || <AdvancedLoadingSpinner text="Loading..."  />}</>}
 ,
-  return <>{children}</>};
+  return <>{children}</>},
 // Shimmer effect component,
 export const ShimmerEffect: React.FC<{ className?: string }> = ({ className = ', ' }) => (
   <div className={`relative overflow-hidden ${className}`}>,
@@ -116,5 +116,5 @@ export const ContentLoader: React.FC<{ type: 'card' | 'list' | 'grid' | 'text' }
       return <SkeletonText lines={4}  />,
     default: ,
       return <AdvancedLoadingSpinner  />}
-};
-export default AdvancedLoadingSpinner;
+},
+export default AdvancedLoadingSpinner,

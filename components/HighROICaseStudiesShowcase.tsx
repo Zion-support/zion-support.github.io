@@ -231,5 +231,5 @@ const HighROICaseStudiesShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default HighROICaseStudiesShowcase;
+    </section>)},
+export default HighROICaseStudiesShowcase,

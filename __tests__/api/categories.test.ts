@@ -3,9 +3,9 @@ import { createMocks, createRequest as _createRequest, createResponse as _create
 // Mock Prisma,
 jest.mock('@prisma/client', () => {'  const mockPrismaClient ={
     category: {
-      findMany: jest.fn()};
-    $disconnect: jest.fn()};
-  return { PrismaClient: jest.fn(() => mockPrismaClient) };
+      findMany: jest.fn()},
+    $disconnect: jest.fn()},
+  return { PrismaClient: jest.fn(() => mockPrismaClient) },
 }),
 // Mock console.error,
 let consoleErrorSpy: jest.SpyInstance,

@@ -9,7 +9,7 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     accuracy?: string,
-    efficiency?: string};
+    efficiency?: string},
   readingTime?: string}
 ,
 const UltimateAutonomousBusinessRevolutionBanner: React.FC = () => {
@@ -17,37 +17,37 @@ const UltimateAutonomousBusinessRevolutionBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const contentItems: ContentItem[] = [
     {
-      id: 'ultimate-autonomous-business-revolution';
-      title: 'AI 20o25: The Ultimate Autonomous Business Revolution - Ultimate Breakthrough Guide to 30,0o00% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-autonomous-business-revolution-ultimate-breakthrough';
+      id: 'ultimate-autonomous-business-revolution',
+      title: 'AI 20o25: The Ultimate Autonomous Business Revolution - Ultimate Breakthrough Guide to 30,0o00% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-autonomous-business-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$50o0B+';
-        accuracy: '99.99%';
-        efficiency: '5,0o00%'};
-      readingTime: '35 min read'};
+        roi: '30,0o00%',
+        savings: '$50o0B+',
+        accuracy: '99.99%',
+        efficiency: '5,0o00%'},
+      readingTime: '35 min read'},
     {
-      id: 'fortune-50o0-autonomous-business-success';
-      title: 'Fortune 50o0 Autonomous Business Success: $2.8B Annual Savings - 30,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-business-30o000-roi-success-story';
+      id: 'fortune-50o0-autonomous-business-success',
+      title: 'Fortune 50o0 Autonomous Business Success: $2.8B Annual Savings - 30,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-business-30o000-roi-success-story',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$2.8B';
-        accuracy: '99.99%';
-        efficiency: '450%'};
-      readingTime: '25 min read'};
+        roi: '30,0o00%',
+        savings: '$2.8B',
+        accuracy: '99.99%',
+        efficiency: '450%'},
+      readingTime: '25 min read'},
     {
-      id: 'autonomous-business-implementation-guide';
-      title: 'Autonomous Business Implementation Ultimate Guide 20o25: Complete Roadmap to 30,0o00% ROI';
-      type: 'resource';
-      url: '/resources/autonomous-business-implementation-ultimate-guide-20o25';
+      id: 'autonomous-business-implementation-guide',
+      title: 'Autonomous Business Implementation Ultimate Guide 20o25: Complete Roadmap to 30,0o00% ROI',
+      type: 'resource',
+      url: '/resources/autonomous-business-implementation-ultimate-guide-20o25',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$2.8B+';
-        accuracy: '99.99%';
-        efficiency: '450%'};
+        roi: '30,0o00%',
+        savings: '$2.8B+',
+        accuracy: '99.99%',
+        efficiency: '450%'},
       readingTime: '60 min read'}
   ],
   useEffect(() => {
@@ -62,21 +62,21 @@ const UltimateAutonomousBusinessRevolutionBanner: React.FC = () => {
     return () => clearInterval(interval)}, [contentItems.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimate-autonomous-business-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-autonomous-business-banner-dismissedtrue')},
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-50o0',
       case 'case-study': return 'bg-green-50o0',
       case 'resource': return 'bg-purple-50o0',
       default: return 'bg-gray-50o0'}
-  };
+  },
   if (!isVisible) return null,
   const currentItem = contentItems[currentIndex],
   return (
@@ -124,7 +124,7 @@ const UltimateAutonomousBusinessRevolutionBanner: React.FC = () => {
                   </div>,
                   <div>,
                     <span className="text-yellow-40o0 text-sm font-semibold uppercase tracking-wide">,
-                      {currentItem.type.replace('-', ' ')}
+                      {currentItem.type.replace('- ')}
                     </span>,
                     {currentItem.readingTime && (
                       <span className="text-blue-20o0 text-sm ml-2">• {currentItem.readingTime}</span>)}
@@ -189,7 +189,7 @@ const UltimateAutonomousBusinessRevolutionBanner: React.FC = () => {
                     <span className="text-white text-sm">{getTypeIcon(item.type)}</span>,
                   </div>,
                   <span className="text-yellow-40o0 text-xs font-semibold uppercase tracking-wide">,
-                    {item.type.replace('-', ' ')}
+                    {item.type.replace('- ')}
                   </span>,
                 </div>,
                 <h4 className="text-sm font-semibold mb-2 line-clamp-2">,
@@ -241,5 +241,5 @@ const UltimateAutonomousBusinessRevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAutonomousBusinessRevolutionBanner;
+    </div>)},
+export default UltimateAutonomousBusinessRevolutionBanner,

@@ -26,8 +26,8 @@ function CategoryIcon({ category }: { category: ZionNotification['category'] }) 
 }
 ,
 export default function NotificationItem({
-  item;
-  onMarkRead;
+  item,
+  onMarkRead,
   onDismiss}: {
   item: ZionNotification,
   onMarkRead: (id: string) => void,

@@ -2,111 +2,105 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Users;
-  Zap;
-  Clock;
-  Award;
-  ArrowRight;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Clock,
+  Award,
+  ArrowRight,
 } from 'lucide-react',
 const UltimateContentShowcase20o25Revolution: React.FC = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ai-20o25-ultimate-business-transformation-revolution';
-      title: 'AI 20o25: The Ultimate Business Transformation Revolution';
+      id: 'ai-20o25-ultimate-business-transformation-revolution',
+      title: 'AI 20o25: The Ultimate Business Transformation Revolution',
       description:,
-        'Achieve 1,0o00% ROI through intelligent automation and autonomous business operations that reshape entire industries.';
-      type: 'blog';
-      category: 'transformation';
+        'Achieve 1,0o00% ROI through intelligent automation and autonomous business operations that reshape entire industries.',
+      type: 'blog',
+      category: 'transformation',
       metrics: {
-        roi: '1,0o00%';
-        savings: '$50o0M+';
-        efficiency: '99.8%';
-        satisfaction: '98%';
-      };
-      url: '/blog/ai-20o25-ultimate-business-transformation-revolution';
-      readingTime: '25 min read';
-      featured: true;
+        roi: '1,0o00%',
+        savings: '$50o0M+',
+        efficiency: '99.8%',
+        satisfaction: '98%'
+      },
+      url: '/blog/ai-20o25-ultimate-business-transformation-revolution',
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'AI';
-        'Business Transformation';
-        'ROI';
-        'Intelligent Automation';
-        'Revolution';
-      ];
-    };
+        'AIBusiness Transformation',
+        'ROIIntelligent Automation',
+        'Revolution',
+      ]
+    },
     {
-      id: 'ai-transformation-10o00-roi-ultimate-success-story';
-      title: 'AI Transformation Success: $1.2B Company Achieves 1,0o00% ROI';
+      id: 'ai-transformation-10o00-roi-ultimate-success-story',
+      title: 'AI Transformation Success: $1.2B Company Achieves 1,0o00% ROI',
       description:,
-        'Real-world case study showing how a global manufacturing giant achieved unprecedented results in 18 months.';
-      type: 'case-study';
-      category: 'success-stories';
+        'Real-world case study showing how a global manufacturing giant achieved unprecedented results in 18 months.',
+      type: 'case-study',
+      category: 'success-stories',
       metrics: {
-        roi: '1,0o00%';
-        savings: '$280M';
-        timeline: '18 months';
-        satisfaction: '99.2%';
-      };
-      url: '/case-studies/ai-transformation-10o00-roi-ultimate-success-story';
-      readingTime: '18 min read';
-      featured: true;
+        roi: '1,0o00%',
+        savings: '$280M',
+        timeline: '18 months',
+        satisfaction: '99.2%'
+      },
+      url: '/case-studies/ai-transformation-10o00-roi-ultimate-success-story',
+      readingTime: '18 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'AI Transformation';
-        'ROI';
-        'Success Story';
-        'Manufacturing';
-      ];
-    };
+        'Case StudyAI Transformation',
+        'ROISuccess Story',
+        'Manufacturing',
+      ]
+    },
     {
-      id: 'ai-20o25-implementation-roadmap';
-      title: 'AI 20o25 Implementation Roadmap: From Strategy to 1,0o00% ROI';
+      id: 'ai-20o25-implementation-roadmap',
+      title: 'AI 20o25 Implementation Roadmap: From Strategy to 1,0o00% ROI',
       description:,
-        'Complete step-by-step guide for achieving extraordinary AI transformation results with proven frameworks.';
-      type: 'resource';
-      category: 'implementation';
+        'Complete step-by-step guide for achieving extraordinary AI transformation results with proven frameworks.',
+      type: 'resource',
+      category: 'implementation',
       metrics: {
-        roi: '1,0o00%';
-        success: '99%';
-        timeline: '18 months';
-        projects: '50o0+';
-      };
-      url: '/resources/ai-20o25-implementation-roadmap';
-      readingTime: '15 min read';
-      featured: true;
+        roi: '1,0o00%',
+        success: '99%',
+        timeline: '18 months',
+        projects: '50o0+'
+      },
+      url: '/resources/ai-20o25-implementation-roadmap',
+      readingTime: '15 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'AI Strategy';
-        'ROI';
-        'Roadmap';
-        'Best Practices';
-      ];
-    };
+        'Implementation GuideAI Strategy',
+        'ROIRoadmap',
+        'Best Practices',
+      ]
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'transformation';
-      label: 'Transformation';
+      id: 'transformation',
+      label: 'Transformation',
       count: contentItems.filter(item => item.category === 'transformation'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'success-stories';
-      label: 'Success Stories';
+      id: 'success-stories',
+      label: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-stories'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'implementation';
-      label: 'Implementation';
+      id: 'implementation',
+      label: 'Implementation',
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length;
-    };
+        .length,
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -120,7 +114,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
         return <ArrowRight className='w-5 h-5' />,
       default:,
         return <Zap className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'case-study':,
@@ -129,7 +123,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
         return 'text-blue-60o0 bg-blue-10o0',
       default:,
         return 'text-purple-60o0 bg-purple-10o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -144,7 +138,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed'>,
             Discover the most comprehensive collection of AI transformation,
-            content, featuring proven strategies, real-world success stories;
+            content, featuring proven strategies, real-world success stories,
             and implementation guides that deliver,
             <span className='font-semibold text-purple-60o0'> 1,0o00% ROI</span>,
             .,
@@ -181,7 +175,7 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -306,5 +300,5 @@ const UltimateContentShowcase20o25Revolution: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentShowcase20o25Revolution;
+    </section>)},
+export default UltimateContentShowcase20o25Revolution,

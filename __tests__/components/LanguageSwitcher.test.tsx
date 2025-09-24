@@ -1,4 +1,6 @@
-import React from react',import { render, fireEvent, screen } from @testing-library/react',import { I18nextProvider } from react-i18next',import i18n from ../../src/i18n/index', // Adjust path if necessary'import LanguageSwitcher from ../../src/components/LanguageSwitcher', // Adjust path if necessary'import Home from ../../src/pages/Home', // Adjust path if necessary,
+import React from react',
+import { render, fireEvent, screen } from @testing-library/react',import { I18nextProvider } from react-i18next',
+import i18n from ../../src/i18n/index', // Adjust path if necessary'import LanguageSwitcher from ../../src/components/LanguageSwitcher', // Adjust path if necessary'import Home from ../../src/pages/Home', // Adjust path if necessary,
 describe('LanguageSwitcher', () => {'  beforeEach(() => {
     // Reset language to English before each test,
     i18n.changeLanguage('en')}),

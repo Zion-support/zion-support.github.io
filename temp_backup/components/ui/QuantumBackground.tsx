@@ -4,7 +4,7 @@ interface QuantumBackgroundProps {
   className?: string}
 ,
 const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
-  children;
+  children,
   className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const [isClient, setIsClient] = useState(false),
@@ -19,7 +19,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
       if (typeof window !== 'undefined') {
         canvas.width = window.innerWidth,
         canvas.height = window.innerHeight}
-    };
+    },
     resizeCanvas(),
     if (typeof window !== 'undefined') {
       window.addEventListener('resize', resizeCanvas)}
@@ -142,7 +142,7 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
         connection.draw()}),
       // Quantum wave interference pattern,
       drawWaveInterference(),
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     const drawWaveInterference = () => {
       if (!ctx) return,
       ctx.save(),
@@ -159,13 +159,13 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
         }
       }
 ,
-      ctx.restore()};
+      ctx.restore()},
     animate(),
     return () => {
       cancelAnimationFrame(animationId),
       if (typeof window !== 'undefined') {
         window.removeEventListener('resize', resizeCanvas)}
-    };
+    },
   }, [isClient]),
   return (
     <div className={`relative overflow-hidden ${className}`}>,
@@ -177,4 +177,4 @@ const QuantumBackground: React.FC<QuantumBackgroundProps> = ({
       {children}
     </div>)}
 ,
-export default QuantumBackground;
+export default QuantumBackground,

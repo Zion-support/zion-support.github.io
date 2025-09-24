@@ -5,12 +5,12 @@ export default async function handler(
   const type = (req.query.type as string) |'rest') {
   const type = (req.query.type as string) || 'rest',
   if (type === 'graphql') {
-    res && res.setHeader('Content-Type', 'text/markdown'),
+    res && res.setHeader('Content-Typetext/markdown'),
     return res,
       .status(200),
       .send(
         `# Zion Partner SDK (GraphQL)\n\nSchemas and resolvers are coming soon. For now, use REST endpoints documented in the REST SDK.`)}
-  res && res.setHeader('Content-Type', 'text/markdown'),
+  res && res.setHeader('Content-Typetext/markdown'),
   return res,
     .status(200),
     .send(

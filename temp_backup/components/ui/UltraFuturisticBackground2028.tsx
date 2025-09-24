@@ -113,15 +113,15 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
             ctx.stroke(),
             ctx.restore()}
         })}),
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       cancelAnimationFrame(animationFrameId),
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, []),
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">,
@@ -142,76 +142,76 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
         <motion.div,
           className="absolute top-20 left-10 w-32 h-32 border border-purple-50o0/30 rotate-45",
           animate={{
-            rotate: [45, 40o5];
-            scale: [1, 1.2, 1];
+            rotate: [45, 40o5],
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-20 w-24 h-24 border border-cyan-50o0/30 rotate-45",
           animate={{
-            rotate: [45, -315];
-            scale: [1, 1.3, 1];
+            rotate: [45, -315],
+            scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 15;
-            repeat: Infinity;
+            duration: 15,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 left-1/4 w-40 h-40 border border-blue-50o0/30 rotate-45",
           animate={{
-            rotate: [45, 40o5];
-            scale: [1, 1.1, 1];
+            rotate: [45, 40o5],
+            scale: [1, 1.1, 1],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         {/* Floating Circles */}
         <motion.div,
           className="absolute top-1/3 left-1/3 w-16 h-16 border border-purple-50o0/20 rounded-full",
           animate={{
-            scale: [1, 1.5, 1];
+            scale: [1, 1.5, 1],
             opacity: [0.2, 0.6, 0.2]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-2/3 right-1/3 w-20 h-20 border border-cyan-50o0/20 rounded-full",
           animate={{
-            scale: [1, 1.3, 1];
+            scale: [1, 1.3, 1],
             opacity: [0.3, 0.7, 0.3]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Floating Triangles */}
         <motion.div,
           className="absolute top-1/4 right-1/4 w-0 h-0 border-l-[20px] border-l-transparent border-b-[35px] border-b-purple-50o0/30 border-r-[20px] border-r-transparent",
           animate={{
-            rotate: [0, 360];
+            rotate: [0, 360],
             y: [0, -20, 0]}}
           transition={{
-            duration: 18;
-            repeat: Infinity;
+            duration: 18,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-1/3 left-1/2 w-0 h-0 border-l-[15px] border-l-transparent border-b-[25px] border-b-cyan-50o0/30 border-r-[15px] border-r-transparent",
           animate={{
-            rotate: [0, -360];
+            rotate: [0, -360],
             y: [0, 15, 0]}}
           transition={{
-            duration: 22;
-            repeat: Infinity;
+            duration: 22,
+            repeat: Infinity,
             ease: "linear"}}
          />,
       </div>,
@@ -231,16 +231,16 @@ export default function UltraFuturisticBackground20o28({ children }: UltraFuturi
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0, -10o0, 0];
-              opacity: [0, 1, 0];
+              y: [0, -10o0, 0],
+              opacity: [0, 1, 0],
               scale: [0, 1, 0]}}
             transition={{
-              duration: Math.random() * 3 + 2;
-              repeat: Infinity;
-              delay: Math.random() * 2;
+              duration: Math.random() * 3 + 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
               ease: "easeInOut"}}
            />))}
       </div>,

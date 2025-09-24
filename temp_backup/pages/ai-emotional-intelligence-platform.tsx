@@ -1,18 +1,18 @@
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Heart;
-  Brain;
-  Users;
-  Target;
-  Award;
-  Clock;
-  CheckCircle;
-  Shield;
-  Database;
-  Server;
-  Layers;
-  FileText;
+  Heart,
+  Brain,
+  Users,
+  Target,
+  Award,
+  Clock,
+  CheckCircle,
+  Shield,
+  Database,
+  Server,
+  Layers,
+  FileText,
 } from 'lucide-react',
 export default function EmotionalIQPage() {
   return (
@@ -36,14 +36,11 @@ export default function EmotionalIQPage() {
         implementationWeeks='2-3 weeks',
         roiNote='Higher CSAT, better retention, and improved collaboration',
         features={[
-          'Multimodal emotion recognition with consent';
-          'Personalized EI training plans';
-          'Role-play simulations with feedback';
-          'Manager dashboards and coaching tips';
-          'Privacy-first data handling';
-          'Integrations with HRIS and LMS';
+          'Multimodal emotion recognition with consentPersonalized EI training plans',
+          'Role-play simulations with feedbackManager dashboards and coaching tips',
+          'Privacy-first data handlingIntegrations with HRIS and LMS',
         ]}
-        industries={['Customer Support', 'Sales', 'HR', 'Healthcare']}
+        industries={['Customer SupportSales', 'HRHealthcare']}
         url='https: //ziontechgroup.com/ai-emotional-intelligence-platform',
       />,
     </>)}

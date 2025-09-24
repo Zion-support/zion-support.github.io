@@ -1,4 +1,6 @@
-import { createMocks } from node-mocks-http',import fs from fs',import path from path',import handler from ../../api/newsletter/subscribe';
+import { createMocks } from node-mocks-http',
+import fs from fs',import path from path',
+import handler from ../../api/newsletter/subscribe',
 const FILE_PATH = path.join(process.cwd(), data', newsletter-subscriptions.json'),
 describe('/api/newsletter/subscribe', () => {'  beforeEach(() => {
     fs.writeFileSync(FILE_PATH, JSON.stringify([]))}),

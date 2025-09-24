@@ -9,7 +9,7 @@ class EnhancedCursorSyncMetrics {
   constructor() {
     this.projectRoot = process.cwd(),
     this.metricsDir = path.join(__dirname, 'metrics'),
-    this.logFile = path.join(__dirname, 'logs', 'enhanced-cursor-sync-cron.log'),
+    this.logFile = path.join(__dirname, 'logsenhanced-cursor-sync-cron.log'),
     this.metricsFile = path.join(this.metricsDir, 'enhanced-sync-metrics.json'),
     this.ensureMetricsDirectory()}
 ,
@@ -25,21 +25,21 @@ class EnhancedCursorSyncMetrics {
         console.error('Error loading metrics:', error.message)}
     }
     return {
-      totalSyncs: 0;
-      successfulSyncs: 0;
-      failedSyncs: 0;
-      totalDuration: 0;
-      averageDuration: 0;
-      totalFiles: 0;
-      lastSync: null;
-      computerStats: {};
-      dailyStats: {};
-      errorStats: {};
+      totalSyncs: 0,
+      successfulSyncs: 0,
+      failedSyncs: 0,
+      totalDuration: 0,
+      averageDuration: 0,
+      totalFiles: 0,
+      lastSync: null,
+      computerStats: {},
+      dailyStats: {},
+      errorStats: {},
       performanceStats: {
-        fastestSync: null;
-        slowestSync: null;
+        fastestSync: null,
+        slowestSync: null,
         averageFilesPerSync: 0}
-    };
+    },
   }
 ,
   saveMetrics(metrics) {
@@ -50,7 +50,7 @@ class EnhancedCursorSyncMetrics {
 ,
   analyzeLogFile() {
     if (!fs.existsSync(this.logFile)) {
-      return { syncs: 0, errors: 0, lastSync: null, durations: [], fileCounts: [] };
+      return { syncs: 0, errors: 0, lastSync: null, durations: [], fileCounts: [] },
     }
 ,
     try {
@@ -81,10 +81,10 @@ class EnhancedCursorSyncMetrics {
           errors++}
       }
 ,
-      return { syncs, errors, lastSync, durations, fileCounts };
+      return { syncs, errors, lastSync, durations, fileCounts },
     } catch (error) {
       console.error('Error analyzing log file:', error.message),
-      return { syncs: 0, errors: 0, lastSync: null, durations: [], fileCounts: [] };
+      return { syncs: 0, errors: 0, lastSync: null, durations: [], fileCounts: [] },
     }
   }
 ,
@@ -95,9 +95,9 @@ class EnhancedCursorSyncMetrics {
     // Ensure performanceStats exists,
     if (!metrics.performanceStats) {
       metrics.performanceStats ={
-        fastestSync: null;
-        slowestSync: null;
-        averageFilesPerSync: 0};
+        fastestSync: null,
+        slowestSync: null,
+        averageFilesPerSync: 0},
     }
 ,
     // Update basic metrics,
@@ -131,11 +131,11 @@ class EnhancedCursorSyncMetrics {
     // Update daily stats,
     if (!metrics.dailyStats[today]) {
       metrics.dailyStats[today] ={
-        syncs: 0;
-        errors: 0;
-        totalDuration: 0;
-        totalFiles: 0;
-        timestamp: new Date().toISOString()};
+        syncs: 0,
+        errors: 0,
+        totalDuration: 0,
+        totalFiles: 0,
+        timestamp: new Date().toISOString()},
     }
 ,
     metrics.dailyStats[today].syncs += logAnalysis.syncs,
@@ -160,23 +160,23 @@ class EnhancedCursorSyncMetrics {
   generateReport() {
     const metrics = this.loadMetrics(),
     const report ={
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       summary: {
-        totalSyncs: metrics.totalSyncs;
-        successfulSyncs: metrics.successfulSyncs;
-        failedSyncs: metrics.failedSyncs;
-        successRate: metrics.successRate + '%';
-        lastSync: metrics.lastSync;
-        averageDuration: metrics.averageDuration.toFixed(2) + 'ms';
-        totalFiles: metrics.totalFiles;
-        averageFilesPerSync: (metrics.performanceStats.averageFilesPerSync || 0).toFixed(2)};
+        totalSyncs: metrics.totalSyncs,
+        successfulSyncs: metrics.successfulSyncs,
+        failedSyncs: metrics.failedSyncs,
+        successRate: metrics.successRate + '%',
+        lastSync: metrics.lastSync,
+        averageDuration: metrics.averageDuration.toFixed(2) + 'ms',
+        totalFiles: metrics.totalFiles,
+        averageFilesPerSync: (metrics.performanceStats.averageFilesPerSync || 0).toFixed(2)},
       performance: {
-        fastestSync: metrics.performanceStats.fastestSync ? metrics.performanceStats.fastestSync + 'ms' : 'N/A';
-        slowestSync: metrics.performanceStats.slowestSync ? metrics.performanceStats.slowestSync + 'ms' : 'N/A';
-        averageDuration: metrics.averageDuration.toFixed(2) + 'ms'};
-      dailyStats: metrics.dailyStats;
-      computerStats: metrics.computerStats;
-      recommendations: this.generateRecommendations(metrics)};
+        fastestSync: metrics.performanceStats.fastestSync ? metrics.performanceStats.fastestSync + 'ms' : 'N/A',
+        slowestSync: metrics.performanceStats.slowestSync ? metrics.performanceStats.slowestSync + 'ms' : 'N/A',
+        averageDuration: metrics.averageDuration.toFixed(2) + 'ms'},
+      dailyStats: metrics.dailyStats,
+      computerStats: metrics.computerStats,
+      recommendations: this.generateRecommendations(metrics)},
     const reportFile = path.join(this.metricsDir, `enhanced-sync-report-${new Date().toISOString().split('T')[0]}.json`),
     fs.writeFileSync(reportFile, JSON.stringify(report, null, 2)),
     // // console.log(`📄 Enhanced report generated: ${reportFile}`)}
@@ -203,25 +203,25 @@ class EnhancedCursorSyncMetrics {
   generateDashboard() {
     const metrics = this.loadMetrics(),
     const dashboard ={
-      title: 'Enhanced Cursor Sync Dashboard';
-      timestamp: new Date().toISOString();
+      title: 'Enhanced Cursor Sync Dashboard',
+      timestamp: new Date().toISOString(),
       stats: {
-        totalSyncs: metrics.totalSyncs;
-        successRate: metrics.successRate + '%';
-        averageDuration: metrics.averageDuration.toFixed(2) + 'ms';
-        totalFiles: metrics.totalFiles};
-      recentActivity: this.getRecentActivity();
+        totalSyncs: metrics.totalSyncs,
+        successRate: metrics.successRate + '%',
+        averageDuration: metrics.averageDuration.toFixed(2) + 'ms',
+        totalFiles: metrics.totalFiles},
+      recentActivity: this.getRecentActivity(),
       performance: {
-        fastest: metrics.performanceStats.fastestSync ? metrics.performanceStats.fastestSync + 'ms' : 'N/A';
-        slowest: metrics.performanceStats.slowestSync ? metrics.performanceStats.slowestSync + 'ms' : 'N/A';
+        fastest: metrics.performanceStats.fastestSync ? metrics.performanceStats.fastestSync + 'ms' : 'N/A',
+        slowest: metrics.performanceStats.slowestSync ? metrics.performanceStats.slowestSync + 'ms' : 'N/A',
         average: metrics.averageDuration.toFixed(2) + 'ms'}
-    };
+    },
     const dashboardFile = path.join(this.metricsDir, 'enhanced-sync-dashboard.json'),
     fs.writeFileSync(dashboardFile, JSON.stringify(dashboard, null, 2)),
     // // console.log(`📊 Enhanced dashboard generated: ${dashboardFile}`)}
 ,
   getRecentActivity() {
-    const logFile = path.join(__dirname, 'logs', 'enhanced-cursor-sync.log'),
+    const logFile = path.join(__dirname, 'logsenhanced-cursor-sync.log'),
     if (!fs.existsSync(logFile)) {
       return []}
 ,

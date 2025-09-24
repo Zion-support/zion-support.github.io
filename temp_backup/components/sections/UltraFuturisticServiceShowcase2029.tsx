@@ -1,21 +1,21 @@
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Target;
-  Shield;
-  Cpu;
-  Globe;
-  Sparkles;
-  DollarSign;
-  Users;
-  Clock;
-  CheckCircle;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+  Globe,
+  Sparkles,
+  DollarSign,
+  Users,
+  Clock,
+  CheckCircle,
 } from 'lucide-react',
 import Link from 'next/link',
 interface Service {
@@ -32,52 +32,52 @@ interface Service {
     mobile: string,
     email: string,
     website: string,
-    address: string};
+    address: string},
 }
 ,
 interface UltraFuturisticServiceShowcase20o29Props {
   services: Service[]}
 ,
 export default function UltraFuturisticServiceShowcase20o29({
-  services;
+  services,
 }: UltraFuturisticServiceShowcase20o29Props) {
   const categories = [
     {
-      name: 'AI & Consciousness';
-      icon: Brain;
-      color: 'from-violet-50o0 to-purple-60o0';
-      services: services.filter(s => s.category.includes('AI'));
-    };
+      name: 'AI & Consciousness',
+      icon: Brain,
+      color: 'from-violet-50o0 to-purple-60o0',
+      services: services.filter(s => s.category.includes('AI'))
+    },
     {
-      name: 'Quantum Computing';
-      icon: Atom;
-      color: 'from-blue-50o0 to-cyan-60o0';
-      services: services.filter(s => s.category.includes('Quantum'));
-    };
+      name: 'Quantum Computing',
+      icon: Atom,
+      color: 'from-blue-50o0 to-cyan-60o0',
+      services: services.filter(s => s.category.includes('Quantum'))
+    },
     {
-      name: 'Space Technology';
-      icon: Rocket;
-      color: 'from-emerald-50o0 to-teal-60o0';
-      services: services.filter(s => s.category.includes('Space'));
-    };
+      name: 'Space Technology',
+      icon: Rocket,
+      color: 'from-emerald-50o0 to-teal-60o0',
+      services: services.filter(s => s.category.includes('Space'))
+    },
     {
-      name: 'Enterprise IT';
-      icon: Cpu;
-      color: 'from-cyan-50o0 to-teal-60o0';
-      services: services.filter(s => s.category.includes('IT'));
-    };
+      name: 'Enterprise IT',
+      icon: Cpu,
+      color: 'from-cyan-50o0 to-teal-60o0',
+      services: services.filter(s => s.category.includes('IT'))
+    },
     {
-      name: 'Micro SAAS';
-      icon: Target;
-      color: 'from-orange-50o0 to-red-60o0';
-      services: services.filter(s => s.category.includes('Micro'));
-    };
+      name: 'Micro SAAS',
+      icon: Target,
+      color: 'from-orange-50o0 to-red-60o0',
+      services: services.filter(s => s.category.includes('Micro'))
+    },
     {
-      name: 'Emerging Tech';
-      icon: Globe;
-      color: 'from-green-50o0 to-emerald-60o0';
-      services: services.filter(s => s.category.includes('Emerging'));
-    };
+      name: 'Emerging Tech',
+      icon: Globe,
+      color: 'from-green-50o0 to-emerald-60o0',
+      services: services.filter(s => s.category.includes('Emerging'))
+    },
   ],
   return (
     <section className='relative py-20 bg-gradient-to-b from-black via-gray-90o0 to-black overflow-hidden'>,
@@ -87,8 +87,8 @@ export default function UltraFuturisticServiceShowcase20o29({
           <div
             className='absolute inset-0',
             style={{
-              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`;
-              backgroundSize: '10o0px 10o0px';
+              backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
+              backgroundSize: '10o0px 10o0px'
             }}
           />,
         </div>,

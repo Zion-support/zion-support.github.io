@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'document-processing-automation - Zion Tech Group';
+  title: 'document-processing-automation - Zion Tech Group',
   description:,
-    'Professional document-processing-automation solutions for your business needs.';
-  keywords: 'document-processing-automation, services, business, technology';
-};
+    'Professional document-processing-automation solutions for your business needs.',
+  keywords: 'document-processing-automation, services, business, technology',
+},
 export default function DocumentProcessingAutomationPage() {
   return (
     <div className='min-h-screen bg-white'>,

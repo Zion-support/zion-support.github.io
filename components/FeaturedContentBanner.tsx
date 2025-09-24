@@ -15,44 +15,44 @@ interface FeaturedContent {
 ,
 const featuredContent: FeaturedContent[] = [
   {
-    id: '1';
-    title: 'AI 20o25 Revolutionary Autonomous Operations Breakthrough';
-    description: 'The Ultimate AI Revolution delivering 10,0o00% ROI through autonomous business operations';
-    category: 'Blog Post';
-    roi: '10,0o00% ROI';
-    badge: 'BREAKTHROUGH';
-    badgeColor: 'bg-red-50o0';
-    link: '/blog/ai-20o25-revolutionary-autonomous-operations-breakthrough';
-    icon: '🚀'};
+    id: '1',
+    title: 'AI 20o25 Revolutionary Autonomous Operations Breakthrough',
+    description: 'The Ultimate AI Revolution delivering 10,0o00% ROI through autonomous business operations',
+    category: 'Blog Post',
+    roi: '10,0o00% ROI',
+    badge: 'BREAKTHROUGH',
+    badgeColor: 'bg-red-50o0',
+    link: '/blog/ai-20o25-revolutionary-autonomous-operations-breakthrough',
+    icon: '🚀'},
   {
-    id: '2';
-    title: 'Global Enterprise Autonomous Transformation';
-    description: 'Fortune 50o0 company achieves 15,0o00% ROI through revolutionary AI implementation';
-    category: 'Case Study';
-    roi: '15,0o00% ROI';
-    badge: 'SUCCESS STORY';
-    badgeColor: 'bg-green-50o0';
-    link: '/case-studies/ai-20o25-global-enterprise-autonomous-transformation-150o00-roi';
-    icon: '🏆'};
+    id: '2',
+    title: 'Global Enterprise Autonomous Transformation',
+    description: 'Fortune 50o0 company achieves 15,0o00% ROI through revolutionary AI implementation',
+    category: 'Case Study',
+    roi: '15,0o00% ROI',
+    badge: 'SUCCESS STORY',
+    badgeColor: 'bg-green-50o0',
+    link: '/case-studies/ai-20o25-global-enterprise-autonomous-transformation-150o00-roi',
+    icon: '🏆'},
   {
-    id: '3';
-    title: 'Ultimate Autonomous Implementation Master Guide';
-    description: 'Complete blueprint for implementing AI autonomous operations with proven 15,0o00% ROI';
-    category: 'Resource Guide';
-    roi: '15,0o00% ROI';
-    badge: 'MASTER GUIDE';
-    badgeColor: 'bg-purple-50o0';
-    link: '/resources/ai-20o25-ultimate-autonomous-implementation-master-guide';
-    icon: '📚'};
+    id: '3',
+    title: 'Ultimate Autonomous Implementation Master Guide',
+    description: 'Complete blueprint for implementing AI autonomous operations with proven 15,0o00% ROI',
+    category: 'Resource Guide',
+    roi: '15,0o00% ROI',
+    badge: 'MASTER GUIDE',
+    badgeColor: 'bg-purple-50o0',
+    link: '/resources/ai-20o25-ultimate-autonomous-implementation-master-guide',
+    icon: '📚'},
   {
-    id: '4';
-    title: 'AI 20o26 Quantum-Neural Fusion Revolution';
-    description: 'Revolutionary breakthrough combining quantum computing with neural networks for unprecedented AI power';
-    category: 'Blog Post';
-    roi: '15,0o00% ROI';
-    badge: 'REVOLUTIONARY';
-    badgeColor: 'bg-indigo-50o0';
-    link: '/blog/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough';
+    id: '4',
+    title: 'AI 20o26 Quantum-Neural Fusion Revolution',
+    description: 'Revolutionary breakthrough combining quantum computing with neural networks for unprecedented AI power',
+    category: 'Blog Post',
+    roi: '15,0o00% ROI',
+    badge: 'REVOLUTIONARY',
+    badgeColor: 'bg-indigo-50o0',
+    link: '/blog/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough',
     icon: '⚛️'}
 ],
 export default function FeaturedContentBanner() {

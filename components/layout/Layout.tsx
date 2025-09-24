@@ -166,5 +166,5 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             </div>,
           </motion.div>,
         </div>)}
-    </>)};
-export default Layout;
+    </>)},
+export default Layout,

@@ -51,7 +51,7 @@ export default function AIFinancialServicesFintechAutomation() {
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>,
                   The financial services industry is undergoing a digital,
                   transformation powered by artificial intelligence. From,
-                  automated trading to fraud detection to personalized banking;
+                  automated trading to fraud detection to personalized banking,
                   AI is reshaping how financial institutions operate and serve,
                   their customers.,
                 </p>,
@@ -142,7 +142,7 @@ export default function AIFinancialServicesFintechAutomation() {
                   </li>,
                   <li>,
                     • <strong>Behavioral Biometrics: </strong> Machine learning,
-                    algorithms learn individual user behavior patterns;
+                    algorithms learn individual user behavior patterns,
                     detecting anomalies that might indicate account compromise,
                   </li>,
                   <li>,
@@ -203,7 +203,7 @@ export default function AIFinancialServicesFintechAutomation() {
                       Sentiment Analysis,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      Natural language processing analyzes news, social media;
+                      Natural language processing analyzes news, social media,
                       and earnings calls to predict market movements.,
                     </p>,
                   </div>,
@@ -258,12 +258,12 @@ export default function AIFinancialServicesFintechAutomation() {
                   </li>,
                   <li>,
                     • <strong>Intelligent Reporting: </strong> Machine learning,
-                    algorithms automatically generate regulatory reports;
+                    algorithms automatically generate regulatory reports,
                     identifying patterns and anomalies that require attention,
                   </li>,
                   <li>,
                     • <strong>Risk Assessment: </strong> AI evaluates compliance,
-                    risks across different business lines and customer segments;
+                    risks across different business lines and customer segments,
                     helping institutions prioritize their compliance efforts,
                   </li>,
                   <li>,
@@ -283,7 +283,7 @@ export default function AIFinancialServicesFintechAutomation() {
                   Implementation Challenges and Solutions,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  While the benefits of AI in financial services are clear;
+                  While the benefits of AI in financial services are clear,
                   implementation comes with unique challenges: ,
                 </p>,
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>,
@@ -359,7 +359,7 @@ export default function AIFinancialServicesFintechAutomation() {
                 </h2>,
                 <p className='text-white/90 mb-4'>,
                   AI is fundamentally transforming the financial services,
-                  industry, creating opportunities for innovation, efficiency;
+                  industry, creating opportunities for innovation, efficiency,
                   and improved customer experiences. Financial institutions that,
                   embrace these technologies will gain significant competitive,
                   advantages while better serving their customers' evolving,

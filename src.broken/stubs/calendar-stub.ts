@@ -15,11 +15,11 @@ export interface DateRange {
 // Stub DayPicker component - simple function that returns null during build,
 export const DayPicker = (props: CalendarProps) => {
   // Return null for build compatibility,
-  return null};
+  return null},
 // Export as default,
-export default DayPicker;
+export default DayPicker,
 // Additional exports that might be needed,
 export const format = (date: Date, formatStr: string) => {
-  return date.toLocaleDateString()};
+  return date.toLocaleDateString()},
 export const isValid = (date: any): date is Date => {
-  return date instanceof Date && !isNaN(date.getTime())};
+  return date instanceof Date && !isNaN(date.getTime())},

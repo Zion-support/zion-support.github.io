@@ -13,5 +13,5 @@ const CloudMigrationServicesChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default CloudMigrationServicesChat;
+    </div>)},
+export default CloudMigrationServicesChat,

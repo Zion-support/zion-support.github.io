@@ -1,5 +1,4 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Link from 'next/link',
 const EnhancedNavigation: React.FC = () => {
   return (
@@ -20,5 +19,5 @@ const EnhancedNavigation: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </nav>)};
-export default EnhancedNavigation;
+    </nav>)},
+export default EnhancedNavigation,

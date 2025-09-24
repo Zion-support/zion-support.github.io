@@ -2,40 +2,40 @@ EyeVolume2MousePointerKeyboardShieldCheckCircle,
 const AdvancedAccessibilityEnhancer = () => {
   const accessibilityFeatures = [
     {
-      icon: Eye;
-      title: "Visual Accessibility";
-      description: "High contrast ratioscreen reader supportand visual indicators";
-      compliance: "WCAG 2.1 AA";
-      features: ["4.5:1 contrast ratio"Screen reader compatibility"Focus indicators"Alt text optimization"]};
+      icon: Eye,
+      title: "Visual Accessibility",
+      description: "High contrast ratioscreen reader supportand visual indicators",
+      compliance: "WCAG 2.1 AA",
+      features: ["4.5:1 contrast ratio"Screen reader compatibility"Focus indicators"Alt text optimization"]},
     {
-      icon: Volume2;
-      title: "Audio Accessibility";
-      description: "Audio descriptionscaptionsand sound alternatives";
-      compliance: "WCAG 2.1 AA";
-      features: ["Audio descriptions"Closed captions"Transcripts"Sound alternatives"]};
+      icon: Volume2,
+      title: "Audio Accessibility",
+      description: "Audio descriptionscaptionsand sound alternatives",
+      compliance: "WCAG 2.1 AA",
+      features: ["Audio descriptions"Closed captions"Transcripts"Sound alternatives"]},
     {
-      icon: MousePointer;
-      title: "Motor Accessibility";
-      description: "Large click targetskeyboard navigationand gesture alternatives";
-      compliance: "WCAG 2.1 AA";
-      features: ["44px minimum touch targets"Keyboard navigation"Gesture alternatives"Voice control"]};
+      icon: MousePointer,
+      title: "Motor Accessibility",
+      description: "Large click targetskeyboard navigationand gesture alternatives",
+      compliance: "WCAG 2.1 AA",
+      features: ["44px minimum touch targets"Keyboard navigation"Gesture alternatives"Voice control"]},
     {
-      icon: Keyboard;
-      title: "Keyboard Navigation";
-      description: "Full keyboard accessibility and focus management";
-      compliance: "WCAG 2.1 AA";
-      features: ["Tab navigation"Focus management"Skip links"Keyboard shortcuts"]};
+      icon: Keyboard,
+      title: "Keyboard Navigation",
+      description: "Full keyboard accessibility and focus management",
+      compliance: "WCAG 2.1 AA",
+      features: ["Tab navigation"Focus management"Skip links"Keyboard shortcuts"]},
     {
-      icon: Shield;
-      title: "Cognitive Accessibility";
-      description: "Clear navigationconsistent designand error prevention";
-      compliance: "WCAG 2.1 AA";
-      features: ["Clear navigation"Consistent design"Error prevention"Help text"]};
+      icon: Shield,
+      title: "Cognitive Accessibility",
+      description: "Clear navigationconsistent designand error prevention",
+      compliance: "WCAG 2.1 AA",
+      features: ["Clear navigation"Consistent design"Error prevention"Help text"]},
     {
-      icon: CheckCircle;
-      title: "Compliance Testing";
-      description: "Automated and manual accessibility testing";
-      compliance: "WCAG 2.1 AA";
+      icon: CheckCircle,
+      title: "Compliance Testing",
+      description: "Automated and manual accessibility testing",
+      compliance: "WCAG 2.1 AA",
       features: ["Automated testing"Manual testing"User testing"Continuous monitoring"]}
   ],
   return (
@@ -126,5 +126,5 @@ const AdvancedAccessibilityEnhancer = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAccessibilityEnhancer;
+    </div>)},
+export default AdvancedAccessibilityEnhancer,

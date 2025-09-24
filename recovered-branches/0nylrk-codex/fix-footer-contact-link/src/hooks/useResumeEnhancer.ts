@@ -9,20 +9,20 @@ export function useResumeEnhancer() {
   const [isEnhancing, setIsEnhancing] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const enhanceContent = async (
-    content: string;
-    type: EnhancementType = 'general';
+    content: string,
+    type: EnhancementType = 'general',
     context?: string): Promise<string | null> => {
     setIsEnhancing(true),
     setError(null),
     try {
       const { data, error } = await supabase.functions.invoke(
-        'resume-enhancer';
+        'resume-enhancer',
         {
           body: {
-            content;
-            enhancementType: type;
-            context;
-          };
+            content,
+            enhancementType: type,
+            context
+          },
         }
       ),
       if (error) {
@@ -33,11 +33,11 @@ export function useResumeEnhancer() {
       console.error('Enhancement error:', err),
       return null} finally {
       setIsEnhancing(false)}
-  };
+  },
   return {
-    enhanceContent;
-    isEnhancing;
-    error;
-  };
+    enhanceContent,
+    isEnhancing,
+    error,
+  },
 }
 ,

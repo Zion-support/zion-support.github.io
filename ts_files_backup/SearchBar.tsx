@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -25,8 +25,8 @@ interface SearchResult {
   url: string, type: 'service' | 'page' | 'category'}
 const SearchBar: React.FC = () => {
 interface SearchResult {
-  title: string, description: string;
-  url: string, type: 'service' | 'page' | 'category';
+  title: string, description: string,
+  url: string, type: 'service' | 'page' | 'category'
 }
 ,
 const SearchBar: React.FC = () => {
@@ -44,15 +44,15 @@ const SearchBar: React.FC = () => {
       url: '/micro-saas',
       type: 'category'}
     {
-      title: 'AI Services';
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more';
-      url: '/ai - services';
-      type: 'category'};
+      title: 'AI Services',
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      url: '/ai - services',
+      type: 'category'},
     {
-      title: 'IT Services';
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more';
-      url: '/it - services';
-      type: 'category'};
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it - services',
+      type: 'category'},
     {
       title: 'Cloud Cost Guard',
       description: 'FinOps Assistant for anomaly detection and cost optimization',
@@ -72,47 +72,47 @@ const SearchBar: React.FC = () => {
   // Mock search data - in a real app, this would come from an API,
   const searchData: SearchResult[] = [
     {
-      title: 'Micro SaaS Products';
-      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more';
-      url: '/micro-saas';
-      type: 'category';
-    };
+      title: 'Micro SaaS Products',
+      description: 'Innovative software solutions including Cloud Cost Guard, API Rate Limiter, and more',
+      url: '/micro-saas',
+      type: 'category'
+    },
     {
-      title: 'AI Services';
-      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more';
-      url: '/ai-services';
-      type: 'category';
-    };
+      title: 'AI Services',
+      description: 'Advanced AI solutions including Computer Vision, Fraud Detection, and more',
+      url: '/ai-services',
+      type: 'category'
+    },
     {
-      title: 'IT Services';
-      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more';
-      url: '/it-services';
-      type: 'category';
-    };
+      title: 'IT Services',
+      description: 'Comprehensive IT solutions including Cloud Migration, Cybersecurity, and more',
+      url: '/it-services',
+      type: 'category'
+    },
     {
-      title: 'Cloud Cost Guard';
-      description: 'FinOps Assistant for anomaly detection and cost optimization';
-      url: '/services';
-      type: 'service';
-    };
+      title: 'Cloud Cost Guard',
+      description: 'FinOps Assistant for anomaly detection and cost optimization',
+      url: '/services',
+      type: 'service'
+    },
     {
-      title: 'Contact Us';
-      description: 'Get in touch with our experts for consultation and quotes';
-      url: '/contact';
-      type: 'page';
-    };
+      title: 'Contact Us',
+      description: 'Get in touch with our experts for consultation and quotes',
+      url: '/contact',
+      type: 'page'
+    },
     {
-      title: 'Pricing';
-      description: 'View our transparent pricing for all services';
-      url: '/pricing';
-      type: 'page';
-    };
+      title: 'Pricing',
+      description: 'View our transparent pricing for all services',
+      url: '/pricing',
+      type: 'page'
+    },
   ],
   const handleSearch = async (searchQuery: string) => {
     if (!searchQuery && searchQuery.trim()) {
       setResults([]),
       setIsOpen(false),
-      return;
+      return,
 }
     setIsLoading(true),
     // Simulate API delay,
@@ -209,5 +209,5 @@ const SearchBar: React.FC = () => {
             </div>) : null}
         </div>)}
     </div>),
-export default SearchBar;
+export default SearchBar,
 }}

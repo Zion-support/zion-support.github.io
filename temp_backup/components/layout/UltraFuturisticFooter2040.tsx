@@ -2,298 +2,298 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Star;
-  Sparkles;
-  Brain;
-  Atom;
-  Shield;
-  Cpu;
-  Code;
-  Rocket;
-  Users;
-  Globe;
-  Lock;
-  Database;
-  Server;
-  Zap;
-  TrendingUp;
-  MessageCircle;
-  HelpCircle;
-  BookOpen;
-  FileText;
-  GraduationCap;
-  Building;
-  Handshake;
-  Heart;
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Star,
+  Sparkles,
+  Brain,
+  Atom,
+  Shield,
+  Cpu,
+  Code,
+  Rocket,
+  Users,
+  Globe,
+  Lock,
+  Database,
+  Server,
+  Zap,
+  TrendingUp,
+  MessageCircle,
+  HelpCircle,
+  BookOpen,
+  FileText,
+  GraduationCap,
+  Building,
+  Handshake,
+  Heart,
 } from 'lucide-react',
 const footerSections = [
   {
-    title: 'Featured Revolutionary Services';
-    description: 'Our most innovative and cutting-edge solutions';
-    icon: <Star className='w-5 h-5 text-yellow-40o0' />;
-    color: 'from-yellow-50o0 to-orange-50o0';
+    title: 'Featured Revolutionary Services',
+    description: 'Our most innovative and cutting-edge solutions',
+    icon: <Star className='w-5 h-5 text-yellow-40o0' />,
+    color: 'from-yellow-50o0 to-orange-50o0',
     links: [
       {
-        name: 'AI Consciousness Evolution 20o40';
-        href: '/ai-consciousness-evolution-20o40';
-        featured: true;
-      };
+        name: 'AI Consciousness Evolution 20o40',
+        href: '/ai-consciousness-evolution-20o40',
+        featured: true
+      },
       {
-        name: 'Quantum Neural Ecosystem 20o40';
-        href: '/quantum-neural-ecosystem-20o40';
-        featured: true;
-      };
+        name: 'Quantum Neural Ecosystem 20o40',
+        href: '/quantum-neural-ecosystem-20o40',
+        featured: true
+      },
       {
-        name: 'Space Resource Intelligence 20o40';
-        href: '/space-resource-intelligence-20o40';
-        featured: true;
-      };
+        name: 'Space Resource Intelligence 20o40',
+        href: '/space-resource-intelligence-20o40',
+        featured: true
+      },
       {
-        name: 'Autonomous Business Intelligence 20o40';
-        href: '/autonomous-business-intelligence-20o40';
-        featured: true;
-      };
+        name: 'Autonomous Business Intelligence 20o40',
+        href: '/autonomous-business-intelligence-20o40',
+        featured: true
+      },
       {
-        name: 'Quantum Cybersecurity Future 20o40';
-        href: '/quantum-cybersecurity-future-20o40';
-        featured: true;
-      };
+        name: 'Quantum Cybersecurity Future 20o40',
+        href: '/quantum-cybersecurity-future-20o40',
+        featured: true
+      },
       {
-        name: 'Brain-Computer Interface 20o40';
-        href: '/brain-computer-interface-20o40';
-        featured: true;
-      };
+        name: 'Brain-Computer Interface 20o40',
+        href: '/brain-computer-interface-20o40',
+        featured: true
+      },
       {
-        name: 'AI Autonomous Research 20o41';
-        href: '/ai-autonomous-research-20o41';
-        featured: true;
-      };
+        name: 'AI Autonomous Research 20o41',
+        href: '/ai-autonomous-research-20o41',
+        featured: true
+      },
       {
-        name: 'Quantum Internet Security 20o41';
-        href: '/quantum-internet-security-20o41';
-        featured: true;
-      };
-      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41' };
+        name: 'Quantum Internet Security 20o41',
+        href: '/quantum-internet-security-20o41',
+        featured: true
+      },
+      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41' },
       {
-        name: 'AI Sales Intelligence 20o41';
-        href: '/ai-sales-intelligence-20o41';
-      };
-    ];
-  };
+        name: 'AI Sales Intelligence 20o41',
+        href: '/ai-sales-intelligence-20o41'
+      },
+    ],
+  },
   {
-    title: 'AI & Consciousness';
-    description: 'Revolutionary AI consciousness platforms';
-    icon: <Brain className='w-5 h-5 text-cyan-40o0' />;
-    color: 'from-purple-50o0 to-pink-50o0';
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI consciousness platforms',
+    icon: <Brain className='w-5 h-5 text-cyan-40o0' />,
+    color: 'from-purple-50o0 to-pink-50o0',
     links: [
       {
-        name: 'AI Consciousness Evolution 20o40';
-        href: '/ai-consciousness-evolution-20o40';
-      };
+        name: 'AI Consciousness Evolution 20o40',
+        href: '/ai-consciousness-evolution-20o40'
+      },
       {
-        name: 'AI Emotional Intelligence 20o40';
-        href: '/ai-emotional-intelligence-20o40';
-        featured: true;
-      };
+        name: 'AI Emotional Intelligence 20o40',
+        href: '/ai-emotional-intelligence-20o40',
+        featured: true
+      },
       {
-        name: 'AI Autonomous Research 20o41';
-        href: '/ai-autonomous-research-20o41';
-      };
+        name: 'AI Autonomous Research 20o41',
+        href: '/ai-autonomous-research-20o41'
+      },
       {
-        name: 'AI Content Personalization 20o41';
-        href: '/ai-content-personalization-20o41';
-        featured: true;
-      };
+        name: 'AI Content Personalization 20o41',
+        href: '/ai-content-personalization-20o41',
+        featured: true
+      },
       {
-        name: 'AI Ethics & Governance 20o41';
-        href: '/ai-ethics-governance-20o41';
-      };
+        name: 'AI Ethics & Governance 20o41',
+        href: '/ai-ethics-governance-20o41'
+      },
       {
-        name: 'AI Autonomous Ecosystem 20o41';
-        href: '/ai-autonomous-ecosystem-20o41';
-      };
+        name: 'AI Autonomous Ecosystem 20o41',
+        href: '/ai-autonomous-ecosystem-20o41'
+      },
       {
-        name: 'AI Predictive Maintenance 20o41';
-        href: '/ai-predictive-maintenance-20o41';
-      };
-      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41' };
+        name: 'AI Predictive Maintenance 20o41',
+        href: '/ai-predictive-maintenance-20o41'
+      },
+      { name: 'AI Customer Success 20o41', href: '/ai-customer-success-20o41' },
       {
-        name: 'AI Sales Intelligence 20o41';
-        href: '/ai-sales-intelligence-20o41';
-      };
+        name: 'AI Sales Intelligence 20o41',
+        href: '/ai-sales-intelligence-20o41'
+      },
       {
-        name: 'Autonomous Business Intelligence 20o40';
-        href: '/autonomous-business-intelligence-20o40';
-      };
-    ];
-  };
+        name: 'Autonomous Business Intelligence 20o40',
+        href: '/autonomous-business-intelligence-20o40'
+      },
+    ],
+  },
   {
-    title: 'Quantum & Emerging Tech';
-    description: 'Breakthrough quantum and space technologies';
-    icon: <Atom className='w-5 h-5 text-blue-40o0' />;
-    color: 'from-blue-50o0 to-cyan-50o0';
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum and space technologies',
+    icon: <Atom className='w-5 h-5 text-blue-40o0' />,
+    color: 'from-blue-50o0 to-cyan-50o0',
     links: [
       {
-        name: 'Quantum Neural Ecosystem 20o40';
-        href: '/quantum-neural-ecosystem-20o40';
-        featured: true;
-      };
+        name: 'Quantum Neural Ecosystem 20o40',
+        href: '/quantum-neural-ecosystem-20o40',
+        featured: true
+      },
       {
-        name: 'Quantum Cybersecurity Future 20o40';
-        href: '/quantum-cybersecurity-future-20o40';
-        featured: true;
-      };
+        name: 'Quantum Cybersecurity Future 20o40',
+        href: '/quantum-cybersecurity-future-20o40',
+        featured: true
+      },
       {
-        name: 'Quantum Internet Security 20o41';
-        href: '/quantum-internet-security-20o41';
-        featured: true;
-      };
+        name: 'Quantum Internet Security 20o41',
+        href: '/quantum-internet-security-20o41',
+        featured: true
+      },
       {
-        name: 'Quantum Cloud Infrastructure 20o41';
-        href: '/quantum-cloud-infrastructure-20o41';
-      };
+        name: 'Quantum Cloud Infrastructure 20o41',
+        href: '/quantum-cloud-infrastructure-20o41'
+      },
       {
-        name: 'Quantum Bio-Computing 20o41';
-        href: '/quantum-bio-computing-20o41';
-      };
+        name: 'Quantum Bio-Computing 20o41',
+        href: '/quantum-bio-computing-20o41'
+      },
       {
-        name: 'Space Resource Intelligence 20o40';
-        href: '/space-resource-intelligence-20o40';
-      };
+        name: 'Space Resource Intelligence 20o40',
+        href: '/space-resource-intelligence-20o40'
+      },
       {
-        name: 'Brain-Computer Interface 20o40';
-        href: '/brain-computer-interface-20o40';
-      };
+        name: 'Brain-Computer Interface 20o40',
+        href: '/brain-computer-interface-20o40'
+      },
       {
-        name: 'Autonomous Vehicle AI 20o40';
-        href: '/autonomous-vehicle-ai-20o40';
-      };
+        name: 'Autonomous Vehicle AI 20o40',
+        href: '/autonomous-vehicle-ai-20o40'
+      },
       {
-        name: 'Quantum Materials Discovery 20o40';
-        href: '/quantum-materials-discovery-20o40';
-      };
+        name: 'Quantum Materials Discovery 20o40',
+        href: '/quantum-materials-discovery-20o40'
+      },
       {
-        name: 'Quantum Financial Intelligence 20o40';
-        href: '/quantum-financial-intelligence-20o40';
-      };
-    ];
-  };
+        name: 'Quantum Financial Intelligence 20o40',
+        href: '/quantum-financial-intelligence-20o40'
+      },
+    ],
+  },
   {
-    title: 'Company & Resources';
-    description: 'About Zion Tech Group and resources';
-    icon: <Target className='w-5 h-5 text-purple-40o0' />;
-    color: 'from-orange-50o0 to-red-50o0';
+    title: 'Company & Resources',
+    description: 'About Zion Tech Group and resources',
+    icon: <Target className='w-5 h-5 text-purple-40o0' />,
+    color: 'from-orange-50o0 to-red-50o0',
     links: [
-      { name: 'About Us', href: '/about' };
-      { name: 'Careers', href: '/careers' };
-      { name: 'Contact', href: '/contact' };
-      { name: 'Partners', href: '/partners' };
-      { name: 'News', href: '/news' };
-      { name: 'Blog', href: '/blog' };
-      { name: 'Case Studies', href: '/case-studies' };
-      { name: 'Support', href: '/support' };
-      { name: 'Training', href: '/training' };
-      { name: 'Resources', href: '/resources' };
-    ];
-  };
+      { name: 'About Us', href: '/about' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Contact', href: '/contact' },
+      { name: 'Partners', href: '/partners' },
+      { name: 'News', href: '/news' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
+      { name: 'Support', href: '/support' },
+      { name: 'Training', href: '/training' },
+      { name: 'Resources', href: '/resources' },
+    ],
+  },
 ],
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const socialLinks = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com/company/ziontechgroup';
-    icon: <Linkedin className='w-5 h-5' />;
-  };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: <Linkedin className='w-5 h-5' />
+  },
   {
-    name: 'GitHub';
-    href: 'https://github.com/Zion-Holdings';
-    icon: <Github className='w-5 h-5' />;
-  };
+    name: 'GitHub',
+    href: 'https://github.com/Zion-Holdings',
+    icon: <Github className='w-5 h-5' />
+  },
 ],
 const UltraFuturisticFooter20o40: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Revolutionary Services';
+      title: 'Revolutionary Services',
       links: [
-        { name: 'AI & Consciousness', href: '/ai-services' };
-        { name: 'Quantum Technology', href: '/quantum-services' };
-        { name: 'Enterprise Solutions', href: '/it-services' };
-        { name: 'Micro SAAS Solutions', href: '/micro-saas' };
-        { name: 'Space Technology', href: '/space-tech' };
-        { name: 'All Services', href: '/services' };
-      ];
-    };
+        { name: 'AI & Consciousness', href: '/ai-services' },
+        { name: 'Quantum Technology', href: '/quantum-services' },
+        { name: 'Enterprise Solutions', href: '/it-services' },
+        { name: 'Micro SAAS Solutions', href: '/micro-saas' },
+        { name: 'Space Technology', href: '/space-tech' },
+        { name: 'All Services', href: '/services' },
+      ],
+    },
     {
-      title: 'AI Autonomous Services';
+      title: 'AI Autonomous Services',
       links: [
         {
-          name: 'AI Research Assistant';
-          href: '/ai-autonomous-research-assistant';
-        };
-        { name: 'AI Content Factory', href: '/ai-autonomous-content-factory' };
+          name: 'AI Research Assistant',
+          href: '/ai-autonomous-research-assistant'
+        },
+        { name: 'AI Content Factory', href: '/ai-autonomous-content-factory' },
         {
-          name: 'AI Customer Success';
-          href: '/ai-autonomous-customer-success';
-        };
+          name: 'AI Customer Success',
+          href: '/ai-autonomous-customer-success'
+        },
         {
-          name: 'AI Sales Intelligence';
-          href: '/ai-autonomous-sales-intelligence';
-        };
+          name: 'AI Sales Intelligence',
+          href: '/ai-autonomous-sales-intelligence'
+        },
         {
-          name: 'AI Product Management';
-          href: '/ai-autonomous-product-management';
-        };
-      ];
-    };
+          name: 'AI Product Management',
+          href: '/ai-autonomous-product-management'
+        },
+      ],
+    },
     {
-      title: 'IT Infrastructure';
+      title: 'IT Infrastructure',
       links: [
         {
-          name: 'Quantum Cloud Infrastructure';
-          href: '/quantum-ready-cloud-infrastructure';
-        };
-        { name: 'AI DevOps Automation', href: '/ai-powered-devops-automation' };
+          name: 'Quantum Cloud Infrastructure',
+          href: '/quantum-ready-cloud-infrastructure'
+        },
+        { name: 'AI DevOps Automation', href: '/ai-powered-devops-automation' },
         {
-          name: 'Zero-Trust Security';
-          href: '/zero-trust-network-architecture';
-        };
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' };
+          name: 'Zero-Trust Security',
+          href: '/zero-trust-network-architecture'
+        },
+        { name: 'Edge Computing', href: '/edge-computing-orchestration' },
         {
-          name: 'Blockchain Platform';
-          href: '/blockchain-infrastructure-platform';
-        };
-      ];
-    };
+          name: 'Blockchain Platform',
+          href: '/blockchain-infrastructure-platform'
+        },
+      ],
+    },
     {
-      title: 'Resources & Support';
+      title: 'Resources & Support',
       links: [
-        { name: 'Documentation', href: '/docs' };
-        { name: 'API Reference', href: '/api' };
-        { name: 'Support Center', href: '/support' };
-        { name: 'Training & Certification', href: '/training' };
-        { name: 'Community Forum', href: '/community' };
-      ];
-    };
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Support Center', href: '/support' },
+        { name: 'Training & Certification', href: '/training' },
+        { name: 'Community Forum', href: '/community' },
+      ],
+    },
   ],
   const socialLinks = [
     {
-      name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';
-      icon: '💼';
-    };
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' };
-    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' };
-    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' };
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: '💼'
+    },
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' },
+    { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' },
+    { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' },
   ],
   const currentYear = new Date().getFullYear(),
   return (
@@ -330,7 +330,7 @@ const UltraFuturisticFooter20o40: React.FC = () => {
                 </div>,
               </div>,
               <p className='text-gray-30o0 mb-6 leading-relaxed max-w-md'>,
-                Pioneering the future of technology with revolutionary AI;
+                Pioneering the future of technology with revolutionary AI,
                 quantum computing, and autonomous solutions that transform,
                 businesses and drive innovation.,
               </p>,
@@ -491,4 +491,4 @@ const UltraFuturisticFooter20o40: React.FC = () => {
       {/* Floating Elements */}
       <div className='absolute bottom-4 left-4 w-8 h-8 border border-cyan-40o0/20 rounded-full animate-pulse'></div>,
       <div className='absolute bottom-8 right-8 w-6 h-6 border border-purple-40o0/20 rounded-lg animate-pulse delay-10o00'></div>,
-    </footer>)};
+    </footer>)},

@@ -7,11 +7,11 @@ import { Card } from '../components/Card',
 import { Button } from '../components/Button',
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    firstName: '';
-    lastName: '';
-    email: '';
-    company: '';
-    subject: '';
+    firstName: '',
+    lastName: '',
+    email: '',
+    company: '',
+    subject: '',
     message: ''}),
   const [formErrors, setFormErrors] = useState({}),
   const [isSubmitting, setIsSubmitting] = useState(false),
@@ -41,12 +41,12 @@ export default function ContactPage() {
   const handleChange = (e) => {
     const { name, value } = e.target,
     setFormData({
-      ...formData;
+      ...formData,
       [name]: value}),
     // Clear error when user starts typing,
     if (formErrors[name]) {
       setFormErrors({
-        ...formErrors;
+        ...formErrors,
         [name]: ''})}
   }
 ,
@@ -58,9 +58,9 @@ export default function ContactPage() {
     setIsSubmitting(true),
     try {
       const response = await fetch('/api/contact', {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON.stringify(formData)}),
       const result = await response.json(),
       if (result.success) {
@@ -78,39 +78,35 @@ export default function ContactPage() {
 ,
   const contactInfo = [
     {
-      icon: Mail;
-      title: 'Email Us';
-      description: 'Get in touch via email';
-      details: 'contact@ziontechgroup.com';
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      icon: Mail,
+      title: 'Email Us',
+      description: 'Get in touch via email',
+      details: 'contact@ziontechgroup.com',
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      icon: Phone;
-      title: 'Call Us';
-      description: 'Speak with our team';
-      details: '+1 (555) 123-4567';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      icon: Phone,
+      title: 'Call Us',
+      description: 'Speak with our team',
+      details: '+1 (555) 123-4567',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      icon: MapPin;
-      title: 'Visit Us';
-      description: 'Our headquarters';
-      details: 'San Francisco, CA';
-      color: 'from-purple-50o0 to-violet-50o0'};
+      icon: MapPin,
+      title: 'Visit Us',
+      description: 'Our headquarters',
+      details: 'San Francisco, CA',
+      color: 'from-purple-50o0 to-violet-50o0'},
     {
-      icon: Clock;
-      title: 'Business Hours';
-      description: 'When we\'re available';
-      details: 'Mon-Fri: 9AM-6PM PST';
+      icon: Clock,
+      title: 'Business Hours',
+      description: 'When we\'re available',
+      details: 'Mon-Fri: 9AM-6PM PST',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const services = [
-    'AI Solutions & Machine Learning';
-    'Cloud Infrastructure & Migration';
-    'Cybersecurity & Compliance';
-    'Digital Transformation';
-    'Data Analytics & Business Intelligence';
-    'IoT & Edge Computing Solutions';
-    'Blockchain Technology';
-    'Custom Software Development'],
+    'AI Solutions & Machine LearningCloud Infrastructure & Migration',
+    'Cybersecurity & ComplianceDigital Transformation',
+    'Data Analytics & Business IntelligenceIoT & Edge Computing Solutions',
+    'Blockchain TechnologyCustom Software Development'],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <Navigation  />,

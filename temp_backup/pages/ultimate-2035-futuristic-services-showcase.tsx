@@ -3,35 +3,27 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Shield, Zap, Target, Users, Award, Clock;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Shield, Zap, Target, Users, Award, Clock,
   Heart, Lightbulb, Search, Filter, Grid, List, Globe, Sparkles} from 'lucide-react',
 import { Layout } from '../components/layout/Layout',
 import { ultimateFuturisticServices20o25 } from '../data/20o25-ultimate-futuristic-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const categories = [
-  'All Services';
-  'AI & Autonomous Systems';
-  'Quantum & Cloud Infrastructure';
-  'Space Technology & AI';
-  'Neural Technology & AI';
-  'Cybersecurity & AI';
-  'Quantum Computing & Finance';
-  'Healthcare & AI';
-  'Manufacturing & AI';
-  'Internet Security & Quantum';
+  'All ServicesAI & Autonomous Systems',
+  'Quantum & Cloud InfrastructureSpace Technology & AI',
+  'Neural Technology & AICybersecurity & AI',
+  'Quantum Computing & FinanceHealthcare & AI',
+  'Manufacturing & AIInternet Security & Quantum',
   'Education & AI'],
 const priceRanges = [
-  'All Prices';
-  'Under $1,0o00';
-  '$1,0o00 - $2,0o00';
-  '$2,0o00 - $3,0o00';
-  '$3,0o00 - $5,0o00';
-  'Over $5,0o00'],
+  'All PricesUnder $1,0o00',
+  '$1,0o00 - $2,0o00$2,0o00 - $3,0o00',
+  '$3,0o00 - $5,0o00Over $5,0o00'],
 export default function Ultimate20o35FuturisticServicesShowcase() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
   const [selectedPriceRange, setSelectedPriceRange] = useState('All Prices'),
@@ -55,7 +47,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {
     if (numPrice < 20o00) return '$1,0o00 - $2,0o00',
     if (numPrice < 30o00) return '$2,0o00 - $3,0o00',
     if (numPrice < 50o00) return '$3,0o00 - $5,0o00',
-    return 'Over $5,0o00'};
+    return 'Over $5,0o00'},
   return (
     <>,
       <Head>,
@@ -90,7 +82,7 @@ export default function Ultimate20o35FuturisticServicesShowcase() {
                 <span className="text-white">Futuristic Services</span>,
               </h1>,
               <p className="text-xl lg:text-2xl text-gray-30o0 max-w-4xl mx-auto mb-8 leading-relaxed">,
-                Experience the future of technology with our revolutionary AI autonomous systems;
+                Experience the future of technology with our revolutionary AI autonomous systems,
                 quantum computing platforms, space technology solutions, and neural interface developments,
               </p>,
               <div className="flex flex-wrap justify-center gap-4 mb-8">,

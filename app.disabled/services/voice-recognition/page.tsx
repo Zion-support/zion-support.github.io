@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'voice-recognition - Zion Tech Group';
+  title: 'voice-recognition - Zion Tech Group',
   description:,
-    'Professional voice-recognition solutions for your business needs.';
-  keywords: 'voice-recognition, services, business, technology';
-};
+    'Professional voice-recognition solutions for your business needs.',
+  keywords: 'voice-recognition, services, business, technology',
+},
 export default function VoiceRecognitionPage() {
   return (
     <div className='min-h-screen bg-white'>,

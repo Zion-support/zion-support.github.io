@@ -2,35 +2,35 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Atom;
-  Users;
-  Globe;
-  Cpu;
-  Target;
-  Microscope;
-  Lock;
-  Cloud;
-  BarChart3;
-  Settings;
-  Eye;
-  Award;
-  Clock;
-  Heart;
-  Lightbulb;
-  ArrowRight;
-  CheckCircle;
-  ChevronRight;
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Users,
+  Globe,
+  Cpu,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  ArrowRight,
+  CheckCircle,
+  ChevronRight,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovativeNewMicroSaasServices20o25 } from '../data/20o25-innovative-new-micro-saas-services',
@@ -38,46 +38,46 @@ import { innovativeNewAIServices20o25 } from '../data/20o25-innovative-new-ai-se
 import { innovativeNewITServices20o25 } from '../data/20o25-innovative-new-it-services',
 import { innovativeNewBusinessSolutions20o25 } from '../data/20o25-innovative-new-business-solutions',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const allServices = [
-  ...innovativeNewMicroSaasServices20o25;
-  ...innovativeNewAIServices20o25;
-  ...innovativeNewITServices20o25;
-  ...innovativeNewBusinessSolutions20o25;
+  ...innovativeNewMicroSaasServices20o25,
+  ...innovativeNewAIServices20o25,
+  ...innovativeNewITServices20o25,
+  ...innovativeNewBusinessSolutions20o25,
 ],
 const serviceCategories = [
   {
-    name: 'New Micro SAAS Services';
-    services: innovativeNewMicroSaasServices20o25;
-    icon: Rocket;
-    color: 'from-teal-50o0 to-emerald-60o0';
-    description: 'Innovative business solutions with AI-powered automation';
-  };
+    name: 'New Micro SAAS Services',
+    services: innovativeNewMicroSaasServices20o25,
+    icon: Rocket,
+    color: 'from-teal-50o0 to-emerald-60o0',
+    description: 'Innovative business solutions with AI-powered automation'
+  },
   {
-    name: 'New AI Services';
-    services: innovativeNewAIServices20o25;
-    icon: Brain;
-    color: 'from-pink-50o0 to-rose-60o0';
-    description: 'Cutting-edge AI services with autonomous capabilities';
-  };
+    name: 'New AI Services',
+    services: innovativeNewAIServices20o25,
+    icon: Brain,
+    color: 'from-pink-50o0 to-rose-60o0',
+    description: 'Cutting-edge AI services with autonomous capabilities'
+  },
   {
-    name: 'New IT Services';
-    services: innovativeNewITServices20o25;
-    icon: Shield;
-    color: 'from-cyan-50o0 to-blue-60o0';
-    description: 'Next-generation IT infrastructure and security';
-  };
+    name: 'New IT Services',
+    services: innovativeNewITServices20o25,
+    icon: Shield,
+    color: 'from-cyan-50o0 to-blue-60o0',
+    description: 'Next-generation IT infrastructure and security'
+  },
   {
-    name: 'New Business Solutions';
-    services: innovativeNewBusinessSolutions20o25;
-    icon: Target;
-    color: 'from-emerald-50o0 to-teal-60o0';
-    description: 'AI-powered business intelligence and automation';
-  };
+    name: 'New Business Solutions',
+    services: innovativeNewBusinessSolutions20o25,
+    icon: Target,
+    color: 'from-emerald-50o0 to-teal-60o0',
+    description: 'AI-powered business intelligence and automation'
+  },
 ],
 const ServiceCard = ({ service, index }: { service: any, index: number }) => (
   <motion.div,
@@ -153,8 +153,8 @@ const ServiceCard = ({ service, index }: { service: any, index: number }) => (
     </Link>,
   </motion.div>),
 const CategorySection = ({
-  category;
-  index;
+  category,
+  index,
 }: {
   category: any,
   index: number}) => (
@@ -199,7 +199,7 @@ const HeroSection = () => (
         </h1>,
         <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
           Discover our latest innovative micro SAAS services, AI solutions, IT,
-          infrastructure, and business solutions. All services are real;
+          infrastructure, and business solutions. All services are real,
           market-ready, and designed to transform your business.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center items-center'>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useState } from "react",
 import { Header } from "@/components/Header",
 import { Footer } from "@/components/Footer",
@@ -34,18 +34,18 @@ interface CategoryListingPageProps {
 ,
 export function CategoryListingPage({
   title,
-  description;
-  listings: initialListings;
+  description,
+  listings: initialListings,
   sortOptions = [
-    { label: 'Newest First'value: 'newest' };
-    { label: 'Oldest First'value: 'oldest' };
-    { label: 'Highest Rating'value: 'rating-high' };
-    { label: 'Highest AI Match'value: 'ai-match' };
-    { label: 'A-Z'value: 'a-z' };
-    { label: 'Z-A'value: 'z-a' }];
+    { label: 'Newest First'value: 'newest' },
+    { label: 'Oldest First'value: 'oldest' },
+    { label: 'Highest Rating'value: 'rating-high' },
+    { label: 'Highest AI Match'value: 'ai-match' },
+    { label: 'A-Z'value: 'a-z' },
+    { label: 'Z-A'value: 'z-a' }],
   filterOptions = [
-    { label: 'All'value: 'all' };
-    { label: 'Highly Rated'value: 'high-rating' };
+    { label: 'All'value: 'all' },
+    { label: 'Highly Rated'value: 'high-rating' },
     { label: 'Best AI Match'value: 'best-match' }]}: CategoryListingPageProps) {
   const [searchQuerysetSearchQuery] = useState(""),
   const [selectedSortsetSelectedSort] = useState(sortOptions[0].value),

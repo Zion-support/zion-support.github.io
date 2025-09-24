@@ -15,4 +15,4 @@ export const ChatMessage = ({ message }) => {
           {message.timestamp.toLocaleTimeString()}
         </p>,
       </div>,
-    </div>)};
+    </div>)},

@@ -48,7 +48,7 @@ const SidebarItem: React.FC<SidebarItemProps> = ({ item, level = 0 }) => {
           {item.children!.map(child => (
             <SidebarItem key={child.id} item={child} level={level + 1} />))}
         </div>)}
-    </div>)};
+    </div>)},
 interface SmartSidebarProps {
   pageType: ,
     | 'home',
@@ -62,15 +62,15 @@ interface SmartSidebarProps {
   className?: string}
 ,
 export default function SmartSidebar({
-  pageType;
-  currentService;
-  currentCategory;
-  className = '';
+  pageType,
+  currentService,
+  currentCategory,
+  className = '',
 }: SmartSidebarProps) {
   const { navigation, isLoading } = useNavigationContext({
-    pageType;
-    currentService;
-    currentCategory;
+    pageType,
+    currentService,
+    currentCategory,
   }),
   if (isLoading) {
     return (
@@ -111,58 +111,58 @@ export default function SmartSidebar({
         return generateExploreSidebar(),
       default: ,
         return generateDefaultSidebar()}
-  };
+  },
   const generateServiceSidebar = () => {
     if (!currentService) return generateDefaultSidebar(),
     const service = navigation.services.find(s => s.id === currentService),
     if (!service) return generateDefaultSidebar(),
     return [
       {
-        id: 'service-overview';
-        label: 'Overview';
-        href: service.href;
-        icon: '📋';
-        priority: 1;
-      };
+        id: 'service-overview',
+        label: 'Overview',
+        href: service.href,
+        icon: '📋',
+        priority: 1
+      },
       {
-        id: 'service-demo';
-        label: 'Live Demo';
-        href: service.href;
-        icon: '🚀';
-        priority: 2;
-      };
+        id: 'service-demo',
+        label: 'Live Demo',
+        href: service.href,
+        icon: '🚀',
+        priority: 2
+      },
       {
-        id: 'service-docs';
-        label: 'Documentation';
-        href: service.href.replace('/demo/', '/docs/');
-        icon: '📚';
-        priority: 3;
-      };
+        id: 'service-docs',
+        label: 'Documentation',
+        href: service.href.replace('/demo//docs/'),
+        icon: '📚',
+        priority: 3
+      },
       {
-        id: 'service-code';
-        label: 'Source Code';
-        href: `https://github.com/ai-factory/${service.id}`;
-        icon: '💻';
-        priority: 4;
-        isExternal: true;
-      };
+        id: 'service-code',
+        label: 'Source Code',
+        href: `https://github.com/ai-factory/${service.id}`,
+        icon: '💻',
+        priority: 4,
+        isExternal: true
+      },
       {
-        id: 'related-services';
-        label: 'Related Services';
-        href: '#';
-        icon: '🔗';
-        priority: 5;
+        id: 'related-services',
+        label: 'Related Services',
+        href: '#',
+        icon: '🔗',
+        priority: 5,
         children: navigation.services,
           .filter(s => s.category === service.category && s.id !== service.id),
           .slice(0, 3),
           .map(s => ({
-            id: `related-${s.id}`;
-            label: s.label;
-            href: s.href;
-            status: s.status;
-          }));
-      };
-    ]};
+            id: `related-${s.id}`,
+            label: s.label,
+            href: s.href,
+            status: s.status
+          })),
+      },
+    ]},
   const generateCategorySidebar = () => {
     if (!currentCategory) return generateDefaultSidebar(),
     const category = navigation.categories.find(c => c.id === currentCategory),
@@ -171,217 +171,217 @@ export default function SmartSidebar({
       s => s.category === category.name),
     return [
       {
-        id: 'category-overview';
-        label: `${category.name} Overview`;
-        href: `/category/${category.slug}`;
-        icon: category.icon;
-        priority: 1;
-      };
+        id: 'category-overview',
+        label: `${category.name} Overview`,
+        href: `/category/${category.slug}`,
+        icon: category.icon,
+        priority: 1
+      },
       {
-        id: 'category-services';
-        label: 'Services in Category';
-        href: '#';
-        icon: '🚀';
-        priority: 2;
+        id: 'category-services',
+        label: 'Services in Category',
+        href: '#',
+        icon: '🚀',
+        priority: 2,
         children: categoryServices.map(service => ({
-          id: `service-${service.id}`;
-          label: service.label;
-          href: service.href;
-          status: service.status;
-        }));
-      };
+          id: `service-${service.id}`,
+          label: service.label,
+          href: service.href,
+          status: service.status
+        })),
+      },
       {
-        id: 'category-stats';
-        label: 'Category Statistics';
-        href: '#';
-        icon: '📊';
-        priority: 3;
+        id: 'category-stats',
+        label: 'Category Statistics',
+        href: '#',
+        icon: '📊',
+        priority: 3,
         children: [
           {
-            id: 'total-services';
-            label: `Total Services: ${categoryServices.length}`;
-            href: '#';
-          };
+            id: 'total-services',
+            label: `Total Services: ${categoryServices.length}`,
+            href: '#'
+          },
           {
-            id: 'active-services';
-            label: `Active: ${categoryServices.filter(s => s.status === 'active').length}`;
-            href: '#';
-          };
+            id: 'active-services',
+            label: `Active: ${categoryServices.filter(s => s.status === 'active').length}`,
+            href: '#'
+          },
           {
-            id: 'beta-services';
-            label: `Beta: ${categoryServices.filter(s => s.status === 'beta').length}`;
-            href: '#';
-          };
-        ];
-      };
-    ]};
+            id: 'beta-services',
+            label: `Beta: ${categoryServices.filter(s => s.status === 'beta').length}`,
+            href: '#'
+          },
+        ],
+      },
+    ]},
   const generateDashboardSidebar = () => {
     return [
       {
-        id: 'dashboard-overview';
-        label: 'Dashboard Overview';
-        href: '/dashboard';
-        icon: '📊';
-        priority: 1;
-      };
+        id: 'dashboard-overview',
+        label: 'Dashboard Overview',
+        href: '/dashboard',
+        icon: '📊',
+        priority: 1
+      },
       {
-        id: 'my-services';
-        label: 'My Services';
-        href: '/dashboard/services';
-        icon: '🚀';
-        priority: 2;
-      };
+        id: 'my-services',
+        label: 'My Services',
+        href: '/dashboard/services',
+        icon: '🚀',
+        priority: 2
+      },
       {
-        id: 'analytics';
-        label: 'Analytics';
-        href: '/dashboard/analytics';
-        icon: '📈';
-        priority: 3;
-      };
+        id: 'analytics',
+        label: 'Analytics',
+        href: '/dashboard/analytics',
+        icon: '📈',
+        priority: 3
+      },
       {
-        id: 'settings';
-        label: 'Settings';
-        href: '/dashboard/settings';
-        icon: '⚙️';
-        priority: 4;
-      };
+        id: 'settings',
+        label: 'Settings',
+        href: '/dashboard/settings',
+        icon: '⚙️',
+        priority: 4
+      },
       {
-        id: 'quick-actions';
-        label: 'Quick Actions';
-        href: '#';
-        icon: '⚡';
-        priority: 5;
+        id: 'quick-actions',
+        label: 'Quick Actions',
+        href: '#',
+        icon: '⚡',
+        priority: 5,
         children: [
           {
-            id: 'add-service';
-            label: 'Add New Service';
-            href: '/dashboard/services/new';
-          };
+            id: 'add-service',
+            label: 'Add New Service',
+            href: '/dashboard/services/new'
+          },
           {
-            id: 'view-reports';
-            label: 'View Reports';
-            href: '/reports';
-          };
+            id: 'view-reports',
+            label: 'View Reports',
+            href: '/reports'
+          },
           {
-            id: 'system-status';
-            label: 'System Status';
-            href: '/system-status';
-          };
-        ];
-      };
-    ]};
+            id: 'system-status',
+            label: 'System Status',
+            href: '/system-status'
+          },
+        ],
+      },
+    ]},
   const generateSearchSidebar = () => {
     return [
       {
-        id: 'search-filters';
-        label: 'Search Filters';
-        href: '#';
-        icon: '🔍';
-        priority: 1;
+        id: 'search-filters',
+        label: 'Search Filters',
+        href: '#',
+        icon: '🔍',
+        priority: 1,
         children: [
           {
-            id: 'filter-category';
-            label: 'By Category';
-            href: '#';
-          };
+            id: 'filter-category',
+            label: 'By Category',
+            href: '#'
+          },
           {
-            id: 'filter-status';
-            label: 'By Status';
-            href: '#';
-          };
+            id: 'filter-status',
+            label: 'By Status',
+            href: '#'
+          },
           {
-            id: 'filter-technology';
-            label: 'By Technology';
-            href: '#';
-          };
-        ];
-      };
+            id: 'filter-technology',
+            label: 'By Technology',
+            href: '#'
+          },
+        ],
+      },
       {
-        id: 'recent-searches';
-        label: 'Recent Searches';
-        href: '#';
-        icon: '🕒';
-        priority: 2;
-      };
+        id: 'recent-searches',
+        label: 'Recent Searches',
+        href: '#',
+        icon: '🕒',
+        priority: 2
+      },
       {
-        id: 'popular-searches';
-        label: 'Popular Searches';
-        href: '#';
-        icon: '🔥';
-        priority: 3;
-      };
-    ]};
+        id: 'popular-searches',
+        label: 'Popular Searches',
+        href: '#',
+        icon: '🔥',
+        priority: 3
+      },
+    ]},
   const generateExploreSidebar = () => {
     return [
       {
-        id: 'explore-categories';
-        label: 'Browse Categories';
-        href: '#';
-        icon: '📂';
-        priority: 1;
+        id: 'explore-categories',
+        label: 'Browse Categories',
+        href: '#',
+        icon: '📂',
+        priority: 1,
         children: navigation.categories.map(category => ({
-          id: `explore-${category.id}`;
-          label: category.name;
-          href: `/category/${category.slug}`;
-          icon: category.icon;
-        }));
-      };
+          id: `explore-${category.id}`,
+          label: category.name,
+          href: `/category/${category.slug}`,
+          icon: category.icon
+        })),
+      },
       {
-        id: 'explore-services';
-        label: 'All Services';
-        href: '/services';
-        icon: '🚀';
-        priority: 2;
-      };
+        id: 'explore-services',
+        label: 'All Services',
+        href: '/services',
+        icon: '🚀',
+        priority: 2
+      },
       {
-        id: 'explore-featured';
-        label: 'Featured Services';
-        href: '#';
-        icon: '⭐';
-        priority: 3;
+        id: 'explore-featured',
+        label: 'Featured Services',
+        href: '#',
+        icon: '⭐',
+        priority: 3,
         children: navigation.services,
           .filter(s => s.status === 'active'),
           .sort((a, b) => (a.priority || 0) - (b.priority || 0)),
           .slice(0, 5),
           .map(service => ({
-            id: `featured-${service.id}`;
-            label: service.label;
-            href: service.href;
-            status: service.status;
-          }));
-      };
-    ]};
+            id: `featured-${service.id}`,
+            label: service.label,
+            href: service.href,
+            status: service.status
+          })),
+      },
+    ]},
   const generateDefaultSidebar = () => {
     return [
       {
-        id: 'quick-start';
-        label: 'Quick Start';
-        href: '/#services';
-        icon: '🚀';
-        priority: 1;
-      };
+        id: 'quick-start',
+        label: 'Quick Start',
+        href: '/#services',
+        icon: '🚀',
+        priority: 1
+      },
       {
-        id: 'popular-services';
-        label: 'Popular Services';
-        href: '/services';
-        icon: '🔥';
-        priority: 2;
-      };
+        id: 'popular-services',
+        label: 'Popular Services',
+        href: '/services',
+        icon: '🔥',
+        priority: 2
+      },
       {
-        id: 'browse-categories';
-        label: 'Browse Categories';
-        href: '/explore';
-        icon: '📂';
-        priority: 3;
-      };
+        id: 'browse-categories',
+        label: 'Browse Categories',
+        href: '/explore',
+        icon: '📂',
+        priority: 3
+      },
       {
-        id: 'latest-updates';
-        label: 'Latest Updates';
-        href: '/newsroom';
-        icon: '📰';
-        priority: 4;
-      };
-    ]};
+        id: 'latest-updates',
+        label: 'Latest Updates',
+        href: '/newsroom',
+        icon: '📰',
+        priority: 4
+      },
+    ]},
   const sidebarItems = generateSidebarContent(),
   return (
     <aside

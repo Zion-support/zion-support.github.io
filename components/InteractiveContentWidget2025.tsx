@@ -7,83 +7,83 @@ const InteractiveContentWidget20o25 = () => {
   const [activeTabsetActiveTab] = useState('trending'),
   const [viewModesetViewMode] = useState('grid'),
   const contentCategories = [
-    { id: ''trending', 'label: ''Trending', 'icon: TrendingUp };
-    { id: ''new', 'label: ''New', 'icon: Star };
-    { id: ''popular', 'label: ''Popular', 'icon: Users };
-    { id: ''ai', 'label: 'AI 'Solutions', 'icon: Zap }
+    { id: ''trendinglabel: ''Trendingicon: TrendingUp },
+    { id: ''newlabel: ''Newicon: Star },
+    { id: ''popularlabel: ''Popularicon: Users },
+    { id: ''ailabel: 'AI 'Solutionsicon: Zap }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: "AI-Powered Business Intelligence Suite";
-      description: "Transform your data into actionable insights with our advanced AI analytics platform";
-      category: "AI Solutions";
-      type: "Platform";
-      rating: 4.9;
-      users: "12.5K";
-      time: "5 min read";
-      image: "/api/placeholder/40o0/250";
-      trending: true;
-      new: false};
+      id: 1,
+      title: "AI-Powered Business Intelligence Suite",
+      description: "Transform your data into actionable insights with our advanced AI analytics platform",
+      category: "AI Solutions",
+      type: "Platform",
+      rating: 4.9,
+      users: "12.5K",
+      time: "5 min read",
+      image: "/api/placeholder/40o0/250",
+      trending: true,
+      new: false},
     {
-      id: 2;
-      title: "Quantum Computing Development Kit";
-      description: "Build quantum applications with our comprehensive development toolkit";
-      category: "Quantum Tech";
-      type: "Development Kit";
-      rating: 4.8;
-      users: "8.2K";
-      time: "8 min read";
-      image: "/api/placeholder/40o0/250";
-      trending: false;
-      new: true};
+      id: 2,
+      title: "Quantum Computing Development Kit",
+      description: "Build quantum applications with our comprehensive development toolkit",
+      category: "Quantum Tech",
+      type: "Development Kit",
+      rating: 4.8,
+      users: "8.2K",
+      time: "8 min read",
+      image: "/api/placeholder/40o0/250",
+      trending: false,
+      new: true},
     {
-      id: 3;
-      title: "Neural Interface API";
-      description: "Integrate brain-computer interfaces into your applications seamlessly";
-      category: "Neural Tech";
-      type: "API";
-      rating: 4.7;
-      users: "15.3K";
-      time: "6 min read";
-      image: "/api/placeholder/40o0/250";
-      trending: true;
-      new: false};
+      id: 3,
+      title: "Neural Interface API",
+      description: "Integrate brain-computer interfaces into your applications seamlessly",
+      category: "Neural Tech",
+      type: "API",
+      rating: 4.7,
+      users: "15.3K",
+      time: "6 min read",
+      image: "/api/placeholder/40o0/250",
+      trending: true,
+      new: false},
     {
-      id: 4;
-      title: "Advanced Automation Workflows";
-      description: "Create complex automation sequences with our visual workflow builder";
-      category: "Automation";
-      type: "Tool";
-      rating: 4.9;
-      users: "22.1K";
-      time: "4 min read";
-      image: "/api/placeholder/40o0/250";
-      trending: false;
-      new: true};
+      id: 4,
+      title: "Advanced Automation Workflows",
+      description: "Create complex automation sequences with our visual workflow builder",
+      category: "Automation",
+      type: "Tool",
+      rating: 4.9,
+      users: "22.1K",
+      time: "4 min read",
+      image: "/api/placeholder/40o0/250",
+      trending: false,
+      new: true},
     {
-      id: 5;
-      title: "Space Technology Integration Hub";
-      description: "Connect your business to satellite networks and space-based services";
-      category: "Space Tech";
-      type: "Platform";
-      rating: 4.6;
-      users: "6.7K";
-      time: "7 min read";
-      image: "/api/placeholder/40o0/250";
-      trending: true;
-      new: false};
+      id: 5,
+      title: "Space Technology Integration Hub",
+      description: "Connect your business to satellite networks and space-based services",
+      category: "Space Tech",
+      type: "Platform",
+      rating: 4.6,
+      users: "6.7K",
+      time: "7 min read",
+      image: "/api/placeholder/40o0/250",
+      trending: true,
+      new: false},
     {
-      id: 6;
-      title: "Consciousness AI Framework";
-      description: "Develop AI systems with enhanced consciousness and emotional intelligence";
-      category: "AI Consciousness";
-      type: "Framework";
-      rating: 4.8;
-      users: "9.4K";
-      time: "10 min read";
-      image: "/api/placeholder/40o0/250";
-      trending: false;
+      id: 6,
+      title: "Consciousness AI Framework",
+      description: "Develop AI systems with enhanced consciousness and emotional intelligence",
+      category: "AI Consciousness",
+      type: "Framework",
+      rating: 4.8,
+      users: "9.4K",
+      time: "10 min read",
+      image: "/api/placeholder/40o0/250",
+      trending: false,
       new: true}
   ],
   const filteredContent = contentItems.filter(item => {
@@ -225,5 +225,5 @@ const InteractiveContentWidget20o25 = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveContentWidget20o25;
+    </div>)},
+export default InteractiveContentWidget20o25,

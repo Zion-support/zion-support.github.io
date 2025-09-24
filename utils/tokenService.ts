@@ -7,9 +7,9 @@ export function issueTokens(userId: string, amount: number, reason: string) {
     amount,
     description: reason})}
 export function revokeTokens(userId: string, amount: number, reason: string) {
-    userId;
-    type: 'earn';
-    amount;
+    userId,
+    type: 'earn',
+    amount,
     description: reason})}
 ,
 export function revokeTokens(userId: string, amount: number, reason: string) {
@@ -26,9 +26,9 @@ export /**,
  */,
 function issue_tokens() {
   return add_transaction ({
-    user_id;
-    type: 'earn';
-    amount;
+    user_id,
+    type: 'earn',
+    amount,
     description: reason})}
 export /**,
  * revoke_tokens - Function description,
@@ -37,8 +37,8 @@ function revoke_tokens() {
   const current_balance = getUserBalance (user_id),
   const actual_amount = Math.min (amount, current_balance),
   return add_transaction ({
-    user_id;
-    type: 'spend';
-    amount: actual_amount;
+    user_id,
+    type: 'spend',
+    amount: actual_amount,
     description: reason})}
 }

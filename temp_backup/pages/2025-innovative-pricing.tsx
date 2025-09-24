@@ -2,16 +2,16 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
-  Brain;
-  Building;
-  Target;
-  Rocket;
-  ArrowRight;
+  Check,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Building,
+  Target,
+  Rocket,
+  ArrowRight,
 } from 'lucide-react',
 // Import our new 20o25 services,
 import { advancedAIAutomationServices20o25 } from '../data/20o25-advanced-ai-automation-services',
@@ -19,104 +19,95 @@ import { innovativeITInfrastructureServices20o25 } from '../data/20o25-innovativ
 import { innovativeMicroSaasSolutions20o25 } from '../data/20o25-innovative-micro-saas-solutions',
 import { emergingTechnologyServices } from '../data/20o25-emerging-technology-services',
 const contact = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 // Service categories with pricing tiers,
 const serviceCategories = [
   {
-    id: 'enterprise-ai';
-    name: 'Enterprise AI Services';
-    icon: <Brain className='w-8 h-8' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    services: advancedAIAutomationServices20o25;
-  };
+    id: 'enterprise-ai',
+    name: 'Enterprise AI Services',
+    icon: <Brain className='w-8 h-8' />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    services: advancedAIAutomationServices20o25
+  },
   {
-    id: 'it-infrastructure';
-    name: 'IT Infrastructure Services';
-    icon: <Building className='w-8 h-8' />;
-    color: 'from-blue-50o0 to-indigo-50o0';
-    services: innovativeITInfrastructureServices20o25;
-  };
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure Services',
+    icon: <Building className='w-8 h-8' />,
+    color: 'from-blue-50o0 to-indigo-50o0',
+    services: innovativeITInfrastructureServices20o25
+  },
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS Solutions';
-    icon: <Target className='w-8 h-8' />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    services: innovativeMicroSaasSolutions20o25;
-  };
+    id: 'micro-saas',
+    name: 'Micro SAAS Solutions',
+    icon: <Target className='w-8 h-8' />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: innovativeMicroSaasSolutions20o25
+  },
   {
-    id: 'emerging-tech';
-    name: 'Emerging Technology Services';
-    icon: <Rocket className='w-8 h-8' />;
-    color: 'from-orange-50o0 to-red-50o0';
-    services: emergingTechnologyServices;
-  };
+    id: 'emerging-tech',
+    name: 'Emerging Technology Services',
+    icon: <Rocket className='w-8 h-8' />,
+    color: 'from-orange-50o0 to-red-50o0',
+    services: emergingTechnologyServices
+  },
 ],
 // Pricing tiers,
 const pricingTiers = [
   {
-    name: 'Starter';
-    price: '$99';
-    period: '/month';
-    description: 'Perfect for small businesses and startups';
+    name: 'Starter',
+    price: '$99',
+    period: '/month',
+    description: 'Perfect for small businesses and startups',
     features: [
-      'Basic service features';
-      'Email support';
-      'Standard integrations';
-      'Community documentation';
-      'Basic analytics';
-    ];
-    color: 'from-gray-50o0 to-slate-50o0';
-  };
+      'Basic service featuresEmail support',
+      'Standard integrationsCommunity documentation',
+      'Basic analytics',
+    ],
+    color: 'from-gray-50o0 to-slate-50o0'
+  },
   {
-    name: 'Professional';
-    price: '$299';
-    period: '/month';
-    description: 'Ideal for growing businesses and teams';
+    name: 'Professional',
+    price: '$299',
+    period: '/month',
+    description: 'Ideal for growing businesses and teams',
     features: [
-      'All Starter features';
-      'Priority support';
-      'Advanced integrations';
-      'Custom configurations';
-      'Advanced analytics';
-      'Team collaboration';
-    ];
-    color: 'from-blue-50o0 to-indigo-50o0';
-    popular: true;
-  };
+      'All Starter featuresPriority support',
+      'Advanced integrationsCustom configurations',
+      'Advanced analyticsTeam collaboration',
+    ],
+    color: 'from-blue-50o0 to-indigo-50o0',
+    popular: true
+  },
   {
-    name: 'Enterprise';
-    price: '$799';
-    period: '/month';
-    description: 'For large organizations with complex needs';
+    name: 'Enterprise',
+    price: '$799',
+    period: '/month',
+    description: 'For large organizations with complex needs',
     features: [
-      'All Professional features';
-      '24/7 dedicated support';
-      'Custom integrations';
-      'White-label options';
-      'Advanced security';
-      'SLA guarantees';
-      'Custom training';
-      'On-premise options';
-    ];
-    color: 'from-purple-50o0 to-pink-50o0';
-  };
+      'All Professional features24/7 dedicated support',
+      'Custom integrationsWhite-label options',
+      'Advanced securitySLA guarantees',
+      'Custom trainingOn-premise options',
+    ],
+    color: 'from-purple-50o0 to-pink-50o0'
+  },
 ],
 // Helper function to get service pricing,
 const getServicePricing = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
   if (service.price?.monthly) return `$${service.price.monthly}/month`,
-  return 'Contact for pricing'};
+  return 'Contact for pricing'},
 // Helper function to get service pricing display,
 const getServicePricingDisplay = (service: any) => {
   if (service.pricing?.starter) return service.pricing.starter,
   if (service.pricing?.monthly) return `$${service.pricing.monthly}`,
   if (service.price?.monthly) return `$${service.price.monthly}`,
-  return 'Contact'};
+  return 'Contact'},
 // Helper function to get service period,
 const getServicePeriod = (service: any) => {
   if (
@@ -124,7 +115,7 @@ const getServicePeriod = (service: any) => {
     service.pricing?.monthly ||,
     service.price?.monthly),
     return '/month',
-  return ''};
+  return ''},
 export default function InnovativePricing20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   // Normalize services to unified format,
@@ -132,66 +123,66 @@ export default function InnovativePricing20o25() {
     if (service.pricing) {
       // IT Infrastructure service format,
       return {
-        id: service.id;
-        name: service.name;
-        tagline: service.description || '';
-        description: service.description || '';
-        category: service.category || service.type || '';
-        icon: '⚡';
-        popular: false;
-        link: service.website || `https://ziontechgroup.com${service.slug}`;
-        pricing: service.pricing;
+        id: service.id,
+        name: service.name,
+        tagline: service.description || '',
+        description: service.description || '',
+        category: service.category || service.type || '',
+        icon: '⚡',
+        popular: false,
+        link: service.website || `https://ziontechgroup.com${service.slug}`,
+        pricing: service.pricing,
         price_monthly: 0, // Will be calculated from pricing,
-        price_yearly: 0;
-        trialDays: 14;
-        setupTime: '1-2 weeks';
-      };
+        price_yearly: 0,
+        trialDays: 14,
+        setupTime: '1-2 weeks'
+      },
     } else if (service.price && typeof service.price === 'object') {
       // Emerging technology service format,
       return {
-        id: service.id;
-        name: service.name;
-        tagline: service.tagline || '';
-        description: service.description || '';
-        category: service.category || '';
-        icon: service.icon || '🚀';
-        popular: service.popular || false;
-        link: service.link || `https://ziontechgroup.com/${service.id}`;
-        price_monthly: service.price.monthly;
-        price_yearly: service.price.yearly;
-        trialDays: service.price.trialDays || 14;
-        setupTime: service.price.setupTime || '1-2 weeks';
-      };
+        id: service.id,
+        name: service.name,
+        tagline: service.tagline || '',
+        description: service.description || '',
+        category: service.category || '',
+        icon: service.icon || '🚀',
+        popular: service.popular || false,
+        link: service.link || `https://ziontechgroup.com/${service.id}`,
+        price_monthly: service.price.monthly,
+        price_yearly: service.price.yearly,
+        trialDays: service.price.trialDays || 14,
+        setupTime: service.price.setupTime || '1-2 weeks'
+      },
     } else {
       // AI Automation and Micro SAAS format,
       return {
-        id: service.id;
-        name: service.name;
-        tagline: service.tagline || '';
-        description: service.description || '';
-        category: service.category || '';
-        icon: service.icon || '🤖';
-        popular: service.popular || false;
-        link: service.link || `https://ziontechgroup.com/${service.id}`;
-        price: service.price;
-        price_monthly: typeof service.price === 'string' ? 0 : 0;
-        price_yearly: typeof service.price === 'string' ? 0 : 0;
-        trialDays: service.trialDays || 14;
-        setupTime: service.setupTime || '1-2 weeks';
-      };
+        id: service.id,
+        name: service.name,
+        tagline: service.tagline || '',
+        description: service.description || '',
+        category: service.category || '',
+        icon: service.icon || '🤖',
+        popular: service.popular || false,
+        link: service.link || `https://ziontechgroup.com/${service.id}`,
+        price: service.price,
+        price_monthly: typeof service.price === 'string' ? 0 : 0,
+        price_yearly: typeof service.price === 'string' ? 0 : 0,
+        trialDays: service.trialDays || 14,
+        setupTime: service.setupTime || '1-2 weeks'
+      },
     }
-  };
+  },
   const getFilteredServices = () => {
     let allServices: UnifiedService[] = [],
     if (selectedCategory === 'all') {
       return [
-        ...advancedAIAutomationServices20o25;
-        ...innovativeITInfrastructureServices20o25;
-        ...innovativeMicroSaasSolutions20o25;
-        ...emergingTechnologyServices;
+        ...advancedAIAutomationServices20o25,
+        ...innovativeITInfrastructureServices20o25,
+        ...innovativeMicroSaasSolutions20o25,
+        ...emergingTechnologyServices,
       ]}
 ,
-    return allServices};
+    return allServices},
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO
@@ -386,29 +377,29 @@ export default function InnovativePricing20o25() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>,
             {[
               {
-                icon: <Shield className='w-12 h-12' />;
-                title: 'Enterprise Security';
+                icon: <Shield className='w-12 h-12' />,
+                title: 'Enterprise Security',
                 description:,
-                  'SOC 2 Type II, GDPR, HIPAA compliance with advanced security features';
-              };
+                  'SOC 2 Type II, GDPR, HIPAA compliance with advanced security features',
+              },
               {
-                icon: <Globe className='w-12 h-12' />;
-                title: 'Global Support';
+                icon: <Globe className='w-12 h-12' />,
+                title: 'Global Support',
                 description:,
-                  '24/7 dedicated support with SLA guarantees and custom training';
-              };
+                  '24/7 dedicated support with SLA guarantees and custom training',
+              },
               {
-                icon: <Zap className='w-12 h-12' />;
-                title: 'Custom Integration';
+                icon: <Zap className='w-12 h-12' />,
+                title: 'Custom Integration',
                 description:,
-                  'White-label options and custom integrations for your business needs';
-              };
+                  'White-label options and custom integrations for your business needs',
+              },
               {
-                icon: <TrendingUp className='w-12 h-12' />;
-                title: 'Scalable Solutions';
+                icon: <TrendingUp className='w-12 h-12' />,
+                title: 'Scalable Solutions',
                 description:,
-                  'On-premise options and unlimited scaling for enterprise growth';
-              };
+                  'On-premise options and unlimited scaling for enterprise growth',
+              },
             ].map((feature, index) => (
               <motion.div,
                 key={index}

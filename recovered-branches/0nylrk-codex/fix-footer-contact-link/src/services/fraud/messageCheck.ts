@@ -18,7 +18,7 @@ export const checkMessage = (messageContent: string): MessageAnalysisResult => {
         : 'suspicious'}
 ,
   return {
-    ...analysis;
-    severity;
-  };
-};
+    ...analysis,
+    severity,
+  },
+},

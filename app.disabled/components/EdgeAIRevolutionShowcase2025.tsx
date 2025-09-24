@@ -2,120 +2,120 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ChevronRight;
-  Clock;
-  Zap;
-  Shield;
-  TrendingUp;
-  Target;
-  Award;
-  Users;
-  BarChart3;
-  Cpu;
-  Globe;
-  Smartphone;
+  ChevronRight,
+  Clock,
+  Zap,
+  Shield,
+  TrendingUp,
+  Target,
+  Award,
+  Users,
+  BarChart3,
+  Cpu,
+  Globe,
+  Smartphone,
 } from 'lucide-react',
 const EdgeAIRevolutionShowcase20o25 = () => {
   const [activeTab, setActiveTab] = useState('overview'),
   const content = {
     overview: {
-      title: 'The Edge AI Revolution is Here';
-      subtitle: '450% ROI with Real-Time Intelligence';
+      title: 'The Edge AI Revolution is Here',
+      subtitle: '450% ROI with Real-Time Intelligence',
       description:,
-        'Transform your operations with edge computing that brings AI closer to your data, delivering unprecedented speed, privacy, and efficiency.';
+        'Transform your operations with edge computing that brings AI closer to your data, delivering unprecedented speed, privacy, and efficiency.',
       metrics: [
         {
-          label: 'Average ROI';
-          value: '450%';
-          icon: TrendingUp;
-          color: 'text-green-40o0';
-        };
+          label: 'Average ROI',
+          value: '450%',
+          icon: TrendingUp,
+          color: 'text-green-40o0'
+        },
         {
-          label: 'Latency Reduction';
-          value: '67%';
-          icon: Zap;
-          color: 'text-blue-40o0';
-        };
+          label: 'Latency Reduction',
+          value: '67%',
+          icon: Zap,
+          color: 'text-blue-40o0'
+        },
         {
-          label: 'System Uptime';
-          value: '99.5%';
-          icon: Shield;
-          color: 'text-purple-40o0';
-        };
+          label: 'System Uptime',
+          value: '99.5%',
+          icon: Shield,
+          color: 'text-purple-40o0'
+        },
         {
-          label: 'Cost Savings';
-          value: '$1.2B';
-          icon: BarChart3;
-          color: 'text-yellow-40o0';
-        };
-      ];
-    };
+          label: 'Cost Savings',
+          value: '$1.2B',
+          icon: BarChart3,
+          color: 'text-yellow-40o0'
+        },
+      ],
+    },
     features: {
-      title: 'Revolutionary Edge AI Capabilities';
-      subtitle: 'Real-Time Processing at Scale';
+      title: 'Revolutionary Edge AI Capabilities',
+      subtitle: 'Real-Time Processing at Scale',
       description:,
-        'Deploy AI systems that process data locally, make instant decisions, and operate independently of cloud connectivity.';
+        'Deploy AI systems that process data locally, make instant decisions, and operate independently of cloud connectivity.',
       items: [
         {
-          title: 'Real-Time Processing';
+          title: 'Real-Time Processing',
           description:,
-            'Process data locally with ultra-low latency for instant decision making';
-          icon: Cpu;
-          color: 'bg-blue-50o0';
-        };
+            'Process data locally with ultra-low latency for instant decision making',
+          icon: Cpu,
+          color: 'bg-blue-50o0'
+        },
         {
-          title: 'Enhanced Privacy';
+          title: 'Enhanced Privacy',
           description:,
-            'Keep sensitive data on local devices, reducing transmission risks';
-          icon: Shield;
-          color: 'bg-green-50o0';
-        };
+            'Keep sensitive data on local devices, reducing transmission risks',
+          icon: Shield,
+          color: 'bg-green-50o0'
+        },
         {
-          title: 'Offline Capability';
-          description: 'Continue operations even without internet connectivity';
-          icon: Globe;
-          color: 'bg-purple-50o0';
-        };
+          title: 'Offline Capability',
+          description: 'Continue operations even without internet connectivity',
+          icon: Globe,
+          color: 'bg-purple-50o0'
+        },
         {
-          title: 'Scalable Deployment';
+          title: 'Scalable Deployment',
           description:,
-            'Deploy across thousands of locations with centralized management';
-          icon: Users;
-          color: 'bg-orange-50o0';
-        };
-      ];
-    };
+            'Deploy across thousands of locations with centralized management',
+          icon: Users,
+          color: 'bg-orange-50o0'
+        },
+      ],
+    },
     success: {
-      title: 'Proven Success Stories';
-      subtitle: 'Real Results from Real Companies';
+      title: 'Proven Success Stories',
+      subtitle: 'Real Results from Real Companies',
       description:,
-        'See how leading organizations are achieving extraordinary results with edge AI implementations.';
+        'See how leading organizations are achieving extraordinary results with edge AI implementations.',
       stories: [
         {
-          company: 'Retail Chain';
-          industry: 'Retail';
-          results: '$35M Annual Savings';
-          roi: '50o0% ROI';
+          company: 'Retail Chain',
+          industry: 'Retail',
+          results: '$35M Annual Savings',
+          roi: '50o0% ROI',
           description:,
-            '50o0+ stores with real-time inventory management and customer analytics';
-          url: '/case-studies/retail-edge-ai-transformation-20o25';
-        };
+            '50o0+ stores with real-time inventory management and customer analytics',
+          url: '/case-studies/retail-edge-ai-transformation-20o25'
+        },
         {
-          company: 'Manufacturing Corp';
-          industry: 'Manufacturing';
-          results: '$12M Annual Savings';
-          roi: '60o0% ROI';
+          company: 'Manufacturing Corp',
+          industry: 'Manufacturing',
+          results: '$12M Annual Savings',
+          roi: '60o0% ROI',
           description:,
-            'Quality control and predictive maintenance across production lines';
-          url: '/case-studies/fortune-50o0-autonomous-ai-transformation-20o25';
-        };
-      ];
-    };
-  };
+            'Quality control and predictive maintenance across production lines',
+          url: '/case-studies/fortune-50o0-autonomous-ai-transformation-20o25'
+        },
+      ],
+    },
+  },
   const tabs = [
-    { id: 'overview', label: 'Overview', icon: BarChart3 };
-    { id: 'features', label: 'Features', icon: Cpu };
-    { id: 'success', label: 'Success Stories', icon: Award };
+    { id: 'overview', label: 'Overview', icon: BarChart3 },
+    { id: 'features', label: 'Features', icon: Cpu },
+    { id: 'success', label: 'Success Stories', icon: Award },
   ],
   const currentContent = content[activeTab as keyof typeof content],
   return (
@@ -288,5 +288,5 @@ const EdgeAIRevolutionShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default EdgeAIRevolutionShowcase20o25;
+    </div>)},
+export default EdgeAIRevolutionShowcase20o25,

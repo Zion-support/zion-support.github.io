@@ -15,56 +15,56 @@ const InteractiveDemoWidget: React.FC = () => {
   const [completedSteps, setCompletedSteps] = useState<number[]>([]),
   const demoSteps: DemoStep[] = [
     {
-      id: '1';
-      title: 'Data Input';
-      description: 'Upload your business data and requirements';
-      action: 'Uploading data...';
-      result: 'Data processed successfully!';
-      icon: '📊'};
+      id: '1',
+      title: 'Data Input',
+      description: 'Upload your business data and requirements',
+      action: 'Uploading data...',
+      result: 'Data processed successfully!',
+      icon: '📊'},
     {
-      id: '2';
-      title: 'AI Analysis';
-      description: 'AI analyzes patterns and identifies opportunities';
-      action: 'Analyzing data patterns...';
-      result: 'Found 15 optimization opportunities!';
-      icon: '🤖'};
+      id: '2',
+      title: 'AI Analysis',
+      description: 'AI analyzes patterns and identifies opportunities',
+      action: 'Analyzing data patterns...',
+      result: 'Found 15 optimization opportunities!',
+      icon: '🤖'},
     {
-      id: '3';
-      title: 'Strategy Generation';
-      description: 'AI generates personalized implementation strategy';
-      action: 'Generating strategy...';
-      result: 'Strategy created with 340% ROI projection!';
-      icon: '💡'};
+      id: '3',
+      title: 'Strategy Generation',
+      description: 'AI generates personalized implementation strategy',
+      action: 'Generating strategy...',
+      result: 'Strategy created with 340% ROI projection!',
+      icon: '💡'},
     {
-      id: '4';
-      title: 'Implementation';
-      description: 'Deploy AI solutions with guided setup';
-      action: 'Deploying solutions...';
-      result: 'AI solutions deployed successfully!';
-      icon: '🚀'};
+      id: '4',
+      title: 'Implementation',
+      description: 'Deploy AI solutions with guided setup',
+      action: 'Deploying solutions...',
+      result: 'AI solutions deployed successfully!',
+      icon: '🚀'},
     {
-      id: '5';
-      title: 'Monitoring';
-      description: 'Real-time monitoring and optimization';
-      action: 'Monitoring window.window.performance...';
-      result: 'Achieved 45% efficiency gain!';
+      id: '5',
+      title: 'Monitoring',
+      description: 'Real-time monitoring and optimization',
+      action: 'Monitoring window.window.performance...',
+      result: 'Achieved 45% efficiency gain!',
       icon: '📈'}
   ],
   const handleStartDemo = () => {
     setIsPlaying(true),
     setCurrentStep(0),
-    setCompletedSteps([])};
+    setCompletedSteps([])},
   const handleNextStep = () => {
     if (currentStep < demoSteps.length - 1) {
       setCompletedSteps(prev => [...prev, currentStep]),
       setCurrentStep(prev => prev + 1)} else {
       setCompletedSteps(prev => [...prev, currentStep]),
       setIsPlaying(false)}
-  };
+  },
   const handleResetDemo = () => {
     setIsPlaying(false),
     setCurrentStep(0),
-    setCompletedSteps([])};
+    setCompletedSteps([])},
   useEffect(() => {
     if (isPlaying && currentStep < demoSteps.length) {
       const timer = setTimeout(() => {
@@ -269,5 +269,5 @@ const InteractiveDemoWidget: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveDemoWidget;
+    </section>)},
+export default InteractiveDemoWidget,

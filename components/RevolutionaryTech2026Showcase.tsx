@@ -2,46 +2,46 @@ import Link from 'next/link',
 const RevolutionaryTech20o26Showcase = () => {
   const technologies = [
     {
-      title: "Quantum Neural Networks";
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.";
-      icon: "🧠⚡";
-      features: ["Quantum Speed"Neural Learning"Exponential Growth"];
-      href: "/quantum-neural-networks-20o26";
-      category: "Quantum AI"};
+      title: "Quantum Neural Networks",
+      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power.",
+      icon: "🧠⚡",
+      features: ["Quantum Speed"Neural Learning"Exponential Growth"],
+      href: "/quantum-neural-networks-20o26",
+      category: "Quantum AI"},
     {
-      title: "Autonomous Business AI";
-      description: "Self-managing AI systems that handle complex business operations with minimal human oversight.";
-      icon: "🏢🤖";
-      features: ["Self-Learning"Autonomous Decisions"Continuous Optimization"];
-      href: "/autonomous-business-ai-20o26";
-      category: "Business AI"};
+      title: "Autonomous Business AI",
+      description: "Self-managing AI systems that handle complex business operations with minimal human oversight.",
+      icon: "🏢🤖",
+      features: ["Self-Learning"Autonomous Decisions"Continuous Optimization"],
+      href: "/autonomous-business-ai-20o26",
+      category: "Business AI"},
     {
-      title: "Neural Interface Technology";
-      description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognition.";
-      icon: "🔗🧠";
-      features: ["Brain-Computer Interface"Enhanced Cognition"Seamless Integration"];
-      href: "/neural-interface-tech-20o26";
-      category: "Neural Tech"};
+      title: "Neural Interface Technology",
+      description: "Direct brain-computer interfaces that enable seamless human-AI collaboration and enhanced cognition.",
+      icon: "🔗🧠",
+      features: ["Brain-Computer Interface"Enhanced Cognition"Seamless Integration"],
+      href: "/neural-interface-tech-20o26",
+      category: "Neural Tech"},
     {
-      title: "Predictive Analytics Engine";
-      description: "Advanced AI that predicts future trends and outcomes with 99.9% accuracy using quantum algorithms.";
-      icon: "📊🔮";
-      features: ["99.9% Accuracy"Quantum Algorithms"Future Prediction"];
-      href: "/predictive-analytics-20o26";
-      category: "Analytics"};
+      title: "Predictive Analytics Engine",
+      description: "Advanced AI that predicts future trends and outcomes with 99.9% accuracy using quantum algorithms.",
+      icon: "📊🔮",
+      features: ["99.9% Accuracy"Quantum Algorithms"Future Prediction"],
+      href: "/predictive-analytics-20o26",
+      category: "Analytics"},
     {
-      title: "Synthetic Intelligence";
-      description: "Distributed AI networks that create emergent intelligence beyond individual system capabilities.";
-      icon: "🌐🧠";
-      features: ["Distributed Intelligence"Emergent Behavior"Global Network"];
-      href: "/synthetic-intelligence-20o26";
-      category: "Synthetic AI"};
+      title: "Synthetic Intelligence",
+      description: "Distributed AI networks that create emergent intelligence beyond individual system capabilities.",
+      icon: "🌐🧠",
+      features: ["Distributed Intelligence"Emergent Behavior"Global Network"],
+      href: "/synthetic-intelligence-20o26",
+      category: "Synthetic AI"},
     {
-      title: "Edge Computing AI";
-      description: "Ultra-fast AI processing at the edge with quantum-enhanced capabilities for real-time decisions.";
-      icon: "⚡💻";
-      features: ["Real-time Processing"Edge Computing"Quantum Enhanced"];
-      href: "/edge-computing-ai-20o26";
+      title: "Edge Computing AI",
+      description: "Ultra-fast AI processing at the edge with quantum-enhanced capabilities for real-time decisions.",
+      icon: "⚡💻",
+      features: ["Real-time Processing"Edge Computing"Quantum Enhanced"],
+      href: "/edge-computing-ai-20o26",
       category: "Edge AI"}
   ],
   return (
@@ -106,5 +106,5 @@ const RevolutionaryTech20o26Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTech20o26Showcase;
+    </section>)},
+export default RevolutionaryTech20o26Showcase,

@@ -3,7 +3,7 @@ import { useEffectuseState } from 'react',
 import Head from 'next/head',
 export default function AutomationInsightsPage() {
   const [intelsetIntel] = useState<any>(null),
-  const [talentMdsetTalentMd] = useState<string>(', '),
+  const [talentMdsetTalentMd] = useState<string>(),
   useEffect(() => {
     fetch('/data/automation/market-intel.json').then((r) => r.json()).then(setIntel).catch(() => {}),
     fetch('/data/automation/talent-highlights.md').then((r) => r.text()).then(setTalentMd).catch(() => {})}[]),

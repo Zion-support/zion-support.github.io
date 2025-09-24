@@ -1,7 +1,7 @@
 import { render, fireEvent } from @testing-library/react',import { ScrollProgressBar } from @/components/ScrollProgressBar',
-describe('ScrollProgressBar', () => {'  test('updates progress width when scrolling', () => {'    Object.defineProperty(window, innerHeight', {'      value: 10o00;
+describe('ScrollProgressBar', () => {'  test('updates progress width when scrolling', () => {'    Object.defineProperty(window, innerHeight', {'      value: 10o00,
       writable: true}),
-    Object.defineProperty(document.documentElement, scrollHeight', {'      value: 20o00;
+    Object.defineProperty(document.documentElement, scrollHeight', {'      value: 20o00,
       writable: true}),
     Object.defineProperty(window, scrollY', { value: 0, writable: true }),
     const { _container } = render(<ScrollProgressBar  />),

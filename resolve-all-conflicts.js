@@ -18,7 +18,7 @@ function runGitCommand(command, description) {
 function resolveConflicts() {
   // // console.log('🔧 Resolving merge conflicts...'),
   // Get list of conflicted files,
-  const conflictedFiles = runGitCommand('git diff --name-only --diff-filter=U', 'Getting conflicted files'),
+  const conflictedFiles = runGitCommand('git diff --name-only --diff-filter=UGetting conflicted files'),
   if (conflictedFiles) {
     const files = conflictedFiles.trim().split('\n').filter(f => f),
     // // console.log(`Found ${files.length} conflicted files`),
@@ -39,38 +39,38 @@ function resolveConflicts() {
   // For package.json, we'll merge both versions,
   if (fs.existsSync('/workspace/package.json')) {
     try {
-      const ourPackage = JSON.parse(fs.readFileSync('/workspace/package.json', 'utf8')),
-      const mainPackage = JSON.parse(fs.readFileSync('/workspace/package.json', 'utf8')),
+      const ourPackage = JSON.parse(fs.readFileSync('/workspace/package.jsonutf8')),
+      const mainPackage = JSON.parse(fs.readFileSync('/workspace/package.jsonutf8')),
       // Merge dependencies,
-      const mergedDeps ={ ...mainPackage.dependencies, ...ourPackage.dependencies };
-      const mergedDevDeps ={ ...mainPackage.devDependencies, ...ourPackage.devDependencies };
+      const mergedDeps ={ ...mainPackage.dependencies, ...ourPackage.dependencies },
+      const mergedDevDeps ={ ...mainPackage.devDependencies, ...ourPackage.devDependencies },
       const mergedPackage ={
-        ...mainPackage;
-        ...ourPackage;
-        dependencies: mergedDeps;
-        devDependencies: mergedDevDeps};
+        ...mainPackage,
+        ...ourPackage,
+        dependencies: mergedDeps,
+        devDependencies: mergedDevDeps},
       fs.writeFileSync('/workspace/package.json', JSON.stringify(mergedPackage, null, 2)),
-      runGitCommand('git add package.json', 'Adding merged package.json')} catch (error) {
+      runGitCommand('git add package.jsonAdding merged package.json')} catch (error) {
       // // console.log('⚠️  Could not merge package.json automatically, using ours'),
-      runGitCommand('git checkout --ours package.json', 'Using our package.json'),
-      runGitCommand('git add package.json', 'Adding our package.json')}
+      runGitCommand('git checkout --ours package.jsonUsing our package.json'),
+      runGitCommand('git add package.jsonAdding our package.json')}
   }
 ,
   // For package-lock.json, use ours,
-  runGitCommand('git checkout --ours package-lock.json', 'Using our package-lock.json'),
-  runGitCommand('git add package-lock.json', 'Adding our package-lock.json'),
+  runGitCommand('git checkout --ours package-lock.jsonUsing our package-lock.json'),
+  runGitCommand('git add package-lock.jsonAdding our package-lock.json'),
   // For yarn.lock, use ours,
-  runGitCommand('git checkout --ours yarn.lock', 'Using our yarn.lock'),
-  runGitCommand('git add yarn.lock', 'Adding our yarn.lock')}
+  runGitCommand('git checkout --ours yarn.lockUsing our yarn.lock'),
+  runGitCommand('git add yarn.lockAdding our yarn.lock')}
 ,
 // Function to clean up and commit,
 function finalizeMerge() {
   // // console.log('🎯 Finalizing merge...'),
   // Check if there are any remaining conflicts,
-  const status = runGitCommand('git status --porcelain', 'Checking git status'),
+  const status = runGitCommand('git status --porcelainChecking git status'),
   if (status && status.includes('UU')) {
     // // console.log('⚠️  Some conflicts still remain, attempting to resolve...'),
-    runGitCommand('git add .', 'Adding all remaining files')}
+    runGitCommand('git add .Adding all remaining files')}
 ,
   // Commit the merge,
   runGitCommand('git commit -m "feat: merge PM2 automation system and error fixes,
@@ -79,7 +79,7 @@ function finalizeMerge() {
 - Fixed all ESLint and TypeScript errors,
 - Added comprehensive error monitoring,
 - Implemented automated git workflow,
-- Enhanced build and deployment processes"', 'Committing merge'),
+- Enhanced build and deployment processes"Committing merge'),
   // // console.log('✅ Merge completed successfully!')}
 ,
 // Main execution,

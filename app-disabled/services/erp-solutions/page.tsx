@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'erp-solutions - Zion Tech Group';
-  description: 'Professional erp-solutions solutions for your business needs.';
-  keywords: 'erp-solutions, services, business, technology';
-};
+  title: 'erp-solutions - Zion Tech Group',
+  description: 'Professional erp-solutions solutions for your business needs.',
+  keywords: 'erp-solutions, services, business, technology',
+},
 export default function ErpSolutionsPage() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-project-manager - Zion Tech Group';
+  title: 'ai-project-manager - Zion Tech Group',
   description:,
-    'Professional ai-project-manager solutions for your business needs.';
-  keywords: 'ai-project-manager, services, business, technology';
-};
+    'Professional ai-project-manager solutions for your business needs.',
+  keywords: 'ai-project-manager, services, business, technology',
+},
 export default function AiProjectManagerPage() {
   return (
     <div className='min-h-screen bg-white'>,

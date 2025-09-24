@@ -8,12 +8,12 @@ import { useAuth } from '@/hooks/useAuth',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from '@/components/ui/form',
 import { Link } from 'react-router-dom',
 import { LoadingOverlay } from '@/components/LoadingOverlay',
@@ -22,8 +22,8 @@ const loginSchema = z.object({
   email: z,
     .string(),
     .email('Please enter a valid email'),
-    .min(1, 'Email is required');
-  password: z.string().min(6, 'Password must be at least 6 characters');
+    .min(1, 'Email is required'),
+  password: z.string().min(6, 'Password must be at least 6 characters'),
 }),
 export function LoginForm() {
   const { login, isLoading } = useAuth(),
@@ -31,11 +31,11 @@ export function LoginForm() {
   const [showPassword, setShowPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const form = useForm({
-    resolver: zodResolver(loginSchema);
+    resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: '';
-      password: '';
-    };
+      email: '',
+      password: ''
+    },
   }),
   const onSubmit = async data => {
     if (isSubmitting) return,
@@ -47,7 +47,7 @@ export function LoginForm() {
         navigate('/')}
     } finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <Form {...form}>,
       <form

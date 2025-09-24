@@ -1,22 +1,22 @@
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Globe;
-  Brain;
-  Database;
-  Cloud;
-  Lock;
-  Rocket;
-  Users;
-  DollarSign;
-  Target;
-  Award;
-  Phone;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Globe,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  Rocket,
+  Users,
+  DollarSign,
+  Target,
+  Award,
+  Phone,
 } from 'lucide-react',
 import { advancedAIAutomation20o25 } from '../../data/advanced-ai-automation-20o25',
 import { advancedCybersecurity20o25 } from '../../data/advanced-cybersecurity-20o25',
@@ -28,75 +28,75 @@ import { educationElearning20o25 } from '../../data/education-elearning-20o25',
 const ComprehensiveServicesShowcase20o25 = () => {
   const serviceCategories = [
     {
-      title: 'AI & Automation Services';
-      icon: Brain;
-      services: advancedAIAutomation20o25;
-      gradient: 'from-purple-60o0 via-pink-60o0 to-blue-60o0';
+      title: 'AI & Automation Services',
+      icon: Brain,
+      services: advancedAIAutomation20o25,
+      gradient: 'from-purple-60o0 via-pink-60o0 to-blue-60o0',
       description:,
-        'Cutting-edge AI solutions that transform business operations';
-    };
+        'Cutting-edge AI solutions that transform business operations',
+    },
     {
-      title: 'Cybersecurity & Security';
-      icon: Shield;
-      services: advancedCybersecurity20o25;
-      gradient: 'from-red-60o0 via-orange-60o0 to-yellow-60o0';
-      description: 'Advanced security solutions for the digital age';
-    };
+      title: 'Cybersecurity & Security',
+      icon: Shield,
+      services: advancedCybersecurity20o25,
+      gradient: 'from-red-60o0 via-orange-60o0 to-yellow-60o0',
+      description: 'Advanced security solutions for the digital age'
+    },
     {
-      title: 'Blockchain & Web3';
-      icon: Globe;
-      services: blockchainWeb320o25;
-      gradient: 'from-green-60o0 via-teal-60o0 to-cyan-60o0';
-      description: 'Next-generation blockchain and decentralized solutions';
-    };
+      title: 'Blockchain & Web3',
+      icon: Globe,
+      services: blockchainWeb320o25,
+      gradient: 'from-green-60o0 via-teal-60o0 to-cyan-60o0',
+      description: 'Next-generation blockchain and decentralized solutions'
+    },
     {
-      title: 'IoT & Edge Computing';
-      icon: Cloud;
-      services: iotEdgeComputing20o25;
-      gradient: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0';
-      description: 'Smart connected solutions for the Internet of Things';
-    };
+      title: 'IoT & Edge Computing',
+      icon: Cloud,
+      services: iotEdgeComputing20o25,
+      gradient: 'from-blue-60o0 via-indigo-60o0 to-purple-60o0',
+      description: 'Smart connected solutions for the Internet of Things'
+    },
     {
-      title: 'Healthcare & Biotechnology';
-      icon: Target;
-      services: healthcareBiotech20o25;
-      gradient: 'from-pink-60o0 via-rose-60o0 to-red-60o0';
-      description: 'Innovative healthcare and biotech solutions';
-    };
+      title: 'Healthcare & Biotechnology',
+      icon: Target,
+      services: healthcareBiotech20o25,
+      gradient: 'from-pink-60o0 via-rose-60o0 to-red-60o0',
+      description: 'Innovative healthcare and biotech solutions'
+    },
     {
-      title: 'Fintech & Financial';
-      icon: DollarSign;
-      services: fintechFinancial20o25;
-      gradient: 'from-emerald-60o0 via-green-60o0 to-teal-60o0';
-      description: 'Revolutionary financial technology solutions';
-    };
+      title: 'Fintech & Financial',
+      icon: DollarSign,
+      services: fintechFinancial20o25,
+      gradient: 'from-emerald-60o0 via-green-60o0 to-teal-60o0',
+      description: 'Revolutionary financial technology solutions'
+    },
     {
-      title: 'Education & E-Learning';
-      icon: Award;
-      services: educationElearning20o25;
-      gradient: 'from-amber-60o0 via-yellow-60o0 to-orange-60o0';
-      description: 'Advanced learning and educational technology';
-    };
+      title: 'Education & E-Learning',
+      icon: Award,
+      services: educationElearning20o25,
+      gradient: 'from-amber-60o0 via-yellow-60o0 to-orange-60o0',
+      description: 'Advanced learning and educational technology'
+    },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <section className='relative py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden'>,
       {/* Animated Background Elements */}
@@ -280,5 +280,5 @@ const ComprehensiveServicesShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default ComprehensiveServicesShowcase20o25;
+    </section>)},
+export default ComprehensiveServicesShowcase20o25,

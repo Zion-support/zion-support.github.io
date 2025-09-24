@@ -2,95 +2,95 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  Brain;
-  Shield;
-  Target;
-  Rocket;
-  ArrowRight;
-  Heart;
-  Building;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
+  Search,
+  Grid,
+  List,
+  Brain,
+  Shield,
+  Target,
+  Rocket,
+  ArrowRight,
+  Heart,
+  Building,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
 } from 'lucide-react',
 // Import our new 20o38 services,
 import { innovative20o38CuttingEdgeServices } from '../data/innovative-20o38-cutting-edge-services',
 import { innovative20o38ITMicroSaasServices } from '../data/innovative-20o38-it-micro-saas-services',
 // Create unified services array,
 const all20o38Services = [
-  ...innovative20o38CuttingEdgeServices;
-  ...innovative20o38ITMicroSaasServices;
+  ...innovative20o38CuttingEdgeServices,
+  ...innovative20o38ITMicroSaasServices,
 ],
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    icon: <Grid className='w-6 h-6' />;
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of cutting-edge 20o38 services';
-  };
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of cutting-edge 20o38 services'
+  },
   {
-    id: 'ai-quantum';
-    name: 'AI & Quantum';
-    icon: <Brain className='w-6 h-6' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    description: 'Revolutionary AI and quantum computing solutions';
-  };
+    id: 'ai-quantum',
+    name: 'AI & Quantum',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    description: 'Revolutionary AI and quantum computing solutions'
+  },
   {
-    id: 'space-tech';
-    name: 'Space Technology';
-    icon: <Rocket className='w-6 h-6' />;
-    color: 'from-pink-50o0 to-rose-50o0';
-    description: 'ArrowRight-generation space exploration and mining';
-  };
+    id: 'space-tech',
+    name: 'Space Technology',
+    icon: <Rocket className='w-6 h-6' />,
+    color: 'from-pink-50o0 to-rose-50o0',
+    description: 'ArrowRight-generation space exploration and mining'
+  },
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    icon: <Shield className='w-6 h-6' />;
-    color: 'from-red-50o0 to-orange-50o0';
-    description: 'Quantum-powered security and threat intelligence';
-  };
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    icon: <Shield className='w-6 h-6' />,
+    color: 'from-red-50o0 to-orange-50o0',
+    description: 'Quantum-powered security and threat intelligence'
+  },
   {
-    id: 'healthcare';
-    name: 'Healthcare AI';
-    icon: <Heart className='w-6 h-6' />;
-    color: 'from-red-50o0 to-pink-50o0';
-    description: 'Autonomous healthcare and medical AI';
-  };
+    id: 'healthcare',
+    name: 'Healthcare AI',
+    icon: <Heart className='w-6 h-6' />,
+    color: 'from-red-50o0 to-pink-50o0',
+    description: 'Autonomous healthcare and medical AI'
+  },
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS';
-    icon: <Target className='w-6 h-6' />;
-    color: 'from-orange-50o0 to-red-50o0';
-    description: 'Intelligent business automation solutions';
-  };
+    id: 'micro-saas',
+    name: 'Micro SAAS',
+    icon: <Target className='w-6 h-6' />,
+    color: 'from-orange-50o0 to-red-50o0',
+    description: 'Intelligent business automation solutions'
+  },
   {
-    id: 'it-infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Building className='w-6 h-6' />;
-    color: 'from-blue-50o0 to-purple-50o0';
-    description: 'Advanced IT and DevOps solutions';
-  };
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Building className='w-6 h-6' />,
+    color: 'from-blue-50o0 to-purple-50o0',
+    description: 'Advanced IT and DevOps solutions'
+  },
   {
-    id: 'climate-tech';
-    name: 'Climate Technology';
-    icon: <Globe className='w-6 h-6' />;
-    color: 'from-teal-50o0 to-green-50o0';
-    description: 'AI-powered climate prediction and analysis';
-  };
+    id: 'climate-tech',
+    name: 'Climate Technology',
+    icon: <Globe className='w-6 h-6' />,
+    color: 'from-teal-50o0 to-green-50o0',
+    description: 'AI-powered climate prediction and analysis'
+  },
 ],
 const sortOptions = [
-  { value: 'name', label: 'Name A-Z' };
-  { value: 'price-low', label: 'Price: Low to High' };
-  { value: 'price-high', label: 'Price: High to Low' };
-  { value: 'popular', label: 'Most Popular' };
-  { value: 'newest', label: 'Newest First' };
-  { value: 'rating', label: 'Highest Rated' };
+  { value: 'name', label: 'Name A-Z' },
+  { value: 'price-low', label: 'Price: Low to High' },
+  { value: 'price-high', label: 'Price: High to Low' },
+  { value: 'popular', label: 'Most Popular' },
+  { value: 'newest', label: 'Newest First' },
+  { value: 'rating', label: 'Highest Rated' },
 ],
 export default function CuttingEdge20o38ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState(''),
@@ -136,11 +136,11 @@ export default function CuttingEdge20o38ServicesShowcase() {
   // Pagination,
   const totalPages = Math.ceil(sortedServices.length / pageSize),
   const paginatedServices = sortedServices.slice(
-    (currentPage - 1) * pageSize;
+    (currentPage - 1) * pageSize,
     currentPage * pageSize),
   const handlePageChange = (page: number) => {
     setCurrentPage(page),
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
       <SEO

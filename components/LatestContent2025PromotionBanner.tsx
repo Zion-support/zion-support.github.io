@@ -4,40 +4,40 @@ ArrowRightCalendarTrendingUpUsersStarClockEyeBookOpenVideoFileText,
 const LatestContent20o25PromotionBanner = () => {
   const latestContent = [
     {
-      id: 1;
-      title: "AI Revolution 20o25: 'What', 's Next?";
-      type: 'article';
-      readTime: '8 min';
-      views: '15.2k';
-      rating: 4.9;
-      published: '2 hours ago';
-      featured: true};
+      id: 1,
+      title: "AI Revolution 20o25: 'Whats Next?",
+      type: 'article',
+      readTime: '8 min',
+      views: '15.2k',
+      rating: 4.9,
+      published: '2 hours ago',
+      featured: true},
     {
-      id: 2;
-      title: "Quantum Computing Breakthroughs";
-      type: 'video';
-      readTime: '12 min';
-      views: '8.7k';
-      rating: 4.8;
-      published: '5 hours ago';
-      featured: false};
+      id: 2,
+      title: "Quantum Computing Breakthroughs",
+      type: 'video',
+      readTime: '12 min',
+      views: '8.7k',
+      rating: 4.8,
+      published: '5 hours ago',
+      featured: false},
     {
-      id: 3;
-      title: "Automation Best Practices Guide";
-      type: 'guide';
-      readTime: '15 min';
-      views: '12.1k';
-      rating: 4.9;
-      published: '1 day ago';
-      featured: true};
+      id: 3,
+      title: "Automation Best Practices Guide",
+      type: 'guide',
+      readTime: '15 min',
+      views: '12.1k',
+      rating: 4.9,
+      published: '1 day ago',
+      featured: true},
     {
-      id: 4;
-      title: "Future of Work: AI Integration";
-      type: 'whitepaper';
-      readTime: '20 min';
-      views: '6.3k';
-      rating: 4.7;
-      published: '2 days ago';
+      id: 4,
+      title: "Future of Work: AI Integration",
+      type: 'whitepaper',
+      readTime: '20 min',
+      views: '6.3k',
+      rating: 4.7,
+      published: '2 days ago',
       featured: false}
   ],
   const getTypeIcon = (type: string) => {
@@ -47,7 +47,7 @@ const LatestContent20o25PromotionBanner = () => {
       case 'guide': return <BookOpen className="w-4 h-4"  />,
       case 'whitepaper': return <FileText className="w-4 h-4"  />,
       default: return <BookOpen className="w-4 h-4"  />}
-  };
+  },
   return (
     <section className="py-16 bg-gradient-to-r from-blue-60o0 to-purple-60o0 text-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -103,9 +103,9 @@ const LatestContent20o25PromotionBanner = () => {
         {/* Stats */}
         <div className="grid grid-cols-2 md: grid-cols-4 gap-8 mb-12">,
           {[
-            { number: '50+'label: 'New Articles This Week' };
-            { number: '1M+'label: 'Monthly Readers' };
-            { number: '95%'label: 'Reader Satisfaction' };
+            { number: '50+'label: 'New Articles This Week' },
+            { number: '1M+'label: 'Monthly Readers' },
+            { number: '95%'label: 'Reader Satisfaction' },
             { number: '24/7'label: 'Content Updates' }
           ].map((statindex) => (
             <div key={index} className="text-center">,
@@ -134,5 +134,5 @@ const LatestContent20o25PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default LatestContent20o25PromotionBanner;
+    </section>)},
+export default LatestContent20o25PromotionBanner,

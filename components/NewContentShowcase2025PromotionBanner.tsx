@@ -10,15 +10,15 @@ import {
   Users,
   Zap,
   Shield,
-  Brain;
-  Globe;
-  Target;
-  Award;
-  CheckCircle;
-  PlayCircle;
-  BookOpen;
-  Lightbulb;
-  Sparkles;
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  Sparkles,
   Rocket} from 'lucide-react',
 const NewContentShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -31,26 +31,26 @@ const NewContentShowcase20o25PromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const features = [
     {
-      icon: Brain;
-      title: 'AI Solutions';
-      description: 'Revolutionary AI technology';
-      color: 'from-purple-50o0 to-blue-50o0'};
+      icon: Brain,
+      title: 'AI Solutions',
+      description: 'Revolutionary AI technology',
+      color: 'from-purple-50o0 to-blue-50o0'},
     {
-      icon: Zap;
-      title: 'Automation';
-      description: 'Intelligent workflow automation';
-      color: 'from-green-50o0 to-teal-50o0'};
+      icon: Zap,
+      title: 'Automation',
+      description: 'Intelligent workflow automation',
+      color: 'from-green-50o0 to-teal-50o0'},
     {
-      icon: Shield;
-      title: 'Security';
-      description: 'Advanced cybersecurity protection';
+      icon: Shield,
+      title: 'Security',
+      description: 'Advanced cybersecurity protection',
       color: 'from-red-50o0 to-orange-50o0'}
   ],
   const stats = [
-    { label: 'New 'Features', 'value: '50+'icon: Sparkles };
-    { label: 'Success 'Rate', 'value: '99.8%'icon: Award };
-    { label: 'Client 'Satisfaction', 'value: '5.0★'icon: Star };
-    { label: 'ROI 'Increase', 'value: '30o0%'icon: TrendingUp }
+    { label: 'New 'Featuresvalue: '50+'icon: Sparkles },
+    { label: 'Success 'Ratevalue: '99.8%'icon: Award },
+    { label: 'Client 'Satisfactionvalue: '5.0★'icon: Star },
+    { label: 'ROI 'Increasevalue: '30o0%'icon: TrendingUp }
   ],
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
@@ -231,5 +231,5 @@ const NewContentShowcase20o25PromotionBanner = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContentShowcase20o25PromotionBanner;
+    </div>)},
+export default NewContentShowcase20o25PromotionBanner,

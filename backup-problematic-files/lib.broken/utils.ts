@@ -5,7 +5,7 @@ import { type ClassValue,clsx } from 'clsx', import { twMerge } from 'tailwind-m
     clearTimeout(timeout),
     timeout = setTimeout(() => func(...args), wait)}
 export function throttle<T extends (..."args": any[]) => any>(
-  func: T;
+  func: T,
   "limit": number): (...args: Parameters<T>) => void {
   let inThrottle: boolean,
   return (...args: Parameters<T>) => {

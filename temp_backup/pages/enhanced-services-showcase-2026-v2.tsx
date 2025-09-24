@@ -20,13 +20,13 @@ export default function EnhancedServicesShowcase20o26V2() {
   const [sortBy, setSortBy] = useState<string>('name'),
   // Combine all services for comprehensive showcase,
   const allServices = [
-    ...innovative20o26MicroSaasV4Services;
-    ...emergingTech20o26ServicesV4;
-    ...ultimate20o26Services;
-    ...revolutionary20o26Innovations;
-    ...nextGenAI20o26Services;
-    ...aiAutonomousServices20o26;
-    ...quantumSpaceTechServices20o26;
+    ...innovative20o26MicroSaasV4Services,
+    ...emergingTech20o26ServicesV4,
+    ...ultimate20o26Services,
+    ...revolutionary20o26Innovations,
+    ...nextGenAI20o26Services,
+    ...aiAutonomousServices20o26,
+    ...quantumSpaceTechServices20o26,
     ...metaverseDigitalRealityServices20o26],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
@@ -70,25 +70,25 @@ export default function EnhancedServicesShowcase20o26V2() {
     service.category?.includes('Consciousness Interface') ||,
     service.category?.includes('Holographic')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length, color: 'from-purple-60o0 to-pink-60o0' };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🤖', count: aiCount, color: 'from-blue-60o0 to-cyan-60o0' };
-    { id: 'quantum', name: 'Quantum & Space Tech', icon: '⚛️', count: quantumCount, color: 'from-indigo-60o0 to-purple-60o0' };
-    { id: 'emerging', name: 'Emerging Technologies', icon: '🔬', count: emergingTechCount, color: 'from-green-60o0 to-teal-60o0' };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount, color: 'from-orange-60o0 to-red-60o0' };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length, color: 'from-purple-60o0 to-pink-60o0' },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🤖', count: aiCount, color: 'from-blue-60o0 to-cyan-60o0' },
+    { id: 'quantum', name: 'Quantum & Space Tech', icon: '⚛️', count: quantumCount, color: 'from-indigo-60o0 to-purple-60o0' },
+    { id: 'emerging', name: 'Emerging Technologies', icon: '🔬', count: emergingTechCount, color: 'from-green-60o0 to-teal-60o0' },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💼', count: microSaasCount, color: 'from-orange-60o0 to-red-60o0' },
     { id: 'metaverse', name: 'Metaverse & VR', icon: '🌌', count: metaverseCount, color: 'from-purple-60o0 to-blue-60o0' }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $50o0', range: 'Under $50o0' };
-    { id: 'medium', name: '$50o0 - $1,50o0', range: '$50o0 - $1,50o0' };
-    { id: 'high', name: '$1,50o0 - $3,0o00', range: '$1,50o0 - $3,0o00' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $50o0', range: 'Under $50o0' },
+    { id: 'medium', name: '$50o0 - $1,50o0', range: '$50o0 - $1,50o0' },
+    { id: 'high', name: '$1,50o0 - $3,0o00', range: '$1,50o0 - $3,0o00' },
     { id: 'enterprise', name: 'Over $3,0o00', range: 'Over $3,0o00' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' };
-    { id: 'price-low', name: 'Price: Low to High' };
-    { id: 'price-high', name: 'Price: High to Low' };
-    { id: 'rating', name: 'Rating' };
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'rating', name: 'Rating' },
     { id: 'newest', name: 'Newest First' }
   ],
   // Filter and sort services,
@@ -138,7 +138,7 @@ export default function EnhancedServicesShowcase20o26V2() {
     if (category?.includes('Biotech')) return <TestTube className="w-5 h-5"  />,
     if (category?.includes('Blockchain')) return <Database className="w-5 h-5"  />,
     if (category?.includes('Transportation')) return <Car className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />};
+    return <Zap className="w-5 h-5"  />},
   return (
     <>,
       <Head>,

@@ -10,7 +10,7 @@ export default function RevolutionaryNewsletterSignup20o26() {
     // Simulate API call,
     await new Promise(resolve => setTimeout(resolve20o00)),
     setIsSubscribed(true),
-    setIsLoading(false)};
+    setIsLoading(false)},
   if (isSubscribed) {
     return (
       <div className="bg-gradient-to-r from-green-90o0 via-emerald-90o0 to-teal-90o0 text-white py-16">,
@@ -18,7 +18,7 @@ export default function RevolutionaryNewsletterSignup20o26() {
           <div className="text-6xl mb-6">🎉</div>,
           <h2 className="text-4xl font-bold mb-6">Welcome to the AI Revolution!</h2>,
           <p className="text-xl text-gray-30o0 mb-8">,
-            'You', 've successfully joined our exclusive community of AI revolutionaries.,
+            'Youve successfully joined our exclusive community of AI revolutionaries.,
             Get ready for breakthrough content and 25,0o00% ROI opportunities.,
           </p>,
           <div className="bg-black/40 backdrop-blur-sm rounded-2xl p-8 border border-green-50o0/20">,
@@ -64,7 +64,7 @@ export default function RevolutionaryNewsletterSignup20o26() {
           <div className="grid grid-cols-1 lg: grid-cols-2 gap-8">,
             {/* Benefits */}
             <div>,
-              <h3 className="text-2xl font-bold mb-6">What 'You', 'll Get: </h3>,
+              <h3 className="text-2xl font-bold mb-6">What 'Youll Get: </h3>,
               <div className="space-y-4">,
                 <div className="flex items-start gap-3">,
                   <div className="text-2xl">🚀</div>,

@@ -107,5 +107,5 @@ const AI20o25UltimateTransformation50o000ROIBanner = () => {
       <div className="absolute top-20 right-20 w-16 h-16 bg-green-40o0 rounded-full opacity-20 animate-pulse delay-10o00"></div>,
       <div className="absolute bottom-20 left-20 w-12 h-12 bg-blue-40o0 rounded-full opacity-20 animate-pulse delay-20o00"></div>,
       <div className="absolute bottom-10 right-10 w-24 h-24 bg-purple-40o0 rounded-full opacity-20 animate-pulse delay-50o0"></div>,
-    </section>)};
-export default AI20o25UltimateTransformation50o000ROIBanner;
+    </section>)},
+export default AI20o25UltimateTransformation50o000ROIBanner,

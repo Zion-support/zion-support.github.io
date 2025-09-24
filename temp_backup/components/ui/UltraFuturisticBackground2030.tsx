@@ -5,7 +5,7 @@ interface UltraFuturisticBackground20o30Props {
   className?: string}
 ,
 const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Props> = ({
-  children;
+  children,
   className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
@@ -30,15 +30,15 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
       particles = [],
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          color: `hsl(${Math.random() * 360}, 70%, 60%)`;
-          alpha: Math.random() * 0.8 + 0.2;
-          type: ['quantum', 'holographic', 'neon'][Math.floor(Math.random() * 3)] as 'quantum' | 'holographic' | 'neon'})}
-    };
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          color: `hsl(${Math.random() * 360}, 70%, 60%)`,
+          alpha: Math.random() * 0.8 + 0.2,
+          type: ['quantumholographic', 'neon'][Math.floor(Math.random() * 3)] as 'quantum' | 'holographic' | 'neon'})}
+    },
     // Draw quantum particles,
     const drawQuantumParticle = (particle: typeof particles[0]) => {
       ctx.save(),
@@ -57,11 +57,11 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
         ctx.beginPath(),
         ctx.moveTo(particle.x, particle.y),
         ctx.lineTo(
-          particle.x + Math.cos(time) * 50;
+          particle.x + Math.cos(time) * 50,
           particle.y + Math.sin(time) * 50),
         ctx.stroke()}
 ,
-      ctx.restore()};
+      ctx.restore()},
     // Draw holographic particles,
     const drawHolographicParticle = (particle: typeof particles[0]) => {
       ctx.save(),
@@ -85,7 +85,7 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
       ctx.beginPath(),
       ctx.arc(particle.x, particle.y, particle.size * hologram, 0, Math.PI * 2),
       ctx.fill(),
-      ctx.restore()};
+      ctx.restore()},
     // Draw neon particles,
     const drawNeonParticle = (particle: typeof particles[0]) => {
       ctx.save(),
@@ -107,10 +107,10 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
       ctx.beginPath(),
       ctx.moveTo(particle.x, particle.y),
       ctx.lineTo(
-        particle.x - particle.vx * 10;
+        particle.x - particle.vx * 10,
         particle.y - particle.vy * 10),
       ctx.stroke(),
-      ctx.restore()};
+      ctx.restore()},
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -138,20 +138,20 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
 ,
         // Occasionally change particle type,
         if (Math.random() < 0.0o01) {
-          particle.type = ['quantum', 'holographic', 'neon'][Math.floor(Math.random() * 3)] as 'quantum' | 'holographic' | 'neon'}
+          particle.type = ['quantumholographic', 'neon'][Math.floor(Math.random() * 3)] as 'quantum' | 'holographic' | 'neon'}
       }),
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     initParticles(),
     animate(),
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight,
-      initParticles()};
+      initParticles()},
     window.addEventListener('resize', handleResize),
     return () => {
       window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId)};
+      cancelAnimationFrame(animationFrameId)},
   }, []),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -161,9 +161,9 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
         <div className="absolute inset-0 opacity-20">,
           <div className="absolute inset-0" style={{
             backgroundImage: `,
-              linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px);
+              linear-gradient(rgba(147, 51, 234, 0.1) 1px, transparent 1px),
               linear-gradient(90deg, rgba(147, 51, 234, 0.1) 1px, transparent 1px),
-            `;
+            `,
             backgroundSize: '50px 50px'}}  />,
         </div>,
         {/* Holographic Orbs */}
@@ -175,22 +175,22 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
           <motion.div,
             className="absolute top-1/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent",
             animate={{
-              x: ['-10o0%', '10o0%'];
+              x: ['-10o0%10o0%'],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 8;
-              repeat: Infinity;
+              duration: 8,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
           <motion.div,
             className="absolute top-3/4 left-0 w-full h-1 bg-gradient-to-r from-transparent via-purple-40o0 to-transparent",
             animate={{
-              x: ['10o0%', '-10o0%'];
+              x: ['10o0%-10o0%'],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 10;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 10,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: 2}}
            />,
         </div>,
@@ -211,22 +211,22 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
         <motion.div,
           className="absolute top-1/4 right-20 w-16 h-16 border border-cyan-40o0 opacity-30",
           animate={{
-            rotate: [0, 360];
+            rotate: [0, 360],
             scale: [1, 1.2, 1]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         {/* Holographic Data Streams */}
         <motion.div,
           className="absolute bottom-1/4 left-20 w-20 h-20 border border-purple-40o0 opacity-25 rounded-full",
           animate={{
-            rotate: [360, 0];
+            rotate: [360, 0],
             scale: [1, 0.8, 1]}}
           transition={{
-            duration: 15;
-            repeat: Infinity;
+            duration: 15,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Neural Network Nodes */}
@@ -236,15 +236,15 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
               key={i}
               className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-60",
               style={{
-                left: `${Math.cos(i * Math.PI / 3) * 40}px`;
+                left: `${Math.cos(i * Math.PI / 3) * 40}px`,
                 top: `${Math.sin(i * Math.PI / 3) * 40}px`}}
               animate={{
-                scale: [1, 1.5, 1];
+                scale: [1, 1.5, 1],
                 opacity: [0.6, 1, 0.6]}}
               transition={{
-                duration: 3;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 3,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: i * 0.5}}
              />))}
         </div>,
@@ -252,5 +252,5 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
       {/* Ambient Light Effects */}
       <div className="absolute inset-0 bg-gradient-to-t from-transparent via-purple-90o0/20 to-transparent pointer-events-none"  />,
       <div className="absolute inset-0 bg-gradient-to-r from-transparent via-cyan-90o0/20 to-transparent pointer-events-none"  />,
-    </div>)};
-export default UltraFuturisticBackground20o30;
+    </div>)},
+export default UltraFuturisticBackground20o30,

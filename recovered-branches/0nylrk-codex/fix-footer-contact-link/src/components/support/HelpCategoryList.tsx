@@ -23,7 +23,7 @@ export function HelpCategoryList({
               article.title.toLowerCase().includes(searchQuery.toLowerCase()) |,
               article.content.toLowerCase().includes(searchQuery.toLowerCase()))),
     : categories),
-    : categories;
+    : categories,
 export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {
   // Filter categories based on search query,
   const filteredCategories = searchQuery,
@@ -60,12 +60,12 @@ export function HelpCategoryList(): any ({ categories, onCategorySelect, searchQ
             </p>,
           </CardContent>,
         </Card>,
-import React from "react";;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HelpCategory } from "./types";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HelpCategory } from "./types",
 interface HelpCategoryListProps {
-  categories: HelpCategory[];
-  onCategorySelect: (categoryId: string) => void;
+  categories: HelpCategory[],
+  onCategorySelect: (categoryId: string) => void,
   searchQuery: string}
 ,
 export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: HelpCategoryListProps) {
@@ -134,11 +134,11 @@ export function HelpCategoryList({ categories, onCategorySelect, searchQuery }: 
 ,
 import React from './react',
 import {
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components / ui / card',
 import { HelpCategory  } from './types',
 interface HelpCategoryListProps {
@@ -160,8 +160,8 @@ function HelpCategoryList() {
           category.articles.some (
             (article) =>,
               article.title.toLowerCase ().includes (search_query.toLowerCase ()) ||,
-              article.content.toLowerCase ().includes (search_query.toLowerCase ());
-          );
+              article.content.toLowerCase ().includes (search_query.toLowerCase ()),
+          ),
       ),
     : categories,
   // Check condition,

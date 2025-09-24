@@ -10,9 +10,9 @@ import {
   ArrowRight,
   Calendar,
   Users,
-  Target;
-  Sparkles;
-  Rocket;
+  Target,
+  Sparkles,
+  Rocket,
   Star} from 'lucide-react',
 export default function AI20o30ContentShowcaseBanner() {
   return (
@@ -33,7 +33,7 @@ export default function AI20o30ContentShowcaseBanner() {
           </h2>,
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
             Discover cutting-edge insightstrategiesand tools to transform your organization,
-            for the autonomous AI future 'that', 's arriving faster than you think.,
+            for the autonomous AI future 'thats arriving faster than you think.,
           </p>,
         </div>,
         {/* Content Grid */}

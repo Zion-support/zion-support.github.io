@@ -52,180 +52,180 @@ const APIManagementSystem: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve1000)),
     const mockEndpoints: APIEndpoint[] = [
       {
-        id: '1';
-        name: 'Get User Profile';
-        path: '/api/v1/users/{id}';
-        method: 'GET';
-        status: 'active';
-        version: 'v1.2.0';
-        responseTime: 145;
-        successRate: 99.2;
-        requestsPerMinute: 1250;
-        lastUpdated: new Date(Date.now() - 2 * 60 * 60 * 1000);
-        documentation: 'Retrieve user profile information by ID';
-        rateLimit: 1000};
+        id: '1',
+        name: 'Get User Profile',
+        path: '/api/v1/users/{id}',
+        method: 'GET',
+        status: 'active',
+        version: 'v1.2.0',
+        responseTime: 145,
+        successRate: 99.2,
+        requestsPerMinute: 1250,
+        lastUpdated: new Date(Date.now() - 2 * 60 * 60 * 1000),
+        documentation: 'Retrieve user profile information by ID',
+        rateLimit: 1000},
       {
-        id: '2';
-        name: 'Create User';
-        path: '/api/v1/users';
-        method: 'POST';
-        status: 'active';
-        version: 'v1.2.0';
-        responseTime: 234;
-        successRate: 98.7;
-        requestsPerMinute: 89;
-        lastUpdated: new Date(Date.now() - 1 * 60 * 60 * 1000);
-        documentation: 'Create a new user account';
-        rateLimit: 100};
+        id: '2',
+        name: 'Create User',
+        path: '/api/v1/users',
+        method: 'POST',
+        status: 'active',
+        version: 'v1.2.0',
+        responseTime: 234,
+        successRate: 98.7,
+        requestsPerMinute: 89,
+        lastUpdated: new Date(Date.now() - 1 * 60 * 60 * 1000),
+        documentation: 'Create a new user account',
+        rateLimit: 100},
       {
-        id: '3';
-        name: 'Update Product';
-        path: '/api/v1/products/{id}';
-        method: 'PUT';
-        status: 'maintenance';
-        version: 'v1.1.0';
-        responseTime: 567;
-        successRate: 95.4;
-        requestsPerMinute: 45;
-        lastUpdated: new Date(Date.now() - 30 * 60 * 1000);
-        documentation: 'Update product information';
-        rateLimit: 500};
+        id: '3',
+        name: 'Update Product',
+        path: '/api/v1/products/{id}',
+        method: 'PUT',
+        status: 'maintenance',
+        version: 'v1.1.0',
+        responseTime: 567,
+        successRate: 95.4,
+        requestsPerMinute: 45,
+        lastUpdated: new Date(Date.now() - 30 * 60 * 1000),
+        documentation: 'Update product information',
+        rateLimit: 500},
       {
-        id: '4';
-        name: 'Delete Order';
-        path: '/api/v1/orders/{id}';
-        method: 'DELETE';
-        status: 'deprecated';
-        version: 'v1.0.0';
-        responseTime: 123;
-        successRate: 99.8;
-        requestsPerMinute: 12;
-        lastUpdated: new Date(Date.now() - 24 * 60 * 60 * 1000);
-        documentation: 'Delete an order (deprecated - use cancel instead)';
-        rateLimit: 50};
+        id: '4',
+        name: 'Delete Order',
+        path: '/api/v1/orders/{id}',
+        method: 'DELETE',
+        status: 'deprecated',
+        version: 'v1.0.0',
+        responseTime: 123,
+        successRate: 99.8,
+        requestsPerMinute: 12,
+        lastUpdated: new Date(Date.now() - 24 * 60 * 60 * 1000),
+        documentation: 'Delete an order (deprecated - use cancel instead)',
+        rateLimit: 50},
       {
-        id: '5';
-        name: 'Search Products';
-        path: '/api/v1/products/search';
-        method: 'GET';
-        status: 'active';
-        version: 'v1.2.0';
-        responseTime: 89;
-        successRate: 99.5;
-        requestsPerMinute: 3450;
-        lastUpdated: new Date(Date.now() - 15 * 60 * 1000);
-        documentation: 'Search products with filters and pagination';
+        id: '5',
+        name: 'Search Products',
+        path: '/api/v1/products/search',
+        method: 'GET',
+        status: 'active',
+        version: 'v1.2.0',
+        responseTime: 89,
+        successRate: 99.5,
+        requestsPerMinute: 3450,
+        lastUpdated: new Date(Date.now() - 15 * 60 * 1000),
+        documentation: 'Search products with filters and pagination',
         rateLimit: 2000}
     ],
     const mockApiKeys: APIKey[] = [
       {
-        id: '1';
-        name: 'Mobile App Key';
-        key: 'sk_live_...abc123';
-        status: 'active';
-        permissions: ['read:'users', 'read:'products', 'write:orders'];
-        usage: 45678;
-        limit: 100000;
-        createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000);
-        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 5 * 60 * 1000)};
+        id: '1',
+        name: 'Mobile App Key',
+        key: 'sk_live_...abc123',
+        status: 'active',
+        permissions: ['read:'usersread:'products', 'write: orders'],
+        usage: 45678,
+        limit: 100000,
+        createdAt: new Date(Date.now() - 30 * 24 * 60 * 60 * 1000),
+        expiresAt: new Date(Date.now() + 90 * 24 * 60 * 60 * 1000),
+        lastUsed: new Date(Date.now() - 5 * 60 * 1000)},
       {
-        id: '2';
-        name: 'Web Dashboard Key';
-        key: 'sk_live_...def456';
-        status: 'active';
-        permissions: ['read:*'write:*'];
-        usage: 123456;
-        limit: 500000;
-        createdAt: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 2 * 60 * 1000)};
+        id: '2',
+        name: 'Web Dashboard Key',
+        key: 'sk_live_...def456',
+        status: 'active',
+        permissions: ['read:*'write:*'],
+        usage: 123456,
+        limit: 500000,
+        createdAt: new Date(Date.now() - 15 * 24 * 60 * 60 * 1000),
+        lastUsed: new Date(Date.now() - 2 * 60 * 1000)},
       {
-        id: '3';
-        name: 'Partner Integration';
-        key: 'sk_live_...ghi789';
-        status: 'active';
-        permissions: ['read:'products', 'read:orders'];
-        usage: 23456;
-        limit: 50000;
-        createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000);
-        expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000);
-        lastUsed: new Date(Date.now() - 30 * 60 * 1000)};
+        id: '3',
+        name: 'Partner Integration',
+        key: 'sk_live_...ghi789',
+        status: 'active',
+        permissions: ['read:'productsread: orders'],
+        usage: 23456,
+        limit: 50000,
+        createdAt: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000),
+        expiresAt: new Date(Date.now() + 30 * 24 * 60 * 60 * 1000),
+        lastUsed: new Date(Date.now() - 30 * 60 * 1000)},
       {
-        id: '4';
-        name: 'Test Environment';
-        key: 'sk_test_...jkl012';
-        status: 'revoked';
-        permissions: ['read:*'write:*'];
-        usage: 1234;
-        limit: 10000;
-        createdAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000);
+        id: '4',
+        name: 'Test Environment',
+        key: 'sk_test_...jkl012',
+        status: 'revoked',
+        permissions: ['read:*'write:*'],
+        usage: 1234,
+        limit: 10000,
+        createdAt: new Date(Date.now() - 60 * 24 * 60 * 60 * 1000),
         lastUsed: new Date(Date.now() - 7 * 24 * 60 * 60 * 1000)}
     ],
     const mockMetrics: APIMetric[] = [
       {
-        id: '1';
-        name: 'Total Requests';
-        value: 2847592;
-        unit: '';
-        trend: 'up';
-        change: 12.3;
-        timestamp: new Date()};
+        id: '1',
+        name: 'Total Requests',
+        value: 2847592,
+        unit: '',
+        trend: 'up',
+        change: 12.3,
+        timestamp: new Date()},
       {
-        id: '2';
-        name: 'Average Response Time';
-        value: 156;
-        unit: 'ms';
-        trend: 'down';
-        change: -8.7;
-        timestamp: new Date()};
+        id: '2',
+        name: 'Average Response Time',
+        value: 156,
+        unit: 'ms',
+        trend: 'down',
+        change: -8.7,
+        timestamp: new Date()},
       {
-        id: '3';
-        name: 'Error Rate';
-        value: 0.8;
-        unit: '%';
-        trend: 'down';
-        change: -0.3;
-        timestamp: new Date()};
+        id: '3',
+        name: 'Error Rate',
+        value: 0.8,
+        unit: '%',
+        trend: 'down',
+        change: -0.3,
+        timestamp: new Date()},
       {
-        id: '4';
-        name: 'Active API Keys';
-        value: 1247;
-        unit: '';
-        trend: 'up';
-        change: 5.2;
-        timestamp: new Date()};
+        id: '4',
+        name: 'Active API Keys',
+        value: 1247,
+        unit: '',
+        trend: 'up',
+        change: 5.2,
+        timestamp: new Date()},
       {
-        id: '5';
-        name: 'Rate Limit Hits';
-        value: 234;
-        unit: '';
-        trend: 'up';
-        change: 15.6;
-        timestamp: new Date()};
+        id: '5',
+        name: 'Rate Limit Hits',
+        value: 234,
+        unit: '',
+        trend: 'up',
+        change: 15.6,
+        timestamp: new Date()},
       {
-        id: '6';
-        name: 'Uptime';
-        value: 99.9;
-        unit: '%';
-        trend: 'stable';
-        change: 0.1;
+        id: '6',
+        name: 'Uptime',
+        value: 99.9,
+        unit: '%',
+        trend: 'stable',
+        change: 0.1,
         timestamp: new Date()}
     ],
     setEndpoints(mockEndpoints),
     setApiKeys(mockApiKeys),
     setMetrics(mockMetrics),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const updateRealTimeData = () => {
     // Update metrics with real-time changes,
     setMetrics(prev => prev.map(metric => ({
-      ...metric;
-      value: metric.value + Math.floor(Math.random() * 100 - 50);
+      ...metric,
+      value: metric.value + Math.floor(Math.random() * 100 - 50),
       timestamp: new Date()}))),
     // Update endpoint metrics,
     setEndpoints(prev => prev.map(endpoint => ({
-      ...endpoint;
-      responseTime: Math.max(50endpoint.responseTime + Math.floor(Math.random() * 20 - 10));
-      requestsPerMinute: Math.max(0endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50))})))};
+      ...endpoint,
+      responseTime: Math.max(50endpoint.responseTime + Math.floor(Math.random() * 20 - 10)),
+      requestsPerMinute: Math.max(0endpoint.requestsPerMinute + Math.floor(Math.random() * 100 - 50))})))},
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-600 bg-green-100',
@@ -235,7 +235,7 @@ const APIManagementSystem: React.FC = () => {
       case 'revoked': return 'text-red-600 bg-red-100',
       case 'expired': return 'text-gray-600 bg-gray-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getMethodColor = (method: string) => {
     switch (method) {
       case 'GET': return 'text-green-600 bg-green-100',
@@ -244,26 +244,26 @@ const APIManagementSystem: React.FC = () => {
       case 'DELETE': return 'text-red-600 bg-red-100',
       case 'PATCH': return 'text-purple-600 bg-purple-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
       default: return '➡️'}
-  };
+  },
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60)),
     if (diffInMinutes < 1) return 'Just now',
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`,
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,
-    return `${Math.floor(diffInMinutes / 1440)}d ago`};
+    return `${Math.floor(diffInMinutes / 1440)}d ago`},
   const formatValue = (value: numberunit: string) => {
     if (unit === 'ms') return `${value}ms`,
     if (unit === '%') return `${value.toFixed(1)}%`,
-    if (unit === ', ') return value.toLocaleString(),
-    return `${value}${unit}`};
+    if (unit === ) return value.toLocaleString(),
+    return `${value}${unit}`},
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-16">,
@@ -304,10 +304,10 @@ const APIManagementSystem: React.FC = () => {
       {/* Navigation Tabs */}
       <div className="flex space-x-1 bg-gray-100 p-1 rounded-lg mb-8">,
         {[
-          { id: ''overview', 'label: ''Overview', 'icon: '📊' };
-          { id: ''endpoints', 'label: ''Endpoints', 'icon: '🔗' };
-          { id: ''keys', 'label: 'API 'Keys', 'icon: '🔑' };
-          { id: ''analytics', 'label: ''Analytics', 'icon: '📈' }
+          { id: ''overviewlabel: ''Overviewicon: '📊' },
+          { id: ''endpointslabel: ''Endpointsicon: '🔗' },
+          { id: ''keyslabel: 'API 'Keysicon: '🔑' },
+          { id: ''analyticslabel: ''Analyticsicon: '📈' }
         ].map((tab) => (
           <button
             key={tab.id}
@@ -521,5 +521,5 @@ const APIManagementSystem: React.FC = () => {
             </div>,
           </div>,
         </div>)}
-    </div>)};
-export default APIManagementSystem;
+    </div>)},
+export default APIManagementSystem,

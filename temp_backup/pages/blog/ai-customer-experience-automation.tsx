@@ -51,7 +51,7 @@ export default function AICustomerExperienceAutomation() {
                 <p className='text-xl text-white/80 max-w-3xl mx-auto'>,
                   Customer expectations are evolving rapidly, and AI-powered,
                   automation is at the forefront of this transformation. Learn,
-                  how intelligent systems are creating seamless, personalized;
+                  how intelligent systems are creating seamless, personalized,
                   and proactive customer experiences that drive loyalty and,
                   growth.,
                 </p>,
@@ -61,7 +61,7 @@ export default function AICustomerExperienceAutomation() {
                   The Customer Experience Revolution,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  In today's digital-first world, customers expect instant;
+                  In today's digital-first world, customers expect instant,
                   personalized, and seamless interactions across all,
                   touchpoints. Traditional customer service approaches can no,
                   longer meet these expectations. AI-powered automation is,
@@ -93,13 +93,13 @@ export default function AICustomerExperienceAutomation() {
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Understand Context:</strong> Advanced natural language,
-                  processing allows chatbots to understand complex queries;
+                  processing allows chatbots to understand complex queries,
                   maintain conversation context, and provide relevant responses,
                   based on the full conversation history.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Learn and Improve: </strong> Machine learning,
-                  algorithms enable chatbots to learn from every interaction;
+                  algorithms enable chatbots to learn from every interaction,
                   continuously improving their accuracy and response quality,
                   over time.,
                 </p>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {
   return (
@@ -268,5 +268,5 @@ const AITrends20o25_20o30FuturePredictionsBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AITrends20o25_20o30FuturePredictionsBanner;
+    </div>)},
+export default AITrends20o25_20o30FuturePredictionsBanner,

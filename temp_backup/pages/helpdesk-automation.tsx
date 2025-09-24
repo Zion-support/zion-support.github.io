@@ -9,21 +9,15 @@ export default function HelpdeskAutomation() {
       implementationWeeks='1-2 weeks',
       roiNote='Reduce response time by 40–60% and improve CSAT by 20–30%',
       features={[
-        'Multi-channel ticketing (email, chat, web, social)';
-        'AI triage, intent detection, and auto-routing';
-        'Self-service knowledge base with AI search';
-        'Chatbots and agent copilot';
-        'SLAs, macros, and workflow automation';
-        'Customer portal and satisfaction surveys';
-        'CRM and incident tool integrations';
-        'Analytics, CSAT/NPS, and quality scoring';
+        'Multi-channel ticketing (email, chat, web, social)AI triage, intent detection, and auto-routing',
+        'Self-service knowledge base with AI searchChatbots and agent copilot',
+        'SLAs, macros, and workflow automationCustomer portal and satisfaction surveys',
+        'CRM and incident tool integrationsAnalytics, CSAT/NPS, and quality scoring',
       ]}
       industries={[
-        'B2B SaaS';
-        'E-commerce';
-        'Fintech';
-        'Healthcare';
-        'Professional Services';
+        'B2B SaaSE-commerce',
+        'FintechHealthcare',
+        'Professional Services',
       ]}
       canonical='https: //ziontechgroup.com/helpdesk-automation',
     />)}

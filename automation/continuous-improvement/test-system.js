@@ -10,20 +10,20 @@ const winston = require('winston'),
 // Configure logging,
 const logger = winston.createLogger({
   level: 'info',  format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
   defaultMeta: { service: 'test-system' },  transports: [
     new winston.transports.File({ filename: 'logs/test-error.log', level: 'error' }),    new winston.transports.File({ filename: 'logs/test-combined.log' }),    new winston.transports.Console({
       format: winston.format.combine(
-        winston.format.colorize();
+        winston.format.colorize(),
         winston.format.simple())})]}),
 class TestSystem {
   constructor() {
     this.testResults ={
-      passed: 0;
-      failed: 0;
-      total: 0};
+      passed: 0,
+      failed: 0,
+      total: 0},
   }
 ,
   /**,
@@ -72,7 +72,7 @@ const requiredDirs = [
   async testDependencies() {
     // // console.log('📦 Testing dependencies...'),
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       // Check required dependencies,
       const requiredDeps = [
         axios',winston',node-cron',dotenv''      ],
@@ -98,7 +98,7 @@ const requiredDirs = [
   async testConfiguration() {
     // // console.log('⚙️  Testing configuration...'),
     try {
-      const envContent = fs.readFileSync('.env', 'utf8'),
+      const envContent = fs.readFileSync('.envutf8'),
       // Check for required environment variables,
       const requiredVars = ['CURSOR_API_KEY', CURSOR_WORKSPACE_ID'],      for (const varName of requiredVars) {
         if (envContent.includes(varName)) {
@@ -158,7 +158,7 @@ const requiredDirs = [
         type: 'code_change',        description: Test improvement',        changes: [
           {
             action: 'add',            file: 'test-file.js',            content: // // console.log("test")}
-        ]};
+        ]},
       if (improver.validateSuggestion) {
         const isValid = improver.validateSuggestion(testSuggestion),
         if (isValid) {

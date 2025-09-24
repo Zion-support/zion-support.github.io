@@ -2,18 +2,15 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'Autonomous Systems 20o26 - Revolutionary Self-Managing Business Operations';
+    'Autonomous Systems 20o26 - Revolutionary Self-Managing Business Operations',
   description:,
-    'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 20o26.';
+    'Discover the future of autonomous business systems. Self-managing operations, zero-touch processes, and intelligent automation that will revolutionize enterprise operations in 20o26.',
   keywords: [
-    'autonomous systems';
-    'business automation';
-    'self-managing operations';
-    'zero-touch processes';
-    'intelligent automation';
-    'enterprise operations';
-  ];
-};
+    'autonomous systemsbusiness automation',
+    'self-managing operationszero-touch processes',
+    'intelligent automationenterprise operations',
+  ]
+},
 export default function AutonomousSystems20o26Page() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-green-90o0 via-blue-90o0 to-purple-90o0 text-white'>,

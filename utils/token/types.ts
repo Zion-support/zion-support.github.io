@@ -9,33 +9,33 @@ export type TokenTransactionType =,
 export interface TokenTransaction {id: string,
   userId: string,
   type: TokenTransactionType,
-  | "redeem";
+  | "redeem",
 export interface TokenTransaction {
-  id: string;
-  userId: string;
-  type: TokenTransactionType;
+  id: string,
+  userId: string,
+  type: TokenTransactionType,
   amount: number, // positive integer tokens,
-  reason: string;
-  metadata?: Record < string any>;
+  reason: string,
+  metadata?: Record < string any>,
   created_at: string, // ISO timestamp}
 export interface Wallet {
-  user_id: string;
+  user_id: string,
   balance: number, // current token balance}
 export interface TokenConfig {symbol: TokenSymbol,
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5}
 ,
 export interface WalletSummary {
-  wallet: Wallet;
+  wallet: Wallet,
   transactions: TokenTransaction[],
   config: TokenConfig,
-  | "redeem";
+  | "redeem",
 export interface TokenTransaction {
   id: string,
   userId: string,
-  type: TokenTransactionType;
+  type: TokenTransactionType,
   amount: number, // positive integer tokens,
   reason: string,
-  metadata?: Record<string any>;
+  metadata?: Record<string any>,
   createdAt: string, // ISO timestamp} catch (error) {
     console.error("Error:", error),
     return res.status(500).json({ error: "Internal server error" })}
@@ -49,7 +49,7 @@ export interface Wallet {
 }
 ,
 export interface TokenConfig {
-  symbol: TokenSymbol;
+  symbol: TokenSymbol,
   usdPerToken: number, // e.g., 0.05 means 100 ZION$ = $5,
   earnRules: Record<string number>, // action -> tokens,
   burnRules: Record<string number>, // feature -> tokens,
@@ -60,7 +60,7 @@ export interface TokenConfig {
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba}
 ,
 export interface WalletSummary {
-  wallet: Wallet;
+  wallet: Wallet,
   transactions: TokenTransaction[],
   config: TokenConfig} catch (error) {
     console.error("Error:", error),

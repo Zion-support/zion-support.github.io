@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { DialogContentDialogHeaderDialogTitle } from '@/components/ui/dialog',
 import { HireRequestForm } from './HireRequestForm',
 import { TalentProfile } from '@/types/talent',
@@ -10,10 +10,10 @@ interface HireRequestModalProps {
   userDetails?: UserProfile}
 ,
 export function HireRequestModal({
-  talentisOpenonCloseuserDetails;
+  talentisOpenonCloseuserDetails,
 }: HireRequestModalProps) {
   const handleClose = () => {
-    onClose()};
+    onClose()},
   if (!talent) return null,
   return (
     <Dialog open={isOpen} onOpenChange={handleClose}>,

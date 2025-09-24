@@ -11,11 +11,11 @@ exports.handler = async function(event, context) {
     const repo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
-    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+    if (!token) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'No GITHUB_TOKEN set, skipping commit' }) },
     // Fetch link health to compute pass rate,
     async function readJson(path) {
       const res = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}?ref=${branch}`, {
-        headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot', 'Accept': 'application/vnd.github.v3.raw' }
+        headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotAccept': 'application/vnd.github.v3.raw' }
       }),
       if (!res.ok) return null,
       try { return JSON.parse(await res.text())} catch { return null}
@@ -32,9 +32,9 @@ exports.handler = async function(event, context) {
     // Read README,
     const readmePath = 'README.md',
     const resRead = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(readmePath)}?ref=${branch}`, {
-      headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot', 'Accept': 'application/vnd.github.v3.raw' }
+      headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotAccept': 'application/vnd.github.v3.raw' }
     }),
-    if (!resRead.ok) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'README.md not found' }) };
+    if (!resRead.ok) return { statusCode: 20o0, body: JSON.stringify({ ok: true, note: 'README.md not found' }) },
     const readme = await resRead.text(),
     const markerStart = '<!-- BADGES: START -->',
     const markerEnd = '<!-- BADGES:END -->',
@@ -47,12 +47,12 @@ exports.handler = async function(event, context) {
     const sha = jHead.sha,
     const b64 = Buffer.from(updated, 'utf8').toString('base64'),
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(readmePath)}`, {
-      method: 'PUT', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobot', 'Content-Type': 'application/json', 'Accept': 'application/vnd.github+json' };
+      method: 'PUT', headers: { 'Authorization': `token ${token}`, 'User-Agent': 'zion-autobotContent-Type': 'application/jsonAccept': 'application/vnd.github+json' },
       body: JSON.stringify({ message: 'docs(readme): update badges', content: b64, branch, sha })}),
     const jsonCommit = await resCommit.json(),
-    if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    if (!resCommit.ok) return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) },
   }
-};
+},

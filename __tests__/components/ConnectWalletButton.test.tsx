@@ -1,15 +1,17 @@
-import React from react',import { render, screen, fireEvent } from @testing-library/react',import ConnectWalletButton from @/components/ConnectWalletButton',import { useWallet } from @/context/WalletContext',import { useTokenBalance } from @/hooks/useTokenBalance',
-jest.mock('@/context/WalletContext'),jest.mock('@/hooks/useTokenBalance');
+import React from react',
+import { render, screen, fireEvent } from @testing-library/react',import ConnectWalletButton from @/components/ConnectWalletButton',
+import { useWallet } from @/context/WalletContext',import { useTokenBalance } from @/hooks/useTokenBalance',
+jest.mock('@/context/WalletContext'),jest.mock('@/hooks/useTokenBalance'),
 const mockUseWallet = useWallet as jest.Mock,
 const mockUseTokenBalance = useTokenBalance as jest.Mock,
 describe('ConnectWalletButton', () => {'  test('renders connect button when disconnected', () => {'    const connectWallet = jest.fn(),
     mockUseWallet.mockReturnValue({
-      isConnected: false;
-      connectWallet;
-      disconnectWallet: jest.fn();
-      displayAddress: null;
-      address: null;
-      chainId: null;
+      isConnected: false,
+      connectWallet,
+      disconnectWallet: jest.fn(),
+      displayAddress: null,
+      address: null,
+      chainId: null,
       provider: null}),
     mockUseTokenBalance.mockReturnValue(null),
     render(<ConnectWalletButton  />),
@@ -17,10 +19,10 @@ describe('ConnectWalletButton', () => {'  test('renders connect button when disc
     expect(connectWallet).toHaveBeenCalled()}),
   test('shows address and disconnect button when connected', () => {'    const disconnectWallet = jest.fn(),
     mockUseWallet.mockReturnValue({
-      isConnected: true;
-      connectWallet: jest.fn();
-      disconnectWallet;
-      displayAddress: 0x1234...abcd',      address: 0x1234',      chainId: 1;
+      isConnected: true,
+      connectWallet: jest.fn(),
+      disconnectWallet,
+      displayAddress: 0x1234...abcd',      address: 0x1234',      chainId: 1,
       provider: {}
     }),
     mockUseTokenBalance.mockReturnValue('10o0'),

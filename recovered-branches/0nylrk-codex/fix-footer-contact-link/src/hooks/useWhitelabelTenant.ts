@@ -11,7 +11,7 @@ export interface WhitelabelTenant {
   landing_page_copy: {
     headline: string,
     subtitle: string,
-    cta: string};
+    cta: string},
   is_active: boolean,
   created_at: string,
   updated_at: string,
@@ -43,11 +43,11 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
           ? `?subdomain=${encodeURIComponent(externalSubdomain)}`,
           : `?host=${encodeURIComponent(hostname)}`,
         const { data, error: functionError } = await supabase.functions.invoke(
-          `${functionName}${params}`;
+          `${functionName}${params}`,
           {
             headers: {
-              'Content-Type': 'application/json';
-            };
+              'Content-Type': 'application/json'
+            },
           }
         ),
         if (functionError) {
@@ -79,9 +79,9 @@ export function useWhitelabelTenant(externalSubdomain?: string) {
         setError(message),
         setTenant(null)} finally {
         setIsLoading(false)}
-    };
+    },
     loadTenant()}, [externalSubdomain]),
-  return { tenant, isLoading, error };
+  return { tenant, isLoading, error },
 }
 ,
 // Hook to check if current user is a tenant admin,
@@ -113,8 +113,8 @@ export function useTenantAdminStatus(tenantId?: string) {
         console.error('Error checking tenant admin status:', err),
         setIsAdmin(false)} finally {
         setIsLoading(false)}
-    };
+    },
     checkAdminStatus()}, [tenantId]),
-  return { isAdmin, isLoading };
+  return { isAdmin, isLoading },
 }
 ,

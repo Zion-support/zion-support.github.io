@@ -1,109 +1,103 @@
 'use client',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  DollarSign;
-  Clock;
-  Users;
-  Award;
-  Zap;
+  ArrowRight,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Users,
+  Award,
+  Zap,
 } from 'lucide-react',
 const UltimateAITransformationShowcase20o25 = () => {
   const content = [
     {
-      id: 'ai-20o25-ultimate-enterprise-transformation-revolution';
-      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution';
+      id: 'ai-20o25-ultimate-enterprise-transformation-revolution',
+      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution',
       description:,
-        'Complete Guide to 15,0o00% ROI - Discover how Fortune 50o0 companies are achieving unprecedented results through revolutionary AI transformation strategies.';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution';
-      readingTime: '45 min read';
+        'Complete Guide to 15,0o00% ROI - Discover how Fortune 50o0 companies are achieving unprecedented results through revolutionary AI transformation strategies.',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution',
+      readingTime: '45 min read',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$85.2B+';
-        efficiency: '4,20o0%';
-        accuracy: '99.99%';
-      };
-      featured: true;
+        roi: '15,0o00%',
+        savings: '$85.2B+',
+        efficiency: '4,20o0%',
+        accuracy: '99.99%'
+      },
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Enterprise Transformation';
-        '15,0o00% ROI';
-        'Fortune 50o0';
-      ];
-    };
+        'AI RevolutionEnterprise Transformation',
+        '15,0o00% ROIFortune 50o0',
+      ],
+    },
     {
-      id: 'fortune-10o0-ai-transformation-150o00-roi-ultimate-success';
+      id: 'fortune-10o0-ai-transformation-150o00-roi-ultimate-success',
       title:,
-        'Fortune 10o0 AI Transformation: $85.2B Company Achieves 15,0o00% ROI';
+        'Fortune 10o0 AI Transformation: $85.2B Company Achieves 15,0o00% ROI',
       description:,
-        'Ultimate Success Story - Learn how a Fortune 10o0 manufacturing conglomerate achieved unprecedented 15,0o00% ROI through comprehensive AI transformation.';
-      type: 'case-study';
-      url: '/case-studies/fortune-10o0-ai-transformation-150o00-roi-ultimate-success';
-      readingTime: '25 min read';
+        'Ultimate Success Story - Learn how a Fortune 10o0 manufacturing conglomerate achieved unprecedented 15,0o00% ROI through comprehensive AI transformation.',
+      type: 'case-study',
+      url: '/case-studies/fortune-10o0-ai-transformation-150o00-roi-ultimate-success',
+      readingTime: '25 min read',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$12.8B';
-        efficiency: '4,50o0%';
-        accuracy: '99.99%';
-      };
-      featured: true;
+        roi: '15,0o00%',
+        savings: '$12.8B',
+        efficiency: '4,50o0%',
+        accuracy: '99.99%'
+      },
+      featured: true,
       tags: [
-        'Fortune 10o0';
-        'AI Transformation';
-        '15,0o00% ROI';
-        'Success Story';
-      ];
-    };
+        'Fortune 10o0AI Transformation',
+        '15,0o00% ROISuccess Story',
+      ],
+    },
     {
-      id: 'ai-20o25-ultimate-transformation-implementation-guide';
-      title: 'AI 20o25 Ultimate Transformation Implementation Guide';
+      id: 'ai-20o25-ultimate-transformation-implementation-guide',
+      title: 'AI 20o25 Ultimate Transformation Implementation Guide',
       description:,
-        'Complete Roadmap to 15,0o00% ROI - The definitive guide to achieving extraordinary results through comprehensive AI transformation with proven strategies.';
-      type: 'resource';
-      url: '/resources/ai-20o25-ultimate-transformation-implementation-guide';
-      readingTime: '60 min read';
+        'Complete Roadmap to 15,0o00% ROI - The definitive guide to achieving extraordinary results through comprehensive AI transformation with proven strategies.',
+      type: 'resource',
+      url: '/resources/ai-20o25-ultimate-transformation-implementation-guide',
+      readingTime: '60 min read',
       metrics: {
-        roi: '15,0o00%';
-        success: '99.7%';
-        timeline: '18 months';
-        savings: '$85.2B+';
-      };
-      featured: true;
+        roi: '15,0o00%',
+        success: '99.7%',
+        timeline: '18 months',
+        savings: '$85.2B+'
+      },
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'AI Transformation';
-        '15,0o00% ROI';
-        'Strategy';
-      ];
-    };
+        'Implementation GuideAI Transformation',
+        '15,0o00% ROIStrategy',
+      ],
+    },
   ],
   const stats = [
     {
-      label: 'Average ROI';
-      value: '15,0o00%';
-      icon: TrendingUp;
-      color: 'text-green-50o0';
-    };
+      label: 'Average ROI',
+      value: '15,0o00%',
+      icon: TrendingUp,
+      color: 'text-green-50o0'
+    },
     {
-      label: 'Total Savings';
-      value: '$85.2B+';
-      icon: DollarSign;
-      color: 'text-blue-50o0';
-    };
+      label: 'Total Savings',
+      value: '$85.2B+',
+      icon: DollarSign,
+      color: 'text-blue-50o0'
+    },
     {
-      label: 'Efficiency Gain';
-      value: '4,20o0%';
-      icon: Zap;
-      color: 'text-purple-50o0';
-    };
+      label: 'Efficiency Gain',
+      value: '4,20o0%',
+      icon: Zap,
+      color: 'text-purple-50o0'
+    },
     {
-      label: 'Success Rate';
-      value: '99.7%';
-      icon: Award;
-      color: 'text-yellow-50o0';
-    };
+      label: 'Success Rate',
+      value: '99.7%',
+      icon: Award,
+      color: 'text-yellow-50o0'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -296,5 +290,5 @@ const UltimateAITransformationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAITransformationShowcase20o25;
+    </section>)},
+export default UltimateAITransformationShowcase20o25,

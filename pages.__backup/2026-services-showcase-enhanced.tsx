@@ -48,44 +48,44 @@ export default function Services20o26ShowcaseEnhancedPage() {
     if (serviceVariant.includes('api')) return 'quantum-advanced',
     if (serviceVariant.includes('integration')) return 'quantum-advanced',
     if (serviceVariant.includes('analytics')) return 'neural',
-    return 'default'};
+    return 'default'},
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all 20o26 services including new ones,
   const all20o26Services = [
-    ...innovative20o26MicroSaasServicesV2;
-    ...emergingTech20o26ServicesV2;
-    ...enterpriseIT20o26ServicesV2;
-    ...innovative20o26AIServicesV3;
-    ...emergingTech20o26ServicesV3;
+    ...innovative20o26MicroSaasServicesV2,
+    ...emergingTech20o26ServicesV2,
+    ...enterpriseIT20o26ServicesV2,
+    ...innovative20o26AIServicesV3,
+    ...emergingTech20o26ServicesV3,
     ...enterpriseIT20o26ServicesV3],
   // Enhanced categories for 20o26,
   const categories = [
-    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length };
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length };
-    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length };
-    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length };
-    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all20o26Services.filter(s => s.category.includes('SaaS')).length };
-    { id: 'healthcare'name: 'Healthcare & Biotech'icon: '🏥'count: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length };
-    { id: 'financial'name: 'Financial Technology'icon: '💰'count: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length };
+    { id: 'all'name: 'All 20o26 Services'icon: '🚀'count: all20o26Services.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: all20o26Services.filter(s => s.category.includes('AI')).length },
+    { id: 'quantum'name: 'Quantum & Emerging Tech'icon: '⚛️'count: all20o26Services.filter(s => s.category.includes('Quantum') || s.category.includes('Emerging')).length },
+    { id: 'enterprise'name: 'Enterprise IT'icon: '🏢'count: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length },
+    { id: 'micro-saas'name: 'Micro SaaS'icon: '💻'count: all20o26Services.filter(s => s.category.includes('SaaS')).length },
+    { id: 'healthcare'name: 'Healthcare & Biotech'icon: '🏥'count: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length },
+    { id: 'financial'name: 'Financial Technology'icon: '💰'count: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'manufacturing'name: 'Manufacturing & IoT'icon: '🏭'count: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length }
   ],
   const priceRanges = [
-    { id: 'all'name: 'All Prices'range: 'All' };
-    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' };
-    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' };
-    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' };
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $1K/month'range: 'Under $1K' },
+    { id: 'medium'name: '$1K - $5K/month'range: '$1K - $5K' },
+    { id: 'high'name: '$5K - $20K/month'range: '$5K - $20K' },
     { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ],
   const sortOptions = [
-    { id: 'name'name: 'Name A-Z' };
-    { id: 'price-low'name: 'Price Low to High' };
-    { id: 'price-high'name: 'Price High to Low' };
-    { id: 'popularity'name: 'Most Popular' };
-    { id: 'newest'name: 'Newest First' };
+    { id: 'name'name: 'Name A-Z' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' },
+    { id: 'popularity'name: 'Most Popular' },
+    { id: 'newest'name: 'Newest First' },
     { id: 'rating'name: 'Highest Rated' }
   ],
   // Filter and sort services,
@@ -139,14 +139,14 @@ export default function Services20o26ShowcaseEnhancedPage() {
     return filtered}[all20o26ServicesearchTermselectedCategoryselectedPriceRangesortBy]),
   // Service statistics,
   const serviceStats ={
-    totalServices: all20o26Services.length;
-    aiServices: all20o26Services.filter(s => s.category.includes('AI')).length;
-    quantumServices: all20o26Services.filter(s => s.category.includes('Quantum')).length;
-    enterpriseServices: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length;
-    microSaasServices: all20o26Services.filter(s => s.category.includes('SaaS')).length;
-    healthcareServices: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length;
-    financialServices: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length;
-    manufacturingServices: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length};
+    totalServices: all20o26Services.length,
+    aiServices: all20o26Services.filter(s => s.category.includes('AI')).length,
+    quantumServices: all20o26Services.filter(s => s.category.includes('Quantum')).length,
+    enterpriseServices: all20o26Services.filter(s => s.category.includes('Enterprise') || s.category.includes('IT')).length,
+    microSaasServices: all20o26Services.filter(s => s.category.includes('SaaS')).length,
+    healthcareServices: all20o26Services.filter(s => s.category.includes('Healthcare') || s.category.includes('Biotech')).length,
+    financialServices: all20o26Services.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length,
+    manufacturingServices: all20o26Services.filter(s => s.category.includes('Manufacturing') || s.category.includes('IoT')).length},
   return (
     <UltraFuturisticBackground  intensity="high">,
       <div className="min-h-screen">,

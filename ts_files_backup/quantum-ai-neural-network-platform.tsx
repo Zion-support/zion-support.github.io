@@ -1,29 +1,29 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 AtomBrainZapShieldUsersTargetArrowRightCheckStarGlobeCpuNetwork,
 import SEO from '../components/SEO',
 const QuantumAINeuralNetworkPlatform: React.FC = () => {
   const features = [
-    "Quantum-enhanced neural network architecture";
-    "Superposition-based learning algorithms";
-    "Quantum entanglement optimization";
-    "Quantum-classical hybrid training";
-    "Quantum error correction protocols";
-    "Multi-dimensional quantum states";
-    "Quantum memory management";
-    "Quantum coherence preservation";
-    "Quantum measurement optimization";
+    "Quantum-enhanced neural network architecture",
+    "Superposition-based learning algorithms",
+    "Quantum entanglement optimization",
+    "Quantum-classical hybrid training",
+    "Quantum error correction protocols",
+    "Multi-dimensional quantum states",
+    "Quantum memory management",
+    "Quantum coherence preservation",
+    "Quantum measurement optimization",
     "Cross-platform quantum synchronization"],
   const benefits = [
-    "Exponential computational power";
-    "Quantum advantage in AI training";
-    "Enhanced pattern recognition";
-    "Faster convergence rates";
+    "Exponential computational power",
+    "Quantum advantage in AI training",
+    "Enhanced pattern recognition",
+    "Faster convergence rates",
     "Quantum-secure AI operations"],
   const pricing = {
-    starter: "$999/month";
-    professional: "$1,999/month";
-    enterprise: "Custom pricing"};
+    starter: "$999/month",
+    professional: "$1,999/month",
+    enterprise: "Custom pricing"},
   return (
     <div className="min-h-screen bg-black text-white">,
       <SEO
@@ -198,5 +198,5 @@ const QuantumAINeuralNetworkPlatform: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
-export default QuantumAINeuralNetworkPlatform;
+    </div>)},
+export default QuantumAINeuralNetworkPlatform,

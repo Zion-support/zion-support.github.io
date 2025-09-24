@@ -1,106 +1,106 @@
-import React from 'react';
+import React from 'react',
 "use client",
 import Link from 'next/link',
 const EdgeAIContentShowcase20o25 = () => {
   const edgeAIContent = [
     {
-      id: 'edge-computing-revolution';
-      title: 'AI 20o25: The Edge Computing Revolution';
-      description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.';
-      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough';
-      type: 'Blog Post';
-      category: 'Technology';
+      id: 'edge-computing-revolution',
+      title: 'AI 20o25: The Edge Computing Revolution',
+      description: 'Achieve 450% ROI with edge AI solutions that deliver real-time processing and massive cost savings.',
+      url: '/blog/ai-20o25-edge-computing-revolution-enterprise-breakthrough',
+      type: 'Blog Post',
+      category: 'Technology',
       metrics: {
-        roi: '450%';
-        savings: '$180M';
-        uptime: '99.7%';
-        speed: '94% faster'};
-      image: '🚀';
-      gradient: 'from-blue-60o0 to-purple-60o0';
-      readingTime: '14 min read';
-      featured: true};
+        roi: '450%',
+        savings: '$180M',
+        uptime: '99.7%',
+        speed: '94% faster'},
+      image: '🚀',
+      gradient: 'from-blue-60o0 to-purple-60o0',
+      readingTime: '14 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-edge-ai';
-      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI';
-      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.';
-      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi';
-      type: 'Case Study';
-      category: 'Success Story';
+      id: 'fortune-50o0-edge-ai',
+      title: 'Fortune 50o0 Edge AI Transformation: 450% ROI',
+      description: 'How a Fortune 50o0 manufacturer achieved $2.1B annual savings with edge AI across 47 facilities.',
+      url: '/case-studies/fortune-50o0-edge-ai-transformation-450-percent-roi',
+      type: 'Case Study',
+      category: 'Success Story',
       metrics: {
-        roi: '450%';
-        savings: '$2.1B';
-        efficiency: '78%';
-        quality: '92%'};
-      image: '🏭';
-      gradient: 'from-green-60o0 to-blue-60o0';
-      readingTime: '12 min read';
-      featured: true};
+        roi: '450%',
+        savings: '$2.1B',
+        efficiency: '78%',
+        quality: '92%'},
+      image: '🏭',
+      gradient: 'from-green-60o0 to-blue-60o0',
+      readingTime: '12 min read',
+      featured: true},
     {
-      id: 'edge-ai-implementation-guide';
-      title: 'Edge AI Implementation Guide: From Strategy to 450% ROI';
-      description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.';
-      url: '/resources/ai-20o25-edge-computing-implementation-guide';
-      type: 'Implementation Guide';
-      category: 'Strategy';
+      id: 'edge-ai-implementation-guide',
+      title: 'Edge AI Implementation Guide: From Strategy to 450% ROI',
+      description: 'Complete roadmap for implementing edge AI solutions with proven ROI and success metrics.',
+      url: '/resources/ai-20o25-edge-computing-implementation-guide',
+      type: 'Implementation Guide',
+      category: 'Strategy',
       metrics: {
-        roi: '450%';
-        timeline: '24 months';
-        success: '98%';
-        savings: '$180M'};
-      image: '📋';
-      gradient: 'from-purple-60o0 to-pink-60o0';
-      readingTime: '25 min read';
-      featured: true};
+        roi: '450%',
+        timeline: '24 months',
+        success: '98%',
+        savings: '$180M'},
+      image: '📋',
+      gradient: 'from-purple-60o0 to-pink-60o0',
+      readingTime: '25 min read',
+      featured: true},
     {
-      id: 'edge-ai-roi-calculator';
-      title: 'Edge AI ROI Calculator: Calculate Your 450%+ ROI Potential';
-      description: 'Interactive tool to calculate your potential ROI and savings with edge AI implementation.';
-      url: '/tools/edge-ai-roi-calculator';
-      type: 'Tool';
-      category: 'Calculator';
+      id: 'edge-ai-roi-calculator',
+      title: 'Edge AI ROI Calculator: Calculate Your 450%+ ROI Potential',
+      description: 'Interactive tool to calculate your potential ROI and savings with edge AI implementation.',
+      url: '/tools/edge-ai-roi-calculator',
+      type: 'Tool',
+      category: 'Calculator',
       metrics: {
-        accuracy: '95%';
-        users: '10,0o00+';
-        satisfaction: '98%';
-        completion: '15 min'};
-      image: '🧮';
-      gradient: 'from-orange-60o0 to-red-60o0';
-      readingTime: 'Interactive Tool';
-      featured: false};
+        accuracy: '95%',
+        users: '10,0o00+',
+        satisfaction: '98%',
+        completion: '15 min'},
+      image: '🧮',
+      gradient: 'from-orange-60o0 to-red-60o0',
+      readingTime: 'Interactive Tool',
+      featured: false},
     {
-      id: 'edge-ai-security-guide';
-      title: 'Edge AI Security: Complete Protection Guide';
-      description: 'Comprehensive security framework for edge AI deployments with 95% threat reduction.';
-      url: '/resources/edge-ai-security-complete-guide';
-      type: 'Security Guide';
-      category: 'Security';
+      id: 'edge-ai-security-guide',
+      title: 'Edge AI Security: Complete Protection Guide',
+      description: 'Comprehensive security framework for edge AI deployments with 95% threat reduction.',
+      url: '/resources/edge-ai-security-complete-guide',
+      type: 'Security Guide',
+      category: 'Security',
       metrics: {
-        threat_reduction: '95%';
-        compliance: '10o0%';
-        incidents: '<1/year';
-        protection: '99.9%'};
-      image: '🛡️';
-      gradient: 'from-red-60o0 to-pink-60o0';
-      readingTime: '18 min read';
-      featured: false};
+        threat_reduction: '95%',
+        compliance: '10o0%',
+        incidents: '<1/year',
+        protection: '99.9%'},
+      image: '🛡️',
+      gradient: 'from-red-60o0 to-pink-60o0',
+      readingTime: '18 min read',
+      featured: false},
     {
-      id: 'edge-ai-industry-applications';
-      title: 'Edge AI Industry Applications: 15 Use Cases with ROI';
-      description: 'Real-world applications across manufacturinghealthcaretailand financial services.';
-      url: '/resources/edge-ai-industry-applications-guide';
-      type: 'Industry Guide';
-      category: 'Applications';
+      id: 'edge-ai-industry-applications',
+      title: 'Edge AI Industry Applications: 15 Use Cases with ROI',
+      description: 'Real-world applications across manufacturinghealthcaretailand financial services.',
+      url: '/resources/edge-ai-industry-applications-guide',
+      type: 'Industry Guide',
+      category: 'Applications',
       metrics: {
-        industries: '15+';
-        use_cases: '50+';
-        avg_roi: '340%';
-        success_rate: '94%'};
-      image: '🏢';
-      gradient: 'from-indigo-60o0 to-purple-60o0';
-      readingTime: '22 min read';
+        industries: '15+',
+        use_cases: '50+',
+        avg_roi: '340%',
+        success_rate: '94%'},
+      image: '🏢',
+      gradient: 'from-indigo-60o0 to-purple-60o0',
+      readingTime: '22 min read',
       featured: false}
   ],
-  const categories = [', 'All', 'Technology'Success 'Story', 'Strategy', 'Calculator', 'Security'Applications'],
+  const categories = [All', 'Technology'Success 'StoryStrategy', 'CalculatorSecurity'Applications'],
   const [selectedCategorysetSelectedCategory] = React.useState('All'),
   const filteredContent = selectedCategory === 'All',
     ? edgeAIContent,
@@ -254,5 +254,5 @@ const EdgeAIContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EdgeAIContentShowcase20o25;
+    </section>)},
+export default EdgeAIContentShowcase20o25,

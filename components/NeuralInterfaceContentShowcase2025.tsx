@@ -5,56 +5,56 @@ const NeuralInterfaceContentShowcase20o25 = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const neuralContent = [
     {
-      id: 'neural-interfaces-business-revolution';
-      title: 'AI 20o25: The Neural Interfaces Business Revolution - Ultimate Enterprise Guide';
-      description: 'Transform your business with brain-computer interface technology - 80o0% ROI in 12 months';
-      url: '/blog/ai-20o25-neural-interfaces-business-revolution-ultimate-guide';
-      type: 'blog';
-      category: 'guides';
+      id: 'neural-interfaces-business-revolution',
+      title: 'AI 20o25: The Neural Interfaces Business Revolution - Ultimate Enterprise Guide',
+      description: 'Transform your business with brain-computer interface technology - 80o0% ROI in 12 months',
+      url: '/blog/ai-20o25-neural-interfaces-business-revolution-ultimate-guide',
+      type: 'blog',
+      category: 'guides',
       metrics: {
-        roi: '80o0%';
-        savings: '$75M';
-        efficiency: '95%';
-        accuracy: '99.9%'};
-      readingTime: '18 min read';
-      featured: true;
-      tags: ['Neural 'Interfaces', 'Business 'Revolution', 'ROI'Enterprise'20o25']};
+        roi: '80o0%',
+        savings: '$75M',
+        efficiency: '95%',
+        accuracy: '99.9%'},
+      readingTime: '18 min read',
+      featured: true,
+      tags: ['Neural 'InterfacesBusiness 'Revolution', 'ROI'Enterprise'20o25']},
     {
-      id: 'fortune-50o0-neural-transformation';
-      title: 'Fortune 50o0 Neural Interface Success: 80o0% ROI in 8 Months';
-      description: 'Real-world case study showing $75M annual savings with neural interface technology';
-      url: '/case-studies/fortune-50o0-neural-interface-transformation-80o0-roi-success';
-      type: 'case-study';
-      category: 'case-studies';
+      id: 'fortune-50o0-neural-transformation',
+      title: 'Fortune 50o0 Neural Interface Success: 80o0% ROI in 8 Months',
+      description: 'Real-world case study showing $75M annual savings with neural interface technology',
+      url: '/case-studies/fortune-50o0-neural-interface-transformation-80o0-roi-success',
+      type: 'case-study',
+      category: 'case-studies',
       metrics: {
-        roi: '80o0%';
-        savings: '$75M';
-        efficiency: '98%';
-        satisfaction: '98%'};
-      readingTime: '15 min read';
-      featured: true;
-      tags: ['Case 'Study', 'Fortune 50o0'Neural 'Interfaces', 'ROI'Success Story']};
+        roi: '80o0%',
+        savings: '$75M',
+        efficiency: '98%',
+        satisfaction: '98%'},
+      readingTime: '15 min read',
+      featured: true,
+      tags: ['Case 'StudyFortune 50o0'Neural 'InterfacesROI'Success Story']},
     {
-      id: 'neural-interface-implementation-guide';
-      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
-      description: 'Complete framework for enterprise neural interface deployment with proven results';
-      url: '/resources/neural-interface-implementation-master-guide-20o25';
-      type: 'resource';
-      category: 'resources';
+      id: 'neural-interface-implementation-guide',
+      title: 'Neural Interface Implementation Master Guide 20o25: From Strategy to 80o0% ROI',
+      description: 'Complete framework for enterprise neural interface deployment with proven results',
+      url: '/resources/neural-interface-implementation-master-guide-20o25',
+      type: 'resource',
+      category: 'resources',
       metrics: {
-        roi: '80o0%';
-        success: '98%';
-        timeline: '12 months';
-        implementations: '50o0+'};
-      readingTime: '25 min read';
-      featured: true;
-      tags: ['Implementation 'Guide', 'Neural 'Interfaces', 'Strategy', 'ROI', 'Framework']}
+        roi: '80o0%',
+        success: '98%',
+        timeline: '12 months',
+        implementations: '50o0+'},
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['Implementation 'GuideNeural 'Interfaces', 'StrategyROI', 'Framework']}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: neuralContent.length };
-    { id: ''guides', 'name: ''Guides', 'count: neuralContent.filter(item => item.category === 'guides').length };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: neuralContent.filter(item => item.category === 'case-studies').length };
-    { id: ''resources', 'name: ''Resources', 'count: neuralContent.filter(item => item.category === 'resources').length }
+    { id: ''allname: 'All 'Contentcount: neuralContent.length },
+    { id: ''guidesname: ''Guidescount: neuralContent.filter(item => item.category === 'guides').length },
+    { id: 'case-'studiesname: 'Case 'Studiescount: neuralContent.filter(item => item.category === 'case-studies').length },
+    { id: ''resourcesname: ''Resourcescount: neuralContent.filter(item => item.category === 'resources').length }
   ],
   const filteredContent = activeCategory === 'all',
     ? neuralContent,
@@ -78,7 +78,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
           </svg>),
       default: ,
         return null}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -89,7 +89,7 @@ const NeuralInterfaceContentShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="py-20 bg-gradient-to-br from-slate-50 via-white to-purple-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -244,5 +244,5 @@ const NeuralInterfaceContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NeuralInterfaceContentShowcase20o25;
+    </div>)},
+export default NeuralInterfaceContentShowcase20o25,

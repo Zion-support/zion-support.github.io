@@ -14,19 +14,19 @@ export default function Service-1755574829757-0o04zwa9h5Service() {
         <meta property="og:type" content="website"  />,
         <meta property="og:url" content="https://ziontechgroup.com/services/service-1755574829757-0o04zwa9h5"  />,
         <script type="application/ld+json">{JSON.stringify({
-          "@context": "https://schema.org";
-          "@type": "Service";
-          "name": "AI-Powered Security Services Service";
-          "description": "Advanced Security Services solution powered by cutting-edge artificial intelligence";
+          "@context": "https: //schema.org",
+          "@type": "Service",
+          "name": "AI-Powered Security Services Service",
+          "description": "Advanced Security Services solution powered by cutting-edge artificial intelligence",
           "provider": {
-            "@type": "Organization";
-            "name": "Zion Tech Group"};
-          "category": "Security Services";
+            "@type": "Organization",
+            "name": "Zion Tech Group"},
+          "category": "Security Services",
           "offers": serviceData.pricing.map(plan => ({
-            "@type": "Offer";
-            "name": plan.plan;
-            "price": plan.price;
-            "description": plan.features.join(', ')}))})}</script>,
+            "@type": "Offer",
+            "name": plan.plan,
+            "price": plan.price,
+            "description": plan.features.join()}))})}</script>,
         <meta name="twitter: card" content="summary_large_image"  /></Head>,
       <main className="container mx-auto px-6 py-12">,
         {/* Hero Section */}

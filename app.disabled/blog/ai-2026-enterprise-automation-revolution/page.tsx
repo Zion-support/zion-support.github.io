@@ -1,17 +1,15 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
-  title: 'AI 20o26: Enterprise Automation Revolution - Zion Tech Group';
+  title: 'AI 20o26: Enterprise Automation Revolution - Zion Tech Group',
   description:,
-    'Discover the revolutionary AI automation solutions that will transform enterprises in 20o26. Advanced workflows, intelligent process automation, and autonomous business operations.';
+    'Discover the revolutionary AI automation solutions that will transform enterprises in 20o26. Advanced workflows, intelligent process automation, and autonomous business operations.',
   keywords: [
-    'AI automation 20o26';
-    'enterprise automation';
-    'intelligent workflows';
-    'autonomous business';
-    'AI transformation';
-  ];
-};
+    'AI automation 20o26enterprise automation',
+    'intelligent workflowsautonomous business',
+    'AI transformation',
+  ]
+},
 export default function AI20o26EnterpriseAutomationRevolution() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0'>,

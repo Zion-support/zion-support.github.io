@@ -1,29 +1,29 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 const NewContent20o26UltimateShowcase: React.FC = () => {
   const contentItems = [
     {
-      title: "AI 20o26 Revolutionary Breakthrough Technologies";
-      description: "Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems delivering unprecedented results.";
+      title: "AI 20o26 Revolutionary Breakthrough Technologies",
+      description: "Discover cutting-edge AI technologies including Quantum-Neural Fusion AI, Synthetic Intelligence, and Consciousness-Level AI systems delivering unprecedented results.",
       features: [
-        "10,0o00x Processing Speed";
-        "Self-Improving AI Systems";
-        "50,0o00% ROI Achievement";
-        "Consciousness-Level Intelligence"];
-      href: "/content/resources/ai-20o26-revolutionary-breakthrough-technologies-ultimate-guide";
-      badge: "🚀 Revolutionary";
-      gradient: "from-purple-60o0 to-blue-60o0"};
+        "10,0o00x Processing Speed",
+        "Self-Improving AI Systems",
+        "50,0o00% ROI Achievement",
+        "Consciousness-Level Intelligence"],
+      href: "/content/resources/ai-20o26-revolutionary-breakthrough-technologies-ultimate-guide",
+      badge: "🚀 Revolutionary",
+      gradient: "from-purple-60o0 to-blue-60o0"},
     {
-      title: "AI 20o26 Implementation Master Framework";
-      description: "The complete blueprint for achieving unprecedented AI implementation success with guaranteed 10,0o00% ROI and 99.97% success rate.";
+      title: "AI 20o26 Implementation Master Framework",
+      description: "The complete blueprint for achieving unprecedented AI implementation success with guaranteed 10,0o00% ROI and 99.97% success rate.",
       features: [
-        "99.97% Success Rate";
-        "10,0o00% Average ROI";
-        "90-Day Transformation";
-        "5-Pillar Framework"];
-      href: "/content/resources/ai-20o26-implementation-master-framework-ultimate-success-guide";
-      badge: "🎯 Master Framework";
+        "99.97% Success Rate",
+        "10,0o00% Average ROI",
+        "90-Day Transformation",
+        "5-Pillar Framework"],
+      href: "/content/resources/ai-20o26-implementation-master-framework-ultimate-success-guide",
+      badge: "🎯 Master Framework",
       gradient: "from-green-60o0 to-teal-60o0"}
   ],
   return (
@@ -149,5 +149,5 @@ const NewContent20o26UltimateShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.section>)};
-export default NewContent20o26UltimateShowcase;
+    </motion.section>)},
+export default NewContent20o26UltimateShowcase,

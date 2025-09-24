@@ -126,5 +126,5 @@ const NewContent20o25QuantumAIRevolutionBanner = () => {
         <div className='absolute bottom-1/3 left-1/3 w-3 h-3 bg-blue-40o0 rounded-full opacity-40 animate-bounce'></div>,
         <div className='absolute bottom-1/4 right-1/6 w-2 h-2 bg-indigo-40o0 rounded-full opacity-70 animate-ping'></div>,
       </div>,
-    </section>)};
-export default NewContent20o25QuantumAIRevolutionBanner;
+    </section>)},
+export default NewContent20o25QuantumAIRevolutionBanner,

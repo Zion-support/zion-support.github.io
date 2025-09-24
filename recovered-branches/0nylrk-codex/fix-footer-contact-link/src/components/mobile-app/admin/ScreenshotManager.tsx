@@ -11,7 +11,7 @@ interface ScreenshotManagerProps {
 type Screenshot = {
   id: string,
   url: string,
-  file: File};
+  file: File},
 export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }) => {
   const [screenshotsetScreenshots] = useState<Screenshot[]>([]),
   const [isDraggingsetIsDragging] = useState(false),
@@ -19,7 +19,7 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
   const handleFileSelect = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       addScreenshots(Array.from(e.target.files))}
-  };
+  },
   const addScreenshots = (files: File[]) => {
     // Filter for image files only,
     const imageFiles = files.filter(file => file.type.startsWith('image/')),
@@ -36,13 +36,13 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
 ,
     const filesToAdd = imageFiles.slice(0availableSlots),
     const newScreenshots = filesToAdd.map(file => ({
-      id: Math.random().toString(36).substring(29);
-      url: URL.createObjectURL(file);
+      id: Math.random().toString(36).substring(29),
+      url: URL.createObjectURL(file),
       file})),
     setScreenshots(prev => [...prev...newScreenshots]),
     if (filesToAdd.length < imageFiles.length) {
       toast.warning(`Only added ${filesToAdd.length} screenshots. Maximum is ${maxScreenshots}.`)}
-  };
+  },
   const removeScreenshot = (id: string) => {
     setScreenshots(prev => {
       const filtered = prev.filter(screenshot => screenshot.id !== id),
@@ -51,18 +51,18 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
       if (removed) {
         URL.revokeObjectURL(removed.url)}
 ,
-      return filtered})};
+      return filtered})},
   const handleDragOver = (e: React.DragEvent) => {
     e.preventDefault(),
-    setIsDragging(true)};
+    setIsDragging(true)},
   const handleDragLeave = () => {
-    setIsDragging(false)};
+    setIsDragging(false)},
   const handleDrop = (e: React.DragEvent) => {
     e.preventDefault(),
     setIsDragging(false),
     if (e.dataTransfer.files) {
       addScreenshots(Array.from(e.dataTransfer.files))}
-  };
+  },
   return (
     <Card className="bg-zion-blue border-zion-purple/30">,
       <CardHeader>,
@@ -117,4 +117,4 @@ export const ScreenshotManager: React.FC<ScreenshotManagerProps> = ({ platform }
             </div>))}
         </div>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

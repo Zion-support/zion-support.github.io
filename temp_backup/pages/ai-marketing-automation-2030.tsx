@@ -1,81 +1,78 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Target;
-  TrendingUp;
-  Users;
-  Mail;
-  BarChart3;
-  Zap;
-  Shield;
-  Globe;
-  Phone;
-  Mail as MailIcon;
-  MapPin;
+  Target,
+  TrendingUp,
+  Users,
+  Mail,
+  BarChart3,
+  Zap,
+  Shield,
+  Globe,
+  Phone,
+  Mail as MailIcon,
+  MapPin,
 } from 'lucide-react',
 import UltraFuturisticBackground20o30 from '../components/ui/UltraFuturisticBackground20o30',
 import UltraFuturisticNavigation20o30 from '../components/layout/UltraFuturisticNavigation20o30',
 import UltraFuturisticFooter20o30 from '../components/layout/UltraFuturisticFooter20o30',
 // Service data,
 const serviceData = {
-  name: 'AI Marketing Automation Suite 20o30';
-  description: 'Intelligent marketing automation powered by AI';
-  price: '$179/month';
+  name: 'AI Marketing Automation Suite 20o30',
+  description: 'Intelligent marketing automation powered by AI',
+  price: '$179/month',
   features: [
     {
-      title: 'AI-Powered Audience Segmentation';
+      title: 'AI-Powered Audience Segmentation',
       description:,
-        'Intelligent customer segmentation using machine learning to identify high-value prospects and personalize marketing campaigns.';
-      icon: Users;
-    };
+        'Intelligent customer segmentation using machine learning to identify high-value prospects and personalize marketing campaigns.',
+      icon: Users
+    },
     {
-      title: 'Predictive Campaign Optimization';
+      title: 'Predictive Campaign Optimization',
       description:,
-        'AI-driven campaign performance prediction and real-time optimization for maximum ROI and engagement.';
-      icon: TrendingUp;
-    };
+        'AI-driven campaign performance prediction and real-time optimization for maximum ROI and engagement.',
+      icon: TrendingUp
+    },
     {
-      title: 'Intelligent Content Generation';
+      title: 'Intelligent Content Generation',
       description:,
-        'AI-powered content creation that adapts to audience preferences and generates personalized marketing materials.';
-      icon: Target;
-    };
+        'AI-powered content creation that adapts to audience preferences and generates personalized marketing materials.',
+      icon: Target
+    },
     {
-      title: 'Multi-Channel Marketing Orchestration';
+      title: 'Multi-Channel Marketing Orchestration',
       description:,
-        'Seamless coordination across email, social media, web, and mobile channels with AI-powered timing optimization.';
-      icon: Globe;
-    };
+        'Seamless coordination across email, social media, web, and mobile channels with AI-powered timing optimization.',
+      icon: Globe
+    },
     {
-      title: 'Real-Time Performance Analytics';
+      title: 'Real-Time Performance Analytics',
       description:,
-        'Advanced analytics dashboard with AI insights, predictive modeling, and automated reporting.';
-      icon: BarChart3;
-    };
+        'Advanced analytics dashboard with AI insights, predictive modeling, and automated reporting.',
+      icon: BarChart3
+    },
     {
-      title: 'Smart Lead Scoring & Nurturing';
+      title: 'Smart Lead Scoring & Nurturing',
       description:,
-        'AI-powered lead qualification and automated nurturing sequences that adapt to prospect behavior.';
-      icon: Zap;
-    };
-  ];
+        'AI-powered lead qualification and automated nurturing sequences that adapt to prospect behavior.',
+      icon: Zap
+    },
+  ],
   marketPosition:,
-    'Leading AI-powered marketing automation platform for businesses seeking to revolutionize customer acquisition and engagement through intelligent automation and predictive analytics.';
+    'Leading AI-powered marketing automation platform for businesses seeking to revolutionize customer acquisition and engagement through intelligent automation and predictive analytics.',
   useCases: [
-    'E-commerce marketing automation';
-    'B2B lead generation and nurturing';
-    'SaaS customer acquisition';
-    'Real estate marketing campaigns';
-    'Healthcare patient engagement';
-    'Financial services marketing';
-  ];
-  roi: 'Average customer sees 320% ROI within 7 months through improved lead quality, conversion rates, and marketing efficiency.';
+    'E-commerce marketing automationB2B lead generation and nurturing',
+    'SaaS customer acquisitionReal estate marketing campaigns',
+    'Healthcare patient engagementFinancial services marketing',
+  ],
+  roi: 'Average customer sees 320% ROI within 7 months through improved lead quality, conversion rates, and marketing efficiency.',
   contactInfo: {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-  };
-};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
+  },
+},
 export default function AIMarketingAutomation20o30() {
   const { features, marketPosition, useCases, roi, contactInfo } = serviceData,
   return (
@@ -137,7 +134,7 @@ export default function AIMarketingAutomation20o30() {
                   </span>,
                 </h1>,
                 <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-                  Transform your marketing with AI-powered automation;
+                  Transform your marketing with AI-powered automation,
                   predictive analytics, and intelligent campaign optimization.,
                   Generate more leads, increase conversions, and maximize ROI.,
                 </p>,

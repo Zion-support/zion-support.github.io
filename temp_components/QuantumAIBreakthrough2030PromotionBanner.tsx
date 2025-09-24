@@ -4,9 +4,9 @@ import {
   Cpu,
   Zap,
   Brain,
-  ArrowRight;
-  Star;
-  Sparkles;
+  ArrowRight,
+  Star,
+  Sparkles,
   Infinity} from 'lucide-react',
 export default function QuantumAIBreakthrough20o30PromotionBanner() {
   return (

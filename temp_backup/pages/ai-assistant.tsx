@@ -4,64 +4,61 @@ import { Button } from '../components/ui/Button',
 import { Bot, CheckCircle, Zap, Shield, Network, Workflow, DollarSign, ExternalLink, Phone, Mail, MapPin } from 'lucide-react',
 export default function AIAssistantPage() {
   const contact = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'Multi-agent orchestration (task, tool, memory roles)';
-    'Guardrails for PII, jailbreaks, and policy compliance';
-    'Human-in-the-loop review queues and approvals';
-    'Evaluation harness with regression suites and metrics';
-    'Observability: traces, costs, latencies, prompt versions';
-    'Integrations: Slack, Zendesk, Notion, Google Drive, Jira';
+    'Multi-agent orchestration (task, tool, memory roles)Guardrails for PII, jailbreaks, and policy compliance',
+    'Human-in-the-loop review queues and approvalsEvaluation harness with regression suites and metrics',
+    'Observability: traces, costs, latencies, prompt versionsIntegrations: Slack, Zendesk, Notion, Google Drive, Jira',
   ],
   const plans = [
     {
-      name: 'Starter';
-      price: '$1,499';
-      period: '/month';
-      includes: ['Single agent', 'Basic guardrails', 'Email support'];
-      color: 'from-blue-500 to-cyan-500';
-      popular: false};
+      name: 'Starter',
+      price: '$1,499',
+      period: '/month',
+      includes: ['Single agentBasic guardrails', 'Email support'],
+      color: 'from-blue-500 to-cyan-500',
+      popular: false},
     {
-      name: 'Growth';
-      price: '$2,999';
-      period: '/month';
-      includes: ['Multi-agent', 'Advanced guardrails', 'Slack support', 'Eval suites'];
-      color: 'from-purple-500 to-pink-500';
-      popular: true};
+      name: 'Growth',
+      price: '$2,999',
+      period: '/month',
+      includes: ['Multi-agentAdvanced guardrails', 'Slack supportEval suites'],
+      color: 'from-purple-500 to-pink-500',
+      popular: true},
     {
-      name: 'Enterprise';
-      price: 'Custom';
-      period: '';
-      includes: ['SAML/SCIM', 'VPC deployment', '24/7 support', 'Custom tooling'];
-      color: 'from-yellow-500 to-orange-500';
-      popular: false};
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      includes: ['SAML/SCIMVPC deployment', '24/7 supportCustom tooling'],
+      color: 'from-yellow-500 to-orange-500',
+      popular: false},
   ],
   const valueProps = [
     {
-      icon: <Zap className="w-8 h-8" />;
-      title: 'Ship Faster';
-      description: 'Blueprints and evals help you move from idea to production quickly.';
-      color: 'from-yellow-500 to-orange-500'};
+      icon: <Zap className="w-8 h-8" />,
+      title: 'Ship Faster',
+      description: 'Blueprints and evals help you move from idea to production quickly.',
+      color: 'from-yellow-500 to-orange-500'},
     {
-      icon: <Shield className="w-8 h-8" />;
-      title: 'Trust & Safety';
-      description: 'Guardrails, redaction, and HITL ensure compliant outcomes.';
-      color: 'from-green-500 to-emerald-500'};
+      icon: <Shield className="w-8 h-8" />,
+      title: 'Trust & Safety',
+      description: 'Guardrails, redaction, and HITL ensure compliant outcomes.',
+      color: 'from-green-500 to-emerald-500'},
     {
-      icon: <Workflow className="w-8 h-8" />;
-      title: 'Operate Reliably';
-      description: 'Full telemetry and cost controls to prevent surprises.';
+      icon: <Workflow className="w-8 h-8" />,
+      title: 'Operate Reliably',
+      description: 'Full telemetry and cost controls to prevent surprises.',
       color: 'from-blue-500 to-cyan-500'}
   ],
   const integrations = [
-    { name: 'Slack', icon: '💬', description: 'Team collaboration and notifications' };
-    { name: 'Zendesk', icon: '🎫', description: 'Customer support integration' };
-    { name: 'Notion', icon: '📝', description: 'Knowledge base and documentation' };
-    { name: 'Google Drive', icon: '☁️', description: 'File storage and sharing' };
-    { name: 'Jira', icon: '📋', description: 'Project management and tracking' };
+    { name: 'Slack', icon: '💬', description: 'Team collaboration and notifications' },
+    { name: 'Zendesk', icon: '🎫', description: 'Customer support integration' },
+    { name: 'Notion', icon: '📝', description: 'Knowledge base and documentation' },
+    { name: 'Google Drive', icon: '☁️', description: 'File storage and sharing' },
+    { name: 'Jira', icon: '📋', description: 'Project management and tracking' },
     { name: 'Microsoft Teams', icon: '👥', description: 'Enterprise communication' }
   ],
   return (

@@ -6,15 +6,15 @@ import { ArrowRight, TrendingUp, Zap, Award, CheckCircle, Star } from 'lucide-re
 const AutonomousBusinessRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const [animatedStats, setAnimatedStats] = useState({
-    roi: 0;
-    savings: 0;
-    efficiency: 0;
+    roi: 0,
+    savings: 0,
+    efficiency: 0,
     satisfaction: 0}),
   const targetStats ={
-    roi: 50o0;
-    savings: 180;
-    efficiency: 340;
-    satisfaction: 98};
+    roi: 50o0,
+    savings: 180,
+    efficiency: 340,
+    satisfaction: 98},
   useEffect(() => {
     const dismissed = localStorage.getItem('autonomousRevolutionBannerDismissed'),
     if (dismissed === 'true') {
@@ -30,39 +30,39 @@ const AutonomousBusinessRevolutionBanner = () => {
         currentStep++,
         const progress = currentStep / steps,
         setAnimatedStats({
-          roi: Math.floor(targetStats.roi * progress);
-          savings: Math.floor(targetStats.savings * progress);
-          efficiency: Math.floor(targetStats.efficiency * progress);
+          roi: Math.floor(targetStats.roi * progress),
+          savings: Math.floor(targetStats.savings * progress),
+          efficiency: Math.floor(targetStats.efficiency * progress),
           satisfaction: Math.floor(targetStats.satisfaction * progress)}),
         if (currentStep >= steps) {
           clearInterval(timer),
           setAnimatedStats(targetStats)}
       }, stepDuration),
-      return () => clearInterval(timer)};
+      return () => clearInterval(timer)},
     const timer = setTimeout(animateStats, 50o0),
     return () => clearTimeout(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('autonomousRevolutionBannerDismissed', 'true')};
+    localStorage.setItem('autonomousRevolutionBannerDismissedtrue')},
   if (!isVisible) return null,
   const featuredContent = [
     {
-      title: 'AI 20o25: The Autonomous Business Revolution';
-      description: 'Ultimate guide to achieving 50o0% ROI with autonomous systems';
-      url: '/blog/ai-20o25-autonomous-business-revolution-ultimate-guide';
-      type: 'blog';
-      readingTime: '25 min read'};
+      title: 'AI 20o25: The Autonomous Business Revolution',
+      description: 'Ultimate guide to achieving 50o0% ROI with autonomous systems',
+      url: '/blog/ai-20o25-autonomous-business-revolution-ultimate-guide',
+      type: 'blog',
+      readingTime: '25 min read'},
     {
-      title: 'Fortune 50o0 Transformation Success';
-      description: 'Real case study: $2.8B company achieves 50o0% ROI';
-      url: '/case-studies/fortune-50o0-autonomous-transformation-50o0-percent-roi';
-      type: 'case-study';
-      readingTime: '15 min read'};
+      title: 'Fortune 50o0 Transformation Success',
+      description: 'Real case study: $2.8B company achieves 50o0% ROI',
+      url: '/case-studies/fortune-50o0-autonomous-transformation-50o0-percent-roi',
+      type: 'case-study',
+      readingTime: '15 min read'},
     {
-      title: 'Implementation Guide 20o25';
-      description: 'Step-by-step roadmap from strategy to 50o0% ROI';
-      url: '/resources/ai-autonomous-implementation-guide-20o25';
-      type: 'resource';
+      title: 'Implementation Guide 20o25',
+      description: 'Step-by-step roadmap from strategy to 50o0% ROI',
+      url: '/resources/ai-autonomous-implementation-guide-20o25',
+      type: 'resource',
       readingTime: '30 min read'}
   ],
   return (
@@ -218,5 +218,5 @@ const AutonomousBusinessRevolutionBanner = () => {
           </motion.div>,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default AutonomousBusinessRevolutionBanner;
+    </AnimatePresence>)},
+export default AutonomousBusinessRevolutionBanner,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import React, { useState } from 'react',
 import Head from 'next/head',
 import EnhancedNavigation from '../components/EnhancedNavigation',
@@ -17,11 +17,11 @@ import { Phone, Mail, MapPin } from 'lucide-react',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 =======,
 =======,
-  Mail, Phone, MapPin, Clock, MessageSquare, Send;
+  Mail, Phone, MapPin, Clock, MessageSquare, Send,
   Globe, Building, Users, Award, Shield, Rocket} from 'lucide-react',
 const ContactPage: React.FC = () => {
 =======,
-  Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle;
+  Mail, Phone, MapPin, Clock, Globe, Send, CheckCircle,
   ArrowRight, MessageSquare, Calendar, Building, Users} from 'lucide-react',
 =======,
 =======,
@@ -29,31 +29,31 @@ export default function Page(){return null}
 ,
 export default function ContactPage() {
   const [formData, setFormData] = useState({
-    name: '';
-    email: '';
-    company: '';
-    phone: '';
-    service: '';
+    name: '',
+    email: '',
+    company: '',
+    phone: '',
+    service: '',
     message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitSuccess, setSubmitSuccess] = useState(false),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-    hours: '24/7 Support Available';
-    timezone: 'Eastern Time (ET)'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com',
+    hours: '24/7 Support Available',
+    timezone: 'Eastern Time (ET)'},
   // Get popular services for showcase,
   const popularServices = [
-    ...innovativeAIServices2029.filter(s => s.popular);
-    ...quantumSpaceInnovations2029.filter(s => s.popular);
-    ...enterpriseITInnovations2029.filter(s => s.popular);
+    ...innovativeAIServices2029.filter(s => s.popular),
+    ...quantumSpaceInnovations2029.filter(s => s.popular),
+    ...enterpriseITInnovations2029.filter(s => s.popular),
     ...innovativeMicroSaas2029.filter(s => s.popular)].slice(0, 6),
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
     setFormData({
-      ...formData;
-      [e.target.name]: e.target.value})};
+      ...formData,
+      [e.target.name]: e.target.value})},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -65,42 +65,42 @@ export default function ContactPage() {
     setTimeout(() => {
       setSubmitSuccess(false),
       setFormData({
-        name: '';
-        email: '';
-        company: '';
-        phone: '';
-        service: '';
-        message: '';
-        budget: '';
-        timeline: ''})}, 5000)};
+        name: '',
+        email: '',
+        company: '',
+        phone: '',
+        service: '',
+        message: '',
+        budget: '',
+        timeline: ''})}, 5000)},
   const contactMethods = [
     {
-      icon: Phone;
-      title: 'Call Us';
-      value: '+1 (302) 464-0950';
-      description: 'Available 24/7 for urgent inquiries';
-      color: 'from-blue-500 to-cyan-500';
-      action: 'tel:+13024640950'};
+      icon: Phone,
+      title: 'Call Us',
+      value: '+1 (302) 464-0950',
+      description: 'Available 24/7 for urgent inquiries',
+      color: 'from-blue-500 to-cyan-500',
+      action: 'tel:+13024640950'},
     {
-      icon: Mail;
-      title: 'Email Us';
-      value: 'kleber@ziontechgroup.com';
-      description: 'Response within 2 hours guaranteed';
-      color: 'from-green-500 to-emerald-500';
-      action: 'mailto:kleber@ziontechgroup.com'};
+      icon: Mail,
+      title: 'Email Us',
+      value: 'kleber@ziontechgroup.com',
+      description: 'Response within 2 hours guaranteed',
+      color: 'from-green-500 to-emerald-500',
+      action: 'mailto:kleber@ziontechgroup.com'},
     {
-      icon: MapPin;
-      title: 'Visit Us';
-      value: 'Middletown, DE';
-      description: 'Global headquarters and innovation center';
-      color: 'from-purple-500 to-pink-500';
-      action: 'https://maps.google.com/?q=Middletown,DE'};
+      icon: MapPin,
+      title: 'Visit Us',
+      value: 'Middletown, DE',
+      description: 'Global headquarters and innovation center',
+      color: 'from-purple-500 to-pink-500',
+      action: 'https://maps.google.com/?q=Middletown,DE'},
     {
-      icon: Clock;
-      title: 'Business Hours';
-      value: '24/7 Support';
-      description: 'Always here when you need us';
-      color: 'from-orange-500 to-red-500';
+      icon: Clock,
+      title: 'Business Hours',
+      value: '24/7 Support',
+      description: 'Always here when you need us',
+      color: 'from-orange-500 to-red-500',
       action: '#'}
   ],
       <section className="relative z-10 py-20 px-4 sm: px-6 lg:px-8">,
@@ -143,31 +143,21 @@ export default function ContactPage() {
               <p>✓ Custom implementation and training</p>,
 =======,
   const services = [
-    'AI Business Intelligence';
-    'Quantum Cybersecurity';
-    'Edge Computing Orchestration';
-    'Space Technology Innovation';
-    'Neural Interface Development';
-    'Autonomous DevOps';
-    'AI Customer Experience';
-    'Quantum Neural Networks';
+    'AI Business IntelligenceQuantum Cybersecurity',
+    'Edge Computing OrchestrationSpace Technology Innovation',
+    'Neural Interface DevelopmentAutonomous DevOps',
+    'AI Customer ExperienceQuantum Neural Networks',
     'Other (Please specify)'],
   const budgets = [
-    'Under $10,000';
-    '$10,000 - $50,000';
-    '$50,000 - $100,000';
-    '$100,000 - $500,000';
-    '$500,000+';
-    'To be discussed'],
+    'Under $10,000$10,000 - $50,000',
+    '$50,000 - $100,000$100,000 - $500,000',
+    '$500,000+To be discussed'],
   const timelines = [
-    'Immediate (1-2 weeks)';
-    'Quick (1-2 months)';
-    'Standard (3-6 months)';
-    'Extended (6+ months)';
-    'Flexible timeline';
-    'To be discussed'],
+    'Immediate (1-2 weeks)Quick (1-2 months)',
+    'Standard (3-6 months)Extended (6+ months)',
+    'Flexible timelineTo be discussed'],
 =======,
-  Mail, Phone, MapPin, ArrowRight, MessageSquare;
+  Mail, Phone, MapPin, ArrowRight, MessageSquare,
   Clock, Globe, Building, Users, Award, Shield, Home, ChevronRight, Brain} from 'lucide-react',
 export default function ContactPage() {
   return (
@@ -600,23 +590,23 @@ export default function ContactPage() {
           </div>,
         </footer>,
       </div>,
-    </>)};
-export default ContactPage;
+    </>)},
+export default ContactPage,
 =======,
 export default function ContactPage() {
 	const contact = {
-		mobile: '+1 302 464 0950';
-		email: 'kleber@ziontechgroup.com';
-		address: '364 E Main St STE 1008 Middletown DE 19709'};
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709'},
 	return (
 		<Layout>,
 =======,
 export default function ContactPage() {
 	const contact = {
-		mobile: '+1 302 464 0950';
-		email: 'kleber@ziontechgroup.com';
-		address: '364 E Main St STE 1008 Middletown DE 19709';
-		website: 'https://ziontechgroup.com'};
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709',
+		website: 'https://ziontechgroup.com'},
 	return (
 		<UltraFuturisticBackground variant="quantum" intensity="high">,
 			<Head>,
@@ -646,13 +636,13 @@ export default function ContactPage() {
 			</div>,
 		</UltraFuturisticBackground>),
 =======,
-        message: ''})}, 3000)};
+        message: ''})}, 3000)},
   const stats = [
-    { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' };
-    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' };
-    { value: '30', label: 'Day Free Trials', icon: <Star className="w-6 h-6" />, color: 'text-blue-400' };
-    { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' };
-    { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' };
+    { value: '500+', label: 'Micro SaaS Services', icon: <Zap className="w-6 h-6" />, color: 'text-cyan-400' },
+    { value: '99.99%', label: 'Uptime Guarantee', icon: <Shield className="w-6 h-6" />, color: 'text-fuchsia-400' },
+    { value: '30', label: 'Day Free Trials', icon: <Star className="w-6 h-6" />, color: 'text-blue-400' },
+    { value: '24/7', label: 'AI Support', icon: <Brain className="w-6 h-6" />, color: 'text-green-400' },
+    { value: '$1B+', label: 'Market Value', icon: <DollarSign className="w-6 h-6" />, color: 'text-yellow-400' },
     { value: '2500%+', label: 'Average ROI', icon: <TrendingUp className="w-6 h-6" />, color: 'text-purple-400' }
   ],
   return (

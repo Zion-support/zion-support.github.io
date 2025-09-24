@@ -7,21 +7,20 @@ export interface RealAugmentedService20o25Batch3 {
 ,
 export const augmentedServicesBatch3: RealAugmentedService20o25Batch3[] = [
   {
-    id: 'batch3-service-1';
-    name: 'Batch 3 Service 1';
-    tagline: 'Third batch of enhanced services';
-    price: '$499';
+    id: 'batch3-service-1',
+    name: 'Batch 3 Service 1',
+    tagline: 'Third batch of enhanced services',
+    price: '$499',
     features: [
-      'Enhanced capabilities';
-      'Better performance';
-      'Advanced features';
-    ];
-  };
+      'Enhanced capabilitiesBetter performance',
+      'Advanced features',
+    ]
+  },
   {
-    id: 'batch3-service-2';
-    name: 'Batch 3 Service 2';
-    tagline: 'Advanced batch 3 solutions';
-    price: '$699';
-    features: ['Premium features', 'Enterprise support', 'Custom integrations'];
-  };
+    id: 'batch3-service-2',
+    name: 'Batch 3 Service 2',
+    tagline: 'Advanced batch 3 solutions',
+    price: '$699',
+    features: ['Premium featuresEnterprise support', 'Custom integrations'],
+  },
 ],

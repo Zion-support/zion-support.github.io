@@ -15,9 +15,9 @@ export default function Featured() {
               These featured listings represent the best that the Zion Marketplace has to offer.,
             </p>,
           </div>,
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { FeaturedListingsSection } from "@/components/FeaturedListingsSection";
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { FeaturedListingsSection } from "@/components/FeaturedListingsSection",
 import { GradientHeading } from "@/components/GradientHeading",
 export default function Featured() {
   return (

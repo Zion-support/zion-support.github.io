@@ -3,50 +3,44 @@ ArrowRightTrendingUpDollarSignUsersZapTargetCheckCircle,
 export default function NewServicesShowcase20o25() {
   const newServices = [
     {
-      title: 'Generative AI Enterprise Transformation';
+      title: 'Generative AI Enterprise Transformation',
       description:,
-        'Transform your enterprise with comprehensive AI solutions achieving 40% cost reduction and 30o0% productivity gains.';
-      price: '$2,999/month';
+        'Transform your enterprise with comprehensive AI solutions achieving 40% cost reduction and 30o0% productivity gains.',
+      price: '$2,999/month',
       features: [
-        'Customer personalization';
-        'Content generation';
-        'Process automation';
-        'Analytics insights';
-      ];
-      link: '/blog/ai-20o25-generative-ai-enterprise-transformation';
-      icon: TrendingUp;
-      color: 'from-cyan-50o0 to-blue-50o0';
-    };
+        'Customer personalizationContent generation',
+        'Process automationAnalytics insights',
+      ],
+      link: '/blog/ai-20o25-generative-ai-enterprise-transformation',
+      icon: TrendingUp,
+      color: 'from-cyan-50o0 to-blue-50o0'
+    },
     {
-      title: 'Retail AI Transformation Suite';
+      title: 'Retail AI Transformation Suite',
       description:,
-        'Complete retail transformation with AI-powered customer experience, inventory management, and dynamic pricing.';
-      price: '$1,999/month';
+        'Complete retail transformation with AI-powered customer experience, inventory management, and dynamic pricing.',
+      price: '$1,999/month',
       features: [
-        'Customer personalization';
-        'Inventory optimization';
-        'Dynamic pricing';
-        'Customer service AI';
-      ];
-      link: '/case-studies/ai-20o25-global-retail-transformation-breakthrough';
-      icon: DollarSign;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Customer personalizationInventory optimization',
+        'Dynamic pricingCustomer service AI',
+      ],
+      link: '/case-studies/ai-20o25-global-retail-transformation-breakthrough',
+      icon: DollarSign,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'AI Implementation Mastery Program';
+      title: 'AI Implementation Mastery Program',
       description:,
-        'Complete implementation guide with step-by-step roadmap, ROI frameworks, and expert consultation.';
-      price: '$1,499/month';
+        'Complete implementation guide with step-by-step roadmap, ROI frameworks, and expert consultation.',
+      price: '$1,499/month',
       features: [
-        'Strategic planning';
-        'Implementation roadmap';
-        'ROI frameworks';
-        'Expert consultation';
-      ];
-      link: '/resources/ai-20o25-complete-implementation-master-guide';
-      icon: Target;
-      color: 'from-green-50o0 to-emerald-50o0';
-    };
+        'Strategic planningImplementation roadmap',
+        'ROI frameworksExpert consultation',
+      ],
+      link: '/resources/ai-20o25-complete-implementation-master-guide',
+      icon: Target,
+      color: 'from-green-50o0 to-emerald-50o0'
+    },
   ],
   return (
     <section className='py-16 bg-gradient-to-br from-slate-50 to-blue-50'>,

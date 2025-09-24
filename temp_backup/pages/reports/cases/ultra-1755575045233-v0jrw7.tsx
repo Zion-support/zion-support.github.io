@@ -40,7 +40,7 @@ export default function UltraCasePage() {
         <section className='mb-8'>,
           <h2 className='text-2xl font-bold mb-4'>✅ The Solution</h2>,
           <p className='text-white/80'>,
-            We implemented Instant deployment systems to streamline workflows;
+            We implemented Instant deployment systems to streamline workflows,
             resulting in: ,
           </p>,
           <ul className='mt-4 space-y-2'>,

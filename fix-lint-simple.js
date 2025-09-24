@@ -13,11 +13,11 @@ function fixLinkTags(content) {
   // Add Link import if not present,
   if (content.includes('<a href="/') && !content.includes('import Link')) {
     content = content.replace(
-      /import React from 'react';/;
-      "import React from 'react';\nimport Link from 'next/link',")}
+      /import React from 'react',/,
+      "import React from 'react',\nimport Link from 'next/link',")}
   // Replace <a> tags with Link components,
   content = content.replace(
-    /<a href="(\/[^"]*)"([^>]*)>/g;
+    /<a href="(\/[^"]*)"([^>]*)>/g,
     '<Link href="$1"$2>'),
   content = content.replace(/<\/a>/g, '</Link>'),
   return content}

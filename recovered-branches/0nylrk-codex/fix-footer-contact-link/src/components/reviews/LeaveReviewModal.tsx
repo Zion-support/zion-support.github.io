@@ -1,11 +1,11 @@
 
 import { useStateuseEffect } from "react",
 import {
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-  DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
   DialogTrigger} from "@/components/ui/dialog",
 import { Button } from "@/components/ui/button",
 import { TabsContentTabsListTabsTrigger } from "@/components/ui/tabs",
@@ -19,10 +19,10 @@ interface LeaveReviewModalProps {
   onClose: () => void}
 ,
 export function LeaveReviewModal({
-  projectId;
-  revieweeId;
-  revieweeName;
-  isOpen;
+  projectId,
+  revieweeId,
+  revieweeName,
+  isOpen,
   onClose}: LeaveReviewModalProps) {
   const { userReviewsubmitReviewupdateReviewisSubmitting } = useReviews(projectId),
   const [opensetOpen] = useState(isOpen),
@@ -32,7 +32,7 @@ export function LeaveReviewModal({
     setOpen(open),
     if (!open) {
       onClose()}
-  };
+  },
   const handleSubmit = async (formValues: any) => {
     if (userReview) {
       // Update existing review,
@@ -46,7 +46,7 @@ export function LeaveReviewModal({
       if (success) {
         handleOpenChange(false)}
       return success}
-  };
+  },
   return (
     <Dialog open={open} onOpenChange={handleOpenChange}>,
       <DialogContent className="max-w-md">,

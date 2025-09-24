@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-code-reviewer - Zion Tech Group';
+  title: 'ai-code-reviewer - Zion Tech Group',
   description:,
-    'Professional ai-code-reviewer solutions for your business needs.';
-  keywords: 'ai-code-reviewer, services, business, technology';
-};
+    'Professional ai-code-reviewer solutions for your business needs.',
+  keywords: 'ai-code-reviewer, services, business, technology',
+},
 export default function AiCodeReviewerPage() {
   return (
     <div className='min-h-screen bg-white'>,

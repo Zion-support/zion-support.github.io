@@ -3,30 +3,30 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Filter, Star, Users, TrendingUp, Zap, Shield;
-  Brain, Rocket, Atom, Cloud, Lock, Globe, Target;
-  CheckCircle, ArrowRight, Phone, Mail, MapPin, Award;
-  Clock, Heart, Lightbulb, Sparkles, Cpu, Eye, BarChart3;
+  Search, Filter, Star, Users, TrendingUp, Zap, Shield,
+  Brain, Rocket, Atom, Cloud, Lock, Globe, Target,
+  CheckCircle, ArrowRight, Phone, Mail, MapPin, Award,
+  Clock, Heart, Lightbulb, Sparkles, Cpu, Eye, BarChart3,
   Settings, Database, Network, Server, Monitor, Smartphone} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { ultimateFuturisticMicroSaasServices20o25 } from '../data/20o25-ultimate-futuristic-micro-saas',
 import { ultimateFuturisticITServices20o25 } from '../data/20o25-ultimate-futuristic-it-services',
 import { ultimateFuturisticAIServices20o25 } from '../data/20o25-ultimate-futuristic-ai-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const allServices = [
-  ...ultimateFuturisticMicroSaasServices20o25;
-  ...ultimateFuturisticITServices20o25;
+  ...ultimateFuturisticMicroSaasServices20o25,
+  ...ultimateFuturisticITServices20o25,
   ...ultimateFuturisticAIServices20o25],
 const categories = [
-  { name: 'All Services', icon: Globe, count: allServices.length, color: 'from-cyan-50o0 to-blue-60o0' };
-  { name: 'AI & Consciousness', icon: Brain, count: ultimateFuturisticAIServices20o25.length, color: 'from-purple-50o0 to-pink-60o0' };
-  { name: 'Micro SAAS', icon: Rocket, count: ultimateFuturisticMicroSaasServices20o25.length, color: 'from-green-50o0 to-emerald-60o0' };
-  { name: 'IT & Infrastructure', icon: Shield, count: ultimateFuturisticITServices20o25.length, color: 'from-blue-50o0 to-cyan-60o0' };
-  { name: 'Quantum & Emerging Tech', icon: Atom, count: allServices.filter(s => s.name.toLowerCase().includes('quantum')).length, color: 'from-indigo-50o0 to-purple-60o0' };
+  { name: 'All Services', icon: Globe, count: allServices.length, color: 'from-cyan-50o0 to-blue-60o0' },
+  { name: 'AI & Consciousness', icon: Brain, count: ultimateFuturisticAIServices20o25.length, color: 'from-purple-50o0 to-pink-60o0' },
+  { name: 'Micro SAAS', icon: Rocket, count: ultimateFuturisticMicroSaasServices20o25.length, color: 'from-green-50o0 to-emerald-60o0' },
+  { name: 'IT & Infrastructure', icon: Shield, count: ultimateFuturisticITServices20o25.length, color: 'from-blue-50o0 to-cyan-60o0' },
+  { name: 'Quantum & Emerging Tech', icon: Atom, count: allServices.filter(s => s.name.toLowerCase().includes('quantum')).length, color: 'from-indigo-50o0 to-purple-60o0' },
   { name: 'Autonomous Systems', icon: Cpu, count: allServices.filter(s => s.name.toLowerCase().includes('autonomous')).length, color: 'from-orange-50o0 to-red-60o0' }
 ],
 export default function Ultimate20o25FuturisticServicesShowcase() {
@@ -43,7 +43,7 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
       case 'price':,
-        return parseFloat(a.price.replace('$', '').replace(',', '')) - parseFloat(b.price.replace('$', '').replace(',', '')),
+        return parseFloat(a.price.replace('$', '').replace(, '')) - parseFloat(b.price.replace('$', '').replace(, '')),
       case 'rating':,
         return b.rating - a.rating,
       case 'customers':,
@@ -52,22 +52,22 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
         return a.name.localeCompare(b.name)}
   }),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <Layout>,
       <Head>,
@@ -92,15 +92,15 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
               Futuristic Services Showcase,
             </h2>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-12 max-w-4xl mx-auto leading-relaxed">,
-              Experience the future of technology with our revolutionary AI consciousness, quantum computing;
+              Experience the future of technology with our revolutionary AI consciousness, quantum computing,
               and autonomous systems. The most advanced services ever created.,
             </p>,
             {/* Stats */}
             <div className="grid grid-cols-2 lg: grid-cols-4 gap-6 mb-12">,
               {[
-                { label: 'Total Services', value: allServices.length, icon: Rocket };
-                { label: 'AI Services', value: ultimateFuturisticAIServices20o25.length, icon: Brain };
-                { label: 'Micro SAAS', value: ultimateFuturisticMicroSaasServices20o25.length, icon: Target };
+                { label: 'Total Services', value: allServices.length, icon: Rocket },
+                { label: 'AI Services', value: ultimateFuturisticAIServices20o25.length, icon: Brain },
+                { label: 'Micro SAAS', value: ultimateFuturisticMicroSaasServices20o25.length, icon: Target },
                 { label: 'IT Services', value: ultimateFuturisticITServices20o25.length, icon: Shield }
               ].map((stat, index) => (
                 <motion.div,
@@ -341,8 +341,8 @@ export default function Ultimate20o25FuturisticServicesShowcase() {
             </p>,
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">,
               {[
-                { icon: Phone, label: 'Phone', value: contactInfo.mobile, href: `tel:${contactInfo.mobile}` };
-                { icon: Mail, label: 'Email', value: contactInfo.email, href: `mailto:${contactInfo.email}` };
+                { icon: Phone, label: 'Phone', value: contactInfo.mobile, href: `tel:${contactInfo.mobile}` },
+                { icon: Mail, label: 'Email', value: contactInfo.email, href: `mailto:${contactInfo.email}` },
                 { icon: MapPin, label: 'Address', value: contactInfo.address, href: '#' }
               ].map((contact, index) => (
                 <motion.div,

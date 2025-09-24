@@ -2,91 +2,84 @@ import { Link } from 'react-router-dom',
 import { Button } from '../ui/button',
 import {
 import { Badge } from '../ui/badge',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '../ui/card',
-  Brain;
-  Shield;
-  Cloud;
-  Database;
-  Zap;
-  Eye;
-  Leaf;
-  DollarSign;
-  ArrowRight;
-  Star;
-  Clock;
-  Globe;
+  Brain,
+  Shield,
+  Cloud,
+  Database,
+  Zap,
+  Eye,
+  Leaf,
+  DollarSign,
+  ArrowRight,
+  Star,
+  Clock,
+  Globe,
 } from 'lucide-react',
 // Mock data for enhanced services,
 const ENHANCED_SERVICES = [
   {
-    id: 'ai-1';
-    title: 'AI-Powered Business Intelligence';
+    id: 'ai-1',
+    title: 'AI-Powered Business Intelligence',
     description:,
-      'Advanced AI algorithms that transform your data into actionable business insights';
-    category: 'AI & Machine Learning';
-    pricingModel: 'subscription';
-    availability: 'immediate';
-    rating: 4.9;
-    price: 2999;
+      'Advanced AI algorithms that transform your data into actionable business insights',
+    category: 'AI & Machine Learning',
+    pricingModel: 'subscription',
+    availability: 'immediate',
+    rating: 4.9,
+    price: 2999,
     features: [
-      'Predictive analytics';
-      'Natural language processing';
-      'Real-time insights';
-      'Custom dashboards';
-    ];
+      'Predictive analyticsNatural language processing',
+      'Real-time insightsCustom dashboards',
+    ],
     benefits: [
-      'Increased efficiency';
-      'Better decision making';
-      'Cost reduction';
-    ];
-    tags: ['AI', 'Analytics', 'Business Intelligence'];
-    location: 'Global';
-  };
+      'Increased efficiencyBetter decision making',
+      'Cost reduction',
+    ],
+    tags: ['AIAnalytics', 'Business Intelligence'],
+    location: 'Global'
+  },
   {
-    id: 'security-1';
-    title: 'Enterprise Cybersecurity Suite';
+    id: 'security-1',
+    title: 'Enterprise Cybersecurity Suite',
     description:,
-      'Comprehensive security solution protecting your business from modern threats';
-    category: 'Cybersecurity';
-    pricingModel: 'subscription';
-    availability: 'immediate';
-    rating: 4.8;
-    price: 1999;
+      'Comprehensive security solution protecting your business from modern threats',
+    category: 'Cybersecurity',
+    pricingModel: 'subscription',
+    availability: 'immediate',
+    rating: 4.8,
+    price: 1999,
     features: [
-      'Threat detection';
-      '24/7 monitoring';
-      'Incident response';
-      'Compliance reporting';
-    ];
-    benefits: ['Enhanced security', 'Compliance assurance', 'Risk mitigation'];
-    tags: ['Security', 'Compliance', 'Enterprise'];
-    location: 'Global';
-  };
+      'Threat detection24/7 monitoring',
+      'Incident responseCompliance reporting',
+    ],
+    benefits: ['Enhanced securityCompliance assurance', 'Risk mitigation'],
+    tags: ['SecurityCompliance', 'Enterprise'],
+    location: 'Global'
+  },
   {
-    id: 'cloud-1';
-    title: 'Cloud Infrastructure Optimization';
+    id: 'cloud-1',
+    title: 'Cloud Infrastructure Optimization',
     description:,
-      'Optimize your cloud costs and performance with intelligent automation';
-    category: 'Cloud & DevOps';
-    pricingModel: 'usage-based';
-    availability: 'within-week';
-    rating: 4.7;
-    price: 1499;
+      'Optimize your cloud costs and performance with intelligent automation',
+    category: 'Cloud & DevOps',
+    pricingModel: 'usage-based',
+    availability: 'within-week',
+    rating: 4.7,
+    price: 1499,
     features: [
-      'Cost optimization';
-      'Performance monitoring';
-      'Auto-scaling';
-      'Security compliance';
-    ];
-    benefits: ['Cost savings', 'Improved performance', 'Scalability'];
-    tags: ['Cloud', 'DevOps', 'Optimization'];
-    location: 'Global';
-  };
+      'Cost optimizationPerformance monitoring',
+      'Auto-scalingSecurity compliance',
+    ],
+    benefits: ['Cost savingsImproved performance', 'Scalability'],
+    tags: ['CloudDevOps', 'Optimization'],
+    location: 'Global'
+  },
 ],
 const EnhancedServicesOverview = () => {
   // Get featured services (first 6),
@@ -115,7 +108,7 @@ const EnhancedServicesOverview = () => {
         return <DollarSign className='w-6 h-6' />,
       default: ,
         return <Zap className='w-6 h-6' />}
-  };
+  },
   const getAvailabilityColor = availability => {
     switch (availability) {
       case 'immediate':,
@@ -126,7 +119,7 @@ const EnhancedServicesOverview = () => {
         return 'text-orange-40o0',
       default: ,
         return 'text-gray-40o0'}
-  };
+  },
   return (
     <section className='py-20 bg-gradient-to-br from-zion-blue-dark via-zion-blue to-zion-purple-dark'>,
       <div className='container mx-auto px-4'>,
@@ -269,10 +262,10 @@ const EnhancedServicesOverview = () => {
             {ENHANCED_SERVICES.reduce((acc, service) => {
               if (!acc.find(cat => cat.category === service.category)) {
                 acc.push({
-                  category: service.category;
+                  category: service.category,
                   count: ENHANCED_SERVICES.filter(
-                    s => s.category === service.category).length;
-                  icon: getCategoryIcon(service.category);
+                    s => s.category === service.category).length,
+                  icon: getCategoryIcon(service.category)
                 })}
               return acc}, []).map((cat, index) => (
               <div
@@ -333,5 +326,5 @@ const EnhancedServicesOverview = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedServicesOverview;
+    </section>)},
+export default EnhancedServicesOverview,

@@ -3,18 +3,15 @@ import ErrorBoundary from '../components/ErrorBoundary',
 import SEO from '../components/SEO',
 export const metadata = {
   title:,
-    'AI Implementation White Paper 20o25: Enterprise Strategy & Best Practices';
+    'AI Implementation White Paper 20o25: Enterprise Strategy & Best Practices',
   description:,
-    'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.';
+    'Comprehensive white paper on AI implementation strategies for enterprises. Learn best practices, frameworks, and proven methodologies for successful AI transformation.',
   keywords: [
-    'AI implementation';
-    'enterprise AI strategy';
-    'AI white paper';
-    'AI best practices';
-    'AI transformation framework';
-    'AI implementation guide';
-  ];
-};
+    'AI implementationenterprise AI strategy',
+    'AI white paperAI best practices',
+    'AI transformation frameworkAI implementation guide',
+  ]
+},
 export default function AIImplementationWhitePaper20o25() {
   return (
     <ErrorBoundary>,
@@ -231,7 +228,7 @@ export default function AIImplementationWhitePaper20o25() {
                   </h4>,
                   <p className='text-gray-30o0'>,
                     Implement robust data quality frameworks and governance,
-                    structures to ensure AI systems have access to clean;
+                    structures to ensure AI systems have access to clean,
                     reliable data.,
                   </p>,
                 </div>,
@@ -240,7 +237,7 @@ export default function AIImplementationWhitePaper20o25() {
                     Model Management,
                   </h4>,
                   <p className='text-gray-30o0'>,
-                    Establish MLOps practices for model versioning, monitoring;
+                    Establish MLOps practices for model versioning, monitoring,
                     and continuous improvement to maintain optimal window.window.performance.,
                   </p>,
                 </div>,

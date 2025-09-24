@@ -2,51 +2,51 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  X;
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  X,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o28 from '../components/layout/UltraFuturisticNavigation20o28',
 import UltraFuturisticFooter20o28 from '../components/layout/UltraFuturisticFooter20o28',
@@ -56,114 +56,105 @@ import { biotechEmerging20o29Services } from '../data/20o29-biotech-emerging-ser
 import { enterpriseIT20o29Services } from '../data/20o29-enterprise-it-services',
 export default function Futuristic20o29Pricing() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const allServices = [
-    ...futuristic20o29AIServices;
-    ...quantumSpace20o29Services;
-    ...biotechEmerging20o29Services;
-    ...enterpriseIT20o29Services;
+    ...futuristic20o29AIServices,
+    ...quantumSpace20o29Services,
+    ...biotechEmerging20o29Services,
+    ...enterpriseIT20o29Services,
   ],
   const pricingTiers = [
     {
-      name: 'Starter';
-      price: '$2,999';
-      period: '/month';
-      description: 'Perfect for small organizations and research institutions';
+      name: 'Starter',
+      price: '$2,999',
+      period: '/month',
+      description: 'Perfect for small organizations and research institutions',
       features: [
-        'Basic service access';
-        'Standard support';
-        'Core features';
-        'Documentation access';
-        'Email support';
-      ];
-      color: 'from-blue-60o0 to-cyan-60o0';
-      popular: false;
-    };
+        'Basic service accessStandard support',
+        'Core featuresDocumentation access',
+        'Email support',
+      ],
+      color: 'from-blue-60o0 to-cyan-60o0',
+      popular: false
+    },
     {
-      name: 'Professional';
-      price: '$8,999';
-      period: '/month';
-      description: 'Ideal for growing companies and research teams';
+      name: 'Professional',
+      price: '$8,999',
+      period: '/month',
+      description: 'Ideal for growing companies and research teams',
       features: [
-        'Advanced service access';
-        'Priority support';
-        'All features';
-        'Custom integrations';
-        'Phone & email support';
-        'Training sessions';
-        'API access';
-      ];
-      color: 'from-purple-60o0 to-pink-60o0';
-      popular: true;
-    };
+        'Advanced service accessPriority support',
+        'All featuresCustom integrations',
+        'Phone & email supportTraining sessions',
+        'API access',
+      ],
+      color: 'from-purple-60o0 to-pink-60o0',
+      popular: true
+    },
     {
-      name: 'Enterprise';
-      price: '$24,999';
-      period: '/month';
-      description: 'For large organizations requiring maximum capabilities';
+      name: 'Enterprise',
+      price: '$24,999',
+      period: '/month',
+      description: 'For large organizations requiring maximum capabilities',
       features: [
-        'Full service access';
-        '24/7 dedicated support';
-        'Custom development';
-        'White-label options';
-        'Dedicated account manager';
-        'On-site training';
-        'Custom compliance';
-        'SLA guarantees';
-      ];
-      color: 'from-red-60o0 to-orange-60o0';
-      popular: false;
-    };
+        'Full service access24/7 dedicated support',
+        'Custom developmentWhite-label options',
+        'Dedicated account managerOn-site training',
+        'Custom complianceSLA guarantees',
+      ],
+      color: 'from-red-60o0 to-orange-60o0',
+      popular: false
+    },
   ],
   const serviceCategories = [
     {
-      title: '🤖 AI & Consciousness Services';
-      icon: Brain;
-      color: 'from-purple-60o0 to-pink-60o0';
-      services: futuristic20o29AIServices;
-    };
+      title: '🤖 AI & Consciousness Services',
+      icon: Brain,
+      color: 'from-purple-60o0 to-pink-60o0',
+      services: futuristic20o29AIServices
+    },
     {
-      title: '🚀 Quantum Space Technology';
-      icon: Rocket;
-      color: 'from-blue-60o0 to-cyan-60o0';
-      services: quantumSpace20o29Services;
-    };
+      title: '🚀 Quantum Space Technology',
+      icon: Rocket,
+      color: 'from-blue-60o0 to-cyan-60o0',
+      services: quantumSpace20o29Services
+    },
     {
-      title: '🧬 Biotechnology & Emerging Tech';
-      icon: Microscope;
-      color: 'from-green-60o0 to-emerald-60o0';
-      services: biotechEmerging20o29Services;
-    };
+      title: '🧬 Biotechnology & Emerging Tech',
+      icon: Microscope,
+      color: 'from-green-60o0 to-emerald-60o0',
+      services: biotechEmerging20o29Services
+    },
     {
-      title: '🏢 Enterprise IT & Security';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
-      services: enterpriseIT20o29Services;
-    };
+      title: '🏢 Enterprise IT & Security',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
+      services: enterpriseIT20o29Services
+    },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <>,
       <Head>,

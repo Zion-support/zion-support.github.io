@@ -11,7 +11,7 @@ const AI20o26AutonomousEnterpriseBanner = () => {
             The Future of Business Operations is Autonomous,
           </h2>,
           <p className="text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed">,
-            Discover how autonomous enterprise systems are revolutionizing business operations in 20o26;
+            Discover how autonomous enterprise systems are revolutionizing business operations in 20o26,
             with self-managing processes, intelligent decision-making, and unprecedented efficiency gains.,
           </p>,
         </div>,
@@ -176,5 +176,5 @@ const AI20o26AutonomousEnterpriseBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26AutonomousEnterpriseBanner;
+    </section>)},
+export default AI20o26AutonomousEnterpriseBanner,

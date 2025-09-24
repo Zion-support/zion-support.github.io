@@ -7,68 +7,68 @@ const SuccessStoriesShowcase20o26 = () => {
   const [isVisible, setIsVisible] = useState(false),
   const successStories = [
     {
-      id: 1;
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      logo: '🏢';
-      challenge: 'Needed to automate complex data processing workflows that were taking 40+ hours per week';
-      solution: 'Implemented AI-powered automation system with neural network optimization';
+      id: 1,
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      logo: '🏢',
+      challenge: 'Needed to automate complex data processing workflows that were taking 40+ hours per week',
+      solution: 'Implemented AI-powered automation system with neural network optimization',
       results: {
-        timeSaved: '95%';
-        costReduction: '80%';
-        productivityIncrease: '30o0%';
-        roi: '50o0%'};
-      testimonial: 'The AI automation system transformed our operations completely. What used to take 40 hours now takes 2 hours, and the accuracy is incredible.';
-      author: 'Sarah Johnson';
-      position: 'CTO, TechCorp Global';
-      image: '👩‍💼'};
+        timeSaved: '95%',
+        costReduction: '80%',
+        productivityIncrease: '30o0%',
+        roi: '50o0%'},
+      testimonial: 'The AI automation system transformed our operations completely. What used to take 40 hours now takes 2 hours, and the accuracy is incredible.',
+      author: 'Sarah Johnson',
+      position: 'CTO, TechCorp Global',
+      image: '👩‍💼'},
     {
-      id: 2;
-      company: 'Quantum Dynamics';
-      industry: 'Quantum Computing';
-      logo: '⚛️';
-      challenge: 'Required quantum-level security for sensitive financial data processing';
-      solution: 'Deployed quantum encryption protocols with neural interface integration';
+      id: 2,
+      company: 'Quantum Dynamics',
+      industry: 'Quantum Computing',
+      logo: '⚛️',
+      challenge: 'Required quantum-level security for sensitive financial data processing',
+      solution: 'Deployed quantum encryption protocols with neural interface integration',
       results: {
-        timeSaved: '90%';
-        costReduction: '75%';
-        productivityIncrease: '40o0%';
-        roi: '60o0%'};
-      testimonial: 'Our quantum security implementation exceeded all expectations. The neural interface makes complex operations feel effortless.';
-      author: 'Dr. Michael Chen';
-      position: 'Chief Quantum Officer, Quantum Dynamics';
-      image: '👨‍🔬'};
+        timeSaved: '90%',
+        costReduction: '75%',
+        productivityIncrease: '40o0%',
+        roi: '60o0%'},
+      testimonial: 'Our quantum security implementation exceeded all expectations. The neural interface makes complex operations feel effortless.',
+      author: 'Dr. Michael Chen',
+      position: 'Chief Quantum Officer, Quantum Dynamics',
+      image: '👨‍🔬'},
     {
-      id: 3;
-      company: 'NeuralTech Solutions';
-      industry: 'AI Research';
-      logo: '🧠';
-      challenge: 'Needed to scale AI model training from days to hours for real-time applications';
-      solution: 'Implemented quantum-neural fusion architecture with advanced optimization';
+      id: 3,
+      company: 'NeuralTech Solutions',
+      industry: 'AI Research',
+      logo: '🧠',
+      challenge: 'Needed to scale AI model training from days to hours for real-time applications',
+      solution: 'Implemented quantum-neural fusion architecture with advanced optimization',
       results: {
-        timeSaved: '98%';
-        costReduction: '85%';
-        productivityIncrease: '50o0%';
-        roi: '80o0%'};
-      testimonial: 'The quantum-neural fusion technology is revolutionary. We can now train complex models in hours instead of days.';
-      author: 'Dr. Elena Rodriguez';
-      position: 'Head of AI Research, NeuralTech Solutions';
-      image: '👩‍🔬'};
+        timeSaved: '98%',
+        costReduction: '85%',
+        productivityIncrease: '50o0%',
+        roi: '80o0%'},
+      testimonial: 'The quantum-neural fusion technology is revolutionary. We can now train complex models in hours instead of days.',
+      author: 'Dr. Elena Rodriguez',
+      position: 'Head of AI Research, NeuralTech Solutions',
+      image: '👩‍🔬'},
     {
-      id: 4;
-      company: 'Autonomous Enterprises';
-      industry: 'Manufacturing';
-      logo: '🏭';
-      challenge: 'Required fully autonomous production lines with predictive maintenance';
-      solution: 'Deployed autonomous business systems with AI-powered predictive analytics';
+      id: 4,
+      company: 'Autonomous Enterprises',
+      industry: 'Manufacturing',
+      logo: '🏭',
+      challenge: 'Required fully autonomous production lines with predictive maintenance',
+      solution: 'Deployed autonomous business systems with AI-powered predictive analytics',
       results: {
-        timeSaved: '92%';
-        costReduction: '70%';
-        productivityIncrease: '350%';
-        roi: '450%'};
-      testimonial: 'Our production lines now run autonomously with 99.9% uptime. The predictive maintenance prevents issues before they occur.';
-      author: 'James Wilson';
-      position: 'Operations Director, Autonomous Enterprises';
+        timeSaved: '92%',
+        costReduction: '70%',
+        productivityIncrease: '350%',
+        roi: '450%'},
+      testimonial: 'Our production lines now run autonomously with 99.9% uptime. The predictive maintenance prevents issues before they occur.',
+      author: 'James Wilson',
+      position: 'Operations Director, Autonomous Enterprises',
       image: '👨‍💼'}
   ],
   useEffect(() => {
@@ -91,7 +91,7 @@ const SuccessStoriesShowcase20o26 = () => {
             Real Results, Real Success,
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed">,
-            Discover how leading companies are transforming their operations with our AI solutions;
+            Discover how leading companies are transforming their operations with our AI solutions,
             achieving remarkable ROI and unprecedented efficiency gains.,
           </p>,
         </div>,
@@ -206,5 +206,5 @@ const SuccessStoriesShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default SuccessStoriesShowcase20o26;
+    </div>)},
+export default SuccessStoriesShowcase20o26,

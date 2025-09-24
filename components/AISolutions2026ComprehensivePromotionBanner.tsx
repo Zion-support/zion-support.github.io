@@ -82,5 +82,5 @@ const AISolutions20o26ComprehensivePromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AISolutions20o26ComprehensivePromotionBanner;
+    </div>)},
+export default AISolutions20o26ComprehensivePromotionBanner,

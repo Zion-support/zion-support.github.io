@@ -1,48 +1,42 @@
 import { Metadata } from 'next',
 import SEO from '../../components/SEO',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  TrendingUp;
-  Zap;
-  CheckCircle;
-  Building;
-  ArrowRight;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  TrendingUp,
+  Zap,
+  CheckCircle,
+  Building,
+  ArrowRight,
 } from 'lucide-react',
 import Link from 'next/link',
 export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI';
+    'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI',
   description:,
-    'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.';
+    'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.',
   keywords: [
-    'Case Study';
-    'Quantum Computing';
-    'Fortune 50o0';
-    'ROI';
-    'Manufacturing';
-    'Transformation';
-  ];
+    'Case StudyQuantum Computing',
+    'Fortune 50o0ROI',
+    'ManufacturingTransformation',
+  ],
   openGraph: {
     title:,
-      'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI';
+      'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI',
     description:,
-      'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Case Study';
-      'Quantum Computing';
-      'Fortune 50o0';
-      'ROI';
-      'Manufacturing';
-      'Transformation';
-    ];
-  };
-};
+      'Case StudyQuantum Computing',
+      'Fortune 50o0ROI',
+      'ManufacturingTransformation',
+    ]
+  },
+},
 export default function Fortune50o0QuantumTransformationPage() {
   return (
     <div>,
@@ -88,12 +82,9 @@ export default function Fortune50o0QuantumTransformationPage() {
           {/* Tags */}
           <div className='flex flex-wrap gap-2 mb-8'>,
             {[
-              'Case Study';
-              'Quantum Computing';
-              'Fortune 50o0';
-              'ROI';
-              'Manufacturing';
-              'Transformation';
+              'Case StudyQuantum Computing',
+              'Fortune 50o0ROI',
+              'ManufacturingTransformation',
             ].map(tag => (
               <span
                 key={tag}
@@ -164,7 +155,7 @@ export default function Fortune50o0QuantumTransformationPage() {
             </p>,
             <ul>,
               <li>,
-                <strong>Supply Chain Optimization</strong>: 10,0o00+ suppliers;
+                <strong>Supply Chain Optimization</strong>: 10,0o00+ suppliers,
                 50,0o00+ products, 20o0+ facilities,
               </li>,
               <li>,
@@ -235,8 +226,8 @@ export default function Fortune50o0QuantumTransformationPage() {
 def quantum_supply_chain_optimizer(suppliers, products, facilities, constraints):,
     # Quantum annealing for global optimization,
     quantum_solution = quantum_annealing(
-        objective_function=minimize_total_cost;
-        constraints=supply_demand_constraints;
+        objective_function=minimize_total_cost,
+        constraints=supply_demand_constraints,
         variables=supplier_product_facility_assignments),
     # Classical post-processing for feasibility,
     feasible_solution = classical_feasibility_check(quantum_solution),

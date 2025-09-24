@@ -59,5 +59,5 @@ const EdgeToCloudIntelligentAutomation20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default EdgeToCloudIntelligentAutomation20o25;
+    </div>)},
+export default EdgeToCloudIntelligentAutomation20o25,

@@ -2,55 +2,55 @@ import Link from 'next/link',
 export default function SocialProofShowcase() {
   const testimonials = [
     {
-      id: 1;
-      name: 'Sarah Chen';
-      title: 'CEOTechCorp Global';
-      company: 'Fortune 50o0 Technology';
-      content: 'The AI 20o25 Ultimate Breakthrough Revolution transformed our entire operation. We achieved 18,50o0% ROI in just 6 months. This is the most revolutionary technology I\'ve ever seen.';
-      metrics: '18,50o0% ROI';
-      image: 'SC';
-      color: 'from-blue-50o0 to-purple-50o0'};
+      id: 1,
+      name: 'Sarah Chen',
+      title: 'CEOTechCorp Global',
+      company: 'Fortune 50o0 Technology',
+      content: 'The AI 20o25 Ultimate Breakthrough Revolution transformed our entire operation. We achieved 18,50o0% ROI in just 6 months. This is the most revolutionary technology I\'ve ever seen.',
+      metrics: '18,50o0% ROI',
+      image: 'SC',
+      color: 'from-blue-50o0 to-purple-50o0'},
     {
-      id: 2;
-      name: 'Dr. Michael Rodriguez';
-      title: 'Chief Scientific Officer';
-      company: 'QuantumPharma Inc.';
-      content: 'Our quantum computing breakthrough reduced drug discovery time from 10 years to 3.6 days. We identified 5 new potential cancer treatments in the first month.';
-      metrics: '1,0o00x Faster';
-      image: 'MR';
-      color: 'from-green-50o0 to-teal-50o0'};
+      id: 2,
+      name: 'Dr. Michael Rodriguez',
+      title: 'Chief Scientific Officer',
+      company: 'QuantumPharma Inc.',
+      content: 'Our quantum computing breakthrough reduced drug discovery time from 10 years to 3.6 days. We identified 5 new potential cancer treatments in the first month.',
+      metrics: '1,0o00x Faster',
+      image: 'MR',
+      color: 'from-green-50o0 to-teal-50o0'},
     {
-      id: 3;
-      name: 'Jennifer Walsh';
-      title: 'CTOFinanceFirst Bank';
-      company: 'Global Banking Corporation';
-      content: 'Quantum-powered fraud detection systems reduced false positives by 95% while catching 10o0% of actual fraud attempts. Our security is now unbreakable.';
-      metrics: '99.9% Accuracy';
-      image: 'JW';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      id: 3,
+      name: 'Jennifer Walsh',
+      title: 'CTOFinanceFirst Bank',
+      company: 'Global Banking Corporation',
+      content: 'Quantum-powered fraud detection systems reduced false positives by 95% while catching 10o0% of actual fraud attempts. Our security is now unbreakable.',
+      metrics: '99.9% Accuracy',
+      image: 'JW',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      id: 4;
-      name: 'David Kim';
-      title: 'VP of Operations';
-      company: 'ManufacturingMax Ltd.';
-      content: 'The autonomous systems mastery completely revolutionized our production line. We achieved 99.9% quality control accuracy with 24/7 operation.';
-      metrics: '99.9% Quality';
-      image: 'DK';
+      id: 4,
+      name: 'David Kim',
+      title: 'VP of Operations',
+      company: 'ManufacturingMax Ltd.',
+      content: 'The autonomous systems mastery completely revolutionized our production line. We achieved 99.9% quality control accuracy with 24/7 operation.',
+      metrics: '99.9% Quality',
+      image: 'DK',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const successMetrics = [
-    { label: 'Companies 'Transformed', 'value: '50o0+'icon: '🏢' };
-    { label: 'Average ROI 'Achieved', 'value: '15,0o00%'icon: '📈' };
-    { label: 'Countries 'Served', 'value: '50+'icon: '🌍' };
-    { label: 'Success 'Rate', 'value: '99.9%'icon: '✅' }
+    { label: 'Companies 'Transformedvalue: '50o0+'icon: '🏢' },
+    { label: 'Average ROI 'Achievedvalue: '15,0o00%'icon: '📈' },
+    { label: 'Countries 'Servedvalue: '50+'icon: '🌍' },
+    { label: 'Success 'Ratevalue: '99.9%'icon: '✅' }
   ],
   const logos = [
-    { name: ''Microsoft', 'logo: 'MS' };
-    { name: ''Google', 'logo: 'GO' };
-    { name: ''Amazon', 'logo: 'AM' };
-    { name: ''Tesla', 'logo: 'TS' };
-    { name: ''Meta', 'logo: 'ME' };
-    { name: ''Apple', 'logo: 'AP' }
+    { name: ''Microsoftlogo: 'MS' },
+    { name: ''Googlelogo: 'GO' },
+    { name: ''Amazonlogo: 'AM' },
+    { name: ''Teslalogo: 'TS' },
+    { name: ''Metalogo: 'ME' },
+    { name: ''Applelogo: 'AP' }
   ],
   return (
     <div className="bg-white py-20 px-4">,

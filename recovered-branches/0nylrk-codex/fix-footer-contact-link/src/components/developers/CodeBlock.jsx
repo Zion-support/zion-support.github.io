@@ -1,9 +1,9 @@
 export default function CodeBlock({
-  children;
-  code;
-  language = 'text';
-  className = '';
-  showLineNumbers = false;
+  children,
+  code,
+  language = 'text',
+  className = '',
+  showLineNumbers = false,
 }) {
   const content = code || children || '',
   return (

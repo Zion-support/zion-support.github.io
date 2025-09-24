@@ -5,15 +5,15 @@ import type { GetServerSideProps } from 'next',
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookie = req.headers.cookie || '',
   const role = cookie,
-    .split(','),
+    .split(),
     .map(s => s.trim()),
     .find(s => s.startsWith('zion_role=')),
     ?.split('=')[1],
   if (!role || (role !== 'franchisee' && role !== 'superadmin')) {
-    return { redirect: { destination: '/unauthorized', permanent: false } };
+    return { redirect: { destination: '/unauthorized', permanent: false } },
   }
-  return { props: {} };
-};
+  return { props: {} },
+},
 export default function FranchisePortalPage() {
   const [submitted, setSubmitted] = useState(false),
   return (

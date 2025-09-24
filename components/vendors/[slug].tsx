@@ -15,8 +15,8 @@ export default function VendorProfilePage({ vendor }: Props) {
     setMessage(null),
     try {
       const res = await fetch('/api/vendors/lead'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ vendorId: vendor.idtitle })}),
       if (!res.ok) throw new Error('Failed to submit'),
       setMessage('Thanks! We will contact you soon.'),
@@ -89,8 +89,8 @@ export default function VendorProfilePage({ vendor }: Props) {
     </div>)}
 ,
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
-  const slug = String(ctx.params?.slug || ', '),
+  const slug = String(ctx.params?.slug || ),
   const { getVendorBySlug } = await import('../../utils/vendor-store'),
   const vendor = slug ? getVendorBySlug(slug) || null : null,
-  return { props: { vendor } };
-};
+  return { props: { vendor } },
+},

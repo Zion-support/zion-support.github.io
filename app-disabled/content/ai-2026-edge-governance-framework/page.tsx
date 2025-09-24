@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Edge AI Governance Framework | Zion Tech Group';
+  title: 'AI 20o26: Edge AI Governance Framework | Zion Tech Group',
   description:,
-    'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.';
+    'A pragmatic framework to govern edge AI systems with policy-as-code, telemetry, and real-time guardrails across distributed environments.',
   keywords: [
-    'edge AI governance';
-    'policy-as-code';
-    'AI guardrails';
-    'telemetry';
-    'AI governance 20o26';
-  ];
-};
+    'edge AI governancepolicy-as-code',
+    'AI guardrailstelemetry',
+    'AI governance 20o26',
+  ]
+},
 export default function EdgeAIGovernanceFramework20o26() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -39,7 +37,7 @@ export default function EdgeAIGovernanceFramework20o26() {
             Edge AI deployments introduce unique risks: intermittent,
             connectivity, heterogeneous hardware, and physical tampering. This,
             framework provides a practical approach to govern models and agents,
-            running at the edge using verifiable supply chains, policy-as-code;
+            running at the edge using verifiable supply chains, policy-as-code,
             and real-time telemetry.,
           </p>,
           <h3>Key Pillars</h3>,

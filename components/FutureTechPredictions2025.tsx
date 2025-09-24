@@ -10,256 +10,256 @@ import {
   Zap,
   Shield,
   Eye,
-  Heart;
-  TrendingUp;
-  Calendar;
-  Clock;
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Award;
-  Lightbulb;
-  BarChart3;
-  Settings;
-  Smartphone;
-  Laptop;
-  Server;
-  Database;
-  Cloud;
-  Lock;
-  Users;
-  MessageSquare;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Code;
-  GitBranch;
-  Layers;
-  Workflow;
-  Network;
-  Activity;
-  PieChart;
-  LineChart;
-  BarChart;
-  TrendingDown;
-  RefreshCw;
-  Download;
-  Upload;
-  Share2;
-  ThumbsUp;
-  MessageCircle;
-  Bookmark;
-  Flag;
-  AlertTriangle;
-  Info;
-  HelpCircle;
-  Search;
-  Filter;
-  SortAsc;
-  SortDesc;
-  Grid;
-  List;
-  MapPin;
-  Phone;
-  Mail;
-  ExternalLink;
-  Maximize;
-  Minimize;
-  X;
-  Plus;
-  Minus;
-  Edit;
-  Trash2;
-  Copy;
-  Save;
-  Folder;
-  File;
-  FolderOpen;
-  Archive;
-  Inbox;
-  Send;
-  Receive;
-  Sync;
-  WifiOff;
-  Battery;
-  Signal;
-  Volume2;
-  VolumeX;
-  Camera;
-  Mic;
-  MicOff;
-  Headphones;
-  Speaker;
-  Monitor;
-  Tablet;
-  Watch;
-  Gamepad2;
-  Controller;
-  Joystick;
-  Mouse;
-  Keyboard;
-  Printer;
-  Scanner;
-  HardDrive;
-  Disc;
-  Usb;
-  Bluetooth;
-  Wifi2;
-  Router;
-  Modem;
-  Switch;
-  Hub;
-  Cable;
-  Plug;
-  Power;
-  BatteryCharging;
-  BatteryLow;
-  BatteryFull;
-  BatteryEmpty;
-  ZapOff;
-  Zap2;
-  Flashlight;
-  FlashlightOff;
-  Sun;
-  Moon;
-  Sunrise;
-  Sunset;
-  CloudRain;
-  CloudSnow;
-  CloudLightning;
-  CloudDrizzle;
-  CloudHail;
-  CloudFog;
-  Wind;
-  Thermometer;
-  Droplets;
-  Umbrella;
-  Snowflake;
-  Flame;
-  Snow;
-  Tornado;
-  Hurricane;
-  Earthquake;
-  Volcano;
-  Mountain;
-  Trees;
-  Leaf;
-  Flower;
-  Seedling;
-  Sprout;
-  Cherry;
-  Apple;
-  Banana;
-  Carrot;
-  Corn;
-  Grape;
-  Lemon;
-  Orange;
-  Peach;
-  Pear;
-  Pineapple;
-  Strawberry;
-  Watermelon;
-  Avocado;
-  Broccoli;
-  Cabbage;
-  Cucumber;
-  Eggplant;
-  Garlic;
-  Ginger;
-  Kiwi;
-  Mango;
-  Mushroom;
-  Onion;
-  Pepper;
-  Potato;
-  Tomato;
-  Wheat;
-  Rice;
-  Bread;
-  Croissant;
-  Bagel;
-  Pretzel;
-  Cookie;
-  Cake;
-  Cupcake;
-  Donut;
-  Lollipop;
-  Candy;
-  Chocolate;
-  IceCream;
-  Pizza;
-  Hamburger;
-  HotDog;
-  Sandwich;
-  Taco;
-  Burrito;
-  Salad;
-  Soup;
-  Steak;
-  Chicken;
-  Fish;
-  Shrimp;
-  Lobster;
-  Crab;
-  Octopus;
-  Squid;
-  Snail;
-  Bee;
-  Butterfly;
-  Bug;
-  Spider;
-  Ant;
-  Ladybug;
-  Dragonfly;
-  Firefly;
-  Mosquito;
-  Fly;
-  Beetle;
-  Grasshopper;
-  Cricket;
-  Mantis;
-  Wasp;
-  Hornet;
-  Bumblebee;
-  Honeybee;
-  Wasp2;
-  Hornet2;
-  Bumblebee2;
-  Honeybee2;
-  Wasp3;
-  Hornet3;
-  Bumblebee3;
-  Honeybee3;
-  Wasp4;
-  Hornet4;
-  Bumblebee4;
-  Honeybee4;
-  Wasp5;
-  Hornet5;
-  Bumblebee5;
-  Honeybee5;
-  Wasp6;
-  Hornet6;
-  Bumblebee6;
-  Honeybee6;
-  Wasp7;
-  Hornet7;
-  Bumblebee7;
-  Honeybee7;
-  Wasp8;
-  Hornet8;
-  Bumblebee8;
-  Honeybee8;
-  Wasp9;
-  Hornet9;
-  Bumblebee9;
-  Honeybee9;
-  Wasp10;
-  Hornet10;
-  Bumblebee10;
+  Heart,
+  TrendingUp,
+  Calendar,
+  Clock,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Lightbulb,
+  BarChart3,
+  Settings,
+  Smartphone,
+  Laptop,
+  Server,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  MessageSquare,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Code,
+  GitBranch,
+  Layers,
+  Workflow,
+  Network,
+  Activity,
+  PieChart,
+  LineChart,
+  BarChart,
+  TrendingDown,
+  RefreshCw,
+  Download,
+  Upload,
+  Share2,
+  ThumbsUp,
+  MessageCircle,
+  Bookmark,
+  Flag,
+  AlertTriangle,
+  Info,
+  HelpCircle,
+  Search,
+  Filter,
+  SortAsc,
+  SortDesc,
+  Grid,
+  List,
+  MapPin,
+  Phone,
+  Mail,
+  ExternalLink,
+  Maximize,
+  Minimize,
+  X,
+  Plus,
+  Minus,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  Folder,
+  File,
+  FolderOpen,
+  Archive,
+  Inbox,
+  Send,
+  Receive,
+  Sync,
+  WifiOff,
+  Battery,
+  Signal,
+  Volume2,
+  VolumeX,
+  Camera,
+  Mic,
+  MicOff,
+  Headphones,
+  Speaker,
+  Monitor,
+  Tablet,
+  Watch,
+  Gamepad2,
+  Controller,
+  Joystick,
+  Mouse,
+  Keyboard,
+  Printer,
+  Scanner,
+  HardDrive,
+  Disc,
+  Usb,
+  Bluetooth,
+  Wifi2,
+  Router,
+  Modem,
+  Switch,
+  Hub,
+  Cable,
+  Plug,
+  Power,
+  BatteryCharging,
+  BatteryLow,
+  BatteryFull,
+  BatteryEmpty,
+  ZapOff,
+  Zap2,
+  Flashlight,
+  FlashlightOff,
+  Sun,
+  Moon,
+  Sunrise,
+  Sunset,
+  CloudRain,
+  CloudSnow,
+  CloudLightning,
+  CloudDrizzle,
+  CloudHail,
+  CloudFog,
+  Wind,
+  Thermometer,
+  Droplets,
+  Umbrella,
+  Snowflake,
+  Flame,
+  Snow,
+  Tornado,
+  Hurricane,
+  Earthquake,
+  Volcano,
+  Mountain,
+  Trees,
+  Leaf,
+  Flower,
+  Seedling,
+  Sprout,
+  Cherry,
+  Apple,
+  Banana,
+  Carrot,
+  Corn,
+  Grape,
+  Lemon,
+  Orange,
+  Peach,
+  Pear,
+  Pineapple,
+  Strawberry,
+  Watermelon,
+  Avocado,
+  Broccoli,
+  Cabbage,
+  Cucumber,
+  Eggplant,
+  Garlic,
+  Ginger,
+  Kiwi,
+  Mango,
+  Mushroom,
+  Onion,
+  Pepper,
+  Potato,
+  Tomato,
+  Wheat,
+  Rice,
+  Bread,
+  Croissant,
+  Bagel,
+  Pretzel,
+  Cookie,
+  Cake,
+  Cupcake,
+  Donut,
+  Lollipop,
+  Candy,
+  Chocolate,
+  IceCream,
+  Pizza,
+  Hamburger,
+  HotDog,
+  Sandwich,
+  Taco,
+  Burrito,
+  Salad,
+  Soup,
+  Steak,
+  Chicken,
+  Fish,
+  Shrimp,
+  Lobster,
+  Crab,
+  Octopus,
+  Squid,
+  Snail,
+  Bee,
+  Butterfly,
+  Bug,
+  Spider,
+  Ant,
+  Ladybug,
+  Dragonfly,
+  Firefly,
+  Mosquito,
+  Fly,
+  Beetle,
+  Grasshopper,
+  Cricket,
+  Mantis,
+  Wasp,
+  Hornet,
+  Bumblebee,
+  Honeybee,
+  Wasp2,
+  Hornet2,
+  Bumblebee2,
+  Honeybee2,
+  Wasp3,
+  Hornet3,
+  Bumblebee3,
+  Honeybee3,
+  Wasp4,
+  Hornet4,
+  Bumblebee4,
+  Honeybee4,
+  Wasp5,
+  Hornet5,
+  Bumblebee5,
+  Honeybee5,
+  Wasp6,
+  Hornet6,
+  Bumblebee6,
+  Honeybee6,
+  Wasp7,
+  Hornet7,
+  Bumblebee7,
+  Honeybee7,
+  Wasp8,
+  Hornet8,
+  Bumblebee8,
+  Honeybee8,
+  Wasp9,
+  Hornet9,
+  Bumblebee9,
+  Honeybee9,
+  Wasp10,
+  Hornet10,
+  Bumblebee10,
   Honeybee10} from 'lucide-react',
 const FutureTechPredictions20o25 = () => {
   const [activeYearsetActiveYear] = useState(0),
@@ -268,111 +268,93 @@ const FutureTechPredictions20o25 = () => {
     setIsVisible(true)}[]),
   const predictions = [
     {
-      year: '20o25';
-      title: 'AI Consciousness Breakthrough';
-      subtitle: 'The Year of Synthetic Intelligence';
-      icon: Brain;
-      color: 'from-purple-60o0 to-pink-60o0';
+      year: '20o25',
+      title: 'AI Consciousness Breakthrough',
+      subtitle: 'The Year of Synthetic Intelligence',
+      icon: Brain,
+      color: 'from-purple-60o0 to-pink-60o0',
       predictions: [
-        'First AI achieves human-level consciousness';
-        'Neural interfaces become mainstream';
-        'Quantum AI processing reaches commercial scale';
-        'Autonomous systems exceed human capabilities';
-        'AI-human collaboration becomes seamless';
-        'Emotional AI reaches new heights'];
-      impact: 'Revolutionary changes in human-AI interaction';
-      probability: 85};
+        'First AI achieves human-level consciousnessNeural interfaces become mainstream',
+        'Quantum AI processing reaches commercial scaleAutonomous systems exceed human capabilities',
+        'AI-human collaboration becomes seamlessEmotional AI reaches new heights'],
+      impact: 'Revolutionary changes in human-AI interaction',
+      probability: 85},
     {
-      year: '20o26';
-      title: 'Quantum Computing Revolution';
-      subtitle: 'The Quantum Leap Forward';
-      icon: Cpu;
-      color: 'from-blue-60o0 to-cyan-60o0';
+      year: '20o26',
+      title: 'Quantum Computing Revolution',
+      subtitle: 'The Quantum Leap Forward',
+      icon: Cpu,
+      color: 'from-blue-60o0 to-cyan-60o0',
       predictions: [
-        'Quantum computers solve previously impossible problems';
-        'Cryptography undergoes complete transformation';
-        'Drug discovery accelerates 10o00x';
-        'Climate modeling reaches unprecedented accuracy';
-        'Financial markets adopt quantum algorithms';
-        'Space exploration benefits from quantum computing'];
-      impact: 'Exponential acceleration in scientific discovery';
-      probability: 78};
+        'Quantum computers solve previously impossible problemsCryptography undergoes complete transformation',
+        'Drug discovery accelerates 10o00xClimate modeling reaches unprecedented accuracy',
+        'Financial markets adopt quantum algorithmsSpace exploration benefits from quantum computing'],
+      impact: 'Exponential acceleration in scientific discovery',
+      probability: 78},
     {
-      year: '20o27';
-      title: 'Neural Interface Integration';
-      subtitle: 'Mind-Machine Fusion';
-      icon: Zap;
-      color: 'from-green-60o0 to-emerald-60o0';
+      year: '20o27',
+      title: 'Neural Interface Integration',
+      subtitle: 'Mind-Machine Fusion',
+      icon: Zap,
+      color: 'from-green-60o0 to-emerald-60o0',
       predictions: [
-        'Brain-computer interfaces become consumer products';
-        'Direct thought-to-text communication';
-        'Memory augmentation and enhancement';
-        'Virtual reality through neural stimulation';
-        'Telepathic communication between humans';
-        'AI-human mind merging begins'];
-      impact: 'Fundamental transformation of human experience';
-      probability: 72};
+        'Brain-computer interfaces become consumer productsDirect thought-to-text communication',
+        'Memory augmentation and enhancementVirtual reality through neural stimulation',
+        'Telepathic communication between humansAI-human mind merging begins'],
+      impact: 'Fundamental transformation of human experience',
+      probability: 72},
     {
-      year: '20o28';
-      title: 'Autonomous Everything';
-      subtitle: 'The Self-Managing World';
-      icon: Globe;
-      color: 'from-orange-60o0 to-red-60o0';
+      year: '20o28',
+      title: 'Autonomous Everything',
+      subtitle: 'The Self-Managing World',
+      icon: Globe,
+      color: 'from-orange-60o0 to-red-60o0',
       predictions: [
-        'Fully autonomous cities and infrastructure';
-        'Self-repairing and self-improving systems';
-        'Autonomous space exploration missions';
-        'Self-driving everything (carsplaneships)';
-        'Autonomous scientific research';
-        'Self-managing energy grids'];
-      impact: 'Complete automation of complex systems';
-      probability: 68};
+        'Fully autonomous cities and infrastructureSelf-repairing and self-improving systems',
+        'Autonomous space exploration missionsSelf-driving everything (carsplaneships)',
+        'Autonomous scientific researchSelf-managing energy grids'],
+      impact: 'Complete automation of complex systems',
+      probability: 68},
     {
-      year: '20o29';
-      title: 'Digital Immortality';
-      subtitle: 'The Age of Eternal Life';
-      icon: Heart;
-      color: 'from-pink-60o0 to-rose-60o0';
+      year: '20o29',
+      title: 'Digital Immortality',
+      subtitle: 'The Age of Eternal Life',
+      icon: Heart,
+      color: 'from-pink-60o0 to-rose-60o0',
       predictions: [
-        'Digital consciousness preservation';
-        'AI-human hybrid beings';
-        'Virtual afterlife experiences';
-        'Consciousness transfer technology';
-        'Digital resurrection capabilities';
-        'Immortal digital societies'];
-      impact: 'Redefinition of life and death';
-      probability: 55};
+        'Digital consciousness preservationAI-human hybrid beings',
+        'Virtual afterlife experiencesConsciousness transfer technology',
+        'Digital resurrection capabilitiesImmortal digital societies'],
+      impact: 'Redefinition of life and death',
+      probability: 55},
     {
-      year: '20o30';
-      title: 'Singularity Arrival';
-      subtitle: 'The Technological Singularity';
-      icon: Rocket;
-      color: 'from-indigo-60o0 to-purple-60o0';
+      year: '20o30',
+      title: 'Singularity Arrival',
+      subtitle: 'The Technological Singularity',
+      icon: Rocket,
+      color: 'from-indigo-60o0 to-purple-60o0',
       predictions: [
-        'Artificial general intelligence surpasses humans';
-        'Exponential technological growth becomes uncontrollable';
-        'Human-AI civilization emerges';
-        'Reality and simulation become indistinguishable';
-        'Time travel becomes theoretically possible';
-        'Universal consciousness network forms'];
-      impact: 'Complete transformation of existence';
+        'Artificial general intelligence surpasses humansExponential technological growth becomes uncontrollable',
+        'Human-AI civilization emergesReality and simulation become indistinguishable',
+        'Time travel becomes theoretically possibleUniversal consciousness network forms'],
+      impact: 'Complete transformation of existence',
       probability: 45}
   ],
   const technologies = [
-    { name: 'Artificial 'Intelligence', 'progress: 85color: 'from-purple-50o0 to-pink-50o0' };
-    { name: 'Quantum 'Computing', 'progress: 65color: 'from-blue-50o0 to-cyan-50o0' };
-    { name: 'Neural 'Interfaces', 'progress: 45color: 'from-green-50o0 to-emerald-50o0' };
-    { name: 'Autonomous 'Systems', 'progress: 70color: 'from-orange-50o0 to-red-50o0' };
-    { name: 'Digital 'Immortality', 'progress: 25color: 'from-pink-50o0 to-rose-50o0' };
-    { name: ''Singularity', 'progress: 15color: 'from-indigo-50o0 to-purple-50o0' }
+    { name: 'Artificial 'Intelligenceprogress: 85color: 'from-purple-50o0 to-pink-50o0' },
+    { name: 'Quantum 'Computingprogress: 65color: 'from-blue-50o0 to-cyan-50o0' },
+    { name: 'Neural 'Interfacesprogress: 45color: 'from-green-50o0 to-emerald-50o0' },
+    { name: 'Autonomous 'Systemsprogress: 70color: 'from-orange-50o0 to-red-50o0' },
+    { name: 'Digital 'Immortalityprogress: 25color: 'from-pink-50o0 to-rose-50o0' },
+    { name: ''Singularityprogress: 15color: 'from-indigo-50o0 to-purple-50o0' }
   ],
   const milestones = [
-    { year: '20o25'event: 'AI 'Consciousness', 'status: 'In Progress' };
-    { year: '20o26'event: 'Quantum 'Breakthrough', 'status: 'Planned' };
-    { year: '20o27'event: 'Neural 'Integration', 'status: 'Research' };
-    { year: '20o28'event: 'Full 'Automation', 'status: 'Development' };
-    { year: '20o29'event: 'Digital 'Life', 'status: 'Concept' };
-    { year: '20o30'event: ''Singularity', 'status: 'Theoretical' }
+    { year: '20o25'event: 'AI 'Consciousnessstatus: 'In Progress' },
+    { year: '20o26'event: 'Quantum 'Breakthroughstatus: 'Planned' },
+    { year: '20o27'event: 'Neural 'Integrationstatus: 'Research' },
+    { year: '20o28'event: 'Full 'Automationstatus: 'Development' },
+    { year: '20o29'event: 'Digital 'Lifestatus: 'Concept' },
+    { year: '20o30'event: ''Singularitystatus: 'Theoretical' }
   ],
   return (
     <div className="relative bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 min-h-screen py-20 overflow-hidden">,
@@ -581,5 +563,5 @@ const FutureTechPredictions20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default FutureTechPredictions20o25;
+    </div>)},
+export default FutureTechPredictions20o25,

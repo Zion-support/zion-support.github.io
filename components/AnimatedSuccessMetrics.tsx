@@ -3,43 +3,43 @@ import React{ useStateuseEffectuseRef } from 'react',
 export default function AnimatedSuccessMetrics() {
   const [isVisiblesetIsVisible] = useState(false),
   const [countsetCounts] = useState({
-    roi: 0;
-    accuracy: 0;
-    speed: 0;
+    roi: 0,
+    accuracy: 0,
+    speed: 0,
     companies: 0}),
   const ref = useRef(null),
   const metrics = [
     {
-      value: 10o000;
-      suffix: '%';
-      label: 'Average ROI';
-      description: 'Fortune 50o0 Companies';
-      color: 'from-yellow-40o0 to-orange-50o0';
-      bgColor: 'from-yellow-60o0/20 to-orange-60o0/20';
-      borderColor: 'border-yellow-50o0/30'};
+      value: 10o000,
+      suffix: '%',
+      label: 'Average ROI',
+      description: 'Fortune 50o0 Companies',
+      color: 'from-yellow-40o0 to-orange-50o0',
+      bgColor: 'from-yellow-60o0/20 to-orange-60o0/20',
+      borderColor: 'border-yellow-50o0/30'},
     {
-      value: 99.9;
-      suffix: '%';
-      label: 'Accuracy Rate';
-      description: 'Quantum Neural Networks';
-      color: 'from-cyan-40o0 to-blue-50o0';
-      bgColor: 'from-cyan-60o0/20 to-blue-60o0/20';
-      borderColor: 'border-cyan-50o0/30'};
+      value: 99.9,
+      suffix: '%',
+      label: 'Accuracy Rate',
+      description: 'Quantum Neural Networks',
+      color: 'from-cyan-40o0 to-blue-50o0',
+      bgColor: 'from-cyan-60o0/20 to-blue-60o0/20',
+      borderColor: 'border-cyan-50o0/30'},
     {
-      value: 50o000;
-      suffix: 'x';
-      label: 'Faster Processing';
-      description: 'vs Traditional AI';
-      color: 'from-green-40o0 to-emerald-50o0';
-      bgColor: 'from-green-60o0/20 to-emerald-60o0/20';
-      borderColor: 'border-green-50o0/30'};
+      value: 50o000,
+      suffix: 'x',
+      label: 'Faster Processing',
+      description: 'vs Traditional AI',
+      color: 'from-green-40o0 to-emerald-50o0',
+      bgColor: 'from-green-60o0/20 to-emerald-60o0/20',
+      borderColor: 'border-green-50o0/30'},
     {
-      value: 50o0;
-      suffix: '+';
-      label: 'Companies Transformed';
-      description: 'Global Success Stories';
-      color: 'from-purple-40o0 to-pink-50o0';
-      bgColor: 'from-purple-60o0/20 to-pink-60o0/20';
+      value: 50o0,
+      suffix: '+',
+      label: 'Companies Transformed',
+      description: 'Global Success Stories',
+      color: 'from-purple-40o0 to-pink-50o0',
+      bgColor: 'from-purple-60o0/20 to-pink-60o0/20',
       borderColor: 'border-purple-50o0/30'}
   ],
   useEffect(() => {
@@ -47,7 +47,7 @@ export default function AnimatedSuccessMetrics() {
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true)}
-      };
+      },
       { threshold: 0.1 }
     ),
     if (ref.current) {
@@ -70,7 +70,7 @@ export default function AnimatedSuccessMetrics() {
             clearInterval(timer)}
 ,
           setCounts(prev => ({
-            ...prev;
+            ...prev,
             [index === 0 ? 'roi' : index === 1 ? 'accuracy' : index === 2 ? 'speed' : 'companies']: currentValue}))}stepDuration)})}
   }[isVisible]),
   return (
@@ -127,9 +127,9 @@ export default function AnimatedSuccessMetrics() {
                       key={i}
                       className={`absolute w-2 h-2 bg-gradient-to-r ${metric.color} rounded-full opacity-20 animate-pulse`}
                       style={{
-                        left: `${20 + i * 30}%`;
-                        top: `${20 + i * 20}%`;
-                        animationDelay: `${i * 0.5}s`;
+                        left: `${20 + i * 30}%`,
+                        top: `${20 + i * 20}%`,
+                        animationDelay: `${i * 0.5}s`,
                         animationDuration: '3s'}}
                     ></div>))}
                 </div>,

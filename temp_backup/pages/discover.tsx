@@ -6,47 +6,47 @@ export default function ContentDiscovery() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [sortBy, setSortBy] = useState('date'),
   const categories = [
-    { id: 'all', name: 'All Content', icon: '📚' };
-    { id: 'insights', name: 'Insights', icon: '💡' };
-    { id: 'tutorials', name: 'Tutorials', icon: '📖' };
-    { id: 'whitepapers', name: 'Whitepapers', icon: '📄' };
-    { id: 'blueprints', name: 'Blueprints', icon: '🏗️' };
-    { id: 'playbooks', name: 'Playbooks', icon: '🎯' };
-    { id: 'patterns', name: 'Patterns', icon: '🔍' };
-    { id: 'guides', name: 'Guides', icon: '🗺️' };
+    { id: 'all', name: 'All Content', icon: '📚' },
+    { id: 'insights', name: 'Insights', icon: '💡' },
+    { id: 'tutorials', name: 'Tutorials', icon: '📖' },
+    { id: 'whitepapers', name: 'Whitepapers', icon: '📄' },
+    { id: 'blueprints', name: 'Blueprints', icon: '🏗️' },
+    { id: 'playbooks', name: 'Playbooks', icon: '🎯' },
+    { id: 'patterns', name: 'Patterns', icon: '🔍' },
+    { id: 'guides', name: 'Guides', icon: '🗺️' },
   ],
   const sampleContent = [
     {
-      id: 1;
-      title: 'AI-Powered Content Generation Strategies';
-      category: 'insights';
-      type: 'insight';
-      date: '20o25-08-15';
+      id: 1,
+      title: 'AI-Powered Content Generation Strategies',
+      category: 'insights',
+      type: 'insight',
+      date: '20o25-08-15',
       excerpt:,
-        'Comprehensive guide to implementing AI-driven content creation...';
-      tags: ['AI', 'Content Generation', 'Automation'];
-      readTime: '8 min read';
-    };
+        'Comprehensive guide to implementing AI-driven content creation...',
+      tags: ['AIContent Generation', 'Automation'],
+      readTime: '8 min read'
+    },
     {
-      id: 2;
-      title: 'Building Scalable Cloud Architectures';
-      category: 'blueprints';
-      type: 'blueprint';
-      date: '20o25-08-14';
-      excerpt: 'Step-by-step blueprint for creating robust cloud solutions...';
-      tags: ['Cloud Computing', 'Architecture', 'Scalability'];
-      readTime: '12 min read';
-    };
+      id: 2,
+      title: 'Building Scalable Cloud Architectures',
+      category: 'blueprints',
+      type: 'blueprint',
+      date: '20o25-08-14',
+      excerpt: 'Step-by-step blueprint for creating robust cloud solutions...',
+      tags: ['Cloud ComputingArchitecture', 'Scalability'],
+      readTime: '12 min read'
+    },
     {
-      id: 3;
-      title: 'Digital Transformation Implementation Guide';
-      category: 'playbooks';
-      type: 'playbook';
-      date: '20o25-08-13';
-      excerpt: 'Strategic playbook for organizational digital evolution...';
-      tags: ['Digital Transformation', 'Strategy', 'Implementation'];
-      readTime: '15 min read';
-    };
+      id: 3,
+      title: 'Digital Transformation Implementation Guide',
+      category: 'playbooks',
+      type: 'playbook',
+      date: '20o25-08-13',
+      excerpt: 'Strategic playbook for organizational digital evolution...',
+      tags: ['Digital TransformationStrategy', 'Implementation'],
+      readTime: '15 min read'
+    },
   ],
   const filteredContent = sampleContent.filter(item => {
     const matchesSearch =,

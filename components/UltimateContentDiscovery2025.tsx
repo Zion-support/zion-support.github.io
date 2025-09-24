@@ -7,78 +7,78 @@ const UltimateContentDiscovery20o25 = () => {
   const [searchQuerysetSearchQuery] = useState(''),
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-5 h-5"  /> };
-    { id: ''ai', 'name: 'AI & Machine 'Learning', 'icon: <Zap className="w-5 h-5"  /> };
-    { id: ''automation', 'name: ''Automation', 'icon: <TrendingUp className="w-5 h-5"  /> };
-    { id: ''cloud', 'name: 'Cloud 'Computing', 'icon: <Users className="w-5 h-5"  /> };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <Star className="w-5 h-5"  /> }
+    { id: ''allname: 'All 'Contenticon: <BookOpen className="w-5 h-5"  /> },
+    { id: ''ainame: 'AI & Machine 'Learningicon: <Zap className="w-5 h-5"  /> },
+    { id: ''automationname: ''Automationicon: <TrendingUp className="w-5 h-5"  /> },
+    { id: ''cloudname: 'Cloud 'Computingicon: <Users className="w-5 h-5"  /> },
+    { id: ''quantumname: 'Quantum 'Computingicon: <Star className="w-5 h-5"  /> }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: "AI-Powered Business Transformation Guide 20o25";
-      description: "Complete roadmap for implementing AI solutions in your organization";
-      category: 'ai';
-      type: 'guide';
-      readTime: '15 min';
-      views: '12.5k';
-      rating: 4.9;
-      featured: true;
-      image: '/api/placeholder/40o0/250'};
+      id: 1,
+      title: "AI-Powered Business Transformation Guide 20o25",
+      description: "Complete roadmap for implementing AI solutions in your organization",
+      category: 'ai',
+      type: 'guide',
+      readTime: '15 min',
+      views: '12.5k',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/40o0/250'},
     {
-      id: 2;
-      title: "Quantum Computing: The Future is Now";
-      description: "Exploring quantum computing applications and their business impact";
-      category: 'quantum';
-      type: 'article';
-      readTime: '8 min';
-      views: '8.2k';
-      rating: 4.8;
-      featured: false;
-      image: '/api/placeholder/40o0/250'};
+      id: 2,
+      title: "Quantum Computing: The Future is Now",
+      description: "Exploring quantum computing applications and their business impact",
+      category: 'quantum',
+      type: 'article',
+      readTime: '8 min',
+      views: '8.2k',
+      rating: 4.8,
+      featured: false,
+      image: '/api/placeholder/40o0/250'},
     {
-      id: 3;
-      title: "Automation Mastery: From Zero to Hero";
-      description: "Step-by-step guide to implementing automation in your workflow";
-      category: 'automation';
-      type: 'video';
-      readTime: '25 min';
-      views: '15.3k';
-      rating: 4.9;
-      featured: true;
-      image: '/api/placeholder/40o0/250'};
+      id: 3,
+      title: "Automation Mastery: From Zero to Hero",
+      description: "Step-by-step guide to implementing automation in your workflow",
+      category: 'automation',
+      type: 'video',
+      readTime: '25 min',
+      views: '15.3k',
+      rating: 4.9,
+      featured: true,
+      image: '/api/placeholder/40o0/250'},
     {
-      id: 4;
-      title: "Cloud Infrastructure Best Practices";
-      description: "Essential strategies for building scalable cloud solutions";
-      category: 'cloud';
-      type: 'whitepaper';
-      readTime: '20 min';
-      views: '6.7k';
-      rating: 4.7;
-      featured: false;
-      image: '/api/placeholder/40o0/250'};
+      id: 4,
+      title: "Cloud Infrastructure Best Practices",
+      description: "Essential strategies for building scalable cloud solutions",
+      category: 'cloud',
+      type: 'whitepaper',
+      readTime: '20 min',
+      views: '6.7k',
+      rating: 4.7,
+      featured: false,
+      image: '/api/placeholder/40o0/250'},
     {
-      id: 5;
-      title: "Neural Networks Explained Simply";
-      description: "Understanding neural networks without the technical jargon";
-      category: 'ai';
-      type: 'tutorial';
-      readTime: '12 min';
-      views: '9.8k';
-      rating: 4.8;
-      featured: false;
-      image: '/api/placeholder/40o0/250'};
+      id: 5,
+      title: "Neural Networks Explained Simply",
+      description: "Understanding neural networks without the technical jargon",
+      category: 'ai',
+      type: 'tutorial',
+      readTime: '12 min',
+      views: '9.8k',
+      rating: 4.8,
+      featured: false,
+      image: '/api/placeholder/40o0/250'},
     {
-      id: 6;
-      title: "The Future of Work: AI Integration";
-      description: "How AI is reshaping the modern workplace and job roles";
-      category: 'ai';
-      type: 'article';
-      readTime: '10 min';
-      views: '11.2k';
-      rating: 4.9;
-      featured: true;
+      id: 6,
+      title: "The Future of Work: AI Integration",
+      description: "How AI is reshaping the modern workplace and job roles",
+      category: 'ai',
+      type: 'article',
+      readTime: '10 min',
+      views: '11.2k',
+      rating: 4.9,
+      featured: true,
       image: '/api/placeholder/40o0/250'}
   ],
   const getTypeIcon = (type: string) => {
@@ -89,7 +89,7 @@ const UltimateContentDiscovery20o25 = () => {
       case 'tutorial': return <Zap className="w-4 h-4"  />,
       case 'whitepaper': return <FileText className="w-4 h-4"  />,
       default: return <BookOpen className="w-4 h-4"  />}
-  };
+  },
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
                          item.description.toLowerCase().includes(searchQuery.toLowerCase()),
@@ -215,9 +215,9 @@ const UltimateContentDiscovery20o25 = () => {
         {/* Stats */}
         <div className="mt-16 grid grid-cols-2 md: grid-cols-4 gap-8">,
           {[
-            { number: '50o0+'label: 'Articles & Guides' };
-            { number: '50+'label: 'Video Tutorials' };
-            { number: '10o0+'label: 'Case Studies' };
+            { number: '50o0+'label: 'Articles & Guides' },
+            { number: '50+'label: 'Video Tutorials' },
+            { number: '10o0+'label: 'Case Studies' },
             { number: '1M+'label: 'Monthly Readers' }
           ].map((statindex) => (
             <div key={index} className="text-center">,
@@ -226,5 +226,5 @@ const UltimateContentDiscovery20o25 = () => {
             </div>))}
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentDiscovery20o25;
+    </section>)},
+export default UltimateContentDiscovery20o25,

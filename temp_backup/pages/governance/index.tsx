@@ -15,14 +15,14 @@ type Proposal = {
   endTime: number,
   status: string,
   queued?: boolean,
-  executedTxHash?: string};
+  executedTxHash?: string},
 type Vote = {
   id: string,
   proposalId: string,
   voter: string,
   option: 'approve' | 'reject' | 'abstain',
   power: number,
-  createdAt: number};
+  createdAt: number},
 export default function GovernanceHome() {
   const { address, connect, disconnect } = useWallet(),
   const [activeTab, setActiveTab] = useState<'board' | 'my' | 'dashboard'>(
@@ -46,7 +46,7 @@ export default function GovernanceHome() {
       list.sort((a, b) => (b.fundingAsk || 0) - (a.fundingAsk || 0)),
     return list}, [proposals, sort]),
   const myVotes = useMemo(
-    () => votes.filter(v => v.voter === (address || '').toLowerCase());
+    () => votes.filter(v => v.voter === (address || '').toLowerCase()),
     [votes, address]),
   return (
     <div className='space-y-6'>,
@@ -170,16 +170,16 @@ export default function GovernanceHome() {
     </div>)}
 ,
 function Dashboard({
-  proposals;
-  votes;
+  proposals,
+  votes,
 }: {
   proposals: Proposal[],
   votes: Vote[]}) {
   const numVoters = useMemo(
-    () => new Set(votes.map(v => v.voter)).size;
+    () => new Set(votes.map(v => v.voter)).size,
     [votes]),
   const totalPower = useMemo(
-    () => votes.reduce((a, v) => a + v.power, 0);
+    () => votes.reduce((a, v) => a + v.power, 0),
     [votes]),
   const outcomes = useMemo(() => {
     const ended = proposals.filter(p => Date.now() > p.endTime),

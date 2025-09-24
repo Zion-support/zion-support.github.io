@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewContent20o26UltimateShowcaseBanner: React.FC = () => {
   return (
@@ -164,5 +164,5 @@ const NewContent20o26UltimateShowcaseBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o26UltimateShowcaseBanner;
+    </section>)},
+export default NewContent20o26UltimateShowcaseBanner,

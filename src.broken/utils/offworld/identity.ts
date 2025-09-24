@@ -42,6 +42,6 @@ export async function buildIdentityProfile(
   const did = await generateDIDKey(),
   const ens = address ? await resolveENS(address) : null,
   const lens = address ? await resolveLens(address) : null,
-  return { did: did || undefined, ens, lens, address: address || null };
+  return { did: did || undefined, ens, lens, address: address || null },
 }
 ,

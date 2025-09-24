@@ -1,4 +1,4 @@
-export default function TermsPage() {;
+export default function TermsPage() {,
   return (
     <div className='min-h-screen py-20 px-4'>
       <div className='max-w-5xl mx-auto'>
@@ -6,4 +6,4 @@ export default function TermsPage() {;
         <p className='text-zinc-500'>Terms will be published here.</p>
       </div>
     </div>)}
-;
+,

@@ -9,81 +9,70 @@ export default function CodeQualityCheckerPage() {
   const [codeInput, setCodeInput] = useState(''),
   const features = [
     {
-      icon: <Code className="w-8 h-8 text-white"  />;
-      title: 'Multi-Language Support';
-      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.';
-      color: 'bg-gradient-to-br from-teal-50o0 to-cyan-60o0';
-      gradient: 'from-teal-40o0 to-cyan-50o0'};
+      icon: <Code className="w-8 h-8 text-white"  />,
+      title: 'Multi-Language Support',
+      description: 'Support for JavaScript, TypeScript, Python, Java, C++, Go, and many more programming languages.',
+      color: 'bg-gradient-to-br from-teal-50o0 to-cyan-60o0',
+      gradient: 'from-teal-40o0 to-cyan-50o0'},
     {
-      icon: <CheckCircle className="w-8 h-8 text-white"  />;
-      title: 'Code Quality Metrics';
-      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.';
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
-      gradient: 'from-green-40o0 to-emerald-50o0'};
+      icon: <CheckCircle className="w-8 h-8 text-white"  />,
+      title: 'Code Quality Metrics',
+      description: 'Comprehensive analysis including complexity, maintainability, test coverage, and security vulnerabilities.',
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
+      gradient: 'from-green-40o0 to-emerald-50o0'},
     {
-      icon: <Zap className="w-8 h-8 text-white"  />;
-      title: 'Real-Time Analysis';
-      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.';
-      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0';
-      gradient: 'from-orange-40o0 to-red-50o0'};
+      icon: <Zap className="w-8 h-8 text-white"  />,
+      title: 'Real-Time Analysis',
+      description: 'Instant code quality feedback with detailed explanations and improvement suggestions.',
+      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',
+      gradient: 'from-orange-40o0 to-red-50o0'},
     {
-      icon: <Shield className="w-8 h-8 text-white"  />;
-      title: 'Security Scanning';
-      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.';
-      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0';
-      gradient: 'from-purple-40o0 to-indigo-50o0'};
+      icon: <Shield className="w-8 h-8 text-white"  />,
+      title: 'Security Scanning',
+      description: 'Automated detection of security vulnerabilities, dependency issues, and best practice violations.',
+      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0',
+      gradient: 'from-purple-40o0 to-indigo-50o0'},
   ],
   const supportedLanguages = [
-    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rules', 'TypeScript checks', 'React best practices'] };
-    { name: 'Python', icon: '🐍', features: ['PEP 8 compliance', 'Type hints', 'Security scanning'] };
-    { name: 'Java', icon: '☕', features: ['PMD rules', 'Checkstyle', 'SonarQube integration'] };
-    { name: 'C++', icon: '⚙️', features: ['Clang-tidy', 'Static analysis', 'Memory leak detection'] };
-    { name: 'Go', icon: '🟢', features: ['Golangci-lint', 'Go vet', 'Performance analysis'] };
-    { name: 'PHP', icon: '🐘', features: ['PHPStan', 'PHP CS Fixer', 'Security analysis'] }
+    { name: 'JavaScript/TypeScript', icon: '⚡', features: ['ESLint rulesTypeScript checks', 'React best practices'] },
+    { name: 'Python', icon: '🐍', features: ['PEP 8 complianceType hints', 'Security scanning'] },
+    { name: 'Java', icon: '☕', features: ['PMD rulesCheckstyle', 'SonarQube integration'] },
+    { name: 'C++', icon: '⚙️', features: ['Clang-tidyStatic analysis', 'Memory leak detection'] },
+    { name: 'Go', icon: '🟢', features: ['Golangci-lintGo vet', 'Performance analysis'] },
+    { name: 'PHP', icon: '🐘', features: ['PHPStanPHP CS Fixer', 'Security analysis'] }
   ],
   const pricing = [
     {
-      name: 'Developer';
-      price: '$29';
-      period: '/month';
-      description: 'Perfect for individual developers and small projects';
+      name: 'Developer',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for individual developers and small projects',
       features: [
-        '10o0 code analyses/month';
-        'Basic quality metrics';
-        '5 programming languages';
-        'Email support';
-        'Basic reporting';
-        'Community rules'];
-      popular: false};
+        '10o0 code analyses/monthBasic quality metrics',
+        '5 programming languagesEmail support',
+        'Basic reportingCommunity rules'],
+      popular: false},
     {
-      name: 'Team';
-      price: '$79';
-      period: '/month';
-      description: 'Ideal for development teams and growing companies';
+      name: 'Team',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for development teams and growing companies',
       features: [
-        '50o0 code analyses/month';
-        'Advanced quality metrics';
-        'All programming languages';
-        'Priority support';
-        'Advanced reporting';
-        'Custom rules';
-        'Team collaboration';
-        'API access'];
-      popular: true};
+        '50o0 code analyses/monthAdvanced quality metrics',
+        'All programming languagesPriority support',
+        'Advanced reportingCustom rules',
+        'Team collaborationAPI access'],
+      popular: true},
     {
-      name: 'Enterprise';
-      price: '$199';
-      period: '/month';
-      description: 'For large organizations with complex codebases';
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations with complex codebases',
       features: [
-        'Unlimited analyses';
-        'Enterprise metrics';
-        'Custom language support';
-        '24/7 dedicated support';
-        'Custom reporting';
-        'White-label options';
-        'On-premise deployment';
-        'Custom integrations'];
+        'Unlimited analysesEnterprise metrics',
+        'Custom language support24/7 dedicated support',
+        'Custom reportingWhite-label options',
+        'On-premise deploymentCustom integrations'],
       popular: false}
   ],
   const handleAnalyzeCode = async () => {
@@ -92,24 +81,22 @@ export default function CodeQualityCheckerPage() {
     // Simulate code analysis,
     setTimeout(() => {
       setAnalysisResults({
-        language: 'JavaScript';
-        qualityScore: 85;
+        language: 'JavaScript',
+        qualityScore: 85,
         issues: [
-          { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' };
-          { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' };
+          { type: 'warning', message: 'Consider using const instead of let for variables that are not reassigned', line: 5, severity: 'medium' },
+          { type: 'info', message: 'Function is quite long (25 lines). Consider breaking it into smaller functions', line: 12, severity: 'low' },
           { type: 'error', message: 'Missing semicolon at end of statement', line: 18, severity: 'high' }
-        ];
+        ],
         metrics: {
-          complexity: 'Medium';
-          maintainability: 'Good';
-          testCoverage: '85%';
-          securityScore: '92%'};
+          complexity: 'Medium',
+          maintainability: 'Good',
+          testCoverage: '85%',
+          securityScore: '92%'},
         recommendations: [
-          'Use const for immutable variables to improve code clarity';
-          'Break down large functions into smaller, more focused functions';
-          'Add proper error handling for better robustness';
-          'Consider adding JSDoc comments for better documentation']}),
-      setIsAnalyzing(false)}, 30o00)};
+          'Use const for immutable variables to improve code clarityBreak down large functions into smaller, more focused functions',
+          'Add proper error handling for better robustnessConsider adding JSDoc comments for better documentation']}),
+      setIsAnalyzing(false)}, 30o00)},
   return (
     <>,
       <Head>,
@@ -133,7 +120,7 @@ export default function CodeQualityCheckerPage() {
             Code Quality Checker,
           </h1>,
           <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed mb-12">,
-            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages;
+            Analyze and improve your code quality with our comprehensive checker. Support for multiple programming languages,
             security scanning, and detailed improvement recommendations. Write better, safer, and more maintainable code.,
           </p>,
           {/* Code Input Form */}

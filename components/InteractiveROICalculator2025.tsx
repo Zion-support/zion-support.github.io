@@ -2,34 +2,34 @@
 import React, { useState, useEffect } from 'react',
 const InteractiveROICalculator20o25 = () => {
   const [formData, setFormData] = useState({
-    companySize: 'small';
-    industry: 'manufacturing';
-    currentRevenue: 10o000000;
-    currentEmployees: 10o0;
-    currentEfficiency: 70;
-    aiInvestment: 50o0000;
+    companySize: 'small',
+    industry: 'manufacturing',
+    currentRevenue: 10o000000,
+    currentEmployees: 10o0,
+    currentEfficiency: 70,
+    aiInvestment: 50o0000,
     implementationTime: 12}),
   const [results, setResults] = useState({
-    projectedROI: 0;
-    costSavings: 0;
-    revenueIncrease: 0;
-    paybackPeriod: 0;
-    efficiencyGain: 0;
+    projectedROI: 0,
+    costSavings: 0,
+    revenueIncrease: 0,
+    paybackPeriod: 0,
+    efficiencyGain: 0,
     productivityBoost: 0}),
   const industryMultipliers ={
-    manufacturing: { roi: 1.5, efficiency: 1.3, productivity: 1.4 };
-    healthcare: { roi: 1.8, efficiency: 1.5, productivity: 1.6 };
-    financial: { roi: 1.6, efficiency: 1.4, productivity: 1.5 };
-    retail: { roi: 1.3, efficiency: 1.2, productivity: 1.3 };
-    technology: { roi: 1.4, efficiency: 1.3, productivity: 1.4 };
+    manufacturing: { roi: 1.5, efficiency: 1.3, productivity: 1.4 },
+    healthcare: { roi: 1.8, efficiency: 1.5, productivity: 1.6 },
+    financial: { roi: 1.6, efficiency: 1.4, productivity: 1.5 },
+    retail: { roi: 1.3, efficiency: 1.2, productivity: 1.3 },
+    technology: { roi: 1.4, efficiency: 1.3, productivity: 1.4 },
     other: { roi: 1.2, efficiency: 1.1, productivity: 1.2 }
-  };
+  },
   const sizeMultipliers ={
-    small: { baseROI: 80o0, baseEfficiency: 25, baseProductivity: 20o0 };
-    medium: { baseROI: 120o0, baseEfficiency: 35, baseProductivity: 280 };
-    large: { baseROI: 180o0, baseEfficiency: 45, baseProductivity: 350 };
+    small: { baseROI: 80o0, baseEfficiency: 25, baseProductivity: 20o0 },
+    medium: { baseROI: 120o0, baseEfficiency: 35, baseProductivity: 280 },
+    large: { baseROI: 180o0, baseEfficiency: 45, baseProductivity: 350 },
     enterprise: { baseROI: 250o0, baseEfficiency: 55, baseProductivity: 40o0 }
-  };
+  },
   useEffect(() => {
     calculateROI()}, [formData]),
   const calculateROI = () => {
@@ -50,22 +50,22 @@ const InteractiveROICalculator20o25 = () => {
     const efficiencyGain = Math.round(baseEfficiencyGain),
     const productivityBoost = Math.round(baseProductivityBoost),
     setResults({
-      projectedROI;
-      costSavings;
-      revenueIncrease;
-      paybackPeriod;
-      efficiencyGain;
-      productivityBoost})};
+      projectedROI,
+      costSavings,
+      revenueIncrease,
+      paybackPeriod,
+      efficiencyGain,
+      productivityBoost})},
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   const formatNumber = (num: number) => {
     if (num >= 10o00000000) {
       return `$${(num / 10o00000000).toFixed(1)}B`} else if (num >= 10o00000) {
       return `$${(num / 10o00000).toFixed(1)}M`} else if (num >= 10o00) {
       return `$${(num / 10o00).toFixed(0)}K`}
-    return `$${num.toLocaleString()}`};
+    return `$${num.toLocaleString()}`},
   return (
     <section className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -96,9 +96,9 @@ const InteractiveROICalculator20o25 = () => {
                 </label>,
                 <div className="grid grid-cols-2 gap-3">,
                   {[
-                    { value: 'small', label: 'Small (10-50 employees)', icon: '🏢' };
-                    { value: 'medium', label: 'Medium (51-20o0 employees)', icon: '🏭' };
-                    { value: 'large', label: 'Large (20o1-10o00 employees)', icon: '🏢' };
+                    { value: 'small', label: 'Small (10-50 employees)', icon: '🏢' },
+                    { value: 'medium', label: 'Medium (51-20o0 employees)', icon: '🏭' },
+                    { value: 'large', label: 'Large (20o1-10o00 employees)', icon: '🏢' },
                     { value: 'enterprise', label: 'Enterprise (10o00+ employees)', icon: '🏗️' }
                   ].map((size) => (
                     <button
@@ -298,5 +298,5 @@ const InteractiveROICalculator20o25 = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveROICalculator20o25;
+    </section>)},
+export default InteractiveROICalculator20o25,

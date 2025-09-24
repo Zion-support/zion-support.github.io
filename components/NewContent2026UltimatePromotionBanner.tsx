@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewContent20o26UltimatePromotionBanner: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {
             Revolutionary AI Content Now Live,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto'>,
-            Discover the ultimate breakthrough guides to AI transformation;
+            Discover the ultimate breakthrough guides to AI transformation,
             quantum computing, and business revolution. The future of technology,
             is here.,
           </p>,
@@ -35,7 +35,7 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {
             </div>,
             <p className='opacity-80 mb-6'>,
               Discover the ultimate AI business transformation strategies for,
-              20o26. Revolutionary breakthrough technologies, quantum computing;
+              20o26. Revolutionary breakthrough technologies, quantum computing,
               neural interfaces, and autonomous systems that will reshape,
               enterprise operations.,
             </p>,
@@ -167,7 +167,7 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {
             </h3>,
             <p className='opacity-80 mb-6'>,
               Join thousands of forward-thinking businesses already implementing,
-              these revolutionary technologies. The future of business is here;
+              these revolutionary technologies. The future of business is here,
               and it starts with your decision to lead.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -189,5 +189,5 @@ const NewContent20o26UltimatePromotionBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o26UltimatePromotionBanner;
+    </section>)},
+export default NewContent20o26UltimatePromotionBanner,

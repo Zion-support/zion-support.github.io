@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function ZeroTrustSecurityPlatform() {
 	return (
@@ -10,11 +10,11 @@ export default function ZeroTrustSecurityPlatform() {
 			implementationWeeks="3-6 weeks",
 			roiNote="Reduce breach risk and blast radius, meet compliance faster",
 			features={[
-				"Identity and device posture checks";
-				"Policy enforcement at network and application layers";
-				"Service-to-service authentication (mTLS)";
-				"Micro-segmentation and least privilege";
-				"SIEM/SOAR integrations and automated response";
+				"Identity and device posture checks",
+				"Policy enforcement at network and application layers",
+				"Service-to-service authentication (mTLS)",
+				"Micro-segmentation and least privilege",
+				"SIEM/SOAR integrations and automated response",
 				"Reference architectures and runbooks]}
 			]}
 			industries={["Financial Services", "Healthcare", "SaaS", "Government"]}
@@ -25,6 +25,6 @@ export default function ZeroTrustSecurityPlatform() {
 export async function getServerSideProps() {
   return {
     props: {}
-  };
+  },
 }
 ,

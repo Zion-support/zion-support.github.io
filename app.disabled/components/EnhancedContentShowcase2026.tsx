@@ -2,16 +2,16 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  Users;
-  Clock;
-  Star;
-  BookOpen;
-  BarChart3;
-  FileText;
-  ExternalLink;
-  ArrowRight;
+  ArrowRight,
+  TrendingUp,
+  Users,
+  Clock,
+  Star,
+  BookOpen,
+  BarChart3,
+  FileText,
+  ExternalLink,
+  ArrowRight,
 } from 'lucide-react',
 interface ContentItem {
   id: string,
@@ -26,7 +26,7 @@ interface ContentItem {
     roi: string,
     savings: string,
     timeToValue: string,
-    readTime?: string};
+    readTime?: string},
   author: string,
   publishDate: string}
 ,
@@ -35,81 +35,75 @@ const EnhancedContentShowcase20o26: React.FC = () => {
     'all' | 'blog' | 'case-study' | 'resource'>('all'),
   const contentItems: ContentItem[] = [
     {
-      id: 'ai-20o26-enterprise-automation';
+      id: 'ai-20o26-enterprise-automation',
       title:,
-        'AI 20o26: Enterprise Automation Breakthrough - 40o0% ROI in 90 Days';
-      type: 'blog';
-      url: '/blog/ai-20o26-enterprise-automation-breakthrough';
+        'AI 20o26: Enterprise Automation Breakthrough - 40o0% ROI in 90 Days',
+      type: 'blog',
+      url: '/blog/ai-20o26-enterprise-automation-breakthrough',
       excerpt:,
-        'Discover how Fortune 50o0 companies are achieving unprecedented 40o0% ROI through next-generation AI automation systems. Real case studies, implementation strategies, and proven frameworks.';
-      featured: true;
-      isNew: true;
+        'Discover how Fortune 50o0 companies are achieving unprecedented 40o0% ROI through next-generation AI automation systems. Real case studies, implementation strategies, and proven frameworks.',
+      featured: true,
+      isNew: true,
       tags: [
-        'AI';
-        'Enterprise Automation';
-        'ROI';
-        'Business Transformation';
-        '20o26';
-      ];
+        'AIEnterprise Automation',
+        'ROIBusiness Transformation',
+        '20o26',
+      ],
       metrics: {
-        roi: '40o0%';
-        savings: '$2.8M';
-        timeToValue: '90 days';
-        readTime: '12 min';
-      };
-      author: 'Zion Tech Group';
-      publishDate: '20o25-0o1-17';
-    };
+        roi: '40o0%',
+        savings: '$2.8M',
+        timeToValue: '90 days',
+        readTime: '12 min'
+      },
+      author: 'Zion Tech Group',
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'ai-transformation-50o0m-revenue';
-      title: 'AI Transformation Success: $50o0M Revenue Increase in 18 Months';
-      type: 'case-study';
-      url: '/case-studies/ai-transformation-50o0m-revenue-increase';
+      id: 'ai-transformation-50o0m-revenue',
+      title: 'AI Transformation Success: $50o0M Revenue Increase in 18 Months',
+      type: 'case-study',
+      url: '/case-studies/ai-transformation-50o0m-revenue-increase',
       excerpt:,
-        'How a Fortune 10o0 company achieved $50o0M revenue increase through comprehensive AI transformation. Detailed implementation strategy, challenges overcome, and lessons learned.';
-      featured: true;
-      isNew: true;
+        'How a Fortune 10o0 company achieved $50o0M revenue increase through comprehensive AI transformation. Detailed implementation strategy, challenges overcome, and lessons learned.',
+      featured: true,
+      isNew: true,
       tags: [
-        'Case Study';
-        'AI Transformation';
-        'Revenue Growth';
-        'Enterprise Success';
-        'ROI';
-      ];
+        'Case StudyAI Transformation',
+        'Revenue GrowthEnterprise Success',
+        'ROI',
+      ],
       metrics: {
-        roi: '50o0%';
-        savings: '$50o0M';
-        timeToValue: '18 months';
-        readTime: '15 min';
-      };
-      author: 'Zion Tech Group';
-      publishDate: '20o25-0o1-17';
-    };
+        roi: '50o0%',
+        savings: '$50o0M',
+        timeToValue: '18 months',
+        readTime: '15 min'
+      },
+      author: 'Zion Tech Group',
+      publishDate: '20o25-0o1-17'
+    },
     {
-      id: 'ai-implementation-master-guide';
-      title: 'AI Implementation Master Guide 20o26: From Strategy to 40o0% ROI';
-      type: 'resource';
-      url: '/resources/ai-implementation-master-guide-20o26';
+      id: 'ai-implementation-master-guide',
+      title: 'AI Implementation Master Guide 20o26: From Strategy to 40o0% ROI',
+      type: 'resource',
+      url: '/resources/ai-implementation-master-guide-20o26',
       excerpt:,
-        'The definitive guide to AI implementation in 20o26. Step-by-step framework, proven strategies, and real-world examples to achieve 40o0% ROI within 90 days.';
-      featured: true;
-      isNew: true;
+        'The definitive guide to AI implementation in 20o26. Step-by-step framework, proven strategies, and real-world examples to achieve 40o0% ROI within 90 days.',
+      featured: true,
+      isNew: true,
       tags: [
-        'Implementation Guide';
-        'AI Strategy';
-        'ROI';
-        'Best Practices';
-        '20o26';
-      ];
+        'Implementation GuideAI Strategy',
+        'ROIBest Practices',
+        '20o26',
+      ],
       metrics: {
-        roi: '40o0%';
-        savings: '60-80%';
-        timeToValue: '90 days';
-        readTime: '25 min';
-      };
-      author: 'Zion Tech Group';
-      publishDate: '20o25-0o1-17';
-    };
+        roi: '40o0%',
+        savings: '60-80%',
+        timeToValue: '90 days',
+        readTime: '25 min'
+      },
+      author: 'Zion Tech Group',
+      publishDate: '20o25-0o1-17'
+    },
   ],
   const filteredContent =,
     activeTab === 'all',
@@ -125,7 +119,7 @@ const EnhancedContentShowcase20o26: React.FC = () => {
         return <BookOpen className='w-5 h-5' />,
       default:,
         return <FileText className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -136,24 +130,24 @@ const EnhancedContentShowcase20o26: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const tabs = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   return (
     <section className='py-16 bg-gray-50'>,
@@ -228,7 +222,7 @@ const EnhancedContentShowcase20o26: React.FC = () => {
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
                     >,
-                      {item.type.toUpperCase().replace('-', ' ')}
+                      {item.type.toUpperCase().replace('- ')}
                     </span>,
                   </div>,
                   {item.isNew && (
@@ -328,5 +322,5 @@ const EnhancedContentShowcase20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedContentShowcase20o26;
+    </section>)},
+export default EnhancedContentShowcase20o26,

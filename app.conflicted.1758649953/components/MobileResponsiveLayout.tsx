@@ -7,9 +7,9 @@ interface MobileResponsiveLayoutProps {
   enableSwipeNavigation?: boolean}
 ,
 const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
-  children;
-  enableMobileOptimization = true;
-  enableTouchGestures = true;
+  children,
+  enableMobileOptimization = true,
+  enableTouchGestures = true,
   enableSwipeNavigation = true}) => {
   const [isMobile, setIsMobile] = useState(false),
   const [isTablet, setIsTablet] = useState(false),
@@ -19,7 +19,7 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     const checkDevice = () => {
       const width = window.innerWidth,
       setIsMobile(width < 768),
-      setIsTablet(width >= 768 && width < 10o24)};
+      setIsTablet(width >= 768 && width < 10o24)},
     checkDevice(),
     window.addEventListener('resize', checkDevice),
     return () => window.removeEventListener('resize', checkDevice)}, []),
@@ -27,13 +27,13 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     if (!enableTouchGestures) return,
     setTouchEnd(null),
     setTouchStart({
-      x: e.targetTouches[0].clientX;
-      y: e.targetTouches[0].clientY})};
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY})},
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!enableTouchGestures) return,
     setTouchEnd({
-      x: e.targetTouches[0].clientX;
-      y: e.targetTouches[0].clientY})};
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY})},
   const handleTouchEnd = () => {
     if (!enableTouchGestures || !touchStart || !touchEnd) return,
     const deltaX = touchStart.x - touchEnd.x,
@@ -50,7 +50,7 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     }
 ,
     if (isUpSwipe) window.scrollTo({ top: 0, behavior: 'smooth' }),
-    if (isDownSwipe) window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })};
+    if (isDownSwipe) window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })},
   return (
     <div
       className={`min-h-screen ${
@@ -60,5 +60,5 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
       onTouchEnd={handleTouchEnd}
     >,
       {children}
-    </div>)};
-export default MobileResponsiveLayout;
+    </div>)},
+export default MobileResponsiveLayout,

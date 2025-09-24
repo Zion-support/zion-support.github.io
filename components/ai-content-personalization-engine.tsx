@@ -10,11 +10,11 @@ export default function AIContentPersonalizationEngine() {
 			implementationWeeks="Implementation: 2–4 weeks",
 			roiNote="Average ROI 3–6x within 90 days",
 			features={[
-				"Segmentation and propensity modeling";
-				"Real-time content and offer selection";
-				"A/B/n and multi-armed bandit experimentation";
-				"Journey orchestration across channels";
-				"Privacy-safe profiling and consent management";
+				"Segmentation and propensity modeling",
+				"Real-time content and offer selection",
+				"A/B/n and multi-armed bandit experimentation",
+				"Journey orchestration across channels",
+				"Privacy-safe profiling and consent management",
 				"Integrations: CDPESPCMSWeb SDK"]}
 			industries={["E‑commerce"Media"SaaS"Education"]}
 			canonical="https: //ziontechgroup.com/ai-content-personalization-engine",

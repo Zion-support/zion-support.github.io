@@ -3,35 +3,35 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Star;
-  DollarSign;
-  CheckCircle;
-  ArrowRight;
-  Rocket;
-  Phone;
-  Mail;
-  MapPin;
-  Grid;
-  List;
-  ChevronDown;
-  Brain;
-  Atom;
-  Shield;
-  Target;
-  Palette;
-  Heart;
-  Truck;
-  GraduationCap;
-  Building;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Globe;
-  Zap;
-  Users;
-  TrendingUp;
+  Search,
+  Star,
+  DollarSign,
+  CheckCircle,
+  ArrowRight,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Grid,
+  List,
+  ChevronDown,
+  Brain,
+  Atom,
+  Shield,
+  Target,
+  Palette,
+  Heart,
+  Truck,
+  GraduationCap,
+  Building,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Globe,
+  Zap,
+  Users,
+  TrendingUp,
 } from 'lucide-react',
 // Import all our service data,
 import { real2026AdvancedServices } from '../data/real-2026-advanced-services',
@@ -44,16 +44,16 @@ export default function Comprehensive2026ServicesShowcase() {
   const [sortBy, setSortBy] = useState<string>('name'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   // Combine all services,
   const allServices = [
-    ...real2026AdvancedServices;
-    ...real2026InnovativeSolutions;
-    ...real2026SpecializedServices;
+    ...real2026AdvancedServices,
+    ...real2026InnovativeSolutions,
+    ...real2026SpecializedServices,
   ],
   // Dynamic category counts,
   const aiCount = allServices.filter(
@@ -76,34 +76,34 @@ export default function Comprehensive2026ServicesShowcase() {
       service.category?.includes('Specialized') ||,
       service.category?.includes('Niche')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
     {
-      id: 'quantum';
-      name: 'Quantum Computing';
-      icon: '⚛️';
-      count: quantumCount;
-    };
+      id: 'quantum',
+      name: 'Quantum Computing',
+      icon: '⚛️',
+      count: quantumCount
+    },
     {
-      id: 'blockchain';
-      name: 'Blockchain & Web3';
-      icon: '⛓️';
-      count: blockchainCount;
-    };
-    { id: 'edge', name: 'Edge Computing & IoT', icon: '🌐', count: edgeCount };
+      id: 'blockchain',
+      name: 'Blockchain & Web3',
+      icon: '⛓️',
+      count: blockchainCount
+    },
+    { id: 'edge', name: 'Edge Computing & IoT', icon: '🌐', count: edgeCount },
     {
-      id: 'specialized';
-      name: 'Specialized Solutions';
-      icon: '🎯';
-      count: specializedCount;
-    };
+      id: 'specialized',
+      name: 'Specialized Solutions',
+      icon: '🎯',
+      count: specializedCount
+    },
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' };
-    { id: 'medium', name: '$1K - $3K/month', range: '$1K - $3K' };
-    { id: 'high', name: '$3K - $6K/month', range: '$3K - $6K' };
-    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $3K/month', range: '$1K - $3K' },
+    { id: 'high', name: '$3K - $6K/month', range: '$3K - $6K' },
+    { id: 'enterprise', name: 'Custom pricing', range: 'Custom' },
   ],
   // Filter and sort services,
   const filteredServices = useMemo(() => {
@@ -172,24 +172,24 @@ export default function Comprehensive2026ServicesShowcase() {
 ,
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <>,
       <Head>,

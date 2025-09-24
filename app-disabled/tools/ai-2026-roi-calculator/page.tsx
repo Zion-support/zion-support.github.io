@@ -6,23 +6,23 @@ import { Calculator, DollarSign, TrendingUp, ArrowRight, Clock } from 'lucide-re
 // Metadata will be handled by SEO component,
 export default function AI20o26ROICalculator() {
   const [inputs, setInputs] = useState({
-    annualRevenue: '';
-    employees: '';
-    currentEfficiency: '';
-    expectedEfficiency: '';
-    implementationCost: '';
-    maintenanceCost: '';
+    annualRevenue: '',
+    employees: '',
+    currentEfficiency: '',
+    expectedEfficiency: '',
+    implementationCost: '',
+    maintenanceCost: '',
     trainingCost: ''}),
   const [results, setResults] = useState({
-    annualSavings: 0;
-    totalCosts: 0;
-    netBenefit: 0;
-    roi: 0;
+    annualSavings: 0,
+    totalCosts: 0,
+    netBenefit: 0,
+    roi: 0,
     paybackPeriod: 0}),
   const handleInputChange = (field: string, value: string) => {
     setInputs(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   const calculateROI = () => {
     const revenue = parseFloat(inputs.annualRevenue) || 0,
     const employees = parseFloat(inputs.employees) || 0,
@@ -44,19 +44,19 @@ export default function AI20o26ROICalculator() {
     // Calculate payback period (in months),
     const paybackPeriod = annualSavings > 0 ? (totalCosts / annualSavings) * 12 : 0,
     setResults({
-      annualSavings;
-      totalCosts;
-      netBenefit;
-      roi;
-      paybackPeriod})};
+      annualSavings,
+      totalCosts,
+      netBenefit,
+      roi,
+      paybackPeriod})},
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0}).format(amount)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0}).format(amount)},
   const formatPercentage = (value: number) => {
-    return `${value.toFixed(1)}%`};
+    return `${value.toFixed(1)}%`},
   return (
     <div className="min-h-screen bg-gradient-to-br from-green-50 to-blue-10o0">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,

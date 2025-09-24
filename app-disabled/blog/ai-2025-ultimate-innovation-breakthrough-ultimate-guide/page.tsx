@@ -1,34 +1,31 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  UserIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: The Ultimate Innovation Breakthrough - Ultimate Guide to 5,0o00% ROI';
+    'AI 20o25: The Ultimate Innovation Breakthrough - Ultimate Guide to 5,0o00% ROI',
   description:,
-    'Discover the revolutionary AI technologies delivering 5,0o00% ROI and transforming enterprises worldwide. Complete guide with real-world success stories and implementation roadmap.';
+    'Discover the revolutionary AI technologies delivering 5,0o00% ROI and transforming enterprises worldwide. Complete guide with real-world success stories and implementation roadmap.',
   keywords: [
-    'AI Innovation';
-    'ROI';
-    'Breakthrough';
-    'Revolutionary AI';
-    'Enterprise AI';
-    '5,0o00% ROI';
-  ];
+    'AI InnovationROI',
+    'BreakthroughRevolutionary AI',
+    'Enterprise AI5,0o00% ROI',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: The Ultimate Innovation Breakthrough - Ultimate Guide to 5,0o00% ROI';
+      'AI 20o25: The Ultimate Innovation Breakthrough - Ultimate Guide to 5,0o00% ROI',
     description:,
-      'Discover the revolutionary AI technologies delivering 5,0o00% ROI and transforming enterprises worldwide.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Discover the revolutionary AI technologies delivering 5,0o00% ROI and transforming enterprises worldwide.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function AI20o25UltimateInnovationBreakthroughPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -291,7 +288,7 @@ export default function AI20o25UltimateInnovationBreakthroughPage() {
             The AI innovation breakthroughs of 20o25 represent the most,
             significant technological advancement in human history. With,
             verified 5,0o00% ROI achievements and transformative impact across,
-            industries, the question isn't whether to adopt these technologies;
+            industries, the question isn't whether to adopt these technologies,
             but how quickly you can implement them.,
           </p>,
           <p className='text-lg text-gray-70o0 mb-8'>,

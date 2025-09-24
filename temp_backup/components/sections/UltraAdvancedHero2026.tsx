@@ -2,45 +2,42 @@ import React, { useEffect, useRef } from 'react',
 import { motion, useScroll, useTransform } from 'framer-motion',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  Zap;
-  Brain;
-  Shield;
-  Cloud;
-  Rocket;
-  CheckCircle;
-  Play;
-  Users;
-  TrendingUp;
-  Award;
-  Phone;
-  Mail;
+  ArrowRight,
+  Star,
+  Zap,
+  Brain,
+  Shield,
+  Cloud,
+  Rocket,
+  CheckCircle,
+  Play,
+  Users,
+  TrendingUp,
+  Award,
+  Phone,
+  Mail,
   MapPin} from 'lucide-react',
 const UltraAdvancedHero20o26: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null),
   const { scrollYProgress } = useScroll({
-    target: containerRef;
+    target: containerRef,
     offset: ["start start", "end start"]}),
   const y = useTransform(scrollYProgress, [0, 1], ["0%", "50%"]),
   const opacity = useTransform(scrollYProgress, [0, 1], [1, 0]),
   const contactInfo ={
-    phone: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709'};
+    phone: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'},
   const stats = [
-    { label: 'Active Services', value: '50o0+', icon: Rocket, color: 'from-blue-50o0 to-purple-60o0' };
-    { label: 'Global Customers', value: '50K+', icon: Users, color: 'from-green-50o0 to-blue-60o0' };
-    { label: 'Success Rate', value: '99.9%', icon: TrendingUp, color: 'from-orange-50o0 to-red-60o0' };
+    { label: 'Active Services', value: '50o0+', icon: Rocket, color: 'from-blue-50o0 to-purple-60o0' },
+    { label: 'Global Customers', value: '50K+', icon: Users, color: 'from-green-50o0 to-blue-60o0' },
+    { label: 'Success Rate', value: '99.9%', icon: TrendingUp, color: 'from-orange-50o0 to-red-60o0' },
     { label: 'Industry Awards', value: '25+', icon: Award, color: 'from-purple-50o0 to-pink-60o0' }
   ],
   const features = [
-    'AI-Powered Solutions';
-    'Quantum Computing Ready';
-    'Enterprise Grade Security';
-    '24/7 Global Support';
-    'Custom Development';
-    'Scalable Infrastructure'],
+    'AI-Powered SolutionsQuantum Computing Ready',
+    'Enterprise Grade Security24/7 Global Support',
+    'Custom DevelopmentScalable Infrastructure'],
   return (
     <section ref={containerRef} className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">,
       {/* Futuristic Background Effects */}
@@ -54,14 +51,14 @@ const UltraAdvancedHero20o26: React.FC = () => {
               key={i}
               className="absolute w-1 h-1 bg-blue-40o0 rounded-full",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0, -20, 0];
+                y: [0, -20, 0],
                 opacity: [0.3, 1, 0.3]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
@@ -212,33 +209,33 @@ const UltraAdvancedHero20o26: React.FC = () => {
         {/* Floating Icons */}
         <motion.div,
           animate={{
-            y: [0, -20, 0];
+            y: [0, -20, 0],
             rotate: [0, 5, 0]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute top-1/4 right-1/4 w-16 h-16 bg-gradient-to-r from-blue-50o0/20 to-purple-50o0/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/10">,
           <Brain className="w-8 h-8 text-blue-40o0"  />,
         </motion.div>,
         <motion.div,
           animate={{
-            y: [0, 20, 0];
+            y: [0, 20, 0],
             rotate: [0, -5, 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute bottom-1/4 left-1/4 w-16 h-16 bg-gradient-to-r from-green-50o0/20 to-blue-50o0/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/10">,
           <Zap className="w-8 h-8 text-green-40o0"  />,
         </motion.div>,
         <motion.div,
           animate={{
-            y: [0, -15, 0];
+            y: [0, -15, 0],
             rotate: [0, 3, 0]}}
           transition={{
-            duration: 7;
-            repeat: Infinity;
+            duration: 7,
+            repeat: Infinity,
             ease: "easeInOut"}}
           className="absolute top-1/3 left-1/3 w-16 h-16 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 rounded-2xl flex items-center justify-center backdrop-blur-sm border border-white/10">,
           <Shield className="w-8 h-8 text-purple-40o0"  />,

@@ -6,25 +6,25 @@ export default function RevolutionaryContentPromotionBanner() {
   const [currentPromotionsetCurrentPromotion] = useState(0),
   const promotions = [
     {
-      title: "🚀 AI 20o25 Revolutionary Breakthrough Ultimate";
-      subtitle: "10,0o00% ROI Guaranteed - Fortune 50o0 Success";
-      link: "/ai-20o25-revolutionary-breakthrough-ultimate";
-      color: "from-red-50o0 to-pink-50o0";
-      bgColor: "from-red-60o0/20 to-pink-60o0/20";
-      borderColor: "border-red-50o0/30"};
+      title: "🚀 AI 20o25 Revolutionary Breakthrough Ultimate",
+      subtitle: "10,0o00% ROI Guaranteed - Fortune 50o0 Success",
+      link: "/ai-20o25-revolutionary-breakthrough-ultimate",
+      color: "from-red-50o0 to-pink-50o0",
+      bgColor: "from-red-60o0/20 to-pink-60o0/20",
+      borderColor: "border-red-50o0/30"},
     {
-      title: "⚛️ Quantum Computing 20o25 Ultimate Breakthrough";
-      subtitle: "25,0o00% ROI Quantum Supremacy Achieved";
-      link: "/quantum-computing-20o25-ultimate-breakthrough";
-      color: "from-cyan-50o0 to-purple-50o0";
-      bgColor: "from-cyan-60o0/20 to-purple-60o0/20";
-      borderColor: "border-cyan-50o0/30"};
+      title: "⚛️ Quantum Computing 20o25 Ultimate Breakthrough",
+      subtitle: "25,0o00% ROI Quantum Supremacy Achieved",
+      link: "/quantum-computing-20o25-ultimate-breakthrough",
+      color: "from-cyan-50o0 to-purple-50o0",
+      bgColor: "from-cyan-60o0/20 to-purple-60o0/20",
+      borderColor: "border-cyan-50o0/30"},
     {
-      title: "🔮 AI 20o26-20o30 Ultimate Future Predictions";
-      subtitle: "Exclusive Revolutionary Forecast - 95% Accuracy";
-      link: "/ai-20o26-20o30-ultimate-future-predictions";
-      color: "from-purple-50o0 to-indigo-50o0";
-      bgColor: "from-purple-60o0/20 to-indigo-60o0/20";
+      title: "🔮 AI 20o26-20o30 Ultimate Future Predictions",
+      subtitle: "Exclusive Revolutionary Forecast - 95% Accuracy",
+      link: "/ai-20o26-20o30-ultimate-future-predictions",
+      color: "from-purple-50o0 to-indigo-50o0",
+      bgColor: "from-purple-60o0/20 to-indigo-60o0/20",
       borderColor: "border-purple-50o0/30"}
   ],
   useEffect(() => {
@@ -77,7 +77,7 @@ export default function RevolutionaryContentPromotionBanner() {
         <div
           className={`h-full bg-gradient-to-r ${current.color} transition-all duration-50o00 ease-linear`}
           style={{
-            width: '10o0%';
+            width: '10o0%',
             animation: 'progress 5s linear infinite'}}
         ></div>,
       </div>,

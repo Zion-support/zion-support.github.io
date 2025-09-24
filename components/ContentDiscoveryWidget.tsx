@@ -17,58 +17,58 @@ export default function ContentDiscoveryWidget() {
   const [currentItemsetCurrentItem] = useState(0),
   const contentItems: ContentItem[] = [
     {
-      id: 'breakthrough-revolution';
-      title: 'AI 20o25 Ultimate Breakthrough Revolution';
-      description: 'Revolutionary AI breakthrough delivering 10,0o00% ROI through quantum-neural fusion and autonomous operations.';
-      link: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'Revolutionary Technology';
-      roi: '10,0o00% ROI';
-      badge: 'BREAKTHROUGH';
-      icon: '🚀'};
+      id: 'breakthrough-revolution',
+      title: 'AI 20o25 Ultimate Breakthrough Revolution',
+      description: 'Revolutionary AI breakthrough delivering 10,0o00% ROI through quantum-neural fusion and autonomous operations.',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'Revolutionary Technology',
+      roi: '10,0o00% ROI',
+      badge: 'BREAKTHROUGH',
+      icon: '🚀'},
     {
-      id: 'global-transformation';
-      title: 'Global Transformation Success Story';
-      description: 'See how a Fortune 50o0 company achieved 10,0o00% ROI in just 6 months using our AI breakthrough.';
-      link: '/case-studies/ai-20o25-global-transformation-breakthrough';
-      category: 'Success Story';
-      roi: '10,0o00% ROI';
-      badge: 'VERIFIED';
-      icon: '🏆'};
+      id: 'global-transformation',
+      title: 'Global Transformation Success Story',
+      description: 'See how a Fortune 50o0 company achieved 10,0o00% ROI in just 6 months using our AI breakthrough.',
+      link: '/case-studies/ai-20o25-global-transformation-breakthrough',
+      category: 'Success Story',
+      roi: '10,0o00% ROI',
+      badge: 'VERIFIED',
+      icon: '🏆'},
     {
-      id: 'roi-calculator';
-      title: 'Interactive ROI Calculator';
-      description: 'Calculate your potential ROI with our revolutionary AI 20o25 breakthrough technology.';
-      link: '/tools/ai-20o25-roi-calculator';
-      category: 'Interactive Tool';
-      roi: 'Free Tool';
-      badge: 'NEW';
-      icon: '🧮'};
+      id: 'roi-calculator',
+      title: 'Interactive ROI Calculator',
+      description: 'Calculate your potential ROI with our revolutionary AI 20o25 breakthrough technology.',
+      link: '/tools/ai-20o25-roi-calculator',
+      category: 'Interactive Tool',
+      roi: 'Free Tool',
+      badge: 'NEW',
+      icon: '🧮'},
     {
-      id: 'quantum-neural-fusion';
-      title: 'Quantum-Neural Fusion Technology';
-      description: 'Revolutionary fusion of quantum computing and neural networks delivering 15,0o00x faster processing.';
-      link: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'Technology';
-      roi: '15,0o00x Faster';
-      badge: 'REVOLUTIONARY';
-      icon: '⚛️'};
+      id: 'quantum-neural-fusion',
+      title: 'Quantum-Neural Fusion Technology',
+      description: 'Revolutionary fusion of quantum computing and neural networks delivering 15,0o00x faster processing.',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'Technology',
+      roi: '15,0o00x Faster',
+      badge: 'REVOLUTIONARY',
+      icon: '⚛️'},
     {
-      id: 'autonomous-operations';
-      title: 'Autonomous Operations System';
-      description: 'Fully autonomous business operations that run 24/7 without human intervention.';
-      link: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'Automation';
-      roi: '24/7 Operations';
-      badge: 'BREAKTHROUGH';
-      icon: '🤖'};
+      id: 'autonomous-operations',
+      title: 'Autonomous Operations System',
+      description: 'Fully autonomous business operations that run 24/7 without human intervention.',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'Automation',
+      roi: '24/7 Operations',
+      badge: 'BREAKTHROUGH',
+      icon: '🤖'},
     {
-      id: 'transcendent-intelligence';
-      title: 'Transcendent Intelligence';
-      description: 'AI that transcends human limitationsmaking decisions with infinite wisdom and perfect foresight.';
-      link: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'Intelligence';
-      roi: '99.9% Accuracy';
-      badge: 'TRANSCENDENT';
+      id: 'transcendent-intelligence',
+      title: 'Transcendent Intelligence',
+      description: 'AI that transcends human limitationsmaking decisions with infinite wisdom and perfect foresight.',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'Intelligence',
+      roi: '99.9% Accuracy',
+      badge: 'TRANSCENDENT',
       icon: '🧠'}
   ],
   useEffect(() => {

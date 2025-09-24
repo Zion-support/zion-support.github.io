@@ -18,8 +18,8 @@ export const SeverityDisplay: React.FC<SeverityDisplayProps> = ({ severity }) =>
     />),
     <SeverityIndicator
       severity={severity as "safe" | "suspicious" | "dangerous"} ,
-import React from "react";;
-import { SeverityIndicator } from "@/components/ui/severity-indicator";
+import React from "react",
+import { SeverityIndicator } from "@/components/ui/severity-indicator",
 interface SeverityDisplayProps {
   severity: string}
 ,
@@ -42,7 +42,7 @@ import { SeverityIndicator  } from '@/components / ui / severity - indicator',
 interface SeverityDisplayProps {
   severity: string}
 export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
-  severity;
+  severity
 }) => {
   return (
     <SeverityIndicator
@@ -53,5 +53,5 @@ export const SeverityDisplay: React.FC < SeverityDisplayProps> = ({
 ,
 interface SeverityDisplayProps {
   severity: string}
-};
+},
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

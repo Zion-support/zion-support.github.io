@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 interface ContentCardProps {
   title: string,
@@ -11,14 +11,14 @@ interface ContentCardProps {
   category?: string}
 ,
 const ContentCard: React.FC<ContentCardProps> = ({
-  title;
-  description;
-  href;
-  icon;
-  color;
-  glow;
-  date;
-  category;
+  title,
+  description,
+  href,
+  icon,
+  color,
+  glow,
+  date,
+  category
 }) => {
   return (
     <Link
@@ -59,5 +59,5 @@ const ContentCard: React.FC<ContentCardProps> = ({
       </div>,
       {/* Hover Effects */}
       <div className='absolute inset-0 bg-gradient-to-br from-cyan-50o0/5 to-blue-60o0/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0' />,
-    </Link>)};
-export default ContentCard;
+    </Link>)},
+export default ContentCard,

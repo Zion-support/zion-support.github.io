@@ -18,22 +18,22 @@ const ParticleBackground: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle configuration,
     const particles: Particle[] = [],
     const particleCount = 10o0,
-    const colors = ['#3b82f6', '#8b5cf6', '#0o6b6d4', '#10b981', '#f59e0b'],
+    const colors = ['#3b82f6#8b5cf6', '#0o6b6d4#10b981', '#f59e0b'],
     // Initialize particles,
     for (let i = 0, i < particleCount, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 0.5;
-        vy: (Math.random() - 0.5) * 0.5;
-        size: Math.random() * 2 + 1;
-        color: colors[Math.floor(Math.random() * colors.length)];
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
         opacity: Math.random() * 0.5 + 0.1})}
 ,
     // Animation loop,
@@ -73,10 +73,10 @@ const ParticleBackground: React.FC = () => {
         })}),
       // Draw geometric shapes,
       drawGeometricShapes(ctx, canvas.width, canvas.height),
-      requestAnimationFrame(animate)};
+      requestAnimationFrame(animate)},
     animate(),
     return () => {
-      window.removeEventListener('resize', resizeCanvas)};
+      window.removeEventListener('resize', resizeCanvas)},
   }, []),
   const drawGeometricShapes = (ctx: CanvasRenderingContext2D, width: number, height: number) => {
     const time = Date.now() * 0.0o01,
@@ -122,11 +122,11 @@ const ParticleBackground: React.FC = () => {
       ctx.moveTo(0, y),
       ctx.lineTo(width, y),
       ctx.stroke()}
-  };
+  },
   return (
     <canvas
       ref={canvasRef}
       className="fixed inset-0 pointer-events-none z-0",
       style={{ opacity: 0.3 }}
-     />)};
-export default ParticleBackground;
+     />)},
+export default ParticleBackground,

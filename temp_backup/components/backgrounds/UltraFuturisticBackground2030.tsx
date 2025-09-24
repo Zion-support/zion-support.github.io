@@ -27,14 +27,14 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
       particles = [],
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.5;
-          vy: (Math.random() - 0.5) * 0.5;
-          size: Math.random() * 2 + 1;
-          color: ['#0o0ffff'#ff0o0ff'#ffff0o0'#0o0ff0o0'#ff0o080'][Math.floor(Math.random() * 5)];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          color: ['#0o0ffff'#ff0o0ff'#ffff0o0'#0o0ff0o0'#ff0o080'][Math.floor(Math.random() * 5)],
           opacity: Math.random() * 0.8 + 0.2})}
-    };
+    },
     const animate = () => {
       ctx.fillStyle = 'rgba(0o0.0o5)',
       ctx.fillRect(0canvas.widthcanvas.height),
@@ -70,17 +70,17 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
           }
         })}),
       ctx.globalAlpha = 1,
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     initParticles(),
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight,
-      initParticles()};
+      initParticles()},
     window.addEventListener('resize'handleResize),
     return () => {
       cancelAnimationFrame(animationId),
-      window.removeEventListener('resize'handleResize)};
+      window.removeEventListener('resize'handleResize)},
   }[]),
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">,
@@ -97,66 +97,66 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30",
           style={{ clipPath: 'polygon(50% 0%10o0% 25%10o0% 75%50% 10o0% 75%0% 25%)' }}
           animate={{
-            rotate: 360;
-            scale: [1.1];
+            rotate: 360,
+            scale: [1.1],
             opacity: [0.30.60.3]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30",
           style={{ clipPath: 'polygon(50% 0%10o0% 25%10o0% 75%50% 10o0% 75%0% 25%)' }}
           animate={{
-            rotate: -360;
-            scale: [10.91];
+            rotate: -360,
+            scale: [10.91],
             opacity: [0.30.60.3]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         {/* Floating Circles */}
         <motion.div,
           className="absolute top-60 left-1/4 w-16 h-16 rounded-full border border-pink-40o0/40",
           animate={{
-            y: [0-20];
+            y: [0-20],
             opacity: [0.40.80.4]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-80 right-1/3 w-20 h-20 rounded-full border border-blue-40o0/40",
           animate={{
-            y: [0o20];
+            y: [0o20],
             opacity: [0.40.80.4]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Animated Lines */}
         <motion.div,
           className="absolute top-32 left-1/2 w-1 h-32 bg-gradient-to-b from-cyan-40o0 to-transparent",
           animate={{
-            height: [326432];
+            height: [326432],
             opacity: [0.30.80.3]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-64 right-1/4 w-1 h-24 bg-gradient-to-b from-purple-40o0 to-transparent",
           animate={{
-            height: [24824];
+            height: [24824],
             opacity: [0.30.80.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
@@ -182,16 +182,16 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0-10o0];
-              opacity: [0o10];
+              y: [0-10o0],
+              opacity: [0o10],
               scale: [0o10]}}
             transition={{
-              duration: Math.random() * 10 + 10;
-              repeat: Infinity;
-              delay: Math.random() * 10;
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
+              delay: Math.random() * 10,
               ease: "easeInOut"}}
            />))}
       </div>,
@@ -201,5 +201,5 @@ const UltraFuturisticBackground20o30: React.FC<UltraFuturisticBackground20o30Pro
         <div className="absolute top-1/3 right-1/4 w-80 h-80 bg-purple-50o0/5 rounded-full blur-3xl"  />,
         <div className="absolute bottom-1/4 left-1/3 w-72 h-72 bg-pink-50o0/5 rounded-full blur-3xl"  />,
       </div>,
-    </div>)};
-export default UltraFuturisticBackground20o30;
+    </div>)},
+export default UltraFuturisticBackground20o30,

@@ -2,67 +2,67 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Shield;
-  Zap;
-  Target;
-  Atom;
-  BookOpen;
-  Truck;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Users;
-  Star;
-  Sparkles;
-  Cpu;
-  Lock;
-  Cloud;
-  Settings;
-  Eye;
-  Award;
-  Clock;
-  Heart;
-  Lightbulb;
-  Search;
-  User;
-  ShoppingCart;
-  Bell;
-  HelpCircle;
-  FileText;
-  Video;
-  Headphones;
-  Code;
-  Database;
-  Network;
-  Server;
-  Monitor;
-  Smartphone;
-  Camera;
-  Gamepad2;
-  Palette;
-  Music;
-  Film;
-  BookOpenCheck;
-  Building;
-  Home;
-  Briefcase;
-  Layers;
-  TrendingUp;
-  Smartphone as Mobile;
-  Globe as World;
-  Zap as Lightning;
-  Shield as Security;
-  Brain as AI;
-  Rocket as Launch;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Shield,
+  Zap,
+  Target,
+  Atom,
+  BookOpen,
+  Truck,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Search,
+  User,
+  ShoppingCart,
+  Bell,
+  HelpCircle,
+  FileText,
+  Video,
+  Headphones,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  Building,
+  Home,
+  Briefcase,
+  Layers,
+  TrendingUp,
+  Smartphone as Mobile,
+  Globe as World,
+  Zap as Lightning,
+  Shield as Security,
+  Brain as AI,
+  Rocket as Launch,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -76,646 +76,646 @@ interface NavigationItem {
   color?: string}
 ,
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Home';
-    href: '/';
-    icon: <Home className='w-5 h-5' />;
-    description: 'Welcome to Zion Tech Group';
-    color: 'from-cyan-50o0 to-blue-50o0';
-  };
+    name: 'Home',
+    href: '/',
+    icon: <Home className='w-5 h-5' />,
+    description: 'Welcome to Zion Tech Group',
+    color: 'from-cyan-50o0 to-blue-50o0'
+  },
   {
-    name: 'All Services';
-    href: '/comprehensive-services-showcase-20o25';
-    icon: <Globe className='w-5 h-5' />;
-    description: 'Complete portfolio of all technology services';
-    badge: 'Showcase';
-    featured: true;
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'All Services',
+    href: '/comprehensive-services-showcase-20o25',
+    icon: <Globe className='w-5 h-5' />,
+    description: 'Complete portfolio of all technology services',
+    badge: 'Showcase',
+    featured: true,
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
-        name: 'View All Services';
-        href: '/comprehensive-services-showcase-20o25';
-        description: 'Complete services portfolio';
-      };
+        name: 'View All Services',
+        href: '/comprehensive-services-showcase-20o25',
+        description: 'Complete services portfolio'
+      },
       {
-        name: 'Service Categories';
-        href: '/comprehensive-services-showcase-20o25#categories';
-        description: 'Browse by category';
-      };
+        name: 'Service Categories',
+        href: '/comprehensive-services-showcase-20o25#categories',
+        description: 'Browse by category'
+      },
       {
-        name: 'Pricing Comparison';
-        href: '/comprehensive-services-showcase-20o25#pricing';
-        description: 'Compare service costs';
-      };
+        name: 'Pricing Comparison',
+        href: '/comprehensive-services-showcase-20o25#pricing',
+        description: 'Compare service costs'
+      },
       {
-        name: 'Service Search';
-        href: '/comprehensive-services-showcase-20o25#search';
-        description: 'Find specific services';
-      };
+        name: 'Service Search',
+        href: '/comprehensive-services-showcase-20o25#search',
+        description: 'Find specific services'
+      },
       {
-        name: 'Latest Innovations';
-        href: '/revolutionary-20o25-services-showcase';
-        description: 'Cutting-edge solutions';
-      };
+        name: 'Latest Innovations',
+        href: '/revolutionary-20o25-services-showcase',
+        description: 'Cutting-edge solutions'
+      },
       {
-        name: '20o26 Services';
-        href: '/revolutionary-20o26-services';
-        description: 'Next generation solutions';
-      };
+        name: '20o26 Services',
+        href: '/revolutionary-20o26-services',
+        description: 'Next generation solutions'
+      },
       {
-        name: '20o27 Services';
-        href: '/revolutionary-20o27-services-showcase';
-        description: 'Future-ready services';
-      };
+        name: '20o27 Services',
+        href: '/revolutionary-20o27-services-showcase',
+        description: 'Future-ready services'
+      },
       {
-        name: 'Ultimate 20o26';
-        href: '/ultimate-20o26-services-showcase';
-        description: 'Premium service collection';
-      };
-    ];
-  };
+        name: 'Ultimate 20o26',
+        href: '/ultimate-20o26-services-showcase',
+        description: 'Premium service collection'
+      },
+    ],
+  },
   {
-    name: 'Micro SAAS';
-    href: '/micro-saas';
-    icon: <Rocket className='w-5 h-5' />;
-    description: 'Innovative business solutions for modern enterprises';
-    badge: 'Hot';
-    featured: true;
-    color: 'from-emerald-50o0 to-teal-50o0';
+    name: 'Micro SAAS',
+    href: '/micro-saas',
+    icon: <Rocket className='w-5 h-5' />,
+    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Hot',
+    featured: true,
+    color: 'from-emerald-50o0 to-teal-50o0',
     children: [
       {
-        name: 'Ultimate Real Micro SAAS';
-        href: '/ultimate-real-micro-saas-showcase-20o25';
-        description: 'Real, market-ready micro SAAS services';
-      };
+        name: 'Ultimate Real Micro SAAS',
+        href: '/ultimate-real-micro-saas-showcase-20o25',
+        description: 'Real, market-ready micro SAAS services',
+      },
       {
-        name: 'AI Business Intelligence';
-        href: '/ai-business-intelligence-suite';
-        description: 'AI-powered business insights';
-      };
+        name: 'AI Business Intelligence',
+        href: '/ai-business-intelligence-suite',
+        description: 'AI-powered business insights'
+      },
       {
-        name: 'AI Content Marketing';
-        href: '/ai-content-marketing-platform';
-        description: 'AI-driven content creation';
-      };
+        name: 'AI Content Marketing',
+        href: '/ai-content-marketing-platform',
+        description: 'AI-driven content creation'
+      },
       {
-        name: 'AI Customer Success';
-        href: '/ai-customer-success-platform';
-        description: 'Predict and prevent churn';
-      };
+        name: 'AI Customer Success',
+        href: '/ai-customer-success-platform',
+        description: 'Predict and prevent churn'
+      },
       {
-        name: 'AI Sales Intelligence';
-        href: '/ai-sales-intelligence-suite';
-        description: 'Transform your sales team';
-      };
+        name: 'AI Sales Intelligence',
+        href: '/ai-sales-intelligence-suite',
+        description: 'Transform your sales team'
+      },
       {
-        name: 'AI HR & Recruitment';
-        href: '/ai-hr-recruitment-platform';
-        description: 'AI-powered hiring solutions';
-      };
+        name: 'AI HR & Recruitment',
+        href: '/ai-hr-recruitment-platform',
+        description: 'AI-powered hiring solutions'
+      },
       {
-        name: 'AI Financial Analytics';
-        href: '/ai-financial-analytics-platform';
-        description: 'Data-driven financial insights';
-      };
+        name: 'AI Financial Analytics',
+        href: '/ai-financial-analytics-platform',
+        description: 'Data-driven financial insights'
+      },
       {
-        name: 'AI Supply Chain';
-        href: '/ai-supply-chain-optimization';
-        description: 'Optimize your supply chain';
-      };
+        name: 'AI Supply Chain',
+        href: '/ai-supply-chain-optimization',
+        description: 'Optimize your supply chain'
+      },
       {
-        name: 'AI Legal Tech';
-        href: '/ai-legal-document-analysis';
-        description: 'Legal document analysis';
-      };
+        name: 'AI Legal Tech',
+        href: '/ai-legal-document-analysis',
+        description: 'Legal document analysis'
+      },
       {
-        name: 'AI Healthcare';
-        href: '/ai-healthcare-analytics-platform';
-        description: 'Healthcare analytics platform';
-      };
+        name: 'AI Healthcare',
+        href: '/ai-healthcare-analytics-platform',
+        description: 'Healthcare analytics platform'
+      },
       {
-        name: 'AI Real Estate';
-        href: '/ai-real-estate-analytics';
-        description: 'Real estate market insights';
-      };
+        name: 'AI Real Estate',
+        href: '/ai-real-estate-analytics',
+        description: 'Real estate market insights'
+      },
       {
-        name: 'AI Education';
-        href: '/ai-education-technology-platform';
-        description: 'Personalized learning platform';
-      };
-    ];
-  };
+        name: 'AI Education',
+        href: '/ai-education-technology-platform',
+        description: 'Personalized learning platform'
+      },
+    ],
+  },
   {
-    name: 'AI & Consciousness';
-    href: '/ai-services';
-    icon: <Brain className='w-5 h-5' />;
-    description: 'Revolutionary AI consciousness and emotional intelligence';
-    badge: 'New';
-    featured: true;
-    color: 'from-violet-50o0 to-purple-60o0';
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className='w-5 h-5' />,
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    featured: true,
+    color: 'from-violet-50o0 to-purple-60o0',
     children: [
       {
-        name: 'AI Consciousness Evolution';
-        href: '/ai-consciousness-evolution-20o25';
-        description: 'Emotional intelligence and self-awareness';
-      };
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-20o25',
+        description: 'Emotional intelligence and self-awareness'
+      },
       {
-        name: 'AI Autonomous Business Operations';
-        href: '/ai-autonomous-business-operations';
-        description: 'Fully autonomous business management';
-      };
+        name: 'AI Autonomous Business Operations',
+        href: '/ai-autonomous-business-operations',
+        description: 'Fully autonomous business management'
+      },
       {
-        name: 'AI Autonomous Research';
-        href: '/ai-autonomous-research-assistant';
-        description: 'Self-directed AI research';
-      };
+        name: 'AI Autonomous Research',
+        href: '/ai-autonomous-research-assistant',
+        description: 'Self-directed AI research'
+      },
       {
-        name: 'AI Emotional Intelligence';
-        href: '/ai-emotional-intelligence-training';
-        description: 'EQ training platform';
-      };
+        name: 'AI Emotional Intelligence',
+        href: '/ai-emotional-intelligence-training',
+        description: 'EQ training platform'
+      },
       {
-        name: 'AI Predictive Maintenance';
-        href: '/ai-predictive-maintenance-platform';
-        description: 'Equipment failure prediction';
-      };
+        name: 'AI Predictive Maintenance',
+        href: '/ai-predictive-maintenance-platform',
+        description: 'Equipment failure prediction'
+      },
       {
-        name: 'AI Content Personalization';
-        href: '/ai-content-personalization-engine';
-        description: 'Personalized content delivery';
-      };
+        name: 'AI Content Personalization',
+        href: '/ai-content-personalization-engine',
+        description: 'Personalized content delivery'
+      },
       {
-        name: 'AI Autonomous Ecosystem';
-        href: '/ai-autonomous-ecosystem-manager';
-        description: 'Self-managing AI systems';
-      };
+        name: 'AI Autonomous Ecosystem',
+        href: '/ai-autonomous-ecosystem-manager',
+        description: 'Self-managing AI systems'
+      },
       {
-        name: 'AI Ethics & Governance';
-        href: '/ai-ethics-governance-framework';
-        description: 'Ethical AI frameworks';
-      };
+        name: 'AI Ethics & Governance',
+        href: '/ai-ethics-governance-framework',
+        description: 'Ethical AI frameworks'
+      },
       {
-        name: 'AI Creativity Studio';
-        href: '/ai-creativity-studio';
-        description: 'AI-powered creative content';
-      };
+        name: 'AI Creativity Studio',
+        href: '/ai-creativity-studio',
+        description: 'AI-powered creative content'
+      },
       {
-        name: 'AI Education Platform';
-        href: '/ai-education-platform';
-        description: 'Personalized AI learning';
-      };
+        name: 'AI Education Platform',
+        href: '/ai-education-platform',
+        description: 'Personalized AI learning'
+      },
       {
-        name: 'AI Healthcare Diagnostics';
-        href: '/ai-healthcare-diagnostics';
-        description: 'Medical AI solutions';
-      };
+        name: 'AI Healthcare Diagnostics',
+        href: '/ai-healthcare-diagnostics',
+        description: 'Medical AI solutions'
+      },
       {
-        name: 'AI Financial Intelligence';
-        href: '/ai-financial-intelligence';
-        description: 'Financial AI analytics';
-      };
+        name: 'AI Financial Intelligence',
+        href: '/ai-financial-intelligence',
+        description: 'Financial AI analytics'
+      },
       {
-        name: 'AI Sustainability Platform';
-        href: '/ai-sustainability-platform';
-        description: 'Environmental AI solutions';
-      };
+        name: 'AI Sustainability Platform',
+        href: '/ai-sustainability-platform',
+        description: 'Environmental AI solutions'
+      },
       {
-        name: 'AI Legal Contract Analyzer';
-        href: '/ai-legal-contract-analyzer';
-        description: 'Legal document analysis';
-      };
+        name: 'AI Legal Contract Analyzer',
+        href: '/ai-legal-contract-analyzer',
+        description: 'Legal document analysis'
+      },
       {
-        name: 'AI Autonomous Code Generation';
-        href: '/ai-autonomous-code-generation';
-        description: 'AI that writes code';
-      };
+        name: 'AI Autonomous Code Generation',
+        href: '/ai-autonomous-code-generation',
+        description: 'AI that writes code'
+      },
       {
-        name: 'AI Autonomous Marketing';
-        href: '/ai-autonomous-marketing-platform';
-        description: 'Autonomous marketing AI';
-      };
+        name: 'AI Autonomous Marketing',
+        href: '/ai-autonomous-marketing-platform',
+        description: 'Autonomous marketing AI'
+      },
       {
-        name: 'AI Autonomous Sales';
-        href: '/ai-autonomous-sales-platform';
-        description: 'AI that closes deals';
-      };
+        name: 'AI Autonomous Sales',
+        href: '/ai-autonomous-sales-platform',
+        description: 'AI that closes deals'
+      },
       {
-        name: 'AI Autonomous Customer Service';
-        href: '/ai-autonomous-customer-service';
-        description: 'Autonomous support AI';
-      };
+        name: 'AI Autonomous Customer Service',
+        href: '/ai-autonomous-customer-service',
+        description: 'Autonomous support AI'
+      },
       {
-        name: 'AI Autonomous HR';
-        href: '/ai-autonomous-hr-platform';
-        description: 'Autonomous HR management';
-      };
+        name: 'AI Autonomous HR',
+        href: '/ai-autonomous-hr-platform',
+        description: 'Autonomous HR management'
+      },
       {
-        name: 'Advanced AI Automation';
-        href: '/advanced-ai-automation-services';
+        name: 'Advanced AI Automation',
+        href: '/advanced-ai-automation-services',
         description:,
-          'AI automation for development, testing, DevOps, security, and data';
-      };
-    ];
-  };
+          'AI automation for development, testing, DevOps, security, and data',
+      },
+    ],
+  },
   {
-    name: 'Quantum & Emerging Tech';
-    href: '/quantum-services';
-    icon: <Atom className='w-5 h-5' />;
-    description: 'Quantum computing and breakthrough technologies';
-    badge: 'Hot';
-    featured: true;
-    color: 'from-indigo-50o0 to-blue-60o0';
+    name: 'Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className='w-5 h-5' />,
+    description: 'Quantum computing and breakthrough technologies',
+    badge: 'Hot',
+    featured: true,
+    color: 'from-indigo-50o0 to-blue-60o0',
     children: [
       {
-        name: 'Quantum-Secure Cloud Infrastructure';
-        href: '/quantum-secure-cloud-infrastructure';
-        description: 'Unbreakable quantum encryption';
-      };
+        name: 'Quantum-Secure Cloud Infrastructure',
+        href: '/quantum-secure-cloud-infrastructure',
+        description: 'Unbreakable quantum encryption'
+      },
       {
-        name: 'Quantum Financial Trading Platform';
-        href: '/quantum-financial-trading';
-        description: 'Ultra-fast quantum trading';
-      };
+        name: 'Quantum Financial Trading Platform',
+        href: '/quantum-financial-trading',
+        description: 'Ultra-fast quantum trading'
+      },
       {
-        name: 'Quantum Internet Security Platform';
-        href: '/quantum-internet-security';
-        description: 'Future-proof internet security';
-      };
+        name: 'Quantum Internet Security Platform',
+        href: '/quantum-internet-security',
+        description: 'Future-proof internet security'
+      },
       {
-        name: 'Space Resource Mining';
-        href: '/space-resource-mining-platform';
-        description: 'Asteroid mining and space resources';
-      };
+        name: 'Space Resource Mining',
+        href: '/space-resource-mining-platform',
+        description: 'Asteroid mining and space resources'
+      },
       {
-        name: 'Quantum Internet Security';
-        href: '/quantum-internet-security-platform';
-        description: 'Unbreakable encryption';
-      };
+        name: 'Quantum Internet Security',
+        href: '/quantum-internet-security-platform',
+        description: 'Unbreakable encryption'
+      },
       {
-        name: 'Brain-Computer Interface';
-        href: '/brain-computer-interface-platform';
-        description: 'Neural interface technology';
-      };
+        name: 'Brain-Computer Interface',
+        href: '/brain-computer-interface-platform',
+        description: 'Neural interface technology'
+      },
       {
-        name: 'Quantum Materials Discovery';
-        href: '/quantum-materials-discovery-platform';
-        description: 'Materials science acceleration';
-      };
+        name: 'Quantum Materials Discovery',
+        href: '/quantum-materials-discovery-platform',
+        description: 'Materials science acceleration'
+      },
       {
-        name: 'Autonomous Vehicle AI';
-        href: '/autonomous-vehicle-ai-platform';
-        description: 'Self-driving AI systems';
-      };
+        name: 'Autonomous Vehicle AI',
+        href: '/autonomous-vehicle-ai-platform',
+        description: 'Self-driving AI systems'
+      },
       {
-        name: 'Quantum Bio-Computing';
-        href: '/quantum-bio-computing-platform';
-        description: 'Quantum-biological hybrid processing';
-      };
+        name: 'Quantum Bio-Computing',
+        href: '/quantum-bio-computing-platform',
+        description: 'Quantum-biological hybrid processing'
+      },
       {
-        name: 'Quantum Energy Platform';
-        href: '/quantum-energy-platform';
-        description: 'Fusion power simulation';
-      };
+        name: 'Quantum Energy Platform',
+        href: '/quantum-energy-platform',
+        description: 'Fusion power simulation'
+      },
       {
-        name: 'Space Technology';
-        href: '/space-technology';
-        description: 'Advanced space solutions';
-      };
+        name: 'Space Technology',
+        href: '/space-technology',
+        description: 'Advanced space solutions'
+      },
       {
-        name: 'Metaverse Development';
-        href: '/metaverse-ai-development-platform';
-        description: 'Virtual world creation';
-      };
+        name: 'Metaverse Development',
+        href: '/metaverse-ai-development-platform',
+        description: 'Virtual world creation'
+      },
       {
-        name: 'Biotech AI Research';
-        href: '/biotech-ai-research-platform';
-        description: 'Biological AI research';
-      };
+        name: 'Biotech AI Research',
+        href: '/biotech-ai-research-platform',
+        description: 'Biological AI research'
+      },
       {
-        name: 'Autonomous Manufacturing';
-        href: '/autonomous-manufacturing';
-        description: 'Smart factory solutions';
-      };
-    ];
-  };
+        name: 'Autonomous Manufacturing',
+        href: '/autonomous-manufacturing',
+        description: 'Smart factory solutions'
+      },
+    ],
+  },
   {
-    name: 'Enterprise IT';
-    href: '/enterprise-it';
-    icon: <Shield className='w-5 h-5' />;
-    description: 'Advanced enterprise infrastructure and security solutions';
-    badge: 'Enterprise';
-    featured: true;
-    color: 'from-blue-50o0 to-cyan-60o0';
+    name: 'Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Shield className='w-5 h-5' />,
+    description: 'Advanced enterprise infrastructure and security solutions',
+    badge: 'Enterprise',
+    featured: true,
+    color: 'from-blue-50o0 to-cyan-60o0',
     children: [
       {
-        name: 'Zero Trust Security Architecture';
-        href: '/zero-trust-network-architecture';
-        description: 'Advanced security framework';
-      };
+        name: 'Zero Trust Security Architecture',
+        href: '/zero-trust-network-architecture',
+        description: 'Advanced security framework'
+      },
       {
-        name: 'Quantum Cybersecurity Services';
-        href: '/quantum-cybersecurity-services';
-        description: 'Future-proof security';
-      };
+        name: 'Quantum Cybersecurity Services',
+        href: '/quantum-cybersecurity-services',
+        description: 'Future-proof security'
+      },
       {
-        name: 'Enterprise AI Operations Center';
-        href: '/enterprise-ai-operations-center';
-        description: 'AI-powered operations';
-      };
+        name: 'Enterprise AI Operations Center',
+        href: '/enterprise-ai-operations-center',
+        description: 'AI-powered operations'
+      },
       {
-        name: 'Advanced IT Infrastructure';
-        href: '/advanced-it-infrastructure-services';
-        description: 'Next-gen infrastructure';
-      };
+        name: 'Advanced IT Infrastructure',
+        href: '/advanced-it-infrastructure-services',
+        description: 'Next-gen infrastructure'
+      },
       {
-        name: 'Comprehensive IT Services';
-        href: '/comprehensive-it-services';
-        description: 'Full IT solutions';
-      };
+        name: 'Comprehensive IT Services',
+        href: '/comprehensive-it-services',
+        description: 'Full IT solutions'
+      },
       {
-        name: 'Cutting-Edge IT Services';
-        href: '/cutting-edge-it-services';
-        description: 'Innovative IT solutions';
-      };
+        name: 'Cutting-Edge IT Services',
+        href: '/cutting-edge-it-services',
+        description: 'Innovative IT solutions'
+      },
       {
-        name: 'Enterprise IT 20o25';
-        href: '/enterprise-it-20o25-services';
-        description: '20o25 IT services';
-      };
+        name: 'Enterprise IT 20o25',
+        href: '/enterprise-it-20o25-services',
+        description: '20o25 IT services'
+      },
       {
-        name: 'Enterprise IT 20o26';
-        href: '/enterprise-it-20o26-services';
-        description: '20o26 IT services';
-      };
+        name: 'Enterprise IT 20o26',
+        href: '/enterprise-it-20o26-services',
+        description: '20o26 IT services'
+      },
       {
-        name: 'Enterprise IT 20o29';
-        href: '/enterprise-it-20o29-services';
-        description: '20o29 IT services';
-      };
+        name: 'Enterprise IT 20o29',
+        href: '/enterprise-it-20o29-services',
+        description: '20o29 IT services'
+      },
       {
-        name: 'Enterprise IT 20o31';
-        href: '/enterprise-it-20o31-services';
-        description: '20o31 IT services';
-      };
+        name: 'Enterprise IT 20o31',
+        href: '/enterprise-it-20o31-services',
+        description: '20o31 IT services'
+      },
       {
-        name: 'Enterprise IT 20o32';
-        href: '/enterprise-it-20o32-services';
-        description: '20o32 IT services';
-      };
-    ];
-  };
+        name: 'Enterprise IT 20o32',
+        href: '/enterprise-it-20o32-services',
+        description: '20o32 IT services'
+      },
+    ],
+  },
   {
-    name: 'Business Solutions';
-    href: '/business-solutions';
-    icon: <Target className='w-5 h-5' />;
+    name: 'Business Solutions',
+    href: '/business-solutions',
+    icon: <Target className='w-5 h-5' />,
     description:,
-      'AI-powered business intelligence, marketing, sales, and HR solutions';
-    badge: 'Business';
-    featured: true;
-    color: 'from-green-50o0 to-emerald-60o0';
+      'AI-powered business intelligence, marketing, sales, and HR solutions',
+    badge: 'Business',
+    featured: true,
+    color: 'from-green-50o0 to-emerald-60o0',
     children: [
       {
-        name: 'Innovative Business Solutions';
-        href: '/innovative-business-solutions';
-        description: 'AI-powered business solutions';
-      };
+        name: 'Innovative Business Solutions',
+        href: '/innovative-business-solutions',
+        description: 'AI-powered business solutions'
+      },
       {
-        name: 'Advanced AI Automation';
-        href: '/advanced-ai-automation-services';
-        description: 'AI automation services';
-      };
+        name: 'Advanced AI Automation',
+        href: '/advanced-ai-automation-services',
+        description: 'AI automation services'
+      },
       {
-        name: 'Innovative Business Solutions 20o25';
-        href: '/innovative-business-solutions-20o25';
-        description: '20o25 business solutions';
-      };
+        name: 'Innovative Business Solutions 20o25',
+        href: '/innovative-business-solutions-20o25',
+        description: '20o25 business solutions'
+      },
       {
-        name: 'Professional Services';
-        href: '/professional-services';
-        description: 'Professional business services';
-      };
+        name: 'Professional Services',
+        href: '/professional-services',
+        description: 'Professional business services'
+      },
       {
-        name: 'Industry Real Services';
-        href: '/industry-real-services';
-        description: 'Industry-specific solutions';
-      };
+        name: 'Industry Real Services',
+        href: '/industry-real-services',
+        description: 'Industry-specific solutions'
+      },
       {
-        name: 'Fintech Financial 20o25';
-        href: '/fintech-financial-20o25';
-        description: 'Financial technology solutions';
-      };
+        name: 'Fintech Financial 20o25',
+        href: '/fintech-financial-20o25',
+        description: 'Financial technology solutions'
+      },
       {
-        name: 'Healthcare Biotech 20o25';
-        href: '/healthcare-biotech-20o25';
-        description: 'Healthcare technology';
-      };
+        name: 'Healthcare Biotech 20o25',
+        href: '/healthcare-biotech-20o25',
+        description: 'Healthcare technology'
+      },
       {
-        name: 'Blockchain Web3 20o25';
-        href: '/blockchain-web3-20o25';
-        description: 'Blockchain solutions';
-      };
+        name: 'Blockchain Web3 20o25',
+        href: '/blockchain-web3-20o25',
+        description: 'Blockchain solutions'
+      },
       {
-        name: 'Education E-Learning 20o25';
-        href: '/education-elearning-20o25';
-        description: 'Educational technology';
-      };
-    ];
-  };
+        name: 'Education E-Learning 20o25',
+        href: '/education-elearning-20o25',
+        description: 'Educational technology'
+      },
+    ],
+  },
   {
-    name: 'Innovations';
-    href: '/innovations';
-    icon: <Sparkles className='w-5 h-5' />;
-    description: 'Cutting-edge innovations and emerging technologies';
-    badge: 'Innovation';
-    featured: true;
-    color: 'from-pink-50o0 to-rose-50o0';
+    name: 'Innovations',
+    href: '/innovations',
+    icon: <Sparkles className='w-5 h-5' />,
+    description: 'Cutting-edge innovations and emerging technologies',
+    badge: 'Innovation',
+    featured: true,
+    color: 'from-pink-50o0 to-rose-50o0',
     children: [
       {
-        name: 'Revolutionary 20o25 Innovations';
-        href: '/revolutionary-20o25-innovations';
-        description: '20o25 breakthrough innovations';
-      };
+        name: 'Revolutionary 20o25 Innovations',
+        href: '/revolutionary-20o25-innovations',
+        description: '20o25 breakthrough innovations'
+      },
       {
-        name: 'Revolutionary 20o26 Innovations';
-        href: '/revolutionary-20o26-innovations';
-        description: '20o26 breakthrough innovations';
-      };
+        name: 'Revolutionary 20o26 Innovations',
+        href: '/revolutionary-20o26-innovations',
+        description: '20o26 breakthrough innovations'
+      },
       {
-        name: 'Revolutionary 20o27 Innovations';
-        href: '/revolutionary-20o27-innovations';
-        description: '20o27 breakthrough innovations';
-      };
+        name: 'Revolutionary 20o27 Innovations',
+        href: '/revolutionary-20o27-innovations',
+        description: '20o27 breakthrough innovations'
+      },
       {
-        name: 'Next-Gen AI 20o26';
-        href: '/next-gen-ai-20o26-services';
-        description: 'Next generation AI';
-      };
+        name: 'Next-Gen AI 20o26',
+        href: '/next-gen-ai-20o26-services',
+        description: 'Next generation AI'
+      },
       {
-        name: 'Next-Gen AI Services';
-        href: '/next-generation-ai-services';
-        description: 'Advanced AI services';
-      };
+        name: 'Next-Gen AI Services',
+        href: '/next-generation-ai-services',
+        description: 'Advanced AI services'
+      },
       {
-        name: 'Next-Gen Innovations 20o25';
-        href: '/next-gen-innovations-20o25';
-        description: '20o25 innovations';
-      };
+        name: 'Next-Gen Innovations 20o25',
+        href: '/next-gen-innovations-20o25',
+        description: '20o25 innovations'
+      },
       {
-        name: 'Emerging Tech 20o25';
-        href: '/emerging-tech-20o25-innovations';
-        description: '20o25 emerging tech';
-      };
+        name: 'Emerging Tech 20o25',
+        href: '/emerging-tech-20o25-innovations',
+        description: '20o25 emerging tech'
+      },
       {
-        name: 'Emerging Tech 20o26';
-        href: '/emerging-tech-20o26-services';
-        description: '20o26 emerging tech';
-      };
+        name: 'Emerging Tech 20o26',
+        href: '/emerging-tech-20o26-services',
+        description: '20o26 emerging tech'
+      },
       {
-        name: 'Emerging Tech 20o27';
-        href: '/emerging-tech-20o27-services';
-        description: '20o27 emerging tech';
-      };
+        name: 'Emerging Tech 20o27',
+        href: '/emerging-tech-20o27-services',
+        description: '20o27 emerging tech'
+      },
       {
-        name: 'Emerging Tech Services';
-        href: '/emerging-technology-services';
-        description: 'Emerging technology';
-      };
+        name: 'Emerging Tech Services',
+        href: '/emerging-technology-services',
+        description: 'Emerging technology'
+      },
       {
-        name: 'Space Tech Services';
-        href: '/space-tech-services';
-        description: 'Space technology solutions';
-      };
+        name: 'Space Tech Services',
+        href: '/space-tech-services',
+        description: 'Space technology solutions'
+      },
       {
-        name: 'Quantum Advanced Services';
-        href: '/quantum-advanced-services';
-        description: 'Advanced quantum solutions';
-      };
+        name: 'Quantum Advanced Services',
+        href: '/quantum-advanced-services',
+        description: 'Advanced quantum solutions'
+      },
       {
-        name: 'Quantum AI Services 20o25';
-        href: '/quantum-ai-services-20o25';
-        description: '20o25 quantum AI';
-      };
+        name: 'Quantum AI Services 20o25',
+        href: '/quantum-ai-services-20o25',
+        description: '20o25 quantum AI'
+      },
       {
-        name: 'Quantum Space Services';
-        href: '/quantum-space-services';
-        description: 'Quantum space solutions';
-      };
-    ];
-  };
+        name: 'Quantum Space Services',
+        href: '/quantum-space-services',
+        description: 'Quantum space solutions'
+      },
+    ],
+  },
   {
-    name: 'Pricing';
-    href: '/pricing';
-    icon: <DollarSign className='w-5 h-5' />;
-    description: 'Transparent pricing for all our services';
-    badge: 'Pricing';
-    color: 'from-yellow-50o0 to-orange-50o0';
+    name: 'Pricing',
+    href: '/pricing',
+    icon: <DollarSign className='w-5 h-5' />,
+    description: 'Transparent pricing for all our services',
+    badge: 'Pricing',
+    color: 'from-yellow-50o0 to-orange-50o0',
     children: [
       {
-        name: 'Market Pricing';
-        href: '/market-pricing';
-        description: 'Competitive market pricing';
-      };
+        name: 'Market Pricing',
+        href: '/market-pricing',
+        description: 'Competitive market pricing'
+      },
       {
-        name: 'Pricing 20o33';
-        href: '/pricing-20o33';
-        description: 'Future pricing models';
-      };
+        name: 'Pricing 20o33',
+        href: '/pricing-20o33',
+        description: 'Future pricing models'
+      },
       {
-        name: 'Pricing Enhanced 20o26';
-        href: '/pricing-enhanced-20o26';
-        description: 'Enhanced 20o26 pricing';
-      };
+        name: 'Pricing Enhanced 20o26',
+        href: '/pricing-enhanced-20o26',
+        description: 'Enhanced 20o26 pricing'
+      },
       {
-        name: 'Revolutionary 20o25 Pricing';
-        href: '/revolutionary-20o25-pricing';
-        description: '20o25 revolutionary pricing';
-      };
+        name: 'Revolutionary 20o25 Pricing',
+        href: '/revolutionary-20o25-pricing',
+        description: '20o25 revolutionary pricing'
+      },
       {
-        name: 'Revolutionary 20o26 Pricing';
-        href: '/revolutionary-20o26-pricing';
-        description: '20o26 revolutionary pricing';
-      };
+        name: 'Revolutionary 20o26 Pricing',
+        href: '/revolutionary-20o26-pricing',
+        description: '20o26 revolutionary pricing'
+      },
       {
-        name: 'Revolutionary 20o28 Pricing';
-        href: '/revolutionary-20o28-pricing';
-        description: '20o28 revolutionary pricing';
-      };
-    ];
-  };
+        name: 'Revolutionary 20o28 Pricing',
+        href: '/revolutionary-20o28-pricing',
+        description: '20o28 revolutionary pricing'
+      },
+    ],
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className='w-5 h-5' />;
-    description: 'Knowledge base, documentation, and learning resources';
-    color: 'from-teal-50o0 to-cyan-50o0';
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Knowledge base, documentation, and learning resources',
+    color: 'from-teal-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'News & Updates';
-        href: '/news';
-        description: 'Latest news and updates';
-      };
+        name: 'News & Updates',
+        href: '/news',
+        description: 'Latest news and updates'
+      },
       {
-        name: 'API Documentation';
-        href: '/api-documentation-generator';
-        description: 'API documentation';
-      };
+        name: 'API Documentation',
+        href: '/api-documentation-generator',
+        description: 'API documentation'
+      },
       {
-        name: 'Analytics Dashboard';
-        href: '/analytics';
-        description: 'Analytics and insights';
-      };
+        name: 'Analytics Dashboard',
+        href: '/analytics',
+        description: 'Analytics and insights'
+      },
       {
-        name: 'Automation Tools';
-        href: '/automation';
-        description: 'Automation solutions';
-      };
+        name: 'Automation Tools',
+        href: '/automation',
+        description: 'Automation solutions'
+      },
       {
-        name: 'Support Center';
-        href: '/support';
-        description: 'Customer support';
-      };
-    ];
-  };
+        name: 'Support Center',
+        href: '/support',
+        description: 'Customer support'
+      },
+    ],
+  },
   {
-    name: 'Company';
-    href: '/company';
-    icon: <Building className='w-5 h-5' />;
-    description: 'About Zion Tech Group and our mission';
-    color: 'from-gray-50o0 to-slate-50o0';
+    name: 'Company',
+    href: '/company',
+    icon: <Building className='w-5 h-5' />,
+    description: 'About Zion Tech Group and our mission',
+    color: 'from-gray-50o0 to-slate-50o0',
     children: [
       {
-        name: 'Contact Us';
-        href: '/contact';
-        description: 'Get in touch with us';
-      };
+        name: 'Contact Us',
+        href: '/contact',
+        description: 'Get in touch with us'
+      },
       {
-        name: 'About Us';
-        href: '/about';
-        description: 'Learn about our company';
-      };
+        name: 'About Us',
+        href: '/about',
+        description: 'Learn about our company'
+      },
       {
-        name: 'Terms of Service';
-        href: '/terms';
-        description: 'Terms and conditions';
-      };
+        name: 'Terms of Service',
+        href: '/terms',
+        description: 'Terms and conditions'
+      },
       {
-        name: 'Privacy Policy';
-        href: '/privacy';
-        description: 'Privacy and data protection';
-      };
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection'
+      },
       {
-        name: 'Security';
-        href: '/security';
-        description: 'Security information';
-      };
-    ];
-  };
+        name: 'Security',
+        href: '/security',
+        description: 'Security information'
+      },
+    ],
+  },
 ],
 export default function UltraFuturisticNavigation20o36() {
   const [isOpen, setIsOpen] = useState(false),
@@ -723,14 +723,14 @@ export default function UltraFuturisticNavigation20o36() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
-    setIsOpen(false)};
+    setIsOpen(false)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-50o0 ${

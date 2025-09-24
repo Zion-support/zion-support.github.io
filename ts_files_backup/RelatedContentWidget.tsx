@@ -10,7 +10,7 @@ interface RelatedContentWidgetProps {
   posts: RelatedPost[]}
 ,
 export default function RelatedContentWidget({
-  titleposts;
+  titleposts,
 }: RelatedContentWidgetProps) {
   return (
     <section className='py-16 bg-gray-50'>,

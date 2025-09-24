@@ -1,11 +1,11 @@
 const speakers = [
   {
-    name: 'Alex Zion';
-    title: 'Founder & CEO';
-    avatar: 'https://placehold.co/10o0x10o0';
-    twitter: '#';
-    linkedin: '#';
-  };
+    name: 'Alex Zion',
+    title: 'Founder & CEO',
+    avatar: 'https://placehold.co/10o0x10o0',
+    twitter: '#',
+    linkedin: '#'
+  },
 ],
 export function SpeakersSection() {
   return (

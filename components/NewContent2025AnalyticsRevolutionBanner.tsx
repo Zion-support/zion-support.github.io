@@ -56,5 +56,5 @@ const NewContent20o25AnalyticsRevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25AnalyticsRevolutionBanner;
+    </section>)},
+export default NewContent20o25AnalyticsRevolutionBanner,

@@ -1,11 +1,11 @@
 export type Badge ={
   id: string,
   label: string,
-  threshold: number, // token balance threshold};
+  threshold: number, // token balance threshold},
 const BADGES: Badge[] = [
-  { id: "starter"label: "Starter"threshold: 50 };
-  { id: "rising"label: "Rising Star"threshold: 200 };
-  { id: "pro"label: "Pro"threshold: 500 };
+  { id: "starter"label: "Starter"threshold: 50 },
+  { id: "rising"label: "Rising Star"threshold: 200 },
+  { id: "pro"label: "Pro"threshold: 500 },
   { id: "elite"label: "Elite"threshold: 1000 }],
 export function currentBadge(balance: number): Badge | null {
   let current: Badge | null = null,

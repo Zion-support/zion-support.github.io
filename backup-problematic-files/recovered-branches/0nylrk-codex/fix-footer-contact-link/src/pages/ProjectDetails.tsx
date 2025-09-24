@@ -1,162 +1,162 @@
-import { useState, useEffect } from "react";
-import { useParams, useNavigate, Link } from "react-router-dom";
-import { format } from "date-fns";
-import { useAuth } from "@/hooks/useAuth";
-import { useProjects } from "@/hooks/useProjects";
-import { AppHeader } from "@/layout/AppHeader";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { Project, ProjectStatus } from "@/types/projects";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react",
+import { useParams, useNavigate, Link } from "react-router-dom",
+import { format } from "date-fns",
+import { useAuth } from "@/hooks/useAuth",
+import { useProjects } from "@/hooks/useProjects",
+import { AppHeader } from "@/layout/AppHeader",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { Project, ProjectStatus } from "@/types/projects",
+import { Button } from "@/components/ui/button",
 import {
-import { Avatar } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Textarea } from "@/components/ui/textarea";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection";
-  Card;
-  CardContent;
-  CardDescription;
-  CardFooter;
-  CardHeader;
-  CardTitle} from "@/components/ui/card";
-  Tabs;
-  TabsContent;
-  TabsList;
-  TabsTrigger} from "@/components/ui/tabs";
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
-  AlertDialogTitle;
-  AlertDialogTrigger} from "@/components/ui/alert-dialog";
-  AlertCircle;
-  Calendar;
-  CheckCircle2;
-  Clock;
-  FileText;
-  Layers;
-  MessageSquare;
-  Video;
-  User;
-  XCircle} from "lucide-react";
+import { Avatar } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Textarea } from "@/components/ui/textarea",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { ProjectReviewSection } from "@/components/projects/reviews/ProjectReviewSection",
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle} from "@/components/ui/card",
+  Tabs,
+  TabsContent,
+  TabsList,
+  TabsTrigger} from "@/components/ui/tabs",
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
+  AlertDialogTitle,
+  AlertDialogTrigger} from "@/components/ui/alert-dialog",
+  AlertCircle,
+  Calendar,
+  CheckCircle2,
+  Clock,
+  FileText,
+  Layers,
+  MessageSquare,
+  Video,
+  User,
+  XCircle} from "lucide-react",
 function ProjectDetailsContent() {
   // useParams may be untyped in this environment, so avoid passing a,
   // type argument and cast the result instead to prevent TS2347 errors.,
-  const { projectId } = useParams() as { projectId?:string };
-  const { user } = useAuth();
-  const navigate = useNavigate();
-  const { getProjectById, updateProjectStatus } = useProjects();
-  const [project, setProject] = useState<Project | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [notes, setNotes] = useState<any[]>([]);
-  const [newNote, setNewNote] = useState("");
-  const [isSubmittingNote, setIsSubmittingNote] = useState(false);
-  const [activeTab, setActiveTab] = useState("details");
+  const { projectId } = useParams() as { projectId?:string },
+  const { user } = useAuth(),
+  const navigate = useNavigate(),
+  const { getProjectById, updateProjectStatus } = useProjects(),
+  const [project, setProject] = useState<Project | null>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [notes, setNotes] = useState<any[]>([]),
+  const [newNote, setNewNote] = useState(""),
+  const [isSubmittingNote, setIsSubmittingNote] = useState(false),
+  const [activeTab, setActiveTab] = useState("details"),
   // Load project data,
   useEffect(() => {
     async function loadProject() {
-      if (!projectId) return;
-      setIsLoading(true);
-      const projectData = await getProjectById(projectId);
+      if (!projectId) return,
+      setIsLoading(true),
+      const projectData = await getProjectById(projectId),
       if (projectData) {
-        setProject(projectData);
+        setProject(projectData),
         // Now fetch notes,
-        fetchProjectNotes(projectId);
+        fetchProjectNotes(projectId),
       } else {
         toast({
-          title:"Project not found";
-          description:"The requested project could not be found.";
-          variant: "destructive"});
-        navigate("/dashboard");
+          title: "Project not found",
+          description:"The requested project could not be found.",
+          variant: "destructive"}),
+        navigate("/dashboard"),
       }
       ,
-      setIsLoading(false);
+      setIsLoading(false),
     }
     ,
-    loadProject();
-  }, [projectId]);
+    loadProject(),
+  }, [projectId]),
   const fetchProjectNotes = async (projectId: string) => {
     try {
       const { data, error } = await supabase,
         .from("project_notes"),
         .select(`,
-          *;
+          *,
           created_by_profile:profiles!user_id(display_name, avatar_url),
         `),
         .eq("project_id", projectId),
-        .order("created_at", { ascending: false });
-      if (error) throw error;
-      setNotes(data || []);
+        .order("created_at", { ascending: false }),
+      if (error) throw error,
+      setNotes(data || []),
     } catch (err) {
-      console.error("Error fetching project notes:", err);
+      console.error("Error fetching project notes:", err),
     }
-  };
+  },
   const handleSubmitNote = async () => {
-    if (!newNote.trim() || !project || !user) return;
-    setIsSubmittingNote(true);
+    if (!newNote.trim() || !project || !user) return,
+    setIsSubmittingNote(true),
     try {
       const { data, error } = await supabase,
         .from("project_notes"),
         .insert({
-          project_id:project.id;
-          user_id:user.id;
+          project_id: project.id,
+          user_id:user.id,
           content: newNote}),
-        .select();
-      if (error) throw error;
+        .select(),
+      if (error) throw error,
       // Refresh notes,
-      fetchProjectNotes(project.id);
-      setNewNote("");
+      fetchProjectNotes(project.id),
+      setNewNote(""),
       toast({
-        title:"Note added";
-        description: "Your note has been added to the project."});
+        title: "Note added",
+        description: "Your note has been added to the project."}),
     } catch (err: any) {
-      console.error("Error adding note:", err);
+      console.error("Error adding note:", err),
       toast({
-        title:"Failed to add note";
-        description:err.message || "An error occurred while adding your note.";
-        variant: "destructive"});
+        title: "Failed to add note",
+        description:err.message || "An error occurred while adding your note.",
+        variant: "destructive"}),
     } finally {
-      setIsSubmittingNote(false);
+      setIsSubmittingNote(false),
     }
-  };
+  },
   const handleStatusChange = async (newStatus: ProjectStatus) => {
-    if (!project) return;
-    const success = await updateProjectStatus(project.id, newStatus);
+    if (!project) return,
+    const success = await updateProjectStatus(project.id, newStatus),
     if (success) {
       setProject({
-        ...project;
-        status: newStatus});
+        ...project,
+        status: newStatus}),
       // If offer was accepted, show a special toast,
       if (newStatus === "offer_accepted") {
         toast({
-          title:"Offer Accepted! 🎉";
-          description: "The project is now in progress. Congratulations!"});
+          title: "Offer Accepted! 🎉",
+          description: "The project is now in progress. Congratulations!"}),
       }
     }
-  };
+  },
   const getStatusBadge = (status: ProjectStatus) => {
     switch (status) {
-      case "offer_sent":return <Badge variant="outline">Offer Sent</Badge>;
+      case "offer_sent": return <Badge variant="outline">Offer Sent</Badge>,
       case "offer_accepted":,
-        return <Badge className="bg-green-10o0 text-green-80o0">Offer Accepted</Badge>;
+        return <Badge className="bg-green-10o0 text-green-80o0">Offer Accepted</Badge>,
       case "changes_requested":,
-        return <Badge variant="secondary">Changes Requested</Badge>;
+        return <Badge variant="secondary">Changes Requested</Badge>,
       case "in_progress":,
-        return <Badge className="bg-blue-10o0 text-blue-80o0">In Progress</Badge>;
+        return <Badge className="bg-blue-10o0 text-blue-80o0">In Progress</Badge>,
       case "completed":,
-        return <Badge variant="default">Completed</Badge>;
+        return <Badge variant="default">Completed</Badge>,
       case "canceled":,
-        return <Badge variant="destructive">Canceled</Badge>;
+        return <Badge variant="destructive">Canceled</Badge>,
       default:  ,
-        return <Badge variant="outline">{status}</Badge>;
+        return <Badge variant="outline">{status}</Badge>,
     }
-  };
+  },
   if (isLoading) {
     return (
       <div className="container mx-auto py-8">,
@@ -166,7 +166,7 @@ function ProjectDetailsContent() {
             <p>Loading project details...</p>,
           </div>,
         </div>,
-      </div>);
+      </div>),
   }
   ,
   if (!project) {
@@ -184,20 +184,20 @@ function ProjectDetailsContent() {
             </Button>,
           </CardContent>,
         </Card>,
-      </div>);
+      </div>),
   }
   ,
   // Check if user is either the client or the talent,
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
   if (!isClient && !isTalent) {
-    navigate("/unauthorized");
-    return null;
+    navigate("/unauthorized"),
+    return null,
   }
   ,
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   return (
     <>,
       <SEO
@@ -234,20 +234,20 @@ function ProjectDetailsContent() {
             </Button>,
           </CardContent>,
         </Card>,
-      </div>);
+      </div>),
   }
   ,
   // Check if user is either the client or the talent,
-  const isClient = user?.id === project.client_id;
-  const isTalent = user?.id === project.talent_id;
+  const isClient = user?.id === project.client_id,
+  const isTalent = user?.id === project.talent_id,
   if (!isClient && !isTalent) {
-    navigate("/unauthorized");
-    return null;
+    navigate("/unauthorized"),
+    return null,
   }
   ,
-  const isOfferPending = project.status === "offer_sent";
-  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status);
-  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status);
+  const isOfferPending = project.status === "offer_sent",
+  const isOfferAccepted = ["offer_accepted", "in_progress", "completed"].includes(project.status),
+  const isActiveProject = ["offer_accepted", "in_progress"].includes(project.status),
   return (
     <>,
       <SEO
@@ -645,14 +645,14 @@ function ProjectDetailsContent() {
         </div>,
       </main>,
       <Footer  />,
-    </>);
+    </>),
 }
 ,
 export default function ProjectDetails() {
   return (
     <ProtectedRoute>,
       <ProjectDetailsContent  />,
-    </ProtectedRoute>);
+    </ProtectedRoute>),
 } import {
   Card,
 CardContent,
@@ -684,14 +684,14 @@ User,
 //Now fetch notes}setIsLoading (false)}loadProject ()}, [projectId]),
 .select (`*,
 created by profile:profiles!user id (display name, avatar url) `)}
-};
+},
 const handleSubmitNote = async () => {
   if (!newNote.trim () || !project || !user) return,
 try {
   if (error) throw error,
 //Refresh notes}finally {
   setIsSubmittingNote (false)}
-};
+},
 const handleStatusChange = async (newStatus: ProjectStatus) => {
   if (!project) return,
 const success = await updateProjectStatus (project.id, newStatus),
@@ -703,7 +703,7 @@ status: newStatus}),
   toast ({
 }
 }
-};
+},
 case "offer accepted": return <Badge className="bg-green-10o0 text-green-80o0">Offer Accepted</Badge>,
 case "changes requested": return <Badge variant="secondary">Changes Requested</Badge>,
 case "in progress": return <Badge className="bg-blue-10o0 text-blue-80o0">In Progress</Badge>,
@@ -711,7 +711,7 @@ case "completed": return <Badge variant="default">Completed</Badge>,
 case "canceled": return <Badge variant="destructive">Canceled</Badge>,
 default: return <Badge variant="outline"> {
   status}</Badge>}
-};
+},
 <p>Loading project details...</p> </div> </div> </div> <Card> <CardContent className="flex flex-col items-center justify-center py-10" > <AlertCircle className="h-10 w-10 text-muted-foreground mb-4"  /> <h2 className="text-xl font-bold mb-2" >Project Not Found</h2> <p className="text-muted-foreground mb-4" > The project you're looking for doesn't exist or you don't have access to it. </p> <Button onClick={
   () => navigate ("/dashboard")}> Return to Dashboard </Button> </CardContent> </Card> </div>)}//Check if user is either the client or the talent container mx-auto px-4 py-8"> <div className=" mb-6"> <div className=" flex flex-col md:flex-row justify-between md:items-center gap-4 mb-2"> <div> </span> </div> </div> <AlertDialog> <AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4" /> Accept Offer </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Accept Project Offer?</AlertDialogTitle> <AlertDialogDescription> By accepting this offer, you agree to the project terms and timeline. This will initiate the contract and start the project. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={
   () => handleStatusChange (" offer accepted")}> Accept Offer </AlertDialogAction> </AlertDialogFooter> </AlertDialogContent> </AlertDialog> </Button> </>)}<AlertDialogTrigger asChild> <Button variant=" default"> <CheckCircle2 className=" mr-2 h-4 w-4" /> Mark as Completed </Button> </AlertDialogTrigger> <AlertDialogContent> <AlertDialogHeader> <AlertDialogTitle>Mark Project as Completed?</AlertDialogTitle> <AlertDialogDescription> This will finalize the project and mark it as complete. Make sure all deliverables have been provided and approved. </AlertDialogDescription> </AlertDialogHeader> <AlertDialogFooter> <AlertDialogCancel>Cancel</AlertDialogCancel> <AlertDialogAction onClick={

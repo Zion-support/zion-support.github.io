@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Data Analysis Platform | Zion Tech Group';
+  title: 'AI Data Analysis Platform | Zion Tech Group',
   description:,
-    'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.';
-};
+    'Build AI-powered data analysis platforms with automated insights, predictive analytics, and business intelligence. Professional data AI solutions starting at $18k.',
+},
 export default function AIDataAnalysisPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function AIDataAnalysisPage() {
           AI Data Analysis Platform,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build AI-powered data analysis platforms with automated insights;
+          Build AI-powered data analysis platforms with automated insights,
           predictive analytics, and intelligent business intelligence tools.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Automated Insights',
             details={[
-              'Pattern recognition';
-              'Anomaly detection';
-              'Trend analysis';
-              'Correlation discovery';
-              'Automated reporting';
-              'Natural language queries';
-              'Insight recommendations';
+              'Pattern recognitionAnomaly detection',
+              'Trend analysisCorrelation discovery',
+              'Automated reportingNatural language queries',
+              'Insight recommendations',
             ]}
           />,
           <Item
             title='Predictive Analytics',
             details={[
-              'Forecasting models';
-              'Risk assessment';
-              'Customer behavior prediction';
-              'Demand forecasting';
-              'Churn prediction';
-              'Revenue optimization';
-              'Scenario planning';
+              'Forecasting modelsRisk assessment',
+              'Customer behavior predictionDemand forecasting',
+              'Churn predictionRevenue optimization',
+              'Scenario planning',
             ]}
           />,
           <Item
             title='Data Processing',
             details={[
-              'Real-time data ingestion';
-              'Data cleaning automation';
-              'Feature engineering';
-              'Model training';
-              'Data validation';
-              'ETL pipelines';
-              'Data quality monitoring';
+              'Real-time data ingestionData cleaning automation',
+              'Feature engineeringModel training',
+              'Data validationETL pipelines',
+              'Data quality monitoring',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$18k–$35k',
           duration='8–12 weeks',
           features={[
-            'Basic data analysis';
-            'Automated insights';
-            'Simple dashboards';
-            'Data visualization';
-            'Basic ML models';
-            'API access';
-            'Standard support';
+            'Basic data analysisAutomated insights',
+            'Simple dashboardsData visualization',
+            'Basic ML modelsAPI access',
+            'Standard support',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$35k–$70k',
           duration='12–20 weeks',
           features={[
-            'Everything in Insights';
-            'Advanced ML models';
-            'Predictive forecasting';
-            'Real-time processing';
-            'Custom algorithms';
-            'Advanced visualizations';
-            'Priority support';
+            'Everything in InsightsAdvanced ML models',
+            'Predictive forecastingReal-time processing',
+            'Custom algorithmsAdvanced visualizations',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$70k+',
           duration='16–28 weeks',
           features={[
-            'Everything in Predictive';
-            'Custom AI development';
-            'Advanced security';
-            'Multi-tenant architecture';
-            'Dedicated support';
-            'SLA guarantees';
-            'On-premise deployment';
+            'Everything in PredictiveCustom AI development',
+            'Advanced securityMulti-tenant architecture',
+            'Dedicated supportSLA guarantees',
+            'On-premise deployment',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

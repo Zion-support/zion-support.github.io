@@ -1,55 +1,55 @@
-import React from "react";
+import React from "react",
 import {Link} from "react-router-dom",
 import {ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone} from "lucide-react",
-import React from "react";;
-import { Link } from "react-router-dom";
+import React from "react",
+import { Link } from "react-router-dom",
 import {
 import React from './react',
 import { Link } from './react-router-dom',
 import { ArrowRight, Search, Users, Briefcase, Settings, MessageSquare, Smartphone } from './lucide-react',
-  ArrowRight;
-  Search;
-  Users;
-  Briefcase;
-  Settings;
-  MessageSquare;
-  Smartphone} from "lucide-react";
+  ArrowRight,
+  Search,
+  Users,
+  Briefcase,
+  Settings,
+  MessageSquare,
+  Smartphone} from "lucide-react",
 export function QuickAccess() {
   const quickLinks = [
     {
       title: "AI Matcher",
       description: "Find the perfect match for your project needs",
       icon: <Search className="h-6 w-6 text-zion-cyan" />,
-      title: "AI Matcher";
-      description: "Find the perfect match for your project needs";
-      icon: <Search className="h-6 w-6 text-zion-cyan" />;
-      link: "/match"};
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/match"},
       link: "/match"}
-    };
+    },
     {
       title: "Talent Directory",
       description: "Browse verified tech specialists",
       icon: <Users className="h-6 w-6 text-zion-purple" />,
       link: "/talent"}
-    };
+    },
     {
       title: "Service Marketplace",
       description: "Discover professional services",
       icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
       link: "/services"}
-    };
+    },
     {
       title: "Equipment Catalog",
       description: "Find specialized hardware",
       icon: <Settings className="h-6 w-6 text-zion-purple" />,
       link: "/equipment"}
-    };
+    },
     {
       title: "Community",
       description: "Connect with tech professionals",
       icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
       link: "/community"}
-    };
+    },
     {
       title: "Mobile App",
       description: "Zion on the go",
@@ -61,11 +61,11 @@ export /**,
 function QuickAccess() {
   const quick_links = [
     {
-      title: "AI Matcher";
-      description: "Find the perfect match for your project needs";
-      icon: <Search className="h - 6 w - 6 text - zion - cyan" />;
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h - 6 w - 6 text - zion - cyan" />,
       link: "/match"}
-  ];
+  ],
   return (
     <section className="py-12 bg-zion-blue-dark">,
       <div className="container mx-auto px-4">,
@@ -93,43 +93,43 @@ function QuickAccess() {
                 <ArrowRight className="ml-1 h-3 w-3" />,
               </div>,
             </Link>,
-  ArrowRight;
-  Search;
-  Users;
-  Briefcase;
-  Settings;
-  MessageSquare;
-  Smartphone} from "lucide-react";
+  ArrowRight,
+  Search,
+  Users,
+  Briefcase,
+  Settings,
+  MessageSquare,
+  Smartphone} from "lucide-react",
 export function QuickAccess() {
   const quickLinks = [
     {
-      title: "AI Matcher";
-      description: "Find the perfect match for your project needs";
-      icon: <Search className="h-6 w-6 text-zion-cyan" />;
-      link: "/match"};
+      title: "AI Matcher",
+      description: "Find the perfect match for your project needs",
+      icon: <Search className="h-6 w-6 text-zion-cyan" />,
+      link: "/match"},
     {
-      title: "Talent Directory";
-      description: "Browse verified tech specialists";
-      icon: <Users className="h-6 w-6 text-zion-purple" />;
-      link: "/talent"};
+      title: "Talent Directory",
+      description: "Browse verified tech specialists",
+      icon: <Users className="h-6 w-6 text-zion-purple" />,
+      link: "/talent"},
     {
-      title: "Service Marketplace";
-      description: "Discover professional services";
-      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />;
-      link: "/services"};
+      title: "Service Marketplace",
+      description: "Discover professional services",
+      icon: <Briefcase className="h-6 w-6 text-zion-cyan" />,
+      link: "/services"},
     {
-      title: "Equipment Catalog";
-      description: "Find specialized hardware";
-      icon: <Settings className="h-6 w-6 text-zion-purple" />;
-      link: "/equipment"};
+      title: "Equipment Catalog",
+      description: "Find specialized hardware",
+      icon: <Settings className="h-6 w-6 text-zion-purple" />,
+      link: "/equipment"},
     {
-      title: "Community";
-      description: "Connect with tech professionals";
-      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />;
-      link: "/community"};
+      title: "Community",
+      description: "Connect with tech professionals",
+      icon: <MessageSquare className="h-6 w-6 text-zion-cyan" />,
+      link: "/community"},
     {
-      title: "Mobile App";
-      description: "Zion on the go";
+      title: "Mobile App",
+      description: "Zion on the go",
       icon: <Smartphone className="h-6 w-6 text-zion-purple" />,
       link: "/mobile-launch"}
   ],

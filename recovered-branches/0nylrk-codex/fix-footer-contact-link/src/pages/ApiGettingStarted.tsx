@@ -1,30 +1,30 @@
-import React from "react";
+import React from "react",
 import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
 import {CodeBlock} from "@/components/developers/CodeBlock",
-import React from "react";;
+import React from "react",
 import { CodeBlock } from "@/components/developers/CodeBlock",
-import ApiDocsLayout from "@/components/developers/ApiDocsLayout";
-import { CodeBlock } from "@/components/developers/CodeBlock";
+import ApiDocsLayout from "@/components/developers/ApiDocsLayout",
+import { CodeBlock } from "@/components/developers/CodeBlock",
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\,
   https: //api.zionai.com/v1/jobs \\,
-  -H "Authorization: Bearer YOUR_API_KEY"`;
+  -H "Authorization: Bearer YOUR_API_KEY"`,
 const quickStartJs = `import axios from 'axios',
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \\,
   https: //api.zionai.com/v1/jobs \\,
   -H "Authorization: Bearer YOUR_API_KEY"`,
 const quickStartJs = `import axios from 'axios',
-  -H "Authorization: Bearer YOUR_API_KEY"`;
-  const quickStartJs = `import axios from 'axios';
-  -H "Authorization: Bearer YOUR_API_KEY"`;
-  const quickStartJs = `import axios from 'axios';
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+  const quickStartJs = `import axios from 'axios',
+  -H "Authorization: Bearer YOUR_API_KEY"`,
+  const quickStartJs = `import axios from 'axios',
 const response = await axios.get('https://api.zionai.com/v1/jobs', {
   headers: {
     Authorization: \`Bearer \${API_KEY}\`}
 }),
-// // console.log(response.data),`});
-// // // // // console.log(response.data),`;
+// // console.log(response.data),`}),
+// // // // // console.log(response.data),`,
   return (
     <ApiDocsLayout>,
       <div className="max-w-3xl prose prose-invert">,
@@ -82,11 +82,11 @@ const response = await axios.get('https://api.zionai.com/v1/jobs', {
         </div>,
       </div>,
     </ApiDocsLayout>)}
-export default ApiGettingStarted;
+export default ApiGettingStarted,
 export function ApiGettingStarted() {
   const authExample = `curl -X GET \,
   https: //api && api.zionai.com/v1/jobs \,
-  -H "Authorization: Bearer YOUR_API_KEY"`;
+  -H "Authorization: Bearer YOUR_API_KEY"`,
   const quickStartJs = `import axios from 'axios',
 const response = await axios && axios.get('https://api && api.zionai.com/v1/jobs', {
   headers: {
@@ -149,5 +149,5 @@ console && // // console.log(response && response.data),`,
       </div>,
     </ApiDocsLayout>)}
 ,
-export default ApiGettingStarted;
+export default ApiGettingStarted,
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

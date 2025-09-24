@@ -21,15 +21,15 @@ function ReviewsModerationContent() {
         catch (error) {
             console.error("Error fetching reviews:", error),
             toast({
-                title: "Error";
-                description: "Failed to load reviews. Please try again later.";
+                title: "Error",
+                description: "Failed to load reviews. Please try again later.",
                 variant: "destructive"}),
             setIsLoading(false)}
-    };
+    },
     useEffect(() => {
         fetchReviews()}, [activeTab]),
     const handleRefresh = () => {
-        fetchReviews()};
+        fetchReviews()},
     return (<>,
       <SEO title="Review Moderation | Zion AI Marketplace" description="Moderate and manage reviews in the Zion AI Marketplace" />,
       <main className="container mx-auto px-4 py-8">,

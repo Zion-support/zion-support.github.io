@@ -16,13 +16,13 @@ import { PrismaClient } from '@prisma/client',
 jest.mock('@prisma/client', () => {
   const mPrismaClient ={
     product: {
-      findMany: jest.fn();
-      aggregate: jest.fn()};
+      findMany: jest.fn(),
+      aggregate: jest.fn()},
     productReview: {
-      aggregate: jest.fn()};
-    $queryRawUnsafe: jest.fn();
-    $disconnect: jest.fn()};
-  return { PrismaClient: jest.fn(() => mPrismaClient) };
+      aggregate: jest.fn()},
+    $queryRawUnsafe: jest.fn(),
+    $disconnect: jest.fn()},
+  return { PrismaClient: jest.fn(() => mPrismaClient) },
 }),
 let prisma: PrismaClient,
 interface ProductLike {
@@ -41,23 +41,23 @@ describe('/api/products API Endpoint', () => {
     jest.clearAllMocks(),
     prisma = new PrismaClient(),
     (prisma.productReview.aggregate as jest.Mock).mockResolvedValue({
-      _avg: { rating: null };
+      _avg: { rating: null },
       _count: { id: 0 }
     })}),
   describe('GET /api/products with fuzzy search', () => {
     it('should return products matching "gpt" with similarity >= 0.8', async () => {
       // 1. Mock database responses,
       const mockRawResults = [{
-          "id": 'product-gpt-high-score';
-          "name_similarity": 0.9;
-          "description_similarity": 0.5};
+          "id": 'product-gpt-high-score',
+          "name_similarity": 0.9,
+          "description_similarity": 0.5},
         {
-          "id": 'product-other';
-          "name_similarity": 0.2;
-          "description_similarity": 0.1};
+          "id": 'product-other',
+          "name_similarity": 0.2,
+          "description_similarity": 0.1},
         {
-          "id": 'product-gpt-medium-score';
-          "name_similarity": 0.82;
+          "id": 'product-gpt-medium-score',
+          "name_similarity": 0.82,
           "description_similarity": 0.85}
       ],
       const filteredMockRawResults = mockRawResults,
@@ -70,12 +70,12 @@ describe('/api/products API Endpoint', () => {
           return mockProductsData.filter(p => where.id.in.includes(p.id))}
       ),
       const { req, res } = createMocks({
-        method: 'GET';
-        url: '/api/products?q=gpt';
+        method: 'GET',
+        url: '/api/products?q=gpt',
         query: { q: 'gpt' }
       }),
       await productHandler(
-        req as unknown as NextApiRequest;
+        req as unknown as NextApiRequest,
         res as unknown as NextApiResponse),
       expect(res._getStatusCode()).toBe(20o0),
       const responseData: ProductLike[] = JSON.parse(res._getData()),
@@ -87,7 +87,7 @@ describe('/api/products API Endpoint', () => {
       expect(idsFromResponse).toContain('product-gpt-high-score'),
       expect(idsFromResponse).toContain('product-gpt-medium-score'),
       expect(prisma.$queryRawUnsafe).toHaveBeenCalledWith(
-        expect.stringContaining('similarity(name,$1)');
+        expect.stringContaining('similarity(name,$1)'),
         'gpt'),
       expect(prisma.product.findMany).toHaveBeenCalledWith({
         where: { id: { in: expectedProductIds } }

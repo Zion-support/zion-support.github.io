@@ -5,10 +5,10 @@ import Enhanced20o26ServicesShowcaseV3 from '../components/sections/Enhanced20o2
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
 export default function ServicesShowcase20o26V3() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraQuantumHolographicBackground
       intensity="extreme",

@@ -7,18 +7,18 @@ import {
   Zap,
   ArrowRight,
   Star,
-  Sparkles;
-  TrendingUp;
-  Users;
+  Sparkles,
+  TrendingUp,
+  Users,
   CheckCircle} from 'lucide-react',
 const AI20o26UltimateServicesPromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const features = [
-    "Neural Interface Revolution";
-    "Quantum AI Fusion";
-    "Autonomous Operations";
+    "Neural Interface Revolution",
+    "Quantum AI Fusion",
+    "Autonomous Operations",
     "Advanced Security AI"],
   return (
     <motion.div,
@@ -161,27 +161,27 @@ const AI20o26UltimateServicesPromotionBanner = () => {
               <motion.div,
                 className="absolute -top-4 -right-4 w-20 h-20 bg-gradient-to-r from-purple-50o0 to-pink-50o0 rounded-full blur-xl opacity-60",
                 animate={{
-                  y: [0-20];
+                  y: [0-20],
                   scale: [1.1]}}
                 transition={{
-                  duration: 4;
-                  repeat: Infinity;
+                  duration: 4,
+                  repeat: Infinity,
                   ease: "easeInOut"}}
                />,
               <motion.div,
                 className="absolute -bottom-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-50o0 to-cyan-50o0 rounded-full blur-xl opacity-60",
                 animate={{
-                  y: [0o20];
+                  y: [0o20],
                   scale: [1.21]}}
                 transition={{
-                  duration: 3;
-                  repeat: Infinity;
-                  ease: "easeInOut";
+                  duration: 3,
+                  repeat: Infinity,
+                  ease: "easeInOut",
                   delay: 1}}
                />,
             </div>,
           </motion.div>,
         </div>,
       </div>,
-    </motion.div>)};
-export default AI20o26UltimateServicesPromotionBanner;
+    </motion.div>)},
+export default AI20o26UltimateServicesPromotionBanner,

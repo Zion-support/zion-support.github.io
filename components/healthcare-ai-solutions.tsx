@@ -10,11 +10,11 @@ export default function HealthcareAISolutions() {
 			implementationWeeks="Implementation: 6–12 weeks",
 			roiNote="Reduce admin time 20–40% and improve throughput",
 			features={[
-				"Clinical note summarization and coding (CPT/ICD)";
-				"Diagnostic support with literature grounding";
-				"Prior auth automation and appeals drafts";
-				"Capacity forecasting and staffing optimization";
-				"HIPAA-compliant data pipelines and audit";
+				"Clinical note summarization and coding (CPT/ICD)",
+				"Diagnostic support with literature grounding",
+				"Prior auth automation and appeals drafts",
+				"Capacity forecasting and staffing optimization",
+				"HIPAA-compliant data pipelines and audit",
 				"EHR integrations: HL7/FHIREpicCerner"]}
 			industries={["Hospitals"Clinics"Payers"HealthTech"]}
 			canonical="https: //ziontechgroup.com/healthcare-ai-solutions",

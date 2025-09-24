@@ -3,29 +3,24 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign;
-  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users;
-  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings;
-  Eye, Award, Clock, Heart, Lightbulb, Search, Filter, Grid, List;
+  CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap, DollarSign,
+  Shield, Mail, MapPin, Rocket, Brain, Sparkles, Atom, Dna, Users,
+  Globe, Cpu, Target, Microscope, Lock, Cloud, BarChart3, Settings,
+  Eye, Award, Clock, Heart, Lightbulb, Search, Filter, Grid, List,
   ChevronDown, ChevronUp, ExternalLink, Play, Pause, Volume2, VolumeX} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { ultimateRealMicroSaasServices20o25 } from '../data/20o25-ultimate-real-micro-saas-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const categories = [
-  'All Services';
-  'Customer Success';
-  'Sales Intelligence';
-  'Content Marketing';
-  'HR & Recruitment';
-  'Financial Analytics';
-  'Supply Chain';
-  'Legal Technology';
-  'Healthcare';
-  'Real Estate';
+  'All ServicesCustomer Success',
+  'Sales IntelligenceContent Marketing',
+  'HR & RecruitmentFinancial Analytics',
+  'Supply ChainLegal Technology',
+  'HealthcareReal Estate',
   'Education'],
 export default function UltimateRealMicroSaasShowcase20o25() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
@@ -84,16 +79,16 @@ export default function UltimateRealMicroSaasShowcase20o25() {
               key={i}
               className="absolute w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full opacity-20",
               animate={{
-                x: [0, Math.random() * 10o00 - 50o0];
-                y: [0, Math.random() * 10o00 - 50o0];
-                scale: [0, 1, 0];
+                x: [0, Math.random() * 10o00 - 50o0],
+                y: [0, Math.random() * 10o00 - 50o0],
+                scale: [0, 1, 0],
                 opacity: [0, 0.5, 0]}}
               transition={{
-                duration: Math.random() * 10 + 10;
-                repeat: Infinity;
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
                 ease: "linear"}}
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
              />))}
         </div>,
@@ -121,9 +116,9 @@ export default function UltimateRealMicroSaasShowcase20o25() {
             transition={{ duration: 0.8, delay: 0.2 }}
             className="grid grid-cols-2 md: grid-cols-4 gap-6 mb-12">,
             {[
-              { number: '10+', label: 'Real Services', icon: Star, color: 'text-cyan-40o0' };
-              { number: '50o0+', label: 'Happy Customers', icon: Users, color: 'text-purple-40o0' };
-              { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-40o0' };
+              { number: '10+', label: 'Real Services', icon: Star, color: 'text-cyan-40o0' },
+              { number: '50o0+', label: 'Happy Customers', icon: Users, color: 'text-purple-40o0' },
+              { number: '99.9%', label: 'Uptime', icon: Shield, color: 'text-green-40o0' },
               { number: '24/7', label: 'Support', icon: Zap, color: 'text-pink-40o0' }
             ].map((stat, index) => (
               <motion.div,

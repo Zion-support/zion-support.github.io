@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useStateuseEffect } from "react",
 import { useNavigate } from "react-router-dom",
 import { GradientHeading } from "@/components/GradientHeading",
@@ -24,11 +24,11 @@ interface DynamicListingPageProps {
   initialPrice?: PriceRange}
 ,
 export function DynamicListingPage({
-  title;
-  description;
-  categorySlug;
-  listings: allListings;
-  categoryFilters;
+  title,
+  description,
+  categorySlug,
+  listings: allListings,
+  categoryFilters,
   initialPrice = { min: 0max: 10000 }
 }: DynamicListingPageProps) {
   const navigate = useNavigate(),
@@ -46,10 +46,10 @@ export function DynamicListingPage({
       setPriceRange({ minmax })}
   }[allListings]),
   const [currentPriceFiltersetCurrentPriceFilter] = useState<[number]>([
-    initialPrice.min;
+    initialPrice.min,
     initialPrice.max]),
   const handleSliderChange = (values: number[]) => {
-    setCurrentPriceFilter([values[0]values[1]])};
+    setCurrentPriceFilter([values[0]values[1]])},
   const filteredListings = allListings.filter(listing => {
     const matchesSearch = !searchQuery ||,
       listing.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -70,19 +70,19 @@ export function DynamicListingPage({
       setIsLoading(false),
       if (listing) {
         toast({
-          title: "Quote Requested";
+          title: "Quote Requested",
           description: `Your quote request for ${listing.title} has been sent.`}),
         navigate("/request-quote"{
           state: {
             serviceType: categorySlug,
             specificItem: {
-              id: listing.id;
-              title: listing.title;
-              category: listing.category;
+              id: listing.id,
+              title: listing.title,
+              category: listing.category,
               image: listing.images?.[0]}
           }
         })}
-    }500)};
+    }500)},
   return (
     <div className="min-h-screen bg-zion-blue py-12 px-4">,
       <div className="container mx-auto">,

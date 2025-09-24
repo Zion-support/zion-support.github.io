@@ -29,19 +29,19 @@ export function useResumeList() {
 ,
       // Transform data to match Resume type,
       const transformedResumes: Resume[] = resumeData.map(resume => ({
-        id: resume.id;
-        user_id: resume.user_id;
+        id: resume.id,
+        user_id: resume.user_id,
         basic_info: {
-          id: resume.id;
-          title: resume.title;
-          headline: resume.headline;
-          summary: resume.summary;
-        };
-        work_experience: [];
-        education: [];
-        skills: [];
-        certifications: [];
-        is_active: resume.is_active;
+          id: resume.id,
+          title: resume.title,
+          headline: resume.headline,
+          summary: resume.summary
+        },
+        work_experience: [],
+        education: [],
+        skills: [],
+        certifications: [],
+        is_active: resume.is_active
       })),
       setResumes(transformedResumes),
       return transformedResumes} catch (e: any) {
@@ -49,17 +49,17 @@ export function useResumeList() {
       setError(e.message),
       return []} finally {
       setIsLoading(false)}
-  };
+  },
   // Fetch resumes when the component mounts,
   useEffect(() => {
     if (user) {
       fetchResumes()}
   }, [user]),
   return {
-    isLoading;
-    error;
-    resumes;
-    fetchResumes;
-  };
+    isLoading,
+    error,
+    resumes,
+    fetchResumes,
+  },
 }
 ,

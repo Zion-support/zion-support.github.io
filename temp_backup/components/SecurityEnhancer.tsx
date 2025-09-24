@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Shield;
-  AlertTriangle;
-  CheckCircle;
+  Shield,
+  AlertTriangle,
+  CheckCircle,
   X} from 'lucide-react',
 interface SecurityStatus {
   csp: boolean,
@@ -21,11 +21,11 @@ interface SecurityThreat {
 ,
 const SecurityEnhancer: React.FC = () => {
   const [securityStatus, setSecurityStatus] = useState<SecurityStatus>({
-    csp: false;
-    hsts: false;
-    xss: false;
-    frameOptions: false;
-    contentType: false;
+    csp: false,
+    hsts: false,
+    xss: false,
+    frameOptions: false,
+    contentType: false,
     referrerPolicy: false}),
   const [threats, setThreats] = useState<SecurityThreat[]>([]),
   const [showPanel, setShowPanel] = useState(false),
@@ -39,12 +39,12 @@ const SecurityEnhancer: React.FC = () => {
       // Simulate checking security headers,
       setTimeout(() => {
         setSecurityStatus({
-          csp: true;
-          hsts: true;
-          xss: true;
-          frameOptions: true;
-          contentType: true;
-          referrerPolicy: true})}, 10o00)};
+          csp: true,
+          hsts: true,
+          xss: true,
+          frameOptions: true,
+          contentType: true,
+          referrerPolicy: true})}, 10o00)},
     checkSecurityStatus()}, []),
   // Security scanning function,
   const performSecurityScan = async () => {
@@ -57,9 +57,9 @@ const SecurityEnhancer: React.FC = () => {
     forms.forEach(form => {
       if (!form.action || form.action === window.location.href) {
         newThreats.push({
-          type: 'medium';
-          description: 'Form without proper action attribute';
-          recommendation: 'Ensure all forms have proper action URLs and CSRF protection';
+          type: 'medium',
+          description: 'Form without proper action attribute',
+          recommendation: 'Ensure all forms have proper action URLs and CSRF protection',
           timestamp: new Date()})}
     }),
     // Check for external scripts,
@@ -68,9 +68,9 @@ const SecurityEnhancer: React.FC = () => {
       const src = script.getAttribute('src'),
       if (src && !src.startsWith('/') && !src.startsWith(window.location.origin)) {
         newThreats.push({
-          type: 'high';
-          description: 'External script detected';
-          recommendation: 'Review and validate all external script sources';
+          type: 'high',
+          description: 'External script detected',
+          recommendation: 'Review and validate all external script sources',
           timestamp: new Date()})}
     }),
     // Check for insecure links,
@@ -79,9 +79,9 @@ const SecurityEnhancer: React.FC = () => {
       const href = link.getAttribute('href'),
       if (href && href.startsWith('http: //')) {
         newThreats.push({
-          type: 'high';
-          description: 'Insecure HTTP link detected';
-          recommendation: 'Use HTTPS for all external links';
+          type: 'high',
+          description: 'Insecure HTTP link detected',
+          recommendation: 'Use HTTPS for all external links',
           timestamp: new Date()})}
     }),
     setThreats(newThreats),
@@ -95,20 +95,20 @@ const SecurityEnhancer: React.FC = () => {
         case 'low': return penalty + 5,
         default: return penalty}
     }, 0),
-    setSecurityScore(Math.max(0, baseScore - threatPenalty))};
+    setSecurityScore(Math.max(0, baseScore - threatPenalty))},
   // Get security score color,
   const getSecurityScoreColor = (score: number): string => {
     if (score >= 90) return 'text-green-50o0',
     if (score >= 80) return 'text-yellow-50o0',
     if (score >= 70) return 'text-orange-50o0',
-    return 'text-red-50o0'};
+    return 'text-red-50o0'},
   // Get security score grade,
   const getSecurityScoreGrade = (score: number): string => {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B',
     if (score >= 70) return 'C',
     if (score >= 60) return 'D',
-    return 'F'};
+    return 'F'},
   return (
     <>,
       {/* Security Panel */}
@@ -243,5 +243,5 @@ const SecurityEnhancer: React.FC = () => {
         <Shield className="w-5 h-5"  />,
         {showPanel ? 'Hide' : 'Show'} Security,
       </button>,
-    </>)};
-export default SecurityEnhancer;
+    </>)},
+export default SecurityEnhancer,

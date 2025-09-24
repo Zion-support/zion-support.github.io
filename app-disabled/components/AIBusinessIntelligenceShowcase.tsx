@@ -5,98 +5,92 @@ const AIBusinessIntelligenceShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-business-intelligence';
-      title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 5,0o00% ROI';
+      id: 'ultimate-business-intelligence',
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 5,0o00% ROI',
       description:,
-        'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented results.';
-      type: 'blog';
-      category: 'guides';
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
+        'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented results.',
+      type: 'blog',
+      category: 'guides',
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$18.7B';
-        accuracy: '99.8%';
-        speed: '450%';
-      };
-      readingTime: '35 min read';
-      featured: true;
+        roi: '5,0o00%',
+        savings: '$18.7B',
+        accuracy: '99.8%',
+        speed: '450%'
+      },
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Business Intelligence';
-        'ROI';
-        'Fortune 50o0';
-        'Ultimate Guide';
-      ];
-    };
+        'AI RevolutionBusiness Intelligence',
+        'ROIFortune 50o0',
+        'Ultimate Guide',
+      ]
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Business Intelligence Success Story';
-      subtitle: '$18.7B Annual Savings - 5,0o00% ROI Success Story';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Business Intelligence Success Story',
+      subtitle: '$18.7B Annual Savings - 5,0o00% ROI Success Story',
       description:,
-        'How a global manufacturing leader achieved extraordinary results with AI business intelligence transformation.';
-      type: 'case-study';
-      category: 'success-stories';
-      url: '/case-studies/fortune-50o0-ai-business-intelligence-50o00-roi-success-story';
+        'How a global manufacturing leader achieved extraordinary results with AI business intelligence transformation.',
+      type: 'case-study',
+      category: 'success-stories',
+      url: '/case-studies/fortune-50o0-ai-business-intelligence-50o00-roi-success-story',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$18.7B';
-        timeframe: '12 months';
-        accuracy: '99.8%';
-      };
-      readingTime: '25 min read';
-      featured: true;
+        roi: '5,0o00%',
+        savings: '$18.7B',
+        timeframe: '12 months',
+        accuracy: '99.8%'
+      },
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'Success Story';
-        'ROI';
-        'Manufacturing';
-        'Transformation';
-      ];
-    };
+        'Fortune 50o0Success Story',
+        'ROIManufacturing',
+        'Transformation',
+      ]
+    },
     {
-      id: 'implementation-guide';
-      title: 'AI Business Intelligence Implementation Ultimate Guide';
-      subtitle: 'Complete Roadmap to 5,0o00% ROI';
+      id: 'implementation-guide',
+      title: 'AI Business Intelligence Implementation Ultimate Guide',
+      subtitle: 'Complete Roadmap to 5,0o00% ROI',
       description:,
-        'The definitive guide to implementing AI-powered business intelligence that delivers unprecedented results.';
-      type: 'resource';
-      category: 'implementation';
-      url: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25';
+        'The definitive guide to implementing AI-powered business intelligence that delivers unprecedented results.',
+      type: 'resource',
+      category: 'implementation',
+      url: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25',
       metrics: {
-        roi: '5,0o00%';
-        guide: 'Complete';
-        success: '99.7%';
-        timeline: '12 months';
-      };
-      readingTime: '45 min read';
-      featured: true;
+        roi: '5,0o00%',
+        guide: 'Complete',
+        success: '99.7%',
+        timeline: '12 months'
+      },
+      readingTime: '45 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'ROI Strategy';
-        'Best Practices';
-        'Framework';
-        'Complete Roadmap';
-      ];
-    };
+        'Implementation GuideROI Strategy',
+        'Best PracticesFramework',
+        'Complete Roadmap',
+      ]
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'guides';
-      name: 'Ultimate Guides';
-      count: content.filter(item => item.category === 'guides').length;
-    };
+      id: 'guides',
+      name: 'Ultimate Guides',
+      count: content.filter(item => item.category === 'guides').length
+    },
     {
-      id: 'success-stories';
-      name: 'Success Stories';
-      count: content.filter(item => item.category === 'success-stories').length;
-    };
+      id: 'success-stories',
+      name: 'Success Stories',
+      count: content.filter(item => item.category === 'success-stories').length
+    },
     {
-      id: 'implementation';
-      name: 'Implementation';
-      count: content.filter(item => item.category === 'implementation').length;
-    };
+      id: 'implementation',
+      name: 'Implementation',
+      count: content.filter(item => item.category === 'implementation').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -112,7 +106,7 @@ const AIBusinessIntelligenceShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -123,7 +117,7 @@ const AIBusinessIntelligenceShowcase = () => {
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -311,5 +305,5 @@ const AIBusinessIntelligenceShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AIBusinessIntelligenceShowcase;
+    </section>)},
+export default AIBusinessIntelligenceShowcase,

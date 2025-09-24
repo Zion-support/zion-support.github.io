@@ -2,278 +2,278 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  CpuIcon;
-  Network;
-  Server;
-  DatabaseIcon;
-  Globe2;
-  ZapIcon;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  CpuIcon,
+  Network,
+  Server,
+  DatabaseIcon,
+  Globe2,
+  ZapIcon,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: '🚀 20o29 Futuristic AI Services';
-    icon: Brain;
-    color: 'from-violet-60o0 to-purple-60o0';
+    title: '🚀 20o29 Futuristic AI Services',
+    icon: Brain,
+    color: 'from-violet-60o0 to-purple-60o0',
     description:,
-      'Next-generation AI consciousness and quantum hybrid computing';
+      'Next-generation AI consciousness and quantum hybrid computing',
     services: [
       {
-        name: 'AI Consciousness Evolution Platform';
-        href: '/ai-consciousness-evolution-20o29';
-        description: 'Develop genuine AI consciousness and self-awareness';
-        price: '$24,999/month';
-      };
+        name: 'AI Consciousness Evolution Platform',
+        href: '/ai-consciousness-evolution-20o29',
+        description: 'Develop genuine AI consciousness and self-awareness',
+        price: '$24,999/month',
+      },
       {
-        name: 'AI Quantum Hybrid Computing';
-        href: '/ai-quantum-hybrid-computing-20o29';
-        description: 'Quantum-classical hybrid AI computing';
-        price: '$19,999/month';
-      };
+        name: 'AI Quantum Hybrid Computing',
+        href: '/ai-quantum-hybrid-computing-20o29',
+        description: 'Quantum-classical hybrid AI computing',
+        price: '$19,999/month',
+      },
       {
-        name: 'AI Multimodal Fusion Platform';
-        href: '/ai-multimodal-fusion-platform-20o29';
-        description: 'Seamless text, image, video, and audio AI';
-        price: '$12,999/month';
-      };
+        name: 'AI Multimodal Fusion Platform',
+        href: '/ai-multimodal-fusion-platform-20o29',
+        description: 'Seamless text, image, video, and audio AI',
+        price: '$12,999/month',
+      },
       {
-        name: 'AI Autonomous Decision Engine';
-        href: '/ai-autonomous-decision-engine-20o29';
-        description: 'Autonomous AI decision making with ethics';
-        price: '$15,999/month';
-      };
-    ];
-  };
+        name: 'AI Autonomous Decision Engine',
+        href: '/ai-autonomous-decision-engine-20o29',
+        description: 'Autonomous AI decision making with ethics',
+        price: '$15,999/month',
+      },
+    ],
+  },
   {
-    title: '⚛️ 20o29 Quantum Innovation Services';
-    icon: Atom;
-    color: 'from-indigo-60o0 to-blue-60o0';
-    description: 'Revolutionary quantum computing and communication';
+    title: '⚛️ 20o29 Quantum Innovation Services',
+    icon: Atom,
+    color: 'from-indigo-60o0 to-blue-60o0',
+    description: 'Revolutionary quantum computing and communication',
     services: [
       {
-        name: 'Quantum Internet Protocol';
-        href: '/quantum-internet-protocol-20o29';
-        description: 'Faster-than-light quantum communication';
-        price: '$29,999/month';
-      };
+        name: 'Quantum Internet Protocol',
+        href: '/quantum-internet-protocol-20o29',
+        description: 'Faster-than-light quantum communication',
+        price: '$29,999/month',
+      },
       {
-        name: 'Quantum Financial Trading Platform';
-        href: '/quantum-financial-trading-platform-20o29';
-        description: 'Quantum-powered algorithmic trading';
-        price: '$39,999/month';
-      };
+        name: 'Quantum Financial Trading Platform',
+        href: '/quantum-financial-trading-platform-20o29',
+        description: 'Quantum-powered algorithmic trading',
+        price: '$39,999/month',
+      },
       {
-        name: 'Quantum Cybersecurity Firewall';
-        href: '/quantum-cybersecurity-firewall-20o29';
-        description: 'Unbreakable quantum encryption';
-        price: '$18,999/month';
-      };
+        name: 'Quantum Cybersecurity Firewall',
+        href: '/quantum-cybersecurity-firewall-20o29',
+        description: 'Unbreakable quantum encryption',
+        price: '$18,999/month',
+      },
       {
-        name: 'Quantum Machine Learning Platform';
-        href: '/quantum-machine-learning-platform-20o29';
-        description: 'Quantum computing for ML acceleration';
-        price: '$22,999/month';
-      };
-    ];
-  };
+        name: 'Quantum Machine Learning Platform',
+        href: '/quantum-machine-learning-platform-20o29',
+        description: 'Quantum computing for ML acceleration',
+        price: '$22,999/month',
+      },
+    ],
+  },
   {
-    title: '🌌 20o29 Emerging Technology Services';
-    icon: Rocket;
-    color: 'from-blue-60o0 to-cyan-60o0';
-    description: 'Space mining, biotech, and autonomous systems';
+    title: '🌌 20o29 Emerging Technology Services',
+    icon: Rocket,
+    color: 'from-blue-60o0 to-cyan-60o0',
+    description: 'Space mining, biotech, and autonomous systems',
     services: [
       {
-        name: 'Space Mining Autonomous Platform';
-        href: '/space-mining-autonomous-platform-20o29';
-        description: 'Autonomous asteroid and space mining';
-        price: '$49,999/month';
-      };
+        name: 'Space Mining Autonomous Platform',
+        href: '/space-mining-autonomous-platform-20o29',
+        description: 'Autonomous asteroid and space mining',
+        price: '$49,999/month',
+      },
       {
-        name: 'Biotech AI Research Platform';
-        href: '/biotech-ai-research-platform-20o29';
-        description: 'AI-powered drug discovery and research';
-        price: '$32,999/month';
-      };
+        name: 'Biotech AI Research Platform',
+        href: '/biotech-ai-research-platform-20o29',
+        description: 'AI-powered drug discovery and research',
+        price: '$32,999/month',
+      },
       {
-        name: 'Metaverse AI Development Platform';
-        href: '/metaverse-ai-development-platform-20o29';
-        description: 'AI-powered virtual world creation';
-        price: '$16,999/month';
-      };
+        name: 'Metaverse AI Development Platform',
+        href: '/metaverse-ai-development-platform-20o29',
+        description: 'AI-powered virtual world creation',
+        price: '$16,999/month',
+      },
       {
-        name: 'Autonomous Vehicle AI Platform';
-        href: '/autonomous-vehicle-ai-platform-20o29';
-        description: 'Advanced self-driving AI systems';
-        price: '$28,999/month';
-      };
-    ];
-  };
+        name: 'Autonomous Vehicle AI Platform',
+        href: '/autonomous-vehicle-ai-platform-20o29',
+        description: 'Advanced self-driving AI systems',
+        price: '$28,999/month',
+      },
+    ],
+  },
   {
-    title: '🏢 20o29 Enterprise IT Services';
-    icon: Building;
-    color: 'from-emerald-60o0 to-teal-60o0';
-    description: 'Advanced enterprise security and automation';
+    title: '🏢 20o29 Enterprise IT Services',
+    icon: Building,
+    color: 'from-emerald-60o0 to-teal-60o0',
+    description: 'Advanced enterprise security and automation',
     services: [
       {
-        name: 'Zero Trust Network Architecture';
-        href: '/zero-trust-network-architecture-20o29';
-        description: 'Continuous verification security';
-        price: '$21,999/month';
-      };
+        name: 'Zero Trust Network Architecture',
+        href: '/zero-trust-network-architecture-20o29',
+        description: 'Continuous verification security',
+        price: '$21,999/month',
+      },
       {
-        name: 'Cloud Native Automation Platform';
-        href: '/cloud-native-automation-platform-20o29';
-        description: 'Multi-cloud DevOps automation';
-        price: '$14,999/month';
-      };
+        name: 'Cloud Native Automation Platform',
+        href: '/cloud-native-automation-platform-20o29',
+        description: 'Multi-cloud DevOps automation',
+        price: '$14,999/month',
+      },
       {
-        name: 'AI-Powered IT Service Desk';
-        href: '/ai-powered-it-service-desk-20o29';
-        description: 'Intelligent IT support automation';
-        price: '$9,999/month';
-      };
+        name: 'AI-Powered IT Service Desk',
+        href: '/ai-powered-it-service-desk-20o29',
+        description: 'Intelligent IT support automation',
+        price: '$9,999/month',
+      },
       {
-        name: 'Data Governance Automation';
-        href: '/data-governance-automation-platform-20o29';
-        description: 'Automated compliance and quality';
-        price: '$19,999/month';
-      };
-    ];
-  };
+        name: 'Data Governance Automation',
+        href: '/data-governance-automation-platform-20o29',
+        description: 'Automated compliance and quality',
+        price: '$19,999/month',
+      },
+    ],
+  },
   {
-    title: '💼 20o29 Practical Business Solutions';
-    icon: Briefcase;
-    color: 'from-orange-60o0 to-red-60o0';
-    description: 'Real-world business AI automation';
+    title: '💼 20o29 Practical Business Solutions',
+    icon: Briefcase,
+    color: 'from-orange-60o0 to-red-60o0',
+    description: 'Real-world business AI automation',
     services: [
       {
-        name: 'AI E-commerce Optimization';
-        href: '/ai-powered-ecommerce-optimization-20o29';
-        description: 'AI-powered sales and customer optimization';
-        price: '$7,999/month';
-      };
+        name: 'AI E-commerce Optimization',
+        href: '/ai-powered-ecommerce-optimization-20o29',
+        description: 'AI-powered sales and customer optimization',
+        price: '$7,999/month',
+      },
       {
-        name: 'AI Financial Advisory Platform';
-        href: '/ai-financial-advisory-platform-20o29';
-        description: 'Intelligent investment and planning';
-        price: '$11,999/month';
-      };
+        name: 'AI Financial Advisory Platform',
+        href: '/ai-financial-advisory-platform-20o29',
+        description: 'Intelligent investment and planning',
+        price: '$11,999/month',
+      },
       {
-        name: 'AI HR Recruitment Automation';
-        href: '/ai-hr-recruitment-automation-20o29';
-        description: 'Automated talent acquisition';
-        price: '$6,999/month';
-      };
+        name: 'AI HR Recruitment Automation',
+        href: '/ai-hr-recruitment-automation-20o29',
+        description: 'Automated talent acquisition',
+        price: '$6,999/month',
+      },
       {
-        name: 'AI Supply Chain Optimization';
-        href: '/ai-supply-chain-optimization-20o29';
-        description: 'Intelligent logistics and inventory';
-        price: '$13,999/month';
-      };
-    ];
-  };
+        name: 'AI Supply Chain Optimization',
+        href: '/ai-supply-chain-optimization-20o29',
+        description: 'Intelligent logistics and inventory',
+        price: '$13,999/month',
+      },
+    ],
+  },
   {
-    title: '🔬 20o29 Research & Development';
-    icon: Microscope;
-    color: 'from-pink-60o0 to-rose-60o0';
-    description: 'Cutting-edge research and innovation';
+    title: '🔬 20o29 Research & Development',
+    icon: Microscope,
+    color: 'from-pink-60o0 to-rose-60o0',
+    description: 'Cutting-edge research and innovation',
     services: [
       {
-        name: 'AI Research Collaboration Platform';
-        href: '/ai-research-collaboration-20o29';
-        description: 'Global AI research network';
-        price: '$34,999/month';
-      };
+        name: 'AI Research Collaboration Platform',
+        href: '/ai-research-collaboration-20o29',
+        description: 'Global AI research network',
+        price: '$34,999/month',
+      },
       {
-        name: 'Quantum Research Laboratory';
-        href: '/quantum-research-laboratory-20o29';
-        description: 'Virtual quantum research environment';
-        price: '$44,999/month';
-      };
+        name: 'Quantum Research Laboratory',
+        href: '/quantum-research-laboratory-20o29',
+        description: 'Virtual quantum research environment',
+        price: '$44,999/month',
+      },
       {
-        name: 'Biotech Innovation Hub';
-        href: '/biotech-innovation-hub-20o29';
-        description: 'AI-powered biotech research';
-        price: '$39,999/month';
-      };
+        name: 'Biotech Innovation Hub',
+        href: '/biotech-innovation-hub-20o29',
+        description: 'AI-powered biotech research',
+        price: '$39,999/month',
+      },
       {
-        name: 'Space Technology Research Platform';
-        href: '/space-technology-research-20o29';
-        description: 'Advanced space research tools';
-        price: '$54,999/month';
-      };
-    ];
-  };
+        name: 'Space Technology Research Platform',
+        href: '/space-technology-research-20o29',
+        description: 'Advanced space research tools',
+        price: '$54,999/month',
+      },
+    ],
+  },
 ],
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'AI Services', href: '/ai-services', icon: Brain };
-  { name: 'Quantum Services', href: '/quantum-services', icon: Atom };
-  { name: 'Space Technology', href: '/space-tech', icon: Rocket };
-  { name: 'Enterprise IT', href: '/enterprise-it', icon: Building };
-  { name: 'Business Solutions', href: '/solutions', icon: Briefcase };
-  { name: 'Research & Development', href: '/research', icon: Microscope };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'AI Services', href: '/ai-services', icon: Brain },
+  { name: 'Quantum Services', href: '/quantum-services', icon: Atom },
+  { name: 'Space Technology', href: '/space-tech', icon: Rocket },
+  { name: 'Enterprise IT', href: '/enterprise-it', icon: Building },
+  { name: 'Business Solutions', href: '/solutions', icon: Briefcase },
+  { name: 'Research & Development', href: '/research', icon: Microscope },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
 ],
 export default function UltraFuturisticNavigation20o29() {
   const [isOpen, setIsOpen] = useState(false),
@@ -281,7 +281,7 @@ export default function UltraFuturisticNavigation20o29() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleMenu = () => setIsOpen(!isOpen),

@@ -4,7 +4,7 @@ import type { RemoteParticipantLocalParticipantTrackPublicationTrack } from 'liv
 type Props = {
   participant: RemoteParticipant | LocalParticipant,
   isLocal?: boolean,
-  displayName?: string};
+  displayName?: string},
 export default function ParticipantTile({ participantisLocaldisplayName }: Props) {
   const videoRef = useRef<HTMLVideoElement | null>(null),
   const audioRef = useRef<HTMLAudioElement | null>(null),
@@ -14,21 +14,21 @@ export default function ParticipantTile({ participantisLocaldisplayName }: Props
         track.attach(videoRef.current)}
       if (track.kind === 'audio' && audioRef.current) {
         track.attach(audioRef.current)}
-    };
+    },
     const handleTrackUnsubscribed = (pub: TrackPublicationtrack: Track) => {
       if (track.kind === 'video' && videoRef.current) {
         track.detach(videoRef.current)}
       if (track.kind === 'audio' && audioRef.current) {
         track.detach(audioRef.current)}
-    };
+    },
     participant.tracks.forEach(pub => {
       const track = pub.track,
       if (track) handleTrackSubscribed(pubtrack)}),
-    participant.on(', 'trackSubscribed', 'handleTrackSubscribed),
-    participant.on(', 'trackUnsubscribed', 'handleTrackUnsubscribed),
+    participant.on(trackSubscribed', 'handleTrackSubscribed),
+    participant.on(trackUnsubscribed', 'handleTrackUnsubscribed),
     return () => {
-      participant.off(', 'trackSubscribed', 'handleTrackSubscribed),
-      participant.off(', 'trackUnsubscribed', 'handleTrackUnsubscribed)};
+      participant.off(trackSubscribed', 'handleTrackSubscribed),
+      participant.off(trackUnsubscribed', 'handleTrackUnsubscribed)},
   }[participant]),
   return (
     <div className="bg-black/60 rounded-lg overflow-hidden border border-gray-700 relative">,

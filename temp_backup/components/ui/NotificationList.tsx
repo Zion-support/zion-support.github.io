@@ -1,21 +1,21 @@
 import React, { useEffect, useMemo, useState } from 'react',
 import { Bell, Filter, CheckCheck, Trash2 } from 'lucide-react',
 import {
-  NotificationItem;
-  NotificationFilter;
-  fetchNotifications;
-  mapFilterToQuery;
-  markAllAsRead;
-  markNotificationRead;
-  clearAllNotifications;
+  NotificationItem,
+  NotificationFilter,
+  fetchNotifications,
+  mapFilterToQuery,
+  markAllAsRead,
+  markNotificationRead,
+  clearAllNotifications,
 } from '../../utils/notifications',
 const tabs: { key: NotificationFilter, label: string }[] = [
-  { key: 'all', label: 'All' };
-  { key: 'unread', label: 'Unread' };
-  { key: 'system', label: 'System' };
-  { key: 'onboarding', label: 'Onboarding' };
-  { key: 'quotes', label: 'Quotes' };
-  { key: 'matches', label: 'Matches' };
+  { key: 'all', label: 'All' },
+  { key: 'unread', label: 'Unread' },
+  { key: 'system', label: 'System' },
+  { key: 'onboarding', label: 'Onboarding' },
+  { key: 'quotes', label: 'Quotes' },
+  { key: 'matches', label: 'Matches' },
 ],
 export default function NotificationList() {
   const [active, setActive] = useState<NotificationFilter>('all'),

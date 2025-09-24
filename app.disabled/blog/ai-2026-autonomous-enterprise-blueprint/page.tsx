@@ -27,7 +27,7 @@ const AutonomousEnterpriseBlueprint20o26 = () => {
           <p>,
             Autonomous enterprises orchestrate AI agents, human experts, and,
             systems via policy to deliver outcomes with minimal manual,
-            intervention. This blueprint outlines capabilities, architecture;
+            intervention. This blueprint outlines capabilities, architecture,
             operating model, and maturity milestones to achieve autonomy at,
             scale.,
           </p>,
@@ -55,7 +55,7 @@ const AutonomousEnterpriseBlueprint20o26 = () => {
           </p>,
           <h2>Operating Model</h2>,
           <p>,
-            Establish an Autonomous Platform Team, define service boundaries;
+            Establish an Autonomous Platform Team, define service boundaries,
             productize agent capabilities, and operate with SLOs tied to,
             business outcomes (cycle time, cost-to-serve, quality, and risk).,
           </p>,
@@ -80,5 +80,5 @@ const AutonomousEnterpriseBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousEnterpriseBlueprint20o26;
+    </div>)},
+export default AutonomousEnterpriseBlueprint20o26,

@@ -1,65 +1,65 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { Mail, Smartphone, Building, Globe, Zap, Shield, Users } from 'lucide-react',
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const footerSections = [
     {
-      title: 'Revolutionary Services';
+      title: 'Revolutionary Services',
       links: [
-        { name: 'Quantum AI Platform', href: '/quantum-ai-cognitive' };
-        { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing' };
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' };
-        { name: 'Space Technology', href: '/space-technology' };
-        { name: 'Biotech AI', href: '/biotech-ai' };
+        { name: 'Quantum AI Platform', href: '/quantum-ai-cognitive' },
+        { name: 'Autonomous Manufacturing', href: '/autonomous-manufacturing' },
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
+        { name: 'Space Technology', href: '/space-technology' },
+        { name: 'Biotech AI', href: '/biotech-ai' },
         { name: 'Quantum Trading', href: '/quantum-financial-trading' }
-      ]};
+      ]},
     {
-      title: 'Technology Solutions';
+      title: 'Technology Solutions',
       links: [
-        { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' };
-        { name: 'Blockchain & DeFi', href: '/services?category=Blockchain%20%26%20DeFi' };
-        { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' };
-        { name: 'Cybersecurity', href: '/services?category=Cybersecurity' };
-        { name: 'Cloud Infrastructure', href: '/services?category=Cloud%20Infrastructure' };
+        { name: 'AI & Machine Learning', href: '/services?category=AI%20%26%20Machine%20Learning' },
+        { name: 'Blockchain & DeFi', href: '/services?category=Blockchain%20%26%20DeFi' },
+        { name: 'IoT & Smart Cities', href: '/services?category=IoT%20%26%20Smart%20Cities' },
+        { name: 'Cybersecurity', href: '/services?category=Cybersecurity' },
+        { name: 'Cloud Infrastructure', href: '/services?category=Cloud%20Infrastructure' },
         { name: 'Digital Transformation', href: '/solutions' }
-      ]};
+      ]},
     {
-      title: 'Industries';
+      title: 'Industries',
       links: [
-        { name: 'Financial Services', href: '/solutions#financial' };
-        { name: 'Healthcare', href: '/solutions#healthcare' };
-        { name: 'Manufacturing', href: '/solutions#manufacturing' };
-        { name: 'Government', href: '/solutions#government' };
-        { name: 'Education', href: '/solutions#education' };
+        { name: 'Financial Services', href: '/solutions#financial' },
+        { name: 'Healthcare', href: '/solutions#healthcare' },
+        { name: 'Manufacturing', href: '/solutions#manufacturing' },
+        { name: 'Government', href: '/solutions#government' },
+        { name: 'Education', href: '/solutions#education' },
         { name: 'Retail & E-commerce', href: '/solutions#retail' }
-      ]};
+      ]},
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'News & Updates', href: '/news' };
-        { name: 'Case Studies', href: '/case-studies' };
-        { name: 'Research', href: '/research' };
+        { name: 'About Us', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News & Updates', href: '/news' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Research', href: '/research' },
         { name: 'Support', href: '/support' }
       ]}
   ],
   const socialLinks = [
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' };
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' };
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' };
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' };
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup' };
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup' },
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup' },
+    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup' },
     { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup' }
   ],
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className="bg-black/95 backdrop-blur-2xl border-t border-white/20 relative overflow-hidden">,
       {/* Futuristic Background Elements */}
@@ -91,7 +91,7 @@ const Footer: React.FC = () => {
               </div>,
             </Link>,
             <p className="text-gray-40o0 mb-8 max-w-md leading-relaxed">,
-              The world&apos,s most advanced autonomous innovation hub delivering cutting-edge technology solutions;
+              The world&apos,s most advanced autonomous innovation hub delivering cutting-edge technology solutions,
               intelligent automation systems, and the future of cloud-native AI infrastructure.,
             </p>,
             {/* Contact Information */}
@@ -217,16 +217,16 @@ const Footer: React.FC = () => {
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-40",
             style={{
-              left: `${10 + i * 12}%`;
+              left: `${10 + i * 12}%`,
               bottom: `${20 + i * 8}%`}}
             animate={{
-              y: [0, -30, 0];
-              opacity: [0.4, 1, 0.4];
+              y: [0, -30, 0],
+              opacity: [0.4, 1, 0.4],
               scale: [1, 1.5, 1]}}
             transition={{
-              duration: 4 + i * 0.5;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 4 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 0.3}}
            />))}
       </div>,

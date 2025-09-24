@@ -10,17 +10,17 @@ import {
   Users,
   Zap,
   Shield,
-  Brain;
-  Globe;
-  Target;
-  Award;
-  CheckCircle;
-  PlayCircle;
-  BookOpen;
-  Lightbulb;
-  DollarSign;
-  BarChart3;
-  Clock;
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  DollarSign,
+  BarChart3,
+  Clock,
   Building2} from 'lucide-react',
 const BusinessSuccessStories20o25 = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -29,87 +29,87 @@ const BusinessSuccessStories20o25 = () => {
     setIsVisible(true)}[]),
   const successStories = [
     {
-      id: 1;
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      logo: 'TC';
-      challenge: 'Manual data processing causing 40% efficiency loss';
-      solution: 'Implemented AI-powered automation suite';
+      id: 1,
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      logo: 'TC',
+      challenge: 'Manual data processing causing 40% efficiency loss',
+      solution: 'Implemented AI-powered automation suite',
       results: {
-        efficiency: '+30o0%';
-        costSavings: '$2.5M';
-        timeSaved: '20o00 hours/month';
-        roi: '450%'};
-      testimonial: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.';
-      author: 'Sarah Johnson';
-      role: 'CEO';
-      rating: 5;
-      image: '/api/placeholder/40o0/30o0'};
+        efficiency: '+30o0%',
+        costSavings: '$2.5M',
+        timeSaved: '20o00 hours/month',
+        roi: '450%'},
+      testimonial: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.',
+      author: 'Sarah Johnson',
+      role: 'CEO',
+      rating: 5,
+      image: '/api/placeholder/40o0/30o0'},
     {
-      id: 2;
-      company: 'Global Finance Inc';
-      industry: 'Financial Services';
-      logo: 'GF';
-      challenge: 'Security breaches costing millions in damages';
-      solution: 'Deployed advanced cybersecurity framework';
+      id: 2,
+      company: 'Global Finance Inc',
+      industry: 'Financial Services',
+      logo: 'GF',
+      challenge: 'Security breaches costing millions in damages',
+      solution: 'Deployed advanced cybersecurity framework',
       results: {
-        security: '99.9%';
-        costSavings: '$5.2M';
-        incidents: '0 breaches';
-        compliance: '10o0%'};
-      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.';
-      author: 'Michael Chen';
-      role: 'CTO';
-      rating: 5;
-      image: '/api/placeholder/40o0/30o0'};
+        security: '99.9%',
+        costSavings: '$5.2M',
+        incidents: '0 breaches',
+        compliance: '10o0%'},
+      testimonial: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
+      author: 'Michael Chen',
+      role: 'CTO',
+      rating: 5,
+      image: '/api/placeholder/40o0/30o0'},
     {
-      id: 3;
-      company: 'Manufacturing Plus';
-      industry: 'Manufacturing';
-      logo: 'MP';
-      challenge: 'Supply chain inefficiencies causing delays';
-      solution: 'AI-driven supply chain optimization';
+      id: 3,
+      company: 'Manufacturing Plus',
+      industry: 'Manufacturing',
+      logo: 'MP',
+      challenge: 'Supply chain inefficiencies causing delays',
+      solution: 'AI-driven supply chain optimization',
       results: {
-        efficiency: '+250%';
-        costSavings: '$3.8M';
-        deliveryTime: '-60%';
-        quality: '+95%'};
-      testimonial: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.';
-      author: 'Emily Rodriguez';
-      role: 'Operations Director';
-      rating: 5;
-      image: '/api/placeholder/40o0/30o0'};
+        efficiency: '+250%',
+        costSavings: '$3.8M',
+        deliveryTime: '-60%',
+        quality: '+95%'},
+      testimonial: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.',
+      author: 'Emily Rodriguez',
+      role: 'Operations Director',
+      rating: 5,
+      image: '/api/placeholder/40o0/30o0'},
     {
-      id: 4;
-      company: 'HealthCare First';
-      industry: 'Healthcare';
-      logo: 'HF';
-      challenge: 'Patient data management and compliance issues';
-      solution: 'Comprehensive data management and compliance system';
+      id: 4,
+      company: 'HealthCare First',
+      industry: 'Healthcare',
+      logo: 'HF',
+      challenge: 'Patient data management and compliance issues',
+      solution: 'Comprehensive data management and compliance system',
       results: {
-        efficiency: '+180%';
-        costSavings: '$1.9M';
-        compliance: '10o0%';
-        patientSatisfaction: '+85%'};
-      testimonial: 'The data management system has revolutionized our patient care. We\'re now fully compliant and our patients are much happier with our services.';
-      author: 'Dr. James Wilson';
-      role: 'Chief Medical Officer';
-      rating: 5;
+        efficiency: '+180%',
+        costSavings: '$1.9M',
+        compliance: '10o0%',
+        patientSatisfaction: '+85%'},
+      testimonial: 'The data management system has revolutionized our patient care. We\'re now fully compliant and our patients are much happier with our services.',
+      author: 'Dr. James Wilson',
+      role: 'Chief Medical Officer',
+      rating: 5,
       image: '/api/placeholder/40o0/30o0'}
   ],
   const overallStats = [
-    { label: 'Projects 'Completed', 'value: '1,20o0+'icon: Target };
-    { label: 'Average 'ROI', 'value: '30o0%'icon: TrendingUp };
-    { label: 'Client 'Satisfaction', 'value: '99.8%'icon: Star };
-    { label: 'Cost 'Savings', 'value: '$50M+'icon: DollarSign }
+    { label: 'Projects 'Completedvalue: '1,20o0+'icon: Target },
+    { label: 'Average 'ROIvalue: '30o0%'icon: TrendingUp },
+    { label: 'Client 'Satisfactionvalue: '99.8%'icon: Star },
+    { label: 'Cost 'Savingsvalue: '$50M+'icon: DollarSign }
   ],
   const industries = [
-    { name: ''Technology', 'count: 45icon: Brain };
-    { name: ''Finance', 'count: 32icon: DollarSign };
-    { name: ''Healthcare', 'count: 28icon: Shield };
-    { name: ''Manufacturing', 'count: 25icon: Building2 };
-    { name: ''Retail', 'count: 20icon: Globe };
-    { name: ''Education', 'count: 15icon: BookOpen }
+    { name: ''Technologycount: 45icon: Brain },
+    { name: ''Financecount: 32icon: DollarSign },
+    { name: ''Healthcarecount: 28icon: Shield },
+    { name: ''Manufacturingcount: 25icon: Building2 },
+    { name: ''Retailcount: 20icon: Globe },
+    { name: ''Educationcount: 15icon: BookOpen }
   ],
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-green-50 py-20">,
@@ -256,5 +256,5 @@ const BusinessSuccessStories20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default BusinessSuccessStories20o25;
+    </div>)},
+export default BusinessSuccessStories20o25,

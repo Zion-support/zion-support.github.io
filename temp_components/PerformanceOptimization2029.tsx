@@ -11,22 +11,22 @@ import {
   HardDrive,
   Wifi,
   Shield,
-  TrendingUp;
-  CheckCircle;
-  AlertTriangle;
-  Info;
-  BarChart3;
-  Activity;
-  Layers;
-  Settings;
-  Rocket;
-  Target;
-  Award;
-  ChevronRight;
-  Play;
-  Pause;
-  RotateCcw;
-  Maximize;
+  TrendingUp,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  BarChart3,
+  Activity,
+  Layers,
+  Settings,
+  Rocket,
+  Target,
+  Award,
+  ChevronRight,
+  Play,
+  Pause,
+  RotateCcw,
+  Maximize,
   Minimize} from 'lucide-react',
 const PerformanceOptimization20o29 = () => {
   const [activeMetricsetActiveMetric] = useState('speed'),
@@ -35,130 +35,118 @@ const PerformanceOptimization20o29 = () => {
   const [currentTestsetCurrentTest] = useState(0),
   const metrics ={
     speed: {
-      title: 'Speed Optimization';
-      subtitle: 'Lightning-fast performance across all devices';
-      icon: Zap;
-      color: 'from-yellow-50o0 to-orange-50o0';
-      currentValue: 95;
-      targetValue: 10o0;
-      unit: 'ms';
-      description: 'Average response time';
+      title: 'Speed Optimization',
+      subtitle: 'Lightning-fast performance across all devices',
+      icon: Zap,
+      color: 'from-yellow-50o0 to-orange-50o0',
+      currentValue: 95,
+      targetValue: 10o0,
+      unit: 'ms',
+      description: 'Average response time',
       improvements: [
-        'Edge computing implementation';
-        'CDN optimization';
-        'Code splitting';
-        'Lazy loading';
-        'Image optimization';
-        'Caching strategies']};
+        'Edge computing implementationCDN optimization',
+        'Code splittingLazy loading',
+        'Image optimizationCaching strategies']},
     efficiency: {
-      title: 'Resource Efficiency';
-      subtitle: 'Minimal resource usage with maximum output';
-      icon: Gauge;
-      color: 'from-green-50o0 to-emerald-50o0';
-      currentValue: 88;
-      targetValue: 95;
-      unit: '%';
-      description: 'Resource utilization';
+      title: 'Resource Efficiency',
+      subtitle: 'Minimal resource usage with maximum output',
+      icon: Gauge,
+      color: 'from-green-50o0 to-emerald-50o0',
+      currentValue: 88,
+      targetValue: 95,
+      unit: '%',
+      description: 'Resource utilization',
       improvements: [
-        'Memory optimization';
-        'CPU usage reduction';
-        'Network efficiency';
-        'Storage optimization';
-        'Battery life improvement';
-        'Heat management']};
+        'Memory optimizationCPU usage reduction',
+        'Network efficiencyStorage optimization',
+        'Battery life improvementHeat management']},
     reliability: {
-      title: 'Reliability & Uptime';
-      subtitle: '99.99% uptime with zero downtime deployments';
-      icon: Shield;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      currentValue: 99.8;
-      targetValue: 99.99;
-      unit: '%';
-      description: 'System uptime';
+      title: 'Reliability & Uptime',
+      subtitle: '99.99% uptime with zero downtime deployments',
+      icon: Shield,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      currentValue: 99.8,
+      targetValue: 99.99,
+      unit: '%',
+      description: 'System uptime',
       improvements: [
-        'Fault tolerance';
-        'Auto-scaling';
-        'Load balancing';
-        'Backup systems';
-        'Disaster recovery';
-        'Health monitoring']};
+        'Fault toleranceAuto-scaling',
+        'Load balancingBackup systems',
+        'Disaster recoveryHealth monitoring']},
     security: {
-      title: 'Security & Privacy';
-      subtitle: 'Military-grade security with privacy-first approach';
-      icon: Shield;
-      color: 'from-red-50o0 to-pink-50o0';
-      currentValue: 98;
-      targetValue: 10o0;
-      unit: '%';
-      description: 'Security score';
+      title: 'Security & Privacy',
+      subtitle: 'Military-grade security with privacy-first approach',
+      icon: Shield,
+      color: 'from-red-50o0 to-pink-50o0',
+      currentValue: 98,
+      targetValue: 10o0,
+      unit: '%',
+      description: 'Security score',
       improvements: [
-        'End-to-end encryption';
-        'Zero-trust architecture';
-        'Privacy protection';
-        'Threat detection';
-        'Vulnerability scanning';
-        'Compliance standards']}
-  };
+        'End-to-end encryptionZero-trust architecture',
+        'Privacy protectionThreat detection',
+        'Vulnerability scanningCompliance standards']}
+  },
   const performanceTests = [
     {
-      name: 'Page Load Speed';
-      current: 1.2;
-      optimized: 0.3;
-      unit: 's';
-      improvement: 75;
-      icon: Clock};
+      name: 'Page Load Speed',
+      current: 1.2,
+      optimized: 0.3,
+      unit: 's',
+      improvement: 75,
+      icon: Clock},
     {
-      name: 'Memory Usage';
-      current: 45;
-      optimized: 12;
-      unit: 'MB';
-      improvement: 73;
-      icon: Database};
+      name: 'Memory Usage',
+      current: 45,
+      optimized: 12,
+      unit: 'MB',
+      improvement: 73,
+      icon: Database},
     {
-      name: 'CPU Utilization';
-      current: 78;
-      optimized: 25;
-      unit: '%';
-      improvement: 68;
-      icon: Cpu};
+      name: 'CPU Utilization',
+      current: 78,
+      optimized: 25,
+      unit: '%',
+      improvement: 68,
+      icon: Cpu},
     {
-      name: 'Network Requests';
-      current: 156;
-      optimized: 23;
-      unit: '';
-      improvement: 85;
+      name: 'Network Requests',
+      current: 156,
+      optimized: 23,
+      unit: '',
+      improvement: 85,
       icon: Network}
   ],
   const optimizationFeatures = [
     {
-      title: 'AI-Powered Optimization';
-      description: 'Machine learning algorithms automatically optimize performance in real-time';
-      icon: Brain;
-      status: 'Active';
-      impact: 'High'};
+      title: 'AI-Powered Optimization',
+      description: 'Machine learning algorithms automatically optimize performance in real-time',
+      icon: Brain,
+      status: 'Active',
+      impact: 'High'},
     {
-      title: 'Edge Computing';
-      description: 'Process data closer to users for ultra-low latency';
-      icon: Layers;
-      status: 'Deployed';
-      impact: 'Critical'};
+      title: 'Edge Computing',
+      description: 'Process data closer to users for ultra-low latency',
+      icon: Layers,
+      status: 'Deployed',
+      impact: 'Critical'},
     {
-      title: 'Predictive Caching';
-      description: 'Anticipate user needs and pre-load content';
-      icon: HardDrive;
-      status: 'Beta';
-      impact: 'Medium'};
+      title: 'Predictive Caching',
+      description: 'Anticipate user needs and pre-load content',
+      icon: HardDrive,
+      status: 'Beta',
+      impact: 'Medium'},
     {
-      title: 'Quantum Compression';
-      description: 'Revolutionary data compression using quantum algorithms';
-      icon: Zap;
-      status: 'Research';
+      title: 'Quantum Compression',
+      description: 'Revolutionary data compression using quantum algorithms',
+      icon: Zap,
+      status: 'Research',
       impact: 'Breakthrough'}
   ],
   const realTimeMetrics = [
-    { label: 'Active Users'value: '2.3M'change: '+12%'trend: 'up' };
-    { label: 'Response Time'value: '45ms'change: '-23%'trend: 'down' };
-    { label: 'Uptime'value: '99.98%'change: '+0.1%'trend: 'up' };
+    { label: 'Active Users'value: '2.3M'change: '+12%'trend: 'up' },
+    { label: 'Response Time'value: '45ms'change: '-23%'trend: 'down' },
+    { label: 'Uptime'value: '99.98%'change: '+0.1%'trend: 'up' },
     { label: 'Error Rate'value: '0.0o2%'change: '-45%'trend: 'down' }
   ],
   useEffect(() => {
@@ -177,7 +165,7 @@ const PerformanceOptimization20o29 = () => {
     return () => clearInterval(interval)}[]),
   const startOptimization = () => {
     setIsOptimizing(true),
-    setOptimizationProgress(0)};
+    setOptimizationProgress(0)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
@@ -498,5 +486,5 @@ const PerformanceOptimization20o29 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default PerformanceOptimization20o29;
+    </div>)},
+export default PerformanceOptimization20o29,

@@ -14,5 +14,5 @@ const ServicePage: NextPage<Props> = () => {
         <p>Service details coming soon...</p>,
         <a href="/services">Back to Services</a>,
       </main>,
-    </div>)};
-export default ServicePage;
+    </div>)},
+export default ServicePage,

@@ -65,7 +65,7 @@ export default function AboutPage() {
                 </h2>,
                 <p className='text-lg text-white/80 mb-4'>,
                   To be the leading provider of autonomous technology solutions,
-                  that enable businesses to operate more efficiently, securely;
+                  that enable businesses to operate more efficiently, securely,
                   and innovatively.,
                 </p>,
                 <p className='text-white/70'>,
@@ -87,7 +87,7 @@ export default function AboutPage() {
                   Innovation First,
                 </h3>,
                 <p className='text-white/70'>,
-                  We constantly push the boundaries of what's possible;
+                  We constantly push the boundaries of what's possible,
                   exploring emerging technologies and creative solutions.,
                 </p>,
               </div>,

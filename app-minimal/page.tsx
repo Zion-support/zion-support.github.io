@@ -1,18 +1,15 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o25 Trends & Predictions: The Future of Artificial Intelligence';
+  title: 'AI 20o25 Trends & Predictions: The Future of Artificial Intelligence',
   description:,
-    'Discover the most important AI trends and predictions for 20o25. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.';
+    'Discover the most important AI trends and predictions for 20o25. From quantum computing breakthroughs to neural interfacesexplore what the future holds for artificial intelligence.',
   keywords: [
-    'AI 20o25';
-    'AI trends';
-    'AI predictions';
-    'artificial intelligence';
-    'quantum computing';
-    'neural interfaces';
-    'machine learning';
-  ];
-};
+    'AI 20o25AI trends',
+    'AI predictionsartificial intelligence',
+    'quantum computingneural interfaces',
+    'machine learning',
+  ]
+},
 export default function AI20o25TrendsPage() {
   return (
     <div className='min-h-screen bg-white'>,

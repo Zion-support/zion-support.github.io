@@ -4,7 +4,7 @@ import UltraFuturisticServiceCard20o26 from './ui/UltraFuturisticServiceCard20o2
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Star;
+  ArrowRight, Star,
   Brain, Atom, Shield, Zap} from 'lucide-react',
 import { innovative20o25MicroSaasBatch } from '../data/innovative-20o25-micro-saas-batch',
 interface Homepage20o25Props { showInternalNav?: boolean }
@@ -25,23 +25,23 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
       setIsMobileMenuOpen(false)}
-  };
+  },
   const allServices = [
-    ...innovativeRealMicroSaasServices20o25;
-    ...innovativeAIServicesEnhanced20o25;
-    ...innovativeITServicesEnhanced20o25;
-    ...emergingTechServicesEnhanced20o25;
-    ...advancedAIAutomationServices;
+    ...innovativeRealMicroSaasServices20o25,
+    ...innovativeAIServicesEnhanced20o25,
+    ...innovativeITServicesEnhanced20o25,
+    ...emergingTechServicesEnhanced20o25,
+    ...advancedAIAutomationServices,
     ...quantumCybersecurityServices],
   const featuredServices = allServices.filter(service => service.popular).slice(0, 12),
   const navigationSections = [
-    { id: 'hero', label: 'Home', icon: '🏠' };
-    { id: 'services', label: 'Micro SAAS', icon: '🚀' };
-    { id: 'ai', label: 'AI Services', icon: '🧠' };
-    { id: 'automation', label: 'AI Automation', icon: '⚡' };
-    { id: 'quantum', label: 'Quantum Security', icon: '🔐' };
-    { id: 'it', label: 'IT Solutions', icon: '💻' };
-    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' };
+    { id: 'hero', label: 'Home', icon: '🏠' },
+    { id: 'services', label: 'Micro SAAS', icon: '🚀' },
+    { id: 'ai', label: 'AI Services', icon: '🧠' },
+    { id: 'automation', label: 'AI Automation', icon: '⚡' },
+    { id: 'quantum', label: 'Quantum Security', icon: '🔐' },
+    { id: 'it', label: 'IT Solutions', icon: '💻' },
+    { id: 'emerging', label: 'Emerging Tech', icon: '🌟' },
     { id: 'contact', label: 'Contact', icon: '📞' }
   ],
   return (
@@ -253,15 +253,15 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                 </div>}>,
                 <UltraFuturisticServiceCard20o26
                   service={{
-                    id: 'ai-ml';
-                    name: 'AI & Machine Learning';
-                    tagline: 'Advanced artificial intelligence solutions';
-                    description: 'Revolutionary AI and machine learning solutions that transform how businesses operate, make decisions, and serve customers';
-                    price: '$999';
-                    period: 'month';
-                    features: ['Machine Learning', 'Deep Learning', 'NLP', 'Computer Vision', 'AI Ethics'];
-                    popular: true;
-                    category: 'AI';
+                    id: 'ai-ml',
+                    name: 'AI & Machine Learning',
+                    tagline: 'Advanced artificial intelligence solutions',
+                    description: 'Revolutionary AI and machine learning solutions that transform how businesses operate, make decisions, and serve customers',
+                    price: '$999',
+                    period: 'month',
+                    features: ['Machine LearningDeep Learning', 'NLPComputer Vision', 'AI Ethics'],
+                    popular: true,
+                    category: 'AI',
                     icon: '🧠'}}
                   variant="ai",
                  />,
@@ -309,15 +309,15 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                 </div>}>,
                 <UltraFuturisticServiceCard20o26
                   service={{
-                    id: 'process-automation';
-                    name: 'Process Automation';
-                    tagline: 'Intelligent automation solutions';
-                    description: 'Intelligent automation that streamlines operations, reduces costs, and enhances productivity across your organization';
-                    price: '$799';
-                    period: 'month';
-                    features: ['Workflow Automation', 'RPA', 'AI Integration', 'Analytics', 'Process Mining'];
-                    popular: true;
-                    category: 'Automation';
+                    id: 'process-automation',
+                    name: 'Process Automation',
+                    tagline: 'Intelligent automation solutions',
+                    description: 'Intelligent automation that streamlines operations, reduces costs, and enhances productivity across your organization',
+                    price: '$799',
+                    period: 'month',
+                    features: ['Workflow AutomationRPA', 'AI IntegrationAnalytics', 'Process Mining'],
+                    popular: true,
+                    category: 'Automation',
                     icon: '⚡'}}
                   variant="automation",
                  />,
@@ -328,15 +328,15 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
                 </div>}>,
                 <UltraFuturisticServiceCard20o26
                   service={{
-                    id: 'quantum-security';
-                    name: 'Quantum Security';
-                    tagline: 'Future-proof security solutions';
-                    description: 'Quantum-secure infrastructure and post-quantum cryptography to protect against future quantum threats';
-                    price: '$2999';
-                    period: 'month';
-                    features: ['Post-Quantum Crypto', 'Quantum Key Distribution', 'Zero Trust', 'Compliance'];
-                    popular: true;
-                    category: 'Security';
+                    id: 'quantum-security',
+                    name: 'Quantum Security',
+                    tagline: 'Future-proof security solutions',
+                    description: 'Quantum-secure infrastructure and post-quantum cryptography to protect against future quantum threats',
+                    price: '$2999',
+                    period: 'month',
+                    features: ['Post-Quantum CryptoQuantum Key Distribution', 'Zero TrustCompliance'],
+                    popular: true,
+                    category: 'Security',
                     icon: '🔐'}}
                   variant="it",
                  />,
@@ -406,11 +406,11 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
-                { title: "AI Content Autonomy", description: "Fully autonomous content creation and management", icon: Brain, color: "from-purple-50o0 to-pink-50o0", link: "/innovative-20o25-services-showcase" };
-                { title: "Quantum Cloud Hybrid", description: "Seamless quantum-classical computing integration", icon: Cpu, color: "from-cyan-50o0 to-blue-50o0", link: "/innovative-20o25-services-showcase" };
-                { title: "Cyber Immune Security", description: "Self-defending systems that adapt to threats", icon: Shield, color: "from-red-50o0 to-orange-50o0", link: "/innovative-20o25-services-showcase" };
-                { title: "Edge Intelligence", description: "Distributed AI processing at the edge", icon: Cloud, color: "from-emerald-50o0 to-teal-50o0", link: "/innovative-20o25-services-showcase" };
-                { title: "AI Research Scout", description: "Intelligent research automation and discovery", icon: BarChart3, color: "from-indigo-50o0 to-purple-50o0", link: "/innovative-20o25-services-showcase" };
+                { title: "AI Content Autonomy", description: "Fully autonomous content creation and management", icon: Brain, color: "from-purple-50o0 to-pink-50o0", link: "/innovative-20o25-services-showcase" },
+                { title: "Quantum Cloud Hybrid", description: "Seamless quantum-classical computing integration", icon: Cpu, color: "from-cyan-50o0 to-blue-50o0", link: "/innovative-20o25-services-showcase" },
+                { title: "Cyber Immune Security", description: "Self-defending systems that adapt to threats", icon: Shield, color: "from-red-50o0 to-orange-50o0", link: "/innovative-20o25-services-showcase" },
+                { title: "Edge Intelligence", description: "Distributed AI processing at the edge", icon: Cloud, color: "from-emerald-50o0 to-teal-50o0", link: "/innovative-20o25-services-showcase" },
+                { title: "AI Research Scout", description: "Intelligent research automation and discovery", icon: BarChart3, color: "from-indigo-50o0 to-purple-50o0", link: "/innovative-20o25-services-showcase" },
                 { title: "Autonomous DevOps", description: "Self-healing infrastructure with zero downtime", icon: Lock, color: "from-yellow-50o0 to-orange-50o0", link: "/innovative-20o25-services-showcase" }
               ].map((service, index) => (
                 <motion.div,
@@ -520,40 +520,40 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
             >,
               {[
                 {
-                  icon: '🧠';
-                  title: "AI & Machine Learning";
-                  description: "Advanced artificial intelligence solutions for business transformation";
-                  services: "50+ AI Services";
-                  color: "from-cyan-50o0 to-blue-60o0"};
+                  icon: '🧠',
+                  title: "AI & Machine Learning",
+                  description: "Advanced artificial intelligence solutions for business transformation",
+                  services: "50+ AI Services",
+                  color: "from-cyan-50o0 to-blue-60o0"},
                 {
-                  icon: '⚛️';
-                  title: "Quantum Technology";
-                  description: "Breakthrough quantum computing and quantum-secure solutions";
-                  services: "25+ Quantum Services";
-                  color: "from-purple-50o0 to-pink-60o0"};
+                  icon: '⚛️',
+                  title: "Quantum Technology",
+                  description: "Breakthrough quantum computing and quantum-secure solutions",
+                  services: "25+ Quantum Services",
+                  color: "from-purple-50o0 to-pink-60o0"},
                 {
-                  icon: '🛡️';
-                  title: "Cybersecurity";
-                  description: "Enterprise-grade security and compliance solutions";
-                  services: "40+ Security Services";
-                  color: "from-red-50o0 to-orange-60o0"};
+                  icon: '🛡️',
+                  title: "Cybersecurity",
+                  description: "Enterprise-grade security and compliance solutions",
+                  services: "40+ Security Services",
+                  color: "from-red-50o0 to-orange-60o0"},
                 {
-                  icon: '🌐';
-                  title: "IT Infrastructure";
-                  description: "Scalable and secure enterprise infrastructure solutions";
-                  services: "35+ Infrastructure Services";
-                  color: "from-green-50o0 to-emerald-60o0"};
+                  icon: '🌐',
+                  title: "IT Infrastructure",
+                  description: "Scalable and secure enterprise infrastructure solutions",
+                  services: "35+ Infrastructure Services",
+                  color: "from-green-50o0 to-emerald-60o0"},
                 {
-                  icon: '📱';
-                  title: "Micro SAAS";
-                  description: "Innovative business solutions for modern enterprises";
-                  services: "60+ Micro SAAS Services";
-                  color: "from-yellow-50o0 to-amber-60o0"};
+                  icon: '📱',
+                  title: "Micro SAAS",
+                  description: "Innovative business solutions for modern enterprises",
+                  services: "60+ Micro SAAS Services",
+                  color: "from-yellow-50o0 to-amber-60o0"},
                 {
-                  icon: '🚀';
-                  title: "Emerging Tech";
-                  description: "Cutting-edge technologies for future-ready businesses";
-                  services: "30+ Emerging Tech Services";
+                  icon: '🚀',
+                  title: "Emerging Tech",
+                  description: "Cutting-edge technologies for future-ready businesses",
+                  services: "30+ Emerging Tech Services",
                   color: "from-indigo-50o0 to-violet-60o0"}
               ].map((category, index) => (
                 <motion.div,
@@ -612,4 +612,4 @@ const Homepage20o25: React.FC<Homepage20o25Props> = ({ showInternalNav = true })
       </AnimatePresence>,
     </Layout>)}),
 Homepage20o25.displayName = 'Homepage20o25',
-export default Homepage20o25;
+export default Homepage20o25,

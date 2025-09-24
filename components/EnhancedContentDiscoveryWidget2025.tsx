@@ -9,22 +9,22 @@ import {
   TrendingUp,
   Clock,
   Star,
-  Eye;
-  ThumbsUp;
-  MessageCircle;
-  Bookmark;
-  ArrowRight;
-  ChevronDown;
-  X;
-  Brain;
-  Zap;
-  Rocket;
-  Target;
-  Users;
-  Award;
-  BarChart3;
-  Cpu;
-  Shield;
+  Eye,
+  ThumbsUp,
+  MessageCircle,
+  Bookmark,
+  ArrowRight,
+  ChevronDown,
+  X,
+  Brain,
+  Zap,
+  Rocket,
+  Target,
+  Users,
+  Award,
+  BarChart3,
+  Cpu,
+  Shield,
   Globe} from 'lucide-react',
 const EnhancedContentDiscoveryWidget20o25 = () => {
   const [searchQuerysetSearchQuery] = useState(''),
@@ -32,105 +32,105 @@ const EnhancedContentDiscoveryWidget20o25 = () => {
   const [sortBysetSortBy] = useState('trending'),
   const [showFiltersetShowFilters] = useState(false),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Globecount: 1247 };
-    { id: ''breakthroughs', 'name: 'AI 'Breakthroughs', 'icon: Braincount: 156 };
-    { id: ''solutions', 'name: 'Enterprise 'Solutions', 'icon: Targetcount: 89 };
-    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Rocketcount: 67 };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BarChart3count: 234 };
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: Bookmarkcount: 189 };
-    { id: ''tools', 'name: 'AI 'Tools', 'icon: Cpucount: 312 };
-    { id: ''security', 'name: ''Security', 'icon: Shieldcount: 45 }
+    { id: ''allname: 'All 'Contenticon: Globecount: 1247 },
+    { id: ''breakthroughsname: 'AI 'Breakthroughsicon: Braincount: 156 },
+    { id: ''solutionsname: 'Enterprise 'Solutionsicon: Targetcount: 89 },
+    { id: ''predictionsname: 'Future 'Predictionsicon: Rocketcount: 67 },
+    { id: 'case-'studiesname: 'Case 'Studiesicon: BarChart3count: 234 },
+    { id: ''tutorialsname: ''Tutorialsicon: Bookmarkcount: 189 },
+    { id: ''toolsname: 'AI 'Toolsicon: Cpucount: 312 },
+    { id: ''securityname: ''Securityicon: Shieldcount: 45 }
   ],
   const sortOptions = [
-    { id: ''trending', 'name: ''Trending', 'icon: TrendingUp };
-    { id: ''newest', 'name: ''Newest', 'icon: Clock };
-    { id: ''popular', 'name: 'Most 'Popular', 'icon: Star };
-    { id: ''views', 'name: 'Most 'Viewed', 'icon: Eye }
+    { id: ''trendingname: ''Trendingicon: TrendingUp },
+    { id: ''newestname: ''Newesticon: Clock },
+    { id: ''popularname: 'Most 'Popularicon: Star },
+    { id: ''viewsname: 'Most 'Viewedicon: Eye }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: "AI 20o25 Ultimate Content Revolution: Revolutionary Breakthroughs";
-      description: "Discover the most advanced AI technologiesbreakthrough innovationsand future predictions that are reshaping industries worldwide.";
-      category: "breakthroughs";
-      type: "blog";
-      readTime: "15 min";
-      views: 240o0;
-      likes: 120o0;
-      comments: 89;
-      rating: 4.9;
-      tags: ["AI 20o25"Revolutionary AI"Quantum Computing"Breakthroughs"];
-      featured: true;
-      image: "/api/placeholder/40o0/20o0"};
+      id: 1,
+      title: "AI 20o25 Ultimate Content Revolution: Revolutionary Breakthroughs",
+      description: "Discover the most advanced AI technologiesbreakthrough innovationsand future predictions that are reshaping industries worldwide.",
+      category: "breakthroughs",
+      type: "blog",
+      readTime: "15 min",
+      views: 240o0,
+      likes: 120o0,
+      comments: 89,
+      rating: 4.9,
+      tags: ["AI 20o25"Revolutionary AI"Quantum Computing"Breakthroughs"],
+      featured: true,
+      image: "/api/placeholder/40o0/20o0"},
     {
-      id: 2;
-      title: "5,0o00% ROI Success Story: Fortune 50o0 AI Transformation";
-      description: "How a Fortune 50o0 company achieved 5,0o00% ROI through our Ultimate Content Revolution AI implementation.";
-      category: "case-studies";
-      type: "case-study";
-      readTime: "12 min";
-      views: 180o0;
-      likes: 950;
-      comments: 45;
-      rating: 4.8;
-      tags: ["ROI"Fortune 50o0"AI Transformation"Success Story"];
-      featured: true;
-      image: "/api/placeholder/40o0/20o0"};
+      id: 2,
+      title: "5,0o00% ROI Success Story: Fortune 50o0 AI Transformation",
+      description: "How a Fortune 50o0 company achieved 5,0o00% ROI through our Ultimate Content Revolution AI implementation.",
+      category: "case-studies",
+      type: "case-study",
+      readTime: "12 min",
+      views: 180o0,
+      likes: 950,
+      comments: 45,
+      rating: 4.8,
+      tags: ["ROI"Fortune 50o0"AI Transformation"Success Story"],
+      featured: true,
+      image: "/api/placeholder/40o0/20o0"},
     {
-      id: 3;
-      title: "Quantum-Neural Fusion: The Next Frontier in AI";
-      description: "Explore the breakthrough integration of quantum computing with neural networks achieving 10,0o00x processing speed.";
-      category: "breakthroughs";
-      type: "blog";
-      readTime: "8 min";
-      views: 320o0;
-      likes: 180o0;
-      comments: 120;
-      rating: 4.9;
-      tags: ["Quantum Computing"Neural Networks"AI Breakthroughs"];
-      featured: false;
-      image: "/api/placeholder/40o0/20o0"};
+      id: 3,
+      title: "Quantum-Neural Fusion: The Next Frontier in AI",
+      description: "Explore the breakthrough integration of quantum computing with neural networks achieving 10,0o00x processing speed.",
+      category: "breakthroughs",
+      type: "blog",
+      readTime: "8 min",
+      views: 320o0,
+      likes: 180o0,
+      comments: 120,
+      rating: 4.9,
+      tags: ["Quantum Computing"Neural Networks"AI Breakthroughs"],
+      featured: false,
+      image: "/api/placeholder/40o0/20o0"},
     {
-      id: 4;
-      title: "Autonomous Business Operations: 85% Cost Reduction";
-      description: "Self-managing AI systems that reduce operational costs by 85% while increasing efficiency across all business units.";
-      category: "solutions";
-      type: "guide";
-      readTime: "10 min";
-      views: 150o0;
-      likes: 80o0;
-      comments: 67;
-      rating: 4.7;
-      tags: ["Autonomous Operations"Cost Reduction"Business Automation"];
-      featured: false;
-      image: "/api/placeholder/40o0/20o0"};
+      id: 4,
+      title: "Autonomous Business Operations: 85% Cost Reduction",
+      description: "Self-managing AI systems that reduce operational costs by 85% while increasing efficiency across all business units.",
+      category: "solutions",
+      type: "guide",
+      readTime: "10 min",
+      views: 150o0,
+      likes: 80o0,
+      comments: 67,
+      rating: 4.7,
+      tags: ["Autonomous Operations"Cost Reduction"Business Automation"],
+      featured: false,
+      image: "/api/placeholder/40o0/20o0"},
     {
-      id: 5;
-      title: "AI 20o26-20o30: Future Technology Predictions";
-      description: "Expert insights into the next decade of technological advancement and AI evolution.";
-      category: "predictions";
-      type: "prediction";
-      readTime: "20 min";
-      views: 410o0;
-      likes: 210o0;
-      comments: 156;
-      rating: 4.8;
-      tags: ["Future Predictions"AI 20o26"Technology Trends"];
-      featured: true;
-      image: "/api/placeholder/40o0/20o0"};
+      id: 5,
+      title: "AI 20o26-20o30: Future Technology Predictions",
+      description: "Expert insights into the next decade of technological advancement and AI evolution.",
+      category: "predictions",
+      type: "prediction",
+      readTime: "20 min",
+      views: 410o0,
+      likes: 210o0,
+      comments: 156,
+      rating: 4.8,
+      tags: ["Future Predictions"AI 20o26"Technology Trends"],
+      featured: true,
+      image: "/api/placeholder/40o0/20o0"},
     {
-      id: 6;
-      title: "Consciousness-Level AI: Human-Like Reasoning";
-      description: "AI systems with human-like reasoning and emotional intelligence capabilities transforming human-AI interaction.";
-      category: "breakthroughs";
-      type: "blog";
-      readTime: "12 min";
-      views: 280o0;
-      likes: 140o0;
-      comments: 98;
-      rating: 4.9;
-      tags: ["Consciousness AI"Human-like AI"Emotional Intelligence"];
-      featured: false;
+      id: 6,
+      title: "Consciousness-Level AI: Human-Like Reasoning",
+      description: "AI systems with human-like reasoning and emotional intelligence capabilities transforming human-AI interaction.",
+      category: "breakthroughs",
+      type: "blog",
+      readTime: "12 min",
+      views: 280o0,
+      likes: 140o0,
+      comments: 98,
+      rating: 4.9,
+      tags: ["Consciousness AI"Human-like AI"Emotional Intelligence"],
+      featured: false,
       image: "/api/placeholder/40o0/20o0"}
   ],
   const filteredContent = contentItems.filter(item => {
@@ -146,7 +146,7 @@ const EnhancedContentDiscoveryWidget20o25 = () => {
       case 'guide': return Target,
       case 'prediction': return Rocket,
       default: return Bookmark}
-  };
+  },
   const getContentTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'text-blue-40o0',
@@ -154,7 +154,7 @@ const EnhancedContentDiscoveryWidget20o25 = () => {
       case 'guide': return 'text-purple-40o0',
       case 'prediction': return 'text-orange-40o0',
       default: return 'text-gray-40o0'}
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -331,5 +331,5 @@ const EnhancedContentDiscoveryWidget20o25 = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default EnhancedContentDiscoveryWidget20o25;
+    </div>)},
+export default EnhancedContentDiscoveryWidget20o25,

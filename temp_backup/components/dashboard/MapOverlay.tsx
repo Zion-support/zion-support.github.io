@@ -1,10 +1,10 @@
-export type RegionMetric = { region: string, value: number };
+export type RegionMetric = { region: string, value: number },
 const regions: RegionMetric[] = [
-  { region: 'NA', value: 0 };
-  { region: 'EU', value: 0 };
-  { region: 'APAC', value: 0 };
-  { region: 'LATAM', value: 0 };
-  { region: 'AFR', value: 0 };
+  { region: 'NA', value: 0 },
+  { region: 'EU', value: 0 },
+  { region: 'APAC', value: 0 },
+  { region: 'LATAM', value: 0 },
+  { region: 'AFR', value: 0 },
 ],
 export default function MapOverlay({ data }: { data: RegionMetric[] }) {
   const byRegion = Object.fromEntries(regions.map(r => [r.region, 0])),

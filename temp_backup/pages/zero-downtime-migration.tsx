@@ -20,7 +20,7 @@ export default function ZeroDowntimeMigration() {
             Zero-Downtime Migration,
           </h1>,
           <p className='mt-4 text-lg text-slate-30o0'>,
-            Plan, rehearse, and execute zero-downtime migrations for databases;
+            Plan, rehearse, and execute zero-downtime migrations for databases,
             services, and platforms.,
           </p>,
           <div className='mt-10 grid grid-cols-1 md: grid-cols-3 gap-6'>,

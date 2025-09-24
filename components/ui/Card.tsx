@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import { cn } from "../../lib/utils",
 interface CardProps {
   children: React.ReactNode,
@@ -21,25 +21,25 @@ const Card: React.FC<CardProps> = ({ children, className, style }) => {
   return (
     <div
       className={cn(
-        "rounded-xl border bg-white shadow-sm transition-all duration-200 hover:shadow-md";
+        "rounded-xl border bg-white shadow-sm transition-all duration-200 hover: shadow-md",
         className)}
       style={style}
     >,
       {children}
-    </div>)};
+    </div>)},
 const CardHeader: React.FC<CardHeaderProps> = ({ children, className }) => {
   return (
     <div className={cn("flex flex-col space-y-1.5 p-6", className)}>,
       {children}
-    </div>)};
+    </div>)},
 const CardContent: React.FC<CardContentProps> = ({ children, className }) => {
   return (
     <div className={cn("p-6 pt-0", className)}>,
       {children}
-    </div>)};
+    </div>)},
 const CardFooter: React.FC<CardFooterProps> = ({ children, className }) => {
   return (
     <div className={cn("flex items-center p-6 pt-0", className)}>,
       {children}
-    </div>)};
-export { Card, CardHeader, CardContent, CardFooter };
+    </div>)},
+export { Card, CardHeader, CardContent, CardFooter },

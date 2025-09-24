@@ -1,13 +1,13 @@
-import React from 'react';
+import React from 'react',
 import {
-  Shield;
-  CheckCircle;
-  Zap;
-  Brain;
-  Atom;
-  Globe;
-  Lock;
-  Users;
+  Shield,
+  CheckCircle,
+  Zap,
+  Brain,
+  Atom,
+  Globe,
+  Lock,
+  Users,
 } from 'lucide-react',
 const QuantumComplianceAutomationPage: React.FC = () => {
   return (
@@ -39,7 +39,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {
             </h1>,
             <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
               Next-generation compliance automation powered by quantum,
-              computing, providing intelligent monitoring, automated reporting;
+              computing, providing intelligent monitoring, automated reporting,
               and regulatory adherence.,
             </p>,
           </div>,
@@ -74,7 +74,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {
                   AI-Powered Analysis,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Intelligent automation that continuously monitors, analyzes;
+                  Intelligent automation that continuously monitors, analyzes,
                   and reports on compliance requirements.,
                 </p>,
               </div>,
@@ -104,7 +104,7 @@ const QuantumComplianceAutomationPage: React.FC = () => {
                     Regulatory Monitoring,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Continuous monitoring of regulatory changes, requirements;
+                    Continuous monitoring of regulatory changes, requirements,
                     and compliance obligations across jurisdictions.,
                   </p>,
                 </div>,
@@ -526,5 +526,5 @@ const QuantumComplianceAutomationPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default QuantumComplianceAutomationPage;
+    </>)},
+export default QuantumComplianceAutomationPage,

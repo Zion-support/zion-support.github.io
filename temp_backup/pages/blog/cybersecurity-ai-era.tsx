@@ -63,7 +63,7 @@ export default function CybersecurityAIEra() {
                 <p className='text-white/90 mb-4'>,
                   The integration of artificial intelligence into cybersecurity,
                   represents a paradigm shift in how we protect digital assets.,
-                  AI systems can analyze vast amounts of data in real-time;
+                  AI systems can analyze vast amounts of data in real-time,
                   identify patterns that human analysts might miss, and respond,
                   to threats with unprecedented speed.,
                 </p>,
@@ -103,7 +103,7 @@ export default function CybersecurityAIEra() {
                   The democratization of AI technology has lowered the barrier,
                   to entry for sophisticated cyber attacks. Malicious actors can,
                   now leverage machine learning algorithms to create more,
-                  convincing phishing campaigns, develop polymorphic malware;
+                  convincing phishing campaigns, develop polymorphic malware,
                   and orchestrate complex attack campaigns.,
                 </p>,
                 <p className='text-white/90 mb-4'>,
@@ -145,7 +145,7 @@ export default function CybersecurityAIEra() {
                       Adaptive Malware,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      Malicious software that can learn from its environment;
+                      Malicious software that can learn from its environment,
                       evade detection, and modify its behavior to achieve its,
                       objectives.,
                     </p>,
@@ -314,7 +314,7 @@ export default function CybersecurityAIEra() {
                   <li>• User consent and control over personal data</li>,
                   <li>• Regular privacy impact assessments for AI systems</li>,
                   <li>,
-                    • Compliance with global privacy regulations (GDPR, CCPA;
+                    • Compliance with global privacy regulations (GDPR, CCPA,
                     etc.),
                   </li>,
                 </ul>,
@@ -409,7 +409,7 @@ export default function CybersecurityAIEra() {
                 <p className='text-white/90 mb-4'>,
                   As AI technology continues to evolve, the cybersecurity,
                   landscape will face new challenges and opportunities. Emerging,
-                  trends include the use of quantum computing for cryptography;
+                  trends include the use of quantum computing for cryptography,
                   the development of more sophisticated AI attack tools, and the,
                   need for international cooperation in addressing AI security,
                   threats.,

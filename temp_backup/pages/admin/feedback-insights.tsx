@@ -6,14 +6,14 @@ import type { GetServerSideProps } from 'next',
 export const getServerSideProps: GetServerSideProps = async ({ req }) => {
   const cookie = req.headers.cookie || '',
   const role = cookie,
-    .split(','),
+    .split(),
     .map(s => s.trim()),
     .find(s => s.startsWith('zion_role=')),
     ?.split('=')[1],
   if (role !== 'superadmin'),
-    return { redirect: { destination: '/unauthorized', permanent: false } };
-  return { props: {} };
-};
+    return { redirect: { destination: '/unauthorized', permanent: false } },
+  return { props: {} },
+},
 export default function FeedbackInsightsAdminPage() {
   const [report, setReport] = useState<AnalysisResult | null>(null),
   const [loading, setLoading] = useState<boolean>(false),
@@ -28,34 +28,34 @@ export default function FeedbackInsightsAdminPage() {
       // Placeholder: Real data would come from your DB/logs,
       const items = [
         {
-          timestamp: new Date().toISOString();
-          feature: 'chatbot';
-          stars: 5;
-          comment: 'Loves the faster replies!';
-        };
+          timestamp: new Date().toISOString(),
+          feature: 'chatbot',
+          stars: 5,
+          comment: 'Loves the faster replies!'
+        },
         {
-          timestamp: new Date().toISOString();
-          feature: 'rentals';
-          stars: 2;
-          comment: 'Checkout kept failing on mobile.';
-        };
+          timestamp: new Date().toISOString(),
+          feature: 'rentals',
+          stars: 2,
+          comment: 'Checkout kept failing on mobile.'
+        },
         {
-          timestamp: new Date().toISOString();
-          feature: 'jobs';
-          stars: 3;
-          comment: 'Job alerts are noisy, want filters';
-        };
+          timestamp: new Date().toISOString(),
+          feature: 'jobs',
+          stars: 3,
+          comment: 'Job alerts are noisy, want filters',
+        },
         {
-          timestamp: new Date().toISOString();
-          feature: 'dashboard';
-          stars: 1;
-          comment: 'Charts not loading in Safari';
-        };
+          timestamp: new Date().toISOString(),
+          feature: 'dashboard',
+          stars: 1,
+          comment: 'Charts not loading in Safari'
+        },
       ],
       const res = await fetch('/api/admin/analyze-feedback', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ items });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ items }),
       }),
       const json = await res.json(),
       setReport(json)} finally {

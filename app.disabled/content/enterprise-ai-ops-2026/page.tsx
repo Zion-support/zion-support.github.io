@@ -1,18 +1,15 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Enterprise AI Ops Blueprint 20o26';
+  title: 'Enterprise AI Ops Blueprint 20o26',
   description:,
-    'A practical blueprint to build, operate, and scale enterprise-grade AI operations with reliability, governance, and measurable ROI in 20o26.';
+    'A practical blueprint to build, operate, and scale enterprise-grade AI operations with reliability, governance, and measurable ROI in 20o26.',
   keywords: [
-    'AI Ops';
-    'MLOps';
-    'LLMOps';
-    'AI Governance';
-    'AI Reliability';
-    'Observability';
-    'AI Platform';
-  ];
-};
+    'AI OpsMLOps',
+    'LLMOpsAI Governance',
+    'AI ReliabilityObservability',
+    'AI Platform',
+  ]
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,

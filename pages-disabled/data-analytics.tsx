@@ -3,132 +3,118 @@ import Link from 'next/link',
 import { ModernHeader } from '../src/components/header/ModernHeader',
 import { SimpleFooter } from '../src/components/layout/SimpleFooter',
 import {
-  BarChart3;
-  TrendingUp;
-  Database;
-  Brain;
-  Eye;
-  Target;
-  CheckCircle;
-  ArrowRight;
-  PieChart;
-  LineChart;
-  Activity;
-  Zap;
-  Shield;
-  Globe;
+  BarChart3,
+  TrendingUp,
+  Database,
+  Brain,
+  Eye,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  PieChart,
+  LineChart,
+  Activity,
+  Zap,
+  Shield,
+  Globe,
 } from 'lucide-react',
 export default function DataAnalytics() {
   const services = [
     {
-      icon: Database;
-      title: 'Data Engineering';
+      icon: Database,
+      title: 'Data Engineering',
       description:,
-        'Build robust data pipelines and infrastructure for real-time and batch processing.';
+        'Build robust data pipelines and infrastructure for real-time and batch processing.',
       features: [
-        'ETL/ELT pipelines';
-        'Data warehousing';
-        'Real-time streaming';
-        'Data quality assurance';
-      ];
-    };
+        'ETL/ELT pipelinesData warehousing',
+        'Real-time streamingData quality assurance',
+      ]
+    },
     {
-      icon: Brain;
-      title: 'Machine Learning';
+      icon: Brain,
+      title: 'Machine Learning',
       description:,
-        'Implement AI and ML models to extract insights and automate decision-making.';
+        'Implement AI and ML models to extract insights and automate decision-making.',
       features: [
-        'Predictive analytics';
-        'Natural language processing';
-        'Computer vision';
-        'Recommendation systems';
-      ];
-    };
+        'Predictive analyticsNatural language processing',
+        'Computer visionRecommendation systems',
+      ]
+    },
     {
-      icon: BarChart3;
-      title: 'Business Intelligence';
+      icon: BarChart3,
+      title: 'Business Intelligence',
       description:,
-        'Create interactive dashboards and reports for data-driven decision making.';
+        'Create interactive dashboards and reports for data-driven decision making.',
       features: [
-        'Interactive dashboards';
-        'Custom reports';
-        'KPI tracking';
-        'Data visualization';
-      ];
-    };
+        'Interactive dashboardsCustom reports',
+        'KPI trackingData visualization',
+      ]
+    },
     {
-      icon: Target;
-      title: 'Advanced Analytics';
+      icon: Target,
+      title: 'Advanced Analytics',
       description:,
-        'Deep dive into your data with statistical analysis and predictive modeling.';
+        'Deep dive into your data with statistical analysis and predictive modeling.',
       features: [
-        'Statistical analysis';
-        'Predictive modeling';
-        'A/B testing';
-        'Cohort analysis';
-      ];
-    };
+        'Statistical analysisPredictive modeling',
+        'A/B testingCohort analysis',
+      ]
+    },
   ],
   const technologies = [
     {
-      category: 'Data Processing';
+      category: 'Data Processing',
       tools: [
-        'Apache Spark';
-        'Apache Kafka';
-        'Apache Airflow';
-        'Apache Beam';
-        'Apache Flink';
-      ];
-    };
+        'Apache SparkApache Kafka',
+        'Apache AirflowApache Beam',
+        'Apache Flink',
+      ]
+    },
     {
-      category: 'Machine Learning';
+      category: 'Machine Learning',
       tools: [
-        'TensorFlow';
-        'PyTorch';
-        'Scikit-learn';
-        'XGBoost';
-        'Apache MLlib';
-      ];
-    };
+        'TensorFlowPyTorch',
+        'Scikit-learnXGBoost',
+        'Apache MLlib',
+      ]
+    },
     {
-      category: 'Visualization';
-      tools: ['Tableau', 'Power BI', 'Grafana', 'D3.js', 'Plotly'];
-    };
+      category: 'Visualization',
+      tools: ['TableauPower BI', 'GrafanaD3.js', 'Plotly'],
+    },
     {
-      category: 'Cloud Platforms';
+      category: 'Cloud Platforms',
       tools: [
-        'AWS Analytics';
-        'Azure Analytics';
-        'Google Cloud Analytics';
-        'Snowflake';
-        'Databricks';
-      ];
-    };
+        'AWS AnalyticsAzure Analytics',
+        'Google Cloud AnalyticsSnowflake',
+        'Databricks',
+      ]
+    },
   ],
   const industries = [
     {
-      name: 'E-commerce';
+      name: 'E-commerce',
       description:,
-        'Customer behavior analysis, inventory optimization, and recommendation engines';
-      icon: Globe;
-    };
+        'Customer behavior analysis, inventory optimization, and recommendation engines',
+      icon: Globe
+    },
     {
-      name: 'Healthcare';
+      name: 'Healthcare',
       description:,
-        'Patient outcome prediction, drug discovery, and operational efficiency';
-      icon: Shield;
-    };
+        'Patient outcome prediction, drug discovery, and operational efficiency',
+      icon: Shield
+    },
     {
-      name: 'Finance';
-      description: 'Risk assessment, fraud detection, and algorithmic trading';
-      icon: TrendingUp;
-    };
+      name: 'Finance',
+      description: 'Risk assessment, fraud detection, and algorithmic trading',
+      icon: TrendingUp
+    },
     {
-      name: 'Manufacturing';
+      name: 'Manufacturing',
       description:,
-        'Predictive maintenance, quality control, and supply chain optimization';
-      icon: Activity;
-    };
+        'Predictive maintenance, quality control, and supply chain optimization',
+      icon: Activity
+    },
   ],
   return (
     <>,
@@ -286,28 +272,28 @@ export default function DataAnalytics() {
             <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>,
               {[
                 {
-                  step: '1';
-                  title: 'Data Discovery';
+                  step: '1',
+                  title: 'Data Discovery',
                   description:,
-                    'Understand your data sources and business objectives';
-                };
+                    'Understand your data sources and business objectives',
+                },
                 {
-                  step: '2';
-                  title: 'Data Preparation';
+                  step: '2',
+                  title: 'Data Preparation',
                   description:,
-                    'Clean, transform, and prepare data for analysis';
-                };
+                    'Clean, transform, and prepare data for analysis',
+                },
                 {
-                  step: '3';
-                  title: 'Model Development';
+                  step: '3',
+                  title: 'Model Development',
                   description:,
-                    'Build and train analytics models and algorithms';
-                };
+                    'Build and train analytics models and algorithms',
+                },
                 {
-                  step: '4';
-                  title: 'Deployment & Monitoring';
-                  description: 'Deploy solutions and monitor performance';
-                };
+                  step: '4',
+                  title: 'Deployment & Monitoring',
+                  description: 'Deploy solutions and monitor performance'
+                },
               ].map((process, index) => (
                 <div key={index} className='text-center'>,
                   <div className='w-16 h-16 bg-purple-60o0 text-white rounded-full flex items-center justify-center text-2xl font-bold mx-auto mb-4'>,

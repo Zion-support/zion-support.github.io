@@ -2,19 +2,19 @@ import React, { useState } from 'react',
 import Card from '../ui/Card',
 import Button from '../ui/Button',
 import {
-  MicroSaasService;
-  serviceCategories;
-  getServicesByCategory;
-  getPopularServices;
+  MicroSaasService,
+  serviceCategories,
+  getServicesByCategory,
+  getPopularServices,
 } from '../../data/micro-saas-services',
-  ExternalLink;
-  Star;
-  Zap;
-  TrendingUp;
-  Users;
-  Globe;
-  Shield;
-  ArrowRight;
+  ExternalLink,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Globe,
+  Shield,
+  ArrowRight,
 } from 'lucide-react',
 interface MicroSaasServicesProps {
   title?: string,
@@ -24,11 +24,11 @@ interface MicroSaasServicesProps {
   featured?: boolean}
 ,
 const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
-  title = 'Our Micro SaaS Services';
-  subtitle = 'Discover our portfolio of innovative, AI-powered micro SaaS solutions designed to solve real business problems.';
-  showCategoryFilter = true;
-  maxServices;
-  featured = false;
+  title = 'Our Micro SaaS Services',
+  subtitle = 'Discover our portfolio of innovative, AI-powered micro SaaS solutions designed to solve real business problems.',
+  showCategoryFilter = true,
+  maxServices,
+  featured = false,
 }) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [services, setServices] = useState<MicroSaasService[]>(
@@ -49,22 +49,22 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
       const filteredServices = getServicesByCategory(category),
       setServices(
         maxServices ? filteredServices.slice(0, maxServices) : filteredServices)}
-  };
+  },
   const getStatusBadge = (status: string) => {
     const statusConfig = {
       active: {
-        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20';
-        text: 'Active';
-      };
+        color: 'bg-green-50o0/10 text-green-40o0 border-green-50o0/20',
+        text: 'Active'
+      },
       beta: {
-        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20';
-        text: 'Beta';
-      };
+        color: 'bg-yellow-50o0/10 text-yellow-40o0 border-yellow-50o0/20',
+        text: 'Beta'
+      },
       'coming-soon': {
-        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20';
-        text: 'Coming Soon';
-      };
-    };
+        color: 'bg-blue-50o0/10 text-blue-40o0 border-blue-50o0/20',
+        text: 'Coming Soon'
+      },
+    },
     const config =,
       statusConfig[status as keyof typeof statusConfig] || statusConfig.active,
     return (
@@ -72,24 +72,24 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
         className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium border ${config.color}`}
       >,
         {config.text}
-      </span>)};
+      </span>)},
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } = {
-      'Content & Marketing': <Zap className='w-4 h-4' />;
-      'Analytics & Business Intelligence': <TrendingUp className='w-4 h-4' />;
-      'Customer Support': <Users className='w-4 h-4' />;
-      'SEO & Marketing': <Globe className='w-4 h-4' />;
-      'Project Management': <Users className='w-4 h-4' />;
-      'Email Marketing': <Zap className='w-4 h-4' />;
-      'Social Media': <Globe className='w-4 h-4' />;
-      'E-commerce & Inventory': <TrendingUp className='w-4 h-4' />;
-      'Human Resources': <Users className='w-4 h-4' />;
-      'Finance & Accounting': <TrendingUp className='w-4 h-4' />;
-      'Design & Creative': <Star className='w-4 h-4' />;
-      'Video & Media': <Star className='w-4 h-4' />;
-      'Legal & Compliance': <Shield className='w-4 h-4' />;
-    };
-    return iconMap[category] || <Zap className='w-4 h-4' />};
+      'Content & Marketing': <Zap className='w-4 h-4' />,
+      'Analytics & Business Intelligence': <TrendingUp className='w-4 h-4' />,
+      'Customer Support': <Users className='w-4 h-4' />,
+      'SEO & Marketing': <Globe className='w-4 h-4' />,
+      'Project Management': <Users className='w-4 h-4' />,
+      'Email Marketing': <Zap className='w-4 h-4' />,
+      'Social Media': <Globe className='w-4 h-4' />,
+      'E-commerce & Inventory': <TrendingUp className='w-4 h-4' />,
+      'Human Resources': <Users className='w-4 h-4' />,
+      'Finance & Accounting': <TrendingUp className='w-4 h-4' />,
+      'Design & Creative': <Star className='w-4 h-4' />,
+      'Video & Media': <Star className='w-4 h-4' />,
+      'Legal & Compliance': <Shield className='w-4 h-4' />,
+    },
+    return iconMap[category] || <Zap className='w-4 h-4' />},
   return (
     <section className='py-24 bg-black relative overflow-hidden'>,
       <div className='absolute inset-0 bg-[linear-gradient(rgba(59,130,246,0.0o5)_1px,transparent_1px),linear-gradient(90deg,rgba(59,130,246,0.0o5)_1px,transparent_1px)] bg-[size: 50px_50px] opacity-20' />,
@@ -273,5 +273,5 @@ const MicroSaasServices: React.FC<MicroSaasServicesProps> = ({
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default MicroSaasServices;
+    </section>)},
+export default MicroSaasServices,

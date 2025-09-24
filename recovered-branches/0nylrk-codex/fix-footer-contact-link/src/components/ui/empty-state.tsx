@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { cn } from "@/lib/utils",
 import { Button } from "@/components/ui/button",
@@ -10,34 +10,34 @@ interface EmptyStateProps {
   action?: {
     text: string,
     href?: string,
-    onClick?: () => void};
+    onClick?: () => void},
   secondaryAction?: {
     text: string,
     href?: string,
     onClick?: () => void}
-    text: string;
-    href?: string;
-    onClick?: () => void};
+    text: string,
+    href?: string,
+    onClick?: () => void},
   secondaryAction?: {
-    text: string;
-    href?: string;
-    onClick?: () => void};
+    text: string,
+    href?: string,
+    onClick?: () => void},
   className?: string}
 ,
-    onClick?: () => void};
+    onClick?: () => void},
   className?: string}
 ,
 export function EmptyState({
-  icon;
-  title;
-  description;
-  action;
-  secondaryAction;
+  icon,
+  title,
+  description,
+  action,
+  secondaryAction,
   className}: EmptyStateProps) {
   return (
     <div
       className={cn(
-        "flex flex-col items-center justify-center text-center p-6 md:p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50";
+        "flex flex-col items-center justify-center text-center p-6 md: p-10 rounded-lg border border-zion-blue-light bg-zion-blue-dark/50",
         className)}
     >,
       <div className="bg-zion-blue/30 p-6 rounded-full mb-6">,

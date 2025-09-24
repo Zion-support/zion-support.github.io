@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Brain;
-  Rocket;
-  Globe;
-  Cpu;
-  Lock;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Rocket,
+  Globe,
+  Cpu,
+  Lock,
 } from 'lucide-react',
 import { cuttingEdgeInnovationServices } from '../../data/20o26-cutting-edge-innovations',
 import { enterpriseSolutions20o26 } from '../../data/20o26-enterprise-solutions',
@@ -18,55 +18,55 @@ import { specializedSolutions20o26 } from '../../data/20o26-specialized-solution
 const Enhanced20o26ServicesShowcase: React.FC = () => {
   // Combine all new services,
   const allNewServices = [
-    ...cuttingEdgeInnovationServices;
-    ...enterpriseSolutions20o26;
-    ...specializedSolutions20o26;
+    ...cuttingEdgeInnovationServices,
+    ...enterpriseSolutions20o26,
+    ...specializedSolutions20o26,
   ],
   // Get featured services (most popular and innovative),
   const featuredServices = allNewServices,
     .filter(service => service.popular),
     .slice(0, 6),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20, scale: 0.95 };
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.5;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0.5,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   const getIconComponent = (icon: string) => {
     const iconMap: { [key: string]: React.ComponentType<any> } = {
-      '🧠⚛️': Brain;
-      '🧠☁️': Cpu;
-      '🧬💻': Cpu;
-      '🛰️⚛️': Globe;
-      '🛰️🚨': Shield;
-      '🔒⚛️': Lock;
-      '🤖🧠': Zap;
-      '🌐🥽': Globe;
-      '🌐⚡': Cpu;
-      '😊🧠': Brain;
-      '🎨✍️🎵': Star;
-      '🔒🛡️': Shield;
-      '🧬🔬': Cpu;
-      '🛰️📡': Globe;
-      '🚨🔍': Shield;
-      '🧠💙': Brain;
-    };
-    return iconMap[icon] || Star};
+      '🧠⚛️': Brain,
+      '🧠☁️': Cpu,
+      '🧬💻': Cpu,
+      '🛰️⚛️': Globe,
+      '🛰️🚨': Shield,
+      '🔒⚛️': Lock,
+      '🤖🧠': Zap,
+      '🌐🥽': Globe,
+      '🌐⚡': Cpu,
+      '😊🧠': Brain,
+      '🎨✍️🎵': Star,
+      '🔒🛡️': Shield,
+      '🧬🔬': Cpu,
+      '🛰️📡': Globe,
+      '🚨🔍': Shield,
+      '🧠💙': Brain,
+    },
+    return iconMap[icon] || Star},
   return (
     <section className='py-24 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
       {/* Enhanced Background */}
@@ -99,7 +99,7 @@ const Enhanced20o26ServicesShowcase: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.8, delay: 0.4 }}
           >,
-            Experience the future with our revolutionary AI, quantum computing;
+            Experience the future with our revolutionary AI, quantum computing,
             and emerging technology breakthroughs. Transform your business with,
             next-generation solutions that deliver unprecedented ROI.,
           </motion.p>,
@@ -157,8 +157,8 @@ const Enhanced20o26ServicesShowcase: React.FC = () => {
                 className='group relative',
                 variants={itemVariants}
                 whileHover={{
-                  y: -10;
-                  transition: { duration: 0.3 };
+                  y: -10,
+                  transition: { duration: 0.3 },
                 }}
               >,
                 {/* Enhanced Glow Effect */}
@@ -286,5 +286,5 @@ const Enhanced20o26ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Enhanced20o26ServicesShowcase;
+    </section>)},
+export default Enhanced20o26ServicesShowcase,

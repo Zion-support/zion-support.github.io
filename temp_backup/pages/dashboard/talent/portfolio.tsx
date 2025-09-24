@@ -1,19 +1,19 @@
-import React from 'react';
+import React from 'react',
 import { useEffect, useMemo, useState } from 'react',
 import Head from 'next/head',
 import { v4 as uuidv4 } from 'uuid',
 import type {
-  EducationItem;
-  Project;
-  TalentPortfolio;
-  WorkExperience;
-  ResumeVersion;
+  EducationItem,
+  Project,
+  TalentPortfolio,
+  WorkExperience,
+  ResumeVersion,
 } from '../../../utils/types/portfolio',
 import { loadPortfolio, savePortfolio } from '../../../utils/api/portfolio',
 import { TALENT_PROFILES } from '../../../data/talent',
 function SectionCard({
-  title;
-  children;
+  title,
+  children,
 }: {
   title: string,
   children: React.ReactNode}) {
@@ -54,18 +54,18 @@ function Button({ children, variant = 'primary', ...rest }: any) {
     </button>)}
 ,
 async function aiAssist(
-  action: 'improve-summary' | 'format-description' | 'suggest-bullets';
-  text?: string;
+  action: 'improve-summary' | 'format-description' | 'suggest-bullets',
+  text?: string,
   context?: any) {
   const res = await fetch('/api/ai/portfolio-assist', {
-    method: 'POST';
-    headers: { 'Content-Type': 'application/json' };
-    body: JSON.stringify({ action, text, context });
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({ action, text, context }),
   }),
   return (await res.json()) as {
     ok: boolean,
     result?: string | string[],
-    error?: string};
+    error?: string},
 }
 ,
 function WizardProgress({ step, total }: { step: number, total: number }) {
@@ -222,21 +222,18 @@ export default function TalentPortfolioBuilder() {
   const [loading, setLoading] = useState(true),
   const [step, setStep] = useState(0),
   const steps = [
-    'Personal Summary';
-    'Work History';
-    'Education';
-    'Skills & Technologies';
-    'Certifications';
-    'Projects';
-    'Preview';
+    'Personal SummaryWork History',
+    'EducationSkills & Technologies',
+    'CertificationsProjects',
+    'Preview',
   ],
   const [portfolio, setPortfolio] = useState<TalentPortfolio>({
-    versions: [];
-    activeVersionId: undefined;
+    versions: [],
+    activeVersionId: undefined
   }),
   const activeVersion = useMemo(
     () =>,
-      portfolio.versions.find(v => v.id === portfolio.activeVersionId) ?? null;
+      portfolio.versions.find(v => v.id === portfolio.activeVersionId) ?? null,
     [portfolio]),
   const [autoGenerate, setAutoGenerate] = useState(false),
   useEffect(() => {
@@ -245,43 +242,43 @@ export default function TalentPortfolioBuilder() {
       if (existing) {
         setPortfolio(existing)} else {
         const initialVersion: ResumeVersion = {
-          id: uuidv4();
-          name: 'General';
-          createdAt: new Date().toISOString();
-          updatedAt: new Date().toISOString();
-          personalSummary: '';
-          skills: [];
-          technologies: [];
-          certifications: [];
-          workHistory: [];
-          education: [];
-          projects: [];
-        };
+          id: uuidv4(),
+          name: 'General',
+          createdAt: new Date().toISOString(),
+          updatedAt: new Date().toISOString(),
+          personalSummary: '',
+          skills: [],
+          technologies: [],
+          certifications: [],
+          workHistory: [],
+          education: [],
+          projects: []
+        },
         setPortfolio({
-          versions: [initialVersion];
-          activeVersionId: initialVersion.id;
+          versions: [initialVersion],
+          activeVersionId: initialVersion.id
         })}
       setLoading(false)})()}, []),
   const updateActive = (updater: (v: ResumeVersion) => ResumeVersion) => {
     setPortfolio(prev => {
       const versions = prev.versions.map(v =>,
         v.id === prev.activeVersionId ? updater({ ...v }) : v),
-      const next = { ...prev, versions };
+      const next = { ...prev, versions },
       savePortfolio(next),
-      return next})};
+      return next})},
   const handlePrint = () => {
-    window.print()};
+    window.print()},
   const importFromTalentProfile = () => {
     const profile = TALENT_PROFILES[0],
     if (!profile || !activeVersion) return,
     updateActive(v => ({
-      ...v;
-      personalSummary: profile.bio;
-      skills: Array.from(new Set([...(v.skills ?? []), ...profile.skills]));
+      ...v,
+      personalSummary: profile.bio,
+      skills: Array.from(new Set([...(v.skills ?? []), ...profile.skills])),
       technologies: Array.from(
-        new Set([...(v.technologies ?? []), ...profile.skills]));
-      updatedAt: new Date().toISOString();
-    }))};
+        new Set([...(v.technologies ?? []), ...profile.skills])),
+      updatedAt: new Date().toISOString()
+    }))},
   if (loading || !activeVersion),
     return (
       <div className='p-6'>,
@@ -310,7 +307,7 @@ export default function TalentPortfolioBuilder() {
                 value={portfolio.activeVersionId}
                 onChange={e =>,
                   setPortfolio(prev => {
-                    const next = { ...prev, activeVersionId: e.target.value };
+                    const next = { ...prev, activeVersionId: e.target.value },
                     savePortfolio(next),
                     return next})}
               >,
@@ -323,24 +320,24 @@ export default function TalentPortfolioBuilder() {
                 variant='secondary',
                 onClick={() => {
                   const newVersion: ResumeVersion = {
-                    id: uuidv4();
-                    name: `New Version ${portfolio.versions.length + 1}`;
-                    createdAt: new Date().toISOString();
-                    updatedAt: new Date().toISOString();
-                    personalSummary: '';
-                    skills: [];
-                    technologies: [];
-                    certifications: [];
-                    workHistory: [];
-                    education: [];
-                    projects: [];
-                  };
+                    id: uuidv4(),
+                    name: `New Version ${portfolio.versions.length + 1}`,
+                    createdAt: new Date().toISOString(),
+                    updatedAt: new Date().toISOString(),
+                    personalSummary: '',
+                    skills: [],
+                    technologies: [],
+                    certifications: [],
+                    workHistory: [],
+                    education: [],
+                    projects: []
+                  },
                   setPortfolio(prev => {
                     const next = {
-                      ...prev;
-                      versions: [...prev.versions, newVersion];
-                      activeVersionId: newVersion.id;
-                    };
+                      ...prev,
+                      versions: [...prev.versions, newVersion],
+                      activeVersionId: newVersion.id
+                    },
                     savePortfolio(next),
                     return next})}}
               >,
@@ -381,12 +378,12 @@ export default function TalentPortfolioBuilder() {
                 <Button
                   onClick={async () => {
                     const res = await aiAssist(
-                      'improve-summary';
+                      'improve-summary',
                       activeVersion.personalSummary),
                     if (res.ok && typeof res.result === 'string'),
                       updateActive(v => ({
-                        ...v;
-                        personalSummary: res.result as string;
+                        ...v,
+                        personalSummary: res.result as string
                       }))}}
                 >,
                   AI Improve,
@@ -412,11 +409,11 @@ export default function TalentPortfolioBuilder() {
                       value={w.company}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           workHistory: v.workHistory.map(x =>,
                             x.id === w.id,
                               ? { ...x, company: e.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -424,9 +421,9 @@ export default function TalentPortfolioBuilder() {
                       value={w.role}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           workHistory: v.workHistory.map(x =>,
-                            x.id === w.id ? { ...x, role: e.target.value } : x);
+                            x.id === w.id ? { ...x, role: e.target.value } : x),
                         }))}
                     />,
                     <TextInput
@@ -434,11 +431,11 @@ export default function TalentPortfolioBuilder() {
                       value={w.startDate}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           workHistory: v.workHistory.map(x =>,
                             x.id === w.id,
                               ? { ...x, startDate: e.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -446,11 +443,11 @@ export default function TalentPortfolioBuilder() {
                       value={w.endDate}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           workHistory: v.workHistory.map(x =>,
                             x.id === w.id,
                               ? { ...x, endDate: e.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                   </div>,
@@ -460,26 +457,26 @@ export default function TalentPortfolioBuilder() {
                     value={w.description}
                     onChange={e =>,
                       updateActive(v => ({
-                        ...v;
+                        ...v,
                         workHistory: v.workHistory.map(x =>,
                           x.id === w.id,
                             ? { ...x, description: e.target.value }
-                            : x);
+                            : x),
                       }))}
                   />,
                   <div className='flex gap-2'>,
                     <Button
                       onClick={async () => {
                         const res = await aiAssist(
-                          'format-description';
+                          'format-description',
                           w.description),
                         if (res.ok && typeof res.result === 'string'),
                           updateActive(v => ({
-                            ...v;
+                            ...v,
                             workHistory: v.workHistory.map(x =>,
                               x.id === w.id,
                                 ? { ...x, description: res.result as string }
-                                : x);
+                                : x),
                           }))}}
                     >,
                       AI Format,
@@ -487,8 +484,8 @@ export default function TalentPortfolioBuilder() {
                     <Button
                       onClick={async () => {
                         const res = await aiAssist(
-                          'suggest-bullets';
-                          w.description;
+                          'suggest-bullets',
+                          w.description,
                           { company: w.company, role: w.role }
                         ),
                         if (res.ok) {
@@ -498,11 +495,11 @@ export default function TalentPortfolioBuilder() {
                                 .split('\n'),
                                 .filter(Boolean),
                           updateActive(v => ({
-                            ...v;
+                            ...v,
                             workHistory: v.workHistory.map(x =>,
                               x.id === w.id,
                                 ? { ...x, bulletPoints: bullets }
-                                : x);
+                                : x),
                           }))}
                       }}
                     >,
@@ -513,8 +510,8 @@ export default function TalentPortfolioBuilder() {
                       variant='ghost',
                       onClick={() =>,
                         updateActive(v => ({
-                          ...v;
-                          workHistory: v.workHistory.filter(x => x.id !== w.id);
+                          ...v,
+                          workHistory: v.workHistory.filter(x => x.id !== w.id)
                         }))}
                     >,
                       Remove,
@@ -524,19 +521,19 @@ export default function TalentPortfolioBuilder() {
               <Button
                 onClick={() =>,
                   updateActive(v => ({
-                    ...v;
+                    ...v,
                     workHistory: [
-                      ...v.workHistory;
+                      ...v.workHistory,
                       {
-                        id: uuidv4();
-                        company: '';
-                        role: '';
-                        startDate: '';
-                        endDate: '';
-                        description: '';
-                        bulletPoints: [];
-                      } as WorkExperience;
-                    ];
+                        id: uuidv4(),
+                        company: '',
+                        role: '',
+                        startDate: '',
+                        endDate: '',
+                        description: '',
+                        bulletPoints: []
+                      } as WorkExperience,
+                    ],
                   }))}
               >,
                 Add Role,
@@ -562,11 +559,11 @@ export default function TalentPortfolioBuilder() {
                       value={e.school}
                       onChange={ev =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           education: v.education.map(x =>,
                             x.id === e.id,
                               ? { ...x, school: ev.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -574,11 +571,11 @@ export default function TalentPortfolioBuilder() {
                       value={e.degree}
                       onChange={ev =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           education: v.education.map(x =>,
                             x.id === e.id,
                               ? { ...x, degree: ev.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -586,11 +583,11 @@ export default function TalentPortfolioBuilder() {
                       value={e.startDate}
                       onChange={ev =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           education: v.education.map(x =>,
                             x.id === e.id,
                               ? { ...x, startDate: ev.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                   </div>,
@@ -600,11 +597,11 @@ export default function TalentPortfolioBuilder() {
                       value={e.endDate}
                       onChange={ev =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           education: v.education.map(x =>,
                             x.id === e.id,
                               ? { ...x, endDate: ev.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -612,11 +609,11 @@ export default function TalentPortfolioBuilder() {
                       value={e.details ?? ''}
                       onChange={ev =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           education: v.education.map(x =>,
                             x.id === e.id,
                               ? { ...x, details: ev.target.value }
-                              : x);
+                              : x),
                         }))}
                     />,
                   </div>,
@@ -625,8 +622,8 @@ export default function TalentPortfolioBuilder() {
                       variant='ghost',
                       onClick={() =>,
                         updateActive(v => ({
-                          ...v;
-                          education: v.education.filter(x => x.id !== e.id);
+                          ...v,
+                          education: v.education.filter(x => x.id !== e.id)
                         }))}
                     >,
                       Remove,
@@ -636,18 +633,18 @@ export default function TalentPortfolioBuilder() {
               <Button
                 onClick={() =>,
                   updateActive(v => ({
-                    ...v;
+                    ...v,
                     education: [
-                      ...v.education;
+                      ...v.education,
                       {
-                        id: uuidv4();
-                        school: '';
-                        degree: '';
-                        startDate: '';
-                        endDate: '';
-                        details: '';
-                      } as EducationItem;
-                    ];
+                        id: uuidv4(),
+                        school: '',
+                        degree: '',
+                        startDate: '',
+                        endDate: '',
+                        details: ''
+                      } as EducationItem,
+                    ],
                   }))}
               >,
                 Add Education,
@@ -666,14 +663,14 @@ export default function TalentPortfolioBuilder() {
               <div>,
                 <label className='text-sm'>Skills (comma-separated)</label>,
                 <TextInput
-                  value={activeVersion.skills.join(', ')}
+                  value={activeVersion.skills.join()}
                   onChange={e =>,
                     updateActive(v => ({
-                      ...v;
+                      ...v,
                       skills: e.target.value,
                         .split(','),
                         .map(s => s.trim()),
-                        .filter(Boolean);
+                        .filter(Boolean),
                     }))}
                 />,
               </div>,
@@ -682,14 +679,14 @@ export default function TalentPortfolioBuilder() {
                   Technologies (comma-separated),
                 </label>,
                 <TextInput
-                  value={activeVersion.technologies.join(', ')}
+                  value={activeVersion.technologies.join()}
                   onChange={e =>,
                     updateActive(v => ({
-                      ...v;
+                      ...v,
                       technologies: e.target.value,
                         .split(','),
                         .map(s => s.trim()),
-                        .filter(Boolean);
+                        .filter(Boolean),
                     }))}
                 />,
               </div>,
@@ -707,14 +704,14 @@ export default function TalentPortfolioBuilder() {
               <TextArea
                 rows={3}
                 placeholder='Comma-separated certifications',
-                value={activeVersion.certifications.join(', ')}
+                value={activeVersion.certifications.join()}
                 onChange={e =>,
                   updateActive(v => ({
-                    ...v;
+                    ...v,
                     certifications: e.target.value,
                       .split(','),
                       .map(s => s.trim()),
-                      .filter(Boolean);
+                      .filter(Boolean),
                   }))}
               />,
               <div className='flex justify-end'>,
@@ -738,27 +735,27 @@ export default function TalentPortfolioBuilder() {
                       value={p.title}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           projects: v.projects.map(x =>,
-                            x.id === p.id ? { ...x, title: e.target.value } : x);
+                            x.id === p.id ? { ...x, title: e.target.value } : x),
                         }))}
                     />,
                     <TextInput
                       placeholder='Technologies (comma-separated)',
-                      value={p.technologies.join(', ')}
+                      value={p.technologies.join()}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           projects: v.projects.map(x =>,
                             x.id === p.id,
                               ? {
-                                  ...x;
+                                  ...x,
                                   technologies: e.target.value,
                                     .split(','),
                                     .map(s => s.trim()),
-                                    .filter(Boolean);
+                                    .filter(Boolean),
                                 }
-                              : x);
+                              : x),
                         }))}
                     />,
                   </div>,
@@ -768,11 +765,11 @@ export default function TalentPortfolioBuilder() {
                     value={p.description}
                     onChange={e =>,
                       updateActive(v => ({
-                        ...v;
+                        ...v,
                         projects: v.projects.map(x =>,
                           x.id === p.id,
                             ? { ...x, description: e.target.value }
-                            : x);
+                            : x),
                       }))}
                   />,
                   <div className='grid grid-cols-1 md: grid-cols-4 gap-2'>,
@@ -781,17 +778,17 @@ export default function TalentPortfolioBuilder() {
                       value={p.media.imageUrl ?? ''}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           projects: v.projects.map(x =>,
                             x.id === p.id,
                               ? {
-                                  ...x;
+                                  ...x,
                                   media: {
-                                    ...x.media;
-                                    imageUrl: e.target.value;
-                                  };
+                                    ...x.media,
+                                    imageUrl: e.target.value
+                                  },
                                 }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -799,14 +796,14 @@ export default function TalentPortfolioBuilder() {
                       value={p.media.pdfUrl ?? ''}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           projects: v.projects.map(x =>,
                             x.id === p.id,
                               ? {
-                                  ...x;
-                                  media: { ...x.media, pdfUrl: e.target.value };
+                                  ...x,
+                                  media: { ...x.media, pdfUrl: e.target.value },
                                 }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -814,17 +811,17 @@ export default function TalentPortfolioBuilder() {
                       value={p.media.githubUrl ?? ''}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           projects: v.projects.map(x =>,
                             x.id === p.id,
                               ? {
-                                  ...x;
+                                  ...x,
                                   media: {
-                                    ...x.media;
-                                    githubUrl: e.target.value;
-                                  };
+                                    ...x.media,
+                                    githubUrl: e.target.value
+                                  },
                                 }
-                              : x);
+                              : x),
                         }))}
                     />,
                     <TextInput
@@ -832,17 +829,17 @@ export default function TalentPortfolioBuilder() {
                       value={p.media.demoUrl ?? ''}
                       onChange={e =>,
                         updateActive(v => ({
-                          ...v;
+                          ...v,
                           projects: v.projects.map(x =>,
                             x.id === p.id,
                               ? {
-                                  ...x;
+                                  ...x,
                                   media: {
-                                    ...x.media;
-                                    demoUrl: e.target.value;
-                                  };
+                                    ...x.media,
+                                    demoUrl: e.target.value
+                                  },
                                 }
-                              : x);
+                              : x),
                         }))}
                     />,
                   </div>,
@@ -850,15 +847,15 @@ export default function TalentPortfolioBuilder() {
                     <Button
                       onClick={async () => {
                         const res = await aiAssist(
-                          'format-description';
+                          'format-description',
                           p.description),
                         if (res.ok && typeof res.result === 'string'),
                           updateActive(v => ({
-                            ...v;
+                            ...v,
                             projects: v.projects.map(x =>,
                               x.id === p.id,
                                 ? { ...x, description: res.result as string }
-                                : x);
+                                : x),
                           }))}}
                     >,
                       AI Improve,
@@ -867,8 +864,8 @@ export default function TalentPortfolioBuilder() {
                       variant='ghost',
                       onClick={() =>,
                         updateActive(v => ({
-                          ...v;
-                          projects: v.projects.filter(x => x.id !== p.id);
+                          ...v,
+                          projects: v.projects.filter(x => x.id !== p.id)
                         }))}
                     >,
                       Remove,
@@ -878,17 +875,17 @@ export default function TalentPortfolioBuilder() {
               <Button
                 onClick={() =>,
                   updateActive(v => ({
-                    ...v;
+                    ...v,
                     projects: [
-                      ...v.projects;
+                      ...v.projects,
                       {
-                        id: uuidv4();
-                        title: '';
-                        description: '';
-                        technologies: [];
-                        media: {};
-                      } as Project;
-                    ];
+                        id: uuidv4(),
+                        title: '',
+                        description: '',
+                        technologies: [],
+                        media: {},
+                      } as Project,
+                    ],
                   }))}
               >,
                 Add Project,
@@ -909,7 +906,7 @@ export default function TalentPortfolioBuilder() {
                 variant='secondary',
                 onClick={() =>,
                   window.open(
-                    `/talent/${TALENT_PROFILES[0]?.slug ?? 'public'}`;
+                    `/talent/${TALENT_PROFILES[0]?.slug ?? 'public'}`,
                     '_blank')}
               >,
                 View Public Profile,
@@ -931,18 +928,18 @@ export default function TalentPortfolioBuilder() {
               variant='secondary',
               onClick={() => {
                 const newVersion: ResumeVersion = {
-                  ...activeVersion;
-                  id: uuidv4();
-                  name: `${activeVersion.name} Copy`;
-                  createdAt: new Date().toISOString();
-                  updatedAt: new Date().toISOString();
-                };
+                  ...activeVersion,
+                  id: uuidv4(),
+                  name: `${activeVersion.name} Copy`,
+                  createdAt: new Date().toISOString(),
+                  updatedAt: new Date().toISOString()
+                },
                 setPortfolio(prev => {
                   const next = {
-                    ...prev;
-                    versions: [...prev.versions, newVersion];
-                    activeVersionId: newVersion.id;
-                  };
+                    ...prev,
+                    versions: [...prev.versions, newVersion],
+                    activeVersionId: newVersion.id
+                  },
                   savePortfolio(next),
                   return next})}}
             >,
@@ -974,9 +971,9 @@ export default function TalentPortfolioBuilder() {
         @media print {
           body {
             background: white !important}
-          nav;
-          header;
-          footer;
+          nav,
+          header,
+          footer,
           .no-print {
             display: none !important}
         }

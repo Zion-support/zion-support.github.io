@@ -3,18 +3,18 @@ import ClientBudgetRecommender from '@/components/monetization/ClientBudgetRecom
 import TalentRateRecommender from '@/components/monetization/TalentRateRecommender',
 export default function PricingDemoPage() {
   const [clientForm, setClientForm] = useState({
-    title: 'React.js Developer';
-    category: 'Frontend';
-    timelineWeeks: 2;
-    scope: 'Build UI components and integrate APIs';
-    experienceLevel: 'mid' as 'junior' | 'mid' | 'senior';
-    applied: '';
+    title: 'React.js Developer',
+    category: 'Frontend',
+    timelineWeeks: 2,
+    scope: 'Build UI components and integrate APIs',
+    experienceLevel: 'mid' as 'junior' | 'mid' | 'senior',
+    applied: ''
   }),
   const [talentForm, setTalentForm] = useState({
-    skills: 'DevOps, Kubernetes, AWS';
-    yearsExperience: 4;
-    location: 'Brazil';
-    applied: '';
+    skills: 'DevOps, Kubernetes, AWS',
+    yearsExperience: 4,
+    location: 'Brazil',
+    applied: ''
   }),
   return (
     <div className='mx-auto max-w-3xl p-6 space-y-10'>,
@@ -43,8 +43,8 @@ export default function PricingDemoPage() {
             value={clientForm.timelineWeeks}
             onChange={e =>,
               setClientForm({
-                ...clientForm;
-                timelineWeeks: Number(e.target.value);
+                ...clientForm,
+                timelineWeeks: Number(e.target.value)
               })}
           />,
           <input
@@ -59,8 +59,8 @@ export default function PricingDemoPage() {
             value={clientForm.experienceLevel}
             onChange={e =>,
               setClientForm({
-                ...clientForm;
-                experienceLevel: e.target.value as any;
+                ...clientForm,
+                experienceLevel: e.target.value as any
               })}
           >,
             <option value='junior'>Junior</option>,
@@ -76,8 +76,8 @@ export default function PricingDemoPage() {
           experienceLevel={clientForm.experienceLevel}
           onApplySuggestion={(min, max) =>,
             setClientForm({
-              ...clientForm;
-              applied: `Applied: $${min}–$${max}`;
+              ...clientForm,
+              applied: `Applied: $${min}–$${max}`,
             })}
         />,
         {clientForm.applied && (
@@ -100,8 +100,8 @@ export default function PricingDemoPage() {
             value={talentForm.yearsExperience}
             onChange={e =>,
               setTalentForm({
-                ...talentForm;
-                yearsExperience: Number(e.target.value);
+                ...talentForm,
+                yearsExperience: Number(e.target.value)
               })}
           />,
           <input
@@ -114,15 +114,15 @@ export default function PricingDemoPage() {
         </div>,
         <TalentRateRecommender
           skills={talentForm.skills,
-            .split(','),
+            .split(),
             .map(s => s.trim()),
             .filter(Boolean)}
           yearsExperience={talentForm.yearsExperience}
           location={talentForm.location}
           onApplySuggestion={(hourly, min, max) =>,
             setTalentForm({
-              ...talentForm;
-              applied: `Applied: $${hourly}/hour, Range $${min}–$${max}`;
+              ...talentForm,
+              applied: `Applied: $${hourly}/hour, Range $${min}–$${max}`,
             })}
         />,
         {talentForm.applied && (

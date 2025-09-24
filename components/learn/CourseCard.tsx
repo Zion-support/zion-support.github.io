@@ -7,7 +7,7 @@ export type Course = {
   isFree: boolean,
   category: string,
   certificationBadge: string,
-  description?: string};
+  description?: string},
 export default function CourseCard({ course }: { course: Course }) {
   return (
     <div className='border rounded-lg p-4 hover: shadow-md transition'>,

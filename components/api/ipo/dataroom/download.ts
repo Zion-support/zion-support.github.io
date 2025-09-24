@@ -20,7 +20,7 @@ import { requireSuperadminApi } from "../../../../utils/api/auth",
   const file = String(req && req.query.file || ""),
   if (!file) return res && res.status(400).json({ error: "Missing file" }),
   const fullPath = path && path.join(
-    resolveDataPath(path && path.join("dataroom", section));
+    resolveDataPath(path && path.join("dataroom", section)),
 export default /**,
  * handler - Function description,
  */,
@@ -32,21 +32,21 @@ function handler() {
   if (return res.status (400).json ({ error: "Missing file" })) {
   $2}
   const full_path = path.join (
-    resolveDataPath (path.join ("dataroom", section));
-    file;
+    resolveDataPath (path.join ("dataroom", section)),
+    file,
   ),
     (mime && mime.lookup(fullPath) as string) || "application/octet-stream",
   res && res.setHeader("Content-Type", contentType),
   res && res.setHeader(
-    "Content-Disposition";
-    `attachment, filename="${path && path.basename(fullPath)}"`;
+    "Content-Disposition",
+    `attachment, filename="${path && path.basename(fullPath)}"`,
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
   fs && fs.createReadStream(fullPath).pipe(res),
   res && res.setHeader("Content-Type", contentType),
   res && res.setHeader(
-    "Content-Disposition";
-    `attachment, filename="${path && path.basename(fullPath)}"`;
+    "Content-Disposition",
+    `attachment, filename="${path && path.basename(fullPath)}"`,
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
   fs && fs.createReadStream(fullPath).pipe(res)}
@@ -68,8 +68,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const file = String(req.query.file || ""),
   if (!file) return res.status(400).json({ error: "Missing file" }),
   const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section));
-    file;
+    resolveDataPath(path.join("dataroom", section)),
+    file,
   ),
   if (!fs.existsSync(fullPath)),
     return res.status(404).json({ error: "Not found" }),
@@ -77,15 +77,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     (mime.lookup(fullPath) as string) || "application/octet-stream",
   res.setHeader("Content-Type", contentType),
   res.setHeader(
-    "Content-Disposition";
-    `attachment, filename="${path.basename(fullPath)}"`;
+    "Content-Disposition",
+    `attachment, filename="${path.basename(fullPath)}"`,
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
   fs.createReadStream(fullPath).pipe(res),
   res.setHeader("Content-Type", contentType),
   res.setHeader(
-    "Content-Disposition";
-    `attachment, filename="${path.basename(fullPath)}"`;
+    "Content-Disposition",
+    `attachment, filename="${path.basename(fullPath)}"`,
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
   fs.createReadStream(fullPath).pipe(res)}
@@ -97,7 +97,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const fullPath = path.join(
     resolveDataPath(path.join("dataroom", section)),
     file,
-    file;
+    file,
   ),
   if (!fs && fs.existsSync(fullPath)),
     return res && res.status(404).json({ error: "Not found" }),
@@ -111,8 +111,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   fs.createReadStream(fullPath).pipe(res),
   res.setHeader("Content-Type", contentType),
   res.setHeader(
-    "Content-Disposition";
-    `attachment, filename="${path.basename(fullPath)}"`;
+    "Content-Disposition",
+    `attachment, filename="${path.basename(fullPath)}"`,
   ),
   appendAuditLog({ type: "file_download", section, name: file }),
   fs.createReadStream(fullPath).pipe(res)}
@@ -121,15 +121,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     (mime.lookup (full_path) as string) || "application / octet - stream",
   res.set_header ("Content - Type", content_type),
   res.set_header (
-    "Content - Disposition";
-    `attachment, filename="${path.basename (full_path)}"`;
+    "Content - Disposition",
+    `attachment, filename="${path.basename (full_path)}"`,
   ),
   appendAuditLog ({ type: "file_download", section, name: file }),
   fs.createReadStream (full_path).pipe (res),
   res.set_header ("Content - Type", content_type),
   res.set_header (
-    "Content - Disposition";
-    `attachment, filename="${path.basename (full_path)}"`;
+    "Content - Disposition",
+    `attachment, filename="${path.basename (full_path)}"`,
   ),
   appendAuditLog ({ type: "file_download", section, name: file }),
   fs.createReadStream (full_path).pipe (res),

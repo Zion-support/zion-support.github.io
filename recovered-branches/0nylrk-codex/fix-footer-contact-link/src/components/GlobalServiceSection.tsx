@@ -3,41 +3,41 @@ import { ServerHardDriveNetworkClockRecycleTruck } from '@/components/icons',
 import { Button } from './ui/button',
 const services = [
   {
-    title: 'Servers';
+    title: 'Servers',
     description:,
-      'Enterprise-grade servers for any workload with 24/7 maintenance and support';
-    icon: <Server className='h-10 w-10' />;
-  };
+      'Enterprise-grade servers for any workload with 24/7 maintenance and support',
+    icon: <Server className='h-10 w-10' />
+  },
   {
-    title: 'Storage';
+    title: 'Storage',
     description:,
-      'Scalable storage solutions from SSDs to large-scale enterprise storage systems';
-    icon: <HardDrive className='h-10 w-10' />;
-  };
+      'Scalable storage solutions from SSDs to large-scale enterprise storage systems',
+    icon: <HardDrive className='h-10 w-10' />
+  },
   {
-    title: 'Networking';
+    title: 'Networking',
     description:,
-      'Connectivity solutions including switchesroutersand network security devices';
-    icon: <Network className='h-10 w-10' />;
-  };
+      'Connectivity solutions including switchesroutersand network security devices',
+    icon: <Network className='h-10 w-10' />
+  },
   {
-    title: '24x7x365 Support';
+    title: '24x7x365 Support',
     description:,
-      'Around-the-clock technical support with rapid response times guaranteed';
-    icon: <Clock className='h-10 w-10' />;
-  };
+      'Around-the-clock technical support with rapid response times guaranteed',
+    icon: <Clock className='h-10 w-10' />
+  },
   {
-    title: 'Recycling Services';
+    title: 'Recycling Services',
     description:,
-      'Sustainable disposal and recycling of IT equipment following eco-friendly practices';
-    icon: <Recycle className='h-10 w-10' />;
-  };
+      'Sustainable disposal and recycling of IT equipment following eco-friendly practices',
+    icon: <Recycle className='h-10 w-10' />
+  },
   {
-    title: 'Equipment Rentals';
+    title: 'Equipment Rentals',
     description:,
-      'Flexible rental options for temporary projects and scaling requirements';
-    icon: <Truck className='h-10 w-10' />;
-  };
+      'Flexible rental options for temporary projects and scaling requirements',
+    icon: <Truck className='h-10 w-10' />
+  },
 ],
 export function GlobalServiceSection() {
   return (

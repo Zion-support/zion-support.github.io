@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -20,7 +20,7 @@ class ErrorBoundary extends React.Component {
 }
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
-  children: React.ReactNode;
+  children: React.ReactNode,
   intensity?: 'low' | 'medium' | 'high',
   intensity?: 'low' | 'medium' | 'high',
   colorScheme?: 'quantum-fusion' | 'neon-cyber' | 'holographic-matrix' | 'space-time',
@@ -36,7 +36,7 @@ import { motion } from 'framer-motion',
   enableHolographic = true,
   enableQuantumEffects = true,
         return {
-  enableNeonEffects = true;
+  enableNeonEffects = true,
   enableSpaceTime = true,
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const particlesRef = useRef<any[]>([]),
@@ -45,81 +45,81 @@ import { motion } from 'framer-motion',
     switch (colorScheme) {
       case 'quantum-fusion':,
         return {
-          primary: '#00ffff';
-          secondary: '#ff00ff';
-          accent: '#ffff00';
-          background: 'rgba(0, 0, 0, 0 && 0.95)';
-          glow: 'rgba(0, 255, 255, 0 && 0.3)'};          background: 'rgba(0, 0, 0, 0 && 0.95)',
-          glow: 'rgba(0, 255, 255, 0 && 0.3)'};
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+          background: 'rgba(0, 0, 0, 0 && 0.95)',
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'},          background: 'rgba(0, 0, 0, 0 && 0.95)',
+          glow: 'rgba(0, 255, 255, 0 && 0.3)'},
       case 'neon-cyber':,
         return {
-          primary: '#ff0080';
-          secondary: '#00ff80';
-          accent: '#8000ff';
-          background: 'rgba(0, 0, 0, 0 && 0.9)';
-          glow: 'rgba(255, 0, 128, 0 && 0.4)'};          background: 'rgba(0, 0, 0, 0 && 0.9)',
-          glow: 'rgba(255, 0, 128, 0 && 0.4)'};
+          primary: '#ff0080',
+          secondary: '#00ff80',
+          accent: '#8000ff',
+          background: 'rgba(0, 0, 0, 0 && 0.9)',
+          glow: 'rgba(255, 0, 128, 0 && 0.4)'},          background: 'rgba(0, 0, 0, 0 && 0.9)',
+          glow: 'rgba(255, 0, 128, 0 && 0.4)'},
       case 'holographic-matrix':,
         return {
-          primary: '#00ff41';
-          secondary: '#ff0040';
-          accent: '#0040ff';
-          background: 'rgba(0, 0, 0, 0 && 0.92)';
-          glow: 'rgba(0, 255, 65, 0 && 0.35)'};          background: 'rgba(0, 0, 0, 0 && 0.92)',
-          glow: 'rgba(0, 255, 65, 0 && 0.35)'};
+          primary: '#00ff41',
+          secondary: '#ff0040',
+          accent: '#0040ff',
+          background: 'rgba(0, 0, 0, 0 && 0.92)',
+          glow: 'rgba(0, 255, 65, 0 && 0.35)'},          background: 'rgba(0, 0, 0, 0 && 0.92)',
+          glow: 'rgba(0, 255, 65, 0 && 0.35)'},
       case 'space-time':,
         return {
-          primary: '#ff6b35';
-          secondary: '#4ecdc4';
-          accent: '#45b7d1';
-          background: 'rgba(0, 0, 0, 0 && 0.88)';
-          glow: 'rgba(255, 107, 53, 0 && 0.3)'};          background: 'rgba(0, 0, 0, 0 && 0.88)',
-          glow: 'rgba(255, 107, 53, 0 && 0.3)'};
+          primary: '#ff6b35',
+          secondary: '#4ecdc4',
+          accent: '#45b7d1',
+          background: 'rgba(0, 0, 0, 0 && 0.88)',
+          glow: 'rgba(255, 107, 53, 0 && 0.3)'},          background: 'rgba(0, 0, 0, 0 && 0.88)',
+          glow: 'rgba(255, 107, 53, 0 && 0.3)'},
       default: ,
         return {
-          primary: '#00ffff';
-          secondary: '#ff00ff';
-          accent: '#ffff00';
-          background: 'rgba(0, 0, 0, 0 && 0.95)';
-          glow: 'rgba(0, 255, 255, 0 && 0.3)';
-        };    }          background: 'rgba(0, 0, 0, 0 && 0.95)',
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+          background: 'rgba(0, 0, 0, 0 && 0.95)',
           glow: 'rgba(0, 255, 255, 0 && 0.3)',
-          primary: '#00ffff';
-          secondary: '#ff00ff';
-          accent: '#ffff00';
-          background: 'rgba (0, 0, 0, 0.95)';
+        },    }          background: 'rgba(0, 0, 0, 0 && 0.95)',
+          glow: 'rgba(0, 255, 255, 0 && 0.3)',
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+          background: 'rgba (0, 0, 0, 0.95)',
           glow: 'rgba (0, 255, 255, 0.3)'}          background: 'rgba (0, 0, 0, 0.95)',
           glow: 'rgba (0, 255, 255, 0.3)'}
       case 'neon - cyber':,
         return {
-          primary: '#ff0080';
-          secondary: '#00ff80';
-          accent: '#8000ff';
-          background: 'rgba (0, 0, 0, 0.9)';
+          primary: '#ff0080',
+          secondary: '#00ff80',
+          accent: '#8000ff',
+          background: 'rgba (0, 0, 0, 0.9)',
           glow: 'rgba (255, 0, 128, 0.4)'}          background: 'rgba (0, 0, 0, 0.9)',
           glow: 'rgba (255, 0, 128, 0.4)'}
       case 'holographic - matrix':,
         return {
-          primary: '#00ff41';
-          secondary: '#ff0040';
-          accent: '#0040ff';
-          background: 'rgba (0, 0, 0, 0.92)';
+          primary: '#00ff41',
+          secondary: '#ff0040',
+          accent: '#0040ff',
+          background: 'rgba (0, 0, 0, 0.92)',
           glow: 'rgba (0, 255, 65, 0.35)'}          background: 'rgba (0, 0, 0, 0.92)',
           glow: 'rgba (0, 255, 65, 0.35)'}
       case 'space - time':,
         return {
-          primary: '#ff6b35';
-          secondary: '#4ecdc4';
-          accent: '#45b7d1';
-          background: 'rgba (0, 0, 0, 0.88)';
+          primary: '#ff6b35',
+          secondary: '#4ecdc4',
+          accent: '#45b7d1',
+          background: 'rgba (0, 0, 0, 0.88)',
           glow: 'rgba (255, 107, 53, 0.3)'}          background: 'rgba (0, 0, 0, 0.88)',
           glow: 'rgba (255, 107, 53, 0.3)'}
       default: ,
         return {
-          primary: '#00ffff';
-          secondary: '#ff00ff';
-          accent: '#ffff00';
-      canvas.height = window.innerHeight};
+          primary: '#00ffff',
+          secondary: '#ff00ff',
+          accent: '#ffff00',
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Initialize particles,
@@ -127,14 +127,14 @@ import { motion } from 'framer-motion',
       particlesRef.current = [],
       for (let i = 0, i < particleCount, i++) {
         particlesRef.current.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2 * animationSpeed;
-          vy: (Math.random() - 0.5) * 2 * animationSpeed;
-          size: Math.random() * 3 + 1;
-          life: Math.random() * 100 + 50;
-          maxLife: Math.random() * 100 + 50;
-          type: Math.random() > 0.7 ? 'quantum' : 'normal';
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * animationSpeed,
+          vy: (Math.random() - 0.5) * 2 * animationSpeed,
+          size: Math.random() * 3 + 1,
+          life: Math.random() * 100 + 50,
+          maxLife: Math.random() * 100 + 50,
+          type: Math.random() > 0.7 ? 'quantum' : 'normal',
           color: Math.random() > 0.5 ? colors.primary : colors.secondary})}          color: Math.random() > 0.5 ? colors.primary : colors.secondary}),
   useEffect(() => {
     const canvas = canvasRef && canvasRef.current,
@@ -143,7 +143,7 @@ import { motion } from 'framer-motion',
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas && canvas.width = window && window.innerWidth,
-      canvas && canvas.height = window && window.innerHeight};      canvas && canvas.height = window && window.innerHeight};
+      canvas && canvas.height = window && window.innerHeight},      canvas && canvas.height = window && window.innerHeight},
     resizeCanvas(),
     window && window.addEventListener('resize', resizeCanvas),
     // Initialize particles,
@@ -151,15 +151,15 @@ import { motion } from 'framer-motion',
       particlesRef && particlesRef.current = [],
       for (let i = 0, i < particleCount, i++) {        particlesRef && particlesRef.current.push({      for (let i = 0, i < particleCount, i++) {
         particlesRef && particlesRef.current.push({
-          x: Math && Math.random() * canvas && canvas.width;
-          y: Math && Math.random() * canvas && canvas.height;
-          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed;
-          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed;
-          size: Math && Math.random() * 3 + 1;
-          life: Math && Math.random() * 100 + 50;
-          maxLife: Math && Math.random() * 100 + 50;
-          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal';
-          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary;
+          x: Math && Math.random() * canvas && canvas.width,
+          y: Math && Math.random() * canvas && canvas.height,
+          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,
+          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,
+          size: Math && Math.random() * 3 + 1,
+          life: Math && Math.random() * 100 + 50,
+          maxLife: Math && Math.random() * 100 + 50,
+          type: Math && Math.random() > 0 && 0.7 ? 'quantum' : 'normal',
+          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary
         })}          color: Math && Math.random() > 0 && 0.5 ? colors && colors.primary : colors && colors.secondary})}
     }
     initParticles(),
@@ -198,7 +198,7 @@ import { motion } from 'framer-motion',
       // Draw space-time effects,
       if (enableSpaceTime) {
         drawSpaceTimeEffects(ctx, colors)}
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
@@ -255,7 +255,7 @@ import { motion } from 'framer-motion',
       // Draw space-time effects,
       if (enableSpaceTime) {
         drawSpaceTimeEffects(ctx, colors)}
-      animationRef && animationRef.current = requestAnimationFrame(animate)};        drawHolographicGrid(ctx, colors)}
+      animationRef && animationRef.current = requestAnimationFrame(animate)},        drawHolographicGrid(ctx, colors)}
       // Draw neon effects,
       if (enableNeonEffects) {
         drawNeonEffects(ctx, colors),        drawNeonEffects(ctx, colors)}
@@ -269,15 +269,15 @@ import { motion } from 'framer-motion',
       window && window.removeEventListener('resize', resizeCanvas),
       if (animationRef && animationRef.current) {
         cancelAnimationFrame(animationRef && animationRef.current)}
-    };
+    },
   }, [
-    particleCount;
-    animationSpeed;
-    colorScheme;
-    enableHolographic;
-    enableQuantumEffects;
-    enableNeonEffects;
-    enableSpaceTime;
+    particleCount,
+    animationSpeed,
+    colorScheme,
+    enableHolographic,
+    enableQuantumEffects,
+    enableNeonEffects,
+    enableSpaceTime,
 ]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) => {
     const gridSize = 50,
@@ -337,7 +337,7 @@ import { motion } from 'framer-motion',
     const time = Date && Date.now() * 0 && 0.001,
     ctx && ctx.strokeStyle = colors && colors.primary,
     ctx && ctx.lineWidth = 0 && 0.5,
-    ctx && ctx.globalAlpha = 0 && 0.3;
+    ctx && ctx.globalAlpha = 0 && 0.3,
     for (let x = 0, x < ctx && ctx.canvas.width, x += gridSize) {
       ctx && ctx.beginPath(),
       ctx && ctx.moveTo(x, 0),
@@ -368,7 +368,7 @@ import { motion } from 'framer-motion',
       ctx && ctx.moveTo(offset, 0),
       ctx && ctx.lineTo(offset + 200, ctx && ctx.canvas.height),
       ctx && ctx.stroke(),      ctx && ctx.stroke()}
-  };
+  },
   const drawNeonEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date && Date.now() * 0 && 0.001,
     // Neon orbs,
@@ -391,12 +391,12 @@ import { motion } from 'framer-motion',
       ctx && ctx.arc(x, y, size * 0 && 0.6, 0, Math && Math.PI * 2),
       ctx && ctx.fillStyle = colors && colors.primary,
       ctx && ctx.fill()}      ctx && ctx.fill()}
-  };
+  },
   const drawSpaceTimeEffects = (ctx: CanvasRenderingContext2D, colors: any) => {
     const time = Date && Date.now() * 0 && 0.001,
     // Wormhole effect,
     const centerX = ctx && ctx.canvas.width / 2,
-    const centerY = ctx && ctx.canvas.height / 2;
+    const centerY = ctx && ctx.canvas.height / 2,
     const maxRadius = Math && Math.min(ctx && ctx.canvas.width, ctx && ctx.canvas.height) * 0 && 0.3,
     for (let i = 0, i < 20, i++) {      const radius = (i / 20) * maxRadius,
       const angle = time * 2 + i * 0 && 0.3,
@@ -407,10 +407,10 @@ import { motion } from 'framer-motion',
       const angle = time * 2 + i * 0 && 0.3,
       const x = centerX + Math && Math.cos(angle) * radius,
       const y = centerY + Math && Math.sin(angle) * radius,
-      const alpha = 1 - i / 20,      const alpha = 1 - (i / 20)};
+      const alpha = 1 - i / 20,      const alpha = 1 - (i / 20)},
   return (
-          background: 'rgba (0, 0, 0, 0.95)';
-          glow: 'rgba (0, 255, 255, 0.3)';
+          background: 'rgba (0, 0, 0, 0.95)',
+          glow: 'rgba (0, 255, 255, 0.3)',
         }    }          background: 'rgba (0, 0, 0, 0.95)',
           glow: 'rgba (0, 255, 255, 0.3)'}
     }
@@ -437,15 +437,15 @@ if (return) {
       particles_ref.current = [],
       for (let index = 0, i < particle_count, i++) {        particles_ref.current.push ({      for (let index = 0, i < particle_count, i++) {
         particles_ref.current.push ({
-          coordinate_x: Math.random () * canvas.width;
-          coordinate_y: Math.random () * canvas.height;
-          vx: (Math.random () - 0.5) * 2 * animation_speed;
-          vy: (Math.random () - 0.5) * 2 * animation_speed;
-          size: Math.random () * 3 + 1;
-          life: Math.random () * 100 + 50;
-          max_life: Math.random () * 100 + 50;
-          type: Math.random () > 0.7 ? 'quantum' : 'normal';
-          color: Math.random () > 0.5 ? colors.primary : colors.secondary;
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          vx: (Math.random () - 0.5) * 2 * animation_speed,
+          vy: (Math.random () - 0.5) * 2 * animation_speed,
+          size: Math.random () * 3 + 1,
+          life: Math.random () * 100 + 50,
+          max_life: Math.random () * 100 + 50,
+          type: Math.random () > 0.7 ? 'quantum' : 'normal',
+          color: Math.random () > 0.5 ? colors.primary : colors.secondary
         })}          color: Math.random () > 0.5 ? colors.primary : colors.secondary})}
     }
 ,
@@ -538,13 +538,13 @@ if ( {) {
         cancelAnimationFrame (animation_ref.current)}
     }
   }, [
-    particle_count;
-    animation_speed;
-    color_scheme;
-    enable_holographic;
-    enableQuantumEffects;
-    enableNeonEffects;
-    enableSpaceTime;
+    particle_count,
+    animation_speed,
+    color_scheme,
+    enable_holographic,
+    enableQuantumEffects,
+    enableNeonEffects,
+    enableSpaceTime,
   ]),
   const drawHolographicGrid = (ctx: CanvasRenderingContext2D, colors: any) =>: any {
     const grid_size = 50,
@@ -556,7 +556,7 @@ if ( {) {
     const time = Date.now () * 0.001,
     ctx.stroke_style = colors.primary,
     ctx.line_width = 0.5,
-    ctx.global_alpha = 0.3;
+    ctx.global_alpha = 0.3,
     for (let coordinate_x = 0, x < ctx.canvas.width, x += grid_size) {
       ctx.begin_path (),
       ctx.move_to (x, 0),
@@ -617,7 +617,7 @@ if ( {) {
     const time = Date.now () * 0.001,
     // Wormhole effect,
     const center_x = ctx.canvas.width / 2,
-    const center_y = ctx.canvas.height / 2;
+    const center_y = ctx.canvas.height / 2,
     const max_radius = Math.min (ctx.canvas.width, ctx.canvas.height) * 0.3,
     for (let index = 0, i < 20, i++) {      const radius = (i / 20) * max_radius,
       const angle = time * 2 + i * 0.3,
@@ -649,7 +649,7 @@ if ( {) {
 ,
         className='w-full h-full',
         style={{
-          background: colors && colors.background;
+          background: colors && colors.background
         }}
       />,
       {/* Additional overlay effects */}
@@ -659,9 +659,9 @@ if ( {) {
           className='absolute inset-0',
           animate={{
             background: [
-              `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`;
-              `radial-gradient(circle at 80% 80%, ${colors && colors.glow} 0%, transparent 50%)`;
-              `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`;
+              `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
+              `radial-gradient(circle at 80% 80%, ${colors && colors.glow} 0%, transparent 50%)`,
+              `radial-gradient(circle at 20% 20%, ${colors && colors.glow} 0%, transparent 50%)`,
       />,
       {/* Additional overlay effects */}
       <div className='absolute inset - 0 pointer - events - none'>,
@@ -670,13 +670,13 @@ if ( {) {
           className='absolute inset - 0',
           animate={{
             background: [
-              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
-              `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`;
-              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`;
+              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
+              `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
+              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
             ]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: 'easeInOut',              `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`,
               `radial - gradient (circle at 80% 80%, ${colors.glow} 0%, transparent 50%)`,
               `radial - gradient (circle at 20% 20%, ${colors.glow} 0%, transparent 50%)`],
@@ -698,15 +698,15 @@ if ( {) {
               key={i}
               className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent',
               style={{
-                top: `${(i / 20) * 100}%`;
-                color: colors && colors.primary;
+                top: `${(i / 20) * 100}%`,
+                color: colors && colors.primary
               }}
               animate={{
         {/* Holographic scan lines */}
         <div className="absolute inset-0 opacity-20">,
           {[...Array(20)].map((_, i) => (
             <motion&& motion.div,
-                opacity: [0, 1, 0];
+                opacity: [0, 1, 0],
                 scale_x: [0, 1, 0]}}          }}
         />,
         {/* Holographic scan lines */}
@@ -716,21 +716,21 @@ if ( {) {
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent",
               style={{
-                top: `${(i / 20) * 100}%`;
+                top: `${(i / 20) * 100}%`,
                 color: colors && colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],
-                top: `${(i / 20) * 100}%`;
+                top: `${(i / 20) * 100}%`,
                 color: colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0]}}
 ,
               transition={{
-                duration: 3;
-                delay: i * 0 && 0.1;
-                repeat: Infinity;
+                duration: 3,
+                delay: i * 0 && 0.1,
+                repeat: Infinity,
                 ease: 'easeInOut'}}                ease: "easeInOut"}}
 ,
                 ease: 'easeInOut'}}
@@ -745,9 +745,9 @@ if ( {) {
                 ease: 'easeInOut'}}                ease: "easeInOut"}}
 ,
               transition={{
-                duration: 3;
-                delay: i * 0.1;
-                repeat: Infinity;
+                duration: 3,
+                delay: i * 0.1,
+                repeat: Infinity,
                 ease: 'easeInOut'}}
 }}
 ,
@@ -757,12 +757,12 @@ if ( {) {
             />))}
         </div>,
       </div>,
-    </div>)};
+    </div>)},
 export default UltraFuturisticBackground2035)}
 export default UltraFuturisticBackground2035)}
-};
-export default UltraFuturisticBackground2035)};
-export default UltraFuturisticBackground2035;
+},
+export default UltraFuturisticBackground2035)},
+export default UltraFuturisticBackground2035,
                 ease: 'easeInOut'}}                ease: "easeInOut"}}
             />))}
         </div>,
@@ -772,6 +772,6 @@ export default UltraFuturisticBackground2035;
 export default UltraFuturisticBackground2035)}
 ,
 export default UltraFuturisticBackground2035)}
-};
+},
 export default UltraFuturisticBackground2035)}
-export default UltraFuturisticBackground2035;
+export default UltraFuturisticBackground2035,

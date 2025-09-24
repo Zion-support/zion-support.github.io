@@ -23,7 +23,7 @@ export default function Page() {
           className='mt-4',
           dangerouslySetInnerHTML={{
             __html:,
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunchpebblenewsroomupdatedautomaticallymultiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latencyhigher reliabilityand faster iteration speed.</p>';
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/newsroom" target="_blank" rel="noopener">https://ziontechgroup.com/newsroom</a></p><h2>Scenario</h2><p>Exploring how techcrunchpebblenewsroomupdatedautomaticallymultiple delivers value.</p><h2>Approach</h2><ul><li>Baseline metrics</li><li>Iterative improvements</li><li>Risk management</li></ul><h2>Results</h2><p>Lower latencyhigher reliabilityand faster iteration speed.</p>'
           }}
         />,
         <p className='mt-6 text-white/60 text-sm'>,

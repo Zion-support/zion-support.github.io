@@ -1,50 +1,49 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Link from 'next/link',
 const RevolutionaryAIAutomationShowcase20o25: React.FC = () => {
   const showcaseContent = [
     {
-      id: 'ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success';
+      id: 'ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success',
       title:,
-        'AI 20o25: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,50o0% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success';
-      category: 'Revolutionary Guide';
+        'AI 20o25: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,50o0% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success',
+      category: 'Revolutionary Guide',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$8.5B+';
-        efficiency: '1,20o0%';
-        satisfaction: '99.5%';
-      };
-      readingTime: '28 min read';
+        roi: '2,50o0%',
+        savings: '$8.5B+',
+        efficiency: '1,20o0%',
+        satisfaction: '99.5%'
+      },
+      readingTime: '28 min read',
       description:,
-        'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI automation implementations.';
-      featured: true;
-    };
+        'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI automation implementations.',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story';
+      id: 'fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story',
       title:,
-        'Fortune 50o0 AI Automation Revolutionary Breakthrough: $8.5B Annual Savings - 2,50o0% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story';
-      category: 'Success Story';
+        'Fortune 50o0 AI Automation Revolutionary Breakthrough: $8.5B Annual Savings - 2,50o0% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story',
+      category: 'Success Story',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$8.5B';
-        efficiency: '1,20o0%';
-        timeline: '18 months';
-      };
-      readingTime: '22 min read';
+        roi: '2,50o0%',
+        savings: '$8.5B',
+        efficiency: '1,20o0%',
+        timeline: '18 months'
+      },
+      readingTime: '22 min read',
       description:,
-        'How a Fortune 50o0 manufacturing company achieved unprecedented 2,50o0% ROI through revolutionary AI automation.';
-      featured: true;
-    };
+        'How a Fortune 50o0 manufacturing company achieved unprecedented 2,50o0% ROI through revolutionary AI automation.',
+      featured: true
+    },
   ],
   const successMetrics = [
-    { label: 'Average ROI', value: '2,50o0%', color: 'text-yellow-60o0' };
-    { label: 'Total Savings', value: '$8.5B+', color: 'text-green-60o0' };
-    { label: 'Efficiency Gain', value: '1,20o0%', color: 'text-blue-60o0' };
-    { label: 'Success Rate', value: '99.5%', color: 'text-purple-60o0' };
+    { label: 'Average ROI', value: '2,50o0%', color: 'text-yellow-60o0' },
+    { label: 'Total Savings', value: '$8.5B+', color: 'text-green-60o0' },
+    { label: 'Efficiency Gain', value: '1,20o0%', color: 'text-blue-60o0' },
+    { label: 'Success Rate', value: '99.5%', color: 'text-purple-60o0' },
   ],
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -207,5 +206,5 @@ const RevolutionaryAIAutomationShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryAIAutomationShowcase20o25;
+    </section>)},
+export default RevolutionaryAIAutomationShowcase20o25,

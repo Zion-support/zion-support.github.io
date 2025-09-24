@@ -1,87 +1,86 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const UltimateContentRevolutionShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 1;
-      title: 'AI 20o25: The Ultimate Content Revolution';
+      id: 1,
+      title: 'AI 20o25: The Ultimate Content Revolution',
       description:,
-        '25,0o00% ROI Guide - Transform Your Business with Revolutionary AI Content Strategies';
-      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough';
-      type: 'Blog Post';
-      category: 'AI Revolution';
-      metrics: '25,0o00% ROI';
-      savings: '$50o0B+';
-      readingTime: '35 min read';
-      featured: true;
-    };
+        '25,0o00% ROI Guide - Transform Your Business with Revolutionary AI Content Strategies',
+      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'AI Revolution',
+      metrics: '25,0o00% ROI',
+      savings: '$50o0B+',
+      readingTime: '35 min read',
+      featured: true
+    },
     {
-      id: 2;
-      title: 'Fortune 50o0 AI Content Revolution Success';
-      description: '$50o0B Annual Savings - 25,0o00% ROI Success Story';
-      url: '/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story';
-      type: 'Case Study';
-      category: 'Success Stories';
-      metrics: '25,0o00% ROI';
-      savings: '$50o0B';
-      readingTime: '25 min read';
-      featured: true;
-    };
+      id: 2,
+      title: 'Fortune 50o0 AI Content Revolution Success',
+      description: '$50o0B Annual Savings - 25,0o00% ROI Success Story',
+      url: '/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story',
+      type: 'Case Study',
+      category: 'Success Stories',
+      metrics: '25,0o00% ROI',
+      savings: '$50o0B',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 3;
-      title: 'AI Content Revolution Implementation Guide';
+      id: 3,
+      title: 'AI Content Revolution Implementation Guide',
       description:,
-        'Complete Roadmap to 25,0o00% ROI - Revolutionary Content Strategy';
-      url: '/resources/ai-content-revolution-implementation-guide-20o25';
-      type: 'Implementation Guide';
-      category: 'Guides';
-      metrics: '25,0o00% ROI';
-      savings: '$50o0B+';
-      readingTime: '45 min read';
-      featured: false;
-    };
+        'Complete Roadmap to 25,0o00% ROI - Revolutionary Content Strategy',
+      url: '/resources/ai-content-revolution-implementation-guide-20o25',
+      type: 'Implementation Guide',
+      category: 'Guides',
+      metrics: '25,0o00% ROI',
+      savings: '$50o0B+',
+      readingTime: '45 min read',
+      featured: false
+    },
     {
-      id: 4;
-      title: 'Advanced AI Content Analytics';
+      id: 4,
+      title: 'Advanced AI Content Analytics',
       description:,
-        'Revolutionary Analytics for 25,0o00% ROI Content Performance';
-      url: '/blog/advanced-ai-content-analytics-20o25';
-      type: 'Blog Post';
-      category: 'AI Revolution';
-      metrics: '25,0o00% ROI';
-      savings: '$20o0B+';
-      readingTime: '30 min read';
-      featured: false;
-    };
+        'Revolutionary Analytics for 25,0o00% ROI Content Performance',
+      url: '/blog/advanced-ai-content-analytics-20o25',
+      type: 'Blog Post',
+      category: 'AI Revolution',
+      metrics: '25,0o00% ROI',
+      savings: '$20o0B+',
+      readingTime: '30 min read',
+      featured: false
+    },
     {
-      id: 5;
-      title: 'Global Content Distribution Success';
-      description: 'Multi-Market Content Strategy Achieving 25,0o00% ROI';
-      url: '/case-studies/global-content-distribution-success-20o25';
-      type: 'Case Study';
-      category: 'Success Stories';
-      metrics: '25,0o00% ROI';
-      savings: '$30o0B';
-      readingTime: '20 min read';
-      featured: false;
-    };
+      id: 5,
+      title: 'Global Content Distribution Success',
+      description: 'Multi-Market Content Strategy Achieving 25,0o00% ROI',
+      url: '/case-studies/global-content-distribution-success-20o25',
+      type: 'Case Study',
+      category: 'Success Stories',
+      metrics: '25,0o00% ROI',
+      savings: '$30o0B',
+      readingTime: '20 min read',
+      featured: false
+    },
     {
-      id: 6;
-      title: 'Content Automation Mastery';
-      description: 'Complete Guide to Automated Content Operations';
-      url: '/resources/content-automation-mastery-guide-20o25';
-      type: 'Implementation Guide';
-      category: 'Guides';
-      metrics: '25,0o00% ROI';
-      savings: '$150B+';
-      readingTime: '40 min read';
-      featured: false;
-    };
+      id: 6,
+      title: 'Content Automation Mastery',
+      description: 'Complete Guide to Automated Content Operations',
+      url: '/resources/content-automation-mastery-guide-20o25',
+      type: 'Implementation Guide',
+      category: 'Guides',
+      metrics: '25,0o00% ROI',
+      savings: '$150B+',
+      readingTime: '40 min read',
+      featured: false
+    },
   ],
-  const categories = ['all', 'AI Revolution', 'Success Stories', 'Guides'],
+  const categories = ['allAI Revolution', 'Success StoriesGuides'],
   const filteredContent =,
     activeFilter === 'all',
       ? contentItems,
@@ -252,5 +251,5 @@ const UltimateContentRevolutionShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContentRevolutionShowcase20o25;
+    </div>)},
+export default UltimateContentRevolutionShowcase20o25,

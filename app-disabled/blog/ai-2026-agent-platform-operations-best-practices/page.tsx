@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI 20o26: Agent Platform Operations Best Practices';
+  title: 'AI 20o26: Agent Platform Operations Best Practices',
   description:,
-    'SLOs, incident response, and change management patterns for safe, reliable agent platforms.';
-};
+    'SLOs, incident response, and change management patterns for safe, reliable agent platforms.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

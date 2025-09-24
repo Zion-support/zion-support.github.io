@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: End-to-End Eval Pipelines';
+  title: 'AI 20o26: End-to-End Eval Pipelines',
   description:,
-    'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.';
-};
+    'Designing continuous, end-to-end evaluation pipelines for safer autonomous systems.',
+},
 export default function Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

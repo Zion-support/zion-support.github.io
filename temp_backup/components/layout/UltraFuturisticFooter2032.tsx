@@ -1,152 +1,149 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Zap;
-  Sparkles;
-  Shield;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Linkedin;
-  Twitter;
-  Facebook;
-  Instagram;
-  Youtube;
-  Github;
-  CheckCircle;
-  Award;
-  Star;
+  Rocket,
+  Brain,
+  Atom,
+  Zap,
+  Sparkles,
+  Shield,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Linkedin,
+  Twitter,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  CheckCircle,
+  Award,
+  Star,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: '🧠 Revolutionary AI';
+    title: '🧠 Revolutionary AI',
     services: [
       {
-        name: 'AI Consciousness Evolution';
-        href: '/ai-consciousness-evolution-platform';
-      };
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-platform'
+      },
       {
-        name: 'AI Emotional Intelligence';
-        href: '/ai-emotional-intelligence-platform';
-      };
+        name: 'AI Emotional Intelligence',
+        href: '/ai-emotional-intelligence-platform'
+      },
       {
-        name: 'AI Creativity Orchestrator';
-        href: '/ai-creativity-orchestrator';
-      };
+        name: 'AI Creativity Orchestrator',
+        href: '/ai-creativity-orchestrator'
+      },
       {
-        name: 'AI Autonomous Business Manager';
-        href: '/ai-autonomous-business-manager';
-      };
-    ];
-  };
+        name: 'AI Autonomous Business Manager',
+        href: '/ai-autonomous-business-manager'
+      },
+    ],
+  },
   {
-    title: '⚛️ Quantum & Emerging Tech';
+    title: '⚛️ Quantum & Emerging Tech',
     services: [
       {
-        name: 'Quantum Internet Security';
-        href: '/quantum-internet-security-gateway';
-      };
+        name: 'Quantum Internet Security',
+        href: '/quantum-internet-security-gateway'
+      },
       {
-        name: 'DNA Computing Platform';
-        href: '/biotech-dna-computing-platform';
-      };
+        name: 'DNA Computing Platform',
+        href: '/biotech-dna-computing-platform'
+      },
       {
-        name: 'Quantum Financial Trading';
-        href: '/quantum-financial-trading-platform';
-      };
-      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' };
-    ];
-  };
+        name: 'Quantum Financial Trading',
+        href: '/quantum-financial-trading-platform'
+      },
+      { name: 'Quantum Creativity Studio', href: '/quantum-creativity-studio' },
+    ],
+  },
   {
-    title: '🏙️ Enterprise IT Solutions';
+    title: '🏙️ Enterprise IT Solutions',
     services: [
       {
-        name: 'Autonomous DevOps Platform';
-        href: '/autonomous-devops-platform';
-      };
+        name: 'Autonomous DevOps Platform',
+        href: '/autonomous-devops-platform'
+      },
       {
-        name: 'Zero Trust Architecture';
-        href: '/zero-trust-network-architecture';
-      };
+        name: 'Zero Trust Architecture',
+        href: '/zero-trust-network-architecture'
+      },
       {
-        name: 'Edge Computing Orchestration';
-        href: '/edge-computing-orchestration';
-      };
+        name: 'Edge Computing Orchestration',
+        href: '/edge-computing-orchestration'
+      },
       {
-        name: 'AI IT Operations Center';
-        href: '/ai-powered-it-operations-center';
-      };
-    ];
-  };
+        name: 'AI IT Operations Center',
+        href: '/ai-powered-it-operations-center'
+      },
+    ],
+  },
   {
-    title: '🌌 Space & Metaverse';
+    title: '🌌 Space & Metaverse',
     services: [
       {
-        name: 'Space Mining Automation';
-        href: '/space-mining-automation-platform';
-      };
+        name: 'Space Mining Automation',
+        href: '/space-mining-automation-platform'
+      },
       {
-        name: 'Metaverse Development';
-        href: '/metaverse-development-platform';
-      };
-      { name: 'AI Health Analytics', href: '/ai-predictive-health-analytics' };
-    ];
-  };
+        name: 'Metaverse Development',
+        href: '/metaverse-development-platform'
+      },
+      { name: 'AI Health Analytics', href: '/ai-predictive-health-analytics' },
+    ],
+  },
 ],
 const quickLinks = [
-  { name: 'Home', href: '/' };
-  { name: 'Services', href: '/services' };
-  { name: 'Solutions', href: '/solutions' };
-  { name: 'Pricing', href: '/pricing' };
-  { name: 'Resources', href: '/resources' };
-  { name: 'Case Studies', href: '/case-studies' };
-  { name: 'Blog', href: '/blog' };
-  { name: 'Contact', href: '/contact' };
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
 ],
 const companyLinks = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'News', href: '/news' };
-  { name: 'Partners', href: '/partners' };
-  { name: 'Support', href: '/support' };
-  { name: 'Status', href: '/status' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'News', href: '/news' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+  { name: 'Status', href: '/status' },
 ],
 const socialLinks = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com/company/ziontechgroup';
-    icon: Linkedin;
-  };
-  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin
+  },
+  { name: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: Github },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com/ziontechgroup';
-    icon: Instagram;
-  };
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram
+  },
   {
-    name: 'YouTube';
-    href: 'https://youtube.com/@ziontechgroup';
-    icon: Youtube;
-  };
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: Youtube
+  },
 ],
 const certifications = [
-  'ISO 270o01 Certified';
-  'SOC 2 Type II Compliant';
-  'GDPR Compliant';
-  'HIPAA Compliant';
-  'PCI DSS Level 1';
-  'FedRAMP Authorized';
+  'ISO 270o01 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
 ],
 export default function UltraFuturisticFooter20o32() {
   return (
@@ -189,7 +186,7 @@ export default function UltraFuturisticFooter20o32() {
                 transition={{ duration: 0.6, delay: 0.1 }}
                 viewport={{ once: true }}
                 className='text-gray-30o0 text-sm leading-relaxed'>,
-                Leading provider of 10o00+ revolutionary AI, quantum computing;
+                Leading provider of 10o00+ revolutionary AI, quantum computing,
                 and IT services. Delivering 10o00% ROI through cutting-edge,
                 solutions that transform businesses.,
               </motion.p>,

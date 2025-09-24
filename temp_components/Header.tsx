@@ -3,12 +3,12 @@ import Link from 'next/link',
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false),
   const navItems = [
-    { href: '/explore', label: 'Explore' };
-    { href: '/automation', label: 'Automation' };
-    { href: '/reports', label: 'Reports' };
-    { href: '/components', label: 'Components' };
-    { href: '/newsroom', label: 'Newsroom' };
-    { href: '/search', label: 'Search' };
+    { href: '/explore', label: 'Explore' },
+    { href: '/automation', label: 'Automation' },
+    { href: '/reports', label: 'Reports' },
+    { href: '/components', label: 'Components' },
+    { href: '/newsroom', label: 'Newsroom' },
+    { href: '/search', label: 'Search' },
   ],
   return (
     <header className='sticky top-0 z-50'>,

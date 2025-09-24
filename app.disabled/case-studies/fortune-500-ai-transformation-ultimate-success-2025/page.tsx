@@ -1,26 +1,23 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months';
+  title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months',
   description:,
-    'Real-world case study showing how a Fortune 50o0 manufacturing company achieved 567% ROI through comprehensive AI implementation.';
+    'Real-world case study showing how a Fortune 50o0 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
   keywords: [
-    'Fortune 50o0';
-    'AI transformation';
-    'case study';
-    'ROI';
-    'manufacturing';
-    'automation';
-  ];
+    'Fortune 50o0AI transformation',
+    'case studyROI',
+    'manufacturingautomation',
+  ],
   openGraph: {
-    title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months';
+    title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings in 18 Months',
     description:,
-      'Real-world case study showing how a Fortune 50o0 manufacturing company achieved 567% ROI through comprehensive AI implementation.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Real-world case study showing how a Fortune 50o0 manufacturing company achieved 567% ROI through comprehensive AI implementation.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function Fortune50o0AITransformation() {
   return (
     <div className='min-h-screen bg-white'>,

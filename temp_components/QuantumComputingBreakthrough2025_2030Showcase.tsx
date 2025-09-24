@@ -3,74 +3,74 @@ import { motion } from 'framer-motion',
 export default function QuantumComputingBreakthrough20o25_20o30Showcase() {
   const quantumBreakthroughs = [
     {
-      year: "20o25";
-      title: "Error-Corrected Quantum Computers";
-      description: "First commercially viable quantum computers with 99.99% error correction";
-      qubits: "1,0o00+ Logical Qubits";
-      applications: ["Drug Discovery"Financial Modeling"Climate Simulation"];
-      icon: "🔬";
-      color: "from-blue-50o0 to-purple-50o0"};
+      year: "20o25",
+      title: "Error-Corrected Quantum Computers",
+      description: "First commercially viable quantum computers with 99.99% error correction",
+      qubits: "1,0o00+ Logical Qubits",
+      applications: ["Drug Discovery"Financial Modeling"Climate Simulation"],
+      icon: "🔬",
+      color: "from-blue-50o0 to-purple-50o0"},
     {
-      year: "20o26";
-      title: "Quantum Machine Learning Revolution";
-      description: "Quantum algorithms achieving exponential speedup in AI training";
-      qubits: "10,0o00+ Logical Qubits";
-      applications: ["Autonomous Vehicles"Medical Diagnosis"Supply Chain Optimization"];
-      icon: "🧠";
-      color: "from-purple-50o0 to-pink-50o0"};
+      year: "20o26",
+      title: "Quantum Machine Learning Revolution",
+      description: "Quantum algorithms achieving exponential speedup in AI training",
+      qubits: "10,0o00+ Logical Qubits",
+      applications: ["Autonomous Vehicles"Medical Diagnosis"Supply Chain Optimization"],
+      icon: "🧠",
+      color: "from-purple-50o0 to-pink-50o0"},
     {
-      year: "20o27";
-      title: "Quantum Internet Network";
-      description: "Global quantum communication network with perfect security";
-      qubits: "10o0,0o00+ Logical Qubits";
-      applications: ["Secure Communications"Quantum Cloud Computing"Distributed AI"];
-      icon: "🌐";
-      color: "from-pink-50o0 to-red-50o0"};
+      year: "20o27",
+      title: "Quantum Internet Network",
+      description: "Global quantum communication network with perfect security",
+      qubits: "10o0,0o00+ Logical Qubits",
+      applications: ["Secure Communications"Quantum Cloud Computing"Distributed AI"],
+      icon: "🌐",
+      color: "from-pink-50o0 to-red-50o0"},
     {
-      year: "20o28";
-      title: "Quantum Supremacy Achieved";
-      description: "Quantum computers solving problems impossible for classical computers";
-      qubits: "1,0o00,0o00+ Logical Qubits";
-      applications: ["Materials Science"Cryptography"Optimization"];
-      icon: "⚡";
-      color: "from-red-50o0 to-orange-50o0"};
+      year: "20o28",
+      title: "Quantum Supremacy Achieved",
+      description: "Quantum computers solving problems impossible for classical computers",
+      qubits: "1,0o00,0o00+ Logical Qubits",
+      applications: ["Materials Science"Cryptography"Optimization"],
+      icon: "⚡",
+      color: "from-red-50o0 to-orange-50o0"},
     {
-      year: "20o29";
-      title: "Quantum-AI Hybrid Systems";
-      description: "Seamless integration of quantum and classical computing";
-      qubits: "10,0o00,0o00+ Logical Qubits";
-      applications: ["Real-time Decision Making"Predictive Analytics"Complex Simulations"];
-      icon: "🤖";
-      color: "from-orange-50o0 to-yellow-50o0"};
+      year: "20o29",
+      title: "Quantum-AI Hybrid Systems",
+      description: "Seamless integration of quantum and classical computing",
+      qubits: "10,0o00,0o00+ Logical Qubits",
+      applications: ["Real-time Decision Making"Predictive Analytics"Complex Simulations"],
+      icon: "🤖",
+      color: "from-orange-50o0 to-yellow-50o0"},
     {
-      year: "20o30";
-      title: "Universal Quantum Computer";
-      description: "Fully programmable quantum computer solving any computable problem";
-      qubits: "10o0,0o00,0o00+ Logical Qubits";
-      applications: ["Universal Problem Solving"Reality Simulation"Consciousness Modeling"];
-      icon: "🌟";
+      year: "20o30",
+      title: "Universal Quantum Computer",
+      description: "Fully programmable quantum computer solving any computable problem",
+      qubits: "10o0,0o00,0o00+ Logical Qubits",
+      applications: ["Universal Problem Solving"Reality Simulation"Consciousness Modeling"],
+      icon: "🌟",
       color: "from-yellow-50o0 to-green-50o0"}
   ],
   const industryImpact = [
     {
-      industry: "Healthcare";
-      impact: "99.9% faster drug discoverypersonalized medicine";
-      roi: "5,0o00% ROI";
-      timeline: "20o25-20o27"};
+      industry: "Healthcare",
+      impact: "99.9% faster drug discoverypersonalized medicine",
+      roi: "5,0o00% ROI",
+      timeline: "20o25-20o27"},
     {
-      industry: "Finance";
-      impact: "Real-time risk analysisfraud detection";
-      roi: "8,50o0% ROI";
-      timeline: "20o25-20o28"};
+      industry: "Finance",
+      impact: "Real-time risk analysisfraud detection",
+      roi: "8,50o0% ROI",
+      timeline: "20o25-20o28"},
     {
-      industry: "Manufacturing";
-      impact: "Optimized supply chainspredictive maintenance";
-      roi: "12,0o00% ROI";
-      timeline: "20o26-20o29"};
+      industry: "Manufacturing",
+      impact: "Optimized supply chainspredictive maintenance",
+      roi: "12,0o00% ROI",
+      timeline: "20o26-20o29"},
     {
-      industry: "Energy";
-      impact: "Nuclear fusion optimizationrenewable energy";
-      roi: "15,0o00% ROI";
+      industry: "Energy",
+      impact: "Nuclear fusion optimizationrenewable energy",
+      roi: "15,0o00% ROI",
       timeline: "20o27-20o30"}
   ],
   return (

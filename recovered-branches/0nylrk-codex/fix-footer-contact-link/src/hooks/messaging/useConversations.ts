@@ -8,9 +8,9 @@ type UserWithProfile = UserProfile | UserDetails | null,
  * Hook to handle conversation operations,
  */,
 export function useConversations(
-  user: UserWithProfile;
-  setConversations: (conversations: Conversation[]) => void;
-  setUnreadCount: (count: number) => void;
+  user: UserWithProfile,
+  setConversations: (conversations: Conversation[]) => void,
+  setUnreadCount: (count: number) => void,
   setIsLoading: (loading: boolean) => void) {
   /**,
    * Fetch conversations for the current user,
@@ -30,46 +30,46 @@ export function useConversations(
         const isUserOne = conv.user_one_id === user.id,
         const otherUserId = isUserOne ? conv.user_two_id : conv.user_one_id,
         return {
-          id: conv.id;
-          user_id: otherUserId;
+          id: conv.id,
+          user_id: otherUserId,
           other_user: {
-            id: otherUserId;
-            name: isUserOne ? conv.user_two_name : conv.user_one_name;
-            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
-            user_type: isUserOne ? conv.user_two_type : conv.user_one_type;
-          };
-          name: isUserOne ? conv.user_two_name : conv.user_one_name;
-          avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar;
+            id: otherUserId,
+            name: isUserOne ? conv.user_two_name : conv.user_one_name,
+            avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
+            user_type: isUserOne ? conv.user_two_type : conv.user_one_type
+          },
+          name: isUserOne ? conv.user_two_name : conv.user_one_name,
+          avatar_url: isUserOne ? conv.user_two_avatar : conv.user_one_avatar,
           last_message: conv.last_message,
             ? {
-                content: conv.last_message;
-                created_at: conv.last_message_time;
+                content: conv.last_message,
+                created_at: conv.last_message_time
               }
-            : undefined;
-          updated_at: conv.updated_at || conv.created_at;
-          unread_count: conv.unread_count || 0;
-          context_type: conv.context_type;
-          context_id: conv.context_id;
-          context_data: conv.context_data;
-        };
+            : undefined,
+          updated_at: conv.updated_at || conv.created_at,
+          unread_count: conv.unread_count || 0,
+          context_type: conv.context_type,
+          context_id: conv.context_id,
+          context_data: conv.context_data
+        },
       }),
       setConversations(formattedConversations),
       // Calculate total unread count,
       const totalUnread = formattedConversations.reduce(
-        (total, conv) => total + (conv.unread_count || 0);
+        (total, conv) => total + (conv.unread_count || 0),
         0),
       setUnreadCount(totalUnread)} catch (error) {
       console.error('Error fetching conversations:', error)} finally {
       setIsLoading(false)}
-  };
+  },
   /**,
    * Create a new conversation and send initial message,
    */,
   const createConversation = async (
-    recipientId: string;
-    initialMessage: string;
-    contextType: 'job' | 'talent' | 'general' = 'general';
-    contextId?: string;
+    recipientId: string,
+    initialMessage: string,
+    contextType: 'job' | 'talent' | 'general' = 'general',
+    contextId?: string,
     contextData?: ConversationContextData) => {
     if (!user || !initialMessage.trim()) return,
     try {
@@ -89,10 +89,10 @@ export function useConversations(
           await supabase,
             .from('conversations'),
             .update({
-              context_type: contextType;
-              context_id: contextId;
-              context_data: contextData;
-              updated_at: new Date().toISOString();
+              context_type: contextType,
+              context_id: contextId,
+              context_data: contextData,
+              updated_at: new Date().toISOString()
             }),
             .eq('id', conversationId)}
       } else {
@@ -107,23 +107,23 @@ export function useConversations(
         const { data: newConversation, error: createError } = await supabase,
           .from('conversations'),
           .insert({
-            user_one_id: user.id;
-            user_one_name: user.displayName || user.email;
+            user_one_id: user.id,
+            user_one_name: user.displayName || user.email,
             user_one_avatar: ,
               user.avatarUrl ||,
-              ('avatar_url' in user ? user.avatar_url : undefined);
-            user_one_type: user.userType;
-            user_two_id: recipientId;
-            user_two_name: recipientData?.display_name || 'User';
-            user_two_avatar: recipientData?.avatar_url;
-            user_two_type: recipientData?.user_type;
-            created_at: new Date().toISOString();
-            updated_at: new Date().toISOString();
-            last_message: initialMessage;
-            last_message_time: new Date().toISOString();
-            context_type: contextType;
-            context_id: contextId;
-            context_data: contextData;
+              ('avatar_url' in user ? user.avatar_url : undefined),
+            user_one_type: user.userType,
+            user_two_id: recipientId,
+            user_two_name: recipientData?.display_name || 'User',
+            user_two_avatar: recipientData?.avatar_url,
+            user_two_type: recipientData?.user_type,
+            created_at: new Date().toISOString(),
+            updated_at: new Date().toISOString(),
+            last_message: initialMessage,
+            last_message_time: new Date().toISOString(),
+            context_type: contextType,
+            context_id: contextId,
+            context_data: contextData
           }),
           .select('id'),
           .single(),
@@ -132,12 +132,12 @@ export function useConversations(
 ,
       // Send the initial message,
       await supabase.from('messages').insert({
-        conversation_id: conversationId;
-        sender_id: user.id;
-        recipient_id: recipientId;
-        content: initialMessage;
-        created_at: new Date().toISOString();
-        read: false;
+        conversation_id: conversationId,
+        sender_id: user.id,
+        recipient_id: recipientId,
+        content: initialMessage,
+        created_at: new Date().toISOString(),
+        read: false
       }),
       // Update conversations list,
       await fetchConversations(),
@@ -145,14 +145,14 @@ export function useConversations(
       return conversationId} catch (error) {
       console.error('Error creating conversation:', error),
       toast({
-        title: 'Failed to create conversation';
-        description: 'Please try again later';
-        variant: 'destructive';
+        title: 'Failed to create conversation',
+        description: 'Please try again later',
+        variant: 'destructive'
       })}
-  };
+  },
   return {
-    fetchConversations;
-    createConversation;
-  };
+    fetchConversations,
+    createConversation,
+  },
 }
 ,

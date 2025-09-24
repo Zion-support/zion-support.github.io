@@ -3,40 +3,40 @@ import { motion } from 'framer-motion',
 const RevolutionaryFeatures20o25 = () => {
   const features = [
     {
-      icon: '🚀';
-      title: 'Autonomous AI Operations';
-      description: 'Self-managing AI systems that operate 24/7 without human interventiondelivering 99.9% uptime and 2,50o0% ROI.';
-      stats: '99.9% Uptime';
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      icon: '🚀',
+      title: 'Autonomous AI Operations',
+      description: 'Self-managing AI systems that operate 24/7 without human interventiondelivering 99.9% uptime and 2,50o0% ROI.',
+      stats: '99.9% Uptime',
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      icon: '⚡';
-      title: 'Quantum Speed Processing';
-      description: 'Revolutionary quantum computing solutions that process data 10,0o00x faster than traditional systems.';
-      stats: '10,0o00x Faster';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      icon: '⚡',
+      title: 'Quantum Speed Processing',
+      description: 'Revolutionary quantum computing solutions that process data 10,0o00x faster than traditional systems.',
+      stats: '10,0o00x Faster',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      icon: '🧠';
-      title: 'Neural Interface Technology';
-      description: 'Direct brain-computer interfaces enabling thought-to-action control and seamless human-AI collaboration.';
-      stats: 'Real-time Control';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      icon: '🧠',
+      title: 'Neural Interface Technology',
+      description: 'Direct brain-computer interfaces enabling thought-to-action control and seamless human-AI collaboration.',
+      stats: 'Real-time Control',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      icon: '🔮';
-      title: 'Predictive Analytics 20o30';
-      description: 'Advanced AI predictions for the next 5 yearshelping businesses prepare for the future of technology.';
-      stats: '5-Year Forecast';
-      color: 'from-orange-50o0 to-red-50o0'};
+      icon: '🔮',
+      title: 'Predictive Analytics 20o30',
+      description: 'Advanced AI predictions for the next 5 yearshelping businesses prepare for the future of technology.',
+      stats: '5-Year Forecast',
+      color: 'from-orange-50o0 to-red-50o0'},
     {
-      icon: '🛡️';
-      title: 'Quantum Security';
-      description: 'Unbreakable encryption using quantum cryptographyproviding absolute security for sensitive data.';
-      stats: 'Unbreakable';
-      color: 'from-indigo-50o0 to-purple-50o0'};
+      icon: '🛡️',
+      title: 'Quantum Security',
+      description: 'Unbreakable encryption using quantum cryptographyproviding absolute security for sensitive data.',
+      stats: 'Unbreakable',
+      color: 'from-indigo-50o0 to-purple-50o0'},
     {
-      icon: '🌐';
-      title: 'Global AI Network';
-      description: 'Worldwide AI infrastructure connecting businesses across continents with instant communication.';
-      stats: 'Global Reach';
+      icon: '🌐',
+      title: 'Global AI Network',
+      description: 'Worldwide AI infrastructure connecting businesses across continents with instant communication.',
+      stats: 'Global Reach',
       color: 'from-teal-50o0 to-blue-50o0'}
   ],
   return (
@@ -118,5 +118,5 @@ const RevolutionaryFeatures20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default RevolutionaryFeatures20o25;
+    </section>)},
+export default RevolutionaryFeatures20o25,

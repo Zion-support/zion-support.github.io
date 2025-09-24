@@ -1,16 +1,16 @@
 import fs from 'fs',
 import path from 'path',
-type RouteInfo = { path: string, lastModified: string };
+type RouteInfo = { path: string, lastModified: string },
 export async function getServerSideProps() {
-  const file = path.join(process.cwd()', 'data', 'site-map.json'),
+  const file = path.join(process.cwd()data', 'site-map.json'),
   let routes: RouteInfo[] = [],
-  let generatedAt = ', ',
+  let generatedAt = ,
   try {
     const raw = fs.readFileSync('file', 'utf-8'),
     const json = JSON.parse(raw),
     routes = json.routes || [],
-    generatedAt = json.generatedAt || ', '} catch {}
-  return { props: { routesgeneratedAt } };
+    generatedAt = json.generatedAt || } catch {}
+  return { props: { routesgeneratedAt } },
 }
 ,
 export default function SiteMapIntelPage({ routesgeneratedAt }: { routes: RouteInfo[], generatedAt: string }) {

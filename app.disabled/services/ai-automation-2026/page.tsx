@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
-  title: 'AI Automation Services 20o26 - Zion Tech Group';
+  title: 'AI Automation Services 20o26 - Zion Tech Group',
   description:,
-    'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.';
+    'Transform your business with cutting-edge AI automation services. Achieve 340% ROI, 70% cost reduction, and 85% process automation with our proven solutions.',
   keywords: [
-    'AI automation services';
-    'business automation';
-    'AI implementation';
-    'process automation';
-    'AI consulting';
-    'enterprise automation';
-  ];
-};
+    'AI automation servicesbusiness automation',
+    'AI implementationprocess automation',
+    'AI consultingenterprise automation',
+  ]
+},
 export default function AIAutomationServices20o26() {
   return (
     <ErrorBoundary>,
@@ -192,7 +189,7 @@ export default function AIAutomationServices20o26() {
                   Computer Vision,
                 </h3>,
                 <p className='text-gray-60o0 mb-6'>,
-                  Implement visual recognition systems for quality control;
+                  Implement visual recognition systems for quality control,
                   security, and process monitoring.,
                 </p>,
                 <ul className='list-disc list-inside text-gray-60o0 space-y-2 mb-6'>,

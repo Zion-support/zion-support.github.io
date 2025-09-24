@@ -3,10 +3,10 @@ import { jsPDF } from 'jspdf',
 import { PortfolioProject } from '@/types/resume',
 import { PdfThemeColors } from '../themeConfig',
 export function addPortfolioSection(
-  doc: jsPDF;
-  projects: PortfolioProject[];
-  colors: PdfThemeColors;
-  startY: number;
+  doc: jsPDF,
+  projects: PortfolioProject[],
+  colors: PdfThemeColors,
+  startY: number,
   maxProjects: number = 2): number {
   if (projects.length === 0) return startY,
   let yPos = startY,
@@ -37,7 +37,7 @@ export function addPortfolioSection(
     if (project.technologies && project.technologies.length > 0) {
       doc.setFontSize(10),
       doc.setTextColor(colors.text),
-      doc.text(`Technologies: ${project.technologies.join(', ')}`, 20, yPos),
+      doc.text(`Technologies: ${project.technologies.join()}`, 20, yPos),
       yPos += 5}
 ,
     if (project.description) {

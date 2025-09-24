@@ -9,11 +9,11 @@ export default function AiHealthcareAnalytics() {
 			implementationWeeks="6-8 weeks",
 			roiNote="Healthcare organizations report 30o0% ROI through improved outcomes and reduced costs",
 			features={[
-				"AI patient outcome prediction";
-				"Clinical decision support";
-				"Population health analytics";
-				"Risk stratification";
-				"Care pathway optimization";
+				"AI patient outcome prediction",
+				"Clinical decision support",
+				"Population health analytics",
+				"Risk stratification",
+				"Care pathway optimization",
 				"Interoperability and security]}
 			]}
 			industries={["Healthcare", "Hospitals", "Payers", "Providers"]}

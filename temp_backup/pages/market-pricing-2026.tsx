@@ -1,56 +1,56 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionary20o26Services } from '../data/revolutionary-20o26-services';
-import { emergingTech20o26Services } from '../data/emerging-tech-20o26-services';
-import { comprehensiveIT20o26Services } from '../data/comprehensive-it-20o26-services';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { TrendingUp, Star, Users, Zap, Brain, Atom, Sparkles, Shield, Target, Cloud, DollarSign, BarChart3, Target as TargetIcon, Award } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { revolutionary20o26Services } from '../data/revolutionary-20o26-services',
+import { emergingTech20o26Services } from '../data/emerging-tech-20o26-services',
+import { comprehensiveIT20o26Services } from '../data/comprehensive-it-20o26-services',
 export default function MarketPricing20o26() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [priceRange, setPriceRange] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [priceRange, setPriceRange] = useState('all'),
   // Combine all 20o26 services,
   const allServices = [
-    ...revolutionary20o26Services;
-    ...emergingTech20o26Services;
-    ...comprehensiveIT20o26Services];
+    ...revolutionary20o26Services,
+    ...emergingTech20o26Services,
+    ...comprehensiveIT20o26Services],
   // Filter services based on selection,
   const filteredServices = allServices.filter(service => {
-    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+    const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
     const matchesPrice = priceRange === 'all' ||,
       (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 50o00) ||,
       (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 50o00 && parseFloat(service.price.replace(/[^0-9.]/g, '')) < 150o00) ||,
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 150o00);
-    return matchesCategory && matchesPrice});
+      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g, '')) >= 150o00),
+    return matchesCategory && matchesPrice}),
   const categories = [
-    { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length };
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length };
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length };
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length };
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length };
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length };
+    { id: 'all', name: 'All Categories', icon: BarChart3, count: allServices.length },
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-  ];
+  ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All price ranges' };
-    { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' };
-    { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' };
+    { id: 'all', name: 'All Prices', range: 'All price ranges' },
+    { id: 'budget', name: 'Budget ($0 - $5K)', range: 'Affordable solutions for startups and small businesses' },
+    { id: 'mid', name: 'Mid-Range ($5K - $15K)', range: 'Professional solutions for growing companies' },
     { id: 'premium', name: 'Premium ($15K+)', range: 'Enterprise-grade solutions for large organizations' }
-  ];
+  ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Calculate pricing statistics,
   const pricingStats ={
-    totalServices: allServices.length;
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length;
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ''))));
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0);
-    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length};
+    totalServices: allServices.length,
+    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, '')), 0) / allServices.length,
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, '')))),
+    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
+    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length},
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",
@@ -89,7 +89,7 @@ export default function MarketPricing20o26() {
                 </span>,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Comprehensive pricing analysis and competitive positioning for our revolutionary AI;
+                Comprehensive pricing analysis and competitive positioning for our revolutionary AI,
                 quantum computing, and emerging technology services,
               </p>,
               {/* Pricing Statistics */}

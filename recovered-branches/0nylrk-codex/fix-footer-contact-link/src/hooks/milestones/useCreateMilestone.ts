@@ -10,7 +10,7 @@ export const useCreateMilestone = (projectId?: string) => {
   const { recordMilestoneActivity } = useRecordActivity(),
   const createMilestone = async (
     milestoneData: Omit<,
-      Milestone;
+      Milestone,
       'id' | 'created_at' | 'updated_at' | 'created_by'>) => {
     if (!user || !projectId) return null,
     try {
@@ -18,29 +18,28 @@ export const useCreateMilestone = (projectId?: string) => {
       const { data, error } = await supabase,
         .from('project_milestones'),
         .insert({
-          ...milestoneData;
-          project_id: projectId;
-          created_by: user.id;
+          ...milestoneData,
+          project_id: projectId,
+          created_by: user.id
         }),
         .select(),
         .single(),
       if (error) throw error,
       // Create activity record,
       await recordMilestoneActivity(
-        data.id;
-        'created';
-        null;
-        'pending';
-        'Milestone created'),
+        data.id,
+        'created',
+        null,
+        'pendingMilestone created'),
       toast.success('Milestone created successfully'),
       return data} catch (err: any) {
       console.error('Error creating milestone:', err),
       toast.error('Failed to create milestone: ' + err.message),
       return null} finally {
       setIsSubmitting(false)}
-  };
+  },
   return {
-    createMilestone;
-    isSubmitting;
-  };
-};
+    createMilestone,
+    isSubmitting,
+  },
+},

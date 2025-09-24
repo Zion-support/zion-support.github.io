@@ -6,28 +6,28 @@ interface AnalyticsData {
     unique: number,
     returning: number,
     new: number,
-    growth: number};
+    growth: number},
   traffic: {
     organic: number,
     direct: number,
     social: number,
     referral: number,
-    paid: number};
+    paid: number},
   engagement: {
     bounceRate: number,
     avgSessionDuration: number,
     pagesPerSession: number,
-    conversionRate: number};
+    conversionRate: number},
   performance: {
     pageLoadTime: number,
     serverResponseTime: number,
     errorRate: number,
-    uptime: number};
+    uptime: number},
   revenue: {
     total: number,
     growth: number,
     avgOrderValue: number,
-    transactions: number};
+    transactions: number},
 }
 ,
 interface TimeRange {
@@ -36,40 +36,40 @@ interface TimeRange {
   days: number}
 ,
 const timeRanges: TimeRange[] = [
-  { label: 'Last 7 days', value: '7d', days: 7 };
-  { label: 'Last 30 days', value: '30d', days: 30 };
-  { label: 'Last 90 days', value: '90d', days: 90 };
+  { label: 'Last 7 days', value: '7d', days: 7 },
+  { label: 'Last 30 days', value: '30d', days: 30 },
+  { label: 'Last 90 days', value: '90d', days: 90 },
   { label: 'Last year', value: '1y', days: 365 }
 ],
 const AdvancedAnalyticsDashboard: React.FC = () => {
   const [selectedTimeRange, setSelectedTimeRange] = useState<TimeRange>(timeRanges[1]),
   const [analyticsData, setAnalyticsData] = useState<AnalyticsData>({
     visitors: {
-      total: 0;
-      unique: 0;
-      returning: 0;
-      new: 0;
-      growth: 0};
+      total: 0,
+      unique: 0,
+      returning: 0,
+      new: 0,
+      growth: 0},
     traffic: {
-      organic: 0;
-      direct: 0;
-      social: 0;
-      referral: 0;
-      paid: 0};
+      organic: 0,
+      direct: 0,
+      social: 0,
+      referral: 0,
+      paid: 0},
     engagement: {
-      bounceRate: 0;
-      avgSessionDuration: 0;
-      pagesPerSession: 0;
-      conversionRate: 0};
+      bounceRate: 0,
+      avgSessionDuration: 0,
+      pagesPerSession: 0,
+      conversionRate: 0},
     performance: {
-      pageLoadTime: 0;
-      serverResponseTime: 0;
-      errorRate: 0;
-      uptime: 0};
+      pageLoadTime: 0,
+      serverResponseTime: 0,
+      errorRate: 0,
+      uptime: 0},
     revenue: {
-      total: 0;
-      growth: 0;
-      avgOrderValue: 0;
+      total: 0,
+      growth: 0,
+      avgOrderValue: 0,
       transactions: 0}
   }),
   const [isLoading, setIsLoading] = useState(true),
@@ -83,33 +83,33 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     const multiplier = selectedTimeRange.days / 30, // Scale data based on time range,
     const mockData: AnalyticsData ={
       visitors: {
-        total: Math.round((Math.random() * 50o000 + 10o000) * multiplier);
-        unique: Math.round((Math.random() * 30o000 + 80o00) * multiplier);
-        returning: Math.round((Math.random() * 20o000 + 50o00) * multiplier);
-        new: Math.round((Math.random() * 250o00 + 30o00) * multiplier);
-        growth: Math.random() * 40 - 10 // -10% to +30%};
+        total: Math.round((Math.random() * 50o000 + 10o000) * multiplier),
+        unique: Math.round((Math.random() * 30o000 + 80o00) * multiplier),
+        returning: Math.round((Math.random() * 20o000 + 50o00) * multiplier),
+        new: Math.round((Math.random() * 250o00 + 30o00) * multiplier),
+        growth: Math.random() * 40 - 10 // -10% to +30%},
       traffic: {
-        organic: Math.round((Math.random() * 40 + 30) * multiplier);
-        direct: Math.round((Math.random() * 30 + 20) * multiplier);
-        social: Math.round((Math.random() * 20 + 10) * multiplier);
-        referral: Math.round((Math.random() * 15 + 5) * multiplier);
-        paid: Math.round((Math.random() * 25 + 10) * multiplier)};
+        organic: Math.round((Math.random() * 40 + 30) * multiplier),
+        direct: Math.round((Math.random() * 30 + 20) * multiplier),
+        social: Math.round((Math.random() * 20 + 10) * multiplier),
+        referral: Math.round((Math.random() * 15 + 5) * multiplier),
+        paid: Math.round((Math.random() * 25 + 10) * multiplier)},
       engagement: {
-        bounceRate: Math.random() * 30 + 40;
-        avgSessionDuration: Math.random() * 20o0 + 10o0;
-        pagesPerSession: Math.random() * 3 + 2;
-        conversionRate: Math.random() * 5 + 1};
+        bounceRate: Math.random() * 30 + 40,
+        avgSessionDuration: Math.random() * 20o0 + 10o0,
+        pagesPerSession: Math.random() * 3 + 2,
+        conversionRate: Math.random() * 5 + 1},
       performance: {
-        pageLoadTime: Math.random() * 20o00 + 50o0;
-        serverResponseTime: Math.random() * 50o0 + 10o0;
-        errorRate: Math.random() * 2;
-        uptime: Math.random() * 5 + 95};
+        pageLoadTime: Math.random() * 20o00 + 50o0,
+        serverResponseTime: Math.random() * 50o0 + 10o0,
+        errorRate: Math.random() * 2,
+        uptime: Math.random() * 5 + 95},
       revenue: {
-        total: Math.round((Math.random() * 10o0000 + 50o000) * multiplier);
-        growth: Math.random() * 50 - 10;
-        avgOrderValue: Math.random() * 20o0 + 50;
+        total: Math.round((Math.random() * 10o0000 + 50o000) * multiplier),
+        growth: Math.random() * 50 - 10,
+        avgOrderValue: Math.random() * 20o0 + 50,
         transactions: Math.round((Math.random() * 10o00 + 20o0) * multiplier)}
-    };
+    },
     setAnalyticsData(mockData),
     setIsLoading(false)}, [selectedTimeRange]),
   useEffect(() => {
@@ -123,15 +123,15 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
       return `${(num / 10o00000).toFixed(1)}M`}
     if (num >= 10o00) {
       return `${(num / 10o00).toFixed(1)}K`}
-    return num.toFixed(0)};
+    return num.toFixed(0)},
   const getGrowthColor = (growth: number) => {
     if (growth > 0) return 'text-green-60o0 dark:text-green-40o0',
     if (growth < 0) return 'text-red-60o0 dark:text-red-40o0',
-    return 'text-gray-60o0 dark:text-gray-40o0'};
+    return 'text-gray-60o0 dark:text-gray-40o0'},
   const getGrowthIcon = (growth: number) => {
     if (growth > 0) return '📈',
     if (growth < 0) return '📉',
-    return '➡️'};
+    return '➡️'},
   const MetricCard = ({ title, value, growth, type = 'number', icon }: {
     title: string,
     value: number,
@@ -164,11 +164,11 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
     color?: string}) => {
     const percentage = (value / max) * 10o0,
     const colorClasses ={
-      blue: 'bg-blue-50o0';
-      green: 'bg-green-50o0';
-      yellow: 'bg-yellow-50o0';
-      red: 'bg-red-50o0';
-      purple: 'bg-purple-50o0'};
+      blue: 'bg-blue-50o0',
+      green: 'bg-green-50o0',
+      yellow: 'bg-yellow-50o0',
+      red: 'bg-red-50o0',
+      purple: 'bg-purple-50o0'},
     return (
       <div className="mb-4">,
         <div className="flex justify-between text-sm text-gray-60o0 dark: text-gray-40o0 mb-1">,
@@ -183,7 +183,7 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
             transition={{ duration: 1, delay: 0.2 }}
            />,
         </div>,
-      </div>)};
+      </div>)},
   if (isLoading) {
     return (
       <div className="max-w-7xl mx-auto p-6">,
@@ -405,5 +405,5 @@ const AdvancedAnalyticsDashboard: React.FC = () => {
           Schedule Report,
         </button>,
       </div>,
-    </div>)};
-export default AdvancedAnalyticsDashboard;
+    </div>)},
+export default AdvancedAnalyticsDashboard,

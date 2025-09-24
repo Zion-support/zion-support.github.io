@@ -2,81 +2,68 @@ import Head from 'next/head',
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  MessageCircle;
-  CheckCircle;
-  Shield;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  Clock;
-  ArrowRight;
-  Star;
-  Headphones;
-  Globe;
-  Bot;
-  Smartphone;
-  Mail;
-  Phone;
+  MessageCircle,
+  CheckCircle,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  Clock,
+  ArrowRight,
+  Star,
+  Headphones,
+  Globe,
+  Bot,
+  Smartphone,
+  Mail,
+  Phone,
 } from 'lucide-react',
 export default function AISupportTriageRouter() {
   const features = [
     {
-      icon: <Bot className='w-6 h-6' />;
-      title: 'Intelligent Ticket Routing';
+      icon: <Bot className='w-6 h-6' />,
+      title: 'Intelligent Ticket Routing',
       description:,
-        'AI-powered classification and routing of support tickets to the most qualified agents';
-    };
+        'AI-powered classification and routing of support tickets to the most qualified agents',
+    },
     {
-      icon: <Clock className='w-6 h-6' />;
-      title: 'Priority Assessment';
+      icon: <Clock className='w-6 h-6' />,
+      title: 'Priority Assessment',
       description:,
-        'Automatic prioritization based on urgency, customer value, and issue complexity';
-    };
+        'Automatic prioritization based on urgency, customer value, and issue complexity',
+    },
     {
-      icon: <Users className='w-6 h-6' />;
-      title: 'Agent Matching';
+      icon: <Users className='w-6 h-6' />,
+      title: 'Agent Matching',
       description:,
-        'Smart matching of tickets to agents based on expertise and availability';
-    };
+        'Smart matching of tickets to agents based on expertise and availability',
+    },
     {
-      icon: <BarChart3 className='w-6 h-6' />;
-      title: 'Performance Analytics';
+      icon: <BarChart3 className='w-6 h-6' />,
+      title: 'Performance Analytics',
       description:,
-        'Real-time insights into support team performance and ticket resolution metrics';
-    };
+        'Real-time insights into support team performance and ticket resolution metrics',
+    },
   ],
   const capabilities = [
-    'Natural Language Processing';
-    'Sentiment Analysis';
-    'Urgency Detection';
-    'Category Classification';
-    'Customer Priority Scoring';
-    'Agent Skill Matching';
-    'Workload Balancing';
-    'Escalation Management';
-    'Multi-language Support';
-    'Integration APIs';
+    'Natural Language ProcessingSentiment Analysis',
+    'Urgency DetectionCategory Classification',
+    'Customer Priority ScoringAgent Skill Matching',
+    'Workload BalancingEscalation Management',
+    'Multi-language SupportIntegration APIs',
   ],
   const channels = [
-    'Email Support';
-    'Live Chat';
-    'Phone Support';
-    'Social Media';
-    'Help Desk Tickets';
-    'Mobile App Support';
-    'Self-Service Portal';
-    'Knowledge Base';
+    'Email SupportLive Chat',
+    'Phone SupportSocial Media',
+    'Help Desk TicketsMobile App Support',
+    'Self-Service PortalKnowledge Base',
   ],
   const benefits = [
-    'Reduced Response Times';
-    'Improved Customer Satisfaction';
-    'Better Agent Utilization';
-    'Lower Support Costs';
-    'Increased First-Call Resolution';
-    'Proactive Issue Prevention';
-    'Scalable Support Operations';
-    '24/7 Automated Routing';
+    'Reduced Response TimesImproved Customer Satisfaction',
+    'Better Agent UtilizationLower Support Costs',
+    'Increased First-Call ResolutionProactive Issue Prevention',
+    'Scalable Support Operations24/7 Automated Routing',
   ],
   return (
     <Layout>,

@@ -1,85 +1,75 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  GraduationCap;
-  Zap;
-  Target;
-  Shield;
-  TrendingUp;
-  Globe;
-  CheckCircle;
-  Star;
-  BarChart3;
-  Lock;
-  Smartphone;
-  Monitor;
-  Award;
-  MessageCircle;
-  Cpu;
+  GraduationCap,
+  Zap,
+  Target,
+  Shield,
+  TrendingUp,
+  Globe,
+  CheckCircle,
+  Star,
+  BarChart3,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,
+  Cpu,
 } from 'lucide-react',
 export default function AIEducationPlatform() {
   const features = [
     {
-      icon: <GraduationCap className='w-6 h-6' />;
-      title: 'Personalized Learning';
+      icon: <GraduationCap className='w-6 h-6' />,
+      title: 'Personalized Learning',
       description:,
-        'Advanced AI-powered personalized learning with adaptive curriculum and individual learning paths.';
-    };
+        'Advanced AI-powered personalized learning with adaptive curriculum and individual learning paths.',
+    },
     {
-      icon: <Zap className='w-6 h-6' />;
-      title: 'Intelligent Content Creation';
+      icon: <Zap className='w-6 h-6' />,
+      title: 'Intelligent Content Creation',
       description:,
-        'Revolutionary intelligent content creation with AI-generated educational materials and assessments.';
-    };
+        'Revolutionary intelligent content creation with AI-generated educational materials and assessments.',
+    },
     {
-      icon: <Target className='w-6 h-6' />;
-      title: 'Learning Analytics';
+      icon: <Target className='w-6 h-6' />,
+      title: 'Learning Analytics',
       description:,
-        'Intelligent learning analytics with AI-powered insights and performance optimization.';
-    };
+        'Intelligent learning analytics with AI-powered insights and performance optimization.',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Student Progress Monitoring';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Student Progress Monitoring',
       description:,
-        'Advanced student progress monitoring with automated assessment and intervention systems.';
-    };
+        'Advanced student progress monitoring with automated assessment and intervention systems.',
+    },
     {
-      icon: <TrendingUp className='w-6 h-6' />;
-      title: 'Adaptive Assessment';
+      icon: <TrendingUp className='w-6 h-6' />,
+      title: 'Adaptive Assessment',
       description:,
-        'Comprehensive adaptive assessment with AI-powered question generation and difficulty adjustment.';
-    };
+        'Comprehensive adaptive assessment with AI-powered question generation and difficulty adjustment.',
+    },
     {
-      icon: <Globe className='w-6 h-6' />;
-      title: 'Global Learning Access';
+      icon: <Globe className='w-6 h-6' />,
+      title: 'Global Learning Access',
       description:,
-        'Democratized global learning access with AI-powered language translation and cultural adaptation.';
-    };
+        'Democratized global learning access with AI-powered language translation and cultural adaptation.',
+    },
   ],
   const benefits = [
-    'Improve learning outcomes by 300%';
-    'Reduce learning time by 50%';
-    'Increase student engagement by 200%';
-    'Personalize education for every student';
-    'Enable 24/7 global learning';
-    'Optimize learning paths';
-    'Scale education globally';
-    'Future-proof learning technology';
+    'Improve learning outcomes by 300%Reduce learning time by 50%',
+    'Increase student engagement by 200%Personalize education for every student',
+    'Enable 24/7 global learningOptimize learning paths',
+    'Scale education globallyFuture-proof learning technology',
   ],
   const useCases = [
-    'K-12 Education';
-    'Higher Education';
-    'Corporate Training';
-    'Language Learning';
-    'Skill Development';
-    'Test Preparation';
-    'Special Education';
-    'Remote Learning';
-    'Personalized Tutoring';
-    'Learning Analytics';
-    'Content Creation';
-    'Assessment Systems';
+    'K-12 EducationHigher Education',
+    'Corporate TrainingLanguage Learning',
+    'Skill DevelopmentTest Preparation',
+    'Special EducationRemote Learning',
+    'Personalized TutoringLearning Analytics',
+    'Content CreationAssessment Systems',
   ],
   return (
     <>,
@@ -130,7 +120,7 @@ export default function AIEducationPlatform() {
                 AI Education Platform,
               </h1>,
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
-                Revolutionize education with AI-powered personalized learning;
+                Revolutionize education with AI-powered personalized learning,
                 intelligent content creation, and adaptive assessment for,
                 optimal learning outcomes.,
               </p>,
@@ -201,7 +191,7 @@ export default function AIEducationPlatform() {
                 Transform Education,
               </h2>,
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-                Experience revolutionary improvements in learning outcomes;
+                Experience revolutionary improvements in learning outcomes,
                 student engagement, and educational efficiency with our AI,
                 education platform.,
               </p>,

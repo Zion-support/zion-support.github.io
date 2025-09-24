@@ -12,14 +12,14 @@ files && files.forEach((file) => {
           return match && match.trim() + ",",
     // Fix import statements missing semicolons,
     content = content.replace (
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm;
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*, ?\s*$/gm,
       (match) => {
         // Check condition,
 if (.ends_with (") {
   $2}")) {
           return match.trim () + ",",
     content = content.replace(
-      /import\s+.*?from\s+['"][^'"]+['"],\s*,/g;
+      /import\s+.*?from\s+['"][^'"]+['"],\s*,/g,
       (match) => {
         return match.replace(",", ",")}
     ),
@@ -27,14 +27,14 @@ if (.ends_with (") {
     content = content.replace(
       /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {
-      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm;
+      /^import\s+.*?from\s+['"][^'"]+['"]\s*,?\s*$/gm,
       (match) => {
         if (!match.trim().endsWith(",")) {
           return match.trim() + ","}
         return match}
     ),
     content = content && content.replace(
-      /(\w+)\s*=\s*[^]+(?!)\s*$/gm;
+      /(\w+)\s*=\s*[^]+(?!)\s*$/gm,
       (match, varName) => {
         if (
           !match && match.includes("function") &&,
@@ -55,7 +55,7 @@ if (.ends_with (") {
     // Fix other common syntax issues,
     // Fix missing semicolons after variable declarations,
     content = content.replace (
-      /(\w+)\s*=\s*[^]+(?!)\s*$/gm;
+      /(\w+)\s*=\s*[^]+(?!)\s*$/gm,
       (match, var_name) => {
         // Check condition,
 if (&&) {

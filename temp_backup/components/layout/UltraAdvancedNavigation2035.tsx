@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, X, ChevronDown, Search;
-  Brain, Cpu, Rocket, Shield;
-  Zap, Globe, Star, Users;
-  Target, Microscope, Atom, Database;
-  Lock, Cloud, BarChart3, Settings;
-  Eye, Code, Palette, Layers;
-  Network, Server, ShieldCheck;
-  GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon;
-  CheckCircleIcon, ArrowRightIcon, CpuIcon;
-  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna;
-  Sparkles, Target as TargetIcon, Shield as ShieldIcon, BookOpen;
-  Sparkles as SparklesIcon, Zap as ZapIcon, Brain as BrainIcon, Play;
-  Heart, BookOpen as BookOpenIcon, Microscope as MicroscopeIcon;
+  Menu, X, ChevronDown, Search,
+  Brain, Cpu, Rocket, Shield,
+  Zap, Globe, Star, Users,
+  Target, Microscope, Atom, Database,
+  Lock, Cloud, BarChart3, Settings,
+  Eye, Code, Palette, Layers,
+  Network, Server, ShieldCheck,
+  GlobeIcon, StarIcon, TrendingUpIcon, UsersIcon,
+  CheckCircleIcon, ArrowRightIcon, CpuIcon,
+  DollarSign, Phone, ArrowRight, Mail, MapPin, Dna,
+  Sparkles, Target as TargetIcon, Shield as ShieldIcon, BookOpen,
+  Sparkles as SparklesIcon, Zap as ZapIcon, Brain as BrainIcon, Play,
+  Heart, BookOpen as BookOpenIcon, Microscope as MicroscopeIcon,
   Rocket as RocketIcon, Atom as AtomIcon, Shield as ShieldIcon2} from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -27,195 +27,195 @@ interface NavigationItem {
   color?: string}
 ,
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const navigationItems: NavigationItem[] = [
   {
-    name: 'All Services';
-    href: '/ultimate-futuristic-services-showcase-20o25';
-    icon: <Globe className="w-5 h-5"  />;
-    description: 'Complete portfolio of all futuristic technology services';
-    badge: 'Showcase';
-    color: 'from-cyan-50o0 to-blue-60o0';
+    name: 'All Services',
+    href: '/ultimate-futuristic-services-showcase-20o25',
+    icon: <Globe className="w-5 h-5"  />,
+    description: 'Complete portfolio of all futuristic technology services',
+    badge: 'Showcase',
+    color: 'from-cyan-50o0 to-blue-60o0',
     children: [
-      { name: 'View All Services', href: '/ultimate-futuristic-services-showcase-20o25', description: 'Complete services portfolio' };
-      { name: 'Service Categories', href: '/ultimate-futuristic-services-showcase-20o25#categories', description: 'Browse by category' };
-      { name: 'Pricing Comparison', href: '/ultimate-futuristic-services-showcase-20o25#pricing', description: 'Compare service costs' };
+      { name: 'View All Services', href: '/ultimate-futuristic-services-showcase-20o25', description: 'Complete services portfolio' },
+      { name: 'Service Categories', href: '/ultimate-futuristic-services-showcase-20o25#categories', description: 'Browse by category' },
+      { name: 'Pricing Comparison', href: '/ultimate-futuristic-services-showcase-20o25#pricing', description: 'Compare service costs' },
       { name: 'Service Search', href: '/ultimate-futuristic-services-showcase-20o25#search', description: 'Find specific services' }
-    ]};
+    ]},
   {
-    name: 'AI & Consciousness';
-    href: '/ai-services';
-    icon: <Brain className="w-5 h-5"  />;
-    description: 'Revolutionary AI consciousness and emotional intelligence';
-    badge: 'New';
-    color: 'from-violet-50o0 to-purple-60o0';
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className="w-5 h-5"  />,
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    color: 'from-violet-50o0 to-purple-60o0',
     children: [
-      { name: 'AI Consciousness Evolution 20o30', href: '/ai-consciousness-evolution-20o30', description: 'Quantum emotional intelligence and self-awareness' };
-      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' };
-      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' };
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' };
-      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' };
-      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI solutions' };
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' };
-      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' };
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Human-AI emotional collaboration' };
+      { name: 'AI Consciousness Evolution 20o30', href: '/ai-consciousness-evolution-20o30', description: 'Quantum emotional intelligence and self-awareness' },
+      { name: 'AI Autonomous Ecosystem', href: '/ai-autonomous-ecosystem', description: 'Self-managing AI systems' },
+      { name: 'AI Ethics & Governance', href: '/ai-ethics-governance', description: 'Ethical AI frameworks' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI solutions' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
+      { name: 'AI Sustainability Platform', href: '/ai-sustainability-platform', description: 'Environmental AI solutions' },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-platform', description: 'Human-AI emotional collaboration' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer', description: 'Legal document analysis' }
-    ]};
+    ]},
   {
-    name: 'Quantum & Emerging Tech';
-    href: '/quantum-services';
-    icon: <Atom className="w-5 h-5"  />;
-    description: 'Quantum computing and breakthrough technologies';
-    badge: 'Hot';
-    color: 'from-indigo-50o0 to-blue-60o0';
+    name: 'Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className="w-5 h-5"  />,
+    description: 'Quantum computing and breakthrough technologies',
+    badge: 'Hot',
+    color: 'from-indigo-50o0 to-blue-60o0',
     children: [
-      { name: 'Quantum AI Brain-Computer Interface', href: '/quantum-ai-brain-computer-interface', description: 'Neural interface technology' };
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum AI trading platform' };
-      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Unbreakable encryption' };
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' };
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Materials science acceleration' };
-      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' };
-      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Unbreakable encryption' };
-      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' };
-      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' };
+      { name: 'Quantum AI Brain-Computer Interface', href: '/quantum-ai-brain-computer-interface', description: 'Neural interface technology' },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum AI trading platform' },
+      { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform', description: 'Unbreakable encryption' },
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'Materials science acceleration' },
+      { name: 'Quantum Robotics', href: '/quantum-robotics', description: 'Quantum-enhanced robotics' },
+      { name: 'Quantum Internet Security', href: '/quantum-internet-security', description: 'Unbreakable encryption' },
+      { name: 'Quantum Logistics', href: '/quantum-logistics-optimization', description: 'Route optimization' },
+      { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure', description: 'Quantum-enhanced cloud computing' },
       { name: 'Quantum Networking', href: '/quantum-networking', description: 'Quantum communication protocols' }
-    ]};
+    ]},
   {
-    name: 'Space Technology';
-    href: '/space-technology';
-    icon: <Rocket className="w-5 h-5"  />;
-    description: 'AI-powered space exploration and resource extraction';
-    badge: 'Revolutionary';
-    color: 'from-blue-50o0 to-cyan-60o0';
+    name: 'Space Technology',
+    href: '/space-technology',
+    icon: <Rocket className="w-5 h-5"  />,
+    description: 'AI-powered space exploration and resource extraction',
+    badge: 'Revolutionary',
+    color: 'from-blue-50o0 to-cyan-60o0',
     children: [
-      { name: 'Space Mining AI Platform', href: '/space-mining-ai-platform', description: 'Asteroid mining and space resources' };
-      { name: 'Space Exploration AI', href: '/space-exploration-ai', description: 'Autonomous space exploration' };
-      { name: 'Satellite AI Management', href: '/satellite-ai-management', description: 'Intelligent satellite operations' };
-      { name: 'Interplanetary Logistics', href: '/interplanetary-logistics', description: 'Space resource management' };
+      { name: 'Space Mining AI Platform', href: '/space-mining-ai-platform', description: 'Asteroid mining and space resources' },
+      { name: 'Space Exploration AI', href: '/space-exploration-ai', description: 'Autonomous space exploration' },
+      { name: 'Satellite AI Management', href: '/satellite-ai-management', description: 'Intelligent satellite operations' },
+      { name: 'Interplanetary Logistics', href: '/interplanetary-logistics', description: 'Space resource management' },
       { name: 'Space Safety Systems', href: '/space-safety-systems', description: 'AI-powered space safety' }
-    ]};
+    ]},
   {
-    name: 'Financial Technology';
-    href: '/fintech';
-    icon: <DollarSign className="w-5 h-5"  />;
-    description: 'Quantum AI-powered financial trading and analytics';
-    badge: 'Advanced';
-    color: 'from-green-50o0 to-emerald-60o0';
+    name: 'Financial Technology',
+    href: '/fintech',
+    icon: <DollarSign className="w-5 h-5"  />,
+    description: 'Quantum AI-powered financial trading and analytics',
+    badge: 'Advanced',
+    color: 'from-green-50o0 to-emerald-60o0',
     children: [
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum AI trading platform' };
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' };
-      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' };
-      { name: 'Quantum Financial Security', href: '/quantum-financial-security', description: 'Unbreakable financial security' };
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', description: 'Quantum AI trading platform' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence', description: 'Financial AI analytics' },
+      { name: 'Blockchain Enterprise Platform', href: '/blockchain-infrastructure-platform', description: 'Enterprise blockchain solutions' },
+      { name: 'Quantum Financial Security', href: '/quantum-financial-security', description: 'Unbreakable financial security' },
       { name: 'AI Risk Assessment', href: '/ai-risk-assessment', description: 'Intelligent risk management' }
-    ]};
+    ]},
   {
-    name: 'Content & Marketing';
-    href: '/content-marketing';
-    icon: <BookOpen className="w-5 h-5"  />;
-    description: 'Autonomous AI content creation and management';
-    badge: 'Popular';
-    color: 'from-purple-50o0 to-pink-60o0';
+    name: 'Content & Marketing',
+    href: '/content-marketing',
+    icon: <BookOpen className="w-5 h-5"  />,
+    description: 'Autonomous AI content creation and management',
+    badge: 'Popular',
+    color: 'from-purple-50o0 to-pink-60o0',
     children: [
-      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory', description: 'Autonomous content creation' };
-      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' };
-      { name: 'SEO Automation Suite', href: '/seo-automation', description: 'Intelligent SEO optimization' };
-      { name: 'Social Media AI Manager', href: '/social-media-ai-manager', description: 'Autonomous social media management' };
+      { name: 'AI Autonomous Content Factory', href: '/ai-autonomous-content-factory', description: 'Autonomous content creation' },
+      { name: 'AI Creativity Studio', href: '/ai-creativity-studio', description: 'AI-powered creative content' },
+      { name: 'SEO Automation Suite', href: '/seo-automation', description: 'Intelligent SEO optimization' },
+      { name: 'Social Media AI Manager', href: '/social-media-ai-manager', description: 'Autonomous social media management' },
       { name: 'Content Analytics Platform', href: '/content-analytics-platform', description: 'Advanced content insights' }
-    ]};
+    ]},
   {
-    name: 'Cybersecurity';
-    href: '/cybersecurity';
-    icon: <Shield className="w-5 h-5"  />;
-    description: 'Quantum encryption and advanced threat detection';
-    badge: 'Secure';
-    color: 'from-red-50o0 to-orange-60o0';
+    name: 'Cybersecurity',
+    href: '/cybersecurity',
+    icon: <Shield className="w-5 h-5"  />,
+    description: 'Quantum encryption and advanced threat detection',
+    badge: 'Secure',
+    color: 'from-red-50o0 to-orange-60o0',
     children: [
-      { name: 'Quantum Cybersecurity Platform', href: '/quantum-cybersecurity-platform', description: 'Unbreakable quantum encryption' };
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced cybersecurity' };
-      { name: 'AI Threat Detection', href: '/ai-threat-detection', description: 'Intelligent threat response' };
-      { name: 'Incident Automation Suite', href: '/incident-automation-suite', description: 'Automated security response' };
+      { name: 'Quantum Cybersecurity Platform', href: '/quantum-cybersecurity-platform', description: 'Unbreakable quantum encryption' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-network-architecture', description: 'Advanced cybersecurity' },
+      { name: 'AI Threat Detection', href: '/ai-threat-detection', description: 'Intelligent threat response' },
+      { name: 'Incident Automation Suite', href: '/incident-automation-suite', description: 'Automated security response' },
       { name: 'Security Compliance Manager', href: '/security-compliance-manager', description: 'Automated compliance' }
-    ]};
+    ]},
   {
-    name: 'Healthcare Technology';
-    href: '/healthcare-tech';
-    icon: <Heart className="w-5 h-5"  />;
-    description: 'AI-powered medical diagnostics and treatment';
-    badge: 'Life-Saving';
-    color: 'from-teal-50o0 to-cyan-60o0';
+    name: 'Healthcare Technology',
+    href: '/healthcare-tech',
+    icon: <Heart className="w-5 h-5"  />,
+    description: 'AI-powered medical diagnostics and treatment',
+    badge: 'Life-Saving',
+    color: 'from-teal-50o0 to-cyan-60o0',
     children: [
-      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI solutions' };
-      { name: 'AI Medical Imaging', href: '/ai-medical-imaging', description: 'Advanced medical imaging' };
-      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Individualized treatment' };
-      { name: 'Drug Discovery AI', href: '/drug-discovery-ai', description: 'Accelerated drug development' };
+      { name: 'AI Healthcare Diagnostics', href: '/ai-healthcare-diagnostics-platform', description: 'Medical AI solutions' },
+      { name: 'AI Medical Imaging', href: '/ai-medical-imaging', description: 'Advanced medical imaging' },
+      { name: 'Personalized Medicine AI', href: '/personalized-medicine-ai', description: 'Individualized treatment' },
+      { name: 'Drug Discovery AI', href: '/drug-discovery-ai', description: 'Accelerated drug development' },
       { name: 'Healthcare Analytics Platform', href: '/healthcare-analytics-platform', description: 'Medical data insights' }
-    ]};
+    ]},
   {
-    name: 'Energy Technology';
-    href: '/energy-tech';
-    icon: <Zap className="w-5 h-5"  />;
-    description: 'Quantum computing for fusion power and energy optimization';
-    badge: 'Sustainable';
-    color: 'from-yellow-50o0 to-orange-60o0';
+    name: 'Energy Technology',
+    href: '/energy-tech',
+    icon: <Zap className="w-5 h-5"  />,
+    description: 'Quantum computing for fusion power and energy optimization',
+    badge: 'Sustainable',
+    color: 'from-yellow-50o0 to-orange-60o0',
     children: [
-      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' };
-      { name: 'Smart Grid AI', href: '/smart-grid-ai', description: 'Intelligent energy management' };
-      { name: 'Renewable Energy AI', href: '/renewable-energy-ai', description: 'Sustainable energy optimization' };
-      { name: 'Energy Storage AI', href: '/energy-storage-ai', description: 'Advanced storage solutions' };
+      { name: 'Quantum Energy Platform', href: '/quantum-energy-platform', description: 'Fusion power simulation' },
+      { name: 'Smart Grid AI', href: '/smart-grid-ai', description: 'Intelligent energy management' },
+      { name: 'Renewable Energy AI', href: '/renewable-energy-ai', description: 'Sustainable energy optimization' },
+      { name: 'Energy Storage AI', href: '/energy-storage-ai', description: 'Advanced storage solutions' },
       { name: 'Climate Impact AI', href: '/climate-impact-ai', description: 'Environmental impact analysis' }
-    ]};
+    ]},
   {
-    name: 'Education Technology';
-    href: '/edtech';
-    icon: <BookOpenIcon className="w-5 h-5"  />;
-    description: 'Personalized AI-powered learning platforms';
-    badge: 'Transformative';
-    color: 'from-indigo-50o0 to-purple-60o0';
+    name: 'Education Technology',
+    href: '/edtech',
+    icon: <BookOpenIcon className="w-5 h-5"  />,
+    description: 'Personalized AI-powered learning platforms',
+    badge: 'Transformative',
+    color: 'from-indigo-50o0 to-purple-60o0',
     children: [
-      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' };
-      { name: 'Adaptive Learning AI', href: '/adaptive-learning-ai', description: 'Intelligent curriculum adaptation' };
-      { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized tutoring' };
-      { name: 'Educational Content AI', href: '/educational-content-ai', description: 'AI-generated learning materials' };
+      { name: 'AI Education Platform', href: '/ai-education-platform', description: 'Personalized AI learning' },
+      { name: 'Adaptive Learning AI', href: '/adaptive-learning-ai', description: 'Intelligent curriculum adaptation' },
+      { name: 'AI Tutoring System', href: '/ai-tutoring-system', description: 'Personalized tutoring' },
+      { name: 'Educational Content AI', href: '/educational-content-ai', description: 'AI-generated learning materials' },
       { name: 'Learning Analytics Platform', href: '/learning-analytics-platform', description: 'Educational insights' }
-    ]};
+    ]},
   {
-    name: 'Materials Science';
-    href: '/materials-science';
-    icon: <MicroscopeIcon className="w-5 h-5"  />;
-    description: 'AI-powered quantum materials research and discovery';
-    badge: 'Breakthrough';
-    color: 'from-cyan-50o0 to-blue-60o0';
+    name: 'Materials Science',
+    href: '/materials-science',
+    icon: <MicroscopeIcon className="w-5 h-5"  />,
+    description: 'AI-powered quantum materials research and discovery',
+    badge: 'Breakthrough',
+    color: 'from-cyan-50o0 to-blue-60o0',
     children: [
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'AI-powered materials research' };
-      { name: 'Nanotechnology AI', href: '/nanotechnology-ai', description: 'Nano-scale material manipulation' };
-      { name: 'Biomaterials AI', href: '/biomaterials-ai', description: 'Biological material development' };
-      { name: 'Composite Materials AI', href: '/composite-materials-ai', description: 'Advanced material combinations' };
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery', description: 'AI-powered materials research' },
+      { name: 'Nanotechnology AI', href: '/nanotechnology-ai', description: 'Nano-scale material manipulation' },
+      { name: 'Biomaterials AI', href: '/biomaterials-ai', description: 'Biological material development' },
+      { name: 'Composite Materials AI', href: '/composite-materials-ai', description: 'Advanced material combinations' },
       { name: 'Materials Testing AI', href: '/materials-testing-ai', description: 'Automated material analysis' }
-    ]};
+    ]},
   {
-    name: 'Enterprise IT';
-    href: '/enterprise-it';
-    icon: <Server className="w-5 h-5"  />;
-    description: 'Enterprise solutions and infrastructure';
-    badge: 'Enterprise';
-    color: 'from-gray-50o0 to-slate-60o0';
+    name: 'Enterprise IT',
+    href: '/enterprise-it',
+    icon: <Server className="w-5 h-5"  />,
+    description: 'Enterprise solutions and infrastructure',
+    badge: 'Enterprise',
+    color: 'from-gray-50o0 to-slate-60o0',
     children: [
-      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' };
-      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' };
-      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT systems' };
-      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Quantum-enhanced infrastructure' };
+      { name: 'Edge Computing Orchestrator', href: '/edge-computing-orchestration', description: 'Edge processing optimization' },
+      { name: 'AI-Powered DevOps', href: '/ai-powered-devops', description: 'Intelligent development automation' },
+      { name: 'Autonomous IT Operations', href: '/autonomous-it-operations', description: 'Self-managing IT systems' },
+      { name: 'Quantum Data Center', href: '/quantum-data-center', description: 'Quantum-enhanced infrastructure' },
       { name: 'IT Asset Discovery Agent', href: '/it-asset-discovery-agent', description: 'Automated asset management' }
     ]}
 ],
 const quickLinks = [
-  { name: 'Home', href: '/', icon: <Star className="w-4 h-4"  /> };
-  { name: 'All Services', href: '/ultimate-futuristic-services-showcase-20o25', icon: <Globe className="w-4 h-4"  /> };
-  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4"  /> };
-  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> };
-  { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4"  /> };
+  { name: 'Home', href: '/', icon: <Star className="w-4 h-4"  /> },
+  { name: 'All Services', href: '/ultimate-futuristic-services-showcase-20o25', icon: <Globe className="w-4 h-4"  /> },
+  { name: 'Pricing', href: '/pricing', icon: <DollarSign className="w-4 h-4"  /> },
+  { name: 'About Us', href: '/about', icon: <Users className="w-4 h-4"  /> },
+  { name: 'Contact', href: '/contact', icon: <Mail className="w-4 h-4"  /> },
   { name: 'Support', href: '/support', icon: <Settings className="w-4 h-4"  /> }
 ],
 export default function UltraAdvancedNavigation20o35() {
@@ -225,7 +225,7 @@ export default function UltraAdvancedNavigation20o35() {
   const toggleMenu = () => setIsOpen(!isOpen),
   const closeMenu = () => setIsOpen(false),
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const filteredServices = navigationItems.filter(item =>,
     item.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
     item.description?.toLowerCase().includes(searchQuery.toLowerCase())),
@@ -234,7 +234,7 @@ export default function UltraAdvancedNavigation20o35() {
       if (window.innerWidth >= 10o24) {
         setIsOpen(false),
         setActiveDropdown(null)}
-    };
+    },
     window.addEventListener('resize', handleResize),
     return () => window.removeEventListener('resize', handleResize)}, []),
   return (

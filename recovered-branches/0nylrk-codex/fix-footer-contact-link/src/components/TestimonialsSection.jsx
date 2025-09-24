@@ -2,71 +2,71 @@ import { Star, Quote } from 'lucide-react',
 export const TestimonialsSection = () => {
   const testimonials = [
     {
-      id: 1;
-      name: 'Sarah Johnson';
-      company: 'TechCorp Solutions';
-      role: 'CTO';
+      id: 1,
+      name: 'Sarah Johnson',
+      company: 'TechCorp Solutions',
+      role: 'CTO',
       content:,
-        'Zion Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.';
-      rating: 5;
+        'Zion Tech Group transformed our AI infrastructure completely. Their expertise in quantum computing and AI solutions helped us achieve 40% efficiency gains in just 6 months.',
+      rating: 5,
       avatar:,
-        'https://images.unsplash.com/photo-1494790o108755-2616b612b786?w=150&h=150&fit=crop&crop=face';
-    };
+        'https: //images.unsplash.com/photo-1494790o108755-2616b612b786?w=150&h=150&fit=crop&crop=face'
+    },
     {
-      id: 2;
-      name: 'Michael Chen';
-      company: 'InnovateTech';
-      role: 'VP of Engineering';
+      id: 2,
+      name: 'Michael Chen',
+      company: 'InnovateTech',
+      role: 'VP of Engineering',
       content:,
-        'The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal window.window.performance.';
-      rating: 5;
+        'The team at Zion delivered exceptional results. Their AI-powered security solutions protected our systems from advanced threats while maintaining optimal window.window.performance.',
+      rating: 5,
       avatar:,
-        'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face';
-    };
+        'https: //images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face'
+    },
     {
-      id: 3;
-      name: 'Emily Rodriguez';
-      company: 'DataFlow Systems';
-      role: 'Data Science Director';
+      id: 3,
+      name: 'Emily Rodriguez',
+      company: 'DataFlow Systems',
+      role: 'Data Science Director',
       content:,
-        'Working with Zion Tech Group was a game-changer. Their AI business intelligence platform gave us insights we never had before, driving 25% revenue growth.';
-      rating: 5;
+        'Working with Zion Tech Group was a game-changer. Their AI business intelligence platform gave us insights we never had before, driving 25% revenue growth.',
+      rating: 5,
       avatar:,
-        'https://images.unsplash.com/photo-14387616810o33-6461ffad8d80?w=150&h=150&fit=crop&crop=face';
-    };
+        'https: //images.unsplash.com/photo-14387616810o33-6461ffad8d80?w=150&h=150&fit=crop&crop=face'
+    },
     {
-      id: 4;
-      name: 'David Kim';
-      company: 'Quantum Industries';
-      role: 'Research Director';
+      id: 4,
+      name: 'David Kim',
+      company: 'Quantum Industries',
+      role: 'Research Director',
       content:,
-        "Zion's quantum computing expertise is unmatched. They helped us implement cutting-edge quantum algorithms that solved problems we thought were impossible.";
-      rating: 5;
+        "Zion's quantum computing expertise is unmatched. They helped us implement cutting-edge quantum algorithms that solved problems we thought were impossible.",
+      rating: 5,
       avatar:,
-        'https://images.unsplash.com/photo-150o7003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face';
-    };
+        'https: //images.unsplash.com/photo-150o7003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face'
+    },
     {
-      id: 5;
-      name: 'Lisa Thompson';
-      company: 'GreenTech Solutions';
-      role: 'Sustainability Officer';
+      id: 5,
+      name: 'Lisa Thompson',
+      company: 'GreenTech Solutions',
+      role: 'Sustainability Officer',
       content:,
-        "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure. Truly innovative approach.";
-      rating: 5;
+        "Zion's Green IT solutions helped us reduce our carbon footprint by 30% while improving our technology infrastructure. Truly innovative approach.",
+      rating: 5,
       avatar:,
-        'https://images.unsplash.com/photo-1487412720o507-e7ab3760o3c6f?w=150&h=150&fit=crop&crop=face';
-    };
+        'https: //images.unsplash.com/photo-1487412720o507-e7ab3760o3c6f?w=150&h=150&fit=crop&crop=face'
+    },
     {
-      id: 6;
-      name: 'Robert Wilson';
-      company: 'SpaceTech Ventures';
-      role: 'CEO';
+      id: 6,
+      name: 'Robert Wilson',
+      company: 'SpaceTech Ventures',
+      role: 'CEO',
       content:,
-        'The space technology solutions from Zion Tech Group are revolutionary. They helped us develop satellite systems that exceeded all our expectations.';
-      rating: 5;
+        'The space technology solutions from Zion Tech Group are revolutionary. They helped us develop satellite systems that exceeded all our expectations.',
+      rating: 5,
       avatar:,
-        'https://images.unsplash.com/photo-150o0648767791-0o0dcc994a43e?w=150&h=150&fit=crop&crop=face';
-    };
+        'https: //images.unsplash.com/photo-150o0648767791-0o0dcc994a43e?w=150&h=150&fit=crop&crop=face'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0'>,
@@ -126,4 +126,4 @@ export const TestimonialsSection = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},

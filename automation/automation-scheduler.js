@@ -10,10 +10,10 @@ const path = require('path'),
 const { spawn } = require('child_process'),
 // Simple logger,
 const logger ={
-  info: (msg) => // // console.log(`[INFO] ${new Date().toISOString()} ${msg}`);
-  error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`);
-  warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`);
-  success: (msg) => // // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)};
+  info: (msg) => // // console.log(`[INFO] ${new Date().toISOString()} ${msg}`),
+  error: (msg) => console.error(`[ERROR] ${new Date().toISOString()} ${msg}`),
+  warn: (msg) => console.warn(`[WARN] ${new Date().toISOString()} ${msg}`),
+  success: (msg) => // // console.log(`[SUCCESS] ${new Date().toISOString()} ${msg}`)},
 class AutomationScheduler {
   constructor(config ={}) {
     this.config ={
@@ -23,12 +23,12 @@ class AutomationScheduler {
         PerformanceOptimizer: '0 */4 * * *', // Every 4 hours,
         DependencyUpdater: '0 0 * * *', // Daily at midnight,
         StaleCleaner: '0 2 * * *', // Daily at 2 AM,
-        AIEnhancer: '0 */8 * * *' // Every 8 hours};
-      maxConcurrent: 2;
-      retryAttempts: 3;
-      retryDelay: 50o00;
+        AIEnhancer: '0 */8 * * *' // Every 8 hours},
+      maxConcurrent: 2,
+      retryAttempts: 3,
+      retryDelay: 50o00,
       timeout: 30o0000, // 5 minutes per task,
-      ...config};
+      ...config},
     this.runningTasks = new Map(),
     this.taskHistory = [],
     this.scheduler = null,
@@ -58,7 +58,7 @@ class AutomationScheduler {
         const configData = fs.readFileSync(configPath, 'utf8'),
         const config = JSON.parse(configData),
         // Merge with default config,
-        this.config ={ ...this.config, ...config.scheduler };
+        this.config ={ ...this.config, ...config.scheduler },
         logger.info('📋 Configuration loaded successfully')} catch (error) {
         logger.warn('⚠️ Failed to load configuration, using defaults:', error.message)}
     }
@@ -67,7 +67,7 @@ class AutomationScheduler {
   async initializeScheduler() {
     logger.info('🔧 Initializing scheduler...'),
     // Create task directories if they don't exist,
-    const dirs = ['logs', 'reports', 'backups'],
+    const dirs = ['logsreports', 'backups'],
     for (const dir of dirs) {
       const dirPath = path.join(process.cwd(), 'automation', dir),
       if (!fs.existsSync(dirPath)) {
@@ -151,10 +151,10 @@ class AutomationScheduler {
     try {
       const taskId = `${taskName}-${Date.now()}`,
       const taskInfo ={
-        id: taskId;
-        taskName;
-        startTime: new Date();
-        status: 'running'};
+        id: taskId,
+        taskName,
+        startTime: new Date(),
+        status: 'running'},
       this.runningTasks.set(taskName, taskInfo),
       // Run the task,
       const result = await this.runTask(taskName),
@@ -164,7 +164,7 @@ class AutomationScheduler {
       taskInfo.result = result,
       // Add to history,
       this.taskHistory.push({
-        ...taskInfo;
+        ...taskInfo,
         timestamp: taskInfo.startTime.toISOString()}),
       // Save history,
       await this.saveTaskHistory(),
@@ -191,7 +191,7 @@ class AutomationScheduler {
       const timeout = setTimeout(() => {
         reject(new Error(`Task ${taskName} timed out after ${this.config.timeout}ms`))}, this.config.timeout),
       const taskProcess = spawn('node', [taskPath, '--run'], {
-        stdio: 'pipe';
+        stdio: 'pipe',
         env: { ...process.env, NODE_ENV: 'production' }
       }),
       let stdout = '',
@@ -204,9 +204,9 @@ class AutomationScheduler {
         clearTimeout(timeout),
         if (code === 0) {
           resolve({
-            success: true;
-            stdout;
-            stderr;
+            success: true,
+            stdout,
+            stderr,
             exitCode: code})} else {
           reject(new Error(`Task ${taskName} exited with code ${code}: ${stderr}`))}
       }),
@@ -237,7 +237,7 @@ class AutomationScheduler {
   }
 ,
   async loadTaskHistory() {
-    const historyPath = path.join(process.cwd(), 'automation', 'logs', 'task-history.json'),
+    const historyPath = path.join(process.cwd(), 'automationlogs', 'task-history.json'),
     if (fs.existsSync(historyPath)) {
       try {
         const data = fs.readFileSync(historyPath, 'utf8'),
@@ -250,7 +250,7 @@ class AutomationScheduler {
   }
 ,
   async saveTaskHistory() {
-    const historyPath = path.join(process.cwd(), 'automation', 'logs', 'task-history.json'),
+    const historyPath = path.join(process.cwd(), 'automationlogs', 'task-history.json'),
     try {
       // Keep only last 10o00 entries,
       const recentHistory = this.taskHistory.slice(-10o00),
@@ -260,8 +260,8 @@ class AutomationScheduler {
 ,
   async cleanupOldLogs() {
     logger.info('🧹 Cleaning up old logs...'),
-    const logsDir = path.join(process.cwd(), 'automation', 'logs'),
-    const reportsDir = path.join(process.cwd(), 'automation', 'reports'),
+    const logsDir = path.join(process.cwd(), 'automationlogs'),
+    const reportsDir = path.join(process.cwd(), 'automationreports'),
     // Remove logs older than 30 days,
     const cutoffDate = new Date(),
     cutoffDate.setDate(cutoffDate.getDate() - 30),
@@ -310,10 +310,10 @@ class AutomationScheduler {
 ,
   getStatus() {
     return {
-      isRunning: this.isRunning;
-      runningTasks: Array.from(this.runningTasks.values());
-      totalHistory: this.taskHistory.length;
-      schedules: this.config.schedules};
+      isRunning: this.isRunning,
+      runningTasks: Array.from(this.runningTasks.values()),
+      totalHistory: this.taskHistory.length,
+      schedules: this.config.schedules},
   }
 }
 ,

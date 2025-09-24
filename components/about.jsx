@@ -1,50 +1,50 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 function About() {
   const team = [
     {
-      name: 'Sarah Johnson';
-      role: 'CEO & Founder';
-      expertise: 'Strategic Leadership';
-    };
-    { name: 'Michael Chen', role: 'CTO', expertise: 'AI & Machine Learning' };
+      name: 'Sarah Johnson',
+      role: 'CEO & Founder',
+      expertise: 'Strategic Leadership'
+    },
+    { name: 'Michael Chen', role: 'CTO', expertise: 'AI & Machine Learning' },
     {
-      name: 'Emily Rodriguez';
-      role: 'Head of Engineering';
-      expertise: 'Cloud Infrastructure';
-    };
+      name: 'Emily Rodriguez',
+      role: 'Head of Engineering',
+      expertise: 'Cloud Infrastructure'
+    },
     {
-      name: 'David Kim';
-      role: 'Security Director';
-      expertise: 'Cybersecurity';
-    };
+      name: 'David Kim',
+      role: 'Security Director',
+      expertise: 'Cybersecurity'
+    },
   ],
   const values = [
     {
-      icon: '🎯';
-      title: 'Innovation';
+      icon: '🎯',
+      title: 'Innovation',
       description:,
-        "We constantly push the boundaries of what's possible with technology.";
-    };
+        "We constantly push the boundaries of what's possible with technology.",
+    },
     {
-      icon: '🤝';
-      title: 'Partnership';
+      icon: '🤝',
+      title: 'Partnership',
       description:,
-        'We work closely with our clients as trusted technology partners.';
-    };
+        'We work closely with our clients as trusted technology partners.',
+    },
     {
-      icon: '⚡';
-      title: 'Excellence';
+      icon: '⚡',
+      title: 'Excellence',
       description:,
-        'We deliver exceptional quality in every project we undertake.';
-    };
+        'We deliver exceptional quality in every project we undertake.',
+    },
     {
-      icon: '🔒';
-      title: 'Security';
+      icon: '🔒',
+      title: 'Security',
       description:,
-        "We prioritize the security and privacy of our clients' data.";
-    };
+        "We prioritize the security and privacy of our clients' data.",
+    },
   ],
   return (
     <>,
@@ -166,30 +166,30 @@ function About() {
           <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                title: 'Artificial Intelligence & Machine Learning';
+                title: 'Artificial Intelligence & Machine Learning',
                 description:,
-                  'Advanced AI solutions for automation and insights';
-              };
+                  'Advanced AI solutions for automation and insights',
+              },
               {
-                title: 'Cloud Infrastructure & Migration';
-                description: 'Scalable and secure cloud solutions';
-              };
+                title: 'Cloud Infrastructure & Migration',
+                description: 'Scalable and secure cloud solutions'
+              },
               {
-                title: 'Cybersecurity Solutions';
-                description: 'Comprehensive protection for your digital assets';
-              };
+                title: 'Cybersecurity Solutions',
+                description: 'Comprehensive protection for your digital assets'
+              },
               {
-                title: 'Data Analytics & Business Intelligence';
-                description: 'Transform data into actionable insights';
-              };
+                title: 'Data Analytics & Business Intelligence',
+                description: 'Transform data into actionable insights'
+              },
               {
-                title: 'Digital Transformation';
-                description: 'Modernize your business processes';
-              };
+                title: 'Digital Transformation',
+                description: 'Modernize your business processes'
+              },
               {
-                title: 'Custom Software Development';
-                description: 'Tailored solutions for unique requirements';
-              };
+                title: 'Custom Software Development',
+                description: 'Tailored solutions for unique requirements'
+              },
             ].map((item, index) => (
               <div
                 key={index}
@@ -266,4 +266,4 @@ function About() {
       </section>,
     </>)}
 ,
-export default About;
+export default About,

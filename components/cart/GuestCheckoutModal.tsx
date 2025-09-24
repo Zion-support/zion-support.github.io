@@ -3,11 +3,11 @@ import { Button } from '../ui/button',
 import { Input } from '../../src/components/ui/input',
 import { Label } from '../ui/label',
 import {
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '../ui/card',
 interface GuestCheckoutModalProps {
   isOpen: boolean,
@@ -15,9 +15,9 @@ interface GuestCheckoutModalProps {
   onCheckout: (email: string) => void}
 ,
 export function GuestCheckoutModal({
-  isOpen;
-  onClose;
-  onCheckout;
+  isOpen,
+  onClose,
+  onCheckout,
 }: GuestCheckoutModalProps) {
   const [email, setEmail] = useState(''),
   if (!isOpen) return null,
@@ -25,7 +25,7 @@ export function GuestCheckoutModal({
     e.preventDefault(),
     if (email) {
       onCheckout(email)}
-  };
+  },
   return (
     <div className='fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50'>,
       <Card className='w-full max-w-md'>,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Safety Certification';
+  title: 'AI 20o26: Agent Safety Certification',
   description:,
-    'Structured certification to validate agent safety with scenario test suites and governance.';
-};
+    'Structured certification to validate agent safety with scenario test suites and governance.',
+},
 export default function AgentSafetyCertificationPage() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -45,7 +45,7 @@ export default function AgentSafetyCertificationPage() {
                 Security: data leakage prevention, isolation, auditability,
               </li>,
               <li>,
-                Reliability: bounded behavior, determinism where needed;
+                Reliability: bounded behavior, determinism where needed,
                 fallback strategies,
               </li>,
             </ul>,

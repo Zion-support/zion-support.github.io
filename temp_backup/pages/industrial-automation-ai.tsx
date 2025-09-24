@@ -1,50 +1,50 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
   Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Industrial Automation AI | Zion Tech Group';
-  description: 'AI-powered industrial automation solutions for smart manufacturing and Industry 4.0.';
-  keywords: 'industrial automation, AI manufacturing, Industry 4.0, smart factory, automation technology';
+  title: 'Industrial Automation AI | Zion Tech Group',
+  description: 'AI-powered industrial automation solutions for smart manufacturing and Industry 4.0.',
+  keywords: 'industrial automation, AI manufacturing, Industry 4.0, smart factory, automation technology',
   openGraph: {
-    title: 'Industrial Automation AI | Zion Tech Group';
-    description: 'AI-powered industrial automation solutions for smart manufacturing and Industry 4.0.';
-    url: 'https://ziontechgroup.com/industrial-automation-ai';
-    siteName: 'Zion Tech Group';
+    title: 'Industrial Automation AI | Zion Tech Group',
+    description: 'AI-powered industrial automation solutions for smart manufacturing and Industry 4.0.',
+    url: 'https://ziontechgroup.com/industrial-automation-ai',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-industrial-automation.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Industrial Automation AI'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-industrial-automation.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Industrial Automation AI'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Industrial Automation AI | Zion Tech Group';
-    description: 'AI-powered industrial automation solutions for smart manufacturing and Industry 4.0.';
-    images: ['https://ziontechgroup.com/og-image-industrial-automation.jpg']};
+    card: 'summary_large_image',
+    title: 'Industrial Automation AI | Zion Tech Group',
+    description: 'AI-powered industrial automation solutions for smart manufacturing and Industry 4.0.',
+    images: ['https://ziontechgroup.com/og-image-industrial-automation.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/industrial-automation-ai'}};
+    canonical: 'https://ziontechgroup.com/industrial-automation-ai'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function IndustrialAutomationAI() {
   return (
     <div className="min-h-screen bg-black text-white">,

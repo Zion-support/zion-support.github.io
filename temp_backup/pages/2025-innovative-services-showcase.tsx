@@ -3,53 +3,40 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Search, Filter, Star, Users, TrendingUp;
-  Brain, Atom, Shield, Rocket, Globe;
-  CheckCircle, ArrowRight, Phone, Mail, MapPin;
-  Zap, Cpu, Database, Lock, Cloud;
-  BarChart3, Settings, Eye, Award, Clock;
+  Search, Filter, Star, Users, TrendingUp,
+  Brain, Atom, Shield, Rocket, Globe,
+  CheckCircle, ArrowRight, Phone, Mail, MapPin,
+  Zap, Cpu, Database, Lock, Cloud,
+  BarChart3, Settings, Eye, Award, Clock,
   ChevronDown, ChevronUp, Filter as FilterIcon} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovativeNewServices } from '../data/20o25-innovative-new-services',
 import { emergingTechBreakthroughs } from '../data/20o25-emerging-tech-breakthroughs',
 import { specializedEnterpriseServices } from '../data/20o25-specialized-enterprise-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const allServices = [
-  ...innovativeNewServices;
-  ...emergingTechBreakthroughs;
+  ...innovativeNewServices,
+  ...emergingTechBreakthroughs,
   ...specializedEnterpriseServices],
 const categories = [
-  'All Services';
-  'AI & Analytics';
-  'Quantum Computing';
-  'Cybersecurity';
-  'DevOps & Automation';
-  'Edge Computing';
-  'Blockchain & Web3';
-  'Content & Marketing';
-  'Healthcare AI';
-  'Financial AI';
-  'Industrial AI';
-  'Retail AI';
-  'Energy AI';
-  'Transportation AI';
-  'Education AI';
-  'Real Estate AI';
-  'Neuromorphic Computing';
-  'Bio-Computing';
-  'Space Computing';
-  'Holographic Computing';
-  'Neural Interfaces';
-  'Fusion Energy'],
+  'All ServicesAI & Analytics',
+  'Quantum ComputingCybersecurity',
+  'DevOps & AutomationEdge Computing',
+  'Blockchain & Web3Content & Marketing',
+  'Healthcare AIFinancial AI',
+  'Industrial AIRetail AI',
+  'Energy AITransportation AI',
+  'Education AIReal Estate AI',
+  'Neuromorphic ComputingBio-Computing',
+  'Space ComputingHolographic Computing',
+  'Neural InterfacesFusion Energy'],
 const priceRanges = [
-  'All Prices';
-  'Under $50o0';
-  '$50o0 - $1,0o00';
-  '$1,0o00 - $2,0o00';
+  'All PricesUnder $50o0',
+  '$50o0 - $1,0o00$1,0o00 - $2,0o00',
   '$2,0o00+'],
 export default function InnovativeServicesShowcase20o25() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -64,12 +51,12 @@ export default function InnovativeServicesShowcase20o25() {
     const matchesCategory = selectedCategory === 'All Services' || service.category === selectedCategory,
     let matchesPrice = true,
     if (selectedPriceRange === 'Under $50o0') {
-      matchesPrice = parseInt(service.price.replace('$', '').replace(',', '')) < 50o0} else if (selectedPriceRange === '$50o0 - $1,0o00') {
-      const price = parseInt(service.price.replace('$', '').replace(',', '')),
+      matchesPrice = parseInt(service.price.replace('$', '').replace(, '')) < 50o0} else if (selectedPriceRange === '$50o0 - $1,0o00') {
+      const price = parseInt(service.price.replace('$', '').replace(, '')),
       matchesPrice = price >= 50o0 && price < 10o00} else if (selectedPriceRange === '$1,0o00 - $2,0o00') {
-      const price = parseInt(service.price.replace('$', '').replace(',', '')),
+      const price = parseInt(service.price.replace('$', '').replace(, '')),
       matchesPrice = price >= 10o00 && price < 20o00} else if (selectedPriceRange === '$2,0o00+') {
-      matchesPrice = parseInt(service.price.replace('$', '').replace(',', '')) >= 20o00}
+      matchesPrice = parseInt(service.price.replace('$', '').replace(, '')) >= 20o00}
 ,
     return matchesSearch && matchesCategory && matchesPrice}),
   const sortedServices = [...filteredServices].sort((a, b) => {
@@ -77,31 +64,31 @@ export default function InnovativeServicesShowcase20o25() {
       case 'popularity':,
         return b.rating - a.rating,
       case 'price-low':,
-        return parseInt(a.price.replace('$', '').replace(',', '')) - parseInt(b.price.replace('$', '').replace(',', '')),
+        return parseInt(a.price.replace('$', '').replace(, '')) - parseInt(b.price.replace('$', '').replace(, '')),
       case 'price-high':,
-        return parseInt(b.price.replace('$', '').replace(',', '')) - parseInt(a.price.replace('$', '').replace(',', '')),
+        return parseInt(b.price.replace('$', '').replace(, '')) - parseInt(a.price.replace('$', '').replace(, '')),
       case 'newest':,
         return new Date(b.launchDate).getTime() - new Date(a.launchDate).getTime(),
       default: ,
         return 0}
   }),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <Layout>,
       <Head>,

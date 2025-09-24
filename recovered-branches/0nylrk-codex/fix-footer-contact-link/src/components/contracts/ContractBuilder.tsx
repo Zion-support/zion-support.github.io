@@ -16,11 +16,11 @@ interface ContractBuilderProps {
   onContractGenerated?: (contractContent: string) => void}
 ,
 export function ContractBuilder({
-  isOpen;
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated;
+  isOpen,
+  onClose,
+  talent,
+  clientName,
+  onContractGenerated,
 }: ContractBuilderProps) {
   const [activeTabsetActiveTab] = useState<string>('form'),
   const [generatedContractsetGeneratedContract] = useState<string | null>(null),
@@ -29,13 +29,13 @@ export function ContractBuilder({
   const [templateManagerOpensetTemplateManagerOpen] = useState(false),
   const [showSmartContractBuildersetShowSmartContractBuilder] = useState(false),
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)};
+    setFormValues(templateData)},
   const handleContractGenerated = (contract: string) => {
     setGeneratedContract(contract),
     setActiveTab('preview'),
     if (onContractGenerated) {
       onContractGenerated(contract)}
-  };
+  },
   if (showSmartContractBuilder) {
     return (
       <SmartContractBuilder

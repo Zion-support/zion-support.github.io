@@ -5,7 +5,7 @@ declare global {
 }
 ,
 export default function WalletConnectButton({
-  onConnected;
+  onConnected,
 }: {
   onConnected?: (address: string) => void}) {
   const [address, setAddress] = useState<string | null>(null),
@@ -15,7 +15,7 @@ export default function WalletConnectButton({
   async function connect() {
     if (!window.ethereum) return,
     const accounts = await window.ethereum.request({
-      method: 'eth_requestAccounts';
+      method: 'eth_requestAccounts'
     }),
     const addr = accounts?.[0],
     setAddress(addr),

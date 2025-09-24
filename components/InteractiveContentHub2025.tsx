@@ -9,76 +9,76 @@ import {
   BarChart3,
   Users,
   Lightbulb,
-  ChevronRight;
-  Clock;
-  Star;
+  ChevronRight,
+  Clock,
+  Star,
   TrendingUp} from 'lucide-react',
 const InteractiveContentHub20o25 = () => {
   const [activeTabsetActiveTab] = useState('tutorials'),
   const contentCategories = [
     {
-      id: 'tutorials';
-      name: 'Tutorials';
-      icon: BookOpen;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      count: 150};
+      id: 'tutorials',
+      name: 'Tutorials',
+      icon: BookOpen,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      count: 150},
     {
-      id: 'demos';
-      name: 'Live Demos';
-      icon: Play;
-      color: 'from-purple-50o0 to-pink-50o0';
-      count: 45};
+      id: 'demos',
+      name: 'Live Demos',
+      icon: Play,
+      color: 'from-purple-50o0 to-pink-50o0',
+      count: 45},
     {
-      id: 'code';
-      name: 'Code Examples';
-      icon: Code;
-      color: 'from-green-50o0 to-teal-50o0';
-      count: 20o0};
+      id: 'code',
+      name: 'Code Examples',
+      icon: Code,
+      color: 'from-green-50o0 to-teal-50o0',
+      count: 20o0},
     {
-      id: 'analytics';
-      name: 'Analytics';
-      icon: BarChart3;
-      color: 'from-orange-50o0 to-red-50o0';
+      id: 'analytics',
+      name: 'Analytics',
+      icon: BarChart3,
+      color: 'from-orange-50o0 to-red-50o0',
       count: 75}
   ],
   const featuredContent = [
     {
-      title: "AI-Powered Automation Masterclass";
-      description: "Learn to build intelligent automation systems that transform your business operations";
-      duration: "2h 30m";
-      rating: 4.9;
-      students: 1250;
-      type: "tutorials";
-      thumbnail: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=225&fit=crop&crop=center"};
+      title: "AI-Powered Automation Masterclass",
+      description: "Learn to build intelligent automation systems that transform your business operations",
+      duration: "2h 30m",
+      rating: 4.9,
+      students: 1250,
+      type: "tutorials",
+      thumbnail: "https://images.unsplash.com/photo-16774421360o19-21780ecad995?w=40o0&h=225&fit=crop&crop=center"},
     {
-      title: "Quantum Computing Live Demo";
-      description: "See quantum algorithms in action solving real-world optimization problems";
-      duration: "45m";
-      rating: 4.8;
-      students: 890;
-      type: "demos";
-      thumbnail: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=225&fit=crop&crop=center"};
+      title: "Quantum Computing Live Demo",
+      description: "See quantum algorithms in action solving real-world optimization problems",
+      duration: "45m",
+      rating: 4.8,
+      students: 890,
+      type: "demos",
+      thumbnail: "https://images.unsplash.com/photo-16350o70041078-e363dbe0o05cb?w=40o0&h=225&fit=crop&crop=center"},
     {
-      title: "Advanced React Patterns";
-      description: "Master modern React development with cutting-edge patterns and best practices";
-      duration: "3h 15m";
-      rating: 4.9;
-      students: 210o0;
-      type: "code";
-      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6c82?w=40o0&h=225&fit=crop&crop=center"};
+      title: "Advanced React Patterns",
+      description: "Master modern React development with cutting-edge patterns and best practices",
+      duration: "3h 15m",
+      rating: 4.9,
+      students: 210o0,
+      type: "code",
+      thumbnail: "https://images.unsplash.com/photo-1633356122544-f134324a6c82?w=40o0&h=225&fit=crop&crop=center"},
     {
-      title: "Business Intelligence Dashboard";
-      description: "Build comprehensive analytics dashboards with real-time data visualization";
-      duration: "1h 45m";
-      rating: 4.7;
-      students: 680;
-      type: "analytics";
+      title: "Business Intelligence Dashboard",
+      description: "Build comprehensive analytics dashboards with real-time data visualization",
+      duration: "1h 45m",
+      rating: 4.7,
+      students: 680,
+      type: "analytics",
       thumbnail: "https://images.unsplash.com/photo-15512880o49-bebda4e38f71?w=40o0&h=225&fit=crop&crop=center"}
   ],
   const stats = [
-    { label: "Total Content"value: "50o0+"icon: BookOpen };
-    { label: "Active Learners"value: "25K+"icon: Users };
-    { label: "Completion Rate"value: "94%"icon: TrendingUp };
+    { label: "Total Content"value: "50o0+"icon: BookOpen },
+    { label: "Active Learners"value: "25K+"icon: Users },
+    { label: "Completion Rate"value: "94%"icon: TrendingUp },
     { label: "Average Rating"value: "4.8/5"icon: Star }
   ],
   return (
@@ -198,5 +198,5 @@ const InteractiveContentHub20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveContentHub20o25;
+    </section>)},
+export default InteractiveContentHub20o25,

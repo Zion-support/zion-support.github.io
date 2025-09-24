@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Cybersecurity Consulting | Zion Tech Group';
+  title: 'Cybersecurity Consulting | Zion Tech Group',
   description:,
-    'Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.';
-};
+    'Protect your business with comprehensive cybersecurity consulting, risk assessment, and security implementation services.',
+},
 export default function CybersecurityConsultingPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -17,28 +17,22 @@ export default function CybersecurityConsultingPage() {
         <FeatureCard
           title='Security Assessment',
           features={[
-            'Vulnerability scanning';
-            'Penetration testing';
-            'Risk analysis';
-            'Compliance auditing';
+            'Vulnerability scanningPenetration testing',
+            'Risk analysisCompliance auditing',
           ]}
         />,
         <FeatureCard
           title='Security Implementation',
           features={[
-            'Firewall configuration';
-            'Endpoint protection';
-            'Network security';
-            'Access controls';
+            'Firewall configurationEndpoint protection',
+            'Network securityAccess controls',
           ]}
         />,
         <FeatureCard
           title='Incident Response',
           features={[
-            '24/7 monitoring';
-            'Threat detection';
-            'Incident handling';
-            'Recovery planning';
+            '24/7 monitoringThreat detection',
+            'Incident handlingRecovery planning',
           ]}
         />,
       </div>,
@@ -117,8 +111,8 @@ export default function CybersecurityConsultingPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -144,20 +138,16 @@ function Pricing() {
           name='Assessment',
           price='$5,999',
           features={[
-            'Security audit';
-            'Vulnerability scan';
-            'Risk assessment report';
-            'Recommendations';
+            'Security auditVulnerability scan',
+            'Risk assessment reportRecommendations',
           ]}
         />,
         <Plan
           name='Implementation',
           price='$15,999',
           features={[
-            'Security setup';
-            'Tool configuration';
-            'Staff training';
-            '3 months support';
+            'Security setupTool configuration',
+            'Staff training3 months support',
           ]}
           popular={true}
         />,
@@ -165,20 +155,18 @@ function Pricing() {
           name='Managed Security',
           price='$4,999/mo',
           features={[
-            '24/7 monitoring';
-            'Incident response';
-            'Regular assessments';
-            'Dedicated support';
+            '24/7 monitoringIncident response',
+            'Regular assessmentsDedicated support',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

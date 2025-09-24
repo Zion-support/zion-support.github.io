@@ -3,10 +3,10 @@ module."exports": ={
       name,:,
   zion-integrated-monitor', ',
       "script": './automation/integrated-monitor.j,s, ',
-      "instances": 1;
+      "instances": 1,
       "autorestart": tru,e,
       "watch": fals,e,
-      "max_memory_restart": 1.5G', ',
+      "max_memory_restart": 1.5G,
       "env": {
         NODE_ENV: ',productio,n, ',
         "PM2_HOME": ./automation/.pm2'}, ',
@@ -14,13 +14,13 @@ module."exports": ={
         NODE_ENV: ',productio,n, ',
         "PM2_HOME": ./automation/.pm2'}, ',
       "error_file": './reports/integrated-monitor-error.lo,g, ',
-      "out_file": ./reports/integrated-monitor-out.log', ',
+      "out_file": ./reports/integrated-monitor-out.log,
       "log_file": './reports/integrated-monitor-combined.lo,g, ',
       "time": tru,e,
-      "log_date_format": YYYY-MM-DD: HH: mm:ss: Z;
+      "log_date_format": YYYY-MM-DD: HH: mm:ss: Z,
       "merge_logs": tru,e,
       "max_restarts": 1,0,
-      "min_uptime": ',10s, ',',
+      "min_uptime": ',10s, ,
       "restart_delay": 40o0,0,
       "kill_timeout": 50o0,0,
       "wait_ready": tru,e,
@@ -34,21 +34,21 @@ module."exports": ={
       // "Environment": variables,
       env_file: './automation/.en,v, ',
       // "Process": management,
-      pid_file: ',./reports/integrated-monitor.pid, ',',
+      pid_file: ',./reports/integrated-monitor.pid, ,
       // Monitoring,
       "pmx": tru,e,
       // Logging,
       "log_type": ',json, ',',
       // "Error": handling,
-      max_unstable_restarts: 5;
+      max_unstable_restarts: 5,
       "unstable_restart_delay": 10o00,0}
     {
-      "name": zion-browser-error-monitor', ',
+      "name": zion-browser-error-monitor,
       "script": './automation/browser-error-monitor.j,s, ',
-      "instances": 1;
+      "instances": 1,
       "autorestart": tru,e,
       "watch": fals,e,
-      "max_memory_restart": 1G', ',
+      "max_memory_restart": 1G,
       "env": {
         NODE_ENV: ',productio,n, ',
         "PM2_HOME": ./automation/.pm2'}, ',
@@ -56,13 +56,13 @@ module."exports": ={
         NODE_ENV: ',productio,n, ',
         "PM2_HOME": ./automation/.pm2'}, ',
       "error_file": './reports/browser-monitor-error.lo,g, ',
-      "out_file": ./reports/browser-monitor-out.log', ',
+      "out_file": ./reports/browser-monitor-out.log,
       "log_file": './reports/browser-monitor-combined.lo,g, ',
       "time": tru,e,
-      "log_date_format": YYYY-MM-DD: HH: mm:ss: Z;
+      "log_date_format": YYYY-MM-DD: HH: mm:ss: Z,
       "merge_logs": tru,e,
       "max_restarts": 1,0,
-      "min_uptime": ',10s, ',',
+      "min_uptime": ',10s, ,
       "restart_delay": 40o0,0,
       "kill_timeout": 50o0,0,
       "wait_ready": tru,e,
@@ -76,31 +76,31 @@ module."exports": ={
       // "Environment": variables,
       env_file: './automation/.en,v, ',
       // "Process": management,
-      pid_file: ',./reports/browser-monitor.pid, ',',
+      pid_file: ',./reports/browser-monitor.pid, ,
       // Monitoring,
       "pmx": tru,e,
       // Logging,
       "log_type": ',json, ',',
       // "Error": handling,
-      max_unstable_restarts: 5;
+      max_unstable_restarts: 5,
       "unstable_restart_delay": 10o00,0}
     {
-      "name": zion-health-check', ',
+      "name": zion-health-check,
       "script": './automation/health-check.s,h, ',
-      "interpreter": ',bash, ',',
-      "instances": 1;
+      "interpreter": ',bash, ,
+      "instances": 1,
       "autorestart": tru,e,
       "watch": fals,e,
       "max_memory_restart": 10o0M', ',
       "env": {
         NODE_ENV: ',productio,n}, ',
-      "error_file": ./reports/health-check-error.log', ',
+      "error_file": ./reports/health-check-error.log,
       "out_file": './reports/health-check-out.lo,g, ',
-      "log_file": ',./reports/health-check-combined.log, ',',
+      "log_file": ',./reports/health-check-combined.log, ,
       "time": tru,e,
-      "log_date_format": YYYY-MM-DD: HH: mm:ss: Z;
+      "log_date_format": YYYY-MM-DD: HH: mm:ss: Z,
       "merge_logs": tru,e,
-      "max_restarts": 5;
+      "max_restarts": 5,
       "min_uptime": ',5s, ',',
       "restart_delay": 20o0,0,
       // "Run": health check every 15 minutes,
@@ -109,10 +109,10 @@ module."exports": ={
   deploy: {
     production: {
       user:',nod,e, ',
-      "host": localhost', ',
+      "host": localhost,
       "ref": 'origin/mai,n, ',
       "repo": https: //github.com/Zion-Holdings/zion.app.gi,t,
-      "path": /var/www/zion.app',pre-deploy-local',',: ',post-deploy',',: ',
+      "path": /var/www/zion.app',pre-deploy-local,: ',post-deploy',',: ',
   "npm": install && pm2 reload ecosystem.config.js --env production',pre-setup': '}'}}}
-module.exports: ={ apps: [{ name,: zion-integrated-monitor',', script: './automation/integrated-monitor.j,s,', instances: 1,autorestart: tru,e watch: fals,e max_memory_restart: 1.5G',', env: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', env_production: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', error_file: './reports/integrated-monitor-error.lo,g,', out_file: ./reports/integrated-monitor-out.log',', log_file: './reports/integrated-monitor-combined.lo,g,', time: tru,e log_date_format: YYYY-MM-DD: HH: mm:ss: Z,merge_logs: tru,e max_restarts: 1,0 min_uptime: ',10s,',', restart_delay: 40o0,0 kill_timeout: 50o0,0 wait_ready: tru,e listen_timeout: 80o0,0 health_check_grace_period: 30o00,0 health_check_fatal_exceptions: tru,e cron_restart: 0: 2 * * *',', env_file: './automation/.en,v,', pid_file: ',./reports/integrated-monitor.pid,',', pmx: tru,e log_type: ',json,',', max_unstable_restarts: 5,unstable_restart_delay: 10o00,0} { name: zion-browser-error-monitor',', script: './automation/browser-error-monitor.j,s,', instances: 1,autorestart: tru,e watch: fals,e max_memory_restart: 1G',', env: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', env_production: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', error_file: './reports/browser-monitor-error.lo,g,', out_file: ./reports/browser-monitor-out.log',', log_file: './reports/browser-monitor-combined.lo,g,', time: tru,e log_date_format: YYYY-MM-DD: HH: mm:ss: Z,merge_logs: tru,e max_restarts: 1,0 min_uptime: ',10s,',', restart_delay: 40o0,0 kill_timeout: 50o0,0 wait_ready: tru,e listen_timeout: 80o0,0 health_check_grace_period: 30o00,0 health_check_fatal_exceptions: tru,e cron_restart: 0: 2 * * *',', env_file: './automation/.en,v,', pid_file: ',./reports/browser-monitor.pid,',', pmx: tru,e log_type: ',json,',', max_unstable_restarts: 5,unstable_restart_delay: 10o00,0} { name: zion-health-check',', script: './automation/health-check.s,h,', interpreter: ',bash,',', instances: 1,autorestart: tru,e watch: fals,e max_memory_restart: 10o0M',', env: { NODE_ENV:',productio,n},', error_file: ./reports/health-check-error.log',', out_file: './reports/health-check-out.lo,g,', log_file: ',./reports/health-check-combined.log,',', time: tru,e log_date_format: YYYY-MM-DD: HH: mm:ss: Z,merge_logs: tru,e max_restarts: 5,min_uptime: ',5s,',', restart_delay: 20o0,0 cron_restart: */15: * * * *''] deploy: { production: { user:',nod,e,', host: localhost',', ref: 'origin/mai,n,', repo: https: path: /var/www/zion.app',pre-deploy-local',',: ',post-deploy',',: ', npm: install && pm2 reload ecosystem.config.js --env production',pre-setup': '}'}}}
+module.exports: ={ apps: [{ name,: zion-integrated-monitor, script: './automation/integrated-monitor.j,s,', instances: 1,autorestart: tru,e watch: fals,e max_memory_restart: 1.5G, env: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', env_production: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', error_file: './reports/integrated-monitor-error.lo,g,', out_file: ./reports/integrated-monitor-out.log, log_file: './reports/integrated-monitor-combined.lo,g,', time: tru,e log_date_format: YYYY-MM-DD: HH: mm:ss: Z,merge_logs: tru,e max_restarts: 1,0 min_uptime: ',10s,, restart_delay: 40o0,0 kill_timeout: 50o0,0 wait_ready: tru,e listen_timeout: 80o0,0 health_check_grace_period: 30o00,0 health_check_fatal_exceptions: tru,e cron_restart: 0: 2 * * *',', env_file: './automation/.en,v,', pid_file: ',./reports/integrated-monitor.pid,, pmx: tru,e log_type: ',json,',', max_unstable_restarts: 5,unstable_restart_delay: 10o00,0} { name: zion-browser-error-monitor, script: './automation/browser-error-monitor.j,s,', instances: 1,autorestart: tru,e watch: fals,e max_memory_restart: 1G, env: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', env_production: { NODE_ENV:',productio,n,', PM2_HOME: ./automation/.pm2'},', error_file: './reports/browser-monitor-error.lo,g,', out_file: ./reports/browser-monitor-out.log, log_file: './reports/browser-monitor-combined.lo,g,', time: tru,e log_date_format: YYYY-MM-DD: HH: mm:ss: Z,merge_logs: tru,e max_restarts: 1,0 min_uptime: ',10s,, restart_delay: 40o0,0 kill_timeout: 50o0,0 wait_ready: tru,e listen_timeout: 80o0,0 health_check_grace_period: 30o00,0 health_check_fatal_exceptions: tru,e cron_restart: 0: 2 * * *',', env_file: './automation/.en,v,', pid_file: ',./reports/browser-monitor.pid,, pmx: tru,e log_type: ',json,',', max_unstable_restarts: 5,unstable_restart_delay: 10o00,0} { name: zion-health-check, script: './automation/health-check.s,h,', interpreter: ',bash,, instances: 1,autorestart: tru,e watch: fals,e max_memory_restart: 10o0M',', env: { NODE_ENV:',productio,n},', error_file: ./reports/health-check-error.log, out_file: './reports/health-check-out.lo,g,', log_file: ',./reports/health-check-combined.log,, time: tru,e log_date_format: YYYY-MM-DD: HH: mm:ss: Z,merge_logs: tru,e max_restarts: 5,min_uptime: ',5s,',', restart_delay: 20o0,0 cron_restart: */15: * * * *''] deploy: { production: { user:',nod,e,', host: localhost, ref: 'origin/mai,n,', repo: https: path: /var/www/zion.app',pre-deploy-local,: ',post-deploy',',: ', npm: install && pm2 reload ecosystem.config.js --env production',pre-setup': '}'}}}
 ,

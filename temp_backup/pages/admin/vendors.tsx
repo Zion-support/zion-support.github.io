@@ -1,17 +1,17 @@
-import { useEffect, useState } from 'react';
-import type { Vendor } from '../../utils/vendor-types';
+import { useEffect, useState } from 'react',
+import type { Vendor } from '../../utils/vendor-types',
 export default function AdminVendorsPage() {
-  const [vendors, setVendors] = useState<Vendor[]>([]);
+  const [vendors, setVendors] = useState<Vendor[]>([]),
   async function load() {
-    const res = await fetch('/api/vendors');
-    const data = await res.json();
+    const res = await fetch('/api/vendors'),
+    const data = await res.json(),
     setVendors(data.vendors || [])}
 ,
-  useEffect(() => { load()}, []);
+  useEffect(() => { load()}, []),
   async function call(action: string, vendorId: string, value?: any) {
     await fetch('/api/admin/vendors', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ action, vendorId, value })}),
     load()}
 ,

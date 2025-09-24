@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o27 Future Predictions: Ultimate Breakthrough Technologies';
+  title: 'AI 20o27 Future Predictions: Ultimate Breakthrough Technologies',
   description:,
-    'Discover the revolutionary AI technologies predicted for 20o27. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs.';
+    'Discover the revolutionary AI technologies predicted for 20o27. Quantum neural networks, autonomous business systems, and next-generation AI breakthroughs.',
   keywords: [
-    'AI 20o27';
-    'future predictions';
-    'quantum AI';
-    'autonomous systems';
-    'AI breakthroughs';
-    'technology trends';
-  ];
-};
+    'AI 20o27future predictions',
+    'quantum AIautonomous systems',
+    'AI breakthroughstechnology trends',
+  ]
+},
 export default function AI20o27FuturePredictionsPage() {
   return (
     <div>,

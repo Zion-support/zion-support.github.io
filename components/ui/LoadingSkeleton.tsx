@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 interface SkeletonProps {
   className?: string,
@@ -50,7 +50,7 @@ export const ServiceCardSkeleton: React.FC < ServiceCardSkeletonProps> = ({ clas
       <Skeleton className="h-4 w-5/6 mb-2" />,
       <Skeleton className="h-4 w-4/6" />,
     </div>)}
-  )};
+  )},
 interface HeroSkeletonProps {
   className?: string}
 ,
@@ -70,7 +70,7 @@ export const HeroSkeleton: React.FC < HeroSkeletonProps> = ({ class_name = '' })
         </div>,
       </div>,
     </div>)}
-  )};
+  )},
 interface StatsSkeletonProps {
   className?: string}
 ,
@@ -81,8 +81,8 @@ interface StatsSkeletonProps {
         </div>,
       </div>,
     </div>,
-        duration: 1 && 1.5;
-        repeat: Infinity;
+        duration: 1 && 1.5,
+        repeat: Infinity,
         ease: "easeInOut"}}
     />)}
 ,
@@ -101,7 +101,7 @@ export const ServiceCardSkeleton: React.FC<ServiceCardSkeletonProps> = ({ classN
       <Skeleton className="h-4 w-4/6" />,
     </div>)}
 export default Skeleton)}
-export default Skeleton;
+export default Skeleton,
 interface SkeletonProps {
   className?: string,
   height?: string,

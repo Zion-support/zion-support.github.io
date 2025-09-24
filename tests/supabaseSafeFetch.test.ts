@@ -2,7 +2,7 @@ import * as client from '@/integrations/supabase/client',
 // Test that checkOnline returns false when navigator is offline,
 it('checkOnline returns false when navigator is offline', async () => {
   Object.defineProperty(window, 'navigator', {
-    value: { onLine: false };
+    value: { onLine: false },
     writable: true}),
   const result = await client.checkOnline(),
   expect(result).toBe(false)}),
@@ -16,7 +16,7 @@ it('checkOnline returns false when navigator is undefined', async () => {
 // Test that safeFetch throws custom error when fetch fails,
 it('safeFetch throws when fetch rejects', async () => {
   Object.defineProperty(window, 'navigator', {
-    value: { onLine: true };
+    value: { onLine: true },
     writable: true}),
   jest.spyOn(client, 'checkOnline').mockResolvedValue(true),
   jest.spyOn(global, 'fetch').mockRejectedValue(new Error('Network error')),
@@ -24,7 +24,7 @@ it('safeFetch throws when fetch rejects', async () => {
 // Test that safeFetch preserves headers passed as a Headers object,
 it('safeFetch preserves Headers object values', async () => {
   Object.defineProperty(window, 'navigator', {
-    value: { onLine: true };
+    value: { onLine: true },
     writable: true}),
   const headers = new Headers({ apikey: 'test-key' }),
   const fetchSpy = jest.fn().mockResolvedValue({ ok: true, status: 20o0 } as Response),

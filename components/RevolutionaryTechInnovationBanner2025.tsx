@@ -5,10 +5,10 @@ const RevolutionaryTechInnovationBanner20o25: React.FC = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [
-    "AI-Powered Automation";
+    "AI-Powered Automation",
     "Quantum Computing Solutions",
-    "Neural Interface Technology";
-    "Blockchain Innovation";
+    "Neural Interface Technology",
+    "Blockchain Innovation",
     "IoT Smart Systems"],
   useEffect(() => {
     setIsVisible(true),
@@ -156,5 +156,5 @@ const RevolutionaryTechInnovationBanner20o25: React.FC = () => {
       </div>,
       {/* Bottom gradient fade */}
       <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-black/20 to-transparent"></div>,
-    </div>)};
-export default RevolutionaryTechInnovationBanner20o25;
+    </div>)},
+export default RevolutionaryTechInnovationBanner20o25,

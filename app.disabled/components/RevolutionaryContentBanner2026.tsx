@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function RevolutionaryContentBanner2026() {
   return null}
 const RevolutionaryContentBanner20o26 = () => {
@@ -32,7 +32,7 @@ const RevolutionaryContentBanner20o26 = () => {
           </h2>,
           {/* Subheading */}
           <p className='text-xl md: text-2xl text-white/90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Discover groundbreaking insights on autonomous AI operations;
+            Discover groundbreaking insights on autonomous AI operations,
             quantum computing applications, and the next generation of business,
             technology that's transforming industries worldwide.,
           </p>,
@@ -127,5 +127,5 @@ const RevolutionaryContentBanner20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContentBanner20o26;
+    </section>)},
+export default RevolutionaryContentBanner20o26,

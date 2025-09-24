@@ -18,8 +18,8 @@ if (idx === -1) return res.status(404).json({ error: 'Not found' }),
   writeAll(items),
   res.status(200).json({ ok: true }),  res.status(200).json({ ok: true })}
 ,
-const REQUESTS_PATH = path.join (process.cwd (), 'data', 'requests.json'),
-const REQUESTS_PATH = path.join(process.cwd(), 'data', 'requests.json'),
+const REQUESTS_PATH = path.join (process.cwd (), 'datarequests.json'),
+const REQUESTS_PATH = path.join(process.cwd(), 'datarequests.json'),
   try {
     return JSON.parse (fs.readFileSync (REQUESTS_PATH, 'utf - 8'))} catch {
     return []}

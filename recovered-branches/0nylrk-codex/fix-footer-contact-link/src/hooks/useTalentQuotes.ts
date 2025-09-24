@@ -15,13 +15,13 @@ export const useTalentQuotes = () => {
   const talentId = user?.id || '',
   // Fetch quotes for this talent,
   const {
-    data: allQuotes = [];
-    isLoading;
-    error;
+    data: allQuotes = [],
+    isLoading,
+    error
   } = useQuery({
-    queryKey: ['quotes', 'talent', talentId];
-    queryFn: () => quoteRequestService.getByTalentId(talentId);
-    enabled: !!talentId;
+    queryKey: ['quotestalent', talentId],
+    queryFn: () => quoteRequestService.getByTalentId(talentId),
+    enabled: !!talentId
   }),
   // Count unread quotes,
   const unreadCount = allQuotes.filter(
@@ -42,7 +42,7 @@ export const useTalentQuotes = () => {
   // Mark as viewed/responded mutation,
   const updateStatusMutation = useMutation({
     mutationFn: ({ id, status }: { id: string, status: QuoteStatus }) =>,
-      quoteRequestService.updateStatus(id, status);
+      quoteRequestService.updateStatus(id, status),
     onSuccess: (_, variables) => {
       let message = 'Status updated',
       if (variables.status === 'in_review') {
@@ -50,54 +50,54 @@ export const useTalentQuotes = () => {
         message = 'Quote marked as responded'}
 ,
       toast({
-        title: message;
-        description: 'The quote request status has been updated';
+        title: message,
+        description: 'The quote request status has been updated'
       }),
       queryClient.invalidateQueries({
-        queryKey: ['quotes', 'talent', talentId];
-      })};
+        queryKey: ['quotestalent', talentId],
+      })},
     onError: (error: Error) => {
       toast({
-        title: 'Error';
-        description: 'Failed to update status: ' + error.message;
-        variant: 'destructive';
-      })};
+        title: 'Error',
+        description: 'Failed to update status: ' + error.message,
+        variant: 'destructive'
+      })},
   }),
   // Archive/Unarchive mutation,
   const toggleArchiveMutation = useMutation({
     mutationFn: ({ id, isArchived }: { id: string, isArchived: boolean }) =>,
-      quoteRequestService.toggleArchive(id, isArchived);
+      quoteRequestService.toggleArchive(id, isArchived),
     onSuccess: (_, variables) => {
       toast({
-        title: variables.isArchived ? 'Quote archived' : 'Quote unarchived';
+        title: variables.isArchived ? 'Quote archived' : 'Quote unarchived',
         description: variables.isArchived,
           ? 'The quote request has been archived',
-          : 'The quote request has been moved back to active quotes';
+          : 'The quote request has been moved back to active quotes',
       }),
       queryClient.invalidateQueries({
-        queryKey: ['quotes', 'talent', talentId];
-      })};
+        queryKey: ['quotestalent', talentId],
+      })},
     onError: (error: Error) => {
       toast({
-        title: 'Error';
-        description: 'Failed to update quote: ' + error.message;
-        variant: 'destructive';
-      })};
+        title: 'Error',
+        description: 'Failed to update quote: ' + error.message,
+        variant: 'destructive'
+      })},
   }),
   return {
-    quotes: filteredQuotes;
-    unreadCount;
-    isLoading;
-    error;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter;
+    quotes: filteredQuotes,
+    unreadCount,
+    isLoading,
+    error,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
     markAsViewed: (id: string) =>,
-      updateStatusMutation.mutate({ id, status: 'in_review' });
+      updateStatusMutation.mutate({ id, status: 'in_review' }),
     markAsResponded: (id: string) =>,
-      updateStatusMutation.mutate({ id, status: 'responded' });
+      updateStatusMutation.mutate({ id, status: 'responded' }),
     toggleArchive: (id: string, isArchived: boolean) =>,
-      toggleArchiveMutation.mutate({ id, isArchived });
-  };
-};
+      toggleArchiveMutation.mutate({ id, isArchived }),
+  },
+},

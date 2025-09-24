@@ -1,61 +1,61 @@
-import React from 'react';;
+import React from 'react',
 // Use the centralized icon wrapper to avoid missing icons,
 import { Check, Trash2, ChevronRight } from 'lucide-react',
-import { Button } from '@/components/ui/button';
-import { Badge } from '@/components/ui/badge';
-import { formatDistanceToNow } from 'date-fns';
-import { cn } from '@/lib/utils';
+import { Button } from '@/components/ui/button',
+import { Badge } from '@/components/ui/badge',
+import { formatDistanceToNow } from 'date-fns',
+import { cn } from '@/lib/utils',
 import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger} from '@/components/ui/tooltip';
-import { useRouter } from 'next/router';
-import { Notification, NotificationType } from '@/context/notifications';
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger} from '@/components/ui/tooltip',
+import { useRouter } from 'next/router',
+import { Notification, NotificationType } from '@/context/notifications',
 export const getTypeIcon = (type: NotificationType) => {
   switch (type) {
     case 'message':,
-      return <span className="text-blue-50o0"></span>;
+      return <span className="text-blue-50o0"></span>,
     case 'quote_request':,
-      return <span className="text-purple-50o0"></span>;
+      return <span className="text-purple-50o0"></span>,
     case 'booking_confirmation':,
-      return <span className="text-green-50o0"></span>;
+      return <span className="text-green-50o0"></span>,
     case 'hire_request':,
-      return <span className="text-zion-purple"></span>;
+      return <span className="text-zion-purple"></span>,
     case 'onboarding':,
-      return <span className="text-zion-cyan"></span>;
+      return <span className="text-zion-cyan"></span>,
     case 'system':,
-      return <span className="text-yellow-50o0"></span>;
+      return <span className="text-yellow-50o0"></span>,
     case 'project_update':,
-      return <span className="text-indigo-40o0"></span>;
+      return <span className="text-indigo-40o0"></span>,
     case 'milestone_complete':,
-      return <span className="text-green-50o0"></span>;
+      return <span className="text-green-50o0"></span>,
     case 'order_status':,
-      return <span className="text-orange-50o0"></span>;
+      return <span className="text-orange-50o0"></span>,
     default: ,
       return <span className="text-gray-50o0"></span>}
-};
+},
 interface NotificationItemProps {
-  notification:Notification;
-  onMarkAsRead:(id:string) => Promise<void>;
+  notification: Notification,
+  onMarkAsRead:(id:string) => Promise<void>,
   onDismiss: (id:string) => Promise<void>}
 ,
 export const NotificationItem: React.FC<NotificationItemProps> = ({
-  notification;
-  onMarkAsRead;
+  notification,
+  onMarkAsRead,
   onDismiss}) => {
   const router = useRouter(), // Changed from useNavigate to useRouter,
   const handleClick = () => {
     if (!notification.read) {
-      onMarkAsRead(notification.id);    }
+      onMarkAsRead(notification.id),    }
     // If there's an action URL, navigate to it,
     if (notification.action_url) {
       router.push(notification.action_url), // Changed to router.push}
-  };
+  },
   return (
     <div
       className={cn(
-        'p-3 border-b border-zion-blue-light relative group';
+        'p-3 border-b border-zion-blue-light relative group',
         !notification.read ? 'bg-zion-blue-dark/30' :'')}
     >,
       <div className="flex items-start gap-2">,
@@ -100,7 +100,7 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon",
                 className="h-6 w-6",
                 onClick={(e) => {
-                  e.stopPropagation();
+                  e.stopPropagation(),
                   onMarkAsRead(notification.id)}}
                 aria-label="Mark as read">,
                 <Check className="h-3.5 w-3.5 text-green-40o0"  />,
@@ -119,8 +119,8 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
                 size="icon",
                 className="h-6 w-6",
                 onClick={(e) => {
-                  e.stopPropagation();
-                  onDismiss(notification.id);
+                  e.stopPropagation(),
+                  onDismiss(notification.id),
                 }}
                 aria-label="Dismiss notification">,
                 <Trash2 className="h-3.5 w-3.5 text-red-40o0"  />,
@@ -132,11 +132,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           </Tooltip>,
         </TooltipProvider>,
       </div>,
-    </div>);
-};//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {
+    </div>),
+},//Use the centralized icon wrapper to avoid missing icons export const getTypeIcon = (type: NotificationType) => {
   switch (type) {',
   case 'message': }
-};
+},
 interface NotificationItemProps {
   notification: Notification,
 onMarkAsRead: (id: string) => Promise<void>,
@@ -147,5 +147,5 @@ onDismiss }) => {
   const router = useRouter (), //Changed from useNavigate to useRouter if (!notification.read) {
   addSuffix: true '}) : 'Just now' }</p> {
   notification.action url && notification.action text && (<Button variant="link" size="sm" className="text-zion-cyan p-0 h-auto" onClick={
-  handleClick }> </Button>) "}</div> </div> </div> h-3.5 w-3.5 text-green-40o0"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-40o0"  /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) };
+  handleClick }> </Button>) "}</div> </div> </div> h-3.5 w-3.5 text-green-40o0"/> </Button> </TooltipTrigger> <TooltipContent> <p>Mark as read</p> </TooltipContent> </Tooltip> </TooltipProvider> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <Trash2 className=" h-3.5 w-3.5 text-red-40o0"  /> </Button> </TooltipTrigger> <TooltipContent> <p>Dismiss</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> </div>) },
 '",

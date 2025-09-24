@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-content-writer - Zion Tech Group';
+  title: 'ai-content-writer - Zion Tech Group',
   description:,
-    'Professional ai-content-writer solutions for your business needs.';
-  keywords: 'ai-content-writer, services, business, technology';
-};
+    'Professional ai-content-writer solutions for your business needs.',
+  keywords: 'ai-content-writer, services, business, technology',
+},
 export default function AiContentWriterPage() {
   return (
     <div className='min-h-screen bg-white'>,

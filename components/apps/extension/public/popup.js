@@ -13,16 +13,16 @@ document.getElementById('askBtn').addEventListener('click', async () => {
   if (!prompt) return,
   const userId = await new Promise((r) => getUserId(r)),
   const res = await fetch(`${API_BASE}/ai/ask`, {
-    method: 'POST';
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) };
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
     body: JSON.stringify({ prompt })}),
   const data = await res.json(),
   document.getElementById('result').textContent = data.text || JSON.stringify(data, null, 2)}),
 document.getElementById('postJob').addEventListener('click', async () => {
   const userId = await new Promise((r) => getUserId(r)),
   const res = await fetch(`${API_BASE}/jobs/generate`, {
-    method: 'POST';
-    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) };
+    method: 'POST',
+    headers: { 'content-type': 'application/json', ...(userId ? { 'x-user-id': userId } : {}) },
     body: JSON.stringify({ role: 'Cloud Engineer' })}),
   const data = await res.json(),
   document.getElementById('result').textContent = data.description || 'Draft saved.'}),

@@ -1,5 +1,5 @@
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Link from 'next/link',
 import { motion  } from 'framer-motion',
 import { ArrowRight, Star, Zap, Shield, Brain } from 'lucide-react',
@@ -10,11 +10,11 @@ interface Service {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -43,13 +43,13 @@ export default function UltraFuturisticServiceShowcase2029({
   title = '2029 Cutting-Edge Services',
   subtitle = 'Experience the future of technology with our revolutionary solutions'}: UltraFuturisticServiceShowcase2029Props) {
 interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[];
+  services: Service[],
   title?: string,
   subtitle?: string,
 export default function UltraFuturisticServiceShowcase2029(): any ({
-  services;
-  title = '2029 Cutting-Edge Services';
-  subtitle = 'Experience the future of technology with our revolutionary solutions';
+  services,
+  title = '2029 Cutting-Edge Services',
+  subtitle = 'Experience the future of technology with our revolutionary solutions',
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
     <section className='py-20 bg-gradient-to-br from-black via-gray-900 to-black'>,
@@ -60,16 +60,16 @@ export default function UltraFuturisticServiceShowcase2029(): any ({
           className='text-center mb-16',
 interface UltraFuturisticServiceShowcase2029Props {
   services: Service[],
-  services: Service[];
+  services: Service[],
   title?: string,
   subtitle?: string,
 export default function UltraFuturisticServiceShowcase2029(): any ({
-  services;
-  title = '2029 Cutting-Edge Services';
-  subtitle = 'Experience the future of technology with our revolutionary solutions';
+  services,
+  title = '2029 Cutting-Edge Services',
+  subtitle = 'Experience the future of technology with our revolutionary solutions',
 }: UltraFuturisticServiceShowcase2029Props) {
   return (
-  services: Service[];
+  services: Service[],
   title?: string,
   title?: string,
   subtitle?: string}
@@ -129,7 +129,7 @@ function UltraFuturisticServiceShowcase2029() {
           transition={{ duration: 0.6 }}
           className='text - center mb - 16',
 interface UltraFuturisticServiceShowcase2029Props {
-  services: Service[];
+  services: Service[],
   title?: string,
   subtitle?: string}
 export default /**,

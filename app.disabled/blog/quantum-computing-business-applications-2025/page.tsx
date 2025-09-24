@@ -2,26 +2,23 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'Quantum Computing Business Applications 20o25 | Zion Tech Group';
+  title: 'Quantum Computing Business Applications 20o25 | Zion Tech Group',
   description:,
-    'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 20o25.';
+    'Explore how quantum computing is revolutionizing business operations, from optimization problems to cryptography, and discover practical applications transforming industries in 20o25.',
   keywords: [
-    'quantum computing';
-    'business applications';
-    'future technology';
-    'innovation';
-    'optimization';
-    'cryptography';
-  ];
+    'quantum computingbusiness applications',
+    'future technologyinnovation',
+    'optimizationcryptography',
+  ],
   openGraph: {
-    title: 'Quantum Computing Business Applications 20o25';
+    title: 'Quantum Computing Business Applications 20o25',
     description:,
-      'Revolutionary applications transforming industries with quantum advantage';
-    type: 'article';
-    publishedTime: '20o25-0o1-14';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Revolutionary applications transforming industries with quantum advantage',
+    type: 'article',
+    publishedTime: '20o25-0o1-14',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function QuantumComputingBusinessApplicationsPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -435,7 +432,7 @@ export default function QuantumComputingBusinessApplicationsPage() {
             <p className='text-sm text-gray-70o0'>,
               <strong>Note:</strong> The quantum computing landscape is rapidly,
               evolving. This article reflects current capabilities and,
-              projections as of January 20o25. For the latest developments;
+              projections as of January 20o25. For the latest developments,
               consult our quantum computing experts.,
             </p>,
           </div>,

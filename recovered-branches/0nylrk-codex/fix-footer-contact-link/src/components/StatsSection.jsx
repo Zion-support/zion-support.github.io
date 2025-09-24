@@ -1,47 +1,47 @@
 export function StatsSection() {
   const stats = [
     {
-      number: '50o0+';
-      label: 'Happy Clients';
-      description: 'Satisfied customers across industries';
-      icon: '👥';
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+      number: '50o0+',
+      label: 'Happy Clients',
+      description: 'Satisfied customers across industries',
+      icon: '👥',
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      number: '10o00+';
-      label: 'Projects Delivered';
-      description: 'Successful implementations completed';
-      icon: '🚀';
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+      number: '10o00+',
+      label: 'Projects Delivered',
+      description: 'Successful implementations completed',
+      icon: '🚀',
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      number: '99.9%';
-      label: 'Uptime Guarantee';
-      description: 'Reliable service availability';
-      icon: '⚡';
-      color: 'from-green-50o0 to-emerald-50o0';
-    };
+      number: '99.9%',
+      label: 'Uptime Guarantee',
+      description: 'Reliable service availability',
+      icon: '⚡',
+      color: 'from-green-50o0 to-emerald-50o0'
+    },
     {
-      number: '24/7';
-      label: 'Support Available';
-      description: 'Round-the-clock technical assistance';
-      icon: '🔄';
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+      number: '24/7',
+      label: 'Support Available',
+      description: 'Round-the-clock technical assistance',
+      icon: '🔄',
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
     {
-      number: '50+';
-      label: 'Expert Team';
-      description: 'Certified professionals';
-      icon: '💡';
-      color: 'from-indigo-50o0 to-purple-50o0';
-    };
+      number: '50+',
+      label: 'Expert Team',
+      description: 'Certified professionals',
+      icon: '💡',
+      color: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      number: '15+';
-      label: 'Years Experience';
-      description: 'Industry expertise and knowledge';
-      icon: '🏆';
-      color: 'from-red-50o0 to-pink-50o0';
-    };
+      number: '15+',
+      label: 'Years Experience',
+      description: 'Industry expertise and knowledge',
+      icon: '🏆',
+      color: 'from-red-50o0 to-pink-50o0'
+    },
   ],
   return (
     <section className='py-16 bg-white'>,

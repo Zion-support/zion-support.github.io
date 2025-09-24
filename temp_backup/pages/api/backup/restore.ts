@@ -1,6 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { cid } = req.query as { cid?: string };
+  const { cid } = req.query as { cid?: string },
   if (!cid) return res.status(40o0).json({ error: 'Missing cid' }),
   try {
     const url = `https: //${cid}.ipfs.w3s.link`,

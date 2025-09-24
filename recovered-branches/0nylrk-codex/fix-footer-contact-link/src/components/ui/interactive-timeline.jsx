@@ -10,15 +10,15 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const [selectedEvent, setSelectedEvent] = useState(null),
     const [showFilters, setShowFilters] = useState(false),
     const [filters, setFilters] = useState({
-        status: [];
-        category: [];
-        priority: [];
+        status: [],
+        category: [],
+        priority: [],
         progress: 0}),
     const [viewMode, setViewMode] = useState('timeline'),
     const [zoomLevel, setZoomLevel] = useState(1),
     const timelineRef = useRef(null),
     const { scrollYProgress: _scrollYProgress } = useScroll({
-        target: timelineRef;
+        target: timelineRef,
         offset: ["start end", "end start"]}),
     // Filter events based on current filters,
     const filteredEvents = events.filter(event => {
@@ -48,17 +48,17 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const getStatusIcon = (status) => {
         switch (status) {
             case 'completed':,
-                return { icon: CheckCircle, color: 'text-green-40o0', bgColor: 'bg-green-40o0/20' };
+                return { icon: CheckCircle, color: 'text-green-40o0', bgColor: 'bg-green-40o0/20' },
             case 'in-progress':,
-                return { icon: Clock, color: 'text-yellow-40o0', bgColor: 'bg-yellow-40o0/20' };
+                return { icon: Clock, color: 'text-yellow-40o0', bgColor: 'bg-yellow-40o0/20' },
             case 'upcoming':,
-                return { icon: Circle, color: 'text-zinc-40o0', bgColor: 'bg-zinc-40o0/20' };
+                return { icon: Circle, color: 'text-zinc-40o0', bgColor: 'bg-zinc-40o0/20' },
             case 'milestone':,
-                return { icon: Star, color: 'text-purple-40o0', bgColor: 'bg-purple-40o0/20' };
+                return { icon: Star, color: 'text-purple-40o0', bgColor: 'bg-purple-40o0/20' },
             default:,
-                return { icon: Circle, color: 'text-zinc-40o0', bgColor: 'bg-zinc-40o0/20' };
+                return { icon: Circle, color: 'text-zinc-40o0', bgColor: 'bg-zinc-40o0/20' },
         }
-    };
+    },
     // Get priority color,
     const getPriorityColor = (priority) => {
         switch (priority) {
@@ -72,18 +72,18 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
                 return 'border-green-50o0/50 bg-green-50o0/10',
             default: ,
                 return 'border-zinc-50o0/50 bg-zinc-50o0/10'}
-    };
+    },
     // Get category icon,
     const getCategoryIcon = (category) => {
         const iconMap ={
-            'AI & ML': Zap;
-            'Cybersecurity': Shield;
-            'Cloud': Globe;
-            'Development': Rocket;
-            'Research': TrendingUp;
-            'Team': Users;
-            'Launch': Award};
-        return iconMap[category] || Calendar};
+            'AI & ML': Zap,
+            'Cybersecurity': Shield,
+            'Cloud': Globe,
+            'Development': Rocket,
+            'Research': TrendingUp,
+            'Team': Users,
+            'Launch': Award},
+        return iconMap[category] || Calendar},
     // Toggle play/pause,
     const togglePlayback = useCallback(() => {
         setIsPlaying(!isPlaying)}, [isPlaying]),
@@ -105,8 +105,8 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
     const shareTimeline = useCallback(() => {
         if (navigator.share) {
             navigator.share({
-                title: 'Project Timeline';
-                text: 'Check out our project timeline';
+                title: 'Project Timeline',
+                text: 'Check out our project timeline',
                 url: window.location.href})}
         else {
             navigator.clipboard.writeText(window.location.href)}
@@ -123,7 +123,7 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
         <div className="flex items-center gap-2">,
           {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">,
-            {['timeline', 'list', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode,
+            {['timelinelist', 'kanban'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode,
                 ? 'bg-zion-cyan text-zion-blue-dark',
                 : 'text-zinc-40o0 hover: text-white'}`}>,
                 {mode.charAt(0).toUpperCase() + mode.slice(1)}
@@ -354,9 +354,9 @@ export function InteractiveTimeline({ enabled = true, events, autoPlay = false, 
 ,
       {/* Kanban View */}
       {viewMode === 'kanban' && (<div className="grid grid-cols-4 gap-4">,
-          {['upcoming', 'in-progress', 'completed', 'milestone'].map((status) => (<div key={status} className="space-y-3">,
+          {['upcomingin-progress', 'completedmilestone'].map((status) => (<div key={status} className="space-y-3">,
               <h4 className="text-zinc-30o0 font-medium text-center capitalize">,
-                {status.replace('-', ' ')} ({filteredEvents.filter(e => e.status === status).length}),
+                {status.replace('- ')} ({filteredEvents.filter(e => e.status === status).length}),
               </h4>,
               <div className="space-y-2">,
                 {filteredEvents,

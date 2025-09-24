@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 Ultimate Innovation Showcase - Revolutionary Breakthroughs';
+  title: 'AI 20o25 Ultimate Innovation Showcase - Revolutionary Breakthroughs',
   description:,
-    'Discover the most revolutionary AI innovations of 20o25 that are transforming industries and creating unprecedented opportunities for businesses worldwide.';
+    'Discover the most revolutionary AI innovations of 20o25 that are transforming industries and creating unprecedented opportunities for businesses worldwide.',
   keywords: [
-    'AI 20o25';
-    'artificial intelligence';
-    'innovation';
-    'breakthrough';
-    'technology trends';
-    'business transformation';
-  ];
-};
+    'AI 20o25artificial intelligence',
+    'innovationbreakthrough',
+    'technology trendsbusiness transformation',
+  ]
+},
 export default function AI20o25UltimateInnovationShowcase() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,

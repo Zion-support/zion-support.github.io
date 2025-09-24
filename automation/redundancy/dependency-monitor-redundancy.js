@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function checkOutdatedDependencies() {
@@ -35,35 +35,35 @@ function checkOutdatedDependencies() {
     if (outdatedResult.status === 0) {
       return {
         outdated: {
-          count: 0;
-          packages: [];
+          count: 0,
+          packages: [],
           timestamp: nowIso()}
-      };
+      },
     } else {
       try {
         const outdatedData = JSON.parse(outdatedResult.stdout),
         const packages = Object.keys(outdatedData),
         return {
           outdated: {
-            count: packages.length;
+            count: packages.length,
             packages: packages.map(pkg => ({
-              name: pkg;
-              current: outdatedData[pkg].current;
-              latest: outdatedData[pkg].latest}));
+              name: pkg,
+              current: outdatedData[pkg].current,
+              latest: outdatedData[pkg].latest})),
             timestamp: nowIso()}
-        };
+        },
       } catch (parseErr) {
         return {
           outdated: {
-            count: 1;
-            packages: [{ name: "unknown", current: "unknown", latest: "unknown" }];
+            count: 1,
+            packages: [{ name: "unknown", current: "unknown", latest: "unknown" }],
             timestamp: nowIso()}
-        };
+        },
       }
     }
   } catch (err) {
     log(`Outdated dependencies check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -74,32 +74,32 @@ function checkVulnerabilities() {
     if (auditResult.status === 0) {
       return {
         vulnerabilities: {
-          count: 0;
-          level: "none";
+          count: 0,
+          level: "none",
           timestamp: nowIso()}
-      };
+      },
     } else {
       try {
         const auditData = JSON.parse(auditResult.stdout),
         const vulnCount = auditData.metadata?.vulnerabilities?.total || 0,
         return {
           vulnerabilities: {
-            count: vulnCount;
-            level: vulnCount > 0 ? "found" : "none";
+            count: vulnCount,
+            level: vulnCount > 0 ? "found" : "none",
             timestamp: nowIso()}
-        };
+        },
       } catch (parseErr) {
         return {
           vulnerabilities: {
-            count: 1;
-            level: "unknown";
+            count: 1,
+            level: "unknown",
             timestamp: nowIso()}
-        };
+        },
       }
     }
   } catch (err) {
     log(`Vulnerabilities check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
@@ -107,37 +107,37 @@ function checkPackageHealth() {
   try {
     log("Checking package health..."),
     const packageJson = JSON.parse(fs.readFileSync("package.json", "utf8")),
-    const dependencies = packageJson.dependencies || {};
-    const devDependencies = packageJson.devDependencies || {};
+    const dependencies = packageJson.dependencies || {},
+    const devDependencies = packageJson.devDependencies || {},
     const totalDeps = Object.keys(dependencies).length + Object.keys(devDependencies).length,
     return {
       packageHealth: {
-        totalDependencies: totalDeps;
-        production: Object.keys(dependencies).length;
-        development: Object.keys(devDependencies).length;
+        totalDependencies: totalDeps,
+        production: Object.keys(dependencies).length,
+        development: Object.keys(devDependencies).length,
         timestamp: nowIso()}
-    };
+    },
   } catch (err) {
     log(`Package health check failed: ${String(err)}`),
-    return { error: String(err), timestamp: nowIso() };
+    return { error: String(err), timestamp: nowIso() },
   }
 }
 ,
 function generateDependencyReport(outdated, vulnerabilities, packageHealth) {
   const timestamp = nowIso(),
   const report ={
-    timestamp;
-    redundancy: true;
-    source: "pm2-redundancy";
+    timestamp,
+    redundancy: true,
+    source: "pm2-redundancy",
     dependencyMonitor: {
-      outdated;
-      vulnerabilities;
-      packageHealth;
+      outdated,
+      vulnerabilities,
+      packageHealth,
       summary: {
-        overallHealth: "good";
+        overallHealth: "good",
         issues: []}
     }
-  };
+  },
   // Analyze overall health,
   if (outdated.outdated?.count > 0) {
     report.dependencyMonitor.summary.issues.push(`${outdated.outdated.count} outdated dependencies`)}
@@ -218,4 +218,4 @@ async function main() {
 if (require.main === module) {
   main()}
 ,
-module.exports ={ main, checkOutdatedDependencies, checkVulnerabilities, checkPackageHealth, generateDependencyReport };
+module.exports ={ main, checkOutdatedDependencies, checkVulnerabilities, checkPackageHealth, generateDependencyReport },

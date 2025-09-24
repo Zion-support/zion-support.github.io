@@ -1,4 +1,5 @@
-#!/usr/bin/env node import fs from 'fs', import path from 'path', import { glob } from 'glob', const CLEANUP_PATTERNS = [ 'src.disabled*.backup','***.old','***.tmp','***.log','**/logs*.test.*','***',{ nodir: true }), let cleanedCount = 0, for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }), let cleanedCount = 0, for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }), let cleanedCount = 0, for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } } function main() {  cleanScripts(), cleanRootFiles(), cleanReportFiles(), let totalRemoved = 0, for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }), for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } }        } main(),
+#!/usr/bin/env node import fs from 'fs',
+import path from 'path', import { glob } from 'glob', const CLEANUP_PATTERNS = [ 'src.disabled*.backup***.old','***.tmp***.log','**/logs*.test.****',{ nodir: true }), let cleanedCount = 0, for (const file of scriptFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanRootFiles() { const rootFiles = glob.sync('*',{ nodir: true }), let cleanedCount = 0, for (const file of rootFiles) { if ( file.includes('fix-') || file.includes('resolve-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.includes('process_') || file.includes('resolve_') || file.includes('fix_') || file.includes('final_') || file.includes('comprehensive_') || file.includes('aggressive_') || file.includes('targeted_') || file.includes('merge_') || file.includes('smart_merge_') || file.includes('quick_conflict_') || file.includes('process-') || file.includes('resolve-') || file.includes('fix-') || file.includes('final-') || file.includes('comprehensive-') || file.includes('aggressive-') || file.includes('targeted-') || file.includes('merge-') || file.includes('smart-merge-') || file.includes('quick-conflict-') || file.endsWith('.txt') || file.endsWith('.log') || file.endsWith('.cjs') || file.endsWith('.js') || file.endsWith('.sh') ) { if (removeFile(file)) { cleanedCount++} } } } function cleanReportFiles() { const reportFiles = glob.sync('**/*-report.json',{ nodir: true }), let cleanedCount = 0, for (const file of reportFiles) { if ( !file.includes('performance-report.json') && !file.includes('quality-report.json') && !file.includes('security-audit-report.json') ) { if (removeFile(file)) { cleanedCount++} } } } function main() {  cleanScripts(), cleanRootFiles(), cleanReportFiles(), let totalRemoved = 0, for (const pattern of CLEANUP_PATTERNS) { const files = glob.sync(pattern,{ nodir: false }), for (const file of files) { if (shouldRemoveFile(file)) { if (removeFile(file)) { totalRemoved++} } } }        } main(),
 #!/usr/bin/env node,
 import { glob } from 'glob',
 /**,
@@ -6,87 +7,58 @@ import { glob } from 'glob',
  * Removes disabled, backup, and unnecessary files,
  */,
 const CLEANUP_PATTERNS = [// Disabled directories,
-  'src.disabled/**';
-  'pages.disabled/**';
-  'pages.disabled_auto/**';
-  'components.disabled/**';
-  'lib.disabled/**';
-  'types.disabled/**';
-  'hooks.disabled/**';
-  'contracts.disabled/**';
+  'src.disabled/**pages.disabled/**',
+  'pages.disabled_auto/**components.disabled/**',
+  'lib.disabled/**types.disabled/**',
+  'hooks.disabled/**contracts.disabled/**',
   // Backup directories,
-  'automation_backup/**';
-  'backup-pages/**';
-  'pages.__backup/**';
-  'pages_backup/**';
-  'lib_backup/**';
-  'broken_files_backup/**';
+  'automation_backup/**backup-pages/**',
+  'pages.__backup/**pages_backup/**',
+  'lib_backup/**broken_files_backup/**',
   // API backup,
-  'api-backup/**';
+  'api-backup/**',
   // Temporary files,
-  '**/*.backup';
-  '**/*.disabled';
-  '**/*.old';
-  '**/*.bak';
-  '**/*.tmp';
-  '**/*.temp';
+  '**/*.backup**/*.disabled',
+  '**/*.old**/*.bak',
+  '**/*.tmp**/*.temp',
   // Build artifacts that shouldn't be in repo,
-  '.next/**';
-  'out/**';
-  'dist/**';
-  'build/**';
+  '.next/**out/**',
+  'dist/**build/**',
   // Log files,
-  '**/*.log';
-  '**/logs/**';
+  '**/*.log**/logs/**',
   // Cache directories,
-  '.cache/**';
-  'node_modules/.cache/**';
+  '.cache/**node_modules/.cache/**',
   // IDE files,
-  '.vscode/**';
-  '.idea/**';
-  '*.swp';
-  '*.swo';
-  '*~';
+  '.vscode/**.idea/**',
+  '*.swp*.swo',
+  '*~',
   // OS files,
-  '.DS_Store';
-  'Thumbs.db';
-  'desktop.ini';
+  '.DS_StoreThumbs.db',
+  'desktop.ini',
 ],
 const KEEP_PATTERNS = [// Keep important config files,
-  'package.json';
-  'package-lock.json';
-  'yarn.lock';
-  'next.config.js';
-  'next.config.cjs';
-  'next.config.mjs';
-  'tsconfig.json';
-  'tailwind.config.js';
-  'postcss.config.js';
-  'eslint.config.js';
+  'package.jsonpackage-lock.json',
+  'yarn.locknext.config.js',
+  'next.config.cjsnext.config.mjs',
+  'tsconfig.jsontailwind.config.js',
+  'postcss.config.jseslint.config.js',
   // Keep documentation,
-  'README.md';
-  'CHANGELOG.md';
-  'LICENSE';
-  'docs/**';
+  'README.mdCHANGELOG.md',
+  'LICENSEdocs/**',
   // Keep scripts (but clean them),
-  'scripts/**';
+  'scripts/**',
   // Keep automation (but clean backups),
-  'automation/**';
+  'automation/**',
   // Keep tests,
-  '__tests__/**';
-  '**/*.test.*';
-  '**/*.spec.*';
+  '__tests__/****/*.test.*',
+  '**/*.spec.*',
   // Keep public assets,
-  'public/**';
+  'public/**',
   // Keep source code,
-  'pages/**';
-  'components/**';
-  'src/**';
-  'lib/**';
-  'utils/**';
-  'hooks/**';
-  'types/**';
-  'api/**';
+  'pages/**components/**',
+  'src/**lib/**',
+  'utils/**hooks/**',
+  'types/**api/**',
 ],
 function shouldKeepFile(filePath) {
   // Check if file matches keep patterns,

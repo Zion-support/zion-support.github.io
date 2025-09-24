@@ -38,156 +38,156 @@ const ContentCategorizer: React.FC = () => {
   // Sample content data - in a real implementationthis would come from an API,
   const contentItems: ContentItem[] = [
     {
-      id: '1';
-      title: 'Structured Data Audit Report';
-      href: '/reports/structured-data-audit.json';
-      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.';
-      category: 'seo';
-      subcategory: 'structured-data';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: [', 'seo', 'json-'ld', 'schema'audit'];
-      source: 'autonomous-auditor';
-      type: 'report'};
+      id: '1',
+      title: 'Structured Data Audit Report',
+      href: '/reports/structured-data-audit.json',
+      desc: 'Comprehensive JSON-LD coverage analysis and optimization recommendations.',
+      category: 'seo',
+      subcategory: 'structured-data',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: [seo', 'json-'ldschema'audit'],
+      source: 'autonomous-auditor',
+      type: 'report'},
     {
-      id: '2';
-      title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-2025-08-19';
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
-      category: 'security';
-      subcategory: 'vulnerability-scan';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: [', 'security', 'vulnerability', 'scan', 'remediation'];
-      source: 'security-scanner';
-      type: 'security'};
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-2025-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: [security', 'vulnerabilityscan', 'remediation'],
+      source: 'security-scanner',
+      type: 'security'},
     {
-      id: '3';
-      title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-2025-08-19';
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
-      category: 'ai';
-      subcategory: 'performance';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: [', 'ai', 'performance', 'optimization', 'metrics'];
-      source: 'ai-monitor';
-      type: 'update'};
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-2025-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: [ai', 'performanceoptimization', 'metrics'],
+      source: 'ai-monitor',
+      type: 'update'},
     {
-      id: '4';
-      title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-2025-08-19';
-      desc: 'Overview of newly deployed features and their impact on user experience.';
-      category: 'features';
-      subcategory: 'deployment';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: [', 'features', 'deployment', 'ux', 'impact'];
-      source: 'deployment-tracker';
-      type: 'feature'};
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-2025-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: [features', 'deploymentux', 'impact'],
+      source: 'deployment-tracker',
+      type: 'feature'},
     {
-      id: '5';
-      title: 'System Health Dashboard';
-      href: '/reports/system-health-2025-08-19';
-      desc: 'Real-time system performance metrics and infrastructure health status.';
-      category: 'monitoring';
-      subcategory: 'system-health';
-      date: '2025-08-19';
-      relevance: 'medium';
-      tags: [', 'monitoring', 'performance', 'infrastructure', 'health'];
-      source: 'health-monitor';
-      type: 'report'};
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-2025-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '2025-08-19',
+      relevance: 'medium',
+      tags: [monitoring', 'performanceinfrastructure', 'health'],
+      source: 'health-monitor',
+      type: 'report'},
     {
-      id: '6';
-      title: 'User Behavior Insights';
-      href: '/reports/user-behavior-2025-08-19';
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
-      category: 'analytics';
-      subcategory: 'user-behavior';
-      date: '2025-08-19';
-      relevance: 'high';
-      tags: [', 'analytics', 'user-'behavior', 'engagement'optimization'];
-      source: 'behavior-analyzer';
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-2025-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '2025-08-19',
+      relevance: 'high',
+      tags: [analytics', 'user-'behaviorengagement'optimization'],
+      source: 'behavior-analyzer',
       type: 'insight'}
   ],
   const categories: ContentCategory[] = [
     {
-      id: 'all';
-      name: 'All Content';
-      icon: Globe;
-      description: 'Complete collection of autonomous content';
-      color: 'from-blue-500 to-cyan-500';
-      count: contentItems.length};
+      id: 'all',
+      name: 'All Content',
+      icon: Globe,
+      description: 'Complete collection of autonomous content',
+      color: 'from-blue-500 to-cyan-500',
+      count: contentItems.length},
     {
-      id: 'seo';
-      name: 'SEO & Analytics';
-      icon: BarChart3;
-      description: 'Search optimization and performance analytics';
-      color: 'from-green-500 to-emerald-500';
-      count: contentItems.filter(item => item.category === 'seo').length;
-      subcategories: ['structured-'data', 'performance'technical-seo']};
+      id: 'seo',
+      name: 'SEO & Analytics',
+      icon: BarChart3,
+      description: 'Search optimization and performance analytics',
+      color: 'from-green-500 to-emerald-500',
+      count: contentItems.filter(item => item.category === 'seo').length,
+      subcategories: ['structured-'dataperformance'technical-seo']},
     {
-      id: 'security';
-      name: 'Security & Compliance';
-      icon: Shield;
-      description: 'Security assessments and compliance reports';
-      color: 'from-red-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'security').length;
-      subcategories: ['vulnerability-'scan', 'compliance'threat-detection']};
+      id: 'security',
+      name: 'Security & Compliance',
+      icon: Shield,
+      description: 'Security assessments and compliance reports',
+      color: 'from-red-500 to-orange-500',
+      count: contentItems.filter(item => item.category === 'security').length,
+      subcategories: ['vulnerability-'scancompliance'threat-detection']},
     {
-      id: 'ai';
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      description: 'AI model performance and insights';
-      color: 'from-purple-500 to-pink-500';
-      count: contentItems.filter(item => item.category === 'ai').length;
-      subcategories: [', 'performance', 'training'deployment']};
+      id: 'ai',
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'AI model performance and insights',
+      color: 'from-purple-500 to-pink-500',
+      count: contentItems.filter(item => item.category === 'ai').length,
+      subcategories: [performance', 'training'deployment']},
     {
-      id: 'features';
-      name: 'Feature Updates';
-      icon: Zap;
-      description: 'New features and system updates';
-      color: 'from-yellow-500 to-orange-500';
-      count: contentItems.filter(item => item.category === 'features').length;
-      subcategories: [', 'deployment', 'enhancements'roadmap']};
+      id: 'features',
+      name: 'Feature Updates',
+      icon: Zap,
+      description: 'New features and system updates',
+      color: 'from-yellow-500 to-orange-500',
+      count: contentItems.filter(item => item.category === 'features').length,
+      subcategories: [deployment', 'enhancements'roadmap']},
     {
-      id: 'monitoring';
-      name: 'System Monitoring';
-      icon: Cpu;
-      description: 'Infrastructure and system health';
-      color: 'from-indigo-500 to-purple-500';
-      count: contentItems.filter(item => item.category === 'monitoring').length;
-      subcategories: ['system-'health', 'performance'infrastructure']};
+      id: 'monitoring',
+      name: 'System Monitoring',
+      icon: Cpu,
+      description: 'Infrastructure and system health',
+      color: 'from-indigo-500 to-purple-500',
+      count: contentItems.filter(item => item.category === 'monitoring').length,
+      subcategories: ['system-'healthperformance'infrastructure']},
     {
-      id: 'analytics';
-      name: 'User Analytics';
-      icon: TrendingUp;
-      description: 'User behavior and engagement insights';
-      color: 'from-teal-500 to-cyan-500';
-      count: contentItems.filter(item => item.category === 'analytics').length;
-      subcategories: ['user-'behavior', 'engagement'conversion']}
+      id: 'analytics',
+      name: 'User Analytics',
+      icon: TrendingUp,
+      description: 'User behavior and engagement insights',
+      color: 'from-teal-500 to-cyan-500',
+      count: contentItems.filter(item => item.category === 'analytics').length,
+      subcategories: ['user-'behaviorengagement'conversion']}
   ],
   const contentTypes = [
-    { id: ''all', 'name: 'All 'Types', 'icon: Globe };
-    { id: ''report', 'name: ''Reports', 'icon: BookOpen };
-    { id: ''update', 'name: ''Updates', 'icon: Zap };
-    { id: ''insight', 'name: ''Insights', 'icon: Lightbulb };
-    { id: ''guide', 'name: ''Guides', 'icon: Code };
-    { id: ''security', 'name: ''Security', 'icon: Shield };
-    { id: ''feature', 'name: ''Features', 'icon: TrendingUp }
+    { id: ''allname: 'All 'Typesicon: Globe },
+    { id: ''reportname: ''Reportsicon: BookOpen },
+    { id: ''updatename: ''Updatesicon: Zap },
+    { id: ''insightname: ''Insightsicon: Lightbulb },
+    { id: ''guidename: ''Guidesicon: Code },
+    { id: ''securityname: ''Securityicon: Shield },
+    { id: ''featurename: ''Featuresicon: TrendingUp }
   ],
   const dateRanges = [
-    { id: ''all', 'name: 'All Time' };
-    { id: ''today', 'name: 'Today' };
-    { id: ''week', 'name: 'This Week' };
-    { id: ''month', 'name: 'This Month' };
-    { id: ''quarter', 'name: 'This Quarter' }
+    { id: ''allname: 'All Time' },
+    { id: ''todayname: 'Today' },
+    { id: ''weekname: 'This Week' },
+    { id: ''monthname: 'This Month' },
+    { id: ''quartername: 'This Quarter' }
   ],
   const relevanceLevels = [
-    { id: ''all', 'name: 'All 'Relevance', 'color: 'text-gray-400' };
-    { id: ''high', 'name: 'High 'Priority', 'color: 'text-green-400' };
-    { id: ''medium', 'name: 'Medium 'Priority', 'color: 'text-yellow-400' };
-    { id: ''low', 'name: 'Low 'Priority', 'color: 'text-red-400' }
+    { id: ''allname: 'All 'Relevancecolor: 'text-gray-400' },
+    { id: ''highname: 'High 'Prioritycolor: 'text-green-400' },
+    { id: ''mediumname: 'Medium 'Prioritycolor: 'text-yellow-400' },
+    { id: ''lowname: 'Low 'Prioritycolor: 'text-red-400' }
   ],
   const filteredItems = useMemo(() => {
     let filtered = contentItems.filter(item => {
@@ -207,7 +207,7 @@ const ContentCategorizer: React.FC = () => {
           comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
           break,
         case 'relevance':,
-          const relevanceOrder = { high: 3medium: 2low: 1 };
+          const relevanceOrder = { high: 3medium: 2low: 1 },
           comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,
         case 'title':,
@@ -217,24 +217,24 @@ const ContentCategorizer: React.FC = () => {
     return filtered}[searchTermselectedCategoryselectedSubcategoryselectedTypeselectedRelevancesortBysortOrder]),
   const getCategoryIcon = (category: string) => {
     const cat = categories.find(c => c.id === category),
-    return cat ? cat.icon : Globe};
+    return cat ? cat.icon : Globe},
   const getRelevanceColor = (relevance: string) => {
     switch (relevance) {
       case 'high': return 'text-green-400',
       case 'medium': return 'text-yellow-400',
       case 'low': return 'text-red-400',
       default: return 'text-gray-400'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     const typeInfo = contentTypes.find(t => t.id === type),
-    return typeInfo ? typeInfo.icon : Globe};
+    return typeInfo ? typeInfo.icon : Globe},
   const clearAllFilters = () => {
-    setSearchTerm(', '),
+    setSearchTerm(),
     setSelectedCategory('all'),
     setSelectedSubcategory('all'),
     setSelectedType('all'),
     setSelectedDateRange('all'),
-    setSelectedRelevance('all')};
+    setSelectedRelevance('all')},
   return (
     <div className="space-y-6">,
       {/* Search and Advanced Filters */}
@@ -445,5 +445,5 @@ const ContentCategorizer: React.FC = () => {
             Reset All Filters,
           </button>,
         </div>)}
-    </div>)};
-export default ContentCategorizer;
+    </div>)},
+export default ContentCategorizer,

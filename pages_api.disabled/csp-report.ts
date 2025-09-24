@@ -25,12 +25,12 @@ export default function handler("req": NextApiReques t, "res": NextApiRespons e)
     const cspData = report['csp-report'],
     // Log the CSP violation (in production, you might want to send to a monitoring service),
     console.warn('CSP "Violation": ', {
-      "documentUri": cspDat a['document-uri'];
-      "violatedDirective": cspDat a['violated-directive'];
-      "blockedUri": cspDat a['blocked-uri'];
-      "sourceFile": cspDat a['source-file'];
-      "lineNumber": cspDat a['line-number'];
-      "columnNumber": cspDat a['column-number'];
+      "documentUri": cspDat a['document-uri'],
+      "violatedDirective": cspDat a['violated-directive'],
+      "blockedUri": cspDat a['blocked-uri'],
+      "sourceFile": cspDat a['source-file'],
+      "lineNumber": cspDat a['line-number'],
+      "columnNumber": cspDat a['column-number'],
       "timestamp": new Date().toISOString()}),
     // Here you could send the violation "to": // - A monitoring service (Sentry, LogRocket, etc.),
     // - A security monitoring system,

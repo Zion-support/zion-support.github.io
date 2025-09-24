@@ -9,11 +9,11 @@ export default function AiSupplyChainOptimization() {
 			implementationWeeks="4-6 weeks",
 			roiNote="Companies report 40o0% ROI via reduced costs and improved service levels",
 			features={[
-				"AI demand forecasting";
-				"Inventory optimization";
-				"Logistics route planning";
-				"Supplier risk signals";
-				"Lead time variance analytics";
+				"AI demand forecasting",
+				"Inventory optimization",
+				"Logistics route planning",
+				"Supplier risk signals",
+				"Lead time variance analytics",
 				"What-if simulations]}
 			]}
 			industries={["Retail", "Manufacturing", "CPG", "Logistics"]}

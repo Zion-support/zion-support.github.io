@@ -2,24 +2,24 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search;
-  Filter;
-  Grid;
-  List;
-  Star;
-  Clock;
-  TrendingUp;
-  ArrowRight;
-  X;
-  Eye;
-  Heart;
-  Share2;
-  Bookmark;
-  Sparkles;
-  Zap;
-  Brain;
-  Cpu;
-  Rocket;
+  Search,
+  Filter,
+  Grid,
+  List,
+  Star,
+  Clock,
+  TrendingUp,
+  ArrowRight,
+  X,
+  Eye,
+  Heart,
+  Share2,
+  Bookmark,
+  Sparkles,
+  Zap,
+  Brain,
+  Cpu,
+  Rocket,
 } from 'lucide-react',
 const InteractiveContentDiscoveryWidget = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -29,130 +29,130 @@ const InteractiveContentDiscoveryWidget = () => {
   const [favorites, setFavorites] = useState(new Set()),
   const [recentlyViewed, setRecentlyViewed] = useState([]),
   const categories = [
-    { id: 'all', name: 'All Content', icon: Grid, count: 156 };
+    { id: 'all', name: 'All Content', icon: Grid, count: 156 },
     {
-      id: 'ai-breakthroughs';
-      name: 'AI Breakthroughs';
-      icon: Brain;
-      count: 42;
-    };
+      id: 'ai-breakthroughs',
+      name: 'AI Breakthroughs',
+      icon: Brain,
+      count: 42
+    },
     {
-      id: 'quantum-computing';
-      name: 'Quantum Computing';
-      icon: Cpu;
-      count: 28;
-    };
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      icon: Cpu,
+      count: 28
+    },
     {
-      id: 'neural-interfaces';
-      name: 'Neural Interfaces';
-      icon: Zap;
-      count: 19;
-    };
-    { id: 'automation', name: 'Automation', icon: Rocket, count: 35 };
-    { id: 'tutorials', name: 'Tutorials', icon: Bookmark, count: 32 };
+      id: 'neural-interfaces',
+      name: 'Neural Interfaces',
+      icon: Zap,
+      count: 19
+    },
+    { id: 'automation', name: 'Automation', icon: Rocket, count: 35 },
+    { id: 'tutorials', name: 'Tutorials', icon: Bookmark, count: 32 },
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'AI Consciousness Breakthrough 20o25';
+      id: 1,
+      title: 'AI Consciousness Breakthrough 20o25',
       description:,
-        'Revolutionary AI systems achieving consciousness-level processing';
-      category: 'ai-breakthroughs';
-      type: 'article';
-      readTime: '8 min';
-      views: 15420;
-      likes: 892;
-      isTrending: true;
-      isNew: true;
-      tags: ['AI', 'Consciousness', 'Breakthrough', '20o25'];
-      image: '🧠';
-      author: 'Dr. Sarah Chen';
-      publishedAt: '20o25-0o1-15';
-    };
+        'Revolutionary AI systems achieving consciousness-level processing',
+      category: 'ai-breakthroughs',
+      type: 'article',
+      readTime: '8 min',
+      views: 15420,
+      likes: 892,
+      isTrending: true,
+      isNew: true,
+      tags: ['AIConsciousness', 'Breakthrough20o25'],
+      image: '🧠',
+      author: 'Dr. Sarah Chen',
+      publishedAt: '20o25-0o1-15'
+    },
     {
-      id: 2;
-      title: 'Quantum Neural Networks Explained';
+      id: 2,
+      title: 'Quantum Neural Networks Explained',
       description:,
-        'How quantum computing is revolutionizing neural network architectures';
-      category: 'quantum-computing';
-      type: 'video';
-      readTime: '15 min';
-      views: 8930;
-      likes: 456;
-      isTrending: false;
-      isNew: false;
-      tags: ['Quantum', 'Neural Networks', 'Computing', 'Tutorial'];
-      image: '⚛️';
-      author: 'Prof. Marcus Rodriguez';
-      publishedAt: '20o25-0o1-12';
-    };
+        'How quantum computing is revolutionizing neural network architectures',
+      category: 'quantum-computing',
+      type: 'video',
+      readTime: '15 min',
+      views: 8930,
+      likes: 456,
+      isTrending: false,
+      isNew: false,
+      tags: ['QuantumNeural Networks', 'ComputingTutorial'],
+      image: '⚛️',
+      author: 'Prof. Marcus Rodriguez',
+      publishedAt: '20o25-0o1-12'
+    },
     {
-      id: 3;
-      title: 'Neural Interface Implementation Guide';
+      id: 3,
+      title: 'Neural Interface Implementation Guide',
       description:,
-        'Step-by-step guide to implementing brain-computer interfaces';
-      category: 'neural-interfaces';
-      type: 'guide';
-      readTime: '12 min';
-      views: 6780;
-      likes: 234;
-      isTrending: true;
-      isNew: false;
-      tags: ['Neural Interface', 'BCI', 'Implementation', 'Guide'];
-      image: '🔗';
-      author: 'Dr. Emily Watson';
-      publishedAt: '20o25-0o1-10';
-    };
+        'Step-by-step guide to implementing brain-computer interfaces',
+      category: 'neural-interfaces',
+      type: 'guide',
+      readTime: '12 min',
+      views: 6780,
+      likes: 234,
+      isTrending: true,
+      isNew: false,
+      tags: ['Neural InterfaceBCI', 'ImplementationGuide'],
+      image: '🔗',
+      author: 'Dr. Emily Watson',
+      publishedAt: '20o25-0o1-10'
+    },
     {
-      id: 4;
-      title: 'Autonomous Business Operations';
-      description: 'How AI is creating fully autonomous business systems';
-      category: 'automation';
-      type: 'case-study';
-      readTime: '6 min';
-      views: 12340;
-      likes: 678;
-      isTrending: false;
-      isNew: true;
-      tags: ['Automation', 'Business', 'AI', 'Operations'];
-      image: '🤖';
-      author: 'Alex Thompson';
-      publishedAt: '20o25-0o1-08';
-    };
+      id: 4,
+      title: 'Autonomous Business Operations',
+      description: 'How AI is creating fully autonomous business systems',
+      category: 'automation',
+      type: 'case-study',
+      readTime: '6 min',
+      views: 12340,
+      likes: 678,
+      isTrending: false,
+      isNew: true,
+      tags: ['AutomationBusiness', 'AIOperations'],
+      image: '🤖',
+      author: 'Alex Thompson',
+      publishedAt: '20o25-0o1-08'
+    },
     {
-      id: 5;
-      title: 'Quantum AI Fusion Technology';
+      id: 5,
+      title: 'Quantum AI Fusion Technology',
       description:,
-        'The convergence of quantum computing and artificial intelligence';
-      category: 'quantum-computing';
-      type: 'research';
-      readTime: '20 min';
-      views: 5670;
-      likes: 345;
-      isTrending: true;
-      isNew: false;
-      tags: ['Quantum AI', 'Fusion', 'Technology', 'Research'];
-      image: '🔬';
-      author: 'Dr. James Liu';
-      publishedAt: '20o25-0o1-0o5';
-    };
+        'The convergence of quantum computing and artificial intelligence',
+      category: 'quantum-computing',
+      type: 'research',
+      readTime: '20 min',
+      views: 5670,
+      likes: 345,
+      isTrending: true,
+      isNew: false,
+      tags: ['Quantum AIFusion', 'TechnologyResearch'],
+      image: '🔬',
+      author: 'Dr. James Liu',
+      publishedAt: '20o25-0o1-0o5'
+    },
     {
-      id: 6;
-      title: 'AI Tools Mastery Course';
+      id: 6,
+      title: 'AI Tools Mastery Course',
       description:,
-        'Complete course on mastering the latest AI development tools';
-      category: 'tutorials';
-      type: 'course';
-      readTime: '45 min';
-      views: 9870;
-      likes: 567;
-      isTrending: false;
-      isNew: true;
-      tags: ['AI Tools', 'Course', 'Tutorial', 'Mastery'];
-      image: '🛠️';
-      author: 'Tech Academy';
-      publishedAt: '20o25-0o1-0o3';
-    };
+        'Complete course on mastering the latest AI development tools',
+      category: 'tutorials',
+      type: 'course',
+      readTime: '45 min',
+      views: 9870,
+      likes: 567,
+      isTrending: false,
+      isNew: true,
+      tags: ['AI ToolsCourse', 'TutorialMastery'],
+      image: '🛠️',
+      author: 'Tech Academy',
+      publishedAt: '20o25-0o1-0o3'
+    },
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch =,
@@ -169,11 +169,11 @@ const InteractiveContentDiscoveryWidget = () => {
       if (newFavorites.has(id)) {
         newFavorites.delete(id)} else {
         newFavorites.add(id)}
-      return newFavorites})};
+      return newFavorites})},
   const addToRecentlyViewed = item => {
     setRecentlyViewed(prev => {
       const filtered = prev.filter(i => i.id !== item.id),
-      return [item, ...filtered].slice(0, 5)})};
+      return [item, ...filtered].slice(0, 5)})},
   const getTypeIcon = type => {
     switch (type) {
       case 'video':,
@@ -190,7 +190,7 @@ const InteractiveContentDiscoveryWidget = () => {
         return '🎓',
       default: ,
         return '📄'}
-  };
+  },
   return (
     <>,
       {/* Floating Action Button */}
@@ -436,5 +436,5 @@ const InteractiveContentDiscoveryWidget = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default InteractiveContentDiscoveryWidget;
+    </>)},
+export default InteractiveContentDiscoveryWidget,

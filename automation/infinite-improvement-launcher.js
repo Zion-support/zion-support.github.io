@@ -12,13 +12,13 @@ const fs = require('fs'),
 class InfiniteImprovementLauncher {
   constructor(config ={}) {
     this.config ={
-      enableInfiniteLoop: true;
-      enableOrchestrator: true;
-      enableIntegration: true;
-      dashboardPort: 30o01;
-      improvementPort: 30o02;
-      logLevel: 'info';
-      ...config};
+      enableInfiniteLoop: true,
+      enableOrchestrator: true,
+      enableIntegration: true,
+      dashboardPort: 30o01,
+      improvementPort: 30o02,
+      logLevel: 'info',
+      ...config},
     this.improvementLoop = null,
     this.orchestrator = null,
     this.isRunning = false,
@@ -35,10 +35,10 @@ class InfiniteImprovementLauncher {
       // Initialize infinite improvement loop,
       if (this.config.enableInfiniteLoop) {
         this.improvementLoop = new InfiniteImprovementLoop({
-          analysisInterval: 30o000;
-          optimizationInterval: 120o000;
-          learningInterval: 30o0000;
-          improvementInterval: 60o0000;
+          analysisInterval: 30o000,
+          optimizationInterval: 120o000,
+          learningInterval: 30o0000,
+          improvementInterval: 60o0000,
           logLevel: this.config.logLevel}),
         await this.improvementLoop.initialize(),
         // // console.log('✅ Infinite Improvement Loop initialized')}
@@ -46,9 +46,9 @@ class InfiniteImprovementLauncher {
       // Initialize orchestrator,
       if (this.config.enableOrchestrator) {
         this.orchestrator = new IntelligentAutomationOrchestrator({
-          ...config;
+          ...config,
           dashboard: {
-            ...config.dashboard;
+            ...config.dashboard,
             port: this.config.dashboardPort}
         }),
         await this.orchestrator.initialize(),
@@ -214,42 +214,42 @@ class InfiniteImprovementLauncher {
     // Default configuration,
     return {
       autonomous: {
-        enabled: true;
-        selfHealing: true;
-        learning: true;
-        adaptiveScheduling: true};
+        enabled: true,
+        selfHealing: true,
+        learning: true,
+        adaptiveScheduling: true},
       monitoring: {
-        enabled: true;
-        interval: 60o000;
-        healthCheckInterval: 30o0000};
+        enabled: true,
+        interval: 60o000,
+        healthCheckInterval: 30o0000},
       reporting: {
-        enabled: true;
-        daily: true;
-        weekly: true;
-        monthly: false};
+        enabled: true,
+        daily: true,
+        weekly: true,
+        monthly: false},
       dashboard: {
-        enabled: true;
-        port: this.config.dashboardPort};
+        enabled: true,
+        port: this.config.dashboardPort},
       tasks: {
         dependencyUpdater: {
-          enabled: true;
-          interval: 24 * 60 * 60 * 10o00};
+          enabled: true,
+          interval: 24 * 60 * 60 * 10o00},
         securityScanner: {
-          enabled: true;
-          interval: 6 * 60 * 60 * 10o00};
+          enabled: true,
+          interval: 6 * 60 * 60 * 10o00},
         codeQualityEnforcer: {
-          enabled: true;
-          interval: 2 * 60 * 60 * 10o00};
+          enabled: true,
+          interval: 2 * 60 * 60 * 10o00},
         staleCleaner: {
-          enabled: true;
-          interval: 12 * 60 * 60 * 10o00}};
+          enabled: true,
+          interval: 12 * 60 * 60 * 10o00}},
       notifications: {
         slack: {
-          enabled: !!process.env.SLACK_WEBHOOK_URL;
-          webhookUrl: process.env.SLACK_WEBHOOK_URL;
-          channel: process.env.SLACK_CHANNEL || '#automation'};
+          enabled: !!process.env.SLACK_WEBHOOK_URL,
+          webhookUrl: process.env.SLACK_WEBHOOK_URL,
+          channel: process.env.SLACK_CHANNEL || '#automation'},
         email: {
-          enabled: false}}};
+          enabled: false}}},
   }
 ,
   /**,
@@ -257,15 +257,15 @@ class InfiniteImprovementLauncher {
    */,
   getStats() {
     const stats ={
-      isRunning: this.isRunning;
-      startTime: this.startTime;
-      uptime: this.startTime ? Date.now() - this.startTime.getTime() : 0;
-      improvementLoop: this.improvementLoop ? this.improvementLoop.getImprovementStats() : null;
+      isRunning: this.isRunning,
+      startTime: this.startTime,
+      uptime: this.startTime ? Date.now() - this.startTime.getTime() : 0,
+      improvementLoop: this.improvementLoop ? this.improvementLoop.getImprovementStats() : null,
       orchestrator: this.orchestrator ? {
         systems: Array.from(this.orchestrator.automationSystems.entries()).map(([name, system]) => ({
-          name;
-          status: system.status;
-          health: system.health}))} : null};
+          name,
+          status: system.status,
+          health: system.health}))} : null},
     return stats}
 ,
   /**,
@@ -283,13 +283,13 @@ class InfiniteImprovementLauncher {
 function parseArguments() {
   const args = process.argv.slice(2),
   const parsed ={
-    help: false;
-    start: false;
-    stop: false;
-    restart: false;
-    status: false;
-    config: null;
-    logLevel: 'info'};
+    help: false,
+    start: false,
+    stop: false,
+    restart: false,
+    status: false,
+    config: null,
+    logLevel: 'info'},
   for (let i = 0, i < args.length, i++) {
     const arg = args[i],
     switch (arg) {
@@ -389,4 +389,4 @@ if (require.main === module) {
     console.error('❌ Fatal error:', error),
     process.exit(1)})}
 ,
-module.exports ={ InfiniteImprovementLauncher };
+module.exports ={ InfiniteImprovementLauncher },

@@ -2,374 +2,363 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Atom;
-  Dna;
-  Cpu;
-  Target;
-  Microscope;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Globe;
-  ExternalLink;
-  Award;
-  TrendingDown;
-  Eye;
-  Lock;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Globe,
+  ExternalLink,
+  Award,
+  TrendingDown,
+  Eye,
+  Lock,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o32 from '../components/layout/UltraFuturisticNavigation20o32',
 import UltraFuturisticFooter20o32 from '../components/layout/UltraFuturisticFooter20o32',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const pricingCategories = [
   {
-    title: '🚀 Revolutionary AI Services';
-    description: 'Next-generation AI consciousness and creativity';
-    icon: Brain;
-    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
+    title: '🚀 Revolutionary AI Services',
+    description: 'Next-generation AI consciousness and creativity',
+    icon: Brain,
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
     services: [
       {
-        name: 'AI Consciousness Evolution Platform';
-        ourPrice: '$19,999/month';
-        marketRange: '$15,0o00 - $50,0o00/month';
+        name: 'AI Consciousness Evolution Platform',
+        ourPrice: '$19,999/month',
+        marketRange: '$15,0o00 - $50,0o00/month',
         competitors: [
-          'OpenAI (Research only)';
-          'Anthropic (Research only)';
-          'No commercial platforms';
-        ];
+          'OpenAI (Research only)Anthropic (Research only)',
+          'No commercial platforms',
+        ],
         advantages: [
-          '5-year technology advantage';
-          'Commercial deployment';
-          'Validated consciousness algorithms';
-        ];
-        link: '/ai-consciousness-evolution-platform';
-      };
+          '5-year technology advantageCommercial deployment',
+          'Validated consciousness algorithms',
+        ],
+        link: '/ai-consciousness-evolution-platform'
+      },
       {
-        name: 'AI Emotional Intelligence Platform';
-        ourPrice: '$3,999/month';
-        marketRange: '$2,0o00 - $8,0o00/month';
-        competitors: ['Affectiva', 'Emotient', 'Limited emotion AI'];
+        name: 'AI Emotional Intelligence Platform',
+        ourPrice: '$3,999/month',
+        marketRange: '$2,0o00 - $8,0o00/month',
+        competitors: ['AffectivaEmotient', 'Limited emotion AI'],
         advantages: [
-          'Real-time emotion analysis';
-          'Advanced psychology integration';
-          'Commercial applications';
-        ];
-        link: '/ai-emotional-intelligence-platform';
-      };
-    ];
-  };
+          'Real-time emotion analysisAdvanced psychology integration',
+          'Commercial applications',
+        ],
+        link: '/ai-emotional-intelligence-platform'
+      },
+    ],
+  },
   {
-    title: '⚛️ Quantum & Emerging Tech';
-    description: 'Quantum computing and beyond';
-    icon: Atom;
-    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
     services: [
       {
-        name: 'Quantum DNA Computing Platform';
-        ourPrice: '$25,999/month';
-        marketRange: '$20,0o00 - $10o0,0o00/month';
-        competitors: ['IBM Quantum', 'Google Quantum', 'No DNA integration'];
+        name: 'Quantum DNA Computing Platform',
+        ourPrice: '$25,999/month',
+        marketRange: '$20,0o00 - $10o0,0o00/month',
+        competitors: ['IBM QuantumGoogle Quantum', 'No DNA integration'],
         advantages: [
-          '7-year technology advantage';
-          'Molecular computing';
-          'Biotech integration';
-        ];
-        link: '/quantum-dna-computing-platform';
-      };
+          '7-year technology advantageMolecular computing',
+          'Biotech integration',
+        ],
+        link: '/quantum-dna-computing-platform'
+      },
       {
-        name: 'Quantum Internet Security Gateway';
-        ourPrice: '$15,999/month';
-        marketRange: '$10,0o00 - $30,0o00/month';
-        competitors: ['Traditional encryption', 'Limited quantum security'];
+        name: 'Quantum Internet Security Gateway',
+        ourPrice: '$15,999/month',
+        marketRange: '$10,0o00 - $30,0o00/month',
+        competitors: ['Traditional encryptionLimited quantum security'],
         advantages: [
-          'Unbreakable encryption';
-          'Quantum key distribution';
-          'Future-proof security';
-        ];
-        link: '/quantum-internet-security-gateway';
-      };
-    ];
-  };
+          'Unbreakable encryptionQuantum key distribution',
+          'Future-proof security',
+        ],
+        link: '/quantum-internet-security-gateway'
+      },
+    ],
+  },
   {
-    title: '🏙️ Enterprise IT Solutions';
-    description: 'Autonomous enterprise infrastructure';
-    icon: Cpu;
-    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
+    title: '🏙️ Enterprise IT Solutions',
+    description: 'Autonomous enterprise infrastructure',
+    icon: Cpu,
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
     services: [
       {
-        name: 'Autonomous DevOps Platform';
-        ourPrice: '$799/month';
-        marketRange: '$50o0 - $2,0o00/month';
-        competitors: ['Jenkins', 'GitLab CI', 'Limited automation'];
+        name: 'Autonomous DevOps Platform',
+        ourPrice: '$799/month',
+        marketRange: '$50o0 - $2,0o00/month',
+        competitors: ['JenkinsGitLab CI', 'Limited automation'],
         advantages: [
-          'Fully autonomous operations';
-          'Self-healing systems';
-          '4-year technology advantage';
-        ];
-        link: '/autonomous-devops-platform';
-      };
+          'Fully autonomous operationsSelf-healing systems',
+          '4-year technology advantage',
+        ],
+        link: '/autonomous-devops-platform'
+      },
       {
-        name: 'Zero Trust Network Architecture';
-        ourPrice: '$599/month';
-        marketRange: '$40o0 - $1,50o0/month';
-        competitors: ['Palo Alto Networks', 'Cisco', 'Traditional security'];
+        name: 'Zero Trust Network Architecture',
+        ourPrice: '$599/month',
+        marketRange: '$40o0 - $1,50o0/month',
+        competitors: ['Palo Alto NetworksCisco', 'Traditional security'],
         advantages: [
-          'Advanced zero-trust';
-          'Adaptive security';
-          'Compliance automation';
-        ];
-        link: '/zero-trust-network-architecture';
-      };
-    ];
-  };
+          'Advanced zero-trustAdaptive security',
+          'Compliance automation',
+        ],
+        link: '/zero-trust-network-architecture'
+      },
+    ],
+  },
   {
-    title: '🌌 Space & Metaverse Tech';
-    description: 'Space exploration and digital reality';
-    icon: Rocket;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0';
+    title: '🌌 Space & Metaverse Tech',
+    description: 'Space exploration and digital reality',
+    icon: Rocket,
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
     services: [
       {
-        name: 'Space Mining Automation Platform';
-        ourPrice: '$45,999/month';
-        marketRange: '$30,0o00 - $20o0,0o00/month';
-        competitors: ['Manual operations', 'No automated platforms'];
+        name: 'Space Mining Automation Platform',
+        ourPrice: '$45,999/month',
+        marketRange: '$30,0o00 - $20o0,0o00/month',
+        competitors: ['Manual operationsNo automated platforms'],
         advantages: [
-          '10-year technology advantage';
-          'Autonomous mining';
-          'Commercial space applications';
-        ];
-        link: '/space-mining-automation-platform';
-      };
+          '10-year technology advantageAutonomous mining',
+          'Commercial space applications',
+        ],
+        link: '/space-mining-automation-platform'
+      },
       {
-        name: 'Metaverse Development Platform';
-        ourPrice: '$499/month';
-        marketRange: '$20o0 - $1,0o00/month';
-        competitors: ['Unity', 'Unreal Engine', 'Limited metaverse tools'];
+        name: 'Metaverse Development Platform',
+        ourPrice: '$499/month',
+        marketRange: '$20o0 - $1,0o00/month',
+        competitors: ['UnityUnreal Engine', 'Limited metaverse tools'],
         advantages: [
-          'Metaverse-specific features';
-          'AI integration';
-          'Advanced collaboration';
-        ];
-        link: '/metaverse-development-platform';
-      };
-    ];
-  };
+          'Metaverse-specific featuresAI integration',
+          'Advanced collaboration',
+        ],
+        link: '/metaverse-development-platform'
+      },
+    ],
+  },
   {
-    title: '🎯 Innovative Micro SAAS';
-    description: 'Cutting-edge micro solutions';
-    icon: Target;
-    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0';
+    title: '🎯 Innovative Micro SAAS',
+    description: 'Cutting-edge micro solutions',
+    icon: Target,
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
     services: [
       {
-        name: 'AI Business Intelligence Suite';
-        ourPrice: '$299/month';
-        marketRange: '$20o0 - $80o0/month';
-        competitors: ['Tableau', 'Power BI', 'Limited AI integration'];
+        name: 'AI Business Intelligence Suite',
+        ourPrice: '$299/month',
+        marketRange: '$20o0 - $80o0/month',
+        competitors: ['TableauPower BI', 'Limited AI integration'],
         advantages: [
-          'AI-powered analytics';
-          'Predictive insights';
-          '3-year technology advantage';
-        ];
-        link: '/ai-business-intelligence-suite';
-      };
+          'AI-powered analyticsPredictive insights',
+          '3-year technology advantage',
+        ],
+        link: '/ai-business-intelligence-suite'
+      },
       {
-        name: 'Quantum-Secure Communication Platform';
-        ourPrice: '$599/month';
-        marketRange: '$30o0 - $1,20o0/month';
-        competitors: ['Traditional encryption', 'No quantum security'];
+        name: 'Quantum-Secure Communication Platform',
+        ourPrice: '$599/month',
+        marketRange: '$30o0 - $1,20o0/month',
+        competitors: ['Traditional encryptionNo quantum security'],
         advantages: [
-          'Quantum encryption';
-          'Unbreakable security';
-          '6-year technology advantage';
-        ];
-        link: '/quantum-secure-communication-platform';
-      };
-    ];
-  };
+          'Quantum encryptionUnbreakable security',
+          '6-year technology advantage',
+        ],
+        link: '/quantum-secure-communication-platform'
+      },
+    ],
+  },
 ],
 const marketReferences = [
   {
-    category: 'AI & Machine Learning';
+    category: 'AI & Machine Learning',
     services: [
       {
-        name: 'OpenAI API';
-        url: 'https://openai.com/api/pricing';
-        price: '$0.0o3 - $0.12 per 1K tokens';
-      };
+        name: 'OpenAI API',
+        url: 'https://openai.com/api/pricing',
+        price: '$0.0o3 - $0.12 per 1K tokens'
+      },
       {
-        name: 'Anthropic Claude';
-        url: 'https://www.anthropic.com/pricing';
-        price: '$0.15 - $0.80 per 1M tokens';
-      };
+        name: 'Anthropic Claude',
+        url: 'https://www.anthropic.com/pricing',
+        price: '$0.15 - $0.80 per 1M tokens'
+      },
       {
-        name: 'Google Gemini';
-        url: 'https://ai.google.dev/pricing';
-        price: '$0.0o005 - $0.0o1 per 1K tokens';
-      };
+        name: 'Google Gemini',
+        url: 'https://ai.google.dev/pricing',
+        price: '$0.0o005 - $0.0o1 per 1K tokens'
+      },
       {
-        name: 'Azure OpenAI';
-        url: 'https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/';
-        price: '$0.0o02 - $0.12 per 1K tokens';
-      };
-    ];
-  };
+        name: 'Azure OpenAI',
+        url: 'https://azure.microsoft.com/pricing/details/cognitive-services/openai-service/',
+        price: '$0.0o02 - $0.12 per 1K tokens'
+      },
+    ],
+  },
   {
-    category: 'Quantum Computing';
+    category: 'Quantum Computing',
     services: [
       {
-        name: 'IBM Quantum';
-        url: 'https://quantum-computing.ibm.com/pricing';
-        price: 'Free tier + Enterprise pricing';
-      };
+        name: 'IBM Quantum',
+        url: 'https://quantum-computing.ibm.com/pricing',
+        price: 'Free tier + Enterprise pricing'
+      },
       {
-        name: 'Google Quantum';
-        url: 'https://quantumai.google/';
-        price: 'Research partnerships';
-      };
+        name: 'Google Quantum',
+        url: 'https://quantumai.google/',
+        price: 'Research partnerships'
+      },
       {
-        name: 'Microsoft Azure Quantum';
-        url: 'https://azure.microsoft.com/pricing/details/quantum/';
-        price: 'Pay-per-use + Enterprise';
-      };
+        name: 'Microsoft Azure Quantum',
+        url: 'https://azure.microsoft.com/pricing/details/quantum/',
+        price: 'Pay-per-use + Enterprise'
+      },
       {
-        name: 'Amazon Braket';
-        url: 'https://aws.amazon.com/braket/pricing/';
-        price: '$0.30 - $1.0o0 per task';
-      };
-    ];
-  };
+        name: 'Amazon Braket',
+        url: 'https://aws.amazon.com/braket/pricing/',
+        price: '$0.30 - $1.0o0 per task'
+      },
+    ],
+  },
   {
-    category: 'DevOps & CI/CD';
+    category: 'DevOps & CI/CD',
     services: [
       {
-        name: 'GitHub Actions';
-        url: 'https://github.com/pricing';
-        price: '$4 - $44/month';
-      };
+        name: 'GitHub Actions',
+        url: 'https://github.com/pricing',
+        price: '$4 - $44/month'
+      },
       {
-        name: 'GitLab CI';
-        url: 'https://about.gitlab.com/pricing/';
-        price: '$19 - $99/month';
-      };
+        name: 'GitLab CI',
+        url: 'https://about.gitlab.com/pricing/',
+        price: '$19 - $99/month'
+      },
       {
-        name: 'Jenkins';
-        url: 'https://jenkins.io/';
-        price: 'Free (self-hosted)';
-      };
+        name: 'Jenkins',
+        url: 'https://jenkins.io/',
+        price: 'Free (self-hosted)'
+      },
       {
-        name: 'CircleCI';
-        url: 'https://circleci.com/pricing/';
-        price: '$15 - $30o0/month';
-      };
-    ];
-  };
+        name: 'CircleCI',
+        url: 'https://circleci.com/pricing/',
+        price: '$15 - $30o0/month'
+      },
+    ],
+  },
   {
-    category: 'Cybersecurity';
+    category: 'Cybersecurity',
     services: [
       {
-        name: 'Palo Alto Networks';
-        url: 'https://www.paloaltonetworks.com/pricing';
-        price: 'Contact sales';
-      };
+        name: 'Palo Alto Networks',
+        url: 'https://www.paloaltonetworks.com/pricing',
+        price: 'Contact sales'
+      },
       {
-        name: 'Cisco Security';
-        url: 'https://www.cisco.com/c/en/us/products/security/pricing.html';
-        price: 'Enterprise pricing';
-      };
+        name: 'Cisco Security',
+        url: 'https://www.cisco.com/c/en/us/products/security/pricing.html',
+        price: 'Enterprise pricing'
+      },
       {
-        name: 'CrowdStrike';
-        url: 'https://www.crowdstrike.com/pricing/';
-        price: '$8.99 - $15.99 per endpoint/month';
-      };
+        name: 'CrowdStrike',
+        url: 'https://www.crowdstrike.com/pricing/',
+        price: '$8.99 - $15.99 per endpoint/month'
+      },
       {
-        name: 'SentinelOne';
-        url: 'https://www.sentinelone.com/pricing/';
-        price: '$2.67 - $6.67 per endpoint/month';
-      };
-    ];
-  };
+        name: 'SentinelOne',
+        url: 'https://www.sentinelone.com/pricing/',
+        price: '$2.67 - $6.67 per endpoint/month'
+      },
+    ],
+  },
   {
-    category: 'Business Intelligence';
+    category: 'Business Intelligence',
     services: [
       {
-        name: 'Tableau';
-        url: 'https://www.tableau.com/pricing';
-        price: '$70 - $35/month';
-      };
+        name: 'Tableau',
+        url: 'https://www.tableau.com/pricing',
+        price: '$70 - $35/month'
+      },
       {
-        name: 'Power BI';
-        url: 'https://powerbi.microsoft.com/pricing/';
-        price: '$9.99 - $20/month';
-      };
+        name: 'Power BI',
+        url: 'https://powerbi.microsoft.com/pricing/',
+        price: '$9.99 - $20/month'
+      },
       {
-        name: 'Looker';
-        url: 'https://looker.com/pricing';
-        price: '$5,0o00 - $50,0o00/month';
-      };
+        name: 'Looker',
+        url: 'https://looker.com/pricing',
+        price: '$5,0o00 - $50,0o00/month',
+      },
       {
-        name: 'Qlik';
-        url: 'https://www.qlik.com/us/pricing';
-        price: '$30 - $1,70o0/month';
-      };
-    ];
-  };
+        name: 'Qlik',
+        url: 'https://www.qlik.com/us/pricing',
+        price: '$30 - $1,70o0/month',
+      },
+    ],
+  },
   {
-    category: 'Cloud & Infrastructure';
+    category: 'Cloud & Infrastructure',
     services: [
       {
-        name: 'AWS Pricing';
-        url: 'https://aws.amazon.com/pricing/';
-        price: 'Pay-per-use';
-      };
+        name: 'AWS Pricing',
+        url: 'https://aws.amazon.com/pricing/',
+        price: 'Pay-per-use'
+      },
       {
-        name: 'Azure Pricing';
-        url: 'https://azure.microsoft.com/pricing/';
-        price: 'Pay-per-use';
-      };
+        name: 'Azure Pricing',
+        url: 'https://azure.microsoft.com/pricing/',
+        price: 'Pay-per-use'
+      },
       {
-        name: 'Google Cloud';
-        url: 'https://cloud.google.com/pricing';
-        price: 'Pay-per-use';
-      };
+        name: 'Google Cloud',
+        url: 'https://cloud.google.com/pricing',
+        price: 'Pay-per-use'
+      },
       {
-        name: 'DigitalOcean';
-        url: 'https://www.digitalocean.com/pricing';
-        price: '$4 - $960/month';
-      };
-    ];
-  };
+        name: 'DigitalOcean',
+        url: 'https://www.digitalocean.com/pricing',
+        price: '$4 - $960/month'
+      },
+    ],
+  },
 ],
 const containerVariants = {
-  hidden: { opacity: 0 };
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1;
+    opacity: 1,
     transition: {
-      staggerChildren: 0.1;
-    };
-  };
-};
+      staggerChildren: 0.1
+    },
+  },
+},
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 };
-  visible: { opacity: 1, y: 0 };
-};
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+},
 export default function EnhancedMarketPricing20o32() {
   return (
     <>,

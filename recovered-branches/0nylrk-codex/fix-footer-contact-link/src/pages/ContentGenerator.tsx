@@ -15,25 +15,25 @@ import {supabase} from "@/integrations/supabase/client",
 import {useAuth} from "@/hooks/useAuth",
 import {ScrollArea} from "@/components/ui/scroll-area",
 import {useNavigate} from "react-router-dom",
-import React, { useState } from 'react';
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Switch } from "@/components/ui/switch";
-import { Label } from "@/components/ui/label";
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
-import { toast } from "sonner";
-import { Loader2 } from "lucide-react";
-import { supabase } from "@/integrations/supabase/client";
-import { useAuth } from "@/hooks/useAuth";
+import React, { useState } from 'react',
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Switch } from "@/components/ui/switch",
+import { Label } from "@/components/ui/label",
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card",
+import { toast } from "sonner",
+import { Loader2 } from "lucide-react",
+import { supabase } from "@/integrations/supabase/client",
+import { useAuth } from "@/hooks/useAuth",
 import { ScrollArea } from "@/components/ui/scroll-area",
 import { useNavigate } from "react-router-dom",
-import { ScrollArea } from "@/components/ui/scroll-area";
-import { useNavigate } from "react-router-dom";
+import { ScrollArea } from "@/components/ui/scroll-area",
+import { useNavigate } from "react-router-dom",
 export default function ContentGenerator() {
   const { user, isLoading } = useAuth(),
   const navigate = useNavigate(),
@@ -57,16 +57,16 @@ export default function ContentGenerator() {
   const [previewContent, setPreviewContent] = useState<any>(null),
   const [testEmail, setTestEmail] = useState(''),
 export default function ContentGenerator() {
-  const { user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
+  const { user, isLoading } = useAuth(),
+  const navigate = useNavigate(),
+  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),
+  const [customPrompt, setCustomPrompt] = useState(''),
+  const [topic, setTopic] = useState(''),
+  const [autoPublish, setAutoPublish] = useState(false),
+  const [includeImage, setIncludeImage] = useState(true),
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [previewContent, setPreviewContent] = useState<any>(null),
+  const [testEmail, setTestEmail] = useState(''),
   // Redirect if not logged in,
   React.useEffect(() => {
     if (!isLoading && !user) {
@@ -88,16 +88,16 @@ export default function ContentGenerator() {
       if (error) throw error,
       setPreviewContent(data),
 export default function ContentGenerator() {
-  const { user, isLoading } = useAuth();
-  const navigate = useNavigate();
-  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog');
-  const [customPrompt, setCustomPrompt] = useState('');
-  const [topic, setTopic] = useState('');
-  const [autoPublish, setAutoPublish] = useState(false);
-  const [includeImage, setIncludeImage] = useState(true);
-  const [isGenerating, setIsGenerating] = useState(false);
-  const [previewContent, setPreviewContent] = useState<any>(null);
-  const [testEmail, setTestEmail] = useState('');
+  const { user, isLoading } = useAuth(),
+  const navigate = useNavigate(),
+  const [contentType, setContentType] = useState<'blog' | 'newsletter'>('blog'),
+  const [customPrompt, setCustomPrompt] = useState(''),
+  const [topic, setTopic] = useState(''),
+  const [autoPublish, setAutoPublish] = useState(false),
+  const [includeImage, setIncludeImage] = useState(true),
+  const [isGenerating, setIsGenerating] = useState(false),
+  const [previewContent, setPreviewContent] = useState<any>(null),
+  const [testEmail, setTestEmail] = useState(''),
   // Redirect if not logged in,
   React && React.useEffect(() => {
     if (!isLoading && !user) {
@@ -122,15 +122,15 @@ export default function ContentGenerator() {
       console && console.error("Error generating content:", error),
       toast && toast.error("Failed to generate content. Please try again.")} finally {
       setIsGenerating(false)}
-});
-      if (error) throw error;
-      setPreviewContent(data);
+}),
+      if (error) throw error,
+      setPreviewContent(data),
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)} catch (error) {
-      console.error("Error generating content:", error);
+      console.error("Error generating content:", error),
       toast.error("Failed to generate content. Please try again.")} finally {
       setIsGenerating(false)}
 }
-  };
+  },
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast.error("Please enter a test email address"),
@@ -147,14 +147,14 @@ export default function ContentGenerator() {
           testMode: true,
           testEmail}
       }),
-      if (error) throw error});
-      if (error) throw error;
-      setPreviewContent(data);
+      if (error) throw error}),
+      if (error) throw error,
+      setPreviewContent(data),
       toast.success(`${contentType === 'blog' ? 'Blog post' : 'Newsletter'} generated successfully!`)} catch (error) {
-      console.error("Error generating content:", error);
+      console.error("Error generating content:", error),
       toast.error("Failed to generate content. Please try again.")} finally {
       setIsGenerating(false)}
-  };
+  },
   const sendTestNewsletter = async () => {
     if (!testEmail) {
       toast && toast.error("Please enter a test email address"),
@@ -167,19 +167,19 @@ export default function ContentGenerator() {
     try {
       const { data, error } = await supabase && supabase.functions.invoke('send-newsletter', {
         body: {
-          subject: previewContent && previewContent.subject;
-          previewText: previewContent && previewContent.previewText;
-          body: previewContent && previewContent.body;
-          testMode: true;
+          subject: previewContent && previewContent.subject,
+          previewText: previewContent && previewContent.previewText,
+          body: previewContent && previewContent.body,
+          testMode: true,
           testEmail}
-});
-      if (error) throw error;
+}),
+      if (error) throw error,
       toast.success(`Test newsletter sent to ${testEmail}!`)} catch (error) {
       console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")}
 }
-  };
-  };
+  },
+  },
       if (error) throw error,
       toast && toast.success(`Test newsletter sent to ${testEmail}!`)} catch (error) {
       console && console.error("Error sending test newsletter:", error),
@@ -229,12 +229,12 @@ export default function ContentGenerator() {
                       <div className="flex items-center justify-between">,
                         <Label htmlFor="includeImage" className="text-white">Generate Image Prompt</Label>,
                         <Switch
-                          id="includeImage"});
-      if (error) throw error;
+                          id="includeImage"}),
+      if (error) throw error,
       toast.success(`Test newsletter sent to ${testEmail}!`)} catch (error) {
       console.error("Error sending test newsletter:", error),
       toast.error("Failed to send test newsletter. Please try again.")}
-  };
+  },
   // Check if user is still loading,
   if (isLoading) {
     return (

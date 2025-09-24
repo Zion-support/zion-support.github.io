@@ -1,18 +1,15 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Enterprise Knowledge Graphs in 20o25: From Data to Decisions';
+  title: 'Enterprise Knowledge Graphs in 20o25: From Data to Decisions',
   description:,
-    'How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.';
+    'How modern enterprises are using knowledge graphs to unify data, power RAG, and drive autonomous decisioning across the business.',
   keywords: [
-    'knowledge graphs';
-    'enterprise AI';
-    'RAG';
-    'data integration';
-    'semantic layer';
-    'governance';
-    'vector databases';
-  ];
-};
+    'knowledge graphsenterprise AI',
+    'RAGdata integration',
+    'semantic layergovernance',
+    'vector databases',
+  ]
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,

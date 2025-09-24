@@ -18,21 +18,21 @@ export function TalentGrid({
   onTalentClick,
   savedTalentIds,
   onToggleSave,
-  isAuthenticated;
-  viewProfile;
-  clearFilters;
+  isAuthenticated,
+  viewProfile,
+  clearFilters,
   handleRequestHire}: TalentGridProps) {
   const handleRequestHireInternal = (talent: TalentProfile) => {
     if (handleRequestHire) {
       handleRequestHire(talent)} else {
       // Default implementation,
       // // console.log("Request to hire: "talent.id)}
-  };
+  },
   const handleViewProfile = (id: string) => {
     if (viewProfile) {
       viewProfile(id)} else {
       onTalentClick(id)}
-  };
+  },
   if (isLoading) {
     return <div className="py-8 text-center">,
       <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-b-2 border-zion-cyan mx-auto mb-4"></div>,

@@ -7,37 +7,37 @@ const AI20o25UltimateContentRevolutionPromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const contentPieces = [
     {
-      id: 'ai-content-revolution-blog';
-      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI Guide';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough';
+      id: 'ai-content-revolution-blog',
+      title: 'AI 20o25: The Ultimate Content Revolution - 25,0o00% ROI Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-ultimate-content-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
-        speed: '1,20o0%';
-        accuracy: '99.9%'};
-      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.'};
+        roi: '25,0o00%',
+        savings: '$50o0B+',
+        speed: '1,20o0%',
+        accuracy: '99.9%'},
+      description: 'Transform your business with revolutionary AI content strategies that deliver unprecedented results.'},
     {
-      id: 'fortune-50o0-content-success';
-      title: 'Fortune 50o0 AI Content Success: $50o0B Annual Savings - 25,0o00% ROI';
-      type: 'Case Study';
-      url: '/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story';
+      id: 'fortune-50o0-content-success',
+      title: 'Fortune 50o0 AI Content Success: $50o0B Annual Savings - 25,0o00% ROI',
+      type: 'Case Study',
+      url: '/case-studies/fortune-50o0-ai-content-revolution-250o00-roi-success-story',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B';
-        timeline: '18 months';
-        accuracy: '99.9%'};
-      description: 'How TechGlobal Industries achieved extraordinary results with AI content revolution.'};
+        roi: '25,0o00%',
+        savings: '$50o0B',
+        timeline: '18 months',
+        accuracy: '99.9%'},
+      description: 'How TechGlobal Industries achieved extraordinary results with AI content revolution.'},
     {
-      id: 'content-implementation-guide';
-      title: 'AI Content Revolution Implementation Guide: Complete Roadmap to 25,0o00% ROI';
-      type: 'Implementation Guide';
-      url: '/resources/ai-content-revolution-implementation-guide-20o25';
+      id: 'content-implementation-guide',
+      title: 'AI Content Revolution Implementation Guide: Complete Roadmap to 25,0o00% ROI',
+      type: 'Implementation Guide',
+      url: '/resources/ai-content-revolution-implementation-guide-20o25',
       metrics: {
-        roi: '25,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: 'Complete'};
+        roi: '25,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: 'Complete'},
       description: 'The definitive guide to transforming your content strategy with revolutionary AI technologies.'}
   ],
   useEffect(() => {
@@ -46,7 +46,7 @@ const AI20o25UltimateContentRevolutionPromotionBanner = () => {
     return () => clearInterval(interval)}, [contentPieces.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai-content-revolution-banner-dismissed', 'true')};
+    localStorage.setItem('ai-content-revolution-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai-content-revolution-banner-dismissed'),
     if (dismissed === 'true') {
@@ -162,5 +162,5 @@ const AI20o25UltimateContentRevolutionPromotionBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateContentRevolutionPromotionBanner;
+    </div>)},
+export default AI20o25UltimateContentRevolutionPromotionBanner,

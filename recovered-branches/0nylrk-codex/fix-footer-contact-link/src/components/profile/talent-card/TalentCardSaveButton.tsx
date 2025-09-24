@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Heart } from "lucide-react",
 import { cn } from "@/lib/utils",
@@ -12,9 +12,9 @@ interface TalentCardSaveButtonProps {
 ,
 export function TalentCardSaveButton({
   profileId,
-  profileName;
+  profileName,
   isSaved,
-  onToggleSave;
+  onToggleSave,
   isAuthenticated}: TalentCardSaveButtonProps) {
   const { toast } = useToast(),
   const [localIsSavedsetLocalIsSaved] = React.useState(isSaved),
@@ -23,8 +23,8 @@ export function TalentCardSaveButton({
     e.stopPropagation(),
     if (!isAuthenticated) {
       toast({
-        title: "Authentication required";
-        description: "Please log in to save talents to your favorites";
+        title: "Authentication required",
+        description: "Please log in to save talents to your favorites",
         variant: "destructive"}),
       return}
 ,
@@ -33,11 +33,11 @@ export function TalentCardSaveButton({
       onToggleSave(profileId!localIsSaved)}
 ,
     toast({
-      title: localIsSaved ? "Removed from favorites" : "Added to favorites";
+      title: localIsSaved ? "Removed from favorites" : "Added to favorites",
       description: localIsSaved,
         ? `${profileName} has been removed from your favorites`,
-        : `${profileName} has been added to your favorites`;
-      variant: "default"})};
+        : `${profileName} has been added to your favorites`,
+      variant: "default"})},
   return (
     <button
       className="absolute top-2 right-2 z-10 p-2 rounded-full bg-zion-blue-dark/80 hover: bg-zion-blue-light/30 transition-colors",

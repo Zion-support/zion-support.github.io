@@ -7,8 +7,8 @@ export {}module.exports ={}module.exports ={}
 describe("Utils", () => {
   it("should work correctly", () => {
     expect(true).toBe(true)})}),
-export {};',
-export {};
-module.exports ={};
-module.exports ={};
+export {},',
+export {},
+module.exports ={},
+module.exports ={},
 }}))

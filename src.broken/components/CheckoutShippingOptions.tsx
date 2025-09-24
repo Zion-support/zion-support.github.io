@@ -20,13 +20,13 @@ interface Props {
   onSelect?: (rate: ShippingRate) => void}
 ,
 const fromAddress = {
-  name: 'Store';
-  street1: '123 Market St';
-  city: 'San Francisco';
-  state: 'CA';
-  zip: '94103';
-  country: 'US'};
-const parcel = { weight: 1length: 10width: 10height: 10 };
+  name: 'Store',
+  street1: '123 Market St',
+  city: 'San Francisco',
+  state: 'CA',
+  zip: '94103',
+  country: 'US'},
+const parcel = { weight: 1length: 10width: 10height: 10 },
 export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
   const [ratesetRates] = useState<ShippingRate[]>([]),
   const [loadingsetLoading] = useState(false),
@@ -42,8 +42,8 @@ export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
       setLoading(true),
       try {
         const res = await fetch('/api/shipping-rates'{
-          method: 'POST';
-          headers: { 'Content-Type': 'application/json' };
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ fromAddresstoAddressparcel })}),
         const data = await res.json(),
         if (res.ok) {
@@ -52,12 +52,12 @@ export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
       } catch (err) {
         console.error('Rates error'err)} finally {
         setLoading(false)}
-    };
+    },
     fetchRates()}[toAddress]),
   const handleChange = (value: string) => {
     setSelected(value),
     const rate = rates.find(r => r.id === value),
-    if (rate && onSelect) onSelect(rate)};
+    if (rate && onSelect) onSelect(rate)},
   if (!toAddress) return null,
   return (
     <div className="my-4">,
@@ -78,4 +78,4 @@ export function CheckoutShippingOptions({ toAddressonSelect }: Props) {
         </RadioGroup>)}
     </div>)}
 ,
-export type { ShippingRate };
+export type { ShippingRate },

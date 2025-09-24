@@ -1,85 +1,75 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  DollarSign;
-  Zap;
-  Target;
-  Shield;
-  TrendingUp;
-  Globe;
-  CheckCircle;
-  Star;
-  BarChart3;
-  Lock;
-  Smartphone;
-  Monitor;
-  Award;
-  MessageCircle;
-  Cpu;
+  DollarSign,
+  Zap,
+  Target,
+  Shield,
+  TrendingUp,
+  Globe,
+  CheckCircle,
+  Star,
+  BarChart3,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,
+  Cpu,
 } from 'lucide-react',
 export default function AIFinancialIntelligence() {
   const features = [
     {
-      icon: <DollarSign className='w-6 h-6' />;
-      title: 'Financial Data Analysis';
+      icon: <DollarSign className='w-6 h-6' />,
+      title: 'Financial Data Analysis',
       description:,
-        'Advanced AI-powered financial data analysis with real-time market insights and trend identification.';
-    };
+        'Advanced AI-powered financial data analysis with real-time market insights and trend identification.',
+    },
     {
-      icon: <Zap className='w-6 h-6' />;
-      title: 'Investment Intelligence';
+      icon: <Zap className='w-6 h-6' />,
+      title: 'Investment Intelligence',
       description:,
-        'Revolutionary investment intelligence with AI algorithms that identify opportunities and risks.';
-    };
+        'Revolutionary investment intelligence with AI algorithms that identify opportunities and risks.',
+    },
     {
-      icon: <Target className='w-6 h-6' />;
-      title: 'Risk Assessment';
+      icon: <Target className='w-6 h-6' />,
+      title: 'Risk Assessment',
       description:,
-        'Intelligent risk assessment with AI-powered analysis of market volatility and portfolio exposure.';
-    };
+        'Intelligent risk assessment with AI-powered analysis of market volatility and portfolio exposure.',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Compliance Monitoring';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Compliance Monitoring',
       description:,
-        'Advanced compliance monitoring with automated regulatory reporting and risk management.';
-    };
+        'Advanced compliance monitoring with automated regulatory reporting and risk management.',
+    },
     {
-      icon: <TrendingUp className='w-6 h-6' />;
-      title: 'Performance Analytics';
+      icon: <TrendingUp className='w-6 h-6' />,
+      title: 'Performance Analytics',
       description:,
-        'Comprehensive performance analytics with AI-powered insights and optimization recommendations.';
-    };
+        'Comprehensive performance analytics with AI-powered insights and optimization recommendations.',
+    },
     {
-      icon: <Globe className='w-6 h-6' />;
-      title: 'Global Market Intelligence';
+      icon: <Globe className='w-6 h-6' />,
+      title: 'Global Market Intelligence',
       description:,
-        'Access to global market intelligence with cross-border analysis and international opportunities.';
-    };
+        'Access to global market intelligence with cross-border analysis and international opportunities.',
+    },
   ],
   const benefits = [
-    'Improve investment returns by 300%';
-    'Reduce risk exposure by 70%';
-    'Increase market insights by 500%';
-    'Accelerate decision making by 200%';
-    'Enable 24/7 market monitoring';
-    'Optimize portfolio performance';
-    'Scale financial operations globally';
-    'Future-proof financial strategy';
+    'Improve investment returns by 300%Reduce risk exposure by 70%',
+    'Increase market insights by 500%Accelerate decision making by 200%',
+    'Enable 24/7 market monitoringOptimize portfolio performance',
+    'Scale financial operations globallyFuture-proof financial strategy',
   ],
   const useCases = [
-    'Investment Analysis';
-    'Risk Management';
-    'Portfolio Optimization';
-    'Market Intelligence';
-    'Compliance Monitoring';
-    'Performance Analytics';
-    'Financial Planning';
-    'Asset Allocation';
-    'Trading Strategies';
-    'Financial Reporting';
-    'Market Research';
-    'Investment Strategy';
+    'Investment AnalysisRisk Management',
+    'Portfolio OptimizationMarket Intelligence',
+    'Compliance MonitoringPerformance Analytics',
+    'Financial PlanningAsset Allocation',
+    'Trading StrategiesFinancial Reporting',
+    'Market ResearchInvestment Strategy',
   ],
   return (
     <>,
@@ -130,7 +120,7 @@ export default function AIFinancialIntelligence() {
                 AI Financial Intelligence,
               </h1>,
               <p className='text-xl md:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
-                Revolutionize financial intelligence with AI-powered analysis;
+                Revolutionize financial intelligence with AI-powered analysis,
                 investment insights, and risk management for optimal financial,
                 window.window.performance.,
               </p>,
@@ -201,7 +191,7 @@ export default function AIFinancialIntelligence() {
                 Transform Financial Intelligence,
               </h2>,
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-                Experience revolutionary improvements in investment returns;
+                Experience revolutionary improvements in investment returns,
                 risk management, and market insights with our AI financial,
                 intelligence platform.,
               </p>,

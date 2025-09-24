@@ -10,11 +10,11 @@ export default function AIEthicsGovernanceFramework() {
 			implementationWeeks="Implementation: 3–6 weeks",
 			roiNote="Reduce compliance risk and accelerate approvals",
 			features={[
-				"AI risk register and DPIA templates";
-				"Bias/fairness testsred-teaming workflows";
-				"Model cardsdata sheetsand change logs";
-				"Prompt governance and access controls";
-				"Regulatory mapping (EU AI ActNIST AI RMF)";
+				"AI risk register and DPIA templates",
+				"Bias/fairness testsred-teaming workflows",
+				"Model cardsdata sheetsand change logs",
+				"Prompt governance and access controls",
+				"Regulatory mapping (EU AI ActNIST AI RMF)",
 				"Training and incident response runbooks"]}
 			industries={["Finance"Healthcare"Public Sector"SaaS"]}
 			canonical="https: //ziontechgroup.com/ai-ethics-governance-framework",

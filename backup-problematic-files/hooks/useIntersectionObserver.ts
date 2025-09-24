@@ -8,33 +8,33 @@ interface UseIntersectionObserverProps {
   useEffect(() => {
     if (prevNode.current) {
   return [setNode, entry] as const}
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react',
 interface UseIntersectionObserverProps {
-  threshold?: number;
-  root?: Element | null;
-  rootMargin?: string;
+  threshold?: number,
+  root?: Element | null,
+  rootMargin?: string,
   freezeOnceVisible?: boolean}
 export function useIntersectionObserver({
-  threshold = 0;
-  root = null;
-  rootMargin = '0%';
+  threshold = 0,
+  root = null,
+  rootMargin = '0%',
   freezeOnceVisible = false}: UseIntersectionObserverProps ={}) {
-  const [entry, setEntry] = useState<IntersectionObserverEntry>();
-  const [node, setNode] = useState<Element | null>(null);
-  const observer = useRef<IntersectionObserver | null>(null);
-  const frozen = entry?.isIntersecting && freezeOnceVisible;
+  const [entry, setEntry] = useState<IntersectionObserverEntry>(),
+  const [node, setNode] = useState<Element | null>(null),
+  const observer = useRef<IntersectionObserver | null>(null),
+  const frozen = entry?.isIntersecting && freezeOnceVisible,
   const updateEntry = ([entry]: IntersectionObserverEntry[]): void => {
-    setEntry(entry)};
+    setEntry(entry)},
   useEffect(() => {
-    const hasIOSupport = !!window.IntersectionObserver;
-    if (!hasIOSupport || frozen || !node) return;
-    const observerParams ={ threshold, root, rootMargin };
-    const currentObserver = new IntersectionObserver(updateEntry, observerParams);
-    observer.current = currentObserver;
-    currentObserver.observe(node);
+    const hasIOSupport = !!window.IntersectionObserver,
+    if (!hasIOSupport || frozen || !node) return,
+    const observerParams ={ threshold, root, rootMargin },
+    const currentObserver = new IntersectionObserver(updateEntry, observerParams),
+    observer.current = currentObserver,
+    currentObserver.observe(node),
     return () => {
       currentObserver.disconnect()}
-  }, [node, threshold, root, rootMargin, frozen]);
+  }, [node, threshold, root, rootMargin, frozen]),
   const prevNode = useRef<Element | null>(null),
   useEffect(() => {
     if (prevNode.current) {

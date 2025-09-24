@@ -3,105 +3,89 @@ import Link from 'next/link',
 export default function CaseStudiesPage() {
   const caseStudies = [
     {
-      title: 'AI-Powered Customer Service Transformation';
-      company: 'Global E-commerce Retailer';
-      industry: 'Retail & E-commerce';
-      challenge: 'High customer service costs and inconsistent response times across multiple channels';
-      solution: 'Implemented AI-powered chatbot system with natural language processing and automated ticket routing';
+      title: 'AI-Powered Customer Service Transformation',
+      company: 'Global E-commerce Retailer',
+      industry: 'Retail & E-commerce',
+      challenge: 'High customer service costs and inconsistent response times across multiple channels',
+      solution: 'Implemented AI-powered chatbot system with natural language processing and automated ticket routing',
       results: [
-        '85% reduction in customer service response time';
-        '60% decrease in customer service costs';
-        '95% customer satisfaction rate maintained';
-        '24/7 customer support availability'];
-      technologies: ['AI/ML'Natural Language Processing'Cloud Infrastructure'API Integration'];
-      duration: '3 months';
-      roi: '340%';
-      featured: true};
+        '85% reduction in customer service response time60% decrease in customer service costs',
+        '95% customer satisfaction rate maintained24/7 customer support availability'],
+      technologies: ['AI/ML'Natural Language Processing'Cloud Infrastructure'API Integration'],
+      duration: '3 months',
+      roi: '340%',
+      featured: true},
     {
-      title: 'Quantum Computing for Financial Risk Management';
-      company: 'International Investment Bank';
-      industry: 'Finance';
-      challenge: 'Complex risk calculations taking days to completelimiting real-time decision making';
-      solution: 'Developed quantum computing algorithms for portfolio optimization and risk assessment';
+      title: 'Quantum Computing for Financial Risk Management',
+      company: 'International Investment Bank',
+      industry: 'Finance',
+      challenge: 'Complex risk calculations taking days to completelimiting real-time decision making',
+      solution: 'Developed quantum computing algorithms for portfolio optimization and risk assessment',
       results: [
-        '99.9% faster risk calculations';
-        'Real-time portfolio optimization';
-        '15% improvement in risk-adjusted returns';
-        'Enhanced regulatory compliance'];
-      technologies: ['Quantum Computing'Financial Algorithms'Risk Modeling'High-Performance Computing'];
-      duration: '6 months';
-      roi: '280%';
-      featured: false};
+        '99.9% faster risk calculationsReal-time portfolio optimization',
+        '15% improvement in risk-adjusted returnsEnhanced regulatory compliance'],
+      technologies: ['Quantum Computing'Financial Algorithms'Risk Modeling'High-Performance Computing'],
+      duration: '6 months',
+      roi: '280%',
+      featured: false},
     {
-      title: 'Cybersecurity Overhaul for Healthcare Provider';
-      company: 'Regional Hospital Network';
-      industry: 'Healthcare';
-      challenge: 'Vulnerable legacy systems and increasing cyber threats targeting patient data';
-      solution: 'Implemented zero-trust security architecture with AI-powered threat detection';
+      title: 'Cybersecurity Overhaul for Healthcare Provider',
+      company: 'Regional Hospital Network',
+      industry: 'Healthcare',
+      challenge: 'Vulnerable legacy systems and increasing cyber threats targeting patient data',
+      solution: 'Implemented zero-trust security architecture with AI-powered threat detection',
       results: [
-        '10o0% compliance with HIPAA regulations';
-        '90% reduction in security incidents';
-        'Real-time threat detection and response';
-        'Enhanced patient data protection'];
-      technologies: ['Zero Trust Security'AI Threat Detection'Compliance Management'Data Encryption'];
-      duration: '4 months';
-      roi: '420%';
-      featured: false};
+        '10o0% compliance with HIPAA regulations90% reduction in security incidents',
+        'Real-time threat detection and responseEnhanced patient data protection'],
+      technologies: ['Zero Trust Security'AI Threat Detection'Compliance Management'Data Encryption'],
+      duration: '4 months',
+      roi: '420%',
+      featured: false},
     {
-      title: 'Cloud Migration and DevOps Transformation';
-      company: 'Manufacturing Technology Company';
-      industry: 'Manufacturing';
-      challenge: 'Outdated on-premise infrastructure limiting scalability and innovation';
-      solution: 'Complete cloud migration with modern DevOps practices and containerization';
+      title: 'Cloud Migration and DevOps Transformation',
+      company: 'Manufacturing Technology Company',
+      industry: 'Manufacturing',
+      challenge: 'Outdated on-premise infrastructure limiting scalability and innovation',
+      solution: 'Complete cloud migration with modern DevOps practices and containerization',
       results: [
-        '70% reduction in infrastructure costs';
-        '10x faster deployment cycles';
-        '99.9% uptime achieved';
-        'Enhanced disaster recovery capabilities'];
-      technologies: ['Cloud Migration'DevOps'Containerization'Infrastructure as Code'];
-      duration: '5 months';
-      roi: '310%';
-      featured: false};
+        '70% reduction in infrastructure costs10x faster deployment cycles',
+        '99.9% uptime achievedEnhanced disaster recovery capabilities'],
+      technologies: ['Cloud Migration'DevOps'Containerization'Infrastructure as Code'],
+      duration: '5 months',
+      roi: '310%',
+      featured: false},
     {
-      title: 'AI-Powered Supply Chain Optimization';
-      company: 'Global Logistics Provider';
-      industry: 'Transportation & Logistics';
-      challenge: 'Inefficient route planning and inventory management leading to delays and increased costs';
-      solution: 'AI-driven supply chain optimization platform with predictive analytics';
+      title: 'AI-Powered Supply Chain Optimization',
+      company: 'Global Logistics Provider',
+      industry: 'Transportation & Logistics',
+      challenge: 'Inefficient route planning and inventory management leading to delays and increased costs',
+      solution: 'AI-driven supply chain optimization platform with predictive analytics',
       results: [
-        '25% reduction in delivery times';
-        '30% decrease in operational costs';
-        'Improved inventory accuracy to 99.5%';
-        'Enhanced customer satisfaction scores'];
-      technologies: ['AI/ML'Predictive Analytics'Supply Chain Management'Real-time Tracking'];
-      duration: '4 months';
-      roi: '380%';
-      featured: false};
+        '25% reduction in delivery times30% decrease in operational costs',
+        'Improved inventory accuracy to 99.5%Enhanced customer satisfaction scores'],
+      technologies: ['AI/ML'Predictive Analytics'Supply Chain Management'Real-time Tracking'],
+      duration: '4 months',
+      roi: '380%',
+      featured: false},
     {
-      title: 'Quantum-Safe Cybersecurity Implementation';
-      company: 'Government Defense Contractor';
-      industry: 'Government & Defense';
-      challenge: 'Need for future-proof cybersecurity against quantum computing threats';
-      solution: 'Implemented quantum-resistant encryption and post-quantum cryptography protocols';
+      title: 'Quantum-Safe Cybersecurity Implementation',
+      company: 'Government Defense Contractor',
+      industry: 'Government & Defense',
+      challenge: 'Need for future-proof cybersecurity against quantum computing threats',
+      solution: 'Implemented quantum-resistant encryption and post-quantum cryptography protocols',
       results: [
-        'Future-proof security against quantum threats';
-        'Enhanced data protection standards';
-        'Compliance with government security requirements';
-        'Improved competitive positioning'];
-      technologies: ['Quantum Cryptography'Post-Quantum Algorithms'Security Protocols'Compliance Management'];
-      duration: '7 months';
-      roi: '250%';
+        'Future-proof security against quantum threatsEnhanced data protection standards',
+        'Compliance with government security requirementsImproved competitive positioning'],
+      technologies: ['Quantum Cryptography'Post-Quantum Algorithms'Security Protocols'Compliance Management'],
+      duration: '7 months',
+      roi: '250%',
       featured: false}
   ],
   const industries = [
-    'All Industries';
-    'Retail & E-commerce';
-    'Finance';
-    'Healthcare';
-    'Manufacturing';
-    'Transportation & Logistics';
-    'Government & Defense';
-    'Technology'],
+    'All IndustriesRetail & E-commerce',
+    'FinanceHealthcare',
+    'ManufacturingTransportation & Logistics',
+    'Government & DefenseTechnology'],
   const featuredCaseStudy = caseStudies.find(study => study.featured),
   return (
     <>,

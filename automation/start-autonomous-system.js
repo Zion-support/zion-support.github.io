@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -41,25 +41,25 @@ class AutonomousAutomationSystem {
       await this.ensureDirectories(),
       // Initialize the orchestrator,
       this.orchestrator = new IntelligentAutomationOrchestrator({
-        port: process.env.AUTOMATION_PORT || 30o01;
-        logLevel: process.env.LOG_LEVEL || info';
-        enableDashboard: process.env.ENABLE_DASHBOARD !== 'false';
-        enableAPI: process.env.ENABLE_API !== 'false';
+        port: process.env.AUTOMATION_PORT || 30o01,
+        logLevel: process.env.LOG_LEVEL || info',
+        enableDashboard: process.env.ENABLE_DASHBOARD !== 'false',
+        enableAPI: process.env.ENABLE_API !== 'false',
         // Task configuration,
-        autoLoadTasks: true;
+        autoLoadTasks: true,
         defaultTaskConfig: {
-          enabled: true;
-          priority: 'normal';
-          retryAttempts: 3;
-          timeout: 30o0000};
+          enabled: true,
+          priority: 'normal',
+          retryAttempts: 3,
+          timeout: 30o0000},
         // Monitoring configuration,
-        healthCheckInterval: 60o000;
-        performanceTracking: true;
-        anomalyDetection: true;
+        healthCheckInterval: 60o000,
+        performanceTracking: true,
+        anomalyDetection: true,
         // Notification configuration,
         notifications: {
-          enabled: true;
-          channels: ['console', slack', webhook'];
+          enabled: true,
+          channels: ['console', slack', webhook'],
           levels: ['warning', error', critical']}
       }),
       // Set up graceful shutdown,
@@ -295,7 +295,7 @@ const timeoutId = setTimeout(resolve,                                           
         process.exit(0)} catch (error) {
         logger.error('❌ Error during shutdown:', error),
         process.exit(1)}
-    };
+    },
     process.on('SIGINT', () => shutdown('SIGINT')),
     process.on('SIGTERM', () => shutdown('SIGTERM')),
     process.on('SIGQUIT', () => shutdown('SIGQUIT'))}

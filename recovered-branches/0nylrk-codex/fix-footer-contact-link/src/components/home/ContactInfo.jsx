@@ -3,83 +3,83 @@ import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Link } from 'react-router-dom',
 import { FuturisticCard, NeonText } from '@/components/ui/FuturisticBackground',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card',
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Clock;
-  Users;
-  Shield;
-  Zap;
-  ExternalLink;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Clock,
+  Users,
+  Shield,
+  Zap,
+  ExternalLink,
 } from 'lucide-react',
 export function ContactInfo() {
   const contactMethods = [
     {
-      title: 'Phone Support';
-      description: 'Speak directly with our technical experts';
-      icon: <Phone className='h-8 w-8 text-zion-cyan' />;
-      value: '+1 30o2 464 0950';
-      action: 'tel:+130o24640950';
-      badge: '24/7 Available';
-      color: '#0o0ffff';
-    };
+      title: 'Phone Support',
+      description: 'Speak directly with our technical experts',
+      icon: <Phone className='h-8 w-8 text-zion-cyan' />,
+      value: '+1 30o2 464 0950',
+      action: 'tel:+130o24640950',
+      badge: '24/7 Available',
+      color: '#0o0ffff'
+    },
     {
-      title: 'Email Support';
-      description: 'Get detailed responses to your inquiries';
-      icon: <Mail className='h-8 w-8 text-zion-purple' />;
-      value: 'kleber@ziontechgroup.com';
-      action: 'mailto:kleber@ziontechgroup.com';
-      badge: 'Response < 2hrs';
-      color: '#8c15e9';
-    };
+      title: 'Email Support',
+      description: 'Get detailed responses to your inquiries',
+      icon: <Mail className='h-8 w-8 text-zion-purple' />,
+      value: 'kleber@ziontechgroup.com',
+      action: 'mailto:kleber@ziontechgroup.com',
+      badge: 'Response < 2hrs',
+      color: '#8c15e9'
+    },
     {
-      title: 'Office Location';
-      description: 'Visit our headquarters for in-person meetings';
-      icon: <MapPin className='h-8 w-8 text-zion-cyan' />;
-      value: '364 E Main St STE 10o08, Middletown DE 19709';
+      title: 'Office Location',
+      description: 'Visit our headquarters for in-person meetings',
+      icon: <MapPin className='h-8 w-8 text-zion-cyan' />,
+      value: '364 E Main St STE 10o08, Middletown DE 19709',
       action:,
-        'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709';
-      badge: 'Open Mon-Fri';
-      color: '#0o0ffff';
-    };
+        'https: //maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709',
+      badge: 'Open Mon-Fri',
+      color: '#0o0ffff'
+    },
     {
-      title: 'Main Website';
-      description: 'Explore our complete company portfolio';
-      icon: <Globe className='h-8 w-8 text-zion-purple' />;
-      value: 'ziontechgroup.com';
-      action: 'https://ziontechgroup.com';
-      badge: 'Official Site';
-      color: '#8c15e9';
-    };
+      title: 'Main Website',
+      description: 'Explore our complete company portfolio',
+      icon: <Globe className='h-8 w-8 text-zion-purple' />,
+      value: 'ziontechgroup.com',
+      action: 'https://ziontechgroup.com',
+      badge: 'Official Site',
+      color: '#8c15e9'
+    },
   ],
   const companyStats = [
     {
-      label: 'Years Experience';
-      value: '10+';
-      icon: <Clock className='h-6 w-6 text-zion-cyan' />;
-    };
+      label: 'Years Experience',
+      value: '10+',
+      icon: <Clock className='h-6 w-6 text-zion-cyan' />
+    },
     {
-      label: 'Team Members';
-      value: '50+';
-      icon: <Users className='h-6 w-6 text-zion-purple' />;
-    };
+      label: 'Team Members',
+      value: '50+',
+      icon: <Users className='h-6 w-6 text-zion-purple' />
+    },
     {
-      label: 'Projects Completed';
-      value: '50o0+';
-      icon: <Shield className='h-6 w-6 text-zion-cyan' />;
-    };
+      label: 'Projects Completed',
+      value: '50o0+',
+      icon: <Shield className='h-6 w-6 text-zion-cyan' />
+    },
     {
-      label: 'Client Satisfaction';
-      value: '98%';
-      icon: <Zap className='h-6 w-6 text-zion-purple' />;
-    };
+      label: 'Client Satisfaction',
+      value: '98%',
+      icon: <Zap className='h-6 w-6 text-zion-purple' />
+    },
   ],
   return (
     <section className='py-20 relative'>,

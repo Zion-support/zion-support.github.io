@@ -1,38 +1,35 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  UserIcon;
-  DocumentTextIcon;
-  CheckCircleIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
+  DocumentTextIcon,
+  CheckCircleIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'AI Revolution Implementation Ultimate Guide 20o25-20o26: Complete Roadmap to 10,0o00% ROI';
+    'AI Revolution Implementation Ultimate Guide 20o25-20o26: Complete Roadmap to 10,0o00% ROI',
   description:,
-    'The definitive guide to implementing AI revolution technologies in your organization, with step-by-step instructions, best practices, and proven strategies for achieving 10,0o00% ROI.';
+    'The definitive guide to implementing AI revolution technologies in your organization, with step-by-step instructions, best practices, and proven strategies for achieving 10,0o00% ROI.',
   keywords: [
-    'Implementation Guide';
-    'AI Revolution';
-    'ROI';
-    'Strategy';
-    'Framework';
-    '20o25-20o26';
-    '10,0o00% ROI';
-  ];
+    'Implementation GuideAI Revolution',
+    'ROIStrategy',
+    'Framework20o25-20o26',
+    '10,0o00% ROI',
+  ],
   openGraph: {
     title:,
-      'AI Revolution Implementation Ultimate Guide 20o25-20o26: Complete Roadmap to 10,0o00% ROI';
+      'AI Revolution Implementation Ultimate Guide 20o25-20o26: Complete Roadmap to 10,0o00% ROI',
     description:,
-      'The definitive guide to implementing AI revolution technologies in your organization, with step-by-step instructions, best practices, and proven strategies for achieving 10,0o00% ROI.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-    tags: ['Implementation Guide', 'AI Revolution', 'ROI', 'Strategy'];
-  };
-};
+      'The definitive guide to implementing AI revolution technologies in your organization, with step-by-step instructions, best practices, and proven strategies for achieving 10,0o00% ROI.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
+    tags: ['Implementation GuideAI Revolution', 'ROIStrategy'],
+  },
+},
 export default function AIRevolutionImplementationGuide() {
   return (
     <div className='min-h-screen bg-white'>,

@@ -8,14 +8,14 @@ import {
   Zap,
   Globe,
   Shield,
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Calendar;
-  Target;
-  Users;
-  BarChart3;
-  Lightbulb;
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Calendar,
+  Target,
+  Users,
+  BarChart3,
+  Lightbulb,
   Star} from 'lucide-react',
 const AITrendsPredictions20o26 = () => {
   const [activePredictionsetActivePrediction] = useState(0),
@@ -24,82 +24,74 @@ const AITrendsPredictions20o26 = () => {
     setIsVisible(true)}[]),
   const predictions = [
     {
-      id: 'quantum-ai';
-      title: 'Quantum-Enhanced AI';
-      timeframe: 'Q2 20o26';
-      confidence: 95;
-      icon: Brain;
-      color: 'from-purple-60o0 to-blue-60o0';
-      description: 'AI systems will leverage quantum computing to achieve unprecedented processing speeds and solve complex optimization problems.';
-      impact: 'Revolutionary';
+      id: 'quantum-ai',
+      title: 'Quantum-Enhanced AI',
+      timeframe: 'Q2 20o26',
+      confidence: 95,
+      icon: Brain,
+      color: 'from-purple-60o0 to-blue-60o0',
+      description: 'AI systems will leverage quantum computing to achieve unprecedented processing speeds and solve complex optimization problems.',
+      impact: 'Revolutionary',
       keyPoints: [
-        '10o00x faster machine learning training';
-        'Breakthrough in drug discovery';
-        'Advanced cryptography solutions';
-        'Real-time complex simulations'];
-      marketValue: '$50B';
-      adoptionRate: '85%'};
+        '10o00x faster machine learning trainingBreakthrough in drug discovery',
+        'Advanced cryptography solutionsReal-time complex simulations'],
+      marketValue: '$50B',
+      adoptionRate: '85%'},
     {
-      id: 'neural-interfaces';
-      title: 'Neural Interface Integration';
-      timeframe: 'Q3 20o26';
-      confidence: 88;
-      icon: Zap;
-      color: 'from-cyan-60o0 to-teal-60o0';
-      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.';
-      impact: 'Transformative';
+      id: 'neural-interfaces',
+      title: 'Neural Interface Integration',
+      timeframe: 'Q3 20o26',
+      confidence: 88,
+      icon: Zap,
+      color: 'from-cyan-60o0 to-teal-60o0',
+      description: 'Direct brain-computer interfaces will become mainstreamenabling thought-controlled devices and enhanced cognitive capabilities.',
+      impact: 'Transformative',
       keyPoints: [
-        'Thought-controlled computing';
-        'Enhanced memory augmentation';
-        'Real-time language translation';
-        'Telepathic communication'];
-      marketValue: '$30B';
-      adoptionRate: '70%'};
+        'Thought-controlled computingEnhanced memory augmentation',
+        'Real-time language translationTelepathic communication'],
+      marketValue: '$30B',
+      adoptionRate: '70%'},
     {
-      id: 'autonomous-systems';
-      title: 'Fully Autonomous Ecosystems';
-      timeframe: 'Q4 20o26';
-      confidence: 92;
-      icon: Shield;
-      color: 'from-green-60o0 to-emerald-60o0';
-      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.';
-      impact: 'Disruptive';
+      id: 'autonomous-systems',
+      title: 'Fully Autonomous Ecosystems',
+      timeframe: 'Q4 20o26',
+      confidence: 92,
+      icon: Shield,
+      color: 'from-green-60o0 to-emerald-60o0',
+      description: 'Complete autonomous systems will manage entire citiestransportation networksand industrial complexes without human intervention.',
+      impact: 'Disruptive',
       keyPoints: [
-        'Self-managing smart cities';
-        'Autonomous transportation networks';
-        'Predictive maintenance systems';
-        'Intelligent resource allocation'];
-      marketValue: '$75B';
-      adoptionRate: '90%'};
+        'Self-managing smart citiesAutonomous transportation networks',
+        'Predictive maintenance systemsIntelligent resource allocation'],
+      marketValue: '$75B',
+      adoptionRate: '90%'},
     {
-      id: 'ai-consciousness';
-      title: 'Artificial Consciousness';
-      timeframe: 'Q1 20o27';
-      confidence: 75;
-      icon: Globe;
-      color: 'from-red-60o0 to-pink-60o0';
-      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.';
-      impact: 'Paradigm-Shifting';
+      id: 'ai-consciousness',
+      title: 'Artificial Consciousness',
+      timeframe: 'Q1 20o27',
+      confidence: 75,
+      icon: Globe,
+      color: 'from-red-60o0 to-pink-60o0',
+      description: 'AI systems will achieve a form of consciousnessleading to ethical considerations and new forms of human-AI collaboration.',
+      impact: 'Paradigm-Shifting',
       keyPoints: [
-        'Self-aware AI systems';
-        'Emotional intelligence in machines';
-        'AI rights and ethics frameworks';
-        'Human-AI collaborative decision making'];
-      marketValue: '$10o0B';
+        'Self-aware AI systemsEmotional intelligence in machines',
+        'AI rights and ethics frameworksHuman-AI collaborative decision making'],
+      marketValue: '$10o0B',
       adoptionRate: '60%'}
   ],
   const marketInsights = [
-    { category: 'AI 'Hardware', 'growth: '+340%'value: '$20o0B' };
-    { category: 'AI 'Software', 'growth: '+280%'value: '$150B' };
-    { category: 'AI 'Services', 'growth: '+420%'value: '$10o0B' };
-    { category: 'AI 'Research', 'growth: '+50o0%'value: '$50B' }
+    { category: 'AI 'Hardwaregrowth: '+340%'value: '$20o0B' },
+    { category: 'AI 'Softwaregrowth: '+280%'value: '$150B' },
+    { category: 'AI 'Servicesgrowth: '+420%'value: '$10o0B' },
+    { category: 'AI 'Researchgrowth: '+50o0%'value: '$50B' }
   ],
   const timeline = [
-    { month: 'Jan 20o26'event: 'Quantum AI 'Prototypes', 'status: 'completed' };
-    { month: 'Mar 20o26'event: 'Neural Interface 'Trials', 'status: 'in-progress' };
-    { month: 'Jun 20o26'event: 'Autonomous City 'Launch', 'status: 'upcoming' };
-    { month: 'Sep 20o26'event: 'AI Consciousness 'Research', 'status: 'upcoming' };
-    { month: 'Dec 20o26'event: 'Full Ecosystem 'Integration', 'status: 'upcoming' }
+    { month: 'Jan 20o26'event: 'Quantum AI 'Prototypesstatus: 'completed' },
+    { month: 'Mar 20o26'event: 'Neural Interface 'Trialsstatus: 'in-progress' },
+    { month: 'Jun 20o26'event: 'Autonomous City 'Launchstatus: 'upcoming' },
+    { month: 'Sep 20o26'event: 'AI Consciousness 'Researchstatus: 'upcoming' },
+    { month: 'Dec 20o26'event: 'Full Ecosystem 'Integrationstatus: 'upcoming' }
   ],
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 overflow-hidden">,
@@ -113,14 +105,14 @@ const AITrendsPredictions20o26 = () => {
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-40",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0-50];
+                y: [0-50],
                 opacity: [0.40.80.4]}}
               transition={{
-                duration: 4 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 3}}
              />))}
         </div>,
@@ -342,5 +334,5 @@ const AITrendsPredictions20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AITrendsPredictions20o26;
+    </div>)},
+export default AITrendsPredictions20o26,

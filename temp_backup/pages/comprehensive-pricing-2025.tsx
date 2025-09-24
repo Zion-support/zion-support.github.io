@@ -2,18 +2,18 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  Shield;
-  Rocket;
-  Database;
-  DollarSign;
-  Heart;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
+  Check,
+  Star,
+  Shield,
+  Rocket,
+  Database,
+  DollarSign,
+  Heart,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
 } from 'lucide-react',
 // Import our new advanced services,
 import { advancedCybersecurityServices2025 } from '../data/2025-advanced-cybersecurity-services',
@@ -23,64 +23,64 @@ import { advancedFintechBlockchain2025 } from '../data/2025-advanced-fintech-blo
 import { advancedHealthcareBiotech2025 } from '../data/2025-advanced-healthcare-biotech',
 // Combine all services,
 const allAdvancedServices = [
-  ...advancedCybersecurityServices2025;
-  ...advancedDevOpsInfrastructure2025;
-  ...advancedDataAnalyticsBI2025;
-  ...advancedFintechBlockchain2025;
-  ...advancedHealthcareBiotech2025;
+  ...advancedCybersecurityServices2025,
+  ...advancedDevOpsInfrastructure2025,
+  ...advancedDataAnalyticsBI2025,
+  ...advancedFintechBlockchain2025,
+  ...advancedHealthcareBiotech2025,
 ],
 // Service categories with pricing tiers,
 const serviceCategories = [
   {
-    name: 'Advanced Cybersecurity';
-    description: 'Enterprise-grade security solutions for modern threats';
-    icon: Shield;
-    color: 'from-red-600 to-pink-600';
-    services: advancedCybersecurityServices2025;
-    avgPrice: '$3,200';
-    marketSize: '$150B+';
-    growthRate: '35%';
-  };
+    name: 'Advanced Cybersecurity',
+    description: 'Enterprise-grade security solutions for modern threats',
+    icon: Shield,
+    color: 'from-red-600 to-pink-600',
+    services: advancedCybersecurityServices2025,
+    avgPrice: '$3,200',
+    marketSize: '$150B+',
+    growthRate: '35%'
+  },
   {
-    name: 'DevOps & Infrastructure';
-    description: 'Modern infrastructure and automation solutions';
-    icon: Rocket;
-    color: 'from-purple-600 to-pink-600';
-    services: advancedDevOpsInfrastructure2025;
-    avgPrice: '$2,500';
-    marketSize: '$80B+';
-    growthRate: '40%';
-  };
+    name: 'DevOps & Infrastructure',
+    description: 'Modern infrastructure and automation solutions',
+    icon: Rocket,
+    color: 'from-purple-600 to-pink-600',
+    services: advancedDevOpsInfrastructure2025,
+    avgPrice: '$2,500',
+    marketSize: '$80B+',
+    growthRate: '40%'
+  },
   {
-    name: 'Data Analytics & BI';
-    description: 'AI-powered insights and business intelligence';
-    icon: Database;
-    color: 'from-blue-600 to-indigo-600';
-    services: advancedDataAnalyticsBI2025;
-    avgPrice: '$3,200';
-    marketSize: '$120B+';
-    growthRate: '30%';
-  };
+    name: 'Data Analytics & BI',
+    description: 'AI-powered insights and business intelligence',
+    icon: Database,
+    color: 'from-blue-600 to-indigo-600',
+    services: advancedDataAnalyticsBI2025,
+    avgPrice: '$3,200',
+    marketSize: '$120B+',
+    growthRate: '30%'
+  },
   {
-    name: 'Fintech & Blockchain';
-    description: 'Next-generation financial technology solutions';
-    icon: DollarSign;
-    color: 'from-green-600 to-emerald-600';
-    services: advancedFintechBlockchain2025;
-    avgPrice: '$2,800';
-    marketSize: '$200B+';
-    growthRate: '50%';
-  };
+    name: 'Fintech & Blockchain',
+    description: 'Next-generation financial technology solutions',
+    icon: DollarSign,
+    color: 'from-green-600 to-emerald-600',
+    services: advancedFintechBlockchain2025,
+    avgPrice: '$2,800',
+    marketSize: '$200B+',
+    growthRate: '50%'
+  },
   {
-    name: 'Healthcare & Biotech';
-    description: 'Revolutionary healthcare and biotechnology platforms';
-    icon: Heart;
-    color: 'from-teal-600 to-cyan-600';
-    services: advancedHealthcareBiotech2025;
-    avgPrice: '$4,000';
-    marketSize: '$180B+';
-    growthRate: '45%';
-  };
+    name: 'Healthcare & Biotech',
+    description: 'Revolutionary healthcare and biotechnology platforms',
+    icon: Heart,
+    color: 'from-teal-600 to-cyan-600',
+    services: advancedHealthcareBiotech2025,
+    avgPrice: '$4,000',
+    marketSize: '$180B+',
+    growthRate: '45%'
+  },
 ],
 export default function ComprehensivePricing2025() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -94,8 +94,8 @@ export default function ComprehensivePricing2025() {
     switch (sortBy) {
       case 'price':,
         return (
-          parseFloat(a.price.replace('$', '').replace(',', '')) -,
-          parseFloat(b.price.replace('$', '').replace(',', ''))),
+          parseFloat(a.price.replace('$', '').replace(, '')) -,
+          parseFloat(b.price.replace('$', '').replace(, ''))),
       case 'name':,
         return a.name.localeCompare(b.name),
       case 'rating':,
@@ -104,41 +104,36 @@ export default function ComprehensivePricing2025() {
         return 0}
   }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-indigo-900'>,
       <SEO
         title='2025 Comprehensive Pricing | Advanced Services | Zion Tech Group',
         description='Explore our comprehensive pricing for advanced micro SAAS, IT, and AI services. Competitive pricing with enterprise-grade solutions across cybersecurity, DevOps, data analytics, fintech, and healthcare.',
         keywords={[
-          'pricing';
-          'advanced services';
-          'micro SAAS';
-          'IT services';
-          'AI services';
-          'cybersecurity';
-          'DevOps';
-          'data analytics';
-          'fintech';
-          'blockchain';
-          'healthcare biotech';
+          'pricingadvanced services',
+          'micro SAASIT services',
+          'AI servicescybersecurity',
+          'DevOpsdata analytics',
+          'fintechblockchain',
+          'healthcare biotech',
         ]}
       />,
       {/* Hero Section */}
@@ -158,7 +153,7 @@ export default function ComprehensivePricing2025() {
               <span className='text-white'>Advanced Services Portfolio</span>,
             </h1>,
             <p className='text-xl md:text-2xl text-blue-100 mb-8 max-w-4xl mx-auto'>,
-              Transparent, competitive pricing for our cutting-edge micro SAAS;
+              Transparent, competitive pricing for our cutting-edge micro SAAS,
               IT, and AI services. Enterprise-grade solutions at accessible,
               prices with proven ROI.,
             </p>,

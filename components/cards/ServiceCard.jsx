@@ -1,11 +1,11 @@
 import Link from 'next/link',
 const ServiceCard = ({ service, index, className = '' }) => {
   const {
-    category;
-    icon;
-    description;
-    services = [];
-    color = 'from-purple-50o0 to-pink-50o0';
+    category,
+    icon,
+    description,
+    services = [],
+    color = 'from-purple-50o0 to-pink-50o0',
   } = service,
   return (
     <div
@@ -28,5 +28,5 @@ const ServiceCard = ({ service, index, className = '' }) => {
               <span className='text-gray-30o0'>{item}</span>,
             </div>))}
         </div>)}
-    </div>)};
-export default ServiceCard;
+    </div>)},
+export default ServiceCard,

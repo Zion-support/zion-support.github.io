@@ -4,8 +4,8 @@ interface PaymentSectionProps {
   onPaymentClick: () => void}
 ,
 export function PaymentSection({
-  selectedCountry;
-  onPaymentClick;
+  selectedCountry,
+  onPaymentClick,
 }: PaymentSectionProps) {
   return (
     <div className='bg-slate-80o0 rounded-lg border border-slate-60o0 p-6'>,

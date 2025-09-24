@@ -19,31 +19,29 @@ export type QuoteFormData = {
   budgetRange: string,
   contactName: string,
   contactEmail: string,
-  company?: string};
+  company?: string},
 const initialData: QuoteFormData = {
-  serviceTypes: [];
-  talentRoles: [];
-  equipmentNeeds: [];
-  projectName: '';
-  description: '';
-  deliverables: '';
-  startDate: null;
-  endDate: null;
-  timelineFlexibility: '';
-  budgetRange: '';
-  contactName: '';
-  contactEmail: '';
-  company: '';
-};
+  serviceTypes: [],
+  talentRoles: [],
+  equipmentNeeds: [],
+  projectName: '',
+  description: '',
+  deliverables: '',
+  startDate: null,
+  endDate: null,
+  timelineFlexibility: '',
+  budgetRange: '',
+  contactName: '',
+  contactEmail: '',
+  company: ''
+},
 export default function RequestQuotePage() {
   const steps = useMemo(
     () => [
-      'Select Services';
-      'Project Details';
-      'Timeline';
-      'Budget';
-      'Summary';
-    ];
+      'Select ServicesProject Details',
+      'TimelineBudget',
+      'Summary',
+    ],
     []),
   const [currentStep, setCurrentStep] = useState(0),
   const [formData, setFormData] = useState<QuoteFormData>(initialData),
@@ -58,19 +56,19 @@ export default function RequestQuotePage() {
     setSubmitResult(null),
     try {
       const res = await fetch('/api/quote-request', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify(formData);
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData)
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.message || 'Submission failed'),
       setSubmitResult({ ok: true, message: 'Request submitted successfully.' })} catch (err: any) {
       setSubmitResult({
-        ok: false;
-        message: err?.message || 'Submission failed';
+        ok: false,
+        message: err?.message || 'Submission failed'
       })} finally {
       setSubmitting(false)}
-  };
+  },
   return (
     <>,
       <Head>,

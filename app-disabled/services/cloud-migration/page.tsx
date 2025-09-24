@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'cloud-migration - Zion Tech Group';
+  title: 'cloud-migration - Zion Tech Group',
   description:,
-    'Professional cloud-migration solutions for your business needs.';
-  keywords: 'cloud-migration, services, business, technology';
-};
+    'Professional cloud-migration solutions for your business needs.',
+  keywords: 'cloud-migration, services, business, technology',
+},
 export default function CloudMigrationPage() {
   return (
     <div className='min-h-screen bg-white'>,

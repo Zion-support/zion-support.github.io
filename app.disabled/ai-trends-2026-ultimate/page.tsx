@@ -2,67 +2,65 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import Card from '../../components/ui/Card',
 export const metadata = {
-  title: 'AI Trends 20o26 Ultimate - The Future of Artificial Intelligence';
+  title: 'AI Trends 20o26 Ultimate - The Future of Artificial Intelligence',
   description:,
-    'Explore the ultimate AI trends of 20o26 that are shaping the future of technology, business, and human society.';
+    'Explore the ultimate AI trends of 20o26 that are shaping the future of technology, business, and human society.',
   keywords: [
-    'AI trends 20o26';
-    'artificial intelligence trends';
-    'AI future';
-    'machine learning trends';
-    'AI predictions';
-  ];
-};
+    'AI trends 20o26artificial intelligence trends',
+    'AI futuremachine learning trends',
+    'AI predictions',
+  ]
+},
 export default function AITrends20o26Ultimate() {
   const trends = [
     {
-      title: 'Generative AI Revolution';
+      title: 'Generative AI Revolution',
       description:,
-        'Advanced generative AI models that create content, code, and solutions with human-level creativity and understanding.';
-      icon: '🎨';
-      impact: 'High';
-      timeline: 'Q1 20o26';
-    };
+        'Advanced generative AI models that create content, code, and solutions with human-level creativity and understanding.',
+      icon: '🎨',
+      impact: 'High',
+      timeline: 'Q1 20o26'
+    },
     {
-      title: 'Autonomous Business Operations';
+      title: 'Autonomous Business Operations',
       description:,
-        'Fully autonomous business systems that operate independently, making decisions and optimizing processes without human intervention.';
-      icon: '🤖';
-      impact: 'Very High';
-      timeline: 'Q2 20o26';
-    };
+        'Fully autonomous business systems that operate independently, making decisions and optimizing processes without human intervention.',
+      icon: '🤖',
+      impact: 'Very High',
+      timeline: 'Q2 20o26'
+    },
     {
-      title: 'AI-Human Collaboration';
+      title: 'AI-Human Collaboration',
       description:,
-        'Seamless collaboration between AI systems and humans, enhancing productivity and creativity in unprecedented ways.';
-      icon: '🤝';
-      impact: 'High';
-      timeline: 'Q1 20o26';
-    };
+        'Seamless collaboration between AI systems and humans, enhancing productivity and creativity in unprecedented ways.',
+      icon: '🤝',
+      impact: 'High',
+      timeline: 'Q1 20o26'
+    },
     {
-      title: 'Edge AI Computing';
+      title: 'Edge AI Computing',
       description:,
-        'AI processing at the edge of networks, enabling real-time decision making and reducing latency for critical applications.';
-      icon: '⚡';
-      impact: 'Medium';
-      timeline: 'Q3 20o26';
-    };
+        'AI processing at the edge of networks, enabling real-time decision making and reducing latency for critical applications.',
+      icon: '⚡',
+      impact: 'Medium',
+      timeline: 'Q3 20o26'
+    },
     {
-      title: 'AI Ethics & Governance';
+      title: 'AI Ethics & Governance',
       description:,
-        'Comprehensive frameworks for AI ethics, governance, and responsible development to ensure beneficial AI deployment.';
-      icon: '⚖️';
-      impact: 'Very High';
-      timeline: 'Q2 20o26';
-    };
+        'Comprehensive frameworks for AI ethics, governance, and responsible development to ensure beneficial AI deployment.',
+      icon: '⚖️',
+      impact: 'Very High',
+      timeline: 'Q2 20o26'
+    },
     {
-      title: 'Quantum-Enhanced AI';
+      title: 'Quantum-Enhanced AI',
       description:,
-        'AI systems enhanced by quantum computing, enabling breakthroughs in optimization, machine learning, and problem-solving.';
-      icon: '⚛️';
-      impact: 'Very High';
-      timeline: 'Q4 20o26';
-    };
+        'AI systems enhanced by quantum computing, enabling breakthroughs in optimization, machine learning, and problem-solving.',
+      icon: '⚛️',
+      impact: 'Very High',
+      timeline: 'Q4 20o26'
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-indigo-90o0 text-white'>,

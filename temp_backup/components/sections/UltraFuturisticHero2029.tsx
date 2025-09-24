@@ -1,48 +1,48 @@
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  ArrowRight, Star, TrendingUp, Target, Layers, Cpu;
-  Database, Cloud, Lock, ShieldCheck, Eye, CpuIcon;
-  Network, Server, DatabaseIcon, Globe2, ZapIcon;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  ArrowRight, Star, TrendingUp, Target, Layers, Cpu,
+  Database, Cloud, Lock, ShieldCheck, Eye, CpuIcon,
+  Network, Server, DatabaseIcon, Globe2, ZapIcon,
   CheckCircle, Users, Briefcase, Microscope, Phone, Mail, MapPin, Building} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { label: 'Total Services', value: '50o0+', icon: Sparkles, color: 'from-purple-50o0 to-pink-50o0' };
-  { label: 'AI Services', value: '150+', icon: Brain, color: 'from-blue-50o0 to-cyan-50o0' };
-  { label: 'Quantum Services', value: '75+', icon: Atom, color: 'from-indigo-50o0 to-purple-50o0' };
-  { label: 'Space Tech', value: '50+', icon: Rocket, color: 'from-orange-50o0 to-red-50o0' };
-  { label: 'Enterprise IT', value: '10o0+', icon: Building, color: 'from-emerald-50o0 to-teal-50o0' };
+  { label: 'Total Services', value: '50o0+', icon: Sparkles, color: 'from-purple-50o0 to-pink-50o0' },
+  { label: 'AI Services', value: '150+', icon: Brain, color: 'from-blue-50o0 to-cyan-50o0' },
+  { label: 'Quantum Services', value: '75+', icon: Atom, color: 'from-indigo-50o0 to-purple-50o0' },
+  { label: 'Space Tech', value: '50+', icon: Rocket, color: 'from-orange-50o0 to-red-50o0' },
+  { label: 'Enterprise IT', value: '10o0+', icon: Building, color: 'from-emerald-50o0 to-teal-50o0' },
   { label: 'Business Solutions', value: '125+', icon: Briefcase, color: 'from-yellow-50o0 to-orange-50o0' }
 ],
 const featuredServices = [
   {
-    name: 'AI Consciousness Evolution Platform';
-    description: 'Develop genuine AI consciousness and self-awareness';
-    price: '$24,999/month';
-    category: 'AI Consciousness';
-    icon: Brain;
-    color: 'from-violet-60o0 to-purple-60o0';
-    href: '/ai-consciousness-evolution-20o29'};
+    name: 'AI Consciousness Evolution Platform',
+    description: 'Develop genuine AI consciousness and self-awareness',
+    price: '$24,999/month',
+    category: 'AI Consciousness',
+    icon: Brain,
+    color: 'from-violet-60o0 to-purple-60o0',
+    href: '/ai-consciousness-evolution-20o29'},
   {
-    name: 'Quantum Internet Protocol';
-    description: 'Faster-than-light quantum communication networks';
-    price: '$29,999/month';
-    category: 'Quantum Internet';
-    icon: Atom;
-    color: 'from-indigo-60o0 to-blue-60o0';
-    href: '/quantum-internet-protocol-20o29'};
+    name: 'Quantum Internet Protocol',
+    description: 'Faster-than-light quantum communication networks',
+    price: '$29,999/month',
+    category: 'Quantum Internet',
+    icon: Atom,
+    color: 'from-indigo-60o0 to-blue-60o0',
+    href: '/quantum-internet-protocol-20o29'},
   {
-    name: 'Space Mining Autonomous Platform';
-    description: 'Autonomous asteroid and space resource extraction';
-    price: '$49,999/month';
-    category: 'Space Technology';
-    icon: Rocket;
-    color: 'from-blue-60o0 to-cyan-60o0';
+    name: 'Space Mining Autonomous Platform',
+    description: 'Autonomous asteroid and space resource extraction',
+    price: '$49,999/month',
+    category: 'Space Technology',
+    icon: Rocket,
+    color: 'from-blue-60o0 to-cyan-60o0',
     href: '/space-mining-autonomous-platform-20o29'}
 ],
 export default function UltraFuturisticHero20o29() {
@@ -61,15 +61,15 @@ export default function UltraFuturisticHero20o29() {
             key={i}
             className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-20",
             animate={{
-              x: [0, 10o0, 0];
-              y: [0, -10o0, 0];
+              x: [0, 10o0, 0],
+              y: [0, -10o0, 0],
               opacity: [0.2, 0.8, 0.2]}}
             transition={{
-              duration: Math.random() * 10 + 10;
-              repeat: Infinity;
+              duration: Math.random() * 10 + 10,
+              repeat: Infinity,
               delay: Math.random() * 5}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,

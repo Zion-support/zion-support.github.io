@@ -1,84 +1,76 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Cloud;
-  Cpu;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  TrendingUp;
+  Cloud,
+  Cpu,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function CloudServicesPage() {
   const services = [
     {
-      title: 'Cloud Migration & Strategy';
+      title: 'Cloud Migration & Strategy',
       description:,
-        'Seamless cloud migration with strategic planning and execution';
+        'Seamless cloud migration with strategic planning and execution',
       features: [
-        'Migration Planning';
-        'Cost Optimization';
-        'Performance Tuning';
-        'Security Implementation';
-      ];
-      price: 'From $10,0o00';
-      icon: Cloud;
-      color: 'from-emerald-50o0 to-teal-50o0';
-    };
+        'Migration PlanningCost Optimization',
+        'Performance TuningSecurity Implementation',
+      ],
+      price: 'From $10,0o00',
+      icon: Cloud,
+      color: 'from-emerald-50o0 to-teal-50o0'
+    },
     {
-      title: 'DevOps & CI/CD';
-      description: 'Automated development and deployment pipelines';
+      title: 'DevOps & CI/CD',
+      description: 'Automated development and deployment pipelines',
       features: [
-        'CI/CD Automation';
-        'Infrastructure as Code';
-        'Monitoring & Alerting';
-        'Performance Optimization';
-      ];
-      price: 'From $6,0o00';
-      icon: Zap;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'CI/CD AutomationInfrastructure as Code',
+        'Monitoring & AlertingPerformance Optimization',
+      ],
+      price: 'From $6,0o00',
+      icon: Zap,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Edge Computing Solutions';
+      title: 'Edge Computing Solutions',
       description:,
-        'Distributed computing for improved performance and reliability';
+        'Distributed computing for improved performance and reliability',
       features: [
-        'Edge Deployment';
-        'Load Balancing';
-        'Global Distribution';
-        'Low Latency';
-      ];
-      price: 'From $8,0o00';
-      icon: Cpu;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Edge DeploymentLoad Balancing',
+        'Global DistributionLow Latency',
+      ],
+      price: 'From $8,0o00',
+      icon: Cpu,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'Cloud Security & Compliance';
+      title: 'Cloud Security & Compliance',
       description:,
-        'Comprehensive security and compliance for cloud environments';
+        'Comprehensive security and compliance for cloud environments',
       features: [
-        'Identity Management';
-        'Data Protection';
-        'Compliance Auditing';
-        'Threat Prevention';
-      ];
-      price: 'From $12,0o00';
-      icon: Shield;
-      color: 'from-red-50o0 to-orange-50o0';
-    };
+        'Identity ManagementData Protection',
+        'Compliance AuditingThreat Prevention',
+      ],
+      price: 'From $12,0o00',
+      icon: Shield,
+      color: 'from-red-50o0 to-orange-50o0'
+    },
   ],
   const stats = [
-    { number: '99.99%', label: 'Uptime Guarantee', icon: Cloud };
-    { number: '50%', label: 'Cost Reduction', icon: TrendingUp };
-    { number: '24/7', label: 'Support Available', icon: Clock };
-    { number: '10o0+', label: 'Cloud Projects', icon: CheckCircle };
+    { number: '99.99%', label: 'Uptime Guarantee', icon: Cloud },
+    { number: '50%', label: 'Cost Reduction', icon: TrendingUp },
+    { number: '24/7', label: 'Support Available', icon: Clock },
+    { number: '10o0+', label: 'Cloud Projects', icon: CheckCircle },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,

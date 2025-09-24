@@ -9,53 +9,53 @@ export default function AutonomousEnterpriseReadinessAssessment() {
   const [showResults, setShowResults] = useState(false),
   const questions = [
     {
-      id: 'data-quality';
-      question: 'How would you rate your current data quality?';
+      id: 'data-quality',
+      question: 'How would you rate your current data quality?',
       options: [
-        { value: 'excellent', label: 'Excellent - Clean, complete, and well-structured', score: 4 };
-        { value: 'good', label: 'Good - Mostly clean with minor issues', score: 3 };
-        { value: 'fair', label: 'Fair - Some quality issues but manageable', score: 2 };
+        { value: 'excellent', label: 'Excellent - Clean, complete, and well-structured', score: 4 },
+        { value: 'good', label: 'Good - Mostly clean with minor issues', score: 3 },
+        { value: 'fair', label: 'Fair - Some quality issues but manageable', score: 2 },
         { value: 'poor', label: 'Poor - Significant quality problems', score: 1 }
-      ]};
+      ]},
     {
-      id: 'infrastructure';
-      question: 'What is your current IT infrastructure readiness?';
+      id: 'infrastructure',
+      question: 'What is your current IT infrastructure readiness?',
       options: [
-        { value: 'cloud-native', label: 'Cloud-native with modern architecture', score: 4 };
-        { value: 'hybrid', label: 'Hybrid cloud and on-premises setup', score: 3 };
-        { value: 'legacy', label: 'Legacy systems with some modernization', score: 2 };
+        { value: 'cloud-native', label: 'Cloud-native with modern architecture', score: 4 },
+        { value: 'hybrid', label: 'Hybrid cloud and on-premises setup', score: 3 },
+        { value: 'legacy', label: 'Legacy systems with some modernization', score: 2 },
         { value: 'outdated', label: 'Outdated infrastructure needing major upgrades', score: 1 }
-      ]};
+      ]},
     {
-      id: 'skills';
-      question: 'How would you assess your team\'s AI/ML skills?';
+      id: 'skills',
+      question: 'How would you assess your team\'s AI/ML skills?',
       options: [
-        { value: 'expert', label: 'Expert level with dedicated AI team', score: 4 };
-        { value: 'intermediate', label: 'Intermediate with some AI experience', score: 3 };
-        { value: 'beginner', label: 'Beginner level with basic knowledge', score: 2 };
+        { value: 'expert', label: 'Expert level with dedicated AI team', score: 4 },
+        { value: 'intermediate', label: 'Intermediate with some AI experience', score: 3 },
+        { value: 'beginner', label: 'Beginner level with basic knowledge', score: 2 },
         { value: 'none', label: 'No AI/ML skills in the team', score: 1 }
-      ]};
+      ]},
     {
-      id: 'budget';
-      question: 'What is your AI implementation budget?';
+      id: 'budget',
+      question: 'What is your AI implementation budget?',
       options: [
-        { value: 'unlimited', label: 'Unlimited budget for AI initiatives', score: 4 };
-        { value: 'substantial', label: 'Substantial budget ($50o0K+)', score: 3 };
-        { value: 'moderate', label: 'Moderate budget ($10o0K-50o0K)', score: 2 };
+        { value: 'unlimited', label: 'Unlimited budget for AI initiatives', score: 4 },
+        { value: 'substantial', label: 'Substantial budget ($50o0K+)', score: 3 },
+        { value: 'moderate', label: 'Moderate budget ($10o0K-50o0K)', score: 2 },
         { value: 'limited', label: 'Limited budget (<$10o0K)', score: 1 }
-      ]};
+      ]},
     {
-      id: 'leadership';
-      question: 'How strong is your leadership support for AI?';
+      id: 'leadership',
+      question: 'How strong is your leadership support for AI?',
       options: [
-        { value: 'champion', label: 'Strong champion with full support', score: 4 };
-        { value: 'supportive', label: 'Supportive but cautious', score: 3 };
-        { value: 'neutral', label: 'Neutral - waiting to see results', score: 2 };
+        { value: 'champion', label: 'Strong champion with full support', score: 4 },
+        { value: 'supportive', label: 'Supportive but cautious', score: 3 },
+        { value: 'neutral', label: 'Neutral - waiting to see results', score: 2 },
         { value: 'skeptical', label: 'Skeptical or resistant', score: 1 }
       ]}
   ],
   const handleAnswer = (questionId: string, value: string) => {
-    setAnswers(prev => ({ ...prev, [questionId]: value }))};
+    setAnswers(prev => ({ ...prev, [questionId]: value }))},
   const calculateScore = () => {
     let totalScore = 0,
     questions.forEach(question => {
@@ -66,29 +66,29 @@ export default function AutonomousEnterpriseReadinessAssessment() {
           totalScore += option.score}
       }
     }),
-    return totalScore};
+    return totalScore},
   const getReadinessLevel = (score: number) => {
-    if (score >= 18) return { level: 'High', color: 'green', description: 'Ready for immediate AI implementation' };
-    if (score >= 14) return { level: 'Medium', color: 'yellow', description: 'Some preparation needed before implementation' };
-    if (score >= 10) return { level: 'Low', color: 'orange', description: 'Significant preparation required' };
-    return { level: 'Very Low', color: 'red', description: 'Extensive preparation needed' };
-  };
+    if (score >= 18) return { level: 'High', color: 'green', description: 'Ready for immediate AI implementation' },
+    if (score >= 14) return { level: 'Medium', color: 'yellow', description: 'Some preparation needed before implementation' },
+    if (score >= 10) return { level: 'Low', color: 'orange', description: 'Significant preparation required' },
+    return { level: 'Very Low', color: 'red', description: 'Extensive preparation needed' },
+  },
   const nextStep = () => {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1)} else {
       const finalScore = calculateScore(),
       setScore(finalScore),
       setShowResults(true)}
-  };
+  },
   const prevStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1)}
-  };
+  },
   const resetAssessment = () => {
     setCurrentStep(0),
     setAnswers({}),
     setScore(0),
-    setShowResults(false)};
+    setShowResults(false)},
   if (showResults) {
     const readiness = getReadinessLevel(score),
     const maxScore = questions.length * 4,

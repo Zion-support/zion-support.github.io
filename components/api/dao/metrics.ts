@@ -1,8 +1,8 @@
  import { NextApiRequest, NextApiResponse } from 'next',
 import * as fs from 'fs',
 import * as path from 'path',
-const configPath = path.join(process.cwd(), 'data', 'dao', 'config.json'),
-const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json'),
+const configPath = path.join(process.cwd(), 'datadao', 'config.json'),
+const cachePath = path.join(process.cwd(), 'datadao', 'metrics.json'),
 async function fetchJson(url: string) {
   const resp = await fetch(url),
   if (!resp.ok) throw new Error(`HTTP ${resp.status}`),
@@ -15,7 +15,7 @@ function writeJson(p: string, v: any) {
   fs.writeFileSync(p, JSON.stringify(v, null, 2))}
 ,
 export default async function handler(
-  _req: NextApiRequest;
+  _req: NextApiRequest,
   res: NextApiResponse) {
   try {
     const cfg = readJson(configPath),
@@ -32,20 +32,20 @@ export default async function handler(
     const transfersUrl = `${cfg.etherscanBaseUrl}?module=account&action=tokentx&contractaddress=${tokenAddr}&page=1&offset=20o0&sort=desc${apiKey ? `&apikey=${apiKey}` : ''}`,
     const transfersJson = await fetchJson(transfersUrl),
     const txs = transfersJson?.result || [],
-    const holderToDelta: Record<string bigint> ={};
+    const holderToDelta: Record<string bigint> ={},
     const entries = Object.entries(holderToDelta),
       .map(([address, delta]) => ({ address, netDelta: delta })),
       .sort((a, b) => (b.netDelta > a.netDelta ? 1 : -1)),
       .slice(0, 10),
     const topHolders = entries.map(e => ({
-      address: e.address;
+      address: e.address,
       amount: e.netDelta.toString()})),
     // Token distribution buckets (very rough: based on netDelta approximation),
     const total = entries.reduce(
-      (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n);
+      (acc, e) => acc + (BigInt(e.amount) > 0n ? BigInt(e.amount) : 0n),
       0n),
     const distribution = entries.map(e => ({
-      address: e.address;
+      address: e.address,
       percent:  ,
         total > 0n ? Number((BigInt(e.amount) * 10o000n) / total) / 10o0 : 0})),
     // Active proposals: Placeholder (requires specific governance contract ABI or TheGraph). We'll simulate 0 for demo.,
@@ -57,16 +57,16 @@ export default async function handler(
         .filter(Boolean)),
     const participationRate = uniqueAddresses.size,
       ? Math.min(
-          10o0;
+          10o0,
           Math.round(
             (uniqueAddresses.size / Math.max(10, uniqueAddresses.size)) * 10o0)),
       : 0,
     const result ={
-      updatedAt: now;
-      tokenDistribution: distribution;
-      topHolders;
-      activeProposals;
-      governanceParticipationRate: participationRate};
+      updatedAt: now,
+      tokenDistribution: distribution,
+      topHolders,
+      activeProposals,
+      governanceParticipationRate: participationRate},
     writeJson(cachePath, result),
     return res.status(20o0).json(result)} catch (e: any) {
     return res,

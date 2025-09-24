@@ -1,4 +1,6 @@
-import React from react',import { render, screen } from @testing-library/react',import { MemoryRouter } from react-router-dom',import { CategoryCard } from @/components/CategoryCard';
+import React from react',
+import { render, screen } from @testing-library/react',import { MemoryRouter } from react-router-dom',
+import { CategoryCard } from @/components/CategoryCard',
 const renderCard = (ui: React.ReactElement) => render(<MemoryRouter>{ui}</MemoryRouter>),
 describe('CategoryCard', () => {'  test('renders title, description and count', () => {'    renderCard(
       <CategoryCard title="Crypto" description="All things crypto" icon={<span data-testid="icon"  />} count={5} />"    ),""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",

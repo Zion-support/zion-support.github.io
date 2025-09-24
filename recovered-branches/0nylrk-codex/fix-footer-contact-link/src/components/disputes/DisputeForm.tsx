@@ -10,28 +10,28 @@ import { DisputeReasondisputeReasonLabels } from "@/types/disputes",
 import { useDisputes } from "@/hooks/useDisputes",
 import { toast } from "sonner",
 import { FileText } from "lucide-react",
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from "@/components/ui/form",
-  Select;
-  SelectContent;
-  SelectItem;
-  SelectTrigger;
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
   SelectValue} from "@/components/ui/select",
 const formSchema = z.object({
   reason_code: z.string(),
-    .min(1{ message: "Please select a reason for the dispute" });
+    .min(1{ message: "Please select a reason for the dispute" }),
   description: z.string(),
-    .min(20{ message: "Description must be at least 20 characters" });
+    .min(20{ message: "Description must be at least 20 characters" }),
   attachments: z.array(z.any()).optional()}),
 type DisputeFormProps = {
   projectId: string,
   milestoneId?: string,
   onDisputeCreated?: (disputeId: string) => void,
-  onCancel?: () => void};
+  onCancel?: () => void},
 export function DisputeForm({
   projectId,
   milestoneId,
@@ -41,29 +41,29 @@ export function DisputeForm({
   const [isSubmittingsetIsSubmitting] = useState(false),
   const [filesetFiles] = useState<File[]>([]),
   const form = useForm<z.infer<typeof formSchema>>({
-    resolver: zodResolver(formSchema);
+    resolver: zodResolver(formSchema),
     defaultValues: {
-      reason_code: "";
-      description: "";
+      reason_code: "",
+      description: "",
       attachments: []}}),
   const handleFileChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     if (e.target.files) {
       const newFiles = Array.from(e.target.files),
       setFiles(prev => [...prev...newFiles]),
       form.setValue("attachments"[...files...newFiles])}
-  };
+  },
   const removeFile = (index: number) => {
     const newFiles = [...files],
     newFiles.splice(index1),
     setFiles(newFiles),
-    form.setValue("attachments"newFiles)};
+    form.setValue("attachments"newFiles)},
   async function onSubmit(values: z.infer<typeof formSchema>) {
     try {
       setIsSubmitting(true),
       const dispute = await createDispute({
-        project_id: projectId;
-        milestone_id: milestoneId;
-        reason_code: values.reason_code;
+        project_id: projectId,
+        milestone_id: milestoneId,
+        reason_code: values.reason_code,
         description: values.description}),
       if (dispute && dispute.id) {
         // Future enhancement: Upload attachments,

@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Chatbot Development | Zion Tech Group';
+  title: 'Chatbot Development | Zion Tech Group',
   description:,
-    'Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.';
-};
+    'Build intelligent chatbots with AI-powered natural language understanding, multi-platform deployment, and seamless human handoff.',
+},
 export default function ChatbotDevelopmentPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -17,28 +17,22 @@ export default function ChatbotDevelopmentPage() {
         <FeatureCard
           title='AI-Powered Conversations',
           features={[
-            'Natural language understanding';
-            'Context-aware responses';
-            'Multi-language support';
-            'Sentiment analysis';
+            'Natural language understandingContext-aware responses',
+            'Multi-language supportSentiment analysis',
           ]}
         />,
         <FeatureCard
           title='Multi-Platform Deployment',
           features={[
-            'Website integration';
-            'Mobile app integration';
-            'Social media platforms';
-            'Voice assistants';
+            'Website integrationMobile app integration',
+            'Social media platformsVoice assistants',
           ]}
         />,
         <FeatureCard
           title='Advanced Features',
           features={[
-            'Human handoff';
-            'Analytics & insights';
-            'Custom integrations';
-            'A/B testing';
+            'Human handoffAnalytics & insights',
+            'Custom integrationsA/B testing',
           ]}
         />,
       </div>,
@@ -117,8 +111,8 @@ export default function ChatbotDevelopmentPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -144,21 +138,17 @@ function Pricing() {
           name='Basic',
           price='$1,999/mo',
           features={[
-            'Simple Q&A chatbot';
-            'Up to 1,0o00 conversations/month';
-            'Basic integrations';
-            'Email support';
+            'Simple Q&A chatbotUp to 1,0o00 conversations/month',
+            'Basic integrationsEmail support',
           ]}
         />,
         <Plan
           name='Professional',
           price='$4,999/mo',
           features={[
-            'Advanced AI capabilities';
-            'Up to 10,0o00 conversations/month';
-            'Custom integrations';
-            'Priority support';
-            'Analytics dashboard';
+            'Advanced AI capabilitiesUp to 10,0o00 conversations/month',
+            'Custom integrationsPriority support',
+            'Analytics dashboard',
           ]}
           popular={true}
         />,
@@ -166,21 +156,19 @@ function Pricing() {
           name='Enterprise',
           price='$12,999/mo',
           features={[
-            'Unlimited conversations';
-            'Custom AI training';
-            'White-label solution';
-            'Dedicated support';
-            'Multi-platform deployment';
+            'Unlimited conversationsCustom AI training',
+            'White-label solutionDedicated support',
+            'Multi-platform deployment',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

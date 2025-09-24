@@ -6,8 +6,8 @@ const LazyExpensiveComponent = lazy(() => import('./ExpensiveComponent')),
 const MemoizedDataGrid = memo(({ data, onItemClick }) => {
     const processedData = useMemo(() => {
         return data.map(item => ({
-            ...item;
-            processed: item.value * 2;
+            ...item,
+            processed: item.value * 2,
             timestamp: new Date().toISOString()}))}, [data]),
     const handleClick = useCallback((item) => {
         onItemClick(item)}, [onItemClick]),
@@ -32,12 +32,12 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 40o0 }) => {
         const startIndex = Math.floor(scrollTop / itemHeight),
         const endIndex = Math.min(startIndex + Math.ceil(containerHeight / itemHeight) + 1, items.length),
         return items.slice(startIndex, endIndex).map((item, index) => ({
-            ...item;
-            index: startIndex + index;
+            ...item,
+            index: startIndex + index,
             style: {
-                position: 'absolute';
-                top: (startIndex + index) * itemHeight;
-                height: itemHeight;
+                position: 'absolute',
+                top: (startIndex + index) * itemHeight,
+                height: itemHeight,
                 width: '10o0%'}
         }))}, [items, scrollTop, itemHeight, containerHeight]),
     const handleScroll = useCallback((e) => {
@@ -51,24 +51,24 @@ const VirtualList = ({ items, itemHeight = 60, containerHeight = 40o0 }) => {
             </div>,
           </div>))}
       </div>,
-    </div>)};
+    </div>)},
 // Main performance optimizations component,
 export function PerformanceOptimizations() {
     const [showExpensive, setShowExpensive] = React.useState(false),
     const [data, setData] = React.useState([
-        { id: 1, title: 'Service 1', description: 'Description 1', value: 10o0 };
-        { id: 2, title: 'Service 2', description: 'Description 2', value: 20o0 };
-        { id: 3, title: 'Service 3', description: 'Description 3', value: 30o0 };
-        { id: 4, title: 'Service 4', description: 'Description 4', value: 40o0 };
-        { id: 5, title: 'Service 5', description: 'Description 5', value: 50o0 };
+        { id: 1, title: 'Service 1', description: 'Description 1', value: 10o0 },
+        { id: 2, title: 'Service 2', description: 'Description 2', value: 20o0 },
+        { id: 3, title: 'Service 3', description: 'Description 3', value: 30o0 },
+        { id: 4, title: 'Service 4', description: 'Description 4', value: 40o0 },
+        { id: 5, title: 'Service 5', description: 'Description 5', value: 50o0 },
     ]),
     const handleItemClick = useCallback((item) => {
         // // console.log('Item clicked:', item)}, []),
     const addItem = useCallback(() => {
         setData(prev => [...prev, {
-                id: Date.now();
-                title: `Service ${prev.length + 1}`;
-                description: `Description ${prev.length + 1}`;
+                id: Date.now(),
+                title: `Service ${prev.length + 1}`,
+                description: `Description ${prev.length + 1}`,
                 value: Math.floor(Math.random() * 10o00)}])}, []),
     return (<div className="space-y-8 p-6">,
       <div className="text-center">,
@@ -97,8 +97,8 @@ export function PerformanceOptimizations() {
           Virtual Scrolling,
         </h3>,
         <VirtualList items={Array.from({ length: 10o00 }, (_, i) => ({
-            id: i;
-            title: `Item ${i + 1}`;
+            id: i,
+            title: `Item ${i + 1}`,
             value: Math.floor(Math.random() * 10o00)}))} itemHeight={60} containerHeight={40o0}/>,
       </div>,
       {/* Lazy Loading */}

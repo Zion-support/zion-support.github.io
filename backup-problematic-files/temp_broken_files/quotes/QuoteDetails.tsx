@@ -1,33 +1,33 @@
 
-import React from "react";;
+import React from "react",
 import {
-  Dialog;
+  Dialog,
   DialogContent,
   DialogHeader,
   DialogTitle,
-  DialogDescription } from "@/components/ui/dialog";
-import { Button } from "@/components/ui/button";
+  DialogDescription } from "@/components/ui/dialog",
+import { Button } from "@/components/ui/button",
 import { Calendar, User, Mail, Clock, DollarSign } from 'lucide-react',
-import { Card, CardContent } from "@/components/ui/card";
-import { Separator } from "@/components/ui/separator";
-import { QuoteStatusBadge } from "./QuoteStatusBadge";
-import type { QuoteRequest } from "@/types/quotes";
-import { format } from "date-fns";
+import { Card, CardContent } from "@/components/ui/card",
+import { Separator } from "@/components/ui/separator",
+import { QuoteStatusBadge } from "./QuoteStatusBadge",
+import type { QuoteRequest } from "@/types/quotes",
+import { format } from "date-fns",
 interface QuoteDetailsProps {
-  quote:QuoteRequest | null;
-  isOpen:boolean;
+  quote: QuoteRequest | null,
+  isOpen:boolean,
   onClose: () => void}
 ,
 export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {
-  if (!quote) return null;
+  if (!quote) return null,
   const formatDate = (dateString?:string) => {
-    if (!dateString) return 'Not specified';
+    if (!dateString) return 'Not specified',
     try {
-      return format(new Date(dateString), 'PPP');
+      return format(new Date(dateString), 'PPP'),
     } catch (e) {
-      return dateString;
+      return dateString,
     }
-  };
+  },
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>,
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">,
@@ -99,8 +99,8 @@ export const QuoteDetails = ({ quote, isOpen, onClose } QuoteDetailsProps) => {
           <Button onClick={onClose}>Close</Button>,
         </div>,
       </DialogContent>,
-    </Dialog>);
-}; import {
+    </Dialog>),
+}, import {
   Dialog,
 DialogContent,
 DialogHeader,
@@ -116,7 +116,7 @@ const formatDate = (dateString?: string) => {
 try {',
   return format (new Date (dateString), 'PPP') }catch (e) {
   return dateString}
-};
+},
 return (<Dialog open={
   isOpen }onOpenChange={
   (open) => !open && onClose () }> <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto" > <DialogHeader> <DialogTitle className="text-2xl flex items-center justify-between" > <span >{

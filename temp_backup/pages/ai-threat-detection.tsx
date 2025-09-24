@@ -1,43 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Shield;
-  Lock, Eye, Users2, Award, CheckCircle, AlertTriangle;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Shield,
+  Lock, Eye, Users2, Award, CheckCircle, AlertTriangle,
   Target, BarChart3, TrendingUp, Cpu, Globe, AlertCircle} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Threat Detection | Zion Tech Group';
-  description: 'Advanced AI-powered threat detection platform that identifies and neutralizes security threats in real-time.';
-  keywords: 'AI threat detection, security threats, cyber threats, AI security, threat intelligence, real-time detection';
+  title: 'AI Threat Detection | Zion Tech Group',
+  description: 'Advanced AI-powered threat detection platform that identifies and neutralizes security threats in real-time.',
+  keywords: 'AI threat detection, security threats, cyber threats, AI security, threat intelligence, real-time detection',
   openGraph: {
-    title: 'AI Threat Detection | Zion Tech Group';
-    description: 'Advanced AI-powered threat detection platform that identifies and neutralizes security threats in real-time.';
-    url: 'https://ziontechgroup.com/ai-threat-detection';
-    siteName: 'Zion Tech Group';
+    title: 'AI Threat Detection | Zion Tech Group',
+    description: 'Advanced AI-powered threat detection platform that identifies and neutralizes security threats in real-time.',
+    url: 'https://ziontechgroup.com/ai-threat-detection',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-threat-detection.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Threat Detection'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-threat-detection.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Threat Detection'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Threat Detection | Zion Tech Group';
-    description: 'Advanced AI-powered threat detection platform that identifies and neutralizes security threats in real-time.';
-    images: ['https://ziontechgroup.com/og-image-ai-threat-detection.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Threat Detection | Zion Tech Group',
+    description: 'Advanced AI-powered threat detection platform that identifies and neutralizes security threats in real-time.',
+    images: ['https://ziontechgroup.com/og-image-ai-threat-detection.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-threat-detection'}};
+    canonical: 'https://ziontechgroup.com/ai-threat-detection'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIThreatDetection() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -81,7 +81,7 @@ export default function AIThreatDetection() {
               Revolutionary AI Threat Detection,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of threat detection from real-time monitoring to automated response;
+              Our AI platform handles every aspect of threat detection from real-time monitoring to automated response,
               continuously learning and adapting to new security threats.,
             </p>,
           </div>,

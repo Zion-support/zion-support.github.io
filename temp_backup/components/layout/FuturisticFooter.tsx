@@ -1,120 +1,120 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Twitter;
-  Linkedin;
-  Github;
-  Facebook;
-  Instagram;
-  Youtube;
-  ArrowUp;
-  Zap;
-  Shield;
-  Users;
-  Award;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Twitter,
+  Linkedin,
+  Github,
+  Facebook,
+  Instagram,
+  Youtube,
+  ArrowUp,
+  Zap,
+  Shield,
+  Users,
+  Award,
 } from 'lucide-react',
 export default function FuturisticFooter() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Services';
+      title: 'Services',
       links: [
-        { name: 'AI & Automation', href: '/services#ai' };
-        { name: 'Cloud Infrastructure', href: '/services#cloud' };
-        { name: 'Security & Compliance', href: '/services#security' };
-        { name: 'Data Analytics', href: '/services#analytics' };
-        { name: 'DevOps & CI/CD', href: '/services#devops' };
-        { name: 'Digital Transformation', href: '/services#digital' };
-      ];
-    };
+        { name: 'AI & Automation', href: '/services#ai' },
+        { name: 'Cloud Infrastructure', href: '/services#cloud' },
+        { name: 'Security & Compliance', href: '/services#security' },
+        { name: 'Data Analytics', href: '/services#analytics' },
+        { name: 'DevOps & CI/CD', href: '/services#devops' },
+        { name: 'Digital Transformation', href: '/services#digital' },
+      ],
+    },
     {
-      title: 'Micro SaaS';
+      title: 'Micro SaaS',
       links: [
         {
-          name: 'Content & Marketing';
-          href: '/micro-saas?category=Content+%26+Marketing';
-        };
+          name: 'Content & Marketing',
+          href: '/micro-saas?category=Content+%26+Marketing'
+        },
         {
-          name: 'Development & DevOps';
-          href: '/micro-saas?category=Development+%26+DevOps';
-        };
-        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' };
+          name: 'Development & DevOps',
+          href: '/micro-saas?category=Development+%26+DevOps'
+        },
+        { name: 'Sales & CRM', href: '/micro-saas?category=Sales+%26+CRM' },
         {
-          name: 'Analytics & Data';
-          href: '/micro-saas?category=Analytics+%26+Data';
-        };
+          name: 'Analytics & Data',
+          href: '/micro-saas?category=Analytics+%26+Data'
+        },
         {
-          name: 'AI & Machine Learning';
-          href: '/micro-saas?category=AI+%26+Machine+Learning';
-        };
+          name: 'AI & Machine Learning',
+          href: '/micro-saas?category=AI+%26+Machine+Learning'
+        },
         {
-          name: 'Emerging Technologies';
-          href: '/micro-saas?category=Emerging+Technologies';
-        };
-      ];
-    };
+          name: 'Emerging Technologies',
+          href: '/micro-saas?category=Emerging+Technologies'
+        },
+      ],
+    },
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Our Team', href: '/about#team' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'Press & Media', href: '/press' };
-        { name: 'Partnerships', href: '/partnerships' };
-        { name: 'Investor Relations', href: '/investors' };
-      ];
-    };
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/about#team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Press & Media', href: '/press' },
+        { name: 'Partnerships', href: '/partnerships' },
+        { name: 'Investor Relations', href: '/investors' },
+      ],
+    },
     {
-      title: 'Resources';
+      title: 'Resources',
       links: [
-        { name: 'Documentation', href: '/docs' };
-        { name: 'API Reference', href: '/api' };
-        { name: 'Blog', href: '/blog' };
-        { name: 'Case Studies', href: '/case-studies' };
-        { name: 'Webinars', href: '/webinars' };
-        { name: 'Support Center', href: '/support' };
-      ];
-    };
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Blog', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Webinars', href: '/webinars' },
+        { name: 'Support Center', href: '/support' },
+      ],
+    },
   ],
   const socialLinks = [
     {
-      name: 'Twitter';
-      href: 'https://twitter.com/ziontechgroup';
-      icon: Twitter;
-    };
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter
+    },
     {
-      name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';
-      icon: Linkedin;
-    };
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: Linkedin
+    },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
     {
-      name: 'Facebook';
-      href: 'https://facebook.com/ziontechgroup';
-      icon: Facebook;
-    };
+      name: 'Facebook',
+      href: 'https://facebook.com/ziontechgroup',
+      icon: Facebook
+    },
     {
-      name: 'Instagram';
-      href: 'https://instagram.com/ziontechgroup';
-      icon: Instagram;
-    };
+      name: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup',
+      icon: Instagram
+    },
     {
-      name: 'YouTube';
-      href: 'https://youtube.com/@ziontechgroup';
-      icon: Youtube;
-    };
+      name: 'YouTube',
+      href: 'https://youtube.com/@ziontechgroup',
+      icon: Youtube
+    },
   ],
   const stats = [
-    { icon: Zap, value: '48+', label: 'Micro SaaS Services' };
-    { icon: Users, value: '50o0+', label: 'Happy Clients' };
-    { icon: Shield, value: '99.9%', label: 'Uptime SLA' };
-    { icon: Award, value: '24/7', label: 'Support Available' };
+    { icon: Zap, value: '48+', label: 'Micro SaaS Services' },
+    { icon: Users, value: '50o0+', label: 'Happy Clients' },
+    { icon: Shield, value: '99.9%', label: 'Uptime SLA' },
+    { icon: Award, value: '24/7', label: 'Support Available' },
   ],
   return (
     <footer className='bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white relative overflow-hidden'>,

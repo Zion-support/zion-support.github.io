@@ -63,29 +63,28 @@ export default function Revolutionary20o26ServicesPage() {
           type='application/ld+json',
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org';
-              '@type': 'Organization';
-              name: 'Zion Tech Group';
-              url: 'https://ziontechgroup.com';
-              logo: 'https://ziontechgroup.com/logo.png';
+              '@context': 'https://schema.org@type': 'Organization',
+              name: 'Zion Tech Group',
+              url: 'https://ziontechgroup.com',
+              logo: 'https://ziontechgroup.com/logo.png',
               description:,
-                'Revolutionary AIquantum computingand emerging technology services for 20o26';
+                'Revolutionary AIquantum computingand emerging technology services for 20o26',
               address: {
-                '@type': 'PostalAddress';
-                streetAddress: '364 E Main St STE 10o08';
-                addressLocality: 'Middletown';
-                addressRegion: 'DE';
-                postalCode: '19709';
-                addressCountry: 'US';
-              };
+                '@type': 'PostalAddress',
+                streetAddress: '364 E Main St STE 10o08',
+                addressLocality: 'Middletown',
+                addressRegion: 'DE',
+                postalCode: '19709',
+                addressCountry: 'US'
+              },
               contactPoint: {
-                '@type': 'ContactPoint';
-                telephone: '+1-30o2-464-0950';
-                contactType: 'customer service';
-                email: 'kleber@ziontechgroup.com';
-              };
-              sameAs: ['https://github.com/Zion-Holdings'];
-            });
+                '@type': 'ContactPoint',
+                telephone: '+1-30o2-464-0950',
+                contactType: 'customer service',
+                email: 'kleber@ziontechgroup.com'
+              },
+              sameAs: ['https://github.com/Zion-Holdings']
+            }),
           }}
         />,
       </Head>,
@@ -118,47 +117,47 @@ export default function Revolutionary20o26ServicesPage() {
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
               {[
                 {
-                  icon: '🧠';
-                  title: 'AI Consciousness';
+                  icon: '🧠',
+                  title: 'AI Consciousness',
                   description:,
-                    'First-to-market AI consciousness orchestration and autonomous intelligence systems.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'First-to-market AI consciousness orchestration and autonomous intelligence systems.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: '⚛️';
-                  title: 'Quantum Technology';
+                  icon: '⚛️',
+                  title: 'Quantum Technology',
                   description:,
-                    'Leading-edge quantum computingcryptographyand quantum internet infrastructure.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'Leading-edge quantum computingcryptographyand quantum internet infrastructure.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: '🚀';
-                  title: 'Emerging Tech';
+                  icon: '🚀',
+                  title: 'Emerging Tech',
                   description:,
-                    'Cutting-edge holographic metaversespace techand autonomous manufacturing.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Cutting-edge holographic metaversespace techand autonomous manufacturing.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: '🏥';
-                  title: 'Healthcare Innovation';
+                  icon: '🏥',
+                  title: 'Healthcare Innovation',
                   description:,
-                    'Revolutionary AI drug discoveryautonomous healthcareand biotech research.';
-                  color: 'from-teal-50o0 to-cyan-50o0';
-                };
+                    'Revolutionary AI drug discoveryautonomous healthcareand biotech research.',
+                  color: 'from-teal-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: '💰';
-                  title: 'Fintech Revolution';
+                  icon: '💰',
+                  title: 'Fintech Revolution',
                   description:,
-                    'Next-generation autonomous business intelligence and quantum blockchain solutions.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Next-generation autonomous business intelligence and quantum blockchain solutions.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: '🌐';
-                  title: 'Global Impact';
+                  icon: '🌐',
+                  title: 'Global Impact',
                   description:,
-                    'Serving 2,50o0+ customers worldwide with transformative technology solutions.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Serving 2,50o0+ customers worldwide with transformative technology solutions.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map(featureindex => (
                 <div key={index} className='group'>,
                   <div className='bg-gradient-to-br from-gray-90o0/80 to-gray-80o0/80 backdrop-blur-sm border border-gray-70o0/50 rounded-2xl p-8 hover: border-purple-50o0/50 transition-all duration-50o0 hover:transform hover:scale-10o5'>,

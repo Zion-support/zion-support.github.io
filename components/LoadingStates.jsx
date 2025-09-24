@@ -10,16 +10,16 @@ export function Skeleton({ className, ...props }) {
 // Spinner component,
 export function Spinner({ className, size = 'md', ...props }) {
   const sizes = {
-    sm: 'w-4 h-4';
-    md: 'w-6 h-6';
-    lg: 'w-8 h-8';
-    xl: 'w-12 h-12';
-  };
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  },
   return (
     <div
       className={cn(
-        'animate-spin rounded-full border-2 border-gray-30o0 border-t-blue-60o0';
-        sizes[size];
+        'animate-spin rounded-full border-2 border-gray-30o0 border-t-blue-60o0',
+        sizes[size],
         className)}
       {...props}
     />)}
@@ -32,7 +32,7 @@ export function LoadingOverlay({ isLoading, children, className }) {
       {isLoading && (
         <div
           className={cn(
-            'absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-10';
+            'absolute inset-0 bg-white/80 backdrop-blur-sm flex items-center justify-center z-10',
             className)}
         >,
           <div className='flex flex-col items-center space-y-4'>,

@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -21,13 +21,13 @@ const path = require('path'),
 class CodeQualityEnforcer extends AutomationTask {
   constructor(config ={}) {
     super({
-      name: 'CodeQualityEnforcer';
+      name: 'CodeQualityEnforcer',
       schedule: 0 */4 * * *', // Every 4 hours,
-      enabled: true;
-      autoFix: true;
-      createPR: true;
-      enforceStandards: true;
-      tools: ['eslint', prettier', typescript', tests'];
+      enabled: true,
+      autoFix: true,
+      createPR: true,
+      enforceStandards: true,
+      tools: ['eslint', prettier', typescript', tests'],
       ...config}),
     this.qualityHistory = [],
     this.violations = []}
@@ -36,14 +36,14 @@ class CodeQualityEnforcer extends AutomationTask {
     logger.info('🎯 Starting code quality enforcement...'),
     try {
       const results ={
-        timestamp: new Date().toISOString();
-        eslint: {};
-        prettier: {};
-        typescript: {};
-        tests: {};
-        coverage: {};
+        timestamp: new Date().toISOString(),
+        eslint: {},
+        prettier: {},
+        typescript: {},
+        tests: {},
+        coverage: {},
         summary: {}
-      };
+      },
       // Run ESLint,
       if (this.config.tools.includes('eslint')) {
         results.eslint = await this.runESLint()}
@@ -96,16 +96,16 @@ class CodeQualityEnforcer extends AutomationTask {
     try {
       // Run ESLint with JSON output,
       const output = execSync('npx eslint . --ext .js,.jsx,.ts,.tsx --format json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: pipe}),
       const results = JSON.parse(output),
       const summary ={
-        totalFiles: results.length;
-        totalErrors: 0;
-        totalWarnings: 0;
-        fixableErrors: 0;
-        fixableWarnings: 0;
-        violations: []};
+        totalFiles: results.length,
+        totalErrors: 0,
+        totalWarnings: 0,
+        fixableErrors: 0,
+        fixableWarnings: 0,
+        violations: []},
       for (const file of results) {
         summary.totalErrors += file.errorCount,
         summary.totalWarnings += file.warningCount,
@@ -113,12 +113,12 @@ class CodeQualityEnforcer extends AutomationTask {
         summary.fixableWarnings += file.fixableWarningCount,
         for (const message of file.messages) {
           summary.violations.push({
-            file: file.filePath;
-            line: message.line;
-            column: message.column;
-            severity: message.severity;
-            message: message.message;
-            rule: message.ruleId;
+            file: file.filePath,
+            line: message.line,
+            column: message.column,
+            severity: message.severity,
+            message: message.message,
+            rule: message.ruleId,
             fixable: message.fix})}
       }
 ,
@@ -135,18 +135,18 @@ class CodeQualityEnforcer extends AutomationTask {
       const results = JSON.parse(stdout),
       return this.processESLintResults(results)} catch (error) {
       logger.error('❌ Failed to parse ESLint output:', error),
-      return { totalErrors: 0, totalWarnings: 0, violations: [] };
+      return { totalErrors: 0, totalWarnings: 0, violations: [] },
     }
   }
 ,
   processESLintResults(results) {
     const summary ={
-      totalFiles: results.length;
-      totalErrors: 0;
-      totalWarnings: 0;
-      fixableErrors: 0;
-      fixableWarnings: 0;
-      violations: []};
+      totalFiles: results.length,
+      totalErrors: 0,
+      totalWarnings: 0,
+      fixableErrors: 0,
+      fixableWarnings: 0,
+      violations: []},
     for (const file of results) {
       summary.totalErrors += file.errorCount,
       summary.totalWarnings += file.warningCount,
@@ -154,12 +154,12 @@ class CodeQualityEnforcer extends AutomationTask {
       summary.fixableWarnings += file.fixableWarningCount,
       for (const message of file.messages) {
         summary.violations.push({
-          file: file.filePath;
-          line: message.line;
-          column: message.column;
-          severity: message.severity;
-          message: message.message;
-          rule: message.ruleId;
+          file: file.filePath,
+          line: message.line,
+          column: message.column,
+          severity: message.severity,
+          message: message.message,
+          rule: message.ruleId,
           fixable: message.fix})}
     }
 ,
@@ -170,16 +170,16 @@ class CodeQualityEnforcer extends AutomationTask {
     try {
       // Check formatting,
       const output = execSync('npx prettier --check "**/*.{js,jsx,ts,tsx,json,css,md}"', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: pipe}),
       logger.info('✅ Prettier: All files properly formatted'),
-      return { formatted: true, violations: [] };
+      return { formatted: true, violations: [] },
 } catch (error) {
       if (error.status === 1) {
         // Prettier returns 1 when files need formatting,
         const violations = this.parsePrettierError(error.stdout),
         logger.info(`⚠️ Prettier: ${violations.length} files need formatting`),
-        return { formatted: false, violations };
+        return { formatted: false, violations },
       }
       throw error}
   }
@@ -190,8 +190,8 @@ class CodeQualityEnforcer extends AutomationTask {
     for (const line of lines) {
       if (line.trim() && !line.includes('Checking formatting')) {
         violations.push({
-          file: line.trim();
-          type: 'formatting';
+          file: line.trim(),
+          type: 'formatting',
           message: File needs formatting})}
     }
 ,
@@ -201,15 +201,15 @@ class CodeQualityEnforcer extends AutomationTask {
     logger.info('📝 Running TypeScript check...'),
     try {
       const output = execSync('npx tsc --noEmit', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: pipe}),
       logger.info('✅ TypeScript: No type errors'),
-      return { hasErrors: false, errors: [] };
+      return { hasErrors: false, errors: [] },
 } catch (error) {
       if (error.status === 1) {
         const errors = this.parseTypeScriptError(error.stdout),
         logger.info(`⚠️ TypeScript: ${errors.length} type errors`),
-        return { hasErrors: true, errors };
+        return { hasErrors: true, errors },
       }
       throw error}
   }
@@ -222,10 +222,10 @@ class CodeQualityEnforcer extends AutomationTask {
         const match = line.match(/(.+):(\d+):(\d+)\s*-\s*error\s+TS\d+:\s*(.+)/),
         if (match) {
           errors.push({
-            file: match[1];
-            line: parseInt(match[2]);
-            column: parseInt(match[3]);
-            message: match[4];
+            file: match[1],
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
+            message: match[4],
             type: typescript})}
       }
     }
@@ -236,7 +236,7 @@ class CodeQualityEnforcer extends AutomationTask {
     logger.info('🧪 Running tests...'),
     try {
       const output = execSync('npm test', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: pipe}),
       const results = this.parseTestResults(output),
       logger.info(`✅ Tests: ${results.passed} passed, ${results.failed} failed`),
@@ -257,20 +257,20 @@ class CodeQualityEnforcer extends AutomationTask {
         failed++}
     }
 ,
-    return { passed, failed, total: passed + failed };
+    return { passed, failed, total: passed + failed },
   }
 ,
   async checkTestCoverage() {
     logger.info('📊 Checking test coverage...'),
     try {
       const output = execSync('npm run test: 'coverage', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: pipe}),
       const coverage = this.parseCoverageOutput(output),
       logger.info(`✅ Coverage: ${coverage.total}%`),
       return coverage} catch (error) {
       logger.warn('⚠️ Could not check test coverage'),
-      return { total: 0, lines: 0, functions: 0, branches: 0, statements: 0 };
+      return { total: 0, lines: 0, functions: 0, branches: 0, statements: 0 },
     }
   }
 ,
@@ -286,7 +286,7 @@ class CodeQualityEnforcer extends AutomationTask {
       }
     }
 ,
-    return { total, lines: total, functions: total, branches: total, statements: total };
+    return { total, lines: total, functions: total, branches: total, statements: total },
   }
 ,
   generateSummary(results) {
@@ -297,11 +297,11 @@ class CodeQualityEnforcer extends AutomationTask {
     const fixableViolations =,
       (results.eslint.violations?.filter(v => v.fixable) || []).length,
     return {
-      totalViolations;
-      fixableViolations;
-      testResults: results.tests;
-      coverage: results.coverage;
-      timestamp: results.timestamp};
+      totalViolations,
+      fixableViolations,
+      testResults: results.tests,
+      coverage: results.coverage,
+      timestamp: results.timestamp},
   }
 ,
   extractViolations(results) {
@@ -309,19 +309,19 @@ class CodeQualityEnforcer extends AutomationTask {
     // ESLint violations,
     if (results.eslint.violations) {
       violations.push(...results.eslint.violations.map(v => ({
-        ...v;
+        ...v,
         tool: eslint})))}
 ,
     // Prettier violations,
     if (results.prettier.violations) {
       violations.push(...results.prettier.violations.map(v => ({
-        ...v;
+        ...v,
         tool: prettier})))}
 ,
     // TypeScript violations,
     if (results.typescript.errors) {
       violations.push(...results.typescript.errors.map(v => ({
-        ...v;
+        ...v,
         tool: typescript})))}
 ,
     return violations}
@@ -452,11 +452,11 @@ This PR was automatically generated by the Code Quality Enforcer.,
 ,
   getStatus() {
     return {
-      ...super.getStatus();
+      ...super.getStatus(),
       qualityHistory: this.qualityHistory.slice(-5), // Last 5 scans,
-      totalScans: this.qualityHistory.length;
-      currentViolations: this.violations.length;
-      fixableViolations: this.violations.filter(v => v.fixable).length};
+      totalScans: this.qualityHistory.length,
+      currentViolations: this.violations.length,
+      fixableViolations: this.violations.filter(v => v.fixable).length},
   }
 }
 ,

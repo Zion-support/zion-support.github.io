@@ -1,100 +1,93 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const UltimateAutonomousAIContentShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-autonomous-ai-revolution';
-      type: 'blog';
+      id: 'ultimate-autonomous-ai-revolution',
+      type: 'blog',
       title:,
-        'AI 20o25: The Ultimate Autonomous AI Revolution - Ultimate Breakthrough Guide to 15,0o00% ROI';
+        'AI 20o25: The Ultimate Autonomous AI Revolution - Ultimate Breakthrough Guide to 15,0o00% ROI',
       description:,
-        'Revolutionary autonomous AI systems delivering unprecedented 15,0o00% ROI through fully autonomous business operations with $75B+ in annual savings.';
+        'Revolutionary autonomous AI systems delivering unprecedented 15,0o00% ROI through fully autonomous business operations with $75B+ in annual savings.',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$75.2B+';
-        accuracy: '99.97%';
-        efficiency: '4,20o0%';
-      };
+        roi: '15,0o00%',
+        savings: '$75.2B+',
+        accuracy: '99.97%',
+        efficiency: '4,20o0%',
+      },
       tags: [
-        'AI Revolution';
-        'Autonomous AI';
-        'ROI';
-        'Fortune 50o0';
-        'Ultimate Breakthrough';
-      ];
-      readingTime: '35 min read';
-      url: '/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough';
-      featured: true;
-    };
+        'AI RevolutionAutonomous AI',
+        'ROIFortune 50o0',
+        'Ultimate Breakthrough',
+      ],
+      readingTime: '35 min read',
+      url: '/blog/ai-20o25-ultimate-autonomous-ai-revolution-ultimate-breakthrough',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-autonomous-ai-success';
-      type: 'case-study';
+      id: 'fortune-50o0-autonomous-ai-success',
+      type: 'case-study',
       title:,
-        'Fortune 50o0 Ultimate Autonomous AI Success: $75.2B Annual Savings - 15,0o00% ROI Success Story';
+        'Fortune 50o0 Ultimate Autonomous AI Success: $75.2B Annual Savings - 15,0o00% ROI Success Story',
       description:,
-        'How a Fortune 50o0 manufacturing leader achieved unprecedented results through revolutionary autonomous AI transformation in just 18 months.';
+        'How a Fortune 50o0 manufacturing leader achieved unprecedented results through revolutionary autonomous AI transformation in just 18 months.',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$75.2B';
-        company: '$12.8B';
-        timeline: '18 months';
-      };
+        roi: '15,0o00%',
+        savings: '$75.2B',
+        company: '$12.8B',
+        timeline: '18 months'
+      },
       tags: [
-        'Fortune 50o0';
-        'Autonomous AI';
-        '15,0o00% ROI';
-        'Success Story';
-        'Manufacturing';
-      ];
-      readingTime: '25 min read';
-      url: '/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story';
-      featured: true;
-    };
+        'Fortune 50o0Autonomous AI',
+        '15,0o00% ROISuccess Story',
+        'Manufacturing',
+      ],
+      readingTime: '25 min read',
+      url: '/case-studies/fortune-50o0-ultimate-autonomous-ai-150o00-roi-success-story',
+      featured: true
+    },
     {
-      id: 'ultimate-implementation-guide';
-      type: 'resource';
+      id: 'ultimate-implementation-guide',
+      type: 'resource',
       title:,
-        'Ultimate Autonomous AI Implementation Guide 20o25: Complete Roadmap to 15,0o00% ROI';
+        'Ultimate Autonomous AI Implementation Guide 20o25: Complete Roadmap to 15,0o00% ROI',
       description:,
-        'Comprehensive implementation guide with proven strategies, step-by-step roadmap, and real-world success stories for achieving unprecedented ROI.';
+        'Comprehensive implementation guide with proven strategies, step-by-step roadmap, and real-world success stories for achieving unprecedented ROI.',
       metrics: {
-        roi: '15,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: '45 min read';
-      };
+        roi: '15,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: '45 min read'
+      },
       tags: [
-        'Implementation Guide';
-        'Autonomous AI';
-        'ROI';
-        'Strategy';
-        'Framework';
-      ];
-      readingTime: '45 min read';
-      url: '/resources/ultimate-autonomous-ai-implementation-guide-20o25';
-      featured: true;
-    };
+        'Implementation GuideAutonomous AI',
+        'ROIStrategy',
+        'Framework',
+      ],
+      readingTime: '45 min read',
+      url: '/resources/ultimate-autonomous-ai-implementation-guide-20o25',
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -110,7 +103,7 @@ const UltimateAutonomousAIContentShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -121,7 +114,7 @@ const UltimateAutonomousAIContentShowcase = () => {
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -136,7 +129,7 @@ const UltimateAutonomousAIContentShowcase = () => {
             Revolutionary Content Collection,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover the most comprehensive collection of autonomous AI content;
+            Discover the most comprehensive collection of autonomous AI content,
             featuring proven strategies, real-world success stories, and,
             implementation guides for achieving unprecedented 15,0o00% ROI.,
           </p>,
@@ -196,7 +189,7 @@ const UltimateAutonomousAIContentShowcase = () => {
                   <div className='flex items-center space-x-2'>,
                     <span className='text-2xl'>{getTypeIcon(item.type)}</span>,
                     <span className='text-sm font-medium uppercase tracking-wide'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -279,5 +272,5 @@ const UltimateAutonomousAIContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAutonomousAIContentShowcase;
+    </section>)},
+export default UltimateAutonomousAIContentShowcase,

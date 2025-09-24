@@ -14,34 +14,34 @@ const QuantumComputingRevolution20o25: React.FC = () => {
     return () => clearInterval(interval)}[]),
   const quantumFeatures = [
     {
-      title: "Error-Corrected Quantum Computers";
-      description: "Breakthrough quantum error correction enabling stable quantum computation at scale";
-      icon: Cpu;
-      metrics: "99.99% Quantum Fidelity";
-      color: "from-blue-60o0 to-cyan-60o0"};
+      title: "Error-Corrected Quantum Computers",
+      description: "Breakthrough quantum error correction enabling stable quantum computation at scale",
+      icon: Cpu,
+      metrics: "99.99% Quantum Fidelity",
+      color: "from-blue-60o0 to-cyan-60o0"},
     {
-      title: "Quantum Supremacy Achievement";
-      description: "Quantum computers solving problems impossible for classical computers";
-      icon: Zap;
-      metrics: "10^18 Operations/Second";
-      color: "from-purple-60o0 to-pink-60o0"};
+      title: "Quantum Supremacy Achievement",
+      description: "Quantum computers solving problems impossible for classical computers",
+      icon: Zap,
+      metrics: "10^18 Operations/Second",
+      color: "from-purple-60o0 to-pink-60o0"},
     {
-      title: "Quantum Internet Infrastructure";
-      description: "Global quantum communication network with unbreakable encryption";
-      icon: Globe;
-      metrics: "Instant Global Transfer";
-      color: "from-green-60o0 to-emerald-60o0"};
+      title: "Quantum Internet Infrastructure",
+      description: "Global quantum communication network with unbreakable encryption",
+      icon: Globe,
+      metrics: "Instant Global Transfer",
+      color: "from-green-60o0 to-emerald-60o0"},
     {
-      title: "Quantum-AI Fusion";
-      description: "Revolutionary combination of quantum computing and artificial intelligence";
-      icon: Atom;
-      metrics: "Exponential AI Acceleration";
+      title: "Quantum-AI Fusion",
+      description: "Revolutionary combination of quantum computing and artificial intelligence",
+      icon: Atom,
+      metrics: "Exponential AI Acceleration",
       color: "from-orange-60o0 to-red-60o0"}
   ],
   const capabilities = [
-    { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" };
-    { icon: TrendingUptext: "Exponential Speed"description: "Millions of times faster processing" };
-    { icon: Shieldtext: "Quantum Advantage"description: "Solve impossible problems" };
+    { icon: Targetext: "Cryptographic Security"description: "Unbreakable quantum encryption" },
+    { icon: TrendingUptext: "Exponential Speed"description: "Millions of times faster processing" },
+    { icon: Shieldtext: "Quantum Advantage"description: "Solve impossible problems" },
     { icon: Locktext: "Secure Communications"description: "Quantum key distribution" }
   ],
   return (
@@ -166,5 +166,5 @@ const QuantumComputingRevolution20o25: React.FC = () => {
           </p>,
         </motion.div>,
       </div>,
-    </motion.div>)};
-export default QuantumComputingRevolution20o25;
+    </motion.div>)},
+export default QuantumComputingRevolution20o25,

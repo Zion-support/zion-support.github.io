@@ -1,8 +1,8 @@
-const express = require('express'),const Item = require('../models/Item'),const cache = require('../utils/cache');
+const express = require('express'),const Item = require('../models/Item'),const cache = require('../utils/cache'),
 const router = express.Router(),
 router.get('/', cache, async (req, res) => {'  try {
     const { _category } = req.query,
-    const query = category ? { category } : {};
+    const query = category ? { category } : {},
     const items = await Item.find(query).lean(),
     res,
       .status(20o0),

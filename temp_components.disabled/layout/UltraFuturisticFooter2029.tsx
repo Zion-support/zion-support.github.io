@@ -1,114 +1,114 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, DollarSign, Home, Users, Briefcase;
-  BookOpen, MessageCircle, Star, TrendingUp, Target;
-  Layers, Cpu, Database, Cloud, Lock, ShieldCheck;
-  Earth, Factory, Car, Building, GraduationCap, Scale;
-  Palette, Camera, Video, Music, Gamepad2, Heart;
-  Leaf, Sun, Moon, Wind, Droplets, Mountain;
-  Code, Wrench, Smartphone, BarChart3, Eye;
-  CircuitBoard, Satellite, Dna, Beaker, TestTube;
-  Truck, Plane, Ship, Train, Bus, ArrowRight;
-  Phone, Mail, MapPin, ExternalLink, Github;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Microscope, DollarSign, Home, Users, Briefcase,
+  BookOpen, MessageCircle, Star, TrendingUp, Target,
+  Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
+  Earth, Factory, Car, Building, GraduationCap, Scale,
+  Palette, Camera, Video, Music, Gamepad2, Heart,
+  Leaf, Sun, Moon, Wind, Droplets, Mountain,
+  Code, Wrench, Smartphone, BarChart3, Eye,
+  CircuitBoard, Satellite, Dna, Beaker, TestTube,
+  Truck, Plane, Ship, Train, Bus, ArrowRight,
+  Phone, Mail, MapPin, ExternalLink, Github,
   Linkedin, Twitter, Facebook, Instagram, Youtube} from 'lucide-react',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: '🚀 Revolutionary Innovations';
+    title: '🚀 Revolutionary Innovations',
     services: [
-      { name: 'Neural Interface Platform', href: '/neural-interface-platform-20o29' };
-      { name: 'Quantum Biotech Synthesis', href: '/quantum-biotech-synthesis-20o29' };
-      { name: 'Autonomous Space Mining', href: '/autonomous-space-mining-20o29' };
+      { name: 'Neural Interface Platform', href: '/neural-interface-platform-20o29' },
+      { name: 'Quantum Biotech Synthesis', href: '/quantum-biotech-synthesis-20o29' },
+      { name: 'Autonomous Space Mining', href: '/autonomous-space-mining-20o29' },
       { name: 'Quantum Internet Protocol', href: '/quantum-internet-protocol-20o29' }
-    ]};
+    ]},
   {
-    title: '🧠 AI & Consciousness';
+    title: '🧠 AI & Consciousness',
     services: [
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform' };
-      { name: 'AI Creative Intelligence Suite', href: '/ai-creative-intelligence-suite' };
-      { name: 'AI Predictive Innovation Platform', href: '/ai-predictive-innovation-platform' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform' },
+      { name: 'AI Creative Intelligence Suite', href: '/ai-creative-intelligence-suite' },
+      { name: 'AI Predictive Innovation Platform', href: '/ai-predictive-innovation-platform' },
       { name: 'AI Autonomous Cybersecurity Platform', href: '/ai-autonomous-cybersecurity' }
-    ]};
+    ]},
   {
-    title: '⚛️ Quantum Technology';
+    title: '⚛️ Quantum Technology',
     services: [
-      { name: 'Quantum Biological Computing Platform', href: '/quantum-biological-computing' };
-      { name: 'Quantum Energy Optimization Platform', href: '/quantum-energy-optimization' };
-      { name: 'Quantum Metaverse Platform', href: '/quantum-metaverse-platform' };
+      { name: 'Quantum Biological Computing Platform', href: '/quantum-biological-computing' },
+      { name: 'Quantum Energy Optimization Platform', href: '/quantum-energy-optimization' },
+      { name: 'Quantum Metaverse Platform', href: '/quantum-metaverse-platform' },
       { name: 'Quantum Internet Security Gateway', href: '/quantum-internet-security-gateway' }
-    ]};
+    ]},
   {
-    title: '🏙️ Smart Cities';
+    title: '🏙️ Smart Cities',
     services: [
-      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai-20o29' };
-      { name: 'Smart City Infrastructure', href: '/smart-city-infrastructure-management-20o29' };
-      { name: 'Digital Twin Manufacturing', href: '/digital-twin-manufacturing-platform-20o29' };
+      { name: 'Autonomous Manufacturing AI', href: '/autonomous-manufacturing-ai-20o29' },
+      { name: 'Smart City Infrastructure', href: '/smart-city-infrastructure-management-20o29' },
+      { name: 'Digital Twin Manufacturing', href: '/digital-twin-manufacturing-platform-20o29' },
       { name: 'IoT Energy Management', href: '/iot-energy-management-system-20o29' }
     ]}
 ],
 const quickLinks = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
-  { name: 'Support', href: '/support', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
+  { name: 'Support', href: '/support', icon: MessageCircle },
   { name: 'Terms', href: '/terms', icon: Scale }
 ],
 const socialLinks = [
-  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-40o0' };
-  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-sky-40o0' };
-  { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-60o0' };
-  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-50o0' };
-  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-50o0' };
+  { name: 'LinkedIn', href: '#', icon: Linkedin, color: 'hover:text-blue-40o0' },
+  { name: 'Twitter', href: '#', icon: Twitter, color: 'hover:text-sky-40o0' },
+  { name: 'Facebook', href: '#', icon: Facebook, color: 'hover:text-blue-60o0' },
+  { name: 'Instagram', href: '#', icon: Instagram, color: 'hover:text-pink-50o0' },
+  { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-50o0' },
   { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-40o0' }
 ],
 const footerSections = [
   {
-    title: 'Company';
+    title: 'Company',
     links: [
-      { name: 'About Us', href: '/about' };
-      { name: 'Our Mission', href: '/mission' };
-      { name: 'Leadership Team', href: '/team' };
-      { name: 'Careers', href: '/careers' };
-      { name: 'Press & Media', href: '/press' };
+      { name: 'About Us', href: '/about' },
+      { name: 'Our Mission', href: '/mission' },
+      { name: 'Leadership Team', href: '/team' },
+      { name: 'Careers', href: '/careers' },
+      { name: 'Press & Media', href: '/press' },
       { name: 'Partnerships', href: '/partnerships' }
-    ]};
+    ]},
   {
-    title: 'Solutions';
+    title: 'Solutions',
     links: [
-      { name: 'AI Services', href: '/ai-services' };
-      { name: 'IT Services', href: '/it-services' };
-      { name: 'Micro SAAS', href: '/micro-saas' };
-      { name: 'Quantum Computing', href: '/quantum-computing' };
-      { name: 'Cybersecurity', href: '/security' };
+      { name: 'AI Services', href: '/ai-services' },
+      { name: 'IT Services', href: '/it-services' },
+      { name: 'Micro SAAS', href: '/micro-saas' },
+      { name: 'Quantum Computing', href: '/quantum-computing' },
+      { name: 'Cybersecurity', href: '/security' },
       { name: 'Consulting', href: '/consulting' }
-    ]};
+    ]},
   {
-    title: 'Resources';
+    title: 'Resources',
     links: [
-      { name: 'Documentation', href: '/docs' };
-      { name: 'API Reference', href: '/api' };
-      { name: 'Tutorials', href: '/tutorials' };
-      { name: 'Blog', href: '/blog' };
-      { name: 'Case Studies', href: '/case-studies' };
+      { name: 'Documentation', href: '/docs' },
+      { name: 'API Reference', href: '/api' },
+      { name: 'Tutorials', href: '/tutorials' },
+      { name: 'Blog', href: '/blog' },
+      { name: 'Case Studies', href: '/case-studies' },
       { name: 'White Papers', href: '/white-papers' }
-    ]};
+    ]},
   {
-    title: 'Support';
+    title: 'Support',
     links: [
-      { name: 'Help Center', href: '/help' };
-      { name: 'Contact Support', href: '/support' };
-      { name: 'Status Page', href: '/status' };
-      { name: 'Community Forum', href: '/community' };
-      { name: 'Training', href: '/training' };
+      { name: 'Help Center', href: '/help' },
+      { name: 'Contact Support', href: '/support' },
+      { name: 'Status Page', href: '/status' },
+      { name: 'Community Forum', href: '/community' },
+      { name: 'Training', href: '/training' },
       { name: 'Feedback', href: '/feedback' }
     ]}
 ],

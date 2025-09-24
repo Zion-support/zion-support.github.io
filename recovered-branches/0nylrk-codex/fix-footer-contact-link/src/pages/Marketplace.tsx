@@ -13,23 +13,23 @@ import {toast} from "@/hooks/use-toast",
 import {useNavigate} from "react-router-dom",
 import {SearchSuggestion} from "@/types/search",
 import {AppLayout} from "@/layout/AppLayout",
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Button } from "@/components/ui/button";
-import { Link } from "react-router-dom";
-import { Grid3X3, ListFilter } from "lucide-react";
-import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput";
-import { FilterSidebar } from "@/components/search/FilterSidebar";
-import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar";
-import { ProductListingCard } from "@/components/ProductListingCard";
-import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData";
-import { toast } from "@/hooks/use-toast";
-import { useNavigate } from "react-router-dom";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Button } from "@/components/ui/button",
+import { Link } from "react-router-dom",
+import { Grid3X3, ListFilter } from "lucide-react",
+import { EnhancedSearchInput } from "@/components/search/EnhancedSearchInput",
+import { FilterSidebar } from "@/components/search/FilterSidebar",
+import { ActiveFiltersBar } from "@/components/search/ActiveFiltersBar",
+import { ProductListingCard } from "@/components/ProductListingCard",
+import { MARKETPLACE_LISTINGS, generateSearchSuggestions, generateFilterOptions } from "@/data/marketplaceData",
+import { toast } from "@/hooks/use-toast",
+import { useNavigate } from "react-router-dom",
 import { SearchSuggestion } from "@/types/search",
 import { AppLayout } from "@/layout/AppLayout",
-import { SearchSuggestion } from "@/types/search";
-import { AppLayout } from "@/layout/AppLayout";
+import { SearchSuggestion } from "@/types/search",
+import { AppLayout } from "@/layout/AppLayout",
 import React, { useState } from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -61,14 +61,14 @@ export default function Marketplace() {
   const [selectedRating, setSelectedRating] = useState<number | null>(null),
   const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
   const filterOptions = generateFilterOptions(),
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
-  const filterOptions = generateFilterOptions();
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = generateFilterOptions(),
   // Filter listings based on selected filters,
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter,
@@ -77,14 +77,14 @@ export default function Marketplace() {
         !listing.tags.some(tag => tag.toLowerCase().includes(searchQuery.toLowerCase()))) {
       return false,
 export default function Marketplace() {
-  const navigate = useNavigate();
-  const [searchQuery, setSearchQuery] = useState("");
-  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]);
-  const [selectedLocations, setSelectedLocations] = useState<string[]>([]);
-  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]);
-  const [selectedRating, setSelectedRating] = useState<number | null>(null);
-  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions();
-  const filterOptions = generateFilterOptions();
+  const navigate = useNavigate(),
+  const [searchQuery, setSearchQuery] = useState(""),
+  const [selectedProductTypes, setSelectedProductTypes] = useState<string[]>([]),
+  const [selectedLocations, setSelectedLocations] = useState<string[]>([]),
+  const [selectedAvailability, setSelectedAvailability] = useState<string[]>([]),
+  const [selectedRating, setSelectedRating] = useState<number | null>(null),
+  const searchSuggestions: SearchSuggestion[] = generateSearchSuggestions(),
+  const filterOptions = generateFilterOptions(),
   // Filter listings based on selected filters,
   const filteredListings = MARKETPLACE_LISTINGS.filter(listing => {
     // Search filter,
@@ -110,7 +110,7 @@ export default function Marketplace() {
     // // console.log(`Filter changed: ${filterType} = ${value}`),
     return true}),
   const handleFilterChange = (filterType: string, value: string) => {
-    // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
+    // // // // // console.log(`Filter changed: ${filterType} = ${value}`),
     switch (filterType) {
       case 'productType':,
         setSelectedProductTypes(prev =>>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
@@ -122,24 +122,24 @@ export default function Marketplace() {
         break,
       case 'availability':,
         setSelectedAvailability(prev =>,
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]),
         break}
 }
-  };
+  },
   const clearAllFilters = () => {
-    setSearchQuery("");
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
+    setSearchQuery(""),
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
     setSelectedRating(null)}
-  };
+  },
   // Handle requesting a quote,
   const handleRequestQuote = (listingId: string) => {
     const listing = MARKETPLACE_LISTINGS.find(item => item.id === listingId),
     if (listing) {
       toast({
         title: "Quote Requested",
-        description: `Your quote request for ${listing.title} has been sent.`})});
+        description: `Your quote request for ${listing.title} has been sent.`})}),
       // Navigate to the quote request page with the listing information,
       navigate("/request-quote", {
         state: {
@@ -149,40 +149,40 @@ export default function Marketplace() {
             title: listing.title,
             category: listing.category,
             image: listing.images?.[0],
-    return true});
+    return true}),
   const handleFilterChange = (filterType: string, value: string) => {
-    // // // // // console.log(`Filter changed: ${filterType} = ${value}`);
+    // // // // // console.log(`Filter changed: ${filterType} = ${value}`),
     switch (filterType) {
       case 'productType':,
         setSelectedProductTypes(prev =>,
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
-        break;
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]),
+        break,
       case 'location':,
         setSelectedLocations(prev =>,
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
-        break;
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]),
+        break,
       case 'availability':,
         setSelectedAvailability(prev =>,
-          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]);
+          prev.includes(value) ? prev.filter(item => item !== value) : [...prev, value]),
         break}
-  };
+  },
   const clearAllFilters = () => {
-    setSearchQuery("");
-    setSelectedProductTypes([]);
-    setSelectedLocations([]);
-    setSelectedAvailability([]);
-    setSelectedRating(null)};
+    setSearchQuery(""),
+    setSelectedProductTypes([]),
+    setSelectedLocations([]),
+    setSelectedAvailability([]),
+    setSelectedRating(null)},
   // Handle requesting a quote,
   const handleRequestQuote = (listingId: string) => {
-    const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === listingId);
+    const listing = MARKETPLACE_LISTINGS && MARKETPLACE_LISTINGS.find(item => item && item.id === listingId),
     if (listing) {
       toast({
-        title: "Quote Requested";
+        title: "Quote Requested",
         description: `Your quote request for ${listing && listing.title} has been sent.`}),
       // Navigate to the quote request page with the listing information,
       navigate("/request-quote", {
         state: {
-          serviceType: listing && listing.category;
+          serviceType: listing && listing.category,
           specificItem: {
 export default /**,
  * Marketplace - Function description,
@@ -194,7 +194,7 @@ function Marketplace() {
   const [selected_locations, setSelectedLocations] = useState < string[]>([]),
   const [selected_availability, setSelectedAvailability] = useState < string[]>([]),
   const [selected_rating, setSelectedRating] = useState < number | null>(null),
-  const search_suggestions: SearchSuggestion[] = generateSearchSuggestions ();
+  const search_suggestions: SearchSuggestion[] = generateSearchSuggestions (),
   const filter_options = generateFilterOptions (),
   // Filter listings based on selected filters,
   const filtered_listings = MARKETPLACE_LISTINGS.filter (listing => {
@@ -222,7 +222,7 @@ function Marketplace() {
       return false}
     return true}),
   const handleFilterChange = (filter_type: string, value: string) =>: any {
-    console.log (`Filter changed: ${filter_type} = ${value}`);
+    console.log (`Filter changed: ${filter_type} = ${value}`),
     switch (filter_type) {
       case 'product_type':,
         setSelectedProductTypes (prev =>,
@@ -247,32 +247,32 @@ function Marketplace() {
 ,
   // Handle requesting a quote,
   const handleRequestQuote = (listing_id: string) =>: any {
-    const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id);
+    const listing = MARKETPLACE_LISTINGS.find (item => item.id === listing_id),
     // Check condition,
 if ( {) {
   $2}
       toast ({
-        title: "Quote Requested";
+        title: "Quote Requested",
         description: `Your quote request for ${listing.title} has been sent.`}),
       // Navigate to the quote request page with the listing information,
       navigate ("/request - quote", {
         state: {
-          service_type: listing.category;
+          service_type: listing.category,
           specific_item: {
-            id: listing.id;
-            title: listing.title;
-            category: listing.category;
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
             image: listing.images?.[0],
-            id: listing.id;
-            title: listing.title;
-            category: listing.category;
+            id: listing.id,
+            title: listing.title,
+            category: listing.category,
             image: listing.images?.[0]}
         }
       })}
 }
-  };
-  };
-  };
+  },
+  },
+  },
   return (
     <AppLayout>,
       <main className="flex - grow container mx - auto px - 4 py - 8">,
@@ -326,12 +326,12 @@ if ( {) {
                 selectedProductTypes,
                 selectedLocations,
                 selectedAvailability,
-                selectedProductTypes;
-                selectedLocations;
-                selectedAvailability;
+                selectedProductTypes,
+                selectedLocations,
+                selectedAvailability,
                 selectedRating,
                 selected_locations,
-                selected_availability;
+                selected_availability,
                 selected_rating}}
               filter_options={filter_options}
               onFilterChange={handleFilterChange}

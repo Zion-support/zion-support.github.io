@@ -5,7 +5,7 @@ export function extractClientIp(req: NextApiRequest): string | null {
 export function extractClientIp(req: NextApiRequest): string | null {
   const xff = (req.headers['x-forwarded-for'] as string) || '',
   const ip =,
-    xff.split(',')[0]?.trim() |,
+    xff.split()[0]?.trim() |,
     (req.headers['x-real-ip'] as string) |,
     (req.socket?.remoteAddress ?? null),
   if (!ip) return null,
@@ -17,6 +17,6 @@ export function getClientIp(req: any): string {
   const forwarded = req.headers['x-forwarded-for'],
   const remoteAddress = req.socket?.remoteAddress,
   if (forwarded) {
-    return Array.isArray(forwarded) ? forwarded[0] : forwarded.split(',')[0].trim()}
+    return Array.isArray(forwarded) ? forwarded[0] : forwarded.split()[0].trim()}
   return remoteAddress |'unknown'}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}

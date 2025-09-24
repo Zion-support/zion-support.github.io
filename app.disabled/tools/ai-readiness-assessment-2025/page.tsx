@@ -15,112 +15,108 @@ interface AssessmentQuestion {
 interface AssessmentResult {
   overallScore: number,
   categoryScores: {
-    [key: string]: number};
+    [key: string]: number},
   recommendations: string[],
   nextSteps: string[]}
 ,
 const assessmentQuestions: AssessmentQuestion[] = [
   {
-    id: 'executive-support';
-    category: 'Strategic Alignment';
-    question: 'How strong is your executive leadership support for AI initiatives?';
+    id: 'executive-support',
+    category: 'Strategic Alignment',
+    question: 'How strong is your executive leadership support for AI initiatives?',
     options: [
-      { value: 1, label: 'No clear support', description: 'No executive sponsorship or budget allocation' };
-      { value: 2, label: 'Limited support', description: 'Some interest but no dedicated resources' };
-      { value: 3, label: 'Moderate support', description: 'Clear sponsorship with basic budget allocation' };
-      { value: 4, label: 'Strong support', description: 'Active sponsorship with dedicated budget and resources' };
+      { value: 1, label: 'No clear support', description: 'No executive sponsorship or budget allocation' },
+      { value: 2, label: 'Limited support', description: 'Some interest but no dedicated resources' },
+      { value: 3, label: 'Moderate support', description: 'Clear sponsorship with basic budget allocation' },
+      { value: 4, label: 'Strong support', description: 'Active sponsorship with dedicated budget and resources' },
       { value: 5, label: 'Excellent support', description: 'Full executive backing with comprehensive resources' }
-    ]};
+    ]},
   {
-    id: 'data-quality';
-    category: 'Data Infrastructure';
-    question: 'How would you rate your current data quality and availability?';
+    id: 'data-quality',
+    category: 'Data Infrastructure',
+    question: 'How would you rate your current data quality and availability?',
     options: [
-      { value: 1, label: 'Poor', description: 'Data is scattered, incomplete, and unreliable' };
-      { value: 2, label: 'Fair', description: 'Some data available but quality issues exist' };
-      { value: 3, label: 'Good', description: 'Most data is available with reasonable quality' };
-      { value: 4, label: 'Very Good', description: 'High-quality data with good governance' };
+      { value: 1, label: 'Poor', description: 'Data is scattered, incomplete, and unreliable' },
+      { value: 2, label: 'Fair', description: 'Some data available but quality issues exist' },
+      { value: 3, label: 'Good', description: 'Most data is available with reasonable quality' },
+      { value: 4, label: 'Very Good', description: 'High-quality data with good governance' },
       { value: 5, label: 'Excellent', description: 'Exceptional data quality with comprehensive governance' }
-    ]};
+    ]},
   {
-    id: 'technical-capabilities';
-    category: 'Technology Infrastructure';
-    question: 'What is your current AI/ML technical capability?';
+    id: 'technical-capabilities',
+    category: 'Technology Infrastructure',
+    question: 'What is your current AI/ML technical capability?',
     options: [
-      { value: 1, label: 'No capabilities', description: 'No AI/ML expertise or infrastructure' };
-      { value: 2, label: 'Basic capabilities', description: 'Limited AI/ML knowledge and tools' };
-      { value: 3, label: 'Moderate capabilities', description: 'Some AI/ML expertise and basic infrastructure' };
-      { value: 4, label: 'Advanced capabilities', description: 'Strong AI/ML team with good infrastructure' };
+      { value: 1, label: 'No capabilities', description: 'No AI/ML expertise or infrastructure' },
+      { value: 2, label: 'Basic capabilities', description: 'Limited AI/ML knowledge and tools' },
+      { value: 3, label: 'Moderate capabilities', description: 'Some AI/ML expertise and basic infrastructure' },
+      { value: 4, label: 'Advanced capabilities', description: 'Strong AI/ML team with good infrastructure' },
       { value: 5, label: 'Expert capabilities', description: 'World-class AI/ML expertise and infrastructure' }
-    ]};
+    ]},
   {
-    id: 'change-management';
-    category: 'Organizational Readiness';
-    question: 'How prepared is your organization for AI-driven change?';
+    id: 'change-management',
+    category: 'Organizational Readiness',
+    question: 'How prepared is your organization for AI-driven change?',
     options: [
-      { value: 1, label: 'Not prepared', description: 'No change management strategy or training' };
-      { value: 2, label: 'Minimally prepared', description: 'Basic awareness but no formal strategy' };
-      { value: 3, label: 'Moderately prepared', description: 'Some training and basic change management' };
-      { value: 4, label: 'Well prepared', description: 'Comprehensive training and change management' };
+      { value: 1, label: 'Not prepared', description: 'No change management strategy or training' },
+      { value: 2, label: 'Minimally prepared', description: 'Basic awareness but no formal strategy' },
+      { value: 3, label: 'Moderately prepared', description: 'Some training and basic change management' },
+      { value: 4, label: 'Well prepared', description: 'Comprehensive training and change management' },
       { value: 5, label: 'Fully prepared', description: 'AI-first culture with advanced change management' }
-    ]};
+    ]},
   {
-    id: 'security-compliance';
-    category: 'Risk Management';
-    question: 'How robust is your security and compliance framework?';
+    id: 'security-compliance',
+    category: 'Risk Management',
+    question: 'How robust is your security and compliance framework?',
     options: [
-      { value: 1, label: 'Weak', description: 'Minimal security measures and compliance' };
-      { value: 2, label: 'Basic', description: 'Some security measures but gaps exist' };
-      { value: 3, label: 'Moderate', description: 'Good security with basic compliance' };
-      { value: 4, label: 'Strong', description: 'Comprehensive security and compliance' };
+      { value: 1, label: 'Weak', description: 'Minimal security measures and compliance' },
+      { value: 2, label: 'Basic', description: 'Some security measures but gaps exist' },
+      { value: 3, label: 'Moderate', description: 'Good security with basic compliance' },
+      { value: 4, label: 'Strong', description: 'Comprehensive security and compliance' },
       { value: 5, label: 'Excellent', description: 'World-class security and compliance framework' }
-    ]};
+    ]},
   {
-    id: 'use-cases';
-    category: 'Strategic Alignment';
-    question: 'How well-defined are your AI use cases and business objectives?';
+    id: 'use-cases',
+    category: 'Strategic Alignment',
+    question: 'How well-defined are your AI use cases and business objectives?',
     options: [
-      { value: 1, label: 'Not defined', description: 'No clear AI use cases or objectives' };
-      { value: 2, label: 'Vaguely defined', description: 'Some ideas but no clear objectives' };
-      { value: 3, label: 'Moderately defined', description: 'Clear use cases with basic objectives' };
-      { value: 4, label: 'Well defined', description: 'Comprehensive use cases with clear objectives' };
+      { value: 1, label: 'Not defined', description: 'No clear AI use cases or objectives' },
+      { value: 2, label: 'Vaguely defined', description: 'Some ideas but no clear objectives' },
+      { value: 3, label: 'Moderately defined', description: 'Clear use cases with basic objectives' },
+      { value: 4, label: 'Well defined', description: 'Comprehensive use cases with clear objectives' },
       { value: 5, label: 'Excellent definition', description: 'Detailed use cases with measurable objectives' }
-    ]};
+    ]},
   {
-    id: 'budget-allocation';
-    category: 'Strategic Alignment';
-    question: 'What is your AI budget allocation and financial commitment?';
+    id: 'budget-allocation',
+    category: 'Strategic Alignment',
+    question: 'What is your AI budget allocation and financial commitment?',
     options: [
-      { value: 1, label: 'No budget', description: 'No dedicated AI budget or resources' };
-      { value: 2, label: 'Limited budget', description: 'Small budget with basic resources' };
-      { value: 3, label: 'Moderate budget', description: 'Reasonable budget for pilot projects' };
-      { value: 4, label: 'Substantial budget', description: 'Significant budget for full implementation' };
+      { value: 1, label: 'No budget', description: 'No dedicated AI budget or resources' },
+      { value: 2, label: 'Limited budget', description: 'Small budget with basic resources' },
+      { value: 3, label: 'Moderate budget', description: 'Reasonable budget for pilot projects' },
+      { value: 4, label: 'Substantial budget', description: 'Significant budget for full implementation' },
       { value: 5, label: 'Comprehensive budget', description: 'Full budget commitment for enterprise AI' }
-    ]};
+    ]},
   {
-    id: 'team-expertise';
-    category: 'Organizational Readiness';
-    question: 'What is your current AI/ML team expertise and capacity?';
+    id: 'team-expertise',
+    category: 'Organizational Readiness',
+    question: 'What is your current AI/ML team expertise and capacity?',
     options: [
-      { value: 1, label: 'No expertise', description: 'No AI/ML team or expertise' };
-      { value: 2, label: 'Limited expertise', description: 'Basic AI/ML knowledge' };
-      { value: 3, label: 'Moderate expertise', description: 'Some AI/ML specialists' };
-      { value: 4, label: 'Strong expertise', description: 'Experienced AI/ML team' };
+      { value: 1, label: 'No expertise', description: 'No AI/ML team or expertise' },
+      { value: 2, label: 'Limited expertise', description: 'Basic AI/ML knowledge' },
+      { value: 3, label: 'Moderate expertise', description: 'Some AI/ML specialists' },
+      { value: 4, label: 'Strong expertise', description: 'Experienced AI/ML team' },
       { value: 5, label: 'Expert team', description: 'World-class AI/ML expertise' }
     ]}
 ],
 const categoryIcons ={
-  'Strategic Alignment': TrendingUp;
-  'Data Infrastructure': BarChart3;
-  'Technology Infrastructure': Zap;
-  'Organizational Readiness': Users;
-  'Risk Management': Shield};
+  'Strategic Alignment': TrendingUp,
+  'Data Infrastructure': BarChart3,
+  'Technology Infrastructure': Zap,
+  'Organizational Readiness': Users,
+  'Risk Management': Shield},
 const categoryColors ={
-  'Strategic Alignment': 'from-blue-50o0 to-blue-60o0';
-  'Data Infrastructure': 'from-green-50o0 to-green-60o0';
-  'Technology Infrastructure': 'from-purple-50o0 to-purple-60o0';
-  'Organizational Readiness': 'from-orange-50o0 to-orange-60o0';
-  'Risk Management': 'from-red-50o0 to-red-60o0'};
+  'Strategic Alignment': 'from-blue-50o0 to-blue-60o0Data Infrastructure': 'from-green-50o0 to-green-60o0Technology Infrastructure': 'from-purple-50o0 to-purple-60o0Organizational Readiness': 'from-orange-50o0 to-orange-60o0Risk Management': 'from-red-50o0 to-red-60o0'},
 export default function AIReadinessAssessment20o25() {
   const [currentQuestion, setCurrentQuestion] = useState(0),
   const [answers, setAnswers] = useState<{ [key: string]: number }>({}),
@@ -133,19 +129,19 @@ export default function AIReadinessAssessment20o25() {
       setTimeout(() => {
         calculateResults(),
         setShowResults(true)}, 30o0)}
-  };
+  },
   const calculateResults = () => {
-    const categoryScores: { [key: string]: { total: number, count: number } } ={};
+    const categoryScores: { [key: string]: { total: number, count: number } } ={},
     assessmentQuestions.forEach(question => {
       const answer = answers[question.id],
       if (answer) {
         if (!categoryScores[question.category]) {
-          categoryScores[question.category] ={ total: 0, count: 0 };
+          categoryScores[question.category] ={ total: 0, count: 0 },
         }
         categoryScores[question.category].total += answer,
         categoryScores[question.category].count += 1}
     }),
-    const finalCategoryScores: { [key: string]: number } ={};
+    const finalCategoryScores: { [key: string]: number } ={},
     Object.keys(categoryScores).forEach(category => {
       finalCategoryScores[category] = Math.round(
         (categoryScores[category].total / categoryScores[category].count) * 20)}),
@@ -155,10 +151,10 @@ export default function AIReadinessAssessment20o25() {
     const recommendations = generateRecommendations(finalCategoryScores),
     const nextSteps = generateNextSteps(overallScore),
     setAssessmentResult({
-      overallScore;
-      categoryScores: finalCategoryScores;
-      recommendations;
-      nextSteps})};
+      overallScore,
+      categoryScores: finalCategoryScores,
+      recommendations,
+      nextSteps})},
   const generateRecommendations = (scores: { [key: string]: number }): string[] => {
     const recommendations: string[] = [],
     Object.entries(scores).forEach(([category, score]) => {
@@ -184,33 +180,27 @@ export default function AIReadinessAssessment20o25() {
     if (recommendations.length === 0) {
       recommendations.push('Excellent readiness! Focus on advanced AI capabilities and innovation')}
 ,
-    return recommendations};
+    return recommendations},
   const generateNextSteps = (score: number): string[] => {
     if (score >= 80) {
       return [
-        'Begin pilot AI projects with high-impact use cases';
-        'Establish AI center of excellence';
-        'Develop advanced AI capabilities';
-        'Plan enterprise-wide AI rollout']} else if (score >= 60) {
+        'Begin pilot AI projects with high-impact use casesEstablish AI center of excellence',
+        'Develop advanced AI capabilitiesPlan enterprise-wide AI rollout']} else if (score >= 60) {
       return [
-        'Address identified gaps in AI readiness';
-        'Start with small pilot projects';
-        'Invest in team training and development';
-        'Build foundational AI infrastructure']} else {
+        'Address identified gaps in AI readinessStart with small pilot projects',
+        'Invest in team training and developmentBuild foundational AI infrastructure']} else {
       return [
-        'Conduct comprehensive AI readiness assessment';
-        'Develop AI strategy and roadmap';
-        'Invest in foundational capabilities';
-        'Consider external AI consulting support']}
-  };
+        'Conduct comprehensive AI readiness assessmentDevelop AI strategy and roadmap',
+        'Invest in foundational capabilitiesConsider external AI consulting support']}
+  },
   const getScoreColor = (score: number) => {
     if (score >= 80) return 'text-green-60o0',
     if (score >= 60) return 'text-yellow-60o0',
-    return 'text-red-60o0'};
+    return 'text-red-60o0'},
   const getScoreLabel = (score: number) => {
     if (score >= 80) return 'Ready for AI Implementation',
     if (score >= 60) return 'Moderate Readiness',
-    return 'Needs Preparation'};
+    return 'Needs Preparation'},
   if (showResults && assessmentResult) {
     return (
       <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-10o0 py-12 px-4">,
@@ -400,7 +390,7 @@ export default function AIReadinessAssessment20o25() {
                 <div className={`p-2 rounded-lg bg-gradient-to-r ${
                   categoryColors[assessmentQuestions[currentQuestion].category as keyof typeof categoryColors]} text-white`}>,
                   {React.createElement(
-                    categoryIcons[assessmentQuestions[currentQuestion].category as keyof typeof categoryIcons];
+                    categoryIcons[assessmentQuestions[currentQuestion].category as keyof typeof categoryIcons],
                     { className: "w-6 h-6" }
                   )}
                 </div>,

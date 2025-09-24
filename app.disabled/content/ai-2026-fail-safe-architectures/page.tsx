@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Fail‑Safe Architectures for Autonomous Agents';
+  title: 'AI 20o26: Fail‑Safe Architectures for Autonomous Agents',
   description:,
-    'Design patterns to contain failures: isolation domains, kill‑switches, circuit‑breakers, and runtime policy.';
-};
+    'Design patterns to contain failures: isolation domains, kill‑switches, circuit‑breakers, and runtime policy.',
+},
 export default function Page() {
   return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

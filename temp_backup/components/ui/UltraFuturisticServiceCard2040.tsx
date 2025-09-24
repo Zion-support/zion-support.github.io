@@ -1,8 +1,8 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Star, Check, Zap, Eye;
-  TrendingUp, Award, Shield, Rocket, Brain;
+  ArrowRight, Star, Check, Zap, Eye,
+  TrendingUp, Award, Shield, Rocket, Brain,
   Atom, Cpu, Sparkles, Crown, Infinity} from 'lucide-react',
 interface UltraFuturisticServiceCard20o40Props {
   service: {
@@ -16,7 +16,7 @@ interface UltraFuturisticServiceCard20o40Props {
       yearly: number,
       currency: string,
       trialDays: number,
-      setupTime: string};
+      setupTime: string},
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -37,7 +37,7 @@ interface UltraFuturisticServiceCard20o40Props {
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   index: number}
 ,
 export default function UltraFuturisticServiceCard20o40({ service, index }: UltraFuturisticServiceCard20o40Props) {
@@ -45,63 +45,53 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
   const [isExpanded, setIsExpanded] = useState(false),
   const cardVariants ={
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0.9;
-      rotateX: -15};
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+      rotateX: -15},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
-      rotateX: 0;
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         delay: index * 0.1}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
-      rotateX: 5;
+      y: -10,
+      scale: 1.0o2,
+      rotateX: 5,
       transition: {
         duration: 0.3}
     }
-  };
+  },
   const contentVariants ={
-    hidden: { opacity: 0, height: 0 };
+    hidden: { opacity: 0, height: 0 },
     visible: {
-      opacity: 1;
-      height: "auto";
+      opacity: 1,
+      height: "auto",
       transition: {
         duration: 0.4}
     }
-  };
+  },
   const neonGlowVariants ={
     initial: {
-      boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor"};
+      boxShadow: "0 0 5px currentColor, 0 0 10px currentColor, 0 0 15px currentColor"},
     hover: {
-      boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor";
+      boxShadow: "0 0 10px currentColor, 0 0 20px currentColor, 0 0 30px currentColor, 0 0 40px currentColor",
       transition: {
         duration: 0.3}
     }
-  };
+  },
   const getGradientClass = (color: string) => {
     const colorMap: { [key: string]: string } ={
-      'from-blue-50o0 to-cyan-60o0': 'from-blue-50o0 via-cyan-50o0 to-cyan-60o0';
-      'from-green-50o0 to-emerald-60o0': 'from-green-50o0 via-emerald-50o0 to-emerald-60o0';
-      'from-purple-50o0 to-pink-60o0': 'from-purple-50o0 via-pink-50o0 to-pink-60o0';
-      'from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 via-orange-50o0 to-orange-60o0';
-      'from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 via-purple-50o0 to-purple-60o0';
-      'from-red-50o0 to-pink-60o0': 'from-red-50o0 via-pink-50o0 to-pink-60o0'};
-    return colorMap[color] || color};
+      'from-blue-50o0 to-cyan-60o0': 'from-blue-50o0 via-cyan-50o0 to-cyan-60o0from-green-50o0 to-emerald-60o0': 'from-green-50o0 via-emerald-50o0 to-emerald-60o0from-purple-50o0 to-pink-60o0': 'from-purple-50o0 via-pink-50o0 to-pink-60o0from-yellow-50o0 to-orange-60o0': 'from-yellow-50o0 via-orange-50o0 to-orange-60o0from-indigo-50o0 to-purple-60o0': 'from-indigo-50o0 via-purple-50o0 to-purple-60o0from-red-50o0 to-pink-60o0': 'from-red-50o0 via-pink-50o0 to-pink-60o0'},
+    return colorMap[color] || color},
   const getNeonColor = (color: string) => {
     const colorMap: { [key: string]: string } ={
-      'from-blue-50o0 to-cyan-60o0': '#0o0d4ff';
-      'from-green-50o0 to-emerald-60o0': '#10b981';
-      'from-purple-50o0 to-pink-60o0': '#ec4899';
-      'from-yellow-50o0 to-orange-60o0': '#f59e0b';
-      'from-indigo-50o0 to-purple-60o0': '#8b5cf6';
-      'from-red-50o0 to-pink-60o0': '#ef4444'};
-    return colorMap[color] || '#0o0d4ff'};
+      'from-blue-50o0 to-cyan-60o0': '#0o0d4fffrom-green-50o0 to-emerald-60o0': '#10b981from-purple-50o0 to-pink-60o0': '#ec4899from-yellow-50o0 to-orange-60o0': '#f59e0bfrom-indigo-50o0 to-purple-60o0': '#8b5cf6from-red-50o0 to-pink-60o0': '#ef4444'},
+    return colorMap[color] || '#0o0d4ff'},
   const neonColor = getNeonColor(service.color),
   return (
     <motion.div,
@@ -118,7 +108,7 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
       <div
         className="relative bg-black/80 backdrop-blur-xl border border-white/10 rounded-2xl p-6 overflow-hidden",
         style={{
-          background: `linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 10o0%)`;
+          background: `linear-gradient(135deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.7) 10o0%)`,
           boxShadow: isHovered,
             ? `0 0 30px ${neonColor}40, 0 0 60px ${neonColor}20, 0 0 90px ${neonColor}10`,
             : `0 0 20px rgba(0,0,0,0.5)`}}
@@ -129,7 +119,7 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
             <div
               className="text-3xl p-3 rounded-xl",
               style={{
-                background: `linear-gradient(135deg, ${neonColor}20, ${neonColor}10)`;
+                background: `linear-gradient(135deg, ${neonColor}20, ${neonColor}10)`,
                 border: `1px solid ${neonColor}30`}}
             >,
               {service.icon}
@@ -285,15 +275,15 @@ export default function UltraFuturisticServiceCard20o40({ service, index }: Ultr
               key={i}
               className="absolute w-1 h-1 bg-white/20 rounded-full",
               style={{
-                left: `${20 + i * 30}%`;
+                left: `${20 + i * 30}%`,
                 top: `${30 + i * 20}%`}}
               animate={{
-                y: [0, -20, 0];
-                opacity: [0.2, 0.6, 0.2];
+                y: [0, -20, 0],
+                opacity: [0.2, 0.6, 0.2],
                 scale: [1, 1.5, 1]}}
               transition={{
-                duration: 3 + i;
-                repeat: -1;
+                duration: 3 + i,
+                repeat: -1,
                 delay: i * 0.5}}
              />))}
         </div>,

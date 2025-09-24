@@ -2,30 +2,27 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 import SEO from '../../components/SEO',
 import {
-  ArrowLeft;
-  Brain;
-  Zap;
-  Target;
-  TrendingUp;
-  Users;
-  Award;
-  Download;
+  ArrowLeft,
+  Brain,
+  Zap,
+  Target,
+  TrendingUp,
+  Users,
+  Award,
+  Download,
 } from 'lucide-react',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: Quantum Neural Superintelligence Revolution - Ultimate Breakthrough';
+    'AI 20o25: Quantum Neural Superintelligence Revolution - Ultimate Breakthrough',
   description:,
-    'Discover the convergence of quantum computing, neural networks, and superintelligence. Experience 1 billion times faster processing power and 30o00% ROI potential.';
+    'Discover the convergence of quantum computing, neural networks, and superintelligence. Experience 1 billion times faster processing power and 30o00% ROI potential.',
   keywords: [
-    'quantum neural superintelligence';
-    'quantum computing';
-    'AI revolution';
-    'neural networks';
-    'superintelligence';
-    'quantum AI';
-    'AI 20o25';
-  ];
-};
+    'quantum neural superintelligencequantum computing',
+    'AI revolutionneural networks',
+    'superintelligencequantum AI',
+    'AI 20o25',
+  ]
+},
 export default function QuantumNeuralSuperintelligenceRevolutionPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-indigo-90o0 text-white'>,
@@ -60,7 +57,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionPage() {
               Experience the convergence of{' '}
               <span className='text-yellow-40o0 font-semibold'>,
                 quantum computing,
-              </span>;
+              </span>,
               <span className='text-green-40o0 font-semibold'>,
                 {' '}
                 neural networks,

@@ -6,9 +6,9 @@ import { real20o37ITServicesAdditions } from '../data/real-20o37-it-services-add
 import { real20o37MicroSaasAdditions } from '../data/real-20o37-micro-saas-additions',
 export default function Revolutionary20o37Pricing() {
   const allServices = [
-    ...real20o37AIServicesAdditions;
-    ...real20o37ITServicesAdditions;
-    ...real20o37MicroSaasAdditions;
+    ...real20o37AIServicesAdditions,
+    ...real20o37ITServicesAdditions,
+    ...real20o37MicroSaasAdditions,
   ],
   const popularServices = allServices.filter(service => service.popular),
   const aiServices = real20o37AIServicesAdditions,
@@ -20,11 +20,9 @@ export default function Revolutionary20o37Pricing() {
         title='Revolutionary 20o37 Pricing | Zion Tech Group',
         description='Discover competitive pricing for our cutting-edge 20o37 services: AI platforms, quantum-secure infrastructure, and innovative micro SAAS solutions. Get the best value for future-ready technology.',
         keywords={[
-          '20o37 pricing';
-          'AI services pricing';
-          'quantum computing pricing';
-          'micro SAAS pricing';
-          'Zion Tech Group pricing';
+          '20o37 pricingAI services pricing',
+          'quantum computing pricingmicro SAAS pricing',
+          'Zion Tech Group pricing',
         ]}
         image='/og-20o37-pricing.jpg',
       />,

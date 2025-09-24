@@ -8,7 +8,7 @@ export type ClientBudgetRecommenderProps = {
   timelineWeeks?: number,
   scope?: string,
   experienceLevel?: 'junior' | 'mid' | 'senior',
-  onApplySuggestion?: (min: number, max: number) => void};
+  onApplySuggestion?: (min: number, max: number) => void},
 export default function ClientBudgetRecommender(
   props: ClientBudgetRecommenderProps) {
   const [loading, setLoading] = useState(false),
@@ -23,19 +23,19 @@ export default function ClientBudgetRecommender(
     setError(null),
     try {
       const res = await axios.post('/api/pricing/client', {
-        title: props.title;
-        category: props.category;
-        timelineWeeks: props.timelineWeeks;
-        scope: props.scope;
-        experienceLevel: props.experienceLevel;
+        title: props.title,
+        category: props.category,
+        timelineWeeks: props.timelineWeeks,
+        scope: props.scope,
+        experienceLevel: props.experienceLevel
       }),
       const s = res.data?.suggestion,
       if (s) {
         setSuggestion({
-          min: s.min;
-          max: s.max;
-          confidence: s.confidence;
-          rationale: s.rationale;
+          min: s.min,
+          max: s.max,
+          confidence: s.confidence,
+          rationale: s.rationale
         })}
     } catch (e) {
       setError('Could not get suggestion')} finally {
@@ -44,9 +44,9 @@ export default function ClientBudgetRecommender(
 ,
   function formatUSD(n: number) {
     return n.toLocaleString('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      maximumFractionDigits: 0;
+      style: 'currency',
+      currency: 'USD',
+      maximumFractionDigits: 0
     })}
 ,
   const rangeText = suggestion,

@@ -15,9 +15,9 @@ export function FooterNewsletter() {
     setIsSubmitting(true),
     try {
       const res = await apiClient('/api/subscribe', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ email });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ email }),
       }),
       if (res.ok) {
         toast.success('Subscribed!'),
@@ -27,7 +27,7 @@ export function FooterNewsletter() {
     } catch (err) {
       toast.error(err.message || 'Subscription failed')} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <form
       onSubmit={handleSubmit}

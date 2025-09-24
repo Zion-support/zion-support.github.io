@@ -62,7 +62,7 @@ function fixImportSyntax() {
     content = content.replace (/(\w+):\s*([^}]+),/g, "$1: $2, "),
     // Fix function parameter syntax errors,
     content = content.replace (
-      /function\s*(([^)]+))\s*{/g;
+      /function\s*(([^)]+))\s*{/g,
       (match, params) => {
         const fixed_params = params.replace (/,/g, ", "),
         return match.replace (params, fixed_params)}),
@@ -79,16 +79,16 @@ function fixImportSyntax() {
         // Skip certain directories,
         if (
           [
-            "node_modules";
-            ".git";
-            ".next";
-            "dist";
-            "build";
-            "out";
-            "ai-optimization-backups";
-            "apps && apps.backup";
-            "backup-merge-conflicts";
-            "apps";
+            "node_modules",
+            ".git",
+            ".next",
+            "dist",
+            "build",
+            "out",
+            "ai-optimization-backups",
+            "apps && apps.backup",
+            "backup-merge-conflicts",
+            "apps",
           ].includes(item)) {
           continue}
         traverse(fullPath)} else if (stat && stat.isFile()) {

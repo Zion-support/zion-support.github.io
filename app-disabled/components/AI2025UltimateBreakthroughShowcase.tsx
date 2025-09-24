@@ -1,92 +1,83 @@
 'use client',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  DollarSign;
-  Users;
-  Clock;
-  CheckCircle;
-  Award;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  DollarSign,
+  Users,
+  Clock,
+  CheckCircle,
+  Award,
 } from 'lucide-react',
 const AI20o25UltimateBreakthroughShowcase = () => {
   const content = [
     {
-      id: 'ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25';
-      type: 'blog';
-      title: 'AI 20o25: The Enterprise Automation Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 2,50o0% ROI';
+      id: 'ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25',
+      type: 'blog',
+      title: 'AI 20o25: The Enterprise Automation Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 2,50o0% ROI',
       description:,
-        'Transform your business with cutting-edge AI automation that delivers unprecedented results. Learn the exact strategies, technologies, and implementation frameworks driving 2,50o0% ROI.';
+        'Transform your business with cutting-edge AI automation that delivers unprecedented results. Learn the exact strategies, technologies, and implementation frameworks driving 2,50o0% ROI.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$3.2B+';
-        efficiency: '95%';
-        accuracy: '99.7%';
-      };
-      readingTime: '28 min read';
+        roi: '2,50o0%',
+        savings: '$3.2B+',
+        efficiency: '95%',
+        accuracy: '99.7%'
+      },
+      readingTime: '28 min read',
       tags: [
-        'AI Automation';
-        'Enterprise';
-        'ROI';
-        'Implementation';
-        'Success Guide';
-        '20o25';
-      ];
-      link: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25';
-      featured: true;
-    };
+        'AI AutomationEnterprise',
+        'ROIImplementation',
+        'Success Guide20o25',
+      ],
+      link: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-ai-automation-250o0-roi-success-story';
-      type: 'case-study';
-      title: 'Fortune 50o0 AI Automation Success Story';
-      subtitle: '$3.2B Annual Savings - 2,50o0% ROI Achievement';
+      id: 'fortune-50o0-ai-automation-250o0-roi-success-story',
+      type: 'case-study',
+      title: 'Fortune 50o0 AI Automation Success Story',
+      subtitle: '$3.2B Annual Savings - 2,50o0% ROI Achievement',
       description:,
-        'How a Fortune 10o0 manufacturing giant transformed operations with AI automation and achieved unprecedented results in just 18 months.';
+        'How a Fortune 10o0 manufacturing giant transformed operations with AI automation and achieved unprecedented results in just 18 months.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$3.2B';
-        timeline: '18 months';
-        efficiency: '340%';
-      };
-      readingTime: '22 min read';
+        roi: '2,50o0%',
+        savings: '$3.2B',
+        timeline: '18 months',
+        efficiency: '340%'
+      },
+      readingTime: '22 min read',
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'AI Automation';
-        '2,50o0% ROI';
-        'Success Story';
-        'Manufacturing';
-      ];
-      link: '/case-studies/fortune-50o0-ai-automation-250o0-roi-success-story';
-      featured: true;
-    };
+        'Case StudyFortune 50o0',
+        'AI Automation2,50o0% ROI',
+        'Success StoryManufacturing',
+      ],
+      link: '/case-studies/fortune-50o0-ai-automation-250o0-roi-success-story',
+      featured: true
+    },
     {
-      id: 'ai-automation-implementation-ultimate-guide-20o25';
-      type: 'resource';
-      title: 'AI Implementation Ultimate Guide 20o25';
-      subtitle: 'Complete Roadmap to 2,50o0% ROI';
+      id: 'ai-automation-implementation-ultimate-guide-20o25',
+      type: 'resource',
+      title: 'AI Implementation Ultimate Guide 20o25',
+      subtitle: 'Complete Roadmap to 2,50o0% ROI',
       description:,
-        'The definitive guide to implementing AI automation that delivers extraordinary results. Complete framework, technologies, and implementation strategies.';
+        'The definitive guide to implementing AI automation that delivers extraordinary results. Complete framework, technologies, and implementation strategies.',
       metrics: {
-        roi: '2,50o0%';
-        success: '50o0+';
-        timeline: '18-24 months';
-        savings: '$3.2B';
-      };
-      readingTime: '35 min read';
+        roi: '2,50o0%',
+        success: '50o0+',
+        timeline: '18-24 months',
+        savings: '$3.2B'
+      },
+      readingTime: '35 min read',
       tags: [
-        'Implementation Guide';
-        'AI Automation';
-        'ROI';
-        'Strategy';
-        'Framework';
-        '20o25';
-      ];
-      link: '/resources/ai-automation-implementation-ultimate-guide-20o25';
-      featured: true;
-    };
+        'Implementation GuideAI Automation',
+        'ROIStrategy',
+        'Framework20o25',
+      ],
+      link: '/resources/ai-automation-implementation-ultimate-guide-20o25',
+      featured: true
+    },
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -98,7 +89,7 @@ const AI20o25UltimateBreakthroughShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -109,7 +100,7 @@ const AI20o25UltimateBreakthroughShowcase = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -269,5 +260,5 @@ const AI20o25UltimateBreakthroughShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25UltimateBreakthroughShowcase;
+    </section>)},
+export default AI20o25UltimateBreakthroughShowcase,

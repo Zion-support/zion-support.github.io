@@ -9,40 +9,40 @@ import {Input} from "@/components/ui/input",
 import {Table, TableBody, TableCell, TableHead, TableHeader, TableRow} from "@/components/ui/table",
 import {Globe, Search, ArrowUpDown} from "lucide-react",
 import {Button} from "@/components/ui/button",
-import { useState, useMemo } from "react";
-import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing";
-import { Input } from "@/components/ui/input";
-import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
-import { Globe, Search, ArrowUpDown } from "lucide-react";
-import { Button } from "@/components/ui/button";
+import { useState, useMemo } from "react",
+import { onsiteServicePricing, CountryPricing } from "@/data/onsiteServicePricing",
+import { Input } from "@/components/ui/input",
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table",
+import { Globe, Search, ArrowUpDown } from "lucide-react",
+import { Button } from "@/components/ui/button",
 import { useState, useMemo  } from './react',
 import { Input  } from '@/components / ui / input',
 import { Globe, Search, ArrowUpDown  } from './lucide-react',
 import { Button  } from '@/components / ui / button',
-  onsiteServicePricing;
-  CountryPricing;
+  onsiteServicePricing,
+  CountryPricing,
 } from "@/data/onsiteServicePricing",
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from "@/components/ui/table",
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
-  onsiteServicePricing;
-  CountryPricing;
+  onsiteServicePricing,
+  CountryPricing,
 } from '@/data / onsiteServicePricing',
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow,
 } from '@/components / ui / table',
 export /**,
  * ITServicePricingTable - Function description,
@@ -56,7 +56,7 @@ function ITServicePricingTable() {
     direction: "ascending"}),
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
-    let filteredData = [...onsiteServicePricing];
+    let filteredData = [...onsiteServicePricing],
     // Filter by search query,
     if (searchQuery) {
       filteredData = filteredData.filter((item) =>,
@@ -65,8 +65,8 @@ function ITServicePricingTable() {
     filteredData.sort((a, b) => {
       if (a[sortConfig.key] < b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? -1 : 1,
-    key: "country";
-    direction: "ascending";
+    key: "country",
+    direction: "ascending"
   }),
   const sorted_data = useMemo (() => {
     let filtered_data = [...onsiteServicePricing],
@@ -75,7 +75,7 @@ function ITServicePricingTable() {
 if ( {) {
   $2}
       filtered_data = filtered_data.filter ((item) =>,
-        item.country.toLowerCase ().includes (search_query.toLowerCase ());
+        item.country.toLowerCase ().includes (search_query.toLowerCase ()),
       )}
     // Sort data,
     filtered_data.sort ((a, b) => {
@@ -91,10 +91,10 @@ if ( {) {
 export function ITServicePricingTable() {
   const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing;
+    key: keyof CountryPricing,
     direction: "ascending" | "descending"}>({
-    key: "country";
-    direction: "ascending"});
+    key: "country",
+    direction: "ascending"}),
   const sortedData = useMemo(() => {
     let filteredData = [...onsiteServicePricing],
     // Filter by search query,
@@ -118,15 +118,15 @@ export function ITServicePricingTable() {
         sortConfig.key === key && sortConfig.direction === "ascending",
           ? "descending",
           : "ascending"})}
-      return 0});
-    return filteredData}, [onsiteServicePricing, searchQuery, sortConfig]);
+      return 0}),
+    return filteredData}, [onsiteServicePricing, searchQuery, sortConfig]),
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
-      key;
+      key,
       direction: ,
         sortConfig.key === key && sortConfig.direction === "ascending",
           ? "descending",
-          : "ascending"})};
+          : "ascending"})},
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">,
       <div className="flex items-center mb-6">,
@@ -186,14 +186,14 @@ export function ITServicePricingTable() {
                 </TableCell>,
               </TableRow>,
 export function ITServicePricingTable() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState(""),
   const [sortConfig, setSortConfig] = useState<{
-    key: keyof CountryPricing;
+    key: keyof CountryPricing,
     direction: "ascending" | "descending"}>({
-    key: "country";
-    direction: "ascending"});
+    key: "country",
+    direction: "ascending"}),
   const sortedData = useMemo(() => {
-    let filteredData = [...onsiteServicePricing];
+    let filteredData = [...onsiteServicePricing],
     // Filter by search query,
     if (searchQuery) {
       filteredData = filteredData.filter(item =>,
@@ -205,15 +205,15 @@ export function ITServicePricingTable() {
         return sortConfig.direction === "ascending" ? -1 : 1}
       if (a[sortConfig.key] > b[sortConfig.key]) {
         return sortConfig.direction === "ascending" ? 1 : -1}
-      return 0});
-    return filteredData}, [onsiteServicePricing, searchQuery, sortConfig]);
+      return 0}),
+    return filteredData}, [onsiteServicePricing, searchQuery, sortConfig]),
   const handleSort = (key: keyof CountryPricing) => {
     setSortConfig({
       key,
       direction:,
         sortConfig.key === key && sortConfig.direction === "ascending",
           ? "descending",
-          : "ascending"})};
+          : "ascending"})},
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-4 w-full">,
       <div className="flex items-center mb-6">,
@@ -275,11 +275,11 @@ export function ITServicePricingTable() {
     return filtered_data}, [onsiteServicePricing, search_query, sort_config]),
   const handle_sort = (key: keyof CountryPricing) =>: any {
     setSortConfig ({
-      key;
+      key,
       direction: ,
         sort_config.key === key && sort_config.direction === "ascending",
           ? "descending",
-          : "ascending";
+          : "ascending",
     })}
 ,
   return (

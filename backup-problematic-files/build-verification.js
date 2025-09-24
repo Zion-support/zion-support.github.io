@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 // // console.log('🔍 Starting build verification...'),
 try {
@@ -22,28 +22,28 @@ try {
   // // console.log('✅ Framer Motion import successful', typeof motion),
   // Test lucide-react icons,
   const {
-    ArrowRight;
-    CheckCircle;
-    Brain;
-    Cloud;
-    Shield;
+    ArrowRight,
+    CheckCircle,
+    Brain,
+    Cloud,
+    Shield,
     Zap} = require('lucide-react'),
   // // console.log('✅ Lucide React icons import successful', {
-    ArrowRight: 'typeof ArrowRight';
-    CheckCircle: 'typeof CheckCircle';
-    Brain: 'typeof Brain';
-    Cloud: 'typeof Cloud';
-    Shield: 'typeof Shield';
+    ArrowRight: 'typeof ArrowRight',
+    CheckCircle: 'typeof CheckCircle',
+    Brain: 'typeof Brain',
+    Cloud: 'typeof Cloud',
+    Shield: 'typeof Shield',
     Zap: 'typeof Zap'}),
   // // console.log('🎉 All core dependencies imported successfully!'),
   // // console.log('📋 Components should be ready for build')} catch (error) {
   console.error('❌ Import error:', error.message),
   process.exit(1),
-    "ArrowRight": typeof ArrowRight;
-    "CheckCircle": typeof CheckCircle;
-    "Brain": typeof Brain;
-    "Cloud": typeof Cloud;
-    "Shield": typeof Shield;
+    "ArrowRight": typeof ArrowRight,
+    "CheckCircle": typeof CheckCircle,
+    "Brain": typeof Brain,
+    "Cloud": typeof Cloud,
+    "Shield": typeof Shield,
     "Zap": typeof Zap}),
   // // console.log('🎉 All core dependencies imported successfully!'),
   // // console.log('📋 Components should be ready for build')} catch (error) {

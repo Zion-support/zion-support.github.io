@@ -10,9 +10,9 @@ export class CacheManager {
 ,
   set(key: string, data: any, ttl: number = 300000): void { // 5 minutes default,
     this.cache.set(key, {
-      data;
-      timestamp: Date.now();
-      ttl;
+      data,
+      timestamp: Date.now(),
+      ttl
     })}
 ,
   get(key: string): any | null {

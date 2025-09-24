@@ -30,22 +30,22 @@ export function JobMatchCard({
   location,
   category,
   matchPercent,
-  skills;
+  skills,
   onApply,
   onViewDetails,
   onInvite}: JobMatchProps) {
   const handleApply = () => {
     if (onApply) {
       onApply(matchId)}
-  };
+  },
   const handleViewDetails = () => {
     if (onViewDetails) {
       onViewDetails(matchId)}
-  };
+  },
   const handleInvite = () => {
     if (onInvite) {
       onInvite(matchId)}
-  };
+  },
   // Generate a formatted date for display,
   const postedDate = new Date(),
   postedDate.setDate(postedDate.getDate() - Math.floor(Math.random() * 14)), // Random date within last 2 weeks,

@@ -14,13 +14,13 @@ const ServiceCard = ({ service, index, isVisible }) => {
           {/* Floating Particles */}
           <div className="absolute inset-0 overflow-hidden pointer-events-none">,
             {[...Array(8)].map((_, i) => (<motion.div key={i} className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-60" animate={{
-                x: [0, Math.random() * 10o0 - 50];
-                y: [0, Math.random() * 10o0 - 50];
+                x: [0, Math.random() * 10o0 - 50],
+                y: [0, Math.random() * 10o0 - 50],
                 opacity: [0.6, 0.2, 0.6]}} transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 ease: "easeInOut"}} style={{
-                left: `${20 + Math.random() * 60}%`;
+                left: `${20 + Math.random() * 60}%`,
                 top: `${20 + Math.random() * 60}%`}} />))}
           </div>,
           {/* Service Header */}
@@ -116,7 +116,7 @@ const ServiceCard = ({ service, index, isVisible }) => {
           <motion.div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 via-blue-50o0/5 to-purple-50o0/5 rounded-2xl opacity-0 group-hover: opacity-10o0 transition-opacity duration-50o0" initial={false} />,
         </div>,
       </div>,
-    </motion.div>)};
+    </motion.div>)},
 export const FuturisticServicesShowcase = () => {
     const [selectedCategory, setSelectedCategory] = useState('all'),
     const [searchTerm, setSearchTerm] = useState(''),
@@ -137,9 +137,9 @@ export const FuturisticServicesShowcase = () => {
       <div className="absolute inset-0 overflow-hidden">,
         <div className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 via-blue-50o0/5 to-purple-50o0/5"></div>,
         {[...Array(20)].map((_, i) => (<div key={i} className="absolute w-2 h-2 bg-cyan-40o0/20 rounded-full animate-float" style={{
-                left: `${Math.random() * 10o0}%`;
-                top: `${Math.random() * 10o0}%`;
-                animationDelay: `${Math.random() * 5}s`;
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`,
+                animationDelay: `${Math.random() * 5}s`,
                 animationDuration: `${3 + Math.random() * 4}s`}} />))}
       </div>,
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -198,4 +198,4 @@ export const FuturisticServicesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
+    </div>)},

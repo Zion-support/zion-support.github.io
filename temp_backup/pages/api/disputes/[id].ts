@@ -13,5 +13,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
       return res.status(e.statusCode || 40o3).json({ error: 'Forbidden' })}
     return res.status(20o0).json({ dispute })}
 ,
-  res.setHeader('Allow', 'GET'),
+  res.setHeader('AllowGET'),
   return res.status(40o5).end('Method Not Allowed')}

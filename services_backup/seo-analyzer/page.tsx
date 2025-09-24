@@ -1,16 +1,16 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'SEO Analyzer | Zion Tech Group';
+  title: 'SEO Analyzer | Zion Tech Group',
   description:,
-    'Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.';
-};
+    'Advanced SEO analysis with AI-powered optimization recommendations, competitor analysis, and automated reporting for maximum search visibility.',
+},
 export default function SEOAnalyzerPage() {
   return (
     <div className='animate-fade-in'>,
       <div className='text-center mb-16'>,
         <h1 className='text-4xl font-bold text-gray-90o0 mb-6'>SEO Analyzer</h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Advanced SEO analysis with AI-powered optimization recommendations;
+          Advanced SEO analysis with AI-powered optimization recommendations,
           competitor analysis, and automated reporting for maximum search,
           visibility.,
         </p>,
@@ -57,11 +57,9 @@ export default function SEOAnalyzerPage() {
               price='$29/month',
               description='Perfect for small websites and blogs',
               features={[
-                'Up to 5 websites';
-                'Basic SEO analysis';
-                'Email support';
-                'Monthly reports';
-                '10o0 keyword tracking';
+                'Up to 5 websitesBasic SEO analysis',
+                'Email supportMonthly reports',
+                '10o0 keyword tracking',
               ]}
             />,
             <PricingCard
@@ -69,12 +67,9 @@ export default function SEOAnalyzerPage() {
               price='$79/month',
               description='Ideal for growing businesses',
               features={[
-                'Up to 25 websites';
-                'Advanced AI analysis';
-                'Priority support';
-                'Weekly reports';
-                '1,0o00 keyword tracking';
-                'Competitor analysis';
+                'Up to 25 websitesAdvanced AI analysis',
+                'Priority supportWeekly reports',
+                '1,0o00 keyword trackingCompetitor analysis',
               ]}
             />,
             <PricingCard
@@ -82,13 +77,10 @@ export default function SEOAnalyzerPage() {
               price='$199/month',
               description='For large organizations and agencies',
               features={[
-                'Unlimited websites';
-                'Custom AI models';
-                '24/7 dedicated support';
-                'Real-time monitoring';
-                'Unlimited keyword tracking';
-                'White-label reporting';
-                'API access';
+                'Unlimited websitesCustom AI models',
+                '24/7 dedicated supportReal-time monitoring',
+                'Unlimited keyword trackingWhite-label reporting',
+                'API access',
               ]}
             />,
           </div>,
@@ -142,8 +134,8 @@ export default function SEOAnalyzerPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -168,10 +160,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -191,8 +183,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

@@ -1,154 +1,154 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  BookOpen;
-  Download;
-  FileText;
-  TrendingUp;
-  Users;
-  Zap;
-  Star;
-  Award;
-  Clock;
-  Eye;
-  ThumbsUp;
-  ArrowRight;
+  ArrowRight,
+  BookOpen,
+  Download,
+  FileText,
+  TrendingUp,
+  Users,
+  Zap,
+  Star,
+  Award,
+  Clock,
+  Eye,
+  ThumbsUp,
+  ArrowRight,
 } from 'lucide-react',
 const InteractiveContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const [hoveredItem, setHoveredItem] = useState(null),
   const contentItems = [
     {
-      id: 1;
-      title: 'Generative AI Enterprise Automation Revolution';
+      id: 1,
+      title: 'Generative AI Enterprise Automation Revolution',
       description:,
-        'Discover how generative AI is transforming enterprise automation with 40o0-80o0% efficiency improvements and $50o0B market transformation.';
-      category: 'ai-automation';
-      type: 'blog';
-      readingTime: '18 min read';
-      views: '12.5K';
-      likes: '98%';
-      featured: true;
-      url: '/blog/ai-20o25-generative-ai-enterprise-automation-revolution';
-      icon: '🤖';
-      color: 'emerald';
-      stats: { roi: '80o0%', savings: '$50o0B' };
-    };
+        'Discover how generative AI is transforming enterprise automation with 40o0-80o0% efficiency improvements and $50o0B market transformation.',
+      category: 'ai-automation',
+      type: 'blog',
+      readingTime: '18 min read',
+      views: '12.5K',
+      likes: '98%',
+      featured: true,
+      url: '/blog/ai-20o25-generative-ai-enterprise-automation-revolution',
+      icon: '🤖',
+      color: 'emerald',
+      stats: { roi: '80o0%', savings: '$50o0B' },
+    },
     {
-      id: 2;
-      title: 'MLOps Breakthrough: 10x Faster Deployment';
+      id: 2,
+      title: 'MLOps Breakthrough: 10x Faster Deployment',
       description:,
-        'Learn how MLOps breakthroughs are enabling 10x faster model deployment with 99.9% reliability and 90% cost reduction.';
-      category: 'mlops';
-      type: 'blog';
-      readingTime: '16 min read';
-      views: '8.7K';
-      likes: '96%';
-      featured: true;
-      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough';
-      icon: '⚙️';
-      color: 'cyan';
-      stats: { speed: '10x', reliability: '99.9%' };
-    };
+        'Learn how MLOps breakthroughs are enabling 10x faster model deployment with 99.9% reliability and 90% cost reduction.',
+      category: 'mlops',
+      type: 'blog',
+      readingTime: '16 min read',
+      views: '8.7K',
+      likes: '96%',
+      featured: true,
+      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough',
+      icon: '⚙️',
+      color: 'cyan',
+      stats: { speed: '10x', reliability: '99.9%' },
+    },
     {
-      id: 3;
-      title: 'Next-Generation Autonomous Systems Revolution';
+      id: 3,
+      title: 'Next-Generation Autonomous Systems Revolution',
       description:,
-        'Explore how autonomous systems are achieving 30o0-60o0% efficiency improvements with self-healing infrastructure.';
-      category: 'autonomous';
-      type: 'blog';
-      readingTime: '20 min read';
-      views: '15.2K';
-      likes: '99%';
-      featured: true;
-      url: '/blog/ai-20o25-next-generation-autonomous-systems-revolution';
-      icon: '🔄';
-      color: 'blue';
-      stats: { efficiency: '60o0%', uptime: '99.99%' };
-    };
+        'Explore how autonomous systems are achieving 30o0-60o0% efficiency improvements with self-healing infrastructure.',
+      category: 'autonomous',
+      type: 'blog',
+      readingTime: '20 min read',
+      views: '15.2K',
+      likes: '99%',
+      featured: true,
+      url: '/blog/ai-20o25-next-generation-autonomous-systems-revolution',
+      icon: '🔄',
+      color: 'blue',
+      stats: { efficiency: '60o0%', uptime: '99.99%' },
+    },
     {
-      id: 4;
-      title: '$50o0B Financial Services AI Transformation';
+      id: 4,
+      title: '$50o0B Financial Services AI Transformation',
       description:,
-        'Real case study: How a leading financial firm achieved 40o0% ROI and $2.3B in cost savings through comprehensive AI transformation.';
-      category: 'case-study';
-      type: 'case-study';
-      readingTime: '12 min read';
-      views: '22.1K';
-      likes: '97%';
-      featured: true;
-      url: '/case-studies/ai-transformation-50o0b-financial-services';
-      icon: '🏦';
-      color: 'yellow';
-      stats: { roi: '40o0%', savings: '$2.3B' };
-    };
+        'Real case study: How a leading financial firm achieved 40o0% ROI and $2.3B in cost savings through comprehensive AI transformation.',
+      category: 'case-study',
+      type: 'case-study',
+      readingTime: '12 min read',
+      views: '22.1K',
+      likes: '97%',
+      featured: true,
+      url: '/case-studies/ai-transformation-50o0b-financial-services',
+      icon: '🏦',
+      color: 'yellow',
+      stats: { roi: '40o0%', savings: '$2.3B' },
+    },
     {
-      id: 5;
-      title: 'Complete AI 20o25 Implementation Guide';
+      id: 5,
+      title: 'Complete AI 20o25 Implementation Guide',
       description:,
-        'Download our comprehensive guide with proven strategies, frameworks, and step-by-step implementation plans for 40o0-80o0% ROI.';
-      category: 'resources';
-      type: 'resource';
-      readingTime: '25 min read';
-      views: '35.8K';
-      likes: '99%';
-      featured: true;
-      url: '/resources/ai-20o25-implementation-guide';
-      icon: '📚';
-      color: 'purple';
-      stats: { roi: '80o0%', downloads: '50K+' };
-    };
+        'Download our comprehensive guide with proven strategies, frameworks, and step-by-step implementation plans for 40o0-80o0% ROI.',
+      category: 'resources',
+      type: 'resource',
+      readingTime: '25 min read',
+      views: '35.8K',
+      likes: '99%',
+      featured: true,
+      url: '/resources/ai-20o25-implementation-guide',
+      icon: '📚',
+      color: 'purple',
+      stats: { roi: '80o0%', downloads: '50K+' },
+    },
     {
-      id: 6;
-      title: 'AI 20o25: Quantum Computing Breakthrough';
+      id: 6,
+      title: 'AI 20o25: Quantum Computing Breakthrough',
       description:,
-        'Discover how quantum computing is revolutionizing AI in 20o25 with breakthrough applications and computational capabilities.';
-      category: 'quantum';
-      type: 'blog';
-      readingTime: '15 min read';
-      views: '18.9K';
-      likes: '95%';
-      featured: false;
-      url: '/blog/ai-20o25-quantum-computing-breakthrough';
-      icon: '⚛️';
-      color: 'indigo';
-      stats: { speed: '10o00x', accuracy: '99.97%' };
-    };
+        'Discover how quantum computing is revolutionizing AI in 20o25 with breakthrough applications and computational capabilities.',
+      category: 'quantum',
+      type: 'blog',
+      readingTime: '15 min read',
+      views: '18.9K',
+      likes: '95%',
+      featured: false,
+      url: '/blog/ai-20o25-quantum-computing-breakthrough',
+      icon: '⚛️',
+      color: 'indigo',
+      stats: { speed: '10o00x', accuracy: '99.97%' },
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'ai-automation';
-      name: 'AI Automation';
+      id: 'ai-automation',
+      name: 'AI Automation',
       count: contentItems.filter(item => item.category === 'ai-automation'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'mlops';
-      name: 'MLOps';
-      count: contentItems.filter(item => item.category === 'mlops').length;
-    };
+      id: 'mlops',
+      name: 'MLOps',
+      count: contentItems.filter(item => item.category === 'mlops').length
+    },
     {
-      id: 'autonomous';
-      name: 'Autonomous Systems';
-      count: contentItems.filter(item => item.category === 'autonomous').length;
-    };
+      id: 'autonomous',
+      name: 'Autonomous Systems',
+      count: contentItems.filter(item => item.category === 'autonomous').length
+    },
     {
-      id: 'case-study';
-      name: 'Case Studies';
-      count: contentItems.filter(item => item.category === 'case-study').length;
-    };
+      id: 'case-study',
+      name: 'Case Studies',
+      count: contentItems.filter(item => item.category === 'case-study').length
+    },
     {
-      id: 'resources';
-      name: 'Resources';
-      count: contentItems.filter(item => item.category === 'resources').length;
-    };
+      id: 'resources',
+      name: 'Resources',
+      count: contentItems.filter(item => item.category === 'resources').length
+    },
     {
-      id: 'quantum';
-      name: 'Quantum AI';
-      count: contentItems.filter(item => item.category === 'quantum').length;
-    };
+      id: 'quantum',
+      name: 'Quantum AI',
+      count: contentItems.filter(item => item.category === 'quantum').length
+    },
   ],
   const filteredItems =,
     activeCategory === 'all',
@@ -157,27 +157,27 @@ const InteractiveContentShowcase20o25 = () => {
   const getColorClasses = color => {
     const colorMap = {
       emerald:,
-        'from-emerald-50o0 to-emerald-60o0 hover:from-emerald-60o0 hover:to-emerald-70o0';
-      cyan: 'from-cyan-50o0 to-cyan-60o0 hover:from-cyan-60o0 hover:to-cyan-70o0';
-      blue: 'from-blue-50o0 to-blue-60o0 hover:from-blue-60o0 hover:to-blue-70o0';
+        'from-emerald-50o0 to-emerald-60o0 hover: from-emerald-60o0 hover:to-emerald-70o0',
+      cyan: 'from-cyan-50o0 to-cyan-60o0 hover:from-cyan-60o0 hover:to-cyan-70o0',
+      blue: 'from-blue-50o0 to-blue-60o0 hover:from-blue-60o0 hover:to-blue-70o0',
       yellow:,
-        'from-yellow-50o0 to-yellow-60o0 hover:from-yellow-60o0 hover:to-yellow-70o0';
+        'from-yellow-50o0 to-yellow-60o0 hover: from-yellow-60o0 hover:to-yellow-70o0',
       purple:,
-        'from-purple-50o0 to-purple-60o0 hover:from-purple-60o0 hover:to-purple-70o0';
+        'from-purple-50o0 to-purple-60o0 hover: from-purple-60o0 hover:to-purple-70o0',
       indigo:,
-        'from-indigo-50o0 to-indigo-60o0 hover:from-indigo-60o0 hover:to-indigo-70o0';
-    };
-    return colorMap[color] || 'from-gray-50o0 to-gray-60o0'};
+        'from-indigo-50o0 to-indigo-60o0 hover: from-indigo-60o0 hover:to-indigo-70o0'
+    },
+    return colorMap[color] || 'from-gray-50o0 to-gray-60o0'},
   const getTextColor = color => {
     const colorMap = {
-      emerald: 'text-emerald-40o0';
-      cyan: 'text-cyan-40o0';
-      blue: 'text-blue-40o0';
-      yellow: 'text-yellow-40o0';
-      purple: 'text-purple-40o0';
-      indigo: 'text-indigo-40o0';
-    };
-    return colorMap[color] || 'text-gray-40o0'};
+      emerald: 'text-emerald-40o0',
+      cyan: 'text-cyan-40o0',
+      blue: 'text-blue-40o0',
+      yellow: 'text-yellow-40o0',
+      purple: 'text-purple-40o0',
+      indigo: 'text-indigo-40o0'
+    },
+    return colorMap[color] || 'text-gray-40o0'},
   return (
     <div className='bg-gradient-to-br from-slate-90o0 via-gray-90o0 to-slate-90o0 text-white py-20'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -320,5 +320,5 @@ const InteractiveContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveContentShowcase20o25;
+    </div>)},
+export default InteractiveContentShowcase20o25,

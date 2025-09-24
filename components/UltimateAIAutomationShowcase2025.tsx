@@ -2,33 +2,33 @@ import Link from 'next/link',
 const UltimateAIAutomationShowcase20o25 = () => {
   const automationFeatures = [
     {
-      title: 'Intelligent Process Automation';
+      title: 'Intelligent Process Automation',
       description:,
-        'AI-powered automation that handles complex business processes with human-like decision making';
-      icon: '🤖';
-      impact: '99.8% Efficiency';
-    };
+        'AI-powered automation that handles complex business processes with human-like decision making',
+      icon: '🤖',
+      impact: '99.8% Efficiency'
+    },
     {
-      title: 'Predictive Maintenance';
+      title: 'Predictive Maintenance',
       description:,
-        'Automated systems that predict and prevent equipment failures before they occur';
-      icon: '🔮';
-      impact: '$5.2B+ Savings';
-    };
+        'Automated systems that predict and prevent equipment failures before they occur',
+      icon: '🔮',
+      impact: '$5.2B+ Savings'
+    },
     {
-      title: 'Smart Resource Allocation';
+      title: 'Smart Resource Allocation',
       description:,
-        'Dynamic allocation of resources based on real-time demand and optimization algorithms';
-      icon: '📊';
-      impact: '2,0o00% ROI';
-    };
+        'Dynamic allocation of resources based on real-time demand and optimization algorithms',
+      icon: '📊',
+      impact: '2,0o00% ROI',
+    },
     {
-      title: 'Autonomous Decision Making';
+      title: 'Autonomous Decision Making',
       description:,
-        'AI systems that make real-time business decisions without human intervention';
-      icon: '⚡';
-      impact: '99.7% Accuracy';
-    };
+        'AI systems that make real-time business decisions without human intervention',
+      icon: '⚡',
+      impact: '99.7% Accuracy'
+    },
   ],
   return (
     <div className='bg-gradient-to-br from-rose-90o0 via-pink-90o0 to-purple-90o0 text-white py-20 px-4'>,
@@ -82,5 +82,5 @@ const UltimateAIAutomationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAIAutomationShowcase20o25;
+    </div>)},
+export default UltimateAIAutomationShowcase20o25,

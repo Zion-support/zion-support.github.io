@@ -1,111 +1,111 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  Globe;
-  ArrowRight;
-  Star;
-  Shield;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Heart;
-  Award;
-  Users;
-  Building;
-  Target;
-  BookOpen;
-  Code;
-  MessageCircle;
-  Calendar;
-  Lightbulb;
-  TrendingUp;
-  Sparkles;
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  Globe,
+  ArrowRight,
+  Star,
+  Shield,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Heart,
+  Award,
+  Users,
+  Building,
+  Target,
+  BookOpen,
+  Code,
+  MessageCircle,
+  Calendar,
+  Lightbulb,
+  TrendingUp,
+  Sparkles,
   BarChart3} from 'lucide-react',
 const UltraFuturisticFooter20o48: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Revolutionary Services';
+      title: 'Revolutionary Services',
       items: [
-        { label: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-20o45', icon: Brain };
-        { label: 'Quantum Edge Computing', href: '/quantum-edge-computing-orchestrator', icon: Atom };
-        { label: 'Autonomous Business AI', href: '/ai-autonomous-business-orchestrator', icon: Rocket };
-        { label: 'Quantum Secure Cloud', href: '/quantum-secure-cloud-hybrid-platform', icon: Shield };
-        { label: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-evolution-platform', icon: Heart };
+        { label: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-platform-20o45', icon: Brain },
+        { label: 'Quantum Edge Computing', href: '/quantum-edge-computing-orchestrator', icon: Atom },
+        { label: 'Autonomous Business AI', href: '/ai-autonomous-business-orchestrator', icon: Rocket },
+        { label: 'Quantum Secure Cloud', href: '/quantum-secure-cloud-hybrid-platform', icon: Shield },
+        { label: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-evolution-platform', icon: Heart },
         { label: 'Autonomous DevOps', href: '/autonomous-devops-intelligence-platform', icon: Code }
-      ]};
+      ]},
     {
-      title: 'Innovative Solutions';
+      title: 'Innovative Solutions',
       items: [
-        { label: 'Healthcare AI', href: '/ai-autonomous-healthcare-diagnostics-platform', icon: Heart };
-        { label: 'Financial Trading AI', href: '/ai-autonomous-financial-trading-orchestrator', icon: TrendingUp };
-        { label: 'Supply Chain AI', href: '/ai-autonomous-supply-chain-orchestrator', icon: Zap };
-        { label: 'Legal Contract AI', href: '/ai-autonomous-legal-contract-analyzer', icon: Shield };
-        { label: 'Creative Content AI', href: '/ai-autonomous-creative-content-orchestrator', icon: Sparkles };
+        { label: 'Healthcare AI', href: '/ai-autonomous-healthcare-diagnostics-platform', icon: Heart },
+        { label: 'Financial Trading AI', href: '/ai-autonomous-financial-trading-orchestrator', icon: TrendingUp },
+        { label: 'Supply Chain AI', href: '/ai-autonomous-supply-chain-orchestrator', icon: Zap },
+        { label: 'Legal Contract AI', href: '/ai-autonomous-legal-contract-analyzer', icon: Shield },
+        { label: 'Creative Content AI', href: '/ai-autonomous-creative-content-orchestrator', icon: Sparkles },
         { label: 'Customer Success AI', href: '/ai-autonomous-customer-success-platform', icon: Users }
-      ]};
+      ]},
     {
-      title: 'Micro SAAS Platforms';
+      title: 'Micro SAAS Platforms',
       items: [
-        { label: 'Quantum Communication Hub', href: '/quantum-secure-communication-hub', icon: MessageCircle };
-        { label: 'HR Intelligence Suite', href: '/autonomous-hr-intelligence-suite', icon: Users };
-        { label: 'Financial Analytics', href: '/quantum-financial-analytics-platform', icon: TrendingUp };
-        { label: 'Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator', icon: Target };
-        { label: 'Network Intelligence', href: '/autonomous-network-intelligence-system', icon: Globe };
+        { label: 'Quantum Communication Hub', href: '/quantum-secure-communication-hub', icon: MessageCircle },
+        { label: 'HR Intelligence Suite', href: '/autonomous-hr-intelligence-suite', icon: Users },
+        { label: 'Financial Analytics', href: '/quantum-financial-analytics-platform', icon: TrendingUp },
+        { label: 'Marketing Orchestrator', href: '/ai-autonomous-marketing-orchestrator', icon: Target },
+        { label: 'Network Intelligence', href: '/autonomous-network-intelligence-system', icon: Globe },
         { label: 'Data Center Automation', href: '/quantum-data-center-automation-platform', icon: Building }
-      ]};
+      ]},
     {
-      title: 'Company & Resources';
+      title: 'Company & Resources',
       items: [
-        { label: 'About Zion Tech Group', href: '/about', icon: Building };
-        { label: 'Our Revolutionary Team', href: '/team', icon: Users };
-        { label: 'Join Our Mission', href: '/careers', icon: Award };
-        { label: 'Knowledge Base', href: '/resources', icon: BookOpen };
-        { label: 'Case Studies', href: '/resources/case-studies', icon: BarChart3 };
+        { label: 'About Zion Tech Group', href: '/about', icon: Building },
+        { label: 'Our Revolutionary Team', href: '/team', icon: Users },
+        { label: 'Join Our Mission', href: '/careers', icon: Award },
+        { label: 'Knowledge Base', href: '/resources', icon: BookOpen },
+        { label: 'Case Studies', href: '/resources/case-studies', icon: BarChart3 },
         { label: 'API Documentation', href: '/resources/api', icon: Code }
       ]}
   ],
   const contactInfo = [
     {
-      icon: Phone;
-      label: 'Phone';
-      value: '+1 30o2 464 0950';
-      href: 'tel:+130o24640950'};
+      icon: Phone,
+      label: 'Phone',
+      value: '+1 30o2 464 0950',
+      href: 'tel:+130o24640950'},
     {
-      icon: Mail;
-      label: 'Email';
-      value: 'kleber@ziontechgroup.com';
-      href: 'mailto:kleber@ziontechgroup.com'};
+      icon: Mail,
+      label: 'Email',
+      value: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com'},
     {
-      icon: MapPin;
-      label: 'Address';
-      value: '364 E Main St STE 10o08 Middletown DE 19709';
-      href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709'};
+      icon: MapPin,
+      label: 'Address',
+      value: '364 E Main St STE 10o08 Middletown DE 19709',
+      href: 'https://maps.google.com/?q=364+E+Main+St+STE+10o08+Middletown+DE+19709'},
     {
-      icon: Globe;
-      label: 'Website';
-      value: 'https://ziontechgroup.com';
+      icon: Globe,
+      label: 'Website',
+      value: 'https://ziontechgroup.com',
       href: 'https://ziontechgroup.com'}
   ],
   const socialLinks = [
-    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' };
-    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' };
-    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' };
+    { icon: Linkedin, href: 'https://linkedin.com/company/zion-tech-group', label: 'LinkedIn' },
+    { icon: Twitter, href: 'https://twitter.com/ziontechgroup', label: 'Twitter' },
+    { icon: Github, href: 'https://github.com/Zion-Holdings', label: 'GitHub' },
     { icon: Youtube, href: 'https://youtube.com/@ziontechgroup', label: 'YouTube' }
   ],
   const stats = [
-    { number: '50o00+', label: 'Innovative Services', icon: Star };
-    { number: '99.99%', label: 'Uptime Guarantee', icon: Shield };
-    { number: '24/7', label: 'AI Support Available', icon: Brain };
+    { number: '50o00+', label: 'Innovative Services', icon: Star },
+    { number: '99.99%', label: 'Uptime Guarantee', icon: Shield },
+    { number: '24/7', label: 'AI Support Available', icon: Brain },
     { number: '20o0+', label: 'Enterprise Clients', icon: Building }
   ],
   return (
@@ -295,5 +295,5 @@ const UltraFuturisticFooter20o48: React.FC = () => {
           </motion.div>,
         </motion.div>,
       </div>,
-    </footer>)};
-export default UltraFuturisticFooter20o48;
+    </footer>)},
+export default UltraFuturisticFooter20o48,

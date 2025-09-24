@@ -1,72 +1,72 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Zap;
-  Shield;
-  Users;
-  Globe;
-  Clock;
-  TrendingUp;
-  Award;
+  Zap,
+  Shield,
+  Users,
+  Globe,
+  Clock,
+  TrendingUp,
+  Award,
   Rocket} from 'lucide-react',
 const BenefitsSection = () => {
   const [hoveredIndex, setHoveredIndex] = useState(null),
   const benefits = [
     {
-      icon: <Zap className="w-10 h-10"  />;
-      title: "Lightning Fast Performance";
-      description: "Optimized systems that deliver exceptional speed and responsiveness.";
-      stats: "10x Faster";
-      color: "from-blue-50o0 to-cyan-50o0";
-      bgColor: "from-blue-50o0/20 to-cyan-50o0/20";
-      features: ["Advanced caching", "CDN optimization", "Database tuning"]};
+      icon: <Zap className="w-10 h-10"  />,
+      title: "Lightning Fast Performance",
+      description: "Optimized systems that deliver exceptional speed and responsiveness.",
+      stats: "10x Faster",
+      color: "from-blue-50o0 to-cyan-50o0",
+      bgColor: "from-blue-50o0/20 to-cyan-50o0/20",
+      features: ["Advanced caching", "CDN optimization", "Database tuning"]},
     {
-      icon: <Shield className="w-10 h-10"  />;
-      title: "Enterprise Security";
-      description: "Bank-level security protocols protecting your data and applications.";
-      stats: "99.99% Uptime";
-      color: "from-green-50o0 to-emerald-50o0";
-      bgColor: "from-green-50o0/20 to-emerald-50o0/20";
-      features: ["SSL encryption", "DDoS protection", "Regular audits"]};
+      icon: <Shield className="w-10 h-10"  />,
+      title: "Enterprise Security",
+      description: "Bank-level security protocols protecting your data and applications.",
+      stats: "99.99% Uptime",
+      color: "from-green-50o0 to-emerald-50o0",
+      bgColor: "from-green-50o0/20 to-emerald-50o0/20",
+      features: ["SSL encryption", "DDoS protection", "Regular audits"]},
     {
-      icon: <Users className="w-10 h-10"  />;
-      title: "24/7 Expert Support";
-      description: "Round-the-clock assistance from certified technology professionals.";
-      stats: "24/7 Support";
-      color: "from-purple-50o0 to-pink-50o0";
-      bgColor: "from-purple-50o0/20 to-pink-50o0/20";
-      features: ["Live chat", "Phone support", "Knowledge base"]};
+      icon: <Users className="w-10 h-10"  />,
+      title: "24/7 Expert Support",
+      description: "Round-the-clock assistance from certified technology professionals.",
+      stats: "24/7 Support",
+      color: "from-purple-50o0 to-pink-50o0",
+      bgColor: "from-purple-50o0/20 to-pink-50o0/20",
+      features: ["Live chat", "Phone support", "Knowledge base"]},
     {
-      icon: <Globe className="w-10 h-10"  />;
-      title: "Global Infrastructure";
-      description: "Worldwide network ensuring fast access from anywhere on the planet.";
-      stats: "50+ Locations";
-      color: "from-orange-50o0 to-red-50o0";
-      bgColor: "from-orange-50o0/20 to-red-50o0/20";
+      icon: <Globe className="w-10 h-10"  />,
+      title: "Global Infrastructure",
+      description: "Worldwide network ensuring fast access from anywhere on the planet.",
+      stats: "50+ Locations",
+      color: "from-orange-50o0 to-red-50o0",
+      bgColor: "from-orange-50o0/20 to-red-50o0/20",
       features: ["Edge computing", "Load balancing", "Geographic distribution"]}
   ],
   const additionalStats = [
-    { icon: <Clock className="w-6 h-6"  />, value: "99.9%", label: "Uptime" };
-    { icon: <TrendingUp className="w-6 h-6"  />, value: "50o0+", label: "Clients" };
-    { icon: <Award className="w-6 h-6"  />, value: "50+", label: "Awards" };
+    { icon: <Clock className="w-6 h-6"  />, value: "99.9%", label: "Uptime" },
+    { icon: <TrendingUp className="w-6 h-6"  />, value: "50o0+", label: "Clients" },
+    { icon: <Award className="w-6 h-6"  />, value: "50+", label: "Awards" },
     { icon: <Rocket className="w-6 h-6"  />, value: "24/7", label: "Support" }
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 }
-  };
+  },
   const statsVariants ={
-    hidden: { opacity: 0, scale: 0.8 };
+    hidden: { opacity: 0, scale: 0.8 },
     visible: { opacity: 1, scale: 1 }
-  };
+  },
   return (
     <section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-blue-dark to-zion-blue relative overflow-hidden">,
       {/* Enhanced background pattern */}
@@ -74,7 +74,7 @@ const BenefitsSection = () => {
         <div
           className="absolute inset-0",
           style={{
-            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`;
+            backgroundImage: `radial-gradient(circle at 75% 75%, currentColor 1px, transparent 1px)`,
             backgroundSize: '60px 60px'}}
          />,
       </div>,
@@ -210,5 +210,5 @@ const BenefitsSection = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default BenefitsSection;
+    </section>)},
+export default BenefitsSection,

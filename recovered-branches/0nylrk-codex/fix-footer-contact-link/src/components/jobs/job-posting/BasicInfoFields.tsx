@@ -17,7 +17,7 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
   const [maxBudgetsetMaxBudget] = useState<string>(""),
   const handleSuggestionApplied = (min: numbermax: number) => {
     setMinBudget(min.toString()),
-    setMaxBudget(max.toString())};
+    setMaxBudget(max.toString())},
   return (
     <div className="space-y-4">,
       <FormField
@@ -132,4 +132,4 @@ export const BasicInfoFields: React.FC<BasicInfoFieldsProps> = ({ control }) => 
             <FormMessage />,
           </FormItem>)}
       />,
-    </div>)};
+    </div>)},

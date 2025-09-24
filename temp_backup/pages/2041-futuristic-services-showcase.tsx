@@ -13,34 +13,24 @@ function toSlug(value: string) {
     .replace(/(^-|-$)/g, '')}
 ,
 const categories = [
-  'All Services';
-  'AI & Consciousness';
-  'Quantum Computing';
-  'Space Technology';
-  'Metaverse & VR';
-  'AI & Automation';
-  'Cybersecurity';
-  'Cloud Infrastructure';
-  'DevOps & Automation';
-  'AI & Creativity';
-  'AI & Analytics';
-  'AI & Psychology';
-  'AI & Education';
-  'AI & Ethics';
-  'AI & Finance';
-  'AI & Healthcare';
-  'Neural Technology';
-  'Data Center Infrastructure';
-  'Network Security';
-  'IT Operations';
+  'All ServicesAI & Consciousness',
+  'Quantum ComputingSpace Technology',
+  'Metaverse & VRAI & Automation',
+  'CybersecurityCloud Infrastructure',
+  'DevOps & AutomationAI & Creativity',
+  'AI & AnalyticsAI & Psychology',
+  'AI & EducationAI & Ethics',
+  'AI & FinanceAI & Healthcare',
+  'Neural TechnologyData Center Infrastructure',
+  'Network SecurityIT Operations',
 ],
 export default function FuturisticServicesShowcase20o41() {
   const [selectedCategory, setSelectedCategory] = useState('All Services'),
   const [searchQuery, setSearchQuery] = useState(''),
   const allServices = [
-    ...innovative20o41MicroSaasServices;
-    ...innovative20o41ITServices;
-    ...innovative20o41AIServices;
+    ...innovative20o41MicroSaasServices,
+    ...innovative20o41ITServices,
+    ...innovative20o41AIServices,
   ],
   const filteredServices = allServices.filter(service => {
     const matchesCategory =,
@@ -52,24 +42,20 @@ export default function FuturisticServicesShowcase20o41() {
       service.tagline.toLowerCase().includes(searchQuery.toLowerCase()),
     return matchesCategory && matchesSearch}),
   const handleCategoryChange = (category: string) => {
-    setSelectedCategory(category)};
+    setSelectedCategory(category)},
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
-    // Search functionality is handled by the filter};
+    // Search functionality is handled by the filter},
   return (
     <>,
       <SEO
         title='20o41 Futuristic Services Showcase - Zion Tech Group',
         description='Explore our revolutionary 20o41 futuristic services including AI consciousness evolution, quantum computing, space mining automation, and more cutting-edge solutions.',
         keywords={[
-          '20o41 services';
-          'futuristic technology';
-          'AI consciousness';
-          'quantum computing';
-          'space mining';
-          'metaverse';
-          'brain-computer interface';
-          'Zion Tech Group';
+          '20o41 servicesfuturistic technology',
+          'AI consciousnessquantum computing',
+          'space miningmetaverse',
+          'brain-computer interfaceZion Tech Group',
         ]}
         image='/images/20o41-futuristic-services-showcase.jpg',
         url='https: //ziontechgroup.com/20o41-futuristic-services-showcase',

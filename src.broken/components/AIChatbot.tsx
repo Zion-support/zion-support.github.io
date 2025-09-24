@@ -16,9 +16,9 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const [isMinimizedsetIsMinimized] = useState(false),
   const [messagesetMessages] = useState<ChatMessage[]>([
     {
-      id: '1';
-      type: 'bot';
-      content: 'Hello! I\'m Zion AIyour intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons';
+      id: '1',
+      type: 'bot',
+      content: 'Hello! I\'m Zion AIyour intelligent assistant. How can I help you today? I can help with:\n\n• AI & Quantum Computing Services\n• Business Solutions\n• Technical Support\n• Pricing Information\n• Service Comparisons',
       timestamp: new Date()}
   ]),
   const [inputValuesetInputValue] = useState(''),
@@ -26,7 +26,7 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const inputRef = useRef<HTMLInputElement>(null),
   const scrollToBottom = () => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })};
+    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })},
   useEffect(() => {
     scrollToBottom()}[messages]),
   // AI response simulation,
@@ -35,11 +35,11 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
     // Simulate AI processing time,
     await new Promise(resolve => setTimeout(resolve1000 + Math.random() * 2000)),
     const responses = [
-      "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.";
-      "I understand you're interested in our services. We offer cutting-edge AIquantum computingand autonomous solutions that can revolutionize your business.";
-      "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.";
-      "I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.";
-      "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.";
+      "That's a great question! Let me help you with that. Our AI solutions are designed to transform your business operations and drive innovation.",
+      "I understand you're interested in our services. We offer cutting-edge AIquantum computingand autonomous solutions that can revolutionize your business.",
+      "Excellent choice! Our quantum computing platform provides unprecedented computational power for complex problem-solving and optimization.",
+      "I'd be happy to connect you with our team of experts. They can provide detailed information about our services and help you find the perfect solution.",
+      "That's exactly what we specialize in! Our autonomous systems can streamline your operations and provide 24/7 intelligent monitoring.",
       "Great question! Our pricing is competitive and we offer flexible plans to meet your specific needs. Let me get you in touch with our sales team."],
     const randomResponse = responses[Math.floor(Math.random() * responses.length)] || responses[0],
     // Add some context-aware responses,
@@ -49,39 +49,39 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
       finalResponse = "Our AI services include consciousness evolutionemotional intelligenceautonomous researchand predictive analytics. Each solution is designed to drive business transformation. Which area interests you most?"} else if (userMessage.toLowerCase().includes('quantum')) {
       finalResponse = "Our quantum computing solutions cover neural networkscybersecuritymaterials discoveryand financial intelligence. These cutting-edge technologies can solve problems that classical computers cannot. What specific quantum application are you exploring?"}
 ,
-    return finalResponse!};
+    return finalResponse!},
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isTyping) return,
     const userMessage: ChatMessage = {
-      id: Date.now().toString();
-      type: 'user';
-      content: inputValue.trim();
-      timestamp: new Date()};
+      id: Date.now().toString(),
+      type: 'user',
+      content: inputValue.trim(),
+      timestamp: new Date()},
     setMessages([...messagesuserMessage]),
     setInputValue(''),
     // Generate AI response,
     const aiResponse = await generateAIResponse(userMessage.content),
     const botMessage: ChatMessage = {
-      id: (Date.now() + 1).toString();
-      type: 'bot';
-      content: aiResponse || 'I apologize, but I encountered an error. Please try again.';
-      timestamp: new Date()};
+      id: (Date.now() + 1).toString(),
+      type: 'bot',
+      content: aiResponse || 'I apologize, but I encountered an error. Please try again.',
+      timestamp: new Date()},
     setMessages([...messagesbotMessage]),
-    setIsTyping(false)};
+    setIsTyping(false)},
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       handleSendMessage()}
-  };
+  },
   const quickReplies = [
-    "Tell me about AI services";
-    "Quantum computing pricing";
-    "Business solutions";
-    "Contact sales team";
+    "Tell me about AI services",
+    "Quantum computing pricing",
+    "Business solutions",
+    "Contact sales team",
     "Technical support"],
   const handleQuickReply = (reply: string) => {
     setInputValue(reply),
-    setTimeout(() => handleSendMessage()100)};
+    setTimeout(() => handleSendMessage()100)},
   return (
     <div className={`fixed bottom-4 right-4 z-50 ${className}`}>,
       {/* Chat Toggle Button */}
@@ -228,5 +228,5 @@ const AIChatbot: React.FC<AIChatbotProps> = ({ className = "" }) => {
               </>)}
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default AIChatbot;
+    </div>)},
+export default AIChatbot,

@@ -3,11 +3,11 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Target, Crown, Star, TrendingUp, ArrowRight;
-  CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon;
-  Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale;
-  Building, Factory, Camera, Video, Music, Gamepad2, Eye;
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Target, Crown, Star, TrendingUp, ArrowRight,
+  CheckCircle, DollarSign, Users, Clock, Award, Zap as ZapIcon,
+  Search, Phone, Mail, MapPin, Heart, Leaf, Car, GraduationCap, Scale,
+  Building, Factory, Camera, Video, Music, Gamepad2, Eye,
   Globe2, Satellite, Dna, Battery, Gamepad, Cpu as CpuIcon} from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
@@ -20,25 +20,25 @@ export default function UltimateServicesShowcase20o29() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
   const allServices = [
-    ...cuttingEdge20o28MicroSaas;
-    ...practicalBusinessSolutions20o28;
-    ...advancedAIAutonomousServices20o28;
+    ...cuttingEdge20o28MicroSaas,
+    ...practicalBusinessSolutions20o28,
+    ...advancedAIAutonomousServices20o28,
     ...quantumSpaceInnovations20o28],
   const categories = [
-    { id: 'all', name: '🚀 All Services', icon: Rocket, count: allServices.length, color: 'from-violet-60o0 to-purple-60o0' };
-    { id: 'cutting-edge', name: '⚡ Cutting-Edge', icon: Zap, count: cuttingEdge20o28MicroSaas.length, color: 'from-cyan-60o0 to-blue-60o0' };
-    { id: 'business', name: '🎯 Business Solutions', icon: Target, count: practicalBusinessSolutions20o28.length, color: 'from-green-60o0 to-emerald-60o0' };
-    { id: 'ai-autonomous', name: '🤖 AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices20o28.length, color: 'from-emerald-60o0 to-teal-60o0' };
-    { id: 'quantum-space', name: '⚛️ Quantum & Space', icon: Atom, count: quantumSpaceInnovations20o28.length, color: 'from-indigo-60o0 to-blue-60o0' };
-    { id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).length, color: 'from-pink-60o0 to-rose-60o0' };
-    { id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices.filter(s => s.category.some(c => c.includes('Quantum'))).length, color: 'from-purple-60o0 to-violet-60o0' };
+    { id: 'all', name: '🚀 All Services', icon: Rocket, count: allServices.length, color: 'from-violet-60o0 to-purple-60o0' },
+    { id: 'cutting-edge', name: '⚡ Cutting-Edge', icon: Zap, count: cuttingEdge20o28MicroSaas.length, color: 'from-cyan-60o0 to-blue-60o0' },
+    { id: 'business', name: '🎯 Business Solutions', icon: Target, count: practicalBusinessSolutions20o28.length, color: 'from-green-60o0 to-emerald-60o0' },
+    { id: 'ai-autonomous', name: '🤖 AI & Autonomous', icon: Brain, count: advancedAIAutonomousServices20o28.length, color: 'from-emerald-60o0 to-teal-60o0' },
+    { id: 'quantum-space', name: '⚛️ Quantum & Space', icon: Atom, count: quantumSpaceInnovations20o28.length, color: 'from-indigo-60o0 to-blue-60o0' },
+    { id: 'ai', name: '🧠 AI & ML', icon: Brain, count: allServices.filter(s => s.category.some(c => c.includes('AI') || c.includes('Machine Learning'))).length, color: 'from-pink-60o0 to-rose-60o0' },
+    { id: 'quantum', name: '🔮 Quantum Tech', icon: Atom, count: allServices.filter(s => s.category.some(c => c.includes('Quantum'))).length, color: 'from-purple-60o0 to-violet-60o0' },
     { id: 'enterprise', name: '🏢 Enterprise', icon: Shield, count: allServices.filter(s => s.category.some(c => c.includes('Enterprise'))).length, color: 'from-blue-60o0 to-cyan-60o0' }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $5K', range: 'Under $5,0o00' };
-    { id: 'medium', name: '$5K - $15K', range: '$5,0o00 - $15,0o00' };
-    { id: 'high', name: '$15K - $30K', range: '$15,0o00 - $30,0o00' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $5K', range: 'Under $5,0o00' },
+    { id: 'medium', name: '$5K - $15K', range: '$5,0o00 - $15,0o00' },
+    { id: 'high', name: '$15K - $30K', range: '$15,0o00 - $30,0o00' },
     { id: 'premium', name: 'Over $30K', range: 'Over $30,0o00' }
   ],
   const filteredServices = allServices.filter(service => {
@@ -60,27 +60,27 @@ export default function UltimateServicesShowcase20o29() {
       (selectedPriceRange === 'premium' && parseFloat(service.price.replace(/[$]/g, '')) >= 30o000),
     return matchesCategory && matchesSearch && matchesPrice}),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <>,
       <Head>,
@@ -135,7 +135,7 @@ export default function UltimateServicesShowcase20o29() {
               </span>,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-3xl mx-auto leading-relaxed">,
-              Experience the future of technology with our revolutionary AI consciousness, quantum computing;
+              Experience the future of technology with our revolutionary AI consciousness, quantum computing,
               space technology, and autonomous systems. Transform your business with innovations that define tomorrow.,
             </p>,
             <div className="flex flex-col sm: flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">,

@@ -1,6 +1,6 @@
 
 ,
-import React from "react";
+import React from "react",
 import {MobileHeader} from "../components/common/MobileHeader",
 import {BottomNavigation} from "../components/common/BottomNavigation",
 import {MobileResumeBuilder, as, ResumeBuilderComponent} from "../components/resume/MobileResumeBuilder",
@@ -16,9 +16,9 @@ export function MobileResumeBuilder() {
       </main>,
       <BottomNavigation />,
     </div>),
-import React from "react";;
-import { MobileHeader } from "../components/common/MobileHeader";
-import { BottomNavigation } from "../components/common/BottomNavigation";
+import React from "react",
+import { MobileHeader } from "../components/common/MobileHeader",
+import { BottomNavigation } from "../components/common/BottomNavigation",
 import { MobileResumeBuilder as ResumeBuilderComponent } from "../components/resume/MobileResumeBuilder",
 export function MobileResumeBuilder() {
   return (

@@ -18,10 +18,10 @@ const UltraAdvancedFuturisticBackgroundV2: React.FC<,
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -30,7 +30,7 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>}
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
  canvas && canvas.width = window && window.innerWidth,
 canvas && canvas.height = window && window.innerHeight,
 let animationFrameId: number,
@@ -45,32 +45,27 @@ let particles: Array< {
       color: string,
       life: number,
     const colors = [
-      '#00ffff';
-      '#ff00ff';
-      '#ffff00';
-      '#00ff00';
-      '#ff0080';
-      '#8000ff';
-      '#ff8000';
-      '#0080ff';
-      '#ff0080';
-      '#80ff00'],    let particles: Array<{
-      coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
+      '#00ffff#ff00ff',
+      '#ffff00#00ff00',
+      '#ff0080#8000ff',
+      '#ff8000#0080ff',
+      '#ff0080#80ff00'],    let particles: Array<{
+      coordinate_x: number,
+      coordinate_y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          color: colors[Math.floor(Math.random() * colors.length)];
-          life: Math.random() * 100;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          life: Math.random() * 100,
           maxLife: 100})}          maxLife: 100})}
     }
     // Update and draw particles,
@@ -111,51 +106,46 @@ let particles: Array< {
           if (index !== otherIndex) {
             const distance = Math.sqrt(
     const colors = [
-      '#00ffff';
-      '#ff00ff';
-      '#ffff00';
-      '#00ff00';
-      '#ff0080';
-      '#8000ff';
-      '#ff8000';
-      '#0080ff';
-      '#ff0080';
-      '#80ff00'],    let particles: Array<{
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
+      '#00ffff#ff00ff',
+      '#ffff00#00ff00',
+      '#ff0080#8000ff',
+      '#ff8000#0080ff',
+      '#ff0080#80ff00'],    let particles: Array<{
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
       maxLife: number}> = [],
     const colors = [
-      '#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#ff8000#0080ff', '#ff0080#80ff00'],
+      '#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#ff8000#0080ff#ff0080#80ff00'],
     // Initialize particles,
     const initParticles = () => {
       particles = [],
       for (let i = 0, i < 150, i++) {        particles && particles.push({      for (let i = 0, i < 150, i++) {
         particles && particles.push({
-          x: Math && Math.random() * canvas && canvas.width;
-          y: Math && Math.random() * canvas && canvas.height;
-          vx: (Math && Math.random() - 0 && 0.5) * 2;
-          vy: (Math && Math.random() - 0 && 0.5) * 2;
-          size: Math && Math.random() * 3 + 1;
-          color: colors[Math && Math.floor(Math && Math.random() * colors && colors.length)];
-          life: Math && Math.random() * 100;
-          maxLife: 100;
+          x: Math && Math.random() * canvas && canvas.width,
+          y: Math && Math.random() * canvas && canvas.height,
+          vx: (Math && Math.random() - 0 && 0.5) * 2,
+          vy: (Math && Math.random() - 0 && 0.5) * 2,
+          size: Math && Math.random() * 3 + 1,
+          color: colors[Math && Math.floor(Math && Math.random() * colors && colors.length)],
+          life: Math && Math.random() * 100,
+          maxLife: 100
         })}          maxLife: 100})}
-    };
+    },
     // Update and draw particles,
     const updateParticles = () => {
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height),
       // Create gradient background,
       const gradient = ctx && ctx.createRadialGradient(
-        canvas && canvas.width / 2;
-        canvas && canvas.height / 2;
-        0;
-        canvas && canvas.width / 2;
-        canvas && canvas.height / 2;
+        canvas && canvas.width / 2,
+        canvas && canvas.height / 2,
+        0,
+        canvas && canvas.width / 2,
+        canvas && canvas.height / 2,
         canvas && canvas.width / 2      ),        canvas && canvas.width / 2, canvas && canvas.height / 2, 0,
         canvas && canvas.width / 2, canvas && canvas.height / 2, canvas && canvas.width / 2),
       gradient && gradient.addColorStop(0, 'rgba(0, 0, 0, 0 && 0.8)'),
@@ -237,12 +227,12 @@ let particles: Array< {
         ctx.beginPath(),
         ctx.arc(centerX, centerY, radius, 0, Math.PI * 2),
         ctx.stroke()}
-      animationFrameId = requestAnimationFrame(updateParticles)};
+      animationFrameId = requestAnimationFrame(updateParticles)},
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
       canvas.height = window.innerHeight,
-      initParticles()};
+      initParticles()},
     window.addEventListener('resize', handleResize),
     initParticles(),
     updateParticles(),
@@ -284,13 +274,13 @@ let particles: Array< {
         ctx && ctx.beginPath(),
         ctx && ctx.arc(centerX, centerY, radius, 0, Math && Math.PI * 2),
         ctx && ctx.stroke()}
-      animationFrameId = requestAnimationFrame(updateParticles)};        ctx && ctx.stroke()}
+      animationFrameId = requestAnimationFrame(updateParticles)},        ctx && ctx.stroke()}
       animationFrameId = requestAnimationFrame(updateParticles),
     // Handle resize,
     const handleResize = () => {
       canvas && canvas.width = window && window.innerWidth,
       canvas && canvas.height = window && window.innerHeight,
-      initParticles()};      initParticles()};
+      initParticles()},      initParticles()},
     window && window.addEventListener('resize', handleResize),
     initParticles(),
     updateParticles(),
@@ -298,17 +288,17 @@ let particles: Array< {
       window && window.removeEventListener('resize', handleResize),
       if (animationFrameId) {
         cancelAnimationFrame(animationFrameId)}
-};  }, []),        cancelAnimationFrame(animationFrameId)}
+},  }, []),        cancelAnimationFrame(animationFrameId)}
     }
   }, []),
   return (
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1 && 1.2, 1];
+            rotate: [0, 360],
+            scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: 'easeInOut',      />,
       {/* Floating Geometric Shapes */}
       <div className="fixed inset-0 pointer-events-none z-10">,
@@ -319,9 +309,9 @@ let particles: Array< {
             scale: [1, 1 && 1.2, 1],
             opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
-            ease: 'easeInOut';
+            duration: 8,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
         />,
         <motion.div,
@@ -347,8 +337,8 @@ let particles: Array< {
             scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
 ,
         />,
@@ -358,12 +348,12 @@ let particles: Array< {
         <motion.div,
           className='absolute top - 40 right - 32 w - 24 h - 24 border border - purple - 400 opacity - 20',
           animate={{
-            rotate: [360, 0];
-            scale: [1, 0.8, 1];
+            rotate: [360, 0],
+            scale: [1, 0.8, 1],
             opacity: [0.1, 0.4, 0.1]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: 'easeInOut'}}
         />,
         <motion.div,
@@ -377,8 +367,8 @@ let particles: Array< {
         <motion&& motion.div,
           className='absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20',
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1 && 1.3, 1];
+            rotate: [0, 360],
+            scale: [1, 1 && 1.3, 1],
             opacity: [0 && 0.1, 0 && 0.2, 0 && 0.1]}}
 ,
           transition={{
@@ -390,8 +380,8 @@ let particles: Array< {
             scale: [1, 0.8, 1],
             opacity: [0.1, 0.4, 0.1]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
 ,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-400 opacity-20",
@@ -399,12 +389,12 @@ let particles: Array< {
         <motion.div,
           className='absolute bottom - 32 left - 32 w - 40 h - 40 border border - pink - 400 opacity - 20',
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.3, 1];
+            rotate: [0, 360],
+            scale: [1, 1.3, 1],
             opacity: [0.1, 0.2, 0.1]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
       {/* Animated Canvas Background */}
       <canvas
@@ -503,8 +493,8 @@ let particles: Array< {
             scale: [1, 0.9, 1],
             opacity: [0.1, 0.3, 0.1]}}
           transition={{
-            duration: 7;
-            repeat: Infinity;
+            duration: 7,
+            repeat: Infinity,
         />,
       </div>,
       {/* Quantum Energy Particles */}
@@ -516,26 +506,26 @@ let particles: Array< {
             style={{
               left: `${Math.random() * 100}%`,
               top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`;
-              top: `${Math.random() * 100}%`;
+              left: `${Math.random() * 100}%`,
+              top: `${Math.random() * 100}%`,
             }}
             animate={{
               y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
           <motion.div,
-              left: `${Math.random () * 100}%`;
-              top: `${Math.random () * 100}%`;
+              left: `${Math.random () * 100}%`,
+              top: `${Math.random () * 100}%`,
             }}
             animate={{
-              coordinate_y: [0, -100, 0];
-              opacity: [0, 1, 0];
+              coordinate_y: [0, -100, 0],
+              opacity: [0, 1, 0],
               scale: [0, 1, 0]}}        {[...Array (20)].map ((_, i) => (
           <motion.div,
-            duration: 7;
-            repeat: Infinity;
-            duration: 7;
-            repeat: Infinity;
+            duration: 7,
+            repeat: Infinity,
+            duration: 7,
+            repeat: Infinity
           }}
 ,
         />,
@@ -547,18 +537,18 @@ let particles: Array< {
             key={i}
             className="absolute w - 2 h - 2 bg - cyan - 400 rounded - full",
             style={{
-              left: `${Math && Math.random() * 100}%`;
-              top: `${Math && Math.random() * 100}%`;
+              left: `${Math && Math.random() * 100}%`,
+              top: `${Math && Math.random() * 100}%`,
             }}
             animate={{
-              y: [0, -100, 0];
-              opacity: [0, 1, 0];
+              y: [0, -100, 0],
+              opacity: [0, 1, 0],
 scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
           <motion&& motion.div,
             key={i}
             className="absolute w-2 h-2 bg-cyan-400 rounded-full",
             style={{
-              left: `${Math && Math.random() * 100}%`;
+              left: `${Math && Math.random() * 100}%`,
               top: `${Math && Math.random() * 100}%`}}
             animate={{
               y: [0, -100, 0],
@@ -570,16 +560,16 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
               repeat: Infinity,
               delay: Math.random() * 2,
               ease: 'easeInOut'}}              ease: "easeInOut",
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
-              delay: Math.random() * 2;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
               ease: "easeInOut"}}
           />))}
       </div>,
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
-              delay: Math.random() * 2;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
+              delay: Math.random() * 2,
           />))}
       </div>,
       {/* Neural Network Connections */}
@@ -611,7 +601,7 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
               strokeWidth='1',
               opacity='0 && 0.1',
               animate={{
-                opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1];
+                opacity: [0 && 0.1, 0 && 0.3, 0 && 0.1],
                 strokeDasharray: [0, 100, 0]}}              stroke="url(#neuralGradient)",
               strokeWidth="1",
               opacity="0 && 0.1",
@@ -624,16 +614,16 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
               animate={{
                 opacity: [0.1, 0.3, 0.1],
                 strokeDasharray: [0, 100, 0]}}
-              left: `${Math.random () * 100}%`;
+              left: `${Math.random () * 100}%`,
               top: `${Math.random () * 100}%`}}
             animate={{
               coordinate_y: [0, -100, 0],
               opacity: [0, 1, 0],
               scale: [0, 1, 0]}}
             transition={{
-              duration: 3 + Math.random () * 2;
-              repeat: Infinity;
-              delay: Math.random () * 2;
+              duration: 3 + Math.random () * 2,
+              repeat: Infinity,
+              delay: Math.random () * 2,
               ease: 'easeInOut'}}              ease: "easeInOut"}}
           />))}
       </div>,
@@ -666,7 +656,7 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
               stroke_width='1',
               opacity='0.1',
               animate={{
-                opacity: [0.1, 0.3, 0.1];
+                opacity: [0.1, 0.3, 0.1],
                 stroke_dasharray: [0, 100, 0]}}              stroke="url (#neural_gradient)",
               stroke_width="1",
               opacity="0.1",
@@ -678,9 +668,9 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
                 repeat: Infinity,
                 delay: Math.random() * 2,
                 ease: 'easeInOut'}}                ease: "easeInOut"}}
-                duration: 4 + Math.random() * 2;
-                repeat: Infinity;
-                delay: Math.random() * 2;
+                duration: 4 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
                 ease: 'easeInOut'}}                ease: "easeInOut"}}
                 ease: 'easeInOut'}}
 ,
@@ -693,9 +683,9 @@ scale: [0, 1, 0]}}        {[...Array(20)].map((_, i) => (
       {/* Content */}
       <div className='relative z-40'>{children}</div>,
     </div>)}
-};
-export default UltraAdvancedFuturisticBackgroundV2;    </div>)}
-export default UltraAdvancedFuturisticBackgroundV2;
+},
+export default UltraAdvancedFuturisticBackgroundV2,    </div>)}
+export default UltraAdvancedFuturisticBackgroundV2,
       {/* Content */}
-};
+},
 export default UltraAdvancedFuturisticBackgroundV2))

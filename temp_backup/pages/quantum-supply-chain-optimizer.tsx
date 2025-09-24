@@ -1,218 +1,205 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Truck;
-  Globe;
-  Zap;
-  Shield;
-  BarChart3;
-  TrendingUp;
-  Target;
-  Users;
-  CheckCircle;
-  ArrowRight;
-  Cpu;
-  Network;
-  Database;
-  Lock;
-  Clock;
-  DollarSign;
-  PieChart;
-  Route;
-  Package;
-  Warehouse;
-  Ship;
-  Plane;
-  Train;
-  Car;
-  Rocket;
-  Atom;
-  Brain;
-  Eye;
+  Truck,
+  Globe,
+  Zap,
+  Shield,
+  BarChart3,
+  TrendingUp,
+  Target,
+  Users,
+  CheckCircle,
+  ArrowRight,
+  Cpu,
+  Network,
+  Database,
+  Lock,
+  Clock,
+  DollarSign,
+  PieChart,
+  Route,
+  Package,
+  Warehouse,
+  Ship,
+  Plane,
+  Train,
+  Car,
+  Rocket,
+  Atom,
+  Brain,
+  Eye,
 } from 'lucide-react',
 import Link from 'next/link',
 const QuantumSupplyChainOptimizer: React.FC = () => {
   const features = [
     {
-      icon: Atom;
-      title: 'Quantum Route Optimization';
+      icon: Atom,
+      title: 'Quantum Route Optimization',
       description:,
-        'Leverage quantum algorithms to find the most efficient delivery routes across global supply chains, reducing costs by up to 40%.';
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'Leverage quantum algorithms to find the most efficient delivery routes across global supply chains, reducing costs by up to 40%.',
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      icon: Brain;
-      title: 'AI Demand Forecasting';
+      icon: Brain,
+      title: 'AI Demand Forecasting',
       description:,
-        'Advanced machine learning models predict demand patterns with 95% accuracy, enabling proactive inventory management.';
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Advanced machine learning models predict demand patterns with 95% accuracy, enabling proactive inventory management.',
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      icon: Network;
-      title: 'Real-time Tracking';
+      icon: Network,
+      title: 'Real-time Tracking',
       description:,
-        'End-to-end visibility across all supply chain nodes with IoT sensors and blockchain verification.';
-      color: 'from-green-50o0 to-emerald-50o0';
-    };
+        'End-to-end visibility across all supply chain nodes with IoT sensors and blockchain verification.',
+      color: 'from-green-50o0 to-emerald-50o0'
+    },
     {
-      icon: Shield;
-      title: 'Risk Management';
+      icon: Shield,
+      title: 'Risk Management',
       description:,
-        'AI-powered risk assessment and mitigation strategies for supply chain disruptions and compliance.';
-      color: 'from-red-50o0 to-orange-50o0';
-    };
+        'AI-powered risk assessment and mitigation strategies for supply chain disruptions and compliance.',
+      color: 'from-red-50o0 to-orange-50o0'
+    },
     {
-      icon: BarChart3;
-      title: 'Performance Analytics';
+      icon: BarChart3,
+      title: 'Performance Analytics',
       description:,
-        'Comprehensive dashboards with real-time KPIs and predictive insights for continuous optimization.';
-      color: 'from-indigo-50o0 to-blue-50o0';
-    };
+        'Comprehensive dashboards with real-time KPIs and predictive insights for continuous optimization.',
+      color: 'from-indigo-50o0 to-blue-50o0'
+    },
     {
-      icon: Zap;
-      title: 'Automated Optimization';
+      icon: Zap,
+      title: 'Automated Optimization',
       description:,
-        'Self-learning algorithms continuously optimize supply chain operations without human intervention.';
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+        'Self-learning algorithms continuously optimize supply chain operations without human intervention.',
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
   ],
   const useCases = [
     {
-      icon: Truck;
-      title: 'Global Logistics';
+      icon: Truck,
+      title: 'Global Logistics',
       description:,
-        'Optimize international shipping routes, customs clearance, and multi-modal transportation.';
+        'Optimize international shipping routes, customs clearance, and multi-modal transportation.',
       benefits: [
-        '30% cost reduction';
-        '50% faster delivery';
-        'Real-time tracking';
-      ];
-    };
+        '30% cost reduction50% faster delivery',
+        'Real-time tracking',
+      ]
+    },
     {
-      icon: Warehouse;
-      title: 'Inventory Management';
+      icon: Warehouse,
+      title: 'Inventory Management',
       description:,
-        'Predict demand fluctuations and optimize stock levels across multiple locations.';
+        'Predict demand fluctuations and optimize stock levels across multiple locations.',
       benefits: [
-        '25% inventory reduction';
-        '99.9% availability';
-        'Automated reordering';
-      ];
-    };
+        '25% inventory reduction99.9% availability',
+        'Automated reordering',
+      ]
+    },
     {
-      icon: Package;
-      title: 'E-commerce Fulfillment';
+      icon: Package,
+      title: 'E-commerce Fulfillment',
       description:,
-        'Streamline order processing, warehouse operations, and last-mile delivery.';
+        'Streamline order processing, warehouse operations, and last-mile delivery.',
       benefits: [
-        '40% faster fulfillment';
-        'Reduced shipping costs';
-        'Better customer experience';
-      ];
-    };
+        '40% faster fulfillmentReduced shipping costs',
+        'Better customer experience',
+      ]
+    },
     {
-      icon: Ship;
-      title: 'Maritime Operations';
+      icon: Ship,
+      title: 'Maritime Operations',
       description:,
-        'Optimize container routing, port scheduling, and vessel utilization.';
+        'Optimize container routing, port scheduling, and vessel utilization.',
       benefits: [
-        '35% fuel savings';
-        'Faster port turnaround';
-        'Reduced emissions';
-      ];
-    };
+        '35% fuel savingsFaster port turnaround',
+        'Reduced emissions',
+      ]
+    },
   ],
   const pricingPlans = [
     {
-      name: 'Starter';
-      price: '$2,999';
-      period: '/month';
-      description: 'Perfect for small to medium businesses';
+      name: 'Starter',
+      price: '$2,999',
+      period: '/month',
+      description: 'Perfect for small to medium businesses',
       features: [
-        'Up to 10o0 supply chain nodes';
-        'Basic route optimization';
-        'Standard analytics dashboard';
-        'Email support';
-        'API access (1,0o00 calls/month)';
-      ];
-      color: 'from-blue-50o0 to-cyan-50o0';
-      popular: false;
-    };
+        'Up to 10o0 supply chain nodesBasic route optimization',
+        'Standard analytics dashboardEmail support',
+        'API access (1,0o00 calls/month)',
+      ],
+      color: 'from-blue-50o0 to-cyan-50o0',
+      popular: false
+    },
     {
-      name: 'Professional';
-      price: '$7,999';
-      period: '/month';
-      description: 'Ideal for growing enterprises';
+      name: 'Professional',
+      price: '$7,999',
+      period: '/month',
+      description: 'Ideal for growing enterprises',
       features: [
-        'Up to 1,0o00 supply chain nodes';
-        'Advanced quantum optimization';
-        'AI demand forecasting';
-        'Real-time tracking & alerts';
-        'Priority support';
-        'API access (10,0o00 calls/month)';
-        'Custom integrations';
-      ];
-      color: 'from-purple-50o0 to-pink-50o0';
-      popular: true;
-    };
+        'Up to 1,0o00 supply chain nodesAdvanced quantum optimization',
+        'AI demand forecastingReal-time tracking & alerts',
+        'Priority supportAPI access (10,0o00 calls/month)',
+        'Custom integrations',
+      ],
+      color: 'from-purple-50o0 to-pink-50o0',
+      popular: true
+    },
     {
-      name: 'Enterprise';
-      price: '$19,999';
-      period: '/month';
-      description: 'For large-scale operations';
+      name: 'Enterprise',
+      price: '$19,999',
+      period: '/month',
+      description: 'For large-scale operations',
       features: [
-        'Unlimited supply chain nodes';
-        'Full quantum computing access';
-        'Custom AI models';
-        'Dedicated account manager';
-        '24/7 phone support';
-        'Unlimited API access';
-        'White-label solutions';
-        'On-premise deployment';
-      ];
-      color: 'from-green-50o0 to-emerald-50o0';
-      popular: false;
-    };
+        'Unlimited supply chain nodesFull quantum computing access',
+        'Custom AI modelsDedicated account manager',
+        '24/7 phone supportUnlimited API access',
+        'White-label solutionsOn-premise deployment',
+      ],
+      color: 'from-green-50o0 to-emerald-50o0',
+      popular: false
+    },
   ],
   const integrations = [
     {
-      name: 'ERP Systems';
-      icon: Database;
-      description: 'SAP, Oracle, Microsoft Dynamics, NetSuite';
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+      name: 'ERP Systems',
+      icon: Database,
+      description: 'SAP, Oracle, Microsoft Dynamics, NetSuite',
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      name: 'Transportation Management';
-      icon: Truck;
-      description: 'Manhattan Associates, JDA, Oracle TMS';
-      color: 'from-green-50o0 to-emerald-50o0';
-    };
+      name: 'Transportation Management',
+      icon: Truck,
+      description: 'Manhattan Associates, JDA, Oracle TMS',
+      color: 'from-green-50o0 to-emerald-50o0'
+    },
     {
-      name: 'Warehouse Management';
-      icon: Warehouse;
-      description: 'HighJump, Tecsys, Manhattan WMS';
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+      name: 'Warehouse Management',
+      icon: Warehouse,
+      description: 'HighJump, Tecsys, Manhattan WMS',
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      name: 'E-commerce Platforms';
-      icon: Globe;
-      description: 'Shopify, WooCommerce, Magento, BigCommerce';
-      color: 'from-orange-50o0 to-red-50o0';
-    };
+      name: 'E-commerce Platforms',
+      icon: Globe,
+      description: 'Shopify, WooCommerce, Magento, BigCommerce',
+      color: 'from-orange-50o0 to-red-50o0'
+    },
     {
-      name: 'Analytics Tools';
-      icon: BarChart3;
-      description: 'Tableau, Power BI, Looker, Qlik';
-      color: 'from-indigo-50o0 to-blue-50o0';
-    };
+      name: 'Analytics Tools',
+      icon: BarChart3,
+      description: 'Tableau, Power BI, Looker, Qlik',
+      color: 'from-indigo-50o0 to-blue-50o0'
+    },
     {
-      name: 'Cloud Platforms';
-      icon: Cpu;
-      description: 'AWS, Azure, Google Cloud, IBM Cloud';
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+      name: 'Cloud Platforms',
+      icon: Cpu,
+      description: 'AWS, Azure, Google Cloud, IBM Cloud',
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
   ],
   return (
     <Layout>,
@@ -273,7 +260,7 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed'>,
               Revolutionize your supply chain operations with the world's first,
-              quantum-powered optimization platform. Reduce costs by up to 40%;
+              quantum-powered optimization platform. Reduce costs by up to 40%,
               improve delivery times by 50%, and gain unprecedented visibility,
               across your entire network.,
             </p>,
@@ -596,5 +583,5 @@ const QuantumSupplyChainOptimizer: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </Layout>)};
-export default QuantumSupplyChainOptimizer;
+    </Layout>)},
+export default QuantumSupplyChainOptimizer,

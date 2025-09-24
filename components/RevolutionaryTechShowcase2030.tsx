@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const RevolutionaryTechShowcase20o30: React.FC = () => {
   return (
@@ -151,7 +151,7 @@ const RevolutionaryTechShowcase20o30: React.FC = () => {
               <h4 className='text-xl font-bold mb-3'>Scientific Discovery</h4>,
               <p className='text-gray-30o0'>,
                 Quantum consciousness systems that can explore infinite,
-                possibilities and discover solutions to 'humanity', 's greatest,
+                possibilities and discover solutions to 'humanitys greatest,
                 challenges.,
               </p>,
             </div>,
@@ -207,5 +207,5 @@ const RevolutionaryTechShowcase20o30: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTechShowcase20o30;
+    </section>)},
+export default RevolutionaryTechShowcase20o30,

@@ -7,26 +7,26 @@ export function useWebSocketReconnection(options: unknown ={}) {
     (callback: () => void) => {
       if (attemptCount >= (options.maxAttempts || 5)) {
         setIsReconnecting(false),
-        return};
+        return},
       setIsReconnecting(true),
       setAttemptCount((prev) => prev + 1),
       const delay: unknown =,
         (options.delay || 1000) *,
         Math.pow(options.backoffMultiplier || 2, attemptCount),
       timeoutRef.current = setTimeout(() => {
-        callback()}, delay)};
-    [attemptCount, options];
+        callback()}, delay)},
+    [attemptCount, options],
   ),
   const resetReconnection: unknown = useCallback(() => {
     if (timeoutRef.current) {
       clearTimeout(timeoutRef.current),
-      timeoutRef.current = null};
+      timeoutRef.current = null},
     setIsReconnecting(false),
     setAttemptCount(0)}, []),
   return {
-    isReconnecting;
-    attemptCount;
-    attemptReconnection;
-    resetReconnection};
+    isReconnecting,
+    attemptCount,
+    attemptReconnection,
+    resetReconnection},
 }
 ,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 interface GradientTextProps {
   children: React.ReactNode,
   className?: string,
@@ -6,10 +6,10 @@ interface GradientTextProps {
   animate?: boolean}
 ,
 export default function GradientText({
-  children;
-  className = '';
-  gradient = 'from-blue-40o0 via-purple-50o0 to-pink-50o0';
-  animate = false;
+  children,
+  className = '',
+  gradient = 'from-blue-40o0 via-purple-50o0 to-pink-50o0',
+  animate = false,
 }: GradientTextProps) {
   return (
     <span

@@ -1,17 +1,17 @@
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 export async function getServerSideProps() {
-  const dir = path.join(process.cwd(), 'data', 'reports', 'lighthouse'),
+  const dir = path.join(process.cwd(), 'datareports', 'lighthouse'),
   const files = fs.existsSync(dir) ? fs.readdirSync(dir).filter(f=>f.endsWith('.json')).sort().reverse() : [],
   const latest = files[0],
   let summary = null,
   if (latest) {
     try { summary = JSON.parse(fs.readFileSync(path.join(dir, latest),'utf8'))} catch {}
   }
-  return { props: { latest, summary } };
+  return { props: { latest, summary } },
 }
 ,
 export default function LighthouseReports({ latest, summary }: any) {
-  const cats = summary?.lhr?.categories || {};
+  const cats = summary?.lhr?.categories || {},
   return (
     <EnhancedLayout>,
       <h1 className="text-2xl font-semibold mb-4">Lighthouse Reports</h1>,

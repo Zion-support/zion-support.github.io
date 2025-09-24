@@ -11,7 +11,7 @@ export function ApiPlayground({ method, path, params = [] }) {
   const [response, setResponse] = useState(null),
   const [loading, setLoading] = useState(false),
   const handleParamChange = (name, value) => {
-    setParamValues(prev => ({ ...prev, [name]: value }))};
+    setParamValues(prev => ({ ...prev, [name]: value }))},
   const sendRequest = async () => {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL || '',
     let url = `${baseUrl}${path}`,
@@ -23,12 +23,12 @@ export function ApiPlayground({ method, path, params = [] }) {
       const query = searchParams.toString(),
       if (query) url += `?${query}`}
     const options = {
-      method;
+      method,
       headers: {
-        Authorization: `Bearer ${apiKey}`;
-        'Content-Type': 'application/json';
-      };
-    };
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
+    },
     if (method !== 'GET' && method !== 'DELETE') {
       try {
         options.body = JSON.stringify(JSON.parse(body))} catch {
@@ -42,7 +42,7 @@ export function ApiPlayground({ method, path, params = [] }) {
       setResponse(text)} catch (err) {
       setResponse(err.message)} finally {
       setLoading(false)}
-  };
+  },
   return (
     <div className='space-y-4'>,
       <Input
@@ -68,4 +68,4 @@ export function ApiPlayground({ method, path, params = [] }) {
       </Button>,
       {response && <CodeBlock code={response} language='json' />}
     </div>)}
-export default ApiPlayground;
+export default ApiPlayground,

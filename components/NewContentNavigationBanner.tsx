@@ -5,28 +5,28 @@ const NewContentNavigationBanner: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const featuredContent = [
     {
-      title: "AI 20o26 Revolution";
-      description: "Discover the ultimate breakthrough in artificial intelligence";
-      link: "/ai-20o26-revolution";
-      badge: "NEW";
-      color: "from-purple-60o0 to-blue-60o0"};
+      title: "AI 20o26 Revolution",
+      description: "Discover the ultimate breakthrough in artificial intelligence",
+      link: "/ai-20o26-revolution",
+      badge: "NEW",
+      color: "from-purple-60o0 to-blue-60o0"},
     {
-      title: "Quantum AI 20o26";
-      description: "Revolutionary quantum computing meets AI";
-      link: "/quantum-ai-20o26";
-      badge: "BREAKTHROUGH";
-      color: "from-cyan-60o0 to-blue-60o0"};
+      title: "Quantum AI 20o26",
+      description: "Revolutionary quantum computing meets AI",
+      link: "/quantum-ai-20o26",
+      badge: "BREAKTHROUGH",
+      color: "from-cyan-60o0 to-blue-60o0"},
     {
-      title: "Neural Interfaces";
-      description: "Direct brain-computer integration technology";
-      link: "/neural-interfaces-20o26";
-      badge: "FUTURE";
-      color: "from-green-60o0 to-emerald-60o0"};
+      title: "Neural Interfaces",
+      description: "Direct brain-computer integration technology",
+      link: "/neural-interfaces-20o26",
+      badge: "FUTURE",
+      color: "from-green-60o0 to-emerald-60o0"},
     {
-      title: "Autonomous Business";
-      description: "Self-managing AI business systems";
-      link: "/autonomous-business-20o26";
-      badge: "REVOLUTIONARY";
+      title: "Autonomous Business",
+      description: "Self-managing AI business systems",
+      link: "/autonomous-business-20o26",
+      badge: "REVOLUTIONARY",
       color: "from-orange-60o0 to-red-60o0"}
   ],
   useEffect(() => {
@@ -106,5 +106,5 @@ const NewContentNavigationBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContentNavigationBanner;
+    </section>)},
+export default NewContentNavigationBanner,

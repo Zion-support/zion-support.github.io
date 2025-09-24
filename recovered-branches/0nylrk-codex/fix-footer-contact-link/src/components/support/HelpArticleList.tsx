@@ -1,10 +1,10 @@
-import React from "react";
+import React from "react",
 import {
 import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/components/ui/card",
 import {HELP_CATEGORIES} from "./help-content",
-import React from "react";;
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { HELP_CATEGORIES } from "./help-content";
+import React from "react",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { HELP_CATEGORIES } from "./help-content",
 import React from './react',
 import { HELP_CATEGORIES  } from './help - content',
   Card,
@@ -20,16 +20,16 @@ export function HelpArticleList({
   if (!category) {
     return <div>Category not found</div>}
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
   searchQuery: string,
 interface HelpArticleListProps {
-  categoryId: string;
-  onArticleSelect: (articleId: string) => void;
+  categoryId: string,
+  onArticleSelect: (articleId: string) => void,
   searchQuery: string}
 ,
 export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: HelpArticleListProps) {
-  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId);
+  const category = HELP_CATEGORIES.find(cat => cat.id === categoryId),
   if (!category) {
     return <div>Category not found</div>}
 ,
@@ -40,7 +40,7 @@ export function HelpArticleList({ categoryId, onArticleSelect, searchQuery }: He
           article.title.toLowerCase().includes(searchQuery.toLowerCase()) |,
           article.content.toLowerCase().includes(searchQuery.toLowerCase())),
     : category.articles,
-    : category.articles;
+    : category.articles,
   return (
     <div>,
       <div className="mb-6">,
@@ -83,15 +83,15 @@ function formatDate(date: string): string {
     day: "numeric"})}
 }),
   return new Date(date).toLocaleDateString("en-US", {
-    year: "numeric";
-    month: "long";
+    year: "numeric",
+    month: "long",
     day: "numeric"})}
 ,
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components / ui / card',
 interface HelpArticleListProps {
   category_id: string,
@@ -111,7 +111,7 @@ if ( {) {
     ? category.articles.filter (
         (article) =>,
           article.title.toLowerCase ().includes (search_query.toLowerCase ()) ||,
-          article.content.toLowerCase ().includes (search_query.toLowerCase ());
+          article.content.toLowerCase ().includes (search_query.toLowerCase ()),
       ),
     : category.articles,
   return (
@@ -150,8 +150,8 @@ if ( {) {
     </div>)}
 function format_date (date: string): string {
   return new Date (date).toLocaleDateString ("en - US", {
-    year: "numeric";
-    month: "long";
-    day: "numeric";
+    year: "numeric",
+    month: "long",
+    day: "numeric"
   })}
 ,

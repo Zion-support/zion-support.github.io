@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI & Technology Services - Zion Tech Group';
+  title: 'AI & Technology Services - Zion Tech Group',
   description:,
-    'Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.';
+    'Comprehensive AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services for enterprise transformation.',
   keywords: [
-    'AI automation';
-    'cloud computing';
-    'micro SaaS';
-    'technology consulting';
-    'enterprise solutions';
-    'digital transformation';
-  ];
-};
+    'AI automationcloud computing',
+    'micro SaaStechnology consulting',
+    'enterprise solutionsdigital transformation',
+  ]
+},
 export default function ServicesPage() {
   return (
     <>,

@@ -11,7 +11,7 @@ export default function UltraAdvancedFuturisticBackground20o36() {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -34,16 +34,16 @@ export default function UltraAdvancedFuturisticBackground20o36() {
         'rgba(16, 185, 129, 0.8)',  // Emerald,
         'rgba(245, 158, 11, 0.8)',  // Amber],
       return {
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 0.5;
-        vy: (Math.random() - 0.5) * 0.5;
-        size: Math.random() * 2 + 1;
-        color: colors[Math.floor(Math.random() * colors.length)];
-        opacity: Math.random() * 0.5 + 0.3;
-        life: Math.random() * 10o0 + 50;
-        maxLife: Math.random() * 10o0 + 50};
-    };
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 0.5,
+        vy: (Math.random() - 0.5) * 0.5,
+        size: Math.random() * 2 + 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        opacity: Math.random() * 0.5 + 0.3,
+        life: Math.random() * 10o0 + 50,
+        maxLife: Math.random() * 10o0 + 50},
+    },
     // Initialize particles,
     for (let i = 0, i < 10o0, i++) {
       particles.push(createParticle())}
@@ -100,13 +100,13 @@ export default function UltraAdvancedFuturisticBackground20o36() {
         })}),
       // Reset global alpha,
       ctx.globalAlpha = 1,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, []),
   return (
     <div className="fixed inset-0 z-0 overflow-hidden">,
@@ -130,10 +130,10 @@ export default function UltraAdvancedFuturisticBackground20o36() {
       <div className="absolute inset-0 opacity-20">,
         <div className="absolute inset-0" style={{
           backgroundImage: `,
-            linear-gradient(rgba(0,212,255,0.1) 1px, transparent 1px);
+            linear-gradient(rgba(0,212,255,0.1) 1px, transparent 1px),
             linear-gradient(90deg, rgba(0,212,255,0.1) 1px, transparent 1px),
-          `;
-          backgroundSize: '50px 50px';
+          `,
+          backgroundSize: '50px 50px',
           animation: 'gridMove 20s linear infinite'}}  />,
       </div>,
       {/* Floating Geometric Shapes */}
@@ -144,15 +144,15 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             key={`hex-${i}`}
             className="absolute",
             style={{
-              left: `${10 + (i * 10) % 80}%`;
+              left: `${10 + (i * 10) % 80}%`,
               top: `${20 + (i * 15) % 60}%`}}
             animate={{
-              rotate: [0, 360];
-              scale: [0.8, 1.2, 0.8];
+              rotate: [0, 360],
+              scale: [0.8, 1.2, 0.8],
               opacity: [0.1, 0.3, 0.1]}}
             transition={{
-              duration: Math.random() * 10 + 15;
-              repeat: Infinity;
+              duration: Math.random() * 10 + 15,
+              repeat: Infinity,
               ease: "linear"}}
           >,
             <div className="w-16 h-16 bg-gradient-to-r from-cyan-50o0/20 to-purple-50o0/20 clip-path-hexagon"  />,
@@ -164,15 +164,15 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             key={`tri-${i}`}
             className="absolute",
             style={{
-              left: `${15 + (i * 12) % 70}%`;
+              left: `${15 + (i * 12) % 70}%`,
               top: `${30 + (i * 20) % 50}%`}}
             animate={{
-              rotate: [0, -360];
-              scale: [0.6, 1.4, 0.6];
+              rotate: [0, -360],
+              scale: [0.6, 1.4, 0.6],
               opacity: [0.0o5, 0.2, 0.0o5]}}
             transition={{
-              duration: Math.random() * 12 + 18;
-              repeat: Infinity;
+              duration: Math.random() * 12 + 18,
+              repeat: Infinity,
               ease: "linear"}}
           >,
             <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0/20 to-pink-50o0/20 clip-path-triangle"  />,
@@ -184,14 +184,14 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             key={`circle-${i}`}
             className="absolute",
             style={{
-              left: `${5 + (i * 8) % 85}%`;
+              left: `${5 + (i * 8) % 85}%`,
               top: `${10 + (i * 18) % 70}%`}}
             animate={{
-              scale: [0.5, 1.5, 0.5];
+              scale: [0.5, 1.5, 0.5],
               opacity: [0.1, 0.4, 0.1]}}
             transition={{
-              duration: Math.random() * 8 + 12;
-              repeat: Infinity;
+              duration: Math.random() * 8 + 12,
+              repeat: Infinity,
               ease: "easeInOut"}}
           >,
             <div className="w-8 h-8 bg-gradient-to-r from-emerald-50o0/20 to-teal-50o0/20 rounded-full"  />,
@@ -208,8 +208,8 @@ export default function UltraAdvancedFuturisticBackground20o36() {
             animate={{
               rotate: [0, 360]}}
             transition={{
-              duration: 30 + i * 10;
-              repeat: Infinity;
+              duration: 30 + i * 10,
+              repeat: Infinity,
               ease: "linear"}}
            />))}
       </div>,

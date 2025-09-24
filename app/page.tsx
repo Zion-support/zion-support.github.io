@@ -10,7 +10,7 @@ export const metadata = {
   title: 'Zion Tech Group - AI & Technology Solutions',
   description:
     'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions. Expert consulting and implementation services.',
-  keywords: ['AI', 'Technology', 'Cloud', 'Cybersecurity', 'Micro SaaS', 'Consulting'],
+  keywords: ['AITechnology', 'CloudCybersecurity', 'Micro SaaSConsulting'],
   openGraph: {
     title: 'Zion Tech Group - AI & Technology Solutions',
     description: 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
@@ -32,21 +32,21 @@ const services = [
     description: 'Custom AI implementations, machine learning models, and intelligent automation systems.',
     icon: <CpuChipIcon className="h-6 w-6" />,
     color: 'bg-blue-100 text-blue-600',
-    features: ['Machine Learning', 'Natural Language Processing', 'Computer Vision', 'Predictive Analytics']
+    features: ['Machine LearningNatural Language Processing', 'Computer VisionPredictive Analytics']
   },
   {
     title: 'Cloud Infrastructure',
     description: 'Scalable cloud solutions, DevOps automation, and infrastructure optimization.',
     icon: <CloudIcon className="h-6 w-6" />,
     color: 'bg-green-100 text-green-600',
-    features: ['AWS/Azure/GCP', 'Kubernetes', 'Microservices', 'Auto-scaling']
+    features: ['AWS/Azure/GCPKubernetes', 'MicroservicesAuto-scaling']
   },
   {
     title: 'Cybersecurity',
     description: 'Advanced security frameworks, threat detection, and compliance solutions.',
     icon: <ShieldCheckIcon className="h-6 w-6" />,
     color: 'bg-purple-100 text-purple-600',
-    features: ['Threat Detection', 'Compliance', 'Security Audits', 'Incident Response']
+    features: ['Threat DetectionCompliance', 'Security AuditsIncident Response']
   }
 ]
 

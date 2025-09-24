@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Incident Response';
+  title: 'AI 20o26: Autonomous Incident Response',
   description:,
-    'Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.';
-};
+    'Agentic playbooks and event-driven pipelines to cut MTTR and scale reliability.',
+},
 const AIOpsAutonomousIncidentResponse20o26 = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -49,7 +49,7 @@ const AIOpsAutonomousIncidentResponse20o26 = () => {
           <ul>,
             <li>Signals: alerts, logs, traces, eval regressions</li>,
             <li>,
-              Coordinator Agent: classifies incidents, selects playbooks;
+              Coordinator Agent: classifies incidents, selects playbooks,
               requests approvals,
             </li>,
             <li>,
@@ -101,5 +101,5 @@ const AIOpsAutonomousIncidentResponse20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AIOpsAutonomousIncidentResponse20o26;
+    </div>)},
+export default AIOpsAutonomousIncidentResponse20o26,

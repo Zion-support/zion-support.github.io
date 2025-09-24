@@ -6,56 +6,56 @@ const UltimateEnterpriseTransformationShowcase = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-enterprise-transformation-revolution';
-      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution';
-      description: 'Achieve 15,0o00% ROI with next-generation AI systems delivering $50+ billion in annual savings';
-      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution';
-      type: 'blog';
-      category: 'transformation';
+      id: 'ultimate-enterprise-transformation-revolution',
+      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution',
+      description: 'Achieve 15,0o00% ROI with next-generation AI systems delivering $50+ billion in annual savings',
+      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution',
+      type: 'blog',
+      category: 'transformation',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$50B+';
-        efficiency: '2,80o0%';
-        accuracy: '99.97%'};
-      readingTime: '25 min read';
-      isNew: true;
-      featured: true};
+        roi: '15,0o00%',
+        savings: '$50B+',
+        efficiency: '2,80o0%',
+        accuracy: '99.97%'},
+      readingTime: '25 min read',
+      isNew: true,
+      featured: true},
     {
-      id: 'fortune-50o0-ultimate-transformation-success';
-      title: 'Fortune 50o0 Ultimate Enterprise Transformation Success Story';
-      description: 'How a $180B company achieved 15,0o00% ROI and $50B annual savings in 18 months';
-      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-150o00-roi-success-story';
-      type: 'case-study';
-      category: 'success-stories';
+      id: 'fortune-50o0-ultimate-transformation-success',
+      title: 'Fortune 50o0 Ultimate Enterprise Transformation Success Story',
+      description: 'How a $180B company achieved 15,0o00% ROI and $50B annual savings in 18 months',
+      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-150o00-roi-success-story',
+      type: 'case-study',
+      category: 'success-stories',
       metrics: {
-        roi: '15,0o00%';
-        savings: '$50B';
-        timeline: '18 months';
-        satisfaction: '99.8%'};
-      readingTime: '20 min read';
-      isNew: true;
-      featured: true};
+        roi: '15,0o00%',
+        savings: '$50B',
+        timeline: '18 months',
+        satisfaction: '99.8%'},
+      readingTime: '20 min read',
+      isNew: true,
+      featured: true},
     {
-      id: 'ultimate-transformation-implementation-guide';
-      title: 'Ultimate Enterprise Transformation Implementation Guide';
-      description: 'Complete roadmap to 15,0o00% ROI with proven strategies and step-by-step instructions';
-      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide';
-      type: 'resource';
-      category: 'implementation';
+      id: 'ultimate-transformation-implementation-guide',
+      title: 'Ultimate Enterprise Transformation Implementation Guide',
+      description: 'Complete roadmap to 15,0o00% ROI with proven strategies and step-by-step instructions',
+      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide',
+      type: 'resource',
+      category: 'implementation',
       metrics: {
-        roi: '15,0o00%';
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+'};
-      readingTime: '40 min read';
-      isNew: true;
+        roi: '15,0o00%',
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+'},
+      readingTime: '40 min read',
+      isNew: true,
       featured: true}
   ],
   const categories = [
-    { id: ''all', 'label: 'All 'Content', 'count: content.length };
-    { id: ''transformation', 'label: ''Transformation', 'count: content.filter(c => c.category === 'transformation').length };
-    { id: 'success-'stories', 'label: 'Success 'Stories', 'count: content.filter(c => c.category === 'success-stories').length };
-    { id: ''implementation', 'label: ''Implementation', 'count: content.filter(c => c.category === 'implementation').length }
+    { id: ''alllabel: 'All 'Contentcount: content.length },
+    { id: ''transformationlabel: ''Transformationcount: content.filter(c => c.category === 'transformation').length },
+    { id: 'success-'storieslabel: 'Success 'Storiescount: content.filter(c => c.category === 'success-stories').length },
+    { id: ''implementationlabel: ''Implementationcount: content.filter(c => c.category === 'implementation').length }
   ],
   const filteredContent = activeCategory === 'all',
     ? content,
@@ -70,7 +70,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -81,7 +81,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -218,5 +218,5 @@ const UltimateEnterpriseTransformationShowcase = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateEnterpriseTransformationShowcase;
+    </div>)},
+export default UltimateEnterpriseTransformationShowcase,

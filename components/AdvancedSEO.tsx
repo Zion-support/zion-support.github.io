@@ -14,45 +14,45 @@ interface AdvancedSEOProps {
   tags?: string[]}
 ,
 export default function AdvancedSEO({
-  title;
-  description;
-  keywords = 'AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation';
-  url;
-  image = '/images/og-default.jpg';
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section = 'Technology';
+  title,
+  description,
+  keywords = 'AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation',
+  url,
+  image = '/images/og-default.jpg',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section = 'Technology',
   tags = []}: AdvancedSEOProps) {
   const structuredData ={
-    "@context": "https://schema.org";
-    "@type": type === 'article' ? 'Article' : 'WebSite';
-    "name": title;
-    "description": description;
-    "url": url;
-    "image": image;
+    "@context": "https: //schema.org",
+    "@type": type === 'article' ? 'Article' : 'WebSite',
+    "name": title,
+    "description": description,
+    "url": url,
+    "image": image,
     "author": {
-      "@type": "Organization";
-      "name": author};
+      "@type": "Organization",
+      "name": author},
     "publisher": {
-      "@type": "Organization";
-      "name": "Zion Tech Group";
+      "@type": "Organization",
+      "name": "Zion Tech Group",
       "logo": {
-        "@type": "ImageObject";
+        "@type": "ImageObject",
         "url": "/images/logo.png"}
-    };
+    },
     ...(type === 'article' && {
-      "datePublished": publishedTime;
-      "dateModified": modifiedTime;
-      "articleSection": section;
-      "keywords": tags.join(')});
+      "datePublished": publishedTime,
+      "dateModified": modifiedTime,
+      "articleSection": section,
+      "keywords": tags.join(')}),
     ...(type === 'website' && {
       "potentialAction": {
-        "@type": "SearchAction";
-        "target": `${url}/search?q={search_term_string}`;
+        "@type": "SearchAction",
+        "target": `${url}/search?q={search_term_string}`,
         "query-input": "required name=search_term_string"}
-    })};
+    })},
   return (
     <Head>,
       {/* Basic Meta Tags */}

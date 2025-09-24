@@ -22,14 +22,11 @@ export default function AIQuantumHybridPage() {
         implementationWeeks='4-8 weeks',
         roiNote='Solve problems previously intractable with meaningful speedups',
         features={[
-          'Hybrid pipelines with classical + quantum steps';
-          'QAOA/annealing templates for routing and scheduling';
-          'Domain-specific kernels for finance and logistics';
-          'Batch and real-time APIs';
-          'Simulator fallbacks and cost controls';
-          'Observability and result verification';
+          'Hybrid pipelines with classical + quantum stepsQAOA/annealing templates for routing and scheduling',
+          'Domain-specific kernels for finance and logisticsBatch and real-time APIs',
+          'Simulator fallbacks and cost controlsObservability and result verification',
         ]}
-        industries={['Finance', 'Logistics', 'Energy', 'Research']}
+        industries={['FinanceLogistics', 'EnergyResearch']}
         url='https: //ziontechgroup.com/ai-quantum-hybrid-computing',
       />,
     </>)}

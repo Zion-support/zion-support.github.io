@@ -4,9 +4,9 @@ const Header = () => {
   const router = useRouter(),
   const isActive = path => router.pathname === path,
   const navItems = [
-    { href: '/about', label: 'About' };
-    { href: '/services', label: 'Services' };
-    { href: '/contact', label: 'Contact' };
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' },
   ],
   return (
     <nav className='fixed top-0 w-full z-50 bg-black/20 backdrop-blur-md border-b border-white/10'>,
@@ -32,5 +32,5 @@ const Header = () => {
           </div>,
         </div>,
       </div>,
-    </nav>)};
-export default Header;
+    </nav>)},
+export default Header,

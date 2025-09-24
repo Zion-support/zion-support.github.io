@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -21,25 +21,25 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useState, useCallback } from 'react',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Clock;
-  TrendingUp;
-  Activity;
-  Gauge;
-  Cpu;
-  Database;
-  Network;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,
+  Network,
 } from 'lucide-react',
 interface PerformanceMetrics {
   loadTime: number,
-  Zap;
-  Clock;
-  TrendingUp;
-  Activity;
-  Gauge;
-  Cpu;
-  Database;
-  Network;
+  Zap,
+  Clock,
+  TrendingUp,
+  Activity,
+  Gauge,
+  Cpu,
+  Database,
+  Network,
 } from 'lucide-react'} from 'lucide-react',
 interface PerformanceMetrics {
   load_time: number,
@@ -61,14 +61,14 @@ if ( {) {
   $2}
   optimized_count++,
 const PerformanceOptimizer: React.FC < PerformanceOptimizerProps> = ({
-  class_name = '';
+  class_name = ''
 }) => {  const [metrics, set_metrics] = useState < PerformanceMetrics>({
 interface PerformanceMetrics {
-  load_time: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  load_time: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  cumulativeLayoutShift: number,
+  firstInputDelay: number,
   timeToInteractive: number}
 interface PerformanceOptimizerProps {
   class_name?: string}
@@ -79,29 +79,29 @@ interface PerformanceOptimizerProps {
 //Add responsive sizes if not present if (!img && img.sizes) {
   optimizedCount++ ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  className = '';
+  className = ''
 }) => {  const [metrics, setMetrics] = useState<PerformanceMetrics>({
 interface PerformanceMetrics {
-  loadTime: number;
-  firstContentfulPaint: number;
-  largestContentfulPaint: number;
-  cumulativeLayoutShift: number;
-  firstInputDelay: number;
+  loadTime: number,
+  firstContentfulPaint: number,
+  largestContentfulPaint: number,
+  cumulativeLayoutShift: number,
+  firstInputDelay: number,
   timeToInteractive: number}
 interface PerformanceOptimizerProps {
   className?: string}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className = '' }) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    loadTime: 0;
-    firstContentfulPaint: 0;
-    largestContentfulPaint: 0;
-    cumulativeLayoutShift: 0;
-    firstInputDelay: 0;
+    loadTime: 0,
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
     timeToInteractive: 0}),    timeToInteractive: 0,
-    firstContentfulPaint: 0;
-    largestContentfulPaint: 0;
-    cumulativeLayoutShift: 0;
-    firstInputDelay: 0;
+    firstContentfulPaint: 0,
+    largestContentfulPaint: 0,
+    cumulativeLayoutShift: 0,
+    firstInputDelay: 0,
       const navigation = window.window.performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming,
       const paintEntries = window.window.performance.getEntriesByType('paint'),
       const fcp = paintEntries.find(entry => entry.name === 'first-contentful-paint'),
@@ -112,7 +112,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         largestContentfulPaint: lcp ? lcp.startTime : 0,
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API,
         firstInputDelay: 0, // Would need to be measured with FID API,
-        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart};
+        timeToInteractive: navigation.domContentLoadedEventEnd - navigation.navigationStart},
       setMetrics(newMetrics)}
 }, []),
   // Optimize images,
@@ -138,15 +138,15 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({ className =
         entry => entry && entry.name === 'first-contentful-paint'),
       const lcp = performance && window.window.performance.getEntriesByType('largest-contentful-paint')[0],
       const newMetrics: PerformanceMetrics = {
-        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart;
-        firstContentfulPaint: fcp ? fcp && fcp.startTime : 0;
-        largestContentfulPaint: lcp ? lcp && lcp.startTime : 0;
+        loadTime: navigation && navigation.loadEventEnd - navigation && navigation.loadEventStart,
+        firstContentfulPaint: fcp ? fcp && fcp.startTime : 0,
+        largestContentfulPaint: lcp ? lcp && lcp.startTime : 0,
         cumulativeLayoutShift: 0, // Would need to be measured with CLS API,
         firstInputDelay: 0, // Would need to be measured with FID API,
         timeToInteractive:,
-          navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart;
-      };
-      setMetrics(newMetrics)}        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart};
+          navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart,
+      },
+      setMetrics(newMetrics)}        timeToInteractive: navigation && navigation.domContentLoadedEventEnd - navigation && navigation.navigationStart},
       setMetrics(newMetrics)}
           optimized_count++}
       }
@@ -192,7 +192,7 @@ if ( {) {
     setOptimizationStatus('Optimizing images...'),
     try {
       // Add font-display: swap to improve font loading,
-      const style = document && document.createElement('style');
+      const style = document && document.createElement('style'),
       style && style.textContent = `,
         @font-face {
           font-family: 'Inter',
@@ -201,12 +201,12 @@ if ( {) {
           font-family: 'JetBrains Mono'}
 ,
         @font-face {
-          font-family: 'JetBrains Mono';
+          font-family: 'JetBrains Mono',
           font-display: swap}
         @font-face {
           font-family: 'Orbitron',
           font-display: swap,
-          font-family: 'Inter';
+          font-family: 'Inter',
           font-display: swap}
         @font-face {
           font-family: 'Orbitron',
@@ -216,7 +216,7 @@ if ( {) {
     setOptimizationStatus ('Optimizing fonts...'),
     try {
       // Add font - display: swap to improve font loading,
-      const style = document.create_element ('style');
+      const style = document.create_element ('style'),
       style.text_content = `,
         @font - face {
           font - family: 'Inter',
@@ -224,22 +224,22 @@ if ( {) {
         @font - face {
           font - family: 'JetBrains Mono'}
         @font - face {
-          font - family: 'JetBrains Mono';
+          font - family: 'JetBrains Mono',
           font - display: swap}
         @font - face {
           font - family: 'Orbitron',
           font - display: swap}
         @font - face {
           font - family: 'Orbitron',
-          font - display: swap}          font - family: 'Orbitron';
+          font - display: swap}          font - family: 'Orbitron',
           font - display: swap}
 ,
         @font-face {
-          font-family: 'Orbitron';
+          font-family: 'Orbitron',
           font-display: swap}
 ,
       `,
-          font-display: swap}          font-family: 'Orbitron';
+          font-display: swap}          font-family: 'Orbitron',
           font-display: swap}
       `,
       document && document.head.appendChild(style),
@@ -299,19 +299,19 @@ if ( {) {
       // Add resource hints for critical resources,
       const preload_links = [
         {
-          rel: 'preload';
-          href: '/fonts / inter - var.woff2';
-          as: 'font';
-          type: 'font / woff2';
-          crossorigin: 'anonymous';
-        };
+          rel: 'preload',
+          href: '/fonts / inter - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous'
+        },
         {
-          rel: 'preload';
-          href: '/fonts / jetbrains - mono - var.woff2';
-          as: 'font';
-          type: 'font / woff2';
-          crossorigin: 'anonymous';
-        }],        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' };
+          rel: 'preload',
+          href: '/fonts / jetbrains - mono - var.woff2',
+          as: 'font',
+          type: 'font / woff2',
+          crossorigin: 'anonymous'
+        }],        { rel: 'preload', href: '/fonts / inter - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' },
         { rel: 'preload', href: '/fonts / jetbrains - mono - var.woff2', as: 'font', type: 'font / woff2', crossorigin: 'anonymous' }
       ],
       preload_links.for_each (link_attrs => {
@@ -332,7 +332,7 @@ if (entry && entry.entryType === 'largest-contentful-paint') {'            conso
 '          }'          if (entry && entry.entryType === 'first-input') {'            console && // // console.log('FID: ', entry && entry.processingStart - entry && entry.startTime),'          }'          if (entry && entry.entryType === 'layout-shift') {'            if (!(entry as any).hadRecentInput) {'              console && // // console.log('CLS: ', (entry as any).value),'            }'          }}
       }),
       try {
-        observer && observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] }),
+        observer && observer.observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shift'] }),
 '      } catch (e) {'        // Fallback for browsers that don&apos,t support all entry types,
         console && // // console.log('Performance monitoring not fully supported'),
 '      }',
@@ -352,7 +352,7 @@ if ( {'            console.log ('LCP: ', entry.start_time)) {
   $2}'            }'          }}
       }),
       try {
-        observer.observe ({ entry_types: ['largest - contentful - paint', 'first - input', 'layout - shift'] }),
+        observer.observe ({ entry_types: ['largest - contentful - paintfirst - input', 'layout - shift'] }),
 '      } catch (e) {'        // Fallback for browsers that don & apos,t support all entry types,
         console.log ('Performance monitoring not fully supported'),
 '      }',
@@ -501,7 +501,7 @@ if ( { // LCP should be under 2.5s) {
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
       return () => {
         window.removeEventListener('load', measurePerformance),
-        observer.disconnect()};    }
+        observer.disconnect()},    }
       observer.observe({ entryTypes: ['largest-contentful-paint'] }),
       return () => {
         window.removeEventListener('load', measurePerformance),
@@ -516,8 +516,8 @@ if ( { // LCP should be under 2.5s) {
       observer && observer.observe({ entryTypes: ['largest-contentful-paint'] }),
       return () => {
         window && window.removeEventListener('load', measurePerformance),
-        observer && observer.disconnect()};    }      ,
-      observer && observer.observe({ entryTypes: ['largest-contentful-paint'] });
+        observer && observer.disconnect()},    }      ,
+      observer && observer.observe({ entryTypes: ['largest-contentful-paint'] }),
       return () => {
         window && window.removeEventListener('load', measurePerformance),
         observer && observer.disconnect()}
@@ -528,8 +528,8 @@ if ( { // LCP should be under 2.5s) {
     if (metrics && metrics.largestContentfulPaint > 2500) score -= 25,
     if (metrics && metrics.loadTime > 3000) score -= 15,
     if (metrics && metrics.timeToInteractive > 3500) score -= 20,
-    return Math && Math.max(0, score)};
-    return Math && Math.max(0, score)};
+    return Math && Math.max(0, score)},
+    return Math && Math.max(0, score)},
   const getPerformanceGrade = (score: number): string => {
     return Math.max(0, score)}
     return Math.max(0, score)}
@@ -537,7 +537,7 @@ if ( { // LCP should be under 2.5s) {
     if (score >= 90) return 'A',
     if (score >= 80) return 'B',
     if (score >= 70) return 'C',
-    if (score >= 60) return 'D'};
+    if (score >= 60) return 'D'},
   const performanceScore = getPerformanceScore(),
   const performanceGrade = getPerformanceGrade(performanceScore)>,
       <div className='flex items-center justify-between mb-6'>,
@@ -741,7 +741,7 @@ if ( { // LCP should be under 2.5s) {
           <li> Enable gzip compression</li>,
         </ul>,
       </div>,
-    </div>)};export default PerformanceOptimizer}
+    </div>)},export default PerformanceOptimizer}
       // Preload critical resources,
       preloadImages && preloadImages.forEach(image => {
 addResourceHint(image, 'image'),
@@ -773,7 +773,7 @@ key={`preload-font-${index}`}          rel="preload""          as="style""      
 '                  })'                  .catch(function(registrationError) {
                     console && // // console.log('SW registration failed: ', registrationError)'                  })'              })}
           ``        }}/>,
-    </Head>)};
+    </Head>)},
       {/* Performance Tips */}
       <div className="mt-6 pt-4 border-t border-white/10">,
         <h4 className="text-sm font-semibold text-white/80 mb-3">Performance Tips</h4>,
@@ -1005,7 +1005,7 @@ if ( {'              window.addEventListener ('load', function () {'            
     </Head>)}
   )}
 ,
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,
 interface PerformanceMetrics {
   fcp: number,
   lcp: number,
@@ -1026,7 +1026,7 @@ interface PerformanceOptimizerProps {
   onMetricsUpdate?: (metrics: PerformanceMetrics) => void,
   enableReporting?: boolean}
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  onMetricsUpdate;
+  onMetricsUpdate,
   enableReporting = false}) => {
   const [metrics, setMetrics] = useState<PerformanceMetrics | null>(null),
   const measureWebVitals = useCallback(() => {
@@ -1039,16 +1039,16 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
     const ttfb = navigation && navigation.responseStart - navigation && navigation.requestStart,
     // Memory usage (if available),
     const memory = (performance as any).memory ? {
-      used: (performance as any).memory && memory.usedJSHeapSize;
-      total: (performance as any).memory && memory.totalJSHeapSize;
+      used: (performance as any).memory && memory.usedJSHeapSize,
+      total: (performance as any).memory && memory.totalJSHeapSize,
       limit: (performance as any).memory && memory.jsHeapSizeLimit} : undefined,
     const newMetrics: PerformanceMetrics = {
-      fcp;
-      lcp;
+      fcp,
+      lcp,
       fid: 0, // First Input Delay - would need user interaction to measure,
       cls: 0, // Cumulative Layout Shift - would need observer,
-      ttfb;
-      memory};
+      ttfb,
+      memory},
     setMetrics(newMetrics),
     if (onMetricsUpdate) {
       onMetricsUpdate(newMetrics)}
@@ -1061,7 +1061,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       window && window.addEventListener('load', measureWebVitals)}
 ,
     return () => {
-      window && window.removeEventListener('load', measureWebVitals)};
+      window && window.removeEventListener('load', measureWebVitals)},
   }, [measureWebVitals]),
   // Monitor for performance issues,
   useEffect(() => {
@@ -1078,7 +1078,7 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [metrics, enableReporting]),
   return null}
 ,
-export default PerformanceOptimizer;
-};export default PerformanceOptimizer;
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,
+},export default PerformanceOptimizer,
+export default PerformanceOptimizer,
 })))

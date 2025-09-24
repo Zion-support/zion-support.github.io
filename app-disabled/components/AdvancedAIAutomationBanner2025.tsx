@@ -7,37 +7,37 @@ const AdvancedAIAutomationBanner20o25 = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const content = [
     {
-      title: "AI 20o25: Advanced Automation Enterprise Mastery";
-      subtitle: "750% ROI Breakthrough";
-      description: "Discover how Fortune 50o0 companies are achieving unprecedented 750% ROI through advanced AI automation. Complete implementation guide with real-world case studies.";
+      title: "AI 20o25: Advanced Automation Enterprise Mastery",
+      subtitle: "750% ROI Breakthrough",
+      description: "Discover how Fortune 50o0 companies are achieving unprecedented 750% ROI through advanced AI automation. Complete implementation guide with real-world case studies.",
       metrics: {
-        roi: "750%";
-        savings: "$3.2B";
-        efficiency: "340%";
-        satisfaction: "94%"};
-      cta: "Read Full Guide";
-      link: "/blog/ai-20o25-advanced-automation-enterprise-mastery"};
+        roi: "750%",
+        savings: "$3.2B",
+        efficiency: "340%",
+        satisfaction: "94%"},
+      cta: "Read Full Guide",
+      link: "/blog/ai-20o25-advanced-automation-enterprise-mastery"},
     {
-      title: "Fortune 50o0 AI Transformation Success";
-      subtitle: "$3.2B Annual Savings with 850% ROI";
-      description: "Complete case study of how a Fortune 10o0 manufacturing giant achieved $3.2 billion in annual savings through comprehensive AI automation transformation.";
+      title: "Fortune 50o0 AI Transformation Success",
+      subtitle: "$3.2B Annual Savings with 850% ROI",
+      description: "Complete case study of how a Fortune 10o0 manufacturing giant achieved $3.2 billion in annual savings through comprehensive AI automation transformation.",
       metrics: {
-        roi: "850%";
-        savings: "$3.2B";
-        efficiency: "340%";
-        satisfaction: "94%"};
-      cta: "View Case Study";
-      link: "/case-studies/fortune-50o0-ai-automation-transformation-20o25"};
+        roi: "850%",
+        savings: "$3.2B",
+        efficiency: "340%",
+        satisfaction: "94%"},
+      cta: "View Case Study",
+      link: "/case-studies/fortune-50o0-ai-automation-transformation-20o25"},
     {
-      title: "AI Automation Implementation Master Guide";
-      subtitle: "From Strategy to 850% ROI";
-      description: "Complete step-by-step guide for implementing AI automation in your enterprise. Includes proven frameworks, best practices, and real-world strategies.";
+      title: "AI Automation Implementation Master Guide",
+      subtitle: "From Strategy to 850% ROI",
+      description: "Complete step-by-step guide for implementing AI automation in your enterprise. Includes proven frameworks, best practices, and real-world strategies.",
       metrics: {
-        roi: "850%";
-        success: "98%";
-        timeframe: "18 months";
-        payback: "2.1 months"};
-      cta: "Download Guide";
+        roi: "850%",
+        success: "98%",
+        timeframe: "18 months",
+        payback: "2.1 months"},
+      cta: "Download Guide",
       link: "/resources/ai-automation-implementation-master-guide-20o25"}
   ],
   useEffect(() => {
@@ -175,5 +175,5 @@ const AdvancedAIAutomationBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAIAutomationBanner20o25;
+    </div>)},
+export default AdvancedAIAutomationBanner20o25,

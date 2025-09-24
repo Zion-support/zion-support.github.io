@@ -1,114 +1,102 @@
-import React from 'react';
+import React from 'react',
 import dynamic from 'next/dynamic',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Lock;
-  Zap;
-  Globe;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  Shield;
-  Database;
+  Brain,
+  Lock,
+  Zap,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  Shield,
+  Database,
   Cloud} from 'lucide-react',
 const SEO = dynamic(() => import('../src/components/SEO'), { ssr: false }),
 const PageTransition = dynamic(() => import('../src/components/PageTransition'), { ssr: false }),
 const EmergingTechPage: React.FC = () => {
   const technologies = [
     {
-      icon: <Brain className="w-8 h-8"   />;
-      title: 'Artificial Intelligence';
-      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.';
+      icon: <Brain className="w-8 h-8"   />,
+      title: 'Artificial Intelligence',
+      description: 'Advanced AI solutions including machine learning, deep learning, and neural networks for intelligent automation.',
       features: [
-        'Machine Learning Models';
-        'Natural Language Processing';
-        'Computer Vision';
-        'Predictive Analytics'];
-      category: 'AI & ML';
-      pricing: 'Starting at $5,0o00';
-      delivery: '2-8 weeks'};
+        'Machine Learning ModelsNatural Language Processing',
+        'Computer VisionPredictive Analytics'],
+      category: 'AI & ML',
+      pricing: 'Starting at $5,0o00',
+      delivery: '2-8 weeks'},
     {
-      icon: <Lock className="w-8 h-8"   />;
-      title: 'Blockchain & Web3';
-      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.';
+      icon: <Lock className="w-8 h-8"   />,
+      title: 'Blockchain & Web3',
+      description: 'Decentralized applications, smart contracts, and blockchain solutions for secure, transparent operations.',
       features: [
-        'Smart Contract Development';
-        'DeFi Solutions';
-        'NFT Platforms';
-        'Cryptocurrency Integration'];
-      category: 'Blockchain';
-      pricing: 'Starting at $8,0o00';
-      delivery: '4-12 weeks'};
+        'Smart Contract DevelopmentDeFi Solutions',
+        'NFT PlatformsCryptocurrency Integration'],
+      category: 'Blockchain',
+      pricing: 'Starting at $8,0o00',
+      delivery: '4-12 weeks'},
     {
-      icon: <Zap className="w-8 h-8"   />;
-      title: 'Quantum Computing';
-      description: 'Next-generation quantum computing solutions for complex problem-solving and optimization.';
+      icon: <Zap className="w-8 h-8"   />,
+      title: 'Quantum Computing',
+      description: 'Next-generation quantum computing solutions for complex problem-solving and optimization.',
       features: [
-        'Quantum Algorithms';
-        'Optimization Problems';
-        'Cryptography';
-        'Simulation'];
-      category: 'Quantum';
-      pricing: 'Starting at $15,0o00';
-      delivery: '6-16 weeks'};
+        'Quantum AlgorithmsOptimization Problems',
+        'CryptographySimulation'],
+      category: 'Quantum',
+      pricing: 'Starting at $15,0o00',
+      delivery: '6-16 weeks'},
     {
-      icon: <Globe className="w-8 h-8"   />;
-      title: 'Edge Computing';
-      description: 'Distributed computing solutions that bring processing power closer to data sources.';
+      icon: <Globe className="w-8 h-8"   />,
+      title: 'Edge Computing',
+      description: 'Distributed computing solutions that bring processing power closer to data sources.',
       features: [
-        'Edge Infrastructure';
-        'Real-time Processing';
-        'IoT Integration';
-        'Low Latency'];
-      category: 'Edge';
-      pricing: 'Starting at $6,0o00';
-      delivery: '3-10 weeks'};
+        'Edge InfrastructureReal-time Processing',
+        'IoT IntegrationLow Latency'],
+      category: 'Edge',
+      pricing: 'Starting at $6,0o00',
+      delivery: '3-10 weeks'},
     {
-      icon: <Shield className="w-8 h-8"   />;
-      title: 'Zero Trust Security';
-      description: 'Advanced security framework that assumes no trust and verifies everything.';
+      icon: <Shield className="w-8 h-8"   />,
+      title: 'Zero Trust Security',
+      description: 'Advanced security framework that assumes no trust and verifies everything.',
       features: [
-        'Identity Verification';
-        'Access Control';
-        'Network Segmentation';
-        'Continuous Monitoring'];
-      category: 'Security';
-      pricing: 'Starting at $4,0o00';
-      delivery: '2-6 weeks'};
+        'Identity VerificationAccess Control',
+        'Network SegmentationContinuous Monitoring'],
+      category: 'Security',
+      pricing: 'Starting at $4,0o00',
+      delivery: '2-6 weeks'},
     {
-      icon: <Database className="w-8 h-8"   />;
-      title: 'Augmented Reality';
-      description: 'Immersive AR solutions that overlay digital information onto the real world.';
+      icon: <Database className="w-8 h-8"   />,
+      title: 'Augmented Reality',
+      description: 'Immersive AR solutions that overlay digital information onto the real world.',
       features: [
-        'AR Applications';
-        '3D Visualization';
-        'Interactive Experiences';
-        'Mobile Integration'];
-      category: 'AR/VR';
-      pricing: 'Starting at $7,0o00';
+        'AR Applications3D Visualization',
+        'Interactive ExperiencesMobile Integration'],
+      category: 'AR/VR',
+      pricing: 'Starting at $7,0o00',
       delivery: '4-14 weeks'}
   ],
   const benefits = [
     {
-      icon: <Star className="w-6 h-6"   />;
-      title: 'Cutting-Edge Technology';
-      description: 'Stay ahead with the latest emerging technologies and innovations'};
+      icon: <Star className="w-6 h-6"   />,
+      title: 'Cutting-Edge Technology',
+      description: 'Stay ahead with the latest emerging technologies and innovations'},
     {
-      icon: <Users className="w-6 h-6"   />;
-      title: 'Expert Team';
-      description: 'Experienced professionals with deep knowledge in emerging technologies'};
+      icon: <Users className="w-6 h-6"   />,
+      title: 'Expert Team',
+      description: 'Experienced professionals with deep knowledge in emerging technologies'},
     {
-      icon: <Clock className="w-6 h-6"   />;
-      title: 'Rapid Development';
-      description: 'Fast implementation and deployment of emerging technology solutions'};
+      icon: <Clock className="w-6 h-6"   />,
+      title: 'Rapid Development',
+      description: 'Fast implementation and deployment of emerging technology solutions'},
     {
-      icon: <Shield className="w-6 h-6"   />;
-      title: 'Future-Proof';
+      icon: <Shield className="w-6 h-6"   />,
+      title: 'Future-Proof',
       description: 'Solutions designed to adapt and scale with evolving technology trends'}
   ],
   return (
@@ -294,4 +282,4 @@ const EmergingTechPage: React.FC = () => {
       </PageTransition>,
     </>)}
 ,
-export default EmergingTechPage;
+export default EmergingTechPage,

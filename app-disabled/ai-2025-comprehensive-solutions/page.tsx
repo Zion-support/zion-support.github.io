@@ -2,12 +2,12 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25 Comprehensive Solutions - Complete AI Transformation Platform';
+    'AI 20o25 Comprehensive Solutions - Complete AI Transformation Platform',
   description:,
-    'Discover our comprehensive AI 20o25 solutions platform featuring quantum-neural fusion, autonomous operations, and transcendent intelligence for complete business transformation.';
+    'Discover our comprehensive AI 20o25 solutions platform featuring quantum-neural fusion, autonomous operations, and transcendent intelligence for complete business transformation.',
   keywords:,
-    'AI 20o25 solutions, comprehensive AI platform, quantum neural fusion, autonomous operations, transcendent intelligence, business transformation';
-};
+    'AI 20o25 solutions, comprehensive AI platform, quantum neural fusion, autonomous operations, transcendent intelligence, business transformation',
+},
 export default function AI20o25ComprehensiveSolutions() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-indigo-90o0 text-white'>,
@@ -161,7 +161,7 @@ export default function AI20o25ComprehensiveSolutions() {
                 Predictive Mastery,
               </h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Predict future outcomes with 99.7% accuracy across all domains;
+                Predict future outcomes with 99.7% accuracy across all domains,
                 from business to scientific discoveries.,
               </p>,
               <div className='space-y-2'>,

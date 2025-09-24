@@ -7,22 +7,22 @@ import {Button} from "@/components/ui/button",
 import {Card, CardContent, CardHeader, CardTitle, CardFooter} from "@/components/ui/card",
 import {Textarea} from "@/components/ui/textarea",
 import {Check, Pencil} from "lucide-react",
-import React, { useState } from "react";
-import { useToast } from "@/hooks/use-toast";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card";
-import { Textarea } from "@/components/ui/textarea";
-import { Check, Pencil } from "lucide-react";
+import React, { useState } from "react",
+import { useToast } from "@/hooks/use-toast",
+import { Button } from "@/components/ui/button",
+import { Card, CardContent, CardHeader, CardTitle, CardFooter } from "@/components/ui/card",
+import { Textarea } from "@/components/ui/textarea",
+import { Check, Pencil } from "lucide-react",
 import React, { useState } from './react',
 import { use_toast  } from '@/hooks / use - toast',
 import { Button  } from '@/components / ui / button',
 import { Textarea  } from '@/components / ui / textarea',
 import { Check, Pencil  } from './lucide-react',
-  Card;
-  CardContent;
-  CardHeader;
-  CardTitle;
-  CardFooter;
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
 } from "@/components/ui/card",
 interface GeneratedDescriptionDisplayProps {
   description: string,
@@ -32,7 +32,7 @@ export function GeneratedDescriptionDisplay({
   description,
   onSave,
 export function GeneratedDescriptionDisplay({
-  description;
+  description,
   onSave}: GeneratedDescriptionDisplayProps) {
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   const { toast } = useToast(),
@@ -42,12 +42,12 @@ export function GeneratedDescriptionDisplay({
     onSave(editedDescription),
     setIsEditing(false),
   const handleSave = () => {
-    onSave(editedDescription);
-    setIsEditing(false);
+    onSave(editedDescription),
+    setIsEditing(false),
     toast({
       title: "Description Saved",
       description: "Your edited description has been saved."})}
-    })};
+    })},
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">,
       <CardHeader>,
@@ -68,21 +68,21 @@ export function GeneratedDescriptionDisplay({
                 Edit,
               </>,
 interface GeneratedDescriptionDisplayProps {
-  description: string;
+  description: string,
   onSave: (editedDescription: string) => void}
 ,
 export function GeneratedDescriptionDisplay({
-  description;
+  description,
   onSave}: GeneratedDescriptionDisplayProps) {
-  const { toast } = useToast();
-  const [isEditing, setIsEditing] = useState(false);
-  const [editedDescription, setEditedDescription] = useState(description);
+  const { toast } = useToast(),
+  const [isEditing, setIsEditing] = useState(false),
+  const [editedDescription, setEditedDescription] = useState(description),
   const handleSave = () => {
-    onSave(editedDescription);
-    setIsEditing(false);
+    onSave(editedDescription),
+    setIsEditing(false),
     toast({
-      title: "Description Saved";
-      description: "Your edited description has been saved."})};
+      title: "Description Saved",
+      description: "Your edited description has been saved."})},
   return (
     <Card className="border border-zion-blue-light bg-zion-blue-dark">,
       <CardHeader>,
@@ -102,11 +102,11 @@ export function GeneratedDescriptionDisplay({
                 <Pencil className="h-4 w-4 mr-1" />,
                 Edit,
               </>)}
-  Card;
-  CardContent;
-  CardHeader;
-  CardTitle;
-  CardFooter;
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+  CardFooter,
 } from '@/components / ui / card',
 interface GeneratedDescriptionDisplayProps {
   description: string,
@@ -122,8 +122,8 @@ function GeneratedDescriptionDisplay() {
     on_save (edited_description),
     setIsEditing (false),
     toast ({
-      title: "Description Saved";
-      description: "Your edited description has been saved.";
+      title: "Description Saved",
+      description: "Your edited description has been saved."
     })}
 ,
   return (

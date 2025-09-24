@@ -1,23 +1,23 @@
 import Layout from '../components/layout/Layout',
 import {
-  Brain;
-  Sparkles;
-  Zap;
-  Target;
-  Users;
-  Award;
-  Clock;
-  CheckCircle;
-  Shield;
-  Globe;
-  Lock;
-  TrendingUp;
-  Building;
-  Star;
-  FileText;
-  Scale;
-  Gavel;
-  Handshake;
+  Brain,
+  Sparkles,
+  Zap,
+  Target,
+  Users,
+  Award,
+  Clock,
+  CheckCircle,
+  Shield,
+  Globe,
+  Lock,
+  TrendingUp,
+  Building,
+  Star,
+  FileText,
+  Scale,
+  Gavel,
+  Handshake,
 } from 'lucide-react',
 export default function TermsOfService() {
   return (
@@ -71,26 +71,26 @@ export default function TermsOfService() {
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Handshake className='w-12 h-12' />;
-                  title: 'Acceptance of Terms';
+                  icon: <Handshake className='w-12 h-12' />,
+                  title: 'Acceptance of Terms',
                   description:,
-                    'By using our services, you agree to be bound by these terms and conditions.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'By using our services, you agree to be bound by these terms and conditions.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Shield className='w-12 h-12' />;
-                  title: 'Service Usage';
+                  icon: <Shield className='w-12 h-12' />,
+                  title: 'Service Usage',
                   description:,
-                    'Our services are provided for lawful purposes and must be used in compliance with applicable laws.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Our services are provided for lawful purposes and must be used in compliance with applicable laws.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Scale className='w-12 h-12' />;
-                  title: 'Legal Compliance';
+                  icon: <Scale className='w-12 h-12' />,
+                  title: 'Legal Compliance',
                   description:,
-                    'Users must comply with all applicable laws, regulations, and industry standards.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Users must comply with all applicable laws, regulations, and industry standards.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
               ].map((term, index) => (
                 <div
                   key={index}
@@ -123,29 +123,25 @@ export default function TermsOfService() {
             <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'AI Consciousness Systems';
+                  title: 'AI Consciousness Systems',
                   description:,
-                    'Advanced artificial intelligence systems with consciousness and emotional intelligence capabilities.';
+                    'Advanced artificial intelligence systems with consciousness and emotional intelligence capabilities.',
                   features: [
-                    'AI model training and deployment';
-                    'Consciousness framework implementation';
-                    'Ethical AI development';
-                    'Performance optimization';
-                  ];
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'AI model training and deploymentConsciousness framework implementation',
+                    'Ethical AI developmentPerformance optimization',
+                  ],
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  title: 'Quantum Computing Solutions';
+                  title: 'Quantum Computing Solutions',
                   description:,
-                    'Quantum computing services for complex computational problems and optimization.';
+                    'Quantum computing services for complex computational problems and optimization.',
                   features: [
-                    'Quantum algorithm development';
-                    'Quantum simulation services';
-                    'Quantum cryptography';
-                    'Hardware integration';
-                  ];
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Quantum algorithm developmentQuantum simulation services',
+                    'Quantum cryptographyHardware integration',
+                  ],
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((service, index) => (
                 <div
                   key={index}
@@ -187,47 +183,47 @@ export default function TermsOfService() {
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Lock className='w-12 h-12' />;
-                  title: 'Account Security';
+                  icon: <Lock className='w-12 h-12' />,
+                  title: 'Account Security',
                   description:,
-                    'Maintain the security of your account credentials and notify us of any unauthorized access.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Maintain the security of your account credentials and notify us of any unauthorized access.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Shield className='w-12 h-12' />;
-                  title: 'Compliance';
+                  icon: <Shield className='w-12 h-12' />,
+                  title: 'Compliance',
                   description:,
-                    'Use our services in compliance with all applicable laws, regulations, and ethical guidelines.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Use our services in compliance with all applicable laws, regulations, and ethical guidelines.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Users className='w-12 h-12' />;
-                  title: 'Respectful Use';
+                  icon: <Users className='w-12 h-12' />,
+                  title: 'Respectful Use',
                   description:,
-                    'Use our services responsibly and respect the rights of other users and third parties.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Use our services responsibly and respect the rights of other users and third parties.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <FileText className='w-12 h-12' />;
-                  title: 'Accurate Information';
+                  icon: <FileText className='w-12 h-12' />,
+                  title: 'Accurate Information',
                   description:,
-                    'Provide accurate and truthful information when using our services.';
-                  color: 'from-orange-50o0 to-red-50o0';
-                };
+                    'Provide accurate and truthful information when using our services.',
+                  color: 'from-orange-50o0 to-red-50o0'
+                },
                 {
-                  icon: <Gavel className='w-12 h-12' />;
-                  title: 'Legal Use';
+                  icon: <Gavel className='w-12 h-12' />,
+                  title: 'Legal Use',
                   description:,
-                    'Ensure your use of our services does not violate any laws or regulations.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Ensure your use of our services does not violate any laws or regulations.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <TrendingUp className='w-12 h-12' />;
-                  title: 'Performance';
+                  icon: <TrendingUp className='w-12 h-12' />,
+                  title: 'Performance',
                   description:,
-                    'Use our services efficiently and avoid activities that could degrade window.window.performance.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'Use our services efficiently and avoid activities that could degrade window.window.performance.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
               ].map((responsibility, index) => (
                 <div
                   key={index}
@@ -260,28 +256,24 @@ export default function TermsOfService() {
             <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Security Violations';
+                  title: 'Security Violations',
                   activities: [
-                    'Attempting to gain unauthorized access to systems';
-                    'Interfering with service availability';
-                    'Introducing malware or harmful code';
-                    'Circumventing security measures';
-                  ];
-                  consequences: 'Immediate account suspension and legal action';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Attempting to gain unauthorized access to systemsInterfering with service availability',
+                    'Introducing malware or harmful codeCircumventing security measures',
+                  ],
+                  consequences: 'Immediate account suspension and legal action',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  title: 'Illegal Activities';
+                  title: 'Illegal Activities',
                   activities: [
-                    'Using services for illegal purposes';
-                    'Violating intellectual property rights';
-                    'Engaging in fraud or deception';
-                    'Violating privacy laws or regulations';
-                  ];
+                    'Using services for illegal purposesViolating intellectual property rights',
+                    'Engaging in fraud or deceptionViolating privacy laws or regulations',
+                  ],
                   consequences:,
-                    'Account termination and reporting to authorities';
-                  color: 'from-orange-50o0 to-red-50o0';
-                };
+                    'Account termination and reporting to authorities',
+                  color: 'from-orange-50o0 to-red-50o0'
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -333,25 +325,25 @@ export default function TermsOfService() {
                 <div className='space-y-6'>,
                   {[
                     {
-                      title: 'Our IP';
+                      title: 'Our IP',
                       description:,
-                        'Zion Tech Group retains all rights to our technology, software, and proprietary systems.';
-                    };
+                        'Zion Tech Group retains all rights to our technology, software, and proprietary systems.',
+                    },
                     {
-                      title: 'Your Content';
+                      title: 'Your Content',
                       description:,
-                        'You retain ownership of content you create using our services, subject to our terms.';
-                    };
+                        'You retain ownership of content you create using our services, subject to our terms.',
+                    },
                     {
-                      title: 'Licenses';
+                      title: 'Licenses',
                       description:,
-                        'We grant you limited licenses to use our services for their intended purposes.';
-                    };
+                        'We grant you limited licenses to use our services for their intended purposes.',
+                    },
                     {
-                      title: 'Restrictions';
+                      title: 'Restrictions',
                       description:,
-                        'You may not reverse engineer, copy, or redistribute our proprietary technology.';
-                    };
+                        'You may not reverse engineer, copy, or redistribute our proprietary technology.',
+                    },
                   ].map((right, index) => (
                     <div key={index} className='flex items-start gap-4'>,
                       <div className='w-3 h-3 bg-blue-50o0 rounded-full mt-2 flex-shrink-0'></div>,
@@ -384,9 +376,9 @@ export default function TermsOfService() {
             </p>,
             <div className='bg-gradient-to-br from-gray-80o0/50 to-gray-90o0/50 border border-gray-70o0/50 rounded-2xl p-8'>,
               <p className='text-gray-30o0 leading-relaxed'>,
-                Zion Tech Group shall not be liable for any indirect;
-                incidental, special, consequential, or punitive damages;
-                including but not limited to loss of profits, data, or use;
+                Zion Tech Group shall not be liable for any indirect,
+                incidental, special, consequential, or punitive damages,
+                including but not limited to loss of profits, data, or use,
                 arising out of or relating to these terms or your use of our,
                 services.,
               </p>,

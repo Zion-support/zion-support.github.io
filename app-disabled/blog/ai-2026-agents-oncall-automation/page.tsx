@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agents‑On‑Call Automation';
+  title: 'AI 20o26: Agents‑On‑Call Automation',
   description:,
-    'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.';
-};
+    'Autonomous triage, mitigation, and escalation with eval‑gated playbooks and deep observability.',
+},
 export default function AgentsOnCallAutomationPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

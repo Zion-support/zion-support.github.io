@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, LucideIcon } from 'lucide-react',
 interface Feature {
@@ -65,5 +65,5 @@ const FeaturesGrid: React.FC<FeaturesGridProps> = ({ features }) => {
             </motion.div>))}
         </div>,
       </div>,
-    </section>)};
-export default FeaturesGrid;
+    </section>)},
+export default FeaturesGrid,

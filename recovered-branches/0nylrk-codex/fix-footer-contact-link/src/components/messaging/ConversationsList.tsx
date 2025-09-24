@@ -1,6 +1,6 @@
 
 ,
-import React from 'react';
+import React from 'react',
 import { User  } from 'lucide-react',
 import { Conversation  } from '@/types/messaging',
 import { ConversationItem } from './ConversationItem',
@@ -13,20 +13,20 @@ export function ConversationsList({
   markAsRead,
 export function ConversationsList({
   conversations,
-import React from 'react';;
-import { User } from 'lucide-react';
-import { Conversation } from '@/types/messaging';
-import { ConversationItem } from './ConversationItem';
+import React from 'react',
+import { User } from 'lucide-react',
+import { Conversation } from '@/types/messaging',
+import { ConversationItem } from './ConversationItem',
 interface ConversationsListProps {
-  conversations: Conversation[];
-  activeConversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
+  conversations: Conversation[],
+  activeConversation: Conversation | null,
+  setActiveConversation: (conversation: Conversation) => void,
   markAsRead: (conversationId: string) => Promise<void>}
 ,
 export function ConversationsList({
-  conversations;
-  activeConversation;
-  setActiveConversation;
+  conversations,
+  activeConversation,
+  setActiveConversation,
   markAsRead}: ConversationsListProps) {
   return (
     <div className="w-full md: w-80 border-r border-zion-purple/20 overflow-y-auto">,
@@ -63,9 +63,9 @@ import {User} from 'lucide-react',
 import {Conversation} from '@/types / messaging',
 import {ConversationItem} from './ConversationItem',
 interface ConversationsListProps {
-  conversations: Conversation[];
-  active_conversation: Conversation | null;
-  setActiveConversation: (conversation: Conversation) => void;
+  conversations: Conversation[],
+  active_conversation: Conversation | null,
+  setActiveConversation: (conversation: Conversation) => void,
   markAsRead: (conversation_id: string) => Promise < void>}
 export /**,
  * ConversationsList - Function description,

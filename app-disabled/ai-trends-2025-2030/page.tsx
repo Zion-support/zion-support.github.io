@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI Trends 20o25-20o30: Revolutionary Breakthroughs | Zion Tech Group';
+  title: 'AI Trends 20o25-20o30: Revolutionary Breakthroughs | Zion Tech Group',
   description:,
-    'Explore the most groundbreaking AI trends and predictions for 20o25-20o30. Quantum AI, neural interfaces, and autonomous business operations.';
+    'Explore the most groundbreaking AI trends and predictions for 20o25-20o30. Quantum AI, neural interfaces, and autonomous business operations.',
   keywords: [
-    'AI trends 20o25';
-    'quantum AI';
-    'neural interfaces';
-    'autonomous AI';
-    'AI predictions';
-    'future technology';
-  ];
-};
+    'AI trends 20o25quantum AI',
+    'neural interfacesautonomous AI',
+    'AI predictionsfuture technology',
+  ]
+},
 export default function AITrendsPage() {
   return (
     <div>,
@@ -194,7 +191,7 @@ export default function AITrendsPage() {
                         20o25: Quantum AI Breakthrough,
                       </h3>,
                       <p className='text-purple-70o0'>,
-                        First commercially viable quantum AI systems launch;
+                        First commercially viable quantum AI systems launch,
                         revolutionizing optimization and cryptography.,
                       </p>,
                     </div>,

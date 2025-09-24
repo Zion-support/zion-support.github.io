@@ -16,7 +16,7 @@ export function ChatInput({ onSendisabled = false }: ChatInputProps) {
     if (message.trim() && !disabled) {
       onSend(message),
       setMessage('')}
-  };
+  },
   const handleKeyPress = (e: KeyboardEvent<HTMLTextAreaElement>) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
@@ -24,7 +24,7 @@ export function ChatInput({ onSendisabled = false }: ChatInputProps) {
         onSend(message),
         setMessage('')}
     }
-  };
+  },
   return (
     <form onSubmit={handleSubmit} className="flex items-end gap-2">,
       <textarea

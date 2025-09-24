@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Agents Red-Team Scenarios';
+  title: 'AI 20o26: Autonomous Agents Red-Team Scenarios',
   description:,
-    'Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden autonomous agents before production.';
+    'Catalog of adversarial scenarios, pass criteria, and CI/CD integration to harden autonomous agents before production.',
   keywords: [
-    'red team';
-    'adversarial testing';
-    'agent safety';
-    'evals';
-    'governance';
-  ];
-};
+    'red teamadversarial testing',
+    'agent safetyevals',
+    'governance',
+  ]
+},
 const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -47,7 +45,7 @@ const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {
           </ul>,
           <h3>Pass Criteria</h3>,
           <p>,
-            Define measurable criteria per scenario: block rate, containment;
+            Define measurable criteria per scenario: block rate, containment,
             and recovery time. Track regressions over time.,
           </p>,
           <h3>CI/CD Integration</h3>,
@@ -74,5 +72,5 @@ const AutonomousAgentsRedTeamScenariosPage: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default AutonomousAgentsRedTeamScenariosPage;
+    </div>)},
+export default AutonomousAgentsRedTeamScenariosPage,

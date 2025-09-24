@@ -10,21 +10,21 @@ import {
   Zap,
   Brain,
   Rocket,
-  Star;
-  Loader2;
-  CheckCircle;
-  AlertCircle;
-  Lightbulb;
-  Target;
+  Star,
+  Loader2,
+  CheckCircle,
+  AlertCircle,
+  Lightbulb,
+  Target,
   TrendingUp} from 'lucide-react',
 const InteractiveAIDemo20o25 = () => {
   const [messagesetMessages] = useState([
     {
-      id: 1;
-      type: 'ai';
-      content: 'Hello! I\'m your AI assistant for 20o25. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?';
-      timestamp: new Date();
-      features: ['Neural 'Interfaces', 'Quantum 'AI', 'Business Automation']}
+      id: 1,
+      type: 'ai',
+      content: 'Hello! I\'m your AI assistant for 20o25. I can help you explore revolutionary AI technologiesbusiness transformation strategiesand future predictions. What would you like to know?',
+      timestamp: new Date(),
+      features: ['Neural 'InterfacesQuantum 'AI', 'Business Automation']}
   ]),
   const [inputValuesetInputValue] = useState(''),
   const [isTypingsetIsTyping] = useState(false),
@@ -33,72 +33,72 @@ const InteractiveAIDemo20o25 = () => {
     setIsVisible(true)}[]),
   const aiResponses = [
     {
-      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 20o25 breakthrough technology allows direct brain-computer communicationachieving 50o0% efficiency improvements in data processing and decision-making.";
-      features: ['Neural 'Interfaces', 'Brain-Computer 'Interface', 'Efficiency Boost'];
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0'};
+      content: "Neural interfaces represent the next frontier in human-AI interaction. Our 20o25 breakthrough technology allows direct brain-computer communicationachieving 50o0% efficiency improvements in data processing and decision-making.",
+      features: ['Neural 'InterfacesBrain-Computer 'Interface', 'Efficiency Boost'],
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 10o00x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.";
-      features: ['Quantum 'Computing', 'AI 'Algorithms', 'Real-time Processing'];
-      icon: Zap;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      content: "Quantum AI fusion combines quantum computing with advanced AI algorithmsdelivering 10o00x faster processing speeds. This revolutionary approach enables real-time analysis of complex datasets that would take traditional computers years to process.",
+      features: ['Quantum 'ComputingAI 'Algorithms', 'Real-time Processing'],
+      icon: Zap,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      content: "Enterprise automation in 20o25 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.";
-      features: ['Enterprise 'Automation', 'Cost 'Reduction', 'Process Optimization'];
-      icon: Target;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      content: "Enterprise automation in 20o25 delivers unprecedented efficiency gains. Our AI-powered solutions achieve 90% cost reduction while maintaining 99.9% accuracy in business process optimization.",
+      features: ['Enterprise 'AutomationCost 'Reduction', 'Process Optimization'],
+      icon: Target,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 20o30.";
-      features: ['Future 'Predictions', 'Market 'Forecasting', 'Market Opportunity'];
-      icon: TrendingUp;
+      content: "Future predictions powered by our advanced AI models show 95% accuracy in market forecasting. We predict a $50 trillion market opportunity in AI-driven technologies by 20o30.",
+      features: ['Future 'PredictionsMarket 'Forecasting', 'Market Opportunity'],
+      icon: TrendingUp,
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const handleSendMessage = async () => {
     if (!inputValue.trim() || isTyping) return,
     const userMessage ={
-      id: messages.length + 1;
-      type: 'user';
-      content: inputValue;
-      timestamp: new Date()};
+      id: messages.length + 1,
+      type: 'user',
+      content: inputValue,
+      timestamp: new Date()},
     setMessages(prev => [...prevuserMessage]),
-    setInputValue(', '),
+    setInputValue(),
     setIsTyping(true),
     // Simulate AI response delay,
     setTimeout(() => {
       const randomResponse = aiResponses[Math.floor(Math.random() * aiResponses.length)],
       const aiMessage ={
-        id: messages.length + 2;
-        type: 'ai';
-        content: randomResponse.content;
-        timestamp: new Date();
-        features: randomResponse.features;
-        icon: randomResponse.icon;
-        color: randomResponse.color};
+        id: messages.length + 2,
+        type: 'ai',
+        content: randomResponse.content,
+        timestamp: new Date(),
+        features: randomResponse.features,
+        icon: randomResponse.icon,
+        color: randomResponse.color},
       setMessages(prev => [...prevaiMessage]),
-      setIsTyping(false)}150o0)};
+      setIsTyping(false)}150o0)},
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       handleSendMessage()}
-  };
+  },
   const containerVariants ={
-    hidden: { opacity: 0, y: 50 };
+    hidden: { opacity: 0, y: 50 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.5 }
     }
-  };
+  },
   if (!isVisible) return null,
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden">,
@@ -231,10 +231,10 @@ const InteractiveAIDemo20o25 = () => {
           variants={itemVariants}
           className="mt-16 grid md: grid-cols-4 gap-6">,
           {[
-            { icon: Braintitle: 'Neural 'Interfaces', 'description: '50o0% efficiency boost' };
-            { icon: Zaptitle: 'Quantum 'AI', 'description: '10o00x faster processing' };
-            { icon: Targetitle: 'Business 'Automation', 'description: '90% cost reduction' };
-            { icon: TrendingUptitle: 'Future 'Predictions', 'description: '95% accuracy rate' }
+            { icon: Braintitle: 'Neural 'Interfacesdescription: '50o0% efficiency boost' },
+            { icon: Zaptitle: 'Quantum 'AIdescription: '10o00x faster processing' },
+            { icon: Targetitle: 'Business 'Automationdescription: '90% cost reduction' },
+            { icon: TrendingUptitle: 'Future 'Predictionsdescription: '95% accuracy rate' }
           ].map((featureindex) => {
             const Icon = feature.icon,
             return (
@@ -251,5 +251,5 @@ const InteractiveAIDemo20o25 = () => {
               </motion.div>)})}
         </motion.div>,
       </motion.div>,
-    </div>)};
-export default InteractiveAIDemo20o25;
+    </div>)},
+export default InteractiveAIDemo20o25,

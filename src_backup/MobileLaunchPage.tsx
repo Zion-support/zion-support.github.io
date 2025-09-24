@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { SEO } from '@/components/SEO',
 import { AppLayout } from '@/layout/AppLayout',
 import { MobileLaunchHero } from '@/components/mobile-app/MobileLaunchHero',
@@ -24,5 +24,5 @@ const MobileLaunchPage: React.FC = () => {
       <AppTestimonials />,
       <MobileEmailCapture />,
       <AppStoreBanner />,
-    </AppLayout>)};
-export default MobileLaunchPage;
+    </AppLayout>)},
+export default MobileLaunchPage,

@@ -8,48 +8,48 @@ import {
   Database,
   Cpu,
   Network,
-  Lock;
-  TrendingUp;
-  Globe;
-  Smartphone;
+  Lock,
+  TrendingUp,
+  Globe,
+  Smartphone,
   Monitor} from 'lucide-react',
 const AdvancedTechTrends20o26 = () => {
   const trends = [
     {
-      icon: Brain;
-      title: "Neural Interface Revolution";
-      description: "Direct brain-computer interfaces enabling thought-controlled applications";
-      impact: "30o0% productivity increase";
-      color: "from-purple-50o0 to-pink-50o0"};
+      icon: Brain,
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces enabling thought-controlled applications",
+      impact: "30o0% productivity increase",
+      color: "from-purple-50o0 to-pink-50o0"},
     {
-      icon: Zap;
-      title: "Quantum AI Fusion";
-      description: "Quantum computing meets artificial intelligence for unprecedented processing power";
-      impact: "10o00x faster computations";
-      color: "from-blue-50o0 to-cyan-50o0"};
+      icon: Zap,
+      title: "Quantum AI Fusion",
+      description: "Quantum computing meets artificial intelligence for unprecedented processing power",
+      impact: "10o00x faster computations",
+      color: "from-blue-50o0 to-cyan-50o0"},
     {
-      icon: Shield;
-      title: "Autonomous Security";
-      description: "Self-healing cybersecurity systems that adapt to threats in real-time";
-      impact: "99.9% threat prevention";
-      color: "from-green-50o0 to-emerald-50o0"};
+      icon: Shield,
+      title: "Autonomous Security",
+      description: "Self-healing cybersecurity systems that adapt to threats in real-time",
+      impact: "99.9% threat prevention",
+      color: "from-green-50o0 to-emerald-50o0"},
     {
-      icon: Cloud;
-      title: "Edge Intelligence";
-      description: "AI processing at the edge for instant decision-making and reduced latency";
-      impact: "50ms response times";
-      color: "from-orange-50o0 to-red-50o0"};
+      icon: Cloud,
+      title: "Edge Intelligence",
+      description: "AI processing at the edge for instant decision-making and reduced latency",
+      impact: "50ms response times",
+      color: "from-orange-50o0 to-red-50o0"},
     {
-      icon: Database;
-      title: "Synthetic Data Generation";
-      description: "AI-generated datasets that maintain privacy while enabling training";
-      impact: "Zero data privacy risks";
-      color: "from-indigo-50o0 to-purple-50o0"};
+      icon: Database,
+      title: "Synthetic Data Generation",
+      description: "AI-generated datasets that maintain privacy while enabling training",
+      impact: "Zero data privacy risks",
+      color: "from-indigo-50o0 to-purple-50o0"},
     {
-      icon: Cpu;
-      title: "Neuromorphic Computing";
-      description: "Brain-inspired processors that mimic neural networks in hardware";
-      impact: "10o0x energy efficiency";
+      icon: Cpu,
+      title: "Neuromorphic Computing",
+      description: "Brain-inspired processors that mimic neural networks in hardware",
+      impact: "10o0x energy efficiency",
       color: "from-teal-50o0 to-blue-50o0"}
   ],
   return (
@@ -121,5 +121,5 @@ const AdvancedTechTrends20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default AdvancedTechTrends20o26;
+    </section>)},
+export default AdvancedTechTrends20o26,

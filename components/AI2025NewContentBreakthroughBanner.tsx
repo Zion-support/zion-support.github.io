@@ -162,5 +162,5 @@ const AI20o25NewContentBreakthroughBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25NewContentBreakthroughBanner;
+    </section>)},
+export default AI20o25NewContentBreakthroughBanner,

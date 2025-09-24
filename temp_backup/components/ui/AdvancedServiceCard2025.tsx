@@ -13,7 +13,7 @@ interface AdvancedService {
     starter: string,
     professional: string,
     enterprise: string,
-    custom?: string};
+    custom?: string},
   features: string[],
   benefits: string[],
   useCases: string[],
@@ -34,9 +34,9 @@ interface AdvancedServiceCard20o25Props {
   onClick?: () => void}
 ,
 const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
-  service;
-  variant = 'default';
-  className = '';
+  service,
+  variant = 'default',
+  className = '',
   onClick}) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
@@ -44,42 +44,42 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
   const variantStyles = useMemo(() => {
     if (variant === 'premium') {
       return {
-        container: 'border-cyan-40o0/50 bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20';
-        icon: <Crown className="w-5 h-5 text-yellow-40o0"  />;
-        badge: 'bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black';
-        button: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0';
-        text: 'text-cyan-50';
-        accent: 'bg-cyan-40o0'};
+        container: 'border-cyan-40o0/50 bg-gradient-to-br from-cyan-90o0/20 to-blue-90o0/20',
+        icon: <Crown className="w-5 h-5 text-yellow-40o0"  />,
+        badge: 'bg-gradient-to-r from-yellow-40o0 to-orange-50o0 text-black',
+        button: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0',
+        text: 'text-cyan-50',
+        accent: 'bg-cyan-40o0'},
     }
 ,
     if (variant === 'enterprise') {
       return {
-        container: 'border-purple-40o0/50 bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20';
-        icon: <Building className="w-5 h-5 text-purple-40o0"  />;
-        badge: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0';
-        button: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0';
-        text: 'text-purple-50';
-        accent: 'bg-purple-40o0'};
+        container: 'border-purple-40o0/50 bg-gradient-to-br from-purple-90o0/20 to-pink-90o0/20',
+        icon: <Building className="w-5 h-5 text-purple-40o0"  />,
+        badge: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0',
+        button: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0 hover:from-purple-60o0 hover:to-pink-70o0',
+        text: 'text-purple-50',
+        accent: 'bg-purple-40o0'},
     }
 ,
     if (variant === 'ai') {
       return {
-        container: 'border-blue-40o0/50 bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20';
-        icon: <Zap className="w-5 h-5 text-blue-40o0"  />;
-        badge: 'bg-gradient-to-r from-blue-50o0 to-indigo-60o0';
-        button: 'bg-gradient-to-r from-blue-50o0 to-indigo-60o0 hover:from-blue-60o0 hover:to-indigo-70o0';
-        text: 'text-blue-50';
-        accent: 'bg-blue-40o0'};
+        container: 'border-blue-40o0/50 bg-gradient-to-br from-blue-90o0/20 to-indigo-90o0/20',
+        icon: <Zap className="w-5 h-5 text-blue-40o0"  />,
+        badge: 'bg-gradient-to-r from-blue-50o0 to-indigo-60o0',
+        button: 'bg-gradient-to-r from-blue-50o0 to-indigo-60o0 hover:from-blue-60o0 hover:to-indigo-70o0',
+        text: 'text-blue-50',
+        accent: 'bg-blue-40o0'},
     }
 ,
     // Default variant,
     return {
-      container: 'border-gray-60o0/50 bg-gradient-to-br from-gray-80o0/20 to-gray-70o0/20';
-      icon: <Rocket className="w-5 h-5 text-cyan-40o0"  />;
-      badge: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0';
-      button: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0';
-      text: 'text-gray-50';
-      accent: 'bg-cyan-40o0'};
+      container: 'border-gray-60o0/50 bg-gradient-to-br from-gray-80o0/20 to-gray-70o0/20',
+      icon: <Rocket className="w-5 h-5 text-cyan-40o0"  />,
+      badge: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0',
+      button: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0',
+      text: 'text-gray-50',
+      accent: 'bg-cyan-40o0'},
   }, [variant]),
   const handleCardClick = useCallback(() => {
     if (onClick) {
@@ -93,7 +93,7 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
     if (category.includes('Security') || category.includes('Compliance')) return <Shield className="w-5 h-5 text-green-40o0"  />,
     if (category.includes('Infrastructure') || category.includes('Cloud')) return <Building className="w-5 h-5 text-purple-40o0"  />,
     if (category.includes('Quantum')) return <Star className="w-5 h-5 text-cyan-40o0"  />,
-    return <Rocket className="w-5 h-5 text-cyan-40o0"  />};
+    return <Rocket className="w-5 h-5 text-cyan-40o0"  />},
   return (
     <motion.div,
       className={`group relative overflow-hidden rounded-2xl transition-all duration-50o0 transform hover: scale-10o5 cursor-pointer ${className}`}
@@ -209,5 +209,5 @@ const AdvancedServiceCard20o25: React.FC<AdvancedServiceCard20o25Props> = ({
         animate={{ x: isHovered ? '10o0%' : '-10o0%' }}
         transition={{ duration: 0.6 }}
        />,
-    </motion.div>)};
-export default AdvancedServiceCard20o25;
+    </motion.div>)},
+export default AdvancedServiceCard20o25,

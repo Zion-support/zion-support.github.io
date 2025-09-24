@@ -7,114 +7,90 @@ const InteractiveAIAssessmentTool = () => {
   const [showResults, setShowResults] = useState(false),
   const questions = [
     {
-      id: 'industry';
-      question: 'What industry does your company operate in?';
-      type: 'select';
+      id: 'industry',
+      question: 'What industry does your company operate in?',
+      type: 'select',
       options: [
-        'Manufacturing';
-        'Healthcare';
-        'Financial Services';
-        'Retail/E-commerce';
-        'Technology';
-        'Logistics/Supply Chain';
-        'Energy/Utilities';
-        'Education';
-        'Real Estate';
-        'Other']};
+        'ManufacturingHealthcare',
+        'Financial ServicesRetail/E-commerce',
+        'TechnologyLogistics/Supply Chain',
+        'Energy/UtilitiesEducation',
+        'Real EstateOther']},
     {
-      id: 'company_size';
-      question: 'What is your company size?';
-      type: 'select';
+      id: 'company_size',
+      question: 'What is your company size?',
+      type: 'select',
       options: [
-        'Startup (1-10 employees)';
-        'Small Business (11-50 employees)';
-        'Medium Business (51-20o0 employees)';
-        'Large Business (20o1-10o00 employees)';
-        'Enterprise (10o00+ employees)']};
+        'Startup (1-10 employees)Small Business (11-50 employees)',
+        'Medium Business (51-20o0 employees)Large Business (20o1-10o00 employees)',
+        'Enterprise (10o00+ employees)']},
     {
-      id: 'current_challenges';
-      question: 'What are your biggest current challenges? (Select all that apply)';
-      type: 'checkbox';
+      id: 'current_challenges',
+      question: 'What are your biggest current challenges? (Select all that apply)',
+      type: 'checkbox',
       options: [
-        'Manual processes causing inefficiency';
-        'Data silos and poor integration';
-        'High operational costs';
-        'Poor customer experience';
-        'Compliance and regulatory issues';
-        'Outdated technology systems';
-        'Difficulty in decision making';
-        'Limited scalability';
-        'Security concerns';
-        'Talent acquisition and retention']};
+        'Manual processes causing inefficiencyData silos and poor integration',
+        'High operational costsPoor customer experience',
+        'Compliance and regulatory issuesOutdated technology systems',
+        'Difficulty in decision makingLimited scalability',
+        'Security concernsTalent acquisition and retention']},
     {
-      id: 'ai_readiness';
-      question: 'How would you rate your current AI readiness?';
-      type: 'radio';
+      id: 'ai_readiness',
+      question: 'How would you rate your current AI readiness?',
+      type: 'radio',
       options: [
-        'Not started - No AI initiatives';
-        'Exploring - Researching AI possibilities';
-        'Pilot phase - Testing AI solutions';
-        'Implementing - Rolling out AI projects';
-        'Advanced - AI is core to operations']};
+        'Not started - No AI initiativesExploring - Researching AI possibilities',
+        'Pilot phase - Testing AI solutionsImplementing - Rolling out AI projects',
+        'Advanced - AI is core to operations']},
     {
-      id: 'budget_range';
-      question: 'What is your approximate budget for AI transformation?';
-      type: 'select';
+      id: 'budget_range',
+      question: 'What is your approximate budget for AI transformation?',
+      type: 'select',
       options: [
-        'Under $50K';
-        '$50K - $10o0K';
-        '$10o0K - $50o0K';
-        '$50o0K - $1M';
-        '$1M - $5M';
-        '$5M+';
-        'Not sure yet']};
+        'Under $50K$50K - $10o0K',
+        '$10o0K - $50o0K$50o0K - $1M',
+        '$1M - $5M$5M+',
+        'Not sure yet']},
     {
-      id: 'timeline';
-      question: 'What is your preferred timeline for implementation?';
-      type: 'select';
+      id: 'timeline',
+      question: 'What is your preferred timeline for implementation?',
+      type: 'select',
       options: [
-        'Immediate (0-3 months)';
-        'Short-term (3-6 months)';
-        'Medium-term (6-12 months)';
-        'Long-term (1-2 years)';
-        'Flexible timeline']};
+        'Immediate (0-3 months)Short-term (3-6 months)',
+        'Medium-term (6-12 months)Long-term (1-2 years)',
+        'Flexible timeline']},
     {
-      id: 'goals';
-      question: 'What are your primary goals for AI implementation? (Select all that apply)';
-      type: 'checkbox';
+      id: 'goals',
+      question: 'What are your primary goals for AI implementation? (Select all that apply)',
+      type: 'checkbox',
       options: [
-        'Increase operational efficiency';
-        'Reduce costs';
-        'Improve customer experience';
-        'Enhance decision making';
-        'Automate repetitive tasks';
-        'Improve data insights';
-        'Increase revenue';
-        'Gain competitive advantage';
-        'Improve compliance';
-        'Scale operations']}
+        'Increase operational efficiencyReduce costs',
+        'Improve customer experienceEnhance decision making',
+        'Automate repetitive tasksImprove data insights',
+        'Increase revenueGain competitive advantage',
+        'Improve complianceScale operations']}
   ],
   const handleAnswer = (questionId, answer) => {
     setAnswers(prev => ({
-      ...prev;
-      [questionId]: answer}))};
+      ...prev,
+      [questionId]: answer}))},
   const calculateResults = () => {
     const results ={
-      aiReadiness: answers.ai_readiness || 'Not started';
-      industry: answers.industry || 'Technology';
-      companySize: answers.company_size || 'Medium Business';
-      challenges: answers.current_challenges || [];
-      goals: answers.goals || [];
-      budget: answers.budget_range || 'Not sure yet';
-      timeline: answers.timeline || 'Flexible timeline'};
+      aiReadiness: answers.ai_readiness || 'Not started',
+      industry: answers.industry || 'Technology',
+      companySize: answers.company_size || 'Medium Business',
+      challenges: answers.current_challenges || [],
+      goals: answers.goals || [],
+      budget: answers.budget_range || 'Not sure yet',
+      timeline: answers.timeline || 'Flexible timeline'},
     // Calculate AI maturity score,
     let maturityScore = 0,
     const readinessMap ={
-      'Not started - No AI initiatives': 0;
-      'Exploring - Researching AI possibilities': 1;
-      'Pilot phase - Testing AI solutions': 2;
-      'Implementing - Rolling out AI projects': 3;
-      'Advanced - AI is core to operations': 4};
+      'Not started - No AI initiatives': 0,
+      'Exploring - Researching AI possibilities': 1,
+      'Pilot phase - Testing AI solutions': 2,
+      'Implementing - Rolling out AI projects': 3,
+      'Advanced - AI is core to operations': 4},
     maturityScore += readinessMap[results.aiReadiness] || 0,
     // Add points for goals and challenges,
     maturityScore += results.goals.length * 0.5,
@@ -130,23 +106,23 @@ const InteractiveAIAssessmentTool = () => {
       recommendations.push('Explore advanced AI technologies')}
 ,
     return {
-      ...results;
-      maturityScore: Math.min(maturityScore, 10);
-      recommendations};
-  };
+      ...results,
+      maturityScore: Math.min(maturityScore, 10),
+      recommendations},
+  },
   const nextStep = () => {
     if (currentStep < questions.length - 1) {
       setCurrentStep(currentStep + 1)} else {
       setShowResults(true)}
-  };
+  },
   const prevStep = () => {
     if (currentStep > 0) {
       setCurrentStep(currentStep - 1)}
-  };
+  },
   const resetAssessment = () => {
     setCurrentStep(0),
     setAnswers({}),
-    setShowResults(false)};
+    setShowResults(false)},
   if (showResults) {
     const results = calculateResults(),
     return (
@@ -159,7 +135,7 @@ const InteractiveAIAssessmentTool = () => {
               </div>,
               <h2 className="text-3xl font-bold text-gray-90o0 mb-4">Your AI Transformation Roadmap</h2>,
               <p className="text-lg text-gray-60o0">,
-                Based on your responses, 'here', 's your personalized AI strategy and recommendations.,
+                Based on your responses, 'heres your personalized AI strategy and recommendations.,
               </p>,
             </div>,
             <div className="grid grid-cols-1 md: grid-cols-2 gap-8 mb-8">,
@@ -341,5 +317,5 @@ const InteractiveAIAssessmentTool = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveAIAssessmentTool;
+    </section>)},
+export default InteractiveAIAssessmentTool,

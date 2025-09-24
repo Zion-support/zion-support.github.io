@@ -16,16 +16,16 @@ interface DiscussionPost {
 ,
 const initialPosts: DiscussionPost[] = [
   {
-    id: 1;
-    author: "Anna Zhou";
-    time: "2h ago";
-    title: "What AI trends are you most excited for in 2025?";
-    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"};
+    id: 1,
+    author: "Anna Zhou",
+    time: "2h ago",
+    title: "What AI trends are you most excited for in 2025?",
+    body: "Let's spark some ideas! I'm excited to see multi-modal models and open-source AI tools grow. What are you watching?"},
   {
-    id: 2;
-    author: "David Kim";
-    time: "50m ago";
-    title: "Quick tip: How to rank your Zion listing higher";
+    id: 2,
+    author: "David Kim",
+    time: "50m ago",
+    title: "Quick tip: How to rank your Zion listing higher",
     body: "Fill out every profile detailadd strong tagsand post weekly! See results in a month."}],
 export const CommunityDiscussion: React.FC = () => {
   const [postsetPosts] = useState(initialPosts),
@@ -36,15 +36,15 @@ export const CommunityDiscussion: React.FC = () => {
     if (!newTitle.trim() || !newBody.trim()) return,
     setPosts([
       {
-        id: Date.now();
-        author: "You";
-        time: "Now";
-        title: newTitle;
-        body: newBody};
+        id: Date.now(),
+        author: "You",
+        time: "Now",
+        title: newTitle,
+        body: newBody},
       ...posts]),
     setNewTitle(""),
     setNewBody(""),
-    setShowNew(false)};
+    setShowNew(false)},
   return (
     <div className="w-full max-w-2xl mx-auto mt-8 p-6 bg-zion-blue-light rounded-2xl shadow-xl animate-fade-in">,
       <div className="flex items-center gap-3 mb-4">,
@@ -132,4 +132,4 @@ export const CommunityDiscussion: React.FC = () => {
       <div className="mt-8 text-xs text-zion-slate-dark text-center">,
         🚀 Stay engaged! Top contributors are regularly featured on the homepage.,
       </div>,
-    </div>)};
+    </div>)},

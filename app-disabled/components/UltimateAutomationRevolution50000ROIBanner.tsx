@@ -16,31 +16,31 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const contentItems: ContentItem[] = [
     {
-      id: 'ultimate-automation-revolution-50o000-roi';
-      title: 'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
-      roi: '50,0o00%';
-      savings: '$2.5 Trillion';
-      readingTime: '45 min read';
-      featured: true};
+      id: 'ultimate-automation-revolution-50o000-roi',
+      title: 'AI 20o25: The Ultimate Automation Revolution - 50,0o00% ROI Breakthrough Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
+      roi: '50,0o00%',
+      savings: '$2.5 Trillion',
+      readingTime: '45 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-ultimate-automation-50o000-roi';
-      title: 'Fortune 50o0 Ultimate Automation Success: $2.5 Trillion Annual Savings - 50,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-automation-50o000-roi-success-story';
-      roi: '50,0o00%';
-      savings: '$2.5 Trillion';
-      readingTime: '35 min read';
-      featured: true};
+      id: 'fortune-50o0-ultimate-automation-50o000-roi',
+      title: 'Fortune 50o0 Ultimate Automation Success: $2.5 Trillion Annual Savings - 50,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-automation-50o000-roi-success-story',
+      roi: '50,0o00%',
+      savings: '$2.5 Trillion',
+      readingTime: '35 min read',
+      featured: true},
     {
-      id: 'ultimate-automation-implementation-guide-50o000-roi';
-      title: 'Ultimate Automation Implementation Guide 20o25: Complete Roadmap to 50,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ultimate-automation-implementation-guide-50o000-roi';
-      roi: '50,0o00%';
-      savings: '$2.5 Trillion';
-      readingTime: '60 min read';
+      id: 'ultimate-automation-implementation-guide-50o000-roi',
+      title: 'Ultimate Automation Implementation Guide 20o25: Complete Roadmap to 50,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ultimate-automation-implementation-guide-50o000-roi',
+      roi: '50,0o00%',
+      savings: '$2.5 Trillion',
+      readingTime: '60 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -54,7 +54,7 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
   }, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimate-automation-50o000-roi-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-automation-50o000-roi-banner-dismissedtrue')},
   if (!isVisible) return null,
   const currentItem = contentItems[currentIndex],
   const getTypeIcon = (type: string) => {
@@ -63,14 +63,14 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
       case 'case-study': return '📊',
       case 'resource': return '📚',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'bg-blue-10o0 text-blue-80o0',
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated background elements */}
@@ -175,5 +175,5 @@ const UltimateAutomationRevolution50o000ROIBanner: React.FC = () => {
       </div>,
       {/* Bottom highlight bar */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-yellow-40o0 via-green-40o0 to-blue-40o0"></div>,
-    </div>)};
-export default UltimateAutomationRevolution50o000ROIBanner;
+    </div>)},
+export default UltimateAutomationRevolution50o000ROIBanner,

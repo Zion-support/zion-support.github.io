@@ -10,7 +10,7 @@ interface ContentItem {
   metrics: {
     roi: string,
     savings: string,
-    efficiency: string};
+    efficiency: string},
 }
 ,
 const AI20o25UltimateAutomationRevolutionBanner: React.FC = () => {
@@ -18,33 +18,33 @@ const AI20o25UltimateAutomationRevolutionBanner: React.FC = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const contentItems: ContentItem[] = [
     {
-      id: 'ultimate-automation-revolution';
-      title: 'AI 20o25: The Ultimate Business Automation Revolution - 25,0o00% ROI Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-business-automation-revolution';
+      id: 'ultimate-automation-revolution',
+      title: 'AI 20o25: The Ultimate Business Automation Revolution - 25,0o00% ROI Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-business-automation-revolution',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
+        roi: '25,0o00%',
+        savings: '$50o0B+',
         efficiency: '3,20o0%'}
-    };
+    },
     {
-      id: 'fortune-50o0-automation-success';
-      title: 'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-automation-250o00-roi-success';
+      id: 'fortune-50o0-automation-success',
+      title: 'Fortune 50o0 Ultimate Automation Success: $50o0B Annual Savings - 25,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-automation-250o00-roi-success',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B';
+        roi: '25,0o00%',
+        savings: '$50o0B',
         efficiency: '99%'}
-    };
+    },
     {
-      id: 'implementation-guide';
-      title: 'Ultimate AI Automation Implementation Guide: Complete Roadmap to 25,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ultimate-ai-automation-implementation-guide';
+      id: 'implementation-guide',
+      title: 'Ultimate AI Automation Implementation Guide: Complete Roadmap to 25,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ultimate-ai-automation-implementation-guide',
       metrics: {
-        roi: '25,0o00%';
-        savings: '$50o0B+';
+        roi: '25,0o00%',
+        savings: '$50o0B+',
         efficiency: '3,20o0%'}
     }
   ],
@@ -59,7 +59,7 @@ const AI20o25UltimateAutomationRevolutionBanner: React.FC = () => {
     return () => clearInterval(interval)}, [contentItems.length]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ai20o25-ultimate-automation-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-ultimate-automation-banner-dismissedtrue')},
   if (isDismissed) return null,
   const currentItem = contentItems[currentIndex],
   return (
@@ -146,5 +146,5 @@ const AI20o25UltimateAutomationRevolutionBanner: React.FC = () => {
             />))}
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateAutomationRevolutionBanner;
+    </div>)},
+export default AI20o25UltimateAutomationRevolutionBanner,

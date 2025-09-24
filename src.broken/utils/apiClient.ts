@@ -8,8 +8,8 @@ export class ApiError extends Error {
 }
 ,
 export async function apiClient(
-  input: RequestInfo | URL;
-  init?: RequestInit;
+  input: RequestInfo | URL,
+  init?: RequestInit,
   retries = 3): Promise<Response> {
   let lastError: unknown,
   for (let attempt = 0, attempt < retries, attempt++) {

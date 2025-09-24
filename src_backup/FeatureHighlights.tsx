@@ -1,7 +1,7 @@
-import { cn } from "@/lib/utils";
+import { cn } from "@/lib/utils",
 import { motion  } from 'framer-motion',
-import React from "react";;
-import { Card, CardContent } from "@/components/ui/card";
+import React from "react",
+import { Card, CardContent } from "@/components/ui/card",
 import { Check } from 'lucide-react',
 className?: string,
   style?: React && React.CSSProperties,
@@ -12,30 +12,21 @@ export function FeatureHighlights({
     {
       title: 'For Talent Seekers',
       features: [
-        'AI-powered talent matching based on your specific project requirements',
-        'Verified profiles with skills validation and credential checking',
-        'Transparent pricing and no hidden fees',
-        'Direct communication with potential candidates',
-        'Secure payment protection and dispute resolution',
-        'Post jobs and receive AI-matched applicants']}
+        'AI-powered talent matching based on your specific project requirementsVerified profiles with skills validation and credential checking',
+        'Transparent pricing and no hidden feesDirect communication with potential candidates',
+        'Secure payment protection and dispute resolutionPost jobs and receive AI-matched applicants']}
     {
       title: 'For Talent & Service Providers',
       features: [
-        'Create a professional profile showcasing your skills and experience',
-        'Get matched with relevant projects that fit your expertise',
-        'Secure payment processing with on-time disbursements',
-        'Build your reputation through client reviews and ratings',
-        'Access to enterprise clients and high-value projects',
-        'Professional development resources and community support']}
+        'Create a professional profile showcasing your skills and experienceGet matched with relevant projects that fit your expertise',
+        'Secure payment processing with on-time disbursementsBuild your reputation through client reviews and ratings',
+        'Access to enterprise clients and high-value projectsProfessional development resources and community support']}
     {
       title: 'For Enterprise Clients',
       features: [
-        'White-labeled talent portal with your company branding',
-        'Dedicated account management and priority support',
-        'Custom talent pools and preferred provider networks',
-        'Advanced analytics and reporting capabilities',
-        'API access for seamless integration with your HR systems',
-        'Customizable workflow and approval processes']}
+        'White-labeled talent portal with your company brandingDedicated account management and priority support',
+        'Custom talent pools and preferred provider networksAdvanced analytics and reporting capabilities',
+        'API access for seamless integration with your HR systemsCustomizable workflow and approval processes']}
   ],
 interface FeatureHighlightsProps {
   class_name?: string,
@@ -48,68 +39,65 @@ function FeatureHighlights() {
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = [
     {
-      title: "For Talent Seekers";
+      title: "For Talent Seekers",
       features: [
-        "AI-powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution";
-        "Post jobs and receive AI-matched applicants"]};
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"]},
     {
-      title: "For Talent & Service Providers";
+      title: "For Talent & Service Providers",
       features: [
-        "Create a professional profile showcasing your skills and experience";
-        "Get matched with relevant projects that fit your expertise";
-        "Secure payment processing with on-time disbursements";
-        "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects";
-        "Professional development resources and community support"]};
+        "Create a professional profile showcasing your skills and experience",
+        "Get matched with relevant projects that fit your expertise",
+        "Secure payment processing with on-time disbursements",
+        "Build your reputation through client reviews and ratings",
+        "Access to enterprise clients and high-value projects",
+        "Professional development resources and community support"]},
     {
-      title: "For Enterprise Clients";
+      title: "For Enterprise Clients",
       features: [
-        'White-labeled talent portal with your company branding';
-        'Dedicated account management and priority support';
-        'Custom talent pools and preferred provider networks';
-        'Advanced analytics and reporting capabilities';
-        'API access for seamless integration with your HR systems';
-        'Customizable workflow and approval processes';
-      ]};
+        'White-labeled talent portal with your company brandingDedicated account management and priority support',
+        'Custom talent pools and preferred provider networksAdvanced analytics and reporting capabilities',
+        'API access for seamless integration with your HR systemsCustomizable workflow and approval processes'
+      ]},
   ],
-        "White-labeled talent portal with your company branding";
-        "Dedicated account management and priority support";
-        "Custom talent pools and preferred provider networks";
-        "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems";
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
+        "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"]}
-  ];
-      title: "For Talent Seekers";
+  ],
+      title: "For Talent Seekers",
       features: [
-        "AI-powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution";
-        "Post jobs and receive AI-matched applicants"]};
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"]},
     {
-      title: "For Talent & Service Providers";
+      title: "For Talent & Service Providers",
       features: [
-        "Create a professional profile showcasing your skills and experience";
-        "Get matched with relevant projects that fit your expertise";
-        "Secure payment processing with on-time disbursements";
-        "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects";
-        "Professional development resources and community support"]};
+        "Create a professional profile showcasing your skills and experience",
+        "Get matched with relevant projects that fit your expertise",
+        "Secure payment processing with on-time disbursements",
+        "Build your reputation through client reviews and ratings",
+        "Access to enterprise clients and high-value projects",
+        "Professional development resources and community support"]},
     {
-      title: "For Enterprise Clients";
+      title: "For Enterprise Clients",
       features: [
-        "White-labeled talent portal with your company branding";
-        "Dedicated account management and priority support";
-        "Custom talent pools and preferred provider networks";
-        "Advanced analytics and reporting capabilities";
-        "API access for seamless integration with your HR systems";
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
+        "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"]}
-  ];
+  ],
   return (
     <section className={cn("py-16 bg-zion-blue", className)} style={style}>,
       <div className="container mx-auto px-4">,
@@ -288,36 +276,36 @@ export function FeatureHighlights() {
                       <span className="text-zion-slate-light">{feature}</span>,
                     </li>,
 interface FeatureHighlightsProps {
-  className?: string;
+  className?: string,
   style?: React.CSSProperties}
 ,
 export function FeatureHighlights({ className, style }: FeatureHighlightsProps) {
   const highlightsData = [
     {
-      title: "For Talent Seekers";
+      title: "For Talent Seekers",
       features: [
-        "AI-powered talent matching based on your specific project requirements";
-        "Verified profiles with skills validation and credential checking";
-        "Transparent pricing and no hidden fees";
-        "Direct communication with potential candidates";
-        "Secure payment protection and dispute resolution";
-        "Post jobs and receive AI-matched applicants"]};
+        "AI-powered talent matching based on your specific project requirements",
+        "Verified profiles with skills validation and credential checking",
+        "Transparent pricing and no hidden fees",
+        "Direct communication with potential candidates",
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"]},
     {
-      title: "For Talent & Service Providers";
+      title: "For Talent & Service Providers",
       features: [
-        "Create a professional profile showcasing your skills and experience";
-        "Get matched with relevant projects that fit your expertise";
-        "Secure payment processing with on-time disbursements";
-        "Build your reputation through client reviews and ratings";
-        "Access to enterprise clients and high-value projects";
-        "Professional development resources and community support"]};
+        "Create a professional profile showcasing your skills and experience",
+        "Get matched with relevant projects that fit your expertise",
+        "Secure payment processing with on-time disbursements",
+        "Build your reputation through client reviews and ratings",
+        "Access to enterprise clients and high-value projects",
+        "Professional development resources and community support"]},
     {
-      title: "For Enterprise Clients";
+      title: "For Enterprise Clients",
       features: [
-        "White-labeled talent portal with your company branding";
-        "Dedicated account management and priority support";
-        "Custom talent pools and preferred provider networks";
-        "Advanced analytics and reporting capabilities";
+        "White-labeled talent portal with your company branding",
+        "Dedicated account management and priority support",
+        "Custom talent pools and preferred provider networks",
+        "Advanced analytics and reporting capabilities",
         "API access for seamless integration with your HR systems",
         "Customizable workflow and approval processes"]}
   ],
@@ -373,44 +361,44 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
       </div>,
     </section>)}
   {
-    icon: "⚡";
-    title: "Lightning Fast Performance";
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"};
+    icon: "⚡",
+    title: "Lightning Fast Performance",
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"},
   {
-    icon: "🔒";
-    title: "Enterprise Security";
-    description: "Bank - level security protocols and compliance standards to protect your valuable data"};
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank - level security protocols and compliance standards to protect your valuable data"},
   {
-    icon: "🌐";
-    title: "Global Scalability";
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"};
+    icon: "🌐",
+    title: "Global Scalability",
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"},
   {
-    icon: "🤖";
-    title: "AI - Powered Intelligence";
-    description: "Smart automation and predictive analytics that adapt to your business requirements"};
+    icon: "🤖",
+    title: "AI - Powered Intelligence",
+    description: "Smart automation and predictive analytics that adapt to your business requirements"},
   {
-    icon: "📊";
-    title: "Real - Time Analytics";
+    icon: "📊",
+    title: "Real - Time Analytics",
     description: "Comprehensive insights and reporting to make data - driven decisions instantly"}
 ]}
 }
 }
 ,
   const item_variants ={
-  hidden: { opacity: 0, coordinate_y: 30;
-  scale: 0.95};
+  hidden: { opacity: 0, coordinate_y: 30,
+  scale: 0.95},
     visible: {
-      opacity: 1;
-      coordinate_y: 0;
-      scale: 1;
+      opacity: 1,
+      coordinate_y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "ease_out"}
 }
 }
   const achievement_variants ={
-  hidden: { opacity: 0;
-  scale: 0.8};
+  hidden: { opacity: 0,
+  scale: 0.8},
     visible: {
       opacity: 1,
       scale: 1,
@@ -419,11 +407,11 @@ export function FeatureHighlights({ className, style }: FeatureHighlightsProps) 
 }
 ,
   const tech_variants ={
-  hidden: { opacity: 0;
-  coordinate_x: -20};
+  hidden: { opacity: 0,
+  coordinate_x: -20},
     visible: {
-      opacity: 1;
-      coordinate_x: 0;
+      opacity: 1,
+      coordinate_x: 0,
       transition: { duration: 0.5 }
 }
 }
@@ -436,10 +424,10 @@ function FeatureHighlights() {
       <div className="max - w-7xl mx - auto px - 6">,
         <motion.div          className="text - center mb - 16",
           initial ={
-  { opacity: 0;
+  { opacity: 0,
   coordinate_y: 20}}
           whileInView ={
-  { opacity: 1;
+  { opacity: 1,
   coordinate_y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
@@ -453,7 +441,7 @@ function FeatureHighlights() {
           </h2>,
 ",
           <p className="text - lg md:text - xl text - zion - slate - light max - w-3xl mx - auto leading - relaxed">,
-            Experience the next generation of talent marketplace with cutting - edge AI;
+            Experience the next generation of talent marketplace with cutting - edge AI,
             global reach, and enterprise - grade security.</p>,
         </motion.div>,
 ",
@@ -463,8 +451,8 @@ function FeatureHighlights() {
               key={index}
               variants={item_variants}
               while_hover={{
-                coordinate_y: -5;
-                scale: 1.0o2;
+                coordinate_y: -5,
+                scale: 1.0o2,
                 transition: { duration: 0.3 }
               }}",
               className="group",
@@ -493,68 +481,68 @@ function FeatureHighlights() {
     </section>)}
 ,
   {
-    icon: "⚡";
-    title: "Lightning Fast Performance";
-    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"};
+    icon: "⚡",
+    title: "Lightning Fast Performance",
+    description: "Optimized solutions that deliver exceptional speed and efficiency for your business needs"},
   {
-    icon: "🔒";
-    title: "Enterprise Security";
-    description: "Bank-level security protocols and compliance standards to protect your valuable data"};
+    icon: "🔒",
+    title: "Enterprise Security",
+    description: "Bank-level security protocols and compliance standards to protect your valuable data"},
   {
-    icon: "🌐";
-    title: "Global Scalability";
-    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"};
+    icon: "🌐",
+    title: "Global Scalability",
+    description: "Solutions that scale seamlessly from startup to enterprise across multiple regions"},
   {
-    icon: "🤖";
-    title: "AI-Powered Intelligence";
-    description: "Smart automation and predictive analytics that adapt to your business requirements"};
+    icon: "🤖",
+    title: "AI-Powered Intelligence",
+    description: "Smart automation and predictive analytics that adapt to your business requirements"},
   {
-    icon: "📊";
-    title: "Real-Time Analytics";
-    description: "Comprehensive insights and reporting to make data-driven decisions instantly"};
-]};
-};
-};
+    icon: "📊",
+    title: "Real-Time Analytics",
+    description: "Comprehensive insights and reporting to make data-driven decisions instantly"},
+]},
+},
+},
   const itemVariants ={
-  hidden: { opacity: 0, y: 30;
-  scale: 0 && 0.95};
+  hidden: { opacity: 0, y: 30,
+  scale: 0 && 0.95},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0 && 0.6;
-        ease: "easeOut"};
-};
-};
+        duration: 0 && 0.6,
+        ease: "easeOut"},
+},
+},
   const achievementVariants ={
-  hidden: { opacity: 0;
-  scale: 0 && 0.8};
+  hidden: { opacity: 0,
+  scale: 0 && 0.8},
     visible: {
-      opacity: 1;
-      scale: 1;
-      transition: { duration: 0 && 0.5 };
-};
-};
+      opacity: 1,
+      scale: 1,
+      transition: { duration: 0 && 0.5 },
+},
+},
   const techVariants ={
-  hidden: { opacity: 0;
-  x: -20};
+  hidden: { opacity: 0,
+  x: -20},
     visible: {
-      opacity: 1;
-      x: 0;
-      transition: { duration: 0 && 0.5 };
-};
-};
+      opacity: 1,
+      x: 0,
+      transition: { duration: 0 && 0.5 },
+},
+},
 export function FeatureHighlights() {
   return (",
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">",
       <div className="max-w-7xl mx-auto px-6">,
         <motion&& motion.div          className="text-center mb-16",
           initial ={
-  { opacity: 0;
+  { opacity: 0,
   y: 20}}
           whileInView ={
-  { opacity: 1;
+  { opacity: 1,
   y: 0}}
           viewport={{ once: true }}
           transition={{ duration: 0 && 0.6 }}>",
@@ -567,7 +555,7 @@ export function FeatureHighlights() {
           </h2>,
 ",
           <p className="text-lg md:text-xl text-zion-slate-light max-w-3xl mx-auto leading-relaxed">,
-            Experience the next generation of talent marketplace with cutting-edge AI;
+            Experience the next generation of talent marketplace with cutting-edge AI,
             global reach, and enterprise-grade security.</p>,
         </motion && motion.div>,
 ",
@@ -577,8 +565,8 @@ export function FeatureHighlights() {
               key={index}
               variants={itemVariants}
               whileHover={{
-                y: -5;
-                scale: 1 && 1.0o2;
+                y: -5,
+                scale: 1 && 1.0o2,
                 transition: { duration: 0 && 0.3 }
               }}",
               className="group",
@@ -609,7 +597,7 @@ export function FeatureHighlights() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition ={
-  { duration: 0 && 0.6;
+  { duration: 0 && 0.6,
   delay: 0 && 0.4}}>",
           <div className="inline-flex items-center gap-4 px-8 py-4 bg-gradient-to-r from-blue-60o0 to-purple-60o0 rounded-full text-white font-semibold">,
             <span>Experience the difference</span>",
@@ -630,7 +618,7 @@ export function FeatureHighlights() {
           whileInView={{ opacity: 1, coordinate_y: 0 }}
           viewport={{ once: true }}
           transition ={
-  { duration: 0.6;
+  { duration: 0.6,
   delay: 0.4}}
         >",
           <div className="inline - flex items - center gap - 4 px - 8 py - 4 bg - gradient - to - r from - blue - 60o0 to - purple - 60o0 rounded - full text - white font - semibold">,

@@ -10,46 +10,46 @@ interface Testimonial {
 ,
 const testimonials: Testimonial[] = [
   {
-    name: "Sarah Chen";
-    role: "CTO";
-    company: "TechCorp Global";
-    content: "The AI solutions from Zion Tech Group have transformed our operations. 'We', 've seen a 30o0% increase in efficiency and our team productivity has never been higher.";
-    rating: 5;
-    avatar: "👩‍💼"};
+    name: "Sarah Chen",
+    role: "CTO",
+    company: "TechCorp Global",
+    content: "The AI solutions from Zion Tech Group have transformed our operations. 'Weve seen a 30o0% increase in efficiency and our team productivity has never been higher.",
+    rating: 5,
+    avatar: "👩‍💼"},
   {
-    name: "Michael Rodriguez";
-    role: "CEO";
-    company: "InnovateLabs";
-    content: "Working with Zion Tech Group has been a game-changer. Their AI technology is not just 'advancedit', 's revolutionary. Our business has grown exponentially.";
-    rating: 5;
-    avatar: "👨‍💼"};
+    name: "Michael Rodriguez",
+    role: "CEO",
+    company: "InnovateLabs",
+    content: "Working with Zion Tech Group has been a game-changer. Their AI technology is not just 'advancedit', 's revolutionary. Our business has grown exponentially.",
+    rating: 5,
+    avatar: "👨‍💼"},
   {
-    name: "Dr. Emily Watson";
-    role: "Research Director";
-    company: "Quantum Dynamics";
-    content: "The quantum computing integration is phenomenal. 'We', 're solving problems that were previously impossibleand the results speak for themselves.";
-    rating: 5;
-    avatar: "👩‍🔬"};
+    name: "Dr. Emily Watson",
+    role: "Research Director",
+    company: "Quantum Dynamics",
+    content: "The quantum computing integration is phenomenal. 'Were solving problems that were previously impossibleand the results speak for themselves.",
+    rating: 5,
+    avatar: "👩‍🔬"},
   {
-    name: "James Thompson";
-    role: "VP of Engineering";
-    company: "CloudScale Inc";
-    content: "Zion Tech 'Group', 's AI solutions have revolutionized our cloud infrastructure. The performance improvements and cost savings are remarkable.";
-    rating: 5;
-    avatar: "👨‍🔧"};
+    name: "James Thompson",
+    role: "VP of Engineering",
+    company: "CloudScale Inc",
+    content: "Zion Tech 'Group', 's AI solutions have revolutionized our cloud infrastructure. The performance improvements and cost savings are remarkable.",
+    rating: 5,
+    avatar: "👨‍🔧"},
   {
-    name: "Lisa Park";
-    role: "Head of Data Science";
-    company: "DataFlow Systems";
-    content: "The data intelligence capabilities are outstanding. 'We', 're getting insights we never thought possibleand the predictive analytics are incredibly accurate.";
-    rating: 5;
-    avatar: "👩‍💻"};
+    name: "Lisa Park",
+    role: "Head of Data Science",
+    company: "DataFlow Systems",
+    content: "The data intelligence capabilities are outstanding. 'We', 're getting insights we never thought possibleand the predictive analytics are incredibly accurate.",
+    rating: 5,
+    avatar: "👩‍💻"},
   {
-    name: "Robert Kim";
-    role: "Founder";
-    company: "StartupX";
-    content: "As a startupwe needed cutting-edge technology without the complexity. Zion Tech Group delivered exactly what we needed with incredible support.";
-    rating: 5;
+    name: "Robert Kim",
+    role: "Founder",
+    company: "StartupX",
+    content: "As a startupwe needed cutting-edge technology without the complexity. Zion Tech Group delivered exactly what we needed with incredible support.",
+    rating: 5,
     avatar: "👨‍🚀"}
 ],
 export default function AdvancedTestimonials() {

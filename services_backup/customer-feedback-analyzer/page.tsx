@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Customer Feedback Analyzer | Zion Tech Group';
+  title: 'Customer Feedback Analyzer | Zion Tech Group',
   description:,
-    'Transform customer feedback into actionable insights with AI-powered sentiment analysis, trend detection, and automated reporting.';
-};
+    'Transform customer feedback into actionable insights with AI-powered sentiment analysis, trend detection, and automated reporting.',
+},
 export default function CustomerFeedbackAnalyzerPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -17,28 +17,22 @@ export default function CustomerFeedbackAnalyzerPage() {
         <FeatureCard
           title='AI Sentiment Analysis',
           features={[
-            'Real-time sentiment scoring';
-            'Emotion detection';
-            'Language processing';
-            'Multi-language support';
+            'Real-time sentiment scoringEmotion detection',
+            'Language processingMulti-language support',
           ]}
         />,
         <FeatureCard
           title='Trend Detection',
           features={[
-            'Pattern recognition';
-            'Issue prioritization';
-            'Performance tracking';
-            'Predictive insights';
+            'Pattern recognitionIssue prioritization',
+            'Performance trackingPredictive insights',
           ]}
         />,
         <FeatureCard
           title='Automated Reporting',
           features={[
-            'Custom dashboards';
-            'Scheduled reports';
-            'Alert notifications';
-            'Executive summaries';
+            'Custom dashboardsScheduled reports',
+            'Alert notificationsExecutive summaries',
           ]}
         />,
       </div>,
@@ -120,8 +114,8 @@ export default function CustomerFeedbackAnalyzerPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -147,21 +141,17 @@ function Pricing() {
           name='Starter',
           price='$149/mo',
           features={[
-            'Up to 1,0o00 feedback items';
-            'Basic sentiment analysis';
-            'Monthly reports';
-            'Email support';
+            'Up to 1,0o00 feedback itemsBasic sentiment analysis',
+            'Monthly reportsEmail support',
           ]}
         />,
         <Plan
           name='Professional',
           price='$399/mo',
           features={[
-            'Up to 10,0o00 feedback items';
-            'Advanced AI analysis';
-            'Real-time dashboards';
-            'Priority support';
-            'Custom integrations';
+            'Up to 10,0o00 feedback itemsAdvanced AI analysis',
+            'Real-time dashboardsPriority support',
+            'Custom integrations',
           ]}
           popular={true}
         />,
@@ -169,21 +159,19 @@ function Pricing() {
           name='Enterprise',
           price='$899/mo',
           features={[
-            'Unlimited feedback items';
-            'Custom AI models';
-            'White-label solution';
-            'Dedicated support';
-            'API access';
+            'Unlimited feedback itemsCustom AI models',
+            'White-label solutionDedicated support',
+            'API access',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

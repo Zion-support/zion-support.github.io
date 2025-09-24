@@ -2,19 +2,19 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Check;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Brain;
-  Building;
-  Target;
-  Zap;
-  Shield;
-  Globe;
-  Grid;
+  Check,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Building,
+  Target,
+  Zap,
+  Shield,
+  Globe,
+  Grid,
 } from 'lucide-react',
 // Import our new service data,
 import { innovativeMicroSaasExpansionV2 } from '../data/20o25-innovative-micro-saas-expansion-v2',
@@ -22,32 +22,32 @@ import { innovativeITInfrastructureExpansion } from '../data/20o25-innovative-it
 import { innovativeAIServicesExpansion } from '../data/20o25-innovative-ai-services-expansion',
 // Create unified services array,
 const allNewServices = [
-  ...innovativeMicroSaasExpansionV2;
-  ...innovativeITInfrastructureExpansion;
-  ...innovativeAIServicesExpansion;
+  ...innovativeMicroSaasExpansionV2,
+  ...innovativeITInfrastructureExpansion,
+  ...innovativeAIServicesExpansion,
 ],
 const serviceCategories = [
   {
-    id: 'micro-saas';
-    name: 'Micro SAAS Solutions';
-    icon: <Target className='w-6 h-6' />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    services: innovativeMicroSaasExpansionV2;
-  };
+    id: 'micro-saas',
+    name: 'Micro SAAS Solutions',
+    icon: <Target className='w-6 h-6' />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: innovativeMicroSaasExpansionV2
+  },
   {
-    id: 'it-infrastructure';
-    name: 'IT Infrastructure';
-    icon: <Building className='w-6 h-6' />;
-    color: 'from-indigo-50o0 to-purple-50o0';
-    services: innovativeITInfrastructureExpansion;
-  };
+    id: 'it-infrastructure',
+    name: 'IT Infrastructure',
+    icon: <Building className='w-6 h-6' />,
+    color: 'from-indigo-50o0 to-purple-50o0',
+    services: innovativeITInfrastructureExpansion
+  },
   {
-    id: 'ai-services';
-    name: 'AI Services';
-    icon: <Brain className='w-6 h-6' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    services: innovativeAIServicesExpansion;
-  };
+    id: 'ai-services',
+    name: 'AI Services',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    services: innovativeAIServicesExpansion
+  },
 ],
 export default function ComprehensivePricingExpansion20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -63,11 +63,9 @@ export default function ComprehensivePricingExpansion20o25() {
         title='20o25 Comprehensive Pricing Expansion - Zion Tech Group',
         description='Explore our latest innovative services pricing. Micro SAAS, IT infrastructure, and AI services with competitive pricing and exceptional value.',
         keywords={[
-          'pricing';
-          'micro SAAS pricing';
-          'IT infrastructure pricing';
-          'AI services pricing';
-          'Zion Tech Group';
+          'pricingmicro SAAS pricing',
+          'IT infrastructure pricingAI services pricing',
+          'Zion Tech Group',
         ]}
         image='/og-image.svg',
       />,

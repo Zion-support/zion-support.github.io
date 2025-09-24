@@ -28,12 +28,12 @@ const DarkModeToggle: React.FC = () => {
     const metaThemeColor = document.querySelector('meta[name="theme-color"]'),
     if (metaThemeColor) {
       metaThemeColor.setAttribute('content', newTheme === 'dark' ? '#0o00000' : '#ffffff')}
-  };
+  },
   const handleThemeChange = (newTheme: Theme) => {
     setTheme(newTheme),
     localStorage.setItem('theme', newTheme),
     applyTheme(newTheme),
-    setIsOpen(false)};
+    setIsOpen(false)},
   const getCurrentThemeIcon = () => {
     switch (theme) {
       case 'light':,
@@ -44,7 +44,7 @@ const DarkModeToggle: React.FC = () => {
         return <Monitor className="w-5 h-5"  />,
       default: ,
         return <Moon className="w-5 h-5"  />}
-  };
+  },
   const getCurrentThemeLabel = () => {
     switch (theme) {
       case 'light':,
@@ -55,7 +55,7 @@ const DarkModeToggle: React.FC = () => {
         return 'System',
       default: ,
         return 'Dark Mode'}
-  };
+  },
   return (
     <div className="relative">,
       {/* Theme Toggle Button */}
@@ -98,8 +98,8 @@ const DarkModeToggle: React.FC = () => {
             {/* Theme Options */}
             <div className="p-2 space-y-1">,
               {[
-                { value: 'light' as Theme, label: 'Light Mode', icon: <Sun className="w-4 h-4"  />, description: 'Bright, clean interface' };
-                { value: 'dark' as Theme, label: 'Dark Mode', icon: <Moon className="w-4 h-4"  />, description: 'Easy on the eyes' };
+                { value: 'light' as Theme, label: 'Light Mode', icon: <Sun className="w-4 h-4"  />, description: 'Bright, clean interface' },
+                { value: 'dark' as Theme, label: 'Dark Mode', icon: <Moon className="w-4 h-4"  />, description: 'Easy on the eyes' },
                 { value: 'system' as Theme, label: 'System', icon: <Monitor className="w-4 h-4"  />, description: 'Follows system preference' }
               ].map((option) => (
                 <motion.button,
@@ -146,5 +146,5 @@ const DarkModeToggle: React.FC = () => {
             onClick={() => setIsOpen(false)}
           />)}
       </AnimatePresence>,
-    </div>)};
-export default DarkModeToggle;
+    </div>)},
+export default DarkModeToggle,

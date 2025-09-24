@@ -5,77 +5,77 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
   const [activeTab, setActiveTab] = useState('all'),
   const content = [
     {
-      id: 'revolutionary-breakthrough-guide';
+      id: 'revolutionary-breakthrough-guide',
       title:,
-        'AI 20o25: The Revolutionary Breakthrough - Ultimate Success Guide';
-      type: 'blog';
-      category: 'AI Revolution';
+        'AI 20o25: The Revolutionary Breakthrough - Ultimate Success Guide',
+      type: 'blog',
+      category: 'AI Revolution',
       description:,
-        'Transform Your Business with Next-Generation AI That Delivers 2,50o0% ROI';
+        'Transform Your Business with Next-Generation AI That Delivers 2,50o0% ROI',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$45.2B';
-        accuracy: '99.7%';
-      };
-      readingTime: '25 min read';
-      link: '/blog/ai-20o25-revolutionary-breakthrough-ultimate-success-guide';
-      featured: true;
-      isNew: true;
-    };
+        roi: '2,50o0%',
+        savings: '$45.2B',
+        accuracy: '99.7%'
+      },
+      readingTime: '25 min read',
+      link: '/blog/ai-20o25-revolutionary-breakthrough-ultimate-success-guide',
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'fortune-50o0-case-study';
+      id: 'fortune-50o0-case-study',
       title:,
-        'Fortune 50o0 AI Transformation: $45.2B Annual Savings - 2,50o0% ROI Success Story';
-      type: 'case-study';
-      category: 'Success Stories';
+        'Fortune 50o0 AI Transformation: $45.2B Annual Savings - 2,50o0% ROI Success Story',
+      type: 'case-study',
+      category: 'Success Stories',
       description:,
-        'How a Global Manufacturing Leader Achieved Unprecedented Results with AI 20o25 Implementation';
+        'How a Global Manufacturing Leader Achieved Unprecedented Results with AI 20o25 Implementation',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$45.2B';
-        timeline: '18 months';
-      };
-      readingTime: '18 min read';
-      link: '/case-studies/fortune-50o0-ai-transformation-250o0-roi-ultimate-success';
-      featured: true;
-      isNew: true;
-    };
+        roi: '2,50o0%',
+        savings: '$45.2B',
+        timeline: '18 months'
+      },
+      readingTime: '18 min read',
+      link: '/case-studies/fortune-50o0-ai-transformation-250o0-roi-ultimate-success',
+      featured: true,
+      isNew: true
+    },
     {
-      id: 'implementation-roadmap';
+      id: 'implementation-roadmap',
       title:,
-        'AI 20o25 Implementation Ultimate Roadmap: Complete Guide to 2,50o0% ROI';
-      type: 'resource';
-      category: 'Implementation';
+        'AI 20o25 Implementation Ultimate Roadmap: Complete Guide to 2,50o0% ROI',
+      type: 'resource',
+      category: 'Implementation',
       description:,
-        'The Definitive Step-by-Step Guide to Transforming Your Business with Next-Generation AI';
+        'The Definitive Step-by-Step Guide to Transforming Your Business with Next-Generation AI',
       metrics: {
-        success: '94%';
-        payback: '3.8 months';
-        roi: '2,50o0%';
-      };
-      readingTime: '35 min read';
-      link: '/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi';
-      featured: true;
-      isNew: true;
-    };
+        success: '94%',
+        payback: '3.8 months',
+        roi: '2,50o0%',
+      },
+      readingTime: '35 min read',
+      link: '/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi',
+      featured: true,
+      isNew: true
+    },
   ],
   const tabs = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(c => c.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(c => c.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(c => c.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(c => c.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(c => c.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(c => c.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeTab === 'all',
@@ -91,7 +91,7 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -102,7 +102,7 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
         return 'from-purple-50o0 to-pink-50o0',
       default:,
         return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -175,7 +175,7 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
                   <div className='flex items-center space-x-2'>,
                     <span className='text-2xl'>{getTypeIcon(item.type)}</span>,
                     <span className='text-sm font-medium text-gray-50o0 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   <div className='flex items-center space-x-2'>,
@@ -274,5 +274,5 @@ const RevolutionaryBreakthrough20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryBreakthrough20o25Showcase;
+    </section>)},
+export default RevolutionaryBreakthrough20o25Showcase,

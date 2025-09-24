@@ -1,42 +1,37 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  TagIcon;
-  BuildingOfficeIcon;
-  ChartBarIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  TagIcon,
+  BuildingOfficeIcon,
+  ChartBarIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story';
+    'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story',
   description:,
-    'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies, resulting in $2.5 trillion annual savings.';
+    'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies, resulting in $2.5 trillion annual savings.',
   keywords: [
-    'Fortune 50o0';
-    'Success Story';
-    'Manufacturing';
-    '10o0,0o00% ROI';
-    'TechGlobal Industries';
-    'AI Transformation';
-  ];
+    'Fortune 50o0Success Story',
+    'Manufacturing10o0,0o00% ROI',
+    'TechGlobal IndustriesAI Transformation',
+  ],
   openGraph: {
     title:,
-      'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story';
+      'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story',
     description:,
-      'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Fortune 50o0';
-      'Success Story';
-      'Manufacturing';
-      'AI Transformation';
-    ];
-  };
-};
+      'Fortune 50o0Success Story',
+      'ManufacturingAI Transformation',
+    ]
+  },
+},
 export default function Fortune50o0SuccessStoryPage() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -154,7 +149,7 @@ export default function Fortune50o0SuccessStoryPage() {
           <div className='prose prose-lg max-w-none'>,
             <h2>Executive Summary</h2>,
             <p>,
-              TechGlobal Industries, a Fortune 50o0 manufacturing leader;
+              TechGlobal Industries, a Fortune 50o0 manufacturing leader,
               achieved unprecedented business transformation through,
               comprehensive AI implementation, resulting in{' '}
               <strong>10o0,0o00% ROI</strong> and,

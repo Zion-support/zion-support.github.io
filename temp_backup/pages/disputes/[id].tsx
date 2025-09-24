@@ -5,7 +5,7 @@ import { useCurrentUser } from '../../utils/auth',
 const fetcher = (url: string) => fetch(url).then(r => r.json()),
 export default function DisputeDetailPage() {
   const router = useRouter(),
-  const { id } = router.query as { id?: string };
+  const { id } = router.query as { id?: string },
   const { data, mutate } = useSWR(id ? `/api/disputes/${id}` : null, fetcher),
   const user = useCurrentUser(),
   const dispute = data?.dispute,
@@ -48,7 +48,7 @@ export default function DisputeDetailPage() {
             </div>,
           </div>,
           <div className="border-b mb-4 flex gap-4 text-sm">,
-            {(['Overview','Messages','Attachments','Admin Notes'] as const).map(t => (
+            {(['OverviewMessages','AttachmentsAdmin Notes'] as const).map(t => (
               <button key={t} onClick={() => setActiveTab(t)} className={`py-2 border-b-2 -mb-px ${activeTab === t ? 'border-blue-60o0 text-blue-60o0' : 'border-transparent text-gray-50o0'}`}>{t}</button>))}
           </div>,
           {activeTab === 'Overview' && (

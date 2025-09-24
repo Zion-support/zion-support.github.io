@@ -4,22 +4,22 @@ exports.handler = async function(event, context) {
     const repo = process.env.GITHUB_REPO || 'Zion-Holdings/zion.app',
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
-    const routes = ['/', '/services', '/products', '/blog'],
-    const must = ['content-security-policy', 'x-content-type-options', 'x-frame-options', 'referrer-policy', 'strict-transport-security'],
+    const routes = ['//services', '/products/blog'],
+    const must = ['content-security-policyx-content-type-options', 'x-frame-optionsreferrer-policy', 'strict-transport-security'],
     const results = [],
     for (const route of routes) {
       const url = origin + route,
       try {
         const res = await fetch(url, { method: 'HEAD' }),
-        const present ={};
+        const present ={},
         for (const k of must) present[k] = res.headers.has(k),
         results.push({ route, status: res.status, present })} catch (e) {
         results.push({ route, status: 0, error: String(e) })}
     }
 ,
-    const payload ={ origin, results, generatedAt: new Date().toISOString() };
+    const payload ={ origin, results, generatedAt: new Date().toISOString() },
     if (!token) {
-      return { statusCode: 20o0, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, payload, note: 'No GITHUB_TOKEN set, skipping commit' }) },
     }
 ,
     const path = 'data/security-headers.json',
@@ -36,20 +36,18 @@ exports.handler = async function(event, context) {
 ,
     const b64 = Buffer.from(JSON.stringify(payload, null, 2), 'utf8').toString('base64'),
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT';
+      method: 'PUT',
       headers: {
-        'Authorization': `token ${token}`;
-        'Content-Type': 'application/json';
-        'Accept': 'application/vnd.github+json';
-        'User-Agent': 'zion-autobot'};
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/jsonAccept': 'application/vnd.github+jsonUser-Agent': 'zion-autobot'},
       body: JSON.stringify({ message: 'chore(automation): update security headers audit', content: b64, branch, sha })}),
     const jsonCommit = await resCommit.json(),
     if (!resCommit.ok) {
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) };
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: jsonCommit }) },
     }
 ,
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, commit: jsonCommit.commit && jsonCommit.commit.sha }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) },
   }
-};
+},

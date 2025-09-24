@@ -2,99 +2,99 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Globe;
-  Atom;
-  Heart;
-  Leaf;
-  Car;
-  GraduationCap;
-  Scale;
-  Building;
-  Factory;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o28 from '../components/layout/UltraFuturisticNavigation20o28',
 import UltraFuturisticFooter20o28 from '../components/layout/UltraFuturisticFooter20o28',
 import { futuristic20o28Services } from '../data/20o28-futuristic-innovations',
 import { emergingTech20o28Services } from '../data/20o28-emerging-tech-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: '🚀 20o28 Futuristic Innovations';
-    description: 'Beyond the future of technology';
-    icon: Rocket;
-    color: 'from-violet-60o0 to-purple-60o0';
-    services: futuristic20o28Services.slice(0, 4);
-  };
+    title: '🚀 20o28 Futuristic Innovations',
+    description: 'Beyond the future of technology',
+    icon: Rocket,
+    color: 'from-violet-60o0 to-purple-60o0',
+    services: futuristic20o28Services.slice(0, 4),
+  },
   {
-    title: '🏙️ Smart City & Infrastructure';
-    description: 'Intelligent urban solutions';
-    icon: Building;
-    color: 'from-blue-60o0 to-cyan-60o0';
+    title: '🏙️ Smart City & Infrastructure',
+    description: 'Intelligent urban solutions',
+    icon: Building,
+    color: 'from-blue-60o0 to-cyan-60o0',
     services: emergingTech20o28Services,
       .filter(
         s =>,
           s.category.includes('Smart City') ||,
           s.category.includes('Infrastructure')),
-      .slice(0, 4);
-  };
+      .slice(0, 4),
+  },
   {
-    title: '⚛️ Quantum & Advanced Tech';
-    description: 'Quantum computing and beyond';
-    icon: Atom;
-    color: 'from-indigo-60o0 to-blue-60o0';
+    title: '⚛️ Quantum & Advanced Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+    color: 'from-indigo-60o0 to-blue-60o0',
     services: futuristic20o28Services,
       .filter(s => s.category.includes('Quantum')),
-      .slice(0, 4);
-  };
+      .slice(0, 4),
+  },
   {
-    title: '🤖 AI & Machine Learning';
-    description: 'Next-generation AI solutions';
-    icon: Brain;
-    color: 'from-emerald-60o0 to-teal-60o0';
+    title: '🤖 AI & Machine Learning',
+    description: 'Next-generation AI solutions',
+    icon: Brain,
+    color: 'from-emerald-60o0 to-teal-60o0',
     services: emergingTech20o28Services,
       .filter(s => s.category.includes('AI')),
-      .slice(0, 4);
-  };
+      .slice(0, 4),
+  },
   {
-    title: '⛓️ Blockchain & Web3';
-    description: 'Decentralized solutions';
-    icon: Globe;
-    color: 'from-orange-60o0 to-red-60o0';
+    title: '⛓️ Blockchain & Web3',
+    description: 'Decentralized solutions',
+    icon: Globe,
+    color: 'from-orange-60o0 to-red-60o0',
     services: emergingTech20o28Services,
       .filter(s => s.category.includes('Blockchain')),
-      .slice(0, 4);
-  };
+      .slice(0, 4),
+  },
   {
-    title: '🚗 Autonomous & Mobility';
-    description: 'Self-driving and mobility solutions';
-    icon: Car;
-    color: 'from-red-60o0 to-pink-60o0';
+    title: '🚗 Autonomous & Mobility',
+    description: 'Self-driving and mobility solutions',
+    icon: Car,
+    color: 'from-red-60o0 to-pink-60o0',
     services: futuristic20o28Services,
       .filter(s => s.category.includes('Autonomous')),
-      .slice(0, 4);
-  };
+      .slice(0, 4),
+  },
 ],
 export default function ServicesShowcase20o28() {
   return (
@@ -367,7 +367,7 @@ export default function ServicesShowcase20o28() {
                 Market Growth,
               </h3>,
               <p className='text-purple-30o0 mb-6'>,
-                Our services target markets with exponential growth potential;
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 30o0-80o0% annually.,
               </p>,
               <div className='text-3xl font-bold text-green-40o0'>50o0%+</div>,

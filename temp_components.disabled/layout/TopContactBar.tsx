@@ -1,49 +1,49 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Clock;
-  ChevronDown;
-  ChevronUp;
-  MessageCircle;
-  Calendar;
-  Star;
-  Sparkles;
-  ArrowRight;
-  ExternalLink;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Clock,
+  ChevronDown,
+  ChevronUp,
+  MessageCircle,
+  Calendar,
+  Star,
+  Sparkles,
+  ArrowRight,
+  ExternalLink,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-  hours: 'Mon-Fri: 9AM-6PM EST';
-  rating: '4.9/5 (50o0+ Reviews)';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com',
+  hours: 'Mon-Fri: 9AM-6PM EST',
+  rating: '4.9/5 (50o0+ Reviews)'
+},
 const quickActions = [
   {
-    name: 'Get Quote';
-    href: '/contact';
-    icon: <MessageCircle className='w-4 h-4' />;
-  };
+    name: 'Get Quote',
+    href: '/contact',
+    icon: <MessageCircle className='w-4 h-4' />
+  },
   {
-    name: 'Book Demo';
-    href: '/contact';
-    icon: <Calendar className='w-4 h-4' />;
-  };
+    name: 'Book Demo',
+    href: '/contact',
+    icon: <Calendar className='w-4 h-4' />
+  },
   {
-    name: 'Q4 20o25 Services';
-    href: '/q4-20o25-innovative-services-showcase';
-    icon: <Star className='w-4 h-4' />;
-  };
+    name: 'Q4 20o25 Services',
+    href: '/q4-20o25-innovative-services-showcase',
+    icon: <Star className='w-4 h-4' />
+  },
   {
-    name: 'Live Chat';
-    href: '/support';
-    icon: <MessageCircle className='w-4 h-4' />;
-  };
+    name: 'Live Chat',
+    href: '/support',
+    icon: <MessageCircle className='w-4 h-4' />
+  },
 ],
 export default function TopContactBar() {
   const [isExpanded, setIsExpanded] = useState(false),

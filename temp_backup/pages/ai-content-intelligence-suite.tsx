@@ -2,135 +2,124 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle, ArrowRight, Star, TrendingUp;
-  Phone, Zap, DollarSign, Shield, Mail;
-  MapPin, Rocket, Brain, Sparkles, Atom;
-  Dna, Users, Globe, Cpu, Lock, Database;
-  BarChart3, Target, Microscope, Cloud;
-  FileText, Search, Globe2, Calendar;
-  Users2, Zap as Lightning, BarChart;
+  CheckCircle, ArrowRight, Star, TrendingUp,
+  Phone, Zap, DollarSign, Shield, Mail,
+  MapPin, Rocket, Brain, Sparkles, Atom,
+  Dna, Users, Globe, Cpu, Lock, Database,
+  BarChart3, Target, Microscope, Cloud,
+  FileText, Search, Globe2, Calendar,
+  Users2, Zap as Lightning, BarChart,
   MessageSquare, BookOpen, Target as TargetIcon} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const features = [
   {
-    icon: Brain;
-    title: 'AI-Powered Content Generation';
-    description: 'Advanced AI models create high-quality, engaging content that matches your brand voice and style.';
-    color: 'from-blue-50o0 to-purple-60o0'};
+    icon: Brain,
+    title: 'AI-Powered Content Generation',
+    description: 'Advanced AI models create high-quality, engaging content that matches your brand voice and style.',
+    color: 'from-blue-50o0 to-purple-60o0'},
   {
-    icon: Search;
-    title: 'SEO Optimization';
-    description: 'Real-time keyword analysis and SEO optimization to improve search rankings and drive organic traffic.';
-    color: 'from-green-50o0 to-emerald-60o0'};
+    icon: Search,
+    title: 'SEO Optimization',
+    description: 'Real-time keyword analysis and SEO optimization to improve search rankings and drive organic traffic.',
+    color: 'from-green-50o0 to-emerald-60o0'},
   {
-    icon: Globe2;
-    title: 'Multi-Language Support';
-    description: 'Create content in multiple languages with automatic localization and cultural adaptation.';
-    color: 'from-cyan-50o0 to-blue-60o0'};
+    icon: Globe2,
+    title: 'Multi-Language Support',
+    description: 'Create content in multiple languages with automatic localization and cultural adaptation.',
+    color: 'from-cyan-50o0 to-blue-60o0'},
   {
-    icon: BarChart;
-    title: 'Performance Analytics';
-    description: 'Comprehensive analytics and A/B testing to optimize content performance and engagement.';
-    color: 'from-purple-50o0 to-pink-60o0'};
+    icon: BarChart,
+    title: 'Performance Analytics',
+    description: 'Comprehensive analytics and A/B testing to optimize content performance and engagement.',
+    color: 'from-purple-50o0 to-pink-60o0'},
   {
-    icon: Calendar;
-    title: 'Content Calendar Management';
-    description: 'Organize and schedule content with automated workflows and team collaboration tools.';
-    color: 'from-orange-50o0 to-red-60o0'};
+    icon: Calendar,
+    title: 'Content Calendar Management',
+    description: 'Organize and schedule content with automated workflows and team collaboration tools.',
+    color: 'from-orange-50o0 to-red-60o0'},
   {
-    icon: Users2;
-    title: 'Team Collaboration';
-    description: 'Work together seamlessly with approval workflows, comments, and version control.';
+    icon: Users2,
+    title: 'Team Collaboration',
+    description: 'Work together seamlessly with approval workflows, comments, and version control.',
     color: 'from-indigo-50o0 to-purple-60o0'}
 ],
 const useCases = [
   {
-    title: 'Blog Content Creation';
-    description: 'Generate engaging blog posts, articles, and thought leadership content at scale.';
-    icon: FileText;
-    color: 'from-blue-50o0 to-purple-60o0'};
+    title: 'Blog Content Creation',
+    description: 'Generate engaging blog posts, articles, and thought leadership content at scale.',
+    icon: FileText,
+    color: 'from-blue-50o0 to-purple-60o0'},
   {
-    title: 'Social Media Marketing';
-    description: 'Create optimized social media posts for all platforms with consistent brand messaging.';
-    icon: MessageSquare;
-    color: 'from-green-50o0 to-emerald-60o0'};
+    title: 'Social Media Marketing',
+    description: 'Create optimized social media posts for all platforms with consistent brand messaging.',
+    icon: MessageSquare,
+    color: 'from-green-50o0 to-emerald-60o0'},
   {
-    title: 'Email Campaigns';
-    description: 'Generate personalized email content that drives engagement and conversions.';
-    icon: Mail;
-    color: 'from-cyan-50o0 to-blue-60o0'};
+    title: 'Email Campaigns',
+    description: 'Generate personalized email content that drives engagement and conversions.',
+    icon: Mail,
+    color: 'from-cyan-50o0 to-blue-60o0'},
   {
-    title: 'Product Descriptions';
-    description: 'Create compelling product descriptions that highlight benefits and drive sales.';
-    icon: TargetIcon;
-    color: 'from-purple-50o0 to-pink-60o0'};
+    title: 'Product Descriptions',
+    description: 'Create compelling product descriptions that highlight benefits and drive sales.',
+    icon: TargetIcon,
+    color: 'from-purple-50o0 to-pink-60o0'},
   {
-    title: 'Educational Content';
-    description: 'Develop comprehensive educational materials and training content.';
-    icon: BookOpen;
-    color: 'from-orange-50o0 to-red-60o0'};
+    title: 'Educational Content',
+    description: 'Develop comprehensive educational materials and training content.',
+    icon: BookOpen,
+    color: 'from-orange-50o0 to-red-60o0'},
   {
-    title: 'SEO Content';
-    description: 'Generate SEO-optimized content that ranks well and drives organic traffic.';
-    icon: Search;
+    title: 'SEO Content',
+    description: 'Generate SEO-optimized content that ranks well and drives organic traffic.',
+    icon: Search,
     color: 'from-indigo-50o0 to-purple-60o0'}
 ],
 const pricingPlans = [
   {
-    name: 'Starter';
-    price: '$99';
-    period: '/month';
-    description: 'Perfect for small businesses and content creators';
+    name: 'Starter',
+    price: '$99',
+    period: '/month',
+    description: 'Perfect for small businesses and content creators',
     features: [
-      'Up to 50 AI-generated articles per month';
-      'Basic SEO optimization';
-      'Content calendar';
-      'Email support';
-      'Basic analytics'];
-    popular: false;
-    color: 'from-gray-50o0 to-gray-60o0'};
+      'Up to 50 AI-generated articles per monthBasic SEO optimization',
+      'Content calendarEmail support',
+      'Basic analytics'],
+    popular: false,
+    color: 'from-gray-50o0 to-gray-60o0'},
   {
-    name: 'Professional';
-    price: '$299';
-    period: '/month';
-    description: 'Ideal for growing businesses and marketing teams';
+    name: 'Professional',
+    price: '$299',
+    period: '/month',
+    description: 'Ideal for growing businesses and marketing teams',
     features: [
-      'Up to 20o0 AI-generated articles per month';
-      'Advanced SEO optimization';
-      'Multi-language support';
-      'Team collaboration';
-      'Advanced analytics';
-      'Priority support';
-      'Custom brand voice training'];
-    popular: true;
-    color: 'from-blue-50o0 to-purple-60o0'};
+      'Up to 20o0 AI-generated articles per monthAdvanced SEO optimization',
+      'Multi-language supportTeam collaboration',
+      'Advanced analyticsPriority support',
+      'Custom brand voice training'],
+    popular: true,
+    color: 'from-blue-50o0 to-purple-60o0'},
   {
-    name: 'Enterprise';
-    price: '$799';
-    period: '/month';
-    description: 'For large organizations with advanced needs';
+    name: 'Enterprise',
+    price: '$799',
+    period: '/month',
+    description: 'For large organizations with advanced needs',
     features: [
-      'Unlimited AI-generated content';
-      'Custom AI model training';
-      'Advanced integrations';
-      'Dedicated account manager';
-      'Custom workflows';
-      'API access';
-      'White-label options';
-      '24/7 phone support'];
-    popular: false;
+      'Unlimited AI-generated contentCustom AI model training',
+      'Advanced integrationsDedicated account manager',
+      'Custom workflowsAPI access',
+      'White-label options24/7 phone support'],
+    popular: false,
     color: 'from-purple-50o0 to-pink-60o0'}
 ],
 const integrations = [
-  'WordPress', 'Shopify', 'HubSpot', 'Mailchimp', 'Google Analytics';
-  'Facebook', 'Twitter', 'LinkedIn', 'Instagram', 'TikTok';
-  'Slack', 'Microsoft Teams', 'Trello', 'Asana', 'Notion';
-  'Salesforce', 'Pipedrive', 'Zapier', 'Make', 'Webhooks'],
+  'WordPressShopify', 'HubSpotMailchimp', 'Google AnalyticsFacebook', 'TwitterLinkedIn', 'InstagramTikTok',
+  'SlackMicrosoft Teams', 'TrelloAsana', 'NotionSalesforce', 'PipedriveZapier', 'MakeWebhooks'],
 export default function AIContentIntelligenceSuite() {
   return (
     <Layout>,

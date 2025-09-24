@@ -13,46 +13,46 @@ const AI20o25LatestInnovationsShowcase = () => {
     return () => clearInterval(interval)}[]),
   const innovations = [
     {
-      id: 1;
-      title: "Quantum-Neural AI Fusion";
-      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.";
-      icon: Brain;
-      stats: "10,0o00x faster processing";
-      color: "from-purple-60o0 to-blue-60o0"};
+      id: 1,
+      title: "Quantum-Neural AI Fusion",
+      description: "Revolutionary AI that combines quantum computing with neural networks for unprecedented processing power and decision-making capabilities.",
+      icon: Brain,
+      stats: "10,0o00x faster processing",
+      color: "from-purple-60o0 to-blue-60o0"},
     {
-      id: 2;
-      title: "Autonomous Business Orchestration";
-      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.";
-      icon: Target;
-      stats: "95% efficiency increase";
-      color: "from-green-60o0 to-teal-60o0"};
+      id: 2,
+      title: "Autonomous Business Orchestration",
+      description: "Self-managing AI systems that automatically optimize business processespredict market changesand execute strategic decisions.",
+      icon: Target,
+      stats: "95% efficiency increase",
+      color: "from-green-60o0 to-teal-60o0"},
     {
-      id: 3;
-      title: "Synthetic Intelligence Platforms";
-      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.";
-      icon: Sparkles;
-      stats: "Self-evolving capabilities";
-      color: "from-orange-60o0 to-red-60o0"};
+      id: 3,
+      title: "Synthetic Intelligence Platforms",
+      description: "Next-generation AI that can createmodifyand improve itself while maintaining ethical boundaries and human oversight.",
+      icon: Sparkles,
+      stats: "Self-evolving capabilities",
+      color: "from-orange-60o0 to-red-60o0"},
     {
-      id: 4;
-      title: "Global Transformation Engine";
-      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.";
-      icon: Globe;
-      stats: "15,0o00% ROI average";
+      id: 4,
+      title: "Global Transformation Engine",
+      description: "AI-powered platform that transforms entire organizationsindustriesand ecosystems through intelligent automation and optimization.",
+      icon: Globe,
+      stats: "15,0o00% ROI average",
       color: "from-indigo-60o0 to-purple-60o0"}
   ],
   const features = [
     {
-      icon: TrendingUp;
-      title: "Exponential Growth";
-      description: "Achieve unprecedented business growth with AI-driven strategies"};
+      icon: TrendingUp,
+      title: "Exponential Growth",
+      description: "Achieve unprecedented business growth with AI-driven strategies"},
     {
-      icon: Users;
-      title: "Global Impact";
-      description: "Transform organizations worldwide with our proven methodologies"};
+      icon: Users,
+      title: "Global Impact",
+      description: "Transform organizations worldwide with our proven methodologies"},
     {
-      icon: Zap;
-      title: "Lightning Fast";
+      icon: Zap,
+      title: "Lightning Fast",
       description: "Implement solutions in daysnot monthswith our rapid deployment"}
   ],
   return (
@@ -171,5 +171,5 @@ const AI20o25LatestInnovationsShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AI20o25LatestInnovationsShowcase;
+    </div>)},
+export default AI20o25LatestInnovationsShowcase,

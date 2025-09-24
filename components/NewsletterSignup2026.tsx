@@ -6,17 +6,17 @@ import {
   Mail,
   CheckCircle,
   X,
-  Sparkles;
-  Bell;
-  TrendingUp;
-  Users;
-  Star;
-  ArrowRight;
-  Shield;
-  Zap;
-  Brain;
-  Target;
-  Lightbulb;
+  Sparkles,
+  Bell,
+  TrendingUp,
+  Users,
+  Star,
+  ArrowRight,
+  Shield,
+  Zap,
+  Brain,
+  Target,
+  Lightbulb,
   Rocket} from 'lucide-react',
 const NewsletterSignup20o26 = () => {
   const [emailsetEmail] = useState(''),
@@ -30,7 +30,7 @@ const NewsletterSignup20o26 = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsLoading(true),
-    setError(', '),
+    setError(),
     try {
       // Simulate API call,
       await new Promise(resolve => setTimeout(resolve20o00)),
@@ -39,29 +39,29 @@ const NewsletterSignup20o26 = () => {
       setEmail(', ')} catch (err) {
       setError('Something went wrong. Please try again.')} finally {
       setIsLoading(false)}
-  };
+  },
   const benefits = [
     {
-      icon: Brain;
-      title: 'AI Breakthrough Alerts';
-      description: 'Get notified about the latest AI breakthroughs and research'};
+      icon: Brain,
+      title: 'AI Breakthrough Alerts',
+      description: 'Get notified about the latest AI breakthroughs and research'},
     {
-      icon: TrendingUp;
-      title: 'Trending Content';
-      description: 'Weekly digest of the most popular and trending articles'};
+      icon: TrendingUp,
+      title: 'Trending Content',
+      description: 'Weekly digest of the most popular and trending articles'},
     {
-      icon: Target;
-      title: 'Personalized Recommendations';
-      description: 'AI-powered content recommendations based on your interests'};
+      icon: Target,
+      title: 'Personalized Recommendations',
+      description: 'AI-powered content recommendations based on your interests'},
     {
-      icon: Zap;
-      title: 'Exclusive Early Access';
+      icon: Zap,
+      title: 'Exclusive Early Access',
       description: 'Be the first to access new content and features'}
   ],
   const stats = [
-    { number: '50K+'label: 'Subscribers' };
-    { number: '4.9/5'label: 'Rating' };
-    { number: '24/7'label: 'Updates' };
+    { number: '50K+'label: 'Subscribers' },
+    { number: '4.9/5'label: 'Rating' },
+    { number: '24/7'label: 'Updates' },
     { number: '10o0%'label: 'Free' }
   ],
   if (!isVisible || isDismissed) return null,
@@ -82,15 +82,15 @@ const NewsletterSignup20o26 = () => {
             key={i}
             className="absolute w-1 h-1 bg-purple-40o0 rounded-full opacity-30",
             animate={{
-              x: [0Math.random() * 20o0 - 10o0];
-              y: [0Math.random() * 20o0 - 10o0];
+              x: [0Math.random() * 20o0 - 10o0],
+              y: [0Math.random() * 20o0 - 10o0],
               scale: [0o10]}}
             transition={{
-              duration: Math.random() * 8 + 6;
-              repeat: Infinity;
+              duration: Math.random() * 8 + 6,
+              repeat: Infinity,
               delay: Math.random() * 3}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,
@@ -241,7 +241,7 @@ const NewsletterSignup20o26 = () => {
                     Welcome to the Future! 🚀,
                   </h3>,
                   <p className="text-gray-30o0 mb-6">,
-                    'You', 're now part of our exclusive community. Check your email for a confirmation,
+                    'Youre now part of our exclusive community. Check your email for a confirmation,
                     and get ready for amazing content delivered to your inbox.,
                   </p>,
                   <div className="bg-white/10 rounded-lg p-4 mb-6">,
@@ -273,7 +273,7 @@ const NewsletterSignup20o26 = () => {
               Join the AI Revolution Today,
             </h3>,
             <p className="text-gray-30o0 mb-6 max-w-2xl mx-auto">,
-              'Don', 't miss out on the most important technological shift of our lifetime.,
+              'Dont miss out on the most important technological shift of our lifetime.,
               Be part of the community 'that', 's shaping the future.,
             </p>,
             <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-40o0">,
@@ -293,5 +293,5 @@ const NewsletterSignup20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.div>)};
-export default NewsletterSignup20o26;
+    </motion.div>)},
+export default NewsletterSignup20o26,

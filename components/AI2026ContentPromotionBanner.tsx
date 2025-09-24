@@ -12,24 +12,24 @@ const AI20o26ContentPromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const features = [
     {
-      icon: "🧠";
-      title: "Neural Interface Revolution";
-      description: "Direct brain-computer interfaces for unprecedented control";
-      link: "/ai-20o26-neural-interface-revolution"};
+      icon: "🧠",
+      title: "Neural Interface Revolution",
+      description: "Direct brain-computer interfaces for unprecedented control",
+      link: "/ai-20o26-neural-interface-revolution"},
     {
-      icon: "⚡";
-      title: "Quantum Neural Fusion";
-      description: "Quantum-enhanced AI for exponential processing power";
-      link: "/ai-20o26-quantum-neural-fusion-revolution"};
+      icon: "⚡",
+      title: "Quantum Neural Fusion",
+      description: "Quantum-enhanced AI for exponential processing power",
+      link: "/ai-20o26-quantum-neural-fusion-revolution"},
     {
-      icon: "🚀";
-      title: "Next-Gen Automation";
-      description: "Autonomous systems that think and adapt independently";
-      link: "/ai-20o26-next-generation-business-automation"};
+      icon: "🚀",
+      title: "Next-Gen Automation",
+      description: "Autonomous systems that think and adapt independently",
+      link: "/ai-20o26-next-generation-business-automation"},
     {
-      icon: "🔮";
-      title: "Future Predictions";
-      description: "AI-powered forecasting with 99.9% accuracy";
+      icon: "🔮",
+      title: "Future Predictions",
+      description: "AI-powered forecasting with 99.9% accuracy",
       link: "/ai-20o26-future-predictions-breakthrough"}
   ],
   return (
@@ -126,5 +126,5 @@ const AI20o26ContentPromotionBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o26ContentPromotionBanner;
+    </div>)},
+export default AI20o26ContentPromotionBanner,

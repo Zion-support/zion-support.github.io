@@ -27,7 +27,7 @@ class StartAllAutomations {
       const status = code === 0 ? '✅' : '❌',
       // // console.log(`${status} Completed: ${script.name} (${processInfo.duration}ms)`)}),
     this.manager.on('scriptImproved', ({ script, improvements }) => {
-      // // console.log(`🔧 Improved: ${script.name} (${improvements.join(', ')})`)}),
+      // // console.log(`🔧 Improved: ${script.name} (${improvements.join()})`)}),
     this.manager.on('improvementCycleCompleted', (results) => {
       const successful = results.filter(r => r.result.success).length,
       // // console.log(`🔧 Improvement cycle: ${successful}/${results.length} scripts improved`)}),

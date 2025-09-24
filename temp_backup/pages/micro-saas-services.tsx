@@ -1,203 +1,191 @@
-import React from 'react';;
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import {
-  Brain;
-  Monitor;
-  Search;
-  Shield;
-  Mail;
-  Share2;
-  Check;
-  Star;
-  Zap;
-  TrendingUp;
-  Users;
-  Globe;
-  Lock;
-  BarChart3;
-  Calendar;
-  Target} from 'lucide-react';
+  Brain,
+  Monitor,
+  Search,
+  Shield,
+  Mail,
+  Share2,
+  Check,
+  Star,
+  Zap,
+  TrendingUp,
+  Users,
+  Globe,
+  Lock,
+  BarChart3,
+  Calendar,
+  Target} from 'lucide-react',
 export default function MicroSaasServicesPage() {
   const microSaasServices = [
     {
-      id: 'ai-content-generator';
-      name: 'AI Content Generator';
-      description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.';
-      icon: <Brain className="w-8 h-8 text-white"  />;
-      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0';
-      gradient: 'from-purple-40o0 to-pink-50o0';
+      id: 'ai-content-generator',
+      name: 'AI Content Generator',
+      description: 'Generate high-quality, SEO-optimized content for blogs, social media, emails, and landing pages using advanced AI technology.',
+      icon: <Brain className="w-8 h-8 text-white"  />,
+      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
+      gradient: 'from-purple-40o0 to-pink-50o0',
       features: [
-        'AI-powered content generationMultiple content types (blog, social, email)';
-        'SEO optimization suggestionsContent templates library';
-        'Plagiarism-free contentMulti-language support'];
+        'AI-powered content generationMultiple content types (blog, social, email)SEO optimization suggestionsContent templates library',
+        'Plagiarism-free contentMulti-language support'],
       useCases: [
-        'Blog content creationSocial media posts';
-        'Email marketing campaignsProduct descriptions';
-        'Landing page copyNewsletter content'];
+        'Blog content creationSocial media postsEmail marketing campaignsProduct descriptions',
+        'Landing page copyNewsletter content'],
       pricing: {
-        starter: { price: 29, features: ['10o0 generations/monthBasic templates', 'SEO analysisEmail support'] };
-        professional: { price: 99, features: ['50o0 generations/monthPremium templates', 'Advanced SEOPriority support', 'API access'] };
-        enterprise: { price: 299, features: ['Unlimited generationsCustom templates', 'White-label optionsSLA guarantee'] }
-      };
-      marketPrice: '$29-299/month';
-      competitors: ['Jasper AICopy.ai', 'Writesonic'];
-      website: 'https://ai-content.ziontech.ai';
-      demo: 'https://demo.ai-content.ziontech.ai'};
+        starter: { price: 29, features: ['10o0 generations/monthBasic templatesSEO analysisEmail support'] },
+        professional: { price: 99, features: ['50o0 generations/monthPremium templatesAdvanced SEOPriority support', 'API access'] },
+        enterprise: { price: 299, features: ['Unlimited generationsCustom templatesWhite-label optionsSLA guarantee'] }
+      },
+      marketPrice: '$29-299/month',
+      competitors: ['Jasper AICopy.aiWritesonic'],
+      website: 'https://ai-content.ziontech.ai',
+      demo: 'https://demo.ai-content.ziontech.ai'},
     {
-      id: 'performance-monitor';
-      name: 'Website Performance Monitor';
-      description: 'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.';
-      icon: <Monitor className="w-8 h-8 text-white"  />;
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
-      gradient: 'from-blue-40o0 to-cyan-50o0';
+      id: 'performance-monitor',
+      name: 'Website Performance Monitor',
+      description: 'Monitor your website performance in real-time with comprehensive metrics, alerts, and optimization recommendations.',
+      icon: <Monitor className="w-8 h-8 text-white"  />,
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
+      gradient: 'from-blue-40o0 to-cyan-50o0',
       features: [
-        'Real-time performance monitoringCore Web Vitals tracking';
-        'Uptime monitoringPerformance alerts';
-        'Historical data analysisOptimization recommendations'];
+        'Real-time performance monitoringCore Web Vitals trackingUptime monitoringPerformance alerts',
+        'Historical data analysisOptimization recommendations'],
       useCases: [
-        'Website performance trackingUser experience monitoring';
-        'SEO performance optimizationServer health monitoring';
-        'CDN performance analysisMobile performance testing'];
+        'Website performance trackingUser experience monitoringSEO performance optimizationServer health monitoring',
+        'CDN performance analysisMobile performance testing'],
       pricing: {
-        starter: { price: 19, features: ['5 URLs5-min monitoring', 'Basic metricsEmail alerts', '7-day retention'] };
-        professional: { price: 49, features: ['25 URLs1-min monitoring', 'Advanced metricsMultiple alerts', '30-day retentionAPI access'] };
-        enterprise: { price: 149, features: ['Unlimited URLsReal-time monitoring', 'All metricsCustom dashboards', '1-year retentionSLA guarantee'] }
-      };
-      marketPrice: '$19-149/month';
-      competitors: ['PingdomGTmetrix', 'WebPageTest'];
-      website: 'https://window.window.window.window.window.performance.ziontech.ai';
-      demo: 'https://demo.window.window.window.window.window.performance.ziontech.ai'};
+        starter: { price: 19, features: ['5 URLs5-min monitoringBasic metricsEmail alerts', '7-day retention'] },
+        professional: { price: 49, features: ['25 URLs1-min monitoringAdvanced metricsMultiple alerts', '30-day retentionAPI access'] },
+        enterprise: { price: 149, features: ['Unlimited URLsReal-time monitoringAll metricsCustom dashboards', '1-year retentionSLA guarantee'] }
+      },
+      marketPrice: '$19-149/month',
+      competitors: ['PingdomGTmetrixWebPageTest'],
+      website: 'https://window.window.window.window.window.performance.ziontech.ai',
+      demo: 'https://demo.window.window.window.window.window.performance.ziontech.ai'},
     {
-      id: 'seo-analytics';
-      name: 'SEO Analytics Dashboard';
-      description: 'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.';
-      icon: <Search className="w-8 h-8 text-white"  />;
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
-      gradient: 'from-green-40o0 to-emerald-50o0';
+      id: 'seo-analytics',
+      name: 'SEO Analytics Dashboard',
+      description: 'Comprehensive SEO tracking, competitor analysis, and keyword monitoring to improve your search engine rankings.',
+      icon: <Search className="w-8 h-8 text-white"  />,
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
+      gradient: 'from-green-40o0 to-emerald-50o0',
       features: [
-        'Keyword tracking & rankingCompetitor analysis';
-        'Backlink monitoringTechnical SEO audits';
-        'Performance reportingMobile optimization insights'];
+        'Keyword tracking & rankingCompetitor analysisBacklink monitoringTechnical SEO audits',
+        'Performance reportingMobile optimization insights'],
       useCases: [
-        'SEO performance trackingCompetitor research';
-        'Keyword strategy developmentTechnical SEO audits';
-        'Link building campaignsContent optimization'];
+        'SEO performance trackingCompetitor researchKeyword strategy developmentTechnical SEO audits',
+        'Link building campaignsContent optimization'],
       pricing: {
-        starter: { price: 39, features: ['10o0 keywordsBasic analysis', 'Monthly reportsEmail support', '7-day retention'] };
-        professional: { price: 89, features: ['50o0 keywordsAdvanced analysis', 'Weekly reportsPriority support', '30-day retentionAPI access'] };
-        enterprise: { price: 199, features: ['Unlimited keywordsFull SEO suite', 'Daily reportsDedicated support', '1-year retentionWhite-label options'] }
-      };
-      marketPrice: '$39-199/month';
-      competitors: ['AhrefsSEMrush', 'Moz'];
-      website: 'https://seo.ziontech.ai';
-      demo: 'https://demo.seo.ziontech.ai'};
+        starter: { price: 39, features: ['10o0 keywordsBasic analysisMonthly reportsEmail support', '7-day retention'] },
+        professional: { price: 89, features: ['50o0 keywordsAdvanced analysisWeekly reportsPriority support', '30-day retentionAPI access'] },
+        enterprise: { price: 199, features: ['Unlimited keywordsFull SEO suiteDaily reportsDedicated support', '1-year retentionWhite-label options'] }
+      },
+      marketPrice: '$39-199/month',
+      competitors: ['AhrefsSEMrushMoz'],
+      website: 'https://seo.ziontech.ai',
+      demo: 'https://demo.seo.ziontech.ai'},
     {
-      id: 'api-rate-limiter';
-      name: 'API Rate Limiter';
-      description: 'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.';
-      icon: <Shield className="w-8 h-8 text-white"  />;
-      color: 'bg-gradient-to-br from-red-50o0 to-orange-60o0';
-      gradient: 'from-red-40o0 to-orange-50o0';
+      id: 'api-rate-limiter',
+      name: 'API Rate Limiter',
+      description: 'Protect your APIs with intelligent rate limiting, traffic management, and comprehensive analytics.',
+      icon: <Shield className="w-8 h-8 text-white"  />,
+      color: 'bg-gradient-to-br from-red-50o0 to-orange-60o0',
+      gradient: 'from-red-40o0 to-orange-50o0',
       features: [
-        'Intelligent rate limitingTraffic pattern analysis';
-        'API key managementReal-time monitoring';
-        'Custom rules & policiesComprehensive analytics'];
+        'Intelligent rate limitingTraffic pattern analysisAPI key managementReal-time monitoring',
+        'Custom rules & policiesComprehensive analytics'],
       useCases: [
-        'API protection & securityTraffic management';
-        'Developer portal managementMicroservices protection';
-        'SaaS API securityEnterprise API governance'];
+        'API protection & securityTraffic managementDeveloper portal managementMicroservices protection',
+        'SaaS API securityEnterprise API governance'],
       pricing: {
-        starter: { price: 25, features: ['10 rate limit rulesBasic limiting', 'API key managementEmail notifications', '7-day retention'] };
-        professional: { price: 79, features: ['50 rate limit rulesAdvanced limiting', 'Unlimited API keysReal-time monitoring', '30-day retentionAPI access'] };
-        enterprise: { price: 199, features: ['Unlimited rulesEnterprise security', 'Advanced featuresCustom integrations', '1-year retentionSLA guarantee'] }
-      };
-      marketPrice: '$25-199/month';
-      competitors: ['KongTyk', 'AWS API Gateway'];
-      website: 'https://rate-limiter.ziontech.ai';
-      demo: 'https://demo.rate-limiter.ziontech.ai'};
+        starter: { price: 25, features: ['10 rate limit rulesBasic limitingAPI key managementEmail notifications', '7-day retention'] },
+        professional: { price: 79, features: ['50 rate limit rulesAdvanced limitingUnlimited API keysReal-time monitoring', '30-day retentionAPI access'] },
+        enterprise: { price: 199, features: ['Unlimited rulesEnterprise securityAdvanced featuresCustom integrations', '1-year retentionSLA guarantee'] }
+      },
+      marketPrice: '$25-199/month',
+      competitors: ['KongTykAWS API Gateway'],
+      website: 'https://rate-limiter.ziontech.ai',
+      demo: 'https://demo.rate-limiter.ziontech.ai'},
     {
-      id: 'email-marketing';
-      name: 'Email Marketing Automation';
-      description: 'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.';
-      icon: <Mail className="w-8 h-8 text-white"  />;
-      color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0';
-      gradient: 'from-indigo-40o0 to-purple-50o0';
+      id: 'email-marketing',
+      name: 'Email Marketing Automation',
+      description: 'Create engaging email campaigns, automate customer journeys, and drive conversions with intelligent email marketing.',
+      icon: <Mail className="w-8 h-8 text-white"  />,
+      color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0',
+      gradient: 'from-indigo-40o0 to-purple-50o0',
       features: [
-        'Drag & drop email builderAdvanced automation workflows';
-        'A/B testing & optimizationSubscriber segmentation';
-        'Performance analyticsTemplate library'];
+        'Drag & drop email builderAdvanced automation workflowsA/B testing & optimizationSubscriber segmentation',
+        'Performance analyticsTemplate library'],
       useCases: [
-        'Newsletter campaignsWelcome series automation';
-        'Abandoned cart recoveryProduct announcements';
-        'Customer onboardingLead nurturing'];
+        'Newsletter campaignsWelcome series automationAbandoned cart recoveryProduct announcements',
+        'Customer onboardingLead nurturing'],
       pricing: {
-        starter: { price: 29, features: ['1,0o00 subscribersBasic templates', 'Simple automationBasic analytics', 'Email support'] };
-        professional: { price: 79, features: ['10,0o00 subscribersAdvanced templates', 'Advanced automationAdvanced analytics', 'Priority supportAPI access'] };
-        enterprise: { price: 199, features: ['Unlimited subscribersCustom templates', 'Complex workflowsEnterprise analytics', 'Dedicated supportWhite-label options'] }
-      };
-      marketPrice: '$29-199/month';
-      competitors: ['MailchimpConvertKit', 'ActiveCampaign'];
-      website: 'https://email.ziontech.ai';
-      demo: 'https://demo.email.ziontech.ai'};
+        starter: { price: 29, features: ['1,0o00 subscribersBasic templatesSimple automationBasic analytics', 'Email support'] },
+        professional: { price: 79, features: ['10,0o00 subscribersAdvanced templatesAdvanced automationAdvanced analytics', 'Priority supportAPI access'] },
+        enterprise: { price: 199, features: ['Unlimited subscribersCustom templatesComplex workflowsEnterprise analytics', 'Dedicated supportWhite-label options'] }
+      },
+      marketPrice: '$29-199/month',
+      competitors: ['MailchimpConvertKitActiveCampaign'],
+      website: 'https://email.ziontech.ai',
+      demo: 'https://demo.email.ziontech.ai'},
     {
-      id: 'social-media-scheduler';
-      name: 'Social Media Scheduler';
-      description: 'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.';
-      icon: <Share2 className="w-8 h-8 text-white"  />;
-      color: 'bg-gradient-to-br from-pink-50o0 to-rose-60o0';
-      gradient: 'from-pink-40o0 to-rose-50o0';
+      id: 'social-media-scheduler',
+      name: 'Social Media Scheduler',
+      description: 'Schedule, manage, and analyze your social media presence across multiple platforms from one unified dashboard.',
+      icon: <Share2 className="w-8 h-8 text-white"  />,
+      color: 'bg-gradient-to-br from-pink-50o0 to-rose-60o0',
+      gradient: 'from-pink-40o0 to-rose-50o0',
       features: [
-        'Multi-platform schedulingContent calendar management';
-        'Campaign planning toolsPerformance analytics';
-        'Team collaborationAuto-posting & optimization'];
+        'Multi-platform schedulingContent calendar managementCampaign planning toolsPerformance analytics',
+        'Team collaborationAuto-posting & optimization'],
       useCases: [
-        'Social media managementContent calendar planning';
-        'Campaign coordinationTeam collaboration';
-        'Performance trackingBrand consistency'];
+        'Social media managementContent calendar planningCampaign coordinationTeam collaboration',
+        'Performance trackingBrand consistency'],
       pricing: {
-        starter: { price: 19, features: ['3 social accountsBasic scheduling', 'Simple calendarBasic analytics', 'Email support'] };
-        professional: { price: 49, features: ['10 social accountsAdvanced scheduling', 'Content calendarAdvanced analytics', 'Priority supportAPI access'] };
-        enterprise: { price: 129, features: ['Unlimited accountsEnterprise scheduling', 'Advanced calendarEnterprise analytics', 'Dedicated supportWhite-label options'] }
-      };
-      marketPrice: '$19-129/month';
-      competitors: ['BufferHootsuite', 'Later'];
-      website: 'https://social.ziontech.ai';
+        starter: { price: 19, features: ['3 social accountsBasic schedulingSimple calendarBasic analytics', 'Email support'] },
+        professional: { price: 49, features: ['10 social accountsAdvanced schedulingContent calendarAdvanced analytics', 'Priority supportAPI access'] },
+        enterprise: { price: 129, features: ['Unlimited accountsEnterprise schedulingAdvanced calendarEnterprise analytics', 'Dedicated supportWhite-label options'] }
+      },
+      marketPrice: '$19-129/month',
+      competitors: ['BufferHootsuiteLater'],
+      website: 'https://social.ziontech.ai',
       demo: 'https://demo.social.ziontech.ai'}
-  ];
+  ],
   const marketInsights = [
     {
-      title: 'AI Content Generation';
-      marketSize: '$1.2B';
-      growth: '+23%';
-      description: 'Rapidly growing market with increasing demand for automated content creation'};
+      title: 'AI Content Generation',
+      marketSize: '$1.2B',
+      growth: '+23%',
+      description: 'Rapidly growing market with increasing demand for automated content creation'},
     {
-      title: 'Performance Monitoring';
-      marketSize: '$3.8B';
-      growth: '+18%';
-      description: 'Essential for modern web applications and user experience optimization'};
+      title: 'Performance Monitoring',
+      marketSize: '$3.8B',
+      growth: '+18%',
+      description: 'Essential for modern web applications and user experience optimization'},
     {
-      title: 'SEO Analytics';
-      marketSize: '$2.1B';
-      growth: '+21%';
-      description: 'Critical for digital marketing and search engine optimization'};
+      title: 'SEO Analytics',
+      marketSize: '$2.1B',
+      growth: '+21%',
+      description: 'Critical for digital marketing and search engine optimization'},
     {
-      title: 'API Management';
-      marketSize: '$4.2B';
-      growth: '+25%';
-      description: 'Growing demand for API security and traffic management'};
+      title: 'API Management',
+      marketSize: '$4.2B',
+      growth: '+25%',
+      description: 'Growing demand for API security and traffic management'},
     {
-      title: 'Email Marketing';
-      marketSize: '$7.5B';
-      growth: '+15%';
-      description: 'Mature market with strong automation and personalization trends'};
+      title: 'Email Marketing',
+      marketSize: '$7.5B',
+      growth: '+15%',
+      description: 'Mature market with strong automation and personalization trends'},
     {
-      title: 'Social Media Management';
-      marketSize: '$2.8B';
-      growth: '+19%';
+      title: 'Social Media Management',
+      marketSize: '$2.8B',
+      growth: '+19%',
       description: 'Increasing need for multi-platform social media coordination'}
-  ];
+  ],
   return (
     <>,
       <Head>,
@@ -222,7 +210,7 @@ export default function MicroSaasServicesPage() {
           </h1>,
           <p className="text-responsive-md text-gray-30o0 max-w-5xl mx-auto leading-relaxed">,
             Discover our comprehensive suite of micro SaaS services designed for modern businesses.,
-            From AI-powered content generation to enterprise-grade performance monitoring;
+            From AI-powered content generation to enterprise-grade performance monitoring,
             we deliver professional solutions with competitive pricing and exceptional value.,
           </p>,
         </div>,

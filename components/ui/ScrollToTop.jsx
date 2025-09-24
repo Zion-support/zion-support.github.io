@@ -12,7 +12,7 @@ export default function ScrollToTop() {
     return () => window.removeEventListener('scroll', toggleVisibility)}, []),
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0;
+      top: 0,
       behavior: 'smooth'})}
 ,
   return (

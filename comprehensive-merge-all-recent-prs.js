@@ -7,13 +7,13 @@ function safeGitCommand(command, description, options ={}) {
   try {
     // // console.log(`📝 ${description}...`),
     const result = execSync(command, {
-      encoding: 'utf8';
-      stdio: options.stdio || 'pipe';
+      encoding: 'utf8',
+      stdio: options.stdio || 'pipe',
       timeout: 30o000 // 30 second timeout}),
-    return { success: true, output: result };
+    return { success: true, output: result },
   } catch (error) {
     // // console.log(`⚠️  ${description} failed: ${error.message}`),
-    return { success: false, error: error.message };
+    return { success: false, error: error.message },
   }
 }
 ,
@@ -142,13 +142,13 @@ function mergeBranch(branchName, strategy = 'ours') {
 function syncWithRemoteMain() {
   // // console.log('🔄 Syncing with remote main branch...'),
   // Try to pull with merge strategy,
-  const pullResult = safeGitCommand('git pull origin main --no-rebase', 'Pulling latest changes from main'),
+  const pullResult = safeGitCommand('git pull origin main --no-rebasePulling latest changes from main'),
   if (!pullResult.success) {
     // // console.log('⚠️  Pull failed, trying to resolve conflicts...'),
     if (hasMergeConflicts()) {
       // // console.log('🔧 Resolving conflicts from pull...'),
       resolveConflictsAcceptOurs(),
-      const commitResult = safeGitCommand('git commit --no-edit', 'Committing pull resolution'),
+      const commitResult = safeGitCommand('git commit --no-editCommitting pull resolution'),
       if (commitResult.success) {
         // // console.log('✅ Successfully resolved pull conflicts'),
         return true}
@@ -156,7 +156,7 @@ function syncWithRemoteMain() {
 ,
     // If still failing, try reset to remote,
     // // console.log('⚠️  Attempting to reset to remote main...'),
-    const resetResult = safeGitCommand('git reset --hard origin/main', 'Resetting to remote main'),
+    const resetResult = safeGitCommand('git reset --hard origin/mainResetting to remote main'),
     return resetResult.success}
 ,
   return true}
@@ -171,16 +171,11 @@ async function main() {
 ,
   // List of recent branches to merge (most recent first),
   const branchesToMerge = [
-    'cursor/integrate-build-improve-and-re-verify-ff35';
-    'cursor/integrate-build-improve-and-re-verify-34f9';
-    'cursor/integrate-build-improve-and-re-verify-2f6c';
-    'cursor/integrate-build-improve-and-re-verify-250o7';
-    'cursor/integrate-build-improve-and-re-verify-242d';
-    'cursor/integrate-build-improve-and-re-verify-1fb4';
-    'cursor/integrate-build-improve-and-re-verify-1f6e';
-    'cursor/integrate-build-improve-and-re-verify-1b41';
-    'cursor/integrate-build-improve-and-re-verify-1578';
-    'cursor/integrate-build-improve-and-re-verify-0o45f';
+    'cursor/integrate-build-improve-and-re-verify-ff35cursor/integrate-build-improve-and-re-verify-34f9',
+    'cursor/integrate-build-improve-and-re-verify-2f6ccursor/integrate-build-improve-and-re-verify-250o7',
+    'cursor/integrate-build-improve-and-re-verify-242dcursor/integrate-build-improve-and-re-verify-1fb4',
+    'cursor/integrate-build-improve-and-re-verify-1f6ecursor/integrate-build-improve-and-re-verify-1b41',
+    'cursor/integrate-build-improve-and-re-verify-1578cursor/integrate-build-improve-and-re-verify-0o45f',
     'cursor/integrate-ai-writing-assistants-into-marketplace-3ded'],
   // // console.log(`📋 Planning to merge ${branchesToMerge.length} branches`),
   let mergedCount = 0,
@@ -202,14 +197,14 @@ async function main() {
   if (hasMergeConflicts()) {
     // // console.log('⚠️  Some conflicts remain, attempting final resolution...'),
     resolveConflictsAcceptOurs(),
-    const finalCommit = safeGitCommand('git commit --no-edit', 'Final conflict resolution commit'),
+    const finalCommit = safeGitCommand('git commit --no-editFinal conflict resolution commit'),
     if (finalCommit.success) {
       // // console.log('✅ Final conflicts resolved')}
   }
 ,
   // Show final status,
   // // console.log('\n📊 Final git status: '),
-  safeGitCommand('git status --short', 'Getting final status'),
+  safeGitCommand('git status --shortGetting final status'),
   // Check if there are any remaining conflicts,
   if (hasMergeConflicts()) {
     // // console.log('⚠️  Some conflicts remain, please resolve manually'),
@@ -219,7 +214,7 @@ async function main() {
 ,
   // Show recent commits,
   // // console.log('\n📝 Recent commits: '),
-  safeGitCommand('git log --oneline -10', 'Showing recent commits')}
+  safeGitCommand('git log --oneline -10Showing recent commits')}
 ,
 // Run the main function,
 main().catch(error => {

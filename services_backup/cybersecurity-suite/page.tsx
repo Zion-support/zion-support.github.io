@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Cybersecurity Suite | Zion Tech Group';
+  title: 'Cybersecurity Suite | Zion Tech Group',
   description:,
-    'Comprehensive cybersecurity solutions with threat detection, vulnerability assessment, and 24/7 monitoring.';
-};
+    'Comprehensive cybersecurity solutions with threat detection, vulnerability assessment, and 24/7 monitoring.',
+},
 export default function CybersecuritySuitePage() {
   return (
     <div className='animate-fade-in'>,
@@ -66,11 +66,9 @@ export default function CybersecuritySuitePage() {
               period='month',
               description='Perfect for small businesses',
               features={[
-                'Basic threat monitoring';
-                'Monthly security reports';
-                'Email support';
-                'Standard compliance';
-                'Basic incident response';
+                'Basic threat monitoringMonthly security reports',
+                'Email supportStandard compliance',
+                'Basic incident response',
               ]}
               popular={false}
             />,
@@ -80,12 +78,9 @@ export default function CybersecuritySuitePage() {
               period='month',
               description='Most popular for growing companies',
               features={[
-                'Advanced threat detection';
-                'Weekly security reports';
-                '24/7 monitoring';
-                'Priority support';
-                'Penetration testing';
-                'Compliance management';
+                'Advanced threat detectionWeekly security reports',
+                '24/7 monitoringPriority support',
+                'Penetration testingCompliance management',
               ]}
               popular={true}
             />,
@@ -95,12 +90,9 @@ export default function CybersecuritySuitePage() {
               period='month',
               description='For large organizations',
               features={[
-                'Full security suite';
-                'Real-time monitoring';
-                'Dedicated security team';
-                'Custom compliance';
-                'White-label solutions';
-                'SLA guarantee';
+                'Full security suiteReal-time monitoring',
+                'Dedicated security teamCustom compliance',
+                'White-label solutionsSLA guarantee',
               ]}
               popular={false}
             />,
@@ -162,9 +154,9 @@ export default function CybersecuritySuitePage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -179,12 +171,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   name: string,
   price: string,
@@ -220,41 +212,41 @@ function PricingCard({
 function SecurityServicesSection() {
   const services = [
     {
-      title: 'Security Assessment';
-      description: 'Comprehensive evaluation of your current security posture';
-      duration: '2-4 weeks';
-      price: 'Starting at $15,0o00';
-    };
+      title: 'Security Assessment',
+      description: 'Comprehensive evaluation of your current security posture',
+      duration: '2-4 weeks',
+      price: 'Starting at $15,0o00',
+    },
     {
-      title: 'Penetration Testing';
-      description: 'Simulated cyber attacks to identify vulnerabilities';
-      duration: '1-2 weeks';
-      price: 'Starting at $8,0o00';
-    };
+      title: 'Penetration Testing',
+      description: 'Simulated cyber attacks to identify vulnerabilities',
+      duration: '1-2 weeks',
+      price: 'Starting at $8,0o00',
+    },
     {
-      title: 'Compliance Audit';
-      description: 'Ensure compliance with industry regulations and standards';
-      duration: '3-6 weeks';
-      price: 'Starting at $25,0o00';
-    };
+      title: 'Compliance Audit',
+      description: 'Ensure compliance with industry regulations and standards',
+      duration: '3-6 weeks',
+      price: 'Starting at $25,0o00',
+    },
     {
-      title: 'Security Training';
-      description: 'Employee cybersecurity awareness and training programs';
-      duration: 'Ongoing';
-      price: 'Starting at $5,0o00/month';
-    };
+      title: 'Security Training',
+      description: 'Employee cybersecurity awareness and training programs',
+      duration: 'Ongoing',
+      price: 'Starting at $5,0o00/month',
+    },
     {
-      title: 'Incident Response';
-      description: 'Rapid response and recovery from security incidents';
-      duration: '24/7';
-      price: 'Starting at $10,0o00/month';
-    };
+      title: 'Incident Response',
+      description: 'Rapid response and recovery from security incidents',
+      duration: '24/7',
+      price: 'Starting at $10,0o00/month',
+    },
     {
-      title: 'Managed Security';
-      description: 'Complete outsourced security operations and monitoring';
-      duration: 'Ongoing';
-      price: 'Starting at $15,0o00/month';
-    };
+      title: 'Managed Security',
+      description: 'Complete outsourced security operations and monitoring',
+      duration: 'Ongoing',
+      price: 'Starting at $15,0o00/month',
+    },
   ],
   return (
     <div className='bg-white rounded-2xl p-8 mb-16'>,
@@ -293,11 +285,9 @@ function PricingSection() {
           period='month',
           description='Basic security monitoring for small businesses',
           features={[
-            '24/7 monitoring';
-            'Basic threat detection';
-            'Monthly reports';
-            'Email support';
-            'Up to 50 users';
+            '24/7 monitoringBasic threat detection',
+            'Monthly reportsEmail support',
+            'Up to 50 users',
           ]}
           popular={false}
         />,
@@ -307,12 +297,9 @@ function PricingSection() {
           period='month',
           description='Advanced security for growing businesses',
           features={[
-            'Advanced threat detection';
-            'Vulnerability scanning';
-            'Compliance monitoring';
-            'Priority support';
-            'Up to 20o0 users';
-            'Incident response';
+            'Advanced threat detectionVulnerability scanning',
+            'Compliance monitoringPriority support',
+            'Up to 20o0 usersIncident response',
           ]}
           popular={true}
         />,
@@ -322,12 +309,9 @@ function PricingSection() {
           period='',
           description='Complete security solution for large organizations',
           features={[
-            'Full SOC services';
-            'Custom security policies';
-            'Dedicated team';
-            '24/7 phone support';
-            'Unlimited users';
-            'Custom integrations';
+            'Full SOC servicesCustom security policies',
+            'Dedicated team24/7 phone support',
+            'Unlimited usersCustom integrations',
           ]}
           popular={false}
         />,
@@ -335,12 +319,12 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

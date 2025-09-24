@@ -4,7 +4,7 @@ import { Send, CheckCircle, AlertCircle, Eye, EyeOff, Loader2, Phone, Mail, User
 import { useAnalytics } from '../hooks/useAnalytics',
 export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle = 'Get in touch with our team', submitText = 'Send Message', className = '', enableAnalytics = true, showProgressBar = true }) => {
     const { trackEvent, trackConversion } = useAnalytics({
-        enableTracking: enableAnalytics;
+        enableTracking: enableAnalytics,
         enableUserBehaviorTracking: true}),
     const [formData, setFormData] = useState({}),
     const [validation, setValidation] = useState({}),
@@ -14,14 +14,14 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
     const [progress, setProgress] = useState(0),
     // Initialize form data and validation,
     useEffect(() => {
-        const initialData ={};
-        const initialValidation ={};
+        const initialData ={},
+        const initialValidation ={},
         fields.forEach(field => {
             initialData[field.name] = field.type === 'checkbox' ? false : '',
             initialValidation[field.name] ={
-                isValid: !field.required;
-                message: '';
-                isTouched: false};
+                isValid: !field.required,
+                message: '',
+                isTouched: false},
         }),
         setFormData(initialData),
         setValidation(initialValidation)}, [fields]),
@@ -81,26 +81,26 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         // Validate field,
         const error = validateField(name, value),
         setValidation(prev => ({
-            ...prev;
+            ...prev,
             [name]: {
-                isValid: !error;
-                message: error || '';
+                isValid: !error,
+                message: error || '',
                 isTouched: true}
         })),
         // Track form interaction,
         if (enableAnalytics) {
-            trackEvent('form', 'field_changed', name, undefined, { fieldName: name, value: String(value) })}
+            trackEvent('formfield_changed', name, undefined, { fieldName: name, value: String(value) })}
     }, [validateField, enableAnalytics, trackEvent]),
     // Handle field blur,
     const handleFieldBlur = useCallback((name) => {
         const value = formData[name],
         const error = validateField(name, value),
         setValidation(prev => ({
-            ...prev;
+            ...prev,
             [name]: {
-                ...prev[name];
-                isValid: !error;
-                message: error || '';
+                ...prev[name],
+                isValid: !error,
+                message: error || '',
                 isTouched: true}
         }))}, [formData, validateField]),
     // Check if form is valid,
@@ -112,18 +112,18 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         if (!isFormValid()) {
             // Track validation error,
             if (enableAnalytics) {
-                trackEvent('form', 'validation_error', 'form_submission_failed', undefined, {
+                trackEvent('formvalidation_error', 'form_submission_failed', undefined, {
                     errors: Object.values(validation).filter(v => !v.isValid).length})}
             return}
         setIsSubmitting(true),
         try {
             // Track form submission start,
             if (enableAnalytics) {
-                trackEvent('form', 'submission_started', 'form_submitted')}
+                trackEvent('formsubmission_started', 'form_submitted')}
             await onSubmit(formData),
             // Track successful submission,
             if (enableAnalytics) {
-                trackEvent('form', 'submission_success', 'form_completed'),
+                trackEvent('formsubmission_success', 'form_completed'),
                 trackConversion('form_submission', 1, { formType: title })}
             setIsSubmitted(true),
             // Reset form after successful submission,
@@ -135,7 +135,7 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
         catch (error) {
             // Track submission error,
             if (enableAnalytics) {
-                trackEvent('form', 'submission_error', 'form_failed', undefined, {
+                trackEvent('formsubmission_error', 'form_failed', undefined, {
                     error: error instanceof Error ? error.message : 'Unknown error'})}
             console.error('Form submission failed:', error)}
         finally {
@@ -261,4 +261,4 @@ export const AdvancedForm = ({ fields, onSubmit, title = 'Contact Us', subtitle 
             </motion.div>)}
         </AnimatePresence>,
       </form>,
-    </motion.div>)};
+    </motion.div>)},

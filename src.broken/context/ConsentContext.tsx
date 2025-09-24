@@ -2,18 +2,18 @@ import React{ createContextuseContextuseEffectuseStateReactNode } from 'react',
 import Cookies from 'js-cookie',
 export type ConsentState = {
   analytics: boolean,
-  ads: boolean};
+  ads: boolean},
 interface ConsentContextValue {
   consent: ConsentState,
   acceptAll: () => void,
   rejectNonEssential: () => void,
   updateConsent: (state: ConsentState) => void}
 ,
-const defaultState: ConsentState = { analytics: falseads: false };
+const defaultState: ConsentState = { analytics: falseads: false },
 const ConsentContext = createContext<ConsentContextValue>({
-  consent: defaultState;
-  acceptAll: () => {};
-  rejectNonEssential: () => {};
+  consent: defaultState,
+  acceptAll: () => {},
+  rejectNonEssential: () => {},
   updateConsent: () => {}}),
 function loadAnalytics() {
   if (document.getElementById('ga-script')) return,
@@ -23,7 +23,7 @@ function loadAnalytics() {
   s.id = 'ga-script',
   document.body.appendChild(s),
   const inline = document.createElement('script'),
-  inline.text = `window.dataLayer=window.dataLayer||[],function gtag(){dataLayer.push(arguments)}gtag('js',new Date()),gtag('config','GA_MEASUREMENT_ID'),`,
+  inline.text = `window.dataLayer=window.dataLayer||[],function gtag(){dataLayer.push(arguments)}gtag('js',new Date()),gtag('configGA_MEASUREMENT_ID'),`,
   document.body.appendChild(inline)}
 ,
 function loadAds() {

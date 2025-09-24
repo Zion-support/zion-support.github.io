@@ -9,11 +9,11 @@ export default function IntelligentHrAnalyticsPlatform() {
 			implementationWeeks="3-5 weeks",
 			roiNote="Reduce attrition risk and HR costs by 25%+",
 			features={[
-				"Turnover prediction and risk scoring";
-				"Engagement analytics and sentiment";
-				"Hiring funnel insights and quality of hire";
-				"Diversity & equity metrics";
-				"Comp plan and headcount forecasting";
+				"Turnover prediction and risk scoring",
+				"Engagement analytics and sentiment",
+				"Hiring funnel insights and quality of hire",
+				"Diversity & equity metrics",
+				"Comp plan and headcount forecasting",
 				"Privacy-preserving data pipelines]}
 			]}
 			industries={["Enterprise", "Mid-market", "Healthcare", "Financial Services", "Manufacturing"]}

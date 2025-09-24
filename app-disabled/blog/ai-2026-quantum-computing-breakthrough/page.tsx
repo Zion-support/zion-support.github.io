@@ -1,17 +1,15 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata = {
-  title: 'AI 20o26: Quantum Computing Breakthrough - Zion Tech Group';
+  title: 'AI 20o26: Quantum Computing Breakthrough - Zion Tech Group',
   description:,
-    'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 20o26. Quantum supremacy, quantum AI, and practical applications.';
+    'Explore the revolutionary quantum computing breakthroughs that will transform AI and enterprise computing in 20o26. Quantum supremacy, quantum AI, and practical applications.',
   keywords: [
-    'quantum computing 20o26';
-    'quantum AI';
-    'quantum supremacy';
-    'quantum algorithms';
-    'enterprise quantum';
-  ];
-};
+    'quantum computing 20o26quantum AI',
+    'quantum supremacyquantum algorithms',
+    'enterprise quantum',
+  ]
+},
 export default function AI20o26QuantumComputingBreakthrough() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-50 to-purple-10o0'>,
@@ -145,7 +143,7 @@ export default function AI20o26QuantumComputingBreakthrough() {
                 </p>,
                 <div className='bg-gray-50 p-4 rounded-lg'>,
                   <div className='text-sm text-gray-60o0'>,
-                    <strong>Impact:</strong> 99.9% accuracy in fraud detection;
+                    <strong>Impact: </strong> 99.9% accuracy in fraud detection,
                     10o00x faster risk calculations,
                   </div>,
                 </div>,
@@ -161,7 +159,7 @@ export default function AI20o26QuantumComputingBreakthrough() {
                 </p>,
                 <div className='bg-gray-50 p-4 rounded-lg'>,
                   <div className='text-sm text-gray-60o0'>,
-                    <strong>Impact:</strong> 40% reduction in production costs;
+                    <strong>Impact: </strong> 40% reduction in production costs,
                     60% faster delivery times,
                   </div>,
                 </div>,

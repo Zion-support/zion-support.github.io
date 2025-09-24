@@ -2,33 +2,33 @@ import Link from 'next/link',
 const RevolutionaryTechTrends20o26 = () => {
   const trends = [
     {
-      title: 'AI Consciousness Evolution';
+      title: 'AI Consciousness Evolution',
       description:,
-        'Witness the emergence of AI systems with self-awareness and emotional intelligence';
-      icon: '🧠';
-      link: '/ai-consciousness-evolution-20o26';
-    };
+        'Witness the emergence of AI systems with self-awareness and emotional intelligence',
+      icon: '🧠',
+      link: '/ai-consciousness-evolution-20o26'
+    },
     {
-      title: 'Synthetic Intelligence Platforms';
+      title: 'Synthetic Intelligence Platforms',
       description:,
-        'Next-generation AI that combines multiple intelligence types for unprecedented capabilities';
-      icon: '⚡';
-      link: '/synthetic-intelligence-20o26';
-    };
+        'Next-generation AI that combines multiple intelligence types for unprecedented capabilities',
+      icon: '⚡',
+      link: '/synthetic-intelligence-20o26'
+    },
     {
-      title: 'Quantum Neural Networks';
+      title: 'Quantum Neural Networks',
       description:,
-        'Revolutionary computing that merges quantum mechanics with neural processing';
-      icon: '🔮';
-      link: '/quantum-neural-networks-20o26';
-    };
+        'Revolutionary computing that merges quantum mechanics with neural processing',
+      icon: '🔮',
+      link: '/quantum-neural-networks-20o26'
+    },
     {
-      title: 'Autonomous Business Ecosystems';
+      title: 'Autonomous Business Ecosystems',
       description:,
-        'Self-managing business systems that adapt and evolve without human intervention';
-      icon: '🌐';
-      link: '/autonomous-business-ecosystems-20o26';
-    };
+        'Self-managing business systems that adapt and evolve without human intervention',
+      icon: '🌐',
+      link: '/autonomous-business-ecosystems-20o26'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-r from-indigo-60o0 via-purple-60o0 to-pink-60o0 text-white'>,
@@ -90,5 +90,5 @@ const RevolutionaryTechTrends20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTechTrends20o26;
+    </section>)},
+export default RevolutionaryTechTrends20o26,

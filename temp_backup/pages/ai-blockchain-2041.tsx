@@ -1,16 +1,16 @@
 import Layout from '../components/layout/Layout',
 import {
-  Link;
-  Sparkles;
-  Zap;
-  Target;
-  Shield;
-  Clock;
-  CheckCircle;
-  Lock;
-  Database;
-  Network;
-  Brain;
+  Link,
+  Sparkles,
+  Zap,
+  Target,
+  Shield,
+  Clock,
+  CheckCircle,
+  Lock,
+  Database,
+  Network,
+  Brain,
 } from 'lucide-react',
 export default function AIBlockchain20o41() {
   return (
@@ -64,47 +64,47 @@ export default function AIBlockchain20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Intelligent Consensus';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Intelligent Consensus',
                   description:,
-                    'AI-powered consensus mechanisms that optimize network performance and security.';
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'AI-powered consensus mechanisms that optimize network performance and security.',
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
                 {
-                  icon: <Shield className='w-8 h-8' />;
-                  title: 'Advanced Security';
+                  icon: <Shield className='w-8 h-8' />,
+                  title: 'Advanced Security',
                   description:,
-                    'AI-enhanced security protocols that detect and prevent sophisticated attacks.';
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'AI-enhanced security protocols that detect and prevent sophisticated attacks.',
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Network className='w-8 h-8' />;
-                  title: 'Smart Routing';
+                  icon: <Network className='w-8 h-8' />,
+                  title: 'Smart Routing',
                   description:,
-                    'Intelligent transaction routing that optimizes speed and reduces costs.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Intelligent transaction routing that optimizes speed and reduces costs.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Database className='w-8 h-8' />;
-                  title: 'Predictive Analytics';
+                  icon: <Database className='w-8 h-8' />,
+                  title: 'Predictive Analytics',
                   description:,
-                    'AI systems that predict network behavior and optimize window.window.performance.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'AI systems that predict network behavior and optimize window.window.performance.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Optimization';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Optimization',
                   description:,
-                    'Instant blockchain optimization for maximum efficiency and throughput.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Instant blockchain optimization for maximum efficiency and throughput.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Autonomous Governance';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Autonomous Governance',
                   description:,
-                    'Self-governing blockchain systems with AI-powered decision making.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Self-governing blockchain systems with AI-powered decision making.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -139,43 +139,43 @@ export default function AIBlockchain20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Smart Contracts';
+                  name: 'Smart Contracts',
                   description:,
-                    'AI-optimized smart contract development and execution';
-                };
+                    'AI-optimized smart contract development and execution',
+                },
                 {
-                  name: 'DeFi Platforms';
+                  name: 'DeFi Platforms',
                   description:,
-                    'Decentralized finance with intelligent risk management';
-                };
+                    'Decentralized finance with intelligent risk management',
+                },
                 {
-                  name: 'NFT Systems';
-                  description: 'Advanced NFT creation and management platforms';
-                };
+                  name: 'NFT Systems',
+                  description: 'Advanced NFT creation and management platforms'
+                },
                 {
-                  name: 'Supply Chain';
+                  name: 'Supply Chain',
                   description:,
-                    'Transparent supply chain tracking and verification';
-                };
+                    'Transparent supply chain tracking and verification',
+                },
                 {
-                  name: 'Identity Management';
+                  name: 'Identity Management',
                   description:,
-                    'Secure decentralized identity and authentication';
-                };
+                    'Secure decentralized identity and authentication',
+                },
                 {
-                  name: 'Cross-chain';
+                  name: 'Cross-chain',
                   description:,
-                    'Interoperability between different blockchain networks';
-                };
+                    'Interoperability between different blockchain networks',
+                },
                 {
-                  name: 'Scalability';
+                  name: 'Scalability',
                   description:,
-                    'High-performance blockchain solutions for enterprise';
-                };
+                    'High-performance blockchain solutions for enterprise',
+                },
                 {
-                  name: 'Compliance';
-                  description: 'Regulatory compliance and audit capabilities';
-                };
+                  name: 'Compliance',
+                  description: 'Regulatory compliance and audit capabilities'
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -205,55 +205,50 @@ export default function AIBlockchain20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Network Analysis';
+                  phase: 'Network Analysis',
                   description:,
-                    'AI analyzes blockchain network performance and identifies optimization opportunities';
+                    'AI analyzes blockchain network performance and identifies optimization opportunities',
                   features: [
-                    'Performance monitoring';
-                    'Bottleneck detection';
-                    'Optimization analysis';
-                  ];
-                };
+                    'Performance monitoringBottleneck detection',
+                    'Optimization analysis',
+                  ]
+                },
                 {
-                  phase: 'Intelligent Consensus';
+                  phase: 'Intelligent Consensus',
                   description:,
-                    'AI-optimized consensus mechanisms for faster and more secure transactions';
+                    'AI-optimized consensus mechanisms for faster and more secure transactions',
                   features: [
-                    'Consensus optimization';
-                    'Security enhancement';
-                    'Performance tuning';
-                  ];
-                };
+                    'Consensus optimizationSecurity enhancement',
+                    'Performance tuning',
+                  ]
+                },
                 {
-                  phase: 'Smart Routing';
+                  phase: 'Smart Routing',
                   description:,
-                    'Intelligent transaction routing for optimal speed and cost efficiency';
+                    'Intelligent transaction routing for optimal speed and cost efficiency',
                   features: [
-                    'Route optimization';
-                    'Fee optimization';
-                    'Speed enhancement';
-                  ];
-                };
+                    'Route optimizationFee optimization',
+                    'Speed enhancement',
+                  ]
+                },
                 {
-                  phase: 'Security Enhancement';
+                  phase: 'Security Enhancement',
                   description:,
-                    'AI-powered security protocols that detect and prevent sophisticated attacks';
+                    'AI-powered security protocols that detect and prevent sophisticated attacks',
                   features: [
-                    'Threat detection';
-                    'Attack prevention';
-                    'Security monitoring';
-                  ];
-                };
+                    'Threat detectionAttack prevention',
+                    'Security monitoring',
+                  ]
+                },
                 {
-                  phase: 'Continuous Optimization';
+                  phase: 'Continuous Optimization',
                   description:,
-                    'Real-time blockchain optimization for maximum efficiency and throughput';
+                    'Real-time blockchain optimization for maximum efficiency and throughput',
                   features: [
-                    'Performance monitoring';
-                    'Dynamic optimization';
-                    'Efficiency improvement';
-                  ];
-                };
+                    'Performance monitoringDynamic optimization',
+                    'Efficiency improvement',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -299,65 +294,57 @@ export default function AIBlockchain20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Public Blockchains';
+                  category: 'Public Blockchains',
                   description:,
-                    'Open, permissionless blockchains with AI-enhanced security and window.window.performance.';
+                    'Open, permissionless blockchains with AI-enhanced security and window.window.performance.',
                   types: [
-                    'Bitcoin';
-                    'Ethereum';
-                    'Polkadot';
-                    'Solana';
-                    'Cardano';
-                  ];
-                };
+                    'BitcoinEthereum',
+                    'PolkadotSolana',
+                    'Cardano',
+                  ]
+                },
                 {
-                  category: 'Private Blockchains';
+                  category: 'Private Blockchains',
                   description:,
-                    'Permissioned blockchains for enterprise with AI-powered governance.';
+                    'Permissioned blockchains for enterprise with AI-powered governance.',
                   types: [
-                    'Hyperledger';
-                    'Corda';
-                    'Quorum';
-                    'Fabric';
-                    'Sawtooth';
-                  ];
-                };
+                    'HyperledgerCorda',
+                    'QuorumFabric',
+                    'Sawtooth',
+                  ]
+                },
                 {
-                  category: 'Consortium Blockchains';
+                  category: 'Consortium Blockchains',
                   description:,
-                    'Multi-organization blockchains with AI-optimized collaboration.';
+                    'Multi-organization blockchains with AI-optimized collaboration.',
                   types: [
-                    'R3 Corda';
-                    'Hyperledger Fabric';
-                    'Quorum';
-                    'MultiChain';
-                    'Chain33';
-                  ];
-                };
+                    'R3 CordaHyperledger Fabric',
+                    'QuorumMultiChain',
+                    'Chain33',
+                  ]
+                },
                 {
-                  category: 'Hybrid Blockchains';
+                  category: 'Hybrid Blockchains',
                   description:,
-                    'Combined public-private blockchains with intelligent interoperability.';
-                  types: ['Dragonchain', 'XinFin', 'Aion', 'Wanchain', 'ICON'];
-                };
+                    'Combined public-private blockchains with intelligent interoperability.',
+                  types: ['DragonchainXinFin', 'AionWanchain', 'ICON'],
+                },
                 {
-                  category: 'Layer 2 Solutions';
+                  category: 'Layer 2 Solutions',
                   description:,
-                    'Scalability solutions built on existing blockchains with AI optimization.';
+                    'Scalability solutions built on existing blockchains with AI optimization.',
                   types: [
-                    'Lightning Network';
-                    'Polygon';
-                    'Optimism';
-                    'Arbitrum';
-                    'StarkNet';
-                  ];
-                };
+                    'Lightning NetworkPolygon',
+                    'OptimismArbitrum',
+                    'StarkNet',
+                  ]
+                },
                 {
-                  category: 'Sidechains';
+                  category: 'Sidechains',
                   description:,
-                    'Independent blockchains connected to main chains with AI-powered bridges.';
-                  types: ['Liquid', 'Rootstock', 'Polygon', 'BSC', 'Avalanche'];
-                };
+                    'Independent blockchains connected to main chains with AI-powered bridges.',
+                  types: ['LiquidRootstock', 'PolygonBSC', 'Avalanche'],
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -394,65 +381,59 @@ export default function AIBlockchain20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Finance';
+                  industry: 'Finance',
                   description:,
-                    'DeFi platforms, digital assets, and intelligent financial services with blockchain.';
+                    'DeFi platforms, digital assets, and intelligent financial services with blockchain.',
                   applications: [
-                    'DeFi platforms';
-                    'Digital assets';
-                    'Smart contracts';
-                  ];
-                };
+                    'DeFi platformsDigital assets',
+                    'Smart contracts',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Secure patient data, medical records, and pharmaceutical tracking with blockchain.';
+                    'Secure patient data, medical records, and pharmaceutical tracking with blockchain.',
                   applications: [
-                    'Patient data';
-                    'Medical records';
-                    'Drug tracking';
-                  ];
-                };
+                    'Patient dataMedical records',
+                    'Drug tracking',
+                  ]
+                },
                 {
-                  industry: 'Supply Chain';
+                  industry: 'Supply Chain',
                   description:,
-                    'Transparent tracking, verification, and optimization of supply chain operations.';
+                    'Transparent tracking, verification, and optimization of supply chain operations.',
                   applications: [
-                    'Product tracking';
-                    'Verification';
-                    'Optimization';
-                  ];
-                };
+                    'Product trackingVerification',
+                    'Optimization',
+                  ]
+                },
                 {
-                  industry: 'Real Estate';
+                  industry: 'Real Estate',
                   description:,
-                    'Property tokenization, smart contracts, and automated real estate transactions.';
+                    'Property tokenization, smart contracts, and automated real estate transactions.',
                   applications: [
-                    'Tokenization';
-                    'Smart contracts';
-                    'Automation';
-                  ];
-                };
+                    'TokenizationSmart contracts',
+                    'Automation',
+                  ]
+                },
                 {
-                  industry: 'Gaming';
+                  industry: 'Gaming',
                   description:,
-                    'NFTs, blockchain gaming, and decentralized virtual economies.';
+                    'NFTs, blockchain gaming, and decentralized virtual economies.',
                   applications: [
-                    'NFTs';
-                    'Blockchain gaming';
-                    'Virtual economies';
-                  ];
-                };
+                    'NFTsBlockchain gaming',
+                    'Virtual economies',
+                  ]
+                },
                 {
-                  industry: 'Government';
+                  industry: 'Government',
                   description:,
-                    'Digital identity, voting systems, and transparent government operations.';
+                    'Digital identity, voting systems, and transparent government operations.',
                   applications: [
-                    'Digital identity';
-                    'Voting systems';
-                    'Transparency';
-                  ];
-                };
+                    'Digital identityVoting systems',
+                    'Transparency',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -489,33 +470,33 @@ export default function AIBlockchain20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Enhanced Security';
+                  title: 'Enhanced Security',
                   description:,
-                    'AI-powered security protocols that provide unprecedented protection for blockchain networks.';
-                  icon: <Shield className='w-8 h-8' />;
-                  color: 'from-indigo-50o0 to-purple-50o0';
-                };
+                    'AI-powered security protocols that provide unprecedented protection for blockchain networks.',
+                  icon: <Shield className='w-8 h-8' />,
+                  color: 'from-indigo-50o0 to-purple-50o0'
+                },
                 {
-                  title: 'Improved Performance';
+                  title: 'Improved Performance',
                   description:,
-                    'AI optimization that dramatically improves blockchain speed and efficiency.';
-                  icon: <Zap className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-cyan-50o0';
-                };
+                    'AI optimization that dramatically improves blockchain speed and efficiency.',
+                  icon: <Zap className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Cost Reduction';
+                  title: 'Cost Reduction',
                   description:,
-                    'Intelligent optimization that reduces transaction costs and operational expenses.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Intelligent optimization that reduces transaction costs and operational expenses.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Scalability';
+                  title: 'Scalability',
                   description:,
-                    'AI-powered solutions that enable massive scale without compromising window.window.performance.';
-                  icon: <Network className='w-8 h-8' />;
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'AI-powered solutions that enable massive scale without compromising window.window.performance.',
+                  icon: <Network className='w-8 h-8' />,
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

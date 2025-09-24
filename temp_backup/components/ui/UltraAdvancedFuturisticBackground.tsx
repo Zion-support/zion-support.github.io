@@ -10,12 +10,12 @@ interface UltraAdvancedFuturisticBackgroundProps {
   children: React.ReactNode}
 ,
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  colorScheme = 'quantum-fusion';
-  particleCount = 30o0;
-  animationSpeed = 1.5;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 30o0,
+  animationSpeed = 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -40,36 +40,36 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         const rect = containerRef.current.getBoundingClientRect(),
         canvas.width = rect.width,
         canvas.height = rect.height}
-    };
+    },
     resizeCanvas(),
     window.addEventListener('resize'resizeCanvas),
     // Color schemes,
     const colorSchemes ={
       'quantum-fusion': {
-        primary: '#0o0ffff';
-        secondary: '#ff0o0ff';
-        accent: '#ffff0o0';
-        quantum: '#0o0ff88';
-        holographic: '#ff0o088'};
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        quantum: '#0o0ff88',
+        holographic: '#ff0o088'},
       'neon-cyber': {
-        primary: '#0o0ff41';
-        secondary: '#ff0o080';
-        accent: '#0o0d4ff';
-        quantum: '#ff6b35';
-        holographic: '#9d4edd'};
+        primary: '#0o0ff41',
+        secondary: '#ff0o080',
+        accent: '#0o0d4ff',
+        quantum: '#ff6b35',
+        holographic: '#9d4edd'},
       'holographic': {
-        primary: '#ff0o0ff';
-        secondary: '#0o0ffff';
-        accent: '#ffff0o0';
-        quantum: '#0o0ff88';
-        holographic: '#ff0o088'};
+        primary: '#ff0o0ff',
+        secondary: '#0o0ffff',
+        accent: '#ffff0o0',
+        quantum: '#0o0ff88',
+        holographic: '#ff0o088'},
       'quantum-ai': {
-        primary: '#0o0d4ff';
-        secondary: '#ff6b35';
-        accent: '#9d4edd';
-        quantum: '#0o0ff88';
+        primary: '#0o0d4ff',
+        secondary: '#ff6b35',
+        accent: '#9d4edd',
+        quantum: '#0o0ff88',
         holographic: '#ff0o088'}
-    };
+    },
     const colors = colorSchemes[colorScheme],
     // Initialize particles,
     const initParticles = () => {
@@ -79,17 +79,17 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
                     Math.random() > 0.5 ? 'holographic' :,
                     Math.random() > 0.3 ? 'neon' : 'fusion',
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2 * animationSpeed;
-          vy: (Math.random() - 0.5) * 2 * animationSpeed;
-          size: Math.random() * 3 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * animationSpeed,
+          vy: (Math.random() - 0.5) * 2 * animationSpeed,
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
           color: type === 'quantum' ? colors.quantum :,
                  type === 'holographic' ? colors.holographic :,
-                 type === 'neon' ? colors.primary : colors.secondary;
+                 type === 'neon' ? colors.primary : colors.secondary,
           type})}
-    };
+    },
     // Quantum entanglement effect,
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return,
@@ -107,7 +107,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.stroke()}
         }
       }
-    };
+    },
     // Holographic grid effect,
     const createHolographicGrid = () => {
       if (!enableHolographic) return,
@@ -128,7 +128,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.moveTo(0y),
         ctx.lineTo(canvas.widthy),
         ctx.stroke()}
-    };
+    },
     // Neural network effect,
     const createNeuralNetwork = () => {
       if (!enableQuantumEffects) return,
@@ -148,13 +148,13 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
             ctx.stroke()}
         }
       }
-    };
+    },
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0canvas.widthcanvas.height),
       // Create background gradient,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2canvas.height / 20;
+        canvas.width / 2canvas.height / 20,
         canvas.width / 2canvas.height / 2Math.max(canvas.widthcanvas.height) / 2),
       gradient.addColorStop(0'rgba(0o0.8)'),
       gradient.addColorStop(0.5'rgba(0o0.6)'),
@@ -183,7 +183,7 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
         ctx.arc(particle.xparticle.yparticle.size0Math.PI * 2),
         // Create glow effect,
         const glowGradient = ctx.createRadialGradient(
-          particle.xparticle.y0;
+          particle.xparticle.y0,
           particle.xparticle.yparticle.size * 3),
         glowGradient.addColorStop(0`${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2'0')}`),
         glowGradient.addColorStop(0.5`${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2'0')}`),
@@ -211,12 +211,12 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           ctx.stroke()}
       }
 ,
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     initParticles(),
     animate(),
     return () => {
       window.removeEventListener('resize'resizeCanvas),
-      cancelAnimationFrame(animationFrameId)};
+      cancelAnimationFrame(animationFrameId)},
   }[intensitycolorSchemeparticleCountanimationSpeedenableHolographicenableQuantumEffects]),
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">,
@@ -247,5 +247,5 @@ const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgro
           </>)}
       </div>,
       {children}
-    </div>)};
-export default UltraAdvancedFuturisticBackground;
+    </div>)},
+export default UltraAdvancedFuturisticBackground,

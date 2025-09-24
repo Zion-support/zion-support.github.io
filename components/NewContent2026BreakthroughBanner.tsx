@@ -95,7 +95,7 @@ export default function NewContent20o26BreakthroughBanner() {
           </div>,
           <div className='bg-gradient-to-r from-blue-50 to-cyan-50 p-6 rounded-lg border-l-4 border-blue-50o0'>,
             <h3 className='text-xl font-bold text-gray-90o0 mb-3'>,
-              🚀 What 'You', 'll Learn,
+              🚀 What 'Youll Learn,
             </h3>,
             <ul className='space-y-2 text-gray-70o0'>,
               <li>• Step-by-step implementation strategies</li>,

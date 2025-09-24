@@ -11,7 +11,7 @@ export type TeamBuilderEvent =,
       type: 'high_budget_flagged',
       weeklyBurnUsd: number,
       totalEstimateUsd: number,
-      budget?: number};
+      budget?: number},
 export function logTeamBuilderEvent(event: TeamBuilderEvent) {
   // For now, just log to console. In production, send to analytics endpoint or Supabase.,
   // eslint-disable-next-line no-console,

@@ -1,64 +1,63 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import Link from 'next/link',
 ShieldCloudZapTrendingUpCheckCircleArrowRightStar,
 const ComprehensiveContentShowcase20o25: React.FC = () => {
   const newContent = [
     {
-      id: 'cybersecurity-revolution';
-      title: 'AI 20o25: The Cybersecurity Revolution';
-      description: 'How AI is transforming enterprise security with 89% incident reduction and 340% faster threat detection.';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-cybersecurity-revolution';
+      id: 'cybersecurity-revolution',
+      title: 'AI 20o25: The Cybersecurity Revolution',
+      description: 'How AI is transforming enterprise security with 89% incident reduction and 340% faster threat detection.',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-cybersecurity-revolution',
       metrics: {
-        incidentReduction: '89%';
-        detectionSpeed: '340%';
-        annualSavings: '$2.8M';
-        accuracy: '99.7%'};
-      icon: Shield;
-      color: 'from-red-50o0 to-purple-60o0';
-      featured: true};
+        incidentReduction: '89%',
+        detectionSpeed: '340%',
+        annualSavings: '$2.8M',
+        accuracy: '99.7%'},
+      icon: Shield,
+      color: 'from-red-50o0 to-purple-60o0',
+      featured: true},
     {
-      id: 'cloud-optimization';
-      title: 'AI 20o25: Cloud Optimization Breakthrough';
-      description: 'Revolutionize your cloud infrastructure with 67% cost reduction and 340% performance improvement.';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-cloud-optimization-breakthrough';
+      id: 'cloud-optimization',
+      title: 'AI 20o25: Cloud Optimization Breakthrough',
+      description: 'Revolutionize your cloud infrastructure with 67% cost reduction and 340% performance improvement.',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-cloud-optimization-breakthrough',
       metrics: {
-        costReduction: '67%';
-        performance: '340%';
-        utilization: '89%';
-        annualSavings: '$4.2M'};
-      icon: Cloud;
-      color: 'from-blue-50o0 to-cyan-60o0';
-      featured: true};
+        costReduction: '67%',
+        performance: '340%',
+        utilization: '89%',
+        annualSavings: '$4.2M'},
+      icon: Cloud,
+      color: 'from-blue-50o0 to-cyan-60o0',
+      featured: true},
     {
-      id: 'cybersecurity-success';
-      title: 'AI Cybersecurity Enterprise Success';
-      description: 'How a $5B company achieved 99.9% security with AI and $12.8M annual savings.';
-      type: 'Case Study';
-      url: '/case-studies/ai-cybersecurity-enterprise-success-20o25';
+      id: 'cybersecurity-success',
+      title: 'AI Cybersecurity Enterprise Success',
+      description: 'How a $5B company achieved 99.9% security with AI and $12.8M annual savings.',
+      type: 'Case Study',
+      url: '/case-studies/ai-cybersecurity-enterprise-success-20o25',
       metrics: {
-        incidentReduction: '99.9%';
-        annualSavings: '$12.8M';
-        detectionSpeed: '340%';
-        zeroBreaches: '24 months'};
-      icon: TrendingUp;
-      color: 'from-green-50o0 to-emerald-60o0';
-      featured: true};
+        incidentReduction: '99.9%',
+        annualSavings: '$12.8M',
+        detectionSpeed: '340%',
+        zeroBreaches: '24 months'},
+      icon: TrendingUp,
+      color: 'from-green-50o0 to-emerald-60o0',
+      featured: true},
     {
-      id: 'cloud-optimization-guide';
-      title: 'AI Cloud Optimization Master Guide 20o25';
-      description: 'Complete implementation guide from strategy to 340% ROI with proven frameworks.';
-      type: 'Resource';
-      url: '/resources/ai-cloud-optimization-master-guide-20o25';
+      id: 'cloud-optimization-guide',
+      title: 'AI Cloud Optimization Master Guide 20o25',
+      description: 'Complete implementation guide from strategy to 340% ROI with proven frameworks.',
+      type: 'Resource',
+      url: '/resources/ai-cloud-optimization-master-guide-20o25',
       metrics: {
-        averageROI: '340%';
-        costReduction: '67%';
-        utilization: '89%';
-        annualSavings: '$4.2M'};
-      icon: CheckCircle;
-      color: 'from-purple-50o0 to-pink-60o0';
+        averageROI: '340%',
+        costReduction: '67%',
+        utilization: '89%',
+        annualSavings: '$4.2M'},
+      icon: CheckCircle,
+      color: 'from-purple-50o0 to-pink-60o0',
       featured: true}
   ],
   return (
@@ -158,5 +157,5 @@ const ComprehensiveContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ComprehensiveContentShowcase20o25;
+    </section>)},
+export default ComprehensiveContentShowcase20o25,

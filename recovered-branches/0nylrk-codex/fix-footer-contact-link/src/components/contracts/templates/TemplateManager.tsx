@@ -14,10 +14,10 @@ interface TemplateManagerProps {
   currentValues?: ContractFormValues}
 ,
 export function TemplateManager({
-  isOpen;
-  onClose;
-  onSelectTemplate;
-  currentValues;
+  isOpen,
+  onClose,
+  onSelectTemplate,
+  currentValues,
 }: TemplateManagerProps) {
   const [modesetMode] = useState<'list' | 'save'>('list'),
   const [selectedTemplatesetSelectedTemplate] =,
@@ -29,13 +29,13 @@ export function TemplateManager({
       onSelectTemplate(template.template_data),
       onClose(),
       toast({
-        title: 'Template loaded';
-        description: `Template "${template.title}" has been loaded.`;
+        title: 'Template loaded',
+        description: `Template "${template.title}" has been loaded.`,
       })}
-  };
+  },
   const handleSaveComplete = () => {
     setMode('list'),
-    setSelectedTemplate(null)};
+    setSelectedTemplate(null)},
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>,
       <DialogContent className='sm: max-w-lg max-h-[90vh] overflow-y-auto'>,

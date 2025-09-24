@@ -6,28 +6,28 @@ const RevolutionaryAIAutomationBanner20o25: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const featuredContent = [
     {
-      id: 'ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success';
-      title: 'AI 20o25: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,50o0% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success';
+      id: 'ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success',
+      title: 'AI 20o25: The Enterprise Automation Revolutionary Breakthrough - Ultimate Success Guide to 2,50o0% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-automation-revolutionary-breakthrough-ultimate-success',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$8.5B+';
-        efficiency: '1,20o0%';
-        satisfaction: '99.5%'};
-      readingTime: '28 min read';
-      description: 'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI automation.'};
+        roi: '2,50o0%',
+        savings: '$8.5B+',
+        efficiency: '1,20o0%',
+        satisfaction: '99.5%'},
+      readingTime: '28 min read',
+      description: 'Discover how Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through revolutionary AI automation.'},
     {
-      id: 'fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story';
-      title: 'Fortune 50o0 AI Automation Revolutionary Breakthrough: $8.5B Annual Savings - 2,50o0% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story';
+      id: 'fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story',
+      title: 'Fortune 50o0 AI Automation Revolutionary Breakthrough: $8.5B Annual Savings - 2,50o0% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-automation-revolutionary-breakthrough-250o0-roi-success-story',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$8.5B';
-        efficiency: '1,20o0%';
-        timeline: '18 months'};
-      readingTime: '22 min read';
+        roi: '2,50o0%',
+        savings: '$8.5B',
+        efficiency: '1,20o0%',
+        timeline: '18 months'},
+      readingTime: '22 min read',
       description: 'How a Fortune 50o0 manufacturing company achieved unprecedented 2,50o0% ROI through revolutionary AI automation.'}
   ],
   useEffect(() => {
@@ -36,7 +36,7 @@ const RevolutionaryAIAutomationBanner20o25: React.FC = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('revolutionary-ai-automation-banner-dismissed', 'true')};
+    localStorage.setItem('revolutionary-ai-automation-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('revolutionary-ai-automation-banner-dismissed'),
     if (dismissed === 'true') {
@@ -141,5 +141,5 @@ const RevolutionaryAIAutomationBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryAIAutomationBanner20o25;
+    </div>)},
+export default RevolutionaryAIAutomationBanner20o25,

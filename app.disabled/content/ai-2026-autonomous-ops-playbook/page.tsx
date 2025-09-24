@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Ops Playbook | Zion Tech Group';
+  title: 'AI 20o26: Autonomous Ops Playbook | Zion Tech Group',
   description:,
-    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.';
-};
+    'A step-by-step playbook to deploy autonomous, outcome-driven operations with agents, EDA, and guardrails.',
+},
 export default function AutonomousOpsPlaybook20o26() {
   return (
     <main className='min-h-screen bg-white'>,

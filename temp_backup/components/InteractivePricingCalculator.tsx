@@ -22,55 +22,55 @@ interface PricingOptions {
 const InteractivePricingCalculator: React.FC = () => {
   const [selectedTier, setSelectedTier] = useState<string>('starter'),
   const [options, setOptions] = useState<PricingOptions>({
-    users: 5;
-    storage: 10;
-    support: 'basic';
-    customization: false;
-    integration: false;
+    users: 5,
+    storage: 10,
+    support: 'basic',
+    customization: false,
+    integration: false,
     training: false}),
   const pricingTiers: PricingTier[] = [
     {
-      id: 'starter';
-      name: 'Starter';
-      basePrice: 99;
-      description: 'Perfect for small teams and startups';
-      features: ['Up to 5 users', '10GB storage', 'Basic support', 'Core features'];
-      icon: <Zap className="w-6 h-6"  />;
-      color: 'from-yellow-50o0 to-orange-50o0'};
+      id: 'starter',
+      name: 'Starter',
+      basePrice: 99,
+      description: 'Perfect for small teams and startups',
+      features: ['Up to 5 users10GB storage', 'Basic supportCore features'],
+      icon: <Zap className="w-6 h-6"  />,
+      color: 'from-yellow-50o0 to-orange-50o0'},
     {
-      id: 'professional';
-      name: 'Professional';
-      basePrice: 299;
-      description: 'Ideal for growing businesses';
-      features: ['Up to 25 users', '10o0GB storage', 'Priority support', 'Advanced features'];
-      icon: <TrendingUp className="w-6 h-6"  />;
-      color: 'from-cyan-50o0 to-blue-50o0';
-      popular: true};
+      id: 'professional',
+      name: 'Professional',
+      basePrice: 299,
+      description: 'Ideal for growing businesses',
+      features: ['Up to 25 users10o0GB storage', 'Priority supportAdvanced features'],
+      icon: <TrendingUp className="w-6 h-6"  />,
+      color: 'from-cyan-50o0 to-blue-50o0',
+      popular: true},
     {
-      id: 'enterprise';
-      name: 'Enterprise';
-      basePrice: 999;
-      description: 'For large organizations';
-      features: ['Unlimited users', '1TB storage', 'Enterprise support', 'All features'];
-      icon: <Shield className="w-6 h-6"  />;
-      color: 'from-purple-50o0 to-pink-50o0'};
+      id: 'enterprise',
+      name: 'Enterprise',
+      basePrice: 999,
+      description: 'For large organizations',
+      features: ['Unlimited users1TB storage', 'Enterprise supportAll features'],
+      icon: <Shield className="w-6 h-6"  />,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      id: 'ai-premium';
-      name: 'AI Premium';
-      basePrice: 1999;
-      description: 'Advanced AI and machine learning features';
-      features: ['AI-powered insights', 'Predictive analytics', 'Custom AI models', '24/7 support'];
-      icon: <Brain className="w-6 h-6"  />;
+      id: 'ai-premium',
+      name: 'AI Premium',
+      basePrice: 1999,
+      description: 'Advanced AI and machine learning features',
+      features: ['AI-powered insightsPredictive analytics', 'Custom AI models24/7 support'],
+      icon: <Brain className="w-6 h-6"  />,
       color: 'from-green-50o0 to-emerald-50o0'}
   ],
   const supportPricing ={
-    basic: 0;
-    priority: 99;
-    enterprise: 299};
+    basic: 0,
+    priority: 99,
+    enterprise: 299},
   const addonPricing ={
-    customization: 199;
-    integration: 299;
-    training: 399};
+    customization: 199,
+    integration: 299,
+    training: 399},
   const calculatePrice = useMemo(() => {
     const tier = pricingTiers.find(t => t.id === selectedTier),
     if (!tier) return 0,
@@ -95,13 +95,13 @@ const InteractivePricingCalculator: React.FC = () => {
     if (options.training) total += addonPricing.training,
     return total}, [selectedTier, options]),
   const handleOptionChange = (key: keyof PricingOptions, value: any) => {
-    setOptions(prev => ({ ...prev, [key]: value }))};
+    setOptions(prev => ({ ...prev, [key]: value }))},
   const formatPrice = (price: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0}).format(price)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0}).format(price)},
   return (
     <div className="max-w-6xl mx-auto p-6">,
       <motion.div,
@@ -207,7 +207,7 @@ const InteractivePricingCalculator: React.FC = () => {
               Support Level,
             </label>,
             <div className="grid grid-cols-3 gap-2">,
-              {(['basic', 'priority', 'enterprise'] as const).map((level) => (
+              {(['basicpriority', 'enterprise'] as const).map((level) => (
                 <button
                   key={level}
                   onClick={() => handleOptionChange('support', level)}
@@ -230,8 +230,8 @@ const InteractivePricingCalculator: React.FC = () => {
             </label>,
             <div className="space-y-3">,
               {[
-                { key: 'customization', label: 'Custom Development', price: addonPricing.customization };
-                { key: 'integration', label: 'Third-party Integrations', price: addonPricing.integration };
+                { key: 'customization', label: 'Custom Development', price: addonPricing.customization },
+                { key: 'integration', label: 'Third-party Integrations', price: addonPricing.integration },
                 { key: 'training', label: 'Team Training', price: addonPricing.training }
               ].map((addon) => (
                 <label key={addon.key} className="flex items-center justify-between cursor-pointer">,
@@ -311,5 +311,5 @@ const InteractivePricingCalculator: React.FC = () => {
           border: none,
           box-shadow: 0 0 10px rgba(6, 182, 212, 0.5)}
       `}</style>,
-    </div>)};
-export default InteractivePricingCalculator;
+    </div>)},
+export default InteractivePricingCalculator,

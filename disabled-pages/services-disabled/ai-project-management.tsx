@@ -2,107 +2,90 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  CheckCircle;
-  Calendar;
-  Brain;
-  Users;
-  Target;
-  BarChart3;
-  Clock;
-  Star;
-  Zap;
-  FileText;
-  TrendingUp;
+  ArrowRight,
+  CheckCircle,
+  Calendar,
+  Brain,
+  Users,
+  Target,
+  BarChart3,
+  Clock,
+  Star,
+  Zap,
+  FileText,
+  TrendingUp,
 } from 'lucide-react',
 const AIProjectManagementPage: NextPage = () => {
   const features = [
-    'AI-powered task prioritization and scheduling';
-    'Intelligent resource allocation and workload balancing';
-    'Automated progress tracking and milestone management';
-    'Smart deadline prediction and risk assessment';
-    'Team collaboration tools with real-time updates';
-    'Customizable project templates and workflows';
-    'Advanced reporting and analytics dashboard';
-    'Integration with popular tools (Slack, Jira, Trello)';
+    'AI-powered task prioritization and schedulingIntelligent resource allocation and workload balancing',
+    'Automated progress tracking and milestone managementSmart deadline prediction and risk assessment',
+    'Team collaboration tools with real-time updatesCustomizable project templates and workflows',
+    'Advanced reporting and analytics dashboardIntegration with popular tools (Slack, Jira, Trello)',
   ],
   const benefits = [
-    'Complete projects 25% faster on average';
-    'Reduce project overruns by 40%';
-    'Improve team productivity by 35%';
-    'Better resource utilization and planning';
-    'Enhanced project visibility and control';
+    'Complete projects 25% faster on averageReduce project overruns by 40%',
+    'Improve team productivity by 35%Better resource utilization and planning',
+    'Enhanced project visibility and control',
   ],
   const useCases = [
-    'Software development projects';
-    'Marketing campaign management';
-    'Event planning and coordination';
-    'Product launch management';
-    'Client project delivery';
+    'Software development projectsMarketing campaign management',
+    'Event planning and coordinationProduct launch management',
+    'Client project delivery',
   ],
   const pricingPlans = [
     {
-      name: 'Team';
-      price: 89;
-      period: 'month';
-      description: 'Perfect for small teams';
+      name: 'Team',
+      price: 89,
+      period: 'month',
+      description: 'Perfect for small teams',
       features: [
-        'Up to 10 team members';
-        'Unlimited projects';
-        'Basic AI features';
-        'Task management';
-        'Team collaboration';
-        'Email support';
-      ];
-    };
+        'Up to 10 team membersUnlimited projects',
+        'Basic AI featuresTask management',
+        'Team collaborationEmail support',
+      ]
+    },
     {
-      name: 'Business';
-      price: 199;
-      period: 'month';
-      description: 'Ideal for growing companies';
+      name: 'Business',
+      price: 199,
+      period: 'month',
+      description: 'Ideal for growing companies',
       features: [
-        'Up to 50 team members';
-        'Advanced AI features';
-        'Resource management';
-        'Custom workflows';
-        'Advanced analytics';
-        'Priority support';
-        'API access';
-      ];
-    };
+        'Up to 50 team membersAdvanced AI features',
+        'Resource managementCustom workflows',
+        'Advanced analyticsPriority support',
+        'API access',
+      ]
+    },
     {
-      name: 'Enterprise';
-      price: 399;
-      period: 'month';
-      description: 'For large organizations';
+      name: 'Enterprise',
+      price: 399,
+      period: 'month',
+      description: 'For large organizations',
       features: [
-        'Unlimited team members';
-        'Custom AI models';
-        'White-label options';
-        'Dedicated account manager';
-        'Custom integrations';
-        'Advanced reporting';
-        'SLA guarantee';
-      ];
-    };
+        'Unlimited team membersCustom AI models',
+        'White-label optionsDedicated account manager',
+        'Custom integrationsAdvanced reporting',
+        'SLA guarantee',
+      ]
+    },
   ],
   const testimonials = [
     {
-      name: 'Sarah Johnson';
-      company: 'Tech Innovations';
-      role: 'Project Manager';
+      name: 'Sarah Johnson',
+      company: 'Tech Innovations',
+      role: 'Project Manager',
       content:,
-        "We've reduced project delivery time by 30% since implementing this AI project management tool. The predictive scheduling is game-changing.";
-      rating: 5;
-    };
+        "We've reduced project delivery time by 30% since implementing this AI project management tool. The predictive scheduling is game-changing.",
+      rating: 5
+    },
     {
-      name: 'Michael Chen';
-      company: 'Digital Agency Pro';
-      role: 'Operations Director';
+      name: 'Michael Chen',
+      company: 'Digital Agency Pro',
+      role: 'Operations Director',
       content:,
-        "The resource allocation features have optimized our team's workload perfectly. Our productivity has increased significantly.";
-      rating: 5;
-    };
+        "The resource allocation features have optimized our team's workload perfectly. Our productivity has increased significantly.",
+      rating: 5
+    },
   ],
   return (
     <>,
@@ -135,7 +118,7 @@ const AIProjectManagementPage: NextPage = () => {
                 AI Project Management,
               </h1>,
               <p className='text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto'>,
-                Intelligent project management that automates scheduling;
+                Intelligent project management that automates scheduling,
                 optimizes resources, and predicts project outcomes. Complete,
                 projects 25% faster with AI-powered planning and execution.,
               </p>,
@@ -348,5 +331,5 @@ const AIProjectManagementPage: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default AIProjectManagementPage;
+    </>)},
+export default AIProjectManagementPage,

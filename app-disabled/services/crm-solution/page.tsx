@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'crm-solution - Zion Tech Group';
-  description: 'Professional crm-solution solutions for your business needs.';
-  keywords: 'crm-solution, services, business, technology';
-};
+  title: 'crm-solution - Zion Tech Group',
+  description: 'Professional crm-solution solutions for your business needs.',
+  keywords: 'crm-solution, services, business, technology',
+},
 export default function CrmSolutionPage() {
   return (
     <div className='min-h-screen bg-white'>,

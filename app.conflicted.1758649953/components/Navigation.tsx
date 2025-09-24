@@ -7,7 +7,7 @@ const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   return (
@@ -82,5 +82,5 @@ const Navigation = () => {
             </div>,
           </div>)}
       </div>,
-    </nav>)};
-export default Navigation;
+    </nav>)},
+export default Navigation,

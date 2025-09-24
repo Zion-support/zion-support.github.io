@@ -1,17 +1,15 @@
 // SEO is deprecated in Next 15, relying on metadata export,
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o25 Advanced Automation - Revolutionary Business Transformation';
+  title: 'AI 20o25 Advanced Automation - Revolutionary Business Transformation',
   description:,
-    'Discover the future of AI automation in 20o25. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 10o00% ROI.';
+    'Discover the future of AI automation in 20o25. Advanced neural networks, autonomous systems, and intelligent business processes that deliver 10o00% ROI.',
   keywords: [
-    'AI automation 20o25';
-    'advanced neural networks';
-    'autonomous business systems';
-    'AI transformation';
-    'intelligent automation';
-  ];
-};
+    'AI automation 20o25advanced neural networks',
+    'autonomous business systemsAI transformation',
+    'intelligent automation',
+  ]
+},
 export default function AI20o25AdvancedAutomationPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0'>,

@@ -10,118 +10,95 @@ export default function SEOAnalyzerToolPage() {
   const [urlsetUrl] = useState(''),
   const features = [
     {
-      icon: <Search className="w-8 h-8 text-white" />;
-      title: 'Comprehensive SEO Analysis';
-      description: 'Deep analysis of on-page SEO factorstechnical issuesand content optimization opportunities.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-      gradient: 'from-green-400 to-emerald-500'};
+      icon: <Search className="w-8 h-8 text-white" />,
+      title: 'Comprehensive SEO Analysis',
+      description: 'Deep analysis of on-page SEO factorstechnical issuesand content optimization opportunities.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <Target className="w-8 h-8 text-white" />;
-      title: 'Keyword Research';
-      description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
-      gradient: 'from-blue-400 to-cyan-500'};
+      icon: <Target className="w-8 h-8 text-white" />,
+      title: 'Keyword Research',
+      description: 'Discover high-value keywords and analyze search intent to optimize your content strategy.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <BarChart3 className="w-8 h-8 text-white" />;
-      title: 'Competitive Analysis';
-      description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.';
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
-      gradient: 'from-purple-400 to-indigo-500'};
+      icon: <BarChart3 className="w-8 h-8 text-white" />,
+      title: 'Competitive Analysis',
+      description: 'Analyze your competitors\' SEO strategies and identify opportunities to outperform them.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
+      gradient: 'from-purple-400 to-indigo-500'},
     {
-      icon: <Zap className="w-8 h-8 text-white" />;
-      title: 'AI-Powered Insights';
-      description: 'Get intelligent recommendations and actionable insights to improve your search rankings.';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
+      icon: <Zap className="w-8 h-8 text-white" />,
+      title: 'AI-Powered Insights',
+      description: 'Get intelligent recommendations and actionable insights to improve your search rankings.',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
       gradient: 'from-orange-400 to-red-500'}],
   const seoFactors = [
     {
-      category: 'On-Page SEO';
+      category: 'On-Page SEO',
       factors: [
-        'Title tags optimization';
-        'Meta descriptions';
-        'Header structure (H1H2H3)';
-        'Content quality and length';
-        'Internal linking structure';
-        'Image optimization (alt tags)'];
-      icon: '📝';
-      color: 'text-green-400'};
+        'Title tags optimizationMeta descriptions',
+        'Header structure (H1H2H3)Content quality and length',
+        'Internal linking structureImage optimization (alt tags)'],
+      icon: '📝',
+      color: 'text-green-400'},
     {
-      category: 'Technical SEO';
+      category: 'Technical SEO',
       factors: [
-        'Page load speed';
-        'Mobile responsiveness';
-        'XML sitemap';
-        'Robots.txt configuration';
-        'SSL certificate';
-        'Core Web Vitals'];
-      icon: '⚙️';
-      color: 'text-blue-400'};
+        'Page load speedMobile responsiveness',
+        'XML sitemapRobots.txt configuration',
+        'SSL certificateCore Web Vitals'],
+      icon: '⚙️',
+      color: 'text-blue-400'},
     {
-      category: 'Content SEO';
+      category: 'Content SEO',
       factors: [
-        'Keyword density';
-        'Content relevance';
-        'Readability scores';
-        'Content freshness';
-        'Multimedia optimization';
-        'Schema markup'];
-      icon: '📊';
-      color: 'text-purple-400'};
+        'Keyword densityContent relevance',
+        'Readability scoresContent freshness',
+        'Multimedia optimizationSchema markup'],
+      icon: '📊',
+      color: 'text-purple-400'},
     {
-      category: 'Local SEO';
+      category: 'Local SEO',
       factors: [
-        'Google My Business';
-        'Local citations';
-        'Review management';
-        'Local keyword targeting';
-        'Location-based content';
-        'Local link building'];
-      icon: '📍';
+        'Google My BusinessLocal citations',
+        'Review managementLocal keyword targeting',
+        'Location-based contentLocal link building'],
+      icon: '📍',
       color: 'text-orange-400'}
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$39';
-      period: '/month';
-      description: 'Perfect for small businesses and bloggers';
+      name: 'Starter',
+      price: '$39',
+      period: '/month',
+      description: 'Perfect for small businesses and bloggers',
       features: [
-        '10 website analyses/month';
-        'Basic SEO metrics';
-        'Keyword research (100 keywords)';
-        'On-page SEO analysis';
-        'Email support';
-        'Basic reporting'];
-      popular: false};
+        '10 website analyses/monthBasic SEO metrics',
+        'Keyword research (100 keywords)On-page SEO analysis',
+        'Email supportBasic reporting'],
+      popular: false},
     {
-      name: 'Professional';
-      price: '$89';
-      period: '/month';
-      description: 'Ideal for growing businesses and agencies';
+      name: 'Professional',
+      price: '$89',
+      period: '/month',
+      description: 'Ideal for growing businesses and agencies',
       features: [
-        '50 website analyses/month';
-        'Advanced SEO metrics';
-        'Keyword research (500 keywords)';
-        'Competitive analysis';
-        'Priority support';
-        'Advanced reporting';
-        'API access';
-        'Team collaboration'];
-      popular: true};
+        '50 website analyses/monthAdvanced SEO metrics',
+        'Keyword research (500 keywords)Competitive analysis',
+        'Priority supportAdvanced reporting',
+        'API accessTeam collaboration'],
+      popular: true},
     {
-      name: 'Enterprise';
-      price: '$249';
-      period: '/month';
-      description: 'For large organizations and SEO agencies';
+      name: 'Enterprise',
+      price: '$249',
+      period: '/month',
+      description: 'For large organizations and SEO agencies',
       features: [
-        'Unlimited analyses';
-        'Enterprise SEO metrics';
-        'Unlimited keyword research';
-        'Advanced competitive analysis';
-        '24/7 dedicated support';
-        'Custom reporting';
-        'White-label options';
-        'Custom integrations'];
+        'Unlimited analysesEnterprise SEO metrics',
+        'Unlimited keyword researchAdvanced competitive analysis',
+        '24/7 dedicated supportCustom reporting',
+        'White-label optionsCustom integrations'],
       popular: false}
   ],
   const handleAnalyzeSEO = async () => {
@@ -130,33 +107,31 @@ export default function SEOAnalyzerToolPage() {
     // Simulate SEO analysis,
     setTimeout(() => {
       setAnalysisResults({
-        url: url;
-        overallScore: 78;
-        onPageScore: 82;
-        technicalScore: 75;
-        contentScore: 80;
-        mobileScore: 85;
+        url: url,
+        overallScore: 78,
+        onPageScore: 82,
+        technicalScore: 75,
+        contentScore: 80,
+        mobileScore: 85,
         issues: [
-          { type: ''error', 'message: 'Missing meta 'description', 'priority: 'high' };
-          { type: ''warning', 'message: 'Title tag too long (65 characters)'priority: 'medium' };
-          { type: ''info', 'message: 'Consider adding more internal 'links', 'priority: 'low' }
-        ];
+          { type: ''errormessage: 'Missing meta 'descriptionpriority: 'high' },
+          { type: ''warningmessage: 'Title tag too long (65 characters)'priority: 'medium' },
+          { type: ''infomessage: 'Consider adding more internal 'linkspriority: 'low' }
+        ],
         recommendations: [
-          'Optimize meta descriptions for better click-through rates';
-          'Improve page load speed by optimizing images';
-          'Add more relevant internal links to improve site structure';
-          'Implement schema markup for rich snippets'];
+          'Optimize meta descriptions for better click-through ratesImprove page load speed by optimizing images',
+          'Add more relevant internal links to improve site structureImplement schema markup for rich snippets'],
         keywords: [
-          { keyword: 'website 'optimization', 'volume: '12'K', 'difficulty: 'medium' };
-          { keyword: 'SEO 'tools', 'volume: '8'K', 'difficulty: 'low' };
-          { keyword: 'search engine 'optimization', 'volume: '15'K', 'difficulty: 'high' }
+          { keyword: 'website 'optimizationvolume: '12'Kdifficulty: 'medium' },
+          { keyword: 'SEO 'toolsvolume: '8'Kdifficulty: 'low' },
+          { keyword: 'search engine 'optimizationvolume: '15'Kdifficulty: 'high' }
         ]}),
-      setIsAnalyzing(false)}4000)};
+      setIsAnalyzing(false)}4000)},
   return (
     <>,
       <Head>,
         <title>SEO Analyzer Tool - Zion Tech Group | Professional SEO Analysis & Optimization</title>,
-        <meta name="description" content="Analyze your 'website', 's SEO performance with our comprehensive tool. Get detailed insightskeyword researchand optimization recommendations to improve search rankings." />,
+        <meta name="description" content="Analyze your 'websites SEO performance with our comprehensive tool. Get detailed insightskeyword researchand optimization recommendations to improve search rankings." />,
         <meta property="og: title" content="SEO Analyzer Tool - Zion Tech Group" />,
         <meta property="og:description" content="Professional SEO analysis tool with comprehensive insights and optimization recommendations." />,
         <meta name="twitter:card" content="summary_large_image" />,
@@ -270,7 +245,7 @@ export default function SEOAnalyzerToolPage() {
               Comprehensive SEO Analysis,
             </h2>,
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">,
-              We analyze every aspect of your 'website', 's SEO to provide actionable insights and recommendations.,
+              We analyze every aspect of your 'websites SEO to provide actionable insights and recommendations.,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 gap-8">,

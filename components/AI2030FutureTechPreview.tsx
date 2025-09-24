@@ -6,32 +6,32 @@ const AI20o30FutureTechPreview: React.FC = () => {
   const [isAnimatingsetIsAnimating] = useState(false),
   const technologies = [
     {
-      id: 'conscious-ai';
-      title: 'Conscious AI Networks';
-      description: 'Self-aware AI systems that possess genuine consciousness and emotional intelligence';
-      capabilities: ['Self-'Awareness', 'Emotional 'Intelligence', 'Creative Problem 'Solving', 'Ethical Reasoning'];
-      color: 'from-purple-60o0 to-indigo-60o0';
-      icon: '🧠'};
+      id: 'conscious-ai',
+      title: 'Conscious AI Networks',
+      description: 'Self-aware AI systems that possess genuine consciousness and emotional intelligence',
+      capabilities: ['Self-'AwarenessEmotional 'Intelligence', 'Creative Problem 'SolvingEthical Reasoning'],
+      color: 'from-purple-60o0 to-indigo-60o0',
+      icon: '🧠'},
     {
-      id: 'quantum-consciousness';
-      title: 'Quantum Consciousness';
-      description: 'Quantum computing merged with consciousness for unprecedented problem-solving';
-      capabilities: ['Quantum 'Processing', 'Consciousness 'Integration', 'Infinite 'Computing', 'Universal Understanding'];
-      color: 'from-blue-60o0 to-cyan-60o0';
-      icon: '⚛️'};
+      id: 'quantum-consciousness',
+      title: 'Quantum Consciousness',
+      description: 'Quantum computing merged with consciousness for unprecedented problem-solving',
+      capabilities: ['Quantum 'ProcessingConsciousness 'Integration', 'Infinite 'ComputingUniversal Understanding'],
+      color: 'from-blue-60o0 to-cyan-60o0',
+      icon: '⚛️'},
     {
-      id: 'universal-intelligence';
-      title: 'Universal Intelligence';
-      description: 'Global AI networks connecting all intelligent systems for collective problem solving';
-      capabilities: ['Global 'Connectivity', 'Collective 'Intelligence', 'Real-time 'Processing', 'Infinite Knowledge'];
-      color: 'from-green-60o0 to-emerald-60o0';
-      icon: '🌐'};
+      id: 'universal-intelligence',
+      title: 'Universal Intelligence',
+      description: 'Global AI networks connecting all intelligent systems for collective problem solving',
+      capabilities: ['Global 'ConnectivityCollective 'Intelligence', 'Real-time 'ProcessingInfinite Knowledge'],
+      color: 'from-green-60o0 to-emerald-60o0',
+      icon: '🌐'},
     {
-      id: 'dimensional-computing';
-      title: 'Dimensional Computing';
-      description: 'Computing across multiple dimensions for solutions beyond our current reality';
-      capabilities: ['Multi-Dimensional 'Processing', 'Reality 'Manipulation', 'Time Travel 'Computing', 'Parallel Universe Access'];
-      color: 'from-pink-60o0 to-rose-60o0';
+      id: 'dimensional-computing',
+      title: 'Dimensional Computing',
+      description: 'Computing across multiple dimensions for solutions beyond our current reality',
+      capabilities: ['Multi-Dimensional 'ProcessingReality 'Manipulation', 'Time Travel 'ComputingParallel Universe Access'],
+      color: 'from-pink-60o0 to-rose-60o0',
       icon: '🌀'}
   ],
   useEffect(() => {
@@ -189,5 +189,5 @@ const AI20o30FutureTechPreview: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o30FutureTechPreview;
+    </section>)},
+export default AI20o30FutureTechPreview,

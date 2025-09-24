@@ -227,5 +227,5 @@ const AI20o26RevolutionaryBreakthroughUltimatePromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26RevolutionaryBreakthroughUltimatePromotionBanner;
+    </section>)},
+export default AI20o26RevolutionaryBreakthroughUltimatePromotionBanner,

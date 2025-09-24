@@ -54,7 +54,7 @@ const AutonomousFinanceAgents20o26 = () => {
           <p>,
             Event streams feed an agent orchestration layer connected to finance,
             systems (ERP, AP/AR, banking). Agents operate under policy, log,
-            decisions, and escalate exceptions to humans. Observability;
+            decisions, and escalate exceptions to humans. Observability,
             auditing, and controls ensure compliance.,
           </p>,
           <h2>Getting Started</h2>,
@@ -84,5 +84,5 @@ const AutonomousFinanceAgents20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousFinanceAgents20o26;
+    </div>)},
+export default AutonomousFinanceAgents20o26,

@@ -5,7 +5,7 @@ import Head from 'next/head',
 import Layout from './layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon} from 'lucide-react',
 import PerformanceDashboard from './PerformanceDashboard',
 import EnhancedSEO from './EnhancedSEO',
@@ -24,7 +24,7 @@ interface Service {
   type: string,
   category: string,
   pricing: {
-    starter: string};
+    starter: string},
   slug: string}
 ,
 const Homepage20o44: React.FC = () => {
@@ -37,7 +37,7 @@ const Homepage20o44: React.FC = () => {
       if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
         (window as any).requestIdleCallback(() => setIsVisible(true))} else {
         setTimeout(() => setIsVisible(true), 10o0)}
-    };
+    },
     handleVisibility(),
     // Auto-rotate featured services with performance optimization,
     const interval = setInterval(() => {
@@ -46,24 +46,24 @@ const Homepage20o44: React.FC = () => {
     const loadingTimer = setTimeout(() => setIsLoading(false), 50o0),
     return () => {
       clearInterval(interval),
-      clearTimeout(loadingTimer)};
+      clearTimeout(loadingTimer)},
   }, []),
   // Combine all revolutionary services,
   const allRevolutionaryServices = [
-    ...revolutionary20o44AdvancedMicroSaas;
-    ...revolutionary20o44ITServices;
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
     ...revolutionary20o44AIServices], []),
   const featuredServices = useMemo(() =>,
     allRevolutionaryServices.slice(0, 6), [allRevolutionaryServices]),
   const handleGetStarted = useCallback(() => {
     // Add analytics tracking,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'get_started' })}
+      (window as any).gtag('eventcta_click', { cta_type: 'get_started' })}
     window.location.href = '/revolutionary-20o44-pricing-showcase'}, []),
   const handleWatchDemo = useCallback(() => {
     // Add analytics tracking,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'cta_click', { cta_type: 'explore_services' })}
+      (window as any).gtag('eventcta_click', { cta_type: 'explore_services' })}
     window.location.href = '/services'}, []),
   const handleServiceClick = useCallback((service: { slug: string }) => {
     window.location.href = service.slug}, []),
@@ -104,19 +104,19 @@ const Homepage20o44: React.FC = () => {
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "description": "Pioneering the future of technology with revolutionary AI consciousness, quantum computing, and autonomous solutions",
+              "url": "https: //ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
               "sameAs": [
-                "https://linkedin.com/company/ziontechgroup";
-                "https://twitter.com/ziontechgroup";
-                "https: //github.com/ziontechgroup"];
+                "https://linkedin.com/company/ziontechgroup",
+                "https://twitter.com/ziontechgroup",
+                "https: //github.com/ziontechgroup"],
               "contactPoint": {
-                "@type": "ContactPoint";
-                "contactType": "customer service";
+                "@type": "ContactPoint",
+                "contactType": "customer service",
                 "availableLanguage": "English"}
             })}}
          />,
@@ -145,46 +145,46 @@ const Homepage20o44: React.FC = () => {
                     key={i}
                     className="absolute w-2 h-2 bg-cyan-40o0/40 rounded-full shadow-[0_0_20px_rgba(6,182,212,0.8)]",
                     animate={{
-                      x: [0, 150, 0];
-                      y: [0, -150, 0];
-                      opacity: [0, 1, 0];
+                      x: [0, 150, 0],
+                      y: [0, -150, 0],
+                      opacity: [0, 1, 0],
                       scale: [0, 1.5, 0]}}
                     transition={{
-                      duration: 8 + i * 0.3;
-                      repeat: Infinity as any;
-                      delay: i * 0.2;
+                      duration: 8 + i * 0.3,
+                      repeat: Infinity as any,
+                      delay: i * 0.2,
                       ease: "easeInOut"}}
                     style={{
-                      left: `${Math.random() * 10o0}%`;
+                      left: `${Math.random() * 10o0}%`,
                       top: `${Math.random() * 10o0}%`}}
                    />))}
               </div>,
               {/* Grid pattern with neon glow */}
               <div className="absolute inset-0 opacity-20">,
                 <div className="absolute inset-0" style={{
-                  backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`;
+                  backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6,182,212,0.3) 1px, transparent 0)`,
                   backgroundSize: '60px 60px'}}></div>,
               </div>,
               {/* Floating geometric shapes */}
               <motion.div,
                 className="absolute top-32 right-32 w-24 h-24 border border-cyan-40o0/30 rotate-45",
                 animate={{
-                  rotate: [45, 40o5];
-                  scale: [1, 1.2, 1];
+                  rotate: [45, 40o5],
+                  scale: [1, 1.2, 1],
                   opacity: [0.3, 0.8, 0.3]}}
                 transition={{
-                  duration: 10;
-                  repeat: Infinity as any;
+                  duration: 10,
+                  repeat: Infinity as any,
                   ease: "linear"}}
                />,
               <motion.div,
                 className="absolute bottom-32 left-32 w-16 h-16 border border-purple-40o0/30 rounded-full",
                 animate={{
-                  scale: [1, 1.5, 1];
+                  scale: [1, 1.5, 1],
                   opacity: [0.3, 0.8, 0.3]}}
                 transition={{
-                  duration: 8;
-                  repeat: Infinity as any;
+                  duration: 8,
+                  repeat: Infinity as any,
                   ease: "easeInOut"}}
                />,
             </div>,
@@ -326,11 +326,11 @@ const Homepage20o44: React.FC = () => {
               </motion.div>,
               <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
                 {[
-                  { icon: Brain, title: "AI Consciousness Evolution", description: "Next-generation AI with emotional intelligence and consciousness", color: "from-purple-50o0 to-pink-50o0" };
-                  { icon: Atom, title: "Quantum Neural Networks", description: "Quantum-powered AI with consciousness integration", color: "from-blue-50o0 to-cyan-50o0" };
-                  { icon: Shield, title: "Quantum Cybersecurity", description: "Quantum-resistant security with AI consciousness", color: "from-red-50o0 to-orange-50o0" };
-                  { icon: Rocket, title: "Space Resource Intelligence", description: "AI-powered space exploration with consciousness", color: "from-indigo-50o0 to-purple-50o0" };
-                  { icon: Cpu, title: "Autonomous Business Intelligence", description: "Fully autonomous AI business intelligence", color: "from-emerald-50o0 to-teal-50o0" };
+                  { icon: Brain, title: "AI Consciousness Evolution", description: "Next-generation AI with emotional intelligence and consciousness", color: "from-purple-50o0 to-pink-50o0" },
+                  { icon: Atom, title: "Quantum Neural Networks", description: "Quantum-powered AI with consciousness integration", color: "from-blue-50o0 to-cyan-50o0" },
+                  { icon: Shield, title: "Quantum Cybersecurity", description: "Quantum-resistant security with AI consciousness", color: "from-red-50o0 to-orange-50o0" },
+                  { icon: Rocket, title: "Space Resource Intelligence", description: "AI-powered space exploration with consciousness", color: "from-indigo-50o0 to-purple-50o0" },
+                  { icon: Cpu, title: "Autonomous Business Intelligence", description: "Fully autonomous AI business intelligence", color: "from-emerald-50o0 to-teal-50o0" },
                   { icon: Database, title: "Quantum Cloud Infrastructure", description: "Quantum-powered cloud with consciousness", color: "from-yellow-50o0 to-orange-50o0" }
                 ].map((feature, index) => (
                   <motion.div,
@@ -372,9 +372,9 @@ const Homepage20o44: React.FC = () => {
             <div className="max-w-7xl mx-auto">,
               <div className="grid grid-cols-2 md: grid-cols-4 gap-8">,
                 {[
-                  { number: "20o00+", label: "Revolutionary Services", icon: Star };
-                  { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp };
-                  { number: "24/7", label: "AI Support Available", icon: Brain };
+                  { number: "20o00+", label: "Revolutionary Services", icon: Star },
+                  { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp },
+                  { number: "24/7", label: "AI Support Available", icon: Brain },
                   { number: "20o0+", label: "Countries Served", icon: Globe }
                 ].map((stat, index) => (
                   <motion.div,
@@ -396,5 +396,5 @@ const Homepage20o44: React.FC = () => {
           </section>,
         </main>,
       </Layout>,
-    </>)};
-export default Homepage20o44;
+    </>)},
+export default Homepage20o44,

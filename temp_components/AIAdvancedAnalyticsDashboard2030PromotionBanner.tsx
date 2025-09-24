@@ -9,56 +9,56 @@ import {
   MousePointer,
   Clock,
   Zap,
-  Target;
-  Brain;
-  Cpu;
-  Database;
-  Network;
-  Shield;
-  Star;
-  Award;
+  Target,
+  Brain,
+  Cpu,
+  Database,
+  Network,
+  Shield,
+  Star,
+  Award,
   X,
-  Play;
-  ArrowRight;
-  Sparkles;
-  CheckCircle;
-  Activity;
-  Globe;
-  Smartphone;
-  Laptop;
-  Server;
-  Cloud;
-  Lock;
+  Play,
+  ArrowRight,
+  Sparkles,
+  CheckCircle,
+  Activity,
+  Globe,
+  Smartphone,
+  Laptop,
+  Server,
+  Cloud,
+  Lock,
   Heart} from 'lucide-react',
 const AIAdvancedAnalyticsDashboard20o30PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentMetricsetCurrentMetric] = useState(0),
   const metrics = [
     {
-      icon: Users;
-      title: '2.3M Active Users';
-      description: 'Real-time user tracking';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      icon: Users,
+      title: '2.3M Active Users',
+      description: 'Real-time user tracking',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      icon: TrendingUp;
-      title: '$2.1M Revenue';
-      description: 'Monthly revenue growth';
-      color: 'from-yellow-50o0 to-orange-50o0'};
+      icon: TrendingUp,
+      title: '$2.1M Revenue',
+      description: 'Monthly revenue growth',
+      color: 'from-yellow-50o0 to-orange-50o0'},
     {
-      icon: Target;
-      title: '3.8% Conversion';
-      description: 'AI-optimized conversion rate';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      icon: Target,
+      title: '3.8% Conversion',
+      description: 'AI-optimized conversion rate',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      icon: Zap;
-      title: '94/10o0 Performance';
-      description: 'Lightning-fast analytics';
+      icon: Zap,
+      title: '94/10o0 Performance',
+      description: 'Lightning-fast analytics',
       color: 'from-blue-50o0 to-cyan-50o0'}
   ],
   const features = [
-    { name: 'Predictive Analytics'icon: Brain };
-    { name: 'Real-time Insights'icon: Activity };
-    { name: 'AI Optimization'icon: Sparkles };
+    { name: 'Predictive Analytics'icon: Brain },
+    { name: 'Real-time Insights'icon: Activity },
+    { name: 'AI Optimization'icon: Sparkles },
     { name: 'Automated Reports'icon: BarChart3 }
   ],
   useEffect(() => {
@@ -150,7 +150,7 @@ const AIAdvancedAnalyticsDashboard20o30PromotionBanner = () => {
                   {/* Main Visual */}
                   <motion.div,
                     animate={{
-                      y: [0-10];
+                      y: [0-10],
                       rotate: [0o20]}}
                     transition={{
                       duration: 4,
@@ -162,12 +162,12 @@ const AIAdvancedAnalyticsDashboard20o30PromotionBanner = () => {
                       <motion.div,
                         key={feature.name}
                         animate={{
-                          y: [0-150];
+                          y: [0-150],
                           x: [0o10]}}
                         transition={{
                           duration: 3 + index * 0.5,
                           repeat: Infinity,
-                          ease: "easeInOut";
+                          ease: "easeInOut",
                           delay: index * 0.5}}
                         className={`absolute ${
                           index === 0 ? '-top-4 -right-4' :,
@@ -239,5 +239,5 @@ const AIAdvancedAnalyticsDashboard20o30PromotionBanner = () => {
            />,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default AIAdvancedAnalyticsDashboard20o30PromotionBanner;
+    </AnimatePresence>)},
+export default AIAdvancedAnalyticsDashboard20o30PromotionBanner,

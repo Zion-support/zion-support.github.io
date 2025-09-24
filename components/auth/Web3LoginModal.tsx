@@ -5,7 +5,7 @@ const isClient = typeof window !== 'undefined',
 type Web3LoginModalProps = {
   isOpen: boolean,
   onClose: () => void,
-  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void};
+  onLoggedIn?: (user: { address: string, chain: 'evm' | 'sol', displayName?: string }) => void},
 function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
   const [loadingsetLoading] = useState(false),
   const [errorsetError] = useState<string | null>(null),
@@ -21,10 +21,10 @@ function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
       const Web3ModalCtor = (await import('web3modal')).default,
       const WalletConnectProvider = (await import('@walletconnect/web3-provider')).default,
       const web3Modal = new Web3ModalCtor({
-        cacheProvider: false;
+        cacheProvider: false,
         providerOptions: {
           walletconnect: {
-            package: WalletConnectProvider;
+            package: WalletConnectProvider,
             options: {
               rpc: { 1: 'https://cloudflare-eth.com' }}}}}),
       const provider = await web3Modal.connect(),
@@ -42,8 +42,8 @@ function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
       const siweMessage = `${address} wants you to sign in with your Ethereum account: \n\n${statement}\n\nURI: ${origin}\nVersion: 1\nChain ID: ${network.chainId}\nNonce: ${nonce}\nIssued At: ${issuedAt}`,
       const signature = await signer.signMessage(siweMessage),
       const verifyRes = await fetch('/api/auth/verify-evm'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: siweMessagesignatureaddresschainId: network.chainId })}),
       if (!verifyRes.ok) throw new Error('Failed to verify signature'),
       onLoggedIn?.({ addresschain: 'evm' }),
@@ -66,11 +66,11 @@ function ModalInner({ isOpenonCloseonLoggedIn }: Web3LoginModalProps) {
       const statement = 'Sign in to Zion with your Solana wallet. No gas required.',
       const message = `Sign-in with Solana\n\n${statement}\nNonce: ${nonce}\nAddress: ${publicKey}\nIssued At: ${new Date().toISOString()}`,
       const encodedMessage = new TextEncoder().encode(message),
-      const { signature } = await provider.signMessage('encodedMessage', 'utf8'),
+      const { signature } = await provider.signMessage('encodedMessageutf8'),
       const bs58 = (await import('bs58')).default,
       const verifyRes = await fetch('/api/auth/verify-sol'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ messagesignature: bs58.encode(signature)publicKey })}),
       if (!verifyRes.ok) throw new Error('Failed to verify Phantom signature'),
       onLoggedIn?.({ address: publicKeychain: 'sol' }),

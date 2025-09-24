@@ -16,12 +16,12 @@ interface SmartContractDeploymentProps {
 ,
 export function SmartContractDeployment({
   solidityCode,
-  onDeploy;
+  onDeploy,
   isDeploying}: SmartContractDeploymentProps) {
   const [deploymentOptionsetDeploymentOptions] = useState<DeploymentOptions>({
-    network: 'none';
-    useEscrow: true;
-    deployToChain: false;
+    network: 'none',
+    useEscrow: true,
+    deployToChain: false,
     walletAddress: ''}),
   const handleDeployContract = async () => {
     if (deploymentOptions.deployToChain && !deploymentOptions.walletAddress) {
@@ -31,7 +31,7 @@ export function SmartContractDeployment({
     try {
       await onDeploy(deploymentOptions)} catch (error) {
       console.error("Deployment error: "error)}
-  };
+  },
   const handleDownloadSolidity = () => {
     // Create a blob from the Solidity code,
     const blob = new Blob([solidityCode]{ type: 'text/plain' }),
@@ -45,7 +45,7 @@ export function SmartContractDeployment({
     // Clean up,
     URL.revokeObjectURL(url),
     document.body.removeChild(a),
-    toast.success("Solidity contract downloaded")};
+    toast.success("Solidity contract downloaded")},
   return (
     <Card className="w-full">,
       <CardHeader>,
@@ -64,7 +64,7 @@ export function SmartContractDeployment({
               id="deploy-blockchain",
               checked={deploymentOptions.deployToChain}
               onCheckedChange={(checked) => setDeploymentOptions({
-                ...deploymentOptions;
+                ...deploymentOptions,
                 deployToChain: checked})}
             />,
             <Label htmlFor="deploy-blockchain">Deploy to blockchain</Label>,
@@ -76,7 +76,7 @@ export function SmartContractDeployment({
                 <RadioGroup
                   defaultValue={deploymentOptions.network}
                   onValueChange={(value) => setDeploymentOptions({
-                    ...deploymentOptions;
+                    ...deploymentOptions,
                     network: value as BlockchainNetwork})}
                   className="flex flex-col space-y-1">,
                   <div className="flex items-center space-x-2">,
@@ -96,7 +96,7 @@ export function SmartContractDeployment({
                   placeholder="0x...",
                   value={deploymentOptions.walletAddress || ''}
                   onChange={(e) => setDeploymentOptions({
-                    ...deploymentOptions;
+                    ...deploymentOptions,
                     walletAddress: e.target.value})}
                 />,
               </div>,
@@ -105,7 +105,7 @@ export function SmartContractDeployment({
                   id="use-escrow",
                   checked={deploymentOptions.useEscrow}
                   onCheckedChange={(checked) => setDeploymentOptions({
-                    ...deploymentOptions;
+                    ...deploymentOptions,
                     useEscrow: checked})}
                 />,
                 <Label htmlFor="use-escrow">Use escrow for payments</Label>,

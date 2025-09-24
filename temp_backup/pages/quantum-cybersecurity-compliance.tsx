@@ -1,104 +1,78 @@
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  Atom;
-  Lock;
-  CheckCircle;
-  Zap;
-  BarChart3;
-  Target;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  Globe;
-  AlertTriangle;
-  FileText;
-  Users;
-  Settings;
+  Shield,
+  Atom,
+  Lock,
+  CheckCircle,
+  Zap,
+  BarChart3,
+  Target,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  Globe,
+  AlertTriangle,
+  FileText,
+  Users,
+  Settings,
 } from 'lucide-react',
 export default function QuantumCybersecurityCompliance() {
   const features = [
-    'Automated compliance monitoring';
-    'Quantum-resistant encryption';
-    'Real-time security assessments';
-    'Compliance reporting automation';
-    'Risk assessment tools';
-    'Policy management system';
-    'Audit trail and logging';
-    'Integration with security tools';
-    'Automated remediation workflows';
-    'Compliance dashboard';
-    'Team training modules';
-    '24/7 security monitoring';
+    'Automated compliance monitoringQuantum-resistant encryption',
+    'Real-time security assessmentsCompliance reporting automation',
+    'Risk assessment toolsPolicy management system',
+    'Audit trail and loggingIntegration with security tools',
+    'Automated remediation workflowsCompliance dashboard',
+    'Team training modules24/7 security monitoring',
   ],
   const benefits = [
-    'Reduce compliance costs by 60%';
-    'Automate 80% of compliance tasks';
-    'Future-proof against quantum threats';
-    'Maintain continuous compliance';
-    'Reduce audit preparation time';
-    'Improve security posture';
-    'Streamlined compliance workflows';
-    'Competitive security advantage';
+    'Reduce compliance costs by 60%Automate 80% of compliance tasks',
+    'Future-proof against quantum threatsMaintain continuous compliance',
+    'Reduce audit preparation timeImprove security posture',
+    'Streamlined compliance workflowsCompetitive security advantage',
   ],
   const useCases = [
-    'Financial institutions';
-    'Healthcare organizations';
-    'Technology companies';
-    'Government contractors';
-    'E-commerce businesses';
-    'SaaS providers';
-    'Compliance officers';
-    'Security teams';
+    'Financial institutionsHealthcare organizations',
+    'Technology companiesGovernment contractors',
+    'E-commerce businessesSaaS providers',
+    'Compliance officersSecurity teams',
   ],
   const complianceFrameworks = [
-    'SOC2 Type I & II';
-    'ISO 270o01';
-    'GDPR';
-    'HIPAA';
-    'PCI DSS';
-    'NIST Cybersecurity Framework';
-    'FedRAMP';
-    'SOX';
+    'SOC2 Type I & IIISO 270o01',
+    'GDPRHIPAA',
+    'PCI DSSNIST Cybersecurity Framework',
+    'FedRAMPSOX',
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$599/month';
+      name: 'Starter',
+      price: '$599/month',
       features: [
-        'Up to 10o0 users';
-        'Basic compliance monitoring';
-        'Standard security assessments';
-        'Email support';
-        'Core compliance frameworks';
-      ];
-    };
+        'Up to 10o0 usersBasic compliance monitoring',
+        'Standard security assessmentsEmail support',
+        'Core compliance frameworks',
+      ]
+    },
     {
-      name: 'Professional';
-      price: '$1,499/month';
+      name: 'Professional',
+      price: '$1,499/month',
       features: [
-        'Up to 1,0o00 users';
-        'Advanced compliance monitoring';
-        'Quantum-resistant encryption';
-        'Priority support';
-        'All compliance frameworks';
-        'Automated remediation';
-      ];
-    };
+        'Up to 1,0o00 usersAdvanced compliance monitoring',
+        'Quantum-resistant encryptionPriority support',
+        'All compliance frameworksAutomated remediation',
+      ],
+    },
     {
-      name: 'Enterprise';
-      price: '$4,999/month';
+      name: 'Enterprise',
+      price: '$4,999/month',
       features: [
-        'Unlimited users';
-        'Full quantum security suite';
-        'Custom compliance policies';
-        'Dedicated security manager';
-        '24/7 support';
-        'Custom integrations';
-      ];
-    };
+        'Unlimited usersFull quantum security suite',
+        'Custom compliance policiesDedicated security manager',
+        '24/7 supportCustom integrations',
+      ]
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white'>,
@@ -160,29 +134,29 @@ export default function QuantumCybersecurityCompliance() {
           <div className='grid md:grid-cols-2 lg:grid-cols-4 gap-8'>,
             {[
               {
-                icon: <Shield className='w-8 h-8' />;
-                title: 'Quantum-Resistant';
+                icon: <Shield className='w-8 h-8' />,
+                title: 'Quantum-Resistant',
                 description:,
-                  'Future-proof encryption that withstands quantum computing attacks';
-              };
+                  'Future-proof encryption that withstands quantum computing attacks',
+              },
               {
-                icon: <Zap className='w-8 h-8' />;
-                title: '60% Cost Reduction';
+                icon: <Zap className='w-8 h-8' />,
+                title: '60% Cost Reduction',
                 description:,
-                  'Automate compliance tasks and reduce operational costs significantly';
-              };
+                  'Automate compliance tasks and reduce operational costs significantly',
+              },
               {
-                icon: <CheckCircle className='w-8 h-8' />;
-                title: 'Continuous Compliance';
+                icon: <CheckCircle className='w-8 h-8' />,
+                title: 'Continuous Compliance',
                 description:,
-                  'Maintain compliance 24/7 with automated monitoring and reporting';
-              };
+                  'Maintain compliance 24/7 with automated monitoring and reporting',
+              },
               {
-                icon: <BarChart3 className='w-8 h-8' />;
-                title: 'Real-Time Security';
+                icon: <BarChart3 className='w-8 h-8' />,
+                title: 'Real-Time Security',
                 description:,
-                  'Monitor threats and vulnerabilities in real-time with AI-powered detection';
-              };
+                  'Monitor threats and vulnerabilities in real-time with AI-powered detection',
+              },
             ].map((benefit, index) => (
               <motion.div,
                 key={index}

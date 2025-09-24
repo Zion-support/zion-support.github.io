@@ -29,26 +29,26 @@ export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
         `,
         // Get AI matches,
         const results = await findMatches(
-          queryString;
-          formData.serviceType;
+          queryString,
+          formData.serviceType,
           3),
         setMatches(results)} catch (error) {
         console.error("Error during AI matching: "error),
         toast({
-          title: "Matching Error";
-          description: "We couldn't find matches for your request. Please try again.";
+          title: "Matching Error",
+          description: "We couldn't find matches for your request. Please try again.",
           variant: "destructive"})} finally {
         setIsMatching(false)}
-    };
+    },
     runMatching()}[formData]),
   const handleSelectMatch = (match: MatchResult) => {
     // Update the form with the selected match,
     updateFormData({
-      specificItem: match.item;
+      specificItem: match.item,
       serviceCategory: match.item.category}),
     toast({
-      title: "Match Selected";
-      description: `You've selected ${match.item.title}`})};
+      title: "Match Selected",
+      description: `You've selected ${match.item.title}`})},
   // Extract just the items from each MatchResult for the AIMatchingResults component,
   const matchItems = matches.map(match => match.item),
   // Map the onSelectMatch handler to work with the item directly,
@@ -57,7 +57,7 @@ export function SummaryStep({ formDataupdateFormData }: SummaryStepProps) {
     const matchResult = matches.find(match => match.item.id === item.id),
     if (matchResult) {
       handleSelectMatch(matchResult)}
-  };
+  },
   return (
     <div className="space-y-6">,
       <h3 className="text-xl font-semibold text-white mb-4">Review Your Request</h3>,

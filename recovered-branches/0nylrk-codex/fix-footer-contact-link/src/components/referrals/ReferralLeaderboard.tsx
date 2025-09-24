@@ -10,10 +10,10 @@ export function ReferralLeaderboard() {
   // This would typically be fetched from the server,
   // For nowe'll use mock data,
   const leaderboardData: LeaderboardEntry[] = [
-    { rank: 1name: "Alex Johnson"referrals: 24 };
-    { rank: 2name: "Jamie Smith"referrals: 18 };
-    { rank: 3name: "Taylor Wong"referrals: 15 };
-    { rank: 4name: "Casey Brown"referrals: 12 };
+    { rank: 1name: "Alex Johnson"referrals: 24 },
+    { rank: 2name: "Jamie Smith"referrals: 18 },
+    { rank: 3name: "Taylor Wong"referrals: 15 },
+    { rank: 4name: "Casey Brown"referrals: 12 },
     { rank: 5name: "Jordan Lee"referrals: 10 }],
   return (
     <Card>,

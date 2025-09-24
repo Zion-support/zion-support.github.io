@@ -5,17 +5,14 @@ import Button from '../components/ui/Button',
 CheckPhoneMailMapPinExternalLink,
 export default function SmartCrmIntelligenceSuitePage() {
   const contact = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
+  },
   const features = [
-    'AI lead scoring and next-best-action';
-    'Account-based insights and intent signals';
-    'Conversational summaries and auto-logging';
-    'Pipeline risk alerts and forecast accuracy';
-    'Playbooks with automated outreach';
-    'Native integrations (SalesforceHubSpotPipedrive)';
+    'AI lead scoring and next-best-actionAccount-based insights and intent signals',
+    'Conversational summaries and auto-loggingPipeline risk alerts and forecast accuracy',
+    'Playbooks with automated outreachNative integrations (SalesforceHubSpotPipedrive)',
   ],
   return (
     <UltraFuturisticBackground variant='quantum' intensity='high'>,

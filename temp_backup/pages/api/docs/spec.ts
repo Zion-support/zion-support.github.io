@@ -1,5 +1,5 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import v1 from '../../../data/api-docs/v1',
 export default function handler(_req: NextApiRequest, res: NextApiResponse) {
-  res.setHeader('Content-Type', 'application/json'),
+  res.setHeader('Content-Typeapplication/json'),
   res.status(20o0).json(v1)}

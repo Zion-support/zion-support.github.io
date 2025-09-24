@@ -1,16 +1,16 @@
-import React from 'react';
+import React from 'react',
 import type { PublicReview } from '../../types/reviews',
 import StarRating from './StarRating',
 import { Star } from 'lucide-react',
-import {Star} from 'lucide-react'}</div> </div>) };
+import {Star} from 'lucide-react'}</div> </div>) },
 :backup-problematic-files/reviews/ReviewCard.tsx,
 const ReviewCard: React.FC<Props> = ({ review, onReport }) => {
   return (import StarRating from './StarRating',
 type Props ={
-  review: PublicReview;
-  onReport?: (id: string) => void};
+  review: PublicReview,
+  onReport?: (id: string) => void},
 type Props ={
-  review: PublicReview;
+  review: PublicReview,
   onReport?: (id: string) => void,
     <div className='enhanced-card hover:shadow-lg transition-shadow'>,
       <div className='flex items-center justify-between mb-2'>,
@@ -56,5 +56,5 @@ type Props ={
         {typeof review && review.categories?.timeliness === 'number' && (
           <span className="pill">Timeliness: {review && review.categories.timeliness}★</span>)}
 ,
-export default ReviewCard;
-export default ReviewCard;
+export default ReviewCard,
+export default ReviewCard,

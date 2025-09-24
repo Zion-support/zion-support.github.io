@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Card from '../ui/Card',
 interface Feature {
   icon: React.ReactNode,
@@ -14,9 +14,9 @@ interface FeaturesProps {
 ,
 export default function Features({ title, subtitle, features, columns = 3 }: FeaturesProps) {
   const gridCols ={
-    1: 'grid-cols-1';
-    2: 'grid-cols-1 md:grid-cols-2';
-    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'};
+    1: 'grid-cols-1',
+    2: 'grid-cols-1 md:grid-cols-2',
+    3: 'grid-cols-1 md:grid-cols-2 lg:grid-cols-3'},
   return (
     <section className="py-24 bg-black">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -25,7 +25,7 @@ export default function Features({ title, subtitle, features, columns = 3 }: Fea
             {title}
           </h2>,
           <p className="text-xl text-gray-40o0 max-w-3xl mx-auto leading-relaxed">,
-            Our platform leverages the latest technologies to deliver enterprise-grade performance;
+            Our platform leverages the latest technologies to deliver enterprise-grade performance,
             security, and scalability for your business needs.,
           </p>,
         </div>,
@@ -62,18 +62,18 @@ export default function Features({ title, subtitle, features, columns = 3 }: Fea
           </h3>,
           <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-8">,
             {[
-              { name: 'Next.js', icon: '⚡', category: 'Framework' };
-              { name: 'React', icon: '⚛️', category: 'Library' };
-              { name: 'TypeScript', icon: '📘', category: 'Language' };
-              { name: 'Tailwind CSS', icon: '🎨', category: 'Styling' };
-              { name: 'Node.js', icon: '🟢', category: 'Runtime' };
-              { name: 'PostgreSQL', icon: '🐘', category: 'Database' };
-              { name: 'Redis', icon: '🔴', category: 'Cache' };
-              { name: 'Docker', icon: '🐳', category: 'Containerization' };
-              { name: 'Kubernetes', icon: '☸️', category: 'Orchestration' };
-              { name: 'AWS', icon: '☁️', category: 'Cloud' };
-              { name: 'Terraform', icon: '🏗️', category: 'Infrastructure' };
-              { name: 'Prometheus', icon: '📊', category: 'Monitoring' };
+              { name: 'Next.js', icon: '⚡', category: 'Framework' },
+              { name: 'React', icon: '⚛️', category: 'Library' },
+              { name: 'TypeScript', icon: '📘', category: 'Language' },
+              { name: 'Tailwind CSS', icon: '🎨', category: 'Styling' },
+              { name: 'Node.js', icon: '🟢', category: 'Runtime' },
+              { name: 'PostgreSQL', icon: '🐘', category: 'Database' },
+              { name: 'Redis', icon: '🔴', category: 'Cache' },
+              { name: 'Docker', icon: '🐳', category: 'Containerization' },
+              { name: 'Kubernetes', icon: '☸️', category: 'Orchestration' },
+              { name: 'AWS', icon: '☁️', category: 'Cloud' },
+              { name: 'Terraform', icon: '🏗️', category: 'Infrastructure' },
+              { name: 'Prometheus', icon: '📊', category: 'Monitoring' },
             ].map((tech, index) => (
               <div
                 key={index}

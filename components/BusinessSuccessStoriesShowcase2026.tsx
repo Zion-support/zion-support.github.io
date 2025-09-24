@@ -11,171 +11,171 @@ import {
   Zap,
   Shield,
   Brain,
-  Globe;
-  CheckCircle;
-  Play;
-  Download;
-  ExternalLink;
-  Sparkles;
-  Target;
-  Award;
-  Rocket;
-  DollarSign;
-  BarChart3;
-  Clock;
-  Building;
-  Quote;
-  ThumbsUp;
-  Eye;
-  Share2;
+  Globe,
+  CheckCircle,
+  Play,
+  Download,
+  ExternalLink,
+  Sparkles,
+  Target,
+  Award,
+  Rocket,
+  DollarSign,
+  BarChart3,
+  Clock,
+  Building,
+  Quote,
+  ThumbsUp,
+  Eye,
+  Share2,
   Heart} from 'lucide-react',
 const BusinessSuccessStoriesShowcase20o26 = () => {
   const [activeStorysetActiveStory] = useState(0),
   const [hoveredCardsetHoveredCard] = useState(null),
   const successStories = [
     {
-      id: 1;
-      company: 'TechCorp Global';
-      industry: 'Technology';
-      size: 'Fortune 50o0';
-      logo: '/api/placeholder/80/80';
-      challenge: 'Manual processes causing 40% efficiency loss and high operational costs';
-      solution: 'Implemented AI-powered automation system with neural consensus technology';
+      id: 1,
+      company: 'TechCorp Global',
+      industry: 'Technology',
+      size: 'Fortune 50o0',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Manual processes causing 40% efficiency loss and high operational costs',
+      solution: 'Implemented AI-powered automation system with neural consensus technology',
       results: {
-        efficiency: '+30o0%';
-        costReduction: '-65%';
-        timeSaved: '2,50o0 hours/month';
-        roi: '450%'};
+        efficiency: '+30o0%',
+        costReduction: '-65%',
+        timeSaved: '2,50o0 hours/month',
+        roi: '450%'},
       testimonial: {
-        text: 'The AI automation system transformed our entire operation. We achieved 30o0% efficiency improvement and saved millions in operational costs.';
-        author: 'Sarah Johnson';
-        position: 'CEOTechCorp Global';
-        avatar: '/api/placeholder/60/60'};
-      technologies: ['Neural Consensus 'AI', 'Workflow 'Automation', 'Predictive Analytics'];
-      duration: '6 months';
-      featured: true;
-      rating: 5.0;
-      views: 1560o0;
-      likes: 892};
+        text: 'The AI automation system transformed our entire operation. We achieved 30o0% efficiency improvement and saved millions in operational costs.',
+        author: 'Sarah Johnson',
+        position: 'CEOTechCorp Global',
+        avatar: '/api/placeholder/60/60'},
+      technologies: ['Neural Consensus 'AIWorkflow 'Automation', 'Predictive Analytics'],
+      duration: '6 months',
+      featured: true,
+      rating: 5.0,
+      views: 1560o0,
+      likes: 892},
     {
-      id: 2;
-      company: 'FinanceFirst Bank';
-      industry: 'Financial Services';
-      size: 'Enterprise';
-      logo: '/api/placeholder/80/80';
-      challenge: 'Cybersecurity threats and compliance issues affecting customer trust';
-      solution: 'Deployed quantum-safe encryption and AI-powered threat detection system';
+      id: 2,
+      company: 'FinanceFirst Bank',
+      industry: 'Financial Services',
+      size: 'Enterprise',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Cybersecurity threats and compliance issues affecting customer trust',
+      solution: 'Deployed quantum-safe encryption and AI-powered threat detection system',
       results: {
-        security: 'Zero breaches';
-        compliance: '10o0%';
-        customerTrust: '+85%';
-        roi: '320%'};
+        security: 'Zero breaches',
+        compliance: '10o0%',
+        customerTrust: '+85%',
+        roi: '320%'},
       testimonial: {
-        text: 'Our security posture improved dramatically. Zero breaches since implementation and 10o0% compliance achievement.';
-        author: 'Michael Chen';
-        position: 'CISOFinanceFirst Bank';
-        avatar: '/api/placeholder/60/60'};
-      technologies: ['Quantum-Safe 'Encryption', 'AI Threat 'Detection', 'Zero-Trust Security'];
-      duration: '4 months';
-      featured: false;
-      rating: 4.9;
-      views: 1230o0;
-      likes: 654};
+        text: 'Our security posture improved dramatically. Zero breaches since implementation and 10o0% compliance achievement.',
+        author: 'Michael Chen',
+        position: 'CISOFinanceFirst Bank',
+        avatar: '/api/placeholder/60/60'},
+      technologies: ['Quantum-Safe 'EncryptionAI Threat 'Detection', 'Zero-Trust Security'],
+      duration: '4 months',
+      featured: false,
+      rating: 4.9,
+      views: 1230o0,
+      likes: 654},
     {
-      id: 3;
-      company: 'ManufacturingPro Inc';
-      industry: 'Manufacturing';
-      size: 'Mid-Market';
-      logo: '/api/placeholder/80/80';
-      challenge: 'Equipment downtime causing $2M monthly losses and production delays';
-      solution: 'Implemented predictive maintenance AI and automated quality control systems';
+      id: 3,
+      company: 'ManufacturingPro Inc',
+      industry: 'Manufacturing',
+      size: 'Mid-Market',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Equipment downtime causing $2M monthly losses and production delays',
+      solution: 'Implemented predictive maintenance AI and automated quality control systems',
       results: {
-        downtime: '-80%';
-        quality: '+95%';
-        savings: '$1.8M/month';
-        roi: '280%'};
+        downtime: '-80%',
+        quality: '+95%',
+        savings: '$1.8M/month',
+        roi: '280%'},
       testimonial: {
-        text: 'Predictive maintenance AI reduced our downtime by 80% and saved us $1.8M monthly. Game-changing technology.';
-        author: 'David Rodriguez';
-        position: 'Operations DirectorManufacturingPro';
-        avatar: '/api/placeholder/60/60'};
-      technologies: ['Predictive Maintenance 'AI', 'Quality Control 'Automation', 'IoT Integration'];
-      duration: '5 months';
-      featured: true;
-      rating: 4.8;
-      views: 980o0;
-      likes: 456};
+        text: 'Predictive maintenance AI reduced our downtime by 80% and saved us $1.8M monthly. Game-changing technology.',
+        author: 'David Rodriguez',
+        position: 'Operations DirectorManufacturingPro',
+        avatar: '/api/placeholder/60/60'},
+      technologies: ['Predictive Maintenance 'AIQuality Control 'Automation', 'IoT Integration'],
+      duration: '5 months',
+      featured: true,
+      rating: 4.8,
+      views: 980o0,
+      likes: 456},
     {
-      id: 4;
-      company: 'RetailMax Chain';
-      industry: 'Retail';
-      size: 'Large Enterprise';
-      logo: '/api/placeholder/80/80';
-      challenge: 'Inventory management inefficiencies and poor customer experience';
-      solution: 'Deployed AI-powered inventory optimization and customer analytics platform';
+      id: 4,
+      company: 'RetailMax Chain',
+      industry: 'Retail',
+      size: 'Large Enterprise',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Inventory management inefficiencies and poor customer experience',
+      solution: 'Deployed AI-powered inventory optimization and customer analytics platform',
       results: {
-        inventory: '+40% accuracy';
-        sales: '+25%';
-        customerSatisfaction: '+90%';
-        roi: '380%'};
+        inventory: '+40% accuracy',
+        sales: '+25%',
+        customerSatisfaction: '+90%',
+        roi: '380%'},
       testimonial: {
-        text: 'AI-driven inventory management increased our sales by 25% and customer satisfaction by 90%. Incredible results.';
-        author: 'Lisa Anderson';
-        position: 'VP OperationsRetailMax';
-        avatar: '/api/placeholder/60/60'};
-      technologies: ['Inventory 'AI', 'Customer 'Analytics', 'Demand Forecasting'];
-      duration: '3 months';
-      featured: false;
-      rating: 4.9;
-      views: 1120o0;
-      likes: 723};
+        text: 'AI-driven inventory management increased our sales by 25% and customer satisfaction by 90%. Incredible results.',
+        author: 'Lisa Anderson',
+        position: 'VP OperationsRetailMax',
+        avatar: '/api/placeholder/60/60'},
+      technologies: ['Inventory 'AICustomer 'Analytics', 'Demand Forecasting'],
+      duration: '3 months',
+      featured: false,
+      rating: 4.9,
+      views: 1120o0,
+      likes: 723},
     {
-      id: 5;
-      company: 'HealthTech Solutions';
-      industry: 'Healthcare';
-      size: 'Enterprise';
-      logo: '/api/placeholder/80/80';
-      challenge: 'Patient data analysis taking weeks and diagnostic accuracy issues';
-      solution: 'Implemented AI diagnostic platform with real-time patient data analysis';
+      id: 5,
+      company: 'HealthTech Solutions',
+      industry: 'Healthcare',
+      size: 'Enterprise',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Patient data analysis taking weeks and diagnostic accuracy issues',
+      solution: 'Implemented AI diagnostic platform with real-time patient data analysis',
       results: {
-        diagnosis: '+95% accuracy';
-        timeReduction: '-75%';
-        patientOutcomes: '+60%';
-        roi: '520%'};
+        diagnosis: '+95% accuracy',
+        timeReduction: '-75%',
+        patientOutcomes: '+60%',
+        roi: '520%'},
       testimonial: {
-        text: 'AI diagnostic platform improved our diagnostic accuracy to 95% and reduced analysis time by 75%. Life-saving technology.';
-        author: 'Dr. Emily Watson';
-        position: 'Chief Medical OfficerHealthTech';
-        avatar: '/api/placeholder/60/60'};
-      technologies: ['AI 'Diagnostics', 'Real-time 'Analytics', 'Medical AI'];
-      duration: '7 months';
-      featured: true;
-      rating: 5.0;
-      views: 1890o0;
-      likes: 120o3};
+        text: 'AI diagnostic platform improved our diagnostic accuracy to 95% and reduced analysis time by 75%. Life-saving technology.',
+        author: 'Dr. Emily Watson',
+        position: 'Chief Medical OfficerHealthTech',
+        avatar: '/api/placeholder/60/60'},
+      technologies: ['AI 'DiagnosticsReal-time 'Analytics', 'Medical AI'],
+      duration: '7 months',
+      featured: true,
+      rating: 5.0,
+      views: 1890o0,
+      likes: 120o3},
     {
-      id: 6;
-      company: 'LogisticsPro Ltd';
-      industry: 'Logistics';
-      size: 'Mid-Market';
-      logo: '/api/placeholder/80/80';
-      challenge: 'Route optimization and fuel costs consuming 30% of revenue';
-      solution: 'Deployed AI route optimization and fuel efficiency management system';
+      id: 6,
+      company: 'LogisticsPro Ltd',
+      industry: 'Logistics',
+      size: 'Mid-Market',
+      logo: '/api/placeholder/80/80',
+      challenge: 'Route optimization and fuel costs consuming 30% of revenue',
+      solution: 'Deployed AI route optimization and fuel efficiency management system',
       results: {
-        fuelCosts: '-35%';
-        deliveryTime: '-50%';
-        customerSatisfaction: '+70%';
-        roi: '290%'};
+        fuelCosts: '-35%',
+        deliveryTime: '-50%',
+        customerSatisfaction: '+70%',
+        roi: '290%'},
       testimonial: {
-        text: 'AI route optimization reduced our fuel costs by 35% and delivery time by 50%. Massive operational improvement.';
-        author: 'James Wilson';
-        position: 'Logistics DirectorLogisticsPro';
-        avatar: '/api/placeholder/60/60'};
-      technologies: ['Route Optimization 'AI', 'Fuel 'Efficiency', 'Supply Chain AI'];
-      duration: '4 months';
-      featured: false;
-      rating: 4.7;
-      views: 870o0;
+        text: 'AI route optimization reduced our fuel costs by 35% and delivery time by 50%. Massive operational improvement.',
+        author: 'James Wilson',
+        position: 'Logistics DirectorLogisticsPro',
+        avatar: '/api/placeholder/60/60'},
+      technologies: ['Route Optimization 'AIFuel 'Efficiency', 'Supply Chain AI'],
+      duration: '4 months',
+      featured: false,
+      rating: 4.7,
+      views: 870o0,
       likes: 389}
   ],
   const featuredStories = successStories.filter(story => story.featured),
@@ -189,7 +189,7 @@ const BusinessSuccessStoriesShowcase20o26 = () => {
       case 'Healthcare': return Target,
       case 'Logistics': return Truck,
       default: return Building}
-  };
+  },
   const getIndustryColor = (industry) => {
     switch (industry) {
       case 'Technology': return 'from-purple-50o0 to-blue-50o0',
@@ -199,7 +199,7 @@ const BusinessSuccessStoriesShowcase20o26 = () => {
       case 'Healthcare': return 'from-blue-50o0 to-indigo-50o0',
       case 'Logistics': return 'from-yellow-50o0 to-orange-50o0',
       default: return 'from-slate-50o0 to-slate-60o0'}
-  };
+  },
   return (
     <div className="bg-gradient-to-br from-slate-50 via-white to-purple-50 py-20">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -429,5 +429,5 @@ const BusinessSuccessStoriesShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default BusinessSuccessStoriesShowcase20o26;
+    </div>)},
+export default BusinessSuccessStoriesShowcase20o26,

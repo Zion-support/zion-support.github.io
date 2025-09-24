@@ -1,47 +1,41 @@
 import { Metadata } from 'next',
 import SEO from '../../components/SEO',
 import {
-  ArrowLeft;
-  ArrowRight;
-  Calendar;
-  Clock;
-  User;
-  TrendingUp;
-  Zap;
-  CheckCircle;
+  ArrowLeft,
+  ArrowRight,
+  Calendar,
+  Clock,
+  User,
+  TrendingUp,
+  Zap,
+  CheckCircle,
 } from 'lucide-react',
 import Link from 'next/link',
 export const metadata: Metadata = {
   title:,
-    "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise";
+    "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise",
   description:,
-    'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.';
+    'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',
   keywords: [
-    'Quantum Computing';
-    'AI';
-    'Enterprise';
-    'ROI';
-    'Breakthrough';
-    '20o25';
-  ];
+    'Quantum ComputingAI',
+    'EnterpriseROI',
+    'Breakthrough20o25',
+  ],
   openGraph: {
     title:,
-      "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise";
+      "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise",
     description:,
-      'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'Quantum Computing';
-      'AI';
-      'Enterprise';
-      'ROI';
-      'Breakthrough';
-      '20o25';
-    ];
-  };
-};
+      'Quantum ComputingAI',
+      'EnterpriseROI',
+      'Breakthrough20o25',
+    ]
+  },
+},
 export default function QuantumComputingBreakthroughPage() {
   return (
     <div>,
@@ -83,12 +77,9 @@ export default function QuantumComputingBreakthroughPage() {
           {/* Tags */}
           <div className='flex flex-wrap gap-2 mb-8'>,
             {[
-              'Quantum Computing';
-              'AI';
-              'Enterprise';
-              'ROI';
-              'Breakthrough';
-              '20o25';
+              'Quantum ComputingAI',
+              'EnterpriseROI',
+              'Breakthrough20o25',
             ].map(tag => (
               <span
                 key={tag}
@@ -103,7 +94,7 @@ export default function QuantumComputingBreakthroughPage() {
           </h1>,
           {/* Subtitle */}
           <p className='text-xl text-gray-60o0 mb-8 leading-relaxed'>,
-            Discover how quantum computing is transforming enterprise AI;
+            Discover how quantum computing is transforming enterprise AI,
             delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0,
             companies.,
           </p>,
@@ -148,11 +139,11 @@ export default function QuantumComputingBreakthroughPage() {
             </p>,
             <ul>,
               <li>,
-                <strong>Financial Services</strong>: Portfolio optimization;
+                <strong>Financial Services</strong>: Portfolio optimization,
                 risk analysis, and fraud detection,
               </li>,
               <li>,
-                <strong>Healthcare</strong>: Drug discovery, protein folding;
+                <strong>Healthcare</strong>: Drug discovery, protein folding,
                 and personalized medicine,
               </li>,
               <li>,
@@ -220,7 +211,7 @@ export default function QuantumComputingBreakthroughPage() {
             <h2>The Technical Breakthrough: Quantum Error Correction</h2>,
             <h3>Quantum Error Correction Milestone</h3>,
             <p>,
-              20o25 marks the achievement of practical quantum error correction;
+              20o25 marks the achievement of practical quantum error correction,
               enabling: ,
             </p>,
             <ul>,

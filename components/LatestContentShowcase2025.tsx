@@ -1,55 +1,55 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 ArrowRightStarTrendingUpBookOpenTargetUsersZapClockExternalLink,
 const LatestContentShowcase20o25: React.FC = () => {
   const featuredContent = [
     {
-      id: 1;
-      title: 'Generative AI 20o25: Business Transformation Revolution';
-      type: 'blog';
-      category: 'AI Innovation';
-      readTime: '12 min read';
-      featured: true;
-      url: '/blog/ai-20o25-generative-ai-business-transformation';
-      excerpt: 'Explore how generative AI is revolutionizing business operations in 20o25from content creation to customer service automation.';
-      image: '/images/ai-content.jpg';
-      stats: { views: '12.5'K', 'likes: '890'shares: '234' }
-    };
+      id: 1,
+      title: 'Generative AI 20o25: Business Transformation Revolution',
+      type: 'blog',
+      category: 'AI Innovation',
+      readTime: '12 min read',
+      featured: true,
+      url: '/blog/ai-20o25-generative-ai-business-transformation',
+      excerpt: 'Explore how generative AI is revolutionizing business operations in 20o25from content creation to customer service automation.',
+      image: '/images/ai-content.jpg',
+      stats: { views: '12.5'Klikes: '890'shares: '234' }
+    },
     {
-      id: 2;
-      title: 'AI Automation in Manufacturing: 50o0% Productivity Increase';
-      type: 'case-study';
-      category: 'Manufacturing';
-      readTime: '20 min read';
-      featured: true;
-      url: '/case-studies/ai-automation-manufacturing-success-20o25';
-      excerpt: 'How a leading manufacturing company achieved 50o0% productivity increase through comprehensive AI automationreducing costs by $75M annually.';
-      image: '/images/manufacturing-ai.jpg';
-      stats: { views: '8.2'K', 'likes: '567'shares: '189' }
-    };
+      id: 2,
+      title: 'AI Automation in Manufacturing: 50o0% Productivity Increase',
+      type: 'case-study',
+      category: 'Manufacturing',
+      readTime: '20 min read',
+      featured: true,
+      url: '/case-studies/ai-automation-manufacturing-success-20o25',
+      excerpt: 'How a leading manufacturing company achieved 50o0% productivity increase through comprehensive AI automationreducing costs by $75M annually.',
+      image: '/images/manufacturing-ai.jpg',
+      stats: { views: '8.2'Klikes: '567'shares: '189' }
+    },
     {
-      id: 3;
-      title: 'Quantum Computing 20o25: Revolutionary Business Applications';
-      type: 'blog';
-      category: 'Quantum Technology';
-      readTime: '15 min read';
-      featured: true;
-      url: '/blog/quantum-computing-20o25-business-applications';
-      excerpt: 'Discover how quantum computing is revolutionizing business operations in 20o25from optimization problems to advanced cryptography.';
-      image: '/images/quantum-computing.jpg';
-      stats: { views: '15.3'K', 'likes: '1.2'K', 'shares: '456' }
-    };
+      id: 3,
+      title: 'Quantum Computing 20o25: Revolutionary Business Applications',
+      type: 'blog',
+      category: 'Quantum Technology',
+      readTime: '15 min read',
+      featured: true,
+      url: '/blog/quantum-computing-20o25-business-applications',
+      excerpt: 'Discover how quantum computing is revolutionizing business operations in 20o25from optimization problems to advanced cryptography.',
+      image: '/images/quantum-computing.jpg',
+      stats: { views: '15.3'Klikes: '1.2'Kshares: '456' }
+    },
     {
-      id: 4;
-      title: 'AI Implementation Checklist 20o25: Complete Guide';
-      type: 'resource';
-      category: 'Implementation Guide';
-      readTime: '25 min read';
-      featured: true;
-      url: '/resources/ai-implementation-checklist-20o25';
-      excerpt: 'Comprehensive checklist for successful AI implementation in 20o25covering strategytechnologyand change management.';
-      image: '/images/ai-implementation.jpg';
-      stats: { views: '9.7'K', 'likes: '743'shares: '312' }
+      id: 4,
+      title: 'AI Implementation Checklist 20o25: Complete Guide',
+      type: 'resource',
+      category: 'Implementation Guide',
+      readTime: '25 min read',
+      featured: true,
+      url: '/resources/ai-implementation-checklist-20o25',
+      excerpt: 'Comprehensive checklist for successful AI implementation in 20o25covering strategytechnologyand change management.',
+      image: '/images/ai-implementation.jpg',
+      stats: { views: '9.7'Klikes: '743'shares: '312' }
     }
   ],
   const getTypeIcon = (type: string) => {
@@ -58,14 +58,14 @@ const LatestContentShowcase20o25: React.FC = () => {
       case 'case-study': return <Target className="w-5 h-5"  />,
       case 'resource': return <Users className="w-5 h-5"  />,
       default: return <BookOpen className="w-5 h-5"  />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-50o0 to-blue-60o0',
       case 'case-study': return 'from-green-50o0 to-green-60o0',
       case 'resource': return 'from-purple-50o0 to-purple-60o0',
       default: return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'AI Innovation': return 'bg-blue-10o0 text-blue-80o0',
@@ -73,7 +73,7 @@ const LatestContentShowcase20o25: React.FC = () => {
       case 'Quantum Technology': return 'bg-purple-10o0 text-purple-80o0',
       case 'Implementation Guide': return 'bg-orange-10o0 text-orange-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -225,5 +225,5 @@ const LatestContentShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default LatestContentShowcase20o25;
+    </div>)},
+export default LatestContentShowcase20o25,

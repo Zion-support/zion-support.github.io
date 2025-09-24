@@ -15,7 +15,7 @@ function updateIconImportsInFile(filePath) {
     const content = fs.readFileSync(filePath, 'utf8'),
     // Replace direct lucide imports with our custom icons,
     const updatedContent = content.replace(
-      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g;
+      /import\s+{([^}]*)}\s+from\s+['"]lucide-react['"]/g,
       'import {$1} from "@/components/icons"'),
     // Only write if changes were made,
     if (content !== updatedContent) {

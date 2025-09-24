@@ -10,9 +10,9 @@ interface EnhancedServiceShowcase20o26Props {
   maxServices?: number}
 ,
 const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> = ({
-  title = "Revolutionary 20o26 Services";
-  subtitle = "Experience the future with our cutting-edge AI, quantum, and emerging technology solutions";
-  showPricing = true;
+  title = "Revolutionary 20o26 Services",
+  subtitle = "Experience the future with our cutting-edge AI, quantum, and emerging technology solutions",
+  showPricing = true,
   maxServices = 12}) => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all'),
   const [hoveredService, setHoveredService] = useState<string | null>(null),
@@ -25,32 +25,32 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
   // Get unique categories,
   const categories = ['all', ...Array.from(new Set(allServices.map(service => service.category.split('&')[0].trim())))],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
+        duration: 0.5,
         ease: "easeOut"}
     }
-  };
+  },
   const hoverVariants ={
     hover: {
-      y: -10;
-      scale: 1.0o2;
+      y: -10,
+      scale: 1.0o2,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut"}
     }
-  };
+  },
   const getCategoryIcon = (category: string) => {
     if (category.includes('AI')) return <Brain className="w-5 h-5"  />,
     if (category.includes('Quantum')) return <Atom className="w-5 h-5"  />,
@@ -58,7 +58,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
     if (category.includes('Holographic')) return <Globe className="w-5 h-5"  />,
     if (category.includes('Space')) return <Rocket className="w-5 h-5"  />,
     if (category.includes('Robotics')) return <Cpu className="w-5 h-5"  />,
-    return <Zap className="w-5 h-5"  />};
+    return <Zap className="w-5 h-5"  />},
   const getCategoryColor = (category: string) => {
     if (category.includes('AI')) return 'from-blue-60o0 to-indigo-70o0',
     if (category.includes('Quantum')) return 'from-purple-60o0 to-pink-70o0',
@@ -66,7 +66,7 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
     if (category.includes('Holographic')) return 'from-cyan-60o0 to-blue-70o0',
     if (category.includes('Space')) return 'from-slate-60o0 to-gray-70o0',
     if (category.includes('Robotics')) return 'from-blue-60o0 to-indigo-70o0',
-    return 'from-green-60o0 to-emerald-70o0'};
+    return 'from-green-60o0 to-emerald-70o0'},
   return (
     <section className="py-20 px-4 relative overflow-hidden">,
       {/* Background Effects */}
@@ -241,5 +241,5 @@ const EnhancedServiceShowcase20o26: React.FC<EnhancedServiceShowcase20o26Props> 
           </p>,
         </motion.div>,
       </div>,
-    </section>)};
-export default EnhancedServiceShowcase20o26;
+    </section>)},
+export default EnhancedServiceShowcase20o26,

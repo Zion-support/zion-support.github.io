@@ -2,145 +2,141 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  DollarSign;
-  Clock;
-  Users;
-  BookOpen;
-  FileText;
-  BarChart3;
-  Zap;
-  Award;
-  ArrowRight;
+  ArrowRight,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Users,
+  BookOpen,
+  FileText,
+  BarChart3,
+  Zap,
+  Award,
+  ArrowRight,
 } from 'lucide-react',
 const UltimateDataTransformationShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const categories = [
-    { id: 'all', label: 'All Content', count: 6 };
-    { id: 'blog', label: 'Blog Posts', count: 2 };
-    { id: 'case-study', label: 'Case Studies', count: 2 };
-    { id: 'resource', label: 'Resources', count: 2 };
+    { id: 'all', label: 'All Content', count: 6 },
+    { id: 'blog', label: 'Blog Posts', count: 2 },
+    { id: 'case-study', label: 'Case Studies', count: 2 },
+    { id: 'resource', label: 'Resources', count: 2 },
   ],
   const contentItems = [
     {
-      id: 'data-revolution-guide';
+      id: 'data-revolution-guide',
       title:,
-        'AI 20o25: The Enterprise Data Revolution - Ultimate Guide to 80o0% ROI';
+        'AI 20o25: The Enterprise Data Revolution - Ultimate Guide to 80o0% ROI',
       description:,
-        'Discover how Fortune 50o0 companies are achieving 80o0% ROI through AI-powered data transformation. Complete implementation guide with real success stories.';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide';
-      readingTime: '18 min read';
+        'Discover how Fortune 50o0 companies are achieving 80o0% ROI through AI-powered data transformation. Complete implementation guide with real success stories.',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide',
+      readingTime: '18 min read',
       metrics: {
-        roi: '80o0%';
-        savings: '$4.2M';
-        timeframe: '18 months';
-        accuracy: '99.8%';
-      };
-      tags: ['AI', 'Data Revolution', 'Enterprise', 'ROI', 'Fortune 50o0'];
-      featured: true;
-    };
+        roi: '80o0%',
+        savings: '$4.2M',
+        timeframe: '18 months',
+        accuracy: '99.8%'
+      },
+      tags: ['AIData Revolution', 'EnterpriseROI', 'Fortune 50o0'],
+      featured: true
+    },
     {
-      id: 'autonomous-operations';
+      id: 'autonomous-operations',
       title:,
-        'AI 20o25: The Autonomous Operations Revolution - 1,20o0% ROI Through Intelligent Automation';
+        'AI 20o25: The Autonomous Operations Revolution - 1,20o0% ROI Through Intelligent Automation',
       description:,
-        'Discover how Fortune 50o0 companies are achieving 1,20o0% ROI through AI-powered autonomous operations. Complete guide to intelligent automation transformation.';
-      type: 'blog';
-      url: '/blog/ai-20o25-autonomous-operations-revolution';
-      readingTime: '15 min read';
+        'Discover how Fortune 50o0 companies are achieving 1,20o0% ROI through AI-powered autonomous operations. Complete guide to intelligent automation transformation.',
+      type: 'blog',
+      url: '/blog/ai-20o25-autonomous-operations-revolution',
+      readingTime: '15 min read',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$15.8M';
-        timeframe: '24 months';
-        efficiency: '450%';
-      };
-      tags: ['AI', 'Autonomous Operations', 'Intelligent Automation', 'ROI'];
-      featured: true;
-    };
+        roi: '1,20o0%',
+        savings: '$15.8M',
+        timeframe: '24 months',
+        efficiency: '450%'
+      },
+      tags: ['AIAutonomous Operations', 'Intelligent AutomationROI'],
+      featured: true
+    },
     {
-      id: 'fortune-50o0-case-study';
+      id: 'fortune-50o0-case-study',
       title:,
-        'Fortune 50o0 AI Transformation: $2.8B Company Achieves 80o0% ROI in 18 Months';
+        'Fortune 50o0 AI Transformation: $2.8B Company Achieves 80o0% ROI in 18 Months',
       description:,
-        'How a Fortune 50o0 manufacturing giant transformed their operations with AI, achieving 80o0% ROI and $4.2M annual savings through intelligent data management.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-transformation-80o0-roi-success';
-      readingTime: '12 min read';
+        'How a Fortune 50o0 manufacturing giant transformed their operations with AI, achieving 80o0% ROI and $4.2M annual savings through intelligent data management.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-transformation-80o0-roi-success',
+      readingTime: '12 min read',
       metrics: {
-        roi: '80o0%';
-        savings: '$19.2M';
-        timeframe: '18 months';
-        company: '$2.8B';
-      };
-      tags: ['Case Study', 'Fortune 50o0', 'AI Transformation', 'ROI'];
-      featured: true;
-    };
+        roi: '80o0%',
+        savings: '$19.2M',
+        timeframe: '18 months',
+        company: '$2.8B'
+      },
+      tags: ['Case StudyFortune 50o0', 'AI TransformationROI'],
+      featured: true
+    },
     {
-      id: 'autonomous-operations-case-study';
+      id: 'autonomous-operations-case-study',
       title:,
-        'AI Autonomous Operations Success: $3.2B Company Achieves 1,20o0% ROI in 24 Months';
+        'AI Autonomous Operations Success: $3.2B Company Achieves 1,20o0% ROI in 24 Months',
       description:,
-        'How a Fortune 50o0 energy company transformed their operations with AI-powered autonomous systems, achieving 1,20o0% ROI and $15.8M annual savings.';
-      type: 'case-study';
-      url: '/case-studies/ai-autonomous-operations-120o0-roi-success';
-      readingTime: '14 min read';
+        'How a Fortune 50o0 energy company transformed their operations with AI-powered autonomous systems, achieving 1,20o0% ROI and $15.8M annual savings.',
+      type: 'case-study',
+      url: '/case-studies/ai-autonomous-operations-120o0-roi-success',
+      readingTime: '14 min read',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$50.2M';
-        timeframe: '24 months';
-        company: '$3.2B';
-      };
-      tags: ['Case Study', 'Autonomous Operations', 'AI Transformation', 'ROI'];
-      featured: true;
-    };
+        roi: '1,20o0%',
+        savings: '$50.2M',
+        timeframe: '24 months',
+        company: '$3.2B'
+      },
+      tags: ['Case StudyAutonomous Operations', 'AI TransformationROI'],
+      featured: true
+    },
     {
-      id: 'data-transformation-guide';
+      id: 'data-transformation-guide',
       title:,
-        'AI Data Transformation Master Guide 20o25: From Strategy to 80o0% ROI';
+        'AI Data Transformation Master Guide 20o25: From Strategy to 80o0% ROI',
       description:,
-        'Complete implementation guide for AI-powered data transformation. Learn how Fortune 50o0 companies achieve 80o0% ROI through intelligent data management.';
-      type: 'resource';
-      url: '/resources/ai-data-transformation-master-guide-20o25';
-      readingTime: '25 min read';
+        'Complete implementation guide for AI-powered data transformation. Learn how Fortune 50o0 companies achieve 80o0% ROI through intelligent data management.',
+      type: 'resource',
+      url: '/resources/ai-data-transformation-master-guide-20o25',
+      readingTime: '25 min read',
       metrics: {
-        roi: '80o0%';
-        enterprises: '50o0+';
-        timeframe: '18 months';
-        success: '98%';
-      };
+        roi: '80o0%',
+        enterprises: '50o0+',
+        timeframe: '18 months',
+        success: '98%'
+      },
       tags: [
-        'Implementation Guide';
-        'AI Strategy';
-        'Data Transformation';
-        'ROI';
-      ];
-      featured: true;
-    };
+        'Implementation GuideAI Strategy',
+        'Data TransformationROI',
+      ],
+      featured: true
+    },
     {
-      id: 'autonomous-operations-guide';
+      id: 'autonomous-operations-guide',
       title:,
-        'AI Autonomous Operations Implementation Guide: From Strategy to 1,20o0% ROI';
+        'AI Autonomous Operations Implementation Guide: From Strategy to 1,20o0% ROI',
       description:,
-        'Complete implementation guide for AI-powered autonomous operations. Learn how Fortune 50o0 companies achieve 1,20o0% ROI through intelligent automation.';
-      type: 'resource';
-      url: '/resources/ai-autonomous-operations-implementation-guide-20o25';
-      readingTime: '22 min read';
+        'Complete implementation guide for AI-powered autonomous operations. Learn how Fortune 50o0 companies achieve 1,20o0% ROI through intelligent automation.',
+      type: 'resource',
+      url: '/resources/ai-autonomous-operations-implementation-guide-20o25',
+      readingTime: '22 min read',
       metrics: {
-        roi: '1,20o0%';
-        enterprises: '30o0+';
-        timeframe: '24 months';
-        success: '95%';
-      };
+        roi: '1,20o0%',
+        enterprises: '30o0+',
+        timeframe: '24 months',
+        success: '95%'
+      },
       tags: [
-        'Implementation Guide';
-        'Autonomous Operations';
-        'AI Strategy';
-        'ROI';
-      ];
-      featured: true;
-    };
+        'Implementation GuideAutonomous Operations',
+        'AI StrategyROI',
+      ],
+      featured: true
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -156,7 +152,7 @@ const UltimateDataTransformationShowcase20o25 = () => {
         return <BarChart3 className='w-4 h-4' />,
       default:,
         return <BookOpen className='w-4 h-4' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -167,7 +163,7 @@ const UltimateDataTransformationShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 via-white to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -239,7 +235,7 @@ const UltimateDataTransformationShowcase20o25 = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='ml-1 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </span>,
                   {item.featured && (
@@ -328,5 +324,5 @@ const UltimateDataTransformationShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateDataTransformationShowcase20o25;
+    </section>)},
+export default UltimateDataTransformationShowcase20o25,

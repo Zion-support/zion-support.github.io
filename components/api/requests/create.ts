@@ -6,17 +6,17 @@ messages: [ {
 // Create utility,
 export const Create = () => {
   // Implementation here,
-  return null>>>>>>> origin/feature/merge-conflicts-and-improvements};
+  return null>>>>>>> origin/feature/merge-conflicts-and-improvements},
 {
   role: 'user', content: prompt}],
 temperature: 0.3}),
 const content = response && response.choices[0]?.message?.content || '',
 const typeMatch = content && content.match (/type\s*:\s* (.+) $/im),
-      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai'),async function saveRequests(requests: any[]) {
+      return { summary: description && description.slice(0, 280), type: 'unknown' },    const { OpenAI } = await import('openai'),async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true }),
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))}
 ,
-      return { summary: description && description.slice(0, 280), type: 'unknown' };    const { OpenAI } = await import('openai'),async function saveRequests(requests: any[]) {
+      return { summary: description && description.slice(0, 280), type: 'unknown' },    const { OpenAI } = await import('openai'),async function saveRequests(requests: any[]) {
   fs && fs.mkdirSync(path && path.dirname(REQUESTS_PATH), { recursive: true }),
   fs && fs.writeFileSync(REQUESTS_PATH, JSON && JSON.stringify(requests, null, 2))>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
 ,
@@ -66,8 +66,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const content = response.choices[0]?.message?.content || '',
     const type_match = content.match (/type\s*:\s*(.+)$/im),
     return {
-      summary: content.trim ();
-      type: type_match ? type_match[1].trim () : 'unknown';
+      summary: content.trim (),
+      type: type_match ? type_match[1].trim () : 'unknown'
     }
   } catch (err) {
     return { summary: description.slice (0, 280), type: 'unknown' }
@@ -123,15 +123,15 @@ function handler() {
 ,
   return res.status(200).json({ id, status: 'ok' })}
 =======,
-    budget: normalized_budget;
-    timeline: String (timeline || '');
-    description: String (description);
-    talent_slug: talent_slug || null;
-    ai_summary: ai.summary;
-    ai_type: ai.type;
-    status: 'new';
-    created_at: now;
-    updated_at: now;
+    budget: normalized_budget,
+    timeline: String (timeline || ''),
+    description: String (description),
+    talent_slug: talent_slug || null,
+    ai_summary: ai.summary,
+    ai_type: ai.type,
+    status: 'new',
+    created_at: now,
+    updated_at: now
   }  requests.push (record),    id,
     name,
     email,
@@ -142,7 +142,7 @@ function handler() {
     ai_summary: ai.summary,
     ai_type: ai.type,
     status: 'new',
-    created_at: now;
+    created_at: now,
     updated_at: now}
   requests.push (record),
   await save_requests (requests),

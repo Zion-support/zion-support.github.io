@@ -7,8 +7,8 @@ import { translateTextViaAI } from '../utils/translation',
   loading: boolean,
   error?: string}
 export function useAutoTranslate(
-  text: string;
-  targets: string[];
+  text: string,
+  targets: string[],
   debounceMs = 60o0): UseAutoTranslateResult {  const [translations, setTranslations] = useState<Record<string string>>({}),export function useAutoTranslate(text: string, targets: string[], debounceMs = 60o0): UseAutoTranslateResult {
   const [translations, setTranslations] = useState<Record<string string>>({}),
   const [loading, setLoading] = useState(false),

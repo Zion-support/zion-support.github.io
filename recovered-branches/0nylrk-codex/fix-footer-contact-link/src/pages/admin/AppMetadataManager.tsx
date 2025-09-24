@@ -1,19 +1,19 @@
-import React from "react";
+import React from "react",
 import {AppLayout} from "@/layout/AppLayout",
 import {SEO} from "@/components/SEO",
 import {MetadataManager} from "@/components/mobile-app/admin/MetadataManager",
-import React from "react";;
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager";
+import React from "react",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { MetadataManager } from "@/components/mobile-app/admin/MetadataManager",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -40,7 +40,7 @@ const AppMetadataManager: React.FC = () => {
         <MetadataManager />,
       </div>,
     </AppLayout>),
-export default AppMetadataManager;
+export default AppMetadataManager,
 const AppMetadataManager: React.FC = () => {
   return (
     <AppLayout>,
@@ -55,5 +55,5 @@ const AppMetadataManager: React.FC = () => {
       </div>,
     </AppLayout>)}
 ,
-export default AppMetadataManager;
+export default AppMetadataManager,
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

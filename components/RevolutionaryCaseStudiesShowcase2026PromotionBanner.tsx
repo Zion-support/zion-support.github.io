@@ -6,16 +6,16 @@ import {
   Award,
   ArrowRight,
   Star,
-  TrendingUp;
-  X;
-  CheckCircle;
-  DollarSign;
-  Users;
-  Clock;
-  Target;
-  BarChart3;
-  Zap;
-  Shield;
+  TrendingUp,
+  X,
+  CheckCircle,
+  DollarSign,
+  Users,
+  Clock,
+  Target,
+  BarChart3,
+  Zap,
+  Shield,
   Globe} from 'lucide-react',
 const RevolutionaryCaseStudiesShowcase20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -33,35 +33,33 @@ const RevolutionaryCaseStudiesShowcase20o26PromotionBanner = () => {
       title: 'FinTech Revolution',
       roi: '50o0%',
       icon: DollarSign,
-      color: 'text-green-40o0';
-      company: 'PayFlow Solutions'};
+      color: 'text-green-40o0',
+      company: 'PayFlow Solutions'},
     {
       title: 'Healthcare AI',
       roi: '40o0%',
       icon: Shield,
-      color: 'text-blue-40o0';
-      company: 'MediTech Innovations'};
+      color: 'text-blue-40o0',
+      company: 'MediTech Innovations'},
     {
       title: 'E-commerce Automation',
       roi: '60o0%',
       icon: Globe,
-      color: 'text-purple-40o0';
-      company: 'ShopGlobal'};
+      color: 'text-purple-40o0',
+      company: 'ShopGlobal'},
     {
       title: 'Smart Manufacturing',
       roi: '350%',
       icon: Zap,
-      color: 'text-orange-40o0';
+      color: 'text-orange-40o0',
       company: 'AutoParts Pro'}
   ],
   const features = [
-    'Real Success Stories';
-    'Proven ROI Results';
-    'Industry Expertise';
-    'Client Testimonials'],
+    'Real Success StoriesProven ROI Results',
+    'Industry ExpertiseClient Testimonials'],
   const stats = [
-    { label: '20o0+'value: 'Projects' };
-    { label: '450%'value: 'Avg ROI' };
+    { label: '20o0+'value: 'Projects' },
+    { label: '450%'value: 'Avg ROI' },
     { label: '96%'value: 'Satisfaction' }
   ],
   if (!isVisible || isDismissed) return null,
@@ -85,15 +83,15 @@ const RevolutionaryCaseStudiesShowcase20o26PromotionBanner = () => {
               key={i}
               className="absolute w-2 h-2 bg-white rounded-full opacity-40",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0-250];
-                opacity: [0.40.80.4];
+                y: [0-250],
+                opacity: [0.40.80.4],
                 scale: [1.21]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
@@ -224,5 +222,5 @@ const RevolutionaryCaseStudiesShowcase20o26PromotionBanner = () => {
           transition={{ duration: 3repeat: Infinity }}
          />,
       </motion.div>,
-    </AnimatePresence>)};
-export default RevolutionaryCaseStudiesShowcase20o26PromotionBanner;
+    </AnimatePresence>)},
+export default RevolutionaryCaseStudiesShowcase20o26PromotionBanner,

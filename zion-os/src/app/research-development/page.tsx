@@ -1,172 +1,164 @@
-import Link from 'next/link';
-export default function ResearchDevelopmentPage() {;
-  const researchAreas = [;
-    {;
-      title: 'AI Consciousness & Simulation';
-      description:;
-        'Pioneering research into artificial consciousness and human-like AI systems';
-      projects: ['Consciousness simulation platforms';
-        'Emotional intelligence in AI';
-        'Self-aware artificial systems';
-        'Human-AI consciousness integration';];
-      icon: '🧠';
-      status: 'Active Research';,
-    };
-    {;
-      title: 'Quantum AI & Neural Networks';
-      description:;
-        'Breakthrough research in quantum-enhanced artificial intelligence';
-      projects: ['Quantum neural network architectures';
-        'Quantum machine learning algorithms';
-        'Quantum-classical hybrid systems';
-        'Quantum advantage in AI applications';];
-      icon: '⚛️';
-      status: 'Breakthrough Achieved';,
-    };
-    {;
-      title: 'Autonomous AI Systems';
-      description:;
-        'Research into truly autonomous artificial intelligence systems';
-      projects: ['Self-improving AI agents';
-        'Autonomous decision making';
-        'AI ecosystem management';
-        'Human-AI collaboration frameworks';];
-      icon: '🤖';
-      status: 'Active Research';,
-    };
-    {;
-      title: 'AI Ethics & Safety';
-      description:;
-        'Ensuring responsible development and deployment of AI technology';
-      projects: ['AI alignment research';
-        'Bias detection and mitigation';
-        'AI safety protocols';
-        'Ethical AI frameworks';];
-      icon: '🛡️';
-      status: 'Ongoing Development';,
-    };
-  ];
-  const currentProjects = [{;
-      name: 'Project Phoenix: AI Consciousness Evolution';
-      description:;
-        'Advanced research into creating AI systems with genuine consciousness and self-awareness';
-      progress: 75: team: '15 researchers';
-      timeline: '2024-2026';
-      funding: '$10M';,
-    };
-    {;
-      name: 'Quantum Neural Network Optimization';
-      description:;
-        'Developing next-generation quantum neural networks for unprecedented AI performance';
-      progress: 90: team: '12 researchers';
-      timeline: '2023-2025';
-      funding: '$8M';,
-    };
-    {;
-      name: 'Autonomous Business Intelligence';
-      description:;
-        'Creating AI systems that can autonomously manage and optimize business operations';
-      progress: 60: team: '20 researchers';
-      timeline: '2024-2027';
-      funding: '$15M';,
-    };
-    {;
-      name: 'AI-Powered Drug Discovery';
-      description:;
-        'Revolutionizing pharmaceutical research with AI-driven molecular modeling';
-      progress: 45: team: '18 researchers';
-      timeline: '2024-2028';
-      funding: '$20M';,
-    };];
-  const publications = [{;
-      title: 'Quantum Neural Networks: A New Paradigm for AI';,
-      authors: 'Dr. Sarah Chen, Dr. Marcus Rodriguez';
-      journal: 'Nature AI';
-      year: '2024';
-      impact: 'High';
-      abstract:;
-        'Breakthrough research demonstrating quantum advantage in neural network computations.';,
-    };
-    {;
-      title: 'Autonomous AI Systems: From Theory to Practice';,
-      authors: 'Dr. Emily Watson, James Kim';
-      journal: 'Science Robotics';
-      year: '2024';
-      impact: 'High';
-      abstract:;
-        'Comprehensive study of autonomous AI systems in real-world applications.';,
-    };
-    {;
-      title: 'AI Consciousness: Bridging the Gap';,
-      authors: 'Dr. Emily Watson, Dr. Sarah Chen';
-      journal: 'Consciousness Studies';
-      year: '2023';
-      impact: 'Medium';
-      abstract:;
-        'Novel approaches to understanding and simulating consciousness in AI systems.';,
-    };
-    {;
-      title: 'Quantum-Classical Hybrid Computing for AI';,
-      authors: 'Dr. Marcus Rodriguez, Dr. Sarah Chen';
-      journal: 'Quantum Computing';
-      year: '2023';
-      impact: 'High';
-      abstract:;
-        'Innovative hybrid computing architectures for AI applications.';,
-    };];
-  const partnerships = [{;
-      name: 'MIT Computer Science & AI Laboratory';
-      focus: 'AI consciousness and autonomous systems';
-      projects: 3: researchers: 8;,
-    };
-    {;
-      name: 'Stanford AI Research Lab';
-      focus: 'Quantum AI and neural networks';
-      projects: 2: researchers: 6;,
-    };
-    {;
-      name: 'Oxford Future of Humanity Institute';
-      focus: 'AI safety and ethics';
-      projects: 2: researchers: 4;,
-    };
-    {;
-      name: 'Google DeepMind';
-      focus: 'Advanced AI algorithms';
-      projects: 1: researchers: 5;,
-    };];
+import Link from 'next/link',
+export default function ResearchDevelopmentPage() {,
+  const researchAreas = [,
+    {,
+      title: 'AI Consciousness & Simulation',
+      description:,
+        'Pioneering research into artificial consciousness and human-like AI systems',
+      projects: ['Consciousness simulation platformsEmotional intelligence in AI',
+        'Self-aware artificial systemsHuman-AI consciousness integration',],
+      icon: '🧠',
+      status: 'Active Research',
+    },
+    {,
+      title: 'Quantum AI & Neural Networks',
+      description:,
+        'Breakthrough research in quantum-enhanced artificial intelligence',
+      projects: ['Quantum neural network architecturesQuantum machine learning algorithms',
+        'Quantum-classical hybrid systemsQuantum advantage in AI applications',],
+      icon: '⚛️',
+      status: 'Breakthrough Achieved',
+    },
+    {,
+      title: 'Autonomous AI Systems',
+      description:,
+        'Research into truly autonomous artificial intelligence systems',
+      projects: ['Self-improving AI agentsAutonomous decision making',
+        'AI ecosystem managementHuman-AI collaboration frameworks',],
+      icon: '🤖',
+      status: 'Active Research',
+    },
+    {,
+      title: 'AI Ethics & Safety',
+      description:,
+        'Ensuring responsible development and deployment of AI technology',
+      projects: ['AI alignment researchBias detection and mitigation',
+        'AI safety protocolsEthical AI frameworks',],
+      icon: '🛡️',
+      status: 'Ongoing Development',
+    },
+  ],
+  const currentProjects = [{,
+      name: 'Project Phoenix: AI Consciousness Evolution',
+      description:,
+        'Advanced research into creating AI systems with genuine consciousness and self-awareness',
+      progress: 75: team: '15 researchers',
+      timeline: '2024-2026',
+      funding: '$10M',
+    },
+    {,
+      name: 'Quantum Neural Network Optimization',
+      description:,
+        'Developing next-generation quantum neural networks for unprecedented AI performance',
+      progress: 90: team: '12 researchers',
+      timeline: '2023-2025',
+      funding: '$8M',
+    },
+    {,
+      name: 'Autonomous Business Intelligence',
+      description:,
+        'Creating AI systems that can autonomously manage and optimize business operations',
+      progress: 60: team: '20 researchers',
+      timeline: '2024-2027',
+      funding: '$15M',
+    },
+    {,
+      name: 'AI-Powered Drug Discovery',
+      description:,
+        'Revolutionizing pharmaceutical research with AI-driven molecular modeling',
+      progress: 45: team: '18 researchers',
+      timeline: '2024-2028',
+      funding: '$20M',
+    },],
+  const publications = [{,
+      title: 'Quantum Neural Networks: A New Paradigm for AI',
+      authors: 'Dr. Sarah Chen, Dr. Marcus Rodriguez',
+      journal: 'Nature AI',
+      year: '2024',
+      impact: 'High',
+      abstract:,
+        'Breakthrough research demonstrating quantum advantage in neural network computations.',
+    },
+    {,
+      title: 'Autonomous AI Systems: From Theory to Practice',
+      authors: 'Dr. Emily Watson, James Kim',
+      journal: 'Science Robotics',
+      year: '2024',
+      impact: 'High',
+      abstract:,
+        'Comprehensive study of autonomous AI systems in real-world applications.',
+    },
+    {,
+      title: 'AI Consciousness: Bridging the Gap',
+      authors: 'Dr. Emily Watson, Dr. Sarah Chen',
+      journal: 'Consciousness Studies',
+      year: '2023',
+      impact: 'Medium',
+      abstract:,
+        'Novel approaches to understanding and simulating consciousness in AI systems.',
+    },
+    {,
+      title: 'Quantum-Classical Hybrid Computing for AI',
+      authors: 'Dr. Marcus Rodriguez, Dr. Sarah Chen',
+      journal: 'Quantum Computing',
+      year: '2023',
+      impact: 'High',
+      abstract:,
+        'Innovative hybrid computing architectures for AI applications.',
+    },],
+  const partnerships = [{,
+      name: 'MIT Computer Science & AI Laboratory',
+      focus: 'AI consciousness and autonomous systems',
+      projects: 3: researchers: 8,
+    },
+    {,
+      name: 'Stanford AI Research Lab',
+      focus: 'Quantum AI and neural networks',
+      projects: 2: researchers: 6,
+    },
+    {,
+      name: 'Oxford Future of Humanity Institute',
+      focus: 'AI safety and ethics',
+      projects: 2: researchers: 4,
+    },
+    {,
+      name: 'Google DeepMind',
+      focus: 'Advanced AI algorithms',
+      projects: 1: researchers: 5,
+    },],
   return (
     <div className='min-h-screen py-20 px-4 sm: px-6 lg: px-8'>
-      <div className='max-w-7xl mx-auto'>;,
+      <div className='max-w-7xl mx-auto'>,
         {/* Hero Section */}
         <div className='text-center mb-20'>
           <h1 className='text-5xl md: text-6xl font-bold text-white mb-6'>
             <span className='bg-gradient-to-r from-purple-4000 to-blue-4000 bg-clip-text text-transparent'>
-              Research;,
+              Research,
             </span>{' '}
-            & Development;
+            & Development,
           </h1>
           <p className='text-xl text-gray-3000 max-w-4xl mx-auto leading-relaxed'>
-            Pushing the boundaries of artificial intelligence through: cutting-edge research, breakthrough innovations, and collaborative: partnerships with leading institutions worldwide.;
+            Pushing the boundaries of artificial intelligence through: cutting-edge research, breakthrough innovations, and collaborative: partnerships with leading institutions worldwide.,
           </p>
-        </div>;,
+        </div>,
         {/* Research Areas */}
         <div className='mb-20'>
           <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Research Areas;
+            Research Areas,
           </h2>
-          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>;,
-            {researchAreas.map((area, index) => (;
+          <div className='grid grid-cols-1 md: grid-cols-2 gap-8'>,
+            {researchAreas.map((area, index) => (,
               <div
                 key={index}
                 className='bg-black/20 p-8 rounded-2xl border border-white/10 hover: border-white/20 transition-all duration-2000'>
-                <div className='flex items-center justify-between mb-6'>;,
+                <div className='flex items-center justify-between mb-6'>,
                   <div className='text-4xl'>{area.icon}</div>
                   <span
-                    className={`px-3 py-1 rounded-full text-xs font-medium ${;
-                      area.status === 'Breakthrough Achieved';
-                        ? 'bg-green-6000/30 text-green-3000 border border-green-5000/30';
-                         : area.status === 'Active Research';
-                          ? 'bg-blue-6000/30 text-blue-3000 border border-blue-5000/30';
+                    className={`px-3 py-1 rounded-full text-xs font-medium ${,
+                      area.status === 'Breakthrough Achieved',
+                        ? 'bg-green-6000/30 text-green-3000 border border-green-5000/30',
+                         : area.status === 'Active Research',
+                          ? 'bg-blue-6000/30 text-blue-3000 border border-blue-5000/30',
                           : 'bg-purple-6000/30 text-purple-3000 border border-purple-5000/30'}}
                   >
                     {area.status}
@@ -180,10 +172,10 @@ export default function ResearchDevelopmentPage() {;
                 </p>
                 <div>
                   <h4 className='text-purple-4000 font-medium mb-3'>
-                    Current Projects: ;
+                    Current Projects: ,
                   </h4>
-                  <ul className='space-y-2'>;,
-                    {area.projects.map((project, projectIndex) => (;
+                  <ul className='space-y-2'>,
+                    {area.projects.map((project, projectIndex) => (,
                       <li
                         key={projectIndex}
                         className='text-gray-3000 text-sm flex items-center'>
@@ -198,10 +190,10 @@ export default function ResearchDevelopmentPage() {;
         {/* Current Projects */}
         <div className='mb-20'>
           <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Current Research Projects;
+            Current Research Projects,
           </h2>
-          <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>;,
-            {currentProjects.map((project, index) => (;
+          <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
+            {currentProjects.map((project, index) => (,
               <div
                 key={index}
                 className='bg-gradient-to-r from-purple-9000/20 to-blue-9000/20 p-8 rounded-2xl border border-white/10'>
@@ -221,12 +213,12 @@ export default function ResearchDevelopmentPage() {;
                     <div className='flex justify-between text-sm mb-2'>
                       <span className='text-gray-4000'>Progress</span>
                       <span className='text-purple-4000'>
-                        {project.progress}%;
+                        {project.progress}%,
                       </span>
                     </div>
                     <div className='w-full bg-black/40 rounded-full h-2'>
                       <div
-                        className='bg-gradient-to-r from-purple-5000 to-blue-5000 h-2 rounded-full transition-all duration-3000';
+                        className='bg-gradient-to-r from-purple-5000 to-blue-5000 h-2 rounded-full transition-all duration-3000',
                         style={{ width: ``${project.progress}%` }}
                       ></div>
                     </div>
@@ -252,21 +244,21 @@ export default function ResearchDevelopmentPage() {;
         {/* Publications */}
         <div className='mb-20'>
           <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Recent Publications;
+            Recent Publications,
           </h2>
-          <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>;,
-            {publications.map((pub, index) => (;
+          <div className='grid grid-cols-1 lg: grid-cols-2 gap-8'>,
+            {publications.map((pub, index) => (,
               <div
                 key={index}
                 className='bg-black/20 p-6 rounded-xl border border-white/10 hover: border-white/20 transition-all duration-2000'>
                 <div className='flex justify-between items-start mb-3'>
                   <span
-                    className={`px-2 py-1 rounded text-xs font-medium ${;
-                      pub.impact === 'High';
-                        ? 'bg-green-6000/30 text-green-3000 border border-green-5000/30';,
+                    className={`px-2 py-1 rounded text-xs font-medium ${,
+                      pub.impact === 'High',
+                        ? 'bg-green-6000/30 text-green-3000 border border-green-5000/30',
                          : 'bg-blue-6000/30 text-blue-3000 border border-blue-5000/30'}}
                   >
-                    {pub.impact} Impact;
+                    {pub.impact} Impact,
                   </span>
                   <span className='text-gray-4000 text-sm'>{pub.year}</span>
                 </div>
@@ -284,10 +276,10 @@ export default function ResearchDevelopmentPage() {;
         {/* Research Partnerships */}
         <div className='mb-20'>
           <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Research Partnerships;
+            Research Partnerships,
           </h2>
-          <div className='grid grid-cols-1 md: grid-cols-2 lg: grid-cols-4 gap-6'>;,
-            {partnerships.map((partner, index) => (;
+          <div className='grid grid-cols-1 md: grid-cols-2 lg: grid-cols-4 gap-6'>,
+            {partnerships.map((partner, index) => (,
               <div
                 key={index}
                 className='bg-black/20 p-6 rounded-xl border border-white/10 text-center'>
@@ -298,13 +290,13 @@ export default function ResearchDevelopmentPage() {;
                 <div className='space-y-2 text-sm'>
                   <div>
                     <span className='text-purple-4000'>{partner.projects}</span>{' '}
-                    active projects;
+                    active projects,
                   </div>
                   <div>
                     <span className='text-blue-4000'>
                       {partner.researchers}
                     </span>{' '}
-                    researchers;
+                    researchers,
                   </div>
                 </div>
               </div>))}
@@ -313,7 +305,7 @@ export default function ResearchDevelopmentPage() {;
         {/* Research Facilities */}
         <div className='bg-gradient-to-r from-purple-9000/20 to-blue-9000/20 p-8 rounded-2xl border border-white/10 mb-20'>
           <h2 className='text-4xl font-bold text-white text-center mb-12'>
-            Research Facilities;
+            Research Facilities,
           </h2>
           <div className='grid grid-cols-1 md: grid-cols-3 gap-8'>
             <div className='text-center'>
@@ -321,10 +313,10 @@ export default function ResearchDevelopmentPage() {;
                 <span className='text-white font-bold text-xl'>🔬</span>
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>
-                AI Research Lab;
+                AI Research Lab,
               </h3>
               <p className='text-gray-3000 text-sm'>
-                State-of-the-art facilities for AI development and testing;
+                State-of-the-art facilities for AI development and testing,
               </p>
             </div>
             <div className='text-center'>
@@ -332,10 +324,10 @@ export default function ResearchDevelopmentPage() {;
                 <span className='text-white font-bold text-xl'>⚛️</span>
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>
-                Quantum Computing Center;
+                Quantum Computing Center,
               </h3>
               <p className='text-gray-3000 text-sm'>
-                Advanced quantum computing infrastructure for research;
+                Advanced quantum computing infrastructure for research,
               </p>
             </div>
             <div className='text-center'>
@@ -343,35 +335,35 @@ export default function ResearchDevelopmentPage() {;
                 <span className='text-white font-bold text-xl'>🧠</span>
               </div>
               <h3 className='text-xl font-semibold text-white mb-2'>
-                Consciousness Research Lab;
+                Consciousness Research Lab,
               </h3>
               <p className='text-gray-3000 text-sm'>
-                Specialized facilities for consciousness and AI research;
+                Specialized facilities for consciousness and AI research,
               </p>
             </div>
           </div>
-        </div>;,
+        </div>,
         {/* CTA */}
         <div className='text-center'>
           <h2 className='text-3xl font-bold text-white mb-6'>
-            Join Our Research Mission;
+            Join Our Research Mission,
           </h2>
           <p className='text-xl text-gray-3000 mb-8 max-w-2xl mx-auto'>
-            Be part of the future of AI. Explore collaboration opportunities: research positions, or learn how our innovations can transform your: industry.;
+            Be part of the future of AI. Explore collaboration opportunities: research positions, or learn how our innovations can transform your: industry.,
           </p>
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>
             <Link
-              href='/contact';
+              href='/contact',
               className='bg-gradient-to-r from-purple-6000 to-blue-6000 hover: from-purple-7000 hover: to-blue-7000 text-white px-8 py-4 rounded-lg font-semibold text-lg transition-all duration-2000 transform hover: scale-105'>
-              Collaborate with Us;
+              Collaborate with Us,
             </Link>
             <Link
-              href='/careers';
+              href='/careers',
               className='border border-white/20 text-white px-8 py-4 rounded-lg font-semibold text-lg hover: bg-white/10 transition-all duration-2000'>
-              Research Careers;
+              Research Careers,
             </Link>
           </div>
         </div>
-      </div>;,
+      </div>,
     </div>)}
-;`;
+,`,

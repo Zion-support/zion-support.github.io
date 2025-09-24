@@ -1,67 +1,67 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 const DocumentationPage: React.FC = () => {
   const sections = [
     {
-      title: "Getting Started";
-      description: "Quick start guide for new users";
-      icon: "🚀";
+      title: "Getting Started",
+      description: "Quick start guide for new users",
+      icon: "🚀",
       links: [
-        { name: "Installation"href: "#installation"description: "Set up Zion App in minutes" };
-        { name: "Quick Start"href: "#quick-start"description: "Build your first automation" };
+        { name: "Installation"href: "#installation"description: "Set up Zion App in minutes" },
+        { name: "Quick Start"href: "#quick-start"description: "Build your first automation" },
         { name: "Configuration"href: "#configuration"description: "Customize your setup" }
-      ]};
+      ]},
     {
-      title: "Core Concepts";
-      description: "Understanding the fundamentals";
-      icon: "🧠";
+      title: "Core Concepts",
+      description: "Understanding the fundamentals",
+      icon: "🧠",
       links: [
-        { name: "Automations"href: "#automations"description: "How autonomous workflows work" };
-        { name: "AI Integration"href: "#ai-integration"description: "Leveraging artificial intelligence" };
+        { name: "Automations"href: "#automations"description: "How autonomous workflows work" },
+        { name: "AI Integration"href: "#ai-integration"description: "Leveraging artificial intelligence" },
         { name: "Monitoring"href: "#monitoring"description: "Real-time system health" }
-      ]};
+      ]},
     {
-      title: "API Reference";
-      description: "Complete API documentation";
-      icon: "🔌";
+      title: "API Reference",
+      description: "Complete API documentation",
+      icon: "🔌",
       links: [
-        { name: "REST API"href: "#rest-api"description: "HTTP endpoints and methods" };
-        { name: "Webhooks"href: "#webhooks"description: "Event-driven integrations" };
+        { name: "REST API"href: "#rest-api"description: "HTTP endpoints and methods" },
+        { name: "Webhooks"href: "#webhooks"description: "Event-driven integrations" },
         { name: "SDK"href: "#sdk"description: "Client libraries and tools" }
-      ]};
+      ]},
     {
-      title: "Automation Guide";
-      description: "Building custom automations";
-      icon: "⚙️";
+      title: "Automation Guide",
+      description: "Building custom automations",
+      icon: "⚙️",
       links: [
-        { name: "Workflow Builder"href: "#workflow-builder"description: "Visual automation designer" };
-        { name: "Triggers"href: "#triggers"description: "Event-based automation" };
+        { name: "Workflow Builder"href: "#workflow-builder"description: "Visual automation designer" },
+        { name: "Triggers"href: "#triggers"description: "Event-based automation" },
         { name: "Actions"href: "#actions"description: "Available automation steps" }
-      ]};
+      ]},
     {
-      title: "Deployment";
-      description: "Production deployment guide";
-      icon: "🌐";
+      title: "Deployment",
+      description: "Production deployment guide",
+      icon: "🌐",
       links: [
-        { name: "Netlify"href: "#netlify"description: "Deploy to Netlify" };
-        { name: "Vercel"href: "#vercel"description: "Deploy to Vercel" };
+        { name: "Netlify"href: "#netlify"description: "Deploy to Netlify" },
+        { name: "Vercel"href: "#vercel"description: "Deploy to Vercel" },
         { name: "Docker"href: "#docker"description: "Containerized deployment" }
-      ]};
+      ]},
     {
-      title: "Troubleshooting";
-      description: "Common issues and solutions";
-      icon: "🔧";
+      title: "Troubleshooting",
+      description: "Common issues and solutions",
+      icon: "🔧",
       links: [
-        { name: "FAQ"href: "#faq"description: "Frequently asked questions" };
-        { name: "Debugging"href: "#debugging"description: "Debug common issues" };
+        { name: "FAQ"href: "#faq"description: "Frequently asked questions" },
+        { name: "Debugging"href: "#debugging"description: "Debug common issues" },
         { name: "Support"href: "#support"description: "Get help when needed" }
       ]}
   ],
   const codeExamples = [
     {
-      title: "Basic Automation";
-      language: "yaml";
+      title: "Basic Automation",
+      language: "yaml",
       code: `name: Basic Automation,
 on:,
   schedule:,
@@ -73,23 +73,23 @@ jobs:,
     steps:,
       - uses: actions/checkout@v4,
       - name: Run Automation,
-        run: npm run automation:cloud`};
+        run: npm run automation:cloud`},
     {
-      title: "AI Content Generation";
-      language: "javascript";
+      title: "AI Content Generation",
+      language: "javascript",
       code: `// AI-powered content generation,
 const generateContent = async (prompt) => {
   const response = await fetch('/api/ai/generate'{
-    method: 'POST';
-    headers: { 'Content-Type': 'application/json' };
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({ prompt })}),
-  return response.json()};
+  return response.json()},
 // Usage,
 const content = await generateContent(
-  'Create a blog post about autonomous automation'),`};
+  'Create a blog post about autonomous automation'),`},
     {
-      title: "Performance Monitoring";
-      language: "typescript";
+      title: "Performance Monitoring",
+      language: "typescript",
       code: `interface PerformanceMetrics {
   lighthouseScore: number,
   loadTime: number,
@@ -98,7 +98,7 @@ const content = await generateContent(
 ,
 const monitorPerformance = async (): Promise<PerformanceMetrics> => {
   const metrics = await fetch('/api/performance/lighthouse'),
-  return metrics.json()};
+  return metrics.json()},
 // Real-time monitoring,
 setInterval(async () => {
   const metrics = await monitorPerformance(),
@@ -247,5 +247,5 @@ setInterval(async () => {
           </div>,
         </footer>,
       </div>,
-    </>)};
-export default DocumentationPage;
+    </>)},
+export default DocumentationPage,

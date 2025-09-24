@@ -1,5 +1,5 @@
 "use client",
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -63,64 +63,64 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Infinity;
-  Hexagon;
-  Network;} from 'lucide-react',import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Infinity,
+  Hexagon,
+  Network,} from 'lucide-react',import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
@@ -128,8 +128,8 @@ import {
   Palette, Camera, Video, Music, Gamepad2, Heart,
   Leaf, Sun, Moon, Wind, Droplets, Mountain,
   Code, Wrench, Smartphone, BarChart3, Eye,
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotion-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$1,299/month' };
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$1,799/month' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotion-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$1,299/month' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$1,799/month' },
       { name: 'AI Autonomous Business Manager', href: '/ai-autonomous-business-manager', description: 'Fully autonomous business operations', price: '$3,999/month' }
     ]}
     title: ' 2030 Quantum & Emerging Tech',
@@ -283,104 +283,104 @@ import {
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]}
   {
-    title: ' 2030 Innovative Micro SAAS';
-    icon: Target;
-    color: 'from-green-600 via-yellow-600 to-orange-600';
-    description: 'Cutting-edge micro solutions';
+    title: ' 2030 Innovative Micro SAAS',
+    icon: Target,
+    color: 'from-green-600 via-yellow-600 to-orange-600',
+    description: 'Cutting-edge micro solutions',
     services: [
-      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' };
-      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' };
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' };
+      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]}
 ,
-        name: 'AI HR Management Suite 2030';
-        href: '/ai-hr-management-suite-2030';
-        description: 'Intelligent human resources management powered by AI';
-        price: '$149/month';
-      };
-    ];
-  }],      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' };
-      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' };
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' };
+        name: 'AI HR Management Suite 2030',
+        href: '/ai-hr-management-suite-2030',
+        description: 'Intelligent human resources management powered by AI',
+        price: '$149/month'
+      },
+    ],
+  }],      { name: 'AI Business Intelligence Suite 2030', href: '/ai-business-intelligence-suite-2030', description: 'AI-powered business analytics and insights', price: '$299/month' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai-customer-experience-platform-2030', description: 'AI-powered customer experience management', price: '$199/month' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai-marketing-automation-2030', description: 'Intelligent marketing automation powered by AI', price: '$179/month' },
       { name: 'AI HR Management Suite 2030', href: '/ai-hr-management-suite-2030', description: 'Intelligent human resources management powered by AI', price: '$149/month' }
     ]}
 ],
 const mainNavigation = [
     services: [
       {
-        name: 'Space Mining Automation Platform';
-        href: '/space - mining - automation - platform';
-        description: 'Automated asteroid mining';
-        price: '$8, 999 / month';
-      };
+        name: 'Space Mining Automation Platform',
+        href: '/space - mining - automation - platform',
+        description: 'Automated asteroid mining',
+        price: '$8, 999 / month',
+      },
       {
-        name: 'Metaverse Digital Reality Platform';
-        href: '/metaverse - digital - reality - platform';
-        description: 'Immersive virtual worlds';
-        price: '$2, 499 / month';
-      };
+        name: 'Metaverse Digital Reality Platform',
+        href: '/metaverse - digital - reality - platform',
+        description: 'Immersive virtual worlds',
+        price: '$2, 499 / month',
+      },
       {
-        name: 'Quantum Research Platform';
-        href: '/quantum - research - platform';
-        description: 'Quantum computing research';
-        price: '$3, 999 / month';
-      };
+        name: 'Quantum Research Platform',
+        href: '/quantum - research - platform',
+        description: 'Quantum computing research',
+        price: '$3, 999 / month',
+      },
       {
-        name: 'AI Research Assistant';
-        href: '/ai - research - assistant';
-        description: 'Intelligent research support';
-        price: '$899 / month';
-      };
-    ];
+        name: 'AI Research Assistant',
+        href: '/ai - research - assistant',
+        description: 'Intelligent research support',
+        price: '$899 / month'
+      },
+    ],
   },  {      { name: 'Space Mining Automation Platform', href: '/space - mining - automation - platform', description: 'Automated asteroid mining', price: '$8, 999 / month' }
       { name: 'Metaverse Digital Reality Platform', href: '/metaverse - digital - reality - platform', description: 'Immersive virtual worlds', price: '$2, 499 / month' }
       { name: 'Quantum Research Platform', href: '/quantum - research - platform', description: 'Quantum computing research', price: '$3, 999 / month' }
       { name: 'AI Research Assistant', href: '/ai - research - assistant', description: 'Intelligent research support', price: '$899 / month' }
     ]}
-    title: '🎯 2030 Innovative Micro SAAS';
-    icon: Target;
-    color: 'from - green - 600 via - yellow - 600 to - orange - 600';
-    description: 'Cutting - edge micro solutions';
+    title: '🎯 2030 Innovative Micro SAAS',
+    icon: Target,
+    color: 'from - green - 600 via - yellow - 600 to - orange - 600',
+    description: 'Cutting - edge micro solutions',
     services: [
       {
-        name: 'AI Business Intelligence Suite 2030';
-        href: '/ai - business - intelligence - suite - 2030';
-        description: 'AI - powered business analytics and insights';
-        price: '$299 / month';
-      };
+        name: 'AI Business Intelligence Suite 2030',
+        href: '/ai - business - intelligence - suite - 2030',
+        description: 'AI - powered business analytics and insights',
+        price: '$299 / month'
+      },
       {
-        name: 'AI Customer Experience Platform 2030';
-        href: '/ai - customer - experience - platform - 2030';
-        description: 'AI - powered customer experience management';
-        price: '$199 / month';
-      };
+        name: 'AI Customer Experience Platform 2030',
+        href: '/ai - customer - experience - platform - 2030',
+        description: 'AI - powered customer experience management',
+        price: '$199 / month'
+      },
       {
-        name: 'AI Marketing Automation Suite 2030';
-        href: '/ai - marketing - automation - 2030';
-        description: 'Intelligent marketing automation powered by AI';
-        price: '$179 / month';
-      };
+        name: 'AI Marketing Automation Suite 2030',
+        href: '/ai - marketing - automation - 2030',
+        description: 'Intelligent marketing automation powered by AI',
+        price: '$179 / month'
+      },
       {
-        name: 'AI HR Management Suite 2030';
-        href: '/ai - hr - management - suite - 2030';
-        description: 'Intelligent human resources management powered by AI';
-        price: '$149 / month';
-      };
-    ];
-  }],      { name: 'AI Business Intelligence Suite 2030', href: '/ai - business - intelligence - suite - 2030', description: 'AI - powered business analytics and insights', price: '$299 / month' };
-      { name: 'AI Customer Experience Platform 2030', href: '/ai - customer - experience - platform - 2030', description: 'AI - powered customer experience management', price: '$199 / month' };
-      { name: 'AI Marketing Automation Suite 2030', href: '/ai - marketing - automation - 2030', description: 'Intelligent marketing automation powered by AI', price: '$179 / month' };
+        name: 'AI HR Management Suite 2030',
+        href: '/ai - hr - management - suite - 2030',
+        description: 'Intelligent human resources management powered by AI',
+        price: '$149 / month'
+      },
+    ],
+  }],      { name: 'AI Business Intelligence Suite 2030', href: '/ai - business - intelligence - suite - 2030', description: 'AI - powered business analytics and insights', price: '$299 / month' },
+      { name: 'AI Customer Experience Platform 2030', href: '/ai - customer - experience - platform - 2030', description: 'AI - powered customer experience management', price: '$199 / month' },
+      { name: 'AI Marketing Automation Suite 2030', href: '/ai - marketing - automation - 2030', description: 'Intelligent marketing automation powered by AI', price: '$179 / month' },
       { name: 'AI HR Management Suite 2030', href: '/ai - hr - management - suite - 2030', description: 'Intelligent human resources management powered by AI', price: '$149 / month' }
     ]}
 const main_navigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Layers };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Case Studies', href: '/case - studies', icon: BarChart3 };
-  { name: 'Blog', href: '/blog', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Layers },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case - studies', icon: BarChart3 },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
   { name: 'Contact', href: '/contact', icon: MessageCircle }
 ],
 const quickLinks = [
@@ -427,60 +427,60 @@ export default function UltraFuturisticNavigation2030() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: 'Solutions', href: '/solutions', icon: Layers };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Case Studies', href: '/case-studies', icon: BarChart3 };
-  { name: 'Blog', href: '/blog', icon: MessageCircle };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: 'Solutions', href: '/solutions', icon: Layers },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Case Studies', href: '/case-studies', icon: BarChart3 },
+  { name: 'Blog', href: '/blog', icon: MessageCircle },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
 ],
 const quickLinks = [
   {
-    name: 'AI Services';
-    href: '/services/ai';
-    icon: Brain;
-    color: 'from-purple-500 to-pink-500';
-  };
+    name: 'AI Services',
+    href: '/services/ai',
+    icon: Brain,
+    color: 'from-purple-500 to-pink-500'
+  },
   {
-    name: 'Quantum Tech';
-    href: '/services/quantum';
-    icon: Atom;
-    color: 'from-blue-500 to-cyan-500';
-  };
+    name: 'Quantum Tech',
+    href: '/services/quantum',
+    icon: Atom,
+    color: 'from-blue-500 to-cyan-500'
+  },
   {
-    name: 'Biotech Solutions';
-    href: '/services/biotech';
-    icon: Microscope;
-    color: 'from-green-500 to-emerald-500';
-  };
+    name: 'Biotech Solutions',
+    href: '/services/biotech',
+    icon: Microscope,
+    color: 'from-green-500 to-emerald-500'
+  },
   {
-    name: 'Space Technology';
-    href: '/services/space';
-    icon: Rocket;
-    color: 'from-indigo-500 to-purple-500';
-  };
+    name: 'Space Technology',
+    href: '/services/space',
+    icon: Rocket,
+    color: 'from-indigo-500 to-purple-500'
+  },
   {
-    name: 'Enterprise IT';
-    href: '/services/enterprise';
-    icon: Cpu;
-    color: 'from-gray-500 to-slate-500';
-  };
+    name: 'Enterprise IT',
+    href: '/services/enterprise',
+    icon: Cpu,
+    color: 'from-gray-500 to-slate-500'
+  },
   {
-    name: 'Micro SAAS';
-    href: '/services/micro-saas';
-    icon: Target;
-    color: 'from-orange-500 to-red-500';
-  }],  { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' };
-  { name: 'Quantum Tech', href: '/services/quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' };
-  { name: 'Biotech Solutions', href: '/services/biotech', icon: Microscope, color: 'from-green-500 to-emerald-500' };
-  { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' };
-  { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' };
+    name: 'Micro SAAS',
+    href: '/services/micro-saas',
+    icon: Target,
+    color: 'from-orange-500 to-red-500'
+  }],  { name: 'AI Services', href: '/services/ai', icon: Brain, color: 'from-purple-500 to-pink-500' },
+  { name: 'Quantum Tech', href: '/services/quantum', icon: Atom, color: 'from-blue-500 to-cyan-500' },
+  { name: 'Biotech Solutions', href: '/services/biotech', icon: Microscope, color: 'from-green-500 to-emerald-500' },
+  { name: 'Space Technology', href: '/services/space', icon: Rocket, color: 'from-indigo-500 to-purple-500' },
+  { name: 'Enterprise IT', href: '/services/enterprise', icon: Cpu, color: 'from-gray-500 to-slate-500' },
   { name: 'Micro SAAS', href: '/services/micro-saas', icon: Target, color: 'from-orange-500 to-red-500' }
 ,
 export default function UltraFuturisticNavigation2030() {
@@ -489,9 +489,9 @@ export default function UltraFuturisticNavigation2030() {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 20)};
+      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 20)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
   const toggleMenu = () => setIsOpen(!isOpen),
@@ -565,45 +565,45 @@ href={contactInfo && contactInfo.website}
 ,
 const quick_links = [
   {
-    name: 'AI Services';
-    href: '/services / ai';
-    icon: Brain;
-    color: 'from - purple - 500 to - pink - 500';
-  };
+    name: 'AI Services',
+    href: '/services / ai',
+    icon: Brain,
+    color: 'from - purple - 500 to - pink - 500'
+  },
   {
-    name: 'Quantum Tech';
-    href: '/services / quantum';
-    icon: Atom;
-    color: 'from - blue - 500 to - cyan - 500';
-  };
+    name: 'Quantum Tech',
+    href: '/services / quantum',
+    icon: Atom,
+    color: 'from - blue - 500 to - cyan - 500'
+  },
   {
-    name: 'Biotech Solutions';
-    href: '/services / biotech';
-    icon: Microscope;
-    color: 'from - green - 500 to - emerald - 500';
-  };
+    name: 'Biotech Solutions',
+    href: '/services / biotech',
+    icon: Microscope,
+    color: 'from - green - 500 to - emerald - 500'
+  },
   {
-    name: 'Space Technology';
-    href: '/services / space';
-    icon: Rocket;
-    color: 'from - indigo - 500 to - purple - 500';
-  };
+    name: 'Space Technology',
+    href: '/services / space',
+    icon: Rocket,
+    color: 'from - indigo - 500 to - purple - 500'
+  },
   {
-    name: 'Enterprise IT';
-    href: '/services / enterprise';
-    icon: Cpu;
-    color: 'from - gray - 500 to - slate - 500';
-  };
+    name: 'Enterprise IT',
+    href: '/services / enterprise',
+    icon: Cpu,
+    color: 'from - gray - 500 to - slate - 500'
+  },
   {
-    name: 'Micro SAAS';
-    href: '/services / micro - saas';
-    icon: Target;
-    color: 'from - orange - 500 to - red - 500';
-  }],  { name: 'AI Services', href: '/services / ai', icon: Brain, color: 'from - purple - 500 to - pink - 500' };
-  { name: 'Quantum Tech', href: '/services / quantum', icon: Atom, color: 'from - blue - 500 to - cyan - 500' };
-  { name: 'Biotech Solutions', href: '/services / biotech', icon: Microscope, color: 'from - green - 500 to - emerald - 500' };
-  { name: 'Space Technology', href: '/services / space', icon: Rocket, color: 'from - indigo - 500 to - purple - 500' };
-  { name: 'Enterprise IT', href: '/services / enterprise', icon: Cpu, color: 'from - gray - 500 to - slate - 500' };
+    name: 'Micro SAAS',
+    href: '/services / micro - saas',
+    icon: Target,
+    color: 'from - orange - 500 to - red - 500'
+  }],  { name: 'AI Services', href: '/services / ai', icon: Brain, color: 'from - purple - 500 to - pink - 500' },
+  { name: 'Quantum Tech', href: '/services / quantum', icon: Atom, color: 'from - blue - 500 to - cyan - 500' },
+  { name: 'Biotech Solutions', href: '/services / biotech', icon: Microscope, color: 'from - green - 500 to - emerald - 500' },
+  { name: 'Space Technology', href: '/services / space', icon: Rocket, color: 'from - indigo - 500 to - purple - 500' },
+  { name: 'Enterprise IT', href: '/services / enterprise', icon: Cpu, color: 'from - gray - 500 to - slate - 500' },
   { name: 'Micro SAAS', href: '/services / micro - saas', icon: Target, color: 'from - orange - 500 to - red - 500' }
 export default /**,
  * UltraFuturisticNavigation2030 - Function description,

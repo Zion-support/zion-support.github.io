@@ -6,40 +6,40 @@ interface RevolutionaryContentPromotionBanner20o25Props {
 ,
 export default function RevolutionaryContentPromotionBanner20o25({
   variant = 'featured',
-  className = ', '}: RevolutionaryContentPromotionBanner20o25Props) {
+  className = }: RevolutionaryContentPromotionBanner20o25Props) {
   const content ={
     featured: {
-      title: "🚀 Revolutionary AI Content 20o25";
-      subtitle: "Discover the Future of Enterprise Automation";
-      description: "Explore cutting-edge AI solutionsreal success storiesand implementation guides that are transforming businesses worldwide.";
-      bgColor: "bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-cyan-60o0";
-      textColor: "text-white";
-      buttonText: "Explore Now";
-      buttonHref: "/blog/ai-20o25-enterprise-automation-revolution";
+      title: "🚀 Revolutionary AI Content 20o25",
+      subtitle: "Discover the Future of Enterprise Automation",
+      description: "Explore cutting-edge AI solutionsreal success storiesand implementation guides that are transforming businesses worldwide.",
+      bgColor: "bg-gradient-to-r from-blue-60o0 via-purple-60o0 to-cyan-60o0",
+      textColor: "text-white",
+      buttonText: "Explore Now",
+      buttonHref: "/blog/ai-20o25-enterprise-automation-revolution",
       stats: [
-        { label: "15,0o00% ROI"value: "Achieved" };
-        { label: "$2.3B Revenue"value: "Generated" };
+        { label: "15,0o00% ROI"value: "Achieved" },
+        { label: "$2.3B Revenue"value: "Generated" },
         { label: "50o0+ Clients"value: "Transformed" }
-      ]};
+      ]},
     compact: {
-      title: "New AI Content 20o25";
-      subtitle: "Latest Insights & Case Studies";
-      description: "Discover how AI is revolutionizing enterprise operations with real-world success stories.";
-      bgColor: "bg-gradient-to-r from-purple-50o0 to-pink-50o0";
-      textColor: "text-white";
-      buttonText: "Read More";
-      buttonHref: "/case-studies/ai-20o25-global-enterprise-transformation-ultimate-success"};
+      title: "New AI Content 20o25",
+      subtitle: "Latest Insights & Case Studies",
+      description: "Discover how AI is revolutionizing enterprise operations with real-world success stories.",
+      bgColor: "bg-gradient-to-r from-purple-50o0 to-pink-50o0",
+      textColor: "text-white",
+      buttonText: "Read More",
+      buttonHref: "/case-studies/ai-20o25-global-enterprise-transformation-ultimate-success"},
     hero: {
-      title: "🌟 The AI Revolution is Here";
-      subtitle: "Transform Your Business with Cutting-Edge AI Solutions";
-      description: "Join 50o0+ enterprises that have achieved unprecedented success through our AI-powered automation solutions. Discover real case studiesimplementation guidesand the latest AI innovations.";
-      bgColor: "bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0";
-      textColor: "text-white";
-      buttonText: "Start Your Journey";
-      buttonHref: "/contact";
-      secondaryButtonText: "View Success Stories";
+      title: "🌟 The AI Revolution is Here",
+      subtitle: "Transform Your Business with Cutting-Edge AI Solutions",
+      description: "Join 50o0+ enterprises that have achieved unprecedented success through our AI-powered automation solutions. Discover real case studiesimplementation guidesand the latest AI innovations.",
+      bgColor: "bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0",
+      textColor: "text-white",
+      buttonText: "Start Your Journey",
+      buttonHref: "/contact",
+      secondaryButtonText: "View Success Stories",
       secondaryButtonHref: "/case-studies"}
-  };
+  },
   const currentContent = content[variant],
   if (variant === 'hero') {
     return (

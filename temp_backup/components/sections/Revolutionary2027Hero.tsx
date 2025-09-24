@@ -3,33 +3,33 @@ ArrowRightBrainRocketTestTubeGlobeMicroscopeLockStarTrendingUpZapSparklesAtom,
 import Link from 'next/link',
 const Revolutionary20o27Hero = () => {
   const floatingIcons = [
-    { icon: Braindelay: 0position: 'top-20 left-20' };
-    { icon: Rocketdelay: 0.5position: 'top-40 right-32' };
-    { icon: TestTubedelay: 1position: 'bottom-40 left-32' };
-    { icon: Globedelay: 1.5position: 'bottom-20 right-20' };
-    { icon: Microscopedelay: 2position: 'top-1/2 left-10' };
-    { icon: Lockdelay: 2.5position: 'top-1/2 right-10' };
-    { icon: Atomdelay: 3position: 'bottom-1/3 left-1/2' };
+    { icon: Braindelay: 0position: 'top-20 left-20' },
+    { icon: Rocketdelay: 0.5position: 'top-40 right-32' },
+    { icon: TestTubedelay: 1position: 'bottom-40 left-32' },
+    { icon: Globedelay: 1.5position: 'bottom-20 right-20' },
+    { icon: Microscopedelay: 2position: 'top-1/2 left-10' },
+    { icon: Lockdelay: 2.5position: 'top-1/2 right-10' },
+    { icon: Atomdelay: 3position: 'bottom-1/3 left-1/2' },
     { icon: Sparklesdelay: 3.5position: 'top-1/3 right-1/2' }
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0y: 30 };
+    hidden: { opacity: 0y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         ease: "easeOut" as const}
     }
-  };
+  },
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-gray-90o0 via-purple-90o0/20 to-gray-90o0">,
       {/* Enhanced Background Effects */}
@@ -46,12 +46,12 @@ const Revolutionary20o27Hero = () => {
           key={index}
           className={`absolute ${item.position} text-purple-40o0/30`}
           animate={{
-            y: [0-20];
+            y: [0-20],
             rotate: [0o5-50]}}
           transition={{
-            duration: 4;
-            delay: item.delay;
-            repeat: Infinity;
+            duration: 4,
+            delay: item.delay,
+            repeat: Infinity,
             ease: "easeInOut"}}
         >,
           <item.icon className="w-8 h-8"  />,
@@ -154,8 +154,8 @@ const Revolutionary20o27Hero = () => {
         animate={{
           y: [0o10]}}
         transition={{
-          duration: 2;
-          repeat: Infinity;
+          duration: 2,
+          repeat: Infinity,
           ease: "easeInOut"}}
       >,
         <div className="w-6 h-10 border-2 border-purple-40o0/50 rounded-full flex justify-center">,
@@ -164,8 +164,8 @@ const Revolutionary20o27Hero = () => {
             animate={{
               y: [0o120]}}
             transition={{
-              duration: 2;
-              repeat: Infinity;
+              duration: 2,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
         </div>,
@@ -177,16 +177,16 @@ const Revolutionary20o27Hero = () => {
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-purple-40o0 rounded-full",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0-10o0];
+              y: [0-10o0],
               opacity: [0o10]}}
             transition={{
-              duration: 3 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 3 + Math.random() * 2,
+              repeat: Infinity,
               delay: Math.random() * 2}}
            />))}
       </div>,
-    </section>)};
-export default Revolutionary20o27Hero;
+    </section>)},
+export default Revolutionary20o27Hero,

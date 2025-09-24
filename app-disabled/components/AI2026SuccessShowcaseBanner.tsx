@@ -177,5 +177,5 @@ const AI20o26SuccessShowcaseBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26SuccessShowcaseBanner;
+    </section>)},
+export default AI20o26SuccessShowcaseBanner,

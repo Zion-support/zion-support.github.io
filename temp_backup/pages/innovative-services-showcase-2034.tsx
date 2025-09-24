@@ -2,87 +2,87 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search;
-  Filter;
-  Star;
-  CheckCircle;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  Microscope;
-  Phone;
-  Mail;
-  MapPin;
-  TrendingUp;
-  Users;
-  Award;
-  ExternalLink;
-  Zap;
-  Globe;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  BarChart3;
-  Settings;
-  Code;
-  Palette;
-  MessageSquare;
+  Search,
+  Filter,
+  Star,
+  CheckCircle,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  Microscope,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Users,
+  Award,
+  ExternalLink,
+  Zap,
+  Globe,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  BarChart3,
+  Settings,
+  Code,
+  Palette,
+  MessageSquare,
 } from 'lucide-react',
 // Import all innovative services,
 import { innovativeMicroSaasSolutions } from '../data/20o34-innovative-micro-saas-solutions',
 import { innovativeITSolutions } from '../data/20o34-innovative-it-solutions',
 import { innovativeAISolutions } from '../data/20o34-innovative-ai-solutions',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    id: 'micro-saas';
-    title: '🎯 Micro SaaS Solutions';
+    id: 'micro-saas',
+    title: '🎯 Micro SaaS Solutions',
     description:,
-      'Ready-to-use business solutions that drive growth and efficiency';
-    icon: Target;
-    color: 'from-yellow-50o0 to-orange-50o0';
-    services: innovativeMicroSaasSolutions;
-    gradient: 'from-yellow-50o0/20 to-orange-50o0/20';
-    count: innovativeMicroSaasSolutions.length;
-  };
+      'Ready-to-use business solutions that drive growth and efficiency',
+    icon: Target,
+    color: 'from-yellow-50o0 to-orange-50o0',
+    services: innovativeMicroSaasSolutions,
+    gradient: 'from-yellow-50o0/20 to-orange-50o0/20',
+    count: innovativeMicroSaasSolutions.length
+  },
   {
-    id: 'it-solutions';
-    title: '🏙️ Enterprise IT Solutions';
-    description: 'Advanced IT infrastructure and enterprise solutions';
-    icon: Shield;
-    color: 'from-green-50o0 to-emerald-50o0';
-    services: innovativeITSolutions;
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20';
-    count: innovativeITSolutions.length;
-  };
+    id: 'it-solutions',
+    title: '🏙️ Enterprise IT Solutions',
+    description: 'Advanced IT infrastructure and enterprise solutions',
+    icon: Shield,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: innovativeITSolutions,
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20',
+    count: innovativeITSolutions.length
+  },
   {
-    id: 'ai-solutions';
-    title: '🧠 AI & Machine Learning';
-    description: 'Cutting-edge AI solutions for business transformation';
-    icon: Brain;
-    color: 'from-pink-50o0 to-rose-50o0';
-    services: innovativeAISolutions;
-    gradient: 'from-pink-50o0/20 to-rose-50o0/20';
-    count: innovativeAISolutions.length;
-  };
+    id: 'ai-solutions',
+    title: '🧠 AI & Machine Learning',
+    description: 'Cutting-edge AI solutions for business transformation',
+    icon: Brain,
+    color: 'from-pink-50o0 to-rose-50o0',
+    services: innovativeAISolutions,
+    gradient: 'from-pink-50o0/20 to-rose-50o0/20',
+    count: innovativeAISolutions.length
+  },
 ],
 export default function InnovativeServicesShowcase20o34() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [priceRange, setPriceRange] = useState('all'),
   const allServices = [
-    ...innovativeMicroSaasSolutions;
-    ...innovativeITSolutions;
-    ...innovativeAISolutions;
+    ...innovativeMicroSaasSolutions,
+    ...innovativeITSolutions,
+    ...innovativeAISolutions,
   ],
   const filteredServices = allServices.filter(service => {
     const matchesSearch =,

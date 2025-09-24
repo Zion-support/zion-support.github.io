@@ -2,29 +2,29 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Atom;
-  Dna;
-  Cpu;
-  Target;
-  Microscope;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Globe;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Atom,
+  Dna,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Globe,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o32 from '../components/layout/UltraFuturisticNavigation20o32',
 import UltraFuturisticFooter20o32 from '../components/layout/UltraFuturisticFooter20o32',
@@ -32,71 +32,71 @@ import { futuristicInnovations20o31 } from '../data/20o31-futuristic-innovations
 import { enterpriseITSolutions20o31 } from '../data/20o31-enterprise-it-solutions',
 import { innovativeMicroSaas20o31 } from '../data/20o31-innovative-micro-saas',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: '🚀 20o32 Revolutionary AI Services';
-    description: 'Next-generation AI consciousness and creativity';
-    icon: Brain;
-    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
-    services: futuristicInnovations20o31.filter(s => s.category.includes('AI'));
-  };
+    title: '🚀 20o32 Revolutionary AI Services',
+    description: 'Next-generation AI consciousness and creativity',
+    icon: Brain,
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
+    services: futuristicInnovations20o31.filter(s => s.category.includes('AI'))
+  },
   {
-    title: '⚛️ 20o32 Quantum & Emerging Tech';
-    description: 'Quantum computing and beyond';
-    icon: Atom;
-    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
+    title: '⚛️ 20o32 Quantum & Emerging Tech',
+    description: 'Quantum computing and beyond',
+    icon: Atom,
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
     services: futuristicInnovations20o31.filter(s =>,
-      s.category.includes('Quantum'));
-  };
+      s.category.includes('Quantum')),
+  },
   {
-    title: '🏙️ 20o32 Enterprise IT Solutions';
-    description: 'Autonomous enterprise infrastructure';
-    icon: Cpu;
-    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
-    services: enterpriseITSolutions20o31;
-  };
+    title: '🏙️ 20o32 Enterprise IT Solutions',
+    description: 'Autonomous enterprise infrastructure',
+    icon: Cpu,
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    services: enterpriseITSolutions20o31
+  },
   {
-    title: '🌌 20o32 Space & Metaverse Tech';
-    description: 'Space exploration and digital reality';
-    icon: Rocket;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0';
+    title: '🌌 20o32 Space & Metaverse Tech',
+    description: 'Space exploration and digital reality',
+    icon: Rocket,
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
     services: futuristicInnovations20o31.filter(s =>,
-      s.category.includes('Space'));
-  };
+      s.category.includes('Space')),
+  },
   {
-    title: '🎯 20o32 Innovative Micro SAAS';
-    description: 'Cutting-edge micro solutions';
-    icon: Target;
-    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0';
-    services: innovativeMicroSaas20o31;
-  };
+    title: '🎯 20o32 Innovative Micro SAAS',
+    description: 'Cutting-edge micro solutions',
+    icon: Target,
+    color: 'from-green-60o0 via-yellow-60o0 to-orange-60o0',
+    services: innovativeMicroSaas20o31
+  },
   {
-    title: '🔬 20o32 Research & Development';
-    description: 'Breakthrough research solutions';
-    icon: Microscope;
-    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0';
+    title: '🔬 20o32 Research & Development',
+    description: 'Breakthrough research solutions',
+    icon: Microscope,
+    color: 'from-orange-60o0 via-red-60o0 to-pink-60o0',
     services: futuristicInnovations20o31.filter(
-      s => s.category.includes('Research') || s.category.includes('Computing'));
-  };
+      s => s.category.includes('Research') || s.category.includes('Computing'))
+  },
 ],
 const containerVariants = {
-  hidden: { opacity: 0 };
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1;
+    opacity: 1,
     transition: {
-      staggerChildren: 0.1;
-    };
-  };
-};
+      staggerChildren: 0.1
+    },
+  },
+},
 const itemVariants = {
-  hidden: { opacity: 0, y: 20 };
-  visible: { opacity: 1, y: 0 };
-};
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0 },
+},
 export default function FuturisticServicesShowcase20o32() {
   return (
     <>,

@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React from 'react',
 import { CardContentCardFooterCardHeaderCardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
 import { Button } from "@/components/ui/button",
@@ -21,13 +21,13 @@ interface MilestoneCardProps {
 ,
 export function MilestoneCard({
   id,
-  projectId;
+  projectId,
   title,
   description,
   amount,
   status,
-  dueDate;
-  onApprove;
+  dueDate,
+  onApprove,
   onReject}: MilestoneCardProps) {
   const { isUnderDisputedisputeStatus } = useDisputeCheck(projectIdid),
   function getStatusBadgeColor() {

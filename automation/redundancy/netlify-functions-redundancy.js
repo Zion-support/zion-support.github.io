@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function getNetlifyFunctions() {
@@ -48,34 +48,34 @@ function executeFunctionLocally(functionName) {
     const functionPath = path.join(process.cwd(), "netlify", "functions", functionName),
     if (!fs.existsSync(functionPath)) {
       log(`Function ${functionName} not found, skipping...`),
-      return { success: false, error: "Function not found" };
+      return { success: false, error: "Function not found" },
     }
 ,
     // Try to execute the function locally,
     const result = run("node", [functionPath], { verbose: true }),
     if (result.status === 0) {
       log(`Function ${functionName} executed successfully`),
-      return { success: true, output: result.stdout };
+      return { success: true, output: result.stdout },
     } else {
       log(`Function ${functionName} failed: ${result.stderr}`),
-      return { success: false, error: result.stderr };
+      return { success: false, error: result.stderr },
     }
   } catch (err) {
     log(`Error executing function ${functionName}: ${String(err)}`),
-    return { success: false, error: String(err) };
+    return { success: false, error: String(err) },
   }
 }
 ,
 function executeCriticalFunctions() {
   const criticalFunctions = [
-    "netlify-auto-healer-runner";
-    "continuous-orchestrator";
-    "build-failure-recovery";
-    "security-audit-runner";
-    "performance-monitor";
-    "content-quality-fixer";
+    "netlify-auto-healer-runner",
+    "continuous-orchestrator",
+    "build-failure-recovery",
+    "security-audit-runner",
+    "performance-monitor",
+    "content-quality-fixer",
     "seo-audit-runner"],
-  const results ={};
+  const results ={},
   for (const funcName of criticalFunctions) {
     results[funcName] = executeFunctionLocally(funcName)}
 ,
@@ -83,12 +83,12 @@ function executeCriticalFunctions() {
 ,
 function executeScheduledFunctions() {
   const scheduledFunctions = [
-    "marketing-scheduler";
-    "content-freshness-score-runner";
-    "maintenance-scheduler";
-    "link-and-health-scheduler";
+    "marketing-scheduler",
+    "content-freshness-score-runner",
+    "maintenance-scheduler",
+    "link-and-health-scheduler",
     "homepage-updater-scheduler"],
-  const results ={};
+  const results ={},
   for (const funcName of scheduledFunctions) {
     results[funcName] = executeFunctionLocally(funcName)}
 ,
@@ -96,12 +96,12 @@ function executeScheduledFunctions() {
 ,
 function executeContentFunctions() {
   const contentFunctions = [
-    "ai-content-factory-runner";
-    "ai-trends-radar-runner";
-    "content-generation-runner";
-    "media-optimizer-runner";
+    "ai-content-factory-runner",
+    "ai-trends-radar-runner",
+    "content-generation-runner",
+    "media-optimizer-runner",
     "og-image-update-runner"],
-  const results ={};
+  const results ={},
   for (const funcName of contentFunctions) {
     results[funcName] = executeFunctionLocally(funcName)}
 ,
@@ -110,25 +110,25 @@ function executeContentFunctions() {
 function generateExecutionReport(criticalResults, scheduledResults, contentResults) {
   const timestamp = nowIso(),
   const report ={
-    timestamp;
-    redundancy: true;
-    source: "pm2-redundancy";
+    timestamp,
+    redundancy: true,
+    source: "pm2-redundancy",
     netlifyFunctions: {
-      critical: criticalResults;
-      scheduled: scheduledResults;
-      content: contentResults;
+      critical: criticalResults,
+      scheduled: scheduledResults,
+      content: contentResults,
       summary: {
         totalExecuted: Object.keys(criticalResults).length +,
                      Object.keys(scheduledResults).length +,
-                     Object.keys(contentResults).length;
+                     Object.keys(contentResults).length,
         successful: Object.values(criticalResults).filter(r => r.success).length +,
                    Object.values(scheduledResults).filter(r => r.success).length +,
-                   Object.values(contentResults).filter(r => r.success).length;
+                   Object.values(contentResults).filter(r => r.success).length,
         failed: Object.values(criticalResults).filter(r => !r.success).length +,
                 Object.values(scheduledResults).filter(r => !r.success).length +,
                 Object.values(contentResults).filter(r => !r.success).length}
     }
-  };
+  },
   const reportPath = path.join(process.cwd(), "netlify-functions-redundancy-report.md"),
   const reportContent = `# Netlify Functions Redundancy Report,
 Generated: ${timestamp}
@@ -208,9 +208,9 @@ if (require.main === module) {
   main()}
 ,
 module.exports ={
-  main;
-  executeFunctionLocally;
-  executeCriticalFunctions;
-  executeScheduledFunctions;
-  executeContentFunctions;
-  generateExecutionReport};
+  main,
+  executeFunctionLocally,
+  executeCriticalFunctions,
+  executeScheduledFunctions,
+  executeContentFunctions,
+  generateExecutionReport},

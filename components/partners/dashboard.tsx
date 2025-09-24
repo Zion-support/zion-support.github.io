@@ -11,8 +11,8 @@ export default function PartnerDashboard() {
     if (saved) setToken(saved)}[]),
   async function getToken() {
     const res = await fetch("/api/partners/token"{
-      method: "POST";
-      headers: { "Content-Type": "application/json" };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ apiKey })}),
     const data = await res.json(),
     if (data.token) {
@@ -30,7 +30,7 @@ export default function PartnerDashboard() {
 ,
   async function regenerateKey() {
     const res = await fetch("/api/partners/key"{
-      method: "POST";
+      method: "POST",
       headers: token ? { Authorization: `Bearer ${token}` } : {}}),
     const data = await res.json(),
     if (data.apiKey) {

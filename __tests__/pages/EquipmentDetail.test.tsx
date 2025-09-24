@@ -1,5 +1,9 @@
 // __tests__/pages/EquipmentDetail.test.tsx,
-import React from react',import { render, screen, fireEvent, act } from @testing-library/react',import @testing-library/jest-dom',import EquipmentDetail, { SAMPLE_EQUIPMENT } from @/src/pages/EquipmentDetail',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import { useRouter } from next/router',import mockNextRouter from next-router-mock',import { useAuth } from @/hooks/useAuth',import { useCart } from @/context/CartContext',
+import React from react',
+import { render, screen, fireEvent, act } from @testing-library/react',import @testing-library/jest-dom',
+import EquipmentDetail, { SAMPLE_EQUIPMENT } from @/src/pages/EquipmentDetail',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',
+import { useRouter } from next/router',import mockNextRouter from next-router-mock',
+import { useAuth } from @/hooks/useAuth',import { useCart } from @/context/CartContext',
 // Mock functions need to be declared before they are used in mock factories,
 const mockNavigate = jest.fn(),
 const mockDispatch = jest.fn(),
@@ -12,7 +16,7 @@ jest.mock('next/router', () => mockNextRouter),
 jest.mock('@/context/CartContext', () => ({'  useCart: jest.fn()})),
 // Revised mock for use-toast to avoid ReferenceError,
 jest.mock('@/hooks/use-toast', () => ({'  toast: {
-    info: (...args: unknown[]) => mockInfoFnForToast(...args);
+    info: (...args: unknown[]) => mockInfoFnForToast(...args),
     success: (...args: unknown[]) => mockSuccessFnForToast(...args)}
 })),
 describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-camera-x10o00',  const originalSampleEquipment = JSON.parse(JSON.stringify(SAMPLE_EQUIPMENT)),
@@ -29,28 +33,28 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
     Object.assign(SAMPLE_EQUIPMENT, JSON.parse(JSON.stringify(originalSampleEquipment))),
     if (!SAMPLE_EQUIPMENT[testProductId]) {
         SAMPLE_EQUIPMENT[testProductId] ={
-            id: testProductId;
+            id: testProductId,
             name: "Test Pro Camera","            description: "Test camera description.","            brand: "TestBrand","            category: "Cameras","            images: ["/images/equipment-placeholder.svg"],"            price: 10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
             currency: "$","            inStock: true,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-            specifications: [];
-            features: [];
-            rating: 4.5;
-            reviewCount: 10;
-            expectedShipping: "1 day","            warranty: "1 year","            returnPolicy: "30 days","        };"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}
+            specifications: [],
+            features: [],
+            rating: 4.5,
+            reviewCount: 10,
+            expectedShipping: "1 day","            warranty: "1 year","            returnPolicy: "30 days","        },"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""}
 ,
     (useRouter as any).mockReturnValue({
-      push: mockNavigate;
-      back: jest.fn();
-      pathname: `/equipment/${testProductId}`;
-      asPath: `/equipment/${testProductId}?from=test`;
+      push: mockNavigate,
+      back: jest.fn(),
+      pathname: `/equipment/${testProductId}`,
+      asPath: `/equipment/${testProductId}?from=test`,
       query: { id: testProductId }
     }),
     mockUseCart.mockReturnValue({
-      items: [];
+      items: [],
       dispatch: mockDispatch})}),
   test('unauthenticated user clicking "Add to Cart" adds item locally and shows info toast', async () => {'    mockUseAuth.mockReturnValue({
-      isAuthenticated: false;
-      user: null;
+      isAuthenticated: false,
+      user: null,
       isLoading: false}),
     render(
       <MemoryRouterProvider url={`/equipment/${testProductId}` }>,
@@ -69,7 +73,7 @@ describe('EquipmentDetail - Add To Cart', () => {'  const testProductId = pro-ca
     expect(mockInfoFnForToast).toHaveBeenCalledWith('Item added. Login to checkout.', {'      action: { label: View Cart', onClick: expect.any(Function) }    }),
     expect(mockSuccessFnForToast).not.toHaveBeenCalled()}),
   test('authenticated user clicking "Add to Cart" adds item and shows success toast', async () => {'    mockUseAuth.mockReturnValue({
-      isAuthenticated: true;
+      isAuthenticated: true,
       user: { id: test-user' },      isLoading: false}),
     render(
       <MemoryRouterProvider url={`/equipment/${testProductId}` }>,

@@ -10,7 +10,7 @@ function writeEpisodes(episodes: any[]) {
   ensureStorage(),
   fs && fs.writeFileSync(EPISODES_PATH, JSON && JSON.stringify(episodes, null, 2), 'utf8')}
 ,
-  const { persona, invitee, topic, operatorPrompt } = req && req.body || {};
+  const { persona, invitee, topic, operatorPrompt } = req && req.body || {},
   const id = uuidv4(),
   const system = `You are ZionGPT, an elite podcast host who interviews builders, founders, and contributors. Maintain a ${persona?.voice |'Visionary'} tone, speak in ${persona?.language |'English'}. If a style sample is provided, align tone and phrasing to it. Produce: >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
 1) 7-10 concise interview questions mixing visionary and technical angles,
@@ -36,16 +36,13 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
       content = JSON.stringify({
         title: `Interview with ${invitee?.name |'Guest'} on ${topic |'Zion'}`,
         questions: [
-          'What is the vision behind Zion as a global decentralized talent protocol?',
-          'How does Zion practically onboard talent and organizations?',
-          'What are the core protocol primitives (identity, reputation, incentives)?',
-          'How does governance work and how do contributors participate?',
-          'What challenges have you faced scaling globally?',
-          'How does Zion interoperate with existing web2 hiring systems?',
+          'What is the vision behind Zion as a global decentralized talent protocol?How does Zion practically onboard talent and organizations?',
+          'What are the core protocol primitives (identity, reputation, incentives)?How does governance work and how do contributors participate?',
+          'What challenges have you faced scaling globally?How does Zion interoperate with existing web2 hiring systems?',
           'What does success look like in 3-5 years?'],
         timeMarkers: {
           intro: '00:00',
-          segments: ['03:00', '08:00', '12: 00'],
+          segments: ['03:0008:00', '12: 00'],
           closing: '14:30'}
         transcript: ,
           'HOST: Welcome... GUEST: Thank you... (stub transcript) ... CTA: Join Zion.',
@@ -102,24 +99,24 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
 ,
     const episodes = readEpisodes(),
     const episode = {
-      id;
-      createdAt: new Date().toISOString();
-      persona;
-      invitee;
-      topic;
-      title: generated && generated.title;
-      questions: generated && generated.questions || [];
+      id,
+      createdAt: new Date().toISOString(),
+      persona,
+      invitee,
+      topic,
+      title: generated && generated.title,
+      questions: generated && generated.questions || [],
       timeMarkers: generated && generated.timeMarkers || {
-        intro: '00:00';
-        segments: [];
-        closing: '14:30';
-      };
-      transcript: generated && generated.transcript;
-      youtubeDescription: generated && generated.youtubeDescription || '';
-      spotifyDescription: generated && generated.spotifyDescription || '';
-      bestQuote: generated && generated.bestQuote || '';
-      audio: {};
-    };
+        intro: '00:00',
+        segments: [],
+        closing: '14:30'
+      },
+      transcript: generated && generated.transcript,
+      youtubeDescription: generated && generated.youtubeDescription || '',
+      spotifyDescription: generated && generated.spotifyDescription || '',
+      bestQuote: generated && generated.bestQuote || '',
+      audio: {},
+    },
     episodes && episodes.unshift(episode),
     writeEpisodes(episodes),
     return res && res.status(200).json({ episode })} catch (error: any) {
@@ -128,7 +125,7 @@ Return a strict JSON object with keys: title, questions (array), timeMarkers { i
     writeEpisodes(episodes),
     return res && res.status(200).json({ episode })} catch (error: any) {
     console && console.error(error),
-    return res && res.status(500).json({ error: error?.message || 'Unknown error' })};
+    return res && res.status(500).json({ error: error?.message || 'Unknown error' })},
 }
 }
     const episode = {

@@ -3,16 +3,14 @@ import Layout from '../components/layout/Layout',
 RocketNetworkBoxesCheckCircle,
 export default function EmergingTechPage() {
   const features = [
-    'Blockchaintokenizationand smart contract audits';
-    'IoT and edge orchestration with zero-trust patterns';
-    '5G private networks and campus connectivity';
-    'Metaverse and spatial computing experimentation';
+    'Blockchaintokenizationand smart contract auditsIoT and edge orchestration with zero-trust patterns',
+    '5G private networks and campus connectivityMetaverse and spatial computing experimentation',
   ],
   const solutions = [
-    { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform' };
-    { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' };
-    { name: '5G Private Networks'href: '/5g-private-network-solutions' };
-    { name: 'Metaverse AI Platform'href: '/metaverse-ai-development-platform' };
+    { name: 'Blockchain Infrastructure'href: '/blockchain-infrastructure-platform' },
+    { name: 'Edge Computing Orchestration'href: '/edge-computing-orchestration' },
+    { name: '5G Private Networks'href: '/5g-private-network-solutions' },
+    { name: 'Metaverse AI Platform'href: '/metaverse-ai-development-platform' },
   ],
   return (
     <Layout>,

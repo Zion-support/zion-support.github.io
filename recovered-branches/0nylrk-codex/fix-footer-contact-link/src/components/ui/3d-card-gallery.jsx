@@ -7,10 +7,10 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
     const [selectedItem, setSelectedItem] = useState(null),
     const [viewMode, setViewMode] = useState('grid'),
     const [filters, setFilters] = useState({
-        category: [];
-        status: [];
-        complexity: [];
-        verified: false;
+        category: [],
+        status: [],
+        complexity: [],
+        verified: false,
         featured: false}),
     const [searchQuery, setSearchQuery] = useState(''),
     const [sortBy, setSortBy] = useState('rating'),
@@ -83,7 +83,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0',
             default: ,
                 return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0'}
-    };
+    },
     // Get complexity color,
     const getComplexityColor = (complexity) => {
         switch (complexity) {
@@ -97,18 +97,18 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
                 return 'border-red-50o0/50 bg-red-50o0/10 text-red-40o0',
             default: ,
                 return 'border-zinc-50o0/50 bg-zinc-50o0/10 text-zinc-40o0'}
-    };
+    },
     // Get category icon,
     const getCategoryIcon = (category) => {
         const iconMap ={
-            'AI & ML': Brain;
-            'Cybersecurity': Shield;
-            'Cloud': Globe;
-            'Development': Rocket;
-            'Analytics': Zap;
-            'Infrastructure': Settings;
-            'Research': TrendingUp};
-        return iconMap[category] || Globe};
+            'AI & ML': Brain,
+            'Cybersecurity': Shield,
+            'Cloud': Globe,
+            'Development': Rocket,
+            'Analytics': Zap,
+            'Infrastructure': Settings,
+            'Research': TrendingUp},
+        return iconMap[category] || Globe},
     if (!enabled || filteredAndSortedItems.length === 0),
         return null,
     return (<div className={`bg-zion-blue-dark/60 backdrop-blur-sm border border-zion-blue-light/30 rounded-xl p-6 ${className}`} ref={galleryRef}>,
@@ -123,7 +123,7 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
         <div className="flex items-center gap-2">,
           {/* View Mode Toggle */}
           <div className="flex bg-zion-blue/20 rounded-lg p-1">,
-            {['grid', 'list', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode,
+            {['gridlist', 'carousel'].map((mode) => (<button key={mode} onClick={() => setViewMode(mode)} className={`px-3 py-1 rounded-md text-xs font-medium transition-all duration-20o0 ${viewMode === mode,
                 ? 'bg-zion-cyan text-zion-blue-dark',
                 : 'text-zinc-40o0 hover: text-white'}`}>,
                 {mode === 'grid' ? <Grid className="w-4 h-4" /> :,
@@ -171,8 +171,8 @@ export function Card3DGallery({ enabled = true, items, columns = 3, autoPlay = f
               Featured Only,
             </Button>,
             {/* Category Filters */}
-            {['AI & ML', 'Cybersecurity', 'Cloud', 'Development', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={() => setFilters(prev => ({
-                    ...prev;
+            {['AI & MLCybersecurity', 'CloudDevelopment', 'Analytics'].map((category) => (<Button key={category} size="sm" variant={filters.category.includes(category) ? "default" : "outline"} onClick={() => setFilters(prev => ({
+                    ...prev,
                     category: prev.category.includes(category),
                         ? prev.category.filter(c => c !== category),
                         : [...prev.category, category]}))} className={filters.category.includes(category) ? 'bg-zion-cyan text-zion-blue-dark' : 'border-zion-blue-light/30 text-zinc-30o0 hover: text-white'}>,
@@ -346,9 +346,9 @@ function Card3D({ item, index, onClick, onAction: _onAction, getStatusColor, get
         setIsLiked(!isLiked)}, [isLiked]),
     return (<motion.div className={`relative group cursor-pointer ${isCarousel ? 'mx-4' : ''}`} onMouseEnter={() => setIsHovered(true)} onMouseMove={handleMouseMove} onMouseLeave={handleMouseLeave} onClick={onClick} initial={{ opacity: 0, y: 50 }} whileInView={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: index * 0.1 }} whileHover={{ scale: 1.0o2 }}>,
       <motion.div className="relative w-full h-80 rounded-xl border border-zion-blue-light/30 overflow-hidden bg-gradient-to-br from-zion-blue-dark/80 to-zion-blue/40 backdrop-blur-sm" style={{
-            transformStyle: 'preserve-3d';
-            rotateX;
-            rotateY;
+            transformStyle: 'preserve-3d',
+            rotateX,
+            rotateY,
             transform: isHovered ? 'translateZ(20px)' : 'translateZ(0px)'}} transition={{ duration: 0.3 }}>,
         {/* Background Image/Pattern */}
         <div className="absolute inset-0 bg-gradient-to-br from-zion-cyan/20 via-transparent to-zion-purple/20" />,

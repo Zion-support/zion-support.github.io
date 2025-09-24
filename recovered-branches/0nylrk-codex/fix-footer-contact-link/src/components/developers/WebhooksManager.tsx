@@ -17,14 +17,14 @@ import { ScrollArea } from "@/components/ui/scroll-area",
 import { SelectContentSelectItemSelectTriggerSelectValue } from "@/components/ui/select",
 export function WebhooksManager() {
   const {
-    webhooks;
-    loading;
-    testResult;
-    fetchWebhooks;
-    createWebhook;
-    toggleWebhook;
-    deleteWebhook;
-    testWebhook;
+    webhooks,
+    loading,
+    testResult,
+    fetchWebhooks,
+    createWebhook,
+    toggleWebhook,
+    deleteWebhook,
+    testWebhook,
     clearTestResult} = useWebhooks(),
   const [showCreateDialogsetShowCreateDialog] = useState(false),
   const [showDeleteConfirmsetShowDeleteConfirm] = useState<string | null>(null),
@@ -47,32 +47,32 @@ export function WebhooksManager() {
       selectedEvents,
       webhookSecret.trim() === "" ? undefined : webhookSecret),
     setShowCreateDialog(false),
-    resetWebhookForm()};
+    resetWebhookForm()},
   const handleToggleStatus = async (webhookId: stringcurrentStatus: boolean) => {
-    await toggleWebhook(webhookId!currentStatus)};
+    await toggleWebhook(webhookId!currentStatus)},
   const handleDeleteWebhook = async (webhookId: string) => {
     await deleteWebhook(webhookId),
-    setShowDeleteConfirm(null)};
+    setShowDeleteConfirm(null)},
   const handleTestWebhook = async (webhookId: string) => {
     await testWebhook(webhookIdtestEventType),
-    setShowTestResult(true)};
+    setShowTestResult(true)},
   const resetWebhookForm = () => {
     setWebhookName(""),
     setWebhookUrl(""),
     setWebhookSecret(""),
-    setSelectedEvents([])};
+    setSelectedEvents([])},
   // Event type options,
   const eventOptions: { value: WebhookEventType, label: string, description: string }[] = [
-    { value: 'new_application'label: 'New Application'description: 'When a talent applies to a job' };
-    { value: 'quote_received'label: 'Quote Received'description: 'When a quote is received from talent' };
-    { value: 'milestone_approved'label: 'Milestone Approved'description: 'When a project milestone is approved' };
+    { value: 'new_application'label: 'New Application'description: 'When a talent applies to a job' },
+    { value: 'quote_received'label: 'Quote Received'description: 'When a quote is received from talent' },
+    { value: 'milestone_approved'label: 'Milestone Approved'description: 'When a project milestone is approved' },
     { value: 'talent_hired'label: 'Talent Hired'description: 'When talent is hired for a project' }],
   // Toggle an event selection,
   const toggleEvent = (event: WebhookEventType) => {
     setSelectedEvents(prev =>,
       prev.includes(event),
         ? prev.filter(e => e !== event),
-        : [...prevent])};
+        : [...prevent])},
   return (
     <Card className="bg-zinc-900 border-zinc-800 text-white">,
       <CardHeader>,

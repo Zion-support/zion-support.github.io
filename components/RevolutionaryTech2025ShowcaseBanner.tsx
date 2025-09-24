@@ -181,5 +181,5 @@ const RevolutionaryTech20o25ShowcaseBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTech20o25ShowcaseBanner;
+    </section>)},
+export default RevolutionaryTech20o25ShowcaseBanner,

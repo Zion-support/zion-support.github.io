@@ -21,22 +21,22 @@ const ComprehensiveServicesShowcase20o25 = () => {
             service.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
         return matchesCategory && matchesIndustry && matchesSearch}),
     const containerVariants ={
-        hidden: { opacity: 0 };
+        hidden: { opacity: 0 },
         visible: {
-            opacity: 1;
+            opacity: 1,
             transition: {
                 staggerChildren: 0.1}
         }
-    };
+    },
     const itemVariants ={
-        hidden: { y: 20, opacity: 0 };
+        hidden: { y: 20, opacity: 0 },
         visible: {
-            y: 0;
-            opacity: 1;
+            y: 0,
+            opacity: 1,
             transition: {
                 duration: 0.5}
         }
-    };
+    },
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
       {/* Hero Section */}
       <div className="relative overflow-hidden">,
@@ -255,5 +255,5 @@ const ComprehensiveServicesShowcase20o25 = () => {
           </div>,
         </div>,
       </motion.section>,
-    </div>)};
-export default ComprehensiveServicesShowcase20o25;
+    </div>)},
+export default ComprehensiveServicesShowcase20o25,

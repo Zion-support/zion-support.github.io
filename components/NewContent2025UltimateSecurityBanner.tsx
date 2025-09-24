@@ -103,5 +103,5 @@ const NewContent20o25UltimateSecurityBanner = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25UltimateSecurityBanner;
+    </section>)},
+export default NewContent20o25UltimateSecurityBanner,

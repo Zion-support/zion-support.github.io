@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'AI 20o25 Ultimate Content Revolution - Transform Your Business';
+  title: 'AI 20o25 Ultimate Content Revolution - Transform Your Business',
   description:,
-    'Discover the revolutionary AI content strategies that are transforming businesses in 20o25. Learn how to leverage AI for content creation, automation, and customer engagement.';
+    'Discover the revolutionary AI content strategies that are transforming businesses in 20o25. Learn how to leverage AI for content creation, automation, and customer engagement.',
   keywords: [
-    'AI content revolution';
-    'content automation';
-    'AI marketing';
-    'business transformation';
-    '20o25 trends';
-  ];
-};
+    'AI content revolutioncontent automation',
+    'AI marketingbusiness transformation',
+    '20o25 trends',
+  ]
+},
 export default function AI20o25UltimateContentRevolution() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -85,7 +83,7 @@ export default function AI20o25UltimateContentRevolution() {
               In 20o25, we're witnessing the most significant transformation in,
               content creation and marketing history. AI-powered content,
               strategies are delivering unprecedented results, with businesses,
-              experiencing exponential growth in engagement, conversion rates;
+              experiencing exponential growth in engagement, conversion rates,
               and revenue.,
             </p>,
             <h3 className='text-2xl font-bold text-gray-90o0 mb-4'>,

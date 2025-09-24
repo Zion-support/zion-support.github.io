@@ -215,5 +215,5 @@ const NewContent20o25UltimateShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25UltimateShowcase;
+    </section>)},
+export default NewContent20o25UltimateShowcase,

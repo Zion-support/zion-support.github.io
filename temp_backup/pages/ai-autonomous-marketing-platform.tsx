@@ -1,65 +1,65 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'AI Autonomous Marketing Platform | Zion Tech Group';
+  title: 'AI Autonomous Marketing Platform | Zion Tech Group',
   description:,
-    'Revolutionary AI-powered autonomous marketing platform that creates, optimizes, and executes marketing campaigns without human intervention.';
+    'Revolutionary AI-powered autonomous marketing platform that creates, optimizes, and executes marketing campaigns without human intervention.',
   keywords:,
-    'AI marketing, autonomous marketing, marketing automation, AI campaigns, marketing AI platform';
+    'AI marketing, autonomous marketing, marketing automation, AI campaigns, marketing AI platform',
   openGraph: {
-    title: 'AI Autonomous Marketing Platform | Zion Tech Group';
+    title: 'AI Autonomous Marketing Platform | Zion Tech Group',
     description:,
-      'Revolutionary AI-powered autonomous marketing platform that creates, optimizes, and executes marketing campaigns without human intervention.';
-    url: 'https://ziontechgroup.com/ai-autonomous-marketing-platform';
-    siteName: 'Zion Tech Group';
+      'Revolutionary AI-powered autonomous marketing platform that creates, optimizes, and executes marketing campaigns without human intervention.',
+    url: 'https://ziontechgroup.com/ai-autonomous-marketing-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-autonomous-marketing.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'AI Autonomous Marketing Platform';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-ai-autonomous-marketing.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Autonomous Marketing Platform'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Autonomous Marketing Platform | Zion Tech Group';
+    card: 'summary_large_image',
+    title: 'AI Autonomous Marketing Platform | Zion Tech Group',
     description:,
-      'Revolutionary AI-powered autonomous marketing platform that creates, optimizes, and executes marketing campaigns without human intervention.';
-    images: ['https://ziontechgroup.com/og-image-ai-autonomous-marketing.jpg'];
-  };
+      'Revolutionary AI-powered autonomous marketing platform that creates, optimizes, and executes marketing campaigns without human intervention.',
+    images: ['https://ziontechgroup.com/og-image-ai-autonomous-marketing.jpg']
+  },
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-autonomous-marketing-platform';
-  };
-};
+    canonical: 'https://ziontechgroup.com/ai-autonomous-marketing-platform'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function AIAutonomousMarketingPlatform() {
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -192,7 +192,7 @@ export default function AIAutonomousMarketingPlatform() {
               How Autonomous Marketing Works,
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-              Our AI platform operates in a continuous cycle of learning;
+              Our AI platform operates in a continuous cycle of learning,
               creating, and optimizing.,
             </p>,
           </div>,

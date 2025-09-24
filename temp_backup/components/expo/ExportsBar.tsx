@@ -6,7 +6,7 @@ export default function ExportsBar() {
   async function emailSummary() {
     setStatus('Sending summary…'),
     const res = await fetch('/api/events/expo/email-summary', {
-      method: 'POST';
+      method: 'POST'
     }),
     const data = await res.json(),
     setStatus(
@@ -20,13 +20,13 @@ export default function ExportsBar() {
       return}
     const msg = `Zion Expo Ticket • ${connected}`,
     const sig = await (window as any).ethereum.request({
-      method: 'personal_sign';
-      params: [msg, connected];
+      method: 'personal_sign',
+      params: [msg, connected],
     }),
     const res = await fetch('/api/events/expo/claim', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ address: connected, signature: sig });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ address: connected, signature: sig }),
     }),
     const data = await res.json(),
     setStatus(

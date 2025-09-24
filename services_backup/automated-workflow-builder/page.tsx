@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Automated Workflow Builder | Zion Tech Group';
+  title: 'Automated Workflow Builder | Zion Tech Group',
   description:,
-    'Visual workflow automation platform. Create, manage, and optimize business processes with drag-and-drop automation.';
-};
+    'Visual workflow automation platform. Create, manage, and optimize business processes with drag-and-drop automation.',
+},
 export default function AutomatedWorkflowBuilderPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function AutomatedWorkflowBuilderPage() {
         <FeatureCard
           title='Visual Builder',
           details={[
-            'Drag-and-drop interface';
-            'Pre-built workflow templates';
-            'Conditional logic';
-            'Multi-step processes';
-            'Real-time testing';
+            'Drag-and-drop interfacePre-built workflow templates',
+            'Conditional logicMulti-step processes',
+            'Real-time testing',
           ]}
         />,
         <FeatureCard
           title='Integration Hub',
           details={[
-            '50o0+ app integrations';
-            'API connectors';
-            'Custom webhooks';
-            'Database connections';
-            'Third-party services';
+            '50o0+ app integrationsAPI connectors',
+            'Custom webhooksDatabase connections',
+            'Third-party services',
           ]}
         />,
         <FeatureCard
           title='Intelligence & Analytics',
           details={[
-            'Performance monitoring';
-            'Bottleneck identification';
-            'Optimization suggestions';
-            'Success rate tracking';
-            'Cost analysis';
+            'Performance monitoringBottleneck identification',
+            'Optimization suggestionsSuccess rate tracking',
+            'Cost analysis',
           ]}
         />,
       </div>,
@@ -97,22 +91,18 @@ function PricingSection() {
           name='Starter',
           price='$39/mo',
           features={[
-            '5 active workflows';
-            '1,0o00 executions/month';
-            'Basic integrations';
-            'Email support';
-            'Standard templates';
+            '5 active workflows1,0o00 executions/month',
+            'Basic integrationsEmail support',
+            'Standard templates',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$129/mo',
           features={[
-            '25 active workflows';
-            '10,0o00 executions/month';
-            'All integrations';
-            'Priority support';
-            'Advanced analytics';
+            '25 active workflows10,0o00 executions/month',
+            'All integrationsPriority support',
+            'Advanced analytics',
           ]}
           featured={true}
         />,
@@ -120,21 +110,19 @@ function PricingSection() {
           name='Enterprise',
           price='$399/mo',
           features={[
-            'Unlimited workflows';
-            'Unlimited executions';
-            'Custom integrations';
-            'White-label solution';
-            'Dedicated support';
+            'Unlimited workflowsUnlimited executions',
+            'Custom integrationsWhite-label solution',
+            'Dedicated support',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

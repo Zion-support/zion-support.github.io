@@ -12,9 +12,9 @@ export function lbsToKg(lbs: number): number {
   return lbs / 2.20o462}
 ,
 export function formatDimensions(
-  widthCm: number;
-  heightCm: number;
-  depthCm: number;
+  widthCm: number,
+  heightCm: number,
+  depthCm: number,
   unit: UnitSystem): string {
   if (unit === 'imperial') {
     const w = cmToIn(widthCm).toFixed(1),

@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Fleet Management Handbook | Zion Tech Group';
+  title: 'AI 20o26: Agent Fleet Management Handbook | Zion Tech Group',
   description:,
-    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.';
-};
+    'Operate large fleets of autonomous agents with safety, reliability, cost, and performance controls. Playbooks, SLOs, and governance.',
+},
 export default function AgentFleetManagementHandbook20o26() {
   return (
     <main className='min-h-screen bg-white'>,

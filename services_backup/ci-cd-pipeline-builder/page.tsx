@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'CI/CD Pipeline Builder | Zion Tech Group';
+  title: 'CI/CD Pipeline Builder | Zion Tech Group',
   description:,
-    'Automated CI/CD pipeline creation with intelligent deployment strategies, monitoring, and rollback capabilities for faster, safer releases.';
-};
+    'Automated CI/CD pipeline creation with intelligent deployment strategies, monitoring, and rollback capabilities for faster, safer releases.',
+},
 export default function CICDPipelineBuilderPage() {
   return (
     <div className='animate-fade-in'>,
@@ -59,11 +59,9 @@ export default function CICDPipelineBuilderPage() {
               price='$79/month',
               description='Perfect for small teams and simple deployments',
               features={[
-                'Up to 5 pipelines';
-                'Basic deployment strategies';
-                'Single cloud support';
-                'Email support';
-                'Basic monitoring';
+                'Up to 5 pipelinesBasic deployment strategies',
+                'Single cloud supportEmail support',
+                'Basic monitoring',
               ]}
             />,
             <PricingCard
@@ -71,12 +69,9 @@ export default function CICDPipelineBuilderPage() {
               price='$199/month',
               description='Ideal for growing development teams',
               features={[
-                'Up to 25 pipelines';
-                'Advanced deployment strategies';
-                'Multi-cloud support';
-                'Priority support';
-                'Advanced monitoring';
-                'Custom integrations';
+                'Up to 25 pipelinesAdvanced deployment strategies',
+                'Multi-cloud supportPriority support',
+                'Advanced monitoringCustom integrations',
               ]}
             />,
             <PricingCard
@@ -84,13 +79,10 @@ export default function CICDPipelineBuilderPage() {
               price='$499/month',
               description='For large organizations with complex deployment needs',
               features={[
-                'Unlimited pipelines';
-                'Custom deployment strategies';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Advanced security features';
-                'SLA guarantees';
-                'Custom training';
+                'Unlimited pipelinesCustom deployment strategies',
+                '24/7 dedicated supportOn-premise deployment',
+                'Advanced security featuresSLA guarantees',
+                'Custom training',
               ]}
             />,
           </div>,
@@ -143,8 +135,8 @@ export default function CICDPipelineBuilderPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -169,10 +161,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -192,8 +184,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

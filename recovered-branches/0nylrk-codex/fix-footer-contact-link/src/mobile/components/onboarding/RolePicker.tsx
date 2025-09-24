@@ -11,7 +11,7 @@ export function RolePicker({ onSelect }: RolePickerProps) {
   const [selectedRolesetSelectedRole] = useState<UserRole>(null),
   const handleSelect = (role: UserRole) => {
     setSelectedRole(role),
-    onSelect(role)};
+    onSelect(role)},
   return (
     <div className="space-y-4 px-4">,
       <h2 className="text-xl font-medium">What brings you to Zion?</h2>,

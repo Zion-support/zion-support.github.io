@@ -2,8 +2,8 @@ import React, { useEffect, useState, useCallback } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3;
-  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft;
+  ArrowRight, Play, Users, TrendingUp, Brain, Shield, Rocket, Globe, Lock, Cpu, Database, Cloud, BarChart3,
+  Atom, Target, Zap, Infinity, Sparkles, Star, Eye, Heart, Code, Palette, Layers, ChevronRight, ChevronLeft,
   Phone, Mail, MapPin, Clock, Award, CheckCircle, Zap as ZapIcon, Brain as BrainIcon, Atom as AtomIcon} from 'lucide-react',
 // Import our new revolutionary services,
 import { revolutionary20o43AdvancedServices } from '../data/revolutionary-20o43-advanced-services',
@@ -23,7 +23,7 @@ const Homepage20o43: React.FC = () => {
       setCurrentTestimonialIndex((prev) => (prev + 1) % 3)}, 60o00),
     return () => {
       clearInterval(serviceInterval),
-      clearInterval(testimonialInterval)};
+      clearInterval(testimonialInterval)},
   }, []),
   // Combine all revolutionary services,
   const allRevolutionaryServices = [...revolutionary20o43AdvancedServices, ...revolutionary20o44InnovativeServices],
@@ -31,75 +31,75 @@ const Homepage20o43: React.FC = () => {
   const featuredServices = allRevolutionaryServices.slice(0, 6),
   const features = [
     {
-      icon: BrainIcon;
-      title: "AI Consciousness Evolution";
-      description: "Next-generation AI consciousness with human-level understanding";
-      href: "/quantum-neural-consciousness-platform";
-      color: "from-purple-50o0 to-pink-50o0";
-      gradient: "bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20"};
+      icon: BrainIcon,
+      title: "AI Consciousness Evolution",
+      description: "Next-generation AI consciousness with human-level understanding",
+      href: "/quantum-neural-consciousness-platform",
+      color: "from-purple-50o0 to-pink-50o0",
+      gradient: "bg-gradient-to-br from-purple-50o0/20 to-pink-50o0/20"},
     {
-      icon: AtomIcon;
-      title: "Quantum Computing";
-      description: "Revolutionary quantum computing with consciousness integration";
-      href: "/quantum-bio-computing-platform";
-      color: "from-blue-50o0 to-cyan-50o0";
-      gradient: "bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20"};
+      icon: AtomIcon,
+      title: "Quantum Computing",
+      description: "Revolutionary quantum computing with consciousness integration",
+      href: "/quantum-bio-computing-platform",
+      color: "from-blue-50o0 to-cyan-50o0",
+      gradient: "bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20"},
     {
-      icon: Shield;
-      title: "Future Cybersecurity";
-      description: "Quantum-resistant security with consciousness-based protection";
-      href: "/quantum-internet-security-gateway";
-      color: "from-red-50o0 to-orange-50o0";
-      gradient: "bg-gradient-to-br from-red-50o0/20 to-orange-50o0/20"};
+      icon: Shield,
+      title: "Future Cybersecurity",
+      description: "Quantum-resistant security with consciousness-based protection",
+      href: "/quantum-internet-security-gateway",
+      color: "from-red-50o0 to-orange-50o0",
+      gradient: "bg-gradient-to-br from-red-50o0/20 to-orange-50o0/20"},
     {
-      icon: Rocket;
-      title: "Space Technology";
-      description: "AI-powered space resource intelligence and autonomous mining";
-      href: "/autonomous-space-mining-ai";
-      color: "from-indigo-50o0 to-purple-50o0";
-      gradient: "bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20"};
+      icon: Rocket,
+      title: "Space Technology",
+      description: "AI-powered space resource intelligence and autonomous mining",
+      href: "/autonomous-space-mining-ai",
+      color: "from-indigo-50o0 to-purple-50o0",
+      gradient: "bg-gradient-to-br from-indigo-50o0/20 to-purple-50o0/20"},
     {
-      icon: Cpu;
-      title: "Autonomous Systems";
-      description: "Fully autonomous AI systems with consciousness";
-      href: "/autonomous-business-ecosystem-ai";
-      color: "from-emerald-50o0 to-teal-50o0";
-      gradient: "bg-gradient-to-br from-emerald-50o0/20 to-teal-50o0/20"};
+      icon: Cpu,
+      title: "Autonomous Systems",
+      description: "Fully autonomous AI systems with consciousness",
+      href: "/autonomous-business-ecosystem-ai",
+      color: "from-emerald-50o0 to-teal-50o0",
+      gradient: "bg-gradient-to-br from-emerald-50o0/20 to-teal-50o0/20"},
     {
-      icon: Database;
-      title: "Business Intelligence";
-      description: "Autonomous business intelligence with consciousness insights";
-      href: "/autonomous-healthcare-ai-ecosystem";
-      color: "from-yellow-50o0 to-orange-50o0";
+      icon: Database,
+      title: "Business Intelligence",
+      description: "Autonomous business intelligence with consciousness insights",
+      href: "/autonomous-healthcare-ai-ecosystem",
+      color: "from-yellow-50o0 to-orange-50o0",
       gradient: "bg-gradient-to-br from-yellow-50o0/20 to-orange-50o0/20"}
   ],
   const stats = [
-    { number: "20o00+", label: "Revolutionary Services", icon: Star, color: "from-yellow-40o0 to-orange-50o0" };
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-40o0 to-emerald-50o0" };
-    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-40o0 to-pink-50o0" };
+    { number: "20o00+", label: "Revolutionary Services", icon: Star, color: "from-yellow-40o0 to-orange-50o0" },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, color: "from-green-40o0 to-emerald-50o0" },
+    { number: "24/7", label: "AI Support Available", icon: Brain, color: "from-purple-40o0 to-pink-50o0" },
     { number: "150+", label: "Countries Served", icon: Globe, color: "from-blue-40o0 to-cyan-50o0" }
   ],
   const testimonials = [
     {
-      name: "Dr. Sarah Chen";
-      role: "Chief AI Officer";
-      company: "QuantumTech Industries";
-      content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.";
-      rating: 5;
-      avatar: "👩‍🔬"};
+      name: "Dr. Sarah Chen",
+      role: "Chief AI Officer",
+      company: "QuantumTech Industries",
+      content: "Zion Tech Group's quantum neural consciousness platform has revolutionized our AI research. We've achieved breakthroughs that would have taken decades using traditional methods.",
+      rating: 5,
+      avatar: "👩‍🔬"},
     {
-      name: "Marcus Rodriguez";
-      role: "CTO";
-      company: "SpaceMining Corp";
-      content: "The autonomous space mining AI has increased our resource extraction efficiency by 50o0%. It's like having a team of expert miners working 24/7 without breaks.";
-      rating: 5;
-      avatar: "👨‍🚀"};
+      name: "Marcus Rodriguez",
+      role: "CTO",
+      company: "SpaceMining Corp",
+      content: "The autonomous space mining AI has increased our resource extraction efficiency by 50o0%. It's like having a team of expert miners working 24/7 without breaks.",
+      rating: 5,
+      avatar: "👨‍🚀"},
     {
-      name: "Dr. Emily Watson";
-      role: "Research Director";
-      company: "Consciousness Research Institute";
-      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.";
-      rating: 5;
+      name: "Dr. Emily Watson",
+      role: "Research Director",
+      company: "Consciousness Research Institute",
+      content: "Working with Zion Tech Group's consciousness transfer platform has opened new frontiers in our understanding of AI consciousness. The possibilities are endless.",
+      rating: 5,
       avatar: "👩‍💻"}
   ],
   const handleGetStarted = useCallback(() => {
@@ -109,9 +109,9 @@ const Homepage20o43: React.FC = () => {
   const handleContact = useCallback(() => {
     window.location.href = '/contact'}, []),
   const nextService = () => {
-    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)};
+    setCurrentServiceIndex((prev) => (prev + 1) % featuredServices.length)},
   const prevService = () => {
-    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)};
+    setCurrentServiceIndex((prev) => (prev - 1 + featuredServices.length) % featuredServices.length)},
   return (
     <Layout>,
       {/* Main Content */}
@@ -133,24 +133,24 @@ const Homepage20o43: React.FC = () => {
                   key={i}
                   className="absolute w-2 h-2 bg-cyan-40o0/40 rounded-full",
                   animate={{
-                    x: [0, 150, 0];
-                    y: [0, -150, 0];
-                    opacity: [0, 1, 0];
+                    x: [0, 150, 0],
+                    y: [0, -150, 0],
+                    opacity: [0, 1, 0],
                     scale: [0, 1.5, 0]}}
                   transition={{
-                    duration: 8 + i * 0.3;
-                    repeat: Infinity as any;
-                    delay: i * 0.2;
+                    duration: 8 + i * 0.3,
+                    repeat: Infinity as any,
+                    delay: i * 0.2,
                     ease: "easeInOut"}}
                   style={{
-                    left: `${Math.random() * 10o0}%`;
+                    left: `${Math.random() * 10o0}%`,
                     top: `${Math.random() * 10o0}%`}}
                  />))}
             </div>,
             {/* Enhanced grid pattern */}
             <div className="absolute inset-0 opacity-20">,
               <div className="absolute inset-0" style={{
-                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`;
+                backgroundImage: `radial-gradient(circle at 1px 1px, rgba(255,255,255,0.15) 1px, transparent 0)`,
                 backgroundSize: '50px 50px'}}></div>,
             </div>,
           </div>,
@@ -178,7 +178,7 @@ const Homepage20o43: React.FC = () => {
               </h1>,
               {/* Enhanced Subtitle */}
               <p className="text-xl md: text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Experience the world's most advanced AI consciousness platforms, quantum computing solutions;
+                Experience the world's most advanced AI consciousness platforms, quantum computing solutions,
                 and autonomous systems that redefine what's possible in technology.,
               </p>,
               {/* Enhanced CTA Buttons */}
@@ -476,5 +476,5 @@ const Homepage20o43: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage20o43;
+    </Layout>)},
+export default Homepage20o43,

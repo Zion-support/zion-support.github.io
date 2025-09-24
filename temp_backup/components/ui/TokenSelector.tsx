@@ -1,12 +1,12 @@
-export type TokenOption = { symbol: string, label: string, value: string };
+export type TokenOption = { symbol: string, label: string, value: string },
 export default function TokenSelector({
-  value;
-  onChange;
+  value,
+  onChange,
 }: {
   value: string,
   onChange: (v: string) => void}) {
   const options: TokenOption[] = [
-    { symbol: 'ZION$', label: 'ZION$', value: 'ZION' };
+    { symbol: 'ZION$', label: 'ZION$', value: 'ZION' },
   ],
   return (
     <div className='flex flex-col gap-1'>,

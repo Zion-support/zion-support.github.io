@@ -1,85 +1,75 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Leaf;
-  TrendingDown;
-  Globe;
-  Zap;
-  Target;
-  Shield;
-  CheckCircle;
-  Star;
-  BarChart3;
-  Lock;
-  Smartphone;
-  Monitor;
-  Award;
-  MessageCircle;
-  Cpu;
+  Leaf,
+  TrendingDown,
+  Globe,
+  Zap,
+  Target,
+  Shield,
+  CheckCircle,
+  Star,
+  BarChart3,
+  Lock,
+  Smartphone,
+  Monitor,
+  Award,
+  MessageCircle,
+  Cpu,
 } from 'lucide-react',
 export default function AISustainabilityPlatform() {
   const features = [
     {
-      icon: <Leaf className='w-6 h-6' />;
-      title: 'Environmental Impact Analysis';
+      icon: <Leaf className='w-6 h-6' />,
+      title: 'Environmental Impact Analysis',
       description:,
-        'AI-powered analysis of environmental impact with real-time monitoring and predictive modeling.';
-    };
+        'AI-powered analysis of environmental impact with real-time monitoring and predictive modeling.',
+    },
     {
-      icon: <TrendingDown className='w-6 h-6' />;
-      title: 'Carbon Footprint Management';
+      icon: <TrendingDown className='w-6 h-6' />,
+      title: 'Carbon Footprint Management',
       description:,
-        'Comprehensive carbon footprint tracking and reduction strategies with AI optimization.';
-    };
+        'Comprehensive carbon footprint tracking and reduction strategies with AI optimization.',
+    },
     {
-      icon: <Target className='w-6 h-6' />;
-      title: 'Sustainability Metrics';
+      icon: <Target className='w-6 h-6' />,
+      title: 'Sustainability Metrics',
       description:,
-        'Advanced sustainability metrics and KPIs with automated reporting and insights.';
-    };
+        'Advanced sustainability metrics and KPIs with automated reporting and insights.',
+    },
     {
-      icon: <Zap className='w-6 h-6' />;
-      title: 'Energy Optimization';
+      icon: <Zap className='w-6 h-6' />,
+      title: 'Energy Optimization',
       description:,
-        'AI-driven energy optimization and renewable energy integration strategies.';
-    };
+        'AI-driven energy optimization and renewable energy integration strategies.',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Compliance Monitoring';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Compliance Monitoring',
       description:,
-        'Automated sustainability compliance monitoring and regulatory reporting.';
-    };
+        'Automated sustainability compliance monitoring and regulatory reporting.',
+    },
     {
-      icon: <Globe className='w-6 h-6' />;
-      title: 'Supply Chain Sustainability';
+      icon: <Globe className='w-6 h-6' />,
+      title: 'Supply Chain Sustainability',
       description:,
-        'End-to-end supply chain sustainability tracking and optimization.';
-    };
+        'End-to-end supply chain sustainability tracking and optimization.',
+    },
   ],
   const benefits = [
-    'Reduce carbon footprint by 60%';
-    'Improve energy efficiency by 80%';
-    'Increase sustainability score by 70%';
-    'Reduce compliance costs by 50%';
-    'Accelerate sustainability goals by 200%';
-    'Enhance brand reputation by 150%';
-    'Scale sustainability operations';
-    'Future-proof business operations';
+    'Reduce carbon footprint by 60%Improve energy efficiency by 80%',
+    'Increase sustainability score by 70%Reduce compliance costs by 50%',
+    'Accelerate sustainability goals by 200%Enhance brand reputation by 150%',
+    'Scale sustainability operationsFuture-proof business operations',
   ],
   const useCases = [
-    'Carbon Tracking';
-    'Energy Optimization';
-    'Supply Chain';
-    'Compliance Reporting';
-    'Sustainability Metrics';
-    'Environmental Impact';
-    'Renewable Energy';
-    'Waste Management';
-    'Water Conservation';
-    'Green Building';
-    'ESG Reporting';
-    'Climate Action';
+    'Carbon TrackingEnergy Optimization',
+    'Supply ChainCompliance Reporting',
+    'Sustainability MetricsEnvironmental Impact',
+    'Renewable EnergyWaste Management',
+    'Water ConservationGreen Building',
+    'ESG ReportingClimate Action',
   ],
   return (
     <>,
@@ -201,7 +191,7 @@ export default function AISustainabilityPlatform() {
                 Transform Sustainability,
               </h2>,
               <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-                Experience revolutionary improvements in environmental impact;
+                Experience revolutionary improvements in environmental impact,
                 energy efficiency, and sustainability metrics with our,
                 AI-powered platform.,
               </p>,

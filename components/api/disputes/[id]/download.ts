@@ -1,12 +1,12 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getDisputeById } from '../../../../utils/fsdb',
 import {
-  parseUserFromRequest;
+  parseUserFromRequest,
   ensureInvolvedOrAdmin} from '../../../../utils/auth',
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {
-  const { id, fileName } = req.query as { id?: string, fileName?: string };
+  const { id, fileName } = req.query as { id?: string, fileName?: string },
   if (
     !id ||,
     !fileName ||,
@@ -25,7 +25,7 @@ export default async function handler(
   res.setHeader('Content-Type', att.mimeType),
   res.setHeader('Content-Length', String(stat.size)),
   res.setHeader(
-    'Content-Disposition';
+    'Content-Disposition',
     `attachment, filename="${path.basename(att.fileName)}"`),
   const stream = fs.createReadStream(att.path),
   stream.pipe(res)}

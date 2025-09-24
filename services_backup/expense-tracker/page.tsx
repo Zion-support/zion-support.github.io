@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Expense Tracker | Zion Tech Group';
+  title: 'AI Expense Tracker | Zion Tech Group',
   description:,
-    'Smart expense tracking with receipt scanning, categorization, and automated reporting. Simplify expense management for individuals and teams.';
-};
+    'Smart expense tracking with receipt scanning, categorization, and automated reporting. Simplify expense management for individuals and teams.',
+},
 export default function ExpenseTrackerPage() {
   return (
     <div className='animate-fade-in'>,
@@ -64,11 +64,9 @@ export default function ExpenseTrackerPage() {
               period='per month',
               description='Perfect for individuals and freelancers',
               features={[
-                'Unlimited receipts';
-                'Basic categorization';
-                'Mobile app';
-                'Basic reporting';
-                'Email support';
+                'Unlimited receiptsBasic categorization',
+                'Mobile appBasic reporting',
+                'Email support',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function ExpenseTrackerPage() {
               period='per month',
               description='Ideal for small businesses and teams',
               features={[
-                'Up to 10 users';
-                'Advanced categorization';
-                'Team management';
-                'Advanced reporting';
-                'Priority support';
-                'API access';
+                'Up to 10 usersAdvanced categorization',
+                'Team managementAdvanced reporting',
+                'Priority supportAPI access',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function ExpenseTrackerPage() {
               period='per month',
               description='For large organizations',
               features={[
-                'Unlimited users';
-                'Custom categorization';
-                'Advanced workflows';
-                '24/7 support';
-                'Custom integrations';
-                'Advanced security';
+                'Unlimited usersCustom categorization',
+                'Advanced workflows24/7 support',
+                'Custom integrationsAdvanced security',
               ]}
               popular={false}
             />,
@@ -228,9 +220,9 @@ export default function ExpenseTrackerPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -245,12 +237,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  title;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   title: string,
   price: string,
@@ -290,10 +282,10 @@ function PricingCard({
     </div>)}
 ,
 function WorkflowStep({
-  step;
-  title;
-  description;
-  icon;
+  step,
+  title,
+  description,
+  icon,
 }: {
   step: string,
   title: string,
@@ -310,9 +302,9 @@ function WorkflowStep({
     </div>)}
 ,
 function BenefitCard({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -339,9 +331,9 @@ function IntegrationCard({ name, icon }: { name: string, icon: string }) {
     </div>)}
 ,
 function UseCaseCard({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,

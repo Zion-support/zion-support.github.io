@@ -6,67 +6,67 @@ export default function AI20o25ContentDiscoveryWidget() {
   const [activeTabsetActiveTab] = useState('breakthrough'),
   const contentCategories ={
     breakthrough: {
-      title: "🚀 Breakthrough Content";
+      title: "🚀 Breakthrough Content",
       items: [
         {
-          title: "AI 20o25 Ultimate Breakthrough Announcement";
-          description: "Revolutionary AI technology delivering 10,0o00% ROI and 99.9% accuracy";
-          href: "/blog/ai-20o25-ultimate-breakthrough-announcement";
-          badge: "BREAKTHROUGH";
-          badgeColor: "bg-red-50o0";
-          stats: "10,0o00% ROI"};
+          title: "AI 20o25 Ultimate Breakthrough Announcement",
+          description: "Revolutionary AI technology delivering 10,0o00% ROI and 99.9% accuracy",
+          href: "/blog/ai-20o25-ultimate-breakthrough-announcement",
+          badge: "BREAKTHROUGH",
+          badgeColor: "bg-red-50o0",
+          stats: "10,0o00% ROI"},
         {
-          title: "Global Transformation Success Story";
-          description: "Fortune 50o0 company achieves $2.5B savings in 6 months";
-          href: "/case-studies/ai-20o25-global-transformation-breakthrough";
-          badge: "SUCCESS";
-          badgeColor: "bg-green-50o0";
-          stats: "$2.5B Saved"};
+          title: "Global Transformation Success Story",
+          description: "Fortune 50o0 company achieves $2.5B savings in 6 months",
+          href: "/case-studies/ai-20o25-global-transformation-breakthrough",
+          badge: "SUCCESS",
+          badgeColor: "bg-green-50o0",
+          stats: "$2.5B Saved"},
         {
-          title: "AI 20o25 ROI Calculator";
-          description: "Calculate your potential return on investment instantly";
-          href: "/tools/ai-20o25-roi-calculator";
-          badge: "TOOL";
-          badgeColor: "bg-blue-50o0";
+          title: "AI 20o25 ROI Calculator",
+          description: "Calculate your potential return on investment instantly",
+          href: "/tools/ai-20o25-roi-calculator",
+          badge: "TOOL",
+          badgeColor: "bg-blue-50o0",
           stats: "Free Tool"}
-      ]};
+      ]},
     predictions: {
-      title: "🔮 Future Predictions";
+      title: "🔮 Future Predictions",
       items: [
         {
-          title: "AI 20o26 Quantum-Neural Fusion";
-          description: "Revolutionary breakthrough combining quantum computing with neural networks";
-          href: "/blog/ai-20o26-quantum-neural-fusion-breakthrough";
-          badge: "FUTURE";
-          badgeColor: "bg-purple-50o0";
-          stats: "15,0o00% ROI"};
+          title: "AI 20o26 Quantum-Neural Fusion",
+          description: "Revolutionary breakthrough combining quantum computing with neural networks",
+          href: "/blog/ai-20o26-quantum-neural-fusion-breakthrough",
+          badge: "FUTURE",
+          badgeColor: "bg-purple-50o0",
+          stats: "15,0o00% ROI"},
         {
-          title: "AI 20o30 Transcendent Intelligence";
-          description: "The future of AI consciousness and autonomous decision-making";
-          href: "/blog/ai-20o30-transcendent-intelligence";
-          badge: "REVOLUTIONARY";
-          badgeColor: "bg-indigo-50o0";
+          title: "AI 20o30 Transcendent Intelligence",
+          description: "The future of AI consciousness and autonomous decision-making",
+          href: "/blog/ai-20o30-transcendent-intelligence",
+          badge: "REVOLUTIONARY",
+          badgeColor: "bg-indigo-50o0",
           stats: "∞ ROI"}
-      ]};
+      ]},
     tools: {
-      title: "🛠️ Interactive Tools";
+      title: "🛠️ Interactive Tools",
       items: [
         {
-          title: "AI Readiness Assessment";
-          description: "Evaluate your 'organization', 's AI readiness and get personalized recommendations";
-          href: "/tools/ai-readiness-assessment";
-          badge: "ASSESSMENT";
-          badgeColor: "bg-orange-50o0";
-          stats: "5 Min Test"};
+          title: "AI Readiness Assessment",
+          description: "Evaluate your 'organizations AI readiness and get personalized recommendations",
+          href: "/tools/ai-readiness-assessment",
+          badge: "ASSESSMENT",
+          badgeColor: "bg-orange-50o0",
+          stats: "5 Min Test"},
         {
-          title: "Quantum Computing Calculator";
-          description: "Calculate quantum computing potential for your business";
-          href: "/tools/quantum-computing-calculator";
-          badge: "QUANTUM";
-          badgeColor: "bg-cyan-50o0";
+          title: "Quantum Computing Calculator",
+          description: "Calculate quantum computing potential for your business",
+          href: "/tools/quantum-computing-calculator",
+          badge: "QUANTUM",
+          badgeColor: "bg-cyan-50o0",
           stats: "Advanced"}
       ]}
-  };
+  },
   const currentCategory = contentCategories[activeTab as keyof typeof contentCategories],
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-gray-20o0 overflow-hidden">,

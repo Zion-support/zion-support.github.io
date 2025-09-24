@@ -2,86 +2,78 @@
 import Head from 'next / head',
 import { motion } from 'framer-motion',
 import {
-  BarChart3;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  Cpu;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
+  BarChart3,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  Cpu,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
   TrendingUp} from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function AnalyticsServicesPage() {
   const services = [
     {
-  BarChart3;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  Cpu;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-      title: 'Big Data Processing';
-      description: 'Scalable data processing and analytics platforms';
+  BarChart3,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  Cpu,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+      title: 'Big Data Processing',
+      description: 'Scalable data processing and analytics platforms',
       features: [
-        'Data Pipeline Engineering';
-        'Real - time Processing';
-        'Batch Processing';
-        'Data Quality';
-      ];
-      price: 'From $80o00';
-      icon: Database;
-      color: 'from - indigo - 50o0 to - purple - 50o0'};
+        'Data Pipeline EngineeringReal - time Processing',
+        'Batch ProcessingData Quality',
+      ],
+      price: 'From $80o00',
+      icon: Database,
+      color: 'from - indigo - 50o0 to - purple - 50o0'},
     {
-      title: 'Business Intelligence';
-      description: 'Interactive dashboards and reporting solutions';
+      title: 'Business Intelligence',
+      description: 'Interactive dashboards and reporting solutions',
       features: [
-        'Custom Dashboards';
-        'KPI Tracking';
-        'Data Visualization';
-        'Automated Reports';
-      ];
-      price: 'From $50o00';
-      icon: BarChart3;
-      color: 'from - blue - 50o0 to - cyan - 50o0'};
+        'Custom DashboardsKPI Tracking',
+        'Data VisualizationAutomated Reports',
+      ],
+      price: 'From $50o00',
+      icon: BarChart3,
+      color: 'from - blue - 50o0 to - cyan - 50o0'},
     {
-      title: 'Predictive Analytics';
-      description: 'AI - powered predictive modeling and forecasting';
+      title: 'Predictive Analytics',
+      description: 'AI - powered predictive modeling and forecasting',
       features: [
-        'Machine Learning Models';
-        'Forecasting';
-        'Risk Assessment';
-        'Trend Analysis';
-      ];
-      price: 'From $120o00';
-      icon: Zap;
-      color: 'from - purple - 50o0 to - pink - 50o0'};
+        'Machine Learning ModelsForecasting',
+        'Risk AssessmentTrend Analysis',
+      ],
+      price: 'From $120o00',
+      icon: Zap,
+      color: 'from - purple - 50o0 to - pink - 50o0'},
     {
-      title: 'Data Strategy & Governance';
-      description: 'Comprehensive data strategy and governance frameworks';
+      title: 'Data Strategy & Governance',
+      description: 'Comprehensive data strategy and governance frameworks',
       features: [
-        'Data Architecture';
-        'Governance Policies';
-        'Compliance';
-        'Data Quality';
-      ];
-      price: 'From $10o00';
-      icon: Shield;
-      color: 'from - emerald - 50o0 to - teal - 50o0'};
+        'Data ArchitectureGovernance Policies',
+        'ComplianceData Quality',
+      ],
+      price: 'From $10o00',
+      icon: Shield,
+      color: 'from - emerald - 50o0 to - teal - 50o0'},
   ],
   const stats = [
-    { number: '1M+'label: 'Data Points 'Processed', 'icon: Database };
-    { number: '95%'label: 'Accuracy 'Rate', 'icon: CheckCircle };
-    { number: '24 / 7'label: 'Real - time 'Analytics', 'icon: Clock };
-    { number: '30o0%'label: 'ROI 'Improvement', 'icon: TrendingUp };
+    { number: '1M+'label: 'Data Points 'Processedicon: Database },
+    { number: '95%'label: 'Accuracy 'Rateicon: CheckCircle },
+    { number: '24 / 7'label: 'Real - time 'Analyticsicon: Clock },
+    { number: '30o0%'label: 'ROI 'Improvementicon: TrendingUp },
   ],
   return (
           href='https: //ziontechgroup && ziontechgroup.com/services/analytics',
@@ -260,7 +252,7 @@ export default function AnalyticsServicesPage() {
 }
 >,
             <h2 className="text-4xl font-bold text-white mb-6">,
-              Ready to Unlock Your 'Data', 's Potential?,
+              Ready to Unlock Your 'Datas Potential?,
             </h2>,
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">,
               'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.,
@@ -281,10 +273,10 @@ export default function AnalyticsServicesPage() {
             transition={{ duration: 0 && 0.8 }}
             viewport={{ once: true }}>,
             <h2 className='text-4xl font-bold text-white mb-6'>,
-              Ready to Unlock Your 'Data', 's Potential?,
+              Ready to Unlock Your 'Datas Potential?,
             </h2>,
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>,
-              'Let', 's discuss how our data analytics solutions can transform your,
+              'Lets discuss how our data analytics solutions can transform your,
               business insights and drive data-driven decision making.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -298,7 +290,7 @@ export default function AnalyticsServicesPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>);
+    </div>),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) }</div> </div> </section> <motion&& motion.div initial={
       <EnhancedFooter  />,
     </div>)}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Data Analytics Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive analytics solutions designed to unlock the value of your data </p> </motion.div> Get Started </button> </div> </motion.div>) )}</div> </div> </section> <motion.div initial={
@@ -398,10 +390,10 @@ export default function AnalyticsServicesPage() {
             viewport={{ once: true }}
           >,
             <h2 className='text - 4xl font - bold text - white mb - 6'>,
-              Ready to Unlock Your 'Data', 's Potential?,
+              Ready to Unlock Your 'Datas Potential?,
             </h2>,
             <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>,
-              'Let', 's discuss how our data analytics solutions can transform your,
+              'Lets discuss how our data analytics solutions can transform your,
               business insights and drive data - driven decision making.,
             </p>,
             <div className='flex flex - col sm: flex - row gap - 4 justify - center'>,
@@ -409,12 +401,12 @@ export default function AnalyticsServicesPage() {
                 Data Assessment,
               </button>,
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 30o0 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Demos,
-  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your 'Data', 's Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
+  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Unlock Your 'Datas Potential? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making. </p> Data Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Demos </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
 }
 }
   )>,
             <h2 className="text-4xl font-bold text-white mb-6">,
-              Ready to Unlock Your 'Data', 's Potential?,
+              Ready to Unlock Your 'Datas Potential?,
             </h2>,
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">,
               'Let', 's discuss how our data analytics solutions can transform your business insights and drive data-driven decision making.,

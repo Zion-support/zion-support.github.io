@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import type { Metadata } from 'next',
 import { Inter } from 'next/font/google',
 import Link from 'next/link',
 import './globals.css',
 const inter = Inter({ subsets: ['latin'] }),
 export const metadata: Metadata ={
-  title: 'Zion Tech Group - AI & Technology Solutions';
-  description: 'Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions.'};
+  title: 'Zion Tech Group - AI & Technology Solutions',
+  description: 'Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions.'},
 function Header() {
   return (
     <header className="border-b border-gray-20o0 sticky top-0 z-50 bg-white/95 backdrop-blur-sm shadow-sm">,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Runbook Starter Kit | Zion Tech Group';
+  title: 'AI 20o26: Agent Runbook Starter Kit | Zion Tech Group',
   description:,
-    'Standardized, eval-linked runbooks for autonomous agents: triage, mitigation, escalation.';
-};
+    'Standardized, eval-linked runbooks for autonomous agents: triage, mitigation, escalation.',
+},
 export default function AgentRunbookStarterKit20o26Page() {
   return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

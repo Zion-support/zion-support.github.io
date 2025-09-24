@@ -25,7 +25,7 @@ class EnhancedAutomationSystem {
    */,
   loadEnvironmentConfig() {
     const env = process.env.NODE_ENV || 'development',
-    const envConfig = config.environments[env] || {};
+    const envConfig = config.environments[env] || {},
     // Merge environment config with base config,
     this.config = this.mergeConfig(config, envConfig),
     // // // // // // // // console.log(`⚙️ Loaded configuration for environment: ${env}`)}
@@ -34,7 +34,7 @@ class EnhancedAutomationSystem {
    * Merge configuration objects,
    */,
   mergeConfig(base, override) {
-    const merged ={ ...base };
+    const merged ={ ...base },
     Object.keys(override).forEach(key => {
       if (typeof override[key] === 'object' && !Array.isArray(override[key])) {
         merged[key] = this.mergeConfig(merged[key] || {}, override[key])} else {
@@ -87,11 +87,11 @@ class EnhancedAutomationSystem {
     try {
       // // // // // // // // console.log('🔔 Starting Alerting System...'),
       this.alerting = new AlertingSystem({
-        email: this.config.alerting.email;
-        slack: this.config.alerting.slack;
-        webhook: this.config.alerting.webhook;
-        thresholds: this.config.alerting.thresholds;
-        cooldown: this.config.alerting.cooldown;
+        email: this.config.alerting.email,
+        slack: this.config.alerting.slack,
+        webhook: this.config.alerting.webhook,
+        thresholds: this.config.alerting.thresholds,
+        cooldown: this.config.alerting.cooldown,
         maxAlerts: this.config.alerting.maxAlerts}),
       // // // // // // // // console.log('✅ Alerting System started')} catch (error) {
       console.error('❌ Failed to start Alerting System:', error),
@@ -105,15 +105,15 @@ class EnhancedAutomationSystem {
     try {
       // // // // // // // // console.log('🔄 Starting Process Recovery System...'),
       this.recovery = new ProcessRecoverySystem({
-        maxRetries: this.config.recovery.maxRetries;
-        retryDelay: this.config.recovery.retryDelay;
-        exponentialBackoff: this.config.recovery.exponentialBackoff;
-        maxBackoffDelay: this.config.recovery.maxBackoffDelay;
-        healthCheckInterval: this.config.recovery.healthCheckInterval;
-        autoRecovery: this.config.recovery.autoRecovery;
-        recoveryStrategies: this.config.recovery.strategies;
-        processDependencies: this.config.recovery.processDependencies;
-        criticalProcesses: this.config.recovery.criticalProcesses;
+        maxRetries: this.config.recovery.maxRetries,
+        retryDelay: this.config.recovery.retryDelay,
+        exponentialBackoff: this.config.recovery.exponentialBackoff,
+        maxBackoffDelay: this.config.recovery.maxBackoffDelay,
+        healthCheckInterval: this.config.recovery.healthCheckInterval,
+        autoRecovery: this.config.recovery.autoRecovery,
+        recoveryStrategies: this.config.recovery.strategies,
+        processDependencies: this.config.recovery.processDependencies,
+        criticalProcesses: this.config.recovery.criticalProcesses,
         logRecovery: true}),
       // // // // // // // // console.log('✅ Process Recovery System started')} catch (error) {
       console.error('❌ Failed to start Process Recovery System:', error),
@@ -128,8 +128,8 @@ class EnhancedAutomationSystem {
       // // // // // // // // console.log('📊 Starting Monitoring Dashboard...'),
       // Override dashboard config with environment settings,
       const dashboardConfig ={
-        ...this.config.dashboard;
-        port: this.config.dashboard.port};
+        ...this.config.dashboard,
+        port: this.config.dashboard.port},
       this.dashboard = new AutomationDashboard(),
       // Wait for dashboard to be ready,
       await new Promise(resolve => {
@@ -183,16 +183,16 @@ class EnhancedAutomationSystem {
   async collectMetrics() {
     try {
       const metrics ={
-        timestamp: Date.now();
+        timestamp: Date.now(),
         system: {
-          uptime: process.uptime();
-          memory: process.memoryUsage();
-          cpu: process.cpuUsage()};
+          uptime: process.uptime(),
+          memory: process.memoryUsage(),
+          cpu: process.cpuUsage()},
         automation: {
-          dashboard: this.dashboard ? 'running' : 'stopped';
-          alerting: this.alerting ? 'running' : 'stopped';
+          dashboard: this.dashboard ? 'running' : 'stopped',
+          alerting: this.alerting ? 'running' : 'stopped',
           recovery: this.recovery ? 'running' : 'stopped'}
-      };
+      },
       // Store metrics (could be sent to external systems),
       if (this.config.integrations.prometheus.enabled) {
         // Send to Prometheus,
@@ -274,11 +274,11 @@ class EnhancedAutomationSystem {
    */,
   checkSystemHealth() {
     const health ={
-      timestamp: Date.now();
-      status: 'healthy';
-      uptime: Date.now() - this.startTime;
+      timestamp: Date.now(),
+      status: 'healthy',
+      uptime: Date.now() - this.startTime,
       components: {}
-    };
+    },
     // Check dashboard health,
     if (this.dashboard) {
       health.components.dashboard = 'healthy'} else {
@@ -321,7 +321,7 @@ class EnhancedAutomationSystem {
         process.exit(0)} catch (error) {
         console.error('❌ Error during shutdown:', error),
         process.exit(1)}
-    };
+    },
     process.on('SIGINT', () => shutdown('SIGINT')),
     process.on('SIGTERM', () => shutdown('SIGTERM')),
     process.on('SIGUSR2', () => shutdown('SIGUSR2')), // For nodemon}
@@ -331,19 +331,19 @@ class EnhancedAutomationSystem {
    */,
   getStatus() {
     return {
-      isRunning: this.isRunning;
-      startTime: this.startTime;
-      uptime: this.startTime ? Date.now() - this.startTime : 0;
+      isRunning: this.isRunning,
+      startTime: this.startTime,
+      uptime: this.startTime ? Date.now() - this.startTime : 0,
       components: {
-        dashboard: !!this.dashboard;
-        alerting: !!this.alerting;
-        recovery: !!this.recovery};
+        dashboard: !!this.dashboard,
+        alerting: !!this.alerting,
+        recovery: !!this.recovery},
       config: {
-        environment: process.env.NODE_ENV || 'development';
-        dashboard: this.config.dashboard;
-        alerting: this.config.alerting.enabled;
+        environment: process.env.NODE_ENV || 'development',
+        dashboard: this.config.dashboard,
+        alerting: this.config.alerting.enabled,
         recovery: this.config.recovery.enabled}
-    };
+    },
   }
 ,
   /**,

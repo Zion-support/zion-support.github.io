@@ -1,55 +1,55 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
-  Calendar, Clock, Target, Users2, FileText2, PieChart;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
-  TrendingUp, Shield, Globe, Database, Network, Zap;
-  Battery, Sun, Wind, Leaf, Gauge, Activity, TrendingUp;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
+  Calendar, Clock, Target, Users2, FileText2, PieChart,
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,
+  TrendingUp, Shield, Globe, Database, Network, Zap,
+  Battery, Sun, Wind, Leaf, Gauge, Activity, TrendingUp,
   BarChart3, Target, Settings, Cog, Wrench, Monitor} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Quantum Energy Optimization | Zion Tech Group';
-  description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.';
-  keywords: 'quantum energy optimization, smart grid, energy efficiency, renewable energy, AI energy management, sustainable energy, quantum energy';
+  title: 'Quantum Energy Optimization | Zion Tech Group',
+  description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.',
+  keywords: 'quantum energy optimization, smart grid, energy efficiency, renewable energy, AI energy management, sustainable energy, quantum energy',
   openGraph: {
-    title: 'Quantum Energy Optimization | Zion Tech Group';
-    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.';
-    url: 'https://ziontechgroup.com/quantum-energy-optimization';
-    siteName: 'Zion Tech Group';
+    title: 'Quantum Energy Optimization | Zion Tech Group',
+    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.',
+    url: 'https://ziontechgroup.com/quantum-energy-optimization',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-quantum-energy.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Quantum Energy Optimization'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-quantum-energy.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Quantum Energy Optimization'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Quantum Energy Optimization | Zion Tech Group';
-    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.';
-    images: ['https://ziontechgroup.com/og-image-quantum-energy.jpg']};
+    card: 'summary_large_image',
+    title: 'Quantum Energy Optimization | Zion Tech Group',
+    description: 'Revolutionary quantum-powered energy optimization platform with AI-driven efficiency, smart grid management, and sustainable energy solutions.',
+    images: ['https://ziontechgroup.com/og-image-quantum-energy.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/quantum-energy-optimization'}};
+    canonical: 'https://ziontechgroup.com/quantum-energy-optimization'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function QuantumEnergyOptimization() {
   return (
     <div className="min-h-screen bg-black text-white">,

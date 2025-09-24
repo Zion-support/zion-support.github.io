@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 ArrowRightStarUsersTrendingUpZapShieldGlobeRocket,
 interface ServiceCardProps {
@@ -14,7 +14,7 @@ interface ServiceCardProps {
       currency: string,
       trialDays: number,
       setupTime: string,
-      enterprise?: number};
+      enterprise?: number},
     features: string[],
     benefits: string[],
     targetAudience: string[],
@@ -37,7 +37,7 @@ interface ServiceCardProps {
     rating: number,
     reviews: number,
     marketSize?: string,
-    growthRate?: string};
+    growthRate?: string},
   index: number}
 ,
 const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex }) => {
@@ -55,22 +55,22 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex
         return <TrendingUp className="w-5 h-5" />,
       default:,
         return <Zap className="w-5 h-5" />}
-  };
+  },
   const getGradientClass = (color: string) => {
     if (color.includes('from-') && color.includes('to-')) {
       return color}
-    return 'from-cyan-500 to-blue-500'};
+    return 'from-cyan-500 to-blue-500'},
   return (
     <motion.div,
       initial={{ opacity: 0, y: 50scale: 0.9 }}
       animate={{ opacity: 1, y: 0scale: 1 }}
       transition={{
-        duration: 0.6;
-        delay: index * 0.1;
+        duration: 0.6,
+        delay: index * 0.1,
         ease: [0.250.460.450.94]}}
       whileHover={{
-        y: -10;
-        scale: 1.02;
+        y: -10,
+        scale: 1.02,
         transition: { duration: 0.3 }
       }}
       className="group relative">,
@@ -231,5 +231,5 @@ const UltraFuturisticServiceCardV2: React.FC<ServiceCardProps> = ({ serviceindex
           className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-purple-500/10 rounded-2xl pointer-events-none",
         />,
       </div>,
-    </motion.div>)};
-export default UltraFuturisticServiceCardV2;
+    </motion.div>)},
+export default UltraFuturisticServiceCardV2,

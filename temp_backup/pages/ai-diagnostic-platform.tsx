@@ -1,41 +1,39 @@
-import React from 'react';;
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import {
-  Brain, Shield, Zap, Target, Stethoscope;
-  BarChart3, Cpu, Globe, Users, Award;
-  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin} from 'lucide-react';
-import Layout from '../components/layout/Layout';
+  Brain, Shield, Zap, Target, Stethoscope,
+  BarChart3, Cpu, Globe, Users, Award,
+  CheckCircle, ArrowRight, Star, Phone, Mail, MapPin} from 'lucide-react',
+import Layout from '../components/layout/Layout',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const features = [
-  'AI-powered medical image analysisSymptom assessment algorithms';
-  'Treatment recommendation enginePatient history integration';
-  'Real-time diagnostic updatesMulti-specialty coverage';
-  'Mobile app integrationHIPAA-compliant platform'];
+  'AI-powered medical image analysisSymptom assessment algorithmsTreatment recommendation enginePatient history integration',
+  'Real-time diagnostic updatesMulti-specialty coverageMobile app integrationHIPAA-compliant platform'],
 const pricingPlans = [
   {
-    name: 'Starter';
-    price: 299;
-    period: 'month';
-    features: ['Basic diagnostic tools3 medical specialties', 'Standard reportingStandard support'];
-    popular: false};
+    name: 'Starter',
+    price: 299,
+    period: 'month',
+    features: ['Basic diagnostic tools3 medical specialtiesStandard reportingStandard support'],
+    popular: false},
   {
-    name: 'Professional';
-    price: 799;
-    period: 'month';
-    features: ['Advanced AI diagnosticsAll specialties', 'Custom reportingAPI access', 'Priority support'];
-    popular: true};
+    name: 'Professional',
+    price: 799,
+    period: 'month',
+    features: ['Advanced AI diagnosticsAll specialtiesCustom reportingAPI access', 'Priority support'],
+    popular: true},
   {
-    name: 'Enterprise';
-    price: 1999;
-    period: 'month';
-    features: ['Custom AI modelsWhite-label solution', 'Dedicated supportCustom integrations', 'Training included'];
+    name: 'Enterprise',
+    price: 1999,
+    period: 'month',
+    features: ['Custom AI modelsWhite-label solutionDedicated supportCustom integrations', 'Training included'],
     popular: false}
-];
+],
 export default function AIDiagnosticPlatform() {
   return (
     <Layout>,

@@ -1,63 +1,55 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const RevolutionaryAIServices20o26: React.FC = () => {
   const services = [
     {
-      title: 'Quantum Neural Architecture';
+      title: 'Quantum Neural Architecture',
       description:,
-        'Revolutionary AI systems that combine quantum computing with advanced neural networks for unprecedented processing capabilities.';
+        'Revolutionary AI systems that combine quantum computing with advanced neural networks for unprecedented processing capabilities.',
       features: [
-        '10o00x faster computation';
-        'Real-time learning';
-        'Quantum encryption';
-        'Autonomous optimization';
-      ];
-      price: 'From $50,0o00';
-      icon: '⚛️';
-      gradient: 'from-purple-60o0 to-indigo-60o0';
-    };
+        '10o00x faster computationReal-time learning',
+        'Quantum encryptionAutonomous optimization',
+      ],
+      price: 'From $50,0o00',
+      icon: '⚛️',
+      gradient: 'from-purple-60o0 to-indigo-60o0'
+    },
     {
-      title: 'Autonomous Business Intelligence';
+      title: 'Autonomous Business Intelligence',
       description:,
-        'Self-managing AI systems that handle complex business operations, decision-making, and optimization with minimal human intervention.';
+        'Self-managing AI systems that handle complex business operations, decision-making, and optimization with minimal human intervention.',
       features: [
-        '24/7 autonomous operation';
-        'Predictive analytics';
-        'Self-healing systems';
-        'Continuous optimization';
-      ];
-      price: 'From $75,0o00';
-      icon: '🤖';
-      gradient: 'from-blue-60o0 to-cyan-60o0';
-    };
+        '24/7 autonomous operationPredictive analytics',
+        'Self-healing systemsContinuous optimization',
+      ],
+      price: 'From $75,0o00',
+      icon: '🤖',
+      gradient: 'from-blue-60o0 to-cyan-60o0'
+    },
     {
-      title: 'Synthetic Intelligence Platform';
+      title: 'Synthetic Intelligence Platform',
       description:,
-        'Advanced AI systems that can create, evolve, and manage other AI systems, leading to exponential technological advancement.';
+        'Advanced AI systems that can create, evolve, and manage other AI systems, leading to exponential technological advancement.',
       features: [
-        'AI breeding capabilities';
-        'Evolutionary algorithms';
-        'Self-improving systems';
-        'Exponential innovation';
-      ];
-      price: 'From $10o0,0o00';
-      icon: '🔬';
-      gradient: 'from-green-60o0 to-emerald-60o0';
-    };
+        'AI breeding capabilitiesEvolutionary algorithms',
+        'Self-improving systemsExponential innovation',
+      ],
+      price: 'From $10o0,0o00',
+      icon: '🔬',
+      gradient: 'from-green-60o0 to-emerald-60o0'
+    },
     {
-      title: 'Neural Interface Integration';
+      title: 'Neural Interface Integration',
       description:,
-        'Direct brain-computer interfaces that revolutionize human-AI collaboration and unlock new levels of productivity.';
+        'Direct brain-computer interfaces that revolutionize human-AI collaboration and unlock new levels of productivity.',
       features: [
-        'Direct neural control';
-        'Thought-to-action';
-        'Enhanced cognition';
-        'Seamless integration';
-      ];
-      price: 'From $125,0o00';
-      icon: '🧠';
-      gradient: 'from-orange-60o0 to-red-60o0';
-    };
+        'Direct neural controlThought-to-action',
+        'Enhanced cognitionSeamless integration',
+      ],
+      price: 'From $125,0o00',
+      icon: '🧠',
+      gradient: 'from-orange-60o0 to-red-60o0'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-indigo-90o0'>,
@@ -151,5 +143,5 @@ const RevolutionaryAIServices20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryAIServices20o26;
+    </section>)},
+export default RevolutionaryAIServices20o26,

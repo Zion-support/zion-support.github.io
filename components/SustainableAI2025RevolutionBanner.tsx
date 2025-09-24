@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const SustainableAI20o25RevolutionBanner: React.FC = () => {
   return (
@@ -131,5 +131,5 @@ const SustainableAI20o25RevolutionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SustainableAI20o25RevolutionBanner;
+    </section>)},
+export default SustainableAI20o25RevolutionBanner,

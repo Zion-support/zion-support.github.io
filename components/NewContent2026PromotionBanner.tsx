@@ -6,9 +6,9 @@ const NewContent20o26PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [currentFeature, setCurrentFeature] = useState(0),
   const features = [
-    { icon: '🧠', title: 'Neural Superintelligence', description: 'Advanced AI with human-level cognition' };
-    { icon: '⚛️', title: 'Quantum-Neural Fusion', description: 'Revolutionary quantum computing integration' };
-    { icon: '🤖', title: 'Autonomous Systems', description: 'Self-managing business operations' };
+    { icon: '🧠', title: 'Neural Superintelligence', description: 'Advanced AI with human-level cognition' },
+    { icon: '⚛️', title: 'Quantum-Neural Fusion', description: 'Revolutionary quantum computing integration' },
+    { icon: '🤖', title: 'Autonomous Systems', description: 'Self-managing business operations' },
     { icon: '🎯', title: 'Neural Interfaces', description: 'Direct brain-computer connectivity' }
   ],
   useEffect(() => {
@@ -41,7 +41,7 @@ const NewContent20o26PromotionBanner = () => {
               </span>,
             </h1>,
             <p className="text-xl md:text-2xl opacity-90 leading-relaxed">,
-              Discover the latest breakthroughs in neural superintelligence, quantum computing;
+              Discover the latest breakthroughs in neural superintelligence, quantum computing,
               and autonomous business systems that are transforming industries worldwide.,
             </p>,
             {/* Rotating Features */}
@@ -120,5 +120,5 @@ const NewContent20o26PromotionBanner = () => {
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>,
         </svg>,
       </div>,
-    </div>)};
-export default NewContent20o26PromotionBanner;
+    </div>)},
+export default NewContent20o26PromotionBanner,

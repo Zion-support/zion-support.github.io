@@ -1,68 +1,68 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Phone, Mail, MapPin, Globe, ArrowRight, Brain, Rocket, Shield;
-  Cloud, Users, Target, Lightbulb, Code, Server, Network;
+  Phone, Mail, MapPin, Globe, ArrowRight, Brain, Rocket, Shield,
+  Cloud, Users, Target, Lightbulb, Code, Server, Network,
   Heart, BarChart3, Globe2, Zap, Star, Award, TrendingUp} from 'lucide-react',
 const UltraFuturisticFooter20o46: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'AI & Machine Learning';
+      title: 'AI & Machine Learning',
       links: [
-        { label: 'Quantum Neural Interfaces', href: '/quantum-neural-interface-platform-20o46' };
-        { label: 'Autonomous AI Enterprise', href: '/autonomous-ai-enterprise-orchestrator-20o46' };
-        { label: 'Quantum Emotion Intelligence', href: '/quantum-emotion-intelligence-platform-20o46' };
-        { label: 'Autonomous AI Research', href: '/autonomous-ai-research-assistant-20o46' };
-        { label: 'Quantum Creative AI', href: '/quantum-creative-ai-platform-20o46' };
+        { label: 'Quantum Neural Interfaces', href: '/quantum-neural-interface-platform-20o46' },
+        { label: 'Autonomous AI Enterprise', href: '/autonomous-ai-enterprise-orchestrator-20o46' },
+        { label: 'Quantum Emotion Intelligence', href: '/quantum-emotion-intelligence-platform-20o46' },
+        { label: 'Autonomous AI Research', href: '/autonomous-ai-research-assistant-20o46' },
+        { label: 'Quantum Creative AI', href: '/quantum-creative-ai-platform-20o46' },
         { label: 'View All AI Services', href: '/ai-services' }
-      ]};
+      ]},
     {
-      title: 'IT & Infrastructure';
+      title: 'IT & Infrastructure',
       links: [
-        { label: 'Quantum Space Computing', href: '/quantum-space-computing-infrastructure-20o46' };
-        { label: 'Autonomous Cybersecurity', href: '/autonomous-cybersecurity-orchestrator-20o46' };
-        { label: 'Quantum Cloud Hybrid', href: '/quantum-cloud-hybrid-platform-20o46' };
-        { label: 'Autonomous DevOps', href: '/autonomous-devops-intelligence-platform-20o46' };
-        { label: 'Quantum Data Center', href: '/quantum-data-center-optimization-20o46' };
+        { label: 'Quantum Space Computing', href: '/quantum-space-computing-infrastructure-20o46' },
+        { label: 'Autonomous Cybersecurity', href: '/autonomous-cybersecurity-orchestrator-20o46' },
+        { label: 'Quantum Cloud Hybrid', href: '/quantum-cloud-hybrid-platform-20o46' },
+        { label: 'Autonomous DevOps', href: '/autonomous-devops-intelligence-platform-20o46' },
+        { label: 'Quantum Data Center', href: '/quantum-data-center-optimization-20o46' },
         { label: 'View All IT Services', href: '/it-services' }
-      ]};
+      ]},
     {
-      title: 'Micro SAAS Solutions';
+      title: 'Micro SAAS Solutions',
       links: [
-        { label: 'Quantum Sustainability', href: '/quantum-sustainability-optimizer-20o46' };
-        { label: 'Autonomous HR Intelligence', href: '/autonomous-hr-intelligence-suite-20o46' };
-        { label: 'Quantum Financial Intelligence', href: '/quantum-financial-intelligence-platform-20o46' };
-        { label: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-orchestrator-20o46' };
-        { label: 'Quantum Customer Experience', href: '/quantum-customer-experience-optimizer-20o46' };
+        { label: 'Quantum Sustainability', href: '/quantum-sustainability-optimizer-20o46' },
+        { label: 'Autonomous HR Intelligence', href: '/autonomous-hr-intelligence-suite-20o46' },
+        { label: 'Quantum Financial Intelligence', href: '/quantum-financial-intelligence-platform-20o46' },
+        { label: 'Autonomous Supply Chain', href: '/autonomous-supply-chain-orchestrator-20o46' },
+        { label: 'Quantum Customer Experience', href: '/quantum-customer-experience-optimizer-20o46' },
         { label: 'View All Micro SAAS', href: '/micro-saas' }
-      ]};
+      ]},
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { label: 'About Us', href: '/about' };
-        { label: 'Our Mission', href: '/mission' };
-        { label: 'Leadership Team', href: '/team' };
-        { label: 'Careers', href: '/careers' };
-        { label: 'News & Updates', href: '/news' };
+        { label: 'About Us', href: '/about' },
+        { label: 'Our Mission', href: '/mission' },
+        { label: 'Leadership Team', href: '/team' },
+        { label: 'Careers', href: '/careers' },
+        { label: 'News & Updates', href: '/news' },
         { label: 'Contact Us', href: '/contact' }
-      ]};
+      ]},
     {
-      title: 'Resources';
+      title: 'Resources',
       links: [
-        { label: 'Blog & Insights', href: '/blog' };
-        { label: 'Case Studies', href: '/case-studies' };
-        { label: 'White Papers', href: '/white-papers' };
-        { label: 'Webinars', href: '/webinars' };
-        { label: 'Documentation', href: '/docs' };
+        { label: 'Blog & Insights', href: '/blog' },
+        { label: 'Case Studies', href: '/case-studies' },
+        { label: 'White Papers', href: '/white-papers' },
+        { label: 'Webinars', href: '/webinars' },
+        { label: 'Documentation', href: '/docs' },
         { label: 'Support Center', href: '/support' }
       ]}
   ],
   const socialLinks = [
-    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼' };
-    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' };
-    { label: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' };
+    { label: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: '💼' },
+    { label: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: '🐦' },
+    { label: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: '📺' },
     { label: 'GitHub', href: 'https://github.com/Zion-Holdings', icon: '💻' }
   ],
   return (
@@ -77,15 +77,15 @@ const UltraFuturisticFooter20o46: React.FC = () => {
             key={i}
             className="absolute w-1 h-1 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full opacity-20",
             animate={{
-              x: [0, Math.random() * 20o0 - 10o0];
-              y: [0, Math.random() * 20o0 - 10o0];
+              x: [0, Math.random() * 20o0 - 10o0],
+              y: [0, Math.random() * 20o0 - 10o0],
               opacity: [0.2, 0.5, 0.2]}}
             transition={{
-              duration: Math.random() * 15 + 15;
-              repeat: Infinity;
+              duration: Math.random() * 15 + 15,
+              repeat: Infinity,
               ease: "easeInOut"}}
             style={{
-              left: Math.random() * 10o0 + '%';
+              left: Math.random() * 10o0 + '%',
               top: Math.random() * 10o0 + '%'}}
            />))}
       </div>,
@@ -250,5 +250,5 @@ const UltraFuturisticFooter20o46: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default UltraFuturisticFooter20o46;
+    </footer>)},
+export default UltraFuturisticFooter20o46,

@@ -3,40 +3,40 @@ import { Button } from '@/components/ui/button',
 import {
 import { Badge } from '@/components/ui/badge',
 import { ENHANCED_SERVICES } from '@/data/enhancedServices',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card',
-  Brain;
-  Cloud;
-  Shield;
-  Database;
-  TrendingUp;
-  Code;
-  Zap;
-  Heart;
-  DollarSign;
-  Link as LinkIcon;
-  ArrowRight;
-  Star;
-  CheckCircle;
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  TrendingUp,
+  Code,
+  Zap,
+  Heart,
+  DollarSign,
+  Link as LinkIcon,
+  ArrowRight,
+  Star,
+  CheckCircle,
 } from 'lucide-react',
 const featuredServices = ENHANCED_SERVICES.filter(
   service => service.featured).slice(0, 6),
 const serviceIcons = {
-  'AI Automation': Brain;
-  'Cloud Management': Cloud;
-  Cybersecurity: Shield;
-  'Data Engineering': Database;
-  'Business Intelligence': TrendingUp;
-  'Developer Tools': Code;
-  'Digital Transformation': Zap;
-  'Healthcare Technology': Heart;
-  'Financial Technology': DollarSign;
-  Blockchain: LinkIcon;
-};
+  'AI Automation': Brain,
+  'Cloud Management': Cloud,
+  Cybersecurity: Shield,
+  'Data Engineering': Database,
+  'Business Intelligence': TrendingUp,
+  'Developer Tools': Code,
+  'Digital Transformation': Zap,
+  'Healthcare Technology': Heart,
+  'Financial Technology': DollarSign,
+  Blockchain: LinkIcon
+},
 export function EnhancedServicesShowcase() {
   return (
     <section className='py-20 bg-zion-blue-dark'>,

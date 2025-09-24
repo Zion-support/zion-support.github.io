@@ -15,7 +15,7 @@ interface ListingCardProps {
   profileType?: 'service' | 'talent'}
 ,
 export function ListingCard({
-  id;
+  id,
   title,
   description,
   image,
@@ -23,7 +23,7 @@ export function ListingCard({
   tags,
   author,
   authorImage,
-  className;
+  className,
   profileType = 'service'}: ListingCardProps) {
   // Generate a profile ID based on the listing data,
   // In a real appthis would be a proper ID from the database,
@@ -32,7 +32,7 @@ export function ListingCard({
     <Link
       to={`/profile/${profileId}`}
       className={cn(
-        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover:border-zion-purple/50 transition-all duration-300 group cursor-pointer";
+        "flex flex-col overflow-hidden rounded-lg border border-zion-blue-light bg-zion-blue hover: border-zion-purple/50 transition-all duration-300 group cursor-pointer",
         className)}
     >,
       {image && (

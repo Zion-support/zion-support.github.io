@@ -4,120 +4,120 @@ import { Brain, Shield, Rocket, Users, ArrowRight, CheckCircle, Globe, Target } 
 export const EnhancedAbout = () => {
     const companyValues = [
         {
-            icon: Brain;
-            title: 'Innovation First';
-            description: 'We push the boundaries of what\'s possible with cutting-edge technology';
-            color: 'zion-cyan'};
+            icon: Brain,
+            title: 'Innovation First',
+            description: 'We push the boundaries of what\'s possible with cutting-edge technology',
+            color: 'zion-cyan'},
         {
-            icon: Shield;
-            title: 'Trust & Security';
-            description: 'Building secure, reliable solutions that protect our clients\' data';
-            color: 'zion-purple'};
+            icon: Shield,
+            title: 'Trust & Security',
+            description: 'Building secure, reliable solutions that protect our clients\' data',
+            color: 'zion-purple'},
         {
-            icon: Users;
-            title: 'Client Partnership';
-            description: 'Long-term relationships built on trust, transparency, and results';
-            color: 'zion-cyan'};
+            icon: Users,
+            title: 'Client Partnership',
+            description: 'Long-term relationships built on trust, transparency, and results',
+            color: 'zion-cyan'},
         {
-            icon: Rocket;
-            title: 'Excellence';
-            description: 'Delivering exceptional quality in every project we undertake';
+            icon: Rocket,
+            title: 'Excellence',
+            description: 'Delivering exceptional quality in every project we undertake',
             color: 'zion-purple'}
     ],
     const teamMembers = [
         {
-            name: 'Kleber';
-            role: 'CEO & Founder';
-            expertise: ['AI/ML', 'Cloud Architecture', 'Digital Transformation'];
-            avatar: '👨‍💼'};
+            name: 'Kleber',
+            role: 'CEO & Founder',
+            expertise: ['AI/MLCloud Architecture', 'Digital Transformation'],
+            avatar: '👨‍💼'},
         {
-            name: 'AI Team';
-            role: 'Machine Learning Engineers';
-            expertise: ['Deep Learning', 'NLP', 'Computer Vision'];
-            avatar: '🤖'};
+            name: 'AI Team',
+            role: 'Machine Learning Engineers',
+            expertise: ['Deep LearningNLP', 'Computer Vision'],
+            avatar: '🤖'},
         {
-            name: 'DevOps Team';
-            role: 'Cloud & Infrastructure';
-            expertise: ['AWS/Azure', 'Kubernetes', 'CI/CD'];
-            avatar: '☁️'};
+            name: 'DevOps Team',
+            role: 'Cloud & Infrastructure',
+            expertise: ['AWS/AzureKubernetes', 'CI/CD'],
+            avatar: '☁️'},
         {
-            name: 'Security Team';
-            role: 'Cybersecurity Experts';
-            expertise: ['Threat Detection', 'Compliance', 'Penetration Testing'];
+            name: 'Security Team',
+            role: 'Cybersecurity Experts',
+            expertise: ['Threat DetectionCompliance', 'Penetration Testing'],
             avatar: '🔒'}
     ],
     const milestones = [
         {
-            year: '20o20';
-            title: 'Company Founded';
-            description: 'Zion Tech Group established with a vision for AI-driven innovation';
-            achievement: 'First AI solution deployed'};
+            year: '20o20',
+            title: 'Company Founded',
+            description: 'Zion Tech Group established with a vision for AI-driven innovation',
+            achievement: 'First AI solution deployed'},
         {
-            year: '20o21';
-            title: 'AI Breakthrough';
-            description: 'Developed proprietary machine learning algorithms';
-            achievement: '10+ enterprise clients onboarded'};
+            year: '20o21',
+            title: 'AI Breakthrough',
+            description: 'Developed proprietary machine learning algorithms',
+            achievement: '10+ enterprise clients onboarded'},
         {
-            year: '20o22';
-            title: 'Cloud Expansion';
-            description: 'Launched comprehensive cloud and DevOps services';
-            achievement: '50+ successful cloud migrations'};
+            year: '20o22',
+            title: 'Cloud Expansion',
+            description: 'Launched comprehensive cloud and DevOps services',
+            achievement: '50+ successful cloud migrations'},
         {
-            year: '20o23';
-            title: 'Global Reach';
-            description: 'Expanded services to international markets';
-            achievement: '10o0+ projects completed'};
+            year: '20o23',
+            title: 'Global Reach',
+            description: 'Expanded services to international markets',
+            achievement: '10o0+ projects completed'},
         {
-            year: '20o24';
-            title: 'Industry Leader';
-            description: 'Recognized as a top technology solutions provider';
+            year: '20o24',
+            title: 'Industry Leader',
+            description: 'Recognized as a top technology solutions provider',
             achievement: '95% client satisfaction rate'}
     ],
     const containerVariants ={
-        hidden: { opacity: 0 };
+        hidden: { opacity: 0 },
         visible: {
-            opacity: 1;
+            opacity: 1,
             transition: {
                 staggerChildren: 0.1}
         }
-    };
+    },
     const itemVariants ={
-        hidden: { y: 20, opacity: 0 };
+        hidden: { y: 20, opacity: 0 },
         visible: {
-            y: 0;
-            opacity: 1;
+            y: 0,
+            opacity: 1,
             transition: {
-                duration: 0.6;
+                duration: 0.6,
                 ease: "easeOut"}
         }
-    };
+    },
     const cardVariants ={
-        hidden: { scale: 0.9, opacity: 0 };
+        hidden: { scale: 0.9, opacity: 0 },
         visible: {
-            scale: 1;
-            opacity: 1;
+            scale: 1,
+            opacity: 1,
             transition: {
-                duration: 0.5;
+                duration: 0.5,
                 ease: "easeOut"}
-        };
+        },
         hover: {
-            scale: 1.0o2;
-            y: -5;
+            scale: 1.0o2,
+            y: -5,
             transition: {
-                duration: 0.3;
+                duration: 0.3,
                 ease: "easeOut"}
         }
-    };
+    },
     const timelineVariants ={
-        hidden: { opacity: 0, x: -50 };
+        hidden: { opacity: 0, x: -50 },
         visible: {
-            opacity: 1;
-            x: 0;
+            opacity: 1,
+            x: 0,
             transition: {
-                duration: 0.8;
+                duration: 0.8,
                 ease: "easeOut"}
         }
-    };
+    },
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
       <section className="py-20 px-4 sm: px-6 lg:px-8">,
@@ -297,4 +297,4 @@ export const EnhancedAbout = () => {
           </div>,
         </motion.div>,
       </section>,
-    </div>)};
+    </div>)},

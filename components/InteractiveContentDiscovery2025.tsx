@@ -1,5 +1,4 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 const InteractiveContentDiscovery20o25 = () => {
@@ -9,101 +8,101 @@ const InteractiveContentDiscovery20o25 = () => {
   useEffect(() => {
     setIsVisible(true)}, []),
   const categories = [
-    { id: 'all', label: 'All Content', icon: '🌟' };
-    { id: 'ai', label: 'AI & Machine Learning', icon: '🤖' };
-    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' };
-    { id: 'neural', label: 'Neural Interfaces', icon: '🧠' };
-    { id: 'autonomous', label: 'Autonomous Systems', icon: '🚀' };
-    { id: 'business', label: 'Business Solutions', icon: '💼' };
+    { id: 'all', label: 'All Content', icon: '🌟' },
+    { id: 'ai', label: 'AI & Machine Learning', icon: '🤖' },
+    { id: 'quantum', label: 'Quantum Computing', icon: '⚛️' },
+    { id: 'neural', label: 'Neural Interfaces', icon: '🧠' },
+    { id: 'autonomous', label: 'Autonomous Systems', icon: '🚀' },
+    { id: 'business', label: 'Business Solutions', icon: '💼' },
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'Enterprise AI Transformation: 50o0% ROI in 6 Months';
-      category: 'case-study';
-      type: 'Case Study';
+      id: 1,
+      title: 'Enterprise AI Transformation: 50o0% ROI in 6 Months',
+      category: 'case-study',
+      type: 'Case Study',
       description:,
-        'How a Fortune 50o0 company achieved unprecedented ROI through AI automation';
-      readTime: '8 min read';
-      featured: true;
-      tags: ['AI Automation', 'Enterprise', 'ROI'];
-      image: '🏢';
-      gradient: 'from-blue-50o0 to-cyan-60o0';
-      link: '/case-studies/enterprise-ai-transformation';
-    };
+        'How a Fortune 50o0 company achieved unprecedented ROI through AI automation',
+      readTime: '8 min read',
+      featured: true,
+      tags: ['AI AutomationEnterprise', 'ROI'],
+      image: '🏢',
+      gradient: 'from-blue-50o0 to-cyan-60o0',
+      link: '/case-studies/enterprise-ai-transformation'
+    },
     {
-      id: 2;
-      title: 'AI Revolution 20o25: The Future is Now';
+      id: 2,
+      title: 'AI Revolution 20o25: The Future is Now',
       description:,
-        'Discover how artificial intelligence is transforming industries and creating unprecedented opportunities.';
-      category: 'ai';
-      readTime: '8 min read';
-      difficulty: 'Intermediate';
-      tags: ['AI', 'Automation', 'Future Tech'];
-      link: '/ai-20o25';
-      featured: true;
-      type: 'Blog Post';
-      image: '🤖';
-      gradient: 'from-purple-50o0 to-pink-60o0';
-    };
+        'Discover how artificial intelligence is transforming industries and creating unprecedented opportunities.',
+      category: 'ai',
+      readTime: '8 min read',
+      difficulty: 'Intermediate',
+      tags: ['AIAutomation', 'Future Tech'],
+      link: '/ai-20o25',
+      featured: true,
+      type: 'Blog Post',
+      image: '🤖',
+      gradient: 'from-purple-50o0 to-pink-60o0'
+    },
     {
-      id: 3;
-      title: 'Quantum Computing Breakthrough: 10o00x Faster Processing';
-      category: 'quantum';
-      type: 'Research Paper';
+      id: 3,
+      title: 'Quantum Computing Breakthrough: 10o00x Faster Processing',
+      category: 'quantum',
+      type: 'Research Paper',
       description:,
-        'Revolutionary quantum algorithms that are reshaping computational possibilities';
-      readTime: '12 min read';
-      featured: true;
-      tags: ['Quantum Computing', 'Algorithms', 'Performance'];
-      image: '⚛️';
-      gradient: 'from-indigo-50o0 to-purple-60o0';
-      link: '/research/quantum-computing-breakthrough';
-    };
+        'Revolutionary quantum algorithms that are reshaping computational possibilities',
+      readTime: '12 min read',
+      featured: true,
+      tags: ['Quantum ComputingAlgorithms', 'Performance'],
+      image: '⚛️',
+      gradient: 'from-indigo-50o0 to-purple-60o0',
+      link: '/research/quantum-computing-breakthrough'
+    },
     {
-      id: 4;
-      title: 'Neural Interface Revolution: Mind-Computer Integration';
+      id: 4,
+      title: 'Neural Interface Revolution: Mind-Computer Integration',
       description:,
-        'Explore the latest developments in brain-computer interfaces and their potential applications.';
-      category: 'neural';
-      readTime: '10 min read';
-      difficulty: 'Advanced';
-      tags: ['Neural Interfaces', 'BCI', 'Innovation'];
-      link: '/neural-interfaces';
-      featured: false;
-      type: 'Technical Guide';
-      image: '🧠';
-      gradient: 'from-green-50o0 to-teal-60o0';
-    };
+        'Explore the latest developments in brain-computer interfaces and their potential applications.',
+      category: 'neural',
+      readTime: '10 min read',
+      difficulty: 'Advanced',
+      tags: ['Neural InterfacesBCI', 'Innovation'],
+      link: '/neural-interfaces',
+      featured: false,
+      type: 'Technical Guide',
+      image: '🧠',
+      gradient: 'from-green-50o0 to-teal-60o0'
+    },
     {
-      id: 5;
-      title: 'Autonomous Business Systems: The Future of Operations';
-      category: 'autonomous';
-      type: 'Implementation Guide';
+      id: 5,
+      title: 'Autonomous Business Systems: The Future of Operations',
+      category: 'autonomous',
+      type: 'Implementation Guide',
       description:,
-        'Complete guide to implementing autonomous business systems for maximum efficiency';
-      readTime: '15 min read';
-      featured: true;
-      tags: ['Autonomous Systems', 'Business Automation', 'Efficiency'];
-      image: '🚀';
-      gradient: 'from-orange-50o0 to-red-60o0';
-      link: '/guides/autonomous-business-systems';
-    };
+        'Complete guide to implementing autonomous business systems for maximum efficiency',
+      readTime: '15 min read',
+      featured: true,
+      tags: ['Autonomous SystemsBusiness Automation', 'Efficiency'],
+      image: '🚀',
+      gradient: 'from-orange-50o0 to-red-60o0',
+      link: '/guides/autonomous-business-systems'
+    },
     {
-      id: 6;
-      title: 'Business Intelligence Revolution: Data-Driven Decisions';
+      id: 6,
+      title: 'Business Intelligence Revolution: Data-Driven Decisions',
       description:,
-        'Learn how advanced analytics and AI are transforming business decision-making processes.';
-      category: 'business';
-      readTime: '6 min read';
-      difficulty: 'Beginner';
-      tags: ['Business Intelligence', 'Analytics', 'Decision Making'];
-      link: '/business-intelligence';
-      featured: false;
-      type: 'Business Guide';
-      image: '💼';
-      gradient: 'from-yellow-50o0 to-orange-60o0';
-    };
+        'Learn how advanced analytics and AI are transforming business decision-making processes.',
+      category: 'business',
+      readTime: '6 min read',
+      difficulty: 'Beginner',
+      tags: ['Business IntelligenceAnalytics', 'Decision Making'],
+      link: '/business-intelligence',
+      featured: false,
+      type: 'Business Guide',
+      image: '💼',
+      gradient: 'from-yellow-50o0 to-orange-60o0'
+    },
   ],
   const filteredItems =,
     selectedCategory === 'all',
@@ -119,7 +118,7 @@ const InteractiveContentDiscovery20o25 = () => {
         return 'bg-red-10o0 text-red-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getTypeColor = type => {
     switch (type) {
       case 'Case Study':,
@@ -136,7 +135,7 @@ const InteractiveContentDiscovery20o25 = () => {
         return 'bg-pink-10o0 text-pink-80o0',
       default: ,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section
       className={`py-16 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}
@@ -266,5 +265,5 @@ const InteractiveContentDiscovery20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveContentDiscovery20o25;
+    </section>)},
+export default InteractiveContentDiscovery20o25,

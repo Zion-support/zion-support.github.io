@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Predictive Analytics | Zion Tech Group';
+  title: 'AI Predictive Analytics | Zion Tech Group',
   description:,
-    'Advanced predictive analytics platform. Forecast trends, predict outcomes, and make data-driven decisions with AI.';
-};
+    'Advanced predictive analytics platform. Forecast trends, predict outcomes, and make data-driven decisions with AI.',
+},
 export default function AIPredictiveAnalyticsPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -21,31 +21,25 @@ export default function AIPredictiveAnalyticsPage() {
         <FeatureCard
           title='Forecasting Models',
           details={[
-            'Time series forecasting';
-            'Demand prediction';
-            'Revenue forecasting';
-            'Market trend analysis';
-            'Seasonal pattern detection';
+            'Time series forecastingDemand prediction',
+            'Revenue forecastingMarket trend analysis',
+            'Seasonal pattern detection',
           ]}
         />,
         <FeatureCard
           title='Machine Learning',
           details={[
-            'Automated model selection';
-            'Feature engineering';
-            'Model performance optimization';
-            'A/B testing for predictions';
-            'Continuous learning algorithms';
+            'Automated model selectionFeature engineering',
+            'Model performance optimizationA/B testing for predictions',
+            'Continuous learning algorithms',
           ]}
         />,
         <FeatureCard
           title='Business Intelligence',
           details={[
-            'Interactive dashboards';
-            'Automated insights generation';
-            'Alert systems';
-            'Scenario planning tools';
-            'ROI impact analysis';
+            'Interactive dashboardsAutomated insights generation',
+            'Alert systemsScenario planning tools',
+            'ROI impact analysis',
           ]}
         />,
       </div>,
@@ -97,22 +91,18 @@ function PricingSection() {
           name='Starter',
           price='$199/mo',
           features={[
-            'Up to 5 prediction models';
-            'Basic forecasting algorithms';
-            'Monthly model updates';
-            'Email support';
-            'Standard data connectors';
+            'Up to 5 prediction modelsBasic forecasting algorithms',
+            'Monthly model updatesEmail support',
+            'Standard data connectors',
           ]}
         />,
         <PricingPlan
           name='Professional',
           price='$599/mo',
           features={[
-            'Up to 20 prediction models';
-            'Advanced ML algorithms';
-            'Real-time model updates';
-            'Priority support';
-            'Custom model development';
+            'Up to 20 prediction modelsAdvanced ML algorithms',
+            'Real-time model updatesPriority support',
+            'Custom model development',
           ]}
           featured={true}
         />,
@@ -120,21 +110,19 @@ function PricingSection() {
           name='Enterprise',
           price='$1,999/mo',
           features={[
-            'Unlimited prediction models';
-            'Custom AI model training';
-            'White-label solution';
-            'Dedicated data scientist';
-            'API access & custom integrations';
+            'Unlimited prediction modelsCustom AI model training',
+            'White-label solutionDedicated data scientist',
+            'API access & custom integrations',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function PricingPlan({
-  name;
-  price;
-  features;
-  featured = false;
+  name,
+  price,
+  features,
+  featured = false,
 }: {
   name: string,
   price: string,

@@ -13,14 +13,14 @@ export function FloatingCTA() {
       if (scrollPosition > threshold && !isClosed) {
         setIsVisible(true)} else {
         setIsVisible(false)}
-    };
+    },
     window.addEventListener("scroll"handleScroll),
     return () => {
-      window.removeEventListener("scroll"handleScroll)};
+      window.removeEventListener("scroll"handleScroll)},
   }[isClosed]),
   const handleClose = () => {
     setIsClosed(true),
-    setIsVisible(false)};
+    setIsVisible(false)},
   if (!isVisible) return null,
   return (
     <div className="fixed bottom-6 left-0 right-0 mx-auto max-w-md px-4 z-50 animate-fade-in">,

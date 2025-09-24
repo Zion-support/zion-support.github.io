@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Guide: Enterprise AI Governance (20o26)';
+  title: 'Guide: Enterprise AI Governance (20o26)',
   description:,
-    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.';
-};
+    'Step-by-step guide to implement enterprise AI governance with policy-as-code and continuous evaluation.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,

@@ -14,7 +14,7 @@ export default function AdvancedNewsletter() {
     await new Promise(resolve => setTimeout(resolve10o00)),
     setIsSubscribed(true),
     setIsLoading(false),
-    setEmail(', ')};
+    setEmail()},
   return (
     <section className="py-20 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <div className="max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 text-center">,

@@ -1,52 +1,52 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewContent20o27ShowcaseBanner: React.FC = () => {
   const newContentItems = [
     {
-      title: 'AI 20o27 Ultimate Breakthrough';
+      title: 'AI 20o27 Ultimate Breakthrough',
       description:,
-        'Revolutionary AI technologies that will transform businesses in 20o27';
-      link: '/ai-20o27-breakthrough';
-      badge: 'NEW';
-      category: 'Revolutionary Technology';
-    };
+        'Revolutionary AI technologies that will transform businesses in 20o27',
+      link: '/ai-20o27-breakthrough',
+      badge: 'NEW',
+      category: 'Revolutionary Technology'
+    },
     {
-      title: 'Quantum-Neural Fusion';
+      title: 'Quantum-Neural Fusion',
       description:,
-        "The world's first integration of quantum computing with neural networks";
-      link: '/quantum-neural-fusion';
-      badge: 'BREAKTHROUGH';
-      category: 'Quantum Computing';
-    };
+        "The world's first integration of quantum computing with neural networks",
+      link: '/quantum-neural-fusion',
+      badge: 'BREAKTHROUGH',
+      category: 'Quantum Computing'
+    },
     {
-      title: 'Synthetic Intelligence 20o27';
-      description: 'AI systems that create and manage other AI systems';
-      link: '/synthetic-intelligence-20o27';
-      badge: 'FUTURE';
-      category: 'AI Evolution';
-    };
+      title: 'Synthetic Intelligence 20o27',
+      description: 'AI systems that create and manage other AI systems',
+      link: '/synthetic-intelligence-20o27',
+      badge: 'FUTURE',
+      category: 'AI Evolution'
+    },
     {
-      title: 'Autonomous Business Ecosystems';
-      description: 'Complete business operations that run independently';
-      link: '/autonomous-business-ecosystems';
-      badge: 'REVOLUTIONARY';
-      category: 'Business Automation';
-    };
+      title: 'Autonomous Business Ecosystems',
+      description: 'Complete business operations that run independently',
+      link: '/autonomous-business-ecosystems',
+      badge: 'REVOLUTIONARY',
+      category: 'Business Automation'
+    },
     {
-      title: 'Neural Superintelligence Platform';
+      title: 'Neural Superintelligence Platform',
       description:,
-        'AI consciousness that surpasses human cognitive capabilities';
-      link: '/neural-superintelligence';
-      badge: 'ULTIMATE';
-      category: 'AI Consciousness';
-    };
+        'AI consciousness that surpasses human cognitive capabilities',
+      link: '/neural-superintelligence',
+      badge: 'ULTIMATE',
+      category: 'AI Consciousness'
+    },
     {
-      title: 'Quantum Consciousness Matrix';
-      description: 'AI systems with quantum-enhanced consciousness';
-      link: '/quantum-consciousness';
-      badge: 'BREAKTHROUGH';
-      category: 'Quantum AI';
-    };
+      title: 'Quantum Consciousness Matrix',
+      description: 'AI systems with quantum-enhanced consciousness',
+      link: '/quantum-consciousness',
+      badge: 'BREAKTHROUGH',
+      category: 'Quantum AI'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
@@ -172,5 +172,5 @@ const NewContent20o27ShowcaseBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o27ShowcaseBanner;
+    </section>)},
+export default NewContent20o27ShowcaseBanner,

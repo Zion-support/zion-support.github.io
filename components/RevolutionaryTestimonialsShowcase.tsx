@@ -2,76 +2,76 @@ import { motion } from 'framer-motion',
 StarQuoteTrendingUpUsersAwardZap,
 const testimonials = [
   {
-    id: 1;
-    name: "Sarah Chen";
-    title: "CTO";
-    company: "TechCorp Global";
-    industry: "Technology";
-    rating: 5;
-    content: "Zion Tech 'Group', 's AI solutions transformed our entire operation. We achieved 30o0% ROI within the first year. Their expertise in automation is unmatched.";
-    results: "30o0% ROI in 12 months";
-    image: "/images/testimonials/sarah-chen.jpg";
-    featured: true};
+    id: 1,
+    name: "Sarah Chen",
+    title: "CTO",
+    company: "TechCorp Global",
+    industry: "Technology",
+    rating: 5,
+    content: "Zion Tech 'Groups AI solutions transformed our entire operation. We achieved 30o0% ROI within the first year. Their expertise in automation is unmatched.",
+    results: "30o0% ROI in 12 months",
+    image: "/images/testimonials/sarah-chen.jpg",
+    featured: true},
   {
-    id: 2;
-    name: "Michael Rodriguez";
-    title: "VP of Operations";
-    company: "Manufacturing Solutions Inc";
-    industry: "Manufacturing";
-    rating: 5;
-    content: "The predictive maintenance system they implemented saved us $2M annually. Our downtime reduced by 80% and efficiency increased by 45%.";
-    results: "$2M annual savings";
-    image: "/images/testimonials/michael-rodriguez.jpg";
-    featured: true};
+    id: 2,
+    name: "Michael Rodriguez",
+    title: "VP of Operations",
+    company: "Manufacturing Solutions Inc",
+    industry: "Manufacturing",
+    rating: 5,
+    content: "The predictive maintenance system they implemented saved us $2M annually. Our downtime reduced by 80% and efficiency increased by 45%.",
+    results: "$2M annual savings",
+    image: "/images/testimonials/michael-rodriguez.jpg",
+    featured: true},
   {
-    id: 3;
-    name: "Dr. Emily Watson";
-    title: "Chief Medical Officer";
-    company: "Regional Health Network";
-    industry: "Healthcare";
-    rating: 5;
-    content: "Their AI diagnostic platform revolutionized our patient care. Diagnosis accuracy improved to 98% and processing time reduced by 90%.";
-    results: "98% diagnosis accuracy";
-    image: "/images/testimonials/emily-watson.jpg";
-    featured: false};
+    id: 3,
+    name: "Dr. Emily Watson",
+    title: "Chief Medical Officer",
+    company: "Regional Health Network",
+    industry: "Healthcare",
+    rating: 5,
+    content: "Their AI diagnostic platform revolutionized our patient care. Diagnosis accuracy improved to 98% and processing time reduced by 90%.",
+    results: "98% diagnosis accuracy",
+    image: "/images/testimonials/emily-watson.jpg",
+    featured: false},
   {
-    id: 4;
-    name: "James Park";
-    title: "Head of Digital Innovation";
-    company: "Financial Services Group";
-    industry: "Finance";
-    rating: 5;
-    content: "Zion Tech 'Group', 's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.";
-    results: "99.7% fraud detection";
-    image: "/images/testimonials/james-park.jpg";
-    featured: false};
+    id: 4,
+    name: "James Park",
+    title: "Head of Digital Innovation",
+    company: "Financial Services Group",
+    industry: "Finance",
+    rating: 5,
+    content: "Zion Tech 'Group', 's fraud detection system is incredible. We reduced false positives by 85% while catching 99.7% of actual fraud attempts.",
+    results: "99.7% fraud detection",
+    image: "/images/testimonials/james-park.jpg",
+    featured: false},
   {
-    id: 5;
-    name: "Lisa Thompson";
-    title: "CEO";
-    company: "RetailMax Chain";
-    industry: "Retail";
-    rating: 5;
-    content: "The AI-powered inventory optimization transformed our supply chain. We reduced costs by 35% and improved customer satisfaction by 60%.";
-    results: "35% cost reduction";
-    image: "/images/testimonials/lisa-thompson.jpg";
-    featured: false};
+    id: 5,
+    name: "Lisa Thompson",
+    title: "CEO",
+    company: "RetailMax Chain",
+    industry: "Retail",
+    rating: 5,
+    content: "The AI-powered inventory optimization transformed our supply chain. We reduced costs by 35% and improved customer satisfaction by 60%.",
+    results: "35% cost reduction",
+    image: "/images/testimonials/lisa-thompson.jpg",
+    featured: false},
   {
-    id: 6;
-    name: "David Kim";
-    title: "Director of IT";
-    company: "Logistics Pro";
-    industry: "Logistics";
-    rating: 5;
-    content: "Their route optimization AI reduced our delivery times by 40% and fuel costs by 25%. The ROI was visible within 3 months of implementation.";
-    results: "40% faster delivery";
-    image: "/images/testimonials/david-kim.jpg";
+    id: 6,
+    name: "David Kim",
+    title: "Director of IT",
+    company: "Logistics Pro",
+    industry: "Logistics",
+    rating: 5,
+    content: "Their route optimization AI reduced our delivery times by 40% and fuel costs by 25%. The ROI was visible within 3 months of implementation.",
+    results: "40% faster delivery",
+    image: "/images/testimonials/david-kim.jpg",
     featured: false}
 ],
 const stats = [
-  { label: "Client Satisfaction"value: "98%"icon: Star };
-  { label: "Average ROI"value: "250%"icon: TrendingUp };
-  { label: "Projects Completed"value: "50o0+"icon: Award };
+  { label: "Client Satisfaction"value: "98%"icon: Star },
+  { label: "Average ROI"value: "250%"icon: TrendingUp },
+  { label: "Projects Completed"value: "50o0+"icon: Award },
   { label: "Global Clients"value: "50+"icon: Users }
 ],
 export default function RevolutionaryTestimonialsShowcase() {
@@ -93,7 +93,7 @@ export default function RevolutionaryTestimonialsShowcase() {
             What Our Clients Say About Us,
           </h2>,
           <p className="text-xl text-gray-60o0 max-w-3xl mx-auto">,
-            'Don', 't just take our word for it. Hear from industry leaders 'who', 've transformed their businesses,
+            'Dont just take our word for it. Hear from industry leaders 'who', 've transformed their businesses,
             with our AI solutions and achieved extraordinary results.,
           </p>,
         </motion.div>,
@@ -146,7 +146,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               {/* Author */}
               <div className="flex items-center">,
                 <div className="w-12 h-12 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-full flex items-center justify-center text-white font-semibold mr-4">,
-                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
+                  {testimonial.name.split(' ').map(n => n[0]).join()}
                 </div>,
                 <div>,
                   <div className="font-semibold text-gray-90o0">{testimonial.name}</div>,
@@ -187,7 +187,7 @@ export default function RevolutionaryTestimonialsShowcase() {
               {/* Author */}
               <div className="flex items-center">,
                 <div className="w-10 h-10 bg-gradient-to-br from-blue-50o0 to-purple-60o0 rounded-full flex items-center justify-center text-white font-semibold text-sm mr-3">,
-                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
+                  {testimonial.name.split(' ').map(n => n[0]).join()}
                 </div>,
                 <div>,
                   <div className="font-semibold text-gray-90o0 text-sm">{testimonial.name}</div>,

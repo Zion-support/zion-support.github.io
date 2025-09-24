@@ -20,25 +20,23 @@ type Deck = {
   title: string,
   stage: FundingStage,
   style: 'Minimal' | 'Gradient' | 'Web3' | 'Corporate',
-  sections: Record<DeckSectionKey string>};
+  sections: Record<DeckSectionKey string>},
 const defaultSections: Record<DeckSectionKey string> = {
-  vision: '';
-  market: '';
-  product: '';
-  team: '';
-  traction: '';
-  tokenomics: '';
-  timeline: '';
-  ask: '';
-  useOfFunds: '';
-  growthModel: '';
-};
+  vision: '',
+  market: '',
+  product: '',
+  team: '',
+  traction: '',
+  tokenomics: '',
+  timeline: '',
+  ask: '',
+  useOfFunds: '',
+  growthModel: ''
+},
 const stageLabels: Record<FundingStage string> = {
-  'pre-seed': 'Pre-Seed / Friends & Family';
-  seed: 'Seed / Strategic Angels';
-  'series-a': 'Series A / Institutional';
-  'public-token': 'Public Token Round (Fair launch, IDO, Airdrop)';
-};
+  'pre-seed': 'Pre-Seed / Friends & Family',
+  seed: 'Seed / Strategic Angelsseries-a': 'Series A / Institutionalpublic-token': 'Public Token Round (Fair launch, IDO, Airdrop)',
+},
 export default function FundraisingHub() {
   const [stage, setStage] = useState<FundingStage>('series-a'),
   const [style, setStyle] = useState<,
@@ -48,43 +46,43 @@ export default function FundraisingHub() {
   const [operatorPrompt, setOperatorPrompt] = useState(
     'Create a fundraising deck for an AI talent protocol raising a $5M Series A. Include: vision, traction, use of funds, token utility, and multiverse growth model.'),
   const activeDeck = useMemo(
-    () => decks.find(d => d.id === activeDeckId) || null;
+    () => decks.find(d => d.id === activeDeckId) || null,
     [decks, activeDeckId]),
   async function handleGenerateDeck() {
-    const payload = { stage, style, operatorPrompt };
+    const payload = { stage, style, operatorPrompt },
     try {
       const res = await fetch('/api/fundraising/generate-deck', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify(payload);
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
       }),
       const data = await res.json(),
       const newDeck: Deck = {
-        id: uuidv4();
-        title: data?.title || `Deck - ${stageLabels[stage]}`;
-        stage;
-        style;
-        sections: { ...defaultSections, ...(data?.sections || {}) };
-      };
+        id: uuidv4(),
+        title: data?.title || `Deck - ${stageLabels[stage]}`,
+        stage,
+        style,
+        sections: { ...defaultSections, ...(data?.sections || {}) },
+      },
       setDecks(prev => [newDeck, ...prev]),
       setActiveDeckId(newDeck.id)} catch (e) {
       const fallback: Deck = {
-        id: uuidv4();
-        title: `Deck - ${stageLabels[stage]}`;
-        stage;
-        style;
+        id: uuidv4(),
+        title: `Deck - ${stageLabels[stage]}`,
+        stage,
+        style,
         sections: {
-          ...defaultSections;
+          ...defaultSections,
           vision:,
-            'Our vision is to build the canonical AI-native talent protocol.';
-          traction: '10k waitlist, 50 design partners, $250k GMV in beta.';
-          useOfFunds: '$5M to scale engineering, growth, and partnerships.';
+            'Our vision is to build the canonical AI-native talent protocol.',
+          traction: '10k waitlist, 50 design partners, $250k GMV in beta.',
+          useOfFunds: '$5M to scale engineering, growth, and partnerships.',
           tokenomics:,
-            'Utility token for staking credentials, access, and governance.';
+            'Utility token for staking credentials, access, and governance.',
           growthModel:,
-            'Multiverse growth: network effects across talent, companies, and tools.';
-        };
-      };
+            'Multiverse growth: network effects across talent, companies, and tools.',
+        },
+      },
       setDecks(prev => [fallback, ...prev]),
       setActiveDeckId(fallback.id)}
   }
@@ -100,9 +98,9 @@ export default function FundraisingHub() {
   async function handleExport(format: 'pdf' | 'notion') {
     if (!activeDeck) return,
     await fetch('/api/fundraising/export', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ deck: activeDeck, format });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ deck: activeDeck, format }),
     }),
     alert(`Export requested: ${format.toUpperCase()}`)}
 ,
@@ -226,16 +224,16 @@ export default function FundraisingHub() {
               <div className='grid grid-cols-1 md:grid-cols-2 gap-4'>,
                 {(
                   [
-                    ['vision', 'Vision'];
-                    ['market', 'Market size'];
-                    ['product', 'Product'];
-                    ['team', 'Team'];
-                    ['traction', 'Traction'];
-                    ['tokenomics', 'Tokenomics'];
-                    ['timeline', 'Timeline'];
-                    ['ask', 'Ask'];
-                    ['useOfFunds', 'Use of funds'];
-                    ['growthModel', 'Multiverse growth model'];
+                    ['visionVision'],
+                    ['marketMarket size'],
+                    ['productProduct'],
+                    ['teamTeam'],
+                    ['tractionTraction'],
+                    ['tokenomicsTokenomics'],
+                    ['timelineTimeline'],
+                    ['askAsk'],
+                    ['useOfFundsUse of funds'],
+                    ['growthModelMultiverse growth model'],
                   ] as [DeckSectionKey, string][]).map(([key, label]) => (
                   <div key={key}>,
                     <label className='block text-xs mb-1 text-gray-50o0'>,

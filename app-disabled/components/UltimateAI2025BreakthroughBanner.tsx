@@ -9,39 +9,39 @@ interface ContentItem {
   metrics: {
     roi: string,
     savings: string,
-    efficiency: string};
+    efficiency: string},
   readingTime: string}
 ,
 const contentItems: ContentItem[] = [
   {
-    id: 'ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
-    title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide to 2,50o0% ROI';
-    type: 'blog';
-    url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
+    id: 'ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
+    title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide to 2,50o0% ROI',
+    type: 'blog',
+    url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
     metrics: {
-      roi: '2,50o0%';
-      savings: '$3.2B+';
-      efficiency: '95%'};
-    readingTime: '25 min read'};
+      roi: '2,50o0%',
+      savings: '$3.2B+',
+      efficiency: '95%'},
+    readingTime: '25 min read'},
   {
-    id: 'fortune-50o0-ai-transformation-250o0-roi-success-story';
-    title: 'Fortune 50o0 AI Transformation Success: $3.2B Annual Savings - 2,50o0% ROI Success Story';
-    type: 'case-study';
-    url: '/case-studies/fortune-50o0-ai-transformation-250o0-roi-success-story';
+    id: 'fortune-50o0-ai-transformation-250o0-roi-success-story',
+    title: 'Fortune 50o0 AI Transformation Success: $3.2B Annual Savings - 2,50o0% ROI Success Story',
+    type: 'case-study',
+    url: '/case-studies/fortune-50o0-ai-transformation-250o0-roi-success-story',
     metrics: {
-      roi: '2,50o0%';
-      savings: '$3.2B';
-      efficiency: '99.2%'};
-    readingTime: '18 min read'};
+      roi: '2,50o0%',
+      savings: '$3.2B',
+      efficiency: '99.2%'},
+    readingTime: '18 min read'},
   {
-    id: 'ai-20o25-implementation-ultimate-roadmap-250o0-roi';
-    title: 'AI 20o25 Implementation Ultimate Roadmap: From Strategy to 2,50o0% ROI in 18 Months';
-    type: 'resource';
-    url: '/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi';
+    id: 'ai-20o25-implementation-ultimate-roadmap-250o0-roi',
+    title: 'AI 20o25 Implementation Ultimate Roadmap: From Strategy to 2,50o0% ROI in 18 Months',
+    type: 'resource',
+    url: '/resources/ai-20o25-implementation-ultimate-roadmap-250o0-roi',
     metrics: {
-      roi: '2,50o0%';
-      savings: '$2.5B-5B';
-      efficiency: '85-95%'};
+      roi: '2,50o0%',
+      savings: '$2.5B-5B',
+      efficiency: '85-95%'},
     readingTime: '25 min read'}
 ],
 const UltimateAI20o25BreakthroughBanner: React.FC = () => {
@@ -63,7 +63,7 @@ const UltimateAI20o25BreakthroughBanner: React.FC = () => {
   const handleDismiss = () => {
     setIsVisible(false),
     setIsDismissed(true),
-    localStorage.setItem('ultimate-ai-20o25-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-ai-20o25-banner-dismissedtrue')},
   if (!isVisible || isDismissed) return null,
   const currentItem = contentItems[currentIndex],
   return (
@@ -163,5 +163,5 @@ const UltimateAI20o25BreakthroughBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateAI20o25BreakthroughBanner;
+    </div>)},
+export default UltimateAI20o25BreakthroughBanner,

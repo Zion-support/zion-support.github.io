@@ -8,46 +8,46 @@ const NextGenInnovationShowcase20o25: React.FC = () => {
     setIsVisible(true)}[]),
   const innovations = [
     {
-      id: 1;
-      title: 'AI-Powered Analytics';
-      icon: '📊';
-      description: 'Advanced machine learning algorithms for predictive insights';
-      features: ['Real-time 'Analysis', 'Predictive 'Modeling', 'Automated Insights'];
-      gradient: 'from-blue-50o0 to-cyan-50o0'};
+      id: 1,
+      title: 'AI-Powered Analytics',
+      icon: '📊',
+      description: 'Advanced machine learning algorithms for predictive insights',
+      features: ['Real-time 'AnalysisPredictive 'Modeling', 'Automated Insights'],
+      gradient: 'from-blue-50o0 to-cyan-50o0'},
     {
-      id: 2;
-      title: 'Quantum Computing';
-      icon: '⚛️';
-      description: 'Revolutionary computing power for complex problem solving';
-      features: ['Quantum 'Algorithms', 'Optimization'Cryptography'];
-      gradient: 'from-purple-50o0 to-pink-50o0'};
+      id: 2,
+      title: 'Quantum Computing',
+      icon: '⚛️',
+      description: 'Revolutionary computing power for complex problem solving',
+      features: ['Quantum 'AlgorithmsOptimization'Cryptography'],
+      gradient: 'from-purple-50o0 to-pink-50o0'},
     {
-      id: 3;
-      title: 'Neural Interfaces';
-      icon: '🧠';
-      description: 'Direct brain-computer interaction technologies';
-      features: ['BCI 'Systems', 'Cognitive 'Enhancement', 'Mind Control'];
-      gradient: 'from-green-50o0 to-teal-50o0'};
+      id: 3,
+      title: 'Neural Interfaces',
+      icon: '🧠',
+      description: 'Direct brain-computer interaction technologies',
+      features: ['BCI 'SystemsCognitive 'Enhancement', 'Mind Control'],
+      gradient: 'from-green-50o0 to-teal-50o0'},
     {
-      id: 4;
-      title: 'Blockchain Solutions';
-      icon: '⛓️';
-      description: 'Securedecentralized systems for modern applications';
-      features: ['Smart 'Contracts', 'DeFi'NFT Integration'];
-      gradient: 'from-orange-50o0 to-red-50o0'};
+      id: 4,
+      title: 'Blockchain Solutions',
+      icon: '⛓️',
+      description: 'Securedecentralized systems for modern applications',
+      features: ['Smart 'ContractsDeFi'NFT Integration'],
+      gradient: 'from-orange-50o0 to-red-50o0'},
     {
-      id: 5;
-      title: 'IoT Networks';
-      icon: '🌐';
-      description: 'Connected devices creating smart ecosystems';
-      features: ['Sensor 'Networks', 'Edge 'Computing', 'Real-time Monitoring'];
-      gradient: 'from-indigo-50o0 to-purple-50o0'};
+      id: 5,
+      title: 'IoT Networks',
+      icon: '🌐',
+      description: 'Connected devices creating smart ecosystems',
+      features: ['Sensor 'NetworksEdge 'Computing', 'Real-time Monitoring'],
+      gradient: 'from-indigo-50o0 to-purple-50o0'},
     {
-      id: 6;
-      title: 'Robotic Automation';
-      icon: '🤖';
-      description: 'Intelligent robots transforming industries';
-      features: ['Industrial 'Robots', 'Service 'Bots', 'Autonomous Systems'];
+      id: 6,
+      title: 'Robotic Automation',
+      icon: '🤖',
+      description: 'Intelligent robots transforming industries',
+      features: ['Industrial 'RobotsService 'Bots', 'Autonomous Systems'],
       gradient: 'from-pink-50o0 to-rose-50o0'}
   ],
   return (
@@ -233,5 +233,5 @@ const NextGenInnovationShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NextGenInnovationShowcase20o25;
+    </div>)},
+export default NextGenInnovationShowcase20o25,

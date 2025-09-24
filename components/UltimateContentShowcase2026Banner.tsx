@@ -6,10 +6,8 @@ const UltimateContentShowcase20o26Banner = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [currentFeature, setCurrentFeature] = useState(0),
   const features = [
-    'Neural Superintelligence';
-    'Quantum-Neural Fusion';
-    'Autonomous Business Systems';
-    'Neural Interface Technology'],
+    'Neural SuperintelligenceQuantum-Neural Fusion',
+    'Autonomous Business SystemsNeural Interface Technology'],
   useEffect(() => {
     const timer = setTimeout(() => setIsVisible(true), 20o0),
     return () => clearTimeout(timer)}, []),
@@ -37,7 +35,7 @@ const UltimateContentShowcase20o26Banner = () => {
               </span>,
             </h1>,
             <p className="text-xl md:text-2xl opacity-90 leading-relaxed">,
-              Discover revolutionary AI technologies, quantum computing breakthroughs;
+              Discover revolutionary AI technologies, quantum computing breakthroughs,
               and neural interface innovations transforming businesses worldwide.,
             </p>,
             {/* Rotating Features */}
@@ -100,5 +98,5 @@ const UltimateContentShowcase20o26Banner = () => {
           <path d="M0,0V5.63C149.93,59,314.09,71.32,475.83,42.57c43-7.64,84.23-20.12,127.61-26.46,59-8.63,112.48,12.24,165.56,35.4C827.93,77.22,886,95.24,951.2,90c86.53-7,172.46-45.71,248.8-84.81V0Z" fill="currentColor"></path>,
         </svg>,
       </div>,
-    </div>)};
-export default UltimateContentShowcase20o26Banner;
+    </div>)},
+export default UltimateContentShowcase20o26Banner,

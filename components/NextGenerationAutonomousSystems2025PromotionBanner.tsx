@@ -6,40 +6,40 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      title: "AI 20o25: Next-Generation Autonomous Systems Revolutionary Breakthrough";
-      subtitle: "Ultimate Guide to 18,0o00% ROI";
-      description: "Discover how next-generation autonomous systems are revolutionizing enterprise operations with unprecedented 18,0o00% ROI and $20o0B+ in savings across Fortune 50o0 companies.";
+      title: "AI 20o25: Next-Generation Autonomous Systems Revolutionary Breakthrough",
+      subtitle: "Ultimate Guide to 18,0o00% ROI",
+      description: "Discover how next-generation autonomous systems are revolutionizing enterprise operations with unprecedented 18,0o00% ROI and $20o0B+ in savings across Fortune 50o0 companies.",
       metrics: {
-        roi: "18,0o00%";
-        savings: "$20o0B+";
-        efficiency: "2,40o0%";
-        accuracy: "99.97%"};
-      url: "/blog/ai-20o25-next-generation-autonomous-systems-revolutionary-breakthrough";
-      type: "blog";
-      readingTime: "35 min read"};
+        roi: "18,0o00%",
+        savings: "$20o0B+",
+        efficiency: "2,40o0%",
+        accuracy: "99.97%"},
+      url: "/blog/ai-20o25-next-generation-autonomous-systems-revolutionary-breakthrough",
+      type: "blog",
+      readingTime: "35 min read"},
     {
-      title: "Fortune 50o0 Next-Generation Autonomous Systems Success Story";
-      subtitle: "$20o0B Annual Savings - 18,0o00% ROI";
-      description: "Discover how a Fortune 50o0 manufacturing giant achieved unprecedented 18,0o00% ROI and $20o0B in annual savings through next-generation autonomous systems implementation.";
+      title: "Fortune 50o0 Next-Generation Autonomous Systems Success Story",
+      subtitle: "$20o0B Annual Savings - 18,0o00% ROI",
+      description: "Discover how a Fortune 50o0 manufacturing giant achieved unprecedented 18,0o00% ROI and $20o0B in annual savings through next-generation autonomous systems implementation.",
       metrics: {
-        roi: "18,0o00%";
-        savings: "$20o0B";
-        efficiency: "2,40o0%";
-        quality: "99.97%"};
-      url: "/case-studies/fortune-50o0-next-generation-autonomous-systems-180o00-roi-success-story";
-      type: "case-study";
-      readingTime: "25 min read"};
+        roi: "18,0o00%",
+        savings: "$20o0B",
+        efficiency: "2,40o0%",
+        quality: "99.97%"},
+      url: "/case-studies/fortune-50o0-next-generation-autonomous-systems-180o00-roi-success-story",
+      type: "case-study",
+      readingTime: "25 min read"},
     {
-      title: "Next-Generation Autonomous Systems Implementation Guide 20o25";
-      subtitle: "Complete Roadmap to 18,0o00% ROI";
-      description: "Complete implementation guide for next-generation autonomous systems that have delivered 18,0o00% ROI and $20o0B+ in savings for Fortune 50o0 companies.";
+      title: "Next-Generation Autonomous Systems Implementation Guide 20o25",
+      subtitle: "Complete Roadmap to 18,0o00% ROI",
+      description: "Complete implementation guide for next-generation autonomous systems that have delivered 18,0o00% ROI and $20o0B+ in savings for Fortune 50o0 companies.",
       metrics: {
-        roi: "18,0o00%";
-        savings: "$20o0B+";
-        efficiency: "2,40o0%";
-        accuracy: "99.97%"};
-      url: "/resources/next-generation-autonomous-systems-implementation-guide-20o25";
-      type: "resource";
+        roi: "18,0o00%",
+        savings: "$20o0B+",
+        efficiency: "2,40o0%",
+        accuracy: "99.97%"},
+      url: "/resources/next-generation-autonomous-systems-implementation-guide-20o25",
+      type: "resource",
       readingTime: "45 min read"}
   ],
   useEffect(() => {
@@ -48,7 +48,7 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
     return () => clearInterval(timer)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('nextGenAutonomousSystems20o25BannerDismissed', 'true')};
+    localStorage.setItem('nextGenAutonomousSystems20o25BannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('nextGenAutonomousSystems20o25BannerDismissed'),
     if (dismissed === 'true') {
@@ -171,5 +171,5 @@ const NextGenerationAutonomousSystems20o25PromotionBanner = () => {
           🚀 REVOLUTIONARY BREAKTHROUGH,
         </div>,
       </div>,
-    </div>)};
-export default NextGenerationAutonomousSystems20o25PromotionBanner;
+    </div>)},
+export default NextGenerationAutonomousSystems20o25PromotionBanner,

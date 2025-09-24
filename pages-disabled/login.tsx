@@ -140,5 +140,5 @@ const LoginPage = () => {
           </div>,
         </div>,
       </div>,
-    </>)};
-export default LoginPage;
+    </>)},
+export default LoginPage,

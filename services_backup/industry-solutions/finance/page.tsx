@@ -1,10 +1,10 @@
 export const metadata = {
-  title: 'Financial Services Technology | Zion Tech Group';
+  title: 'Financial Services Technology | Zion Tech Group',
   description:,
-    'Secure financial technology solutions including trading platforms, payment processing, fraud detection, risk management, and regulatory compliance systems.';
+    'Secure financial technology solutions including trading platforms, payment processing, fraud detection, risk management, and regulatory compliance systems.',
   keywords:,
-    'fintech, financial technology, trading platforms, payment processing, fraud detection, risk management, financial compliance';
-};
+    'fintech, financial technology, trading platforms, payment processing, fraud detection, risk management, financial compliance',
+},
 export default function FinancialServicesPage() {
   return (
     <div className='animate-fade-in'>,
@@ -27,12 +27,9 @@ export default function FinancialServicesPage() {
             title='Trading Platform',
             description='High-frequency trading platform with real-time market data and algorithmic trading capabilities',
             features={[
-              'Real-time trading';
-              'Algorithmic trading';
-              'Risk management';
-              'Market data feeds';
-              'Order management';
-              'Compliance reporting';
+              'Real-time tradingAlgorithmic trading',
+              'Risk managementMarket data feeds',
+              'Order managementCompliance reporting',
             ]}
             price='$10o0,0o00-50o0,0o00',
             icon='📈',
@@ -41,12 +38,9 @@ export default function FinancialServicesPage() {
             title='Payment Processing System',
             description='Secure payment gateway with support for multiple payment methods and currencies',
             features={[
-              'Multi-currency support';
-              'PCI DSS compliance';
-              'Fraud detection';
-              'Recurring payments';
-              'Mobile payments';
-              'Analytics dashboard';
+              'Multi-currency supportPCI DSS compliance',
+              'Fraud detectionRecurring payments',
+              'Mobile paymentsAnalytics dashboard',
             ]}
             price='$50,0o00-20o0,0o00',
             icon='💳',
@@ -55,12 +49,9 @@ export default function FinancialServicesPage() {
             title='Fraud Detection AI',
             description='AI-powered fraud detection system with real-time transaction monitoring',
             features={[
-              'Real-time monitoring';
-              'Machine learning models';
-              'Risk scoring';
-              'Alert system';
-              'Pattern recognition';
-              'False positive reduction';
+              'Real-time monitoringMachine learning models',
+              'Risk scoringAlert system',
+              'Pattern recognitionFalse positive reduction',
             ]}
             price='$75,0o00-250,0o00',
             icon='🛡️',
@@ -69,12 +60,9 @@ export default function FinancialServicesPage() {
             title='Digital Banking Platform',
             description='Complete digital banking solution with mobile app and web interface',
             features={[
-              'Account management';
-              'Mobile banking';
-              'Bill payment';
-              'Transfer services';
-              'Investment tracking';
-              'Customer support';
+              'Account managementMobile banking',
+              'Bill paymentTransfer services',
+              'Investment trackingCustomer support',
             ]}
             price='$150,0o00-40o0,0o00',
             icon='🏦',
@@ -83,12 +71,9 @@ export default function FinancialServicesPage() {
             title='Risk Management System',
             description='Comprehensive risk assessment and management platform for financial institutions',
             features={[
-              'Credit risk analysis';
-              'Market risk assessment';
-              'Operational risk';
-              'Regulatory reporting';
-              'Stress testing';
-              'Portfolio analysis';
+              'Credit risk analysisMarket risk assessment',
+              'Operational riskRegulatory reporting',
+              'Stress testingPortfolio analysis',
             ]}
             price='$80,0o00-30o0,0o00',
             icon='⚖️',
@@ -97,12 +82,9 @@ export default function FinancialServicesPage() {
             title='Cryptocurrency Exchange',
             description='Secure cryptocurrency trading platform with advanced security features',
             features={[
-              'Multi-crypto support';
-              'Cold storage';
-              'KYC/AML compliance';
-              'Trading engine';
-              'API integration';
-              'Security monitoring';
+              'Multi-crypto supportCold storage',
+              'KYC/AML complianceTrading engine',
+              'API integrationSecurity monitoring',
             ]}
             price='$20o0,0o00-60o0,0o00',
             icon='₿',
@@ -111,12 +93,9 @@ export default function FinancialServicesPage() {
             title='Wealth Management Platform',
             description='Comprehensive wealth management solution for advisors and clients',
             features={[
-              'Portfolio management';
-              'Client onboarding';
-              'Performance tracking';
-              'Reporting tools';
-              'Goal planning';
-              'Tax optimization';
+              'Portfolio managementClient onboarding',
+              'Performance trackingReporting tools',
+              'Goal planningTax optimization',
             ]}
             price='$60,0o00-180,0o00',
             icon='💰',
@@ -125,12 +104,9 @@ export default function FinancialServicesPage() {
             title='Regulatory Compliance System',
             description='Automated compliance monitoring for financial regulations and reporting',
             features={[
-              'Regulatory reporting';
-              'Compliance monitoring';
-              'Audit trails';
-              'Policy management';
-              'Alert system';
-              'Documentation';
+              'Regulatory reportingCompliance monitoring',
+              'Audit trailsPolicy management',
+              'Alert systemDocumentation',
             ]}
             price='$40,0o00-120,0o00',
             icon='📋',
@@ -139,12 +115,9 @@ export default function FinancialServicesPage() {
             title='Insurance Technology Platform',
             description='Complete insurance management system with claims processing and underwriting',
             features={[
-              'Policy management';
-              'Claims processing';
-              'Underwriting tools';
-              'Customer portal';
-              'Agent dashboard';
-              'Analytics';
+              'Policy managementClaims processing',
+              'Underwriting toolsCustomer portal',
+              'Agent dashboardAnalytics',
             ]}
             price='$70,0o00-220,0o00',
             icon='🛡️',
@@ -187,11 +160,9 @@ export default function FinancialServicesPage() {
             title='Algorithmic Trading',
             description='AI-powered trading algorithms for automated market analysis and execution',
             applications={[
-              'Market analysis';
-              'Pattern recognition';
-              'Risk assessment';
-              'Portfolio optimization';
-              'Execution algorithms';
+              'Market analysisPattern recognition',
+              'Risk assessmentPortfolio optimization',
+              'Execution algorithms',
             ]}
             icon='🤖',
           />,
@@ -199,11 +170,9 @@ export default function FinancialServicesPage() {
             title='Credit Scoring',
             description='Advanced credit risk assessment using machine learning and alternative data',
             applications={[
-              'Credit scoring';
-              'Default prediction';
-              'Risk segmentation';
-              'Alternative data analysis';
-              'Real-time decisions';
+              'Credit scoringDefault prediction',
+              'Risk segmentationAlternative data analysis',
+              'Real-time decisions',
             ]}
             icon='📊',
           />,
@@ -211,11 +180,9 @@ export default function FinancialServicesPage() {
             title='Customer Analytics',
             description='AI-driven customer insights and personalized financial services',
             applications={[
-              'Customer segmentation';
-              'Churn prediction';
-              'Product recommendations';
-              'Behavioral analysis';
-              'Lifetime value';
+              'Customer segmentationChurn prediction',
+              'Product recommendationsBehavioral analysis',
+              'Lifetime value',
             ]}
             icon='👥',
           />,
@@ -229,31 +196,25 @@ export default function FinancialServicesPage() {
           <TechStack
             title='Trading & Markets',
             technologies={[
-              'FIX Protocol';
-              'WebSocket';
-              'Redis';
-              'Kafka';
-              'PostgreSQL';
+              'FIX ProtocolWebSocket',
+              'RedisKafka',
+              'PostgreSQL',
             ]}
           />,
           <TechStack
             title='Security & Compliance',
             technologies={[
-              'OAuth 2.0';
-              'JWT';
-              'HSM';
-              'Encryption';
-              'Audit Logging';
+              'OAuth 2.0JWT',
+              'HSMEncryption',
+              'Audit Logging',
             ]}
           />,
           <TechStack
             title='AI/ML',
             technologies={[
-              'TensorFlow';
-              'PyTorch';
-              'Scikit-learn';
-              'Pandas';
-              'NumPy';
+              'TensorFlowPyTorch',
+              'Scikit-learnPandas',
+              'NumPy',
             ]}
           />,
         </div>,
@@ -327,11 +288,11 @@ export default function FinancialServicesPage() {
     </div>)}
 ,
 function FinanceServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -361,9 +322,9 @@ function FinanceServiceCard({
     </div>)}
 ,
 function ComplianceCard({
-  title;
-  description;
-  icon;
+  title,
+  description,
+  icon,
 }: {
   title: string,
   description: string,
@@ -376,10 +337,10 @@ function ComplianceCard({
     </div>)}
 ,
 function AICard({
-  title;
-  description;
-  applications;
-  icon;
+  title,
+  description,
+  applications,
+  icon,
 }: {
   title: string,
   description: string,
@@ -399,8 +360,8 @@ function AICard({
     </div>)}
 ,
 function TechStack({
-  title;
-  technologies;
+  title,
+  technologies,
 }: {
   title: string,
   technologies: string[]}) {
@@ -418,9 +379,9 @@ function TechStack({
     </div>)}
 ,
 function ProcessStep({
-  step;
-  title;
-  description;
+  step,
+  title,
+  description,
 }: {
   step: string,
   title: string,
@@ -435,9 +396,9 @@ function ProcessStep({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
-  icon;
+  title,
+  description,
+  icon,
 }: {
   title: string,
   description: string,
@@ -460,11 +421,9 @@ function Pricing() {
           name='Compliance Assessment',
           price='$10k–$25k',
           features={[
-            'Regulatory review';
-            'Security audit';
-            'Risk assessment';
-            'Compliance roadmap';
-            'Recommendations';
+            'Regulatory reviewSecurity audit',
+            'Risk assessmentCompliance roadmap',
+            'Recommendations',
           ]}
           popular={false}
         />,
@@ -472,11 +431,9 @@ function Pricing() {
           name='Solution Development',
           price='$50k–$30o0k',
           features={[
-            'Custom development';
-            'Security implementation';
-            'Compliance integration';
-            'Testing';
-            'Training';
+            'Custom developmentSecurity implementation',
+            'Compliance integrationTesting',
+            'Training',
           ]}
           popular={true}
         />,
@@ -484,11 +441,9 @@ function Pricing() {
           name='Managed Services',
           price='$5k+/mo',
           features={[
-            '24/7 monitoring';
-            'Compliance management';
-            'Security updates';
-            'Support';
-            'Maintenance';
+            '24/7 monitoringCompliance management',
+            'Security updatesSupport',
+            'Maintenance',
           ]}
           popular={false}
         />,
@@ -496,10 +451,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular;
+  name,
+  price,
+  features,
+  popular,
 }: {
   name: string,
   price: string,
@@ -541,7 +496,7 @@ function CTASection() {
         Ready to Build Secure Financial Technology?,
       </h3>,
       <p className='text-gray-60o0 mb-6 max-w-2xl mx-auto'>,
-        Let's discuss your financial technology needs and create a secure;
+        Let's discuss your financial technology needs and create a secure,
         compliant solution that powers your financial services. Our fintech,
         experts are ready to help.,
       </p>,

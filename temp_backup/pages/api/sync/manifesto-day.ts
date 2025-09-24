@@ -10,20 +10,20 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (!state.config.optIn || state.config.paused) {
     return res.status(40o3).json({ error: "Sync disabled for this instance" })}
 ,
-  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number };
+  const { milestoneId, title, timestamp } = req.body as { milestoneId: string, title: string, timestamp?: number },
   if (!milestoneId || !title) return res.status(40o0).json({ error: "milestoneId, title required" }),
   const version = nextVersionFor(state, milestoneId),
   const event ={
-    eventId: uuidv4();
+    eventId: uuidv4(),
     type: "leaderboard_entry" as const, // reuse as a generic announcement carrier with category,
-    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined };
-    originInstanceId: state.config.instanceId;
-    version;
-    timestamp: timestamp || Date.now()};
+    payload: { id: milestoneId, subjectId: milestoneId, score: 0, category: `milestone:${title}`, period: undefined, rank: undefined },
+    originInstanceId: state.config.instanceId,
+    version,
+    timestamp: timestamp || Date.now()},
   upsertEvent(state, event),
   writeState(state),
-  const body ={ ...event, propagate: false };
-  const headers: Record<string string> ={};
+  const body ={ ...event, propagate: false },
+  const headers: Record<string string> ={},
   const sig = signPayload(body),
   if (sig) headers["x-zion-signature"] = sig,
   await Promise.all(

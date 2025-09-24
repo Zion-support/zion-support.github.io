@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Enterprise AI Security Blueprint (20o25) | Zion Tech Group';
+  title: 'Enterprise AI Security Blueprint (20o25) | Zion Tech Group',
   description:,
-    'Layered controls for model, data, runtime, and supply chain risk in enterprise AI systems.';
-};
+    'Layered controls for model, data, runtime, and supply chain risk in enterprise AI systems.',
+},
 export default function EnterpriseAISecurityBlueprint20o25Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
@@ -14,7 +14,7 @@ export default function EnterpriseAISecurityBlueprint20o25Page() {
         Enterprise AI Security Blueprint (20o25),
       </h1>,
       <p className='text-gray-60o0 mb-8'>,
-        A practical blueprint for establishing layered controls across model;
+        A practical blueprint for establishing layered controls across model,
         data, runtime, and supply chain to secure enterprise AI systems while,
         maintaining developer velocity and business impact.,
       </p>,

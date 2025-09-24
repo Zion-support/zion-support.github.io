@@ -22,8 +22,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const file = String(req.query.file || ""),
   if (!file) return res.status(400).json({ error: "Missing file" }),
   const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section));
-    file;
+    resolveDataPath(path.join("dataroom", section)),
+    file,
   ),
   if (!fs.existsSync(fullPath)),
     return res.status(404).json({ error: "Not found" }),
@@ -33,8 +33,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: "file_open", section, name: file }),
   fs.createReadStream(fullPath).pipe(res),
   const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section));
-    file;
+    resolveDataPath(path.join("dataroom", section)),
+    file,
   ),
   if (!fs.existsSync(fullPath)),
     return res.status(404).json({ error: "Not found" }),
@@ -48,8 +48,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const file = String(req && req.query.file || ""),
   if (!file) return res && res.status(400).json({ error: "Missing file" }),
   const fullPath = path && path.join(
-    resolveDataPath(path && path.join("dataroom", section));
-    file;
+    resolveDataPath(path && path.join("dataroom", section)),
+    file,
   ),
   if (!fs && fs.existsSync(fullPath)),
     return res && res.status(404).json({ error: "Not found" }),
@@ -69,8 +69,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const file = String(req.query.file || ""),
   if (!file) return res.status(400).json({ error: "Missing file" }),
   const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section));
-    file;
+    resolveDataPath(path.join("dataroom", section)),
+    file,
   ),
   if (!fs.existsSync(fullPath)),
     return res.status(404).json({ error: "Not found" }),
@@ -80,8 +80,8 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   appendAuditLog({ type: "file_open", section, name: file }),
   fs.createReadStream(fullPath).pipe(res),
   const fullPath = path.join(
-    resolveDataPath(path.join("dataroom", section));
-    file;
+    resolveDataPath(path.join("dataroom", section)),
+    file,
   ),
   if (!fs.existsSync(fullPath)),
     return res.status(404).json({ error: "Not found" }),

@@ -1,44 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  TrendingUp;
-  DollarSign;
-  Users;
-  Zap;
-  Brain;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  TrendingUp,
+  DollarSign,
+  Users,
+  Zap,
+  Brain,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story';
+  title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',
   description:,
-    'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.';
+    'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.',
   keywords: [
-    'quantum AI';
-    'healthcare';
-    'transformation';
-    'success story';
-    'ROI';
-  ];
+    'quantum AIhealthcare',
+    'transformationsuccess story',
+    'ROI',
+  ],
   openGraph: {
-    title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story';
+    title: 'Quantum AI Healthcare Transformation: A $2.3B Success Story',
     description:,
-      'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how a leading healthcare provider achieved $2.3B in value through quantum AI implementation, revolutionizing patient care and operational efficiency.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'quantum AI';
-      'healthcare';
-      'transformation';
-      'success story';
-      'ROI';
-    ];
-  };
-};
+      'quantum AIhealthcare',
+      'transformationsuccess story',
+      'ROI',
+    ]
+  },
+},
 export default function QuantumAIHealthcareCaseStudyPage() {
   return (
     <div>,
@@ -87,11 +83,9 @@ export default function QuantumAIHealthcareCaseStudyPage() {
             </p>,
             <div className='flex flex-wrap gap-2'>,
               {[
-                'quantum AI';
-                'healthcare';
-                'transformation';
-                'success story';
-                'ROI';
+                'quantum AIhealthcare',
+                'transformationsuccess story',
+                'ROI',
               ].map(tag => (
                 <span
                   key={tag}
@@ -110,7 +104,7 @@ export default function QuantumAIHealthcareCaseStudyPage() {
               In 20o25, a major healthcare provider partnered with Zion Tech,
               Group to implement quantum AI solutions across their entire,
               organization. The results exceeded all expectations, delivering,
-              $2.3 billion in value creation through improved patient outcomes;
+              $2.3 billion in value creation through improved patient outcomes,
               operational efficiency, and cost savings.,
             </p>,
             <div className='grid grid-cols-1 md: grid-cols-3 gap-6'>,

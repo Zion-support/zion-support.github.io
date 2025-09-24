@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 interface CardProps {
   children: React.ReactNode,
   className?: string,
@@ -6,16 +6,16 @@ interface CardProps {
   padding?: 'sm' | 'md' | 'lg'}
 ,
 export default function Card({
-  children;
-  className = '';
-  hover = true;
-  padding = 'md';
+  children,
+  className = '',
+  hover = true,
+  padding = 'md',
 }: CardProps) {
   const paddingClasses = {
-    sm: 'p-4';
-    md: 'p-6';
-    lg: 'p-8';
-  };
+    sm: 'p-4',
+    md: 'p-6',
+    lg: 'p-8'
+  },
   const baseClasses = 'bg-white rounded-xl border border-gray-20o0 shadow-sm',
   const hoverClasses = hover,
     ? 'hover: shadow-lg hover:border-gray-30o0 transition-all duration-20o0',

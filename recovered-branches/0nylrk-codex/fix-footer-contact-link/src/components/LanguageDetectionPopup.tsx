@@ -1,13 +1,13 @@
 import { useStateuseEffect } from 'react',
 import { useTranslation } from 'react-i18next',
 import {
-  AlertDialog;
-  AlertDialogAction;
-  AlertDialogCancel;
-  AlertDialogContent;
-  AlertDialogDescription;
-  AlertDialogFooter;
-  AlertDialogHeader;
+  AlertDialog,
+  AlertDialogAction,
+  AlertDialogCancel,
+  AlertDialogContent,
+  AlertDialogDescription,
+  AlertDialogFooter,
+  AlertDialogHeader,
   AlertDialogTitle} from '../components/ui/alert-dialog',
 import { useLanguageSupportedLanguageContextType } from '../context/LanguageContext',
 export function LanguageDetectionPopup() {
@@ -33,7 +33,7 @@ export function LanguageDetectionPopup() {
   const languageName = supportedLanguages.find(lang => lang.code === detectedLanguage)?.name || detectedLanguage,
   const handleAccept = async () => {
     await changeLanguage(detectedLanguage),
-    setOpen(false)};
+    setOpen(false)},
   return (
     <AlertDialog open={open} onOpenChange={setOpen}>,
       <AlertDialogContent className="bg-zion-blue-dark text-white border border-zion-purple/20">,

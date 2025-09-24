@@ -6,10 +6,10 @@ export const PerformanceMonitor: React.FC = () => {
       for (const entry of list.getEntries()) {
         if (entry.entryType === 'navigation') {
           // // console.log(
-            'Page load time:';
+            'Page load time: ',
             entry.loadEventEnd - entry.loadEventStart)}
       }
     }),
     observer.observe({ entryTypes: ['navigation'] }),
     return () => observer.disconnect()}, []),
-  return null, // This component doesn't render anything};
+  return null, // This component doesn't render anything},

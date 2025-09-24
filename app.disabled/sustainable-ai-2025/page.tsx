@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Sustainable AI 20o25 - Zion Tech Group';
+  title: 'Sustainable AI 20o25 - Zion Tech Group',
   description:,
-    'Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI.';
+    'Green AI solutions achieving 85% carbon reduction and 30o0% ROI through sustainable technology. Achieve carbon neutrality with AI.',
   keywords: [
-    'sustainable AI';
-    'green technology';
-    'carbon neutral';
-    'environmental AI';
-    'climate solutions';
-  ];
-};
+    'sustainable AIgreen technology',
+    'carbon neutralenvironmental AI',
+    'climate solutions',
+  ]
+},
 export default function SustainableAI20o25Page() {
   return (
     <div>,

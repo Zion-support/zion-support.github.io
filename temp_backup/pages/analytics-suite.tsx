@@ -9,16 +9,12 @@ export default function AnalyticsSuite() {
       implementationWeeks='Same day',
       roiNote='Replace heavy tools, speed up pages, and keep key insights',
       features={[
-        'Realtime dashboards and funnels';
-        'Attribution, events, and goals';
-        'API and webhooks';
-        'Custom dimensions and UTM tracking';
-        'Anomaly alerts';
-        'SEO and page-speed overlays';
-        'GDPR/CCPA-compliant, no cookies';
-        'Migration assistants (GA4, UA)';
+        'Realtime dashboards and funnelsAttribution, events, and goals',
+        'API and webhooksCustom dimensions and UTM tracking',
+        'Anomaly alertsSEO and page-speed overlays',
+        'GDPR/CCPA-compliant, no cookiesMigration assistants (GA4, UA)',
       ]}
-      industries={['Startups', 'SMBs', 'Agencies', 'Publishers']}
+      industries={['StartupsSMBs', 'AgenciesPublishers']}
       canonical='https: //ziontechgroup.com/analytics-suite',
     />)}
 ,

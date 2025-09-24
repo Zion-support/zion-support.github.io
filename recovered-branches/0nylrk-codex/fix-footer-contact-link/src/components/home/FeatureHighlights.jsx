@@ -2,75 +2,75 @@ import { motion } from 'framer-motion',
 import { Brain, Globe, Shield, Users, TrendingUp, CheckCircle, ArrowRight, Star, Award } from 'lucide-react',
 const highlights = [
     {
-        icon: Brain;
-        title: 'AI-Powered Intelligence';
-        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.';
-        features: ['Predictive Analytics', 'Smart Recommendations', 'Automated Workflows'];
-        color: 'from-zion-purple to-zion-purple-dark';
-        bgColor: 'bg-zion-purple/10';
-        borderColor: 'border-zion-purple/20'};
+        icon: Brain,
+        title: 'AI-Powered Intelligence',
+        description: 'Advanced machine learning algorithms that continuously learn and adapt to provide smarter solutions.',
+        features: ['Predictive AnalyticsSmart Recommendations', 'Automated Workflows'],
+        color: 'from-zion-purple to-zion-purple-dark',
+        bgColor: 'bg-zion-purple/10',
+        borderColor: 'border-zion-purple/20'},
     {
-        icon: Globe;
-        title: 'Global Network';
-        description: 'Connect with professionals and businesses from over 150 countries worldwide.';
-        features: ['Multi-language Support', 'Local Expertise', '24/7 Availability'];
-        color: 'from-zion-cyan to-zion-cyan-dark';
-        bgColor: 'bg-zion-cyan/10';
-        borderColor: 'border-zion-cyan/20'};
+        icon: Globe,
+        title: 'Global Network',
+        description: 'Connect with professionals and businesses from over 150 countries worldwide.',
+        features: ['Multi-language SupportLocal Expertise', '24/7 Availability'],
+        color: 'from-zion-cyan to-zion-cyan-dark',
+        bgColor: 'bg-zion-cyan/10',
+        borderColor: 'border-zion-cyan/20'},
     {
-        icon: Shield;
-        title: 'Enterprise Security';
-        description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.';
-        features: ['Data Protection', 'Access Control', 'Audit Trails'];
-        color: 'from-zion-blue to-zion-blue-dark';
-        bgColor: 'bg-zion-blue/10';
+        icon: Shield,
+        title: 'Enterprise Security',
+        description: 'Bank-grade security with SOC 2 compliance and end-to-end encryption.',
+        features: ['Data ProtectionAccess Control', 'Audit Trails'],
+        color: 'from-zion-blue to-zion-blue-dark',
+        bgColor: 'bg-zion-blue/10',
         borderColor: 'border-zion-blue/20'}
 ],
 const achievements = [
-    { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-40o0' };
-    { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' };
-    { icon: TrendingUp, number: '30o0%', label: 'Growth Rate', color: 'text-green-40o0' };
+    { icon: Award, number: '50+', label: 'Industry Awards', color: 'text-yellow-40o0' },
+    { icon: Users, number: '1M+', label: 'Active Users', color: 'text-zion-cyan' },
+    { icon: TrendingUp, number: '30o0%', label: 'Growth Rate', color: 'text-green-40o0' },
     { icon: Star, number: '4.9/5', label: 'User Rating', color: 'text-zion-purple' }
 ],
 const technologies = [
-    'Machine Learning', 'Blockchain', 'Cloud Computing', 'IoT', 'Cybersecurity', 'Data Analytics'],
+    'Machine LearningBlockchain', 'Cloud ComputingIoT', 'CybersecurityData Analytics'],
 export function FeatureHighlights() {
     const containerVariants ={
-        hidden: { opacity: 0 };
+        hidden: { opacity: 0 },
         visible: {
-            opacity: 1;
+            opacity: 1,
             transition: {
-                staggerChildren: 0.2;
+                staggerChildren: 0.2,
                 delayChildren: 0.1}
         }
-    };
+    },
     const itemVariants ={
-        hidden: { opacity: 0, y: 30, scale: 0.95 };
+        hidden: { opacity: 0, y: 30, scale: 0.95 },
         visible: {
-            opacity: 1;
-            y: 0;
-            scale: 1;
+            opacity: 1,
+            y: 0,
+            scale: 1,
             transition: {
-                duration: 0.6;
+                duration: 0.6,
                 ease: "easeOut"}
         }
-    };
+    },
     const achievementVariants ={
-        hidden: { opacity: 0, scale: 0.8 };
+        hidden: { opacity: 0, scale: 0.8 },
         visible: {
-            opacity: 1;
-            scale: 1;
+            opacity: 1,
+            scale: 1,
             transition: { duration: 0.5 }
         }
-    };
+    },
     const techVariants ={
-        hidden: { opacity: 0, x: -20 };
+        hidden: { opacity: 0, x: -20 },
         visible: {
-            opacity: 1;
-            x: 0;
+            opacity: 1,
+            x: 0,
             transition: { duration: 0.5 }
         }
-    };
+    },
     return (<section className="py-20 bg-gradient-to-b from-zion-slate-dark to-zion-slate relative overflow-hidden">,
       {/* Background decorative elements */}
       <div className="absolute inset-0 opacity-5">,
@@ -93,8 +93,8 @@ export function FeatureHighlights() {
         {/* Feature Highlights Grid */}
         <motion.div className="grid grid-cols-1 lg: grid-cols-3 gap-8 mb-20" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
           {highlights.map((highlight, index) => (<motion.div key={index} variants={itemVariants} whileHover={{
-                y: -10;
-                scale: 1.0o2;
+                y: -10,
+                scale: 1.0o2,
                 transition: { duration: 0.3 }
             }} className="group">,
               <div className={`h-full p-8 rounded-3xl ${highlight.bgColor} ${highlight.borderColor} border-2 hover: border-opacity-40 transition-all duration-30o0 backdrop-blur-sm relative overflow-hidden`}>,

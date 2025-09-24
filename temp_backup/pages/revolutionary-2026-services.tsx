@@ -2,17 +2,17 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Star;
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Search;
-  Grid;
-  List;
-  ChevronDown;
-  Phone;
-  Mail;
-  MapPin;
+  Star,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Search,
+  Grid,
+  List,
+  ChevronDown,
+  Phone,
+  Mail,
+  MapPin,
 } from 'lucide-react',
 import { Button } from '../components/ui/Button',
 import UltraAdvancedFuturisticBackground2026 from '../components/ui/UltraAdvancedFuturisticBackground2026',
@@ -26,9 +26,9 @@ export default function Revolutionary2026ServicesPage() {
   const [sortBy, setSortBy] = useState('name'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const allServices = [
-    ...revolutionary2026MicroSaasServices;
-    ...revolutionary2026ITServices;
-    ...revolutionary2026AIServices;
+    ...revolutionary2026MicroSaasServices,
+    ...revolutionary2026ITServices,
+    ...revolutionary2026AIServices,
   ],
   // Dynamic category counts,
   const aiCount = allServices.filter(service =>,
@@ -42,39 +42,39 @@ export default function Revolutionary2026ServicesPage() {
   const microSaasCount = revolutionary2026MicroSaasServices.length,
   const categories = [
     {
-      id: 'all';
-      name: 'All Revolutionary Services';
-      icon: '🚀';
-      count: allServices.length;
-    };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount };
+      id: 'all',
+      name: 'All Revolutionary Services',
+      icon: '🚀',
+      count: allServices.length
+    },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: aiCount },
     {
-      id: 'quantum';
-      name: 'Quantum & Advanced Tech';
-      icon: '⚛️';
-      count: quantumCount;
-    };
+      id: 'quantum',
+      name: 'Quantum & Advanced Tech',
+      icon: '⚛️',
+      count: quantumCount
+    },
     {
-      id: 'enterprise';
-      name: 'Enterprise IT';
-      icon: '🏢';
-      count: enterpriseCount;
-    };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount };
+      id: 'enterprise',
+      name: 'Enterprise IT',
+      icon: '🏢',
+      count: enterpriseCount
+    },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' };
-    { id: 'medium', name: '$1K - $3K/month', range: '$1K - $3K' };
-    { id: 'high', name: '$3K - $8K/month', range: '$3K - $8K' };
-    { id: 'enterprise', name: '$8K+/month', range: '$8K+' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $3K/month', range: '$1K - $3K' },
+    { id: 'high', name: '$3K - $8K/month', range: '$3K - $8K' },
+    { id: 'enterprise', name: '$8K+/month', range: '$8K+' },
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' };
-    { id: 'price-low', name: 'Price: Low to High' };
-    { id: 'price-high', name: 'Price: High to Low' };
-    { id: 'rating', name: 'Rating' };
-    { id: 'customers', name: 'Customer Count' };
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price: Low to High' },
+    { id: 'price-high', name: 'Price: High to Low' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customer Count' },
   ],
   // Filter and sort services,
   const filteredServices = allServices,
@@ -96,26 +96,26 @@ export default function Revolutionary2026ServicesPage() {
       const matchesPrice =,
         selectedPriceRange === 'all' ||,
         (selectedPriceRange === 'low' &&,
-          parseFloat(service.price.replace('$', '').replace(',', '')) < 1000) ||,
+          parseFloat(service.price.replace('$', '').replace(, '')) < 1000) ||,
         (selectedPriceRange === 'medium' &&,
-          parseFloat(service.price.replace('$', '').replace(',', '')) >= 1000 &&,
-          parseFloat(service.price.replace('$', '').replace(',', '')) < 3000) ||,
+          parseFloat(service.price.replace('$', '').replace(, '')) >= 1000 &&,
+          parseFloat(service.price.replace('$', '').replace(, '')) < 3000) ||,
         (selectedPriceRange === 'high' &&,
-          parseFloat(service.price.replace('$', '').replace(',', '')) >= 3000 &&,
-          parseFloat(service.price.replace('$', '').replace(',', '')) < 8000) ||,
+          parseFloat(service.price.replace('$', '').replace(, '')) >= 3000 &&,
+          parseFloat(service.price.replace('$', '').replace(, '')) < 8000) ||,
         (selectedPriceRange === 'enterprise' &&,
-          parseFloat(service.price.replace('$', '').replace(',', '')) >= 8000),
+          parseFloat(service.price.replace('$', '').replace(, '')) >= 8000),
       return matchesSearch && matchesCategory && matchesPrice}),
     .sort((a, b) => {
       switch (sortBy) {
         case 'price-low':,
           return (
-            parseFloat(a.price.replace('$', '').replace(',', '')) -,
-            parseFloat(b.price.replace('$', '').replace(',', ''))),
+            parseFloat(a.price.replace('$', '').replace(, '')) -,
+            parseFloat(b.price.replace('$', '').replace(, ''))),
         case 'price-high':,
           return (
-            parseFloat(b.price.replace('$', '').replace(',', '')) -,
-            parseFloat(a.price.replace('$', '').replace(',', ''))),
+            parseFloat(b.price.replace('$', '').replace(, '')) -,
+            parseFloat(a.price.replace('$', '').replace(, ''))),
         case 'rating':,
           return b.rating - a.rating,
         case 'customers':,
@@ -124,11 +124,11 @@ export default function Revolutionary2026ServicesPage() {
           return a.name.localeCompare(b.name)}
     }),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   return (
     <UltraAdvancedFuturisticBackground2026>,
       <Head>,
@@ -171,9 +171,9 @@ export default function Revolutionary2026ServicesPage() {
               <motion.div,
                 animate={{ rotate: [0, 5, -5, 0] }}
                 transition={{
-                  duration: 4;
-                  repeat: Infinity;
-                  ease: 'easeInOut';
+                  duration: 4,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
                 }}
                 className='inline-block mb-8'>,
                 <div className='w-24 h-24 mx-auto bg-gradient-to-r from-cyan-500 via-purple-500 to-pink-500 rounded-full flex items-center justify-center'>,

@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Automation Solutions | Zion Tech Group';
+  title: 'Automation Solutions | Zion Tech Group',
   description:,
-    'Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.';
-};
+    'Intelligent automation solutions including RPA, workflow automation, AI-powered automation, and business process optimization. Streamline your operations.',
+},
 export default function AutomationSolutionsPage() {
   return (
     <div className='animate-fade-in'>,
@@ -11,7 +11,7 @@ export default function AutomationSolutionsPage() {
           Automation Solutions,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto mb-12'>,
-          Intelligent automation solutions including RPA, workflow automation;
+          Intelligent automation solutions including RPA, workflow automation,
           AI-powered automation, and business process optimization. Streamline,
           your operations and boost productivity.,
         </p>,
@@ -25,11 +25,9 @@ export default function AutomationSolutionsPage() {
             title='Robotic Process Automation (RPA)',
             description='Automate repetitive tasks and business processes with intelligent bots',
             features={[
-              'Process discovery & analysis';
-              'Bot development & deployment';
-              'Exception handling';
-              'Monitoring & reporting';
-              'Scalable automation';
+              'Process discovery & analysisBot development & deployment',
+              'Exception handlingMonitoring & reporting',
+              'Scalable automation',
             ]}
             price='$15k–$50k',
             icon='🤖',
@@ -38,11 +36,9 @@ export default function AutomationSolutionsPage() {
             title='Workflow Automation',
             description='End-to-end workflow automation with intelligent decision making',
             features={[
-              'Workflow design';
-              'Integration management';
-              'Approval processes';
-              'Notification systems';
-              'Performance analytics';
+              'Workflow designIntegration management',
+              'Approval processesNotification systems',
+              'Performance analytics',
             ]}
             price='$10k–$35k',
             icon='⚡',
@@ -51,11 +47,9 @@ export default function AutomationSolutionsPage() {
             title='AI-Powered Automation',
             description='Intelligent automation using AI and machine learning for complex tasks',
             features={[
-              'AI decision making';
-              'Natural language processing';
-              'Predictive automation';
-              'Learning algorithms';
-              'Cognitive automation';
+              'AI decision makingNatural language processing',
+              'Predictive automationLearning algorithms',
+              'Cognitive automation',
             ]}
             price='$25k–$80k',
             icon='🧠',
@@ -64,11 +58,9 @@ export default function AutomationSolutionsPage() {
             title='Document Processing Automation',
             description='Automated document handling, extraction, and processing',
             features={[
-              'OCR & text extraction';
-              'Document classification';
-              'Data validation';
-              'Workflow routing';
-              'Compliance checking';
+              'OCR & text extractionDocument classification',
+              'Data validationWorkflow routing',
+              'Compliance checking',
             ]}
             price='$12k–$40k',
             icon='📄',
@@ -77,11 +69,9 @@ export default function AutomationSolutionsPage() {
             title='Customer Service Automation',
             description='Automated customer support with chatbots and intelligent routing',
             features={[
-              'Chatbot development';
-              'Ticket routing';
-              'Response automation';
-              'Sentiment analysis';
-              'Escalation management';
+              'Chatbot developmentTicket routing',
+              'Response automationSentiment analysis',
+              'Escalation management',
             ]}
             price='$18k–$60k',
             icon='💬',
@@ -90,11 +80,9 @@ export default function AutomationSolutionsPage() {
             title='Financial Process Automation',
             description='Automated financial processes including invoicing, payments, and reporting',
             features={[
-              'Invoice processing';
-              'Payment automation';
-              'Financial reporting';
-              'Reconciliation';
-              'Compliance automation';
+              'Invoice processingPayment automation',
+              'Financial reportingReconciliation',
+              'Compliance automation',
             ]}
             price='$20k–$70k',
             icon='💰',
@@ -103,12 +91,9 @@ export default function AutomationSolutionsPage() {
             title='HR & Payroll Automation',
             description='Complete HR process automation including recruitment, onboarding, and payroll',
             features={[
-              'Resume screening';
-              'Interview scheduling';
-              'Onboarding workflows';
-              'Payroll processing';
-              'Benefits management';
-              'Performance tracking';
+              'Resume screeningInterview scheduling',
+              'Onboarding workflowsPayroll processing',
+              'Benefits managementPerformance tracking',
             ]}
             price='$18k–$60k',
             icon='👥',
@@ -117,12 +102,9 @@ export default function AutomationSolutionsPage() {
             title='Marketing Automation',
             description='Intelligent marketing campaign automation and lead nurturing',
             features={[
-              'Email campaigns';
-              'Lead scoring';
-              'Social media posting';
-              'Content scheduling';
-              'A/B testing';
-              'Analytics tracking';
+              'Email campaignsLead scoring',
+              'Social media postingContent scheduling',
+              'A/B testingAnalytics tracking',
             ]}
             price='$15k–$50k',
             icon='📢',
@@ -131,12 +113,9 @@ export default function AutomationSolutionsPage() {
             title='Inventory Management Automation',
             description='Automated inventory tracking, ordering, and supply chain management',
             features={[
-              'Stock monitoring';
-              'Auto reordering';
-              'Supplier management';
-              'Demand forecasting';
-              'Quality control';
-              'Cost optimization';
+              'Stock monitoringAuto reordering',
+              'Supplier managementDemand forecasting',
+              'Quality controlCost optimization',
             ]}
             price='$20k–$65k',
             icon='📦',
@@ -145,12 +124,9 @@ export default function AutomationSolutionsPage() {
             title='Email & Communication Automation',
             description='Intelligent email management and communication workflows',
             features={[
-              'Email routing';
-              'Response automation';
-              'Template management';
-              'Follow-up sequences';
-              'Spam filtering';
-              'Analytics tracking';
+              'Email routingResponse automation',
+              'Template managementFollow-up sequences',
+              'Spam filteringAnalytics tracking',
             ]}
             price='$12k–$40k',
             icon='📧',
@@ -159,12 +135,9 @@ export default function AutomationSolutionsPage() {
             title='Data Entry & Migration Automation',
             description='Automated data entry, validation, and system migration',
             features={[
-              'Data extraction';
-              'Validation rules';
-              'Format conversion';
-              'Error handling';
-              'Migration testing';
-              'Data quality checks';
+              'Data extractionValidation rules',
+              'Format conversionError handling',
+              'Migration testingData quality checks',
             ]}
             price='$15k–$45k',
             icon='📊',
@@ -173,12 +146,9 @@ export default function AutomationSolutionsPage() {
             title='Compliance & Audit Automation',
             description='Automated compliance monitoring and audit preparation',
             features={[
-              'Compliance checking';
-              'Audit trail generation';
-              'Report automation';
-              'Policy enforcement';
-              'Risk assessment';
-              'Documentation management';
+              'Compliance checkingAudit trail generation',
+              'Report automationPolicy enforcement',
+              'Risk assessmentDocumentation management',
             ]}
             price='$18k–$55k',
             icon='📋',
@@ -187,12 +157,9 @@ export default function AutomationSolutionsPage() {
             title='Customer Onboarding Automation',
             description='Streamlined customer onboarding with automated workflows',
             features={[
-              'Application processing';
-              'Document verification';
-              'Account setup';
-              'Welcome sequences';
-              'Progress tracking';
-              'Compliance checks';
+              'Application processingDocument verification',
+              'Account setupWelcome sequences',
+              'Progress trackingCompliance checks',
             ]}
             price='$16k–$50k',
             icon='🚀',
@@ -201,12 +168,9 @@ export default function AutomationSolutionsPage() {
             title='Sales Process Automation',
             description='End-to-end sales automation from lead to close',
             features={[
-              'Lead qualification';
-              'Follow-up automation';
-              'Proposal generation';
-              'Contract management';
-              'Pipeline tracking';
-              'Revenue forecasting';
+              'Lead qualificationFollow-up automation',
+              'Proposal generationContract management',
+              'Pipeline trackingRevenue forecasting',
             ]}
             price='$20k–$70k',
             icon='💼',
@@ -215,12 +179,9 @@ export default function AutomationSolutionsPage() {
             title='IT Operations Automation',
             description='Automated IT operations and infrastructure management',
             features={[
-              'Server monitoring';
-              'Backup automation';
-              'Patch management';
-              'Incident response';
-              'Performance optimization';
-              'Security scanning';
+              'Server monitoringBackup automation',
+              'Patch managementIncident response',
+              'Performance optimizationSecurity scanning',
             ]}
             price='$25k–$80k',
             icon='⚙️',
@@ -229,12 +190,9 @@ export default function AutomationSolutionsPage() {
             title='Quality Assurance Automation',
             description='Automated testing and quality control processes',
             features={[
-              'Test case generation';
-              'Automated testing';
-              'Bug tracking';
-              'Performance monitoring';
-              'Regression testing';
-              'Quality reporting';
+              'Test case generationAutomated testing',
+              'Bug trackingPerformance monitoring',
+              'Regression testingQuality reporting',
             ]}
             price='$18k–$60k',
             icon='🔍',
@@ -243,12 +201,9 @@ export default function AutomationSolutionsPage() {
             title='Expense Management Automation',
             description='Automated expense tracking, approval, and reimbursement',
             features={[
-              'Receipt processing';
-              'Expense categorization';
-              'Approval workflows';
-              'Policy compliance';
-              'Reimbursement processing';
-              'Analytics reporting';
+              'Receipt processingExpense categorization',
+              'Approval workflowsPolicy compliance',
+              'Reimbursement processingAnalytics reporting',
             ]}
             price='$12k–$40k',
             icon='💳',
@@ -257,12 +212,9 @@ export default function AutomationSolutionsPage() {
             title='Project Management Automation',
             description='Automated project tracking and resource management',
             features={[
-              'Task assignment';
-              'Progress tracking';
-              'Resource allocation';
-              'Timeline management';
-              'Risk monitoring';
-              'Reporting automation';
+              'Task assignmentProgress tracking',
+              'Resource allocationTimeline management',
+              'Risk monitoringReporting automation',
             ]}
             price='$15k–$50k',
             icon='📅',
@@ -271,12 +223,9 @@ export default function AutomationSolutionsPage() {
             title='Customer Feedback Automation',
             description='Automated feedback collection and analysis',
             features={[
-              'Survey automation';
-              'Response collection';
-              'Sentiment analysis';
-              'Action planning';
-              'Follow-up automation';
-              'Trend analysis';
+              'Survey automationResponse collection',
+              'Sentiment analysisAction planning',
+              'Follow-up automationTrend analysis',
             ]}
             price='$10k–$35k',
             icon='💬',
@@ -285,12 +234,9 @@ export default function AutomationSolutionsPage() {
             title='Supply Chain Automation',
             description='End-to-end supply chain process automation',
             features={[
-              'Order processing';
-              'Vendor management';
-              'Shipment tracking';
-              'Quality control';
-              'Compliance monitoring';
-              'Cost optimization';
+              'Order processingVendor management',
+              'Shipment trackingQuality control',
+              'Compliance monitoringCost optimization',
             ]}
             price='$25k–$75k',
             icon='🚚',
@@ -299,12 +245,9 @@ export default function AutomationSolutionsPage() {
             title='Legal Document Automation',
             description='Automated legal document processing and management',
             features={[
-              'Document generation';
-              'Contract analysis';
-              'Compliance checking';
-              'Version control';
-              'Approval workflows';
-              'Archive management';
+              'Document generationContract analysis',
+              'Compliance checkingVersion control',
+              'Approval workflowsArchive management',
             ]}
             price='$20k–$65k',
             icon='⚖️',
@@ -313,12 +256,9 @@ export default function AutomationSolutionsPage() {
             title='Real Estate Process Automation',
             description='Automated real estate workflows and property management',
             features={[
-              'Property listing';
-              'Lead management';
-              'Document processing';
-              'Inspection scheduling';
-              'Contract management';
-              'Commission tracking';
+              'Property listingLead management',
+              'Document processingInspection scheduling',
+              'Contract managementCommission tracking',
             ]}
             price='$18k–$55k',
             icon='🏠',
@@ -327,12 +267,9 @@ export default function AutomationSolutionsPage() {
             title='Healthcare Process Automation',
             description='Medical process automation and patient management',
             features={[
-              'Patient scheduling';
-              'Appointment reminders';
-              'Insurance verification';
-              'Billing automation';
-              'Compliance tracking';
-              'Report generation';
+              'Patient schedulingAppointment reminders',
+              'Insurance verificationBilling automation',
+              'Compliance trackingReport generation',
             ]}
             price='$25k–$80k',
             icon='🏥',
@@ -341,12 +278,9 @@ export default function AutomationSolutionsPage() {
             title='Manufacturing Automation',
             description='Production line and manufacturing process automation',
             features={[
-              'Production scheduling';
-              'Quality control';
-              'Inventory management';
-              'Equipment monitoring';
-              'Maintenance scheduling';
-              'Performance tracking';
+              'Production schedulingQuality control',
+              'Inventory managementEquipment monitoring',
+              'Maintenance schedulingPerformance tracking',
             ]}
             price='$30k–$10o0k',
             icon='🏭',
@@ -355,12 +289,9 @@ export default function AutomationSolutionsPage() {
             title='Insurance Process Automation',
             description='Automated insurance workflows and claims processing',
             features={[
-              'Claims processing';
-              'Policy management';
-              'Risk assessment';
-              'Underwriting automation';
-              'Payment processing';
-              'Compliance monitoring';
+              'Claims processingPolicy management',
+              'Risk assessmentUnderwriting automation',
+              'Payment processingCompliance monitoring',
             ]}
             price='$22k–$70k',
             icon='🛡️',
@@ -369,12 +300,9 @@ export default function AutomationSolutionsPage() {
             title='Event Management Automation',
             description='Automated event planning and management workflows',
             features={[
-              'Event registration';
-              'Attendee management';
-              'Communication automation';
-              'Resource planning';
-              'Feedback collection';
-              'Analytics reporting';
+              'Event registrationAttendee management',
+              'Communication automationResource planning',
+              'Feedback collectionAnalytics reporting',
             ]}
             price='$15k–$45k',
             icon='🎉',
@@ -389,34 +317,25 @@ export default function AutomationSolutionsPage() {
           <Item
             title='RPA & Process Automation',
             details={[
-              'UiPath, Automation Anywhere, Blue Prism';
-              'Process mining and discovery tools';
-              'Screen scraping and data extraction';
-              'API integration and orchestration';
-              'Exception handling and error recovery';
-              'Performance monitoring and analytics';
+              'UiPath, Automation Anywhere, Blue PrismProcess mining and discovery tools',
+              'Screen scraping and data extractionAPI integration and orchestration',
+              'Exception handling and error recoveryPerformance monitoring and analytics',
             ]}
           />,
           <Item
             title='AI & Machine Learning',
             details={[
-              'Natural language processing (NLP)';
-              'Computer vision and image recognition';
-              'Predictive analytics and forecasting';
-              'Decision trees and rule engines';
-              'Machine learning model integration';
-              'Cognitive automation platforms';
+              'Natural language processing (NLP)Computer vision and image recognition',
+              'Predictive analytics and forecastingDecision trees and rule engines',
+              'Machine learning model integrationCognitive automation platforms',
             ]}
           />,
           <Item
             title='Integration & Orchestration',
             details={[
-              'API management and integration';
-              'Workflow orchestration engines';
-              'Event-driven automation';
-              'Microservices architecture';
-              'Cloud-native automation';
-              'Real-time monitoring and alerting';
+              'API management and integrationWorkflow orchestration engines',
+              'Event-driven automationMicroservices architecture',
+              'Cloud-native automationReal-time monitoring and alerting',
             ]}
           />,
         </div>,
@@ -426,11 +345,11 @@ export default function AutomationSolutionsPage() {
     </div>)}
 ,
 function AutomationServiceCard({
-  title;
-  description;
-  features;
-  price;
-  icon;
+  title,
+  description,
+  features,
+  price,
+  icon,
 }: {
   title: string,
   description: string,
@@ -477,12 +396,9 @@ function Pricing() {
           price='$5k–$15k',
           duration='2–4 weeks',
           features={[
-            'Process discovery and analysis';
-            'Automation opportunity identification';
-            'ROI calculation and business case';
-            'Technology recommendations';
-            'Implementation roadmap';
-            'Pilot process selection';
+            'Process discovery and analysisAutomation opportunity identification',
+            'ROI calculation and business caseTechnology recommendations',
+            'Implementation roadmapPilot process selection',
           ]}
         />,
         <Plan
@@ -490,12 +406,9 @@ function Pricing() {
           price='$20k–$80k',
           duration='8–16 weeks',
           features={[
-            'End-to-end automation development';
-            'Integration with existing systems';
-            'Testing and quality assurance';
-            'User training and documentation';
-            'Deployment and go-live support';
-            'Performance monitoring setup';
+            'End-to-end automation developmentIntegration with existing systems',
+            'Testing and quality assuranceUser training and documentation',
+            'Deployment and go-live supportPerformance monitoring setup',
           ]}
         />,
         <Plan
@@ -503,22 +416,19 @@ function Pricing() {
           price='$3k+/mo',
           duration='Ongoing',
           features={[
-            '24/7 monitoring and maintenance';
-            'Continuous optimization';
-            'Exception handling and support';
-            'Performance reporting';
-            'Process improvements';
-            'Scalability management';
+            '24/7 monitoring and maintenanceContinuous optimization',
+            'Exception handling and supportPerformance reporting',
+            'Process improvementsScalability management',
           ]}
         />,
       </div>,
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

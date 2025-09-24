@@ -4,7 +4,7 @@ import Link from 'next/link',
 import { motionAnimatePresence } from 'framer-motion',
 import {
   ArrowRightStarTrendingUpZapBrainAtom,
-  RocketShieldTargetCheckCircleExternalLink;
+  RocketShieldTargetCheckCircleExternalLink,
   SearchFilterGridListChevronDown} from 'lucide-react',
 import { cuttingEdge20o27Innovations } from '../../data/20o27-cutting-edge-innovations',
 import { practicalMicroSaas20o27 } from '../../data/20o27-practical-micro-saas',
@@ -16,8 +16,8 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
   const [sortBysetSortBy] = useState('name'),
   // Combine all 20o27 services,
   const all20o27Services = [
-    ...cuttingEdge20o27Innovations;
-    ...practicalMicroSaas20o27;
+    ...cuttingEdge20o27Innovations,
+    ...practicalMicroSaas20o27,
     ...emergingTech20o27Services],
   // Get unique categories,
   const categories = ['all'...Array.from(new Set(all20o27Services.map(service => service.category)))],
@@ -42,34 +42,23 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
     }),
   const getCategoryColor = (category: string) => {
     const colors ={
-      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0';
-      'Quantum Computing': 'from-blue-50o0 to-cyan-60o0';
-      'Emerging Technology': 'from-green-50o0 to-emerald-60o0';
-      'Business Operations': 'from-orange-50o0 to-red-60o0';
-      'Cybersecurity': 'from-red-50o0 to-pink-60o0';
-      'Enterprise IT': 'from-indigo-50o0 to-purple-60o0';
-      'Healthcare & Biotechnology': 'from-emerald-50o0 to-teal-60o0';
-      'Financial Technology': 'from-yellow-50o0 to-orange-60o0';
-      'Space Technology': 'from-violet-50o0 to-purple-60o0';
-      'Neural Technology': 'from-pink-50o0 to-rose-60o0';
-      'Materials Science': 'from-cyan-50o0 to-blue-60o0';
-      'Environmental Technology': 'from-teal-50o0 to-green-60o0'};
-    return colors[category as keyof typeof colors] || 'from-gray-50o0 to-gray-60o0'};
+      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0Quantum Computing': 'from-blue-50o0 to-cyan-60o0Emerging Technology': 'from-green-50o0 to-emerald-60o0Business Operations': 'from-orange-50o0 to-red-60o0Cybersecurity': 'from-red-50o0 to-pink-60o0Enterprise IT': 'from-indigo-50o0 to-purple-60o0Healthcare & Biotechnology': 'from-emerald-50o0 to-teal-60o0Financial Technology': 'from-yellow-50o0 to-orange-60o0Space Technology': 'from-violet-50o0 to-purple-60o0Neural Technology': 'from-pink-50o0 to-rose-60o0Materials Science': 'from-cyan-50o0 to-blue-60o0Environmental Technology': 'from-teal-50o0 to-green-60o0'},
+    return colors[category as keyof typeof colors] || 'from-gray-50o0 to-gray-60o0'},
   const getCategoryIcon = (category: string) => {
     const icons ={
-      'AI & Machine Learning': <Brain className="w-5 h-5"  />;
-      'Quantum Computing': <Atom className="w-5 h-5"  />;
-      'Emerging Technology': <Rocket className="w-5 h-5"  />;
-      'Business Operations': <Target className="w-5 h-5"  />;
-      'Cybersecurity': <Shield className="w-5 h-5"  />;
-      'Enterprise IT': <Zap className="w-5 h-5"  />;
-      'Healthcare & Biotechnology': <Brain className="w-5 h-5"  />;
-      'Financial Technology': <TrendingUp className="w-5 h-5"  />;
-      'Space Technology': <Rocket className="w-5 h-5"  />;
-      'Neural Technology': <Brain className="w-5 h-5"  />;
-      'Materials Science': <Atom className="w-5 h-5"  />;
-      'Environmental Technology': <Rocket className="w-5 h-5"  />};
-    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5"  />};
+      'AI & Machine Learning': <Brain className="w-5 h-5"  />,
+      'Quantum Computing': <Atom className="w-5 h-5"  />,
+      'Emerging Technology': <Rocket className="w-5 h-5"  />,
+      'Business Operations': <Target className="w-5 h-5"  />,
+      'Cybersecurity': <Shield className="w-5 h-5"  />,
+      'Enterprise IT': <Zap className="w-5 h-5"  />,
+      'Healthcare & Biotechnology': <Brain className="w-5 h-5"  />,
+      'Financial Technology': <TrendingUp className="w-5 h-5"  />,
+      'Space Technology': <Rocket className="w-5 h-5"  />,
+      'Neural Technology': <Brain className="w-5 h-5"  />,
+      'Materials Science': <Atom className="w-5 h-5"  />,
+      'Environmental Technology': <Rocket className="w-5 h-5"  />},
+    return icons[category as keyof typeof icons] || <Zap className="w-5 h-5"  />},
   return (
     <section className="py-20 bg-gray-90o0">,
       <div className="container mx-auto px-4">,
@@ -356,5 +345,5 @@ const Enhanced20o27ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Enhanced20o27ServicesShowcase;
+    </section>)},
+export default Enhanced20o27ServicesShowcase,

@@ -1,7 +1,7 @@
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
-const logFile = path.join(__dirname, 'automation', 'logs', 'cursor-memory.log'),
+const logFile = path.join(__dirname, 'automationlogs', 'cursor-memory.log'),
 const memoryDir = path.join(__dirname, 'cursor-memory'),
 const memorySummary = path.join(memoryDir, 'memory-summary.json'),
 if (!fs.existsSync(path.dirname(logFile))) {
@@ -17,7 +17,7 @@ function log(message) {
 function loadSummary() {
   try {
     return JSON.parse(fs.readFileSync(memorySummary, 'utf8'))} catch {
-    return { totalEntries: 0, categories: {}, confidenceDistribution: { high: 0, medium: 0, low: 0 }, lastUpdated: null };
+    return { totalEntries: 0, categories: {}, confidenceDistribution: { high: 0, medium: 0, low: 0 }, lastUpdated: null },
   }
 }
 ,

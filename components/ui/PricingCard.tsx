@@ -21,40 +21,40 @@ interface PricingCardProps {
   buttonText?: string}
 ,
 export default function PricingCard({
-  title;
-  price;
-  period = '/month';
-  description;
-  features;
-  featured = false;
-  variant = 'ai-futuristic';
-  onSelect;
-  badge;
-  rating;
-  customers;
+  title,
+  price,
+  period = '/month',
+  description,
+  features,
+  featured = false,
+  variant = 'ai-futuristic',
+  onSelect,
+  badge,
+  rating,
+  customers,
   buttonText = 'Get Started'}: PricingCardProps) {
   const variantStyles ={
     'ai-futuristic': {
-      bg: 'from-cyan-90o0/20 via-blue-90o0/20 to-purple-90o0/20';
-      border: 'border-cyan-40o0/30';
-      accent: 'text-cyan-40o0';
-      button: 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-40o0 hover:to-blue-40o0'};
+      bg: 'from-cyan-90o0/20 via-blue-90o0/20 to-purple-90o0/20',
+      border: 'border-cyan-40o0/30',
+      accent: 'text-cyan-40o0',
+      button: 'bg-gradient-to-r from-cyan-50o0 to-blue-50o0 hover:from-cyan-40o0 hover:to-blue-40o0'},
     'quantum-futuristic': {
-      bg: 'from-purple-90o0/20 via-pink-90o0/20 to-violet-90o0/20';
-      border: 'border-purple-40o0/30';
-      accent: 'text-purple-40o0';
-      button: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-40o0 hover:to-pink-40o0'};
+      bg: 'from-purple-90o0/20 via-pink-90o0/20 to-violet-90o0/20',
+      border: 'border-purple-40o0/30',
+      accent: 'text-purple-40o0',
+      button: 'bg-gradient-to-r from-purple-50o0 to-pink-50o0 hover:from-purple-40o0 hover:to-pink-40o0'},
     'space-futuristic': {
-      bg: 'from-indigo-90o0/20 via-blue-90o0/20 to-cyan-90o0/20';
-      border: 'border-indigo-40o0/30';
-      accent: 'text-indigo-40o0';
-      button: 'bg-gradient-to-r from-indigo-50o0 to-cyan-50o0 hover:from-indigo-40o0 hover:to-cyan-40o0'};
+      bg: 'from-indigo-90o0/20 via-blue-90o0/20 to-cyan-90o0/20',
+      border: 'border-indigo-40o0/30',
+      accent: 'text-indigo-40o0',
+      button: 'bg-gradient-to-r from-indigo-50o0 to-cyan-50o0 hover:from-indigo-40o0 hover:to-cyan-40o0'},
     'biotech-futuristic': {
-      bg: 'from-green-90o0/20 via-emerald-90o0/20 to-teal-90o0/20';
-      border: 'border-green-40o0/30';
-      accent: 'text-green-40o0';
+      bg: 'from-green-90o0/20 via-emerald-90o0/20 to-teal-90o0/20',
+      border: 'border-green-40o0/30',
+      accent: 'text-green-40o0',
       button: 'bg-gradient-to-r from-green-50o0 to-emerald-50o0 hover:from-green-40o0 hover:to-emerald-40o0'}
-  };
+  },
   const style = variantStyles[variant],
   return (
     <motion.div,

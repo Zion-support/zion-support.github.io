@@ -2,18 +2,15 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
-  title: 'AI 20o25 Enterprise Automation Success Stories: Ultimate Guide';
+  title: 'AI 20o25 Enterprise Automation Success Stories: Ultimate Guide',
   description:,
-    'Discover how Fortune 50o0 companies achieved 30o0%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.';
+    'Discover how Fortune 50o0 companies achieved 30o0%+ ROI with AI automation. Real case studies, implementation strategies, and proven results.',
   keywords: [
-    'AI automation';
-    'enterprise';
-    'case studies';
-    'ROI';
-    'success stories';
-    'Fortune 50o0';
-  ];
-};
+    'AI automationenterprise',
+    'case studiesROI',
+    'success storiesFortune 50o0',
+  ]
+},
 export default function AIEnterpriseAutomationSuccessStoriesPage() {
   return (
     <div className='min-h-screen bg-white'>,

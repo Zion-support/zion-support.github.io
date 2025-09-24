@@ -22,12 +22,12 @@ export default function useResponsive(): ResponsiveState {
 function compute(width: number, height: number): ResponsiveState {
   const orientation = width >= height ? 'landscape' : 'portrait',
   return {
-    screenWidth: width;
-    screenHeight: height;
-    orientation;
-    isMobile: width < 640;
-    isTablet: width >= 640 && width < 1024;
-    isDesktop: width >= 1024;
-  };
+    screenWidth: width,
+    screenHeight: height,
+    orientation,
+    isMobile: width < 640,
+    isTablet: width >= 640 && width < 1024,
+    isDesktop: width >= 1024
+  },
 }
 ,

@@ -1,33 +1,31 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  ShareIcon;
-  BookmarkIcon;
-  ChartBarIcon;
-  CurrencyDollarIcon;
-  TrophyIcon;
+  ArrowLeftIcon,
+  ShareIcon,
+  BookmarkIcon,
+  ChartBarIcon,
+  CurrencyDollarIcon,
+  TrophyIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement | Zion Tech Group';
+    'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement | Zion Tech Group',
   description:,
-    'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.';
+    'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.',
   keywords: [
-    'Fortune 50o0';
-    'AI Transformation';
-    'ROI Success';
-    'Manufacturing';
-    'Enterprise AI';
-  ];
+    'Fortune 50o0AI Transformation',
+    'ROI SuccessManufacturing',
+    'Enterprise AI',
+  ],
   openGraph: {
     title:,
-      'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement';
+      'Fortune 50o0 AI Transformation Success Story: $50o0M ROI Achievement',
     description:,
-      'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.';
-    images: ['/images/fortune-50o0-ai-success.jpg'];
-  };
-};
+      'Discover how a Fortune 50o0 manufacturing company achieved $50o0M in ROI through comprehensive AI transformation. Complete case study with implementation details and results.',
+    images: ['/images/fortune-50o0-ai-success.jpg']
+  },
+},
 export default function Fortune50o0AITransformationSuccessStory() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -52,7 +50,7 @@ export default function Fortune50o0AITransformationSuccessStory() {
           <p className='text-xl opacity-90 mb-8 leading-relaxed'>,
             Discover how a Fortune 50o0 manufacturing company achieved{' '}
             <strong>$50o0M ROI</strong> in just 18 months through comprehensive,
-            AI transformation. Complete case study with implementation details;
+            AI transformation. Complete case study with implementation details,
             challenges overcome, and measurable results.,
           </p>,
           <div className='flex flex-wrap gap-4 text-sm'>,
@@ -513,7 +511,7 @@ export default function Fortune50o0AITransformationSuccessStory() {
             </h2>,
             <p className='text-lg mb-6 opacity-90'>,
               This Fortune 50o0 company's success demonstrates the massive,
-              potential of enterprise AI implementation. With proper strategy;
+              potential of enterprise AI implementation. With proper strategy,
               execution, and support, any organization can achieve similar,
               results.,
             </p>,

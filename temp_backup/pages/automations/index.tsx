@@ -1,5 +1,5 @@
-import React from "react";;
-import Link from "next/link";
+import React from "react",
+import Link from "next/link",
 export default function AutomationsPage() {
   return (
     <main className="mx-auto max-w-5xl px-4 py-12">,

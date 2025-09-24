@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  BarChart3;
-  Users;
-  Clock;
-  TrendingUp;
-  Eye;
-  Activity;
-  X;
-  Play;
-  Pause;
+  BarChart3,
+  Users,
+  Clock,
+  TrendingUp,
+  Eye,
+  Activity,
+  X,
+  Play,
+  Pause,
   Download} from 'lucide-react',
 interface UserBehavior {
   pageViews: number,
@@ -29,12 +29,12 @@ const EnhancedAnalyticsTracker: React.FC = () => {
   const [isTracking, setIsTracking] = useState(true),
   const [showPanel, setShowPanel] = useState(false),
   const [userBehavior, setUserBehavior] = useState<UserBehavior>({
-    pageViews: 0;
-    uniqueVisitors: 0;
-    averageSessionDuration: 0;
-    bounceRate: 0;
-    conversionRate: 0;
-    topPages: [];
+    pageViews: 0,
+    uniqueVisitors: 0,
+    averageSessionDuration: 0,
+    bounceRate: 0,
+    conversionRate: 0,
+    topPages: [],
     userJourney: []}),
   const [events, setEvents] = useState<AnalyticsEvent[]>([]),
   const [sessionStart] = useState<Date>(new Date()),
@@ -47,15 +47,15 @@ const EnhancedAnalyticsTracker: React.FC = () => {
       const path = window.location.pathname,
       setCurrentPage(path),
       const event: AnalyticsEvent ={
-        type: 'pageview';
-        timestamp: new Date();
+        type: 'pageview',
+        timestamp: new Date(),
         data: { path, referrer: document.referrer }
-      };
+      },
       setEvents(prev => [...prev, event]),
       setUserBehavior(prev => ({
-        ...prev;
-        pageViews: prev.pageViews + 1;
-        topPages: updateTopPages(prev.topPages, path)}))};
+        ...prev,
+        pageViews: prev.pageViews + 1,
+        topPages: updateTopPages(prev.topPages, path)}))},
     // Track clicks,
     const trackClick = (event: MouseEvent) => {
       const target = event.target as HTMLElement,
@@ -63,11 +63,11 @@ const EnhancedAnalyticsTracker: React.FC = () => {
       const text = target.textContent?.slice(0, 50) || '',
       const href = (target as HTMLAnchorElement).href || '',
       const clickEvent: AnalyticsEvent ={
-        type: 'click';
-        timestamp: new Date();
+        type: 'click',
+        timestamp: new Date(),
         data: { tagName, text, href, x: event.clientX, y: event.clientY }
-      };
-      setEvents(prev => [...prev, clickEvent])};
+      },
+      setEvents(prev => [...prev, clickEvent])},
     // Track scroll depth,
     let maxScrollDepth = 0,
     const trackScroll = () => {
@@ -76,49 +76,49 @@ const EnhancedAnalyticsTracker: React.FC = () => {
         maxScrollDepth = scrollDepth,
         if (scrollDepth % 25 === 0) { // Track every 25%,
           const scrollEvent: AnalyticsEvent ={
-            type: 'scroll';
-            timestamp: new Date();
+            type: 'scroll',
+            timestamp: new Date(),
             data: { depth: scrollDepth, page: currentPage }
-          };
+          },
           setEvents(prev => [...prev, scrollEvent])}
       }
-    };
+    },
     // Track form submissions,
     const trackFormSubmit = (event: Event) => {
       const form = event.target as HTMLFormElement,
       const formEvent: AnalyticsEvent ={
-        type: 'form_submit';
-        timestamp: new Date();
+        type: 'form_submit',
+        timestamp: new Date(),
         data: {
-          formId: form.id || 'unknown';
-          formAction: form.action;
+          formId: form.id || 'unknown',
+          formAction: form.action,
           formMethod: form.method}
-      };
+      },
       setEvents(prev => [...prev, formEvent]),
       setUserBehavior(prev => ({
-        ...prev;
-        conversionRate: prev.conversionRate + 0.1}))};
+        ...prev,
+        conversionRate: prev.conversionRate + 0.1}))},
     // Track downloads,
     const trackDownload = (event: Event) => {
       const link = event.target as HTMLAnchorElement,
       const downloadEvent: AnalyticsEvent ={
-        type: 'download';
-        timestamp: new Date();
+        type: 'download',
+        timestamp: new Date(),
         data: {
-          filename: link.download || link.href.split('/').pop();
+          filename: link.download || link.href.split('/').pop(),
           url: link.href}
-      };
-      setEvents(prev => [...prev, downloadEvent])};
+      },
+      setEvents(prev => [...prev, downloadEvent])},
     // Track social shares,
     const trackShare = (event: Event) => {
       const shareEvent: AnalyticsEvent ={
-        type: 'share';
-        timestamp: new Date();
+        type: 'share',
+        timestamp: new Date(),
         data: {
-          platform: (event.target as HTMLElement).getAttribute('data-platform') || 'unknown';
+          platform: (event.target as HTMLElement).getAttribute('data-platform') || 'unknown',
           page: currentPage}
-      };
-      setEvents(prev => [...prev, shareEvent])};
+      },
+      setEvents(prev => [...prev, shareEvent])},
     // Add event listeners,
     document.addEventListener('click', trackClick),
     window.addEventListener('scroll', trackScroll),
@@ -137,7 +137,7 @@ const EnhancedAnalyticsTracker: React.FC = () => {
     return () => {
       document.removeEventListener('click', trackClick),
       window.removeEventListener('scroll', trackScroll),
-      document.removeEventListener('submit', trackFormSubmit)};
+      document.removeEventListener('submit', trackFormSubmit)},
   }, [isTracking, currentPage]),
   // Update top pages,
   const updateTopPages = (topPages: Array<{ path: string, views: number }>, path: string) => {
@@ -148,13 +148,13 @@ const EnhancedAnalyticsTracker: React.FC = () => {
 ,
     return topPages,
       .sort((a, b) => b.views - a.views),
-      .slice(0, 5)};
+      .slice(0, 5)},
   // Calculate session duration,
   useEffect(() => {
     const interval = setInterval(() => {
       const duration = Math.floor((Date.now() - sessionStart.getTime()) / 10o00),
       setUserBehavior(prev => ({
-        ...prev;
+        ...prev,
         averageSessionDuration: duration}))}, 10o00),
     return () => clearInterval(interval)}, [sessionStart]),
   // Simulate unique visitors,
@@ -164,34 +164,34 @@ const EnhancedAnalyticsTracker: React.FC = () => {
       const newId = 'visitor_' + Date.now() + '_' + Math.random().toString(36).substr(2, 9),
       localStorage.setItem('visitor_id', newId),
       setUserBehavior(prev => ({
-        ...prev;
+        ...prev,
         uniqueVisitors: prev.uniqueVisitors + 1}))}
   }, []),
   // Toggle tracking,
   const toggleTracking = () => {
-    setIsTracking(!isTracking)};
+    setIsTracking(!isTracking)},
   // Export analytics data,
   const exportAnalytics = () => {
     const data ={
-      userBehavior;
-      events;
-      sessionStart;
-      currentPage};
+      userBehavior,
+      events,
+      sessionStart,
+      currentPage},
     const blob = new Blob([JSON.stringify(data, null, 2)], { type: 'application/json' }),
     const url = URL.createObjectURL(blob),
     const a = document.createElement('a'),
     a.href = url,
     a.download = `analytics-${new Date().toISOString().split('T')[0]}.json`,
     a.click(),
-    URL.revokeObjectURL(url)};
+    URL.revokeObjectURL(url)},
   // Clear analytics data,
   const clearAnalytics = () => {
     setEvents([]),
     setUserBehavior(prev => ({
-      ...prev;
-      pageViews: 0;
-      topPages: [];
-      userJourney: []}))};
+      ...prev,
+      pageViews: 0,
+      topPages: [],
+      userJourney: []}))},
   return (
     <>,
       {/* Analytics Panel */}
@@ -323,5 +323,5 @@ const EnhancedAnalyticsTracker: React.FC = () => {
         <BarChart3 className="w-5 h-5"  />,
         {showPanel ? 'Hide' : 'Show'} Analytics,
       </button>,
-    </>)};
-export default EnhancedAnalyticsTracker;
+    </>)},
+export default EnhancedAnalyticsTracker,

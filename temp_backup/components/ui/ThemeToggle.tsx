@@ -26,12 +26,12 @@ const ThemeToggle: React.FC = () => {
 ,
     localStorage.setItem('theme', theme)}, [theme, mounted]),
   const handleThemeChange = (newTheme: Theme) => {
-    setTheme(newTheme)};
+    setTheme(newTheme)},
   if (!mounted) return null,
   const themes = [
-    { value: 'light', icon: Sun, label: 'Light' };
-    { value: 'dark', icon: Moon, label: 'Dark' };
-    { value: 'system', icon: Monitor, label: 'System' };
+    { value: 'light', icon: Sun, label: 'Light' },
+    { value: 'dark', icon: Moon, label: 'Dark' },
+    { value: 'system', icon: Monitor, label: 'System' },
   ] as const,
   return (
     <div className='relative'>,
@@ -60,5 +60,5 @@ const ThemeToggle: React.FC = () => {
               />)}
           </button>))}
       </motion.div>,
-    </div>)};
-export default ThemeToggle;
+    </div>)},
+export default ThemeToggle,

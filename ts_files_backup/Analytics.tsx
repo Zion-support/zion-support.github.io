@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -37,17 +37,17 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
       // Initialize gtag,
       window && window.dataLayer = window && window.dataLayer || [],
       function gtag(): any (...args: unknown[]) {
-        window && window.dataLayer.push(args);
+        window && window.dataLayer.push(args)
 }
       window && window.gtag = gtag,
       gtag('js', new Date()),
       gtag('config', trackingId, {
-        page_title: document && document.title;
-        page_location: window && window.location.href;
+        page_title: document && document.title,
+        page_location: window && window.location.href
       }),
       // Track page views,
       const trackPageView = () => {
-        gtag('event', 'page_view', {
+        gtag('eventpage_view', {
           page_title: document.title,
           page_location: window.location.href,
           page_path: window.location.pathname})}
@@ -83,7 +83,7 @@ const Analytics: React.FC<AnalyticsProps> = ({ trackingId = 'G-XXXXXXXXXX' }) =>
     trackEvent('external_link_click', {
       link_url: url,
       link_text: linkText,
-      page_location: window.location.href})};
+      page_location: window.location.href})},
   // Expose tracking functions globally for use in other components,
   if (typeof window !== 'undefined') {
     (window as any).trackEvent = trackEvent,
@@ -108,13 +108,13 @@ function gtag() {
       window.gtag = gtag,
       gtag ('js', new Date ()),
       gtag ('config', tracking_id, {
-        page_title: document.title;
+        page_title: document.title,
         page_location: window.location.href}),
       // Track page views,
       const trackPageView = () =>: any {
-        gtag ('event', 'page_view', {
-          page_title: document.title;
-          page_location: window.location.href;
+        gtag ('eventpage_view', {
+          page_title: document.title,
+          page_location: window.location.href,
           page_path: window.location.pathname})}
 ,
       // Track page view on load,
@@ -141,20 +141,20 @@ if ( {) {
   // Track button clicks,
   const trackButtonClick = (button_name: string, location?: string) =>: any {
     track_event ('button_click', {
-      button_name: button_name;
+      button_name: button_name,
       location: location || window.location.pathname})}
 ,
   // Track form submissions,
   const trackFormSubmission = (form_name: string) =>: any {
     track_event ('form_submit', {
-      form_name: form_name;
+      form_name: form_name,
       page_location: window.location.href})}
 ,
   // Track external link clicks,
   const trackExternalLink = (url: string, link_text: string) =>: any {
     track_event ('external_link_click', {
-      link_url: url;
-      link_text: link_text;
+      link_url: url,
+      link_text: link_text,
       page_location: window.location.href})}
 ,
   // Expose tracking functions globally for use in other components,
@@ -169,7 +169,7 @@ if ( {) {
     <Head>,
       <script
         dangerouslySetInnerHTML={{
-                        name: 'load';
+                        name: 'load',
                         value: Math.round(loadTime)}),
           __html: `,
             // Performance monitoring,
@@ -180,20 +180,20 @@ if ( {) {
                   if (perfData) {
                     const loadTime = perfData.loadEventEnd - perfData.loadEventStart,
                     if (window.gtag) {
-                      window.gtag('event', 'timing_complete', {
+                      window.gtag('eventtiming_complete', {
                         name: 'load',
                         value: Math.round(loadTime),
-                        name: 'load';
+                        name: 'load',
                         value: Math.round(loadTime)}),
                     const loadTime = perfData && perfData.loadEventEnd - perfData && perfData.loadEventStart,
                     if (window && window.gtag) {
-                      window && window.gtag('event', 'timing_complete', {
-                        name: 'load';
+                      window && window.gtag('eventtiming_complete', {
+                        name: 'load',
                         value: Math && Math.round(loadTime)})}
                   }
 }, 0)})}
 }}
        />,
     </Head>),
-export default Analytics;
+export default Analytics,
 }}}

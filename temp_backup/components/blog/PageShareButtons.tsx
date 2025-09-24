@@ -1,18 +1,18 @@
 import { useMemo } from 'react',
 import {
-  LinkedinShareButton;
-  LinkedinIcon;
-  FacebookShareButton;
-  FacebookIcon;
-  TwitterShareButton;
-  TwitterIcon;
+  LinkedinShareButton,
+  LinkedinIcon,
+  FacebookShareButton,
+  FacebookIcon,
+  TwitterShareButton,
+  TwitterIcon,
 } from 'react-share',
 export default function PageShareButtons({
-  title;
-  url;
-  description;
-  onShare;
-  utm = 'utm_source=social&utm_medium=share&utm_campaign=blog';
+  title,
+  url,
+  description,
+  onShare,
+  utm = 'utm_source=social&utm_medium=share&utm_campaign=blog',
 }: {
   title: string,
   url: string,
@@ -25,7 +25,7 @@ export default function PageShareButtons({
   const handle = (network: string) => () => {
     try {
       onShare && onShare(network)} catch {}
-  };
+  },
   return (
     <div className='flex items-center gap-3'>,
       <LinkedinShareButton

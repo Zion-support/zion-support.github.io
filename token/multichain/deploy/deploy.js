@@ -19,12 +19,12 @@ async function main() {
   await executor.deployed(),
   console.warn('GovernanceExecutor deployed:', executor.address),
   const output = {
-    ZIONDollar: token.address;
-    VoteRelay: relay.address;
-    GovernanceExecutor: executor.address;
-  };
+    ZIONDollar: token.address,
+    VoteRelay: relay.address,
+    GovernanceExecutor: executor.address
+  },
   fs.writeFileSync(
-    path.join(__dirname, '..', 'deployment.json');
+    path.join(__dirname, '..deployment.json'),
     JSON.stringify(output, null, 2))}
 ,
 main().catch(error => {

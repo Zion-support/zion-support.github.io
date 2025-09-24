@@ -6,46 +6,46 @@ const UltimateTransformationBanner20o25 = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      id: 'ultimate-transformation';
-      title: 'AI 20o25: The Ultimate Business Transformation Revolution';
-      subtitle: '950% ROI Breakthrough - $4.2B Market Transformation';
-      description: 'Discover how Fortune 50o0 companies achieve 750% average ROI through strategic AI transformation with 99.8% client satisfaction.';
+      id: 'ultimate-transformation',
+      title: 'AI 20o25: The Ultimate Business Transformation Revolution',
+      subtitle: '950% ROI Breakthrough - $4.2B Market Transformation',
+      description: 'Discover how Fortune 50o0 companies achieve 750% average ROI through strategic AI transformation with 99.8% client satisfaction.',
       metrics: {
-        roi: '950%';
-        savings: '$4.2B';
-        satisfaction: '99.8%';
-        success: '98%'};
-      url: '/blog/ai-20o25-ultimate-business-transformation-revolution';
-      type: 'blog';
-      readingTime: '25 min read';
-      featured: true};
+        roi: '950%',
+        savings: '$4.2B',
+        satisfaction: '99.8%',
+        success: '98%'},
+      url: '/blog/ai-20o25-ultimate-business-transformation-revolution',
+      type: 'blog',
+      readingTime: '25 min read',
+      featured: true},
     {
-      id: 'enterprise-success';
-      title: 'AI 20o25 Ultimate Enterprise Transformation Success';
-      subtitle: '$2.8B Company Achieves 950% ROI in 18 Months';
-      description: 'Real-world case study: Fortune 10o0 manufacturing conglomerate generates $1.2 billion in annual savings with 99.9% operational efficiency.';
+      id: 'enterprise-success',
+      title: 'AI 20o25 Ultimate Enterprise Transformation Success',
+      subtitle: '$2.8B Company Achieves 950% ROI in 18 Months',
+      description: 'Real-world case study: Fortune 10o0 manufacturing conglomerate generates $1.2 billion in annual savings with 99.9% operational efficiency.',
       metrics: {
-        roi: '950%';
-        savings: '$1.2B';
-        efficiency: '99.9%';
-        timeline: '18 months'};
-      url: '/case-studies/ai-20o25-ultimate-enterprise-transformation-success-story';
-      type: 'case-study';
-      readingTime: '20 min read';
-      featured: true};
+        roi: '950%',
+        savings: '$1.2B',
+        efficiency: '99.9%',
+        timeline: '18 months'},
+      url: '/case-studies/ai-20o25-ultimate-enterprise-transformation-success-story',
+      type: 'case-study',
+      readingTime: '20 min read',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'AI 20o25 Ultimate Implementation Master Guide';
-      subtitle: 'From Strategy to 950% ROI in 18 Months';
-      description: 'Comprehensive framework for achieving 950% ROI through AI transformation, based on 50o0+ successful enterprise implementations.';
+      id: 'implementation-guide',
+      title: 'AI 20o25 Ultimate Implementation Master Guide',
+      subtitle: 'From Strategy to 950% ROI in 18 Months',
+      description: 'Comprehensive framework for achieving 950% ROI through AI transformation, based on 50o0+ successful enterprise implementations.',
       metrics: {
-        roi: '950%';
-        success: '98%';
-        savings: '$4.2B';
-        timeline: '18 months'};
-      url: '/resources/ai-20o25-ultimate-implementation-master-guide';
-      type: 'resource';
-      readingTime: '45 min read';
+        roi: '950%',
+        success: '98%',
+        savings: '$4.2B',
+        timeline: '18 months'},
+      url: '/resources/ai-20o25-ultimate-implementation-master-guide',
+      type: 'resource',
+      readingTime: '45 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -54,7 +54,7 @@ const UltimateTransformationBanner20o25 = () => {
     return () => clearInterval(interval)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimate-transformation-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-transformation-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-transformation-banner-dismissed'),
     if (dismissed === 'true') {
@@ -155,5 +155,5 @@ const UltimateTransformationBanner20o25 = () => {
             />))}
         </div>,
       </div>,
-    </div>)};
-export default UltimateTransformationBanner20o25;
+    </div>)},
+export default UltimateTransformationBanner20o25,

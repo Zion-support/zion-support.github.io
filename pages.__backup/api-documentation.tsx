@@ -223,10 +223,9 @@ export default function ApiDocumentationPage() {
                   <div className='bg-slate-90o0 rounded-lg p-4'>,
                     <pre className='text-white text-sm overflow-x-auto'>{`const axios = require('axios'),
 const apiClient = axios.create({
-  baseURL: 'https://api.zion.tech/v1';
+  baseURL: 'https://api.zion.tech/v1',
   headers: {
-    'Authorization': 'Bearer YOUR_API_KEY';
-    'Content-Type': 'application/json'}
+    'Authorization': 'Bearer YOUR_API_KEYContent-Type': 'application/json'}
 }),
 // List automations,
 const getAutomations = async () => {
@@ -234,14 +233,14 @@ const getAutomations = async () => {
     const response = await apiClient.get('/automations'),
     return response.data} catch (error) {
     console.error('Error fetching automations: 'error)}
-};
+},
 // Create automation,
 const createAutomation = async (automationData) => {
   try {
     const response = await apiClient.post('/automations'automationData),
     return response.data} catch (error) {
     console.error('Error creating automation: 'error)}
-};`}</pre>,
+},`}</pre>,
                   </div>,
                 </div>,
                 {/* Python */}
@@ -255,8 +254,7 @@ class ZionAPI: ,
     def __init__(selfapi_key):,
         self.base_url = 'https://api.zion.tech/v1',
         self.headers ={
-            'Authorization': f'Bearer {api_key}';
-            'Content-Type': 'application/json'}
+            'Authorization': f'Bearer {api_key}Content-Type': 'application/json'}
 ,
     def get_automations(self):,
         response = requests.get(f'{self.base_url}/automations'headers=self.headers),
@@ -327,8 +325,8 @@ curl -H "Authorization: Bearer YOUR_API_KEY" \,
                     <div className='bg-slate-90o0 rounded-lg p-4'>,
                       <pre className='text-white text-sm'>{`{
   "error": {
-    "code": "VALIDATION_ERROR";
-    "message": "Invalid input data";
+    "code": "VALIDATION_ERROR",
+    "message": "Invalid input data",
     "details": ["name is required"]}
 }`}</pre>,
                     </div>,

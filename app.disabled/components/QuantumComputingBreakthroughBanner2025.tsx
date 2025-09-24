@@ -8,43 +8,43 @@ const QuantumComputingBreakthroughBanner20o25 = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const quantumContent = [
     {
-      id: 'quantum-breakthrough';
-      title: 'AI 20o25: The Quantum Computing Breakthrough That\'s Revolutionizing Enterprise';
-      description: 'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.';
-      url: '/blog/ai-20o25-quantum-computing-breakthrough-enterprise';
+      id: 'quantum-breakthrough',
+      title: 'AI 20o25: The Quantum Computing Breakthrough That\'s Revolutionizing Enterprise',
+      description: 'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',
+      url: '/blog/ai-20o25-quantum-computing-breakthrough-enterprise',
       metrics: {
-        roi: '60o0%';
-        savings: '$50o0M+';
-        accuracy: '99.7%';
-        speed: '67% faster'};
-      type: 'Blog Post';
-      readingTime: '18 min read';
-      featured: true};
+        roi: '60o0%',
+        savings: '$50o0M+',
+        accuracy: '99.7%',
+        speed: '67% faster'},
+      type: 'Blog Post',
+      readingTime: '18 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-case-study';
-      title: 'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI';
-      description: 'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.';
-      url: '/case-studies/fortune-50o0-quantum-transformation-20o25';
+      id: 'fortune-50o0-case-study',
+      title: 'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI',
+      description: 'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.',
+      url: '/case-studies/fortune-50o0-quantum-transformation-20o25',
       metrics: {
-        roi: '80o0%';
-        savings: '$2.8B';
-        accuracy: '99.9%';
-        speed: '67% reduction'};
-      type: 'Case Study';
-      readingTime: '22 min read';
-      featured: true};
+        roi: '80o0%',
+        savings: '$2.8B',
+        accuracy: '99.9%',
+        speed: '67% reduction'},
+      type: 'Case Study',
+      readingTime: '22 min read',
+      featured: true},
     {
-      id: 'quantum-implementation-guide';
-      title: 'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI';
-      description: 'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.';
-      url: '/resources/quantum-computing-implementation-guide-20o25';
+      id: 'quantum-implementation-guide',
+      title: 'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI',
+      description: 'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.',
+      url: '/resources/quantum-computing-implementation-guide-20o25',
       metrics: {
-        roi: '80o0%';
-        savings: '$50o0M+';
-        accuracy: '99.9%';
-        speed: '340% improvement'};
-      type: 'Resource';
-      readingTime: '35 min read';
+        roi: '80o0%',
+        savings: '$50o0M+',
+        accuracy: '99.9%',
+        speed: '340% improvement'},
+      type: 'Resource',
+      readingTime: '35 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -60,7 +60,7 @@ const QuantumComputingBreakthroughBanner20o25 = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('quantum-banner-dismissed', 'true')};
+    localStorage.setItem('quantum-banner-dismissedtrue')},
   const currentItem = quantumContent[currentContent],
   if (!isVisible || isDismissed) return null,
   return (
@@ -178,5 +178,5 @@ const QuantumComputingBreakthroughBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default QuantumComputingBreakthroughBanner20o25;
+    </div>)},
+export default QuantumComputingBreakthroughBanner20o25,

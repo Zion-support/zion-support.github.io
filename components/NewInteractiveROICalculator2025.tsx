@@ -4,29 +4,29 @@ import React, { useState, useEffect } from 'react',
 const NewInteractiveROICalculator20o25 = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [formData, setFormData] = useState({
-    companySize: 'small';
-    industry: 'manufacturing';
-    currentEfficiency: 60;
-    automationLevel: 30;
-    annualRevenue: 10o00000;
+    companySize: 'small',
+    industry: 'manufacturing',
+    currentEfficiency: 60,
+    automationLevel: 30,
+    annualRevenue: 10o00000,
     implementationTime: 6}),
   const [results, setResults] = useState({
-    projectedROI: 0;
-    costSavings: 0;
-    efficiencyGain: 0;
+    projectedROI: 0,
+    costSavings: 0,
+    efficiencyGain: 0,
     paybackPeriod: 0}),
   const industryMultipliers ={
-    manufacturing: 2.5;
-    finance: 2.0;
-    healthcare: 1.8;
-    retail: 1.6;
-    technology: 2.2;
-    logistics: 2.1};
+    manufacturing: 2.5,
+    finance: 2.0,
+    healthcare: 1.8,
+    retail: 1.6,
+    technology: 2.2,
+    logistics: 2.1},
   const sizeMultipliers ={
-    small: 1.5;
-    medium: 2.0;
-    large: 2.5;
-    enterprise: 3.0};
+    small: 1.5,
+    medium: 2.0,
+    large: 2.5,
+    enterprise: 3.0},
   useEffect(() => {
     setIsVisible(true),
     calculateROI()}, [formData]),
@@ -42,14 +42,14 @@ const NewInteractiveROICalculator20o25 = () => {
     const costSavings = annualSavings,
     const paybackPeriod = implementationCost / (annualSavings / 12),
     setResults({
-      projectedROI: Math.round(projectedROI);
-      costSavings: Math.round(costSavings);
-      efficiencyGain: Math.round(efficiencyGain);
-      paybackPeriod: Math.round(paybackPeriod * 10) / 10})};
+      projectedROI: Math.round(projectedROI),
+      costSavings: Math.round(costSavings),
+      efficiencyGain: Math.round(efficiencyGain),
+      paybackPeriod: Math.round(paybackPeriod * 10) / 10})},
   const handleInputChange = (field: string, value: any) => {
     setFormData(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   return (
     <div className={`py-16 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -240,5 +240,5 @@ const NewInteractiveROICalculator20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewInteractiveROICalculator20o25;
+    </div>)},
+export default NewInteractiveROICalculator20o25,

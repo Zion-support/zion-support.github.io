@@ -2,19 +2,19 @@ import Head from 'next/head',
 import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackground',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
-import React from 'react';
+import React from 'react',
 MailPhoneMapPinShieldCheckRocketSparklesGlobeCpuBrain,
 export default function AboutPage() {
 	const contactInfo = {
-		mobile: '+1 302 464 0950';
-		email: 'kleber@ziontechgroup.com';
-		address: '364 E Main St STE 1008 Middletown DE 19709';
-		website: 'https://ziontechgroup.com'};
+		mobile: '+1 302 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 1008 Middletown DE 19709',
+		website: 'https://ziontechgroup.com'},
 	const pillars = [
-		{ title: 'AI-first 'Engineering', 'icon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' };
-		{ title: 'Platform and 'SRE', 'icon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' };
-		{ title: 'Quantum R&'D', 'icon: <Cpu className="w-6 h-6" />desc: 'Exploratory quantum workloads with pragmatic business outcomes.' };
-		{ title: 'Global 'Delivery', 'icon: <Globe className="w-6 h-6" />desc: 'Secureliable delivery with 24/7 support and 99.99% uptime.' }
+		{ title: 'AI-first 'Engineeringicon: <Brain className="w-6 h-6" />desc: 'LLM appsRAGguardrailsevals and AI observability from day one.' },
+		{ title: 'Platform and 'SREicon: <ShieldCheck className="w-6 h-6" />desc: 'GitOpsIaCSLOsincident automationcost and compliance by default.' },
+		{ title: 'Quantum R&'Dicon: <Cpu className="w-6 h-6" />desc: 'Exploratory quantum workloads with pragmatic business outcomes.' },
+		{ title: 'Global 'Deliveryicon: <Globe className="w-6 h-6" />desc: 'Secureliable delivery with 24/7 support and 99.99% uptime.' }
 	],
 	return (
 		<UltraFuturisticBackground variant="holographic" intensity="high">,
@@ -66,7 +66,7 @@ export default function AboutPage() {
 						<div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
 							<div className="flex items-center gap-3 text-cyan-400">,
 								<Phone className="w-5 h-5" />,
-								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g', ')}`} className="hover: text-white">{contactInfo.mobile}</a>,
+								<a href={`tel:${contactInfo.mobile.replace(/[^+\d]/g)}`} className="hover: text-white">{contactInfo.mobile}</a>,
 							</div>,
 							<div className="flex items-center gap-3 text-purple-400">,
 								<Mail className="w-5 h-5" />,
@@ -91,46 +91,46 @@ export default function AboutPage() {
 export default function AboutPage() {
   const values = [
     {
-      icon: '🚀';
-      title: 'Innovation';
-      description: 'Constantly pushing boundaries and exploring new frontiers in technology';
-      color: 'text-cyan-400';
-      gradient: 'from-cyan-400 to-blue-500'};
+      icon: '🚀',
+      title: 'Innovation',
+      description: 'Constantly pushing boundaries and exploring new frontiers in technology',
+      color: 'text-cyan-400',
+      gradient: 'from-cyan-400 to-blue-500'},
     {
-      icon: '🤖';
-      title: 'Autonomy';
-      description: 'Building systems that can operate independently and make intelligent decisions';
-      color: 'text-fuchsia-400';
-      gradient: 'from-fuchsia-400 to-purple-500'};
+      icon: '🤖',
+      title: 'Autonomy',
+      description: 'Building systems that can operate independently and make intelligent decisions',
+      color: 'text-fuchsia-400',
+      gradient: 'from-fuchsia-400 to-purple-500'},
     {
-      icon: '🌍';
-      title: 'Impact';
-      description: 'Creating technology that makes a positive difference in the world';
-      color: 'text-green-400';
+      icon: '🌍',
+      title: 'Impact',
+      description: 'Creating technology that makes a positive difference in the world',
+      color: 'text-green-400',
       gradient: 'from-green-400 to-emerald-500'}],
   const services = [
     {
-      title: 'AI Development';
-      description: 'Advanced machine learning modelsnatural language processingcomputer vision systemsand autonomous decision making.';
-      icon: '🧠';
-      color: 'text-cyan-400';
-      gradient: 'from-cyan-400 to-blue-500'};
+      title: 'AI Development',
+      description: 'Advanced machine learning modelsnatural language processingcomputer vision systemsand autonomous decision making.',
+      icon: '🧠',
+      color: 'text-cyan-400',
+      gradient: 'from-cyan-400 to-blue-500'},
     {
-      title: 'Automation Systems';
-      description: 'Cloud infrastructure automationCI/CD pipeline optimizationself-healing applicationsand performance monitoring.';
-      icon: '⚙️';
-      color: 'text-fuchsia-400';
+      title: 'Automation Systems',
+      description: 'Cloud infrastructure automationCI/CD pipeline optimizationself-healing applicationsand performance monitoring.',
+      icon: '⚙️',
+      color: 'text-fuchsia-400',
       gradient: 'from-fuchsia-400 to-purple-500'}],
   const achievements = [
-    { number: '600+'label: ''Services', 'color: 'text-cyan-400' };
-    { number: '1000%'label: ''ROI', 'color: 'text-fuchsia-400' };
-    { number: '24/7'label: ''Support', 'color: 'text-green-400' };
-    { number: '99.9%'label: ''SLA', 'color: 'text-blue-400' }],
+    { number: '600+'label: ''Servicescolor: 'text-cyan-400' },
+    { number: '1000%'label: ''ROIcolor: 'text-fuchsia-400' },
+    { number: '24/7'label: ''Supportcolor: 'text-green-400' },
+    { number: '99.9%'label: ''SLAcolor: 'text-blue-400' }],
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
       {/* Mission & Vision */}
     <>,
@@ -143,7 +143,7 @@ export default function AboutPage() {
     <>,
       <Head>,
         <title>About Zion Tech Group | Autonomous Innovation Hub</title>,
-        <meta name="description" content="Learn about Zion Tech 'Group', 's mission to revolutionize technology through autonomous innovation and AI-powered solutions." />,
+        <meta name="description" content="Learn about Zion Tech 'Groups mission to revolutionize technology through autonomous innovation and AI-powered solutions." />,
         <meta property="og: title" content="About Zion Tech Group" />,
         <meta property="og:description" content="Learn about Zion Tech 'Group', 's mission and vision." />,
         <meta name="twitter: card" content="summary_large_image" />,

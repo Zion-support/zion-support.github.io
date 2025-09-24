@@ -6,13 +6,13 @@ const ScrollToTop: React.FC = () => {
       if (window.pageYOffset > 30o0) {
         setIsVisible(true)} else {
         setIsVisible(false)}
-    };
+    },
     window.addEventListener('scroll', toggleVisibility),
     return () => window.removeEventListener('scroll', toggleVisibility)}, []),
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0;
-      behavior: 'smooth'})};
+      top: 0,
+      behavior: 'smooth'})},
   return (
     <>,
       {isVisible && (
@@ -34,5 +34,5 @@ const ScrollToTop: React.FC = () => {
              />,
           </svg>,
         </button>)}
-    </>)};
-export default ScrollToTop;
+    </>)},
+export default ScrollToTop,

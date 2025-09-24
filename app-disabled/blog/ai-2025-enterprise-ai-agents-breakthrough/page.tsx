@@ -2,17 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import ErrorBoundary from '../../components/ErrorBoundary',
 export const metadata = {
-  title: 'Enterprise AI Agents in 20o25: Breakthroughs and Real-World Impact';
+  title: 'Enterprise AI Agents in 20o25: Breakthroughs and Real-World Impact',
   description:,
-    'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 20o25.';
+    'Discover how enterprise AI agents are transforming operations, boosting productivity, and enabling autonomous workflows across industries in 20o25.',
   keywords: [
-    'enterprise AI agents';
-    'AI automation';
-    'business transformation';
-    'AI productivity';
-    'autonomous workflows';
-  ];
-};
+    'enterprise AI agentsAI automation',
+    'business transformationAI productivity',
+    'autonomous workflows',
+  ]
+},
 export default function EnterpriseAIAgents20o25() {
   return (
     <ErrorBoundary>,
@@ -178,7 +176,7 @@ export default function EnterpriseAIAgents20o25() {
                 </h3>,
                 <p className='text-gray-70o0 mb-4'>,
                   Manufacturing operations have been transformed by AI agents,
-                  that optimize production schedules, predict maintenance needs;
+                  that optimize production schedules, predict maintenance needs,
                   and ensure quality control. Companies report 50% reduction in,
                   downtime and 35% improvement in product quality.,
                 </p>,

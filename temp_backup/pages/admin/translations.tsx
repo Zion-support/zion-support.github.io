@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic',
 const TranslationPreview = dynamic(
-  () => import('../../components/admin/TranslationPreview');
+  () => import('../../components/admin/TranslationPreview'),
   { ssr: false }
 ),
 export default function TranslationsAdminPage() {

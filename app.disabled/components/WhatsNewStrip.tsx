@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { WHATS_NEW_ITEMS } from '../../data/whatsNew',
 const WhatsNewStrip: React.FC = () => {
@@ -39,8 +39,8 @@ const WhatsNewStrip: React.FC = () => {
             </Link>))}
         </div>,
       </div>,
-    </section>)};
-export default WhatsNewStrip;
+    </section>)},
+export default WhatsNewStrip,
 export default function WhatsNewStrip() {
   return null}
 ,

@@ -1,178 +1,170 @@
-import React from 'react';
+import React from 'react',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Users;
-  Heart;
-  Star;
-  Award;
-  Globe;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp;
-  Infinity;
-  Eye;
-  Sparkles;
-  Clock;
-  Zap;
-  Lightbulb;
-  Coffee;
-  Gamepad2;
-  BookOpen;
-  Music;
-  Camera;
-  Palette;
-  Dumbbell;
-  TreePine;
-  Globe2;
+  Users,
+  Heart,
+  Star,
+  Award,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Infinity,
+  Eye,
+  Sparkles,
+  Clock,
+  Zap,
+  Lightbulb,
+  Coffee,
+  Gamepad2,
+  BookOpen,
+  Music,
+  Camera,
+  Palette,
+  Dumbbell,
+  TreePine,
+  Globe2,
 } from 'lucide-react',
 import Link from 'next/link',
 const CulturePage: React.FC = () => {
   const culturePillars = [
     {
-      icon: Heart;
-      title: 'People First';
+      icon: Heart,
+      title: 'People First',
       description:,
-        'We believe that our people are our greatest asset. We invest in their growth, well-being, and success.';
-      color: 'from-red-50o0 to-pink-50o0';
+        'We believe that our people are our greatest asset. We invest in their growth, well-being, and success.',
+      color: 'from-red-50o0 to-pink-50o0',
       examples: [
-        'Comprehensive health and wellness programs';
-        'Flexible work arrangements and remote options';
-        'Mental health support and counseling services';
-        'Family-friendly policies and benefits';
-      ];
-    };
+        'Comprehensive health and wellness programsFlexible work arrangements and remote options',
+        'Mental health support and counseling servicesFamily-friendly policies and benefits',
+      ]
+    },
     {
-      icon: Lightbulb;
-      title: 'Innovation & Creativity';
+      icon: Lightbulb,
+      title: 'Innovation & Creativity',
       description:,
-        'We foster an environment where creativity thrives and innovative ideas are celebrated and nurtured.';
-      color: 'from-yellow-50o0 to-orange-50o0';
+        'We foster an environment where creativity thrives and innovative ideas are celebrated and nurtured.',
+      color: 'from-yellow-50o0 to-orange-50o0',
       examples: [
-        '20% time for personal projects and innovation';
-        'Regular hackathons and innovation challenges';
-        'Creative spaces and collaboration areas';
-        'Recognition for breakthrough ideas';
-      ];
-    };
+        '20% time for personal projects and innovationRegular hackathons and innovation challenges',
+        'Creative spaces and collaboration areasRecognition for breakthrough ideas',
+      ]
+    },
     {
-      icon: Globe2;
-      title: 'Diversity & Inclusion';
+      icon: Globe2,
+      title: 'Diversity & Inclusion',
       description:,
-        'We celebrate diversity and create an inclusive environment where everyone feels valued and heard.';
-      color: 'from-green-50o0 to-emerald-50o0';
+        'We celebrate diversity and create an inclusive environment where everyone feels valued and heard.',
+      color: 'from-green-50o0 to-emerald-50o0',
       examples: [
-        'Diverse hiring practices and inclusive policies';
-        'Employee resource groups and communities';
-        'Cultural awareness and sensitivity training';
-        'Equal opportunities for growth and advancement';
-      ];
-    };
+        'Diverse hiring practices and inclusive policiesEmployee resource groups and communities',
+        'Cultural awareness and sensitivity trainingEqual opportunities for growth and advancement',
+      ]
+    },
     {
-      icon: Users;
-      title: 'Collaboration & Teamwork';
+      icon: Users,
+      title: 'Collaboration & Teamwork',
       description:,
-        'We believe that the best results come from working together and supporting each other.';
-      color: 'from-blue-50o0 to-cyan-50o0';
+        'We believe that the best results come from working together and supporting each other.',
+      color: 'from-blue-50o0 to-cyan-50o0',
       examples: [
-        'Cross-functional project teams';
-        'Regular team building activities';
-        'Open communication and feedback culture';
-        'Mentorship and knowledge sharing programs';
-      ];
-    };
+        'Cross-functional project teamsRegular team building activities',
+        'Open communication and feedback cultureMentorship and knowledge sharing programs',
+      ]
+    },
   ],
   const workLifeBalance = [
     {
-      icon: Coffee;
-      title: 'Flexible Work Hours';
+      icon: Coffee,
+      title: 'Flexible Work Hours',
       description:,
-        "Work when you're most productive, with flexible start and end times";
-    };
+        "Work when you're most productive, with flexible start and end times",
+    },
     {
-      icon: Globe;
-      title: 'Remote Work Options';
-      description: 'Work from anywhere with our global remote work policies';
-    };
+      icon: Globe,
+      title: 'Remote Work Options',
+      description: 'Work from anywhere with our global remote work policies'
+    },
     {
-      icon: Dumbbell;
-      title: 'Wellness Programs';
-      description: 'Gym memberships, fitness classes, and wellness challenges';
-    };
+      icon: Dumbbell,
+      title: 'Wellness Programs',
+      description: 'Gym memberships, fitness classes, and wellness challenges',
+    },
     {
-      icon: TreePine;
-      title: 'Unlimited PTO';
+      icon: TreePine,
+      title: 'Unlimited PTO',
       description:,
-        'Take time off when you need it to recharge and stay balanced';
-    };
+        'Take time off when you need it to recharge and stay balanced',
+    },
   ],
   const funActivities = [
     {
-      icon: Gamepad2;
-      title: 'Gaming & Entertainment';
-      description: 'Game rooms, VR setups, and regular gaming tournaments';
-    };
+      icon: Gamepad2,
+      title: 'Gaming & Entertainment',
+      description: 'Game rooms, VR setups, and regular gaming tournaments',
+    },
     {
-      icon: Music;
-      title: 'Music & Arts';
-      description: 'Music rooms, art supplies, and creative expression spaces';
-    };
+      icon: Music,
+      title: 'Music & Arts',
+      description: 'Music rooms, art supplies, and creative expression spaces',
+    },
     {
-      icon: Camera;
-      title: 'Photography & Media';
-      description: 'Photo walks, video projects, and creative media workshops';
-    };
+      icon: Camera,
+      title: 'Photography & Media',
+      description: 'Photo walks, video projects, and creative media workshops',
+    },
     {
-      icon: Palette;
-      title: 'Creative Workshops';
-      description: 'Regular art, craft, and creative skill-building sessions';
-    };
+      icon: Palette,
+      title: 'Creative Workshops',
+      description: 'Regular art, craft, and creative skill-building sessions',
+    },
   ],
   const growthOpportunities = [
     {
-      icon: BookOpen;
-      title: 'Learning & Development';
+      icon: BookOpen,
+      title: 'Learning & Development',
       description:,
-        'Continuous learning opportunities, courses, and certifications';
-    };
+        'Continuous learning opportunities, courses, and certifications',
+    },
     {
-      icon: Star;
-      title: 'Career Advancement';
-      description: 'Clear career paths and promotion opportunities';
-    };
+      icon: Star,
+      title: 'Career Advancement',
+      description: 'Clear career paths and promotion opportunities'
+    },
     {
-      icon: Award;
-      title: 'Recognition & Rewards';
-      description: 'Regular recognition programs and performance rewards';
-    };
+      icon: Award,
+      title: 'Recognition & Rewards',
+      description: 'Regular recognition programs and performance rewards'
+    },
     {
-      icon: Users;
-      title: 'Mentorship';
-      description: 'Formal and informal mentorship programs';
-    };
+      icon: Users,
+      title: 'Mentorship',
+      description: 'Formal and informal mentorship programs'
+    },
   ],
   const teamQuotes = [
     {
       quote:,
-        "Zion Tech Group isn't just a company—it's a family. The support and encouragement I've received here have been incredible.";
-      author: 'Sarah Chen';
-      role: 'Senior AI Engineer';
-      avatar: '/images/team/sarah-chen.jpg';
-    };
+        "Zion Tech Group isn't just a company—it's a family. The support and encouragement I've received here have been incredible.",
+      author: 'Sarah Chen',
+      role: 'Senior AI Engineer',
+      avatar: '/images/team/sarah-chen.jpg'
+    },
     {
       quote:,
-        "The culture here encourages innovation and risk-taking. I've never felt more empowered to push boundaries and create something amazing.";
-      author: 'Marcus Rodriguez';
-      role: 'Quantum Computing Specialist';
-      avatar: '/images/team/marcus-rodriguez.jpg';
-    };
+        "The culture here encourages innovation and risk-taking. I've never felt more empowered to push boundaries and create something amazing.",
+      author: 'Marcus Rodriguez',
+      role: 'Quantum Computing Specialist',
+      avatar: '/images/team/marcus-rodriguez.jpg'
+    },
     {
       quote:,
-        'Work-life balance is real here. I can pursue my passion for technology while maintaining a healthy personal life.';
-      author: 'Emily Watson';
-      role: 'Space Technology Lead';
-      avatar: '/images/team/emily-watson.jpg';
-    };
+        'Work-life balance is real here. I can pursue my passion for technology while maintaining a healthy personal life.',
+      author: 'Emily Watson',
+      role: 'Space Technology Lead',
+      avatar: '/images/team/emily-watson.jpg'
+    },
   ],
   return (
     <Layout>,
@@ -194,7 +186,7 @@ const CulturePage: React.FC = () => {
               </h1>,
               <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
                 Discover what makes Zion Tech Group an extraordinary place to,
-                work, grow, and innovate. Our culture is built on trust;
+                work, grow, and innovate. Our culture is built on trust,
                 creativity, and a shared passion for transforming the future.,
               </p>,
             </motion.div>,
@@ -435,5 +427,5 @@ const CulturePage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default CulturePage;
+    </Layout>)},
+export default CulturePage,

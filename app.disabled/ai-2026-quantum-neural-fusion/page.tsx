@@ -2,148 +2,137 @@ import { Metadata } from 'next',
 import Link from 'next/link',
 import Card from '../../components/ui/Card',
 import {
-  ArrowRight;
-  Brain;
-  Zap;
-  Target;
-  TrendingUp;
-  Users;
-  Award;
-  Lightbulb;
-  Atom;
-  Cpu;
-  Network;
+  ArrowRight,
+  Brain,
+  Zap,
+  Target,
+  TrendingUp,
+  Users,
+  Award,
+  Lightbulb,
+  Atom,
+  Cpu,
+  Network,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'AI 20o26 Quantum Neural Fusion - Zion Tech Group';
+  title: 'AI 20o26 Quantum Neural Fusion - Zion Tech Group',
   description:,
-    'Experience the revolutionary fusion of quantum computing and neural networks. Discover how AI 20o26 quantum neural fusion delivers 15,0o00% ROI and transforms industries.';
+    'Experience the revolutionary fusion of quantum computing and neural networks. Discover how AI 20o26 quantum neural fusion delivers 15,0o00% ROI and transforms industries.',
   keywords: [
-    'AI 20o26';
-    'quantum neural fusion';
-    'quantum computing';
-    'neural networks';
-    'breakthrough';
-    'ROI';
-  ];
+    'AI 20o26quantum neural fusion',
+    'quantum computingneural networks',
+    'breakthroughROI',
+  ],
   openGraph: {
-    title: 'AI 20o26 Quantum Neural Fusion - Zion Tech Group';
+    title: 'AI 20o26 Quantum Neural Fusion - Zion Tech Group',
     description:,
-      'Experience the revolutionary fusion of quantum computing and neural networks.';
-    images: ['/og-ai-20o26-quantum-neural.jpg'];
-  };
-};
+      'Experience the revolutionary fusion of quantum computing and neural networks.',
+    images: ['/og-ai-20o26-quantum-neural.jpg']
+  },
+},
 const quantumFeatures = [
   {
-    icon: Atom;
-    title: 'Quantum Processing Units';
+    icon: Atom,
+    title: 'Quantum Processing Units',
     description:,
-      'Revolutionary quantum processors that process information at the speed of light, solving complex problems in milliseconds.';
-    impact: '10,0o00x faster processing';
-    color: 'from-purple-50o0 to-pink-50o0';
-  };
+      'Revolutionary quantum processors that process information at the speed of light, solving complex problems in milliseconds.',
+    impact: '10,0o00x faster processing',
+    color: 'from-purple-50o0 to-pink-50o0'
+  },
   {
-    icon: Brain;
-    title: 'Neural Quantum Networks';
+    icon: Brain,
+    title: 'Neural Quantum Networks',
     description:,
-      'Advanced neural networks enhanced with quantum properties, achieving 99.9% accuracy in pattern recognition.';
-    impact: '99.9% accuracy rate';
-    color: 'from-blue-50o0 to-cyan-50o0';
-  };
+      'Advanced neural networks enhanced with quantum properties, achieving 99.9% accuracy in pattern recognition.',
+    impact: '99.9% accuracy rate',
+    color: 'from-blue-50o0 to-cyan-50o0'
+  },
   {
-    icon: Network;
-    title: 'Quantum Entanglement Learning';
+    icon: Network,
+    title: 'Quantum Entanglement Learning',
     description:,
-      'AI systems that learn through quantum entanglement, enabling instant knowledge transfer across all connected systems.';
-    impact: 'Instant knowledge transfer';
-    color: 'from-green-50o0 to-teal-50o0';
-  };
+      'AI systems that learn through quantum entanglement, enabling instant knowledge transfer across all connected systems.',
+    impact: 'Instant knowledge transfer',
+    color: 'from-green-50o0 to-teal-50o0'
+  },
   {
-    icon: Cpu;
-    title: 'Hybrid Quantum-Classical Processing';
+    icon: Cpu,
+    title: 'Hybrid Quantum-Classical Processing',
     description:,
-      'Seamless integration of quantum and classical computing for optimal performance in all scenarios.';
-    impact: 'Optimal performance';
-    color: 'from-orange-50o0 to-red-50o0';
-  };
+      'Seamless integration of quantum and classical computing for optimal performance in all scenarios.',
+    impact: 'Optimal performance',
+    color: 'from-orange-50o0 to-red-50o0'
+  },
 ],
 const industryApplications = [
   {
-    industry: 'Healthcare';
-    icon: '🏥';
+    industry: 'Healthcare',
+    icon: '🏥',
     applications: [
-      'Drug discovery acceleration (10o00x faster)';
-      'Personalized treatment optimization';
-      'Real-time disease prediction';
-      'Surgical precision enhancement';
-    ];
-    roi: '25,0o00% ROI';
-  };
+      'Drug discovery acceleration (10o00x faster)Personalized treatment optimization',
+      'Real-time disease predictionSurgical precision enhancement',
+    ],
+    roi: '25,0o00% ROI',
+  },
   {
-    industry: 'Finance';
-    icon: '💰';
+    industry: 'Finance',
+    icon: '💰',
     applications: [
-      'Quantum risk assessment';
-      'Real-time fraud detection';
-      'Algorithmic trading optimization';
-      'Cryptocurrency market analysis';
-    ];
-    roi: '20,0o00% ROI';
-  };
+      'Quantum risk assessmentReal-time fraud detection',
+      'Algorithmic trading optimizationCryptocurrency market analysis',
+    ],
+    roi: '20,0o00% ROI',
+  },
   {
-    industry: 'Manufacturing';
-    icon: '🏭';
+    industry: 'Manufacturing',
+    icon: '🏭',
     applications: [
-      'Predictive maintenance (99.8% accuracy)';
-      'Supply chain optimization';
-      'Quality control automation';
-      'Energy efficiency maximization';
-    ];
-    roi: '18,0o00% ROI';
-  };
+      'Predictive maintenance (99.8% accuracy)Supply chain optimization',
+      'Quality control automationEnergy efficiency maximization',
+    ],
+    roi: '18,0o00% ROI',
+  },
   {
-    industry: 'Transportation';
-    icon: '🚗';
+    industry: 'Transportation',
+    icon: '🚗',
     applications: [
-      'Autonomous vehicle navigation';
-      'Traffic flow optimization';
-      'Route planning efficiency';
-      'Safety system enhancement';
-    ];
-    roi: '15,0o00% ROI';
-  };
+      'Autonomous vehicle navigationTraffic flow optimization',
+      'Route planning efficiencySafety system enhancement',
+    ],
+    roi: '15,0o00% ROI',
+  },
 ],
 const technicalSpecs = [
   {
-    spec: 'Quantum Qubits';
-    value: '1,0o00,0o00+';
-    description: 'Simultaneous quantum states for parallel processing';
-  };
+    spec: 'Quantum Qubits',
+    value: '1,0o00,0o00+',
+    description: 'Simultaneous quantum states for parallel processing'
+  },
   {
-    spec: 'Processing Speed';
-    value: '10^18 ops/sec';
-    description: 'Operations per second with quantum acceleration';
-  };
+    spec: 'Processing Speed',
+    value: '10^18 ops/sec',
+    description: 'Operations per second with quantum acceleration'
+  },
   {
-    spec: 'Memory Capacity';
-    value: '1 Exabyte';
-    description: 'Quantum memory storage capacity';
-  };
+    spec: 'Memory Capacity',
+    value: '1 Exabyte',
+    description: 'Quantum memory storage capacity'
+  },
   {
-    spec: 'Accuracy Rate';
-    value: '99.9%';
-    description: 'Neural network prediction accuracy';
-  };
+    spec: 'Accuracy Rate',
+    value: '99.9%',
+    description: 'Neural network prediction accuracy'
+  },
   {
-    spec: 'Energy Efficiency';
-    value: '95% reduction';
-    description: 'Compared to traditional computing';
-  };
+    spec: 'Energy Efficiency',
+    value: '95% reduction',
+    description: 'Compared to traditional computing'
+  },
   {
-    spec: 'Learning Speed';
-    value: '10o00x faster';
-    description: 'Neural network training acceleration';
-  };
+    spec: 'Learning Speed',
+    value: '10o00x faster',
+    description: 'Neural network training acceleration'
+  },
 ],
 export default function AI20o26QuantumNeuralFusion() {
   return (
@@ -168,7 +157,7 @@ export default function AI20o26QuantumNeuralFusion() {
             </h1>,
             <p className='text-xl md:text-2xl text-purple-10o0 max-w-4xl mx-auto mb-8'>,
               Experience the revolutionary fusion of quantum computing and,
-              neural networks. The most advanced AI system ever created;
+              neural networks. The most advanced AI system ever created,
               delivering unprecedented performance and ROI.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

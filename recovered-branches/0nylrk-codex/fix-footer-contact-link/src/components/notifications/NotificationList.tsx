@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { ScrollArea } from '@/components/ui/scroll-area',
 import { Skeleton } from '@/components/ui/skeleton',
 import { Button } from '@/components/ui/button',
@@ -13,12 +13,12 @@ interface NotificationListProps {
   onRetry: () => void}
 ,
 export const NotificationList: React.FC<NotificationListProps> = ({
-  loading;
-  error;
-  notifications;
-  onMarkAsRead;
-  onDismiss;
-  onRetry;
+  loading,
+  error,
+  notifications,
+  onMarkAsRead,
+  onDismiss,
+  onRetry
 }) => {
   return (
     <ScrollArea className='flex-1 overflow-y-auto max-h-[350px]'>,
@@ -49,4 +49,4 @@ export const NotificationList: React.FC<NotificationListProps> = ({
             onMarkAsRead={onMarkAsRead}
             onDismiss={onDismiss}
           />)))}
-    </ScrollArea>)};
+    </ScrollArea>)},

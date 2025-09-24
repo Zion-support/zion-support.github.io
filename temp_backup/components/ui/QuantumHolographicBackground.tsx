@@ -6,8 +6,8 @@ interface QuantumHolographicBackgroundProps {
   variant?: 'quantum' | 'holographic' | 'cyberpunk' | 'neural' | 'quantum-entanglement'}
 ,
 const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> = ({
-  children;
-  intensity = 'medium';
+  children,
+  intensity = 'medium',
   variant = 'quantum'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -28,22 +28,22 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
       color: string,
       type: 'quantum' | 'holographic' | 'neural'}> = [],
     const colors ={
-      quantum: ['#0o0ffff', '#ff0o0ff', '#ffff0o0', '#0o0ff0o0', '#ff0o080'];
-      holographic: ['#ff1493', '#0o0bfff', '#32cd32', '#ffd70o0', '#ff450o0'];
-      cyberpunk: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o000', '#80o00ff'];
-      neural: ['#0o0ff0o0', '#ff0o0ff', '#ffff0o0', '#0o0ffff', '#ff80o00'];
-      'quantum-entanglement': ['#ff1493', '#0o0bfff', '#32cd32', '#ffd70o0', '#ff450o0', '#ff0o080', '#0o0ffff', '#ffff0o0']};
+      quantum: ['#0o0ffff#ff0o0ff', '#ffff0o0#0o0ff0o0', '#ff0o080'],
+      holographic: ['#ff1493#0o0bfff', '#32cd32#ffd70o0', '#ff450o0'],
+      cyberpunk: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o000', '#80o00ff'],
+      neural: ['#0o0ff0o0#ff0o0ff', '#ffff0o0#0o0ffff', '#ff80o00'],
+      'quantum-entanglement': ['#ff1493#0o0bfff', '#32cd32#ffd70o0', '#ff450o0#ff0o080', '#0o0ffff#ffff0o0']},
     const currentColors = colors[variant] || colors.quantum,
     // Create particles,
     for (let i = 0, i < (intensity === 'high' ? 20o0 : intensity === 'medium' ? 120 : 80), i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2;
-        vy: (Math.random() - 0.5) * 2;
-        size: Math.random() * 3 + 1;
-        opacity: Math.random() * 0.8 + 0.2;
-        color: currentColors[Math.floor(Math.random() * currentColors.length)];
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2,
+        vy: (Math.random() - 0.5) * 2,
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: currentColors[Math.floor(Math.random() * currentColors.length)],
         type: variant === 'quantum-entanglement' ? 'quantum' : variant as any})}
 ,
     // Quantum entanglement effect,
@@ -56,7 +56,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
             particles[i].color = particles[i + 1].color}
         }
       }
-    };
+    },
     // Neural network connections,
     const drawNeuralConnections = () => {
       if (variant === 'neural' || variant === 'quantum-entanglement') {
@@ -75,7 +75,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
           }
         }
       }
-    };
+    },
     // Holographic grid,
     const drawHolographicGrid = () => {
       if (variant === 'holographic' || variant === 'quantum-entanglement') {
@@ -94,7 +94,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
           ctx.lineTo(canvas.width, y),
           ctx.stroke()}
       }
-    };
+    },
     // Cyberpunk effects,
     const drawCyberpunkEffects = () => {
       if (variant === 'cyberpunk' || variant === 'quantum-entanglement') {
@@ -106,7 +106,7 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
           const y = Math.random() * canvas.height,
           ctx.fillText('0o1', x, y)}
       }
-    };
+    },
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Draw background effects,
@@ -141,16 +141,16 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
       }),
       // Create quantum entanglement,
       createEntanglement(),
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, [intensity, variant]),
   return (
     <div className="relative min-h-screen overflow-hidden">,
@@ -174,15 +174,15 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
             key={i}
             className="absolute",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              rotate: [0, 360];
-              scale: [0.8, 1.2, 0.8];
+              rotate: [0, 360],
+              scale: [0.8, 1.2, 0.8],
               opacity: [0.1, 0.3, 0.1]}}
             transition={{
-              duration: 8 + Math.random() * 4;
-              repeat: Infinity;
+              duration: 8 + Math.random() * 4,
+              repeat: Infinity,
               ease: "linear"}}
           >,
             <div
@@ -207,12 +207,12 @@ const QuantumHolographicBackground: React.FC<QuantumHolographicBackgroundProps> 
               className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-50o0 to-transparent opacity-20",
               style={{ top: `${20 + i * 15}%` }}
               animate={{
-                x: ['-10o0%', '10o0%']}}
+                x: ['-10o0%10o0%']}}
               transition={{
-                duration: 10 + i * 2;
-                repeat: Infinity;
+                duration: 10 + i * 2,
+                repeat: Infinity,
                 ease: "linear"}}
              />))}
         </div>)}
-    </div>)};
-export default QuantumHolographicBackground;
+    </div>)},
+export default QuantumHolographicBackground,

@@ -10,19 +10,19 @@ import {
   Star,
   BookOpen,
   Play,
-  Download;
-  Share2;
-  Heart;
-  Eye;
-  ChevronDown;
-  Sparkles;
-  Zap;
-  Brain;
-  Rocket;
-  Target;
-  Users;
-  Award;
-  Globe;
+  Download,
+  Share2,
+  Heart,
+  Eye,
+  ChevronDown,
+  Sparkles,
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  Users,
+  Award,
+  Globe,
   Shield} from 'lucide-react',
 const AdvancedContentDiscoveryWidget20o26 = () => {
   const [searchQuerysetSearchQuery] = useState(''),
@@ -31,110 +31,110 @@ const AdvancedContentDiscoveryWidget20o26 = () => {
   const [showFiltersetShowFilters] = useState(false),
   const [favoritesetFavorites] = useState(new Set()),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Globecolor: 'from-blue-50o0 to-cyan-50o0' };
-    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'icon: Zapcolor: 'from-cyan-50o0 to-teal-50o0' };
-    { id: ''automation', 'name: ''Automation', 'icon: Rocketcolor: 'from-orange-50o0 to-red-50o0' };
-    { id: ''predictions', 'name: 'Future 'Predictions', 'icon: Targetcolor: 'from-green-50o0 to-emerald-50o0' };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' };
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: Playcolor: 'from-yellow-50o0 to-orange-50o0' }
+    { id: ''allname: 'All 'Contenticon: Globecolor: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'ai-'innovationsname: 'AI 'Innovationsicon: Braincolor: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'quantum-'computingname: 'Quantum 'Computingicon: Zapcolor: 'from-cyan-50o0 to-teal-50o0' },
+    { id: ''automationname: ''Automationicon: Rocketcolor: 'from-orange-50o0 to-red-50o0' },
+    { id: ''predictionsname: 'Future 'Predictionsicon: Targetcolor: 'from-green-50o0 to-emerald-50o0' },
+    { id: 'case-'studiesname: 'Case 'Studiesicon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' },
+    { id: ''tutorialsname: ''Tutorialsicon: Playcolor: 'from-yellow-50o0 to-orange-50o0' }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: 'Neural Architecture Revolution 20o26';
-      description: 'Breakthrough neural networks that mimic human consciousness with unprecedented accuracy and efficiency.';
-      category: 'ai-innovations';
-      type: 'article';
-      readTime: '12 min';
-      views: 15420;
-      likes: 892;
-      rating: 4.9;
-      featured: true;
-      trending: true;
-      tags: [', 'AI', 'Neural 'Networks', 'Consciousness'Machine Learning'];
-      author: 'Dr. Sarah Chen';
-      publishedAt: '20o26-0o1-15';
-      thumbnail: '/api/placeholder/40o0/250'};
+      id: 1,
+      title: 'Neural Architecture Revolution 20o26',
+      description: 'Breakthrough neural networks that mimic human consciousness with unprecedented accuracy and efficiency.',
+      category: 'ai-innovations',
+      type: 'article',
+      readTime: '12 min',
+      views: 15420,
+      likes: 892,
+      rating: 4.9,
+      featured: true,
+      trending: true,
+      tags: [AI', 'Neural 'NetworksConsciousness'Machine Learning'],
+      author: 'Dr. Sarah Chen',
+      publishedAt: '20o26-0o1-15',
+      thumbnail: '/api/placeholder/40o0/250'},
     {
-      id: 2;
-      title: 'Quantum AI Fusion: The Next Frontier';
-      description: 'Exploring the convergence of quantum computing and artificial intelligence for exponential computational power.';
-      category: 'quantum-computing';
-      type: 'video';
-      readTime: '25 min';
-      views: 22350;
-      likes: 1245;
-      rating: 4.8;
-      featured: true;
-      trending: true;
-      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Computational Power'];
-      author: 'Prof. Michael Rodriguez';
-      publishedAt: '20o26-0o1-12';
-      thumbnail: '/api/placeholder/40o0/250'};
+      id: 2,
+      title: 'Quantum AI Fusion: The Next Frontier',
+      description: 'Exploring the convergence of quantum computing and artificial intelligence for exponential computational power.',
+      category: 'quantum-computing',
+      type: 'video',
+      readTime: '25 min',
+      views: 22350,
+      likes: 1245,
+      rating: 4.8,
+      featured: true,
+      trending: true,
+      tags: ['Quantum 'ComputingAI', 'FusionComputational Power'],
+      author: 'Prof. Michael Rodriguez',
+      publishedAt: '20o26-0o1-12',
+      thumbnail: '/api/placeholder/40o0/250'},
     {
-      id: 3;
-      title: 'Autonomous Business Operations Guide';
-      description: 'Complete implementation guide for autonomous business processes with real-world case studies.';
-      category: 'automation';
-      type: 'guide';
-      readTime: '18 min';
-      views: 18750;
-      likes: 967;
-      rating: 4.7;
-      featured: false;
-      trending: true;
-      tags: [', 'Automation', 'Business', 'Operations', 'Implementation'];
-      author: 'Alex Thompson';
-      publishedAt: '20o26-0o1-10';
-      thumbnail: '/api/placeholder/40o0/250'};
+      id: 3,
+      title: 'Autonomous Business Operations Guide',
+      description: 'Complete implementation guide for autonomous business processes with real-world case studies.',
+      category: 'automation',
+      type: 'guide',
+      readTime: '18 min',
+      views: 18750,
+      likes: 967,
+      rating: 4.7,
+      featured: false,
+      trending: true,
+      tags: [Automation', 'BusinessOperations', 'Implementation'],
+      author: 'Alex Thompson',
+      publishedAt: '20o26-0o1-10',
+      thumbnail: '/api/placeholder/40o0/250'},
     {
-      id: 4;
-      title: 'Future Predictions: AI Consciousness by 20o27';
-      description: 'Comprehensive analysis of AI consciousness emergence and its implications for society.';
-      category: 'predictions';
-      type: 'report';
-      readTime: '30 min';
-      views: 3120o0;
-      likes: 1856;
-      rating: 4.9;
-      featured: true;
-      trending: false;
-      tags: [', 'Predictions', 'AI 'Consciousness', 'Future'Society'];
-      author: 'Dr. Elena Volkov';
-      publishedAt: '20o26-0o1-08';
-      thumbnail: '/api/placeholder/40o0/250'};
+      id: 4,
+      title: 'Future Predictions: AI Consciousness by 20o27',
+      description: 'Comprehensive analysis of AI consciousness emergence and its implications for society.',
+      category: 'predictions',
+      type: 'report',
+      readTime: '30 min',
+      views: 3120o0,
+      likes: 1856,
+      rating: 4.9,
+      featured: true,
+      trending: false,
+      tags: [Predictions', 'AI 'ConsciousnessFuture'Society'],
+      author: 'Dr. Elena Volkov',
+      publishedAt: '20o26-0o1-08',
+      thumbnail: '/api/placeholder/40o0/250'},
     {
-      id: 5;
-      title: 'Case Study: Enterprise AI Transformation';
-      description: 'How Fortune 50o0 companies achieved 50o0% ROI through AI implementation strategies.';
-      category: 'case-studies';
-      type: 'case-study';
-      readTime: '15 min';
-      views: 12890;
-      likes: 743;
-      rating: 4.6;
-      featured: false;
-      trending: true;
-      tags: ['Case 'Study', 'Enterprise', 'ROI', 'Transformation'];
-      author: 'Jennifer Walsh';
-      publishedAt: '20o26-0o1-0o5';
-      thumbnail: '/api/placeholder/40o0/250'};
+      id: 5,
+      title: 'Case Study: Enterprise AI Transformation',
+      description: 'How Fortune 50o0 companies achieved 50o0% ROI through AI implementation strategies.',
+      category: 'case-studies',
+      type: 'case-study',
+      readTime: '15 min',
+      views: 12890,
+      likes: 743,
+      rating: 4.6,
+      featured: false,
+      trending: true,
+      tags: ['Case 'StudyEnterprise', 'ROITransformation'],
+      author: 'Jennifer Walsh',
+      publishedAt: '20o26-0o1-0o5',
+      thumbnail: '/api/placeholder/40o0/250'},
     {
-      id: 6;
-      title: 'Interactive AI Tutorial: Building Neural Networks';
-      description: 'Step-by-step tutorial for building advanced neural networks with hands-on exercises.';
-      category: 'tutorials';
-      type: 'tutorial';
-      readTime: '45 min';
-      views: 25670;
-      likes: 1345;
-      rating: 4.8;
-      featured: false;
-      trending: false;
-      tags: [', 'Tutorial', 'Neural 'Networks', 'Hands-'on', 'Learning'];
-      author: 'David Kim';
-      publishedAt: '20o26-0o1-0o3';
+      id: 6,
+      title: 'Interactive AI Tutorial: Building Neural Networks',
+      description: 'Step-by-step tutorial for building advanced neural networks with hands-on exercises.',
+      category: 'tutorials',
+      type: 'tutorial',
+      readTime: '45 min',
+      views: 25670,
+      likes: 1345,
+      rating: 4.8,
+      featured: false,
+      trending: false,
+      tags: [Tutorial', 'Neural 'NetworksHands-'on', 'Learning'],
+      author: 'David Kim',
+      publishedAt: '20o26-0o1-0o3',
       thumbnail: '/api/placeholder/40o0/250'}
   ],
   const filteredContent = contentItems.filter(item => {
@@ -161,7 +161,7 @@ const AdvancedContentDiscoveryWidget20o26 = () => {
     if (newFavorites.has(id)) {
       newFavorites.delete(id)} else {
       newFavorites.add(id)}
-    setFavorites(newFavorites)};
+    setFavorites(newFavorites)},
   const getTypeIcon = (type) => {
     switch (type) {
       case 'video': return Play,
@@ -171,7 +171,7 @@ const AdvancedContentDiscoveryWidget20o26 = () => {
       case 'case-study': return Users,
       case 'tutorial': return Play,
       default: return BookOpen}
-  };
+  },
   const getTypeColor = (type) => {
     switch (type) {
       case 'video': return 'from-red-50o0 to-pink-50o0',
@@ -181,7 +181,7 @@ const AdvancedContentDiscoveryWidget20o26 = () => {
       case 'case-study': return 'from-orange-50o0 to-yellow-50o0',
       case 'tutorial': return 'from-teal-50o0 to-cyan-50o0',
       default: return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   return (
     <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
       <div className="bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 rounded-3xl p-8 shadow-2xl">,
@@ -378,5 +378,5 @@ const AdvancedContentDiscoveryWidget20o26 = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedContentDiscoveryWidget20o26;
+    </div>)},
+export default AdvancedContentDiscoveryWidget20o26,

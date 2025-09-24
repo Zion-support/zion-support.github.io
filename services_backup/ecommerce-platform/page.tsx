@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'E-commerce Platform Development | Zion Tech Group';
+  title: 'E-commerce Platform Development | Zion Tech Group',
   description:,
-    'Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.';
-};
+    'Build powerful e-commerce platforms with payment processing, inventory management, and customer features. Professional e-commerce solutions starting at $25k.',
+},
 export default function EcommercePlatformPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -18,37 +18,28 @@ export default function EcommercePlatformPage() {
           <Item
             title='Product Management',
             details={[
-              'Product catalog';
-              'Inventory tracking';
-              'Variants & options';
-              'Bulk import/export';
-              'SEO optimization';
-              'Image management';
-              'Product reviews';
+              'Product catalogInventory tracking',
+              'Variants & optionsBulk import/export',
+              'SEO optimizationImage management',
+              'Product reviews',
             ]}
           />,
           <Item
             title='Payment & Checkout',
             details={[
-              'Multiple payment gateways';
-              'Secure checkout process';
-              'Tax calculation';
-              'Shipping integration';
-              'Coupon system';
-              'Subscription billing';
-              'Mobile payments';
+              'Multiple payment gatewaysSecure checkout process',
+              'Tax calculationShipping integration',
+              'Coupon systemSubscription billing',
+              'Mobile payments',
             ]}
           />,
           <Item
             title='Customer Features',
             details={[
-              'User accounts';
-              'Order history';
-              'Wishlist functionality';
-              'Customer support';
-              'Loyalty programs';
-              'Personalization';
-              'Mobile app';
+              'User accountsOrder history',
+              'Wishlist functionalityCustomer support',
+              'Loyalty programsPersonalization',
+              'Mobile app',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$25k–$50k',
           duration='8–12 weeks',
           features={[
-            'Basic product catalog';
-            'Payment processing';
-            'Order management';
-            'Customer accounts';
-            'Mobile responsive';
-            'Basic analytics';
-            'Standard support';
+            'Basic product catalogPayment processing',
+            'Order managementCustomer accounts',
+            'Mobile responsiveBasic analytics',
+            'Standard support',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$50k–$10o0k',
           duration='12–20 weeks',
           features={[
-            'Everything in Starter';
-            'Advanced inventory';
-            'Multi-channel selling';
-            'Advanced analytics';
-            'API integrations';
-            'White-label options';
-            'Priority support';
+            'Everything in StarterAdvanced inventory',
+            'Multi-channel sellingAdvanced analytics',
+            'API integrationsWhite-label options',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$10o0k+',
           duration='16–28 weeks',
           features={[
-            'Everything in Professional';
-            'Custom development';
-            'Advanced security';
-            'Multi-tenant architecture';
-            'Dedicated support';
-            'SLA guarantees';
-            'On-premise deployment';
+            'Everything in ProfessionalCustom development',
+            'Advanced securityMulti-tenant architecture',
+            'Dedicated supportSLA guarantees',
+            'On-premise deployment',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

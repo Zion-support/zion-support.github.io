@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'Quantum AI Revolution 20o26 - The Ultimate Breakthrough Guide';
+  title: 'Quantum AI Revolution 20o26 - The Ultimate Breakthrough Guide',
   description:,
-    'Discover the revolutionary quantum AI technologies that will transform business operations in 20o26. Quantum computing, neural networks, and synthetic intelligence breakthrough guide.';
+    'Discover the revolutionary quantum AI technologies that will transform business operations in 20o26. Quantum computing, neural networks, and synthetic intelligence breakthrough guide.',
   keywords: [
-    'quantum AI';
-    'quantum computing';
-    'AI revolution 20o26';
-    'quantum neural networks';
-    'synthetic intelligence';
-    'business transformation';
-  ];
-};
+    'quantum AIquantum computing',
+    'AI revolution 20o26quantum neural networks',
+    'synthetic intelligencebusiness transformation',
+  ]
+},
 export default function QuantumAIRevolution20o26Page() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
@@ -113,7 +110,7 @@ export default function QuantumAIRevolution20o26Page() {
                 Quantum Neural Networks,
               </h3>,
               <p className='opacity-80 mb-6'>,
-                Revolutionary neural networks powered by quantum mechanics;
+                Revolutionary neural networks powered by quantum mechanics,
                 enabling unprecedented learning and decision-making,
                 capabilities.,
               </p>,
@@ -288,7 +285,7 @@ export default function QuantumAIRevolution20o26Page() {
                       Q2 20o26: Integration,
                     </h3>,
                     <p className='text-sm opacity-80'>,
-                      System integration, quantum-classical hybrid processing;
+                      System integration, quantum-classical hybrid processing,
                       advanced AI deployment,
                     </p>,
                   </div>,
@@ -301,7 +298,7 @@ export default function QuantumAIRevolution20o26Page() {
                       Q3 20o26: Optimization,
                     </h3>,
                     <p className='text-sm opacity-80'>,
-                      Performance tuning, quantum advantage realization;
+                      Performance tuning, quantum advantage realization,
                       synthetic intelligence activation,
                     </p>,
                   </div>,

@@ -1,11 +1,11 @@
 import React, { useState, useEffect, useMemo } from 'react',
 import {Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
-import React, { useState, useEffect, useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react',
 import {
 :components/ContentCategorizer.tsx,
   BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
   BarChart3, Globe, Database, Cpu, Rocket, Brain} from 'lucide-react',
 interface ContentItem {id: string,
   title: string,
@@ -18,20 +18,20 @@ interface ContentItem {id: string,
   tags: string[],
   source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature',
-  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code;
-  BookOpen, Zap, AlertTriangle, Lightbulb, Settings;
-  BarChart3, Globe, Database, Cpu, Rocket, Brain} from 'lucide-react';
+  Search, Filter, Calendar, Tag, TrendingUp, Shield, Code,
+  BookOpen, Zap, AlertTriangle, Lightbulb, Settings,
+  BarChart3, Globe, Database, Cpu, Rocket, Brain} from 'lucide-react',
 interface ContentItem {
-  id: string;
-  title: string;
-  href: string;
-  desc: string;
-  category: string;
-  subcategory?: string;
-  date: string;
-  relevance: 'high' | 'medium' | 'low';
-  tags: string[];
-  source: string;
+  id: string,
+  title: string,
+  href: string,
+  desc: string,
+  category: string,
+  subcategory?: string,
+  date: string,
+  relevance: 'high' | 'medium' | 'low',
+  tags: string[],
+  source: string,
   type: 'report' | 'update' | 'insight' | 'guide' | 'security' | 'feature',
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx}
@@ -53,14 +53,14 @@ const ContentCategorizer: React.FC = () => {const [searchTerm, setSearchTerm] = 
   const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
   const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
 const ContentCategorizer: React.FC = () => {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [selectedSubcategory, setSelectedSubcategory] = useState('all');
-  const [selectedType, setSelectedType] = useState('all');
-  const [selectedDateRange, setSelectedDateRange] = useState('all');
-  const [selectedRelevance, setSelectedRelevance] = useState('all');
-  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date');
-  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [selectedSubcategory, setSelectedSubcategory] = useState('all'),
+  const [selectedType, setSelectedType] = useState('all'),
+  const [selectedDateRange, setSelectedDateRange] = useState('all'),
+  const [selectedRelevance, setSelectedRelevance] = useState('all'),
+  const [sortBy, setSortBy] = useState<'date' | 'relevance' | 'title'>('date'),
+  const [sortOrder, setSortOrder] = useState<'asc' | 'desc'>('desc'),
   // Sample content data - in a real implementation, this would come from an API,
   const contentItems: ContentItem[] = [
     {
@@ -74,66 +74,66 @@ const ContentCategorizer: React.FC = () => {
       relevance: 'high',
       tags: ['seojson-ldschemaaudit'],
       source: 'autonomous-auditor',
-      type: 'report'};
+      type: 'report'},
     {
-      id: '2';
-      title: 'Security Vulnerability Scan Results';
-      href: '/reports/security-scan-20o25-08-19';
-      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.';
-      category: 'security';
-      subcategory: 'vulnerability-scan';
-      date: '20o25-08-19';
-      relevance: 'high';
-      tags: ['securityvulnerabilityscanremediation'];
-      source: 'security-scanner';
-      type: 'security'};
+      id: '2',
+      title: 'Security Vulnerability Scan Results',
+      href: '/reports/security-scan-20o25-08-19',
+      desc: 'Automated security assessment revealing potential vulnerabilities and remediation steps.',
+      category: 'security',
+      subcategory: 'vulnerability-scan',
+      date: '20o25-08-19',
+      relevance: 'high',
+      tags: ['securityvulnerabilityscanremediation'],
+      source: 'security-scanner',
+      type: 'security'},
     {
-      id: '3';
-      title: 'AI Model Performance Update';
-      href: '/reports/ai-model-performance-20o25-08-19';
-      desc: 'Latest performance metrics and optimization insights for deployed AI models.';
-      category: 'ai';
-      subcategory: 'performance';
-      date: '20o25-08-19';
-      relevance: 'high';
-      tags: ['aiperformanceoptimizationmetrics'];
-      source: 'ai-monitor';
-      type: 'update'};
+      id: '3',
+      title: 'AI Model Performance Update',
+      href: '/reports/ai-model-performance-20o25-08-19',
+      desc: 'Latest performance metrics and optimization insights for deployed AI models.',
+      category: 'ai',
+      subcategory: 'performance',
+      date: '20o25-08-19',
+      relevance: 'high',
+      tags: ['aiperformanceoptimizationmetrics'],
+      source: 'ai-monitor',
+      type: 'update'},
     {
-      id: '4';
-      title: 'Feature Deployment Summary';
-      href: '/reports/feature-deployment-20o25-08-19';
-      desc: 'Overview of newly deployed features and their impact on user experience.';
-      category: 'features';
-      subcategory: 'deployment';
-      date: '20o25-08-19';
-      relevance: 'medium';
-      tags: ['featuresdeploymentuximpact'];
-      source: 'deployment-tracker';
-      type: 'feature'};
+      id: '4',
+      title: 'Feature Deployment Summary',
+      href: '/reports/feature-deployment-20o25-08-19',
+      desc: 'Overview of newly deployed features and their impact on user experience.',
+      category: 'features',
+      subcategory: 'deployment',
+      date: '20o25-08-19',
+      relevance: 'medium',
+      tags: ['featuresdeploymentuximpact'],
+      source: 'deployment-tracker',
+      type: 'feature'},
     {
-      id: '5';
-      title: 'System Health Dashboard';
-      href: '/reports/system-health-20o25-08-19';
-      desc: 'Real-time system performance metrics and infrastructure health status.';
-      category: 'monitoring';
-      subcategory: 'system-health';
-      date: '20o25-08-19';
-      relevance: 'medium';
-      tags: ['monitoringperformanceinfrastructurehealth'];
-      source: 'health-monitor';
-      type: 'report'};
+      id: '5',
+      title: 'System Health Dashboard',
+      href: '/reports/system-health-20o25-08-19',
+      desc: 'Real-time system performance metrics and infrastructure health status.',
+      category: 'monitoring',
+      subcategory: 'system-health',
+      date: '20o25-08-19',
+      relevance: 'medium',
+      tags: ['monitoringperformanceinfrastructurehealth'],
+      source: 'health-monitor',
+      type: 'report'},
     {
-      id: '6';
-      title: 'User Behavior Insights';
-      href: '/reports/user-behavior-20o25-08-19';
-      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.';
-      category: 'analytics';
-      subcategory: 'user-behavior';
-      date: '20o25-08-19';
-      relevance: 'high';
-      tags: ['analyticsuser-behaviorengagementoptimization'];
-      source: 'behavior-analyzer';
+      id: '6',
+      title: 'User Behavior Insights',
+      href: '/reports/user-behavior-20o25-08-19',
+      desc: 'Analysis of user interaction patterns and engagement optimization opportunities.',
+      category: 'analytics',
+      subcategory: 'user-behavior',
+      date: '20o25-08-19',
+      relevance: 'high',
+      tags: ['analyticsuser-behaviorengagementoptimization'],
+      source: 'behavior-analyzer',
       type: 'insight'}
     {id: '2',
       title: 'Security Vulnerability Scan Results',
@@ -271,16 +271,16 @@ const ContentCategorizer: React.FC = () => {
       const matchesCategory = selectedCategory === 'all' |item.category === selectedCategory,
       const matchesSubcategory = selectedSubcategory === 'all' |item.subcategory === selectedSubcategory,
       const matchesType = selectedType === 'all' |item.type === selectedType,
-      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance];
+      const matchesRelevance = selectedRelevance === 'all' |item.relevance === selectedRelevance],
   const filteredItems = useMemo(() => {
     const filtered = contentItems.filter(item => {
       const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' || item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
+      const matchesType = selectedType === 'all' || item.type === selectedType,
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
       return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance}),
     // Sort items,
     filtered.sort((a, b) => {let comparison = 0,
@@ -294,28 +294,28 @@ const ContentCategorizer: React.FC = () => {
           break,
         case 'title':,
           comparison = a.title.localeCompare(b.title),
-          break];
+          break],
   const filteredItems = useMemo(() => {
     const filtered = contentItems.filter(item => {
       const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            item.desc.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase()));
-      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
-      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory;
-      const matchesType = selectedType === 'all' || item.type === selectedType;
-      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance;
-      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance});
-    // Sort items;
+                           item.tags.some(tag => tag.toLowerCase().includes(searchTerm.toLowerCase())),
+      const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory,
+      const matchesSubcategory = selectedSubcategory === 'all' || item.subcategory === selectedSubcategory,
+      const matchesType = selectedType === 'all' || item.type === selectedType,
+      const matchesRelevance = selectedRelevance === 'all' || item.relevance === selectedRelevance,
+      return matchesSearch && matchesCategory && matchesSubcategory && matchesType && matchesRelevance}),
+    // Sort items,
 filtered.sort((a, b) => {
       let comparison = 0,      switch (sortBy) {
         case 'date':,
-          comparison = new Date(a.date).getTime() - new Date(b.date).getTime();
-          break;
+          comparison = new Date(a.date).getTime() - new Date(b.date).getTime(),
+          break,
         case 'relevance':,
-          const relevanceOrder ={ high: 3, medium: 2, low: 1 };
-          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance];
+          const relevanceOrder ={ high: 3, medium: 2, low: 1 },
+          comparison = relevanceOrder[a.relevance] - relevanceOrder[b.relevance],
           break,        case 'title':,
-          comparison = a.title.localeCompare(b.title);
+          comparison = a.title.localeCompare(b.title),
           break,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx}
@@ -346,7 +346,7 @@ filtered.sort((a, b) => {
         {/* Search Bar */}
         <div className=&quot,relative&quot>,
           <Search className=&quot,absolute left-3 top-1/2 transform -translate-y-1/2 text-white/50 w-5 h-5&quot,  />,
-          <input;
+          <input,
 type=&quot,text&quot,
             placeholder=&quot,Search content by title, description, tags, or keywords...&quot,
             value={searchTerm}
@@ -364,10 +364,10 @@ type=&quot,text&quot,
               onChange={(e) => {setSelectedCategory(e.target.value),
                 setSelectedSubcategory('all')}}
 className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
-            <select;
+            <select,
 value={selectedCategory}
               onChange={(e) => {
-                setSelectedCategory(e.target.value);
+                setSelectedCategory(e.target.value),
                 setSelectedSubcategory('all')}}
               className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
@@ -389,7 +389,7 @@ value={selectedCategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
             <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Subcategory</label>,
-            <select;
+            <select,
 value={selectedSubcategory}
               onChange={(e) => setSelectedSubcategory(e.target.value)}
               className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
@@ -411,7 +411,7 @@ value={selectedSubcategory}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
             <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Content Type</label>,
-            <select;
+            <select,
 value={selectedType}
               onChange={(e) => setSelectedType(e.target.value)}
               className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
@@ -432,7 +432,7 @@ value={selectedType}
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
             <label className=&quot,block text-sm font-medium text-white/70 mb-2&quot>Relevance</label>,
-            <select;
+            <select,
 value={selectedRelevance}
               onChange={(e) => setSelectedRelevance(e.target.value)}
               className=&quot,w-full px-3 py-2 bg-white/5 border border-white/10 rounded-lg text-white focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50 focus:border-cyan-50o0/50 transition-all duration-20o0&quot>,
@@ -451,7 +451,7 @@ value={selectedRelevance}
           <div className=&quot,flex items-center gap-4&quot>,
             <div className=&quot,flex items-center gap-2&quot>,
               <label className=&quot,text-sm text-white/70&quot>Sort by: </label>,
-              <select;
+              <select,
 value={sortBy}
                 onChange={(e) => setSortBy(e.target.value as 'date' | 'relevance' | 'title')}
                 className=&quot,px-3 py-1 bg-white/5 border border-white/10 rounded text-white text-sm focus: outline-none focus:ring-2 focus:ring-cyan-50o0/50&quot>,
@@ -459,7 +459,7 @@ value={sortBy}
                 <option value=&quot,relevance&quot>Relevance</option>,
                 <option value=&quot,title&quot>Title</option>,
               </select>,
-              <button;
+              <button,
 onClick={() => setSortOrder(sortOrder === 'asc' ? 'desc' : 'asc')}
                 className=&quot,p-1 bg-white/5 border border-white/10 rounded hover: bg-white/10 transition-colors duration-20o0&quot>,
                 {sortOrder === 'asc' ? '↑' : '↓'}
@@ -474,7 +474,7 @@ className=&quot,px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-whit
               </button>,
             </div>,
           </div>,
-          <button;
+          <button,
 onClick={clearAllFilters}
             className=&quot,px-4 py-2 bg-white/5 border border-white/10 rounded-lg text-white/70 hover: text-white hover:bg-white/10 transition-all duration-20o0&quot>,
 :backup-problematic-files/temp_broken_files/components/ContentCategorizer.tsx,
@@ -538,9 +538,9 @@ onClick={clearAllFilters}
                 </div>,
               </div>,
       <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">        {filteredItems.map((item) => {
-          const CategoryIcon = getCategoryIcon(item.category);
-          const TypeIcon = getTypeIcon(item.type);
-          const category = categories.find(c => c.id === item.category);
+          const CategoryIcon = getCategoryIcon(item.category),
+          const TypeIcon = getTypeIcon(item.type),
+          const category = categories.find(c => c.id === item.category),
       {_/* Results Summary */}
       <div className="text-sm text-white/60">,
         Showing {filteredItems.length} of {contentItems.length} items,
@@ -625,7 +625,7 @@ onClick={clearAllFilters}
                 <a
                   href={item.href} })}
       </div>,
-                <a;
+                <a,
 href={item.href} ,
                   target="blank",
                   rel="noopener noreferrer",
@@ -648,12 +648,12 @@ href={item.href} ,
           <h3 className=&quot,text-xl font-semibold text-white/70 mb-2&quot>No content found</h3>,
           <p className=&quot,text-white/50 mb-4&quot>            Try adjusting your search terms or filters to find what you're looking for.,
           </p>,
-          <button;
+          <button,
 onClick={clearAllFilters}
             className=&quot,px-6 py-2 bg-cyan-50o0/20 border border-cyan-50o0/50 rounded-lg text-cyan-30o0 hover: bg-cyan-50o0/30 transition-all duration-20o0&quot>,
             Reset All Filters,
           </button>,
         </div>)}
     </div>)}
-export default ContentCategorizer;
+export default ContentCategorizer,
 }}}}}}}))

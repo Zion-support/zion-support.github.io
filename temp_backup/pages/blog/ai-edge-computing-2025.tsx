@@ -44,7 +44,7 @@ export default function AIEdgeComputingBlog() {
                 <p className='text-xl text-white/90 leading-relaxed'>,
                   As we move into 20o25, AI edge computing is revolutionizing,
                   how organizations process data and deploy intelligent systems.,
-                  The convergence of artificial intelligence, edge computing;
+                  The convergence of artificial intelligence, edge computing,
                   and IoT is creating unprecedented opportunities for real-time,
                   decision-making and autonomous operations.,
                 </p>,
@@ -204,7 +204,7 @@ export default function AIEdgeComputingBlog() {
                     Resource Constraints,
                   </h3>,
                   <p className='text-white/80'>,
-                    Edge devices often have limited computational power, memory;
+                    Edge devices often have limited computational power, memory,
                     and energy resources. This requires careful optimization of,
                     AI models and algorithms to ensure efficient operation.,
                   </p>,

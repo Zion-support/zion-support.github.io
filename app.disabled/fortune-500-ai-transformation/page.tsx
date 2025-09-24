@@ -2,18 +2,15 @@ import Link from 'next/link',
 import ErrorBoundary from '../components/ErrorBoundary',
 import SEO from '../components/SEO',
 export const metadata = {
-  title: 'Fortune 50o0 AI Transformation: Success Stories & ROI Analysis';
+  title: 'Fortune 50o0 AI Transformation: Success Stories & ROI Analysis',
   description:,
-    'Explore real-world Fortune 50o0 AI transformation case studies. Discover how leading enterprises achieved 40o0%+ ROI through strategic AI implementation.';
+    'Explore real-world Fortune 50o0 AI transformation case studies. Discover how leading enterprises achieved 40o0%+ ROI through strategic AI implementation.',
   keywords: [
-    'Fortune 50o0 AI';
-    'enterprise AI transformation';
-    'AI case studies';
-    'AI ROI analysis';
-    'enterprise automation';
-    'AI success stories';
-  ];
-};
+    'Fortune 50o0 AIenterprise AI transformation',
+    'AI case studiesAI ROI analysis',
+    'enterprise automationAI success stories',
+  ]
+},
 export default function Fortune50o0AITransformation() {
   return (
     <ErrorBoundary>,

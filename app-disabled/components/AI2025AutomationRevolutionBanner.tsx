@@ -6,40 +6,40 @@ const AI20o25AutomationRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const featuredContent = [
     {
-      id: 'ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25';
-      title: 'AI 20o25: The Enterprise Automation Revolution - Ultimate Breakthrough Guide to 2,50o0% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25';
+      id: 'ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25',
+      title: 'AI 20o25: The Enterprise Automation Revolution - Ultimate Breakthrough Guide to 2,50o0% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-enterprise-automation-revolution-ultimate-breakthrough-20o25',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$15.8B+';
-        efficiency: '1,20o0%';
-        accuracy: '99.7%'};
-      readingTime: '25 min read';
-      isNew: true};
+        roi: '2,50o0%',
+        savings: '$15.8B+',
+        efficiency: '1,20o0%',
+        accuracy: '99.7%'},
+      readingTime: '25 min read',
+      isNew: true},
     {
-      id: 'fortune-50o0-ai-automation-transformation-250o0-roi-success-story';
-      title: 'Fortune 50o0 AI Automation Transformation: $15.8B Annual Savings - 2,50o0% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-automation-transformation-250o0-roi-success-story';
+      id: 'fortune-50o0-ai-automation-transformation-250o0-roi-success-story',
+      title: 'Fortune 50o0 AI Automation Transformation: $15.8B Annual Savings - 2,50o0% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-automation-transformation-250o0-roi-success-story',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$15.8B';
-        timeline: '18 months';
-        satisfaction: '98%'};
-      readingTime: '18 min read';
-      isNew: true};
+        roi: '2,50o0%',
+        savings: '$15.8B',
+        timeline: '18 months',
+        satisfaction: '98%'},
+      readingTime: '18 min read',
+      isNew: true},
     {
-      id: 'ai-automation-implementation-ultimate-guide-20o25';
-      title: 'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 2,50o0% ROI';
-      type: 'resource';
-      url: '/resources/ai-automation-implementation-ultimate-guide-20o25';
+      id: 'ai-automation-implementation-ultimate-guide-20o25',
+      title: 'AI Automation Implementation Ultimate Guide 20o25: Complete Roadmap to 2,50o0% ROI',
+      type: 'resource',
+      url: '/resources/ai-automation-implementation-ultimate-guide-20o25',
       metrics: {
-        roi: '2,50o0%';
-        success: '1,0o00+';
-        timeline: '18 months';
-        projects: 'Fortune 50o0'};
-      readingTime: '25 min read';
+        roi: '2,50o0%',
+        success: '1,0o00+',
+        timeline: '18 months',
+        projects: 'Fortune 50o0'},
+      readingTime: '25 min read',
       isNew: true}
   ],
   useEffect(() => {
@@ -53,7 +53,7 @@ const AI20o25AutomationRevolutionBanner = () => {
   }, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-automation-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-automation-banner-dismissedtrue')},
   if (!isVisible) return null,
   const currentContent = featuredContent[currentSlide],
   return (
@@ -197,5 +197,5 @@ const AI20o25AutomationRevolutionBanner = () => {
           </svg>,
         </button>,
       </div>,
-    </div>)};
-export default AI20o25AutomationRevolutionBanner;
+    </div>)},
+export default AI20o25AutomationRevolutionBanner,

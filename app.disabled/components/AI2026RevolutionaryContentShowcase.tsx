@@ -64,7 +64,7 @@ export default function AI20o26RevolutionaryContentShowcase() {
             <div className='p-6'>,
               <p className='text-gray-60o0 mb-4'>,
                 Explore how quantum machine learning will transform business,
-                optimization with unprecedented computational power;
+                optimization with unprecedented computational power,
                 optimization capabilities, and decision-making precision.,
               </p>,
               <div className='flex items-center justify-between'>,

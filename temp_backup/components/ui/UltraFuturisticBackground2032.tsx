@@ -5,7 +5,7 @@ interface UltraFuturisticBackground20o32Props {
   className?: string}
 ,
 const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Props> = ({
-  children;
+  children,
   className = ''}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   useEffect(() => {
@@ -29,24 +29,24 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
       particles = [],
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.5;
-          vy: (Math.random() - 0.5) * 0.5;
-          size: Math.random() * 2 + 1;
-          color: `hsl(${Math.random() * 360}, 70%, 60%)`;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          color: `hsl(${Math.random() * 360}, 70%, 60%)`,
           alpha: Math.random() * 0.5 + 0.3})}
-    };
+    },
     // Update and draw particles,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
         canvas.width / 2),
       gradient.addColorStop(0, 'rgba(15, 23, 42, 0.8)'),
       gradient.addColorStop(0.5, 'rgba(30, 41, 59, 0.6)'),
@@ -90,16 +90,16 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
               ctx.restore()}
           }
         })}),
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     createParticles(),
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       window.removeEventListener('resize', handleResize),
-      cancelAnimationFrame(animationFrameId)};
+      cancelAnimationFrame(animationFrameId)},
   }, []),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -114,43 +114,43 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/30",
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.2, 1];
+            rotate: [0, 360],
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/30 rounded-full",
           animate={{
-            y: [0, -20, 0];
+            y: [0, -20, 0],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 15;
-            repeat: Infinity;
+            duration: 15,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-pink-40o0/30 transform rotate-45",
           animate={{
-            rotate: [0, -360];
-            scale: [1, 1.1, 1];
+            rotate: [0, -360],
+            scale: [1, 1.1, 1],
             opacity: [0.3, 0.5, 0.3]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-blue-40o0/30 transform rotate-12",
           animate={{
-            y: [0, 15, 0];
+            y: [0, 15, 0],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 18;
-            repeat: Infinity;
+            duration: 18,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
@@ -165,12 +165,12 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
             className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0/40 to-transparent",
             style={{ top: `${(i + 1) * 10}%` }}
             animate={{
-              opacity: [0.2, 0.6, 0.2];
+              opacity: [0.2, 0.6, 0.2],
               scaleX: [0.8, 1, 0.8]}}
             transition={{
-              duration: 8 + i * 0.5;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 8 + i * 0.5,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 0.2}}
            />))}
 ,
@@ -181,12 +181,12 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
             className="absolute h-full w-px bg-gradient-to-b from-transparent via-purple-40o0/40 to-transparent",
             style={{ left: `${(i + 1) * 10}%` }}
             animate={{
-              opacity: [0.2, 0.6, 0.2];
+              opacity: [0.2, 0.6, 0.2],
               scaleY: [0.8, 1, 0.8]}}
             transition={{
-              duration: 10 + i * 0.3;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 10 + i * 0.3,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 0.3}}
            />))}
       </div>,
@@ -197,15 +197,15 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
             key={`stream-${i}`}
             className="absolute text-xs font-mono text-cyan-40o0/60",
             style={{
-              left: `${20 + i * 15}%`;
+              left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`}}
             animate={{
-              y: [0, -10o0, 0];
+              y: [0, -10o0, 0],
               opacity: [0, 1, 0]}}
             transition={{
-              duration: 12 + i * 2;
-              repeat: Infinity;
-              ease: "linear";
+              duration: 12 + i * 2,
+              repeat: Infinity,
+              ease: "linear",
               delay: i * 2}}
           >,
             {`0x${Math.random().toString(16).substr(2, 8).toUpperCase()}`}
@@ -218,20 +218,19 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
             key={`orb-${i}`}
             className="absolute w-4 h-4 rounded-full",
             style={{
-              left: `${25 + i * 20}%`;
-              top: `${60 + i * 15}%`;
+              left: `${25 + i * 20}%`,
+              top: `${60 + i * 15}%`,
               background: `radial-gradient(circle, rgba(56, 189, 248, 0.8) 0%, rgba(147, 51, 234, 0.4) 50%, transparent 10o0%)`}}
             animate={{
-              scale: [0.5, 1.5, 0.5];
-              opacity: [0.3, 0.8, 0.3];
+              scale: [0.5, 1.5, 0.5],
+              opacity: [0.3, 0.8, 0.3],
               boxShadow: [
-                '0 0 20px rgba(56, 189, 248, 0.5)';
-                '0 0 40px rgba(56, 189, 248, 0.8)';
+                '0 0 20px rgba(56, 189, 248, 0.5)0 0 40px rgba(56, 189, 248, 0.8)',
                 '0 0 20px rgba(56, 189, 248, 0.5)']}}
             transition={{
-              duration: 6 + i * 1;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 6 + i * 1,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 2}}
            />))}
       </div>,
@@ -244,5 +243,5 @@ const UltraFuturisticBackground20o32: React.FC<UltraFuturisticBackground20o32Pro
         <div className="absolute inset-0 bg-gradient-to-t from-slate-90o0/20 via-transparent to-slate-90o0/20"  />,
         <div className="absolute inset-0 bg-gradient-to-r from-slate-90o0/10 via-transparent to-slate-90o0/10"  />,
       </div>,
-    </div>)};
-export default UltraFuturisticBackground20o32;
+    </div>)},
+export default UltraFuturisticBackground20o32,

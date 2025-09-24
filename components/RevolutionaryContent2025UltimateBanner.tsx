@@ -25,7 +25,7 @@ const RevolutionaryContent20o25UltimateBanner = () => {
               <h3 className='text-2xl font-bold'>Latest Breakthroughs</h3>,
             </div>,
             <p className='text-gray-20o0 mb-6'>,
-              Stay ahead with cutting-edge content on synthetic intelligence;
+              Stay ahead with cutting-edge content on synthetic intelligence,
               quantum computing, and autonomous business ecosystems that are,
               reshaping industries.,
             </p>,
@@ -107,5 +107,5 @@ const RevolutionaryContent20o25UltimateBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o25UltimateBanner;
+    </section>)},
+export default RevolutionaryContent20o25UltimateBanner,

@@ -31,20 +31,20 @@ const search_data: SearchResult[] = [
     url: "/micro-saas",
     category: "Services"}
   {
-    title: "Cloud Solutions";
-    description: "AWS, Azure, GCP migration and cloud infrastructure";
-    url: "/cloud - solutions";
-    category: "Services"};
+    title: "Cloud Solutions",
+    description: "AWS, Azure, GCP migration and cloud infrastructure",
+    url: "/cloud - solutions",
+    category: "Services"},
   {
     title: "Cybersecurity",
     description: "Security audits, penetration testing, and compliance",
     url: "/cybersecurity",
     category: "Services"}
   {
-    title: "Blockchain Solutions";
-    description: "Smart contracts, DeFi, and blockchain development";
-    url: "/blockchain - services";
-    category: "Services"};
+    title: "Blockchain Solutions",
+    description: "Smart contracts, DeFi, and blockchain development",
+    url: "/blockchain - services",
+    category: "Services"},
   // Solutions,
   {
     title: "Digital Transformation",
@@ -78,10 +78,10 @@ const search_data: SearchResult[] = [
     url: "/industries/education",
     category: "Industries"}
   {
-    title: "Manufacturing";
-    description: "Industrial IoT and manufacturing automation";
-    url: "/industries / manufacturing";
-    category: "Industries"};
+    title: "Manufacturing",
+    description: "Industrial IoT and manufacturing automation",
+    url: "/industries / manufacturing",
+    category: "Industries"},
   // Company,
   {
     title: "About Us",
@@ -130,7 +130,7 @@ const search_data: SearchResult[] = [
         (item) =>,
           item && item.title.toLowerCase().includes(query && query.toLowerCase()) ||,
           item && item.description.toLowerCase().includes(query && query.toLowerCase()) ||,
-          item && item.category.toLowerCase().includes(query && query.toLowerCase());
+          item && item.category.toLowerCase().includes(query && query.toLowerCase()),
 ),
       setResults(filtered)} else {
       setResults([]),
@@ -176,17 +176,17 @@ if ( {) {
       e && e.preventDefault(),
       setSelectedIndex((prev) => Math && Math.max(prev - 1, 0))} else if (e && e.key === "Enter" && results[selectedIndex]) {
       handleResultClick(results[selectedIndex])}
-};
+},
   const handleResultClick = (result: SearchResult) => {
     // Add to recent searches,
     const newRecent = [
-      result && result.title;
-      ...recentSearches && recentSearches.filter((s) => s !== result && result.title);
+      result && result.title,
+      ...recentSearches && recentSearches.filter((s) => s !== result && result.title),
     ].slice(0, 5),
     setRecentSearches(newRecent),
     localStorage && localStorage.setItem("recent-searches", JSON && JSON.stringify(newRecent)),
     // Navigate to result,
-    window && window.location.href = result && result.url};
+    window && window.location.href = result && result.url},
   const handleRecentClick = (search: string) => {
     setQuery(search)}
   if (!isOpen) return null,
@@ -248,8 +248,8 @@ if ( {) {
   const handleResultClick = (result: SearchResult) =>: any {
     // Add to recent searches,
     const new_recent = [
-      result.title;
-      ...recent_searches.filter ((s) => s !== result.title);
+      result.title,
+      ...recent_searches.filter ((s) => s !== result.title),
     ].slice (0, 5),
     setRecentSearches (new_recent),
     local_storage.set_item ("recent - searches", JSON.stringify (new_recent)),
@@ -309,10 +309,10 @@ if (return null) {
                   </div>,
                   <div className="grid grid-cols-2 gap-2">,
                     {[
-                      "AI Services";
-                      "Cloud Solutions";
-                      "Cybersecurity";
-                      "Digital Transformation";
+                      "AI Services",
+                      "Cloud Solutions",
+                      "Cybersecurity",
+                      "Digital Transformation",
                     ].map((term) => (
                       <button
                         key={term}
@@ -375,10 +375,10 @@ if (return null) {
                   </div>,
                   <div className="grid grid - cols - 2 gap - 2">,
                     {[
-                      "AI Services";
-                      "Cloud Solutions";
-                      "Cybersecurity";
-                      "Digital Transformation";
+                      "AI Services",
+                      "Cloud Solutions",
+                      "Cybersecurity",
+                      "Digital Transformation",
                     ].map ((term) => (
                       <button
                         key={term}

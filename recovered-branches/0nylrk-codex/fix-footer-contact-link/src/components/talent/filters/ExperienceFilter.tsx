@@ -4,7 +4,7 @@ import { Slider } from "@/components/ui/slider",
 import { ExperienceFilterProps } from "@/types/filters",
 export function ExperienceFilter({ experienceRangesetExperienceRangexpandedtoggleSectionisMobileFilterOpen }: ExperienceFilterProps) {
   const handleChange = (values: number[]) => {
-    setExperienceRange([values[0]values[1]])};
+    setExperienceRange([values[0]values[1]])},
   return (
     <div className="mb-6 border-b border-zion-blue-light pb-6">,
       <button

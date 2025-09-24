@@ -1,70 +1,70 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain;
-  Rocket;
-  Target;
-  Cpu;
-  Globe;
-  Eye;
-  ChevronRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  ArrowRight;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Phone;
-  Mail;
-  MapPin;
-  ExternalLink;
+  Brain,
+  Rocket,
+  Target,
+  Cpu,
+  Globe,
+  Eye,
+  ChevronRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  ArrowRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
 } from 'lucide-react',
 import { innovativeMicroSaasServices20o29V2 } from '../../data/20o29-innovative-micro-saas-v2',
 import { aiBreakthroughServices20o29 } from '../../data/20o29-ai-breakthrough-services',
 import { spaceTechBreakthroughServices20o29 } from '../../data/20o29-space-tech-breakthroughs',
 import { enterpriseITBreakthroughServices20o29 } from '../../data/20o29-enterprise-it-breakthroughs',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    id: 'micro-saas';
-    title: '🚀 Innovative Micro SAAS';
-    icon: Target;
-    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0';
-    description: 'Cutting-edge micro solutions for modern businesses';
-    services: innovativeMicroSaasServices20o29V2;
-  };
+    id: 'micro-saas',
+    title: '🚀 Innovative Micro SAAS',
+    icon: Target,
+    color: 'from-violet-60o0 via-purple-60o0 to-indigo-60o0',
+    description: 'Cutting-edge micro solutions for modern businesses',
+    services: innovativeMicroSaasServices20o29V2
+  },
   {
-    id: 'ai-breakthroughs';
-    title: '🧠 AI Breakthrough Services';
-    icon: Brain;
-    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0';
-    description: 'Revolutionary AI consciousness and creativity';
-    services: aiBreakthroughServices20o29;
-  };
+    id: 'ai-breakthroughs',
+    title: '🧠 AI Breakthrough Services',
+    icon: Brain,
+    color: 'from-indigo-60o0 via-blue-60o0 to-cyan-60o0',
+    description: 'Revolutionary AI consciousness and creativity',
+    services: aiBreakthroughServices20o29
+  },
   {
-    id: 'space-tech';
-    title: '🌌 Space Technology Breakthroughs';
-    icon: Rocket;
-    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0';
-    description: 'Next-generation space exploration and technology';
-    services: spaceTechBreakthroughServices20o29;
-  };
+    id: 'space-tech',
+    title: '🌌 Space Technology Breakthroughs',
+    icon: Rocket,
+    color: 'from-teal-60o0 via-emerald-60o0 to-green-60o0',
+    description: 'Next-generation space exploration and technology',
+    services: spaceTechBreakthroughServices20o29
+  },
   {
-    id: 'enterprise-it';
-    title: '🏢 Enterprise IT Breakthroughs';
-    icon: Cpu;
-    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0';
-    description: 'AI-powered enterprise solutions and optimization';
-    services: enterpriseITBreakthroughServices20o29;
-  };
+    id: 'enterprise-it',
+    title: '🏢 Enterprise IT Breakthroughs',
+    icon: Cpu,
+    color: 'from-blue-60o0 via-cyan-60o0 to-teal-60o0',
+    description: 'AI-powered enterprise solutions and optimization',
+    services: enterpriseITBreakthroughServices20o29
+  },
 ],
 export default function ComprehensiveServicesShowcase20o29() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -80,25 +80,25 @@ export default function ComprehensiveServicesShowcase20o29() {
         service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
         service.category.toLowerCase().includes(searchTerm.toLowerCase()))),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut'
+      },
+    },
+  },
   return (
     <section className='relative py-20 bg-black/95 overflow-hidden'>,
       {/* Animated Background Elements */}
@@ -120,7 +120,7 @@ export default function ComprehensiveServicesShowcase20o29() {
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-            Discover our comprehensive portfolio of cutting-edge micro SAAS, AI;
+            Discover our comprehensive portfolio of cutting-edge micro SAAS, AI,
             space technology, and enterprise IT solutions,
           </p>,
         </motion.div>,
@@ -218,7 +218,7 @@ export default function ComprehensiveServicesShowcase20o29() {
                     </h3>,
                     <div className='flex items-center gap-2'>,
                       <span className='px-2 py-1 text-xs font-medium bg-gradient-to-r from-green-50o0 to-emerald-50o0 text-white rounded-full'>,
-                        {service.category.replace('-', ' ').toUpperCase()}
+                        {service.category.replace('- ').toUpperCase()}
                       </span>,
                     </div>,
                   </div>,

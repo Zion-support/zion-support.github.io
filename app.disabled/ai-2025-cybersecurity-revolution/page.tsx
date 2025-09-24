@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 Cybersecurity Revolution: The Ultimate Protection Guide';
+  title: 'AI 20o25 Cybersecurity Revolution: The Ultimate Protection Guide',
   description:,
-    'Discover how AI is revolutionizing cybersecurity in 20o25. Learn about advanced threat detection, automated response systems, and next-generation security solutions.';
+    'Discover how AI is revolutionizing cybersecurity in 20o25. Learn about advanced threat detection, automated response systems, and next-generation security solutions.',
   keywords: [
-    'AI Cybersecurity';
-    'Threat Detection';
-    'Security Automation';
-    'AI Security';
-    '20o25 Trends';
-  ];
-};
+    'AI CybersecurityThreat Detection',
+    'Security AutomationAI Security',
+    '20o25 Trends',
+  ]
+},
 export default function AICybersecurity20o25Page() {
   return (
     <>,

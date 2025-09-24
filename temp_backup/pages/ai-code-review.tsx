@@ -15,26 +15,26 @@ export default function AICodeReview() {
           <div className='mt-8 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
             {[
               {
-                title: 'Style & Lint';
-                desc: 'Enforce conventions and consistency, autofix common issues.';
-              };
+                title: 'Style & Lint',
+                desc: 'Enforce conventions and consistency, autofix common issues.',
+              },
               {
-                title: 'Security';
-                desc: 'Detect vulnerabilities and secrets with remediation steps.';
-              };
+                title: 'Security',
+                desc: 'Detect vulnerabilities and secrets with remediation steps.'
+              },
               {
-                title: 'Performance';
-                desc: 'Highlight inefficient queries and hot paths.';
-              };
-              { title: 'Test Gaps', desc: 'Suggest tests and coverage areas.' };
+                title: 'Performance',
+                desc: 'Highlight inefficient queries and hot paths.'
+              },
+              { title: 'Test Gaps', desc: 'Suggest tests and coverage areas.' },
               {
-                title: 'Integrations';
-                desc: 'GitHub/GitLab/Bitbucket, Jira, Slack.';
-              };
+                title: 'Integrations',
+                desc: 'GitHub/GitLab/Bitbucket, Jira, Slack.',
+              },
               {
-                title: 'Policy';
-                desc: 'Branch protection checks and compliance enforcements.';
-              };
+                title: 'Policy',
+                desc: 'Branch protection checks and compliance enforcements.'
+              },
             ].map(f => (
               <div
                 key={f.title}

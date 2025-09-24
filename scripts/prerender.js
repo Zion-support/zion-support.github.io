@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react',
 import { readFileSync, writeFileSync } from 'fs',
 import path, { resolve } from 'path',
 import { build } from 'esbuild',
 import { renderToString } from 'react-dom/server',
 async function prerender() {
   const result = await build({
-    entryPoints: [resolve('src/pages/Home.tsx')];
-    bundle: true;
-    platform: 'node';
-    format: 'esm';
-    write: false;
+    entryPoints: [resolve('src/pages/Home.tsx')],
+    bundle: true,
+    platform: 'node',
+    format: 'esm',
+    write: false,
     plugins: [
       {
-        name: 'alias';
+        name: 'alias',
         setup(build) {
           build.onResolve({ filter: /^@\// }, (args) => {
             const file = args.path.replace(/^@\//, ''),
-            return { path: path.resolve('src', file) };
-          })}};
+            return { path: path.resolve('src', file) },
+          })}},
     ]}),
   const text = result.outputFiles[0].text,
   const mod = await import(`data: text/javascript,base64,${Buffer.from(text).toString('base64')}`),

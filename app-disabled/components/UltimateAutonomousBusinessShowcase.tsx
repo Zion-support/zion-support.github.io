@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 interface ContentItem {
   id: string,
@@ -10,81 +10,75 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     accuracy?: string,
-    efficiency?: string};
+    efficiency?: string},
   readingTime?: string,
   tags: string[]}
 ,
 const UltimateAutonomousBusinessShowcase: React.FC = () => {
   const contentItems: ContentItem[] = [
     {
-      id: 'ultimate-autonomous-business-revolution';
+      id: 'ultimate-autonomous-business-revolution',
       title:,
-        'AI 20o25: The Ultimate Autonomous Business Revolution - Ultimate Breakthrough Guide to 30,0o00% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-autonomous-business-revolution-ultimate-breakthrough';
+        'AI 20o25: The Ultimate Autonomous Business Revolution - Ultimate Breakthrough Guide to 30,0o00% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-autonomous-business-revolution-ultimate-breakthrough',
       description:,
-        'Discover the revolutionary AI technologies and implementation strategies that are reshaping entire industries, with companies achieving ROI figures exceeding 30,0o00% within 18 months.';
+        'Discover the revolutionary AI technologies and implementation strategies that are reshaping entire industries, with companies achieving ROI figures exceeding 30,0o00% within 18 months.',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$50o0B+';
-        accuracy: '99.99%';
-        efficiency: '5,0o00%';
-      };
-      readingTime: '35 min read';
+        roi: '30,0o00%',
+        savings: '$50o0B+',
+        accuracy: '99.99%',
+        efficiency: '5,0o00%',
+      },
+      readingTime: '35 min read',
       tags: [
-        'AI Revolution';
-        'Autonomous Business';
-        'ROI';
-        'Fortune 50o0';
-        '30,0o00% ROI';
-      ];
-    };
+        'AI RevolutionAutonomous Business',
+        'ROIFortune 50o0',
+        '30,0o00% ROI',
+      ],
+    },
     {
-      id: 'fortune-50o0-autonomous-business-success';
+      id: 'fortune-50o0-autonomous-business-success',
       title:,
-        'Fortune 50o0 Autonomous Business Success: $2.8B Annual Savings - 30,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-business-30o000-roi-success-story';
+        'Fortune 50o0 Autonomous Business Success: $2.8B Annual Savings - 30,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-business-30o000-roi-success-story',
       description:,
-        'A Fortune 50o0 manufacturing giant achieved unprecedented success through comprehensive AI automation, generating $2.8B in annual savings and achieving a remarkable 30,0o00% ROI within just 18 months.';
+        'A Fortune 50o0 manufacturing giant achieved unprecedented success through comprehensive AI automation, generating $2.8B in annual savings and achieving a remarkable 30,0o00% ROI within just 18 months.',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$2.8B';
-        accuracy: '99.99%';
-        efficiency: '450%';
-      };
-      readingTime: '25 min read';
+        roi: '30,0o00%',
+        savings: '$2.8B',
+        accuracy: '99.99%',
+        efficiency: '450%'
+      },
+      readingTime: '25 min read',
       tags: [
-        'Fortune 50o0';
-        'Case Study';
-        '30,0o00% ROI';
-        'Success Story';
-        'Manufacturing';
-      ];
-    };
+        'Fortune 50o0Case Study',
+        '30,0o00% ROISuccess Story',
+        'Manufacturing',
+      ],
+    },
     {
-      id: 'autonomous-business-implementation-guide';
+      id: 'autonomous-business-implementation-guide',
       title:,
-        'Autonomous Business Implementation Ultimate Guide 20o25: Complete Roadmap to 30,0o00% ROI';
-      type: 'resource';
-      url: '/resources/autonomous-business-implementation-ultimate-guide-20o25';
+        'Autonomous Business Implementation Ultimate Guide 20o25: Complete Roadmap to 30,0o00% ROI',
+      type: 'resource',
+      url: '/resources/autonomous-business-implementation-ultimate-guide-20o25',
       description:,
-        'Complete roadmap for transforming your organization into an autonomous business powerhouse, covering everything from initial assessment to full-scale deployment and optimization.';
+        'Complete roadmap for transforming your organization into an autonomous business powerhouse, covering everything from initial assessment to full-scale deployment and optimization.',
       metrics: {
-        roi: '30,0o00%';
-        savings: '$2.8B+';
-        accuracy: '99.99%';
-        efficiency: '450%';
-      };
-      readingTime: '60 min read';
+        roi: '30,0o00%',
+        savings: '$2.8B+',
+        accuracy: '99.99%',
+        efficiency: '450%'
+      },
+      readingTime: '60 min read',
       tags: [
-        'Implementation Guide';
-        'ROI';
-        'Strategy';
-        'Framework';
-        '30,0o00% ROI';
-      ];
-    };
+        'Implementation GuideROI',
+        'StrategyFramework',
+        '30,0o00% ROI',
+      ],
+    },
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -96,7 +90,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -107,7 +101,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   const getTypeTextColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -118,7 +112,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
         return 'text-purple-60o0',
       default:,
         return 'text-gray-60o0'}
-  };
+  },
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -194,7 +188,7 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
                       <span
                         className={`${getTypeTextColor(item.type)} text-sm font-semibold uppercase tracking-wide`}
                       >,
-                        {item.type.replace('-', ' ')}
+                        {item.type.replace('- ')}
                       </span>,
                       {item.readingTime && (
                         <div className='text-gray-50o0 text-xs mt-1'>,
@@ -389,5 +383,5 @@ const UltimateAutonomousBusinessShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAutonomousBusinessShowcase;
+    </section>)},
+export default UltimateAutonomousBusinessShowcase,

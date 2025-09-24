@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
@@ -18,17 +18,17 @@ export const AddSkillForm = ({ resumeIdonAddSkill }: AddSkillFormProps) => {
     e.preventDefault(),
     if (!skillName.trim()) return,
     const newSkill: Skill = {
-      name: skillName.trim();
-      category: skillCategory || 'Other';
-      proficiency: proficiency;
-    };
+      name: skillName.trim(),
+      category: skillCategory || 'Other',
+      proficiency: proficiency
+    },
     const success = await onAddSkill(newSkill),
     if (success) {
       setSkillName(''),
       setProficiency(3)}
-  };
+  },
   const handleEnhanceSkill = (enhancedCategory: string) => {
-    setSkillCategory(enhancedCategory)};
+    setSkillCategory(enhancedCategory)},
   return (
     <form onSubmit={handleSubmit} className='space-y-4'>,
       <div className='flex flex-col gap-4 md: flex-row'>,
@@ -85,4 +85,4 @@ export const AddSkillForm = ({ resumeIdonAddSkill }: AddSkillFormProps) => {
           </div>,
         </div>,
       </div>,
-    </form>)};
+    </form>)},

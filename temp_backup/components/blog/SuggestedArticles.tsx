@@ -6,8 +6,8 @@ function overlapScore(a: BlogPost, b: BlogPost): number {
   return topics * 2 + tags}
 ,
 export default function SuggestedArticles({
-  current;
-  all;
+  current,
+  all,
 }: {
   current: BlogPost,
   all: BlogPost[]}) {

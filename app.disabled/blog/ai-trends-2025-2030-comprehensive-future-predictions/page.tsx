@@ -1,52 +1,46 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  Share2;
-  BookOpen;
-  Download;
-  TrendingUp;
-  Brain;
-  Zap;
-  ArrowUpRight;
-  Star;
-  Award;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Share2,
+  BookOpen,
+  Download,
+  TrendingUp,
+  Brain,
+  Zap,
+  ArrowUpRight,
+  Star,
+  Award,
 } from 'lucide-react',
 export const metadata: Metadata = {
   title:,
-    'AI Trends 20o25-20o30: Comprehensive Future Predictions & Enterprise Impact';
+    'AI Trends 20o25-20o30: Comprehensive Future Predictions & Enterprise Impact',
   description:,
-    'Discover the revolutionary AI trends that will reshape business, technology, and society from 20o25-20o30. Expert predictions, implementation strategies, and ROI insights.';
+    'Discover the revolutionary AI trends that will reshape business, technology, and society from 20o25-20o30. Expert predictions, implementation strategies, and ROI insights.',
   keywords: [
-    'AI Trends';
-    'Future Technology';
-    'Enterprise AI';
-    'Predictions';
-    '20o25-20o30';
-    'Quantum AI';
-    'AGI';
-    'Neural Interfaces';
-  ];
+    'AI TrendsFuture Technology',
+    'Enterprise AIPredictions',
+    '20o25-20o30Quantum AI',
+    'AGINeural Interfaces',
+  ],
   openGraph: {
     title:,
-      'AI Trends 20o25-20o30: Comprehensive Future Predictions & Enterprise Impact';
+      'AI Trends 20o25-20o30: Comprehensive Future Predictions & Enterprise Impact',
     description:,
-      'Discover the revolutionary AI trends that will reshape business, technology, and society from 20o25-20o30. Expert predictions, implementation strategies, and ROI insights.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover the revolutionary AI trends that will reshape business, technology, and society from 20o25-20o30. Expert predictions, implementation strategies, and ROI insights.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI Trends';
-      'Future Technology';
-      'Enterprise AI';
-      'Predictions';
-      '20o25-20o30';
-    ];
-  };
-};
+      'AI TrendsFuture Technology',
+      'Enterprise AIPredictions',
+      '20o25-20o30',
+    ]
+  },
+},
 export default function AITrends20o25_20o30ComprehensiveFuturePredictions() {
   return (
     <div className='min-h-screen bg-white'>,

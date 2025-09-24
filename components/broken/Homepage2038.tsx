@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2038 from './ui/UltraFuturisticServiceCard2038',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   ArrowRightStar,
-  BrainAtomShieldZapTrendingUpGlobe;
-  RocketTargetCpuCloudLockUsersAward;
+  BrainAtomShieldZapTrendingUpGlobe,
+  RocketTargetCpuCloudLockUsersAward,
   CheckCircleSparklesInfinityZap as Lightning} from 'lucide-react',
 // Import new services,
 import { innovative2038MicroSaasServices } from '../data/innovative-2038-micro-saas-services',
@@ -293,40 +293,40 @@ const Homepage2038: React.FC = () => {
                 Why Choose Zion Tech Group?,
               </h2>,
               <p className="text-xl text-gray-300 max-w-4xl mx-auto">,
-                'We', 're not just building technology - 'we', 're shaping the future of human consciousness and computing,
+                'Were not just building technology - 'we', 're shaping the future of human consciousness and computing,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-12 h-12" />;
-                  title: "AI Consciousness Evolution";
-                  description: "Leading the development of artificial consciousness and emotional intelligence";
-                  color: "from-purple-500 to-pink-500"};
+                  icon: <Brain className="w-12 h-12" />,
+                  title: "AI Consciousness Evolution",
+                  description: "Leading the development of artificial consciousness and emotional intelligence",
+                  color: "from-purple-500 to-pink-500"},
                 {
-                  icon: <Atom className="w-12 h-12" />;
-                  title: "Quantum Computing Power";
-                  description: "Access to the most advanced quantum computing capabilities available";
-                  color: "from-blue-500 to-cyan-500"};
+                  icon: <Atom className="w-12 h-12" />,
+                  title: "Quantum Computing Power",
+                  description: "Access to the most advanced quantum computing capabilities available",
+                  color: "from-blue-500 to-cyan-500"},
                 {
-                  icon: <Shield className="w-12 h-12" />;
-                  title: "Future-Proof Security";
-                  description: "Quantum-resistant encryption and zero-trust security frameworks";
-                  color: "from-red-500 to-orange-500"};
+                  icon: <Shield className="w-12 h-12" />,
+                  title: "Future-Proof Security",
+                  description: "Quantum-resistant encryption and zero-trust security frameworks",
+                  color: "from-red-500 to-orange-500"},
                 {
-                  icon: <Rocket className="w-12 h-12" />;
-                  title: "Innovation First";
-                  description: "Constantly pushing the boundaries of 'what', 's possible in technology";
-                  color: "from-green-500 to-emerald-500"};
+                  icon: <Rocket className="w-12 h-12" />,
+                  title: "Innovation First",
+                  description: "Constantly pushing the boundaries of 'whats possible in technology",
+                  color: "from-green-500 to-emerald-500"},
                 {
-                  icon: <Users className="w-12 h-12" />;
-                  title: "Global Expertise";
-                  description: "World-class team with experience across cutting-edge technologies";
-                  color: "from-indigo-500 to-purple-500"};
+                  icon: <Users className="w-12 h-12" />,
+                  title: "Global Expertise",
+                  description: "World-class team with experience across cutting-edge technologies",
+                  color: "from-indigo-500 to-purple-500"},
                 {
-                  icon: <Award className="w-12 h-12" />;
-                  title: "Proven Results";
-                  description: "Track record of delivering transformative solutions to leading organizations";
+                  icon: <Award className="w-12 h-12" />,
+                  title: "Proven Results",
+                  description: "Track record of delivering transformative solutions to leading organizations",
                   color: "from-yellow-500 to-orange-500"}
               ].map((featureindex) => (
                 <motion.div,
@@ -392,5 +392,5 @@ const Homepage2038: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage2038;
+    </Layout>)},
+export default Homepage2038,

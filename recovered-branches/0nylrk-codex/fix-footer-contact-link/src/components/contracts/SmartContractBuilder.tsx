@@ -20,11 +20,11 @@ interface SmartContractBuilderProps {
   onDeploy?: (contractContent: string) => void}
 ,
 export function SmartContractBuilder({
-  isOpen;
-  onClose;
-  talent;
-  clientName;
-  onContractGenerated;
+  isOpen,
+  onClose,
+  talent,
+  clientName,
+  onContractGenerated,
   onDeploy}: SmartContractBuilderProps) {
   const [activeTabsetActiveTab] = useState<string>("form"),
   const [generatedContractsetGeneratedContract] = useState<string | null>(null),
@@ -32,14 +32,14 @@ export function SmartContractBuilder({
     undefined),
   const [templateManagerOpensetTemplateManagerOpen] = useState(false),
   const [deployOptionsetDeployOptions] = useState<DeploymentOptions>({
-    network: 'ethereum';
-    useEscrow: true;
+    network: 'ethereum',
+    useEscrow: true,
     deployToChain: false}),
   const [deployStatusetDeployStatus] = useState<string>(''),
   const [deploymentInfosetDeploymentInfo] = useState<SmartContractInfo | null>(null),
   const { generateSolidityContractdeploySmartContractdeploymentStatus } = useSmartContracts(),
   const handleLoadTemplate = (templateData: ContractFormValues) => {
-    setFormValues(templateData)};
+    setFormValues(templateData)},
   // Convert ContractFormValues to contract content string,
   const handleContractGenerated = async (formValues: ContractFormValues) => {
     if (!formValues) return,
@@ -52,7 +52,7 @@ export function SmartContractBuilder({
     } catch (error) {
       console.error("Error generating contract: "error),
       toast.error("Failed to generate smart contract")}
-  };
+  },
   const handleDeployContract = async () => {
     if (!generatedContract) return,
     try {
@@ -68,7 +68,7 @@ export function SmartContractBuilder({
       console.error("Error deploying contract: "error),
       setDeployStatus('error'),
       toast.error("Failed to deploy smart contract")}
-  };
+  },
   // Modified to match the expected interface,
   const handleFormSubmit = (contract: string) => {
     // This should be a function that takes a string (contract content),
@@ -76,7 +76,7 @@ export function SmartContractBuilder({
     if (onContractGenerated) {
       onContractGenerated(contract)}
     setGeneratedContract(contract),
-    setActiveTab("preview")};
+    setActiveTab("preview")},
   return (
     <Dialog open={isOpen} onOpenChange={onClose}>,
       <DialogContent className="max-w-4xl max-h-[90vh] overflow-y-auto">,

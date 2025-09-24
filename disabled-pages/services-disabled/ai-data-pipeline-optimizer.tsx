@@ -21,7 +21,7 @@ export default function AIDataPipelineOptimizer(...args: any[]): any {
           AI Data Pipeline Optimizer,
         </h1>,
         <p className='mt-4 text-white/80'>,
-          Profile and optimize data/AI pipelines across Spark, Snowflake;
+          Profile and optimize data/AI pipelines across Spark, Snowflake,
           Airflow, dbt, Kafka, and RAG stores.,
         </p>,
         <ul className='mt-6 space-y-2 text-white/80 list-disc pl-5'>,

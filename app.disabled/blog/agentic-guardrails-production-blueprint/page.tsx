@@ -1,54 +1,45 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agentic Guardrails Production Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Agentic Guardrails Production Blueprint | Zion Tech Group',
   description:,
-    'Practical blueprint for shipping agentic systems to production with safety, reliability, and cost guardrails: policy-as-code, eval gates, and runtime controls.';
+    'Practical blueprint for shipping agentic systems to production with safety, reliability, and cost guardrails: policy-as-code, eval gates, and runtime controls.',
   keywords: [
-    'agentic guardrails';
-    'AI safety';
-    'policy-as-code';
-    'LLM evals';
-    'runtime controls';
-    'production AI';
-    'observability';
-  ];
-};
+    'agentic guardrailsAI safety',
+    'policy-as-codeLLM evals',
+    'runtime controlsproduction AI',
+    'observability',
+  ]
+},
 const sections = [
   {
-    title: 'Why Guardrails Matter Now';
+    title: 'Why Guardrails Matter Now',
     points: [
-      'Increased autonomy introduces novel failure modes across safety, security, and cost leakage.';
-      'Enterprises require deterministic controls layered with evaluation-driven confidence.';
-      'Regulatory and brand risks demand auditable, repeatable safeguards.';
-    ];
-  };
+      'Increased autonomy introduces novel failure modes across safety, security, and cost leakage.Enterprises require deterministic controls layered with evaluation-driven confidence.',
+      'Regulatory and brand risks demand auditable, repeatable safeguards.',
+    ],
+  },
   {
-    title: 'Architecture Overview';
+    title: 'Architecture Overview',
     points: [
-      'Policy-as-code backbone with versioned controls and exemptions.';
-      'Pre-deployment eval gates with scenario coverage and pass/fail thresholds.';
-      'Runtime guardrails: input validation, tool permissioning, output filters, cost caps.';
-      'Observability: traces, metrics, red-team events, and audit logs.';
-    ];
-  };
+      'Policy-as-code backbone with versioned controls and exemptions.Pre-deployment eval gates with scenario coverage and pass/fail thresholds.',
+      'Runtime guardrails: input validation, tool permissioning, output filters, cost caps.Observability: traces, metrics, red-team events, and audit logs.',
+    ],
+  },
   {
-    title: 'Implementation Playbook';
+    title: 'Implementation Playbook',
     points: [
-      'Model risks: enumerate unsafe actions, data exfiltration, and hallucination impact.';
-      'Define controls: allow/deny lists, rate limits, financial limits, PII handling.';
-      'Instrument evals: regression suites, adversarial prompts, business KPI checks.';
-      'Automate release: CI gates, rollout stages, and automatic rollback policies.';
-    ];
-  };
+      'Model risks: enumerate unsafe actions, data exfiltration, and hallucination impact.Define controls: allow/deny lists, rate limits, financial limits, PII handling.',
+      'Instrument evals: regression suites, adversarial prompts, business KPI checks.Automate release: CI gates, rollout stages, and automatic rollback policies.',
+    ],
+  },
   {
-    title: 'Operating at Scale';
+    title: 'Operating at Scale',
     points: [
-      'SLOs for quality, latency, and cost per request with alert thresholds.';
-      'Continuous red teaming with synthetic data and human-in-the-loop review.';
-      'Monthly governance reviews with exceptions and control updates.';
-    ];
-  };
+      'SLOs for quality, latency, and cost per request with alert thresholds.Continuous red teaming with synthetic data and human-in-the-loop review.',
+      'Monthly governance reviews with exceptions and control updates.',
+    ],
+  },
 ],
 const ArticlePage = () => {
   return (
@@ -114,5 +105,5 @@ const ArticlePage = () => {
           </div>,
         </section>,
       </div>,
-    </div>)};
-export default ArticlePage;
+    </div>)},
+export default ArticlePage,

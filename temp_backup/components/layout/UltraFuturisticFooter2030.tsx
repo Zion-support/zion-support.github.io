@@ -1,198 +1,195 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Shield;
-  Cpu;
-  Target;
-  Microscope;
-  Users;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Youtube;
-  Github;
-  ArrowRight;
-  Heart;
-  Star;
-  Award;
-  CheckCircle;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Shield,
+  Cpu,
+  Target,
+  Microscope,
+  Users,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Youtube,
+  Github,
+  ArrowRight,
+  Heart,
+  Star,
+  Award,
+  CheckCircle,
 } from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: '🚀 AI & Consciousness';
+    title: '🚀 AI & Consciousness',
     services: [
       {
-        name: 'AI Consciousness Evolution';
-        href: '/ai-consciousness-evolution-platform';
-      };
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-platform'
+      },
       {
-        name: 'AI Emotional Intelligence';
-        href: '/ai-emotion-intelligence-platform';
-      };
+        name: 'AI Emotional Intelligence',
+        href: '/ai-emotion-intelligence-platform'
+      },
       {
-        name: 'AI Creativity Orchestrator';
-        href: '/ai-creativity-orchestrator';
-      };
+        name: 'AI Creativity Orchestrator',
+        href: '/ai-creativity-orchestrator'
+      },
       {
-        name: 'AI Autonomous Business Manager';
-        href: '/ai-autonomous-business-manager';
-      };
-    ];
-  };
+        name: 'AI Autonomous Business Manager',
+        href: '/ai-autonomous-business-manager'
+      },
+    ],
+  },
   {
-    title: '⚛️ Quantum & Emerging Tech';
+    title: '⚛️ Quantum & Emerging Tech',
     services: [
       {
-        name: 'Quantum Internet Security';
-        href: '/quantum-internet-security-gateway';
-      };
+        name: 'Quantum Internet Security',
+        href: '/quantum-internet-security-gateway'
+      },
       {
-        name: 'Quantum Learning Accelerator';
-        href: '/quantum-learning-accelerator';
-      };
+        name: 'Quantum Learning Accelerator',
+        href: '/quantum-learning-accelerator'
+      },
       {
-        name: 'Quantum Financial Trading';
-        href: '/quantum-financial-trading-platform';
-      };
+        name: 'Quantum Financial Trading',
+        href: '/quantum-financial-trading-platform'
+      },
       {
-        name: 'Quantum Cloud Infrastructure';
-        href: '/quantum-cloud-infrastructure';
-      };
-    ];
-  };
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure'
+      },
+    ],
+  },
   {
-    title: '🧬 Biotech & DNA Computing';
+    title: '🧬 Biotech & DNA Computing',
     services: [
       {
-        name: 'DNA Computing Platform';
-        href: '/biotech-dna-computing-platform';
-      };
+        name: 'DNA Computing Platform',
+        href: '/biotech-dna-computing-platform'
+      },
       {
-        name: 'Personalized Nutrition';
-        href: '/biotech-personalized-nutrition';
-      };
+        name: 'Personalized Nutrition',
+        href: '/biotech-personalized-nutrition'
+      },
       {
-        name: 'Predictive Health Analytics';
-        href: '/ai-predictive-health-analytics';
-      };
-      { name: 'Research Automation', href: '/advanced-research-automation' };
-    ];
-  };
+        name: 'Predictive Health Analytics',
+        href: '/ai-predictive-health-analytics'
+      },
+      { name: 'Research Automation', href: '/advanced-research-automation' },
+    ],
+  },
   {
-    title: '🏙️ Enterprise IT Solutions';
+    title: '🏙️ Enterprise IT Solutions',
     services: [
-      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' };
+      { name: 'Autonomous DevOps', href: '/autonomous-devops-platform' },
       {
-        name: 'Autonomous IT Operations';
-        href: '/autonomous-it-operations-center';
-      };
+        name: 'Autonomous IT Operations',
+        href: '/autonomous-it-operations-center'
+      },
       {
-        name: 'AI Enterprise Security';
-        href: '/ai-powered-enterprise-security';
-      };
+        name: 'AI Enterprise Security',
+        href: '/ai-powered-enterprise-security'
+      },
       {
-        name: 'Intelligent Data Governance';
-        href: '/intelligent-data-governance';
-      };
-    ];
-  };
+        name: 'Intelligent Data Governance',
+        href: '/intelligent-data-governance'
+      },
+    ],
+  },
   {
-    title: '🌌 Space & Metaverse Tech';
+    title: '🌌 Space & Metaverse Tech',
     services: [
       {
-        name: 'Space Mining Automation';
-        href: '/space-mining-automation-platform';
-      };
+        name: 'Space Mining Automation',
+        href: '/space-mining-automation-platform'
+      },
       {
-        name: 'Metaverse Digital Reality';
-        href: '/metaverse-digital-reality-platform';
-      };
-      { name: 'Quantum Research Platform', href: '/quantum-research-platform' };
-      { name: 'AI Research Assistant', href: '/ai-research-assistant' };
-    ];
-  };
+        name: 'Metaverse Digital Reality',
+        href: '/metaverse-digital-reality-platform'
+      },
+      { name: 'Quantum Research Platform', href: '/quantum-research-platform' },
+      { name: 'AI Research Assistant', href: '/ai-research-assistant' },
+    ],
+  },
   {
-    title: '🎯 20o30 Innovative Micro SAAS';
+    title: '🎯 20o30 Innovative Micro SAAS',
     services: [
       {
-        name: 'AI Business Intelligence Suite 20o30';
-        href: '/ai-business-intelligence-suite-20o30';
-      };
+        name: 'AI Business Intelligence Suite 20o30',
+        href: '/ai-business-intelligence-suite-20o30'
+      },
       {
-        name: 'AI Customer Experience Platform 20o30';
-        href: '/ai-customer-experience-platform-20o30';
-      };
+        name: 'AI Customer Experience Platform 20o30',
+        href: '/ai-customer-experience-platform-20o30'
+      },
       {
-        name: 'AI Marketing Automation Suite 20o30';
-        href: '/ai-marketing-automation-20o30';
-      };
+        name: 'AI Marketing Automation Suite 20o30',
+        href: '/ai-marketing-automation-20o30'
+      },
       {
-        name: 'AI HR Management Suite 20o30';
-        href: '/ai-hr-management-suite-20o30';
-      };
-    ];
-  };
+        name: 'AI HR Management Suite 20o30',
+        href: '/ai-hr-management-suite-20o30'
+      },
+    ],
+  },
 ],
 const quickLinks = [
-  { name: 'Home', href: '/' };
-  { name: 'Services', href: '/services' };
-  { name: 'Solutions', href: '/solutions' };
-  { name: 'Pricing', href: '/pricing' };
-  { name: 'Resources', href: '/resources' };
-  { name: 'Case Studies', href: '/case-studies' };
-  { name: 'Blog', href: '/blog' };
-  { name: 'Contact', href: '/contact' };
+  { name: 'Home', href: '/' },
+  { name: 'Services', href: '/services' },
+  { name: 'Solutions', href: '/solutions' },
+  { name: 'Pricing', href: '/pricing' },
+  { name: 'Resources', href: '/resources' },
+  { name: 'Case Studies', href: '/case-studies' },
+  { name: 'Blog', href: '/blog' },
+  { name: 'Contact', href: '/contact' },
 ],
 const companyInfo = [
-  { name: 'About Us', href: '/about' };
-  { name: 'Careers', href: '/careers' };
-  { name: 'Press', href: '/press' };
-  { name: 'Partners', href: '/partners' };
-  { name: 'Support', href: '/support' };
-  { name: 'Status', href: '/status' };
+  { name: 'About Us', href: '/about' },
+  { name: 'Careers', href: '/careers' },
+  { name: 'Press', href: '/press' },
+  { name: 'Partners', href: '/partners' },
+  { name: 'Support', href: '/support' },
+  { name: 'Status', href: '/status' },
 ],
 const socialLinks = [
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com/company/ziontechgroup';
-    icon: Linkedin;
-  };
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com/company/ziontechgroup',
+    icon: Linkedin
+  },
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: Twitter },
   {
-    name: 'Facebook';
-    href: 'https://facebook.com/ziontechgroup';
-    icon: Facebook;
-  };
+    name: 'Facebook',
+    href: 'https://facebook.com/ziontechgroup',
+    icon: Facebook
+  },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com/ziontechgroup';
-    icon: Instagram;
-  };
-  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube };
-  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github };
+    name: 'Instagram',
+    href: 'https://instagram.com/ziontechgroup',
+    icon: Instagram
+  },
+  { name: 'YouTube', href: 'https://youtube.com/ziontechgroup', icon: Youtube },
+  { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: Github },
 ],
 const certifications = [
-  'ISO 270o01 Certified';
-  'SOC 2 Type II Compliant';
-  'GDPR Compliant';
-  'HIPAA Compliant';
-  'PCI DSS Level 1';
-  'FedRAMP Authorized';
+  'ISO 270o01 CertifiedSOC 2 Type II Compliant',
+  'GDPR CompliantHIPAA Compliant',
+  'PCI DSS Level 1FedRAMP Authorized',
 ],
 export default function UltraFuturisticFooter20o30() {
   return (
@@ -227,7 +224,7 @@ export default function UltraFuturisticFooter20o30() {
                 </div>,
               </div>,
               <p className='text-gray-30o0 text-sm leading-relaxed'>,
-                Pioneering the future with cutting-edge AI, quantum computing;
+                Pioneering the future with cutting-edge AI, quantum computing,
                 and emerging technologies. Transforming businesses through,
                 innovative solutions and intelligent automation.,
               </p>,

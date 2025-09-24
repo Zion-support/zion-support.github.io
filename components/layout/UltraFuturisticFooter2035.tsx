@@ -1,6 +1,6 @@
 
-import React from 'react';;
-import React from 'react';
+import React from 'react',
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
@@ -57,72 +57,72 @@ import {
   Video,
   Headphones} from 'lucide-react',import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight,
-  Zap;
-  Globe;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Target;
-  BookOpen;
-  Users;
-  Star;
-  Sparkles;
-  Cpu;
-  Lock;
-  Cloud;
-  BarChart3;
-  Settings;
-  Eye;
-  Award;
-  Clock;
-  Heart;
-  Lightbulb;
-  Twitter;
-  Linkedin;
-  Facebook;
-  Instagram;
-  Youtube;
-  Github;
-  MessageCircle;
-  MessageSquare;
-  ArrowUp;
-  ExternalLink;
-  Building;
-  Code;
-  Database;
-  Network;
-  Server;
-  Monitor;
-  Smartphone;
-  Camera;
-  Gamepad2;
-  Palette;
-  Music;
-  Film;
-  BookOpenCheck;
-  HelpCircle;
-  FileText;
-  Video;
-  Headphones;} from 'lucide-react',import {
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight;
-  Video;
-  Headphones;} from 'lucide-react',import {
+  Zap,
+  Globe,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Target,
+  BookOpen,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Eye,
+  Award,
+  Clock,
+  Heart,
+  Lightbulb,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Youtube,
+  Github,
+  MessageCircle,
+  MessageSquare,
+  ArrowUp,
+  ExternalLink,
+  Building,
+  Code,
+  Database,
+  Network,
+  Server,
+  Monitor,
+  Smartphone,
+  Camera,
+  Gamepad2,
+  Palette,
+  Music,
+  Film,
+  BookOpenCheck,
+  HelpCircle,
+  FileText,
+  Video,
+  Headphones,} from 'lucide-react',import {
   Zap, Globe, Phone, Mail, MapPin, ArrowRight,
-  Video;
-  Headphones;} from 'lucide-react',import {
-  Zap, Globe, Phone, Mail, MapPin, ArrowRight;
+  Video,
+  Headphones,} from 'lucide-react',import {
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight,
+  Video,
+  Headphones,} from 'lucide-react',import {
+  Zap, Globe, Phone, Mail, MapPin, ArrowRight,
   Brain, Atom, Shield, Rocket, Target, BookOpen, Users,
   Star, Sparkles, Cpu, Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
   Twitter, Linkedin, Facebook, Instagram, Youtube, Github, MessageCircle, MessageSquare,
   ArrowUp, ExternalLink, Building, Code, Database, Network, Server, Monitor, Smartphone, Camera, Gamepad2}
   {
-    title: 'Micro SAAS';
-    description: 'Innovative business solutions for modern enterprises';
+    title: 'Micro SAAS',
+    description: 'Innovative business solutions for modern enterprises',
   {
     title: 'Quantum & Emerging Tech',
     description: 'Breakthrough quantum and space technologies',
@@ -288,11 +288,11 @@ import {
       { name: 'Market Pricing', href: '/market-pricing' }
       { name: 'Services Advertising', href: '/services-advertising' }
     ]}
-]};
+]},
   {
-    title: 'Resources';
-    description: 'Documentation, support, and learning';
-    icon: <BookOpen className='w-5 h-5 text-cyan-400' />;
+    title: 'Resources',
+    description: 'Documentation, support, and learning',
+    icon: <BookOpen className='w-5 h-5 text-cyan-400' />,
     links: [
   return (
     <footer className="relative bg-black text-white overflow-hidden">,
@@ -308,26 +308,26 @@ import {
               linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
             `]}
-];
+],
 const socialLinks = [
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
         {_/* Animated grid */}
         <motion.div,
           className="absolute inset-0 opacity-5",
           style={{
             backgroundImage: `,
-              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+              linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
-            `;
+            `,
             backgroundSize: '200px 200px'}}
 ,
           animate={{
             backgroundPosition: ['0px 0px200px 200px']}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: 'linear'}}
         />,
       </div>,
@@ -348,54 +348,54 @@ const UltraFuturisticFooter2035: React.FC = () => {
                       Zion Tech Group,
                     </h3>,
                     <p className='text-sm text-gray-400'>,
-      { name: 'Market Pricing', href: '/market - pricing' };
-      { name: 'Services Advertising', href: '/services - advertising' };
-    ];
-  };
+      { name: 'Market Pricing', href: '/market - pricing' },
+      { name: 'Services Advertising', href: '/services - advertising' },
+    ],
+  },
 ],
 const socialLinks = [
   {
-    name: 'Twitter';
-    href: 'https://twitter.com / ziontechgroup';
-    icon: <Twitter className='w - 5 h - 5' />;
-  };
+    name: 'Twitter',
+    href: 'https://twitter.com / ziontechgroup',
+    icon: <Twitter className='w - 5 h - 5' />
+  },
   {
-    name: 'LinkedIn';
-    href: 'https://linkedin.com / company / ziontechgroup';
-    icon: <Linkedin className='w - 5 h - 5' />;
-  };
+    name: 'LinkedIn',
+    href: 'https://linkedin.com / company / ziontechgroup',
+    icon: <Linkedin className='w - 5 h - 5' />
+  },
   {
-    name: 'Facebook';
-    href: 'https://facebook.com / ziontechgroup';
-    icon: <Facebook className='w - 5 h - 5' />;
-  };
+    name: 'Facebook',
+    href: 'https://facebook.com / ziontechgroup',
+    icon: <Facebook className='w - 5 h - 5' />
+  },
   {
-    name: 'Instagram';
-    href: 'https://instagram.com / ziontechgroup';
-    icon: <Instagram className='w - 5 h - 5' />;
-  };
+    name: 'Instagram',
+    href: 'https://instagram.com / ziontechgroup',
+    icon: <Instagram className='w - 5 h - 5' />
+  },
   {
-    name: 'YouTube';
-    href: 'https://youtube.com/@ziontechgroup';
-    icon: <Youtube className='w - 5 h - 5' />;
-  };
+    name: 'YouTube',
+    href: 'https://youtube.com/@ziontechgroup',
+    icon: <Youtube className='w - 5 h - 5' />
+  },
   {
-    name: 'GitHub';
-    href: 'https://github.com / Zion - Holdings';
-    icon: <Github className='w - 5 h - 5' />;
+    name: 'GitHub',
+    href: 'https://github.com / Zion - Holdings',
+    icon: <Github className='w - 5 h - 5' />
   }],
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () =>: any {
-    window.scroll_to ({ top: 0, behavior: 'smooth' }),  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: <Twitter className="w - 5 h - 5" /> };
-  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: <Linkedin className="w - 5 h - 5" /> };
-  { name: 'Facebook', href: 'https://facebook.com / ziontechgroup', icon: <Facebook className="w - 5 h - 5" /> };
-  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: <Instagram className="w - 5 h - 5" /> };
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w - 5 h - 5" /> };
+    window.scroll_to ({ top: 0, behavior: 'smooth' }),  { name: 'Twitter', href: 'https://twitter.com / ziontechgroup', icon: <Twitter className="w - 5 h - 5" /> },
+  { name: 'LinkedIn', href: 'https://linkedin.com / company / ziontechgroup', icon: <Linkedin className="w - 5 h - 5" /> },
+  { name: 'Facebook', href: 'https://facebook.com / ziontechgroup', icon: <Facebook className="w - 5 h - 5" /> },
+  { name: 'Instagram', href: 'https://instagram.com / ziontechgroup', icon: <Instagram className="w - 5 h - 5" /> },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w - 5 h - 5" /> },
   { name: 'GitHub', href: 'https://github.com / Zion - Holdings', icon: <Github className="w - 5 h - 5" /> }
 const UltraFuturisticFooter2035: React.FC = () => {
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })}
-  };
+  },
   return (
     <footer className='relative bg - black text - white overflow - hidden'>,
       {/* Background Effects */}
@@ -407,17 +407,17 @@ const UltraFuturisticFooter2035: React.FC = () => {
           className='absolute inset - 0 opacity - 5',
           style={{
             background_image: `,
-              linear - gradient (rgba (0, 255, 255, 0.3) 1px, transparent 1px);
+              linear - gradient (rgba (0, 255, 255, 0.3) 1px, transparent 1px),
               linear - gradient (90deg, rgba (0, 255, 255, 0.3) 1px, transparent 1px),
-            `;
-            background_size: '200px 200px';
+            `,
+            background_size: '200px 200px'
           }}
         />,
       </div>,
       <div className='relative z-10'>            ease: 'linear'}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: 'linear'}}
 }}
           }}
@@ -667,7 +667,7 @@ const UltraFuturisticFooter2035: React.FC = () => {
         </div>,
       </div>,
     </footer>)}
-/* Animated grid */};
+/* Animated grid */},
   /* Animated grid */,
 /* Animated grid */,
   /* Animated grid */}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
@@ -681,12 +681,12 @@ const UltraFuturisticFooter2035: React.FC = () => {
   link.featured ? 'text-cyan-400 hover: text-cyan-300' : 'text-gray-400 hover:text-white'}`}> </li>) )}</ul> </motion.div>) )}</div> {
   /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)}
 export default UltraFuturisticFooter2035)}
-};
+},
   /* Animated grid */ }<motion && motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social && social.icon }</a>) ) }</div> </motion && motion.div> </div> {
   /* Footer Sections */ }{
   footerSections && footerSections.map ( (section, index) => (<motion&& motion.div key= {
-  section && section.title)};
+  section && section.title)},
   /* Animated grid */}<motion.div > <div className="flex items-center gap-3" > <div className="w-12 h-12 bg-gradient-to-r from-cyan-500 to-blue-500 rounded-xl flex items-center justify-center" > <Brain className="w-6 h-6 text-white" /> </div> <div> <h3 className="text-2xl font-bold bg-gradient-to-r from-cyan-400 to-blue-500 bg-clip-text text-transparent" > Zion Tech Group </h3> <p className="text-sm text-gray-400" >Revolutionary Technology Solutions</p> </div> </div> <p className="text-gray-300 leading-relaxed max-w-md" > Leading the future with cutting-edge AI consciousness, quantum computing, and innovative micro SAAS solutions. Transform your business with our revolutionary technology. </p> > {
   social.icon}</a>) )}</div> </motion.div> </div> {
   /* Footer Sections */}{
@@ -696,11 +696,11 @@ export default UltraFuturisticFooter2035)}
   link && link.href}className= {
   `text-sm transition-colors duration-200 $ {
   link && link.featured ? 'text-cyan-400 hover: text-cyan-300' : 'text-gray-400 hover:text-white'}`}> </li>) ) }</ul> </motion && motion.div>) ) }</div> {
-  /* Bottom Section */ }<motion && motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion && motion.div> </div> </div> </footer>) };
-export default UltraFuturisticFooter2035)};
-export default UltraFuturisticFooter2035;
-  /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)};
-export default UltraFuturisticFooter2035;
-export default UltraFuturisticFooter2035)};
-export default UltraFuturisticFooter2035;
-export default UltraFuturisticFooter2035;
+  /* Bottom Section */ }<motion && motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" >  2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion && motion.div> </div> </div> </footer>) },
+export default UltraFuturisticFooter2035)},
+export default UltraFuturisticFooter2035,
+  /* Bottom Section */}<motion.div > <div className="flex flex-col md: flex-row items-center justify-between gap-4" > <div className="text-sm text-gray-400" > © 2025 Zion Tech Group. All rights reserved. </div> <div className="flex items-center gap-6 text-sm text-gray-400" > <Link href="/privacy" className="hover:text-white transition-colors duration-200" > Privacy Policy </a> <Link href="/terms" className="hover:text-white transition-colors duration-200" > Terms of Service </a> <Link href="/cookies" className="hover:text-white transition-colors duration-200" > Cookie Policy </a> </div> <button aria-label="Scroll to top" w-5 h-5" /> </button> </div> </motion.div> </div> </div> </footer>)},
+export default UltraFuturisticFooter2035,
+export default UltraFuturisticFooter2035)},
+export default UltraFuturisticFooter2035,
+export default UltraFuturisticFooter2035,

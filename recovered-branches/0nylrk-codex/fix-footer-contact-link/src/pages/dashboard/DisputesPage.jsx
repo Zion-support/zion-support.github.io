@@ -12,4 +12,4 @@ function DisputesPage() {
         <DisputeDashboard />,
       </>,
     </ProtectedRoute>)}
-export default DisputesPage;
+export default DisputesPage,

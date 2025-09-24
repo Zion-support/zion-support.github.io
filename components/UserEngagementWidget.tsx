@@ -14,15 +14,15 @@ interface EngagementMetrics {
 ,
 export default function UserEngagementWidget() {
   const [metricsetMetrics] = useState<EngagementMetrics>({
-    activeUsers: 0;
-    sessionDuration: 0;
-    pageDepth: 0;
-    scrollDepth: 0;
-    clickThroughRate: 0;
-    socialShares: 0;
-    comments: 0;
-    likes: 0;
-    bookmarks: 0;
+    activeUsers: 0,
+    sessionDuration: 0,
+    pageDepth: 0,
+    scrollDepth: 0,
+    clickThroughRate: 0,
+    socialShares: 0,
+    comments: 0,
+    likes: 0,
+    bookmarks: 0,
     downloads: 0}),
   const [isVisiblesetIsVisible] = useState(false),
   const [userActionsetUserActions] = useState<string[]>([]),
@@ -30,28 +30,23 @@ export default function UserEngagementWidget() {
     // Simulate real-time engagement data,
     const interval = setInterval(() => {
       setMetrics(prev => ({
-        activeUsers: 150 + Math.floor(Math.random() * 50);
-        sessionDuration: 180 + Math.random() * 120;
-        pageDepth: 3 + Math.random() * 4;
-        scrollDepth: 60 + Math.random() * 30;
-        clickThroughRate: 15 + Math.random() * 10;
-        socialShares: prev.socialShares + Math.floor(Math.random() * 3);
-        comments: prev.comments + Math.floor(Math.random() * 2);
-        likes: prev.likes + Math.floor(Math.random() * 5);
-        bookmarks: prev.bookmarks + Math.floor(Math.random() * 2);
+        activeUsers: 150 + Math.floor(Math.random() * 50),
+        sessionDuration: 180 + Math.random() * 120,
+        pageDepth: 3 + Math.random() * 4,
+        scrollDepth: 60 + Math.random() * 30,
+        clickThroughRate: 15 + Math.random() * 10,
+        socialShares: prev.socialShares + Math.floor(Math.random() * 3),
+        comments: prev.comments + Math.floor(Math.random() * 2),
+        likes: prev.likes + Math.floor(Math.random() * 5),
+        bookmarks: prev.bookmarks + Math.floor(Math.random() * 2),
         downloads: prev.downloads + Math.floor(Math.random() * 1)})),
       // Simulate user actions,
       const actions = [
-        'User viewed AI 20o25 breakthrough content';
-        'User downloaded case study PDF';
-        'User shared content on LinkedIn';
-        'User bookmarked quantum computing page';
-        'User commented on blog post';
-        'User clicked CTA button';
-        'User scrolled to bottom of page';
-        'User viewed multiple pages';
-        'User signed up for newsletter';
-        'User requested demo';
+        'User viewed AI 20o25 breakthrough contentUser downloaded case study PDF',
+        'User shared content on LinkedInUser bookmarked quantum computing page',
+        'User commented on blog postUser clicked CTA button',
+        'User scrolled to bottom of pageUser viewed multiple pages',
+        'User signed up for newsletterUser requested demo',
       ],
       if (Math.random() > 0.7) {
         const randomAction = actions[Math.floor(Math.random() * actions.length)],
@@ -61,7 +56,7 @@ export default function UserEngagementWidget() {
   const formatTime = (seconds: number) => {
     const minutes = Math.floor(seconds / 60),
     const remainingSeconds = Math.floor(seconds % 60),
-    return `${minutes}m ${remainingSeconds}s`};
+    return `${minutes}m ${remainingSeconds}s`},
   return (
     <div className="fixed top-4 right-4 z-50">,
       <button

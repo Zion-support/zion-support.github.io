@@ -17,7 +17,7 @@ export interface ProductListing {
     name: string,
     id: string,
     avatarUrl?: string,
-    email?: string, // Added optional email property};
+    email?: string, // Added optional email property},
   images: string[],
   createdAt: string,
   rating?: number,

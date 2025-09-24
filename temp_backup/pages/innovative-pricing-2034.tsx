@@ -2,126 +2,117 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  CheckCircle;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Brain;
-  Target;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  BarChart3;
-  Settings;
-  Code;
-  Palette;
-  MessageSquare;
-  Phone;
-  Mail;
-  MapPin;
-  ArrowRight;
-  ExternalLink;
-  DollarSign;
-  Users;
-  Clock;
-  Award;
-  Rocket;
+  CheckCircle,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Target,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  BarChart3,
+  Settings,
+  Code,
+  Palette,
+  MessageSquare,
+  Phone,
+  Mail,
+  MapPin,
+  ArrowRight,
+  ExternalLink,
+  DollarSign,
+  Users,
+  Clock,
+  Award,
+  Rocket,
 } from 'lucide-react',
 // Import all innovative services,
 import { innovativeMicroSaasSolutions } from '../data/20o34-innovative-micro-saas-solutions',
 import { innovativeITSolutions } from '../data/20o34-innovative-it-solutions',
 import { innovativeAISolutions } from '../data/20o34-innovative-ai-solutions',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const pricingTiers = [
   {
-    name: 'Starter';
-    description: 'Perfect for small businesses and startups';
-    price: 'From $79/month';
+    name: 'Starter',
+    description: 'Perfect for small businesses and startups',
+    price: 'From $79/month',
     features: [
-      'Up to 1,0o00 users/items';
-      'Basic support';
-      'Core features';
-      'Standard integrations';
-      'Email support';
-    ];
-    color: 'from-cyan-50o0 to-blue-50o0';
-    popular: false;
-  };
+      'Up to 1,0o00 users/itemsBasic support',
+      'Core featuresStandard integrations',
+      'Email support',
+    ],
+    color: 'from-cyan-50o0 to-blue-50o0',
+    popular: false
+  },
   {
-    name: 'Professional';
-    description: 'Ideal for growing businesses';
-    price: 'From $299/month';
+    name: 'Professional',
+    description: 'Ideal for growing businesses',
+    price: 'From $299/month',
     features: [
-      'Up to 10,0o00 users/items';
-      'Priority support';
-      'Advanced features';
-      'Premium integrations';
-      'Phone & email support';
-      'Custom reporting';
-      'API access';
-    ];
-    color: 'from-purple-50o0 to-pink-50o0';
-    popular: true;
-  };
+      'Up to 10,0o00 users/itemsPriority support',
+      'Advanced featuresPremium integrations',
+      'Phone & email supportCustom reporting',
+      'API access',
+    ],
+    color: 'from-purple-50o0 to-pink-50o0',
+    popular: true
+  },
   {
-    name: 'Enterprise';
-    description: 'For large organizations';
-    price: 'From $799/month';
+    name: 'Enterprise',
+    description: 'For large organizations',
+    price: 'From $799/month',
     features: [
-      'Unlimited users/items';
-      '24/7 dedicated support';
-      'All features';
-      'Custom integrations';
-      'Dedicated account manager';
-      'Custom development';
-      'On-premise options';
-      'SLA guarantees';
-    ];
-    color: 'from-green-50o0 to-emerald-50o0';
-    popular: false;
-  };
+      'Unlimited users/items24/7 dedicated support',
+      'All featuresCustom integrations',
+      'Dedicated account managerCustom development',
+      'On-premise optionsSLA guarantees',
+    ],
+    color: 'from-green-50o0 to-emerald-50o0',
+    popular: false
+  },
 ],
 const serviceCategories = [
   {
-    id: 'micro-saas';
-    title: '🎯 Micro SaaS Solutions';
+    id: 'micro-saas',
+    title: '🎯 Micro SaaS Solutions',
     description:,
-      'Ready-to-use business solutions that drive growth and efficiency';
-    icon: Target;
-    services: innovativeMicroSaasSolutions;
-    color: 'from-yellow-50o0 to-orange-50o0';
-  };
+      'Ready-to-use business solutions that drive growth and efficiency',
+    icon: Target,
+    services: innovativeMicroSaasSolutions,
+    color: 'from-yellow-50o0 to-orange-50o0'
+  },
   {
-    id: 'it-solutions';
-    title: '🏙️ Enterprise IT Solutions';
-    description: 'Advanced IT infrastructure and enterprise solutions';
-    icon: Shield;
-    services: innovativeITSolutions;
-    color: 'from-green-50o0 to-emerald-50o0';
-  };
+    id: 'it-solutions',
+    title: '🏙️ Enterprise IT Solutions',
+    description: 'Advanced IT infrastructure and enterprise solutions',
+    icon: Shield,
+    services: innovativeITSolutions,
+    color: 'from-green-50o0 to-emerald-50o0'
+  },
   {
-    id: 'ai-solutions';
-    title: '🧠 AI & Machine Learning';
-    description: 'Cutting-edge AI solutions for business transformation';
-    icon: Brain;
-    services: innovativeAISolutions;
-    color: 'from-pink-50o0 to-rose-50o0';
-  };
+    id: 'ai-solutions',
+    title: '🧠 AI & Machine Learning',
+    description: 'Cutting-edge AI solutions for business transformation',
+    icon: Brain,
+    services: innovativeAISolutions,
+    color: 'from-pink-50o0 to-rose-50o0'
+  },
 ],
 export default function InnovativePricing20o34() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedTier, setSelectedTier] = useState('professional'),
   const allServices = [
-    ...innovativeMicroSaasSolutions;
-    ...innovativeITSolutions;
-    ...innovativeAISolutions;
+    ...innovativeMicroSaasSolutions,
+    ...innovativeITSolutions,
+    ...innovativeAISolutions,
   ],
   const filteredServices =,
     selectedCategory === 'all',

@@ -1,19 +1,19 @@
 import { motion } from 'framer-motion',
 import {
-  Star;
-  Rocket;
-  Sparkles;
-  Brain;
-  Atom;
-  Cpu;
-  Building;
-  Calculator;
-  DollarSign;
-  Grid;
-  ArrowRight;
-  Play;
-  Target;
-  Zap;
+  Star,
+  Rocket,
+  Sparkles,
+  Brain,
+  Atom,
+  Cpu,
+  Building,
+  Calculator,
+  DollarSign,
+  Grid,
+  ArrowRight,
+  Play,
+  Target,
+  Zap,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function Showcase() {
@@ -57,31 +57,31 @@ export default function Showcase() {
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Star className='w-12 h-12 text-yellow-40o0' />;
-                  title: '20o25 Services Showcase';
+                  icon: <Star className='w-12 h-12 text-yellow-40o0' />,
+                  title: '20o25 Services Showcase',
                   description:,
-                    'Current service portfolio with the latest innovations';
-                  href: '/services';
-                  featured: true;
-                  badge: 'Current';
-                };
+                    'Current service portfolio with the latest innovations',
+                  href: '/services',
+                  featured: true,
+                  badge: 'Current'
+                },
                 {
-                  icon: <Sparkles className='w-12 h-12 text-purple-40o0' />;
-                  title: '20o37 Innovative Services';
+                  icon: <Sparkles className='w-12 h-12 text-purple-40o0' />,
+                  title: '20o37 Innovative Services',
                   description:,
-                    'Future technology preview and upcoming solutions';
-                  href: '/20o37-innovative-services-showcase';
-                  featured: true;
-                  badge: 'Future';
-                };
+                    'Future technology preview and upcoming solutions',
+                  href: '/20o37-innovative-services-showcase',
+                  featured: true,
+                  badge: 'Future'
+                },
                 {
-                  icon: <DollarSign className='w-12 h-12 text-green-40o0' />;
-                  title: 'Pricing Plans';
-                  description: 'Service pricing and comprehensive packages';
-                  href: '/pricing';
-                  featured: true;
-                  badge: 'Pricing';
-                };
+                  icon: <DollarSign className='w-12 h-12 text-green-40o0' />,
+                  title: 'Pricing Plans',
+                  description: 'Service pricing and comprehensive packages',
+                  href: '/pricing',
+                  featured: true,
+                  badge: 'Pricing'
+                },
               ].map((showcase, index) => (
                 <motion.div,
                   key={index}
@@ -134,77 +134,71 @@ export default function Showcase() {
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'AI & Consciousness';
+                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'AI & Consciousness',
                   description:,
-                    'Advanced AI consciousness solutions and emotional intelligence platforms';
-                  href: '/ai-services';
+                    'Advanced AI consciousness solutions and emotional intelligence platforms',
+                  href: '/ai-services',
                   services: [
-                    'AI Consciousness Evolution';
-                    'Emotional Intelligence';
-                    'Autonomous Systems';
-                  ];
-                };
+                    'AI Consciousness EvolutionEmotional Intelligence',
+                    'Autonomous Systems',
+                  ]
+                },
                 {
-                  icon: <Atom className='w-12 h-12 text-blue-40o0' />;
-                  title: 'Quantum Technology';
+                  icon: <Atom className='w-12 h-12 text-blue-40o0' />,
+                  title: 'Quantum Technology',
                   description:,
-                    'Breakthrough quantum computing and quantum-secure solutions';
-                  href: '/quantum-services';
+                    'Breakthrough quantum computing and quantum-secure solutions',
+                  href: '/quantum-services',
                   services: [
-                    'Quantum Computing';
-                    'Quantum Security';
-                    'Quantum Networks';
-                  ];
-                };
+                    'Quantum ComputingQuantum Security',
+                    'Quantum Networks',
+                  ]
+                },
                 {
-                  icon: <Cpu className='w-12 h-12 text-purple-40o0' />;
-                  title: 'Autonomous Systems';
+                  icon: <Cpu className='w-12 h-12 text-purple-40o0' />,
+                  title: 'Autonomous Systems',
                   description:,
-                    'Self-operating intelligent systems and automation platforms';
-                  href: '/autonomous-systems';
+                    'Self-operating intelligent systems and automation platforms',
+                  href: '/autonomous-systems',
                   services: [
-                    'Business Automation';
-                    'DevOps Automation';
-                    'Content Generation';
-                  ];
-                };
+                    'Business AutomationDevOps Automation',
+                    'Content Generation',
+                  ]
+                },
                 {
-                  icon: <Rocket className='w-12 h-12 text-green-40o0' />;
-                  title: 'Micro SAAS';
+                  icon: <Rocket className='w-12 h-12 text-green-40o0' />,
+                  title: 'Micro SAAS',
                   description:,
-                    'Specialized business solutions and innovative applications';
-                  href: '/micro-saas';
+                    'Specialized business solutions and innovative applications',
+                  href: '/micro-saas',
                   services: [
-                    'Business Intelligence';
-                    'HR Analytics';
-                    'Supply Chain';
-                  ];
-                };
+                    'Business IntelligenceHR Analytics',
+                    'Supply Chain',
+                  ]
+                },
                 {
-                  icon: <Building className='w-12 h-12 text-yellow-40o0' />;
-                  title: 'Enterprise IT';
+                  icon: <Building className='w-12 h-12 text-yellow-40o0' />,
+                  title: 'Enterprise IT',
                   description:,
-                    'Corporate infrastructure and enterprise-grade solutions';
-                  href: '/enterprise-it';
+                    'Corporate infrastructure and enterprise-grade solutions',
+                  href: '/enterprise-it',
                   services: [
-                    'Cloud Infrastructure';
-                    'Security Platforms';
-                    'Data Management';
-                  ];
-                };
+                    'Cloud InfrastructureSecurity Platforms',
+                    'Data Management',
+                  ]
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-pink-40o0' />;
-                  title: 'Industry Solutions';
+                  icon: <Target className='w-12 h-12 text-pink-40o0' />,
+                  title: 'Industry Solutions',
                   description:,
-                    'Specialized solutions for healthcare, finance, and manufacturing';
-                  href: '/solutions';
+                    'Specialized solutions for healthcare, finance, and manufacturing',
+                  href: '/solutions',
                   services: [
-                    'Healthcare AI';
-                    'Financial Technology';
-                    'Manufacturing AI';
-                  ];
-                };
+                    'Healthcare AIFinancial Technology',
+                    'Manufacturing AI',
+                  ]
+                },
               ].map((category, index) => (
                 <motion.div,
                   key={index}
@@ -265,21 +259,21 @@ export default function Showcase() {
             <div className='grid md: grid-cols-2 gap-8'>,
               {[
                 {
-                  icon: <Play className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'AI Consciousness Simulator';
+                  icon: <Play className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'AI Consciousness Simulator',
                   description:,
-                    'Experience our AI consciousness evolution platform in action';
-                  status: 'Live Demo Available';
-                  href: '/ai-consciousness-evolution-platform';
-                };
+                    'Experience our AI consciousness evolution platform in action',
+                  status: 'Live Demo Available',
+                  href: '/ai-consciousness-evolution-platform'
+                },
                 {
-                  icon: <Zap className='w-12 h-12 text-blue-40o0' />;
-                  title: 'Quantum Security Demo';
+                  icon: <Zap className='w-12 h-12 text-blue-40o0' />,
+                  title: 'Quantum Security Demo',
                   description:,
-                    'See quantum encryption and security in real-time';
-                  status: 'Coming Soon';
-                  href: '/quantum-cybersecurity-sentinel';
-                };
+                    'See quantum encryption and security in real-time',
+                  status: 'Coming Soon',
+                  href: '/quantum-cybersecurity-sentinel'
+                },
               ].map((demo, index) => (
                 <motion.div,
                   key={index}

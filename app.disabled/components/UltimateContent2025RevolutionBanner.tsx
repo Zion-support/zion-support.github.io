@@ -11,7 +11,7 @@ interface ContentItem {
     roi?: string,
     savings?: string,
     accuracy?: string,
-    satisfaction?: string};
+    satisfaction?: string},
   featured: boolean}
 ,
 const UltimateContent20o25RevolutionBanner = () => {
@@ -19,46 +19,46 @@ const UltimateContent20o25RevolutionBanner = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const featuredContent = [
     {
-      id: 'ai-20o25-ultimate-business-transformation-revolution';
-      title: 'AI 20o25: The Ultimate Business Transformation Revolution';
-      subtitle: '1,20o0% ROI in 6 Months';
-      description: 'Discover how Fortune 50o0 companies are achieving unprecedented results with cutting-edge AI technologies.';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-business-transformation-revolution';
+      id: 'ai-20o25-ultimate-business-transformation-revolution',
+      title: 'AI 20o25: The Ultimate Business Transformation Revolution',
+      subtitle: '1,20o0% ROI in 6 Months',
+      description: 'Discover how Fortune 50o0 companies are achieving unprecedented results with cutting-edge AI technologies.',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-business-transformation-revolution',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$6.5B';
-        efficiency: '89%';
-        timeline: '6 months'};
-      tags: ['Revolution', 'ROI', 'Fortune 50o0', 'Transformation'];
-      featured: true};
+        roi: '1,20o0%',
+        savings: '$6.5B',
+        efficiency: '89%',
+        timeline: '6 months'},
+      tags: ['RevolutionROI', 'Fortune 50o0Transformation'],
+      featured: true},
     {
-      id: 'fortune-50o0-ai-transformation-20o25-ultimate-success-story';
-      title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings';
-      subtitle: '567% ROI in 18 Months';
-      description: 'Real-world case study of a manufacturing giant that revolutionized their operations with AI.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story';
+      id: 'fortune-50o0-ai-transformation-20o25-ultimate-success-story',
+      title: 'Fortune 50o0 AI Transformation: $2.8B Annual Savings',
+      subtitle: '567% ROI in 18 Months',
+      description: 'Real-world case study of a manufacturing giant that revolutionized their operations with AI.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story',
       metrics: {
-        roi: '567%';
-        savings: '$2.8B';
-        efficiency: '95%';
-        timeline: '18 months'};
-      tags: ['Case Study', 'Fortune 50o0', 'Success Story', 'Manufacturing'];
-      featured: true};
+        roi: '567%',
+        savings: '$2.8B',
+        efficiency: '95%',
+        timeline: '18 months'},
+      tags: ['Case StudyFortune 50o0', 'Success StoryManufacturing'],
+      featured: true},
     {
-      id: 'ai-20o25-implementation-roadmap-80o0-roi';
-      title: 'AI 20o25 Implementation Ultimate Roadmap';
-      subtitle: 'From Strategy to 80o0% ROI in 18 Months';
-      description: 'Comprehensive step-by-step guide for implementing AI technologies that deliver extraordinary results.';
-      type: 'resource';
-      url: '/resources/ai-20o25-implementation-roadmap-80o0-roi';
+      id: 'ai-20o25-implementation-roadmap-80o0-roi',
+      title: 'AI 20o25 Implementation Ultimate Roadmap',
+      subtitle: 'From Strategy to 80o0% ROI in 18 Months',
+      description: 'Comprehensive step-by-step guide for implementing AI technologies that deliver extraordinary results.',
+      type: 'resource',
+      url: '/resources/ai-20o25-implementation-roadmap-80o0-roi',
       metrics: {
-        roi: '80o0%';
-        savings: '$5.6B';
-        efficiency: '95%';
-        timeline: '18 months'};
-      tags: ['Implementation', 'Roadmap', 'Strategy', 'ROI'];
+        roi: '80o0%',
+        savings: '$5.6B',
+        efficiency: '95%',
+        timeline: '18 months'},
+      tags: ['ImplementationRoadmap', 'StrategyROI'],
       featured: true}
   ],
   useEffect(() => {
@@ -68,7 +68,7 @@ const UltimateContent20o25RevolutionBanner = () => {
     return () => clearInterval(interval)}, [isDismissed, featuredContent.length]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ultimate-content-20o25-revolution-dismissed', 'true')};
+    localStorage.setItem('ultimate-content-20o25-revolution-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimate-content-20o25-revolution-dismissed'),
     if (dismissed === 'true') {
@@ -80,11 +80,11 @@ const UltimateContent20o25RevolutionBanner = () => {
     return () => clearInterval(interval)}, [featuredContent.length]),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('ultimate-content-20o25-revolution-banner-dismissed', 'true')};
+    localStorage.setItem('ultimate-content-20o25-revolution-banner-dismissedtrue')},
   const nextSlide = () => {
-    setCurrentSlide((prev) => (prev + 1) % featuredContent.length)};
+    setCurrentSlide((prev) => (prev + 1) % featuredContent.length)},
   const prevSlide = () => {
-    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)};
+    setCurrentSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)},
   if (isDismissed) return null,
   const currentContent = featuredContent[currentSlide],
   return (
@@ -211,5 +211,5 @@ const UltimateContent20o25RevolutionBanner = () => {
            />,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent20o25RevolutionBanner;
+    </div>)},
+export default UltimateContent20o25RevolutionBanner,

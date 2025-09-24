@@ -26,7 +26,7 @@ export function MyApplications() {
         return <Badge className="bg-red-100 text-red-800">Rejected</Badge>,
       default:,
         return <Badge variant="outline">{status}</Badge>}
-  };
+  },
   if (isLoading) {
     return (
       <div className="flex justify-center items-center p-8">,

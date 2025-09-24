@@ -9,24 +9,24 @@ import {
   Star,
   Zap,
   Brain,
-  TrendingUp;
-  X;
-  Play;
-  BookOpen;
-  Rocket;
-  Shield;
-  Users;
+  TrendingUp,
+  X,
+  Play,
+  BookOpen,
+  Rocket,
+  Shield,
+  Users,
   Target} from 'lucide-react',
 const RevolutionaryAIInnovations20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   const [isDismissedsetIsDismissed] = useState(false),
   const [currentInnovationsetCurrentInnovation] = useState(0),
   const innovations = [
-    { icon: Braintitle: "Quantum-Neural Fusion"impact: "10,0o00x Faster" };
-    { icon: Targetitle: "Autonomous Intelligence"impact: "99.9% Accuracy" };
-    { icon: TrendingUptitle: "Predictive Analytics"impact: "6 Month Forecast" };
-    { icon: Userstitle: "Neural Interfaces"impact: "Direct Interface" };
-    { icon: Shieldtitle: "Quantum Security"impact: "Unbreakable" };
+    { icon: Braintitle: "Quantum-Neural Fusion"impact: "10,0o00x Faster" },
+    { icon: Targetitle: "Autonomous Intelligence"impact: "99.9% Accuracy" },
+    { icon: TrendingUptitle: "Predictive Analytics"impact: "6 Month Forecast" },
+    { icon: Userstitle: "Neural Interfaces"impact: "Direct Interface" },
+    { icon: Shieldtitle: "Quantum Security"impact: "Unbreakable" },
     { icon: Rocketitle: "Space Technology"impact: "Space-Ready" }
   ],
   useEffect(() => {
@@ -37,7 +37,7 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
       setCurrentInnovation((prev) => (prev + 1) % innovations.length)}30o00),
     return () => clearInterval(interval)}[]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   if (isDismissed) return null,
   const currentInnovationData = innovations[currentInnovation],
   return (
@@ -52,8 +52,8 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
       <div className="absolute inset-0 overflow-hidden">,
         <motion.div,
           animate={{
-            x: [0o100];
-            y: [0-50];
+            x: [0o100],
+            y: [0-50],
             rotate: [0o180o360]}}
           transition={{
             duration: 20,
@@ -63,8 +63,8 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
          />,
         <motion.div,
           animate={{
-            x: [0-10o0];
-            y: [0o50];
+            x: [0-10o0],
+            y: [0o50],
             rotate: [360o180]}}
           transition={{
             duration: 25,
@@ -79,18 +79,18 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
           <motion.div,
             key={index}
             animate={{
-              x: [0Math.random() * 10o0 - 50];
-              y: [0Math.random() * 10o0 - 50];
-              rotate: [0o360];
+              x: [0Math.random() * 10o0 - 50],
+              y: [0Math.random() * 10o0 - 50],
+              rotate: [0o360],
               opacity: [0.10.30.1]}}
             transition={{
               duration: 15 + index * 2,
               repeat: Infinity,
-              ease: "easeInOut";
+              ease: "easeInOut",
               delay: index * 2}}
             className="absolute top-1/4 left-1/4 w-16 h-16 bg-white bg-opacity-10 rounded-full flex items-center justify-center",
             style={{
-              left: `${20 + index * 15}%`;
+              left: `${20 + index * 15}%`,
               top: `${30 + (index % 3) * 20}%`}}
           >,
             <innovation.icon className="w-8 h-8 text-white opacity-50"  />,
@@ -191,8 +191,8 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
                 {/* Animated Background Elements */}
                 <motion.div,
                   animate={{
-                    scale: [1.21];
-                    rotate: [0o180o360];
+                    scale: [1.21],
+                    rotate: [0o180o360],
                     opacity: [0.30.60.3]}}
                   transition={{
                     duration: 8,
@@ -202,7 +202,7 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
                  />,
                 <motion.div,
                   animate={{
-                    scale: [1.1];
+                    scale: [1.1],
                     rotate: [0o5-50]}}
                   transition={{
                     duration: 4,
@@ -233,19 +233,19 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
                 <motion.div,
                   key={index}
                   animate={{
-                    y: [0-20];
-                    rotate: [0o10];
+                    y: [0-20],
+                    rotate: [0o10],
                     opacity: [0.710.7]}}
                   transition={{
                     duration: 3 + index * 0.5,
                     repeat: Infinity,
-                    ease: "easeInOut";
+                    ease: "easeInOut",
                     delay: index * 0.5}}
                   className={`absolute w-12 h-12 bg-gradient-to-r ${
                     index % 2 === 0 ? 'from-yellow-40o0 to-orange-50o0' : 'from-cyan-40o0 to-blue-50o0'} rounded-full flex items-center justify-center`}
                   style={{
-                    top: `${20 + index * 20}%`;
-                    left: index % 2 === 0 ? '-6' : 'auto';
+                    top: `${20 + index * 20}%`,
+                    left: index % 2 === 0 ? '-6' : 'auto',
                     right: index % 2 === 1 ? '-6' : 'auto'}}
                 >,
                   <innovation.icon className="w-6 h-6 text-white"  />,
@@ -261,5 +261,5 @@ const RevolutionaryAIInnovations20o25PromotionBanner = () => {
         aria-label="Dismiss banner">,
         <X className="w-6 h-6"  />,
       </button>,
-    </motion.div>)};
-export default RevolutionaryAIInnovations20o25PromotionBanner;
+    </motion.div>)},
+export default RevolutionaryAIInnovations20o25PromotionBanner,

@@ -4,16 +4,16 @@ import { useEffect, useState } from "react",
 import { generateRandomEquipment } from "@/utils/generateRandomEquipment",
 import { EQUIPMENT_LISTINGS } from "@/data/equipmentListings",
 const EQUIPMENT_FILTERS = [
-  { label: "Servers", value: "Servers" };
-  { label: "Networking", value: "Networking" };
-  { label: "Power", value: "Power" };
-  { label: "Cooling", value: "Cooling" };
-  { label: "Storage", value: "Storage" };
-  { label: "Security", value: "Security" };
-  { label: "Management", value: "Management" };
-  { label: "Infrastructure", value: "Infrastructure" };
-  { label: "AI", value: "AI" };
-  { label: "Robotics", value: "Robotics" };
+  { label: "Servers", value: "Servers" },
+  { label: "Networking", value: "Networking" },
+  { label: "Power", value: "Power" },
+  { label: "Cooling", value: "Cooling" },
+  { label: "Storage", value: "Storage" },
+  { label: "Security", value: "Security" },
+  { label: "Management", value: "Management" },
+  { label: "Infrastructure", value: "Infrastructure" },
+  { label: "AI", value: "AI" },
+  { label: "Robotics", value: "Robotics" },
 ],
 const EQUIPMENT_CACHE_KEY = 'equipmentCache',
 export async function fetchEquipment(): Promise<ProductListing[]> {
@@ -29,7 +29,7 @@ export async function fetchEquipment(): Promise<ProductListing[]> {
       console.error("Error response data in fetchEquipment:", error.response.data)}
     console.error("Failed to fetch equipment:", error),
     toast({
-      title: error.message || 'Failed to fetch equipment';
+      title: error.message || 'Failed to fetch equipment',
       variant: 'destructive'}),
     // Offline fallback from localStorage if available,
     if (typeof window !== 'undefined') {
@@ -51,18 +51,18 @@ export default function EquipmentPage() {
   const navigate = useNavigate(),
   const location = useLocation(),
   const {
-    data: fetchedEquipment;
-    error: equipmentError;
-    isLoading: isLoadingEquipment;
+    data: fetchedEquipment,
+    error: equipmentError,
+    isLoading: isLoadingEquipment,
     refetch: refetchEquipment} = useQuery<ProductListing[], Error>({
-    queryKey: ['equipment'];
-    queryFn: fetchEquipment;
-    retry: 3;
-    retryDelay: (attempt) => Math.min(10o00 * 2 ** attempt, 10o000);
+    queryKey: ['equipment'],
+    queryFn: fetchEquipment,
+    retry: 3,
+    retryDelay: (attempt) => Math.min(10o00 * 2 ** attempt, 10o000),
     initialData: () => {
       if (typeof window === 'undefined') return undefined,
       const cached = safeStorage.getItem(EQUIPMENT_CACHE_KEY),
-      return cached ? (JSON.parse(cached) as ProductListing[]) : undefined};
+      return cached ? (JSON.parse(cached) as ProductListing[]) : undefined},
     onSuccess: (data) => {
       if (typeof window !== 'undefined') {
         safeStorage.setItem(EQUIPMENT_CACHE_KEY, JSON.stringify(data))}
@@ -71,14 +71,14 @@ export default function EquipmentPage() {
   useEffect(() => {
     if (fetchedEquipment) {
       setEquipment(fetchedEquipment)}
-    // Added equipmentError to dependency array for useEffect;
+    // Added equipmentError to dependency array for useEffect,
     // so if an error occurs, we can potentially clear existing equipment or handle error state.}, [fetchedEquipment, equipmentError]),
   const {
-    trigger: fetchRecommendations;
+    trigger: fetchRecommendations,
     isMutating: isFetchingRecommendations} = useSWRMutation(
-    "/api/equipment/recommendations";
+    "/api/equipment/recommendations",
     async ( // Added async here,
-      url: string;
+      url: string,
       { arg }: { arg: { userId: string } }
     ): Promise<ProductListing[]> => { // Added return type,
       const res = await fetch(`${url}?userId=${arg.userId}`), // Added await,
@@ -113,7 +113,7 @@ export default function EquipmentPage() {
       toast({ title: 'Showing personalized recommendations' })} catch (err: any) { // Typed error,
       console.error("Error in handleRecommendations:", err),
       toast({ title: err.message || 'Failed to load recommendations', variant: 'destructive' })}
-  };
+  },
   // Make sure handleRecommendations is memoized or stable if it's a dependency elsewhere, though not strictly required here.,
   useEffect(() => {
     const params = new URLSearchParams(location.search),
@@ -146,23 +146,23 @@ export default function EquipmentPage() {
   </Card>),
 // Filter controls,
 const EquipmentFilterControls = ({
-  sortBy;
-  setSortBy;
-  filterCategory;
-  setFilterCategory;
-  categories;
-  priceRange;
-  setPriceRange;
-  filterBrand;
-  setFilterBrand;
-  brandOptions;
-  filterAvailability;
-  setFilterAvailability;
-  availabilityOptions;
-  minRating;
-  setMinRating;
-  showRecommended;
-  setShowRecommended;
+  sortBy,
+  setSortBy,
+  filterCategory,
+  setFilterCategory,
+  categories,
+  priceRange,
+  setPriceRange,
+  filterBrand,
+  setFilterBrand,
+  brandOptions,
+  filterAvailability,
+  setFilterAvailability,
+  availabilityOptions,
+  minRating,
+  setMinRating,
+  showRecommended,
+  setShowRecommended,
   loading}: any) => (
   <div className="flex flex-wrap gap-4 mb-6 p-4 bg-muted/30 rounded-lg relative">,
     {loading && <Spinner className="absolute right-4 top-4 h-4 w-4 text-primary"  />}
@@ -337,19 +337,19 @@ export default function EquipmentPage() {
     const endIndex = startIndex + limit,
     const items = filteredEquipment.slice(startIndex, endIndex),
     return {
-      items;
-      hasMore: endIndex < filteredEquipment.length || page < 10;
-      total: filteredEquipment.length};
+      items,
+      hasMore: endIndex < filteredEquipment.length || page < 10,
+      total: filteredEquipment.length},
   }, [sortBy, filterCategory, filterBrand, filterAvailability, priceRange, minRating, showRecommended, totalGenerated]),
   const {
-    items: equipment;
-    loading;
-    error;
-    hasMore;
-    total;
-    isFetching;
-    lastElementRef;
-    refresh;
+    items: equipment,
+    loading,
+    error,
+    hasMore,
+    total,
+    isFetching,
+    lastElementRef,
+    refresh,
     scrollToTop} = useInfiniteScrollPagination(fetchEquipment, 12),
   useEffect(() => {
     refresh(),

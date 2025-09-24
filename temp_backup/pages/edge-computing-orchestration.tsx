@@ -1,33 +1,33 @@
-import React from 'react';
+import React from 'react',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Cpu;
-  Network;
-  Server;
-  Database;
-  Zap;
-  Target;
-  Brain;
-  Users;
-  TrendingUp;
-  BarChart3;
-  Code;
-  Globe;
-  Lock;
-  Settings;
-  Star;
-  ArrowRight;
-  CheckCircle;
-  Clock;
-  Activity;
-  Wifi;
-  Smartphone;
-  Car;
-  Factory;
-  Shield;
-  Building;
-  Heart;
+  Cpu,
+  Network,
+  Server,
+  Database,
+  Zap,
+  Target,
+  Brain,
+  Users,
+  TrendingUp,
+  BarChart3,
+  Code,
+  Globe,
+  Lock,
+  Settings,
+  Star,
+  ArrowRight,
+  CheckCircle,
+  Clock,
+  Activity,
+  Wifi,
+  Smartphone,
+  Car,
+  Factory,
+  Shield,
+  Building,
+  Heart,
 } from 'lucide-react',
 export default function EdgeOrchestrationPage() {
   return (
@@ -51,14 +51,11 @@ export default function EdgeOrchestrationPage() {
         implementationWeeks='4-8 weeks',
         roiNote='Reduce latency and bandwidth costs while improving reliability',
         features={[
-          'Fleet provisioning and zero-touch onboarding';
-          'Policy-driven placement and rollouts';
-          'Local-first processing with cloud sync';
-          'Resilient messaging and data replication';
-          'Observability and remote diagnostics';
-          'Security with TPM/attestation and secrets';
+          'Fleet provisioning and zero-touch onboardingPolicy-driven placement and rollouts',
+          'Local-first processing with cloud syncResilient messaging and data replication',
+          'Observability and remote diagnosticsSecurity with TPM/attestation and secrets',
         ]}
-        industries={['Retail', 'Manufacturing', 'Energy', 'Telco']}
+        industries={['RetailManufacturing', 'EnergyTelco']}
         url='https: //ziontechgroup.com/edge-computing-orchestration',
       />,
     </>)}

@@ -12,12 +12,12 @@ export default function SOC2ComplianceAutomationPage() {
 					</p>,
 					<div className="mt-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
 						{[
-							{ title: 'Controls 'Library', 'desc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.' };
-							{ title: 'Evidence 'Automation', 'desc: 'Pull evidence from cloudCIticketingsecurity tools.' };
-							{ title: 'Vendor 'Risk', 'desc: 'Automated questionnairestrackingand remediation workflows.' };
-							{ title: 'Asset 'Inventory', 'desc: 'Infrastructure and device inventory with configuration checks.' };
-							{ title: 'Workflow & 'Tasks', 'desc: 'Assign remediation tasksSLAsand approvals.' };
-							{ title: 'Audit 'Room', 'desc: 'Share evidence securely with auditors, immutable logs.' }
+							{ title: 'Controls 'Librarydesc: 'Mapped to SOC 2 Trust Service Criteria with policy templates.' },
+							{ title: 'Evidence 'Automationdesc: 'Pull evidence from cloudCIticketingsecurity tools.' },
+							{ title: 'Vendor 'Riskdesc: 'Automated questionnairestrackingand remediation workflows.' },
+							{ title: 'Asset 'Inventorydesc: 'Infrastructure and device inventory with configuration checks.' },
+							{ title: 'Workflow & 'Tasksdesc: 'Assign remediation tasksSLAsand approvals.' },
+							{ title: 'Audit 'Roomdesc: 'Share evidence securely with auditors, immutable logs.' }
 						].map((f) => (
 							<div key={f.title} className="rounded-xl border border-white/10 bg-white/5 p-6 backdrop-blur">,
 								<h3 className="text-lg font-semibold text-white">{f.title}</h3>,

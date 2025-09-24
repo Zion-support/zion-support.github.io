@@ -1,5 +1,5 @@
 "use client",
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
@@ -9,14 +9,14 @@ import {
   TrendingUp,
   DollarSign,
   Users,
-  Star;
-  Check;
-  X;
-  ArrowRight;
-  ExternalLink;
-  Zap;
-  Brain;
-  Globe;
+  Star,
+  Check,
+  X,
+  ArrowRight,
+  ExternalLink,
+  Zap,
+  Brain,
+  Globe,
   Rocket} from 'lucide-react',
 export default function ToolComparisonPage() {
   const [searchTermsetSearchTerm] = React.useState(''),
@@ -25,117 +25,117 @@ export default function ToolComparisonPage() {
   const allTools = [
     // AI Tools,
     {
-      name: 'ChatGPT';
-      category: 'AI Assistant';
-      pricing: 'Free - $20/month';
-      rating: 4.8;
-      users: '100M+';
-      bestFor: 'Content creatorsdevelopersresearchers';
-      pros: ['Powerful 'capabilities', 'Easy to 'use', 'Regular 'updates', 'Good free tier'];
-      cons: ['Sometimes 'inaccurate', 'Limited 'context', 'Privacy concerns'];
-      website: 'https://chat.openai.com';
-      icon: <Brain className="w-6 h-6" />;
-      color: 'text-green-400'};
+      name: 'ChatGPT',
+      category: 'AI Assistant',
+      pricing: 'Free - $20/month',
+      rating: 4.8,
+      users: '100M+',
+      bestFor: 'Content creatorsdevelopersresearchers',
+      pros: ['Powerful 'capabilitiesEasy to 'use', 'Regular 'updatesGood free tier'],
+      cons: ['Sometimes 'inaccurateLimited 'context', 'Privacy concerns'],
+      website: 'https://chat.openai.com',
+      icon: <Brain className="w-6 h-6" />,
+      color: 'text-green-400'},
     {
-      name: 'Midjourney';
-      category: 'AI Art';
-      pricing: '$10 - $30/month';
-      rating: 4.7;
-      users: '1M+';
-      bestFor: 'Designersmarketerscontent creators';
-      pros: ['High-quality 'output', 'Creative 'control', 'Commercial 'rights', 'Active community'];
-      cons: ['Discord-only 'interface', 'Limited 'customization', 'Monthly subscription'];
-      website: 'https://midjourney.com';
-      icon: <Zap className="w-6 h-6" />;
-      color: 'text-purple-400'};
+      name: 'Midjourney',
+      category: 'AI Art',
+      pricing: '$10 - $30/month',
+      rating: 4.7,
+      users: '1M+',
+      bestFor: 'Designersmarketerscontent creators',
+      pros: ['High-quality 'outputCreative 'control', 'Commercial 'rightsActive community'],
+      cons: ['Discord-only 'interfaceLimited 'customization', 'Monthly subscription'],
+      website: 'https://midjourney.com',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'text-purple-400'},
     {
-      name: 'Jasper';
-      category: 'AI Writing';
-      pricing: '$39 - $125/month';
-      rating: 4.6;
-      users: '100K+';
-      bestFor: 'Marketing teamscontent creatorsbusinesses';
-      pros: ['Specialized for 'marketing', 'Brand voice 'training', 'SEO 'optimization', 'Team features'];
-      cons: [', 'Expensive', 'Limited free 'trial', 'Can be repetitive'];
-      website: 'https://jasper.ai';
-      icon: <Brain className="w-6 h-6" />;
-      color: 'text-blue-400'};
+      name: 'Jasper',
+      category: 'AI Writing',
+      pricing: '$39 - $125/month',
+      rating: 4.6,
+      users: '100K+',
+      bestFor: 'Marketing teamscontent creatorsbusinesses',
+      pros: ['Specialized for 'marketingBrand voice 'training', 'SEO 'optimizationTeam features'],
+      cons: [', 'ExpensiveLimited free 'trial', 'Can be repetitive'],
+      website: 'https://jasper.ai',
+      icon: <Brain className="w-6 h-6" />,
+      color: 'text-blue-400'},
     // SaaS Tools,
     {
-      name: 'Zapier';
-      category: 'Automation';
-      pricing: 'Free - $19.99/month';
-      rating: 4.8;
-      users: '2M+';
-      bestFor: 'Businesses looking to automate workflows';
-      pros: ['Easy to 'use', 'Extensive 'integrations', 'Reliable'Great support'];
-      cons: ['Can get 'expensive', 'Limited customization'];
-      website: 'https://zapier.com';
-      icon: <Zap className="w-6 h-6" />;
-      color: 'text-orange-400'};
+      name: 'Zapier',
+      category: 'Automation',
+      pricing: 'Free - $19.99/month',
+      rating: 4.8,
+      users: '2M+',
+      bestFor: 'Businesses looking to automate workflows',
+      pros: ['Easy to 'useExtensive 'integrations', 'Reliable'Great support'],
+      cons: ['Can get 'expensiveLimited customization'],
+      website: 'https://zapier.com',
+      icon: <Zap className="w-6 h-6" />,
+      color: 'text-orange-400'},
     {
-      name: 'Notion';
-      category: 'Productivity';
-      pricing: 'Free - $8/month';
-      rating: 4.7;
-      users: '20M+';
-      bestFor: 'Teams that need flexible workspace';
-      pros: ['Highly 'flexible', 'Beautiful 'interface', 'Great 'templates', 'Free tier'];
-      cons: ['Learning 'curve', 'Limited offline 'access', 'Can be overwhelming'];
-      website: 'https://notion.so';
-      icon: <Globe className="w-6 h-6" />;
-      color: 'text-gray-400'};
+      name: 'Notion',
+      category: 'Productivity',
+      pricing: 'Free - $8/month',
+      rating: 4.7,
+      users: '20M+',
+      bestFor: 'Teams that need flexible workspace',
+      pros: ['Highly 'flexibleBeautiful 'interface', 'Great 'templatesFree tier'],
+      cons: ['Learning 'curveLimited offline 'access', 'Can be overwhelming'],
+      website: 'https://notion.so',
+      icon: <Globe className="w-6 h-6" />,
+      color: 'text-gray-400'},
     {
-      name: 'Stripe';
-      category: 'Payments';
-      pricing: '2.9% + 30¢ per transaction';
-      rating: 4.9;
-      users: '1M+';
-      bestFor: 'Online businessesSaaS companiese-commerce';
-      pros: ['Developer-'friendly', 'Global 'reach', 'Excellent 'docs', 'Reliable'];
-      cons: ['Higher fees than some 'alternatives', 'Complex for 'beginners', 'Strict requirements'];
-      website: 'https://stripe.com';
-      icon: <DollarSign className="w-6 h-6" />;
-      color: 'text-blue-400'};
+      name: 'Stripe',
+      category: 'Payments',
+      pricing: '2.9% + 30¢ per transaction',
+      rating: 4.9,
+      users: '1M+',
+      bestFor: 'Online businessesSaaS companiese-commerce',
+      pros: ['Developer-'friendlyGlobal 'reach', 'Excellent 'docsReliable'],
+      cons: ['Higher fees than some 'alternativesComplex for 'beginners', 'Strict requirements'],
+      website: 'https://stripe.com',
+      icon: <DollarSign className="w-6 h-6" />,
+      color: 'text-blue-400'},
     // Startup Tools,
     {
-      name: 'HubSpot';
-      category: 'Marketing & Sales';
-      pricing: 'Free - $45/month';
-      rating: 4.7;
-      users: '135K+';
-      bestFor: 'B2B startupsSaaS companiesmarketing teams';
-      pros: ['Free 'tier', 'All-in-one 'solution', 'Great for 'beginners', 'Excellent support'];
-      cons: ['Can get 'expensive', 'Complex for small 'teams', 'Limited customization'];
-      website: 'https://hubspot.com';
-      icon: <TrendingUp className="w-6 h-6" />;
-      color: 'text-orange-400'};
+      name: 'HubSpot',
+      category: 'Marketing & Sales',
+      pricing: 'Free - $45/month',
+      rating: 4.7,
+      users: '135K+',
+      bestFor: 'B2B startupsSaaS companiesmarketing teams',
+      pros: ['Free 'tierAll-in-one 'solution', 'Great for 'beginnersExcellent support'],
+      cons: ['Can get 'expensiveComplex for small 'teams', 'Limited customization'],
+      website: 'https://hubspot.com',
+      icon: <TrendingUp className="w-6 h-6" />,
+      color: 'text-orange-400'},
     {
-      name: 'Mailchimp';
-      category: 'Email Marketing';
-      pricing: 'Free - $59/month';
-      rating: 4.5;
-      users: '12M+';
-      bestFor: 'E-commercecontent creatorsmall businesses';
-      pros: ['Free 'tier', 'Easy to 'use', 'Good 'templates', 'Affordable'];
-      cons: ['Limited free 'features', 'Basic 'automation', 'Can be expensive'];
-      website: 'https://mailchimp.com';
-      icon: <Users className="w-6 h-6" />;
-      color: 'text-yellow-400'};
+      name: 'Mailchimp',
+      category: 'Email Marketing',
+      pricing: 'Free - $59/month',
+      rating: 4.5,
+      users: '12M+',
+      bestFor: 'E-commercecontent creatorsmall businesses',
+      pros: ['Free 'tierEasy to 'use', 'Good 'templatesAffordable'],
+      cons: ['Limited free 'featuresBasic 'automation', 'Can be expensive'],
+      website: 'https://mailchimp.com',
+      icon: <Users className="w-6 h-6" />,
+      color: 'text-yellow-400'},
     {
-      name: 'Calendly';
-      category: 'Productivity';
-      pricing: 'Free - $12/month';
-      rating: 4.8;
-      users: '10M+';
-      bestFor: 'Sales teamsconsultantsremote teams';
-      pros: ['Free 'tier', 'Easy 'integration', 'Professional 'appearance', 'Time-saving'];
-      cons: ['Limited free 'features', 'Basic 'customization', 'Can be expensive'];
-      website: 'https://calendly.com';
-      icon: <Globe className="w-6 h-6" />;
+      name: 'Calendly',
+      category: 'Productivity',
+      pricing: 'Free - $12/month',
+      rating: 4.8,
+      users: '10M+',
+      bestFor: 'Sales teamsconsultantsremote teams',
+      pros: ['Free 'tierEasy 'integration', 'Professional 'appearanceTime-saving'],
+      cons: ['Limited free 'featuresBasic 'customization', 'Can be expensive'],
+      website: 'https://calendly.com',
+      icon: <Globe className="w-6 h-6" />,
       color: 'text-blue-400'}
   ],
-  const categories = [', 'All', 'AI 'Assistant', 'AI 'Art', 'AI 'Writing', 'Automation', 'Productivity', 'Payments'Marketing & 'Sales', 'Email Marketing'],
+  const categories = [All', 'AI 'AssistantAI 'Art', 'AI 'WritingAutomation', 'ProductivityPayments'Marketing & 'SalesEmail Marketing'],
   const filteredTools = allTools.filter(tool => {
     const matchesSearch = tool.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                          tool.category.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -147,7 +147,7 @@ export default function ToolComparisonPage() {
       case 'rating':,
         return b.rating - a.rating,
       case 'users':,
-        return parseInt(b.users.replace(/[^0-9]/g', ')) - parseInt(a.users.replace(/[^0-9]/g', ')),
+        return parseInt(b.users.replace(/[^0-9]/g)) - parseInt(a.users.replace(/[^0-9]/g', ')),
       case 'name':,
         return a.name.localeCompare(b.name),
       default: ,
@@ -156,7 +156,7 @@ export default function ToolComparisonPage() {
   const getPricingColor = (pricing: string) => {
     if (pricing.includes('Free')) return 'text-green-400',
     if (pricing.includes('$')) return 'text-blue-400',
-    return 'text-gray-400'};
+    return 'text-gray-400'},
   return (
     <>,
       <Head>,

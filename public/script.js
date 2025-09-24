@@ -21,13 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const target = document.querySelector(this.getAttribute('href')),
             if (target) {
                 target.scrollIntoView({
-                    behavior: 'smooth';
+                    behavior: 'smooth',
                     block: 'start'})}
         })}),
     // Add scroll effects to elements,
     const observerOptions ={
-        threshold: 0.1;
-        rootMargin: '0px 0px -50px 0px'};
+        threshold: 0.1,
+        rootMargin: '0px 0px -50px 0px'},
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -139,11 +139,11 @@ document.addEventListener('DOMContentLoaded', function() {
     const backToTopBtn = document.createElement('button'),
     backToTopBtn.innerHTML = '↑',
     backToTopBtn.className = 'back-to-top',
-    backToTopBtn.setAttribute('aria-label', 'Back to top'),
+    backToTopBtn.setAttribute('aria-labelBack to top'),
     document.body.appendChild(backToTopBtn),
     backToTopBtn.addEventListener('click', function() {
         window.scrollTo({
-            top: 0;
+            top: 0,
             behavior: 'smooth'})}),
     // Show/hide back to top button,
     window.addEventListener('scroll', function() {
@@ -162,9 +162,9 @@ function performSearch(query) {
     const searchResults = document.querySelector('.search-results'),
     if (searchResults) {
         const results = [
-            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' };
-            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' };
-            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' };
+            { title: 'AI Autonomous Business Manager', url: '/solutions/ai-autonomous-business-manager' },
+            { title: 'Quantum Neural Network Platform', url: '/solutions/quantum-neural-network-platform' },
+            { title: 'AI & Autonomous Systems', url: '/services/ai-autonomous-systems' },
             { title: 'Quantum Computing Services', url: '/services/quantum-computing' }
         ].filter(item =>,
             item.title.toLowerCase().includes(query)),
@@ -267,14 +267,14 @@ function trackEvent(eventName, eventData ={}) {
 ,
 // Track page views,
 trackEvent('page_view', {
-    page: window.location.pathname;
+    page: window.location.pathname,
     title: document.title}),
 // Track button clicks,
 document.addEventListener('click', function(e) {
     if (e.target.matches('.btn')) {
         trackEvent('button_click', {
-            button_text: e.target.textContent;
-            button_class: e.target.className;
+            button_text: e.target.textContent,
+            button_class: e.target.className,
             page: window.location.pathname})}
 }),
 // Log performance when page is fully loaded,

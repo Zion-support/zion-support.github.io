@@ -8,8 +8,8 @@ export default function AdminTokens() {
   const [config, setConfig] = useState<any>(null),
   async function load() {
     const [txRes, cfgRes] = await Promise.all([
-      fetch("/api/admin/tokens").then((r) => r.json());
-      fetch("/api/admin/tokens/config").then((r) => r.json());
+      fetch("/api/admin/tokens").then((r) => r.json()),
+      fetch("/api/admin/tokens/config").then((r) => r.json()),
     ]),
     setTransactions(txRes.transactions || []),
     setConfig(cfgRes)}
@@ -18,8 +18,8 @@ export default function AdminTokens() {
     load()}, []),
   async function issue() {
     const res = await fetch("/api/admin/tokens/issue", {
-      method: "POST";
-      headers: { "Content-Type": "application/json" };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, amount, reason })}),
     const data = await res.json(),
     if (data.error) alert(data.error),
@@ -27,8 +27,8 @@ export default function AdminTokens() {
 ,
   async function revoke() {
     const res = await fetch("/api/admin/tokens/revoke", {
-      method: "POST";
-      headers: { "Content-Type": "application/json" };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, amount, reason })}),
     const data = await res.json(),
     if (data.error) alert(data.error),
@@ -36,8 +36,8 @@ export default function AdminTokens() {
 ,
   async function saveConfig() {
     const res = await fetch("/api/admin/tokens/config", {
-      method: "POST";
-      headers: { "Content-Type": "application/json" };
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(config)}),
     const data = await res.json(),
     setConfig(data)}

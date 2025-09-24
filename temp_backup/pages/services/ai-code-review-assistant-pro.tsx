@@ -2,88 +2,73 @@ import Head from 'next/head',
 import Layout from '../../components/layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  Code;
-  CheckCircle;
-  Shield;
-  Zap;
-  Target;
-  BarChart3;
-  Bug;
-  Clock;
-  ArrowRight;
-  Star;
-  GitBranch;
-  Globe;
-  Bot;
-  Smartphone;
-  Mail;
-  Phone;
-  Eye;
-  AlertTriangle;
-  Lightbulb;
+  Code,
+  CheckCircle,
+  Shield,
+  Zap,
+  Target,
+  BarChart3,
+  Bug,
+  Clock,
+  ArrowRight,
+  Star,
+  GitBranch,
+  Globe,
+  Bot,
+  Smartphone,
+  Mail,
+  Phone,
+  Eye,
+  AlertTriangle,
+  Lightbulb,
 } from 'lucide-react',
 export default function AICodeReviewAssistantPro() {
   const features = [
     {
-      icon: <Eye className='w-6 h-6' />;
-      title: 'Automated Code Review';
+      icon: <Eye className='w-6 h-6' />,
+      title: 'Automated Code Review',
       description:,
-        'AI-powered analysis of code quality, security vulnerabilities, and best practices';
-    };
+        'AI-powered analysis of code quality, security vulnerabilities, and best practices',
+    },
     {
-      icon: <Bug className='w-6 h-6' />;
-      title: 'Bug Detection';
+      icon: <Bug className='w-6 h-6' />,
+      title: 'Bug Detection',
       description:,
-        'Advanced static analysis to identify potential bugs and runtime issues';
-    };
+        'Advanced static analysis to identify potential bugs and runtime issues',
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Security Scanning';
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Security Scanning',
       description:,
-        'Comprehensive security analysis to detect vulnerabilities and compliance issues';
-    };
+        'Comprehensive security analysis to detect vulnerabilities and compliance issues',
+    },
     {
-      icon: <Lightbulb className='w-6 h-6' />;
-      title: 'Code Optimization';
+      icon: <Lightbulb className='w-6 h-6' />,
+      title: 'Code Optimization',
       description:,
-        'Intelligent suggestions for performance improvements and code refactoring';
-    };
+        'Intelligent suggestions for performance improvements and code refactoring',
+    },
   ],
   const capabilities = [
-    'Static Code Analysis';
-    'Security Vulnerability Detection';
-    'Code Quality Metrics';
-    'Performance Optimization';
-    'Best Practice Enforcement';
-    'Compliance Checking';
-    'Documentation Review';
-    'Test Coverage Analysis';
-    'Dependency Scanning';
-    'Integration APIs';
+    'Static Code AnalysisSecurity Vulnerability Detection',
+    'Code Quality MetricsPerformance Optimization',
+    'Best Practice EnforcementCompliance Checking',
+    'Documentation ReviewTest Coverage Analysis',
+    'Dependency ScanningIntegration APIs',
   ],
   const languages = [
-    'JavaScript/TypeScript';
-    'Python';
-    'Java';
-    'C/C++';
-    'Go';
-    'Rust';
-    'PHP';
-    'Ruby';
-    'C#';
-    'Swift';
-    'Kotlin';
-    'Scala';
+    'JavaScript/TypeScriptPython',
+    'JavaC/C++',
+    'GoRust',
+    'PHPRuby',
+    'C#Swift',
+    'KotlinScala',
   ],
   const benefits = [
-    'Faster Code Reviews';
-    'Improved Code Quality';
-    'Reduced Security Risks';
-    'Consistent Standards';
-    'Knowledge Sharing';
-    'Cost Reduction';
-    'Faster Development';
-    'Better Maintainability';
+    'Faster Code ReviewsImproved Code Quality',
+    'Reduced Security RisksConsistent Standards',
+    'Knowledge SharingCost Reduction',
+    'Faster DevelopmentBetter Maintainability',
   ],
   return (
     <Layout>,

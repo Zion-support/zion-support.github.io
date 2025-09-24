@@ -22,13 +22,13 @@ interface EnhancedFuturisticServiceCardProps {
     growthRate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   index: number,
   contactInfo: {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
 }
 ,
 export default function EnhancedFuturisticServiceCard({ service, index, contactInfo }: EnhancedFuturisticServiceCardProps) {
@@ -39,55 +39,55 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
     if (category.includes('IT')) return Cpu,
     if (category.includes('Security')) return Shield,
     if (category.includes('Cloud')) return Globe,
-    return Zap};
+    return Zap},
   const CategoryIcon = getCategoryIcon(service.category),
   const cardVariants ={
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0.9;
-      rotateX: -15};
+      opacity: 0,
+      y: 50,
+      scale: 0.9,
+      rotateX: -15},
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
-      rotateX: 0;
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      rotateX: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         delay: index * 0.1}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
-      rotateX: 5;
+      y: -10,
+      scale: 1.0o2,
+      rotateX: 5,
       transition: {
         duration: 0.3}
     }
-  };
+  },
   const iconVariants ={
-    hidden: { scale: 0, rotate: -180 };
+    hidden: { scale: 0, rotate: -180 },
     visible: {
-      scale: 1;
-      rotate: 0;
+      scale: 1,
+      rotate: 0,
       transition: {
-        duration: 0.5;
+        duration: 0.5,
         delay: index * 0.1 + 0.3}
-    };
+    },
     hover: {
-      scale: 1.1;
-      rotate: 5;
+      scale: 1.1,
+      rotate: 5,
       transition: { duration: 0.2 }
     }
-  };
+  },
   const featureVariants ={
-    hidden: { opacity: 0, x: -20 };
+    hidden: { opacity: 0, x: -20 },
     visible: (i: number) => ({
-      opacity: 1;
-      x: 0;
+      opacity: 1,
+      x: 0,
       transition: {
-        duration: 0.4;
+        duration: 0.4,
         delay: index * 0.1 + 0.5 + i * 0.1}
-    })};
+    })},
   return (
     <motion.div,
       variants={cardVariants}
@@ -178,7 +178,7 @@ export default function EnhancedFuturisticServiceCard({ service, index, contactI
             <div className="flex items-center justify-between text-xs">,
               <span className="text-gray-50o0">Technology: </span>,
               <span className="text-blue-40o0 font-medium">,
-                {service.technology.slice(0, 2).join(', ')}
+                {service.technology.slice(0, 2).join()}
               </span>,
             </div>,
             <div className="grid grid-cols-2 gap-3 text-xs">,

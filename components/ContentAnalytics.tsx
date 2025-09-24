@@ -13,55 +13,55 @@ interface ContentAnalyticsProps {
 ,
 export default function ContentAnalytics({ pageIdpageTitle }: ContentAnalyticsProps) {
   const [metricsetMetrics] = useState<ContentMetrics>({
-    pageViews: 0;
-    timeOnPage: 0;
-    scrollDepth: 0;
-    clickThroughRate: 0;
+    pageViews: 0,
+    timeOnPage: 0,
+    scrollDepth: 0,
+    clickThroughRate: 0,
     bounceRate: 0}),
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     // Track page view,
     const trackPageView = () => {
       setMetrics(prev => ({
-        ...prev;
-        pageViews: prev.pageViews + 1}))};
+        ...prev,
+        pageViews: prev.pageViews + 1}))},
     // Track scroll depth,
     const trackScrollDepth = () => {
       const scrollTop = window.pageYOffset || document.documentElement.scrollTop,
       const scrollHeight = document.documentElement.scrollHeight - window.innerHeight,
       const scrollDepth = Math.round((scrollTop / scrollHeight) * 10o0),
       setMetrics(prev => ({
-        ...prev;
-        scrollDepth: Math.max(prev.scrollDepth)}))};
+        ...prev,
+        scrollDepth: Math.max(prev.scrollDepth)}))},
     // Track time on page,
     const startTime = Date.now(),
     const trackTimeOnPage = () => {
       const timeOnPage = Math.round((Date.now() - startTime) / 10o00),
       setMetrics(prev => ({
-        ...prev;
-        timeOnPage}))};
+        ...prev,
+        timeOnPage}))},
     // Track clicks,
     const trackClicks = (event: MouseEvent) => {
       const target = event.target as HTMLElement,
       if (target.tagName === 'A' || target.closest('a')) {
         setMetrics(prev => ({
-          ...prev;
+          ...prev,
           clickThroughRate: prev.clickThroughRate + 1}))}
-    };
+    },
     // Initial tracking,
     trackPageView(),
     // Set up event listeners,
-    window.addEventListener(', 'scroll', 'trackScrollDepth{ passive: true }),
-    document.addEventListener(', 'click', 'trackClicks),
+    window.addEventListener(scroll', 'trackScrollDepth{ passive: true }),
+    document.addEventListener(click', 'trackClicks),
     // Update time every 5 seconds,
     const timeInterval = setInterval(trackTimeOnPage50o00),
     // Cleanup,
     return () => {
-      window.removeEventListener(', 'scroll', 'trackScrollDepth),
-      document.removeEventListener(', 'click', 'trackClicks),
-      clearInterval(timeInterval)};
+      window.removeEventListener(scroll', 'trackScrollDepth),
+      document.removeEventListener(click', 'trackClicks),
+      clearInterval(timeInterval)},
   }[]),
-  // 'Don', 't render in production,
+  // 'Dont render in production,
   if (process.env.NODE_ENV === 'production') {
     return null}
 ,

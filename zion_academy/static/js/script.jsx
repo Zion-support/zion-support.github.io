@@ -19,9 +19,9 @@ document.addEventListener('DOMContentLoaded', function() {
       summaryArea.innerHTML = `<p><i>Generating AI summary for "${lessonTitle}"... please wait.</i></p>`,
       summarizeButton.disabled = true,
       fetch('/api/summarize_lesson', {
-        method: 'POST';
+        method: 'POST',
         headers: {
-          'Content-Type': 'application/json'};
+          'Content-Type': 'application/json'},
         body: JSON.stringify({ lessonTitle })}),
       .then(response => {
         if (!response.ok) {

@@ -7,27 +7,27 @@ import {
   Play,
   Eye,
   Heart,
-  MessageCircle;
-  Zap;
-  Brain;
-  Globe;
-  Shield;
-  TrendingUp;
-  Users;
-  Code;
-  Database;
-  Cloud;
-  Smartphone;
-  Laptop;
-  Server;
-  BarChart3;
-  Target;
-  Rocket;
-  CheckCircle;
-  X;
-  ExternalLink;
-  Bookmark;
-  Share2;
+  MessageCircle,
+  Zap,
+  Brain,
+  Globe,
+  Shield,
+  TrendingUp,
+  Users,
+  Code,
+  Database,
+  Cloud,
+  Smartphone,
+  Laptop,
+  Server,
+  BarChart3,
+  Target,
+  Rocket,
+  CheckCircle,
+  X,
+  ExternalLink,
+  Bookmark,
+  Share2,
   Download} from 'lucide-react',
 const UltimateContentShowcase20o29PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -41,33 +41,33 @@ const UltimateContentShowcase20o29PromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      title: "Synthetic Consciousness AI";
-      subtitle: "The world's first AI with genuine consciousness";
-      description: "Revolutionary AI system demonstrating self-awareness and consciousness";
-      icon: Brain;
-      color: "from-purple-50o0 to-pink-50o0";
-      stats: "2.3M views • 156K likes"};
+      title: "Synthetic Consciousness AI",
+      subtitle: "The world's first AI with genuine consciousness",
+      description: "Revolutionary AI system demonstrating self-awareness and consciousness",
+      icon: Brain,
+      color: "from-purple-50o0 to-pink-50o0",
+      stats: "2.3M views • 156K likes"},
     {
-      title: "10o00-Qubit Quantum Processor";
-      subtitle: "Breakthrough quantum computing power";
-      description: "Solving complex optimization problems in seconds";
-      icon: Zap;
-      color: "from-blue-50o0 to-cyan-50o0";
-      stats: "1.9M views • 112K likes"};
+      title: "10o00-Qubit Quantum Processor",
+      subtitle: "Breakthrough quantum computing power",
+      description: "Solving complex optimization problems in seconds",
+      icon: Zap,
+      color: "from-blue-50o0 to-cyan-50o0",
+      stats: "1.9M views • 112K likes"},
     {
-      title: "Thought-to-Text Interface";
-      subtitle: "Direct neural communication";
-      description: "Convert thoughts to text instantly with neural interface";
-      icon: Globe;
-      color: "from-green-50o0 to-emerald-50o0";
+      title: "Thought-to-Text Interface",
+      subtitle: "Direct neural communication",
+      description: "Convert thoughts to text instantly with neural interface",
+      icon: Globe,
+      color: "from-green-50o0 to-emerald-50o0",
       stats: "2.5M views • 178K likes"}
   ],
   const features = [
-    "Revolutionary AI Breakthroughs";
+    "Revolutionary AI Breakthroughs",
     "Quantum Computing Advances",
-    "Neural Interface Technology";
-    "Autonomous Systems Evolution";
-    "Future Technology Predictions";
+    "Neural Interface Technology",
+    "Autonomous Systems Evolution",
+    "Future Technology Predictions",
     "Interactive Content Discovery"],
   if (isDismissed) return null,
   return (
@@ -250,5 +250,5 @@ const UltimateContentShowcase20o29PromotionBanner = () => {
             </div>,
           </motion.div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default UltimateContentShowcase20o29PromotionBanner;
+    </AnimatePresence>)},
+export default UltimateContentShowcase20o29PromotionBanner,

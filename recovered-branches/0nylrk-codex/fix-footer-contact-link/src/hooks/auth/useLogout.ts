@@ -11,6 +11,6 @@ export const useLogout = (setUser: (user: UserProfile | null) => void) => {
       // Update state,
       setUser(null)} catch (error) {
       console.error('Error during logout:', error)}
-  };
-  return { logout };
-};
+  },
+  return { logout },
+},

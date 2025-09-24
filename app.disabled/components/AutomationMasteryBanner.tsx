@@ -12,7 +12,7 @@ const AutomationMasteryBanner = () => {
   }, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('automation-mastery-banner-dismissed', 'true')};
+    localStorage.setItem('automation-mastery-banner-dismissedtrue')},
   if (!isVisible) return null,
   return (
     <div className='relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden'>,
@@ -91,5 +91,5 @@ const AutomationMasteryBanner = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default AutomationMasteryBanner;
+    </div>)},
+export default AutomationMasteryBanner,

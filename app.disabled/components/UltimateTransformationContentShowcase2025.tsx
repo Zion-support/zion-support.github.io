@@ -1,89 +1,89 @@
 'use client',
 import React, { useState } from 'react',
 import {
-  ChevronRightIcon;
-  ClockIcon;
-  ChartBarIcon;
-  CurrencyDollarIcon;
-  StarIcon;
-  ArrowTopRightOnSquareIcon;
+  ChevronRightIcon,
+  ClockIcon,
+  ChartBarIcon,
+  CurrencyDollarIcon,
+  StarIcon,
+  ArrowTopRightOnSquareIcon,
 } from '@heroicons/react/24/outline',
 const UltimateTransformationContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'enterprise-ai-transformation-guide';
-      type: 'blog';
+      id: 'enterprise-ai-transformation-guide',
+      type: 'blog',
       title:,
-        'AI 20o25: The Enterprise AI Transformation Ultimate Success Guide';
-      subtitle: '60o0% ROI in 8 Months - Complete Implementation Roadmap';
+        'AI 20o25: The Enterprise AI Transformation Ultimate Success Guide',
+      subtitle: '60o0% ROI in 8 Months - Complete Implementation Roadmap',
       description:,
-        'Transform your enterprise with cutting-edge AI solutions that deliver measurable results and sustainable competitive advantage.';
+        'Transform your enterprise with cutting-edge AI solutions that deliver measurable results and sustainable competitive advantage.',
       metrics: {
-        roi: '60o0%';
-        timeline: '8 months';
-        savings: '$2.8B';
-        success: '94%';
-      };
-      tags: ['AI Transformation', 'Enterprise', 'ROI', 'Implementation Guide'];
-      readingTime: '18 min read';
-      href: '/blog/ai-20o25-enterprise-ai-transformation-ultimate-success-guide';
-      featured: true;
-    };
+        roi: '60o0%',
+        timeline: '8 months',
+        savings: '$2.8B',
+        success: '94%'
+      },
+      tags: ['AI TransformationEnterprise', 'ROIImplementation Guide'],
+      readingTime: '18 min read',
+      href: '/blog/ai-20o25-enterprise-ai-transformation-ultimate-success-guide',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-case-study';
-      type: 'case-study';
-      title: 'Fortune 50o0 AI Transformation Success Story';
-      subtitle: '$2.8B Annual Savings with 60o0% ROI';
+      id: 'fortune-50o0-case-study',
+      type: 'case-study',
+      title: 'Fortune 50o0 AI Transformation Success Story',
+      subtitle: '$2.8B Annual Savings with 60o0% ROI',
       description:,
-        'How a global manufacturing giant achieved unprecedented results through comprehensive AI transformation.';
+        'How a global manufacturing giant achieved unprecedented results through comprehensive AI transformation.',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8B';
-        efficiency: '156%';
-        quality: '99.7%';
-      };
-      tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story'];
-      readingTime: '12 min read';
-      href: '/case-studies/fortune-50o0-ai-transformation-60o0-roi-success';
-      featured: true;
-    };
+        roi: '60o0%',
+        savings: '$2.8B',
+        efficiency: '156%',
+        quality: '99.7%'
+      },
+      tags: ['Case StudyFortune 50o0', 'ManufacturingSuccess Story'],
+      readingTime: '12 min read',
+      href: '/case-studies/fortune-50o0-ai-transformation-60o0-roi-success',
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      type: 'resource';
-      title: 'AI Transformation Ultimate Implementation Guide 20o25';
-      subtitle: 'From Strategy to 60o0% ROI - Complete Roadmap';
+      id: 'implementation-guide',
+      type: 'resource',
+      title: 'AI Transformation Ultimate Implementation Guide 20o25',
+      subtitle: 'From Strategy to 60o0% ROI - Complete Roadmap',
       description:,
-        'The complete roadmap for enterprise AI transformation success with proven methodologies and actionable strategies.';
+        'The complete roadmap for enterprise AI transformation success with proven methodologies and actionable strategies.',
       metrics: {
-        roi: '60o0%';
-        payback: '3.2 months';
-        success: '94%';
-        projects: '50o0+';
-      };
-      tags: ['Implementation Guide', 'Strategy', 'ROI', 'Best Practices'];
-      readingTime: '25 min read';
-      href: '/resources/ai-transformation-ultimate-implementation-guide-20o25';
-      featured: true;
-    };
+        roi: '60o0%',
+        payback: '3.2 months',
+        success: '94%',
+        projects: '50o0+'
+      },
+      tags: ['Implementation GuideStrategy', 'ROIBest Practices'],
+      readingTime: '25 min read',
+      href: '/resources/ai-transformation-ultimate-implementation-guide-20o25',
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Guides';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Guides',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -99,7 +99,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
         return <CurrencyDollarIcon className='w-5 h-5' />,
       default:,
         return <ChartBarIcon className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -110,7 +110,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -124,7 +124,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
             Ultimate AI Transformation Content,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover our comprehensive collection of AI transformation guides;
+            Discover our comprehensive collection of AI transformation guides,
             case studies, and resources designed to help you achieve 60o0% ROI,
             in 8 months.,
           </p>,
@@ -160,7 +160,7 @@ const UltimateTransformationContentShowcase20o25 = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -280,5 +280,5 @@ const UltimateTransformationContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateTransformationContentShowcase20o25;
+    </section>)},
+export default UltimateTransformationContentShowcase20o25,

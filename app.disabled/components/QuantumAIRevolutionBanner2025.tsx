@@ -6,43 +6,43 @@ const QuantumAIRevolutionBanner20o25 = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const quantumContent = [
     {
-      id: 'quantum-computing-revolution';
-      title: 'AI 20o25: The Quantum Computing Revolution';
-      description: 'Discover how quantum computing is revolutionizing enterprise AI with 10o00% performance improvements and $50B+ market opportunities.';
-      url: '/blog/ai-20o25-quantum-computing-revolution-enterprise-breakthrough';
-      type: 'blog';
+      id: 'quantum-computing-revolution',
+      title: 'AI 20o25: The Quantum Computing Revolution',
+      description: 'Discover how quantum computing is revolutionizing enterprise AI with 10o00% performance improvements and $50B+ market opportunities.',
+      url: '/blog/ai-20o25-quantum-computing-revolution-enterprise-breakthrough',
+      type: 'blog',
       metrics: {
-        performance: '10o00%';
-        accuracy: '99.9%';
-        market: '$50B+';
-        roi: '1,20o0%'};
-      readingTime: '18 min read';
-      featured: true};
+        performance: '10o00%',
+        accuracy: '99.9%',
+        market: '$50B+',
+        roi: '1,20o0%'},
+      readingTime: '18 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-quantum-success';
-      title: 'Fortune 50o0 Quantum AI Transformation: 1,20o0% ROI';
-      description: 'How a $2.1B company achieved unprecedented efficiency with quantum AI, saving $180M annually.';
-      url: '/case-studies/fortune-50o0-quantum-ai-transformation-20o25-ultimate-success';
-      type: 'case-study';
+      id: 'fortune-50o0-quantum-success',
+      title: 'Fortune 50o0 Quantum AI Transformation: 1,20o0% ROI',
+      description: 'How a $2.1B company achieved unprecedented efficiency with quantum AI, saving $180M annually.',
+      url: '/case-studies/fortune-50o0-quantum-ai-transformation-20o25-ultimate-success',
+      type: 'case-study',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$180M';
-        efficiency: '78%';
-        accuracy: '99.9%'};
-      readingTime: '15 min read';
-      featured: true};
+        roi: '1,20o0%',
+        savings: '$180M',
+        efficiency: '78%',
+        accuracy: '99.9%'},
+      readingTime: '15 min read',
+      featured: true},
     {
-      id: 'quantum-implementation-guide';
-      title: 'Quantum AI Implementation Master Guide 20o25';
-      description: 'Complete guide to implementing quantum AI in your enterprise, with proven strategies and ROI optimization techniques.';
-      url: '/resources/quantum-ai-implementation-master-guide-20o25';
-      type: 'resource';
+      id: 'quantum-implementation-guide',
+      title: 'Quantum AI Implementation Master Guide 20o25',
+      description: 'Complete guide to implementing quantum AI in your enterprise, with proven strategies and ROI optimization techniques.',
+      url: '/resources/quantum-ai-implementation-master-guide-20o25',
+      type: 'resource',
       metrics: {
-        roi: '1,20o0%';
-        performance: '10o00%';
-        accuracy: '99.9%';
-        timeline: '18 months'};
-      readingTime: '25 min read';
+        roi: '1,20o0%',
+        performance: '10o00%',
+        accuracy: '99.9%',
+        timeline: '18 months'},
+      readingTime: '25 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -51,7 +51,7 @@ const QuantumAIRevolutionBanner20o25 = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('quantum-ai-banner-dismissed', 'true')};
+    localStorage.setItem('quantum-ai-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('quantum-ai-banner-dismissed'),
     if (dismissed === 'true') {
@@ -192,5 +192,5 @@ const QuantumAIRevolutionBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default QuantumAIRevolutionBanner20o25;
+    </div>)},
+export default QuantumAIRevolutionBanner20o25,

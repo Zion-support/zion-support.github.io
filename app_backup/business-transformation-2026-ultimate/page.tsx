@@ -2,10 +2,10 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 import { Card } from '../../components/ui/Card',
 export const metadata = {
-  title: 'Page';
+  title: 'Page',
   description:,
-    'Page - Professional blog page with comprehensive information and insights.';
-};
+    'Page - Professional blog page with comprehensive information and insights.',
+},
 export default function PagePage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

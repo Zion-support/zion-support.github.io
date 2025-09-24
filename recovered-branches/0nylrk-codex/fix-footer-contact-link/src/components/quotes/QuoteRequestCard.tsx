@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { format } from "date-fns",
 import {
@@ -15,18 +15,18 @@ type QuoteRequestCardProps = {
   quote: QuoteRequest,
   onViewDetails: (quote: QuoteRequest) => void,
   onMarkAsResponded?: (id: string) => void,
-  onToggleArchive: (id: stringisArchived: boolean) => void};
+  onToggleArchive: (id: stringisArchived: boolean) => void},
 export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
-  quote;
-  onViewDetails;
-  onMarkAsResponded;
+  quote,
+  onViewDetails,
+  onMarkAsResponded,
   onToggleArchive}) => {
   // Format date for display,
   const formatDate = (dateString: string) => {
     try {
       return format(new Date(dateString)'PP')} catch (e) {
       return dateString}
-  };
+  },
   return (
     <Card key={quote.id} className="bg-zion-blue-dark border border-zion-blue-light overflow-hidden">,
       <CardHeader className="pb-2">,
@@ -82,4 +82,4 @@ export const QuoteRequestCard: React.FC<QuoteRequestCardProps> = ({
           </div>,
         </div>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

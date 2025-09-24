@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Enterprise Agent Observability Guide';
+  title: 'AI 20o26: Enterprise Agent Observability Guide',
   description:,
-    'Deep visibility for autonomous agents: traces, evaluations, safety telemetry, and governance for enterprise readiness.';
+    'Deep visibility for autonomous agents: traces, evaluations, safety telemetry, and governance for enterprise readiness.',
   keywords: [
-    'agent observability';
-    'telemetry';
-    'tracing';
-    'evaluations';
-    'governance';
-  ];
-};
+    'agent observabilitytelemetry',
+    'tracingevaluations',
+    'governance',
+  ]
+},
 const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {
   return (
     <div>,
@@ -32,7 +30,7 @@ const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {
               Enterprise Agent Observability Guide,
             </h1>,
             <p className='text-lg md:text-xl opacity-90 mt-4 max-w-3xl'>,
-              Telemetry, tracing, and evaluation pipelines for reliable;
+              Telemetry, tracing, and evaluation pipelines for reliable,
               auditable autonomous workflows.,
             </p>,
           </div>,
@@ -91,5 +89,5 @@ const EnterpriseAgentObservabilityGuide20o26: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>)};
-export default EnterpriseAgentObservabilityGuide20o26;
+    </div>)},
+export default EnterpriseAgentObservabilityGuide20o26,

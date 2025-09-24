@@ -17,8 +17,8 @@ export function getUserFromRequest(req: any): User | null {
 export function assertTalentOrClientForOffer(
   req: NextApiRequest,
   offer: { clientId: string, talentSlug: string }
-  req: NextApiRequest;
-  offer: { clientId: string, talentSlug: string };
+  req: NextApiRequest,
+  offer: { clientId: string, talentSlug: string },
   talentSlugHeader?: string): DemoUser {
   const u = getDemoUser(req),
   if (u && u.role === 'client' && u && u.id === offer && offer.clientId) return u,
@@ -41,15 +41,15 @@ export function assertTalentOrClientForOffer(
 if ( {) {
   $2}
     return {
-      id: 'user - 1';
-      email: 'user@example.com';
-      role: 'client';
+      id: 'user - 1',
+      email: 'user@example.com',
+      role: 'client',
       name: 'Test User'}
   }
   return null}
 export function assertTalentOrClientForOffer (
-  req: NextApiRequest;
-  offer: { client_id: string, talent_slug: string };
+  req: NextApiRequest,
+  offer: { client_id: string, talent_slug: string },
   talentSlugHeader?: string): DemoUser {
   const u = getDemoUser (req),
   // Check condition,
@@ -68,7 +68,7 @@ if (=== offer.talent_slug) {
   // Check condition,
 if ( {) {
   $2}
-    throw new Error ('Authentication required');
+    throw new Error ('Authentication required'),
   }
   return user}
 >>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

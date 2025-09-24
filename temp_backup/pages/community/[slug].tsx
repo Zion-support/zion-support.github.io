@@ -24,7 +24,7 @@ const POSTS_QUERY = `,
 `,
 export default function CategoryPage() {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const [posts, setPosts] = useState<ForumPost[]>([]),
   const [cursor, setCursor] = useState<string | null>(null),
   const [hasMore, setHasMore] = useState(true),
@@ -33,12 +33,12 @@ export default function CategoryPage() {
     if (!slug) return,
     setLoading(true),
     const res = await fetch('/api/graphql', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        query: POSTS_QUERY;
-        variables: { slug, cursor: after };
-      });
+        query: POSTS_QUERY,
+        variables: { slug, cursor: after },
+      }),
     }),
     const json = await res.json(),
     const result = json.data?.Posts,
@@ -47,7 +47,7 @@ export default function CategoryPage() {
       setPosts(prev => (after ? [...prev, ...newPosts] : newPosts)),
       setCursor(result.pageInfo.endCursor),
       setHasMore(result.pageInfo.hasNextPage)}
-    setLoading(false)};
+    setLoading(false)},
   useEffect(() => {
     setPosts([]),
     setCursor(null),

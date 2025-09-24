@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 // File: /workspace/zion-os/src/app/contact/page.tsx,
 import * as entry from '../../../../src/app/contact/page.js',
 import type {
-  ResolvingMetadata;
-  ResolvingViewport;
+  ResolvingMetadata,
+  ResolvingViewport
 } from 'next/dist/lib/metadata/types/metadata-interface.js',
 type TEntry = typeof import('../../../../src/app/contact/page.js'),
 // Check that the entry is a valid entry,
@@ -11,7 +11,7 @@ checkFields<,
   Diff<,
     {
       default: Function,
-      config?: {};
+      config?: {},
       generateStaticParams?: Function,
       revalidate?: RevalidateRange<TEntry> | false,
       dynamic?: 'auto' | 'force-dynamic' | 'error' | 'force-static',
@@ -30,8 +30,8 @@ checkFields<,
       metadata?: any,
       generateMetadata?: Function,
       viewport?: any,
-      generateViewport?: Function};
-    TEntry;
+      generateViewport?: Function},
+    TEntry,
     ''>>(),
 // Check the prop type of the entry function,
 checkFields<Diff<PageProps FirstArg<TEntry['default']>, 'default'>>(),
@@ -39,40 +39,40 @@ checkFields<Diff<PageProps FirstArg<TEntry['default']>, 'default'>>(),
 if ('generateMetadata' in entry) {
   checkFields<,
     Diff<,
-      PageProps;
-      FirstArg<MaybeField<TEntry 'generateMetadata'>>;
+      PageProps,
+      FirstArg<MaybeField<TEntry 'generateMetadata'>>,
       'generateMetadata'>>(),
   checkFields<,
     Diff<,
-      ResolvingMetadata;
-      SecondArg<MaybeField<TEntry 'generateMetadata'>>;
+      ResolvingMetadata,
+      SecondArg<MaybeField<TEntry 'generateMetadata'>>,
       'generateMetadata'>>()}
 ,
 // Check the arguments and return type of the generateViewport function,
 if ('generateViewport' in entry) {
   checkFields<,
     Diff<,
-      PageProps;
-      FirstArg<MaybeField<TEntry 'generateViewport'>>;
+      PageProps,
+      FirstArg<MaybeField<TEntry 'generateViewport'>>,
       'generateViewport'>>(),
   checkFields<,
     Diff<,
-      ResolvingViewport;
-      SecondArg<MaybeField<TEntry 'generateViewport'>>;
+      ResolvingViewport,
+      SecondArg<MaybeField<TEntry 'generateViewport'>>,
       'generateViewport'>>()}
 ,
 // Check the arguments and return type of the generateStaticParams function,
 if ('generateStaticParams' in entry) {
   checkFields<,
     Diff<,
-      { params: PageParams };
-      FirstArg<MaybeField<TEntry 'generateStaticParams'>>;
+      { params: PageParams },
+      FirstArg<MaybeField<TEntry 'generateStaticParams'>>,
       'generateStaticParams'>>(),
   checkFields<,
     Diff<,
       {
         __tag__: 'generateStaticParams',
-        __return_type__: any[] | Promise<any[]>};
+        __return_type__: any[] | Promise<any[]>},
       {
         __tag__: 'generateStaticParams',
         __return_type__: ReturnType<MaybeField<TEntry 'generateStaticParams'>>}

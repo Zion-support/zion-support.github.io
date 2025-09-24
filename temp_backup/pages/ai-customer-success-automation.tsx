@@ -1,42 +1,42 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Headphones;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Headphones,
   MessageCircle, Clock, Award, Target, Users2} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Customer Success Automation | Zion Tech Group';
-  description: 'Revolutionary AI-powered customer success automation platform that ensures customer satisfaction and retention.';
-  keywords: 'AI customer success, customer success automation, customer retention, AI automation, customer satisfaction, customer support';
+  title: 'AI Customer Success Automation | Zion Tech Group',
+  description: 'Revolutionary AI-powered customer success automation platform that ensures customer satisfaction and retention.',
+  keywords: 'AI customer success, customer success automation, customer retention, AI automation, customer satisfaction, customer support',
   openGraph: {
-    title: 'AI Customer Success Automation | Zion Tech Group';
-    description: 'Revolutionary AI-powered customer success automation platform that ensures customer satisfaction and retention.';
-    url: 'https://ziontechgroup.com/ai-customer-success-automation';
-    siteName: 'Zion Tech Group';
+    title: 'AI Customer Success Automation | Zion Tech Group',
+    description: 'Revolutionary AI-powered customer success automation platform that ensures customer satisfaction and retention.',
+    url: 'https://ziontechgroup.com/ai-customer-success-automation',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-customer-success-automation.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Customer Success Automation'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-customer-success-automation.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Customer Success Automation'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Customer Success Automation | Zion Tech Group';
-    description: 'Revolutionary AI-powered customer success automation platform that ensures customer satisfaction and retention.';
-    images: ['https://ziontechgroup.com/og-image-ai-customer-success-automation.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Customer Success Automation | Zion Tech Group',
+    description: 'Revolutionary AI-powered customer success automation platform that ensures customer satisfaction and retention.',
+    images: ['https://ziontechgroup.com/og-image-ai-customer-success-automation.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-customer-success-automation'}};
+    canonical: 'https://ziontechgroup.com/ai-customer-success-automation'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AICustomerSuccessAutomation() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -53,7 +53,7 @@ export default function AICustomerSuccessAutomation() {
               AI Customer Success Automation,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              The world's most advanced AI customer success automation platform that ensures customer satisfaction;
+              The world's most advanced AI customer success automation platform that ensures customer satisfaction,
               retention, and growth through intelligent automation and proactive support.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -80,7 +80,7 @@ export default function AICustomerSuccessAutomation() {
               Revolutionary Customer Success Automation,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of customer success from onboarding to retention;
+              Our AI platform handles every aspect of customer success from onboarding to retention,
               continuously learning and optimizing for maximum customer satisfaction and growth.,
             </p>,
           </div>,

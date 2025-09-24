@@ -1,7 +1,7 @@
 "use client",
 import React{ useState } from 'react',
 type Props ={
-  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void};
+  onSubmit: (payload: { title: string, description?: string, dueDate: string, amountUsd: number }) => Promise<void> | void},
 export default function MilestoneForm({ onSubmit }: Props) {
   const [titlesetTitle] = useState(''),
   const [descriptionsetDescription] = useState(''),
@@ -25,7 +25,7 @@ export default function MilestoneForm({ onSubmit }: Props) {
       setAmountUsd('')} catch (err: any) {
       setError(err?.message || 'Failed to create milestone')} finally {
       setLoading(false)}
-  };
+  },
   return (
     <form onSubmit={handleSubmit} className="space-y-4">,
       {error && <div className="text-red-60o0 text-sm">{error}</div>}

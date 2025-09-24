@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback, Suspense } from 'react',
 import Layout from './layout/Layout',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2;
+  ArrowRight, Play, Star, Users, Award, TrendingUp, Brain, Shield, Rocket, Loader2,
   Zap, Globe, Cpu, Eye, Atom, Heart} from 'lucide-react',
 // Lazy load heavy components,
 const LazyServiceCard = React.lazy(() => import('./ServiceCard')),
@@ -24,7 +24,7 @@ const EnhancedHomepage20o26: React.FC = () => {
     const serviceTimer = setInterval(rotateServices, 50o00), // Increased from 40o00ms for better UX,
     // Intersection Observer for performance optimization,
     const observer = new IntersectionObserver(
-      ([entry]) => setIsIntersecting(entry.isIntersecting);
+      ([entry]) => setIsIntersecting(entry.isIntersecting),
       { threshold: 0.1 }
     ),
     const heroSection = document.getElementById('hero-section'),
@@ -32,69 +32,69 @@ const EnhancedHomepage20o26: React.FC = () => {
     return () => {
       clearTimeout(timer),
       clearInterval(serviceTimer),
-      if (heroSection) observer.unobserve(heroSection)};
+      if (heroSection) observer.unobserve(heroSection)},
   }, [rotateServices]),
   // Optimized animation variants,
   const fadeInUp ={
     initial: { opacity: 0, y: 40 }, // Reduced from 60 for smoother animation,
-    animate: { opacity: 1, y: 0 };
-    transition: { duration: 0.5, ease: "easeOut" } // Reduced from 0.6};
+    animate: { opacity: 1, y: 0 },
+    transition: { duration: 0.5, ease: "easeOut" } // Reduced from 0.6},
   const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: 0.08, // Reduced from 0.1 for faster loading,
         delayChildren: 0.1 // Reduced from 0.2}
     }
-  };
+  },
   const backgroundVariants ={
     initial: { opacity: 0, scale: 0.9 }, // Increased from 0.8 for better visual,
     animate: {
-      opacity: 1;
-      scale: 1;
+      opacity: 1,
+      scale: 1,
       transition: { duration: 1.2, ease: "easeOut" as const } // Reduced from 1.5}
-  };
+  },
   const featuredServices = [
     {
-      title: "Quantum AI Content Factory";
-      description: "Generate unlimited high-quality content with quantum AI processing";
-      icon: Brain;
-      color: "from-purple-60o0 to-pink-70o0";
-      price: "$1,299/month";
-      features: ["Quantum AI content generation", "Unlimited content creation", "Multi-format support"]};
+      title: "Quantum AI Content Factory",
+      description: "Generate unlimited high-quality content with quantum AI processing",
+      icon: Brain,
+      color: "from-purple-60o0 to-pink-70o0",
+      price: "$1,299/month",
+      features: ["Quantum AI content generation", "Unlimited content creation", "Multi-format support"]},
     {
-      title: "Autonomous Customer Success Platform";
-      description: "AI-driven customer success automation that never sleeps";
-      icon: Shield;
-      color: "from-cyan-60o0 to-blue-70o0";
-      price: "$899/month";
-      features: ["Autonomous monitoring", "Predictive churn prevention", "AI engagement scoring"]};
+      title: "Autonomous Customer Success Platform",
+      description: "AI-driven customer success automation that never sleeps",
+      icon: Shield,
+      color: "from-cyan-60o0 to-blue-70o0",
+      price: "$899/month",
+      features: ["Autonomous monitoring", "Predictive churn prevention", "AI engagement scoring"]},
     {
-      title: "Quantum Financial Forecasting Engine";
-      description: "Predict market movements with quantum computing precision";
-      icon: Zap;
-      color: "from-emerald-60o0 to-teal-70o0";
-      price: "$2,499/month";
-      features: ["Quantum market analysis", "Real-time forecasting", "Portfolio optimization"]};
+      title: "Quantum Financial Forecasting Engine",
+      description: "Predict market movements with quantum computing precision",
+      icon: Zap,
+      color: "from-emerald-60o0 to-teal-70o0",
+      price: "$2,499/month",
+      features: ["Quantum market analysis", "Real-time forecasting", "Portfolio optimization"]},
     {
-      title: "Autonomous DevOps Orchestrator";
-      description: "Self-managing infrastructure that scales automatically";
-      icon: Cpu;
-      color: "from-orange-60o0 to-red-70o0";
-      price: "$1,599/month";
-      features: ["Autonomous management", "Self-healing systems", "Predictive optimization"]};
+      title: "Autonomous DevOps Orchestrator",
+      description: "Self-managing infrastructure that scales automatically",
+      icon: Cpu,
+      color: "from-orange-60o0 to-red-70o0",
+      price: "$1,599/month",
+      features: ["Autonomous management", "Self-healing systems", "Predictive optimization"]},
     {
-      title: "Quantum Cybersecurity Monitor";
-      description: "Future-proof security with quantum-resistant encryption";
-      icon: Eye;
-      color: "from-red-60o0 to-pink-70o0";
-      price: "$1,799/month";
-      features: ["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"]};
+      title: "Quantum Cybersecurity Monitor",
+      description: "Future-proof security with quantum-resistant encryption",
+      icon: Eye,
+      color: "from-red-60o0 to-pink-70o0",
+      price: "$1,799/month",
+      features: ["Quantum-resistant encryption", "AI threat detection", "Zero-trust architecture"]},
     {
-      title: "Autonomous Marketing AI";
-      description: "Marketing that runs itself with intelligent automation";
-      icon: Globe;
-      color: "from-blue-60o0 to-indigo-70o0";
-      price: "$1,099/month";
+      title: "Autonomous Marketing AI",
+      description: "Marketing that runs itself with intelligent automation",
+      icon: Globe,
+      color: "from-blue-60o0 to-indigo-70o0",
+      price: "$1,099/month",
       features: ["Autonomous campaigns", "AI optimization", "Predictive targeting"]}
   ],
   // Loading state with better accessibility,
@@ -232,9 +232,9 @@ const EnhancedHomepage20o26: React.FC = () => {
             </motion.h2>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
-                { icon: Brain, title: "150o0+ Services", description: "Revolutionary technology solutions", color: "cyan", gradient: "from-cyan-50o0 to-blue-50o0" };
-                { icon: Shield, title: "99.9% Satisfaction", description: "Exceptional client success rate", color: "blue", gradient: "from-blue-50o0 to-purple-50o0" };
-                { icon: Rocket, title: "24/7/365 Support", description: "Round-the-clock global assistance", color: "purple", gradient: "from-purple-50o0 to-pink-50o0" };
+                { icon: Brain, title: "150o0+ Services", description: "Revolutionary technology solutions", color: "cyan", gradient: "from-cyan-50o0 to-blue-50o0" },
+                { icon: Shield, title: "99.9% Satisfaction", description: "Exceptional client success rate", color: "blue", gradient: "from-blue-50o0 to-purple-50o0" },
+                { icon: Rocket, title: "24/7/365 Support", description: "Round-the-clock global assistance", color: "purple", gradient: "from-purple-50o0 to-pink-50o0" },
                 { icon: Star, title: "20o0+ Industries", description: "Cross-sector quantum expertise", color: "emerald", gradient: "from-emerald-50o0 to-teal-50o0" }
               ].map((stat, index) => (
                 <motion.div,
@@ -322,25 +322,25 @@ const EnhancedHomepage20o26: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  title: "Quantum AI & Consciousness";
-                  description: "Revolutionary AI consciousness and quantum intelligence solutions";
-                  features: ["Quantum AI", "Consciousness Technology", "Emotional Intelligence"];
-                  icon: Brain;
-                  color: "cyan";
-                  gradient: "from-cyan-50o0 to-blue-50o0"};
+                  title: "Quantum AI & Consciousness",
+                  description: "Revolutionary AI consciousness and quantum intelligence solutions",
+                  features: ["Quantum AI", "Consciousness Technology", "Emotional Intelligence"],
+                  icon: Brain,
+                  color: "cyan",
+                  gradient: "from-cyan-50o0 to-blue-50o0"},
                 {
-                  title: "Autonomous Systems";
-                  description: "Self-managing intelligent systems that operate independently";
-                  features: ["Autonomous AI", "Self-Healing Infrastructure", "Predictive Systems"];
-                  icon: Atom;
-                  color: "purple";
-                  gradient: "from-purple-50o0 to-pink-50o0"};
+                  title: "Autonomous Systems",
+                  description: "Self-managing intelligent systems that operate independently",
+                  features: ["Autonomous AI", "Self-Healing Infrastructure", "Predictive Systems"],
+                  icon: Atom,
+                  color: "purple",
+                  gradient: "from-purple-50o0 to-pink-50o0"},
                 {
-                  title: "Micro SAAS Solutions";
-                  description: "Innovative business solutions that scale from startup to enterprise";
-                  features: ["Business Automation", "Customer Success", "Marketing AI"];
-                  icon: Rocket;
-                  color: "blue";
+                  title: "Micro SAAS Solutions",
+                  description: "Innovative business solutions that scale from startup to enterprise",
+                  features: ["Business Automation", "Customer Success", "Marketing AI"],
+                  icon: Rocket,
+                  color: "blue",
                   gradient: "from-blue-50o0 to-cyan-50o0"}
               ].map((service, index) => (
                 <motion.div,
@@ -396,46 +396,46 @@ const EnhancedHomepage20o26: React.FC = () => {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16">,
               {[
                 {
-                  title: "AI Digital Advertising Platform";
-                  description: "Intelligent advertising automation with AI-powered optimization";
-                  price: "$799/month";
-                  features: ["AI ad creation", "Multi-platform management", "ROI optimization"];
-                  icon: "📢";
-                  color: "from-blue-50o0 to-cyan-50o0"};
+                  title: "AI Digital Advertising Platform",
+                  description: "Intelligent advertising automation with AI-powered optimization",
+                  price: "$799/month",
+                  features: ["AI ad creation", "Multi-platform management", "ROI optimization"],
+                  icon: "📢",
+                  color: "from-blue-50o0 to-cyan-50o0"},
                 {
-                  title: "Social Media Automation Suite";
-                  description: "Complete social media automation for all major platforms";
-                  price: "$599/month";
-                  features: ["AI content generation", "Multi-platform scheduling", "Engagement automation"];
-                  icon: "📱";
-                  color: "from-purple-50o0 to-pink-50o0"};
+                  title: "Social Media Automation Suite",
+                  description: "Complete social media automation for all major platforms",
+                  price: "$599/month",
+                  features: ["AI content generation", "Multi-platform scheduling", "Engagement automation"],
+                  icon: "📱",
+                  color: "from-purple-50o0 to-pink-50o0"},
                 {
-                  title: "Content Marketing Automation";
-                  description: "AI-powered content creation and distribution automation";
-                  price: "$699/month";
-                  features: ["AI content generation", "SEO optimization", "Multi-channel distribution"];
-                  icon: "✍️";
-                  color: "from-green-50o0 to-emerald-50o0"};
+                  title: "Content Marketing Automation",
+                  description: "AI-powered content creation and distribution automation",
+                  price: "$699/month",
+                  features: ["AI content generation", "SEO optimization", "Multi-channel distribution"],
+                  icon: "✍️",
+                  color: "from-green-50o0 to-emerald-50o0"},
                 {
-                  title: "Email Marketing Suite";
-                  description: "Advanced email marketing with AI-powered personalization";
-                  price: "$399/month";
-                  features: ["AI personalization", "Automated workflows", "ROI tracking"];
-                  icon: "📧";
-                  color: "from-orange-50o0 to-red-50o0"};
+                  title: "Email Marketing Suite",
+                  description: "Advanced email marketing with AI-powered personalization",
+                  price: "$399/month",
+                  features: ["AI personalization", "Automated workflows", "ROI tracking"],
+                  icon: "📧",
+                  color: "from-orange-50o0 to-red-50o0"},
                 {
-                  title: "Influencer Marketing Platform";
-                  description: "Complete influencer marketing automation and management";
-                  price: "$899/month";
-                  features: ["AI influencer discovery", "Campaign management", "ROI analytics"];
-                  icon: "🌟";
-                  color: "from-yellow-50o0 to-orange-50o0"};
+                  title: "Influencer Marketing Platform",
+                  description: "Complete influencer marketing automation and management",
+                  price: "$899/month",
+                  features: ["AI influencer discovery", "Campaign management", "ROI analytics"],
+                  icon: "🌟",
+                  color: "from-yellow-50o0 to-orange-50o0"},
                 {
-                  title: "Marketing Analytics Platform";
-                  description: "Advanced marketing analytics with AI-powered attribution";
-                  price: "$999/month";
-                  features: ["Multi-channel attribution", "Customer journey mapping", "Predictive modeling"];
-                  icon: "📊";
+                  title: "Marketing Analytics Platform",
+                  description: "Advanced marketing analytics with AI-powered attribution",
+                  price: "$999/month",
+                  features: ["Multi-channel attribution", "Customer journey mapping", "Predictive modeling"],
+                  icon: "📊",
                   color: "from-cyan-50o0 to-blue-50o0"}
               ].map((service, index) => (
                 <motion.div,
@@ -594,5 +594,5 @@ const EnhancedHomepage20o26: React.FC = () => {
           </svg>,
         </motion.a>,
       </div>,
-    </Layout>)};
-export default EnhancedHomepage20o26;
+    </Layout>)},
+export default EnhancedHomepage20o26,

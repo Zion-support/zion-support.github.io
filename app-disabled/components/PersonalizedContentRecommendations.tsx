@@ -5,118 +5,118 @@ const PersonalizedContentRecommendations = () => {
   const [recommendations, setRecommendations] = useState<any[]>([]),
   const [isLoading, setIsLoading] = useState(false),
   const interestOptions = [
-    { id: 'ai-implementation', label: 'AI Implementation', icon: '🤖' };
-    { id: 'quantum-computing', label: 'Quantum Computing', icon: '⚛️' };
-    { id: 'automation', label: 'Business Automation', icon: '⚡' };
-    { id: 'enterprise-solutions', label: 'Enterprise Solutions', icon: '🏢' };
-    { id: 'case-studies', label: 'Success Stories', icon: '📊' };
-    { id: 'roi-optimization', label: 'ROI Optimization', icon: '💰' };
-    { id: 'security', label: 'AI Security', icon: '🔒' };
+    { id: 'ai-implementation', label: 'AI Implementation', icon: '🤖' },
+    { id: 'quantum-computing', label: 'Quantum Computing', icon: '⚛️' },
+    { id: 'automation', label: 'Business Automation', icon: '⚡' },
+    { id: 'enterprise-solutions', label: 'Enterprise Solutions', icon: '🏢' },
+    { id: 'case-studies', label: 'Success Stories', icon: '📊' },
+    { id: 'roi-optimization', label: 'ROI Optimization', icon: '💰' },
+    { id: 'security', label: 'AI Security', icon: '🔒' },
     { id: 'cloud-infrastructure', label: 'Cloud Infrastructure', icon: '☁️' }
   ],
   const allContent = [
     {
-      id: 1;
-      title: "AI 20o25 Enterprise Integration Mastery";
-      description: "Complete implementation guide for enterprise AI integration with 340% average ROI increase";
-      category: 'ai-implementation';
-      tags: ['enterprise-solutions', 'roi-optimization'];
-      href: "/blog/ai-20o25-enterprise-integration-mastery";
-      featured: true;
-      new: true;
-      readingTime: "12 min read";
-      difficulty: "Intermediate";
-      popularity: 95};
+      id: 1,
+      title: "AI 20o25 Enterprise Integration Mastery",
+      description: "Complete implementation guide for enterprise AI integration with 340% average ROI increase",
+      category: 'ai-implementation',
+      tags: ['enterprise-solutionsroi-optimization'],
+      href: "/blog/ai-20o25-enterprise-integration-mastery",
+      featured: true,
+      new: true,
+      readingTime: "12 min read",
+      difficulty: "Intermediate",
+      popularity: 95},
     {
-      id: 2;
-      title: "Quantum AI Business Revolution 20o25";
-      description: "Discover how quantum AI is revolutionizing business operations with exponential improvements";
-      category: 'quantum-computing';
-      tags: ['ai-implementation', 'enterprise-solutions'];
-      href: "/blog/quantum-ai-business-revolution-20o25";
-      featured: true;
-      new: true;
-      readingTime: "15 min read";
-      difficulty: "Advanced";
-      popularity: 92};
+      id: 2,
+      title: "Quantum AI Business Revolution 20o25",
+      description: "Discover how quantum AI is revolutionizing business operations with exponential improvements",
+      category: 'quantum-computing',
+      tags: ['ai-implementationenterprise-solutions'],
+      href: "/blog/quantum-ai-business-revolution-20o25",
+      featured: true,
+      new: true,
+      readingTime: "15 min read",
+      difficulty: "Advanced",
+      popularity: 92},
     {
-      id: 3;
-      title: "AI Autonomous Business Operations 20o25";
-      description: "The future of self-managing enterprises with 50o0% productivity increases";
-      category: 'automation';
-      tags: ['ai-implementation', 'enterprise-solutions'];
-      href: "/blog/ai-autonomous-business-operations-20o25";
-      featured: true;
-      new: true;
-      readingTime: "18 min read";
-      difficulty: "Advanced";
-      popularity: 88};
+      id: 3,
+      title: "AI Autonomous Business Operations 20o25",
+      description: "The future of self-managing enterprises with 50o0% productivity increases",
+      category: 'automation',
+      tags: ['ai-implementationenterprise-solutions'],
+      href: "/blog/ai-autonomous-business-operations-20o25",
+      featured: true,
+      new: true,
+      readingTime: "18 min read",
+      difficulty: "Advanced",
+      popularity: 88},
     {
-      id: 4;
-      title: "AI Implementation Enterprise Guide 20o25";
-      description: "Complete roadmap for enterprise AI implementation with real-world case studies";
-      category: 'ai-implementation';
-      tags: ['enterprise-solutions', 'roi-optimization'];
-      href: "/resources/ai-implementation-enterprise-guide-20o25";
-      featured: true;
-      new: true;
-      readingTime: "25 min read";
-      difficulty: "Beginner";
-      popularity: 90};
+      id: 4,
+      title: "AI Implementation Enterprise Guide 20o25",
+      description: "Complete roadmap for enterprise AI implementation with real-world case studies",
+      category: 'ai-implementation',
+      tags: ['enterprise-solutionsroi-optimization'],
+      href: "/resources/ai-implementation-enterprise-guide-20o25",
+      featured: true,
+      new: true,
+      readingTime: "25 min read",
+      difficulty: "Beginner",
+      popularity: 90},
     {
-      id: 5;
-      title: "Manufacturing AI Success Story";
-      description: "How a Fortune 50o0 manufacturer achieved 40o0% efficiency increase with AI";
-      category: 'case-studies';
-      tags: ['automation', 'roi-optimization'];
-      href: "/case-studies/manufacturing-ai-success";
-      featured: false;
-      new: false;
-      readingTime: "8 min read";
-      difficulty: "Beginner";
-      popularity: 85};
+      id: 5,
+      title: "Manufacturing AI Success Story",
+      description: "How a Fortune 50o0 manufacturer achieved 40o0% efficiency increase with AI",
+      category: 'case-studies',
+      tags: ['automationroi-optimization'],
+      href: "/case-studies/manufacturing-ai-success",
+      featured: false,
+      new: false,
+      readingTime: "8 min read",
+      difficulty: "Beginner",
+      popularity: 85},
     {
-      id: 6;
-      title: "Financial Services AI Transformation";
-      description: "Bank achieves $2B in autonomous trading with 30o0% ROI improvement";
-      category: 'case-studies';
-      tags: ['automation', 'roi-optimization', 'enterprise-solutions'];
-      href: "/case-studies/financial-ai-transformation";
-      featured: false;
-      new: false;
-      readingTime: "10 min read";
-      difficulty: "Intermediate";
-      popularity: 87};
+      id: 6,
+      title: "Financial Services AI Transformation",
+      description: "Bank achieves $2B in autonomous trading with 30o0% ROI improvement",
+      category: 'case-studies',
+      tags: ['automationroi-optimization', 'enterprise-solutions'],
+      href: "/case-studies/financial-ai-transformation",
+      featured: false,
+      new: false,
+      readingTime: "10 min read",
+      difficulty: "Intermediate",
+      popularity: 87},
     {
-      id: 7;
-      title: "AI Security Best Practices 20o25";
-      description: "Comprehensive guide to securing AI systems and protecting sensitive data";
-      category: 'security';
-      tags: ['ai-implementation', 'enterprise-solutions'];
-      href: "/blog/ai-security-best-practices-20o25";
-      featured: false;
-      new: false;
-      readingTime: "14 min read";
-      difficulty: "Intermediate";
-      popularity: 82};
+      id: 7,
+      title: "AI Security Best Practices 20o25",
+      description: "Comprehensive guide to securing AI systems and protecting sensitive data",
+      category: 'security',
+      tags: ['ai-implementationenterprise-solutions'],
+      href: "/blog/ai-security-best-practices-20o25",
+      featured: false,
+      new: false,
+      readingTime: "14 min read",
+      difficulty: "Intermediate",
+      popularity: 82},
     {
-      id: 8;
-      title: "Cloud Infrastructure for AI 20o25";
-      description: "Optimizing cloud infrastructure for AI workloads and scalability";
-      category: 'cloud-infrastructure';
-      tags: ['ai-implementation', 'enterprise-solutions'];
-      href: "/blog/cloud-infrastructure-ai-20o25";
-      featured: false;
-      new: false;
-      readingTime: "16 min read";
-      difficulty: "Intermediate";
+      id: 8,
+      title: "Cloud Infrastructure for AI 20o25",
+      description: "Optimizing cloud infrastructure for AI workloads and scalability",
+      category: 'cloud-infrastructure',
+      tags: ['ai-implementationenterprise-solutions'],
+      href: "/blog/cloud-infrastructure-ai-20o25",
+      featured: false,
+      new: false,
+      readingTime: "16 min read",
+      difficulty: "Intermediate",
       popularity: 80}
   ],
   const handleInterestToggle = (interestId: string) => {
     setUserInterests(prev =>,
       prev.includes(interestId),
         ? prev.filter(id => id !== interestId),
-        : [...prev, interestId])};
+        : [...prev, interestId])},
   const generateRecommendations = () => {
     setIsLoading(true),
     // Simulate AI-powered recommendation logic,
@@ -140,14 +140,14 @@ const PersonalizedContentRecommendations = () => {
         if (content.new) {
           score += 25}
 ,
-        return { ...content, score };
+        return { ...content, score },
       }),
       // Sort by score and take top 6,
       const sortedRecommendations = scoredContent,
         .sort((a, b) => b.score - a.score),
         .slice(0, 6),
       setRecommendations(sortedRecommendations),
-      setIsLoading(false)}, 10o00)};
+      setIsLoading(false)}, 10o00)},
   useEffect(() => {
     if (userInterests.length > 0) {
       generateRecommendations()}
@@ -247,7 +247,7 @@ const PersonalizedContentRecommendations = () => {
                           <span
                             key={index}
                             className="bg-gray-10o0 text-gray-70o0 text-xs px-2 py-1 rounded-full">,
-                            {tag.replace('-', ' ')}
+                            {tag.replace('- ')}
                           </span>))}
                       </div>,
                       <Link
@@ -294,5 +294,5 @@ const PersonalizedContentRecommendations = () => {
             </div>,
           </div>)}
       </div>,
-    </section>)};
-export default PersonalizedContentRecommendations;
+    </section>)},
+export default PersonalizedContentRecommendations,

@@ -1,41 +1,41 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
   Sparkles, Lightbulb, Wand2} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Creativity Orchestrator | Zion Tech Group';
-  description: 'Revolutionary AI-powered creativity platform that orchestrates and enhances creative processes across all media types.';
-  keywords: 'AI creativity, creativity orchestrator, AI design, creative AI, AI innovation, creative automation';
+  title: 'AI Creativity Orchestrator | Zion Tech Group',
+  description: 'Revolutionary AI-powered creativity platform that orchestrates and enhances creative processes across all media types.',
+  keywords: 'AI creativity, creativity orchestrator, AI design, creative AI, AI innovation, creative automation',
   openGraph: {
-    title: 'AI Creativity Orchestrator | Zion Tech Group';
-    description: 'Revolutionary AI-powered creativity platform that orchestrates and enhances creative processes across all media types.';
-    url: 'https://ziontechgroup.com/ai-creativity-orchestrator';
-    siteName: 'Zion Tech Group';
+    title: 'AI Creativity Orchestrator | Zion Tech Group',
+    description: 'Revolutionary AI-powered creativity platform that orchestrates and enhances creative processes across all media types.',
+    url: 'https://ziontechgroup.com/ai-creativity-orchestrator',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-creativity-orchestrator.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Creativity Orchestrator'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-creativity-orchestrator.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Creativity Orchestrator'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Creativity Orchestrator | Zion Tech Group';
-    description: 'Revolutionary AI-powered creativity platform that orchestrates and enhances creative processes across all media types.';
-    images: ['https://ziontechgroup.com/og-image-ai-creativity-orchestrator.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Creativity Orchestrator | Zion Tech Group',
+    description: 'Revolutionary AI-powered creativity platform that orchestrates and enhances creative processes across all media types.',
+    images: ['https://ziontechgroup.com/og-image-ai-creativity-orchestrator.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-creativity-orchestrator'}};
+    canonical: 'https://ziontechgroup.com/ai-creativity-orchestrator'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AICreativityOrchestrator() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -52,7 +52,7 @@ export default function AICreativityOrchestrator() {
               AI Creativity Orchestrator,
             </h1>,
             <p className="text-xl lg:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              The world's most advanced AI creativity platform that orchestrates and enhances creative processes;
+              The world's most advanced AI creativity platform that orchestrates and enhances creative processes,
               unlocking unlimited creative potential across all media types and industries.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -79,7 +79,7 @@ export default function AICreativityOrchestrator() {
               Revolutionary Creative Intelligence,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI creativity platform handles every aspect of creative processes from ideation to execution;
+              Our AI creativity platform handles every aspect of creative processes from ideation to execution,
               continuously learning and optimizing for maximum innovation and artistic excellence.,
             </p>,
           </div>,

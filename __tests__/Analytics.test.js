@@ -1,8 +1,8 @@
-import React from 'react';',
+import React from 'react,
 import '@testing-library/jest-dom',',
-import Analytics from '../components/Analytics',',describe('Analytics', () => {'}
+import Analytics from '../components/Analytics,describe('Analytics', () => {'}
 import _React from 'react',
-import Analytics from '../components/Analytics',',
+import Analytics from '../components/Analytics,
 ursor/automate-test-improve-and-merge-code-646c,
   test('renders without crashing', () => {'}
     render(<Analytics  />),expect(screen.getByTestId('analytics')).toBeInTheDocument()'}),test('displays correct content', () => {'}
@@ -28,12 +28,12 @@ describe('Analytics', () => {',
   test('handles user interactions', () => {',
   test('applies correct styling', () => {',
 ursor/automate-test-improve-and-merge-code-646c,
-    render(<Analytics  />);
-    expect(screen.getByTestId('analytics')).toBeInTheDocument(),'});
+    render(<Analytics  />),
+    expect(screen.getByTestId('analytics')).toBeInTheDocument(),'}),
   test('displays correct content', () => {'}
-    render(<Analytics  />)});
+    render(<Analytics  />)}),
   test('handles user interactions', () => {'}
-    render(<Analytics  />)});
+    render(<Analytics  />)}),
   test('applies correct styling', () => {'}
     render(<Analytics  />)})})}),
 '',

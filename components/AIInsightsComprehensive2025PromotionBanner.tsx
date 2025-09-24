@@ -125,38 +125,38 @@ export default function AIInsightsComprehensive20o25PromotionBanner() {
     </div>)}
 ,
 const keyMetrics = [
-  { value: "87%"label: "AI Success Rate" };
-  { value: "340%"label: "Average ROI" };
-  { value: "2.3M"label: "Jobs Created" };
+  { value: "87%"label: "AI Success Rate" },
+  { value: "340%"label: "Average ROI" },
+  { value: "2.3M"label: "Jobs Created" },
   { value: "45%"label: "Market Growth" }
 ],
 const marketAnalysis = [
   {
-    icon: <TrendingUp className="h-5 w-5 text-white"  />;
-    title: "AI Market Growth Analysis";
-    category: "Market Research";
-    description: "Comprehensive analysis of AI market growth and investment trends.";
-    growth: "45% YoY Growth"};
+    icon: <TrendingUp className="h-5 w-5 text-white"  />,
+    title: "AI Market Growth Analysis",
+    category: "Market Research",
+    description: "Comprehensive analysis of AI market growth and investment trends.",
+    growth: "45% YoY Growth"},
   {
-    icon: <BarChart3 className="h-5 w-5 text-white"  />;
-    title: "Enterprise AI Adoption";
-    category: "Business Intelligence";
-    description: "Deep dive into enterprise AI adoption and business impact.";
+    icon: <BarChart3 className="h-5 w-5 text-white"  />,
+    title: "Enterprise AI Adoption",
+    category: "Business Intelligence",
+    description: "Deep dive into enterprise AI adoption and business impact.",
     growth: "78% Adoption Rate"}
 ],
 const industryImpact = [
-  { icon: <Brain className="h-6 w-6 text-white"  />name: "Healthcare"adoption: "92%"roi: "450%" };
-  { icon: <Target className="h-6 w-6 text-white"  />name: "Finance"adoption: "88%"roi: "380%" };
-  { icon: <Users className="h-6 w-6 text-white"  />name: "Manufacturing"adoption: "85%"roi: "420%" };
+  { icon: <Brain className="h-6 w-6 text-white"  />name: "Healthcare"adoption: "92%"roi: "450%" },
+  { icon: <Target className="h-6 w-6 text-white"  />name: "Finance"adoption: "88%"roi: "380%" },
+  { icon: <Users className="h-6 w-6 text-white"  />name: "Manufacturing"adoption: "85%"roi: "420%" },
   { icon: <Globe className="h-6 w-6 text-white"  />name: "Retail"adoption: "78%"roi: "320%" }
 ],
 const futurePredictions = [
   {
-    title: "Artificial General Intelligence";
-    description: "First AGI systems will emerge with human-level reasoning.";
-    timeline: "20o27-20o29"};
+    title: "Artificial General Intelligence",
+    description: "First AGI systems will emerge with human-level reasoning.",
+    timeline: "20o27-20o29"},
   {
-    title: "Quantum AI Revolution";
-    description: "Quantum computing will enable unprecedented AI power.";
+    title: "Quantum AI Revolution",
+    description: "Quantum computing will enable unprecedented AI power.",
     timeline: "20o26-20o28"}
 ],

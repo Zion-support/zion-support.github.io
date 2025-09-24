@@ -79,5 +79,5 @@ const AI20o26UltimateBreakthroughBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26UltimateBreakthroughBanner;
+    </section>)},
+export default AI20o26UltimateBreakthroughBanner,

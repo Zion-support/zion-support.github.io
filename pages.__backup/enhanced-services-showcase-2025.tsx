@@ -3,9 +3,9 @@ import Head from 'next/head',
 import { motionAnimatePresence } from 'framer-motion',
 import {
   SearchStarUsersTrendingUp,
-  DollarSignClockCheckCircleArrowRight;
+  DollarSignClockCheckCircleArrowRight,
   RocketMonitorCpu,
-  ZapDatabaseCloudLockCode;
+  ZapDatabaseCloudLockCode,
   SparklesTargetAwardLightbulb} from 'lucide-react',
 import { innovativeRealMicroSaasServices20o25 as allData } from '../data/20o25-innovative-real-micro-saas-services',
 import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
@@ -23,26 +23,26 @@ export default function EnhancedServicesShowcase20o25() {
   const spaceCount = allServices.filter(service => service.category.includes('Space')).length,
   const cybersecurityCount = allServices.filter(service => service.category.includes('Security') || service.category.includes('Cybersecurity')).length,
   const categories = [
-    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length };
-    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount };
-    { id: 'quantum'name: 'Quantum Computing'icon: '⚛️'count: quantumCount };
-    { id: 'blockchain'name: 'Blockchain & Web3'icon: '⛓️'count: blockchainCount };
-    { id: 'iot'name: 'IoT & Edge Computing'icon: '🌐'count: iotCount };
-    { id: 'space'name: 'Space Technology'icon: '🚀'count: spaceCount };
+    { id: 'all'name: 'All Services'icon: '🚀'count: allServices.length },
+    { id: 'ai'name: 'AI & Machine Learning'icon: '🧠'count: aiCount },
+    { id: 'quantum'name: 'Quantum Computing'icon: '⚛️'count: quantumCount },
+    { id: 'blockchain'name: 'Blockchain & Web3'icon: '⛓️'count: blockchainCount },
+    { id: 'iot'name: 'IoT & Edge Computing'icon: '🌐'count: iotCount },
+    { id: 'space'name: 'Space Technology'icon: '🚀'count: spaceCount },
     { id: 'security'name: 'Cybersecurity'icon: '🔒'count: cybersecurityCount }
   ],
   const priceRanges = [
-    { id: 'all'name: 'All Prices'range: 'All' };
-    { id: 'low'name: 'Under $2K/month'range: 'Under $2K' };
-    { id: 'medium'name: '$2K - $8K/month'range: '$2K - $8K' };
-    { id: 'high'name: '$8K - $20K/month'range: '$8K - $20K' };
+    { id: 'all'name: 'All Prices'range: 'All' },
+    { id: 'low'name: 'Under $2K/month'range: 'Under $2K' },
+    { id: 'medium'name: '$2K - $8K/month'range: '$2K - $8K' },
+    { id: 'high'name: '$8K - $20K/month'range: '$8K - $20K' },
     { id: 'premium'name: '$20K+/month'range: '$20K+' }
   ],
   const sortOptions = [
-    { id: 'name'name: 'Name A-Z' };
-    { id: 'price-low'name: 'Price Low to High' };
-    { id: 'price-high'name: 'Price High to Low' };
-    { id: 'rating'name: 'Rating' };
+    { id: 'name'name: 'Name A-Z' },
+    { id: 'price-low'name: 'Price Low to High' },
+    { id: 'price-high'name: 'Price High to Low' },
+    { id: 'rating'name: 'Rating' },
     { id: 'customers'name: 'Customer Count' }
   ],
   // Filter and sort services,
@@ -53,7 +53,7 @@ export default function EnhancedServicesShowcase20o25() {
         const match = price.replace(/[^0-9.]/g''),
         const parsed = parseFloat(match || '0'),
         return isNaN(parsed) ? 0 : parsed}
-      return 0};
+      return 0},
     let filtered = allServices.filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -90,22 +90,22 @@ export default function EnhancedServicesShowcase20o25() {
 ,
     return filtered}[searchTermselectedCategoryselectedPriceRangesortByallServices]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0y: 20 };
+    hidden: { opacity: 0y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <EnhancedFuturisticBackground
       intensity="high",

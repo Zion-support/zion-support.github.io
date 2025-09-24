@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Agents ROI Playbook 20o26 | Zion Tech Group';
+  title: 'AI Agents ROI Playbook 20o26 | Zion Tech Group',
   description:,
-    'A practical playbook to model, track, and realize ROI from enterprise AI agents with evidence-driven governance.';
-};
+    'A practical playbook to model, track, and realize ROI from enterprise AI agents with evidence-driven governance.',
+},
 export default function AIAgentsROIPlaybook20o26() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -27,7 +27,7 @@ export default function AIAgentsROIPlaybook20o26() {
         <div className='max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 prose prose-lg'>,
           <h2>Measure What Matters</h2>,
           <p>,
-            Define success metrics aligned to business outcomes: cycle time;
+            Define success metrics aligned to business outcomes: cycle time,
             quality, cost-to-serve, and risk. Use counterfactuals and guardrail,
             pass rates to quantify value and confidence.,
           </p>,

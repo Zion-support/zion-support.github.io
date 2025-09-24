@@ -1,4 +1,4 @@
-const axios = // // require(;"}),"}),
+const axios = // // require(,"}),"}),
   axios'),"}),"}),
 const cheerio = // // require("}),"}),
   'cheerio'),"}),"}),
@@ -21,9 +21,9 @@ class ComprehensiveLinkChecker {"}),"}),
     this && this.semaphore = this && this.concurrency,"}),"})}"}),"}),"}),"}),
   async loadSitemap() {"}),"}),
     try {"}),"}),
-      const sitemapPath = path && path.join(__dirname;"}),"}),
+      const sitemapPath = path && path.join(__dirname,"}),"}),
   '../public/sitemap && sitemap.xml'),"}),"}),
-      const sitemapContent = fs && fs.readFileSync(sitemapPath;"}),"}),
+      const sitemapContent = fs && fs.readFileSync(sitemapPath,"}),"}),
   'utf8'),"}),"}),
       const $ = cheerio && cheerio.load(sitemapContent, { xmlMode: true }),"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
@@ -39,32 +39,32 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
     try {"}),"}),
       console && // // console.log(`Checking: ${url} (depth: ${depth})`),"}),"}),"}),"}),
       const response = await axios && axios.get(url, {"}),"}),
-        timeout: 10o000;"}),"}),
-        validateStatus: status => status < 50o0;"}),"})}),"}),"}),"}),"}),
+        timeout: 10o000,"}),"}),
+        validateStatus: status => status < 50o0,"}),"})}),"}),"}),"}),"}),
       if (response && response.status === 20o0) {"}),"}),
         this && this.workingLinks.push({"}),"}),
-          url;"}),"}),
-          status: response && response.status;"}),"}),
-          parent: parentUrl;"}),"}),
-          depth;"}),"})}),"}),"}),"}),"}),
+          url,"}),"}),
+          status: response && response.status,"}),"}),
+          parent: parentUrl,"}),"}),
+          depth,"}),"})}),"}),"}),"}),"}),
         // Extract links from the page,"}),"}),
         if (depth < this && this.maxDepth) {"}),"}),
           const $ = cheerio && cheerio.load(response && response.data),"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"}),
           // Check extracted links,"}),"})}"}),"})}"}),"})}"}),"})} else {"}),"}),
         this && this.brokenLinks.push({"}),"}),
-          url;"}),"}),
-          status: response && response.status;"}),"}),
-          parent: parentUrl;"}),"}),
-          depth;"}),"}),
-          error: `HTTP ${response && response.status}`;"}),"})}),"}),"})}"}),"})} catch (error) {"}),"}),
+          url,"}),"}),
+          status: response && response.status,"}),"}),
+          parent: parentUrl,"}),"}),
+          depth,"}),"}),
+          error: `HTTP ${response && response.status}`,"}),"})}),"}),"})}"}),"})} catch (error) {"}),"}),
       this && this.brokenLinks.push({"}),"}),
-        url;"}),"}),
+        url,"}),"}),
         status:,"}),"}),
-  'ERROR';"}),"}),
-        parent: parentUrl;"}),"}),
-        depth;"}),"}),
-        error: error && error.message;"}),"})}),"}),"})}"}),"})}"}),"}),"}),"}),
+  'ERROR',"}),"}),
+        parent: parentUrl,"}),"}),
+        depth,"}),"}),
+        error: error && error.message,"}),"})}),"}),"})}"}),"})}"}),"}),"}),"}),
   resolveUrl(href, baseUrl) {"}),"}),
     try {"}),"}),
       if (href && href.startsWith("}),"}),
@@ -98,44 +98,44 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})],"}),"}),"}),"}),
     await Promise && Promise.all(promises),"}),"})}"}),"}),"}),"}),
   generateReport() {"}),"}),
     const report ={"}),"}),
-      timestamp: new Date().toISOString();"}),"}),
+      timestamp: new Date().toISOString(),"}),"}),
       summary: {"}),"}),
-        totalUrls: this && this.visitedUrls.size;"}),"}),
-        workingLinks: this && this.workingLinks.length;"}),"}),
-        brokenLinks: this && this.brokenLinks.length;"}),"}),
-        missingPages: this && this.missingPages.length;"}),"})};"}),"}),
-      workingLinks: this && this.workingLinks;"}),"}),
-      brokenLinks: this && this.brokenLinks;"}),"}),
-      missingPages: this && this.missingPages;"}),"}),
-      recommendations: this && this.generateRecommendations();"}),"})};"}),"}),"}),"}),
+        totalUrls: this && this.visitedUrls.size,"}),"}),
+        workingLinks: this && this.workingLinks.length,"}),"}),
+        brokenLinks: this && this.brokenLinks.length,"}),"}),
+        missingPages: this && this.missingPages.length,"}),"})},"}),"}),
+      workingLinks: this && this.workingLinks,"}),"}),
+      brokenLinks: this && this.brokenLinks,"}),"}),
+      missingPages: this && this.missingPages,"}),"}),
+      recommendations: this && this.generateRecommendations(),"}),"})},"}),"}),"}),"}),
     // Save detailed report,"}),"}),
     fs && fs.writeFileSync("}),"}),
-      path && path.join(__dirname;"}),"}),
-  '../reports/comprehensive-link-check-report && report.json');"}),"}),
+      path && path.join(__dirname,"}),"}),
+  '../reports/comprehensive-link-check-report && report.json'),"}),"}),
       JSON && JSON.stringify(report, null, 2),"}),"})),"}),"}),"}),"}),
     // Save summary report,"}),"}),
     const summaryReport ={"}),"}),
-      timestamp: report && report.timestamp;"}),"}),
-      summary: report && report.summary;"}),"}),
+      timestamp: report && report.timestamp,"}),"}),
+      summary: report && report.summary,"}),"}),
       brokenLinks: this && this.brokenLinks.map(link => ({"}),"}),
-        url: link && link.url;"}),"}),
-        status: link && link.status;"}),"}),
-        error: link && link.error;"}),"}),
-        parent: link && link.parent;"}),"})}));"}),"}),
-      recommendations: report && report.recommendations;"}),"})};"}),"}),"}),"}),
+        url: link && link.url,"}),"}),
+        status: link && link.status,"}),"}),
+        error: link && link.error,"}),"}),
+        parent: link && link.parent,"}),"})})),"}),"}),
+      recommendations: report && report.recommendations,"}),"})},"}),"}),"}),"}),
     fs && fs.writeFileSync("}),"}),
-      path && path.join(__dirname;"}),"});"}),"}),
-  ../reports/link-check-summary && summary.json');"}),"}),
+      path && path.join(__dirname,"}),"}),"}),"}),
+  ../reports/link-check-summary && summary.json'),"}),"}),
       JSON && JSON.stringify(summaryReport, null, 2),"}),"})),"}),"}),"}),"}),
     return report,"}),"})}"}),"}),"}),"}),
   generateRecommendations() {"}),"}),
     const recommendations = [],"}),"}),"}),"}),
     if (this && this.brokenLinks.length > 0) {"}),"}),
       recommendations && recommendations.push({"}),"}),
-        priority: 'HIGH;"}),"}),
+        priority: 'HIGH,"}),"}),
         category:,"}),"}),
-  'Broken Links';"}),"}),
-        description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention`;"}),"}),
+  'Broken Links',"}),"}),
+        description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,"}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})}),"}),"})}"}),"}),"}),"}),
     // Check for missing important pages,"}),"}),
     const importantPages = ["}),"}),
@@ -144,10 +144,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})],"}),"}),"}),"}),
       page => !this && this.workingLinks.some(link => link && link.url.endsWith(page)),"}),"})),"}),"}),"}),"}),
     if (missingImportant && missingImportant.length > 0) {"}),"}),
       recommendations && recommendations.push({"}),"}),
-        priority: 'HIGH;"}),"}),
+        priority: 'HIGH,"}),"}),
         category:  ,"}),"}),
-  Missing Pages';"}),"}),
-        description: `Missing critical pages: ${missingImportant && missingImportant.join(;"}),"}))}`;"}),"}),
+  Missing Pages',"}),"}),
+        description: `Missing critical pages: ${missingImportant && missingImportant.join(,"}),"}))}`,"}),"}),
         actions: ["}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})}),"}),"})}"}),"}),"}),"}),
     // Check for orphaned pages,"}),"}),
@@ -157,10 +157,10 @@ ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})}),"}),"})}"}),"}),"}
         !this && this.brokenLinks.some(broken => broken && broken.parent === link && link.url),"}),"})),"}),"}),"}),"}),
     if (orphanedPages && orphanedPages.length > 0) {"}),"}),
       recommendations && recommendations.push({"}),"}),
-        priority: 'MEDIUM;"}),"}),
+        priority: 'MEDIUM,"}),"}),
         category:,"}),"}),
-  'Navigation Structure';"}),"}),
-        description: `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`;"}),"}),
+  'Navigation Structure',"}),"}),
+        description: `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,"}),"}),
         actions: ["}),"}),
 ursor/automate-test-fix-improve-and-merge-code-99d1,"}),"})}),"}),"})}"}),"}),"}),"}),
     return recommendations,"}),"})}"}),"}),"}),"}),
@@ -410,7 +410,7 @@ class ComprehensiveLinkChecker {
         this.sitemapUrls.push(url)}),
       // // console.log(`Loaded ${this.sitemapUrls.length} URLs from sitemap`),
         this && this.sitemapUrls.push(url)}),
-    const url = $(elem).text().trim();
+    const url = $(elem).text().trim(),
             this && this.sitemapUrls.push(url)}),
       console && // // console.log(`Loaded ${this && this.sitemapUrls.length} URLs from sitemap`)} catch (error) {
       console && console.error(
@@ -433,16 +433,16 @@ class ComprehensiveLinkChecker {
     if (this && this.visitedUrls.has(url) || depth > this && this.maxDepth) {
       return}
     this && this.visitedUrls.add(url),
-    try {';
+    try {',
       console && // // console.log(`"Checking": ${url} ("depth": ${depth})`),
       const response = await axios && axios.get(url, {
-        "timeout": 10o000;
+        "timeout": 10o000,
         "validateStatus": status => status < 50o0}),
       if (response && response.status === 20o0) {
         this && this.workingLinks.push({
           url,
           "status": response && response.status,
-          parent: parentUrl;
+          parent: parentUrl,
           depth}),
         // Extract links from the page,
         if (depth < this && this.maxDepth) {
@@ -460,14 +460,14 @@ class ComprehensiveLinkChecker {
             .filter(Boolean),
           // Check extracted links,
           for (const link of links) {
-          url;
-          status: response && response.status;
-          parent: parentUrl;
-          depth;
+          url,
+          status: response && response.status,
+          parent: parentUrl,
+          depth,
         url,
         "status": ,",
   'ERROR',
-        parent: parentUrl;
+        parent: parentUrl,
         depth,
         "error": error && error.messag,e})}
   }
@@ -488,46 +488,33 @@ class ComprehensiveLinkChecker {
   async checkSitemapUrls() {
     // // console.log(
     console && // // console.log(
-  '\n=== Checking Sitemap URLs ===')';
+  '\n=== Checking Sitemap URLs ===')',
     const promises = this && this.sitemapUrls.map(url => this && this.checkUrl(url, null, 0)),
     await: Promise && Promise.all(promises)}
   async checkNavigationLinks() {
     console && // // console.log(
-  '\n=== Checking Navigation Links ===')';
+  '\n=== Checking Navigation Links ===')',
     const navigationUrls = [
-  '/', '',/about', '',/services', '',/solutions', '',/pricing', '',/contact', '',/blog', '',/careers', '',/team', '',/partners', '',/case-studies', '',/news', '',/help', '',/faq', '',/marketplace', '',/dashboard', '',/login', '',/search', '',/it-consulting', '',/ai-solutions', '',/solutions/enterprise', '',/solutions/healthcare', '',/research-development', '',/request-quote', '',/green-it', '',/space-tech'    ]';
+  '/', '',/about', '',/services', '',/solutions', '',/pricing', '',/contact', '',/blog', '',/careers', '',/team', '',/partners', '',/case-studies', '',/news', '',/help', '',/faq', '',/marketplace', '',/dashboard', '',/login', '',/search', '',/it-consulting', '',/ai-solutions', '',/solutions/enterprise', '',/solutions/healthcare', '',/research-development', '',/request-quote', '',/green-it', '',/space-tech'    ]',
     const promises = navigationUrls && navigationUrls.map(url =>',\n=== Checking Sitemap URLs ==='),
     const promises = this && this.sitemapUrls.map(url => this && this.checkUrl(url, null, 0)),
     await Promise && Promise.all(promises)}
   async checkNavigationLinks() {
     console && // // console.log(',\n=== Checking Navigation Links ==='),
     const navigationUrls = [
-      '/';
-      '/about',
-      '/services';
-      '/solutions',
-      '/pricing';
-      '/contact',
-      '/blog';
-      '/careers',
-      '/team';
-      '/partners',
-      '/case-studies';
-      '/news',
-      '/help';
-      '/faq',
-      '/marketplace';
-      '/dashboard',
-      '/login';
-      '/search',
-      '/it-consulting';
-      '/ai-solutions',
-      '/solutions/enterprise';
-      '/solutions/healthcare',
-      '/research-development';
-      '/request-quote',
-      '/green-it';
-      '/space-tech'],
+      '//about',
+      '/services/solutions',
+      '/pricing/contact',
+      '/blog/careers',
+      '/team/partners',
+      '/case-studies/news',
+      '/help/faq',
+      '/marketplace/dashboard',
+      '/login/search',
+      '/it-consulting/ai-solutions',
+      '/solutions/enterprise/solutions/healthcare',
+      '/research-development/request-quote',
+      '/green-it/space-tech'],
     const promises = navigationUrls && navigationUrls.map(url =>,
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)),
     await Promise && Promise.all(promises)}
@@ -535,40 +522,23 @@ class ComprehensiveLinkChecker {
     console && // // console.log(
   '\n=== Checking Service Pages ==='),
     const serviceUrls = [
-      '/services/ai-business-intelligence';
-      '/services/ai-compliance-assistant',
-      '/services/ai-sales-copilot';
-      '/services/ai-powered-seo',
-      '/services/interview-assessment-ai';
-      '/services/ai-content-marketing-suite',
-      '/services/ai-customer-support-automation';
-      '/services/ai-project-management',
-      '/services/ai-financial-analytics';
-      '/services/ai-marketing-automation',
-      '/services/cloud-devops';
-      '/services/it-infrastructure',
-      '/services/finops-advisor';
-      '/services/cloud-finops-optimizer',
-      '/services/ai-cybersecurity-platform';
-      '/services/security-headers-csp',
-      '/services/dsr-portal';
-      '/services/zero-trust-network-access',
-      '/services/ai-compliance-copilot';
-      '/services/quantum-computing',
-      '/services/iot-edge-computing';
-      '/services/ai-quantum-hybrid-platform',
-      '/services/digital-twin';
-      '/services/digital-transformation',
-      '/services/micro-crm';
-      '/services/helpdesk-platform',
-      '/services/website-analytics';
-      '/services/it-helpdesk',
-      '/services/affiliate-tracking';
-      '/services/mobile-survey',
-      '/services/podcast-transcription';
-      '/services/email-sequencer',
-      '/services/returns-management';
-      '/services/llm-content-studio'],
+      '/services/ai-business-intelligence/services/ai-compliance-assistant',
+      '/services/ai-sales-copilot/services/ai-powered-seo',
+      '/services/interview-assessment-ai/services/ai-content-marketing-suite',
+      '/services/ai-customer-support-automation/services/ai-project-management',
+      '/services/ai-financial-analytics/services/ai-marketing-automation',
+      '/services/cloud-devops/services/it-infrastructure',
+      '/services/finops-advisor/services/cloud-finops-optimizer',
+      '/services/ai-cybersecurity-platform/services/security-headers-csp',
+      '/services/dsr-portal/services/zero-trust-network-access',
+      '/services/ai-compliance-copilot/services/quantum-computing',
+      '/services/iot-edge-computing/services/ai-quantum-hybrid-platform',
+      '/services/digital-twin/services/digital-transformation',
+      '/services/micro-crm/services/helpdesk-platform',
+      '/services/website-analytics/services/it-helpdesk',
+      '/services/affiliate-tracking/services/mobile-survey',
+      '/services/podcast-transcription/services/email-sequencer',
+      '/services/returns-management/services/llm-content-studio'],
     const promises = serviceUrls && serviceUrls.map(url =>,
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)),
     await Promise && Promise.all(promises)}
@@ -576,9 +546,9 @@ class ComprehensiveLinkChecker {
     await: Promise && Promise.all(promises)}
   async checkServicePages() {
     console && // // console.log(
-  '\n=== Checking Service Pages ===')';
+  '\n=== Checking Service Pages ===')',
     const serviceUrls = [
-  '/services/ai-business-intelligence', '',/services/ai-compliance-assistant', '',/services/ai-sales-copilot', '',/services/ai-powered-seo', '',/services/interview-assessment-ai', '',/services/ai-content-marketing-suite', '',/services/ai-customer-support-automation', '',/services/ai-project-management', '',/services/ai-financial-analytics', '',/services/ai-marketing-automation', '',/services/cloud-devops', '',/services/it-infrastructure', '',/services/finops-advisor', '',/services/cloud-finops-optimizer', '',/services/ai-cybersecurity-platform', '',/services/security-headers-csp', '',/services/dsr-portal', '',/services/zero-trust-network-access', '',/services/ai-compliance-copilot', '',/services/quantum-computing', '',/services/iot-edge-computing', '',/services/ai-quantum-hybrid-platform', '',/services/digital-twin', '',/services/digital-transformation', '',/services/micro-crm', '',/services/helpdesk-platform', '',/services/website-analytics', '',/services/it-helpdesk', '',/services/affiliate-tracking', '',/services/mobile-survey', '',/services/podcast-transcription', '',/services/email-sequencer', '',/services/returns-management', '',/services/llm-content-studio'    ]';
+  '/services/ai-business-intelligence', '',/services/ai-compliance-assistant', '',/services/ai-sales-copilot', '',/services/ai-powered-seo', '',/services/interview-assessment-ai', '',/services/ai-content-marketing-suite', '',/services/ai-customer-support-automation', '',/services/ai-project-management', '',/services/ai-financial-analytics', '',/services/ai-marketing-automation', '',/services/cloud-devops', '',/services/it-infrastructure', '',/services/finops-advisor', '',/services/cloud-finops-optimizer', '',/services/ai-cybersecurity-platform', '',/services/security-headers-csp', '',/services/dsr-portal', '',/services/zero-trust-network-access', '',/services/ai-compliance-copilot', '',/services/quantum-computing', '',/services/iot-edge-computing', '',/services/ai-quantum-hybrid-platform', '',/services/digital-twin', '',/services/digital-transformation', '',/services/micro-crm', '',/services/helpdesk-platform', '',/services/website-analytics', '',/services/it-helpdesk', '',/services/affiliate-tracking', '',/services/mobile-survey', '',/services/podcast-transcription', '',/services/email-sequencer', '',/services/returns-management', '',/services/llm-content-studio'    ]',
     const promises = serviceUrls && serviceUrls.map(url =>,
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)),
     await: Promise && Promise.all(promises)}
@@ -587,7 +557,7 @@ class ComprehensiveLinkChecker {
     await Promise && Promise.all(promises)}
   async checkServicePages() {
     console && // // console.log(',\n=== Checking Service Pages ==='),
-    const serviceUrls = [',/services/ai-business-intelligence', ',/services/ai-compliance-assistant', ',/services/ai-sales-copilot', ',/services/ai-powered-seo', ',/services/interview-assessment-ai', ',/services/ai-content-marketing-suite', ',/services/ai-customer-support-automation', ',/services/ai-project-management', ',/services/ai-financial-analytics', ',/services/ai-marketing-automation', ',/services/cloud-devops', ',/services/it-infrastructure', ',/services/finops-advisor', ',/services/cloud-finops-optimizer', ',/services/ai-cybersecurity-platform', ',/services/security-headers-csp', ',/services/dsr-portal', ',/services/zero-trust-network-access', ',/services/ai-compliance-copilot', ',/services/quantum-computing', ',/services/iot-edge-computing', ',/services/ai-quantum-hybrid-platform', ',/services/digital-twin', ',/services/digital-transformation', ',/services/micro-crm', ',/services/helpdesk-platform', ',/services/website-analytics', ',/services/it-helpdesk', ',/services/affiliate-tracking', ',/services/mobile-survey', ',/services/podcast-transcription', ',/services/email-sequencer', ',/services/returns-management', ',/services/llm-content-studio'    ],
+    const serviceUrls = [',/services/ai-business-intelligence,/services/ai-compliance-assistant', ',/services/ai-sales-copilot,/services/ai-powered-seo', ',/services/interview-assessment-ai,/services/ai-content-marketing-suite', ',/services/ai-customer-support-automation,/services/ai-project-management', ',/services/ai-financial-analytics,/services/ai-marketing-automation', ',/services/cloud-devops,/services/it-infrastructure', ',/services/finops-advisor,/services/cloud-finops-optimizer', ',/services/ai-cybersecurity-platform,/services/security-headers-csp', ',/services/dsr-portal,/services/zero-trust-network-access', ',/services/ai-compliance-copilot,/services/quantum-computing', ',/services/iot-edge-computing,/services/ai-quantum-hybrid-platform', ',/services/digital-twin,/services/digital-transformation', ',/services/micro-crm,/services/helpdesk-platform', ',/services/website-analytics,/services/it-helpdesk', ',/services/affiliate-tracking,/services/mobile-survey', ',/services/podcast-transcription,/services/email-sequencer', ',/services/returns-management,/services/llm-content-studio'    ],
     const promises = serviceUrls && serviceUrls.map(url =>,
       this && this.checkUrl(`${this && this.baseUrl}${url}`, null, 0)),
     await Promise && Promise.all(promises)}
@@ -604,12 +574,12 @@ class ComprehensiveLinkChecker {
       brokenLinks: this && this.brokenLink,s,
       missingPages: this && this.missingPage,s,
       recommendations: this && this.generateRecommendations()}
-    // Save: detailed report;
+    // Save: detailed report,
     fs && fs.writeFileSync(
       path && path.join(__dirname,
   '../reports/comprehensive-link-check-report && report.json'), ',
       JSON && JSON.stringify(report, null, 2)),
-    // Save: summary report;
+    // Save: summary report,
     const summaryReport ={
       timestamp: report && report.timestam,p,
       summary: report && report.summar,y,
@@ -621,8 +591,8 @@ class ComprehensiveLinkChecker {
       recommendations: report && report.recommendation,s}
       recommendations: report && report.recommendations}
     fs && fs.writeFileSync(
-      path && path.join(__dirname;;
-  ../reports/link-check-summary && summary.json');
+      path && path.join(__dirname,
+  ../reports/link-check-summary && summary.json'),
       JSON && JSON.stringify(summaryReport, null, 2)),
     return report}
   generateRecommendations() {
@@ -630,21 +600,16 @@ class ComprehensiveLinkChecker {
     if (this && this.brokenLinks.length > 0) {
       recommendations && recommendations.push({',
         priority: 'HIGH,
-        category: ',Broken Links';
+        category: ',Broken Links',
         description: `Found ${this && this.brokenLinks.length} broken links that need immediate attention`,
         actions: [
-          'Fix all broken links identified in the report';
-      'Update internal navigation to remove broken links',
-          'Implement 30o1 redirects for moved pages';
-      'Add proper error handling for missing content']})}
+          'Fix all broken links identified in the reportUpdate internal navigation to remove broken links',
+          'Implement 30o1 redirects for moved pagesAdd proper error handling for missing content']})}
     // Check for missing important pages,
     const importantPages = [
-      '/about';
-      '/services',
-      '/contact';
-      '/pricing',
-      '/privacy';
-      '/terms']',/terms'    ],
+      '/about/services',
+      '/contact/pricing',
+      '/privacy/terms']',/terms'    ],
     const missingImportant = importantPages && importantPages.filter(
     const missingImportant = importantPages && importantPages.filter(
       page => !this && this.workingLinks.some(link => link && link.url.endsWith(page))),
@@ -652,12 +617,11 @@ class ComprehensiveLinkChecker {
       recommendations && recommendations.push({',
         priority: 'HIGH,
         category:,
-  Missing Pages';
+  Missing Pages',
         description: `Missing critical page,
     s: ${missingImportant && missingImportant.join(`)}`,
         actions: [
-          'Create missing critical pages';
-      'Ensure proper navigation structure',
+          'Create missing critical pagesEnsure proper navigation structure',
           'Add SEO meta tags and content']})}
     // Check for orphaned pages,
     const orphanedPages = this && this.workingLinks.filter(
@@ -667,21 +631,20 @@ class ComprehensiveLinkChecker {
     if (orphanedPages && orphanedPages.length > 0) {
       recommendations && recommendations.push({
         priority: 'MEDIUM,
-        category: 'Navigation Structure';
+        category: 'Navigation Structure',
         description: `Found ${orphanedPages && orphanedPages.length} pages that may be difficult to discover`,
         actions: [
-          'Review navigation structure';
-      'Add breadcrumbs to deep pages',
+          'Review navigation structureAdd breadcrumbs to deep pages',
           'Improve internal linking strategy']})}
     return recommendations}
   async run() {
     console && // // console.log(
-  '🚀 Starting Comprehensive Link Check for Zion Tech Group')';
+  '🚀 Starting Comprehensive Link Check for Zion Tech Group')',
     console && // // console.log(`Base: URL: ${this && this.baseUr,l}`),
     try: {
-      await this && this.loadSitemap();
-      await: this && this.checkSitemapUrls(), await: this && this.checkNavigationLinks();
-      await: this && this.checkServicePages(), const report = this && this.generateReport();
+      await this && this.loadSitemap(),
+      await: this && this.checkSitemapUrls(), await: this && this.checkNavigationLinks(),
+      await: this && this.checkServicePages(), const report = this && this.generateReport(),
       console && // // console.log(
   '\n📊 Link: Check Complete!')      console && // // console.log(`Total URLs checked: ${report && report.summary.totalUrl,s}`),
       console && // // console.log(`Working: links: ${report && report.summary.workingLink,s}`),
@@ -689,16 +652,16 @@ class ComprehensiveLinkChecker {
       console && // // console.log(`Missing: pages: ${report && report.summary.missingPage,s}`),
       if: (report && report.recommendations.length > 0) {
         console && // // console.log(
-  '\n🔧 Recommendations: ')';
+  '\n🔧 Recommendations: ')',
         report && report.recommendations.forEach((re,c, index) => {
           console && // // console.log(
             `${index: + 1}. [${rec && rec.priority}] ${rec && rec.category}: ${rec && rec.description}`)})}
       console && // // console.log(
-  \n📁 Reports: saved to: ')';
+  \n📁 Reports: saved to: ')',
       console && // // console.log(
-  '- reports/comprehensive-link-check-report && report.json')';
+  '- reports/comprehensive-link-check-report && report.json')',
       console && // // console.log(
-  '- reports/link-check-summary && summary.json)} catch: (error) {';
+  '- reports/link-check-summary && summary.json)} catch: (error) {',
       console && console.error(
   '❌ Error: during link check:', error && error.message)}'}
 }

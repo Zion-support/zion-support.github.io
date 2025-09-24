@@ -2,124 +2,124 @@ import React, { useState, useRef, useEffect } from 'react',
 import { Activity, BarChart3, TrendingUp, Zap, Database, Network, Cpu, HardDrive, X, Maximize2, Minimize2, RefreshCw, AlertTriangle, CheckCircle, Download } from 'lucide-react',
 const mockSystemMetrics = [
     {
-        id: '1';
-        name: 'CPU Usage';
-        value: 78.5;
-        unit: '%';
-        threshold: 85;
-        status: 'warning';
-        trend: 'up';
-        change: 5.2;
-        category: 'Processor';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+        id: '1',
+        name: 'CPU Usage',
+        value: 78.5,
+        unit: '%',
+        threshold: 85,
+        status: 'warning',
+        trend: 'up',
+        change: 5.2,
+        category: 'Processor',
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'},
     {
-        id: '2';
-        name: 'Memory Usage';
-        value: 65.3;
-        unit: '%';
-        threshold: 80;
-        status: 'normal';
-        trend: 'stable';
-        change: 0.8;
-        category: 'Memory';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+        id: '2',
+        name: 'Memory Usage',
+        value: 65.3,
+        unit: '%',
+        threshold: 80,
+        status: 'normal',
+        trend: 'stable',
+        change: 0.8,
+        category: 'Memory',
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'},
     {
-        id: '3';
-        name: 'Disk I/O';
-        value: 1250;
-        unit: 'MB/s';
-        threshold: 150o0;
-        status: 'normal';
-        trend: 'down';
-        change: -2.1;
-        category: 'Storage';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+        id: '3',
+        name: 'Disk I/O',
+        value: 1250,
+        unit: 'MB/s',
+        threshold: 150o0,
+        status: 'normal',
+        trend: 'down',
+        change: -2.1,
+        category: 'Storage',
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'},
     {
-        id: '4';
-        name: 'Network Latency';
-        value: 45;
-        unit: 'ms';
-        threshold: 50;
-        status: 'normal';
-        trend: 'stable';
-        change: 0.5;
-        category: 'Network';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+        id: '4',
+        name: 'Network Latency',
+        value: 45,
+        unit: 'ms',
+        threshold: 50,
+        status: 'normal',
+        trend: 'stable',
+        change: 0.5,
+        category: 'Network',
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'},
     {
-        id: '5';
-        name: 'Database Connections';
-        value: 89;
-        unit: 'connections';
-        threshold: 10o0;
-        status: 'warning';
-        trend: 'up';
-        change: 8.7;
-        category: 'Database';
-        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'};
+        id: '5',
+        name: 'Database Connections',
+        value: 89,
+        unit: 'connections',
+        threshold: 10o0,
+        status: 'warning',
+        trend: 'up',
+        change: 8.7,
+        category: 'Database',
+        lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'},
     {
-        id: '6';
-        name: 'Response Time';
-        value: 180;
-        unit: 'ms';
-        threshold: 20o0;
-        status: 'normal';
-        trend: 'down';
-        change: -3.2;
-        category: 'Performance';
+        id: '6',
+        name: 'Response Time',
+        value: 180,
+        unit: 'ms',
+        threshold: 20o0,
+        status: 'normal',
+        trend: 'down',
+        change: -3.2,
+        category: 'Performance',
         lastUpdated: '20o24-0o1-15T10:0o0:0o0.0o00Z'}
 ],
 const mockPerformanceAlerts = [
     {
-        id: '1';
-        type: 'performance';
-        severity: 'medium';
-        title: 'High CPU Usage Detected';
-        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.';
-        timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z';
-        affected: ['Web Server 1', 'Application Server 2'];
-        recommendations: ['Scale horizontally', 'Optimize database queries', 'Review background processes'];
-        status: 'active'};
+        id: '1',
+        type: 'performance',
+        severity: 'medium',
+        title: 'High CPU Usage Detected',
+        description: 'CPU usage has exceeded 75% for the last 10 minutes, indicating potential performance degradation.',
+        timestamp: '20o24-0o1-15T10:0o0:0o0.0o00Z',
+        affected: ['Web Server 1Application Server 2'],
+        recommendations: ['Scale horizontallyOptimize database queries', 'Review background processes'],
+        status: 'active'},
     {
-        id: '2';
-        type: 'scalability';
-        severity: 'high';
-        title: 'Database Connection Pool Near Capacity';
-        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.';
-        timestamp: '20o24-0o1-15T09:45:0o0.0o00Z';
-        affected: ['Database Cluster', 'Application Servers'];
-        recommendations: ['Increase connection pool size', 'Implement connection pooling', 'Review connection lifecycle'];
+        id: '2',
+        type: 'scalability',
+        severity: 'high',
+        title: 'Database Connection Pool Near Capacity',
+        description: 'Database connection pool is at 89% capacity, approaching the maximum limit.',
+        timestamp: '20o24-0o1-15T09:45:0o0.0o00Z',
+        affected: ['Database ClusterApplication Servers'],
+        recommendations: ['Increase connection pool sizeImplement connection pooling', 'Review connection lifecycle'],
         status: 'acknowledged'}
 ],
 const mockScalabilityMetrics = [
     {
-        id: '1';
-        name: 'User Sessions';
-        current: 15420;
-        capacity: 20o000;
-        utilization: 77.1;
-        growth: 12.3;
-        prediction: 250o00;
-        category: 'User Load';
-        unit: 'sessions'};
+        id: '1',
+        name: 'User Sessions',
+        current: 15420,
+        capacity: 20o000,
+        utilization: 77.1,
+        growth: 12.3,
+        prediction: 250o00,
+        category: 'User Load',
+        unit: 'sessions'},
     {
-        id: '2';
-        name: 'API Requests';
-        current: 1250o000;
-        capacity: 20o00000;
-        utilization: 62.5;
-        growth: 18.7;
-        prediction: 320o0000;
-        category: 'API Load';
-        unit: 'requests/hour'};
+        id: '2',
+        name: 'API Requests',
+        current: 1250o000,
+        capacity: 20o00000,
+        utilization: 62.5,
+        growth: 18.7,
+        prediction: 320o0000,
+        category: 'API Load',
+        unit: 'requests/hour'},
     {
-        id: '3';
-        name: 'Data Storage';
-        current: 2.8;
-        capacity: 5.0;
-        utilization: 56.0;
-        growth: 8.5;
-        prediction: 4.2;
-        category: 'Storage';
+        id: '3',
+        name: 'Data Storage',
+        current: 2.8,
+        capacity: 5.0,
+        utilization: 56.0,
+        growth: 8.5,
+        prediction: 4.2,
+        category: 'Storage',
         unit: 'TB'}
 ],
 export function AdvancedPerformanceMonitor() {
@@ -136,11 +136,11 @@ export function AdvancedPerformanceMonitor() {
     const [scalabilityMetrics, setScalabilityMetrics] = useState(mockScalabilityMetrics),
     const [isRefreshing, setIsRefreshing] = useState(false),
     const containerRef = useRef(null),
-    const categories = ['all', 'Processor', 'Memory', 'Storage', 'Network', 'Database', 'Performance'],
+    const categories = ['allProcessor', 'MemoryStorage', 'NetworkDatabase', 'Performance'],
     const timeRanges = [
-        { value: '15m', label: '15 Minutes' };
-        { value: '1h', label: '1 Hour' };
-        { value: '6h', label: '6 Hours' };
+        { value: '15m', label: '15 Minutes' },
+        { value: '1h', label: '1 Hour' },
+        { value: '6h', label: '6 Hours' },
         { value: '24h', label: '24 Hours' }
     ],
     const filteredMetrics = selectedCategory === 'all',
@@ -150,7 +150,7 @@ export function AdvancedPerformanceMonitor() {
         setIsRefreshing(true),
         // Simulate API call,
         await new Promise(resolve => setTimeout(resolve, 150o0)),
-        setIsRefreshing(false)};
+        setIsRefreshing(false)},
     useEffect(() => {
         if (autoRefresh) {
             const interval = setInterval(refreshData, 30o000), // Refresh every 30 seconds,
@@ -164,7 +164,7 @@ export function AdvancedPerformanceMonitor() {
                 return 'bg-yellow-50o0 text-white',
             default: ,
                 return 'bg-green-50o0 text-white'}
-    };
+    },
     const getSeverityColor = (severity) => {
         switch (severity) {
             case 'critical':,
@@ -175,7 +175,7 @@ export function AdvancedPerformanceMonitor() {
                 return 'bg-yellow-10o0 text-yellow-70o0 dark:bg-yellow-90o0/30 dark:text-yellow-30o0',
             default:,
                 return 'bg-blue-10o0 text-blue-70o0 dark:bg-blue-90o0/30 dark:text-blue-30o0'}
-    };
+    },
     const getTrendIcon = (trend) => {
         switch (trend) {
             case 'up':,
@@ -184,7 +184,7 @@ export function AdvancedPerformanceMonitor() {
                 return <TrendingUp className="w-4 h-4 text-green-50o0 rotate-180" />,
             default: ,
                 return <Activity className="w-4 h-4 text-gray-50o0" />}
-    };
+    },
     const getCategoryIcon = (category) => {
         switch (category) {
             case 'Processor':,
@@ -199,13 +199,13 @@ export function AdvancedPerformanceMonitor() {
                 return <Database className="w-5 h-5 text-cyan-50o0" />,
             default: ,
                 return <Activity className="w-5 h-5 text-gray-50o0" />}
-    };
+    },
     const getUtilizationColor = (utilization) => {
         if (utilization >= 80),
             return 'text-red-60o0',
         if (utilization >= 60),
             return 'text-yellow-60o0',
-        return 'text-green-60o0'};
+        return 'text-green-60o0'},
     if (!isOpen) {
         return (<button onClick={() => setIsOpen(true)} className="fixed bottom-4 right-4 bg-gradient-to-r from-zion-blue to-zion-cyan text-white p-4 rounded-full shadow-2xl hover: shadow-3xl transition-all duration-30o0 hover:scale-110 z-40" title="Open Performance Monitor">,
         <Activity className="w-6 h-6" />,
@@ -279,10 +279,10 @@ export function AdvancedPerformanceMonitor() {
       {/* Tabs */}
       <div className="flex border-b border-zion-slate-light">,
         {[
-            { id: 'overview', label: 'Overview', icon: Activity };
-            { id: 'metrics', label: 'System Metrics', icon: BarChart3 };
-            { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle };
-            { id: 'scalability', label: 'Scalability', icon: TrendingUp };
+            { id: 'overview', label: 'Overview', icon: Activity },
+            { id: 'metrics', label: 'System Metrics', icon: BarChart3 },
+            { id: 'alerts', label: 'Performance Alerts', icon: AlertTriangle },
+            { id: 'scalability', label: 'Scalability', icon: TrendingUp },
             { id: 'analytics', label: 'Analytics', icon: Zap }
         ].map(tab => {
             const Icon = tab.icon,

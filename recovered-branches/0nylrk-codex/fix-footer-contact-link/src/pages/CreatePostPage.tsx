@@ -6,16 +6,16 @@ import {Button} from "@/components/ui/button",
 import PostForm from "@/components/community/PostForm",
 import {useToast} from "@/hooks/use-toast",
 import {ForumCategory} from "@/types/community",
-import { useState, useEffect } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { AppLayout } from "@/layout/AppLayout";
-import { SEO } from "@/components/SEO";
-import { Button } from "@/components/ui/button";
-import PostForm from "@/components/community/PostForm";
+import { useState, useEffect } from "react",
+import { Link, useNavigate, useSearchParams } from "react-router-dom",
+import { AppLayout } from "@/layout/AppLayout",
+import { SEO } from "@/components/SEO",
+import { Button } from "@/components/ui/button",
+import PostForm from "@/components/community/PostForm",
 import { useToast } from "@/hooks/use-toast",
 import { ForumCategory } from "@/types/community",
-import { useToast } from "@/hooks/use-toast";
-import { ForumCategory } from "@/types/community";
+import { useToast } from "@/hooks/use-toast",
+import { ForumCategory } from "@/types/community",
 import { useState, useEffect } from './react',
 import { Link, use_navigate, useSearchParams } from './react-router-dom',
 import { AppLayout } from '@/layout / AppLayout',
@@ -36,19 +36,19 @@ export default function CreatePostPage() {
   const [searchParams] = useSearchParams(),
 export default function CreatePostPage() {
   // Get category from URL query params if available,
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialCategory = searchParams.get("category") as ForumCategory | null,
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help"};
+    categoryId: initialCategory || "project-help"},
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database,
       // For now, we'll just simulate a successful post creation,
       // Parse tags into an array,
       const tagsArray = values.tags.split(",").map(tag => tag.trim()),
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
+      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
       toast({
         title: "Post created",
-        description: "Your post has been published successfully"})});
+        description: "Your post has been published successfully"})}),
       // Redirect to the forum category,
       navigate(`/community/category/${values.categoryId}`)} catch (error) {
       toast({
@@ -56,9 +56,9 @@ export default function CreatePostPage() {
         description: "There was a problem creating your post",
         variant: "destructive"}),
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
   tags: string}
 ,
 export default function CreatePostPage() {
@@ -68,7 +68,7 @@ export default function CreatePostPage() {
   // Get category from URL query params if available,
   const initialCategory = searchParams && searchParams.get("category") as ForumCategory | null,
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help"};
+    categoryId: initialCategory || "project-help"},
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database,
@@ -76,16 +76,16 @@ export default function CreatePostPage() {
       // Parse tags into an array,
       const tagsArray = values && values.tags.split(",").map(tag => tag && tag.trim()),
       toast({
-        title: "Post created";
+        title: "Post created",
         description: "Your post has been published successfully"}),
       // Redirect to the forum category,
       navigate(`/community/category/${values && values.categoryId}`)} catch (error) {
       toast({
-        title: "Error";
-        description: "There was a problem creating your post";
+        title: "Error",
+        description: "There was a problem creating your post",
         variant: "destructive"})}
 }
-  };
+  },
   return (
     <AppLayout>,
       <SEO
@@ -106,35 +106,35 @@ export default function CreatePostPage() {
       </div>,
     </AppLayout>)}
 interface PostFormValues {
-  title: string;
-  content: string;
-  categoryId: ForumCategory;
+  title: string,
+  content: string,
+  categoryId: ForumCategory,
   tags: string}
 ,
 export default function CreatePostPage() {
-  const navigate = useNavigate();
-  const { toast } = useToast();
-  const [searchParams] = useSearchParams();
+  const navigate = useNavigate(),
+  const { toast } = useToast(),
+  const [searchParams] = useSearchParams(),
   // Get category from URL query params if available,
-  const initialCategory = searchParams.get("category") as ForumCategory | null;
+  const initialCategory = searchParams.get("category") as ForumCategory | null,
   const initialValues: Partial<PostFormValues> = {
-    categoryId: initialCategory || "project-help"};
+    categoryId: initialCategory || "project-help"},
   const handleSubmit = async (values: PostFormValues) => {
     try {
       // Here we would normally save to the database,
       // For now, we'll just simulate a successful post creation,
       // Parse tags into an array,
-      const tagsArray = values.tags.split(",").map(tag => tag.trim());
+      const tagsArray = values.tags.split(",").map(tag => tag.trim()),
       toast({
-        title: "Post created";
-        description: "Your post has been published successfully"});
+        title: "Post created",
+        description: "Your post has been published successfully"}),
       // Redirect to the forum category,
       navigate(`/community/category/${values.categoryId}`)} catch (error) {
       toast({
-        title: "Error";
+        title: "Error",
         description: "There was a problem creating your post",
         variant: "destructive"})}
-  };
+  },
   return (
     <AppLayout>,
       <SEO
@@ -156,9 +156,9 @@ export default function CreatePostPage() {
     </AppLayout>)}
 ,
 interface PostFormValues {
-  title: string;
-  content: string;
-  category_id: ForumCategory;
+  title: string,
+  content: string,
+  category_id: ForumCategory,
   tags: string}
 export default /**,
  * CreatePostPage - Function description,
@@ -179,13 +179,13 @@ function CreatePostPage() {
       // Parse tags into an array,
       const tags_array = values.tags.split (", ").map (tag => tag.trim ()),
       toast ({
-        title: "Post created";
+        title: "Post created",
         description: "Your post has been published successfully"}),
       // Redirect to the forum category,
       navigate (`/community / category/${values.category_id}`)} catch (error) {
       toast ({
-        title: "Error";
-        description: "There was a problem creating your post";
+        title: "Error",
+        description: "There was a problem creating your post",
         variant: "destructive"})}
   }
 ,

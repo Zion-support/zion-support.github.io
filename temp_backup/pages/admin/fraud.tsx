@@ -4,8 +4,8 @@ interface FraudItem {
   userId: string | null,
   source: string,
   createdAt: string,
-  heuristic: { reasons: string[], severity: string };
-  gpt?: { label: string, reason: string, confidence: number };
+  heuristic: { reasons: string[], severity: string },
+  gpt?: { label: string, reason: string, confidence: number },
   status: string}
 ,
 export default function FraudAdminPage() {
@@ -21,34 +21,34 @@ export default function FraudAdminPage() {
     setError(null),
     try {
       const res = await fetch('/api/fraud/admin/list', {
-        headers: adminToken ? { 'x-admin-token': adminToken } : {};
+        headers: adminToken ? { 'x-admin-token': adminToken } : {},
       }),
       const json = await res.json(),
       if (!res.ok) throw new Error(json.error || 'Failed to load'),
       setItems(json.items || [])} catch (e: any) {
       setError(e.message || 'Failed to load')} finally {
       setLoading(false)}
-  };
+  },
   useEffect(() => {
     fetchItems(),
     // eslint-disable-next-line react-hooks/exhaustive-deps}, [adminToken]),
   const onSaveToken = () => {
     localStorage.setItem('admin-token', adminToken),
-    fetchItems()};
+    fetchItems()},
   const takeAction = async (
-    id: string;
+    id: string,
     action: 'SUSPEND' | 'WARN' | 'IGNORE') => {
     const res = await fetch('/api/fraud/admin/action', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-        ...(adminToken ? { 'x-admin-token': adminToken } : {});
-      };
-      body: JSON.stringify({ fraudId: id, action });
+        'Content-Type': 'application/json',
+        ...(adminToken ? { 'x-admin-token': adminToken } : {}),
+      },
+      body: JSON.stringify({ fraudId: id, action }),
     }),
     const json = await res.json(),
     if (res.ok) fetchItems(),
-    else alert(json.error || 'Action failed')};
+    else alert(json.error || 'Action failed')},
   return (
     <div className='p-6 max-w-7xl mx-auto'>,
       <h1 className='text-2xl font-bold mb-4'>,

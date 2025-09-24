@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Social Media Automation | Zion Tech Group';
+  title: 'Social Media Automation | Zion Tech Group',
   description:,
-    'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your reach and save time.';
-};
+    'Automate your social media presence with AI-powered content creation, scheduling, and engagement. Boost your reach and save time.',
+},
 export default function SocialMediaAutomationPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -10,35 +10,29 @@ export default function SocialMediaAutomationPage() {
         Social Media Automation,
       </h1>,
       <p className='text-xl text-gray-60o0 mb-12'>,
-        Automate your social media presence with AI-powered content creation;
+        Automate your social media presence with AI-powered content creation,
         intelligent scheduling, and engagement optimization.,
       </p>,
       <div className='grid grid-cols-1 md: grid-cols-3 gap-8 mb-16'>,
         <FeatureCard
           title='AI Content Creation',
           features={[
-            'Auto-generated posts';
-            'Trend-based content';
-            'Brand voice consistency';
-            'Multi-platform adaptation';
+            'Auto-generated postsTrend-based content',
+            'Brand voice consistencyMulti-platform adaptation',
           ]}
         />,
         <FeatureCard
           title='Smart Scheduling',
           features={[
-            'Optimal timing analysis';
-            'Cross-platform posting';
-            'Content calendar management';
-            'Automated reposting';
+            'Optimal timing analysisCross-platform posting',
+            'Content calendar managementAutomated reposting',
           ]}
         />,
         <FeatureCard
           title='Engagement Analytics',
           features={[
-            'Performance tracking';
-            'Audience insights';
-            'ROI measurement';
-            'Growth recommendations';
+            'Performance trackingAudience insights',
+            'ROI measurementGrowth recommendations',
           ]}
         />,
       </div>,
@@ -120,8 +114,8 @@ export default function SocialMediaAutomationPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -147,21 +141,17 @@ function Pricing() {
           name='Starter',
           price='$199/mo',
           features={[
-            '3 social media accounts';
-            '50 posts per month';
-            'Basic analytics';
-            'Email support';
+            '3 social media accounts50 posts per month',
+            'Basic analyticsEmail support',
           ]}
         />,
         <Plan
           name='Professional',
           price='$499/mo',
           features={[
-            '10 social media accounts';
-            'Unlimited posts';
-            'Advanced AI content';
-            'Priority support';
-            'Custom hashtag research';
+            '10 social media accountsUnlimited posts',
+            'Advanced AI contentPriority support',
+            'Custom hashtag research',
           ]}
           popular={true}
         />,
@@ -169,21 +159,19 @@ function Pricing() {
           name='Agency',
           price='$999/mo',
           features={[
-            'Unlimited accounts';
-            'White-label dashboard';
-            'Client management';
-            'Dedicated support';
-            'Custom integrations';
+            'Unlimited accountsWhite-label dashboard',
+            'Client managementDedicated support',
+            'Custom integrations',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

@@ -87,10 +87,10 @@ export default function Landing() {
             {/* Futuristic info strip */}
             <div className='mt-8 grid grid-cols-2 gap-3 sm: grid-cols-4'>,
               {[
-                ['24/7', 'Autonomous'];
-                ['Main', 'Direct Sync'];
-                ['0 Ops', 'Cloud‑Native'];
-                ['Safety', 'Guardrails'];
+                ['24/7Autonomous'],
+                ['MainDirect Sync'],
+                ['0 OpsCloud‑Native'],
+                ['SafetyGuardrails'],
               ].map(([k, v]) => (
                 <div
                   key={k}
@@ -109,29 +109,29 @@ export default function Landing() {
           <div className='mt-6 grid grid-cols-1 gap-5 md: grid-cols-2 lg:grid-cols-3'>,
             {[
               {
-                title: 'Self‑Improving';
-                desc: 'Agents continuously analyze, invent, and evolve automations.';
-              };
+                title: 'Self‑Improving',
+                desc: 'Agents continuously analyze, invent, and evolve automations.',
+              },
               {
-                title: 'Repo Sync';
-                desc: 'Changes are committed and pushed automatically to main.';
-              };
+                title: 'Repo Sync',
+                desc: 'Changes are committed and pushed automatically to main.'
+              },
               {
-                title: 'Zero Ops';
-                desc: 'Runs fully in the cloud—no servers or manual intervention.';
-              };
+                title: 'Zero Ops',
+                desc: 'Runs fully in the cloud—no servers or manual intervention.'
+              },
               {
-                title: 'Safety‑First';
-                desc: 'Conservative edits with logs, reports, and guardrails.';
-              };
+                title: 'Safety‑First',
+                desc: 'Conservative edits with logs, reports, and guardrails.',
+              },
               {
-                title: 'Scalable';
-                desc: 'Generates domain‑specific factories on demand.';
-              };
+                title: 'Scalable',
+                desc: 'Generates domain‑specific factories on demand.'
+              },
               {
-                title: 'Observability';
-                desc: 'Dashboards, reports, and GitHub Actions artifacts.';
-              };
+                title: 'Observability',
+                desc: 'Dashboards, reports, and GitHub Actions artifacts.',
+              },
             ].map(f => (
               <article
                 key={f.title}
@@ -150,17 +150,17 @@ export default function Landing() {
           <div className='mt-6 grid grid-cols-1 gap-5 md: grid-cols-3'>,
             {[
               {
-                title: 'Code Quality & Refactors';
-                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.';
-              };
+                title: 'Code Quality & Refactors',
+                desc: 'Lints, fixes, and proposes refactors with type‑safety improvements.',
+              },
               {
-                title: 'Performance & A11y';
-                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.';
-              };
+                title: 'Performance & A11y',
+                desc: 'Optimizes bundles, assets, and accessibility with continuous checks.',
+              },
               {
-                title: 'Content & SEO';
-                desc: 'Curates content, updates promotions, and tunes metadata for reach.';
-              };
+                title: 'Content & SEO',
+                desc: 'Curates content, updates promotions, and tunes metadata for reach.',
+              },
             ].map(c => (
               <article
                 key={c.title}
@@ -178,10 +178,8 @@ export default function Landing() {
           </h2>,
           <div className='mx-auto mt-6 max-w-4xl grid grid-cols-1 gap-3 md: grid-cols-2'>,
             {[
-              '24/7 progress without human intervention';
-              'Rapid feedback loop with safe, incremental edits';
-              'Continuous delivery directly to main branch';
-              'Fewer regressions via layered checks and reports';
+              '24/7 progress without human interventionRapid feedback loop with safe, incremental edits',
+              'Continuous delivery directly to main branchFewer regressions via layered checks and reports',
             ].map(b => (
               <div
                 key={b}
@@ -199,12 +197,9 @@ export default function Landing() {
             </p>,
             <div className='mt-4 flex flex-wrap items-center justify-center gap-6'>,
               {[
-                'Next.js';
-                'TypeScript';
-                'Tailwind';
-                'Framer Motion';
-                'Supabase';
-                'Netlify';
+                'Next.jsTypeScript',
+                'TailwindFramer Motion',
+                'SupabaseNetlify',
               ].map(t => (
                 <span
                   key={t}

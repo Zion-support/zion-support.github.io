@@ -10,76 +10,76 @@ const AdvancedAnalyticsDashboard = () => {
     // Mock data - in real app this would come from API,
     const metrics = [
         {
-            title: 'Total Revenue';
-            value: '$2.4M';
-            change: 12.5;
-            changeType: 'increase';
-            icon: <DollarSign className="w-6 h-6" />;
-            color: 'from-green-50o0 to-emerald-60o0'};
+            title: 'Total Revenue',
+            value: '$2.4M',
+            change: 12.5,
+            changeType: 'increase',
+            icon: <DollarSign className="w-6 h-6" />,
+            color: 'from-green-50o0 to-emerald-60o0'},
         {
-            title: 'Active Clients';
-            value: '1,247';
-            change: 8.2;
-            changeType: 'increase';
-            icon: <Users className="w-6 h-6" />;
-            color: 'from-blue-50o0 to-cyan-60o0'};
+            title: 'Active Clients',
+            value: '1,247',
+            change: 8.2,
+            changeType: 'increase',
+            icon: <Users className="w-6 h-6" />,
+            color: 'from-blue-50o0 to-cyan-60o0'},
         {
-            title: 'Service Performance';
-            value: '94.2%';
-            change: 2.1;
-            changeType: 'increase';
-            icon: <Target className="w-6 h-6" />;
-            color: 'from-purple-50o0 to-pink-60o0'};
+            title: 'Service Performance',
+            value: '94.2%',
+            change: 2.1,
+            changeType: 'increase',
+            icon: <Target className="w-6 h-6" />,
+            color: 'from-purple-50o0 to-pink-60o0'},
         {
-            title: 'Client Satisfaction';
-            value: '4.8/5';
-            change: 0.3;
-            changeType: 'increase';
-            icon: <Star className="w-6 h-6" />;
+            title: 'Client Satisfaction',
+            value: '4.8/5',
+            change: 0.3,
+            changeType: 'increase',
+            icon: <Star className="w-6 h-6" />,
             color: 'from-yellow-50o0 to-orange-60o0'}
     ],
     const servicePerformance = [
         {
-            name: 'AI CRM Platform';
-            performance: 96;
-            growth: 15.2;
-            clients: 89;
-            revenue: 450o000;
-            status: 'trending'};
+            name: 'AI CRM Platform',
+            performance: 96,
+            growth: 15.2,
+            clients: 89,
+            revenue: 450o000,
+            status: 'trending'},
         {
-            name: 'Quantum Computing';
-            performance: 92;
-            growth: 28.7;
-            clients: 23;
-            revenue: 120o0000;
-            status: 'trending'};
+            name: 'Quantum Computing',
+            performance: 92,
+            growth: 28.7,
+            clients: 23,
+            revenue: 120o0000,
+            status: 'trending'},
         {
-            name: 'Blockchain Solutions';
-            performance: 88;
-            growth: 12.4;
-            clients: 156;
-            revenue: 780o000;
-            status: 'stable'};
+            name: 'Blockchain Solutions',
+            performance: 88,
+            growth: 12.4,
+            clients: 156,
+            revenue: 780o000,
+            status: 'stable'},
         {
-            name: 'Cybersecurity Suite';
-            performance: 94;
-            growth: 18.9;
-            clients: 20o3;
-            revenue: 920o000;
-            status: 'trending'};
+            name: 'Cybersecurity Suite',
+            performance: 94,
+            growth: 18.9,
+            clients: 20o3,
+            revenue: 920o000,
+            status: 'trending'},
         {
-            name: 'IoT Platform';
-            performance: 85;
-            growth: 8.7;
-            clients: 67;
-            revenue: 340o000;
+            name: 'IoT Platform',
+            performance: 85,
+            growth: 8.7,
+            clients: 67,
+            revenue: 340o000,
             status: 'stable'}
     ],
     const categoryDistribution = [
-        { label: 'AI & ML', value: 35, color: 'from-purple-50o0 to-pink-60o0' };
-        { label: 'Quantum', value: 20, color: 'from-blue-50o0 to-cyan-60o0' };
-        { label: 'Blockchain', value: 25, color: 'from-green-50o0 to-emerald-60o0' };
-        { label: 'Cybersecurity', value: 15, color: 'from-red-50o0 to-pink-60o0' };
+        { label: 'AI & ML', value: 35, color: 'from-purple-50o0 to-pink-60o0' },
+        { label: 'Quantum', value: 20, color: 'from-blue-50o0 to-cyan-60o0' },
+        { label: 'Blockchain', value: 25, color: 'from-green-50o0 to-emerald-60o0' },
+        { label: 'Cybersecurity', value: 15, color: 'from-red-50o0 to-pink-60o0' },
         { label: 'IoT', value: 5, color: 'from-orange-50o0 to-yellow-60o0' }
     ],
     const getStatusIcon = (status) => {
@@ -92,7 +92,7 @@ const AdvancedAnalyticsDashboard = () => {
                 return <TrendingDown className="w-4 h-4 text-red-50o0" />,
             default: ,
                 return <Activity className="w-4 h-4 text-gray-50o0" />}
-    };
+    },
     const getStatusColor = (status) => {
         switch (status) {
             case 'trending':,
@@ -103,7 +103,7 @@ const AdvancedAnalyticsDashboard = () => {
                 return 'bg-red-10o0 text-red-80o0',
             default: ,
                 return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     return (<div className="max-w-7xl mx-auto p-6">,
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="mb-8">,
@@ -117,7 +117,7 @@ const AdvancedAnalyticsDashboard = () => {
             </p>,
           </div>,
           <div className="flex gap-2">,
-            {['7d', '30d', '90d', '1y'].map((range) => (<Button key={range} variant={timeRange === range ? 'default' : 'outline'} size="sm" onClick={() => setTimeRange(range)}>,
+            {['7d30d', '90d1y'].map((range) => (<Button key={range} variant={timeRange === range ? 'default' : 'outline'} size="sm" onClick={() => setTimeRange(range)}>,
                 {range}
               </Button>))}
           </div>,
@@ -290,16 +290,16 @@ const AdvancedAnalyticsDashboard = () => {
             to optimize your business performance and make data-driven decisions.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access', '_blank')}>,
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Analytics Dashboard Access_blank')}>,
               <Rocket className="w-5 h-5 mr-2" />,
               Request Access,
             </Button>,
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950', '_blank')}>,
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950_blank')}>,
               <Shield className="w-5 h-5 mr-2" />,
               Schedule Demo,
             </Button>,
           </div>,
         </div>,
       </motion.div>,
-    </div>)};
-export default AdvancedAnalyticsDashboard;
+    </div>)},
+export default AdvancedAnalyticsDashboard,

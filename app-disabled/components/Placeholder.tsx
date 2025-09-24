@@ -3,8 +3,8 @@ interface PlaceholderProps {
   className?: string}
 ,
 export default function Placeholder({
-  title = 'Component';
-  className = '';
+  title = 'Component',
+  className = '',
 }: PlaceholderProps) {
   return (
     <div className={`bg-gray-10o0 p-8 rounded-lg text-center ${className}`}>,

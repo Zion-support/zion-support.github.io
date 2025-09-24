@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function runGit(args, options ={}) {
@@ -34,30 +34,30 @@ function runGit(args, options ={}) {
 // Redundancy system configuration,
 const REDUNDANCY_SYSTEMS ={
   pm2: {
-    name: "PM2 Redundancy";
-    ecosystemFile: "ecosystem.redundancy.pm2.cjs";
+    name: "PM2 Redundancy",
+    ecosystemFile: "ecosystem.redundancy.pm2.cjs",
     processes: [
-      "redundancy-marketing-sync";
-      "redundancy-sync-health";
-      "redundancy-build-monitor";
-      "redundancy-netlify-orchestrator";
-      "redundancy-content-quality";
-      "redundancy-security-scanner";
-      "redundancy-performance-monitor";
-      "redundancy-dependency-monitor";
-      "redundancy-health-orchestrator"];
-    status: "unknown"};
+      "redundancy-marketing-sync",
+      "redundancy-sync-health",
+      "redundancy-build-monitor",
+      "redundancy-netlify-orchestrator",
+      "redundancy-content-quality",
+      "redundancy-security-scanner",
+      "redundancy-performance-monitor",
+      "redundancy-dependency-monitor",
+      "redundancy-health-orchestrator"],
+    status: "unknown"},
   githubActions: {
-    name: "GitHub Actions Redundancy";
+    name: "GitHub Actions Redundancy",
     workflows: [
-      "marketing-sync";
-      "sync-health"];
-    status: "unknown"};
+      "marketing-sync",
+      "sync-health"],
+    status: "unknown"},
   netlifyFunctions: {
-    name: "Netlify Functions Redundancy";
-    functionsCount: 0;
+    name: "Netlify Functions Redundancy",
+    functionsCount: 0,
     status: "unknown"}
-};
+},
 function checkPM2Redundancy() {
   log("Checking PM2 redundancy system..."),
   try {
@@ -72,20 +72,20 @@ function checkPM2Redundancy() {
         const total = REDUNDANCY_SYSTEMS.pm2.processes.length,
         REDUNDANCY_SYSTEMS.pm2.status = running === total ? "healthy" : "degraded",
         log(`PM2 Redundancy: ${running}/${total} processes running`),
-        return { success: true, running, total, status: REDUNDANCY_SYSTEMS.pm2.status };
+        return { success: true, running, total, status: REDUNDANCY_SYSTEMS.pm2.status },
       } catch (error) {
         log(`Error parsing PM2 status: ${String(error)}`),
-        return { success: false, error: "Failed to parse PM2 status" };
+        return { success: false, error: "Failed to parse PM2 status" },
       }
     } else {
       log("PM2 not available"),
       REDUNDANCY_SYSTEMS.pm2.status = "unavailable",
-      return { success: false, error: "PM2 not available" };
+      return { success: false, error: "PM2 not available" },
     }
   } catch (error) {
     log(`Error checking PM2 redundancy: ${String(error)}`),
     REDUNDANCY_SYSTEMS.pm2.status = "error",
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
@@ -95,7 +95,7 @@ function checkGitHubActionsRedundancy() {
     const workflowsDir = path.join(process.cwd(), ".github", "workflows"),
     if (!fs.existsSync(workflowsDir)) {
       REDUNDANCY_SYSTEMS.githubActions.status = "unavailable",
-      return { success: false, error: "GitHub workflows directory not found" };
+      return { success: false, error: "GitHub workflows directory not found" },
     }
 ,
     const workflowFiles = fs.readdirSync(workflowsDir).filter(file => file.endsWith('.yml')),
@@ -104,11 +104,11 @@ function checkGitHubActionsRedundancy() {
     const status = redundancyWorkflows.length > 0 ? "healthy" : "degraded",
     REDUNDANCY_SYSTEMS.githubActions.status = status,
     log(`GitHub Actions Redundancy: ${redundancyWorkflows.length} workflows found`),
-    return { success: true, workflows: redundancyWorkflows, status };
+    return { success: true, workflows: redundancyWorkflows, status },
   } catch (error) {
     log(`Error checking GitHub Actions redundancy: ${String(error)}`),
     REDUNDANCY_SYSTEMS.githubActions.status = "error",
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
@@ -118,7 +118,7 @@ function checkNetlifyFunctionsRedundancy() {
     const manifestPath = path.join(process.cwd(), "netlify", "functions", "functions-manifest.json"),
     if (!fs.existsSync(manifestPath)) {
       REDUNDANCY_SYSTEMS.netlifyFunctions.status = "unavailable",
-      return { success: false, error: "Functions manifest not found" };
+      return { success: false, error: "Functions manifest not found" },
     }
 ,
     const manifestContent = fs.readFileSync(manifestPath, "utf8"),
@@ -127,15 +127,15 @@ function checkNetlifyFunctionsRedundancy() {
       REDUNDANCY_SYSTEMS.netlifyFunctions.functionsCount = manifest.functions.length,
       REDUNDANCY_SYSTEMS.netlifyFunctions.status = "healthy",
       log(`Netlify Functions Redundancy: ${manifest.functions.length} functions found`),
-      return { success: true, functions: manifest.functions, status: "healthy" };
+      return { success: true, functions: manifest.functions, status: "healthy" },
     } else {
       REDUNDANCY_SYSTEMS.netlifyFunctions.status = "degraded",
-      return { success: false, error: "Invalid functions manifest" };
+      return { success: false, error: "Invalid functions manifest" },
     }
   } catch (error) {
     log(`Error checking Netlify Functions redundancy: ${String(error)}`),
     REDUNDANCY_SYSTEMS.netlifyFunctions.status = "error",
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
@@ -145,7 +145,7 @@ function startPM2Redundancy() {
     const ecosystemFile = REDUNDANCY_SYSTEMS.pm2.ecosystemFile,
     const ecosystemPath = path.join(process.cwd(), ecosystemFile),
     if (!fs.existsSync(ecosystemPath)) {
-      return { success: false, error: `Ecosystem file not found: ${ecosystemFile}` };
+      return { success: false, error: `Ecosystem file not found: ${ecosystemFile}` },
     }
 ,
     // Create logs directory,
@@ -157,14 +157,14 @@ function startPM2Redundancy() {
     const startResult = run("pm2", ["start", ecosystemFile, "--update-env"]),
     if (startResult.status === 0) {
       log("PM2 redundancy system started successfully"),
-      return { success: true, message: "PM2 redundancy system started" };
+      return { success: true, message: "PM2 redundancy system started" },
     } else {
       log(`Failed to start PM2 redundancy: ${startResult.stderr}`),
-      return { success: false, error: startResult.stderr };
+      return { success: false, error: startResult.stderr },
     }
   } catch (error) {
     log(`Error starting PM2 redundancy: ${String(error)}`),
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
@@ -174,14 +174,14 @@ function stopPM2Redundancy() {
     const stopResult = run("pm2", ["stop", "ecosystem.redundancy.pm2.cjs"]),
     if (stopResult.status === 0) {
       log("PM2 redundancy system stopped successfully"),
-      return { success: true, message: "PM2 redundancy system stopped" };
+      return { success: true, message: "PM2 redundancy system stopped" },
     } else {
       log(`Failed to stop PM2 redundancy: ${stopResult.stderr}`),
-      return { success: false, error: stopResult.stderr };
+      return { success: false, error: stopResult.stderr },
     }
   } catch (error) {
     log(`Error stopping PM2 redundancy: ${String(error)}`),
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
@@ -191,14 +191,14 @@ function restartPM2Redundancy() {
     const restartResult = run("pm2", ["restart", "ecosystem.redundancy.pm2.cjs"]),
     if (restartResult.status === 0) {
       log("PM2 redundancy system restarted successfully"),
-      return { success: true, message: "PM2 redundancy system restarted" };
+      return { success: true, message: "PM2 redundancy system restarted" },
     } else {
       log(`Failed to restart PM2 redundancy: ${restartResult.stderr}`),
-      return { success: false, error: restartResult.stderr };
+      return { success: false, error: restartResult.stderr },
     }
   } catch (error) {
     log(`Error restarting PM2 redundancy: ${String(error)}`),
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
@@ -206,9 +206,9 @@ function runRedundancyTests() {
   log("Running redundancy system tests..."),
   try {
     const testResults ={
-      pm2: null;
-      githubActions: null;
-      netlifyFunctions: null};
+      pm2: null,
+      githubActions: null,
+      netlifyFunctions: null},
     // Test PM2 redundancy,
     testResults.pm2 = checkPM2Redundancy(),
     // Test GitHub Actions redundancy,
@@ -220,19 +220,19 @@ function runRedundancyTests() {
     const totalSystems = Object.keys(testResults).length,
     const overallStatus = healthySystems === totalSystems ? "healthy" :,
                          healthySystems >= totalSystems * 0.7 ? "degraded" : "critical",
-    return { success: true, results: testResults, overallStatus, healthySystems, totalSystems };
+    return { success: true, results: testResults, overallStatus, healthySystems, totalSystems },
   } catch (error) {
     log(`Error running redundancy tests: ${String(error)}`),
-    return { success: false, error: String(error) };
+    return { success: false, error: String(error) },
   }
 }
 ,
 function generateUnifiedReport() {
   const report ={
-    generatedAt: nowIso();
-    systemStatus: {};
-    testResults: null;
-    summary: "Unified redundancy system report"};
+    generatedAt: nowIso(),
+    systemStatus: {},
+    testResults: null,
+    summary: "Unified redundancy system report"},
   try {
     // Check all systems,
     report.systemStatus.pm2 = checkPM2Redundancy(),
@@ -372,12 +372,12 @@ if (require.main === module) {
   main()}
 ,
 module.exports ={
-  checkPM2Redundancy;
-  checkGitHubActionsRedundancy;
-  checkNetlifyFunctionsRedundancy;
-  startPM2Redundancy;
-  stopPM2Redundancy;
-  restartPM2Redundancy;
-  runRedundancyTests;
-  generateUnifiedReport;
-  REDUNDANCY_SYSTEMS};
+  checkPM2Redundancy,
+  checkGitHubActionsRedundancy,
+  checkNetlifyFunctionsRedundancy,
+  startPM2Redundancy,
+  stopPM2Redundancy,
+  restartPM2Redundancy,
+  runRedundancyTests,
+  generateUnifiedReport,
+  REDUNDANCY_SYSTEMS},

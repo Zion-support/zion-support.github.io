@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react',
 import {
-  Eye, EyeOff, Volume2, VolumeX, Keyboard, Mouse;
-  Smartphone, Monitor, CheckCircle, AlertTriangle;
+  Eye, EyeOff, Volume2, VolumeX, Keyboard, Mouse,
+  Smartphone, Monitor, CheckCircle, AlertTriangle,
   Settings, X, Zap, Accessibility, Contrast, Type} from 'lucide-react',
 interface AccessibilitySettings {
   highContrast: boolean,
@@ -24,12 +24,12 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isVisible, setIsVisible] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    screenReader: false;
-    keyboardNavigation: false;
-    focusIndicators: true;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false,
+    focusIndicators: true,
     colorBlindMode: false}),
   const [issues, setIssues] = useState<AccessibilityIssue[]>([]),
   const [isScanning, setIsScanning] = useState(false),
@@ -38,7 +38,7 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [announcements, setAnnouncements] = useState<string[]>([]),
   // Apply accessibility settings,
   const applySettings = useCallback((newSettings: Partial<AccessibilitySettings>) => {
-    const updatedSettings ={ ...settings, ...newSettings };
+    const updatedSettings ={ ...settings, ...newSettings },
     setSettings(updatedSettings),
     // Apply high contrast,
     if (updatedSettings.highContrast) {
@@ -77,11 +77,11 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     images.forEach((img, index) => {
       if (!img.alt && !img.getAttribute('aria-label')) {
         newIssues.push({
-          id: `img-${index}`;
-          type: 'error';
-          message: 'Image missing alt text';
-          element: img.tagName.toLowerCase();
-          fix: 'Add descriptive alt text or aria-label';
+          id: `img-${index}`,
+          type: 'error',
+          message: 'Image missing alt text',
+          element: img.tagName.toLowerCase(),
+          fix: 'Add descriptive alt text or aria-label',
           priority: 'high'})}
     }),
     // Check for form labels,
@@ -91,11 +91,11 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       const label = document.querySelector(`label[for="${id}"]`),
       if (!label && !input.getAttribute('aria-label')) {
         newIssues.push({
-          id: `input-${index}`;
-          type: 'warning';
-          message: 'Form control missing label';
-          element: input.tagName.toLowerCase();
-          fix: 'Add label or aria-label attribute';
+          id: `input-${index}`,
+          type: 'warning',
+          message: 'Form control missing label',
+          element: input.tagName.toLowerCase(),
+          fix: 'Add label or aria-label attribute',
           priority: 'medium'})}
     }),
     // Check for heading structure,
@@ -105,11 +105,11 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       const level = parseInt(heading.tagName.charAt(1)),
       if (level > previousLevel + 1) {
         newIssues.push({
-          id: `heading-${index}`;
-          type: 'warning';
-          message: 'Heading level skipped';
-          element: heading.tagName.toLowerCase();
-          fix: 'Use proper heading hierarchy (h1 → h2 → h3)';
+          id: `heading-${index}`,
+          type: 'warning',
+          message: 'Heading level skipped',
+          element: heading.tagName.toLowerCase(),
+          fix: 'Use proper heading hierarchy (h1 → h2 → h3)',
           priority: 'medium'})}
       previousLevel = level}),
     // Check for color contrast (simplified),
@@ -121,11 +121,11 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       // This is a simplified check - in reality you'd need a proper contrast calculator,
       if (color === backgroundColor) {
         newIssues.push({
-          id: `contrast-${index}`;
-          type: 'error';
-          message: 'Poor color contrast detected';
-          element: element.tagName.toLowerCase();
-          fix: 'Ensure sufficient contrast between text and background';
+          id: `contrast-${index}`,
+          type: 'error',
+          message: 'Poor color contrast detected',
+          element: element.tagName.toLowerCase(),
+          fix: 'Ensure sufficient contrast between text and background',
           priority: 'high'})}
     }),
     setIssues(newIssues),
@@ -153,8 +153,8 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       if (!liveRegion) {
         liveRegion = document.createElement('div'),
         liveRegion.id = 'accessibility-live-region',
-        liveRegion.setAttribute('aria-live', 'polite'),
-        liveRegion.setAttribute('aria-atomic', 'true'),
+        liveRegion.setAttribute('aria-livepolite'),
+        liveRegion.setAttribute('aria-atomictrue'),
         liveRegion.className = 'sr-only',
         document.body.appendChild(liveRegion)}
 ,
@@ -172,35 +172,35 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     root.style.fontSize = `${newSettings.fontSize}px`,
     root.style.setProperty('--font-scale', scaleFactor.toString()),
     // Apply contrast with better color schemes,
-    root.classList.remove('contrast-normal', 'contrast-high', 'contrast-inverted'),
+    root.classList.remove('contrast-normalcontrast-high', 'contrast-inverted'),
     root.classList.add(`contrast-${newSettings.contrast}`),
     // Enhanced high contrast mode,
     if (newSettings.highContrast) {
       root.classList.add('high-contrast'),
-      root.style.setProperty('--high-contrast', 'true')} else {
+      root.style.setProperty('--high-contrasttrue')} else {
       root.classList.remove('high-contrast'),
-      root.style.setProperty('--high-contrast', 'false')}
+      root.style.setProperty('--high-contrastfalse')}
 ,
     // Apply spacing with better ratios,
     const spacingValues ={
-      'normal': 1;
-      'large': 1.5;
-      'extra-large': 2};
+      'normal': 1,
+      'large': 1.5,
+      'extra-large': 2},
     const spacing = spacingValues[newSettings.spacing] || 1,
     root.style.setProperty('--spacing-multiplier', spacing.toString()),
     // Apply focus indicator with better visibility,
     if (newSettings.focusIndicator) {
       root.classList.add('focus-visible'),
-      root.style.setProperty('--focus-visible', 'true')} else {
+      root.style.setProperty('--focus-visibletrue')} else {
       root.classList.remove('focus-visible'),
-      root.style.setProperty('--focus-visible', 'false')}
+      root.style.setProperty('--focus-visiblefalse')}
 ,
     // Apply reduced motion with better transitions,
     if (newSettings.reducedMotion) {
       root.classList.add('reduced-motion'),
-      root.style.setProperty('--reduced-motion', 'true')} else {
+      root.style.setProperty('--reduced-motiontrue')} else {
       root.classList.remove('reduced-motion'),
-      root.style.setProperty('--reduced-motion', 'false')}
+      root.style.setProperty('--reduced-motionfalse')}
 ,
     // Announce changes to screen reader,
     announceToScreenReader(`Accessibility settings updated: ${Object.keys(newSettings).join(', ')}`)}, [announceToScreenReader]),
@@ -215,39 +215,39 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
     return () => document.removeEventListener('keydown', handleKeyNavigation)}, [handleKeyNavigation]),
   // Enhanced update setting with better feedback,
   const updateSetting = useCallback((key: keyof AccessibilitySettings, value: any) => {
-    const newSettings ={ ...settings, [key]: value };
+    const newSettings ={ ...settings, [key]: value },
     setSettings(newSettings),
     applySettings(newSettings),
     // Save to localStorage,
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
     // Provide feedback,
     const feedbackMessages ={
-      fontSize: `Font size changed to ${value}px`;
-      contrast: `Contrast changed to ${value}`;
-      reducedMotion: `Reduced motion ${value ? 'enabled' : 'disabled'}`;
-      highContrast: `High contrast ${value ? 'enabled' : 'disabled'}`;
-      largeText: `Large text ${value ? 'enabled' : 'disabled'}`;
-      spacing: `Spacing changed to ${value}`;
-      focusIndicator: `Focus indicator ${value ? 'enabled' : 'disabled'}`;
-      screenReader: `Screen reader support ${value ? 'enabled' : 'disabled'}`};
+      fontSize: `Font size changed to ${value}px`,
+      contrast: `Contrast changed to ${value}`,
+      reducedMotion: `Reduced motion ${value ? 'enabled' : 'disabled'}`,
+      highContrast: `High contrast ${value ? 'enabled' : 'disabled'}`,
+      largeText: `Large text ${value ? 'enabled' : 'disabled'}`,
+      spacing: `Spacing changed to ${value}`,
+      focusIndicator: `Focus indicator ${value ? 'enabled' : 'disabled'}`,
+      screenReader: `Screen reader support ${value ? 'enabled' : 'disabled'}`},
     announceToScreenReader(feedbackMessages[key] || 'Setting updated')}, [settings, applySettings, announceToScreenReader]),
   // Enhanced quick actions,
   const quickActions = [
     {
-      label: 'Increase Font Size';
-      action: () => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24));
-      icon: <ZoomIn className="w-4 h-4"  />};
+      label: 'Increase Font Size',
+      action: () => updateSetting('fontSize', Math.min(settings.fontSize + 2, 24)),
+      icon: <ZoomIn className="w-4 h-4"  />},
     {
-      label: 'Decrease Font Size';
-      action: () => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12));
-      icon: <ZoomOut className="w-4 h-4"  />};
+      label: 'Decrease Font Size',
+      action: () => updateSetting('fontSize', Math.max(settings.fontSize - 2, 12)),
+      icon: <ZoomOut className="w-4 h-4"  />},
     {
-      label: 'Toggle High Contrast';
-      action: () => updateSetting('highContrast', !settings.highContrast);
-      icon: <Contrast className="w-4 h-4"  />};
+      label: 'Toggle High Contrast',
+      action: () => updateSetting('highContrast', !settings.highContrast),
+      icon: <Contrast className="w-4 h-4"  />},
     {
-      label: 'Toggle Reduced Motion';
-      action: () => updateSetting('reducedMotion', !settings.reducedMotion);
+      label: 'Toggle Reduced Motion',
+      action: () => updateSetting('reducedMotion', !settings.reducedMotion),
       icon: <Settings className="w-4 h-4"  />}
   ],
   if (!isVisible) return null,
@@ -372,10 +372,10 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
               {/* Toggle Settings */}
               <div className="space-y-3">,
                 {[
-                  { key: 'highContrast', label: 'High Contrast', icon: <Contrast className="w-4 h-4"  /> };
-                  { key: 'largeText', label: 'Large Text', icon: <Text className="w-4 h-4"  /> };
-                  { key: 'reducedMotion', label: 'Reduced Motion', icon: <Settings className="w-4 h-4"  /> };
-                  { key: 'focusIndicator', label: 'Focus Indicator', icon: <Eye className="w-4 h-4"  /> };
+                  { key: 'highContrast', label: 'High Contrast', icon: <Contrast className="w-4 h-4"  /> },
+                  { key: 'largeText', label: 'Large Text', icon: <Text className="w-4 h-4"  /> },
+                  { key: 'reducedMotion', label: 'Reduced Motion', icon: <Settings className="w-4 h-4"  /> },
+                  { key: 'focusIndicator', label: 'Focus Indicator', icon: <Eye className="w-4 h-4"  /> },
                   { key: 'screenReader', label: 'Screen Reader Support', icon: <Volume2 className="w-4 h-4"  /> }
                 ].map(({ key, label, icon }) => (
                   <label key={key} className="flex items-center space-x-3 cursor-pointer">,
@@ -425,5 +425,5 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
               {announcement}
             </motion.div>))}
         </div>)}
-    </>)};
-export default EnhancedAccessibilityEnhancer;
+    </>)},
+export default EnhancedAccessibilityEnhancer,

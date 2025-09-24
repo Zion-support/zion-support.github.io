@@ -1,15 +1,15 @@
 import Layout from '../components/layout/Layout',
 import {
-  TrendingUp;
-  Sparkles;
-  Zap;
-  Target;
-  ChartBar;
-  Clock;
-  CheckCircle;
-  Brain;
-  BarChart3;
-  LineChart;
+  TrendingUp,
+  Sparkles,
+  Zap,
+  Target,
+  ChartBar,
+  Clock,
+  CheckCircle,
+  Brain,
+  BarChart3,
+  LineChart,
 } from 'lucide-react',
 export default function AIPredictiveAnalytics20o41() {
   return (
@@ -63,47 +63,47 @@ export default function AIPredictiveAnalytics20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Neural Pattern Recognition';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Neural Pattern Recognition',
                   description:,
-                    'Advanced neural networks that identify complex patterns and correlations invisible to traditional analytics.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Advanced neural networks that identify complex patterns and correlations invisible to traditional analytics.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <TrendingUp className='w-8 h-8' />;
-                  title: 'Future Trend Prediction';
+                  icon: <TrendingUp className='w-8 h-8' />,
+                  title: 'Future Trend Prediction',
                   description:,
-                    'AI-powered forecasting that predicts market trends, customer behavior, and business outcomes with unprecedented accuracy.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'AI-powered forecasting that predicts market trends, customer behavior, and business outcomes with unprecedented accuracy.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <BarChart3 className='w-8 h-8' />;
-                  title: 'Real-time Analytics';
+                  icon: <BarChart3 className='w-8 h-8' />,
+                  title: 'Real-time Analytics',
                   description:,
-                    'Instant insights and predictions that update in real-time as new data becomes available.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Instant insights and predictions that update in real-time as new data becomes available.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Predictive Modeling';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Predictive Modeling',
                   description:,
-                    'Sophisticated models that learn from historical data to predict future scenarios and outcomes.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Sophisticated models that learn from historical data to predict future scenarios and outcomes.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Automated Insights';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Automated Insights',
                   description:,
-                    'AI-generated insights that automatically identify opportunities, risks, and actionable recommendations.';
-                  color: 'from-cyan-50o0 to-blue-50o0';
-                };
+                    'AI-generated insights that automatically identify opportunities, risks, and actionable recommendations.',
+                  color: 'from-cyan-50o0 to-blue-50o0'
+                },
                 {
-                  icon: <LineChart className='w-8 h-8' />;
-                  title: 'Multi-dimensional Analysis';
+                  icon: <LineChart className='w-8 h-8' />,
+                  title: 'Multi-dimensional Analysis',
                   description:,
-                    'Comprehensive analysis across multiple dimensions, time periods, and data sources for complete insights.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'Comprehensive analysis across multiple dimensions, time periods, and data sources for complete insights.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -138,42 +138,42 @@ export default function AIPredictiveAnalytics20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Business Intelligence';
-                  description: 'Comprehensive BI dashboards and reporting';
-                };
+                  name: 'Business Intelligence',
+                  description: 'Comprehensive BI dashboards and reporting'
+                },
                 {
-                  name: 'Customer Analytics';
+                  name: 'Customer Analytics',
                   description:,
-                    'Deep insights into customer behavior and preferences';
-                };
+                    'Deep insights into customer behavior and preferences',
+                },
                 {
-                  name: 'Financial Forecasting';
-                  description: 'Predictive financial modeling and planning';
-                };
+                  name: 'Financial Forecasting',
+                  description: 'Predictive financial modeling and planning'
+                },
                 {
-                  name: 'Operational Analytics';
+                  name: 'Operational Analytics',
                   description:,
-                    'Real-time operational insights and optimization';
-                };
+                    'Real-time operational insights and optimization',
+                },
                 {
-                  name: 'Market Analysis';
+                  name: 'Market Analysis',
                   description:,
-                    'Competitive intelligence and market trend prediction';
-                };
+                    'Competitive intelligence and market trend prediction',
+                },
                 {
-                  name: 'Risk Assessment';
+                  name: 'Risk Assessment',
                   description:,
-                    'Predictive risk modeling and mitigation strategies';
-                };
+                    'Predictive risk modeling and mitigation strategies',
+                },
                 {
-                  name: 'Performance Metrics';
-                  description: 'KPI tracking and performance optimization';
-                };
+                  name: 'Performance Metrics',
+                  description: 'KPI tracking and performance optimization'
+                },
                 {
-                  name: 'Predictive Maintenance';
+                  name: 'Predictive Maintenance',
                   description:,
-                    'AI-powered maintenance scheduling and optimization';
-                };
+                    'AI-powered maintenance scheduling and optimization',
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -203,55 +203,50 @@ export default function AIPredictiveAnalytics20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Data Collection';
+                  phase: 'Data Collection',
                   description:,
-                    'Comprehensive data gathering from multiple sources and systems';
+                    'Comprehensive data gathering from multiple sources and systems',
                   features: [
-                    'Multi-source integration';
-                    'Real-time streaming';
-                    'Data validation';
-                  ];
-                };
+                    'Multi-source integrationReal-time streaming',
+                    'Data validation',
+                  ]
+                },
                 {
-                  phase: 'Data Processing';
+                  phase: 'Data Processing',
                   description:,
-                    'Advanced data cleaning, transformation, and preparation for analysis';
+                    'Advanced data cleaning, transformation, and preparation for analysis',
                   features: [
-                    'Data cleaning';
-                    'Feature engineering';
-                    'Quality assurance';
-                  ];
-                };
+                    'Data cleaningFeature engineering',
+                    'Quality assurance',
+                  ]
+                },
                 {
-                  phase: 'AI Analysis';
+                  phase: 'AI Analysis',
                   description:,
-                    'Deep learning algorithms analyze patterns and identify correlations';
+                    'Deep learning algorithms analyze patterns and identify correlations',
                   features: [
-                    'Neural networks';
-                    'Pattern recognition';
-                    'Correlation analysis';
-                  ];
-                };
+                    'Neural networksPattern recognition',
+                    'Correlation analysis',
+                  ]
+                },
                 {
-                  phase: 'Prediction Generation';
+                  phase: 'Prediction Generation',
                   description:,
-                    'AI generates predictions, forecasts, and actionable insights';
+                    'AI generates predictions, forecasts, and actionable insights',
                   features: [
-                    'Trend forecasting';
-                    'Risk assessment';
-                    'Opportunity identification';
-                  ];
-                };
+                    'Trend forecastingRisk assessment',
+                    'Opportunity identification',
+                  ]
+                },
                 {
-                  phase: 'Insight Delivery';
+                  phase: 'Insight Delivery',
                   description:,
-                    'Real-time delivery of insights through dashboards and alerts';
+                    'Real-time delivery of insights through dashboards and alerts',
                   features: [
-                    'Interactive dashboards';
-                    'Automated alerts';
-                    'Mobile access';
-                  ];
-                };
+                    'Interactive dashboardsAutomated alerts',
+                    'Mobile access',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -297,65 +292,59 @@ export default function AIPredictiveAnalytics20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Finance';
+                  industry: 'Finance',
                   description:,
-                    'Predict market trends, assess risks, and optimize investment strategies with AI-powered analytics.';
+                    'Predict market trends, assess risks, and optimize investment strategies with AI-powered analytics.',
                   applications: [
-                    'Risk assessment';
-                    'Portfolio optimization';
-                    'Fraud detection';
-                  ];
-                };
+                    'Risk assessmentPortfolio optimization',
+                    'Fraud detection',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Predict patient outcomes, optimize treatments, and improve healthcare delivery with predictive insights.';
+                    'Predict patient outcomes, optimize treatments, and improve healthcare delivery with predictive insights.',
                   applications: [
-                    'Patient monitoring';
-                    'Treatment optimization';
-                    'Resource planning';
-                  ];
-                };
+                    'Patient monitoringTreatment optimization',
+                    'Resource planning',
+                  ]
+                },
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'Forecast demand, optimize inventory, and personalize customer experiences with predictive analytics.';
+                    'Forecast demand, optimize inventory, and personalize customer experiences with predictive analytics.',
                   applications: [
-                    'Demand forecasting';
-                    'Inventory optimization';
-                    'Customer segmentation';
-                  ];
-                };
+                    'Demand forecastingInventory optimization',
+                    'Customer segmentation',
+                  ]
+                },
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'Predict equipment failures, optimize production, and reduce downtime with AI analytics.';
+                    'Predict equipment failures, optimize production, and reduce downtime with AI analytics.',
                   applications: [
-                    'Predictive maintenance';
-                    'Quality control';
-                    'Supply chain optimization';
-                  ];
-                };
+                    'Predictive maintenanceQuality control',
+                    'Supply chain optimization',
+                  ]
+                },
                 {
-                  industry: 'Transportation';
+                  industry: 'Transportation',
                   description:,
-                    'Optimize routes, predict delays, and improve logistics with predictive transportation analytics.';
+                    'Optimize routes, predict delays, and improve logistics with predictive transportation analytics.',
                   applications: [
-                    'Route optimization';
-                    'Delay prediction';
-                    'Fleet management';
-                  ];
-                };
+                    'Route optimizationDelay prediction',
+                    'Fleet management',
+                  ]
+                },
                 {
-                  industry: 'Energy';
+                  industry: 'Energy',
                   description:,
-                    'Predict energy demand, optimize generation, and improve grid efficiency with AI analytics.';
+                    'Predict energy demand, optimize generation, and improve grid efficiency with AI analytics.',
                   applications: [
-                    'Demand forecasting';
-                    'Grid optimization';
-                    'Renewable integration';
-                  ];
-                };
+                    'Demand forecastingGrid optimization',
+                    'Renewable integration',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -392,33 +381,33 @@ export default function AIPredictiveAnalytics20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Increased Revenue';
+                  title: 'Increased Revenue',
                   description:,
-                    'Predict market opportunities and customer needs to drive revenue growth and market expansion.';
-                  icon: <TrendingUp className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Predict market opportunities and customer needs to drive revenue growth and market expansion.',
+                  icon: <TrendingUp className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Reduced Costs';
+                  title: 'Reduced Costs',
                   description:,
-                    'Identify inefficiencies and optimize operations to reduce costs and improve profitability.';
-                  icon: <ChartBar className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Identify inefficiencies and optimize operations to reduce costs and improve profitability.',
+                  icon: <ChartBar className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  title: 'Better Decisions';
+                  title: 'Better Decisions',
                   description:,
-                    'Make data-driven decisions with confidence using AI-powered insights and predictions.';
-                  icon: <Brain className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'Make data-driven decisions with confidence using AI-powered insights and predictions.',
+                  icon: <Brain className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
                 {
-                  title: 'Competitive Advantage';
+                  title: 'Competitive Advantage',
                   description:,
-                    'Stay ahead of the competition with predictive insights and proactive strategies.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Stay ahead of the competition with predictive insights and proactive strategies.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

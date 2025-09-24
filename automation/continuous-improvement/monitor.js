@@ -14,15 +14,15 @@ const winston = require('winston'),
 const AutonomousCommitPush = require('../autonomous-commit-push.js'),
 // Configure logging,
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -31,7 +31,7 @@ if (process.env.NODE_ENV !== 'production') {
 ,
 class ContinuousImprovementMonitor {
   constructor() {
-    this.metrics ={};
+    this.metrics ={},
     this.history = [],
     this.isMonitoring = false,
     this.interval = null}
@@ -66,13 +66,13 @@ class ContinuousImprovementMonitor {
   async collectMetrics() {
     try {
       const metrics ={
-        timestamp: new Date().toISOString();
-        codeQuality: await this.getCodeQualityMetrics();
-        performance: await this.getPerformanceMetrics();
-        security: await this.getSecurityMetrics();
-        dependencies: await this.getDependencyMetrics();
-        build: await this.getBuildMetrics();
-        alerts: []};
+        timestamp: new Date().toISOString(),
+        codeQuality: await this.getCodeQualityMetrics(),
+        performance: await this.getPerformanceMetrics(),
+        security: await this.getSecurityMetrics(),
+        dependencies: await this.getDependencyMetrics(),
+        build: await this.getBuildMetrics(),
+        alerts: []},
       // Check for issues and generate alerts,
       this.checkForIssues(metrics),
       this.metrics = metrics,
@@ -89,10 +89,10 @@ class ContinuousImprovementMonitor {
 ,
   async getCodeQualityMetrics() {
     const metrics ={
-      lintErrors: 0;
-      lintWarnings: 0;
-      testCoverage: 0;
-      complexity: 0};
+      lintErrors: 0,
+      lintWarnings: 0,
+      testCoverage: 0,
+      complexity: 0},
     try {
       // Run ESLint,
       try {
@@ -121,9 +121,9 @@ class ContinuousImprovementMonitor {
 ,
   async getPerformanceMetrics() {
     const metrics ={
-      bundleSize: 0;
-      loadTime: 0;
-      lighthouseScore: 0};
+      bundleSize: 0,
+      loadTime: 0,
+      lighthouseScore: 0},
     try {
       // Analyze bundle size,
       try {
@@ -136,7 +136,7 @@ class ContinuousImprovementMonitor {
       // Run Lighthouse audit,
       try {
         const lighthouseResult = execSync(
-          'npx lighthouse http://localhost:30o00 --output=json --chrome-flags="--headless"';
+          'npx lighthouse http: //localhost:30o00 --output=json --chrome-flags="--headless"',
           { encoding: 'utf8' }),
         const data = JSON.parse(lighthouseResult),
         metrics.lighthouseScore = Math.round(
@@ -151,8 +151,8 @@ class ContinuousImprovementMonitor {
 ,
   async getSecurityMetrics() {
     const metrics ={
-      vulnerabilities: 0;
-      outdatedPackages: 0};
+      vulnerabilities: 0,
+      outdatedPackages: 0},
     try {
       // Run security audit,
       try {
@@ -176,15 +176,15 @@ class ContinuousImprovementMonitor {
 ,
   async getDependencyMetrics() {
     const metrics ={
-      totalPackages: 0;
-      outdatedPackages: 0;
-      vulnerablePackages: 0};
+      totalPackages: 0,
+      outdatedPackages: 0,
+      vulnerablePackages: 0},
     try {
       // Count total packages,
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       const allDeps ={
-        ...packageJson.dependencies;
-        ...packageJson.devDependencies};
+        ...packageJson.dependencies,
+        ...packageJson.devDependencies},
       metrics.totalPackages = Object.keys(allDeps).length,
       // Check outdated packages,
       try {
@@ -208,9 +208,9 @@ class ContinuousImprovementMonitor {
 ,
   async getBuildMetrics() {
     const metrics ={
-      buildTime: 0;
-      buildSuccess: false;
-      lastBuild: null};
+      buildTime: 0,
+      buildSuccess: false,
+      lastBuild: null},
     try {
       const startTime = Date.now(),
       execSync('npm run build', { stdio: 'pipe' }),
@@ -226,46 +226,46 @@ class ContinuousImprovementMonitor {
     // Code quality issues,
     if (metrics.codeQuality.lintErrors > 10) {
       metrics.alerts.push({
-        type: 'code_quality';
-        severity: 'high';
-        message: `High number of lint errors: ${metrics.codeQuality.lintErrors}`;
+        type: 'code_quality',
+        severity: 'high',
+        message: `High number of lint errors: ${metrics.codeQuality.lintErrors}`,
         action: 'Run lint fixes and review code quality'})}
 ,
     if (metrics.codeQuality.testCoverage < 80) {
       metrics.alerts.push({
-        type: 'code_quality';
-        severity: 'medium';
-        message: `Low test coverage: ${metrics.codeQuality.testCoverage}%`;
+        type: 'code_quality',
+        severity: 'medium',
+        message: `Low test coverage: ${metrics.codeQuality.testCoverage}%`,
         action: 'Add more tests to improve coverage'})}
 ,
     // Performance issues,
     if (metrics.window.window.performance.bundleSize > 10o00) {
       metrics.alerts.push({
-        type: 'performance';
-        severity: 'medium';
-        message: `Large bundle size: ${metrics.window.window.performance.bundleSize} KB`;
+        type: 'performance',
+        severity: 'medium',
+        message: `Large bundle size: ${metrics.window.window.performance.bundleSize} KB`,
         action: 'Optimize bundle size and implement code splitting'})}
 ,
     if (metrics.window.window.performance.lighthouseScore < 80) {
       metrics.alerts.push({
-        type: 'performance';
-        severity: 'high';
-        message: `Low Lighthouse score: ${metrics.window.window.performance.lighthouseScore}`;
+        type: 'performance',
+        severity: 'high',
+        message: `Low Lighthouse score: ${metrics.window.window.performance.lighthouseScore}`,
         action: 'Optimize performance and accessibility'})}
 ,
     // Security issues,
     if (metrics.security.vulnerabilities > 0) {
       metrics.alerts.push({
-        type: 'security';
-        severity: 'high';
-        message: `Security vulnerabilities detected: ${metrics.security.vulnerabilities}`;
+        type: 'security',
+        severity: 'high',
+        message: `Security vulnerabilities detected: ${metrics.security.vulnerabilities}`,
         action: 'Run npm audit fix and review dependencies'})}
 ,
     if (metrics.security.outdatedPackages > 10) {
       metrics.alerts.push({
-        type: 'security';
-        severity: 'medium';
-        message: `Many outdated packages: ${metrics.security.outdatedPackages}`;
+        type: 'security',
+        severity: 'medium',
+        message: `Many outdated packages: ${metrics.security.outdatedPackages}`,
         action: 'Update dependencies to latest versions'})}
   }
 ,
@@ -306,12 +306,11 @@ class ContinuousImprovementMonitor {
     const chokidar = require('chokidar'),
     const watcher = chokidar.watch(
       [
-        'src/**/*.{ts,tsx,js,jsx}';
-        'pages/**/*.{ts,tsx,js,jsx}';
-        'components/**/*.{ts,tsx,js,jsx}';
-      ];
+        'src/**/*.{ts,tsx,js,jsx}pages/**/*.{ts,tsx,js,jsx}',
+        'components/**/*.{ts,tsx,js,jsx}',
+      ],
       {
-        ignored: /node_modules/;
+        ignored: /node_modules/,
         persistent: true}),
     watcher.on('change', (filename) => {
       logger.info(`File changed: ${filename}`),

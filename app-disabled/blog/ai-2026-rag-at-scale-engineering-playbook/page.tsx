@@ -1,19 +1,16 @@
 import Link from 'next/link',
 import SEO from '../../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: RAG at Scale - Engineering Playbook';
+  title: 'AI 20o26: RAG at Scale - Engineering Playbook',
   description:,
-    'A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI.';
+    'A practical, engineering-first playbook to design, operate, and scale Retrieval-Augmented Generation (RAG) systems with reliability, observability, and ROI.',
   keywords: [
-    'RAG';
-    'retrieval-augmented generation';
-    'vector databases';
-    'prompt engineering';
-    'observability';
-    'RAG evaluation';
-    'scalability';
-  ];
-};
+    'RAGretrieval-augmented generation',
+    'vector databasesprompt engineering',
+    'observabilityRAG evaluation',
+    'scalability',
+  ]
+},
 export default function AI20o26RAGAtScalePlaybook() {
   return (
     <>,
@@ -35,7 +32,7 @@ export default function AI20o26RAGAtScalePlaybook() {
               RAG at Scale: Engineering Playbook (20o26),
             </h1>,
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>,
-              Design resilient retrieval pipelines, optimize latency and cost;
+              Design resilient retrieval pipelines, optimize latency and cost,
               and ship measurable outcomes with production-grade RAG.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -73,11 +70,11 @@ export default function AI20o26RAGAtScalePlaybook() {
                 Dual index strategy: hybrid BM25 + dense vectors with reranking,
               </li>,
               <li>,
-                Data plane: extraction, chunking, embeddings, quality gates;
+                Data plane: extraction, chunking, embeddings, quality gates,
                 lineage,
               </li>,
               <li>,
-                Query plane: routing, retrieval orchestration, guardrails;
+                Query plane: routing, retrieval orchestration, guardrails,
                 caching,
               </li>,
               <li>,
@@ -98,7 +95,7 @@ export default function AI20o26RAGAtScalePlaybook() {
                     Establish golden chunking rules and embedding baselines,
                   </li>,
                   <li>,
-                    Set up eval harness: retrieval precision/recall;
+                    Set up eval harness: retrieval precision/recall,
                     groundedness, latency,
                   </li>,
                   <li>,
@@ -137,7 +134,7 @@ export default function AI20o26RAGAtScalePlaybook() {
                 Ready to deploy RAG with confidence?,
               </h3>,
               <p className='text-lg mb-6 opacity-90'>,
-                We help teams productionize RAG with strong governance, evals;
+                We help teams productionize RAG with strong governance, evals,
                 and SLOs.,
               </p>,
               <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

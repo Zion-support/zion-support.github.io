@@ -10,10 +10,10 @@ export default function Innovative20o26ServicesShowcase() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Filter services based on search and category,
   const filteredServices = useMemo(() => {
     let filtered = allInnovative20o26Services,
@@ -53,28 +53,28 @@ export default function Innovative20o26ServicesShowcase() {
         return filtered.sort((a, b) => a.name.localeCompare(b.name))}
   }, [searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allInnovative20o26Services.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovative20o26ServiceStats.aiServices };
-    { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: innovative20o26ServiceStats.blockchainServices };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: '🛡️', count: innovative20o26ServiceStats.cybersecurityServices };
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: innovative20o26ServiceStats.spaceQuantumServices };
-    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: innovative20o26ServiceStats.healthcareBiotechServices };
-    { id: 'fintech', name: 'Financial Technology', icon: '💳', count: innovative20o26ServiceStats.fintechServices };
-    { id: 'education', name: 'Education & Research', icon: '🎓', count: innovative20o26ServiceStats.educationResearchServices };
-    { id: 'manufacturing', name: 'Manufacturing & Logistics', icon: '🏭', count: innovative20o26ServiceStats.manufacturingLogisticsServices };
-    { id: 'energy', name: 'Energy & Sustainability', icon: '⚡', count: innovative20o26ServiceStats.energySustainabilityServices };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allInnovative20o26Services.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovative20o26ServiceStats.aiServices },
+    { id: 'blockchain', name: 'Blockchain & Web3', icon: '⛓️', count: innovative20o26ServiceStats.blockchainServices },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: '🛡️', count: innovative20o26ServiceStats.cybersecurityServices },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: innovative20o26ServiceStats.spaceQuantumServices },
+    { id: 'healthcare', name: 'Healthcare & Biotech', icon: '🏥', count: innovative20o26ServiceStats.healthcareBiotechServices },
+    { id: 'fintech', name: 'Financial Technology', icon: '💳', count: innovative20o26ServiceStats.fintechServices },
+    { id: 'education', name: 'Education & Research', icon: '🎓', count: innovative20o26ServiceStats.educationResearchServices },
+    { id: 'manufacturing', name: 'Manufacturing & Logistics', icon: '🏭', count: innovative20o26ServiceStats.manufacturingLogisticsServices },
+    { id: 'energy', name: 'Energy & Sustainability', icon: '⚡', count: innovative20o26ServiceStats.energySustainabilityServices },
     { id: 'entertainment', name: 'Entertainment & Media', icon: '🎬', count: innovative20o26ServiceStats.entertainmentMediaServices }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' };
-    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $1K/month', range: 'Under $1K' },
+    { id: 'medium', name: '$1K - $5K/month', range: '$1K - $5K' },
     { id: 'high', name: '$5K+/month', range: '$5K+' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name' };
-    { id: 'price', name: 'Price' };
-    { id: 'rating', name: 'Rating' };
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
     { id: 'customers', name: 'Customers' }
   ],
   return (

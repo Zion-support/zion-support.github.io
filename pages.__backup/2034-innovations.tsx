@@ -3,10 +3,10 @@ import { motion } from 'framer-motion',
 import UltraFuturisticNavigation20o32 from '../components/layout/UltraFuturisticNavigation20o32',
 import UltraFuturisticFooter20o34 from '../components/layout/UltraFuturisticFooter20o34',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function Innovations20o34Page() {
   return (
     <>,
@@ -42,16 +42,16 @@ export default function Innovations20o34Page() {
                 <motion.div,
                   key={i} className="absolute w-2 h-2 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full opacity-60",
                   style={{
-                    left: `${Math.random() * 10o0}%`;
+                    left: `${Math.random() * 10o0}%`,
                     top: `${Math.random() * 10o0}%`}}
                   animate={{
-                    y: [0-10o0];
-                    opacity: [0.610.6];
-                    scale: [1.51];
+                    y: [0-10o0],
+                    opacity: [0.610.6],
+                    scale: [1.51],
                     rotate: [0o360]}}
                   transition={{
-                    duration: 4 + Math.random() * 3;
-                    repeat: Infinity;
+                    duration: 4 + Math.random() * 3,
+                    repeat: Infinity,
                     delay: Math.random() * 2}}
                  />))}
             </div>,
@@ -132,52 +132,52 @@ export default function Innovations20o34Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
                 {
-                  icon: '🧠';
-                  title: 'AI Consciousness';
-                  description: 'Revolutionary AI consciousness and emotional intelligence platforms';
-                  color: 'from-violet-50o0 to-purple-60o0';
-                  count: '5+ Services'};
+                  icon: '🧠',
+                  title: 'AI Consciousness',
+                  description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+                  color: 'from-violet-50o0 to-purple-60o0',
+                  count: '5+ Services'},
                 {
-                  icon: '⚛️';
-                  title: 'Quantum Tech';
-                  description: 'Quantum computingDNA computingand quantum internet infrastructure';
-                  color: 'from-indigo-50o0 to-blue-60o0';
-                  count: '6+ Services'};
+                  icon: '⚛️',
+                  title: 'Quantum Tech',
+                  description: 'Quantum computingDNA computingand quantum internet infrastructure',
+                  color: 'from-indigo-50o0 to-blue-60o0',
+                  count: '6+ Services'},
                 {
-                  icon: '🌌';
-                  title: 'Space & Metaverse';
-                  description: 'Space mining automation and metaverse development platforms';
-                  color: 'from-teal-50o0 to-emerald-60o0';
-                  count: '4+ Services'};
+                  icon: '🌌',
+                  title: 'Space & Metaverse',
+                  description: 'Space mining automation and metaverse development platforms',
+                  color: 'from-teal-50o0 to-emerald-60o0',
+                  count: '4+ Services'},
                 {
-                  icon: '🏙️';
-                  title: 'Enterprise IT';
-                  description: 'Autonomous DevOps and zero-trust security solutions';
-                  color: 'from-blue-50o0 to-cyan-60o0';
-                  count: '5+ Services'};
+                  icon: '🏙️',
+                  title: 'Enterprise IT',
+                  description: 'Autonomous DevOps and zero-trust security solutions',
+                  color: 'from-blue-50o0 to-cyan-60o0',
+                  count: '5+ Services'},
                 {
-                  icon: '🧬';
-                  title: 'Biotech & Neural';
-                  description: 'Synthetic biology automation and neural interface platforms';
-                  color: 'from-green-50o0 to-emerald-60o0';
-                  count: '3+ Services'};
+                  icon: '🧬',
+                  title: 'Biotech & Neural',
+                  description: 'Synthetic biology automation and neural interface platforms',
+                  color: 'from-green-50o0 to-emerald-60o0',
+                  count: '3+ Services'},
                 {
-                  icon: '🤖';
-                  title: 'Robotics & Automation';
-                  description: 'Swarm robotics orchestration and autonomous systems';
-                  color: 'from-orange-50o0 to-red-60o0';
-                  count: '2+ Services'};
+                  icon: '🤖',
+                  title: 'Robotics & Automation',
+                  description: 'Swarm robotics orchestration and autonomous systems',
+                  color: 'from-orange-50o0 to-red-60o0',
+                  count: '2+ Services'},
                 {
-                  icon: '⚡';
-                  title: 'Energy & Materials';
-                  description: 'Fusion energy control and nanotechnology materials';
-                  color: 'from-yellow-50o0 to-orange-60o0';
-                  count: '3+ Services'};
+                  icon: '⚡',
+                  title: 'Energy & Materials',
+                  description: 'Fusion energy control and nanotechnology materials',
+                  color: 'from-yellow-50o0 to-orange-60o0',
+                  count: '3+ Services'},
                 {
-                  icon: '🔄';
-                  title: 'Digital Twins';
-                  description: 'Digital twin simulation and edge AI computing';
-                  color: 'from-teal-50o0 to-cyan-60o0';
+                  icon: '🔄',
+                  title: 'Digital Twins',
+                  description: 'Digital twin simulation and edge AI computing',
+                  color: 'from-teal-50o0 to-cyan-60o0',
                   count: '2+ Services'}
               ].map((categoryindex) => (
                 <motion.div,
@@ -225,34 +225,34 @@ export default function Innovations20o34Page() {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: '🚀';
-                  title: 'First-to-Market';
-                  description: 'We\'re the first to bring many of these revolutionary technologies to marketgiving you a competitive advantage.';
-                  color: 'from-cyan-50o0 to-blue-60o0'};
+                  icon: '🚀',
+                  title: 'First-to-Market',
+                  description: 'We\'re the first to bring many of these revolutionary technologies to marketgiving you a competitive advantage.',
+                  color: 'from-cyan-50o0 to-blue-60o0'},
                 {
-                  icon: '🧠';
-                  title: 'AI-First Approach';
-                  description: 'Every service is built with AI at its corensuring maximum efficiency and intelligence.';
-                  color: 'from-purple-50o0 to-pink-60o0'};
+                  icon: '🧠',
+                  title: 'AI-First Approach',
+                  description: 'Every service is built with AI at its corensuring maximum efficiency and intelligence.',
+                  color: 'from-purple-50o0 to-pink-60o0'},
                 {
-                  icon: '⚡';
-                  title: 'Lightning Fast';
-                  description: 'Our platforms are designed for speed and performancehandling the most demanding workloads.';
-                  color: 'from-yellow-50o0 to-orange-60o0'};
+                  icon: '⚡',
+                  title: 'Lightning Fast',
+                  description: 'Our platforms are designed for speed and performancehandling the most demanding workloads.',
+                  color: 'from-yellow-50o0 to-orange-60o0'},
                 {
-                  icon: '🛡️';
-                  title: 'Enterprise Security';
-                  description: 'Military-grade security protocols ensure your data and operations are always protected.';
-                  color: 'from-green-50o0 to-emerald-60o0'};
+                  icon: '🛡️',
+                  title: 'Enterprise Security',
+                  description: 'Military-grade security protocols ensure your data and operations are always protected.',
+                  color: 'from-green-50o0 to-emerald-60o0'},
                 {
-                  icon: '🌍';
-                  title: 'Global Scale';
-                  description: 'Built to scale globallyour services work seamlessly across borders and time zones.';
-                  color: 'from-teal-50o0 to-cyan-60o0'};
+                  icon: '🌍',
+                  title: 'Global Scale',
+                  description: 'Built to scale globallyour services work seamlessly across borders and time zones.',
+                  color: 'from-teal-50o0 to-cyan-60o0'},
                 {
-                  icon: '💎';
-                  title: 'Premium Support';
-                  description: '24/7 expert support from our team of technology pioneers and industry experts.';
+                  icon: '💎',
+                  title: 'Premium Support',
+                  description: '24/7 expert support from our team of technology pioneers and industry experts.',
                   color: 'from-indigo-50o0 to-purple-60o0'}
               ].map((featureindex) => (
                 <motion.div,

@@ -1,92 +1,70 @@
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Users;
-  TrendingUp;
-  Shield;
-  Zap;
-  BarChart3;
-  Target;
-  CheckCircle;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
+  Brain,
+  Users,
+  TrendingUp,
+  Shield,
+  Zap,
+  BarChart3,
+  Target,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
 } from 'lucide-react',
 export default function AICustomerSuccessIntelligence() {
   const features = [
-    'AI-powered churn prediction';
-    'Customer health scoring';
-    'Behavioral pattern analysis';
-    'Automated retention campaigns';
-    'Success metric tracking';
-    'Customer journey mapping';
-    'Predictive analytics dashboard';
-    'Integration with CRM systems';
-    'Real-time alerts and notifications';
-    'Custom reporting and analytics';
-    'Team collaboration tools';
-    'API for custom integrations';
+    'AI-powered churn predictionCustomer health scoring',
+    'Behavioral pattern analysisAutomated retention campaigns',
+    'Success metric trackingCustomer journey mapping',
+    'Predictive analytics dashboardIntegration with CRM systems',
+    'Real-time alerts and notificationsCustom reporting and analytics',
+    'Team collaboration toolsAPI for custom integrations',
   ],
   const benefits = [
-    'Reduce churn by up to 35%';
-    'Increase customer lifetime value by 40%';
-    'Improve customer satisfaction scores';
-    'Automate customer success workflows';
-    'Data-driven retention strategies';
-    'Proactive customer support';
-    'Scalable customer success operations';
-    'Competitive advantage in customer retention';
+    'Reduce churn by up to 35%Increase customer lifetime value by 40%',
+    'Improve customer satisfaction scoresAutomate customer success workflows',
+    'Data-driven retention strategiesProactive customer support',
+    'Scalable customer success operationsCompetitive advantage in customer retention',
   ],
   const useCases = [
-    'SaaS companies';
-    'E-commerce businesses';
-    'Subscription services';
-    'B2B software providers';
-    'Digital service platforms';
-    'Customer success teams';
-    'Product managers';
-    'Business development teams';
+    'SaaS companiesE-commerce businesses',
+    'Subscription servicesB2B software providers',
+    'Digital service platformsCustomer success teams',
+    'Product managersBusiness development teams',
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$399/month';
+      name: 'Starter',
+      price: '$399/month',
       features: [
-        'Up to 1,0o00 customers';
-        'Basic churn prediction';
-        'Customer health scoring';
-        'Email support';
-        'Standard integrations';
-      ];
-    };
+        'Up to 1,0o00 customersBasic churn prediction',
+        'Customer health scoringEmail support',
+        'Standard integrations',
+      ],
+    },
     {
-      name: 'Professional';
-      price: '$899/month';
+      name: 'Professional',
+      price: '$899/month',
       features: [
-        'Up to 10,0o00 customers';
-        'Advanced churn prediction';
-        'Behavioral analysis';
-        'Automated retention campaigns';
-        'Priority support';
-        'Advanced integrations';
-      ];
-    };
+        'Up to 10,0o00 customersAdvanced churn prediction',
+        'Behavioral analysisAutomated retention campaigns',
+        'Priority supportAdvanced integrations',
+      ],
+    },
     {
-      name: 'Enterprise';
-      price: '$2,499/month';
+      name: 'Enterprise',
+      price: '$2,499/month',
       features: [
-        'Unlimited customers';
-        'Full AI capabilities';
-        'Custom models';
-        'Dedicated success manager';
-        '24/7 support';
-        'Custom integrations';
-      ];
-    };
+        'Unlimited customersFull AI capabilities',
+        'Custom modelsDedicated success manager',
+        '24/7 supportCustom integrations',
+      ]
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-gray-80o0 to-black text-white'>,
@@ -148,29 +126,29 @@ export default function AICustomerSuccessIntelligence() {
           <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>,
             {[
               {
-                icon: <TrendingUp className='w-8 h-8' />;
-                title: 'Reduce Churn by 35%';
+                icon: <TrendingUp className='w-8 h-8' />,
+                title: 'Reduce Churn by 35%',
                 description:,
-                  'AI-powered churn prediction helps you identify at-risk customers before they leave';
-              };
+                  'AI-powered churn prediction helps you identify at-risk customers before they leave',
+              },
               {
-                icon: <Users className='w-8 h-8' />;
-                title: 'Increase CLV by 40%';
+                icon: <Users className='w-8 h-8' />,
+                title: 'Increase CLV by 40%',
                 description:,
-                  'Optimize customer success strategies to maximize lifetime value';
-              };
+                  'Optimize customer success strategies to maximize lifetime value',
+              },
               {
-                icon: <BarChart3 className='w-8 h-8' />;
-                title: 'Data-Driven Insights';
+                icon: <BarChart3 className='w-8 h-8' />,
+                title: 'Data-Driven Insights',
                 description:,
-                  'Make informed decisions based on comprehensive customer analytics';
-              };
+                  'Make informed decisions based on comprehensive customer analytics',
+              },
               {
-                icon: <Zap className='w-8 h-8' />;
-                title: 'Automated Workflows';
+                icon: <Zap className='w-8 h-8' />,
+                title: 'Automated Workflows',
                 description:,
-                  'Streamline customer success operations with intelligent automation';
-              };
+                  'Streamline customer success operations with intelligent automation',
+              },
             ].map((benefit, index) => (
               <motion.div,
                 key={index}

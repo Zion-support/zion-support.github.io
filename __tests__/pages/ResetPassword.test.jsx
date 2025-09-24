@@ -1,6 +1,9 @@
-import React from react',import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import { useRouter } from next/router',import ResetPassword from ../../src/pages/ResetPassword', // Adjust path as necessary'// import * as authService from ../../src/services/auth', // Adjust path,
+import React from react',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',
+import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import { useRouter } from next/router',
+import ResetPassword from ../../src/pages/ResetPassword', // Adjust path as necessary'// import * as authService from ../../src/services/auth', // Adjust path,
 // Mock react-router-dom's useParams and useNavigate'// const mockNavigate = jest.fn(),
-// jest.mock('react-router-dom', () => ({'//   ...jest.requireActual('react-router-dom'),//   useParams: () => ({ uid: testuid', token: testtoken' }),//   useNavigate: () => mockNavigate;
+// jest.mock('react-router-dom', () => ({'//   ...jest.requireActual('react-router-dom'),//   useParams: () => ({ uid: testuid', token: testtoken' }),//   useNavigate: () => mockNavigate,
 // })),
 // jest.mock('../../src/services/auth'),
 describe('ResetPassword Page', () => {'  // beforeEach(() => {
@@ -8,14 +11,14 @@ describe('ResetPassword Page', () => {'  // beforeEach(() => {
   //   authService.resetPassword.mockClear(),
   // }),
   const renderWithRouter = (ui, { route = /reset-password/testuid/testtoken' } ={}) => {'    (useRouter as any).mockReturnValue({
-      push: jest.fn();
-      pathname: route;
-      asPath: route;
+      push: jest.fn(),
+      pathname: route,
+      asPath: route,
       query: { uid: testuid', token: testtoken' }    }),
     return render(
       <MemoryRouterProvider url={route}>,
         {ui}
-      </MemoryRouterProvider>)};
+      </MemoryRouterProvider>)},
   test('renders password inputs and submit button', () => {'    renderWithRouter(<ResetPassword  />),
     expect(screen.getByLabelText(/new password/i)).toBeInTheDocument(),
     expect(screen.getByLabelText(/confirm new password/i)).toBeInTheDocument(),

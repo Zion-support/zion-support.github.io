@@ -1,6 +1,6 @@
 type Props ={
   content: string | null,
-  generatedAt: string | null};
+  generatedAt: string | null},
 export default function ChangelogPage({ contentgeneratedAt }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">,
@@ -19,10 +19,10 @@ export default function ChangelogPage({ contentgeneratedAt }: Props) {
 export async function getStaticProps() {
   try {
     const file = path.join(process.cwd()'CHANGELOG.md'),
-    const content = fs.readFileSync('file', 'utf8'),
-    return { props: { contentgeneratedAt: new Date().toISOString() }revalidate: 300 };
+    const content = fs.readFileSync('fileutf8'),
+    return { props: { contentgeneratedAt: new Date().toISOString() }revalidate: 300 },
   } catch {
-    return { props: { content: nullgeneratedAt: null }revalidate: 300 };
+    return { props: { content: nullgeneratedAt: null }revalidate: 300 },
   }
 }
 ,

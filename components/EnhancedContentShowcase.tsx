@@ -9,75 +9,75 @@ const EnhancedContentShowcase = () => {
     return () => clearTimeout(timer)}[]),
   const contentCategories ={
     breakthroughs: {
-      title: 'AI 20o25 Breakthroughs';
-      description: 'Revolutionary AI technologies transforming industries';
+      title: 'AI 20o25 Breakthroughs',
+      description: 'Revolutionary AI technologies transforming industries',
       items: [
         {
-          title: 'AI 20o25 Ultimate Breakthrough Revolution';
-          description: '10,0o00% ROI with quantum-AI fusion technology';
-          href: '/ai-20o25-ultimate-breakthrough-revolution';
-          icon: '🚀';
-          featured: true};
+          title: 'AI 20o25 Ultimate Breakthrough Revolution',
+          description: '10,0o00% ROI with quantum-AI fusion technology',
+          href: '/ai-20o25-ultimate-breakthrough-revolution',
+          icon: '🚀',
+          featured: true},
         {
-          title: 'AI 20o26 Quantum-Neural Fusion';
-          description: '15,0o00% ROI with next-gen neural interfaces';
-          href: '/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough';
-          icon: '⚛️';
-          featured: true};
+          title: 'AI 20o26 Quantum-Neural Fusion',
+          description: '15,0o00% ROI with next-gen neural interfaces',
+          href: '/ai-20o26-quantum-neural-fusion-revolutionary-breakthrough',
+          icon: '⚛️',
+          featured: true},
         {
-          title: 'AI 20o30 Transcendent Intelligence';
-          description: 'Beyond human-level AI capabilities';
-          href: '/ai-20o30-transcendent-intelligence';
-          icon: '🧠';
+          title: 'AI 20o30 Transcendent Intelligence',
+          description: 'Beyond human-level AI capabilities',
+          href: '/ai-20o30-transcendent-intelligence',
+          icon: '🧠',
           featured: false}
-      ]};
+      ]},
     caseStudies: {
-      title: 'Success Stories';
-      description: 'Real-world transformations with proven results';
+      title: 'Success Stories',
+      description: 'Real-world transformations with proven results',
       items: [
         {
-          title: 'Global Manufacturing Transformation';
-          description: '$2.4B annual savings with 850% ROI';
-          href: '/case-studies/ai-20o25-global-manufacturing-transformation-breakthrough';
-          icon: '🏭';
-          featured: true};
+          title: 'Global Manufacturing Transformation',
+          description: '$2.4B annual savings with 850% ROI',
+          href: '/case-studies/ai-20o25-global-manufacturing-transformation-breakthrough',
+          icon: '🏭',
+          featured: true},
         {
-          title: 'Fortune 50o0 Enterprise Success';
-          description: '1,50o0% ROI in 6 months';
-          href: '/case-studies/ai-20o25-fortune-50o0-transformation-breakthrough';
-          icon: '🏢';
-          featured: true};
+          title: 'Fortune 50o0 Enterprise Success',
+          description: '1,50o0% ROI in 6 months',
+          href: '/case-studies/ai-20o25-fortune-50o0-transformation-breakthrough',
+          icon: '🏢',
+          featured: true},
         {
-          title: 'Financial Services Revolution';
-          description: '99.9% accuracy with AI automation';
-          href: '/case-studies/ai-20o25-global-finance-transformation-breakthrough';
-          icon: '💰';
+          title: 'Financial Services Revolution',
+          description: '99.9% accuracy with AI automation',
+          href: '/case-studies/ai-20o25-global-finance-transformation-breakthrough',
+          icon: '💰',
           featured: false}
-      ]};
+      ]},
     resources: {
-      title: 'Implementation Guides';
-      description: 'Step-by-step guides for AI transformation';
+      title: 'Implementation Guides',
+      description: 'Step-by-step guides for AI transformation',
       items: [
         {
-          title: 'AI Implementation Master Guide';
-          description: '150+ pages of comprehensive strategies';
-          href: '/resources/ai-20o25-implementation-master-guide';
-          icon: '📚';
-          featured: true};
+          title: 'AI Implementation Master Guide',
+          description: '150+ pages of comprehensive strategies',
+          href: '/resources/ai-20o25-implementation-master-guide',
+          icon: '📚',
+          featured: true},
         {
-          title: 'Synthetic Intelligence Guide';
-          description: 'Breakthrough implementation strategies';
-          href: '/resources/ai-20o25-synthetic-intelligence-implementation-guide';
-          icon: '🔬';
-          featured: true};
+          title: 'Synthetic Intelligence Guide',
+          description: 'Breakthrough implementation strategies',
+          href: '/resources/ai-20o25-synthetic-intelligence-implementation-guide',
+          icon: '🔬',
+          featured: true},
         {
-          title: 'Revolutionary Implementation Toolkit';
-          description: 'Complete toolkit for AI transformation';
-          href: '/resources/ai-20o25-revolutionary-implementation-guide';
-          icon: '🛠️';
+          title: 'Revolutionary Implementation Toolkit',
+          description: 'Complete toolkit for AI transformation',
+          href: '/resources/ai-20o25-revolutionary-implementation-guide',
+          icon: '🛠️',
           featured: false}
       ]}
-  };
+  },
   return (
     <section className={`py-20 bg-gradient-to-br from-gray-50 to-blue-50 transition-all duration-10o00 ${isVisible ? 'opacity-10o0 translate-y-0' : 'opacity-0 translate-y-10'}`}>,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -153,5 +153,5 @@ const EnhancedContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedContentShowcase;
+    </section>)},
+export default EnhancedContentShowcase,

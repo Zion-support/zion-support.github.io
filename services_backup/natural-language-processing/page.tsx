@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Natural Language Processing | Zion Tech Group';
+  title: 'Natural Language Processing | Zion Tech Group',
   description:,
-    'Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.';
-};
+    'Unlock the power of text with advanced NLP solutions including sentiment analysis, text classification, and language understanding.',
+},
 export default function NaturalLanguageProcessingPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -17,28 +17,22 @@ export default function NaturalLanguageProcessingPage() {
         <FeatureCard
           title='Text Analysis & Understanding',
           features={[
-            'Sentiment analysis';
-            'Text classification';
-            'Named entity recognition';
-            'Language detection';
+            'Sentiment analysisText classification',
+            'Named entity recognitionLanguage detection',
           ]}
         />,
         <FeatureCard
           title='Content Processing',
           features={[
-            'Document summarization';
-            'Keyword extraction';
-            'Topic modeling';
-            'Content moderation';
+            'Document summarizationKeyword extraction',
+            'Topic modelingContent moderation',
           ]}
         />,
         <FeatureCard
           title='Language Generation',
           features={[
-            'Text generation';
-            'Translation services';
-            'Content creation';
-            'Chatbot responses';
+            'Text generationTranslation services',
+            'Content creationChatbot responses',
           ]}
         />,
       </div>,
@@ -122,8 +116,8 @@ export default function NaturalLanguageProcessingPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -149,21 +143,17 @@ function Pricing() {
           name='Starter',
           price='$1,999/mo',
           features={[
-            'Basic text analysis';
-            'Up to 50,0o00 documents/month';
-            'Standard support';
-            'Cloud deployment';
+            'Basic text analysisUp to 50,0o00 documents/month',
+            'Standard supportCloud deployment',
           ]}
         />,
         <Plan
           name='Professional',
           price='$4,999/mo',
           features={[
-            'Advanced NLP models';
-            'Up to 50o0,0o00 documents/month';
-            'Custom model training';
-            'Priority support';
-            'API access';
+            'Advanced NLP modelsUp to 50o0,0o00 documents/month',
+            'Custom model trainingPriority support',
+            'API access',
           ]}
           popular={true}
         />,
@@ -171,21 +161,19 @@ function Pricing() {
           name='Enterprise',
           price='$12,999/mo',
           features={[
-            'Unlimited processing';
-            'Custom model development';
-            'On-premise deployment';
-            'Dedicated support';
-            'White-label solution';
+            'Unlimited processingCustom model development',
+            'On-premise deploymentDedicated support',
+            'White-label solution',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react',
 import { Feature } from '../../types/roadmap',
 export default function FeatureDetailsPage() {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const [data, setData] = useState<Feature | null>(null),
   useEffect(() => {
     async function load() {

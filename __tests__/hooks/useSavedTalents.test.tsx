@@ -1,12 +1,14 @@
-import { vi, describe, it, expect, beforeEach } from vitest',import { renderHook, act } from @testing-library/react',import { useSavedTalents } from @/hooks/talent/useSavedTalents',import { supabase } from @/integrations/supabase/client',import { showApiError } from @/utils/apiErrorHandler',import { toast } from @/hooks/use-toast', // Assuming direct toast usage for non-error cases'// Removed unused useRouter import,
+import { vi, describe, it, expect, beforeEach } from vitest',import { renderHook, act } from @testing-library/react',import { useSavedTalents } from @/hooks/talent/useSavedTalents',
+import { supabase } from @/integrations/supabase/client',import { showApiError } from @/utils/apiErrorHandler',
+import { toast } from @/hooks/use-toast', // Assuming direct toast usage for non-error cases'// Removed unused useRouter import,
 import { supabase as supabaseClientModule } from @/integrations/supabase/client',
 // Mocks,
 vi.mock('@/integrations/supabase/client', () => ({'  supabase: {
-    from: vi.fn();
-    select: vi.fn();
-    eq: vi.fn();
-    in: vi.fn();
-    insert: vi.fn();
+    from: vi.fn(),
+    select: vi.fn(),
+    eq: vi.fn(),
+    in: vi.fn(),
+    insert: vi.fn(),
     delete: vi.fn()}
 })),
 // Cast the imported module to access its mocked methods,
@@ -16,14 +18,14 @@ const supabase = supabaseClientModule as unknown as {
   eq: vi.Mock,
   in: vi.Mock,
   insert: vi.Mock,
-  delete: vi.Mock};
+  delete: vi.Mock},
 vi.mock('@/utils/apiErrorHandler', () => ({'  showApiError: vi.fn()})),
 vi.mock('@/hooks/use-toast', () => ({'  toast: vi.fn()})),
 vi.mock('@/hooks/talent/useAuthStatus', () => ({'  useAuthStatus: vi.fn(() => ({
-    isAuthenticated: true;
+    isAuthenticated: true,
     userDetails: { id: test-user-id' }}))})),
 vi.mock('next/router', () => ({'  useRouter: vi.fn(() => ({
-    push: vi.fn();
+    push: vi.fn(),
     asPath: /some-path'}))})),
 describe('useSavedTalents', () => {'  beforeEach(() => {
     vi.clearAllMocks(),

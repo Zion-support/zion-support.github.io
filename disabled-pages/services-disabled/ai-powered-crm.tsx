@@ -2,107 +2,90 @@ import type { NextPage } from 'next',
 import Head from 'next/head',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  CheckCircle;
-  Users;
-  Brain;
-  Target;
-  BarChart3;
-  Zap;
-  Phone;
-  Mail;
-  Calendar;
-  Star;
-  TrendingUp;
+  ArrowRight,
+  CheckCircle,
+  Users,
+  Brain,
+  Target,
+  BarChart3,
+  Zap,
+  Phone,
+  Mail,
+  Calendar,
+  Star,
+  TrendingUp,
 } from 'lucide-react',
 const AIPoweredCRMPage: NextPage = () => {
   const features = [
-    'AI-powered lead scoring and qualification';
-    'Automated follow-up sequences and reminders';
-    'Intelligent contact and opportunity management';
-    'Predictive analytics for sales forecasting';
-    'Email integration with smart response suggestions';
-    'Customizable sales pipelines and workflows';
-    'Team collaboration and activity tracking';
-    'Mobile app for on-the-go access';
+    'AI-powered lead scoring and qualificationAutomated follow-up sequences and reminders',
+    'Intelligent contact and opportunity managementPredictive analytics for sales forecasting',
+    'Email integration with smart response suggestionsCustomizable sales pipelines and workflows',
+    'Team collaboration and activity trackingMobile app for on-the-go access'
   ],
   const benefits = [
-    'Increase sales conversion rates by 35%';
-    'Reduce manual data entry by 80%';
-    'Improve lead response time by 60%';
-    'Boost team productivity and collaboration';
-    'Gain actionable insights from customer data';
+    'Increase sales conversion rates by 35%Reduce manual data entry by 80%',
+    'Improve lead response time by 60%Boost team productivity and collaboration',
+    'Gain actionable insights from customer data',
   ],
   const useCases = [
-    'Sales team management';
-    'Lead generation and nurturing';
-    'Customer relationship management';
-    'Sales pipeline optimization';
-    'Team performance tracking';
+    'Sales team managementLead generation and nurturing',
+    'Customer relationship managementSales pipeline optimization',
+    'Team performance tracking',
   ],
   const pricingPlans = [
     {
-      name: 'Starter';
-      price: 79;
-      period: 'month';
-      description: 'Perfect for small sales teams';
+      name: 'Starter',
+      price: 79,
+      period: 'month',
+      description: 'Perfect for small sales teams',
       features: [
-        'Up to 5 users';
-        '1,0o00 contacts';
-        'Basic AI features';
-        'Email integration';
-        'Mobile app';
-        'Email support';
-      ];
-    };
+        'Up to 5 users1,0o00 contacts',
+        'Basic AI featuresEmail integration',
+        'Mobile appEmail support',
+      ],
+    },
     {
-      name: 'Professional';
-      price: 199;
-      period: 'month';
-      description: 'Ideal for growing businesses';
+      name: 'Professional',
+      price: 199,
+      period: 'month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 15 users';
-        '10,0o00 contacts';
-        'Advanced AI features';
-        'Custom workflows';
-        'Advanced analytics';
-        'Priority support';
-        'API access';
-      ];
-    };
+        'Up to 15 users10,0o00 contacts',
+        'Advanced AI featuresCustom workflows',
+        'Advanced analyticsPriority support',
+        'API access',
+      ],
+    },
     {
-      name: 'Enterprise';
-      price: 499;
-      period: 'month';
-      description: 'For large organizations';
+      name: 'Enterprise',
+      price: 499,
+      period: 'month',
+      description: 'For large organizations',
       features: [
-        'Unlimited users';
-        'Unlimited contacts';
-        'Custom AI models';
-        'White-label options';
-        'Dedicated account manager';
-        'Custom integrations';
-        'Advanced reporting';
-      ];
-    };
+        'Unlimited usersUnlimited contacts',
+        'Custom AI modelsWhite-label options',
+        'Dedicated account managerCustom integrations',
+        'Advanced reporting',
+      ]
+    },
   ],
   const testimonials = [
     {
-      name: 'Robert Kim';
-      company: 'SalesForce Pro';
-      role: 'Sales Director';
+      name: 'Robert Kim',
+      company: 'SalesForce Pro',
+      role: 'Sales Director',
       content:,
-        "Our sales team's productivity increased by 40% within the first month. The AI lead scoring is incredibly accurate.";
-      rating: 5;
-    };
+        "Our sales team's productivity increased by 40% within the first month. The AI lead scoring is incredibly accurate.",
+      rating: 5
+    },
     {
-      name: 'Lisa Martinez';
-      company: 'Growth Solutions';
-      role: 'VP of Sales';
+      name: 'Lisa Martinez',
+      company: 'Growth Solutions',
+      role: 'VP of Sales',
       content:,
-        'The automated follow-up sequences have transformed our lead nurturing process. Highly recommend for any sales team.';
-      rating: 5;
-    };
+        'The automated follow-up sequences have transformed our lead nurturing process. Highly recommend for any sales team.',
+      rating: 5
+    },
   ],
   return (
     <>,
@@ -349,5 +332,5 @@ const AIPoweredCRMPage: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default AIPoweredCRMPage;
+    </>)},
+export default AIPoweredCRMPage,

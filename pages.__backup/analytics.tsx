@@ -3,54 +3,54 @@ import Link from 'next/link',
 const Analytics = () => {
   const keyMetrics = [
     {
-      title: 'Total Page Views';
-      value: '2.4M';
-      change: '+12.5%';
-      trend: 'up';
-      period: 'Last 30 days'};
+      title: 'Total Page Views',
+      value: '2.4M',
+      change: '+12.5%',
+      trend: 'up',
+      period: 'Last 30 days'},
     {
-      title: 'Unique Visitors';
-      value: '847K';
-      change: '+8.3%';
-      trend: 'up';
-      period: 'Last 30 days'};
+      title: 'Unique Visitors',
+      value: '847K',
+      change: '+8.3%',
+      trend: 'up',
+      period: 'Last 30 days'},
     {
-      title: 'Bounce Rate';
-      value: '23.4%';
-      change: '-2.1%';
-      trend: 'down';
-      period: 'Last 30 days'};
+      title: 'Bounce Rate',
+      value: '23.4%',
+      change: '-2.1%',
+      trend: 'down',
+      period: 'Last 30 days'},
     {
-      title: 'Avg. Session Duration';
-      value: '4m 32s';
-      change: '+15.2%';
-      trend: 'up';
+      title: 'Avg. Session Duration',
+      value: '4m 32s',
+      change: '+15.2%',
+      trend: 'up',
       period: 'Last 30 days'}
   ],
   const trafficSources = [
-    { source: 'Organic Search'percentage: 45change: '+5.2%' };
-    { source: 'Direct Traffic'percentage: 28change: '+2.1%' };
-    { source: 'Social Media'percentage: 15change: '+8.7%' };
-    { source: 'Referral'percentage: 8change: '-1.3%' };
+    { source: 'Organic Search'percentage: 45change: '+5.2%' },
+    { source: 'Direct Traffic'percentage: 28change: '+2.1%' },
+    { source: 'Social Media'percentage: 15change: '+8.7%' },
+    { source: 'Referral'percentage: 8change: '-1.3%' },
     { source: 'Email'percentage: 4change: '+12.4%' }
   ],
   const topPages = [
-    { page: '/'views: '324K'change: '+8.2%' };
-    { page: '/services'views: '156K'change: '+12.4%' };
-    { page: '/about'views: '98K'change: '+5.7%' };
-    { page: '/automation'views: '87K'change: '+18.9%' };
+    { page: '/'views: '324K'change: '+8.2%' },
+    { page: '/services'views: '156K'change: '+12.4%' },
+    { page: '/about'views: '98K'change: '+5.7%' },
+    { page: '/automation'views: '87K'change: '+18.9%' },
     { page: '/reports'views: '76K'change: '+22.1%' }
   ],
   const geographicData = [
-    { country: 'United States'visitors: '45.2%'change: '+3.1%' };
-    { country: 'United Kingdom'visitors: '18.7%'change: '+1.8%' };
-    { country: 'Germany'visitors: '12.3%'change: '+2.4%' };
-    { country: 'Canada'visitors: '8.9%'change: '+0.9%' };
+    { country: 'United States'visitors: '45.2%'change: '+3.1%' },
+    { country: 'United Kingdom'visitors: '18.7%'change: '+1.8%' },
+    { country: 'Germany'visitors: '12.3%'change: '+2.4%' },
+    { country: 'Canada'visitors: '8.9%'change: '+0.9%' },
     { country: 'Australia'visitors: '6.2%'change: '+1.2%' }
   ],
   const deviceBreakdown = [
-    { device: 'Desktop'percentage: 58change: '+2.1%' };
-    { device: 'Mobile'percentage: 35change: '+4.7%' };
+    { device: 'Desktop'percentage: 58change: '+2.1%' },
+    { device: 'Mobile'percentage: 35change: '+4.7%' },
     { device: 'Tablet'percentage: 7change: '-1.2%' }
   ],
   return (
@@ -181,5 +181,5 @@ const Analytics = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default Analytics;
+    </div>)},
+export default Analytics,

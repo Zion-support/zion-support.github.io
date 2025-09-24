@@ -113,5 +113,5 @@ const AISolutions20o25UltimatePromotionBanner = () => {
       <div className='absolute top-8 right-8 w-3 h-3 bg-purple-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-4 left-8 w-2 h-2 bg-pink-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-8 right-4 w-3 h-3 bg-blue-40o0 rounded-full animate-ping'></div>,
-    </div>)};
-export default AISolutions20o25UltimatePromotionBanner;
+    </div>)},
+export default AISolutions20o25UltimatePromotionBanner,

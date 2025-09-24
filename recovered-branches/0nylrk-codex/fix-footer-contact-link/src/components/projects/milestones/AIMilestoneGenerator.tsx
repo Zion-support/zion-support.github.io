@@ -3,9 +3,9 @@ import React{ useState } from 'react',
 import { Button } from '@/components/ui/button',
 import { CardContent } from '@/components/ui/card',
 import {
-  Accordion;
-  AccordionContent;
-  AccordionItem;
+  Accordion,
+  AccordionContent,
+  AccordionItem,
   AccordionTrigger} from '@/components/ui/accordion',
 Loader2SparklesPlusCalendar,
 import { formatparseISO } from 'date-fns',
@@ -20,11 +20,11 @@ interface AIMilestoneGeneratorProps {
   onAddMilestone: (milestone: GeneratedMilestone) => void}
 ,
 export function AIMilestoneGenerator({
-  scope;
-  startDate;
-  endDate;
-  projectType;
-  onAddMilestones;
+  scope,
+  startDate,
+  endDate,
+  projectType,
+  onAddMilestones,
   onAddMilestone}: AIMilestoneGeneratorProps) {
   const { generateMilestonesgeneratedMilestonesisGeneratingclearGeneratedMilestones } = useMilestoneGenerator(),
   const [selectedMilestonesetSelectedMilestones] = useState<Record<stringboolean>>({}),
@@ -33,33 +33,33 @@ export function AIMilestoneGenerator({
       return}
 ,
     const input: MilestoneInput = {
-      scope;
-      startDate;
-      endDate;
-      projectType};
+      scope,
+      startDate,
+      endDate,
+      projectType},
     await generateMilestones(input),
     // Initially select all milestones,
-    const initialSelection = {};
+    const initialSelection = {},
     generatedMilestones.forEach((_index) => {
       initialSelection[index] = true}),
-    setSelectedMilestones(initialSelection)};
+    setSelectedMilestones(initialSelection)},
   const handleAddToProject = () => {
     const selectedMilestonesList = generatedMilestones.filter((_index) =>,
       selectedMilestones[index]),
     onAddMilestones(selectedMilestonesList),
     clearGeneratedMilestones(),
-    setSelectedMilestones({})};
+    setSelectedMilestones({})},
   const toggleMilestoneSelection = (index: number) => {
     setSelectedMilestones(prev => ({
-      ...prev;
-      [index]: !prev[index]}))};
+      ...prev,
+      [index]: !prev[index]}))},
   const handleAddSingleMilestone = (milestone: GeneratedMilestone) => {
-    onAddMilestone(milestone)};
+    onAddMilestone(milestone)},
   const formatDate = (dateString: string) => {
     try {
       return format(parseISO(dateString)'MMM ddyyyy')} catch (error) {
       return dateString}
-  };
+  },
   return (
     <div className="space-y-4">,
       <div className="flex items-center justify-between">,

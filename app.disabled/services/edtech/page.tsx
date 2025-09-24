@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'edtech - Zion Tech Group';
-  description: 'Professional edtech solutions for your business needs.';
-  keywords: 'edtech, services, business, technology';
-};
+  title: 'edtech - Zion Tech Group',
+  description: 'Professional edtech solutions for your business needs.',
+  keywords: 'edtech, services, business, technology',
+},
 export default function EdtechPage() {
   return (
     <div className='min-h-screen bg-white'>,

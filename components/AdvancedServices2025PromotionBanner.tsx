@@ -6,22 +6,22 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {
   const [currentServicesetCurrentService] = useState(0),
   const services = [
     {
-      title: "AI Strategy Consulting";
-      icon: "🤖";
-      description: "Comprehensive AI strategy development";
-      features: ["Strategic Planning"ROI Optimization"];
-      color: "from-emerald-50o0 to-teal-60o0"};
+      title: "AI Strategy Consulting",
+      icon: "🤖",
+      description: "Comprehensive AI strategy development",
+      features: ["Strategic Planning"ROI Optimization"],
+      color: "from-emerald-50o0 to-teal-60o0"},
     {
-      title: "Machine Learning Development";
-      icon: "🧠";
-      description: "Custom ML models and algorithms";
-      features: ["Custom Models"Advanced Analytics"];
-      color: "from-blue-50o0 to-indigo-60o0"};
+      title: "Machine Learning Development",
+      icon: "🧠",
+      description: "Custom ML models and algorithms",
+      features: ["Custom Models"Advanced Analytics"],
+      color: "from-blue-50o0 to-indigo-60o0"},
     {
-      title: "Intelligent Automation";
-      icon: "⚡";
-      description: "End-to-end automation solutions";
-      features: ["Process Automation"95% Efficiency Gain"];
+      title: "Intelligent Automation",
+      icon: "⚡",
+      description: "End-to-end automation solutions",
+      features: ["Process Automation"95% Efficiency Gain"],
       color: "from-purple-50o0 to-pink-60o0"}
   ],
   useEffect(() => {
@@ -180,5 +180,5 @@ const AdvancedServices20o25PromotionBanner: React.FC = () => {
         .animation-delay-30o00 {
           animation-delay: 3s}
       `}</style>,
-    </div>)};
-export default AdvancedServices20o25PromotionBanner;
+    </div>)},
+export default AdvancedServices20o25PromotionBanner,

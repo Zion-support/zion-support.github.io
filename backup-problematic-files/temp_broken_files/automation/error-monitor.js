@@ -1,7 +1,7 @@
 // Error-monitor utility,
 export const Error-monitor = () => {
   // Implementation here,
-  return null};
+  return null},
 /**,
  * Error Monitor - PM2 Automation Script,
  * Monitors the application for errors and automatically fixes common issues,
@@ -13,17 +13,17 @@ class ErrorMonitor {
   constructor() {
     this.projectRoot = process.cwd(),
     this.monitoringReport ={
-      timestamp: new Date().toISOString();
-      duration: 0;
-      errorsDetected: [];
-      warnings: [];
-      healthStatus: 'healthy';
+      timestamp: new Date().toISOString(),
+      duration: 0,
+      errorsDetected: [],
+      warnings: [],
+      healthStatus: 'healthy',
       metrics: {
-        totalErrors: 0;
-        totalWarnings: 0;
-        buildSuccess: false;
-        typeCheckSuccess: false;
-        lintSuccess: false}};
+        totalErrors: 0,
+        totalWarnings: 0,
+        buildSuccess: false,
+        typeCheckSuccess: false,
+        lintSuccess: false}},
     this.startTime = Date.now(),
     this.isRunning = false,
     this.checkInterval = 60o000, // 1 minute,
@@ -33,7 +33,7 @@ class ErrorMonitor {
     // // console.log('🔍 Starting Error Monitor...'),
     this.isRunning = true,
     // Create logs directory,
-    const logsDir = path.join(this.projectRoot, 'automation', 'logs'),
+    const logsDir = path.join(this.projectRoot, 'automationlogs'),
     if (!fs.existsSync(logsDir)) {
       fs.mkdirSync(logsDir, { recursive: true })}
 ,
@@ -66,8 +66,8 @@ class ErrorMonitor {
     } catch (error) {
       console.error('❌ Health check failed:', error),
       this.monitoringReport.errorsDetected.push({
-        type: 'health_check_failure';
-        message: error.message;
+        type: 'health_check_failure',
+        message: error.message,
         timestamp: new Date().toISOString(),
         timestamp: new Date().toISOString()})}
   }
@@ -75,9 +75,9 @@ class ErrorMonitor {
   async checkTypeScriptErrors() {
     try {
       execSync('npx tsc --noEmit --pretty false', {
-        encoding: 'utf8';
-        cwd: this.projectRoot;
-        stdio: ['pipe', 'pipe', 'pipe']}),
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipepipe', 'pipe']}),
       this.monitoringReport.metrics.typeCheckSuccess = true,
       // // console.log('✅ TypeScript check passed')} catch (error) {
       if (error.stdout) {
@@ -92,9 +92,9 @@ class ErrorMonitor {
   async checkESLintErrors() {
     try {
       execSync('npx eslint . --format=compact --no-eslintrc', {
-        encoding: 'utf8';
-        cwd: this.projectRoot;
-        stdio: ['pipe', 'pipe', 'pipe']}),
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipepipe', 'pipe']}),
       this.monitoringReport.metrics.lintSuccess = true,
       // // console.log('✅ ESLint check passed')} catch (error) {
       if (error.stdout) {
@@ -110,16 +110,16 @@ class ErrorMonitor {
     try {
       // Quick build check (without full build),
       execSync('npx next build --dry-run', {
-        encoding: 'utf8';
-        cwd: this.projectRoot;
-        stdio: ['pipe', 'pipe', 'pipe'];
+        encoding: 'utf8',
+        cwd: this.projectRoot,
+        stdio: ['pipepipe', 'pipe'],
         timeout: 30o000, // 30 second timeout}),
       this.monitoringReport.metrics.buildSuccess = true,
       // // console.log('✅ Build check passed')} catch (error) {
       this.monitoringReport.metrics.buildSuccess = false,
       this.monitoringReport.errorsDetected.push({
-        type: 'build_failure';
-        message: error.message;
+        type: 'build_failure',
+        message: error.message,
         timestamp: new Date().toISOString()}),
       this.monitoringReport.metrics.totalErrors += 1,
       // // console.log('❌ Build check failed')}
@@ -127,11 +127,9 @@ class ErrorMonitor {
 ,
   async checkCriticalFiles() {
     const criticalFiles = [
-      'package.json';
-      'tsconfig.json';
-      'next.config.js';
-      'src/App.tsx';
-      'src/pages/index.tsx';
+      'package.jsontsconfig.json',
+      'next.config.jssrc/App.tsx',
+      'src/pages/index.tsx',
     ],
           timestamp: new Date().toISOString()}),
         this.monitoringReport.metrics.totalErrors += 1}
@@ -181,8 +179,8 @@ class ErrorMonitor {
       const automation = new ErrorFixerAutomation(),
       await automation.run(),
       this.monitoringReport.errorsDetected.push({
-        type: 'error_fixer_failure';
-        message: error.message;
+        type: 'error_fixer_failure',
+        message: error.message,
         timestamp: new Date().toISOString(),
         timestamp: new Date().toISOString()})}
   }
@@ -198,8 +196,8 @@ class ErrorMonitor {
 ,
   async saveReport() {
     const reportPath = path.join(
-      this.projectRoot;
-      'error-reports';
+      this.projectRoot,
+      'error-reports',
       `error-monitor-report-${Date.now()}.json`),
     const reportDir = path.dirname(reportPath),
     if (!fs.existsSync(reportDir)) {
@@ -208,7 +206,7 @@ class ErrorMonitor {
     // Add duration to report,
     this.monitoringReport.duration = Date.now() - this.startTime,
     fs.writeFileSync(
-      reportPath;
+      reportPath,
       JSON.stringify(this.monitoringReport, null, 2)),
     // Keep only the latest 10 reports,
     this.cleanupOldReports(reportDir)}
@@ -219,8 +217,8 @@ class ErrorMonitor {
         .readdirSync(reportDir),
         .filter(file => file.startsWith('error-monitor-report-')),
         .map(file => ({
-          name: file;
-          path: path.join(reportDir, file);
+          name: file,
+          path: path.join(reportDir, file),
           time: fs.statSync(path.join(reportDir, file)).mtime.getTime()})),
         .sort((a, b) => b.time - a.time),
       // Remove old reports (keep only the latest 10),

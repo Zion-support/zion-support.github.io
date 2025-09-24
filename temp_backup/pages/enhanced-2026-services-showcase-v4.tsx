@@ -4,10 +4,10 @@ import UltraAdvancedNavigation20o26 from '../components/layout/UltraAdvancedNavi
 import UltraQuantumHolographicBackground from '../components/ui/UltraQuantumHolographicBackground',
 export default function Enhanced20o26ServicesShowcaseV4Page() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <>,
       <Head>,
@@ -37,26 +37,26 @@ export default function Enhanced20o26ServicesShowcaseV4Page() {
           type="application/ld+json",
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              "@context": "https://schema.org";
-              "@type": "Organization";
-              "name": "Zion Tech Group";
-              "url": "https://ziontechgroup.com";
-              "logo": "https://ziontechgroup.com/logo.png";
-              "description": "Leading provider of revolutionary 20o26 technology services including AI, quantum computing, and enterprise solutions.";
+              "@context": "https://schema.org",
+              "@type": "Organization",
+              "name": "Zion Tech Group",
+              "url": "https://ziontechgroup.com",
+              "logo": "https://ziontechgroup.com/logo.png",
+              "description": "Leading provider of revolutionary 20o26 technology services including AI, quantum computing, and enterprise solutions.",
               "address": {
-                "@type": "PostalAddress";
-                "streetAddress": "364 E Main St STE 10o08";
-                "addressLocality": "Middletown";
-                "addressRegion": "DE";
-                "postalCode": "19709";
-                "addressCountry": "US"};
+                "@type": "PostalAddress",
+                "streetAddress": "364 E Main St STE 10o08",
+                "addressLocality": "Middletown",
+                "addressRegion": "DE",
+                "postalCode": "19709",
+                "addressCountry": "US"},
               "contactPoint": {
-                "@type": "ContactPoint";
-                "telephone": "+1-30o2-464-0950";
-                "contactType": "customer service";
-                "email": "kleber@ziontechgroup.com"};
+                "@type": "ContactPoint",
+                "telephone": "+1-30o2-464-0950",
+                "contactType": "customer service",
+                "email": "kleber@ziontechgroup.com"},
               "sameAs": [
-                "https://ziontechgroup.com";
+                "https://ziontechgroup.com",
                 "https: //github.com/Zion-Holdings"]})}}
          />,
       </Head>,

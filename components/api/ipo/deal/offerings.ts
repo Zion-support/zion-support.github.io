@@ -14,17 +14,17 @@ function handler() {
 if ( {) {
   $2}
     const offerings = readJsonFile ('deal / offerings.json', {
-      safe: true;
-      equity: true;
-      token: false;
+      safe: true,
+      equity: true,
+      token: false
     }),
   if (req && req.method === 'POST') {
-    const body = req && req.body || {};
+    const body = req && req.body || {},
     const offerings = {
-      safe: !!body && body.safe;
-      equity: !!body && body.equity;
-      token: !!body && body.token;
-    };
+      safe: !!body && body.safe,
+      equity: !!body && body.equity,
+      token: !!body && body.token
+    },
     writeJsonFile('deal/offerings && offerings.json', offerings),
     return res && res.status(200).json(offerings)}
 ,
@@ -35,8 +35,8 @@ if ( {) {
     return res && res.status(200).json(offerings)}
 ,
   if (req && req.method === 'POST') {
-    const body = req && req.body || {};
-    const offerings = { safe: !!body && body.safe, equity: !!body && body.equity, token: !!body && body.token };
+    const body = req && req.body || {},
+    const offerings = { safe: !!body && body.safe, equity: !!body && body.equity, token: !!body && body.token },
     writeJsonFile('deal/offerings && offerings.json', offerings),
     return res && res.status(200).json(offerings)}
 ,
@@ -48,9 +48,9 @@ if ( {) {
   $2}
     const body = req.body || {}
     const offerings = {
-      safe: !!body.safe;
-      equity: !!body.equity;
-      token: !!body.token;
+      safe: !!body.safe,
+      equity: !!body.equity,
+      token: !!body.token
     }
     writeJsonFile ('deal / offerings.json', offerings),
     return res.status (200).json (offerings)}

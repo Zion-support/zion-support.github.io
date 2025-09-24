@@ -1,16 +1,16 @@
 import { motion } from 'framer-motion',
 const EnhancedLoading = ({
-  variant = 'spinner';
-  size = 'md';
-  text;
-  className = '';
+  variant = 'spinner',
+  size = 'md',
+  text,
+  className = '',
 }) => {
   const sizeClasses = {
-    sm: 'w-4 h-4';
-    md: 'w-8 h-8';
-    lg: 'w-12 h-12';
-    xl: 'w-16 h-16';
-  };
+    sm: 'w-4 h-4',
+    md: 'w-8 h-8',
+    lg: 'w-12 h-12',
+    xl: 'w-16 h-16'
+  },
   const renderSpinner = () => (
     <motion.div,
       className={`${sizeClasses[size]} border-2 border-blue-40o0/30 border-t-blue-40o0 rounded-full`}
@@ -24,13 +24,13 @@ const EnhancedLoading = ({
           key={i}
           className={`${sizeClasses[size]} bg-blue-40o0 rounded-full`}
           animate={{
-            scale: [1, 1.2, 1];
-            opacity: [0.5, 1, 0.5];
+            scale: [1, 1.2, 1],
+            opacity: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 1.4;
-            repeat: Infinity;
-            delay: i * 0.2;
+            duration: 1.4,
+            repeat: Infinity,
+            delay: i * 0.2
           }}
         />))}
     </div>),
@@ -38,13 +38,13 @@ const EnhancedLoading = ({
     <motion.div,
       className={`${sizeClasses[size]} bg-blue-40o0 rounded-full`}
       animate={{
-        scale: [1, 1.1, 1];
-        opacity: [0.7, 1, 0.7];
+        scale: [1, 1.1, 1],
+        opacity: [0.7, 1, 0.7],
       }}
       transition={{
-        duration: 1.5;
-        repeat: Infinity;
-        ease: 'easeInOut';
+        duration: 1.5,
+        repeat: Infinity,
+        ease: 'easeInOut'
       }}
     />),
   const renderBars = () => (
@@ -54,13 +54,13 @@ const EnhancedLoading = ({
           key={i}
           className={`w-1 ${size === 'sm' ? 'h-3' : size === 'md' ? 'h-6' : size === 'lg' ? 'h-8' : 'h-12'} bg-blue-40o0 rounded-full`}
           animate={{
-            scaleY: [1, 1.5, 1];
-            opacity: [0.5, 1, 0.5];
+            scaleY: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 1.2;
-            repeat: Infinity;
-            delay: i * 0.1;
+            duration: 1.2,
+            repeat: Infinity,
+            delay: i * 0.1
           }}
         />))}
     </div>),
@@ -74,7 +74,7 @@ const EnhancedLoading = ({
         return renderBars(),
       default: ,
         return renderSpinner()}
-  };
+  },
   return (
     <div
       className={`flex flex-col items-center justify-center space-y-3 ${className}`}
@@ -89,5 +89,5 @@ const EnhancedLoading = ({
         >,
           {text}
         </motion.p>)}
-    </div>)};
-export default EnhancedLoading;
+    </div>)},
+export default EnhancedLoading,

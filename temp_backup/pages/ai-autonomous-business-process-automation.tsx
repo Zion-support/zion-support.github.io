@@ -1,40 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
   Settings, Workflow, Clock, Database, Cloud} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Autonomous Business Process Automation | Zion Tech Group';
-  description: 'Revolutionary AI-powered autonomous business process automation that eliminates manual work and optimizes operations.';
-  keywords: 'AI automation, business process automation, autonomous operations, AI workflow, process optimization';
+  title: 'AI Autonomous Business Process Automation | Zion Tech Group',
+  description: 'Revolutionary AI-powered autonomous business process automation that eliminates manual work and optimizes operations.',
+  keywords: 'AI automation, business process automation, autonomous operations, AI workflow, process optimization',
   openGraph: {
-    title: 'AI Autonomous Business Process Automation | Zion Tech Group';
-    description: 'Revolutionary AI-powered autonomous business process automation that eliminates manual work and optimizes operations.';
-    url: 'https://ziontechgroup.com/ai-autonomous-business-process-automation';
-    siteName: 'Zion Tech Group';
+    title: 'AI Autonomous Business Process Automation | Zion Tech Group',
+    description: 'Revolutionary AI-powered autonomous business process automation that eliminates manual work and optimizes operations.',
+    url: 'https://ziontechgroup.com/ai-autonomous-business-process-automation',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-autonomous-business-process-automation.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Autonomous Business Process Automation'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-autonomous-business-process-automation.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Autonomous Business Process Automation'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Autonomous Business Process Automation | Zion Tech Group';
-    description: 'Revolutionary AI-powered autonomous business process automation that eliminates manual work and optimizes operations.';
-    images: ['https://ziontechgroup.com/og-image-ai-autonomous-business-process-automation.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Autonomous Business Process Automation | Zion Tech Group',
+    description: 'Revolutionary AI-powered autonomous business process automation that eliminates manual work and optimizes operations.',
+    images: ['https://ziontechgroup.com/og-image-ai-autonomous-business-process-automation.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-autonomous-business-process-automation'}};
+    canonical: 'https://ziontechgroup.com/ai-autonomous-business-process-automation'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIAutonomousBusinessProcessAutomation() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -78,7 +78,7 @@ export default function AIAutonomousBusinessProcessAutomation() {
               Revolutionary Process Automation,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI platform handles every aspect of business processes from analysis to execution;
+              Our AI platform handles every aspect of business processes from analysis to execution,
               continuously learning and optimizing for maximum efficiency.,
             </p>,
           </div>,

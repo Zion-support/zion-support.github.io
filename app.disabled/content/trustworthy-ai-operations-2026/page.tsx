@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Trustworthy AI Operations 20o26 | Zion Tech Group';
+  title: 'Trustworthy AI Operations 20o26 | Zion Tech Group',
   description:,
-    'Practical operating model for safe, reliable, and auditable AI systems in production.';
-};
+    'Practical operating model for safe, reliable, and auditable AI systems in production.',
+},
 export default function TrustworthyAIOperations20o26() {
   return (
     <main className='min-h-screen bg-white'>,

@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Platform SLOs That Matter';
+  title: 'AI 20o26: Agent Platform SLOs That Matter',
   description:,
-    'A concise SLO set for safety, quality, reliability, and cost—ready to adopt.';
-};
+    'A concise SLO set for safety, quality, reliability, and cost—ready to adopt.',
+},
 export default function AgentPlatformSLOsPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -23,7 +23,7 @@ export default function AgentPlatformSLOsPage() {
           </h2>,
           <ul className='list-disc ml-6 mt-3 text-gray-70o0 space-y-2'>,
             <li>,
-              <strong>Safety</strong>: policy-as-code violations per 1k actions;
+              <strong>Safety</strong>: policy-as-code violations per 1k actions,
               unsafe tool invocations, sandbox breaks,
             </li>,
             <li>,
@@ -35,7 +35,7 @@ export default function AgentPlatformSLOsPage() {
               critical paths, degradation fallbacks,
             </li>,
             <li>,
-              <strong>Cost</strong>: tokens per successful task, cache hit rate;
+              <strong>Cost</strong>: tokens per successful task, cache hit rate,
               batch/route efficiency,
             </li>,
           </ul>,

@@ -3,16 +3,15 @@ import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2.7.1',
 const supabaseUrl = Deno.env.get('SUPABASE_URL')!,
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async (req: Request) => {
   // Handle CORS,
   if (req.method === 'OPTIONS') {
     return new Response(null, {
-      status: 204;
-      headers: corsHeaders;
+      status: 204,
+      headers: corsHeaders
     })}
 ,
   try {
@@ -23,12 +22,12 @@ serve(async (req: Request) => {
       console.error('Failed to create scheduled reminders:', error),
       return new Response(
         JSON.stringify({
-          error: 'Failed to create scheduled reminders';
-          details: error;
-        });
+          error: 'Failed to create scheduled reminders',
+          details: error
+        }),
         {
-          status: 500;
-          headers: { 'Content-Type': 'application/json', ...corsHeaders };
+          status: 500,
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
         }
       )}
 ,
@@ -36,19 +35,19 @@ serve(async (req: Request) => {
     const { data: pendingJobs, error: jobsError } = await supabase,
       .from('scheduled_jobs'),
       .select('id, payload'),
-      .eq('job_type', 'onboarding_reminder'),
-      .eq('status', 'pending'),
+      .eq('job_typeonboarding_reminder'),
+      .eq('statuspending'),
       .lt('scheduled_for', new Date().toISOString()),
     if (jobsError) {
       console.error('Failed to fetch pending jobs:', jobsError),
       return new Response(
         JSON.stringify({
-          error: 'Failed to fetch pending jobs';
-          details: jobsError;
-        });
+          error: 'Failed to fetch pending jobs',
+          details: jobsError
+        }),
         {
-          status: 500;
-          headers: { 'Content-Type': 'application/json', ...corsHeaders };
+          status: 500,
+          headers: { 'Content-Type': 'application/json', ...corsHeaders },
         }
       )}
 ,
@@ -57,14 +56,14 @@ serve(async (req: Request) => {
       for (const job of pendingJobs) {
         // Call the send-onboarding-reminder function for each job,
         const reminderResponse = await fetch(
-          `${supabaseUrl}/functions/v1/send-onboarding-reminder`;
+          `${supabaseUrl}/functions/v1/send-onboarding-reminder`,
           {
-            method: 'POST';
+            method: 'POST',
             headers: {
-              'Content-Type': 'application/json';
-              Authorization: `Bearer ${supabaseServiceKey}`;
-            };
-            body: JSON.stringify(job.payload);
+              'Content-Type': 'application/json',
+              Authorization: `Bearer ${supabaseServiceKey}`,
+            },
+            body: JSON.stringify(job.payload)
           }
         ),
         if (reminderResponse.ok) {
@@ -72,8 +71,8 @@ serve(async (req: Request) => {
           const { error: updateError } = await supabase,
             .from('scheduled_jobs'),
             .update({
-              status: 'completed';
-              completed_at: new Date().toISOString();
+              status: 'completed',
+              completed_at: new Date().toISOString()
             }),
             .eq('id', job.id),
           if (updateError) {
@@ -85,7 +84,7 @@ serve(async (req: Request) => {
           await supabase,
             .from('scheduled_jobs'),
             .update({
-              status: 'failed';
+              status: 'failed'
             }),
             .eq('id', job.id)}
       }
@@ -93,24 +92,24 @@ serve(async (req: Request) => {
 ,
     return new Response(
       JSON.stringify({
-        message: 'Reminders processed successfully';
-        processed_jobs: processedJobs.length;
-        job_ids: processedJobs;
-      });
+        message: 'Reminders processed successfully',
+        processed_jobs: processedJobs.length,
+        job_ids: processedJobs
+      }),
       {
-        status: 200;
-        headers: { 'Content-Type': 'application/json', ...corsHeaders };
+        status: 200,
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
       }
     )} catch (error) {
     console.error(error),
     return new Response(
       JSON.stringify({
-        error: 'Internal server error';
-        details: error.message;
-      });
+        error: 'Internal server error',
+        details: error.message
+      }),
       {
-        status: 500;
-        headers: { 'Content-Type': 'application/json', ...corsHeaders };
+        status: 500,
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
       }
     )}
 }),

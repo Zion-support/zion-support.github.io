@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import {Calendar, RefreshCw} from "@/components/icons",
 import {Card, CardContent} from "@/components/ui/card",
 import {Input} from "@/components/ui/input",
@@ -9,18 +9,18 @@ import {Calendar, as, CalendarComponent} from "@/components/ui/calendar",
 import {format} from "date-fns",
 import type { DateRange } from "@/types/dateRange",
 import type { QuoteStatus } from "@/types/quotes",
-import React from "react";;
-import { Calendar, RefreshCw } from "@/components/icons";
-import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover";
-import { Button } from "@/components/ui/button";
-import { Calendar as CalendarComponent } from "@/components/ui/calendar";
+import React from "react",
+import { Calendar, RefreshCw } from "@/components/icons",
+import { Card, CardContent } from "@/components/ui/card",
+import { Input } from "@/components/ui/input",
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Popover, PopoverContent, PopoverTrigger } from "@/components/ui/popover",
+import { Button } from "@/components/ui/button",
+import { Calendar as CalendarComponent } from "@/components/ui/calendar",
 import { format } from "date-fns",
-import { format } from "date-fns";
-import type { DateRange } from "@/types/dateRange";
-import type { QuoteStatus } from "@/types/quotes";
+import { format } from "date-fns",
+import type { DateRange } from "@/types/dateRange",
+import type { QuoteStatus } from "@/types/quotes",
 
 interface QuotesFilterProps {
   searchQuery: string,
@@ -55,14 +55,14 @@ export const QuotesFilter: React.FC<QuotesFilterProps> = ({
   archive_filter,
   setArchiveFilter,
   setDateRange,
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
-  setArchiveFilter;
-  dateRange;
-  setDateRange;
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
+  setArchiveFilter,
+  dateRange,
+  setDateRange,
   onReset}) => {
   return (
     <Card className="mb-6 bg-zion-blue-dark border-zion-blue-light">,

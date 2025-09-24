@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Autonomous Operations - Zion Tech Group';
+  title: 'Autonomous Operations - Zion Tech Group',
   description:,
-    'Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 10o0 proven solutions.';
+    'Transform your business with autonomous AI operations that deliver 890% ROI and $12.8B in annual savings. Fortune 10o0 proven solutions.',
   keywords: [
-    'autonomous operations';
-    'AI automation';
-    'business transformation';
-    'ROI';
-    'enterprise AI';
-  ];
-};
+    'autonomous operationsAI automation',
+    'business transformationROI',
+    'enterprise AI',
+  ]
+},
 export default function AutonomousOperationsPage() {
   return (
     <div>,
@@ -289,7 +287,7 @@ export default function AutonomousOperationsPage() {
                   </div>,
                 </div>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Transformed operations with autonomous fraud detection;
+                  Transformed operations with autonomous fraud detection,
                   investment optimization, and customer service systems.,
                 </p>,
                 <Link

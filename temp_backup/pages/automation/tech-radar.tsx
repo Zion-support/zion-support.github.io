@@ -1,8 +1,8 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
-type Item ={ source: string, name: string, url: string, description?: string, downloads?: number };
-type Props ={ pypi: Item[], crates: Item[], github: { [k: string]: Item[] } };
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
+type Item ={ source: string, name: string, url: string, description?: string, downloads?: number },
+type Props ={ pypi: Item[], crates: Item[], github: { [k: string]: Item[] } },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd()'public'automation'tech-radar.json'),
@@ -10,13 +10,13 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
     const data = JSON.parse(raw),
     return {
       props: {
-        pypi: data.ecosystems.pypi || [];
-        crates: data.ecosystems.crates || [];
-        github: data.ecosystems.github || {}};
+        pypi: data.ecosystems.pypi || [],
+        crates: data.ecosystems.crates || [],
+        github: data.ecosystems.github || {}},
       revalidate: 720o0}} catch {
-    return { props: { pypi: []crates: []github: {} }revalidate: 720o0 };
+    return { props: { pypi: []crates: []github: {} }revalidate: 720o0 },
   }
-};
+},
 export default function TechRadar({ pypicratesgithub }: Props) {
   const langs = Object.keys(github),
   return (

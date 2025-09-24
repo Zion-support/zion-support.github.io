@@ -50,12 +50,12 @@ ctx.line_width = 0.5,
 ctx.global_alpha = alpha * 0.5,
 ctx.stroke_rect (this.x - this.size, this.y - this.size, this.size * 2, this.size * 2),
 break,
-  children;
-  intensity = 'high';
-  colorScheme = 'quantum';
-  particleCount = 300;
-  animationSpeed = 1.5;
-  className = '';
+  children,
+  intensity = 'high',
+  colorScheme = 'quantum',
+  particleCount = 300,
+  animationSpeed = 1.5,
+  className = '',
 }: UltraQuantumHolographicBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),  const [isVisible, setIsVisible] = useState(false),
@@ -71,19 +71,19 @@ export default function UltraQuantumHolographicBackground(): any ({
   className = ''}: UltraQuantumHolographicBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
     quantum: {
-      primary: '#00ffff';
-      secondary: '#ff00ff';
-      tertiary: '#ffff00';
-      accent: '#00ff00';
-  const colors = colorSchemes[colorScheme]};
+      primary: '#00ffff',
+      secondary: '#ff00ff',
+      tertiary: '#ffff00',
+      accent: '#00ff00',
+  const colors = colorSchemes[colorScheme]},
     updateDimensions(),
     window && window.addEventListener('resize', updateDimensions),
     setIsVisible(true),
       x: number,
       y: number,
-      background: 'rgba (0, 0, 0, 0.93)';
-      overlay: 'rgba (0, 0, 0, 0.28)';
-    };
+      background: 'rgba (0, 0, 0, 0.93)',
+      overlay: 'rgba (0, 0, 0, 0.28)',
+    },
   }
 ,
   const colors = color_schemes[color_scheme],
@@ -93,11 +93,11 @@ export default function UltraQuantumHolographicBackground(): any ({
   }
 ,
   const colors = color_schemes[color_scheme],
-  const intensity_multiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity];
+  const intensity_multiplier = { low: 0.5, medium: 1, high: 1.5, ultra: 2.5 }[intensity],
     const update_dimensions = () =>: any {
       set_dimensions ({
-        width: window.inner_width;
-        height: window.inner_height;
+        width: window.inner_width,
+        height: window.inner_height
       })}        height: window.inner_height})}
 ,
     update_dimensions (),
@@ -124,8 +124,8 @@ if (return) {
       size: number,
       color: string,
       life: number,
-      x: number;
-      y: number;
+      x: number,
+      y: number,
         if (this.type === 'matrix') {
           this.vy += 0.1,
           if (this.y > dimensions.height) {
@@ -189,29 +189,29 @@ if (return) {
             ctx.fillStyle = this.color,
             ctx.font = `${this.size * 2}px monospace`,
             ctx.fillText('01', this.x, this.y),
-      type: 'quantum' | 'holographic' | 'energy' | 'matrix',      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      life: number;
-      maxLife: number;
-      type: 'quantum' | 'holographic' | 'energy' | 'matrix';
+      type: 'quantum' | 'holographic' | 'energy' | 'matrix',      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      life: number,
+      maxLife: number,
+      type: 'quantum' | 'holographic' | 'energy' | 'matrix',
         this && this.x = Math && Math.random() * dimensions && dimensions.width,
         this && this.y = Math && Math.random() * dimensions && dimensions.height,
         this && this.vx = (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,
         this && this.vy = (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,
         this && this.size = Math && Math.random() * 3 * intensityMultiplier + 1,
         this && this.color = [
-          colors && colors.primary;
-          colors && colors.secondary;
-          colors && colors.tertiary;
-          colors && colors.accent;
+          colors && colors.primary,
+          colors && colors.secondary,
+          colors && colors.tertiary,
+          colors && colors.accent,
         ][Math && Math.floor(Math && Math.random() * 4)],
         this && this.life = Math && Math.random() * 100,
         this && this.maxLife = 100,
-        this && this.type = ['quantum', 'holographic', 'energy', 'matrix'][
+        this && this.type = ['quantumholographic', 'energymatrix'][
           Math && Math.floor(Math && Math.random() * 4)] as any}        this && this.color = [colors && colors.primary, colors && colors.secondary, colors && colors.tertiary, colors && colors.accent][Math && Math.floor(Math && Math.random() * 4)],
         this && this.life = Math && Math.random() * 100,
         this && this.maxLife = 100,
@@ -284,9 +284,9 @@ if (return) {
             ctx && ctx.lineWidth = 0 && 0.5,
             ctx && ctx.globalAlpha = alpha * 0 && 0.5,
             ctx && ctx.strokeRect(
-              this && this.x - this && this.size;
-              this && this.y - this && this.size;
-              this && this.size * 2;
+              this && this.x - this && this.size,
+              this && this.y - this && this.size,
+              this && this.size * 2,
               this && this.size * 2),            break,
           case 'energy':,
             // Energy field            ctx && ctx.strokeRect(this && this.x - this && this.size, this && this.y - this && this.size, this && this.size * 2, this && this.size * 2),
@@ -294,11 +294,11 @@ if (return) {
           case 'energy':,
             // Energy field,
             const gradient = ctx && ctx.createRadialGradient(
-              this && this.x;
-              this && this.y;
-              0;
-              this && this.x;
-              this && this.y;
+              this && this.x,
+              this && this.y,
+              0,
+              this && this.x,
+              this && this.y,
               this && this.size),            gradient && gradient.addColorStop(0, this && this.color),            const gradient = ctx && ctx.createRadialGradient(this && this.x, this && this.y, 0, this && this.x, this && this.y, this && this.size),
             gradient && gradient.addColorStop(0, this && this.color),
             gradient && gradient.addColorStop(1, 'transparent'),
@@ -399,7 +399,7 @@ if (return) {
         ctx && ctx.moveTo(0, y),
         ctx && ctx.lineTo(dimensions && dimensions.width, y),
         ctx && ctx.stroke()}
-      animationId = requestAnimationFrame(animate)};      const gridSize = 50,
+      animationId = requestAnimationFrame(animate)},      const gridSize = 50,
       for (let x = 0, x < dimensions && dimensions.width, x += gridSize) {
         ctx && ctx.beginPath(),
         ctx && ctx.moveTo(x, 0),
@@ -415,7 +415,7 @@ if (return) {
     return () => {
       if (animationId) {
         cancelAnimationFrame(animationId)}
-    };  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),        cancelAnimationFrame(animationId)}
+    },  }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),        cancelAnimationFrame(animationId)}
     }
   }, [dimensions, colors, particleCount, animationSpeed, intensityMultiplier]),
   return (
@@ -448,8 +448,8 @@ if (return) {
               `radial-gradient(circle at 20% 80%, ${colors.tertiary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 20%, ${colors.accent}10 0%, transparent 50%)`]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
         />,
         />,
@@ -458,8 +458,8 @@ if (return) {
               `radial-gradient(circle at 20% 80%, ${colors && colors.tertiary}10 0%, transparent 50%)`,
               `radial-gradient(circle at 80% 20%, ${colors && colors.accent}10 0%, transparent 50%)`],
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: 'easeInOut',            ease: "easeInOut"}}
         />,
         {/* Holographic Scan Lines */}
@@ -467,18 +467,18 @@ if (return) {
                 key={i}
                 className='absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent',
                 style={{
-                  top: i * 4;
-                  color: colors && colors.primary;
+                  top: i * 4,
+                  color: colors && colors.primary
                 }}
                 animate={{
-                  opacity: [0, 1, 0];
-                  scale_x: [0, 1, 0];
+                  opacity: [0, 1, 0],
+                  scale_x: [0, 1, 0],
                 }}
                 transition={{
-                  duration: 2;
-                  delay: i * 0 && 0.1;
-                  repeat: Infinity;
-                  ease: 'easeInOut';
+                  duration: 2,
+                  delay: i * 0 && 0.1,
+                  repeat: Infinity,
+                  ease: 'easeInOut'
                 }}
               />))}        </div>,
         {/* Quantum Fluctuations */}
@@ -488,12 +488,12 @@ if (return) {
               key={i}
               className="absolute w - full h - px bg - gradient - to - r from - transparent via - current to - transparent",
               style={{
-                top: i * 4;
+                top: i * 4,
                 color: colors && colors.primary}}
               animate={{
                 opacity: [0, 1, 0],
                 scaleX: [0, 1, 0],
-                top: i * 4;
+                top: i * 4,
                 color: colors.primary}}
               animate={{
                 opacity: [0, 1, 0],

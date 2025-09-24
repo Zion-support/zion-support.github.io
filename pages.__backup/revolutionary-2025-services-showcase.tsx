@@ -4,101 +4,101 @@ import Link from 'next/link',
 import { motionAnimatePresence } from 'framer-motion',
 import {
   SearchFilterStarUsersTrendingUp,
-  DollarSignClockCheckCircleArrowRight;
+  DollarSignClockCheckCircleArrowRight,
   BrainRocketDnaGlobeShieldWifi,
   PackageBotCarBuilding2MonitorCpu,
-  ZapAtomDatabaseCloudLockCode;
-  PhoneMailMapPinExternalLinkChevronDown;
+  ZapAtomDatabaseCloudLockCode,
+  PhoneMailMapPinExternalLinkChevronDown,
   AwardTargetZap as ZapIconGlobe as GlobeIcon} from 'lucide-react',
 // Import the new revolutionary services,
 import { revolutionary20o25Services } from '../data/revolutionary-20o25-innovative-services',
 import { revolutionary20o25ITServices } from '../data/revolutionary-20o25-it-infrastructure',
 const allServices = [...revolutionary20o25Services...revolutionary20o25ITServices],
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
-    id: 'ai-consciousness';
-    title: '🧠 AI Consciousness & Emotional Intelligence';
-    description: 'Revolutionary AI consciousness and emotional intelligence platforms';
-    icon: Brain;
-    color: 'from-violet-50o0 to-purple-50o0';
-    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI'));
-    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'};
+    id: 'ai-consciousness',
+    title: '🧠 AI Consciousness & Emotional Intelligence',
+    description: 'Revolutionary AI consciousness and emotional intelligence platforms',
+    icon: Brain,
+    color: 'from-violet-50o0 to-purple-50o0',
+    services: allServices.filter(s => s.category.includes('AI Consciousness') || s.category.includes('Healthcare AI')),
+    gradient: 'from-violet-50o0/20 to-indigo-50o0/20'},
   {
-    id: 'quantum-emerging';
-    title: '⚛️ Quantum & Emerging Tech';
-    description: 'Quantum computingDNA computingand beyond';
-    icon: Atom;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing'));
-    gradient: 'from-blue-50o0/20 to-cyan-50o0/20'};
+    id: 'quantum-emerging',
+    title: '⚛️ Quantum & Emerging Tech',
+    description: 'Quantum computingDNA computingand beyond',
+    icon: Atom,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    services: allServices.filter(s => s.category.includes('Quantum') || s.category.includes('DNA Computing')),
+    gradient: 'from-blue-50o0/20 to-cyan-50o0/20'},
   {
-    id: 'space-tech';
-    title: '🚀 Space Technology & Satellite';
-    description: 'Space mission management and satellite operations';
-    icon: Rocket;
-    color: 'from-indigo-50o0 to-blue-50o0';
-    services: allServices.filter(s => s.category.includes('Space Technology'));
-    gradient: 'from-indigo-50o0/20 to-blue-50o0/20'};
+    id: 'space-tech',
+    title: '🚀 Space Technology & Satellite',
+    description: 'Space mission management and satellite operations',
+    icon: Rocket,
+    color: 'from-indigo-50o0 to-blue-50o0',
+    services: allServices.filter(s => s.category.includes('Space Technology')),
+    gradient: 'from-indigo-50o0/20 to-blue-50o0/20'},
   {
-    id: 'cybersecurity';
-    title: '🔒 Next-Generation Cybersecurity';
-    description: 'Quantum encryption and AI threat detection';
-    icon: Shield;
-    color: 'from-red-50o0 to-pink-50o0';
-    services: allServices.filter(s => s.category.includes('Cybersecurity'));
-    gradient: 'from-red-50o0/20 to-pink-50o0/20'};
+    id: 'cybersecurity',
+    title: '🔒 Next-Generation Cybersecurity',
+    description: 'Quantum encryption and AI threat detection',
+    icon: Shield,
+    color: 'from-red-50o0 to-pink-50o0',
+    services: allServices.filter(s => s.category.includes('Cybersecurity')),
+    gradient: 'from-red-50o0/20 to-pink-50o0/20'},
   {
-    id: 'cloud-infrastructure';
-    title: '☁️ Quantum Cloud & Infrastructure';
-    description: 'Quantum-enhanced cloud computing and infrastructure';
-    icon: Cloud;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure'));
-    gradient: 'from-cyan-50o0/20 to-blue-50o0/20'};
+    id: 'cloud-infrastructure',
+    title: '☁️ Quantum Cloud & Infrastructure',
+    description: 'Quantum-enhanced cloud computing and infrastructure',
+    icon: Cloud,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    services: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('Infrastructure')),
+    gradient: 'from-cyan-50o0/20 to-blue-50o0/20'},
   {
-    id: 'fintech';
-    title: '🏦 Financial Technology Revolution';
-    description: 'AI-powered trading and quantum risk management';
-    icon: DollarSign;
-    color: 'from-green-50o0 to-emerald-50o0';
-    services: allServices.filter(s => s.category.includes('Financial Technology'));
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20'};
+    id: 'fintech',
+    title: '🏦 Financial Technology Revolution',
+    description: 'AI-powered trading and quantum risk management',
+    icon: DollarSign,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: allServices.filter(s => s.category.includes('Financial Technology')),
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20'},
   {
-    id: 'industrial-iot';
-    title: '🏭 Industrial IoT & Smart Manufacturing';
-    description: 'Zero downtime manufacturing and predictive maintenance';
-    icon: Building2;
-    color: 'from-gray-50o0 to-slate-50o0';
-    services: allServices.filter(s => s.category.includes('Industrial IoT'));
-    gradient: 'from-gray-50o0/20 to-slate-50o0/20'};
+    id: 'industrial-iot',
+    title: '🏭 Industrial IoT & Smart Manufacturing',
+    description: 'Zero downtime manufacturing and predictive maintenance',
+    icon: Building2,
+    color: 'from-gray-50o0 to-slate-50o0',
+    services: allServices.filter(s => s.category.includes('Industrial IoT')),
+    gradient: 'from-gray-50o0/20 to-slate-50o0/20'},
   {
-    id: 'edtech';
-    title: '🎓 Education Technology Revolution';
-    description: 'AI-powered personalized learning and 10x faster knowledge acquisition';
-    icon: Users;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    services: allServices.filter(s => s.category.includes('Education Technology'));
-    gradient: 'from-blue-50o0/20 to-cyan-50o0/20'};
+    id: 'edtech',
+    title: '🎓 Education Technology Revolution',
+    description: 'AI-powered personalized learning and 10x faster knowledge acquisition',
+    icon: Users,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    services: allServices.filter(s => s.category.includes('Education Technology')),
+    gradient: 'from-blue-50o0/20 to-cyan-50o0/20'},
   {
-    id: 'sustainability';
-    title: '🌱 Sustainability & Green Technology';
-    description: 'AI-powered environmental solutions for carbon neutrality';
-    icon: Globe;
-    color: 'from-green-50o0 to-emerald-50o0';
-    services: allServices.filter(s => s.category.includes('Sustainability'));
-    gradient: 'from-green-50o0/20 to-emerald-50o0/20'};
+    id: 'sustainability',
+    title: '🌱 Sustainability & Green Technology',
+    description: 'AI-powered environmental solutions for carbon neutrality',
+    icon: Globe,
+    color: 'from-green-50o0 to-emerald-50o0',
+    services: allServices.filter(s => s.category.includes('Sustainability')),
+    gradient: 'from-green-50o0/20 to-emerald-50o0/20'},
   {
-    id: 'logistics';
-    title: '🚛 Logistics & Supply Chain';
-    description: '99.9% delivery accuracy and zero waste supply chain';
-    icon: Package;
-    color: 'from-orange-50o0 to-red-50o0';
-    services: allServices.filter(s => s.category.includes('Logistics'));
+    id: 'logistics',
+    title: '🚛 Logistics & Supply Chain',
+    description: '99.9% delivery accuracy and zero waste supply chain',
+    icon: Package,
+    color: 'from-orange-50o0 to-red-50o0',
+    services: allServices.filter(s => s.category.includes('Logistics')),
     gradient: 'from-orange-50o0/20 to-red-50o0/20'}
 ],
 export default function Revolutionary20o25ServicesShowcase() {

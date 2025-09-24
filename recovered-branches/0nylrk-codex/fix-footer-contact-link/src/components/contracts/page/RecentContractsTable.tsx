@@ -12,7 +12,7 @@ interface RecentContractsTableProps {
   onViewContract: (contractId: string) => void}
 ,
 export function RecentContractsTable({
-  contractsonViewContract;
+  contractsonViewContract,
 }: RecentContractsTableProps) {
   return (
     <>,

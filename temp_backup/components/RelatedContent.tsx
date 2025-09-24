@@ -11,169 +11,169 @@ interface RelatedContentProps {
   items?: RelatedContentItem[]}
 ,
 export default function RelatedContent({
-  currentPage;
-  items;
+  currentPage,
+  items,
 }: RelatedContentProps) {
   // Default related content based on current page,
   const getDefaultRelatedContent = (page: string): RelatedContentItem[] => {
     const defaults: Record<string RelatedContentItem[]> = {
       home: [
         {
-          title: 'Automation Hub';
-          description: 'Explore our autonomous systems';
-          href: '/automation';
-          category: 'Automation';
-        };
+          title: 'Automation Hub',
+          description: 'Explore our autonomous systems',
+          href: '/automation',
+          category: 'Automation'
+        },
         {
-          title: 'Component Library';
-          description: 'Browse our UI components';
-          href: '/components';
-          category: 'Components';
-        };
+          title: 'Component Library',
+          description: 'Browse our UI components',
+          href: '/components',
+          category: 'Components'
+        },
         {
-          title: 'Reports & Content';
-          description: 'Discover our content library';
-          href: '/reports';
-          category: 'Content';
-        };
+          title: 'Reports & Content',
+          description: 'Discover our content library',
+          href: '/reports',
+          category: 'Content'
+        },
         {
-          title: 'Site Health';
-          description: 'Check site performance';
-          href: '/site-health';
-          category: 'Health';
-        };
-      ];
+          title: 'Site Health',
+          description: 'Check site performance',
+          href: '/site-health',
+          category: 'Health'
+        },
+      ],
       automation: [
         {
-          title: 'Site Health';
-          description: 'Monitor site performance';
-          href: '/site-health';
-          category: 'Health';
-        };
+          title: 'Site Health',
+          description: 'Monitor site performance',
+          href: '/site-health',
+          category: 'Health'
+        },
         {
-          title: 'Component Library';
-          description: 'Browse UI components';
-          href: '/components';
-          category: 'Components';
-        };
+          title: 'Component Library',
+          description: 'Browse UI components',
+          href: '/components',
+          category: 'Components'
+        },
         {
-          title: 'Explore Features';
-          description: 'Discover all capabilities';
-          href: '/explore';
-          category: 'Features';
-        };
+          title: 'Explore Features',
+          description: 'Discover all capabilities',
+          href: '/explore',
+          category: 'Features'
+        },
         {
-          title: 'Newsroom';
-          description: 'Latest updates';
-          href: '/newsroom';
-          category: 'Updates';
-        };
-      ];
+          title: 'Newsroom',
+          description: 'Latest updates',
+          href: '/newsroom',
+          category: 'Updates'
+        },
+      ],
       reports: [
         {
-          title: 'AI Trends';
-          description: 'Latest AI insights';
-          href: '/reports/ai-trends';
-          category: 'AI';
-        };
+          title: 'AI Trends',
+          description: 'Latest AI insights',
+          href: '/reports/ai-trends',
+          category: 'AI'
+        },
         {
-          title: 'Innovations';
-          description: 'Cutting-edge research';
-          href: '/reports/innovations';
-          category: 'Research';
-        };
+          title: 'Innovations',
+          description: 'Cutting-edge research',
+          href: '/reports/innovations',
+          category: 'Research'
+        },
         {
-          title: 'Tutorials';
-          description: 'Step-by-step guides';
-          href: '/reports/tutorials';
-          category: 'Guides';
-        };
+          title: 'Tutorials',
+          description: 'Step-by-step guides',
+          href: '/reports/tutorials',
+          category: 'Guides'
+        },
         {
-          title: 'Automation Hub';
-          description: 'See automations in action';
-          href: '/automation';
-          category: 'Automation';
-        };
-      ];
+          title: 'Automation Hub',
+          description: 'See automations in action',
+          href: '/automation',
+          category: 'Automation'
+        },
+      ],
       components: [
         {
-          title: 'Component Library';
-          description: 'Browse all components';
-          href: '/components';
-          category: 'Components';
-        };
+          title: 'Component Library',
+          description: 'Browse all components',
+          href: '/components',
+          category: 'Components'
+        },
         {
-          title: 'Playground';
-          description: 'Test components live';
-          href: '/playground';
-          category: 'Testing';
-        };
+          title: 'Playground',
+          description: 'Test components live',
+          href: '/playground',
+          category: 'Testing'
+        },
         {
-          title: 'Reports';
-          description: 'Technical documentation';
-          href: '/reports';
-          category: 'Docs';
-        };
+          title: 'Reports',
+          description: 'Technical documentation',
+          href: '/reports',
+          category: 'Docs'
+        },
         {
-          title: 'Explore';
-          description: 'Discover features';
-          href: '/explore';
-          category: 'Features';
-        };
-      ];
+          title: 'Explore',
+          description: 'Discover features',
+          href: '/explore',
+          category: 'Features'
+        },
+      ],
       explore: [
         {
-          title: 'Automation Hub';
-          description: 'Live autonomous systems';
-          href: '/automation';
-          category: 'Automation';
-        };
+          title: 'Automation Hub',
+          description: 'Live autonomous systems',
+          href: '/automation',
+          category: 'Automation'
+        },
         {
-          title: 'Component Library';
-          description: 'UI components';
-          href: '/components';
-          category: 'Components';
-        };
+          title: 'Component Library',
+          description: 'UI components',
+          href: '/components',
+          category: 'Components'
+        },
         {
-          title: 'Reports Index';
-          description: 'Content library';
-          href: '/reports';
-          category: 'Content';
-        };
+          title: 'Reports Index',
+          description: 'Content library',
+          href: '/reports',
+          category: 'Content'
+        },
         {
-          title: 'Site Health';
-          description: 'Performance metrics';
-          href: '/site-health';
-          category: 'Health';
-        };
-      ];
+          title: 'Site Health',
+          description: 'Performance metrics',
+          href: '/site-health',
+          category: 'Health'
+        },
+      ],
       newsroom: [
         {
-          title: 'Automation Updates';
-          description: 'Latest automation news';
-          href: '/automation';
-          category: 'Automation';
-        };
+          title: 'Automation Updates',
+          description: 'Latest automation news',
+          href: '/automation',
+          category: 'Automation'
+        },
         {
-          title: 'AI Trends';
-          description: 'AI industry insights';
-          href: '/reports/ai-trends';
-          category: 'AI';
-        };
+          title: 'AI Trends',
+          description: 'AI industry insights',
+          href: '/reports/ai-trends',
+          category: 'AI'
+        },
         {
-          title: 'Innovations';
-          description: 'Research breakthroughs';
-          href: '/reports/innovations';
-          category: 'Research';
-        };
+          title: 'Innovations',
+          description: 'Research breakthroughs',
+          href: '/reports/innovations',
+          category: 'Research'
+        },
         {
-          title: 'Site Health';
-          description: 'Performance updates';
-          href: '/site-health';
-          category: 'Health';
-        };
-      ];
-    };
+          title: 'Site Health',
+          description: 'Performance updates',
+          href: '/site-health',
+          category: 'Health'
+        },
+      ],
+    },
     // Find the best match for the current page,
     for (const [key, content] of Object.entries(defaults)) {
       if (page.includes(key)) {
@@ -183,30 +183,30 @@ export default function RelatedContent({
     // Fallback to general content,
     return [
       {
-        title: 'Home';
-        description: 'Return to homepage';
-        href: '/';
-        category: 'Navigation';
-      };
+        title: 'Home',
+        description: 'Return to homepage',
+        href: '/',
+        category: 'Navigation'
+      },
       {
-        title: 'Explore';
-        description: 'Discover all features';
-        href: '/explore';
-        category: 'Features';
-      };
+        title: 'Explore',
+        description: 'Discover all features',
+        href: '/explore',
+        category: 'Features'
+      },
       {
-        title: 'Automation';
-        description: 'See automations';
-        href: '/automation';
-        category: 'Automation';
-      };
+        title: 'Automation',
+        description: 'See automations',
+        href: '/automation',
+        category: 'Automation'
+      },
       {
-        title: 'Reports';
-        description: 'Browse content';
-        href: '/reports';
-        category: 'Content';
-      };
-    ]};
+        title: 'Reports',
+        description: 'Browse content',
+        href: '/reports',
+        category: 'Content'
+      },
+    ]},
   const relatedContent = items || getDefaultRelatedContent(currentPage),
   if (relatedContent.length === 0) return null,
   return (

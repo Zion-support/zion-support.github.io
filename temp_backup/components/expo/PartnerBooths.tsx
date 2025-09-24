@@ -3,7 +3,7 @@ type Partner = {
   name: string,
   category: 'University' | 'Bank' | 'DAO' | 'Enterprise',
   description: string,
-  url: string};
+  url: string},
 export default function PartnerBooths({ partners }: { partners: Partner[] }) {
   const [active, setActive] = useState<Partner | null>(null),
   return (

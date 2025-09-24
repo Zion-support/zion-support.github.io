@@ -1,152 +1,152 @@
 import { Link, useLocation } from 'react-router-dom',
 import { cn } from '@/lib/utils',
 import {
-  Home;
-  ShoppingCart;
-  Users;
-  Settings;
-  FileText;
-  HelpCircle;
-  Code;
-  BarChart3;
-  Briefcase;
-  Leaf;
-  Building;
-  Mail;
-  Calendar;
-  Globe;
-  Zap;
+  Home,
+  ShoppingCart,
+  Users,
+  Settings,
+  FileText,
+  HelpCircle,
+  Code,
+  BarChart3,
+  Briefcase,
+  Leaf,
+  Building,
+  Mail,
+  Calendar,
+  Globe,
+  Zap,
 } from 'lucide-react',
 export function MainSidebar() {
   const location = useLocation(),
   const sidebarSections = [
     {
-      title: 'Main';
+      title: 'Main',
       items: [
         {
-          key: 'home';
-          href: '/';
-          icon: <Home className='w-4 h-4' />;
-          label: 'Home';
-        };
+          key: 'home',
+          href: '/',
+          icon: <Home className='w-4 h-4' />,
+          label: 'Home'
+        },
         {
-          key: 'marketplace';
-          href: '/marketplace';
-          icon: <ShoppingCart className='w-4 h-4' />;
-          label: 'Marketplace';
-        };
+          key: 'marketplace',
+          href: '/marketplace',
+          icon: <ShoppingCart className='w-4 h-4' />,
+          label: 'Marketplace'
+        },
         {
-          key: 'services';
-          href: '/services';
-          icon: <Settings className='w-4 h-4' />;
-          label: 'Services';
-        };
+          key: 'services',
+          href: '/services',
+          icon: <Settings className='w-4 h-4' />,
+          label: 'Services'
+        },
         {
-          key: 'talent';
-          href: '/talent';
-          icon: <Users className='w-4 h-4' />;
-          label: 'Talent';
-        };
+          key: 'talent',
+          href: '/talent',
+          icon: <Users className='w-4 h-4' />,
+          label: 'Talent'
+        },
         {
-          key: 'equipment';
-          href: '/equipment';
-          icon: <BarChart3 className='w-4 h-4' />;
-          label: 'Equipment';
-        };
-      ];
-    };
+          key: 'equipment',
+          href: '/equipment',
+          icon: <BarChart3 className='w-4 h-4' />,
+          label: 'Equipment'
+        },
+      ],
+    },
     {
-      title: 'Company';
+      title: 'Company',
       items: [
         {
-          key: 'about';
-          href: '/about';
-          icon: <Building className='w-4 h-4' />;
-          label: 'About Us';
-        };
+          key: 'about',
+          href: '/about',
+          icon: <Building className='w-4 h-4' />,
+          label: 'About Us'
+        },
         {
-          key: 'careers';
-          href: '/careers';
-          icon: <Briefcase className='w-4 h-4' />;
-          label: 'Careers';
-        };
+          key: 'careers',
+          href: '/careers',
+          icon: <Briefcase className='w-4 h-4' />,
+          label: 'Careers'
+        },
         {
-          key: 'partners';
-          href: '/partners';
-          icon: <Users className='w-4 h-4' />;
-          label: 'Partners';
-        };
+          key: 'partners',
+          href: '/partners',
+          icon: <Users className='w-4 h-4' />,
+          label: 'Partners'
+        },
         {
-          key: 'contact';
-          href: '/contact';
-          icon: <Mail className='w-4 h-4' />;
-          label: 'Contact';
-        };
-      ];
-    };
+          key: 'contact',
+          href: '/contact',
+          icon: <Mail className='w-4 h-4' />,
+          label: 'Contact'
+        },
+      ],
+    },
     {
-      title: 'Resources';
+      title: 'Resources',
       items: [
         {
-          key: 'blog';
-          href: '/blog';
-          icon: <FileText className='w-4 h-4' />;
-          label: 'Blog';
-        };
+          key: 'blog',
+          href: '/blog',
+          icon: <FileText className='w-4 h-4' />,
+          label: 'Blog'
+        },
         {
-          key: 'community';
-          href: '/community';
-          icon: <Globe className='w-4 h-4' />;
-          label: 'Community';
-        };
+          key: 'community',
+          href: '/community',
+          icon: <Globe className='w-4 h-4' />,
+          label: 'Community'
+        },
         {
-          key: 'green-it';
-          href: '/green-it';
-          icon: <Leaf className='w-4 h-4' />;
-          label: 'Green IT';
-        };
+          key: 'green-it',
+          href: '/green-it',
+          icon: <Leaf className='w-4 h-4' />,
+          label: 'Green IT'
+        },
         {
-          key: 'zion-hire-ai';
-          href: '/zion-hire-ai';
-          icon: <Zap className='w-4 h-4' />;
-          label: 'AI Hiring';
-        };
-      ];
-    };
+          key: 'zion-hire-ai',
+          href: '/zion-hire-ai',
+          icon: <Zap className='w-4 h-4' />,
+          label: 'AI Hiring'
+        },
+      ],
+    },
     {
-      title: 'Support';
+      title: 'Support',
       items: [
         {
-          key: 'help';
-          href: '/help';
-          icon: <HelpCircle className='w-4 h-4' />;
-          label: 'Help Center';
-        };
+          key: 'help',
+          href: '/help',
+          icon: <HelpCircle className='w-4 h-4' />,
+          label: 'Help Center'
+        },
         {
-          key: 'developers';
-          href: '/developers';
-          icon: <Code className='w-4 h-4' />;
-          label: 'Developer Portal';
-        };
+          key: 'developers',
+          href: '/developers',
+          icon: <Code className='w-4 h-4' />,
+          label: 'Developer Portal'
+        },
         {
-          key: 'api-docs';
-          href: '/api-docs';
-          icon: <Code className='w-4 h-4' />;
-          label: 'API Docs';
-        };
+          key: 'api-docs',
+          href: '/api-docs',
+          icon: <Code className='w-4 h-4' />,
+          label: 'API Docs'
+        },
         {
-          key: 'sitemap';
-          href: '/sitemap';
-          icon: <Calendar className='w-4 h-4' />;
-          label: 'Sitemap';
-        };
-      ];
-    };
+          key: 'sitemap',
+          href: '/sitemap',
+          icon: <Calendar className='w-4 h-4' />,
+          label: 'Sitemap'
+        },
+      ],
+    },
   ],
   const isActive = href => {
     if (href === '/') {
       return location.pathname === '/'}
-    return location.pathname.startsWith(href)};
+    return location.pathname.startsWith(href)},
   return (
     <aside className='w-64 bg-zion-blue-dark border-r border-zion-blue-light min-h-screen p-4'>,
       <div className='mb-8'>,
@@ -171,7 +171,7 @@ export function MainSidebar() {
                   <Link
                     to={item.href}
                     className={cn(
-                      'flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors';
+                      'flex items-center space-x-3 px-3 py-2 rounded-md text-sm font-medium transition-colors',
                       isActive(item.href),
                         ? 'bg-zion-purple/20 text-zion-cyan',
                         : 'text-zion-slate-light hover: bg-zion-purple/10 hover:text-zion-cyan')}

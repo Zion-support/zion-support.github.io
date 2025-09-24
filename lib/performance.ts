@@ -3,14 +3,14 @@
  */
 
 export interface PerformanceMetrics {
-  name: string;
-  startTime: number;
-  endTime?: number;
-  duration?: number;
+  name: string,
+  startTime: number,
+  endTime?: number,
+  duration?: number
 }
 
 class PerformanceMonitor {
-  private metrics: Map<string, PerformanceMetrics> = new Map();
+  private metrics: Map<string, PerformanceMetrics> = new Map(),
 
   /**
    * Start timing a performance metric
@@ -19,8 +19,8 @@ class PerformanceMonitor {
     if (typeof window !== 'undefined' && window.performance) {
       this.metrics.set(name, {
         name,
-        startTime: window.performance.now(),
-      });
+        startTime: window.performance.now()
+      }),
     }
   }
 
@@ -28,61 +28,61 @@ class PerformanceMonitor {
    * End timing a performance metric
    */
   end(name: string): PerformanceMetrics | null {
-    const metric = this.metrics.get(name);
+    const metric = this.metrics.get(name),
     if (!metric) {
-      return null;
+      return null
     }
 
     if (typeof window !== 'undefined' && window.performance) {
-      const endTime = window.performance.now();
-      const duration = endTime - metric.startTime;
+      const endTime = window.performance.now(),
+      const duration = endTime - metric.startTime,
       const completedMetric: PerformanceMetrics = {
         ...metric,
         endTime,
-        duration,
-      };
-      this.metrics.set(name, completedMetric);
+        duration
+      },
+      this.metrics.set(name, completedMetric),
       if (process.env.NODE_ENV === 'development') {
         // console.log(`Performance: ${name} took ${duration.toFixed(2)}ms`)
       }
-      return completedMetric;
+      return completedMetric,
     }
 
-    return null;
+    return null,
   }
 
   /**
    * Get all performance metrics
    */
   getAllMetrics(): PerformanceMetrics[] {
-    return Array.from(this.metrics.values());
+    return Array.from(this.metrics.values()),
   }
 
   /**
    * Clear all metrics
    */
   clear(): void {
-    this.metrics.clear();
+    this.metrics.clear(),
   }
 
   /**
    * Measure a function's execution time
    */
   async measure<T>(name: string, fn: () => Promise<T>): Promise<T> {
-    this.start(name);
+    this.start(name),
     try {
-      const result = await fn();
-      this.end(name);
-      return result;
+      const result = await fn(),
+      this.end(name),
+      return result
     } catch (error) {
-      this.end(name);
-      throw error;
+      this.end(name),
+      throw error,
     }
   }
 }
 
 // Export singleton instance
-export const performanceMonitor = new PerformanceMonitor();
+export const performanceMonitor = new PerformanceMonitor(),
 
 // Web Vitals monitoring
 export function reportWebVitals(metric: any) {
@@ -99,7 +99,7 @@ export function reportWebVitals(metric: any) {
 
 // Performance observer for Core Web Vitals
 export function observeWebVitals() {
-  if (typeof window === 'undefined') return;
+  if (typeof window === 'undefined') return,
   // Observe Largest Contentful Paint
   if ('PerformanceObserver' in window) {
     try {
@@ -108,11 +108,11 @@ export function observeWebVitals() {
           reportWebVitals({
             name: entry.name,
             value: entry.startTime,
-            id: entry.name,
-          });
+            id: entry.name
+          }),
         }
-      });
-      observer.observe({ entryTypes: ['largest-contentful-paint'] });
+      }),
+      observer.observe({ entryTypes: ['largest-contentful-paint'] }),
     } catch (error) {
       // ignore unsupported environments
     }

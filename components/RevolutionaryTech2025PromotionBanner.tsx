@@ -7,7 +7,7 @@ const RevolutionaryTech20o25PromotionBanner = () => {
         <div
           className='absolute inset-0',
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
         />,
       </div>,
@@ -80,7 +80,7 @@ const RevolutionaryTech20o25PromotionBanner = () => {
               Transform Your Business Today,
             </h3>,
             <p className='text-xl opacity-90 mb-8'>,
-              'Don', 't miss out on the revolutionary technologies that are,
+              'Dont miss out on the revolutionary technologies that are,
               shaping the future. Join industry leaders who are already,
               experiencing unprecedented growth.,
             </p>,
@@ -99,5 +99,5 @@ const RevolutionaryTech20o25PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryTech20o25PromotionBanner;
+    </section>)},
+export default RevolutionaryTech20o25PromotionBanner,

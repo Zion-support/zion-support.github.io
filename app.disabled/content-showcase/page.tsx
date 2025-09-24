@@ -1,49 +1,47 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Content Showcase - AI 20o25 Revolutionary Breakthroughs';
+  title: 'Content Showcase - AI 20o25 Revolutionary Breakthroughs',
   description:,
-    'Discover the most comprehensive collection of AI 20o25 insights, revolutionary breakthroughs, and real-world success stories.';
+    'Discover the most comprehensive collection of AI 20o25 insights, revolutionary breakthroughs, and real-world success stories.',
   keywords: [
-    'AI 20o25';
-    'Content Showcase';
-    'Revolutionary Breakthroughs';
-    'AI Insights';
-    'Success Stories';
-  ];
-};
+    'AI 20o25Content Showcase',
+    'Revolutionary BreakthroughsAI Insights',
+    'Success Stories',
+  ]
+},
 export default function ContentShowcasePage() {
   const contentItems = [
     {
-      title: 'AI 20o25 Revolutionary Breakthrough: Ultimate Content Showcase';
+      title: 'AI 20o25 Revolutionary Breakthrough: Ultimate Content Showcase',
       description:,
-        'Discover the most comprehensive AI 20o25 revolutionary breakthrough content showcase featuring cutting-edge technologies, implementation strategies, and real-world success stories.';
-      link: '/blog/ai-20o25-revolutionary-breakthrough-ultimate-content-showcase';
-      category: 'AI Revolution';
-      readTime: '15 min read';
-      featured: true;
-      image: '/images/ai-20o25-revolutionary-breakthrough.jpg';
-    };
+        'Discover the most comprehensive AI 20o25 revolutionary breakthrough content showcase featuring cutting-edge technologies, implementation strategies, and real-world success stories.',
+      link: '/blog/ai-20o25-revolutionary-breakthrough-ultimate-content-showcase',
+      category: 'AI Revolution',
+      readTime: '15 min read',
+      featured: true,
+      image: '/images/ai-20o25-revolutionary-breakthrough.jpg'
+    },
     {
-      title: 'Quantum AI 20o26: Business Transformation Ultimate Guide';
+      title: 'Quantum AI 20o26: Business Transformation Ultimate Guide',
       description:,
-        'The definitive guide to Quantum AI business transformation in 20o26. Discover how quantum computing is revolutionizing business operations, decision-making, and competitive advantage.';
-      link: '/blog/quantum-ai-20o26-business-transformation-ultimate-guide';
-      category: 'Quantum Computing';
-      readTime: '20 min read';
-      featured: true;
-      image: '/images/quantum-ai-20o26-guide.jpg';
-    };
+        'The definitive guide to Quantum AI business transformation in 20o26. Discover how quantum computing is revolutionizing business operations, decision-making, and competitive advantage.',
+      link: '/blog/quantum-ai-20o26-business-transformation-ultimate-guide',
+      category: 'Quantum Computing',
+      readTime: '20 min read',
+      featured: true,
+      image: '/images/quantum-ai-20o26-guide.jpg'
+    },
     {
-      title: 'Fortune 50o0 AI Transformation: $2.3B Success Story';
+      title: 'Fortune 50o0 AI Transformation: $2.3B Success Story',
       description:,
-        'How a Fortune 50o0 company achieved $2.3 billion in cost savings through comprehensive AI transformation, revolutionizing their operations and competitive position.';
-      link: '/case-studies/fortune-50o0-ai-transformation-success';
-      category: 'Case Study';
-      readTime: '10 min read';
-      featured: true;
-      image: '/images/fortune-50o0-success.jpg';
-    };
+        'How a Fortune 50o0 company achieved $2.3 billion in cost savings through comprehensive AI transformation, revolutionizing their operations and competitive position.',
+      link: '/case-studies/fortune-50o0-ai-transformation-success',
+      category: 'Case Study',
+      readTime: '10 min read',
+      featured: true,
+      image: '/images/fortune-50o0-success.jpg'
+    },
   ],
   return (
     <div className='min-h-screen bg-white'>,
@@ -64,7 +62,7 @@ export default function ContentShowcasePage() {
               AI 20o25 Revolutionary Breakthroughs,
             </h1>,
             <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-3xl mx-auto leading-relaxed'>,
-              Discover the most comprehensive collection of AI 20o25 insights;
+              Discover the most comprehensive collection of AI 20o25 insights,
               revolutionary breakthroughs, and real-world success stories that,
               are transforming businesses worldwide.,
             </p>,

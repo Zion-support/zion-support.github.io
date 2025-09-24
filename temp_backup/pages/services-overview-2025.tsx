@@ -3,119 +3,119 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Award;
-  Zap;
-  Cloud;
-  Target;
-  Search;
-  Filter;
-  Grid;
-  List;
-  DollarSign;
-  Users;
-  Clock;
-  Eye;
-  Heart;
-  Globe;
-  BarChart3;
-  Cpu;
-  Database;
-  Network;
-  Lock;
-  Sparkles;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Award,
+  Zap,
+  Cloud,
+  Target,
+  Search,
+  Filter,
+  Grid,
+  List,
+  DollarSign,
+  Users,
+  Clock,
+  Eye,
+  Heart,
+  Globe,
+  BarChart3,
+  Cpu,
+  Database,
+  Network,
+  Lock,
+  Sparkles,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { comprehensiveRealServices20o25 } from '../data/20o25-comprehensive-real-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    id: 'ai-ml';
-    name: 'AI & Machine Learning';
-    icon: Brain;
-    color: 'from-purple-50o0 to-pink-60o0';
-    description: 'Cutting-edge AI solutions that transform business operations';
-  };
+    id: 'ai-ml',
+    name: 'AI & Machine Learning',
+    icon: Brain,
+    color: 'from-purple-50o0 to-pink-60o0',
+    description: 'Cutting-edge AI solutions that transform business operations'
+  },
   {
-    id: 'customer-success';
-    name: 'Customer Success';
-    icon: Users;
-    color: 'from-blue-50o0 to-cyan-60o0';
+    id: 'customer-success',
+    name: 'Customer Success',
+    icon: Users,
+    color: 'from-blue-50o0 to-cyan-60o0',
     description:,
-      'AI-powered tools to enhance customer experience and retention';
-  };
+      'AI-powered tools to enhance customer experience and retention',
+  },
   {
-    id: 'supply-chain';
-    name: 'Supply Chain';
-    icon: Network;
-    color: 'from-green-50o0 to-emerald-60o0';
+    id: 'supply-chain',
+    name: 'Supply Chain',
+    icon: Network,
+    color: 'from-green-50o0 to-emerald-60o0',
     description:,
-      'Intelligent optimization for logistics and inventory management';
-  };
+      'Intelligent optimization for logistics and inventory management',
+  },
   {
-    id: 'financial-planning';
-    name: 'Financial Planning';
-    icon: DollarSign;
-    color: 'from-yellow-50o0 to-orange-60o0';
-    description: 'AI-driven financial analysis and planning solutions';
-  };
+    id: 'financial-planning',
+    name: 'Financial Planning',
+    icon: DollarSign,
+    color: 'from-yellow-50o0 to-orange-60o0',
+    description: 'AI-driven financial analysis and planning solutions'
+  },
   {
-    id: 'sales-intelligence';
-    name: 'Sales Intelligence';
-    icon: Target;
-    color: 'from-red-50o0 to-pink-60o0';
-    description: 'Smart sales tools that boost conversion and revenue';
-  };
+    id: 'sales-intelligence',
+    name: 'Sales Intelligence',
+    icon: Target,
+    color: 'from-red-50o0 to-pink-60o0',
+    description: 'Smart sales tools that boost conversion and revenue'
+  },
   {
-    id: 'hr-analytics';
-    name: 'HR Analytics';
-    icon: BarChart3;
-    color: 'from-indigo-50o0 to-purple-60o0';
-    description: 'Data-driven insights for human resources optimization';
-  };
+    id: 'hr-analytics',
+    name: 'HR Analytics',
+    icon: BarChart3,
+    color: 'from-indigo-50o0 to-purple-60o0',
+    description: 'Data-driven insights for human resources optimization'
+  },
   {
-    id: 'decision-intelligence';
-    name: 'Decision Intelligence';
-    icon: Cpu;
-    color: 'from-teal-50o0 to-blue-60o0';
-    description: 'AI-powered decision support and business intelligence';
-  };
+    id: 'decision-intelligence',
+    name: 'Decision Intelligence',
+    icon: Cpu,
+    color: 'from-teal-50o0 to-blue-60o0',
+    description: 'AI-powered decision support and business intelligence'
+  },
   {
-    id: 'content-marketing';
-    name: 'Content Marketing';
-    icon: Sparkles;
-    color: 'from-pink-50o0 to-rose-60o0';
-    description: 'Intelligent content creation and marketing automation';
-  };
+    id: 'content-marketing',
+    name: 'Content Marketing',
+    icon: Sparkles,
+    color: 'from-pink-50o0 to-rose-60o0',
+    description: 'Intelligent content creation and marketing automation'
+  },
   {
-    id: 'crm-intelligence';
-    name: 'CRM & Customer Intelligence';
-    icon: Database;
-    color: 'from-cyan-50o0 to-blue-60o0';
-    description: 'Advanced customer relationship management solutions';
-  };
+    id: 'crm-intelligence',
+    name: 'CRM & Customer Intelligence',
+    icon: Database,
+    color: 'from-cyan-50o0 to-blue-60o0',
+    description: 'Advanced customer relationship management solutions'
+  },
   {
-    id: 'business-intelligence';
-    name: 'Business Intelligence';
-    icon: Globe;
-    color: 'from-violet-50o0 to-purple-60o0';
-    description: 'Comprehensive business analytics and reporting platforms';
-  };
+    id: 'business-intelligence',
+    name: 'Business Intelligence',
+    icon: Globe,
+    color: 'from-violet-50o0 to-purple-60o0',
+    description: 'Comprehensive business analytics and reporting platforms'
+  },
 ],
 export default function ServicesOverview20o25() {
   const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -127,7 +127,7 @@ export default function ServicesOverview20o25() {
       selectedCategory === 'all' ||,
       service.category,
         .toLowerCase(),
-        .includes(selectedCategory.replace('-', ' ')),
+        .includes(selectedCategory.replace('- ')),
     const searchMatch =,
       service.name.toLowerCase().includes(searchQuery.toLowerCase()) ||,
       service.description.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -138,23 +138,23 @@ export default function ServicesOverview20o25() {
     const categoryName = serviceCategories.find(
       cat => cat.id === categoryId)?.name,
     return comprehensiveRealServices20o25.filter(service =>,
-      service.category.includes(categoryName || ''))};
+      service.category.includes(categoryName || ''))},
   const getCategoryStats = (categoryId: string) => {
     const services = getCategoryServices(categoryId),
     const totalRevenue = services.reduce((sum, service) => {
       const price = parseInt(service.price.replace('$', '')),
       return sum + price * service.customers}, 0),
     return {
-      serviceCount: services.length;
+      serviceCount: services.length,
       totalCustomers: services.reduce(
-        (sum, service) => sum + service.customers;
-        0);
+        (sum, service) => sum + service.customers,
+        0),
       averageRating:,
         services.reduce((sum, service) => sum + service.rating, 0) /,
-          services.length || 0;
-      totalRevenue: totalRevenue;
-    };
-  };
+          services.length || 0,
+      totalRevenue: totalRevenue
+    },
+  },
   return (
     <>,
       <Head>,

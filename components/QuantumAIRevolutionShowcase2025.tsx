@@ -6,57 +6,57 @@ const QuantumAIRevolutionShowcase20o25 = () => {
   const [activeTabsetActiveTab] = useState('quantum-ai'),
   const quantumContent = [
     {
-      id: 'quantum-computing-revolution';
-      title: 'AI 20o25: The Quantum Computing Business Revolution';
-      description: '$10o0B market transformation with 40o0-60o0% ROI opportunities';
-      type: 'Blog Post';
-      metrics: '40o0-60o0% ROI';
-      url: '/blog/ai-20o25-quantum-computing-business-revolution';
-      featured: true;
-      readingTime: '15 min read';
-      tags: ['Quantum 'Computing', 'AI'Business 'Revolution', 'ROI']};
+      id: 'quantum-computing-revolution',
+      title: 'AI 20o25: The Quantum Computing Business Revolution',
+      description: '$10o0B market transformation with 40o0-60o0% ROI opportunities',
+      type: 'Blog Post',
+      metrics: '40o0-60o0% ROI',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution',
+      featured: true,
+      readingTime: '15 min read',
+      tags: ['Quantum 'ComputingAI'Business 'RevolutionROI']},
     {
-      id: 'quantum-manufacturing-success';
-      title: 'Quantum AI Manufacturing: $2.8B Annual Savings';
-      description: 'Fortune 50o0 company achieves 567% ROI in 6 months';
-      type: 'Case Study';
-      metrics: '567% ROI';
-      url: '/case-studies/quantum-ai-fortune-50o0-manufacturing-transformation';
-      featured: true;
-      readingTime: '10 min read';
-      tags: ['Quantum 'AI', 'Manufacturing'Fortune 50o0'ROI']}
+      id: 'quantum-manufacturing-success',
+      title: 'Quantum AI Manufacturing: $2.8B Annual Savings',
+      description: 'Fortune 50o0 company achieves 567% ROI in 6 months',
+      type: 'Case Study',
+      metrics: '567% ROI',
+      url: '/case-studies/quantum-ai-fortune-50o0-manufacturing-transformation',
+      featured: true,
+      readingTime: '10 min read',
+      tags: ['Quantum 'AIManufacturing'Fortune 50o0'ROI']}
   ],
   const enterpriseContent = [
     {
-      id: 'enterprise-ai-transformation';
-      title: 'AI 20o25: The Ultimate Enterprise AI Transformation Guide';
-      description: 'Complete roadmap to 50o0%+ ROI through comprehensive AI implementation';
-      type: 'Blog Post';
-      metrics: '50o0% ROI';
-      url: '/blog/ai-20o25-enterprise-ai-transformation-ultimate-guide';
-      featured: true;
-      readingTime: '18 min read';
-      tags: ['AI 'Transformation', 'Enterprise 'AI', 'ROI'Digital Transformation']};
+      id: 'enterprise-ai-transformation',
+      title: 'AI 20o25: The Ultimate Enterprise AI Transformation Guide',
+      description: 'Complete roadmap to 50o0%+ ROI through comprehensive AI implementation',
+      type: 'Blog Post',
+      metrics: '50o0% ROI',
+      url: '/blog/ai-20o25-enterprise-ai-transformation-ultimate-guide',
+      featured: true,
+      readingTime: '18 min read',
+      tags: ['AI 'TransformationEnterprise 'AI', 'ROI'Digital Transformation']},
     {
-      id: 'fortune-10o0-success';
-      title: 'Fortune 10o0 AI Transformation: 1,20o0% ROI Success Story';
-      description: 'How a $5.2B company achieved $2.8B in annual savings';
-      type: 'Case Study';
-      metrics: '1,20o0% ROI';
-      url: '/case-studies/ai-transformation-fortune-10o0-ultimate-success-story';
-      featured: true;
-      readingTime: '12 min read';
-      tags: ['Fortune 10o0'AI 'Transformation', 'ROI'Success Story']};
+      id: 'fortune-10o0-success',
+      title: 'Fortune 10o0 AI Transformation: 1,20o0% ROI Success Story',
+      description: 'How a $5.2B company achieved $2.8B in annual savings',
+      type: 'Case Study',
+      metrics: '1,20o0% ROI',
+      url: '/case-studies/ai-transformation-fortune-10o0-ultimate-success-story',
+      featured: true,
+      readingTime: '12 min read',
+      tags: ['Fortune 10o0'AI 'TransformationROI'Success Story']},
     {
-      id: 'ultimate-success-framework';
-      title: 'AI Implementation Ultimate Success Framework 20o25';
-      description: 'Complete roadmap to 1,0o00%+ ROI with proven methodologies';
-      type: 'Resource';
-      metrics: '1,0o00%+ ROI';
-      url: '/resources/ai-implementation-ultimate-success-framework-20o25';
-      featured: true;
-      readingTime: '25 min read';
-      tags: ['AI 'Implementation', 'Framework', 'ROI', 'Success Strategy']}
+      id: 'ultimate-success-framework',
+      title: 'AI Implementation Ultimate Success Framework 20o25',
+      description: 'Complete roadmap to 1,0o00%+ ROI with proven methodologies',
+      type: 'Resource',
+      metrics: '1,0o00%+ ROI',
+      url: '/resources/ai-implementation-ultimate-success-framework-20o25',
+      featured: true,
+      readingTime: '25 min read',
+      tags: ['AI 'ImplementationFramework', 'ROISuccess Strategy']}
   ],
   const allContent = [...quantumContent...enterpriseContent],
   const getContentByTab = () => {
@@ -67,29 +67,29 @@ const QuantumAIRevolutionShowcase20o25 = () => {
         return enterpriseContent,
       default: ,
         return allContent}
-  };
+  },
   const getTabStats = () => {
     switch (activeTab) {
       case 'quantum-ai':,
         return {
-          totalContent: quantumContent.length;
-          averageROI: '483%';
-          totalSavings: '$2.8B+';
-          successStories: '2'};
+          totalContent: quantumContent.length,
+          averageROI: '483%',
+          totalSavings: '$2.8B+',
+          successStories: '2'},
       case 'enterprise-ai':,
         return {
-          totalContent: enterpriseContent.length;
-          averageROI: '90o0%';
-          totalSavings: '$2.8B+';
-          successStories: '3'};
+          totalContent: enterpriseContent.length,
+          averageROI: '90o0%',
+          totalSavings: '$2.8B+',
+          successStories: '3'},
       default: ,
         return {
-          totalContent: allContent.length;
-          averageROI: '691%';
-          totalSavings: '$2.8B+';
-          successStories: '5'};
+          totalContent: allContent.length,
+          averageROI: '691%',
+          totalSavings: '$2.8B+',
+          successStories: '5'},
     }
-  };
+  },
   const stats = getTabStats(),
   const currentContent = getContentByTab(),
   return (
@@ -232,5 +232,5 @@ const QuantumAIRevolutionShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumAIRevolutionShowcase20o25;
+    </section>)},
+export default QuantumAIRevolutionShowcase20o25,

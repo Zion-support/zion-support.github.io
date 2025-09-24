@@ -1,9 +1,11 @@
-import React from react',import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',import ForgotPasswordPage from ../../pages/forgot-password', // Adjust path if needed'import { forgotPassword } from ../../src/services/auth', // Adjust path if needed,
+import React from react',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import @testing-library/jest-dom',
+import ForgotPasswordPage from ../../pages/forgot-password', // Adjust path if needed'import { forgotPassword } from ../../src/services/auth', // Adjust path if needed,
 // Mock the auth service,
 jest.mock('../../src/services/auth', () => ({'  forgotPassword: jest.fn()})),
 // Mock next/link,
 jest.mock('next/link', () => {'  const MockLink = ({ children, href }: { _children: React.ReactNode, href: string }) => {
-    return <a href={href}>{children}</a>};
+    return <a href={href}>{children}</a>},
   MockLink.displayName = MockLink',  return MockLink}),
 describe('ForgotPasswordPage', () => {'  const mockForgotPassword = forgotPassword as jest.Mock,
   beforeEach(() => {

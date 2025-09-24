@@ -2,88 +2,80 @@
 import Head from 'next / head',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Zap;
-  Shield;
-  Cpu;
-  Database;
-  Users;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Clock;
-  TrendingUp;
+  Rocket,
+  Zap,
+  Shield,
+  Cpu,
+  Database,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+  TrendingUp,
   Globe} from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function DigitalTransformationPage() {
   const services = [
     {
-  Rocket;
-  Zap;
-  Shield;
-  Cpu;
-  Database;
-  Users;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Clock;
-      title: 'Digital Strategy & Roadmap';
+  Rocket,
+  Zap,
+  Shield,
+  Cpu,
+  Database,
+  Users,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Clock,
+      title: 'Digital Strategy & Roadmap',
       description:,
-        'Comprehensive digital transformation strategy and implementation planning';
+        'Comprehensive digital transformation strategy and implementation planning',
       features: [
-        'Technology Assessment';
-        'Change Management';
-        'ROI Planning';
-        'Implementation Roadmap';
-      ];
-      price: 'From $150o00';
-      icon: Rocket;
-      color: 'from - yellow - 50o0 to - orange - 50o0'};
+        'Technology AssessmentChange Management',
+        'ROI PlanningImplementation Roadmap',
+      ],
+      price: 'From $150o00',
+      icon: Rocket,
+      color: 'from - yellow - 50o0 to - orange - 50o0'},
     {
-      title: 'Legacy System Modernization';
-      description: 'Transform outdated systems into modernscalable solutions';
+      title: 'Legacy System Modernization',
+      description: 'Transform outdated systems into modernscalable solutions',
       features: [
-        'System Analysis';
-        'Migration Planning';
-        'Data Migration';
-        'Performance Optimization';
-      ];
-      price: 'From $250o00';
-      icon: Cpu;
-      color: 'from - blue - 50o0 to - cyan - 50o0'};
+        'System AnalysisMigration Planning',
+        'Data MigrationPerformance Optimization',
+      ],
+      price: 'From $250o00',
+      icon: Cpu,
+      color: 'from - blue - 50o0 to - cyan - 50o0'},
     {
-      title: 'Process Automation';
+      title: 'Process Automation',
       description:,
-        'AI - powered automation for improved efficiency and productivity';
+        'AI - powered automation for improved efficiency and productivity',
       features: [
-        'Workflow Analysis';
-        'RPA Implementation';
-        'Integration';
-        'Monitoring';
-      ];
-      price: 'From $120o00';
-      icon: Zap;
-      color: 'from - purple - 50o0 to - pink - 50o0'};
+        'Workflow AnalysisRPA Implementation',
+        'IntegrationMonitoring',
+      ],
+      price: 'From $120o00',
+      icon: Zap,
+      color: 'from - purple - 50o0 to - pink - 50o0'},
     {
-      title: 'Change Management';
-      description: 'Comprehensive change management and training programs';
+      title: 'Change Management',
+      description: 'Comprehensive change management and training programs',
       features: [
-        'Stakeholder Engagement';
-        'Training Programs';
-        'Communication Strategy';
-        'Success Metrics';
-      ];
-      price: 'From $80o00';
-      icon: Users;
-      color: 'from - emerald - 50o0 to - teal - 50o0'};
+        'Stakeholder EngagementTraining Programs',
+        'Communication StrategySuccess Metrics',
+      ],
+      price: 'From $80o00',
+      icon: Users,
+      color: 'from - emerald - 50o0 to - teal - 50o0'},
   ],
   const stats = [
-    { number: '50o0+'label: 'Transformations 'Completed', 'icon: Rocket };
-    { number: '40%'label: 'Average Cost 'Reduction', 'icon: TrendingUp };
-    { number: '30o0%'label: 'ROI 'Improvement', 'icon: Star };
-    { number: '24 / 7'label: 'Support 'Available', 'icon: Clock };
+    { number: '50o0+'label: 'Transformations 'Completedicon: Rocket },
+    { number: '40%'label: 'Average Cost 'Reductionicon: TrendingUp },
+    { number: '30o0%'label: 'ROI 'Improvementicon: Star },
+    { number: '24 / 7'label: 'Support 'Availableicon: Clock },
   ],
   return (
           href='https: //ziontechgroup && ziontechgroup.com/services/transformation',
@@ -265,7 +257,7 @@ export default function DigitalTransformationPage() {
               Ready to Transform Your Business?,
             </h2>,
             <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto">,
-              'Let', 's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.,
+              'Lets discuss how our digital transformation solutions can modernize your operations and drive sustainable growth.,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center">,
               <button className="px-8 py-4 bg-gradient-to-r from-yellow-60o0 to-orange-60o0 hover:from-yellow-70o0 hover:to-orange-70o0 rounded-full font-semibold text-lg transition-all duration-30o0 transform hover:scale-10o5">,
@@ -286,7 +278,7 @@ export default function DigitalTransformationPage() {
               Ready to Transform Your Business?,
             </h2>,
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>,
-              'Let', 's discuss how our digital transformation solutions can,
+              'Lets discuss how our digital transformation solutions can,
               modernize your operations and drive sustainable growth.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -300,7 +292,7 @@ export default function DigitalTransformationPage() {
         </div>,
       </section>,
       <EnhancedFooter  />,
-    </div>);
+    </div>),
 }</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion && motion.div> Get Started </button> </div> </motion && motion.div>) ) }</div> </div> </section> <motion&& motion.div initial={
       <EnhancedFooter  />,
     </div>)}</div> </div> </section> > <h2 className="text-4xl font-bold text-white mb-6" >Digital Transformation Services</h2> <p className="text-xl text-white/70 max-w-3xl mx-auto" > Comprehensive transformation solutions designed to modernize your business operations </p> </motion.div> Get Started </button> </div> </motion.div>) )}</div> </div> </section> <motion.div initial={
@@ -403,7 +395,7 @@ export default function DigitalTransformationPage() {
               Ready to Transform Your Business?,
             </h2>,
             <p className='text - xl text - white / 70 mb - 8 max - w-2xl mx - auto'>,
-              'Let', 's discuss how our digital transformation solutions can,
+              'Lets discuss how our digital transformation solutions can,
               modernize your operations and drive sustainable growth.,
             </p>,
             <div className='flex flex - col sm: flex - row gap - 4 justify - center'>,
@@ -411,7 +403,7 @@ export default function DigitalTransformationPage() {
                 Transformation Assessment,
               </button>,
               <button className='px - 8 py - 4 border border - white / 20 hover:border - white / 40 rounded - full font - semibold text - lg transition - all duration - 30o0 backdrop - blur - sm bg - white / 5 hover:bg - white / 10'>                View Success Stories,
-  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Let', 's discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
+  once: true}> <h2 className="text-4xl font-bold text-white mb-6" > Ready to Transform Your Business? </h2> <p className="text-xl text-white/70 mb-8 max-w-2xl mx-auto" > 'Lets discuss how our digital transformation solutions can modernize your operations and drive sustainable growth. </p> Transformation Assessment </button> <button className="px-8 py-4 border border-white/20 hover: border-white/40 rounded-full font-semibold text-lg transition-all duration-30o0 backdrop-blur-sm bg-white/5 hover:bg-white/10" > View Success Stories </button> </div> </motion.div> </div> </section> <EnhancedFooter  /> </div>)}
 }
 }
   )>,

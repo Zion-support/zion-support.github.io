@@ -10,7 +10,7 @@ export default function DaoHome() {
   useEffect(() => {
     async function load() {
       const rpc = new ethers.providers.JsonRpcProvider(
-        (process as any).env?.NEXT_PUBLIC_RPC_URL || undefined;
+        (process as any).env?.NEXT_PUBLIC_RPC_URL || undefined,
         DAO_ADDRESSES.chainId),
       const readProvider = provider || rpc,
       const contract = getGovernor(readProvider),
@@ -26,12 +26,12 @@ export default function DaoHome() {
           const deadline = await contract.proposalDeadline(id),
           const state = await contract.state(id),
           return {
-            id;
-            description;
-            snapshot: snapshot.toString();
-            deadline: deadline.toString();
-            state;
-          };
+            id,
+            description,
+            snapshot: snapshot.toString(),
+            deadline: deadline.toString(),
+            state
+          },
         })),
       setProposals(mapped.reverse())}
     load().catch(console.error)}, [provider]),

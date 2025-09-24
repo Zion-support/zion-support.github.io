@@ -18,7 +18,7 @@ class EnhancedGitAutomation {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'enhanced-git-automation.log'),
+    this.logFile = path.join(__dirname, 'logsenhanced-git-automation.log'),
     this.statusFile = path.join(__dirname, '.git-automation-status.json'),
     this.ensureDirectories(),
     this.initializeStatus()}
@@ -28,30 +28,30 @@ class EnhancedGitAutomation {
     if (fs.existsSync(configPath)) {
       const config = JSON.parse(fs.readFileSync(configPath, 'utf8')),
       return {
-        ...config;
+        ...config,
         git: {
-          maxCommitSize: 50;
-          commitMessageTemplate: 'feat: {description}';
-          branch: 'main';
-          autoPush: true;
-          enableLogging: true;
-          autoFixEnabled: true;
-          smartGrouping: true;
-          conflictResolution: true;
-          performanceOptimization: true;
-          ...config.git}};
+          maxCommitSize: 50,
+          commitMessageTemplate: 'feat: {description}',
+          branch: 'main',
+          autoPush: true,
+          enableLogging: true,
+          autoFixEnabled: true,
+          smartGrouping: true,
+          conflictResolution: true,
+          performanceOptimization: true,
+          ...config.git}},
     }
     return {
       git: {
-        maxCommitSize: 50;
-        commitMessageTemplate: 'feat: {description}';
-        branch: 'main';
-        autoPush: true;
-        enableLogging: true;
-        autoFixEnabled: true;
-        smartGrouping: true;
-        conflictResolution: true;
-        performanceOptimization: true}};
+        maxCommitSize: 50,
+        commitMessageTemplate: 'feat: {description}',
+        branch: 'main',
+        autoPush: true,
+        enableLogging: true,
+        autoFixEnabled: true,
+        smartGrouping: true,
+        conflictResolution: true,
+        performanceOptimization: true}},
   }
 ,
   ensureDirectories() {
@@ -63,14 +63,14 @@ class EnhancedGitAutomation {
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
       const initialStatus ={
-        lastCommit: null;
-        lastPush: null;
-        totalCommits: 0;
-        totalPushes: 0;
-        errors: [];
+        lastCommit: null,
+        lastPush: null,
+        totalCommits: 0,
+        totalPushes: 0,
+        errors: [],
         performance: {
-          averageCommitTime: 0;
-          averagePushTime: 0}};
+          averageCommitTime: 0,
+          averagePushTime: 0}},
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2))}
   }
 ,
@@ -92,16 +92,16 @@ class EnhancedGitAutomation {
   async executeCommand(command, options ={}) {
     try {
       const result = execSync(command, {
-        encoding: 'utf8';
-        stdio: options.stdio || 'pipe';
-        cwd: this.projectRoot;
+        encoding: 'utf8',
+        stdio: options.stdio || 'pipe',
+        cwd: this.projectRoot,
         ...options}),
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       return {
-        success: false;
-        error: error.message;
-        output: error.stdout || ''};
+        success: false,
+        error: error.message,
+        output: error.stdout || ''},
     }
   }
 ,
@@ -128,7 +128,7 @@ class EnhancedGitAutomation {
     const hasConflicts =,
       result.output.includes('UU ') || result.output.includes('AA '),
     if (hasConflicts) {
-      this.log('Merge conflicts detected', 'warn')}
+      this.log('Merge conflicts detectedwarn')}
     return hasConflicts}
 ,
   async resolveConflicts() {
@@ -141,19 +141,19 @@ class EnhancedGitAutomation {
     // Pull latest changes,
     const pullResult = await this.executeCommand('git pull origin main'),
     if (!pullResult.success) {
-      this.log('Failed to pull latest changes', 'error'),
+      this.log('Failed to pull latest changeserror'),
       return false}
 ,
-    this.log('Conflicts resolved successfully', 'success'),
+    this.log('Conflicts resolved successfullysuccess'),
     return true}
 ,
   async autoFix() {
     if (!this.config.git.autoFixEnabled) return true,
     this.log('Running automatic fixes...'),
     const fixes = [
-      { command: 'npm run lint -- --fix', name: 'ESLint fixes' };
-      { command: 'npm run format', name: 'Code formatting' };
-      { command: 'npm run type-check', name: 'TypeScript check' };
+      { command: 'npm run lint -- --fix', name: 'ESLint fixes' },
+      { command: 'npm run format', name: 'Code formatting' },
+      { command: 'npm run type-check', name: 'TypeScript check' },
     ],
     for (const fix of fixes) {
       try {
@@ -172,13 +172,13 @@ class EnhancedGitAutomation {
       return [files]}
 ,
     const groups ={
-      typescript: [];
-      javascript: [];
-      styles: [];
-      config: [];
-      docs: [];
-      tests: [];
-      other: []};
+      typescript: [],
+      javascript: [],
+      styles: [],
+      config: [],
+      docs: [],
+      tests: [],
+      other: []},
     files.forEach((file) => {
       const ext = path.extname(file).toLowerCase(),
       const filename = path.basename(file).toLowerCase(),
@@ -213,9 +213,9 @@ class EnhancedGitAutomation {
         description = `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`}
 ,
       descriptions.push(description)}),
-    const message = descriptions.join(', '),
+    const message = descriptions.join(),
     return this.config.git.commitMessageTemplate.replace(
-      '{description}';
+      '{description}',
       message)}
 ,
   async stageFiles(files) {
@@ -286,7 +286,7 @@ class EnhancedGitAutomation {
     if (hasConflicts) {
       const resolved = await this.resolveConflicts(),
       if (!resolved) {
-        this.log('Failed to resolve conflicts', 'error'),
+        this.log('Failed to resolve conflictserror'),
         return false}
     }
 ,
@@ -322,7 +322,7 @@ class EnhancedGitAutomation {
 ,
     const totalTime = Date.now() - startTime,
     this.log(
-      `✅ Enhanced git automation completed in ${totalTime}ms. ${successCount} commits made.`;
+      `✅ Enhanced git automation completed in ${totalTime}ms. ${successCount} commits made.`,
       'success'),
     return successCount > 0}
 ,
@@ -331,16 +331,13 @@ class EnhancedGitAutomation {
     const chokidar = require('chokidar'),
     const watcher = chokidar.watch(
       [
-        'src/**/*';
-        'components/**/*';
-        'pages/**/*';
-        'styles/**/*';
-        'public/**/*';
-        'automation/**/*';
-      ];
+        'src/**/*components/**/*',
+        'pages/**/*styles/**/*',
+        'public/**/*automation/**/*',
+      ],
       {
-        ignored: /(node_modules|\.git|\.next|dist|build|logs|temp)/;
-        persistent: true;
+        ignored: /(node_modules|\.git|\.next|dist|build|logs|temp)/,
+        persistent: true,
         ignoreInitial: true}),
     let commitTimeout,
     const commitDelay = 30o00, // 3 seconds delay,
@@ -383,7 +380,7 @@ switch (command) {
   case 'status':,
     const status = gitAutomation.getStatus(),
     // // console.log(
-      'Enhanced Git Automation Status:';
+      'Enhanced Git Automation Status: ',
       JSON.stringify(status, null, 2)),
     break,
   case 'fix':,

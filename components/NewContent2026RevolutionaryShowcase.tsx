@@ -1,62 +1,56 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewContent20o26RevolutionaryShowcase: React.FC = () => {
   const newContent = [
     {
-      id: 1;
-      title: 'AI 20o26-20o30: Revolutionary Breakthrough Predictions';
+      id: 1,
+      title: 'AI 20o26-20o30: Revolutionary Breakthrough Predictions',
       excerpt:,
-        'Discover the revolutionary AI breakthroughs predicted for 20o26-20o30 that will fundamentally transform how businesses operate, compete, and succeed in the next decade.';
-      category: 'AI Trends';
-      readingTime: '12 min read';
-      featured: true;
-      slug: 'ai-20o26-20o30-future-predictions-revolutionary-breakthrough';
-      icon: '🚀';
-      gradient: 'from-purple-60o0 to-blue-60o0';
+        'Discover the revolutionary AI breakthroughs predicted for 20o26-20o30 that will fundamentally transform how businesses operate, compete, and succeed in the next decade.',
+      category: 'AI Trends',
+      readingTime: '12 min read',
+      featured: true,
+      slug: 'ai-20o26-20o30-future-predictions-revolutionary-breakthrough',
+      icon: '🚀',
+      gradient: 'from-purple-60o0 to-blue-60o0',
       highlights: [
-        'Quantum-Neural Fusion';
-        'Synthetic Intelligence';
-        'Neural Interfaces';
-        'AGI Achievement';
-      ];
-    };
+        'Quantum-Neural FusionSynthetic Intelligence',
+        'Neural InterfacesAGI Achievement',
+      ]
+    },
     {
-      id: 2;
-      title: 'Quantum AI 20o26: The Ultimate Business Revolution Guide';
+      id: 2,
+      title: 'Quantum AI 20o26: The Ultimate Business Revolution Guide',
       excerpt:,
-        'Transform your enterprise with quantum-neural intelligence. Experience 10o00x faster optimization, real-time financial modeling, and revolutionary business capabilities.';
-      category: 'Quantum Computing';
-      readingTime: '15 min read';
-      featured: true;
-      slug: 'quantum-ai-20o26-business-revolution-ultimate-guide';
-      icon: '⚛️';
-      gradient: 'from-indigo-60o0 to-purple-60o0';
+        'Transform your enterprise with quantum-neural intelligence. Experience 10o00x faster optimization, real-time financial modeling, and revolutionary business capabilities.',
+      category: 'Quantum Computing',
+      readingTime: '15 min read',
+      featured: true,
+      slug: 'quantum-ai-20o26-business-revolution-ultimate-guide',
+      icon: '⚛️',
+      gradient: 'from-indigo-60o0 to-purple-60o0',
       highlights: [
-        '10o00x Faster Processing';
-        'Real-Time Modeling';
-        'Drug Discovery';
-        'Supply Chain Optimization';
-      ];
-    };
+        '10o00x Faster ProcessingReal-Time Modeling',
+        'Drug DiscoverySupply Chain Optimization',
+      ]
+    },
     {
-      id: 3;
+      id: 3,
       title:,
-        'Neural Interfaces 20o26: The Complete Enterprise Revolution Guide';
+        'Neural Interfaces 20o26: The Complete Enterprise Revolution Guide',
       excerpt:,
-        'Transform your business with brain-computer integration. Enable thought-controlled operations, cognitive enhancement, and direct neural communication between human minds and AI systems.';
-      category: 'Neural Interfaces';
-      readingTime: '18 min read';
-      featured: true;
-      slug: 'neural-interfaces-20o26-enterprise-revolution-complete-guide';
-      icon: '🧠';
-      gradient: 'from-emerald-60o0 to-cyan-60o0';
+        'Transform your business with brain-computer integration. Enable thought-controlled operations, cognitive enhancement, and direct neural communication between human minds and AI systems.',
+      category: 'Neural Interfaces',
+      readingTime: '18 min read',
+      featured: true,
+      slug: 'neural-interfaces-20o26-enterprise-revolution-complete-guide',
+      icon: '🧠',
+      gradient: 'from-emerald-60o0 to-cyan-60o0',
       highlights: [
-        'Thought Control';
-        'Cognitive Enhancement';
-        'Neural Collaboration';
-        'Direct Brain-Computer Integration';
-      ];
-    };
+        'Thought ControlCognitive Enhancement',
+        'Neural CollaborationDirect Brain-Computer Integration',
+      ]
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -152,7 +146,7 @@ const NewContent20o26RevolutionaryShowcase: React.FC = () => {
             Ready to Transform Your Business?,
           </h3>,
           <p className='text-xl opacity-90 mb-8 max-w-2xl mx-auto'>,
-            'Don', 't just read about the future - start building it today. Our,
+            'Dont just read about the future - start building it today. Our,
             comprehensive AI transformation services will help you implement,
             these revolutionary technologies.,
           </p>,
@@ -194,5 +188,5 @@ const NewContent20o26RevolutionaryShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o26RevolutionaryShowcase;
+    </section>)},
+export default NewContent20o26RevolutionaryShowcase,

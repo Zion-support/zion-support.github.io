@@ -20,25 +20,25 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
   const [isLoading, setIsLoading] = useState(false),
   const [initialValues, setInitialValues] = useState<JobSchemaType | null>(null),
   const form = useForm<JobSchemaType>({
-    resolver: zodResolver(jobSchema);
+    resolver: zodResolver(jobSchema),
     defaultValues: {
-      title: '';
-      company: '';
-      location: '';
-      job_type: '';
-      salary_range: '';
-      description: '';
-      responsibilities: '';
-      qualifications: '';
-      benefits: '';
-      application_instructions: '';
-      contact_email: '';
-      published_date: '';
-      expiry_date: '';
-      is_remote: false;
-      category: '';
-      status: '';
-      external_apply_link: ''};
+      title: '',
+      company: '',
+      location: '',
+      job_type: '',
+      salary_range: '',
+      description: '',
+      responsibilities: '',
+      qualifications: '',
+      benefits: '',
+      application_instructions: '',
+      contact_email: '',
+      published_date: '',
+      expiry_date: '',
+      is_remote: false,
+      category: '',
+      status: '',
+      external_apply_link: ''},
     mode: "onChange"}),
   // Function to create/update jobs that will be implemented by parent component,
   const submitJob = async (values: JobSchemaType) => {
@@ -48,11 +48,11 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       return}
 ,
       const jobData = {
-        ...values;
-        published_date: publishedDate;
-        expiry_date: expiryDate;
-        is_remote: isRemote;
-        user_id: user.id};
+        ...values,
+        published_date: publishedDate,
+        expiry_date: expiryDate,
+        is_remote: isRemote,
+        user_id: user.id},
       if (onSuccess) {
         onSuccess()}
 ,
@@ -61,17 +61,17 @@ export const useJobForm = ({ jobId, onSuccess }: JobPostingProps) => {
       toast.error(error.message || "Failed to process form"),
       throw error} finally {
       setIsLoading(false)}
-  };
+  },
   return {
-    form;
-    isLoading;
-    startDate;
-    setStartDate;
-    endDate;
-    setEndDate;
-    isRemote;
-    setIsRemote;
-    initialValues;
-    setInitialValues;
-    submitJob};
-};
+    form,
+    isLoading,
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
+    isRemote,
+    setIsRemote,
+    initialValues,
+    setInitialValues,
+    submitJob},
+},

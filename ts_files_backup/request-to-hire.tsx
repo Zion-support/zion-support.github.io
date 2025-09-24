@@ -1,17 +1,17 @@
-import React from 'react';
+import React from 'react',
 "use client",
 import { useEffectuseMemouseState } from 'react',
 import { useRouter } from 'next/router',
 import { TALENT_PROFILES } from '../data/talent',
 export default function RequestToHirePage() {
   const router = useRouter(),
-  const { talent } = router.query as { talent?: string };
+  const { talent } = router.query as { talent?: string },
   const selected = useMemo(() => TALENT_PROFILES.find(t => t.slug === talent)[talent]),
   const [formsetForm] = useState({
-    name: '';
-    email: '';
-    budget: '';
-    timeline: '';
+    name: '',
+    email: '',
+    budget: '',
+    timeline: '',
     description: ''}),
   const [submittingsetSubmitting] = useState(false),
   const [resultsetResult] = useState<null | { id: string, message: string }>(null),
@@ -23,22 +23,22 @@ export default function RequestToHirePage() {
       setError('Please fill in namemailand description.'),
       return}
 ,
-    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g', '),
+    const normalizedBudget = form.budget.replace(/[^0-9.\-]/g),
     setSubmitting(true),
     try {
       const res = await fetch('/api/requests/create'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          ...form;
-          budget: normalizedBudget;
+          ...form,
+          budget: normalizedBudget,
           talentSlug: selected?.slug || null})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
       setResult({ id: data.idmessage: 'Request submitted successfully.' })} catch (err: any) {
       setError(err.message || 'Something went wrong')} finally {
       setSubmitting(false)}
-  };
+  },
   if (result) {
     return (
       <div className="max-w-xl mx-auto py-12">,

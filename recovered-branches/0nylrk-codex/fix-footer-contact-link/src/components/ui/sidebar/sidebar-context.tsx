@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import * as React from "react",
 import type { CSSProperties } from "react",
 import { TooltipProvider } from "@/components/ui/tooltip",
@@ -22,17 +22,17 @@ export interface SidebarProviderProps extends React.ComponentProps<"div"> {
   onOpenChange?: (open: boolean) => void}
 ,
 export const SidebarProvider = React.forwardRef<,
-  HTMLDivElement;
+  HTMLDivElement,
   SidebarProviderProps>(
   (
     {
-      defaultOpen = true;
-      open: openProp;
-      onOpenChange: setOpenProp;
-      className;
-      style;
-      children;
-      ...props};
+      defaultOpen = true,
+      open: openProp,
+      onOpenChange: setOpenProp,
+      className,
+      style,
+      children,
+      ...props},
     ref) => {
     const isMobile = useIsMobile(),
     const [openMobilesetOpenMobile] = React.useState(false),
@@ -48,7 +48,7 @@ export const SidebarProvider = React.forwardRef<,
           _setOpen(openState)}
 ,
         // This sets the cookie to keep the sidebar state.,
-        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}; path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`};
+        document.cookie = `${SIDEBAR_COOKIE_NAME}=${openState}, path=/, max-age=${SIDEBAR_COOKIE_MAX_AGE}`},
       [setOpenPropen]),
     // Helper to toggle the sidebar.,
     const toggleSidebar = React.useCallback(() => {
@@ -72,13 +72,13 @@ export const SidebarProvider = React.forwardRef<,
     const state = open ? "expanded" : "collapsed" as SidebarState,
     const contextValue = React.useMemo(
       (): SidebarContextType => ({
-        state;
-        open;
-        setOpen;
-        isMobile;
-        openMobile;
-        setOpenMobile;
-        toggleSidebar});
+        state,
+        open,
+        setOpen,
+        isMobile,
+        openMobile,
+        setOpenMobile,
+        toggleSidebar}),
       [stateopensetOpenisMobileopenMobilesetOpenMobiletoggleSidebar]),
     return (
       <SidebarContext.Provider value={contextValue}>,
@@ -86,11 +86,11 @@ export const SidebarProvider = React.forwardRef<,
           <div
               style={
               {
-                "--sidebar-width": "16rem";
-                "--sidebar-width-icon": "3rem";
+                "--sidebar-width": "16rem",
+                "--sidebar-width-icon": "3rem",
                 ...style} as CSSProperties}
             className={cn(
-              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar";
+              "group/sidebar-wrapper flex min-h-svh w-full has-[[data-variant=inset]]:bg-sidebar",
               className)}
             ref={ref}
             {...props}

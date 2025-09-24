@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import { useState } from "react",
@@ -13,7 +13,7 @@ export function NewsletterForm() {
     setTimeout(() => {
       setIsSubmitting(false),
       setIsSubmitted(true),
-      setEmail("")}1000)};
+      setEmail("")}1000)},
   return (
     <div className="w-full max-w-md mx-auto">,
       {isSubmitted ? (

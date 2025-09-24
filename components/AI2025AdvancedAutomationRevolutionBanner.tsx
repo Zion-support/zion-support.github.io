@@ -22,43 +22,43 @@ const AI20o25AdvancedAutomationRevolutionBanner = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('ai20o25-advanced-automation-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-advanced-automation-banner-dismissedtrue')},
   const featuredContent = [
     {
-      id: 'ai-20o25-advanced-automation-revolution-ultimate-breakthrough';
-      title: 'AI 20o25: The Advanced Automation Revolution - Ultimate Breakthrough Guide';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-breakthrough';
+      id: 'ai-20o25-advanced-automation-revolution-ultimate-breakthrough',
+      title: 'AI 20o25: The Advanced Automation Revolution - Ultimate Breakthrough Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '2,0o00%';
-        savings: '$8.5B+';
-        efficiency: '1,20o0%';
-        accuracy: '99.9%'};
-      description: 'Achieve unprecedented ROI with our revolutionary AI automation framework';
-      badge: 'NEW BREAKTHROUGH'};
+        roi: '2,0o00%',
+        savings: '$8.5B+',
+        efficiency: '1,20o0%',
+        accuracy: '99.9%'},
+      description: 'Achieve unprecedented ROI with our revolutionary AI automation framework',
+      badge: 'NEW BREAKTHROUGH'},
     {
-      id: 'fortune-50o0-advanced-automation-20o00-roi-success-story';
-      title: 'Fortune 50o0 Advanced Automation Success: $8.5B Annual Savings';
-      type: 'Case Study';
-      url: '/case-studies/fortune-50o0-advanced-automation-20o00-roi-success-story';
+      id: 'fortune-50o0-advanced-automation-20o00-roi-success-story',
+      title: 'Fortune 50o0 Advanced Automation Success: $8.5B Annual Savings',
+      type: 'Case Study',
+      url: '/case-studies/fortune-50o0-advanced-automation-20o00-roi-success-story',
       metrics: {
-        roi: '2,0o00%';
-        savings: '$8.5B';
-        timeline: '18 months';
-        satisfaction: '99.7%'};
-      description: 'Real-world success story from Fortune 50o0 manufacturing giant';
-      badge: 'SUCCESS STORY'};
+        roi: '2,0o00%',
+        savings: '$8.5B',
+        timeline: '18 months',
+        satisfaction: '99.7%'},
+      description: 'Real-world success story from Fortune 50o0 manufacturing giant',
+      badge: 'SUCCESS STORY'},
     {
-      id: 'ai-20o25-advanced-automation-implementation-ultimate-guide';
-      title: 'AI 20o25 Advanced Automation Implementation Ultimate Guide';
-      type: 'Implementation Guide';
-      url: '/resources/ai-20o25-advanced-automation-implementation-ultimate-guide';
+      id: 'ai-20o25-advanced-automation-implementation-ultimate-guide',
+      title: 'AI 20o25 Advanced Automation Implementation Ultimate Guide',
+      type: 'Implementation Guide',
+      url: '/resources/ai-20o25-advanced-automation-implementation-ultimate-guide',
       metrics: {
-        roi: '2,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        projects: '50o0+'};
-      description: 'Complete roadmap to 2,0o00% ROI in 18 months';
+        roi: '2,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        projects: '50o0+'},
+      description: 'Complete roadmap to 2,0o00% ROI in 18 months',
       badge: 'IMPLEMENTATION GUIDE'}
   ],
   if (!isVisible || isDismissed) return null,
@@ -157,5 +157,5 @@ const AI20o25AdvancedAutomationRevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25AdvancedAutomationRevolutionBanner;
+    </div>)},
+export default AI20o25AdvancedAutomationRevolutionBanner,

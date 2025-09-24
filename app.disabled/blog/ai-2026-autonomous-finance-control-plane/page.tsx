@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Autonomous Finance Control Plane';
+  title: 'AI 20o26: Autonomous Finance Control Plane',
   description:,
-    'Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.';
-};
+    'Real-time policy enforcement, anomaly detection, and auditability for modern finance operations.',
+},
 export default function AutonomousFinanceControlPlanePage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

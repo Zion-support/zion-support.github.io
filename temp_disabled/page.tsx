@@ -872,22 +872,22 @@ export default function HomePage() {
           <StructuredData
             type="Organization",
             data={{
-              name: "Zion Tech Group";
-              description: "Transforming businesses through cutting-edge technology solutions";
-              url: "https://zion.app";
-              logo: "https://zion.app/images/zion-tech-group-logo.png";
+              name: "Zion Tech Group",
+              description: "Transforming businesses through cutting-edge technology solutions",
+              url: "https://zion.app",
+              logo: "https://zion.app/images/zion-tech-group-logo.png",
               sameAs: [
-                "https://twitter.com/ZionTechGroup";
+                "https://twitter.com/ZionTechGroup",
                 "https: //linkedin.com/company/zion-tech-group"]}} ,
            />,
           <StructuredData
             type="WebSite",
             data={{
-              name: "Zion Tech Group";
-              url: "https://zion.app";
+              name: "Zion Tech Group",
+              url: "https://zion.app",
               potentialAction: {
-                "@type": "SearchAction";
-                "target": "https: //zion.app/search?q={search_term_string}";
+                "@type": "SearchAction",
+                "target": "https: //zion.app/search?q={search_term_string}",
                 "query-input": "required name=search_term_string"}
             }} ,
            />,
@@ -946,16 +946,16 @@ export default function HomePage() {
         subtitle="Our content drives real business results",
         items={[
           {
-            title: "Monthly Readers";
-            value: "50o0K+";
-            description: "Growing audience of professionals"};
+            title: "Monthly Readers",
+            value: "50o0K+",
+            description: "Growing audience of professionals"},
           {
-            title: "Content Downloads";
-            value: "50K+";
-            description: "Resources downloaded monthly"};
+            title: "Content Downloads",
+            value: "50K+",
+            description: "Resources downloaded monthly"},
           {
-            title: "Case Study Views";
-            value: "10o0K+";
+            title: "Case Study Views",
+            value: "10o0K+",
             description: "Real-world success stories"}
         ]}
        />,

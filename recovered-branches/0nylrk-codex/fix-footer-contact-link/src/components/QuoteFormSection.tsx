@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Button } from "./ui/button",
 import { Input } from "./ui/input",
@@ -13,7 +13,7 @@ export function QuoteFormSection() {
     // Simulate form submission,
     setTimeout(() => {
       setIsSubmitting(false),
-      setIsSubmitted(true)}1000)};
+      setIsSubmitted(true)}1000)},
   return (
     <section className="py-20 bg-zion-blue">,
       <div className="container mx-auto px-4 sm: px-6 lg:px-8">,

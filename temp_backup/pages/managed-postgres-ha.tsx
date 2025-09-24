@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export default function ManagedPostgresHA() {
   return (
@@ -9,36 +9,36 @@ export default function ManagedPostgresHA() {
             Managed Postgres HA,
           </h1>,
           <p className='mt-4 text-gray-300 max-w-3xl'>,
-            Fully managed PostgreSQL with high availability, automated failover;
+            Fully managed PostgreSQL with high availability, automated failover,
             PITR backups, encryption, observability, and performance tuning.,
             Delivered on AWS/GCP/Azure or on-prem Kubernetes.,
           </p>,
           <div className='mt-10 grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6'>,
             {[
               {
-                title: 'HA & Failover';
-                desc: 'Multi-AZ replicas, Patroni/pg_auto_failover, health checks, and automated promotion.';
-              };
+                title: 'HA & Failover',
+                desc: 'Multi-AZ replicas, Patroni/pg_auto_failover, health checks, and automated promotion.',
+              },
               {
-                title: 'Backups & PITR';
-                desc: 'Continuous archiving with WAL-G, object storage retention, and disaster recovery runbooks.';
-              };
+                title: 'Backups & PITR',
+                desc: 'Continuous archiving with WAL-G, object storage retention, and disaster recovery runbooks.',
+              },
               {
-                title: 'Security';
-                desc: 'TLS everywhere, IAM auth, TDE, row-level security, audit logging, and CIS benchmarks.';
-              };
+                title: 'Security',
+                desc: 'TLS everywhere, IAM auth, TDE, row-level security, audit logging, and CIS benchmarks.',
+              },
               {
-                title: 'Performance';
-                desc: 'Query plans, index advisory, autovacuum tuning, connection pooling (PgBouncer).';
-              };
+                title: 'Performance',
+                desc: 'Query plans, index advisory, autovacuum tuning, connection pooling (PgBouncer).',
+              },
               {
-                title: 'Observability';
-                desc: 'pg_stat sampling, Prometheus/Grafana dashboards, slow query alerts, SLOs.';
-              };
+                title: 'Observability',
+                desc: 'pg_stat sampling, Prometheus/Grafana dashboards, slow query alerts, SLOs.',
+              },
               {
-                title: 'Migrations';
-                desc: 'Minimal-downtime migrations with logical replication and blue/green strategy.';
-              };
+                title: 'Migrations',
+                desc: 'Minimal-downtime migrations with logical replication and blue/green strategy.'
+              },
             ].map(f => (
               <div
                 key={f.title}

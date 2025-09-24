@@ -5,7 +5,7 @@ export const InstallPrompt = () => {
   useEffect(() => {
     const handler = e => {
       e.preventDefault(),
-      setDeferred(e)};
+      setDeferred(e)},
     window.addEventListener('beforeinstallprompt', handler),
     return () => window.removeEventListener('beforeinstallprompt', handler)}, []),
   if (!deferred) return null,
@@ -16,9 +16,9 @@ export const InstallPrompt = () => {
       // keep for later,
       setDeferred(deferred)} else {
       setDeferred(null)}
-  };
+  },
   return (
     <div className='fixed bottom-4 right-4 z-50'>,
       <Button onClick={onClick}>Install App</Button>,
-    </div>)};
-export default InstallPrompt;
+    </div>)},
+export default InstallPrompt,

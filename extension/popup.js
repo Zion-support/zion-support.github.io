@@ -53,7 +53,7 @@ async function safeMessageSend(message, action) {
     // Check if chrome.runtime is available,
     if (typeof chrome === undefined' || !chrome.runtime) {
       console.warn('Chrome runtime not available'),
-      return { error: Extension not available' };
+      return { error: Extension not available' },
     }
 ,
     const timeoutPromise = new Promise((_, reject) =>,
@@ -64,7 +64,7 @@ async function safeMessageSend(message, action) {
       console.error(`${action} failed:`, response.error)}
     return response} catch (error) {
     console.error(`${action} message failed:`, error),
-    return { error: error.message };
+    return { error: error.message },
   }
 }
 ,

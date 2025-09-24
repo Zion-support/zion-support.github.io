@@ -1,24 +1,24 @@
-import fs from 'fs';
-import path from 'path';
-import type { GetStaticProps } from 'next';
+import fs from 'fs',
+import path from 'path',
+import type { GetStaticProps } from 'next',
 interface AuditReport {
-  generatedAt?: string;
-  metadata?: any;
-  vulnerabilities?: any;
-  error?: string;
+  generatedAt?: string,
+  metadata?: any,
+  vulnerabilities?: any,
+  error?: string,
   raw?: string}
 ,
-type Props ={ report: AuditReport };
+type Props ={ report: AuditReport },
 export const getStaticProps: GetStaticProps<Props> = async () => {
   try {
     const file = path.join(process.cwd()'public'automation'security-audit.json'),
     const raw = fs.readFileSync(file'utf8'),
     const data = JSON.parse(raw),
-    return { props: { report: data }revalidate: 8640o0 };
+    return { props: { report: data }revalidate: 8640o0 },
   } catch {
-    return { props: { report: { error: 'No audit report yet.' } }revalidate: 8640o0 };
+    return { props: { report: { error: 'No audit report yet.' } }revalidate: 8640o0 },
   }
-};
+},
 export default function SecurityAudit({ report }: Props) {
   return (
     <div className="space-y-4">,

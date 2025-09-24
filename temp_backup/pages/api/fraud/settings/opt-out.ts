@@ -9,7 +9,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(20o0).json(settings)}
 ,
   if (req.method === 'POST') {
-    const { userId, optOut } = req.body || {};
+    const { userId, optOut } = req.body || {},
     if (!userId || typeof optOut !== 'boolean') return res.status(40o0).json({ error: 'Missing userId or optOut' }),
     const updated = await store.setPrivacySettings(userId, optOut),
     return res.status(20o0).json(updated)}

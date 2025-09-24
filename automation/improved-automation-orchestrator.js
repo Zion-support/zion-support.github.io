@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -30,30 +30,30 @@ class ImprovedAutomationOrchestrator {
     this.isRunning = false,
     this.systemConfigs ={
       continuous-improvement': {
-        script: 'continuous-improvement/index.js';
-        name: Continuous Improvement System';
-        description: Monitors and improves code quality, performance, and security';
-        autoRestart: true;
-        maxRestarts: 5};
+        script: 'continuous-improvement/index.js',
+        name: Continuous Improvement System',
+        description: Monitors and improves code quality, performance, and security',
+        autoRestart: true,
+        maxRestarts: 5},
       enhanced-infinite-improvement': {
-        script: 'enhanced-infinite-improvement.js';
-        name: Enhanced Infinite Improvement Loop';
-        description: AI-powered continuous improvement with learning capabilities';
-        autoRestart: true;
-        maxRestarts: 3};
+        script: 'enhanced-infinite-improvement.js',
+        name: Enhanced Infinite Improvement Loop',
+        description: AI-powered continuous improvement with learning capabilities',
+        autoRestart: true,
+        maxRestarts: 3},
       autonomous-system': {
-        script: 'autonomous-system.js';
-        name: Autonomous Automation System';
-        description: Multi-module autonomous system for various tasks';
-        autoRestart: true;
-        maxRestarts: 5};
+        script: 'autonomous-system.js',
+        name: Autonomous Automation System',
+        description: Multi-module autonomous system for various tasks',
+        autoRestart: true,
+        maxRestarts: 5},
       intelligent-orchestrator': {
-        script: 'intelligent-automation-orchestrator.js';
-        name: Intelligent Automation Orchestrator';
-        description: Coordinates and manages all automation systems';
-        autoRestart: false;
+        script: 'intelligent-automation-orchestrator.js',
+        name: Intelligent Automation Orchestrator',
+        description: Coordinates and manages all automation systems',
+        autoRestart: false,
         maxRestarts: 1}
-    };
+    },
   }
 ,
   async initialize() {
@@ -77,7 +77,7 @@ class ImprovedAutomationOrchestrator {
   setupWebSocket() {
     this.io = socketIo(this.server, {
       cors: {
-        origin: "*";
+        origin: "*",
         methods: ["GET", "POST"]}
     }),
     this.io.on('connection', (socket) => {
@@ -94,12 +94,12 @@ class ImprovedAutomationOrchestrator {
   setupHealthEndpoints() {
     this.app.get('/health', (req, res) => {
       res.json({
-        status: 'healthy';
-        timestamp: new Date().toISOString();
-        systems: this.getSystemStatus();
+        status: 'healthy',
+        timestamp: new Date().toISOString(),
+        systems: this.getSystemStatus(),
         orchestrator: {
-          port: this.port;
-          uptime: process.uptime();
+          port: this.port,
+          uptime: process.uptime(),
           memory: process.memoryUsage()}
       })}),
     this.app.get('/api/systems', (req, res) => {
@@ -122,14 +122,14 @@ class ImprovedAutomationOrchestrator {
     for (const [systemName, config] of Object.entries(this.systemConfigs)) {
       if (systemName === 'intelligent-orchestrator') continue, // Skip self,
       const system ={
-        name: systemName;
-        config: config;
-        process: null;
-        status: 'stopped';
-        restarts: 0;
-        lastStart: null;
-        lastError: null;
-        logs: []};
+        name: systemName,
+        config: config,
+        process: null,
+        status: 'stopped',
+        restarts: 0,
+        lastStart: null,
+        lastError: null,
+        logs: []},
       this.automationSystems.set(systemName, system)}
 ,
     logger.info(`✅ Initialized ${this.automationSystems.size} automation systems`)}
@@ -151,8 +151,8 @@ class ImprovedAutomationOrchestrator {
         throw new Error(`Script not found: ${scriptPath}`)}
 ,
       const child = spawn('node', [scriptPath], {
-        cwd: __dirname;
-        stdio: ['pipe', pipe', pipe'];
+        cwd: __dirname,
+        stdio: ['pipe', pipe', pipe'],
         env: { ...process.env, NODE_ENV: 'production' }
       }),
       system.process = child,
@@ -302,7 +302,7 @@ const timeoutId = setTimeout(checkStatus,                                       
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed}
-      };
+      },
       checkStatus()})}
 ,
   stopSystem(systemName) {
@@ -416,16 +416,16 @@ const timeoutId = setTimeout(() => this.startSystem(systemName),                
 // Store timeoutId for cleanup if needed}
 ,
   getSystemStatus() {
-    const status ={};
+    const status ={},
     for (const [name, system] of this.automationSystems) {
       status[name] ={
-        name: system.config.name;
-        description: system.config.description;
-        status: system.status;
-        restarts: system.restarts;
-        lastStart: system.lastStart;
-        lastError: system.lastError;
-        uptime: system.lastStart ? Date.now() - system.lastStart.getTime() : 0};
+        name: system.config.name,
+        description: system.config.description,
+        status: system.status,
+        restarts: system.restarts,
+        lastStart: system.lastStart,
+        lastError: system.lastError,
+        uptime: system.lastStart ? Date.now() - system.lastStart.getTime() : 0},
     }
     return status}
 ,

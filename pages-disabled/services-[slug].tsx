@@ -13,48 +13,47 @@ interface Service {
 // Mock services data for now,
 const mockServices: Service[] = [
   {
-    id: 'ai-solutions';
-    name: 'AI Solutions';
+    id: 'ai-solutions',
+    name: 'AI Solutions',
     description:,
-      'Advanced artificial intelligence solutions for modern businesses';
-    tagline: 'Transform your business with AI';
-    price: '$999/month';
+      'Advanced artificial intelligence solutions for modern businesses',
+    tagline: 'Transform your business with AI',
+    price: '$999/month',
     features: [
-      'Machine Learning';
-      'Natural Language Processing';
-      'Computer Vision';
-    ];
-    link: '/services/ai-solutions';
-  };
+      'Machine LearningNatural Language Processing',
+      'Computer Vision',
+    ],
+    link: '/services/ai-solutions'
+  },
   {
-    id: 'cloud-infrastructure';
-    name: 'Cloud Infrastructure';
-    description: 'Scalable cloud solutions for enterprise needs';
-    tagline: 'Scale with confidence';
-    price: '$499/month';
-    features: ['Auto-scaling', 'Load balancing', 'High availability'];
-    link: '/services/cloud-infrastructure';
-  };
+    id: 'cloud-infrastructure',
+    name: 'Cloud Infrastructure',
+    description: 'Scalable cloud solutions for enterprise needs',
+    tagline: 'Scale with confidence',
+    price: '$499/month',
+    features: ['Auto-scalingLoad balancing', 'High availability'],
+    link: '/services/cloud-infrastructure'
+  },
 ],
 export async function getStaticPaths() {
   const paths = mockServices.map(service => ({
-    params: { slug: service.id };
+    params: { slug: service.id },
   })),
   return {
-    paths;
-    fallback: false;
-  };
+    paths,
+    fallback: false
+  },
 }
 ,
 export async function getStaticProps({ params }: { params: { slug: string } }) {
   const service = mockServices.find(s => s.id === params.slug),
   if (!service) {
-    return { notFound: true };
+    return { notFound: true },
   }
 ,
   return {
-    props: { service };
-  };
+    props: { service },
+  },
 }
 ,
 export default function ServiceDetailPage({ service }: { service: Service }) {

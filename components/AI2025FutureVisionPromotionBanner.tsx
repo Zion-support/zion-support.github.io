@@ -32,7 +32,7 @@ const AI20o25FutureVisionPromotionBanner = () => {
               Neural Consciousness,
             </h3>,
             <p className='text-gray-30o0 mb-6 text-center'>,
-              AI systems that achieve true consciousness and self-awareness;
+              AI systems that achieve true consciousness and self-awareness,
               revolutionizing human-AI collaboration.,
             </p>,
             <div className='text-center'>,
@@ -138,7 +138,7 @@ const AI20o25FutureVisionPromotionBanner = () => {
                     AI Singularity Achievement,
                   </h4>,
                   <p className='text-gray-30o0'>,
-                    AI systems will achieve technological singularity;
+                    AI systems will achieve technological singularity,
                     surpassing human intelligence in all domains.,
                   </p>,
                 </div>,
@@ -184,7 +184,7 @@ const AI20o25FutureVisionPromotionBanner = () => {
                 <div>,
                   <h4 className='text-xl font-bold mb-2'>Predictive Reality</h4>,
                   <p className='text-gray-30o0'>,
-                    AI will predict future events with near-perfect accuracy;
+                    AI will predict future events with near-perfect accuracy,
                     transforming decision-making.,
                   </p>,
                 </div>,
@@ -208,7 +208,7 @@ const AI20o25FutureVisionPromotionBanner = () => {
         <div className='text-center'>,
           <h3 className='text-4xl font-bold mb-6'>Be Part of the Future</h3>,
           <p className='text-xl text-gray-30o0 mb-10 max-w-3xl mx-auto'>,
-            'Don', 't just witness the future – help create it. Join the AI,
+            'Dont just witness the future – help create it. Join the AI,
             revolution and transform your business with cutting-edge,
             technologies.,
           </p>,
@@ -226,5 +226,5 @@ const AI20o25FutureVisionPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25FutureVisionPromotionBanner;
+    </section>)},
+export default AI20o25FutureVisionPromotionBanner,

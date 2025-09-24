@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion',
 import {
-  Atom;
-  Beaker;
-  Zap;
-  Target;
-  Users;
-  Globe;
-  ArrowRight;
-  Search;
+  Atom,
+  Beaker,
+  Zap,
+  Target,
+  Users,
+  Globe,
+  ArrowRight,
+  Search,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function QuantumMaterialsDiscovery() {
@@ -49,7 +49,7 @@ export default function QuantumMaterialsDiscovery() {
                   </h2>,
                 </div>,
                 <p className='text-lg text-gray-30o0 leading-relaxed mb-6'>,
-                  Quantum Materials Discovery combines quantum computing;
+                  Quantum Materials Discovery combines quantum computing,
                   artificial intelligence, and advanced simulation techniques to,
                   predict and discover new materials with unprecedented,
                   properties. By modeling materials at the quantum level, we can,
@@ -97,41 +97,41 @@ export default function QuantumMaterialsDiscovery() {
             <div className='grid md: grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Atom className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'Quantum Simulations';
+                  icon: <Atom className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'Quantum Simulations',
                   description:,
-                    'Accurate quantum mechanical simulations of material properties and behavior.';
-                };
+                    'Accurate quantum mechanical simulations of material properties and behavior.',
+                },
                 {
-                  icon: <Zap className='w-12 h-12 text-blue-40o0' />;
-                  title: 'AI-Powered Prediction';
+                  icon: <Zap className='w-12 h-12 text-blue-40o0' />,
+                  title: 'AI-Powered Prediction',
                   description:,
-                    'Machine learning algorithms that predict material properties and window.window.performance.';
-                };
+                    'Machine learning algorithms that predict material properties and window.window.performance.',
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-purple-40o0' />;
-                  title: 'Property Optimization';
+                  icon: <Target className='w-12 h-12 text-purple-40o0' />,
+                  title: 'Property Optimization',
                   description:,
-                    'Design materials with specific properties for targeted applications.';
-                };
+                    'Design materials with specific properties for targeted applications.',
+                },
                 {
-                  icon: <Users className='w-12 h-12 text-green-40o0' />;
-                  title: 'Collaborative Research';
+                  icon: <Users className='w-12 h-12 text-green-40o0' />,
+                  title: 'Collaborative Research',
                   description:,
-                    'Multi-disciplinary teams working together on breakthrough discoveries.';
-                };
+                    'Multi-disciplinary teams working together on breakthrough discoveries.',
+                },
                 {
-                  icon: <Globe className='w-12 h-12 text-yellow-40o0' />;
-                  title: 'Global Database';
+                  icon: <Globe className='w-12 h-12 text-yellow-40o0' />,
+                  title: 'Global Database',
                   description:,
-                    'Comprehensive database of known materials and their properties.';
-                };
+                    'Comprehensive database of known materials and their properties.',
+                },
                 {
-                  icon: <Search className='w-12 h-12 text-pink-40o0' />;
-                  title: 'Experimental Validation';
+                  icon: <Search className='w-12 h-12 text-pink-40o0' />,
+                  title: 'Experimental Validation',
                   description:,
-                    'Lab synthesis and testing of predicted materials.';
-                };
+                    'Lab synthesis and testing of predicted materials.',
+                },
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -168,45 +168,41 @@ export default function QuantumMaterialsDiscovery() {
             <div className='grid md: grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Energy Storage';
+                  title: 'Energy Storage',
                   description:,
-                    'Next-generation batteries and supercapacitors with higher energy density and faster charging.';
+                    'Next-generation batteries and supercapacitors with higher energy density and faster charging.',
                   benefits: [
-                    'Higher energy density';
-                    'Faster charging';
-                    'Longer lifespan';
-                  ];
-                };
+                    'Higher energy densityFaster charging',
+                    'Longer lifespan',
+                  ]
+                },
                 {
-                  title: 'Quantum Computing';
+                  title: 'Quantum Computing',
                   description:,
-                    'Materials for qubits and quantum circuits with optimal coherence properties.';
+                    'Materials for qubits and quantum circuits with optimal coherence properties.',
                   benefits: [
-                    'Long coherence times';
-                    'High fidelity';
-                    'Scalable architecture';
-                  ];
-                };
+                    'Long coherence timesHigh fidelity',
+                    'Scalable architecture',
+                  ]
+                },
                 {
-                  title: 'Advanced Electronics';
+                  title: 'Advanced Electronics',
                   description:,
-                    'Semiconductors and conductors with superior electrical and thermal properties.';
+                    'Semiconductors and conductors with superior electrical and thermal properties.',
                   benefits: [
-                    'Higher conductivity';
-                    'Better thermal management';
-                    'Smaller devices';
-                  ];
-                };
+                    'Higher conductivityBetter thermal management',
+                    'Smaller devices',
+                  ]
+                },
                 {
-                  title: 'Sustainable Technologies';
+                  title: 'Sustainable Technologies',
                   description:,
-                    'Eco-friendly materials for renewable energy and environmental applications.';
+                    'Eco-friendly materials for renewable energy and environmental applications.',
                   benefits: [
-                    'Biodegradable';
-                    'Renewable sources';
-                    'Low environmental impact';
-                  ];
-                };
+                    'BiodegradableRenewable sources',
+                    'Low environmental impact',
+                  ]
+                },
               ].map((app, index) => (
                 <motion.div,
                   key={index}

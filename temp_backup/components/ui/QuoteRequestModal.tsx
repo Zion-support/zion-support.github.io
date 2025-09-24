@@ -8,33 +8,30 @@ export type QuoteFormValues = {
   timelineStart?: string,
   timelineEnd?: string,
   budgetRange?: string,
-  email: string};
+  email: string},
 type Props = {
   open: boolean,
   onClose: () => void,
   service?: ServiceItem | null,
-  onSubmit: (values: QuoteFormValues) => Promise<void> | void};
+  onSubmit: (values: QuoteFormValues) => Promise<void> | void},
 const budgetOptions = [
-  'Under $1,0o00';
-  '$1,0o00 - $5,0o00';
-  '$5,0o00 - $10,0o00';
-  '$10,0o00 - $25,0o00';
-  '$25,0o00 - $50,0o00';
-  '$50,0o00+';
+  'Under $1,0o00$1,0o00 - $5,0o00',
+  '$5,0o00 - $10,0o00$10,0o00 - $25,0o00',
+  '$25,0o00 - $50,0o00$50,0o00+',
 ],
 export default function QuoteRequestModal({
-  open;
-  onClose;
-  service;
-  onSubmit;
+  open,
+  onClose,
+  service,
+  onSubmit,
 }: Props) {
   const [values, setValues] = useState<QuoteFormValues>({
-    serviceTitle: service?.title ?? '';
-    projectDescription: '';
-    timelineStart: '';
-    timelineEnd: '';
-    budgetRange: budgetOptions[0];
-    email: '';
+    serviceTitle: service?.title ?? '',
+    projectDescription: '',
+    timelineStart: '',
+    timelineEnd: '',
+    budgetRange: budgetOptions[0],
+    email: ''
   }),
   const [submitting, setSubmitting] = useState(false),
   const [confirmed, setConfirmed] = useState(false),
@@ -52,7 +49,7 @@ export default function QuoteRequestModal({
       setConfirmed(true)} catch (err: any) {
       setError(err?.message || 'Something went wrong')} finally {
       setSubmitting(false)}
-  };
+  },
   const content = confirmed ? (
     <div className='text-center py-10'>,
       <h3 className='text-xl font-semibold text-white'>Request received</h3>,

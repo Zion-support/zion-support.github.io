@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import type { OrgData } from '../../types/org',
 import PersonCard from './PersonCard',
 export default function OrgGrid({
-  data;
-  showPhotos;
+  data,
+  showPhotos,
 }: {
   data: OrgData,
   showPhotos: boolean}) {
@@ -38,8 +38,8 @@ export default function OrgGrid({
     </div>)}
 ,
 function Section({
-  title;
-  children;
+  title,
+  children,
 }: {
   title: string,
   children: React.ReactNode}) {

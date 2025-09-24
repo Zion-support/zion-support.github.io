@@ -4,7 +4,7 @@ export type SuggestionBoxProps = {
   confidence: 'Low' | 'Medium' | 'High',
   rationale: string,
   onApply: () => void, // parent handles applying, we do NOT auto-submit,
-  disabled?: boolean};
+  disabled?: boolean},
 export function PricingSuggestionBox(props: SuggestionBoxProps) {
   const { type, rangeText, confidence, rationale, onApply, disabled } = props,
   const badgeColor =,
@@ -51,4 +51,4 @@ export function PricingSuggestionBox(props: SuggestionBoxProps) {
       </div>,
     </div>)}
 ,
-export default PricingSuggestionBox;
+export default PricingSuggestionBox,

@@ -1,5 +1,6 @@
-;
-import { DelayTolerantDAO } from ../../src/offworld/delayDao',import { initOrbit } from ../../src/offworld/orbitdb',
+,
+import { DelayTolerantDAO } from ../../src/offworld/delayDao',
+import { initOrbit } from ../../src/offworld/orbitdb',
 async function main() {
   await initOrbit('./offworld-db'),  const dao = new DelayTolerantDAO(),
   // Submit a proposal while offline,

@@ -8,35 +8,35 @@ import {
   Star,
   Zap,
   Rocket,
-  Shield;
-  TrendingUp;
-  Users;
-  Award;
-  ChevronRight;
-  CheckCircle;
-  BarChart3;
-  Globe;
+  Shield,
+  TrendingUp,
+  Users,
+  Award,
+  ChevronRight,
+  CheckCircle,
+  BarChart3,
+  Globe,
   Cpu} from 'lucide-react',
 const ComprehensiveAISolutions20o26PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
   useEffect(() => {
     setIsVisible(true)}[]),
   const solutions = [
-    { icon: Braintitle: 'Enterprise 'AI', 'color: 'from-blue-50o0 to-purple-50o0' };
-    { icon: Rocketitle: 'Quantum 'AI', 'color: 'from-purple-50o0 to-pink-50o0' };
-    { icon: Zaptitle: ''Automation', 'color: 'from-green-50o0 to-blue-50o0' };
-    { icon: Shieldtitle: 'Security 'AI', 'color: 'from-red-50o0 to-orange-50o0' }
+    { icon: Braintitle: 'Enterprise 'AIcolor: 'from-blue-50o0 to-purple-50o0' },
+    { icon: Rocketitle: 'Quantum 'AIcolor: 'from-purple-50o0 to-pink-50o0' },
+    { icon: Zaptitle: ''Automationcolor: 'from-green-50o0 to-blue-50o0' },
+    { icon: Shieldtitle: 'Security 'AIcolor: 'from-red-50o0 to-orange-50o0' }
   ],
   const benefits = [
-    { icon: TrendingUptext: '99.9% Uptime' };
-    { icon: Userstext: '10o00+ Enterprises' };
-    { icon: Awardtext: 'Industry Leading' };
+    { icon: TrendingUptext: '99.9% Uptime' },
+    { icon: Userstext: '10o00+ Enterprises' },
+    { icon: Awardtext: 'Industry Leading' },
     { icon: BarChart3text: '60% Cost Reduction' }
   ],
   const stats = [
-    { value: '10,0o00+'label: 'AI Models' };
-    { value: '50o0+'label: 'Solutions' };
-    { value: '1,0o00+'label: 'Enterprises' };
+    { value: '10,0o00+'label: 'AI Models' },
+    { value: '50o0+'label: 'Solutions' },
+    { value: '1,0o00+'label: 'Enterprises' },
     { value: '99.9%'label: 'Uptime' }
   ],
   return (
@@ -185,5 +185,5 @@ const ComprehensiveAISolutions20o26PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default ComprehensiveAISolutions20o26PromotionBanner;
+    </div>)},
+export default ComprehensiveAISolutions20o26PromotionBanner,

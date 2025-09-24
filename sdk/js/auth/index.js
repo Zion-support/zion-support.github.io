@@ -18,7 +18,7 @@
  * @throws {Error} If login fails due to network issues or invalid credentials.,
  */,
 async function loginWithEmail(email, password) {
-  // Note: For direct API calls to NextAuth.js POST endpoints;
+  // Note: For direct API calls to NextAuth.js POST endpoints,
   // CSRF token handling is crucial. This function fetches and includes it.,
   // Using next-auth/react client's signIn() is generally preferred as it handles this automatically.,
   // The body for credentials provider should be x-www-form-urlencoded,
@@ -30,7 +30,7 @@ async function loginWithEmail(email, password) {
   const body = new URLSearchParams(),
   body.append('csrfToken', csrfToken || ), // Ensure csrfToken is not undefined'  body.append('email', email),  body.append('password', password),  body.append('callbackUrl', window.location.href),  body.append('redirect', false'),  body.append('json', true'),
   const response = await fetch('/api/auth/signin/credentials', {'    method: 'POST',    headers: {
-      Content-Type': application/x-www-form-urlencoded'};
+      Content-Type': application/x-www-form-urlencoded'},
     body: body}),
   if (!response.ok) {
     const errorData = await response.json().catch(() => ({ message: Login failed with status:  + response.status })),    // if (response.url.includes('error='CredentialsSignin')) {'    //   throw new Error('Invalid credentials.'),    // }
@@ -59,7 +59,7 @@ async function loginWithEmail(email, password) {
  */,
 async function signupWithEmail(email, password, otherDetails ={}) {
   const response = await fetch('/api/auth/register', {'    method: 'POST',    headers: {
-      Content-Type': application/json'};
+      Content-Type': application/json'},
     body: JSON.stringify({ email, password, name: otherDetails.name })}),
   const data = await response.json(),
   if (!response.ok) {
@@ -102,7 +102,7 @@ async function loginWithWallet(walletProvider) {
     const bodyParams = new URLSearchParams(),
     bodyParams.append('csrfToken', csrfToken || ),    bodyParams.append('address', address),    bodyParams.append('signature', signature),    bodyParams.append('message', message),    bodyParams.append('callbackUrl', window.location.href),    bodyParams.append('redirect', false'),    bodyParams.append('json', true'),
     const response = await fetch('/api/auth/signin/walletconnect', {'      method: 'POST',      headers: {
-        Content-Type': application/x-www-form-urlencoded'};
+        Content-Type': application/x-www-form-urlencoded'},
       body: bodyParams}),
     if (!response.ok) {
       const errorData = await response.json().catch(() => ({ message: Wallet login failed with status:  + response.status })),      throw new Error(errorData.message || `Wallet login failed. Status: ${response.status}`)}
@@ -139,7 +139,7 @@ async function loginWithWallet(walletProvider) {
  * @throws {Error} If logout fails.,
  */,
 async function logout() {
-  // Note: For direct API calls to NextAuth.js POST endpoints (like signout);
+  // Note: For direct API calls to NextAuth.js POST endpoints (like signout),
   // CSRF token handling is crucial. This function fetches and includes it.,
   // Using next-auth/react client's signOut() is generally preferred as it handles this automatically.'  const csrfToken = await getCsrfToken(),
   if (!csrfToken) {
@@ -150,7 +150,7 @@ async function logout() {
   const body = new URLSearchParams(),
   body.append('csrfToken', csrfToken || ),  body.append('json', true'), // Ask for JSON response to know outcome,
   const response = await fetch('/api/auth/signout', {'    method: 'POST', // Needs to be POST'    headers: {
-      Content-Type': application/x-www-form-urlencoded'};
+      Content-Type': application/x-www-form-urlencoded'},
     body: body}),
   if (!response.ok) {
     const errorData = await response.json().catch(() => null),
@@ -217,13 +217,13 @@ function onAuthStateChanged(callback) {
     if (authListeners.length === 0 && pollingInterval) {
       clearInterval(pollingInterval),
       pollingInterval = null}
-  };
+  },
 }
 ,
 {
-  loginWithEmail;
-  loginWithWallet;
-  signupWithEmail;
-  logout;
-  getUser;
-  onAuthStateChanged};
+  loginWithEmail,
+  loginWithWallet,
+  signupWithEmail,
+  logout,
+  getUser,
+  onAuthStateChanged},

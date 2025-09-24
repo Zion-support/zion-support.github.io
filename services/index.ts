@@ -40,28 +40,28 @@ export type {
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
     name: 'Utility Tools',
-    description: 'Essential tools for everyday tasks';
+    description: 'Essential tools for everyday tasks',
     services: ['urlShortenerpasswordGeneratorqrCodeGenerator']}
   MEDIA: {
     name: 'Media & Files',
-    description: 'File conversion and media processing tools';
+    description: 'File conversion and media processing tools',
     services: ['file_converter']}
   ANALYSIS: {
     name: 'Analysis & Insights',
-    description: 'Text analysis and content insights';
+    description: 'Text analysis and content insights',
     services: ['text_analysis']}
 } as const,
 // Service metadata for the application,
 export const SERVICES_METADATA = {
   url_shortener: {
-    name: 'URL Shortener';
+    name: 'URL Shortener',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
     description: 'Create short, trackable URLs with analytics',
     icon: '',
     category: 'UTILITIES',
     features: [
       'Custom short codes_click tracking_analytics dashboard_expiration datesQR code generation'],
-    pricing: 'Free';
+    pricing: 'Free',
     api_endpoint: '/api / url - shortener'}
   password_generator: {
     name: 'Password Generator',
@@ -70,7 +70,7 @@ export const SERVICES_METADATA = {
     category: 'UTILITIES',
     features: [
       'Multiple generation modes_strength analysis_custom character sets_password history_security recommendations'],
-    pricing: 'Free';
+    pricing: 'Free',
     api_endpoint: '/api / password - generator'}
   qrCodeGenerator: {
     name: 'QR Code Generator',
@@ -79,7 +79,7 @@ export const SERVICES_METADATA = {
     category: 'UTILITIES',
     features: [
       'Multiple QR code types_custom styling_logo integration_error correction_template library'],
-    pricing: 'Free';
+    pricing: 'Free',
     api_endpoint: '/api / qr - code - generator'}
   file_converter: {
     name: 'File Converter',
@@ -88,10 +88,10 @@ export const SERVICES_METADATA = {
     category: 'MEDIA',
     features: [
       'Multiple file formats_batch conversion_quality settings_metadata preservation_cloud processing'],
-    pricing: 'Free (Basic) / $9 && 9.99/month (Pro)';
+    pricing: 'Free (Basic) / $9 && 9.99/month (Pro)',
     apiEndpoint: '/api/file-converter'}
   textAnalysis: {
-    pricing: 'Free (Basic) / $9.99 / month (Pro)';
+    pricing: 'Free (Basic) / $9.99 / month (Pro)',
     api_endpoint: '/api / file - converter'}
   text_analysis: {
     name: 'Text Analysis',
@@ -100,7 +100,7 @@ export const SERVICES_METADATA = {
     category: 'ANALYSIS',
     features: [
       'Readability metrics_sentiment analysis_keyword extraction_entity recognition_language detection'],
-    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)';
+    pricing: 'Free (Basic) / $19 && 19.99/month (Pro)',
     apiEndpoint: '/api/text-analysis'}
 } as const,
 // Service availability and status,
@@ -112,15 +112,15 @@ export const getServiceStatus = () => {
     fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
 ,
   return {
-    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
-    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() };
+    urlShortener: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
+    passwordGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
+    qrCodeGenerator: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
+    fileConverter: { status: 'active', uptime: '99.9%', lastUpdated: new Date() },
     textAnalysis: { status: 'active', uptime: '99.9%', lastUpdated: new Date() }
-    urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
-    passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
-    qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
-    fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() };
+    urlShortener: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() },
+    passwordGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() },
+    qrCodeGenerator: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() },
+    fileConverter: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() },
     textAnalysis: { status: 'active', uptime: '99 && 99.9%', lastUpdated: new Date() }
 }
 }
@@ -140,57 +140,57 @@ export const getServiceStats = () => {
   }
 }
 ,
-      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
-      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
-      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
-      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 },
+      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },
+      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
+      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
 // Export all micro SaaS services,
-export { urlShortenerService } from './urlShortenerService';
-export { passwordGeneratorService } from './passwordGeneratorService';
-export { qrCodeService } from './qrCodeService';
-export { fileConverterService } from './fileConverterService';
-export { textAnalysisService } from './textAnalysisService';
+export { urlShortenerService } from './urlShortenerService',
+export { passwordGeneratorService } from './passwordGeneratorService',
+export { qrCodeService } from './qrCodeService',
+export { fileConverterService } from './fileConverterService',
+export { textAnalysisService } from './textAnalysisService',
 // Export service types and interfaces,
 export type {
-  ShortUrl;
-  UrlAnalytics;
-  ClickEvent;
-  CreateShortUrlRequest} from './urlShortenerService';
+  ShortUrl,
+  UrlAnalytics,
+  ClickEvent,
+  CreateShortUrlRequest} from './urlShortenerService',
 export type {
-  PasswordOptions;
-  PasswordStrength;
-  GeneratedPassword} from './passwordGeneratorService';
+  PasswordOptions,
+  PasswordStrength,
+  GeneratedPassword} from './passwordGeneratorService',
 export type {
-  QRCodeOptions;
-  QRCodeResult;
-  QRCodeTemplate} from './qrCodeService';
+  QRCodeOptions,
+  QRCodeResult,
+  QRCodeTemplate} from './qrCodeService',
 export type {
-  ConversionOptions;
-  ConversionResult;
-  SupportedFormat;
-  FileInfo} from './fileConverterService';
+  ConversionOptions,
+  ConversionResult,
+  SupportedFormat,
+  FileInfo} from './fileConverterService',
 export type {
-  TextAnalysisResult;
-  BasicTextStats;
-  ReadabilityMetrics;
-  SentimentAnalysis;
-  KeywordAnalysis;
-  LanguageDetection;
-  EntityExtraction;
-  TextSummary} from './textAnalysisService';
+  TextAnalysisResult,
+  BasicTextStats,
+  ReadabilityMetrics,
+  SentimentAnalysis,
+  KeywordAnalysis,
+  LanguageDetection,
+  EntityExtraction,
+  TextSummary} from './textAnalysisService',
 // Service categories for easy discovery,
 export const SERVICE_CATEGORIES = {
   UTILITIES: {
-    name: 'Utility Tools';
-    description: 'Essential tools for everyday tasks';
-    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']};
+    name: 'Utility Tools',
+    description: 'Essential tools for everyday tasks',
+    services: ['urlShortenerpasswordGeneratorqrCodeGenerator']},
   MEDIA: {
-    name: 'Media & Files';
-    description: 'File conversion and media processing tools';
-    services: ['fileConverter']};
+    name: 'Media & Files',
+    description: 'File conversion and media processing tools',
+    services: ['fileConverter']},
   ANALYSIS: {
-    name: 'Analysis & Insights';
-    description: 'Text analysis and content insights';
+    name: 'Analysis & Insights',
+    description: 'Text analysis and content insights',
     services: ['textAnalysis']}
 } as const,
 // Service availability and status,
@@ -207,17 +207,17 @@ export const getServiceStatus = () =>: any {
 // Service usage statistics,
 export const getServiceStats = () => {
   return {
-    totalUsers: 15420;
-    totalRequests: 2847500;
-    averageResponseTime: 125;
+    totalUsers: 15420,
+    totalRequests: 2847500,
+    averageResponseTime: 125,
     services: {
-      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 };
-      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 };
-      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 };
-      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 };
+      urlShortener: { users: 8920, requests: 1250000, avgResponse: 89 },
+      passwordGenerator: { users: 12450, requests: 890000, avgResponse: 45 },
+      qrCodeGenerator: { users: 6780, requests: 456000, avgResponse: 156 },
+      fileConverter: { users: 5430, requests: 234000, avgResponse: 234 },
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba,
       textAnalysis: { users: 3890, requests: 11500, avgResponse: 178 }
     }
   }
-};
+},
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}

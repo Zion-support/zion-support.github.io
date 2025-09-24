@@ -5,143 +5,139 @@ const AI20o25UltimateInnovationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const innovationContent = [
     {
-      id: 'ai-innovation-showcase';
-      title: 'AI 20o25: The Ultimate Innovation Showcase Revolution';
+      id: 'ai-innovation-showcase',
+      title: 'AI 20o25: The Ultimate Innovation Showcase Revolution',
       description:,
-        '4,20o0% ROI Through Next-Generation Intelligence - The most comprehensive transformation in enterprise technology history.';
+        '4,20o0% ROI Through Next-Generation Intelligence - The most comprehensive transformation in enterprise technology history.',
       metrics: {
-        roi: '4,20o0%';
-        savings: '$15.8B+';
-        efficiency: '1,80o0%';
-        accuracy: '99.97%';
-      };
-      url: '/blog/ai-20o25-ultimate-innovation-showcase-revolution';
-      type: 'Blog Post';
-      category: 'innovation';
-      readingTime: '35 min read';
-      featured: true;
+        roi: '4,20o0%',
+        savings: '$15.8B+',
+        efficiency: '1,80o0%',
+        accuracy: '99.97%'
+      },
+      url: '/blog/ai-20o25-ultimate-innovation-showcase-revolution',
+      type: 'Blog Post',
+      category: 'innovation',
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'AI Innovation';
-        'Next-Generation Intelligence';
-        'Enterprise Transformation';
-        'ROI';
-      ];
-    };
+        'AI InnovationNext-Generation Intelligence',
+        'Enterprise TransformationROI',
+      ]
+    },
     {
-      id: 'fortune-50o0-innovation-success';
-      title: 'Fortune 50o0 AI Innovation Success Story';
+      id: 'fortune-50o0-innovation-success',
+      title: 'Fortune 50o0 AI Innovation Success Story',
       description:,
-        '$15.8B Annual Savings - 4,20o0% ROI Success - Real-world implementation results from Fortune 50o0 manufacturing giant.';
+        '$15.8B Annual Savings - 4,20o0% ROI Success - Real-world implementation results from Fortune 50o0 manufacturing giant.',
       metrics: {
-        roi: '4,20o0%';
-        savings: '$15.8B';
-        satisfaction: '99.7%';
-        timeline: '18 months';
-      };
-      url: '/case-studies/fortune-50o0-ai-innovation-showcase-420o0-roi-success-story';
-      type: 'Case Study';
-      category: 'success';
-      readingTime: '22 min read';
-      featured: true;
-      tags: ['Fortune 50o0', 'Success Story', 'Manufacturing', 'ROI'];
-    };
+        roi: '4,20o0%',
+        savings: '$15.8B',
+        satisfaction: '99.7%',
+        timeline: '18 months'
+      },
+      url: '/case-studies/fortune-50o0-ai-innovation-showcase-420o0-roi-success-story',
+      type: 'Case Study',
+      category: 'success',
+      readingTime: '22 min read',
+      featured: true,
+      tags: ['Fortune 50o0Success Story', 'ManufacturingROI'],
+    },
     {
-      id: 'ai-innovation-implementation-guide';
-      title: 'AI Innovation Implementation Ultimate Guide';
+      id: 'ai-innovation-implementation-guide',
+      title: 'AI Innovation Implementation Ultimate Guide',
       description:,
-        'Complete Roadmap to 4,20o0% ROI - Step-by-step implementation guide for enterprise AI transformation.';
+        'Complete Roadmap to 4,20o0% ROI - Step-by-step implementation guide for enterprise AI transformation.',
       metrics: {
-        roi: '4,20o0%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: '45 min read';
-      };
-      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25-20o26';
-      type: 'Implementation Guide';
-      category: 'guide';
-      readingTime: '45 min read';
-      featured: true;
-      tags: ['Implementation', 'Roadmap', 'Best Practices', 'Guide'];
-    };
+        roi: '4,20o0%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: '45 min read'
+      },
+      url: '/resources/ai-innovation-implementation-ultimate-guide-20o25-20o26',
+      type: 'Implementation Guide',
+      category: 'guide',
+      readingTime: '45 min read',
+      featured: true,
+      tags: ['ImplementationRoadmap', 'Best PracticesGuide'],
+    },
     {
-      id: 'advanced-neural-architectures';
-      title: 'Advanced Neural Architectures Revolution';
+      id: 'advanced-neural-architectures',
+      title: 'Advanced Neural Architectures Revolution',
       description:,
-        '2,80o0% ROI Through Next-Generation Intelligence - Revolutionary neural network architectures for enterprise success.';
+        '2,80o0% ROI Through Next-Generation Intelligence - Revolutionary neural network architectures for enterprise success.',
       metrics: {
-        roi: '2,80o0%';
-        savings: '$4.2B';
-        accuracy: '99.7%';
-        timeline: '8 months';
-      };
-      url: '/blog/ai-20o25-advanced-neural-architectures-revolution';
-      type: 'Blog Post';
-      category: 'innovation';
-      readingTime: '25 min read';
-      featured: false;
-      tags: ['Neural Architectures', 'AI Innovation', 'Enterprise', 'ROI'];
-    };
+        roi: '2,80o0%',
+        savings: '$4.2B',
+        accuracy: '99.7%',
+        timeline: '8 months'
+      },
+      url: '/blog/ai-20o25-advanced-neural-architectures-revolution',
+      type: 'Blog Post',
+      category: 'innovation',
+      readingTime: '25 min read',
+      featured: false,
+      tags: ['Neural ArchitecturesAI Innovation', 'EnterpriseROI'],
+    },
     {
-      id: 'synthetic-intelligence-breakthrough';
-      title: 'Synthetic Intelligence Breakthrough';
+      id: 'synthetic-intelligence-breakthrough',
+      title: 'Synthetic Intelligence Breakthrough',
       description:,
-        '2,50o0% ROI Through Artificial General Intelligence - Next-generation AGI systems for autonomous business operations.';
+        '2,50o0% ROI Through Artificial General Intelligence - Next-generation AGI systems for autonomous business operations.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$8.2B+';
-        accuracy: '99.7%';
-        efficiency: '1,80o0%';
-      };
-      url: '/blog/ai-20o25-synthetic-intelligence-revolution-ultimate-breakthrough';
-      type: 'Blog Post';
-      category: 'innovation';
-      readingTime: '30 min read';
-      featured: false;
-      tags: ['Synthetic Intelligence', 'AGI', 'Autonomous Operations', 'ROI'];
-    };
+        roi: '2,50o0%',
+        savings: '$8.2B+',
+        accuracy: '99.7%',
+        efficiency: '1,80o0%',
+      },
+      url: '/blog/ai-20o25-synthetic-intelligence-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'innovation',
+      readingTime: '30 min read',
+      featured: false,
+      tags: ['Synthetic IntelligenceAGI', 'Autonomous OperationsROI'],
+    },
     {
-      id: 'autonomous-business-ecosystems';
-      title: 'Autonomous Business Ecosystems Revolution';
+      id: 'autonomous-business-ecosystems',
+      title: 'Autonomous Business Ecosystems Revolution',
       description:,
-        '7,50o0% ROI Through Self-Managing Enterprise Systems - Complete autonomous business transformation.';
+        '7,50o0% ROI Through Self-Managing Enterprise Systems - Complete autonomous business transformation.',
       metrics: {
-        roi: '7,50o0%';
-        savings: '$25.8B+';
-        efficiency: '2,40o0%';
-        accuracy: '99.97%';
-      };
-      url: '/blog/ai-20o25-20o26-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough';
-      type: 'Blog Post';
-      category: 'innovation';
-      readingTime: '35 min read';
-      featured: false;
+        roi: '7,50o0%',
+        savings: '$25.8B+',
+        efficiency: '2,40o0%',
+        accuracy: '99.97%'
+      },
+      url: '/blog/ai-20o25-20o26-ultimate-autonomous-enterprise-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
+      category: 'innovation',
+      readingTime: '35 min read',
+      featured: false,
       tags: [
-        'Autonomous Systems';
-        'Business Transformation';
-        'Enterprise';
-        'ROI';
-      ];
-    };
+        'Autonomous SystemsBusiness Transformation',
+        'EnterpriseROI',
+      ]
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: innovationContent.length };
+    { id: 'all', name: 'All Content', count: innovationContent.length },
     {
-      id: 'innovation';
-      name: 'Innovation';
+      id: 'innovation',
+      name: 'Innovation',
       count: innovationContent.filter(item => item.category === 'innovation'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'success';
-      name: 'Success Stories';
+      id: 'success',
+      name: 'Success Stories',
       count: innovationContent.filter(item => item.category === 'success'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'guide';
-      name: 'Implementation Guides';
-      count: innovationContent.filter(item => item.category === 'guide').length;
-    };
+      id: 'guide',
+      name: 'Implementation Guides',
+      count: innovationContent.filter(item => item.category === 'guide').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -289,5 +285,5 @@ const AI20o25UltimateInnovationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25UltimateInnovationShowcase;
+    </section>)},
+export default AI20o25UltimateInnovationShowcase,

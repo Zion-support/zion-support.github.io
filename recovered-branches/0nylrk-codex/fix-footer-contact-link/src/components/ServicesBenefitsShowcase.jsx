@@ -1,127 +1,103 @@
 import {
 import { Button } from './ui/button',
 import { CONTACT_INFO } from '@/data/comprehensiveServices',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from './ui/card',
-  Brain;
-  Cloud;
-  Zap;
-  Shield;
-  TrendingUp;
-  Users;
-  Globe;
-  CheckCircle;
-  Star;
-  ArrowRight;
-  Phone;
-  Mail;
-  ExternalLink;
+  Brain,
+  Cloud,
+  Zap,
+  Shield,
+  TrendingUp,
+  Users,
+  Globe,
+  CheckCircle,
+  Star,
+  ArrowRight,
+  Phone,
+  Mail,
+  ExternalLink,
 } from 'lucide-react',
 export function ServicesBenefitsShowcase() {
   const serviceBenefits = [
     {
-      category: 'AI Services';
-      icon: <Brain className='w-12 h-12' />;
-      color: 'from-purple-50o0 to-indigo-60o0';
+      category: 'AI Services',
+      icon: <Brain className='w-12 h-12' />,
+      color: 'from-purple-50o0 to-indigo-60o0',
       description:,
-        'Transform your business with cutting-edge artificial intelligence and machine learning solutions';
+        'Transform your business with cutting-edge artificial intelligence and machine learning solutions',
       benefits: [
-        'Advanced AI algorithms and models';
-        'Real-time data processing and insights';
-        'Scalable machine learning infrastructure';
-        'Custom AI model development';
-        'Natural language processing capabilities';
-        'Computer vision and image recognition';
-        'Predictive analytics and forecasting';
-        'AI-powered automation workflows';
-      ];
+        'Advanced AI algorithms and modelsReal-time data processing and insights',
+        'Scalable machine learning infrastructureCustom AI model development',
+        'Natural language processing capabilitiesComputer vision and image recognition',
+        'Predictive analytics and forecastingAI-powered automation workflows',
+      ],
       useCases: [
-        'Customer service chatbots';
-        'Predictive maintenance systems';
-        'Fraud detection and prevention';
-        'Content generation and optimization';
-        'Recommendation engines';
-        'Process automation';
-        'Data analysis and insights';
-        'Intelligent document processing';
-      ];
-      marketPosition: 'Industry-leading AI solutions with proven ROI';
-      startingPrice: '$299';
-      implementationTime: '1-6 weeks';
-      support: '24/7 expert support included';
-    };
+        'Customer service chatbotsPredictive maintenance systems',
+        'Fraud detection and preventionContent generation and optimization',
+        'Recommendation enginesProcess automation',
+        'Data analysis and insightsIntelligent document processing',
+      ],
+      marketPosition: 'Industry-leading AI solutions with proven ROI',
+      startingPrice: '$299',
+      implementationTime: '1-6 weeks',
+      support: '24/7 expert support included'
+    },
     {
-      category: 'IT Services';
-      icon: <Cloud className='w-12 h-12' />;
-      color: 'from-cyan-50o0 to-blue-60o0';
+      category: 'IT Services',
+      icon: <Cloud className='w-12 h-12' />,
+      color: 'from-cyan-50o0 to-blue-60o0',
       description:,
-        'Enterprise-grade IT infrastructure and consulting services for modern businesses';
+        'Enterprise-grade IT infrastructure and consulting services for modern businesses',
       benefits: [
-        'Cloud migration and optimization';
-        'Cybersecurity and compliance';
-        'DevOps automation and CI/CD';
-        'Infrastructure as code';
-        '24/7 monitoring and support';
-        'Disaster recovery planning';
-        'Performance optimization';
-        'Scalable architecture design';
-      ];
+        'Cloud migration and optimizationCybersecurity and compliance',
+        'DevOps automation and CI/CDInfrastructure as code',
+        '24/7 monitoring and supportDisaster recovery planning',
+        'Performance optimizationScalable architecture design',
+      ],
       useCases: [
-        'Digital transformation initiatives';
-        'Cloud infrastructure setup';
-        'Security audits and compliance';
-        'Application modernization';
-        'Data center consolidation';
-        'Business continuity planning';
-        'Performance monitoring';
-        'Cost optimization strategies';
-      ];
-      marketPosition: 'Trusted IT partner for enterprise transformation';
-      startingPrice: '$4,499';
-      implementationTime: '2-6 weeks';
-      support: '24/7 dedicated support team';
-    };
+        'Digital transformation initiativesCloud infrastructure setup',
+        'Security audits and complianceApplication modernization',
+        'Data center consolidationBusiness continuity planning',
+        'Performance monitoringCost optimization strategies',
+      ],
+      marketPosition: 'Trusted IT partner for enterprise transformation',
+      startingPrice: '$4,499',
+      implementationTime: '2-6 weeks',
+      support: '24/7 dedicated support team'
+    },
     {
-      category: 'Micro SAAS';
-      icon: <Zap className='w-12 h-12' />;
-      color: 'from-emerald-50o0 to-green-60o0';
+      category: 'Micro SAAS',
+      icon: <Zap className='w-12 h-12' />,
+      color: 'from-emerald-50o0 to-green-60o0',
       description:,
-        'Specialized software-as-a-service solutions designed for specific business needs';
+        'Specialized software-as-a-service solutions designed for specific business needs',
       benefits: [
-        'Ready-to-use business applications';
-        'Cloud-based accessibility';
-        'Automatic updates and maintenance';
-        'Scalable user management';
-        'API integrations';
-        'Customizable workflows';
-        'Real-time collaboration';
-        'Mobile-first design';
-      ];
+        'Ready-to-use business applicationsCloud-based accessibility',
+        'Automatic updates and maintenanceScalable user management',
+        'API integrationsCustomizable workflows',
+        'Real-time collaborationMobile-first design',
+      ],
       useCases: [
-        'Inventory management';
-        'Project management';
-        'Customer support automation';
-        'HR and employee management';
-        'Financial analytics';
-        'Supply chain optimization';
-        'Marketing automation';
-        'Sales pipeline management';
-      ];
-      marketPosition: 'Affordable, scalable solutions for growing businesses';
-      startingPrice: '$199';
-      implementationTime: 'Immediate - 3 weeks';
-      support: 'Business hours support with priority options';
-    };
+        'Inventory managementProject management',
+        'Customer support automationHR and employee management',
+        'Financial analyticsSupply chain optimization',
+        'Marketing automationSales pipeline management',
+      ],
+      marketPosition: 'Affordable, scalable solutions for growing businesses',
+      startingPrice: '$199',
+      implementationTime: 'Immediate - 3 weeks',
+      support: 'Business hours support with priority options'
+    },
   ],
   const industryStats = [
-    { metric: '95%', label: 'Client Satisfaction Rate' };
-    { metric: '24/7', label: 'Support Availability' };
-    { metric: '50+', label: 'Countries Served' };
-    { metric: '10+', label: 'Years Experience' };
+    { metric: '95%', label: 'Client Satisfaction Rate' },
+    { metric: '24/7', label: 'Support Availability' },
+    { metric: '50+', label: 'Countries Served' },
+    { metric: '10+', label: 'Years Experience' },
   ],
   return (
     <div className='py-20 bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0'>,

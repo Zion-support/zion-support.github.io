@@ -1,157 +1,157 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Cloud;
-  Shield;
-  Database;
-  Network;
-  Code;
-  BarChart3;
-  Target;
-  Lightbulb;
-  Rocket;
-  Zap;
-  Globe;
-  Lock;
-  Cpu;
-  Sparkles;
-  ShieldCheck;
-  Globe2;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
+  Brain,
+  Cloud,
+  Shield,
+  Database,
+  Network,
+  Code,
+  BarChart3,
+  Target,
+  Lightbulb,
+  Rocket,
+  Zap,
+  Globe,
+  Lock,
+  Cpu,
+  Sparkles,
+  ShieldCheck,
+  Globe2,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
   ExternalLink} from 'lucide-react',
 import SEOHead from '../components/SEOHead',
 const InnovativeServices20o25: React.FC = () => {
   const serviceCategories = [
     {
-      title: "AI Automation Services";
-      description: "Revolutionary AI-powered automation solutions that transform business operations";
-      icon: Brain;
-      color: "from-blue-60o0 to-cyan-60o0";
+      title: "AI Automation Services",
+      description: "Revolutionary AI-powered automation solutions that transform business operations",
+      icon: Brain,
+      color: "from-blue-60o0 to-cyan-60o0",
       services: [
         {
-          name: "AI Code Review & Quality Assurance";
-          description: "Intelligent code analysis, review automation, and quality assurance";
-          price: "$1,299/month";
-          features: ["AI-powered code analysis", "Security vulnerability detection", "Code quality scoring", "Performance optimization"];
-          link: "https://ziontechgroup.com/ai-code-review";
-          popular: true};
+          name: "AI Code Review & Quality Assurance",
+          description: "Intelligent code analysis, review automation, and quality assurance",
+          price: "$1,299/month",
+          features: ["AI-powered code analysis", "Security vulnerability detection", "Code quality scoring", "Performance optimization"],
+          link: "https://ziontechgroup.com/ai-code-review",
+          popular: true},
         {
-          name: "AI Content Marketing Automation";
-          description: "Intelligent content creation, optimization, and distribution automation";
-          price: "$899/month";
-          features: ["AI-powered content generation", "SEO optimization", "Multi-channel distribution", "Performance analytics"];
-          link: "https://ziontechgroup.com/ai-content-marketing";
-          popular: true};
+          name: "AI Content Marketing Automation",
+          description: "Intelligent content creation, optimization, and distribution automation",
+          price: "$899/month",
+          features: ["AI-powered content generation", "SEO optimization", "Multi-channel distribution", "Performance analytics"],
+          link: "https://ziontechgroup.com/ai-content-marketing",
+          popular: true},
         {
-          name: "AI Customer Support Automation";
-          description: "Intelligent customer support with automated responses and issue resolution";
-          price: "$699/month";
-          features: ["AI-powered chatbots", "Automated ticket routing", "Knowledge base automation", "Sentiment analysis"];
-          link: "https://ziontechgroup.com/ai-customer-support";
+          name: "AI Customer Support Automation",
+          description: "Intelligent customer support with automated responses and issue resolution",
+          price: "$699/month",
+          features: ["AI-powered chatbots", "Automated ticket routing", "Knowledge base automation", "Sentiment analysis"],
+          link: "https://ziontechgroup.com/ai-customer-support",
           popular: true}
-      ]};
+      ]},
     {
-      title: "Advanced IT Infrastructure";
-      description: "Cutting-edge infrastructure solutions with quantum computing and neuromorphic technology";
-      icon: Cpu;
-      color: "from-purple-60o0 to-indigo-60o0";
+      title: "Advanced IT Infrastructure",
+      description: "Cutting-edge infrastructure solutions with quantum computing and neuromorphic technology",
+      icon: Cpu,
+      color: "from-purple-60o0 to-indigo-60o0",
       services: [
         {
-          name: "Quantum-Secure Cloud Infrastructure";
-          description: "Future-proof cloud infrastructure with quantum-resistant encryption";
-          price: "$3,999/month";
-          features: ["Quantum-resistant encryption", "Post-quantum cryptography", "Multi-cloud orchestration", "Zero-trust security"];
-          link: "https://ziontechgroup.com/quantum-secure-cloud";
-          popular: true};
+          name: "Quantum-Secure Cloud Infrastructure",
+          description: "Future-proof cloud infrastructure with quantum-resistant encryption",
+          price: "$3,999/month",
+          features: ["Quantum-resistant encryption", "Post-quantum cryptography", "Multi-cloud orchestration", "Zero-trust security"],
+          link: "https://ziontechgroup.com/quantum-secure-cloud",
+          popular: true},
         {
-          name: "Edge Computing Orchestration";
-          description: "Intelligent orchestration of distributed edge computing resources";
-          price: "$1,899/month";
-          features: ["Intelligent workload distribution", "Edge-to-cloud synchronization", "Real-time optimization", "IoT integration"];
-          link: "https://ziontechgroup.com/edge-computing-orchestration";
-          popular: true};
+          name: "Edge Computing Orchestration",
+          description: "Intelligent orchestration of distributed edge computing resources",
+          price: "$1,899/month",
+          features: ["Intelligent workload distribution", "Edge-to-cloud synchronization", "Real-time optimization", "IoT integration"],
+          link: "https://ziontechgroup.com/edge-computing-orchestration",
+          popular: true},
         {
-          name: "Neuromorphic Computing Infrastructure";
-          description: "Brain-inspired computing architecture for ultra-efficient AI processing";
-          price: "$5,999/month";
-          features: ["Brain-inspired neural architecture", "Ultra-low power consumption", "Real-time learning", "Spiking neural networks"];
-          link: "https://ziontechgroup.com/neuromorphic-computing";
+          name: "Neuromorphic Computing Infrastructure",
+          description: "Brain-inspired computing architecture for ultra-efficient AI processing",
+          price: "$5,999/month",
+          features: ["Brain-inspired neural architecture", "Ultra-low power consumption", "Real-time learning", "Spiking neural networks"],
+          link: "https://ziontechgroup.com/neuromorphic-computing",
           popular: false}
-      ]};
+      ]},
     {
-      title: "Innovative Micro-SaaS Solutions";
-      description: "Specialized SaaS solutions for specific industries and business needs";
-      icon: Sparkles;
-      color: "from-green-60o0 to-emerald-60o0";
+      title: "Innovative Micro-SaaS Solutions",
+      description: "Specialized SaaS solutions for specific industries and business needs",
+      icon: Sparkles,
+      color: "from-green-60o0 to-emerald-60o0",
       services: [
         {
-          name: "AI Legal Document Automation";
-          description: "Intelligent legal document creation, review, and automation";
-          price: "$599/month";
-          features: ["AI-powered contract generation", "Legal document review", "Compliance checking", "Workflow automation"];
-          link: "https://ziontechgroup.com/ai-legal-automation";
-          popular: true};
+          name: "AI Legal Document Automation",
+          description: "Intelligent legal document creation, review, and automation",
+          price: "$599/month",
+          features: ["AI-powered contract generation", "Legal document review", "Compliance checking", "Workflow automation"],
+          link: "https://ziontechgroup.com/ai-legal-automation",
+          popular: true},
         {
-          name: "AI Real Estate Analytics";
-          description: "Intelligent real estate market analysis and investment insights";
-          price: "$799/month";
-          features: ["Market trend analysis", "Investment opportunity identification", "Property valuation", "Risk assessment"];
-          link: "https://ziontechgroup.com/ai-real-estate-analytics";
-          popular: true};
+          name: "AI Real Estate Analytics",
+          description: "Intelligent real estate market analysis and investment insights",
+          price: "$799/month",
+          features: ["Market trend analysis", "Investment opportunity identification", "Property valuation", "Risk assessment"],
+          link: "https://ziontechgroup.com/ai-real-estate-analytics",
+          popular: true},
         {
-          name: "AI Restaurant Management";
-          description: "Intelligent restaurant operations, inventory, and customer management";
-          price: "$399/month";
-          features: ["Inventory management", "Demand forecasting", "Staff optimization", "Customer analytics"];
-          link: "https://ziontechgroup.com/ai-restaurant-management";
+          name: "AI Restaurant Management",
+          description: "Intelligent restaurant operations, inventory, and customer management",
+          price: "$399/month",
+          features: ["Inventory management", "Demand forecasting", "Staff optimization", "Customer analytics"],
+          link: "https://ziontechgroup.com/ai-restaurant-management",
           popular: true}
-      ]};
+      ]},
     {
-      title: "Cutting-Edge AI Research";
-      description: "Revolutionary AI platforms for advanced research and scientific discovery";
-      icon: Rocket;
-      color: "from-orange-60o0 to-red-60o0";
+      title: "Cutting-Edge AI Research",
+      description: "Revolutionary AI platforms for advanced research and scientific discovery",
+      icon: Rocket,
+      color: "from-orange-60o0 to-red-60o0",
       services: [
         {
-          name: "AI Drug Discovery Platform";
-          description: "Accelerate drug discovery with AI-powered molecular analysis";
-          price: "$8,999/month";
-          features: ["Molecular analysis", "Drug efficacy prediction", "Toxicity prediction", "Clinical trial optimization"];
-          link: "https://ziontechgroup.com/ai-drug-discovery";
-          popular: true};
+          name: "AI Drug Discovery Platform",
+          description: "Accelerate drug discovery with AI-powered molecular analysis",
+          price: "$8,999/month",
+          features: ["Molecular analysis", "Drug efficacy prediction", "Toxicity prediction", "Clinical trial optimization"],
+          link: "https://ziontechgroup.com/ai-drug-discovery",
+          popular: true},
         {
-          name: "AI Climate Prediction Platform";
-          description: "Predict climate patterns with AI-powered environmental analysis";
-          price: "$3,999/month";
-          features: ["Climate modeling", "Weather prediction", "Environmental analysis", "Risk assessment"];
-          link: "https://ziontechgroup.com/ai-climate-prediction";
-          popular: true};
+          name: "AI Climate Prediction Platform",
+          description: "Predict climate patterns with AI-powered environmental analysis",
+          price: "$3,999/month",
+          features: ["Climate modeling", "Weather prediction", "Environmental analysis", "Risk assessment"],
+          link: "https://ziontechgroup.com/ai-climate-prediction",
+          popular: true},
         {
-          name: "AI Space Exploration Platform";
-          description: "Revolutionize space exploration with AI-powered mission optimization";
-          price: "$12,999/month";
-          features: ["Mission planning", "Satellite optimization", "Astronomical analysis", "Risk assessment"];
-          link: "https://ziontechgroup.com/ai-space-exploration";
+          name: "AI Space Exploration Platform",
+          description: "Revolutionize space exploration with AI-powered mission optimization",
+          price: "$12,999/month",
+          features: ["Mission planning", "Satellite optimization", "Astronomical analysis", "Risk assessment"],
+          link: "https://ziontechgroup.com/ai-space-exploration",
           popular: false}
       ]}
   ],
   const contactInfo ={
-    mobile: "+1 30o2 464 0950";
-    email: "kleber@ziontechgroup.com";
-    address: "364 E Main St STE 10o08 Middletown DE 19709";
-    website: "https://ziontechgroup.com"};
+    mobile: "+1 30o2 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 10o08 Middletown DE 19709",
+    website: "https://ziontechgroup.com"},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-slate-80o0 to-slate-90o0">,
       <SEOHead
         config={{
-          title: "Innovative Services 20o25 - Zion Tech Group";
-          description: "Discover our cutting-edge AI, IT infrastructure, and micro-SaaS services. Revolutionary solutions for the future of business and technology.";
+          title: "Innovative Services 20o25 - Zion Tech Group",
+          description: "Discover our cutting-edge AI, IT infrastructure, and micro-SaaS services. Revolutionary solutions for the future of business and technology.",
           keywords: "AI services, IT infrastructure, micro-SaaS, quantum computing, neuromorphic computing, AI automation, Zion Tech Group"}}
        />,
       {/* Hero Section */}

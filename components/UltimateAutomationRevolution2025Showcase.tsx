@@ -1,87 +1,84 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const UltimateAutomationRevolution20o25Showcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'ultimate-automation-revolution';
-      title: 'AI 20o25: The Ultimate Automation Revolution';
-      subtitle: '50,0o00% ROI Breakthrough Guide';
+      id: 'ultimate-automation-revolution',
+      title: 'AI 20o25: The Ultimate Automation Revolution',
+      subtitle: '50,0o00% ROI Breakthrough Guide',
       description:,
-        'Transform your business with revolutionary AI automation that delivers unprecedented returns. Learn the strategies, technologies, and implementation frameworks that are transforming businesses across every industry.';
-      type: 'blog';
-      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough';
-      readingTime: '35 min read';
+        'Transform your business with revolutionary AI automation that delivers unprecedented returns. Learn the strategies, technologies, and implementation frameworks that are transforming businesses across every industry.',
+      type: 'blog',
+      url: '/blog/ai-20o25-ultimate-automation-revolution-50o000-roi-breakthrough',
+      readingTime: '35 min read',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B+';
-        efficiency: '3,20o0%';
-        accuracy: '99.97%';
-      };
+        roi: '50,0o00%',
+        savings: '$2.8B+',
+        efficiency: '3,20o0%',
+        accuracy: '99.97%'
+      },
       tags: [
-        'AI Automation';
-        'ROI';
-        'Business Transformation';
-        'Revolutionary Technology';
-      ];
-      featured: true;
-    };
+        'AI AutomationROI',
+        'Business TransformationRevolutionary Technology',
+      ],
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 Ultimate Automation Success';
-      subtitle: '$2.8B Annual Savings - 50,0o00% ROI Success Story';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 Ultimate Automation Success',
+      subtitle: '$2.8B Annual Savings - 50,0o00% ROI Success Story',
       description:,
-        'How TechGlobal Industries transformed their operations with revolutionary AI automation, achieving unprecedented success and establishing market leadership.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ultimate-automation-50o000-roi-success-story';
-      readingTime: '25 min read';
+        'How TechGlobal Industries transformed their operations with revolutionary AI automation, achieving unprecedented success and establishing market leadership.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ultimate-automation-50o000-roi-success-story',
+      readingTime: '25 min read',
       metrics: {
-        roi: '50,0o00%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        accuracy: '99.97%';
-      };
-      tags: ['Fortune 50o0', 'Success Story', 'Manufacturing', 'Case Study'];
-      featured: true;
-    };
+        roi: '50,0o00%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        accuracy: '99.97%'
+      },
+      tags: ['Fortune 50o0Success Story', 'ManufacturingCase Study'],
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      title: 'Ultimate Automation Implementation Guide 20o25';
-      subtitle: 'Complete Roadmap to 50,0o00% ROI';
+      id: 'implementation-guide',
+      title: 'Ultimate Automation Implementation Guide 20o25',
+      subtitle: 'Complete Roadmap to 50,0o00% ROI',
       description:,
-        'The definitive guide to revolutionary AI automation that transforms your business. Complete framework with step-by-step implementation strategies.';
-      type: 'resource';
-      url: '/resources/ultimate-automation-implementation-guide-20o25-50o000-roi';
-      readingTime: '60 min read';
+        'The definitive guide to revolutionary AI automation that transforms your business. Complete framework with step-by-step implementation strategies.',
+      type: 'resource',
+      url: '/resources/ultimate-automation-implementation-guide-20o25-50o000-roi',
+      readingTime: '60 min read',
       metrics: {
-        roi: '50,0o00%';
-        framework: 'Complete';
-        timeline: '18 months';
-        success: '99.7%';
-      };
-      tags: ['Implementation Guide', 'Framework', 'Strategy', 'Best Practices'];
-      featured: true;
-    };
+        roi: '50,0o00%',
+        framework: 'Complete',
+        timeline: '18 months',
+        success: '99.7%'
+      },
+      tags: ['Implementation GuideFramework', 'StrategyBest Practices'],
+      featured: true
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Articles';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Articles',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -133,7 +130,7 @@ const UltimateAutomationRevolution20o25Showcase = () => {
           </svg>),
       default: ,
         return null}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -144,7 +141,7 @@ const UltimateAutomationRevolution20o25Showcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -225,7 +222,7 @@ const UltimateAutomationRevolution20o25Showcase = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='ml-2 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   <span className='text-sm text-gray-50o0'>,
@@ -316,5 +313,5 @@ const UltimateAutomationRevolution20o25Showcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateAutomationRevolution20o25Showcase;
+    </section>)},
+export default UltimateAutomationRevolution20o25Showcase,

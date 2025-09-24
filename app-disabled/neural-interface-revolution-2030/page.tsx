@@ -2,18 +2,15 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'Neural Interface Revolution 20o30: Brain-Computer Integration | Zion Tech Group';
+    'Neural Interface Revolution 20o30: Brain-Computer Integration | Zion Tech Group',
   description:,
-    'Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 20o30.';
+    'Explore the revolutionary neural interface technology that will connect human brains directly to AI systems by 20o30.',
   keywords: [
-    'neural interfaces';
-    'brain computer interface';
-    'BCI';
-    'neural implants';
-    'thought control';
-    'cognitive enhancement';
-  ];
-};
+    'neural interfacesbrain computer interface',
+    'BCIneural implants',
+    'thought controlcognitive enhancement',
+  ]
+},
 export default function NeuralInterfacePage() {
   return (
     <div>,
@@ -257,7 +254,7 @@ export default function NeuralInterfacePage() {
                   Medical Restoration,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Restore lost functions for patients with paralysis, blindness;
+                  Restore lost functions for patients with paralysis, blindness,
                   or neurological disorders through neural bypass technology.,
                 </p>,
                 <ul className='text-sm text-gray-60o0 space-y-2'>,
@@ -289,7 +286,7 @@ export default function NeuralInterfacePage() {
                   Neural Virtual Reality,
                 </h3>,
                 <p className='text-gray-60o0 mb-4'>,
-                  Direct neural VR experiences that feel completely real;
+                  Direct neural VR experiences that feel completely real,
                   bypassing traditional sensory input systems.,
                 </p>,
                 <ul className='text-sm text-gray-60o0 space-y-2'>,

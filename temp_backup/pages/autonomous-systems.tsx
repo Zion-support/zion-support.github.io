@@ -1,17 +1,17 @@
 import { motion } from 'framer-motion',
 import {
-  Cpu;
-  Brain;
-  Rocket;
-  Zap;
-  Shield;
-  Target;
-  ArrowRight;
-  Play;
-  Star;
-  Cog;
-  Wrench;
-  Globe;
+  Cpu,
+  Brain,
+  Rocket,
+  Zap,
+  Shield,
+  Target,
+  ArrowRight,
+  Play,
+  Star,
+  Cog,
+  Wrench,
+  Globe,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function AutonomousSystems() {
@@ -51,7 +51,7 @@ export default function AutonomousSystems() {
                 <p className='text-lg text-gray-30o0 leading-relaxed mb-6'>,
                   Autonomous systems are AI-powered platforms that operate,
                   independently, making intelligent decisions and taking actions,
-                  without human intervention. They continuously learn, adapt;
+                  without human intervention. They continuously learn, adapt,
                   and optimize their window.window.performance.,
                 </p>,
                 <div className='space-y-4'>,
@@ -152,76 +152,70 @@ export default function AutonomousSystems() {
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'AI Autonomous Business Operations Engine';
+                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'AI Autonomous Business Operations Engine',
                   description:,
-                    'Complete business process automation with intelligent decision-making';
+                    'Complete business process automation with intelligent decision-making',
                   features: [
-                    'Process optimization';
-                    'Intelligent routing';
-                    'Performance analytics';
-                  ];
-                  href: '/autonomous-business-operations-engine';
-                };
+                    'Process optimizationIntelligent routing',
+                    'Performance analytics',
+                  ],
+                  href: '/autonomous-business-operations-engine'
+                },
                 {
-                  icon: <Rocket className='w-12 h-12 text-blue-40o0' />;
-                  title: 'AI Autonomous DevOps Platform';
+                  icon: <Rocket className='w-12 h-12 text-blue-40o0' />,
+                  title: 'AI Autonomous DevOps Platform',
                   description:,
-                    'Self-managing development and operations infrastructure';
+                    'Self-managing development and operations infrastructure',
                   features: [
-                    'Auto-scaling';
-                    'Deployment automation';
-                    'Performance monitoring';
-                  ];
-                  href: '/ai-autonomous-devops-platform';
-                };
+                    'Auto-scalingDeployment automation',
+                    'Performance monitoring',
+                  ],
+                  href: '/ai-autonomous-devops-platform'
+                },
                 {
-                  icon: <Zap className='w-12 h-12 text-purple-40o0' />;
-                  title: 'AI Autonomous Content Factory';
+                  icon: <Zap className='w-12 h-12 text-purple-40o0' />,
+                  title: 'AI Autonomous Content Factory',
                   description:,
-                    'Automated content creation and management system';
+                    'Automated content creation and management system',
                   features: [
-                    'Content generation';
-                    'SEO optimization';
-                    'Distribution automation';
-                  ];
-                  href: '/ai-autonomous-content-factory';
-                };
+                    'Content generationSEO optimization',
+                    'Distribution automation',
+                  ],
+                  href: '/ai-autonomous-content-factory'
+                },
                 {
-                  icon: <Shield className='w-12 h-12 text-green-40o0' />;
-                  title: 'AI Autonomous Customer Success';
+                  icon: <Shield className='w-12 h-12 text-green-40o0' />,
+                  title: 'AI Autonomous Customer Success',
                   description:,
-                    'Proactive customer support and success management';
+                    'Proactive customer support and success management',
                   features: [
-                    'Issue prediction';
-                    'Automated resolution';
-                    'Success tracking';
-                  ];
-                  href: '/ai-autonomous-customer-success';
-                };
+                    'Issue predictionAutomated resolution',
+                    'Success tracking',
+                  ],
+                  href: '/ai-autonomous-customer-success'
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-yellow-40o0' />;
-                  title: 'AI Autonomous Sales Intelligence';
+                  icon: <Target className='w-12 h-12 text-yellow-40o0' />,
+                  title: 'AI Autonomous Sales Intelligence',
                   description:,
-                    'Intelligent sales process automation and optimization';
+                    'Intelligent sales process automation and optimization',
                   features: [
-                    'Lead scoring';
-                    'Opportunity tracking';
-                    'Performance analytics';
-                  ];
-                  href: '/ai-sales-intelligence-automation';
-                };
+                    'Lead scoringOpportunity tracking',
+                    'Performance analytics',
+                  ],
+                  href: '/ai-sales-intelligence-automation'
+                },
                 {
-                  icon: <Globe className='w-12 h-12 text-pink-40o0' />;
-                  title: 'AI Autonomous Ecosystem Manager';
-                  description: 'Comprehensive business ecosystem coordination';
+                  icon: <Globe className='w-12 h-12 text-pink-40o0' />,
+                  title: 'AI Autonomous Ecosystem Manager',
+                  description: 'Comprehensive business ecosystem coordination',
                   features: [
-                    'Partner management';
-                    'Resource optimization';
-                    'Growth automation';
-                  ];
-                  href: '/ai-autonomous-ecosystem-manager';
-                };
+                    'Partner managementResource optimization',
+                    'Growth automation',
+                  ],
+                  href: '/ai-autonomous-ecosystem-manager'
+                },
               ].map((system, index) => (
                 <motion.div,
                   key={index}
@@ -279,29 +273,29 @@ export default function AutonomousSystems() {
             <div className='grid md: grid-cols-4 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />;
-                  title: '1. Data Collection';
+                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />,
+                  title: '1. Data Collection',
                   description:,
-                    'Continuous gathering of relevant data from multiple sources';
-                };
+                    'Continuous gathering of relevant data from multiple sources',
+                },
                 {
-                  icon: <Cog className='w-12 h-12 text-blue-40o0' />;
-                  title: '2. Analysis & Learning';
+                  icon: <Cog className='w-12 h-12 text-blue-40o0' />,
+                  title: '2. Analysis & Learning',
                   description:,
-                    'AI-powered analysis and pattern recognition for continuous improvement';
-                };
+                    'AI-powered analysis and pattern recognition for continuous improvement',
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-purple-40o0' />;
-                  title: '3. Decision Making';
+                  icon: <Target className='w-12 h-12 text-purple-40o0' />,
+                  title: '3. Decision Making',
                   description:,
-                    'Intelligent decision-making based on learned patterns and goals';
-                };
+                    'Intelligent decision-making based on learned patterns and goals',
+                },
                 {
-                  icon: <Rocket className='w-12 h-12 text-green-40o0' />;
-                  title: '4. Autonomous Action';
+                  icon: <Rocket className='w-12 h-12 text-green-40o0' />,
+                  title: '4. Autonomous Action',
                   description:,
-                    'Execution of decisions and continuous optimization of processes';
-                };
+                    'Execution of decisions and continuous optimization of processes',
+                },
               ].map((step, index) => (
                 <motion.div,
                   key={index}
@@ -338,41 +332,41 @@ export default function AutonomousSystems() {
             <div className='grid md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Zap className='w-12 h-12 text-yellow-40o0' />;
-                  title: '24/7 Operation';
+                  icon: <Zap className='w-12 h-12 text-yellow-40o0' />,
+                  title: '24/7 Operation',
                   description:,
-                    'Continuous operation without breaks, holidays, or human limitations';
-                };
+                    'Continuous operation without breaks, holidays, or human limitations',
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-green-40o0' />;
-                  title: 'Increased Efficiency';
+                  icon: <Target className='w-12 h-12 text-green-40o0' />,
+                  title: 'Increased Efficiency',
                   description:,
-                    'Optimized processes and reduced operational costs through automation';
-                };
+                    'Optimized processes and reduced operational costs through automation',
+                },
                 {
-                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'Intelligent Decisions';
+                  icon: <Brain className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'Intelligent Decisions',
                   description:,
-                    'Data-driven decision making that improves over time';
-                };
+                    'Data-driven decision making that improves over time',
+                },
                 {
-                  icon: <Shield className='w-12 h-12 text-purple-40o0' />;
-                  title: 'Enhanced Security';
+                  icon: <Shield className='w-12 h-12 text-purple-40o0' />,
+                  title: 'Enhanced Security',
                   description:,
-                    'Proactive threat detection and automated security responses';
-                };
+                    'Proactive threat detection and automated security responses',
+                },
                 {
-                  icon: <Rocket className='w-12 h-12 text-blue-40o0' />;
-                  title: 'Scalability';
+                  icon: <Rocket className='w-12 h-12 text-blue-40o0' />,
+                  title: 'Scalability',
                   description:,
-                    'Easily scale operations without proportional increase in human resources';
-                };
+                    'Easily scale operations without proportional increase in human resources',
+                },
                 {
-                  icon: <Star className='w-12 h-12 text-pink-40o0' />;
-                  title: 'Competitive Advantage';
+                  icon: <Star className='w-12 h-12 text-pink-40o0' />,
+                  title: 'Competitive Advantage',
                   description:,
-                    'Stay ahead with cutting-edge autonomous technology';
-                };
+                    'Stay ahead with cutting-edge autonomous technology',
+                },
               ].map((benefit, index) => (
                 <motion.div,
                   key={index}

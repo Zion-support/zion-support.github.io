@@ -1,11 +1,11 @@
-import React from "react";
+import React from "react",
 import { Textarea } from "@/components/ui/textarea",
 import { Input } from "@/components/ui/input",
 import { Label } from "@/components/ui/label",
-import React from 'react';;
-import { Textarea } from "@/components/ui/textarea";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
+import React from 'react',
+import { Textarea } from "@/components/ui/textarea",
+import { Input } from "@/components/ui/input",
+import { Label } from "@/components/ui/label",
 
 export interface MessageTabProps {
   message: string,
@@ -23,9 +23,9 @@ export function MessageTab({
   proposalLink,
   setProposalLink}: MessageTabProps) {
 export interface MessageTabProps {
-  message: string;
-  setMessage: (message: string) => void;
-  proposalLink: string;
+  message: string,
+  setMessage: (message: string) => void,
+  proposalLink: string,
   setProposalLink: (link: string) => void}
 ,
 export function MessageTab({ message, setMessage, proposalLink, setProposalLink }: MessageTabProps) {
@@ -56,7 +56,7 @@ export function MessageTab({ message, setMessage, proposalLink, setProposalLink 
         />,
       </div>),
 export interface MessageTabProps {
-  message: string;
+  message: string,
   setMessage: (message: string) => void,
   proposalLink: string,
   setProposalLink: (link: string) => void}
@@ -101,7 +101,7 @@ function MessageTab() {
     </div>)}
   ),
 export interface MessageTabProps {
-  message: string;
+  message: string,
   setMessage: (message: string) => void,
   proposalLink: string,
   setProposalLink: (link: string) => void}

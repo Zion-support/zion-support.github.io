@@ -10,96 +10,88 @@ import {
   Shield,
   Globe,
   Rocket,
-  Target;
-  TrendingUp;
-  Users;
-  BarChart3;
-  Lightbulb;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Award;
+  Target,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Lightbulb,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
   Sparkles} from 'lucide-react',
 const AI20o25_20o26UltimateInnovationShowcase = () => {
   const [activeTabsetActiveTab] = useState('breakthroughs'),
   const [currentInnovationsetCurrentInnovation] = useState(0),
   const innovations = [
     {
-      id: 'quantum-ai';
-      title: 'Quantum-AI Fusion Technology';
-      description: 'Revolutionary fusion of quantum computing with artificial intelligencedelivering unprecedented processing power and problem-solving capabilities.';
+      id: 'quantum-ai',
+      title: 'Quantum-AI Fusion Technology',
+      description: 'Revolutionary fusion of quantum computing with artificial intelligencedelivering unprecedented processing power and problem-solving capabilities.',
       features: [
-        '10o00x faster computation speeds';
-        'Quantum neural networks';
-        'Real-time optimization';
-        'Breakthrough in cryptography'];
-      impact: 'Transform entire industries with quantum-enhanced AI';
-      icon: Cpu;
-      color: 'from-purple-50o0 to-pink-50o0'};
+        '10o00x faster computation speedsQuantum neural networks',
+        'Real-time optimizationBreakthrough in cryptography'],
+      impact: 'Transform entire industries with quantum-enhanced AI',
+      icon: Cpu,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      id: 'neural-consensus';
-      title: 'Neural Consensus Revolution';
-      description: 'Advanced AI systems that achieve consensus across distributed networksenabling unprecedented coordination and decision-making.';
+      id: 'neural-consensus',
+      title: 'Neural Consensus Revolution',
+      description: 'Advanced AI systems that achieve consensus across distributed networksenabling unprecedented coordination and decision-making.',
       features: [
-        'Distributed intelligence networks';
-        'Consensus-driven automation';
-        'Real-time collaboration';
-        'Scalable decision frameworks'];
-      impact: 'Enable global-scale intelligent coordination';
-      icon: Brain;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+        'Distributed intelligence networksConsensus-driven automation',
+        'Real-time collaborationScalable decision frameworks'],
+      impact: 'Enable global-scale intelligent coordination',
+      icon: Brain,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      id: 'synthetic-consciousness';
-      title: 'Synthetic Consciousness Platform';
-      description: 'Breakthrough in artificial consciousness that enables AI systems to develop genuine understanding and emotional intelligence.';
+      id: 'synthetic-consciousness',
+      title: 'Synthetic Consciousness Platform',
+      description: 'Breakthrough in artificial consciousness that enables AI systems to develop genuine understanding and emotional intelligence.',
       features: [
-        'Emotional intelligence processing';
-        'Contextual understanding';
-        'Creative problem solving';
-        'Ethical decision making'];
-      impact: 'Create truly intelligent and empathetic AI systems';
-      icon: Lightbulb;
-      color: 'from-green-50o0 to-emerald-50o0'};
+        'Emotional intelligence processingContextual understanding',
+        'Creative problem solvingEthical decision making'],
+      impact: 'Create truly intelligent and empathetic AI systems',
+      icon: Lightbulb,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      id: 'omniversal-computing';
-      title: 'Omniversal Computing Architecture';
-      description: 'Next-generation computing that operates across multiple dimensions and realitiesenabling solutions to previously impossible problems.';
+      id: 'omniversal-computing',
+      title: 'Omniversal Computing Architecture',
+      description: 'Next-generation computing that operates across multiple dimensions and realitiesenabling solutions to previously impossible problems.',
       features: [
-        'Multi-dimensional processing';
-        'Reality simulation capabilities';
-        'Infinite scalability';
-        'Universal problem solving'];
-      impact: 'Solve problems across all possible realities';
-      icon: Globe;
+        'Multi-dimensional processingReality simulation capabilities',
+        'Infinite scalabilityUniversal problem solving'],
+      impact: 'Solve problems across all possible realities',
+      icon: Globe,
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   const breakthroughStats = [
-    { label: 'Processing Speed 'Increase', 'value: '10,0o00'x', 'icon: Zap };
-    { label: 'Problem-Solving 'Accuracy', 'value: '99.9%'icon: Target };
-    { label: 'Energy 'Efficiency', 'value: '95%'icon: Shield };
-    { label: 'Global Adoption 'Rate', 'value: '87%'icon: Users }
+    { label: 'Processing Speed 'Increasevalue: '10,0o00'xicon: Zap },
+    { label: 'Problem-Solving 'Accuracyvalue: '99.9%'icon: Target },
+    { label: 'Energy 'Efficiencyvalue: '95%'icon: Shield },
+    { label: 'Global Adoption 'Ratevalue: '87%'icon: Users }
   ],
   const useCases = [
     {
-      category: 'Healthcare';
-      title: 'AI-Powered Medical Breakthroughs';
-      description: 'Revolutionary medical AI that can diagnose diseases with 99.9% accuracy and develop personalized treatment plans.';
-      benefits: ['Early disease 'detection', 'Personalized 'medicine', 'Drug discovery 'acceleration', 'Surgical precision enhancement']};
+      category: 'Healthcare',
+      title: 'AI-Powered Medical Breakthroughs',
+      description: 'Revolutionary medical AI that can diagnose diseases with 99.9% accuracy and develop personalized treatment plans.',
+      benefits: ['Early disease 'detectionPersonalized 'medicine', 'Drug discovery 'accelerationSurgical precision enhancement']},
     {
-      category: 'Climate';
-      title: 'Climate Crisis Solutions';
-      description: 'Advanced AI systems that can model and solve complex climate challengesfrom carbon capture to renewable energy optimization.';
-      benefits: ['Carbon footprint 'reduction', 'Renewable energy 'optimization', 'Climate modeling 'accuracy', 'Sustainable solutions']};
+      category: 'Climate',
+      title: 'Climate Crisis Solutions',
+      description: 'Advanced AI systems that can model and solve complex climate challengesfrom carbon capture to renewable energy optimization.',
+      benefits: ['Carbon footprint 'reductionRenewable energy 'optimization', 'Climate modeling 'accuracySustainable solutions']},
     {
-      category: 'Space';
-      title: 'Space Exploration Revolution';
-      description: 'AI-powered space exploration that can autonomously navigatediscoverand colonize new worlds.';
-      benefits: ['Autonomous space 'missions', 'Planetary 'discovery', 'Resource 'optimization', 'Interstellar communication']};
+      category: 'Space',
+      title: 'Space Exploration Revolution',
+      description: 'AI-powered space exploration that can autonomously navigatediscoverand colonize new worlds.',
+      benefits: ['Autonomous space 'missionsPlanetary 'discovery', 'Resource 'optimizationInterstellar communication']},
     {
-      category: 'Education';
-      title: 'Personalized Learning Revolution';
-      description: 'AI tutors that adapt to individual learning styles and pacemaking education accessible to everyone globally.';
-      benefits: ['Personalized 'curriculum', 'Adaptive 'learning', 'Global 'accessibility', 'Real-time assessment']}
+      category: 'Education',
+      title: 'Personalized Learning Revolution',
+      description: 'AI tutors that adapt to individual learning styles and pacemaking education accessible to everyone globally.',
+      benefits: ['Personalized 'curriculumAdaptive 'learning', 'Global 'accessibilityReal-time assessment']}
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -272,5 +264,5 @@ const AI20o25_20o26UltimateInnovationShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AI20o25_20o26UltimateInnovationShowcase;
+    </div>)},
+export default AI20o25_20o26UltimateInnovationShowcase,

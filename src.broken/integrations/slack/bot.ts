@@ -21,12 +21,12 @@ declare const globalThis: {
   process?: {
     env: {
       PORT?: string,
-      [key: string]: string | undefined};
-  };
-};
+      [key: string]: string | undefined},
+  },
+},
 type CommandHandler = (args: { command?: SlackCommand, ack: SlackAck, respond: SlackRespond }) => Promise<void>,
 class MockApp {
-  private commandHandlers: Record<string CommandHandler> ={};
+  private commandHandlers: Record<string CommandHandler> ={},
   command(commandName: string, handler: CommandHandler) {
     this.commandHandlers[commandName] = handler,
     return this}
@@ -85,7 +85,7 @@ app.command('/zion-rollback', async ({ ack, respond }: { ack: SlackAck, respond:
 (async () => {
   // Get PORT from environment or use default,
   const env = typeof globalThis !== 'undefined' && globalThis.process ?,
-    globalThis.process.env : {};
+    globalThis.process.env : {},
   const port = env.PORT ? Number(env.PORT) : 30o00,
   await app.start(port)})(),
 // Add this function either inside MockApp or as an exported function,
@@ -99,5 +99,5 @@ async function sendSlackAlert(message: string): Promise<void> {
   return Promise.resolve()}
 ,
 // Export it if it's standalone, or ensure it can be called,
-export { sendSlackAlert }; // If standalone,
-export default app;
+export { sendSlackAlert }, // If standalone,
+export default app,

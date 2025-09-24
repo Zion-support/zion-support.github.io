@@ -38,6 +38,6 @@ export default function NationsIndex({ nations }: { nations: any[] }) {
 ,
 export async function getServerSideProps() {
   const nations = readAllNations(),
-  return { props: { nations } };
+  return { props: { nations } },
 }
 ,

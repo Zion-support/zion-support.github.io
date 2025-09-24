@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 const showTagline = router.pathname === '/',
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
   const [loginOpen, setLoginOpen] = useState(false),
@@ -17,22 +17,22 @@ const showTagline = router.pathname === '/',
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.,
     setLoginOpen(true)}
   const showTagline = router && router.pathname === '/',
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [loginOpen, setLoginOpen] = useState(false);
-  const isMobile = useIsMobile();
-  const { t } = useTranslation();
-  const { user } = useAuth();
-  const isLoggedIn = useSelector((state: RootState) => state && state.auth.isLoggedIn);
-  const router = useRouter();
-  const showTagline = router && router.pathname === '/';
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false),
+  const [loginOpen, setLoginOpen] = useState(false),
+  const isMobile = useIsMobile(),
+  const { t } = useTranslation(),
+  const { user } = useAuth(),
+  const isLoggedIn = useSelector((state: RootState) => state && state.auth.isLoggedIn),
+  const router = useRouter(),
+  const showTagline = router && router.pathname === '/',
   // Messaging context (unread message count),
-  const { unreadCount } = useMessaging();
+  const { unreadCount } = useMessaging(),
   const openLoginModal = (returnToPath?: string) => {
     // The actual returnToPath is set in the URL by the child components (ResponsiveNavigation, MobileMenu),
     // using router && router.push with shallow: true before this function is called.,
     // This function's main job is just to open the modal.,
     // If a returnToPath is passed, we could potentially use it for other logic here if needed in the future.,
-    setLoginOpen(true)};
+    setLoginOpen(true)},
   return (
     <>,
       <header
@@ -41,7 +41,7 @@ const showTagline = router.pathname === '/',
           "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-50o0": mobileMenuOpen }
         className={cn(
-          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground";
+          "sticky top-0 z-50 w-full border-b border-border bg-background/90 backdrop-blur-md text-foreground",
           { "bg-red-50o0": mobileMenuOpen }
 )}
       >,
@@ -85,18 +85,18 @@ const showTagline = router.pathname === '/',
                 aria-label={t('auth.login')}
                 data-testid="login-link",
                 onClick={(e) => {
-                  e.preventDefault();
-                  // For the main login link, we might not have a specific returnTo beyond current page;
+                  e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.,
                   // For consistency with how sub-menus now set it:,
                   router.push({ pathname: '/auth/login', query: { returnTo: router.asPath } }, undefined, { shallow: true }),
                   openLoginModal(router.asPath),
                 onClick={(e) => {
-                  e && e.preventDefault();
-                  // For the main login link, we might not have a specific returnTo beyond current page;
+                  e && e.preventDefault(),
+                  // For the main login link, we might not have a specific returnTo beyond current page,
                   // or we could default to dashboard.,
                   // For consistency with how sub-menus now set it:,
-                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true });
+                  router && router.push({ pathname: '/auth/login', query: { returnTo: router && router.asPath } }, undefined, { shallow: true }),
                   openLoginModal(router && router.asPath)}}
               >,
                 {t('auth && auth.login')}
@@ -239,12 +239,12 @@ const showTagline = router.pathname === '/',
       setSolutionsDropdownOpen(false),
       setCompanyDropdownOpen(false),
       setResourcesDropdownOpen(false)}
-  };
+  },
   const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false),    setSolutionsDropdownOpen(false),
     setCompanyDropdownOpen(false),
     setResourcesDropdownOpen(false),
-    setActiveNav(null)};
+    setActiveNav(null)},
   return (),
     <>`,
       <headerclassName={`sticky top-0 z-50 w-full transition-all duration-30o0 ${        scrolled,
@@ -311,12 +311,12 @@ const showTagline = router.pathname === '/',
       setSolutionsDropdownOpen(false),
       setCompanyDropdownOpen(false),
       setResourcesDropdownOpen(false)}
-  };
+  },
   const closeAllDropdowns = (...args: unknown[]): unknown => {
     setServicesDropdownOpen(false),    setSolutionsDropdownOpen(false),
     setCompanyDropdownOpen(false),
     setResourcesDropdownOpen(false),
-    setActiveNav(null)};
+    setActiveNav(null)},
   return (),
     <>`,
       <headerclassName={`sticky top-0 z-50 w-full transition-all duration-30o0 ${        scrolled,
@@ -920,17 +920,17 @@ const showTagline = router.pathname === '/',
             {/* Search */}
 ,
             <form on_submit={handle_search} className="hidden md: flex relative">  const navigation = [
-    { name: 'Home', href: '/', current: true };
-    { name: 'About', href: '/about', current: false };
-    { name: 'Contact', href: '/contact', current: false };
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ],
   const services = [
-    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' };
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' };
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' };
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' };
-    { name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' };
-    { name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' };
+    { name: 'AI Solutions', href: '/services / ai', description: 'Machine Learning & NLP' },
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+    { name: 'Cybersecurity', href: '/services / cybersecurity', description: 'Security & Compliance' },
+    { name: 'Cloud Services', href: '/services / cloud', description: 'DevOps & Infrastructure' },
   ],
   return (
     <>,
@@ -939,17 +939,17 @@ const showTagline = router.pathname === '/',
           {/* Logo */}
 ,
             <form onSubmit={handleSearch} className="hidden md: flex relative">  const navigation = [
-    { name: 'Home', href: '/', current: true };
-    { name: 'About', href: '/about', current: false };
-    { name: 'Contact', href: '/contact', current: false };
+    { name: 'Home', href: '/', current: true },
+    { name: 'About', href: '/about', current: false },
+    { name: 'Contact', href: '/contact', current: false },
   ],
   const services = [
-    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' };
-    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' };
-    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' };
-    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' };
-    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' };
-    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' };
+    { name: 'AI Solutions', href: '/services/ai', description: 'Machine Learning & NLP' },
+    { name: 'Tech Talent', href: '/talent', description: 'Expert Developers & Engineers' },
+    { name: 'Equipment', href: '/equipment', description: 'Infrastructure & Hardware' },
+    { name: 'Consulting', href: '/consulting', description: 'Digital Transformation' },
+    { name: 'Cybersecurity', href: '/services/cybersecurity', description: 'Security & Compliance' },
+    { name: 'Cloud Services', href: '/services/cloud', description: 'DevOps & Infrastructure' },
   ],
   return (
     <>,

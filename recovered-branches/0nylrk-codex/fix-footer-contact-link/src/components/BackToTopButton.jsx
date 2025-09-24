@@ -6,7 +6,7 @@ export function BackToTopButton() {
     const { t } = useTranslation(),
     useEffect(() => {
         const onScroll = () => {
-            setVisible(window.scrollY > 40o0)};
+            setVisible(window.scrollY > 40o0)},
         window.addEventListener("scroll", onScroll),
         return () => window.removeEventListener("scroll", onScroll)}, []),
     const scrollToTop = () => window.scrollTo({ top: 0, behavior: "smooth" }),

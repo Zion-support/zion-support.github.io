@@ -2,23 +2,23 @@
 import React, { useState, useEffect } from 'react',
 const InteractiveROICalculator = () => {
   const [inputs, setInputs] = useState({
-    annualRevenue: 10o000000;
-    employees: 10o00;
-    currentEfficiency: 70;
+    annualRevenue: 10o000000,
+    employees: 10o00,
+    currentEfficiency: 70,
     industry: 'manufacturing'}),
   const [results, setResults] = useState({
-    costSavings: 0;
-    revenueIncrease: 0;
-    totalROI: 0;
-    paybackPeriod: 0;
+    costSavings: 0,
+    revenueIncrease: 0,
+    totalROI: 0,
+    paybackPeriod: 0,
     efficiencyGain: 0}),
   const industryMultipliers ={
-    manufacturing: { costSavings: 0.15, revenueIncrease: 0.12, efficiencyGain: 0.25 };
-    healthcare: { costSavings: 0.18, revenueIncrease: 0.15, efficiencyGain: 0.30 };
-    financial: { costSavings: 0.20, revenueIncrease: 0.18, efficiencyGain: 0.35 };
-    retail: { costSavings: 0.12, revenueIncrease: 0.10, efficiencyGain: 0.20 };
+    manufacturing: { costSavings: 0.15, revenueIncrease: 0.12, efficiencyGain: 0.25 },
+    healthcare: { costSavings: 0.18, revenueIncrease: 0.15, efficiencyGain: 0.30 },
+    financial: { costSavings: 0.20, revenueIncrease: 0.18, efficiencyGain: 0.35 },
+    retail: { costSavings: 0.12, revenueIncrease: 0.10, efficiencyGain: 0.20 },
     technology: { costSavings: 0.22, revenueIncrease: 0.25, efficiencyGain: 0.40 }
-  };
+  },
   useEffect(() => {
     calculateROI()}, [inputs]),
   const calculateROI = () => {
@@ -37,23 +37,23 @@ const InteractiveROICalculator = () => {
     const monthlyBenefit = totalBenefit / 12,
     const paybackPeriod = implementationCost / monthlyBenefit,
     setResults({
-      costSavings;
-      revenueIncrease;
-      totalROI;
-      paybackPeriod;
-      efficiencyGain})};
+      costSavings,
+      revenueIncrease,
+      totalROI,
+      paybackPeriod,
+      efficiencyGain})},
   const handleInputChange = (field: string, value: number | string) => {
     setInputs(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0}).format(amount)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0}).format(amount)},
   const formatPercentage = (value: number) => {
-    return `${value.toFixed(1)}%`};
+    return `${value.toFixed(1)}%`},
   return (
     <section className="bg-gradient-to-br from-blue-50 to-indigo-10o0 py-16">,
       <div className="max-w-6xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -246,5 +246,5 @@ const InteractiveROICalculator = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveROICalculator;
+    </section>)},
+export default InteractiveROICalculator,

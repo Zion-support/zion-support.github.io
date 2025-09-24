@@ -6,28 +6,28 @@ const AI20o26SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
   const content = [
     {
-      title: "AI 20o26: Synthetic Consciousness Breakthrough";
-      subtitle: "Ultimate Guide to 1,20o0% ROI Through Artificial General Intelligence";
-      metrics: "1,20o0% ROI • $45.8M Savings • 99.9% Satisfaction";
-      url: "/blog/ai-20o26-synthetic-consciousness-breakthrough-ultimate-guide";
-      type: "blog";
-      readingTime: "32 min read";
-      highlight: "Artificial General Intelligence"};
+      title: "AI 20o26: Synthetic Consciousness Breakthrough",
+      subtitle: "Ultimate Guide to 1,20o0% ROI Through Artificial General Intelligence",
+      metrics: "1,20o0% ROI • $45.8M Savings • 99.9% Satisfaction",
+      url: "/blog/ai-20o26-synthetic-consciousness-breakthrough-ultimate-guide",
+      type: "blog",
+      readingTime: "32 min read",
+      highlight: "Artificial General Intelligence"},
     {
-      title: "Neural Interface Revolution";
-      subtitle: "850% ROI Through Brain-Computer Integration";
-      metrics: "850% ROI • $15.2M Savings • 99.7% Accuracy";
-      url: "/blog/ai-20o26-neural-interface-revolution-ultimate-guide";
-      type: "blog";
-      readingTime: "28 min read";
-      highlight: "Brain-Computer Interface"};
+      title: "Neural Interface Revolution",
+      subtitle: "850% ROI Through Brain-Computer Integration",
+      metrics: "850% ROI • $15.2M Savings • 99.7% Accuracy",
+      url: "/blog/ai-20o26-neural-interface-revolution-ultimate-guide",
+      type: "blog",
+      readingTime: "28 min read",
+      highlight: "Brain-Computer Interface"},
     {
-      title: "Fortune 50o0 Neural Transformation";
-      subtitle: "$8.2B Company Achieves 850% ROI in 18 Months";
-      metrics: "850% ROI • $69.7M Savings • 98.7% Adoption";
-      url: "/case-studies/fortune-50o0-neural-interface-transformation-850-roi-success";
-      type: "case-study";
-      readingTime: "22 min read";
+      title: "Fortune 50o0 Neural Transformation",
+      subtitle: "$8.2B Company Achieves 850% ROI in 18 Months",
+      metrics: "850% ROI • $69.7M Savings • 98.7% Adoption",
+      url: "/case-studies/fortune-50o0-neural-interface-transformation-850-roi-success",
+      type: "case-study",
+      readingTime: "22 min read",
       highlight: "Fortune 50o0 Success"}
   ],
   useEffect(() => {
@@ -41,7 +41,7 @@ const AI20o26SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
   }[]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o26-consciousness-banner-'dismissed', 'true')};
+    localStorage.setItem('ai20o26-consciousness-banner-'dismissedtrue')},
   if (!isVisible) return null,
   const currentContent = content[currentSlide],
   return (
@@ -166,5 +166,5 @@ const AI20o26SyntheticConsciousnessBreakthroughBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o26SyntheticConsciousnessBreakthroughBanner;
+    </div>)},
+export default AI20o26SyntheticConsciousnessBreakthroughBanner,

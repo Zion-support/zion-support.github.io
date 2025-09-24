@@ -8,15 +8,15 @@ interface HireNowCTAProps {
     id: string,
     full_name?: string,
     professional_title?: string,
-    hourly_rate?: number};
+    hourly_rate?: number},
 }
 ,
 export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
   const [modalOpensetModalOpen] = useState(false),
   const handleOpenModal = () => {
-    setModalOpen(true)};
+    setModalOpen(true)},
   const handleCloseModal = () => {
-    setModalOpen(false)};
+    setModalOpen(false)},
   // Check if we have minimum required data,
   const canHire = talentProfile && talentProfile.id && talentProfile.full_name,
   // Calculate talent profile completeness (simplified),
@@ -51,15 +51,15 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
         isOpen={modalOpen}
         onClose={handleCloseModal}
         talent={talentProfile ? {
-          id: talentProfile.id;
-          user_id: talentProfile.id;
-          full_name: talentProfile.full_name || 'Talent';
-          professional_title: talentProfile.professional_title || 'Professional';
-          bio: '';
-          years_experience: 0;
-          skills: [];
-          availability_type: 'full_time';
-          timezone: '';
+          id: talentProfile.id,
+          user_id: talentProfile.id,
+          full_name: talentProfile.full_name || 'Talent',
+          professional_title: talentProfile.professional_title || 'Professional',
+          bio: '',
+          years_experience: 0,
+          skills: [],
+          availability_type: 'full_time',
+          timezone: '',
           hourly_rate: talentProfile.hourly_rate} : null}
       />,
     </div>)}
@@ -68,14 +68,10 @@ export function HireNowCTA({ talentProfile }: HireNowCTAProps) {
 function calculateProfileCompleteness(profile: any) {
   if (!profile) return 0,
   const fields = [
-    'full_name',
-    'professional_title',
-    'bio',
-    'skills',
-    'hourly_rate';
-    'location';
-    'portfolio_links';
-    'experience';
+    'full_nameprofessional_title',
+    'bioskills',
+    'hourly_ratelocation',
+    'portfolio_linksexperience',
     'availability_type'],
   let completedFields = 0,
   let totalFields = 0,

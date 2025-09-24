@@ -1,106 +1,102 @@
-import React from 'react';;
-import SEO from '../components/SEO';
-import Layout from '../components/layout/Layout';
-import { motion } from 'framer-motion';
+import React from 'react',
+import SEO from '../components/SEO',
+import Layout from '../components/layout/Layout',
+import { motion } from 'framer-motion',
 import {
   Star, Brain, Atom, Shield, Zap, TrendingUp, Globe,
   Rocket, Lock, Palette, Factory, Database, Cloud,
-  Cpu, Eye, Target, Users, BarChart3} from 'lucide-react';
-import { innovative20o25MicroSaasBatch } from '../data/innovative-20o25-micro-saas-batch';
+  Cpu, Eye, Target, Users, BarChart3} from 'lucide-react',
+import { innovative20o25MicroSaasBatch } from '../data/innovative-20o25-micro-saas-batch',
 const Comprehensive20o25InnovativeServicesShowcase: React.FC = () => {
   const categories = [
-    { name:'AI & Marketing', icon:Brain, color: 'from-purple-50o0 to-pink-50o0' };
-    { name:'Quantum & Finance', icon:Atom, color: 'from-cyan-50o0 to-blue-50o0' };
-    { name:'Space Technology', icon:Rocket, color: 'from-indigo-50o0 to-purple-50o0' };
-    { name:'Metaverse & AI', icon:Globe, color: 'from-green-50o0 to-teal-50o0' };
-    { name:'Cybersecurity', icon:Shield, color: 'from-red-50o0 to-orange-50o0' };
-    { name:'Supply Chain & AI', icon:Factory, color: 'from-yellow-50o0 to-orange-50o0' };
-    { name:'Quantum & Healthcare', icon:Cpu, color: 'from-violet-50o0 to-purple-50o0' };
-    { name:'AI & Creativity', icon:Palette, color: 'from-pink-50o0 to-rose-50o0' };
+    { name:'AI & Marketing', icon:Brain, color: 'from-purple-50o0 to-pink-50o0' },
+    { name:'Quantum & Finance', icon:Atom, color: 'from-cyan-50o0 to-blue-50o0' },
+    { name:'Space Technology', icon:Rocket, color: 'from-indigo-50o0 to-purple-50o0' },
+    { name:'Metaverse & AI', icon:Globe, color: 'from-green-50o0 to-teal-50o0' },
+    { name:'Cybersecurity', icon:Shield, color: 'from-red-50o0 to-orange-50o0' },
+    { name:'Supply Chain & AI', icon:Factory, color: 'from-yellow-50o0 to-orange-50o0' },
+    { name:'Quantum & Healthcare', icon:Cpu, color: 'from-violet-50o0 to-purple-50o0' },
+    { name:'AI & Creativity', icon:Palette, color: 'from-pink-50o0 to-rose-50o0' },
     { name:'AI & Robotics', icon:Database, color: 'from-emerald-50o0 to-green-50o0' }
-  ];
+  ],
 // Import existing services for comprehensive showcase,
-import { realMicroSaasServices20o25 } from '../data/20o25-real-micro-saas-services';
+import { realMicroSaasServices20o25 } from '../data/20o25-real-micro-saas-services',
 // Combine all services,
 const allServices = [
-  ...innovativeMicroSaas20o25ExpansionV2;
-  ...emergingTechInnovations20o25;
-  ...realMicroSaasServices20o25];
+  ...innovativeMicroSaas20o25ExpansionV2,
+  ...emergingTechInnovations20o25,
+  ...realMicroSaasServices20o25],
 // Service categories,
 const serviceCategories = [
-  'All ServicesAI & Machine Learning';
-  'Quantum ComputingCybersecurity';
-  'Healthcare & BiotechFinance & Investment';
-  'Supply Chain & LogisticsManufacturing & Industry 4.0';
-  'Space TechnologyBlockchain & Web3';
-  'Education & LearningLegal & Compliance';
-  'Energy & SustainabilityAutonomous Vehicles';
-  'IoT & Edge ComputingMetaverse & VR';
-  'Neuroscience & BCI'];
+  'All ServicesAI & Machine LearningQuantum ComputingCybersecurity',
+  'Healthcare & BiotechFinance & InvestmentSupply Chain & LogisticsManufacturing & Industry 4.0',
+  'Space TechnologyBlockchain & Web3Education & LearningLegal & Compliance',
+  'Energy & SustainabilityAutonomous VehiclesIoT & Edge ComputingMetaverse & VR',
+  'Neuroscience & BCI'],
 // Helper function to get service category,
 const getServiceCategory = (service: any) => {
-  if (service.category) return service.category;
-  if (service.type) return service.type;
-  return 'Other'};
+  if (service.category) return service.category,
+  if (service.type) return service.type,
+  return 'Other'},
 // Helper function to get service pricing,
 const getServicePricing = (service: any) => {
-  if (service.pricing?.starter) return service.pricing.starter;
-  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`;
-  if (service.price?.monthly) return `$${service.price.monthly}/month`;
-  return 'Contact for pricing';
-};
+  if (service.pricing?.starter) return service.pricing.starter,
+  if (service.pricing?.monthly) return `$${service.pricing.monthly}/month`,
+  if (service.price?.monthly) return `$${service.price.monthly}/month`,
+  return 'Contact for pricing',
+},
 // Helper function to get service features,
 const getServiceFeatures = (service: any) => {
-  if (service.features) return service.features;
-  if (service.keyFeatures) return service.keyFeatures;
-  return []};
+  if (service.features) return service.features,
+  if (service.keyFeatures) return service.keyFeatures,
+  return []},
 // Helper function to get service description,
 const getServiceDescription = (service: any) => {
-  if (service.description) return service.description;
-  if (service.tagline) return service.tagline;
-  return ''};
+  if (service.description) return service.description,
+  if (service.tagline) return service.tagline,
+  return ''},
 export default function Comprehensive20o25InnovativeServicesShowcase() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('All Services');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('All Services'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   // Filter and sort services,
   const filteredServices = allServices,
     .filter(service => {
-      const serviceName = (service as any).title || (service as any).name || '';
+      const serviceName = (service as any).title || (service as any).name || '',
       const matchesSearch = serviceName.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false;
+                           (service as any).tagline?.toLowerCase().includes(searchTerm.toLowerCase()) || false,
       const matchesCategory = selectedCategory === 'All Services' || ,
-                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]);
-      return matchesSearch && matchesCategory;
+                             getServiceCategory(service).includes(selectedCategory.split(' ')[0]),
+      return matchesSearch && matchesCategory,
     }),
     .sort((a, b) => {
-      const aName = (a as any).title || (a as any).name || '';
-      const bName = (b as any).title || (b as any).name || '';
+      const aName = (a as any).title || (a as any).name || '',
+      const bName = (b as any).title || (b as any).name || '',
       switch (sortBy) {
         case 'name':,
-          return aName.localeCompare(bName);
+          return aName.localeCompare(bName),
         case 'price':,
-          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0);
+          return ((a as any).price?.monthly || 0) - ((b as any).price?.monthly || 0),
         case 'rating':,
-          return ((b as any).rating || 0) - ((a as any).rating || 0);
+          return ((b as any).rating || 0) - ((a as any).rating || 0),
         case 'popularity':,
         default: return ((b as any).customers || 0) - ((a as any).customers || 0)}
-    });
+    }),
   const containerVariants ={
-    hidden: { opacity:0 };
+    hidden: { opacity:0 },
     visible: {
-      opacity:1;
+      opacity:1,
       transition: {
         staggerChildren:0.1}
     }
   const getCategoryIcon = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.icon :Star};
+    const cat = categories.find(c => c.name === category),
+    return cat ? cat.icon :Star},
   const getCategoryColor = (category: string) => {
-    const cat = categories.find(c => c.name === category);
-    return cat ? cat.color :'from-gray-50o0 to-gray-60o0'};
+    const cat = categories.find(c => c.name === category),
+    return cat ? cat.color :'from-gray-50o0 to-gray-60o0'},
   return (
     <Layout>,
       <SEO
@@ -111,8 +107,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
         title="20o25 Innovative Services Showcase | Zion Tech Group",
         description="Discover our cutting-edge 20o25 innovative micro SAAS services, IT solutions, and AI platforms. Quantum computing, space technology, and autonomous systems.",
         keywords={[
-          'innovative services 20o25micro SAAS';
-          'quantum computingspace technology';
+          'innovative services 20o25micro SAASquantum computingspace technology',
           'AI platformsautonomous systems']}
        />,
       {/* Hero Section */}
@@ -191,7 +186,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
           </motion.div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {categories.map((category, index) => {
-              const IconComponent = category.icon;
+              const IconComponent = category.icon,
               return (
                 <motion.div,
                   key={category.name}
@@ -211,7 +206,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>);
+                </motion.div>),
             })}
           </div>,
         </div>,
@@ -234,7 +229,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
           </motion.div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">,
             {innovative20o25MicroSaasBatch.filter(service => service.popular).map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
+              const IconComponent = getCategoryIcon(service.category),
               return (
                 <motion.div,
                   key={service.id}
@@ -306,7 +301,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>);
+                </motion.div>),
             })}
           </div>,
         </div>,
@@ -330,7 +325,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
           </motion.div>,
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">,
             {innovative20o25MicroSaasBatch.map((service, index) => {
-              const IconComponent = getCategoryIcon(service.category);
+              const IconComponent = getCategoryIcon(service.category),
               return (
                 <motion.div,
                   key={service.id}
@@ -356,7 +351,7 @@ export default function Comprehensive20o25InnovativeServicesShowcase() {
                       </div>,
                     </div>,
                   </div>,
-                </motion.div>);
+                </motion.div>),
             })}
           </div>,
         </div>,

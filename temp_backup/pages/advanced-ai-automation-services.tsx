@@ -2,167 +2,165 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Brain;
-  Sparkles;
-  Users;
-  BarChart3;
-  Settings;
-  Award;
-  Code;
-  TestTube;
-  Server;
-  Database;
-  Shield as Shield;
-  Mail;
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Brain,
+  Sparkles,
+  Users,
+  BarChart3,
+  Settings,
+  Award,
+  Code,
+  TestTube,
+  Server,
+  Database,
+  Shield as Shield,
+  Mail,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices2025 } from '../data/2025-advanced-ai-automation-services',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const heroStats = [
   {
-    label: 'AI Services Delivered';
-    value: '200+';
-    icon: <Brain className='w-5 h-5' />;
-  };
+    label: 'AI Services Delivered',
+    value: '200+',
+    icon: <Brain className='w-5 h-5' />
+  },
   {
-    label: 'Happy AI Clients';
-    value: '500+';
-    icon: <Users className='w-5 h-5' />;
-  };
+    label: 'Happy AI Clients',
+    value: '500+',
+    icon: <Users className='w-5 h-5' />
+  },
   {
-    label: 'AI Success Rate';
-    value: '99.8%';
-    icon: <Award className='w-5 h-5' />;
-  };
+    label: 'AI Success Rate',
+    value: '99.8%',
+    icon: <Award className='w-5 h-5' />
+  },
   {
-    label: 'AI ROI Average';
-    value: '500%';
-    icon: <TrendingUp className='w-5 h-5' />;
-  };
+    label: 'AI ROI Average',
+    value: '500%',
+    icon: <TrendingUp className='w-5 h-5' />
+  },
 ],
 const serviceCategories = [
   {
-    title: 'AI Development Tools';
-    description: 'Advanced AI-powered development and testing automation';
+    title: 'AI Development Tools',
+    description: 'Advanced AI-powered development and testing automation',
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Development Tools');
-    icon: Code;
-    color: 'from-emerald-500 to-teal-600';
-    features: ['Code Review Automation', 'AI Testing', 'DevOps Intelligence'];
-  };
+      s => s.category === 'AI Development Tools'),
+    icon: Code,
+    color: 'from-emerald-500 to-teal-600',
+    features: ['Code Review AutomationAI Testing', 'DevOps Intelligence'],
+  },
   {
-    title: 'AI Testing & Quality Assurance';
-    description: 'Intelligent testing automation with AI-driven insights';
+    title: 'AI Testing & Quality Assurance',
+    description: 'Intelligent testing automation with AI-driven insights',
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Testing & Quality Assurance');
-    icon: TestTube;
-    color: 'from-purple-500 to-indigo-600';
-    features: ['Test Generation', 'Performance Testing', 'Quality Assurance'];
-  };
+      s => s.category === 'AI Testing & Quality Assurance'),
+    icon: TestTube,
+    color: 'from-purple-500 to-indigo-600',
+    features: ['Test GenerationPerformance Testing', 'Quality Assurance'],
+  },
   {
-    title: 'AI DevOps & Infrastructure';
-    description: 'Self-managing infrastructure with AI optimization';
+    title: 'AI DevOps & Infrastructure',
+    description: 'Self-managing infrastructure with AI optimization',
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI DevOps & Infrastructure');
-    icon: Server;
-    color: 'from-blue-500 to-indigo-600';
+      s => s.category === 'AI DevOps & Infrastructure'),
+    icon: Server,
+    color: 'from-blue-500 to-indigo-600',
     features: [
-      'Infrastructure Management';
-      'Deployment Optimization';
-      'Performance Monitoring';
-    ];
-  };
+      'Infrastructure ManagementDeployment Optimization',
+      'Performance Monitoring',
+    ]
+  },
   {
-    title: 'AI Cybersecurity';
-    description: 'Proactive threat detection and response with AI';
+    title: 'AI Cybersecurity',
+    description: 'Proactive threat detection and response with AI',
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Cybersecurity');
-    icon: SecurityIcon;
-    color: 'from-red-500 to-pink-600';
-    features: ['Threat Detection', 'Incident Response', 'Security Automation'];
-  };
+      s => s.category === 'AI Cybersecurity'),
+    icon: SecurityIcon,
+    color: 'from-red-500 to-pink-600',
+    features: ['Threat DetectionIncident Response', 'Security Automation'],
+  },
   {
-    title: 'AI Data Management';
-    description: 'Intelligent data infrastructure with AI automation';
+    title: 'AI Data Management',
+    description: 'Intelligent data infrastructure with AI automation',
     services: advancedAIAutomationServices2025.filter(
-      s => s.category === 'AI Data Management');
-    icon: Database;
-    color: 'from-cyan-500 to-blue-600';
+      s => s.category === 'AI Data Management'),
+    icon: Database,
+    color: 'from-cyan-500 to-blue-600',
     features: [
-      'Pipeline Management';
-      'Quality Assurance';
-      'Governance Automation';
-    ];
-  };
+      'Pipeline ManagementQuality Assurance',
+      'Governance Automation',
+    ]
+  },
 ],
 const heroFeatures = [
   {
-    title: 'AI-Powered Automation';
+    title: 'AI-Powered Automation',
     description:,
-      'Advanced AI algorithms that automate complex development, testing, and operations tasks.';
-    icon: Brain;
-    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600';
-  };
+      'Advanced AI algorithms that automate complex development, testing, and operations tasks.',
+    icon: Brain,
+    gradient: 'bg-gradient-to-r from-cyan-500 to-blue-600'
+  },
   {
-    title: 'Intelligent Optimization';
+    title: 'Intelligent Optimization',
     description:,
-      'AI-driven optimization that continuously improves performance, security, and efficiency.';
-    icon: Sparkles;
-    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600';
-  };
+      'AI-driven optimization that continuously improves performance, security, and efficiency.',
+    icon: Sparkles,
+    gradient: 'bg-gradient-to-r from-purple-500 to-pink-600'
+  },
   {
-    title: 'Autonomous Operations';
+    title: 'Autonomous Operations',
     description:,
-      'Self-managing systems that operate independently with minimal human intervention.';
-    icon: Settings;
-    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600';
-  };
+      'Self-managing systems that operate independently with minimal human intervention.',
+    icon: Settings,
+    gradient: 'bg-gradient-to-r from-green-500 to-emerald-600'
+  },
   {
-    title: 'Predictive Analytics';
+    title: 'Predictive Analytics',
     description:,
-      'AI-powered insights that predict issues before they occur and optimize window.window.performance.';
-    icon: BarChart3;
-    gradient: 'bg-gradient-to-r from-orange-500 to-red-600';
-  };
+      'AI-powered insights that predict issues before they occur and optimize window.window.performance.',
+    icon: BarChart3,
+    gradient: 'bg-gradient-to-r from-orange-500 to-red-600'
+  },
 ],
 const testimonials = [
   {
-    name: 'Dr. Michael Chen';
-    role: 'CTO, TechFlow Solutions';
-    company: 'TechFlow Solutions';
+    name: 'Dr. Michael Chen',
+    role: 'CTO, TechFlow Solutions',
+    company: 'TechFlow Solutions',
     content:,
-      "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.";
-    rating: 5;
-    avatar: '👨‍💻';
-  };
+      "Zion Tech Group's AI automation platform has revolutionized our development process. We've reduced testing time by 90% and improved code quality significantly.",
+    rating: 5,
+    avatar: '👨‍💻'
+  },
   {
-    name: 'Sarah Rodriguez';
-    role: 'DevOps Director, CloudScale Inc.';
-    company: 'CloudScale Inc.';
+    name: 'Sarah Rodriguez',
+    role: 'DevOps Director, CloudScale Inc.',
+    company: 'CloudScale Inc.',
     content:,
-      'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.';
-    rating: 5;
-    avatar: '👩‍💼';
-  };
+      'The autonomous DevOps platform has transformed our infrastructure management. We now have 99.9% uptime with 60% lower operational costs.',
+    rating: 5,
+    avatar: '👩‍💼'
+  },
   {
-    name: 'David Kim';
-    role: 'Security Manager, SecureNet Corp.';
-    company: 'SecureNet Corp.';
+    name: 'David Kim',
+    role: 'Security Manager, SecureNet Corp.',
+    company: 'SecureNet Corp.',
     content:,
-      'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.';
-    rating: 5;
-    avatar: '👨‍🔒';
-  };
+      'Their AI security platform provides proactive threat detection that has prevented multiple security incidents. The ROI has been incredible.',
+    rating: 5,
+    avatar: '👨‍🔒'
+  },
 ],
 export default function AdvancedAIAutomationServices() {
   return (
@@ -256,7 +254,7 @@ export default function AdvancedAIAutomationServices() {
               Why Choose Our AI Automation Services?,
             </h2>,
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>,
-              Our AI automation services provide unprecedented efficiency;
+              Our AI automation services provide unprecedented efficiency,
               accuracy, and cost savings across all aspects of technology,
               operations,
             </p>,

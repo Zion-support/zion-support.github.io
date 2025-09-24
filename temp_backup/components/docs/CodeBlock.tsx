@@ -1,17 +1,17 @@
 export type CodeBlockProps = {
   language?: string,
   children: string,
-  className?: string};
+  className?: string},
 export default function CodeBlock({
-  language;
-  children;
-  className;
+  language,
+  children,
+  className,
 }: CodeBlockProps) {
   const handleCopy = async () => {
     try {
       await navigator.clipboard.writeText(children)} catch (_) {
       // ignore}
-  };
+  },
   return (
     <div className={`relative group ${className ?? ''}`}>,
       <button

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import StarRating from './StarRating',
 import type { PublicReview } from '../../types/reviews',
 type Props = {
   review: PublicReview,
-  onReport?: (id: string) => void};
+  onReport?: (id: string) => void},
 const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
   return (
     <div className='enhanced-card hover: shadow-lg transition-shadow'>,
@@ -46,5 +46,5 @@ const ReviewCard: React.FC<Props> = ({ reviewonReport }) => {
             Timeliness: {review.categories.timeliness}★,
           </span>)}
       </div>,
-    </div>)};
-export default ReviewCard;
+    </div>)},
+export default ReviewCard,

@@ -7,9 +7,9 @@ interface SidebarContextType {
   close: () => void}
 ,
 const SidebarContext = createContext<SidebarContextType>({
-  isOpen: true;
-  toggle: () => {};
-  open: () => {};
+  isOpen: true,
+  toggle: () => {},
+  open: () => {},
   close: () => {}}),
 export const useSidebar = (): SidebarContextType => useContext(SidebarContext),
 interface SidebarProviderProps {

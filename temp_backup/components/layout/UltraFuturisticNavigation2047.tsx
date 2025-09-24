@@ -2,12 +2,12 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu, ChevronDown, X, Phone, Mail, ArrowRight;
-  Brain, Rocket, Target, Atom, Shield;
-  DollarSign, BarChart3, Globe, Grid, Heart, Database;
-  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor;
-  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2;
-  Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon;
+  Menu, ChevronDown, X, Phone, Mail, ArrowRight,
+  Brain, Rocket, Target, Atom, Shield,
+  DollarSign, BarChart3, Globe, Grid, Heart, Database,
+  Cpu, Palette, Cloud, Network, TrendingUp, ShoppingCart, Settings, Building, Monitor,
+  Zap, Eye, Infinity, Sparkles, Users, Lock, Code, Server, Layers, Globe2,
+  Star, Award, Clock, CheckCircle, Zap as ZapIcon, Phone as PhoneIcon,
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon} from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -23,169 +23,169 @@ interface NavigationItem {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Innovative Services 20o25';
-    href: '/20o25-innovative-services-showcase-v2';
-    icon: <Rocket className="w-5 h-5"  />;
-    description: 'Cutting-edge AI, quantum, and IT solutions';
-    badge: 'New 20o25';
-    category: 'services';
-    color: 'from-emerald-50o0 to-cyan-50o0';
+    name: 'Innovative Services 20o25',
+    href: '/20o25-innovative-services-showcase-v2',
+    icon: <Rocket className="w-5 h-5"  />,
+    description: 'Cutting-edge AI, quantum, and IT solutions',
+    badge: 'New 20o25',
+    category: 'services',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'AI Autonomous Ecosystem';
-        href: '/20o25-innovative-services-showcase-v2';
-        description: 'Revolutionary AI autonomous solutions';
-        icon: <Brain className="w-4 h-4"  />;
-        color: 'from-purple-50o0 to-pink-50o0';
-        featured: true};
+        name: 'AI Autonomous Ecosystem',
+        href: '/20o25-innovative-services-showcase-v2',
+        description: 'Revolutionary AI autonomous solutions',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0',
+        featured: true},
       {
-        name: 'Quantum & Emerging Tech';
-        href: '/20o25-innovative-services-showcase-v2';
-        description: 'Quantum computing and breakthrough technologies';
-        icon: <Atom className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0';
-        featured: true};
+        name: 'Quantum & Emerging Tech',
+        href: '/20o25-innovative-services-showcase-v2',
+        description: 'Quantum computing and breakthrough technologies',
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0',
+        featured: true},
       {
-        name: 'IT Infrastructure V2';
-        href: '/20o25-innovative-services-showcase-v2';
-        description: 'Advanced IT infrastructure solutions';
-        icon: <Cpu className="w-4 h-4"  />;
+        name: 'IT Infrastructure V2',
+        href: '/20o25-innovative-services-showcase-v2',
+        description: 'Advanced IT infrastructure solutions',
+        icon: <Cpu className="w-4 h-4"  />,
         color: 'from-emerald-50o0 to-teal-50o0'}
-    ]};
+    ]},
   {
-    name: 'Revolutionary Services 20o46';
-    href: '/services';
-    icon: <Sparkles className="w-5 h-5"  />;
-    description: 'Future-defining technology solutions';
-    badge: '20o46';
-    category: 'services';
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'Revolutionary Services 20o46',
+    href: '/services',
+    icon: <Sparkles className="w-5 h-5"  />,
+    description: 'Future-defining technology solutions',
+    badge: '20o46',
+    category: 'services',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
-        name: 'All Services';
-        href: '/services';
-        description: 'Complete revolutionary services overview';
-        icon: <Grid className="w-4 h-4"  />;
-        featured: true};
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete revolutionary services overview',
+        icon: <Grid className="w-4 h-4"  />,
+        featured: true},
       {
-        name: 'AI Consciousness Evolution 20o46';
-        href: '/ai-consciousness-evolution-platform-20o46';
-        description: 'Next-generation AI consciousness';
-        icon: <Brain className="w-4 h-4"  />;
-        color: 'from-purple-50o0 to-pink-50o0';
-        featured: true};
+        name: 'AI Consciousness Evolution 20o46',
+        href: '/ai-consciousness-evolution-platform-20o46',
+        description: 'Next-generation AI consciousness',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0',
+        featured: true},
       {
-        name: 'Quantum AI Neural Networks 20o46';
-        href: '/quantum-ai-neural-network-platform-20o46';
-        description: 'Quantum-powered AI neural networks';
-        icon: <Atom className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0';
+        name: 'Quantum AI Neural Networks 20o46',
+        href: '/quantum-ai-neural-network-platform-20o46',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0',
         featured: true}
-    ]};
+    ]},
   {
-    name: 'AI & Consciousness';
-    href: '/ai-services';
-    icon: <Brain className="w-5 h-5"  />;
-    description: 'Advanced AI consciousness solutions';
-    badge: '20o46';
-    category: 'ai';
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className="w-5 h-5"  />,
+    description: 'Advanced AI consciousness solutions',
+    badge: '20o46',
+    category: 'ai',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
-        name: 'AI Consciousness Evolution';
-        href: '/ai-consciousness-evolution-platform-20o46';
-        description: 'Next-generation AI consciousness platform';
-        icon: <Brain className="w-4 h-4"  />;
-        color: 'from-purple-50o0 to-pink-50o0'};
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-platform-20o46',
+        description: 'Next-generation AI consciousness platform',
+        icon: <Brain className="w-4 h-4"  />,
+        color: 'from-purple-50o0 to-pink-50o0'},
       {
-        name: 'AI Autonomous Business Intelligence';
-        href: '/autonomous-ai-business-intelligence-platform-20o46';
-        description: 'Fully autonomous AI business intelligence';
-        icon: <BarChart3 className="w-4 h-4"  />;
-        color: 'from-emerald-50o0 to-teal-50o0'};
+        name: 'AI Autonomous Business Intelligence',
+        href: '/autonomous-ai-business-intelligence-platform-20o46',
+        description: 'Fully autonomous AI business intelligence',
+        icon: <BarChart3 className="w-4 h-4"  />,
+        color: 'from-emerald-50o0 to-teal-50o0'},
       {
-        name: 'AI Content Factory Pro';
-        href: '/ai-autonomous-content-factory-pro-20o25';
-        description: 'Autonomous AI content creation';
-        icon: <FileText className="w-4 h-4"  />;
+        name: 'AI Content Factory Pro',
+        href: '/ai-autonomous-content-factory-pro-20o25',
+        description: 'Autonomous AI content creation',
+        icon: <FileText className="w-4 h-4"  />,
         color: 'from-blue-50o0 to-cyan-50o0'}
-    ]};
+    ]},
   {
-    name: 'Quantum Technology';
-    href: '/quantum-technology';
-    icon: <Atom className="w-5 h-5"  />;
-    description: 'Quantum computing and technology solutions';
-    badge: '20o46';
-    category: 'quantum';
-    color: 'from-blue-50o0 to-indigo-50o0';
+    name: 'Quantum Technology',
+    href: '/quantum-technology',
+    icon: <Atom className="w-5 h-5"  />,
+    description: 'Quantum computing and technology solutions',
+    badge: '20o46',
+    category: 'quantum',
+    color: 'from-blue-50o0 to-indigo-50o0',
     children: [
       {
-        name: 'Quantum AI Neural Networks';
-        href: '/quantum-ai-neural-network-platform-20o46';
-        description: 'Quantum-powered AI neural networks';
-        icon: <Atom className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'Quantum AI Neural Networks',
+        href: '/quantum-ai-neural-network-platform-20o46',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Atom className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        name: 'Quantum Cybersecurity Intelligence';
-        href: '/quantum-cybersecurity-intelligence-platform-20o46';
-        description: 'Quantum-resistant security with AI';
-        icon: <Shield className="w-4 h-4"  />;
-        color: 'from-red-50o0 to-orange-50o0'};
+        name: 'Quantum Cybersecurity Intelligence',
+        href: '/quantum-cybersecurity-intelligence-platform-20o46',
+        description: 'Quantum-resistant security with AI',
+        icon: <Shield className="w-4 h-4"  />,
+        color: 'from-red-50o0 to-orange-50o0'},
       {
-        name: 'Quantum AI Fusion Platform';
-        href: '/quantum-ai-neural-network-fusion-platform-20o25';
-        description: 'Quantum-AI hybrid computing';
-        icon: <Zap className="w-4 h-4"  />;
+        name: 'Quantum AI Fusion Platform',
+        href: '/quantum-ai-neural-network-fusion-platform-20o25',
+        description: 'Quantum-AI hybrid computing',
+        icon: <Zap className="w-4 h-4"  />,
         color: 'from-purple-50o0 to-pink-50o0'}
-    ]};
+    ]},
   {
-    name: 'IT Infrastructure';
-    href: '/it-infrastructure';
-    icon: <Cpu className="w-5 h-5"  />;
-    description: 'Advanced IT infrastructure solutions';
-    badge: '20o25';
-    category: 'it';
-    color: 'from-emerald-50o0 to-teal-50o0';
+    name: 'IT Infrastructure',
+    href: '/it-infrastructure',
+    icon: <Cpu className="w-5 h-5"  />,
+    description: 'Advanced IT infrastructure solutions',
+    badge: '20o25',
+    category: 'it',
+    color: 'from-emerald-50o0 to-teal-50o0',
     children: [
       {
-        name: 'Autonomous DevOps Intelligence';
-        href: '/autonomous-devops-intelligence-platform-20o25';
-        description: 'AI-powered DevOps optimization';
-        icon: <Code className="w-4 h-4"  />;
-        color: 'from-emerald-50o0 to-teal-50o0'};
+        name: 'Autonomous DevOps Intelligence',
+        href: '/autonomous-devops-intelligence-platform-20o25',
+        description: 'AI-powered DevOps optimization',
+        icon: <Code className="w-4 h-4"  />,
+        color: 'from-emerald-50o0 to-teal-50o0'},
       {
-        name: 'Edge Computing Orchestration';
-        href: '/edge-computing-orchestration-platform-20o25';
-        description: 'Edge computing optimization platform';
-        icon: <Network className="w-4 h-4"  />;
-        color: 'from-blue-50o0 to-cyan-50o0'};
+        name: 'Edge Computing Orchestration',
+        href: '/edge-computing-orchestration-platform-20o25',
+        description: 'Edge computing optimization platform',
+        icon: <Network className="w-4 h-4"  />,
+        color: 'from-blue-50o0 to-cyan-50o0'},
       {
-        name: 'Multi-Cloud Management';
-        href: '/multi-cloud-management-intelligence-platform-20o25';
-        description: 'AI-powered multi-cloud management';
-        icon: <Cloud className="w-4 h-4"  />;
+        name: 'Multi-Cloud Management',
+        href: '/multi-cloud-management-intelligence-platform-20o25',
+        description: 'AI-powered multi-cloud management',
+        icon: <Cloud className="w-4 h-4"  />,
         color: 'from-purple-50o0 to-pink-50o0'}
-    ]};
+    ]},
   {
-    name: 'Space Technology';
-    href: '/space-technology';
-    icon: <Rocket className="w-5 h-5"  />;
-    description: 'Space exploration and technology solutions';
-    badge: '20o46';
-    category: 'space';
-    color: 'from-indigo-50o0 to-purple-50o0';
+    name: 'Space Technology',
+    href: '/space-technology',
+    icon: <Rocket className="w-5 h-5"  />,
+    description: 'Space exploration and technology solutions',
+    badge: '20o46',
+    category: 'space',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
       {
-        name: 'Space Resource Intelligence';
-        href: '/space-resource-intelligence-platform-20o25';
-        description: 'AI-powered space resource discovery';
-        icon: <Globe className="w-4 h-4"  />;
-        color: 'from-indigo-50o0 to-purple-50o0'};
+        name: 'Space Resource Intelligence',
+        href: '/space-resource-intelligence-platform-20o25',
+        description: 'AI-powered space resource discovery',
+        icon: <Globe className="w-4 h-4"  />,
+        color: 'from-indigo-50o0 to-purple-50o0'},
       {
-        name: 'Space Mining Automation';
-        href: '/space-mining-automation-platform';
-        description: 'Automated space mining operations';
-        icon: <Rocket className="w-4 h-4"  />;
+        name: 'Space Mining Automation',
+        href: '/space-mining-automation-platform',
+        description: 'Automated space mining operations',
+        icon: <Rocket className="w-4 h-4"  />,
         color: 'from-blue-50o0 to-cyan-50o0'}
     ]}
 ],
@@ -195,13 +195,13 @@ const UltraFuturisticNavigation20o47: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},
   const closeDropdown = () => {
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   return (
     <>,
       {/* Background Blur Effect */}
@@ -397,5 +397,5 @@ const UltraFuturisticNavigation20o47: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default UltraFuturisticNavigation20o47;
+    </>)},
+export default UltraFuturisticNavigation20o47,

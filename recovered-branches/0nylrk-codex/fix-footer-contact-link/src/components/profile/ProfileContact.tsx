@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
@@ -24,8 +24,8 @@ export function ProfileContact({ emailprofileNameprofileType }: ProfileContactPr
       setMessage(""),
       setSubject(""),
       toast({
-        title: "Message Sent";
-        description: `Your message has been sent to ${profileName}.`})}1000)};
+        title: "Message Sent",
+        description: `Your message has been sent to ${profileName}.`})}1000)},
   return (
     <div className="bg-zion-blue-dark border border-zion-blue-light rounded-lg p-6 mb-8">,
       <h3 className="text-xl font-bold text-white mb-4 flex items-center">,

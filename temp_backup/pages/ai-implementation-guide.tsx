@@ -3,149 +3,125 @@ import Link from 'next/link',
 export default function AIImplementationGuidePage() {
   const phases = [
     {
-      phase: 'Phase 1';
-      title: 'Assessment & Strategy';
-      duration: '4-6 weeks';
-      description: 'Evaluate current state and define AI strategy';
+      phase: 'Phase 1',
+      title: 'Assessment & Strategy',
+      duration: '4-6 weeks',
+      description: 'Evaluate current state and define AI strategy',
       activities: [
-        'Current technology audit';
-        'Business process analysis';
-        'AI opportunity identification';
-        'ROI assessment';
-        'Stakeholder alignment';
-      ];
+        'Current technology auditBusiness process analysis',
+        'AI opportunity identificationROI assessment',
+        'Stakeholder alignment',
+      ],
       deliverables: [
-        'AI readiness report';
-        'Strategic roadmap';
-        'Budget allocation plan';
-        'Success metrics definition';
-      ];
-    };
+        'AI readiness reportStrategic roadmap',
+        'Budget allocation planSuccess metrics definition',
+      ]
+    },
     {
-      phase: 'Phase 2';
-      title: 'Proof of Concept';
-      duration: '8-12 weeks';
-      description: 'Validate AI concepts with small-scale implementations';
+      phase: 'Phase 2',
+      title: 'Proof of Concept',
+      duration: '8-12 weeks',
+      description: 'Validate AI concepts with small-scale implementations',
       activities: [
-        'Use case prioritization';
-        'Data quality assessment';
-        'Model selection';
-        'Pilot project design';
-        'Team training';
-      ];
+        'Use case prioritizationData quality assessment',
+        'Model selectionPilot project design',
+        'Team training',
+      ],
       deliverables: [
-        'Working prototype';
-        'Performance benchmarks';
-        'Risk assessment';
-        'Training documentation';
-      ];
-    };
+        'Working prototypePerformance benchmarks',
+        'Risk assessmentTraining documentation',
+      ]
+    },
     {
-      phase: 'Phase 3';
-      title: 'Pilot Implementation';
-      duration: '12-16 weeks';
-      description: 'Deploy AI solutions in controlled environments';
+      phase: 'Phase 3',
+      title: 'Pilot Implementation',
+      duration: '12-16 weeks',
+      description: 'Deploy AI solutions in controlled environments',
       activities: [
-        'Full-scale development';
-        'Integration with existing systems';
-        'User acceptance testing';
-        'Performance optimization';
-        'Security validation';
-      ];
+        'Full-scale developmentIntegration with existing systems',
+        'User acceptance testingPerformance optimization',
+        'Security validation',
+      ],
       deliverables: [
-        'Production-ready system';
-        'Integration documentation';
-        'User training materials';
-        'Monitoring dashboards';
-      ];
-    };
+        'Production-ready systemIntegration documentation',
+        'User training materialsMonitoring dashboards',
+      ]
+    },
     {
-      phase: 'Phase 4';
-      title: 'Scale & Optimize';
-      duration: 'Ongoing';
-      description: 'Expand AI capabilities across the organization';
+      phase: 'Phase 4',
+      title: 'Scale & Optimize',
+      duration: 'Ongoing',
+      description: 'Expand AI capabilities across the organization',
       activities: [
-        'Cross-department deployment';
-        'Advanced feature development';
-        'Performance monitoring';
-        'Continuous improvement';
-        'Knowledge sharing';
-      ];
+        'Cross-department deploymentAdvanced feature development',
+        'Performance monitoringContinuous improvement',
+        'Knowledge sharing',
+      ],
       deliverables: [
-        'Organization-wide AI adoption';
-        'Advanced analytics capabilities';
-        'Best practices documentation';
-        'Center of excellence';
-      ];
-    };
+        'Organization-wide AI adoptionAdvanced analytics capabilities',
+        'Best practices documentationCenter of excellence',
+      ]
+    },
   ],
   const bestPractices = [
     {
-      category: 'Data Management';
+      category: 'Data Management',
       practices: [
-        'Ensure data quality and consistency across all sources';
-        'Implement robust data governance and privacy controls';
-        'Create comprehensive data documentation and lineage';
-        'Establish data retention and archival policies';
-      ];
-    };
+        'Ensure data quality and consistency across all sourcesImplement robust data governance and privacy controls',
+        'Create comprehensive data documentation and lineageEstablish data retention and archival policies',
+      ]
+    },
     {
-      category: 'Model Development';
+      category: 'Model Development',
       practices: [
-        'Start with simple models and iterate complexity';
-        'Implement comprehensive testing and validation';
-        'Use explainable AI techniques for transparency';
-        'Establish model versioning and deployment pipelines';
-      ];
-    };
+        'Start with simple models and iterate complexityImplement comprehensive testing and validation',
+        'Use explainable AI techniques for transparencyEstablish model versioning and deployment pipelines',
+      ]
+    },
     {
-      category: 'Change Management';
+      category: 'Change Management',
       practices: [
-        'Engage stakeholders early and often';
-        'Provide comprehensive training and support';
-        'Communicate benefits and address concerns';
-        'Celebrate successes and learn from failures';
-      ];
-    };
+        'Engage stakeholders early and oftenProvide comprehensive training and support',
+        'Communicate benefits and address concernsCelebrate successes and learn from failures',
+      ]
+    },
     {
-      category: 'Monitoring & Maintenance';
+      category: 'Monitoring & Maintenance',
       practices: [
-        'Implement real-time performance monitoring';
-        'Set up automated alerting for issues';
-        'Regular model retraining and updates';
-        'Continuous performance optimization';
-      ];
-    };
+        'Implement real-time performance monitoringSet up automated alerting for issues',
+        'Regular model retraining and updatesContinuous performance optimization',
+      ]
+    },
   ],
   const commonPitfalls = [
     {
-      title: 'Starting Too Big';
+      title: 'Starting Too Big',
       description:,
-        'Attempting to implement complex AI solutions without proper foundation';
-      solution: 'Begin with simple use cases and gradually increase complexity';
-    };
+        'Attempting to implement complex AI solutions without proper foundation',
+      solution: 'Begin with simple use cases and gradually increase complexity'
+    },
     {
-      title: 'Ignoring Data Quality';
-      description: 'Building models on poor or inconsistent data';
-      solution: 'Invest in data quality initiatives before model development';
-    };
+      title: 'Ignoring Data Quality',
+      description: 'Building models on poor or inconsistent data',
+      solution: 'Invest in data quality initiatives before model development'
+    },
     {
-      title: 'Lack of Stakeholder Buy-in';
-      description: 'Failing to engage key stakeholders early in the process';
-      solution: 'Create a comprehensive change management strategy';
-    };
+      title: 'Lack of Stakeholder Buy-in',
+      description: 'Failing to engage key stakeholders early in the process',
+      solution: 'Create a comprehensive change management strategy'
+    },
     {
-      title: 'Insufficient Testing';
-      description: 'Rushing to production without adequate validation';
+      title: 'Insufficient Testing',
+      description: 'Rushing to production without adequate validation',
       solution:,
-        'Implement comprehensive testing protocols and validation frameworks';
-    };
+        'Implement comprehensive testing protocols and validation frameworks',
+    },
     {
-      title: 'Poor Integration Planning';
+      title: 'Poor Integration Planning',
       description:,
-        'Not considering how AI systems will integrate with existing infrastructure';
-      solution: 'Plan integration requirements early and test thoroughly';
-    };
+        'Not considering how AI systems will integrate with existing infrastructure',
+      solution: 'Plan integration requirements early and test thoroughly'
+    },
   ],
   return (
     <>,

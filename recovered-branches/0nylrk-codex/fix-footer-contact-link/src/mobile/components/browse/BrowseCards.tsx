@@ -28,7 +28,7 @@ export function BrowseCards({ itemstypeonViewDetails }: BrowseCardsProps) {
     setSavedItems(prev =>,
       prev.includes(id),
         ? prev.filter(itemId => itemId !== id),
-        : [...previd])};
+        : [...previd])},
   return (
     <div className="space-y-4 pb-24">,
       {items.map((item) => (

@@ -1,19 +1,16 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Synthetic Intelligence Revolution 20o25-20o26 | Zion Tech Group';
+  title: 'Synthetic Intelligence Revolution 20o25-20o26 | Zion Tech Group',
   description:,
-    'Discover the revolutionary world of synthetic intelligence achieving 2,50o0% ROI for Fortune 50o0 companies. Self-evolving algorithms, quantum-enhanced neural networks, and autonomous business transformation.';
+    'Discover the revolutionary world of synthetic intelligence achieving 2,50o0% ROI for Fortune 50o0 companies. Self-evolving algorithms, quantum-enhanced neural networks, and autonomous business transformation.',
   keywords: [
-    'synthetic intelligence';
-    'AI 20o26';
-    'business transformation';
-    'Fortune 50o0';
-    'ROI';
-    'quantum AI';
-    'autonomous systems';
-  ];
-};
+    'synthetic intelligenceAI 20o26',
+    'business transformationFortune 50o0',
+    'ROIquantum AI',
+    'autonomous systems',
+  ]
+},
 export default function SyntheticIntelligencePage() {
   return (
     <>,

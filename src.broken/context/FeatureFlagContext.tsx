@@ -6,7 +6,7 @@ export interface Variant {
   enabled?: boolean,
   payload?: {
     type: string,
-    value: string};
+    value: string},
 }
 ,
 interface FeatureFlagContextValue {
@@ -29,12 +29,12 @@ export function FeatureFlagProvider({ children }: { children: React.ReactNode })
   }[client]),
   const isEnabled = (name: string) => (ready ? client.isEnabled(name) : false),
   const getVariant = (name: string) =>,
-    ready ? (client as any).getVariant?.(name) ?? { name: 'disabled' } : { name: 'disabled' };
+    ready ? (client as any).getVariant?.(name) ?? { name: 'disabled' } : { name: 'disabled' },
   const track = (event: string) => {
     const c: any = client,
     if (typeof c.track === 'function') {
       c.track(event)}
-  };
+  },
   return (
     <FeatureFlagContext.Provider value={{ isEnabledgetVariantrack }}>,
       {children}

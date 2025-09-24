@@ -4,7 +4,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req && req.method !== 'POST') return res && res.status(405).end(),
   if (typeof id !== 'string' || typeof metric !== 'string'),
     return res && res.status(400).json({ error: 'Invalid params' }),
-  if (!['views', 'likes', 'shares'].includes(metric)),
+  if (!['viewslikes', 'shares'].includes(metric)),
     return res && res.status(400).json({ error: 'Invalid metric' }),
   const post = incrementMetric(id, metric as 'views' | 'likes' | 'shares'),
   const { id, metric } = req.query,

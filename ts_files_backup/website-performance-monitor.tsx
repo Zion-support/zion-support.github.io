@@ -9,104 +9,93 @@ export default function WebsitePerformanceMonitorPage() {
   const [analysisResultsetAnalysisResults] = useState(null)>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
   const features = [
     {
-      icon: <Monitor className="w-8 h-8 text-white" />;
-      title: 'Real-Time Monitoring';
-      description: '24/7 monitoring of your website performance with instant alerts and notifications.';
-      color: 'bg-gradient-to-br from-blue-500 to-cyan-600';
-      gradient: 'from-blue-400 to-cyan-500'};
+      icon: <Monitor className="w-8 h-8 text-white" />,
+      title: 'Real-Time Monitoring',
+      description: '24/7 monitoring of your website performance with instant alerts and notifications.',
+      color: 'bg-gradient-to-br from-blue-500 to-cyan-600',
+      gradient: 'from-blue-400 to-cyan-500'},
     {
-      icon: <Gauge className="w-8 h-8 text-white" />;
-      title: 'Performance Metrics';
-      description: 'Comprehensive metrics including Core Web Vitalspage load timesand user experience scores.';
-      color: 'bg-gradient-to-br from-green-500 to-emerald-600';
-      gradient: 'from-green-400 to-emerald-500'};
+      icon: <Gauge className="w-8 h-8 text-white" />,
+      title: 'Performance Metrics',
+      description: 'Comprehensive metrics including Core Web Vitalspage load timesand user experience scores.',
+      color: 'bg-gradient-to-br from-green-500 to-emerald-600',
+      gradient: 'from-green-400 to-emerald-500'},
     {
-      icon: <AlertTriangle className="w-8 h-8 text-white" />;
-      title: 'Issue Detection';
-      description: 'Automatically detect and alert on performance issuesdowntimeand bottlenecks.';
-      color: 'bg-gradient-to-br from-orange-500 to-red-600';
-      gradient: 'from-orange-400 to-red-500'};
+      icon: <AlertTriangle className="w-8 h-8 text-white" />,
+      title: 'Issue Detection',
+      description: 'Automatically detect and alert on performance issuesdowntimeand bottlenecks.',
+      color: 'bg-gradient-to-br from-orange-500 to-red-600',
+      gradient: 'from-orange-400 to-red-500'},
     {
-      icon: <TrendingUp className="w-8 h-8 text-white" />;
-      title: 'Performance Optimization';
-      description: 'AI-powered recommendations to improve your website speed and user experience.';
-      color: 'bg-gradient-to-br from-purple-500 to-indigo-600';
+      icon: <TrendingUp className="w-8 h-8 text-white" />,
+      title: 'Performance Optimization',
+      description: 'AI-powered recommendations to improve your website speed and user experience.',
+      color: 'bg-gradient-to-br from-purple-500 to-indigo-600',
       gradient: 'from-purple-400 to-indigo-500'}],
   const metrics = [
     {
-      name: 'Core Web Vitals';
-      description: 'LCPFIDand CLS metrics that directly impact user experience and SEO rankings.';
-      icon: '⚡';
-      color: 'text-blue-400'};
+      name: 'Core Web Vitals',
+      description: 'LCPFIDand CLS metrics that directly impact user experience and SEO rankings.',
+      icon: '⚡',
+      color: 'text-blue-400'},
     {
-      name: 'Page Load Time';
-      description: 'Comprehensive analysis of page load performance across different devices and locations.';
-      icon: '🚀';
-      color: 'text-green-400'};
+      name: 'Page Load Time',
+      description: 'Comprehensive analysis of page load performance across different devices and locations.',
+      icon: '🚀',
+      color: 'text-green-400'},
     {
-      name: 'Uptime Monitoring';
-      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.';
-      icon: '🔄';
-      color: 'text-purple-400'};
+      name: 'Uptime Monitoring',
+      description: '99.9% uptime monitoring with instant alerts for any downtime or performance issues.',
+      icon: '🔄',
+      color: 'text-purple-400'},
     {
-      name: 'Mobile Performance';
-      description: 'Mobile-first performance testing and optimization recommendations.';
-      icon: '📱';
-      color: 'text-orange-400'};
+      name: 'Mobile Performance',
+      description: 'Mobile-first performance testing and optimization recommendations.',
+      icon: '📱',
+      color: 'text-orange-400'},
     {
-      name: 'SEO Impact';
-      description: 'Performance metrics that directly affect your search engine rankings and visibility.';
-      icon: '🔍';
-      color: 'text-cyan-400'};
+      name: 'SEO Impact',
+      description: 'Performance metrics that directly affect your search engine rankings and visibility.',
+      icon: '🔍',
+      color: 'text-cyan-400'},
     {
-      name: 'User Experience';
-      description: 'Real user experience metrics and conversion impact analysis.';
-      icon: '👥';
+      name: 'User Experience',
+      description: 'Real user experience metrics and conversion impact analysis.',
+      icon: '👥',
       color: 'text-pink-400'}
   ],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$29';
-      period: '/month';
-      description: 'Perfect for small websites and blogs';
+      name: 'Starter',
+      price: '$29',
+      period: '/month',
+      description: 'Perfect for small websites and blogs',
       features: [
-        '5 websites monitored';
-        'Basic performance metrics';
-        'Daily monitoring';
-        'Email alerts';
-        'Basic reporting';
-        'Core Web Vitals tracking'];
-      popular: false};
+        '5 websites monitoredBasic performance metrics',
+        'Daily monitoringEmail alerts',
+        'Basic reportingCore Web Vitals tracking'],
+      popular: false},
     {
-      name: 'Professional';
-      price: '$79';
-      period: '/month';
-      description: 'Ideal for growing businesses and e-commerce sites';
+      name: 'Professional',
+      price: '$79',
+      period: '/month',
+      description: 'Ideal for growing businesses and e-commerce sites',
       features: [
-        '25 websites monitored';
-        'Advanced performance metrics';
-        'Real-time monitoring';
-        'SMS & email alerts';
-        'Advanced reporting';
-        'Performance optimization tips';
-        'API access';
-        'Team collaboration'];
-      popular: true};
+        '25 websites monitoredAdvanced performance metrics',
+        'Real-time monitoringSMS & email alerts',
+        'Advanced reportingPerformance optimization tips',
+        'API accessTeam collaboration'],
+      popular: true},
     {
-      name: 'Enterprise';
-      price: '$199';
-      period: '/month';
-      description: 'For large organizations with critical performance requirements';
+      name: 'Enterprise',
+      price: '$199',
+      period: '/month',
+      description: 'For large organizations with critical performance requirements',
       features: [
-        'Unlimited websites';
-        'Enterprise-grade monitoring';
-        'Custom alerting rules';
-        '24/7 support';
-        'Custom integrations';
-        'White-label reporting';
-        'SLA guarantees';
-        'On-premise options'];
+        'Unlimited websitesEnterprise-grade monitoring',
+        'Custom alerting rules24/7 support',
+        'Custom integrationsWhite-label reporting',
+        'SLA guaranteesOn-premise options'],
       popular: false}
   ],
   const handleAnalyzeWebsite = async () => {
@@ -114,18 +103,16 @@ export default function WebsitePerformanceMonitorPage() {
     // Simulate website analysis,
     setTimeout(() => {
       setAnalysisResults({
-        url: 'https://example.com';
-        overallScore: 87;
-        lcp: '2.1s';
-        fid: '45ms';
-        cls: '0.08';
-        loadTime: '1.8s';
+        url: 'https://example.com',
+        overallScore: 87,
+        lcp: '2.1s',
+        fid: '45ms',
+        cls: '0.08',
+        loadTime: '1.8s',
         recommendations: [
-          'Optimize images and implement lazy loading';
-          'Minimize render-blocking resources';
-          'Enable compression and caching';
-          'Consider using a CDN for global performance']}),
-      setIsAnalyzing(false)}4000)};
+          'Optimize images and implement lazy loadingMinimize render-blocking resources',
+          'Enable compression and cachingConsider using a CDN for global performance']}),
+      setIsAnalyzing(false)}4000)},
   return (
     <>,
       <Head>,
@@ -225,7 +212,7 @@ export default function WebsitePerformanceMonitorPage() {
               Comprehensive Performance Metrics,
             </h2>,
             <p className="text-responsive-md text-gray-400 max-w-4xl mx-auto leading-relaxed">,
-              Track all the metrics that matter for your 'website', 's performance and user experience.,
+              Track all the metrics that matter for your 'websites performance and user experience.,
             </p>,
           </div>,
           <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6">,

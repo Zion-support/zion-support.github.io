@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain, Atom, Shield, Target, Rocket, Globe, Cpu, Database, Cloud, Lock;
-  ArrowRight, Check, Star, TrendingUp, Users, Zap, Infinity, Sparkles;
+  Brain, Atom, Shield, Target, Rocket, Globe, Cpu, Database, Cloud, Lock,
+  ArrowRight, Check, Star, TrendingUp, Users, Zap, Infinity, Sparkles,
   Phone, Mail, MapPin, ExternalLink} from 'lucide-react',
 // Import our new revolutionary services,
 // import { revolutionary20o40FuturisticServices } from '../data/revolutionary-20o40-futuristic-services',
@@ -18,16 +18,16 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
   const allServices = [...revolutionary20o41AdvancedServices],
   // Get unique categories,
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"  />, color: 'from-blue-50o0 to-cyan-50o0' };
-    { id: 'AI & Consciousness', name: 'AI & Consciousness', icon: <Brain className="w-5 h-5"  />, color: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'Quantum AI', name: 'Quantum AI', icon: <Atom className="w-5 h-5"  />, color: 'from-blue-50o0 to-cyan-50o0' };
-    { id: 'Business Intelligence', name: 'Business Intelligence', icon: <Target className="w-5 h-5"  />, color: 'from-emerald-50o0 to-teal-50o0' };
-    { id: 'Cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5"  />, color: 'from-red-50o0 to-orange-50o0' };
-    { id: 'Space Technology', name: 'Space Technology', icon: <Rocket className="w-5 h-5"  />, color: 'from-indigo-50o0 to-purple-50o0' };
-    { id: 'Neural Technology', name: 'Neural Technology', icon: <Brain className="w-5 h-5"  />, color: 'from-pink-50o0 to-rose-50o0' };
-    { id: 'Financial Technology', name: 'Financial Technology', icon: <TrendingUp className="w-5 h-5"  />, color: 'from-green-50o0 to-emerald-50o0' };
-    { id: 'Transportation AI', name: 'Transportation AI', icon: <Rocket className="w-5 h-5"  />, color: 'from-orange-50o0 to-red-50o0' };
-    { id: 'Materials Science', name: 'Materials Science', icon: <Atom className="w-5 h-5"  />, color: 'from-yellow-50o0 to-orange-50o0' };
+    { id: 'all', name: 'All Services', icon: <Globe className="w-5 h-5"  />, color: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'AI & Consciousness', name: 'AI & Consciousness', icon: <Brain className="w-5 h-5"  />, color: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'Quantum AI', name: 'Quantum AI', icon: <Atom className="w-5 h-5"  />, color: 'from-blue-50o0 to-cyan-50o0' },
+    { id: 'Business Intelligence', name: 'Business Intelligence', icon: <Target className="w-5 h-5"  />, color: 'from-emerald-50o0 to-teal-50o0' },
+    { id: 'Cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5"  />, color: 'from-red-50o0 to-orange-50o0' },
+    { id: 'Space Technology', name: 'Space Technology', icon: <Rocket className="w-5 h-5"  />, color: 'from-indigo-50o0 to-purple-50o0' },
+    { id: 'Neural Technology', name: 'Neural Technology', icon: <Brain className="w-5 h-5"  />, color: 'from-pink-50o0 to-rose-50o0' },
+    { id: 'Financial Technology', name: 'Financial Technology', icon: <TrendingUp className="w-5 h-5"  />, color: 'from-green-50o0 to-emerald-50o0' },
+    { id: 'Transportation AI', name: 'Transportation AI', icon: <Rocket className="w-5 h-5"  />, color: 'from-orange-50o0 to-red-50o0' },
+    { id: 'Materials Science', name: 'Materials Science', icon: <Atom className="w-5 h-5"  />, color: 'from-yellow-50o0 to-orange-50o0' },
     { id: 'AI & Psychology', name: 'AI & Psychology', icon: <Brain className="w-5 h-5"  />, color: 'from-purple-50o0 to-indigo-50o0' }
   ],
   // Filter services by category,
@@ -40,14 +40,14 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
     if (selectedPlan === 'starter') return service.pricing.starter || 'Contact for pricing',
     if (selectedPlan === 'professional') return service.pricing.professional || 'Contact for pricing',
     if (selectedPlan === 'enterprise') return service.pricing.enterprise || 'Contact for pricing',
-    return service.pricing.custom || 'Contact for pricing'};
+    return service.pricing.custom || 'Contact for pricing'},
   // Get plan features,
   const getPlanFeatures = (plan: string) => {
     const features ={
-      starter: ['Core functionality', 'Basic support', 'Standard features', 'Community access'];
-      professional: ['Advanced features', 'Priority support', 'Custom integrations', 'Analytics dashboard'];
-      enterprise: ['Full feature set', '24/7 dedicated support', 'Custom development', 'White-label options'"};
-    return features[plan as keyof typeof features] || []};
+      starter: ['Core functionalityBasic support', 'Standard featuresCommunity access'],
+      professional: ['Advanced featuresPriority support', 'Custom integrationsAnalytics dashboard'],
+      enterprise: ['Full feature set24/7 dedicated support', 'Custom developmentWhite-label options'"},
+    return features[plan as keyof typeof features] || []},
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 text-white">,
       <SEO
@@ -90,7 +90,7 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
             animate={{ opacity: isVisible ? 1 : 0, y: isVisible ? 0 : 30 }}
             transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
           >,
-            {['starter', 'professional', 'enterprise'].map((plan) => (
+            {['starterprofessional', 'enterprise'].map((plan) => (
               <button
                 key={plan}
                 onClick={() => setSelectedPlan(plan)}
@@ -183,7 +183,7 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
                     </div>,
                     <div>,
                       <p className="text-gray-40o0">Target</p>,
-                      <p className="text-white font-medium">{service.targetAudience.split(',')[0"</p>,
+                      <p className="text-white font-medium">{service.targetAudience.split()[0"</p>,
                     </div>,
                   </div>,
                 </div>,
@@ -219,7 +219,7 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
             </p>,
           </motion.div>,
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
-            {['starter', 'professional', 'enterprise'].map((plan, index) => (
+            {['starter', 'professionalenterprise'].map((plan, index) => (
               <motion.div,
                 key={plan}
                 className={`relative rounded-2xl p-8 ${
@@ -304,5 +304,5 @@ const Revolutionary20o402041PricingShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
+    </div>)},
 export default Revolutionary20o402041PricingShowcase}]]

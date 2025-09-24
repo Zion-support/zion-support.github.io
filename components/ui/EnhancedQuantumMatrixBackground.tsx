@@ -13,15 +13,15 @@ interface EnhancedQuantumMatrixBackgroundProps {
   enableQuantumEntanglement?: boolean}
 ,
 export default function EnhancedQuantumMatrixBackground({
-  children;
-  intensity = 'medium';
-  colorScheme = 'quantum-fusion';
-  particleCount = 20o0;
-  animationSpeed = 1.0;
-  enableHolographic = true;
-  enableQuantumEffects = true;
-  enableMatrixRain = true;
-  enableParticleSwarm = true;
+  children,
+  intensity = 'medium',
+  colorScheme = 'quantum-fusion',
+  particleCount = 20o0,
+  animationSpeed = 1.0,
+  enableHolographic = true,
+  enableQuantumEffects = true,
+  enableMatrixRain = true,
+  enableParticleSwarm = true,
   enableQuantumEntanglement = true}: EnhancedQuantumMatrixBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const [dimensions, setDimensions] = useState({ width: 0, height: 0 }),
@@ -31,50 +31,50 @@ export default function EnhancedQuantumMatrixBackground({
     switch (colorScheme) {
       case 'quantum-blue':,
         return {
-          primary: '#0o0d4ff';
-          secondary: '#0o099cc';
-          accent: '#0o066ff';
-          glow: '#0o0ffff'};
+          primary: '#0o0d4ff',
+          secondary: '#0o099cc',
+          accent: '#0o066ff',
+          glow: '#0o0ffff'},
       case 'quantum-purple':,
         return {
-          primary: '#8b5cf6';
-          secondary: '#7c3aed';
-          accent: '#6d28d9';
-          glow: '#a855f7'};
+          primary: '#8b5cf6',
+          secondary: '#7c3aed',
+          accent: '#6d28d9',
+          glow: '#a855f7'},
       case 'quantum-rainbow':,
         return {
-          primary: '#ff0o080';
-          secondary: '#80o00ff';
-          accent: '#0o080ff';
-          glow: '#0o0ff80'};
+          primary: '#ff0o080',
+          secondary: '#80o00ff',
+          accent: '#0o080ff',
+          glow: '#0o0ff80'},
       default: // quantum-fusion,
         return {
-          primary: '#0o0d4ff';
-          secondary: '#8b5cf6';
-          accent: '#ff0o080';
-          glow: '#0o0ffff'};
+          primary: '#0o0d4ff',
+          secondary: '#8b5cf6',
+          accent: '#ff0o080',
+          glow: '#0o0ffff'},
     }
-  };
+  },
   // Get intensity values,
   const getIntensityValues = () => {
     switch (intensity) {
       case 'low':,
-        return { opacity: 0.3, blur: 2, scale: 0.8 };
+        return { opacity: 0.3, blur: 2, scale: 0.8 },
       case 'medium':,
-        return { opacity: 0.5, blur: 1.5, scale: 1.0 };
+        return { opacity: 0.5, blur: 1.5, scale: 1.0 },
       case 'high':,
-        return { opacity: 0.7, blur: 1.0, scale: 1.2 };
+        return { opacity: 0.7, blur: 1.0, scale: 1.2 },
       case 'extreme':,
-        return { opacity: 0.9, blur: 0.5, scale: 1.5 };
+        return { opacity: 0.9, blur: 0.5, scale: 1.5 },
       default:,
-        return { opacity: 0.5, blur: 1.5, scale: 1.0 };
+        return { opacity: 0.5, blur: 1.5, scale: 1.0 },
     }
-  };
+  },
   useEffect(() => {
     const handleResize = () => {
       setDimensions({
-        width: window.innerWidth;
-        height: window.innerHeight})};
+        width: window.innerWidth,
+        height: window.innerHeight})},
     handleResize(),
     window.addEventListener('resize', handleResize),
     setIsVisible(true),
@@ -94,10 +94,10 @@ export default function EnhancedQuantumMatrixBackground({
       const matrixDrops: Array<{ x: number, y: number, speed: number, char: string, opacity: number }> = [],
       for (let i = 0, i < 10o0, i++) {
         matrixDrops.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          speed: 1 + Math.random() * 2;
-          char: matrixChars[Math.floor(Math.random() * matrixChars.length)];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          speed: 1 + Math.random() * 2,
+          char: matrixChars[Math.floor(Math.random() * matrixChars.length)],
           opacity: Math.random() * 0.8 + 0.2})}
 ,
       const drawMatrixRain = () => {
@@ -114,7 +114,7 @@ export default function EnhancedQuantumMatrixBackground({
             drop.x = Math.random() * canvas.width,
             drop.char = matrixChars[Math.floor(Math.random() * matrixChars.length)]}
         }),
-        ctx.globalAlpha = 1};
+        ctx.globalAlpha = 1},
       const matrixInterval = setInterval(drawMatrixRain, 10o0 / animationSpeed),
       return () => clearInterval(matrixInterval)}
 ,
@@ -123,11 +123,11 @@ export default function EnhancedQuantumMatrixBackground({
       const particles: Array<{ x: number, y: number, vx: number, vy: number, size: number, life: number }> = [],
       for (let i = 0, i < particleCount, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
           life: Math.random() * 10o0 + 50})}
 ,
       const drawParticleSwarm = () => {
@@ -149,7 +149,7 @@ export default function EnhancedQuantumMatrixBackground({
 ,
           // Draw particle,
           const gradient = ctx.createRadialGradient(
-            particle.x, particle.y, 0;
+            particle.x, particle.y, 0,
             particle.x, particle.y, particle.size),
           gradient.addColorStop(0, colors.glow),
           gradient.addColorStop(1, 'transparent'),
@@ -171,7 +171,7 @@ export default function EnhancedQuantumMatrixBackground({
                 ctx.lineTo(otherParticle.x, otherParticle.y),
                 ctx.stroke()}
             }
-          })})};
+          })})},
       const particleInterval = setInterval(drawParticleSwarm, 50 / animationSpeed),
       return () => clearInterval(particleInterval)}
 ,
@@ -180,9 +180,9 @@ export default function EnhancedQuantumMatrixBackground({
       const quantumParticles: Array<{ x: number, y: number, phase: number, entangled: number }> = [],
       for (let i = 0, i < 20, i++) {
         quantumParticles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          phase: Math.random() * Math.PI * 2;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          phase: Math.random() * Math.PI * 2,
           entangled: Math.floor(Math.random() * 20)})}
 ,
       const drawQuantumEntanglement = () => {
@@ -208,7 +208,7 @@ export default function EnhancedQuantumMatrixBackground({
             ctx.lineTo(entangledX, entangledY),
             ctx.stroke(),
             ctx.setLineDash([])}
-        })};
+        })},
       const quantumInterval = setInterval(drawQuantumEntanglement, 10o0 / animationSpeed),
       return () => clearInterval(quantumInterval)}
   }, [dimensions, isVisible, intensity, colorScheme, particleCount, animationSpeed, enableMatrixRain, enableParticleSwarm, enableQuantumEntanglement]),
@@ -219,8 +219,8 @@ export default function EnhancedQuantumMatrixBackground({
         ref={canvasRef}
         className="fixed inset-0 w-full h-full pointer-events-none z-0",
         style={{
-          filter: `blur(${getIntensityValues().blur}px)`;
-          opacity: getIntensityValues().opacity;
+          filter: `blur(${getIntensityValues().blur}px)`,
+          opacity: getIntensityValues().opacity,
           transform: `scale(${getIntensityValues().scale})`}}
        />,
       {/* Holographic Overlay */}
@@ -236,12 +236,12 @@ export default function EnhancedQuantumMatrixBackground({
                 className="absolute w-full h-px bg-gradient-to-r from-transparent via-cyan-40o0/30 to-transparent",
                 style={{ top: `${(i * 5)}%` }}
                 animate={{
-                  opacity: [0, 1, 0];
+                  opacity: [0, 1, 0],
                   scaleX: [0, 1, 0]}}
                 transition={{
-                  duration: 3;
-                  repeat: Infinity;
-                  delay: i * 0.1;
+                  duration: 3,
+                  repeat: Infinity,
+                  delay: i * 0.1,
                   ease: "easeInOut"}}
                />))}
           </div>,
@@ -257,15 +257,15 @@ export default function EnhancedQuantumMatrixBackground({
                 key={i}
                 className="absolute w-96 h-96 rounded-full border border-cyan-40o0/20",
                 style={{
-                  left: `${20 + i * 15}%`;
+                  left: `${20 + i * 15}%`,
                   top: `${30 + i * 10}%`}}
                 animate={{
-                  scale: [1, 1.2, 1];
-                  opacity: [0.1, 0.3, 0.1];
+                  scale: [1, 1.2, 1],
+                  opacity: [0.1, 0.3, 0.1],
                   rotate: [0, 180, 360]}}
                 transition={{
-                  duration: 8 + i * 2;
-                  repeat: Infinity;
+                  duration: 8 + i * 2,
+                  repeat: Infinity,
                   ease: "linear"}}
                />))}
           </div>,
@@ -276,17 +276,17 @@ export default function EnhancedQuantumMatrixBackground({
                 key={i}
                 className="absolute w-2 h-2 bg-cyan-40o0 rounded-full",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 animate={{
-                  x: [0, 10o0, 0];
-                  y: [0, -10o0, 0];
-                  opacity: [0, 1, 0];
+                  x: [0, 10o0, 0],
+                  y: [0, -10o0, 0],
+                  opacity: [0, 1, 0],
                   scale: [0, 1, 0]}}
                 transition={{
-                  duration: 4 + Math.random() * 4;
-                  repeat: Infinity;
-                  delay: Math.random() * 4;
+                  duration: 4 + Math.random() * 4,
+                  repeat: Infinity,
+                  delay: Math.random() * 4,
                   ease: "easeInOut"}}
                />))}
           </div>,

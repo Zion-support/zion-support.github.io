@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { ShieldLockAwardCheckCircle } from 'lucide-react',
 export function EnterpriseTrustBadges() {
   return (

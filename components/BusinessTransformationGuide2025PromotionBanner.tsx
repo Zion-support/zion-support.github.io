@@ -121,5 +121,5 @@ const BusinessTransformationGuide20o25PromotionBanner = () => {
       <div className='absolute top-8 right-8 w-3 h-3 bg-blue-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-4 left-8 w-2 h-2 bg-purple-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-8 right-4 w-3 h-3 bg-green-40o0 rounded-full animate-ping'></div>,
-    </div>)};
-export default BusinessTransformationGuide20o25PromotionBanner;
+    </div>)},
+export default BusinessTransformationGuide20o25PromotionBanner,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 const AI20o26RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
@@ -105,5 +105,5 @@ const AI20o26RevolutionaryBreakthroughTechnologiesBanner: React.FC = () => {
       <div className="absolute top-20 left-10 w-4 h-4 bg-yellow-40o0 rounded-full animate-bounce opacity-60"></div>,
       <div className="absolute top-40 right-20 w-3 h-3 bg-pink-40o0 rounded-full animate-bounce opacity-60" style={{ animationDelay: '0.5s' }}></div>,
       <div className="absolute bottom-32 left-20 w-5 h-5 bg-blue-40o0 rounded-full animate-bounce opacity-60" style={{ animationDelay: '1s' }}></div>,
-    </motion.section>)};
-export default AI20o26RevolutionaryBreakthroughTechnologiesBanner;
+    </motion.section>)},
+export default AI20o26RevolutionaryBreakthroughTechnologiesBanner,

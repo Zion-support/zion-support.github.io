@@ -5,20 +5,20 @@ import {
   Zap,
   TrendingUp,
   Users,
-  Award;
-  ArrowRight;
-  CheckCircle;
+  Award,
+  ArrowRight,
+  CheckCircle,
   Sparkles} from 'lucide-react',
 const RevolutionaryContentBanner20o26 = () => {
   const features = [
-    "30o0% ROI Guaranteed";
-    "Zero Implementation Risk";
-    "24/7 Expert Support";
+    "30o0% ROI Guaranteed",
+    "Zero Implementation Risk",
+    "24/7 Expert Support",
     "Future-Proof Technology"],
   const stats = [
-    { number: "50o0+"label: "Companies Transformed" };
-    { number: "99.9%"label: "Uptime Guarantee" };
-    { number: "24/7"label: "Expert Support" };
+    { number: "50o0+"label: "Companies Transformed" },
+    { number: "99.9%"label: "Uptime Guarantee" },
+    { number: "24/7"label: "Expert Support" },
     { number: "30o0%"label: "Average ROI" }
   ],
   return (
@@ -137,21 +137,21 @@ const RevolutionaryContentBanner20o26 = () => {
       {/* Floating Elements */}
       <motion.div,
         animate={{
-          y: [0-20];
+          y: [0-20],
           rotate: [0o50]}}
         transition={{
-          duration: 6;
-          repeat: Infinity;
+          duration: 6,
+          repeat: Infinity,
           ease: "easeInOut"}}
         className="absolute top-20 left-10 w-20 h-20 bg-gradient-to-r from-yellow-40o0 to-orange-40o0 rounded-full opacity-20 blur-xl",
        />,
       <motion.div,
         animate={{
-          y: [0o20];
+          y: [0o20],
           rotate: [0-50]}}
         transition={{
-          duration: 8;
-          repeat: Infinity;
+          duration: 8,
+          repeat: Infinity,
           ease: "easeInOut"}}
         className="absolute bottom-20 right-10 w-32 h-32 bg-gradient-to-r from-purple-40o0 to-pink-40o0 rounded-full opacity-20 blur-xl",
        />,

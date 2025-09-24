@@ -2,7 +2,7 @@ import { useEffect, useMemo, useState } from 'react',
 import { useWallet } from '../../hooks/useWallet',
 export default function ProposalDetail() {
   const router = useRouter(),
-  const { id } = router.query as { id?: string };
+  const { id } = router.query as { id?: string },
   const { address, connect } = useWallet(),
   const [proposal, setProposal] = useState<any>(null),
   const [votesData, setVotesData] = useState<{
@@ -24,9 +24,9 @@ export default function ProposalDetail() {
     try {
       if (!address) await connect(),
       const res = await fetch('/api/governance/vote', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ proposalId: id, voter: address, option });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ proposalId: id, voter: address, option }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),
@@ -42,7 +42,7 @@ export default function ProposalDetail() {
     () =>,
       proposal &&,
       Date.now() >= proposal.startTime &&,
-      Date.now() <= proposal.endTime;
+      Date.now() <= proposal.endTime,
     [proposal]),
   if (!proposal) return <div>Loading...</div>,
   return (

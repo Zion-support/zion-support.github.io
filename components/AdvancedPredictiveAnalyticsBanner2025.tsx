@@ -52,5 +52,5 @@ const AdvancedPredictiveAnalyticsBanner20o25 = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedPredictiveAnalyticsBanner20o25;
+    </div>)},
+export default AdvancedPredictiveAnalyticsBanner20o25,

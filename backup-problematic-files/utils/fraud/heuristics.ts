@@ -75,11 +75,11 @@ export function runHeuristics(data: any): HeuristicResult {
   const label = flags && flags.size > 0 ? 'SUSPICIOUS' : 'SAFE',
 export interface HeuristicDeps {
   countEventsByIp: (
-    ip: string;
-    source: MonitoredSource;
+    ip: string,
+    source: MonitoredSource,
     within_minutes: number) => Promise < number>,
 export async function evaluate_heuristics (
-  event: FraudEvent;
+  event: FraudEvent,
   deps: HeuristicDeps): Promise < HeuristicEvaluation> {
   const reasons: string[] = [],
   let severity: HeuristicEvaluation['severity'] = 'low',

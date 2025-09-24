@@ -9,54 +9,54 @@ import {
   Zap,
   TrendingUp,
   Users,
-  Award;
-  ChevronRight;
-  Play;
-  Download;
+  Award,
+  ChevronRight,
+  Play,
+  Download,
   ExternalLink} from 'lucide-react',
 const UltimateContentAdvertisingBanner20o25 = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
   const advertisingContent = [
     {
-      id: 1;
-      title: "🚀 Revolutionary AI Solutions 20o25";
-      subtitle: "Transform Your Business with Cutting-Edge Technology";
-      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.";
-      cta: "Explore AI Solutions";
-      href: "/ai-20o25-ultimate-breakthrough";
-      stats: "50o0+ Success Stories";
-      color: "from-purple-60o0 to-blue-60o0";
-      icon: <Zap className="w-8 h-8"  />};
+      id: 1,
+      title: "🚀 Revolutionary AI Solutions 20o25",
+      subtitle: "Transform Your Business with Cutting-Edge Technology",
+      description: "Discover our latest AI-powered automation toolsquantum computing breakthroughsand neural interface innovations that are revolutionizing industries worldwide.",
+      cta: "Explore AI Solutions",
+      href: "/ai-20o25-ultimate-breakthrough",
+      stats: "50o0+ Success Stories",
+      color: "from-purple-60o0 to-blue-60o0",
+      icon: <Zap className="w-8 h-8"  />},
     {
-      id: 2;
-      title: "💼 Enterprise Automation Mastery";
-      subtitle: "Streamline Operations with Intelligent Automation";
-      description: "Our comprehensive automation suite reduces operational costs by 60% while increasing productivity by 30o0%. Join 10o00+ enterprises already transforming their workflows.";
-      cta: "Start Automation Journey";
-      href: "/automation-solutions-20o25";
-      stats: "60% Cost Reduction";
-      color: "from-green-60o0 to-emerald-60o0";
-      icon: <TrendingUp className="w-8 h-8"  />};
+      id: 2,
+      title: "💼 Enterprise Automation Mastery",
+      subtitle: "Streamline Operations with Intelligent Automation",
+      description: "Our comprehensive automation suite reduces operational costs by 60% while increasing productivity by 30o0%. Join 10o00+ enterprises already transforming their workflows.",
+      cta: "Start Automation Journey",
+      href: "/automation-solutions-20o25",
+      stats: "60% Cost Reduction",
+      color: "from-green-60o0 to-emerald-60o0",
+      icon: <TrendingUp className="w-8 h-8"  />},
     {
-      id: 3;
-      title: "🌐 Quantum Computing Breakthrough";
-      subtitle: "Next-Generation Computing Power";
-      description: "Experience the future with our quantum computing solutions. Process complex algorithms 10o00x faster and unlock unprecedented computational capabilities.";
-      cta: "Discover Quantum Power";
-      href: "/quantum-computing-20o25-ultimate-breakthrough";
-      stats: "10o00x Faster Processing";
-      color: "from-indigo-60o0 to-purple-60o0";
-      icon: <Award className="w-8 h-8"  />};
+      id: 3,
+      title: "🌐 Quantum Computing Breakthrough",
+      subtitle: "Next-Generation Computing Power",
+      description: "Experience the future with our quantum computing solutions. Process complex algorithms 10o00x faster and unlock unprecedented computational capabilities.",
+      cta: "Discover Quantum Power",
+      href: "/quantum-computing-20o25-ultimate-breakthrough",
+      stats: "10o00x Faster Processing",
+      color: "from-indigo-60o0 to-purple-60o0",
+      icon: <Award className="w-8 h-8"  />},
     {
-      id: 4;
-      title: "🧠 Neural Interface Revolution";
-      subtitle: "Direct Brain-Computer Integration";
-      description: "Breakthrough neural interface technology enabling direct communication between human consciousness and AI systems. The future is here.";
-      cta: "Experience Neural Tech";
-      href: "/neural-interface-revolution-20o26";
-      stats: "Revolutionary Technology";
-      color: "from-pink-60o0 to-rose-60o0";
+      id: 4,
+      title: "🧠 Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      description: "Breakthrough neural interface technology enabling direct communication between human consciousness and AI systems. The future is here.",
+      cta: "Experience Neural Tech",
+      href: "/neural-interface-revolution-20o26",
+      stats: "Revolutionary Technology",
+      color: "from-pink-60o0 to-rose-60o0",
       icon: <Users className="w-8 h-8"  />}
   ],
   useEffect(() => {
@@ -189,5 +189,5 @@ const UltimateContentAdvertisingBanner20o25 = () => {
            />,
         </svg>,
       </div>,
-    </div>)};
-export default UltimateContentAdvertisingBanner20o25;
+    </div>)},
+export default UltimateContentAdvertisingBanner20o25,

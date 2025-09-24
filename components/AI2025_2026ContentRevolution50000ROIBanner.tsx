@@ -88,5 +88,5 @@ const AI20o25_20o26ContentRevolution50o000ROIBanner = () => {
       </div>,
       {/* Bottom Wave */}
       <div className='absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-white to-transparent'></div>,
-    </section>)};
-export default AI20o25_20o26ContentRevolution50o000ROIBanner;
+    </section>)},
+export default AI20o25_20o26ContentRevolution50o000ROIBanner,

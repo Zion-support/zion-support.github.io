@@ -4,6 +4,6 @@ export type Trend ={
   title: string,
   highlights: string[],
   summary: string,
-  tags: string[]};
+  tags: string[]},
 export async function getServerSideProps() {
 }

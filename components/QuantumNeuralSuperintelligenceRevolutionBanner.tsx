@@ -28,7 +28,7 @@ export default function QuantumNeuralSuperintelligenceRevolutionBanner() {
             Experience the convergence of{' '}
             <span className='text-yellow-40o0 font-semibold'>,
               quantum computing,
-            </span>;
+            </span>,
             <span className='text-green-40o0 font-semibold'>,
               {' '}
               neural networks,

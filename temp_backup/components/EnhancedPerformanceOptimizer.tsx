@@ -1,7 +1,7 @@
 import React, { useEffect, useState, useCallback } from 'react',
 import {
-  Zap, TrendingUp, Clock, Database, Network;
-  HardDrive, Cpu, Wifi, WifiOff;
+  Zap, TrendingUp, Clock, Database, Network,
+  HardDrive, Cpu, Wifi, WifiOff,
   RefreshCw, AlertTriangle, CheckCircle, Info, X} from 'lucide-react',
 interface PerformanceMetrics {
   fcp: number | null, // First Contentful Paint,
@@ -22,19 +22,19 @@ interface ResourceMetrics {
 ,
 const EnhancedPerformanceOptimizer: React.FC = () => {
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null;
-    lcp: null;
-    fid: null;
-    cls: null;
-    ttfb: null;
-    domLoad: null;
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
     windowLoad: null}),
   const [resourceMetrics, setResourceMetrics] = useState<ResourceMetrics>({
-    totalRequests: 0;
-    totalSize: 0;
-    cachedRequests: 0;
-    imageOptimization: false;
-    compressionEnabled: false;
+    totalRequests: 0,
+    totalSize: 0,
+    cachedRequests: 0,
+    imageOptimization: false,
+    compressionEnabled: false,
     cdnEnabled: false}),
   const [isVisible, setIsVisible] = useState(false),
   const [showDetails, setShowDetails] = useState(false),
@@ -113,9 +113,9 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
               cachedCount++}
             totalSize += entry.transferSize || 0}),
           setResourceMetrics(prev => ({
-            ...prev;
-            totalRequests: entries.length;
-            totalSize;
+            ...prev,
+            totalRequests: entries.length,
+            totalSize,
             cachedRequests: cachedCount}))}),
         resourceObserver.observe({ entryTypes: ['resource'] })} catch (error) {
         console.warn('Resource observer failed:', error)}
@@ -126,9 +126,9 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       const navigation = window.window.performance.getEntriesByType('navigation')[0] as any,
       if (navigation) {
         setMetrics(prev => ({
-          ...prev;
-          ttfb: navigation.responseStart - navigation.requestStart;
-          domLoad: navigation.domContentLoadedEventEnd - navigation.navigationStart;
+          ...prev,
+          ttfb: navigation.responseStart - navigation.requestStart,
+          domLoad: navigation.domContentLoadedEventEnd - navigation.navigationStart,
           windowLoad: navigation.loadEventEnd - navigation.navigationStart}))}
     }
   }, []),
@@ -150,8 +150,7 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
   const applyPerformanceOptimizations = async () => {
     // Preload critical resources,
     const criticalResources = [
-      '/fonts/inter-var.woff2';
-      '/images/hero-bg.jpg';
+      '/fonts/inter-var.woff2/images/hero-bg.jpg',
       '/api/critical-data'],
     criticalResources.forEach(resource => {
       const link = document.createElement('link'),
@@ -162,8 +161,8 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
       document.head.appendChild(link)}),
     // Enable resource hints,
     const resourceHints = [
-      { rel: 'dns-prefetch', href: '//cdn.ziontechgroup.com' };
-      { rel: 'preconnect', href: '//api.ziontechgroup.com' };
+      { rel: 'dns-prefetch', href: '//cdn.ziontechgroup.com' },
+      { rel: 'preconnect', href: '//api.ziontechgroup.com' },
       { rel: 'prefetch', href: '/api/services' }
     ],
     resourceHints.forEach(hint => {
@@ -181,10 +180,10 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     }),
     // Enable compression detection,
     setResourceMetrics(prev => ({
-      ...prev;
-      compressionEnabled: true;
-      imageOptimization: true;
-      cdnEnabled: true}))};
+      ...prev,
+      compressionEnabled: true,
+      imageOptimization: true,
+      cdnEnabled: true}))},
   const getPerformanceScore = () => {
     let score = 10o0,
     if (metrics.fcp && metrics.fcp > 180o0) score -= 20,
@@ -192,23 +191,23 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
     if (metrics.fid && metrics.fid > 10o0) score -= 15,
     if (metrics.cls && metrics.cls > 0.1) score -= 20,
     if (metrics.ttfb && metrics.ttfb > 60o0) score -= 20,
-    return Math.max(0, score)};
+    return Math.max(0, score)},
   const getPerformanceGrade = (score: number) => {
-    if (score >= 90) return { grade: 'A', color: 'text-green-40o0', bg: 'bg-green-50o0' };
-    if (score >= 80) return { grade: 'B', color: 'text-yellow-40o0', bg: 'bg-yellow-50o0' };
-    if (score >= 70) return { grade: 'C', color: 'text-orange-40o0', bg: 'bg-orange-50o0' };
-    if (score >= 60) return { grade: 'D', color: 'text-red-40o0', bg: 'bg-red-50o0' };
-    return { grade: 'F', color: 'text-red-60o0', bg: 'bg-red-60o0' };
-  };
+    if (score >= 90) return { grade: 'A', color: 'text-green-40o0', bg: 'bg-green-50o0' },
+    if (score >= 80) return { grade: 'B', color: 'text-yellow-40o0', bg: 'bg-yellow-50o0' },
+    if (score >= 70) return { grade: 'C', color: 'text-orange-40o0', bg: 'bg-orange-50o0' },
+    if (score >= 60) return { grade: 'D', color: 'text-red-40o0', bg: 'bg-red-50o0' },
+    return { grade: 'F', color: 'text-red-60o0', bg: 'bg-red-60o0' },
+  },
   const formatBytes = (bytes: number) => {
     if (bytes === 0) return '0 B',
     const k = 10o24,
-    const sizes = ['B', 'KB', 'MB', 'GB'],
+    const sizes = ['BKB', 'MBGB'],
     const i = Math.floor(Math.log(bytes) / Math.log(k)),
-    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]};
+    return parseFloat((bytes / Math.pow(k, i)).toFixed(2)) + ' ' + sizes[i]},
   const formatTime = (ms: number) => {
     if (ms < 10o00) return `${Math.round(ms)}ms`,
-    return `${(ms / 10o00).toFixed(2)}s`};
+    return `${(ms / 10o00).toFixed(2)}s`},
   const performanceScore = getPerformanceScore(),
   const gradeInfo = getPerformanceGrade(performanceScore),
   return (
@@ -408,5 +407,5 @@ const EnhancedPerformanceOptimizer: React.FC = () => {
             </div>,
           </div>,
         </div>)}
-    </>)};
-export default EnhancedPerformanceOptimizer;
+    </>)},
+export default EnhancedPerformanceOptimizer,

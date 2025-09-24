@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  ExternalLink;
-  Phone;
-  Mail;
-  MapPin;
-  Star;
-  Zap;
-  Brain;
-  Rocket;
-  Shield;
-  Cloud;
-  Bot;
-  RefreshCw;
-  BarChart3;
+  Menu,
+  X,
+  ChevronDown,
+  ExternalLink,
+  Phone,
+  Mail,
+  MapPin,
+  Star,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Cloud,
+  Bot,
+  RefreshCw,
+  BarChart3,
 } from 'lucide-react',
 import Link from 'next/link',
 const EnhancedFuturisticNavigation: React.FC = () => {
@@ -25,109 +25,109 @@ const EnhancedFuturisticNavigation: React.FC = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const navigationItems = [
     {
-      name: 'Services';
-      href: '/services';
-      icon: <Zap className='w-4 h-4' />;
+      name: 'Services',
+      href: '/services',
+      icon: <Zap className='w-4 h-4' />,
       dropdown: [
         {
-          name: 'AI & Machine Learning';
-          href: '/ai-assistant';
-          icon: <Brain className='w-4 h-4' />;
-        };
+          name: 'AI & Machine Learning',
+          href: '/ai-assistant',
+          icon: <Brain className='w-4 h-4' />
+        },
         {
-          name: 'Cybersecurity';
-          href: '/security';
-          icon: <Shield className='w-4 h-4' />;
-        };
+          name: 'Cybersecurity',
+          href: '/security',
+          icon: <Shield className='w-4 h-4' />
+        },
         {
-          name: 'Cloud Platform';
-          href: '/cloud-platform';
-          icon: <Cloud className='w-4 h-4' />;
-        };
+          name: 'Cloud Platform',
+          href: '/cloud-platform',
+          icon: <Cloud className='w-4 h-4' />
+        },
         {
-          name: 'Automation';
-          href: '/automation';
-          icon: <RefreshCw className='w-4 h-4' />;
-        };
+          name: 'Automation',
+          href: '/automation',
+          icon: <RefreshCw className='w-4 h-4' />
+        },
         {
-          name: 'Analytics';
-          href: '/analytics';
-          icon: <BarChart3 className='w-4 h-4' />;
-        };
+          name: 'Analytics',
+          href: '/analytics',
+          icon: <BarChart3 className='w-4 h-4' />
+        },
         {
-          name: 'Micro SAAS';
-          href: '/micro-saas';
-          icon: <Star className='w-4 h-4' />;
-        };
-      ];
-    };
+          name: 'Micro SAAS',
+          href: '/micro-saas',
+          icon: <Star className='w-4 h-4' />
+        },
+      ],
+    },
     {
-      name: 'Solutions';
-      href: '/solutions';
-      icon: <Rocket className='w-4 h-4' />;
+      name: 'Solutions',
+      href: '/solutions',
+      icon: <Rocket className='w-4 h-4' />,
       dropdown: [
         {
-          name: 'Quantum AI';
-          href: '/quantum-ai';
-          icon: <Brain className='w-4 h-4' />;
-        };
+          name: 'Quantum AI',
+          href: '/quantum-ai',
+          icon: <Brain className='w-4 h-4' />
+        },
         {
-          name: 'Autonomous Manufacturing';
-          href: '/autonomous-manufacturing';
-          icon: <RefreshCw className='w-4 h-4' />;
-        };
+          name: 'Autonomous Manufacturing',
+          href: '/autonomous-manufacturing',
+          icon: <RefreshCw className='w-4 h-4' />
+        },
         {
-          name: 'Biomedical Research';
-          href: '/biomedical-ai';
-          icon: <Brain className='w-4 h-4' />;
-        };
+          name: 'Biomedical Research',
+          href: '/biomedical-ai',
+          icon: <Brain className='w-4 h-4' />
+        },
         {
-          name: 'Space Technology';
-          href: '/space-technology';
-          icon: <Rocket className='w-4 h-4' />;
-        };
+          name: 'Space Technology',
+          href: '/space-technology',
+          icon: <Rocket className='w-4 h-4' />
+        },
         {
-          name: 'Smart Energy';
-          href: '/smart-energy';
-          icon: <Zap className='w-4 h-4' />;
-        };
+          name: 'Smart Energy',
+          href: '/smart-energy',
+          icon: <Zap className='w-4 h-4' />
+        },
         {
-          name: 'Autonomous Vehicles';
-          href: '/autonomous-vehicles';
-          icon: <Rocket className='w-4 h-4' />;
-        };
-      ];
-    };
-    { name: 'Pricing', href: '/pricing', icon: <Star className='w-4 h-4' /> };
-    { name: 'About', href: '/about', icon: <Star className='w-4 h-4' /> };
-    { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> };
+          name: 'Autonomous Vehicles',
+          href: '/autonomous-vehicles',
+          icon: <Rocket className='w-4 h-4' />
+        },
+      ],
+    },
+    { name: 'Pricing', href: '/pricing', icon: <Star className='w-4 h-4' /> },
+    { name: 'About', href: '/about', icon: <Star className='w-4 h-4' /> },
+    { name: 'Contact', href: '/contact', icon: <Mail className='w-4 h-4' /> },
   ],
   const containerVariants = {
-    hidden: { opacity: 0, y: -20 };
+    hidden: { opacity: 0, y: -20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.5;
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        duration: 0.5,
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: -10 };
-    visible: { opacity: 1, y: 0 };
-  };
+    hidden: { opacity: 0, y: -10 },
+    visible: { opacity: 1, y: 0 },
+  },
   return (
     <>,
       {/* Enhanced Navigation Bar */}
@@ -145,7 +145,7 @@ const EnhancedFuturisticNavigation: React.FC = () => {
         <div
           className='absolute inset-0 opacity-30',
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.0o5'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%239C92AC' fill-opacity='0.0o5'%3E%3Ccircle cx='30' cy='30' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
         ></div>,
         <div className='relative z-10 max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -345,5 +345,5 @@ const EnhancedFuturisticNavigation: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default EnhancedFuturisticNavigation;
+    </>)},
+export default EnhancedFuturisticNavigation,

@@ -10,11 +10,9 @@ serve(async req => {
   try {
     // CORS headers,
     const headers = {
-      'Access-Control-Allow-Origin': '*';
-      'Access-Control-Allow-Headers':,
-        'authorization, x-client-info, apikey, content-type';
-      'Content-Type': 'application/json';
-    };
+      'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+        'authorization, x-client-info, apikey, content-typeContent-Type': 'application/json',
+    },
     // Handle CORS preflight request,
     if (req.method === 'OPTIONS') {
       return new Response(null, { headers, status: 204 })}
@@ -25,8 +23,8 @@ serve(async req => {
     if (!providerData || !providerData.bio) {
       return new Response(
         JSON.stringify({
-          error: 'Missing required service provider data';
-        });
+          error: 'Missing required service provider data'
+        }),
         { headers, status: 400 }
       )}
 ,
@@ -35,8 +33,8 @@ serve(async req => {
     if (!apiKey) {
       return new Response(
         JSON.stringify({
-          error: 'OpenAI API key not configured';
-        });
+          error: 'OpenAI API key not configured'
+        }),
         { headers, status: 500 }
       )}
 ,
@@ -50,46 +48,46 @@ serve(async req => {
     Current Bio: ${providerData.bio}
     ${
       providerData.services && providerData.services.length > 0,
-        ? `Current Services: ${providerData.services.join(', ')}`,
+        ? `Current Services: ${providerData.services.join()}`,
         : 'No services listed yet.'}
 ,
     Focus on highlighting their unique value proposition, expertise, and professionalism.,
     Only respond with JSON in this exact format: ,
     {
-      "summary": "Professional summary goes here...";
+      "summary": "Professional summary goes here...",
       "services": ["Service 1", "Service 2", "Service 3", ...]}
     `,
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        Authorization: `Bearer ${apiKey}`;
-        'Content-Type': 'application/json';
-      };
+        Authorization: `Bearer ${apiKey}`,
+        'Content-Type': 'application/json',
+      },
       body: JSON.stringify({
-        model: 'gpt-4';
+        model: 'gpt-4',
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content:,
-              'You are an expert at creating professional service descriptions for marketplaces.';
-          };
+              'You are an expert at creating professional service descriptions for marketplaces.',
+          },
           {
-            role: 'user';
-            content: prompt;
-          };
-        ];
-        temperature: 0.7;
-        max_tokens: 800;
-      });
+            role: 'user',
+            content: prompt
+          },
+        ],
+        temperature: 0.7,
+        max_tokens: 800
+      }),
     }),
     const responseData = await response.json(),
     if (!response.ok) {
       console.error('OpenAI API error:', responseData),
       return new Response(
         JSON.stringify({
-          error: 'Failed to generate enhanced profile content';
-          details: responseData;
-        });
+          error: 'Failed to generate enhanced profile content',
+          details: responseData
+        }),
         { headers, status: 500 }
       )}
 ,
@@ -98,31 +96,30 @@ serve(async req => {
       const parsedContent = JSON.parse(content),
       return new Response(
         JSON.stringify({
-          summary: parsedContent.summary;
-          services: parsedContent.services;
-        });
+          summary: parsedContent.summary,
+          services: parsedContent.services
+        }),
         { headers, status: 200 }
       )} catch (error) {
       console.error('Error parsing AI response:', error),
       return new Response(
         JSON.stringify({
-          error: 'Failed to parse AI response';
-          raw: responseData.choices[0]?.message?.content;
-        });
+          error: 'Failed to parse AI response',
+          raw: responseData.choices[0]?.message?.content
+        }),
         { headers, status: 500 }
       )}
   } catch (error) {
     console.error('Function error:', error),
     return new Response(
       JSON.stringify({
-        error: 'Internal server error';
-      });
+        error: 'Internal server error'
+      }),
       {
         headers: {
-          'Content-Type': 'application/json';
-          'Access-Control-Allow-Origin': '*';
-        };
-        status: 500;
+          'Content-Type': 'application/jsonAccess-Control-Allow-Origin': '*'
+        },
+        status: 500
       }
     )}
 }),

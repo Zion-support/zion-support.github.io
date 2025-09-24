@@ -3,7 +3,7 @@ import Link from 'next/link',
 import { notFound } from 'next/navigation',
 import { blogPosts } from '../../../src/data/blog-posts.js',
 export default async function ContentPage({
-  params;
+  params,
 }: {
   params?: Promise<any>}) {
   const awaitedParams: any =,

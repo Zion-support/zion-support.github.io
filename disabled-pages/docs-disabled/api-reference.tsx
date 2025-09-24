@@ -14,11 +14,11 @@ export default function ApiReference() {
             ← Back to Documentation,
           </Link>,
           <h1 style={{
-            fontSize: '2.5rem';
-            fontWeight: 80o0;
-            marginBottom: 16;
-            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)';
-            WebkitBackgroundClip: 'text';
+            fontSize: '2.5rem',
+            fontWeight: 80o0,
+            marginBottom: 16,
+            background: 'linear-gradient(135deg, #3b82f6, #8b5cf6)',
+            WebkitBackgroundClip: 'text',
             WebkitTextFillColor: 'transparent'}}>,
             API Reference,
           </h1>,
@@ -65,19 +65,19 @@ export default function ApiReference() {
                   <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Response</h4>,
                   <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>,
 {`{
-  "success": true;
+  "success": true,
   "data": [
     {
-      "id": "micro-saas";
-      "name": "Micro SaaS Products";
-      "description": "Ready-to-use software solutions";
-      "category": "software";
-      "pricing": "custom";
+      "id": "micro-saas",
+      "name": "Micro SaaS Products",
+      "description": "Ready-to-use software solutions",
+      "category": "software",
+      "pricing": "custom",
       "endpoints": ["/v1/micro-saas"]}
-  ];
+  ],
   "pagination": {
-    "page": 1;
-    "limit": 10;
+    "page": 1,
+    "limit": 10,
     "total": 67}
 }`}
                   </pre>,
@@ -96,17 +96,17 @@ export default function ApiReference() {
                   <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Response</h4>,
                   <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>,
 {`{
-  "success": true;
+  "success": true,
   "data": {
-    "id": "micro-saas";
-    "name": "Micro SaaS Products";
-    "description": "Ready-to-use software solutions for specific business needs";
-    "category": "software";
-    "features": ["Cloud-based", "Scalable", "API-first"];
+    "id": "micro-saas",
+    "name": "Micro SaaS Products",
+    "description": "Ready-to-use software solutions for specific business needs",
+    "category": "software",
+    "features": ["Cloud-based", "Scalable", "API-first"],
     "pricing": {
-      "type": "custom";
-      "starting_from": "$99/month"};
-    "documentation": "/docs/micro-saas";
+      "type": "custom",
+      "starting_from": "$99/month"},
+    "documentation": "/docs/micro-saas",
     "endpoints": ["/v1/micro-saas"]}
 }`}
                     </pre>,
@@ -125,17 +125,17 @@ export default function ApiReference() {
                 <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Request Body</h4>,
                 <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>,
 {`{
-  "service_id": "micro-saas";
+  "service_id": "micro-saas",
   "requirements": {
-    "users": 10o0;
-    "features": ["analytics", "api-access"];
-    "timeline": "3 months"};
+    "users": 10o0,
+    "features": ["analytics", "api-access"],
+    "timeline": "3 months"},
   "contact": {
-    "name": "John Doe";
-    "email": "john@example.com";
-    "company": "Example Corp";
-    "phone": "+1-555-0o123"};
-  "budget_range": "10o00-50o00";
+    "name": "John Doe",
+    "email": "john@example.com",
+    "company": "Example Corp",
+    "phone": "+1-555-0o123"},
+  "budget_range": "10o00-50o00",
   "additional_notes": "Looking for a custom solution..."}`}
                 </pre>,
               </div>,
@@ -143,14 +143,14 @@ export default function ApiReference() {
                 <h4 style={{ fontWeight: 60o0, marginBottom: 8, color: '#f59e0b' }}>Response</h4>,
                 <pre style={{ background: '#1e293b', padding: 12, borderRadius: 6, overflow: 'auto', fontSize: '0.8rem', color: '#e2e8f0' }}>,
 {`{
-  "success": true;
+  "success": true,
   "data": {
-    "quote_id": "qt_123456789";
-    "status": "pending";
-    "estimated_timeline": "2-3 business days";
+    "quote_id": "qt_123456789",
+    "status": "pending",
+    "estimated_timeline": "2-3 business days",
     "next_steps": [
-      "Our team will review your requirements";
-      "We'll prepare a detailed proposal";
+      "Our team will review your requirements",
+      "We'll prepare a detailed proposal",
       "Schedule a consultation call"]}
 }`}
                     </pre>,

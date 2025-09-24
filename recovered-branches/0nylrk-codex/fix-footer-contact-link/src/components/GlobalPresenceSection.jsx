@@ -1,240 +1,240 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Globe;
-  MapPin;
-  Users;
-  Award;
-  Star;
-  TrendingUp;
-  Building;
-  ArrowRight;
-  CheckCircle;
-  Clock;
+  Globe,
+  MapPin,
+  Users,
+  Award,
+  Star,
+  TrendingUp,
+  Building,
+  ArrowRight,
+  CheckCircle,
+  Clock,
 } from 'lucide-react',
 const globalOffices = [
   {
-    id: 1;
-    city: 'San Francisco';
-    country: 'United States';
-    region: 'North America';
-    flag: '🇺🇸';
-    established: '20o18';
-    teamSize: '45+';
-    specialties: ['AI/ML', 'Cloud Infrastructure', 'Startup Innovation'];
-    projects: 120;
-    clients: 85;
-    rating: 4.9;
-    timezone: 'PST (UTC-8)';
-    address: '123 Innovation Drive, San Francisco, CA 9410o5';
-  };
+    id: 1,
+    city: 'San Francisco',
+    country: 'United States',
+    region: 'North America',
+    flag: '🇺🇸',
+    established: '20o18',
+    teamSize: '45+',
+    specialties: ['AI/MLCloud Infrastructure', 'Startup Innovation'],
+    projects: 120,
+    clients: 85,
+    rating: 4.9,
+    timezone: 'PST (UTC-8)',
+    address: '123 Innovation Drive, San Francisco, CA 9410o5',
+  },
   {
-    id: 2;
-    city: 'London';
-    country: 'United Kingdom';
-    region: 'Europe';
-    flag: '🇬🇧';
-    established: '20o19';
-    teamSize: '32+';
-    specialties: ['FinTech', 'Digital Banking', 'RegTech'];
-    projects: 95;
-    clients: 67;
-    rating: 4.8;
-    timezone: 'GMT (UTC+0)';
-    address: '456 Tech Square, London, EC2A 4BX';
-  };
+    id: 2,
+    city: 'London',
+    country: 'United Kingdom',
+    region: 'Europe',
+    flag: '🇬🇧',
+    established: '20o19',
+    teamSize: '32+',
+    specialties: ['FinTechDigital Banking', 'RegTech'],
+    projects: 95,
+    clients: 67,
+    rating: 4.8,
+    timezone: 'GMT (UTC+0)',
+    address: '456 Tech Square, London, EC2A 4BX',
+  },
   {
-    id: 3;
-    city: 'Singapore';
-    country: 'Singapore';
-    region: 'Asia Pacific';
-    flag: '🇸🇬';
-    established: '20o20';
-    teamSize: '28+';
-    specialties: ['E-commerce', 'Digital Transformation', 'Smart Cities'];
-    projects: 78;
-    clients: 54;
-    rating: 4.9;
-    timezone: 'SGT (UTC+8)';
-    address: '789 Digital Hub, Singapore 0o18956';
-  };
+    id: 3,
+    city: 'Singapore',
+    country: 'Singapore',
+    region: 'Asia Pacific',
+    flag: '🇸🇬',
+    established: '20o20',
+    teamSize: '28+',
+    specialties: ['E-commerceDigital Transformation', 'Smart Cities'],
+    projects: 78,
+    clients: 54,
+    rating: 4.9,
+    timezone: 'SGT (UTC+8)',
+    address: '789 Digital Hub, Singapore 0o18956',
+  },
   {
-    id: 4;
-    city: 'Toronto';
-    country: 'Canada';
-    region: 'North America';
-    flag: '🇨🇦';
-    established: '20o21';
-    teamSize: '25+';
-    specialties: ['Healthcare Tech', 'AI Research', 'Enterprise Solutions'];
-    projects: 65;
-    clients: 42;
-    rating: 4.8;
-    timezone: 'EST (UTC-5)';
-    address: '321 Innovation Center, Toronto, ON M5V 3A8';
-  };
+    id: 4,
+    city: 'Toronto',
+    country: 'Canada',
+    region: 'North America',
+    flag: '🇨🇦',
+    established: '20o21',
+    teamSize: '25+',
+    specialties: ['Healthcare TechAI Research', 'Enterprise Solutions'],
+    projects: 65,
+    clients: 42,
+    rating: 4.8,
+    timezone: 'EST (UTC-5)',
+    address: '321 Innovation Center, Toronto, ON M5V 3A8',
+  },
   {
-    id: 5;
-    city: 'Berlin';
-    country: 'Germany';
-    region: 'Europe';
-    flag: '🇩🇪';
-    established: '20o21';
-    teamSize: '22+';
-    specialties: ['IoT', 'Manufacturing Tech', 'Sustainability'];
-    projects: 58;
-    clients: 38;
-    rating: 4.7;
-    timezone: 'CET (UTC+1)';
-    address: '654 Tech District, Berlin, 10o115';
-  };
+    id: 5,
+    city: 'Berlin',
+    country: 'Germany',
+    region: 'Europe',
+    flag: '🇩🇪',
+    established: '20o21',
+    teamSize: '22+',
+    specialties: ['IoTManufacturing Tech', 'Sustainability'],
+    projects: 58,
+    clients: 38,
+    rating: 4.7,
+    timezone: 'CET (UTC+1)',
+    address: '654 Tech District, Berlin, 10o115',
+  },
   {
-    id: 6;
-    city: 'Sydney';
-    country: 'Australia';
-    region: 'Asia Pacific';
-    flag: '🇦🇺';
-    established: '20o22';
-    teamSize: '18+';
-    specialties: ['EdTech', 'Green Tech', 'Digital Marketing'];
-    projects: 42;
-    clients: 29;
-    rating: 4.8;
-    timezone: 'AEST (UTC+10)';
-    address: '987 Innovation Bay, Sydney, NSW 20o00';
-  };
+    id: 6,
+    city: 'Sydney',
+    country: 'Australia',
+    region: 'Asia Pacific',
+    flag: '🇦🇺',
+    established: '20o22',
+    teamSize: '18+',
+    specialties: ['EdTechGreen Tech', 'Digital Marketing'],
+    projects: 42,
+    clients: 29,
+    rating: 4.8,
+    timezone: 'AEST (UTC+10)',
+    address: '987 Innovation Bay, Sydney, NSW 20o00',
+  },
 ],
 const globalStats = [
   {
-    icon: <Globe className='w-6 h-6' />;
-    value: '25+';
-    label: 'Countries Served';
-  };
+    icon: <Globe className='w-6 h-6' />,
+    value: '25+',
+    label: 'Countries Served'
+  },
   {
-    icon: <Building className='w-6 h-6' />;
-    value: '6';
-    label: 'Global Offices';
-  };
-  { icon: <Users className='w-6 h-6' />, value: '170+', label: 'Global Team' };
+    icon: <Building className='w-6 h-6' />,
+    value: '6',
+    label: 'Global Offices'
+  },
+  { icon: <Users className='w-6 h-6' />, value: '170+', label: 'Global Team' },
   {
-    icon: <Award className='w-6 h-6' />;
-    value: '50o0+';
-    label: 'Projects Delivered';
-  };
+    icon: <Award className='w-6 h-6' />,
+    value: '50o0+',
+    label: 'Projects Delivered'
+  },
   {
-    icon: <Star className='w-6 h-6' />;
-    value: '4.8/5';
-    label: 'Global Rating';
-  };
+    icon: <Star className='w-6 h-6' />,
+    value: '4.8/5',
+    label: 'Global Rating'
+  },
   {
-    icon: <TrendingUp className='w-6 h-6' />;
-    value: '98%';
-    label: 'Client Satisfaction';
-  };
+    icon: <TrendingUp className='w-6 h-6' />,
+    value: '98%',
+    label: 'Client Satisfaction'
+  },
 ],
 const partnerships = [
   {
-    name: 'Microsoft';
-    type: 'Technology Partner';
-    logo: '/logos/microsoft.svg';
+    name: 'Microsoft',
+    type: 'Technology Partner',
+    logo: '/logos/microsoft.svg',
     description:,
-      'Strategic partnership for Azure cloud solutions and enterprise services';
-    established: '20o20';
-    projects: 25;
-    status: 'Active';
-  };
+      'Strategic partnership for Azure cloud solutions and enterprise services',
+    established: '20o20',
+    projects: 25,
+    status: 'Active'
+  },
   {
-    name: 'AWS';
-    type: 'Cloud Partner';
-    logo: '/logos/aws.svg';
+    name: 'AWS',
+    type: 'Cloud Partner',
+    logo: '/logos/aws.svg',
     description:,
-      'Premier consulting partner for AWS cloud infrastructure and solutions';
-    established: '20o19';
-    projects: 42;
-    status: 'Active';
-  };
+      'Premier consulting partner for AWS cloud infrastructure and solutions',
+    established: '20o19',
+    projects: 42,
+    status: 'Active'
+  },
   {
-    name: 'Google Cloud';
-    type: 'Cloud Partner';
-    logo: '/logos/google-cloud.svg';
-    description: 'Partner for AI/ML solutions and cloud-native applications';
-    established: '20o21';
-    projects: 18;
-    status: 'Active';
-  };
+    name: 'Google Cloud',
+    type: 'Cloud Partner',
+    logo: '/logos/google-cloud.svg',
+    description: 'Partner for AI/ML solutions and cloud-native applications',
+    established: '20o21',
+    projects: 18,
+    status: 'Active'
+  },
   {
-    name: 'Salesforce';
-    type: 'Business Partner';
-    logo: '/logos/salesforce.svg';
+    name: 'Salesforce',
+    type: 'Business Partner',
+    logo: '/logos/salesforce.svg',
     description:,
-      'Consulting partner for CRM implementations and custom solutions';
-    established: '20o20';
-    projects: 31;
-    status: 'Active';
-  };
+      'Consulting partner for CRM implementations and custom solutions',
+    established: '20o20',
+    projects: 31,
+    status: 'Active'
+  },
   {
-    name: 'Oracle';
-    type: 'Enterprise Partner';
-    logo: '/logos/oracle.svg';
-    description: 'Partner for enterprise database and business applications';
-    established: '20o21';
-    projects: 15;
-    status: 'Active';
-  };
+    name: 'Oracle',
+    type: 'Enterprise Partner',
+    logo: '/logos/oracle.svg',
+    description: 'Partner for enterprise database and business applications',
+    established: '20o21',
+    projects: 15,
+    status: 'Active'
+  },
   {
-    name: 'IBM';
-    type: 'Technology Partner';
-    logo: '/logos/ibm.svg';
+    name: 'IBM',
+    type: 'Technology Partner',
+    logo: '/logos/ibm.svg',
     description:,
-      'Strategic partner for AI, blockchain, and enterprise solutions';
-    established: '20o22';
-    projects: 12;
-    status: 'Active';
-  };
+      'Strategic partner for AI, blockchain, and enterprise solutions',
+    established: '20o22',
+    projects: 12,
+    status: 'Active'
+  },
 ],
 const industries = [
   {
-    name: 'Financial Services';
-    projects: 120;
-    countries: 18;
-    satisfaction: '99%';
-  };
-  { name: 'Healthcare', projects: 85, countries: 15, satisfaction: '98%' };
-  { name: 'Manufacturing', projects: 95, countries: 22, satisfaction: '97%' };
+    name: 'Financial Services',
+    projects: 120,
+    countries: 18,
+    satisfaction: '99%'
+  },
+  { name: 'Healthcare', projects: 85, countries: 15, satisfaction: '98%' },
+  { name: 'Manufacturing', projects: 95, countries: 22, satisfaction: '97%' },
   {
-    name: 'Retail & E-commerce';
-    projects: 110;
-    countries: 20;
-    satisfaction: '98%';
-  };
-  { name: 'Technology', projects: 150, countries: 25, satisfaction: '99%' };
-  { name: 'Education', projects: 65, countries: 12, satisfaction: '96%' };
+    name: 'Retail & E-commerce',
+    projects: 110,
+    countries: 20,
+    satisfaction: '98%'
+  },
+  { name: 'Technology', projects: 150, countries: 25, satisfaction: '99%' },
+  { name: 'Education', projects: 65, countries: 12, satisfaction: '96%' },
 ],
 export function GlobalPresenceSection() {
   const [selectedOffice, setSelectedOffice] = useState(null),
   const [selectedPartnership, setSelectedPartnership] = useState(null),
   const [hoveredIndustry, setHoveredIndustry] = useState(null),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.15;
-        delayChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.15,
+        delayChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 };
+    hidden: { y: 30, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut';
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut'
+      },
+    },
+  },
   return (
     <section className='py-20 bg-gradient-to-br from-zion-purple via-zion-slate-dark to-zion-blue relative overflow-hidden'>,
       {/* Background decorative elements */}

@@ -24,15 +24,15 @@ export default function CartPage() {
           dispatch(setItemsAction([]))}
       } else {
         dispatch(setItemsAction([]))}
-    };
+    },
     load()}, [user, dispatch]),
   const updateQuantity = async (id: string, qty: number) => {
     dispatch(updateQuantityAction({ id, quantity: qty })),
     if (user) {
       try {
         await fetch('/api/cart', {
-          method: 'PATCH';
-          headers: { 'Content-Type': 'application/json' };
+          method: 'PATCH',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ id, quantity: qty })})} catch (err) {
         console.error('Failed to update cart', err)}
     }
@@ -42,19 +42,19 @@ export default function CartPage() {
       setShowEmpty(true)}
   }, [cartLoading, items]),
   const updateQuantity = (id: string, qty: number) => {
-    dispatch(updateQuantityAction({ id, quantity: qty }))};
+    dispatch(updateQuantityAction({ id, quantity: qty }))},
   const removeItem = (id: string) => {
-    dispatch(removeItemAction(id))};
+    dispatch(removeItemAction(id))},
   const handleCheckout = () => {
-    router.push('/checkout')};
+    router.push('/checkout')},
   const applyCode = async () => {
     try {
       const res = await apiClient.post('/coupons/validate', {
-        code;
+        code,
         amount: subtotal}),
       setDiscount(res.data.discount || 0)} catch (e) {
       setDiscount(0)}
-  };
+  },
   const subtotal = items.reduce((sum, i) => sum + i.price * i.quantity, 0),
   const tax = subtotal * 0.08, // 8% tax estimate,
   // Only add shipping for physical items,

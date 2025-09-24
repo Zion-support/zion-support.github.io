@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {SEO} from "@/components/SEO",
@@ -8,18 +8,18 @@ import {Button} from "@/components/ui/button",
 import {ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe} from "lucide-react",
 import {useAuth} from "@/hooks/useAuth",
 import {Link} from "react-router-dom",
-import React from "react";;
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { useWhitelabel } from "@/context/WhitelabelContext";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
-import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { useWhitelabel } from "@/context/WhitelabelContext",
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Button } from "@/components/ui/button",
+import { ArrowRight, Briefcase, PenTool, BarChart3, Users, Shield, Globe } from "lucide-react",
 import { useAuth } from "@/hooks/useAuth",
 import { Link } from "react-router-dom",
-import { useAuth } from "@/hooks/useAuth";
-import { Link } from "react-router-dom";
+import { useAuth } from "@/hooks/useAuth",
+import { Link } from "react-router-dom",
 export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
@@ -27,8 +27,8 @@ export default function ZionHireAI() {
   const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
   const { isAuthenticated } = useAuth(),
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
+  const { isAuthenticated } = useAuth(),
   return (
     <>,
   return (
@@ -271,8 +271,8 @@ export default function ZionHireAI() {
       <Footer />,
     </>),
 export default function ZionHireAI() {
-  const { isWhitelabel, brandName, primaryColor } = useWhitelabel();
-  const { isAuthenticated } = useAuth();
+  const { isWhitelabel, brandName, primaryColor } = useWhitelabel(),
+  const { isAuthenticated } = useAuth(),
   return (
     <>,
       <SEO
@@ -293,7 +293,7 @@ export default function ZionHireAI() {
                   {isWhitelabel ? `${brandName} Recruiting Assistant` : "Zion Hire AI"}
                 </h1>,
                 <p className="text-lg text-zion-slate-light max-w-[600px]">,
-                  Empower your team with AI-driven talent acquisition. Streamline your hiring process;
+                  Empower your team with AI-driven talent acquisition. Streamline your hiring process,
                   improve candidate matches, and enhance the applicant experience.,
                 </p>,
                 <div className="flex flex-col sm: flex-row gap-3 pt-4">,
@@ -333,7 +333,7 @@ export default function ZionHireAI() {
             <div className="text-center mb-12">,
               <h2 className="text-3xl font-bold tracking-tight">Powerful AI Hiring Tools</h2>,
               <p className="text-muted-foreground mt-4 max-w-3xl mx-auto">,
-                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process;
+                Our comprehensive suite of AI-powered hiring tools help you streamline your recruiting process,
                 find better candidates, and make data-driven decisions.,
               </p>,
             </div>,
@@ -520,7 +520,7 @@ export default function ZionHireAI() {
             <div className="text - center mb - 12">,
               <h2 className="text - 3xl font - bold tracking - tight">Powerful AI Hiring Tools</h2>,
               <p className="text - muted - foreground mt - 4 max - w-3xl mx - auto">,
-                Our comprehensive suite of AI - powered hiring tools help you streamline your recruiting process;
+                Our comprehensive suite of AI - powered hiring tools help you streamline your recruiting process,
                 find better candidates, and make data - driven decisions.,
               </p>,
             </div>,
@@ -683,7 +683,7 @@ export default function ZionHireAI() {
           <div className="container mx - auto px - 4 md: px - 6 text - center">,
             <h2 className="text - 3xl font - bold text - white mb - 4">Ready to transform your hiring process?</h2>,
             <p className="text - zion - slate - light max - w-2xl mx - auto mb - 8">,
-              Join leading companies using Zion Hire AI to find better talent faster;
+              Join leading companies using Zion Hire AI to find better talent faster,
               reduce time - to - hire, and improve candidate experience.,
             </p>,
             <Button

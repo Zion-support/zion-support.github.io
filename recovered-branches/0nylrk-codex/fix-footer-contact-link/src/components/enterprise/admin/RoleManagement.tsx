@@ -3,78 +3,77 @@ import { Badge } from "@/components/ui/badge",
 import { Switch } from "@/components/ui/switch",
 import { toast } from "@/hooks/use-toast",
 import { InfoIcon } from "lucide-react",
-
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
   TableRow} from "@/components/ui/table",
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
   TooltipTrigger} from "@/components/ui/tooltip",
 export function RoleManagement() {
   // Mock team members data,
   const teamMembers = [
     {
-      id: 1;
-      name: "Alex Johnson";
-      email: "alex@example.com";
-      role: "Admin";
+      id: 1,
+      name: "Alex Johnson",
+      email: "alex@example.com",
+      role: "Admin",
       permissions: {
-        viewCandidates: true;
-        editCandidates: true;
-        createJobs: true;
-        manageTeam: true;
-        viewBilling: true;
-        manageBilling: true}};
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: true,
+        viewBilling: true,
+        manageBilling: true}},
     {
-      id: 2;
-      name: "Jamie Smith";
-      email: "jamie@example.com";
-      role: "Recruiter";
+      id: 2,
+      name: "Jamie Smith",
+      email: "jamie@example.com",
+      role: "Recruiter",
       permissions: {
-        viewCandidates: true;
-        editCandidates: true;
-        createJobs: true;
-        manageTeam: false;
-        viewBilling: false;
-        manageBilling: false}};
+        viewCandidates: true,
+        editCandidates: true,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: false,
+        manageBilling: false}},
     {
-      id: 3;
-      name: "Sam Williams";
-      email: "sam@example.com";
-      role: "Manager";
+      id: 3,
+      name: "Sam Williams",
+      email: "sam@example.com",
+      role: "Manager",
       permissions: {
-        viewCandidates: true;
-        editCandidates: false;
-        createJobs: true;
-        manageTeam: false;
-        viewBilling: true;
-        manageBilling: false}};
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: true,
+        manageTeam: false,
+        viewBilling: true,
+        manageBilling: false}},
     {
-      id: 4;
-      name: "Taylor Brown";
-      email: "taylor@example.com";
-      role: "Viewer";
+      id: 4,
+      name: "Taylor Brown",
+      email: "taylor@example.com",
+      role: "Viewer",
       permissions: {
-        viewCandidates: true;
-        editCandidates: false;
-        createJobs: false;
-        manageTeam: false;
-        viewBilling: false;
+        viewCandidates: true,
+        editCandidates: false,
+        createJobs: false,
+        manageTeam: false,
+        viewBilling: false,
         manageBilling: false}}],
   const handlePermissionChange = (memberId: numberpermission: stringvalue: boolean) => {
     // In a real appthis would make an API call to update permissions,
     toast({
-      title: "Permission updated";
-      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})};
+      title: "Permission updated",
+      description: `Permission ${permission} has been ${value ? "granted" : "revoked"}.`})},
   const roleDescriptions: Record<string> = {
-    "Admin": "Full access to all features and settings";
-    "Recruiter": "Can manage candidates and job postings";
-    "Manager": "Can view candidates and create jobs";
-    "Viewer": "Read-only access to candidates"};
+    "Admin": "Full access to all features and settings",
+    "Recruiter": "Can manage candidates and job postings",
+    "Manager": "Can view candidates and create jobs",
+    "Viewer": "Read-only access to candidates"},
   return (
     <div className="space-y-6">,
       <div>,

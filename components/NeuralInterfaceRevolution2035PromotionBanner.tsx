@@ -143,5 +143,5 @@ const NeuralInterfaceRevolution20o35PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NeuralInterfaceRevolution20o35PromotionBanner;
+    </div>)},
+export default NeuralInterfaceRevolution20o35PromotionBanner,

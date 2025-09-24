@@ -1,47 +1,43 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  User;
-  Clock;
-  Share2;
-  BookOpen;
-  TrendingUp;
-  Zap;
-  CheckCircle;
-  ArrowRight;
-  Brain;
+  ArrowLeft,
+  Calendar,
+  User,
+  Clock,
+  Share2,
+  BookOpen,
+  TrendingUp,
+  Zap,
+  CheckCircle,
+  ArrowRight,
+  Brain,
 } from 'lucide-react',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25 Implementation Master Guide: Ultimate Roadmap for Enterprise Transformation';
+    'AI 20o25 Implementation Master Guide: Ultimate Roadmap for Enterprise Transformation',
   description:,
-    'Comprehensive guide to implementing AI transformation in 20o25, covering strategy, technology, processes, and best practices for achieving maximum ROI and competitive advantage.';
+    'Comprehensive guide to implementing AI transformation in 20o25, covering strategy, technology, processes, and best practices for achieving maximum ROI and competitive advantage.',
   keywords: [
-    'AI Implementation';
-    'Enterprise Transformation';
-    'AI Strategy';
-    'ROI Optimization';
-    'Digital Transformation';
-  ];
+    'AI ImplementationEnterprise Transformation',
+    'AI StrategyROI Optimization',
+    'Digital Transformation',
+  ],
   openGraph: {
     title:,
-      'AI 20o25 Implementation Master Guide: Ultimate Roadmap for Enterprise Transformation';
+      'AI 20o25 Implementation Master Guide: Ultimate Roadmap for Enterprise Transformation',
     description:,
-      'Comprehensive guide to implementing AI transformation in 20o25, covering strategy, technology, processes, and best practices for achieving maximum ROI and competitive advantage.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Comprehensive guide to implementing AI transformation in 20o25, covering strategy, technology, processes, and best practices for achieving maximum ROI and competitive advantage.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI Implementation';
-      'Enterprise Transformation';
-      'AI Strategy';
-      'ROI Optimization';
-      'Digital Transformation';
-    ];
-  };
-};
+      'AI ImplementationEnterprise Transformation',
+      'AI StrategyROI Optimization',
+      'Digital Transformation',
+    ]
+  },
+},
 export default function AIImplementationMasterGuidePage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-50 to-indigo-50'>,
@@ -85,17 +81,15 @@ export default function AIImplementationMasterGuidePage() {
             AI 20o25 Implementation Master Guide,
           </h1>,
           <p className='text-xl text-gray-60o0 mb-8 max-w-3xl mx-auto'>,
-            Comprehensive guide to implementing AI transformation in 20o25;
+            Comprehensive guide to implementing AI transformation in 20o25,
             covering strategy, technology, processes, and best practices for,
             achieving maximum ROI and competitive advantage.,
           </p>,
           <div className='flex flex-wrap justify-center gap-4 mb-8'>,
             {[
-              'AI Implementation';
-              'Enterprise Transformation';
-              'AI Strategy';
-              'ROI Optimization';
-              'Digital Transformation';
+              'AI ImplementationEnterprise Transformation',
+              'AI StrategyROI Optimization',
+              'Digital Transformation',
             ].map(tag => (
               <span
                 key={tag}

@@ -1,6 +1,6 @@
 export const metadata ={
-  title: 'Business Process Automation | Zion Tech Group';
-  description: 'Comprehensive business process automation services including RPA, workflow automation, AI-powered automation, and digital transformation solutions.'};
+  title: 'Business Process Automation | Zion Tech Group',
+  description: 'Comprehensive business process automation services including RPA, workflow automation, AI-powered automation, and digital transformation solutions.'},
 export default function BusinessAutomationPage() {
   return (
     <div className="animate-fade-in">,
@@ -207,11 +207,11 @@ function Pricing() {
           price="$3k–$8k",
           duration="2–4 weeks",
           features={[
-            "Process analysis";
-            "Automation opportunity identification";
-            "ROI calculation";
-            "Implementation roadmap";
-            "Technology recommendations";
+            "Process analysis",
+            "Automation opportunity identification",
+            "ROI calculation",
+            "Implementation roadmap",
+            "Technology recommendations",
             "Detailed report"]}
           popular={false}
          />,
@@ -220,11 +220,11 @@ function Pricing() {
           price="$10k–$40k",
           duration="4–12 weeks",
           features={[
-            "Custom automation development";
-            "System integration";
-            "Testing & validation";
-            "User training";
-            "Documentation";
+            "Custom automation development",
+            "System integration",
+            "Testing & validation",
+            "User training",
+            "Documentation",
             "3 months support"]}
           popular={true}
          />,
@@ -233,11 +233,11 @@ function Pricing() {
           price="$2k+/mo",
           duration="Ongoing",
           features={[
-            "24/7 monitoring";
-            "Performance optimization";
-            "Process improvements";
-            "Regular reporting";
-            "Maintenance & updates";
+            "24/7 monitoring",
+            "Performance optimization",
+            "Process improvements",
+            "Regular reporting",
+            "Maintenance & updates",
             "Dedicated support"]}
           popular={false}
          />,

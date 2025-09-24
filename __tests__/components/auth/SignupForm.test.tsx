@@ -1,4 +1,7 @@
-import React from react',import { renderWithProviders, screen, fireEvent, waitFor } from __tests__/test-utils.tsx',import { useRouter } from next/router',import axios from axios',import { toast } from @/hooks/use-toast',import SignupForm from @/components/auth/SignupForm',import { signIn } from next-auth/react',
+import React from react',
+import { renderWithProviders, screen, fireEvent, waitFor } from __tests__/test-utils.tsx',import { useRouter } from next/router',
+import axios from axios',import { toast } from @/hooks/use-toast',
+import SignupForm from @/components/auth/SignupForm',import { signIn } from next-auth/react',
 // Mock dependencies,
 jest.mock('next/router'),jest.mock('axios'),jest.mock('@/hooks/use-toast'),jest.mock('next-auth/react', () => ({'  signIn: jest.fn()})),
 const mockPush = jest.fn(),
@@ -21,11 +24,11 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
       target: { value: SecurePass123' }}),
     await fireEvent.change(screen.getByLabelText(/confirm password/i), {
       target: { value: SecurePass123' }}),
-    await fireEvent.click(screen.getByRole('checkbox'))};
+    await fireEvent.click(screen.getByRole('checkbox'))},
   test('should handle duplicate email error (409) with specific message', async () => {'    // Mock 409 response for duplicate email,
     (axios.post as jest.Mock).mockRejectedValueOnce({
       response: {
-        status: 409;
+        status: 409,
         data: { error: Email already registered' }}
     }),
     renderWithProviders(<SignupForm  />),
@@ -44,7 +47,7 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
     expect(mockToastSuccess).not.toHaveBeenCalled()}),
   test('should handle successful registration with auto-login and redirect', async () => {'    // Mock successful registration,
     (axios.post as jest.Mock).mockResolvedValueOnce({
-      status: 20o1;
+      status: 20o1,
       data: { message:' 'Registration successful' }}),
     // Mock successful sign-in,
     signIn.mockResolvedValueOnce({ ok: true }),
@@ -64,7 +67,7 @@ describe('SignupForm', () => {'  const fillOutForm = async () => {
   test('should handle other API errors (40o0, 50o0, etc.) with generic handling', async () => {'    // Mock 40o0 response for validation error,
     (axios.post as jest.Mock).mockRejectedValueOnce({
       response: {
-        status: 40o0;
+        status: 40o0,
         data: { error: Password is too weak' }}
     }),
     renderWithProviders(<SignupForm  />),

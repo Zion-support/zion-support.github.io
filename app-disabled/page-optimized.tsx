@@ -12,48 +12,36 @@ const StructuredData = React.lazy(() => import('../components/StructuredData')),
 const HomePage: React.FC = () => {
   const seoData = {
     title:,
-      'AI Innovation Hub 20o25 - Revolutionary AI Solutions with 5,0o00% ROI';
+      'AI Innovation Hub 20o25 - Revolutionary AI Solutions with 5,0o00% ROI',
     description:,
-      'Discover the most advanced AI solutions delivering 5,0o00% to 25,0o00% ROI. Fortune 50o0 success stories, implementation guides, and cutting-edge AI technology for enterprise transformation.';
+      'Discover the most advanced AI solutions delivering 5,0o00% to 25,0o00% ROI. Fortune 50o0 success stories, implementation guides, and cutting-edge AI technology for enterprise transformation.',
     keywords: [
-      'AI Innovation';
-      'Artificial Intelligence';
-      'ROI Calculator';
-      'Business Intelligence';
-      'AI Implementation';
-      'Enterprise AI';
-      'Quantum AI';
-      'Autonomous Systems';
-      'AI Transformation';
-      'Machine Learning';
-      'Deep Learning';
-      'Neural Networks';
-      'AI Solutions';
-      'AI Consulting';
-      'AI Technology';
-      'AI Revolution';
-      'AI Breakthrough';
-      'AI Success Stories';
-      'AI Case Studies';
-      'AI Resources';
-    ];
-    canonicalUrl: 'https://zion.app';
-    ogImage: '/images/ai-innovation-hub-og.jpg';
-    ogType: 'website';
+      'AI InnovationArtificial Intelligence',
+      'ROI CalculatorBusiness Intelligence',
+      'AI ImplementationEnterprise AI',
+      'Quantum AIAutonomous Systems',
+      'AI TransformationMachine Learning',
+      'Deep LearningNeural Networks',
+      'AI SolutionsAI Consulting',
+      'AI TechnologyAI Revolution',
+      'AI BreakthroughAI Success Stories',
+      'AI Case StudiesAI Resources',
+    ],
+    canonicalUrl: 'https://zion.app',
+    ogImage: '/images/ai-innovation-hub-og.jpg',
+    ogType: 'website',
     structuredData: {
-      '@context': 'https://schema.org';
-      '@type': 'WebSite';
-      name: 'AI Innovation Hub';
-      url: 'https://zion.app';
+      '@context': 'https://schema.org@type': 'WebSite',
+      name: 'AI Innovation Hub',
+      url: 'https://zion.app',
       description:,
-        'Revolutionary AI solutions delivering unprecedented ROI and business transformation';
+        'Revolutionary AI solutions delivering unprecedented ROI and business transformation',
       potentialAction: {
-        '@type': 'SearchAction';
-        target: 'https://zion.app/search?q={search_term_string}';
-        'query-input': 'required name=search_term_string';
-      };
-    };
-  };
+        '@type': 'SearchAction',
+        target: 'https://zion.app/search?q={search_term_string}query-input': 'required name=search_term_string',
+      },
+    },
+  },
   return (
     <>,
       <SEOOptimizer seoData={seoData}>,
@@ -411,5 +399,5 @@ const HomePage: React.FC = () => {
           </MobileResponsiveLayout>,
         </PerformanceOptimizer>,
       </SEOOptimizer>,
-    </>)};
-export default HomePage;
+    </>)},
+export default HomePage,

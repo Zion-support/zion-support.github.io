@@ -12,11 +12,11 @@ interface State {
 class ErrorBoundary extends Component<PropsState> {
   constructor(props: Props) {
     super(props),
-    this.state ={ hasError: false };
+    this.state ={ hasError: false },
   }
 ,
   static getDerivedStateFromError(error: Error): State {
-    return { hasError: truerror };
+    return { hasError: truerror },
   }
 ,
   componentDidCatch(error: ErrorerrorInfo: ErrorInfo) {
@@ -38,7 +38,7 @@ class ErrorBoundary extends Component<PropsState> {
             </button>,
     console.error('Error caught by boundary:'errorInfo),
     this.setState({
-      error;
+      error,
       errorInfo}),
     // Log error to external service (e.g.Sentry),
     if (typeof window !== 'undefined' && (window as any).Sentry) {
@@ -46,9 +46,9 @@ class ErrorBoundary extends Component<PropsState> {
   }
 ,
   handleReload = () => {
-    window.location.reload()};
+    window.location.reload()},
   handleGoHome = () => {
-    window.location.href = '/'};
+    window.location.href = '/'},
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {
@@ -64,7 +64,7 @@ class ErrorBoundary extends Component<PropsState> {
               Oops! Something went wrong,
             </h1>,
             <p className="text-lg text-white/70 mb-8 leading-relaxed">,
-              'We', 're sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.,
+              'Were sorrybut something unexpected happened. Our team has been notified and is working to fix this issue.,
             </p>,
             {process.env.NODE_ENV === 'development' && this.state.error && (
               <details className="text-left bg-white/5 rounded-xl p-6 mb-8 border border-white/10">,
@@ -118,5 +118,5 @@ class ErrorBoundary extends Component<PropsState> {
     return this.props.children}
 }
 ,
-export default ErrorBoundary;
+export default ErrorBoundary,
 })

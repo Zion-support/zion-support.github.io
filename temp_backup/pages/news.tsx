@@ -2,167 +2,167 @@ import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO',
 import Link from 'next/link',
 import React, { useState } from 'react',
 import EnhancedNavigation from '../components/EnhancedNavigation',
 import EnhancedFooter from '../components/EnhancedFooter',
-  Newspaper;
-  Calendar;
-  User;
-  Tag;
-  ArrowRight;
-  ExternalLink;
-  TrendingUp;
-  Award;
-  Rocket;
-  Globe;
-  Brain;
-  Atom;
+  Newspaper,
+  Calendar,
+  User,
+  Tag,
+  ArrowRight,
+  ExternalLink,
+  TrendingUp,
+  Award,
+  Rocket,
+  Globe,
+  Brain,
+  Atom,
   Zap} from 'lucide-react',
 const NewsPage: React.FC = () => {
   const newsArticles = [
     {
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
-      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.';
-      author: 'Press Team';
-      date: '20o25-0o1-15';
-      date: '2025-01-15';
-      author: 'Zion Tech Group';
-      readTime: '5 min read';
-      featured: true;
-      image: '/images/news/ai-consciousness-breakthrough.jpg';
-      tags: ['AI Consciousness', 'Breakthrough', 'Research', 'Innovation']};
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
+      excerpt: 'Breakthrough technology that brings emotional intelligence and self-awareness to artificial intelligence systems.',
+      author: 'Press Team',
+      date: '20o25-0o1-15',
+      date: '2025-01-15',
+      author: 'Zion Tech Group',
+      readTime: '5 min read',
+      featured: true,
+      image: '/images/news/ai-consciousness-breakthrough.jpg',
+      tags: ['AI ConsciousnessBreakthrough', 'ResearchInnovation']},
     {
-      id: 2;
-      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion';
-      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.';
-      category: 'company';
-      date: '2025-01-10';
-      author: 'Zion Tech Group';
-      readTime: '3 min read';
-      featured: true;
-      image: '/images/news/series-c-funding.jpg';
-      tags: ['Funding', 'Investment', 'Growth', 'Expansion']};
+      id: 2,
+      title: 'Series C Funding Round: Zion Tech Group Raises $250M for Global Expansion',
+      excerpt: 'Major investment round led by leading venture capital firms to accelerate AI consciousness platform development and international market expansion.',
+      category: 'company',
+      date: '2025-01-10',
+      author: 'Zion Tech Group',
+      readTime: '3 min read',
+      featured: true,
+      image: '/images/news/series-c-funding.jpg',
+      tags: ['FundingInvestment', 'GrowthExpansion']},
     {
-      id: 3;
-      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure';
-      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.';
-      category: 'partnerships';
-      date: '2025-01-05';
-      author: 'Zion Tech Group';
-      readTime: '4 min read';
-      featured: true;
-      image: '/images/news/quantum-azure-partnership.jpg';
-      tags: ['Quantum Computing', 'Microsoft Azure', 'Security', 'Partnership']}
+      id: 3,
+      title: 'Quantum-Secure Cloud Infrastructure Launches in Partnership with Microsoft Azure',
+      excerpt: 'World\'s first quantum-secure cloud platform provides unbreakable encryption for enterprise customers, setting new security standards.',
+      category: 'partnerships',
+      date: '2025-01-05',
+      author: 'Zion Tech Group',
+      readTime: '4 min read',
+      featured: true,
+      image: '/images/news/quantum-azure-partnership.jpg',
+      tags: ['Quantum ComputingMicrosoft Azure', 'SecurityPartnership']}
   ],
   const latestNews = [
     {
-      id: 4;
-      title: 'AI Customer Success Platform Achieves 99.9% Customer Retention Rate';
-      excerpt: 'Revolutionary AI-powered customer success solution demonstrates exceptional results in preventing churn and improving customer satisfaction.';
-      category: 'product';
-      date: '2025-01-12';
-      author: 'Sarah Chen';
-      readTime: '4 min read';
-      featured: false;
-      image: '/images/news/ai-customer-success.jpg';
-      tags: ['AI', 'Customer Success', 'Retention', 'Platform']};
+      id: 4,
+      title: 'AI Customer Success Platform Achieves 99.9% Customer Retention Rate',
+      excerpt: 'Revolutionary AI-powered customer success solution demonstrates exceptional results in preventing churn and improving customer satisfaction.',
+      category: 'product',
+      date: '2025-01-12',
+      author: 'Sarah Chen',
+      readTime: '4 min read',
+      featured: false,
+      image: '/images/news/ai-customer-success.jpg',
+      tags: ['AICustomer Success', 'RetentionPlatform']},
     {
-      id: 5;
-      title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year';
-      excerpt: 'Recognition as one of the world\'s most innovative AI companies highlights our leadership in artificial intelligence and quantum computing.';
-      category: 'company';
-      date: '2025-01-08';
-      author: 'Zion Tech Group';
-      readTime: '2 min read';
-      featured: false;
-      image: '/images/news/forbes-ai-50.jpg';
-      tags: ['Recognition', 'Forbes', 'AI Leadership', 'Innovation']};
+      id: 5,
+      title: 'Zion Tech Group Named to Forbes AI 50 List for Second Consecutive Year',
+      excerpt: 'Recognition as one of the world\'s most innovative AI companies highlights our leadership in artificial intelligence and quantum computing.',
+      category: 'company',
+      date: '2025-01-08',
+      author: 'Zion Tech Group',
+      readTime: '2 min read',
+      featured: false,
+      image: '/images/news/forbes-ai-50.jpg',
+      tags: ['RecognitionForbes', 'AI LeadershipInnovation']},
     {
-      id: 6;
-      title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"';
-      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.';
-      category: 'research';
-      date: '2025-01-03';
-      author: 'Dr. Michael Rodriguez';
-      readTime: '8 min read';
-      featured: false;
-      image: '/images/news/quantum-drug-discovery.jpg';
-      tags: ['Quantum Computing', 'Drug Discovery', 'Research', 'Healthcare']};
+      id: 6,
+      title: 'New Research Paper: "Quantum Neural Networks for Drug Discovery"',
+      excerpt: 'Breakthrough research demonstrates quantum computing applications in pharmaceutical research, potentially accelerating drug development by decades.',
+      category: 'research',
+      date: '2025-01-03',
+      author: 'Dr. Michael Rodriguez',
+      readTime: '8 min read',
+      featured: false,
+      image: '/images/news/quantum-drug-discovery.jpg',
+      tags: ['Quantum ComputingDrug Discovery', 'ResearchHealthcare']},
     {
-      id: 7;
-      title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation';
-      excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.';
-      category: 'partnerships';
-      date: '2024-12-28';
-      author: 'Zion Tech Group';
-      readTime: '3 min read';
-      featured: false;
-      image: '/images/news/deloitte-partnership.jpg';
-      tags: ['Partnership', 'Deloitte', 'Enterprise', 'AI Implementation']};
+      id: 7,
+      title: 'Strategic Partnership with Deloitte for Enterprise AI Implementation',
+      excerpt: 'Collaboration to deliver AI consciousness solutions to Fortune 500 companies, accelerating digital transformation initiatives.',
+      category: 'partnerships',
+      date: '2024-12-28',
+      author: 'Zion Tech Group',
+      readTime: '3 min read',
+      featured: false,
+      image: '/images/news/deloitte-partnership.jpg',
+      tags: ['PartnershipDeloitte', 'EnterpriseAI Implementation']},
     {
-      id: 8;
-      title: 'AI Autonomous Business Operations Platform Beta Launch';
-      excerpt: 'Revolutionary platform enables fully autonomous business management with AI-driven decision making and process optimization.';
-      category: 'product';
-      date: '2024-12-20';
-      author: 'Zion Tech Group';
-      readTime: '6 min read';
-      featured: false;
-      image: '/images/news/ai-autonomous-business.jpg';
-      tags: ['AI', 'Autonomous Operations', 'Business', 'Platform']};
+      id: 8,
+      title: 'AI Autonomous Business Operations Platform Beta Launch',
+      excerpt: 'Revolutionary platform enables fully autonomous business management with AI-driven decision making and process optimization.',
+      category: 'product',
+      date: '2024-12-20',
+      author: 'Zion Tech Group',
+      readTime: '6 min read',
+      featured: false,
+      image: '/images/news/ai-autonomous-business.jpg',
+      tags: ['AIAutonomous Operations', 'BusinessPlatform']},
     {
-      id: 9;
-      title: 'Zion Tech Group Expands to European Markets';
-      excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.';
-      category: 'company';
-      date: '2024-12-15';
-      author: 'Zion Tech Group';
-      readTime: '3 min read';
-      featured: false;
-      image: '/images/news/european-expansion.jpg';
-      tags: ['Expansion', 'Europe', 'International', 'Growth']}
+      id: 9,
+      title: 'Zion Tech Group Expands to European Markets',
+      excerpt: 'Strategic expansion into European Union markets with new offices in London, Berlin, and Paris to serve growing demand.',
+      category: 'company',
+      date: '2024-12-15',
+      author: 'Zion Tech Group',
+      readTime: '3 min read',
+      featured: false,
+      image: '/images/news/european-expansion.jpg',
+      tags: ['ExpansionEurope', 'InternationalGrowth']}
   ],
   const pressReleases = [
     {
-      title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough';
-      date: '2025-01-15';
-      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'};
+      title: 'Zion Tech Group Announces Revolutionary AI Consciousness Breakthrough',
+      date: '2025-01-15',
+      summary: 'Major milestone in artificial intelligence research with implications for human-AI collaboration and consciousness studies.'},
     {
-      title: 'Series C Funding Round: $250M Investment for Global Expansion';
-      date: '2025-01-10';
-      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'};
+      title: 'Series C Funding Round: $250M Investment for Global Expansion',
+      date: '2025-01-10',
+      summary: 'Strategic investment to accelerate AI consciousness platform development and international market expansion.'},
     {
-      title: 'Quantum-Secure Cloud Partnership with Microsoft Azure';
-      date: '2025-01-05';
+      title: 'Quantum-Secure Cloud Partnership with Microsoft Azure',
+      date: '2025-01-05',
       summary: 'World\'s first quantum-secure cloud infrastructure for enterprise customers.'}
   ],
   const mediaResources = [
     {
-      title: 'Company Fact Sheet';
-      description: 'Key facts, figures, and company information for media and investors.';
-      type: 'PDF';
-      size: '2.1 MB';
-      download: '/media/zion-tech-group-fact-sheet.pdf'};
+      title: 'Company Fact Sheet',
+      description: 'Key facts, figures, and company information for media and investors.',
+      type: 'PDF',
+      size: '2.1 MB',
+      download: '/media/zion-tech-group-fact-sheet.pdf'},
     {
-      title: 'Executive Biographies';
-      description: 'Professional backgrounds and photos of Zion Tech Group leadership team.';
-      type: 'ZIP';
-      size: '15.3 MB';
-      download: '/media/executive-bios.zip'};
+      title: 'Executive Biographies',
+      description: 'Professional backgrounds and photos of Zion Tech Group leadership team.',
+      type: 'ZIP',
+      size: '15.3 MB',
+      download: '/media/executive-bios.zip'},
     {
-      title: 'Company Logo Package';
-      description: 'High-resolution logos and brand assets for media use.';
-      type: 'ZIP';
-      size: '8.7 MB';
-      download: '/media/logo-package.zip'};
+      title: 'Company Logo Package',
+      description: 'High-resolution logos and brand assets for media use.',
+      type: 'ZIP',
+      size: '8.7 MB',
+      download: '/media/logo-package.zip'},
     {
-      title: 'Product Screenshots';
-      description: 'High-quality screenshots of our AI and quantum computing platforms.';
-      type: 'ZIP';
-      size: '25.1 MB';
+      title: 'Product Screenshots',
+      description: 'High-quality screenshots of our AI and quantum computing platforms.',
+      type: 'ZIP',
+      size: '25.1 MB',
       download: '/media/product-screenshots.zip'}
   ],
   const filteredNews = [...featuredNews, ...latestNews].filter(news => {
@@ -175,51 +175,51 @@ const NewsPage: React.FC = () => {
   const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US', {
-      year: 'numeric';
-      month: 'long';
-      day: 'numeric'})};
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'})},
 =======,
 export default function NewsPage() {
 =======,
-      author: 'Dr. Kleber';
-      featured: true;
-      image: '/api/placeholder/600/400';
-      tags: ['AI Consciousness', 'Breakthrough', 'Innovation'];
-      readTime: '5 min read'};
+      author: 'Dr. Kleber',
+      featured: true,
+      image: '/api/placeholder/600/400',
+      tags: ['AI ConsciousnessBreakthrough', 'Innovation'],
+      readTime: '5 min read'},
     {
-      title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems';
-      excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.';
-      author: 'Research Team';
-      date: '2025-01-12';
-      category: 'Research';
-      readTime: '6 min read';
-      image: '/news/quantum-breakthrough.jpg';
-      tags: ['Quantum Computing', 'Research', 'Breakthrough'];
-      icon: <Atom className="w-6 h-6" />;
-      featured: true};
+      title: 'Quantum Computing Breakthrough: Solving Complex Optimization Problems',
+      excerpt: 'Our quantum team achieves significant milestone in solving previously impossible computational challenges.',
+      author: 'Research Team',
+      date: '2025-01-12',
+      category: 'Research',
+      readTime: '6 min read',
+      image: '/news/quantum-breakthrough.jpg',
+      tags: ['Quantum ComputingResearch', 'Breakthrough'],
+      icon: <Atom className="w-6 h-6" />,
+      featured: true},
     {
-      title: 'Cybersecurity Partnership with Global Tech Leaders';
-      excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.';
-      author: 'Partnerships Team';
-      date: '2025-01-10';
+      title: 'Cybersecurity Partnership with Global Tech Leaders',
+      excerpt: 'Strategic collaboration to advance AI-powered threat detection and response systems.',
+      author: 'Partnerships Team',
+      date: '2025-01-10',
   const [searchQuery, setSearchQuery] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [selectedYear, setSelectedYear] = useState('all'),
   const categories = [
-    { id: 'all', name: 'All News', icon: Newspaper, count: 45 };
-    { id: 'ai', name: 'AI & Technology', icon: Brain, count: 18 };
-    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 };
-    { id: 'space', name: 'Space Technology', icon: Rocket, count: 8 };
+    { id: 'all', name: 'All News', icon: Newspaper, count: 45 },
+    { id: 'ai', name: 'AI & Technology', icon: Brain, count: 18 },
+    { id: 'quantum', name: 'Quantum Computing', icon: Atom, count: 12 },
+    { id: 'space', name: 'Space Technology', icon: Rocket, count: 8 },
     { id: 'security', name: 'Cybersecurity', icon: Shield, count: 7 }
   ],
   const years = [
-    { id: 'all', name: 'All Years' };
-    { id: '2025', name: '2025' };
-    { id: '2024', name: '2024' };
+    { id: 'all', name: 'All Years' },
+    { id: '2025', name: '2025' },
+    { id: '2024', name: '2024' },
     { id: '2023', name: '2023' }
   ],
-  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink;
-  TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap;
+  Newspaper, Calendar, User, Tag, ArrowRight, ExternalLink,
+  TrendingUp, Lightbulb, Rocket, Globe, Shield, Zap,
   Clock, BookOpen, Video, Podcast, FileText, Search} from 'lucide-react',
   return (
     <UltraAdvancedFuturisticBackground>,
@@ -231,17 +231,17 @@ export default function NewsPage() {
 export default function NewsPage() {
   const newsArticles = [
     {
-      id: 1;
-      title: "Zion Tech Group Launches New AI-Powered Automation Platform";
-      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.";
-      date: "2025-01-19";
-      category: "Company News";
-      author: "Zion Tech Group";
-      readTime: "3 min read";
-      image: "🚀";
-      featured: true};
+      id: 1,
+      title: "Zion Tech Group Launches New AI-Powered Automation Platform",
+      excerpt: "Our latest innovation brings autonomous decision-making capabilities to enterprise environments, revolutionizing how businesses operate.",
+      date: "2025-01-19",
+      category: "Company News",
+      author: "Zion Tech Group",
+      readTime: "3 min read",
+      image: "🚀",
+      featured: true},
     {
-      id: 2;
+      id: 2,
             </motion.div>,
           </div>,
         </section>,
@@ -423,64 +423,64 @@ export default function NewsPage() {
               className="text-5xl md:text-7xl font-bold bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 bg-clip-text text-transparent mb-6",
               initial={{ opacity: 0, y: 30 }}
 =======,
-      id: 1;
-      title: "Zion Tech Group Launches Revolutionary Quantum AI Platform";
-      excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.";
-      category: "Product Launch";
-      author: "Zion Tech Group Team";
-      date: "2025-01-15";
-      readTime: "5 min read";
-      image: "/images/news/quantum-ai-launch.jpg";
-      tags: ["Quantum Computing", "AI", "Product Launch"]};
+      id: 1,
+      title: "Zion Tech Group Launches Revolutionary Quantum AI Platform",
+      excerpt: "Our latest quantum AI platform combines quantum computing with artificial intelligence to deliver unprecedented performance and capabilities for enterprise applications.",
+      category: "Product Launch",
+      author: "Zion Tech Group Team",
+      date: "2025-01-15",
+      readTime: "5 min read",
+      image: "/images/news/quantum-ai-launch.jpg",
+      tags: ["Quantum Computing", "AI", "Product Launch"]},
     {
-      id: 2;
-      title: "New Partnership with Global Healthcare Consortium";
-      excerpt: "We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.";
-      category: "Partnership";
-      author: "Business Development";
-      date: "2025-01-12";
-      readTime: "4 min read";
-      image: "/images/news/healthcare-partnership.jpg";
-      tags: ["Healthcare", "Partnership", "AI"]};
+      id: 2,
+      title: "New Partnership with Global Healthcare Consortium",
+      excerpt: "We're excited to announce our strategic partnership with the Global Healthcare Consortium to revolutionize medical diagnostics using our AI-powered healthcare solutions.",
+      category: "Partnership",
+      author: "Business Development",
+      date: "2025-01-12",
+      readTime: "4 min read",
+      image: "/images/news/healthcare-partnership.jpg",
+      tags: ["Healthcare", "Partnership", "AI"]},
     {
-      id: 3;
-      title: "Breakthrough in Autonomous Cybersecurity Systems";
-      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.";
-      category: "Research";
-      author: "Research Team";
-      date: "2025-01-10";
-      readTime: "6 min read";
-      image: "/images/news/cybersecurity-breakthrough.jpg";
-      tags: ["Cybersecurity", "Research", "Autonomous Systems"]};
+      id: 3,
+      title: "Breakthrough in Autonomous Cybersecurity Systems",
+      excerpt: "Our research team has achieved a major breakthrough in autonomous cybersecurity, developing systems that can detect and respond to threats in real-time without human intervention.",
+      category: "Research",
+      author: "Research Team",
+      date: "2025-01-10",
+      readTime: "6 min read",
+      image: "/images/news/cybersecurity-breakthrough.jpg",
+      tags: ["Cybersecurity", "Research", "Autonomous Systems"]},
     {
-      id: 4;
-      title: "Space Technology Division Expands Operations";
-      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.";
-      category: "Company News";
-      author: "Space Technology Team";
-      date: "2025-01-08";
-      readTime: "3 min read";
-      image: "/images/news/space-expansion.jpg";
-      tags: ["Space Technology", "Expansion", "Satellites"]};
+      id: 4,
+      title: "Space Technology Division Expands Operations",
+      excerpt: "Our space technology division is expanding operations to support growing demand for satellite operations, space resource mining, and orbital analytics services.",
+      category: "Company News",
+      author: "Space Technology Team",
+      date: "2025-01-08",
+      readTime: "3 min read",
+      image: "/images/news/space-expansion.jpg",
+      tags: ["Space Technology", "Expansion", "Satellites"]},
     {
-      id: 5;
-      title: "AI Ethics and Governance Framework Released";
-      excerpt: "We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.";
-      category: "Policy";
-      author: "AI Ethics Team";
-      date: "2025-01-05";
-      readTime: "7 min read";
-      image: "/images/news/ai-ethics-framework.jpg";
-      tags: ["AI Ethics", "Governance", "Policy"]};
+      id: 5,
+      title: "AI Ethics and Governance Framework Released",
+      excerpt: "We've published our comprehensive AI ethics and governance framework, setting new standards for responsible AI development and deployment in enterprise environments.",
+      category: "Policy",
+      author: "AI Ethics Team",
+      date: "2025-01-05",
+      readTime: "7 min read",
+      image: "/images/news/ai-ethics-framework.jpg",
+      tags: ["AI Ethics", "Governance", "Policy"]},
     {
-      id: 6;
-      title: "Financial Services Innovation Award Winner";
-      excerpt: "Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.";
-      category: "Awards";
-      author: "Marketing Team";
-      date: "2025-01-03";
-      readTime: "3 min read";
-      image: "/images/news/financial-award.jpg";
+      id: 6,
+      title: "Financial Services Innovation Award Winner",
+      excerpt: "Zion Tech Group has been recognized as the winner of the Financial Services Innovation Award for our quantum financial modeling and risk assessment platforms.",
+      category: "Awards",
+      author: "Marketing Team",
+      date: "2025-01-03",
+      readTime: "3 min read",
+      image: "/images/news/financial-award.jpg",
       tags: ["Awards", "Financial Services", "Quantum Computing"],
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8 }}
@@ -512,124 +512,124 @@ export default function NewsPage() {
                       ? "bg-gradient-to-r from-blue-500 to-purple-600 text-white",
                       : "bg-gray-800/50 text-gray-300 hover: bg-gray-700/50 border border-gray-700 hover:border-gray-600",
 =======,
-  Search, Calendar, Clock, User, Tag;
-  ArrowRight, ExternalLink, TrendingUp;
+  Search, Calendar, Clock, User, Tag,
+  ArrowRight, ExternalLink, TrendingUp,
   BookOpen, Globe, Video} from 'lucide-react',
 export default function News() {
   const [searchTerm, setSearchTerm] = useState(''),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const categories = [
-    { id: 'all', name: 'All News', count: 24 };
-    { id: 'ai', name: 'AI & Consciousness', count: 8 };
-    { id: 'quantum', name: 'Quantum Computing', count: 6 };
-    { id: 'enterprise', name: 'Enterprise IT', count: 5 };
-    { id: 'research', name: 'Research & Development', count: 3 };
+    { id: 'all', name: 'All News', count: 24 },
+    { id: 'ai', name: 'AI & Consciousness', count: 8 },
+    { id: 'quantum', name: 'Quantum Computing', count: 6 },
+    { id: 'enterprise', name: 'Enterprise IT', count: 5 },
+    { id: 'research', name: 'Research & Development', count: 3 },
     { id: 'industry', name: 'Industry Insights', count: 2 }
   ],
   const featuredNews = [
     {
-      id: 1;
-      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform';
-      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.';
-      category: 'ai';
-      author: 'Dr. Sarah Chen';
-      date: '2024-01-15';
-      readTime: '5 min read';
-      image: '/images/news/ai-consciousness-launch.jpg';
-      featured: true;
-      tags: ['AI Consciousness', 'Platform Launch', 'Innovation']};
+      id: 1,
+      title: 'Zion Tech Group Launches Revolutionary AI Consciousness Platform',
+      excerpt: 'Our latest breakthrough in artificial consciousness technology promises to revolutionize how businesses interact with AI systems, enabling unprecedented levels of understanding and collaboration.',
+      category: 'ai',
+      author: 'Dr. Sarah Chen',
+      date: '2024-01-15',
+      readTime: '5 min read',
+      image: '/images/news/ai-consciousness-launch.jpg',
+      featured: true,
+      tags: ['AI ConsciousnessPlatform Launch', 'Innovation']},
     {
-      id: 2;
-      title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability';
-      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.';
-      category: 'quantum';
-      author: 'Prof. Michael Rodriguez';
-      date: '2024-01-12';
-      readTime: '7 min read';
-      image: '/images/news/quantum-breakthrough.jpg';
-      featured: true;
-      tags: ['Quantum Computing', 'Research', 'Breakthrough']}
+      id: 2,
+      title: 'Quantum Computing Breakthrough: Achieving 1000+ Qubit Stability',
+      excerpt: 'Our quantum research team has achieved a major milestone in quantum computing stability, opening new possibilities for complex computational problems.',
+      category: 'quantum',
+      author: 'Prof. Michael Rodriguez',
+      date: '2024-01-12',
+      readTime: '7 min read',
+      image: '/images/news/quantum-breakthrough.jpg',
+      featured: true,
+      tags: ['Quantum ComputingResearch', 'Breakthrough']}
   ],
   const latestNews = [
     {
-      id: 3;
-      title: 'Enterprise AI Adoption: Trends and Best Practices for 2024';
-      excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.';
-      category: 'enterprise';
-      author: 'Jennifer Kim';
-      date: '2024-01-10';
-      readTime: '4 min read';
-      image: '/images/news/enterprise-ai-trends.jpg';
-      tags: ['Enterprise AI', 'Best Practices', '2024 Trends']};
+      id: 3,
+      title: 'Enterprise AI Adoption: Trends and Best Practices for 2024',
+      excerpt: 'Discover the key trends driving AI adoption in enterprise environments and learn best practices for successful implementation.',
+      category: 'enterprise',
+      author: 'Jennifer Kim',
+      date: '2024-01-10',
+      readTime: '4 min read',
+      image: '/images/news/enterprise-ai-trends.jpg',
+      tags: ['Enterprise AIBest Practices', '2024 Trends']},
     {
-      id: 4;
-      title: 'The Future of Autonomous Business Systems';
-      excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.';
-      category: 'research';
-      author: 'Dr. Alex Thompson';
-      date: '2024-01-08';
-      readTime: '6 min read';
-      image: '/images/news/autonomous-systems.jpg';
-      tags: ['Autonomous Systems', 'Future of Work', 'Innovation']};
+      id: 4,
+      title: 'The Future of Autonomous Business Systems',
+      excerpt: 'Exploring how autonomous systems are reshaping business operations and what this means for the future of work.',
+      category: 'research',
+      author: 'Dr. Alex Thompson',
+      date: '2024-01-08',
+      readTime: '6 min read',
+      image: '/images/news/autonomous-systems.jpg',
+      tags: ['Autonomous SystemsFuture of Work', 'Innovation']},
     {
-      id: 5;
-      title: 'Cybersecurity in the Age of AI: New Threats and Solutions';
-      excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.';
-      category: 'enterprise';
-      author: 'Marcus Johnson';
-      date: '2024-01-05';
-      readTime: '5 min read';
-      image: '/images/news/ai-cybersecurity.jpg';
-      tags: ['Cybersecurity', 'AI Security', 'Digital Protection']};
+      id: 5,
+      title: 'Cybersecurity in the Age of AI: New Threats and Solutions',
+      excerpt: 'How artificial intelligence is both creating new cybersecurity challenges and providing innovative solutions to protect digital assets.',
+      category: 'enterprise',
+      author: 'Marcus Johnson',
+      date: '2024-01-05',
+      readTime: '5 min read',
+      image: '/images/news/ai-cybersecurity.jpg',
+      tags: ['CybersecurityAI Security', 'Digital Protection']},
     {
-      id: 6;
-      title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies';
-      excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.';
-      category: 'quantum';
-      author: 'Dr. Elena Petrova';
-      date: '2024-01-03';
-      readTime: '8 min read';
-      image: '/images/news/quantum-ml.jpg';
-      tags: ['Quantum ML', 'Research', 'Technology Convergence']}
+      id: 6,
+      title: 'Quantum Machine Learning: Bridging Two Revolutionary Technologies',
+      excerpt: 'Our research team explores the intersection of quantum computing and machine learning, revealing exciting possibilities for the future.',
+      category: 'quantum',
+      author: 'Dr. Elena Petrova',
+      date: '2024-01-03',
+      readTime: '8 min read',
+      image: '/images/news/quantum-ml.jpg',
+      tags: ['Quantum MLResearch', 'Technology Convergence']}
   ],
   const industryInsights = [
     {
-      id: 7;
-      title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact';
-      excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.';
-      category: 'industry';
-      author: 'Dr. Robert Chang';
-      date: '2024-01-01';
-      readTime: '6 min read';
-      tags: ['AI Ethics', 'Business Impact', 'Consciousness']};
+      id: 7,
+      title: 'The Rise of Conscious AI: Ethical Considerations and Business Impact',
+      excerpt: 'Examining the ethical implications of AI consciousness and how businesses can navigate this new frontier responsibly.',
+      category: 'industry',
+      author: 'Dr. Robert Chang',
+      date: '2024-01-01',
+      readTime: '6 min read',
+      tags: ['AI EthicsBusiness Impact', 'Consciousness']},
     {
-      id: 8;
-      title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions';
-      excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.';
-      category: 'industry';
-      author: 'Lisa Wang';
-      date: '2023-12-28';
-      readTime: '4 min read';
-      tags: ['Micro-SaaS', 'Startups', 'Software Industry']}
+      id: 8,
+      title: 'Micro-SaaS Revolution: How Small Teams Are Building Big Solutions',
+      excerpt: 'Exploring the growing trend of micro-SaaS companies and how they are disrupting traditional software markets.',
+      category: 'industry',
+      author: 'Lisa Wang',
+      date: '2023-12-28',
+      readTime: '4 min read',
+      tags: ['Micro-SaaSStartups', 'Software Industry']}
   ],
   const upcomingEvents = [
     {
-      id: 1;
-      title: 'AI Consciousness Summit 2024';
-      type: 'Conference';
-      date: '2024-02-15';
-      time: '9:00 AM - 6:00 PM';
-      location: 'San Francisco, CA';
-      description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.';
-      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'};
+      id: 1,
+      title: 'AI Consciousness Summit 2024',
+      type: 'Conference',
+      date: '2024-02-15',
+      time: '9:00 AM - 6:00 PM',
+      location: 'San Francisco, CA',
+      description: 'Join industry leaders and researchers for a deep dive into the future of AI consciousness technology.',
+      registration: 'https://ziontechgroup.com/events/ai-consciousness-summit-2024'},
     {
-      id: 2;
-      title: 'Quantum Computing Workshop';
-      type: 'Workshop';
-      date: '2024-02-22';
-      time: '1:00 PM - 5:00 PM';
-      location: 'Virtual';
-      description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.';
+      id: 2,
+      title: 'Quantum Computing Workshop',
+      type: 'Workshop',
+      date: '2024-02-22',
+      time: '1:00 PM - 5:00 PM',
+      location: 'Virtual',
+      description: 'Hands-on workshop covering quantum computing fundamentals and practical applications.',
       registration: 'https://ziontechgroup.com/events/quantum-workshop'}
   ],
   const filteredNews = [...featuredNews, ...latestNews, ...industryInsights].filter(article => {
@@ -640,17 +640,17 @@ export default function News() {
     return matchesSearch && matchesCategory}),
   const formatDate = (dateString: string) => {
     return new Date(dateString).toLocaleDateString('en-US', {
-      year: 'numeric';
-      month: 'long';
-      day: 'numeric'})};
+      year: 'numeric',
+      month: 'long',
+      day: 'numeric'})},
   const getCategoryColor = (category: string) => {
     const colors = {
-      ai: 'from-cyan-500 to-blue-500';
-      quantum: 'from-purple-500 to-pink-500';
-      enterprise: 'from-green-500 to-emerald-500';
-      research: 'from-orange-500 to-red-500';
-      industry: 'from-indigo-500 to-purple-500'};
-    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'};
+      ai: 'from-cyan-500 to-blue-500',
+      quantum: 'from-purple-500 to-pink-500',
+      enterprise: 'from-green-500 to-emerald-500',
+      research: 'from-orange-500 to-red-500',
+      industry: 'from-indigo-500 to-purple-500'},
+    return colors[category as keyof typeof colors] || 'from-gray-500 to-gray-600'},
   return (
     <div className="min-h-screen bg-black text-white">,
       {/* Hero Section */}
@@ -668,75 +668,75 @@ export default function News() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
 =======,
-  Newspaper, Globe, Award, Users, Rocket, Brain;
+  Newspaper, Globe, Award, Users, Rocket, Brain,
   ArrowRight, ExternalLink, Calendar, Tag, Star} from 'lucide-react',
 export default function NewsPage() {
   const newsItems = [
     {
-      title: "Zion Tech Group Named Top AI Innovation Company 2025";
-      category: "Awards & Recognition";
-      date: "January 15, 2025";
-      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.";
-      image: "/api/placeholder/600/400";
-      source: "TechCrunch";
-      url: "#";
-      featured: true;
-      icon: Award;
-      color: "from-yellow-500 to-orange-500"};
+      title: "Zion Tech Group Named Top AI Innovation Company 2025",
+      category: "Awards & Recognition",
+      date: "January 15, 2025",
+      excerpt: "Zion Tech Group has been recognized as one of the top AI innovation companies of 2025 by TechCrunch, highlighting our breakthrough work in autonomous AI systems and quantum computing integration.",
+      image: "/api/placeholder/600/400",
+      source: "TechCrunch",
+      url: "#",
+      featured: true,
+      icon: Award,
+      color: "from-yellow-500 to-orange-500"},
     {
-      title: "Revolutionary Quantum AI Breakthrough Announced";
-      category: "Technology Innovation";
-      date: "January 10, 2025";
-      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.";
-      image: "/api/placeholder/600/400";
-      source: "MIT Technology Review";
-      url: "#";
-      featured: false;
-      icon: Brain;
-      color: "from-purple-500 to-pink-500"};
+      title: "Revolutionary Quantum AI Breakthrough Announced",
+      category: "Technology Innovation",
+      date: "January 10, 2025",
+      excerpt: "Zion Tech Group announces a major breakthrough in quantum AI integration, achieving unprecedented performance improvements in machine learning algorithms through quantum-enhanced neural networks.",
+      image: "/api/placeholder/600/400",
+      source: "MIT Technology Review",
+      url: "#",
+      featured: false,
+      icon: Brain,
+      color: "from-purple-500 to-pink-500"},
     {
-      title: "Partnership with Fortune 500 Financial Institution";
-      category: "Business Development";
-      date: "January 5, 2025";
-      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations.";
-      image: "/api/placeholder/600/400";
-      source: "Business Insider";
-      url: "#";
-      featured: false;
-      icon: Users;
-      color: "from-blue-500 to-cyan-500"};
+      title: "Partnership with Fortune 500 Financial Institution",
+      category: "Business Development",
+      date: "January 5, 2025",
+      excerpt: "Zion Tech Group announces strategic partnership with leading financial institution to deploy AI-powered risk assessment and fraud detection systems across their global operations.",
+      image: "/api/placeholder/600/400",
+      source: "Business Insider",
+      url: "#",
+      featured: false,
+      icon: Users,
+      color: "from-blue-500 to-cyan-500"},
     {
-      title: "New Cybersecurity Division Launch";
-      category: "Company News";
-      date: "December 28, 2024";
-      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions.";
-      image: "/api/placeholder/600/400";
-      source: "Security Weekly";
-      url: "#";
-      featured: false;
-      icon: Rocket;
-      color: "from-red-500 to-orange-500"};
+      title: "New Cybersecurity Division Launch",
+      category: "Company News",
+      date: "December 28, 2024",
+      excerpt: "Zion Tech Group expands its service portfolio with the launch of a dedicated cybersecurity division, offering quantum-resistant encryption and AI-powered threat detection solutions.",
+      image: "/api/placeholder/600/400",
+      source: "Security Weekly",
+      url: "#",
+      featured: false,
+      icon: Rocket,
+      color: "from-red-500 to-orange-500"},
     {
-      title: "Record-Breaking AI Model Performance";
-      category: "Research & Development";
-      date: "December 20, 2024";
-      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.";
-      image: "/api/placeholder/600/400";
-      source: "AI Research Journal";
-      url: "#";
-      featured: false;
-      icon: Brain;
-      color: "from-emerald-500 to-teal-500"};
+      title: "Record-Breaking AI Model Performance",
+      category: "Research & Development",
+      date: "December 20, 2024",
+      excerpt: "Our research team achieves record-breaking performance in natural language processing, with our latest AI model outperforming industry benchmarks by 40% in accuracy and 60% in speed.",
+      image: "/api/placeholder/600/400",
+      source: "AI Research Journal",
+      url: "#",
+      featured: false,
+      icon: Brain,
+      color: "from-emerald-500 to-teal-500"},
     {
-      title: "Global Expansion: New Office in Singapore";
-      category: "Company News";
-      date: "December 15, 2024";
-      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region.";
-      image: "/api/placeholder/600/400";
-      source: "Singapore Business Times";
-      url: "#";
-      featured: false;
-      icon: Globe;
+      title: "Global Expansion: New Office in Singapore",
+      category: "Company News",
+      date: "December 15, 2024",
+      excerpt: "Zion Tech Group announces the opening of its new Asia-Pacific headquarters in Singapore, expanding our global reach and strengthening partnerships in the region.",
+      image: "/api/placeholder/600/400",
+      source: "Singapore Business Times",
+      url: "#",
+      featured: false,
+      icon: Globe,
       color: "from-indigo-500 to-purple-500"}
   ],
   const categories = ["All", "Awards & Recognition", "Technology Innovation", "Business Development", "Company News", "Research & Development"],
@@ -854,7 +854,7 @@ export default function NewsPage() {
                     : 'bg-white/5 text-white/70 hover: bg-white/10 hover:text-white',
 =======,
             className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto mb-12">,
-            Stay updated with the latest developments in AI consciousness, quantum computing;
+            Stay updated with the latest developments in AI consciousness, quantum computing,
             and emerging technologies from Zion Tech Group.,
           </motion.p>,
           {/* Search and Filter */}
@@ -1393,7 +1393,7 @@ export default function NewsPage() {
                 Media Inquiries,
               </h2>,
               <p className="text-xl text-gray-300 mb-8">,
-                For press inquiries, media interviews, or additional information;
+                For press inquiries, media interviews, or additional information,
                 please contact our communications team.,
 =======,
               </p>,

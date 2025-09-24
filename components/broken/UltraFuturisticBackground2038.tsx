@@ -8,7 +8,7 @@ interface UltraFuturisticBackground2038Props {
 ,
 export default function UltraFuturisticBackground2038({
   intensity = 'medium',
-  theme = 'consciousness';
+  theme = 'consciousness',
   children}: UltraFuturisticBackground2038Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -25,50 +25,50 @@ export default function UltraFuturisticBackground2038({
         canvas.width = rect.width * (window.devicePixelRatio || 1),
         canvas.height = rect.height * (window.devicePixelRatio || 1),
         ctx.scale(window.devicePixelRatio || 1)}
-    };
+    },
     resizeCanvas(),
-    window.addEventListener(', 'resize', 'resizeCanvas),
+    window.addEventListener(resize', 'resizeCanvas),
     // Enhanced theme-based color schemes for 2038,
     const getThemeColors = () => {
       switch (theme) {
         case 'consciousness':,
           return {
-            primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'];
-            secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'];
-            accent: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
+            primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'],
+            secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'],
+            accent: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'],
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']},
         case 'neon':,
           return {
-            primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'];
-            secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'];
-            accent: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
+            primary: ['#ff0080'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'],
+            secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'],
+            accent: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'],
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']},
         case 'holographic':,
           return {
-            primary: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'];
-            secondary: ['#54a0ff'#5f27cd'#ff9ff3'#54a0ff'#5f27cd'#ff6b6b'];
-            accent: ['#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'#54a0ff'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
+            primary: ['#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'],
+            secondary: ['#54a0ff'#5f27cd'#ff9ff3'#54a0ff'#5f27cd'#ff6b6b'],
+            accent: ['#4ecdc4'#45b7d1'#96ceb4'#feca57'#ff9ff3'#54a0ff'],
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']},
         case 'cyberpunk':,
           return {
-            primary: ['#ff0055'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'];
-            secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'];
-            accent: ['#ffff40'#ff40ff'#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
+            primary: ['#ff0055'#00ffff'#ffff00'#ff00ff'#8000ff'#00ff80'],
+            secondary: ['#ff8000'#0080ff'#ff4080'#40ffff'#ffff40'#ff40ff'],
+            accent: ['#ffff40'#ff40ff'#ff6b6b'#4ecdc4'#45b7d1'#96ceb4'],
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']},
         case 'space':,
           return {
-            primary: ['#1e3a8a'#7c3aed'#059669'#dc2626'#ea580c'#0891b2'];
-            secondary: ['#8b5cf6'#ec4899'#f59e0b'#10b981'#06b6d4'#a855f7'];
-            accent: ['#f97316'#ef4444'#84cc16'#06b6d4'#a855f7'#f97316'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
+            primary: ['#1e3a8a'#7c3aed'#059669'#dc2626'#ea580c'#0891b2'],
+            secondary: ['#8b5cf6'#ec4899'#f59e0b'#10b981'#06b6d4'#a855f7'],
+            accent: ['#f97316'#ef4444'#84cc16'#06b6d4'#a855f7'#f97316'],
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']},
         default: // quantum,
           return {
-            primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'];
-            secondary: ['#f59e0b'#ef4444'#8b5cf6'#06b6d4'#ec4899'#10b981'];
-            accent: ['#ec4899'#10b981'#f59e0b'#ef4444'#8b5cf6'#06b6d4'];
-            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']};
+            primary: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444'],
+            secondary: ['#f59e0b'#ef4444'#8b5cf6'#06b6d4'#ec4899'#10b981'],
+            accent: ['#ec4899'#10b981'#f59e0b'#ef4444'#8b5cf6'#06b6d4'],
+            quantum: ['#8b5cf6'#06b6d4'#ec4899'#10b981'#f59e0b'#ef4444']},
       }
-    };
+    },
     const colors = getThemeColors(),
     // Enhanced particle system with consciousness and quantum effects,
     let particles: Array<{
@@ -99,25 +99,25 @@ export default function UltraFuturisticBackground2038({
                     Math.random() > 0.5 ? 'quantum-field' :,
                     Math.random() > 0.3 ? 'hologram' : 'particle',
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2 * intensityMultiplier;
-          vy: (Math.random() - 0.5) * 2 * intensityMultiplier;
-          size: Math.random() * 4 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
-          color: colors.primary[Math.floor(Math.random() * colors.primary.length)];
-          type;
-          life: Math.random() * 100;
-          maxLife: 100;
-          rotation: Math.random() * Math.PI * 2;
-          rotationSpeed: (Math.random() - 0.5) * 0.1;
-          phase: Math.random() * Math.PI * 2;
-          amplitude: Math.random() * 20 + 10;
-          frequency: Math.random() * 0.02 + 0.01;
-          entanglement: [Math.random()];
-          consciousness: Math.random();
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          size: Math.random() * 4 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: colors.primary[Math.floor(Math.random() * colors.primary.length)],
+          type,
+          life: Math.random() * 100,
+          maxLife: 100,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.1,
+          phase: Math.random() * Math.PI * 2,
+          amplitude: Math.random() * 20 + 10,
+          frequency: Math.random() * 0.02 + 0.01,
+          entanglement: [Math.random()],
+          consciousness: Math.random(),
           quantumState: Math.random()})}
-    };
+    },
     // Enhanced animation loop with consciousness and quantum effects,
     const animate = () => {
       if (prefersReducedMotion) return,
@@ -189,7 +189,7 @@ export default function UltraFuturisticBackground2038({
         if (particle.type === 'quantum-field') {
           const fieldSize = particle.size * 3,
           const gradient = ctx.createRadialGradient(
-            particle.xparticle.y0;
+            particle.xparticle.y0,
             particle.xparticle.yfieldSize),
           gradient.addColorStop(0`rgba(139246${particle.opacity * 0.8})`),
           gradient.addColorStop(1'rgba(1392460)'),
@@ -225,11 +225,11 @@ export default function UltraFuturisticBackground2038({
           particle.consciousness = Math.random(),
           particle.quantumState = Math.random() * Math.PI * 2}
       }),
-      requestAnimationFrame(animate)};
+      requestAnimationFrame(animate)},
     initParticles(),
     animate(),
     return () => {
-      window.removeEventListener(', 'resize', 'resizeCanvas)};
+      window.removeEventListener(resize', 'resizeCanvas)},
   }[intensitytheme]),
   return (
     <div ref={containerRef} className="fixed inset-0 pointer-events-none">,
@@ -252,14 +252,14 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-500 to-transparent opacity-20",
                 style={{
-                  left: `${(i * 5) % 100}%`;
+                  left: `${(i * 5) % 100}%`,
                   top: `${(i * 3) % 100}%`}}
                 animate={{
-                  height: [326432];
+                  height: [326432],
                   opacity: [0.20.60.2]}}
                 transition={{
-                  duration: 3 + i * 0.2;
-                  repeat: Infinity;
+                  duration: 3 + i * 0.2,
+                  repeat: Infinity,
                   ease: "easeInOut"}}
               />))}
           </div>)}
@@ -276,8 +276,8 @@ export default function UltraFuturisticBackground2038({
                 animate={{
                   opacity: [0.30.80.3]}}
                 transition={{
-                  duration: 4 + i * 0.3;
-                  repeat: Infinity;
+                  duration: 4 + i * 0.3,
+                  repeat: Infinity,
                   ease: "easeInOut"}}
               />))}
           </div>)}
@@ -290,14 +290,14 @@ export default function UltraFuturisticBackground2038({
                 key={i}
                 className="absolute w-96 h-96 border border-pink-500/20 rounded-full",
                 style={{
-                  left: `${(i * 12) % 100}%`;
+                  left: `${(i * 12) % 100}%`,
                   top: `${(i * 8) % 100}%`}}
                 animate={{
-                  scale: [1.51];
+                  scale: [1.51],
                   opacity: [0.20.60.2]}}
                 transition={{
-                  duration: 6 + i * 0.5;
-                  repeat: Infinity;
+                  duration: 6 + i * 0.5,
+                  repeat: Infinity,
                   ease: "easeInOut"}}
               />))}
           </div>)}

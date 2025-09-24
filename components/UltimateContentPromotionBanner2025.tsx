@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const UltimateContentPromotionBanner20o25: React.FC = () => {
   return (
@@ -129,5 +129,5 @@ const UltimateContentPromotionBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentPromotionBanner20o25;
+    </section>)},
+export default UltimateContentPromotionBanner20o25,

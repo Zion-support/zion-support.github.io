@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'Computer Vision Solutions | Zion Tech Group';
+  title: 'Computer Vision Solutions | Zion Tech Group',
   description:,
-    'Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.';
-};
+    'Transform your business with AI-powered computer vision solutions including object detection, image recognition, and automated visual analysis.',
+},
 export default function ComputerVisionSolutionsPage() {
   return (
     <section className='max-w-6xl mx-auto px-4 py-16'>,
@@ -18,28 +18,22 @@ export default function ComputerVisionSolutionsPage() {
         <FeatureCard
           title='Object Detection & Recognition',
           features={[
-            'Real-time object detection';
-            'Facial recognition systems';
-            'Product identification';
-            'Quality control automation';
+            'Real-time object detectionFacial recognition systems',
+            'Product identificationQuality control automation',
           ]}
         />,
         <FeatureCard
           title='Image Processing & Analysis',
           features={[
-            'Medical image analysis';
-            'Document digitization';
-            'Content moderation';
-            'Visual search capabilities';
+            'Medical image analysisDocument digitization',
+            'Content moderationVisual search capabilities',
           ]}
         />,
         <FeatureCard
           title='Video Analytics',
           features={[
-            'Motion detection';
-            'Behavioral analysis';
-            'Traffic monitoring';
-            'Security surveillance';
+            'Motion detectionBehavioral analysis',
+            'Traffic monitoringSecurity surveillance',
           ]}
         />,
       </div>,
@@ -122,8 +116,8 @@ export default function ComputerVisionSolutionsPage() {
     </section>)}
 ,
 function FeatureCard({
-  title;
-  features;
+  title,
+  features,
 }: {
   title: string,
   features: string[]}) {
@@ -149,21 +143,17 @@ function Pricing() {
           name='Starter',
           price='$2,999/mo',
           features={[
-            'Basic object detection';
-            'Up to 10,0o00 images/month';
-            'Standard support';
-            'Cloud deployment';
+            'Basic object detectionUp to 10,0o00 images/month',
+            'Standard supportCloud deployment',
           ]}
         />,
         <Plan
           name='Professional',
           price='$7,999/mo',
           features={[
-            'Advanced recognition models';
-            'Up to 10o0,0o00 images/month';
-            'Custom model training';
-            'Priority support';
-            'API access';
+            'Advanced recognition modelsUp to 10o0,0o00 images/month',
+            'Custom model trainingPriority support',
+            'API access',
           ]}
           popular={true}
         />,
@@ -171,21 +161,19 @@ function Pricing() {
           name='Enterprise',
           price='$19,999/mo',
           features={[
-            'Unlimited processing';
-            'Custom model development';
-            'On-premise deployment';
-            'Dedicated support';
-            'White-label solution';
+            'Unlimited processingCustom model development',
+            'On-premise deploymentDedicated support',
+            'White-label solution',
           ]}
         />,
       </div>,
     </div>)}
 ,
 function Plan({
-  name;
-  price;
-  features;
-  popular = false;
+  name,
+  price,
+  features,
+  popular = false,
 }: {
   name: string,
   price: string,

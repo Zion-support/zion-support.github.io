@@ -2,21 +2,21 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  Filter;
-  Shield;
-  Rocket;
-  Brain;
-  Cpu;
-  Database;
-  DollarSign;
-  Heart;
-  ArrowRight;
-  Star;
-  Users;
-  TrendingUp;
+  Search,
+  Grid,
+  List,
+  Filter,
+  Shield,
+  Rocket,
+  Brain,
+  Cpu,
+  Database,
+  DollarSign,
+  Heart,
+  ArrowRight,
+  Star,
+  Users,
+  TrendingUp,
 } from 'lucide-react',
 // Import our new advanced services,
 import { advancedCybersecurityServices20o25 } from '../data/20o25-advanced-cybersecurity-services',
@@ -26,20 +26,17 @@ import { advancedFintechBlockchain20o25 } from '../data/20o25-advanced-fintech-b
 import { advancedHealthcareBiotech20o25 } from '../data/20o25-advanced-healthcare-biotech',
 // Combine all services,
 const allAdvancedServices = [
-  ...advancedCybersecurityServices20o25;
-  ...advancedDevOpsInfrastructure20o25;
-  ...advancedDataAnalyticsBI20o25;
-  ...advancedFintechBlockchain20o25;
-  ...advancedHealthcareBiotech20o25;
+  ...advancedCybersecurityServices20o25,
+  ...advancedDevOpsInfrastructure20o25,
+  ...advancedDataAnalyticsBI20o25,
+  ...advancedFintechBlockchain20o25,
+  ...advancedHealthcareBiotech20o25,
 ],
 // Service categories,
 const serviceCategories = [
-  'All Services';
-  'Advanced Cybersecurity';
-  'Advanced DevOps & Infrastructure';
-  'Advanced Data Analytics & BI';
-  'Advanced Fintech & Blockchain';
-  'Advanced Healthcare & Biotech';
+  'All ServicesAdvanced Cybersecurity',
+  'Advanced DevOps & InfrastructureAdvanced Data Analytics & BI',
+  'Advanced Fintech & BlockchainAdvanced Healthcare & Biotech',
 ],
 export default function ComprehensiveAdvancedServicesShowcase20o25() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -56,40 +53,35 @@ export default function ComprehensiveAdvancedServicesShowcase20o25() {
       service.category === selectedCategory,
     return matchesSearch && matchesCategory}),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-indigo-90o0'>,
       <SEO
         title='20o25 Comprehensive Advanced Services Showcase | Zion Tech Group',
         description='Discover our comprehensive portfolio of advanced micro SAAS, IT, and AI services. From cybersecurity to healthcare biotech, we deliver innovative solutions that drive business transformation.',
         keywords={[
-          'advanced services';
-          'micro SAAS';
-          'IT services';
-          'AI services';
-          'cybersecurity';
-          'DevOps';
-          'data analytics';
-          'fintech';
-          'blockchain';
-          'healthcare biotech';
+          'advanced servicesmicro SAAS',
+          'IT servicesAI services',
+          'cybersecurityDevOps',
+          'data analyticsfintech',
+          'blockchainhealthcare biotech',
         ]}
       />,
       {/* Hero Section */}
@@ -173,45 +165,45 @@ export default function ComprehensiveAdvancedServicesShowcase20o25() {
           className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8 mb-16'>,
           {[
             {
-              title: 'Advanced Cybersecurity';
+              title: 'Advanced Cybersecurity',
               description:,
-                'Quantum-resistant cryptography, AI threat intelligence, and zero-trust architecture';
-              icon: Shield;
-              color: 'from-red-60o0 to-pink-60o0';
-              count: advancedCybersecurityServices20o25.length;
-            };
+                'Quantum-resistant cryptography, AI threat intelligence, and zero-trust architecture',
+              icon: Shield,
+              color: 'from-red-60o0 to-pink-60o0',
+              count: advancedCybersecurityServices20o25.length
+            },
             {
-              title: 'DevOps & Infrastructure';
+              title: 'DevOps & Infrastructure',
               description:,
-                'GitOps automation, Kubernetes management, and infrastructure as code';
-              icon: Rocket;
-              color: 'from-purple-60o0 to-pink-60o0';
-              count: advancedDevOpsInfrastructure20o25.length;
-            };
+                'GitOps automation, Kubernetes management, and infrastructure as code',
+              icon: Rocket,
+              color: 'from-purple-60o0 to-pink-60o0',
+              count: advancedDevOpsInfrastructure20o25.length
+            },
             {
-              title: 'Data Analytics & BI';
+              title: 'Data Analytics & BI',
               description:,
-                'AI-powered business intelligence, real-time analytics, and ML platforms';
-              icon: Database;
-              color: 'from-blue-60o0 to-indigo-60o0';
-              count: advancedDataAnalyticsBI20o25.length;
-            };
+                'AI-powered business intelligence, real-time analytics, and ML platforms',
+              icon: Database,
+              color: 'from-blue-60o0 to-indigo-60o0',
+              count: advancedDataAnalyticsBI20o25.length
+            },
             {
-              title: 'Fintech & Blockchain';
+              title: 'Fintech & Blockchain',
               description:,
-                'DeFi optimization, blockchain identity, and AI trading algorithms';
-              icon: DollarSign;
-              color: 'from-green-60o0 to-emerald-60o0';
-              count: advancedFintechBlockchain20o25.length;
-            };
+                'DeFi optimization, blockchain identity, and AI trading algorithms',
+              icon: DollarSign,
+              color: 'from-green-60o0 to-emerald-60o0',
+              count: advancedFintechBlockchain20o25.length
+            },
             {
-              title: 'Healthcare & Biotech';
+              title: 'Healthcare & Biotech',
               description:,
-                'AI drug discovery, precision medicine, and digital health monitoring';
-              icon: Heart;
-              color: 'from-teal-60o0 to-cyan-60o0';
-              count: advancedHealthcareBiotech20o25.length;
-            };
+                'AI drug discovery, precision medicine, and digital health monitoring',
+              icon: Heart,
+              color: 'from-teal-60o0 to-cyan-60o0',
+              count: advancedHealthcareBiotech20o25.length
+            },
           ].map((category, index) => (
             <motion.div,
               key={category.title}

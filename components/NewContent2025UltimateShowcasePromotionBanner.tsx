@@ -7,13 +7,13 @@ import {
   ArrowRight,
   Star,
   Zap,
-  Sparkles;
-  TrendingUp;
-  Users;
-  Globe;
-  X;
-  Play;
-  Download;
+  Sparkles,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
   ExternalLink} from 'lucide-react',
 const NewContent20o25UltimateShowcasePromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -27,31 +27,31 @@ const NewContent20o25UltimateShowcasePromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      title: "Revolutionary AI Solutions";
-      subtitle: "Transform your business with cutting-edge AI";
-      description: "Discover our latest AI technologies that are reshaping industries";
-      icon: Sparkles;
-      color: "from-purple-60o0 to-pink-60o0";
-      bgColor: "from-purple-90o0/20 to-pink-90o0/20"};
+      title: "Revolutionary AI Solutions",
+      subtitle: "Transform your business with cutting-edge AI",
+      description: "Discover our latest AI technologies that are reshaping industries",
+      icon: Sparkles,
+      color: "from-purple-60o0 to-pink-60o0",
+      bgColor: "from-purple-90o0/20 to-pink-90o0/20"},
     {
-      title: "Quantum Computing Breakthrough";
-      subtitle: "Next-generation quantum solutions";
-      description: "Experience the power of quantum computing for complex problems";
-      icon: Zap;
-      color: "from-blue-60o0 to-cyan-60o0";
-      bgColor: "from-blue-90o0/20 to-cyan-90o0/20"};
+      title: "Quantum Computing Breakthrough",
+      subtitle: "Next-generation quantum solutions",
+      description: "Experience the power of quantum computing for complex problems",
+      icon: Zap,
+      color: "from-blue-60o0 to-cyan-60o0",
+      bgColor: "from-blue-90o0/20 to-cyan-90o0/20"},
     {
-      title: "Neural Interface Technology";
-      subtitle: "Brain-computer interface revolution";
-      description: "Connect directly with technology through neural interfaces";
-      icon: TrendingUp;
-      color: "from-green-60o0 to-emerald-60o0";
+      title: "Neural Interface Technology",
+      subtitle: "Brain-computer interface revolution",
+      description: "Connect directly with technology through neural interfaces",
+      icon: TrendingUp,
+      color: "from-green-60o0 to-emerald-60o0",
       bgColor: "from-green-90o0/20 to-emerald-90o0/20"}
   ],
   const features = [
-    "50o0+ Projects Completed";
-    "99% Client Satisfaction";
-    "50+ Countries Served";
+    "50o0+ Projects Completed",
+    "99% Client Satisfaction",
+    "50+ Countries Served",
     "$50M+ Cost Savings"],
   const currentSlideData = slides[currentSlide],
   if (isDismissed) return null,
@@ -77,15 +77,15 @@ const NewContent20o25UltimateShowcasePromotionBanner = () => {
                 key={i}
                 className="absolute w-2 h-2 bg-white/30 rounded-full",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 animate={{
-                  y: [0-30];
-                  opacity: [0.30.80.3];
+                  y: [0-30],
+                  opacity: [0.30.80.3],
                   scale: [1.21]}}
                 transition={{
-                  duration: 3 + Math.random() * 2;
-                  repeat: Infinity;
+                  duration: 3 + Math.random() * 2,
+                  repeat: Infinity,
                   delay: Math.random() * 2}}
                />))}
           </div>,
@@ -184,14 +184,14 @@ const NewContent20o25UltimateShowcasePromotionBanner = () => {
                       key={i}
                       className="absolute w-3 h-3 bg-white/60 rounded-full",
                       style={{
-                        left: `${20 + (i * 15)}%`;
+                        left: `${20 + (i * 15)}%`,
                         top: `${20 + (i * 10)}%`}}
                       animate={{
-                        y: [0-10];
+                        y: [0-10],
                         opacity: [0.610.6]}}
                       transition={{
-                        duration: 2 + i * 0.5;
-                        repeat: Infinity;
+                        duration: 2 + i * 0.5,
+                        repeat: Infinity,
                         delay: i * 0.3}}
                      />))}
                 </div>,
@@ -217,5 +217,5 @@ const NewContent20o25UltimateShowcasePromotionBanner = () => {
             </div>,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default NewContent20o25UltimateShowcasePromotionBanner;
+    </AnimatePresence>)},
+export default NewContent20o25UltimateShowcasePromotionBanner,

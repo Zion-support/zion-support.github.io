@@ -7,31 +7,31 @@ const UltimateContent20o25PromotionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const contentHighlights = [
     {
-      title: "AI 20o25: Advanced Automation Revolution";
-      description: "50o0% ROI with $2.8B annual savings";
-      metrics: "99.9% uptime, 95% efficiency";
-      type: "blog";
-      readingTime: "22 min read";
-      url: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide"};
+      title: "AI 20o25: Advanced Automation Revolution",
+      description: "50o0% ROI with $2.8B annual savings",
+      metrics: "99.9% uptime, 95% efficiency",
+      type: "blog",
+      readingTime: "22 min read",
+      url: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide"},
     {
-      title: "Fortune 50o0 AI Transformation Success";
-      description: "70o0% ROI and $3.2B annual savings";
-      metrics: "18 months implementation";
-      type: "case-study";
-      readingTime: "25 min read";
-      url: "/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success"};
+      title: "Fortune 50o0 AI Transformation Success",
+      description: "70o0% ROI and $3.2B annual savings",
+      metrics: "18 months implementation",
+      type: "case-study",
+      readingTime: "25 min read",
+      url: "/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success"},
     {
-      title: "AI Transformation Master Guide 20o25";
-      description: "Complete implementation framework";
-      metrics: "Proven 70o0% ROI strategies";
-      type: "resource";
-      readingTime: "35 min read";
+      title: "AI Transformation Master Guide 20o25",
+      description: "Complete implementation framework",
+      metrics: "Proven 70o0% ROI strategies",
+      type: "resource",
+      readingTime: "35 min read",
       url: "/resources/ai-transformation-master-guide-20o25-ultimate-edition"}
   ],
   const stats = [
-    { label: "Average ROI", value: "70o0%", icon: TrendingUp };
-    { label: "Annual Savings", value: "$3.2B", icon: Award };
-    { label: "Success Rate", value: "94%", icon: CheckCircle };
+    { label: "Average ROI", value: "70o0%", icon: TrendingUp },
+    { label: "Annual Savings", value: "$3.2B", icon: Award },
+    { label: "Success Rate", value: "94%", icon: CheckCircle },
     { label: "Implementation Time", value: "18 months", icon: Clock }
   ],
   useEffect(() => {
@@ -153,5 +153,5 @@ const UltimateContent20o25PromotionBanner = () => {
           </svg>,
         </button>,
       </div>,
-    </div>)};
-export default UltimateContent20o25PromotionBanner;
+    </div>)},
+export default UltimateContent20o25PromotionBanner,

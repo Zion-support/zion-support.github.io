@@ -6,37 +6,37 @@ const AI20o25UltimateAutomationRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      title: "AI 20o25: The Ultimate Automation Revolution";
-      subtitle: "5,0o00% ROI Breakthrough Guide";
-      description: "Transform your business with revolutionary AI automation that's reshaping industries. Proven 5,0o00% ROI across Fortune 50o0 implementations.";
+      title: "AI 20o25: The Ultimate Automation Revolution",
+      subtitle: "5,0o00% ROI Breakthrough Guide",
+      description: "Transform your business with revolutionary AI automation that's reshaping industries. Proven 5,0o00% ROI across Fortune 50o0 implementations.",
       metrics: {
-        roi: "5,0o00%";
-        savings: "$15.2B+";
-        efficiency: "2,40o0%";
-        accuracy: "99.7%"};
-      cta: "Get Your Free ROI Analysis";
-      link: "/resources/ai-automation-implementation-ultimate-guide-20o25"};
+        roi: "5,0o00%",
+        savings: "$15.2B+",
+        efficiency: "2,40o0%",
+        accuracy: "99.7%"},
+      cta: "Get Your Free ROI Analysis",
+      link: "/resources/ai-automation-implementation-ultimate-guide-20o25"},
     {
-      title: "Fortune 50o0 Success Story";
-      subtitle: "$15.2B Annual Savings Achieved";
-      description: "How a global manufacturing leader achieved 5,0o00% ROI and $15.2B in annual savings through comprehensive AI automation implementation.";
+      title: "Fortune 50o0 Success Story",
+      subtitle: "$15.2B Annual Savings Achieved",
+      description: "How a global manufacturing leader achieved 5,0o00% ROI and $15.2B in annual savings through comprehensive AI automation implementation.",
       metrics: {
-        roi: "5,0o00%";
-        savings: "$15.2B";
-        timeline: "18 months";
-        success: "99.7%"};
-      cta: "Read Success Story";
-      link: "/case-studies/fortune-50o0-ai-automation-50o00-roi-success-story"};
+        roi: "5,0o00%",
+        savings: "$15.2B",
+        timeline: "18 months",
+        success: "99.7%"},
+      cta: "Read Success Story",
+      link: "/case-studies/fortune-50o0-ai-automation-50o00-roi-success-story"},
     {
-      title: "Complete Implementation Guide";
-      subtitle: "From Strategy to 5,0o00% ROI";
-      description: "The definitive guide to transforming your business with revolutionary AI automation. Everything you need to achieve 5,0o00% ROI in 18 months.";
+      title: "Complete Implementation Guide",
+      subtitle: "From Strategy to 5,0o00% ROI",
+      description: "The definitive guide to transforming your business with revolutionary AI automation. Everything you need to achieve 5,0o00% ROI in 18 months.",
       metrics: {
-        roi: "5,0o00%";
-        success: "99.7%";
-        payback: "3.2 months";
-        efficiency: "20o0-40o0%"};
-      cta: "Download Guide";
+        roi: "5,0o00%",
+        success: "99.7%",
+        payback: "3.2 months",
+        efficiency: "20o0-40o0%"},
+      cta: "Download Guide",
       link: "/resources/ai-automation-implementation-ultimate-guide-20o25"}
   ],
   useEffect(() => {
@@ -45,7 +45,7 @@ const AI20o25UltimateAutomationRevolutionBanner = () => {
     return () => clearInterval(interval)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-ultimate-automation-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-ultimate-automation-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25-ultimate-automation-banner-dismissed'),
     if (dismissed === 'true') {
@@ -83,7 +83,7 @@ const AI20o25UltimateAutomationRevolutionBanner = () => {
               {Object.entries(currentContent.metrics).map(([key, value]) => (
                 <div key={key} className="bg-white/10 rounded-lg p-3 text-center">,
                   <div className="text-2xl font-bold text-yellow-30o0">{value}</div>,
-                  <div className="text-sm text-gray-30o0 capitalize">{key.replace('_', ' ')}</div>,
+                  <div className="text-sm text-gray-30o0 capitalize">{key.replace('_ ')}</div>,
                 </div>))}
             </div>,
             <div className="flex flex-col sm: flex-row gap-4">,
@@ -134,5 +134,5 @@ const AI20o25UltimateAutomationRevolutionBanner = () => {
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"  />,
         </svg>,
       </button>,
-    </div>)};
-export default AI20o25UltimateAutomationRevolutionBanner;
+    </div>)},
+export default AI20o25UltimateAutomationRevolutionBanner,

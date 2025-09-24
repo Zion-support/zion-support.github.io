@@ -69,7 +69,7 @@ export default function FeaturesPage() {
                 Autonomous AI Agents,
               </h2>,
               <p className='text-xl text-white/70 max-w-3xl mx-auto'>,
-                Our intelligent AI agents work autonomously to monitor;
+                Our intelligent AI agents work autonomously to monitor,
                 optimize, and improve your infrastructure 24/7.,
               </p>,
             </div>,
@@ -86,7 +86,7 @@ export default function FeaturesPage() {
                       </h3>,
                       <p className='text-white/70'>,
                         AI agents analyze complex data patterns and make,
-                        intelligent decisions to optimize performance, security;
+                        intelligent decisions to optimize performance, security,
                         and resource utilization.,
                       </p>,
                     </div>,
@@ -129,14 +129,10 @@ export default function FeaturesPage() {
                 </h3>,
                 <div className='space-y-4'>,
                   {[
-                    'Real-time system monitoring';
-                    'Predictive failure analysis';
-                    'Automated resource scaling';
-                    'Intelligent load balancing';
-                    'Performance optimization';
-                    'Security threat detection';
-                    'Compliance monitoring';
-                    'Cost optimization';
+                    'Real-time system monitoringPredictive failure analysis',
+                    'Automated resource scalingIntelligent load balancing',
+                    'Performance optimizationSecurity threat detection',
+                    'Compliance monitoringCost optimization',
                   ].map((capability, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
@@ -203,14 +199,10 @@ export default function FeaturesPage() {
               </h3>,
               <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>,
                 {[
-                  'Custom dashboards';
-                  'Alert management';
-                  'Historical data analysis';
-                  'Performance baselines';
-                  'Capacity planning';
-                  'Cost tracking';
-                  'Compliance reporting';
-                  'API monitoring';
+                  'Custom dashboardsAlert management',
+                  'Historical data analysisPerformance baselines',
+                  'Capacity planningCost tracking',
+                  'Compliance reportingAPI monitoring',
                 ].map((feature, index) => (
                   <div
                     key={index}
@@ -241,30 +233,30 @@ export default function FeaturesPage() {
                 <div className='space-y-4'>,
                   {[
                     {
-                      step: '1';
-                      title: 'Detection';
-                      desc: 'AI identifies anomalies and potential issues';
-                    };
+                      step: '1',
+                      title: 'Detection',
+                      desc: 'AI identifies anomalies and potential issues'
+                    },
                     {
-                      step: '2';
-                      title: 'Analysis';
-                      desc: 'Deep analysis of root causes and impact';
-                    };
+                      step: '2',
+                      title: 'Analysis',
+                      desc: 'Deep analysis of root causes and impact'
+                    },
                     {
-                      step: '3';
-                      title: 'Resolution';
-                      desc: 'Automated fixes and system recovery';
-                    };
+                      step: '3',
+                      title: 'Resolution',
+                      desc: 'Automated fixes and system recovery'
+                    },
                     {
-                      step: '4';
-                      title: 'Verification';
-                      desc: 'Confirm resolution and system health';
-                    };
+                      step: '4',
+                      title: 'Verification',
+                      desc: 'Confirm resolution and system health'
+                    },
                     {
-                      step: '5';
-                      title: 'Learning';
-                      desc: 'Update AI models for future prevention';
-                    };
+                      step: '5',
+                      title: 'Learning',
+                      desc: 'Update AI models for future prevention'
+                    },
                   ].map((item, index) => (
                     <div key={index} className='flex items-center space-x-4'>,
                       <div className='w-8 h-8 bg-gradient-to-br from-cyan-40o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold text-sm'>,
@@ -345,14 +337,10 @@ export default function FeaturesPage() {
                 </h3>,
                 <div className='space-y-4'>,
                   {[
-                    'Real-time threat detection';
-                    'Automated vulnerability scanning';
-                    'Intrusion prevention systems';
-                    'Data encryption at rest & transit';
-                    'Access control & authentication';
-                    'Compliance monitoring';
-                    'Security incident response';
-                    'Audit logging & reporting';
+                    'Real-time threat detectionAutomated vulnerability scanning',
+                    'Intrusion prevention systemsData encryption at rest & transit',
+                    'Access control & authenticationCompliance monitoring',
+                    'Security incident responseAudit logging & reporting',
                   ].map((feature, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-green-40o0 rounded-full'></div>,
@@ -366,14 +354,10 @@ export default function FeaturesPage() {
                 </h3>,
                 <div className='space-y-4'>,
                   {[
-                    'SOC 2 Type II';
-                    'ISO 270o01';
-                    'GDPR compliance';
-                    'HIPAA ready';
-                    'PCI DSS';
-                    'FedRAMP';
-                    'NIST framework';
-                    'Industry-specific standards';
+                    'SOC 2 Type IIISO 270o01',
+                    'GDPR complianceHIPAA ready',
+                    'PCI DSSFedRAMP',
+                    'NIST frameworkIndustry-specific standards',
                   ].map((standard, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-blue-40o0 rounded-full'></div>,
@@ -440,14 +424,10 @@ export default function FeaturesPage() {
               </h3>,
               <div className='grid grid-cols-2 md: grid-cols-4 gap-6'>,
                 {[
-                  'Real-time dashboards';
-                  'Custom reporting';
-                  'Data visualization';
-                  'Trend analysis';
-                  'Anomaly detection';
-                  'Capacity forecasting';
-                  'ROI calculations';
-                  'Benchmark comparisons';
+                  'Real-time dashboardsCustom reporting',
+                  'Data visualizationTrend analysis',
+                  'Anomaly detectionCapacity forecasting',
+                  'ROI calculationsBenchmark comparisons',
                 ].map((capability, index) => (
                   <div
                     key={index}
@@ -477,14 +457,10 @@ export default function FeaturesPage() {
                 </h3>,
                 <div className='space-y-4'>,
                   {[
-                    'Infrastructure provisioning';
-                    'Application deployment';
-                    'Configuration management';
-                    'Backup & recovery';
-                    'Scaling & load balancing';
-                    'Security updates';
-                    'Performance tuning';
-                    'Disaster recovery';
+                    'Infrastructure provisioningApplication deployment',
+                    'Configuration managementBackup & recovery',
+                    'Scaling & load balancingSecurity updates',
+                    'Performance tuningDisaster recovery',
                   ].map((area, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
@@ -498,14 +474,10 @@ export default function FeaturesPage() {
                 </h3>,
                 <div className='space-y-4'>,
                   {[
-                    '99.9% uptime guarantee';
-                    '90% reduction in manual tasks';
-                    '60% faster deployment';
-                    '50% cost savings';
-                    '24/7 operation';
-                    'Zero human error';
-                    'Instant scalability';
-                    'Proactive maintenance';
+                    '99.9% uptime guarantee90% reduction in manual tasks',
+                    '60% faster deployment50% cost savings',
+                    '24/7 operationZero human error',
+                    'Instant scalabilityProactive maintenance',
                   ].map((benefit, index) => (
                     <div key={index} className='flex items-center space-x-3'>,
                       <div className='w-2 h-2 bg-fuchsia-40o0 rounded-full'></div>,

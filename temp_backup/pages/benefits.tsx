@@ -1,303 +1,267 @@
-import React from 'react';
+import React from 'react',
 import Layout from '../components/layout/Layout',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Heart;
-  Shield;
-  DollarSign;
-  GraduationCap;
-  Globe;
-  ArrowRight;
-  CheckCircle;
-  TrendingUp;
-  Infinity;
-  Eye;
-  Sparkles;
-  Clock;
-  Zap;
-  Users;
-  Award;
-  Coffee;
-  Dumbbell;
-  TreePine;
-  Home;
-  Car;
-  Plane;
-  BookOpen;
-  Monitor;
-  Smartphone;
-  Wifi;
-  Utensils;
+  Heart,
+  Shield,
+  DollarSign,
+  GraduationCap,
+  Globe,
+  ArrowRight,
+  CheckCircle,
+  TrendingUp,
+  Infinity,
+  Eye,
+  Sparkles,
+  Clock,
+  Zap,
+  Users,
+  Award,
+  Coffee,
+  Dumbbell,
+  TreePine,
+  Home,
+  Car,
+  Plane,
+  BookOpen,
+  Monitor,
+  Smartphone,
+  Wifi,
+  Utensils,
 } from 'lucide-react',
 const BenefitsPage: React.FC = () => {
   const benefitCategories = [
     {
-      title: 'Health & Wellness';
+      title: 'Health & Wellness',
       description:,
-        'Comprehensive health coverage and wellness programs to keep you healthy and happy';
-      icon: Heart;
-      color: 'from-red-50o0 to-pink-50o0';
+        'Comprehensive health coverage and wellness programs to keep you healthy and happy',
+      icon: Heart,
+      color: 'from-red-50o0 to-pink-50o0',
       benefits: [
         {
-          name: 'Medical, Dental & Vision';
+          name: 'Medical, Dental & Vision',
           description:,
-            '10o0% employer-paid premium coverage for you and your family';
+            '10o0% employer-paid premium coverage for you and your family',
           details: [
-            'Comprehensive medical coverage';
-            'Dental and vision plans';
-            'Prescription drug coverage';
-            'Mental health services';
-          ];
-        };
+            'Comprehensive medical coverageDental and vision plans',
+            'Prescription drug coverageMental health services',
+          ]
+        },
         {
-          name: 'Wellness Programs';
+          name: 'Wellness Programs',
           description:,
-            'Gym memberships, fitness classes, and wellness challenges';
+            'Gym memberships, fitness classes, and wellness challenges',
           details: [
-            'Free gym memberships';
-            'On-site fitness classes';
-            'Wellness challenges and rewards';
-            'Health coaching services';
-          ];
-        };
+            'Free gym membershipsOn-site fitness classes',
+            'Wellness challenges and rewardsHealth coaching services',
+          ]
+        },
         {
-          name: 'Mental Health Support';
-          description: 'Professional counseling and mental health resources';
+          name: 'Mental Health Support',
+          description: 'Professional counseling and mental health resources',
           details: [
-            'Employee assistance program';
-            'Mental health counseling';
-            'Stress management workshops';
-            'Meditation and mindfulness programs';
-          ];
-        };
-      ];
-    };
+            'Employee assistance programMental health counseling',
+            'Stress management workshopsMeditation and mindfulness programs',
+          ]
+        },
+      ],
+    },
     {
-      title: 'Financial Security';
+      title: 'Financial Security',
       description:,
-        'Competitive compensation and financial benefits to secure your future';
-      icon: DollarSign;
-      color: 'from-green-50o0 to-emerald-50o0';
+        'Competitive compensation and financial benefits to secure your future',
+      icon: DollarSign,
+      color: 'from-green-50o0 to-emerald-50o0',
       benefits: [
         {
-          name: 'Competitive Salary';
+          name: 'Competitive Salary',
           description:,
-            'Above-market compensation with regular performance reviews';
+            'Above-market compensation with regular performance reviews',
           details: [
-            'Market-leading base salaries';
-            'Performance-based bonuses';
-            'Annual salary reviews';
-            'Equity participation';
-          ];
-        };
+            'Market-leading base salariesPerformance-based bonuses',
+            'Annual salary reviewsEquity participation',
+          ]
+        },
         {
-          name: '40o1(k) & Retirement';
-          description: 'Generous retirement savings with employer matching';
+          name: '40o1(k) & Retirement',
+          description: 'Generous retirement savings with employer matching',
           details: [
-            '40o1(k) with 6% employer match';
-            'Roth 40o1(k) options';
-            'Financial planning services';
-            'Retirement education';
-          ];
-        };
+            '40o1(k) with 6% employer matchRoth 40o1(k) options',
+            'Financial planning servicesRetirement education',
+          ]
+        },
         {
-          name: 'Stock Options & Equity';
+          name: 'Stock Options & Equity',
           description:,
-            'Ownership in the company through stock options and equity grants';
+            'Ownership in the company through stock options and equity grants',
           details: [
-            'Stock option grants';
-            'Restricted stock units';
-            'Performance equity awards';
-            'Employee stock purchase plan';
-          ];
-        };
-      ];
-    };
+            'Stock option grantsRestricted stock units',
+            'Performance equity awardsEmployee stock purchase plan',
+          ]
+        },
+      ],
+    },
     {
-      title: 'Learning & Development';
+      title: 'Learning & Development',
       description:,
-        'Continuous learning opportunities to advance your career and skills';
-      icon: GraduationCap;
-      color: 'from-blue-50o0 to-cyan-50o0';
+        'Continuous learning opportunities to advance your career and skills',
+      icon: GraduationCap,
+      color: 'from-blue-50o0 to-cyan-50o0',
       benefits: [
         {
-          name: 'Professional Development';
-          description: 'Courses, certifications, and learning resources';
+          name: 'Professional Development',
+          description: 'Courses, certifications, and learning resources',
           details: [
-            'Unlimited learning budget';
-            'Professional certifications';
-            'Conference attendance';
-            'Online learning platforms';
-          ];
-        };
+            'Unlimited learning budgetProfessional certifications',
+            'Conference attendanceOnline learning platforms',
+          ]
+        },
         {
-          name: 'Tuition Reimbursement';
-          description: 'Support for advanced degrees and continuing education';
+          name: 'Tuition Reimbursement',
+          description: 'Support for advanced degrees and continuing education',
           details: [
-            'Graduate degree support';
-            'Course reimbursement';
-            'Professional development';
-            'Industry certifications';
-          ];
-        };
+            'Graduate degree supportCourse reimbursement',
+            'Professional developmentIndustry certifications',
+          ]
+        },
         {
-          name: 'Internal Training';
-          description: 'Company-sponsored training and skill development';
+          name: 'Internal Training',
+          description: 'Company-sponsored training and skill development',
           details: [
-            'Technical workshops';
-            'Leadership training';
-            'Soft skills development';
-            'Cross-functional training';
-          ];
-        };
-      ];
-    };
+            'Technical workshopsLeadership training',
+            'Soft skills developmentCross-functional training',
+          ]
+        },
+      ],
+    },
     {
-      title: 'Work-Life Balance';
+      title: 'Work-Life Balance',
       description:,
-        'Flexible work arrangements and time off to maintain work-life harmony';
-      icon: Clock;
-      color: 'from-purple-50o0 to-pink-50o0';
+        'Flexible work arrangements and time off to maintain work-life harmony',
+      icon: Clock,
+      color: 'from-purple-50o0 to-pink-50o0',
       benefits: [
         {
-          name: 'Flexible Work Arrangements';
-          description: 'Remote work options and flexible scheduling';
+          name: 'Flexible Work Arrangements',
+          description: 'Remote work options and flexible scheduling',
           details: [
-            '10o0% remote work option';
-            'Flexible start/end times';
-            'Hybrid work models';
-            'Work from anywhere';
-          ];
-        };
+            '10o0% remote work optionFlexible start/end times',
+            'Hybrid work modelsWork from anywhere',
+          ]
+        },
         {
-          name: 'Unlimited PTO';
-          description: 'Take time off when you need it to recharge';
+          name: 'Unlimited PTO',
+          description: 'Take time off when you need it to recharge',
           details: [
-            'Unlimited paid time off';
-            'Sick leave coverage';
-            'Personal days';
-            'Mental health days';
-          ];
-        };
+            'Unlimited paid time offSick leave coverage',
+            'Personal daysMental health days',
+          ]
+        },
         {
-          name: 'Family-Friendly Policies';
-          description: 'Support for families and life events';
+          name: 'Family-Friendly Policies',
+          description: 'Support for families and life events',
           details: [
-            'Paid parental leave';
-            'Family medical leave';
-            'Childcare support';
-            'Elder care resources';
-          ];
-        };
-      ];
-    };
+            'Paid parental leaveFamily medical leave',
+            'Childcare supportElder care resources',
+          ]
+        },
+      ],
+    },
     {
-      title: 'Office & Perks';
+      title: 'Office & Perks',
       description:,
-        'Modern office amenities and daily perks to enhance your work experience';
-      icon: Coffee;
-      color: 'from-orange-50o0 to-red-50o0';
+        'Modern office amenities and daily perks to enhance your work experience',
+      icon: Coffee,
+      color: 'from-orange-50o0 to-red-50o0',
       benefits: [
         {
-          name: 'Modern Office Spaces';
-          description: 'Beautiful, well-equipped offices with modern amenities';
+          name: 'Modern Office Spaces',
+          description: 'Beautiful, well-equipped offices with modern amenities',
           details: [
-            'Open concept workspaces';
-            'Private meeting rooms';
-            'Collaboration areas';
-            'Quiet zones';
-          ];
-        };
+            'Open concept workspacesPrivate meeting rooms',
+            'Collaboration areasQuiet zones',
+          ]
+        },
         {
-          name: 'Daily Perks';
-          description: 'Free meals, snacks, and beverages throughout the day';
+          name: 'Daily Perks',
+          description: 'Free meals, snacks, and beverages throughout the day',
           details: [
-            'Free breakfast and lunch';
-            'Unlimited snacks';
-            'Premium coffee and tea';
-            'Healthy food options';
-          ];
-        };
+            'Free breakfast and lunchUnlimited snacks',
+            'Premium coffee and teaHealthy food options',
+          ]
+        },
         {
-          name: 'Technology & Equipment';
-          description: 'Latest technology and equipment to do your best work';
+          name: 'Technology & Equipment',
+          description: 'Latest technology and equipment to do your best work',
           details: [
-            'Latest laptops and devices';
-            'Dual monitors';
-            'Ergonomic furniture';
-            'Mobile phone plans';
-          ];
-        };
-      ];
-    };
+            'Latest laptops and devicesDual monitors',
+            'Ergonomic furnitureMobile phone plans',
+          ]
+        },
+      ],
+    },
     {
-      title: 'Community & Culture';
-      description: 'Team building, social events, and a supportive community';
-      icon: Users;
-      color: 'from-indigo-50o0 to-purple-50o0';
+      title: 'Community & Culture',
+      description: 'Team building, social events, and a supportive community',
+      icon: Users,
+      color: 'from-indigo-50o0 to-purple-50o0',
       benefits: [
         {
-          name: 'Team Building';
-          description: 'Regular team events and social activities';
+          name: 'Team Building',
+          description: 'Regular team events and social activities',
           details: [
-            'Team offsites';
-            'Social events';
-            'Holiday parties';
-            'Team building activities';
-          ];
-        };
+            'Team offsitesSocial events',
+            'Holiday partiesTeam building activities',
+          ]
+        },
         {
-          name: 'Employee Resource Groups';
-          description: 'Connect with colleagues who share your interests';
+          name: 'Employee Resource Groups',
+          description: 'Connect with colleagues who share your interests',
           details: [
-            'Diversity groups';
-            'Professional networks';
-            'Interest-based clubs';
-            'Mentorship programs';
-          ];
-        };
+            'Diversity groupsProfessional networks',
+            'Interest-based clubsMentorship programs',
+          ]
+        },
         {
-          name: 'Recognition Programs';
-          description: 'Celebrate achievements and contributions';
+          name: 'Recognition Programs',
+          description: 'Celebrate achievements and contributions',
           details: [
-            'Employee of the month';
-            'Performance awards';
-            'Innovation recognition';
-            'Peer recognition';
-          ];
-        };
-      ];
-    };
+            'Employee of the monthPerformance awards',
+            'Innovation recognitionPeer recognition',
+          ]
+        },
+      ],
+    },
   ],
   const additionalPerks = [
     {
-      icon: Plane;
-      title: 'Travel & Transportation';
+      icon: Plane,
+      title: 'Travel & Transportation',
       description:,
-        'Commuter benefits, travel allowances, and transportation support';
-    };
+        'Commuter benefits, travel allowances, and transportation support',
+    },
     {
-      icon: Home;
-      title: 'Home Office Setup';
-      description: 'Ergonomic furniture and equipment for remote work';
-    };
+      icon: Home,
+      title: 'Home Office Setup',
+      description: 'Ergonomic furniture and equipment for remote work'
+    },
     {
-      icon: Car;
-      title: 'Transportation Benefits';
-      description: 'Commuter passes, parking, and ride-sharing credits';
-    };
+      icon: Car,
+      title: 'Transportation Benefits',
+      description: 'Commuter passes, parking, and ride-sharing credits',
+    },
     {
-      icon: Wifi;
-      title: 'Internet & Utilities';
-      description: 'Home internet and utility reimbursements';
-    };
+      icon: Wifi,
+      title: 'Internet & Utilities',
+      description: 'Home internet and utility reimbursements'
+    },
   ],
   const totalCompensation = [
-    { label: 'Base Salary', value: 'Competitive' };
-    { label: 'Performance Bonus', value: 'Up to 25%' };
-    { label: 'Equity Value', value: '$50K-$20o0K' };
-    { label: 'Benefits Value', value: '$15K-$25K' };
+    { label: 'Base Salary', value: 'Competitive' },
+    { label: 'Performance Bonus', value: 'Up to 25%' },
+    { label: 'Equity Value', value: '$50K-$20o0K' },
+    { label: 'Benefits Value', value: '$15K-$25K' },
   ],
   return (
     <Layout>,
@@ -319,7 +283,7 @@ const BenefitsPage: React.FC = () => {
               </h1>,
               <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
                 We believe in taking care of our people. Our comprehensive,
-                benefits package is designed to support your health, wealth;
+                benefits package is designed to support your health, wealth,
                 growth, and well-being both inside and outside of work.,
               </p>,
             </motion.div>,
@@ -337,7 +301,7 @@ const BenefitsPage: React.FC = () => {
                 Total Compensation Package,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
-                Our benefits add significant value to your total compensation;
+                Our benefits add significant value to your total compensation,
                 making Zion Tech Group one of the most attractive employers in,
                 the technology industry.,
               </p>,
@@ -476,7 +440,7 @@ const BenefitsPage: React.FC = () => {
                 Why Our Benefits Stand Out,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-3xl mx-auto'>,
-                Our benefits package is designed to be comprehensive;
+                Our benefits package is designed to be comprehensive,
                 competitive, and genuinely supportive of our employees' needs,
                 and aspirations.,
               </p>,
@@ -484,41 +448,41 @@ const BenefitsPage: React.FC = () => {
             <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: Shield;
-                  title: '10o0% Employer Paid';
+                  icon: Shield,
+                  title: '10o0% Employer Paid',
                   description:,
-                    'Most of our benefits are fully employer-paid, reducing your out-of-pocket costs';
-                };
+                    'Most of our benefits are fully employer-paid, reducing your out-of-pocket costs',
+                },
                 {
-                  icon: Globe;
-                  title: 'Global Coverage';
+                  icon: Globe,
+                  title: 'Global Coverage',
                   description:,
-                    'Benefits that work for you regardless of where you live and work';
-                };
+                    'Benefits that work for you regardless of where you live and work',
+                },
                 {
-                  icon: Zap;
-                  title: 'Above Market';
+                  icon: Zap,
+                  title: 'Above Market',
                   description:,
-                    'Our benefits package exceeds industry standards and competitor offerings';
-                };
+                    'Our benefits package exceeds industry standards and competitor offerings',
+                },
                 {
-                  icon: Users;
-                  title: 'Family Inclusive';
+                  icon: Users,
+                  title: 'Family Inclusive',
                   description:,
-                    'Comprehensive coverage for your entire family, not just you';
-                };
+                    'Comprehensive coverage for your entire family, not just you',
+                },
                 {
-                  icon: Clock;
-                  title: 'Immediate Eligibility';
+                  icon: Clock,
+                  title: 'Immediate Eligibility',
                   description:,
-                    'Most benefits start from day one, no waiting periods';
-                };
+                    'Most benefits start from day one, no waiting periods',
+                },
                 {
-                  icon: Award;
-                  title: 'Regular Updates';
+                  icon: Award,
+                  title: 'Regular Updates',
                   description:,
-                    'We continuously improve our benefits based on employee feedback';
-                };
+                    'We continuously improve our benefits based on employee feedback',
+                },
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -573,5 +537,5 @@ const BenefitsPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </Layout>)};
-export default BenefitsPage;
+    </Layout>)},
+export default BenefitsPage,

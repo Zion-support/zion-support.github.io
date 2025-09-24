@@ -5,45 +5,45 @@ import {
   CheckCircleArrowRightStarTrendingUp,
   PhoneZapDollarSignShieldMail,
   MapPinRocketBrainSparklesAtom,
-  DnaUsersGlobeCpuLockDatabase;
+  DnaUsersGlobeCpuLockDatabase,
   BarChart3TargetMicroscopeCloud} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { innovative20o25NewServices } from '../data/innovative-20o25-new-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const categories = [
   {
-    name: 'AI & Machine Learning';
-    icon: Brain;
-    color: 'from-blue-50o0 to-purple-60o0';
-    count: 4};
+    name: 'AI & Machine Learning',
+    icon: Brain,
+    color: 'from-blue-50o0 to-purple-60o0',
+    count: 4},
   {
-    name: 'Quantum Computing';
-    icon: Atom;
-    color: 'from-indigo-50o0 to-purple-60o0';
-    count: 2};
+    name: 'Quantum Computing',
+    icon: Atom,
+    color: 'from-indigo-50o0 to-purple-60o0',
+    count: 2},
   {
-    name: 'Edge Computing';
-    icon: Globe;
-    color: 'from-cyan-50o0 to-blue-60o0';
-    count: 1};
+    name: 'Edge Computing',
+    icon: Globe,
+    color: 'from-cyan-50o0 to-blue-60o0',
+    count: 1},
   {
-    name: 'Blockchain & Web3';
-    icon: Lock;
-    color: 'from-orange-50o0 to-red-60o0';
-    count: 1};
+    name: 'Blockchain & Web3',
+    icon: Lock,
+    color: 'from-orange-50o0 to-red-60o0',
+    count: 1},
   {
-    name: 'Space Technology';
-    icon: Rocket;
-    color: 'from-red-50o0 to-pink-60o0';
-    count: 1};
+    name: 'Space Technology',
+    icon: Rocket,
+    color: 'from-red-50o0 to-pink-60o0',
+    count: 1},
   {
-    name: 'DevOps & Automation';
-    icon: Zap;
-    color: 'from-yellow-50o0 to-orange-60o0';
+    name: 'DevOps & Automation',
+    icon: Zap,
+    color: 'from-yellow-50o0 to-orange-60o0',
     count: 1}
 ],
 export default function Innovative20o25ServicesShowcase() {

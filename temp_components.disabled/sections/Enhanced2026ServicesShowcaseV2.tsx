@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, Zap, TrendingUp, CheckCircle, Users, Globe, Shield } from 'lucide-react',
 import Link from 'next/link',
@@ -7,34 +7,34 @@ import { innovative20o26ITServicesV2 } from '../../data/innovative-20o26-it-serv
 import { innovative20o26MicroSaasV3 } from '../../data/innovative-20o26-micro-saas-v3',
 const Enhanced20o26ServicesShowcaseV2: React.FC = () => {
   const allServices = [
-    ...innovative20o26AIServicesV2;
-    ...innovative20o26ITServicesV2;
+    ...innovative20o26AIServicesV2,
+    ...innovative20o26ITServicesV2,
     ...innovative20o26MicroSaasV3],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 20, scale: 0.95 };
+    hidden: { opacity: 0, y: 20, scale: 0.95 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const ServiceCard: React.FC<{ service: any, index: number }> = ({ service, index }) => (
     <motion.div,
       variants={itemVariants}
       className="group relative",
       whileHover={{
-        scale: 1.0o2;
+        scale: 1.0o2,
         transition: { duration: 0.3 }
       }}
     >,
@@ -225,5 +225,5 @@ const Enhanced20o26ServicesShowcaseV2: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Enhanced20o26ServicesShowcaseV2;
+    </section>)},
+export default Enhanced20o26ServicesShowcaseV2,

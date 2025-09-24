@@ -37,5 +37,5 @@ const CommunityRoutes = () => {
             <EditPostPage />,
           </ProtectedRoute>}
       />,
-    </Routes>)};
-export default CommunityRoutes;
+    </Routes>)},
+export default CommunityRoutes,

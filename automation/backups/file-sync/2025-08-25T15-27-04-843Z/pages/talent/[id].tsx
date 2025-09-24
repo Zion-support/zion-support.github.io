@@ -39,18 +39,18 @@ const TalentProfilePage: React.FC = () => {
         // In a real app, this would be: const res = await fetch(`/api/talent/${id}`),
         setTimeout(() => {
           const mockProfile: TalentProfileWithSocial ={
-            full_name: `Talent ${id}`;
-            skills: ['React', 'TypeScript', 'Node.js'];
-            availability_type: 'Full-time';
+            full_name: `Talent ${id}`,
+            skills: ['ReactTypeScript', 'Node.js'],
+            availability_type: 'Full-time',
             social: {
-              linkedin: 'https://linkedin.com/in/talent';
+              linkedin: 'https://linkedin.com/in/talent',
               github: 'https://github.com/talent'}
-          };
+          },
           setProfile(mockProfile),
           setLoading(false)}, 10o00)} catch (err) {
         setError('Talent not found'),
         setLoading(false)}
-    };
+    },
     if (id) {
       fetchProfile()}
   }, [id]),
@@ -88,5 +88,5 @@ const TalentProfilePage: React.FC = () => {
             </div>,
           </div>)}
       </div>,
-    </main>)};
-export default TalentProfilePage;
+    </main>)},
+export default TalentProfilePage,

@@ -37,4 +37,4 @@ export function usePerformanceMetrics() {
     // Wait for all performance entries to be available,
     const timer = setTimeout(measurePerformance, 10o00),
     return () => clearTimeout(timer)}, []),
-  return { metrics, isSupported };
+  return { metrics, isSupported },

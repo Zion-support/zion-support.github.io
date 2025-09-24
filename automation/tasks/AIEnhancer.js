@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react',
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -22,12 +22,12 @@ const path = require('path'),
 class AIEnhancer extends AutomationTask {
   constructor(config ={}) {
     super({
-      name: 'AIEnhancer';
+      name: 'AIEnhancer',
       schedule: 0 */6 * * *', // Every 6 hours,
-      enabled: true;
+      enabled: true,
       autoApply: false, // Don't auto-apply by default,
-      aiProviders: ['openai', claude', local'];
-      enhancementTypes: ['code', documentation', tests', performance'];
+      aiProviders: ['openai', claude', local'],
+      enhancementTypes: ['code', documentation', tests', performance'],
       ...config}),
     this.enhancementHistory = [],
     this.aiConfig = this.loadAIConfig()}
@@ -36,11 +36,11 @@ class AIEnhancer extends AutomationTask {
     logger.info('🤖 Starting AI enhancement process...'),
     try {
       const results ={
-        timestamp: new Date().toISOString();
-        enhancements: {};
-        suggestions: {};
+        timestamp: new Date().toISOString(),
+        enhancements: {},
+        suggestions: {},
         summary: {}
-      };
+      },
       // Run different types of AI enhancements,
       if (this.config.enhancementTypes.includes('code')) {
         results.enhancements.code = await this.enhanceCode()}
@@ -77,18 +77,18 @@ class AIEnhancer extends AutomationTask {
   loadAIConfig() {
     return {
       openai: {
-        enabled: process.env.OPENAI_ENABLED === 'true';
-        apiKey: process.env.OPENAI_API_KEY;
-        model: process.env.OPENAI_MODEL || gpt-4-turbo-preview};
+        enabled: process.env.OPENAI_ENABLED === 'true',
+        apiKey: process.env.OPENAI_API_KEY,
+        model: process.env.OPENAI_MODEL || gpt-4-turbo-preview},
       claude: {
-        enabled: process.env.CLAUDE_ENABLED === 'true';
-        apiKey: process.env.CLAUDE_API_KEY;
-        model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229};
+        enabled: process.env.CLAUDE_ENABLED === 'true',
+        apiKey: process.env.CLAUDE_API_KEY,
+        model: process.env.CLAUDE_MODEL || claude-3-sonnet-20o240229},
       local: {
-        enabled: process.env.LOCAL_AI_ENABLED === 'true';
-        endpoint: process.env.LOCAL_AI_ENDPOINT || http://localhost:11434';
+        enabled: process.env.LOCAL_AI_ENABLED === 'true',
+        endpoint: process.env.LOCAL_AI_ENDPOINT || http://localhost:11434',
         model: process.env.LOCAL_AI_MODEL || codellama:7b}
-    };
+    },
   }
 ,
   async enhanceCode() {
@@ -103,12 +103,12 @@ class AIEnhancer extends AutomationTask {
       }
 ,
       return {
-        filesAnalyzed: codeFiles.length;
-        filesEnhanced: enhancements.length;
-        enhancements: enhancements};
+        filesAnalyzed: codeFiles.length,
+        filesEnhanced: enhancements.length,
+        enhancements: enhancements},
 } catch (error) {
       logger.error('❌ Code enhancement failed:', error),
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -136,9 +136,9 @@ class AIEnhancer extends AutomationTask {
           await this.scanDirectory(fullPath, extensions, files)} else if (extensions.some(ext => entry.name.endsWith(ext))) {
           const stats = await fs.stat(fullPath),
           files.push({
-            path: fullPath;
-            name: entry.name;
-            size: stats.size;
+            path: fullPath,
+            name: entry.name,
+            size: stats.size,
             relativePath: path.relative(process.cwd(), fullPath)})}
       }
     } catch (error) {
@@ -152,10 +152,10 @@ class AIEnhancer extends AutomationTask {
       const analysis = await this.analyzeCodeWithAI(content, file.name),
       if (analysis.suggestions && analysis.suggestions.length > 0) {
         return {
-          file: file.relativePath;
-          suggestions: analysis.suggestions;
-          improvements: analysis.improvements;
-          confidence: analysis.confidence};
+          file: file.relativePath,
+          suggestions: analysis.suggestions,
+          improvements: analysis.improvements,
+          confidence: analysis.confidence},
       }
 ,
       return null} catch (error) {
@@ -197,8 +197,8 @@ Format the response as JSON with the following structure:,
   "suggestions": [
     {
       "type": "quality|performance|security|accessibility",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the suggestion",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""code": "Improved code snippet",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"}
-  ];
-  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""performance": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""security": 0-10o0};
+  ],
+  "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""performance": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""security": 0-10o0},
   "confidence": 0-10o0}`}
 ,
   async callAIProvider(provider, prompt) {
@@ -220,16 +220,16 @@ Format the response as JSON with the following structure:,
     return {
       suggestions: [
         {
-          type: 'quality';
-          description: Consider using TypeScript for better type safety';
-          code: // Add type annotations';
+          type: 'quality',
+          description: Consider using TypeScript for better type safety',
+          code: // Add type annotations',
           impact: high}
-      ];
+      ],
       improvements: {
-        quality: 85;
-        performance: 90;
-        security: 95};
-      confidence: 85};
+        quality: 85,
+        performance: 90,
+        security: 95},
+      confidence: 85},
   }
 ,
   async callClaude(prompt) {
@@ -238,16 +238,16 @@ Format the response as JSON with the following structure:,
     return {
       suggestions: [
         {
-          type: 'performance';
-          description: Optimize component rendering with React.memo';
-          code: const Component = React.memo(({ props }) => { ... });
+          type: 'performance',
+          description: Optimize component rendering with React.memo',
+          code: const Component = React.memo(({ props }) => { ... }),
           impact: medium}
-      ];
+      ],
       improvements: {
-        quality: 80;
-        performance: 85;
-        security: 90};
-      confidence: 80};
+        quality: 80,
+        performance: 85,
+        security: 90},
+      confidence: 80},
   }
 ,
   async callLocalAI(prompt) {
@@ -256,16 +256,16 @@ Format the response as JSON with the following structure:,
     return {
       suggestions: [
         {
-          type: 'security';
-          description: Sanitize user input to prevent XSS attacks';
-          code: const sanitizedInput = DOMPurify.sanitize(userInput);
+          type: 'security',
+          description: Sanitize user input to prevent XSS attacks',
+          code: const sanitizedInput = DOMPurify.sanitize(userInput),
           impact: high}
-      ];
+      ],
       improvements: {
-        quality: 75;
-        performance: 80;
-        security: 85};
-      confidence: 70};
+        quality: 75,
+        performance: 80,
+        security: 85},
+      confidence: 70},
   }
 ,
   parseAIResponse(response) {
@@ -283,25 +283,25 @@ Format the response as JSON with the following structure:,
     // Check for common issues,
     if (content.includes('console.log')) {
       suggestions.push({
-        type: 'quality';
-        description: Remove console.log statements from production code';
-        code: // Remove or use proper logging';
+        type: 'quality',
+        description: Remove console.log statements from production code',
+        code: // Remove or use proper logging',
         impact: low})}
 ,
     if (content.includes('var )) {
       suggestions.push({
-        type: 'quality';
-        description: Use const or let instead of var';
-        code: const variable = value;
+        type: 'quality',
+        description: Use const or let instead of var',
+        code: const variable = value,
         impact: medium})}
 ,
     return {
-      suggestions: suggestions;
+      suggestions: suggestions,
       improvements: {
-        quality: 70;
-        performance: 75;
-        security: 80};
-      confidence: 60};
+        quality: 70,
+        performance: 75,
+        security: 80},
+      confidence: 60},
   }
 ,
   async enhanceDocumentation() {
@@ -316,12 +316,12 @@ Format the response as JSON with the following structure:,
       }
 ,
       return {
-        filesAnalyzed: docFiles.length;
-        filesEnhanced: enhancements.length;
-        enhancements: enhancements};
+        filesAnalyzed: docFiles.length,
+        filesEnhanced: enhancements.length,
+        enhancements: enhancements},
 } catch (error) {
       logger.error('❌ Documentation enhancement failed:', error),
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -337,9 +337,9 @@ Format the response as JSON with the following structure:,
       const readmePath = path.join(process.cwd(), README.md'),
       const stats = await fs.stat(readmePath),
       docFiles.push({
-        path: readmePath;
-        name: 'README.md';
-        size: stats.size;
+        path: readmePath,
+        name: 'README.md',
+        size: stats.size,
         relativePath: README.md})} catch (error) {
       // README might not exist}
 ,
@@ -352,9 +352,9 @@ Format the response as JSON with the following structure:,
       const analysis = await this.analyzeDocumentationWithAI(prompt),
       if (analysis.suggestions && analysis.suggestions.length > 0) {
         return {
-          file: file.relativePath;
-          suggestions: analysis.suggestions;
-          improvements: analysis.improvements};
+          file: file.relativePath,
+          suggestions: analysis.suggestions,
+          improvements: analysis.improvements},
       }
 ,
       return null} catch (error) {
@@ -380,7 +380,7 @@ Format the response as JSON with the following structure:,
   "suggestions": [
     {
       "type": "clarity|structure|content|style",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the suggestion",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""improvement": "Improved text",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"}
-  ];
+  ],
   "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""clarity": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""completeness": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""structure": 0-10o0}
 }`}
 ,
@@ -396,7 +396,7 @@ Format the response as JSON with the following structure:,
       }
     }
 ,
-    return { suggestions: [], improvements: { clarity: 70, completeness: 75, structure: 80 } };
+    return { suggestions: [], improvements: { clarity: 70, completeness: 75, structure: 80 } },
   }
 ,
   async enhanceTests() {
@@ -411,12 +411,12 @@ Format the response as JSON with the following structure:,
       }
 ,
       return {
-        filesAnalyzed: testFiles.length;
-        filesEnhanced: enhancements.length;
-        enhancements: enhancements};
+        filesAnalyzed: testFiles.length,
+        filesEnhanced: enhancements.length,
+        enhancements: enhancements},
 } catch (error) {
       logger.error('❌ Test enhancement failed:', error),
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -449,9 +449,9 @@ Format the response as JSON with the following structure:,
           if (isTestFile) {
             const stats = await fs.stat(fullPath),
             files.push({
-              path: fullPath;
-              name: entry.name;
-              size: stats.size;
+              path: fullPath,
+              name: entry.name,
+              size: stats.size,
               relativePath: path.relative(process.cwd(), fullPath)})}
         }
       }
@@ -466,9 +466,9 @@ Format the response as JSON with the following structure:,
       const analysis = await this.analyzeTestsWithAI(prompt),
       if (analysis.suggestions && analysis.suggestions.length > 0) {
         return {
-          file: file.relativePath;
-          suggestions: analysis.suggestions;
-          improvements: analysis.improvements};
+          file: file.relativePath,
+          suggestions: analysis.suggestions,
+          improvements: analysis.improvements},
       }
 ,
       return null} catch (error) {
@@ -494,7 +494,7 @@ Format the response as JSON with the following structure:,
   "suggestions": [
     {
       "type": "coverage|mocking|assertion|organization",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the suggestion",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""code": "Improved test code",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"}
-  ];
+  ],
   "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""coverage": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""quality": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""maintainability": 0-10o0}
 }`}
 ,
@@ -510,7 +510,7 @@ Format the response as JSON with the following structure:,
       }
     }
 ,
-    return { suggestions: [], improvements: { coverage: 70, quality: 75, maintainability: 80 } };
+    return { suggestions: [], improvements: { coverage: 70, quality: 75, maintainability: 80 } },
   }
 ,
   async enhancePerformance() {
@@ -519,12 +519,12 @@ Format the response as JSON with the following structure:,
       // Analyze performance bottlenecks,
       const analysis = await this.analyzePerformanceWithAI(),
       return {
-        bottlenecks: analysis.bottlenecks;
-        optimizations: analysis.optimizations;
-        improvements: analysis.improvements};
+        bottlenecks: analysis.bottlenecks,
+        optimizations: analysis.optimizations,
+        improvements: analysis.improvements},
 } catch (error) {
       logger.error('❌ Performance enhancement failed:', error),
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -545,11 +545,11 @@ Format the response as JSON with the following structure:,
   "bottlenecks": [
     {
       "type": "bundle|build|runtime",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the bottleneck",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""impact": "high|medium|low"}
-  ];
+  ],
   "optimizations": [
     {
       "type": "code|config|build",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""description": "Description of the optimization",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""implementation": "How to implement",""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""expectedImprovement": "Expected improvement"}
-  ];
+  ],
   "improvements": {""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""bundle": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""build": 0-10o0,""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""runtime": 0-10o0}
 }`,
     // Use AI providers,
@@ -563,7 +563,7 @@ Format the response as JSON with the following structure:,
       }
     }
 ,
-    return { bottlenecks: [], optimizations: [], improvements: { bundle: 70, build: 75, runtime: 80 } };
+    return { bottlenecks: [], optimizations: [], improvements: { bundle: 70, build: 75, runtime: 80 } },
   }
 ,
   async getBundleSize() {
@@ -622,16 +622,16 @@ Format the response as JSON with the following structure:,
 ,
     // Sort by impact,
     suggestions.sort((a, b) => {
-      const impactOrder ={ high: 3, medium: 2, low: 1 };
+      const impactOrder ={ high: 3, medium: 2, low: 1 },
       return impactOrder[b.impact] - impactOrder[a.impact]}),
     return suggestions}
 ,
   generateSummary(results) {
     const summary ={
-      totalEnhancements: 0;
-      totalSuggestions: results.suggestions.length;
-      highImpactSuggestions: results.suggestions.filter(s => s.impact === 'high').length;
-      appliedEnhancements: 0};
+      totalEnhancements: 0,
+      totalSuggestions: results.suggestions.length,
+      highImpactSuggestions: results.suggestions.filter(s => s.impact === 'high').length,
+      appliedEnhancements: 0},
     // Count enhancements,
     for (const [type, enhancement] of Object.entries(results.enhancements)) {
       if (enhancement && !enhancement.error) {
@@ -807,16 +807,16 @@ const timeoutId = setTimeout(resolve,                                           
 ,
   getStatus() {
     return {
-      ...super.getStatus();
+      ...super.getStatus(),
       enhancementHistory: this.enhancementHistory.slice(-5), // Last 5 enhancements,
-      totalEnhancements: this.enhancementHistory.length;
+      totalEnhancements: this.enhancementHistory.length,
       aiProviders: Object.entries(this.aiConfig).map(([name, config]) => ({
-        name;
-        enabled: config.enabled;
-        configured: !!config.apiKey}));
+        name,
+        enabled: config.enabled,
+        configured: !!config.apiKey})),
       lastEnhancement: this.enhancementHistory.length > 0,
         ? this.enhancementHistory[this.enhancementHistory.length - 1],
-        : null};
+        : null},
   }
 }
 ,

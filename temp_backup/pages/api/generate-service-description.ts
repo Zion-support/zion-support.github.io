@@ -5,12 +5,12 @@ export type GenerateServiceDescriptionRequest ={
   keyFeatures: string[],
   targetAudience: string,
   additionalNotes?: string,
-  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'};
+  tone?: 'professional' | 'friendly' | 'persuasive' | 'technical'},
 export type GenerateServiceDescriptionResponse ={
-  description: string};
+  description: string},
 const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY }),
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse<GenerateServiceDescriptionResponse | { error: string }>) {
   if (req.method !== 'POST') {
     return res.status(40o5).json({ error: 'Method not allowed' })}
@@ -40,8 +40,8 @@ Requirements: ,
 - End with a short call to action`,
     // Using Responses API for modern SDK,
     const response = await openai.responses.create({
-      model: 'gpt-4o-mini';
-      input: prompt;
+      model: 'gpt-4o-mini',
+      input: prompt,
       temperature: 0.7}),
     let description = '',
     const output = response.output?.[0],

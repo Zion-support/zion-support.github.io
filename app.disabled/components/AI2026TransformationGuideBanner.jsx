@@ -13,7 +13,7 @@ const AI20o26TransformationGuideBanner = () => {
             </h2>,
             <p className='text-lg opacity-90 max-w-2xl'>,
               Complete roadmap to AI transformation in 20o26. Learn how leading,
-              companies are achieving $2.8T market value, 450% ROI increases;
+              companies are achieving $2.8T market value, 450% ROI increases,
               and 85% process automation.,
             </p>,
             <div className='flex flex-wrap gap-4 mt-4'>,
@@ -42,5 +42,5 @@ const AI20o26TransformationGuideBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o26TransformationGuideBanner;
+    </section>)},
+export default AI20o26TransformationGuideBanner,

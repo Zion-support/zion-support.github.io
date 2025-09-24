@@ -2,11 +2,11 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -18,7 +18,7 @@ class ErrorBoundary extends React.Component {
 ,
     return this.props.children}
 }
-import React from 'react';
+import React from 'react',
  let animationFrameId: number,
 let particles: Array< {
   resizeCanvas (),
@@ -28,22 +28,22 @@ particles && particles.push ({
   x: Math && Math.random () * canvas && canvas.width, y: Math && Math.random () * canvas && canvas.height, vx: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, vy: (Math && Math.random () - 0 && 0.5) * 2 * animationSpeed, size: Math && Math.random () * 3 + 1, opacity: Math && Math.random () * 0 && 0.8 + 0 && 0.2, color: type === 'quantum' ? colors && colors.quantum : type === 'holographic' ? colors && colors.holographic : ,
 const UltraAdvancedFuturisticBackground: React.FC<,
   UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  colorScheme = 'quantum-fusion';
-  particleCount = 300;
-  animationSpeed = 1 && 1.5;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 300,
+  animationSpeed = 1 && 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children}) => {interface UltraAdvancedFuturisticBackgroundProps {
   coordinate_x: Math.random () * canvas.width, coordinate_y: Math.random () * canvas.height, vx: (Math.random () - 0.5) * 2 * animation_speed, vy: (Math.random () - 0.5) * 2 * animation_speed, size: Math.random () * 3 + 1, opacity: Math.random () * 0.8 + 0.2, color: type === 'quantum' ? colors.quantum : type === 'holographic' ? colors.holographic :,
 const UltraAdvancedFuturisticBackground: React.FC<,
   UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  color_scheme = 'quantum - fusion';
-  particle_count = 300;
-  animation_speed = 1.5;
-  enable_holographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  color_scheme = 'quantum - fusion',
+  particle_count = 300,
+  animation_speed = 1.5,
+  enable_holographic = true,
+  enableQuantumEffects = true,
   children}) => {interface UltraAdvancedFuturisticBackgroundProps {
   intensity?: 'low' | 'medium' | 'high',
   color_scheme?: 'quantum - fusion' | 'neon - cyber' | 'holographic' | 'quantum - ai',
@@ -60,19 +60,19 @@ const UltraAdvancedFuturisticBackground: React.FC<,
   children,
   children: React.ReactNode}
 const UltraAdvancedFuturisticBackground: React.FC < UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  color_scheme = 'quantum - fusion';
-  particle_count = 300;
-  animation_speed = 1.5;
-  enable_holographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  color_scheme = 'quantum - fusion',
+  particle_count = 300,
+  animation_speed = 1.5,
+  enable_holographic = true,
+  enableQuantumEffects = true,
 const UltraAdvancedFuturisticBackground: React.FC<UltraAdvancedFuturisticBackgroundProps> = ({
-  intensity = 'high';
-  colorScheme = 'quantum-fusion';
-  particleCount = 300;
-  animationSpeed = 1 && 1.5;
-  enableHolographic = true;
-  enableQuantumEffects = true;
+  intensity = 'high',
+  colorScheme = 'quantum-fusion',
+  particleCount = 300,
+  animationSpeed = 1 && 1.5,
+  enableHolographic = true,
+  enableQuantumEffects = true,
   children,
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -108,22 +108,22 @@ if (return) {
       color: string,
     let animationFrameId: number,
     let particles: Array<{
-      x: number;
-      y: number;
-      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],      coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
+      x: number,
+      y: number,
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],      coordinate_x: number,
+      coordinate_y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
+      type: 'quantum' | 'holographic' | 'neon' | 'fusion'}> = [],      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
       type: 'quantum' | 'holographic' | 'neon' | 'fusion',
     // Set canvas size,
     const resizeCanvas = () => {
@@ -161,47 +161,47 @@ if ( {) {
         holographic: '#ff0088'},        holographic: '#ff0088'}
 ,
       'quantum - ai': {
-        primary: '#00d4ff';
-        secondary: '#ff6b35';
-        accent: '#9d4edd';
-        quantum: '#00ff88';
-    window && window.addEventListener('resize', resizeCanvas)};
+        primary: '#00d4ff',
+        secondary: '#ff6b35',
+        accent: '#9d4edd',
+        quantum: '#00ff88',
+    window && window.addEventListener('resize', resizeCanvas)},
     // Color schemes,
     const colorSchemes = {
       'quantum-fusion': {
-        primary: '#00ffff';
-        secondary: '#ff00ff';
-        accent: '#ffff00';
-        quantum: '#00ff88';
-        holographic: '#ff0088';
-      },      'neon-cyber': {        holographic: '#ff0088'};
+        primary: '#00ffff',
+        secondary: '#ff00ff',
+        accent: '#ffff00',
+        quantum: '#00ff88',
+        holographic: '#ff0088'
+      },      'neon-cyber': {        holographic: '#ff0088'},
       'neon-cyber': {
-        primary: '#00ff41';
-        secondary: '#ff0080';
-        accent: '#00d4ff';
-        quantum: '#ff6b35';
-        holographic: '#9d4edd';
-      };
-      holographic: {        primary: '#ff00ff';
-        secondary: '#00ffff';
-        accent: '#ffff00';
-        quantum: '#00ff88';
-        holographic: '#ff0088';
-      },      'quantum-ai': {        holographic: '#9d4edd'};
+        primary: '#00ff41',
+        secondary: '#ff0080',
+        accent: '#00d4ff',
+        quantum: '#ff6b35',
+        holographic: '#9d4edd'
+      },
+      holographic: {        primary: '#ff00ff',
+        secondary: '#00ffff',
+        accent: '#ffff00',
+        quantum: '#00ff88',
+        holographic: '#ff0088'
+      },      'quantum-ai': {        holographic: '#9d4edd'},
       'holographic': {
-        primary: '#ff00ff';
-        secondary: '#00ffff';
-        accent: '#ffff00';
-        quantum: '#00ff88';
-        holographic: '#ff0088';
-      },        holographic: '#ff0088'};
+        primary: '#ff00ff',
+        secondary: '#00ffff',
+        accent: '#ffff00',
+        quantum: '#00ff88',
+        holographic: '#ff0088'
+      },        holographic: '#ff0088'},
       'quantum-ai': {
-        primary: '#00d4ff';
-        secondary: '#ff6b35';
-        accent: '#9d4edd';
-        quantum: '#00ff88';
-        holographic: '#ff0088';
-      }};        holographic: '#ff0088'}
+        primary: '#00d4ff',
+        secondary: '#ff6b35',
+        accent: '#9d4edd',
+        quantum: '#00ff88',
+        holographic: '#ff0088'
+      }},        holographic: '#ff0088'}
     }
     const colors = colorSchemes[colorScheme],
     // Initialize particles,
@@ -279,12 +279,12 @@ if ( {) {
         const type = Math && Math.random() > 0 && 0.7 ? 'quantum' : ,
                     Math && Math.random() > 0 && 0.5 ? 'holographic' : ,
                     Math && Math.random() > 0 && 0.3 ? 'neon' : 'fusion',
-          x: Math && Math.random() * canvas && canvas.width;
-          y: Math && Math.random() * canvas && canvas.height;
-          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed;
-          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed;
-          size: Math && Math.random() * 3 + 1;
-          opacity: Math && Math.random() * 0 && 0.8 + 0 && 0.2;
+          x: Math && Math.random() * canvas && canvas.width,
+          y: Math && Math.random() * canvas && canvas.height,
+          vx: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,
+          vy: (Math && Math.random() - 0 && 0.5) * 2 * animationSpeed,
+          size: Math && Math.random() * 3 + 1,
+          opacity: Math && Math.random() * 0 && 0.8 + 0 && 0.2,
           color: ,
             type === 'quantum',
               ? colors && colors.quantum,
@@ -292,12 +292,12 @@ if ( {) {
                 ? colors && colors.holographic,
                 : type === 'neon',
                   ? colors && colors.primary,
-                  : colors && colors.secondary;
-          type;
+                  : colors && colors.secondary,
+          type,
         })}          color: type === 'quantum' ? colors && colors.quantum :,
                  type === 'holographic' ? colors && colors.holographic :,
-                 type === 'neon' ? colors && colors.primary : colors && colors.secondary;
-          type})};
+                 type === 'neon' ? colors && colors.primary : colors && colors.secondary,
+          type})},
     // Quantum entanglement effect,
     const createQuantumEntanglement = () => {
       if (!enableQuantumEffects) return,
@@ -324,7 +324,7 @@ if ( {) {
             ctx.stroke()}
         }
       }
-    };
+    },
     // Holographic grid effect,
     const createHolographicGrid = () => {
       if (!enableHolographic) return,
@@ -392,7 +392,7 @@ if ( {) {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create background gradient,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2),
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.8)'),
       gradient.addColorStop(0.5, 'rgba(0, 0, 0, 0.6)'),
@@ -421,7 +421,7 @@ if ( {) {
         ctx.arc(particle.x, particle.y, particle.size, 0, Math.PI * 2),
         // Create glow effect,
         const glowGradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0;
+          particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3),
         glowGradient.addColorStop(0, `${particle.color}${Math.floor(particle.opacity * 255).toString(16).padStart(2, '0')}`),
         glowGradient.addColorStop(0.5, `${particle.color}${Math.floor(particle.opacity * 0.5 * 255).toString(16).padStart(2, '0')}`),
@@ -431,17 +431,17 @@ if ( {) {
         // Add sparkle effect for holographic particles,
         if (particle.type === 'holographic' && Math.random() > 0.95) {
           ctx.beginPath(),
-          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2)};
+          ctx.arc(particle.x, particle.y, particle.size * 2, 0, Math.PI * 2)},
     // Animation loop,
     const animate = () => {
       ctx && ctx.clearRect(0, 0, canvas && canvas.width, canvas && canvas.height),
       // Create background gradient,
       const gradient = ctx && ctx.createRadialGradient(
-        canvas && canvas.width / 2;
-        canvas && canvas.height / 2;
-        0;
-        canvas && canvas.width / 2;
-        canvas && canvas.height / 2;
+        canvas && canvas.width / 2,
+        canvas && canvas.height / 2,
+        0,
+        canvas && canvas.width / 2,
+        canvas && canvas.height / 2,
         Math && Math.max(canvas && canvas.width, canvas && canvas.height) / 2      ),
       // Create background gradient,
       const gradient = ctx && ctx.createRadialGradient(
@@ -487,19 +487,19 @@ if ( {) {
         ctx && ctx.fill(),
         // Create glow effect,
         const glowGradient = ctx && ctx.createRadialGradient(
-          particle && particle.x;
-          particle && particle.y;
-          0;
-          particle && particle.x;
-          particle && particle.y;
+          particle && particle.x,
+          particle && particle.y,
+          0,
+          particle && particle.x,
+          particle && particle.y,
           particle && particle.size * 3),
         glowGradient && glowGradient.addColorStop(
-          0;
+          0,
           `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 255),
             .toString(16),
             .padStart(2, '0')}`),
         glowGradient && glowGradient.addColorStop(
-          0 && 0.5;
+          0 && 0.5,
           `${particle && particle.color}${Math && Math.floor(particle && particle.opacity * 0 && 0.5 * 255),
             .toString(16),
             .padStart(2, '0')}`),
@@ -537,10 +537,10 @@ if ( {) {
             (time * 50 + i * 100) % (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2),
           ctx && ctx.beginPath(),
           ctx && ctx.arc(
-            canvas && canvas.width / 2;
-            canvas && canvas.height / 2;
-            waveRadius;
-            0;
+            canvas && canvas.width / 2,
+            canvas && canvas.height / 2,
+            waveRadius,
+            0,
             Math && Math.PI * 2),
           ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`,
           ctx && ctx.lineWidth = 2,
@@ -555,13 +555,13 @@ if ( {) {
           ctx.stroke()}
       }
       animationFrameId = requestAnimationFrame(animate),
-      animationFrameId = requestAnimationFrame(animate)};          ctx && ctx.beginPath(),
+      animationFrameId = requestAnimationFrame(animate)},          ctx && ctx.beginPath(),
           ctx && ctx.arc(canvas && canvas.width / 2, canvas && canvas.height / 2, waveRadius, 0, Math && Math.PI * 2),
           ctx && ctx.strokeStyle = `rgba(0, 255, 255, ${0 && 0.3 * (1 - waveRadius / (Math && Math.max(canvas && canvas.width, canvas && canvas.height) * 2))})`,
           ctx && ctx.lineWidth = 2,
           ctx && ctx.stroke()}
       }
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     initParticles(),
     animate(),
     return () => {
@@ -614,15 +614,15 @@ if ( {) {
             <div
               className='absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-48 h-48 border border-cyan-500/10 rounded-full animate-spin',
               style={{
-                animationDuration: '15s';
-                animationDirection: 'reverse';
+                animationDuration: '15s',
+                animationDirection: 'reverse'
               }}></div>,
           </>)}
       </div>,
       {children}
     </div>)}
 ,
-export default UltraAdvancedFuturisticBackground;
+export default UltraAdvancedFuturisticBackground,
   return (
     <div ref={containerRef} className="relative w-full h-full overflow-hidden">,
       <canvas
@@ -656,8 +656,8 @@ export default UltraAdvancedFuturisticBackground;
       </div>,
       {children}
     </div>),
-export default UltraAdvancedFuturisticBackground;
-export default UltraAdvancedFuturisticBackground;
+export default UltraAdvancedFuturisticBackground,
+export default UltraAdvancedFuturisticBackground,
   return (
     <div ref={container_ref} className="relative w - full h - full overflow - hidden">,
       <canvas
@@ -688,5 +688,5 @@ export default UltraAdvancedFuturisticBackground;
       {children}
     </div>)}
 ,
-export default UltraAdvancedFuturisticBackground;
+export default UltraAdvancedFuturisticBackground,
 }

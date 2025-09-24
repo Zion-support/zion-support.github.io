@@ -14,8 +14,8 @@ export default function Innovative20o26ServicesShowcase() {
   const [selectedPriceRange, setSelectedPriceRange] = useState<string>('all'),
   const [sortBy, setSortBy] = useState<string>('name'),
   const allServices = [
-    ...innovative20o26MicroSaasServicesV4;
-    ...emergingTech20o26ServicesV4;
+    ...innovative20o26MicroSaasServicesV4,
+    ...emergingTech20o26ServicesV4,
     ...enterpriseIT20o26ServicesV4],
   // Dynamic category counts,
   const aiCount = allServices.filter(service => service.category?.includes('AI')).length,
@@ -24,23 +24,23 @@ export default function Innovative20o26ServicesShowcase() {
   const microSaasCount = allServices.filter(service => service.category?.includes('Micro SaaS')).length,
   const emergingTechCount = allServices.filter(service => service.category?.includes('Emerging') || service.category?.includes('Neuromorphic') || service.category?.includes('Synthetic')).length,
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount };
-    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount };
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI Services', icon: '🧠', count: aiCount },
+    { id: 'quantum', name: 'Quantum Tech', icon: '⚛️', count: quantumCount },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseCount },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: microSaasCount },
     { id: 'emerging', name: 'Emerging Tech', icon: '🔬', count: emergingTechCount }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', range: 'All' };
-    { id: 'low', name: 'Under $50o0', range: 'Under $50o0' };
-    { id: 'medium', name: '$50o0 - $1,0o00', range: '$50o0 - $1,0o00' };
+    { id: 'all', name: 'All Prices', range: 'All' },
+    { id: 'low', name: 'Under $50o0', range: 'Under $50o0' },
+    { id: 'medium', name: '$50o0 - $1,0o00', range: '$50o0 - $1,0o00' },
     { id: 'high', name: 'Over $1,0o00', range: 'Over $1,0o00' }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name' };
-    { id: 'price', name: 'Price' };
-    { id: 'rating', name: 'Rating' };
+    { id: 'name', name: 'Name' },
+    { id: 'price', name: 'Price' },
+    { id: 'rating', name: 'Rating' },
     { id: 'popularity', name: 'Popularity' }
   ],
   // Filter and sort services,
@@ -102,22 +102,22 @@ export default function Innovative20o26ServicesShowcase() {
     }),
     return filtered}, [allServices, selectedCategory, selectedPriceRange, searchTerm, sortBy]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <>,
       <Head>,
@@ -155,7 +155,7 @@ export default function Innovative20o26ServicesShowcase() {
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed">,
                 Discover the future of technology with our cutting-edge 20o26 services.,
-                From AI-powered solutions to quantum computing and emerging technologies;
+                From AI-powered solutions to quantum computing and emerging technologies,
                 transform your business with next-generation innovation.,
               </p>,
             </motion.div>,

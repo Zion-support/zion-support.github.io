@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Agent Safety Evals 20o26 | Zion Tech Group';
+  title: 'Agent Safety Evals 20o26 | Zion Tech Group',
   description:,
-    'A pragmatic guide to designing and operating agent safety evaluations in 20o26: red-teaming, harnesses, metrics, and governance to ship reliable agents.';
-};
+    'A pragmatic guide to designing and operating agent safety evaluations in 20o26: red-teaming, harnesses, metrics, and governance to ship reliable agents.',
+},
 export default function AgentSafetyEvals20o26Page() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
@@ -35,7 +35,7 @@ export default function AgentSafetyEvals20o26Page() {
             cases with synthetic and real logs.,
           </li>,
           <li>,
-            <strong>Tool-aware harnesses</strong>: simulate APIs, rate limits;
+            <strong>Tool-aware harnesses</strong>: simulate APIs, rate limits,
             and failure modes for realistic behavior.,
           </li>,
           <li>,
@@ -43,7 +43,7 @@ export default function AgentSafetyEvals20o26Page() {
             exfiltration checks, PII handling, and policy-as-code validation.,
           </li>,
           <li>,
-            <strong>Human oversight</strong>: calibrated reviewer rubrics;
+            <strong>Human oversight</strong>: calibrated reviewer rubrics,
             inter-rater reliability, and sampling strategy.,
           </li>,
           <li>,
@@ -72,7 +72,7 @@ export default function AgentSafetyEvals20o26Page() {
         </ol>,
         <h2>Get the starter kit</h2>,
         <p>,
-          Use our open eval templates to bootstrap your program: scenario spec;
+          Use our open eval templates to bootstrap your program: scenario spec,
           harness interface, rubric examples, and CI snippets.,
         </p>,
       </section>,

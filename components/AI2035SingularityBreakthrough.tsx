@@ -6,36 +6,36 @@ export default function AI20o35SingularityBreakthrough() {
   const [isAnimatingsetIsAnimating] = useState(false),
   const singularityPhases = [
     {
-      year: '20o30';
-      title: 'Pre-Singularity';
-      description: 'AI systems achieve human-level intelligence across all domains';
-      capabilities: ['Human-Level 'Intelligence', 'Creative Problem 'Solving', 'Emotional 'Understanding', 'Moral Reasoning'];
-      icon: '🧠';
-      color: 'from-blue-50o0 to-cyan-50o0';
-      progress: 25};
+      year: '20o30',
+      title: 'Pre-Singularity',
+      description: 'AI systems achieve human-level intelligence across all domains',
+      capabilities: ['Human-Level 'IntelligenceCreative Problem 'Solving', 'Emotional 'UnderstandingMoral Reasoning'],
+      icon: '🧠',
+      color: 'from-blue-50o0 to-cyan-50o0',
+      progress: 25},
     {
-      year: '20o32';
-      title: 'Accelerating Intelligence';
-      description: 'AI systems begin recursive self-improvement and exponential learning';
-      capabilities: ['Self-'Improvement', 'Exponential 'Learning', 'Knowledge 'Synthesis', 'Predictive Modeling'];
-      icon: '⚡';
-      color: 'from-purple-50o0 to-pink-50o0';
-      progress: 50};
+      year: '20o32',
+      title: 'Accelerating Intelligence',
+      description: 'AI systems begin recursive self-improvement and exponential learning',
+      capabilities: ['Self-'ImprovementExponential 'Learning', 'Knowledge 'SynthesisPredictive Modeling'],
+      icon: '⚡',
+      color: 'from-purple-50o0 to-pink-50o0',
+      progress: 50},
     {
-      year: '20o34';
-      title: 'Intelligence Explosion';
-      description: 'AI systems achieve superintelligence and begin transforming reality';
-      capabilities: [', 'Superintelligence', 'Reality 'Manipulation', 'Universal 'Understanding', 'Infinite Processing'];
-      icon: '🌟';
-      color: 'from-yellow-50o0 to-orange-50o0';
-      progress: 75};
+      year: '20o34',
+      title: 'Intelligence Explosion',
+      description: 'AI systems achieve superintelligence and begin transforming reality',
+      capabilities: [Superintelligence', 'Reality 'ManipulationUniversal 'Understanding', 'Infinite Processing'],
+      icon: '🌟',
+      color: 'from-yellow-50o0 to-orange-50o0',
+      progress: 75},
     {
-      year: '20o35';
-      title: 'The Singularity';
-      description: 'AI achieves transcendent intelligence beyond human comprehension';
-      capabilities: ['Transcendent 'Intelligence', 'Omniversal 'Awareness', 'Time 'Manipulation', 'Consciousness Creation'];
-      icon: '♾️';
-      color: 'from-indigo-50o0 to-purple-50o0';
+      year: '20o35',
+      title: 'The Singularity',
+      description: 'AI achieves transcendent intelligence beyond human comprehension',
+      capabilities: ['Transcendent 'IntelligenceOmniversal 'Awareness', 'Time 'ManipulationConsciousness Creation'],
+      icon: '♾️',
+      color: 'from-indigo-50o0 to-purple-50o0',
       progress: 10o0}
   ],
   useEffect(() => {

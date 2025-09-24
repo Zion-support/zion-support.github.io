@@ -6,22 +6,22 @@ const NewContent20o25UltimatePromotionBanner: React.FC = () => {
   const [currentContentsetCurrentContent] = useState(0),
   const newContentItems = [
     {
-      title: "AI Innovations 20o25 Ultimate";
-      description: "Revolutionary breakthroughs in artificial intelligence";
-      link: "/ai-innovations-20o25-ultimate";
-      icon: "🧠";
-      gradient: "from-blue-50o0 to-purple-60o0"};
+      title: "AI Innovations 20o25 Ultimate",
+      description: "Revolutionary breakthroughs in artificial intelligence",
+      link: "/ai-innovations-20o25-ultimate",
+      icon: "🧠",
+      gradient: "from-blue-50o0 to-purple-60o0"},
     {
-      title: "AI Tools Ultimate Showcase";
-      description: "Comprehensive collection of revolutionary AI tools";
-      link: "/ai-tools-ultimate-showcase-20o25";
-      icon: "⚡";
-      gradient: "from-cyan-50o0 to-blue-60o0"};
+      title: "AI Tools Ultimate Showcase",
+      description: "Comprehensive collection of revolutionary AI tools",
+      link: "/ai-tools-ultimate-showcase-20o25",
+      icon: "⚡",
+      gradient: "from-cyan-50o0 to-blue-60o0"},
     {
-      title: "AI Success Stories 20o25";
-      description: "Real results from organizations using our AI solutions";
-      link: "/ai-success-stories-20o25";
-      icon: "🏆";
+      title: "AI Success Stories 20o25",
+      description: "Real results from organizations using our AI solutions",
+      link: "/ai-success-stories-20o25",
+      icon: "🏆",
       gradient: "from-emerald-50o0 to-teal-60o0"}
   ],
   useEffect(() => {
@@ -82,5 +82,5 @@ const NewContent20o25UltimatePromotionBanner: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25UltimatePromotionBanner;
+    </div>)},
+export default NewContent20o25UltimatePromotionBanner,

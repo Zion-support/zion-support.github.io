@@ -2,241 +2,214 @@ import Head from 'next/head',
 import Card from '../components/ui/Card',
 import Button from '../components/ui/Button',
 import {
-  Activity;
-  BarChart3;
-  AlertTriangle;
-  Clock;
-  Database;
-  Globe;
-  Lock;
-  Shield;
-  TrendingUp;
-  Users;
-  Zap;
-  ArrowRight;
-  Play;
-  CheckCircle;
-  Star;
-  Server;
-  Cloud;
-  Eye;
-  Bell;
-  Settings;
-  Code;
+  Activity,
+  BarChart3,
+  AlertTriangle,
+  Clock,
+  Database,
+  Globe,
+  Lock,
+  Shield,
+  TrendingUp,
+  Users,
+  Zap,
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Server,
+  Cloud,
+  Eye,
+  Bell,
+  Settings,
+  Code,
 } from 'lucide-react',
 export default function CloudMonitoringPage() {
   const features = [
     {
-      icon: <Activity className='w-8 h-8 text-white' />;
-      title: 'Real-time Monitoring';
+      icon: <Activity className='w-8 h-8 text-white' />,
+      title: 'Real-time Monitoring',
       description:,
-        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.';
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
-      gradient: 'from-green-40o0 to-emerald-50o0';
-    };
+        'Monitor your entire infrastructure in real-time with sub-second latency and instant alerting.',
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
+      gradient: 'from-green-40o0 to-emerald-50o0'
+    },
     {
-      icon: <BarChart3 className='w-8 h-8 text-white' />;
-      title: 'Advanced Analytics';
+      icon: <BarChart3 className='w-8 h-8 text-white' />,
+      title: 'Advanced Analytics',
       description:,
-        'Deep insights into performance metrics, resource utilization, and business intelligence.';
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
-      gradient: 'from-blue-40o0 to-cyan-50o0';
-    };
+        'Deep insights into performance metrics, resource utilization, and business intelligence.',
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
+      gradient: 'from-blue-40o0 to-cyan-50o0'
+    },
     {
-      icon: <AlertTriangle className='w-8 h-8 text-white' />;
-      title: 'Smart Alerting';
+      icon: <AlertTriangle className='w-8 h-8 text-white' />,
+      title: 'Smart Alerting',
       description:,
-        'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.';
-      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0';
-      gradient: 'from-red-40o0 to-pink-50o0';
-    };
+        'AI-powered anomaly detection and intelligent alerting to prevent issues before they impact users.',
+      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0',
+      gradient: 'from-red-40o0 to-pink-50o0'
+    },
     {
-      icon: <Database className='w-8 h-8 text-white' />;
-      title: 'Multi-Cloud Support';
+      icon: <Database className='w-8 h-8 text-white' />,
+      title: 'Multi-Cloud Support',
       description:,
-        'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.';
-      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0';
-      gradient: 'from-purple-40o0 to-indigo-50o0';
-    };
+        'Monitor AWS, Azure, Google Cloud, and on-premises infrastructure from a single dashboard.',
+      color: 'bg-gradient-to-br from-purple-50o0 to-indigo-60o0',
+      gradient: 'from-purple-40o0 to-indigo-50o0'
+    },
     {
-      icon: <Shield className='w-8 h-8 text-white' />;
-      title: 'Security Monitoring';
+      icon: <Shield className='w-8 h-8 text-white' />,
+      title: 'Security Monitoring',
       description:,
-        'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.';
-      color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0';
-      gradient: 'from-yellow-40o0 to-orange-50o0';
-    };
+        'Comprehensive security monitoring with threat detection, compliance reporting, and audit trails.',
+      color: 'bg-gradient-to-br from-yellow-50o0 to-orange-60o0',
+      gradient: 'from-yellow-40o0 to-orange-50o0'
+    },
     {
-      icon: <Zap className='w-8 h-8 text-white' />;
-      title: 'Auto-scaling';
+      icon: <Zap className='w-8 h-8 text-white' />,
+      title: 'Auto-scaling',
       description:,
-        'Intelligent auto-scaling based on real-time metrics and predictive analytics.';
-      color: 'bg-gradient-to-br from-teal-50o0 to-blue-60o0';
-      gradient: 'from-teal-40o0 to-blue-50o0';
-    };
+        'Intelligent auto-scaling based on real-time metrics and predictive analytics.',
+      color: 'bg-gradient-to-br from-teal-50o0 to-blue-60o0',
+      gradient: 'from-teal-40o0 to-blue-50o0'
+    },
   ],
   const monitoringCapabilities = [
     {
-      category: 'Infrastructure';
-      icon: <Server className='w-6 h-6 text-blue-40o0' />;
+      category: 'Infrastructure',
+      icon: <Server className='w-6 h-6 text-blue-40o0' />,
       metrics: [
-        'CPU Usage';
-        'Memory Utilization';
-        'Disk I/O';
-        'Network Performance';
-        'Container Metrics';
-      ];
-    };
+        'CPU UsageMemory Utilization',
+        'Disk I/ONetwork Performance',
+        'Container Metrics',
+      ]
+    },
     {
-      category: 'Applications';
-      icon: <Code className='w-6 h-6 text-green-40o0' />;
+      category: 'Applications',
+      icon: <Code className='w-6 h-6 text-green-40o0' />,
       metrics: [
-        'Response Time';
-        'Error Rates';
-        'Throughput';
-        'User Experience';
-        'API Performance';
-      ];
-    };
+        'Response TimeError Rates',
+        'ThroughputUser Experience',
+        'API Performance',
+      ]
+    },
     {
-      category: 'Databases';
-      icon: <Database className='w-6 h-6 text-purple-40o0' />;
+      category: 'Databases',
+      icon: <Database className='w-6 h-6 text-purple-40o0' />,
       metrics: [
-        'Query Performance';
-        'Connection Pool';
-        'Index Usage';
-        'Replication Lag';
-        'Storage Growth';
-      ];
-    };
+        'Query PerformanceConnection Pool',
+        'Index UsageReplication Lag',
+        'Storage Growth',
+      ]
+    },
     {
-      category: 'Security';
-      icon: <Shield className='w-6 h-6 text-red-40o0' />;
+      category: 'Security',
+      icon: <Shield className='w-6 h-6 text-red-40o0' />,
       metrics: [
-        'Threat Detection';
-        'Access Logs';
-        'Vulnerability Scans';
-        'Compliance Status';
-        'Audit Trails';
-      ];
-    };
+        'Threat DetectionAccess Logs',
+        'Vulnerability ScansCompliance Status',
+        'Audit Trails',
+      ]
+    },
   ],
   const pricingPlans = [
     {
-      name: 'Starter';
-      price: '$49';
-      period: '/month';
-      description: 'Perfect for small teams and startups';
+      name: 'Starter',
+      price: '$49',
+      period: '/month',
+      description: 'Perfect for small teams and startups',
       features: [
-        'Up to 10 servers';
-        'Basic monitoring';
-        'Email alerts';
-        '7-day data retention';
-        'Community support';
-        'Mobile app access';
-      ];
-      popular: false;
-      color: 'border-gray-60o0';
-      buttonColor: 'bg-gray-60o0 hover:bg-gray-70o0';
-    };
+        'Up to 10 serversBasic monitoring',
+        'Email alerts7-day data retention',
+        'Community supportMobile app access',
+      ],
+      popular: false,
+      color: 'border-gray-60o0',
+      buttonColor: 'bg-gray-60o0 hover:bg-gray-70o0'
+    },
     {
-      name: 'Professional';
-      price: '$199';
-      period: '/month';
-      description: 'Ideal for growing businesses';
+      name: 'Professional',
+      price: '$199',
+      period: '/month',
+      description: 'Ideal for growing businesses',
       features: [
-        'Up to 10o0 servers';
-        'Advanced monitoring';
-        'SMS & Slack alerts';
-        '30-day data retention';
-        'Priority support';
-        'Custom dashboards';
-        'API access';
-        'Team collaboration';
-      ];
-      popular: true;
-      color: 'border-blue-50o0';
-      buttonColor: 'bg-blue-60o0 hover:bg-blue-70o0';
-    };
+        'Up to 10o0 serversAdvanced monitoring',
+        'SMS & Slack alerts30-day data retention',
+        'Priority supportCustom dashboards',
+        'API accessTeam collaboration',
+      ],
+      popular: true,
+      color: 'border-blue-50o0',
+      buttonColor: 'bg-blue-60o0 hover:bg-blue-70o0'
+    },
     {
-      name: 'Enterprise';
-      price: '$599';
-      period: '/month';
-      description: 'For large organizations';
+      name: 'Enterprise',
+      price: '$599',
+      period: '/month',
+      description: 'For large organizations',
       features: [
-        'Unlimited servers';
-        'Full monitoring suite';
-        'Custom integrations';
-        '1-year data retention';
-        'Dedicated support';
-        'White-label solution';
-        'SLA guarantee';
-        'On-premise option';
-      ];
-      popular: false;
-      color: 'border-purple-60o0';
-      buttonColor: 'bg-purple-60o0 hover:bg-purple-70o0';
-    };
+        'Unlimited serversFull monitoring suite',
+        'Custom integrations1-year data retention',
+        'Dedicated supportWhite-label solution',
+        'SLA guaranteeOn-premise option',
+      ],
+      popular: false,
+      color: 'border-purple-60o0',
+      buttonColor: 'bg-purple-60o0 hover:bg-purple-70o0'
+    },
   ],
   const integrations = [
-    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' };
-    { name: 'Azure', icon: '🔷', description: 'Monitor integration' };
-    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' };
-    { name: 'Docker', icon: '🐳', description: 'Container monitoring' };
-    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' };
-    { name: 'Slack', icon: '💬', description: 'Team notifications' };
-    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' };
-    { name: 'Jira', icon: '📋', description: 'Issue tracking' };
+    { name: 'AWS', icon: '☁️', description: 'CloudWatch integration' },
+    { name: 'Azure', icon: '🔷', description: 'Monitor integration' },
+    { name: 'GCP', icon: '☁️', description: 'Stackdriver integration' },
+    { name: 'Docker', icon: '🐳', description: 'Container monitoring' },
+    { name: 'Kubernetes', icon: '☸️', description: 'K8s native support' },
+    { name: 'Slack', icon: '💬', description: 'Team notifications' },
+    { name: 'PagerDuty', icon: '🚨', description: 'Incident management' },
+    { name: 'Jira', icon: '📋', description: 'Issue tracking' },
   ],
   const useCases = [
     {
-      title: 'DevOps Teams';
+      title: 'DevOps Teams',
       description:,
-        'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.';
-      icon: '🔄';
+        'Monitor CI/CD pipelines, deployment success rates, and infrastructure health.',
+      icon: '🔄',
       benefits: [
-        'Faster deployments';
-        'Reduced downtime';
-        'Better collaboration';
-        'Automated scaling';
-      ];
-    };
+        'Faster deploymentsReduced downtime',
+        'Better collaborationAutomated scaling',
+      ]
+    },
     {
-      title: 'SaaS Companies';
+      title: 'SaaS Companies',
       description:,
-        'Track user experience, application performance, and business metrics.';
-      icon: '💼';
+        'Track user experience, application performance, and business metrics.',
+      icon: '💼',
       benefits: [
-        'User satisfaction';
-        'Revenue optimization';
-        'Competitive advantage';
-        'Customer retention';
-      ];
-    };
+        'User satisfactionRevenue optimization',
+        'Competitive advantageCustomer retention',
+      ]
+    },
     {
-      title: 'E-commerce';
+      title: 'E-commerce',
       description:,
-        'Monitor website performance, payment processing, and inventory systems.';
-      icon: '🛒';
+        'Monitor website performance, payment processing, and inventory systems.',
+      icon: '🛒',
       benefits: [
-        'Higher conversion';
-        'Faster checkout';
-        'Inventory optimization';
-        'Revenue growth';
-      ];
-    };
+        'Higher conversionFaster checkout',
+        'Inventory optimizationRevenue growth',
+      ]
+    },
     {
-      title: 'Financial Services';
+      title: 'Financial Services',
       description:,
-        'Ensure compliance, security, and 24/7 availability of critical systems.';
-      icon: '💰';
+        'Ensure compliance, security, and 24/7 availability of critical systems.',
+      icon: '💰',
       benefits: [
-        'Regulatory compliance';
-        'Fraud detection';
-        'Risk management';
-        'Customer trust';
-      ];
-    };
+        'Regulatory complianceFraud detection',
+        'Risk managementCustomer trust',
+      ]
+    },
   ],
   return (
     <>,

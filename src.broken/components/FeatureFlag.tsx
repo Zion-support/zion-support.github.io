@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useFeatureFlags } from '@/context/FeatureFlagContext',
 interface FeatureFlagProps {
   name: string,
@@ -9,4 +9,4 @@ export function FeatureFlag({ namechildren }: FeatureFlagProps) {
   if (!isEnabled(name)) return null,
   return <>{children}</>}
 ,
-export default FeatureFlag;
+export default FeatureFlag,

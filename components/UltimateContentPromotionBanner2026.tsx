@@ -10,39 +10,39 @@ import {
   Star,
   TrendingUp,
   Users,
-  Award;
-  ChevronRight;
-  Play;
-  BookOpen;
-  Lightbulb;
-  Target;
-  Globe;
-  X;
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Lightbulb,
+  Target,
+  Globe,
+  X,
   ArrowRight} from 'lucide-react',
 const UltimateContentPromotionBanner20o26 = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentMessagesetCurrentMessage] = useState(0),
   const promotionalMessages = [
     {
-      icon: Brain;
-      title: "Revolutionary AI Innovations 20o26";
-      subtitle: "Discover breakthrough technologies that will reshape the future";
-      color: "from-purple-60o0 to-pink-60o0";
-      bgColor: "bg-gradient-to-r from-purple-60o0/10 to-pink-60o0/10";
-      borderColor: "border-purple-50o0/30"};
+      icon: Brain,
+      title: "Revolutionary AI Innovations 20o26",
+      subtitle: "Discover breakthrough technologies that will reshape the future",
+      color: "from-purple-60o0 to-pink-60o0",
+      bgColor: "bg-gradient-to-r from-purple-60o0/10 to-pink-60o0/10",
+      borderColor: "border-purple-50o0/30"},
     {
-      icon: Rocket;
-      title: "Future Technology Predictions";
-      subtitle: "Explore 'what', 's coming in the next decade of innovation";
-      color: "from-blue-60o0 to-cyan-60o0";
-      bgColor: "bg-gradient-to-r from-blue-60o0/10 to-cyan-60o0/10";
-      borderColor: "border-blue-50o0/30"};
+      icon: Rocket,
+      title: "Future Technology Predictions",
+      subtitle: "Explore 'whats coming in the next decade of innovation",
+      color: "from-blue-60o0 to-cyan-60o0",
+      bgColor: "bg-gradient-to-r from-blue-60o0/10 to-cyan-60o0/10",
+      borderColor: "border-blue-50o0/30"},
     {
-      icon: Target;
-      title: "Enterprise AI Solutions";
-      subtitle: "Transform your business with cutting-edge AI technology";
-      color: "from-green-60o0 to-emerald-60o0";
-      bgColor: "bg-gradient-to-r from-green-60o0/10 to-emerald-60o0/10";
+      icon: Target,
+      title: "Enterprise AI Solutions",
+      subtitle: "Transform your business with cutting-edge AI technology",
+      color: "from-green-60o0 to-emerald-60o0",
+      bgColor: "bg-gradient-to-r from-green-60o0/10 to-emerald-60o0/10",
       borderColor: "border-green-50o0/30"}
   ],
   useEffect(() => {
@@ -131,17 +131,17 @@ const UltimateContentPromotionBanner20o26 = () => {
               key={i}
               className="absolute w-2 h-2 bg-white/20 rounded-full",
               style={{
-                left: `${20 + i * 15}%`;
+                left: `${20 + i * 15}%`,
                 top: '50%'}}
               animate={{
-                y: [0-20];
+                y: [0-20],
                 opacity: [0.20.80.2]}}
               transition={{
-                duration: 2 + i * 0.5;
-                repeat: Infinity;
+                duration: 2 + i * 0.5,
+                repeat: Infinity,
                 delay: i * 0.3}}
              />))}
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default UltimateContentPromotionBanner20o26;
+    </AnimatePresence>)},
+export default UltimateContentPromotionBanner20o26,

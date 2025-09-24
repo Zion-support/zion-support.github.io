@@ -33,9 +33,9 @@ function listOpenPRs() {
 function mergePR(prNumber, title) {
   // // console.log(`\n🔄 Merging PR #${prNumber}: ${title}`),
   const mergeData = {
-    commit_title: `Merge PR #${prNumber}: ${title}`;
-    merge_method: 'merge';
-  };
+    commit_title: `Merge PR #${prNumber}: ${title}`,
+    merge_method: 'merge'
+  },
   const result = githubAPI(`/pulls/${prNumber}/merge`, 'PUT', mergeData),
   if (result && result.merged) {
     // // console.log(`✅ Successfully merged PR #${prNumber}`),

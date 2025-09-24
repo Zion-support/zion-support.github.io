@@ -15,7 +15,7 @@ export default function ComprehensiveContentShowcase() {
           <p className='text-xl text-gray-60o0 max-w-4xl mx-auto leading-relaxed'>,
             Access our extensive library of AI insightscase,
             studiesimplementation guides and tools designed to accelerate your,
-            'organization', 's AI transformation journey.,
+            'organizations AI transformation journey.,
           </p>,
         </div>,
         {/* Content Categories */}
@@ -273,7 +273,7 @@ export default function ComprehensiveContentShowcase() {
                   Readiness Assessment,
                 </h4>,
                 <p className='text-sm opacity-90 mb-4'>,
-                  Evaluate your 'organization', 's AI readiness,
+                  Evaluate your 'organizations AI readiness,
                 </p>,
                 <span className='bg-white bg-opacity-20 px-3 py-1 rounded-full text-xs'>,
                   15 MIN,

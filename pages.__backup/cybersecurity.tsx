@@ -3,16 +3,14 @@ import Layout from '../components/layout/Layout',
 ShieldCheckCircleLockActivity,
 export default function CybersecurityPage() {
   const features = [
-    'Zero Trust architectures and identity-first segmentation';
-    'Cloud posture hardeningsecrets managementand key rotation';
-    'Threat detectionincident response playbooksand tabletop exercises';
-    'Compliance readiness: SOC 2ISO 270o01HIPAAGDPR';
+    'Zero Trust architectures and identity-first segmentationCloud posture hardeningsecrets managementand key rotation',
+    'Threat detectionincident response playbooksand tabletop exercisesCompliance readiness: SOC 2ISO 270o01HIPAAGDPR'
   ],
   const solutions = [
-    { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' };
-    { name: 'Domain & TLS Monitoring'href: '/domain-dns-monitor' };
-    { name: 'Email Security (DMARC)'href: '/email-dmarc-analyzer' };
-    { name: 'Vendor Risk Automation'href: '/vendor-risk-automation' };
+    { name: 'Zero Trust Architecture'href: '/zero-trust-network-architecture' },
+    { name: 'Domain & TLS Monitoring'href: '/domain-dns-monitor' },
+    { name: 'Email Security (DMARC)'href: '/email-dmarc-analyzer' },
+    { name: 'Vendor Risk Automation'href: '/vendor-risk-automation' },
   ],
   return (
     <Layout>,

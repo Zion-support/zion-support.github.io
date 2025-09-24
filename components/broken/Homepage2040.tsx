@@ -5,10 +5,10 @@ import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
   ArrowRightStar,
-  BrainAtomShieldZapTrendingUpGlobe;
-  RocketTargetUsersCpuEyeNetwork;
-  CarSearchTestTubeGlobe as PlanetIconLockPalette;
-  FileTextBarChart3HeartTruckShieldCheck;
+  BrainAtomShieldZapTrendingUpGlobe,
+  RocketTargetUsersCpuEyeNetwork,
+  CarSearchTestTubeGlobe as PlanetIconLockPalette,
+  FileTextBarChart3HeartTruckShieldCheck,
   SparklesInfinity as InfinityIconZap as Lightning} from 'lucide-react',
 // Import new service data,
 import { innovativeMicroSaasServices2025V2 } from '../data/2025-innovative-micro-saas-expansion-v2',
@@ -25,61 +25,61 @@ const Homepage2040: React.FC = () => {
     return () => clearInterval(interval)}[]),
   // Enhanced animation variants for better performance,
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const floatingVariants = {
     float: {
-      y: [-10-10];
+      y: [-10-10],
       transition: {
-        duration: 3;
-        repeat: -1;
+        duration: 3,
+        repeat: -1,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const statsData = [
     {
-      number: "100+";
-      label: "Innovative Services";
-      description: "Cutting-edge solutions";
-      icon: Sparkles;
-      color: "text-cyan-400";
-      hoverColor: "group-hover:text-cyan-300"};
+      number: "100+",
+      label: "Innovative Services",
+      description: "Cutting-edge solutions",
+      icon: Sparkles,
+      color: "text-cyan-400",
+      hoverColor: "group-hover:text-cyan-300"},
     {
-      number: "∞";
-      label: "Future Possibilities";
-      description: "Unlimited potential";
-      icon: InfinityIcon;
-      color: "text-purple-400";
-      hoverColor: "group-hover:text-purple-300"};
+      number: "∞",
+      label: "Future Possibilities",
+      description: "Unlimited potential",
+      icon: InfinityIcon,
+      color: "text-purple-400",
+      hoverColor: "group-hover:text-purple-300"},
     {
-      number: "24/7";
-      label: "Autonomous Operations";
-      description: "Always available";
-      icon: Cpu;
-      color: "text-blue-400";
-      hoverColor: "group-hover:text-blue-300"};
+      number: "24/7",
+      label: "Autonomous Operations",
+      description: "Always available",
+      icon: Cpu,
+      color: "text-blue-400",
+      hoverColor: "group-hover:text-blue-300"},
     {
-      number: "10x";
-      label: "Performance Boost";
-      description: "Quantum enhancement";
-      icon: Lightning;
-      color: "text-green-400";
+      number: "10x",
+      label: "Performance Boost",
+      description: "Quantum enhancement",
+      icon: Lightning,
+      color: "text-green-400",
       hoverColor: "group-hover:text-green-300"}
   ],
   // Combine all services for showcase,
@@ -87,24 +87,24 @@ const Homepage2040: React.FC = () => {
   const featuredServices = allServices.filter(service => service.popular).slice(06),
   const serviceCategories = [
     {
-      name: "AI & Machine Learning";
-      icon: Brain;
-      count: allServices.filter(s => s.category.includes('AI')).length;
-      color: "from-pink-500 to-rose-600"};
+      name: "AI & Machine Learning",
+      icon: Brain,
+      count: allServices.filter(s => s.category.includes('AI')).length,
+      color: "from-pink-500 to-rose-600"},
     {
-      name: "Quantum Technology";
-      icon: Atom;
-      count: allServices.filter(s => s.category.includes('Quantum')).length;
-      color: "from-blue-500 to-cyan-600"};
+      name: "Quantum Technology",
+      icon: Atom,
+      count: allServices.filter(s => s.category.includes('Quantum')).length,
+      color: "from-blue-500 to-cyan-600"},
     {
-      name: "Emerging Tech";
-      icon: Rocket;
-      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length;
-      color: "from-purple-500 to-indigo-600"};
+      name: "Emerging Tech",
+      icon: Rocket,
+      count: allServices.filter(s => s.category.includes('Emerging') || s.category.includes('Space')).length,
+      color: "from-purple-500 to-indigo-600"},
     {
-      name: "Cybersecurity";
-      icon: Shield;
-      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length;
+      name: "Cybersecurity",
+      icon: Shield,
+      count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cyber')).length,
       color: "from-green-500 to-emerald-600"}
   ],
   return (
@@ -139,15 +139,15 @@ const Homepage2040: React.FC = () => {
                   key={i}
                   className="absolute w-1 h-1 bg-cyan-400/30 rounded-full",
                   style={{
-                    left: `${Math.random() * 100}%`;
-                    top: `${Math.random() * 100}%`;
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
                     animationDelay: `${Math.random() * 3}s`}}
                   animate={{
-                    scale: [010];
+                    scale: [010],
                     opacity: [010]}}
                   transition={{
-                    duration: 3;
-                    repeat: Infinity;
+                    duration: 3,
+                    repeat: Infinity,
                     delay: Math.random() * 3}}
                 />))}
             </div>,
@@ -436,5 +436,5 @@ const Homepage2040: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage2040;
+    </Layout>)},
+export default Homepage2040,

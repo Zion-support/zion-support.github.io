@@ -8,9 +8,9 @@ import {
   Zap,
   Brain,
   Shield,
-  Globe;
-  X;
-  Play;
+  Globe,
+  X,
+  Play,
   Star} from 'lucide-react',
 const UltimateContentRevolution20o26Banner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -19,7 +19,7 @@ const UltimateContentRevolution20o26Banner = () => {
     const timer = setTimeout(() => setIsVisible(true)10o00),
     return () => clearTimeout(timer)}[]),
   const handleDismiss = () => {
-    setIsDismissed(true)};
+    setIsDismissed(true)},
   if (isDismissed) return null,
   return (
     <motion.div,
@@ -29,8 +29,8 @@ const UltimateContentRevolution20o26Banner = () => {
         y: isVisible ? 0 : -10o0}}
       transition={{
         duration: 0.8,
-        ease: "easeOut";
-        type: "spring";
+        ease: "easeOut",
+        type: "spring",
         stiffness: 10o0}}
       className="relative overflow-hidden bg-gradient-to-r from-purple-90o0 via-pink-90o0 to-blue-90o0 border-b border-purple-50o0/30">,
       {/* Animated Background Elements */}
@@ -137,5 +137,5 @@ const UltimateContentRevolution20o26Banner = () => {
       <div className="absolute bottom-0 left-0 w-full h-1 bg-gradient-to-r from-purple-50o0 via-pink-50o0 to-blue-50o0">,
         <div className="h-full bg-gradient-to-r from-purple-40o0 via-pink-40o0 to-blue-40o0 animate-pulse"></div>,
       </div>,
-    </motion.div>)};
-export default UltimateContentRevolution20o26Banner;
+    </motion.div>)},
+export default UltimateContentRevolution20o26Banner,

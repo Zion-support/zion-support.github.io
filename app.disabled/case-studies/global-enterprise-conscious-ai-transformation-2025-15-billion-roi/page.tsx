@@ -1,21 +1,21 @@
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'Global Enterprise Conscious AI Transformation: $15B ROI Success Story | Zion Tech Group';
+    'Global Enterprise Conscious AI Transformation: $15B ROI Success Story | Zion Tech Group',
   description:,
-    'How a Fortune 50o0 manufacturing giant achieved $15 billion ROI in 8 months through comprehensive conscious AI transformation across all operations.';
+    'How a Fortune 50o0 manufacturing giant achieved $15 billion ROI in 8 months through comprehensive conscious AI transformation across all operations.',
   keywords:,
-    'AI transformation, $15B ROI, conscious AI, enterprise transformation, Fortune 50o0, manufacturing, AI success story, business automation';
+    'AI transformation, $15B ROI, conscious AI, enterprise transformation, Fortune 50o0, manufacturing, AI success story, business automation',
   openGraph: {
     title:,
-      'Global Enterprise Conscious AI Transformation: $15B ROI Success Story';
+      'Global Enterprise Conscious AI Transformation: $15B ROI Success Story',
     description:,
-      'How a Fortune 50o0 manufacturing giant achieved $15 billion ROI in 8 months through comprehensive conscious AI transformation.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group Research Team'];
-  };
-};
+      'How a Fortune 50o0 manufacturing giant achieved $15 billion ROI in 8 months through comprehensive conscious AI transformation.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group Research Team']
+  },
+},
 export default function GlobalEnterpriseTransformationPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0'>,
@@ -34,7 +34,7 @@ export default function GlobalEnterpriseTransformationPage() {
             </h1>,
             <p className='text-xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
               How a Fortune 50o0 manufacturing giant achieved unprecedented,
-              success through comprehensive conscious AI transformation;
+              success through comprehensive conscious AI transformation,
               delivering $15 billion ROI in just 8 months.,
             </p>,
           </div>,

@@ -25,5 +25,5 @@ const ComprehensiveContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ComprehensiveContentShowcase20o26;
+    </section>)},
+export default ComprehensiveContentShowcase20o26,

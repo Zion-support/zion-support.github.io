@@ -25,52 +25,52 @@ const SearchComponent: React.FC = () => {
   // Mock search data - in a real app, this would come from an API,
   const searchData: SearchResult[] = [
     {
-      id: '1';
-      title: 'AI-Powered Autonomous Business Operations';
-      description: 'Revolutionary AI platform that autonomously manages and optimizes your entire business operations.';
-      type: 'service';
-      url: '/services/ai-autonomous-business';
-      category: 'AI & Machine Learning';
-      tags: ['AI', 'automation', 'business', 'operations']};
+      id: '1',
+      title: 'AI-Powered Autonomous Business Operations',
+      description: 'Revolutionary AI platform that autonomously manages and optimizes your entire business operations.',
+      type: 'service',
+      url: '/services/ai-autonomous-business',
+      category: 'AI & Machine Learning',
+      tags: ['AIautomation', 'businessoperations']},
     {
-      id: '2';
-      title: 'Quantum-Secure Cloud Infrastructure';
-      description: 'Next-generation cloud platform with quantum encryption and advanced security protocols.';
-      type: 'service';
-      url: '/services/quantum-secure-cloud';
-      category: 'Quantum Computing';
-      tags: ['quantum', 'cloud', 'security', 'encryption']};
+      id: '2',
+      title: 'Quantum-Secure Cloud Infrastructure',
+      description: 'Next-generation cloud platform with quantum encryption and advanced security protocols.',
+      type: 'service',
+      url: '/services/quantum-secure-cloud',
+      category: 'Quantum Computing',
+      tags: ['quantumcloud', 'securityencryption']},
     {
-      id: '3';
-      title: 'AI-Powered Space Technology Platform';
-      description: 'Cutting-edge AI platform for space exploration, satellite management, and cosmic data analysis.';
-      type: 'service';
-      url: '/services/space-tech-ai';
-      category: 'Space Technology';
-      tags: ['AI', 'space', 'satellite', 'exploration']};
+      id: '3',
+      title: 'AI-Powered Space Technology Platform',
+      description: 'Cutting-edge AI platform for space exploration, satellite management, and cosmic data analysis.',
+      type: 'service',
+      url: '/services/space-tech-ai',
+      category: 'Space Technology',
+      tags: ['AIspace', 'satelliteexploration']},
     {
-      id: '4';
-      title: 'Zero-Trust Security Architecture';
-      description: 'Advanced cybersecurity framework implementing zero-trust principles for maximum protection.';
-      type: 'solution';
-      url: '/solutions/zero-trust-security';
-      category: 'Cybersecurity';
-      tags: ['security', 'zero-trust', 'cybersecurity', 'protection']};
+      id: '4',
+      title: 'Zero-Trust Security Architecture',
+      description: 'Advanced cybersecurity framework implementing zero-trust principles for maximum protection.',
+      type: 'solution',
+      url: '/solutions/zero-trust-security',
+      category: 'Cybersecurity',
+      tags: ['securityzero-trust', 'cybersecurityprotection']},
     {
-      id: '5';
-      title: 'Micro SaaS Solutions';
-      description: 'Ready-to-deploy micro SaaS applications that solve specific business problems.';
-      type: 'service';
-      url: '/services/micro-saas';
-      category: 'Micro SaaS';
-      tags: ['SaaS', 'micro', 'business', 'solutions']}
+      id: '5',
+      title: 'Micro SaaS Solutions',
+      description: 'Ready-to-deploy micro SaaS applications that solve specific business problems.',
+      type: 'service',
+      url: '/services/micro-saas',
+      category: 'Micro SaaS',
+      tags: ['SaaSmicro', 'businesssolutions']}
   ],
   const categories = [
-    { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"  /> };
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4"  /> };
-    { id: 'quantum', name: 'Quantum Computing', icon: <Atom className="w-4 h-4"  /> };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"  /> };
-    { id: 'space-tech', name: 'Space Technology', icon: <Rocket className="w-4 h-4"  /> };
+    { id: 'all', name: 'All Categories', icon: <Globe className="w-4 h-4"  /> },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-4 h-4"  /> },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Atom className="w-4 h-4"  /> },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-4 h-4"  /> },
+    { id: 'space-tech', name: 'Space Technology', icon: <Rocket className="w-4 h-4"  /> },
     { id: 'micro-saas', name: 'Micro SaaS', icon: <Globe className="w-4 h-4"  /> }
   ],
   useEffect(() => {
@@ -79,7 +79,7 @@ const SearchComponent: React.FC = () => {
         setIsOpen(false),
         setQuery(''),
         setSelectedIndex(-1)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
   useEffect(() => {
@@ -105,7 +105,7 @@ const SearchComponent: React.FC = () => {
           if (selectedIndex >= 0 && filteredResults[selectedIndex]) {
             window.location.href = filteredResults[selectedIndex].url}
           break}
-    };
+    },
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)}, [isOpen, filteredResults, selectedIndex]),
   useEffect(() => {
@@ -124,7 +124,7 @@ const SearchComponent: React.FC = () => {
       // Apply category filter,
       if (selectedCategory !== 'all') {
         filtered = filtered.filter(item =>,
-          item.category.toLowerCase().includes(selectedCategory.replace('-', ' ')))}
+          item.category.toLowerCase().includes(selectedCategory.replace('- ')))}
 ,
       setFilteredResults(filtered),
       setIsLoading(false),
@@ -134,7 +134,7 @@ const SearchComponent: React.FC = () => {
     if (query.trim()) {
       setIsOpen(true),
       inputRef.current?.focus()}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'service':,
@@ -147,7 +147,7 @@ const SearchComponent: React.FC = () => {
         return <Rocket className="w-4 h-4 text-orange-50o0"  />,
       default:,
         return <Globe className="w-4 h-4 text-gray-50o0"  />}
-  };
+  },
   const getTypeLabel = (type: string) => {
     switch (type) {
       case 'service':,
@@ -160,7 +160,7 @@ const SearchComponent: React.FC = () => {
         return 'Resource',
       default:,
         return 'Item'}
-  };
+  },
   return (
     <div className="relative" ref={searchRef}>,
       {/* Search Button */}
@@ -296,5 +296,5 @@ const SearchComponent: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default SearchComponent;
+    </div>)},
+export default SearchComponent,

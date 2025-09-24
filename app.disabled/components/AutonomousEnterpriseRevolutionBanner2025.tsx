@@ -11,7 +11,7 @@ interface ContentItem {
     roi: string,
     savings: string,
     efficiency: string,
-    satisfaction: string};
+    satisfaction: string},
   description: string,
   readingTime: string}
 ,
@@ -21,40 +21,40 @@ const AutonomousEnterpriseRevolutionBanner20o25: React.FC = () => {
   const [isDismissed, setIsDismissed] = useState(false),
   const contentItems: ContentItem[] = [
     {
-      id: 'autonomous-enterprise-systems';
-      title: 'AI 20o25: The Autonomous Enterprise Systems Revolution - 60o0% ROI Breakthrough';
-      type: 'blog';
-      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution';
+      id: 'autonomous-enterprise-systems',
+      title: 'AI 20o25: The Autonomous Enterprise Systems Revolution - 60o0% ROI Breakthrough',
+      type: 'blog',
+      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8B';
-        efficiency: '99.7%';
-        satisfaction: '98%'};
-      description: 'Discover how Fortune 50o0 companies are achieving 60o0% ROI with autonomous AI systems that run entire business operations without human intervention.';
-      readingTime: '18 min read'};
+        roi: '60o0%',
+        savings: '$2.8B',
+        efficiency: '99.7%',
+        satisfaction: '98%'},
+      description: 'Discover how Fortune 50o0 companies are achieving 60o0% ROI with autonomous AI systems that run entire business operations without human intervention.',
+      readingTime: '18 min read'},
     {
-      id: 'fortune-50o0-transformation';
-      title: 'Fortune 50o0 Autonomous Transformation: $3.2B Annual Savings with 70o0% ROI';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-transformation-20o25';
+      id: 'fortune-50o0-transformation',
+      title: 'Fortune 50o0 Autonomous Transformation: $3.2B Annual Savings with 70o0% ROI',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-transformation-20o25',
       metrics: {
-        roi: '70o0%';
-        savings: '$3.2B';
-        efficiency: '89%';
-        satisfaction: '99.4%'};
-      description: 'How a Fortune 10o0 company achieved $3.2B in annual savings and 70o0% ROI through comprehensive autonomous AI system implementation.';
-      readingTime: '22 min read'};
+        roi: '70o0%',
+        savings: '$3.2B',
+        efficiency: '89%',
+        satisfaction: '99.4%'},
+      description: 'How a Fortune 10o0 company achieved $3.2B in annual savings and 70o0% ROI through comprehensive autonomous AI system implementation.',
+      readingTime: '22 min read'},
     {
-      id: 'autonomous-implementation-guide';
-      title: 'Autonomous Enterprise Implementation Master Guide 20o25: From Strategy to 70o0% ROI';
-      type: 'resource';
-      url: '/resources/autonomous-enterprise-implementation-master-guide-20o25';
+      id: 'autonomous-implementation-guide',
+      title: 'Autonomous Enterprise Implementation Master Guide 20o25: From Strategy to 70o0% ROI',
+      type: 'resource',
+      url: '/resources/autonomous-enterprise-implementation-master-guide-20o25',
       metrics: {
-        roi: '70o0%';
-        savings: '$3B+';
-        efficiency: '98%';
-        satisfaction: '98%'};
-      description: 'The complete guide to implementing autonomous AI systems in Fortune 50o0 companies, with proven strategies for achieving 70o0% ROI.';
+        roi: '70o0%',
+        savings: '$3B+',
+        efficiency: '98%',
+        satisfaction: '98%'},
+      description: 'The complete guide to implementing autonomous AI systems in Fortune 50o0 companies, with proven strategies for achieving 70o0% ROI.',
       readingTime: '35 min read'}
   ],
   useEffect(() => {
@@ -70,7 +70,7 @@ const AutonomousEnterpriseRevolutionBanner20o25: React.FC = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('autonomous-enterprise-banner-dismissed', 'true')};
+    localStorage.setItem('autonomous-enterprise-banner-dismissedtrue')},
   const currentItem = contentItems[currentIndex],
   if (isDismissed || !isVisible) {
     return null}
@@ -81,14 +81,14 @@ const AutonomousEnterpriseRevolutionBanner20o25: React.FC = () => {
       case 'case-study': return 'bg-green-10o0 text-green-80o0',
       case 'resource': return 'bg-purple-10o0 text-purple-80o0',
       default: return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog': return '📝',
       case 'case-study': return '📊',
       case 'resource': return '📚',
       default: return '📄'}
-  };
+  },
   return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white overflow-hidden">,
       {/* Animated Background Elements */}
@@ -198,5 +198,5 @@ const AutonomousEnterpriseRevolutionBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AutonomousEnterpriseRevolutionBanner20o25;
+    </div>)},
+export default AutonomousEnterpriseRevolutionBanner20o25,

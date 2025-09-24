@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react',
-type RepoStats ={ generatedAt?: string, pages?: number, blogPosts?: number, digests?: number, governance?: { voters: number, totalPower: number, proposals: number } | null };
+type RepoStats ={ generatedAt?: string, pages?: number, blogPosts?: number, digests?: number, governance?: { voters: number, totalPower: number, proposals: number } | null },
 export default function RepoAutomation() {
   const [stats, setStats] = useState<RepoStats | null>(null),
   useEffect(() => {

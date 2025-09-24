@@ -11,10 +11,10 @@ const crypto = require('crypto'),
 class AIBuildMonitor {
   constructor() {
     this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs', 'ai-build-monitor.log'),
-    this.learningDataFile = path.join(this.projectRoot, 'logs', 'build-learning-data.json'),
-    this.predictionModelFile = path.join(this.projectRoot, 'logs', 'build-prediction-model.json'),
-    this.buildHistoryFile = path.join(this.projectRoot, 'logs', 'build-history.json'),
+    this.logFile = path.join(this.projectRoot, 'logsai-build-monitor.log'),
+    this.learningDataFile = path.join(this.projectRoot, 'logsbuild-learning-data.json'),
+    this.predictionModelFile = path.join(this.projectRoot, 'logsbuild-prediction-model.json'),
+    this.buildHistoryFile = path.join(this.projectRoot, 'logsbuild-history.json'),
     this.ensureLogsDirectory(),
     this.loadLearningData(),
     this.loadPredictionModel(),
@@ -42,20 +42,20 @@ class AIBuildMonitor {
       if (fs.existsSync(this.learningDataFile)) {
         this.learningData = JSON.parse(fs.readFileSync(this.learningDataFile, 'utf8'))} else {
         this.learningData ={
-          buildPatterns: [];
-          failureSignatures: [];
-          successPatterns: [];
-          optimizationStrategies: [];
-          lastUpdated: new Date().toISOString()};
+          buildPatterns: [],
+          failureSignatures: [],
+          successPatterns: [],
+          optimizationStrategies: [],
+          lastUpdated: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load learning data: ${error.message}`, 'ERROR'),
       this.learningData ={
-        buildPatterns: [];
-        failureSignatures: [];
-        successPatterns: [];
-        optimizationStrategies: [];
-        lastUpdated: new Date().toISOString()};
+        buildPatterns: [],
+        failureSignatures: [],
+        successPatterns: [],
+        optimizationStrategies: [],
+        lastUpdated: new Date().toISOString()},
     }
   }
 ,
@@ -64,18 +64,18 @@ class AIBuildMonitor {
       if (fs.existsSync(this.predictionModelFile)) {
         this.predictionModel = JSON.parse(fs.readFileSync(this.predictionModelFile, 'utf8'))} else {
         this.predictionModel ={
-          failureProbability: 0.1;
-          riskFactors: {};
-          confidenceScore: 0.5;
-          lastTrained: new Date().toISOString()};
+          failureProbability: 0.1,
+          riskFactors: {},
+          confidenceScore: 0.5,
+          lastTrained: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load prediction model: ${error.message}`, 'ERROR'),
       this.predictionModel ={
-        failureProbability: 0.1;
-        riskFactors: {};
-        confidenceScore: 0.5;
-        lastTrained: new Date().toISOString()};
+        failureProbability: 0.1,
+        riskFactors: {},
+        confidenceScore: 0.5,
+        lastTrained: new Date().toISOString()},
     }
   }
 ,
@@ -106,7 +106,7 @@ class AIBuildMonitor {
       const riskScore = this.calculateRiskScore([...packageIssues, ...tsIssues, ...buildIssues, ...depIssues]),
       this.log(`Current build risk score: ${riskScore.toFixed(2)}`),
       if (riskScore > 0.7) {
-        this.log('High risk detected! Initiating preventive measures...', 'WARN'),
+        this.log('High risk detected! Initiating preventive measures...WARN'),
         await this.applyPreventiveMeasures()}
 } catch (error) {
       this.log(`Build state analysis failed: ${error.message}`, 'ERROR')}
@@ -132,9 +132,9 @@ class AIBuildMonitor {
       const outdatedDeps = await this.checkOutdatedDependencies(),
       if (outdatedDeps.length > 0) {
         issues.push({
-          type: 'OUTDATED_DEPENDENCIES';
-          severity: 'MEDIUM';
-          weight: 0.6;
+          type: 'OUTDATED_DEPENDENCIES',
+          severity: 'MEDIUM',
+          weight: 0.6,
           details: outdatedDeps})}
 } catch (error) {
       issues.push({ type: 'PACKAGE_JSON_PARSE_ERROR', severity: 'CRITICAL', weight: 1.0 })}
@@ -187,9 +187,9 @@ class AIBuildMonitor {
       const auditResult = await this.runSecurityAudit(),
       if (auditResult.vulnerabilities > 0) {
         issues.push({
-          type: 'SECURITY_VULNERABILITIES';
-          severity: 'HIGH';
-          weight: 0.9;
+          type: 'SECURITY_VULNERABILITIES',
+          severity: 'HIGH',
+          weight: 0.9,
           details: { count: auditResult.vulnerabilities }
         })}
 ,
@@ -197,9 +197,9 @@ class AIBuildMonitor {
       const circularDeps = await this.checkCircularDependencies(),
       if (circularDeps.length > 0) {
         issues.push({
-          type: 'CIRCULAR_DEPENDENCIES';
-          severity: 'MEDIUM';
-          weight: 0.7;
+          type: 'CIRCULAR_DEPENDENCIES',
+          severity: 'MEDIUM',
+          weight: 0.7,
           details: circularDeps})}
 } catch (error) {
       this.log(`Dependency analysis failed: ${error.message}`, 'ERROR')}
@@ -233,7 +233,7 @@ class AIBuildMonitor {
 ,
   async clearBuildCache() {
     this.log('Clearing build cache...'),
-    const cacheDirs = ['node_modules/.cache', '.vite', 'dist', 'out'],
+    const cacheDirs = ['node_modules/.cache.vite', 'distout'],
     for (const dir of cacheDirs) {
       const cachePath = path.join(this.projectRoot, dir),
       if (fs.existsSync(cachePath)) {
@@ -288,10 +288,10 @@ class AIBuildMonitor {
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'];
-          ui: ['@radix-ui/react-accordion', '@radix-ui/react-alert-dialog']}
+          vendor: ['reactreact-dom'],
+          ui: ['@radix-ui/react-accordion@radix-ui/react-alert-dialog']}
       }
-    };
+    },
     chunkSizeWarningLimit: 10o00}`,
           config = config.replace('export default defineConfig({', `export default defineConfig({${optimizations}`),
           fs.writeFileSync(viteConfigPath, config),
@@ -305,8 +305,8 @@ class AIBuildMonitor {
     this.log('Running preemptive build test...'),
     try {
       const result = execSync('npm run build', {
-        encoding: 'utf8';
-        stdio: 'pipe';
+        encoding: 'utf8',
+        stdio: 'pipe',
         timeout: 30o0000 // 5 minutes}),
       this.log('Preemptive build test successful'),
       this.recordBuildSuccess()} catch (error) {
@@ -323,7 +323,7 @@ class AIBuildMonitor {
       const predictions = this.predictIssues(recentPatterns),
       // Take preventive action if needed,
       if (predictions.riskLevel === 'HIGH') {
-        this.log('High risk predicted! Taking preventive action...', 'WARN'),
+        this.log('High risk predicted! Taking preventive action...WARN'),
         await this.applyPreventiveMeasures()}
 ,
       // Update prediction model,
@@ -334,10 +334,10 @@ class AIBuildMonitor {
   analyzeRecentPatterns() {
     // Analyze recent build history for patterns,
     const patterns ={
-      failureRate: 0.2;
-      commonErrors: [];
-      buildTimeTrend: 'stable';
-      dependencyIssues: 0};
+      failureRate: 0.2,
+      commonErrors: [],
+      buildTimeTrend: 'stable',
+      dependencyIssues: 0},
     return patterns}
 ,
   predictIssues(patterns) {
@@ -347,10 +347,10 @@ class AIBuildMonitor {
     if (patterns.buildTimeTrend === 'increasing') riskScore += 0.2,
     if (patterns.dependencyIssues > 2) riskScore += 0.2,
     return {
-      riskLevel: riskScore > 0.6 ? 'HIGH' : riskScore > 0.3 ? 'MEDIUM' : 'LOW';
-      confidence: 0.8;
-      riskScore: riskScore;
-      recommendations: this.generateRecommendations(riskScore)};
+      riskLevel: riskScore > 0.6 ? 'HIGH' : riskScore > 0.3 ? 'MEDIUM' : 'LOW',
+      confidence: 0.8,
+      riskScore: riskScore,
+      recommendations: this.generateRecommendations(riskScore)},
   }
 ,
   generateRecommendations(riskScore) {
@@ -401,10 +401,10 @@ class AIBuildMonitor {
   extractBuildPatterns(buildHistory) {
     // Extract patterns from build history,
     const patterns ={
-      timeOfDay: {};
-      dayOfWeek: {};
-      failureTriggers: [];
-      successFactors: []};
+      timeOfDay: {},
+      dayOfWeek: {},
+      failureTriggers: [],
+      successFactors: []},
     return patterns}
 ,
   recordBuildSuccess() {
@@ -427,18 +427,18 @@ class AIBuildMonitor {
       const result = execSync('npm audit --json', { encoding: 'utf8', stdio: 'pipe' }),
       const audit = JSON.parse(result),
       return {
-        vulnerabilities: audit.metadata?.vulnerabilities?.total || 0;
-        critical: audit.metadata?.vulnerabilities?.critical || 0;
-        high: audit.metadata?.vulnerabilities?.high || 0};
+        vulnerabilities: audit.metadata?.vulnerabilities?.total || 0,
+        critical: audit.metadata?.vulnerabilities?.critical || 0,
+        high: audit.metadata?.vulnerabilities?.high || 0},
     } catch (error) {
-      return { vulnerabilities: 0, critical: 0, high: 0 };
+      return { vulnerabilities: 0, critical: 0, high: 0 },
     }
   }
 ,
   async checkCircularDependencies() {
     try {
       const result = execSync('npx madge --circular --extensions js,ts,jsx,tsx .', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       return result.split('\n').filter(line => line.trim())} catch (error) {
       return []}
@@ -449,8 +449,8 @@ class AIBuildMonitor {
 const monitor = new AIBuildMonitor(),
 // Handle graceful shutdown,
 process.on('SIGINT', () => {
-  monitor.log('Shutting down AI Build Monitor...', 'INFO'),
+  monitor.log('Shutting down AI Build Monitor...INFO'),
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  monitor.log('Shutting down AI Build Monitor...', 'INFO'),
+  monitor.log('Shutting down AI Build Monitor...INFO'),
   process.exit(0)})}}))

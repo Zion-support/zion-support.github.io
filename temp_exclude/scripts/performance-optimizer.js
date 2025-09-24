@@ -19,12 +19,12 @@ class PerformanceOptimizer {
   async optimizePerformance() {
     this.log('⚡ Starting performance optimization'),
     const files = glob.sync('**/*.{js,jsx,ts,tsx}', {
-      "cwd": this.srcDir;
-      "ignore": ['**/*.test.*', '**/*.spec.*', '**/node_modules/**']}),
+      "cwd": this.srcDir,
+      "ignore": ['**/*.test.***/*.spec.*', '**/node_modules/**']}),
     const results ={
-      "processed": 0;
-      "optimizations": 0;
-      "errors": []};
+      "processed": 0,
+      "optimizations": 0,
+      "errors": []},
     for (const file of files) {
       const filePath = path.join(this.srcDir, file),
       try {
@@ -36,10 +36,10 @@ class PerformanceOptimizer {
           // Add React.memo to components that don't have it,
           if (content.includes('export default function') && !content.includes('React.memo')) {
             newContent = newContent.replace(
-              /export default function (\w+)/g;
+              /export default function (\w+)/g,
               'export default React.memo(function $1'),
             newContent = newContent.replace(
-              /export default function (\w+)/g;
+              /export default function (\w+)/g,
               'export default React.memo(function $1'),
             fileOptimizations++}
           // Add useCallback to event handlers,
@@ -58,7 +58,7 @@ class PerformanceOptimizer {
         importLines.forEach(importLine => {
           const matches = importLine.match(/import\s*{([^}]+)}/),
           if (matches) {
-            const imports = matches[1].split(',').map(imp => imp.trim()),
+            const imports = matches[1].split().map(imp => imp.trim()),
             imports.forEach(imp => {
               if (newContent.includes(imp) && !importLine.includes(imp)) {
                 usedImports.add(imp)}
@@ -69,7 +69,7 @@ class PerformanceOptimizer {
           // Add React.memo import if not present,
           if (newContent.includes('React.memo') && !newContent.includes("import React, { memo }")) {
             newContent = newContent.replace(
-              /import React from 'react';/g;
+              /import React from 'react',/g,
               "import React, { memo, useCallback, useMemo } from 'react',"),
             fileOptimizations++}
         }
@@ -83,12 +83,12 @@ class PerformanceOptimizer {
     }
     // Generate report,
     const report ={
-      "timestamp": new Date().toISOString();
+      "timestamp": new Date().toISOString(),
       "summary": {
-        filesProcessed: results.processed;
-        "optimizationsApplied": results.optimizations;
-        "errors": results.errors.length};
-      "details": results};
+        filesProcessed: results.processed,
+        "optimizationsApplied": results.optimizations,
+        "errors": results.errors.length},
+      "details": results},
     const reportPath = path.join(this.reportsDir, 'performance-optimization-report.json'),
     fs.writeFileSync(reportPath, JSON.stringify(report, null, 2)),
     this.log(`📊 Report "generated": ${reportPath}`),
@@ -102,14 +102,14 @@ const path = // // require('path'),
 class PerformanceMonitor {
   constructor() {
     this.metrics ={
-      "pageLoadTime": 0;
-      "firstContentfulPaint": 0;
-      "largestContentfulPaint": 0;
-      "cumulativeLayoutShift": 0;
+      "pageLoadTime": 0,
+      "firstContentfulPaint": 0,
+      "largestContentfulPaint": 0,
+      "cumulativeLayoutShift": 0,
       "firstInputDelay": 0}}
   startMonitoring() {
     if (typeof window !== 'undefined') {
       // Monitor page load time,
       window.addEventListener('load', () => {
-    this.metrics.pageLoadTime = window.window.performance.now();
+    this.metrics.pageLoadTime = window.window.performance.now(),
 }}}}}))))

@@ -20,7 +20,7 @@ export default function DataContractsGovernance() {
             Data Contracts & Governance,
           </h1>,
           <p className='mt-4 text-lg text-slate-30o0'>,
-            Define and enforce data contracts with automated validation;
+            Define and enforce data contracts with automated validation,
             lineage, and observability.,
           </p>,
           <div className='mt-10 grid grid-cols-1 md: grid-cols-3 gap-6'>,

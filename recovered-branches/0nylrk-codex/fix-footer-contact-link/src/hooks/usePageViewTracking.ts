@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useEffect } from 'react',
 import { useLocation } from 'react-router-dom',
 /**,
@@ -10,13 +10,13 @@ export function usePageViewTracking() {
   useEffect(() => {
     const handleRouteChange = () => {
       // Track page view,
-      // // console.log('Page view:', window.location.pathname)};
+      // // console.log('Page view:', window.location.pathname)},
     // Listen for route changes,
     window.addEventListener('popstate', handleRouteChange),
     // Initial page load,
     handleRouteChange(),
     return () => {
-      window.removeEventListener('popstate', handleRouteChange)};
+      window.removeEventListener('popstate', handleRouteChange)},
   }, []),
   // Also track when location changes directly via React Router,
   useEffect(() => {

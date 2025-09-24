@@ -3,65 +3,65 @@ ArrowRightBrainZapShieldGlobeTrendingUpStarUsersTargetClockCheckCircle,
 export default function LatestAIFeaturesShowcase20o25() {
   const features = [
     {
-      icon: Brain;
-      title: 'Neural Interface Technology';
+      icon: Brain,
+      title: 'Neural Interface Technology',
       description:,
-        'Direct brain-computer interfaces enabling seamless human-AI communication and unprecedented productivity gains.';
-      color: 'from-purple-50o0 to-purple-60o0';
-      bgColor: 'bg-purple-50';
-      iconColor: 'text-purple-60o0';
-      stats: '85% faster decision making';
-    };
+        'Direct brain-computer interfaces enabling seamless human-AI communication and unprecedented productivity gains.',
+      color: 'from-purple-50o0 to-purple-60o0',
+      bgColor: 'bg-purple-50',
+      iconColor: 'text-purple-60o0',
+      stats: '85% faster decision making'
+    },
     {
-      icon: Zap;
-      title: 'Quantum AI Fusion';
+      icon: Zap,
+      title: 'Quantum AI Fusion',
       description:,
-        'Revolutionary combination of quantum computing and AI delivering unprecedented processing power and capabilities.';
-      color: 'from-blue-50o0 to-blue-60o0';
-      bgColor: 'bg-blue-50';
-      iconColor: 'text-blue-60o0';
-      stats: '10o00x processing speed';
-    };
+        'Revolutionary combination of quantum computing and AI delivering unprecedented processing power and capabilities.',
+      color: 'from-blue-50o0 to-blue-60o0',
+      bgColor: 'bg-blue-50',
+      iconColor: 'text-blue-60o0',
+      stats: '10o00x processing speed'
+    },
     {
-      icon: Globe;
-      title: 'Autonomous Business Systems';
+      icon: Globe,
+      title: 'Autonomous Business Systems',
       description:,
-        'Self-managing business operations that adaptlearnand optimize in real-time for maximum efficiency.';
-      color: 'from-green-50o0 to-green-60o0';
-      bgColor: 'bg-green-50';
-      iconColor: 'text-green-60o0';
-      stats: '50o0% productivity increase';
-    };
+        'Self-managing business operations that adaptlearnand optimize in real-time for maximum efficiency.',
+      color: 'from-green-50o0 to-green-60o0',
+      bgColor: 'bg-green-50',
+      iconColor: 'text-green-60o0',
+      stats: '50o0% productivity increase'
+    },
     {
-      icon: Shield;
-      title: 'AI Security Fortress';
+      icon: Shield,
+      title: 'AI Security Fortress',
       description:,
-        'Next-generation AI-powered security systems that predict and prevent cyber threats before they occur.';
-      color: 'from-red-50o0 to-red-60o0';
-      bgColor: 'bg-red-50';
-      iconColor: 'text-red-60o0';
-      stats: '99.9% threat prevention';
-    };
+        'Next-generation AI-powered security systems that predict and prevent cyber threats before they occur.',
+      color: 'from-red-50o0 to-red-60o0',
+      bgColor: 'bg-red-50',
+      iconColor: 'text-red-60o0',
+      stats: '99.9% threat prevention'
+    },
     {
-      icon: Target;
-      title: 'Predictive Analytics Engine';
+      icon: Target,
+      title: 'Predictive Analytics Engine',
       description:,
-        'Advanced AI systems that predict market trendscustomer behaviorand business outcomes with incredible accuracy.';
-      color: 'from-orange-50o0 to-orange-60o0';
-      bgColor: 'bg-orange-50';
-      iconColor: 'text-orange-60o0';
-      stats: '95% prediction accuracy';
-    };
+        'Advanced AI systems that predict market trendscustomer behaviorand business outcomes with incredible accuracy.',
+      color: 'from-orange-50o0 to-orange-60o0',
+      bgColor: 'bg-orange-50',
+      iconColor: 'text-orange-60o0',
+      stats: '95% prediction accuracy'
+    },
     {
-      icon: Users;
-      title: 'Synthetic Intelligence';
+      icon: Users,
+      title: 'Synthetic Intelligence',
       description:,
-        'Artificially created consciousness that rivals human intelligencecapable of creative thinking and emotional understanding.';
-      color: 'from-indigo-50o0 to-indigo-60o0';
-      bgColor: 'bg-indigo-50';
-      iconColor: 'text-indigo-60o0';
-      stats: 'Human-level reasoning';
-    };
+        'Artificially created consciousness that rivals human intelligencecapable of creative thinking and emotional understanding.',
+      color: 'from-indigo-50o0 to-indigo-60o0',
+      bgColor: 'bg-indigo-50',
+      iconColor: 'text-indigo-60o0',
+      stats: 'Human-level reasoning'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,

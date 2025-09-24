@@ -12,7 +12,7 @@ interface NavigationItem {
   featured?: boolean,
   metrics?: {
     count?: number,
-    roi?: string};
+    roi?: string},
 }
 ,
 const EnhancedNavigation: React.FC = () => {
@@ -21,98 +21,98 @@ const EnhancedNavigation: React.FC = () => {
   const pathname = usePathname(),
   const navigationItems: NavigationItem[] = [
     {
-      id: 'home';
-      label: 'Home';
-      href: '/';
-      icon: '🏠';
-      description: 'AI Innovation Hub';
-    };
+      id: 'home',
+      label: 'Home',
+      href: '/',
+      icon: '🏠',
+      description: 'AI Innovation Hub'
+    },
     {
-      id: 'content';
-      label: 'Content Hub';
-      href: '/content';
-      icon: '📚';
-      description: 'Revolutionary AI Content';
-      featured: true;
+      id: 'content',
+      label: 'Content Hub',
+      href: '/content',
+      icon: '📚',
+      description: 'Revolutionary AI Content',
+      featured: true,
       children: [
         {
-          id: 'blog';
-          label: 'Blog Posts';
-          href: '/blog';
-          description: 'Latest AI insights and breakthroughs';
-          metrics: { count: 25, roi: '5,0o00%' };
-        };
+          id: 'blog',
+          label: 'Blog Posts',
+          href: '/blog',
+          description: 'Latest AI insights and breakthroughs',
+          metrics: { count: 25, roi: '5,0o00%' },
+        },
         {
-          id: 'case-studies';
-          label: 'Case Studies';
-          href: '/case-studies';
-          description: 'Real-world success stories';
-          metrics: { count: 15, roi: '15,0o00%' };
-        };
+          id: 'case-studies',
+          label: 'Case Studies',
+          href: '/case-studies',
+          description: 'Real-world success stories',
+          metrics: { count: 15, roi: '15,0o00%' },
+        },
         {
-          id: 'resources';
-          label: 'Resources';
-          href: '/resources';
-          description: 'Implementation guides and tools';
-          metrics: { count: 20, roi: '25,0o00%' };
-        };
-      ];
-    };
+          id: 'resources',
+          label: 'Resources',
+          href: '/resources',
+          description: 'Implementation guides and tools',
+          metrics: { count: 20, roi: '25,0o00%' },
+        },
+      ],
+    },
     {
-      id: 'services';
-      label: 'AI Services';
-      href: '/services';
-      icon: '⚙️';
-      description: 'Enterprise AI Solutions';
+      id: 'services',
+      label: 'AI Services',
+      href: '/services',
+      icon: '⚙️',
+      description: 'Enterprise AI Solutions',
       children: [
         {
-          id: 'business-intelligence';
-          label: 'Business Intelligence';
-          href: '/services/business-intelligence';
-          description: '15,0o00% ROI BI Solutions';
-          metrics: { roi: '15,0o00%' };
-        };
+          id: 'business-intelligence',
+          label: 'Business Intelligence',
+          href: '/services/business-intelligence',
+          description: '15,0o00% ROI BI Solutions',
+          metrics: { roi: '15,0o00%' },
+        },
         {
-          id: 'automation';
-          label: 'Process Automation';
-          href: '/services/automation';
-          description: '5,0o00% ROI Automation';
-          metrics: { roi: '5,0o00%' };
-        };
+          id: 'automation',
+          label: 'Process Automation',
+          href: '/services/automation',
+          description: '5,0o00% ROI Automation',
+          metrics: { roi: '5,0o00%' },
+        },
         {
-          id: 'quantum-ai';
-          label: 'Quantum AI';
-          href: '/services/quantum-ai';
-          description: '25,0o00% ROI Quantum Solutions';
-          metrics: { roi: '25,0o00%' };
-        };
-      ];
-    };
+          id: 'quantum-ai',
+          label: 'Quantum AI',
+          href: '/services/quantum-ai',
+          description: '25,0o00% ROI Quantum Solutions',
+          metrics: { roi: '25,0o00%' },
+        },
+      ],
+    },
     {
-      id: 'calculator';
-      label: 'ROI Calculator';
-      href: '/calculator';
-      icon: '🧮';
-      description: 'Calculate Your AI ROI';
-      featured: true;
-    };
+      id: 'calculator',
+      label: 'ROI Calculator',
+      href: '/calculator',
+      icon: '🧮',
+      description: 'Calculate Your AI ROI',
+      featured: true
+    },
     {
-      id: 'about';
-      label: 'About';
-      href: '/about';
-      icon: 'ℹ️';
-      description: 'Our Mission & Vision';
-    };
+      id: 'about',
+      label: 'About',
+      href: '/about',
+      icon: 'ℹ️',
+      description: 'Our Mission & Vision'
+    },
   ],
   const isActive = (href: string) => {
     if (href === '/') {
       return pathname === '/'}
-    return pathname.startsWith(href)};
+    return pathname.startsWith(href)},
   const handleDropdownToggle = (itemId: string) => {
-    setActiveDropdown(activeDropdown === itemId ? null : itemId)};
+    setActiveDropdown(activeDropdown === itemId ? null : itemId)},
   const handleLinkClick = () => {
     setIsOpen(false),
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
       if (
@@ -120,7 +120,7 @@ const EnhancedNavigation: React.FC = () => {
         !(event.target as Element).closest('.navigation-container')) {
         setIsOpen(false),
         setActiveDropdown(null)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [isOpen]),
   return (
@@ -323,5 +323,5 @@ const EnhancedNavigation: React.FC = () => {
             </div>,
           </div>)}
       </div>,
-    </nav>)};
-export default EnhancedNavigation;
+    </nav>)},
+export default EnhancedNavigation,

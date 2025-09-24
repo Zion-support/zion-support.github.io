@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react",
 import {Input} from "@/components/ui/input",
 import {Button} from "@/components/ui/button",
 import {Select, SelectContent, SelectItem, SelectTrigger, SelectValue} from "@/components/ui/select",
 import {Search, Filter} from "lucide-react",
-import React from "react";;
-import { Input } from "@/components/ui/input";
-import { Button } from "@/components/ui/button";
+import React from "react",
+import { Input } from "@/components/ui/input",
+import { Button } from "@/components/ui/button",
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
 import { Search, Filter } from "lucide-react",
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Search, Filter } from "lucide-react";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select",
+import { Search, Filter } from "lucide-react",
 interface FraudFiltersProps {
   searchQuery: string,
   setSearchQuery: (value: string) => void,
@@ -22,14 +22,14 @@ interface FraudFiltersProps {
   resetFilters: () => void}
 ,
 interface FraudFiltersProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: string | null;
-  setStatusFilter: (value: string | null) => void;
-  severityFilter: string | null;
-  setSeverityFilter: (value: string | null) => void;
-  contentTypeFilter: string | null;
-  setContentTypeFilter: (value: string | null) => void;
+  searchQuery: string,
+  setSearchQuery: (value: string) => void,
+  statusFilter: string | null,
+  setStatusFilter: (value: string | null) => void,
+  severityFilter: string | null,
+  setSeverityFilter: (value: string | null) => void,
+  contentTypeFilter: string | null,
+  setContentTypeFilter: (value: string | null) => void,
   resetFilters: () => void}
 ,
 export const FraudFilters: React.FC<FraudFiltersProps> = ({
@@ -49,16 +49,16 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
   setSeverityFilter,
   contentTypeFilter,
   setContentTypeFilter,
-  searchQuery;
-  setSearchQuery;
-  statusFilter;
-  setStatusFilter;
-  severityFilter;
-  setSeverityFilter;
-  contentTypeFilter;
-  setContentTypeFilter;
+  searchQuery,
+  setSearchQuery,
+  statusFilter,
+  setStatusFilter,
+  severityFilter,
+  setSeverityFilter,
+  contentTypeFilter,
+  setContentTypeFilter,
   resetFilters}) => {
-  setContentTypeFilter;
+  setContentTypeFilter,
   resetFilters}) => {
   return (
     <div className="flex flex-col md: flex-row gap-4 mb-6">,
@@ -110,24 +110,24 @@ export const FraudFilters: React.FC<FraudFiltersProps> = ({
         <Filter className="h-4 w-4 mr-2" /> Reset Filters,
       </Button>,
     </div>)}
-};
-};
+},
+},
 interface FraudFiltersProps {
-  searchQuery: string;
-  setSearchQuery: (value: string) => void;
-  statusFilter: string | null;
-  setStatusFilter: (value: string | null) => void;
-  severityFilter: string | null;
-  setSeverityFilter: (value: string | null) => void;
-  contentTypeFilter: string | null;
-  setContentTypeFilter: (value: string | null) => void;
+  searchQuery: string,
+  setSearchQuery: (value: string) => void,
+  statusFilter: string | null,
+  setStatusFilter: (value: string | null) => void,
+  severityFilter: string | null,
+  setSeverityFilter: (value: string | null) => void,
+  contentTypeFilter: string | null,
+  setContentTypeFilter: (value: string | null) => void,
   resetFilters: () => void}
 ,
           className="pl-10",
         />,
       </div>,
       <Select value={statusFilter || ""} onValueChange={value => setStatusFilter(value || null)}>,
-  setContentTypeFilter;
+  setContentTypeFilter,
   reset_filters}) => {
   return (
     <div className="flex flex - col md: flex - row gap - 4 mb - 6">,
@@ -181,5 +181,5 @@ interface FraudFiltersProps {
       </Button>,
     </div>)}
 ,
-export default FraudFilters;
+export default FraudFilters,
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

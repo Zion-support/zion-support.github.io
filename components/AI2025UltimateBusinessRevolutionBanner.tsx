@@ -159,5 +159,5 @@ const AI20o25UltimateBusinessRevolutionBanner = () => {
       <div className="absolute top-40 right-20 w-12 h-12 bg-blue-40o0 rounded-full opacity-20 animate-bounce delay-10o00"></div>,
       <div className="absolute bottom-40 left-20 w-20 h-20 bg-purple-40o0 rounded-full opacity-20 animate-bounce delay-20o00"></div>,
       <div className="absolute bottom-20 right-10 w-14 h-14 bg-pink-40o0 rounded-full opacity-20 animate-bounce delay-50o0"></div>,
-    </section>)};
-export default AI20o25UltimateBusinessRevolutionBanner;
+    </section>)},
+export default AI20o25UltimateBusinessRevolutionBanner,

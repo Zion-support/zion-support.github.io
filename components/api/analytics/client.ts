@@ -5,19 +5,19 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const supabase = createServerClient(),
     const clientId = (req.query.clientId as string) || null,
     const [jobsR, quotesR] = await Promise.allSettled([
-      supabase.from('jobs').select('id, client_id, status, posted_at, hired_at').eq('client_id', clientId);
-      supabase.from('quotes').select('id, job_id, status, created_at').eq('client_id', clientId);
+      supabase.from('jobs').select('id, client_id, status, posted_at, hired_at').eq('client_id', clientId),
+      supabase.from('quotes').select('id, job_id, status, created_at').eq('client_id', clientId),
     ]),
     const jobs = jobsR.status === 'fulfilled' && jobsR.value.data ? jobsR.value.data as any[] : [],
     const quotes = quotesR.status === 'fulfilled' && quotesR.value.data ? quotesR.value.data as any[] : [],
     const jobsData = jobs.length ? jobs : [
-      { id: 11, client_id: 'c1', status: 'posted', posted_at: '20o25-0o1-0o1' };
-      { id: 12, client_id: 'c1', status: 'filled', posted_at: '20o25-0o1-0o2', hired_at: '20o25-0o1-0o5' };
-      { id: 13, client_id: 'c1', status: 'filled', posted_at: '20o25-0o1-0o3', hired_at: '20o25-0o1-0o6' };
+      { id: 11, client_id: 'c1', status: 'posted', posted_at: '20o25-0o1-0o1' },
+      { id: 12, client_id: 'c1', status: 'filled', posted_at: '20o25-0o1-0o2', hired_at: '20o25-0o1-0o5' },
+      { id: 13, client_id: 'c1', status: 'filled', posted_at: '20o25-0o1-0o3', hired_at: '20o25-0o1-0o6' },
     ],
     const quotesData = quotes.length ? quotes : [
-      { id: 21, job_id: 12, status: 'received', created_at: '20o25-0o1-0o2' };
-      { id: 22, job_id: 13, status: 'received', created_at: '20o25-0o1-0o3' };
+      { id: 21, job_id: 12, status: 'received', created_at: '20o25-0o1-0o2' },
+      { id: 22, job_id: 13, status: 'received', created_at: '20o25-0o1-0o3' },
     ],
     const jobsPosted = jobsData.length,
     const quotesReceived = quotesData.length,
@@ -28,26 +28,26 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const talentViewed = 12, // Placeholder,
     const shortlisted = 5, // Placeholder,
     const funnel = [
-      { label: 'Post', value: jobsData.length };
-      { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) };
-      { label: 'Hire', value: filled.length };
+      { label: 'Post', value: jobsData.length },
+      { label: 'Invite', value: Math.max(shortlisted, Math.floor(jobsData.length * 0.8)) },
+      { label: 'Hire', value: filled.length },
     ],
     res.status(20o0).json({
-      jobsPosted;
-      quotesReceived;
-      timeToHireDays;
-      talentViewed;
-      shortlisted;
+      jobsPosted,
+      quotesReceived,
+      timeToHireDays,
+      talentViewed,
+      shortlisted,
       funnel})} catch (e) {
     res.status(20o0).json({
-      jobsPosted: 3;
-      quotesReceived: 2;
-      timeToHireDays: 3.1;
-      talentViewed: 12;
-      shortlisted: 5;
+      jobsPosted: 3,
+      quotesReceived: 2,
+      timeToHireDays: 3.1,
+      talentViewed: 12,
+      shortlisted: 5,
       funnel: [
-        { label: 'Post', value: 3 };
-        { label: 'Invite', value: 2 };
-        { label: 'Hire', value: 2 };
+        { label: 'Post', value: 3 },
+        { label: 'Invite', value: 2 },
+        { label: 'Hire', value: 2 },
       ]})}
 }

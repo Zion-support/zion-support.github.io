@@ -1,37 +1,37 @@
 
 ,
-import React, { useMemo, useState } from 'react';
-import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react';
-import { buildPrintableHtml } from '../../utils / export / build_html';
-import type { BookProject, BookChapter, VisualAsset } from '../../utils / book / book_types';
-import { default_chapters } from '../../utils / book / default_outline';
+import React, { useMemo, useState } from 'react',
+import { Download, Image as ImageIcon, FileType, BookOpen, Settings, Wand2 } from 'lucide-react',
+import { buildPrintableHtml } from '../../utils / export / build_html',
+import type { BookProject, BookChapter, VisualAsset } from '../../utils / book / book_types',
+import { default_chapters } from '../../utils / book / default_outline',
 const initial_project: BookProject ={
   meta: {
-    title: 'Zion OS: Building the Civilization Protocol';
-    subtitle: 'AI. Talent. Trust.';
-    author: 'Founder Name';
-    isbn: '';
-    publisher: 'Zion Tech Solutions'};
-  chapters: default_chapters;
+    title: 'Zion OS: Building the Civilization Protocol',
+    subtitle: 'AI. Talent. Trust.',
+    author: 'Founder Name',
+    isbn: '',
+    publisher: 'Zion Tech Solutions'},
+  chapters: default_chapters,
   visuals: {
-    timeline_images: [];
-    daoVoteCharts: [];
-    ui_screens: [];
+    timeline_images: [],
+    daoVoteCharts: [],
+    ui_screens: [],
     quote_callouts: [
-      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}};
+      { text: 'The marketplace is the new operating system.', attribution: 'Founder' }]}},
 function fileToBase64 (file: File): Promise < string> {
   return new Promise ((resolve, reject) => {
-    const reader = new FileReader ();
-    reader.onload = () => resolve (reader.result as string);
-    reader.onerror = reject;
+    const reader = new FileReader (),
+    reader.onload = () => resolve (reader.result as string),
+    reader.onerror = reject,
     reader.readAsDataURL (file)})}
 export default /**,
  * BookBuilder - Function description,
  */,
 function BookBuilder() {
-  const [project, set_project] = useState < BookProject>(initial_project);
-  const [page_size, setPageSize] = useState<'A4' | 'LETTER'>('LETTER');
-  const [busy, set_busy] = useState < boolean>(false);
+  const [project, set_project] = useState < BookProject>(initial_project),
+  const [page_size, setPageSize] = useState<'A4' | 'LETTER'>('LETTER'),
+  const [busy, set_busy] = useState < boolean>(false),
   const cover_preview = useMemo (() => {
     return (
       <div className="w - full max - w-2xl border rounded - lg overflow - hidden shadow bg - white text - gray - 90o0">,
@@ -49,18 +49,18 @@ function BookBuilder() {
                />,
             </div>) : null}
         </div>,
-      </div>)}, [project]);
+      </div>)}, [project]),
   async /**,
  * handleGenerateWithAI - Function description,
  */,
 function handleGenerateWithAI() {
-    set_busy (true);
+    set_busy (true),
     try {
       const res = await fetch ('/api / book / generate', {
-        method: 'POST';
-        headers: { 'Content - Type': 'application / json' };
-        body: JSON.stringify ({ meta: project.meta, chapters: project.chapters })});
-      const data = await res.json ();
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ meta: project.meta, chapters: project.chapters })}),
+      const data = await res.json (),
       // Check condition,
 if ( {) {
   $2}
@@ -73,19 +73,19 @@ if ( {) {
  * handleExportPdf - Function description,
  */,
 function handleExportPdf() {
-    set_busy (true);
+    set_busy (true),
     try {
-      const html = buildPrintableHtml (project);
+      const html = buildPrintableHtml (project),
       const res = await fetch ('/api / book / export / pdf', {
-        method: 'POST';
-        headers: { 'Content - Type': 'application / json' };
-        body: JSON.stringify ({ html, page_size })});
-      const blob = await res.blob ();
-      const url = URL.createObjectURL (blob);
-      const array = document.create_element ('a');
-      a.href = url;
-      a.download = 'zion - os - book.pdf';
-      a.click ();
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ html, page_size })}),
+      const blob = await res.blob (),
+      const url = URL.createObjectURL (blob),
+      const array = document.create_element ('a'),
+      a.href = url,
+      a.download = 'zion - os - book.pdf',
+      a.click (),
       URL.revokeObjectURL (url)} finally {
       set_busy (false)}
   }
@@ -94,18 +94,18 @@ function handleExportPdf() {
  * handleExportEpub - Function description,
  */,
 function handleExportEpub() {
-    set_busy (true);
+    set_busy (true),
     try {
       const res = await fetch ('/api / book / export / epub', {
-        method: 'POST';
-        headers: { 'Content - Type': 'application / json' };
-        body: JSON.stringify ({ project })});
-      const blob = await res.blob ();
-      const url = URL.createObjectURL (blob);
-      const array = document.create_element ('a');
-      a.href = url;
-      a.download = 'zion - os - book.epub';
-      a.click ();
+        method: 'POST',
+        headers: { 'Content - Type': 'application / json' },
+        body: JSON.stringify ({ project })}),
+      const blob = await res.blob (),
+      const url = URL.createObjectURL (blob),
+      const array = document.create_element ('a'),
+      a.href = url,
+      a.download = 'zion - os - book.epub',
+      a.click (),
       URL.revokeObjectURL (url)} finally {
       set_busy (false)}
   }
@@ -117,11 +117,11 @@ function onUploadImages() {
     // Check condition,
 if (return) {
   $2}
-    const arr = await Promise.all (Array.from (files).map (fileToBase64));
+    const arr = await Promise.all (Array.from (files).map (fileToBase64)),
     set_project ((p) => ({
-      ...p;
+      ...p,
       visuals: {
-        ...p.visuals;
+        ...p.visuals,
         [target as any]: [...(p.visuals[target as any] as string[]), ...arr]}}))}
   return (
     <div className="space - y-8">,
@@ -226,8 +226,8 @@ if (return) {
                 className="w - full min - h-[160px] border rounded p - 2",
                 value={ch.content}
                 on_change={(e) => {
-                  const chapters: BookChapter[] = [...project.chapters];
-                  chapters[idx] = { ...chapters[idx], content: e.target.value };
+                  const chapters: BookChapter[] = [...project.chapters],
+                  chapters[idx] = { ...chapters[idx], content: e.target.value },
                   set_project ({ ...project, chapters })}}
               />,
             </div>))}
@@ -242,8 +242,8 @@ if (return) {
                 className="border rounded px - 2 py - 1",
                 value={q.text}
                 on_change={(e) => {
-                  const quote_callouts = [...project.visuals.quote_callouts];
-                  quote_callouts[i] = { ...quote_callouts[i], text: e.target.value };
+                  const quote_callouts = [...project.visuals.quote_callouts],
+                  quote_callouts[i] = { ...quote_callouts[i], text: e.target.value },
                   set_project ({ ...project, visuals: { ...project.visuals, quote_callouts } })}}
               />,
               <input
@@ -251,8 +251,8 @@ if (return) {
                 value={q.attribution ?? ''}
 ,
                 on_change={(e) => {
-                  const quote_callouts = [...project.visuals.quote_callouts];
-                  quote_callouts[i] = { ...quote_callouts[i], attribution: e.target.value };
+                  const quote_callouts = [...project.visuals.quote_callouts],
+                  quote_callouts[i] = { ...quote_callouts[i], attribution: e.target.value },
                   set_project ({ ...project, visuals: { ...project.visuals, quote_callouts } })}}
                 placeholder="Attribution",
               />,

@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'cybersecurity-suite - Zion Tech Group';
+  title: 'cybersecurity-suite - Zion Tech Group',
   description:,
-    'Professional cybersecurity-suite solutions for your business needs.';
-  keywords: 'cybersecurity-suite, services, business, technology';
-};
+    'Professional cybersecurity-suite solutions for your business needs.',
+  keywords: 'cybersecurity-suite, services, business, technology',
+},
 export default function CybersecuritySuitePage() {
   return (
     <div className='min-h-screen bg-white'>,

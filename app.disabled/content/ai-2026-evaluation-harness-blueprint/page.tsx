@@ -1,9 +1,9 @@
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Evaluation Harness Blueprint - Zion Tech Group';
+  title: 'AI 20o26: Evaluation Harness Blueprint - Zion Tech Group',
   description:,
-    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.';
-};
+    'Build an evaluation harness for autonomous agents with scenario suites, metrics, and governance to ship reliable AI.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,

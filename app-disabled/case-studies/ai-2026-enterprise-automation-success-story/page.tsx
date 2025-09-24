@@ -3,28 +3,25 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'AI 20o26 Enterprise Automation Success Story - Fortune 50o0 Transformation';
+    'AI 20o26 Enterprise Automation Success Story - Fortune 50o0 Transformation',
   description:,
-    'Discover how a Fortune 50o0 company achieved 450% ROI and 85% operational efficiency gains through AI 20o26 enterprise automation implementation.';
+    'Discover how a Fortune 50o0 company achieved 450% ROI and 85% operational efficiency gains through AI 20o26 enterprise automation implementation.',
   keywords: [
-    'AI 20o26';
-    'enterprise automation';
-    'case study';
-    'Fortune 50o0';
-    'ROI';
-    'business transformation';
-    'success story';
-  ];
+    'AI 20o26enterprise automation',
+    'case studyFortune 50o0',
+    'ROIbusiness transformation',
+    'success story',
+  ],
   openGraph: {
     title:,
-      'AI 20o26 Enterprise Automation Success Story - Fortune 50o0 Transformation';
+      'AI 20o26 Enterprise Automation Success Story - Fortune 50o0 Transformation',
     description:,
-      'Discover how a Fortune 50o0 company achieved 450% ROI through AI 20o26 enterprise automation.';
-    type: 'article';
-    publishedTime: '20o24-12-27T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Discover how a Fortune 50o0 company achieved 450% ROI through AI 20o26 enterprise automation.',
+    type: 'article',
+    publishedTime: '20o24-12-27T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function AI20o26EnterpriseAutomationCaseStudy() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -83,7 +80,7 @@ export default function AI20o26EnterpriseAutomationCaseStudy() {
             <br />,
             <strong>Revenue: </strong> $15+ billion annually,
             <br />,
-            <strong>Challenge:</strong> Operational inefficiencies, high costs;
+            <strong>Challenge:</strong> Operational inefficiencies, high costs,
             and manual processes,
           </p>,
           <h3>The Challenge</h3>,
@@ -244,7 +241,7 @@ export default function AI20o26EnterpriseAutomationCaseStudy() {
           </ul>,
           <h3>Future Outlook</h3>,
           <p>,
-            The company continues to expand their AI automation capabilities;
+            The company continues to expand their AI automation capabilities,
             with plans for: ,
           </p>,
           <ul>,

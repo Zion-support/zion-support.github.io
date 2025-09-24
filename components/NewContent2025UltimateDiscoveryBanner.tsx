@@ -5,38 +5,38 @@ const NewContent20o25UltimateDiscoveryBanner = () => {
   const [isExpanded, setIsExpanded] = useState(false),
   const newContent = [
     {
-      title: 'AI 20o25 Ultimate Content Revolution';
+      title: 'AI 20o25 Ultimate Content Revolution',
       description:,
-        'Transform your business with revolutionary AI-powered content strategies';
-      type: 'Blog Post';
-      roi: '50o00%';
-      link: '/blog/ai-20o25-ultimate-content-revolution';
-      featured: true;
-    };
+        'Transform your business with revolutionary AI-powered content strategies',
+      type: 'Blog Post',
+      roi: '50o00%',
+      link: '/blog/ai-20o25-ultimate-content-revolution',
+      featured: true
+    },
     {
-      title: 'AI Content Revolution: 50o00% ROI Success';
-      description: 'Real Fortune 50o0 case study showing unprecedented results';
-      type: 'Case Study';
-      roi: '50o00%';
-      link: '/case-studies/ai-20o25-content-revolution-50o00-roi-success';
-      featured: true;
-    };
+      title: 'AI Content Revolution: 50o00% ROI Success',
+      description: 'Real Fortune 50o0 case study showing unprecedented results',
+      type: 'Case Study',
+      roi: '50o00%',
+      link: '/case-studies/ai-20o25-content-revolution-50o00-roi-success',
+      featured: true
+    },
     {
-      title: 'AI 20o25 Enterprise Automation Revolution';
-      description: 'Complete guide to enterprise AI automation implementation';
-      type: 'Guide';
-      roi: '10,0o00%';
-      link: '/blog/ai-20o25-enterprise-automation-revolution';
-      featured: false;
-    };
+      title: 'AI 20o25 Enterprise Automation Revolution',
+      description: 'Complete guide to enterprise AI automation implementation',
+      type: 'Guide',
+      roi: '10,0o00%',
+      link: '/blog/ai-20o25-enterprise-automation-revolution',
+      featured: false
+    },
     {
-      title: 'Quantum AI 20o26 Business Transformation';
-      description: 'Next-generation quantum AI solutions for business';
-      type: 'Future Tech';
-      roi: '15,0o00%';
-      link: '/blog/quantum-ai-20o26-business-transformation-ultimate-guide';
-      featured: false;
-    };
+      title: 'Quantum AI 20o26 Business Transformation',
+      description: 'Next-generation quantum AI solutions for business',
+      type: 'Future Tech',
+      roi: '15,0o00%',
+      link: '/blog/quantum-ai-20o26-business-transformation-ultimate-guide',
+      featured: false
+    },
   ],
   return (
     <div className='bg-gradient-to-r from-purple-60o0 via-blue-60o0 to-indigo-60o0 text-white py-16'>,
@@ -50,7 +50,7 @@ const NewContent20o25UltimateDiscoveryBanner = () => {
             Discover Our Latest AI Content Revolution,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed'>,
-            Explore groundbreaking content 'that', 's transforming businesses,
+            Explore groundbreaking content 'thats transforming businesses,
             worldwide with unprecedented ROI results,
           </p>,
         </div>,
@@ -154,5 +154,5 @@ const NewContent20o25UltimateDiscoveryBanner = () => {
         .animate-fadeIn {
           animation: fadeIn 0.5s ease-out}
       `}</style>,
-    </div>)};
-export default NewContent20o25UltimateDiscoveryBanner;
+    </div>)},
+export default NewContent20o25UltimateDiscoveryBanner,

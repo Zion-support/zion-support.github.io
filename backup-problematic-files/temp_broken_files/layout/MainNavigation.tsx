@@ -1,84 +1,84 @@
-import React from 'react';
-import Link from "next/link";
-import { useRouter } from "next/router";
-import { useState } from "react";
-import { cn } from "@/lib/utils";
-import { useAuth } from "@/hooks/useAuth";
-import { useTranslation } from "react-i18next";
-import { useFavorites } from "@/hooks/useFavorites";
-import { useCart } from "@/context/CartContext";
+import React from 'react',
+import Link from "next/link",
+import { useRouter } from "next/router",
+import { useState } from "react",
+import { cn } from "@/lib/utils",
+import { useAuth } from "@/hooks/useAuth",
+import { useTranslation } from "react-i18next",
+import { useFavorites } from "@/hooks/useFavorites",
+import { useCart } from "@/context/CartContext",
 import { Heart, MessageSquare, CreditCard, ShoppingCart, Wallet } from 'lucide-react',
-import { LanguageSelector } from '@/components/header/LanguageSelector';
-import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card';
-import { MiniCartPreview } from '@/components/cart/MiniCartPreview';
-import { LoginModal } from '@/components/auth/LoginModal';
+import { LanguageSelector } from '@/components/header/LanguageSelector',
+import { HoverCard, HoverCardTrigger, HoverCardContent } from '@/components/ui/hover-card',
+import { MiniCartPreview } from '@/components/cart/MiniCartPreview',
+import { LoginModal } from '@/components/auth/LoginModal',
  import {
 import {
 interface MainNavigationProps {
-  isAdmin?:boolean;
-  unreadCount?:number;
-  className?:string;}
+  isAdmin?:boolean,
+  unreadCount?:number,
+  className?:string,}
 ,
 export function MainNavigation({ isAdmin = false, unreadCount = 0, className } MainNavigationProps) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false), // Add state,
-  const { user } = useAuth();
-  const isAuthenticated = !!user;
-  const [loginOpen, setLoginOpen] = useState(false);
-  const { count } = useFavorites();
-  const { items } = useCart();
-  const cartCount = items.length;
+  const { user } = useAuth(),
+  const isAuthenticated = !!user,
+  const [loginOpen, setLoginOpen] = useState(false),
+  const { count } = useFavorites(),
+  const { items } = useCart(),
+  const cartCount = items.length,
   const router = useRouter(), // Changed from useLocation,
-  const { t } = useTranslation();
+  const { t } = useTranslation(),
   const handleCartClick = (e: React.MouseEvent) => {
     if (!isAuthenticated) {
-      e.preventDefault();
-      setLoginOpen(true);
+      e.preventDefault(),
+      setLoginOpen(true),
       return}
-    setIsMobileMenuOpen(false);
-  };
+    setIsMobileMenuOpen(false),
+  },
   const baseLinks = [
     {
-      key:'home';
-      href:'/';
-      matches: (path:string) => path === '/'};
+      key: 'home',
+      href:'/',
+      matches: (path:string) => path === '/'},
     {
-      key:'marketplace';
-      href:'/marketplace';
-      matches: (path:string) => path.startsWith('/marketplace')};
+      key: 'marketplace',
+      href:'/marketplace',
+      matches: (path:string) => path.startsWith('/marketplace')},
     {
-      key:'categories';
-      href:'/categories';
-      matches: (path:string) => path.startsWith('/categories')};
+      key: 'categories',
+      href:'/categories',
+      matches: (path:string) => path.startsWith('/categories')},
     {
-      key:'talent';
-      href:'/talent';
-      matches: (path:string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')};
+      key: 'talent',
+      href:'/talent',
+      matches: (path:string) => path.startsWith('/talent') && !path.includes('/talent-dashboard')},
     {
-      key:'equipment';
-      href:'/equipment';
-      matches: (path:string) => path.startsWith('/equipment')};
+      key: 'equipment',
+      href:'/equipment',
+      matches: (path:string) => path.startsWith('/equipment')},
     {
-      key:'community';
-      href:'/community';
+      key: 'community',
+      href:'/community',
       matches: (path:string) => path.startsWith('/community') || path.startsWith('/forum')}
-  ];
-  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) }));
+  ],
+  const links = baseLinks.map(link => ({ ...link, name: t(`nav.${link.key}`) })),
   // Add authenticated-only links,
   if (isAuthenticated) {
     links.push({
-      key:'dashboard';
-      name:t('nav.dashboard');
-      href:'/dashboard';
-      matches: (path:string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'});
+      key: 'dashboard',
+      name:t('nav.dashboard'),
+      href:'/dashboard',
+      matches: (path:string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard'}),
   }
   ,
   // Add admin-only links,
   if (isAdmin) {
     links.push({
-      key:'analytics';
-      name:t('nav.analytics');
-      href:'/analytics';
-      matches: (path:string) => path.startsWith('/analytics')});
+      key: 'analytics',
+      name:t('nav.analytics'),
+      href:'/analytics',
+      matches: (path:string) => path.startsWith('/analytics')}),
   }
   ,
   return (
@@ -98,8 +98,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
         <div
           id="main-navbar-collapse",
           className={cn(
-            "navbar-collapse";
-            { "open":isMobileMenuOpen };
+            "navbar-collapse",
+            { "open":isMobileMenuOpen },
             "w-full md:flex md:w-auto", // Handles visibility and desktop layout,
             !isMobileMenuOpen && "hidden" // Explicitly hide when not open and on mobile)}
         >,
@@ -111,8 +111,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   aria-label={link.name}
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link";
-                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "nav-link",
+                    "inline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     link.matches(router.pathname),
                       ? "bg-zion-purple/20 text-zion-cyan",
                       :"text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
@@ -129,8 +129,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   aria-label="Wishlist",
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link";
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/wishlist",
                       ? "bg-zion-purple/20 text-zion-cyan",
                       :"text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
@@ -151,8 +151,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   aria-label="Wallet",
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link";
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/wallet",
                       ? "bg-zion-purple/20 text-zion-cyan",
                       :"text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
@@ -169,8 +169,8 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                   aria-label="Messages",
                   onClick={() => setIsMobileMenuOpen(false)}
                   className={cn(
-                    "nav-link";
-                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary";
+                    "nav-link",
+                    "relative inline-flex h-9 w-9 items-center justify-center rounded-md transition-colors focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary",
                     router.pathname === "/messages",
                       ? "bg-zion-purple/20 text-zion-cyan",
                       :"text-white hover: bg-zion-purple/10 hover:text-zion-cyan")}
@@ -192,7 +192,7 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
                     aria-label={t('nav.cart')}
                     onClick={handleCartClick}
                     className={cn(
-                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary';
+                      'nav-linkinline-flex h-9 items-center justify-center rounded-md px-4 text-sm font-medium transition-colors relative focus-visible: outline-none focus-visible:ring-2 focus-visible:ring-primary',
                       router.pathname.startsWith('/cart'),
                         ? 'bg-zion-purple/20 text-zion-cyan',
                         :'text-white hover: bg-zion-purple/10 hover:text-zion-cyan')}
@@ -216,22 +216,22 @@ export function MainNavigation({ isAdmin = false, unreadCount = 0, className } M
         </div>,
       </nav>,
       <LoginModal isOpen={loginOpen} onOpenChange={setLoginOpen}  />,
-    </>);}
+    </>),}
   {
   {
   Heart, MessageSquare, CreditCard,   ShoppingCart, Wallet } from "lucide-react",
   {
   {
-  LanguageSelector ','}from '@/components/header/LanguageSelector',
+  LanguageSelector }from '@/components/header/LanguageSelector',
   {
   {',
-  HoverCard,   HoverCardTrigger, HoverCardContent ','}from '@/components/ui/hover-card',
+  HoverCard,   HoverCardTrigger, HoverCardContent }from '@/components/ui/hover-card',
   {
   {',
-  MiniCartPreview ','}from '@/components/cart/MiniCartPreview',
+  MiniCartPreview }from '@/components/cart/MiniCartPreview',
   {
   {',
-  LoginModal ','}from '@/components/auth/LoginModal',
+  LoginModal }from '@/components/auth/LoginModal',
 interface MainNavigationProps {
   isAdmin?: boolean,
 unreadCount?: number,
@@ -252,48 +252,48 @@ const handleCartClick = (e: React.MouseEvent) => {
   if (!isAuthenticated) {
   e.preventDefault (),
 setLoginOpen (true),
-return }setIsMobileMenuOpen (false) };',
-const baseLinks = [ {',',
-  key: 'home',',',
-href: '/',',',
-matches: (path: string) => path === '/' };',
-{',',
-  key: 'marketplace',',',
-href: '/marketplace',',',
-matches: (path: string) => path.startsWith ('/marketplace') };',
-{',',
-  key: 'categories',',',
-href: '/categories',',',
-matches: (path: string) => path.startsWith ('/categories') };',
-{',',
-  key: 'talent',',',
-href: '/talent',',',
-matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') };',
-{',',
-  key: 'equipment',',',
-href: '/equipment',',',
-matches: (path: string) => path.startsWith ('/equipment') };',
-{',',
-  key: 'community',',',
-href: '/community',',',
+return }setIsMobileMenuOpen (false) },',
+const baseLinks = [ {,
+  key: 'home',,
+href: '/',,
+matches: (path: string) => path === '/' },',
+{,
+  key: 'marketplace',,
+href: '/marketplace',,
+matches: (path: string) => path.startsWith ('/marketplace') },',
+{,
+  key: 'categories',,
+href: '/categories',,
+matches: (path: string) => path.startsWith ('/categories') },',
+{,
+  key: 'talent',,
+href: '/talent',,
+matches: (path: string) => path.startsWith ('/talent') && !path.includes ('/talent-dashboard') },',
+{,
+  key: 'equipment',,
+href: '/equipment',,
+matches: (path: string) => path.startsWith ('/equipment') },',
+{,
+  key: 'community',,
+href: '/community',,
 matches: (path: string) => path.startsWith ('/community') || path.startsWith ('/forum') }],
 const links = baseLinks.map (link => ({
   ...link, name: t (`nav.$ {
   link.key }`) }) ),
 //Add authenticated-only links if (isAuthenticated) {',
-  links.push ({',',
-  key: 'dashboard',',',
-name: t ('nav.dashboard'),',',
-href: '/dashboard',',',
+  links.push ({,
+  key: 'dashboard',,
+name: t ('nav.dashboard'),,
+href: '/dashboard',,
 matches: (path: string) => path === '/dashboard' || path === '/client-dashboard' || path === '/talent-dashboard' }) }//Add admin-only links if (isAdmin) {',
-  links.push ({',',
-  key: 'analytics',',',
-name: t ('nav.analytics'),',',
-href: '/analytics',',',
+  links.push ({,
+  key: 'analytics',,
+name: t ('nav.analytics'),,
+href: '/analytics',,
 matches: (path: string) => path.startsWith ('/analytics') ,"}) ,","}return (<> <button > <span className="navbar-toggler-icon" ></span> </button> <nav) }> {"  link.name ,","}</Link> </li>) ) ",","}<Link href="/wishlist" aria-label="Wishlist" onClick={
   () => setIsMobileMenuOpen (false) }{
   count ,"}</span>) ,","}</Link> </li>) ",","}<Link href="/wallet" aria-label="Wallet" onClick={"  () => setIsMobileMenuOpen (false) ,","}) ",","}> <Wallet className="w-4 h-4"  /> </Link> </li>) ",","}<Link href="/messages" aria-label="Messages" onClick={
-  () => setIsMobileMenuOpen (false) ,'}{',',
-  unreadCount > 9 ? '9+' : unreadCount }</span>) ,'}</Link> </li>) ',',"}? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover: bg-zion-purple/10 hover:text-zion-cyan') ,","}> {",","  cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" > cartCount ,","}</span>) ",","}</Link> </HoverCardTrigger> <HoverCardContent> <MiniCartPreview  /> </HoverCardContent> </HoverCard> </li> </ul> <div className="flex items-center gap-2 mt-4 md: mt-0 md:ml-auto" > <LanguageSelector  /> </div> </div> </nav> <LoginModal isOpen={
+  () => setIsMobileMenuOpen (false) ,'}{,
+  unreadCount > 9 ? '9+' : unreadCount }</span>) ,'}</Link> </li>) ,"}? 'bg-zion-purple/20 text-zion-cyan' : 'text-white hover: bg-zion-purple/10 hover:text-zion-cyan') ,","}> {",","  cartCount > 0 && (<span className="absolute -top-1 -right-1 bg-zion-purple text-white text-xs rounded-full h-5 w-5 flex items-center justify-center" > cartCount ,","}</span>) ",","}</Link> </HoverCardTrigger> <HoverCardContent> <MiniCartPreview  /> </HoverCardContent> </HoverCard> </li> </ul> <div className="flex items-center gap-2 mt-4 md: mt-0 md:ml-auto" > <LanguageSelector  /> </div> </div> </nav> <LoginModal isOpen={
   loginOpen }onOpenChange= {
 }}

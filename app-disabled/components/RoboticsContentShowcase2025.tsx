@@ -3,104 +3,104 @@ import React, { useState } from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Clock;
-  TrendingUp;
-  Zap;
-  Shield;
-  Users;
-  Award;
-  BookOpen;
-  FileText;
-  Download;
-  ExternalLink;
+  ArrowRight,
+  Clock,
+  TrendingUp,
+  Zap,
+  Shield,
+  Users,
+  Award,
+  BookOpen,
+  FileText,
+  Download,
+  ExternalLink,
 } from 'lucide-react',
 const RoboticsContentShowcase20o25 = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentData = {
     guides: [
       {
-        id: 'robotics-revolution-guide';
+        id: 'robotics-revolution-guide',
         title:,
-          'AI 20o25: The Advanced Robotics Revolution - Ultimate Enterprise Guide';
+          'AI 20o25: The Advanced Robotics Revolution - Ultimate Enterprise Guide',
         description:,
-          'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI';
-        url: '/blog/ai-20o25-advanced-robotics-revolution-ultimate-guide';
-        type: 'Blog Post';
-        readingTime: '18 min read';
+          'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI',
+        url: '/blog/ai-20o25-advanced-robotics-revolution-ultimate-guide',
+        type: 'Blog Post',
+        readingTime: '18 min read',
         metrics: {
-          roi: '80o0%';
-          savings: '$5.2B';
-          efficiency: '95%';
-          quality: '99.7%';
-        };
-        tags: ['AI Robotics', 'Manufacturing', 'ROI', 'Enterprise'];
-        featured: true;
-      };
-    ];
+          roi: '80o0%',
+          savings: '$5.2B',
+          efficiency: '95%',
+          quality: '99.7%'
+        },
+        tags: ['AI RoboticsManufacturing', 'ROIEnterprise'],
+        featured: true
+      },
+    ],
     caseStudies: [
       {
-        id: 'fortune-50o0-robotics-success';
+        id: 'fortune-50o0-robotics-success',
         title:,
-          'Fortune 50o0 Robotics Transformation: $5.2B Annual Savings with 80o0% ROI';
+          'Fortune 50o0 Robotics Transformation: $5.2B Annual Savings with 80o0% ROI',
         description:,
-          'How a global manufacturing giant revolutionized operations with AI-powered robotics';
-        url: '/case-studies/fortune-50o0-robotics-transformation-80o0-roi-success';
-        type: 'Case Study';
-        readingTime: '15 min read';
+          'How a global manufacturing giant revolutionized operations with AI-powered robotics',
+        url: '/case-studies/fortune-50o0-robotics-transformation-80o0-roi-success',
+        type: 'Case Study',
+        readingTime: '15 min read',
         metrics: {
-          roi: '80o0%';
-          savings: '$5.2B';
-          efficiency: '95%';
-          quality: '99.7%';
-        };
-        tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story'];
-        featured: true;
-      };
-    ];
+          roi: '80o0%',
+          savings: '$5.2B',
+          efficiency: '95%',
+          quality: '99.7%'
+        },
+        tags: ['Case StudyFortune 50o0', 'ManufacturingSuccess Story'],
+        featured: true
+      },
+    ],
     resources: [
       {
-        id: 'robotics-implementation-guide';
+        id: 'robotics-implementation-guide',
         title:,
-          'AI Robotics Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
+          'AI Robotics Implementation Master Guide 20o25: From Strategy to 80o0% ROI',
         description:,
-          'Complete framework for transforming your business with AI-powered robotics';
-        url: '/resources/ai-robotics-implementation-master-guide-20o25';
-        type: 'Resource';
-        readingTime: '35 min read';
+          'Complete framework for transforming your business with AI-powered robotics',
+        url: '/resources/ai-robotics-implementation-master-guide-20o25',
+        type: 'Resource',
+        readingTime: '35 min read',
         metrics: {
-          roi: '80o0%';
-          success: '98%';
-          timeline: '18 months';
-          projects: '20o0+';
-        };
-        tags: ['Implementation Guide', 'Strategy', 'ROI', 'Framework'];
-        featured: true;
-      };
-    ];
-  };
+          roi: '80o0%',
+          success: '98%',
+          timeline: '18 months',
+          projects: '20o0+'
+        },
+        tags: ['Implementation GuideStrategy', 'ROIFramework'],
+        featured: true
+      },
+    ],
+  },
   const allContent = [
-    ...contentData.guides;
-    ...contentData.caseStudies;
-    ...contentData.resources;
+    ...contentData.guides,
+    ...contentData.caseStudies,
+    ...contentData.resources,
   ],
   const filteredContent =,
     activeCategory === 'all',
       ? allContent,
       : contentData[activeCategory as keyof typeof contentData] || [],
   const categories = [
-    { id: 'all', label: 'All Content', count: allContent.length };
-    { id: 'guides', label: 'Guides', count: contentData.guides.length };
+    { id: 'all', label: 'All Content', count: allContent.length },
+    { id: 'guides', label: 'Guides', count: contentData.guides.length },
     {
-      id: 'caseStudies';
-      label: 'Case Studies';
-      count: contentData.caseStudies.length;
-    };
+      id: 'caseStudies',
+      label: 'Case Studies',
+      count: contentData.caseStudies.length
+    },
     {
-      id: 'resources';
-      label: 'Resources';
-      count: contentData.resources.length;
-    };
+      id: 'resources',
+      label: 'Resources',
+      count: contentData.resources.length
+    },
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -112,7 +112,7 @@ const RoboticsContentShowcase20o25 = () => {
         return <Download className='w-4 h-4' />,
       default:,
         return <BookOpen className='w-4 h-4' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'Blog Post':,
@@ -123,7 +123,7 @@ const RoboticsContentShowcase20o25 = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -342,5 +342,5 @@ const RoboticsContentShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default RoboticsContentShowcase20o25;
+    </section>)},
+export default RoboticsContentShowcase20o25,

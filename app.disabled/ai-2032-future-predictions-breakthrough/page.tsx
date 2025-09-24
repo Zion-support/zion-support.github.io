@@ -1,24 +1,21 @@
 import Link from 'next/link',
 export const metadata = {
   title:,
-    'AI 20o32 Future Predictions: The Ultimate Breakthrough Guide | Zion Tech Group';
+    'AI 20o32 Future Predictions: The Ultimate Breakthrough Guide | Zion Tech Group',
   description:,
-    'Discover the revolutionary AI predictions for 20o32. Quantum AI, neural interfaces, and breakthrough technologies that will transform everything. Expert analysis and implementation strategies.';
+    'Discover the revolutionary AI predictions for 20o32. Quantum AI, neural interfaces, and breakthrough technologies that will transform everything. Expert analysis and implementation strategies.',
   keywords: [
-    'AI 20o32';
-    'Future Predictions';
-    'Quantum AI';
-    'Neural Interfaces';
-    'Breakthrough Technology';
-    'AI Revolution';
-  ];
+    'AI 20o32Future Predictions',
+    'Quantum AINeural Interfaces',
+    'Breakthrough TechnologyAI Revolution',
+  ],
   openGraph: {
-    title: 'AI 20o32 Future Predictions: The Ultimate Breakthrough Guide';
+    title: 'AI 20o32 Future Predictions: The Ultimate Breakthrough Guide',
     description:,
-      'Revolutionary AI predictions for 20o32. Quantum AI, neural interfaces, and breakthrough technologies.';
-    type: 'article';
-  };
-};
+      'Revolutionary AI predictions for 20o32. Quantum AI, neural interfaces, and breakthrough technologies.',
+    type: 'article'
+  },
+},
 export default function AI20o32FuturePredictions() {
   return (
     <div className='max-w-4xl mx-auto px-4 py-8'>,

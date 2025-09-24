@@ -7,16 +7,16 @@ const useForm = (initialValues = {}, onSubmit) => {
     e => {
       const { name, value } = e.target,
       setValues(prev => ({
-        ...prev;
-        [name]: value;
+        ...prev,
+        [name]: value,
       })),
       // Clear error when user starts typing,
       if (errors[name]) {
         setErrors(prev => ({
-          ...prev;
-          [name]: '';
+          ...prev,
+          [name]: '',
         }))}
-    };
+    },
     [errors]),
   const handleSubmit = useCallback(
     async e => {
@@ -29,7 +29,7 @@ const useForm = (initialValues = {}, onSubmit) => {
         // eslint-disable-next-line no-undef,
         console.error('Form submission error:', error)} finally {
         setIsSubmitting(false)}
-    };
+    },
     [values, onSubmit]),
   const reset = useCallback(() => {
     setValues(initialValues),
@@ -37,23 +37,23 @@ const useForm = (initialValues = {}, onSubmit) => {
     setIsSubmitting(false)}, [initialValues]),
   const setError = useCallback((name, message) => {
     setErrors(prev => ({
-      ...prev;
-      [name]: message;
+      ...prev,
+      [name]: message,
     }))}, []),
   const setFieldValue = useCallback((name, value) => {
     setValues(prev => ({
-      ...prev;
-      [name]: value;
+      ...prev,
+      [name]: value,
     }))}, []),
   return {
-    values;
-    errors;
-    isSubmitting;
-    handleChange;
-    handleSubmit;
-    reset;
-    setError;
-    setFieldValue;
-  };
-};
-export default useForm;
+    values,
+    errors,
+    isSubmitting,
+    handleChange,
+    handleSubmit,
+    reset,
+    setError,
+    setFieldValue,
+  },
+},
+export default useForm,

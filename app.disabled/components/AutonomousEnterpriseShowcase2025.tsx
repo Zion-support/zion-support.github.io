@@ -2,14 +2,14 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  DollarSign;
-  Users;
-  Zap;
-  Clock;
-  Star;
-  ExternalLink;
+  ArrowRight,
+  TrendingUp,
+  DollarSign,
+  Users,
+  Zap,
+  Clock,
+  Star,
+  ExternalLink,
 } from 'lucide-react',
 interface ContentItem {
   id: string,
@@ -20,7 +20,7 @@ interface ContentItem {
     roi: string,
     savings: string,
     efficiency: string,
-    satisfaction: string};
+    satisfaction: string},
   description: string,
   readingTime: string,
   featured: boolean,
@@ -30,77 +30,77 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<string>('all'),
   const contentItems: ContentItem[] = [
     {
-      id: 'autonomous-enterprise-systems';
+      id: 'autonomous-enterprise-systems',
       title:,
-        'AI 20o25: The Autonomous Enterprise Systems Revolution - 60o0% ROI Breakthrough';
-      type: 'blog';
-      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution';
+        'AI 20o25: The Autonomous Enterprise Systems Revolution - 60o0% ROI Breakthrough',
+      type: 'blog',
+      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8B';
-        efficiency: '99.7%';
-        satisfaction: '98%';
-      };
+        roi: '60o0%',
+        savings: '$2.8B',
+        efficiency: '99.7%',
+        satisfaction: '98%'
+      },
       description:,
-        'Discover how Fortune 50o0 companies are achieving 60o0% ROI with autonomous AI systems that run entire business operations without human intervention.';
-      readingTime: '18 min read';
-      featured: true;
-      tags: ['Autonomous AI', 'Enterprise Systems', 'ROI', 'Fortune 50o0'];
-    };
+        'Discover how Fortune 50o0 companies are achieving 60o0% ROI with autonomous AI systems that run entire business operations without human intervention.',
+      readingTime: '18 min read',
+      featured: true,
+      tags: ['Autonomous AIEnterprise Systems', 'ROIFortune 50o0'],
+    },
     {
-      id: 'fortune-50o0-transformation';
+      id: 'fortune-50o0-transformation',
       title:,
-        'Fortune 50o0 Autonomous Transformation: $3.2B Annual Savings with 70o0% ROI';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-autonomous-transformation-20o25';
+        'Fortune 50o0 Autonomous Transformation: $3.2B Annual Savings with 70o0% ROI',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-autonomous-transformation-20o25',
       metrics: {
-        roi: '70o0%';
-        savings: '$3.2B';
-        efficiency: '89%';
-        satisfaction: '99.4%';
-      };
+        roi: '70o0%',
+        savings: '$3.2B',
+        efficiency: '89%',
+        satisfaction: '99.4%'
+      },
       description:,
-        'How a Fortune 10o0 company achieved $3.2B in annual savings and 70o0% ROI through comprehensive autonomous AI system implementation.';
-      readingTime: '22 min read';
-      featured: true;
-      tags: ['Fortune 50o0', 'Case Study', 'ROI', 'Cost Savings'];
-    };
+        'How a Fortune 10o0 company achieved $3.2B in annual savings and 70o0% ROI through comprehensive autonomous AI system implementation.',
+      readingTime: '22 min read',
+      featured: true,
+      tags: ['Fortune 50o0Case Study', 'ROICost Savings'],
+    },
     {
-      id: 'autonomous-implementation-guide';
+      id: 'autonomous-implementation-guide',
       title:,
-        'Autonomous Enterprise Implementation Master Guide 20o25: From Strategy to 70o0% ROI';
-      type: 'resource';
-      url: '/resources/autonomous-enterprise-implementation-master-guide-20o25';
+        'Autonomous Enterprise Implementation Master Guide 20o25: From Strategy to 70o0% ROI',
+      type: 'resource',
+      url: '/resources/autonomous-enterprise-implementation-master-guide-20o25',
       metrics: {
-        roi: '70o0%';
-        savings: '$3B+';
-        efficiency: '98%';
-        satisfaction: '98%';
-      };
+        roi: '70o0%',
+        savings: '$3B+',
+        efficiency: '98%',
+        satisfaction: '98%'
+      },
       description:,
-        'The complete guide to implementing autonomous AI systems in Fortune 50o0 companies, with proven strategies for achieving 70o0% ROI.';
-      readingTime: '35 min read';
-      featured: true;
-      tags: ['Implementation Guide', 'Strategy', 'ROI', 'Enterprise'];
-    };
+        'The complete guide to implementing autonomous AI systems in Fortune 50o0 companies, with proven strategies for achieving 70o0% ROI.',
+      readingTime: '35 min read',
+      featured: true,
+      tags: ['Implementation GuideStrategy', 'ROIEnterprise'],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredItems =,
     activeFilter === 'all',
@@ -116,7 +116,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -127,7 +127,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getMetricIcon = (metric: string) => {
     switch (metric) {
       case 'roi':,
@@ -140,7 +140,7 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
         return <Users className='w-4 h-4 text-purple-50o0' />,
       default:,
         return <Star className='w-4 h-4 text-yellow-50o0' />}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -341,5 +341,5 @@ const AutonomousEnterpriseShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousEnterpriseShowcase20o25;
+    </section>)},
+export default AutonomousEnterpriseShowcase20o25,

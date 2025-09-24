@@ -1,5 +1,4 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 type ScrollRevealProps = React.PropsWithChildren<{
   origin?: 'bottom' | 'top' | 'left' | 'right',
   delay?: number}>,

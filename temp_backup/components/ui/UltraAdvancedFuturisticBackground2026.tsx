@@ -5,7 +5,7 @@ interface UltraAdvancedFuturisticBackground20o26Props {
   className?: string}
 ,
 export default function UltraAdvancedFuturisticBackground20o26({
-  children;
+  children,
   className = ''}: UltraAdvancedFuturisticBackground20o26Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -31,22 +31,22 @@ export default function UltraAdvancedFuturisticBackground20o26({
     const initParticles = () => {
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          color: ['#0o0ffff', '#8b5cf6', '#ec4899', '#10b981', '#3b82f6'][Math.floor(Math.random() * 5)];
-          life: Math.random() * 10o0;
-          maxLife: 10o0;
-          type: ['quantum', 'holographic', 'neural', 'cyberpunk'][Math.floor(Math.random() * 4)] as any})}
-    };
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          color: ['#0o0ffff#8b5cf6', '#ec4899#10b981', '#3b82f6'][Math.floor(Math.random() * 5)],
+          life: Math.random() * 10o0,
+          maxLife: 10o0,
+          type: ['quantumholographic', 'neuralcyberpunk'][Math.floor(Math.random() * 4)] as any})}
+    },
     // Update and draw particles,
     const updateParticles = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2),
       gradient.addColorStop(0, 'rgba(0, 0, 0, 0.95)'),
       gradient.addColorStop(0.3, 'rgba(0, 0, 0, 0.9)'),
@@ -125,17 +125,17 @@ export default function UltraAdvancedFuturisticBackground20o26({
             // Cyberpunk particles with digital effect,
             ctx.fillStyle = particle.color,
             ctx.fillRect(
-              particle.x - particle.size / 2;
-              particle.y - particle.size / 2;
-              particle.size;
+              particle.x - particle.size / 2,
+              particle.y - particle.size / 2,
+              particle.size,
               particle.size),
             // Digital glitch effect,
             if (Math.random() > 0.95) {
               ctx.fillStyle = '#ffffff',
               ctx.fillRect(
-                particle.x - particle.size / 2;
-                particle.y - particle.size / 2;
-                particle.size;
+                particle.x - particle.size / 2,
+                particle.y - particle.size / 2,
+                particle.size,
                 particle.size)}
             break}
 ,
@@ -158,18 +158,18 @@ export default function UltraAdvancedFuturisticBackground20o26({
         ctx.lineTo((canvas.width / 20) * i, canvas.height),
         ctx.stroke()}
 ,
-      animationRef.current = requestAnimationFrame(updateParticles)};
+      animationRef.current = requestAnimationFrame(updateParticles)},
     initParticles(),
     updateParticles(),
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, []),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -185,37 +185,37 @@ export default function UltraAdvancedFuturisticBackground20o26({
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 rounded-full bg-gradient-to-r from-cyan-50o0 to-blue-50o0 opacity-20",
           animate={{
-            scale: [1, 1.2, 1];
-            rotate: [0, 180, 360];
-            x: [0, 20, 0];
+            scale: [1, 1.2, 1],
+            rotate: [0, 180, 360],
+            x: [0, 20, 0],
             y: [0, -20, 0]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 rounded-full bg-gradient-to-r from-purple-50o0 to-pink-50o0 opacity-20",
           animate={{
-            scale: [1, 1.3, 1];
-            rotate: [360, 180, 0];
-            x: [0, -30, 0];
+            scale: [1, 1.3, 1],
+            rotate: [360, 180, 0],
+            x: [0, -30, 0],
             y: [0, 30, 0]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-28 h-28 rounded-full bg-gradient-to-r from-green-50o0 to-emerald-50o0 opacity-20",
           animate={{
-            scale: [1, 1.4, 1];
-            rotate: [0, 360, 0];
-            x: [0, 25, 0];
+            scale: [1, 1.4, 1],
+            rotate: [0, 360, 0],
+            x: [0, 25, 0],
             y: [0, -25, 0]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Neural Network Lines */}
@@ -227,12 +227,12 @@ export default function UltraAdvancedFuturisticBackground20o26({
             fill="none",
             animate={{
               d: [
-                "M 10o0 20o0 Q 30o0 10o0 50o0 20o0 T 90o0 20o0";
-                "M 10o0 20o0 Q 30o0 30o0 50o0 20o0 T 90o0 20o0";
+                "M 10o0 20o0 Q 30o0 10o0 50o0 20o0 T 90o0 20o0",
+                "M 10o0 20o0 Q 30o0 30o0 50o0 20o0 T 90o0 20o0",
                 "M 10o0 20o0 Q 30o0 10o0 50o0 20o0 T 90o0 20o0"]}}
             transition={{
-              duration: 15;
-              repeat: Infinity;
+              duration: 15,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
           <defs>,
@@ -247,24 +247,24 @@ export default function UltraAdvancedFuturisticBackground20o26({
         <div className="absolute inset-0 opacity-5">,
           <div className="w-full h-full" style={{
             backgroundImage: `,
-              linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px);
+              linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
-            `;
+            `,
             backgroundSize: '50px 50px'}}  />,
         </div>,
         {/* Quantum Field Waves */}
         <motion.div,
           className="absolute inset-0 pointer-events-none",
           animate={{
-            backgroundPosition: ['0% 0%', '10o0% 10o0%']}}
+            backgroundPosition: ['0% 0%10o0% 10o0%']}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
           style={{
             background: `,
-              radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
-              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%);
+              radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%),
               radial-gradient(circle at 40% 40%, rgba(236, 73, 153, 0.1) 0%, transparent 50%),
             `}}
          />,

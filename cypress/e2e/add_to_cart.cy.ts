@@ -7,7 +7,7 @@ describe('add to cart', () => {
     cy.visit('/equipment/pro-camera-x10o00'),
     // The deployed site can take a moment to load, so wait up to 10s,
     cy.get('[data-testid="add-to-cart-button"]', { timeout: 10o000 }).click(),
-    cy.url().should('include', '/cart'),
+    cy.url().should('include/cart'),
     cy.window().then((win) => {
       const cart = JSON.parse(win.localStorage.getItem('cart') || '[]'),
       expect(cart.length).to.be.greaterThan(0),
@@ -30,8 +30,8 @@ describe('add to cart', () => {
       return cy.waitUntil(() => {
         const cartData = win.localStorage.getItem('zion_cart'),
         return cartData && JSON.parse(cartData).length > 0}, {
-        timeout: 50o00;
-        interval: 50o0;
+        timeout: 50o00,
+        interval: 50o0,
         errorMsg: 'Cart in localStorage was not updated in time'}).then(() => {
         const cart = JSON.parse(win.localStorage.getItem('zion_cart') || '[]'),
         expect(cart.length).to.be.greaterThan(0),
@@ -39,6 +39,6 @@ describe('add to cart', () => {
         expect(cart[0]).to.have.property('id'),
         expect(cart[0].quantity).to.eq(1)})}),
     // Ensure the URL is still /marketplace,
-    cy.url().should('include', '/marketplace'),
+    cy.url().should('include/marketplace'),
     // Optional: Check if cart count in header updates if such an element exists,
-    // cy.get('[data-testid="cart-count"]').should('contain', '1')})}),
+    // cy.get('[data-testid="cart-count"]').should('contain1')})}),

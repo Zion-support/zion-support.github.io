@@ -8,12 +8,12 @@ import {
   DollarSign,
   Target,
   BarChart3,
-  Clock;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Zap;
-  Shield;
+  Clock,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Zap,
+  Shield,
   Globe} from 'lucide-react',
 const BusinessTransformationShowcase20o25 = () => {
   const [activeMetricsetActiveMetric] = useState(0),
@@ -22,86 +22,78 @@ const BusinessTransformationShowcase20o25 = () => {
     setIsVisible(true)}[]),
   const metrics = [
     {
-      icon: TrendingUp;
-      title: 'Revenue Growth';
-      value: '+340%';
-      description: 'Average revenue increase';
-      color: 'from-green-50o0 to-emerald-60o0';
+      icon: TrendingUp,
+      title: 'Revenue Growth',
+      value: '+340%',
+      description: 'Average revenue increase',
+      color: 'from-green-50o0 to-emerald-60o0',
       details: [
-        'AI-powered sales optimization';
-        'Predictive customer analytics';
-        'Dynamic pricing strategies';
-        'Market expansion automation']};
+        'AI-powered sales optimizationPredictive customer analytics',
+        'Dynamic pricing strategiesMarket expansion automation']},
     {
-      icon: Users;
-      title: 'Customer Acquisition';
-      value: '+280%';
-      description: 'New customer growth';
-      color: 'from-blue-50o0 to-cyan-60o0';
+      icon: Users,
+      title: 'Customer Acquisition',
+      value: '+280%',
+      description: 'New customer growth',
+      color: 'from-blue-50o0 to-cyan-60o0',
       details: [
-        'Intelligent lead scoring';
-        'Automated marketing campaigns';
-        'Personalized customer journeys';
-        'Social media optimization']};
+        'Intelligent lead scoringAutomated marketing campaigns',
+        'Personalized customer journeysSocial media optimization']},
     {
-      icon: DollarSign;
-      title: 'Cost Reduction';
-      value: '-65%';
-      description: 'Operational cost savings';
-      color: 'from-purple-50o0 to-pink-60o0';
+      icon: DollarSign,
+      title: 'Cost Reduction',
+      value: '-65%',
+      description: 'Operational cost savings',
+      color: 'from-purple-50o0 to-pink-60o0',
       details: [
-        'Process automation';
-        'Resource optimization';
-        'Predictive maintenance';
-        'Energy efficiency improvements']};
+        'Process automationResource optimization',
+        'Predictive maintenanceEnergy efficiency improvements']},
     {
-      icon: Target;
-      title: 'Efficiency Gain';
-      value: '+420%';
-      description: 'Overall productivity boost';
-      color: 'from-orange-50o0 to-red-60o0';
+      icon: Target,
+      title: 'Efficiency Gain',
+      value: '+420%',
+      description: 'Overall productivity boost',
+      color: 'from-orange-50o0 to-red-60o0',
       details: [
-        'Workflow automation';
-        'AI-assisted decision making';
-        'Real-time performance monitoring';
-        'Intelligent task prioritization']}
+        'Workflow automationAI-assisted decision making',
+        'Real-time performance monitoringIntelligent task prioritization']}
   ],
   const successStories = [
     {
-      company: 'TechCorp Solutions';
-      industry: 'Technology';
-      challenge: 'Manual processes causing delays';
-      solution: 'AI-powered automation platform';
-      results: '85% faster operations60% cost reduction';
-      logo: '🏢'};
+      company: 'TechCorp Solutions',
+      industry: 'Technology',
+      challenge: 'Manual processes causing delays',
+      solution: 'AI-powered automation platform',
+      results: '85% faster operations60% cost reduction',
+      logo: '🏢'},
     {
-      company: 'Global Manufacturing Inc';
-      industry: 'Manufacturing';
-      challenge: 'Supply chain inefficiencies';
-      solution: 'Predictive analytics & optimization';
-      results: '40% inventory reduction95% on-time delivery';
-      logo: '🏭'};
+      company: 'Global Manufacturing Inc',
+      industry: 'Manufacturing',
+      challenge: 'Supply chain inefficiencies',
+      solution: 'Predictive analytics & optimization',
+      results: '40% inventory reduction95% on-time delivery',
+      logo: '🏭'},
     {
-      company: 'FinanceFirst Group';
-      industry: 'Financial Services';
-      challenge: 'Manual risk assessment';
-      solution: 'AI-driven risk analysis system';
-      results: '70% faster decisions90% accuracy improvement';
+      company: 'FinanceFirst Group',
+      industry: 'Financial Services',
+      challenge: 'Manual risk assessment',
+      solution: 'AI-driven risk analysis system',
+      results: '70% faster decisions90% accuracy improvement',
       logo: '🏦'}
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: { opacity: 1, y: 0 }
-  };
+  },
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0 overflow-hidden">,
       {/* Background Effects */}
@@ -279,5 +271,5 @@ const BusinessTransformationShowcase20o25 = () => {
           </div>,
         </motion.div>,
       </motion.div>,
-    </div>)};
-export default BusinessTransformationShowcase20o25;
+    </div>)},
+export default BusinessTransformationShowcase20o25,

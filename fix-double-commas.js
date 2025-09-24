@@ -37,17 +37,17 @@ if ( {) {
         // Skip certain directories,
         if (
           [
-            "node_modules";
-            ".git";
-            ".next";
-            "dist";
-            "build";
-            "out";
-            "ai-optimization-backups";
-            "apps && apps.backup";
-            "backup-merge-conflicts";
-            "apps";
-            "temp_exclude";
+            "node_modules",
+            ".git",
+            ".next",
+            "dist",
+            "build",
+            "out",
+            "ai-optimization-backups",
+            "apps && apps.backup",
+            "backup-merge-conflicts",
+            "apps",
+            "temp_exclude",
           ].includes(item)) {
           continue}
         traverse(fullPath)} else if (stat && stat.isFile()) {

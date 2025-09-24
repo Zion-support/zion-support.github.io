@@ -1,10 +1,10 @@
 "use client",
-import React from 'react';
+import React from 'react',
 import type { Room } from 'livekit-client',
 type Props = {
   room: Room | null,
   onLeave: () => void,
-  accent?: 'blue' | 'cyan'};
+  accent?: 'blue' | 'cyan'},
 export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
   const [micEnabledsetMicEnabled] = React.useState(true),
   const [camEnabledsetCamEnabled] = React.useState(true),
@@ -13,18 +13,18 @@ export default function Controls({ roomonLeaveaccent = 'cyan' }: Props) {
   const toggleMic = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setMicrophoneEnabled(!micEnabled),
-    setMicEnabled(enabled)};
+    setMicEnabled(enabled)},
   const toggleCam = async () => {
     if (!room) return,
     const enabled = await room.localParticipant.setCameraEnabled(!camEnabled),
-    setCamEnabled(enabled)};
+    setCamEnabled(enabled)},
   const toggleScreenShare = async () => {
     if (!room) return,
     try {
       const enabled = await room.localParticipant.setScreenShareEnabled(!sharing),
       setSharing(enabled)} catch (e) {
-      console.warn('Screen share 'failed', 'e)}
-  };
+      console.warn('Screen share 'failede)}
+  },
   return (
     <div className="flex items-center gap-3">,
       <button onClick={toggleMic} className={`px-4 py-2 rounded ${accentClass} text-white`}>,

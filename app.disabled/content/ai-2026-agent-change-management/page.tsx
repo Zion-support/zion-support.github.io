@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Change Management | Zion Tech Group';
+  title: 'AI 20o26: Agent Change Management | Zion Tech Group',
   description:,
-    'Eval-gated change management for autonomous agents: approvals, rollouts, and safeguards.';
-};
+    'Eval-gated change management for autonomous agents: approvals, rollouts, and safeguards.',
+},
 export default function AgentChangeManagement20o26Page() {
   return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,

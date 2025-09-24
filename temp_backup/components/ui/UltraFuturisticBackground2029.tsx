@@ -23,7 +23,7 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Initialize particles,
@@ -38,25 +38,25 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
         'rgba(236, 72, 153, 0.8)'  // Pink],
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.5;
-          vy: (Math.random() - 0.5) * 0.5;
-          size: Math.random() * 3 + 1;
-          opacity: Math.random() * 0.5 + 0.3;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.5 + 0.3,
           color: colors[Math.floor(Math.random() * colors.length)]})}
-      particlesRef.current = particles};
+      particlesRef.current = particles},
     initParticles(),
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Draw gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
         Math.max(canvas.width, canvas.height) / 2),
       gradient.addColorStop(0, 'rgba(15, 23, 42, 1)'), // Dark blue,
       gradient.addColorStop(0.3, 'rgba(30, 41, 59, 0.8)'), // Slate,
@@ -109,9 +109,9 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
       // Draw floating geometric shapes,
       const time = Date.now() * 0.0o01,
       const shapes = [
-        { x: canvas.width * 0.2, y: canvas.height * 0.3, rotation: time * 0.5, size: 80 };
-        { x: canvas.width * 0.8, y: canvas.height * 0.7, rotation: -time * 0.3, size: 60 };
-        { x: canvas.width * 0.1, y: canvas.height * 0.8, rotation: time * 0.7, size: 10o0 };
+        { x: canvas.width * 0.2, y: canvas.height * 0.3, rotation: time * 0.5, size: 80 },
+        { x: canvas.width * 0.8, y: canvas.height * 0.7, rotation: -time * 0.3, size: 60 },
+        { x: canvas.width * 0.1, y: canvas.height * 0.8, rotation: time * 0.7, size: 10o0 },
         { x: canvas.width * 0.9, y: canvas.height * 0.2, rotation: -time * 0.4, size: 70 }
       ],
       shapes.forEach((shape, index) => {
@@ -135,13 +135,13 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
         ctx.closePath(),
         ctx.stroke(),
         ctx.restore()}),
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, []),
   return (
     <>,
@@ -163,31 +163,31 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
         <motion.div,
           className="absolute top-1/4 left-1/4 w-32 h-32 bg-gradient-to-br from-purple-50o0/20 to-blue-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1, 1.2, 1];
+            scale: [1, 1.2, 1],
             opacity: [0.3, 0.6, 0.3]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
+            duration: 4,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-3/4 right-1/4 w-40 h-40 bg-gradient-to-br from-blue-50o0/20 to-cyan-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1.2, 1, 1.2];
+            scale: [1.2, 1, 1.2],
             opacity: [0.4, 0.7, 0.4]}}
           transition={{
-            duration: 5;
-            repeat: Infinity;
+            duration: 5,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute bottom-1/4 left-1/3 w-24 h-24 bg-gradient-to-br from-green-50o0/20 to-emerald-50o0/20 rounded-full blur-3xl",
           animate={{
-            scale: [1, 1.3, 1];
+            scale: [1, 1.3, 1],
             opacity: [0.2, 0.5, 0.2]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Neon Lines */}
@@ -197,8 +197,8 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             animate={{
               opacity: [0.3, 1, 0.3]}}
             transition={{
-              duration: 3;
-              repeat: Infinity;
+              duration: 3,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
           <motion.div,
@@ -206,8 +206,8 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             animate={{
               opacity: [0.3, 1, 0.3]}}
             transition={{
-              duration: 4;
-              repeat: Infinity;
+              duration: 4,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
           <motion.div,
@@ -215,8 +215,8 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             animate={{
               opacity: [0.3, 1, 0.3]}}
             transition={{
-              duration: 5;
-              repeat: Infinity;
+              duration: 5,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
           <motion.div,
@@ -224,8 +224,8 @@ export default function UltraFuturisticBackground20o29({ children }: UltraFuturi
             animate={{
               opacity: [0.3, 1, 0.3]}}
             transition={{
-              duration: 6;
-              repeat: Infinity;
+              duration: 6,
+              repeat: Infinity,
               ease: "easeInOut"}}
            />,
         </div>,

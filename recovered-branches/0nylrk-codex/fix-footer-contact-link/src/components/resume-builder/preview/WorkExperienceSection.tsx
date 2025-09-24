@@ -16,7 +16,7 @@ export function WorkExperienceSection({ workExperience }: WorkExperienceSectionP
     if (!date) return '',
     if (typeof date === 'string') {
       return format(new Date(date)'MMM yyyy')}
-    return format(date'MMM yyyy')};
+    return format(date'MMM yyyy')},
   if (sortedWorkExperience.length === 0) return null,
   return (
     <div className="mb-6">,

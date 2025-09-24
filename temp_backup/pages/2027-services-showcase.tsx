@@ -3,9 +3,9 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock;
-  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe;
-  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud;
+  Search, Star, Users, TrendingUp, DollarSign, Clock,
+  CheckCircle, ArrowRight, Rocket, Brain, Atom, Globe,
+  Zap, Sparkles, Shield, Target, Cpu, Database, Cloud,
   Lock, ShieldCheck, Eye, Heart, Share2, Download, Phone, Mail, MapPin} from 'lucide-react',
 import { cuttingEdge20o27Innovations } from '../data/20o27-cutting-edge-innovations',
 import { practicalMicroSaas20o27 } from '../data/20o27-practical-micro-saas',
@@ -18,12 +18,12 @@ export default function ServicesShowcase20o27() {
   const [sortBy, setSortBy] = useState<string>('name'),
   // Sort options,
   const sortOptions = [
-    { value: 'name', label: 'Sort by Name' };
-    { value: 'price', label: 'Sort by Price' };
+    { value: 'name', label: 'Sort by Name' },
+    { value: 'price', label: 'Sort by Price' },
     { value: 'roi', label: 'Sort by ROI' }
   ],
   const allServices = [
-    ...cuttingEdge20o27Innovations;
+    ...cuttingEdge20o27Innovations,
     ...practicalMicroSaas20o27],
   // Filter services based on search and category,
   const filteredServices = allServices.filter(service => {
@@ -49,29 +49,29 @@ export default function ServicesShowcase20o27() {
         return 0}
   }),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length };
-    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length };
-    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s => s.category.includes('AI Civilization')).length };
-    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s => s.category.includes('Quantum Time')).length };
-    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s => s.category.includes('AI Multiverse')).length };
-    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s => s.category.includes('Customer Success')).length };
-    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s => s.category.includes('Content Marketing')).length };
-    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length };
-    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'AI Consciousness Evolution', name: 'AI Consciousness', icon: '🧠', count: allServices.filter(s => s.category.includes('AI Consciousness')).length },
+    { id: 'Quantum Consciousness', name: 'Quantum Consciousness', icon: '⚛️', count: allServices.filter(s => s.category.includes('Quantum Consciousness')).length },
+    { id: 'AI Civilization', name: 'AI Civilization', icon: '🏛️', count: allServices.filter(s => s.category.includes('AI Civilization')).length },
+    { id: 'Quantum Time', name: 'Quantum Time', icon: '⏰', count: allServices.filter(s => s.category.includes('Quantum Time')).length },
+    { id: 'AI Multiverse', name: 'AI Multiverse', icon: '🌌', count: allServices.filter(s => s.category.includes('AI Multiverse')).length },
+    { id: 'Customer Success Automation', name: 'Customer Success', icon: '🎯', count: allServices.filter(s => s.category.includes('Customer Success')).length },
+    { id: 'Content Marketing Automation', name: 'Content Marketing', icon: '📝', count: allServices.filter(s => s.category.includes('Content Marketing')).length },
+    { id: 'Inventory Management', name: 'Inventory Management', icon: '📦', count: allServices.filter(s => s.category.includes('Inventory Management')).length },
+    { id: 'HR Automation', name: 'HR Automation', icon: '👥', count: allServices.filter(s => s.category.includes('HR Automation')).length },
     { id: 'Financial Automation', name: 'Financial Automation', icon: '💰', count: allServices.filter(s => s.category.includes('Financial Automation')).length }
   ],
   const priceRanges = [
-    { id: 'all', name: 'All Prices', count: allServices.length };
-    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 10o00).length };
-    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10o00 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10o000).length };
+    { id: 'all', name: 'All Prices', count: allServices.length },
+    { id: 'low', name: 'Under $1K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) < 10o00).length },
+    { id: 'medium', name: '$1K - $10K/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10o00 && parseInt(s.price.replace(/[^0-9]/g, '')) < 10o000).length },
     { id: 'high', name: '$10K+/month', count: allServices.filter(s => parseInt(s.price.replace(/[^0-9]/g, '')) >= 10o000).length }
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraFuturisticMatrixBackground20o27>,
       <Head>,

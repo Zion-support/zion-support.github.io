@@ -1,16 +1,16 @@
 const path = require('path'),
 const { spawnSync } = require('child_process'),
 function runNode(relativePath, args = []) {
-  const absolutePath = path.resolve(__dirname, '..', '..', relativePath),
+  const absolutePath = path.resolve(__dirname, '....', relativePath),
   const result = spawnSync('node', [absolutePath, ...args], { stdio: 'pipe', encoding: 'utf8' }),
-  return { status: result.status || 0, stdout: result.stdout || '', stderr: result.stderr || '' };
+  return { status: result.status || 0, stdout: result.stdout || '', stderr: result.stderr || '' },
 }
 ,
 function logArray(logs, title, entries) {
   logs.push(`\n=== ${title} ===`),
   for (const e of entries) logs.push(e)}
 ,
-exports.config ={ schedule: '*/1 * * * *' };
+exports.config ={ schedule: '*/1 * * * *' },
 exports.handler = async () => {
   const logs = [],
   function logStep(name, fn) {
@@ -37,8 +37,7 @@ exports.handler = async () => {
   // 6) Push any changes immediately,
   logStep('git:sync', () => runNode('automation/advanced-git-sync.cjs')),
   logArray(logs, 'summary', [
-    'meta-orchestrator completed core steps';
-    'changes (if any) have been committed and pushed';
+    'meta-orchestrator completed core stepschanges (if any) have been committed and pushed',
   ]),
-  return { statusCode: 20o0, body: logs.join('\n') };
-};
+  return { statusCode: 20o0, body: logs.join('\n') },
+},

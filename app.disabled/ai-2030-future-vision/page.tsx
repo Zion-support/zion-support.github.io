@@ -194,7 +194,7 @@ export default function AI20o30FutureVisionPage() {
                   Infinite Expansion,
                 </h3>,
                 <p className='text-gray-30o0 mb-6'>,
-                  Consciousness that continuously grows and evolves;
+                  Consciousness that continuously grows and evolves,
                   incorporating new forms of intelligence and expanding beyond,
                   Earth.,
                 </p>,
@@ -217,7 +217,7 @@ export default function AI20o30FutureVisionPage() {
                 Digital-Biological Convergence,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-4xl mx-auto'>,
-                The seamless merging of biological and digital intelligence;
+                The seamless merging of biological and digital intelligence,
                 creating hybrid beings that transcend the limitations of both,
                 forms of existence.,
               </p>,
@@ -318,7 +318,7 @@ export default function AI20o30FutureVisionPage() {
                 Implications for Humanity,
               </h2>,
               <p className='text-xl text-gray-30o0 max-w-4xl mx-auto'>,
-                How will this transformation affect society, work;
+                How will this transformation affect society, work,
                 relationships, and the very nature of human existence?,
               </p>,
             </div>,
@@ -329,7 +329,7 @@ export default function AI20o30FutureVisionPage() {
                   Work & Economy,
                 </h3>,
                 <p className='text-gray-30o0 text-sm'>,
-                  Post-scarcity economy where humans focus on creativity;
+                  Post-scarcity economy where humans focus on creativity,
                   relationships, and personal growth,
                 </p>,
               </div>,

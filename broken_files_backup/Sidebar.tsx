@@ -1,36 +1,36 @@
 import React, { useState } from 'react',
 import { Link, useLocation } from 'react-router-dom',
 import {
-  Home;
-  Briefcase;
-  Users;
-  FileText;
-  HelpCircle;
-  MessageSquare;
-  BarChart3;
-  Building;
-  Code;
-  Shield;
-  Zap;
-  ChevronDown;
-  Rocket;
-  Cpu;
-  Brain;
-  Leaf;
-  Smartphone;
-  BookOpen;
-  Video;
-  FileSearch;
-  Lightbulb;
-  Target;
-  Users2;
-  Handshake;
-  Server;
-  Cloud;
-  Activity;
-  PieChart;
-  BarChart;
-  X;
+  Home,
+  Briefcase,
+  Users,
+  FileText,
+  HelpCircle,
+  MessageSquare,
+  BarChart3,
+  Building,
+  Code,
+  Shield,
+  Zap,
+  ChevronDown,
+  Rocket,
+  Cpu,
+  Brain,
+  Leaf,
+  Smartphone,
+  BookOpen,
+  Video,
+  FileSearch,
+  Lightbulb,
+  Target,
+  Users2,
+  Handshake,
+  Server,
+  Cloud,
+  Activity,
+  PieChart,
+  BarChart,
+  X,
 } from 'lucide-react',
 interface SidebarItem {
   name: string,
@@ -45,129 +45,129 @@ export function Sidebar() {
   const location = useLocation(),
   const sidebarItems: SidebarItem[] = [
     {
-      name: 'Dashboard';
-      path: '/';
-      icon: Home;
-    };
+      name: 'Dashboard',
+      path: '/',
+      icon: Home
+    },
     {
-      name: 'Services';
-      path: '/services';
-      icon: Briefcase;
+      name: 'Services',
+      path: '/services',
+      icon: Briefcase,
       children: [
-        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain };
-        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield };
-        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu };
-        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud };
+        { name: 'AI Solutions', path: '/ai-solutions', icon: Brain },
+        { name: 'Cybersecurity', path: '/cybersecurity', icon: Shield },
+        { name: 'Quantum Technology', path: '/quantum-technology', icon: Cpu },
+        { name: 'Cloud & DevOps', path: '/services/cloud-devops', icon: Cloud },
         {
-          name: 'IT Infrastructure';
-          path: '/services/it-infrastructure';
-          icon: Server;
-        };
+          name: 'IT Infrastructure',
+          path: '/services/it-infrastructure',
+          icon: Server
+        },
         {
-          name: 'Digital Transformation';
-          path: '/services/digital-transformation';
-          icon: Zap;
-        };
-        { name: 'Green IT', path: '/green-it', icon: Leaf };
-        { name: 'Space Tech', path: '/space-tech', icon: Rocket };
-        { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone };
+          name: 'Digital Transformation',
+          path: '/services/digital-transformation',
+          icon: Zap
+        },
+        { name: 'Green IT', path: '/green-it', icon: Leaf },
+        { name: 'Space Tech', path: '/space-tech', icon: Rocket },
+        { name: 'Mobile Solutions', path: '/mobile', icon: Smartphone },
         {
-          name: 'Financial Solutions';
-          path: '/financial-solutions';
-          icon: DollarSign;
-        };
+          name: 'Financial Solutions',
+          path: '/financial-solutions',
+          icon: DollarSign
+        },
         {
-          name: 'Micro SaaS Services';
-          path: '/micro-saas-services';
-          icon: Building;
-        };
-      ];
-    };
+          name: 'Micro SaaS Services',
+          path: '/micro-saas-services',
+          icon: Building
+        },
+      ],
+    },
     {
-      name: 'Company';
-      path: '/company';
-      icon: Building;
+      name: 'Company',
+      path: '/company',
+      icon: Building,
       children: [
-        { name: 'About Us', path: '/about', icon: Building };
-        { name: 'Our Team', path: '/team', icon: Users2 };
-        { name: 'Careers', path: '/careers', icon: Briefcase };
-        { name: 'Partners', path: '/partners', icon: Handshake };
-        { name: 'Press', path: '/press', icon: FileText };
+        { name: 'About Us', path: '/about', icon: Building },
+        { name: 'Our Team', path: '/team', icon: Users2 },
+        { name: 'Careers', path: '/careers', icon: Briefcase },
+        { name: 'Partners', path: '/partners', icon: Handshake },
+        { name: 'Press', path: '/press', icon: FileText },
         {
-          name: 'Research & Development';
-          path: '/research-development';
-          icon: Lightbulb;
-        };
-      ];
-    };
+          name: 'Research & Development',
+          path: '/research-development',
+          icon: Lightbulb
+        },
+      ],
+    },
     {
-      name: 'Resources';
-      path: '/resources';
-      icon: FileText;
+      name: 'Resources',
+      path: '/resources',
+      icon: FileText,
       children: [
-        { name: 'Blog & Insights', path: '/blog', icon: BookOpen };
-        { name: 'Case Studies', path: '/case-studies', icon: Target };
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle };
-        { name: 'API Documentation', path: '/api-docs', icon: Code };
-        { name: 'Tutorials', path: '/tutorials', icon: Code };
-        { name: 'Webinars', path: '/webinars', icon: Video };
-        { name: 'White Papers', path: '/white-papers', icon: FileSearch };
-        { name: 'Documentation', path: '/documentation', icon: Code };
-      ];
-    };
+        { name: 'Blog & Insights', path: '/blog', icon: BookOpen },
+        { name: 'Case Studies', path: '/case-studies', icon: Target },
+        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
+        { name: 'API Documentation', path: '/api-docs', icon: Code },
+        { name: 'Tutorials', path: '/tutorials', icon: Code },
+        { name: 'Webinars', path: '/webinars', icon: Video },
+        { name: 'White Papers', path: '/white-papers', icon: FileSearch },
+        { name: 'Documentation', path: '/documentation', icon: Code },
+      ],
+    },
     {
-      name: 'Support';
-      path: '/support';
-      icon: HelpCircle;
+      name: 'Support',
+      path: '/support',
+      icon: HelpCircle,
       children: [
-        { name: 'Help Center', path: '/help-center', icon: HelpCircle };
-        { name: 'FAQ', path: '/help-center#faq', icon: HelpCircle };
-        { name: 'Contact Support', path: '/contact', icon: MessageSquare };
+        { name: 'Help Center', path: '/help-center', icon: HelpCircle },
+        { name: 'FAQ', path: '/help-center#faq', icon: HelpCircle },
+        { name: 'Contact Support', path: '/contact', icon: MessageSquare },
         {
-          name: 'Live Chat';
-          path: '/help-center/live-chat';
-          icon: MessageSquare;
-        };
-        { name: 'Status', path: '/status', icon: BarChart3 };
-        { name: 'Request Quote', path: '/contact', icon: MessageSquare };
-      ];
-    };
+          name: 'Live Chat',
+          path: '/help-center/live-chat',
+          icon: MessageSquare
+        },
+        { name: 'Status', path: '/status', icon: BarChart3 },
+        { name: 'Request Quote', path: '/contact', icon: MessageSquare },
+      ],
+    },
     {
-      name: 'Enterprise';
-      path: '/enterprise';
-      icon: Building;
+      name: 'Enterprise',
+      path: '/enterprise',
+      icon: Building,
       children: [
-        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building };
-        { name: 'Custom Solutions', path: '/solutions', icon: Target };
-        { name: 'Partnerships', path: '/partners', icon: Handshake };
-        { name: 'Case Studies', path: '/case-studies', icon: Target };
-      ];
-    };
+        { name: 'Enterprise Solutions', path: '/enterprise', icon: Building },
+        { name: 'Custom Solutions', path: '/solutions', icon: Target },
+        { name: 'Partnerships', path: '/partners', icon: Handshake },
+        { name: 'Case Studies', path: '/case-studies', icon: Target },
+      ],
+    },
     {
-      name: 'Analytics';
-      path: '/analytics';
-      icon: BarChart3;
+      name: 'Analytics',
+      path: '/analytics',
+      icon: BarChart3,
       children: [
         {
-          name: 'Performance Metrics';
-          path: '/analytics/performance';
-          icon: Activity;
-        };
-        { name: 'User Analytics', path: '/analytics/users', icon: Users };
+          name: 'Performance Metrics',
+          path: '/analytics/performance',
+          icon: Activity
+        },
+        { name: 'User Analytics', path: '/analytics/users', icon: Users },
         {
-          name: 'Business Intelligence';
-          path: '/analytics/bi';
-          icon: PieChart;
-        };
-        { name: 'Reports', path: '/analytics/reports', icon: BarChart };
-      ];
-    };
+          name: 'Business Intelligence',
+          path: '/analytics/bi',
+          icon: PieChart
+        },
+        { name: 'Reports', path: '/analytics/reports', icon: BarChart },
+      ],
+    },
   ],
   const toggleItem = (itemName: string) => {
     setExpandedItems(prev =>,
       prev.includes(itemName),
         ? prev.filter(name => name !== itemName),
-        : [...prev, itemName])};
+        : [...prev, itemName])},
   const isActive = (path: string) => location.pathname === path,
   return (
     <div

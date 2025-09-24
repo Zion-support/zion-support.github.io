@@ -16,13 +16,13 @@ function loadConfiguration() {
       const configData = fs.readFileSync(configPath, 'utf8'),
       return JSON.parse(configData)} catch (error) {
       console.warn(
-        '⚠️ Failed to load automation-config.json, using defaults:';
+        '⚠️ Failed to load automation-config.json, using defaults: ',
         error.message)}
   }
 ,
   // Load infinite improvement configuration,
   const infiniteConfigPath = path.join(__dirname, 'infinite-improvement-config.json'),
-  let infiniteConfig ={};
+  let infiniteConfig ={},
   if (fs.existsSync(infiniteConfigPath)) {
     try {
       const infiniteConfigData = fs.readFileSync(infiniteConfigPath, 'utf8'),
@@ -33,44 +33,44 @@ function loadConfiguration() {
   // Default configuration,
   return {
     autonomous: {
-      enabled: true;
-      selfHealing: true;
-      learning: true;
-      adaptiveScheduling: true};
+      enabled: true,
+      selfHealing: true,
+      learning: true,
+      adaptiveScheduling: true},
     monitoring: {
-      enabled: true;
-      interval: 60o000;
-      healthCheckInterval: 30o0000};
+      enabled: true,
+      interval: 60o000,
+      healthCheckInterval: 30o0000},
     reporting: {
-      enabled: true;
-      daily: true;
-      weekly: true;
-      monthly: false};
+      enabled: true,
+      daily: true,
+      weekly: true,
+      monthly: false},
     dashboard: {
-      enabled: true;
-      port: process.env.DASHBOARD_PORT || 30o01};
+      enabled: true,
+      port: process.env.DASHBOARD_PORT || 30o01},
     tasks: {
       dependencyUpdater: {
-        enabled: true;
-        interval: 24 * 60 * 60 * 10o00};
+        enabled: true,
+        interval: 24 * 60 * 60 * 10o00},
       securityScanner: {
-        enabled: true;
-        interval: 6 * 60 * 60 * 10o00};
+        enabled: true,
+        interval: 6 * 60 * 60 * 10o00},
       codeQualityEnforcer: {
-        enabled: true;
-        interval: 2 * 60 * 60 * 10o00};
+        enabled: true,
+        interval: 2 * 60 * 60 * 10o00},
       staleCleaner: {
-        enabled: true;
-        interval: 12 * 60 * 60 * 10o00}};
+        enabled: true,
+        interval: 12 * 60 * 60 * 10o00}},
     notifications: {
       slack: {
-        enabled: !!process.env.SLACK_WEBHOOK_URL;
-        webhookUrl: process.env.SLACK_WEBHOOK_URL;
-        channel: process.env.SLACK_CHANNEL || '#automation'};
+        enabled: !!process.env.SLACK_WEBHOOK_URL,
+        webhookUrl: process.env.SLACK_WEBHOOK_URL,
+        channel: process.env.SLACK_CHANNEL || '#automation'},
       email: {
-        enabled: false}};
+        enabled: false}},
     // Merge infinite improvement configuration,
-    ...infiniteConfig};
+    ...infiniteConfig},
 }
 ,
 // Initialize the automation system,
@@ -93,10 +93,10 @@ async function main() {
       // // console.log('🔄 Initializing Infinite Improvement Loop...'),
       try {
         improvementLauncher = new InfiniteImprovementLauncher({
-          enableInfiniteLoop: true;
+          enableInfiniteLoop: true,
           enableOrchestrator: false, // We already have the orchestrator,
-          enableIntegration: true;
-          dashboardPort: config.infiniteImprovement.dashboardPort || 30o02;
+          enableIntegration: true,
+          dashboardPort: config.infiniteImprovement.dashboardPort || 30o02,
           logLevel: config.infiniteImprovement.logLevel || 'info'}),
         await improvementLauncher.initialize(),
         // // console.log('✅ Infinite Improvement Loop initialized')} catch (error) {
@@ -141,10 +141,10 @@ async function main() {
 function parseArguments() {
   const args = process.argv.slice(2),
   const parsed ={
-    help: false;
-    watch: false;
-    daemon: false;
-    config: null};
+    help: false,
+    watch: false,
+    daemon: false,
+    config: null},
   for (let i = 0, i < args.length, i++) {
     const arg = args[i],
     switch (arg) {
@@ -199,4 +199,4 @@ if (require.main === module) {
     console.error('❌ Fatal error:', error),
     process.exit(1)})}
 ,
-module.exports ={ main, loadConfiguration };
+module.exports ={ main, loadConfiguration },

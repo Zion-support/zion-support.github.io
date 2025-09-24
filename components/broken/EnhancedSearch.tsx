@@ -13,7 +13,7 @@ interface SearchResult {
   features?: string[],
   pricing?: {
     starter?: string,
-    enterprise?: string};
+    enterprise?: string},
 }
 ,
 interface SearchProps {
@@ -24,10 +24,10 @@ interface SearchProps {
   showFilters?: boolean}
 ,
 const EnhancedSearch: React.FC<SearchProps> = ({
-  onSearch;
-  onResultSelect;
-  placeholder = "Search revolutionary services...";
-  className = "";
+  onSearch,
+  onResultSelect,
+  placeholder = "Search revolutionary services...",
+  className = "",
   showFilters = true}) => {
   const [querysetQuery] = useState(''),
   const [isSearchingsetIsSearching] = useState(false),
@@ -36,53 +36,50 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const [selectedFiltersetSelectedFilters] = useState<string[]>([]),
   const [searchHistorysetSearchHistory] = useState<string[]>([]),
   const [popularSearches] = useState([
-    'AI Consciousness';
-    'Quantum Computing';
-    'Cybersecurity';
-    'Business Intelligence';
-    'Space Technology';
-    'Autonomous Systems']),
+    'AI ConsciousnessQuantum Computing',
+    'CybersecurityBusiness Intelligence',
+    'Space TechnologyAutonomous Systems']),
   // Mock search results - in real appthis would come from API,
   const mockSearchResults: SearchResult[] = [
     {
-      id: '1';
-      name: 'AI Consciousness Evolution Platform 2045';
-      description: 'Next-generation AI consciousness with emotional intelligence and self-awareness capabilities.';
-      category: 'AI & Machine Learning';
-      type: 'Platform';
-      slug: '/ai-consciousness-evolution-platform-2045';
-      relevance: 95;
-      features: ['Emotional 'Intelligence', 'Self-'Awareness', 'Consciousness Evolution'];
-      pricing: { starter: '$999/'month', 'enterprise: 'Contact Sales' }
-    };
+      id: '1',
+      name: 'AI Consciousness Evolution Platform 2045',
+      description: 'Next-generation AI consciousness with emotional intelligence and self-awareness capabilities.',
+      category: 'AI & Machine Learning',
+      type: 'Platform',
+      slug: '/ai-consciousness-evolution-platform-2045',
+      relevance: 95,
+      features: ['Emotional 'IntelligenceSelf-'Awareness', 'Consciousness Evolution'],
+      pricing: { starter: '$999/'monthenterprise: 'Contact Sales' }
+    },
     {
-      id: '2';
-      name: 'Quantum AI Hybrid Computing';
-      description: 'Quantum-powered AI with consciousness integration and quantum supremacy.';
-      category: 'Quantum Computing';
-      type: 'Platform';
-      slug: '/quantum-ai-hybrid-computing';
-      relevance: 92;
-      features: ['Quantum 'Supremacy', 'AI 'Integration', 'Hybrid Computing'];
-      pricing: { starter: '$1,499/'month', 'enterprise: 'Contact Sales' }
-    };
+      id: '2',
+      name: 'Quantum AI Hybrid Computing',
+      description: 'Quantum-powered AI with consciousness integration and quantum supremacy.',
+      category: 'Quantum Computing',
+      type: 'Platform',
+      slug: '/quantum-ai-hybrid-computing',
+      relevance: 92,
+      features: ['Quantum 'SupremacyAI 'Integration', 'Hybrid Computing'],
+      pricing: { starter: '$1,499/'monthenterprise: 'Contact Sales' }
+    },
     {
-      id: '3';
-      name: 'Quantum Cybersecurity Intelligence';
-      description: 'Quantum-resistant security with AI consciousness and threat prediction.';
-      category: 'Cybersecurity';
-      type: 'Platform';
-      slug: '/quantum-cybersecurity-intelligence';
-      relevance: 88;
-      features: ['Quantum 'Resistance', 'Threat 'Prediction', 'AI Security'];
-      pricing: { starter: '$799/'month', 'enterprise: 'Contact Sales' }
+      id: '3',
+      name: 'Quantum Cybersecurity Intelligence',
+      description: 'Quantum-resistant security with AI consciousness and threat prediction.',
+      category: 'Cybersecurity',
+      type: 'Platform',
+      slug: '/quantum-cybersecurity-intelligence',
+      relevance: 88,
+      features: ['Quantum 'ResistanceThreat 'Prediction', 'AI Security'],
+      pricing: { starter: '$799/'monthenterprise: 'Contact Sales' }
     }
   ],
   const categories = [
-    { id: ''ai', 'name: 'AI & 'ML', 'icon: Braincolor: 'from-purple-500 to-pink-500' };
-    { id: ''quantum', 'name: ''Quantum', 'icon: Atomcolor: 'from-blue-500 to-cyan-500' };
-    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-500 to-orange-500' };
-    { id: ''business', 'name: ''Business', 'icon: Rocketcolor: 'from-emerald-500 to-teal-500' }
+    { id: ''ainame: 'AI & 'MLicon: Braincolor: 'from-purple-500 to-pink-500' },
+    { id: ''quantumname: ''Quantumicon: Atomcolor: 'from-blue-500 to-cyan-500' },
+    { id: ''securityname: ''Securityicon: Shieldcolor: 'from-red-500 to-orange-500' },
+    { id: ''businessname: ''Businessicon: Rocketcolor: 'from-emerald-500 to-teal-500' }
   ],
   // Debounced search function,
   const debouncedSearch = useCallback(
@@ -109,8 +106,8 @@ const EnhancedSearch: React.FC<SearchProps> = ({
           const sortedResults = filteredResults.sort((ab) => b.relevance - a.relevance),
           setResults(sortedResults),
           setShowResults(true),
-          setIsSearching(false)}300)}300);
-      [selectedFilters]);
+          setIsSearching(false)}300)}300),
+      [selectedFilters]),
     [selectedFilters]),
   useEffect(() => {
     debouncedSearch(query)}[querydebouncedSearch]),
@@ -127,7 +124,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     const handleClickOutside = (event: MouseEvent) => {
       if (searchRef.current && !searchRef.current.contains(event.target as Node)) {
         setIsOpen(false)}
-    };
+    },
   // Handle search submission,
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault(),
@@ -144,7 +141,7 @@ const EnhancedSearch: React.FC<SearchProps> = ({
   const addToSearchHistory = (searchTerm: string) => {
     const newHistory = [searchTerm...searchHistory.filter(item => item !== searchTerm)].slice(0, 5),
     setSearchHistory(newHistory),
-    localStorage.setItem('zion-search-'history', 'JSON.stringify(newHistory))};
+    localStorage.setItem('zion-search-'historyJSON.stringify(newHistory))},
   // Load search history from localStorage,
   useEffect(() => {
     const savedHistory = localStorage.getItem('zion-search-history'),
@@ -159,17 +156,17 @@ const EnhancedSearch: React.FC<SearchProps> = ({
     setSelectedFilters(prev =>,
       prev.includes(filterId),
         ? prev.filter(id => id !== filterId),
-        : [...prevfilterId])};
+        : [...prevfilterId])},
   // Handle result selection,
   const handleResultSelect = (result: SearchResult) => {
     onResultSelect(result),
     setShowResults(false),
-    setQuery(', ')};
+    setQuery()},
   // Clear search,
   const clearSearch = () => {
     setQuery(', '),
     setShowResults(false),
-    setResults([])};
+    setResults([])},
   return (
     <div className={`relative ${className}`}>,
       {/* Search Form */}
@@ -363,15 +360,15 @@ const EnhancedSearch: React.FC<SearchProps> = ({
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
+    </div>)},
 // Debounce utility function,
 function debounce<T extends (...args: any[]) => any>(
-  func: T;
+  func: T,
   wait: number): (...args: Parameters<T>) => void {
   let timeout: NodeJS.Timeout,
   return (...args: Parameters<T>) => {
     clearTimeout(timeout),
-    timeout = setTimeout(() => func(...args)wait)};
+    timeout = setTimeout(() => func(...args)wait)},
 }
 ,
 export default EnhancedSearch}

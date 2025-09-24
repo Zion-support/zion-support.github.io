@@ -1,4 +1,4 @@
-export default function MicroSaasServicesPage() {;
+export default function MicroSaasServicesPage() {,
   return (
     <main className='min-h-screen py-20 px-4'>
       <div className='max-w-5xl mx-auto'>
@@ -6,4 +6,4 @@ export default function MicroSaasServicesPage() {;
         <p className='text-zinc-500'>Details coming soon.</p>
       </div>
     </main>)}
-;
+,

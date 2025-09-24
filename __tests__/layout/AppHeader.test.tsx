@@ -1,4 +1,5 @@
-import React from react',import { render, screen, fireEvent, waitFor as _waitFor } from @testing-library/react',import { AppHeader } from @/layout/AppHeader', // Adjust path as necessary'import { AuthProviderValue } from @/context/auth/AuthContext', // Adjust path'import { useAuth } from @/hooks/useAuth', // Adjust path'import { useMessaging } from @/context/MessagingContext', // Adjust path'import { useRouter } from next/router', // Mock this,
+import React from react',
+import { render, screen, fireEvent, waitFor as _waitFor } from @testing-library/react',import { AppHeader } from @/layout/AppHeader', // Adjust path as necessary'import { AuthProviderValue } from @/context/auth/AuthContext', // Adjust path'import { useAuth } from @/hooks/useAuth', // Adjust path'import { useMessaging } from @/context/MessagingContext', // Adjust path'import { useRouter } from next/router', // Mock this,
 // Mock next/router,
 jest.mock('next/router', () => ({'  useRouter: jest.fn()})),
 // Mock useAuth hook,
@@ -9,13 +10,13 @@ jest.mock('@/context/MessagingContext', () => ({'  useMessaging: jest.fn()})),
 jest.mock('react-i18next', () => ({'  useTranslation: () => ({
     t: (key: string) => key, // Simple mock for t function,
     i18n: {
-      changeLanguage: jest.fn();
+      changeLanguage: jest.fn(),
       language: en'}
   })})),
 // Mock lucide-react icons,
 jest.mock('lucide-react', () => {'  // Import React inside the factory to avoid "Cannot access React' before initialization" caused by jest hoisting."  // eslint-disable-next-line @typescript-eslint/no-require-imports""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
   const React = require('react'),  return {
-    Menu: () => React.createElement('div', { data-testid': menu-icon' }),    X: () => React.createElement('div', { data-testid': x-icon' })};
+    Menu: () => React.createElement('div', { data-testid': menu-icon' }),    X: () => React.createElement('div', { data-testid': x-icon' })},
 }),
 describe('AppHeader', () => {'  const mockPush = jest.fn(),
   const mockUseRouter = useRouter as jest.Mock,
@@ -25,13 +26,13 @@ describe('AppHeader', () => {'  const mockPush = jest.fn(),
     // Reset mocks before each test,
     mockPush.mockClear(),
     mockUseRouter.mockReturnValue({
-      push: mockPush;
-      pathname: /',      query: {};
+      push: mockPush,
+      pathname: /',      query: {},
       asPath: /'}),
     mockUseAuth.mockReturnValue({
       user: null, // Simulate logged-out user to show Login link,
-      loading: false;
-      isWhitelabel: false;
+      loading: false,
+      isWhitelabel: false,
       // Add other properties expected by useAuth if any} as AuthProviderValue), // Cast to AuthProviderValue,
     mockUseMessaging.mockReturnValue({
       unreadCount: 0, // Default unread count})}),
@@ -44,7 +45,7 @@ describe('AppHeader', () => {'  const mockPush = jest.fn(),
     expect(mockPush).toHaveBeenCalledTimes(1),
     expect(mockPush).toHaveBeenCalledWith('/login')}),
   it('should not render the Login link when user is authenticated', () => {'    mockUseAuth.mockReturnValue({
-      user: { id: 1', name: Test User' }, // Simulate logged-in user'      loading: false;
+      user: { id: 1', name: Test User' }, // Simulate logged-in user'      loading: false,
       isWhitelabel: false} as AuthProviderValue),
     render(<AppHeader  />),
     expect(screen.queryByTestId('login-link')).not.toBeInTheDocument()})}),

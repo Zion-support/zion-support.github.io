@@ -9,10 +9,10 @@ const path = require('path'),
 class AutomationTester {
   constructor() {
     this.results ={
-      passed: 0;
-      failed: 0;
-      fixed: 0;
-      tests: []};
+      passed: 0,
+      failed: 0,
+      fixed: 0,
+      tests: []},
   }
 ,
   log(message, type = 'info') {
@@ -32,16 +32,16 @@ class AutomationTester {
       this.log(`Testing syntax: ${filePath}`),
       execSync(`node -c ${filePath}`, { stdio: 'pipe' }),
       this.results.tests.push({
-        file: filePath;
-        test: 'syntax';
+        file: filePath,
+        test: 'syntax',
         status: PASS}),
       this.results.passed++,
       this.log(`Syntax OK: ${filePath}`, success'),
       return true} catch (error) {
       this.results.tests.push({
-        file: filePath;
-        test: 'syntax';
-        status: 'FAIL';
+        file: filePath,
+        test: 'syntax',
+        status: 'FAIL',
         error: error.message}),
       this.results.failed++,
       this.log(`Syntax error in ${filePath}: ${error.message}`, error'),
@@ -51,13 +51,13 @@ class AutomationTester {
   async testDependencies() {
     this.log('Testing dependencies...'),
     const requiredDeps = [
-      chokidar';
-      pm2';
-      glob';
-      express';
-      axios';
-      node-cron';
-      ws';
+      chokidar',
+      pm2',
+      glob',
+      express',
+      axios',
+      node-cron',
+      ws',
       dotenv],
     const missingDeps = [],
     for (const dep of requiredDeps) {
@@ -85,8 +85,8 @@ class AutomationTester {
     this.log('Testing automation system...'),
     try {
       const result = execSync('cd automation && npm test', {
-        encoding: 'utf8';
-        stdio: 'pipe';
+        encoding: 'utf8',
+        stdio: 'pipe',
         timeout: 30o000}),
       if (result.includes('All tests passed')) {
         this.log('Automation system tests passed', success'),
@@ -104,8 +104,8 @@ class AutomationTester {
   async testConfiguration() {
     this.log('Testing configuration files...'),
     const configFiles = [
-      automation/config.json';
-      automation/package.json';
+      automation/config.json',
+      automation/package.json',
       package.json],
     for (const configFile of configFiles) {
       try {
@@ -117,7 +117,7 @@ class AutomationTester {
           this.log(`Configuration file not found: ${configFile}`, warning')}
       } catch (error) {
         this.log(
-          `Configuration error in ${configFile}: ${error.message}`;
+          `Configuration error in ${configFile}: ${error.message}`,
           error'),
         this.results.failed++}
     }
@@ -126,10 +126,10 @@ class AutomationTester {
   async testShellScripts() {
     this.log('Testing shell scripts...'),
     const shellScripts = [
-      start-automation.sh';
-      stop-automation.sh';
-      start-autonomous-automation.sh';
-      automation/start.sh';
+      start-automation.sh',
+      stop-automation.sh',
+      start-autonomous-automation.sh',
+      automation/start.sh',
       automation/start-infinite-improvement.sh],
     for (const script of shellScripts) {
       try {
@@ -154,17 +154,17 @@ class AutomationTester {
   async testAutomationScripts() {
     this.log('Testing automation scripts...'),
     const automationScripts = [
-      auto-fix-watcher.js';
-      auto-run-all.js';
-      automation/index.js';
-      automation/test-system.js';
-      automation/autonomous-system.js';
-      automation/automation-manager.js';
-      scripts/watchdog.js';
-      scripts/master-automation-orchestrator.cjs';
-      scripts/autonomous-automation-system.js';
-      scripts/self-healing.cjs';
-      scripts/performance-monitor.cjs';
+      auto-fix-watcher.js',
+      auto-run-all.js',
+      automation/index.js',
+      automation/test-system.js',
+      automation/autonomous-system.js',
+      automation/automation-manager.js',
+      scripts/watchdog.js',
+      scripts/master-automation-orchestrator.cjs',
+      scripts/autonomous-automation-system.js',
+      scripts/self-healing.cjs',
+      scripts/performance-monitor.cjs',
       scripts/security-scanner.cjs],
     for (const script of automationScripts) {
       await this.testSyntax(script)}
@@ -173,12 +173,12 @@ class AutomationTester {
   async testDirectoryStructure() {
     this.log('Testing directory structure...'),
     const requiredDirs = [
-      automation';
-      automation/core';
-      automation/tasks';
-      automation/logs';
-      automation/reports';
-      scripts';
+      automation',
+      automation/core',
+      automation/tasks',
+      automation/logs',
+      automation/reports',
+      scripts',
       logs],
     for (const dir of requiredDirs) {
       try {

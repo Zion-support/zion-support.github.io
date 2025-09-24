@@ -12,7 +12,7 @@ type Props = {
   serverUrl: string,
   token: string,
   startMode: StartMode,
-  onLeave?: (durationSec: number) => void};
+  onLeave?: (durationSec: number) => void},
 export default function CallRoom({ projectIduserIdisplayNameroomNameserverUrltokenstartModeonLeave }: Props) {
   const [roomsetRoom] = useState<Room | null>(null),
   const [participantsetParticipants] = useState<Array<RemoteParticipant | LocalParticipant>>([]),
@@ -44,19 +44,19 @@ export default function CallRoom({ projectIduserIdisplayNameroomNameserverUrltok
     const r = current || room,
     if (!r) return,
     const list: Array<RemoteParticipant | LocalParticipant> = [r.localParticipant...Array.from(r.participants.values())],
-    setParticipants(list)};
+    setParticipants(list)},
   useEffect(() => {
     connect(),
     return () => {
       if (room) {
         room.disconnect()}
-    };
+    },
   }[connect]),
   const handleLeave = () => {
     if (room) {
       room.disconnect()}
     const durationSec = connectedAt ? Math.round((Date.now() - connectedAt) / 1000) : 0,
-    onLeave?.(durationSec)};
+    onLeave?.(durationSec)},
   const gridCols = useMemo(() => {
     const count = participants.length || 1,
     if (count <= 1) return 'grid-cols-1',

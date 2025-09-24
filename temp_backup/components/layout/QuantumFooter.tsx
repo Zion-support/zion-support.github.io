@@ -1,60 +1,60 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Mail, Phone, MapPin, Globe, Twitter, Linkedin;
-  Github, Facebook, Instagram, Youtube, Rocket;
+  Mail, Phone, MapPin, Globe, Twitter, Linkedin,
+  Github, Facebook, Instagram, Youtube, Rocket,
   Shield, Brain, Cpu, Database, Sparkles} from 'lucide-react',
 const QuantumFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const footerSections = [
     {
-      title: 'Revolutionary Services';
+      title: 'Revolutionary Services',
       links: [
-        { name: 'AI & Machine Learning', href: '/services#ai' };
-        { name: 'Quantum Computing', href: '/services#quantum' };
-        { name: 'Space Technology', href: '/services#space' };
-        { name: 'Cybersecurity', href: '/services#security' };
-        { name: 'Biomedical AI', href: '/services#biomedical' };
+        { name: 'AI & Machine Learning', href: '/services#ai' },
+        { name: 'Quantum Computing', href: '/services#quantum' },
+        { name: 'Space Technology', href: '/services#space' },
+        { name: 'Cybersecurity', href: '/services#security' },
+        { name: 'Biomedical AI', href: '/services#biomedical' },
         { name: 'Metaverse Development', href: '/services#metaverse' }
-      ]};
+      ]},
     {
-      title: 'Micro SAAS Solutions';
+      title: 'Micro SAAS Solutions',
       links: [
-        { name: '150+ Services', href: '/micro-saas' };
-        { name: 'AI Content Generation', href: '/micro-saas#ai-content' };
-        { name: 'Customer Service AI', href: '/micro-saas#customer-service' };
-        { name: 'Sales Automation', href: '/micro-saas#sales' };
-        { name: 'Data Analytics', href: '/micro-saas#analytics' };
+        { name: '150+ Services', href: '/micro-saas' },
+        { name: 'AI Content Generation', href: '/micro-saas#ai-content' },
+        { name: 'Customer Service AI', href: '/micro-saas#customer-service' },
+        { name: 'Sales Automation', href: '/micro-saas#sales' },
+        { name: 'Data Analytics', href: '/micro-saas#analytics' },
         { name: 'Legal Contract AI', href: '/micro-saas#legal' }
-      ]};
+      ]},
     {
-      title: 'Industries';
+      title: 'Industries',
       links: [
-        { name: 'Healthcare', href: '/solutions#healthcare' };
-        { name: 'Finance', href: '/solutions#finance' };
-        { name: 'Manufacturing', href: '/solutions#manufacturing' };
-        { name: 'Education', href: '/solutions#education' };
-        { name: 'Government', href: '/solutions#government' };
+        { name: 'Healthcare', href: '/solutions#healthcare' },
+        { name: 'Finance', href: '/solutions#finance' },
+        { name: 'Manufacturing', href: '/solutions#manufacturing' },
+        { name: 'Education', href: '/solutions#education' },
+        { name: 'Government', href: '/solutions#government' },
         { name: 'Retail', href: '/solutions#retail' }
-      ]};
+      ]},
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'Case Studies', href: '/case-studies' };
-        { name: 'News', href: '/news' };
-        { name: 'Blog', href: '/blog' };
+        { name: 'About Us', href: '/about' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'News', href: '/news' },
+        { name: 'Blog', href: '/blog' },
         { name: 'Support', href: '/support' }
       ]}
   ],
   const socialLinks = [
-    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> };
-    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> };
-    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> };
-    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> };
-    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> };
+    { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> },
+    { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> },
+    { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> },
+    { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> },
+    { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> },
     { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> }
   ],
   return (
@@ -68,14 +68,14 @@ const QuantumFooter: React.FC = () => {
             key={i}
             className="absolute w-1 h-1 bg-cyan-40o0 rounded-full opacity-30",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0, -30, 0];
+              y: [0, -30, 0],
               opacity: [0.3, 0.8, 0.3]}}
             transition={{
-              duration: 4 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
               delay: Math.random() * 2}}
            />))}
       </div>,
@@ -229,10 +229,10 @@ const QuantumFooter: React.FC = () => {
           animate={{
             scaleX: [0, 1, 0]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
       </div>,
-    </footer>)};
-export default QuantumFooter;
+    </footer>)},
+export default QuantumFooter,

@@ -1,30 +1,30 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  ChevronDown;
-  X;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  BookOpen;
-  DollarSign;
-  Users;
-  Star;
-  Sparkles;
-  Cpu;
-  Building;
-  Play;
-  Calculator;
-  FileText;
-  Video;
-  Shield;
-  Zap;
-  TrendingUp;
-  Lightbulb;
-  Search;
+  Menu,
+  ChevronDown,
+  X,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  BookOpen,
+  DollarSign,
+  Users,
+  Star,
+  Sparkles,
+  Cpu,
+  Building,
+  Play,
+  Calculator,
+  FileText,
+  Video,
+  Shield,
+  Zap,
+  TrendingUp,
+  Lightbulb,
+  Search,
 } from 'lucide-react',
 import Link from 'next/link',
 interface NavigationItem {
@@ -68,190 +68,190 @@ const Handshake = ({ className }: { className: string }) => (
   </svg>),
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Services';
-    href: '/services';
-    icon: <Play className='w-5 h-5' />;
-    description: 'Complete technology solutions';
-    badge: 'Main';
-    category: 'services';
+    name: 'Services',
+    href: '/services',
+    icon: <Play className='w-5 h-5' />,
+    description: 'Complete technology solutions',
+    badge: 'Main',
+    category: 'services',
     children: [
       {
-        name: 'All Services';
-        href: '/services';
-        description: 'Complete services overview';
-        icon: <Calculator className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete services overview',
+        icon: <Calculator className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'AI & Consciousness';
-        href: '/ai-services';
-        description: 'Advanced AI consciousness solutions';
-        icon: <Brain className='w-4 h-4' />;
-        price: 'From $2,999/month';
-      };
+        name: 'AI & Consciousness',
+        href: '/ai-services',
+        description: 'Advanced AI consciousness solutions',
+        icon: <Brain className='w-4 h-4' />,
+        price: 'From $2,999/month',
+      },
       {
-        name: 'Quantum Technology';
-        href: '/quantum-services';
-        description: 'Quantum computing solutions';
-        icon: <Atom className='w-4 h-4' />;
-        price: 'From $1,499/month';
-      };
+        name: 'Quantum Technology',
+        href: '/quantum-services',
+        description: 'Quantum computing solutions',
+        icon: <Atom className='w-4 h-4' />,
+        price: 'From $1,499/month',
+      },
       {
-        name: 'Autonomous Systems';
-        href: '/autonomous-systems';
-        description: 'Self-operating intelligent systems';
-        icon: <Cpu className='w-4 h-4' />;
-        price: 'From $799/month';
-      };
+        name: 'Autonomous Systems',
+        href: '/autonomous-systems',
+        description: 'Self-operating intelligent systems',
+        icon: <Cpu className='w-4 h-4' />,
+        price: 'From $799/month'
+      },
       {
-        name: 'Micro SAAS';
-        href: '/micro-saas';
-        description: 'Specialized business solutions';
-        icon: <Rocket className='w-4 h-4' />;
-        price: 'From $299/month';
-      };
+        name: 'Micro SAAS',
+        href: '/micro-saas',
+        description: 'Specialized business solutions',
+        icon: <Rocket className='w-4 h-4' />,
+        price: 'From $299/month'
+      },
       {
-        name: 'Enterprise IT';
-        href: '/enterprise-it';
-        description: 'Corporate infrastructure solutions';
-        icon: <Building className='w-4 h-4' />;
-        price: 'From $1,999/month';
-      };
-    ];
-  };
+        name: 'Enterprise IT',
+        href: '/enterprise-it',
+        description: 'Corporate infrastructure solutions',
+        icon: <Building className='w-4 h-4' />,
+        price: 'From $1,999/month',
+      },
+    ],
+  },
   {
-    name: 'Showcase & Pricing';
-    href: '/showcase';
-    icon: <Star className='w-5 h-5' />;
-    description: 'Service demonstrations and pricing';
-    category: 'showcase';
+    name: 'Showcase & Pricing',
+    href: '/showcase',
+    icon: <Star className='w-5 h-5' />,
+    description: 'Service demonstrations and pricing',
+    category: 'showcase',
     children: [
       {
-        name: 'Innovative 20o38 Services';
-        href: '/innovative-20o38-services-showcase';
-        description: 'Cutting-edge 20o38 services showcase';
-        icon: <Sparkles className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'Innovative 20o38 Services',
+        href: '/innovative-20o38-services-showcase',
+        description: 'Cutting-edge 20o38 services showcase',
+        icon: <Sparkles className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Revolutionary 20o27 Services';
-        href: '/revolutionary-20o27-services-showcase';
-        description: 'Revolutionary 20o27 services showcase';
-        icon: <TrendingUp className='w-4 h-4' />;
-      };
+        name: 'Revolutionary 20o27 Services',
+        href: '/revolutionary-20o27-services-showcase',
+        description: 'Revolutionary 20o27 services showcase',
+        icon: <TrendingUp className='w-4 h-4' />
+      },
       {
-        name: 'Ultimate 20o26 Services';
-        href: '/ultimate-20o26-services-showcase';
-        description: 'Ultimate 20o26 services showcase';
-        icon: <Zap className='w-4 h-4' />;
-      };
+        name: 'Ultimate 20o26 Services',
+        href: '/ultimate-20o26-services-showcase',
+        description: 'Ultimate 20o26 services showcase',
+        icon: <Zap className='w-4 h-4' />
+      },
       {
-        name: 'Market Pricing';
-        href: '/market-pricing';
-        description: 'Competitive market pricing';
-        icon: <DollarSign className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Market Pricing',
+        href: '/market-pricing',
+        description: 'Competitive market pricing',
+        icon: <DollarSign className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Solutions';
-    href: '/solutions';
-    icon: <Target className='w-5 h-5' />;
-    description: 'Industry-specific solutions';
-    category: 'solutions';
+    name: 'Solutions',
+    href: '/solutions',
+    icon: <Target className='w-5 h-5' />,
+    description: 'Industry-specific solutions',
+    category: 'solutions',
     children: [
       {
-        name: 'Healthcare Solutions';
-        href: '/healthcare-solutions';
-        description: 'AI-powered healthcare solutions';
-        icon: <Shield className='w-4 h-4' />;
-      };
+        name: 'Healthcare Solutions',
+        href: '/healthcare-solutions',
+        description: 'AI-powered healthcare solutions',
+        icon: <Shield className='w-4 h-4' />
+      },
       {
-        name: 'Financial Services';
-        href: '/financial-services';
-        description: 'Quantum financial solutions';
-        icon: <DollarSign className='w-4 h-4' />;
-      };
+        name: 'Financial Services',
+        href: '/financial-services',
+        description: 'Quantum financial solutions',
+        icon: <DollarSign className='w-4 h-4' />
+      },
       {
-        name: 'Manufacturing';
-        href: '/manufacturing-solutions';
-        description: 'Smart manufacturing solutions';
-        icon: <Cpu className='w-4 h-4' />;
-      };
+        name: 'Manufacturing',
+        href: '/manufacturing-solutions',
+        description: 'Smart manufacturing solutions',
+        icon: <Cpu className='w-4 h-4' />
+      },
       {
-        name: 'Government Tech';
-        href: '/government-technology-solutions';
-        description: 'Government technology solutions';
-        icon: <Building className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Government Tech',
+        href: '/government-technology-solutions',
+        description: 'Government technology solutions',
+        icon: <Building className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className='w-5 h-5' />;
-    description: 'Knowledge and insights';
-    category: 'resources';
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Knowledge and insights',
+    category: 'resources',
     children: [
       {
-        name: 'White Papers';
-        href: '/white-papers';
-        description: 'Industry insights and research';
-        icon: <FileText className='w-4 h-4' />;
-      };
+        name: 'White Papers',
+        href: '/white-papers',
+        description: 'Industry insights and research',
+        icon: <FileText className='w-4 h-4' />
+      },
       {
-        name: 'Webinars';
-        href: '/webinars';
-        description: 'Educational webinars';
-        icon: <Video className='w-4 h-4' />;
-      };
+        name: 'Webinars',
+        href: '/webinars',
+        description: 'Educational webinars',
+        icon: <Video className='w-4 h-4' />
+      },
       {
-        name: 'Research & Development';
-        href: '/research-development';
-        description: 'Innovation and research';
-        icon: <Lightbulb className='w-4 h-4' />;
-      };
+        name: 'Research & Development',
+        href: '/research-development',
+        description: 'Innovation and research',
+        icon: <Lightbulb className='w-4 h-4' />
+      },
       {
-        name: 'Training';
-        href: '/training';
-        description: 'Professional development';
-        icon: <Users className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Training',
+        href: '/training',
+        description: 'Professional development',
+        icon: <Users className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Company';
-    href: '/about';
-    icon: <Building className='w-5 h-5' />;
-    description: 'About Zion Tech Group';
-    category: 'company';
+    name: 'Company',
+    href: '/about',
+    icon: <Building className='w-5 h-5' />,
+    description: 'About Zion Tech Group',
+    category: 'company',
     children: [
       {
-        name: 'About Us';
-        href: '/about';
-        description: 'Our story and mission';
-        icon: <Users className='w-4 h-4' />;
-      };
+        name: 'About Us',
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Users className='w-4 h-4' />
+      },
       {
-        name: 'Partners';
-        href: '/partners';
-        description: 'Strategic partnerships';
-        icon: <Handshake className='w-4 h-4' />;
-      };
+        name: 'Partners',
+        href: '/partners',
+        description: 'Strategic partnerships',
+        icon: <Handshake className='w-4 h-4' />
+      },
       {
-        name: 'Investors';
-        href: '/investors';
-        description: 'Investment opportunities';
-        icon: <TrendingUp className='w-4 h-4' />;
-      };
+        name: 'Investors',
+        href: '/investors',
+        description: 'Investment opportunities',
+        icon: <TrendingUp className='w-4 h-4' />
+      },
       {
-        name: 'Careers';
-        href: '/careers';
-        description: 'Join our team';
-        icon: <Users className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />
+      },
+    ],
+  },
 ],
 const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -262,7 +262,7 @@ const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
     const handleClickOutside = (event: MouseEvent) => {
       if (isOpen && !(event.target as HTMLElement).closest('.mobile-menu')) {
         setIsOpen(false)}
-    };
+    },
     document.addEventListener('mousedown', handleClickOutside),
     return () => document.removeEventListener('mousedown', handleClickOutside)}, [isOpen]),
   // Handle keyboard navigation,
@@ -271,13 +271,13 @@ const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
       if (event.key === 'Escape') {
         setIsOpen(false),
         setActiveDropdown(null)}
-    };
+    },
     document.addEventListener('keydown', handleKeyDown),
     return () => document.removeEventListener('keydown', handleKeyDown)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const closeDropdown = () => {
-    setActiveDropdown(null)};
+    setActiveDropdown(null)},
   const filteredServices = navigationItems.flatMap(
     item =>,
       item.children?.filter(
@@ -521,5 +521,5 @@ const UltraAdvancedFuturisticNavigation20o38: React.FC = () => {
               </p>)}
           </div>,
         </div>)}
-    </nav>)};
-export default UltraAdvancedFuturisticNavigation20o38;
+    </nav>)},
+export default UltraAdvancedFuturisticNavigation20o38,

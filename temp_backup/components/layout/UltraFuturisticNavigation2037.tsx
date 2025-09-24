@@ -2,17 +2,17 @@ import React, { useState, useEffect, useRef, useCallback } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain;
-  Rocket;
-  Shield;
-  Atom;
-  Globe;
-  BookOpen;
-  Building;
-  ChevronDown;
-  Menu;
-  X;
-  Star;
+  Brain,
+  Rocket,
+  Shield,
+  Atom,
+  Globe,
+  BookOpen,
+  Building,
+  ChevronDown,
+  Menu,
+  X,
+  Star,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -178,303 +178,303 @@ const FileText = ({ className }: { className?: string }) => (
   </svg>),
 const navigationItems: NavigationItem[] = [
   {
-    name: 'AI & Consciousness';
-    href: '/ai-services';
-    icon: <Brain className='w-5 h-5' />;
-    description: 'Revolutionary AI consciousness and emotional intelligence';
-    badge: 'New';
-    featured: true;
-    category: 'AI';
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className='w-5 h-5' />,
+    description: 'Revolutionary AI consciousness and emotional intelligence',
+    badge: 'New',
+    featured: true,
+    category: 'AI',
     children: [
       {
-        name: 'AI Consciousness Evolution 20o29';
-        href: '/ai-consciousness-evolution-20o29';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Breakthrough AI consciousness platform';
-        category: 'AI';
-      };
+        name: 'AI Consciousness Evolution 20o29',
+        href: '/ai-consciousness-evolution-20o29',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Breakthrough AI consciousness platform',
+        category: 'AI'
+      },
       {
-        name: 'AI Emotional Intelligence Training';
-        href: '/ai-emotional-intelligence-training';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Train AI systems to understand emotions';
-        category: 'AI';
-      };
+        name: 'AI Emotional Intelligence Training',
+        href: '/ai-emotional-intelligence-training',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Train AI systems to understand emotions',
+        category: 'AI'
+      },
       {
-        name: 'AI Autonomous Research Assistant';
-        href: '/ai-autonomous-research-assistant';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Fully autonomous AI research agent';
-        category: 'AI';
-      };
+        name: 'AI Autonomous Research Assistant',
+        href: '/ai-autonomous-research-assistant',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Fully autonomous AI research agent',
+        category: 'AI'
+      },
       {
-        name: 'AI Predictive Maintenance';
-        href: '/ai-predictive-maintenance-platform';
-        icon: <Brain className='w-4 h-4' />;
-        description: 'Predict equipment failures with AI';
-        category: 'AI';
-      };
-    ];
-  };
+        name: 'AI Predictive Maintenance',
+        href: '/ai-predictive-maintenance-platform',
+        icon: <Brain className='w-4 h-4' />,
+        description: 'Predict equipment failures with AI',
+        category: 'AI'
+      },
+    ],
+  },
   {
-    name: 'Enterprise IT Solutions';
-    href: '/it-services';
-    icon: <Shield className='w-5 h-5' />;
-    description: 'Advanced enterprise infrastructure solutions';
-    badge: 'Enterprise';
-    category: 'IT';
+    name: 'Enterprise IT Solutions',
+    href: '/it-services',
+    icon: <Shield className='w-5 h-5' />,
+    description: 'Advanced enterprise infrastructure solutions',
+    badge: 'Enterprise',
+    category: 'IT',
     children: [
       {
-        name: 'Enterprise Cybersecurity Suite 20o29';
-        href: '/enterprise-cybersecurity-suite-20o29';
-        icon: <Shield className='w-4 h-4' />;
-        description: 'Next-generation enterprise cybersecurity';
-        category: 'IT';
-      };
+        name: 'Enterprise Cybersecurity Suite 20o29',
+        href: '/enterprise-cybersecurity-suite-20o29',
+        icon: <Shield className='w-4 h-4' />,
+        description: 'Next-generation enterprise cybersecurity',
+        category: 'IT'
+      },
       {
-        name: 'Cloud Infrastructure Automation';
-        href: '/cloud-infrastructure-automation';
-        icon: <Shield className='w-4 h-4' />;
-        description: 'Automate cloud infrastructure management';
-        category: 'IT';
-      };
+        name: 'Cloud Infrastructure Automation',
+        href: '/cloud-infrastructure-automation',
+        icon: <Shield className='w-4 h-4' />,
+        description: 'Automate cloud infrastructure management',
+        category: 'IT'
+      },
       {
-        name: 'Data Center Optimization';
-        href: '/data-center-optimization-suite';
-        icon: <Shield className='w-4 h-4' />;
-        description: 'Optimize data center performance with AI';
-        category: 'IT';
-      };
+        name: 'Data Center Optimization',
+        href: '/data-center-optimization-suite',
+        icon: <Shield className='w-4 h-4' />,
+        description: 'Optimize data center performance with AI',
+        category: 'IT'
+      },
       {
-        name: 'Network Performance Monitoring';
-        href: '/network-performance-monitoring';
-        icon: <Shield className='w-4 h-4' />;
-        description: 'Monitor and optimize network performance';
-        category: 'IT';
-      };
-    ];
-  };
+        name: 'Network Performance Monitoring',
+        href: '/network-performance-monitoring',
+        icon: <Shield className='w-4 h-4' />,
+        description: 'Monitor and optimize network performance',
+        category: 'IT'
+      },
+    ],
+  },
   {
-    name: 'Micro SAAS Solutions';
-    href: '/micro-saas';
-    icon: <Rocket className='w-5 h-5' />;
-    description: 'Innovative business solutions for modern enterprises';
-    badge: 'Business';
-    category: 'SAAS';
+    name: 'Micro SAAS Solutions',
+    href: '/micro-saas',
+    icon: <Rocket className='w-5 h-5' />,
+    description: 'Innovative business solutions for modern enterprises',
+    badge: 'Business',
+    category: 'SAAS',
     children: [
       {
-        name: 'AI-Powered CRM Automation';
-        href: '/ai-powered-crm-automation';
-        icon: <Rocket className='w-4 h-4' />;
-        description: 'Automate your CRM with intelligent AI workflows';
-        category: 'SAAS';
-      };
+        name: 'AI-Powered CRM Automation',
+        href: '/ai-powered-crm-automation',
+        icon: <Rocket className='w-4 h-4' />,
+        description: 'Automate your CRM with intelligent AI workflows',
+        category: 'SAAS'
+      },
       {
-        name: 'Smart Inventory Management';
-        href: '/smart-inventory-management';
-        icon: <Rocket className='w-4 h-4' />;
-        description: 'Optimize inventory with AI-powered forecasting';
-        category: 'SAAS';
-      };
+        name: 'Smart Inventory Management',
+        href: '/smart-inventory-management',
+        icon: <Rocket className='w-4 h-4' />,
+        description: 'Optimize inventory with AI-powered forecasting',
+        category: 'SAAS'
+      },
       {
-        name: 'Automated Accounting Platform';
-        href: '/automated-accounting-platform';
-        icon: <Rocket className='w-4 h-4' />;
-        description: 'Streamline accounting with intelligent automation';
-        category: 'SAAS';
-      };
+        name: 'Automated Accounting Platform',
+        href: '/automated-accounting-platform',
+        icon: <Rocket className='w-4 h-4' />,
+        description: 'Streamline accounting with intelligent automation',
+        category: 'SAAS'
+      },
       {
-        name: 'Intelligent Project Management';
-        href: '/intelligent-project-management';
-        icon: <Rocket className='w-4 h-4' />;
-        description: 'Manage projects with AI-powered insights';
-        category: 'SAAS';
-      };
-    ];
-  };
+        name: 'Intelligent Project Management',
+        href: '/intelligent-project-management',
+        icon: <Rocket className='w-4 h-4' />,
+        description: 'Manage projects with AI-powered insights',
+        category: 'SAAS'
+      },
+    ],
+  },
   {
-    name: 'Quantum & Emerging Tech';
-    href: '/quantum-services';
-    icon: <Atom className='w-5 h-5' />;
-    description: 'Cutting-edge quantum and emerging technologies';
-    badge: 'Future';
-    category: 'Quantum';
+    name: 'Quantum & Emerging Tech',
+    href: '/quantum-services',
+    icon: <Atom className='w-5 h-5' />,
+    description: 'Cutting-edge quantum and emerging technologies',
+    badge: 'Future',
+    category: 'Quantum',
     children: [
       {
-        name: 'Quantum Cybersecurity';
-        href: '/quantum-cybersecurity-services';
-        icon: <Atom className='w-4 h-4' />;
-        description: 'Quantum-resistant security solutions';
-        category: 'Quantum';
-      };
+        name: 'Quantum Cybersecurity',
+        href: '/quantum-cybersecurity-services',
+        icon: <Atom className='w-4 h-4' />,
+        description: 'Quantum-resistant security solutions',
+        category: 'Quantum'
+      },
       {
-        name: 'Quantum AI Fusion';
-        href: '/quantum-ai-fusion';
-        icon: <Atom className='w-4 h-4' />;
-        description: 'Quantum AI hybrid computing platform';
-        category: 'Quantum';
-      };
+        name: 'Quantum AI Fusion',
+        href: '/quantum-ai-fusion',
+        icon: <Atom className='w-4 h-4' />,
+        description: 'Quantum AI hybrid computing platform',
+        category: 'Quantum'
+      },
       {
-        name: 'Space Technology';
-        href: '/space-technology';
-        icon: <Atom className='w-4 h-4' />;
-        description: 'Advanced space technology solutions';
-        category: 'Quantum';
-      };
-    ];
-  };
+        name: 'Space Technology',
+        href: '/space-technology',
+        icon: <Atom className='w-4 h-4' />,
+        description: 'Advanced space technology solutions',
+        category: 'Quantum'
+      },
+    ],
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: <BookOpen className='w-5 h-5' />;
-    description: 'Knowledge base and learning resources';
-    category: 'Resources';
+    name: 'Resources',
+    href: '/resources',
+    icon: <BookOpen className='w-5 h-5' />,
+    description: 'Knowledge base and learning resources',
+    category: 'Resources',
     children: [
       {
-        name: 'Blog';
-        href: '/blog';
-        icon: <BookOpen className='w-4 h-4' />;
-        description: 'Latest insights and industry trends';
-        category: 'Resources';
-      };
+        name: 'Blog',
+        href: '/blog',
+        icon: <BookOpen className='w-4 h-4' />,
+        description: 'Latest insights and industry trends',
+        category: 'Resources'
+      },
       {
-        name: 'Case Studies';
-        href: '/case-studies';
-        icon: <BookOpen className='w-4 h-4' />;
-        description: 'Real-world implementation success stories';
-        category: 'Resources';
-      };
+        name: 'Case Studies',
+        href: '/case-studies',
+        icon: <BookOpen className='w-4 h-4' />,
+        description: 'Real-world implementation success stories',
+        category: 'Resources'
+      },
       {
-        name: 'Documentation';
-        href: '/docs';
-        icon: <BookOpen className='w-4 h-4' />;
-        description: 'Technical documentation and guides';
-        category: 'Resources';
-      };
-    ];
-  };
+        name: 'Documentation',
+        href: '/docs',
+        icon: <BookOpen className='w-4 h-4' />,
+        description: 'Technical documentation and guides',
+        category: 'Resources'
+      },
+    ],
+  },
   {
-    name: 'Company';
-    href: '/about';
-    icon: <Building className='w-5 h-5' />;
-    description: 'Learn about Zion Tech Group';
-    category: 'Company';
+    name: 'Company',
+    href: '/about',
+    icon: <Building className='w-5 h-5' />,
+    description: 'Learn about Zion Tech Group',
+    category: 'Company',
     children: [
       {
-        name: 'About Us';
-        href: '/about';
-        icon: <Building className='w-4 h-4' />;
-        description: 'Our mission and vision';
-        category: 'Company';
-      };
+        name: 'About Us',
+        href: '/about',
+        icon: <Building className='w-4 h-4' />,
+        description: 'Our mission and vision',
+        category: 'Company'
+      },
       {
-        name: 'Careers';
-        href: '/careers';
-        icon: <Building className='w-4 h-4' />;
-        description: 'Join our team';
-        category: 'Company';
-      };
+        name: 'Careers',
+        href: '/careers',
+        icon: <Building className='w-4 h-4' />,
+        description: 'Join our team',
+        category: 'Company'
+      },
       {
-        name: 'Contact';
-        href: '/contact';
-        icon: <Building className='w-4 h-4' />;
-        description: 'Get in touch with us';
-        category: 'Company';
-      };
-    ];
-  };
+        name: 'Contact',
+        href: '/contact',
+        icon: <Building className='w-4 h-4' />,
+        description: 'Get in touch with us',
+        category: 'Company'
+      },
+    ],
+  },
   {
-    name: 'Research & Innovation';
-    href: '/research';
-    icon: <Brain className='w-5 h-5' />;
-    description: 'Cutting-edge research and innovation';
-    badge: 'Innovation';
-    category: 'research';
+    name: 'Research & Innovation',
+    href: '/research',
+    icon: <Brain className='w-5 h-5' />,
+    description: 'Cutting-edge research and innovation',
+    badge: 'Innovation',
+    category: 'research',
     children: [
       {
-        name: 'AI Research';
-        href: '/research#ai';
-        description: 'Artificial intelligence research';
-        icon: <Brain className='w-4 h-4' />;
-      };
+        name: 'AI Research',
+        href: '/research#ai',
+        description: 'Artificial intelligence research',
+        icon: <Brain className='w-4 h-4' />
+      },
       {
-        name: 'Quantum Research';
-        href: '/research#quantum';
-        description: 'Quantum computing research';
-        icon: <Cpu className='w-4 h-4' />;
-      };
+        name: 'Quantum Research',
+        href: '/research#quantum',
+        description: 'Quantum computing research',
+        icon: <Cpu className='w-4 h-4' />
+      },
       {
-        name: 'Space Research';
-        href: '/research#space';
-        description: 'Space technology research';
-        icon: <Rocket className='w-4 h-4' />;
-      };
+        name: 'Space Research',
+        href: '/research#space',
+        description: 'Space technology research',
+        icon: <Rocket className='w-4 h-4' />
+      },
       {
-        name: 'Biotech Research';
-        href: '/research#biotech';
-        description: 'Biotechnology research';
-        icon: <Target className='w-4 h-4' />;
-      };
+        name: 'Biotech Research',
+        href: '/research#biotech',
+        description: 'Biotechnology research',
+        icon: <Target className='w-4 h-4' />
+      },
       {
-        name: 'Publications';
-        href: '/research#publications';
-        description: 'Research papers and publications';
-        icon: <FileText className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Publications',
+        href: '/research#publications',
+        description: 'Research papers and publications',
+        icon: <FileText className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Company';
-    href: '/about';
-    icon: <Building className='w-5 h-5' />;
-    description: 'About Zion Tech Group';
-    badge: 'Company';
-    category: 'company';
+    name: 'Company',
+    href: '/about',
+    icon: <Building className='w-5 h-5' />,
+    description: 'About Zion Tech Group',
+    badge: 'Company',
+    category: 'company',
     children: [
       {
-        name: 'About Us';
-        href: '/about';
-        description: 'Learn about our company';
-        icon: <Users className='w-4 h-4' />;
-      };
+        name: 'About Us',
+        href: '/about',
+        description: 'Learn about our company',
+        icon: <Users className='w-4 h-4' />
+      },
       {
-        name: 'Leadership Team';
-        href: '/about#leadership';
-        description: 'Meet our leadership';
-        icon: <User className='w-4 h-4' />;
-      };
+        name: 'Leadership Team',
+        href: '/about#leadership',
+        description: 'Meet our leadership',
+        icon: <User className='w-4 h-4' />
+      },
       {
-        name: 'Careers';
-        href: '/careers';
-        description: 'Join our team';
-        icon: <Briefcase className='w-4 h-4' />;
-      };
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Briefcase className='w-4 h-4' />
+      },
       {
-        name: 'News & Updates';
-        href: '/news';
-        description: 'Latest company news';
-        icon: <Newspaper className='w-4 h-4' />;
-      };
+        name: 'News & Updates',
+        href: '/news',
+        description: 'Latest company news',
+        icon: <Newspaper className='w-4 h-4' />
+      },
       {
-        name: 'Contact Us';
-        href: '/contact';
-        description: 'Get in touch';
-        icon: <Mail className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Contact Us',
+        href: '/contact',
+        description: 'Get in touch',
+        icon: <Mail className='w-4 h-4' />
+      },
+    ],
+  },
 ],
 // Normalize href to ensure proper routing,
 const normalizeHref = (href: string) => {
   if (href.startsWith('http')) return href,
-  return href.startsWith('/') ? href : `/${href}`};
+  return href.startsWith('/') ? href : `/${href}`},
 interface UltraFuturisticNavigation20o37Props {
   onMenuToggle?: () => void,
   'aria-expanded'?: boolean}
 ,
 export default function UltraFuturisticNavigation20o37({
-  onMenuToggle;
-  'aria-expanded': ariaExpanded;
+  onMenuToggle,
+  'aria-expanded': ariaExpanded,
 }: UltraFuturisticNavigation20o37Props) {
   const [isOpen, setIsOpen] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
@@ -482,17 +482,17 @@ export default function UltraFuturisticNavigation20o37({
   const navRef = useRef<HTMLElement>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleMenu = () => {
     setIsOpen(!isOpen),
-    onMenuToggle?.()};
+    onMenuToggle?.()},
   const handleDropdownToggle = (itemName: string) => {
-    setActiveDropdown(activeDropdown === itemName ? null : itemName)};
+    setActiveDropdown(activeDropdown === itemName ? null : itemName)},
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
-    setIsOpen(false)};
+    setIsOpen(false)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${

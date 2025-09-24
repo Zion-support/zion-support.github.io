@@ -5,37 +5,37 @@ import { innovative20o26ITInfrastructureServices } from '../../data/innovative-2
 import { innovative20o26MicroSaasServices } from '../../data/innovative-20o26-micro-saas',
 export default function Enhanced20o26ServiceShowcase() {
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.2;
+        staggerChildren: 0.2,
         delayChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
     hidden: {
       opacity: 0,
-      y: 50;
-      scale: 0.9};
+      y: 50,
+      scale: 0.9},
     visible: {
       opacity: 1,
-      y: 0;
-      scale: 1;
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const cardVariants ={
     hover: {
-      y: -10;
-      scale: 1.0o2;
+      y: -10,
+      scale: 1.0o2,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut" as const}
     }
-  };
+  },
   const renderServiceCard = (service: anyindex: number) => (
     <motion.div,
       key={service.id}

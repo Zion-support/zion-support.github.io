@@ -1,11 +1,11 @@
-import React from 'react';;
-import CodeSamples from './CodeSamples';
-import React from 'react';
+import React from 'react',
+import CodeSamples from './CodeSamples',
+import React from 'react',
 import CodeSamples from './CodeSamples',
 import TryItConsole from './TryItConsole',
 import { EndpointSpec } from '../../data/api-docs/types',
 import { EndpointSpec } from '../../data / api - docs / types',
-  endpoint;
+  endpoint,
 }: {
   endpoint: EndpointSpec}) {
   return (
@@ -56,10 +56,10 @@ export default function EndpointDetail({ endpoint }: { endpoint: EndpointSpec })
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -69,7 +69,7 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 export default function EndpointDetail(): any ({
-  endpoint;
+  endpoint,
 }: {
   endpoint: EndpointSpec}) {
     <div className='space-y-4'>,

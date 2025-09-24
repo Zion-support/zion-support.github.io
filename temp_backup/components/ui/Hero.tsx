@@ -5,10 +5,10 @@ interface HeroProps {
   description?: string,
   primaryCTA?: {
     text: string,
-    href: string};
+    href: string},
   secondaryCTA?: {
     text: string,
-    href: string};
+    href: string},
   stats?: Array<{
     value: string,
     label: string,
@@ -17,21 +17,21 @@ interface HeroProps {
   className?: string}
 ,
 export default function Hero({
-  title;
-  subtitle;
-  description;
-  primaryCTA;
-  secondaryCTA;
-  stats;
-  background = 'gradient';
-  className = '';
+  title,
+  subtitle,
+  description,
+  primaryCTA,
+  secondaryCTA,
+  stats,
+  background = 'gradient',
+  className = '',
 }: HeroProps) {
   const backgroundClasses = {
-    gradient: 'bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-10o0';
-    solid: 'bg-white';
+    gradient: 'bg-gradient-to-br from-gray-50 via-blue-50 to-indigo-10o0',
+    solid: 'bg-white',
     image:,
-      'bg-gradient-to-br from-gray-90o0/90 via-blue-90o0/90 to-indigo-90o0/90 text-white';
-  };
+      'bg-gradient-to-br from-gray-90o0/90 via-blue-90o0/90 to-indigo-90o0/90 text-white',
+  },
   const classes = `py-20 sm: py-24 lg:py-32 ${backgroundClasses[background]} ${className}`,
   return (
     <section className={classes}>,

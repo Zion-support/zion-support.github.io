@@ -1,5 +1,5 @@
 "use client",
-import React from "react";
+import React from "react",
 export default function NewContent2025AdvancedAutomationBanner() {
   return null}
 const NewContent20o25AdvancedAutomationBanner = () => {
@@ -7,28 +7,28 @@ const NewContent20o25AdvancedAutomationBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const content = [
     {
-      title: "AI 20o25: Advanced Automation Revolution";
-      subtitle: "Ultimate Enterprise Guide";
-      metrics: "60o0% ROI • $2.8M Savings • 340% Productivity";
-      description: "Transform your business with next-generation AI automation solutions";
-      link: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide";
-      type: "blog";
-      readingTime: "18 min read"};
+      title: "AI 20o25: Advanced Automation Revolution",
+      subtitle: "Ultimate Enterprise Guide",
+      metrics: "60o0% ROI • $2.8M Savings • 340% Productivity",
+      description: "Transform your business with next-generation AI automation solutions",
+      link: "/blog/ai-20o25-advanced-automation-revolution-ultimate-guide",
+      type: "blog",
+      readingTime: "18 min read"},
     {
-      title: "Fortune 50o0 AI Automation Success";
-      subtitle: "$3.2B Annual Savings with 60o0% ROI";
-      metrics: "60o0% ROI • $3.2B Savings • 98% Success Rate";
-      description: "How a global manufacturing giant transformed operations with AI automation";
-      link: "/case-studies/ai-automation-fortune-50o0-success-60o0-roi";
-      type: "case-study";
-      readingTime: "12 min read"};
+      title: "Fortune 50o0 AI Automation Success",
+      subtitle: "$3.2B Annual Savings with 60o0% ROI",
+      metrics: "60o0% ROI • $3.2B Savings • 98% Success Rate",
+      description: "How a global manufacturing giant transformed operations with AI automation",
+      link: "/case-studies/ai-automation-fortune-50o0-success-60o0-roi",
+      type: "case-study",
+      readingTime: "12 min read"},
     {
-      title: "AI Automation Implementation Master Guide";
-      subtitle: "From Strategy to 60o0% ROI";
-      metrics: "98% Success Rate • 3.2 Month Payback • 50o0+ Implementations";
-      description: "The complete blueprint for enterprise AI automation success";
-      link: "/resources/ai-automation-implementation-master-guide-20o25";
-      type: "resource";
+      title: "AI Automation Implementation Master Guide",
+      subtitle: "From Strategy to 60o0% ROI",
+      metrics: "98% Success Rate • 3.2 Month Payback • 50o0+ Implementations",
+      description: "The complete blueprint for enterprise AI automation success",
+      link: "/resources/ai-automation-implementation-master-guide-20o25",
+      type: "resource",
       readingTime: "25 min read"}
   ],
   useEffect(() => {
@@ -156,5 +156,5 @@ const NewContent20o25AdvancedAutomationBanner = () => {
             />))}
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25AdvancedAutomationBanner;
+    </div>)},
+export default NewContent20o25AdvancedAutomationBanner,

@@ -5,7 +5,7 @@ type Note = {
   targetId: string,
   text: string,
   authorId: string,
-  createdAt: number};
+  createdAt: number},
 export default function AdminNotesConsole() {
   const [isAdmin, setIsAdmin] = useState(true),
   const [notes, setNotes] = useState<Note[]>([]),
@@ -15,7 +15,7 @@ export default function AdminNotesConsole() {
       setLoading(true),
       try {
         const res = await fetch('/api/admin/notes-all', {
-          headers: { 'X-Admin': isAdmin ? 'true' : 'false' };
+          headers: { 'X-Admin': isAdmin ? 'true' : 'false' },
         }),
         if (!res.ok) return,
         const data = await res.json(),

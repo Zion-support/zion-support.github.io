@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import {
-  render;
-  screen;
-  fireEvent;
-  act;
-  waitFor;
+  render,
+  screen,
+  fireEvent,
+  act,
+  waitFor,
 } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import { GuestCheckoutModal } from '@/components/cart/GuestCheckoutModal', // Adjust path as necessary,
@@ -17,10 +17,10 @@ describe('GuestCheckoutModal', () => {
   const mockOnOpenChange = jest.fn(),
   const mockOnSubmit = jest.fn(),
   const defaultProps = {
-    open: true;
-    onOpenChange: mockOnOpenChange;
-    onSubmit: mockOnSubmit;
-  };
+    open: true,
+    onOpenChange: mockOnOpenChange,
+    onSubmit: mockOnSubmit
+  },
   beforeEach(() => {
     // Reset mocks before each test,
     mockOnOpenChange.mockClear(),
@@ -61,7 +61,7 @@ describe('GuestCheckoutModal', () => {
     const emailInput = screen.getByPlaceholderText('Email'),
     const addressInput = screen.getByPlaceholderText('Shipping Address'),
     const submitButton = screen.getByRole('button', {
-      name: 'Continue to Payment';
+      name: 'Continue to Payment'
     }),
     expect(submitButton).toBeDisabled(),
     await act(async () => {
@@ -74,7 +74,7 @@ describe('GuestCheckoutModal', () => {
     const addressInput = screen.getByPlaceholderText(
       'Shipping Address') as HTMLInputElement,
     const submitButton = screen.getByRole('button', {
-      name: 'Continue to Payment';
+      name: 'Continue to Payment'
     }),
     await act(async () => {
       fireEvent.change(emailInput, { target: { value: 'test@example.com' } }),
@@ -83,8 +83,8 @@ describe('GuestCheckoutModal', () => {
       fireEvent.click(submitButton)}),
     expect(mockOnSubmit).toHaveBeenCalledTimes(1),
     expect(mockOnSubmit).toHaveBeenCalledWith({
-      email: 'test@example.com';
-      address: '123 Main St';
+      email: 'test@example.com',
+      address: '123 Main St'
     })}),
   test('Should not show test data warning if isProdDomain is true', () => {
     (
@@ -99,7 +99,7 @@ describe('GuestCheckoutModal', () => {
     const addressInput = screen.getByPlaceholderText(
       'Shipping Address') as HTMLInputElement,
     const submitButton = screen.getByRole('button', {
-      name: 'Continue to Payment';
+      name: 'Continue to Payment'
     }),
     await act(async () => {
       fireEvent.change(emailInput, { target: { value: 'test@@example.com' } })}),
@@ -110,8 +110,8 @@ describe('GuestCheckoutModal', () => {
       fireEvent.click(submitButton)}),
     expect(mockOnSubmit).toHaveBeenCalledTimes(1),
     expect(mockOnSubmit).toHaveBeenCalledWith({
-      email: 'test@example.com';
-      address: 'sample address';
+      email: 'test@example.com',
+      address: 'sample address'
     }),
     // Check if alert was called due to original '@@',
     expect(global.alert).toHaveBeenCalledWith(
@@ -123,23 +123,23 @@ describe('GuestCheckoutModal', () => {
     const addressInput = screen.getByPlaceholderText(
       'Shipping Address') as HTMLInputElement,
     const submitButton = screen.getByRole('button', {
-      name: 'Continue to Payment';
+      name: 'Continue to Payment'
     }),
     await act(async () => {
       fireEvent.change(emailInput, {
-        target: { value: 'contact@@@domain.com' };
+        target: { value: 'contact@@@domain.com' },
       })}),
     expect(emailInput.value).toBe('contact@domain.com'), // Check normalization during typing,
     await act(async () => {
       fireEvent.change(addressInput, {
-        target: { value: 'another sample address' };
+        target: { value: 'another sample address' },
       })}),
     await act(async () => {
       fireEvent.click(submitButton)}),
     expect(mockOnSubmit).toHaveBeenCalledTimes(1),
     expect(mockOnSubmit).toHaveBeenCalledWith({
-      email: 'contact@domain.com';
-      address: 'another sample address';
+      email: 'contact@domain.com',
+      address: 'another sample address'
     }),
     // Check if alert was called due to original '@@@',
     expect(global.alert).toHaveBeenCalledWith(
@@ -164,7 +164,7 @@ describe('GuestCheckoutModal', () => {
       addressInput = screen.getByPlaceholderText(
         'Shipping Address') as HTMLInputElement,
       submitButton = screen.getByRole('button', {
-        name: 'Continue to Payment';
+        name: 'Continue to Payment'
       })}),
     test('should not submit if both fields are empty', async () => {
       await act(async () => {
@@ -242,7 +242,7 @@ describe('GuestCheckoutModal', () => {
       const emailInput = screen.getByPlaceholderText('Email'),
       const addressInput = screen.getByPlaceholderText('Shipping Address'),
       const submitButton = screen.getByRole('button', {
-        name: 'Continue to Payment';
+        name: 'Continue to Payment'
       }),
       // Initial state,
       expect(submitButton).toBeDisabled(),

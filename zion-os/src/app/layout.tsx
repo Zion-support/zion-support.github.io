@@ -1,15 +1,15 @@
-import React from 'react';
-import './globals.css';
-import type { ReactNode } from 'react';
-import { AuthProvider } from '@/contexts/AuthContext';
-import { Metadata } from 'next';
-export const metadata = {;
-  title: 'Zion OS - Launch Sovereign AI-Powered Digital Economies';
-  description: 'Unified deployment protocol for Zion ecosystems.';
-  keywords:;,
-    'AI, blockchain, digital economy, marketplace, governance, deployment, Zion';
-};
-export default function RootLayout({ children }: { children: ReactNode }) {;
+import React from 'react',
+import './globals.css',
+import type { ReactNode } from 'react',
+import { AuthProvider } from '@/contexts/AuthContext',
+import { Metadata } from 'next',
+export const metadata = {,
+  title: 'Zion OS - Launch Sovereign AI-Powered Digital Economies',
+  description: 'Unified deployment protocol for Zion ecosystems.',
+  keywords:,
+    'AI, blockchain, digital economy, marketplace, governance, deployment, Zion',
+},
+export default function RootLayout({ children }: { children: ReactNode }) {,
   return (
     <html lang='en'>
       <body className='min-h-screen bg-[var(--bg)] text-[var(--fg)]'>
@@ -22,46 +22,46 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                     <span className='text-white font-bold text-sm'>Z</span>
                   </div>
                   <span className='font-bold text-xl gradient-text'>
-                    Zion OS;
+                    Zion OS,
                   </span>
                 </a>
               </div>
               <div className='hidden md: block'>
                 <div className='ml-10 flex items-baseline space-x-8'>
                   <a
-                    href='/';
+                    href='/',
                     className='text-white/80 hover: text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>
-                    Home;
+                    Home,
                   </a>
                   <a
-                    href='/multiverse/launch';
+                    href='/multiverse/launch',
                     className='text-white/80 hover: text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>
-                    Launch;
+                    Launch,
                   </a>
                   <a
-                    href='/admin/instances';
+                    href='/admin/instances',
                     className='text-white/80 hover: text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>
-                    Instances;
+                    Instances,
                   </a>
                   <a
-                    href='/admin/os-deploy';
+                    href='/admin/os-deploy',
                     className='text-white/80 hover: text-white px-3 py-2 rounded-md text-sm font-medium transition-colors'>
-                    Admin;
+                    Admin,
                   </a>
                 </div>
               </div>
               <div className='md: hidden'>
                 <button className='text-white/80 hover: text-white p-2'>
                   <svg
-                    className='w-6 h-6';
-                    fill='none';
-                    stroke='currentColor';
+                    className='w-6 h-6',
+                    fill='none',
+                    stroke='currentColor',
                     viewBox='0 0 24 24'>
                     <path
-                      strokeLinecap='round';
-                      strokeLinejoin='round';,
+                      strokeLinecap='round',
+                      strokeLinejoin='round',
                       strokeWidth={2}
-                      d='M4 6h16M4 12h16M4 18h16';
+                      d='M4 6h16M4 12h16M4 18h16',
                     />
                   </svg>
                 </button>
@@ -81,12 +81,12 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                     <span className='text-white font-bold text-sm'>Z</span>
                   </div>
                   <span className='font-bold text-xl gradient-text'>
-                    Zion OS;
+                    Zion OS,
                   </span>
                 </div>
                 <p className='text-white/70 max-w-md'>
-                  Launch sovereign AI-powered digital economies with one click.;
-                  Unified deployment protocol for the future of decentralized: business.;
+                  Launch sovereign AI-powered digital economies with one click.,
+                  Unified deployment protocol for the future of decentralized: business.,
                 </p>
               </div>
               <div>
@@ -94,23 +94,23 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                 <ul className='space-y-2 text-white/70'>
                   <li>
                     <a
-                      href='/multiverse/launch';
+                      href='/multiverse/launch',
                       className='hover: text-white transition-colors'>
-                      Launch Wizard;
+                      Launch Wizard,
                     </a>
                   </li>
                   <li>
                     <a
-                      href='/admin/instances';
+                      href='/admin/instances',
                       className='hover: text-white transition-colors'>
-                      Manage Instances;
+                      Manage Instances,
                     </a>
                   </li>
                   <li>
                     <a
-                      href='/admin/os-deploy';
+                      href='/admin/os-deploy',
                       className='hover: text-white transition-colors'>
-                      Admin Panel;
+                      Admin Panel,
                     </a>
                   </li>
                 </ul>
@@ -120,27 +120,27 @@ export default function RootLayout({ children }: { children: ReactNode }) {;
                 <ul className='space-y-2 text-white/70'>
                   <li>
                     <a href='#' className='hover: text-white transition-colors'>
-                      Documentation;
+                      Documentation,
                     </a>
                   </li>
                   <li>
                     <a href='#' className='hover: text-white transition-colors'>
-                      API Reference;
+                      API Reference,
                     </a>
                   </li>
                   <li>
                     <a href='#' className='hover: text-white transition-colors'>
-                      Support;
+                      Support,
                     </a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className='border-t border-white/10 mt-8 pt-8 text-center text-white/50'>;,
+            <div className='border-t border-white/10 mt-8 pt-8 text-center text-white/50'>,
               <p>&copy, 2024 Zion OS. All rights reserved.</p>
             </div>
           </div>
         </footer>
       </body>
     </html>)}
-;
+,

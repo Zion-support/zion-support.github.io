@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import SEO from '../components/SEO',
 import Link from 'next/link',
 import { Check, ExternalLink, Network, Radar, Shield } from 'lucide-react',
@@ -7,37 +7,30 @@ export default function ITAssetDiscoveryAgentPage() {
   const description =,
     'Agentless network and cloud discovery for hardware, software, and SaaS. Unify inventories, detect drift, and export to CMDB.',
   const features = [
-    'Agentless network scans with authenticated probes';
-    'Cloud discovery for AWS/Azure/GCP across accounts';
-    'SaaS discovery via OAuth and SSO logs';
-    'Software inventory, CVE enrichment, and EOL tracking';
-    'Change detection and configuration drift alerts';
-    'Exports: ServiceNow, Jira, CMDBs, CSV/JSON';
-    'Role-based access and audit logs';
-    'API-first with webhooks for events';
+    'Agentless network scans with authenticated probesCloud discovery for AWS/Azure/GCP across accounts',
+    'SaaS discovery via OAuth and SSO logsSoftware inventory, CVE enrichment, and EOL tracking',
+    'Change detection and configuration drift alertsExports: ServiceNow, Jira, CMDBs, CSV/JSON',
+    'Role-based access and audit logsAPI-first with webhooks for events',
   ],
   const pricingNotes = [
-    'Starter: $99–$299/mo (up to 250 assets)';
-    'Growth: $300–$1,499/mo (2,500–10,000 assets)';
-    'Enterprise: Custom (SSO/SCIM, HA, multi-org)';
+    'Starter: $99–$299/mo (up to 250 assets)Growth: $300–$1,499/mo (2,500–10,000 assets)',
+    'Enterprise: Custom (SSO/SCIM, HA, multi-org)',
   ],
   const references = [
-    { name: 'runZero pricing', url: 'https://www.runzero.com/pricing/' };
-    { name: 'Lansweeper pricing', url: 'https://www.lansweeper.com/pricing/' };
-    { name: 'Nmap', url: 'https://nmap.org/' };
+    { name: 'runZero pricing', url: 'https://www.runzero.com/pricing/' },
+    { name: 'Lansweeper pricing', url: 'https://www.lansweeper.com/pricing/' },
+    { name: 'Nmap', url: 'https://nmap.org/' },
   ],
   return (
     <>,
       <SEO
         data={{
-          pageTitle: title;
-          pageDescription: description;
+          pageTitle: title,
+          pageDescription: description,
           pageKeywords: [
-            'IT asset discovery';
-            'IT management';
-            'asset tracking';
-            'Zion Tech Group';
-          ];
+            'IT asset discoveryIT management',
+            'asset trackingZion Tech Group',
+          ]
         }}
       />,
       <section className='relative pt-28 pb-16 md: pt-36 md:pb-24'>,

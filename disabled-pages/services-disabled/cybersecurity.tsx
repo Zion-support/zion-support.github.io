@@ -6,68 +6,60 @@ import { Shield, Lock, Eye, AlertTriangle, CheckCircle, ArrowRight, Users, Globe
 const Cybersecurity = () => {
   const services = [
     {
-      title: 'Security Assessment';
-      description: 'Comprehensive evaluation of your current security posture';
-      icon: Eye;
+      title: 'Security Assessment',
+      description: 'Comprehensive evaluation of your current security posture',
+      icon: Eye,
       features: [
-        'Vulnerability scanning';
-        'Penetration testing';
-        'Security audit';
-        'Risk assessment';
-        'Compliance review']};
+        'Vulnerability scanningPenetration testing',
+        'Security auditRisk assessment',
+        'Compliance review']},
     {
-      title: 'Network Security';
-      description: 'Protect your network infrastructure from threats';
-      icon: Network;
+      title: 'Network Security',
+      description: 'Protect your network infrastructure from threats',
+      icon: Network,
       features: [
-        'Firewall configuration';
-        'Intrusion detection';
-        'Network monitoring';
-        'VPN setup';
-        'Traffic analysis']};
+        'Firewall configurationIntrusion detection',
+        'Network monitoringVPN setup',
+        'Traffic analysis']},
     {
-      title: 'Data Protection';
-      description: 'Safeguard your sensitive data and information';
-      icon: Database;
+      title: 'Data Protection',
+      description: 'Safeguard your sensitive data and information',
+      icon: Database,
       features: [
-        'Data encryption';
-        'Backup solutions';
-        'Access controls';
-        'Data loss prevention';
-        'Privacy compliance']};
+        'Data encryptionBackup solutions',
+        'Access controlsData loss prevention',
+        'Privacy compliance']},
     {
-      title: 'Incident Response';
-      description: 'Rapid response to security incidents and breaches';
-      icon: AlertTriangle;
+      title: 'Incident Response',
+      description: 'Rapid response to security incidents and breaches',
+      icon: AlertTriangle,
       features: [
-        '24/7 monitoring';
-        'Incident detection';
-        'Forensic analysis';
-        'Recovery planning';
+        '24/7 monitoringIncident detection',
+        'Forensic analysisRecovery planning',
         'Post-incident review']}
   ],
   const compliance = [
     {
-      name: 'SOC 2';
-      description: 'Service Organization Control 2 compliance for service providers';
-      icon: Shield};
+      name: 'SOC 2',
+      description: 'Service Organization Control 2 compliance for service providers',
+      icon: Shield},
     {
-      name: 'ISO 270o01';
-      description: 'International standard for information security management';
-      icon: Lock};
+      name: 'ISO 270o01',
+      description: 'International standard for information security management',
+      icon: Lock},
     {
-      name: 'GDPR';
-      description: 'General Data Protection Regulation compliance';
-      icon: Globe};
+      name: 'GDPR',
+      description: 'General Data Protection Regulation compliance',
+      icon: Globe},
     {
-      name: 'HIPAA';
-      description: 'Health Insurance Portability and Accountability Act';
+      name: 'HIPAA',
+      description: 'Health Insurance Portability and Accountability Act',
       icon: Users}
   ],
   const stats = [
-    { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' };
-    { number: '24/7', label: 'Monitoring', description: 'Round-the-clock surveillance' };
-    { number: '< 5min', label: 'Response Time', description: 'Rapid incident response' };
+    { number: '99.9%', label: 'Security Uptime', description: 'Continuous protection' },
+    { number: '24/7', label: 'Monitoring', description: 'Round-the-clock surveillance' },
+    { number: '< 5min', label: 'Response Time', description: 'Rapid incident response' },
     { number: '10o0%', label: 'Compliance', description: 'Regulatory adherence' }
   ],
   return (
@@ -227,5 +219,5 @@ const Cybersecurity = () => {
         </section>,
       </main>,
       <Footer  />,
-    </>)};
-export default Cybersecurity;
+    </>)},
+export default Cybersecurity,

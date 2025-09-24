@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 Ultimate Business Transformation Guide';
+  title: 'AI 20o25 Ultimate Business Transformation Guide',
   description:,
-    'Discover the revolutionary AI technologies and strategies that will transform your business in 20o25. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.';
+    'Discover the revolutionary AI technologies and strategies that will transform your business in 20o25. Comprehensive guide to AI implementation, ROI optimization, and competitive advantage.',
   keywords: [
-    'AI transformation';
-    'business AI';
-    'AI implementation';
-    'digital transformation';
-    'AI ROI';
-    '20o25 AI trends';
-  ];
-};
+    'AI transformationbusiness AI',
+    'AI implementationdigital transformation',
+    'AI ROI20o25 AI trends',
+  ]
+},
 export default function AI20o25UltimateBusinessTransformationPage() {
   return (
     <div>,

@@ -1,29 +1,21 @@
-import React from 'react';
+import React from 'react',
 import { ChevronDownChevronUp } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Checkbox } from '@/components/ui/checkbox',
 import { SkillsFilterProps } from '@/types/filters',
 // Common skills in AI and tech,
 const POPULAR_SKILLS = [
-  'Machine Learning';
-  'Deep Learning';
-  'Python';
-  'TensorFlow';
-  'PyTorch';
-  'Computer Vision';
-  'NLP';
-  'Data Science';
-  'AWS';
-  'Docker';
-  'Kubernetes';
-  'React';
-  'Node.js';
-  'TypeScript';
-  'DevOps';
-  'Security';
+  'Machine LearningDeep Learning',
+  'PythonTensorFlow',
+  'PyTorchComputer Vision',
+  'NLPData Science',
+  'AWSDocker',
+  'KubernetesReact',
+  'Node.jsTypeScript',
+  'DevOpsSecurity',
 ],
 export function SkillsFilter({
-  selectedSkillstoggleSkillexpandedtoggleSectionisMobileFilterOpen;
+  selectedSkillstoggleSkillexpandedtoggleSectionisMobileFilterOpen,
 }: SkillsFilterProps) {
   return (
     <div className='mb-6 border-b border-zion-blue-light pb-6'>,

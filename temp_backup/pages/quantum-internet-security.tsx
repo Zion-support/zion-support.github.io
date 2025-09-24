@@ -1,13 +1,13 @@
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  Lock;
-  Globe;
-  Zap;
-  Target;
-  Users;
-  ArrowRight;
-  Atom;
+  Shield,
+  Lock,
+  Globe,
+  Zap,
+  Target,
+  Users,
+  ArrowRight,
+  Atom,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function QuantumInternetSecurity() {
@@ -98,41 +98,41 @@ export default function QuantumInternetSecurity() {
             <div className='grid md: grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Lock className='w-12 h-12 text-cyan-40o0' />;
-                  title: 'Quantum Key Distribution';
+                  icon: <Lock className='w-12 h-12 text-cyan-40o0' />,
+                  title: 'Quantum Key Distribution',
                   description:,
-                    'Unbreakable encryption keys generated through quantum entanglement, ensuring perfect secrecy.';
-                };
+                    'Unbreakable encryption keys generated through quantum entanglement, ensuring perfect secrecy.',
+                },
                 {
-                  icon: <Zap className='w-12 h-12 text-blue-40o0' />;
-                  title: 'Instant Threat Detection';
+                  icon: <Zap className='w-12 h-12 text-blue-40o0' />,
+                  title: 'Instant Threat Detection',
                   description:,
-                    'Real-time monitoring using quantum sensors that detect anomalies at the quantum level.';
-                };
+                    'Real-time monitoring using quantum sensors that detect anomalies at the quantum level.',
+                },
                 {
-                  icon: <Target className='w-12 h-12 text-purple-40o0' />;
-                  title: 'Quantum-Resistant Algorithms';
+                  icon: <Target className='w-12 h-12 text-purple-40o0' />,
+                  title: 'Quantum-Resistant Algorithms',
                   description:,
-                    'Advanced cryptographic protocols designed to withstand attacks from quantum computers.';
-                };
+                    'Advanced cryptographic protocols designed to withstand attacks from quantum computers.',
+                },
                 {
-                  icon: <Globe className='w-12 h-12 text-green-40o0' />;
-                  title: 'Global Quantum Network';
+                  icon: <Globe className='w-12 h-12 text-green-40o0' />,
+                  title: 'Global Quantum Network',
                   description:,
-                    'Worldwide quantum-secured communication infrastructure with instant connectivity.';
-                };
+                    'Worldwide quantum-secured communication infrastructure with instant connectivity.',
+                },
                 {
-                  icon: <Shield className='w-12 h-12 text-yellow-40o0' />;
-                  title: 'Zero-Trust Architecture';
+                  icon: <Shield className='w-12 h-12 text-yellow-40o0' />,
+                  title: 'Zero-Trust Architecture',
                   description:,
-                    'Quantum-verified identity and access management with continuous authentication.';
-                };
+                    'Quantum-verified identity and access management with continuous authentication.',
+                },
                 {
-                  icon: <Atom className='w-12 h-12 text-pink-40o0' />;
-                  title: 'Quantum Machine Learning';
+                  icon: <Atom className='w-12 h-12 text-pink-40o0' />,
+                  title: 'Quantum Machine Learning',
                   description:,
-                    'AI-powered threat detection using quantum computing for pattern recognition.';
-                };
+                    'AI-powered threat detection using quantum computing for pattern recognition.',
+                },
               ].map((feature, index) => (
                 <motion.div,
                   key={index}
@@ -169,45 +169,41 @@ export default function QuantumInternetSecurity() {
             <div className='grid md: grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Financial Institutions';
+                  title: 'Financial Institutions',
                   description:,
-                    'Quantum-secured banking, trading, and payment systems with unbreakable encryption.';
+                    'Quantum-secured banking, trading, and payment systems with unbreakable encryption.',
                   benefits: [
-                    'Unbreakable encryption';
-                    'Real-time fraud detection';
-                    'Global compliance';
-                  ];
-                };
+                    'Unbreakable encryptionReal-time fraud detection',
+                    'Global compliance',
+                  ]
+                },
                 {
-                  title: 'Government & Defense';
+                  title: 'Government & Defense',
                   description:,
-                    'National security infrastructure protected by quantum encryption and threat detection.';
+                    'National security infrastructure protected by quantum encryption and threat detection.',
                   benefits: [
-                    'Classified communications';
-                    'Critical infrastructure';
-                    'National security';
-                  ];
-                };
+                    'Classified communicationsCritical infrastructure',
+                    'National security',
+                  ]
+                },
                 {
-                  title: 'Healthcare Systems';
+                  title: 'Healthcare Systems',
                   description:,
-                    'Patient data protection and medical device security using quantum protocols.';
+                    'Patient data protection and medical device security using quantum protocols.',
                   benefits: [
-                    'HIPAA compliance';
-                    'Device security';
-                    'Data privacy';
-                  ];
-                };
+                    'HIPAA complianceDevice security',
+                    'Data privacy',
+                  ]
+                },
                 {
-                  title: 'Energy & Utilities';
+                  title: 'Energy & Utilities',
                   description:,
-                    'Grid security and critical infrastructure protection against cyber threats.';
+                    'Grid security and critical infrastructure protection against cyber threats.',
                   benefits: [
-                    'Grid resilience';
-                    'Threat prevention';
-                    '24/7 monitoring';
-                  ];
-                };
+                    'Grid resilienceThreat prevention',
+                    '24/7 monitoring',
+                  ]
+                },
               ].map((app, index) => (
                 <motion.div,
                   key={index}

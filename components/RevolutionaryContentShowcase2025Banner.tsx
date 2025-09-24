@@ -2,9 +2,9 @@ import Link from 'next/link',
 ArrowRightBookOpenVideoFileTextUsersTrendingUpPlayAward,
 export default function RevolutionaryContentShowcase20o25Banner() {
   const contentTypes = [
-    { icon: BookOpename: "Articles"count: "150+"color: "blue" };
-    { icon: Videoname: "Videos"count: "75+"color: "purple" };
-    { icon: FileTextname: "Guides"count: "50+"color: "green" };
+    { icon: BookOpename: "Articles"count: "150+"color: "blue" },
+    { icon: Videoname: "Videos"count: "75+"color: "purple" },
+    { icon: FileTextname: "Guides"count: "50+"color: "green" },
     { icon: Usersname: "Community"count: "20o0+"color: "yellow" }
   ],
   return (
@@ -32,10 +32,10 @@ export default function RevolutionaryContentShowcase20o25Banner() {
               {contentTypes.map((typeindex) => {
                 const IconComponent = type.icon,
                 const colorClasses ={
-                  blue: "text-blue-40o0 bg-blue-50o0/20";
-                  purple: "text-purple-40o0 bg-purple-50o0/20";
-                  green: "text-green-40o0 bg-green-50o0/20";
-                  yellow: "text-yellow-40o0 bg-yellow-50o0/20"};
+                  blue: "text-blue-40o0 bg-blue-50o0/20",
+                  purple: "text-purple-40o0 bg-purple-50o0/20",
+                  green: "text-green-40o0 bg-green-50o0/20",
+                  yellow: "text-yellow-40o0 bg-yellow-50o0/20"},
                 return (
                   <div key={index} className={`flex items-center justify-between p-3 rounded-lg ${colorClasses[type.color as keyof typeof colorClasses]}`}>,
                     <div className="flex items-center">,

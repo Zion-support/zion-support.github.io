@@ -12,19 +12,19 @@ interface MobileHeaderProps {
   onSettingsClick?: () => void}
 ,
 export function MobileHeader({
-  title;
-  showBack = false;
-  showNotifications = false;
-  showSettings = false;
-  className;
-  onNotificationsClick;
-  onSettingsClick;
+  title,
+  showBack = false,
+  showNotifications = false,
+  showSettings = false,
+  className,
+  onNotificationsClick,
+  onSettingsClick,
 }: MobileHeaderProps) {
   const navigate = useNavigate(),
   return (
     <header
       className={cn(
-        'sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border';
+        'sticky top-0 z-40 bg-background/80 backdrop-blur-sm border-b border-border',
         className)}
     >,
       <div className='flex items-center justify-between h-14 px-4'>,

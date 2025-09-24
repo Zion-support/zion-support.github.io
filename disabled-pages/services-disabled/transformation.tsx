@@ -3,98 +3,89 @@ import Navigation from '../../src/components/Navigation',
 import Footer from '../../src/components/Footer',
 import SEOHead from '../../src/components/SEOHead',
 import {
-  Rocket;
-  Zap;
-  Users;
-  Globe;
-  CheckCircle;
-  Award;
-  Brain;
-  Cloud;
-  Shield;
-  Phone;
-  Mail;
+  Rocket,
+  Zap,
+  Users,
+  Globe,
+  CheckCircle,
+  Award,
+  Brain,
+  Cloud,
+  Shield,
+  Phone,
+  Mail,
 } from 'lucide-react',
 const DigitalTransformation = () => {
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Service';
-    name: 'Digital Transformation Services';
+    '@context': 'https: //schema.org@type': 'Service',
+    name: 'Digital Transformation Services',
     description:,
-      'Transform your business with comprehensive digital transformation solutions';
+      'Transform your business with comprehensive digital transformation solutions',
     provider: {
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
-      url: 'https://ziontechgroup.com';
-    };
-  };
+      '@type': 'Organization',
+      name: 'Zion Tech Group',
+      url: 'https://ziontechgroup.com'
+    },
+  },
   const services = [
     {
-      title: 'Strategy & Planning';
+      title: 'Strategy & Planning',
       description:,
-        'Comprehensive digital transformation roadmap and strategy development';
-      icon: Brain;
+        'Comprehensive digital transformation roadmap and strategy development',
+      icon: Brain,
       features: [
-        'Digital Assessment';
-        'Technology Roadmap';
-        'Change Management';
-        'ROI Analysis';
-      ];
-    };
+        'Digital AssessmentTechnology Roadmap',
+        'Change ManagementROI Analysis',
+      ]
+    },
     {
-      title: 'Process Automation';
+      title: 'Process Automation',
       description:,
-        'Streamline operations with intelligent automation solutions';
-      icon: Zap;
+        'Streamline operations with intelligent automation solutions',
+      icon: Zap,
       features: [
-        'Workflow Automation';
-        'RPA Implementation';
-        'AI Integration';
-        'Process Optimization';
-      ];
-    };
+        'Workflow AutomationRPA Implementation',
+        'AI IntegrationProcess Optimization',
+      ]
+    },
     {
-      title: 'Cloud Migration';
-      description: 'Modernize infrastructure with cloud-first approach';
-      icon: Cloud;
+      title: 'Cloud Migration',
+      description: 'Modernize infrastructure with cloud-first approach',
+      icon: Cloud,
       features: [
-        'Cloud Strategy';
-        'Migration Planning';
-        'Hybrid Solutions';
-        'Cost Optimization';
-      ];
-    };
+        'Cloud StrategyMigration Planning',
+        'Hybrid SolutionsCost Optimization',
+      ]
+    },
     {
-      title: 'Data & Analytics';
-      description: 'Unlock insights with advanced data analytics and AI';
-      icon: Globe;
+      title: 'Data & Analytics',
+      description: 'Unlock insights with advanced data analytics and AI',
+      icon: Globe,
       features: [
-        'Data Strategy';
-        'Analytics Platform';
-        'AI/ML Solutions';
-        'Business Intelligence';
-      ];
-    };
+        'Data StrategyAnalytics Platform',
+        'AI/ML SolutionsBusiness Intelligence',
+      ]
+    },
   ],
   const industries = [
     {
-      name: 'Manufacturing';
-      description: 'Smart factory and Industry 4.0 solutions';
-    };
+      name: 'Manufacturing',
+      description: 'Smart factory and Industry 4.0 solutions'
+    },
     {
-      name: 'Healthcare';
-      description: 'Digital health and telemedicine platforms';
-    };
+      name: 'Healthcare',
+      description: 'Digital health and telemedicine platforms'
+    },
     {
-      name: 'Financial Services';
-      description: 'FinTech and digital banking solutions';
-    };
-    { name: 'Retail', description: 'E-commerce and omnichannel experiences' };
-    { name: 'Education', description: 'EdTech and digital learning platforms' };
+      name: 'Financial Services',
+      description: 'FinTech and digital banking solutions'
+    },
+    { name: 'Retail', description: 'E-commerce and omnichannel experiences' },
+    { name: 'Education', description: 'EdTech and digital learning platforms' },
     {
-      name: 'Government';
-      description: 'Digital government and citizen services';
-    };
+      name: 'Government',
+      description: 'Digital government and citizen services'
+    },
   ],
   return (
     <>,
@@ -282,5 +273,5 @@ const DigitalTransformation = () => {
         </section>,
       </main>,
       <Footer />,
-    </>)};
-export default DigitalTransformation;
+    </>)},
+export default DigitalTransformation,

@@ -1,7 +1,7 @@
 import type { GetServerSideProps } from 'next',
 import { FormEvent, useEffect, useState } from 'react',
 import type { Vendor } from '../utils/vendor-types',
-type Props = { vendor: Vendor | null };
+type Props = { vendor: Vendor | null },
 export default function AgencyDashboardPage({ vendor }: Props) {
   const [activeVendor, setActiveVendor] = useState(vendor),
   const [pkgTitle, setPkgTitle] = useState(''),
@@ -14,16 +14,16 @@ export default function AgencyDashboardPage({ vendor }: Props) {
     e.preventDefault(),
     const formData = new FormData(e.currentTarget),
     const updated = {
-      ...activeVendor;
-      name: String(formData.get('name') || activeVendor.name);
-      about: String(formData.get('about') || activeVendor.about || '');
+      ...activeVendor,
+      name: String(formData.get('name') || activeVendor.name),
+      about: String(formData.get('about') || activeVendor.about || ''),
       servicesOffered: String(
         formData.get('servicesOffered') ||,
-          activeVendor.servicesOffered?.join(',') ||,
+          activeVendor.servicesOffered?.join() ||,
           ''),
-        .split(','),
+        .split(),
         .map(s => s.trim()),
-        .filter(Boolean);
+        .filter(Boolean),
     } as Vendor,
     // For MVP, update via direct API not implemented, keep local preview only,
     setActiveVendor(updated)}
@@ -31,13 +31,13 @@ export default function AgencyDashboardPage({ vendor }: Props) {
   function addPackage() {
     if (!pkgTitle || !pkgPrice || !activeVendor) return,
     const packages = [
-      ...(activeVendor.packages || []);
+      ...(activeVendor.packages || []),
       {
-        id: `pkg_${Date.now()}`;
-        title: pkgTitle;
-        description: pkgDesc;
-        priceUsd: Number(pkgPrice);
-      };
+        id: `pkg_${Date.now()}`,
+        title: pkgTitle,
+        description: pkgDesc,
+        priceUsd: Number(pkgPrice)
+      },
     ],
     setActiveVendor({ ...activeVendor, packages }),
     setPkgTitle(''),
@@ -79,7 +79,7 @@ export default function AgencyDashboardPage({ vendor }: Props) {
             <label className='block text-sm mb-1'>Services Offered</label>,
             <input
               name='servicesOffered',
-              defaultValue={activeVendor.servicesOffered?.join(', ') || ''}
+              defaultValue={activeVendor.servicesOffered?.join() || ''}
               className='w-full border rounded px-3 py-2 bg-transparent',
             />,
           </div>,
@@ -148,9 +148,9 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 ,
   async function changeStatus(itemId: string, status: string) {
     await fetch('/api/vendors/update-pipeline', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ itemId, status });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ itemId, status }),
     }),
     fetchItems()}
 ,
@@ -187,5 +187,5 @@ function Pipeline({ vendorId }: { vendorId: string }) {
 export const getServerSideProps: GetServerSideProps<Props> = async () => {
   const { listVendors } = await import('../utils/vendor-store'),
   const vendor = listVendors()[0] || null, // tie to auth later,
-  return { props: { vendor } };
-};
+  return { props: { vendor } },
+},

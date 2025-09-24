@@ -10,7 +10,7 @@ export type FontFamily = 'default' | 'montserrat' | 'open-sans' | 'roboto',
  * Loads and registers custom fonts for PDF documents,
  */,
 export async function loadCustomFonts(
-  doc: jsPDF;
+  doc: jsPDF,
   fontFamily: FontFamily = 'default'): Promise<void> {
   if (fontFamily === 'default') return,
   try {

@@ -5,8 +5,8 @@ import { innovativeMicroSaasServices20o26 } from '../data/20o26-innovative-micro
 import { specializedITSolutions20o26 } from '../data/20o26-specialized-it-solutions',
 import { emergingTechServices20o26 } from '../data/20o26-emerging-tech-services',
 import {
-  Search, Filter, Star, Users, TrendingUp;
-  Clock, Zap, Shield, Cloud, Brain;
+  Search, Filter, Star, Users, TrendingUp,
+  Clock, Zap, Shield, Cloud, Brain,
   Database, Globe, Robot, Cube, Sparkles} from 'lucide-react',
 interface Service {
   id: string,
@@ -38,7 +38,7 @@ interface Service {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
   realImplementation: boolean,
   implementationDetails: string,
   launchDate: string,
@@ -52,41 +52,29 @@ const ComprehensiveServicesShowcase20o26: React.FC = () => {
   const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
   const [sortBy, setSortBy] = useState('popularity'),
   const allServices = [
-    ...innovativeMicroSaasServices20o26;
-    ...specializedITSolutions20o26;
+    ...innovativeMicroSaasServices20o26,
+    ...specializedITSolutions20o26,
     ...emergingTechServices20o26],
   const categories = [
-    'all';
-    'Business Intelligence & Analytics';
-    'Content Creation & Marketing';
-    'Customer Service & Support';
-    'E-commerce & Retail';
-    'HR & Recruitment';
-    'Financial Management';
-    'Project Management';
-    'Education & Training';
-    'Healthcare & Medical';
-    'Cloud Infrastructure & DevOps';
-    'Cybersecurity & Threat Intelligence';
-    'Data Engineering & Analytics';
-    'API Management & Integration';
-    'Network Monitoring & Management';
-    'Database Management & Optimization';
-    'IT Service Management';
-    'Backup & Disaster Recovery';
-    'Quantum Computing & AI';
-    'Blockchain & Web3';
-    'Internet of Things (IoT)';
-    'Edge Computing & 5G';
-    'AR/VR & Immersive Technology';
-    'Robotics & Automation';
+    'allBusiness Intelligence & Analytics',
+    'Content Creation & MarketingCustomer Service & Support',
+    'E-commerce & RetailHR & Recruitment',
+    'Financial ManagementProject Management',
+    'Education & TrainingHealthcare & Medical',
+    'Cloud Infrastructure & DevOpsCybersecurity & Threat Intelligence',
+    'Data Engineering & AnalyticsAPI Management & Integration',
+    'Network Monitoring & ManagementDatabase Management & Optimization',
+    'IT Service ManagementBackup & Disaster Recovery',
+    'Quantum Computing & AIBlockchain & Web3',
+    'Internet of Things (IoT)Edge Computing & 5G',
+    'AR/VR & Immersive TechnologyRobotics & Automation',
     'Digital Twin & Simulation'],
   const priceRanges = [
-    { value: 'all', label: 'All Prices' };
-    { value: '0-10o0', label: '$0 - $10o0' };
-    { value: '10o0-20o0', label: '$10o0 - $20o0' };
-    { value: '20o0-40o0', label: '$20o0 - $40o0' };
-    { value: '40o0-60o0', label: '$40o0 - $60o0' };
+    { value: 'all', label: 'All Prices' },
+    { value: '0-10o0', label: '$0 - $10o0' },
+    { value: '10o0-20o0', label: '$10o0 - $20o0' },
+    { value: '20o0-40o0', label: '$20o0 - $40o0' },
+    { value: '40o0-60o0', label: '$40o0 - $60o0' },
     { value: '60o0+', label: '$60o0+' }
   ],
   const filteredServices = allServices.filter(service => {
@@ -122,31 +110,31 @@ const ComprehensiveServicesShowcase20o26: React.FC = () => {
   }),
   const getCategoryIcon = (category: string) => {
     const iconMap: { [key: string]: React.ReactNode } ={
-      'Business Intelligence & Analytics': <Database className="w-5 h-5"  />;
-      'Content Creation & Marketing': <Sparkles className="w-5 h-5"  />;
-      'Customer Service & Support': <Users className="w-5 h-5"  />;
-      'E-commerce & Retail': <Globe className="w-5 h-5"  />;
-      'HR & Recruitment': <Users className="w-5 h-5"  />;
-      'Financial Management': <TrendingUp className="w-5 h-5"  />;
-      'Project Management': <Clock className="w-5 h-5"  />;
-      'Education & Training': <Brain className="w-5 h-5"  />;
-      'Healthcare & Medical': <Shield className="w-5 h-5"  />;
-      'Cloud Infrastructure & DevOps': <Cloud className="w-5 h-5"  />;
-      'Cybersecurity & Threat Intelligence': <Shield className="w-5 h-5"  />;
-      'Data Engineering & Analytics': <Database className="w-5 h-5"  />;
-      'API Management & Integration': <Zap className="w-5 h-5"  />;
-      'Network Monitoring & Management': <Globe className="w-5 h-5"  />;
-      'Database Management & Optimization': <Database className="w-5 h-5"  />;
-      'IT Service Management': <Users className="w-5 h-5"  />;
-      'Backup & Disaster Recovery': <Cloud className="w-5 h-5"  />;
-      'Quantum Computing & AI': <Brain className="w-5 h-5"  />;
-      'Blockchain & Web3': <Cube className="w-5 h-5"  />;
-      'Internet of Things (IoT)': <Zap className="w-5 h-5"  />;
-      'Edge Computing & 5G': <Globe className="w-5 h-5"  />;
-      'AR/VR & Immersive Technology': <Cube className="w-5 h-5"  />;
-      'Robotics & Automation': <Robot className="w-5 h-5"  />;
-      'Digital Twin & Simulation': <Cube className="w-5 h-5"  />};
-    return iconMap[category] || <Sparkles className="w-5 h-5"  />};
+      'Business Intelligence & Analytics': <Database className="w-5 h-5"  />,
+      'Content Creation & Marketing': <Sparkles className="w-5 h-5"  />,
+      'Customer Service & Support': <Users className="w-5 h-5"  />,
+      'E-commerce & Retail': <Globe className="w-5 h-5"  />,
+      'HR & Recruitment': <Users className="w-5 h-5"  />,
+      'Financial Management': <TrendingUp className="w-5 h-5"  />,
+      'Project Management': <Clock className="w-5 h-5"  />,
+      'Education & Training': <Brain className="w-5 h-5"  />,
+      'Healthcare & Medical': <Shield className="w-5 h-5"  />,
+      'Cloud Infrastructure & DevOps': <Cloud className="w-5 h-5"  />,
+      'Cybersecurity & Threat Intelligence': <Shield className="w-5 h-5"  />,
+      'Data Engineering & Analytics': <Database className="w-5 h-5"  />,
+      'API Management & Integration': <Zap className="w-5 h-5"  />,
+      'Network Monitoring & Management': <Globe className="w-5 h-5"  />,
+      'Database Management & Optimization': <Database className="w-5 h-5"  />,
+      'IT Service Management': <Users className="w-5 h-5"  />,
+      'Backup & Disaster Recovery': <Cloud className="w-5 h-5"  />,
+      'Quantum Computing & AI': <Brain className="w-5 h-5"  />,
+      'Blockchain & Web3': <Cube className="w-5 h-5"  />,
+      'Internet of Things (IoT)': <Zap className="w-5 h-5"  />,
+      'Edge Computing & 5G': <Globe className="w-5 h-5"  />,
+      'AR/VR & Immersive Technology': <Cube className="w-5 h-5"  />,
+      'Robotics & Automation': <Robot className="w-5 h-5"  />,
+      'Digital Twin & Simulation': <Cube className="w-5 h-5"  />},
+    return iconMap[category] || <Sparkles className="w-5 h-5"  />},
   return (
     <Layout>,
       <div className="min-h-screen bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-indigo-90o0">,
@@ -385,5 +373,5 @@ const ComprehensiveServicesShowcase20o26: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </Layout>)};
-export default ComprehensiveServicesShowcase20o26;
+    </Layout>)},
+export default ComprehensiveServicesShowcase20o26,

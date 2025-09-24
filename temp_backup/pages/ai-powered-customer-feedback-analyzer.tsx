@@ -1,54 +1,50 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Shield;
-  Star;
-  MessageSquare;
-  Brain;
-  BarChart3;
-  TrendingUp;
-  Users;
-  Zap;
-  Globe;
-  Lock;
-  Target;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Shield,
+  Star,
+  MessageSquare,
+  Brain,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Zap,
+  Globe,
+  Lock,
+  Target,
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
 export default function AIPoweredCustomerFeedbackAnalyzerPage() {
   const service = {
-    name: 'AI-Powered Customer Feedback Analyzer';
-    tagline: 'Transform customer feedback into actionable insights with AI';
-    price: '$299';
-    period: '/month';
+    name: 'AI-Powered Customer Feedback Analyzer',
+    tagline: 'Transform customer feedback into actionable insights with AI',
+    price: '$299',
+    period: '/month',
     description:,
-      'Intelligent feedback analysis platform that uses natural language processing and sentiment analysis to automatically categorize, analyze, and extract actionable insights from customer feedback across multiple channels.';
+      'Intelligent feedback analysis platform that uses natural language processing and sentiment analysis to automatically categorize, analyze, and extract actionable insights from customer feedback across multiple channels.',
     features: [
-      'Multi-channel feedback collection';
-      'AI-powered sentiment analysis';
-      'Automatic feedback categorization';
-      'Trend analysis and reporting';
-      'Real-time alert system';
-      'Integration with CRM platforms';
-      'Custom dashboard and reports';
-      'Multi-language support';
-      'API for custom integrations';
-    ];
-    rating: 4.8;
-    trialDays: 14;
-    setupTime: '1 week';
+      'Multi-channel feedback collectionAI-powered sentiment analysis',
+      'Automatic feedback categorizationTrend analysis and reporting',
+      'Real-time alert systemIntegration with CRM platforms',
+      'Custom dashboard and reportsMulti-language support',
+      'API for custom integrations',
+    ],
+    rating: 4.8,
+    trialDays: 14,
+    setupTime: '1 week',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-  };
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+  },
   return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
@@ -143,7 +139,7 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {
                       Market Research,
                     </h3>,
                     <p className='text-slate-30o0 text-sm'>,
-                      Gain insights into customer preferences, market trends;
+                      Gain insights into customer preferences, market trends,
                       and competitive positioning.,
                     </p>,
                   </div>,
@@ -162,11 +158,9 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {
                     </h3>,
                     <div className='space-y-2'>,
                       {[
-                        'Python & TensorFlow';
-                        'React & Node.js';
-                        'PostgreSQL & Redis';
-                        'NLP & Sentiment Analysis';
-                        'Real-time Processing';
+                        'Python & TensorFlowReact & Node.js',
+                        'PostgreSQL & RedisNLP & Sentiment Analysis',
+                        'Real-time Processing',
                       ].map((tech, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
@@ -182,11 +176,9 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {
                     </h3>,
                     <div className='space-y-2'>,
                       {[
-                        'Salesforce & HubSpot';
-                        'Zendesk & Shopify';
-                        'WooCommerce & Mailchimp';
-                        'Custom APIs';
-                        'Webhook Support';
+                        'Salesforce & HubSpotZendesk & Shopify',
+                        'WooCommerce & MailchimpCustom APIs',
+                        'Webhook Support',
                       ].map((integration, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-cyan-40o0 rounded-full'></div>,
@@ -373,7 +365,7 @@ export default function AIPoweredCustomerFeedbackAnalyzerPage() {
             </h2>,
             <p className='text-lg text-slate-30o0 mb-6 max-w-2xl mx-auto'>,
               Join 234+ organizations already using our AI-Powered Customer,
-              Feedback Analyzer to improve customer satisfaction, reduce churn;
+              Feedback Analyzer to improve customer satisfaction, reduce churn,
               and drive business growth.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

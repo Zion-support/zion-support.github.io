@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Eval‑Gated Autonomy | Zion Tech Group';
+  title: 'AI 20o26: Eval‑Gated Autonomy | Zion Tech Group',
   description:,
-    'Designing autonomous agents that are gated by evaluations across build, deploy, and runtime.';
-  keywords: ['evals', 'governance', 'autonomy', 'ai agents', 'risk management'];
-};
+    'Designing autonomous agents that are gated by evaluations across build, deploy, and runtime.',
+  keywords: ['evalsgovernance', 'autonomyai agents', 'risk management'],
+},
 const EvalGatedAutonomy20o26: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -67,5 +67,5 @@ const EvalGatedAutonomy20o26: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default EvalGatedAutonomy20o26;
+    </div>)},
+export default EvalGatedAutonomy20o26,

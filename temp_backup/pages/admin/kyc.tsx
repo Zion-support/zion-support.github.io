@@ -12,12 +12,12 @@ export default function AdminKycPage() {
   useEffect(() => {
     load()}, []),
   async function act(
-    userId: string;
+    userId: string,
     action: 'approve' | 'reject' | 'needs_more_info') {
     const res = await fetch('/api/admin/kyc-queue', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ userId, action, reason: reason || undefined });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ userId, action, reason: reason || undefined }),
     }),
     const data = await res.json(),
     if (data.ok) load()}
@@ -57,7 +57,7 @@ export default function AdminKycPage() {
                   </div>,
                   {p.flags && p.flags.length > 0 && (
                     <div className='text-xs mt-1'>,
-                      Flags: {p.flags.join(', ')}
+                      Flags: {p.flags.join()}
                     </div>)}
                 </div>,
                 <div className='flex gap-2'>,

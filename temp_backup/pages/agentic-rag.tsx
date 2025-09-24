@@ -2,48 +2,44 @@ import Head from 'next/head',
 import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMatrixBackground',
 import { Button } from '../components/ui/Button',
 import {
-  Database;
-  Gauge;
-  Check;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Link2;
+  Database,
+  Gauge,
+  Check,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Link2,
 } from 'lucide-react',
 export default function AgenticRAGPage() {
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const plans = [
     {
-      name: 'Starter';
-      price: '$199/month';
+      name: 'Starter',
+      price: '$199/month',
       items: [
-        '100K tokens/month';
-        'Web/PDF ingestion';
-        'Basic reranker';
-        'CSV export';
-      ];
-    };
+        '100K tokens/monthWeb/PDF ingestion',
+        'Basic rerankerCSV export',
+      ]
+    },
     {
-      name: 'Pro';
-      price: '$599/month';
+      name: 'Pro',
+      price: '$599/month',
       items: [
-        '2M tokens/month';
-        'GitHub/S3 connectors';
-        'Hybrid search + rerank';
-        'Eval kits';
-      ];
-    };
+        '2M tokens/monthGitHub/S3 connectors',
+        'Hybrid search + rerankEval kits',
+      ]
+    },
     {
-      name: 'Enterprise';
-      price: 'Custom';
-      items: ['Siloed indexes', 'SOC2/ISO support', 'Private VPC', 'SAML/SSO'];
-    };
+      name: 'Enterprise',
+      price: 'Custom',
+      items: ['Siloed indexesSOC2/ISO support', 'Private VPCSAML/SSO'],
+    },
   ],
   return (
     <UltraFuturisticMatrixBackground>,

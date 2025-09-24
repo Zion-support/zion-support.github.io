@@ -61,5 +61,5 @@ const AutonomousEdgeBlueprint20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousEdgeBlueprint20o25;
+    </div>)},
+export default AutonomousEdgeBlueprint20o25,

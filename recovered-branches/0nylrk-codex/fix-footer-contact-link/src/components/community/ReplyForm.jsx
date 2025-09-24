@@ -1,8 +1,8 @@
 import React, { useState } from 'react',
 import { Button } from '@/components/ui/button',
 export default function ReplyForm({
-  onSubmit;
-  placeholder = 'Write your reply...';
+  onSubmit,
+  placeholder = 'Write your reply...',
 }) {
   const [content, setContent] = useState(''),
   const handleSubmit = e => {
@@ -10,7 +10,7 @@ export default function ReplyForm({
     if (content.trim()) {
       onSubmit(content),
       setContent('')}
-  };
+  },
   return (
     <form onSubmit={handleSubmit} className='mt-4'>,
       <textarea

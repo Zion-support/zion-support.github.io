@@ -7,18 +7,18 @@ import {
   ArrowRight,
   Star,
   Zap,
-  Sparkles;
-  TrendingUp;
-  Users;
-  Globe;
-  X;
-  Play;
-  Download;
-  ExternalLink;
-  Brain;
-  Cpu;
-  Database;
-  Cloud;
+  Sparkles,
+  TrendingUp,
+  Users,
+  Globe,
+  X,
+  Play,
+  Download,
+  ExternalLink,
+  Brain,
+  Cpu,
+  Database,
+  Cloud,
   Shield} from 'lucide-react',
 const NewContentNavigation = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -27,90 +27,90 @@ const NewContentNavigation = () => {
     setIsVisible(true)}[]),
   const contentCategories = [
     {
-      title: "AI Solutions";
-      description: "Revolutionary AI technologies";
-      icon: Brain;
-      color: "from-purple-60o0 to-pink-60o0";
-      href: "/ai-solutions";
+      title: "AI Solutions",
+      description: "Revolutionary AI technologies",
+      icon: Brain,
+      color: "from-purple-60o0 to-pink-60o0",
+      href: "/ai-solutions",
       items: [
-        "Machine Learning";
-        "Natural Language Processing";
-        "Computer Vision";
-        "AI Automation"]};
+        "Machine Learning",
+        "Natural Language Processing",
+        "Computer Vision",
+        "AI Automation"]},
     {
-      title: "Quantum Computing";
-      description: "Next-generation quantum solutions";
-      icon: Cpu;
-      color: "from-blue-60o0 to-cyan-60o0";
-      href: "/quantum-computing";
+      title: "Quantum Computing",
+      description: "Next-generation quantum solutions",
+      icon: Cpu,
+      color: "from-blue-60o0 to-cyan-60o0",
+      href: "/quantum-computing",
       items: [
-        "Quantum Algorithms";
-        "Quantum Machine Learning";
-        "Quantum Security";
-        "Quantum Optimization"]};
+        "Quantum Algorithms",
+        "Quantum Machine Learning",
+        "Quantum Security",
+        "Quantum Optimization"]},
     {
-      title: "Neural Interfaces";
-      description: "Brain-computer interface tech";
-      icon: Database;
-      color: "from-green-60o0 to-emerald-60o0";
-      href: "/neural-interfaces";
+      title: "Neural Interfaces",
+      description: "Brain-computer interface tech",
+      icon: Database,
+      color: "from-green-60o0 to-emerald-60o0",
+      href: "/neural-interfaces",
       items: [
-        "BCI Development";
-        "Cognitive Enhancement";
-        "Medical Applications";
-        "Neural Signal Processing"]};
+        "BCI Development",
+        "Cognitive Enhancement",
+        "Medical Applications",
+        "Neural Signal Processing"]},
     {
-      title: "Cloud Infrastructure";
-      description: "Scalable cloud solutions";
-      icon: Cloud;
-      color: "from-orange-60o0 to-red-60o0";
-      href: "/cloud-infrastructure";
+      title: "Cloud Infrastructure",
+      description: "Scalable cloud solutions",
+      icon: Cloud,
+      color: "from-orange-60o0 to-red-60o0",
+      href: "/cloud-infrastructure",
       items: [
-        "Multi-Cloud Architecture";
-        "Container Orchestration";
-        "Serverless Computing";
-        "Edge Computing"]};
+        "Multi-Cloud Architecture",
+        "Container Orchestration",
+        "Serverless Computing",
+        "Edge Computing"]},
     {
-      title: "Security Solutions";
-      description: "Advanced security measures";
-      icon: Shield;
-      color: "from-indigo-60o0 to-purple-60o0";
-      href: "/security-solutions";
+      title: "Security Solutions",
+      description: "Advanced security measures",
+      icon: Shield,
+      color: "from-indigo-60o0 to-purple-60o0",
+      href: "/security-solutions",
       items: [
-        "Threat Detection";
-        "Data Encryption";
-        "Access Control";
-        "Compliance Monitoring"]};
+        "Threat Detection",
+        "Data Encryption",
+        "Access Control",
+        "Compliance Monitoring"]},
     {
-      title: "Ultimate Showcase";
-      description: "Complete technology showcase";
-      icon: Sparkles;
-      color: "from-pink-60o0 to-rose-60o0";
-      href: "/showcase/ultimate-20o25";
+      title: "Ultimate Showcase",
+      description: "Complete technology showcase",
+      icon: Sparkles,
+      color: "from-pink-60o0 to-rose-60o0",
+      href: "/showcase/ultimate-20o25",
       items: [
-        "All Technologies";
-        "Interactive Demos";
-        "Case Studies";
+        "All Technologies",
+        "Interactive Demos",
+        "Case Studies",
         "Success Stories"]}
   ],
   const featuredContent = [
     {
-      title: "AI 20o25 Breakthrough";
-      description: "Latest AI innovations transforming industries";
-      href: "/ai-solutions";
-      badge: "HOT";
-      icon: TrendingUp};
+      title: "AI 20o25 Breakthrough",
+      description: "Latest AI innovations transforming industries",
+      href: "/ai-solutions",
+      badge: "HOT",
+      icon: TrendingUp},
     {
-      title: "Quantum Revolution";
-      description: "Quantum computing solutions for complex problems";
-      href: "/quantum-computing";
-      badge: "NEW";
-      icon: Zap};
+      title: "Quantum Revolution",
+      description: "Quantum computing solutions for complex problems",
+      href: "/quantum-computing",
+      badge: "NEW",
+      icon: Zap},
     {
-      title: "Neural Interface Demo";
-      description: "Experience brain-computer interfaces";
-      href: "/neural-interfaces";
-      badge: "DEMO";
+      title: "Neural Interface Demo",
+      description: "Experience brain-computer interfaces",
+      href: "/neural-interfaces",
+      badge: "DEMO",
       icon: Play}
   ],
   return (
@@ -252,5 +252,5 @@ const NewContentNavigation = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.div>)};
-export default NewContentNavigation;
+    </motion.div>)},
+export default NewContentNavigation,

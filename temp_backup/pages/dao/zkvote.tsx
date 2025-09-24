@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { useEffect, useMemo, useState } from 'react',
 import { BrowserProvider } from 'ethers',
 import dynamic from 'next/dynamic',
 // Lazy import to avoid SSR issues,
 const ReactJson = dynamic(() => import('react-json-view'), {
-  ssr: false;
+  ssr: false
 }) as any,
 export default function ZkVotePage() {
   const [account, setAccount] = useState<string>(''),
@@ -23,42 +23,42 @@ export default function ZkVotePage() {
   const connect = async () => {
     if (!provider) return,
     const accs = await provider.send('eth_requestAccounts', []),
-    setAccount(accs[0])};
+    setAccount(accs[0])},
   const generateIdentity = async () => {
     // Minimal identity: hash of wallet address + salt (for demo only).,
     // In production, use @semaphore-protocol/identity to create deterministic ZK identities.,
     const salt = Date.now().toString(),
     const id = `0x${Buffer.from(account + ':' + salt).toString('hex')}`,
-    setIdentityCommitment(id)};
+    setIdentityCommitment(id)},
   const makeProof = async () => {
     // Placeholder: front-end should use @semaphore-protocol/proof to generate proof from identity.,
     // Here we mock a proof shape matching the contract struct for demo and UI plumbing.,
     const mock = {
-      pA: [0, 0];
+      pA: [0, 0],
       pB: [
-        [0, 0];
-        [0, 0];
-      ];
-      pC: [0, 0];
-      pubSignals: [0, optionId, Number(groupId), 0];
-      merkleTreeDepth: 20;
-      weight: weight ? BigInt(weight).toString() : '0';
-    };
-    setProof(mock)};
+        [0, 0],
+        [0, 0],
+      ],
+      pC: [0, 0],
+      pubSignals: [0, optionId, Number(groupId), 0],
+      merkleTreeDepth: 20,
+      weight: weight ? BigInt(weight).toString() : '0'
+    },
+    setProof(mock)},
   const submitVote = async () => {
     if (!proof) return,
     setSubmitting(true),
     try {
       const res = await fetch('/api/dao/submit-zk-vote', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ proof, optionId });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ proof, optionId }),
       }),
       const j = await res.json(),
       setResult(j)} catch (e: any) {
       setResult({ error: e?.message || 'failed' })} finally {
       setSubmitting(false)}
-  };
+  },
   return (
     <div className='max-w-2xl mx-auto p-6 space-y-4'>,
       <h1 className='text-2xl font-semibold'>Zion OS — ZK Vote (Semaphore)</h1>,

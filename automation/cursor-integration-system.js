@@ -1,14 +1,14 @@
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -35,21 +35,21 @@ class CursorIntegrationSystem extends EventEmitter {
   constructor(config ={}) {
     super(),
     this.config ={
-      dataDir: config.dataDir || './data';
-      enableChatAutomation: config.enableChatAutomation !== false;
-      enableChatMonitor: config.enableChatMonitor !== false;
-      enableTodoQueue: config.enableTodoQueue !== false;
-      autoProcessChats: config.autoProcessChats !== false;
-      ...config};
+      dataDir: config.dataDir || './data',
+      enableChatAutomation: config.enableChatAutomation !== false,
+      enableChatMonitor: config.enableChatMonitor !== false,
+      enableTodoQueue: config.enableTodoQueue !== false,
+      autoProcessChats: config.autoProcessChats !== false,
+      ...config},
     this.isRunning = false,
     this.chatAutomation = null,
     this.chatMonitor = null,
     this.todoQueueManager = null,
     this.integrationStats ={
-      chatsProcessed: 0;
-      todosCreated: 0;
-      queueItemsAdded: 0;
-      lastActivity: null};
+      chatsProcessed: 0,
+      todosCreated: 0,
+      queueItemsAdded: 0,
+      lastActivity: null},
   }
 ,
   async initialize() {
@@ -76,10 +76,10 @@ class CursorIntegrationSystem extends EventEmitter {
   async initializeChatAutomation() {
     logger.info('🔧 Initializing Cursor Chat Automation...'),
     this.chatAutomation = new CursorChatAutomation({
-      dataDir: path.join(this.config.dataDir, 'cursor-chats');
-      todoFile: path.join(this.config.dataDir, 'todos.json');
-      queueFile: path.join(this.config.dataDir, 'queue.json');
-      autoCreateTodos: true;
+      dataDir: path.join(this.config.dataDir, 'cursor-chats'),
+      todoFile: path.join(this.config.dataDir, 'todos.json'),
+      queueFile: path.join(this.config.dataDir, 'queue.json'),
+      autoCreateTodos: true,
       autoQueueTasks: true}),
     await this.chatAutomation.initialize(),
     // Listen for events,
@@ -95,7 +95,7 @@ class CursorIntegrationSystem extends EventEmitter {
   async initializeChatMonitor() {
     logger.info('👀 Initializing Cursor Chat Monitor...'),
     this.chatMonitor = new CursorChatMonitor({
-      outputDir: path.join(this.config.dataDir, 'cursor-chats');
+      outputDir: path.join(this.config.dataDir, 'cursor-chats'),
       maxHistorySize: 10o00}),
     await this.chatMonitor.initialize(),
     // Listen for events,
@@ -111,9 +111,9 @@ class CursorIntegrationSystem extends EventEmitter {
   async initializeTodoQueueManager() {
     logger.info('📋 Initializing Todo and Queue Manager...'),
     this.todoQueueManager = new TodoQueueManager({
-      dataDir: this.config.dataDir;
-      autoAssign: true;
-      autoPrioritize: true;
+      dataDir: this.config.dataDir,
+      autoAssign: true,
+      autoPrioritize: true,
       maxQueueSize: 20o0}),
     await this.todoQueueManager.initialize(),
     // Listen for events,
@@ -129,22 +129,22 @@ class CursorIntegrationSystem extends EventEmitter {
       this.chatAutomation.on('todoCreated', async (todo) => {
         try {
           await this.todoQueueManager.addTodo({
-            title: todo.text;
-            description: todo.context;
-            priority: todo.priority;
-            category: todo.type;
-            source: 'cursor_chat_automation';
+            title: todo.text,
+            description: todo.context,
+            priority: todo.priority,
+            category: todo.type,
+            source: 'cursor_chat_automation',
             chatId: todo.chatId})} catch (error) {
           logger.error('Error adding todo to manager:', error)}
       }),
       this.chatAutomation.on('itemQueued', async (item) => {
         try {
           await this.todoQueueManager.addToQueue({
-            title: item.text;
-            description: item.context;
-            type: item.type;
-            priority: 'medium';
-            source: 'cursor_chat_automation';
+            title: item.text,
+            description: item.context,
+            type: item.type,
+            priority: 'medium',
+            source: 'cursor_chat_automation',
             chatId: item.chatId})} catch (error) {
           logger.error('Error adding item to queue:', error)}
       })}
@@ -161,10 +161,10 @@ class CursorIntegrationSystem extends EventEmitter {
     try {
       // Create a chat object that the automation can process,
       const chat ={
-        id: chatData.id;
-        content: chatData.content;
-        timestamp: chatData.timestamp;
-        source: chatData.source};
+        id: chatData.id,
+        content: chatData.content,
+        timestamp: chatData.timestamp,
+        source: chatData.source},
       // Process the chat,
       await this.chatAutomation.processChat(chat)} catch (error) {
       logger.error('Error processing chat with automation:', error)}
@@ -173,11 +173,11 @@ class CursorIntegrationSystem extends EventEmitter {
   async processManualChat(content, metadata ={}) {
     logger.info('📝 Processing manual chat input...'),
     const chat ={
-      id: `manual_${Date.now()}`;
-      content: content;
-      timestamp: new Date().toISOString();
-      source: 'manual';
-      ...metadata};
+      id: `manual_${Date.now()}`,
+      content: content,
+      timestamp: new Date().toISOString(),
+      source: 'manual',
+      ...metadata},
     if (this.chatAutomation) {
       await this.chatAutomation.processChat(chat)}
 ,
@@ -188,7 +188,7 @@ class CursorIntegrationSystem extends EventEmitter {
       throw new Error('Todo/Queue Manager not initialized')}
 ,
     return await this.todoQueueManager.addTodo({
-      ...todoData;
+      ...todoData,
       source: 'manual'})}
 ,
   async addManualQueueItem(itemData) {
@@ -196,7 +196,7 @@ class CursorIntegrationSystem extends EventEmitter {
       throw new Error('Todo/Queue Manager not initialized')}
 ,
     return await this.todoQueueManager.addToQueue({
-      ...itemData;
+      ...itemData,
       source: 'manual'})}
 ,
   getTodos(filter ={}) {
@@ -237,26 +237,26 @@ class CursorIntegrationSystem extends EventEmitter {
 ,
   async generateIntegrationReport() {
     const report ={
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       systemStatus: {
-        isRunning: this.isRunning;
-        chatAutomationActive: this.chatAutomation?.isRunning || false;
-        chatMonitorActive: this.chatMonitor?.isRunning || false;
-        todoQueueActive: this.todoQueueManager?.isRunning || false};
-      integrationStats: this.integrationStats;
+        isRunning: this.isRunning,
+        chatAutomationActive: this.chatAutomation?.isRunning || false,
+        chatMonitorActive: this.chatMonitor?.isRunning || false,
+        todoQueueActive: this.todoQueueManager?.isRunning || false},
+      integrationStats: this.integrationStats,
       components: {
-        chatAutomation: this.chatAutomation?.getStatus() || null;
-        chatMonitor: this.chatMonitor?.getStatus() || null;
-        todoQueueManager: this.todoQueueManager?.getStatus() || null};
+        chatAutomation: this.chatAutomation?.getStatus() || null,
+        chatMonitor: this.chatMonitor?.getStatus() || null,
+        todoQueueManager: this.todoQueueManager?.getStatus() || null},
       summary: {
-        totalTodos: this.todoQueueManager?.todos.size || 0;
-        totalQueueItems: this.todoQueueManager?.queue.length || 0;
-        totalChats: this.chatMonitor?.chatHistory.length || 0;
-        todosFromChats: this.getTodos({ source: 'cursor_chat' }).length;
+        totalTodos: this.todoQueueManager?.todos.size || 0,
+        totalQueueItems: this.todoQueueManager?.queue.length || 0,
+        totalChats: this.chatMonitor?.chatHistory.length || 0,
+        todosFromChats: this.getTodos({ source: 'cursor_chat' }).length,
         queueItemsFromChats: this.getQueueItems({ source: 'cursor_chat' }),
-          .length}};
+          .length}},
     const reportFile = path.join(
-      this.config.dataDir;
+      this.config.dataDir,
       `integration-report-${Date.now()}.json`),
     await fs.writeFile(reportFile, JSON.stringify(report, null, 2)),
     logger.info(`📊 Generated integration report: ${reportFile}`),
@@ -265,12 +265,12 @@ class CursorIntegrationSystem extends EventEmitter {
 ,
   getStatus() {
     return {
-      isRunning: this.isRunning;
+      isRunning: this.isRunning,
       components: {
-        chatAutomation: this.chatAutomation?.getStatus() || null;
-        chatMonitor: this.chatMonitor?.getStatus() || null;
-        todoQueueManager: this.todoQueueManager?.getStatus() || null};
-      integrationStats: this.integrationStats};
+        chatAutomation: this.chatAutomation?.getStatus() || null,
+        chatMonitor: this.chatMonitor?.getStatus() || null,
+        todoQueueManager: this.todoQueueManager?.getStatus() || null},
+      integrationStats: this.integrationStats},
   }
 ,
   async stop() {
@@ -293,9 +293,9 @@ module.exports = CursorIntegrationSystem,
 // Run if called directly,
 if (require.main === module) {
   const integration = new CursorIntegrationSystem({
-    enableChatAutomation: true;
-    enableChatMonitor: true;
-    enableTodoQueue: true;
+    enableChatAutomation: true,
+    enableChatMonitor: true,
+    enableTodoQueue: true,
     autoProcessChats: true}),
   integration.initialize().catch((error) => {
     logger.error('Failed to initialize Cursor Integration System:', error),

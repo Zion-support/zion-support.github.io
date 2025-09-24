@@ -1,79 +1,72 @@
-import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types';
+import { FraudEvent, HeuristicEvaluation, MonitoredSource } from './types',
 const suspiciousLinkHosts = [
-  'paypal.mecash.app';
-  'venmo.comwa.me';
-  't.metelegram.me';
-  'whatsapp.comwesternunion.com';
-  'moneygram.com'];
+  'paypal.mecash.appvenmo.comwa.me',
+  't.metelegram.mewhatsapp.comwesternunion.com',
+  'moneygram.com'],
 const suspiciousPhrases = [
-  'whatsapp metelegram me';
-  'contact me on whatsappcashapp only';
-  'crypto onlysend crypto';
-  'wire transfergift card';
-  'western unionoff-platform payment';
-  'outside paymentpay outside';
-  'pay me directlydm me on';
-  'reach me on whatsappskype me';
-  'email me at'];
+  'whatsapp metelegram mecontact me on whatsappcashapp only',
+  'crypto onlysend cryptowire transfergift card',
+  'western unionoff-platform paymentoutside paymentpay outside',
+  'pay me directlydm me onreach me on whatsappskype me',
+  'email me at'],
 const vagueScammyJobPhrases = [
-  'easy workquick money';
-  'no experience neededwork from home and earn fast';
-  'daily payoutsearn $\\d+ per day'];
+  'easy workquick moneyno experience neededwork from home and earn fast',
+  'daily payoutsearn $\\d+ per day'],
 function containsSuspiciousHost(text: string): boolean {
-  const lower = text.toLowerCase();
+  const lower = text.toLowerCase(),
   return suspiciousLinkHosts.some((host) => lower.includes(host))}
 ,
 function containsSuspiciousPhrase(text: string): string[] {
-  const lower = text.toLowerCase();
+  const lower = text.toLowerCase(),
   return suspiciousPhrases.filter((p) => lower.includes(p))}
 ,
 function containsVagueJobClaims(text: string): string[] {
-  const lower = text.toLowerCase();
-  const reasons: string[] = [];
+  const lower = text.toLowerCase(),
+  const reasons: string[] = [],
   for (const pattern of vagueScammyJobPhrases) {
-    const re = new RegExp(pattern, 'i');
-    if (re.test(lower)) reasons.push(`job_vague_claim: "${pattern}"`);
+    const re = new RegExp(pattern, 'i'),
+    if (re.test(lower)) reasons.push(`job_vague_claim: "${pattern}"`),
   }
-  return reasons;
+  return reasons,
 }
 ,
 export interface HeuristicDeps {
   countEventsByIp: (ip: string, source: MonitoredSource, withinMinutes: number) => Promise<number>}
 ,
 export async function evaluateHeuristics(event: FraudEvent, deps: HeuristicDeps): Promise<HeuristicEvaluation> {
-  const reasons: string[] = [];
-  let severity: HeuristicEvaluation['severity'] = 'low';
+  const reasons: string[] = [],
+  let severity: HeuristicEvaluation['severity'] = 'low',
   if (event.source === 'signup' && event.ipAddress) {
-    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10);
+    const recent = await deps.countEventsByIp(event.ipAddress, 'signup', 10),
     if (recent >= 3) {
-      reasons.push(`rapid_fire_signups_from_ip: ${event.ipAddress}:${recent}in10m`);
-      severity = recent >= 10 ? 'high' : 'medium';
+      reasons.push(`rapid_fire_signups_from_ip: ${event.ipAddress}:${recent}in10m`),
+      severity = recent >= 10 ? 'high' : 'medium',
     }
   }
 ,
   if ((event.source === 'message' || event.source === 'job_post' || event.source === 'quote' || event.source === 'review') && event.content) {
     if (containsSuspiciousHost(event.content)) {
-      reasons.push('outside_payment_link_detected');
-      severity = 'high';
+      reasons.push('outside_payment_link_detected'),
+      severity = 'high',
     }
-    const phrases = containsSuspiciousPhrase(event.content);
+    const phrases = containsSuspiciousPhrase(event.content),
     if (phrases.length > 0) {
-      reasons.push(...phrases.map((p) => `suspicious_phrase: "${p}"`));
-      if (severity === 'low') severity = 'medium';
+      reasons.push(...phrases.map((p) => `suspicious_phrase: "${p}"`)),
+      if (severity === 'low') severity = 'medium',
     }
   }
 ,
   if (event.source === 'job_post' && event.content) {
-    const vague = containsVagueJobClaims(event.content);
+    const vague = containsVagueJobClaims(event.content),
     if (vague.length > 0) {
-      reasons.push(...vague);
-      if (severity === 'low') severity = 'medium';
+      reasons.push(...vague),
+      if (severity === 'low') severity = 'medium',
     }
   }
 ,
   return {
-    flagged: reasons.length > 0;
-    reasons;
-    severity};
+    flagged: reasons.length > 0,
+    reasons,
+    severity},
 }
 ,

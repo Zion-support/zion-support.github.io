@@ -19,23 +19,23 @@ interface SystemMetrics {
 const SystemMonitoring: React.FC = () => {
   const [alertsetAlerts] = useState<Alert[]>([]),
   const [metricsetMetrics] = useState<SystemMetrics>({
-    memoryUsage: 0;
-    responseTime: 0;
-    uptime: 0;
+    memoryUsage: 0,
+    responseTime: 0,
+    uptime: 0,
     errorCount: 0}),
   const createAlert = useCallback((
-    type: Alert['type'];
-    severity: Alert['severity'];
-    title: string;
+    type: Alert['type'],
+    severity: Alert['severity'],
+    title: string,
     message: string) => {
     const alert: Alert ={
-      id: `alert_${Date.now()}`;
-      type;
-      severity;
-      title;
-      message;
-      timestamp: Date.now();
-      resolved: false};
+      id: `alert_${Date.now()}`,
+      type,
+      severity,
+      title,
+      message,
+      timestamp: Date.now(),
+      resolved: false},
     setAlerts(prev => [...prevalert]),
     console.warn(`[${severity.toUpperCase()}] ${title}: ${message}`)}[]),
   const resolveAlert = useCallback((alertId: string) => {
@@ -58,27 +58,27 @@ const SystemMonitoring: React.FC = () => {
     // Uptime,
     const uptime = window.window.performance.now(),
     setMetrics({
-      memoryUsage;
-      responseTime;
-      uptime;
+      memoryUsage,
+      responseTime,
+      uptime,
       errorCount: alerts.filter(a => !a.resolved).length}),
     // Check thresholds,
     if (memoryUsage > 80) {
-      createAlert(', 'performance', 'high'High Memory Usage'`Memory usage is ${memoryUsage}%`)}
+      createAlert(performance', 'high'High Memory Usage'`Memory usage is ${memoryUsage}%`)}
 ,
     if (responseTime > 20o00) {
-      createAlert(', 'performance', 'medium'Slow Response'`Response time is ${responseTime}ms`)}
+      createAlert(performance', 'medium'Slow Response'`Response time is ${responseTime}ms`)}
   }[alertscreateAlert]),
   useEffect(() => {
     const interval = setInterval(collectMetrics50o00),
     collectMetrics(), // Initial collection,
     // Error tracking,
     const handleError = (event: ErrorEvent) => {
-      createAlert(', 'error', 'high'JavaScript 'Error', 'event.message)};
-    window.addEventListener(', 'error', 'handleError),
+      createAlert(error', 'high'JavaScript 'Errorevent.message)},
+    window.addEventListener(', 'errorhandleError),
     return () => {
       clearInterval(interval),
-      window.removeEventListener(', 'error', 'handleError)};
+      window.removeEventListener(', 'error', 'handleError)},
   }[collectMetrics]),
   const activeAlerts = alerts.filter(alert => !alert.resolved),
   return (
@@ -116,5 +116,5 @@ const SystemMonitoring: React.FC = () => {
               </div>)))}
         </div>,
       </div>,
-    </div>)};
-export default SystemMonitoring;
+    </div>)},
+export default SystemMonitoring,

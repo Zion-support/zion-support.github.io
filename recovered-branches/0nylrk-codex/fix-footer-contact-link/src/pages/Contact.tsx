@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import {useState} from "react",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
@@ -13,40 +13,40 @@ import z from "zod",
 import {ChatAssistant} from "@/components/ChatAssistant",
 import {Mail, MessageSquare, MapPin, Phone} from "lucide-react",
 import {AppLayout} from "@/layout/AppLayout",
-import { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { SEO } from "@/components/SEO";
-import { GradientHeading } from "@/components/GradientHeading";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Card } from "@/components/ui/card";
-import { toast } from "@/components/ui/use-toast";
-import z from "zod";
-import { ChatAssistant } from "@/components/ChatAssistant";
+import { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { SEO } from "@/components/SEO",
+import { GradientHeading } from "@/components/GradientHeading",
+import { Button } from "@/components/ui/button",
+import { Input } from "@/components/ui/input",
+import { Textarea } from "@/components/ui/textarea",
+import { Card } from "@/components/ui/card",
+import { toast } from "@/components/ui/use-toast",
+import z from "zod",
+import { ChatAssistant } from "@/components/ChatAssistant",
 import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
 import { AppLayout } from "@/layout/AppLayout",
-import { Mail, MessageSquare, MapPin, Phone } from "lucide-react";
-import { AppLayout } from "@/layout/AppLayout";
-import { useState } from "react";
+import { Mail, MessageSquare, MapPin, Phone } from "lucide-react",
+import { AppLayout } from "@/layout/AppLayout",
+import { useState } from "react",
 export default function Contact() {
   const [formData, setFormData] = useState({
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "";
-    email: "";
-    subject: "";
+    name: "",
+    email: "",
+    subject: "",
     message: ""}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [isChatOpen, setIsChatOpen] = useState(false),
-    message: ""});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
+    message: ""}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isChatOpen, setIsChatOpen] = useState(false),
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({ ...prev, [name]: value }))}
-  };
+  },
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault(),
     try {
@@ -59,13 +59,13 @@ export default function Contact() {
       schema.parse(formData),
       // Simulate form submission,
       setIsSubmitting(true),
-        name: z.string().min(2, "Name must be at least 2 characters");
-        email: z.string().email("Invalid email address");
-        subject: z.string().min(2, "Subject must be at least 2 characters");
+        name: z.string().min(2, "Name must be at least 2 characters"),
+        email: z.string().email("Invalid email address"),
+        subject: z.string().min(2, "Subject must be at least 2 characters"),
         message: z.string().min(10, "Message must be at least 10 characters")}),
       schema.parse(formData),
       // Simulate form submission,
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       setTimeout(() => {
         setIsSubmitting(false),
         toast({
@@ -88,7 +88,7 @@ export default function Contact() {
           variant: "destructive"})}
     }
 }
-  };
+  },
   // Handle sending messages to the AI chat assistant,
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
@@ -98,9 +98,9 @@ export default function Contact() {
           "Content-Type": "application/json"}
         body: JSON.stringify({
           messages: [{ role: "user", content: message }]})}),
-          "Content-Type": "application/json"};
+          "Content-Type": "application/json"},
         body: JSON.stringify({
-          messages: [{ role: "user", content: message }]})});
+          messages: [{ role: "user", content: message }]})}),
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")}
       return Promise.resolve()} catch (error) {
@@ -111,8 +111,8 @@ export default function Contact() {
         variant: "destructive",
   const handleChange = (e: React && React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e && e.target,
-    setFormData(prev => ({ ...prev, [name]: value }))};
-});
+    setFormData(prev => ({ ...prev, [name]: value }))},
+}),
       return Promise.resolve()}
 ,
   return (
@@ -280,81 +280,81 @@ export default function Contact() {
       </main>,
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: "";
-    email: "";
-    subject: "";
-    message: ""});
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isChatOpen, setIsChatOpen] = useState(false);
+    name: "",
+    email: "",
+    subject: "",
+    message: ""}),
+  const [isSubmitting, setIsSubmitting] = useState(false),
+  const [isChatOpen, setIsChatOpen] = useState(false),
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }))};
+    const { name, value } = e.target,
+    setFormData(prev => ({ ...prev, [name]: value }))},
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+    e.preventDefault(),
     try {
       // Basic validation with Zod,
       const schema = z.object({
-        name: z.string().min(2, "Name must be at least 2 characters");
-        email: z.string().email("Invalid email address");
-        subject: z.string().min(2, "Subject must be at least 2 characters");
-        message: z.string().min(10, "Message must be at least 10 characters")});
-      schema.parse(formData);
+        name: z.string().min(2, "Name must be at least 2 characters"),
+        email: z.string().email("Invalid email address"),
+        subject: z.string().min(2, "Subject must be at least 2 characters"),
+        message: z.string().min(10, "Message must be at least 10 characters")}),
+      schema.parse(formData),
       // Simulate form submission,
-      setIsSubmitting(true);
+      setIsSubmitting(true),
       setTimeout(() => {
-        setIsSubmitting(false);
+        setIsSubmitting(false),
         toast({
-          title: "Message Sent";
-          description: "We've received your message and will get back to you soon."});
+          title: "Message Sent",
+          description: "We've received your message and will get back to you soon."}),
         // Reset form,
         setFormData({
-          name: "";
-          email: "";
-          subject: "";
+          name: "",
+          email: "",
+          subject: "",
           message: ""})}, 1500)} catch (error) {
       if (error instanceof z.ZodError) {
         toast({
-          title: "Form Validation Error";
-          description: error.errors[0].message;
+          title: "Form Validation Error",
+          description: error.errors[0].message,
           variant: "destructive"})} else {
         toast({
-          title: "An error occurred";
-          description: "Please try again later";
+          title: "An error occurred",
+          description: "Please try again later",
           variant: "destructive"})}
     }
-  };
+  },
   // Handle sending messages to the AI chat assistant,
   const handleSendMessage = async (message: string): Promise<void> => {
     try {
       const response = await fetch("https://ziontechgroup.functions.supabase.co/functions/v1/ai-chat", {
-        method: "POST";
+        method: "POST",
         headers: {
-          "Content-Type": "application/json"};
+          "Content-Type": "application/json"},
         body: JSON.stringify({
-          messages: [{ role: "user", content: message }]})});
+          messages: [{ role: "user", content: message }]})}),
       if (!response.ok) {
         throw new Error("Failed to get response from AI assistant")}
 ,
       return Promise.resolve()} catch (error) {
-      console.error("Error in AI chat:", error);
+      console.error("Error in AI chat:", error),
       toast({
-        title: "Chat Error";
-        description: "There was an error communicating with our AI assistant. Please try again.";
-        variant: "destructive"});
+        title: "Chat Error",
+        description: "There was an error communicating with our AI assistant. Please try again.",
+        variant: "destructive"}),
       return Promise.resolve()}
-  };
+  },
   const offices = [
     {
-      name: "Headquarters";
-      address: "123 Tech Avenue, San Francisco, CA 94105";
-      phone: "+1 302 464 0950";
-      email: "commercial@ziontechgroup.com"};
+      name: "Headquarters",
+      address: "123 Tech Avenue, San Francisco, CA 94105",
+      phone: "+1 302 464 0950",
+      email: "commercial@ziontechgroup.com"},
     {
-      name: "East Coast Office";
-      address: "456 Innovation Street, New York, NY 10001";
-      phone: "+1 302 464 0950";
+      name: "East Coast Office",
+      address: "456 Innovation Street, New York, NY 10001",
+      phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com"}
-  ];
+  ],
   return (
     <AppLayout>,
       <SEO
@@ -375,7 +375,7 @@ export default function Contact() {
             <div>,
               <h2 className="text-3xl font-bold text-white mb-6">Get in Touch</h2>,
               <p className="text-zion-slate-light text-lg mb-8">,
-                Whether you have a question about our platform, pricing, or anything else;
+                Whether you have a question about our platform, pricing, or anything else,
                 our team is ready to answer all your questions.,
               </p>,
               <form onSubmit={handleSubmit} className="space-y-6">,
@@ -489,12 +489,12 @@ export default function Contact() {
                   <Button
                     onClick={() => setIsChatOpen(true)}
                     className="w-full mt-4 bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple",
-      phone: "+1 302 464 0950";
+      phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com"}
     {
-      name: "East Coast Office";
+      name: "East Coast Office",
       address: "456 Innovation Street, New York, NY 10001",
-      phone: "+1 302 464 0950";
+      phone: "+1 302 464 0950",
       email: "commercial@ziontechgroup.com"}
   ],
   return (
@@ -517,7 +517,7 @@ export default function Contact() {
             <div>,
               <h2 className="text - 3xl font - bold text - white mb - 6">Get in Touch</h2>,
               <p className="text - zion - slate - light text - lg mb - 8">,
-                Whether you have a question about our platform, pricing, or anything else;
+                Whether you have a question about our platform, pricing, or anything else,
                 our team is ready to answer all your questions.,
               </p>,
               <form on_submit={handle_submit} className="space - y-6">,
@@ -668,9 +668,9 @@ export default function Contact() {
           onClose={() => setIsChatOpen(false)}
 ,
           recipient={{
-            id: 'ai-assistant';
-            name: 'AI Assistant';
-            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI';
+            id: 'ai-assistant',
+            name: 'AI Assistant',
+            avatarUrl: 'https://placehold && placehold.co/64x64?text=AI',
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
         />)}
@@ -684,9 +684,9 @@ export default function Contact() {
           is_open={isChatOpen}
           on_close={() => setIsChatOpen (false)}
           recipient={{
-            id: 'ai - assistant';
-            name: 'AI Assistant';
-            avatar_url: 'https://placehold.co / 64x64?text = AI';
+            id: 'ai - assistant',
+            name: 'AI Assistant',
+            avatar_url: 'https://placehold.co / 64x64?text = AI',
             role: 'Support Bot'}}
           onSendMessage={handleSendMessage}
         />)}

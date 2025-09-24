@@ -1,13 +1,13 @@
 'use client',
 import React, { useState, useEffect } from 'react',
 import {
-  X;
-  ChevronLeft;
-  ChevronRight;
-  Star;
-  TrendingUp;
-  Clock;
-  Users;
+  X,
+  ChevronLeft,
+  ChevronRight,
+  Star,
+  TrendingUp,
+  Clock,
+  Users,
 } from 'lucide-react',
 const AdvancedAutomationRevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
@@ -21,83 +21,83 @@ const AdvancedAutomationRevolutionBanner = () => {
   }, []),
   const handleDismiss = () => {
     setIsDismissed(true),
-    localStorage.setItem('advanced-automation-banner-dismissed', 'true')};
+    localStorage.setItem('advanced-automation-banner-dismissedtrue')},
   const content = [
     {
-      id: 'advanced-automation-revolution';
-      title: 'AI 20o25: The Advanced Automation Revolution';
-      subtitle: 'Ultimate Guide to 750% ROI';
+      id: 'advanced-automation-revolution',
+      title: 'AI 20o25: The Advanced Automation Revolution',
+      subtitle: 'Ultimate Guide to 750% ROI',
       description:,
-        'Discover how Fortune 50o0 companies are achieving 750% ROI through advanced AI automation. Complete implementation guide with real-world success stories.';
+        'Discover how Fortune 50o0 companies are achieving 750% ROI through advanced AI automation. Complete implementation guide with real-world success stories.',
       metrics: {
-        roi: '750%';
-        savings: '$8.2M annually';
-        efficiency: '340%';
-        satisfaction: '99.2%';
-      };
-      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-guide';
-      type: 'blog';
-      readingTime: '28 min read';
-      featured: true;
-    };
+        roi: '750%',
+        savings: '$8.2M annually',
+        efficiency: '340%',
+        satisfaction: '99.2%'
+      },
+      url: '/blog/ai-20o25-advanced-automation-revolution-ultimate-guide',
+      type: 'blog',
+      readingTime: '28 min read',
+      featured: true
+    },
     {
-      id: 'intelligent-workflow-revolution';
-      title: 'AI 20o25: The Intelligent Workflow Revolution';
-      subtitle: 'Ultimate Guide to 90o0% ROI';
+      id: 'intelligent-workflow-revolution',
+      title: 'AI 20o25: The Intelligent Workflow Revolution',
+      subtitle: 'Ultimate Guide to 90o0% ROI',
       description:,
-        'Discover how intelligent workflows are transforming business operations with 90o0% ROI. Complete guide to implementing AI-powered workflow automation.';
+        'Discover how intelligent workflows are transforming business operations with 90o0% ROI. Complete guide to implementing AI-powered workflow automation.',
       metrics: {
-        roi: '90o0%';
-        savings: '$12.3M annually';
-        efficiency: '560%';
-        satisfaction: '99.5%';
-      };
-      url: '/blog/ai-20o25-intelligent-workflow-revolution-ultimate-guide';
-      type: 'blog';
-      readingTime: '25 min read';
-      featured: true;
-    };
+        roi: '90o0%',
+        savings: '$12.3M annually',
+        efficiency: '560%',
+        satisfaction: '99.5%'
+      },
+      url: '/blog/ai-20o25-intelligent-workflow-revolution-ultimate-guide',
+      type: 'blog',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-advanced-automation';
-      title: 'Fortune 50o0 Advanced Automation Success';
-      subtitle: '$3.2B Company Achieves 750% ROI in 10 Months';
+      id: 'fortune-50o0-advanced-automation',
+      title: 'Fortune 50o0 Advanced Automation Success',
+      subtitle: '$3.2B Company Achieves 750% ROI in 10 Months',
       description:,
-        'How a Fortune 50o0 manufacturing company transformed operations with advanced AI automation, achieving 750% ROI and $12.8M annual savings.';
+        'How a Fortune 50o0 manufacturing company transformed operations with advanced AI automation, achieving 750% ROI and $12.8M annual savings.',
       metrics: {
-        roi: '750%';
-        savings: '$12.8M annually';
-        efficiency: '450%';
-        satisfaction: '99.2%';
-      };
-      url: '/case-studies/fortune-50o0-advanced-automation-750-roi-success';
-      type: 'case-study';
-      readingTime: '18 min read';
-      featured: true;
-    };
+        roi: '750%',
+        savings: '$12.8M annually',
+        efficiency: '450%',
+        satisfaction: '99.2%'
+      },
+      url: '/case-studies/fortune-50o0-advanced-automation-750-roi-success',
+      type: 'case-study',
+      readingTime: '18 min read',
+      featured: true
+    },
     {
-      id: 'global-enterprise-workflow';
-      title: 'Global Enterprise Intelligent Workflow Success';
-      subtitle: '$4.1B Company Achieves 90o0% ROI in 8 Months';
+      id: 'global-enterprise-workflow',
+      title: 'Global Enterprise Intelligent Workflow Success',
+      subtitle: '$4.1B Company Achieves 90o0% ROI in 8 Months',
       description:,
-        'How a global enterprise transformed operations with intelligent workflow automation, achieving 90o0% ROI and $18.7M annual savings.';
+        'How a global enterprise transformed operations with intelligent workflow automation, achieving 90o0% ROI and $18.7M annual savings.',
       metrics: {
-        roi: '90o0%';
-        savings: '$18.7M annually';
-        efficiency: '560%';
-        satisfaction: '99.5%';
-      };
-      url: '/case-studies/global-enterprise-intelligent-workflow-90o0-roi-success';
-      type: 'case-study';
-      readingTime: '20 min read';
-      featured: true;
-    };
+        roi: '90o0%',
+        savings: '$18.7M annually',
+        efficiency: '560%',
+        satisfaction: '99.5%'
+      },
+      url: '/case-studies/global-enterprise-intelligent-workflow-90o0-roi-success',
+      type: 'case-study',
+      readingTime: '20 min read',
+      featured: true
+    },
   ],
   const nextSlide = () => {
-    setCurrentSlide(prev => (prev + 1) % content.length)};
+    setCurrentSlide(prev => (prev + 1) % content.length)},
   const prevSlide = () => {
-    setCurrentSlide(prev => (prev - 1 + content.length) % content.length)};
+    setCurrentSlide(prev => (prev - 1 + content.length) % content.length)},
   const goToSlide = (index: number) => {
-    setCurrentSlide(index)};
+    setCurrentSlide(index)},
   if (isDismissed) return null,
   const currentContent = content[currentSlide],
   return (
@@ -274,5 +274,5 @@ const AdvancedAutomationRevolutionBanner = () => {
           </a>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAutomationRevolutionBanner;
+    </div>)},
+export default AdvancedAutomationRevolutionBanner,

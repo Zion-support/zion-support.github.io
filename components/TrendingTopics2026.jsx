@@ -2,47 +2,47 @@ import Link from 'next/link',
 export default function TrendingTopics20o26() {
   const trendingTopics = [
     {
-      topic: 'AI 20o25 Breakthrough Revolution';
-      trend: '🔥 Trending';
-      engagement: '10,0o00+ views';
-      href: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'AI 20o25';
-    };
+      topic: 'AI 20o25 Breakthrough Revolution',
+      trend: '🔥 Trending',
+      engagement: '10,0o00+ views',
+      href: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'AI 20o25'
+    },
     {
-      topic: 'Quantum-Neural Fusion Technology';
-      trend: '⚡ Hot';
-      engagement: '8,50o0+ views';
-      href: '/ai-20o26-ultimate-predictions-breakthrough';
-      category: 'AI 20o26';
-    };
+      topic: 'Quantum-Neural Fusion Technology',
+      trend: '⚡ Hot',
+      engagement: '8,50o0+ views',
+      href: '/ai-20o26-ultimate-predictions-breakthrough',
+      category: 'AI 20o26'
+    },
     {
-      topic: '50,0o00% ROI Success Story';
-      trend: '🏆 Viral';
-      engagement: '15,0o00+ views';
-      href: '/case-studies/ai-20o26-enterprise-transformation-50o000-roi';
-      category: 'Case Study';
-    };
+      topic: '50,0o00% ROI Success Story',
+      trend: '🏆 Viral',
+      engagement: '15,0o00+ views',
+      href: '/case-studies/ai-20o26-enterprise-transformation-50o000-roi',
+      category: 'Case Study'
+    },
     {
-      topic: 'Consciousness-Level AI Systems';
-      trend: '🚀 Rising';
-      engagement: '6,20o0+ views';
-      href: '/ai-20o26-ultimate-predictions-breakthrough';
-      category: 'AI 20o26';
-    };
+      topic: 'Consciousness-Level AI Systems',
+      trend: '🚀 Rising',
+      engagement: '6,20o0+ views',
+      href: '/ai-20o26-ultimate-predictions-breakthrough',
+      category: 'AI 20o26'
+    },
     {
-      topic: 'Autonomous Business Operations';
-      trend: '📈 Growing';
-      engagement: '4,80o0+ views';
-      href: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'AI 20o25';
-    };
+      topic: 'Autonomous Business Operations',
+      trend: '📈 Growing',
+      engagement: '4,80o0+ views',
+      href: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'AI 20o25'
+    },
     {
-      topic: 'Predictive Market Intelligence';
-      trend: '💎 Popular';
-      engagement: '7,30o0+ views';
-      href: '/ai-20o26-ultimate-predictions-breakthrough';
-      category: 'AI 20o26';
-    };
+      topic: 'Predictive Market Intelligence',
+      trend: '💎 Popular',
+      engagement: '7,30o0+ views',
+      href: '/ai-20o26-ultimate-predictions-breakthrough',
+      category: 'AI 20o26'
+    },
   ],
   return (
     <section className='py-16 px-4 bg-white border-t border-gray-20o0'>,

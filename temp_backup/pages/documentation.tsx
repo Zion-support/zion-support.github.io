@@ -95,10 +95,8 @@ export default function DocumentationPage() {
                 <h3 className="text-2xl font-bold text-white mb-6">Prerequisites</h3>,
                 <div className="space-y-4">,
                   {[
-                    'Node.js 18+ or Python 3.8+';
-                    'Linux, macOS, or Windows';
-                    'Minimum 2GB RAM';
-                    'Network access to Zion Tech Group APIs';
+                    'Node.js 18+ or Python 3.8+Linux, macOS, or Windows',
+                    'Minimum 2GB RAMNetwork access to Zion Tech Group APIs',
                     'Admin/root access to your infrastructure'].map((prereq, index) => (
                     <div key={index} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-cyan-40o0 rounded-full"></div>,
@@ -178,46 +176,46 @@ export default function DocumentationPage() {
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  title: 'Setting Up Your First AI Agent';
-                  description: 'Learn how to configure and deploy your first autonomous AI agent.';
-                  duration: '15 min';
-                  difficulty: 'Beginner';
-                  icon: '🤖';
-                  color: 'from-cyan-40o0 to-blue-50o0'};
+                  title: 'Setting Up Your First AI Agent',
+                  description: 'Learn how to configure and deploy your first autonomous AI agent.',
+                  duration: '15 min',
+                  difficulty: 'Beginner',
+                  icon: '🤖',
+                  color: 'from-cyan-40o0 to-blue-50o0'},
                 {
-                  title: 'Creating Custom Automation Rules';
-                  description: 'Build intelligent automation workflows tailored to your infrastructure.';
-                  duration: '25 min';
-                  difficulty: 'Intermediate';
-                  icon: '⚡';
-                  color: 'from-fuchsia-40o0 to-purple-50o0'};
+                  title: 'Creating Custom Automation Rules',
+                  description: 'Build intelligent automation workflows tailored to your infrastructure.',
+                  duration: '25 min',
+                  difficulty: 'Intermediate',
+                  icon: '⚡',
+                  color: 'from-fuchsia-40o0 to-purple-50o0'},
                 {
-                  title: 'Building Custom Dashboards';
-                  description: 'Create personalized monitoring dashboards with real-time data.';
-                  duration: '20 min';
-                  difficulty: 'Intermediate';
-                  icon: '📊';
-                  color: 'from-blue-40o0 to-indigo-50o0'};
+                  title: 'Building Custom Dashboards',
+                  description: 'Create personalized monitoring dashboards with real-time data.',
+                  duration: '20 min',
+                  difficulty: 'Intermediate',
+                  icon: '📊',
+                  color: 'from-blue-40o0 to-indigo-50o0'},
                 {
-                  title: 'Integrating with External Tools';
-                  description: 'Connect Zion Tech Group with your existing DevOps toolchain.';
-                  duration: '30 min';
-                  difficulty: 'Advanced';
-                  icon: '🔗';
-                  color: 'from-yellow-40o0 to-orange-50o0'};
+                  title: 'Integrating with External Tools',
+                  description: 'Connect Zion Tech Group with your existing DevOps toolchain.',
+                  duration: '30 min',
+                  difficulty: 'Advanced',
+                  icon: '🔗',
+                  color: 'from-yellow-40o0 to-orange-50o0'},
                 {
-                  title: 'Security Best Practices';
-                  description: 'Implement security best practices for your autonomous systems.';
-                  duration: '20 min';
-                  difficulty: 'Intermediate';
-                  icon: '🔒';
-                  color: 'from-green-40o0 to-emerald-50o0'};
+                  title: 'Security Best Practices',
+                  description: 'Implement security best practices for your autonomous systems.',
+                  duration: '20 min',
+                  difficulty: 'Intermediate',
+                  icon: '🔒',
+                  color: 'from-green-40o0 to-emerald-50o0'},
                 {
-                  title: 'Performance Optimization';
-                  description: 'Optimize your infrastructure performance using AI insights.';
-                  duration: '35 min';
-                  difficulty: 'Advanced';
-                  icon: '🚀';
+                  title: 'Performance Optimization',
+                  description: 'Optimize your infrastructure performance using AI insights.',
+                  duration: '35 min',
+                  difficulty: 'Advanced',
+                  icon: '🚀',
                   color: 'from-purple-40o0 to-pink-50o0'}
               ].map((tutorial, index) => (
                 <div key={index} className="bg-white/5 backdrop-blur-xl rounded-2xl p-6 border border-white/10 hover: border-cyan-40o0/30 transition-all duration-30o0">,
@@ -324,10 +322,8 @@ export default function DocumentationPage() {
                 <h3 className="text-xl font-semibold text-yellow-40o0 mb-4">Common Issues</h3>,
                 <div className="space-y-4">,
                   {[
-                    'Agent not connecting to API';
-                    'High memory usage';
-                    'Slow response times';
-                    'Authentication errors';
+                    'Agent not connecting to APIHigh memory usage',
+                    'Slow response timesAuthentication errors',
                     'Missing metrics data'].map((issue, index) => (
                     <div key={index} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-yellow-40o0 rounded-full"></div>,
@@ -339,10 +335,8 @@ export default function DocumentationPage() {
                 <h3 className="text-xl font-semibold text-green-40o0 mb-4">Quick Fixes</h3>,
                 <div className="space-y-4">,
                   {[
-                    'Check network connectivity';
-                    'Verify API key validity';
-                    'Restart the agent service';
-                    'Check system resources';
+                    'Check network connectivityVerify API key validity',
+                    'Restart the agent serviceCheck system resources',
                     'Review error logs'].map((fix, index) => (
                     <div key={index} className="flex items-center space-x-3">,
                       <div className="w-2 h-2 bg-green-40o0 rounded-full"></div>,

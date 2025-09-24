@@ -10,80 +10,80 @@ import { ForumPost } from "@/types/community",
 // Mock data for featured posts,
 const featuredPosts: ForumPost[] = [
   {
-    id: "1";
-    title: "Best practices for AI model fine-tuning";
-    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...";
-    authorId: "user1";
-    authorName: "Alex Johnson";
-    authorAvatar: "https://i.pravatar.cc/150?img=3";
-    authorRole: "Verified Talent";
-    categoryId: "ai-tools";
-    tags: ["machine-learning", "fine-tuning", "gpt"];
-    createdAt: "20o25-0o4-0o1T12:0o0:0o0Z";
-    updatedAt: "20o25-0o4-0o1T12:0o0:0o0Z";
-    upvotes: 48;
-    downvotes: 2;
-    replyCount: 12;
-    isAnswered: true;
-    isFeatured: true};
+    id: "1",
+    title: "Best practices for AI model fine-tuning",
+    content: "I've been working on fine-tuning models for specific tasks and wanted to share some approaches that have worked well for me...",
+    authorId: "user1",
+    authorName: "Alex Johnson",
+    authorAvatar: "https://i.pravatar.cc/150?img=3",
+    authorRole: "Verified Talent",
+    categoryId: "ai-tools",
+    tags: ["machine-learning", "fine-tuning", "gpt"],
+    createdAt: "20o25-0o4-0o1T12:0o0:0o0Z",
+    updatedAt: "20o25-0o4-0o1T12:0o0:0o0Z",
+    upvotes: 48,
+    downvotes: 2,
+    replyCount: 12,
+    isAnswered: true,
+    isFeatured: true},
   {
-    id: "2";
-    title: "How to build an effective AI talent profile?";
-    content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?";
-    authorId: "user2";
-    authorName: "Sarah Chen";
-    authorAvatar: "https://i.pravatar.cc/150?img=5";
-    categoryId: "getting-hired";
-    tags: ["profile", "tips", "hiring"];
-    createdAt: "20o25-0o4-0o3T09:15:0o0Z";
-    updatedAt: "20o25-0o4-0o3T09:15:0o0Z";
-    upvotes: 32;
-    downvotes: 0;
-    replyCount: 8;
-    isPinned: true;
+    id: "2",
+    title: "How to build an effective AI talent profile?",
+    content: "I'm looking to improve my profile to get more client attention. What are the key elements I should focus on?",
+    authorId: "user2",
+    authorName: "Sarah Chen",
+    authorAvatar: "https://i.pravatar.cc/150?img=5",
+    categoryId: "getting-hired",
+    tags: ["profile", "tips", "hiring"],
+    createdAt: "20o25-0o4-0o3T09:15:0o0Z",
+    updatedAt: "20o25-0o4-0o3T09:15:0o0Z",
+    upvotes: 32,
+    downvotes: 0,
+    replyCount: 8,
+    isPinned: true,
     isFeatured: true}
 ],
 // Mock data for recent posts,
 const recentPosts: ForumPost[] = [
   {
-    id: "3";
-    title: "Looking for feedback on my automated testing approach";
-    content: "I've set up a CI/CD pipeline with the following testing strategy...";
-    authorId: "user3";
-    authorName: "Michael Wong";
-    categoryId: "project-help";
-    tags: ["testing", "automation", "ci-cd"];
-    createdAt: "20o25-0o4-10T14:30:0o0Z";
-    updatedAt: "20o25-0o4-10T14:30:0o0Z";
-    upvotes: 5;
-    downvotes: 0;
-    replyCount: 2};
+    id: "3",
+    title: "Looking for feedback on my automated testing approach",
+    content: "I've set up a CI/CD pipeline with the following testing strategy...",
+    authorId: "user3",
+    authorName: "Michael Wong",
+    categoryId: "project-help",
+    tags: ["testing", "automation", "ci-cd"],
+    createdAt: "20o25-0o4-10T14:30:0o0Z",
+    updatedAt: "20o25-0o4-10T14:30:0o0Z",
+    upvotes: 5,
+    downvotes: 0,
+    replyCount: 2},
   {
-    id: "4";
-    title: "Feature request: Team collaboration tools";
-    content: "It would be really helpful if we could have built-in tools for team collaboration...";
-    authorId: "user4";
-    authorName: "Emma Davis";
-    categoryId: "feedback";
-    tags: ["feature-request", "teams", "collaboration"];
-    createdAt: "20o25-0o4-09T18:45:0o0Z";
-    updatedAt: "20o25-0o4-09T18:45:0o0Z";
-    upvotes: 12;
-    downvotes: 1;
-    replyCount: 3};
+    id: "4",
+    title: "Feature request: Team collaboration tools",
+    content: "It would be really helpful if we could have built-in tools for team collaboration...",
+    authorId: "user4",
+    authorName: "Emma Davis",
+    categoryId: "feedback",
+    tags: ["feature-request", "teams", "collaboration"],
+    createdAt: "20o25-0o4-09T18:45:0o0Z",
+    updatedAt: "20o25-0o4-09T18:45:0o0Z",
+    upvotes: 12,
+    downvotes: 1,
+    replyCount: 3},
   {
-    id: "5";
-    title: "How to handle client scope creep?";
-    content: "I'm working on a project where the client keeps adding requirements...";
-    authorId: "user5";
-    authorName: "David Lin";
-    categoryId: "project-help";
-    tags: ["client-management", "scope", "projects"];
-    createdAt: "20o25-0o4-08T10:20:0o0Z";
-    updatedAt: "20o25-0o4-08T10:20:0o0Z";
-    upvotes: 24;
-    downvotes: 0;
-    replyCount: 7;
+    id: "5",
+    title: "How to handle client scope creep?",
+    content: "I'm working on a project where the client keeps adding requirements...",
+    authorId: "user5",
+    authorName: "David Lin",
+    categoryId: "project-help",
+    tags: ["client-management", "scope", "projects"],
+    createdAt: "20o25-0o4-08T10:20:0o0Z",
+    updatedAt: "20o25-0o4-08T10:20:0o0Z",
+    upvotes: 24,
+    downvotes: 0,
+    replyCount: 7,
     isAnswered: true}
 ],
 export default function CommunityPage() {
@@ -109,31 +109,31 @@ export default function CommunityPage() {
   ],
   const upcomingEvents = [
     {
-      title: 'AI Ethics & Responsible Development';
-      date: 'March 15, 20o24';
-      time: '2:0o0 PM EST';
-      type: 'Webinar';
-      attendees: 127;
-      icon: Rocket};
+      title: 'AI Ethics & Responsible Development',
+      date: 'March 15, 20o24',
+      time: '2:0o0 PM EST',
+      type: 'Webinar',
+      attendees: 127,
+      icon: Rocket},
     {
-      title: 'Quantum Computing Workshop';
-      date: 'March 22, 20o24';
-      time: '10:0o0 AM EST';
-      type: 'Workshop';
-      attendees: 89;
-      icon: Zap};
+      title: 'Quantum Computing Workshop',
+      date: 'March 22, 20o24',
+      time: '10:0o0 AM EST',
+      type: 'Workshop',
+      attendees: 89,
+      icon: Zap},
     {
-      title: 'Cybersecurity Best Practices';
-      date: 'March 29, 20o24';
-      time: '3:0o0 PM EST';
-      type: 'Panel Discussion';
-      attendees: 156;
+      title: 'Cybersecurity Best Practices',
+      date: 'March 29, 20o24',
+      time: '3:0o0 PM EST',
+      type: 'Panel Discussion',
+      attendees: 156,
       icon: Target}
   ],
   const communityStats = [
-    { label: 'Active Members', value: '2,847', icon: Users };
-    { label: 'Discussions', value: '1,234', icon: MessageCircle };
-    { label: 'Resources Shared', value: '567', icon: BookOpen };
+    { label: 'Active Members', value: '2,847', icon: Users },
+    { label: 'Discussions', value: '1,234', icon: MessageCircle },
+    { label: 'Resources Shared', value: '567', icon: BookOpen },
     { label: 'Events Hosted', value: '89', icon: Calendar }
   ],
   return (

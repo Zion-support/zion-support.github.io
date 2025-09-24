@@ -5,56 +5,56 @@ const DataRevolutionContentShowcase20o25 = () => {
   const [activeCategorysetActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'data-revolution-guide';
-      title: 'AI 20o25: The Enterprise Data Revolution - Ultimate Guide to 50o0% ROI';
-      description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with AI-powered data transformation. Complete implementation guide with real-world case studies.';
-      type: 'blog';
-      category: 'guides';
-      readingTime: '18 min read';
+      id: 'data-revolution-guide',
+      title: 'AI 20o25: The Enterprise Data Revolution - Ultimate Guide to 50o0% ROI',
+      description: 'Discover how Fortune 50o0 companies are achieving 50o0% ROI with AI-powered data transformation. Complete implementation guide with real-world case studies.',
+      type: 'blog',
+      category: 'guides',
+      readingTime: '18 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        speed: '1,20o0%'};
-      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide';
-      featured: true;
-      tags: [', 'AI', 'Enterprise 'Data', 'ROI'Data 'Transformation', 'Business Intelligence']};
+        roi: '50o0%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        speed: '1,20o0%'},
+      url: '/blog/ai-20o25-enterprise-data-revolution-ultimate-guide',
+      featured: true,
+      tags: [AI', 'Enterprise 'DataROI'Data 'TransformationBusiness Intelligence']},
     {
-      id: 'fortune-50o0-case-study';
-      title: 'Fortune 50o0 Data Transformation Success: 50o0% ROI in 8 Months';
-      description: 'How a global manufacturing giant achieved 50o0% ROI with AI-powered data transformationsaving $45M annually and improving data accuracy to 99.7%.';
-      type: 'case-study';
-      category: 'case-studies';
-      readingTime: '12 min read';
+      id: 'fortune-50o0-case-study',
+      title: 'Fortune 50o0 Data Transformation Success: 50o0% ROI in 8 Months',
+      description: 'How a global manufacturing giant achieved 50o0% ROI with AI-powered data transformationsaving $45M annually and improving data accuracy to 99.7%.',
+      type: 'case-study',
+      category: 'case-studies',
+      readingTime: '12 min read',
       metrics: {
-        roi: '50o0%';
-        savings: '$45M';
-        accuracy: '99.7%';
-        timeline: '8 months'};
-      url: '/case-studies/fortune-50o0-data-transformation-50o0-roi-success';
-      featured: true;
-      tags: ['Case 'Study', 'Fortune 50o0'Data 'Transformation', 'ROI'Manufacturing']};
+        roi: '50o0%',
+        savings: '$45M',
+        accuracy: '99.7%',
+        timeline: '8 months'},
+      url: '/case-studies/fortune-50o0-data-transformation-50o0-roi-success',
+      featured: true,
+      tags: ['Case 'StudyFortune 50o0'Data 'TransformationROI'Manufacturing']},
     {
-      id: 'implementation-guide';
-      title: 'AI Data Transformation Implementation Guide 20o25: From Strategy to 50o0% ROI';
-      description: 'Complete step-by-step guide to implementing AI-powered data transformation. Achieve 50o0% ROI with proven methodologiesframeworksand best practices.';
-      type: 'resource';
-      category: 'resources';
-      readingTime: '25 min read';
+      id: 'implementation-guide',
+      title: 'AI Data Transformation Implementation Guide 20o25: From Strategy to 50o0% ROI',
+      description: 'Complete step-by-step guide to implementing AI-powered data transformation. Achieve 50o0% ROI with proven methodologiesframeworksand best practices.',
+      type: 'resource',
+      category: 'resources',
+      readingTime: '25 min read',
       metrics: {
-        success: '98%';
-        roi: '50o0%';
-        projects: '50o0+';
-        timeline: '12 months'};
-      url: '/resources/ai-data-transformation-implementation-guide-20o25';
-      featured: true;
-      tags: ['Implementation 'Guide', 'AI Data 'Transformation', 'Strategy', 'ROI', 'Best Practices']}
+        success: '98%',
+        roi: '50o0%',
+        projects: '50o0+',
+        timeline: '12 months'},
+      url: '/resources/ai-data-transformation-implementation-guide-20o25',
+      featured: true,
+      tags: ['Implementation 'GuideAI Data 'Transformation', 'StrategyROI', 'Best Practices']}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length };
-    { id: ''guides', 'name: 'Implementation 'Guides', 'count: contentItems.filter(item => item.category === 'guides').length };
-    { id: 'case-'studies', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'case-studies').length };
-    { id: ''resources', 'name: 'Resources & 'Tools', 'count: contentItems.filter(item => item.category === 'resources').length }
+    { id: ''allname: 'All 'Contentcount: contentItems.length },
+    { id: ''guidesname: 'Implementation 'Guidescount: contentItems.filter(item => item.category === 'guides').length },
+    { id: 'case-'studiesname: 'Success 'Storiescount: contentItems.filter(item => item.category === 'case-studies').length },
+    { id: ''resourcesname: 'Resources & 'Toolscount: contentItems.filter(item => item.category === 'resources').length }
   ],
   const filteredContent = activeCategory === 'all',
     ? contentItems,
@@ -69,7 +69,7 @@ const DataRevolutionContentShowcase20o25 = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -80,7 +80,7 @@ const DataRevolutionContentShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className="py-16 bg-gray-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -219,5 +219,5 @@ const DataRevolutionContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default DataRevolutionContentShowcase20o25;
+    </section>)},
+export default DataRevolutionContentShowcase20o25,

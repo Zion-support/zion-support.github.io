@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Governance Blueprint 20o26';
+  title: 'AI Governance Blueprint 20o26',
   description:,
-    'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.';
-};
+    'Practical governance framework for enterprise AI: policy-as-code, risk controls, and oversight.',
+},
 export default function AIGovernanceBlueprint20o26() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

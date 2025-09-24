@@ -1,44 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeft;
-  Calendar;
-  Clock;
-  User;
-  Brain;
-  Zap;
-  Shield;
+  ArrowLeft,
+  Calendar,
+  Clock,
+  User,
+  Brain,
+  Zap,
+  Shield,
 } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25: Autonomous Enterprise Systems - The Future of Business Operations';
+    'AI 20o25: Autonomous Enterprise Systems - The Future of Business Operations',
   description:,
-    'Explore how autonomous AI systems are revolutionizing enterprise operations in 20o25, creating self-managing businesses that adapt, learn, and optimize without human intervention.';
+    'Explore how autonomous AI systems are revolutionizing enterprise operations in 20o25, creating self-managing businesses that adapt, learn, and optimize without human intervention.',
   keywords: [
-    'autonomous systems';
-    'AI 20o25';
-    'enterprise automation';
-    'self-managing systems';
-    'business intelligence';
-  ];
+    'autonomous systemsAI 20o25',
+    'enterprise automationself-managing systems',
+    'business intelligence',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: Autonomous Enterprise Systems - The Future of Business Operations';
+      'AI 20o25: Autonomous Enterprise Systems - The Future of Business Operations',
     description:,
-      'Explore how autonomous AI systems are revolutionizing enterprise operations in 20o25, creating self-managing businesses that adapt, learn, and optimize without human intervention.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Explore how autonomous AI systems are revolutionizing enterprise operations in 20o25, creating self-managing businesses that adapt, learn, and optimize without human intervention.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'autonomous systems';
-      'AI 20o25';
-      'enterprise automation';
-      'self-managing systems';
-      'business intelligence';
-    ];
-  };
-};
+      'autonomous systemsAI 20o25',
+      'enterprise automationself-managing systems',
+      'business intelligence',
+    ]
+  },
+},
 export default function AutonomousEnterpriseSystemsPage() {
   return (
     <div>,
@@ -83,16 +79,14 @@ export default function AutonomousEnterpriseSystemsPage() {
             </h1>,
             <p className='text-xl text-gray-60o0 mb-6 leading-relaxed'>,
               Explore how autonomous AI systems are revolutionizing enterprise,
-              operations in 20o25, creating self-managing businesses that adapt;
+              operations in 20o25, creating self-managing businesses that adapt,
               learn, and optimize without human intervention.,
             </p>,
             <div className='flex flex-wrap gap-2'>,
               {[
-                'autonomous systems';
-                'AI 20o25';
-                'enterprise automation';
-                'self-managing systems';
-                'business intelligence';
+                'autonomous systemsAI 20o25',
+                'enterprise automationself-managing systems',
+                'business intelligence',
               ].map(tag => (
                 <span
                   key={tag}

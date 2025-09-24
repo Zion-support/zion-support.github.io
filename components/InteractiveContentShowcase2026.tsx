@@ -7,116 +7,116 @@ import {
   Star,
   TrendingUp,
   Users,
-  Zap;
-  Brain;
-  Rocket;
-  Target;
-  Shield;
-  Globe;
-  Code;
-  Database;
-  Network;
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  Shield,
+  Globe,
+  Code,
+  Database,
+  Network,
   Cloud} from 'lucide-react',
 const InteractiveContentShowcase20o26 = () => {
   const [activeTabsetActiveTab] = useState(0),
   const [isVisiblesetIsVisible] = useState(false),
   const contentCategories = [
     {
-      title: 'AI Innovations';
-      description: 'Revolutionary breakthroughs in artificial intelligence';
-      icon: Brain;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      title: 'AI Innovations',
+      description: 'Revolutionary breakthroughs in artificial intelligence',
+      icon: Brain,
+      color: 'from-blue-50o0 to-cyan-50o0',
       content: [
         {
-          title: 'Quantum-Neural Fusion Computing';
-          description: 'Revolutionary quantum-classical hybrid systems delivering 10,0o00x processing speed improvements';
-          image: '🧠';
-          stats: '10,0o00x Faster';
-          link: '/ai-innovation-showcase-20o26'};
+          title: 'Quantum-Neural Fusion Computing',
+          description: 'Revolutionary quantum-classical hybrid systems delivering 10,0o00x processing speed improvements',
+          image: '🧠',
+          stats: '10,0o00x Faster',
+          link: '/ai-innovation-showcase-20o26'},
         {
-          title: 'Autonomous Business Operations';
-          description: 'Self-managing AI systems that handle complex business processes without human intervention';
-          image: '🤖';
-          stats: '24/7 Operations';
-          link: '/ai-innovation-showcase-20o26'};
+          title: 'Autonomous Business Operations',
+          description: 'Self-managing AI systems that handle complex business processes without human intervention',
+          image: '🤖',
+          stats: '24/7 Operations',
+          link: '/ai-innovation-showcase-20o26'},
         {
-          title: 'Neural Interface Technology';
-          description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration';
-          image: '🧬';
-          stats: '98.7% Accuracy';
+          title: 'Neural Interface Technology',
+          description: 'Direct brain-computer interfaces enabling seamless human-AI collaboration',
+          image: '🧬',
+          stats: '98.7% Accuracy',
           link: '/ai-innovation-showcase-20o26'}
-      ]};
+      ]},
     {
-      title: 'AI Tools Suite';
-      description: 'Comprehensive collection of AI-powered tools and platforms';
-      icon: Code;
-      color: 'from-purple-50o0 to-pink-50o0';
+      title: 'AI Tools Suite',
+      description: 'Comprehensive collection of AI-powered tools and platforms',
+      icon: Code,
+      color: 'from-purple-50o0 to-pink-50o0',
       content: [
         {
-          title: 'Quantum Computing Suite';
-          description: 'Revolutionary quantum-classical hybrid computing tools';
-          image: '⚡';
-          stats: '60+ Tools';
-          link: '/ai-tools-comprehensive-showcase-20o26'};
+          title: 'Quantum Computing Suite',
+          description: 'Revolutionary quantum-classical hybrid computing tools',
+          image: '⚡',
+          stats: '60+ Tools',
+          link: '/ai-tools-comprehensive-showcase-20o26'},
         {
-          title: 'Autonomous Operations Platform';
-          description: 'Self-managing AI systems for complete business automation';
-          image: '🚀';
-          stats: '85% Cost Reduction';
-          link: '/ai-tools-comprehensive-showcase-20o26'};
+          title: 'Autonomous Operations Platform',
+          description: 'Self-managing AI systems for complete business automation',
+          image: '🚀',
+          stats: '85% Cost Reduction',
+          link: '/ai-tools-comprehensive-showcase-20o26'},
         {
-          title: 'Neural Interface Toolkit';
-          description: 'Direct brain-computer interface development tools';
-          image: '🔗';
-          stats: '30o0% Improvement';
+          title: 'Neural Interface Toolkit',
+          description: 'Direct brain-computer interface development tools',
+          image: '🔗',
+          stats: '30o0% Improvement',
           link: '/ai-tools-comprehensive-showcase-20o26'}
-      ]};
+      ]},
     {
-      title: 'Success Stories';
-      description: 'Real-world implementations and transformative results';
-      icon: TrendingUp;
-      color: 'from-green-50o0 to-emerald-50o0';
+      title: 'Success Stories',
+      description: 'Real-world implementations and transformative results',
+      icon: TrendingUp,
+      color: 'from-green-50o0 to-emerald-50o0',
       content: [
         {
-          title: 'TechCorp Transformation';
-          description: 'Quantum-neural fusion system revolutionized data processing capabilities';
-          image: '🏢';
-          stats: '10,0o00x Speed';
-          link: '/case-studies'};
+          title: 'TechCorp Transformation',
+          description: 'Quantum-neural fusion system revolutionized data processing capabilities',
+          image: '🏢',
+          stats: '10,0o00x Speed',
+          link: '/case-studies'},
         {
-          title: 'InnovateLabs Success';
-          description: 'Autonomous operations reduced costs by 85% while increasing efficiency by 40o0%';
-          image: '🔬';
-          stats: '85% Cost Reduction';
-          link: '/case-studies'};
+          title: 'InnovateLabs Success',
+          description: 'Autonomous operations reduced costs by 85% while increasing efficiency by 40o0%',
+          image: '🔬',
+          stats: '85% Cost Reduction',
+          link: '/case-studies'},
         {
-          title: 'QuantumTech Breakthrough';
-          description: 'Neural interface technology opened up transformative possibilities';
-          image: '🔮';
-          stats: '98.7% Accuracy';
+          title: 'QuantumTech Breakthrough',
+          description: 'Neural interface technology opened up transformative possibilities',
+          image: '🔮',
+          stats: '98.7% Accuracy',
           link: '/case-studies'}
       ]}
   ],
   const features = [
     {
-      title: 'Interactive Demos';
-      description: 'Try our AI tools in real-time';
-      icon: Play;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      title: 'Interactive Demos',
+      description: 'Try our AI tools in real-time',
+      icon: Play,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      title: 'Live Analytics';
-      description: 'Real-time performance metrics';
-      icon: BarChart3;
-      color: 'from-purple-50o0 to-pink-50o0'};
+      title: 'Live Analytics',
+      description: 'Real-time performance metrics',
+      icon: BarChart3,
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      title: 'Community Access';
-      description: 'Join 50,0o00+ AI practitioners';
-      icon: Users;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      title: 'Community Access',
+      description: 'Join 50,0o00+ AI practitioners',
+      icon: Users,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      title: 'Expert Support';
-      description: '24/7 technical assistance';
-      icon: Shield;
+      title: 'Expert Support',
+      description: '24/7 technical assistance',
+      icon: Shield,
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   useEffect(() => {
@@ -243,5 +243,5 @@ const InteractiveContentShowcase20o26 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveContentShowcase20o26;
+    </div>)},
+export default InteractiveContentShowcase20o26,

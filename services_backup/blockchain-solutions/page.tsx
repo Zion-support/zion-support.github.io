@@ -1,6 +1,6 @@
 export const metadata ={
-  title: 'Blockchain Solutions | Zion Tech Group';
-  description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'};
+  title: 'Blockchain Solutions | Zion Tech Group',
+  description: 'Comprehensive blockchain development services including DeFi, NFTs, smart contracts, and Web3 applications.'},
 export default function BlockchainSolutionsPage() {
   return (
     <div className="animate-fade-in">,

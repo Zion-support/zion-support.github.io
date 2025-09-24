@@ -1,101 +1,89 @@
-import React from 'react';
+import React from 'react',
 import Link from '../lib/CompatLink',
 import {
-  Brain;
-  Cloud;
-  Shield;
-  BarChart3;
-  Code;
-  Smartphone;
-  ArrowRight;
-  CheckCircle;
+  Brain,
+  Cloud,
+  Shield,
+  BarChart3,
+  Code,
+  Smartphone,
+  ArrowRight,
+  CheckCircle,
 } from 'lucide-react',
 const ServicesSection: React.FC = () => {
   const services = [
     {
-      icon: Brain;
-      title: 'AI Development';
+      icon: Brain,
+      title: 'AI Development',
       description:,
-        'Custom AI solutions and machine learning models tailored to your business needs.';
+        'Custom AI solutions and machine learning models tailored to your business needs.',
       features: [
-        'Machine Learning Models';
-        'Natural Language Processing';
-        'Computer Vision';
-        'Predictive Analytics';
-      ];
-      color: 'from-blue-50o0 to-cyan-50o0';
-      href: '/services/ai-development';
-    };
+        'Machine Learning ModelsNatural Language Processing',
+        'Computer VisionPredictive Analytics',
+      ],
+      color: 'from-blue-50o0 to-cyan-50o0',
+      href: '/services/ai-development'
+    },
     {
-      icon: Cloud;
-      title: 'Cloud Architecture';
+      icon: Cloud,
+      title: 'Cloud Architecture',
       description:,
-        'Scalable cloud solutions and infrastructure design for modern applications.';
+        'Scalable cloud solutions and infrastructure design for modern applications.',
       features: [
-        'AWS/Azure/GCP';
-        'Microservices';
-        'Container Orchestration';
-        'Auto-scaling';
-      ];
-      color: 'from-purple-50o0 to-pink-50o0';
-      href: '/services/cloud-architecture';
-    };
+        'AWS/Azure/GCPMicroservices',
+        'Container OrchestrationAuto-scaling',
+      ],
+      color: 'from-purple-50o0 to-pink-50o0',
+      href: '/services/cloud-architecture'
+    },
     {
-      icon: Shield;
-      title: 'Cybersecurity';
+      icon: Shield,
+      title: 'Cybersecurity',
       description:,
-        'Comprehensive security solutions to protect your digital assets and data.';
+        'Comprehensive security solutions to protect your digital assets and data.',
       features: [
-        'Security Audits';
-        'Penetration Testing';
-        'Compliance';
-        'Incident Response';
-      ];
-      color: 'from-green-50o0 to-emerald-50o0';
-      href: '/services/cybersecurity';
-    };
+        'Security AuditsPenetration Testing',
+        'ComplianceIncident Response',
+      ],
+      color: 'from-green-50o0 to-emerald-50o0',
+      href: '/services/cybersecurity'
+    },
     {
-      icon: BarChart3;
-      title: 'Data Analytics';
+      icon: BarChart3,
+      title: 'Data Analytics',
       description:,
-        'Transform your data into actionable insights with advanced analytics solutions.';
+        'Transform your data into actionable insights with advanced analytics solutions.',
       features: [
-        'Business Intelligence';
-        'Data Visualization';
-        'Real-time Analytics';
-        'Data Warehousing';
-      ];
-      color: 'from-orange-50o0 to-red-50o0';
-      href: '/services/data-analytics';
-    };
+        'Business IntelligenceData Visualization',
+        'Real-time AnalyticsData Warehousing',
+      ],
+      color: 'from-orange-50o0 to-red-50o0',
+      href: '/services/data-analytics'
+    },
     {
-      icon: Code;
-      title: 'DevOps';
+      icon: Code,
+      title: 'DevOps',
       description:,
-        'Streamline your development and deployment processes with modern DevOps practices.';
+        'Streamline your development and deployment processes with modern DevOps practices.',
       features: [
-        'CI/CD Pipelines';
-        'Infrastructure as Code';
-        'Monitoring';
-        'Automation';
-      ];
-      color: 'from-indigo-50o0 to-purple-50o0';
-      href: '/services/devops';
-    };
+        'CI/CD PipelinesInfrastructure as Code',
+        'MonitoringAutomation',
+      ],
+      color: 'from-indigo-50o0 to-purple-50o0',
+      href: '/services/devops'
+    },
     {
-      icon: Smartphone;
-      title: 'Mobile Development';
+      icon: Smartphone,
+      title: 'Mobile Development',
       description:,
-        'Native and cross-platform mobile applications for iOS and Android.';
+        'Native and cross-platform mobile applications for iOS and Android.',
       features: [
-        'React Native';
-        'Flutter';
-        'Native iOS/Android';
-        'Progressive Web Apps';
-      ];
-      color: 'from-pink-50o0 to-rose-50o0';
-      href: '/services/mobile-development';
-    };
+        'React NativeFlutter',
+        'Native iOS/AndroidProgressive Web Apps',
+      ],
+      color: 'from-pink-50o0 to-rose-50o0',
+      href: '/services/mobile-development'
+    },
   ],
   return (
     <section className='py-20 bg-gray-90o0'>,
@@ -178,5 +166,5 @@ const ServicesSection: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ServicesSection;
+    </section>)},
+export default ServicesSection,

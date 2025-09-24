@@ -6,14 +6,14 @@ const Layout = ({ children }) => {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)};
+      setIsScrolled(window.scrollY > 10)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigationLinks = [
-    { href: '/', label: 'Home' };
-    { href: '/about', label: 'About' };
-    { href: '/services', label: 'Services' };
-    { href: '/contact', label: 'Contact' };
+    { href: '/', label: 'Home' },
+    { href: '/about', label: 'About' },
+    { href: '/services', label: 'Services' },
+    { href: '/contact', label: 'Contact' },
   ],
   return (
     <div className='min-h-screen bg-gray-50'>,
@@ -200,5 +200,5 @@ const Layout = ({ children }) => {
       </footer>,
       {/* Scroll to Top Button */}
       <ScrollToTop />,
-    </div>)};
-export default Layout;
+    </div>)},
+export default Layout,

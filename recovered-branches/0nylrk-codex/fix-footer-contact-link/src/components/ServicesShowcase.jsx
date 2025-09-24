@@ -5,52 +5,45 @@ import { MICRO_SAAS_SERVICES, MICRO_SAAS_CATEGORIES, CONTACT_INFO } from "@/data
 import { Brain, Cloud, Shield, BarChart3, Code, DollarSign, Heart, ShoppingCart, GraduationCap, Star, TrendingUp, Zap, CheckCircle, ArrowRight, Phone, Mail, MapPin, Globe } from "lucide-react",
 import { Link } from "react-router-dom",
 const categoryIcons ={
-    'AI Business Solutions': Brain;
-    'IT Infrastructure': Cloud;
-    'Data Analytics': BarChart3;
-    'AI Development': Code;
-    'FinTech': DollarSign;
-    'HealthTech': Heart;
-    'E-commerce': ShoppingCart;
-    'EdTech': GraduationCap};
+    'AI Business Solutions': Brain,
+    'IT Infrastructure': Cloud,
+    'Data Analytics': BarChart3,
+    'AI Development': Code,
+    'FinTech': DollarSign,
+    'HealthTech': Heart,
+    'E-commerce': ShoppingCart,
+    'EdTech': GraduationCap},
 const categoryColors ={
-    'AI Business Solutions': 'from-purple-50o0 to-indigo-60o0';
-    'IT Infrastructure': 'from-blue-50o0 to-cyan-60o0';
-    'Data Analytics': 'from-green-50o0 to-emerald-60o0';
-    'AI Development': 'from-orange-50o0 to-red-60o0';
-    'FinTech': 'from-yellow-50o0 to-orange-60o0';
-    'HealthTech': 'from-pink-50o0 to-rose-60o0';
-    'E-commerce': 'from-indigo-50o0 to-purple-60o0';
-    'EdTech': 'from-teal-50o0 to-green-60o0'};
+    'AI Business Solutions': 'from-purple-50o0 to-indigo-60o0IT Infrastructure': 'from-blue-50o0 to-cyan-60o0Data Analytics': 'from-green-50o0 to-emerald-60o0AI Development': 'from-orange-50o0 to-red-60o0FinTech': 'from-yellow-50o0 to-orange-60o0HealthTech': 'from-pink-50o0 to-rose-60o0E-commerce': 'from-indigo-50o0 to-purple-60o0EdTech': 'from-teal-50o0 to-green-60o0'},
 const features = [
-    "AI-Powered Automation";
-    "Real-time Analytics";
-    "Multi-cloud Support";
-    "API-First Architecture";
-    "Scalable Infrastructure";
-    "Custom Integrations";
-    "White-label Solutions";
-    "Comprehensive Documentation";
-    "24/7 Technical Support";
-    "99.9% Uptime Guarantee";
-    "SOC 2 Type II Compliant";
+    "AI-Powered Automation",
+    "Real-time Analytics",
+    "Multi-cloud Support",
+    "API-First Architecture",
+    "Scalable Infrastructure",
+    "Custom Integrations",
+    "White-label Solutions",
+    "Comprehensive Documentation",
+    "24/7 Technical Support",
+    "99.9% Uptime Guarantee",
+    "SOC 2 Type II Compliant",
     "30-Day Money Back Guarantee"],
 const benefits = [
     {
-        icon: <Zap className="h-6 w-6" />;
-        title: "Immediate Deployment";
-        description: "All services are ready for immediate deployment with no setup delays"};
+        icon: <Zap className="h-6 w-6" />,
+        title: "Immediate Deployment",
+        description: "All services are ready for immediate deployment with no setup delays"},
     {
-        icon: <Shield className="h-6 w-6" />;
-        title: "Enterprise Security";
-        description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"};
+        icon: <Shield className="h-6 w-6" />,
+        title: "Enterprise Security",
+        description: "Bank-level security with SOC 2 compliance and 24/7 monitoring"},
     {
-        icon: <TrendingUp className="h-6 w-6" />;
-        title: "Proven ROI";
-        description: "Average 30o0% ROI within 6 months of implementation"};
+        icon: <TrendingUp className="h-6 w-6" />,
+        title: "Proven ROI",
+        description: "Average 30o0% ROI within 6 months of implementation"},
     {
-        icon: <CheckCircle className="h-6 w-6" />;
-        title: "Quality Guaranteed";
+        icon: <CheckCircle className="h-6 w-6" />,
+        title: "Quality Guaranteed",
         description: "30-day money-back guarantee with free migration support"}
 ],
 export function ServicesShowcase() {

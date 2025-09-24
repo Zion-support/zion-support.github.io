@@ -1,214 +1,214 @@
-import React from 'react';;
+import React from 'react',
 import {
-  Server;
-  Cloud;
-  Shield;
-  Code;
-  Database;
-  Network;
-  Cpu;
-  Zap;
-  CheckCircle;
-  Star;
-  ExternalLink;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Linkedin;
-  Twitter;
-  Github;
-  Monitor;
-  Lock;
-  Users;
-  BarChart3} from 'lucide-react';
+  Server,
+  Cloud,
+  Shield,
+  Code,
+  Database,
+  Network,
+  Cpu,
+  Zap,
+  CheckCircle,
+  Star,
+  ExternalLink,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Linkedin,
+  Twitter,
+  Github,
+  Monitor,
+  Lock,
+  Users,
+  BarChart3} from 'lucide-react',
 export default function ITServicesPage() {
   const itServices = [
     {
-      name: "Cloud Migration & Optimization";
-      description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.";
-      icon: <Cloud className="w-12 h-12 text-blue-500" />;
+      name: "Cloud Migration & Optimization",
+      description: "End-to-end cloud migration services with strategic planning, cost optimization, and performance tuning for maximum ROI.",
+      icon: <Cloud className="w-12 h-12 text-blue-500" />,
       features: [
-        "Multi-cloud strategy development";
-        "Cost optimization and monitoring";
-        "Security compliance implementation";
-        "Performance tuning and optimization";
-        "24/7 monitoring and alerting";
-        "Disaster recovery planning";
-        "Data migration and validation";
-        "Team training and documentation"];
+        "Multi-cloud strategy development",
+        "Cost optimization and monitoring",
+        "Security compliance implementation",
+        "Performance tuning and optimization",
+        "24/7 monitoring and alerting",
+        "Disaster recovery planning",
+        "Data migration and validation",
+        "Team training and documentation"],
       pricing: {
-        small: "From $2,500";
-        medium: "From $5,000";
-        enterprise: "From $15,000"};
-      marketPrice: "$5,000-15,000";
-      useCases: ["Enterprises", "Mid-size companies", "Startups", "Healthcare", "Financial services"];
+        small: "From $2,500",
+        medium: "From $5,000",
+        enterprise: "From $15,000"},
+      marketPrice: "$5,000-15,000",
+      useCases: ["Enterprises", "Mid-size companies", "Startups", "Healthcare", "Financial services"],
       benefits: [
-        "Reduced infrastructure costs";
-        "Improved scalability";
-        "Enhanced security posture";
-        "Better performance";
-        "Operational efficiency"];
-      website: "https://ziontechgroup.com/cloud-migration"};
+        "Reduced infrastructure costs",
+        "Improved scalability",
+        "Enhanced security posture",
+        "Better performance",
+        "Operational efficiency"],
+      website: "https://ziontechgroup.com/cloud-migration"},
     {
-      name: "DevOps Automation Platform";
-      description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.";
-      icon: <Code className="w-12 h-12 text-green-500" />;
+      name: "DevOps Automation Platform",
+      description: "Complete CI/CD pipeline automation with infrastructure as code, monitoring solutions, and security integration.",
+      icon: <Code className="w-12 h-12 text-green-500" />,
       features: [
-        "CI/CD pipeline automation";
-        "Infrastructure as Code (IaC)";
-        "Container orchestration";
-        "Monitoring and alerting";
-        "Security scanning integration";
-        "Auto-scaling capabilities";
-        "Configuration management";
-        "Performance optimization"];
+        "CI/CD pipeline automation",
+        "Infrastructure as Code (IaC)",
+        "Container orchestration",
+        "Monitoring and alerting",
+        "Security scanning integration",
+        "Auto-scaling capabilities",
+        "Configuration management",
+        "Performance optimization"],
       pricing: {
-        starter: "$599/month";
-        professional: "$1,199/month";
-        enterprise: "$2,499/month"};
-      marketPrice: "$800-1500/month";
-      useCases: ["Development teams", "Tech companies", "Enterprises", "Startups", "DevOps teams"];
+        starter: "$599/month",
+        professional: "$1,199/month",
+        enterprise: "$2,499/month"},
+      marketPrice: "$800-1500/month",
+      useCases: ["Development teams", "Tech companies", "Enterprises", "Startups", "DevOps teams"],
       benefits: [
-        "Faster deployment cycles";
-        "Reduced manual errors";
-        "Improved collaboration";
-        "Better resource utilization";
-        "Enhanced security"];
-      website: "https://ziontechgroup.com/devops-automation"};
+        "Faster deployment cycles",
+        "Reduced manual errors",
+        "Improved collaboration",
+        "Better resource utilization",
+        "Enhanced security"],
+      website: "https://ziontechgroup.com/devops-automation"},
     {
-      name: "Cybersecurity Assessment & Implementation";
-      description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.";
-      icon: <Shield className="w-12 h-12 text-red-500" />;
+      name: "Cybersecurity Assessment & Implementation",
+      description: "Comprehensive security audits, penetration testing, and security infrastructure deployment with compliance frameworks.",
+      icon: <Shield className="w-12 h-12 text-red-500" />,
       features: [
-        "Security audits and assessments";
-        "Penetration testing";
-        "Compliance framework implementation";
-        "Incident response planning";
-        "Security awareness training";
-        "Vulnerability management";
-        "Security monitoring setup";
-        "Compliance reporting"];
+        "Security audits and assessments",
+        "Penetration testing",
+        "Compliance framework implementation",
+        "Incident response planning",
+        "Security awareness training",
+        "Vulnerability management",
+        "Security monitoring setup",
+        "Compliance reporting"],
       pricing: {
-        basic: "From $3,500";
-        comprehensive: "From $7,500";
-        enterprise: "From $20,000"};
-      marketPrice: "$7,000-20,000";
-      useCases: ["Financial services", "Healthcare", "Government", "Enterprises", "E-commerce"];
+        basic: "From $3,500",
+        comprehensive: "From $7,500",
+        enterprise: "From $20,000"},
+      marketPrice: "$7,000-20,000",
+      useCases: ["Financial services", "Healthcare", "Government", "Enterprises", "E-commerce"],
       benefits: [
-        "Reduced security risks";
-        "Compliance assurance";
-        "Improved incident response";
-        "Enhanced customer trust";
-        "Cost-effective security"];
-      website: "https://ziontechgroup.com/cybersecurity"};
+        "Reduced security risks",
+        "Compliance assurance",
+        "Improved incident response",
+        "Enhanced customer trust",
+        "Cost-effective security"],
+      website: "https://ziontechgroup.com/cybersecurity"},
     {
-      name: "Network Infrastructure Design";
-      description: "Scalable network architecture design with high availability, security, and performance optimization.";
-      icon: <Network className="w-12 h-12 text-purple-500" />;
+      name: "Network Infrastructure Design",
+      description: "Scalable network architecture design with high availability, security, and performance optimization.",
+      icon: <Network className="w-12 h-12 text-purple-500" />,
       features: [
-        "Network architecture design";
-        "High availability setup";
-        "Security implementation";
-        "Performance optimization";
-        "Load balancing configuration";
-        "Network monitoring";
-        "Documentation and training";
-        "Ongoing support"];
+        "Network architecture design",
+        "High availability setup",
+        "Security implementation",
+        "Performance optimization",
+        "Load balancing configuration",
+        "Network monitoring",
+        "Documentation and training",
+        "Ongoing support"],
       pricing: {
-        small: "From $4,000";
-        medium: "From $8,000";
-        enterprise: "From $25,000"};
-      marketPrice: "$8,000-30,000";
-      useCases: ["Enterprises", "Data centers", "Cloud providers", "Educational institutions", "Healthcare"];
+        small: "From $4,000",
+        medium: "From $8,000",
+        enterprise: "From $25,000"},
+      marketPrice: "$8,000-30,000",
+      useCases: ["Enterprises", "Data centers", "Cloud providers", "Educational institutions", "Healthcare"],
       benefits: [
-        "Improved network performance";
-        "Enhanced security";
-        "Better scalability";
-        "Reduced downtime";
-        "Operational efficiency"];
-      website: "https://ziontechgroup.com/network-infrastructure"};
+        "Improved network performance",
+        "Enhanced security",
+        "Better scalability",
+        "Reduced downtime",
+        "Operational efficiency"],
+      website: "https://ziontechgroup.com/network-infrastructure"},
     {
-      name: "Database Design & Optimization";
-      description: "Database architecture design, performance tuning, and migration services for optimal data management.";
-      icon: <Database className="w-12 h-12 text-orange-500" />;
+      name: "Database Design & Optimization",
+      description: "Database architecture design, performance tuning, and migration services for optimal data management.",
+      icon: <Database className="w-12 h-12 text-orange-500" />,
       features: [
-        "Database architecture design";
-        "Performance tuning and optimization";
-        "Data migration services";
-        "Backup and recovery setup";
-        "Security implementation";
-        "Monitoring and alerting";
-        "Scalability planning";
-        "Maintenance procedures"];
+        "Database architecture design",
+        "Performance tuning and optimization",
+        "Data migration services",
+        "Backup and recovery setup",
+        "Security implementation",
+        "Monitoring and alerting",
+        "Scalability planning",
+        "Maintenance procedures"],
       pricing: {
-        consultation: "From $1,500";
-        implementation: "From $5,000";
-        enterprise: "From $15,000"};
-      marketPrice: "$3,000-20,000";
-      useCases: ["E-commerce platforms", "SaaS companies", "Enterprises", "Financial services", "Healthcare"];
+        consultation: "From $1,500",
+        implementation: "From $5,000",
+        enterprise: "From $15,000"},
+      marketPrice: "$3,000-20,000",
+      useCases: ["E-commerce platforms", "SaaS companies", "Enterprises", "Financial services", "Healthcare"],
       benefits: [
-        "Improved data performance";
-        "Enhanced data security";
-        "Better scalability";
-        "Reduced maintenance costs";
-        "Improved reliability"];
-      website: "https://ziontechgroup.com/database-services"};
+        "Improved data performance",
+        "Enhanced data security",
+        "Better scalability",
+        "Reduced maintenance costs",
+        "Improved reliability"],
+      website: "https://ziontechgroup.com/database-services"},
     {
-      name: "IT Infrastructure Management";
-      description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.";
-      icon: <Server className="w-12 h-12 text-indigo-500" />;
+      name: "IT Infrastructure Management",
+      description: "Comprehensive IT infrastructure management with proactive monitoring, maintenance, and optimization services.",
+      icon: <Server className="w-12 h-12 text-indigo-500" />,
       features: [
-        "24/7 infrastructure monitoring";
-        "Proactive maintenance";
-        "Performance optimization";
-        "Security updates";
-        "Backup management";
-        "Disaster recovery";
-        "Capacity planning";
-        "Vendor management"];
+        "24/7 infrastructure monitoring",
+        "Proactive maintenance",
+        "Performance optimization",
+        "Security updates",
+        "Backup management",
+        "Disaster recovery",
+        "Capacity planning",
+        "Vendor management"],
       pricing: {
-        basic: "$799/month";
-        professional: "$1,599/month";
-        enterprise: "$3,199/month"};
-      marketPrice: "$1,200-3,500/month";
-      useCases: ["Enterprises", "Mid-size companies", "Healthcare", "Financial services", "Educational institutions"];
+        basic: "$799/month",
+        professional: "$1,599/month",
+        enterprise: "$3,199/month"},
+      marketPrice: "$1,200-3,500/month",
+      useCases: ["Enterprises", "Mid-size companies", "Healthcare", "Financial services", "Educational institutions"],
       benefits: [
-        "Reduced downtime";
-        "Lower operational costs";
-        "Improved performance";
-        "Enhanced security";
-        "Peace of mind"];
+        "Reduced downtime",
+        "Lower operational costs",
+        "Improved performance",
+        "Enhanced security",
+        "Peace of mind"],
       website: "https://ziontechgroup.com/infrastructure-management"}
-  ];
+  ],
   const additionalServices = [
     {
-      name: "API Development & Integration";
-      description: "Custom API development and third-party system integration services.";
-      pricing: "From $2,500";
-      icon: <Code className="w-8 h-8 text-blue-400" />};
+      name: "API Development & Integration",
+      description: "Custom API development and third-party system integration services.",
+      pricing: "From $2,500",
+      icon: <Code className="w-8 h-8 text-blue-400" />},
     {
-      name: "Data Backup & Recovery";
-      description: "Comprehensive backup solutions and disaster recovery planning.";
-      pricing: "From $299/month";
-      icon: <Database className="w-8 h-8 text-green-400" />};
+      name: "Data Backup & Recovery",
+      description: "Comprehensive backup solutions and disaster recovery planning.",
+      pricing: "From $299/month",
+      icon: <Database className="w-8 h-8 text-green-400" />},
     {
-      name: "Performance Monitoring";
-      description: "Real-time performance monitoring and optimization services.";
-      pricing: "From $199/month";
-      icon: <Monitor className="w-8 h-8 text-purple-400" />};
+      name: "Performance Monitoring",
+      description: "Real-time performance monitoring and optimization services.",
+      pricing: "From $199/month",
+      icon: <Monitor className="w-8 h-8 text-purple-400" />},
     {
-      name: "IT Consulting";
-      description: "Strategic IT consulting and technology roadmap planning.";
-      pricing: "From $150/hour";
+      name: "IT Consulting",
+      description: "Strategic IT consulting and technology roadmap planning.",
+      pricing: "From $150/hour",
       icon: <Users className="w-8 h-8 text-orange-400" />}
-  ];
+  ],
   const stats = [
-    { label: "Infrastructure Deployed", value: "200+" };
-    { label: "Security Audits", value: "150+" };
-    { label: "Uptime Guarantee", value: "99.9%" };
+    { label: "Infrastructure Deployed", value: "200+" },
+    { label: "Security Audits", value: "150+" },
+    { label: "Uptime Guarantee", value: "99.9%" },
     { label: "Client Satisfaction", value: "97%" }
-  ];
+  ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-gray-900 via-blue-900 to-purple-900 text-white">,
       {/* Hero Section */}

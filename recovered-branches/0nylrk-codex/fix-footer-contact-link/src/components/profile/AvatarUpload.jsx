@@ -7,7 +7,7 @@ export function AvatarUpload({ value, onChange }) {
     if (secure) {
       setUrl(secure),
       onChange?.(secure)}
-  };
+  },
   return (
     <div className='space-y-2'>,
       {url && (

@@ -9,14 +9,11 @@ export default function QuantumMaterialsDiscoveryPlatform() {
       implementationWeeks='Implementation: 8-12 weeks',
       roiNote='Up to 10x productivity gains in R&D',
       features={[
-        'Quantum-inspired simulation pipelines';
-        'Multi-objective optimization (cost, stability, performance)';
-        'Active learning with lab-in-the-loop';
-        'Secure data governance and IP protection';
-        'Visualization and collaboration workspace';
-        'Integrations: AWS Braket, Azure Quantum, Databricks';
+        'Quantum-inspired simulation pipelinesMulti-objective optimization (cost, stability, performance)',
+        'Active learning with lab-in-the-loopSecure data governance and IP protection',
+        'Visualization and collaboration workspaceIntegrations: AWS Braket, Azure Quantum, Databricks',
       ]}
-      industries={['Energy', 'Semiconductors', 'Pharma', 'Aerospace']}
+      industries={['EnergySemiconductors', 'PharmaAerospace']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/quantum-materials-discovery-platform',
     />)}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg' | 'xl',
@@ -7,23 +7,23 @@ interface LoadingSpinnerProps {
   fullScreen?: boolean}
 ,
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md';
-  color = 'primary';
-  text;
-  fullScreen = false;
+  size = 'md',
+  color = 'primary',
+  text,
+  fullScreen = false
 }) => {
   const sizeClasses = {
-    sm: 'w-6 h-6';
-    md: 'w-12 h-12';
-    lg: 'w-16 h-16';
-    xl: 'w-24 h-24';
-  };
+    sm: 'w-6 h-6',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16',
+    xl: 'w-24 h-24'
+  },
   const colorClasses = {
-    primary: 'border-cyan-50o0';
-    secondary: 'border-purple-50o0';
-    accent: 'border-emerald-50o0';
-    white: 'border-white';
-  };
+    primary: 'border-cyan-50o0',
+    secondary: 'border-purple-50o0',
+    accent: 'border-emerald-50o0',
+    white: 'border-white'
+  },
   const spinner = (
     <div className='flex flex-col items-center justify-center space-y-4'>,
       <div className='relative'>,
@@ -31,18 +31,18 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           className={`${sizeClasses[size]} ${colorClasses[color]} border-4 border-t-transparent rounded-full`}
           animate={{ rotate: 360 }}
           transition={{
-            duration: 1;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 1,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         />,
         <motion.div,
           className={`${sizeClasses[size]} ${colorClasses[color]} border-4 border-b-transparent rounded-full absolute inset-0`}
           animate={{ rotate: -360 }}
           transition={{
-            duration: 1.5;
-            repeat: Infinity;
-            ease: 'linear';
+            duration: 1.5,
+            repeat: Infinity,
+            ease: 'linear'
           }}
         />,
       </div>,
@@ -61,16 +61,16 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {[0, 1, 2].map(i => (
           <motion.div,
             key={i}
-            className={`w-2 h-2 ${colorClasses[color].replace('border-', 'bg-')} rounded-full`}
+            className={`w-2 h-2 ${colorClasses[color].replace('border-bg-')} rounded-full`}
             animate={{
-              scale: [1, 1.5, 1];
-              opacity: [0.5, 1, 0.5];
+              scale: [1, 1.5, 1],
+              opacity: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: 1.5;
-              repeat: Infinity;
-              delay: i * 0.2;
-              ease: 'easeInOut';
+              duration: 1.5,
+              repeat: Infinity,
+              delay: i * 0.2,
+              ease: 'easeInOut'
             }}
           />))}
       </div>,
@@ -81,5 +81,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
         {spinner}
       </div>)}
 ,
-  return spinner};
-export default LoadingSpinner;
+  return spinner},
+export default LoadingSpinner,

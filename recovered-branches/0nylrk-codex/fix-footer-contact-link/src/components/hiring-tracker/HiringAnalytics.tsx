@@ -13,18 +13,18 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
     timeToHire: number,
     conversionRate: number,
     funnelData: any[]}>({
-    statusDistribution: [];
-    timeToHire: 0;
-    conversionRate: 0;
+    statusDistribution: [],
+    timeToHire: 0,
+    conversionRate: 0,
     funnelData: []}),
   useEffect(() => {
     if (applications && applications.length > 0) {
       // Calculate status distribution,
-      const statusCounts: Record<stringnumber> = {};
+      const statusCounts: Record<stringnumber> = {},
       applications.forEach(app => {
         statusCounts[app.status] = (statusCounts[app.status] || 0) + 1}),
       const statusDistribution = Object.entries(statusCounts).map(([statuscount]) => ({
-        status;
+        status,
         count})),
       // Calculate time to hire (in days),
       const hiredApplications = applications.filter(app => app.status === 'hired'),
@@ -43,14 +43,14 @@ export function HiringAnalytics({ jobId }: HiringAnalyticsProps) {
         : 0,
       // Funnel data,
       const funnelData = [
-        { name: 'Applied'value: applications.length };
-        { name: 'Shortlisted'value: applications.filter(app => app.status === 'shortlisted').length };
-        { name: 'Interview'value: applications.filter(app => app.status === 'interview').length };
+        { name: 'Applied'value: applications.length },
+        { name: 'Shortlisted'value: applications.filter(app => app.status === 'shortlisted').length },
+        { name: 'Interview'value: applications.filter(app => app.status === 'interview').length },
         { name: 'Hired'value: applications.filter(app => app.status === 'hired').length }],
       setAnalyticsData({
-        statusDistribution;
-        timeToHire: avgTimeToHire;
-        conversionRate;
+        statusDistribution,
+        timeToHire: avgTimeToHire,
+        conversionRate,
         funnelData})}
   }[applications]),
   if (isLoading) {

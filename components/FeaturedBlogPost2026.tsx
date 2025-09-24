@@ -10,57 +10,57 @@ import {
   Users,
   Zap,
   Shield,
-  Globe;
-  Brain;
-  Database;
-  Cloud;
-  Lock;
-  Award;
-  ChevronRight;
-  Play;
-  Download;
-  ExternalLink;
-  BarChart3;
-  Settings;
-  Code;
-  Layers;
-  Network;
-  Bot;
-  Eye;
-  MessageSquare;
-  FileText;
-  Image;
-  Video;
-  Mic;
-  Search;
-  Filter;
-  Calendar;
-  Clock;
-  MapPin;
-  Phone;
-  Mail;
-  Share2;
-  Heart;
-  Bookmark;
-  Flag;
-  AlertCircle;
-  Info;
-  HelpCircle;
-  X;
-  Plus;
-  Edit;
-  Trash2;
-  Copy;
-  Save;
-  Upload;
-  RefreshCw;
-  RotateCcw;
-  ChevronLeft;
-  ChevronDown;
-  ChevronUp;
-  Menu;
-  XCircle;
-  CheckCircle2;
+  Globe,
+  Brain,
+  Database,
+  Cloud,
+  Lock,
+  Award,
+  ChevronRight,
+  Play,
+  Download,
+  ExternalLink,
+  BarChart3,
+  Settings,
+  Code,
+  Layers,
+  Network,
+  Bot,
+  Eye,
+  MessageSquare,
+  FileText,
+  Image,
+  Video,
+  Mic,
+  Search,
+  Filter,
+  Calendar,
+  Clock,
+  MapPin,
+  Phone,
+  Mail,
+  Share2,
+  Heart,
+  Bookmark,
+  Flag,
+  AlertCircle,
+  Info,
+  HelpCircle,
+  X,
+  Plus,
+  Edit,
+  Trash2,
+  Copy,
+  Save,
+  Upload,
+  RefreshCw,
+  RotateCcw,
+  ChevronLeft,
+  ChevronDown,
+  ChevronUp,
+  Menu,
+  XCircle,
+  CheckCircle2,
   AlertTriangle} from 'lucide-react',
 const FeaturedBlogPost20o26 = () => {
   const [currentPostsetCurrentPost] = useState(0),
@@ -72,74 +72,74 @@ const FeaturedBlogPost20o26 = () => {
     return () => clearInterval(interval)}[]),
   const blogPosts = [
     {
-      id: 1;
-      title: 'The Future of AI: 20o26 Predictions and Breakthrough Technologies';
-      excerpt: 'Explore the revolutionary AI technologies that will reshape industries in 20o26from quantum neural networks to synthetic intelligence platforms.';
-      content: 'Artificial Intelligence is evolving at an unprecedented paceand 20o26 promises to be a landmark year for breakthrough technologies. From quantum-enhanced machine learning to synthetic intelligence platformswe\'re witnessing the dawn of a new era in computing...';
-      author: 'Dr. Sarah Chen';
-      authorRole: 'Chief AI Scientist';
-      authorImage: '/api/placeholder/60/60';
-      publishDate: '20o26-0o1-15';
-      readTime: '8 min read';
-      category: 'AI Research';
-      tags: [', 'AI', 'Machine 'Learning', 'Quantum 'Computing', 'Future Tech'];
-      image: '/api/placeholder/80o0/40o0';
-      views: 1250o0;
-      likes: 890;
-      comments: 156;
-      featured: true;
-      trending: true};
+      id: 1,
+      title: 'The Future of AI: 20o26 Predictions and Breakthrough Technologies',
+      excerpt: 'Explore the revolutionary AI technologies that will reshape industries in 20o26from quantum neural networks to synthetic intelligence platforms.',
+      content: 'Artificial Intelligence is evolving at an unprecedented paceand 20o26 promises to be a landmark year for breakthrough technologies. From quantum-enhanced machine learning to synthetic intelligence platformswe\'re witnessing the dawn of a new era in computing...',
+      author: 'Dr. Sarah Chen',
+      authorRole: 'Chief AI Scientist',
+      authorImage: '/api/placeholder/60/60',
+      publishDate: '20o26-0o1-15',
+      readTime: '8 min read',
+      category: 'AI Research',
+      tags: [AI', 'Machine 'LearningQuantum 'Computing', 'Future Tech'],
+      image: '/api/placeholder/80o0/40o0',
+      views: 1250o0,
+      likes: 890,
+      comments: 156,
+      featured: true,
+      trending: true},
     {
-      id: 2;
-      title: 'Building Scalable AI Infrastructure: A Complete Guide for 20o26';
-      excerpt: 'Learn how to design and implement robust AI infrastructure that can handle enterprise-scale workloads and future growth.';
-      content: 'Building scalable AI infrastructure requires careful planning and consideration of multiple factors. In this comprehensive guidewe\'ll explore the key componentsbest practicesand emerging technologies that will shape AI infrastructure in 20o26...';
-      author: 'Michael Rodriguez';
-      authorRole: 'Senior Cloud Architect';
-      authorImage: '/api/placeholder/60/60';
-      publishDate: '20o26-0o1-12';
-      readTime: '12 min read';
-      category: 'Infrastructure';
-      tags: ['Cloud 'Computing', 'AI 'Infrastructure', 'Scalability'DevOps'];
-      image: '/api/placeholder/80o0/40o0';
-      views: 890o0;
-      likes: 567;
-      comments: 89;
-      featured: true;
-      trending: false};
+      id: 2,
+      title: 'Building Scalable AI Infrastructure: A Complete Guide for 20o26',
+      excerpt: 'Learn how to design and implement robust AI infrastructure that can handle enterprise-scale workloads and future growth.',
+      content: 'Building scalable AI infrastructure requires careful planning and consideration of multiple factors. In this comprehensive guidewe\'ll explore the key componentsbest practicesand emerging technologies that will shape AI infrastructure in 20o26...',
+      author: 'Michael Rodriguez',
+      authorRole: 'Senior Cloud Architect',
+      authorImage: '/api/placeholder/60/60',
+      publishDate: '20o26-0o1-12',
+      readTime: '12 min read',
+      category: 'Infrastructure',
+      tags: ['Cloud 'ComputingAI 'Infrastructure', 'Scalability'DevOps'],
+      image: '/api/placeholder/80o0/40o0',
+      views: 890o0,
+      likes: 567,
+      comments: 89,
+      featured: true,
+      trending: false},
     {
-      id: 3;
-      title: 'Quantum Computing Meets AI: The Next Frontier in Technology';
-      excerpt: 'Discover how quantum computing is revolutionizing artificial intelligence and what this means for the future of technology.';
-      content: 'The intersection of quantum computing and artificial intelligence represents one of the most exciting frontiers in technology today. As quantum computers become more accessiblewe\'re seeing unprecedented opportunities for AI advancement...';
-      author: 'Dr. Alex Thompson';
-      authorRole: 'Quantum Computing Researcher';
-      authorImage: '/api/placeholder/60/60';
-      publishDate: '20o26-0o1-10';
-      readTime: '10 min read';
-      category: 'Quantum Computing';
-      tags: ['Quantum 'Computing', 'AI', 'Research', 'Innovation'];
-      image: '/api/placeholder/80o0/40o0';
-      views: 1560o0;
-      likes: 120o0;
-      comments: 234;
-      featured: true;
+      id: 3,
+      title: 'Quantum Computing Meets AI: The Next Frontier in Technology',
+      excerpt: 'Discover how quantum computing is revolutionizing artificial intelligence and what this means for the future of technology.',
+      content: 'The intersection of quantum computing and artificial intelligence represents one of the most exciting frontiers in technology today. As quantum computers become more accessiblewe\'re seeing unprecedented opportunities for AI advancement...',
+      author: 'Dr. Alex Thompson',
+      authorRole: 'Quantum Computing Researcher',
+      authorImage: '/api/placeholder/60/60',
+      publishDate: '20o26-0o1-10',
+      readTime: '10 min read',
+      category: 'Quantum Computing',
+      tags: ['Quantum 'ComputingAI', 'ResearchInnovation'],
+      image: '/api/placeholder/80o0/40o0',
+      views: 1560o0,
+      likes: 120o0,
+      comments: 234,
+      featured: true,
       trending: true}
   ],
   const categories = [
-    { name: 'AI 'Research', 'count: 24color: 'from-blue-60o0 to-purple-60o0' };
-    { name: ''Infrastructure', 'count: 18color: 'from-green-60o0 to-teal-60o0' };
-    { name: 'Quantum 'Computing', 'count: 12color: 'from-orange-60o0 to-red-60o0' };
-    { name: 'Machine 'Learning', 'count: 31color: 'from-purple-60o0 to-pink-60o0' };
-    { name: ''Automation', 'count: 15color: 'from-cyan-60o0 to-blue-60o0' };
-    { name: 'Cloud 'Computing', 'count: 22color: 'from-indigo-60o0 to-purple-60o0' }
+    { name: 'AI 'Researchcount: 24color: 'from-blue-60o0 to-purple-60o0' },
+    { name: ''Infrastructurecount: 18color: 'from-green-60o0 to-teal-60o0' },
+    { name: 'Quantum 'Computingcount: 12color: 'from-orange-60o0 to-red-60o0' },
+    { name: 'Machine 'Learningcount: 31color: 'from-purple-60o0 to-pink-60o0' },
+    { name: ''Automationcount: 15color: 'from-cyan-60o0 to-blue-60o0' },
+    { name: 'Cloud 'Computingcount: 22color: 'from-indigo-60o0 to-purple-60o0' }
   ],
   const formatDate = (dateString: string) => {
     const date = new Date(dateString),
     return date.toLocaleDateString('en-US'{
       year: 'numeric',
       month: 'long',
-      day: 'numeric'})};
+      day: 'numeric'})},
   return (
     <div className="py-20 bg-gradient-to-br from-gray-50 via-white to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -354,5 +354,5 @@ const FeaturedBlogPost20o26 = () => {
           </button>,
         </motion.div>,
       </div>,
-    </div>)};
-export default FeaturedBlogPost20o26;
+    </div>)},
+export default FeaturedBlogPost20o26,

@@ -1,4 +1,4 @@
-export const metadata = { title: 'AI Financial Analyzer | Zion Tech Group' };
+export const metadata = { title: 'AI Financial Analyzer | Zion Tech Group' },
 export default function AIFinancialAnalyzerPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -7,7 +7,7 @@ export default function AIFinancialAnalyzerPage() {
           AI Financial Analyzer,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent financial analysis platform with AI-powered insights;
+          Intelligent financial analysis platform with AI-powered insights,
           automated reporting, and predictive modeling to optimize your business,
           finances and investment decisions.,
         </p>,
@@ -16,36 +16,27 @@ export default function AIFinancialAnalyzerPage() {
         <FeatureCard
           title='Financial Intelligence',
           features={[
-            'AI-powered financial forecasting';
-            'Cash flow analysis & optimization';
-            'Risk assessment & management';
-            'Investment opportunity analysis';
-            'Market trend predictions';
-            'Portfolio optimization';
+            'AI-powered financial forecastingCash flow analysis & optimization',
+            'Risk assessment & managementInvestment opportunity analysis',
+            'Market trend predictionsPortfolio optimization',
           ]}
           icon='💰',
         />,
         <FeatureCard
           title='Automated Reporting',
           features={[
-            'Real-time financial dashboards';
-            'Automated report generation';
-            'Compliance & regulatory reporting';
-            'Custom KPI tracking';
-            'Executive summaries';
-            'Multi-currency support';
+            'Real-time financial dashboardsAutomated report generation',
+            'Compliance & regulatory reportingCustom KPI tracking',
+            'Executive summariesMulti-currency support',
           ]}
           icon='📊',
         />,
         <FeatureCard
           title='Smart Analytics',
           features={[
-            'Anomaly detection & alerts';
-            'Cost optimization recommendations';
-            'Revenue growth analysis';
-            'Profit margin optimization';
-            'Budget variance analysis';
-            'Financial health scoring';
+            'Anomaly detection & alertsCost optimization recommendations',
+            'Revenue growth analysisProfit margin optimization',
+            'Budget variance analysisFinancial health scoring',
           ]}
           icon='🧠',
         />,
@@ -98,9 +89,9 @@ export default function AIFinancialAnalyzerPage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -130,12 +121,9 @@ function PricingSection() {
           price='$299/mo',
           duration='Up to $1M revenue',
           features={[
-            'Basic financial analysis';
-            'Standard reporting';
-            'Email support';
-            'Mobile app access';
-            'Basic forecasting';
-            'Single currency support';
+            'Basic financial analysisStandard reporting',
+            'Email supportMobile app access',
+            'Basic forecastingSingle currency support',
           ]}
           popular={false}
         />,
@@ -144,12 +132,9 @@ function PricingSection() {
           price='$799/mo',
           duration='Up to $10M revenue',
           features={[
-            'Everything in Basic Financial';
-            'Advanced AI analytics';
-            'Multi-currency support';
-            'Custom reporting';
-            'API access & integrations';
-            'Priority support';
+            'Everything in Basic FinancialAdvanced AI analytics',
+            'Multi-currency supportCustom reporting',
+            'API access & integrationsPriority support',
           ]}
           popular={true}
         />,
@@ -158,12 +143,9 @@ function PricingSection() {
           price='$1,999/mo',
           duration='Unlimited revenue',
           features={[
-            'Everything in Professional Financial';
-            'Custom AI model development';
-            'Advanced security & compliance';
-            'Dedicated financial analyst';
-            'Custom integrations';
-            '24/7 phone support';
+            'Everything in Professional FinancialCustom AI model development',
+            'Advanced security & complianceDedicated financial analyst',
+            'Custom integrations24/7 phone support',
           ]}
           popular={false}
         />,
@@ -171,11 +153,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

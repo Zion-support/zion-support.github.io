@@ -1,15 +1,13 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26 Enterprise Multimodal Agents Blueprint';
+  title: 'AI 20o26 Enterprise Multimodal Agents Blueprint',
   description:,
-    'Downloadable enterprise blueprint for designing, operating, and governing multimodal agent systems in 20o26.';
+    'Downloadable enterprise blueprint for designing, operating, and governing multimodal agent systems in 20o26.',
   keywords: [
-    'multimodal agents';
-    'enterprise blueprint';
-    'governance';
-    'operating model';
-  ];
-};
+    'multimodal agentsenterprise blueprint',
+    'governanceoperating model',
+  ]
+},
 export default function EnterpriseMultimodalAgentsBlueprintPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-50 via-white to-blue-50'>,

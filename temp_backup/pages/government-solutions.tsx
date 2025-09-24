@@ -1,53 +1,53 @@
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  Building;
-  Globe;
-  Brain;
-  Lock;
-  Users;
-  Target;
-  Award;
+  Shield,
+  Building,
+  Globe,
+  Brain,
+  Lock,
+  Users,
+  Target,
+  Award,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 export default function GovernmentSolutions() {
   const solutions = [
     {
-      icon: <Shield className='w-12 h-12 text-cyan-40o0' />;
-      title: 'Government Cybersecurity';
-      description: 'FIPS-compliant security solutions for government agencies';
-      href: '/government-technology-solutions';
-    };
+      icon: <Shield className='w-12 h-12 text-cyan-40o0' />,
+      title: 'Government Cybersecurity',
+      description: 'FIPS-compliant security solutions for government agencies',
+      href: '/government-technology-solutions'
+    },
     {
-      icon: <Building className='w-12 h-12 text-blue-40o0' />;
-      title: 'Digital Transformation';
-      description: 'Modernize government services with AI and automation';
-      href: '/ai-autonomous-business-operations';
-    };
+      icon: <Building className='w-12 h-12 text-blue-40o0' />,
+      title: 'Digital Transformation',
+      description: 'Modernize government services with AI and automation',
+      href: '/ai-autonomous-business-operations'
+    },
     {
-      icon: <Globe className='w-12 h-12 text-purple-40o0' />;
-      title: 'Cloud Infrastructure';
-      description: 'FedRAMP-ready cloud solutions for government workloads';
-      href: '/multi-cloud-disaster-recovery';
-    };
+      icon: <Globe className='w-12 h-12 text-purple-40o0' />,
+      title: 'Cloud Infrastructure',
+      description: 'FedRAMP-ready cloud solutions for government workloads',
+      href: '/multi-cloud-disaster-recovery'
+    },
     {
-      icon: <Brain className='w-12 h-12 text-green-40o0' />;
-      title: 'AI for Government';
-      description: 'AI-powered solutions for public sector efficiency';
-      href: '/ai-powered-decision-engine';
-    };
+      icon: <Brain className='w-12 h-12 text-green-40o0' />,
+      title: 'AI for Government',
+      description: 'AI-powered solutions for public sector efficiency',
+      href: '/ai-powered-decision-engine'
+    },
     {
-      icon: <Lock className='w-12 h-12 text-yellow-40o0' />;
-      title: 'Compliance & Security';
-      description: 'Meet government security and compliance requirements';
-      href: '/soc2-compliance-automation';
-    };
+      icon: <Lock className='w-12 h-12 text-yellow-40o0' />,
+      title: 'Compliance & Security',
+      description: 'Meet government security and compliance requirements',
+      href: '/soc2-compliance-automation'
+    },
     {
-      icon: <Users className='w-12 h-12 text-pink-40o0' />;
-      title: 'Citizen Services';
-      description: 'Improve citizen experience with digital solutions';
-      href: '/intelligent-content-automation-platform';
-    };
+      icon: <Users className='w-12 h-12 text-pink-40o0' />,
+      title: 'Citizen Services',
+      description: 'Improve citizen experience with digital solutions',
+      href: '/intelligent-content-automation-platform'
+    },
   ],
   return (
     <Layout>,

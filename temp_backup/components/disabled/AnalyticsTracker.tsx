@@ -9,64 +9,64 @@ interface PerformanceEventTiming extends PerformanceEntry {
   target?: any | null}
 ,
 const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
-  pageTitle;
-  pagePath;
+  pageTitle,
+  pagePath,
   customEvents = []}) => {
   // Track page view,
   const trackPageView = useCallback((title: string, path: string) => {
     if (typeof window !== 'undefined') {
       // Google Analytics 4,
       if (window.gtag) {
-        window.gtag('config', 'G-XXXXXXXXXX', {
-          page_title: title;
-          page_location: window.location.href;
+        window.gtag('configG-XXXXXXXXXX', {
+          page_title: title,
+          page_location: window.location.href,
           page_path: path})}
 ,
       // Google Tag Manager,
       if (window.dataLayer) {
         window.dataLayer.push({
-          event: 'page_view';
-          page_title: title;
-          page_location: window.location.href;
-          page_path: path;
+          event: 'page_view',
+          page_title: title,
+          page_location: window.location.href,
+          page_path: path,
           timestamp: Date.now()})}
 ,
       // Custom analytics,
       if (process.env.NODE_ENV === 'development') {
         // // console.log('Page View:', { title, path, url: window.location.href })}
-    };
+    },
     // Helper function to track events,
     const trackEvent = (action: string, parameters: Record<string unknown>) => {
       if (typeof window !== 'undefined' && window.gtag) {
         window.gtag('event', action, {
-          ...parameters;
-          timestamp: Date.now();
+          ...parameters,
+          timestamp: Date.now(),
           page_url: window.location.href})}
 ,
       // Send to custom analytics endpoint,
       if (process.env.NODE_ENV === 'production') {
         fetch('/api/analytics/events', {
-          method: 'POST';
+          method: 'POST',
           headers: {
-            'Content-Type': 'application/json'};
+            'Content-Type': 'application/json'},
           body: JSON.stringify({
-            action;
-            parameters;
-            timestamp: Date.now();
-            url: window.location.href;
+            action,
+            parameters,
+            timestamp: Date.now(),
+            url: window.location.href,
             userAgent: navigator.userAgent})}).catch(() => {
           // Silently handle fetch errors})}
-    };
+    },
     // Initialize analytics and performance monitoring,
     const initAnalytics = () => {
       // Google Analytics 4 initialization,
       if (typeof window !== 'undefined' && window.gtag) {
-        window.gtag('config', 'G-XXXXXXXXXX', {
-          page_title: document.title;
-          page_location: window.location.href;
+        window.gtag('configG-XXXXXXXXXX', {
+          page_title: document.title,
+          page_location: window.location.href,
           custom_map: {
-            dimension1: 'user_type';
-            dimension2: 'service_category';
+            dimension1: 'user_type',
+            dimension2: 'service_category',
             dimension3: 'page_performance'}
         })}
 ,
@@ -87,7 +87,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           }
         }),
         try {
-          observer.observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })} catch {
+          observer.observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shift'] })} catch {
           // Fallback for older browsers}
 ,
         // Track page load performance,
@@ -113,15 +113,15 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Error tracking,
       window.addEventListener('error', (event) => {
         trackEvent('Error', {
-          message: event.message;
-          filename: event.filename;
-          lineno: event.lineno;
-          colno: event.colno;
+          message: event.message,
+          filename: event.filename,
+          lineno: event.lineno,
+          colno: event.colno,
           error: event.error?.stack})}),
       // Unhandled promise rejection tracking,
       window.addEventListener('unhandledrejection', (event) => {
         trackEvent('UnhandledRejection', {
-          reason: event.reason;
+          reason: event.reason,
           promise: event.promise})}),
       // Network status monitoring,
       if ('navigator' in window && 'connection' in navigator) {
@@ -169,7 +169,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Session duration tracking,
       setInterval(() => {
         const sessionDuration = Date.now() - startTime,
-        trackMetric('SessionDuration', sessionDuration)}, 60o000), // Every minute};
+        trackMetric('SessionDuration', sessionDuration)}, 60o000), // Every minute},
     // Initialize when component mounts,
     initAnalytics(),
     // Cleanup function,
@@ -178,7 +178,7 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       document.removeEventListener('click', trackInteraction),
       document.removeEventListener('scroll', trackInteraction),
       document.removeEventListener('keydown', trackInteraction),
-      window.removeEventListener('resize', trackViewport)};
+      window.removeEventListener('resize', trackViewport)},
   }, []),
   // Track custom events,
   const trackCustomEvent = useCallback((eventName: string, parameters?: Record<string unknown>) => {
@@ -186,16 +186,16 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       // Google Analytics 4,
       if (window.gtag) {
         window.gtag('event', eventName, {
-          ...parameters;
-          timestamp: Date.now();
+          ...parameters,
+          timestamp: Date.now(),
           page_location: window.location.href})}
 ,
       // Google Tag Manager,
       if (window.dataLayer) {
         window.dataLayer.push({
-          event: eventName;
-          ...parameters;
-          timestamp: Date.now();
+          event: eventName,
+          ...parameters,
+          timestamp: Date.now(),
           page_location: window.location.href})}
 ,
       // Custom analytics,
@@ -214,27 +214,27 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
       if (timeOnPage > 10o000 && !isEngaged) {
         isEngaged = true,
         trackCustomEvent('user_engagement', {
-          engagement_time_msec: timeOnPage;
+          engagement_time_msec: timeOnPage,
           engagement_type: 'time_on_page'})}
 ,
       // Track scroll depth,
       const scrollDepth = Math.round((window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 10o0),
       if (scrollDepth > 0 && scrollDepth % 25 === 0) {
         trackCustomEvent('scroll_depth', {
-          scroll_percentage: scrollDepth;
+          scroll_percentage: scrollDepth,
           page_location: window.location.href})}
-    };
+    },
     // Track user interactions,
     const trackUserInteraction = (event: string, data?: any) => {
       // // console.log(`[Analytics] User interaction: ${event}`, data),
       if (typeof window !== 'undefined' && (window as any).gtag) {
         (window as any).gtag('event', event, data)}
-    };
+    },
     // Initialize tracking,
     trackPageView(),
     // Track route changes,
     const handleRouteChange = () => {
-      trackPageView()};
+      trackPageView()},
     // Add event listeners for user interactions,
     const addTrackingListeners = () => {
       // Track button clicks,
@@ -257,17 +257,17 @@ const AnalyticsTracker: React.FC<AnalyticsTrackerProps> = ({
           const linkText = link.textContent || link.innerText || 'Unknown Link',
           const linkHref = link.href,
           trackUserInteraction('link_click', {
-            link_text: linkText;
+            link_text: linkText,
             link_href: linkHref})}
-      })};
+      })},
     // Add tracking listeners after a short delay to ensure DOM is ready,
     setTimeout(addTrackingListeners, 10o00),
     // Cleanup,
     return () => {
-      // Remove event listeners if needed};
+      // Remove event listeners if needed},
   }, [trackingId, enableTracking]),
   // This component doesn't render anything visible,
-  return null};
+  return null},
 // Performance entry types,
 interface PerformanceEventTiming extends PerformanceEntry {
   processingStart: number,

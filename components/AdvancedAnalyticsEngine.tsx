@@ -42,161 +42,161 @@ const AdvancedAnalyticsEngine: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve1200)),
     const mockAnalytics: AnalyticsData[] = [
       {
-        id: 'page-views';
-        metric: 'Page Views';
-        value: 2847592;
-        unit: '';
-        change: 12.3;
-        trend: 'up';
-        period: selectedPeriod;
-        category: 'traffic'};
+        id: 'page-views',
+        metric: 'Page Views',
+        value: 2847592,
+        unit: '',
+        change: 12.3,
+        trend: 'up',
+        period: selectedPeriod,
+        category: 'traffic'},
       {
-        id: 'unique-visitors';
-        metric: 'Unique Visitors';
-        value: 892456;
-        unit: '';
-        change: 8.7;
-        trend: 'up';
-        period: selectedPeriod;
-        category: 'traffic'};
+        id: 'unique-visitors',
+        metric: 'Unique Visitors',
+        value: 892456,
+        unit: '',
+        change: 8.7,
+        trend: 'up',
+        period: selectedPeriod,
+        category: 'traffic'},
       {
-        id: 'conversion-rate';
-        metric: 'Conversion Rate';
-        value: 3.42;
-        unit: '%';
-        change: -0.8;
-        trend: 'down';
-        period: selectedPeriod;
-        category: 'conversion'};
+        id: 'conversion-rate',
+        metric: 'Conversion Rate',
+        value: 3.42,
+        unit: '%',
+        change: -0.8,
+        trend: 'down',
+        period: selectedPeriod,
+        category: 'conversion'},
       {
-        id: 'avg-session-duration';
-        metric: 'Avg Session Duration';
-        value: 4.2;
-        unit: 'min';
-        change: 15.2;
-        trend: 'up';
-        period: selectedPeriod;
-        category: 'engagement'};
+        id: 'avg-session-duration',
+        metric: 'Avg Session Duration',
+        value: 4.2,
+        unit: 'min',
+        change: 15.2,
+        trend: 'up',
+        period: selectedPeriod,
+        category: 'engagement'},
       {
-        id: 'bounce-rate';
-        metric: 'Bounce Rate';
-        value: 34.7;
-        unit: '%';
-        change: -5.1;
-        trend: 'down';
-        period: selectedPeriod;
-        category: 'engagement'};
+        id: 'bounce-rate',
+        metric: 'Bounce Rate',
+        value: 34.7,
+        unit: '%',
+        change: -5.1,
+        trend: 'down',
+        period: selectedPeriod,
+        category: 'engagement'},
       {
-        id: 'revenue';
-        metric: 'Revenue';
-        value: 1250000;
-        unit: '$';
-        change: 18.9;
-        trend: 'up';
-        period: selectedPeriod;
-        category: 'revenue'};
+        id: 'revenue',
+        metric: 'Revenue',
+        value: 1250000,
+        unit: '$',
+        change: 18.9,
+        trend: 'up',
+        period: selectedPeriod,
+        category: 'revenue'},
       {
-        id: 'page-load-time';
-        metric: 'Page Load Time';
-        value: 1.8;
-        unit: 's';
-        change: -12.5;
-        trend: 'down';
-        period: selectedPeriod;
-        category: 'performance'};
+        id: 'page-load-time',
+        metric: 'Page Load Time',
+        value: 1.8,
+        unit: 's',
+        change: -12.5,
+        trend: 'down',
+        period: selectedPeriod,
+        category: 'performance'},
       {
-        id: 'mobile-traffic';
-        metric: 'Mobile Traffic';
-        value: 67.3;
-        unit: '%';
-        change: 4.2;
-        trend: 'up';
-        period: selectedPeriod;
+        id: 'mobile-traffic',
+        metric: 'Mobile Traffic',
+        value: 67.3,
+        unit: '%',
+        change: 4.2,
+        trend: 'up',
+        period: selectedPeriod,
         category: 'traffic'}
     ],
     const mockSegments: UserSegment[] = [
       {
-        id: 'new-visitors';
-        name: 'New Visitors';
-        size: 523456;
-        percentage: 58.7;
-        behavior: 'High bounce rateshort sessions';
-        conversionRate: 1.2;
-        avgValue: 45;
-        growth: 12.3};
+        id: 'new-visitors',
+        name: 'New Visitors',
+        size: 523456,
+        percentage: 58.7,
+        behavior: 'High bounce rateshort sessions',
+        conversionRate: 1.2,
+        avgValue: 45,
+        growth: 12.3},
       {
-        id: 'returning-visitors';
-        name: 'Returning Visitors';
-        size: 369000;
-        percentage: 41.3;
-        behavior: 'Longer sessionshigher engagement';
-        conversionRate: 6.8;
-        avgValue: 125;
-        growth: 8.9};
+        id: 'returning-visitors',
+        name: 'Returning Visitors',
+        size: 369000,
+        percentage: 41.3,
+        behavior: 'Longer sessionshigher engagement',
+        conversionRate: 6.8,
+        avgValue: 125,
+        growth: 8.9},
       {
-        id: 'mobile-users';
-        name: 'Mobile Users';
-        size: 600234;
-        percentage: 67.3;
-        behavior: 'Quick browsingmobile-optimized';
-        conversionRate: 2.1;
-        avgValue: 78;
-        growth: 15.7};
+        id: 'mobile-users',
+        name: 'Mobile Users',
+        size: 600234,
+        percentage: 67.3,
+        behavior: 'Quick browsingmobile-optimized',
+        conversionRate: 2.1,
+        avgValue: 78,
+        growth: 15.7},
       {
-        id: 'desktop-users';
-        name: 'Desktop Users';
-        size: 292222;
-        percentage: 32.7;
-        behavior: 'Detailed browsinghigher conversions';
-        conversionRate: 5.4;
-        avgValue: 156;
-        growth: 4.2};
+        id: 'desktop-users',
+        name: 'Desktop Users',
+        size: 292222,
+        percentage: 32.7,
+        behavior: 'Detailed browsinghigher conversions',
+        conversionRate: 5.4,
+        avgValue: 156,
+        growth: 4.2},
       {
-        id: 'high-value-users';
-        name: 'High Value Users';
-        size: 89234;
-        percentage: 10.0;
-        behavior: 'Multiple purchasesbrand loyal';
-        conversionRate: 18.5;
-        avgValue: 445;
+        id: 'high-value-users',
+        name: 'High Value Users',
+        size: 89234,
+        percentage: 10.0,
+        behavior: 'Multiple purchasesbrand loyal',
+        conversionRate: 18.5,
+        avgValue: 445,
         growth: 22.1}
     ],
     const mockFunnel: ConversionFunnel[] = [
       {
-        stage: 'Landing Page';
-        visitors: 100000;
-        conversion: 100;
-        dropoff: 0;
-        optimization: 'Improve headline and CTA placement'};
+        stage: 'Landing Page',
+        visitors: 100000,
+        conversion: 100,
+        dropoff: 0,
+        optimization: 'Improve headline and CTA placement'},
       {
-        stage: 'Product Browse';
-        visitors: 45000;
-        conversion: 45;
-        dropoff: 55;
-        optimization: 'Enhance product filtering and search'};
+        stage: 'Product Browse',
+        visitors: 45000,
+        conversion: 45,
+        dropoff: 55,
+        optimization: 'Enhance product filtering and search'},
       {
-        stage: 'Add to Cart';
-        visitors: 12500;
-        conversion: 12.5;
-        dropoff: 72.2;
-        optimization: 'Simplify checkout process'};
+        stage: 'Add to Cart',
+        visitors: 12500,
+        conversion: 12.5,
+        dropoff: 72.2,
+        optimization: 'Simplify checkout process'},
       {
-        stage: 'Checkout Start';
-        visitors: 8750;
-        conversion: 8.75;
-        dropoff: 30;
-        optimization: 'Reduce form fields and add guest checkout'};
+        stage: 'Checkout Start',
+        visitors: 8750,
+        conversion: 8.75,
+        dropoff: 30,
+        optimization: 'Reduce form fields and add guest checkout'},
       {
-        stage: 'Purchase Complete';
-        visitors: 5250;
-        conversion: 5.25;
-        dropoff: 40;
+        stage: 'Purchase Complete',
+        visitors: 5250,
+        conversion: 5.25,
+        dropoff: 40,
         optimization: 'Add trust signals and payment options'}
     ],
     setAnalyticsData(mockAnalytics),
     setUserSegments(mockSegments),
     setConversionFunnel(mockFunnel),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const getCategoryColor = (category: string) => {
     switch (category) {
       case 'traffic': return 'bg-blue-100 text-blue-800',
@@ -205,31 +205,31 @@ const AdvancedAnalyticsEngine: React.FC = () => {
       case 'revenue': return 'bg-yellow-100 text-yellow-800',
       case 'performance': return 'bg-red-100 text-red-800',
       default: return 'bg-gray-100 text-gray-800'}
-  };
+  },
   const getTrendIcon = (trend: string) => {
     switch (trend) {
       case 'up': return '📈',
       case 'down': return '📉',
       case 'stable': return '➡️',
       default: return '➡️'}
-  };
+  },
   const getTrendColor = (trend: stringmetric: string) => {
     if (metric.includes('bounce') || metric.includes('load time')) {
       return trend === 'down' ? 'text-green-600' : 'text-red-600'}
-    return trend === 'up' ? 'text-green-600' : 'text-red-600'};
+    return trend === 'up' ? 'text-green-600' : 'text-red-600'},
   const formatValue = (value: numberunit: string) => {
     if (unit === '$') {
       return new Intl.NumberFormat('en-US'{
-        style: 'currency';
-        currency: 'USD';
-        minimumFractionDigits: 0;
-        maximumFractionDigits: 0;
+        style: 'currency',
+        currency: 'USD',
+        minimumFractionDigits: 0,
+        maximumFractionDigits: 0
       }).format(value)}
     if (unit === '%') {
       return `${value.toFixed(1)}%`}
     if (unit === 'min' || unit === 's') {
       return `${value.toFixed(1)}${unit}`}
-    return value.toLocaleString()};
+    return value.toLocaleString()},
   const filteredData = selectedMetric === 'all',
     ? analyticsData,
     : analyticsData.filter(item => item.category === selectedMetric),
@@ -415,5 +415,5 @@ const AdvancedAnalyticsEngine: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAnalyticsEngine;
+    </div>)},
+export default AdvancedAnalyticsEngine,

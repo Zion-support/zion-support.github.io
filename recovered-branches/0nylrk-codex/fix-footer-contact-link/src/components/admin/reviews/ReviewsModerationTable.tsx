@@ -5,17 +5,17 @@ import {format} from "date-fns",
 import {toast} from "@/hooks/use-toast",
 import {supabase} from "@/integrations/supabase/client",
 import {Review, ReviewStatus} from "@/types/reviews",
-import { useState } from "react";
-import { useMutation } from "@tanstack/react-query";
-import { Check, X, User, Star, MoreHorizontal } from "lucide-react";
-import { format } from "date-fns";
-import { toast } from "@/hooks/use-toast";
-import { supabase } from "@/integrations/supabase/client";
-import { Review, ReviewStatus } from "@/types/reviews";
+import { useState } from "react",
+import { useMutation } from "@tanstack/react-query",
+import { Check, X, User, Star, MoreHorizontal } from "lucide-react",
+import { format } from "date-fns",
+import { toast } from "@/hooks/use-toast",
+import { supabase } from "@/integrations/supabase/client",
+import { Review, ReviewStatus } from "@/types/reviews",
 import {
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "@/components/ui/button";
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Badge } from "@/components/ui/badge",
+import { Button } from "@/components/ui/button",
 import { useState } from './react',
 import { use_mutation } from '@tanstack / react - query',
 import { Check, X, User, Star, MoreHorizontal } from './lucide-react',
@@ -29,31 +29,31 @@ import { Dialog, DialogContent, DialogDescription, DialogFooter, DialogHeader, D
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@/components / ui / dropdown - menu',
 import { Badge } from '@/components / ui / badge',
 import { Button } from '@/components / ui / button',
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle} from "@/components/ui/dialog";
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface ReviewsModerationTableProps {
   reviews: Review[],
   isLoading: boolean,
   onRefresh: () => void}
 ,
   onRefresh}: ReviewsModerationTableProps) {
-  const [selectedReview, setSelectedReview] = useState<Review | null>(null);
+  const [selectedReview, setSelectedReview] = useState<Review | null>(null),
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
-  const [viewDetailsOpen, setViewDetailsOpen] = useState(false);
+  const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
       reviewId,
@@ -73,37 +73,37 @@ interface ReviewsModerationTableProps {
         description: `Review has been ${data.status}.`}),
       onRefresh(),
       setViewDetailsOpen(false)}
-        .eq("id", reviewId);
-      if (error) throw error;
+        .eq("id", reviewId),
+      if (error) throw error,
       return { reviewId, status }
-    };
+    },
     onSuccess: (data) => {
       toast({
-        title: "Review updated";
-        description: `Review has been ${data.status}.`});
-      onRefresh();
-      setViewDetailsOpen(false)};
+        title: "Review updated",
+        description: `Review has been ${data.status}.`}),
+      onRefresh(),
+      setViewDetailsOpen(false)},
     onError: (error: Error) => {
       toast({
         title: "Error",
         description: `Failed to update review: ${error.message}`,
-        variant: "destructive"})}})}});
+        variant: "destructive"})}})}}),
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
-      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200";
+      case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
       case "rejected":,
         return "bg-red-100 text-red-800 hover: bg-red-200",
       default:,
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"}
 }
-  };
+  },
   const getInitials = (name: string) => {
     return name,
       .split(" "),
       .map((n) => n[0]),
       .join(""),
       .toUpperCase()}
-  };
+  },
   if (isLoading) {
     return (
       <div className="space-y-4">,
@@ -124,13 +124,13 @@ interface ReviewsModerationTableProps {
     updateReviewStatus({ reviewId, status: "approved" })}
   const handleReject = (reviewId: string) => {
     updateReviewStatus({ reviewId, status: "rejected" })}
-  };
+  },
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })};
+    updateReviewStatus({ reviewId, status: "rejected" })},
   const handleViewDetails = (review: Review) => {
     setSelectedReview(review),
     setViewDetailsOpen(true)}
-  };
+  },
   const renderStars = (rating: number) => {
     return (
       <div className="flex">,
@@ -165,25 +165,25 @@ interface ReviewsModerationTableProps {
                         src={review.reviewer_profile.avatar_url}
                         alt={review.reviewer_profile.display_name |""}
 ,
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
-  TableRow} from "@/components/ui/table";
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogFooter;
-  DialogHeader;
-  DialogTitle} from "@/components/ui/dialog";
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
-  DropdownMenuTrigger} from "@/components/ui/dropdown-menu";
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
+  TableRow} from "@/components/ui/table",
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogFooter,
+  DialogHeader,
+  DialogTitle} from "@/components/ui/dialog",
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface ReviewsModerationTableProps {
-  reviews: Review[];
-  isLoading: boolean;
+  reviews: Review[],
+  isLoading: boolean,
   onRefresh: () => void}
 ,
 export function ReviewsModerationTable(): any ({
@@ -194,9 +194,9 @@ export function ReviewsModerationTable(): any ({
   const [viewDetailsOpen, setViewDetailsOpen] = useState(false),
   const { mutate: updateReviewStatus, isPending } = useMutation({
     mutationFn: async ({
-      reviewId;
+      reviewId,
       status}: {
-      reviewId: string;
+      reviewId: string,
       status: ReviewStatus}) => {
       const { error } = await supabase,
         .from("reviews"),
@@ -204,32 +204,32 @@ export function ReviewsModerationTable(): any ({
         .eq("id", reviewId),
       if (error) throw error,
       return { reviewId, status }
-};
+},
     onSuccess: (data) => {
       toast({
-        title: "Review updated";
-        description: `Review has been ${data && data.status}.`});
+        title: "Review updated",
+        description: `Review has been ${data && data.status}.`}),
       onRefresh(),
-      setViewDetailsOpen(false)};
+      setViewDetailsOpen(false)},
     onError: (error: Error) => {
       toast({
-        title: "Error";
-        description: `Failed to update review: ${error && error.message}`;
+        title: "Error",
+        description: `Failed to update review: ${error && error.message}`,
         variant: "destructive"})}}),
   const getStatusColor = (status: ReviewStatus) => {
     switch (status) {
       case "approved": return "bg-green-100 text-green-800 hover:bg-green-200",
       case "rejected":,
-        return "bg-red-100 text-red-800 hover:bg-red-200";
+        return "bg-red-100 text-red-800 hover: bg-red-200",
       default: ,
         return "bg-yellow-100 text-yellow-800 hover:bg-yellow-200"}
-  };
+  },
   const getInitials = (name: string) => {
     return name,
       .split(" "),
       .map((n) => n[0]),
       .join(""),
-      .toUpperCase()};
+      .toUpperCase()},
   if (isLoading) {
     return (
       <div className="space-y-4">,
@@ -249,12 +249,12 @@ export function ReviewsModerationTable(): any ({
       </div>)}
 ,
   const handleApprove = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "approved" })};
+    updateReviewStatus({ reviewId, status: "approved" })},
   const handleReject = (reviewId: string) => {
-    updateReviewStatus({ reviewId, status: "rejected" })};
+    updateReviewStatus({ reviewId, status: "rejected" })},
   const handleViewDetails = (review: Review) => {
-    setSelectedReview(review);
-    setViewDetailsOpen(true)};
+    setSelectedReview(review),
+    setViewDetailsOpen(true)},
   const renderStars = (rating: number) => {
     return (
       <div className="flex">,
@@ -264,10 +264,10 @@ export function ReviewsModerationTable(): any ({
             className={`h-4 w-4 ${star <= rating ? "fill-yellow-400 text-yellow-400" : "text-gray-300"}`}
           />))}
 ,
-      </div>)};
+      </div>)},
 interface ReviewsModerationTableProps {
-  reviews: Review[];
-  is_loading: boolean;
+  reviews: Review[],
+  is_loading: boolean,
   on_refresh: () => void}
 export /**,
  * ReviewsModerationTable - Function description,
@@ -277,9 +277,9 @@ function ReviewsModerationTable() {
   const [viewDetailsOpen, setViewDetailsOpen] = useState (false),
   const { mutate: updateReviewStatus, is_pending } = use_mutation ({
     mutation_fn: async ({
-      review_id;
+      review_id,
       status}: {
-      review_id: string;
+      review_id: string,
       status: ReviewStatus}) => {
       const { error } = await supabase,
         .from ("reviews"),
@@ -292,20 +292,20 @@ if (throw error) {
     }
     on_success: (data) => {
       toast ({
-        title: "Review updated";
-        description: `Review has been ${data.status}.`});
+        title: "Review updated",
+        description: `Review has been ${data.status}.`}),
       on_refresh (),
       setViewDetailsOpen (false)}
     on_error: (error: Error) => {
       toast ({
-        title: "Error";
-        description: `Failed to update review: ${error.message}`;
+        title: "Error",
+        description: `Failed to update review: ${error.message}`,
         variant: "destructive"})}}),
   const getStatusColor = (status: ReviewStatus) =>: any {
     switch (status) {
       case "approved": return "bg - green - 100 text - green - 800 hover:bg - green - 200",
       case "rejected":,
-        return "bg - red - 100 text - red - 800 hover:bg - red - 200";
+        return "bg - red - 100 text - red - 800 hover: bg - red - 200",
       default: ,
         return "bg - yellow - 100 text - yellow - 800 hover:bg - yellow - 200"}
   }
@@ -344,7 +344,7 @@ if ( {) {
     updateReviewStatus ({ review_id, status: "rejected" })}
 ,
   const handleViewDetails = (review: Review) =>: any {
-    setSelectedReview (review);
+    setSelectedReview (review),
     setViewDetailsOpen (true)}
 ,
   const render_stars = (rating: number) =>: any {

@@ -3,17 +3,14 @@ import Layout from '../components/layout/Layout',
 ShieldCheckPhoneMailMapPinExternalLinkLock,
 export default function TLSCertificateMonitorPage() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const features = [
-    'Expiry alerts with safe lead windows';
-    'Chain trust and intermediate CA checks';
-    'OCSP stapling and revocation status';
-    'HSTS and weak cipher detection';
-    'SAN/hostname drift and redirect loops';
-    'Slack/Email/PagerDuty alerts with runbooks'],
+    'Expiry alerts with safe lead windowsChain trust and intermediate CA checks',
+    'OCSP stapling and revocation statusHSTS and weak cipher detection',
+    'SAN/hostname drift and redirect loopsSlack/Email/PagerDuty alerts with runbooks'],
   return (
     <Layout>,
       <Head>,

@@ -18,7 +18,7 @@ const AutonomousSupplyChainPlaybook20o26 = () => {
             AI 20o26: Autonomous Supply Chain Playbook,
           </h1>,
           <p className='text-lg text-gray-60o0 mt-4'>,
-            How leaders will orchestrate planning, sourcing, manufacturing;
+            How leaders will orchestrate planning, sourcing, manufacturing,
             logistics, and returns with AI agents for resilience and ROI.,
           </p>,
         </header>,
@@ -77,5 +77,5 @@ const AutonomousSupplyChainPlaybook20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AutonomousSupplyChainPlaybook20o26;
+    </div>)},
+export default AutonomousSupplyChainPlaybook20o26,

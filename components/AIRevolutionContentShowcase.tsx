@@ -6,101 +6,101 @@ const AIRevolutionContentShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ai-revolution-breakthrough';
-      title: 'AI 20o25-20o26: The Ultimate AI Revolution Breakthrough';
-      description: 'Discover the revolutionary AI breakthroughs that are transforming Fortune 50o0 companies with unprecedented 10,0o00% ROI through next-generation artificial intelligence systems.';
-      type: 'blog';
-      category: 'ai-revolution';
-      url: '/blog/ai-20o25-20o26-ultimate-ai-revolution-breakthrough-ultimate-guide';
+      id: 'ai-revolution-breakthrough',
+      title: 'AI 20o25-20o26: The Ultimate AI Revolution Breakthrough',
+      description: 'Discover the revolutionary AI breakthroughs that are transforming Fortune 50o0 companies with unprecedented 10,0o00% ROI through next-generation artificial intelligence systems.',
+      type: 'blog',
+      category: 'ai-revolution',
+      url: '/blog/ai-20o25-20o26-ultimate-ai-revolution-breakthrough-ultimate-guide',
       metrics: {
-        roi: '10,0o00%';
-        savings: '$50B+';
-        efficiency: '3,0o00%';
-        accuracy: '99.99%'};
-      readingTime: '45 min read';
-      featured: true;
-      tags: ['AI Revolution', '20o25-20o26', 'ROI', 'Fortune 50o0', 'Breakthrough']};
+        roi: '10,0o00%',
+        savings: '$50B+',
+        efficiency: '3,0o00%',
+        accuracy: '99.99%'},
+      readingTime: '45 min read',
+      featured: true,
+      tags: ['AI Revolution20o25-20o26', 'ROIFortune 50o0', 'Breakthrough']},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Revolution Success: $50B Annual Savings';
-      description: 'How a Fortune 50o0 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,0o00% ROI and $50B in annual savings.';
-      type: 'case-study';
-      category: 'success-stories';
-      url: '/case-studies/fortune-50o0-ai-revolution-10o000-roi-success-story';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Revolution Success: $50B Annual Savings',
+      description: 'How a Fortune 50o0 manufacturing conglomerate achieved unprecedented success through comprehensive AI revolution implementation, delivering 10,0o00% ROI and $50B in annual savings.',
+      type: 'case-study',
+      category: 'success-stories',
+      url: '/case-studies/fortune-50o0-ai-revolution-10o000-roi-success-story',
       metrics: {
-        roi: '10,0o00%';
-        savings: '$50B';
-        timeline: '18 months';
-        efficiency: '3,0o00%'};
-      readingTime: '25 min read';
-      featured: true;
-      tags: ['Case Study', 'Fortune 50o0', 'AI Revolution', 'Success Story']};
+        roi: '10,0o00%',
+        savings: '$50B',
+        timeline: '18 months',
+        efficiency: '3,0o00%'},
+      readingTime: '25 min read',
+      featured: true,
+      tags: ['Case StudyFortune 50o0', 'AI RevolutionSuccess Story']},
     {
-      id: 'implementation-guide';
-      title: 'AI Revolution Implementation Ultimate Guide 20o25-20o26';
-      description: 'The definitive guide to implementing AI revolution technologies in your organizationwith step-by-step instructionsbest practicesand proven strategies for achieving 10,0o00% ROI.';
-      type: 'resource';
-      category: 'implementation';
-      url: '/resources/ai-revolution-implementation-ultimate-guide-20o25-20o26';
+      id: 'implementation-guide',
+      title: 'AI Revolution Implementation Ultimate Guide 20o25-20o26',
+      description: 'The definitive guide to implementing AI revolution technologies in your organizationwith step-by-step instructionsbest practicesand proven strategies for achieving 10,0o00% ROI.',
+      type: 'resource',
+      category: 'implementation',
+      url: '/resources/ai-revolution-implementation-ultimate-guide-20o25-20o26',
       metrics: {
-        roi: '10,0o00%';
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+'};
-      readingTime: '60 min read';
-      featured: true;
-      tags: ['Implementation Guide', 'AI Revolution', 'ROI', 'Strategy']};
+        roi: '10,0o00%',
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+'},
+      readingTime: '60 min read',
+      featured: true,
+      tags: ['Implementation GuideAI Revolution', 'ROIStrategy']},
     {
-      id: 'quantum-ai-breakthrough';
-      title: 'Quantum AI 20o26: The Next Frontier of Business Intelligence';
-      description: 'Explore how quantum-enhanced AI is revolutionizing business operations with 1,0o00x faster processing and 99.97% accuracy in complex decision-making.';
-      type: 'blog';
-      category: 'ai-revolution';
-      url: '/blog/quantum-ai-20o26-business-revolution';
+      id: 'quantum-ai-breakthrough',
+      title: 'Quantum AI 20o26: The Next Frontier of Business Intelligence',
+      description: 'Explore how quantum-enhanced AI is revolutionizing business operations with 1,0o00x faster processing and 99.97% accuracy in complex decision-making.',
+      type: 'blog',
+      category: 'ai-revolution',
+      url: '/blog/quantum-ai-20o26-business-revolution',
       metrics: {
-        roi: '40o0-60o0%';
-        speed: '1,0o00x';
-        accuracy: '99.97%';
-        market: '$10o0B'};
-      readingTime: '22 min read';
-      featured: false;
-      tags: ['Quantum AI', 'Business Revolution', 'ROI', 'Fortune 50o0']};
+        roi: '40o0-60o0%',
+        speed: '1,0o00x',
+        accuracy: '99.97%',
+        market: '$10o0B'},
+      readingTime: '22 min read',
+      featured: false,
+      tags: ['Quantum AIBusiness Revolution', 'ROIFortune 50o0']},
     {
-      id: 'autonomous-enterprise';
-      title: 'Autonomous Enterprise Systems: The Future of Business Operations';
-      description: 'Learn how self-managing AI systems are creating fully autonomous business operations with 99.7% autonomy and 80o0% efficiency improvements.';
-      type: 'blog';
-      category: 'ai-revolution';
-      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution';
+      id: 'autonomous-enterprise',
+      title: 'Autonomous Enterprise Systems: The Future of Business Operations',
+      description: 'Learn how self-managing AI systems are creating fully autonomous business operations with 99.7% autonomy and 80o0% efficiency improvements.',
+      type: 'blog',
+      category: 'ai-revolution',
+      url: '/blog/ai-20o25-autonomous-enterprise-systems-revolution',
       metrics: {
-        roi: '3,0o00%';
-        autonomy: '99.7%';
-        efficiency: '80o0%';
-        savings: '$25.6M'};
-      readingTime: '28 min read';
-      featured: false;
-      tags: ['Autonomous Systems', 'Enterprise AI', 'ROI', 'Revolution']};
+        roi: '3,0o00%',
+        autonomy: '99.7%',
+        efficiency: '80o0%',
+        savings: '$25.6M'},
+      readingTime: '28 min read',
+      featured: false,
+      tags: ['Autonomous SystemsEnterprise AI', 'ROIRevolution']},
     {
-      id: 'multimodal-intelligence';
-      title: 'Multimodal AI: The Complete Business Intelligence Solution';
-      description: 'Discover how multimodal AI systems process textimagesaudioand sensor data simultaneously to provide comprehensive business insights.';
-      type: 'blog';
-      category: 'ai-revolution';
-      url: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide';
+      id: 'multimodal-intelligence',
+      title: 'Multimodal AI: The Complete Business Intelligence Solution',
+      description: 'Discover how multimodal AI systems process textimagesaudioand sensor data simultaneously to provide comprehensive business insights.',
+      type: 'blog',
+      category: 'ai-revolution',
+      url: '/blog/ai-20o25-multimodal-intelligence-revolution-ultimate-guide',
       metrics: {
-        roi: '750%';
-        accuracy: '99.7%';
-        savings: '$3.2B';
-        efficiency: '450%'};
-      readingTime: '25 min read';
-      featured: false;
-      tags: ['Multimodal 'AI', 'Enterprise 'AI', 'ROI'Cross-Modal Intelligence']}
+        roi: '750%',
+        accuracy: '99.7%',
+        savings: '$3.2B',
+        efficiency: '450%'},
+      readingTime: '25 min read',
+      featured: false,
+      tags: ['Multimodal 'AIEnterprise 'AI', 'ROI'Cross-Modal Intelligence']}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length };
-    { id: 'ai-'revolution', 'name: 'AI 'Revolution', 'count: contentItems.filter(item => item.category === 'ai-revolution').length };
-    { id: 'success-'stories', 'name: 'Success 'Stories', 'count: contentItems.filter(item => item.category === 'success-stories').length };
-    { id: ''implementation', 'name: ''Implementation', 'count: contentItems.filter(item => item.category === 'implementation').length }
+    { id: ''allname: 'All 'Contentcount: contentItems.length },
+    { id: 'ai-'revolutionname: 'AI 'Revolutioncount: contentItems.filter(item => item.category === 'ai-revolution').length },
+    { id: 'success-'storiesname: 'Success 'Storiescount: contentItems.filter(item => item.category === 'success-stories').length },
+    { id: ''implementationname: ''Implementationcount: contentItems.filter(item => item.category === 'implementation').length }
   ],
   const filteredContent = activeCategory === 'all',
     ? contentItems,
@@ -111,14 +111,14 @@ const AIRevolutionContentShowcase = () => {
       case 'case-study': return '📊',
       case 'resource': return '📚',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog': return 'from-blue-50o0 to-cyan-50o0',
       case 'case-study': return 'from-green-50o0 to-emerald-50o0',
       case 'resource': return 'from-purple-50o0 to-pink-50o0',
       default: return 'from-gray-50o0 to-gray-60o0'}
-  };
+  },
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -235,5 +235,5 @@ const AIRevolutionContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AIRevolutionContentShowcase;
+    </div>)},
+export default AIRevolutionContentShowcase,

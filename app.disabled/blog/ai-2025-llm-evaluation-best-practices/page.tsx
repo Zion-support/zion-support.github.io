@@ -1,21 +1,17 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25: LLM Evaluation Best Practices - Reliable, Fair, and Robust';
+  title: 'AI 20o25: LLM Evaluation Best Practices - Reliable, Fair, and Robust',
   description:,
-    'A practical guide to evaluating large language models in 20o25, covering metrics, human-in-the-loop evaluation, bias audits, reliability testing, and production monitoring.';
+    'A practical guide to evaluating large language models in 20o25, covering metrics, human-in-the-loop evaluation, bias audits, reliability testing, and production monitoring.',
   keywords: [
-    'LLM evaluation';
-    'AI reliability';
-    'bias audit';
-    'prompt evaluation';
-    'robustness testing';
-    'safety evaluation';
-    'RAG quality';
-    'agent assessment';
-  ];
-};
+    'LLM evaluationAI reliability',
+    'bias auditprompt evaluation',
+    'robustness testingsafety evaluation',
+    'RAG qualityagent assessment',
+  ]
+},
 const LlmEvaluationBestPractices20o25: React.FC = () => {
   return (
     <div>,
@@ -61,7 +57,7 @@ const LlmEvaluationBestPractices20o25: React.FC = () => {
                 handling, jailbreak resistance, toxicity scores.,
               </li>,
               <li>,
-                <strong>Fairness</strong>: sensitive attribute parity;
+                <strong>Fairness</strong>: sensitive attribute parity,
                 demographic parity difference, equal opportunity.,
               </li>,
               <li>,
@@ -69,7 +65,7 @@ const LlmEvaluationBestPractices20o25: React.FC = () => {
                 stability, tool-call error recovery.,
               </li>,
               <li>,
-                <strong>Efficiency</strong>: latency, token cost, throughput;
+                <strong>Efficiency</strong>: latency, token cost, throughput,
                 cache hit rate.,
               </li>,
             </ul>,
@@ -88,7 +84,7 @@ const LlmEvaluationBestPractices20o25: React.FC = () => {
             <h3>Agent and RAG Specifics</h3>,
             <ul>,
               <li>,
-                <strong>RAG</strong>: retrieval hit rate, grounding percentage;
+                <strong>RAG</strong>: retrieval hit rate, grounding percentage,
                 faithfulness, hallucination rate.,
               </li>,
               <li>,
@@ -104,7 +100,7 @@ const LlmEvaluationBestPractices20o25: React.FC = () => {
             </p>,
             <h3>Governance and Reporting</h3>,
             <p>,
-              Publish evaluation cards per use case. Include risk tiers;
+              Publish evaluation cards per use case. Include risk tiers,
               approved prompt templates, and emergency rollback procedures.,
             </p>,
             <div className='mt-8 p-6 bg-purple-50 rounded-xl'>,
@@ -130,5 +126,5 @@ const LlmEvaluationBestPractices20o25: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>)};
-export default LlmEvaluationBestPractices20o25;
+    </div>)},
+export default LlmEvaluationBestPractices20o25,

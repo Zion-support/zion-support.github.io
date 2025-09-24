@@ -10,52 +10,48 @@ const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 // Configuration,
 const CONFIG ={
-  componentsDir: path.join(__dirname, '../components');
-  appDir: path.join(__dirname, '../app');
-  scriptsDir: __dirname;
-  backupDir: path.join(__dirname, '../backups');
-  logFile: path.join(__dirname, '../enhancement.log')};
+  componentsDir: path.join(__dirname, '../components'),
+  appDir: path.join(__dirname, '../app'),
+  scriptsDir: __dirname,
+  backupDir: path.join(__dirname, '../backups'),
+  logFile: path.join(__dirname, '../enhancement.log')},
 // New components to integrate,
 const NEW_COMPONENTS = [
-  'AdvancedPerformanceOptimizer';
-  'AIContentGenerator';
-  'AdvancedAnalyticsDashboard';
-  'EnhancedSEO';
-  'PerformanceMonitor';
-  'EnhancedLoadingSpinner';
-  'EnhancedErrorBoundary';
-  'InteractiveAICalculator'],
+  'AdvancedPerformanceOptimizerAIContentGenerator',
+  'AdvancedAnalyticsDashboardEnhancedSEO',
+  'PerformanceMonitorEnhancedLoadingSpinner',
+  'EnhancedErrorBoundaryInteractiveAICalculator'],
 // Enhancement tasks,
 const ENHANCEMENT_TASKS = [
   {
-    name: 'Performance Optimization';
-    description: 'Implement advanced performance monitoring and optimization';
-    components: ['AdvancedPerformanceOptimizer', 'PerformanceMonitor'];
-    priority: 'high'};
+    name: 'Performance Optimization',
+    description: 'Implement advanced performance monitoring and optimization',
+    components: ['AdvancedPerformanceOptimizerPerformanceMonitor'],
+    priority: 'high'},
   {
-    name: 'AI Content Generation';
-    description: 'Add AI-powered content generation capabilities';
-    components: ['AIContentGenerator'];
-    priority: 'high'};
+    name: 'AI Content Generation',
+    description: 'Add AI-powered content generation capabilities',
+    components: ['AIContentGenerator'],
+    priority: 'high'},
   {
-    name: 'Analytics Dashboard';
-    description: 'Implement comprehensive analytics and reporting';
-    components: ['AdvancedAnalyticsDashboard'];
-    priority: 'medium'};
+    name: 'Analytics Dashboard',
+    description: 'Implement comprehensive analytics and reporting',
+    components: ['AdvancedAnalyticsDashboard'],
+    priority: 'medium'},
   {
-    name: 'SEO Enhancement';
-    description: 'Advanced SEO optimization and meta tag management';
-    components: ['EnhancedSEO'];
-    priority: 'high'};
+    name: 'SEO Enhancement',
+    description: 'Advanced SEO optimization and meta tag management',
+    components: ['EnhancedSEO'],
+    priority: 'high'},
   {
-    name: 'UI/UX Improvements';
-    description: 'Enhanced loading states and error handling';
-    components: ['EnhancedLoadingSpinner', 'EnhancedErrorBoundary'];
-    priority: 'medium'};
+    name: 'UI/UX Improvements',
+    description: 'Enhanced loading states and error handling',
+    components: ['EnhancedLoadingSpinnerEnhancedErrorBoundary'],
+    priority: 'medium'},
   {
-    name: 'Interactive Features';
-    description: 'Add interactive calculators and tools';
-    components: ['InteractiveAICalculator'];
+    name: 'Interactive Features',
+    description: 'Add interactive calculators and tools',
+    components: ['InteractiveAICalculator'],
     priority: 'low'}
 ],
 class EnhancementAutomation {
@@ -129,13 +125,13 @@ class EnhancementAutomation {
       let content = fs.readFileSync(mainPagePath, 'utf8'),
       // Add imports for new components,
       const newImports = [
-        "import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer',";
-        "import AIContentGenerator from '../components/AIContentGenerator',";
-        "import AdvancedAnalyticsDashboard from '../components/AdvancedAnalyticsDashboard',";
-        "import EnhancedSEO from '../components/EnhancedSEO',";
-        "import PerformanceMonitor from '../components/PerformanceMonitor',";
-        "import EnhancedLoadingSpinner from '../components/EnhancedLoadingSpinner',";
-        "import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary',";
+        "import AdvancedPerformanceOptimizer from '../components/AdvancedPerformanceOptimizer',",
+        "import AIContentGenerator from '../components/AIContentGenerator',",
+        "import AdvancedAnalyticsDashboard from '../components/AdvancedAnalyticsDashboard',",
+        "import EnhancedSEO from '../components/EnhancedSEO',",
+        "import PerformanceMonitor from '../components/PerformanceMonitor',",
+        "import EnhancedLoadingSpinner from '../components/EnhancedLoadingSpinner',",
+        "import EnhancedErrorBoundary from '../components/EnhancedErrorBoundary',",
         "import InteractiveAICalculator from '../components/InteractiveAICalculator',"],
       // Check if imports already exist,
       const existingImports = newImports.filter(imp => content.includes(imp.split(' from ')[1])),
@@ -145,19 +141,16 @@ class EnhancementAutomation {
         const importSection = content.match(/import.*?from.*?,/g),
         if (importSection) {
           const lastImportIndex = content.lastIndexOf(importSection[importSection.length - 1]),
-          const insertPoint = content.indexOf(',', lastImportIndex) + 1,
+          const insertPoint = content.indexOf(, lastImportIndex) + 1,
           content = content.slice(0, insertPoint) + '\n' + missingImports.join('\n') + '\n' + content.slice(insertPoint),
           this.log(`✅ Added ${missingImports.length} new imports`)}
       }
 ,
       // Add components to the page if not already present,
       const componentAdditions = [
-        '<AdvancedPerformanceOptimizer  />';
-        '<AIContentGenerator  />';
-        '<AdvancedAnalyticsDashboard  />';
-        '<EnhancedSEO  />';
-        '<PerformanceMonitor  />';
-        '<InteractiveAICalculator  />'],
+        '<AdvancedPerformanceOptimizer  /><AIContentGenerator  />',
+        '<AdvancedAnalyticsDashboard  /><EnhancedSEO  />',
+        '<PerformanceMonitor  /><InteractiveAICalculator  />'],
       let componentsAdded = 0,
       componentAdditions.forEach(component => {
         if (!content.includes(component)) {
@@ -190,14 +183,9 @@ class EnhancementAutomation {
       const packageJson = JSON.parse(fs.readFileSync(packageJsonPath, 'utf8')),
       // Add new scripts for enhancement automation,
       const newScripts ={
-        'enhance:all': 'node scripts/comprehensive-enhancement-automation.js';
-        'enhance:performance': 'node scripts/performance-optimization.js';
-        'enhance:seo': 'node scripts/seo-optimization.js';
-        'enhance:ui': 'node scripts/ui-enhancement.js';
-        'analyze:performance': 'node scripts/analyze-window.window.performance.js';
-        'generate: content': 'node scripts/content-generation.js'};
+        'enhance: all': 'node scripts/comprehensive-enhancement-automation.jsenhance:performance': 'node scripts/performance-optimization.jsenhance:seo': 'node scripts/seo-optimization.jsenhance:ui': 'node scripts/ui-enhancement.jsanalyze:performance': 'node scripts/analyze-window.window.performance.jsgenerate: content': 'node scripts/content-generation.js'},
       if (!packageJson.scripts) {
-        packageJson.scripts ={};
+        packageJson.scripts ={},
       }
 ,
       let scriptsAdded = 0,
@@ -239,7 +227,7 @@ export default function EnhancedDemoPage() {
         <EnhancedSEO
           title="Enhanced Demo - Advanced Features",
           description="Demonstration of all advanced components and features",
-          keywords={['demo', 'enhanced', 'advanced', 'features', 'components']}
+          keywords={['demoenhanced', 'advancedfeatures', 'components']}
          />,
         <Suspense fallback={<EnhancedLoadingSpinner variant="fullscreen"  />}>,
           <div className="container mx-auto px-4 py-8 space-y-12">,
@@ -249,7 +237,7 @@ export default function EnhancedDemoPage() {
               </h1>,
               <p className="text-xl text-gray-60o0 dark:text-gray-40o0 max-w-3xl mx-auto">,
                 Experience all the advanced components and features in action.,
-                This page demonstrates performance optimization, AI content generation;
+                This page demonstrates performance optimization, AI content generation,
                 analytics, and interactive tools.,
               </p>,
             </div>,
@@ -284,7 +272,7 @@ ${ENHANCEMENT_TASKS.map(task => `,
 ### ${task.name}
 - **Priority**: ${task.priority}
 - **Description**: ${task.description}
-- **Components**: ${task.components.join(', ')}
+- **Components**: ${task.components.join()}
 - **Status**: ✅ Completed,
 `).join('\n')}
 ,
@@ -298,12 +286,7 @@ ${ENHANCEMENT_TASKS.map(task => `,
 7. **Interactive Tools**: AI-powered calculators and interactive features,
 ## Scripts Added,
 ${Object.entries({
-  'enhance:all': 'Run comprehensive enhancement automation';
-  'enhance:performance': 'Performance optimization automation';
-  'enhance:seo': 'SEO optimization automation';
-  'enhance:ui': 'UI enhancement automation';
-  'analyze:performance': 'Performance analysis tools';
-  'generate: content': 'Content generation automation'}).map(([script, description]) => `- \`${script}\`: ${description}`).join('\n')}
+  'enhance: all': 'Run comprehensive enhancement automationenhance:performance': 'Performance optimization automationenhance:seo': 'SEO optimization automationenhance:ui': 'UI enhancement automationanalyze:performance': 'Performance analysis toolsgenerate: content': 'Content generation automation'}).map(([script, description]) => `- \`${script}\`: ${description}`).join('\n')}
 ,
 ## Files Modified,
 - \`app/page.tsx\`: Updated with new component integrations,
@@ -353,4 +336,4 @@ if (import.meta.url === `file: //${process.argv[1]}`) {
     console.error('Enhancement automation failed:', error),
     process.exit(1)})}
 ,
-export default EnhancementAutomation;
+export default EnhancementAutomation,

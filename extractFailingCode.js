@@ -16,7 +16,7 @@ try {
   // (from report[0]?.filePath and report[0]?.messages?.[0]?.line),
   // to extract the surrounding code. This is a placeholder for that.,
   console.warn(`// Extracted problem:  ,
-// ${firstErrorMessage};
+// ${firstErrorMessage},
 function bug() {
   // Placeholder for the actual failing code snippet,
   console.warn("This is a placeholder for the failing code."),"}`)} catch (error) {

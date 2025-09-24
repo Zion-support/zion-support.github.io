@@ -13,183 +13,165 @@ export default function PricingPage() {
   const [billingCyclesetBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlansetSelectedPlan] = useState<string | null>(null),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const popularServices = getPopularServices(),
   // Combine all services for comprehensive pricing,
   const allServices = [
-    ...enhancedRealMicroSaasServices;
-    ...nextGenerationAIServices;
-    ...cuttingEdgeITServices;
+    ...enhancedRealMicroSaasServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
     ...innovativeMicroSaasV2Services],
   // Enhanced service categories with pricing,
   const serviceCategories = [
     {
-      name: 'Next-Generation AI';
-      description: 'Revolutionary AI platforms';
-      services: ['AI Multimodal Fusion'AI Autonomous Decision Engine'AI Emotional Intelligence'];
-      avgPrice: '$3,199/month';
-      savings: 'Save 60-80% vs. competitors'};
+      name: 'Next-Generation AI',
+      description: 'Revolutionary AI platforms',
+      services: ['AI Multimodal Fusion'AI Autonomous Decision Engine'AI Emotional Intelligence'],
+      avgPrice: '$3,199/month',
+      savings: 'Save 60-80% vs. competitors'},
     {
-      name: 'Cutting-Edge IT Infrastructure';
-      description: 'Advanced infrastructure solutions';
-      services: ['Zero Trust Architecture'Edge Computing Orchestration'5G Private Networks'];
-      avgPrice: '$4,999/month';
-      savings: 'Save 50-70% vs. competitors'};
+      name: 'Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions',
+      services: ['Zero Trust Architecture'Edge Computing Orchestration'5G Private Networks'],
+      avgPrice: '$4,999/month',
+      savings: 'Save 50-70% vs. competitors'},
     {
-      name: 'Innovative Micro SaaS';
-      description: 'Creative and practical SaaS tools';
-      services: ['AI Brand Personality'Virtual Event Holograms'AI Meeting Transcriber'];
-      avgPrice: '$199/month';
-      savings: 'Save 40-60% vs. competitors'};
+      name: 'Innovative Micro SaaS',
+      description: 'Creative and practical SaaS tools',
+      services: ['AI Brand Personality'Virtual Event Holograms'AI Meeting Transcriber'],
+      avgPrice: '$199/month',
+      savings: 'Save 40-60% vs. competitors'},
     {
-      name: 'Quantum & Space Technology';
-      description: 'Quantum computing and space solutions';
-      services: ['Quantum AI Hybrid'Space Technology Platform'Quantum Cybersecurity'];
-      avgPrice: '$5,999/month';
-      savings: 'Save 70-85% vs. competitors'};
+      name: 'Quantum & Space Technology',
+      description: 'Quantum computing and space solutions',
+      services: ['Quantum AI Hybrid'Space Technology Platform'Quantum Cybersecurity'],
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-85% vs. competitors'},
     {
-      name: 'Enterprise IT Services';
-      description: 'Comprehensive enterprise solutions';
-      services: ['Cloud Migration'DevOps Automation'Security Hardening'];
-      avgPrice: '$2,999/month';
+      name: 'Enterprise IT Services',
+      description: 'Comprehensive enterprise solutions',
+      services: ['Cloud Migration'DevOps Automation'Security Hardening'],
+      avgPrice: '$2,999/month',
       savings: 'Save 45-65% vs. competitors'}
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings,
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for small businesses and startups';
-      price: billingCycle === 'monthly' ? 49 : 39;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billingCycle === 'monthly' ? 49 : 39,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 50+ Core Services';
-        'Basic AI Integration';
-        'Standard Support (24/7)';
-        '30-Day Free Trial';
-        'Basic Analytics Dashboard';
-        'Email Support';
-        '99.5% Uptime Guarantee';
-        'Standard Security Features'];
-      icon: <Sparkles className="w-8 h-8"  />;
-      variant: 'quantum' as const;
-      popular: false;
-      cta: 'Start Free Trial';
-      ctaVariant: 'secondary' as const};
+        'Access to 50+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeStandard Security Features'],
+      icon: <Sparkles className="w-8 h-8"  />,
+      variant: 'quantum' as const,
+      popular: false,
+      cta: 'Start Free Trial',
+      ctaVariant: 'secondary' as const},
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses and teams';
-      price: billingCycle === 'monthly' ? 149 : 119;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 149 : 119,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 20o0+ Premium Services';
-        'Advanced AI & Quantum Computing';
-        'Priority Support (24/7)';
-        '60-Day Free Trial';
-        'Advanced Analytics & Reporting';
-        'Phone & Email Support';
-        '99.9% Uptime Guarantee';
-        'Enhanced Security & Compliance';
-        'Custom Integrations';
-        'Team Collaboration Tools';
-        'API Access';
-        'White-label Options'];
-      icon: <Crown className="w-8 h-8"  />;
-      variant: 'holographic' as const;
-      popular: true;
-      cta: 'Start Free Trial';
-      ctaVariant: 'primary' as const};
+        'Access to 20o0+ Premium ServicesAdvanced AI & Quantum Computing',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics & ReportingPhone & Email Support',
+        '99.9% Uptime GuaranteeEnhanced Security & Compliance',
+        'Custom IntegrationsTeam Collaboration Tools',
+        'API AccessWhite-label Options'],
+      icon: <Crown className="w-8 h-8"  />,
+      variant: 'holographic' as const,
+      popular: true,
+      cta: 'Start Free Trial',
+      ctaVariant: 'primary' as const},
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: billingCycle === 'monthly' ? 499 : 399;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 499 : 399,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to ALL 50o0+ Services';
-        'Full Quantum AI & Autonomous Systems';
-        'Dedicated Support Team (24/7)';
-        '90-Day Free Trial';
-        'Enterprise Analytics & AI Insights';
-        'Dedicated Account Manager';
-        '99.99% Uptime SLA';
-        'Enterprise Security & Compliance';
-        'Custom Development Services';
-        'Advanced Team Management';
-        'Full API & SDK Access';
-        'Custom Branding & White-label';
-        'On-premise Deployment Options';
-        'Advanced AI Training & Customization';
-        'Priority Feature Development';
-        'Global Infrastructure Access'];
-      icon: <Rocket className="w-8 h-8"  />;
-      variant: 'neural' as const;
-      popular: false;
-      cta: 'Contact Sales';
+        'Access to ALL 50o0+ ServicesFull Quantum AI & Autonomous Systems',
+        'Dedicated Support Team (24/7)90-Day Free Trial',
+        'Enterprise Analytics & AI InsightsDedicated Account Manager',
+        '99.99% Uptime SLAEnterprise Security & Compliance',
+        'Custom Development ServicesAdvanced Team Management',
+        'Full API & SDK AccessCustom Branding & White-label',
+        'On-premise Deployment OptionsAdvanced AI Training & Customization',
+        'Priority Feature DevelopmentGlobal Infrastructure Access'],
+      icon: <Rocket className="w-8 h-8"  />,
+      variant: 'neural' as const,
+      popular: false,
+      cta: 'Contact Sales',
       ctaVariant: 'primary' as const}
   ],
   // Service category pricing examples,
   const serviceCategoryPricing = [
     {
-      category: 'Quantum AI & Computing';
-      services: ['Quantum AI Platform'Neural Network Training'Quantum Optimization'];
-      startingPrice: '$99/month';
-      icon: <Brain className="w-6 h-6"  />};
+      category: 'Quantum AI & Computing',
+      services: ['Quantum AI Platform'Neural Network Training'Quantum Optimization'],
+      startingPrice: '$99/month',
+      icon: <Brain className="w-6 h-6"  />},
     {
-      category: 'Autonomous Systems';
-      services: ['AI Factory Management'Robotic Process Automation'Smart Manufacturing'];
-      startingPrice: '$149/month';
-      icon: <Factory className="w-6 h-6"  />};
+      category: 'Autonomous Systems',
+      services: ['AI Factory Management'Robotic Process Automation'Smart Manufacturing'],
+      startingPrice: '$149/month',
+      icon: <Factory className="w-6 h-6"  />},
     {
-      category: 'Healthcare & Biotech';
-      services: ['Drug Discovery AI'Medical Imaging Analysis'Genomic Research Platform'];
-      startingPrice: '$199/month';
-      icon: <FlaskConical className="w-6 h-6"  />};
+      category: 'Healthcare & Biotech',
+      services: ['Drug Discovery AI'Medical Imaging Analysis'Genomic Research Platform'],
+      startingPrice: '$199/month',
+      icon: <FlaskConical className="w-6 h-6"  />},
     {
-      category: 'Cybersecurity';
-      services: ['Quantum Encryption'Threat Intelligence'Zero-Trust Security'];
-      startingPrice: '$129/month';
-      icon: <Shield className="w-6 h-6"  />};
+      category: 'Cybersecurity',
+      services: ['Quantum Encryption'Threat Intelligence'Zero-Trust Security'],
+      startingPrice: '$129/month',
+      icon: <Shield className="w-6 h-6"  />},
     {
-      category: 'Financial Technology';
-      services: ['AI Trading Platform'Risk Management'Portfolio Optimization'];
-      startingPrice: '$179/month';
-      icon: <DollarSign className="w-6 h-6"  />};
+      category: 'Financial Technology',
+      services: ['AI Trading Platform'Risk Management'Portfolio Optimization'],
+      startingPrice: '$179/month',
+      icon: <DollarSign className="w-6 h-6"  />},
     {
-      category: 'Space Technology';
-      services: ['Satellite Management'Space Data Analytics'Mission Planning AI'];
-      startingPrice: '$299/month';
+      category: 'Space Technology',
+      services: ['Satellite Management'Space Data Analytics'Mission Planning AI'],
+      startingPrice: '$299/month',
       icon: <Rocket className="w-6 h-6"  />}
   ],
   // Value propositions,
   const valuePropositions = [
     {
-      title: 'Unprecedented ROI';
-      description: 'Average 30o0% ROI within 6 months';
-      icon: <TrendingUp className="w-8 h-8"  />;
-      metric: '30o0%';
-      detail: 'Average ROI'};
+      title: 'Unprecedented ROI',
+      description: 'Average 30o0% ROI within 6 months',
+      icon: <TrendingUp className="w-8 h-8"  />,
+      metric: '30o0%',
+      detail: 'Average ROI'},
     {
-      title: 'Time to Value';
-      description: 'Get up and running in under 24 hours';
-      icon: <Clock className="w-8 h-8"  />;
-      metric: '<24h';
-      detail: 'Setup Time'};
+      title: 'Time to Value',
+      description: 'Get up and running in under 24 hours',
+      icon: <Clock className="w-8 h-8"  />,
+      metric: '<24h',
+      detail: 'Setup Time'},
     {
-      title: 'Global Reach';
-      description: 'Available in 150+ countries worldwide';
-      icon: <Globe className="w-8 h-8"  />;
-      metric: '150+';
-      detail: 'Countries'};
+      title: 'Global Reach',
+      description: 'Available in 150+ countries worldwide',
+      icon: <Globe className="w-8 h-8"  />,
+      metric: '150+',
+      detail: 'Countries'},
     {
-      title: 'Enterprise Security';
-      description: 'Bank-level security with 99.99% uptime';
-      icon: <Shield className="w-8 h-8"  />;
-      metric: '99.99%';
+      title: 'Enterprise Security',
+      description: 'Bank-level security with 99.99% uptime',
+      icon: <Shield className="w-8 h-8"  />,
+      metric: '99.99%',
       detail: 'Uptime SLA'}
   ],
   return (

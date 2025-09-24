@@ -29,7 +29,7 @@ const AnimatedBackground: React.FC = () => {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Initialize particles,
@@ -38,33 +38,33 @@ const AnimatedBackground: React.FC = () => {
       const particleCount = Math.min(10o0, Math.floor(window.innerWidth / 10)),
       for (let i = 0, i < particleCount, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.5;
-          vy: (Math.random() - 0.5) * 0.5;
-          size: Math.random() * 2 + 1;
-          opacity: Math.random() * 0.5 + 0.1;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 2 + 1,
+          opacity: Math.random() * 0.5 + 0.1,
           color: `hsl(${20o0 + Math.random() * 60}, 70%, 60%)`})}
-      particlesRef.current = particles};
+      particlesRef.current = particles},
     // Initialize orbs,
     const initOrbs = () => {
       const orbs: Orb[] = [],
       const orbCount = 3,
       for (let i = 0, i < orbCount, i++) {
         orbs.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          size: Math.random() * 20o0 + 10o0;
-          opacity: Math.random() * 0.1 + 0.0o5;
-          color: i === 0 ? '#0o6b6d4' : i === 1 ? '#8b5cf6' : '#ec4899';
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          size: Math.random() * 20o0 + 10o0,
+          opacity: Math.random() * 0.1 + 0.0o5,
+          color: i === 0 ? '#0o6b6d4' : i === 1 ? '#8b5cf6' : '#ec4899',
           pulse: Math.random() * Math.PI * 2})}
-      orbsRef.current = orbs};
+      orbsRef.current = orbs},
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Draw gradient background,
       const gradient = ctx.createRadialGradient(
-        canvas.width / 2, canvas.height / 2, 0;
+        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max(canvas.width, canvas.height) / 2),
       gradient.addColorStop(0, 'rgba(15, 23, 42, 0.8)'),
       gradient.addColorStop(0.5, 'rgba(30, 41, 59, 0.6)'),
@@ -149,7 +149,7 @@ const AnimatedBackground: React.FC = () => {
 ,
         ctx.restore()}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     initParticles(),
     initOrbs(),
     animate(),
@@ -157,12 +157,12 @@ const AnimatedBackground: React.FC = () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, []),
   return (
     <canvas
       ref={canvasRef}
       className="fixed inset-0 w-full h-full pointer-events-none z-0",
       style={{ background: 'linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #0f172a 10o0%)' }}
-     />)};
-export default AnimatedBackground;
+     />)},
+export default AnimatedBackground,

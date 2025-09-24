@@ -18,5 +18,5 @@ const CybersecurityTrendsFor20o24AndBeyondChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default CybersecurityTrendsFor20o24AndBeyondChat;
+    </div>)},
+export default CybersecurityTrendsFor20o24AndBeyondChat,

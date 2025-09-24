@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -25,9 +25,9 @@ const execAsync = promisify(exec),
 class OptimizationSlackBot {
   constructor() {
     this.app = new App({
-      token: process.env.SLACK_BOT_TOKEN;
-      signingSecret: process.env.SLACK_SIGNING_SECRET;
-      socketMode: true;
+      token: process.env.SLACK_BOT_TOKEN,
+      signingSecret: process.env.SLACK_SIGNING_SECRET,
+      socketMode: true,
       appToken: process.env.SLACK_APP_TOKEN}),
     this.isRunning = false,
     this.setupCommands(),
@@ -43,12 +43,12 @@ const target = args[0] || all,
 const options = args.slice(1),
       try {
         await respond({
-          response_type: 'in_channel';
+          response_type: 'in_channel',
           blocks: [
             {
-              type: 'section';
+              type: 'section',
               text: {
-                type: 'mrkdwn';
+                type: 'mrkdwn',
                 text: `🚀 *Starting optimization for: ${target}*\n\nInitiating Cursor agents...`}
             }
           ]}),
@@ -56,7 +56,7 @@ const options = args.slice(1),
         await this.triggerOptimization(target)} catch (error) {
         logger.error('Optimization command error:', error),
         await respond({
-          response_type: 'ephemeral';
+          response_type: 'ephemeral',
           text: `❌ Error: ${error.message}`})}
     }),
     // Status command,
@@ -65,17 +65,17 @@ const options = args.slice(1),
       try {
         const status = await this.getPerformanceStatus(),
         await respond({
-          response_type: 'in_channel';
+          response_type: 'in_channel',
           blocks: [
             {
-              type: 'section';
+              type: 'section',
               text: {
-                type: 'mrkdwn';
+                type: 'mrkdwn',
                 text: `📊 *Performance Status*\n\n${status.summary}`}
             }
           ]})} catch (error) {
         await respond({
-          response_type: 'ephemeral';
+          response_type: 'ephemeral',
           text: `❌ Error: ${error.message}`})}
     })}
 ,
@@ -84,9 +84,9 @@ const options = args.slice(1),
       await say({
         blocks: [
           {
-            type: 'section';
+            type: 'section',
             text: {
-              type: 'mrkdwn';
+              type: 'mrkdwn',
               text: `🚨 *Performance Alert*\n\n${event.message}`}
           }
         ]})}),
@@ -94,9 +94,9 @@ const options = args.slice(1),
       await say({
         blocks: [
           {
-            type: 'section';
+            type: 'section',
             text: {
-              type: 'mrkdwn';
+              type: 'mrkdwn',
               text: `✅ *Optimization Complete*\n\n${event.message}`}
           }
         ]})})}
@@ -110,7 +110,7 @@ const options = args.slice(1),
         await this.triggerOptimization(target),
         await complete({
           outputs: {
-            status: 'completed';
+            status: 'completed',
             target: target}
         })} catch (error) {
         await fail({
@@ -250,20 +250,20 @@ const timeoutId = setTimeout(resolve,                                           
 // Store timeoutId for cleanup if needed,
 // Store timeoutId for cleanup if needed),
     return {
-      success: true;
-      target: target;
-      timestamp: new Date().toISOString()};
+      success: true,
+      target: target,
+      timestamp: new Date().toISOString()},
   }
 ,
   async getPerformanceStatus() {
     // Simulate performance status,
     return {
-      summary: All systems operational';
+      summary: All systems operational',
       metrics: {
-        uptime: 99.9%';
-        responseTime: 150ms';
-        errorRate: 0.1%};
-      timestamp: new Date().toISOString()};
+        uptime: 99.9%',
+        responseTime: 150ms',
+        errorRate: 0.1%},
+      timestamp: new Date().toISOString()},
   }
 ,
   async start() {

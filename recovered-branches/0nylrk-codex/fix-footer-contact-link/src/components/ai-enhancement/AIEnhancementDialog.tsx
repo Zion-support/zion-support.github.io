@@ -1,8 +1,8 @@
 import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
 } from '@/components/ui/dialog',
 import { AIEnhancementPanel } from './AIEnhancementPanel',
 import { AIEnhancementOptions } from '@/hooks/useAIContentEnhancer',
@@ -15,16 +15,16 @@ interface AIEnhancementDialogProps {
   initialContent?: string}
 ,
 export function AIEnhancementDialog({
-  title;
-  isOpen;
-  onClose;
-  onApply;
-  defaultOptions;
-  initialContent;
+  title,
+  isOpen,
+  onClose,
+  onApply,
+  defaultOptions,
+  initialContent,
 }: AIEnhancementDialogProps) {
   const handleApply = (content: string) => {
     onApply(content),
-    onClose()};
+    onClose()},
   return (
     <Dialog open={isOpen} onOpenChange={() => onClose()}>,
       <DialogContent className='max-w-3xl'>,

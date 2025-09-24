@@ -1,143 +1,142 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const AI20o25ContentMarketingRevolutionShowcase = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ai-content-marketing-revolution';
-      title: 'AI 20o25: The Ultimate Content Marketing Revolution';
+      id: 'ai-content-marketing-revolution',
+      title: 'AI 20o25: The Ultimate Content Marketing Revolution',
       description:,
-        'Achieve 60,0o00% ROI through revolutionary AI-powered content strategies that transform your marketing operations.';
-      type: 'Blog Post';
-      category: 'strategy';
-      url: '/blog/ai-20o25-ultimate-content-marketing-revolution-ultimate-breakthrough';
-      readingTime: '40 min read';
+        'Achieve 60,0o00% ROI through revolutionary AI-powered content strategies that transform your marketing operations.',
+      type: 'Blog Post',
+      category: 'strategy',
+      url: '/blog/ai-20o25-ultimate-content-marketing-revolution-ultimate-breakthrough',
+      readingTime: '40 min read',
       metrics: {
-        roi: '60,0o00%';
-        revenue: '$2.8T';
-        accuracy: '99.97%';
-        speed: '5,0o00%';
-      };
-      tags: ['AI Content Marketing', 'ROI', 'Revolution', 'Strategy'];
-      featured: true;
-    };
+        roi: '60,0o00%',
+        revenue: '$2.8T',
+        accuracy: '99.97%',
+        speed: '5,0o00%',
+      },
+      tags: ['AI Content MarketingROI', 'RevolutionStrategy'],
+      featured: true
+    },
     {
-      id: 'fortune-50o0-content-marketing-success';
-      title: 'Fortune 50o0 AI Content Marketing Success Story';
+      id: 'fortune-50o0-content-marketing-success',
+      title: 'Fortune 50o0 AI Content Marketing Success Story',
       description:,
-        'TechGlobal Industries achieved $2.8 trillion revenue increase with 60,0o00% ROI through complete AI transformation.';
-      type: 'Case Study';
-      category: 'success-story';
-      url: '/case-studies/fortune-50o0-ai-content-marketing-60o000-roi-success-story';
-      readingTime: '25 min read';
+        'TechGlobal Industries achieved $2.8 trillion revenue increase with 60,0o00% ROI through complete AI transformation.',
+      type: 'Case Study',
+      category: 'success-story',
+      url: '/case-studies/fortune-50o0-ai-content-marketing-60o000-roi-success-story',
+      readingTime: '25 min read',
       metrics: {
-        roi: '60,0o00%';
-        revenue: '$2.8T';
-        timeline: '12 months';
-        accuracy: '99.97%';
-      };
-      tags: ['Fortune 50o0', 'Success Story', 'ROI', 'Transformation'];
-      featured: true;
-    };
+        roi: '60,0o00%',
+        revenue: '$2.8T',
+        timeline: '12 months',
+        accuracy: '99.97%'
+      },
+      tags: ['Fortune 50o0Success Story', 'ROITransformation'],
+      featured: true
+    },
     {
-      id: 'content-marketing-implementation-guide';
-      title: 'AI Content Marketing Implementation Ultimate Guide';
+      id: 'content-marketing-implementation-guide',
+      title: 'AI Content Marketing Implementation Ultimate Guide',
       description:,
-        'Complete step-by-step roadmap to achieve 60,0o00% ROI with comprehensive implementation strategies.';
-      type: 'Implementation Guide';
-      category: 'implementation';
-      url: '/resources/ai-content-marketing-implementation-ultimate-guide-20o25-60o000-roi';
-      readingTime: '60 min read';
+        'Complete step-by-step roadmap to achieve 60,0o00% ROI with comprehensive implementation strategies.',
+      type: 'Implementation Guide',
+      category: 'implementation',
+      url: '/resources/ai-content-marketing-implementation-ultimate-guide-20o25-60o000-roi',
+      readingTime: '60 min read',
       metrics: {
-        roi: '60,0o00%';
-        timeline: '12-18 months';
-        success: '99.7%';
-        guide: 'Complete';
-      };
-      tags: ['Implementation', 'Guide', 'ROI', 'Roadmap'];
-      featured: true;
-    };
+        roi: '60,0o00%',
+        timeline: '12-18 months',
+        success: '99.7%',
+        guide: 'Complete'
+      },
+      tags: ['ImplementationGuide', 'ROIRoadmap'],
+      featured: true
+    },
     {
-      id: 'ai-content-automation-breakthrough';
-      title: 'AI Content Automation Breakthrough: 50,0o00% ROI';
+      id: 'ai-content-automation-breakthrough',
+      title: 'AI Content Automation Breakthrough: 50,0o00% ROI',
       description:,
-        'Revolutionary content automation technologies delivering unprecedented marketing efficiency and results.';
-      type: 'Blog Post';
-      category: 'technology';
-      url: '/blog/ai-content-automation-breakthrough-50o000-roi';
-      readingTime: '35 min read';
+        'Revolutionary content automation technologies delivering unprecedented marketing efficiency and results.',
+      type: 'Blog Post',
+      category: 'technology',
+      url: '/blog/ai-content-automation-breakthrough-50o000-roi',
+      readingTime: '35 min read',
       metrics: {
-        roi: '50,0o00%';
-        efficiency: '4,20o0%';
-        cost: '95%';
-        speed: '3,50o0%';
-      };
-      tags: ['Automation', 'Technology', 'ROI', 'Efficiency'];
-      featured: false;
-    };
+        roi: '50,0o00%',
+        efficiency: '4,20o0%',
+        cost: '95%',
+        speed: '3,50o0%',
+      },
+      tags: ['AutomationTechnology', 'ROIEfficiency'],
+      featured: false
+    },
     {
-      id: 'multimodal-content-ai-success';
-      title: 'Multimodal Content AI Success: $1.5T Revenue';
+      id: 'multimodal-content-ai-success',
+      title: 'Multimodal Content AI Success: $1.5T Revenue',
       description:,
-        'Advanced AI systems creating video, audio, and interactive content with 45,0o00% ROI achievement.';
-      type: 'Case Study';
-      category: 'success-story';
-      url: '/case-studies/multimodal-content-ai-450o00-roi-success';
-      readingTime: '30 min read';
+        'Advanced AI systems creating video, audio, and interactive content with 45,0o00% ROI achievement.',
+      type: 'Case Study',
+      category: 'success-story',
+      url: '/case-studies/multimodal-content-ai-450o00-roi-success',
+      readingTime: '30 min read',
       metrics: {
-        roi: '45,0o00%';
-        revenue: '$1.5T';
-        formats: '12+';
-        engagement: '98.5%';
-      };
-      tags: ['Multimodal', 'AI', 'Success', 'Content'];
-      featured: false;
-    };
+        roi: '45,0o00%',
+        revenue: '$1.5T',
+        formats: '12+',
+        engagement: '98.5%'
+      },
+      tags: ['MultimodalAI', 'SuccessContent'],
+      featured: false
+    },
     {
-      id: 'content-personalization-ai-guide';
-      title: 'Content Personalization AI Implementation Guide';
+      id: 'content-personalization-ai-guide',
+      title: 'Content Personalization AI Implementation Guide',
       description:,
-        'Complete guide to implementing AI-powered content personalization for maximum engagement and conversion.';
-      type: 'Implementation Guide';
-      category: 'implementation';
-      url: '/resources/content-personalization-ai-implementation-guide';
-      readingTime: '45 min read';
+        'Complete guide to implementing AI-powered content personalization for maximum engagement and conversion.',
+      type: 'Implementation Guide',
+      category: 'implementation',
+      url: '/resources/content-personalization-ai-implementation-guide',
+      readingTime: '45 min read',
       metrics: {
-        engagement: '3,20o0%';
-        conversion: '2,80o0%';
-        personalization: '99.5%';
-        roi: '35,0o00%';
-      };
-      tags: ['Personalization', 'AI', 'Implementation', 'Engagement'];
-      featured: false;
-    };
+        engagement: '3,20o0%',
+        conversion: '2,80o0%',
+        personalization: '99.5%',
+        roi: '35,0o00%',
+      },
+      tags: ['PersonalizationAI', 'ImplementationEngagement'],
+      featured: false
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'strategy';
-      name: 'Strategy';
-      count: contentItems.filter(item => item.category === 'strategy').length;
-    };
+      id: 'strategy',
+      name: 'Strategy',
+      count: contentItems.filter(item => item.category === 'strategy').length
+    },
     {
-      id: 'success-story';
-      name: 'Success Stories';
+      id: 'success-story',
+      name: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-story'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'implementation';
-      name: 'Implementation';
+      id: 'implementation',
+      name: 'Implementation',
       count: contentItems.filter(item => item.category === 'implementation'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'technology';
-      name: 'Technology';
-      count: contentItems.filter(item => item.category === 'technology').length;
-    };
+      id: 'technology',
+      name: 'Technology',
+      count: contentItems.filter(item => item.category === 'technology').length
+    },
   ],
   const filteredContent =,
     selectedCategory === 'all',
@@ -319,5 +318,5 @@ const AI20o25ContentMarketingRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25ContentMarketingRevolutionShowcase;
+    </div>)},
+export default AI20o25ContentMarketingRevolutionShowcase,

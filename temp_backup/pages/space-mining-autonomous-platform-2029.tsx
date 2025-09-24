@@ -2,120 +2,99 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Zap;
-  Sparkles;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  TrendingUp;
-  Target;
-  Layers;
-  Globe;
-  Brain;
-  Atom;
-  Building;
-  Satellite;
+  Rocket,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  TrendingUp,
+  Target,
+  Layers,
+  Globe,
+  Brain,
+  Atom,
+  Building,
+  Satellite,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
-  'Autonomous asteroid mining';
-  'Resource identification systems';
-  'Automated extraction processes';
-  'Space logistics management';
-  'Resource processing automation';
-  'Space transportation systems';
-  'Remote monitoring and control';
-  'Resource value assessment';
+  'Autonomous asteroid miningResource identification systems',
+  'Automated extraction processesSpace logistics management',
+  'Resource processing automationSpace transportation systems',
+  'Remote monitoring and controlResource value assessment',
 ],
 const benefits = [
-  'Access to unlimited resources';
-  'Reduced Earth resource dependency';
-  'Autonomous space operations';
-  'Scalable mining operations';
-  'Cost-effective resource extraction';
-  'Space industry leadership';
+  'Access to unlimited resourcesReduced Earth resource dependency',
+  'Autonomous space operationsScalable mining operations',
+  'Cost-effective resource extractionSpace industry leadership',
 ],
 const useCases = [
-  'Space mining companies';
-  'Government space agencies';
-  'Resource companies';
-  'Technology companies';
-  'Research institutions';
-  'Investment firms';
+  'Space mining companiesGovernment space agencies',
+  'Resource companiesTechnology companies',
+  'Research institutionsInvestment firms',
 ],
 const technology = [
-  'Autonomous Robotics';
-  'Space Technology';
-  'AI Systems';
-  'Resource Processing';
-  'Satellite Communication';
-  'Advanced Propulsion';
+  'Autonomous RoboticsSpace Technology',
+  'AI SystemsResource Processing',
+  'Satellite CommunicationAdvanced Propulsion',
 ],
 const pricingPlans = [
   {
-    name: 'Space Explorer';
-    price: '$49,999';
-    period: '/month';
-    description: 'Perfect for research institutions and space startups';
+    name: 'Space Explorer',
+    price: '$49,999',
+    period: '/month',
+    description: 'Perfect for research institutions and space startups',
     features: [
-      'Basic autonomous mining';
-      'Resource identification';
-      'Remote monitoring';
-      'Basic support';
-      'Training modules';
-    ];
-    popular: false;
-  };
+      'Basic autonomous miningResource identification',
+      'Remote monitoringBasic support',
+      'Training modules',
+    ],
+    popular: false
+  },
   {
-    name: 'Space Enterprise';
-    price: '$99,999';
-    period: '/month';
-    description: 'For established space companies and resource firms';
+    name: 'Space Enterprise',
+    price: '$99,999',
+    period: '/month',
+    description: 'For established space companies and resource firms',
     features: [
-      'Advanced autonomous systems';
-      'Full resource processing';
-      'Custom mining operations';
-      'Priority support';
-      'Custom training';
-      'Integration services';
-    ];
-    popular: true;
-  };
+      'Advanced autonomous systemsFull resource processing',
+      'Custom mining operationsPriority support',
+      'Custom trainingIntegration services',
+    ],
+    popular: true
+  },
   {
-    name: 'Space Government';
-    price: '$199,999';
-    period: '/month';
-    description: 'For government agencies and military organizations';
+    name: 'Space Government',
+    price: '$199,999',
+    period: '/month',
+    description: 'For government agencies and military organizations',
     features: [
-      'Military-grade space systems';
-      'Custom space protocols';
-      'On-site deployment';
-      '24/7 dedicated support';
-      'Compliance certification';
-      'Full training program';
-    ];
-    popular: false;
-  };
+      'Military-grade space systemsCustom space protocols',
+      'On-site deployment24/7 dedicated support',
+      'Compliance certificationFull training program',
+    ],
+    popular: false
+  },
 ],
 export default function SpaceMiningAutonomousPlatform20o29() {
   return (

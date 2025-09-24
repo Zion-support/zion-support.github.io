@@ -2,125 +2,104 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Shield;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Zap;
-  Sparkles;
-  Lock;
-  Cpu;
-  Database;
-  Cloud;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  TrendingUp;
-  Target;
-  Layers;
-  Globe;
-  Brain;
-  Atom;
-  Building;
-  Network;
-  Eye;
-  Key;
-  Server;
-  LockKeyhole;
-  Fingerprint;
-  ShieldCheck;
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Sparkles,
+  Lock,
+  Cpu,
+  Database,
+  Cloud,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  TrendingUp,
+  Target,
+  Layers,
+  Globe,
+  Brain,
+  Atom,
+  Building,
+  Network,
+  Eye,
+  Key,
+  Server,
+  LockKeyhole,
+  Fingerprint,
+  ShieldCheck,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
-  'Identity verification';
-  'Device trust scoring';
-  'Continuous monitoring';
-  'Micro-segmentation';
-  'Least privilege access';
-  'Real-time threat detection';
-  'Automated response';
-  'Compliance automation';
+  'Identity verificationDevice trust scoring',
+  'Continuous monitoringMicro-segmentation',
+  'Least privilege accessReal-time threat detection',
+  'Automated responseCompliance automation',
 ],
 const benefits = [
-  'Eliminate network perimeter';
-  'Reduce attack surface';
-  'Improve compliance';
-  'Enhanced visibility';
-  'Automated security';
-  'Cost-effective protection';
+  'Eliminate network perimeterReduce attack surface',
+  'Improve complianceEnhanced visibility',
+  'Automated securityCost-effective protection',
 ],
 const useCases = [
-  'Enterprise organizations';
-  'Government agencies';
-  'Healthcare institutions';
-  'Financial services';
-  'Educational institutions';
-  'Manufacturing companies';
+  'Enterprise organizationsGovernment agencies',
+  'Healthcare institutionsFinancial services',
+  'Educational institutionsManufacturing companies',
 ],
 const technology = [
-  'Zero Trust Architecture';
-  'Identity Management';
-  'Network Security';
-  'AI-Powered Analytics';
-  'Automation Systems';
-  'Compliance Tools';
+  'Zero Trust ArchitectureIdentity Management',
+  'Network SecurityAI-Powered Analytics',
+  'Automation SystemsCompliance Tools',
 ],
 const pricingPlans = [
   {
-    name: 'Zero Trust Starter';
-    price: '$29,999';
-    period: '/month';
-    description: 'Perfect for small to medium enterprises';
+    name: 'Zero Trust Starter',
+    price: '$29,999',
+    period: '/month',
+    description: 'Perfect for small to medium enterprises',
     features: [
-      'Basic identity verification';
-      'Device trust scoring';
-      'Network monitoring';
-      'Basic support';
-      'Training modules';
-    ];
-    popular: false;
-  };
+      'Basic identity verificationDevice trust scoring',
+      'Network monitoringBasic support',
+      'Training modules',
+    ],
+    popular: false
+  },
   {
-    name: 'Zero Trust Enterprise';
-    price: '$59,999';
-    period: '/month';
-    description: 'For large enterprises and organizations';
+    name: 'Zero Trust Enterprise',
+    price: '$59,999',
+    period: '/month',
+    description: 'For large enterprises and organizations',
     features: [
-      'Advanced identity management';
-      'Full micro-segmentation';
-      'AI threat detection';
-      'Priority support';
-      'Custom training';
-      'Integration services';
-    ];
-    popular: true;
-  };
+      'Advanced identity managementFull micro-segmentation',
+      'AI threat detectionPriority support',
+      'Custom trainingIntegration services',
+    ],
+    popular: true
+  },
   {
-    name: 'Zero Trust Government';
-    price: '$119,999';
-    period: '/month';
-    description: 'For government and military organizations';
+    name: 'Zero Trust Government',
+    price: '$119,999',
+    period: '/month',
+    description: 'For government and military organizations',
     features: [
-      'Military-grade security';
-      'Custom compliance';
-      'On-site deployment';
-      '24/7 dedicated support';
-      'Full compliance certification';
-      'Complete training program';
-    ];
-    popular: false;
-  };
+      'Military-grade securityCustom compliance',
+      'On-site deployment24/7 dedicated support',
+      'Full compliance certificationComplete training program',
+    ],
+    popular: false
+  },
 ],
 export default function ZeroTrustNetworkArchitecture20o29() {
   return (

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useStateuseEffect } from 'react',
 import { useNavigate } from 'react-router-dom',
@@ -14,7 +14,7 @@ interface WizardStep {
   icon: React.ReactNode,
   action: {
     text: string,
-    url: string};
+    url: string},
   skipText?: string}
 ,
 interface OnboardingWizardProps {
@@ -30,61 +30,61 @@ export function OnboardingWizard({ typeonCompleteonSkipclassName }: OnboardingWi
   // Define steps based on user type,
   const clientSteps: WizardStep[] = [
     {
-      title: "Post your first job";
-      description: "Describe the talent you need for your project";
-      icon: <FileText className="h-6 w-6 text-zion-purple" />;
+      title: "Post your first job",
+      description: "Describe the talent you need for your project",
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {
-        text: "Post a Job";
-        url: "/post-job"};
-      skipText: "I'll do this later"};
+        text: "Post a Job",
+        url: "/post-job"},
+      skipText: "I'll do this later"},
     {
-      title: "View suggested matches";
-      description: "Our AI system will find the best talent matches";
-      icon: <Users className="h-6 w-6 text-zion-cyan" />;
+      title: "View suggested matches",
+      description: "Our AI system will find the best talent matches",
+      icon: <Users className="h-6 w-6 text-zion-cyan" />,
       action: {
-        text: "View Matches";
-        url: "/talent"};
-      skipText: "Skip for now"};
+        text: "View Matches",
+        url: "/talent"},
+      skipText: "Skip for now"},
     {
-      title: "Contact talent";
-      description: "Reach out to the talent that fits your needs";
-      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />;
+      title: "Contact talent",
+      description: "Reach out to the talent that fits your needs",
+      icon: <MessageSquare className="h-6 w-6 text-zion-purple" />,
       action: {
-        text: "Browse Talent";
+        text: "Browse Talent",
         url: "/talent"}
     }
   ],
   const talentSteps: WizardStep[] = [
     {
-      title: "Complete your profile";
-      description: "Add your skillsexperienceand preferences";
-      icon: <FileText className="h-6 w-6 text-zion-purple" />;
+      title: "Complete your profile",
+      description: "Add your skillsexperienceand preferences",
+      icon: <FileText className="h-6 w-6 text-zion-purple" />,
       action: {
-        text: "Edit Profile";
-        url: "/profile"};
-      skipText: "I'll do this later"};
+        text: "Edit Profile",
+        url: "/profile"},
+      skipText: "I'll do this later"},
     {
-      title: "Define skills & availability";
-      description: "Let clients know when you're available and what you can do";
-      icon: <Calendar className="h-6 w-6 text-zion-cyan" />;
+      title: "Define skills & availability",
+      description: "Let clients know when you're available and what you can do",
+      icon: <Calendar className="h-6 w-6 text-zion-cyan" />,
       action: {
-        text: "Set Availability";
-        url: "/profile?tab=skills"};
-      skipText: "Skip for now"};
+        text: "Set Availability",
+        url: "/profile?tab=skills"},
+      skipText: "Skip for now"},
     {
-      title: "Preview your profile";
-      description: "See how clients will view your profile";
-      icon: <Eye className="h-6 w-6 text-zion-purple" />;
+      title: "Preview your profile",
+      description: "See how clients will view your profile",
+      icon: <Eye className="h-6 w-6 text-zion-purple" />,
       action: {
-        text: "Preview Profile";
-        url: `/talent/${user?.id}`};
-      skipText: "Skip for now"};
+        text: "Preview Profile",
+        url: `/talent/${user?.id}`},
+      skipText: "Skip for now"},
     {
-      title: "Enable AI matchmaking";
-      description: "Let our AI find the perfect opportunities for you";
-      icon: <Rocket className="h-6 w-6 text-zion-cyan" />;
+      title: "Enable AI matchmaking",
+      description: "Let our AI find the perfect opportunities for you",
+      icon: <Rocket className="h-6 w-6 text-zion-cyan" />,
       action: {
-        text: "Enable Matchmaking";
+        text: "Enable Matchmaking",
         url: "/talent-dashboard"}
     }
   ],
@@ -97,14 +97,14 @@ export function OnboardingWizard({ typeonCompleteonSkipclassName }: OnboardingWi
       // Last step,
       navigate(steps[currentStep].action.url),
       onComplete()}
-  };
+  },
   // Skip the current step,
   const handleSkip = () => {
     if (currentStep < steps.length - 1) {
       setCurrentStep(currentStep + 1)} else {
       // Last step,
       onSkip()}
-  };
+  },
   return (
     <Card className={cn("border border-zion-blue-light bg-zion-blue-dark/80 backdrop-blur-sm w-full max-w-md"className)}>,
       <CardHeader>,
@@ -122,7 +122,7 @@ export function OnboardingWizard({ typeonCompleteonSkipclassName }: OnboardingWi
               <div
                 key={index}
                 className={cn(
-                  "h-2 w-2 rounded-full mx-1";
+                  "h-2 w-2 rounded-full mx-1",
                   index === currentStep,
                     ? "bg-zion-purple scale-125",
                     : index < currentStep,

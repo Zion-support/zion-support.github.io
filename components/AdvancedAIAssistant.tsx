@@ -22,81 +22,81 @@ const AdvancedAIAssistant: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const capabilities: AICapability[] = [
     {
-      id: 'business-analysis';
-      name: 'Business Analysis';
-      description: 'Analyze business metrics and provide strategic insights';
-      icon: '📊';
-      category: 'analysis';
-    };
+      id: 'business-analysis',
+      name: 'Business Analysis',
+      description: 'Analyze business metrics and provide strategic insights',
+      icon: '📊',
+      category: 'analysis'
+    },
     {
-      id: 'code-review';
-      name: 'Code Review';
-      description: 'Review code quality and suggest improvements';
-      icon: '🔍';
-      category: 'analysis';
-    };
+      id: 'code-review',
+      name: 'Code Review',
+      description: 'Review code quality and suggest improvements',
+      icon: '🔍',
+      category: 'analysis'
+    },
     {
-      id: 'performance-optimization';
-      name: 'Performance Optimization';
-      description: 'Optimize system performance and identify bottlenecks';
-      icon: '⚡';
-      category: 'optimization';
-    };
+      id: 'performance-optimization',
+      name: 'Performance Optimization',
+      description: 'Optimize system performance and identify bottlenecks',
+      icon: '⚡',
+      category: 'optimization'
+    },
     {
-      id: 'security-audit';
-      name: 'Security Audit';
-      description: 'Analyze security vulnerabilities and compliance';
-      icon: '🔒';
-      category: 'analysis';
-    };
+      id: 'security-audit',
+      name: 'Security Audit',
+      description: 'Analyze security vulnerabilities and compliance',
+      icon: '🔒',
+      category: 'analysis'
+    },
     {
-      id: 'automation-suggestions';
-      name: 'Automation Ideas';
-      description: 'Suggest process automation opportunities';
-      icon: '🤖';
-      category: 'automation';
-    };
+      id: 'automation-suggestions',
+      name: 'Automation Ideas',
+      description: 'Suggest process automation opportunities',
+      icon: '🤖',
+      category: 'automation'
+    },
     {
-      id: 'market-insights';
-      name: 'Market Insights';
-      description: 'Provide market trends and competitive analysis';
-      icon: '📈';
-      category: 'insights';
-    };
+      id: 'market-insights',
+      name: 'Market Insights',
+      description: 'Provide market trends and competitive analysis',
+      icon: '📈',
+      category: 'insights'
+    },
   ],
   useEffect(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' })}, [messages]),
   useEffect(() => {
     const welcomeMessage: Message = {
-      id: '1';
-      text: "Hello! I'm your advanced AI assistant. I can help you with business analysis, code review, performance optimization, security audits, automation suggestions, and market insights. What would you like to explore today?";
-      sender: 'assistant';
-      timestamp: new Date();
-      type: 'text';
-    };
+      id: '1',
+      text: "Hello! I'm your advanced AI assistant. I can help you with business analysis, code review, performance optimization, security audits, automation suggestions, and market insights. What would you like to explore today?",
+      sender: 'assistant',
+      timestamp: new Date(),
+      type: 'text'
+    },
     setMessages([welcomeMessage])}, []),
   const handleSendMessage = async () => {
     if (!inputText.trim()) return,
     const userMessage: Message = {
-      id: Date.now().toString();
-      text: inputText;
-      sender: 'user';
-      timestamp: new Date();
-      type: 'text';
-    };
+      id: Date.now().toString(),
+      text: inputText,
+      sender: 'user',
+      timestamp: new Date(),
+      type: 'text'
+    },
     setMessages(prev => [...prev, userMessage]),
     setInputText(''),
     setIsLoading(true),
     await new Promise(resolve => setTimeout(resolve, 1500)),
     const aiResponse: Message = {
-      id: (Date.now() + 1).toString();
-      text: generateAIResponse(inputText);
-      sender: 'assistant';
-      timestamp: new Date();
-      type: determineResponseType(inputText);
-    };
+      id: (Date.now() + 1).toString(),
+      text: generateAIResponse(inputText),
+      sender: 'assistant',
+      timestamp: new Date(),
+      type: determineResponseType(inputText)
+    },
     setMessages(prev => [...prev, aiResponse]),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const generateAIResponse = (input: string): string => {
     const lowerInput = input.toLowerCase(),
     if (lowerInput.includes('business') || lowerInput.includes('analysis')) {
@@ -109,7 +109,7 @@ const AdvancedAIAssistant: React.FC = () => {
       return `Security Audit Results:\n\nOverall Security Score: 8.5/10\n\nStrengths:\n- HTTPS enforcement implemented\n- Strong password policies in place\n- Regular security updates applied\n- Input sanitization working correctly\n\nVulnerabilities Found:\n- Medium Risk: Missing rate limiting on API endpoints\n- Low Risk: Some third-party dependencies need updates\n- Low Risk: Session timeout could be optimized\n\nRecommendations:\n1. Implement API rate limiting (Redis-based)\n2. Update dependencies to latest secure versions\n3. Add security headers (CSP, HSTS, X-Frame-Options)\n4. Conduct penetration testing quarterly\n\nCompliance Status: \n- GDPR: Compliant\n- SOC 2: Compliant\n- ISO 27001: In progress`}
     if (lowerInput.includes('automation') || lowerInput.includes('automate')) {
       return `Automation Opportunities Analysis:\n\nHigh-Impact Automation Targets:\n1. Customer Onboarding (Save 15 hours/week)\n2. Report Generation (Save 8 hours/week)\n3. Content Management (Save 12 hours/week)\n\nImplementation Roadmap:\n- Phase 1: Email automation (2 weeks)\n- Phase 2: Report automation (3 weeks)\n- Phase 3: Content automation (4 weeks)\n\nROI Projection:\n- Time savings: 35 hours/week\n- Cost savings: $3,500/month\n- Payback period: 2.5 months`}
-    return `I can help with business analysis, code review, performance optimization, security audit, process automation suggestions, and market research. Please provide more specifics about what you'd like analyzed.`};
+    return `I can help with business analysis, code review, performance optimization, security audit, process automation suggestions, and market research. Please provide more specifics about what you'd like analyzed.`},
   const determineResponseType = (
     input: string): 'text' | 'code' | 'analysis' | 'recommendation' => {
     const lowerInput = input.toLowerCase(),
@@ -118,23 +118,23 @@ const AdvancedAIAssistant: React.FC = () => {
       return 'analysis',
     if (lowerInput.includes('recommend') || lowerInput.includes('suggest')),
       return 'recommendation',
-    return 'text'};
+    return 'text'},
   const handleCapabilityClick = (capability: AICapability) => {
     setActiveCapability(capability.id),
     const capabilityMessage: Message = {
-      id: Date.now().toString();
-      text: `I'd like help with ${capability.name.toLowerCase()}. ${capability.description}`;
-      sender: 'user';
-      timestamp: new Date();
-      type: 'text';
-    };
+      id: Date.now().toString(),
+      text: `I'd like help with ${capability.name.toLowerCase()}. ${capability.description}`,
+      sender: 'user',
+      timestamp: new Date(),
+      type: 'text'
+    },
     setMessages(prev => [...prev, capabilityMessage]),
-    setInputText(`Help me with ${capability.name.toLowerCase()}`)};
+    setInputText(`Help me with ${capability.name.toLowerCase()}`)},
   const formatTimestamp = (timestamp: Date) => {
     return timestamp.toLocaleTimeString([], {
-      hour: '2-digit';
-      minute: '2-digit';
-    })};
+      hour: '2-digit',
+      minute: '2-digit'
+    })},
   return (
     <div className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
       <div className='text-center mb-12'>,
@@ -300,5 +300,5 @@ const AdvancedAIAssistant: React.FC = () => {
           </button>,
         </div>,
       </div>,
-    </div>)};
-export default AdvancedAIAssistant;
+    </div>)},
+export default AdvancedAIAssistant,

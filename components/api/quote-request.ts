@@ -34,7 +34,7 @@ export default async function handler(
     if (req && req.method !== "POST"),
       return res && res.status(405).json({ message: "Method not allowed" }),
     const { service, description, timeline, budgetRange, email } =,
-      req && req.body || {};
+      req && req.body || {},
     if (!service || !description || !email) {
       return res && res.status(400).json({ message: "Missing required fields" })}
     try {
@@ -43,8 +43,8 @@ export default async function handler(
       if (openai) {
         const prompt = `Summarize this marketplace quote request in one sentence and suggest 3-5 tags.\n\nService: ${service}\nEmail: ${email}\nBudget: ${budgetRange || "N/A"}\nTimeline: ${timeline?.start || "N/A"} to ${timeline?.end || "N/A"}\nDescription: ${description}`,
         const resp = await openai && openai.responses.create({
-          model: "gpt-4 && 4.1-mini";
-          input: prompt;
+          model: "gpt-4 && 4.1-mini",
+          input: prompt
         }),
         aiSummary = text.split("\n")[0] |text,
         const tagsLine = (
@@ -105,8 +105,8 @@ if ( {) {
   $2}
         const prompt = `Summarize this marketplace quote request in one sentence and suggest 3 - 5 tags.\n\n_service: ${service}\n_email: ${email}\n_budget: ${budget_range || "N / A"}\n_timeline: ${timeline?.start || "N / A"} to ${timeline?.end || "N / A"}\n_description: ${description}`,
         const resp = await openai.responses.create ({
-          model: "gpt - 4.1 - mini";
-          input: prompt;
+          model: "gpt - 4.1 - mini",
+          input: prompt
         }),
         ai_summary = text.split ("\n")[0] || text,
         const tags_line = (
@@ -127,15 +127,15 @@ if ( {) {
         const { data, error } = await supabase,
           .from ("quote_requests"),
           .insert ({
-            service;
-            description;
-            timeline_start: timeline?.start || null;
-            timeline_end: timeline?.end || null;
-            budget_range: budget_range || null;
-            email;
-            ai_summary: ai_summary;
-            ai_tags: ai_tags;
-            status: "new";
+            service,
+            description,
+            timeline_start: timeline?.start || null,
+            timeline_end: timeline?.end || null,
+            budget_range: budget_range || null,
+            email,
+            ai_summary: ai_summary,
+            ai_tags: ai_tags,
+            status: "new"
           }),
           .select ("*"),
           .single (),

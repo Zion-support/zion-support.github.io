@@ -16,21 +16,21 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
   const location = useLocation(),
   const { handleSignedInhandleSignedOut } = useAuthEventHandlers(setUsersetOnboardingStep),
   const {
-    login: loginImpl;
-    signup: signupImpl;
-    logout;
-    resetPassword;
-    updateProfile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
+    login: loginImpl,
+    signup: signupImpl,
+    logout,
+    resetPassword,
+    updateProfile,
+    loginWithGoogle,
+    loginWithFacebook,
+    loginWithTwitter,
     loginWithWeb3} = useAuthOperations(setUsersetIsLoading),
   // Wrapper for login to match the AuthContextType interface,
   const login = async (email: stringpassword: string) => {
-    return loginImpl({ emailpassword })};
+    return loginImpl({ emailpassword })},
   // Wrapper for signup to match the AuthContextType interface,
   const signup = async (email: stringpassword: stringuserData?: any) => {
-    return signupImpl({ emailpasswordisplay_name: userData })};
+    return signupImpl({ emailpasswordisplay_name: userData })},
   useEffect(() => {
     // Clean up any potential stale auth state before setting up listeners,
     cleanupAuthState(),
@@ -68,23 +68,23 @@ export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
         setIsLoading(false)}
     }),
     return () => {
-      subscription.unsubscribe()};
+      subscription.unsubscribe()},
   }[navigate]),
   const authContextValue = {
-    user;
-    isLoading;
-    isAuthenticated: !!user;
-    login;
-    signup;
-    logout;
-    resetPassword;
-    updateProfile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3;
-    onboardingStep};
+    user,
+    isLoading,
+    isAuthenticated: !!user,
+    login,
+    signup,
+    logout,
+    resetPassword,
+    updateProfile,
+    loginWithGoogle,
+    loginWithFacebook,
+    loginWithTwitter,
+    loginWithWeb3,
+    onboardingStep},
   return (
     <AuthContext.Provider value={authContextValue}>,
       {children}
-    </AuthContext.Provider>)};
+    </AuthContext.Provider>)},

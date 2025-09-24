@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'chatbot-development - Zion Tech Group';
+  title: 'chatbot-development - Zion Tech Group',
   description:,
-    'Professional chatbot-development solutions for your business needs.';
-  keywords: 'chatbot-development, services, business, technology';
-};
+    'Professional chatbot-development solutions for your business needs.',
+  keywords: 'chatbot-development, services, business, technology',
+},
 export default function ChatbotDevelopmentPage() {
   return (
     <div className='min-h-screen bg-white'>,

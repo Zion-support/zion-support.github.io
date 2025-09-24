@@ -14,4 +14,4 @@ const Textarea = forwardRef(
       </div>)}
 ),
 Textarea.displayName = 'Textarea',
-export default Textarea;
+export default Textarea,

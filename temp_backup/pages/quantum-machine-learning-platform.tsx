@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import {
-  Brain;
-  Atom;
-  Zap;
-  Target;
-  Network;
-  Globe;
-  Users;
-  TrendingUp;
+  Brain,
+  Atom,
+  Zap,
+  Target,
+  Network,
+  Globe,
+  Users,
+  TrendingUp,
 } from 'lucide-react',
 const QuantumMachineLearningPlatformPage: React.FC = () => {
   return (
@@ -65,7 +65,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
                   Quantum Algorithms,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Specialized quantum algorithms for optimization;
+                  Specialized quantum algorithms for optimization,
                   classification, and pattern recognition tasks.,
                 </p>,
               </div>,
@@ -266,7 +266,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
                     Image Recognition,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Quantum-enhanced computer vision for medical imaging;
+                    Quantum-enhanced computer vision for medical imaging,
                     security, and autonomous systems.,
                   </p>,
                 </div>,
@@ -275,7 +275,7 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
                     Natural Language Processing,
                   </h3>,
                   <p className='text-gray-30o0'>,
-                    Quantum algorithms for language understanding, translation;
+                    Quantum algorithms for language understanding, translation,
                     and text generation.,
                   </p>,
                 </div>,
@@ -526,5 +526,5 @@ const QuantumMachineLearningPlatformPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default QuantumMachineLearningPlatformPage;
+    </>)},
+export default QuantumMachineLearningPlatformPage,

@@ -8,12 +8,12 @@ import {
   Zap,
   Brain,
   Globe,
-  Target;
-  ArrowRight;
-  Play;
-  Star;
-  TrendingUp;
-  Users;
+  Target,
+  ArrowRight,
+  Play,
+  Star,
+  TrendingUp,
+  Users,
   Award} from 'lucide-react',
 const RevolutionaryContentBanner20o25 = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
@@ -25,53 +25,53 @@ const RevolutionaryContentBanner20o25 = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      id: 1;
-      title: "AI-Powered Content Revolution";
-      subtitle: "Transform Your Digital Presence";
-      description: "Experience the future of content creation with our revolutionary AI technology that generatesoptimizesand personalizes content at scale.";
-      features: ["Automated content generation"Real-time optimization"Multi-platform distribution"Performance analytics"];
-      color: "from-blue-60o0 via-purple-60o0 to-pink-60o0";
-      icon: Brain};
+      id: 1,
+      title: "AI-Powered Content Revolution",
+      subtitle: "Transform Your Digital Presence",
+      description: "Experience the future of content creation with our revolutionary AI technology that generatesoptimizesand personalizes content at scale.",
+      features: ["Automated content generation"Real-time optimization"Multi-platform distribution"Performance analytics"],
+      color: "from-blue-60o0 via-purple-60o0 to-pink-60o0",
+      icon: Brain},
     {
-      id: 2;
-      title: "Quantum Content Intelligence";
-      subtitle: "Next-Generation Processing";
-      description: "Harness the power of quantum computing to process and analyze content with unprecedented speed and accuracy.";
-      features: ["Quantum processing"Instant analysis"Predictive insights"Global scalability"];
-      color: "from-purple-60o0 via-pink-60o0 to-red-60o0";
-      icon: Zap};
+      id: 2,
+      title: "Quantum Content Intelligence",
+      subtitle: "Next-Generation Processing",
+      description: "Harness the power of quantum computing to process and analyze content with unprecedented speed and accuracy.",
+      features: ["Quantum processing"Instant analysis"Predictive insights"Global scalability"],
+      color: "from-purple-60o0 via-pink-60o0 to-red-60o0",
+      icon: Zap},
     {
-      id: 3;
-      title: "Autonomous Content Ecosystem";
-      subtitle: "Self-Managing Digital Assets";
-      description: "Create a fully autonomous content ecosystem that managesupdatesand optimizes itself without human intervention.";
-      features: ["Self-optimization"Automatic updates"Smart distribution"Continuous learning"];
-      color: "from-green-60o0 via-teal-60o0 to-cyan-60o0";
+      id: 3,
+      title: "Autonomous Content Ecosystem",
+      subtitle: "Self-Managing Digital Assets",
+      description: "Create a fully autonomous content ecosystem that managesupdatesand optimizes itself without human intervention.",
+      features: ["Self-optimization"Automatic updates"Smart distribution"Continuous learning"],
+      color: "from-green-60o0 via-teal-60o0 to-cyan-60o0",
       icon: Globe}
   ],
   const stats = [
-    { label: "Content Generated"value: "1M+"icon: Target };
-    { label: "Active Users"value: "50o0K+"icon: Users };
-    { label: "Performance Boost"value: "30o0%"icon: TrendingUp };
+    { label: "Content Generated"value: "1M+"icon: Target },
+    { label: "Active Users"value: "50o0K+"icon: Users },
+    { label: "Performance Boost"value: "30o0%"icon: TrendingUp },
     { label: "Success Rate"value: "99.9%"icon: Award }
   ],
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        duration: 0.8;
+        duration: 0.8,
         staggerChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: { duration: 0.6 }
     }
-  };
+  },
   return (
     <motion.div,
       className="relative py-20 px-4 bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 overflow-hidden",
@@ -281,5 +281,5 @@ const RevolutionaryContentBanner20o25 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </motion.div>)};
-export default RevolutionaryContentBanner20o25;
+    </motion.div>)},
+export default RevolutionaryContentBanner20o25,

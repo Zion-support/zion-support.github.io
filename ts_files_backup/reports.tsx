@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
@@ -8,96 +8,96 @@ import {
   User,
   Tag,
   ArrowRight,
-  TrendingUp;
-  BarChart3;
-  Brain;
-  Atom;
-  Globe;
-  Shield;
-  Zap;
-  Eye;
-  Clock;
+  TrendingUp,
+  BarChart3,
+  Brain,
+  Atom,
+  Globe,
+  Shield,
+  Zap,
+  Eye,
+  Clock,
   Award} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 const ReportsPage: React.FC = () => {
   const reports = [
     {
-      title: 'The Future of Quantum Computing in Enterprise: 2024-2030';
-      excerpt: 'Comprehensive analysis of quantum computing adoption trendsmarket opportunitiesand strategic implications for businesses across industries.';
-      date: '2024-01-15';
-      author: 'Dr. Sarah Chen & Quantum Research Team';
-      category: 'Technology Trends';
-      tags: ['Quantum 'Computing', 'Enterprise'Market 'Analysis', 'Future Tech'];
-      pages: 45;
-      downloads: 1247;
-      views: 5678;
-      featured: true;
-      icon: <Atom className="w-8 h-8" />;
-      color: 'from-purple-500 to-pink-500'};
+      title: 'The Future of Quantum Computing in Enterprise: 2024-2030',
+      excerpt: 'Comprehensive analysis of quantum computing adoption trendsmarket opportunitiesand strategic implications for businesses across industries.',
+      date: '2024-01-15',
+      author: 'Dr. Sarah Chen & Quantum Research Team',
+      category: 'Technology Trends',
+      tags: ['Quantum 'ComputingEnterprise'Market 'AnalysisFuture Tech'],
+      pages: 45,
+      downloads: 1247,
+      views: 5678,
+      featured: true,
+      icon: <Atom className="w-8 h-8" />,
+      color: 'from-purple-500 to-pink-500'},
     {
-      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices';
-      excerpt: 'In-depth study of artificial intelligence implementation success storiesreturn on investment metricsand strategic recommendations.';
-      date: '2024-01-10';
-      author: 'AI Research Division';
-      category: 'Business Intelligence';
-      tags: ['AI', 'ROI', 'Fortune 500', 'Best Practices'];
-      pages: 38;
-      downloads: 892;
-      views: 3456;
-      featured: false;
-      icon: <Brain className="w-8 h-8" />;
-      color: 'from-blue-500 to-cyan-500'};
+      title: 'AI Adoption in Fortune 500 Companies: ROI Analysis & Best Practices',
+      excerpt: 'In-depth study of artificial intelligence implementation success storiesreturn on investment metricsand strategic recommendations.',
+      date: '2024-01-10',
+      author: 'AI Research Division',
+      category: 'Business Intelligence',
+      tags: ['AIROI', 'Fortune 500Best Practices'],
+      pages: 38,
+      downloads: 892,
+      views: 3456,
+      featured: false,
+      icon: <Brain className="w-8 h-8" />,
+      color: 'from-blue-500 to-cyan-500'},
     {
-      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape';
-      excerpt: 'Analysis of emerging cybersecurity challengesAI-powered threatsand defense strategies for modern organizations.';
-      date: '2024-01-08';
-      author: 'Cybersecurity Research Team';
-      category: 'Security';
-      tags: [', 'Cybersecurity', 'AI 'Threats', 'Threat 'Landscape', 'Defense'];
-      pages: 52;
-      downloads: 1567;
-      views: 6789;
-      featured: false;
-      icon: <Shield className="w-8 h-8" />;
-      color: 'from-red-500 to-orange-500'};
+      title: 'Cybersecurity Threats in the Age of AI: 2024 Threat Landscape',
+      excerpt: 'Analysis of emerging cybersecurity challengesAI-powered threatsand defense strategies for modern organizations.',
+      date: '2024-01-08',
+      author: 'Cybersecurity Research Team',
+      category: 'Security',
+      tags: [Cybersecurity', 'AI 'ThreatsThreat 'Landscape', 'Defense'],
+      pages: 52,
+      downloads: 1567,
+      views: 6789,
+      featured: false,
+      icon: <Shield className="w-8 h-8" />,
+      color: 'from-red-500 to-orange-500'},
     {
-      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding';
-      excerpt: 'Comprehensive overview of technology investment patternsemerging sectorsand funding opportunities worldwide.';
-      date: '2024-01-05';
-      author: 'Market Research Team';
-      category: 'Market Analysis';
-      tags: ['Venture 'Capital', 'Investment', 'Innovation', 'Global Markets'];
-      pages: 41;
-      downloads: 734;
-      views: 2890;
-      featured: false;
-      icon: <TrendingUp className="w-8 h-8" />;
-      color: 'from-green-500 to-emerald-500'};
+      title: 'Global Tech Investment Trends: Venture Capital & Innovation Funding',
+      excerpt: 'Comprehensive overview of technology investment patternsemerging sectorsand funding opportunities worldwide.',
+      date: '2024-01-05',
+      author: 'Market Research Team',
+      category: 'Market Analysis',
+      tags: ['Venture 'CapitalInvestment', 'InnovationGlobal Markets'],
+      pages: 41,
+      downloads: 734,
+      views: 2890,
+      featured: false,
+      icon: <TrendingUp className="w-8 h-8" />,
+      color: 'from-green-500 to-emerald-500'},
     {
-      title: 'Edge Computing & IoT: Transforming Industries in Real-Time';
-      excerpt: 'Research on edge computing adoptionInternet of Things integrationand industry transformation opportunities.';
-      date: '2024-01-03';
-      author: 'IoT Research Division';
-      category: 'Emerging Tech';
-      tags: ['Edge 'Computing', 'IoT'Industry 4.0'Real-time'];
-      pages: 36;
-      downloads: 623;
-      views: 2345;
-      featured: false;
-      icon: <Zap className="w-8 h-8" />;
-      color: 'from-yellow-500 to-orange-500'};
+      title: 'Edge Computing & IoT: Transforming Industries in Real-Time',
+      excerpt: 'Research on edge computing adoptionInternet of Things integrationand industry transformation opportunities.',
+      date: '2024-01-03',
+      author: 'IoT Research Division',
+      category: 'Emerging Tech',
+      tags: ['Edge 'ComputingIoT'Industry 4.0'Real-time'],
+      pages: 36,
+      downloads: 623,
+      views: 2345,
+      featured: false,
+      icon: <Zap className="w-8 h-8" />,
+      color: 'from-yellow-500 to-orange-500'},
     {
-      title: 'Sustainable Technology: Green Computing & Environmental Impact';
-      excerpt: 'Analysis of sustainable technology practicesenvironmental impact assessmentand green computing solutions.';
-      date: '2024-01-01';
-      author: 'Sustainability Research Team';
-      category: 'Sustainability';
-      tags: ['Green 'Computing', 'Sustainability'Environmental 'Impact', 'Clean Tech'];
-      pages: 43;
-      downloads: 445;
-      views: 1789;
-      featured: false;
-      icon: <Globe className="w-8 h-8" />;
+      title: 'Sustainable Technology: Green Computing & Environmental Impact',
+      excerpt: 'Analysis of sustainable technology practicesenvironmental impact assessmentand green computing solutions.',
+      date: '2024-01-01',
+      author: 'Sustainability Research Team',
+      category: 'Sustainability',
+      tags: ['Green 'ComputingSustainability'Environmental 'ImpactClean Tech'],
+      pages: 43,
+      downloads: 445,
+      views: 1789,
+      featured: false,
+      icon: <Globe className="w-8 h-8" />,
       color: 'from-teal-500 to-green-500'}
   ],
   return (
@@ -105,7 +105,7 @@ const ReportsPage: React.FC = () => {
       <div className="min-h-screen">,
         <Head>,
           <title>Research Reports - Zion Tech Group | Industry Analysis & Technology Insights</title>,
-          <meta name="description" content="Access Zion Tech 'Group', 's comprehensive research reportswhitepapersand industry analysis covering AIquantum computingcybersecurityand emerging technologies." />,
+          <meta name="description" content="Access Zion Tech 'Groups comprehensive research reportswhitepapersand industry analysis covering AIquantum computingcybersecurityand emerging technologies." />,
         </Head>,
         <QuickNavigation />,
         <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
@@ -341,6 +341,6 @@ const ReportsPage: React.FC = () => {
           </div>,
         </section>,
       </div>,
-    </UltraAdvancedFuturisticBackground>)};
-export default ReportsPage;
+    </UltraAdvancedFuturisticBackground>)},
+export default ReportsPage,
 }))

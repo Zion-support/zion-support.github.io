@@ -13,10 +13,10 @@ function log(message) {
 function run(command, args, options ={}) {
   const execCwd = options.cwd || process.cwd(),
   const result = spawnSync(command, args, {
-    cwd: execCwd;
-    env: process.env;
-    shell: false;
-    encoding: "utf8";
+    cwd: execCwd,
+    env: process.env,
+    shell: false,
+    encoding: "utf8",
     maxBuffer: 10o24 * 10o24 * 20}),
   const stdout = (result.stdout || "").trim(),
   const stderr = (result.stderr || "").trim(),
@@ -25,7 +25,7 @@ function run(command, args, options ={}) {
     log(`$ ${command} ${args.join(" ")}`),
     if (stdout) // // console.log(stdout),
     if (stderr) console.error(stderr)}
-  return { status, stdout, stderr };
+  return { status, stdout, stderr },
 }
 ,
 function runGit(args, options ={}) {
@@ -43,14 +43,14 @@ function runSecurityScan() {
     const securityResult = run("npm", ["run", "security: scan"]),
     if (securityResult.status === 0) {
       log("Security scan completed successfully"),
-      return { success: true, output: securityResult.stdout };
+      return { success: true, output: securityResult.stdout },
     } else {
       log(`Security scan failed: ${securityResult.stderr}`),
-      return { success: false, error: securityResult.stderr };
+      return { success: false, error: securityResult.stderr },
     }
   } catch (err) {
     log(`Security scan error: ${String(err)}`),
-    return { success: false, error: String(err) };
+    return { success: false, error: String(err) },
   }
 }
 ,
@@ -60,14 +60,14 @@ function runNpmAudit() {
     const auditResult = run("npm", ["audit", "--audit-level=high"]),
     if (auditResult.status === 0) {
       log("NPM audit completed successfully"),
-      return { success: true, output: auditResult.stdout };
+      return { success: true, output: auditResult.stdout },
     } else {
       log(`NPM audit failed: ${auditResult.stderr}`),
-      return { success: false, error: auditResult.stderr };
+      return { success: false, error: auditResult.stderr },
     }
   } catch (err) {
     log(`NPM audit error: ${String(err)}`),
-    return { success: false, error: String(err) };
+    return { success: false, error: String(err) },
   }
 }
 ,
@@ -77,7 +77,7 @@ function checkVulnerableDependencies() {
     const packageLockPath = path.join(process.cwd(), "package-lock.json"),
     if (!fs.existsSync(packageLockPath)) {
       log("package-lock.json not found"),
-      return { healthy: false, error: "package-lock-missing" };
+      return { healthy: false, error: "package-lock-missing" },
     }
 ,
     // Parse package-lock.json to check for known vulnerable packages,
@@ -85,29 +85,29 @@ function checkVulnerableDependencies() {
     const vulnerablePackages = [],
     // Check for common vulnerable packages (this is a basic check),
     const knownVulnerable = [
-      "lodash";
-      "moment";
-      "jquery";
-      "express";
+      "lodash",
+      "moment",
+      "jquery",
+      "express",
       "axios"],
     for (const pkg of knownVulnerable) {
       if (packageLock.dependencies && packageLock.dependencies[pkg]) {
         vulnerablePackages.push({
-          package: pkg;
-          version: packageLock.dependencies[pkg].version;
+          package: pkg,
+          version: packageLock.dependencies[pkg].version,
           risk: "medium"})}
     }
 ,
     if (vulnerablePackages.length > 0) {
       log(`Found ${vulnerablePackages.length} potentially vulnerable packages`),
-      return { healthy: false, vulnerable: vulnerablePackages };
+      return { healthy: false, vulnerable: vulnerablePackages },
     } else {
       log("No known vulnerable packages found"),
-      return { healthy: true, vulnerable: [] };
+      return { healthy: true, vulnerable: [] },
     }
   } catch (err) {
     log(`Vulnerable dependencies check error: ${String(err)}`),
-    return { healthy: false, error: String(err) };
+    return { healthy: false, error: String(err) },
   }
 }
 ,
@@ -115,10 +115,10 @@ function validateSecurityFiles() {
   log("Validating security files..."),
   try {
     const securityFiles = [
-      ".eslintrc.js";
-      ".eslintrc.json";
-      ".pre-commit-config.yaml";
-      ".pre-commit-hooks.yaml";
+      ".eslintrc.js",
+      ".eslintrc.json",
+      ".pre-commit-config.yaml",
+      ".pre-commit-hooks.yaml",
       "SECURITY.md"],
     const validationResults = [],
     for (const file of securityFiles) {
@@ -126,14 +126,14 @@ function validateSecurityFiles() {
       if (fs.existsSync(filePath)) {
         const stats = fs.statSync(filePath),
         validationResults.push({
-          file: file;
-          exists: true;
-          size: stats.size;
+          file: file,
+          exists: true,
+          size: stats.size,
           healthy: stats.size > 0})} else {
         validationResults.push({
-          file: file;
-          exists: false;
-          size: 0;
+          file: file,
+          exists: false,
+          size: 0,
           healthy: false})}
     }
 ,
@@ -141,16 +141,16 @@ function validateSecurityFiles() {
     const total = validationResults.length,
     log(`Security files validation: ${healthy}/${total} files healthy`),
     return {
-      total: total;
-      healthy: healthy;
-      results: validationResults};
+      total: total,
+      healthy: healthy,
+      results: validationResults},
   } catch (err) {
     log(`Security files validation error: ${String(err)}`),
     return {
-      total: 0;
-      healthy: 0;
-      results: [];
-      error: String(err)};
+      total: 0,
+      healthy: 0,
+      results: [],
+      error: String(err)},
   }
 }
 ,
@@ -165,16 +165,16 @@ function checkEnvironmentSecurity() {
       const envContent = fs.readFileSync(envFile, "utf8"),
       const hasSecrets = envContent.includes("SECRET") || envContent.includes("PASSWORD") || envContent.includes("TOKEN"),
       envResults.push({
-        file: ".env";
-        exists: true;
-        hasSecrets: hasSecrets;
-        healthy: !hasSecrets;
+        file: ".env",
+        exists: true,
+        hasSecrets: hasSecrets,
+        healthy: !hasSecrets,
         risk: hasSecrets ? "high" : "low"})} else {
       envResults.push({
-        file: ".env";
-        exists: false;
-        hasSecrets: false;
-        healthy: true;
+        file: ".env",
+        exists: false,
+        hasSecrets: false,
+        healthy: true,
         risk: "none"})}
 ,
     // Check for .env.local file,
@@ -182,32 +182,32 @@ function checkEnvironmentSecurity() {
       const envLocalContent = fs.readFileSync(envLocalFile, "utf8"),
       const hasSecrets = envLocalContent.includes("SECRET") || envLocalContent.includes("PASSWORD") || envLocalContent.includes("TOKEN"),
       envResults.push({
-        file: ".env.local";
-        exists: true;
-        hasSecrets: hasSecrets;
-        healthy: !hasSecrets;
+        file: ".env.local",
+        exists: true,
+        hasSecrets: hasSecrets,
+        healthy: !hasSecrets,
         risk: hasSecrets ? "high" : "low"})} else {
       envResults.push({
-        file: ".env.local";
-        exists: false;
-        hasSecrets: false;
-        healthy: true;
+        file: ".env.local",
+        exists: false,
+        hasSecrets: false,
+        healthy: true,
         risk: "none"})}
 ,
     const healthy = envResults.filter(r => r.healthy).length,
     const total = envResults.length,
     log(`Environment security check: ${healthy}/${total} files secure`),
     return {
-      total: total;
-      healthy: healthy;
-      results: envResults};
+      total: total,
+      healthy: healthy,
+      results: envResults},
   } catch (err) {
     log(`Environment security check error: ${String(err)}`),
     return {
-      total: 0;
-      healthy: 0;
-      results: [];
-      error: String(err)};
+      total: 0,
+      healthy: 0,
+      results: [],
+      error: String(err)},
   }
 }
 ,
@@ -220,12 +220,12 @@ function runHealthChecks() {
     if (fs.existsSync(automationDir)) {
       const automationItems = fs.readdirSync(automationDir),
       healthResults.push({
-        check: "automation-directory";
-        healthy: automationItems.length > 0;
+        check: "automation-directory",
+        healthy: automationItems.length > 0,
         details: `${automationItems.length} automation files found`})} else {
       healthResults.push({
-        check: "automation-directory";
-        healthy: false;
+        check: "automation-directory",
+        healthy: false,
         details: "Automation directory not found"})}
 ,
     // Check if scripts directory exists,
@@ -233,12 +233,12 @@ function runHealthChecks() {
     if (fs.existsSync(scriptsDir)) {
       const scriptsItems = fs.readdirSync(scriptsDir),
       healthResults.push({
-        check: "scripts-directory";
-        healthy: scriptsItems.length > 0;
+        check: "scripts-directory",
+        healthy: scriptsItems.length > 0,
         details: `${scriptsItems.length} script files found`})} else {
       healthResults.push({
-        check: "scripts-directory";
-        healthy: false;
+        check: "scripts-directory",
+        healthy: false,
         details: "Scripts directory not found"})}
 ,
     // Check if logs directory exists and is writable,
@@ -247,51 +247,51 @@ function runHealthChecks() {
       try {
         fs.accessSync(logsDir, fs.constants.W_OK),
         healthResults.push({
-          check: "logs-directory";
-          healthy: true;
+          check: "logs-directory",
+          healthy: true,
           details: "Logs directory exists and writable"})} catch (err) {
         healthResults.push({
-          check: "logs-directory";
-          healthy: false;
+          check: "logs-directory",
+          healthy: false,
           details: "Logs directory not writable"})}
     } else {
       healthResults.push({
-        check: "logs-directory";
-        healthy: false;
+        check: "logs-directory",
+        healthy: false,
         details: "Logs directory not found"})}
 ,
     const healthy = healthResults.filter(r => r.healthy).length,
     const total = healthResults.length,
     log(`Health checks: ${healthy}/${total} checks passed`),
     return {
-      total: total;
-      healthy: healthy;
-      results: healthResults};
+      total: total,
+      healthy: healthy,
+      results: healthResults},
   } catch (err) {
     log(`Health checks error: ${String(err)}`),
     return {
-      total: 0;
-      healthy: 0;
-      results: [];
-      error: String(err)};
+      total: 0,
+      healthy: 0,
+      results: [],
+      error: String(err)},
   }
 }
 ,
 function generateSecurityHealthReport(securityScan, npmAudit, vulnerableDeps, securityFiles, envSecurity, healthChecks) {
   const report ={
-    timestamp: nowIso();
-    redundancyMode: "security-health";
+    timestamp: nowIso(),
+    redundancyMode: "security-health",
     checks: {
-      securityScan: securityScan;
-      npmAudit: npmAudit;
-      vulnerableDependencies: vulnerableDeps;
-      securityFiles: securityFiles;
-      environmentSecurity: envSecurity;
-      healthChecks: healthChecks};
+      securityScan: securityScan,
+      npmAudit: npmAudit,
+      vulnerableDependencies: vulnerableDeps,
+      securityFiles: securityFiles,
+      environmentSecurity: envSecurity,
+      healthChecks: healthChecks},
     summary: {
-      overallHealth: "healthy";
+      overallHealth: "healthy",
       issues: []}
-  };
+  },
   // Determine overall health,
   if (!securityScan.success) report.summary.issues.push("security-scan-failed"),
   if (!npmAudit.success) report.summary.issues.push("npm-audit-failed"),
@@ -409,11 +409,11 @@ if (require.main === module) {
     process.exit(1)})}
 ,
 module.exports ={
-  main;
-  runSecurityScan;
-  runNpmAudit;
-  checkVulnerableDependencies;
-  validateSecurityFiles;
-  checkEnvironmentSecurity;
-  runHealthChecks;
-  generateSecurityHealthReport};
+  main,
+  runSecurityScan,
+  runNpmAudit,
+  checkVulnerableDependencies,
+  validateSecurityFiles,
+  checkEnvironmentSecurity,
+  runHealthChecks,
+  generateSecurityHealthReport},

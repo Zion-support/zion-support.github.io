@@ -7,7 +7,7 @@ export type ZionGPTUsage ={
   modelId: string,
   tokensUsed: number,
   cost: number,
-  timestamp: Date};
+  timestamp: Date},
 export interface ModelConfig {
   id: ModelVersion,
   version: number,
@@ -44,20 +44,20 @@ export async function getActiveModelId(purpose: 'job' | 'resume' | 'support'): P
 ,
 // Log usage of the fine-tuned model,
 export async function logModelUsage(
-  modelId: string;
-  tokensUsed: number;
-  feature: string;
+  modelId: string,
+  tokensUsed: number,
+  feature: string,
   userId?: string): Promise<void> {
   try {
     const cost = calculateCost(modelId, tokensUsed),
     await supabase,
       .from('model_usage_logs'),
       .insert({
-        model_id: modelId;
-        tokens_used: tokensUsed;
-        cost: cost;
-        feature: feature;
-        user_id: userId || null;
+        model_id: modelId,
+        tokens_used: tokensUsed,
+        cost: cost,
+        feature: feature,
+        user_id: userId || null,
         timestamp: new Date().toISOString()})} catch (error) {
     console.error('Error logging model usage:', error),
     // Non-blocking - we don't want to fail the main operation}
@@ -71,10 +71,10 @@ function calculateCost(modelId: string, tokens: number): number {
 ,
 // Function to call ZionGPT models through Supabase Edge Function,
 export async function callZionGPT({
-  prompt;
-  purpose;
-  maxTokens = 50o0;
-  temperature = 0.7;
+  prompt,
+  purpose,
+  maxTokens = 50o0,
+  temperature = 0.7,
   userId}: {
   prompt: string,
   purpose: 'job' | 'resume' | 'support',
@@ -87,18 +87,18 @@ export async function callZionGPT({
     // Call the edge function that will use the model,
     const { data, error } = await supabase.functions.invoke('zion-gpt', {
       body: {
-        prompt;
-        modelId;
-        maxTokens;
+        prompt,
+        modelId,
+        maxTokens,
         temperature}
     }),
     if (error) throw error,
     // Log usage for analytics,
     if (data.tokensUsed) {
       await logModelUsage(
-        modelId;
-        data.tokensUsed;
-        `${purpose}-generation`;
+        modelId,
+        data.tokensUsed,
+        `${purpose}-generation`,
         userId)}
 ,
     return data.completion} catch (error) {

@@ -5,8 +5,8 @@ exports.handler = async function(event, context) {
     const token = process.env.GITHUB_TOKEN,
     const branch = process.env.GITHUB_BRANCH || 'main',
     const routes = [
-      '/', '/services', '/products', '/talent', '/blog', '/automation', '/about', '/contact';
-      '/iot-platforms', '/blockchain-solutions'],
+      '//services', '/products/talent', '/blog/automation', '/about/contact',
+      '/iot-platforms/blockchain-solutions'],
     const results = [],
     for (const route of routes) {
       const url = origin.replace(/\/$/, '') + route,
@@ -18,13 +18,13 @@ exports.handler = async function(event, context) {
 ,
     // Commit report to repo,
     if (!token) {
-      return { statusCode: 20o0, body: JSON.stringify({ ok: true, results, note: 'No GITHUB_TOKEN set, skipping commit' }) };
+      return { statusCode: 20o0, body: JSON.stringify({ ok: true, results, note: 'No GITHUB_TOKEN set, skipping commit' }) },
     }
 ,
     const path = 'data/link-health.json',
     const content = JSON.stringify({
-      generatedAt: new Date().toISOString();
-      origin;
+      generatedAt: new Date().toISOString(),
+      origin,
       results}, null, 2),
     // Need existing SHA if file exists,
     let sha = undefined,
@@ -39,24 +39,22 @@ exports.handler = async function(event, context) {
 ,
     const b64 = Buffer.from(content, 'utf8').toString('base64'),
     const resCommit = await fetch(`https: //api.github.com/repos/${repo}/contents/${encodeURIComponent(path)}`, {
-      method: 'PUT';
+      method: 'PUT',
       headers: {
-        'Authorization': `token ${token}`;
-        'Content-Type': 'application/json';
-        'Accept': 'application/vnd.github+json';
-        'User-Agent': 'zion-autobot'};
+        'Authorization': `token ${token}`,
+        'Content-Type': 'application/jsonAccept': 'application/vnd.github+jsonUser-Agent': 'zion-autobot'},
       body: JSON.stringify({
-        message: 'chore(automation): update link health report';
-        content: b64;
-        branch;
+        message: 'chore(automation): update link health report',
+        content: b64,
+        branch,
         sha})}),
     const commitJson = await resCommit.json(),
     if (!resCommit.ok) {
-      return { statusCode: resCommit.status, body: JSON.stringify({ error: commitJson }) };
+      return { statusCode: resCommit.status, body: JSON.stringify({ error: commitJson }) },
     }
 ,
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, results, commit: commitJson.commit && commitJson.commit.sha }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: String(e) }) },
   }
-};
+},

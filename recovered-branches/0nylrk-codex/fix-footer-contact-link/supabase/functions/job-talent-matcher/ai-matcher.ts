@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { JobData, TalentProfile, MatchResult } from "./types.ts",
 // Get openAI API key from environment variables,
@@ -12,20 +12,20 @@ export async function normalizeSkillsWithAI(skills: string[]): Promise<string[]>
   try {
     const skillsString = skills.join(", "),
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
-        "Content-Type": "application/json";
-        "Authorization": `Bearer ${openAiApiKey}`};
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${openAiApiKey}`},
       body: JSON.stringify({
-        model: "gpt-4o-mini";
+        model: "gpt-4o-mini",
         messages: [
           {
-            role: "system";
-            content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.js', 'nodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."};
+            role: "system",
+            content: "You are a skill normalizer for a tech job platform. Normalize the provided skills to their standard industry naming conventions (e.g., 'react js' to 'React.jsnodejs' to 'Node.js'). Return only a comma-separated list of the normalized skills, nothing else."},
           {
-            role: "user";
+            role: "user",
             content: skillsString}
-        ];
+        ],
         temperature: 0.3})}),
     const data = await response.json(),
     if (!data.choices || !data.choices[0] || !data.choices[0].message) {
@@ -70,15 +70,15 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
       `}).join("\n\n"),
     // Send request to OpenAI for matching,
     const response = await fetch("https://api.openai.com/v1/chat/completions", {
-      method: "POST";
+      method: "POST",
       headers: {
-        "Content-Type": "application/json";
-        "Authorization": `Bearer ${openAiApiKey}`};
+        "Content-Type": "application/json",
+        "Authorization": `Bearer ${openAiApiKey}`},
       body: JSON.stringify({
-        model: "gpt-4o-mini";
+        model: "gpt-4o-mini",
         messages: [
           {
-            role: "system";
+            role: "system",
             content: `You are an AI talent matcher for a job marketplace. Based on the job details and talent profiles provided, identify the top 5 matching talents (or fewer if there aren't 5 good matches). For each match, provide: ,
             1. The talent ID,
             2. A match score from 0-10o0,
@@ -87,16 +87,16 @@ export async function findBestMatches(jobDetails: any, talents: TalentProfile[])
             Return your response in JSON format only, with no additional text: ,
             [
               {
-                "talentId": "talent-id-1";
-                "score": 85;
-                "matchedSkills": ["skill1", "skill2"];
-                "reason": "Brief reason for match"};
-              ...]`};
+                "talentId": "talent-id-1",
+                "score": 85,
+                "matchedSkills": ["skill1", "skill2"],
+                "reason": "Brief reason for match"},
+              ...]`},
           {
-            role: "user";
+            role: "user",
             content: `Job Details:\n${jobDetailsText}\n\nTalent Profiles: \n${talentProfilesText}`}
-        ];
-        temperature: 0.4;
+        ],
+        temperature: 0.4,
         response_format: { type: "json_object" }
       })}),
     const data = await response.json(),
@@ -133,10 +133,10 @@ export function performBasicSkillMatching(jobDetails: any, talents: TalentProfil
     // Calculate a basic match score,
     const matchScore = Math.round((matchedSkills.length / requiredSkills.length) * 10o0),
     return {
-      talentId: talent.id;
-      score: matchScore;
-      matchedSkills: matchedSkills;
-      reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`};
+      talentId: talent.id,
+      score: matchScore,
+      matchedSkills: matchedSkills,
+      reason: `Matched ${matchedSkills.length} out of ${requiredSkills.length} required skills.`},
   }),
   .filter(match => match.score > 30) // Only include matches with at least 30% score,
   .sort((a, b) => b.score - a.score) // Sort by score (highest first),

@@ -29,4 +29,4 @@ export const useResumeProgress = (resume: Resume | null) => {
 ,
     const progressPercentage = (completed / 5) * 100,
     setProgress(progressPercentage)}, [resume]),
-  return progress};
+  return progress},

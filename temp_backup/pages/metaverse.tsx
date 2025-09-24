@@ -1,309 +1,255 @@
 import { motion } from 'framer-motion',
 import {
-  Gamepad2;
-  Eye;
-  Globe;
-  Users;
-  Target;
-  ArrowRight;
-  CheckCircle;
-  Building;
-  Rocket;
-  Shield;
-  Zap;
-  Star;
-  Palette;
-  Music;
-  Film;
-  BookOpen;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Settings;
-  Code;
-  TrendingUp;
-  Award;
+  Gamepad2,
+  Eye,
+  Globe,
+  Users,
+  Target,
+  ArrowRight,
+  CheckCircle,
+  Building,
+  Rocket,
+  Shield,
+  Zap,
+  Star,
+  Palette,
+  Music,
+  Film,
+  BookOpen,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Settings,
+  Code,
+  TrendingUp,
+  Award,
 } from 'lucide-react',
 export default function Metaverse() {
   const metaverseServices = [
     {
-      title: 'Virtual World Creation';
+      title: 'Virtual World Creation',
       description:,
-        'Design and build immersive 3D virtual environments for businesses, education, and entertainment.';
-      icon: <Globe className='w-12 h-12 text-blue-40o0' />;
+        'Design and build immersive 3D virtual environments for businesses, education, and entertainment.',
+      icon: <Globe className='w-12 h-12 text-blue-40o0' />,
       features: [
-        'Custom 3D Environment Design';
-        'Interactive Virtual Spaces';
-        'Real-time Rendering';
-        'Multi-user Environments';
-        'Cross-platform Compatibility';
-        'Performance Optimization';
-      ];
+        'Custom 3D Environment DesignInteractive Virtual Spaces',
+        'Real-time RenderingMulti-user Environments',
+        'Cross-platform CompatibilityPerformance Optimization',
+      ],
       useCases: [
-        'Virtual Offices & Workspaces';
-        'Educational Virtual Campuses';
-        'Virtual Events & Conferences';
-        'Virtual Shopping Experiences';
-      ];
-    };
+        'Virtual Offices & WorkspacesEducational Virtual Campuses',
+        'Virtual Events & ConferencesVirtual Shopping Experiences',
+      ]
+    },
     {
-      title: 'Immersive Experiences';
+      title: 'Immersive Experiences',
       description:,
-        'Create engaging VR/AR experiences that captivate users and drive engagement.';
-      icon: <Eye className='w-12 h-12 text-purple-40o0' />;
+        'Create engaging VR/AR experiences that captivate users and drive engagement.',
+      icon: <Eye className='w-12 h-12 text-purple-40o0' />,
       features: [
-        'VR/AR Development';
-        '360° Video Experiences';
-        'Interactive Storytelling';
-        'Spatial Audio Integration';
-        'Haptic Feedback Systems';
-        'Motion Tracking';
-      ];
+        'VR/AR Development360° Video Experiences',
+        'Interactive StorytellingSpatial Audio Integration',
+        'Haptic Feedback SystemsMotion Tracking',
+      ],
       useCases: [
-        'Virtual Training & Simulation';
-        'Interactive Marketing Campaigns';
-        'Virtual Tourism & Exploration';
-        'Immersive Gaming Experiences';
-      ];
-    };
+        'Virtual Training & SimulationInteractive Marketing Campaigns',
+        'Virtual Tourism & ExplorationImmersive Gaming Experiences',
+      ]
+    },
     {
-      title: 'Digital Twins';
+      title: 'Digital Twins',
       description:,
-        'Build accurate digital replicas of physical assets and environments for monitoring and optimization.';
-      icon: <Building className='w-12 h-12 text-green-40o0' />;
+        'Build accurate digital replicas of physical assets and environments for monitoring and optimization.',
+      icon: <Building className='w-12 h-12 text-green-40o0' />,
       features: [
-        '3D Asset Scanning & Modeling';
-        'Real-time Data Integration';
-        'Predictive Analytics';
-        'IoT Sensor Integration';
-        'Performance Monitoring';
-        'Predictive Maintenance';
-      ];
+        '3D Asset Scanning & ModelingReal-time Data Integration',
+        'Predictive AnalyticsIoT Sensor Integration',
+        'Performance MonitoringPredictive Maintenance',
+      ],
       useCases: [
-        'Smart City Planning';
-        'Industrial Facility Management';
-        'Building Information Modeling';
-        'Infrastructure Monitoring';
-      ];
-    };
+        'Smart City PlanningIndustrial Facility Management',
+        'Building Information ModelingInfrastructure Monitoring',
+      ]
+    },
     {
-      title: 'VR/AR Solutions';
+      title: 'VR/AR Solutions',
       description:,
-        'Develop cutting-edge virtual and augmented reality applications for various industries.';
-      icon: <Gamepad2 className='w-12 h-12 text-orange-40o0' />;
+        'Develop cutting-edge virtual and augmented reality applications for various industries.',
+      icon: <Gamepad2 className='w-12 h-12 text-orange-40o0' />,
       features: [
-        'Mobile AR Applications';
-        'VR Headset Applications';
-        'Mixed Reality Solutions';
-        'Gesture Recognition';
-        'Voice Commands';
-        'Eye Tracking';
-      ];
+        'Mobile AR ApplicationsVR Headset Applications',
+        'Mixed Reality SolutionsGesture Recognition',
+        'Voice CommandsEye Tracking',
+      ],
       useCases: [
-        'Remote Collaboration Tools';
-        'Virtual Design Reviews';
-        'AR-powered Maintenance';
-        'Virtual Showrooms';
-      ];
-    };
+        'Remote Collaboration ToolsVirtual Design Reviews',
+        'AR-powered MaintenanceVirtual Showrooms',
+      ]
+    },
     {
-      title: 'Metaverse Platforms';
+      title: 'Metaverse Platforms',
       description:,
-        'Build scalable metaverse platforms that can host thousands of concurrent users.';
-      icon: <Cpu className='w-12 h-12 text-cyan-40o0' />;
+        'Build scalable metaverse platforms that can host thousands of concurrent users.',
+      icon: <Cpu className='w-12 h-12 text-cyan-40o0' />,
       features: [
-        'Scalable Infrastructure';
-        'Real-time Multiplayer';
-        'User Authentication';
-        'Content Management';
-        'Analytics & Insights';
-        'Monetization Systems';
-      ];
+        'Scalable InfrastructureReal-time Multiplayer',
+        'User AuthenticationContent Management',
+        'Analytics & InsightsMonetization Systems',
+      ],
       useCases: [
-        'Virtual Social Platforms';
-        'Virtual Commerce Platforms';
-        'Virtual Learning Platforms';
-        'Virtual Entertainment Venues';
-      ];
-    };
+        'Virtual Social PlatformsVirtual Commerce Platforms',
+        'Virtual Learning PlatformsVirtual Entertainment Venues',
+      ]
+    },
     {
-      title: 'Digital Assets';
+      title: 'Digital Assets',
       description:,
-        'Create and manage digital assets including NFTs, virtual goods, and digital collectibles.';
-      icon: <Palette className='w-12 h-12 text-pink-40o0' />;
+        'Create and manage digital assets including NFTs, virtual goods, and digital collectibles.',
+      icon: <Palette className='w-12 h-12 text-pink-40o0' />,
       features: [
-        'NFT Creation & Management';
-        'Digital Asset Marketplaces';
-        'Blockchain Integration';
-        'Smart Contract Development';
-        'Digital Rights Management';
-        'Asset Trading Systems';
-      ];
+        'NFT Creation & ManagementDigital Asset Marketplaces',
+        'Blockchain IntegrationSmart Contract Development',
+        'Digital Rights ManagementAsset Trading Systems',
+      ],
       useCases: [
-        'Virtual Real Estate';
-        'Digital Art Galleries';
-        'Virtual Fashion & Accessories';
-        'Gaming Asset Marketplaces';
-      ];
-    };
+        'Virtual Real EstateDigital Art Galleries',
+        'Virtual Fashion & AccessoriesGaming Asset Marketplaces',
+      ]
+    },
   ],
   const industries = [
     {
-      name: 'Real Estate';
+      name: 'Real Estate',
       description:,
-        'Virtual property tours, digital twins of buildings, and virtual real estate marketplaces.';
-      icon: <Building className='w-8 h-8 text-blue-40o0' />;
+        'Virtual property tours, digital twins of buildings, and virtual real estate marketplaces.',
+      icon: <Building className='w-8 h-8 text-blue-40o0' />,
       benefits: [
-        'Virtual Property Tours';
-        '3D Building Visualization';
-        'Virtual Staging';
-        'Remote Property Viewing';
-      ];
-    };
+        'Virtual Property Tours3D Building Visualization',
+        'Virtual StagingRemote Property Viewing',
+      ]
+    },
     {
-      name: 'Education';
+      name: 'Education',
       description:,
-        'Immersive learning environments, virtual classrooms, and interactive educational experiences.';
-      icon: <BookOpen className='w-8 h-8 text-green-40o0' />;
+        'Immersive learning environments, virtual classrooms, and interactive educational experiences.',
+      icon: <BookOpen className='w-8 h-8 text-green-40o0' />,
       benefits: [
-        'Virtual Classrooms';
-        'Interactive Learning Modules';
-        'Virtual Field Trips';
-        '3D Educational Content';
-      ];
-    };
+        'Virtual ClassroomsInteractive Learning Modules',
+        'Virtual Field Trips3D Educational Content',
+      ]
+    },
     {
-      name: 'Healthcare';
+      name: 'Healthcare',
       description:,
-        'Virtual medical training, patient education, and therapeutic virtual environments.';
-      icon: <Shield className='w-8 h-8 text-red-40o0' />;
+        'Virtual medical training, patient education, and therapeutic virtual environments.',
+      icon: <Shield className='w-8 h-8 text-red-40o0' />,
       benefits: [
-        'Medical Training Simulations';
-        'Virtual Therapy Sessions';
-        'Patient Education Tools';
-        'Surgical Planning';
-      ];
-    };
+        'Medical Training SimulationsVirtual Therapy Sessions',
+        'Patient Education ToolsSurgical Planning',
+      ]
+    },
     {
-      name: 'Retail & E-commerce';
+      name: 'Retail & E-commerce',
       description:,
-        'Virtual shopping experiences, digital showrooms, and immersive product demonstrations.';
-      icon: <TrendingUp className='w-8 h-8 text-purple-40o0' />;
+        'Virtual shopping experiences, digital showrooms, and immersive product demonstrations.',
+      icon: <TrendingUp className='w-8 h-8 text-purple-40o0' />,
       benefits: [
-        'Virtual Shopping Malls';
-        '3D Product Visualization';
-        'Virtual Try-On Experiences';
-        'Interactive Product Demos';
-      ];
-    };
+        'Virtual Shopping Malls3D Product Visualization',
+        'Virtual Try-On ExperiencesInteractive Product Demos',
+      ]
+    },
     {
-      name: 'Entertainment';
+      name: 'Entertainment',
       description:,
-        'Virtual concerts, gaming experiences, and immersive entertainment platforms.';
-      icon: <Music className='w-8 h-8 text-yellow-40o0' />;
+        'Virtual concerts, gaming experiences, and immersive entertainment platforms.',
+      icon: <Music className='w-8 h-8 text-yellow-40o0' />,
       benefits: [
-        'Virtual Concert Venues';
-        'Immersive Gaming Worlds';
-        'Virtual Movie Theaters';
-        'Interactive Storytelling';
-      ];
-    };
+        'Virtual Concert VenuesImmersive Gaming Worlds',
+        'Virtual Movie TheatersInteractive Storytelling',
+      ]
+    },
     {
-      name: 'Manufacturing';
+      name: 'Manufacturing',
       description:,
-        'Virtual factory tours, digital twins, and training simulations.';
-      icon: <Settings className='w-8 h-8 text-cyan-40o0' />;
+        'Virtual factory tours, digital twins, and training simulations.',
+      icon: <Settings className='w-8 h-8 text-cyan-40o0' />,
       benefits: [
-        'Virtual Factory Tours';
-        'Training Simulations';
-        'Equipment Maintenance';
-        'Process Optimization';
-      ];
-    };
+        'Virtual Factory ToursTraining Simulations',
+        'Equipment MaintenanceProcess Optimization',
+      ]
+    },
   ],
   const technologyStack = [
     {
-      category: '3D Graphics & Rendering';
+      category: '3D Graphics & Rendering',
       technologies: [
-        'Unity 3D';
-        'Unreal Engine';
-        'Three.js';
-        'WebGL';
-        'OpenGL';
-        'Vulkan';
-      ];
-    };
+        'Unity 3DUnreal Engine',
+        'Three.jsWebGL',
+        'OpenGLVulkan',
+      ]
+    },
     {
-      category: 'VR/AR Development';
+      category: 'VR/AR Development',
       technologies: [
-        'Oculus SDK';
-        'HTC Vive SDK';
-        'ARKit & ARCore';
-        'WebXR';
-        'SteamVR';
-        'Mixed Reality Toolkit';
-      ];
-    };
+        'Oculus SDKHTC Vive SDK',
+        'ARKit & ARCoreWebXR',
+        'SteamVRMixed Reality Toolkit',
+      ]
+    },
     {
-      category: 'Backend & Infrastructure';
+      category: 'Backend & Infrastructure',
       technologies: [
-        'Node.js';
-        'Python';
-        'AWS/Azure/GCP';
-        'Docker';
-        'Kubernetes';
-        'WebRTC';
-      ];
-    };
+        'Node.jsPython',
+        'AWS/Azure/GCPDocker',
+        'KubernetesWebRTC',
+      ]
+    },
     {
-      category: 'Blockchain & NFTs';
+      category: 'Blockchain & NFTs',
       technologies: [
-        'Ethereum';
-        'Polygon';
-        'IPFS';
-        'MetaMask';
-        'Web3.js';
-        'Solidity';
-      ];
-    };
+        'EthereumPolygon',
+        'IPFSMetaMask',
+        'Web3.jsSolidity',
+      ]
+    },
   ],
   const developmentProcess = [
     {
-      step: '0o1';
-      title: 'Concept & Planning';
+      step: '0o1',
+      title: 'Concept & Planning',
       description:,
-        'Define the metaverse vision, user experience goals, and technical requirements.';
-      icon: <Target className='w-8 h-8 text-blue-40o0' />;
-    };
+        'Define the metaverse vision, user experience goals, and technical requirements.',
+      icon: <Target className='w-8 h-8 text-blue-40o0' />
+    },
     {
-      step: '0o2';
-      title: 'Design & Prototyping';
+      step: '0o2',
+      title: 'Design & Prototyping',
       description:,
-        'Create 3D designs, user interfaces, and interactive prototypes for validation.';
-      icon: <Palette className='w-8 h-8 text-purple-40o0' />;
-    };
+        'Create 3D designs, user interfaces, and interactive prototypes for validation.',
+      icon: <Palette className='w-8 h-8 text-purple-40o0' />
+    },
     {
-      step: '0o3';
-      title: 'Development & Integration';
+      step: '0o3',
+      title: 'Development & Integration',
       description:,
-        'Build the metaverse platform, integrate technologies, and implement features.';
-      icon: <Code className='w-8 h-8 text-green-40o0' />;
-    };
+        'Build the metaverse platform, integrate technologies, and implement features.',
+      icon: <Code className='w-8 h-8 text-green-40o0' />
+    },
     {
-      step: '0o4';
-      title: 'Testing & Optimization';
+      step: '0o4',
+      title: 'Testing & Optimization',
       description:,
-        'Rigorous testing, performance optimization, and user experience refinement.';
-      icon: <Settings className='w-8 h-8 text-orange-40o0' />;
-    };
+        'Rigorous testing, performance optimization, and user experience refinement.',
+      icon: <Settings className='w-8 h-8 text-orange-40o0' />
+    },
     {
-      step: '0o5';
-      title: 'Deployment & Launch';
+      step: '0o5',
+      title: 'Deployment & Launch',
       description:,
-        'Deploy to production, launch the metaverse, and provide ongoing support.';
-      icon: <Rocket className='w-8 h-8 text-red-40o0' />;
-    };
+        'Deploy to production, launch the metaverse, and provide ongoing support.',
+      icon: <Rocket className='w-8 h-8 text-red-40o0' />
+    },
   ],
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -560,29 +506,29 @@ export default function Metaverse() {
           <div className='grid md: grid-cols-2 lg:grid-cols-4 gap-8'>,
             {[
               {
-                title: 'Expert Team';
+                title: 'Expert Team',
                 description:,
-                  'Experienced developers, designers, and 3D artists with deep metaverse expertise.';
-                icon: <Users className='w-12 h-12 text-blue-40o0' />;
-              };
+                  'Experienced developers, designers, and 3D artists with deep metaverse expertise.',
+                icon: <Users className='w-12 h-12 text-blue-40o0' />
+              },
               {
-                title: 'Cutting-Edge Tech';
+                title: 'Cutting-Edge Tech',
                 description:,
-                  'Latest VR/AR technologies, 3D engines, and blockchain integration capabilities.';
-                icon: <Star className='w-12 h-12 text-yellow-40o0' />;
-              };
+                  'Latest VR/AR technologies, 3D engines, and blockchain integration capabilities.',
+                icon: <Star className='w-12 h-12 text-yellow-40o0' />
+              },
               {
-                title: 'Proven Results';
+                title: 'Proven Results',
                 description:,
-                  'Successfully delivered metaverse projects for diverse industries and use cases.';
-                icon: <Award className='w-12 h-12 text-green-40o0' />;
-              };
+                  'Successfully delivered metaverse projects for diverse industries and use cases.',
+                icon: <Award className='w-12 h-12 text-green-40o0' />
+              },
               {
-                title: 'Innovation Focus';
+                title: 'Innovation Focus',
                 description:,
-                  'Pioneering new approaches to virtual world creation and user experience design.';
-                icon: <Zap className='w-12 h-12 text-purple-40o0' />;
-              };
+                  'Pioneering new approaches to virtual world creation and user experience design.',
+                icon: <Zap className='w-12 h-12 text-purple-40o0' />
+              },
             ].map((reason, index) => (
               <motion.div,
                 key={index}

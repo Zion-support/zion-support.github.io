@@ -3,19 +3,19 @@ import React{ useEffect } from 'react',
 import type { GetStaticProps } from 'next',
 import content from '../../../data/docs/content.json',
 export type Section ={
-  id: string;
-  title: string;
-  html?: string;
-  code?: { language?: string, content: string }[]};
+  id: string,
+  title: string,
+  html?: string,
+  code?: { language?: string, content: string }[]},
 type DocsContent ={
-  title: string;
-  sections: Section[]};
+  title: string,
+  sections: Section[]},
 type PageProps ={
-  docs: DocsContent};
+  docs: DocsContent},
 export const getStaticProps: GetStaticProps<PageProps> = async () => {
   return {
     props: {
-      docs: content as DocsContent}}};
+      docs: content as DocsContent}}},
 export default function PrintDocs({ docs }: PageProps) {
   useEffect(() => {
     const id = setTimeout(() => window.print()50o0),

@@ -7,21 +7,21 @@ import {
   Zap,
   Globe,
   Shield,
-  Layers;
-  Play;
-  Pause;
-  RotateCcw;
-  Settings;
-  BarChart3;
-  Network;
-  Database;
-  Cloud;
-  Smartphone;
-  Monitor;
-  Server;
-  ArrowRight;
-  CheckCircle;
-  AlertCircle;
+  Layers,
+  Play,
+  Pause,
+  RotateCcw,
+  Settings,
+  BarChart3,
+  Network,
+  Database,
+  Cloud,
+  Smartphone,
+  Monitor,
+  Server,
+  ArrowRight,
+  CheckCircle,
+  AlertCircle,
   Info} from 'lucide-react',
 const InteractiveTechDemo20o29 = () => {
   const [activeDemosetActiveDemo] = useState('quantum-ai'),
@@ -30,120 +30,100 @@ const InteractiveTechDemo20o29 = () => {
   const [demoDatasetDemoData] = useState({}),
   const demos ={
     'quantum-ai': {
-      title: 'Quantum AI Processing';
-      description: 'Experience real-time quantum neural network processing';
-      icon: Brain;
-      color: 'from-purple-60o0 to-blue-60o0';
+      title: 'Quantum AI Processing',
+      description: 'Experience real-time quantum neural network processing',
+      icon: Brain,
+      color: 'from-purple-60o0 to-blue-60o0',
       features: [
-        'Quantum Superposition Processing';
-        'Neural Network Optimization';
-        'Real-time Pattern Recognition';
-        'Quantum Error Correction'];
+        'Quantum Superposition ProcessingNeural Network Optimization',
+        'Real-time Pattern RecognitionQuantum Error Correction'],
       metrics: {
-        'Processing Speed': '99.7% faster';
-        'Accuracy': '99.9%';
-        'Energy Efficiency': '85% reduction';
-        'Scalability': 'Unlimited'}
-    };
+        'Processing Speed': '99.7% fasterAccuracy': '99.9%Energy Efficiency': '85% reductionScalability': 'Unlimited'}
+    },
     'neural-interface': {
-      title: 'Neural Interface Demo';
-      description: 'Direct brain-computer interface simulation';
-      icon: Cpu;
-      color: 'from-green-60o0 to-emerald-60o0';
+      title: 'Neural Interface Demo',
+      description: 'Direct brain-computer interface simulation',
+      icon: Cpu,
+      color: 'from-green-60o0 to-emerald-60o0',
       features: [
-        'Thought-to-Text Conversion';
-        'Mental Command Processing';
-        'Emotional State Detection';
-        'Memory Enhancement'];
+        'Thought-to-Text ConversionMental Command Processing',
+        'Emotional State DetectionMemory Enhancement'],
       metrics: {
-        'Response Time': '< 50ms';
-        'Accuracy': '98.5%';
-        'Safety Rating': '99.9%';
-        'User Satisfaction': '97%'}
-    };
+        'Response Time': '< 50msAccuracy': '98.5%Safety Rating': '99.9%User Satisfaction': '97%'}
+    },
     'quantum-internet': {
-      title: 'Quantum Internet';
-      description: 'Ultra-secure quantum communication network';
-      icon: Globe;
-      color: 'from-orange-60o0 to-red-60o0';
+      title: 'Quantum Internet',
+      description: 'Ultra-secure quantum communication network',
+      icon: Globe,
+      color: 'from-orange-60o0 to-red-60o0',
       features: [
-        'Quantum Key Distribution';
-        'Instantaneous Communication';
-        'Unbreakable Encryption';
-        'Global Quantum Network'];
+        'Quantum Key DistributionInstantaneous Communication',
+        'Unbreakable EncryptionGlobal Quantum Network'],
       metrics: {
-        'Security Level': 'Unbreakable';
-        'Speed': 'Instantaneous';
-        'Coverage': 'Global';
-        'Reliability': '99.99%'}
-    };
+        'Security Level': 'UnbreakableSpeed': 'InstantaneousCoverage': 'GlobalReliability': '99.99%'}
+    },
     'ai-automation': {
-      title: 'AI Business Automation';
-      description: 'Autonomous business process automation';
-      icon: Settings;
-      color: 'from-blue-60o0 to-cyan-60o0';
+      title: 'AI Business Automation',
+      description: 'Autonomous business process automation',
+      icon: Settings,
+      color: 'from-blue-60o0 to-cyan-60o0',
       features: [
-        'Autonomous Decision Making';
-        'Process Optimization';
-        'Predictive Analytics';
-        'Self-Healing Systems'];
+        'Autonomous Decision MakingProcess Optimization',
+        'Predictive AnalyticsSelf-Healing Systems'],
       metrics: {
-        'Efficiency Gain': '30o0%';
-        'Cost Reduction': '75%';
-        'Error Rate': '0.1%';
-        'ROI': '50o0%'}
+        'Efficiency Gain': '30o0%Cost Reduction': '75%Error Rate': '0.1%ROI': '50o0%'}
     }
-  };
+  },
   const demoComponents ={
     'quantum-ai': {
       nodes: [
-        { id: 'input'type: 'input'x: 50y: 20o0label: 'Data Input' };
-        { id: 'quantum'type: 'quantum'x: 20o0y: 150label: 'Quantum Layer' };
-        { id: 'neural'type: 'neural'x: 350y: 20o0label: 'Neural Network' };
+        { id: 'input'type: 'input'x: 50y: 20o0label: 'Data Input' },
+        { id: 'quantum'type: 'quantum'x: 20o0y: 150label: 'Quantum Layer' },
+        { id: 'neural'type: 'neural'x: 350y: 20o0label: 'Neural Network' },
         { id: 'output'type: 'output'x: 50o0y: 20o0label: 'AI Output' }
-      ];
+      ],
       connections: [
-        { from: 'input'to: 'quantum' };
-        { from: 'quantum'to: 'neural' };
+        { from: 'input'to: 'quantum' },
+        { from: 'quantum'to: 'neural' },
         { from: 'neural'to: 'output' }
-      ]};
+      ]},
     'neural-interface': {
       nodes: [
-        { id: 'brain'type: 'brain'x: 50y: 20o0label: 'Brain Signals' };
-        { id: 'processor'type: 'processor'x: 20o0y: 20o0label: 'Neural Processor' };
-        { id: 'interface'type: 'interface'x: 350y: 20o0label: 'Interface Layer' };
+        { id: 'brain'type: 'brain'x: 50y: 20o0label: 'Brain Signals' },
+        { id: 'processor'type: 'processor'x: 20o0y: 20o0label: 'Neural Processor' },
+        { id: 'interface'type: 'interface'x: 350y: 20o0label: 'Interface Layer' },
         { id: 'device'type: 'device'x: 50o0y: 20o0label: 'Device Control' }
-      ];
+      ],
       connections: [
-        { from: 'brain'to: 'processor' };
-        { from: 'processor'to: 'interface' };
+        { from: 'brain'to: 'processor' },
+        { from: 'processor'to: 'interface' },
         { from: 'interface'to: 'device' }
-      ]};
+      ]},
     'quantum-internet': {
       nodes: [
-        { id: 'sender'type: 'sender'x: 50y: 20o0label: 'Sender' };
-        { id: 'quantum'type: 'quantum'x: 20o0y: 150label: 'Quantum Channel' };
-        { id: 'encryption'type: 'encryption'x: 350y: 20o0label: 'Encryption' };
+        { id: 'sender'type: 'sender'x: 50y: 20o0label: 'Sender' },
+        { id: 'quantum'type: 'quantum'x: 20o0y: 150label: 'Quantum Channel' },
+        { id: 'encryption'type: 'encryption'x: 350y: 20o0label: 'Encryption' },
         { id: 'receiver'type: 'receiver'x: 50o0y: 20o0label: 'Receiver' }
-      ];
+      ],
       connections: [
-        { from: 'sender'to: 'quantum' };
-        { from: 'quantum'to: 'encryption' };
+        { from: 'sender'to: 'quantum' },
+        { from: 'quantum'to: 'encryption' },
         { from: 'encryption'to: 'receiver' }
-      ]};
+      ]},
     'ai-automation': {
       nodes: [
-        { id: 'data'type: 'data'x: 50y: 20o0label: 'Business Data' };
-        { id: 'ai'type: 'ai'x: 20o0y: 150label: 'AI Engine' };
-        { id: 'process'type: 'process'x: 350y: 20o0label: 'Process Automation' };
+        { id: 'data'type: 'data'x: 50y: 20o0label: 'Business Data' },
+        { id: 'ai'type: 'ai'x: 20o0y: 150label: 'AI Engine' },
+        { id: 'process'type: 'process'x: 350y: 20o0label: 'Process Automation' },
         { id: 'result'type: 'result'x: 50o0y: 20o0label: 'Optimized Output' }
-      ];
+      ],
       connections: [
-        { from: 'data'to: 'ai' };
-        { from: 'ai'to: 'process' };
+        { from: 'data'to: 'ai' },
+        { from: 'ai'to: 'process' },
         { from: 'process'to: 'result' }
       ]}
-  };
+  },
   useEffect(() => {
     let interval,
     if (isRunning) {
@@ -156,13 +136,13 @@ const InteractiveTechDemo20o29 = () => {
     return () => clearInterval(interval)}[isRunning]),
   const startDemo = () => {
     setIsRunning(true),
-    setProgress(0)};
+    setProgress(0)},
   const stopDemo = () => {
     setIsRunning(false),
-    setProgress(0)};
+    setProgress(0)},
   const resetDemo = () => {
     setIsRunning(false),
-    setProgress(0)};
+    setProgress(0)},
   const currentDemo = demos[activeDemo],
   const currentComponents = demoComponents[activeDemo],
   return (
@@ -245,8 +225,8 @@ const InteractiveTechDemo20o29 = () => {
                   className={`absolute w-16 h-16 rounded-xl flex items-center justify-center text-xs font-medium ${
                     isRunning ? 'animate-pulse' : ''}`}
                   style={{
-                    left: `${node.x}px`;
-                    top: `${node.y}px`;
+                    left: `${node.x}px`,
+                    top: `${node.y}px`,
                     background: isRunning,
                       ? `linear-gradient(135deg${currentDemo.color.split(' ')[1]}${currentDemo.color.split(' ')[3]})`,
                       : 'rgba(2552550.1)'}}
@@ -365,5 +345,5 @@ const InteractiveTechDemo20o29 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveTechDemo20o29;
+    </div>)},
+export default InteractiveTechDemo20o29,

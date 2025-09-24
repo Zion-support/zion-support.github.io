@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -73,10 +73,10 @@ class CursorExtensionBackground {
 ,
   async analyzeCode(codeData) {
     const analysis ={
-      timestamp: new Date().toISOString();
-      file: codeData.file;
-      issues: [];
-      suggestions: []};
+      timestamp: new Date().toISOString(),
+      file: codeData.file,
+      issues: [],
+      suggestions: []},
     // Analyze code for common issues,
     if (codeData.content) {
       analysis.issues = this.findCodeIssues(codeData.content),
@@ -89,25 +89,25 @@ class CursorExtensionBackground {
     // Check for console.log in production code,
     if (content.includes('logger.info(')) {
       issues.push({
-        type: 'debug_code';
-        message: Console.log statement found';
-        severity: 'low';
+        type: 'debug_code',
+        message: Console.log statement found',
+        severity: 'low',
         line: this.findLineNumber(content, logger.info(')})}
 ,
     // Check for TODO/FIXME comments,
     if (content.includes('TODO') || content.includes('FIXME')) {
       issues.push({
-        type: 'todo_items';
-        message: TODO/FIXME comment found';
-        severity: 'medium';
+        type: 'todo_items',
+        message: TODO/FIXME comment found',
+        severity: 'medium',
         line: this.findLineNumber(content, TODO')})}
 ,
     // Check for var usage,
     if (content.includes('var ) && !content.includes('var _')) {
       issues.push({
-        type: 'var_usage';
-        message: var keyword used instead of const/let';
-        severity: 'medium';
+        type: 'var_usage',
+        message: var keyword used instead of const/let',
+        severity: 'medium',
         line: this.findLineNumber(content, var )})}
 ,
     // Check for unused imports,
@@ -140,10 +140,10 @@ class CursorExtensionBackground {
       const matches = content.match(usageRegex),
       if (!matches || matches.length <= 1) { // Only the import statement,
         issues.push({
-          type: 'unused_import';
-          message: `Unused import: ${importItem.name}`;
-          severity: 'low';
-          importName: importItem.name;
+          type: 'unused_import',
+          message: `Unused import: ${importItem.name}`,
+          severity: 'low',
+          importName: importItem.name,
           modulePath: importItem.modulePath})}
     }),
     return issues}
@@ -154,30 +154,30 @@ class CursorExtensionBackground {
       switch (issue.type) {
         case debug_code':,
           suggestions.push({
-            type: 'remove_debug';
-            message: Remove console.log statement';
-            code: // Remove or replace with proper logging';
+            type: 'remove_debug',
+            message: Remove console.log statement',
+            code: // Remove or replace with proper logging',
             severity: issue.severity}),
           break,
         case todo_items':,
           suggestions.push({
-            type: 'address_todo';
-            message: Address TODO/FIXME comment';
-            code: // Implement the TODO item';
+            type: 'address_todo',
+            message: Address TODO/FIXME comment',
+            code: // Implement the TODO item',
             severity: issue.severity}),
           break,
         case var_usage':,
           suggestions.push({
-            type: 'replace_var';
-            message: Replace var with const or let';
-            code: const variableName = value, // or let if reassignment needed';
+            type: 'replace_var',
+            message: Replace var with const or let',
+            code: const variableName = value, // or let if reassignment needed',
             severity: issue.severity}),
           break,
         case unused_import':,
           suggestions.push({
-            type: 'remove_import';
-            message: `Remove unused import: ${issue.importName}`;
-            code: `// Remove: ${issue.importName} from ${issue.modulePath}`;
+            type: 'remove_import',
+            message: `Remove unused import: ${issue.importName}`,
+            code: `// Remove: ${issue.importName} from ${issue.modulePath}`,
             severity: issue.severity}),
           break}
     }),
@@ -185,28 +185,28 @@ class CursorExtensionBackground {
 ,
   async suggestImprovement(data) {
     const suggestion ={
-      timestamp: new Date().toISOString();
-      file: data.file;
-      type: data.type;
-      description: data.description;
-      code: data.code;
-      severity: data.severity || medium};
+      timestamp: new Date().toISOString(),
+      file: data.file,
+      type: data.type,
+      description: data.description,
+      code: data.code,
+      severity: data.severity || medium},
     // Store in history,
     this.improvementHistory.push(suggestion),
     return suggestion}
 ,
   async applyImprovement(data) {
     const result ={
-      timestamp: new Date().toISOString();
-      file: data.file;
-      success: false;
-      changes: []};
+      timestamp: new Date().toISOString(),
+      file: data.file,
+      success: false,
+      changes: []},
     try {
       // Apply the improvement (this would integrate with the editor),
       result.success = true,
       result.changes.push({
-        type: data.type;
-        description: data.description;
+        type: data.type,
+        description: data.description,
         applied: true}),
       logger.info(`✅ Applied improvement to ${data.file}`)} catch (error) {
       result.error = error.message,
@@ -230,7 +230,7 @@ class CursorExtensionBackground {
         const analysis = await this.analyzeCode(item),
         // Send analysis results back to content script,
         chrome.tabs.sendMessage(item.tabId, {
-          type: 'ANALYSIS_RESULT';
+          type: 'ANALYSIS_RESULT',
           analysis})} catch (error) {
         logger.error('Error processing analysis item:', error)}
     }
@@ -241,12 +241,12 @@ class CursorExtensionBackground {
 ,
   getStatus() {
     return {
-      isActive: this.isActive;
-      queueLength: this.analysisQueue.length;
-      improvementHistory: this.improvementHistory.length;
+      isActive: this.isActive,
+      queueLength: this.analysisQueue.length,
+      improvementHistory: this.improvementHistory.length,
       lastActivity: this.improvementHistory.length > 0,
         ? this.improvementHistory[this.improvementHistory.length - 1].timestamp,
-        : null};
+        : null},
   }
 ,
   stop() {

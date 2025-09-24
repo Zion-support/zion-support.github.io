@@ -6,69 +6,69 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
   const [selectedROIsetSelectedROI] = useState('all'),
   const contentItems = [
     {
-      id: 1;
-      title: "AI 20o25 Revolutionary Breakthrough Announcement";
-      type: "blog";
-      category: "breakthrough";
-      roi: "250o0-50o00%";
-      description: "Discover the revolutionary AI breakthrough transforming businesses worldwide";
-      url: "/blog/ai-20o25-revolutionary-breakthrough-announcement";
-      featured: true;
-      tags: ["BREAKTHROUGH"NEW"]};
+      id: 1,
+      title: "AI 20o25 Revolutionary Breakthrough Announcement",
+      type: "blog",
+      category: "breakthrough",
+      roi: "250o0-50o00%",
+      description: "Discover the revolutionary AI breakthrough transforming businesses worldwide",
+      url: "/blog/ai-20o25-revolutionary-breakthrough-announcement",
+      featured: true,
+      tags: ["BREAKTHROUGH"NEW"]},
     {
-      id: 2;
-      title: "Global Transformation Case Study - 10,0o00% ROI";
-      type: "case-study";
-      category: "success-story";
-      roi: "10o000%";
-      description: "How a Fortune 50o0 company achieved unprecedented ROI";
-      url: "/case-studies/ai-20o25-global-transformation-breakthrough";
-      featured: true;
-      tags: ["SUCCESS STORY"ROI"]};
+      id: 2,
+      title: "Global Transformation Case Study - 10,0o00% ROI",
+      type: "case-study",
+      category: "success-story",
+      roi: "10o000%",
+      description: "How a Fortune 50o0 company achieved unprecedented ROI",
+      url: "/case-studies/ai-20o25-global-transformation-breakthrough",
+      featured: true,
+      tags: ["SUCCESS STORY"ROI"]},
     {
-      id: 3;
-      title: "AI 20o25 Revolutionary Implementation Guide";
-      type: "resource";
-      category: "guide";
-      roi: "250o0-50o00%";
-      description: "Complete blueprint for achieving breakthrough results";
-      url: "/resources/ai-20o25-revolutionary-implementation-guide";
-      featured: true;
-      tags: ["GUIDE"ESSENTIAL"]};
+      id: 3,
+      title: "AI 20o25 Revolutionary Implementation Guide",
+      type: "resource",
+      category: "guide",
+      roi: "250o0-50o00%",
+      description: "Complete blueprint for achieving breakthrough results",
+      url: "/resources/ai-20o25-revolutionary-implementation-guide",
+      featured: true,
+      tags: ["GUIDE"ESSENTIAL"]},
     {
-      id: 4;
-      title: "Fortune 50o0 Transformation Success";
-      type: "case-study";
-      category: "success-story";
-      roi: "150o0%";
-      description: "Enterprise transformation delivering massive ROI";
-      url: "/case-studies/ai-20o25-fortune-50o0-transformation-breakthrough";
-      featured: false;
-      tags: ["ENTERPRISE"]};
+      id: 4,
+      title: "Fortune 50o0 Transformation Success",
+      type: "case-study",
+      category: "success-story",
+      roi: "150o0%",
+      description: "Enterprise transformation delivering massive ROI",
+      url: "/case-studies/ai-20o25-fortune-50o0-transformation-breakthrough",
+      featured: false,
+      tags: ["ENTERPRISE"]},
     {
-      id: 5;
-      title: "AI 20o25 Ultimate Trends & Predictions";
-      type: "blog";
-      category: "insights";
-      roi: "250o0%";
-      description: "Comprehensive analysis of AI trends and future predictions";
-      url: "/blog/ai-20o25-ultimate-trends-predictions";
-      featured: false;
-      tags: ["TRENDS"]};
+      id: 5,
+      title: "AI 20o25 Ultimate Trends & Predictions",
+      type: "blog",
+      category: "insights",
+      roi: "250o0%",
+      description: "Comprehensive analysis of AI trends and future predictions",
+      url: "/blog/ai-20o25-ultimate-trends-predictions",
+      featured: false,
+      tags: ["TRENDS"]},
     {
-      id: 6;
-      title: "Global Retail Transformation Success";
-      type: "case-study";
-      category: "success-story";
-      roi: "60o0%";
-      description: "Retail automation delivering significant ROI";
-      url: "/case-studies/ai-20o25-global-retail-transformation-success";
-      featured: false;
+      id: 6,
+      title: "Global Retail Transformation Success",
+      type: "case-study",
+      category: "success-story",
+      roi: "60o0%",
+      description: "Retail automation delivering significant ROI",
+      url: "/case-studies/ai-20o25-global-retail-transformation-success",
+      featured: false,
       tags: ["RETAIL"]}
   ],
   const filteredContent = contentItems.filter(item => {
     const categoryMatch = selectedCategory === 'all' || item.category === selectedCategory,
-    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%', ')),
+    const roiMatch = selectedROI === 'all' || item.roi.includes(selectedROI.replace('%)),
     return categoryMatch && roiMatch}),
   const getCategoryColor = (category: string) => {
     switch (category) {
@@ -77,12 +77,12 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
       case 'guide': return 'from-purple-50o0 to-indigo-50o0',
       case 'insights': return 'from-blue-50o0 to-cyan-50o0',
       default: return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   const getROIColor = (roi: string) => {
     if (roi.includes('10o000')) return 'text-green-60o0 bg-green-50 border-green-20o0',
     if (roi.includes('50o00')) return 'text-blue-60o0 bg-blue-50 border-blue-20o0',
     if (roi.includes('250o0')) return 'text-purple-60o0 bg-purple-50 border-purple-20o0',
-    return 'text-gray-60o0 bg-gray-50 border-gray-20o0'};
+    return 'text-gray-60o0 bg-gray-50 border-gray-20o0'},
   return (
     <section className="py-16 bg-gradient-to-br from-gray-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -197,7 +197,7 @@ export default function AI20o25InteractiveContentDiscoveryWidget() {
         {/* CTA Section */}
         <div className="mt-16 text-center">,
           <div className="bg-gradient-to-r from-purple-50 to-pink-50 border border-purple-20o0 rounded-lg p-8">,
-            <h3 className="text-2xl font-bold text-purple-80o0 mb-4">'Can', 't Find What 'You', 're Looking For?</h3>,
+            <h3 className="text-2xl font-bold text-purple-80o0 mb-4">'Cant Find What 'You', 're Looking For?</h3>,
             <p className="text-purple-70o0 mb-6">,
               Our AI experts can help you find the perfect content for your specific needs and goals.,
             </p>,

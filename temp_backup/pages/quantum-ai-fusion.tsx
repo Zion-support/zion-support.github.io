@@ -1,53 +1,53 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
-  Calendar, Clock, Target, Users2, FileText2, PieChart;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
+  Calendar, Clock, Target, Users2, FileText2, PieChart,
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,
   TrendingUp, Shield, Globe, Database, Network} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Quantum AI Fusion | Zion Tech Group';
-  description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.';
-  keywords: 'quantum AI fusion, quantum computing, artificial intelligence, quantum machine learning, quantum algorithms';
+  title: 'Quantum AI Fusion | Zion Tech Group',
+  description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.',
+  keywords: 'quantum AI fusion, quantum computing, artificial intelligence, quantum machine learning, quantum algorithms',
   openGraph: {
-    title: 'Quantum AI Fusion | Zion Tech Group';
-    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.';
-    url: 'https://ziontechgroup.com/quantum-ai-fusion';
-    siteName: 'Zion Tech Group';
+    title: 'Quantum AI Fusion | Zion Tech Group',
+    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.',
+    url: 'https://ziontechgroup.com/quantum-ai-fusion',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Quantum AI Fusion'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Quantum AI Fusion'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Quantum AI Fusion | Zion Tech Group';
-    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.';
-    images: ['https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg']};
+    card: 'summary_large_image',
+    title: 'Quantum AI Fusion | Zion Tech Group',
+    description: 'Revolutionary fusion of quantum computing and artificial intelligence for next-generation problem solving.',
+    images: ['https://ziontechgroup.com/og-image-quantum-ai-fusion.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/quantum-ai-fusion'}};
+    canonical: 'https://ziontechgroup.com/quantum-ai-fusion'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function QuantumAIFusion() {
   return (
     <div className="min-h-screen bg-black text-white">,

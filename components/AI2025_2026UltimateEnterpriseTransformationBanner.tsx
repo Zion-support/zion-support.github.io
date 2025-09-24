@@ -31,8 +31,7 @@ export default function AI20o25_20o26UltimateEnterpriseTransformationBanner() {
             <strong className='text-yellow-40o0'>,
               50o0%+ ROI improvements,
             </strong>,
-            autonomous systemsand next-generation business intelligence 'that';
-            's transforming industries worldwide.,
+            autonomous systemsand next-generation business intelligence 'thats transforming industries worldwide.,
           </p>,
           {/* Key Benefits Grid */}
           <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12 max-w-5xl mx-auto'>,

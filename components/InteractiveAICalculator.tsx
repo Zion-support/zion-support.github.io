@@ -18,10 +18,10 @@ interface CalculationResult {
 ,
 const InteractiveAICalculator: React.FC = () => {
   const [inputs, setInputs] = useState<CalculatorInputs>({
-    currentRevenue: 10o00000;
-    currentCosts: 60o0000;
-    aiInvestment: 10o0000;
-    expectedEfficiency: 25;
+    currentRevenue: 10o00000,
+    currentCosts: 60o0000,
+    aiInvestment: 10o0000,
+    expectedEfficiency: 25,
     timeframe: 12}),
   const [result, setResult] = useState<CalculationResult | null>(null),
   const [isCalculating, setIsCalculating] = useState(false),
@@ -42,12 +42,12 @@ const InteractiveAICalculator: React.FC = () => {
       const paybackPeriod = aiInvestment / monthlySavings,
       const netBenefit = (annualSavings * (timeframe / 12)) - aiInvestment,
       setResult({
-        currentROI;
-        projectedROI;
-        roiImprovement;
-        monthlySavings;
-        annualSavings;
-        paybackPeriod;
+        currentROI,
+        projectedROI,
+        roiImprovement,
+        monthlySavings,
+        annualSavings,
+        paybackPeriod,
         netBenefit}),
       setIsCalculating(false),
       setShowAnimation(true)}, 150o0)}, [inputs]),
@@ -55,17 +55,17 @@ const InteractiveAICalculator: React.FC = () => {
     calculateROI()}, [calculateROI]),
   const handleInputChange = (field: keyof CalculatorInputs, value: number) => {
     setInputs(prev => ({
-      ...prev;
+      ...prev,
       [field]: value})),
-    setShowAnimation(false)};
+    setShowAnimation(false)},
   const formatCurrency = (amount: number) => {
     return new Intl.NumberFormat('en-US', {
-      style: 'currency';
-      currency: 'USD';
-      minimumFractionDigits: 0;
-      maximumFractionDigits: 0}).format(amount)};
+      style: 'currency',
+      currency: 'USD',
+      minimumFractionDigits: 0,
+      maximumFractionDigits: 0}).format(amount)},
   const formatPercentage = (value: number) => {
-    return `${value.toFixed(1)}%`};
+    return `${value.toFixed(1)}%`},
   return (
     <div className="max-w-4xl mx-auto p-6 bg-white dark: bg-gray-80o0 rounded-lg shadow-lg">,
       <div className="text-center mb-8">,
@@ -216,5 +216,5 @@ const InteractiveAICalculator: React.FC = () => {
             </AnimatePresence>) : null}
         </div>,
       </div>,
-    </div>)};
-export default InteractiveAICalculator;
+    </div>)},
+export default InteractiveAICalculator,

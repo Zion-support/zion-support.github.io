@@ -2,39 +2,39 @@ import React, { useState, useEffect, useCallback, useMemo } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  Shield;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Grid;
-  Heart;
-  Database;
-  Cpu;
-  Palette;
-  Cloud;
-  Network;
-  TrendingUp;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Zap;
-  Eye;
-  Infinity;
-  Sparkles;
-  Search;
-  User;
-  Bell;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Search,
+  User,
+  Bell,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
@@ -63,198 +63,198 @@ function normalizeHref(href: string): string {
 ,
 const navigationItems: NavigationItem[] = [
   {
-    name: 'Revolutionary Services 20o44';
-    href: '/services';
-    icon: <Rocket className='w-5 h-5' />;
-    description: 'Future-defining technology solutions';
-    badge: 'New 20o44';
-    category: 'services';
-    color: 'from-emerald-50o0 to-cyan-50o0';
+    name: 'Revolutionary Services 20o44',
+    href: '/services',
+    icon: <Rocket className='w-5 h-5' />,
+    description: 'Future-defining technology solutions',
+    badge: 'New 20o44',
+    category: 'services',
+    color: 'from-emerald-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'All Services';
-        href: '/services';
-        description: 'Complete revolutionary services overview';
-        icon: <Grid className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'All Services',
+        href: '/services',
+        description: 'Complete revolutionary services overview',
+        icon: <Grid className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'AI Consciousness Evolution 20o44';
-        href: '/ai-consciousness-evolution-20o44';
-        description: 'Next-generation AI consciousness';
-        icon: <Brain className='w-4 h-4' />;
-        color: 'from-purple-50o0 to-pink-50o0';
-        featured: true;
-      };
+        name: 'AI Consciousness Evolution 20o44',
+        href: '/ai-consciousness-evolution-20o44',
+        description: 'Next-generation AI consciousness',
+        icon: <Brain className='w-4 h-4' />,
+        color: 'from-purple-50o0 to-pink-50o0',
+        featured: true
+      },
       {
-        name: 'Quantum Neural Network 20o44';
-        href: '/quantum-neural-network-platform-20o44';
-        description: 'Quantum-powered AI neural networks';
-        icon: <Atom className='w-4 h-4' />;
-        color: 'from-blue-50o0 to-cyan-50o0';
-        featured: true;
-      };
+        name: 'Quantum Neural Network 20o44',
+        href: '/quantum-neural-network-platform-20o44',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Atom className='w-4 h-4' />,
+        color: 'from-blue-50o0 to-cyan-50o0',
+        featured: true
+      },
       {
-        name: 'AI Autonomous Business Intelligence 20o44';
-        href: '/ai-autonomous-business-intelligence-20o44';
-        description: 'AI-powered business intelligence';
-        icon: <BarChart3 className='w-4 h-4' />;
-        color: 'from-emerald-50o0 to-teal-50o0';
-      };
+        name: 'AI Autonomous Business Intelligence 20o44',
+        href: '/ai-autonomous-business-intelligence-20o44',
+        description: 'AI-powered business intelligence',
+        icon: <BarChart3 className='w-4 h-4' />,
+        color: 'from-emerald-50o0 to-teal-50o0'
+      },
       {
-        name: 'Quantum Cybersecurity 20o44';
-        href: '/quantum-cybersecurity-platform-20o44';
-        description: 'Quantum-resistant security';
-        icon: <Shield className='w-4 h-4' />;
-        color: 'from-red-50o0 to-orange-50o0';
-      };
+        name: 'Quantum Cybersecurity 20o44',
+        href: '/quantum-cybersecurity-platform-20o44',
+        description: 'Quantum-resistant security',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-50o0 to-orange-50o0'
+      },
       {
-        name: 'Autonomous Customer Success 20o44';
-        href: '/autonomous-customer-success-20o44';
-        description: 'AI-powered customer success';
-        icon: <Heart className='w-4 h-4' />;
-        color: 'from-pink-50o0 to-purple-50o0';
-      };
-    ];
-  };
+        name: 'Autonomous Customer Success 20o44',
+        href: '/autonomous-customer-success-20o44',
+        description: 'AI-powered customer success',
+        icon: <Heart className='w-4 h-4' />,
+        color: 'from-pink-50o0 to-purple-50o0'
+      },
+    ],
+  },
   {
-    name: 'AI & Consciousness';
-    href: '/ai-services';
-    icon: <Brain className='w-5 h-5' />;
-    description: 'Advanced AI consciousness solutions';
-    badge: '20o44';
-    category: 'ai';
-    color: 'from-purple-50o0 to-pink-50o0';
+    name: 'AI & Consciousness',
+    href: '/ai-services',
+    icon: <Brain className='w-5 h-5' />,
+    description: 'Advanced AI consciousness solutions',
+    badge: '20o44',
+    category: 'ai',
+    color: 'from-purple-50o0 to-pink-50o0',
     children: [
       {
-        name: 'AI Consciousness Evolution';
-        href: '/ai-consciousness-evolution-20o44';
-        description: 'Next-generation AI consciousness';
-        icon: <Brain className='w-4 h-4' />;
-        featured: true;
-      };
+        name: 'AI Consciousness Evolution',
+        href: '/ai-consciousness-evolution-20o44',
+        description: 'Next-generation AI consciousness',
+        icon: <Brain className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Quantum Neural Networks';
-        href: '/quantum-neural-network-platform-20o44';
-        description: 'Quantum-powered AI neural networks';
-        icon: <Atom className='w-4 h-4' />;
-      };
+        name: 'Quantum Neural Networks',
+        href: '/quantum-neural-network-platform-20o44',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Atom className='w-4 h-4' />
+      },
       {
-        name: 'Autonomous Business Intelligence';
-        href: '/ai-autonomous-business-intelligence-20o44';
-        description: 'AI-powered business intelligence';
-        icon: <BarChart3 className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Autonomous Business Intelligence',
+        href: '/ai-autonomous-business-intelligence-20o44',
+        description: 'AI-powered business intelligence',
+        icon: <BarChart3 className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Quantum Technology';
-    href: '/quantum-services';
-    icon: <Atom className='w-5 h-5' />;
-    description: 'Quantum computing and technology';
-    badge: '20o44';
-    category: 'quantum';
-    color: 'from-blue-50o0 to-cyan-50o0';
+    name: 'Quantum Technology',
+    href: '/quantum-services',
+    icon: <Atom className='w-5 h-5' />,
+    description: 'Quantum computing and technology',
+    badge: '20o44',
+    category: 'quantum',
+    color: 'from-blue-50o0 to-cyan-50o0',
     children: [
       {
-        name: 'Quantum Cloud Infrastructure';
-        href: '/quantum-cloud-infrastructure-20o44';
-        description: 'Quantum-powered cloud solutions';
-        icon: <Cloud className='w-4 h-4' />;
-      };
+        name: 'Quantum Cloud Infrastructure',
+        href: '/quantum-cloud-infrastructure-20o44',
+        description: 'Quantum-powered cloud solutions',
+        icon: <Cloud className='w-4 h-4' />
+      },
       {
-        name: 'Quantum Cybersecurity';
-        href: '/quantum-cybersecurity-platform-20o44';
-        description: 'Quantum-resistant security';
-        icon: <Shield className='w-4 h-4' />;
-      };
+        name: 'Quantum Cybersecurity',
+        href: '/quantum-cybersecurity-platform-20o44',
+        description: 'Quantum-resistant security',
+        icon: <Shield className='w-4 h-4' />
+      },
       {
-        name: 'Quantum Neural Networks';
-        href: '/quantum-neural-network-platform-20o44';
-        description: 'Quantum-powered AI neural networks';
-        icon: <Brain className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Quantum Neural Networks',
+        href: '/quantum-neural-network-platform-20o44',
+        description: 'Quantum-powered AI neural networks',
+        icon: <Brain className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Space Technology';
-    href: '/space-tech';
-    icon: <Rocket className='w-5 h-5' />;
-    description: 'Space exploration and technology';
-    badge: '20o44';
-    category: 'space';
-    color: 'from-indigo-50o0 to-purple-50o0';
+    name: 'Space Technology',
+    href: '/space-tech',
+    icon: <Rocket className='w-5 h-5' />,
+    description: 'Space exploration and technology',
+    badge: '20o44',
+    category: 'space',
+    color: 'from-indigo-50o0 to-purple-50o0',
     children: [
       {
-        name: 'Space Resource Intelligence';
-        href: '/space-resource-intelligence-20o44';
-        description: 'AI-powered space exploration';
-        icon: <Globe className='w-4 h-4' />;
-      };
+        name: 'Space Resource Intelligence',
+        href: '/space-resource-intelligence-20o44',
+        description: 'AI-powered space exploration',
+        icon: <Globe className='w-4 h-4' />
+      },
       {
-        name: 'Quantum Space Computing';
-        href: '/quantum-space-computing-20o44';
-        description: 'Quantum computing in space';
-        icon: <Cpu className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Quantum Space Computing',
+        href: '/quantum-space-computing-20o44',
+        description: 'Quantum computing in space',
+        icon: <Cpu className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Enterprise Solutions';
-    href: '/enterprise-solutions';
-    icon: <Building className='w-5 h-5' />;
-    description: 'Enterprise-grade solutions';
-    category: 'enterprise';
-    color: 'from-emerald-50o0 to-teal-50o0';
+    name: 'Enterprise Solutions',
+    href: '/enterprise-solutions',
+    icon: <Building className='w-5 h-5' />,
+    description: 'Enterprise-grade solutions',
+    category: 'enterprise',
+    color: 'from-emerald-50o0 to-teal-50o0',
     children: [
       {
-        name: 'IT Services';
-        href: '/it-services';
-        description: 'Comprehensive IT solutions';
-        icon: <Monitor className='w-4 h-4' />;
-      };
+        name: 'IT Services',
+        href: '/it-services',
+        description: 'Comprehensive IT solutions',
+        icon: <Monitor className='w-4 h-4' />
+      },
       {
-        name: 'Cybersecurity';
-        href: '/security';
-        description: 'Advanced security solutions';
-        icon: <Shield className='w-4 h-4' />;
-      };
+        name: 'Cybersecurity',
+        href: '/security',
+        description: 'Advanced security solutions',
+        icon: <Shield className='w-4 h-4' />
+      },
       {
-        name: 'Cloud Solutions';
-        href: '/cloud-platform';
-        description: 'Cloud infrastructure and services';
-        icon: <Cloud className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Cloud Solutions',
+        href: '/cloud-platform',
+        description: 'Cloud infrastructure and services',
+        icon: <Cloud className='w-4 h-4' />
+      },
+    ],
+  },
   {
-    name: 'Resources';
-    href: '/resources';
-    icon: <Database className='w-5 h-5' />;
-    description: 'Knowledge and resources';
-    category: 'resources';
-    color: 'from-yellow-50o0 to-orange-50o0';
+    name: 'Resources',
+    href: '/resources',
+    icon: <Database className='w-5 h-5' />,
+    description: 'Knowledge and resources',
+    category: 'resources',
+    color: 'from-yellow-50o0 to-orange-50o0',
     children: [
       {
-        name: 'Blog';
-        href: '/blog';
-        description: 'Latest insights and updates';
-        icon: <Eye className='w-4 h-4' />;
-      };
+        name: 'Blog',
+        href: '/blog',
+        description: 'Latest insights and updates',
+        icon: <Eye className='w-4 h-4' />
+      },
       {
-        name: 'Case Studies';
-        href: '/case-studies';
-        description: 'Success stories and implementations';
-        icon: <TrendingUp className='w-4 h-4' />;
-      };
+        name: 'Case Studies',
+        href: '/case-studies',
+        description: 'Success stories and implementations',
+        icon: <TrendingUp className='w-4 h-4' />
+      },
       {
-        name: 'Documentation';
-        href: '/docs';
-        description: 'Technical documentation and guides';
-        icon: <Settings className='w-4 h-4' />;
-      };
-    ];
-  };
+        name: 'Documentation',
+        href: '/docs',
+        description: 'Technical documentation and guides',
+        icon: <Settings className='w-4 h-4' />
+      },
+    ],
+  },
 ],
 const UltraFuturisticNavigation20o44: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -268,13 +268,13 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
   // Handle scroll effect,
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll, { passive: true }),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   // Handle dropdown interactions,
   const handleDropdownToggle = useCallback(
     (itemName: string) => {
-      setActiveDropdown(activeDropdown === itemName ? null : itemName)};
+      setActiveDropdown(activeDropdown === itemName ? null : itemName)},
     [activeDropdown]),
   // Handle search,
   const handleSearch = useCallback(
@@ -283,10 +283,10 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
       if (searchQuery.trim()) {
         // Add analytics tracking,
         if (typeof window !== 'undefined' && (window as any).gtag) {
-          (window as any).gtag('event', 'search', { search_term: searchQuery })}
+          (window as any).gtag('eventsearch', { search_term: searchQuery })}
         // Navigate to search results or services page,
         window.location.href = `/services?search=${encodeURIComponent(searchQuery)}`}
-    };
+    },
     [searchQuery]),
   // Close mobile menu,
   const closeMobileMenu = useCallback(() => {
@@ -298,7 +298,7 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
       if (e.key === 'Enter' || e.key === ' ') {
         e.preventDefault(),
         action()}
-    };
+    },
     []),
   return (
     <nav
@@ -598,5 +598,5 @@ const UltraFuturisticNavigation20o44: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default UltraFuturisticNavigation20o44;
+    </nav>)},
+export default UltraFuturisticNavigation20o44,

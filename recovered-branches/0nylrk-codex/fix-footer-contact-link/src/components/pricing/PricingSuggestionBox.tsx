@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Button } from '@/components/ui/button',
 import { TooltipProviderTooltipTriggerTooltipContent } from '@/components/ui/tooltip',
 import { CardContent } from '@/components/ui/card',
@@ -12,10 +12,10 @@ interface PricingSuggestionBoxProps {
   rateType: 'hourly' | 'fixed'}
 ,
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-  suggestion;
-  isLoading;
-  onApplySuggestion;
-  rateType;
+  suggestion,
+  isLoading,
+  onApplySuggestion,
+  rateType
 }) => {
   if (isLoading) {
     return (
@@ -34,9 +34,9 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
     return null}
 ,
   const confidenceColor = {
-    High: 'bg-green-100 text-green-800';
-    Medium: 'bg-yellow-100 text-yellow-800';
-    Low: 'bg-red-100 text-red-800';
+    High: 'bg-green-100 text-green-800',
+    Medium: 'bg-yellow-100 text-yellow-800',
+    Low: 'bg-red-100 text-red-800'
   }[suggestion.confidence],
   return (
     <Card className='border-2 border-dashed border-muted-foreground/20'>,
@@ -80,4 +80,4 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           Based on market data & trends. You can adjust as needed.,
         </p>,
       </CardContent>,
-    </Card>)};
+    </Card>)},

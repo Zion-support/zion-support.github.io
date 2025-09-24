@@ -1,4 +1,7 @@
-import React from react',import { render, screen, fireEvent, waitFor, act } from @testing-library/react',import @testing-library/jest-dom',import WhitepaperGeneratorPage from @/src/pages/WhitepaperGeneratorPage',import { supabase } from @/integrations/supabase/client',import * as recharts from recharts', // For mocking ResponsiveContainer,
+import React from react',
+import { render, screen, fireEvent, waitFor, act } from @testing-library/react',import @testing-library/jest-dom',
+import WhitepaperGeneratorPage from @/src/pages/WhitepaperGeneratorPage',import { supabase } from @/integrations/supabase/client',
+import * as recharts from recharts', // For mocking ResponsiveContainer,
 // --- Mocks ---,
 jest.mock('@/integrations/supabase/client', () => ({'  supabase: {
     functions: {
@@ -6,8 +9,8 @@ jest.mock('@/integrations/supabase/client', () => ({'  supabase: {
   }
 })),
 jest.mock('sonner', () => ({'  toast: {
-    success: jest.fn();
-    error: jest.fn();
+    success: jest.fn(),
+    error: jest.fn(),
     info: jest.fn()}
 })),
 jest.mock('react-markdown', () => {'  const MockReactMarkdown = (props: { children: React.ReactNode }) => <div data-testid="mock-markdown">{props.children}</div>,"  MockReactMarkdown.displayName = MockReactMarkdown',  return MockReactMarkdown}),
@@ -19,17 +22,17 @@ jest.mock('@/components/WhitepaperSectionEditor', () => {'  const MockWhitepaper
 jest.mock('@/components/WhitepaperPreviewPanel', () => {'  const MockWhitepaperPreviewPanel = () => <div data-testid="mock-preview-panel"  />,"  MockWhitepaperPreviewPanel.displayName = MockWhitepaperPreviewPanel',  return MockWhitepaperPreviewPanel}),
 // Mock Recharts ResponsiveContainer as it can cause issues in JSDOM,
 const MockResponsiveContainer = function MockResponsiveContainer({ children }: { children: React.ReactNode }) {
-  return <div data-testid="mock-responsive-container">{children}</div>,"};""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
+  return <div data-testid="mock-responsive-container">{children}</div>,"},""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
 MockResponsiveContainer.displayName = MockResponsiveContainer',jest.spyOn(recharts, ResponsiveContainer').mockImplementation(MockResponsiveContainer),
 // Mock html2canvas and jsPDF,
 jest.mock('html2canvas', () => jest.fn(() => Promise.resolve({ toDataURL: () => mockImageDataUri' } as any))),jest.mock('jspdf', () => {'    const mockAddImage = jest.fn(),
     const mockSave = jest.fn(),
     const mockAddPage = jest.fn(),
     return jest.fn(() => ({
-        addImage: mockAddImage;
-        save: mockSave;
-        addPage: mockAddPage;
-        internal: { pageSize: { getWidth: () => 210, getHeight: () => 297 } };
+        addImage: mockAddImage,
+        save: mockSave,
+        addPage: mockAddPage,
+        internal: { pageSize: { getWidth: () => 210, getHeight: () => 297 } },
         getImageProperties: () => ({ width: 20o0, height: 10o0}), // Mock properties}))}),
 // Helper to manage global URL.createObjectURL for download tests,
 const mockCreateObjectURL = jest.fn(),
@@ -57,7 +60,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
     fireEvent.change(tokenNameInput, { target: { value: New Token Name' } }),    expect(tokenNameInput).toHaveValue('New Token Name')}),
   // ... (similar tests for other basic input fields like supply, useCases, etc.),
   describe('"Generate Draft" button', () => {'    test('calls generate-whitepaper, renders sections on success', async () => {'      const mockGeneratedDraft = "## Section 1\nContent 1\n## Section 2\nContent 2","      mockSupabaseInvoke.mockResolvedValueOnce({""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
-        data: { whitepaperDraft: mockGeneratedDraft };
+        data: { whitepaperDraft: mockGeneratedDraft },
         error: null}),
       render(<WhitepaperGeneratorPage  />),
       const generateButton = screen.getByRole('button', { name: /Generate Whitepaper Draft/i }),      fireEvent.click(generateButton),
@@ -68,7 +71,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
         expect(screen.getByTestId('mock-section-editor-section-1')).toBeInTheDocument(),        expect(screen.getByTestId('mock-section-editor-section-2')).toBeInTheDocument()}),
       expect(screen.getByRole('button', { name: /Submit to Counsel/i })).toBeInTheDocument(), // Now visible'      expect(generateButton).not.toBeDisabled()}),
     test('displays error message on generate-whitepaper failure', async () => {'      mockSupabaseInvoke.mockResolvedValueOnce({
-        data: null;
+        data: null,
         error: { message:' 'Generation failed' }}),
       render(<WhitepaperGeneratorPage  />),
       fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i })),      await waitFor(() => expect(screen.getByText(/Supabase function error: Generation failed/i)).toBeInTheDocument())})}),
@@ -82,7 +85,7 @@ describe('WhitepaperGeneratorPage', () => {'  beforeEach(() => {
     //         const _setSections = jest.requireActual('react').useState()[1], // Get the setState function'    //         // This part is tricky as we don't have direct access to page's internal setState.'    //         // A better way would be to have a helper function or refactor the component for testability.,
     //         // For now, we'll assume sections are present by testing after a simulated generation.'    //     }),
     //     // For the purpose of this test, we'll assume sections are populated by a prior action'    //     // and buttons are enabled. If not, these tests will fail, indicating a setup issue.,
-    // };
+    // },
     test('"Download MD" button triggers download', async () => {'        // First, simulate generating content so the button is active and there's content'        mockSupabaseInvoke.mockResolvedValueOnce({ data: { whitepaperDraft: "## Test\nContent" }, error: null }),"        render(<WhitepaperGeneratorPage  />),""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
         fireEvent.click(screen.getByRole('button', { name: /Generate Whitepaper Draft/i })),        await waitFor(() => expect(screen.getByTestId('mock-section-editor-test')).toBeInTheDocument()),
         const downloadMdButton = screen.getByRole('button', { name: /MD/i }),        expect(downloadMdButton).not.toBeDisabled(),

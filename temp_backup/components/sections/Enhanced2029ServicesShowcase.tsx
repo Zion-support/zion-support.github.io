@@ -1,14 +1,14 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Shield;
-  Brain;
-  Atom;
-  Rocket;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Shield,
+  Brain,
+  Atom,
+  Rocket,
 } from 'lucide-react',
 import Link from 'next/link',
 import { innovativeMicroSaas20o29V3 } from '../../data/20o29-innovative-micro-saas-v3',
@@ -16,9 +16,9 @@ import { innovativeITServices20o29V3 } from '../../data/20o29-innovative-it-serv
 import { innovativeAIServices20o29V3 } from '../../data/20o29-innovative-ai-services-v3',
 const Enhanced20o29ServicesShowcase: React.FC = () => {
   const allNewServices = [
-    ...innovativeMicroSaas20o29V3;
-    ...innovativeITServices20o29V3;
-    ...innovativeAIServices20o29V3;
+    ...innovativeMicroSaas20o29V3,
+    ...innovativeITServices20o29V3,
+    ...innovativeAIServices20o29V3
   ],
   const featuredServices = allNewServices,
     .filter(service => service.popular),
@@ -209,5 +209,5 @@ const Enhanced20o29ServicesShowcase: React.FC = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Enhanced20o29ServicesShowcase;
+    </section>)},
+export default Enhanced20o29ServicesShowcase,

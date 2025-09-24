@@ -9,14 +9,11 @@ export default function EducationTechnologySolutions() {
       implementationWeeks='Implementation: 4-8 weeks',
       roiNote='Higher completion rates and lower instructional costs',
       features={[
-        'Adaptive learning with mastery-based progression';
-        'Assessment generation and grading assistance';
-        'LLM tutor with curriculum alignment';
-        'Analytics for instructors and administrators';
-        'Accessibility and safety controls';
-        'Integrations: Canvas, Moodle, Google Classroom';
+        'Adaptive learning with mastery-based progressionAssessment generation and grading assistance',
+        'LLM tutor with curriculum alignmentAnalytics for instructors and administrators',
+        'Accessibility and safety controlsIntegrations: Canvas, Moodle, Google Classroom',
       ]}
-      industries={['K-12', 'Higher Ed', 'Workforce']}
+      industries={['K-12Higher Ed', 'Workforce']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/education-technology-solutions',
     />)}

@@ -5,10 +5,9 @@ const supabaseUrl = Deno.env.get('SUPABASE_URL')!,
 const supabaseServiceKey = Deno.env.get('SUPABASE_SERVICE_ROLE_KEY')!,
 const supabase = createClient(supabaseUrl, supabaseServiceKey),
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
@@ -27,8 +26,8 @@ serve(async req => {
     const { data: pendingJobs, error: jobsError } = await supabase,
       .from('scheduled_jobs'),
       .select('id, payload'),
-      .eq('job_type', 'send_retention_email'),
-      .eq('status', 'pending'),
+      .eq('job_typesend_retention_email'),
+      .eq('statuspending'),
       .limit(50),
     if (jobsError) {
       throw new Error(`Failed to fetch pending jobs: ${jobsError.message}`)}
@@ -39,14 +38,14 @@ serve(async req => {
         try {
           // Call the send-retention-email function for each job,
           const reminderResponse = await fetch(
-            `${supabaseUrl}/functions/v1/send-retention-email`;
+            `${supabaseUrl}/functions/v1/send-retention-email`,
             {
-              method: 'POST';
+              method: 'POST',
               headers: {
-                'Content-Type': 'application/json';
-                Authorization: `Bearer ${supabaseServiceKey}`;
-              };
-              body: JSON.stringify(job);
+                'Content-Type': 'application/json',
+                Authorization: `Bearer ${supabaseServiceKey}`,
+              },
+              body: JSON.stringify(job)
             }
           ),
           if (!reminderResponse.ok) {
@@ -56,7 +55,7 @@ serve(async req => {
             await supabase,
               .from('scheduled_jobs'),
               .update({
-                status: 'failed';
+                status: 'failed'
               }),
               .eq('id', job.id)} else {
             processedJobs.push(job.id)}
@@ -66,7 +65,7 @@ serve(async req => {
           await supabase,
             .from('scheduled_jobs'),
             .update({
-              status: 'failed';
+              status: 'failed'
             }),
             .eq('id', job.id)}
       }
@@ -74,25 +73,25 @@ serve(async req => {
 ,
     return new Response(
       JSON.stringify({
-        message: 'Retention emails processed successfully';
-        emails_scheduled: scheduledCount;
-        emails_processed: processedJobs.length;
-        job_ids: processedJobs;
-      });
+        message: 'Retention emails processed successfully',
+        emails_scheduled: scheduledCount,
+        emails_processed: processedJobs.length,
+        job_ids: processedJobs
+      }),
       {
-        status: 200;
-        headers: { 'Content-Type': 'application/json', ...corsHeaders };
+        status: 200,
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
       }
     )} catch (error) {
     console.error('Error in process-retention-emails function:', error),
     return new Response(
       JSON.stringify({
-        error: 'Internal server error';
-        details: error.message;
-      });
+        error: 'Internal server error',
+        details: error.message
+      }),
       {
-        status: 500;
-        headers: { 'Content-Type': 'application/json', ...corsHeaders };
+        status: 500,
+        headers: { 'Content-Type': 'application/json', ...corsHeaders },
       }
     )}
 }),

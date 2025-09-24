@@ -150,7 +150,7 @@ export default function CybersecurityPage() {
                   Network Security,
                 </h3>,
                 <p className='text-white/70 mb-4'>,
-                  Comprehensive network protection including firewalls;
+                  Comprehensive network protection including firewalls,
                   intrusion detection systems, and network monitoring.,
                 </p>,
                 <ul className='text-white/60 space-y-2'>,

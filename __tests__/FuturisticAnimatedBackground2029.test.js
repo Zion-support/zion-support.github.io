@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { render, screen, fireEvent } from '@testing-library/react',
 import '@testing-library/jest-dom',
 import FuturisticAnimatedBackground20o29 from '../components/FuturisticAnimatedBackground20o29',

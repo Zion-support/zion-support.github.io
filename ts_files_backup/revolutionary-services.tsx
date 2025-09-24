@@ -16,18 +16,18 @@ export default function RevolutionaryServicesPage() {
   const [showFiltersetShowFilters] = useState(false),
   const [selectedServicesetSelectedService] = useState<any>(null),
   const priceRanges = [
-    { value: ''All', 'label: 'All Prices' };
-    { value: '0-1000'label: '$0 - $1,000' };
-    { value: '1001-2500'label: '$1,001 - $2,500' };
-    { value: '2501-5000'label: '$2,501 - $5,000' };
+    { value: ''Alllabel: 'All Prices' },
+    { value: '0-1000'label: '$0 - $1,000' },
+    { value: '1001-2500'label: '$1,001 - $2,500' },
+    { value: '2501-5000'label: '$2,501 - $5,000' },
     { value: '5001+'label: '$5,001+' }
   ],
   const sortOptions = [
-    { value: ''name', 'label: 'Name A-Z' };
-    { value: ''price', 'label: 'Price Low-High' };
-    { value: ''popularity', 'label: 'Most Popular' };
-    { value: ''category', 'label: 'Category' };
-    { value: ''roi', 'label: 'Highest ROI' }
+    { value: ''namelabel: 'Name A-Z' },
+    { value: ''pricelabel: 'Price Low-High' },
+    { value: ''popularitylabel: 'Most Popular' },
+    { value: ''categorylabel: 'Category' },
+    { value: ''roilabel: 'Highest ROI' }
   ],
   // Filter and sort services,
   let filteredServices = revolutionaryMicroSaasServices,
@@ -52,7 +52,7 @@ export default function RevolutionaryServicesPage() {
   filteredServices.sort((ab) => {
     switch (sortBy) {
       case 'price':,
-        return parseFloat(a.price.replace('$', ').replace(',', ')) - parseFloat(b.price.replace('$', ').replace(',', ')),
+        return parseFloat(a.price.replace('$).replace(',', ')) - parseFloat(b.price.replace('$).replace(',', ')),
       case 'popularity':,
         return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':,
@@ -65,91 +65,91 @@ export default function RevolutionaryServicesPage() {
         return a.name.localeCompare(b.name)}
   }),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const popularServices = getPopularRevolutionaryServices(),
   // Enhanced service categories with better descriptions,
   const enhancedCategories = [
     {
-      name: 'Quantum AI & Cognitive Computing';
-      description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities';
-      icon: <Brain className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length;
-      color: 'from-purple-500 to-indigo-600'};
+      name: 'Quantum AI & Cognitive Computing',
+      description: 'Revolutionary quantum AI solutions with human-level reasoning capabilities',
+      icon: <Brain className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum AI & Cognitive Computing').length,
+      color: 'from-purple-500 to-indigo-600'},
     {
-      name: 'Autonomous Manufacturing & Industry 4.0';
-      description: 'Next-generation autonomous manufacturing with zero human intervention';
-      icon: <Factory className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length;
-      color: 'from-orange-500 to-red-600'};
+      name: 'Autonomous Manufacturing & Industry 4.0',
+      description: 'Next-generation autonomous manufacturing with zero human intervention',
+      icon: <Factory className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Manufacturing & Industry 4.0').length,
+      color: 'from-orange-500 to-red-600'},
     {
-      name: 'Quantum Blockchain & DeFi';
-      description: 'Quantum-secured blockchain platforms with infinite scalability';
-      icon: <Globe className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length;
-      color: 'from-green-500 to-emerald-600'};
+      name: 'Quantum Blockchain & DeFi',
+      description: 'Quantum-secured blockchain platforms with infinite scalability',
+      icon: <Globe className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Blockchain & DeFi').length,
+      color: 'from-green-500 to-emerald-600'},
     {
-      name: 'AI Biomedical Research & Drug Discovery';
-      description: 'AI-powered platforms for accelerated drug discovery and medical research';
-      icon: <FlaskIcon className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length;
-      color: 'from-blue-500 to-indigo-600'};
+      name: 'AI Biomedical Research & Drug Discovery',
+      description: 'AI-powered platforms for accelerated drug discovery and medical research',
+      icon: <FlaskIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Biomedical Research & Drug Discovery').length,
+      color: 'from-blue-500 to-indigo-600'},
     {
-      name: 'Quantum Cybersecurity & Threat Detection';
-      description: 'Quantum-resistant cybersecurity with AI-powered threat detection';
-      icon: <ShieldCheck className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length;
-      color: 'from-red-500 to-pink-600'};
+      name: 'Quantum Cybersecurity & Threat Detection',
+      description: 'Quantum-resistant cybersecurity with AI-powered threat detection',
+      icon: <ShieldCheck className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Cybersecurity & Threat Detection').length,
+      color: 'from-red-500 to-pink-600'},
     {
-      name: 'Space Technology & Satellite Optimization';
-      description: 'Revolutionary platforms for space exploration and satellite optimization';
-      icon: <Rocket className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length;
-      color: 'from-indigo-500 to-purple-600'};
+      name: 'Space Technology & Satellite Optimization',
+      description: 'Revolutionary platforms for space exploration and satellite optimization',
+      icon: <Rocket className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Space Technology & Satellite Optimization').length,
+      color: 'from-indigo-500 to-purple-600'},
     {
-      name: 'AI Content Creation & Marketing';
-      description: 'Quantum-powered content creation at infinite scale';
-      icon: <FileText className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length;
-      color: 'from-teal-500 to-cyan-600'};
+      name: 'AI Content Creation & Marketing',
+      description: 'Quantum-powered content creation at infinite scale',
+      icon: <FileText className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'AI Content Creation & Marketing').length,
+      color: 'from-teal-500 to-cyan-600'},
     {
-      name: 'Quantum Computing as a Service';
-      description: 'Enterprise quantum computing with real quantum processors';
-      icon: <Cpu className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length;
-      color: 'from-violet-500 to-purple-600'};
+      name: 'Quantum Computing as a Service',
+      description: 'Enterprise quantum computing with real quantum processors',
+      icon: <Cpu className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Quantum Computing as a Service').length,
+      color: 'from-violet-500 to-purple-600'},
     {
-      name: 'Autonomous Vehicles & Smart Transportation';
-      description: 'AI platforms for autonomous vehicles and smart transportation';
-      icon: <CarIcon className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length;
-      color: 'from-emerald-500 to-green-600'};
+      name: 'Autonomous Vehicles & Smart Transportation',
+      description: 'AI platforms for autonomous vehicles and smart transportation',
+      icon: <CarIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Autonomous Vehicles & Smart Transportation').length,
+      color: 'from-emerald-500 to-green-600'},
     {
-      name: 'Smart Energy & Renewable Energy';
-      description: 'AI platforms for smart energy grids and renewable energy optimization';
-      icon: <LeafIcon className="w-6 h-6" />;
-      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length;
+      name: 'Smart Energy & Renewable Energy',
+      description: 'AI platforms for smart energy grids and renewable energy optimization',
+      icon: <LeafIcon className="w-6 h-6" />,
+      count: revolutionaryMicroSaasServices.filter(s => s.category === 'Smart Energy & Renewable Energy').length,
       color: 'from-yellow-500 to-orange-600'}
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants = {
-    hidden: { y: 20opacity: 0 };
+    hidden: { y: 20opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <UltraFuturisticBackground variant="quantum" intensity="high">,
       <div className="min-h-screen">,
@@ -187,7 +187,7 @@ export default function RevolutionaryServicesPage() {
                 transition={{ duration: 0.8delay: 0.2 }}
               >,
                 Experience the future of technology with our revolutionary micro SaaS platform.,
-                Quantum AIautonomous systemspace technologyand cutting-edge solutions that redefine 'what', 's possible.,
+                Quantum AIautonomous systemspace technologyand cutting-edge solutions that redefine 'whats possible.,
               </motion.p>,
               {/* Service Count Stats */}
               <motion.div,
@@ -231,7 +231,7 @@ export default function RevolutionaryServicesPage() {
                 <Button
                   variant="futuristic",
                   size="lg",
-                  onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                  onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                 >,
                   Get Started,
                   <Rocket className="ml-2 w-5 h-5" />,
@@ -353,7 +353,7 @@ export default function RevolutionaryServicesPage() {
                                                  <Button
                              variant="primary",
                              size="md",
-                             onClick={() => window.open(service.'link', '_blank')}
+                             onClick={() => window.open(service.'link_blank')}
                              className="w-full">,
                              Learn More,
                              <ExternalLink className="ml-2 w-4 h-4" />,
@@ -469,7 +469,7 @@ export default function RevolutionaryServicesPage() {
                           <Button
                             variant="primary",
                             size="sm",
-                            onClick={() => window.open(service.'link', '_blank')}
+                            onClick={() => window.open(service.'link_blank')}
                             className="w-full">,
                             Learn More,
                             <ExternalLink className="ml-2 w-4 h-4" />,
@@ -514,7 +514,7 @@ export default function RevolutionaryServicesPage() {
                                                          <Button
                                variant="primary",
                                size="sm",
-                               onClick={() => window.open(service.'link', '_blank')}
+                               onClick={() => window.open(service.'link_blank')}
                              >,
                                Learn More,
                                <ExternalLink className="ml-2 w-4 h-4" />,
@@ -652,14 +652,14 @@ export default function RevolutionaryServicesPage() {
                       <div className="flex gap-4">,
                                                  <Button
                            variant="primary",
-                           onClick={() => window.open(selectedService.'link', '_blank')}
+                           onClick={() => window.open(selectedService.'link_blank')}
                          >,
                            Visit Service,
                            <ExternalLink className="ml-2 w-4 h-4" />,
                          </Button>,
                          <Button
                            variant="futuristic",
-                           onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                           onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                          >,
                            Contact Sales,
                            <Mail className="ml-2 w-4 h-4" />,
@@ -691,7 +691,7 @@ export default function RevolutionaryServicesPage() {
                                  <Button
                    variant="primary",
                    size="lg",
-                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                  >,
                    Start Free Trial,
                    <Rocket className="ml-2 w-5 h-5" />,
@@ -699,7 +699,7 @@ export default function RevolutionaryServicesPage() {
                  <Button
                    variant="futuristic",
                    size="lg",
-                   onClick={() => window.open('https://ziontechgroup.com/'contact', '_blank')}
+                   onClick={() => window.open('https://ziontechgroup.com/'contact_blank')}
                  >,
                    Schedule Demo,
                    <Calendar className="ml-2 w-5 h-5" />,

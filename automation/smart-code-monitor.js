@@ -10,9 +10,9 @@ const { execSync, spawn } = require('child_process'),
 class SmartCodeMonitor {
   constructor() {
     this.projectRoot = process.cwd(),
-    this.logFile = path.join(this.projectRoot, 'logs', 'smart-code-monitor.log'),
-    this.patternDatabaseFile = path.join(this.projectRoot, 'logs', 'code-patterns.json'),
-    this.qualityMetricsFile = path.join(this.projectRoot, 'logs', 'quality-metrics.json'),
+    this.logFile = path.join(this.projectRoot, 'logssmart-code-monitor.log'),
+    this.patternDatabaseFile = path.join(this.projectRoot, 'logscode-patterns.json'),
+    this.qualityMetricsFile = path.join(this.projectRoot, 'logsquality-metrics.json'),
     this.autoFixThreshold = parseFloat(process.env.AUTO_FIX_THRESHOLD) || 0.8,
     this.ensureLogsDirectory(),
     this.loadPatternDatabase(),
@@ -21,10 +21,10 @@ class SmartCodeMonitor {
     this.patternLearningEnabled = process.env.PATTERN_LEARNING === 'enabled',
     this.minConfidenceScore = 0.75,
     this.codeQualityThresholds ={
-      complexity: 10;
-      maintainability: 65;
-      testCoverage: 80;
-      documentation: 70};
+      complexity: 10,
+      maintainability: 65,
+      testCoverage: 80,
+      documentation: 70},
     // // // // // // // // console.log('🧠 Smart Code Monitor Starting...'),
     this.startMonitoring()}
 ,
@@ -45,20 +45,20 @@ class SmartCodeMonitor {
       if (fs.existsSync(this.patternDatabaseFile)) {
         this.patternDatabase = JSON.parse(fs.readFileSync(this.patternDatabaseFile, 'utf8'))} else {
         this.patternDatabase ={
-          antiPatterns: [];
-          bestPractices: [];
-          commonIssues: [];
-          fixStrategies: [];
-          lastUpdated: new Date().toISOString()};
+          antiPatterns: [],
+          bestPractices: [],
+          commonIssues: [],
+          fixStrategies: [],
+          lastUpdated: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load pattern database: ${error.message}`, 'ERROR'),
       this.patternDatabase ={
-        antiPatterns: [];
-        bestPractices: [];
-        commonIssues: [];
-        fixStrategies: [];
-        lastUpdated: new Date().toISOString()};
+        antiPatterns: [],
+        bestPractices: [],
+        commonIssues: [],
+        fixStrategies: [],
+        lastUpdated: new Date().toISOString()},
     }
   }
 ,
@@ -67,22 +67,22 @@ class SmartCodeMonitor {
       if (fs.existsSync(this.qualityMetricsFile)) {
         this.qualityMetrics = JSON.parse(fs.readFileSync(this.qualityMetricsFile, 'utf8'))} else {
         this.qualityMetrics ={
-          overallScore: 0;
-          complexityScore: 0;
-          maintainabilityScore: 0;
-          testCoverageScore: 0;
-          documentationScore: 0;
-          lastUpdated: new Date().toISOString()};
+          overallScore: 0,
+          complexityScore: 0,
+          maintainabilityScore: 0,
+          testCoverageScore: 0,
+          documentationScore: 0,
+          lastUpdated: new Date().toISOString()},
       }
     } catch (error) {
       this.log(`Failed to load quality metrics: ${error.message}`, 'ERROR'),
       this.qualityMetrics ={
-        overallScore: 0;
-        complexityScore: 0;
-        maintainabilityScore: 0;
-        testCoverageScore: 0;
-        documentationScore: 0;
-        lastUpdated: new Date().toISOString()};
+        overallScore: 0,
+        complexityScore: 0,
+        maintainabilityScore: 0,
+        testCoverageScore: 0,
+        documentationScore: 0,
+        lastUpdated: new Date().toISOString()},
     }
   }
 ,
@@ -115,28 +115,28 @@ class SmartCodeMonitor {
       const documentationResults = await this.analyzeDocumentation(),
       // Calculate overall quality score,
       const qualityScore = this.calculateQualityScore({
-        lint: lintResults;
-        typescript: typeCheckResults;
-        complexity: complexityResults;
-        coverage: coverageResults;
+        lint: lintResults,
+        typescript: typeCheckResults,
+        complexity: complexityResults,
+        coverage: coverageResults,
         documentation: documentationResults}),
       this.log(`Code quality score: ${qualityScore.toFixed(2)}/10o0`),
       // Apply intelligent fixes if quality is below threshold,
       if (qualityScore < this.autoFixThreshold * 10o0) {
-        this.log('Quality below threshold, applying intelligent fixes...', 'WARN'),
+        this.log('Quality below threshold, applying intelligent fixes...WARN'),
         await this.applyIntelligentFixes({
-          lint: lintResults;
-          typescript: typeCheckResults;
-          complexity: complexityResults;
-          coverage: coverageResults;
+          lint: lintResults,
+          typescript: typeCheckResults,
+          complexity: complexityResults,
+          coverage: coverageResults,
           documentation: documentationResults})}
 ,
       // Update quality metrics,
       this.updateQualityMetrics(qualityScore, {
-        lint: lintResults;
-        typescript: typeCheckResults;
-        complexity: complexityResults;
-        coverage: coverageResults;
+        lint: lintResults,
+        typescript: typeCheckResults,
+        complexity: complexityResults,
+        coverage: coverageResults,
         documentation: documentationResults})} catch (error) {
       this.log(`Code quality scan failed: ${error.message}`, 'ERROR')}
   }
@@ -145,23 +145,23 @@ class SmartCodeMonitor {
     this.log('Running ESLint analysis...'),
     try {
       const result = execSync('npm run lint --silent', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       return {
-        success: true;
-        issues: 0;
-        warnings: 0;
-        errors: 0};
+        success: true,
+        issues: 0,
+        warnings: 0,
+        errors: 0},
     } catch (error) {
       // Parse ESLint output for issues,
       const output = error.stdout || error.stderr || '',
       const issues = this.parseESLintOutput(output),
       return {
-        success: false;
-        issues: issues.length;
-        warnings: issues.filter(i => i.severity === 'warn').length;
-        errors: issues.filter(i => i.severity === 'error').length;
-        details: issues};
+        success: false,
+        issues: issues.length,
+        warnings: issues.filter(i => i.severity === 'warn').length,
+        errors: issues.filter(i => i.severity === 'error').length,
+        details: issues},
     }
   }
 ,
@@ -176,9 +176,9 @@ class SmartCodeMonitor {
           const lineNumber = parseInt(parts[1]) || 0,
           const message = parts.slice(2).join(':').trim(),
           issues.push({
-            file: filePath;
-            line: lineNumber;
-            message: message;
+            file: filePath,
+            line: lineNumber,
+            message: message,
             severity: message.includes('error') ? 'error' : 'warn'})}
       }
     }
@@ -189,20 +189,20 @@ class SmartCodeMonitor {
     this.log('Running TypeScript type check...'),
     try {
       const result = execSync('npm run type-check --silent', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       return {
-        success: true;
-        issues: 0;
-        errors: 0};
+        success: true,
+        issues: 0,
+        errors: 0},
     } catch (error) {
       const output = error.stdout || error.stderr || '',
       const issues = this.parseTypeScriptOutput(output),
       return {
-        success: false;
-        issues: issues.length;
-        errors: issues.length;
-        details: issues};
+        success: false,
+        issues: issues.length,
+        errors: issues.length,
+        details: issues},
     }
   }
 ,
@@ -214,9 +214,9 @@ class SmartCodeMonitor {
         const match = line.match(/(.+):(\d+):(\d+)\s*-\s*(.+)/),
         if (match) {
           issues.push({
-            file: match[1].trim();
-            line: parseInt(match[2]);
-            column: parseInt(match[3]);
+            file: match[1].trim(),
+            line: parseInt(match[2]),
+            column: parseInt(match[3]),
             message: match[4].trim()})}
       }
     }
@@ -229,12 +229,12 @@ class SmartCodeMonitor {
       // Use ESLint complexity rule or custom analysis,
       const complexityScore = await this.calculateComplexityScore(),
       return {
-        score: complexityScore;
-        level: complexityScore > 80 ? 'HIGH' : complexityScore > 60 ? 'MEDIUM' : 'LOW';
-        issues: complexityScore > 80 ? ['High cyclomatic complexity detected'] : []};
+        score: complexityScore,
+        level: complexityScore > 80 ? 'HIGH' : complexityScore > 60 ? 'MEDIUM' : 'LOW',
+        issues: complexityScore > 80 ? ['High cyclomatic complexity detected'] : []},
     } catch (error) {
       this.log(`Complexity analysis failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN', issues: [] };
+      return { score: 0, level: 'UNKNOWN', issues: [] },
     }
   }
 ,
@@ -257,7 +257,7 @@ class SmartCodeMonitor {
 ,
   findSourceFiles() {
     const sourceFiles = [],
-    const extensions = ['.js', '.ts', '.jsx', '.tsx'],
+    const extensions = ['.js.ts', '.jsx.tsx'],
     const scanDirectory = (dir) => {
       const items = fs.readdirSync(dir),
       for (const item of items) {
@@ -267,7 +267,7 @@ class SmartCodeMonitor {
           scanDirectory(fullPath)} else if (stat.isFile() && extensions.includes(path.extname(item))) {
           sourceFiles.push(fullPath)}
       }
-    };
+    },
     scanDirectory(this.projectRoot),
     return sourceFiles}
 ,
@@ -276,17 +276,17 @@ class SmartCodeMonitor {
     try {
       // Try to run test coverage if available,
       const result = execSync('npm run test:coverage --silent', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       // Parse coverage output,
       const coverage = this.parseCoverageOutput(result),
       return {
-        score: coverage.percentage;
-        level: coverage.percentage > 80 ? 'HIGH' : coverage.percentage > 60 ? 'MEDIUM' : 'LOW';
-        details: coverage};
+        score: coverage.percentage,
+        level: coverage.percentage > 80 ? 'HIGH' : coverage.percentage > 60 ? 'MEDIUM' : 'LOW',
+        details: coverage},
     } catch (error) {
       this.log(`Test coverage check failed: ${error.message}`, 'WARN'),
-      return { score: 0, level: 'UNKNOWN', details: { percentage: 0 } };
+      return { score: 0, level: 'UNKNOWN', details: { percentage: 0 } },
     }
   }
 ,
@@ -302,7 +302,7 @@ class SmartCodeMonitor {
         break}
     }
 ,
-    return { percentage };
+    return { percentage },
   }
 ,
   async analyzeDocumentation() {
@@ -320,13 +320,13 @@ class SmartCodeMonitor {
 ,
       const documentationScore = totalFiles > 0 ? (documentedFiles / totalFiles) * 10o0 : 0,
       return {
-        score: documentationScore;
-        level: documentationScore > 80 ? 'HIGH' : documentationScore > 60 ? 'MEDIUM' : 'LOW';
-        documentedFiles;
-        totalFiles};
+        score: documentationScore,
+        level: documentationScore > 80 ? 'HIGH' : documentationScore > 60 ? 'MEDIUM' : 'LOW',
+        documentedFiles,
+        totalFiles},
     } catch (error) {
       this.log(`Documentation analysis failed: ${error.message}`, 'ERROR'),
-      return { score: 0, level: 'UNKNOWN', documentedFiles: 0, totalFiles: 0 };
+      return { score: 0, level: 'UNKNOWN', documentedFiles: 0, totalFiles: 0 },
     }
   }
 ,
@@ -342,11 +342,11 @@ class SmartCodeMonitor {
 ,
   calculateQualityScore(results) {
     const weights ={
-      lint: 0.3;
-      typescript: 0.25;
-      complexity: 0.2;
-      coverage: 0.15;
-      documentation: 0.1};
+      lint: 0.3,
+      typescript: 0.25,
+      complexity: 0.2,
+      coverage: 0.15,
+      documentation: 0.1},
     let totalScore = 0,
     let totalWeight = 0,
     // Lint score (inverse of issues),
@@ -503,14 +503,14 @@ class SmartCodeMonitor {
   calculateFileComplexity(content) {
     // Simple cyclomatic complexity calculation,
     const complexityIndicators = [
-      /if\s*(/g;
-      /else\s*if\s*(/g;
-      /for\s*(/g;
-      /while\s*(/g;
-      /switch\s*(/g;
-      /case\s+/g;
-      /catch\s*(/g;
-      /\|\|/g;
+      /if\s*(/g,
+      /else\s*if\s*(/g,
+      /for\s*(/g,
+      /while\s*(/g,
+      /switch\s*(/g,
+      /case\s+/g,
+      /catch\s*(/g,
+      /\|\|/g,
       /&&/g],
     let complexity = 1, // Base complexity,
     for (const indicator of complexityIndicators) {
@@ -675,8 +675,8 @@ class SmartCodeMonitor {
 const monitor = new SmartCodeMonitor(),
 // Handle graceful shutdown,
 process.on('SIGINT', () => {
-  monitor.log('Shutting down Smart Code Monitor...', 'INFO'),
+  monitor.log('Shutting down Smart Code Monitor...INFO'),
   process.exit(0)}),
 process.on('SIGTERM', () => {
-  monitor.log('Shutting down Smart Code Monitor...', 'INFO'),
+  monitor.log('Shutting down Smart Code Monitor...INFO'),
   process.exit(0)})))))))

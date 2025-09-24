@@ -1,18 +1,15 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Go-To-Market Agents Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Go-To-Market Agents Blueprint | Zion Tech Group',
   description:,
-    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.';
+    'Blueprint for GTM agents: pipeline generation, deal acceleration, and expansion with policy-as-code guardrails.',
   keywords: [
-    'go-to-market agents';
-    'GTM agents';
-    'sales automation';
-    'marketing automation';
-    'policy-as-code';
-    'evals';
-    'governance';
-  ];
-};
+    'go-to-market agentsGTM agents',
+    'sales automationmarketing automation',
+    'policy-as-codeevals',
+    'governance',
+  ]
+},
 export default function GoToMarketAgentsBlueprintPage() {
   return (
     <div className='min-h-screen bg-white'>,

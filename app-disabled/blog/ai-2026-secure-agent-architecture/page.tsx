@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Secure Agent Architecture';
+  title: 'AI 20o26: Secure Agent Architecture',
   description:,
-    'Blueprint for zero-trust agents with isolation domains, policy-as-code, runtime guards, and continuous verification.';
+    'Blueprint for zero-trust agents with isolation domains, policy-as-code, runtime guards, and continuous verification.',
   keywords: [
-    'secure agents';
-    'zero trust';
-    'policy as code';
-    'runtime guards';
-    'isolation domains';
-  ];
-};
+    'secure agentszero trust',
+    'policy as coderuntime guards',
+    'isolation domains',
+  ]
+},
 const SecureAgentArchitecturePage: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -40,7 +38,7 @@ const SecureAgentArchitecturePage: React.FC = () => {
         <div className='prose prose-lg max-w-none'>,
           <h2>Isolation Domains</h2>,
           <p>,
-            Segment agent capabilities and data access with scoped tokens;
+            Segment agent capabilities and data access with scoped tokens,
             sandboxes, and network policies.,
           </p>,
           <h3>Runtime Guards</h3>,
@@ -78,5 +76,5 @@ const SecureAgentArchitecturePage: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default SecureAgentArchitecturePage;
+    </div>)},
+export default SecureAgentArchitecturePage,

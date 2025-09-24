@@ -12,14 +12,14 @@ export default function AdminWeb3Page() {
   const save = (list: any) => {
     if (typeof window !== 'undefined'),
       window.localStorage.setItem('zion-web3-users', JSON.stringify(list)),
-    setUsers(list)};
+    setUsers(list)},
   const metrics = {
-    total: users.length;
-    evm: users.filter(u => u.chain === 'evm').length;
-    sol: users.filter(u => u.chain === 'sol').length;
-    enabled: users.filter(u => u.enabled).length;
-    disabled: users.filter(u => !u.enabled).length;
-  };
+    total: users.length,
+    evm: users.filter(u => u.chain === 'evm').length,
+    sol: users.filter(u => u.chain === 'sol').length,
+    enabled: users.filter(u => u.enabled).length,
+    disabled: users.filter(u => !u.enabled).length
+  },
   return (
     <>,
       <Head>,
@@ -49,7 +49,7 @@ export default function AdminWeb3Page() {
                     checked={u.enabled}
                     onChange={e => {
                       const next = users.slice(),
-                      next[i] = { ...u, enabled: e.target.checked };
+                      next[i] = { ...u, enabled: e.target.checked },
                       save(next)}}
                   />,
                 </label>,

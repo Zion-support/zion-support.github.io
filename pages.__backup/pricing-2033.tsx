@@ -6,159 +6,141 @@ import {
 import { cuttingEdge20o33Services } from '../data/20o33-cutting-edge-innovations',
 import { innovativeITServices20o33 } from '../data/20o33-innovative-it-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function Pricing20o33Page() {
   const [billingCyclesetBillingCycle] = useState<'monthly' | 'yearly'>('monthly'),
   const [selectedPlansetSelectedPlan] = useState<string | null>(null),
   // Enhanced service categories with pricing,
   const serviceCategories = [
     {
-      name: 'Revolutionary AI Services';
-      description: 'AI consciousness evolution and emotional intelligence';
-      services: ['AI Consciousness Evolution'AI Emotional Intelligence'AI Creativity Orchestrator'AI Autonomous Business Manager'];
-      avgPrice: '$11,499/month';
-      savings: 'Save 60-80% vs. competitors';
-      icon: Brain;
-      color: 'from-violet-50o0 to-purple-50o0'};
+      name: 'Revolutionary AI Services',
+      description: 'AI consciousness evolution and emotional intelligence',
+      services: ['AI Consciousness Evolution'AI Emotional Intelligence'AI Creativity Orchestrator'AI Autonomous Business Manager'],
+      avgPrice: '$11,499/month',
+      savings: 'Save 60-80% vs. competitors',
+      icon: Brain,
+      color: 'from-violet-50o0 to-purple-50o0'},
     {
-      name: 'Quantum & Emerging Tech';
-      description: 'Quantum computing and DNA-based solutions';
-      services: ['Quantum DNA Computing'Quantum Internet Security'Quantum Financial Trading'Quantum Creativity Studio'];
-      avgPrice: '$19,999/month';
-      savings: 'Save 70-85% vs. competitors';
-      icon: Atom;
-      color: 'from-indigo-50o0 to-blue-50o0'};
+      name: 'Quantum & Emerging Tech',
+      description: 'Quantum computing and DNA-based solutions',
+      services: ['Quantum DNA Computing'Quantum Internet Security'Quantum Financial Trading'Quantum Creativity Studio'],
+      avgPrice: '$19,999/month',
+      savings: 'Save 70-85% vs. competitors',
+      icon: Atom,
+      color: 'from-indigo-50o0 to-blue-50o0'},
     {
-      name: 'Enterprise IT Solutions';
-      description: 'Autonomous operations and zero-trust security';
-      services: ['Autonomous DevOps'Zero Trust Architecture'Edge Computing Orchestration'AI IT Operations Center'];
-      avgPrice: '$649/month';
-      savings: 'Save 50-70% vs. competitors';
-      icon: Cpu;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      name: 'Enterprise IT Solutions',
+      description: 'Autonomous operations and zero-trust security',
+      services: ['Autonomous DevOps'Zero Trust Architecture'Edge Computing Orchestration'AI IT Operations Center'],
+      avgPrice: '$649/month',
+      savings: 'Save 50-70% vs. competitors',
+      icon: Cpu,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      name: 'Space & Metaverse Tech';
-      description: 'Space mining and metaverse development';
-      services: ['Space Mining Automation'Metaverse AI Development'AI Health Analytics'Holographic Events'];
-      avgPrice: '$14,999/month';
-      savings: 'Save 65-80% vs. competitors';
-      icon: Rocket;
-      color: 'from-teal-50o0 to-emerald-50o0'};
+      name: 'Space & Metaverse Tech',
+      description: 'Space mining and metaverse development',
+      services: ['Space Mining Automation'Metaverse AI Development'AI Health Analytics'Holographic Events'],
+      avgPrice: '$14,999/month',
+      savings: 'Save 65-80% vs. competitors',
+      icon: Rocket,
+      color: 'from-teal-50o0 to-emerald-50o0'},
     {
-      name: 'Innovative Micro SAAS';
-      description: 'Cutting-edge solutions for every business';
-      services: ['AI Business Intelligence'Quantum-Secure Communication'AI Customer Success'Blockchain Supply Chain'];
-      avgPrice: '$374/month';
-      savings: 'Save 40-60% vs. competitors';
-      icon: Target;
-      color: 'from-green-50o0 to-yellow-50o0'};
+      name: 'Innovative Micro SAAS',
+      description: 'Cutting-edge solutions for every business',
+      services: ['AI Business Intelligence'Quantum-Secure Communication'AI Customer Success'Blockchain Supply Chain'],
+      avgPrice: '$374/month',
+      savings: 'Save 40-60% vs. competitors',
+      icon: Target,
+      color: 'from-green-50o0 to-yellow-50o0'},
     {
-      name: 'Research & Development';
-      description: 'Breakthrough technologies and innovations';
-      services: ['Neuromorphic Computing'Photonic Computing'Swarm Robotics'Biotech Automation'];
-      avgPrice: '$1,099/month';
-      savings: 'Save 55-75% vs. competitors';
-      icon: Microscope;
+      name: 'Research & Development',
+      description: 'Breakthrough technologies and innovations',
+      services: ['Neuromorphic Computing'Photonic Computing'Swarm Robotics'Biotech Automation'],
+      avgPrice: '$1,099/month',
+      savings: 'Save 55-75% vs. competitors',
+      icon: Microscope,
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   // Enhanced pricing tiers with more realistic and comprehensive offerings,
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for small businesses and startups';
-      price: billingCycle === 'monthly' ? 99 : 79;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Starter',
+      description: 'Perfect for small businesses and startups',
+      price: billingCycle === 'monthly' ? 99 : 79,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 10o0+ Core Services';
-        'Basic AI Integration';
-        'Standard Support (24/7)';
-        '30-Day Free Trial';
-        'Basic Analytics Dashboard';
-        'Email Support';
-        '99.5% Uptime Guarantee';
-        'Basic Security Features';
-        'API Access (10o00 calls/month)';
-        'Community Support'];
-      popular: false;
-      color: 'from-gray-50o0 to-gray-60o0'};
+        'Access to 10o0+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeBasic Security Features',
+        'API Access (10o00 calls/month)Community Support'],
+      popular: false,
+      color: 'from-gray-50o0 to-gray-60o0'},
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses and teams';
-      price: billingCycle === 'monthly' ? 299 : 239;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Professional',
+      description: 'Ideal for growing businesses and teams',
+      price: billingCycle === 'monthly' ? 299 : 239,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to 20o0+ Advanced Services';
-        'Advanced AI Integration';
-        'Priority Support (24/7)';
-        '60-Day Free Trial';
-        'Advanced Analytics Dashboard';
-        'Phone & Email Support';
-        '99.9% Uptime Guarantee';
-        'Advanced Security Features';
-        'API Access (10,0o00 calls/month)';
-        'Dedicated Account Manager';
-        'Custom Integrations';
-        'Advanced Reporting'];
-      popular: true;
-      color: 'from-purple-50o0 to-cyan-50o0'};
+        'Access to 20o0+ Advanced ServicesAdvanced AI Integration',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics DashboardPhone & Email Support',
+        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'API Access (10,0o00 calls/month)Dedicated Account Manager',
+        'Custom IntegrationsAdvanced Reporting'],
+      popular: true,
+      color: 'from-purple-50o0 to-cyan-50o0'},
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: billingCycle === 'monthly' ? 999 : 799;
-      period: billingCycle === 'monthly' ? '/month' : '/month';
-      savings: billingCycle === 'yearly' ? 'Save 20%' : '';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: billingCycle === 'monthly' ? 999 : 799,
+      period: billingCycle === 'monthly' ? '/month' : '/month',
+      savings: billingCycle === 'yearly' ? 'Save 20%' : '',
       features: [
-        'Access to All 50o0+ Services';
-        'Full AI & Quantum Integration';
-        'Premium Support (24/7)';
-        '90-Day Free Trial';
-        'Enterprise Analytics Suite';
-        'Dedicated Support Team';
-        '99.99% Uptime Guarantee';
-        'Enterprise Security Features';
-        'Unlimited API Access';
-        'Dedicated Success Manager';
-        'Custom Development';
-        'Advanced Compliance';
-        'White-label Solutions';
-        'SLA Guarantees'];
-      popular: false;
+        'Access to All 50o0+ ServicesFull AI & Quantum Integration',
+        'Premium Support (24/7)90-Day Free Trial',
+        'Enterprise Analytics SuiteDedicated Support Team',
+        '99.99% Uptime GuaranteeEnterprise Security Features',
+        'Unlimited API AccessDedicated Success Manager',
+        'Custom DevelopmentAdvanced Compliance',
+        'White-label SolutionsSLA Guarantees'],
+      popular: false,
       color: 'from-blue-50o0 to-indigo-50o0'}
   ],
   // Popular services with pricing,
   const popularServices = [
     {
-      name: 'AI Consciousness Evolution Platform';
-      price: '$24,999/month';
-      description: 'Develop genuine AI consciousness through advanced neural architecture';
-      category: 'AI & Consciousness';
-      features: ['Multi-dimensional consciousness mapping'Emotional intelligence evolution'Self-awareness development'];
-      savings: 'Save 70% vs. competitors'};
+      name: 'AI Consciousness Evolution Platform',
+      price: '$24,999/month',
+      description: 'Develop genuine AI consciousness through advanced neural architecture',
+      category: 'AI & Consciousness',
+      features: ['Multi-dimensional consciousness mapping'Emotional intelligence evolution'Self-awareness development'],
+      savings: 'Save 70% vs. competitors'},
     {
-      name: 'Quantum DNA Computing Platform';
-      price: '$35,999/month';
-      description: 'Breakthrough platform combining quantum computing with DNA-based computation';
-      category: 'Quantum & Biotech';
-      features: ['DNA-based quantum algorithms'Biological quantum entanglement'DNA memory systems'];
-      savings: 'Save 75% vs. competitors'};
+      name: 'Quantum DNA Computing Platform',
+      price: '$35,999/month',
+      description: 'Breakthrough platform combining quantum computing with DNA-based computation',
+      category: 'Quantum & Biotech',
+      features: ['DNA-based quantum algorithms'Biological quantum entanglement'DNA memory systems'],
+      savings: 'Save 75% vs. competitors'},
     {
-      name: 'Space Mining Automation Platform';
-      price: '$45,999/month';
-      description: 'Revolutionary platform for automated asteroid mining and resource extraction';
-      category: 'Space Technology';
-      features: ['Asteroid identification and mapping'Automated mining operations'Resource extraction algorithms'];
-      savings: 'Save 80% vs. competitors'};
+      name: 'Space Mining Automation Platform',
+      price: '$45,999/month',
+      description: 'Revolutionary platform for automated asteroid mining and resource extraction',
+      category: 'Space Technology',
+      features: ['Asteroid identification and mapping'Automated mining operations'Resource extraction algorithms'],
+      savings: 'Save 80% vs. competitors'},
     {
-      name: 'AI Business Intelligence Suite';
-      price: '$299/month';
-      description: 'Comprehensive business intelligence platform powered by artificial intelligence';
-      category: 'Micro SAAS';
-      features: ['AI-powered analytics'Predictive insights'Automated reporting'];
+      name: 'AI Business Intelligence Suite',
+      price: '$299/month',
+      description: 'Comprehensive business intelligence platform powered by artificial intelligence',
+      category: 'Micro SAAS',
+      features: ['AI-powered analytics'Predictive insights'Automated reporting'],
       savings: 'Save 50% vs. competitors'}
   ],
   return (

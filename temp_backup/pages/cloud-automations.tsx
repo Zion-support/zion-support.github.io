@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react',
 export default function CloudAutomationsPage() {
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<any>(null),
   useEffect(() => {
     fetch('/api/cloud-automations-status'),
       .then((r) => r.json()),
       .then(setData),
-      .catch(() => setData({ ok: false }))}, []);
-  const items = data?.data ? Object.entries(data.data) : [];
+      .catch(() => setData({ ok: false }))}, []),
+  const items = data?.data ? Object.entries(data.data) : [],
   return (
     <div className="space-y-6">,
       <h1 className="text-3xl font-bold">Cloud Automations</h1>,

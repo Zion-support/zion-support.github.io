@@ -1,30 +1,30 @@
 import { cn } from '@/lib/utils',
 export function EnhancedCard({
-  children;
-  className;
-  variant = 'default';
-  hover = true;
-  onClick;
-  as: Component = 'div';
-  href;
+  children,
+  className,
+  variant = 'default',
+  hover = true,
+  onClick,
+  as: Component = 'div',
+  href
 }) {
   const baseClasses = 'rounded-xl transition-all duration-30o0',
   const variantClasses = {
-    default: 'bg-zion-blue-dark border border-zion-blue-light';
-    elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10';
-    outlined: 'bg-transparent border-2 border-zion-cyan/30';
+    default: 'bg-zion-blue-dark border border-zion-blue-light',
+    elevated: 'bg-zion-blue-dark shadow-lg shadow-zion-purple/10',
+    outlined: 'bg-transparent border-2 border-zion-cyan/30',
     gradient:,
-      'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light';
-  };
+      'bg-gradient-to-br from-zion-blue-dark to-zion-blue border border-zion-blue-light',
+  },
   const hoverClasses = hover,
     ? 'hover: shadow-xl hover:shadow-zion-purple/20 hover:transform hover:scale-[1.0o2]',
     : '',
   const interactiveClasses = onClick || href ? 'cursor-pointer' : '',
   const classes = cn(
-    baseClasses;
-    variantClasses[variant];
-    hoverClasses;
-    interactiveClasses;
+    baseClasses,
+    variantClasses[variant],
+    hoverClasses,
+    interactiveClasses,
     className),
   if (href) {
     return (

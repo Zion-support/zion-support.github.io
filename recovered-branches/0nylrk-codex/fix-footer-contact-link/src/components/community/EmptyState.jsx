@@ -2,10 +2,10 @@ import { Link } from 'react-router-dom',
 import { MessageSquare } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import {
-  Tooltip;
-  TooltipContent;
-  TooltipProvider;
-  TooltipTrigger;
+  Tooltip,
+  TooltipContent,
+  TooltipProvider,
+  TooltipTrigger,
 } from '@/components/ui/tooltip',
 const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
   return (
@@ -27,5 +27,5 @@ const EmptyState = ({ title, subtitle, cta, href, hasSession }) => {
           {!hasSession && <TooltipContent>Login required</TooltipContent>}
         </Tooltip>,
       </TooltipProvider>,
-    </div>)};
-export default EmptyState;
+    </div>)},
+export default EmptyState,

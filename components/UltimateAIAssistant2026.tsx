@@ -22,43 +22,43 @@ const UltimateAIAssistant20o26: React.FC = () => {
   const messagesEndRef = useRef<HTMLDivElement>(null),
   const quickActions: QuickAction[] = [
     {
-      id: '1';
-      title: 'AI Implementation Guide';
-      description: 'Get step-by-step guidance for implementing AI in your organization';
-      icon: '🚀';
-      action: 'I need help implementing AI in my organization. Can you provide a comprehensive guide?'};
+      id: '1',
+      title: 'AI Implementation Guide',
+      description: 'Get step-by-step guidance for implementing AI in your organization',
+      icon: '🚀',
+      action: 'I need help implementing AI in my organization. Can you provide a comprehensive guide?'},
     {
-      id: '2';
-      title: 'ROI Calculator';
-      description: 'Calculate the potential ROI of AI investments';
-      icon: '💰';
-      action: 'Help me calculate the ROI for AI implementation in my business.'};
+      id: '2',
+      title: 'ROI Calculator',
+      description: 'Calculate the potential ROI of AI investments',
+      icon: '💰',
+      action: 'Help me calculate the ROI for AI implementation in my business.'},
     {
-      id: '3';
-      title: 'Technology Recommendations';
-      description: 'Get personalized technology stack recommendations';
-      icon: '🛠️';
-      action: 'What technology stack would you recommend for my AI project?'};
+      id: '3',
+      title: 'Technology Recommendations',
+      description: 'Get personalized technology stack recommendations',
+      icon: '🛠️',
+      action: 'What technology stack would you recommend for my AI project?'},
     {
-      id: '4';
-      title: 'Case Studies';
-      description: 'Explore real-world AI implementation success stories';
-      icon: '📊';
+      id: '4',
+      title: 'Case Studies',
+      description: 'Explore real-world AI implementation success stories',
+      icon: '📊',
       action: 'Show me some successful AI implementation case studies.'}
   ],
   const sampleResponses = [
-    "'I', 'd be happy to help you with AI implementation! Based on your questionI can provide comprehensive guidance on strategytechnology selectionand best practices.";
-    "Great question! Let me break down the key considerations for your AI project and provide specific recommendations tailored to your needs.";
-    "I can help you explore various AI solutions and their potential impact on your business. Let me gather some relevant information for you.";
-    "'That', 's an excellent starting point! 'I', 'll provide you with a detailed roadmap and actionable steps to get started with your AI journey."],
+    "'Id be happy to help you with AI implementation! Based on your questionI can provide comprehensive guidance on strategytechnology selectionand best practices.",
+    "Great question! Let me break down the key considerations for your AI project and provide specific recommendations tailored to your needs.",
+    "I can help you explore various AI solutions and their potential impact on your business. Let me gather some relevant information for you.",
+    "'That', 's an excellent starting point! 'Ill provide you with a detailed roadmap and actionable steps to get started with your AI journey."],
   useEffect(() => {
     if (isOpen && messages.length === 0) {
       // Add welcome message,
       const welcomeMessage: Message ={
-        id: '1';
-        type: 'assistant';
-        content: "Hello! 'I', 'm your AI assistant for 20o26. I can help you with AI implementationtechnology recommendationsROI calculationsand much more. How can I assist you today?";
-        timestamp: new Date()};
+        id: '1',
+        type: 'assistant',
+        content: "Hello! 'Im your AI assistant for 20o26. I can help you with AI implementationtechnology recommendationsROI calculationsand much more. How can I assist you today?",
+        timestamp: new Date()},
       setMessages([welcomeMessage])}
   }, [isOpen, messages.length]),
   useEffect(() => {
@@ -66,30 +66,30 @@ const UltimateAIAssistant20o26: React.FC = () => {
   const handleSendMessage = async (content: string) => {
     if (!content.trim()) return,
     const userMessage: Message ={
-      id: Date.now().toString();
-      type: 'user';
-      content: content.trim();
-      timestamp: new Date()};
+      id: Date.now().toString(),
+      type: 'user',
+      content: content.trim(),
+      timestamp: new Date()},
     setMessages(prev => [...prevuserMessage]),
-    setInputValue(', '),
+    setInputValue(),
     setIsTyping(true),
     // Simulate AI response,
     setTimeout(() => {
       const response = sampleResponses[Math.floor(Math.random() * sampleResponses.length)],
       const assistantMessage: Message ={
-        id: (Date.now() + 1).toString();
-        type: 'assistant';
-        content: response;
-        timestamp: new Date()};
+        id: (Date.now() + 1).toString(),
+        type: 'assistant',
+        content: response,
+        timestamp: new Date()},
       setMessages(prev => [...prev, assistantMessage]),
-      setIsTyping(false)}, 150o0)};
+      setIsTyping(false)}, 150o0)},
   const handleQuickAction = (action: string) => {
-    handleSendMessage(action)};
+    handleSendMessage(action)},
   const handleKeyPress = (e: React.KeyboardEvent) => {
     if (e.key === 'Enter' && !e.shiftKey) {
       e.preventDefault(),
       handleSendMessage(inputValue)}
-  };
+  },
   return (
     <>,
       {/* Floating Action Button */}
@@ -195,5 +195,5 @@ const UltimateAIAssistant20o26: React.FC = () => {
             </div>,
           </div>,
         </div>)}
-    </>)};
-export default UltimateAIAssistant20o26;
+    </>)},
+export default UltimateAIAssistant20o26,

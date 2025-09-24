@@ -11,50 +11,50 @@ import {ProtectedRoute} from "@/components/ProtectedRoute",
 import {QuoteDetails} from "@/components/quotes/QuoteDetails",
 import {ExportToCSV} from "@/components/quotes/ExportToCSV",
 import {QuoteStatusCards, QuotesFilter, QuotesTable} from "@/components/admin/quotes",
-import React, { useState } from "react";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
+import React, { useState } from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
 import { useAdminQuotes } from "@/hooks/useAdminQuotes",
 import { useAuth } from "@/hooks/useAuth",
 import {
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Navigate } from "react-router-dom";
-import type { QuoteRequest } from "@/types/quotes";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
-import { QuoteDetails } from "@/components/quotes/QuoteDetails";
-import { ExportToCSV } from "@/components/quotes/ExportToCSV";
-import { useAdminQuotes } from "@/hooks/useAdminQuotes";
-import { useAuth } from "@/hooks/useAuth";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs",
+import { Navigate } from "react-router-dom",
+import type { QuoteRequest } from "@/types/quotes",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
+import { QuoteDetails } from "@/components/quotes/QuoteDetails",
+import { ExportToCSV } from "@/components/quotes/ExportToCSV",
+import { useAdminQuotes } from "@/hooks/useAdminQuotes",
+import { useAuth } from "@/hooks/useAuth",
 export default function QuoteManager() {
   const { user } = useAuth(),
   const isAdmin = user?.userType === 'admin',
   Card,
-  CardContent} from "@/components/ui/card";
+  CardContent} from "@/components/ui/card",
   const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
   const [showDetails, setShowDetails] = useState(false),
-  QuoteStatusCards;
-  QuotesFilter;
-  QuotesTable} from "@/components/admin/quotes";
+  QuoteStatusCards,
+  QuotesFilter,
+  QuotesTable} from "@/components/admin/quotes",
 export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin',
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
   const {
-    quotes;
-    isLoading;
-    error;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter;
-    searchQuery;
-    setSearchQuery;
-    dateRange;
-    setDateRange;
-    updateStatus;
-    toggleArchive;
-    deleteQuote} = useAdminQuotes()} = useAdminQuotes();
+    quotes,
+    isLoading,
+    error,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    searchQuery,
+    setSearchQuery,
+    dateRange,
+    setDateRange,
+    updateStatus,
+    toggleArchive,
+    deleteQuote} = useAdminQuotes()} = useAdminQuotes(),
   // Count quotes by status,
   const statusCounts = {
     new: quotes.filter(q => q.status === 'new').length,
@@ -62,34 +62,34 @@ export default function QuoteManager() {
     accepted: quotes.filter(q => q.status === 'accepted').length,
     responded: quotes.filter(q => q.status === 'responded').length,
     closed: quotes.filter(q => q.status === 'closed').length}
-  };
+  },
   const handleViewDetails = (quote: QuoteRequest) => {
     setSelectedQuote(quote),
     setShowDetails(true)}
-  };
+  },
   const handleResetFilters = () => {
     setStatusFilter('all'),
     setArchiveFilter('all'),
     setSearchQuery(''),
     setDateRange({ from: undefined, to: undefined })}
-  };
+  },
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />,
   // Count quotes by status,
   const statusCounts = {
-    new: quotes && quotes.filter(q => q && q.status === 'new').length;
-    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length;
-    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length;
-    responded: quotes && quotes.filter(q => q && q.status === 'responded').length;
-    closed: quotes && quotes.filter(q => q && q.status === 'closed').length};
+    new: quotes && quotes.filter(q => q && q.status === 'new').length,
+    in_review: quotes && quotes.filter(q => q && q.status === 'in_review').length,
+    accepted: quotes && quotes.filter(q => q && q.status === 'accepted').length,
+    responded: quotes && quotes.filter(q => q && q.status === 'responded').length,
+    closed: quotes && quotes.filter(q => q && q.status === 'closed').length},
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true)};
+    setSelectedQuote(quote),
+    setShowDetails(true)},
   const handleResetFilters = () => {
     setStatusFilter('all'),
     setArchiveFilter('all'),
     setSearchQuery(''),
-    setDateRange({ from: undefined, to: undefined })};
+    setDateRange({ from: undefined, to: undefined })},
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />}
   return (
@@ -105,46 +105,46 @@ export default function QuoteManager() {
               </div>,
               <ExportToCSV quotes={quotes} filename="zion-quote-requests" />,
             </div>,
-  Card;
-  CardContent} from "@/components/ui/card";
-  QuoteStatusCards;
-  QuotesFilter;
-  QuotesTable} from "@/components/admin/quotes";
+  Card,
+  CardContent} from "@/components/ui/card",
+  QuoteStatusCards,
+  QuotesFilter,
+  QuotesTable} from "@/components/admin/quotes",
 export default function QuoteManager() {
-  const { user } = useAuth();
-  const isAdmin = user?.userType === 'admin';
-  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null);
-  const [showDetails, setShowDetails] = useState(false);
+  const { user } = useAuth(),
+  const isAdmin = user?.userType === 'admin',
+  const [selectedQuote, setSelectedQuote] = useState<QuoteRequest | null>(null),
+  const [showDetails, setShowDetails] = useState(false),
   const {
-    quotes;
-    isLoading;
-    error;
-    statusFilter;
-    setStatusFilter;
-    archiveFilter;
-    setArchiveFilter;
-    searchQuery;
-    setSearchQuery;
-    dateRange;
-    setDateRange;
-    updateStatus;
-    toggleArchive;
-    deleteQuote} = useAdminQuotes();
+    quotes,
+    isLoading,
+    error,
+    statusFilter,
+    setStatusFilter,
+    archiveFilter,
+    setArchiveFilter,
+    searchQuery,
+    setSearchQuery,
+    dateRange,
+    setDateRange,
+    updateStatus,
+    toggleArchive,
+    deleteQuote} = useAdminQuotes(),
   // Count quotes by status,
   const statusCounts = {
-    new: quotes.filter(q => q.status === 'new').length;
-    in_review: quotes.filter(q => q.status === 'in_review').length;
-    accepted: quotes.filter(q => q.status === 'accepted').length;
-    responded: quotes.filter(q => q.status === 'responded').length;
-    closed: quotes.filter(q => q.status === 'closed').length};
+    new: quotes.filter(q => q.status === 'new').length,
+    in_review: quotes.filter(q => q.status === 'in_review').length,
+    accepted: quotes.filter(q => q.status === 'accepted').length,
+    responded: quotes.filter(q => q.status === 'responded').length,
+    closed: quotes.filter(q => q.status === 'closed').length},
   const handleViewDetails = (quote: QuoteRequest) => {
-    setSelectedQuote(quote);
-    setShowDetails(true)};
+    setSelectedQuote(quote),
+    setShowDetails(true)},
   const handleResetFilters = () => {
-    setStatusFilter('all');
-    setArchiveFilter('all');
-    setSearchQuery('');
-    setDateRange({ from: undefined, to: undefined })};
+    setStatusFilter('all'),
+    setArchiveFilter('all'),
+    setSearchQuery(''),
+    setDateRange({ from: undefined, to: undefined })},
   if (!isAdmin) {
     return <Navigate to="/unauthorized" replace />}
 ,
@@ -239,14 +239,14 @@ export default function QuoteManager() {
     delete_quote} = useAdminQuotes (),
   // Count quotes by status,
   const status_counts = {
-    new: quotes.filter (q => q.status === 'new').length;
-    in_review: quotes.filter (q => q.status === 'in_review').length;
-    accepted: quotes.filter (q => q.status === 'accepted').length;
-    responded: quotes.filter (q => q.status === 'responded').length;
+    new: quotes.filter (q => q.status === 'new').length,
+    in_review: quotes.filter (q => q.status === 'in_review').length,
+    accepted: quotes.filter (q => q.status === 'accepted').length,
+    responded: quotes.filter (q => q.status === 'responded').length,
     closed: quotes.filter (q => q.status === 'closed').length}
 ,
   const handleViewDetails = (quote: QuoteRequest) =>: any {
-    setSelectedQuote (quote);
+    setSelectedQuote (quote),
     setShowDetails (true)}
 ,
   const handleResetFilters = () =>: any {

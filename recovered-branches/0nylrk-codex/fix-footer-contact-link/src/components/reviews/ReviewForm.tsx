@@ -4,12 +4,12 @@ import { useForm } from 'react-hook-form',
 import { Button } from '@/components/ui/button',
 import { Textarea } from '@/components/ui/textarea',
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
-  FormMessage;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
+  FormMessage,
 } from '@/components/ui/form',
 import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group',
 import { Switch } from '@/components/ui/switch',
@@ -32,45 +32,45 @@ interface ReviewFormProps {
   isSubmitting: boolean}
 ,
 export function ReviewForm({
-  projectId;
-  revieweeId;
-  revieweeName;
-  onSubmit;
-  defaultValues;
-  isSubmitting;
+  projectId,
+  revieweeId,
+  revieweeName,
+  onSubmit,
+  defaultValues,
+  isSubmitting,
 }: ReviewFormProps) {
   const [hoveredStarsetHoveredStar] = useState<number>(0),
   const form = useForm<ReviewFormValues>({
     defaultValues: defaultValues,
       ? {
-          rating: defaultValues.rating;
-          review_text: defaultValues.review_text;
-          communication_rating: defaultValues.communication_rating;
-          quality_rating: defaultValues.quality_rating;
-          timeliness_rating: defaultValues.timeliness_rating;
-          would_work_again: defaultValues.would_work_again;
-          is_anonymous: defaultValues.is_anonymous;
+          rating: defaultValues.rating,
+          review_text: defaultValues.review_text,
+          communication_rating: defaultValues.communication_rating,
+          quality_rating: defaultValues.quality_rating,
+          timeliness_rating: defaultValues.timeliness_rating,
+          would_work_again: defaultValues.would_work_again,
+          is_anonymous: defaultValues.is_anonymous
         }
       : {
-          rating: 0;
-          review_text: '';
-          communication_rating: undefined;
-          quality_rating: undefined;
-          timeliness_rating: undefined;
-          would_work_again: undefined;
-          is_anonymous: false;
-        };
+          rating: 0,
+          review_text: '',
+          communication_rating: undefined,
+          quality_rating: undefined,
+          timeliness_rating: undefined,
+          would_work_again: undefined,
+          is_anonymous: false
+        },
   }),
   const handleSubmit = async (values: ReviewFormValues) => {
     const formattedData = {
-      ...values;
-      project_id: projectId;
-      reviewee_id: revieweeId;
-    };
+      ...values,
+      project_id: projectId,
+      reviewee_id: revieweeId
+    },
     const success = await onSubmit(formattedData),
     if (success) {
       form.reset()}
-  };
+  },
   const watchRating = form.watch('rating'),
   return (
     <Form {...form}>,
@@ -114,11 +114,11 @@ export function ReviewForm({
           control={form.control}
           name='review_text',
           rules={{
-            required: 'Please provide feedback';
+            required: 'Please provide feedback',
             minLength: {
-              value: 20;
-              message: 'Review must be at least 20 characters';
-            };
+              value: 20,
+              message: 'Review must be at least 20 characters'
+            },
           }}
           render={({ field }) => (
             <FormItem>,

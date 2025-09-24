@@ -6,8 +6,8 @@ interface EnhancedFuturisticBackgroundProps {
   children: React.ReactNode}
 ,
 export default function EnhancedFuturisticBackground({
-  variant = 'quantum-advanced';
-  intensity = 'medium';
+  variant = 'quantum-advanced',
+  intensity = 'medium',
   children}: EnhancedFuturisticBackgroundProps) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | null>(null),
@@ -29,25 +29,25 @@ export default function EnhancedFuturisticBackground({
       color: string,
       type: 'quantum' | 'holographic' | 'neural' | 'field'}> = [],
     const colors ={
-      quantum: ['#0o0ffff', '#0o080ff', '#80o00ff', '#ff0o080'];
-      holographic: ['#ff0o0ff', '#0o0ffff', '#ffff0o0', '#ff80o00'];
-      neural: ['#0o0ff80', '#80o00ff', '#ff0o080', '#0o0ffff'];
-      field: ['#80ff0o0', '#ff80o00', '#0o080ff', '#ff0o080']};
+      quantum: ['#0o0ffff#0o080ff', '#80o00ff#ff0o080'],
+      holographic: ['#ff0o0ff#0o0ffff', '#ffff0o0#ff80o00'],
+      neural: ['#0o0ff80#80o00ff', '#ff0o080#0o0ffff'],
+      field: ['#80ff0o0#ff80o00', '#0o080ff#ff0o080']},
     const intensityMultiplier ={
-      low: 0.5;
-      medium: 1;
-      high: 1.5};
+      low: 0.5,
+      medium: 1,
+      high: 1.5},
     const particleCount = Math.floor(10o0 * intensityMultiplier[intensity]),
     // Initialize particles,
     for (let i = 0, i < particleCount, i++) {
       particles.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * intensityMultiplier[intensity];
-        vy: (Math.random() - 0.5) * 2 * intensityMultiplier[intensity];
-        size: Math.random() * 3 + 1;
-        opacity: Math.random() * 0.8 + 0.2;
-        color: colors[variant === 'quantum-advanced' ? 'quantum' : variant === 'holographic-advanced' ? 'holographic' : variant === 'neural-network' ? 'neural' : 'field'][Math.floor(Math.random() * 4)];
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * intensityMultiplier[intensity],
+        vy: (Math.random() - 0.5) * 2 * intensityMultiplier[intensity],
+        size: Math.random() * 3 + 1,
+        opacity: Math.random() * 0.8 + 0.2,
+        color: colors[variant === 'quantum-advanced' ? 'quantum' : variant === 'holographic-advanced' ? 'holographic' : variant === 'neural-network' ? 'neural' : 'field'][Math.floor(Math.random() * 4)],
         type: variant === 'quantum-advanced' ? 'quantum' : variant === 'holographic-advanced' ? 'holographic' : variant === 'neural-network' ? 'neural' : 'field'})}
 ,
     // Quantum entanglement effect,
@@ -68,7 +68,7 @@ export default function EnhancedFuturisticBackground({
           }
         }
       }
-    };
+    },
     // Neural network connections,
     const createNeuralConnections = () => {
       if (variant === 'neural-network') {
@@ -88,7 +88,7 @@ export default function EnhancedFuturisticBackground({
           }
         }
       }
-    };
+    },
     // Holographic interference patterns,
     const createHolographicPatterns = () => {
       if (variant === 'holographic-advanced') {
@@ -100,7 +100,7 @@ export default function EnhancedFuturisticBackground({
           ctx.fillStyle = `rgba(255, 0, 255, ${particles[i].opacity * 0.6})`,
           ctx.fill()}
       }
-    };
+    },
     // Quantum field fluctuations,
     const createQuantumField = () => {
       if (variant === 'quantum-field') {
@@ -117,7 +117,7 @@ export default function EnhancedFuturisticBackground({
           }
         }
       }
-    };
+    },
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
       // Update and draw particles,
@@ -157,19 +157,19 @@ export default function EnhancedFuturisticBackground({
           ctx.stroke()}
       }
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     return () => {
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
     window.addEventListener('resize', handleResize),
     return () => {
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, []),
   const getBackgroundClasses = () => {
     const baseClasses = 'relative min-h-screen overflow-hidden',
@@ -190,7 +190,7 @@ export default function EnhancedFuturisticBackground({
         return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-orange-90o0 to-red-90o0', className),
       default:,
         return cn(baseClasses, 'bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-purple-90o0', className)}
-  };
+  },
   return (
     <div className="relative min-h-screen bg-black overflow-hidden">,
       <canvas

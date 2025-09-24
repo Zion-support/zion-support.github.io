@@ -8,7 +8,7 @@ interface UltraFuturisticBackground2026Props {
 ,
 const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props> = ({
   children,
-  className = ', '}) => {
+  className = }) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
   const [isReducedMotion, setIsReducedMotion] = useState(false),
@@ -18,7 +18,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
     const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)'),
     setIsReducedMotion(mediaQuery.matches),
     const handleChange = (event: MediaQueryListEvent) => {
-      setIsReducedMotion(event.matches)};
+      setIsReducedMotion(event.matches)},
     mediaQuery.addEventListener('change', handleChange),
     return () => mediaQuery.removeEventListener('change', handleChange)}, []),
   // Intersection Observer for performance,
@@ -26,7 +26,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
     if (typeof window === 'undefined' || !('IntersectionObserver' in window)) return,
     const observer = new window.IntersectionObserver(
       ([entry]) => {
-        setIsVisible(entry.isIntersecting)};
+        setIsVisible(entry.isIntersecting)},
       { threshold: 0.1 }
     ),
     if (canvasRef.current) {
@@ -48,29 +48,29 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         return {
           primary: '#3b82f6',   // Blue,
           secondary: '#8b5cf6',  // Purple,
-          accent: '#06b6d4'      // Cyan};
+          accent: '#06b6d4'      // Cyan},
       case 'cyber':,
         return {
           primary: '#10b981',    // Green,
           secondary: '#f59e0b',  // Amber,
-          accent: '#ef4444'      // Red};
+          accent: '#ef4444'      // Red},
       case 'neon':,
         return {
           primary: '#ec4899',    // Pink,
           secondary: '#f97316',  // Orange,
-          accent: '#8b5cf6'      // Purple};
+          accent: '#8b5cf6'      // Purple},
       default: ,
         return {
-          primary: '#3b82f6';
-          secondary: '#8b5cf6';
-          accent: '#06b6d4'};
+          primary: '#3b82f6',
+          secondary: '#8b5cf6',
+          accent: '#06b6d4'},
     }
   }, []),
   // Memoized particle system configuration,
   const particleConfig = useMemo(() => ({
-    maxParticles: isReducedMotion ? 50 : 150;
-    particleSize: { min: 1, max: 3 };
-    speed: { min: 0.5, max: 2.0 };
+    maxParticles: isReducedMotion ? 50 : 150,
+    particleSize: { min: 1, max: 3 },
+    speed: { min: 0.5, max: 2.0 },
     opacity: { min: 0.1, max: 0.8 }
   }), [isReducedMotion]),
   // Initialize canvas and animation,
@@ -87,7 +87,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
       canvas.height = rect.height * dpr,
       ctx.scale(dpr, dpr),
       canvas.style.width = `${rect.width}px`,
-      canvas.style.height = `${rect.height}px`};
+      canvas.style.height = `${rect.height}px`},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle system,
@@ -140,31 +140,31 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           break}
 ,
       return {
-        x;
-        y;
-        vx;
-        vy;
-        size: Math.random() * 3 + 1;
-        color: colors[Math.floor(Math.random() * colors.length)];
-        alpha: Math.random() * 0.8 + 0.2;
-        life: 0;
-        maxLife: Math.random() * 200 + 100};
-    };
+        x,
+        y,
+        vx,
+        vy,
+        size: Math.random() * 3 + 1,
+        color: colors[Math.floor(Math.random() * colors.length)],
+        alpha: Math.random() * 0.8 + 0.2,
+        life: 0,
+        maxLife: Math.random() * 200 + 100},
+    },
     // Initialize particles,
     const initParticles = () => {
       particles.length = 0,
       for (let i = 0, i < particleConfig.maxParticles, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * particleConfig.speed.max * intensityValue;
-          vy: (Math.random() - 0.5) * particleConfig.speed.max * intensityValue;
-          size: Math.random() * (particleConfig.particleSize.max - particleConfig.particleSize.min) + particleConfig.particleSize.min;
-          opacity: Math.random() * (particleConfig.opacity.max - particleConfig.opacity.min) + particleConfig.opacity.min;
-          color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)];
-          life: Math.random() * 100;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * particleConfig.speed.max * intensityValue,
+          vy: (Math.random() - 0.5) * particleConfig.speed.max * intensityValue,
+          size: Math.random() * (particleConfig.particleSize.max - particleConfig.particleSize.min) + particleConfig.particleSize.min,
+          opacity: Math.random() * (particleConfig.opacity.max - particleConfig.opacity.min) + particleConfig.opacity.min,
+          color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)],
+          life: Math.random() * 100,
           maxLife: 100})}
-    };
+    },
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0canvas.widthcanvas.height),
@@ -193,7 +193,7 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         ctx.fill(),
         // Draw glow effect,
         const gradient = ctx.createRadialGradient(
-          particle.xparticle.y0;
+          particle.xparticle.y0,
           particle.xparticle.yparticle.size * 3),
         gradient.addColorStop(0particle.color),
         gradient.addColorStop(1'transparent'),
@@ -236,18 +236,18 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         ctx.lineTo(canvas.widthy),
         ctx.stroke()}
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
-    window.addEventListener(', 'resize', 'handleResize),
+      canvas.height = window.innerHeight},
+    window.addEventListener(resize', 'handleResize),
     initParticles(),
     animate(),
     return () => {
-      window.removeEventListener(', 'resize', 'handleResize),
+      window.removeEventListener(resize', 'handleResize),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }[]),
   return (
     <div className={`relative min-h-screen overflow-hidden ${className}`}>,
@@ -262,42 +262,42 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/20",
           animate={{
-            rotate: 360;
-            scale: [1.21];
+            rotate: 360,
+            scale: [1.21],
             opacity: [0.30.60.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "linear"}}
         />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-pink-400/20 rounded-full",
           animate={{
-            y: [0-20];
+            y: [0-20],
             opacity: [0.20.50.2]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute bottom-32 left-32 w-40 h-40 border border-purple-400/20 transform rotate-45",
           animate={{
-            rotate: [0180360];
+            rotate: [0180360],
             scale: [1.1]}}
           transition={{
-            duration: 12;
-            repeat: Infinity;
+            duration: 12,
+            repeat: Infinity,
             ease: "linear"}}
         />,
         <motion.div,
           className="absolute bottom-20 right-20 w-28 h-28 border border-green-400/20 transform rotate-12",
           animate={{
-            rotate: [0-180-360];
+            rotate: [0-180-360],
             opacity: [0.40.70.4]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "linear"}}
         />,
       </div>,
@@ -308,8 +308,8 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           animate={{
             x: ['-100%'100%']}}
           transition={{
-            duration: 15;
-            repeat: Infinity;
+            duration: 15,
+            repeat: Infinity,
             ease: "linear"}}
         />,
         <motion.div,
@@ -317,8 +317,8 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
           animate={{
             y: ['-100%'100%']}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
         />,
       </div>,
@@ -331,6 +331,6 @@ const UltraFuturisticBackground2026: React.FC<UltraFuturisticBackground2026Props
         <div className="absolute inset-0 bg-gradient-to-br from-transparent via-cyan-400/2 to-transparent" />,
         <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-purple-400/2 to-transparent" />,
       </div>,
-    </div>)};
-export default UltraFuturisticBackground2026;
+    </div>)},
+export default UltraFuturisticBackground2026,
 })

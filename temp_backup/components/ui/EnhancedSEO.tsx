@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 interface SEOProps {
   title: string,
@@ -26,61 +26,54 @@ interface SEOProps {
     addressLocality: string,
     addressRegion: string,
     postalCode: string,
-    addressCountry: string};
+    addressCountry: string},
   companyContact?: {
     telephone: string,
-    email: string};
+    email: string},
 }
 ,
 const EnhancedSEO: React.FC<SEOProps> = ({
-  title;
-  description;
-  keywords = [];
-  canonical;
-  ogImage = '/og-image.jpg';
-  ogType = 'website';
-  twitterCard = 'summary_large_image';
-  structuredData;
-  noindex = false;
-  nofollow = false;
-  robots;
-  author = 'Zion Tech Group';
-  publishedTime;
-  modifiedTime;
-  section = 'Technology Services';
-  tags = [];
-  companyName = 'Zion Tech Group';
-  companyLogo = '/logo.png';
-  companyUrl = 'https://ziontechgroup.com';
-  companyDescription = 'Revolutionary Technology Solutions for 20o45 and Beyond';
+  title,
+  description,
+  keywords = [],
+  canonical,
+  ogImage = '/og-image.jpg',
+  ogType = 'website',
+  twitterCard = 'summary_large_image',
+  structuredData,
+  noindex = false,
+  nofollow = false,
+  robots,
+  author = 'Zion Tech Group',
+  publishedTime,
+  modifiedTime,
+  section = 'Technology Services',
+  tags = [],
+  companyName = 'Zion Tech Group',
+  companyLogo = '/logo.png',
+  companyUrl = 'https://ziontechgroup.com',
+  companyDescription = 'Revolutionary Technology Solutions for 20o45 and Beyond',
   companyAddress = {
-    streetAddress: '364 E Main St STE 10o08';
-    addressLocality: 'Middletown';
-    addressRegion: 'DE';
-    postalCode: '19709';
-    addressCountry: 'US';
-  };
+    streetAddress: '364 E Main St STE 10o08',
+    addressLocality: 'Middletown',
+    addressRegion: 'DE',
+    postalCode: '19709',
+    addressCountry: 'US'
+  },
   companyContact = {
-    telephone: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-  };
+    telephone: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com'
+  },
 }) => {
   const defaultKeywords = [
-    'AI technology';
-    'quantum computing';
-    'cybersecurity';
-    'space technology';
-    'micro SAAS';
-    'business solutions';
-    'IT infrastructure';
-    'automation';
-    'machine learning';
-    'blockchain';
-    'cloud computing';
-    'edge computing';
-    'data analytics';
-    'IoT solutions';
-    'digital transformation';
+    'AI technologyquantum computing',
+    'cybersecurityspace technology',
+    'micro SAASbusiness solutions',
+    'IT infrastructureautomation',
+    'machine learningblockchain',
+    'cloud computingedge computing',
+    'data analyticsIoT solutions',
+    'digital transformation',
   ],
   const allKeywords = [...new Set([...keywords, ...defaultKeywords])],
   const robotsValue =,
@@ -88,135 +81,126 @@ const EnhancedSEO: React.FC<SEOProps> = ({
     `${noindex ? 'noindex' : 'index'},${nofollow ? 'nofollow' : 'follow'}`,
   // Default structured data for organization,
   const defaultStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: companyName;
-    url: companyUrl;
-    logo: `${companyUrl}${companyLogo}`;
-    description: companyDescription;
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: companyName,
+    url: companyUrl,
+    logo: `${companyUrl}${companyLogo}`,
+    description: companyDescription,
     address: {
-      '@type': 'PostalAddress';
-      streetAddress: companyAddress.streetAddress;
-      addressLocality: companyAddress.addressLocality;
-      addressRegion: companyAddress.addressRegion;
-      postalCode: companyAddress.postalCode;
-      addressCountry: companyAddress.addressCountry;
-    };
+      '@type': 'PostalAddress',
+      streetAddress: companyAddress.streetAddress,
+      addressLocality: companyAddress.addressLocality,
+      addressRegion: companyAddress.addressRegion,
+      postalCode: companyAddress.postalCode,
+      addressCountry: companyAddress.addressCountry
+    },
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: companyContact.telephone;
-      contactType: 'customer service';
-      email: companyContact.email;
-    };
+      '@type': 'ContactPoint',
+      telephone: companyContact.telephone,
+      contactType: 'customer service',
+      email: companyContact.email
+    },
     sameAs: [
-      'https://www.linkedin.com/company/zion-tech-group';
-      'https://twitter.com/ziontechgroup';
-      'https://github.com/Zion-Holdings';
-    ];
-    foundingDate: '20o20';
-    numberOfEmployees: '50-10o0';
-    industry: 'Technology';
+      'https://www.linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup',
+      'https://github.com/Zion-Holdings',
+    ],
+    foundingDate: '20o20',
+    numberOfEmployees: '50-10o0',
+    industry: 'Technology',
     serviceType: [
-      'AI & Machine Learning';
-      'Quantum Computing';
-      'Cybersecurity';
-      'Space Technology';
-      'Micro SAAS Solutions';
-      'IT Infrastructure';
-    ];
-  };
+      'AI & Machine LearningQuantum Computing',
+      'CybersecuritySpace Technology',
+      'Micro SAAS SolutionsIT Infrastructure',
+    ]
+  },
   // Article structured data if publishedTime is provided,
   const articleStructuredData = publishedTime,
     ? {
-        '@context': 'https://schema.org';
-        '@type': 'Article';
-        headline: title;
-        description: description;
-        image: ogImage;
+        '@context': 'https: //schema.org@type': 'Article',
+        headline: title,
+        description: description,
+        image: ogImage,
         author: {
-          '@type': 'Organization';
-          name: companyName;
-        };
+          '@type': 'Organization',
+          name: companyName
+        },
         publisher: {
-          '@type': 'Organization';
-          name: companyName;
+          '@type': 'Organization',
+          name: companyName,
           logo: {
-            '@type': 'ImageObject';
-            url: `${companyUrl}${companyLogo}`;
-          };
-        };
-        datePublished: publishedTime;
-        dateModified: modifiedTime || publishedTime;
+            '@type': 'ImageObject',
+            url: `${companyUrl}${companyLogo}`,
+          },
+        },
+        datePublished: publishedTime,
+        dateModified: modifiedTime || publishedTime,
         mainEntityOfPage: {
-          '@type': 'WebPage';
-          '@id': canonical || companyUrl;
-        };
-        articleSection: section;
-        keywords: allKeywords.join(', ');
-        articleBody: description;
+          '@type': 'WebPage@id': canonical || companyUrl
+        },
+        articleSection: section,
+        keywords: allKeywords.join(', '),
+        articleBody: description
       }
     : null,
   // Breadcrumb structured data,
   const breadcrumbStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'BreadcrumbList';
+    '@context': 'https: //schema.org@type': 'BreadcrumbList',
     itemListElement: [
       {
-        '@type': 'ListItem';
-        position: 1;
-        name: 'Home';
-        item: companyUrl;
-      };
+        '@type': 'ListItem',
+        position: 1,
+        name: 'Home',
+        item: companyUrl
+      },
       {
-        '@type': 'ListItem';
-        position: 2;
-        name: section;
-        item: `${companyUrl}/${section.toLowerCase().replace(/\s+/g, '-')}`;
-      };
+        '@type': 'ListItem',
+        position: 2,
+        name: section,
+        item: `${companyUrl}/${section.toLowerCase().replace(/\s+/g, '-')}`,
+      },
       {
-        '@type': 'ListItem';
-        position: 3;
-        name: title;
-        item: canonical || companyUrl;
-      };
-    ];
-  };
+        '@type': 'ListItem',
+        position: 3,
+        name: title,
+        item: canonical || companyUrl
+      },
+    ],
+  },
   // FAQ structured data for common questions,
   const faqStructuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'FAQPage';
+    '@context': 'https: //schema.org@type': 'FAQPage',
     mainEntity: [
       {
-        '@type': 'Question';
-        name: 'What services does Zion Tech Group offer?';
+        '@type': 'Question',
+        name: 'What services does Zion Tech Group offer?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'Zion Tech Group offers revolutionary AI consciousness, quantum computing, cybersecurity, space technology, and autonomous systems solutions for businesses looking to transform their operations with cutting-edge technology.';
-        };
-      };
+          '@type': 'Answer',
+          text: 'Zion Tech Group offers revolutionary AI consciousness, quantum computing, cybersecurity, space technology, and autonomous systems solutions for businesses looking to transform their operations with cutting-edge technology.',
+        },
+      },
       {
-        '@type': 'Question';
-        name: 'How can I get started with Zion Tech Group services?';
+        '@type': 'Question',
+        name: 'How can I get started with Zion Tech Group services?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'You can get started by contacting us at kleber@ziontechgroup.com or calling +1 30o2 464 0950. Our team will assess your needs and recommend the best solutions for your business.';
-        };
-      };
+          '@type': 'Answer',
+          text: 'You can get started by contacting us at kleber@ziontechgroup.com or calling +1 30o2 464 0950. Our team will assess your needs and recommend the best solutions for your business.'
+        },
+      },
       {
-        '@type': 'Question';
-        name: 'What makes Zion Tech Group different from other technology companies?';
+        '@type': 'Question',
+        name: 'What makes Zion Tech Group different from other technology companies?',
         acceptedAnswer: {
-          '@type': 'Answer';
-          text: 'We specialize in futuristic technology solutions that are 10-20 years ahead of the market, including AI consciousness, quantum computing, and autonomous systems that provide unprecedented competitive advantages.';
-        };
-      };
-    ];
-  };
+          '@type': 'Answer',
+          text: 'We specialize in futuristic technology solutions that are 10-20 years ahead of the market, including AI consciousness, quantum computing, and autonomous systems that provide unprecedented competitive advantages.',
+        },
+      },
+    ],
+  },
   const finalStructuredData = structuredData || [
-    defaultStructuredData;
-    breadcrumbStructuredData;
-    faqStructuredData;
-    ...(articleStructuredData ? [articleStructuredData] : []);
+    defaultStructuredData,
+    breadcrumbStructuredData,
+    faqStructuredData,
+    ...(articleStructuredData ? [articleStructuredData] : []),
   ],
   return (
     <Head>,
@@ -225,7 +209,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         {title} | {companyName}
       </title>,
       <meta name='description' content={description} />,
-      <meta name='keywords' content={allKeywords.join(', ')} />,
+      <meta name='keywords' content={allKeywords.join()} />,
       <meta name='author' content={author} />,
       <meta name='robots' content={robotsValue} />,
       {/* Canonical URL */}
@@ -296,7 +280,7 @@ const EnhancedSEO: React.FC<SEOProps> = ({
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(finalStructuredData);
+          __html: JSON.stringify(finalStructuredData)
         }}
       />,
       {/* Additional SEO Meta Tags */}
@@ -321,5 +305,5 @@ const EnhancedSEO: React.FC<SEOProps> = ({
         name='business: contact:address',
         content={`${companyAddress.streetAddress}, ${companyAddress.addressLocality}, ${companyAddress.addressRegion} ${companyAddress.postalCode}`}
       />,
-    </Head>)};
-export default EnhancedSEO;
+    </Head>)},
+export default EnhancedSEO,

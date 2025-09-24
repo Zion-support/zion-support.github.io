@@ -11,7 +11,7 @@
 /******/ 	var __webpack_modules__ = ({}),
 /************************************************************************/,
 /******/ 	// The module cache,
-/******/ 	var __webpack_module_cache__ ={};
+/******/ 	var __webpack_module_cache__ ={},
 /******/,
 /******/ 	// The require function,
 /******/ 	function __webpack_require__(moduleId) {
@@ -25,7 +25,7 @@
 /******/ 			// no module.id needed,
 /******/ 			// no module.loaded needed,
 /******/ 			exports: {}
-/******/ 		};
+/******/ 		},
 /******/,
 /******/ 		// Execute the module function,
 /******/ 		var threw = true,
@@ -53,7 +53,7 @@
 /******/ 				() => (module),
 /******/ 			__webpack_require__.d(getter, { a: getter }),
 /******/ 			return getter,
-/******/ 		};
+/******/ 		},
 /******/ 	})(),
 /******/,
 /******/ 	/* webpack/runtime/define property getters */,
@@ -65,12 +65,12 @@
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] }),
 /******/ 				}
 /******/ 			}
-/******/ 		};
+/******/ 		},
 /******/ 	})(),
 /******/,
 /******/ 	/* webpack/runtime/ensure chunk */,
 /******/ 	(() => {
-/******/ 		__webpack_require__.f ={};
+/******/ 		__webpack_require__.f ={},
 /******/ 		// This file contains only the entry chunk.,
 /******/ 		// The chunk loading function for additional chunks,
 /******/ 		__webpack_require__.e = (chunkId) => {
@@ -78,7 +78,7 @@
 /******/ 				__webpack_require__.f[key](chunkId, promises),
 /******/ 				return promises,
 /******/ 			}, [])),
-/******/ 		};
+/******/ 		},
 /******/ 	})(),
 /******/,
 /******/ 	/* webpack/runtime/get javascript chunk filename */,
@@ -87,7 +87,7 @@
 /******/ 		__webpack_require__.u = (chunkId) => {
 /******/ 			// return url for filenames based on template,
 /******/ 			return "" + chunkId + ".js",
-/******/ 		};
+/******/ 		},
 /******/ 	})(),
 /******/,
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */,
@@ -103,7 +103,7 @@
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' }),
 /******/ 			}
 /******/ 			Object.defineProperty(exports, '__esModule', { value: true }),
-/******/ 		};
+/******/ 		},
 /******/ 	})(),
 /******/,
 /******/ 	/* webpack/runtime/startup entrypoint */,
@@ -126,7 +126,7 @@
 /******/ 		// "1" means "loaded", otherwise not loaded yet,
 /******/ 		var installedChunks ={
 /******/ 			"webpack-runtime": 1,
-/******/ 		};
+/******/ 		},
 /******/,
 /******/ 		// no on chunks loaded,
 /******/,
@@ -141,7 +141,7 @@
 /******/ 			for(var i = 0, i < chunkIds.length, i++),
 /******/ 				installedChunks[chunkIds[i]] = 1,
 /******/,
-/******/ 		};
+/******/ 		},
 /******/,
 /******/ 		// require() chunk loading for javascript,
 /******/ 		__webpack_require__.f.require = (chunkId, promises) => {
@@ -151,7 +151,7 @@
 /******/ 					installChunk(require("./" + __webpack_require__.u(chunkId))),
 /******/ 				} else installedChunks[chunkId] = 1,
 /******/ 			}
-/******/ 		};
+/******/ 		},
 /******/,
 /******/ 		module.exports = __webpack_require__,
 /******/ 		__webpack_require__.C = installChunk,

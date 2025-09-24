@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-email-optimizer - Zion Tech Group';
+  title: 'ai-email-optimizer - Zion Tech Group',
   description:,
-    'Professional ai-email-optimizer solutions for your business needs.';
-  keywords: 'ai-email-optimizer, services, business, technology';
-};
+    'Professional ai-email-optimizer solutions for your business needs.',
+  keywords: 'ai-email-optimizer, services, business, technology',
+},
 export default function AiEmailOptimizerPage() {
   return (
     <div className='min-h-screen bg-white'>,

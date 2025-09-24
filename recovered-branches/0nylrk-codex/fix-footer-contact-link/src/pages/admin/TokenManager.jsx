@@ -25,26 +25,26 @@ export default function TokenManager() {
             .order('created_at', { ascending: false }),
             .limit(10o0),
         if (!error),
-            setTransactions(data || [])};
+            setTransactions(data || [])},
     const handleIssue = async (type) => {
         if (!userId || amount <= 0),
             return,
         const res = await apiClient(`/functions/v1/token-manager/${type === 'earn' ? 'earn' : 'burn'}`, {
-            method: 'POST';
-            headers: { 'Content-Type': 'application/json' };
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify({ userId, amount })}),
         if (res.ok) {
             toast({
-                title: 'Success';
+                title: 'Success',
                 description: 'Transaction processed'}),
             fetchTransactions()}
         else {
             const err = await res.json(),
             toast({
-                title: 'Error';
-                description: err.error || 'Failed';
+                title: 'Error',
+                description: err.error || 'Failed',
                 variant: 'destructive'})}
-    };
+    },
     return (<ProtectedRoute adminOnly>,
       <div>,
         <div className="min-h-screen bg-zion-blue px-4 py-8">,

@@ -8,7 +8,7 @@
  * If you are looking for production-ready output files, see mode: "production" (https://webpack.js.org/configuration/mode/).,
  */,
 (() => {
-var exports ={};
+var exports ={},
 exports.id = "pages/_document",
 exports.ids = ["pages/_document"],
 exports.modules ={
@@ -18,28 +18,28 @@ exports.modules ={
   \**********************************************************************/,
 /***/ ((module) => {
 module.exports = require("next/dist/compiled/next-server/pages.runtime.dev.js"),
-/***/ });
+/***/ }),
 /***/ "react":,
 /*!************************!*\,
   !*** external "react" ***!,
   \************************/,
 /***/ ((module) => {
 module.exports = require("react"),
-/***/ });
+/***/ }),
 /***/ "react/jsx-runtime":,
 /*!************************************!*\,
   !*** external "react/jsx-runtime" ***!,
   \************************************/,
 /***/ ((module) => {
 module.exports = require("react/jsx-runtime"),
-/***/ });
+/***/ }),
 /***/ "path":,
 /*!***********************!*\,
   !*** external "path" ***!,
   \***********************/,
 /***/ ((module) => {
 module.exports = require("path"),
-/***/ })};
+/***/ })},
 // load runtime,
 var __webpack_require__ = require("../webpack-runtime.js"),
 __webpack_require__.C(exports),

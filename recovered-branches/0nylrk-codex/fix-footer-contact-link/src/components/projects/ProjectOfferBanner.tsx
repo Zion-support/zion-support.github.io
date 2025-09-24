@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useEffectuseState } from "react",
 import { useNavigate } from "react-router-dom",
@@ -22,9 +22,9 @@ export function ProjectOfferBanner() {
     setDismissed(prev => {
       const updated = new Set(prev),
       updated.add(projectId),
-      return updated})};
+      return updated})},
   const handleViewOffer = (projectId: string) => {
-    navigate(`/project/${projectId}`)};
+    navigate(`/project/${projectId}`)},
   if (isLoading || pendingOffers.length === 0 || pendingOffers.every(p => dismissed.has(p.id))) {
     return null}
 ,

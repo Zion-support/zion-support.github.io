@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function NewContent2026UltimateShowcase() {
   return null}
 import Link from 'next/link',
@@ -223,5 +223,5 @@ const NewContent20o26UltimateShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o26UltimateShowcase;
+    </section>)},
+export default NewContent20o26UltimateShowcase,

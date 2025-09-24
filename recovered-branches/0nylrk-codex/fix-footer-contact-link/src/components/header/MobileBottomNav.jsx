@@ -1,11 +1,11 @@
 import { Link, useLocation } from 'react-router-dom',
 import {
-  Home;
-  Search;
-  MessageSquare;
-  User;
-  MessageCircle;
-  ShoppingCart;
+  Home,
+  Search,
+  MessageSquare,
+  User,
+  MessageCircle,
+  ShoppingCart,
 } from 'lucide-react',
 import { useCart } from '@/context/CartContext',
 import { cn } from '@/lib/utils',
@@ -20,50 +20,50 @@ export function MobileBottomNav({ unreadCount = 0 }) {
   const cartCount = items.reduce((sum, i) => sum + i.quantity, 0),
   const navItems = [
     {
-      name: 'Home';
-      href: '/';
-      icon: Home;
-      matches: path => path === '/';
-    };
+      name: 'Home',
+      href: '/',
+      icon: Home,
+      matches: path => path === '/'
+    },
     {
-      name: 'Browse';
-      href: '/talent';
-      icon: Search;
+      name: 'Browse',
+      href: '/talent',
+      icon: Search,
       matches: path =>,
         path.startsWith('/talent') ||,
         path.startsWith('/categories') ||,
-        path.startsWith('/marketplace');
-    };
+        path.startsWith('/marketplace'),
+    },
     {
-      name: 'Community';
-      href: '/community';
-      icon: MessageCircle;
+      name: 'Community',
+      href: '/community',
+      icon: MessageCircle,
       matches: path =>,
-        path.startsWith('/community') || path.startsWith('/forum');
-    };
+        path.startsWith('/community') || path.startsWith('/forum'),
+    },
     {
-      name: 'Messages';
-      href: '/messages';
-      icon: MessageSquare;
+      name: 'Messages',
+      href: '/messages',
+      icon: MessageSquare,
       matches: path =>,
-        path.startsWith('/messages') || path.startsWith('/inbox');
-      badge: unreadCount;
-      authRequired: true;
-    };
+        path.startsWith('/messages') || path.startsWith('/inbox'),
+      badge: unreadCount,
+      authRequired: true
+    },
     {
-      name: 'Cart';
-      href: '/cart';
-      icon: ShoppingCart;
-      matches: path => path.startsWith('/cart');
-      badge: cartCount;
-    };
+      name: 'Cart',
+      href: '/cart',
+      icon: ShoppingCart,
+      matches: path => path.startsWith('/cart'),
+      badge: cartCount
+    },
     {
-      name: 'Dashboard';
-      href: '/dashboard';
-      icon: User;
-      matches: path => path.startsWith('/dashboard');
-      authRequired: true;
-    };
+      name: 'Dashboard',
+      href: '/dashboard',
+      icon: User,
+      matches: path => path.startsWith('/dashboard'),
+      authRequired: true
+    },
   ],
   // Filter items based on auth status,
   const visibleItems = navItems.filter(
@@ -76,7 +76,7 @@ export function MobileBottomNav({ unreadCount = 0 }) {
             key={item.name}
             to={item.href}
             className={cn(
-              'flex flex-col items-center justify-center w-full h-full px-1 py-1';
+              'flex flex-col items-center justify-center w-full h-full px-1 py-1',
               item.matches(location.pathname),
                 ? 'text-zion-cyan',
                 : 'text-white/70 hover: text-white')}

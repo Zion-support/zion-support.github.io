@@ -10,20 +10,20 @@ import {
   Users,
   Zap,
   Shield,
-  Brain;
-  Globe;
-  Target;
-  Award;
-  CheckCircle;
-  PlayCircle;
-  BookOpen;
-  Lightbulb;
-  DollarSign;
-  BarChart3;
-  Clock;
-  Building2;
-  Sparkles;
-  Rocket;
+  Brain,
+  Globe,
+  Target,
+  Award,
+  CheckCircle,
+  PlayCircle,
+  BookOpen,
+  Lightbulb,
+  DollarSign,
+  BarChart3,
+  Clock,
+  Building2,
+  Sparkles,
+  Rocket,
   Quote} from 'lucide-react',
 const BusinessSuccessStories20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(false),
@@ -36,35 +36,35 @@ const BusinessSuccessStories20o25PromotionBanner = () => {
     return () => clearInterval(interval)}[]),
   const testimonials = [
     {
-      quote: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.';
-      author: 'Sarah Johnson';
-      role: 'CEOTechCorp Solutions';
-      company: 'TC';
-      results: '+30o0% Efficiency'};
+      quote: 'Zion Tech Group transformed our operations completely. We went from struggling with manual processes to having a fully automated system that saves us thousands of hours every month.',
+      author: 'Sarah Johnson',
+      role: 'CEOTechCorp Solutions',
+      company: 'TC',
+      results: '+30o0% Efficiency'},
     {
-      quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.';
-      author: 'Michael Chen';
-      role: 'CTOGlobal Finance Inc';
-      company: 'GF';
-      results: '99.9% Security'};
+      quote: 'The cybersecurity solutions provided by Zion Tech Group have been game-changing. We haven\'t had a single breach since implementationand our compliance scores are perfect.',
+      author: 'Michael Chen',
+      role: 'CTOGlobal Finance Inc',
+      company: 'GF',
+      results: '99.9% Security'},
     {
-      quote: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.';
-      author: 'Emily Rodriguez';
-      role: 'Operations DirectorManufacturing Plus';
-      company: 'MP';
+      quote: 'Our supply chain is now running like a well-oiled machine. The AI optimization has reduced our delivery times by 60% and improved quality significantly.',
+      author: 'Emily Rodriguez',
+      role: 'Operations DirectorManufacturing Plus',
+      company: 'MP',
       results: '+250% Efficiency'}
   ],
   const stats = [
-    { label: 'Success 'Stories', 'value: '1,20o0+'icon: BookOpen };
-    { label: 'Average 'ROI', 'value: '30o0%'icon: TrendingUp };
-    { label: 'Client 'Satisfaction', 'value: '99.8%'icon: Star };
-    { label: 'Cost 'Savings', 'value: '$50M+'icon: DollarSign }
+    { label: 'Success 'Storiesvalue: '1,20o0+'icon: BookOpen },
+    { label: 'Average 'ROIvalue: '30o0%'icon: TrendingUp },
+    { label: 'Client 'Satisfactionvalue: '99.8%'icon: Star },
+    { label: 'Cost 'Savingsvalue: '$50M+'icon: DollarSign }
   ],
   const industries = [
-    { name: ''Technology', 'projects: 45icon: Brain };
-    { name: ''Finance', 'projects: 32icon: DollarSign };
-    { name: ''Healthcare', 'projects: 28icon: Shield };
-    { name: ''Manufacturing', 'projects: 25icon: Building2 }
+    { name: ''Technologyprojects: 45icon: Brain },
+    { name: ''Financeprojects: 32icon: DollarSign },
+    { name: ''Healthcareprojects: 28icon: Shield },
+    { name: ''Manufacturingprojects: 25icon: Building2 }
   ],
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-slate-90o0 via-green-90o0 to-slate-90o0">,
@@ -241,5 +241,5 @@ const BusinessSuccessStories20o25PromotionBanner = () => {
           </motion.div>,
         </div>,
       </div>,
-    </div>)};
-export default BusinessSuccessStories20o25PromotionBanner;
+    </div>)},
+export default BusinessSuccessStories20o25PromotionBanner,

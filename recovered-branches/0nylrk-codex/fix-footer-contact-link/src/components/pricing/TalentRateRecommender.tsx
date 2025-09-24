@@ -3,8 +3,8 @@ import React{ useState } from "react",
 import { Button } from "@/components/ui/button",
 import {
   getTalentRateSuggestion,
-  PricingSuggestion;
-  TalentRateParams;
+  PricingSuggestion,
+  TalentRateParams,
   trackPricingSuggestion} from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
@@ -17,10 +17,10 @@ interface TalentRateRecommenderProps {
   rateType: "hourly" | "fixed"}
 ,
 export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
-  skills;
-  yearsExperience;
-  location;
-  onSuggestionApplied;
+  skills,
+  yearsExperience,
+  location,
+  onSuggestionApplied,
   rateType}) => {
   const [isLoadingsetIsLoading] = useState(false),
   const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null),
@@ -32,14 +32,14 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
     setIsLoading(true),
     try {
       const params: TalentRateParams = {
-        skills;
-        yearsExperience;
-        location};
+        skills,
+        yearsExperience,
+        location},
       const result = await getTalentRateSuggestion(params),
       setSuggestion(result)} catch (error) {
       console.error("Error generating rate suggestion: "error)} finally {
       setIsLoading(false)}
-  };
+  },
   const handleApplySuggestion = () => {
     if (suggestion) {
       // We'll use the middle of the range as the suggested rate,
@@ -48,14 +48,14 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
       // Track this suggestion application,
       if (user) {
         trackPricingSuggestion({
-          userId: user.id;
-          suggestionType: 'talent';
-          suggestedMin: suggestion.minRate;
-          suggestedMax: suggestion.maxRate;
-          actualValue: suggestedRate;
+          userId: user.id,
+          suggestionType: 'talent',
+          suggestedMin: suggestion.minRate,
+          suggestedMax: suggestion.maxRate,
+          actualValue: suggestedRate,
           accepted: true})}
     }
-  };
+  },
   return (
     <div className="space-y-4">,
       <div>,
@@ -75,4 +75,4 @@ export const TalentRateRecommender: React.FC<TalentRateRecommenderProps> = ({
             rateType={rateType}
           />)}
       </div>,
-    </div>)};
+    </div>)},

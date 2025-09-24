@@ -11,22 +11,22 @@ import {Card, CardContent, CardDescription, CardHeader, CardTitle} from "@/compo
 import {Badge} from "@/components/ui/badge",
 import {MapPin, Clock, Link, as, LinkIcon, Github, Twitter, Linkedin, CheckCircle2, Mail, Phone, Globe} from "lucide-react",
 import {HireNowCTA} from "@/components/profile/HireNowCTA",
-import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { supabase } from "@/integrations/supabase/client";
-import { toast } from "@/hooks/use-toast";
-import { SEO } from "@/components/SEO";
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Button } from "@/components/ui/button";
+import { useState, useEffect } from "react",
+import { useParams } from "react-router-dom",
+import { supabase } from "@/integrations/supabase/client",
+import { toast } from "@/hooks/use-toast",
+import { SEO } from "@/components/SEO",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { Button } from "@/components/ui/button",
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
 import { Badge } from "@/components/ui/badge",
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import {
 import { HireNowCTA } from "@/components/profile/HireNowCTA",
-import { HireNowCTA } from "@/components/profile/HireNowCTA";
+import { HireNowCTA } from "@/components/profile/HireNowCTA",
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
@@ -43,39 +43,39 @@ export default function ProfileDetail() {
   CheckCircle2,
   Mail,
   Phone,
-  Globe} from "lucide-react";
+  Globe} from "lucide-react",
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
   const { profileId } = useParams(),
-  const [profileData, setProfileData] = useState<any>(null);
+  const [profileData, setProfileData] = useState<any>(null),
   const [isLoading, setIsLoading] = useState(true),
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
-  const { profileId } = useParams();
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { profileId } = useParams(),
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
   const [error, setError] = useState<string | null>(null),
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true);
-      setError(null);
+      setIsLoading(true),
+      setError(null),
       try {
         if (!profileId) {
-          setError("Profile ID is missing.");
+          setError("Profile ID is missing."),
           return}
         const { data, error } = await supabase,
           .from("talent_profiles"),
           .select("*"),
           .eq("id", profileId),
           .single(),
-          .single();
+          .single(),
         if (error) {
           throw new Error(error.message)}
         if (!data) {
-          setError("Profile not found.");
+          setError("Profile not found."),
           return}
         setProfileData(data)} catch (err: any) {
         setError(err.message |"Failed to fetch profile."),
@@ -85,8 +85,8 @@ export default function ProfileDetail() {
           variant: "destructive"})} finally {
         setIsLoading (false)}
 }
-    fetchProfile()}, [profileId])};
-    fetchProfile()}, [profileId]);
+    fetchProfile()}, [profileId])},
+    fetchProfile()}, [profileId]),
   if (isLoading) {
     return (
       <div className="min-h-screen flex items-center justify-center">,
@@ -102,52 +102,52 @@ export default function ProfileDetail() {
       <div className="min-h-screen flex items-center justify-center">,
         <p>Profile not found.</p>,
       </div>)}
-  MapPin;
-  Clock;
-  Link as LinkIcon;
-  Github;
-  Twitter;
-  Linkedin;
-  CheckCircle2;
-  Mail;
-  Phone;
-  Globe} from "lucide-react";
+  MapPin,
+  Clock,
+  Link as LinkIcon,
+  Github,
+  Twitter,
+  Linkedin,
+  CheckCircle2,
+  Mail,
+  Phone,
+  Globe} from "lucide-react",
 export default function ProfileDetail() {
   // useParams is typed as `any` in this environment due to missing type,
   // definitions, so avoid passing a type argument to prevent TS2347.,
-  const { profileId } = useParams();
-  const [profileData, setProfileData] = useState<any>(null);
-  const [isLoading, setIsLoading] = useState(true);
-  const [error, setError] = useState<string | null>(null);
+  const { profileId } = useParams(),
+  const [profileData, setProfileData] = useState<any>(null),
+  const [isLoading, setIsLoading] = useState(true),
+  const [error, setError] = useState<string | null>(null),
   useEffect(() => {
     const fetchProfile = async () => {
-      setIsLoading(true);
-      setError(null);
+      setIsLoading(true),
+      setError(null),
       try {
         if (!profileId) {
-          setError("Profile ID is missing.");
+          setError("Profile ID is missing."),
           return}
 ,
         const { data, error } = await supabase,
           .from("talent_profiles"),
           .select("*"),
           .eq("id", profileId),
-          .single();
+          .single(),
         if (error) {
           throw new Error(error.message)}
 ,
         if (!data) {
-          setError("Profile not found.");
+          setError("Profile not found."),
           return}
 ,
         setProfileData(data)} catch (err: any) {
-        setError(err && err.message || "Failed to fetch profile.");
+        setError(err && err.message || "Failed to fetch profile."),
         toast({
-          title: "Error";
-          description: err && err.message || "Failed to fetch profile.";
+          title: "Error",
+          description: err && err.message || "Failed to fetch profile.",
           variant: "destructive"})} finally {
         setIsLoading(false)}
-    };
+    },
     fetchProfile()}, [profileId]),
   if (isLoading) {
     return (
@@ -340,9 +340,9 @@ export default function ProfileDetail() {
                 full_name: profileData?.full_name |'',
                 professional_title: profileData?.professional_title |'',
                 hourly_rate: profileData?.hourly_rate |0,
-                id: profileData?.id || '';
-                full_name: profileData?.full_name || '';
-                professional_title: profileData?.professional_title || '';
+                id: profileData?.id || '',
+                full_name: profileData?.full_name || '',
+                professional_title: profileData?.professional_title || '',
                 hourly_rate: profileData?.hourly_rate || 0}}
             />,
             {/* Contact Information */}
@@ -476,9 +476,9 @@ export default function ProfileDetail() {
           <div className="col - span - 4 lg: col - span - 1">,
             <HireNowCTA
               talent_profile={{
-                id: profile_data?.id || '';
-                full_name: profile_data?.full_name || '';
-                professional_title: profile_data?.professional_title || '';
+                id: profile_data?.id || '',
+                full_name: profile_data?.full_name || '',
+                professional_title: profile_data?.professional_title || '',
                 hourly_rate: profile_data?.hourly_rate || 0}}
             />,
             {/* Contact Information */}

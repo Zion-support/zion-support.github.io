@@ -6,46 +6,46 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      id: 'ultimate-business-intelligence';
-      title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
-      subtitle: '5,0o00% ROI • $18.7B Annual Savings • 99.8% Accuracy';
-      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented results.';
+      id: 'ultimate-business-intelligence',
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',
+      subtitle: '5,0o00% ROI • $18.7B Annual Savings • 99.8% Accuracy',
+      description: 'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented results.',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$18.7B';
-        accuracy: '99.8%';
-        speed: '450%'};
-      cta: 'Discover the Ultimate Guide';
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough';
-      type: 'blog';
-      featured: true};
+        roi: '5,0o00%',
+        savings: '$18.7B',
+        accuracy: '99.8%',
+        speed: '450%'},
+      cta: 'Discover the Ultimate Guide',
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-breakthrough',
+      type: 'blog',
+      featured: true},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Business Intelligence Success Story';
-      subtitle: '$18.7B Annual Savings • 5,0o00% ROI • 12 Months';
-      description: 'How a global manufacturing leader achieved extraordinary results with AI business intelligence transformation.';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Business Intelligence Success Story',
+      subtitle: '$18.7B Annual Savings • 5,0o00% ROI • 12 Months',
+      description: 'How a global manufacturing leader achieved extraordinary results with AI business intelligence transformation.',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$18.7B';
-        timeframe: '12 months';
-        accuracy: '99.8%'};
-      cta: 'Read Success Story';
-      url: '/case-studies/fortune-50o0-ai-business-intelligence-50o00-roi-success-story';
-      type: 'case-study';
-      featured: true};
+        roi: '5,0o00%',
+        savings: '$18.7B',
+        timeframe: '12 months',
+        accuracy: '99.8%'},
+      cta: 'Read Success Story',
+      url: '/case-studies/fortune-50o0-ai-business-intelligence-50o00-roi-success-story',
+      type: 'case-study',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'AI Business Intelligence Implementation Ultimate Guide';
-      subtitle: 'Complete Roadmap • 5,0o00% ROI • Proven Methodology';
-      description: 'The definitive guide to implementing AI-powered business intelligence that delivers unprecedented results.';
+      id: 'implementation-guide',
+      title: 'AI Business Intelligence Implementation Ultimate Guide',
+      subtitle: 'Complete Roadmap • 5,0o00% ROI • Proven Methodology',
+      description: 'The definitive guide to implementing AI-powered business intelligence that delivers unprecedented results.',
       metrics: {
-        roi: '5,0o00%';
-        guide: 'Complete';
-        success: '99.7%';
-        timeline: '12 months'};
-      cta: 'Get Implementation Guide';
-      url: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25';
-      type: 'resource';
+        roi: '5,0o00%',
+        guide: 'Complete',
+        success: '99.7%',
+        timeline: '12 months'},
+      cta: 'Get Implementation Guide',
+      url: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25',
+      type: 'resource',
       featured: true}
   ],
   useEffect(() => {
@@ -54,7 +54,7 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
     return () => clearInterval(interval)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai-bi-banner-dismissed', 'true')};
+    localStorage.setItem('ai-bi-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai-bi-banner-dismissed'),
     if (dismissed === 'true') {
@@ -169,5 +169,5 @@ const AIBusinessIntelligenceRevolutionBanner = () => {
       </div>,
       {/* Bottom Gradient */}
       <div className="absolute bottom-0 left-0 right-0 h-1 bg-gradient-to-r from-purple-50o0 via-blue-50o0 to-indigo-50o0"></div>,
-    </div>)};
-export default AIBusinessIntelligenceRevolutionBanner;
+    </div>)},
+export default AIBusinessIntelligenceRevolutionBanner,

@@ -2,7 +2,7 @@ import React, { useMemo, useRef } from 'react',
 export type LineSeries = {
   label: string,
   color?: string,
-  points: { x: number, y: number }[]};
+  points: { x: number, y: number }[]},
 export type SimpleLineChartProps = {
   series: LineSeries[],
   width?: number,
@@ -10,15 +10,15 @@ export type SimpleLineChartProps = {
   yLabel?: string,
   xLabel?: string,
   onExportCsv?: (rows: Array<Record<string number>>) => void,
-  onExportPng?: (svgElement: SVGSVGElement) => void};
+  onExportPng?: (svgElement: SVGSVGElement) => void},
 export default function SimpleLineChart({
-  series;
-  width = 640;
-  height = 260;
-  yLabel;
-  xLabel;
-  onExportCsv;
-  onExportPng;
+  series,
+  width = 640,
+  height = 260,
+  yLabel,
+  xLabel,
+  onExportCsv,
+  onExportPng,
 }: SimpleLineChartProps) {
   const padding = 36,
   const svgRef = useRef<SVGSVGElement | null>(null),
@@ -96,7 +96,7 @@ export default function SimpleLineChart({
             key={s.label + idx}
             fill='none',
             stroke={
-              s.color || ['#2563eb', '#16a34a', '#f59e0b', '#ef4444'][idx % 4]}
+              s.color || ['#2563eb#16a34a', '#f59e0b#ef4444'][idx % 4]}
             strokeWidth={2}
             points={s.points,
               .map(p => `${xScale(p.x)},${yScale(p.y)}`),

@@ -10,14 +10,14 @@ import {
   Star,
   TrendingUp,
   Users,
-  Award;
-  ChevronRight;
-  Play;
-  BookOpen;
-  Code;
-  BarChart3;
-  Shield;
-  Globe;
+  Award,
+  ChevronRight,
+  Play,
+  BookOpen,
+  Code,
+  BarChart3,
+  Shield,
+  Globe,
   Lightbulb} from 'lucide-react',
 const UltimateContentShowcase20o27 = () => {
   const [activeTabsetActiveTab] = useState('ai-innovations'),
@@ -26,93 +26,93 @@ const UltimateContentShowcase20o27 = () => {
     setIsVisible(true)}[]),
   const contentSections ={
     'ai-innovations': {
-      title: 'AI Innovations 20o27';
-      subtitle: 'Revolutionary AI Technologies Transforming Business';
-      icon: Brain;
-      color: 'from-purple-60o0 to-blue-60o0';
+      title: 'AI Innovations 20o27',
+      subtitle: 'Revolutionary AI Technologies Transforming Business',
+      icon: Brain,
+      color: 'from-purple-60o0 to-blue-60o0',
       content: [
         {
-          title: 'Neural Interface Revolution';
-          description: 'Direct brain-computer interfaces enabling unprecedented human-AI collaboration';
-          features: ['Real-time thought 'processing', 'Enhanced cognitive 'abilities', 'Seamless AI integration'];
-          impact: '50o0% productivity increase'};
+          title: 'Neural Interface Revolution',
+          description: 'Direct brain-computer interfaces enabling unprecedented human-AI collaboration',
+          features: ['Real-time thought 'processingEnhanced cognitive 'abilities', 'Seamless AI integration'],
+          impact: '50o0% productivity increase'},
         {
-          title: 'Quantum AI Processing';
-          description: 'Quantum-enhanced AI algorithms solving complex problems in seconds';
-          features: ['Quantum neural 'networks', 'Exponential speed 'improvements', 'Breakthrough problem solving'];
-          impact: '10o00x faster processing'};
+          title: 'Quantum AI Processing',
+          description: 'Quantum-enhanced AI algorithms solving complex problems in seconds',
+          features: ['Quantum neural 'networksExponential speed 'improvements', 'Breakthrough problem solving'],
+          impact: '10o00x faster processing'},
         {
-          title: 'Conscious AI Systems';
-          description: 'Self-aware AI systems with emotional intelligence and ethical reasoning';
-          features: ['Emotional 'understanding', 'Ethical decision 'making', 'Autonomous problem solving'];
+          title: 'Conscious AI Systems',
+          description: 'Self-aware AI systems with emotional intelligence and ethical reasoning',
+          features: ['Emotional 'understandingEthical decision 'making', 'Autonomous problem solving'],
           impact: 'Human-level consciousness'}
-      ]};
+      ]},
     'automation-mastery': {
-      title: 'Automation Mastery';
-      subtitle: 'Complete Business Process Automation';
-      icon: Zap;
-      color: 'from-green-60o0 to-teal-60o0';
+      title: 'Automation Mastery',
+      subtitle: 'Complete Business Process Automation',
+      icon: Zap,
+      color: 'from-green-60o0 to-teal-60o0',
       content: [
         {
-          title: 'Autonomous Operations';
-          description: 'Fully automated business operations requiring zero human intervention';
-          features: ['Self-managing 'systems', 'Predictive 'maintenance', 'Automatic optimization'];
-          impact: '99.9% uptime achieved'};
+          title: 'Autonomous Operations',
+          description: 'Fully automated business operations requiring zero human intervention',
+          features: ['Self-managing 'systemsPredictive 'maintenance', 'Automatic optimization'],
+          impact: '99.9% uptime achieved'},
         {
-          title: 'Intelligent Workflows';
-          description: 'AI-powered workflow optimization adapting to business needs in real-time';
-          features: ['Dynamic process 'adaptation', 'Resource 'optimization', 'Performance monitoring'];
-          impact: '30o0% efficiency gain'};
+          title: 'Intelligent Workflows',
+          description: 'AI-powered workflow optimization adapting to business needs in real-time',
+          features: ['Dynamic process 'adaptationResource 'optimization', 'Performance monitoring'],
+          impact: '30o0% efficiency gain'},
         {
-          title: 'Predictive Analytics';
-          description: 'Advanced forecasting and trend analysis for strategic decision making';
-          features: ['Market 'prediction', 'Risk 'assessment', 'Opportunity identification'];
+          title: 'Predictive Analytics',
+          description: 'Advanced forecasting and trend analysis for strategic decision making',
+          features: ['Market 'predictionRisk 'assessment', 'Opportunity identification'],
           impact: '95% accuracy rate'}
-      ]};
+      ]},
     'future-tech': {
-      title: 'Future Technologies';
-      subtitle: 'Next-Generation Solutions for Tomorrow';
-      icon: Rocket;
-      color: 'from-orange-60o0 to-red-60o0';
+      title: 'Future Technologies',
+      subtitle: 'Next-Generation Solutions for Tomorrow',
+      icon: Rocket,
+      color: 'from-orange-60o0 to-red-60o0',
       content: [
         {
-          title: 'Holographic Interfaces';
-          description: '3D holographic displays and interaction systems for immersive experiences';
-          features: ['3D 'visualization', 'Gesture 'control', 'Immersive collaboration'];
-          impact: 'Revolutionary user experience'};
+          title: 'Holographic Interfaces',
+          description: '3D holographic displays and interaction systems for immersive experiences',
+          features: ['3D 'visualizationGesture 'control', 'Immersive collaboration'],
+          impact: 'Revolutionary user experience'},
         {
-          title: 'Blockchain Integration';
-          description: 'Decentralized systems ensuring securitytransparencyand trust';
-          features: ['Smart 'contracts', 'Decentralized 'storage', 'Cryptographic security'];
-          impact: '10o0% data integrity'};
+          title: 'Blockchain Integration',
+          description: 'Decentralized systems ensuring securitytransparencyand trust',
+          features: ['Smart 'contractsDecentralized 'storage', 'Cryptographic security'],
+          impact: '10o0% data integrity'},
         {
-          title: 'Edge Computing';
-          description: 'Distributed computing infrastructure for ultra-low latency applications';
-          features: ['Real-time 'processing', 'Local data 'handling', 'Reduced latency'];
+          title: 'Edge Computing',
+          description: 'Distributed computing infrastructure for ultra-low latency applications',
+          features: ['Real-time 'processingLocal data 'handling', 'Reduced latency'],
           impact: '10ms response time'}
       ]}
-  };
+  },
   const stats = [
-    { label: 'Active 'Users', 'value: '2.5M+'icon: Users };
-    { label: 'Success 'Rate', 'value: '99.8%'icon: Award };
-    { label: 'ROI 'Increase', 'value: '50o0%'icon: TrendingUp };
-    { label: 'Time 'Saved', 'value: '10M+ 'hrs', 'icon: Clock }
+    { label: 'Active 'Usersvalue: '2.5M+'icon: Users },
+    { label: 'Success 'Ratevalue: '99.8%'icon: Award },
+    { label: 'ROI 'Increasevalue: '50o0%'icon: TrendingUp },
+    { label: 'Time 'Savedvalue: '10M+ 'hrsicon: Clock }
   ],
   const testimonials = [
     {
-      name: 'Sarah Chen';
-      role: 'CEOTechCorp';
-      content: 'This platform revolutionized our entire operation. The AI integration is seamless and the results are extraordinary.';
-      rating: 5};
+      name: 'Sarah Chen',
+      role: 'CEOTechCorp',
+      content: 'This platform revolutionized our entire operation. The AI integration is seamless and the results are extraordinary.',
+      rating: 5},
     {
-      name: 'Michael Rodriguez';
-      role: 'CTOInnovateLabs';
-      content: 'The automation capabilities are unmatched. We\'ve seen a 40o0% increase in productivity since implementation.';
-      rating: 5};
+      name: 'Michael Rodriguez',
+      role: 'CTOInnovateLabs',
+      content: 'The automation capabilities are unmatched. We\'ve seen a 40o0% increase in productivity since implementation.',
+      rating: 5},
     {
-      name: 'Dr. Emily Watson';
-      role: 'Research DirectorFutureTech';
-      content: 'The quantum AI processing has opened doors we never thought possible. Truly groundbreaking technology.';
+      name: 'Dr. Emily Watson',
+      role: 'Research DirectorFutureTech',
+      content: 'The quantum AI processing has opened doors we never thought possible. Truly groundbreaking technology.',
       rating: 5}
   ],
   return (
@@ -124,10 +124,8 @@ const UltimateContentShowcase20o27 = () => {
           className="absolute top-0 left-0 w-full h-full",
           animate={{
             background: [
-              'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
-              'radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)';
-              'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)';
-              'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)';
+              'radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)radial-gradient(circle at 80% 20%rgba(25511980.3) 0%transparent 50%)',
+              'radial-gradient(circle at 40% 80%rgba(120o2192550.3) 0%transparent 50%)radial-gradient(circle at 20% 50%rgba(120o11980.3) 0%transparent 50%)'
             ]}}
           transition={{ duration: 20repeat: Infinity }}
          />,
@@ -286,5 +284,5 @@ const UltimateContentShowcase20o27 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default UltimateContentShowcase20o27;
+    </div>)},
+export default UltimateContentShowcase20o27,

@@ -12,21 +12,21 @@ export default function VendorRegisterPage() {
     const payload = Object.fromEntries(formData.entries()),
     try {
       const res = await fetch('/api/vendors/register'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          slug: String(payload.slug);
-          name: String(payload.name);
-          servicesOffered: String(payload.servicesOffered || ', '),
+          slug: String(payload.slug),
+          name: String(payload.name),
+          servicesOffered: String(payload.servicesOffered || ),
             .split(','),
             .map(s => s.trim()),
-            .filter(Boolean);
-          teamSize: Number(payload.teamSize || 0);
-          about: String(payload.about || ', ');
+            .filter(Boolean),
+          teamSize: Number(payload.teamSize || 0),
+          about: String(payload.about || ),
           verificationDocs: String(payload.verificationDocs || ', '),
-            .split(','),
+            .split(),
             .map(s => s.trim()),
-            .filter(Boolean);
+            .filter(Boolean),
           caseStudies: []})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Failed to submit'),

@@ -26,7 +26,7 @@ export default function Page() {
           className='mt-4',
           dangerouslySetInnerHTML={{
             __html:,
-              '<p>Source: <a class="text-cyan-30o0 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>';
+              '<p>Source: <a class="text-cyan-30o0 underline" href="https://ziontechgroup.com/automation" target="_blank" rel="noopener">https://ziontechgroup.com/automation</a></p><h2>Context</h2><p>Signals indicate recurring needs around <strong>trigger, homepage, sitemap, automation, hubdiscover, autonomous</strong>.</p><h2>Problem</h2><p>How do we design a robust, observable, and cost-efficient approach?</p><h2>Forces</h2><ul><li>Latency and throughput trade-offs</li><li>Quality and evaluation</li><li>Security and governance</li></ul><h2>Solution</h2><p>Define clear boundaries, automate evaluation, and continuously iterate with telemetry-in-the-loop.</p><h2>Consequences</h2><p>Improved reliability and faster iteration, requires disciplined measurement.</p>',
           }}
         />,
         <p className='mt-6 text-white/60 text-sm'>,

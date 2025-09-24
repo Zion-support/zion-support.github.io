@@ -33,7 +33,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       setError('Failed to fetch jobs. Please try again.'),
       toast.error('Failed to fetch jobs')} finally {
       setIsLoading(false)}
-  };
+  },
   const updateJobStatus = async (jobId: string, newStatus: JobStatus) => {
     try {
       const { error: updateError } = await supabase,
@@ -51,7 +51,7 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       console.error('Error updating job status:', err),
       toast.error('Failed to update job status'),
       return false}
-  };
+  },
   const deleteJob = async (jobId: string) => {
     try {
       const { error: deleteError } = await supabase,
@@ -67,19 +67,19 @@ export const useJobs = (userId?: string, status?: JobStatus) => {
       console.error('Error deleting job:', err),
       toast.error('Failed to delete job'),
       return false}
-  };
+  },
   // Fetch jobs when component mounts or dependencies change,
   useEffect(() => {
     fetchJobs()}, [clientId, status]),
   return {
-    jobs;
-    isLoading;
-    error;
-    refetch: fetchJobs;
-    updateJobStatus;
-    deleteJob;
-    createJob;
-    updateJob;
-    getJobById;
-  };
-};
+    jobs,
+    isLoading,
+    error,
+    refetch: fetchJobs,
+    updateJobStatus,
+    deleteJob,
+    createJob,
+    updateJob,
+    getJobById
+  },
+},

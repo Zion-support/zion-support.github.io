@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AI20o27UltimateBreakthroughBanner: React.FC = () => {
   return (
@@ -101,5 +101,5 @@ const AI20o27UltimateBreakthroughBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o27UltimateBreakthroughBanner;
+    </section>)},
+export default AI20o27UltimateBreakthroughBanner,

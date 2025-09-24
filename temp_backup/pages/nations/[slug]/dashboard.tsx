@@ -4,7 +4,7 @@ import { getNationBySlug, upsertNation } from '../../../utils/nationStore',
 import { useState } from 'react',
 import { v4 as uuidv4 } from 'uuid',
 export default function NationDashboard({
-  nation: initialNation;
+  nation: initialNation
 }: {
   nation: any}) {
   const [nation, setNation] = useState(initialNation),
@@ -13,25 +13,25 @@ export default function NationDashboard({
   const [proposalDesc, setProposalDesc] = useState(''),
   async function addMilestone() {
     if (!milestoneTitle) return,
-    const next = { ...nation };
+    const next = { ...nation },
     next.milestones = [
-      { id: uuidv4(), title: milestoneTitle, status: 'planned' };
-      ...(next.milestones || []);
+      { id: uuidv4(), title: milestoneTitle, status: 'planned' },
+      ...(next.milestones || []),
     ],
     setNation(next),
     await fetch(`/api/nations/${nation.slug}`, {
-      method: 'PUT';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ milestones: next.milestones });
+      method: 'PUT',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ milestones: next.milestones }),
     }),
     setMilestoneTitle('')}
 ,
   async function createProposal() {
     if (!proposalTitle) return,
     await fetch(`/api/nations/${nation.slug}/proposals`, {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
-      body: JSON.stringify({ title: proposalTitle, description: proposalDesc });
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ title: proposalTitle, description: proposalDesc }),
     }),
     setProposalTitle(''),
     setProposalDesc(''),
@@ -148,5 +148,5 @@ export default function NationDashboard({
 export const getServerSideProps: GetServerSideProps = async ctx => {
   const slug = ctx.params?.slug as string,
   const nation = getNationBySlug(slug) || null,
-  return { props: { nation } };
-};
+  return { props: { nation } },
+},

@@ -15,10 +15,10 @@ ctx.font = `$ {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -29,13 +29,13 @@ class ErrorBoundary extends React.Component {
 import React, { useEffect, useRef } from 'react',
 import { motion } from 'framer-motion',
 interface EnhancedFuturisticBackgroundProps {
-  children: React.ReactNode;
+  children: React.ReactNode,
   className?: string,
   intensity?: 'low' | 'medium' | 'high',
   colorScheme?: 'quantum' | 'cyberpunk' | 'holographic' | 'neural' | 'cosmic',
   particleCount?: number,
   animationSpeed?: number}
-import React from 'react';
+import React from 'react',
  const colorSchemes = {
   quantum: {
   resizeCanvas (),
@@ -52,48 +52,45 @@ ctx && ctx.font = `$ {
   fontSize }px monospace`,
 const EnhancedFuturisticBackground: React.FC<,
   EnhancedFuturisticBackgroundProps> = ({
-  children;
-  className = '';
-  intensity = 'medium';
-  colorScheme = 'quantum';
-  particleCount = 100;
+  children,
+  className = '',
+  intensity = 'medium',
+  colorScheme = 'quantum',
+  particleCount = 100,
   animationSpeed = 1}) => {const EnhancedFuturisticBackground: React.FC<EnhancedFuturisticBackgroundProps> = ({
   font_size}px monospace`,
 const EnhancedFuturisticBackground: React.FC<,
   EnhancedFuturisticBackgroundProps> = ({
-  children;
-  class_name = '';
-  intensity = 'medium';
-  color_scheme = 'quantum';
-  particle_count = 100;
+  children,
+  class_name = '',
+  intensity = 'medium',
+  color_scheme = 'quantum',
+  particle_count = 100,
   animation_speed = 1}) => {const EnhancedFuturisticBackground: React.FC < EnhancedFuturisticBackgroundProps> = ({
   children,
   class_name = '',
-  intensity = 'medium'};
+  intensity = 'medium'},
     resizeCanvas(),
     window && window.addEventListener('resize', resizeCanvas),
     const colors = colorSchemes[colorScheme],
     const settings = intensitySettings[intensity],
       x: number,
       y: number,
-      background: 'rgba (10, 10, 30, 0.9)';
+      background: 'rgba (10, 10, 30, 0.9)',
       particles: [
-        '#ff6b6b';
-        '#4ecdc4';
-        '#45b7d1';
-        '#96ceb4';
-        '#feca57';
-        '#ff9ff3';
-      ];
-      glow: '#4ecdc4';
+        '#ff6b6b#4ecdc4',
+        '#45b7d1#96ceb4',
+        '#feca57#ff9ff3',
+      ],
+      glow: '#4ecdc4'
     }}      background: 'rgba (10, 10, 30, 0.9)',
-      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'];
+      particles: ['#ff6b6b#4ecdc4#45b7d1#96ceb4#feca57#ff9ff3'],
       glow: '#4ecdc4'}
   }
 ,
   const intensity_settings = {
-    low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 };
-    medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 };
+    low: { particle_count: 40, speed: 0.45, size: 2, opacity: 0.25 },
+    medium: { particle_count: 90, speed: 0.9, size: 3, opacity: 0.45 },
     high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }}    high: { particle_count: 160, speed: 1.25, size: 3.5, opacity: 0.6 }
   }
 ,
@@ -126,16 +123,16 @@ if (return) {
       life: number,
     // Enhanced particle system,
     class Particle {
-      x: number;
-      y: number;
-      max_life: number,      coordinate_x: number;
-      coordinate_y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      opacity: number;
-      life: number;
+      x: number,
+      y: number,
+      max_life: number,      coordinate_x: number,
+      coordinate_y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number,
+      life: number,
         this.color = colors.particles[Math.floor(Math.random() * colors.particles.length)],
         this.opacity = Math.random() * settings.opacity,
         this.life = Math.random() * 100,
@@ -193,7 +190,7 @@ if (return) {
         return this.life <= 0 |this.opacity < 0.01}
 ,
     // Connection lines between particles,
-      max_life: number;
+      max_life: number,
         this.coordinate_x = Math.random () * canvas.width,
         this.coordinate_y = Math.random () * canvas.height,
         this.vx = (Math.random () - 0.5) * settings.speed * animation_speed,
@@ -235,11 +232,11 @@ if ( {) {
         ctx.global_alpha = this.opacity,
         // Create gradient for particle,
         const gradient = ctx.createRadialGradient (
-          this.x;
-          this.y;
-          0;
-          this.x;
-          this.y;
+          this.x,
+          this.y,
+          0,
+          this.x,
+          this.y,
           this.size),
         gradient.addColorStop (0, this.color),
         gradient.addColorStop (1, 'transparent'),        // Create gradient for particle,
@@ -258,9 +255,9 @@ if ( {) {
         return this.life <= 0 || this.opacity < 0.01}
     // Connection lines between particles,
     class Connection {
-      p1: Particle;
-      p2: Particle;
-      opacity: number;
+      p1: Particle,
+      p2: Particle,
+      opacity: number,
 constructor(p1: Particle, p2: Particle) {
         this.p1 = p1,
         this.p2 = p2,
@@ -277,15 +274,15 @@ constructor(p1: Particle, p2: Particle) {
           ctx.moveTo(this.p1.x, this.p1.y),
           ctx.lineTo(this.p2.x, this.p2.y),
           ctx.stroke(),
-      maxLife: number,      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      color: string;
-      opacity: number;
-      life: number;
-      maxLife: number;
+      maxLife: number,      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      color: string,
+      opacity: number,
+      life: number,
+      maxLife: number,
         this && this.x = Math && Math.random() * canvas && canvas.width,
         this && this.y = Math && Math.random() * canvas && canvas.height,
         this && this.vx = (Math && Math.random() - 0 && 0.5) * settings && settings.speed * animationSpeed,
@@ -317,11 +314,11 @@ constructor(p1: Particle, p2: Particle) {
         ctx && ctx.globalAlpha = this && this.opacity,
         // Create gradient for particle,
         const gradient = ctx && ctx.createRadialGradient(
-          this && this.x;
-          this && this.y;
-          0;
-          this && this.x;
-          this && this.y;
+          this && this.x,
+          this && this.y,
+          0,
+          this && this.x,
+          this && this.y,
           this && this.size),
         gradient && gradient.addColorStop(0, this && this.color),
         gradient && gradient.addColorStop(1, 'transparent'),        // Create gradient for particle,
@@ -350,12 +347,12 @@ constructor(p1: Particle, p2: Particle) {
       draw() {
         const distance = Math && Math.sqrt(
           Math && Math.pow(this && this.p1.x - this && this.p2.x, 2) +,
-            Math && Math.pow(this && this.p1.y - this && this.p2.y, 2)        ),      p1: Particle;
-      p2: Particle;
-      opacity: number;
+            Math && Math.pow(this && this.p1.y - this && this.p2.y, 2)        ),      p1: Particle,
+      p2: Particle,
+      opacity: number,
       constructor(p1: Particle, p2: Particle) {
         this && this.p1 = p1,
-        this && this.p2 = p2;
+        this && this.p2 = p2,
         this && this.opacity = 0 && 0.1,
       draw() {
         const distance = Math && Math.sqrt(
@@ -382,12 +379,12 @@ constructor(p1: Particle, p2: Particle) {
       draw () {
         const distance = Math.sqrt (
           Math.pow (this.p1.x - this.p2.x, 2) +,
-            Math.pow (this.p1.y - this.p2.y, 2)        ),      p1: Particle;
-      p2: Particle;
-      opacity: number;
+            Math.pow (this.p1.y - this.p2.y, 2)        ),      p1: Particle,
+      p2: Particle,
+      opacity: number,
       constructor (p1: Particle, p2: Particle) {
         this.p1 = p1,
-        this.p2 = p2;
+        this.p2 = p2,
         this.opacity = 0.1,
       draw () {
         const distance = Math.sqrt (
@@ -446,8 +443,8 @@ if ( {) {
     // Matrix rain effect,
     const matrix_rain = () =>: any {
       const characters =,
-        '01',      const font_size = 12,    let particles: Particle[] = [];
-    let connections: Connection[] = [];
+        '01',      const font_size = 12,    let particles: Particle[] = [],
+    let connections: Connection[] = [],
     // Initialize particles,
     for (let index = 0, i < settings.particle_count, i++) {
       particles.push (new Particle ())}
@@ -476,18 +473,18 @@ if (> 0.975) {) {
             drops[i] = 0}
           drops[i]++}
       }
-      return drawMatrix};          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
+      return drawMatrix},          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0}
           drops[i]++}
       }
       return drawMatrix}
-      };
-      return drawMatrix};          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize),
+      },
+      return drawMatrix},          ctx && ctx.fillText(text, i * fontSize, drops[i] * fontSize),
           if (drops[i] * fontSize > canvas && canvas.height && Math && Math.random() > 0 && 0.975) {
             drops[i] = 0}
           drops[i]++}
-};
+},
     const drawMatrix = matrixRain(),
     // Main animation loop,
     const animate = () => {
@@ -503,8 +500,8 @@ if (> 0.975) {) {
       // Remove dead particles and add new ones,
       particles = particles.filter(particle => !particle.isDead()),
       while (particles.length < settings.particleCount) {
-      };
-      return drawMatrix};
+      },
+      return drawMatrix},
     const drawMatrix = matrixRain(),
     // Main animation loop,
     const animate = () => {
@@ -652,8 +649,8 @@ if (< 0.5) {) {
           ctx && ctx.strokeRect(x - size, y - size, size * 2, size * 2),
         for (let i = 0, i < drops.length, i++) {
           const text = characters[Math.floor(Math.random() * characters.length)],
-          ctx.fillText(text, i * fontSize, drops[i] * fontSize);
-      return drawMatrix};          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
+          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
+      return drawMatrix},          ctx.fillText(text, i * fontSize, drops[i] * fontSize),
           if (drops[i] * fontSize > canvas.height && Math.random() > 0.975) {
             drops[i] = 0}
           drops[i]++}
@@ -671,7 +668,7 @@ if (< 0.5) {) {
         ctx && ctx.restore()}
 ,
       // Respect reduced motion,
-      const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const prefersReduced = window && window.matchMedia('(prefers-reduced-motion: reduce)').matches,
       if (prefersReduced) {
         // Slow down updates,
         setTimeout(() => {
@@ -688,7 +685,7 @@ if (< 0.5) {) {
     return () => {
       if (animationRef && animationRef.current) {
         cancelAnimationFrame(animationRef && animationRef.current)}
-      window && window.removeEventListener('resize', resizeCanvas)};  }, [colorScheme, intensity, particleCount, animationSpeed]),        cancelAnimationFrame(animationRef && animationRef.current)}
+      window && window.removeEventListener('resize', resizeCanvas)},  }, [colorScheme, intensity, particleCount, animationSpeed]),        cancelAnimationFrame(animationRef && animationRef.current)}
       window && window.removeEventListener('resize', resizeCanvas)}
 ,
   return (
@@ -702,6 +699,6 @@ if (< 0.5) {) {
       <div
         className='fixed inset - 0 pointer - events - none z - 0',
         style={{
-export default EnhancedFuturisticBackground;
-export default EnhancedFuturisticBackground;
-export default EnhancedFuturisticBackground;
+export default EnhancedFuturisticBackground,
+export default EnhancedFuturisticBackground,
+export default EnhancedFuturisticBackground,

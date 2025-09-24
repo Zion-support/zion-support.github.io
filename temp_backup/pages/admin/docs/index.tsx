@@ -6,28 +6,28 @@ export default function DocsAdmin() {
   const fetchContent = async () => {
     setStatus('Loading...'),
     const res = await fetch('/api/admin/docs/get', {
-      headers: { 'x-admin-token': token };
+      headers: { 'x-admin-token': token },
     }),
     if (!res.ok) {
       setStatus('Failed to load'),
       return}
     const json = await res.json(),
     setValue(JSON.stringify(json, null, 2)),
-    setStatus('Loaded')};
+    setStatus('Loaded')},
   const saveContent = async () => {
     setStatus('Saving...'),
     try {
       const parsed = JSON.parse(value),
       const res = await fetch('/api/admin/docs/save', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json', 'x-admin-token': token };
-        body: JSON.stringify(parsed);
+        method: 'POST',
+        headers: { 'Content-Type': 'application/jsonx-admin-token': token },
+        body: JSON.stringify(parsed)
       }),
       if (!res.ok) throw new Error('Save failed'),
       const data = await res.json(),
       setStatus(`Saved version ${data.version}`)} catch (e) {
       setStatus('Invalid JSON or save error')}
-  };
+  },
   return (
     <div className='max-w-5xl mx-auto p-6 space-y-4'>,
       <h1 className='text-2xl font-semibold'>Docs Admin</h1>,

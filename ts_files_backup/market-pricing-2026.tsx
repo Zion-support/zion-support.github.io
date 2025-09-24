@@ -13,45 +13,45 @@ export default function MarketPricing2026() {
   const [priceRangesetPriceRange] = useState('all'),
   // Combine all 2026 services,
   const allServices = [
-    ...revolutionary2026Services;
-    ...emergingTech2026Services;
+    ...revolutionary2026Services,
+    ...emergingTech2026Services,
     ...comprehensiveIT2026Services],
   // Filter services based on selection,
   const filteredServices = allServices.filter(service => {
     const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
     const matchesPrice = priceRange === 'all' ||,
-      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g', ')) < 5000) ||,
-      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g', ')) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g', ')) < 15000) ||,
-      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g', ')) >= 15000),
+      (priceRange === 'budget' && parseFloat(service.price.replace(/[^0-9.]/g)) < 5000) ||,
+      (priceRange === 'mid' && parseFloat(service.price.replace(/[^0-9.]/g)) >= 5000 && parseFloat(service.price.replace(/[^0-9.]/g', ')) < 15000) ||,
+      (priceRange === 'premium' && parseFloat(service.price.replace(/[^0-9.]/g)) >= 15000),
     return matchesCategory && matchesPrice}),
   const categories = [
-    { id: ''all', 'name: 'All 'Categories', 'icon: BarChart3count: allServices.length };
-    { id: ''AI', 'name: 'AI & Machine 'Learning', 'icon: Braincount: allServices.filter(s => s.category.includes('AI')).length };
-    { id: ''Quantum', 'name: 'Quantum 'Computing', 'icon: Atomcount: allServices.filter(s => s.category.includes('Quantum')).length };
-    { id: ''Emerging', 'name: 'Emerging 'Technology', 'icon: Sparklescount: allServices.filter(s => s.category.includes('Emerging')).length };
-    { id: ''IT', 'name: 'IT & 'Infrastructure', 'icon: Shieldcount: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length };
-    { id: ''Autonomous', 'name: 'Autonomous 'Systems', 'icon: Targetcount: allServices.filter(s => s.category.includes('Autonomous')).length };
-    { id: ''Cloud', 'name: 'Cloud & 'DevOps', 'icon: Cloudcount: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
+    { id: ''allname: 'All 'Categoriesicon: BarChart3count: allServices.length },
+    { id: ''AIname: 'AI & Machine 'Learningicon: Braincount: allServices.filter(s => s.category.includes('AI')).length },
+    { id: ''Quantumname: 'Quantum 'Computingicon: Atomcount: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: ''Emergingname: 'Emerging 'Technologyicon: Sparklescount: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: ''ITname: 'IT & 'Infrastructureicon: Shieldcount: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: ''Autonomousname: 'Autonomous 'Systemsicon: Targetcount: allServices.filter(s => s.category.includes('Autonomous')).length },
+    { id: ''Cloudname: 'Cloud & 'DevOpsicon: Cloudcount: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
   ],
   const priceRanges = [
-    { id: ''all', 'name: 'All 'Prices', 'range: 'All price ranges' };
-    { id: ''budget', 'name: 'Budget ($0 - $5K)'range: 'Affordable solutions for startups and small businesses' };
-    { id: ''mid', 'name: 'Mid-Range ($5K - $15K)'range: 'Professional solutions for growing companies' };
-    { id: ''premium', 'name: 'Premium ($15K+)'range: 'Enterprise-grade solutions for large organizations' }
+    { id: ''allname: 'All 'Pricesrange: 'All price ranges' },
+    { id: ''budgetname: 'Budget ($0 - $5K)'range: 'Affordable solutions for startups and small businesses' },
+    { id: ''midname: 'Mid-Range ($5K - $15K)'range: 'Professional solutions for growing companies' },
+    { id: ''premiumname: 'Premium ($15K+)'range: 'Enterprise-grade solutions for large organizations' }
   ],
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Calculate pricing statistics,
   const pricingStats = {
-    totalServices: allServices.length;
-    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, ', ')), 0) / allServices.length;
-    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ', '))));
-    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ', '))));
-    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0);
-    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length};
+    totalServices: allServices.length,
+    averagePrice: allServices.reduce((sum, service) => sum + parseFloat(service.price.replace(/[^0-9.]/g, )), 0) / allServices.length,
+    lowestPrice: Math.min(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, ', ')))),
+    highestPrice: Math.max(...allServices.map(s => parseFloat(s.price.replace(/[^0-9.]/g, )))),
+    totalCustomers: allServices.reduce((sum, service) => sum + service.customers, 0),
+    averageRating: allServices.reduce((sum, service) => sum + service.rating, 0) / allServices.length},
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",

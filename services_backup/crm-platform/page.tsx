@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'CRM Platform Development | Zion Tech Group';
+  title: 'CRM Platform Development | Zion Tech Group',
   description:,
-    'Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.';
-};
+    'Build powerful CRM platforms with lead management, sales tracking, and customer insights. Professional CRM solutions starting at $20k.',
+},
 export default function CRMPlatformPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function CRMPlatformPage() {
           CRM Platform Development,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build powerful CRM platforms with lead management, sales tracking;
+          Build powerful CRM platforms with lead management, sales tracking,
           customer insights, and automation workflows.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Lead Management',
             details={[
-              'Lead capture forms';
-              'Lead scoring system';
-              'Lead assignment rules';
-              'Lead nurturing workflows';
-              'Lead source tracking';
-              'Conversion analytics';
-              'Lead qualification tools';
+              'Lead capture formsLead scoring system',
+              'Lead assignment rulesLead nurturing workflows',
+              'Lead source trackingConversion analytics',
+              'Lead qualification tools',
             ]}
           />,
           <Item
             title='Sales Pipeline',
             details={[
-              'Deal tracking';
-              'Pipeline visualization';
-              'Sales forecasting';
-              'Activity tracking';
-              'Quote generation';
-              'Contract management';
-              'Revenue reporting';
+              'Deal trackingPipeline visualization',
+              'Sales forecastingActivity tracking',
+              'Quote generationContract management',
+              'Revenue reporting',
             ]}
           />,
           <Item
             title='Customer Management',
             details={[
-              'Contact management';
-              'Communication history';
-              'Customer segmentation';
-              'Support ticket integration';
-              'Customer health scoring';
-              'Lifetime value tracking';
-              'Retention analytics';
+              'Contact managementCommunication history',
+              'Customer segmentationSupport ticket integration',
+              'Customer health scoringLifetime value tracking',
+              'Retention analytics',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$20k–$40k',
           duration='8–12 weeks',
           features={[
-            'Basic contact management';
-            'Lead tracking';
-            'Simple pipeline';
-            'Email integration';
-            'Basic reporting';
-            'Mobile app';
-            'User management';
+            'Basic contact managementLead tracking',
+            'Simple pipelineEmail integration',
+            'Basic reportingMobile app',
+            'User management',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$40k–$80k',
           duration='12–18 weeks',
           features={[
-            'Everything in Starter';
-            'Advanced automation';
-            'Custom fields & workflows';
-            'Advanced analytics';
-            'API integrations';
-            'White-label options';
-            'Priority support';
+            'Everything in StarterAdvanced automation',
+            'Custom fields & workflowsAdvanced analytics',
+            'API integrationsWhite-label options',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$80k+',
           duration='16–24 weeks',
           features={[
-            'Everything in Professional';
-            'Custom development';
-            'Advanced security';
-            'Multi-tenant architecture';
-            'Dedicated support';
-            'SLA guarantees';
-            'On-premise deployment';
+            'Everything in ProfessionalCustom development',
+            'Advanced securityMulti-tenant architecture',
+            'Dedicated supportSLA guarantees',
+            'On-premise deployment',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

@@ -4,33 +4,29 @@ import { ArrowLeft, Calendar, Clock, User, Brain } from 'lucide-react',
 import SEO from '../../components/SEO',
 export const metadata: Metadata = {
   title:,
-    "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise";
+    "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise",
   description:,
-    'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.';
+    'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.',
   keywords: [
-    'quantum computing';
-    'AI 20o25';
-    'enterprise transformation';
-    'quantum AI';
-    'breakthrough technology';
-  ];
+    'quantum computingAI 20o25',
+    'enterprise transformationquantum AI',
+    'breakthrough technology',
+  ],
   openGraph: {
     title:,
-      "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise";
+      "AI 20o25: The Quantum Computing Revolution That's Reshaping Enterprise",
     description:,
-      'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover how quantum computing is revolutionizing AI capabilities in 20o25, delivering unprecedented processing power and solving previously impossible enterprise challenges.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'quantum computing';
-      'AI 20o25';
-      'enterprise transformation';
-      'quantum AI';
-      'breakthrough technology';
-    ];
-  };
-};
+      'quantum computingAI 20o25',
+      'enterprise transformationquantum AI',
+      'breakthrough technology',
+    ]
+  },
+},
 export default function QuantumComputingRevolutionPage() {
   return (
     <div>,
@@ -80,11 +76,9 @@ export default function QuantumComputingRevolutionPage() {
             </p>,
             <div className='flex flex-wrap gap-2'>,
               {[
-                'quantum computing';
-                'AI 20o25';
-                'enterprise transformation';
-                'quantum AI';
-                'breakthrough technology';
+                'quantum computingAI 20o25',
+                'enterprise transformationquantum AI',
+                'breakthrough technology',
               ].map(tag => (
                 <span
                   key={tag}

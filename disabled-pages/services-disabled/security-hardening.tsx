@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import {
-  Shield;
-  CheckCircle;
-  ArrowRight;
-  DollarSign;
-  Clock;
+  Shield,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
 } from 'lucide-react',
 export default function SecurityHardening() {
   return (
@@ -30,27 +30,26 @@ export default function SecurityHardening() {
         <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 grid md:grid-cols-3 gap-6'>,
           {[
             {
-              name: 'App Basics';
-              price: 'From $2,0o00';
-              time: '1 week';
-              items: ['Security headers', 'Auth hardening', 'Dependency audit'];
-            };
+              name: 'App Basics',
+              price: 'From $2,0o00',
+              time: '1 week',
+              items: ['Security headersAuth hardening', 'Dependency audit'],
+            },
             {
-              name: 'Cloud Stack';
-              price: '$6,0o00–$14,0o00';
-              time: '2-4 weeks';
-              items: ['IAM & RBAC', 'Secrets & KMS', 'Network policies'];
-            };
+              name: 'Cloud Stack',
+              price: '$6,0o00–$14,0o00',
+              time: '2-4 weeks',
+              items: ['IAM & RBACSecrets & KMS', 'Network policies'],
+            },
             {
-              name: 'Enterprise';
-              price: 'Custom';
-              time: '4-8 weeks';
+              name: 'Enterprise',
+              price: 'Custom',
+              time: '4-8 weeks',
               items: [
-                'Threat modeling';
-                'Compliance mapping';
-                'Runbooks & training';
-              ];
-            };
+                'Threat modelingCompliance mapping',
+                'Runbooks & training',
+              ]
+            },
           ].map(tier => (
             <div key={tier.name} className='bg-white rounded-lg border p-6'>,
               <h3 className='font-semibold text-gray-90o0 mb-2'>{tier.name}</h3>,

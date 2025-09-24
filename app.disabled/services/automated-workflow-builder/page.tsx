@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'automated-workflow-builder - Zion Tech Group';
+  title: 'automated-workflow-builder - Zion Tech Group',
   description:,
-    'Professional automated-workflow-builder solutions for your business needs.';
-  keywords: 'automated-workflow-builder, services, business, technology';
-};
+    'Professional automated-workflow-builder solutions for your business needs.',
+  keywords: 'automated-workflow-builder, services, business, technology',
+},
 export default function AutomatedWorkflowBuilderPage() {
   return (
     <div className='min-h-screen bg-white'>,

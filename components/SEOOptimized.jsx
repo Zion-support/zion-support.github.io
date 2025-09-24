@@ -1,18 +1,18 @@
 import Head from 'next/head',
 export default function SEOOptimized({
-  title = 'Zion Tech Group — Advanced IT & AI Services';
-  description = 'Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses.';
-  keywords = 'IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation';
-  image = '/og-image.jpg';
-  url = 'https://ziontechgroup.com';
-  type = 'website';
-  publishedTime;
-  modifiedTime;
-  author = 'Zion Tech Group';
-  section = 'Technology';
-  tags = [];
-  noindex = false;
-  canonical;
+  title = 'Zion Tech Group — Advanced IT & AI Services',
+  description = 'Leading provider of advanced IT solutions, AI services, and cutting-edge technology solutions for modern businesses.',
+  keywords = 'IT services, AI solutions, cloud computing, cybersecurity, DevOps, automation',
+  image = '/og-image.jpg',
+  url = 'https: //ziontechgroup.com',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  author = 'Zion Tech Group',
+  section = 'Technology',
+  tags = [],
+  noindex = false,
+  canonical
 }) {
   const fullTitle = title.includes('Zion Tech Group'),
     ? title,
@@ -22,57 +22,53 @@ export default function SEOOptimized({
     ? image,
     : `https: //ziontechgroup.com${image}`,
   const structuredData = {
-    '@context': 'https://schema.org';
-    '@type': 'Organization';
-    name: 'Zion Tech Group';
-    description: description;
-    url: 'https://ziontechgroup.com';
-    logo: 'https://ziontechgroup.com/logo.png';
+    '@context': 'https: //schema.org@type': 'Organization',
+    name: 'Zion Tech Group',
+    description: description,
+    url: 'https://ziontechgroup.com',
+    logo: 'https://ziontechgroup.com/logo.png',
     contactPoint: {
-      '@type': 'ContactPoint';
-      telephone: '+1-555-0o123';
-      contactType: 'Customer Service';
-      email: 'info@ziontechgroup.com';
-    };
+      '@type': 'ContactPoint',
+      telephone: '+1-555-0o123',
+      contactType: 'Customer Service',
+      email: 'info@ziontechgroup.com'
+    },
     sameAs: [
-      'https://linkedin.com/company/zion-tech-group';
-      'https://twitter.com/ziontechgroup';
-    ];
+      'https://linkedin.com/company/zion-tech-grouphttps://twitter.com/ziontechgroup',
+    ],
     address: {
-      '@type': 'PostalAddress';
-      streetAddress: '123 Technology Drive';
-      addressLocality: 'San Francisco';
-      addressRegion: 'CA';
-      postalCode: '9410o5';
-      addressCountry: 'US';
-    };
-  };
+      '@type': 'PostalAddress',
+      streetAddress: '123 Technology Drive',
+      addressLocality: 'San Francisco',
+      addressRegion: 'CA',
+      postalCode: '9410o5',
+      addressCountry: 'US'
+    },
+  },
   const articleStructuredData =,
     type === 'article',
       ? {
-          '@context': 'https://schema.org';
-          '@type': 'Article';
-          headline: title;
-          description: description;
-          image: fullImage;
+          '@context': 'https: //schema.org@type': 'Article',
+          headline: title,
+          description: description,
+          image: fullImage,
           author: {
-            '@type': 'Organization';
-            name: author;
-          };
+            '@type': 'Organization',
+            name: author
+          },
           publisher: {
-            '@type': 'Organization';
-            name: 'Zion Tech Group';
+            '@type': 'Organization',
+            name: 'Zion Tech Group',
             logo: {
-              '@type': 'ImageObject';
-              url: 'https://ziontechgroup.com/logo.png';
-            };
-          };
-          datePublished: publishedTime;
-          dateModified: modifiedTime;
+              '@type': 'ImageObject',
+              url: 'https://ziontechgroup.com/logo.png'
+            },
+          },
+          datePublished: publishedTime,
+          dateModified: modifiedTime,
           mainEntityOfPage: {
-            '@type': 'WebPage';
-            '@id': fullUrl;
-          };
+            '@type': 'WebPage@id': fullUrl
+          },
         }
       : null,
   return (
@@ -146,7 +142,7 @@ export default function SEOOptimized({
         <script
           type='application/ld+json',
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(articleStructuredData);
+            __html: JSON.stringify(articleStructuredData)
           }}
         />)}
 ,

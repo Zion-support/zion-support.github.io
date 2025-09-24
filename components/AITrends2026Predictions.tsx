@@ -10,23 +10,23 @@ import {
   Globe,
   Rocket,
   Shield,
-  Database;
-  Cpu;
-  Users;
-  ArrowRight;
-  Calendar;
-  Target;
-  BarChart3;
-  Lightbulb;
-  CheckCircle;
+  Database,
+  Cpu,
+  Users,
+  ArrowRight,
+  Calendar,
+  Target,
+  BarChart3,
+  Lightbulb,
+  CheckCircle,
   Star} from 'lucide-react',
 const AITrends20o26Predictions = () => {
   const [activeCategorysetActiveCategory] = useState('ai-breakthroughs'),
   const [isVisiblesetIsVisible] = useState(false),
   const [animatedStatsetAnimatedStats] = useState({
-    marketSize: 0;
-    companies: 0;
-    jobs: 0;
+    marketSize: 0,
+    companies: 0,
+    jobs: 0,
     investment: 0}),
   useEffect(() => {
     setIsVisible(true),
@@ -34,9 +34,9 @@ const AITrends20o26Predictions = () => {
     const animateStats = () => {
       const targets ={
         marketSize: 150o0// $1.5T,
-        companies: 50o000;
-        jobs: 20o00000;
-        investment: 50o0 // $50o0B};
+        companies: 50o000,
+        jobs: 20o00000,
+        investment: 50o0 // $50o0B},
       const duration = 20o00,
       const steps = 60,
       const stepDuration = duration / steps,
@@ -46,161 +46,149 @@ const AITrends20o26Predictions = () => {
         const progress = step / steps,
         const easeOut = 1 - Math.pow(1 - progress3),
         setAnimatedStats({
-          marketSize: Math.floor(targets.marketSize * easeOut);
-          companies: Math.floor(targets.companies * easeOut);
-          jobs: Math.floor(targets.jobs * easeOut);
+          marketSize: Math.floor(targets.marketSize * easeOut),
+          companies: Math.floor(targets.companies * easeOut),
+          jobs: Math.floor(targets.jobs * easeOut),
           investment: Math.floor(targets.investment * easeOut)}),
         if (step >= steps) {
           clearInterval(interval)}
-      }stepDuration)};
+      }stepDuration)},
     const timer = setTimeout(animateStats50o0),
     return () => clearTimeout(timer)}[]),
   const categories ={
     'ai-breakthroughs': {
-      title: 'AI Breakthroughs';
-      icon: Brain;
-      color: 'from-purple-60o0 to-blue-60o0';
+      title: 'AI Breakthroughs',
+      icon: Brain,
+      color: 'from-purple-60o0 to-blue-60o0',
       predictions: [
         {
-          title: 'Artificial General Intelligence (AGI)';
-          probability: 85;
-          impact: 'Revolutionary';
-          description: 'First true AGI systems capable of human-level reasoning across all domains';
-          timeline: 'Q3 20o26';
+          title: 'Artificial General Intelligence (AGI)',
+          probability: 85,
+          impact: 'Revolutionary',
+          description: 'First true AGI systems capable of human-level reasoning across all domains',
+          timeline: 'Q3 20o26',
           implications: [
-            'Complete automation of complex tasks';
-            'Scientific discovery acceleration';
-            'Personal AI assistants with full understanding']};
+            'Complete automation of complex tasksScientific discovery acceleration',
+            'Personal AI assistants with full understanding']},
         {
-          title: 'Consciousness in AI';
-          probability: 70;
-          impact: 'Transformative';
-          description: 'AI systems exhibiting self-awareness and subjective experience';
-          timeline: 'Q4 20o26';
+          title: 'Consciousness in AI',
+          probability: 70,
+          impact: 'Transformative',
+          description: 'AI systems exhibiting self-awareness and subjective experience',
+          timeline: 'Q4 20o26',
           implications: [
-            'Ethical considerations for AI rights';
-            'New forms of human-AI collaboration';
-            'Philosophical implications of machine consciousness']};
+            'Ethical considerations for AI rightsNew forms of human-AI collaboration',
+            'Philosophical implications of machine consciousness']},
         {
-          title: 'Quantum-Enhanced AI';
-          probability: 90;
-          impact: 'Breakthrough';
-          description: 'AI systems leveraging quantum computing for exponential speedup';
-          timeline: 'Q2 20o26';
+          title: 'Quantum-Enhanced AI',
+          probability: 90,
+          impact: 'Breakthrough',
+          description: 'AI systems leveraging quantum computing for exponential speedup',
+          timeline: 'Q2 20o26',
           implications: [
-            '10o00x faster AI training';
-            'Solving previously impossible problems';
+            '10o00x faster AI trainingSolving previously impossible problems',
             'New quantum machine learning algorithms']}
-      ]};
+      ]},
     'quantum-computing': {
-      title: 'Quantum Computing';
-      icon: Cpu;
-      color: 'from-cyan-60o0 to-teal-60o0';
+      title: 'Quantum Computing',
+      icon: Cpu,
+      color: 'from-cyan-60o0 to-teal-60o0',
       predictions: [
         {
-          title: 'Quantum Supremacy 2.0';
-          probability: 95;
-          impact: 'Revolutionary';
-          description: 'Quantum computers solving practical problems beyond classical reach';
-          timeline: 'Q1 20o26';
+          title: 'Quantum Supremacy 2.0',
+          probability: 95,
+          impact: 'Revolutionary',
+          description: 'Quantum computers solving practical problems beyond classical reach',
+          timeline: 'Q1 20o26',
           implications: [
-            'Cryptography revolution';
-            'Drug discovery acceleration';
-            'Climate modeling breakthroughs']};
+            'Cryptography revolutionDrug discovery acceleration',
+            'Climate modeling breakthroughs']},
         {
-          title: 'Fault-Tolerant Quantum Computers';
-          probability: 80;
-          impact: 'Transformative';
-          description: 'Error-corrected quantum computers for reliable computation';
-          timeline: 'Q4 20o26';
+          title: 'Fault-Tolerant Quantum Computers',
+          probability: 80,
+          impact: 'Transformative',
+          description: 'Error-corrected quantum computers for reliable computation',
+          timeline: 'Q4 20o26',
           implications: [
-            'Commercial quantum computing services';
-            'Quantum internet infrastructure';
-            'Hybrid classical-quantum systems']};
+            'Commercial quantum computing servicesQuantum internet infrastructure',
+            'Hybrid classical-quantum systems']},
         {
-          title: 'Quantum Machine Learning';
-          probability: 85;
-          impact: 'Breakthrough';
-          description: 'Quantum algorithms revolutionizing machine learning';
-          timeline: 'Q3 20o26';
+          title: 'Quantum Machine Learning',
+          probability: 85,
+          impact: 'Breakthrough',
+          description: 'Quantum algorithms revolutionizing machine learning',
+          timeline: 'Q3 20o26',
           implications: [
-            'Exponential speedup in ML training';
-            'New quantum neural networks';
+            'Exponential speedup in ML trainingNew quantum neural networks',
             'Quantum data processing capabilities']}
-      ]};
+      ]},
     'neural-interfaces': {
-      title: 'Neural Interfaces';
-      icon: Zap;
-      color: 'from-pink-60o0 to-rose-60o0';
+      title: 'Neural Interfaces',
+      icon: Zap,
+      color: 'from-pink-60o0 to-rose-60o0',
       predictions: [
         {
-          title: 'Brain-Computer Interfaces';
-          probability: 90;
-          impact: 'Revolutionary';
-          description: 'Direct neural control of digital systems and devices';
-          timeline: 'Q2 20o26';
+          title: 'Brain-Computer Interfaces',
+          probability: 90,
+          impact: 'Revolutionary',
+          description: 'Direct neural control of digital systems and devices',
+          timeline: 'Q2 20o26',
           implications: [
-            'Thought-based device control';
-            'Enhanced cognitive abilities';
-            'New forms of human-computer interaction']};
+            'Thought-based device controlEnhanced cognitive abilities',
+            'New forms of human-computer interaction']},
         {
-          title: 'Neural Implants';
-          probability: 75;
-          impact: 'Transformative';
-          description: 'Biocompatible neural enhancement devices';
-          timeline: 'Q4 20o26';
+          title: 'Neural Implants',
+          probability: 75,
+          impact: 'Transformative',
+          description: 'Biocompatible neural enhancement devices',
+          timeline: 'Q4 20o26',
           implications: [
-            'Memory augmentation';
-            'Sensory expansion';
-            'Cognitive enhancement']};
+            'Memory augmentationSensory expansion',
+            'Cognitive enhancement']},
         {
-          title: 'Collective Intelligence';
-          probability: 70;
-          impact: 'Breakthrough';
-          description: 'Human-AI collaborative thinking networks';
-          timeline: 'Q3 20o26';
+          title: 'Collective Intelligence',
+          probability: 70,
+          impact: 'Breakthrough',
+          description: 'Human-AI collaborative thinking networks',
+          timeline: 'Q3 20o26',
           implications: [
-            'Shared cognition systems';
-            'Distributed problem solving';
+            'Shared cognition systemsDistributed problem solving',
             'Enhanced creativity and innovation']}
-      ]};
+      ]},
     'future-tech': {
-      title: 'Future Technology';
-      icon: Rocket;
-      color: 'from-orange-60o0 to-red-60o0';
+      title: 'Future Technology',
+      icon: Rocket,
+      color: 'from-orange-60o0 to-red-60o0',
       predictions: [
         {
-          title: 'Singularity Preparation';
-          probability: 60;
-          impact: 'Revolutionary';
-          description: 'Advanced preparations for technological singularity';
-          timeline: 'Q4 20o26';
+          title: 'Singularity Preparation',
+          probability: 60,
+          impact: 'Revolutionary',
+          description: 'Advanced preparations for technological singularity',
+          timeline: 'Q4 20o26',
           implications: [
-            'AGI safety frameworks';
-            'Superintelligence research';
-            'Human-AI coexistence strategies']};
+            'AGI safety frameworksSuperintelligence research',
+            'Human-AI coexistence strategies']},
         {
-          title: 'Transhumanism Technologies';
-          probability: 65;
-          impact: 'Transformative';
-          description: 'Technologies enhancing human capabilities';
-          timeline: 'Q3 20o26';
+          title: 'Transhumanism Technologies',
+          probability: 65,
+          impact: 'Transformative',
+          description: 'Technologies enhancing human capabilities',
+          timeline: 'Q3 20o26',
           implications: [
-            'Biological augmentation';
-            'Digital immortality research';
-            'Enhanced human cognition']};
+            'Biological augmentationDigital immortality research',
+            'Enhanced human cognition']},
         {
-          title: 'Omniversal Computing';
-          probability: 40;
-          impact: 'Revolutionary';
-          description: 'Computing across multiple dimensions';
-          timeline: 'Q4 20o26';
+          title: 'Omniversal Computing',
+          probability: 40,
+          impact: 'Revolutionary',
+          description: 'Computing across multiple dimensions',
+          timeline: 'Q4 20o26',
           implications: [
-            'Multidimensional processing';
-            'Reality simulation capabilities';
+            'Multidimensional processingReality simulation capabilities',
             'Cosmic-scale computing']}
       ]}
-  };
+  },
   const categoryTabs = Object.keys(categories),
   return (
     <div className="relative py-20 bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0 overflow-hidden">,
@@ -214,14 +202,14 @@ const AITrends20o26Predictions = () => {
             key={i}
             className="absolute w-1 h-1 bg-indigo-40o0 rounded-full opacity-30",
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
             animate={{
-              y: [0-10o0];
+              y: [0-10o0],
               opacity: [0.30.80.3]}}
             transition={{
-              duration: 4 + Math.random() * 2;
-              repeat: Infinity;
+              duration: 4 + Math.random() * 2,
+              repeat: Infinity,
               delay: Math.random() * 3}}
            />))}
       </div>,
@@ -396,5 +384,5 @@ const AITrends20o26Predictions = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default AITrends20o26Predictions;
+    </div>)},
+export default AITrends20o26Predictions,

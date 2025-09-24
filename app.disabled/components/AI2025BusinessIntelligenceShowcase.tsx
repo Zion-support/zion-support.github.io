@@ -5,95 +5,95 @@ const AI20o25BusinessIntelligenceShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-bi-guide';
-      title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
-      type: 'blog';
+      id: 'ultimate-bi-guide',
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',
+      type: 'blog',
       description:,
-        'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.';
-      metrics: '3,20o0% ROI • $8.2M Savings • 99.7% Accuracy';
-      readingTime: '25 min read';
-      featured: true;
-      link: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-guide';
-      tags: ['AI Revolution', 'Business Intelligence', 'ROI', 'Enterprise'];
-    };
+        'Transform your enterprise with next-generation AI-powered business intelligence that delivers unprecedented insights and competitive advantage.',
+      metrics: '3,20o0% ROI • $8.2M Savings • 99.7% Accuracy',
+      readingTime: '25 min read',
+      featured: true,
+      link: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-guide',
+      tags: ['AI RevolutionBusiness Intelligence', 'ROIEnterprise'],
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Business Intelligence Success Story';
-      type: 'case-study';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Business Intelligence Success Story',
+      type: 'case-study',
       description:,
-        'How a global manufacturing leader with $12.8B revenue achieved 3,20o0% ROI through AI-powered business intelligence transformation.';
-      metrics: '$8.2M Annual Savings • 450% Efficiency • 99.7% Accuracy';
-      readingTime: '18 min read';
-      featured: true;
-      link: '/case-studies/fortune-50o0-ai-business-intelligence-320o0-roi-success-story';
-      tags: ['Fortune 50o0', 'Success Story', 'Manufacturing', 'ROI'];
-    };
+        'How a global manufacturing leader with $12.8B revenue achieved 3,20o0% ROI through AI-powered business intelligence transformation.',
+      metrics: '$8.2M Annual Savings • 450% Efficiency • 99.7% Accuracy',
+      readingTime: '18 min read',
+      featured: true,
+      link: '/case-studies/fortune-50o0-ai-business-intelligence-320o0-roi-success-story',
+      tags: ['Fortune 50o0Success Story', 'ManufacturingROI'],
+    },
     {
-      id: 'implementation-guide';
-      title: 'AI Business Intelligence Implementation Ultimate Guide';
-      type: 'resource';
+      id: 'implementation-guide',
+      title: 'AI Business Intelligence Implementation Ultimate Guide',
+      type: 'resource',
       description:,
-        'Complete roadmap to 3,20o0% ROI in 12-18 months. Your comprehensive blueprint for AI BI transformation with proven frameworks.';
-      metrics: '94% Success Rate • 3.2 Month Payback • 450% Speed Improvement';
-      readingTime: '35 min read';
-      featured: true;
-      link: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25';
-      tags: ['Implementation', 'Guide', 'ROI', 'Framework'];
-    };
+        'Complete roadmap to 3,20o0% ROI in 12-18 months. Your comprehensive blueprint for AI BI transformation with proven frameworks.',
+      metrics: '94% Success Rate • 3.2 Month Payback • 450% Speed Improvement',
+      readingTime: '35 min read',
+      featured: true,
+      link: '/resources/ai-business-intelligence-implementation-ultimate-guide-20o25',
+      tags: ['ImplementationGuide', 'ROIFramework'],
+    },
     {
-      id: 'advanced-analytics';
-      title: 'AI 20o25: The Advanced Analytics Revolution';
-      type: 'blog';
+      id: 'advanced-analytics',
+      title: 'AI 20o25: The Advanced Analytics Revolution',
+      type: 'blog',
       description:,
-        'Discover how advanced analytics powered by AI is revolutionizing business intelligence and delivering extraordinary results.';
-      metrics: '90o0% ROI • $8.2M Savings • 99.7% Accuracy';
-      readingTime: '22 min read';
-      featured: false;
-      link: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide';
-      tags: ['Advanced Analytics', 'AI', 'ROI', 'Fortune 50o0'];
-    };
+        'Discover how advanced analytics powered by AI is revolutionizing business intelligence and delivering extraordinary results.',
+      metrics: '90o0% ROI • $8.2M Savings • 99.7% Accuracy',
+      readingTime: '22 min read',
+      featured: false,
+      link: '/blog/ai-20o25-advanced-analytics-revolution-ultimate-guide',
+      tags: ['Advanced AnalyticsAI', 'ROIFortune 50o0'],
+    },
     {
-      id: 'intelligent-automation';
-      title: 'AI 20o25: The Intelligent Automation Revolution';
-      type: 'blog';
+      id: 'intelligent-automation',
+      title: 'AI 20o25: The Intelligent Automation Revolution',
+      type: 'blog',
       description:,
-        'Learn how intelligent automation is transforming business processes and delivering unprecedented efficiency gains.';
-      metrics: '1,10o0% ROI • $12.8M Savings • 450% Efficiency';
-      readingTime: '25 min read';
-      featured: false;
-      link: '/blog/ai-20o25-intelligent-automation-revolution-ultimate-guide';
-      tags: ['Intelligent Automation', 'AI', 'ROI', 'Business Process'];
-    };
+        'Learn how intelligent automation is transforming business processes and delivering unprecedented efficiency gains.',
+      metrics: '1,10o0% ROI • $12.8M Savings • 450% Efficiency',
+      readingTime: '25 min read',
+      featured: false,
+      link: '/blog/ai-20o25-intelligent-automation-revolution-ultimate-guide',
+      tags: ['Intelligent AutomationAI', 'ROIBusiness Process'],
+    },
     {
-      id: 'edge-computing';
-      title: 'AI 20o25: The Edge Computing Revolution';
-      type: 'blog';
+      id: 'edge-computing',
+      title: 'AI 20o25: The Edge Computing Revolution',
+      type: 'blog',
       description:,
-        'Explore how edge computing is enabling real-time AI processing and delivering faster, more efficient business intelligence.';
-      metrics: '450% ROI • $2.3M Savings • 67% Latency Reduction';
-      readingTime: '18 min read';
-      featured: false;
-      link: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide';
-      tags: ['Edge Computing', 'AI', 'ROI', 'Latency'];
-    };
+        'Explore how edge computing is enabling real-time AI processing and delivering faster, more efficient business intelligence.',
+      metrics: '450% ROI • $2.3M Savings • 67% Latency Reduction',
+      readingTime: '18 min read',
+      featured: false,
+      link: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide',
+      tags: ['Edge ComputingAI', 'ROILatency'],
+    },
   ],
   const categories = [
-    { id: 'all', label: 'All Content', count: content.length };
+    { id: 'all', label: 'All Content', count: content.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: content.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: content.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: content.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: content.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: content.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: content.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -109,7 +109,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -120,7 +120,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -195,7 +195,7 @@ const AI20o25BusinessIntelligenceShowcase = () => {
                     className={`inline-flex items-center px-3 py-1 rounded-full text-xs font-semibold border ${getTypeColor(item.type)}`}
                   >,
                     <span className='mr-1'>{getTypeIcon(item.type)}</span>,
-                    {item.type.replace('-', ' ').toUpperCase()}
+                    {item.type.replace('- ').toUpperCase()}
                   </div>,
                   <div className='text-sm text-gray-50o0'>,
                     {item.readingTime}
@@ -261,5 +261,5 @@ const AI20o25BusinessIntelligenceShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25BusinessIntelligenceShowcase;
+    </section>)},
+export default AI20o25BusinessIntelligenceShowcase,

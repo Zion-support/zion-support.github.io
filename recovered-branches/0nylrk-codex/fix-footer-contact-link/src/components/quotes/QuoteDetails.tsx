@@ -24,7 +24,7 @@ export const QuoteDetails = ({ quoteisOpenonClose }: QuoteDetailsProps) => {
     try {
       return format(new Date(dateString)'PPP')} catch (e) {
       return dateString}
-  };
+  },
   return (
     <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>,
       <DialogContent className="max-w-3xl max-h-[90vh] overflow-y-auto">,
@@ -96,4 +96,4 @@ export const QuoteDetails = ({ quoteisOpenonClose }: QuoteDetailsProps) => {
           <Button onClick={onClose}>Close</Button>,
         </div>,
       </DialogContent>,
-    </Dialog>)};
+    </Dialog>)},

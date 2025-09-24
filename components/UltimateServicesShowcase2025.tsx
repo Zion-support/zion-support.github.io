@@ -1,92 +1,92 @@
-import React from 'react';
+import React from 'react',
 "use client",
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 ArrowRightZapShieldCloudBrainGlobeTrendingUpStarCheckCircle,
 const services = [
   {
-    id: 1;
-    title: "AI-Powered Business Automation";
-    description: "Transform your operations with intelligent automation that learns and adapts to your business needs.";
-    price: "From $299/month";
+    id: 1,
+    title: "AI-Powered Business Automation",
+    description: "Transform your operations with intelligent automation that learns and adapts to your business needs.",
+    price: "From $299/month",
     features: [
-      "40-60% operational cost reduction";
-      "30o0% productivity increase";
-      "ROI within 3 months";
-      "24/7 intelligent monitoring"];
-    icon: Brain;
-    color: "from-blue-50o0 to-purple-60o0";
-    popular: true;
-    category: "AI & Automation"};
+      "40-60% operational cost reduction",
+      "30o0% productivity increase",
+      "ROI within 3 months",
+      "24/7 intelligent monitoring"],
+    icon: Brain,
+    color: "from-blue-50o0 to-purple-60o0",
+    popular: true,
+    category: "AI & Automation"},
   {
-    id: 2;
-    title: "Enterprise AI Content Generation";
-    description: "Create high-qualitySEO-optimized content at scale with our advanced AI writing platform.";
-    price: "From $199/month";
+    id: 2,
+    title: "Enterprise AI Content Generation",
+    description: "Create high-qualitySEO-optimized content at scale with our advanced AI writing platform.",
+    price: "From $199/month",
     features: [
-      "80% content creation time savings";
-      "20o0% SEO ranking improvement";
-      "Consistent brand messaging";
-      "Multi-language support"];
-    icon: Zap;
-    color: "from-green-50o0 to-teal-60o0";
-    popular: false;
-    category: "Content & Marketing"};
+      "80% content creation time savings",
+      "20o0% SEO ranking improvement",
+      "Consistent brand messaging",
+      "Multi-language support"],
+    icon: Zap,
+    color: "from-green-50o0 to-teal-60o0",
+    popular: false,
+    category: "Content & Marketing"},
   {
-    id: 3;
-    title: "Advanced Cybersecurity Solutions";
-    description: "Protect your business with next-generation AI-powered security that evolves with threats.";
-    price: "From $399/month";
+    id: 3,
+    title: "Advanced Cybersecurity Solutions",
+    description: "Protect your business with next-generation AI-powered security that evolves with threats.",
+    price: "From $399/month",
     features: [
-      "90% faster threat detection";
-      "70% reduction in false positives";
-      "24/7 automated protection";
-      "Zero-trust architecture"];
-    icon: Shield;
-    color: "from-red-50o0 to-pink-60o0";
-    popular: false;
-    category: "Security"};
+      "90% faster threat detection",
+      "70% reduction in false positives",
+      "24/7 automated protection",
+      "Zero-trust architecture"],
+    icon: Shield,
+    color: "from-red-50o0 to-pink-60o0",
+    popular: false,
+    category: "Security"},
   {
-    id: 4;
-    title: "Cloud Infrastructure Optimization";
-    description: "Maximize your cloud investment with intelligent resource management and cost optimization.";
-    price: "From $599/month";
+    id: 4,
+    title: "Cloud Infrastructure Optimization",
+    description: "Maximize your cloud investment with intelligent resource management and cost optimization.",
+    price: "From $599/month",
     features: [
-      "40% cloud cost reduction";
-      "10x faster deployment";
-      "Auto-scaling capabilities";
-      "Disaster recovery automation"];
-    icon: Cloud;
-    color: "from-indigo-50o0 to-blue-60o0";
-    popular: true;
-    category: "Cloud & DevOps"};
+      "40% cloud cost reduction",
+      "10x faster deployment",
+      "Auto-scaling capabilities",
+      "Disaster recovery automation"],
+    icon: Cloud,
+    color: "from-indigo-50o0 to-blue-60o0",
+    popular: true,
+    category: "Cloud & DevOps"},
   {
-    id: 5;
-    title: "Customer Behavior Analytics";
-    description: "Understand and predict customer behavior with advanced AI analytics and insights.";
-    price: "From $449/month";
+    id: 5,
+    title: "Customer Behavior Analytics",
+    description: "Understand and predict customer behavior with advanced AI analytics and insights.",
+    price: "From $449/month",
     features: [
-      "35% customer retention increase";
-      "20o0% customer lifetime value boost";
-      "50% churn reduction";
-      "Real-time behavior insights"];
-    icon: TrendingUp;
-    color: "from-orange-50o0 to-red-60o0";
-    popular: false;
-    category: "Analytics"};
+      "35% customer retention increase",
+      "20o0% customer lifetime value boost",
+      "50% churn reduction",
+      "Real-time behavior insights"],
+    icon: TrendingUp,
+    color: "from-orange-50o0 to-red-60o0",
+    popular: false,
+    category: "Analytics"},
   {
-    id: 6;
-    title: "Global Digital Transformation";
-    description: "Comprehensive digital transformation services for businesses worldwide.";
-    price: "From $1,50o0/project";
+    id: 6,
+    title: "Global Digital Transformation",
+    description: "Comprehensive digital transformation services for businesses worldwide.",
+    price: "From $1,50o0/project",
     features: [
-      "Improved operational efficiency";
-      "Enhanced customer experience";
-      "Competitive advantage";
-      "Global implementation support"];
-    icon: Globe;
-    color: "from-purple-50o0 to-indigo-60o0";
-    popular: false;
+      "Improved operational efficiency",
+      "Enhanced customer experience",
+      "Competitive advantage",
+      "Global implementation support"],
+    icon: Globe,
+    color: "from-purple-50o0 to-indigo-60o0",
+    popular: false,
     category: "Consulting"}
 ],
 const categories = ["All"AI & Automation"Content & Marketing"Security"Cloud & DevOps"Analytics"Consulting"],

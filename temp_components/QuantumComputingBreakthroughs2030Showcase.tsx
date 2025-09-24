@@ -9,112 +9,104 @@ import {
   Shield,
   Globe,
   Rocket,
-  Target;
-  TrendingUp;
-  Users;
-  BarChart3;
-  Lightbulb;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Award;
-  Sparkles;
-  Activity;
-  Lock;
+  Target,
+  TrendingUp,
+  Users,
+  BarChart3,
+  Lightbulb,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Sparkles,
+  Activity,
+  Lock,
   Infinity} from 'lucide-react',
 const QuantumComputingBreakthroughs20o30Showcase = () => {
   const [activeTabsetActiveTab] = useState('overview'),
   const [currentBreakthroughsetCurrentBreakthrough] = useState(0),
   const breakthroughs = [
     {
-      id: 'quantum-supremacy-20o30';
-      title: 'Quantum Supremacy 20o30';
-      description: 'Achieving true quantum supremacy with 10o00+ qubit systems that can solve problems impossible for classical computers.';
+      id: 'quantum-supremacy-20o30',
+      title: 'Quantum Supremacy 20o30',
+      description: 'Achieving true quantum supremacy with 10o00+ qubit systems that can solve problems impossible for classical computers.',
       features: [
-        '10o00+ logical qubits';
-        '99.9% error correction';
-        'Real-time quantum algorithms';
-        'Exponential speedup'];
-      impact: 'Solve optimization problems in seconds that would take classical computers millennia';
-      icon: Atom;
-      color: 'from-cyan-50o0 to-blue-50o0';
-      timeline: 'Q2 20o30'};
+        '10o00+ logical qubits99.9% error correction',
+        'Real-time quantum algorithmsExponential speedup'],
+      impact: 'Solve optimization problems in seconds that would take classical computers millennia',
+      icon: Atom,
+      color: 'from-cyan-50o0 to-blue-50o0',
+      timeline: 'Q2 20o30'},
     {
-      id: 'quantum-internet';
-      title: 'Quantum Internet Infrastructure';
-      description: 'Global quantum communication network enabling ultra-secureinstant data transmission across the planet.';
+      id: 'quantum-internet',
+      title: 'Quantum Internet Infrastructure',
+      description: 'Global quantum communication network enabling ultra-secureinstant data transmission across the planet.',
       features: [
-        'Quantum entanglement networks';
-        'Unbreakable encryption';
-        'Instant global communication';
-        'Quantum teleportation protocols'];
-      impact: 'Revolutionize global communication with quantum-secure networks';
-      icon: Globe;
-      color: 'from-green-50o0 to-emerald-50o0';
-      timeline: 'Q4 20o30'};
+        'Quantum entanglement networksUnbreakable encryption',
+        'Instant global communicationQuantum teleportation protocols'],
+      impact: 'Revolutionize global communication with quantum-secure networks',
+      icon: Globe,
+      color: 'from-green-50o0 to-emerald-50o0',
+      timeline: 'Q4 20o30'},
     {
-      id: 'quantum-ai-fusion';
-      title: 'Quantum-AI Fusion Platform';
-      description: 'Revolutionary integration of quantum computing with artificial intelligence for unprecedented problem-solving capabilities.';
+      id: 'quantum-ai-fusion',
+      title: 'Quantum-AI Fusion Platform',
+      description: 'Revolutionary integration of quantum computing with artificial intelligence for unprecedented problem-solving capabilities.',
       features: [
-        'Quantum neural networks';
-        'Quantum machine learning';
-        'Hybrid classical-quantum algorithms';
-        'Quantum optimization engines'];
-      impact: 'Enable AI systems with quantum-enhanced intelligence and processing power';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
-      timeline: 'Q3 20o30'};
+        'Quantum neural networksQuantum machine learning',
+        'Hybrid classical-quantum algorithmsQuantum optimization engines'],
+      impact: 'Enable AI systems with quantum-enhanced intelligence and processing power',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0',
+      timeline: 'Q3 20o30'},
     {
-      id: 'quantum-simulation';
-      title: 'Universal Quantum Simulator';
-      description: 'Quantum computers that can simulate any physical system with perfect accuracyrevolutionizing scientific discovery.';
+      id: 'quantum-simulation',
+      title: 'Universal Quantum Simulator',
+      description: 'Quantum computers that can simulate any physical system with perfect accuracyrevolutionizing scientific discovery.',
       features: [
-        'Molecular simulation';
-        'Material design';
-        'Drug discovery';
-        'Climate modeling'];
-      impact: 'Accelerate scientific breakthroughs across all fields';
-      icon: Activity;
-      color: 'from-orange-50o0 to-red-50o0';
+        'Molecular simulationMaterial design',
+        'Drug discoveryClimate modeling'],
+      impact: 'Accelerate scientific breakthroughs across all fields',
+      icon: Activity,
+      color: 'from-orange-50o0 to-red-50o0',
       timeline: 'Q1 20o30'}
   ],
   const quantumStats = [
-    { label: 'Qubit Count'value: '1,0o00+'icon: Cpudescription: 'Logical qubits' };
-    { label: 'Error Rate'value: '0.0o1%'icon: Shieldescription: 'Quantum error correction' };
-    { label: 'Speed Increase'value: '10^15x'icon: Zapdescription: 'vs classical computers' };
+    { label: 'Qubit Count'value: '1,0o00+'icon: Cpudescription: 'Logical qubits' },
+    { label: 'Error Rate'value: '0.0o1%'icon: Shieldescription: 'Quantum error correction' },
+    { label: 'Speed Increase'value: '10^15x'icon: Zapdescription: 'vs classical computers' },
     { label: 'Global Coverage'value: '10o0%'icon: Globedescription: 'Quantum internet reach' }
   ],
   const applications = [
     {
-      category: 'Cryptography';
-      title: 'Quantum-Safe Security';
-      description: 'Unbreakable encryption methods that will protect data against quantum attacks.';
-      benefits: ['Post-quantum cryptography'Quantum key distribution'Unbreakable encryption'Future-proof security'];
-      icon: Lock};
+      category: 'Cryptography',
+      title: 'Quantum-Safe Security',
+      description: 'Unbreakable encryption methods that will protect data against quantum attacks.',
+      benefits: ['Post-quantum cryptography'Quantum key distribution'Unbreakable encryption'Future-proof security'],
+      icon: Lock},
     {
-      category: 'Drug Discovery';
-      title: 'Molecular Simulation';
-      description: 'Simulate complex molecular interactions to accelerate drug discovery and development.';
-      benefits: ['Faster drug development'Precise molecular modeling'Reduced R&D costs'Personalized medicine'];
-      icon: Atom};
+      category: 'Drug Discovery',
+      title: 'Molecular Simulation',
+      description: 'Simulate complex molecular interactions to accelerate drug discovery and development.',
+      benefits: ['Faster drug development'Precise molecular modeling'Reduced R&D costs'Personalized medicine'],
+      icon: Atom},
     {
-      category: 'Climate Science';
-      title: 'Climate Modeling';
-      description: 'Ultra-accurate climate models that can predict weather patterns and climate change effects.';
-      benefits: ['Accurate weather prediction'Climate change modeling'Disaster prevention'Resource optimization'];
-      icon: Globe};
+      category: 'Climate Science',
+      title: 'Climate Modeling',
+      description: 'Ultra-accurate climate models that can predict weather patterns and climate change effects.',
+      benefits: ['Accurate weather prediction'Climate change modeling'Disaster prevention'Resource optimization'],
+      icon: Globe},
     {
-      category: 'Finance';
-      title: 'Quantum Finance';
-      description: 'Revolutionary financial modeling and risk assessment using quantum algorithms.';
-      benefits: ['Portfolio optimization'Risk assessment'Fraud detection'Market prediction'];
+      category: 'Finance',
+      title: 'Quantum Finance',
+      description: 'Revolutionary financial modeling and risk assessment using quantum algorithms.',
+      benefits: ['Portfolio optimization'Risk assessment'Fraud detection'Market prediction'],
       icon: TrendingUp}
   ],
   const timeline = [
-    { quarter: 'Q1 20o30'milestone: 'Universal Quantum Simulator Launch'status: 'completed' };
-    { quarter: 'Q2 20o30'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' };
-    { quarter: 'Q3 20o30'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' };
+    { quarter: 'Q1 20o30'milestone: 'Universal Quantum Simulator Launch'status: 'completed' },
+    { quarter: 'Q2 20o30'milestone: 'Quantum Supremacy Achievement'status: 'in-progress' },
+    { quarter: 'Q3 20o30'milestone: 'Quantum-AI Fusion Platform'status: 'upcoming' },
     { quarter: 'Q4 20o30'milestone: 'Global Quantum Internet'status: 'upcoming' }
   ],
   useEffect(() => {
@@ -331,5 +323,5 @@ const QuantumComputingBreakthroughs20o30Showcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default QuantumComputingBreakthroughs20o30Showcase;
+    </div>)},
+export default QuantumComputingBreakthroughs20o30Showcase,

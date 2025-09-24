@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 interface BreadcrumbItem {
   label: string,
@@ -40,11 +40,11 @@ export default function Breadcrumbs() {
           segment.charAt(0).toUpperCase() + segment.slice(1).replace(/-/g, ' ')}
 ,
       breadcrumbs.push({
-        label;
-        href: currentPath;
-        isCurrent: index === pathSegments.length - 1;
+        label,
+        href: currentPath,
+        isCurrent: index === pathSegments.length - 1
       })}),
-    return breadcrumbs};
+    return breadcrumbs},
   const breadcrumbs = generateBreadcrumbs(),
   if (breadcrumbs.length <= 1) return null,
   return (

@@ -2,137 +2,137 @@
 import React, { useState } from 'react',
 import { motion } from 'framer-motion',
 import {
-  Mail;
-  Phone;
-  MapPin;
-  Globe;
-  Twitter;
-  Linkedin;
-  Github;
-  Instagram;
-  Youtube;
-  Facebook;
-  ArrowRight;
-  Heart;
-  Shield;
-  Zap;
-  Brain;
-  Rocket;
-  Star;
-  Users;
-  Award;
-  Clock;
-  Target;
-  Building;
+  Mail,
+  Phone,
+  MapPin,
+  Globe,
+  Twitter,
+  Linkedin,
+  Github,
+  Instagram,
+  Youtube,
+  Facebook,
+  ArrowRight,
+  Heart,
+  Shield,
+  Zap,
+  Brain,
+  Rocket,
+  Star,
+  Users,
+  Award,
+  Clock,
+  Target,
+  Building,
   BookOpen} from 'lucide-react',
 import Link from 'next/link',
 const UltraFuturisticFooter20o36: React.FC = () => {
   const currentYear = new Date().getFullYear(),
 const footerSections = [
   {
-    title: 'Featured Services';
-    description: 'Our most popular and innovative solutions';
-    icon: <Star className="w-5 h-5 text-yellow-40o0"  />;
+    title: 'Featured Services',
+    description: 'Our most popular and innovative solutions',
+    icon: <Star className="w-5 h-5 text-yellow-40o0"  />,
     links: [
-      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o29', featured: true };
-      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', featured: true };
-      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform', featured: true };
-      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', featured: true };
-      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', featured: true };
-      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', featured: true };
-      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', featured: true };
-      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' };
-      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' };
+      { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o29', featured: true },
+      { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform', featured: true },
+      { name: 'Autonomous Business Operations', href: '/autonomous-business-operations-platform', featured: true },
+      { name: 'Space Resource Mining', href: '/space-resource-mining-platform', featured: true },
+      { name: 'Brain-Computer Interface', href: '/brain-computer-interface-platform', featured: true },
+      { name: 'Quantum Financial Trading', href: '/quantum-financial-trading-platform', featured: true },
+      { name: 'AI Emotional Intelligence', href: '/ai-emotional-intelligence-training', featured: true },
+      { name: 'Quantum Materials Discovery', href: '/quantum-materials-discovery-platform' },
+      { name: 'Autonomous Vehicle AI', href: '/autonomous-vehicle-ai-platform' },
       { name: 'Quantum Bio-Computing', href: '/quantum-bio-computing-platform' }
-    ]};
+    ]},
   {
-    title: 'AI & Consciousness';
-    description: 'Revolutionary AI platforms and solutions';
-    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />;
+    title: 'AI & Consciousness',
+    description: 'Revolutionary AI platforms and solutions',
+    icon: <Brain className="w-5 h-5 text-cyan-40o0"  />,
     links: [
-      { name: 'AI Consciousness Evolution 20o29', href: '/ai-consciousness-evolution-20o29' };
-      { name: 'AI Emotional Intelligence Training', href: '/ai-emotional-intelligence-training' };
-      { name: 'AI Autonomous Business Operations', href: '/autonomous-business-operations-platform' };
-      { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' };
-      { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform' };
-      { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine' };
-      { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager' };
-      { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework' };
-      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform' };
+      { name: 'AI Consciousness Evolution 20o29', href: '/ai-consciousness-evolution-20o29' },
+      { name: 'AI Emotional Intelligence Training', href: '/ai-emotional-intelligence-training' },
+      { name: 'AI Autonomous Business Operations', href: '/autonomous-business-operations-platform' },
+      { name: 'AI Autonomous Research Assistant', href: '/ai-autonomous-research-assistant' },
+      { name: 'AI Predictive Maintenance Platform', href: '/ai-predictive-maintenance-platform' },
+      { name: 'AI Content Personalization Engine', href: '/ai-content-personalization-engine' },
+      { name: 'AI Autonomous Ecosystem Manager', href: '/ai-autonomous-ecosystem-manager' },
+      { name: 'AI Ethics & Governance Framework', href: '/ai-ethics-governance-framework' },
+      { name: 'AI Customer Success Platform', href: '/ai-customer-success-platform' },
       { name: 'AI Sales Intelligence Platform', href: '/ai-sales-intelligence-platform' }
-    ]};
+    ]},
   {
-    title: 'Quantum & Emerging Tech';
-    description: 'Breakthrough quantum and space technologies';
-    icon: <Atom className="w-5 h-5 text-blue-40o0"  />;
+    title: 'Quantum & Emerging Tech',
+    description: 'Breakthrough quantum and space technologies',
+    icon: <Atom className="w-5 h-5 text-blue-40o0"  />,
     links: [
-      { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform' };
-      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' };
-      { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery-platform' };
-      { name: 'Quantum Bio-Computing Platform', href: '/quantum-bio-computing-platform' };
-      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' };
-      { name: 'Quantum Cloud Infrastructure Platform', href: '/quantum-cloud-infrastructure-platform' };
-      { name: 'Space Resource Mining Platform', href: '/space-resource-mining-platform' };
-      { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology' };
-      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform' };
+      { name: 'Quantum Neural Network Platform', href: '/quantum-neural-network-platform' },
+      { name: 'Quantum Financial Trading Platform', href: '/quantum-financial-trading-platform' },
+      { name: 'Quantum Materials Discovery Platform', href: '/quantum-materials-discovery-platform' },
+      { name: 'Quantum Bio-Computing Platform', href: '/quantum-bio-computing-platform' },
+      { name: 'Quantum Internet Security Platform', href: '/quantum-internet-security-platform' },
+      { name: 'Quantum Cloud Infrastructure Platform', href: '/quantum-cloud-infrastructure-platform' },
+      { name: 'Space Resource Mining Platform', href: '/space-resource-mining-platform' },
+      { name: 'AI-Powered Space Technology', href: '/ai-powered-space-technology' },
+      { name: 'Brain-Computer Interface Platform', href: '/brain-computer-interface-platform' },
       { name: 'Autonomous Vehicle AI Platform', href: '/autonomous-vehicle-ai-platform' }
-    ]};
+    ]},
   {
-    title: 'Enterprise IT Solutions';
-    description: 'Advanced enterprise infrastructure solutions';
-    icon: <Shield className="w-5 h-5 text-purple-40o0"  />;
+    title: 'Enterprise IT Solutions',
+    description: 'Advanced enterprise infrastructure solutions',
+    icon: <Shield className="w-5 h-5 text-purple-40o0"  />,
     links: [
-      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' };
-      { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center' };
-      { name: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform' };
-      { name: 'Blockchain Infrastructure Platform', href: '/blockchain-infrastructure-platform' };
-      { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' };
-      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' };
-      { name: 'AI-Powered Cybersecurity Platform', href: '/ai-powered-cybersecurity' };
-      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' };
-      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' };
+      { name: 'Quantum-Secure Cloud Infrastructure', href: '/quantum-secure-cloud-infrastructure' },
+      { name: 'Autonomous IT Operations Center', href: '/autonomous-it-operations-center' },
+      { name: 'Edge Computing Orchestration Platform', href: '/edge-computing-orchestration-platform' },
+      { name: 'Blockchain Infrastructure Platform', href: '/blockchain-infrastructure-platform' },
+      { name: 'AI-Powered DevOps Platform', href: '/ai-powered-devops-platform' },
+      { name: 'Zero Trust Security Platform', href: '/zero-trust-security-platform' },
+      { name: 'AI-Powered Cybersecurity Platform', href: '/ai-powered-cybersecurity' },
+      { name: 'AI-Powered IT Asset Management', href: '/ai-powered-it-asset-management' },
+      { name: 'SOC 2 Compliance Automation', href: '/soc2-compliance-automation' },
       { name: 'RAG Evaluation Lab', href: '/rag-evaluation-lab' }
-    ]};
+    ]},
   {
-    title: 'Micro SAAS Solutions';
-    description: 'Innovative business solutions for modern enterprises';
-    icon: <Rocket className="w-5 h-5 text-emerald-40o0"  />;
+    title: 'Micro SAAS Solutions',
+    description: 'Innovative business solutions for modern enterprises',
+    icon: <Rocket className="w-5 h-5 text-emerald-40o0"  />,
     links: [
-      { name: 'AI Content Generator', href: '/ai-content-generator' };
-      { name: 'AI Code Review', href: '/ai-code-review' };
-      { name: 'AI HR Analytics Platform', href: '/intelligent-hr-analytics-platform' };
-      { name: 'AI Financial Planning Platform', href: '/ai-financial-planning-platform' };
-      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' };
-      { name: 'Content Automation Platform', href: '/intelligent-content-automation-platform' };
-      { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro' };
-      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' };
-      { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics' };
+      { name: 'AI Content Generator', href: '/ai-content-generator' },
+      { name: 'AI Code Review', href: '/ai-code-review' },
+      { name: 'AI HR Analytics Platform', href: '/intelligent-hr-analytics-platform' },
+      { name: 'AI Financial Planning Platform', href: '/ai-financial-planning-platform' },
+      { name: 'Supply Chain Optimization', href: '/intelligent-supply-chain-optimization' },
+      { name: 'Content Automation Platform', href: '/intelligent-content-automation-platform' },
+      { name: 'AI Meeting Transcriber Pro', href: '/ai-meeting-transcriber-pro' },
+      { name: 'AI Financial Intelligence', href: '/ai-financial-intelligence' },
+      { name: 'AI Healthcare Analytics', href: '/ai-healthcare-analytics' },
       { name: 'AI Legal Contract Analyzer', href: '/ai-legal-contract-analyzer' }
     ]}
 ],
 const socialLinks = [
-  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> };
-  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> };
-  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> };
-  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> };
-  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> };
+  { name: 'Twitter', href: 'https://twitter.com/ziontechgroup', icon: <Twitter className="w-5 h-5"  /> },
+  { name: 'LinkedIn', href: 'https://linkedin.com/company/ziontechgroup', icon: <Linkedin className="w-5 h-5"  /> },
+  { name: 'Facebook', href: 'https://facebook.com/ziontechgroup', icon: <Facebook className="w-5 h-5"  /> },
+  { name: 'Instagram', href: 'https://instagram.com/ziontechgroup', icon: <Instagram className="w-5 h-5"  /> },
+  { name: 'YouTube', href: 'https://youtube.com/@ziontechgroup', icon: <Youtube className="w-5 h-5"  /> },
   { name: 'GitHub', href: 'https://github.com/ziontechgroup', icon: <Github className="w-5 h-5"  /> }
 ],
 export default function UltraFuturisticFooter20o36() {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   const fadeInUp ={
-    initial: { opacity: 0, y: 30 };
-    whileInView: { opacity: 1, y: 0 };
-    transition: { duration: 0.6 };
+    initial: { opacity: 0, y: 30 },
+    whileInView: { opacity: 1, y: 0 },
+    transition: { duration: 0.6 },
     viewport: { once: true }
-  };
+  },
   const staggerContainer ={
     animate: {
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   return (
     <footer className="relative bg-gradient-to-br from-gray-90o0 via-black to-gray-90o0 border-t border-gray-80o0/50 overflow-hidden">,
       {/* Background Elements */}
@@ -351,5 +351,5 @@ export default function UltraFuturisticFooter20o36() {
           </div>,
         </motion.div>,
       </div>,
-    </footer>)};
+    </footer>)},
 export default UltraFuturisticFooter20o36}

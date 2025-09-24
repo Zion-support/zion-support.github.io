@@ -9,26 +9,26 @@ import {
   Globe,
   Eye,
   Users,
-  MousePointer;
-  Zap;
-  CheckCircle;
-  AlertTriangle;
-  Info;
-  ArrowUp;
-  ArrowDown;
-  Minus;
-  Star;
-  Award;
-  BookOpen;
-  Code;
-  Settings;
-  Play;
-  Pause;
-  RotateCcw;
-  Maximize;
-  Minimize;
-  Filter;
-  SortAsc;
+  MousePointer,
+  Zap,
+  CheckCircle,
+  AlertTriangle,
+  Info,
+  ArrowUp,
+  ArrowDown,
+  Minus,
+  Star,
+  Award,
+  BookOpen,
+  Code,
+  Settings,
+  Play,
+  Pause,
+  RotateCcw,
+  Maximize,
+  Minimize,
+  Filter,
+  SortAsc,
   SortDesc} from 'lucide-react',
 const SEOOptimization20o29 = () => {
   const [activeMetricsetActiveMetric] = useState('ranking'),
@@ -37,134 +37,122 @@ const SEOOptimization20o29 = () => {
   const [currentKeywordsetCurrentKeyword] = useState(0),
   const seoMetrics ={
     ranking: {
-      title: 'Search Rankings';
-      subtitle: 'Track your position in search results';
-      icon: Target;
-      color: 'from-green-50o0 to-emerald-50o0';
-      currentValue: 8.5;
-      targetValue: 10;
-      unit: '/10';
-      description: 'Average ranking score';
+      title: 'Search Rankings',
+      subtitle: 'Track your position in search results',
+      icon: Target,
+      color: 'from-green-50o0 to-emerald-50o0',
+      currentValue: 8.5,
+      targetValue: 10,
+      unit: '/10',
+      description: 'Average ranking score',
       improvements: [
-        'Keyword optimization';
-        'Content quality enhancement';
-        'Technical SEO fixes';
-        'Backlink building';
-        'User experience improvement';
-        'Page speed optimization']};
+        'Keyword optimizationContent quality enhancement',
+        'Technical SEO fixesBacklink building',
+        'User experience improvementPage speed optimization']},
     traffic: {
-      title: 'Organic Traffic';
-      subtitle: 'Monitor your organic search traffic growth';
-      icon: TrendingUp;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      currentValue: 1250o00;
-      targetValue: 20o0000;
-      unit: 'visitors/month';
-      description: 'Monthly organic visitors';
+      title: 'Organic Traffic',
+      subtitle: 'Monitor your organic search traffic growth',
+      icon: TrendingUp,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      currentValue: 1250o00,
+      targetValue: 20o0000,
+      unit: 'visitors/month',
+      description: 'Monthly organic visitors',
       improvements: [
-        'Content marketing strategy';
-        'Long-tail keyword targeting';
-        'Featured snippet optimization';
-        'Local SEO enhancement';
-        'Voice search optimization';
-        'Mobile-first indexing']};
+        'Content marketing strategyLong-tail keyword targeting',
+        'Featured snippet optimizationLocal SEO enhancement',
+        'Voice search optimizationMobile-first indexing']},
     visibility: {
-      title: 'Search Visibility';
-      subtitle: 'Measure your overall search presence';
-      icon: Eye;
-      color: 'from-purple-50o0 to-indigo-50o0';
-      currentValue: 65;
-      targetValue: 85;
-      unit: '%';
-      description: 'Search visibility score';
+      title: 'Search Visibility',
+      subtitle: 'Measure your overall search presence',
+      icon: Eye,
+      color: 'from-purple-50o0 to-indigo-50o0',
+      currentValue: 65,
+      targetValue: 85,
+      unit: '%',
+      description: 'Search visibility score',
       improvements: [
-        'Schema markup implementation';
-        'Rich snippets optimization';
-        'Image SEO enhancement';
-        'Video SEO strategy';
-        'FAQ optimization';
-        'Knowledge panel targeting']};
+        'Schema markup implementationRich snippets optimization',
+        'Image SEO enhancementVideo SEO strategy',
+        'FAQ optimizationKnowledge panel targeting']},
     conversion: {
-      title: 'Conversion Rate';
-      subtitle: 'Track SEO-driven conversions';
-      icon: MousePointer;
-      color: 'from-orange-50o0 to-red-50o0';
-      currentValue: 3.2;
-      targetValue: 5.5;
-      unit: '%';
-      description: 'SEO conversion rate';
+      title: 'Conversion Rate',
+      subtitle: 'Track SEO-driven conversions',
+      icon: MousePointer,
+      color: 'from-orange-50o0 to-red-50o0',
+      currentValue: 3.2,
+      targetValue: 5.5,
+      unit: '%',
+      description: 'SEO conversion rate',
       improvements: [
-        'Landing page optimization';
-        'Call-to-action enhancement';
-        'User journey mapping';
-        'A/B testing implementation';
-        'Conversion tracking setup';
-        'Goal configuration']}
-  };
+        'Landing page optimizationCall-to-action enhancement',
+        'User journey mappingA/B testing implementation',
+        'Conversion tracking setupGoal configuration']}
+  },
   const keywords = [
     {
-      keyword: 'AI technology 20o29';
-      position: 3;
-      volume: 1250o0;
-      difficulty: 'Medium';
-      trend: 'up';
-      change: '+2';
-      icon: Star};
+      keyword: 'AI technology 20o29',
+      position: 3,
+      volume: 1250o0,
+      difficulty: 'Medium',
+      trend: 'up',
+      change: '+2',
+      icon: Star},
     {
-      keyword: 'quantum computing';
-      position: 7;
-      volume: 890o0;
-      difficulty: 'High';
-      trend: 'up';
-      change: '+1';
-      icon: Zap};
+      keyword: 'quantum computing',
+      position: 7,
+      volume: 890o0,
+      difficulty: 'High',
+      trend: 'up',
+      change: '+1',
+      icon: Zap},
     {
-      keyword: 'machine learning';
-      position: 2;
-      volume: 1560o0;
-      difficulty: 'Medium';
-      trend: 'up';
-      change: '+3';
-      icon: Brain};
+      keyword: 'machine learning',
+      position: 2,
+      volume: 1560o0,
+      difficulty: 'Medium',
+      trend: 'up',
+      change: '+3',
+      icon: Brain},
     {
-      keyword: 'artificial intelligence';
-      position: 5;
-      volume: 2210o0;
-      difficulty: 'High';
-      trend: 'down';
-      change: '-1';
+      keyword: 'artificial intelligence',
+      position: 5,
+      volume: 2210o0,
+      difficulty: 'High',
+      trend: 'down',
+      change: '-1',
       icon: Cpu}
   ],
   const seoFeatures = [
     {
-      title: 'AI-Powered SEO Analysis';
-      description: 'Advanced AI algorithms analyze your content and provide optimization recommendations';
-      icon: Brain;
-      status: 'Active';
-      impact: 'High'};
+      title: 'AI-Powered SEO Analysis',
+      description: 'Advanced AI algorithms analyze your content and provide optimization recommendations',
+      icon: Brain,
+      status: 'Active',
+      impact: 'High'},
     {
-      title: 'Real-time Ranking Tracking';
-      description: 'Monitor your search rankings across multiple search engines in real-time';
-      icon: Target;
-      status: 'Deployed';
-      impact: 'Critical'};
+      title: 'Real-time Ranking Tracking',
+      description: 'Monitor your search rankings across multiple search engines in real-time',
+      icon: Target,
+      status: 'Deployed',
+      impact: 'Critical'},
     {
-      title: 'Content Optimization';
-      description: 'Automated content analysis and optimization suggestions';
-      icon: BookOpen;
-      status: 'Beta';
-      impact: 'Medium'};
+      title: 'Content Optimization',
+      description: 'Automated content analysis and optimization suggestions',
+      icon: BookOpen,
+      status: 'Beta',
+      impact: 'Medium'},
     {
-      title: 'Technical SEO Audit';
-      description: 'Comprehensive technical SEO analysis and fix recommendations';
-      icon: Settings;
-      status: 'Active';
+      title: 'Technical SEO Audit',
+      description: 'Comprehensive technical SEO analysis and fix recommendations',
+      icon: Settings,
+      status: 'Active',
       impact: 'High'}
   ],
   const realTimeData = [
-    { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' };
-    { label: 'Average Position'value: '4.2'change: '-0.8'trend: 'up' };
-    { label: 'Click-Through Rate'value: '8.5%'change: '+1.2%'trend: 'up' };
+    { label: 'Organic Traffic'value: '125K'change: '+12%'trend: 'up' },
+    { label: 'Average Position'value: '4.2'change: '-0.8'trend: 'up' },
+    { label: 'Click-Through Rate'value: '8.5%'change: '+1.2%'trend: 'up' },
     { label: 'Conversion Rate'value: '3.2%'change: '+0.5%'trend: 'up' }
   ],
   useEffect(() => {
@@ -183,7 +171,7 @@ const SEOOptimization20o29 = () => {
     return () => clearInterval(interval)}[]),
   const startAnalysis = () => {
     setIsAnalyzing(true),
-    setAnalysisProgress(0)};
+    setAnalysisProgress(0)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-green-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
@@ -507,5 +495,5 @@ const SEOOptimization20o29 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default SEOOptimization20o29;
+    </div>)},
+export default SEOOptimization20o29,

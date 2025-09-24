@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Edge Agents On-Device';
+  title: 'AI 20o26: Edge Agents On-Device',
   description:,
-    'Private, low-latency agents with hybrid on-device/offload compute, secure updates, and telemetry for enterprises.';
+    'Private, low-latency agents with hybrid on-device/offload compute, secure updates, and telemetry for enterprises.',
   keywords: [
-    'edge agents';
-    'on-device AI';
-    'privacy';
-    'low latency';
-    'hybrid compute';
-  ];
-};
+    'edge agentson-device AI',
+    'privacylow latency',
+    'hybrid compute',
+  ]
+},
 export default function EdgeAgentsOnDevicePage() {
   return (
     <div className='min-h-screen bg-white'>,

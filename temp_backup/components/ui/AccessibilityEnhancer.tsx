@@ -1,19 +1,19 @@
 import React, { useEffect, useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Eye;
-  EyeOff;
-  Volume2;
-  VolumeX;
-  MousePointer;
-  Keyboard;
-  Monitor;
-  Smartphone;
-  Sun;
-  Moon;
-  Accessibility;
-  SkipForward;
-  SkipBack;
+  Eye,
+  EyeOff,
+  Volume2,
+  VolumeX,
+  MousePointer,
+  Keyboard,
+  Monitor,
+  Smartphone,
+  Sun,
+  Moon,
+  Accessibility,
+  SkipForward,
+  SkipBack,
 } from 'lucide-react',
 interface AccessibilitySettings {
   highContrast: boolean,
@@ -27,13 +27,13 @@ interface AccessibilitySettings {
 const AccessibilityEnhancer: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    screenReader: false;
-    keyboardNavigation: false;
-    focusIndicator: true;
-    colorBlindness: 'none';
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false,
+    focusIndicator: true,
+    colorBlindness: 'none'
   }),
   const [currentFocus, setCurrentFocus] = useState<string>(''),
   useEffect(() => {
@@ -67,23 +67,23 @@ const AccessibilityEnhancer: React.FC = () => {
       root.classList.remove('focus-visible')}
 ,
     // Color blindness support,
-    root.classList.remove('protanopia', 'deuteranopia', 'tritanopia'),
+    root.classList.remove('protanopiadeuteranopia', 'tritanopia'),
     if (newSettings.colorBlindness !== 'none') {
       root.classList.add(newSettings.colorBlindness)}
 ,
     // Save to localStorage,
-    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))};
+    localStorage.setItem('accessibility-settings', JSON.stringify(newSettings))},
   const updateSetting = (key: keyof AccessibilitySettings, value: any) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = { ...settings, [key]: value },
     setSettings(newSettings),
-    applyAccessibilitySettings(newSettings)};
+    applyAccessibilitySettings(newSettings)},
   const skipToContent = () => {
     const mainContent =,
       document.querySelector('main') || document.querySelector('#main-content'),
     if (mainContent) {
       mainContent.focus(),
       mainContent.scrollIntoView({ behavior: 'smooth' })}
-  };
+  },
   const skipToNavigation = () => {
     const navigation =,
       document.querySelector('nav') ||,
@@ -91,7 +91,7 @@ const AccessibilityEnhancer: React.FC = () => {
     if (navigation) {
       navigation.focus(),
       navigation.scrollIntoView({ behavior: 'smooth' })}
-  };
+  },
   return (
     <>,
       {/* Skip Links */}
@@ -258,5 +258,5 @@ const AccessibilityEnhancer: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default AccessibilityEnhancer;
+    </>)},
+export default AccessibilityEnhancer,

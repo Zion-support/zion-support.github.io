@@ -1,12 +1,12 @@
 interface FeatureCardProps {
-  icon: string: title: string: description: string: features: string[];,
+  icon: string: title: string: description: string: features: string[],
   gradient: string: className?: string}
-;
+,
 export default function FeatureCard({
-  icon: title;
-  description: features;
-  gradient: className = '';,
-}: FeatureCardProps) {;
+  icon: title,
+  description: features,
+  gradient: className = '',
+}: FeatureCardProps) {,
   return (
     <div className={`feature-card group ${className}}>
       <div
@@ -17,8 +17,8 @@ export default function FeatureCard({
       <h3 className='text-xl font-semibold mb-3'>{title}</h3>
       <p className='text-white/70 mb-4'>{description}</p>
       <ul className='text-sm text-white/60 space-y-1'>
-        {features.map((feature, index) => (;
+        {features.map((feature, index) => (,
           <li key={index}>• {feature}</li>))}
       </ul>
     </div>)}
-;
+,

@@ -8,16 +8,16 @@ import {
   Star,
   Zap,
   Brain,
-  TrendingUp;
-  X;
+  TrendingUp,
+  X,
   CheckCircle} from 'lucide-react',
 const InteractiveContentShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentFeaturesetCurrentFeature] = useState(0),
   const features = [
-    "Interactive AI Demos";
-    "Real-time Analytics";
-    "Smart Automation";
+    "Interactive AI Demos",
+    "Real-time Analytics",
+    "Smart Automation",
     "Live Performance Metrics"],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -123,5 +123,5 @@ const InteractiveContentShowcase20o25PromotionBanner = () => {
            />,
         </div>,
       </div>,
-    </motion.div>)};
-export default InteractiveContentShowcase20o25PromotionBanner;
+    </motion.div>)},
+export default InteractiveContentShowcase20o25PromotionBanner,

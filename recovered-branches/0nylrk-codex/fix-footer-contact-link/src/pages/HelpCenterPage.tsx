@@ -1,21 +1,21 @@
-import React from "react";
+import React from "react",
 import HelpCenter from "@/components/support/HelpCenter",
 import {SEO} from "@/components/SEO",
-import React from "react";;
+import React from "react",
 import { SEO } from "@/components/SEO",
-import HelpCenter from "@/components/support/HelpCenter";
-import { SEO } from "@/components/SEO";
+import HelpCenter from "@/components/support/HelpCenter",
+import { SEO } from "@/components/SEO",
 export default function HelpCenterPage() {
   return (
     <>,
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {

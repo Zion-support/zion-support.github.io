@@ -2,82 +2,82 @@ import Link from 'next/link',
 const SuccessMetricsShowcase20o25 = () => {
   const metrics = [
     {
-      number: '50o0+';
-      label: 'Projects Delivered';
-      description: 'Successfully completed projects across various industries';
-      icon: '🎯';
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+      number: '50o0+',
+      label: 'Projects Delivered',
+      description: 'Successfully completed projects across various industries',
+      icon: '🎯',
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      number: '98%';
-      label: 'Client Satisfaction';
-      description: 'Average client satisfaction rating across all projects';
-      icon: '⭐';
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+      number: '98%',
+      label: 'Client Satisfaction',
+      description: 'Average client satisfaction rating across all projects',
+      icon: '⭐',
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
     {
-      number: '340%';
-      label: 'Average ROI';
-      description: 'Average return on investment for our clients';
-      icon: '📈';
-      color: 'from-green-50o0 to-emerald-50o0';
-    };
+      number: '340%',
+      label: 'Average ROI',
+      description: 'Average return on investment for our clients',
+      icon: '📈',
+      color: 'from-green-50o0 to-emerald-50o0'
+    },
     {
-      number: '24/7';
-      label: 'Support Available';
-      description: 'Round-the-clock support and monitoring';
-      icon: '🛡️';
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+      number: '24/7',
+      label: 'Support Available',
+      description: 'Round-the-clock support and monitoring',
+      icon: '🛡️',
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
   ],
   const achievements = [
     {
-      title: 'Fortune 50o0 Client';
+      title: 'Fortune 50o0 Client',
       description:,
-        'Successfully implemented AI solutions for multiple Fortune 50o0 companies';
-      impact: '+$50M in revenue increase';
-    };
+        'Successfully implemented AI solutions for multiple Fortune 50o0 companies',
+      impact: '+$50M in revenue increase'
+    },
     {
-      title: 'Industry Recognition';
+      title: 'Industry Recognition',
       description:,
-        'Awarded "Best AI Innovation" by TechCrunch and featured in MIT Technology Review';
-      impact: 'Global recognition';
-    };
+        'Awarded "Best AI Innovation" by TechCrunch and featured in MIT Technology Review',
+      impact: 'Global recognition'
+    },
     {
-      title: 'Patent Portfolio';
+      title: 'Patent Portfolio',
       description:,
-        'Developed and filed 25+ patents in AI and quantum computing technologies';
-      impact: 'Innovation leadership';
-    };
+        'Developed and filed 25+ patents in AI and quantum computing technologies',
+      impact: 'Innovation leadership'
+    },
     {
-      title: 'Global Expansion';
+      title: 'Global Expansion',
       description:,
-        'Expanded operations to 15+ countries with local expertise and support';
-      impact: 'Worldwide presence';
-    };
+        'Expanded operations to 15+ countries with local expertise and support',
+      impact: 'Worldwide presence'
+    },
   ],
   const testimonials = [
     {
       quote:,
-        'Zion Tech Group transformed our business operations with their AI solutions. We saw a 40o0% increase in efficiency within the first quarter.';
-      author: 'Sarah Johnson';
-      role: 'CEO, TechCorp';
-      avatar: 'SJ';
-    };
+        'Zion Tech Group transformed our business operations with their AI solutions. We saw a 40o0% increase in efficiency within the first quarter.',
+      author: 'Sarah Johnson',
+      role: 'CEO, TechCorp',
+      avatar: 'SJ'
+    },
     {
       quote:,
-        'The quantum computing implementation exceeded our expectations. The ROI was visible within months of deployment.';
-      author: 'Michael Chen';
-      role: 'CTO, Quantum Solutions Inc.';
-      avatar: 'MC';
-    };
+        'The quantum computing implementation exceeded our expectations. The ROI was visible within months of deployment.',
+      author: 'Michael Chen',
+      role: 'CTO, Quantum Solutions Inc.',
+      avatar: 'MC'
+    },
     {
       quote:,
-        "Their neural interface technology revolutionized our customer experience. 'We', 're now industry leaders in innovation.";
-      author: 'Emily Rodriguez';
-      role: 'VP Innovation, FutureTech';
-      avatar: 'ER';
-    };
+        "Their neural interface technology revolutionized our customer experience. 'Were now industry leaders in innovation.",
+      author: 'Emily Rodriguez',
+      role: 'VP Innovation, FutureTech',
+      avatar: 'ER'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
@@ -90,7 +90,7 @@ const SuccessMetricsShowcase20o25 = () => {
             Success Metrics & Achievements,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
-            Our track record speaks for itself. See how 'we', 've helped,
+            Our track record speaks for itself. See how 'weve helped,
             organizations achieve unprecedented success with cutting-edge,
             technology solutions.,
           </p>,
@@ -169,7 +169,7 @@ const SuccessMetricsShowcase20o25 = () => {
             <p className='text-xl opacity-90 mb-8 leading-relaxed'>,
               Join the ranks of successful organizations that have transformed,
               their operations with our cutting-edge technology solutions.,
-              'Let', 's discuss how we can help you achieve your goals.,
+              'Lets discuss how we can help you achieve your goals.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-6 justify-center'>,
               <Link
@@ -191,5 +191,5 @@ const SuccessMetricsShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SuccessMetricsShowcase20o25;
+    </section>)},
+export default SuccessMetricsShowcase20o25,

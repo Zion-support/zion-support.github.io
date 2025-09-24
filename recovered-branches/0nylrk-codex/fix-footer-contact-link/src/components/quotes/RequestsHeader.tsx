@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { Badge } from "@/components/ui/badge",
 import {
@@ -13,12 +13,12 @@ type RequestsHeaderProps = {
   statusFilter: QuoteStatus | 'all',
   setStatusFilter: (value: QuoteStatus | 'all') => void,
   archiveFilter: 'active' | 'archived' | 'all',
-  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void};
+  setArchiveFilter: (value: 'active' | 'archived' | 'all') => void},
 export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
-  unreadCount;
-  statusFilter;
-  setStatusFilter;
-  archiveFilter;
+  unreadCount,
+  statusFilter,
+  setStatusFilter,
+  archiveFilter,
   setArchiveFilter}) => {
   return (
     <div className="flex flex-col md: flex-row justify-between items-start md:items-center mb-8">,
@@ -65,4 +65,4 @@ export const RequestsHeader: React.FC<RequestsHeaderProps> = ({
           </SelectContent>,
         </Select>,
       </div>,
-    </div>)};
+    </div>)},

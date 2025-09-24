@@ -7,9 +7,9 @@ interface MobileResponsiveLayoutProps {
   enableSwipeNavigation?: boolean}
 ,
 const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
-  children;
-  enableMobileOptimization = true;
-  enableTouchGestures = true;
+  children,
+  enableMobileOptimization = true,
+  enableTouchGestures = true,
   enableSwipeNavigation = true}) => {
   const [isMobile, setIsMobile] = useState(false),
   const [isTablet, setIsTablet] = useState(false),
@@ -20,7 +20,7 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     const checkDevice = () => {
       const width = window.innerWidth,
       setIsMobile(width < 768),
-      setIsTablet(width >= 768 && width < 10o24)};
+      setIsTablet(width >= 768 && width < 10o24)},
     checkDevice(),
     window.addEventListener('resize', checkDevice),
     return () => window.removeEventListener('resize', checkDevice)}, []),
@@ -29,13 +29,13 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     if (!enableTouchGestures) return,
     setTouchEnd(null),
     setTouchStart({
-      x: e.targetTouches[0].clientX;
-      y: e.targetTouches[0].clientY})};
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY})},
   const handleTouchMove = (e: React.TouchEvent) => {
     if (!enableTouchGestures) return,
     setTouchEnd({
-      x: e.targetTouches[0].clientX;
-      y: e.targetTouches[0].clientY})};
+      x: e.targetTouches[0].clientX,
+      y: e.targetTouches[0].clientY})},
   const handleTouchEnd = () => {
     if (!enableTouchGestures || !touchStart || !touchEnd) return,
     const deltaX = touchStart.x - touchEnd.x,
@@ -59,23 +59,23 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
     if (isDownSwipe) {
       // Scroll to bottom,
       window.scrollTo({ top: document.body.scrollHeight, behavior: 'smooth' })}
-  };
+  },
   // Mobile-specific optimizations,
   const mobileOptimizations ={
     // Prevent zoom on input focus,
     preventZoom: () => {
       const viewport = document.querySelector('meta[name="viewport"]'),
       if (viewport) {
-        viewport.setAttribute('content', 'width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
-    };
+        viewport.setAttribute('contentwidth=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')}
+    },
     // Optimize images for mobile,
     optimizeImages: () => {
       const images = document.querySelectorAll('img'),
       images.forEach(img => {
         if (isMobile) {
-          img.setAttribute('loading', 'lazy'),
-          img.setAttribute('decoding', 'async')}
-      })};
+          img.setAttribute('loadinglazy'),
+          img.setAttribute('decodingasync')}
+      })},
     // Optimize fonts for mobile,
     optimizeFonts: () => {
       const style = document.createElement('style'),
@@ -93,7 +93,7 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
         }
       `,
       document.head.appendChild(style)}
-  };
+  },
   useEffect(() => {
     if (enableMobileOptimization && isMobile) {
       mobileOptimizations.preventZoom(),
@@ -108,7 +108,7 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
         ? 'px-4 py-2 text-sm',
         : isTablet,
         ? 'px-6 py-3 text-base',
-        : 'px-8 py-4 text-lg'}`};
+        : 'px-8 py-4 text-lg'}`},
   return (
     <div
       className={`min-h-screen ${
@@ -135,8 +135,8 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
           min-height: 44px,
           min-width: 44px}
 ,
-        .mobile-optimized input;
-        .mobile-optimized textarea;
+        .mobile-optimized input,
+        .mobile-optimized textarea,
         .mobile-optimized select {
           /* Prevent zoom on input focus */,
           font-size: 16px,
@@ -249,8 +249,8 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
           transition: transform 0.1s ease}
 ,
         /* Mobile forms */,
-        .mobile-optimized input;
-        .mobile-optimized textarea;
+        .mobile-optimized input,
+        .mobile-optimized textarea,
         .mobile-optimized select {
           width: 10o0%,
           padding: 12px 16px,
@@ -259,8 +259,8 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
           font-size: 16px,
           transition: border-color 0.2s ease}
 ,
-        .mobile-optimized input:focus;
-        .mobile-optimized textarea:focus;
+        .mobile-optimized input: focus,
+        .mobile-optimized textarea:focus,
         .mobile-optimized select: focus {
           outline: none,
           border-color: #3b82f6,
@@ -317,5 +317,5 @@ const MobileResponsiveLayout: React.FC<MobileResponsiveLayoutProps> = ({
       <div className="w-full">,
         {children}
       </div>,
-    </div>)};
-export default MobileResponsiveLayout;
+    </div>)},
+export default MobileResponsiveLayout,

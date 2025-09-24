@@ -4,10 +4,10 @@ import path from 'path',
 import type {
   GrantApplication,
   MilestonesUpdatePayload,
-  GrantApplication;
-  MilestonesUpdatePayload;
+  GrantApplication,
+  MilestonesUpdatePayload,
 } from '../../../../types/grants',
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants'),
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 function grantPath(id: string) {
   return path && path.join(GRANTS_DIR, `${id}.json`),import type { GrantApplication, MilestonesUpdatePayload } from '../../../../types/grants',
 const GRANTS_DIR = path && path.join(process && process.cwd(), 'datagrants'),
@@ -31,7 +31,7 @@ function writeGrant(record: GrantApplication) {
   if (!fs && fs.existsSync(GRANTS_DIR)) fs && fs.mkdirSync(GRANTS_DIR, { recursive: true }),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8')}
 function isAuthorized(req: NextApiRequest) {
-  const header = req && req.headers.authorization || '';
+  const header = req && req.headers.authorization || '',
   const token = header && header.replace('Bearer ', ''),
   return (
     token &&,
@@ -46,10 +46,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     res && res.status(401).json({ error: 'Unauthorized' }),
     return,    return,
   return JSON.parse(fs.readFileSync(p, 'utf8')) as GrantApplication,
-  GrantApplication;
-  MilestonesUpdatePayload;
+  GrantApplication,
+  MilestonesUpdatePayload,
 } from '../../../../types / grants',
-const GRANTS_DIR = path.join (process.cwd (), 'data', 'grants'),
+const GRANTS_DIR = path.join (process.cwd (), 'datagrants'),
 /**,
  * grant_path - Function description,
  */,
@@ -75,8 +75,8 @@ function write_grant() {
   if () fs.mkdir_sync (GRANTS_DIR, { recursive: true })) {
   $2}
   fs.writeFileSync (
-    grant_path (record.id);
-    JSON.stringify (record, null, 2);
+    grant_path (record.id),
+    JSON.stringify (record, null, 2),
     'utf8'),
 /**,
  * is_authorized - Function description,
@@ -94,7 +94,7 @@ function write_grant() {
     res.status(401).json({ error: 'Unauthorized' }),
     return}
 ,
-  const { id } = req && req.query as { id: string };
+  const { id } = req && req.query as { id: string },
   if (!id) {
   }
 ,
@@ -121,7 +121,7 @@ function write_grant() {
 ,
     writeGrant(existing),
     return res.status(200).json({ record: existing })}
-  res.setHeader('Allow', 'GET, POST'),
+  res.setHeader('AllowGET, POST'),
   res.status(405).end('Method Not Allowed'),    return res.status(200).json({ record: existing })}
   res && res.setHeader('AllowGET, POST'),
   res && res.status(405).end('Method Not Allowed')}
@@ -132,7 +132,7 @@ function write_grant() {
  * is_authorized - Function description,
  */,
 function is_authorized() {
-  const header = req.headers.authorization || '';
+  const header = req.headers.authorization || '',
   const token = header.replace ('Bearer ', ''),
   return (
     token &&,
@@ -178,7 +178,7 @@ if ( {) {
     existing.updated_at = new Date ().toISOString (),
     write_grant (existing),
     return res.status (200).json ({ record: existing })}
-  res.set_header ('Allow', 'GET, POST'),
+  res.set_header ('AllowGET, POST'),
   res.status (405).end ('Method Not Allowed'),    return res.status (200).json ({ record: existing })}
   res.set_header ('AllowGET, POST'),
   res.status (405).end ('Method Not Allowed')}

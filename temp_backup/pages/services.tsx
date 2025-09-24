@@ -61,76 +61,76 @@ export default function ServicesPage() {
   const [sortBy, setSortBy] = useState('name'),
   // Combine all services,
   const allServices = [
-    ...innovativeMicroSaasServices;
-    ...extraServices;
-    ...additionalEnhancedServices;
-    ...advancedAIServices;
-    ...innovativeAIServices;
-    ...quantumSpaceServices;
-    ...enterpriseITServices;
-    ...enhancedRealMicroSaasServices;
-    ...additionalEnhancedServices;
-    ...extraServices;
-    ...newlyAddedServices;
-    ...newRealServices;
-    ...moreRealServices2025;
-    ...industryRealServices;
-    ...professionalServices;
-    ...nextGenerationAIServices;
-    ...cuttingEdgeITServices;
-    ...innovativeMicroSaasV2Services;
-    ...marketValidatedServices;
-    ...emergingTechnologyServices;
-    ...comprehensiveITSolutions;
-    ...curatedMarketServices;
-    ...realMarketServices;
-    ...new2025Services;
-    ...verified2025Additions;
-    ...newRealInnovations;
-    ...serviceExpansions2025;
-    ...quantumAdvancedServices;
-    ...emergingTechServices;
-    ...spaceTechServices;
-    ...innovativeAIServices;
-    ...emergingTechAdvancedServices;
+    ...innovativeMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...advancedAIServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...enhancedRealMicroSaasServices,
+    ...additionalEnhancedServices,
+    ...extraServices,
+    ...newlyAddedServices,
+    ...newRealServices,
+    ...moreRealServices2025,
+    ...industryRealServices,
+    ...professionalServices,
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...marketValidatedServices,
+    ...emergingTechnologyServices,
+    ...comprehensiveITSolutions,
+    ...curatedMarketServices,
+    ...realMarketServices,
+    ...new2025Services,
+    ...verified2025Additions,
+    ...newRealInnovations,
+    ...serviceExpansions2025,
+    ...quantumAdvancedServices,
+    ...emergingTechServices,
+    ...spaceTechServices,
+    ...innovativeAIServices,
+    ...emergingTechAdvancedServices,
     ...itInfrastructureServices,
 =======,
-    ...newOperationalServices2025;
-    ...realServicesQ12025;
-    ...realEnterpriseServices2025;
-    ...verifiedRealServices2025Batch2;
-    ...innovative2025Services;
-    ...emergingTech2025Services;
-    ...realMarketAugmentations2025;
-    ...innovative2026MicroSaasServicesV2;
-    ...emergingTech2026ServicesV2;
-    ...enterpriseIT2026ServicesV2;
-    ...aiAutonomousServices2026;
-    ...quantumSpaceTechServices2026;
-    ...metaverseDigitalRealityServices2026;
-    ...ultimate2026Services;
-    ...revolutionary2026Innovations;
-    ...innovative2026MicroSaasServicesV4;
-    ...emergingTech2026ServicesV4;
-    ...enterpriseIT2026ServicesV4;
+    ...newOperationalServices2025,
+    ...realServicesQ12025,
+    ...realEnterpriseServices2025,
+    ...verifiedRealServices2025Batch2,
+    ...innovative2025Services,
+    ...emergingTech2025Services,
+    ...realMarketAugmentations2025,
+    ...innovative2026MicroSaasServicesV2,
+    ...emergingTech2026ServicesV2,
+    ...enterpriseIT2026ServicesV2,
+    ...aiAutonomousServices2026,
+    ...quantumSpaceTechServices2026,
+    ...metaverseDigitalRealityServices2026,
+    ...ultimate2026Services,
+    ...revolutionary2026Innovations,
+    ...innovative2026MicroSaasServicesV4,
+    ...emergingTech2026ServicesV4,
+    ...enterpriseIT2026ServicesV4,
     ...innovative2026AIServicesV4],
   // Categories for filtering,
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Monitor className="w-5 h-5" />, count: allServices.length };
-    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length };
-    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Quantum')).length };
-    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Space')).length };
-    { id: 'emerging', name: 'Emerging Tech', icon: <Star className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Emerging')).length };
-    { id: 'infrastructure', name: 'IT Infrastructure', icon: <Building2 className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Infrastructure') || s.category.includes('DevOps')).length };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length };
-    { id: 'robotics', name: 'Robotics & Automation', icon: <Bot className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length };
-    { id: 'biotech', name: 'Biotech & Healthcare', icon: <Dna className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Biotech') || s.category.includes('Healthcare')).length };
-    { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length };
+    { id: 'all', name: 'All Services', icon: <Monitor className="w-5 h-5" />, count: allServices.length },
+    { id: 'ai-ml', name: 'AI & Machine Learning', icon: <Brain className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('AI') || s.category.includes('Machine Learning')).length },
+    { id: 'quantum', name: 'Quantum Computing', icon: <Zap className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'space', name: 'Space Technology', icon: <Rocket className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Space')).length },
+    { id: 'emerging', name: 'Emerging Tech', icon: <Star className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: 'infrastructure', name: 'IT Infrastructure', icon: <Building2 className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Infrastructure') || s.category.includes('DevOps')).length },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: <Shield className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Security') || s.category.includes('Cybersecurity')).length },
+    { id: 'robotics', name: 'Robotics & Automation', icon: <Bot className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Robotics') || s.category.includes('Automation')).length },
+    { id: 'biotech', name: 'Biotech & Healthcare', icon: <Dna className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Biotech') || s.category.includes('Healthcare')).length },
+    { id: 'finance', name: 'Financial Technology', icon: <DollarSign className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('Financial') || s.category.includes('Trading')).length },
     { id: 'iot', name: 'IoT & Edge Computing', icon: <Wifi className="w-5 h-5" />, count: allServices.filter(s => s.category.includes('IoT') || s.category.includes('Edge')).length }
   ],
 =======,
-  Search, Filter, Grid, List, Star;
-  TrendingUp, Zap, Brain, Shield, Globe;
+  Search, Filter, Grid, List, Star,
+  TrendingUp, Zap, Brain, Shield, Globe,
   ArrowRight, ExternalLink, Check, Cpu} from 'lucide-react',
 export default function ServicesPage() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -139,21 +139,21 @@ export default function ServicesPage() {
   const [sortBy, setSortBy] = useState<'name' | 'price' | 'rating' | 'popularity'>('popularity'),
   // Combine all services,
   const allServices = useMemo(() => [
-    ...enhancedRealMicroSaasServices;
-    ...extraServices;
-    ...additionalEnhancedServices;
-    ...innovativeMicroSaasServices;
-    ...advancedAIServices;
+    ...enhancedRealMicroSaasServices,
+    ...extraServices,
+    ...additionalEnhancedServices,
+    ...innovativeMicroSaasServices,
+    ...advancedAIServices,
     ...blockchainEmergingTechServices], []),
   // Get unique categories,
   const categories = useMemo(() => {
     const cats = [...new Set(allServices.map(service => service.category))],
     return ['all', ...cats.sort()]}, [allServices]),
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenAIServices.length };
-    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length };
-    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveEnterpriseITServices.length };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'ai', name: 'AI & Machine Learning', icon: '🧠', count: innovativeAIServices.length + nextGenAIServices.length },
+    { id: 'quantum', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
+    { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length + comprehensiveEnterpriseITServices.length },
     { id: 'micro-saas', name: 'Micro SaaS', icon: '💻', count: enhancedRealMicroSaasServices.length + innovativeMicroSaasSolutions.length }
   ],
   // Get all categories,
@@ -191,10 +191,10 @@ export default function ServicesPage() {
     }),
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
 =======,
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -218,7 +218,7 @@ export default function ServicesPage() {
               Revolutionary Micro SaaS Services,
             </h1>,
             <p className="text-xl sm:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed">,
-              Discover our comprehensive portfolio of 500+ cutting-edge micro SaaS services powered by quantum AI;
+              Discover our comprehensive portfolio of 500+ cutting-edge micro SaaS services powered by quantum AI,
               blockchain technology, and revolutionary innovations.,
             </p>,
           </motion.div>,

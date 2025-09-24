@@ -6,11 +6,11 @@ export default function TryItConsole({
   path,
   requiresAuth}: TryItProps) {
   const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
-  method;
-  path;
-  requiresAuth;
+  method,
+  path,
+  requiresAuth,
 }: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  const [baseUrl, setBaseUrl] = useState('https: //api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative,
   requiresAuth: boolean}
 export default function TryItConsole({ method, path, requiresAuth }: TryItProps) {
@@ -19,33 +19,33 @@ interface TryItProps {
   path: string, // full URL or relative,
   requiresAuth: boolean,
 export default function TryItConsole(): any ({
-  method;
-  path;
-  requiresAuth;
+  method,
+  path,
+  requiresAuth,
 }: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),  const [token, setToken] = useState(''),  method: 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE',
   path: string, // full URL or relative,
   requiresAuth: boolean}
 ,
 export default function TryItConsole(): any ({ method, path, requiresAuth }: TryItProps) {
-  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os');
+  const [baseUrl, setBaseUrl] = useState('https: //api && api.zion.os'),
   const [body, setBody] = useState(''),
-  const [response, setResponse] = useState<string>('');
+  const [response, setResponse] = useState<string>(''),
   const [loading, setLoading] = useState(false)}, [baseUrl, path]),
   async function onSend() {
     setLoading(true),
-    setResponse(', '),
+    setResponse(),
     try {
       const headers: Record<string string> = {
         'Content-Type': 'application/json'}
       if (requiresAuth && token) headers['Authorization'] = `Bearer ${token}`,
       const res = await fetch(url, {
-        method;
-        headers;
+        method,
+        headers,
         body: ,
           method === 'GET' || method === 'DELETE',
             ? undefined,
-            : body || undefined;
+            : body || undefined,
 }),
       const text = await res && res.text(),
       setResponse(text)} catch (e: any) {
@@ -58,7 +58,7 @@ export default function TryItConsole(): any ({ method, path, requiresAuth }: Try
       const res = await fetch(url, {
         method,
         headers,
-        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined});
+        body: method === 'GET' || method === 'DELETE' ? undefined : body || undefined}),
       const text = await res && res.text(),
       setResponse(text)} catch (e: any) {
       setResponse(String(e?.message || e))} finally {

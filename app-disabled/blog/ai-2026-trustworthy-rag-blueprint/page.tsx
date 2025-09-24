@@ -25,7 +25,7 @@ const TrustworthyRAGBlueprint20o26 = () => {
         <div className='prose prose-lg max-w-none'>,
           <h2>Foundations</h2>,
           <p>,
-            Trustworthy RAG begins with data governance: versioned corpora;
+            Trustworthy RAG begins with data governance: versioned corpora,
             document lineage, and access controls. Retrieval quality and,
             response grounding must be measurable and enforced.,
           </p>,
@@ -50,7 +50,7 @@ const TrustworthyRAGBlueprint20o26 = () => {
           </ul>,
           <h2>Reference Stack</h2>,
           <p>,
-            Feature store for retrieval signals, vector and keyword indices;
+            Feature store for retrieval signals, vector and keyword indices,
             policy engine for PII/security rules, evaluation harness, and,
             observability overlay for retrieval and generation steps.,
           </p>,
@@ -73,5 +73,5 @@ const TrustworthyRAGBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default TrustworthyRAGBlueprint20o26;
+    </div>)},
+export default TrustworthyRAGBlueprint20o26,

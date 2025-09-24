@@ -251,5 +251,5 @@ const NeuralInterfaceRevolution20o35 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NeuralInterfaceRevolution20o35;
+    </div>)},
+export default NeuralInterfaceRevolution20o35,

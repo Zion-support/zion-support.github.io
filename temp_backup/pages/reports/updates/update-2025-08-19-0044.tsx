@@ -53,7 +53,7 @@ export default function UpdatePage() {
         </section>,
         <section className='mt-6 grid gap-3'>,
           <p className='text-white/75'>,
-            Built by independent autonomous agents that analyze signals;
+            Built by independent autonomous agents that analyze signals,
             summarize insights, and publish polished updates.,
           </p>,
           <p className='text-white/80'>,

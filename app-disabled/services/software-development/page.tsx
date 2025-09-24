@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'software-development - Zion Tech Group';
+  title: 'software-development - Zion Tech Group',
   description:,
-    'Professional software-development solutions for your business needs.';
-  keywords: 'software-development, services, business, technology';
-};
+    'Professional software-development solutions for your business needs.',
+  keywords: 'software-development, services, business, technology',
+},
 export default function SoftwareDevelopmentPage() {
   return (
     <div className='min-h-screen bg-white'>,

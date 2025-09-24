@@ -10,11 +10,11 @@ export function getProjectById(id: string): Project | null {
 ,
 export function createProject(project: Omit<Project 'id' | 'createdAt' | 'updatedAt' | 'milestones'>): Project {
 	const newProject: Project = {
-		...project;
-		id: `project_${Date.now()}`;
-		milestones: [];
-		createdAt: new Date().toISOString();
-		updatedAt: new Date().toISOString()};
+		...project,
+		id: `project_${Date.now()}`,
+		milestones: [],
+		createdAt: new Date().toISOString(),
+		updatedAt: new Date().toISOString()},
 	projects.push(newProject),
 	return newProject}
 ,
@@ -26,10 +26,10 @@ export function updateProject(id: string, updates: Partial<Omit<Project 'id'>>):
 ,
 export function addMilestone(project: Project, milestone: Omit<Milestone 'id' | 'createdAt' | 'updatedAt'>): Milestone {
 	const newMilestone: Milestone = {
-		...milestone;
-		id: `milestone_${Date.now()}`;
-		createdAt: new Date().toISOString();
-		updatedAt: new Date().toISOString()};
+		...milestone,
+		id: `milestone_${Date.now()}`,
+		createdAt: new Date().toISOString(),
+		updatedAt: new Date().toISOString()},
 	project.milestones.push(newMilestone),
 	project.updatedAt = new Date().toISOString(),
 	return newMilestone}

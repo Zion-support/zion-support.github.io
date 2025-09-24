@@ -1,72 +1,72 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  User;
-  Settings;
-  LogOut;
-  Bell;
-  Globe;
-  Zap;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
 } from 'lucide-react',
 import Link from 'next/link',
 interface EnhancedNavigationProps {
   className?: string}
 ,
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
-  className = '';
+  className = ''
 }) => {
   const [isOpen, setIsOpen] = useState(false),
   const [isScrolled, setIsScrolled] = useState(false),
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigationItems = [
     {
-      name: 'Services';
-      href: '/services';
-      hasDropdown: true;
+      name: 'Services',
+      href: '/services',
+      hasDropdown: true,
       dropdownItems: [
-        { name: 'AI & Machine Learning', href: '/services?category=ai-ml' };
-        { name: 'Quantum Computing', href: '/services?category=quantum' };
-        { name: 'Space Technology', href: '/services?category=space' };
-        { name: 'Biotech & Healthcare', href: '/services?category=biotech' };
-        { name: 'Financial Services', href: '/services?category=finance' };
-        { name: 'Cybersecurity', href: '/services?category=security' };
-        { name: 'Edge Computing', href: '/services?category=edge' };
-        { name: 'Blockchain', href: '/services?category=blockchain' };
-        { name: 'View All Services', href: '/services' };
-      ];
-    };
+        { name: 'AI & Machine Learning', href: '/services?category=ai-ml' },
+        { name: 'Quantum Computing', href: '/services?category=quantum' },
+        { name: 'Space Technology', href: '/services?category=space' },
+        { name: 'Biotech & Healthcare', href: '/services?category=biotech' },
+        { name: 'Financial Services', href: '/services?category=finance' },
+        { name: 'Cybersecurity', href: '/services?category=security' },
+        { name: 'Edge Computing', href: '/services?category=edge' },
+        { name: 'Blockchain', href: '/services?category=blockchain' },
+        { name: 'View All Services', href: '/services' },
+      ],
+    },
     {
-      name: 'Solutions';
-      href: '/solutions';
-      hasDropdown: true;
+      name: 'Solutions',
+      href: '/solutions',
+      hasDropdown: true,
       dropdownItems: [
-        { name: 'Enterprise Solutions', href: '/solutions?type=enterprise' };
-        { name: 'Startup Solutions', href: '/solutions?type=startup' };
-        { name: 'Government Solutions', href: '/solutions?type=government' };
-        { name: 'Healthcare Solutions', href: '/solutions?type=healthcare' };
-        { name: 'Financial Solutions', href: '/solutions?type=financial' };
-      ];
-    };
-    { name: 'Pricing', href: '/pricing' };
-    { name: 'Resources', href: '/resources' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Contact', href: '/contact' };
+        { name: 'Enterprise Solutions', href: '/solutions?type=enterprise' },
+        { name: 'Startup Solutions', href: '/solutions?type=startup' },
+        { name: 'Government Solutions', href: '/solutions?type=government' },
+        { name: 'Healthcare Solutions', href: '/solutions?type=healthcare' },
+        { name: 'Financial Solutions', href: '/solutions?type=financial' },
+      ],
+    },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'Resources', href: '/resources' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Contact', href: '/contact' },
   ],
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
@@ -257,5 +257,5 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default EnhancedNavigation;
+    </nav>)},
+export default EnhancedNavigation,

@@ -6,26 +6,24 @@ export default function CaseStudyPage() {
   // This would typically come from a database or API,
   // For now, we'll show a generic case study page,
   const caseStudy = {
-    id: id as string;
+    id: id as string,
     title: ,
       'Case Study: ' +,
-      (id as string)?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase());
-    company: 'Client Company';
-    industry: 'Technology';
+      (id as string)?.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
+    company: 'Client Company',
+    industry: 'Technology',
     challenge:,
-      'The client faced significant challenges with manual processes and inefficient workflows that were limiting their growth potential.';
+      'The client faced significant challenges with manual processes and inefficient workflows that were limiting their growth potential.',
     solution:,
-      'We implemented a comprehensive AI automation solution that streamlined operations and improved efficiency across all departments.';
+      'We implemented a comprehensive AI automation solution that streamlined operations and improved efficiency across all departments.',
     results: [
-      '40% increase in operational efficiency';
-      '60% reduction in processing time';
-      '85% improvement in accuracy';
-      'Significant cost savings';
-    ];
-    duration: '6 months';
+      '40% increase in operational efficiency60% reduction in processing time',
+      '85% improvement in accuracySignificant cost savings',
+    ],
+    duration: '6 months',
     description:,
-      'A comprehensive case study demonstrating the transformative impact of AI automation on business operations.';
-  };
+      'A comprehensive case study demonstrating the transformative impact of AI automation on business operations.',
+  },
   if (!id) {
     return (
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white flex items-center justify-center'>,
@@ -116,7 +114,7 @@ export default function CaseStudyPage() {
                 <p className='text-white/90 mb-4'>,
                   This case study demonstrates the transformative power of AI,
                   automation when properly implemented. The results speak for,
-                  themselves, showing significant improvements in efficiency;
+                  themselves, showing significant improvements in efficiency,
                   accuracy, and cost savings.,
                 </p>,
                 <p className='text-white/90'>,

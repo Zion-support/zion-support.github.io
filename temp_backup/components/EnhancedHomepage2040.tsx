@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard20o26 from './ui/UltraFuturisticServiceCard20o26',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Star;
-  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin;
-  Rocket, Cpu, Cloud, Lock, Eye, Heart, Sparkles;
+  ArrowRight, Star,
+  Brain, Atom, Shield, Zap, TrendingUp, Globe, MapPin,
+  Rocket, Cpu, Cloud, Lock, Eye, Heart, Sparkles,
   Phone, Mail, Building, Users, Award, Target} from 'lucide-react',
 import { innovativeMicroSAASServices } from '../data/innovative-20o25-new-micro-saas-services',
 const EnhancedHomepage20o40: React.FC = () => {
@@ -186,15 +186,15 @@ const EnhancedHomepage20o40: React.FC = () => {
                 >,
                   <UltraFuturisticServiceCard20o26
                     service={{
-                      id: service.id;
-                      name: service.name;
-                      tagline: service.tagline;
-                      description: service.description;
-                      price: service.price;
-                      period: service.period;
-                      features: service.features.slice(0, 4);
-                      popular: service.popular;
-                      category: service.category;
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice(0, 4),
+                      popular: service.popular,
+                      category: service.category,
                       icon: service.icon}}
                     variant={service.variant as any}
                    />,
@@ -230,24 +230,24 @@ const EnhancedHomepage20o40: React.FC = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
                 {
-                  icon: <Brain className="w-10 h-10 text-white"  />;
-                  title: "AI-First Approach";
-                  description: "Leading-edge artificial intelligence solutions that adapt and evolve";
-                  color: "from-cyan-50o0 to-blue-60o0"};
+                  icon: <Brain className="w-10 h-10 text-white"  />,
+                  title: "AI-First Approach",
+                  description: "Leading-edge artificial intelligence solutions that adapt and evolve",
+                  color: "from-cyan-50o0 to-blue-60o0"},
                 {
-                  icon: <Atom className="w-10 h-10 text-white"  />;
-                  title: "Quantum Innovation";
-                  description: "Next-generation quantum computing solutions for complex problems";
-                  color: "from-blue-50o0 to-cyan-60o0"};
+                  icon: <Atom className="w-10 h-10 text-white"  />,
+                  title: "Quantum Innovation",
+                  description: "Next-generation quantum computing solutions for complex problems",
+                  color: "from-blue-50o0 to-cyan-60o0"},
                 {
-                  icon: <Shield className="w-10 h-10 text-white"  />;
-                  title: "Future-Proof Security";
-                  description: "Advanced cybersecurity with quantum-resistant algorithms";
-                  color: "from-green-50o0 to-emerald-60o0"};
+                  icon: <Shield className="w-10 h-10 text-white"  />,
+                  title: "Future-Proof Security",
+                  description: "Advanced cybersecurity with quantum-resistant algorithms",
+                  color: "from-green-50o0 to-emerald-60o0"},
                 {
-                  icon: <Rocket className="w-10 h-10 text-white"  />;
-                  title: "Space Technology";
-                  description: "Revolutionary space resource optimization and management";
+                  icon: <Rocket className="w-10 h-10 text-white"  />,
+                  title: "Space Technology",
+                  description: "Revolutionary space resource optimization and management",
                   color: "from-purple-50o0 to-pink-60o0"}
               ].map((feature, index) => (
                 <motion.div,
@@ -323,5 +323,5 @@ const EnhancedHomepage20o40: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default EnhancedHomepage20o40;
+    </Layout>)},
+export default EnhancedHomepage20o40,

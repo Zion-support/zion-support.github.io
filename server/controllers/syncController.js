@@ -21,13 +21,13 @@ exports.receiveSyncUpdate = (req, res) => {
   mergeRecords(syncStore.resolutions, resolutions),
   mergeRecords(syncStore.leaderboard, leaderboard),
   syncStore.lastUpdated = Date.now(),
-  res.json({ status: 'ok', updated: syncStore.lastUpdated })};
+  res.json({ status: 'ok', updated: syncStore.lastUpdated })},
 exports.getSyncState = (_req, res) => {
   const state ={
-    proposals: Array.from(syncStore.proposals.values());
-    tokenTransfers: Array.from(syncStore.tokenTransfers.values());
-    talentMoves: Array.from(syncStore.talentMoves.values());
-    resolutions: Array.from(syncStore.resolutions.values());
-    leaderboard: Array.from(syncStore.leaderboard.values());
-    lastUpdated: syncStore.lastUpdated};
-  res.json(state)};
+    proposals: Array.from(syncStore.proposals.values()),
+    tokenTransfers: Array.from(syncStore.tokenTransfers.values()),
+    talentMoves: Array.from(syncStore.talentMoves.values()),
+    resolutions: Array.from(syncStore.resolutions.values()),
+    leaderboard: Array.from(syncStore.leaderboard.values()),
+    lastUpdated: syncStore.lastUpdated},
+  res.json(state)},

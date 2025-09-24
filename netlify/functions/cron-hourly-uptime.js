@@ -3,7 +3,7 @@ exports.handler = async function() {
   try {
     const baseUrl = process.env.URL || process.env.DEPLOY_URL || '',
     const endpoints = [
-      '/', '/learn', '/dao', '/certifications', '/api/learn/courses', '/api/dao/metrics'],
+      '//learn', '/dao/certifications', '/api/learn/courses/api/dao/metrics'],
     const results = [],
     for (const ep of endpoints) {
       const url = `${baseUrl}${ep}`,
@@ -16,7 +16,7 @@ exports.handler = async function() {
         results.push({ path: ep, status: 0, ms, error: String(e.message || e) })}
     }
 ,
-    const log ={ timestamp: Date.now(), results };
+    const log ={ timestamp: Date.now(), results },
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
@@ -35,8 +35,8 @@ exports.handler = async function() {
         await upsertFile({ owner, repo, path: existingPath, content, message: 'chore(automation): init uptime log', token })}
     }
 ,
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, count: results.length }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, count: results.length }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) },
   }
-};
+},

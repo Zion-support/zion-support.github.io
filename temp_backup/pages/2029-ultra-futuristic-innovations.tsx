@@ -1,17 +1,17 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Star;
-  TrendingUp;
-  Eye;
-  Timer;
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Star,
+  TrendingUp,
+  Eye,
+  Timer,
 } from 'lucide-react',
 import UltraFuturisticBackground20o29 from '../components/backgrounds/UltraFuturisticBackground20o29',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
@@ -21,14 +21,14 @@ import { cuttingEdge20o29Services } from '../data/20o29-cutting-edge-innovations
 import { ultimateMicroSaasServices } from '../data/ultimate-micro-saas-services',
 export default function UltraFuturistic20o29InnovationsPage() {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const all20o29Services = [
-    ...cuttingEdgeInnovations20o29;
-    ...spaceColonization20o29Services;
+    ...cuttingEdgeInnovations20o29,
+    ...spaceColonization20o29Services,
   ],
   return (
     <>,
@@ -134,66 +134,66 @@ export default function UltraFuturistic20o29InnovationsPage() {
           <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
             {[
               {
-                title: '🧠 AI Consciousness & Innovation';
+                title: '🧠 AI Consciousness & Innovation',
                 description:,
-                  'Revolutionary AI systems with human-like consciousness and reasoning capabilities';
-                icon: Brain;
-                color: 'from-purple-60o0 to-pink-60o0';
+                  'Revolutionary AI systems with human-like consciousness and reasoning capabilities',
+                icon: Brain,
+                color: 'from-purple-60o0 to-pink-60o0',
                 services: cuttingEdge20o29Services.filter(
                   s =>,
                     s.category.includes('Consciousness') ||,
-                    s.category.includes('Business'));
-              };
+                    s.category.includes('Business')),
+              },
               {
-                title: '⚛️ Quantum & Neuroscience';
+                title: '⚛️ Quantum & Neuroscience',
                 description:,
-                  'Quantum computing meets brain-computer interfaces for unprecedented capabilities';
-                icon: Atom;
-                color: 'from-indigo-60o0 to-purple-60o0';
+                  'Quantum computing meets brain-computer interfaces for unprecedented capabilities',
+                icon: Atom,
+                color: 'from-indigo-60o0 to-purple-60o0',
                 services: cuttingEdge20o29Services.filter(
                   s =>,
                     s.category.includes('Neuroscience') ||,
-                    s.category.includes('Time'));
-              };
+                    s.category.includes('Time')),
+              },
               {
-                title: '🚀 Space Colonization & Mining';
+                title: '🚀 Space Colonization & Mining',
                 description:,
-                  'Automated space exploration, colonization, and resource extraction systems';
-                icon: Rocket;
-                color: 'from-red-60o0 to-orange-60o0';
+                  'Automated space exploration, colonization, and resource extraction systems',
+                icon: Rocket,
+                color: 'from-red-60o0 to-orange-60o0',
                 services: cuttingEdge20o29Services.filter(
                   s =>,
-                    s.category.includes('Space') || s.category.includes('Time'));
-              };
+                    s.category.includes('Space') || s.category.includes('Time')),
+              },
               {
-                title: '🏠 Space Architecture & Energy';
+                title: '🏠 Space Architecture & Energy',
                 description:,
-                  'Advanced habitat design and space-based energy harvesting platforms';
-                icon: Globe;
-                color: 'from-green-60o0 to-teal-60o0';
+                  'Advanced habitat design and space-based energy harvesting platforms',
+                icon: Globe,
+                color: 'from-green-60o0 to-teal-60o0',
                 services: cuttingEdge20o29Services.filter(
                   s =>,
                     s.category.includes('Architecture') ||,
-                    s.category.includes('Energy'));
-              };
+                    s.category.includes('Energy')),
+              },
               {
-                title: '👁️ AI Reality Augmentation';
+                title: '👁️ AI Reality Augmentation',
                 description:,
-                  'Real-time AI-powered reality enhancement and content generation';
-                icon: Eye;
-                color: 'from-orange-60o0 to-red-60o0';
+                  'Real-time AI-powered reality enhancement and content generation',
+                icon: Eye,
+                color: 'from-orange-60o0 to-red-60o0',
                 services: cuttingEdge20o29Services.filter(s =>,
-                  s.category.includes('Augmented Reality'));
-              };
+                  s.category.includes('Augmented Reality')),
+              },
               {
-                title: '⏰ Quantum Time Manipulation';
+                title: '⏰ Quantum Time Manipulation',
                 description:,
-                  'Quantum-based time perception manipulation and optimization';
-                icon: Timer;
-                color: 'from-green-60o0 to-emerald-60o0';
+                  'Quantum-based time perception manipulation and optimization',
+                icon: Timer,
+                color: 'from-green-60o0 to-emerald-60o0',
                 services: cuttingEdge20o29Services.filter(s =>,
-                  s.category.includes('Time'));
-              };
+                  s.category.includes('Time')),
+              },
             ].map((category, index) => (
               <motion.div,
                 key={index}
@@ -261,35 +261,35 @@ export default function UltraFuturistic20o29InnovationsPage() {
           <div className='grid grid-cols-1 md:grid-cols-4 gap-8'>,
             {[
               {
-                label: 'Revolutionary Services';
+                label: 'Revolutionary Services',
                 value: all20o29Services.filter(
-                  s => (s as any).innovationLevel === 'Revolutionary').length;
-                icon: Rocket;
-                color: 'from-purple-50o0 to-pink-50o0';
-              };
+                  s => (s as any).innovationLevel === 'Revolutionary').length,
+                icon: Rocket,
+                color: 'from-purple-50o0 to-pink-50o0'
+              },
               {
-                label: 'Patent Pending';
+                label: 'Patent Pending',
                 value: all20o29Services.filter(
-                  s => (s as any).patentStatus === 'Patent Pending').length;
-                icon: Shield;
-                color: 'from-blue-50o0 to-cyan-50o0';
-              };
+                  s => (s as any).patentStatus === 'Patent Pending').length,
+                icon: Shield,
+                color: 'from-blue-50o0 to-cyan-50o0'
+              },
               {
-                label: 'Total Customers';
+                label: 'Total Customers',
                 value: all20o29Services.reduce(
-                  (sum, s) => sum + s.customers;
-                  0);
-                icon: Star;
-                color: 'from-yellow-50o0 to-orange-50o0';
-              };
+                  (sum, s) => sum + s.customers,
+                  0),
+                icon: Star,
+                color: 'from-yellow-50o0 to-orange-50o0'
+              },
               {
-                label: 'Average Rating';
+                label: 'Average Rating',
                 value: (
                   all20o29Services.reduce((sum, s) => sum + s.rating, 0) /,
-                  all20o29Services.length).toFixed(1);
-                icon: TrendingUp;
-                color: 'from-green-50o0 to-teal-50o0';
-              };
+                  all20o29Services.length).toFixed(1),
+                icon: TrendingUp,
+                color: 'from-green-50o0 to-teal-50o0'
+              },
             ].map((stat, index) => (
               <motion.div,
                 key={index}

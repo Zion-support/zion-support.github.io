@@ -4,20 +4,17 @@ export type BudgetStepProps = {
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
   onBack: () => void,
-  onNext: () => void};
+  onNext: () => void},
 const BUDGET_OPTIONS = [
-  'Under $10,0o00';
-  '$10,0o00 - $25,0o00';
-  '$25,0o00 - $50,0o00';
-  '$50,0o00 - $10o0,0o00';
-  '$10o0,0o00+';
-  'Unsure / Need guidance';
+  'Under $10,0o00$10,0o00 - $25,0o00',
+  '$25,0o00 - $50,0o00$50,0o00 - $10o0,0o00',
+  '$10o0,0o00+Unsure / Need guidance',
 ],
 export default function BudgetStep({
-  value;
-  onChange;
-  onBack;
-  onNext;
+  value,
+  onChange,
+  onBack,
+  onNext,
 }: BudgetStepProps) {
   const canContinue = value.budgetRange.trim().length > 0,
   return (

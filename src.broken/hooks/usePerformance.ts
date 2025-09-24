@@ -18,20 +18,20 @@ interface PerformanceOptions {
 ,
 export function usePerformance(options: PerformanceOptions ={}) {
   const {
-    enableRealUserMonitoring = true;
-    enableWebVitals = true;
-    enableResourceTiming = true;
-    enableNavigationTiming = true;
-    logToConsole = false;
+    enableRealUserMonitoring = true,
+    enableWebVitals = true,
+    enableResourceTiming = true,
+    enableNavigationTiming = true,
+    logToConsole = false,
     sendToAnalytics = false} = options,
   const [metrics, setMetrics] = useState<PerformanceMetrics>({
-    fcp: null;
-    lcp: null;
-    fid: null;
-    cls: null;
-    ttfb: null;
-    domLoad: null;
-    windowLoad: null;
+    fcp: null,
+    lcp: null,
+    fid: null,
+    cls: null,
+    ttfb: null,
+    domLoad: null,
+    windowLoad: null,
     navigationStart: null}),
   const [isMonitoring, setIsMonitoring] = useState(false),
   const observerRef = useRef<PerformanceObserver | null>(null),
@@ -46,9 +46,9 @@ export function usePerformance(options: PerformanceOptions ={}) {
       const domLoad = navigationEntry.domContentLoadedEventEnd - navigationEntry.domContentLoadedEventStart,
       const windowLoad = navigationEntry.loadEventEnd - navigationEntry.loadEventStart,
       setMetrics(prev => ({
-        ...prev;
-        ttfb;
-        domLoad;
+        ...prev,
+        ttfb,
+        domLoad,
         windowLoad})),
       if (logToConsole) {
         // // console.log('Navigation Timing:', { ttfb, domLoad, windowLoad })}
@@ -120,7 +120,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
       document.removeEventListener('pointerdown', firstInputHandler),
       document.removeEventListener('keydown', firstInputHandler),
       document.removeEventListener('mousedown', firstInputHandler),
-      document.removeEventListener('touchstart', firstInputHandler)};
+      document.removeEventListener('touchstart', firstInputHandler)},
     document.addEventListener('pointerdown', firstInputHandler),
     document.addEventListener('keydown', firstInputHandler),
     document.addEventListener('mousedown', firstInputHandler),
@@ -194,19 +194,19 @@ export function usePerformance(options: PerformanceOptions ={}) {
     if (!sendToAnalytics) return,
     const performanceScore = getPerformanceScore(),
     const analyticsData ={
-      ...metrics;
-      performanceScore;
-      timestamp: Date.now();
-      userAgent: navigator.userAgent;
-      url: window.location.href};
+      ...metrics,
+      performanceScore,
+      timestamp: Date.now(),
+      userAgent: navigator.userAgent,
+      url: window.location.href},
     // Example: Send to Google Analytics,
     if (window.gtag) {
-      window.gtag('event', 'performance_metrics', analyticsData)}
+      window.gtag('eventperformance_metrics', analyticsData)}
 ,
     // Example: Send to custom endpoint,
     fetch('/api/analytics/performance', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(analyticsData)}).catch(console.error)}, [metrics, sendToAnalytics, getPerformanceScore]),
   // Auto-start monitoring on mount,
   useEffect(() => {
@@ -214,7 +214,7 @@ export function usePerformance(options: PerformanceOptions ={}) {
       startMonitoring()}
 ,
     return () => {
-      stopMonitoring()};
+      stopMonitoring()},
   }, [enableRealUserMonitoring, startMonitoring, stopMonitoring]),
   // Auto-send metrics when they're complete,
   useEffect(() => {
@@ -222,14 +222,14 @@ export function usePerformance(options: PerformanceOptions ={}) {
       sendMetricsToAnalytics()}
   }, [metrics, sendToAnalytics, sendMetricsToAnalytics]),
   return {
-    metrics;
-    isMonitoring;
-    performanceScore: getPerformanceScore();
-    startMonitoring;
-    stopMonitoring;
-    getResourceTiming;
-    sendMetricsToAnalytics};
-};
+    metrics,
+    isMonitoring,
+    performanceScore: getPerformanceScore(),
+    startMonitoring,
+    stopMonitoring,
+    getResourceTiming,
+    sendMetricsToAnalytics},
+},
 // Hook for monitoring specific component performance,
 export function useComponentPerformance(componentName: string) {
   const [renderTime, setRenderTime] = useState<number>(0),
@@ -245,9 +245,9 @@ export function useComponentPerformance(componentName: string) {
       // Log slow components,
       if (totalTime > 16) { // 16ms = 60fps threshold,
         console.warn(`Slow component render: ${componentName} took ${totalTime.toFixed(2)}ms`)}
-    };
+    },
   }, [componentName]),
-  return { renderTime, mountTime };
+  return { renderTime, mountTime },
 }
 ,
 // Hook for monitoring API call performance,
@@ -272,8 +272,8 @@ export function useAPIPerformance() {
     }),
     return slowAPIs.sort((a, b) => b.average - a.average)}, [apiMetrics]),
   return {
-    apiMetrics;
-    trackAPICall;
-    getAPIAverage;
-    getSlowAPIs};
+    apiMetrics,
+    trackAPICall,
+    getAPIAverage,
+    getSlowAPIs},
 }

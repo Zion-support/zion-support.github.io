@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -31,12 +31,12 @@ const https = require('https'),
 class CursorIntegration {
   constructor() {
     this.config ={
-      apiEndpoint: process.env.CURSOR_API_ENDPOINT || https://api.cursor.sh';
-      apiKey: process.env.CURSOR_API_KEY;
-      workspaceId: process.env.CURSOR_WORKSPACE_ID;
-      projectPath: process.cwd();
-      maxRetries: 3;
-      timeout: 30o000};
+      apiEndpoint: process.env.CURSOR_API_ENDPOINT || https://api.cursor.sh',
+      apiKey: process.env.CURSOR_API_KEY,
+      workspaceId: process.env.CURSOR_WORKSPACE_ID,
+      projectPath: process.cwd(),
+      maxRetries: 3,
+      timeout: 30o000},
     this.isConnected = false,
     this.lastAnalysis = null,
     this.analysisHistory = []}
@@ -79,9 +79,9 @@ const prompt = this.buildCodeQualityPrompt(analysisData),
 const response = await this.callCursorAPI(prompt),
 const analysis = this.parseCodeQualityResponse(response),
     this.lastAnalysis ={
-      type: 'codeQuality';
-      data: analysis;
-      timestamp: new Date().toISOString()};
+      type: 'codeQuality',
+      data: analysis,
+      timestamp: new Date().toISOString()},
     this.analysisHistory.push(this.lastAnalysis),
     return analysis}
 ,
@@ -95,9 +95,9 @@ const prompt = this.buildPerformancePrompt(performanceData),
 const response = await this.callCursorAPI(prompt),
 const analysis = this.parsePerformanceResponse(response),
     this.lastAnalysis ={
-      type: 'performance';
-      data: analysis;
-      timestamp: new Date().toISOString()};
+      type: 'performance',
+      data: analysis,
+      timestamp: new Date().toISOString()},
     this.analysisHistory.push(this.lastAnalysis),
     return analysis}
 ,
@@ -111,9 +111,9 @@ const prompt = this.buildSecurityPrompt(securityData),
 const response = await this.callCursorAPI(prompt),
 const analysis = this.parseSecurityResponse(response),
     this.lastAnalysis ={
-      type: 'security';
-      data: analysis;
-      timestamp: new Date().toISOString()};
+      type: 'security',
+      data: analysis,
+      timestamp: new Date().toISOString()},
     this.analysisHistory.push(this.lastAnalysis),
     return analysis}
 ,
@@ -137,8 +137,8 @@ const analysis = this.parseSecurityResponse(response),
         const result = await this.applySuggestion(suggestion),
         results.push(result)} catch (error) {
         results.push({
-          suggestion;
-          status: 'failed';
+          suggestion,
+          status: 'failed',
           error: error.message})}
     }
 ,
@@ -162,7 +162,7 @@ const walkDir = (dir) => {
         } else if (extensions.includes(path.extname(item))) {
           files.push(fullPath)}
       }
-    };
+    },
     walkDir(this.config.projectPath),
     return files.slice(0, 10o0), // Limit to first 10o0 files}
 ,
@@ -171,21 +171,21 @@ const walkDir = (dir) => {
    */,
   async collectCodeQualityData(files) {
     const data ={
-      files: [];
-      lintResults: null;
-      testResults: null;
-      bundleAnalysis: null;
+      files: [],
+      lintResults: null,
+      testResults: null,
+      bundleAnalysis: null,
       complexityMetrics: {}
-    };
+    },
     // Collect file information,
     for (const file of files) {
       try {
         const content = fs.readFileSync(file, 'utf8'),
 const stats = fs.statSync(file),
         data.files.push({
-          path: file;
-          size: stats.size;
-          lines: content.split('\n').length;
+          path: file,
+          size: stats.size,
+          lines: content.split('\n').length,
           lastModified: stats.mtime.toISOString()})} catch (error) {
         logger.warn(`Warning: Could not read file ${file}: ${error.message}`)}
     }
@@ -193,28 +193,28 @@ const stats = fs.statSync(file),
     // Run linting,
     try {
       const lintOutput = execSync('npm run lint -- --format json', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.config.projectPath}).toString(),
       data.lintResults = JSON.parse(lintOutput)} catch (error) {
-      data.lintResults ={ errors: [], warnings: [] };
+      data.lintResults ={ errors: [], warnings: [] },
     }
 ,
     // Run tests,
     try {
       const testOutput = execSync('npm run test -- --json --outputFile=test-results.json', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.config.projectPath}).toString(),
-      data.testResults = JSON.parse(fs.readFileSync('test-results.json', 'utf8'))} catch (error) {
-      data.testResults ={ success: false, error: error.message };
+      data.testResults = JSON.parse(fs.readFileSync('test-results.jsonutf8'))} catch (error) {
+      data.testResults ={ success: false, error: error.message },
     }
 ,
     // Analyze bundle,
     try {
       const bundleOutput = execSync('npm run bundle: 'analyze', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.config.projectPath}).toString(),
       data.bundleAnalysis = this.parseBundleAnalysis(bundleOutput)} catch (error) {
-      data.bundleAnalysis ={ error: error.message };
+      data.bundleAnalysis ={ error: error.message },
     }
 ,
     return data}
@@ -224,26 +224,26 @@ const stats = fs.statSync(file),
    */,
   async collectPerformanceData() {
     const data ={
-      buildTime: null;
-      bundleSize: null;
-      lighthouseScores: null;
-      apiPerformance: null;
-      memoryUsage: null};
+      buildTime: null,
+      bundleSize: null,
+      lighthouseScores: null,
+      apiPerformance: null,
+      memoryUsage: null},
     // Measure build time,
     try {
       const startTime = Date.now(),
       execSync('npm run build', { stdio: 'pipe', cwd: this.config.projectPath }),
       data.buildTime = Date.now() - startTime} catch (error) {
-      data.buildTime ={ error: error.message };
+      data.buildTime ={ error: error.message },
     }
 ,
     // Get bundle size,
     try {
       const bundleOutput = execSync('npm run bundle: 'report', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.config.projectPath}).toString(),
       data.bundleSize = this.parseBundleSize(bundleOutput)} catch (error) {
-      data.bundleSize ={ error: error.message };
+      data.bundleSize ={ error: error.message },
     }
 ,
     // Get memory usage,
@@ -255,28 +255,28 @@ const stats = fs.statSync(file),
    */,
   async collectSecurityData() {
     const data ={
-      vulnerabilities: null;
-      dependencies: null;
-      securityAudit: null;
-      codeSecurity: null};
+      vulnerabilities: null,
+      dependencies: null,
+      securityAudit: null,
+      codeSecurity: null},
     // Check for vulnerabilities,
     try {
       const auditOutput = execSync('npm audit --json', {
-        stdio: 'pipe';
+        stdio: 'pipe',
         cwd: this.config.projectPath}).toString(),
       data.vulnerabilities = JSON.parse(auditOutput)} catch (error) {
-      data.vulnerabilities ={ error: error.message };
+      data.vulnerabilities ={ error: error.message },
     }
 ,
     // Get dependency information,
     try {
-      const packageJson = JSON.parse(fs.readFileSync('package.json', 'utf8')),
+      const packageJson = JSON.parse(fs.readFileSync('package.jsonutf8')),
       data.dependencies ={
-        total: Object.keys(packageJson.dependencies || {}).length;
-        devDependencies: Object.keys(packageJson.devDependencies || {}).length;
-        outdated: JSON.parse(execSync('npm outdated --json', { stdio: 'pipe' }).toString() || {})};
+        total: Object.keys(packageJson.dependencies || {}).length,
+        devDependencies: Object.keys(packageJson.devDependencies || {}).length,
+        outdated: JSON.parse(execSync('npm outdated --json', { stdio: 'pipe' }).toString() || {})},
     } catch (error) {
-      data.dependencies ={ error: error.message };
+      data.dependencies ={ error: error.message },
     }
 ,
     return data}
@@ -286,7 +286,7 @@ const stats = fs.statSync(file),
    */,
   buildCodeQualityPrompt(data) {
     return {
-      workspaceId: this.config.workspaceId;
+      workspaceId: this.config.workspaceId,
       prompt: `Analyze the code quality of this Next.js application and provide detailed recommendations:,
 Project Structure:,
 - Total files: ${data.files.length}
@@ -308,9 +308,9 @@ Please provide: ,
 4. Testing coverage recommendations,
 5. Bundle size optimization suggestions,
 6. Specific code examples for improvements,
-Focus on practical, implementable improvements that will have the most impact on code quality and maintainability.`;
-      context: 'code-quality-analysis';
-      maxTokens: 30o00};
+Focus on practical, implementable improvements that will have the most impact on code quality and maintainability.`,
+      context: 'code-quality-analysis',
+      maxTokens: 30o00},
   }
 ,
   /**,
@@ -318,7 +318,7 @@ Focus on practical, implementable improvements that will have the most impact on
    */,
   buildPerformancePrompt(data) {
     return {
-      workspaceId: this.config.workspaceId;
+      workspaceId: this.config.workspaceId,
       prompt: `Analyze the performance of this Next.js application and provide optimization recommendations:,
 Build Performance:,
 - Build time: ${data.buildTime}ms,
@@ -336,9 +336,9 @@ Please provide: ,
 5. Caching strategies,
 6. Code splitting recommendations,
 7. Specific implementation suggestions,
-Focus on measurable performance improvements that will enhance user experience.`;
-      context: 'performance-analysis';
-      maxTokens: 30o00};
+Focus on measurable performance improvements that will enhance user experience.`,
+      context: 'performance-analysis',
+      maxTokens: 30o00},
   }
 ,
   /**,
@@ -346,7 +346,7 @@ Focus on measurable performance improvements that will enhance user experience.`
    */,
   buildSecurityPrompt(data) {
     return {
-      workspaceId: this.config.workspaceId;
+      workspaceId: this.config.workspaceId,
       prompt: `Analyze the security of this Next.js application and provide security recommendations:,
 Vulnerability Scan:,
 ${JSON.stringify(data.vulnerabilities, null, 2)}
@@ -362,9 +362,9 @@ Please provide: ,
 5. Data protection strategies,
 6. Input validation enhancements,
 7. Specific security fixes with code examples,
-Focus on security improvements that will protect user data and prevent security breaches.`;
-      context: 'security-analysis';
-      maxTokens: 30o00};
+Focus on security improvements that will protect user data and prevent security breaches.`,
+      context: 'security-analysis',
+      maxTokens: 30o00},
   }
 ,
   /**,
@@ -372,7 +372,7 @@ Focus on security improvements that will protect user data and prevent security 
    */,
   buildImprovementPrompt(analysis) {
     return {
-      workspaceId: this.config.workspaceId;
+      workspaceId: this.config.workspaceId,
       prompt: `Based on this analysis, provide specific, actionable improvement suggestions: ,
 Analysis Results:,
 ${JSON.stringify(analysis, null, 2)}
@@ -389,9 +389,9 @@ For each suggestion, include: ,
 - Before and after code examples,
 - Explanation of the improvement,
 - Priority level (critical, high, medium, low),
-Focus on improvements that can be implemented immediately and will have the most positive impact.`;
-      context: 'improvement-suggestions';
-      maxTokens: 40o00};
+Focus on improvements that can be implemented immediately and will have the most positive impact.`,
+      context: 'improvement-suggestions',
+      maxTokens: 40o00},
   }
 ,
   /**,
@@ -401,14 +401,14 @@ Focus on improvements that can be implemented immediately and will have the most
     return new Promise((resolve, reject) => {
       const postData = JSON.stringify(prompt),
 const options ={
-        hostname: new URL(this.config.apiEndpoint).hostname;
-        port: 443;
-        path: /api/analyze';
-        method: 'POST';
+        hostname: new URL(this.config.apiEndpoint).hostname,
+        port: 443,
+        path: /api/analyze',
+        method: 'POST',
         headers: {
-          Content-Type': application/json';
-          Authorization': `Bearer ${this.config.apiKey}`;
-          Content-Length': Buffer.byteLength(postData)};
+          Content-Type': application/json',
+          Authorization': `Bearer ${this.config.apiKey}`,
+          Content-Length': Buffer.byteLength(postData)},
         timeout: this.config.timeout}
 const req = https.request(options, (res) => {
         let data = ,
@@ -431,19 +431,19 @@ const req = https.request(options, (res) => {
   parseCodeQualityResponse(response) {
     try {
       return {
-        issues: response.issues || [];
-        recommendations: response.recommendations || [];
-        metrics: response.metrics || {};
-        priority: response.priority || medium';
-        confidence: response.confidence || 0.8};
+        issues: response.issues || [],
+        recommendations: response.recommendations || [],
+        metrics: response.metrics || {},
+        priority: response.priority || medium',
+        confidence: response.confidence || 0.8},
     } catch (error) {
       return {
-        issues: [];
-        recommendations: [];
-        metrics: {};
-        priority: 'medium';
-        confidence: 0.5;
-        error: Failed to parse response};
+        issues: [],
+        recommendations: [],
+        metrics: {},
+        priority: 'medium',
+        confidence: 0.5,
+        error: Failed to parse response},
     }
   }
 ,
@@ -453,19 +453,19 @@ const req = https.request(options, (res) => {
   parsePerformanceResponse(response) {
     try {
       return {
-        optimizations: response.optimizations || [];
-        bottlenecks: response.bottlenecks || [];
-        metrics: response.metrics || {};
-        priority: response.priority || medium';
-        confidence: response.confidence || 0.8};
+        optimizations: response.optimizations || [],
+        bottlenecks: response.bottlenecks || [],
+        metrics: response.metrics || {},
+        priority: response.priority || medium',
+        confidence: response.confidence || 0.8},
     } catch (error) {
       return {
-        optimizations: [];
-        bottlenecks: [];
-        metrics: {};
-        priority: 'medium';
-        confidence: 0.5;
-        error: Failed to parse response};
+        optimizations: [],
+        bottlenecks: [],
+        metrics: {},
+        priority: 'medium',
+        confidence: 0.5,
+        error: Failed to parse response},
     }
   }
 ,
@@ -475,19 +475,19 @@ const req = https.request(options, (res) => {
   parseSecurityResponse(response) {
     try {
       return {
-        vulnerabilities: response.vulnerabilities || [];
-        recommendations: response.recommendations || [];
-        riskLevel: response.riskLevel || medium';
-        priority: response.priority || high';
-        confidence: response.confidence || 0.9};
+        vulnerabilities: response.vulnerabilities || [],
+        recommendations: response.recommendations || [],
+        riskLevel: response.riskLevel || medium',
+        priority: response.priority || high',
+        confidence: response.confidence || 0.9},
     } catch (error) {
       return {
-        vulnerabilities: [];
-        recommendations: [];
-        riskLevel: 'medium';
-        priority: 'high';
-        confidence: 0.5;
-        error: Failed to parse response};
+        vulnerabilities: [],
+        recommendations: [],
+        riskLevel: 'medium',
+        priority: 'high',
+        confidence: 0.5,
+        error: Failed to parse response},
     }
   }
 ,
@@ -497,19 +497,19 @@ const req = https.request(options, (res) => {
   parseImprovementResponse(response) {
     try {
       return {
-        suggestions: response.suggestions || [];
-        priority: response.priority || medium';
-        implementation: response.implementation || {};
-        testing: response.testing || [];
-        risks: response.risks || []};
+        suggestions: response.suggestions || [],
+        priority: response.priority || medium',
+        implementation: response.implementation || {},
+        testing: response.testing || [],
+        risks: response.risks || []},
     } catch (error) {
       return {
-        suggestions: [];
-        priority: 'medium';
-        implementation: {};
-        testing: [];
-        risks: [];
-        error: Failed to parse response'      };
+        suggestions: [],
+        priority: 'medium',
+        implementation: {},
+        testing: [],
+        risks: [],
+        error: Failed to parse response'      },
     }
   }
 ,
@@ -519,7 +519,7 @@ const req = https.request(options, (res) => {
   async applySuggestion(suggestion) {
     try {
       const prompt ={
-        workspaceId: this.config.workspaceId;
+        workspaceId: this.config.workspaceId,
         prompt: `Apply this code improvement suggestion:,
 ${JSON.stringify(suggestion, null, 2)}
 ,
@@ -529,23 +529,23 @@ Please provide the exact code changes needed, including: ,
 3. New code to add,
 4. Code to remove,
 5. Any additional files to create,
-Make sure the changes are safe and maintain the existing functionality.`;
-        context: 'code-application';
-        maxTokens: 20o00};
+Make sure the changes are safe and maintain the existing functionality.`,
+        context: 'code-application',
+        maxTokens: 20o00},
       const response = await this.callCursorAPI(prompt),
 const changes = this.parseCodeChanges(response),
       // Apply the changes,
       const results = await this.applyCodeChanges(changes),
       return {
-        suggestion;
-        status: 'completed';
-        changes: results;
-        timestamp: new Date().toISOString()};
+        suggestion,
+        status: 'completed',
+        changes: results,
+        timestamp: new Date().toISOString()},
     } catch (error) {
       return {
-        suggestion;
-        status: 'failed';
-        error: error.message};
+        suggestion,
+        status: 'failed',
+        error: error.message},
     }
   }
 ,
@@ -574,8 +574,8 @@ const changes = this.parseCodeChanges(response),
           results.push(result)}
       } catch (error) {
         results.push({
-          change;
-          status: 'failed';
+          change,
+          status: 'failed',
           error: error.message})}
     }
 ,
@@ -598,9 +598,9 @@ const changes = this.parseCodeChanges(response),
 ,
       fs.writeFileSync(fullPath, content),
       return {
-        file: filePath;
-        status: 'modified';
-        timestamp: new Date().toISOString()};
+        file: filePath,
+        status: 'modified',
+        timestamp: new Date().toISOString()},
     } catch (error) {
       throw new Error(`Failed to modify file ${filePath}: ${error.message}`)}
   }
@@ -617,9 +617,9 @@ const changes = this.parseCodeChanges(response),
 ,
       fs.writeFileSync(fullPath, content),
       return {
-        file: filePath;
-        status: 'created';
-        timestamp: new Date().toISOString()};
+        file: filePath,
+        status: 'created',
+        timestamp: new Date().toISOString()},
     } catch (error) {
       throw new Error(`Failed to create file ${filePath}: ${error.message}`)}
   }
@@ -632,9 +632,9 @@ const changes = this.parseCodeChanges(response),
       const fullPath = path.resolve(filePath),
       fs.unlinkSync(fullPath),
       return {
-        file: filePath;
-        status: 'deleted';
-        timestamp: new Date().toISOString()};
+        file: filePath,
+        status: 'deleted',
+        timestamp: new Date().toISOString()},
     } catch (error) {
       throw new Error(`Failed to delete file ${filePath}: ${error.message}`)}
   }
@@ -646,7 +646,7 @@ const changes = this.parseCodeChanges(response),
     try {
       // Extract bundle size information from output,
       const lines = output.split('\n'),
-const bundleInfo ={};
+const bundleInfo ={},
       for (const line of lines) {
         if (line.includes('Bundle size: ')) {
           bundleInfo.size = line.split(':')[1].trim()} else if (line.includes('Chunks: ')) {
@@ -654,7 +654,7 @@ const bundleInfo ={};
       }
 ,
       return bundleInfo} catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -665,7 +665,7 @@ const bundleInfo ={};
     try {
       // Extract size information from bundle analysis output,
       const lines = output.split('\n'),
-const sizeInfo ={};
+const sizeInfo ={},
       for (const line of lines) {
         if (line.includes('Total size: ')) {
           sizeInfo.total = line.split(':')[1].trim()} else if (line.includes('JavaScript: ')) {
@@ -674,7 +674,7 @@ const sizeInfo ={};
       }
 ,
       return sizeInfo} catch (error) {
-      return { error: error.message };
+      return { error: error.message },
     }
   }
 ,
@@ -695,10 +695,10 @@ const sizeInfo ={};
    */,
   getStatus() {
     return {
-      isConnected: this.isConnected;
-      lastAnalysis: this.lastAnalysis?.type || null;
-      historyLength: this.analysisHistory.length;
-      timestamp: new Date().toISOString()};
+      isConnected: this.isConnected,
+      lastAnalysis: this.lastAnalysis?.type || null,
+      historyLength: this.analysisHistory.length,
+      timestamp: new Date().toISOString()},
   }
 }
 ,

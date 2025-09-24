@@ -3,8 +3,8 @@ import React{ useState } from "react",
 import { Button } from "@/components/ui/button",
 import {
   getClientBudgetSuggestion,
-  PricingSuggestion;
-  ClientBudgetParams;
+  PricingSuggestion,
+  ClientBudgetParams,
   trackPricingSuggestion} from "@/services/pricingSuggestionService",
 import { PricingSuggestionBox } from "./PricingSuggestionBox",
 import { useAuth } from "@/hooks/useAuth",
@@ -18,11 +18,11 @@ interface ClientBudgetRecommenderProps {
   onSuggestionApplied: (minValue: numbermaxValue: number) => void}
 ,
 export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = ({
-  jobTitle;
-  category;
-  timeline;
-  scope;
-  experienceLevel;
+  jobTitle,
+  category,
+  timeline,
+  scope,
+  experienceLevel,
   onSuggestionApplied}) => {
   const [isLoadingsetIsLoading] = useState(false),
   const [suggestionsetSuggestion] = useState<PricingSuggestion | null>(null),
@@ -34,8 +34,8 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
     setIsLoading(true),
     try {
       const params: ClientBudgetParams = {
-        jobTitle;
-        category};
+        jobTitle,
+        category},
       if (timeline) params.timeline = timeline,
       if (scope) params.scope = scope,
       if (experienceLevel) params.experienceLevel = experienceLevel,
@@ -43,20 +43,20 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
       setSuggestion(result)} catch (error) {
       console.error("Error generating budget suggestion: "error)} finally {
       setIsLoading(false)}
-  };
+  },
   const handleApplySuggestion = () => {
     if (suggestion) {
       onSuggestionApplied(suggestion.minRatesuggestion.maxRate),
       // Track this suggestion application,
       if (user) {
         trackPricingSuggestion({
-          userId: user.id;
-          suggestionType: 'client';
-          suggestedMin: suggestion.minRate;
-          suggestedMax: suggestion.maxRate;
+          userId: user.id,
+          suggestionType: 'client',
+          suggestedMin: suggestion.minRate,
+          suggestedMax: suggestion.maxRate,
           accepted: true})}
     }
-  };
+  },
   return (
     <div className="space-y-4">,
       <div>,
@@ -76,4 +76,4 @@ export const ClientBudgetRecommender: React.FC<ClientBudgetRecommenderProps> = (
             rateType="hourly",
           />)}
       </div>,
-    </div>)};
+    </div>)},

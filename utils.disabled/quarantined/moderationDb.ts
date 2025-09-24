@@ -22,22 +22,22 @@ export async function createFlag(
   data: Partial<ModerationFlag>): Promise<ModerationFlag> {
   const now = new Date().toISOString(),
   const flag: ModerationFlag = {
-    id: `flag_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`;
-    contentId: data.contentId || '';
-    contentType: data.contentType || 'post';
-    reason: data.reason || '';
-    status: 'pending';
-    reportedBy: data.reportedBy || 'system';
-    createdAt: now;
-    updatedAt: now;
-    adminNotes: data.adminNotes;
-  };
+    id: `flag_${Date.now()}_${Math.random().toString(36).slice(2, 9)}`,
+    contentId: data.contentId || '',
+    contentType: data.contentType || 'post',
+    reason: data.reason || '',
+    status: 'pending',
+    reportedBy: data.reportedBy || 'system',
+    createdAt: now,
+    updatedAt: now,
+    adminNotes: data.adminNotes
+  },
   flags.push(flag),
   return flag}
 ,
 export async function updateFlagStatus(
-  id: string;
-  status: ModerationFlag['status'];
+  id: string,
+  status: ModerationFlag['status'],
   adminNotes?: string): Promise<ModerationFlag | undefined> {
   const flag = await getFlagById(id),
   if (!flag) return undefined,

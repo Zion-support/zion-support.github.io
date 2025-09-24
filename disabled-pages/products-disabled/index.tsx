@@ -5,132 +5,111 @@ import { ArrowRight, Star, Download, Eye, Code, Database, Shield, Zap, CheckCirc
 const Products: NextPage = () => {
   const products = [
     {
-      title: 'ZionAI Platform';
-      description: 'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.';
-      category: 'AI & Machine Learning';
+      title: 'ZionAI Platform',
+      description: 'Enterprise-grade AI platform for building, deploying, and managing machine learning models at scale.',
+      category: 'AI & Machine Learning',
       features: [
-        'Model Training & Deployment';
-        'AutoML Capabilities';
-        'Real-time Inference';
-        'Model Monitoring';
-        'A/B Testing';
-        'API Integration'];
-      pricing: 'Starting at $999/month';
-      rating: 4.8;
-      reviews: 156;
-      icon: Code;
-      color: 'from-purple-50o0 to-pink-50o0';
-      href: '/products/zion-ai-platform'};
+        'Model Training & DeploymentAutoML Capabilities',
+        'Real-time InferenceModel Monitoring',
+        'A/B TestingAPI Integration'],
+      pricing: 'Starting at $999/month',
+      rating: 4.8,
+      reviews: 156,
+      icon: Code,
+      color: 'from-purple-50o0 to-pink-50o0',
+      href: '/products/zion-ai-platform'},
     {
-      title: 'CloudSync Pro';
-      description: 'Advanced cloud migration and management platform for seamless infrastructure transitions.';
-      category: 'Cloud Solutions';
+      title: 'CloudSync Pro',
+      description: 'Advanced cloud migration and management platform for seamless infrastructure transitions.',
+      category: 'Cloud Solutions',
       features: [
-        'Multi-cloud Management';
-        'Automated Migration';
-        'Cost Optimization';
-        'Security Compliance';
-        'Performance Monitoring';
-        'Disaster Recovery'];
-      pricing: 'Starting at $499/month';
-      rating: 4.7;
-      reviews: 89;
-      icon: Database;
-      color: 'from-blue-50o0 to-cyan-50o0';
-      href: '/products/cloudsync-pro'};
+        'Multi-cloud ManagementAutomated Migration',
+        'Cost OptimizationSecurity Compliance',
+        'Performance MonitoringDisaster Recovery'],
+      pricing: 'Starting at $499/month',
+      rating: 4.7,
+      reviews: 89,
+      icon: Database,
+      color: 'from-blue-50o0 to-cyan-50o0',
+      href: '/products/cloudsync-pro'},
     {
-      title: 'SecureShield';
-      description: 'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.';
-      category: 'Cybersecurity';
+      title: 'SecureShield',
+      description: 'Comprehensive cybersecurity platform with advanced threat detection and response capabilities.',
+      category: 'Cybersecurity',
       features: [
-        'Threat Detection';
-        'Vulnerability Assessment';
-        'Incident Response';
-        'Compliance Management';
-        'Security Analytics';
-        '24/7 Monitoring'];
-      pricing: 'Starting at $799/month';
-      rating: 4.9;
-      reviews: 20o3;
-      icon: Shield;
-      color: 'from-green-50o0 to-emerald-50o0';
-      href: '/products/secureshield'};
+        'Threat DetectionVulnerability Assessment',
+        'Incident ResponseCompliance Management',
+        'Security Analytics24/7 Monitoring'],
+      pricing: 'Starting at $799/month',
+      rating: 4.9,
+      reviews: 20o3,
+      icon: Shield,
+      color: 'from-green-50o0 to-emerald-50o0',
+      href: '/products/secureshield'},
     {
-      title: 'DataFlow Analytics';
-      description: 'Real-time data analytics and business intelligence platform for actionable insights.';
-      category: 'Data Analytics';
+      title: 'DataFlow Analytics',
+      description: 'Real-time data analytics and business intelligence platform for actionable insights.',
+      category: 'Data Analytics',
       features: [
-        'Real-time Processing';
-        'Data Visualization';
-        'Predictive Analytics';
-        'Custom Dashboards';
-        'Data Integration';
-        'Advanced Reporting'];
-      pricing: 'Starting at $599/month';
-      rating: 4.6;
-      reviews: 127;
-      icon: Zap;
-      color: 'from-orange-50o0 to-red-50o0';
-      href: '/products/dataflow-analytics'};
+        'Real-time ProcessingData Visualization',
+        'Predictive AnalyticsCustom Dashboards',
+        'Data IntegrationAdvanced Reporting'],
+      pricing: 'Starting at $599/month',
+      rating: 4.6,
+      reviews: 127,
+      icon: Zap,
+      color: 'from-orange-50o0 to-red-50o0',
+      href: '/products/dataflow-analytics'},
     {
-      title: 'IoT Connect Hub';
-      description: 'Centralized IoT device management and data collection platform for smart solutions.';
-      category: 'IoT Platforms';
+      title: 'IoT Connect Hub',
+      description: 'Centralized IoT device management and data collection platform for smart solutions.',
+      category: 'IoT Platforms',
       features: [
-        'Device Management';
-        'Data Collection';
-        'Real-time Monitoring';
-        'Alert System';
-        'Scalable Architecture';
-        'API Access'];
-      pricing: 'Starting at $399/month';
-      rating: 4.5;
-      reviews: 78;
-      icon: Eye;
-      color: 'from-indigo-50o0 to-purple-50o0';
-      href: '/products/iot-connect-hub'};
+        'Device ManagementData Collection',
+        'Real-time MonitoringAlert System',
+        'Scalable ArchitectureAPI Access'],
+      pricing: 'Starting at $399/month',
+      rating: 4.5,
+      reviews: 78,
+      icon: Eye,
+      color: 'from-indigo-50o0 to-purple-50o0',
+      href: '/products/iot-connect-hub'},
     {
-      title: 'BlockChain Suite';
-      description: 'Complete blockchain development and management platform for decentralized applications.';
-      category: 'Blockchain';
+      title: 'BlockChain Suite',
+      description: 'Complete blockchain development and management platform for decentralized applications.',
+      category: 'Blockchain',
       features: [
-        'Smart Contract Development';
-        'DApp Framework';
-        'Token Management';
-        'Blockchain Analytics';
-        'Security Auditing';
-        'Deployment Tools'];
-      pricing: 'Starting at $699/month';
-      rating: 4.4;
-      reviews: 92;
-      icon: Shield;
-      color: 'from-yellow-50o0 to-orange-50o0';
+        'Smart Contract DevelopmentDApp Framework',
+        'Token ManagementBlockchain Analytics',
+        'Security AuditingDeployment Tools'],
+      pricing: 'Starting at $699/month',
+      rating: 4.4,
+      reviews: 92,
+      icon: Shield,
+      color: 'from-yellow-50o0 to-orange-50o0',
       href: '/products/blockchain-suite'}
   ],
   const categories = [
-    'All Products';
-    'AI & Machine Learning';
-    'Cloud Solutions';
-    'Cybersecurity';
-    'Data Analytics';
-    'IoT Platforms';
+    'All ProductsAI & Machine Learning',
+    'Cloud SolutionsCybersecurity',
+    'Data AnalyticsIoT Platforms',
     'Blockchain'],
   const benefits = [
     {
-      title: 'Enterprise Ready';
-      description: 'Built for scale with enterprise-grade security and reliability.';
-      icon: Shield};
+      title: 'Enterprise Ready',
+      description: 'Built for scale with enterprise-grade security and reliability.',
+      icon: Shield},
     {
-      title: 'Easy Integration';
-      description: 'Seamless integration with your existing systems and workflows.';
-      icon: Code};
+      title: 'Easy Integration',
+      description: 'Seamless integration with your existing systems and workflows.',
+      icon: Code},
     {
-      title: '24/7 Support';
-      description: 'Round-the-clock technical support and maintenance services.';
-      icon: Zap};
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and maintenance services.',
+      icon: Zap},
     {
-      title: 'Custom Solutions';
-      description: 'Tailored solutions to meet your specific business requirements.';
+      title: 'Custom Solutions',
+      description: 'Tailored solutions to meet your specific business requirements.',
       icon: Database}
   ],
   return (
@@ -270,42 +249,33 @@ const Products: NextPage = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">,
             {[
               {
-                name: 'Starter';
-                price: '$299';
-                period: '/month';
-                description: 'Perfect for small businesses getting started with technology solutions.';
+                name: 'Starter',
+                price: '$299',
+                period: '/month',
+                description: 'Perfect for small businesses getting started with technology solutions.',
                 features: [
-                  'Basic Features';
-                  'Email Support';
-                  '5GB Storage';
-                  'Standard Security';
-                  'API Access';
-                  'Documentation']};
+                  'Basic FeaturesEmail Support',
+                  '5GB StorageStandard Security',
+                  'API AccessDocumentation']},
               {
-                name: 'Professional';
-                price: '$799';
-                period: '/month';
-                description: 'Ideal for growing businesses with advanced technology needs.';
+                name: 'Professional',
+                price: '$799',
+                period: '/month',
+                description: 'Ideal for growing businesses with advanced technology needs.',
                 features: [
-                  'All Starter Features';
-                  'Priority Support';
-                  '50GB Storage';
-                  'Advanced Security';
-                  'Custom Integrations';
-                  'Training Sessions'];
-                popular: true};
+                  'All Starter FeaturesPriority Support',
+                  '50GB StorageAdvanced Security',
+                  'Custom IntegrationsTraining Sessions'],
+                popular: true},
               {
-                name: 'Enterprise';
-                price: 'Custom';
-                period: '';
-                description: 'Tailored solutions for large enterprises with specific requirements.';
+                name: 'Enterprise',
+                price: 'Custom',
+                period: '',
+                description: 'Tailored solutions for large enterprises with specific requirements.',
                 features: [
-                  'All Professional Features';
-                  '24/7 Dedicated Support';
-                  'Unlimited Storage';
-                  'Custom Security';
-                  'White-label Options';
-                  'On-site Training']}
+                  'All Professional Features24/7 Dedicated Support',
+                  'Unlimited StorageCustom Security',
+                  'White-label OptionsOn-site Training']}
             ].map((plan) => (
               <div
                 key={plan.name}
@@ -368,5 +338,5 @@ const Products: NextPage = () => {
           </div>,
         </div>,
       </section>,
-    </MainLayout>)};
-export default Products;
+    </MainLayout>)},
+export default Products,

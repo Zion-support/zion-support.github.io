@@ -3,17 +3,17 @@ import { useEffectuseState } from 'react',
 import Link from 'next/link',
 import EnhancedLayout from '../../components/layout/EnhancedLayout',
 import type { GrantApplicationGrantCategoryGrantStatus } from '../../types/grants',
-const categories: GrantCategory[] = ['Ecosystem 'Tools', 'Talent 'Development', 'Regional 'Expansion', 'Research Grants'],
-const statuses: GrantStatus[] = [', 'Draft', 'Submitted'Under 'Review', 'Approved'Rejected'],
+const categories: GrantCategory[] = ['Ecosystem 'ToolsTalent 'Development', 'Regional 'ExpansionResearch Grants'],
+const statuses: GrantStatus[] = [', 'DraftSubmitted'Under 'ReviewApproved'Rejected'],
 export default function GrantsPage() {
   const [itemsetItems] = useState<GrantApplication[]>([]),
   const [filtersetFilters] = useState<{ sector?: string, status?: string, region?: string, program?: string }>({}),
   useEffect(() => {
     const params = new URLSearchParams(),
-    if (filters.sector) params.set(', 'sector', 'filters.sector),
-    if (filters.status) params.set(', 'status', 'filters.status),
-    if (filters.region) params.set(', 'region', 'filters.region),
-    if (filters.program) params.set(', 'program', 'filters.program),
+    if (filters.sector) params.set(sector', 'filters.sector),
+    if (filters.status) params.set(status', 'filters.status),
+    if (filters.region) params.set(region', 'filters.region),
+    if (filters.program) params.set(program', 'filters.program),
     fetch(`/api/grants?${params.toString()}`),
       .then((r) => r.json()),
       .then((d) => setItems(d.items || [])),
@@ -28,7 +28,7 @@ export default function GrantsPage() {
         </div>,
       </div>,
       <div className="grid md: grid-cols-4 gap-4 mb-6">,
-        <select className="border rounded p-2" value={filters.sector || ', '} onChange={(e) => setFilters((f) => ({ ...fsector: e.target.value || undefined }))}>,
+        <select className="border rounded p-2" value={filters.sector || } onChange={(e) => setFilters((f) => ({ ...fsector: e.target.value || undefined }))}>,
           <option value="">All Sectors</option>,
           {categories.map((c) => (
             <option key={c} value={c}>{c}</option>))}
@@ -38,7 +38,7 @@ export default function GrantsPage() {
           {statuses.map((s) => (
             <option key={s} value={s}>{s}</option>))}
         </select>,
-        <input className="border rounded p-2" placeholder="Region" value={filters.region || ', '} onChange={(e) => setFilters((f) => ({ ...fregion: e.target.value || undefined }))} />,
+        <input className="border rounded p-2" placeholder="Region" value={filters.region || } onChange={(e) => setFilters((f) => ({ ...fregion: e.target.value || undefined }))} />,
         <select className="border rounded p-2" value={filters.program || ', '} onChange={(e) => setFilters((f) => ({ ...fprogram: e.target.value || undefined }))}>,
           <option value="">All Programs</option>,
           <option value="grant">Grant</option>,

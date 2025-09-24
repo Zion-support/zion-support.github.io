@@ -2,10 +2,10 @@
 import React, { useState, useEffect, useCallback } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  RotateCcw;
-  Accessibility;
-  CheckCircle;
-  AlertCircle;
+  RotateCcw,
+  Accessibility,
+  CheckCircle,
+  AlertCircle,
 } from 'lucide-react',
 interface AccessibilitySettings {
   highContrast: boolean,
@@ -18,12 +18,12 @@ interface AccessibilitySettings {
 const EnhancedAccessibilityEnhancer: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const [settings, setSettings] = useState<AccessibilitySettings>({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    highSaturation: false;
-    focusIndicator: true;
-    screenReader: false;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    highSaturation: false,
+    focusIndicator: true,
+    screenReader: false
   }),
   const [fontSize, setFontSize] = useState(16),
   const [lineHeight, setLineHeight] = useState(1.5),
@@ -41,10 +41,10 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
       const root = document.documentElement,
       // Apply high contrast mode,
       if (newSettings.highContrast) {
-        root.style.setProperty('--text-primary', '#ffffff'),
-        root.style.setProperty('--text-secondary', '#e5e7eb'),
-        root.style.setProperty('--bg-primary', '#0o00000'),
-        root.style.setProperty('--bg-secondary', '#1f2937')} else {
+        root.style.setProperty('--text-primary#ffffff'),
+        root.style.setProperty('--text-secondary#e5e7eb'),
+        root.style.setProperty('--bg-primary#0o00000'),
+        root.style.setProperty('--bg-secondary#1f2937')} else {
         root.style.removeProperty('--text-primary'),
         root.style.removeProperty('--text-secondary'),
         root.style.removeProperty('--bg-primary'),
@@ -52,64 +52,64 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
 ,
       // Apply large text,
       if (newSettings.largeText) {
-        root.style.setProperty('--font-size-base', '18px'),
-        root.style.setProperty('--line-height-base', '1.6')} else {
+        root.style.setProperty('--font-size-base18px'),
+        root.style.setProperty('--line-height-base1.6')} else {
         root.style.removeProperty('--font-size-base'),
         root.style.removeProperty('--line-height-base')}
 ,
       // Apply reduced motion,
       if (newSettings.reducedMotion) {
-        root.style.setProperty('--animation-duration', '0.1s'),
-        root.style.setProperty('--transition-duration', '0.1s')} else {
+        root.style.setProperty('--animation-duration0.1s'),
+        root.style.setProperty('--transition-duration0.1s')} else {
         root.style.removeProperty('--animation-duration'),
         root.style.removeProperty('--transition-duration')}
 ,
       // Apply high saturation,
       if (newSettings.highSaturation) {
-        root.style.setProperty('--saturation', '1.2')} else {
+        root.style.setProperty('--saturation1.2')} else {
         root.style.removeProperty('--saturation')}
 ,
       // Apply focus indicator,
       if (newSettings.focusIndicator) {
-        root.style.setProperty('--focus-ring', '2px solid #3b82f6')} else {
+        root.style.setProperty('--focus-ring2px solid #3b82f6')} else {
         root.style.removeProperty('--focus-ring')}
 ,
       // Save settings,
       localStorage.setItem(
-        'zion-accessibility-settings';
-        JSON.stringify(newSettings))};
+        'zion-accessibility-settings',
+        JSON.stringify(newSettings))},
     []),
   const updateSetting = useCallback(
     (key: keyof AccessibilitySettings, value: boolean) => {
-      const newSettings = { ...settings, [key]: value };
+      const newSettings = { ...settings, [key]: value },
       setSettings(newSettings),
-      applyAccessibilitySettings(newSettings)};
+      applyAccessibilitySettings(newSettings)},
     [settings, applyAccessibilitySettings]),
   const resetSettings = useCallback(() => {
     const defaultSettings: AccessibilitySettings = {
-      highContrast: false;
-      largeText: false;
-      reducedMotion: false;
-      highSaturation: false;
-      focusIndicator: true;
-      screenReader: false;
-    };
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      highSaturation: false,
+      focusIndicator: true,
+      screenReader: false
+    },
     setSettings(defaultSettings),
     applyAccessibilitySettings(defaultSettings)}, [applyAccessibilitySettings]),
   const updateFontSize = useCallback((newSize: number) => {
     setFontSize(newSize),
     document.documentElement.style.setProperty(
-      '--font-size-base';
+      '--font-size-base',
       `${newSize}px`)}, []),
   const updateLineHeight = useCallback((newHeight: number) => {
     setLineHeight(newHeight),
     document.documentElement.style.setProperty(
-      '--line-height-base';
+      '--line-height-base',
       newHeight.toString())}, []),
   const updateLetterSpacing = useCallback((newSpacing: number) => {
     setLetterSpacing(newSpacing),
     document.documentElement.style.setProperty(
-      '--letter-spacing';
+      '--letter-spacing',
       `${newSpacing}px`)}, []),
   return (
     <div className='fixed bottom-4 right-4 z-50'>,
@@ -290,5 +290,5 @@ const EnhancedAccessibilityEnhancer: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default EnhancedAccessibilityEnhancer;
+    </div>)},
+export default EnhancedAccessibilityEnhancer,

@@ -1,5 +1,5 @@
 "use client",
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
@@ -81,82 +81,82 @@ import {
   Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
   Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Atom;
-  Globe;
-  Zap;
-  Sparkles;
-  Shield;
-  Microscope;
-  DollarSign;
-  Home;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Target;
-  Layers;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  ShieldCheck;
-  Earth;
-  Factory;
-  Car;
-  Building;
-  GraduationCap;
-  Scale;
-  Palette;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;
-  Heart;
-  Leaf;
-  Sun;
-  Moon;
-  Wind;
-  Droplets;
-  Mountain;
-  Code;
-  Wrench;
-  Smartphone;
-  BarChart3;
-  Eye;
-  Network;
-  Server;
-  HardDrive;
-  Monitor;
-  Laptop;
-  Watch;
-  Headphones;
-  Speaker;
-  Mic;
-  Keyboard;
-  Mouse;
-  CpuIcon;
-  DatabaseIcon;
-  CloudIcon;
-  LockIcon;
-  ShieldIcon;
-  GlobeIcon;
-  ZapIcon;
-  SparklesIcon;
-  BrainIcon;
-  AtomIcon;} from 'lucide-react',import {
-  Menu, X, ChevronDown, Search, Phone, Mail, MapPin;
-  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Atom,
+  Globe,
+  Zap,
+  Sparkles,
+  Shield,
+  Microscope,
+  DollarSign,
+  Home,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Target,
+  Layers,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  ShieldCheck,
+  Earth,
+  Factory,
+  Car,
+  Building,
+  GraduationCap,
+  Scale,
+  Palette,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,
+  Heart,
+  Leaf,
+  Sun,
+  Moon,
+  Wind,
+  Droplets,
+  Mountain,
+  Code,
+  Wrench,
+  Smartphone,
+  BarChart3,
+  Eye,
+  Network,
+  Server,
+  HardDrive,
+  Monitor,
+  Laptop,
+  Watch,
+  Headphones,
+  Speaker,
+  Mic,
+  Keyboard,
+  Mouse,
+  CpuIcon,
+  DatabaseIcon,
+  CloudIcon,
+  LockIcon,
+  ShieldIcon,
+  GlobeIcon,
+  ZapIcon,
+  SparklesIcon,
+  BrainIcon,
+  AtomIcon,} from 'lucide-react',import {
+  Menu, X, ChevronDown, Search, Phone, Mail, MapPin,
+  Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
   Microscope, DollarSign, Home, Users, Briefcase,
   BookOpen, MessageCircle, Star, TrendingUp, Target,
   Layers, Cpu, Database, Cloud, Lock, ShieldCheck,
@@ -166,10 +166,10 @@ import {
   Code, Wrench, Smartphone, BarChart3, Eye,
   Network, Server, HardDrive, Monitor} from 'lucide-react',
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const serviceCategories = [
   {
     title: ' 2031 Revolutionary AI Services',
@@ -182,45 +182,45 @@ const serviceCategories = [
   CloudIcon, LockIcon, ShieldIcon, GlobeIcon,
   ZapIcon, SparklesIcon, BrainIcon, AtomIcon,
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup && ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup && ziontechgroup.com'};  website: 'https://ziontechgroup && ziontechgroup.com'};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup && ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup && ziontechgroup.com'},  website: 'https://ziontechgroup && ziontechgroup.com'},
 const serviceCategories = [
   {
-    title: '🚀 2031 Revolutionary AI Services';
-    icon: BrainIcon;
-    color: 'from-violet-600 via-purple-600 to-indigo-600';
-    description: 'Next-generation AI consciousness and creativity';
+    title: '🚀 2031 Revolutionary AI Services',
+    icon: BrainIcon,
+    color: 'from-violet-600 via-purple-600 to-indigo-600',
+    description: 'Next-generation AI consciousness and creativity',
     services: [
       {
-        name: 'AI Consciousness Evolution Platform';
-        href: '/ai-consciousness-evolution-platform';
-        description: 'Develop genuine AI consciousness';
-        price: '$19,999/month';
-      };
+        name: 'AI Consciousness Evolution Platform',
+        href: '/ai-consciousness-evolution-platform',
+        description: 'Develop genuine AI consciousness',
+        price: '$19,999/month',
+      },
       {
-        name: 'AI Emotional Intelligence Platform';
-        href: '/ai-emotional-intelligence-platform';
-        description: 'Real-time emotion analysis and response';
-        price: '$3,999/month';
-      };
+        name: 'AI Emotional Intelligence Platform',
+        href: '/ai-emotional-intelligence-platform',
+        description: 'Real-time emotion analysis and response',
+        price: '$3,999/month',
+      },
       {
-        name: 'AI Creativity Orchestrator';
-        href: '/ai-creativity-orchestrator';
-        description: 'Multi-model creativity fusion';
-        price: '$5,999/month';
-      };
+        name: 'AI Creativity Orchestrator',
+        href: '/ai-creativity-orchestrator',
+        description: 'Multi-model creativity fusion',
+        price: '$5,999/month',
+      },
       {
-        name: 'AI Dream Interpreter Platform';
-        href: '/ai-dream-interpreter-platform';
-        description: 'Dream analysis with AI psychology';
-        price: '$299/month';
-      };
-    ];
-  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' };
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+        name: 'AI Dream Interpreter Platform',
+        href: '/ai-dream-interpreter-platform',
+        description: 'Dream analysis with AI psychology',
+        price: '$299/month'
+      },
+    ],
+  },  {      { name: 'AI Consciousness Evolution Platform', href: '/ai-consciousness-evolution-platform', description: 'Develop genuine AI consciousness', price: '$19,999/month' },
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
       { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: '$299/month' }
 ]}
     title: ' 2031 Quantum & Emerging Tech',
@@ -371,8 +371,8 @@ const serviceCategories = [
     ]}],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' }
       { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' }
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
-      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' };
-      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' };
+      { name: 'AI Emotional Intelligence Platform', href: '/ai-emotional-intelligence-platform', description: 'Real-time emotion analysis and response', price: '$3,999/month' },
+      { name: 'AI Creativity Orchestrator', href: '/ai-creativity-orchestrator', description: 'Multi-model creativity fusion', price: '$5,999/month' },
       { name: 'AI Dream Interpreter Platform', href: '/ai-dream-interpreter-platform', description: 'Dream analysis with AI psychology', price: '$299/month' }
     ]}
     title: '⚛️ 2031 Quantum & Emerging Tech',
@@ -525,15 +525,15 @@ const serviceCategories = [
       { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' }
       { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
     ]}
-        name: 'Swarm Robotics Orchestration';
-        href: '/swarm-robotics-orchestration';
-        description: 'Coordinate robot swarms';
-        price: '$449/month';
-      };
-    ];
-  }],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' };
-      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' };
-      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' };
+        name: 'Swarm Robotics Orchestration',
+        href: '/swarm-robotics-orchestration',
+        description: 'Coordinate robot swarms',
+        price: '$449/month'
+      },
+    ],
+  }],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic-computing-platform', description: 'Brain-inspired computing', price: '$899/month' },
+      { name: 'DNA Computing Platform', href: '/dna-computing-platform', description: 'Molecular computing', price: '$1,299/month' },
+      { name: 'Photonic Computing Infrastructure', href: '/photonic-computing-infrastructure', description: 'Light-speed computing', price: '$699/month' },
       { name: 'Swarm Robotics Orchestration', href: '/swarm-robotics-orchestration', description: 'Coordinate robot swarms', price: '$449/month' }
     ]}
 ,
@@ -554,16 +554,16 @@ const mainNavigation = [
   { name: 'Resources', href: '/resources', icon: BookOpen }],  { name: 'Resources', href: '/resources', icon: BookOpen }
 ],
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
-  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket };
-  { name: 'AI Solutions', href: '/ai-services', icon: Brain };
-  { name: 'IT Solutions', href: '/it-services', icon: Cpu };
-  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom };
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
+  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket },
+  { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+  { name: 'IT Solutions', href: '/it-services', icon: Cpu },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Resources', href: '/resources', icon: BookOpen }
 ],
 export default function UltraFuturisticNavigation2031() {
@@ -573,20 +573,20 @@ export default function UltraFuturisticNavigation2031() {
   useEffect(() => {
     const handleScroll = () => {
 const mainNavigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
   {
-    name: '2030 Services';
-    href: '/services/2030-futuristic-services';
-    icon: Rocket;
-  },  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket };
-  { name: 'AI Solutions', href: '/ai-services', icon: Brain };
-  { name: 'IT Solutions', href: '/it-services', icon: Cpu };
-  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom };
-  { name: 'Space Tech', href: '/space-tech', icon: Rocket };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+    name: '2030 Services',
+    href: '/services/2030-futuristic-services',
+    icon: Rocket
+  },  { name: 'AI Solutions', href: '/ai-services', icon: Brain },  { name: '2030 Services', href: '/services/2030-futuristic-services', icon: Rocket },
+  { name: 'AI Solutions', href: '/ai-services', icon: Brain },
+  { name: 'IT Solutions', href: '/it-services', icon: Cpu },
+  { name: 'Quantum Tech', href: '/quantum-services', icon: Atom },
+  { name: 'Space Tech', href: '/space-tech', icon: Rocket },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Resources', href: '/resources', icon: BookOpen }],  { name: 'Resources', href: '/resources', icon: BookOpen }
 ],
 export default function UltraFuturisticNavigation2031() {
@@ -595,12 +595,12 @@ export default function UltraFuturisticNavigation2031() {
   const [scrolled, setScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window && window.scrollY > 50)};
+      setScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
-    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setScrolled(window && window.scrollY > 50)};
+    return () => window && window.removeEventListener('scroll', handleScroll)}, []),      setScrolled(window && window.scrollY > 50)},
     window && window.addEventListener('scroll', handleScroll),
     return () => window && window.removeEventListener('scroll', handleScroll),
-      setScrolled(window.scrollY > 50)};
+      setScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   return (
@@ -815,50 +815,50 @@ export default function UltraFuturisticNavigation2031() {
                   animate={{ opacity: 1, y: 0 }}
 ,
       {
-        name: 'Neuromorphic Computing Platform';
-        href: '/neuromorphic - computing - platform';
-        description: 'Brain - inspired computing';
-        price: '$899 / month';
-      };
+        name: 'Neuromorphic Computing Platform',
+        href: '/neuromorphic - computing - platform',
+        description: 'Brain - inspired computing',
+        price: '$899 / month'
+      },
       {
-        name: 'DNA Computing Platform';
-        href: '/dna - computing - platform';
-        description: 'Molecular computing';
-        price: '$1, 299 / month';
-      };
+        name: 'DNA Computing Platform',
+        href: '/dna - computing - platform',
+        description: 'Molecular computing',
+        price: '$1, 299 / month',
+      },
       {
-        name: 'Photonic Computing Infrastructure';
-        href: '/photonic - computing - infrastructure';
-        description: 'Light - speed computing';
-        price: '$699 / month';
-      };
+        name: 'Photonic Computing Infrastructure',
+        href: '/photonic - computing - infrastructure',
+        description: 'Light - speed computing',
+        price: '$699 / month'
+      },
       {
-        name: 'Swarm Robotics Orchestration';
-        href: '/swarm - robotics - orchestration';
-        description: 'Coordinate robot swarms';
-        price: '$449 / month';
-      };
-    ];
-  }],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic - computing - platform', description: 'Brain - inspired computing', price: '$899 / month' };
+        name: 'Swarm Robotics Orchestration',
+        href: '/swarm - robotics - orchestration',
+        description: 'Coordinate robot swarms',
+        price: '$449 / month'
+      },
+    ],
+  }],      { name: 'Neuromorphic Computing Platform', href: '/neuromorphic - computing - platform', description: 'Brain - inspired computing', price: '$899 / month' },
       { name: 'DNA Computing Platform', href: '/dna - computing - platform', description: 'Molecular computing', price: '$1, 299 / month' }
-      { name: 'Photonic Computing Infrastructure', href: '/photonic - computing - infrastructure', description: 'Light - speed computing', price: '$699 / month' };
+      { name: 'Photonic Computing Infrastructure', href: '/photonic - computing - infrastructure', description: 'Light - speed computing', price: '$699 / month' },
       { name: 'Swarm Robotics Orchestration', href: '/swarm - robotics - orchestration', description: 'Coordinate robot swarms', price: '$449 / month' }
     ]}
 const main_navigation = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'Services', href: '/services', icon: Briefcase };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'Services', href: '/services', icon: Briefcase },
   {
-    name: '2030 Services';
-    href: '/services / 2030 - futuristic - services';
-    icon: Rocket;
-  },  { name: 'AI Solutions', href: '/ai - services', icon: Brain },  { name: '2030 Services', href: '/services / 2030 - futuristic - services', icon: Rocket };
-  { name: 'AI Solutions', href: '/ai - services', icon: Brain };
-  { name: 'IT Solutions', href: '/it - services', icon: Cpu };
-  { name: 'Quantum Tech', href: '/quantum - services', icon: Atom };
-  { name: 'Space Tech', href: '/space - tech', icon: Rocket };
-  { name: 'Pricing', href: '/pricing', icon: DollarSign };
-  { name: 'About', href: '/about', icon: Users };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+    name: '2030 Services',
+    href: '/services / 2030 - futuristic - services',
+    icon: Rocket
+  },  { name: 'AI Solutions', href: '/ai - services', icon: Brain },  { name: '2030 Services', href: '/services / 2030 - futuristic - services', icon: Rocket },
+  { name: 'AI Solutions', href: '/ai - services', icon: Brain },
+  { name: 'IT Solutions', href: '/it - services', icon: Cpu },
+  { name: 'Quantum Tech', href: '/quantum - services', icon: Atom },
+  { name: 'Space Tech', href: '/space - tech', icon: Rocket },
+  { name: 'Pricing', href: '/pricing', icon: DollarSign },
+  { name: 'About', href: '/about', icon: Users },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
   { name: 'Resources', href: '/resources', icon: BookOpen }],  { name: 'Resources', href: '/resources', icon: BookOpen }
 ],
 export default /**,
@@ -1128,8 +1128,8 @@ function UltraFuturisticNavigation2031() {
                                 animate={{ opacity: 1, coordinate_x: 0 }}
 ,
                                 transition={{
-                                  duration: 0.2;
-                                  delay: service_index * 0.05;
+                                  duration: 0.2,
+                                  delay: service_index * 0.05
                                 }}
 >,
                                 <Link
@@ -1285,7 +1285,7 @@ function UltraFuturisticNavigation2031() {
       {/* Spacer for fixed navigation */}
       <div className='h-32 lg: h-40'></div>,
     </>),      <div className="h-32 lg: h-40"></div>,
-    </>);
+    </>),
 }
 }
       {/* Mobile Navigation Menu */}
@@ -1358,7 +1358,7 @@ function UltraFuturisticNavigation2031() {
 ,
       <div className='h - 32 lg: h - 40'></div>,
     </>),      <div className="h - 32 lg: h - 40"></div>,
-    </>);
+    </>),
     </>)}
 ,
       <div className='h-32 lg: h-40'></div>,

@@ -5,11 +5,11 @@ import {
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -22,21 +22,21 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-  ArrowRight;
-  ExternalLink;
-  Star;
-  TrendingUp;
-  Users;
-  Zap;
-  Shield;
-  Clock;
-  Check;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock;
-  Globe;} from 'lucide-react',
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Globe,} from 'lucide-react',
   ArrowRight,
   ExternalLink,
   Star,
@@ -52,38 +52,38 @@ class ErrorBoundary extends React.Component {
   DollarSign,
   Lock,
   Globe} from 'lucide-react',
-  ArrowRight;
-  ExternalLink;
-  Star;
-  TrendingUp;
-  Users;
-  Zap;
-  Shield;
-  Clock;
-  Check;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock;
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
   Globe} from 'lucide-react',
 interface UltraAdvancedServiceCardProps {
   service: {import {
-  ArrowRight;
-  ExternalLink;
-  Star;
-  TrendingUp;
-  Users;
-  Zap;
-  Shield;
-  Clock;
-  Check;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock;
-  Globe;} from 'lucide-react',
+  ArrowRight,
+  ExternalLink,
+  Star,
+  TrendingUp,
+  Users,
+  Zap,
+  Shield,
+  Clock,
+  Check,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Globe} from 'lucide-react',
 interface UltraAdvancedServiceCardProps {
   service: {import {
   ArrowRight, ExternalLink, Star, TrendingUp,
@@ -128,39 +128,39 @@ interface UltraAdvancedServiceCardProps {
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
-    reviews: number};
+    reviews: number},
+    reviews: number},
   service: {
-    id: string;
-    name: string;
-    tagline: string;
-    price: string;
-    period: string;
-    description: string;
-    features: string[];
-    popular: boolean;
-    icon: string;
-    color: string;
-    textColor: string;
-    link: string;
-    marketPosition: string;
-    targetAudience: string;
-    trialDays: number;
-    setupTime: string;
-    category: string;
-    realService: boolean;
-    technology: string[];
-    integrations: string[];
-    useCases: string[];
-    roi: string;
-    competitors: string[];
-    marketSize: string;
-    growthRate: string;
-    variant: string;
+    id: string,
+    name: string,
+    tagline: string,
+    price: string,
+    period: string,
+    description: string,
+    features: string[],
+    popular: boolean,
+    icon: string,
+    color: string,
+    textColor: string,
+    link: string,
+    marketPosition: string,
+    targetAudience: string,
+    trialDays: number,
+    setupTime: string,
+    category: string,
+    realService: boolean,
+    technology: string[],
+    integrations: string[],
+    useCases: string[],
+    roi: string,
+    competitors: string[],
+    marketSize: string,
+    growthRate: string,
+    variant: string,
     contactInfo: {
-      mobile: string;
-      email: string;
-      address: string;
+      mobile: string,
+      email: string,
+      address: string,
       website: string}
     realImplementation: boolean,
     implementationDetails: string,
@@ -210,19 +210,19 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
     if (category.includes('Internet') |category.includes('Network')) return <Globe className="w-4 h-4" />,
     return <Zap className="w-4 h-4" />,
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({
-  service;
+  service
 }) => {  const [isExpanded, setIsExpanded] = useState(false),
   const [isHovered, setIsHovered] = useState(false),
   const getCategoryIcon = (category: string) => {    contactInfo: {
-      mobile: string;
-      email: string;
-      address: string;
-      website: string};
-    realImplementation: boolean;
-    implementationDetails: string;
-    launchDate: string;
-    customers: number;
-    rating: number;
+      mobile: string,
+      email: string,
+      address: string,
+      website: string},
+    realImplementation: boolean,
+    implementationDetails: string,
+    launchDate: string,
+    customers: number,
+    rating: number,
     reviews: number}
 }
 const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ service }) => {
@@ -241,54 +241,54 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       return <Lock className='w-4 h-4' />,
     if (category && category.includes('Internet') || category && category.includes('Network')),
       return <Globe className='w-4 h-4' />,
-    return <Zap className='w-4 h-4' />};
+    return <Zap className='w-4 h-4' />},
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 };
-    visible: {      opacity: 1;
-      y: 0;
+    hidden: { opacity: 0, y: 20 },
+    visible: {      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0 && 0.6;
-        ease: 'easeOut' as const;
-      };
+        duration: 0 && 0.6,
+        ease: 'easeOut' as const
+      },
     },    hover: {
-      y: -10;
+      y: -10,
       transition: {
-        duration: 0 && 0.3;
-        ease: 'easeOut' as const;
-      };
-    }};
+        duration: 0 && 0.3,
+        ease: 'easeOut' as const
+      },
+    }},
   const contentVariants = {
-    hidden: { opacity: 0, height: 0 };
+    hidden: { opacity: 0, height: 0 },
     visible: {    if (category && category.includes('AI') || category && category.includes('Machine Learning')) return <Brain className="w-4 h-4" />,
     if (category && category.includes('Quantum')) return <Zap className="w-4 h-4" />,
     if (category && category.includes('Space')) return <Rocket className="w-4 h-4" />,
     if (category && category.includes('Biotech') || category && category.includes('Healthcare')) return <Dna className="w-4 h-4" />,
     if (category && category.includes('Finance') || category && category.includes('Trading')) return <DollarSign className="w-4 h-4" />,
     if (category && category.includes('Security') || category && category.includes('Cybersecurity')) return <Lock className="w-4 h-4" />,
-    if (category && category.includes('Internet') || category && category.includes('Network')) return <Globe className="w-4 h-4" />;
+    if (category && category.includes('Internet') || category && category.includes('Network')) return <Globe className="w-4 h-4" />,
     return <Zap className="w-4 h-4" />,
   const containerVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {    visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0 && 0.6;
-        ease: 'easeOut' as const;
-      };
+        duration: 0 && 0.6,
+        ease: 'easeOut' as const
+      },
     },        ease: "easeOut" as const}
-};
+},
     hover: {
-      y: -10;
+      y: -10,
       transition: {
-        duration: 0 && 0.3;
-        ease: 'easeOut' as const;
-      };
+        duration: 0 && 0.3,
+        ease: 'easeOut' as const
+      },
     },        ease: "easeOut" as const,
           isHovered ? 'opacity-100' : 'opacity-50',
-        ease: 'ease_out' as const;
-      };
-    };
+        ease: 'ease_out' as const
+      },
+    },
   }
 ,
         onHoverStart={() => setIsHovered (true)}
@@ -309,8 +309,8 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         className={`absolute inset - 0 rounded - 2xl blur - xl transition - all duration - 500 ${
           is_hovered ? 'opacity - 100' : 'opacity - 50'}`}
         style={{
-          background: `linear - gradient (135deg, ${service.color})`;
-          transform: is_hovered ? 'scale (1.05)' : 'scale (1)';
+          background: `linear - gradient (135deg, ${service.color})`,
+          transform: is_hovered ? 'scale (1.05)' : 'scale (1)'
         }}
       />,
       {/* Main Card */}
@@ -326,13 +326,13 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       />,
       {/* Main Card */}
 ,
-    hidden: { opacity: 0, height: 0 };
+    hidden: { opacity: 0, height: 0 },
       <div
-        duration: 0.5;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0.5,
+        ease: 'easeOut' as const
+      },
+    },
+  },
         onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
     >,
@@ -366,7 +366,7 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
       />,
       {/* Main Card */}
       <div
-    hidden: { opacity: 0, height: 0 };
+    hidden: { opacity: 0, height: 0 },
       <div
         className={`relative bg-gradient-to-br ${service.color} p-1 rounded-2xl transition-all duration-500 ${
           isHovered ? 'shadow-2xl' : 'shadow-lg'}`}
@@ -907,11 +907,11 @@ const UltraAdvancedServiceCard: React.FC<UltraAdvancedServiceCardProps> = ({ ser
         </div>,
       </div>,
     </motion.div>)}
-};
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4",
+},
+export default UltraAdvancedServiceCard,            className="flex justify-center mt-4",
           {/* Expand/Collapse Indicator */}
-};
-export default UltraAdvancedServiceCard;            className="flex justify-center mt-4",
+},
+export default UltraAdvancedServiceCard,            className="flex justify-center mt-4",
             animate={{ rotate: isExpanded ? 180 : 0 }}
             transition={{ duration: 0 && 0.3 }}
           >,
@@ -919,6 +919,6 @@ export default UltraAdvancedServiceCard;            className="flex justify-cent
         </div>,
       </div>,
     </motion && motion.div>),
-export default UltraAdvancedServiceCard)};
-export default UltraAdvancedServiceCard;
+export default UltraAdvancedServiceCard)},
+export default UltraAdvancedServiceCard,
 }

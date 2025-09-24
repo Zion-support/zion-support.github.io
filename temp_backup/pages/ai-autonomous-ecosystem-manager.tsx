@@ -9,14 +9,11 @@ export default function AIAutonomousEcosystemManager() {
       implementationWeeks='Implementation: 4-8 weeks',
       roiNote='Typical ROI: 300-600% through automation and reduced toil',
       features={[
-        'Policy-driven autonomous agents';
-        'LLM + tools planning and execution';
-        'Guardrails, approvals, and rollback safety';
-        'Observability and drift detection';
-        'Cross-system workflows (DevOps, SecOps, FinOps)';
-        'Integrations: Jira, GitHub, PagerDuty, ServiceNow';
+        'Policy-driven autonomous agentsLLM + tools planning and execution',
+        'Guardrails, approvals, and rollback safetyObservability and drift detection',
+        'Cross-system workflows (DevOps, SecOps, FinOps)Integrations: Jira, GitHub, PagerDuty, ServiceNow',
       ]}
-      industries={['Enterprise IT', 'SaaS', 'Telecom', 'Fintech']}
+      industries={['Enterprise ITSaaS', 'TelecomFintech']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-autonomous-ecosystem-manager',
     />)}

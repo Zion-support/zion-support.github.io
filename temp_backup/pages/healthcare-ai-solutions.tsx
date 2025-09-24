@@ -9,14 +9,11 @@ export default function HealthcareAISolutions() {
       implementationWeeks='Implementation: 6-10 weeks',
       roiNote='Hospitals report 20-30% improved outcomes and cost reduction',
       features={[
-        'Clinical decision support and triage';
-        'Patient risk stratification and outreach';
-        'Operational optimization and staffing';
-        'Radiology and pathology assistance';
-        'De-identification and PHI governance';
-        'Integrations: Epic, Cerner, HL7/FHIR, Snowflake';
+        'Clinical decision support and triagePatient risk stratification and outreach',
+        'Operational optimization and staffingRadiology and pathology assistance',
+        'De-identification and PHI governanceIntegrations: Epic, Cerner, HL7/FHIR, Snowflake',
       ]}
-      industries={['Hospitals', 'Payers', 'Providers', 'Life Sciences']}
+      industries={['HospitalsPayers', 'ProvidersLife Sciences']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/healthcare-ai-solutions',
     />)}

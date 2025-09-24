@@ -12,7 +12,7 @@ export default function CreateProposal() {
   const [description, setDescription] = useState(''),
   const [status, setStatus] = useState(''),
   const governor = useMemo(
-    () => (provider ? getGovernor(provider.getSigner()) : null);
+    () => (provider ? getGovernor(provider.getSigner()) : null),
     [provider]),
   async function propose() {
     if (!governor) return,
@@ -24,9 +24,9 @@ export default function CreateProposal() {
         const args = params ? JSON.parse(params) : [],
         calldata = iface.encodeFunctionData(signature.split('(')[0], args)}
       const tx = await governor.propose(
-        [target];
-        [ethers.utils.parseEther(value)];
-        [calldata];
+        [target],
+        [ethers.utils.parseEther(value)],
+        [calldata],
         description),
       const receipt = await tx.wait(),
       setStatus(`Proposed in tx ${receipt.transactionHash}`)} catch (e: any) {

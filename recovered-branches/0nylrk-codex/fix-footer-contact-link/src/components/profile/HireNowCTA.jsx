@@ -7,10 +7,10 @@ import { DollarSign, MessageSquare } from 'lucide-react',
 export function HireNowCTA({ talentName, hourlyRate, onHire }) {
   const [isFormOpen, setIsFormOpen] = useState(false),
   const [formData, setFormData] = useState({
-    projectDescription: '';
-    budget: '';
-    startDate: '';
-    message: '';
+    projectDescription: '',
+    budget: '',
+    startDate: '',
+    message: ''
   }),
   const handleSubmit = e => {
     e.preventDefault(),
@@ -18,17 +18,17 @@ export function HireNowCTA({ talentName, hourlyRate, onHire }) {
       onHire(formData)}
     // Reset form and close,
     setFormData({
-      projectDescription: '';
-      budget: '';
-      startDate: '';
-      message: '';
+      projectDescription: '',
+      budget: '',
+      startDate: '',
+      message: ''
     }),
-    setIsFormOpen(false)};
+    setIsFormOpen(false)},
   const handleChange = e => {
     setFormData(prev => ({
-      ...prev;
-      [e.target.name]: e.target.value;
-    }))};
+      ...prev,
+      [e.target.name]: e.target.value,
+    }))},
   return (
     <Card className='bg-zion-blue-light border-zion-blue-lighter'>,
       <CardHeader>,

@@ -7,205 +7,189 @@ export default function Marketplace() {
     const [selectedPriceRange, setSelectedPriceRange] = useState('all'),
     const [sortBy, setSortBy] = useState('featured'),
     const categories = [
-        { id: 'all', name: 'All Products', icon: Globe, count: 24 };
-        { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 8 };
-        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 };
-        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 5 };
-        { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 };
+        { id: 'all', name: 'All Products', icon: Globe, count: 24 },
+        { id: 'ai-solutions', name: 'AI Solutions', icon: Brain, count: 8 },
+        { id: 'cybersecurity', name: 'Cybersecurity', icon: Shield, count: 6 },
+        { id: 'cloud-infrastructure', name: 'Cloud & Infrastructure', icon: Cloud, count: 5 },
+        { id: 'blockchain', name: 'Blockchain & Web3', icon: Network, count: 3 },
         { id: 'iot-platforms', name: 'IoT Platforms', icon: Smartphone, count: 2 }
     ],
     const priceRanges = [
-        { id: 'all', name: 'All Prices' };
-        { id: 'free', name: 'Free' };
-        { id: 'under-10o0', name: 'Under $10o0' };
-        { id: '10o0-50o0', name: '$10o0 - $50o0' };
-        { id: '50o0-10o00', name: '$50o0 - $1,0o00' };
+        { id: 'all', name: 'All Prices' },
+        { id: 'free', name: 'Free' },
+        { id: 'under-10o0', name: 'Under $10o0' },
+        { id: '10o0-50o0', name: '$10o0 - $50o0' },
+        { id: '50o0-10o00', name: '$50o0 - $1,0o00' },
         { id: 'over-10o00', name: 'Over $1,0o00' }
     ],
     const sortOptions = [
-        { id: 'featured', name: 'Featured' };
-        { id: 'price-low', name: 'Price: Low to High' };
-        { id: 'price-high', name: 'Price: High to Low' };
-        { id: 'newest', name: 'Newest' };
-        { id: 'popular', name: 'Most Popular' };
+        { id: 'featured', name: 'Featured' },
+        { id: 'price-low', name: 'Price: Low to High' },
+        { id: 'price-high', name: 'Price: High to Low' },
+        { id: 'newest', name: 'Newest' },
+        { id: 'popular', name: 'Most Popular' },
         { id: 'rating', name: 'Highest Rated' }
     ],
     const marketplaceProducts = [
         {
-            id: 1;
-            name: 'AI Autonomous Business Manager';
-            description: 'Complete AI-powered business management platform with autonomous decision-making capabilities.';
-            category: 'ai-solutions';
-            price: 2999;
-            originalPrice: 3999;
-            currency: 'USD';
-            rating: 4.9;
-            reviewCount: 127;
-            image: '/images/marketplace/ai-business-manager.jpg';
+            id: 1,
+            name: 'AI Autonomous Business Manager',
+            description: 'Complete AI-powered business management platform with autonomous decision-making capabilities.',
+            category: 'ai-solutions',
+            price: 2999,
+            originalPrice: 3999,
+            currency: 'USD',
+            rating: 4.9,
+            reviewCount: 127,
+            image: '/images/marketplace/ai-business-manager.jpg',
             features: [
-                'Autonomous decision making';
-                'Business process automation';
-                'Real-time analytics';
-                'Multi-tenant support';
-                'API integration'];
-            tags: ['AI', 'Business Automation', 'Enterprise', 'Cloud'];
-            featured: true;
-            new: false;
-            discount: 25;
-            type: 'software'};
+                'Autonomous decision makingBusiness process automation',
+                'Real-time analyticsMulti-tenant support',
+                'API integration'],
+            tags: ['AIBusiness Automation', 'EnterpriseCloud'],
+            featured: true,
+            new: false,
+            discount: 25,
+            type: 'software'},
         {
-            id: 2;
-            name: 'Quantum Neural Network Framework';
-            description: 'Advanced quantum computing framework for neural network development and optimization.';
-            category: 'ai-solutions';
-            price: 1499;
-            originalPrice: 1999;
-            currency: 'USD';
-            rating: 4.8;
-            reviewCount: 89;
-            image: '/images/marketplace/quantum-framework.jpg';
+            id: 2,
+            name: 'Quantum Neural Network Framework',
+            description: 'Advanced quantum computing framework for neural network development and optimization.',
+            category: 'ai-solutions',
+            price: 1499,
+            originalPrice: 1999,
+            currency: 'USD',
+            rating: 4.8,
+            reviewCount: 89,
+            image: '/images/marketplace/quantum-framework.jpg',
             features: [
-                'Quantum algorithm optimization';
-                'Neural network training';
-                'GPU acceleration';
-                'Python SDK';
-                'Documentation & examples'];
-            tags: ['Quantum Computing', 'AI', 'Research', 'Python'];
-            featured: true;
-            new: true;
-            discount: 25;
-            type: 'software'};
+                'Quantum algorithm optimizationNeural network training',
+                'GPU accelerationPython SDK',
+                'Documentation & examples'],
+            tags: ['Quantum ComputingAI', 'ResearchPython'],
+            featured: true,
+            new: true,
+            discount: 25,
+            type: 'software'},
         {
-            id: 3;
-            name: 'SOC2 Compliance Automation Suite';
-            description: 'Comprehensive security and compliance automation platform for enterprise organizations.';
-            category: 'cybersecurity';
-            price: 899;
-            originalPrice: 1199;
-            currency: 'USD';
-            rating: 4.7;
-            reviewCount: 156;
-            image: '/images/marketplace/soc2-suite.jpg';
+            id: 3,
+            name: 'SOC2 Compliance Automation Suite',
+            description: 'Comprehensive security and compliance automation platform for enterprise organizations.',
+            category: 'cybersecurity',
+            price: 899,
+            originalPrice: 1199,
+            currency: 'USD',
+            rating: 4.7,
+            reviewCount: 156,
+            image: '/images/marketplace/soc2-suite.jpg',
             features: [
-                'Automated compliance checks';
-                'Security assessment tools';
-                'Audit trail management';
-                'Risk assessment';
-                'Reporting dashboard'];
-            tags: ['Cybersecurity', 'Compliance', 'SOC2', 'Enterprise'];
-            featured: false;
-            new: false;
-            discount: 25;
-            type: 'software'};
+                'Automated compliance checksSecurity assessment tools',
+                'Audit trail managementRisk assessment',
+                'Reporting dashboard'],
+            tags: ['CybersecurityCompliance', 'SOC2Enterprise'],
+            featured: false,
+            new: false,
+            discount: 25,
+            type: 'software'},
         {
-            id: 4;
-            name: '5G Enterprise Network Kit';
-            description: 'Complete 5G networking solution for enterprise environments with advanced security.';
-            category: 'cloud-infrastructure';
-            price: 2499;
-            originalPrice: 2999;
-            currency: 'USD';
-            rating: 4.6;
-            reviewCount: 73;
-            image: '/images/marketplace/5g-kit.jpg';
+            id: 4,
+            name: '5G Enterprise Network Kit',
+            description: 'Complete 5G networking solution for enterprise environments with advanced security.',
+            category: 'cloud-infrastructure',
+            price: 2499,
+            originalPrice: 2999,
+            currency: 'USD',
+            rating: 4.6,
+            reviewCount: 73,
+            image: '/images/marketplace/5g-kit.jpg',
             features: [
-                '5G network infrastructure';
-                'Enterprise security';
-                'Load balancing';
-                'Monitoring tools';
-                '24/7 support'];
-            tags: ['5G', 'Networking', 'Enterprise', 'Infrastructure'];
-            featured: false;
-            new: false;
-            discount: 17;
-            type: 'hardware'};
+                '5G network infrastructureEnterprise security',
+                'Load balancingMonitoring tools',
+                '24/7 support'],
+            tags: ['5GNetworking', 'EnterpriseInfrastructure'],
+            featured: false,
+            new: false,
+            discount: 17,
+            type: 'hardware'},
         {
-            id: 5;
-            name: 'AI Workflow Templates Pack';
-            description: 'Collection of 50+ pre-built AI workflow templates for common business processes.';
-            category: 'ai-solutions';
-            price: 199;
-            originalPrice: 299;
-            currency: 'USD';
-            rating: 4.5;
-            reviewCount: 234;
-            image: '/images/marketplace/workflow-templates.jpg';
+            id: 5,
+            name: 'AI Workflow Templates Pack',
+            description: 'Collection of 50+ pre-built AI workflow templates for common business processes.',
+            category: 'ai-solutions',
+            price: 199,
+            originalPrice: 299,
+            currency: 'USD',
+            rating: 4.5,
+            reviewCount: 234,
+            image: '/images/marketplace/workflow-templates.jpg',
             features: [
-                '50+ workflow templates';
-                'Customizable designs';
-                'Integration guides';
-                'Best practices';
-                'Community support'];
-            tags: ['AI', 'Workflows', 'Templates', 'Business'];
-            featured: false;
-            new: false;
-            discount: 33;
-            type: 'template'};
+                '50+ workflow templatesCustomizable designs',
+                'Integration guidesBest practices',
+                'Community support'],
+            tags: ['AIWorkflows', 'TemplatesBusiness'],
+            featured: false,
+            new: false,
+            discount: 33,
+            type: 'template'},
         {
-            id: 6;
-            name: 'Blockchain DeFi Development Kit';
-            description: 'Complete toolkit for building decentralized finance applications on blockchain.';
-            category: 'blockchain';
-            price: 599;
-            originalPrice: 799;
-            currency: 'USD';
-            rating: 4.4;
-            reviewCount: 98;
-            image: '/images/marketplace/blockchain-defi.jpg';
+            id: 6,
+            name: 'Blockchain DeFi Development Kit',
+            description: 'Complete toolkit for building decentralized finance applications on blockchain.',
+            category: 'blockchain',
+            price: 599,
+            originalPrice: 799,
+            currency: 'USD',
+            rating: 4.4,
+            reviewCount: 98,
+            image: '/images/marketplace/blockchain-defi.jpg',
             features: [
-                'Smart contract templates';
-                'DeFi protocol examples';
-                'Security best practices';
-                'Testing framework';
-                'Deployment guides'];
-            tags: ['Blockchain', 'DeFi', 'Smart Contracts', 'Development'];
-            featured: false;
-            new: true;
-            discount: 25;
-            type: 'development-kit'};
+                'Smart contract templatesDeFi protocol examples',
+                'Security best practicesTesting framework',
+                'Deployment guides'],
+            tags: ['BlockchainDeFi', 'Smart ContractsDevelopment'],
+            featured: false,
+            new: true,
+            discount: 25,
+            type: 'development-kit'},
         {
-            id: 7;
-            name: 'IoT Data Analytics Platform';
-            description: 'Enterprise IoT platform with advanced analytics and machine learning capabilities.';
-            category: 'iot-platforms';
-            price: 1799;
-            originalPrice: 2299;
-            currency: 'USD';
-            rating: 4.3;
-            reviewCount: 67;
-            image: '/images/marketplace/iot-platform.jpg';
+            id: 7,
+            name: 'IoT Data Analytics Platform',
+            description: 'Enterprise IoT platform with advanced analytics and machine learning capabilities.',
+            category: 'iot-platforms',
+            price: 1799,
+            originalPrice: 2299,
+            currency: 'USD',
+            rating: 4.3,
+            reviewCount: 67,
+            image: '/images/marketplace/iot-platform.jpg',
             features: [
-                'IoT device management';
-                'Real-time analytics';
-                'ML-powered insights';
-                'Scalable architecture';
-                'Multi-cloud support'];
-            tags: ['IoT', 'Analytics', 'Machine Learning', 'Enterprise'];
-            featured: false;
-            new: false;
-            discount: 22;
-            type: 'platform'};
+                'IoT device managementReal-time analytics',
+                'ML-powered insightsScalable architecture',
+                'Multi-cloud support'],
+            tags: ['IoTAnalytics', 'Machine LearningEnterprise'],
+            featured: false,
+            new: false,
+            discount: 22,
+            type: 'platform'},
         {
-            id: 8;
-            name: 'Cybersecurity Threat Intelligence';
-            description: 'Real-time threat intelligence and security monitoring service.';
-            category: 'cybersecurity';
-            price: 399;
-            originalPrice: 599;
-            currency: 'USD';
-            rating: 4.8;
-            reviewCount: 189;
-            image: '/images/marketplace/threat-intelligence.jpg';
+            id: 8,
+            name: 'Cybersecurity Threat Intelligence',
+            description: 'Real-time threat intelligence and security monitoring service.',
+            category: 'cybersecurity',
+            price: 399,
+            originalPrice: 599,
+            currency: 'USD',
+            rating: 4.8,
+            reviewCount: 189,
+            image: '/images/marketplace/threat-intelligence.jpg',
             features: [
-                'Real-time threat feeds';
-                'Security alerts';
-                'Vulnerability scanning';
-                'Incident response';
-                'Expert support'];
-            tags: ['Cybersecurity', 'Threat Intelligence', 'Monitoring', 'Security'];
-            featured: false;
-            new: false;
-            discount: 33;
+                'Real-time threat feedsSecurity alerts',
+                'Vulnerability scanningIncident response',
+                'Expert support'],
+            tags: ['CybersecurityThreat Intelligence', 'MonitoringSecurity'],
+            featured: false,
+            new: false,
+            discount: 33,
             type: 'service'}
     ],
     const filteredProducts = marketplaceProducts.filter(product => {
@@ -243,13 +227,13 @@ export default function Marketplace() {
     const formatPrice = (price, currency) => {
         if (price === 0),
             return 'Free',
-        return `${currency} ${price.toLocaleString()}`};
+        return `${currency} ${price.toLocaleString()}`},
     const getCategoryIcon = (categoryId) => {
         const category = categories.find(cat => cat.id === categoryId),
-        return category ? category.icon : Globe};
+        return category ? category.icon : Globe},
     const getCategoryName = (categoryId) => {
         const category = categories.find(cat => cat.id === categoryId),
-        return category ? category.name : 'Unknown'};
+        return category ? category.name : 'Unknown'},
     return (<div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-blue-90o0 to-slate-90o0">,
       {/* Header */}
       <div className="bg-white/5 backdrop-blur-sm border-b border-white/10">,

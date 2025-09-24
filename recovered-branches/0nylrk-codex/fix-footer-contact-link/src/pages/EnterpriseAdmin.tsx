@@ -1,4 +1,4 @@
-import React from "react";
+import React from "react",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {AdminDashboard} from "@/components/enterprise/admin/AdminDashboard",
@@ -6,16 +6,16 @@ import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
 import {SEO} from "@/components/SEO",
 import {ProtectedRoute} from "@/components/ProtectedRoute",
-import React from "react";;
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard";
-import { useAuth } from "@/hooks/useAuth";
-import { Navigate } from "react-router-dom";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { AdminDashboard } from "@/components/enterprise/admin/AdminDashboard",
+import { useAuth } from "@/hooks/useAuth",
+import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
 import { ProtectedRoute } from "@/components/ProtectedRoute",
-import { SEO } from "@/components/SEO";
-import { ProtectedRoute } from "@/components/ProtectedRoute";
+import { SEO } from "@/components/SEO",
+import { ProtectedRoute } from "@/components/ProtectedRoute",
 import React from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -32,9 +32,9 @@ export default function EnterpriseAdmin() {
   // Check if user has enterprise admin role,
   const isEnterpriseAdmin = user?.role === "enterprise_admin",
 export default function EnterpriseAdmin() {
-  const { user } = useAuth();
+  const { user } = useAuth(),
   // Check if user has enterprise admin role,
-  const isEnterpriseAdmin = user?.role === "enterprise_admin";
+  const isEnterpriseAdmin = user?.role === "enterprise_admin",
   if (!isEnterpriseAdmin) {
     return <Navigate to="/unauthorized" />}
   return (

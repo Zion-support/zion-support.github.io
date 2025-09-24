@@ -1,54 +1,54 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
-  Calendar, Clock, Target, Users2, FileText2, PieChart;
-  VirtualReality, Gamepad2, Cube, Eye, Palette, Zap;
-  Globe, Smartphone, Monitor, Headphones, Camera;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
+  Calendar, Clock, Target, Users2, FileText2, PieChart,
+  VirtualReality, Gamepad2, Cube, Eye, Palette, Zap,
+  Globe, Smartphone, Monitor, Headphones, Camera,
   GraduationCap} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Metaverse Development Studio Pro | Zion Tech Group';
-  description: 'Professional metaverse development studio creating immersive virtual worlds, experiences, and digital assets.';
-  keywords: 'metaverse development, virtual reality, VR development, 3D worlds, immersive experiences, digital assets';
+  title: 'Metaverse Development Studio Pro | Zion Tech Group',
+  description: 'Professional metaverse development studio creating immersive virtual worlds, experiences, and digital assets.',
+  keywords: 'metaverse development, virtual reality, VR development, 3D worlds, immersive experiences, digital assets',
   openGraph: {
-    title: 'Metaverse Development Studio Pro | Zion Tech Group';
-    description: 'Professional metaverse development studio creating immersive virtual worlds, experiences, and digital assets.';
-    url: 'https://ziontechgroup.com/metaverse-development-studio-pro';
-    siteName: 'Zion Tech Group';
+    title: 'Metaverse Development Studio Pro | Zion Tech Group',
+    description: 'Professional metaverse development studio creating immersive virtual worlds, experiences, and digital assets.',
+    url: 'https://ziontechgroup.com/metaverse-development-studio-pro',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-metaverse-studio.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Metaverse Development Studio Pro'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-metaverse-studio.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Metaverse Development Studio Pro'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Metaverse Development Studio Pro | Zion Tech Group';
-    description: 'Professional metaverse development studio creating immersive virtual worlds, experiences, and digital assets.';
-    images: ['https://ziontechgroup.com/og-image-metaverse-studio.jpg']};
+    card: 'summary_large_image',
+    title: 'Metaverse Development Studio Pro | Zion Tech Group',
+    description: 'Professional metaverse development studio creating immersive virtual worlds, experiences, and digital assets.',
+    images: ['https://ziontechgroup.com/og-image-metaverse-studio.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/metaverse-development-studio-pro'}};
+    canonical: 'https://ziontechgroup.com/metaverse-development-studio-pro'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function MetaverseDevelopmentStudioPro() {
   return (
     <div className="min-h-screen bg-black text-white">,

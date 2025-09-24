@@ -2,27 +2,27 @@ import React, { useState } from 'react',
 import SEO from '../components/SEO',
 import { motion } from 'framer-motion',
 import {
-  Search;
-  Grid;
-  List;
-  Filter;
-  Brain;
-  Shield;
-  Cloud;
-  Factory;
-  Truck;
-  Heart;
-  ArrowRight;
-  Check;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  TrendingUp;
-  Users;
-  Zap;
-  Target;
-  Award;
+  Search,
+  Grid,
+  List,
+  Filter,
+  Brain,
+  Shield,
+  Cloud,
+  Factory,
+  Truck,
+  Heart,
+  ArrowRight,
+  Check,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  TrendingUp,
+  Users,
+  Zap,
+  Target,
+  Award,
 } from 'lucide-react',
 // Import our new innovative services,
 import { innovative20o27AIBusinessIntelligenceServices } from '../data/innovative-20o27-ai-business-intelligence',
@@ -31,83 +31,83 @@ import { innovative20o27CloudDevOpsServices } from '../data/innovative-20o27-clo
 import { innovative20o27IndustrySolutions } from '../data/innovative-20o27-industry-solutions',
 // Combine all services,
 const allInnovativeServices = [
-  ...innovative20o27AIBusinessIntelligenceServices;
-  ...innovative20o27CybersecurityComplianceServices;
-  ...innovative20o27CloudDevOpsServices;
-  ...innovative20o27IndustrySolutions;
+  ...innovative20o27AIBusinessIntelligenceServices,
+  ...innovative20o27CybersecurityComplianceServices,
+  ...innovative20o27CloudDevOpsServices,
+  ...innovative20o27IndustrySolutions,
 ],
 const categories = [
   {
-    id: 'all';
-    name: 'All Services';
-    icon: <Grid className='w-6 h-6' />;
-    color: 'from-gray-50o0 to-slate-50o0';
-    description: 'Complete portfolio of innovative 20o27 services';
-  };
+    id: 'all',
+    name: 'All Services',
+    icon: <Grid className='w-6 h-6' />,
+    color: 'from-gray-50o0 to-slate-50o0',
+    description: 'Complete portfolio of innovative 20o27 services'
+  },
   {
-    id: 'ai-business-intelligence';
-    name: 'AI Business Intelligence';
-    icon: <Brain className='w-6 h-6' />;
-    color: 'from-blue-50o0 to-indigo-50o0';
-    description: 'AI-powered analytics and business insights';
-  };
+    id: 'ai-business-intelligence',
+    name: 'AI Business Intelligence',
+    icon: <Brain className='w-6 h-6' />,
+    color: 'from-blue-50o0 to-indigo-50o0',
+    description: 'AI-powered analytics and business insights'
+  },
   {
-    id: 'cybersecurity-compliance';
-    name: 'Cybersecurity & Compliance';
-    icon: <Shield className='w-6 h-6' />;
-    color: 'from-red-50o0 to-orange-50o0';
-    description: 'Advanced security and compliance solutions';
-  };
+    id: 'cybersecurity-compliance',
+    name: 'Cybersecurity & Compliance',
+    icon: <Shield className='w-6 h-6' />,
+    color: 'from-red-50o0 to-orange-50o0',
+    description: 'Advanced security and compliance solutions'
+  },
   {
-    id: 'cloud-devops';
-    name: 'Cloud Infrastructure & DevOps';
-    icon: <Cloud className='w-6 h-6' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    description: 'Modern cloud and DevOps solutions';
-  };
+    id: 'cloud-devops',
+    name: 'Cloud Infrastructure & DevOps',
+    icon: <Cloud className='w-6 h-6' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    description: 'Modern cloud and DevOps solutions'
+  },
   {
-    id: 'healthcare-biotech';
-    name: 'Healthcare & Biotech';
-    icon: <Heart className='w-6 h-6' />;
-    color: 'from-pink-50o0 to-red-50o0';
-    description: 'AI-powered healthcare solutions';
-  };
+    id: 'healthcare-biotech',
+    name: 'Healthcare & Biotech',
+    icon: <Heart className='w-6 h-6' />,
+    color: 'from-pink-50o0 to-red-50o0',
+    description: 'AI-powered healthcare solutions'
+  },
   {
-    id: 'financial-technology';
-    name: 'Financial Technology';
-    icon: <TrendingUp className='w-6 h-6' />;
-    color: 'from-emerald-50o0 to-green-50o0';
-    description: 'Fintech and compliance automation';
-  };
+    id: 'financial-technology',
+    name: 'Financial Technology',
+    icon: <TrendingUp className='w-6 h-6' />,
+    color: 'from-emerald-50o0 to-green-50o0',
+    description: 'Fintech and compliance automation'
+  },
   {
-    id: 'retail-ecommerce';
-    name: 'Retail & E-commerce';
-    icon: <Target className='w-6 h-6' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    description: 'Retail optimization and analytics';
-  };
+    id: 'retail-ecommerce',
+    name: 'Retail & E-commerce',
+    icon: <Target className='w-6 h-6' />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    description: 'Retail optimization and analytics'
+  },
   {
-    id: 'manufacturing-industrial';
-    name: 'Manufacturing & Industrial';
-    icon: <Factory className='w-6 h-6' />;
-    color: 'from-orange-50o0 to-red-50o0';
-    description: 'Manufacturing AI and quality control';
-  };
+    id: 'manufacturing-industrial',
+    name: 'Manufacturing & Industrial',
+    icon: <Factory className='w-6 h-6' />,
+    color: 'from-orange-50o0 to-red-50o0',
+    description: 'Manufacturing AI and quality control'
+  },
   {
-    id: 'transportation-logistics';
-    name: 'Transportation & Logistics';
-    icon: <Truck className='w-6 h-6' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    description: 'Logistics optimization and supply chain';
-  };
+    id: 'transportation-logistics',
+    name: 'Transportation & Logistics',
+    icon: <Truck className='w-6 h-6' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    description: 'Logistics optimization and supply chain'
+  },
 ],
 const sortOptions = [
-  { value: 'name', label: 'Name A-Z' };
-  { value: 'price-low', label: 'Price: Low to High' };
-  { value: 'price-high', label: 'Price: High to Low' };
-  { value: 'popular', label: 'Most Popular' };
-  { value: 'newest', label: 'Newest First' };
-  { value: 'rating', label: 'Highest Rated' };
+  { value: 'name', label: 'Name A-Z' },
+  { value: 'price-low', label: 'Price: Low to High' },
+  { value: 'price-high', label: 'Price: High to Low' },
+  { value: 'popular', label: 'Most Popular' },
+  { value: 'newest', label: 'Newest First' },
+  { value: 'rating', label: 'Highest Rated' },
 ],
 export default function Innovative20o27ServicesShowcase() {
   const [searchQuery, setSearchQuery] = useState(''),
@@ -126,7 +126,7 @@ export default function Innovative20o27ServicesShowcase() {
       matchesSearch &&,
       service.category,
         .toLowerCase(),
-        .includes(selectedCategory.replace('-', ' ')))}),
+        .includes(selectedCategory.replace('- ')))}),
   // Sort services,
   const sortedServices = [...filteredServices].sort((a, b) => {
     switch (sortBy) {
@@ -154,42 +154,38 @@ export default function Innovative20o27ServicesShowcase() {
   const totalPages = Math.ceil(sortedServices.length / pageSize),
   const startIndex = (currentPage - 1) * pageSize,
   const paginatedServices = sortedServices.slice(
-    startIndex;
+    startIndex,
     startIndex + pageSize),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-10o0'>,
       <SEO
         title='Innovative 20o27 Services Showcase | Zion Tech Group',
         description='Discover our cutting-edge 20o27 services: AI Business Intelligence, Cybersecurity, Cloud DevOps, and Industry Solutions. Transform your business with innovative technology.',
         keywords={[
-          'AI services';
-          'cybersecurity';
-          'cloud infrastructure';
-          'DevOps';
-          'healthcare AI';
-          'fintech';
-          'retail optimization';
-          'manufacturing AI';
-          'logistics';
+          'AI servicescybersecurity',
+          'cloud infrastructureDevOps',
+          'healthcare AIfintech',
+          'retail optimizationmanufacturing AI',
+          'logistics',
         ]}
         image='https: //ziontechgroup.com/og-innovative-20o27-services.jpg',
       />,

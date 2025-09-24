@@ -1,5 +1,5 @@
 "use client",
-import React from "react";
+import React from "react",
 export default function UltimateContentShowcase2026() {
   return null}
 ,
@@ -8,52 +8,52 @@ const UltimateContentShowcase20o26: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const contentItems: ContentItem[] = [
     {
-      id: 'advanced-automation-mastery';
-      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide';
+      id: 'advanced-automation-mastery',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
       metrics: {
-        roi: '50o0%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        satisfaction: '98%'};
-      featured: true;
-      isNew: true};
+        roi: '50o0%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        satisfaction: '98%'},
+      featured: true,
+      isNew: true},
     {
-      id: 'ai-transformation-10o00-roi';
-      title: 'AI Transformation Success Story: $2.8B Company Achieves 1,0o00% ROI in 18 Months';
-      type: 'case-study';
-      url: '/case-studies/ai-transformation-10o00-percent-roi-ultimate-success-story';
+      id: 'ai-transformation-10o00-roi',
+      title: 'AI Transformation Success Story: $2.8B Company Achieves 1,0o00% ROI in 18 Months',
+      type: 'case-study',
+      url: '/case-studies/ai-transformation-10o00-percent-roi-ultimate-success-story',
       metrics: {
-        roi: '1,0o00%';
-        savings: '$280M';
-        accuracy: '99.9%';
-        satisfaction: '99.2%'};
-      featured: true;
-      isNew: true};
+        roi: '1,0o00%',
+        savings: '$280M',
+        accuracy: '99.9%',
+        satisfaction: '99.2%'},
+      featured: true,
+      isNew: true},
     {
-      id: 'implementation-master-guide';
-      title: 'AI 20o25 Implementation Master Guide: Ultimate Success Framework';
-      type: 'resource';
-      url: '/resources/ai-20o25-implementation-master-guide-ultimate-success-framework';
+      id: 'implementation-master-guide',
+      title: 'AI 20o25 Implementation Master Guide: Ultimate Success Framework',
+      type: 'resource',
+      url: '/resources/ai-20o25-implementation-master-guide-ultimate-success-framework',
       metrics: {
-        roi: '50o0%+';
-        savings: '$2.8B';
-        accuracy: '94%';
-        satisfaction: '98%'};
-      featured: true;
-      isNew: true};
+        roi: '50o0%+',
+        savings: '$2.8B',
+        accuracy: '94%',
+        satisfaction: '98%'},
+      featured: true,
+      isNew: true},
     {
-      id: 'quantum-computing-revolution';
-      title: 'AI 20o25: The Quantum Computing Business Revolution - Ultimate Breakthrough Guide';
-      type: 'blog';
-      url: '/blog/ai-20o25-quantum-computing-business-revolution-ultimate-breakthrough';
+      id: 'quantum-computing-revolution',
+      title: 'AI 20o25: The Quantum Computing Business Revolution - Ultimate Breakthrough Guide',
+      type: 'blog',
+      url: '/blog/ai-20o25-quantum-computing-business-revolution-ultimate-breakthrough',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$10o0B';
-        accuracy: '99.97%';
-        satisfaction: '99%'};
-      featured: true;
+        roi: '1,20o0%',
+        savings: '$10o0B',
+        accuracy: '99.97%',
+        satisfaction: '99%'},
+      featured: true,
       isNew: true}
   ],
   useEffect(() => {
@@ -70,7 +70,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -81,7 +81,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   if (!isVisible) return null,
   return (
     <div className="relative bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16 overflow-hidden">,
@@ -101,7 +101,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
             Ultimate AI Content Showcase 20o26,
           </h2>,
           <p className="text-xl md:text-2xl opacity-90 max-w-4xl mx-auto leading-relaxed">,
-            Discover our latest collection of AI transformation content featuring 50o0%+ ROI success stories;
+            Discover our latest collection of AI transformation content featuring 50o0%+ ROI success stories,
             quantum computing breakthroughs, and proven implementation frameworks.,
           </p>,
         </div>,
@@ -121,7 +121,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
                         <div className="flex items-center gap-3 mb-4">,
                           <span className="text-2xl">{getTypeIcon(item.type)}</span>,
                           <span className={`px-3 py-1 rounded-full text-sm font-medium ${getTypeColor(item.type)}`}>,
-                            {item.type.replace('-', ' ').toUpperCase()}
+                            {item.type.replace('- ').toUpperCase()}
                           </span>,
                           {item.isNew && (
                             <span className="px-3 py-1 rounded-full text-sm font-medium bg-red-10o0 text-red-80o0">,
@@ -143,7 +143,7 @@ const UltimateContentShowcase20o26: React.FC = () => {
                         <div className="flex flex-wrap gap-4 mb-6">,
                           {Object.entries(item.metrics).map(([key, value]) => (
                             <div key={key} className="bg-white bg-opacity-20 rounded-lg px-4 py-2">,
-                              <div className="text-sm opacity-80 capitalize">{key.replace('_', ' ')}</div>,
+                              <div className="text-sm opacity-80 capitalize">{key.replace('_ ')}</div>,
                               <div className="text-lg font-bold">{value}</div>,
                             </div>))}
                         </div>,
@@ -238,5 +238,5 @@ const UltimateContentShowcase20o26: React.FC = () => {
           </svg>,
         </button>,
       </div>,
-    </div>)};
-export default UltimateContentShowcase20o26;
+    </div>)},
+export default UltimateContentShowcase20o26,

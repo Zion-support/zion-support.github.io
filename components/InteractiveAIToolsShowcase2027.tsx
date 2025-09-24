@@ -10,27 +10,27 @@ import {
   Play,
   Download,
   Share2,
-  Heart;
-  BookOpen;
-  Users;
-  Clock;
-  ArrowRight;
-  ChevronRight;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Sparkles;
-  Target;
-  Award;
-  TrendingUp;
-  Globe;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Smartphone;
-  Monitor;
+  Heart,
+  BookOpen,
+  Users,
+  Clock,
+  ArrowRight,
+  ChevronRight,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Sparkles,
+  Target,
+  Award,
+  TrendingUp,
+  Globe,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Smartphone,
+  Monitor,
   Laptop} from 'lucide-react',
 const InteractiveAIToolsShowcase20o27 = () => {
   const [selectedCategorysetSelectedCategory] = useState('all'),
@@ -39,91 +39,91 @@ const InteractiveAIToolsShowcase20o27 = () => {
   const [selectedToolsetSelectedTool] = useState(null),
   const [isPlayingsetIsPlaying] = useState(false),
   const categories = [
-    { id: ''all', 'name: 'All 'Tools', 'icon: Gridcolor: 'from-purple-60o0 to-pink-60o0' };
-    { id: 'ai-'assistants', 'name: 'AI 'Assistants', 'icon: Braincolor: 'from-blue-60o0 to-cyan-60o0' };
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-60o0 to-emerald-60o0' };
-    { id: ''analytics', 'name: ''Analytics', 'icon: TrendingUpcolor: 'from-orange-60o0 to-red-60o0' };
-    { id: ''development', 'name: ''Development', 'icon: Cpucolor: 'from-indigo-60o0 to-purple-60o0' };
-    { id: ''security', 'name: ''Security', 'icon: Shieldcolor: 'from-red-60o0 to-pink-60o0' }
+    { id: ''allname: 'All 'Toolsicon: Gridcolor: 'from-purple-60o0 to-pink-60o0' },
+    { id: 'ai-'assistantsname: 'AI 'Assistantsicon: Braincolor: 'from-blue-60o0 to-cyan-60o0' },
+    { id: ''automationname: ''Automationicon: Zapcolor: 'from-green-60o0 to-emerald-60o0' },
+    { id: ''analyticsname: ''Analyticsicon: TrendingUpcolor: 'from-orange-60o0 to-red-60o0' },
+    { id: ''developmentname: ''Developmenticon: Cpucolor: 'from-indigo-60o0 to-purple-60o0' },
+    { id: ''securityname: ''Securityicon: Shieldcolor: 'from-red-60o0 to-pink-60o0' }
   ],
   const aiTools = [
     {
-      id: 1;
-      name: "Neural Consciousness AI";
-      description: "Advanced AI system with near-human consciousness capabilitiescapable of complex reasoning and emotional intelligence.";
-      category: "ai-assistants";
-      image: "/api/placeholder/40o0/30o0";
-      rating: 4.9;
-      downloads: "2.3M";
-      price: "Free";
-      tags: ["AI"Consciousness"Neural Networks"20o27"];
-      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"Learning Capabilities"];
-      demo: true;
-      featured: true};
+      id: 1,
+      name: "Neural Consciousness AI",
+      description: "Advanced AI system with near-human consciousness capabilitiescapable of complex reasoning and emotional intelligence.",
+      category: "ai-assistants",
+      image: "/api/placeholder/40o0/30o0",
+      rating: 4.9,
+      downloads: "2.3M",
+      price: "Free",
+      tags: ["AI"Consciousness"Neural Networks"20o27"],
+      features: ["Natural Language Processing"Emotional Intelligence"Complex Reasoning"Learning Capabilities"],
+      demo: true,
+      featured: true},
     {
-      id: 2;
-      name: "Quantum Automation Suite";
-      description: "Revolutionary automation platform powered by quantum computing for unprecedented processing speeds.";
-      category: "automation";
-      image: "/api/placeholder/40o0/30o0";
-      rating: 4.8;
-      downloads: "1.8M";
-      price: "$299/month";
-      tags: ["Quantum"Automation"High Performance"20o27"];
-      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"Advanced Analytics"];
-      demo: true;
-      featured: true};
+      id: 2,
+      name: "Quantum Automation Suite",
+      description: "Revolutionary automation platform powered by quantum computing for unprecedented processing speeds.",
+      category: "automation",
+      image: "/api/placeholder/40o0/30o0",
+      rating: 4.8,
+      downloads: "1.8M",
+      price: "$299/month",
+      tags: ["Quantum"Automation"High Performance"20o27"],
+      features: ["Quantum Processing"Real-time Automation"Scalable Architecture"Advanced Analytics"],
+      demo: true,
+      featured: true},
     {
-      id: 3;
-      name: "Predictive Analytics Engine";
-      description: "AI-powered analytics platform that predicts future trends and behaviors with 99.7% accuracy.";
-      category: "analytics";
-      image: "/api/placeholder/40o0/30o0";
-      rating: 4.7;
-      downloads: "3.1M";
-      price: "$199/month";
-      tags: ["Analytics"Prediction"Machine Learning"20o27"];
-      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"API Integration"];
-      demo: true;
-      featured: false};
+      id: 3,
+      name: "Predictive Analytics Engine",
+      description: "AI-powered analytics platform that predicts future trends and behaviors with 99.7% accuracy.",
+      category: "analytics",
+      image: "/api/placeholder/40o0/30o0",
+      rating: 4.7,
+      downloads: "3.1M",
+      price: "$199/month",
+      tags: ["Analytics"Prediction"Machine Learning"20o27"],
+      features: ["Predictive Modeling"Real-time Analysis"Custom Dashboards"API Integration"],
+      demo: true,
+      featured: false},
     {
-      id: 4;
-      name: "Code Generation AI";
-      description: "Advanced AI that generatesreviewsand optimizes code in multiple programming languages.";
-      category: "development";
-      image: "/api/placeholder/40o0/30o0";
-      rating: 4.9;
-      downloads: "4.2M";
-      price: "Free";
-      tags: ["Development"Code Generation"AI"20o27"];
-      features: ["Multi-language Support"Code Review"Optimization"Documentation"];
-      demo: true;
-      featured: true};
+      id: 4,
+      name: "Code Generation AI",
+      description: "Advanced AI that generatesreviewsand optimizes code in multiple programming languages.",
+      category: "development",
+      image: "/api/placeholder/40o0/30o0",
+      rating: 4.9,
+      downloads: "4.2M",
+      price: "Free",
+      tags: ["Development"Code Generation"AI"20o27"],
+      features: ["Multi-language Support"Code Review"Optimization"Documentation"],
+      demo: true,
+      featured: true},
     {
-      id: 5;
-      name: "Quantum Security Vault";
-      description: "Next-generation security platform using quantum encryption to protect against all known threats.";
-      category: "security";
-      image: "/api/placeholder/40o0/30o0";
-      rating: 4.8;
-      downloads: "1.5M";
-      price: "$399/month";
-      tags: ["Security"Quantum"Encryption"20o27"];
-      features: ["Quantum Encryption"Threat Detection"Zero Trust"Compliance"];
-      demo: false;
-      featured: false};
+      id: 5,
+      name: "Quantum Security Vault",
+      description: "Next-generation security platform using quantum encryption to protect against all known threats.",
+      category: "security",
+      image: "/api/placeholder/40o0/30o0",
+      rating: 4.8,
+      downloads: "1.5M",
+      price: "$399/month",
+      tags: ["Security"Quantum"Encryption"20o27"],
+      features: ["Quantum Encryption"Threat Detection"Zero Trust"Compliance"],
+      demo: false,
+      featured: false},
     {
-      id: 6;
-      name: "Neural Interface SDK";
-      description: "Development kit for creating brain-computer interface applications and neural control systems.";
-      category: "development";
-      image: "/api/placeholder/40o0/30o0";
-      rating: 4.6;
-      downloads: "890K";
-      price: "$599/month";
-      tags: ["Neural Interface"SDK"BCI"20o27"];
-      features: ["Neural Signal Processing"Real-time Control"Multi-platform"Documentation"];
-      demo: true;
+      id: 6,
+      name: "Neural Interface SDK",
+      description: "Development kit for creating brain-computer interface applications and neural control systems.",
+      category: "development",
+      image: "/api/placeholder/40o0/30o0",
+      rating: 4.6,
+      downloads: "890K",
+      price: "$599/month",
+      tags: ["Neural Interface"SDK"BCI"20o27"],
+      features: ["Neural Signal Processing"Real-time Control"Multi-platform"Documentation"],
+      demo: true,
       featured: false}
   ],
   const filteredTools = aiTools.filter(tool => {
@@ -145,15 +145,15 @@ const InteractiveAIToolsShowcase20o27 = () => {
             key={i}
             className="absolute w-1 h-1 bg-blue-40o0 rounded-full opacity-30",
             animate={{
-              x: [0Math.random() * 10o00];
-              y: [0Math.random() * 10o00];
+              x: [0Math.random() * 10o00],
+              y: [0Math.random() * 10o00],
               scale: [0o10]}}
             transition={{
-              duration: Math.random() * 12 + 8;
-              repeat: Infinity;
+              duration: Math.random() * 12 + 8,
+              repeat: Infinity,
               delay: Math.random() * 6}}
             style={{
-              left: `${Math.random() * 10o0}%`;
+              left: `${Math.random() * 10o0}%`,
               top: `${Math.random() * 10o0}%`}}
            />))}
       </div>,
@@ -537,5 +537,5 @@ const InteractiveAIToolsShowcase20o27 = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default InteractiveAIToolsShowcase20o27;
+    </div>)},
+export default InteractiveAIToolsShowcase20o27,

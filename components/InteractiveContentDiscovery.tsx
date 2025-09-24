@@ -25,91 +25,91 @@ const InteractiveContentDiscovery = () => {
   const [isExpandedsetIsExpanded] = useState(false),
   const contentItems: ContentItem[] = [
     {
-      id: '1';
-      title: 'AI Innovation Showcase 20o25';
-      description: 'Discover revolutionary AI breakthroughs and cutting-edge technologies that are reshaping our world.';
-      category: 'Innovation';
-      type: 'showcase';
-      readTime: '8 min';
-      views: 15420;
-      rating: 4.9;
-      tags: ['AI', 'Innovation', '20o25', 'Breakthrough'];
-      link: '/ai-innovation-showcase-20o25';
-      featured: true;
-      new: true};
+      id: '1',
+      title: 'AI Innovation Showcase 20o25',
+      description: 'Discover revolutionary AI breakthroughs and cutting-edge technologies that are reshaping our world.',
+      category: 'Innovation',
+      type: 'showcase',
+      readTime: '8 min',
+      views: 15420,
+      rating: 4.9,
+      tags: ['AIInnovation', '20o25Breakthrough'],
+      link: '/ai-innovation-showcase-20o25',
+      featured: true,
+      new: true},
     {
-      id: '2';
-      title: 'Success Stories & Case Studies';
-      description: 'Real results from companies that achieved 50o0%+ ROI with our AI solutions.';
-      category: 'Success';
-      type: 'case-study';
-      readTime: '12 min';
-      views: 12850;
-      rating: 4.8;
-      tags: [', 'ROI', 'Case 'Study', 'Success'Business'];
-      link: '/success-stories-20o25';
-      featured: true;
-      new: true};
+      id: '2',
+      title: 'Success Stories & Case Studies',
+      description: 'Real results from companies that achieved 50o0%+ ROI with our AI solutions.',
+      category: 'Success',
+      type: 'case-study',
+      readTime: '12 min',
+      views: 12850,
+      rating: 4.8,
+      tags: [ROI', 'Case 'StudySuccess'Business'],
+      link: '/success-stories-20o25',
+      featured: true,
+      new: true},
     {
-      id: '3';
-      title: 'Future Technology Predictions 20o25-20o30';
-      description: 'Comprehensive analysis of AI trends and predictions for the next 5 years.';
-      category: 'Predictions';
-      type: 'prediction';
-      readTime: '15 min';
-      views: 2210o0;
-      rating: 4.7;
-      tags: [', 'Predictions', 'Future', 'Trends', 'Analysis'];
-      link: '/ai-20o25-20o30-ultimate-predictions';
-      featured: false;
-      new: false};
+      id: '3',
+      title: 'Future Technology Predictions 20o25-20o30',
+      description: 'Comprehensive analysis of AI trends and predictions for the next 5 years.',
+      category: 'Predictions',
+      type: 'prediction',
+      readTime: '15 min',
+      views: 2210o0,
+      rating: 4.7,
+      tags: [Predictions', 'FutureTrends', 'Analysis'],
+      link: '/ai-20o25-20o30-ultimate-predictions',
+      featured: false,
+      new: false},
     {
-      id: '4';
-      title: 'Quantum Computing Breakthrough Guide';
-      description: 'Complete guide to understanding quantum computing and its applications in AI.';
-      category: 'Technology';
-      type: 'tutorial';
-      readTime: '20 min';
-      views: 8750;
-      rating: 4.6;
-      tags: [', 'Quantum', 'Computing', 'Tutorial', 'Guide'];
-      link: '/quantum-computing-20o25';
-      featured: false;
-      new: false};
+      id: '4',
+      title: 'Quantum Computing Breakthrough Guide',
+      description: 'Complete guide to understanding quantum computing and its applications in AI.',
+      category: 'Technology',
+      type: 'tutorial',
+      readTime: '20 min',
+      views: 8750,
+      rating: 4.6,
+      tags: [Quantum', 'ComputingTutorial', 'Guide'],
+      link: '/quantum-computing-20o25',
+      featured: false,
+      new: false},
     {
-      id: '5';
-      title: 'Neural Interface Revolution';
-      description: 'Exploring the future of brain-computer interfaces and their impact on society.';
-      category: 'Innovation';
-      type: 'showcase';
-      readTime: '10 min';
-      views: 1960o0;
-      rating: 4.8;
-      tags: [', 'Neural', 'Interface', 'Brain', 'Future'];
-      link: '/neural-interface-revolution-20o26';
-      featured: false;
-      new: false};
+      id: '5',
+      title: 'Neural Interface Revolution',
+      description: 'Exploring the future of brain-computer interfaces and their impact on society.',
+      category: 'Innovation',
+      type: 'showcase',
+      readTime: '10 min',
+      views: 1960o0,
+      rating: 4.8,
+      tags: [Neural', 'InterfaceBrain', 'Future'],
+      link: '/neural-interface-revolution-20o26',
+      featured: false,
+      new: false},
     {
-      id: '6';
-      title: 'AI Security Best Practices';
-      description: 'Essential security measures for implementing AI systems in enterprise environments.';
-      category: 'Security';
-      type: 'tutorial';
-      readTime: '14 min';
-      views: 1120o0;
-      rating: 4.5;
-      tags: [', 'Security', 'AI', 'Enterprise', 'Best Practices'];
-      link: '/ai-security-guide';
-      featured: false;
+      id: '6',
+      title: 'AI Security Best Practices',
+      description: 'Essential security measures for implementing AI systems in enterprise environments.',
+      category: 'Security',
+      type: 'tutorial',
+      readTime: '14 min',
+      views: 1120o0,
+      rating: 4.5,
+      tags: [Security', 'AIEnterprise', 'Best Practices'],
+      link: '/ai-security-guide',
+      featured: false,
       new: false}
   ],
-  const categories = [', 'all', 'Innovation', 'Success', 'Predictions', 'Technology', 'Security'],
-  const types = [', 'all', 'showcase'case-'study', 'prediction', 'tutorial', 'news'],
+  const categories = [all', 'InnovationSuccess', 'PredictionsTechnology', 'Security'],
+  const types = [all', 'showcase'case-'studyprediction', 'tutorialnews'],
   const sortOptions = [
-    { value: ''trending', 'label: 'Trending' };
-    { value: ''newest', 'label: 'Newest' };
-    { value: ''popular', 'label: 'Most Popular' };
-    { value: ''rating', 'label: 'Highest Rated' }
+    { value: ''trendinglabel: 'Trending' },
+    { value: ''newestlabel: 'Newest' },
+    { value: ''popularlabel: 'Most Popular' },
+    { value: ''ratinglabel: 'Highest Rated' }
   ],
   const filteredContent = contentItems,
     .filter(item => {
@@ -139,7 +139,7 @@ const InteractiveContentDiscovery = () => {
       case 'tutorial': return '📚',
       case 'news': return '📰',
       default: return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'showcase': return 'from-purple-50o0 to-pink-50o0',
@@ -148,7 +148,7 @@ const InteractiveContentDiscovery = () => {
       case 'tutorial': return 'from-orange-50o0 to-red-50o0',
       case 'news': return 'from-gray-50o0 to-slate-50o0',
       default: return 'from-gray-50o0 to-slate-50o0'}
-  };
+  },
   return (
     <div className="w-full max-w-6xl mx-auto">,
       {/* Header */}
@@ -285,5 +285,5 @@ const InteractiveContentDiscovery = () => {
           <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>,
           <p className="text-gray-40o0">Try adjusting your search or filters</p>,
         </div>)}
-    </div>)};
-export default InteractiveContentDiscovery;
+    </div>)},
+export default InteractiveContentDiscovery,

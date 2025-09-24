@@ -6,37 +6,37 @@ const AI20o25SingularityBreakthroughPromotionBanner: React.FC = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const singularityContent = [
     {
-      id: 'singularity-breakthrough';
-      title: 'AI 20o25: The Singularity Breakthrough';
-      description: 'Ultimate Guide to 10o0,0o00% ROI';
-      type: 'blog';
-      url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide';
+      id: 'singularity-breakthrough',
+      title: 'AI 20o25: The Singularity Breakthrough',
+      description: 'Ultimate Guide to 10o0,0o00% ROI',
+      type: 'blog',
+      url: '/blog/ai-20o25-singularity-breakthrough-ultimate-guide',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T';
-        timeline: '18 months'};
-      badge: 'BREAKTHROUGH'};
+        roi: '10o0,0o00%',
+        savings: '$2.5T',
+        timeline: '18 months'},
+      badge: 'BREAKTHROUGH'},
     {
-      id: 'fortune-50o0-singularity';
-      title: 'Fortune 50o0 AI Singularity Success';
-      description: '$2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-ai-singularity-10o0000-roi-success-story';
+      id: 'fortune-50o0-singularity',
+      title: 'Fortune 50o0 AI Singularity Success',
+      description: '$2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-ai-singularity-10o0000-roi-success-story',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T';
-        efficiency: '99.99%'};
-      badge: 'SUCCESS STORY'};
+        roi: '10o0,0o00%',
+        savings: '$2.5T',
+        efficiency: '99.99%'},
+      badge: 'SUCCESS STORY'},
     {
-      id: 'singularity-implementation';
-      title: 'AI Singularity Implementation Guide';
-      description: 'Complete Roadmap to 10o0,0o00% ROI';
-      type: 'resource';
-      url: '/resources/ai-singularity-implementation-ultimate-guide-20o25';
+      id: 'singularity-implementation',
+      title: 'AI Singularity Implementation Guide',
+      description: 'Complete Roadmap to 10o0,0o00% ROI',
+      type: 'resource',
+      url: '/resources/ai-singularity-implementation-ultimate-guide-20o25',
       metrics: {
-        roi: '10o0,0o00%';
-        timeline: '18 months';
-        success: '99.7%'};
+        roi: '10o0,0o00%',
+        timeline: '18 months',
+        success: '99.7%'},
       badge: 'IMPLEMENTATION GUIDE'}
   ],
   useEffect(() => {
@@ -45,7 +45,7 @@ const AI20o25SingularityBreakthroughPromotionBanner: React.FC = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('singularity-banner-dismissed', 'true')};
+    localStorage.setItem('singularity-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('singularity-banner-dismissed'),
     if (dismissed === 'true') {
@@ -165,5 +165,5 @@ const AI20o25SingularityBreakthroughPromotionBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25SingularityBreakthroughPromotionBanner;
+    </div>)},
+export default AI20o25SingularityBreakthroughPromotionBanner,

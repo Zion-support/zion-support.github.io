@@ -4,13 +4,13 @@ import { BarChartDollarSignLineChartTrendingUpUsers } from 'lucide-react',
 export function PartnerDashboard() {
   // Placeholder data - would come from API in real implementation,
   const stats = {
-    totalReferrals: 42;
-    pendingReferrals: 8;
-    completedReferrals: 34;
-    conversionRate: 18.5;
-    totalRevenue: 850.0;
-    pendingRevenue: 200.0;
-  };
+    totalReferrals: 42,
+    pendingReferrals: 8,
+    completedReferrals: 34,
+    conversionRate: 18.5,
+    totalRevenue: 850.0,
+    pendingRevenue: 200.0
+  },
   return (
     <div className='space-y-6'>,
       {/* Stats Overview */}

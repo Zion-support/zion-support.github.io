@@ -1,197 +1,197 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react',
 import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
 import Link from 'next / link',
 "use client",
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  Shield;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Grid;
-  Heart;
-  Database;
-  Cpu;
-  Palette;
-  Cloud;
-  Network;
-  TrendingUp;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Zap;
-  Eye;
-  Infinity;
-  Sparkles;
-  Users;
-  Lock;
-  Code;
-  Server;
-  Layers;
-  Globe2;
-  Star;
-  Award;
-  Clock;
-  CheckCircle;
-  Zap as ZapIcon;
-  Phone as PhoneIcon;
-  Search;
-  User;
-  Bell;
-  Cog;
-  LogOut;
-  Home;
-  Info;
-  FileText;
-  Users as UsersIcon;
-  Bot;
-  MessageCircle;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  MapPin;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  MapPin,
 } from 'lucide-react',
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  Shield;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Grid;
-  Heart;
-  Database;
-  Cpu;
-  Palette;
-  Cloud;
-  Network;
-  TrendingUp;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Zap;
-  Eye;
-  Infinity;
-  Sparkles;
-  Users;
-  Lock;
-  Code;
-  Server;
-  Layers;
-  Globe2;
-  Star;
-  Award;
-  Clock;
-  CheckCircle;
-  Zap as ZapIcon;
-  Phone as PhoneIcon;
-  Search;
-  User;
-  Bell;
-  Cog;
-  LogOut;
-  Home;
-  Info;
-  FileText;
-  Users as UsersIcon;
-  Bot;
-  MessageCircle;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  MapPin;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  MapPin,
 } from 'lucide-react',
-  Menu;
-  ChevronDown;
-  X;
-  Phone;
-  Mail;
-  ArrowRight;
-  Brain;
-  Rocket;
-  Target;
-  Atom;
-  Shield;
-  DollarSign;
-  BarChart3;
-  Globe;
-  Grid;
-  Heart;
-  Database;
-  Cpu;
-  Palette;
-  Cloud;
-  Network;
-  TrendingUp;
-  ShoppingCart;
-  Settings;
-  Building;
-  Monitor;
-  Zap;
-  Eye;
-  Infinity;
-  Sparkles;
-  Users;
-  Lock;
-  Code;
-  Server;
-  Layers;
-  Globe2;
-  Star;
-  Award;
-  Clock;
-  CheckCircle;
-  Zap as ZapIcon;
-  Phone as PhoneIcon;
-  Search;
-  User;
-  Bell;
-  Cog;
-  LogOut;
-  Home;
-  Info;
-  FileText;
-  Users as UsersIcon;
-  Bot;
-  MessageCircle;
-  Linkedin;
-  Twitter;
-  Github;
-  Youtube;
-  MapPin;
+  Menu,
+  ChevronDown,
+  X,
+  Phone,
+  Mail,
+  ArrowRight,
+  Brain,
+  Rocket,
+  Target,
+  Atom,
+  Shield,
+  DollarSign,
+  BarChart3,
+  Globe,
+  Grid,
+  Heart,
+  Database,
+  Cpu,
+  Palette,
+  Cloud,
+  Network,
+  TrendingUp,
+  ShoppingCart,
+  Settings,
+  Building,
+  Monitor,
+  Zap,
+  Eye,
+  Infinity,
+  Sparkles,
+  Users,
+  Lock,
+  Code,
+  Server,
+  Layers,
+  Globe2,
+  Star,
+  Award,
+  Clock,
+  CheckCircle,
+  Zap as ZapIcon,
+  Phone as PhoneIcon,
+  Search,
+  User,
+  Bell,
+  Cog,
+  LogOut,
+  Home,
+  Info,
+  FileText,
+  Users as UsersIcon,
+  Bot,
+  MessageCircle,
+  Linkedin,
+  Twitter,
+  Github,
+  Youtube,
+  MapPin,
 } from 'lucide-react',
 interface NavigationItem {
   name: string,
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -213,8 +213,8 @@ class ErrorBoundary extends React.Component {
   Search, User, Bell, Cog, LogOut, Home, Info, FileText, Users as UsersIcon,
   Bot, MessageCircle, Linkedin, Twitter, Github, Youtube, MapPin} from 'lucide-react',
 interface NavigationItem {
-  name: string;
-  href: string;
+  name: string,
+  href: string,
   icon?: React.ReactNode,
   description?: string,
   children?: NavigationItem[],
@@ -241,61 +241,61 @@ const navigationItems: NavigationItem[] = [
     children: [
       {
   color?: string,
-    description: 'Knowledge base and insights';
-    category: 'resources';
-    color: 'from-orange-500 to-red-500';
+    description: 'Knowledge base and insights',
+    category: 'resources',
+    color: 'from-orange-500 to-red-500',
     children: [
-    description: 'Company information and support';
-    category: 'company';
-    color: 'from-gray-500 to-slate-500';
+    description: 'Company information and support',
+    category: 'company',
+    color: 'from-gray-500 to-slate-500',
     children: [
       {
-        href: '/about';
-        description: 'Our story and mission';
-        icon: <Info className='w-4 h-4' />;
-        featured: true;
-      };
+        href: '/about',
+        description: 'Our story and mission',
+        icon: <Info className='w-4 h-4' />,
+        featured: true
+      },
       {
-        name: 'Careers';
-        href: '/careers';
-        description: 'Join our team';
-        icon: <Users className='w-4 h-4' />;
-        color: 'from-green-500 to-emerald-500';
-      };
+        name: 'Careers',
+        href: '/careers',
+        description: 'Join our team',
+        icon: <Users className='w-4 h-4' />,
+        color: 'from-green-500 to-emerald-500'
+      },
       {
-        name: 'Support';
-        href: '/support';
-        description: 'Get help and support';
-        icon: <MessageCircle className='w-4 h-4' />;
-        color: 'from-blue-500 to-cyan-500';
-      };
+        name: 'Support',
+        href: '/support',
+        description: 'Get help and support',
+        icon: <MessageCircle className='w-4 h-4' />,
+        color: 'from-blue-500 to-cyan-500'
+      },
       {
-        name: 'Privacy Policy';
-        href: '/privacy';
-        description: 'Privacy and data protection';
-        icon: <Shield className='w-4 h-4' />;
-        color: 'from-red-500 to-pink-500';
-      };
-    ];
-  }],        icon: <Shield className="w-4 h-4" />;
+        name: 'Privacy Policy',
+        href: '/privacy',
+        description: 'Privacy and data protection',
+        icon: <Shield className='w-4 h-4' />,
+        color: 'from-red-500 to-pink-500'
+      },
+    ],
+  }],        icon: <Shield className="w-4 h-4" />,
         color: 'from-red-500 to-pink-500'}
       {
-        name: 'About Us';
-        href: '/about';
-        description: 'Company information and mission';
-        icon: <Info className="w - 4 h - 4" />;
+        name: 'About Us',
+        href: '/about',
+        description: 'Company information and mission',
+        icon: <Info className="w - 4 h - 4" />,
         color: 'from - blue - 500 to - cyan - 500'}
       {
-        name: 'Contact';
-        href: '/contact';
-        description: 'Get in touch with our team';
-        icon: <Mail className="w - 4 h - 4" />;
+        name: 'Contact',
+        href: '/contact',
+        description: 'Get in touch with our team',
+        icon: <Mail className="w - 4 h - 4" />,
         color: 'from - purple - 500 to - pink - 500'}
       {
-        name: 'Team';
-        href: '/team';
-        description: 'Meet our leadership team';
-        icon: <Users className="w - 4 h - 4" />;
+        name: 'Team',
+        href: '/team',
+        description: 'Meet our leadership team',
+        icon: <Users className="w - 4 h - 4" />,
         color: 'from - orange - 500 to - red - 500'}
     ]}
 ,
@@ -304,13 +304,13 @@ const navigationItems: NavigationItem[] = [
       if (window.innerWidth >= 1024) {
         setIsOpen(false),
   const handleDropdownToggle = (name: string) => {
-    setActiveDropdown(activeDropdown === name ? null : name)};    setActiveDropdown(activeDropdown === name ? null : name)};
+    setActiveDropdown(activeDropdown === name ? null : name)},    setActiveDropdown(activeDropdown === name ? null : name)},
   useEffect(() => {
     const handleResize = () => {
       if (window && window.innerWidth >= 1024) {
         setIsOpen(false),
         setActiveDropdown(null)}
-    };
+    },
     window && window.addEventListener('resize', handleResize),
     return () => window && window.removeEventListener('resize', handleResize),        setActiveDropdown(null)}
     }
@@ -925,12 +925,12 @@ className='lg: hidden bg - slate - 800 / 95 backdrop - blur - md border - t bord
                   </Link>,
                 </div>,
               </div>,
-            </div>};
+            </div>},
 export default UltraFuturisticNavigation2047)}
 export default UltraFuturisticNavigation2047)}
-};
-export default UltraFuturisticNavigation2047)};
-export default UltraFuturisticNavigation2047;
+},
+export default UltraFuturisticNavigation2047)},
+export default UltraFuturisticNavigation2047,
           </motion.div>)}
       </AnimatePresence>,
     </nav>)}
@@ -938,7 +938,7 @@ export default UltraFuturisticNavigation2047;
 export default UltraFuturisticNavigation2047)}
 ,
 export default UltraFuturisticNavigation2047)}
-};
+},
 export default UltraFuturisticNavigation2047)}
-export default UltraFuturisticNavigation2047;
+export default UltraFuturisticNavigation2047,
 }))))))))))))))))))))]]

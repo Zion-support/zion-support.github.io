@@ -35,29 +35,29 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       element.scrollIntoView({ behavior: 'smooth' }),
       setActiveSection(sectionId),
       setIsMobileMenuOpen(false)}
-  };
+  },
   const allServices = [
     // New 2035 services (featured first),
-    ...innovative2035MicroSaasServices;
-    ...innovative2035AIServices;
-    ...innovative2035ITServices;
+    ...innovative2035MicroSaasServices,
+    ...innovative2035AIServices,
+    ...innovative2035ITServices,
     // Existing services,
-    ...innovativeRealMicroSaasServices2025;
-    ...innovativeAIServicesEnhanced2025;
-    ...innovativeITServicesEnhanced2025;
-    ...emergingTechServicesEnhanced2025;
-    ...advancedAIAutomationServices;
+    ...innovativeRealMicroSaasServices2025,
+    ...innovativeAIServicesEnhanced2025,
+    ...innovativeITServicesEnhanced2025,
+    ...emergingTechServicesEnhanced2025,
+    ...advancedAIAutomationServices,
     ...quantumCybersecurityServices],
   const featuredServices = allServices.filter(service => service.popular).slice(012),
   const navigationSections = [
-    { id: ''hero', 'label: ''Home', 'icon: '🏠' };
-    { id: ''services', 'label: 'Micro 'SAAS', 'icon: '🚀' };
-    { id: ''ai', 'label: 'AI 'Services', 'icon: '🧠' };
-    { id: ''automation', 'label: 'AI 'Automation', 'icon: '⚡' };
-    { id: ''quantum', 'label: 'Quantum 'Security', 'icon: '🔐' };
-    { id: ''it', 'label: 'IT 'Solutions', 'icon: '💻' };
-    { id: ''emerging', 'label: 'Emerging 'Tech', 'icon: '🌟' };
-    { id: ''contact', 'label: ''Contact', 'icon: '📞' }
+    { id: ''herolabel: ''Homeicon: '🏠' },
+    { id: ''serviceslabel: 'Micro 'SAASicon: '🚀' },
+    { id: ''ailabel: 'AI 'Servicesicon: '🧠' },
+    { id: ''automationlabel: 'AI 'Automationicon: '⚡' },
+    { id: ''quantumlabel: 'Quantum 'Securityicon: '🔐' },
+    { id: ''itlabel: 'IT 'Solutionsicon: '💻' },
+    { id: ''emerginglabel: 'Emerging 'Techicon: '🌟' },
+    { id: ''contactlabel: ''Contacticon: '📞' }
   ],
   return (
     <UltraFuturisticBackground2026 intensity="medium" theme="quantum">,
@@ -139,15 +139,15 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 >,
                   <UltraFuturisticServiceCard2026
                     service={{
-                      id: service.id;
-                      name: service.name;
-                      tagline: service.tagline;
-                      description: service.description;
-                      price: service.price;
-                      period: service.period;
-                      features: service.features;
-                      popular: service.popular;
-                      category: service.category;
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features,
+                      popular: service.popular,
+                      category: service.category,
                       icon: service.icon}}
                     variant="ai",
                   />,
@@ -600,34 +600,34 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
                 Why Choose Zion Tech Group?,
               </h2>,
               <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto">,
-                'We', 're not just another technology company - 'we', 're pioneers shaping the future of business and technology,
+                'Were not just another technology company - 'we', 're pioneers shaping the future of business and technology,
               </p>,
             </motion.div>,
             <div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  title: 'Innovation First';
-                  description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.';
-                  icon: '🚀'};
+                  title: 'Innovation First',
+                  description: 'We don\'t follow trends - we create them. Our services are built on cutting-edge research and breakthrough technologies.',
+                  icon: '🚀'},
                 {
-                  title: 'Proven Results';
-                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiencycost savingsand competitive advantage.';
-                  icon: '📈'};
+                  title: 'Proven Results',
+                  description: 'Our solutions have helped businesses achieve 10x improvements in efficiencycost savingsand competitive advantage.',
+                  icon: '📈'},
                 {
-                  title: 'Future-Proof Technology';
-                  description: 'Built with quantum computingAI consciousnessand space technology - ensuring your business stays ahead of the curve.';
-                  icon: '🔮'};
+                  title: 'Future-Proof Technology',
+                  description: 'Built with quantum computingAI consciousnessand space technology - ensuring your business stays ahead of the curve.',
+                  icon: '🔮'},
                 {
-                  title: 'Expert Team';
-                  description: 'World-class engineerscientistsand business strategists with decades of experience in emerging technologies.';
-                  icon: '👥'};
+                  title: 'Expert Team',
+                  description: 'World-class engineerscientistsand business strategists with decades of experience in emerging technologies.',
+                  icon: '👥'},
                 {
-                  title: '24/7 Support';
-                  description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.';
-                  icon: '🛡️'};
+                  title: '24/7 Support',
+                  description: 'Round-the-clock support and monitoring to ensure your systems run smoothly and efficiently.',
+                  icon: '🛡️'},
                 {
-                  title: 'Scalable Solutions';
-                  description: 'From startups to enterprisesour solutions scale with your business and grow with your ambitions.';
+                  title: 'Scalable Solutions',
+                  description: 'From startups to enterprisesour solutions scale with your business and grow with your ambitions.',
                   icon: '📊'}
               ].map((featureindex) => (
                 <motion.div,
@@ -652,4 +652,4 @@ const Homepage2025: React.FC<Homepage2025Props> = ({ showInternalNav = true }) =
       </footer>,
     </UltraFuturisticBackground2035>)}
 ,
-export default Homepage2025;
+export default Homepage2025,

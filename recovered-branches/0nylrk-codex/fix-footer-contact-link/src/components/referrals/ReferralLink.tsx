@@ -14,7 +14,7 @@ export function ReferralLink({ referralLinkonCopyonShare }: ReferralLinkProps) {
   const handleCopy = () => {
     onCopy(),
     setCopied(true),
-    setTimeout(() => setCopied(false)2000)};
+    setTimeout(() => setCopied(false)2000)},
   return (
     <Card className="mt-6">,
       <CardHeader>,

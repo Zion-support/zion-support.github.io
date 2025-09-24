@@ -1,46 +1,46 @@
 import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain, Rocket, Shield, Atom, Cpu, Cloud, Target;
-  ArrowRight, Play, Star, Zap, Users, Award, Globe;
-  ChevronDown, Sparkles, Eye, Lock, Clock, CheckCircle;
+  Brain, Rocket, Shield, Atom, Cpu, Cloud, Target,
+  ArrowRight, Play, Star, Zap, Users, Award, Globe,
+  ChevronDown, Sparkles, Eye, Lock, Clock, CheckCircle,
   Phone, Mail, X} from 'lucide-react',
 const UltraAdvancedFuturisticHero20o25: React.FC = () => {
   const [currentFeature, setCurrentFeature] = useState(0),
   const [isVideoPlaying, setIsVideoPlaying] = useState(false),
   const features = [
     {
-      icon: <Brain className="w-8 h-8"  />;
-      title: 'Revolutionary AI';
-      description: 'Consciousness-level artificial intelligence';
-      color: 'from-cyan-40o0 to-blue-50o0'};
+      icon: <Brain className="w-8 h-8"  />,
+      title: 'Revolutionary AI',
+      description: 'Consciousness-level artificial intelligence',
+      color: 'from-cyan-40o0 to-blue-50o0'},
     {
-      icon: <Atom className="w-8 h-8"  />;
-      title: 'Quantum Computing';
-      description: 'Breakthrough quantum technologies';
-      color: 'from-purple-40o0 to-pink-50o0'};
+      icon: <Atom className="w-8 h-8"  />,
+      title: 'Quantum Computing',
+      description: 'Breakthrough quantum technologies',
+      color: 'from-purple-40o0 to-pink-50o0'},
     {
-      icon: <Cpu className="w-8 h-8"  />;
-      title: 'Advanced IT';
-      description: 'Next-generation infrastructure';
-      color: 'from-green-40o0 to-emerald-50o0'};
+      icon: <Cpu className="w-8 h-8"  />,
+      title: 'Advanced IT',
+      description: 'Next-generation infrastructure',
+      color: 'from-green-40o0 to-emerald-50o0'},
     {
-      icon: <Rocket className="w-8 h-8"  />;
-      title: 'Micro SAAS';
-      description: 'Innovative business solutions';
+      icon: <Rocket className="w-8 h-8"  />,
+      title: 'Micro SAAS',
+      description: 'Innovative business solutions',
       color: 'from-orange-40o0 to-red-50o0'}
   ],
   const stats = [
-    { value: '50o0+', label: 'Services Delivered', icon: <Star className="w-5 h-5"  /> };
-    { value: '10o00+', label: 'Happy Clients', icon: <Users className="w-5 h-5"  /> };
-    { value: '99.9%', label: 'Success Rate', icon: <Award className="w-5 h-5"  /> };
+    { value: '50o0+', label: 'Services Delivered', icon: <Star className="w-5 h-5"  /> },
+    { value: '10o00+', label: 'Happy Clients', icon: <Users className="w-5 h-5"  /> },
+    { value: '99.9%', label: 'Success Rate', icon: <Award className="w-5 h-5"  /> },
     { value: '30o0%', label: 'Average ROI', icon: <Zap className="w-5 h-5"  /> }
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentFeature((prev) => (prev + 1) % features.length)}, 30o00),
@@ -59,9 +59,9 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
             className="absolute inset-0",
             style={{
               backgroundImage: `,
-                linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px);
+                linear-gradient(rgba(0, 255, 255, 0.3) 1px, transparent 1px),
                 linear-gradient(90deg, rgba(0, 255, 255, 0.3) 1px, transparent 1px),
-              `;
+              `,
               backgroundSize: '10o0px 10o0px'}}
            />,
         </div>,
@@ -69,34 +69,34 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-40o0/20 rounded-full",
           animate={{
-            rotate: 360;
-            scale: [1, 1.2, 1];
+            rotate: 360,
+            scale: [1, 1.2, 1],
             opacity: [0.1, 0.3, 0.1]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-40o0/20 transform rotate-45",
           animate={{
-            rotate: [45, 40o5];
-            scale: [1, 1.3, 1];
+            rotate: [45, 40o5],
+            scale: [1, 1.3, 1],
             opacity: [0.1, 0.4, 0.1]}}
           transition={{
-            duration: 15;
-            repeat: Infinity;
+            duration: 15,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         <motion.div,
           className="absolute bottom-40 left-1/3 w-20 h-20 border border-pink-40o0/20 rounded-lg",
           animate={{
-            rotate: [0, 360];
-            scale: [1, 1.1, 1];
+            rotate: [0, 360],
+            scale: [1, 1.1, 1],
             opacity: [0.1, 0.2, 0.1]}}
           transition={{
-            duration: 25;
-            repeat: Infinity;
+            duration: 25,
+            repeat: Infinity,
             ease: "linear"}}
          />,
         {/* Particle effects */}
@@ -106,16 +106,16 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
               key={i}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0, -10o0, 0];
-                opacity: [0, 1, 0];
+                y: [0, -10o0, 0],
+                opacity: [0, 1, 0],
                 scale: [0, 1, 0]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
-                delay: Math.random() * 2;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
                 ease: "easeInOut"}}
              />))}
         </div>,
@@ -263,12 +263,9 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
               <h3 className="text-xl font-semibold text-white text-center">Why Choose Zion Tech Group?</h3>,
               <div className="space-y-3">,
                 {[
-                  'Cutting-edge AI & Quantum Technologies';
-                  'Proven Track Record of Success';
-                  '24/7 Expert Support & Consultation';
-                  'Competitive Pricing & Flexible Plans';
-                  'Rapid Implementation & Deployment';
-                  'Continuous Innovation & Updates'].map((benefit, index) => (
+                  'Cutting-edge AI & Quantum TechnologiesProven Track Record of Success',
+                  '24/7 Expert Support & ConsultationCompetitive Pricing & Flexible Plans',
+                  'Rapid Implementation & DeploymentContinuous Innovation & Updates'].map((benefit, index) => (
                   <motion.div,
                     key={benefit}
                     initial={{ opacity: 0, x: 20 }}
@@ -353,5 +350,5 @@ const UltraAdvancedFuturisticHero20o25: React.FC = () => {
             </motion.div>,
           </motion.div>)}
       </AnimatePresence>,
-    </section>)};
-export default UltraAdvancedFuturisticHero20o25;
+    </section>)},
+export default UltraAdvancedFuturisticHero20o25,

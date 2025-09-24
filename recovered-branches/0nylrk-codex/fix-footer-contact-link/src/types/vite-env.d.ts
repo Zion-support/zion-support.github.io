@@ -30,5 +30,5 @@ declare var process: {
   env: {
     [key: string]: string | undefined,
     NODE_ENV: 'development' | 'production' | 'test',
-    PORT?: string};
-};
+    PORT?: string},
+},

@@ -1,292 +1,280 @@
 export const real20o29ServiceAdditions = [
   {
-    id: 'ai-email-responder-pro';
-    name: 'AI Email Responder Pro';
-    tagline: 'Auto-triage and respond to routine emails with guardrails';
-    price: '$69';
-    period: '/month';
+    id: 'ai-email-responder-pro',
+    name: 'AI Email Responder Pro',
+    tagline: 'Auto-triage and respond to routine emails with guardrails',
+    price: '$69',
+    period: '/month',
     description:,
-      'Autonomously drafts and sends replies for common inquiries, routes high-priority items, and summarizes threads. Integrates with Gmail, Outlook, and helpdesks with policy guardrails.';
+      'Autonomously drafts and sends replies for common inquiries, routes high-priority items, and summarizes threads. Integrates with Gmail, Outlook, and helpdesks with policy guardrails.',
     features: [
-      'Intent detection and auto-reply templates';
-      'Priority triage and SLA routing';
-      'PII redaction and safety guardrails';
-      'CRM/helpdesk sync (HubSpot, Zendesk)';
-      'Weekly insights and KPI dashboard';
-    ];
-    popular: true;
-    icon: '📧';
-    color: 'from-cyan-50o0 to-blue-60o0';
-    textColor: 'text-cyan-40o0';
-    link: 'https://ziontechgroup.com/services/ai-email-responder-pro';
+      'Intent detection and auto-reply templatesPriority triage and SLA routing',
+      'PII redaction and safety guardrailsCRM/helpdesk sync (HubSpot, Zendesk)',
+      'Weekly insights and KPI dashboard',
+    ],
+    popular: true,
+    icon: '📧',
+    color: 'from-cyan-50o0 to-blue-60o0',
+    textColor: 'text-cyan-40o0',
+    link: 'https://ziontechgroup.com/services/ai-email-responder-pro',
     marketPosition: ,
-      'Comparable to Superhuman AI and Gmail add-ons, adds policy guardrails and SLA routing.';
-    targetAudience: 'SMBs, agencies, support teams';
-    trialDays: 14;
-    setupTime: '20 minutes';
-    category: 'AI & Data';
-    realService: true;
-    technology: ['OpenAI/Groq', 'Gmail/Outlook APIs', 'Next.js', 'PostgreSQL'];
-    integrations: ['Gmail', 'Outlook', 'HubSpot', 'Zendesk', 'Slack'];
-    useCases: ['Customer support replies', 'Lead responses', 'Internal triage'];
-    roi: 'Reduce response time by 70%, automate 40–60% of volume.';
-    competitors: ['Superhuman AI', 'Front', 'Zendesk macros'];
-    marketSize: '$5B+ email productivity';
-    growthRate: '20% CAGR';
-    variant: 'ai-futuristic';
+      'Comparable to Superhuman AI and Gmail add-ons, adds policy guardrails and SLA routing.',
+    targetAudience: 'SMBs, agencies, support teams',
+    trialDays: 14,
+    setupTime: '20 minutes',
+    category: 'AI & Data',
+    realService: true,
+    technology: ['OpenAI/GroqGmail/Outlook APIs', 'Next.jsPostgreSQL'],
+    integrations: ['GmailOutlook', 'HubSpotZendesk', 'Slack'],
+    useCases: ['Customer support repliesLead responses', 'Internal triage'],
+    roi: 'Reduce response time by 70%, automate 40–60% of volume.',
+    competitors: ['Superhuman AIFront', 'Zendesk macros'],
+    marketSize: '$5B+ email productivity',
+    growthRate: '20% CAGR',
+    variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
     implementationDetails:,
-      'OAuth connectors, reply template engine, safety filters, and analytics.';
-    launchDate: '20o29-0o1-10';
-    customers: 120;
-    rating: 4.7;
-    reviews: 64;
-  };
+      'OAuth connectors, reply template engine, safety filters, and analytics.',
+    launchDate: '20o29-0o1-10',
+    customers: 120,
+    rating: 4.7,
+    reviews: 64
+  },
   {
-    id: 'mobile-first-surveys';
-    name: 'Mobile-First Surveys';
-    tagline: 'Beautiful surveys with real-time analytics';
-    price: '$39';
-    period: '/month';
+    id: 'mobile-first-surveys',
+    name: 'Mobile-First Surveys',
+    tagline: 'Beautiful surveys with real-time analytics',
+    price: '$39',
+    period: '/month',
     description:,
-      'Create responsive surveys optimized for phones. Conditional logic, NPS/CSAT templates, and export to sheets/warehouse.';
+      'Create responsive surveys optimized for phones. Conditional logic, NPS/CSAT templates, and export to sheets/warehouse.',
     features: [
-      'Responsive builder and themes';
-      'Conditional logic and branching';
-      'NPS/CSAT library';
-      'Webhook and Zapier integrations';
-      'Real-time analytics and CSV/BigQuery export';
-    ];
-    popular: false;
-    icon: '📱';
-    color: 'from-purple-50o0 to-pink-60o0';
-    textColor: 'text-purple-30o0';
-    link: 'https://ziontechgroup.com/services/mobile-first-surveys';
+      'Responsive builder and themesConditional logic and branching',
+      'NPS/CSAT libraryWebhook and Zapier integrations',
+      'Real-time analytics and CSV/BigQuery export',
+    ],
+    popular: false,
+    icon: '📱',
+    color: 'from-purple-50o0 to-pink-60o0',
+    textColor: 'text-purple-30o0',
+    link: 'https://ziontechgroup.com/services/mobile-first-surveys',
     marketPosition: ,
-      'Comparable to Typeform/Tally, simpler pricing and better mobile UX.';
-    targetAudience: 'Product and marketing teams';
-    trialDays: 14;
-    setupTime: '10 minutes';
-    category: 'Developer Tools';
-    realService: true;
-    technology: ['Next.js', 'Tailwind', 'PostgreSQL'];
-    integrations: ['Zapier', 'Make', 'Google Sheets', 'Slack'];
-    useCases: ['Product feedback', 'Onboarding', 'NPS campaigns'];
-    roi: 'Boost response rates by 20–40% vs. desktop-first forms.';
-    competitors: ['Typeform', 'Tally', 'SurveyMonkey'];
-    marketSize: '$3B+ surveys';
-    growthRate: '15% CAGR';
-    variant: 'ai-futuristic';
+      'Comparable to Typeform/Tally, simpler pricing and better mobile UX.',
+    targetAudience: 'Product and marketing teams',
+    trialDays: 14,
+    setupTime: '10 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next.jsTailwind', 'PostgreSQL'],
+    integrations: ['ZapierMake', 'Google SheetsSlack'],
+    useCases: ['Product feedbackOnboarding', 'NPS campaigns'],
+    roi: 'Boost response rates by 20–40% vs. desktop-first forms.',
+    competitors: ['TypeformTally', 'SurveyMonkey'],
+    marketSize: '$3B+ surveys',
+    growthRate: '15% CAGR',
+    variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
     implementationDetails:,
-      'Schema-driven form renderer, analytics, and exports.';
-    launchDate: '20o29-0o1-22';
-    customers: 80;
-    rating: 4.6;
-    reviews: 41;
-  };
+      'Schema-driven form renderer, analytics, and exports.',
+    launchDate: '20o29-0o1-22',
+    customers: 80,
+    rating: 4.6,
+    reviews: 41
+  },
   {
-    id: 'affiliate-tracking-hub';
-    name: 'Affiliate Tracking Hub';
-    tagline: 'Cross-device attribution and automated payouts';
-    price: '$129';
-    period: '/month';
+    id: 'affiliate-tracking-hub',
+    name: 'Affiliate Tracking Hub',
+    tagline: 'Cross-device attribution and automated payouts',
+    price: '$129',
+    period: '/month',
     description:,
-      'Create referral links, track multi-touch attribution, and automate payouts via Stripe/PayPal. Anti-fraud heuristics included.';
+      'Create referral links, track multi-touch attribution, and automate payouts via Stripe/PayPal. Anti-fraud heuristics included.',
     features: [
-      'Custom referral links and coupons';
-      'Attribution across devices';
-      'Stripe/PayPal payouts';
-      'Fraud detection heuristics';
-      'Partner portal and reports';
-    ];
-    popular: true;
-    icon: '🔗';
-    color: 'from-emerald-50o0 to-teal-60o0';
-    textColor: 'text-emerald-30o0';
-    link: 'https://ziontechgroup.com/services/affiliate-tracking-hub';
+      'Custom referral links and couponsAttribution across devices',
+      'Stripe/PayPal payoutsFraud detection heuristics',
+      'Partner portal and reports',
+    ],
+    popular: true,
+    icon: '🔗',
+    color: 'from-emerald-50o0 to-teal-60o0',
+    textColor: 'text-emerald-30o0',
+    link: 'https://ziontechgroup.com/services/affiliate-tracking-hub',
     marketPosition: ,
-      'Comparable to PartnerStack/Impact, focuses on SMB simplicity and compliance.';
-    targetAudience: 'E-commerce, SaaS, marketplaces';
-    trialDays: 14;
-    setupTime: '45 minutes';
-    category: 'Developer Tools';
-    realService: true;
-    technology: ['Next.js', 'PostgreSQL', 'Stripe'];
-    integrations: ['Stripe', 'PayPal', 'Shopify', 'WooCommerce'];
-    useCases: ['Affiliate programs', 'Ambassador campaigns'];
-    roi: 'Increase partner revenue by 10–25% with better attribution.';
-    competitors: ['PartnerStack', 'Impact'];
-    marketSize: '$8B+ affiliate software';
-    growthRate: '12% CAGR';
-    variant: 'analytics-futuristic';
+      'Comparable to PartnerStack/Impact, focuses on SMB simplicity and compliance.',
+    targetAudience: 'E-commerce, SaaS, marketplaces',
+    trialDays: 14,
+    setupTime: '45 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next.jsPostgreSQL', 'Stripe'],
+    integrations: ['StripePayPal', 'ShopifyWooCommerce'],
+    useCases: ['Affiliate programsAmbassador campaigns'],
+    roi: 'Increase partner revenue by 10–25% with better attribution.',
+    competitors: ['PartnerStackImpact'],
+    marketSize: '$8B+ affiliate software',
+    growthRate: '12% CAGR',
+    variant: 'analytics-futuristic',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
     implementationDetails:,
-      'Visitor identity stitching, cookie/UTM tracking, payouts.';
-    launchDate: '20o29-0o2-0o4';
-    customers: 60;
-    rating: 4.6;
-    reviews: 38;
-  };
+      'Visitor identity stitching, cookie/UTM tracking, payouts.',
+    launchDate: '20o29-0o2-0o4',
+    customers: 60,
+    rating: 4.6,
+    reviews: 38
+  },
   {
-    id: 'smb-website-analytics';
-    name: 'SMB Website Analytics';
-    tagline: 'Privacy-first analytics for non-technical teams';
-    price: '$19';
-    period: '/month';
+    id: 'smb-website-analytics',
+    name: 'SMB Website Analytics',
+    tagline: 'Privacy-first analytics for non-technical teams',
+    price: '$19',
+    period: '/month',
     description:,
-      'Track traffic, top pages, conversions, and sources with simple dashboards. Cookie-less, GDPR-friendly.';
+      'Track traffic, top pages, conversions, and sources with simple dashboards. Cookie-less, GDPR-friendly.',
     features: [
-      'Pageviews and conversions';
-      'Top sources and campaigns';
-      'Goals and funnels';
-      'Email/Slack weekly report';
-      'CSV export';
-    ];
-    popular: false;
-    icon: '📈';
-    color: 'from-blue-50o0 to-indigo-60o0';
-    textColor: 'text-blue-30o0';
-    link: 'https://ziontechgroup.com/services/smb-website-analytics';
+      'Pageviews and conversionsTop sources and campaigns',
+      'Goals and funnelsEmail/Slack weekly report',
+      'CSV export',
+    ],
+    popular: false,
+    icon: '📈',
+    color: 'from-blue-50o0 to-indigo-60o0',
+    textColor: 'text-blue-30o0',
+    link: 'https://ziontechgroup.com/services/smb-website-analytics',
     marketPosition: ,
-      'Comparable to Plausible/Simple Analytics, adds non-technical UX and goal templates.';
-    targetAudience: 'SMBs, agencies';
-    trialDays: 14;
-    setupTime: '10 minutes';
-    category: 'Developer Tools';
-    realService: true;
-    technology: ['Next.js', 'Clickhouse/PostgreSQL'];
-    integrations: ['Slack', 'Google Ads', 'Facebook Ads'];
-    useCases: ['Simple analytics', 'Campaign tracking', 'Landing page testing'];
-    roi: 'Improve conversion rate 5–15% with insights.';
-    competitors: ['Plausible', 'Simple Analytics'];
-    marketSize: '$2B+ web analytics';
-    growthRate: '10% CAGR';
-    variant: 'analytics-futuristic';
+      'Comparable to Plausible/Simple Analytics, adds non-technical UX and goal templates.',
+    targetAudience: 'SMBs, agencies',
+    trialDays: 14,
+    setupTime: '10 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next.jsClickhouse/PostgreSQL'],
+    integrations: ['SlackGoogle Ads', 'Facebook Ads'],
+    useCases: ['Simple analyticsCampaign tracking', 'Landing page testing'],
+    roi: 'Improve conversion rate 5–15% with insights.',
+    competitors: ['PlausibleSimple Analytics'],
+    marketSize: '$2B+ web analytics',
+    growthRate: '10% CAGR',
+    variant: 'analytics-futuristic',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
-    implementationDetails: 'Client-side tracker, ingestion API, and dashboard.';
-    launchDate: '20o29-0o2-12';
-    customers: 95;
-    rating: 4.5;
-    reviews: 52;
-  };
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Client-side tracker, ingestion API, and dashboard.',
+    launchDate: '20o29-0o2-12',
+    customers: 95,
+    rating: 4.5,
+    reviews: 52
+  },
   {
-    id: 'it-helpdesk-saas';
-    name: 'IT Helpdesk SaaS';
-    tagline: 'Ticketing, routing, and knowledge base for MSPs';
-    price: '$59';
-    period: '/agent/month';
+    id: 'it-helpdesk-saas',
+    name: 'IT Helpdesk SaaS',
+    tagline: 'Ticketing, routing, and knowledge base for MSPs',
+    price: '$59',
+    period: '/agent/month',
     description:,
-      'Modern ITSM with email ingestion, SLA routing, asset links, and a client portal. Lightweight and fast.';
+      'Modern ITSM with email ingestion, SLA routing, asset links, and a client portal. Lightweight and fast.',
     features: [
-      'Email-to-ticket and auto-assign';
-      'SLA policies and escalations';
-      'Knowledge base and portal';
-      'Asset links and comments';
-      'Reports and exports';
-    ];
-    popular: true;
-    icon: '🛠️';
-    color: 'from-slate-50o0 to-gray-60o0';
-    textColor: 'text-slate-30o0';
-    link: 'https://ziontechgroup.com/services/it-helpdesk-saas';
+      'Email-to-ticket and auto-assignSLA policies and escalations',
+      'Knowledge base and portalAsset links and comments',
+      'Reports and exports',
+    ],
+    popular: true,
+    icon: '🛠️',
+    color: 'from-slate-50o0 to-gray-60o0',
+    textColor: 'text-slate-30o0',
+    link: 'https://ziontechgroup.com/services/it-helpdesk-saas',
     marketPosition:,
-      'Simpler alternative to Freshservice/Jira Service Management for MSPs.';
-    targetAudience: 'IT service providers, MSPs';
-    trialDays: 14;
-    setupTime: '1 hour';
-    category: 'Cloud & FinOps';
-    realService: true;
-    technology: ['Next.js', 'Node', 'PostgreSQL'];
-    integrations: ['Email', 'Slack', 'Okta'];
-    useCases: ['IT support', 'SLA routing', 'Self-service'];
-    roi: 'Reduce resolution time by 25–40% with routing and KB.';
-    competitors: ['Freshservice', 'Jira Service Management'];
-    marketSize: '$10B+ ITSM';
-    growthRate: '12% CAGR';
-    variant: 'monitoring-futuristic';
+      'Simpler alternative to Freshservice/Jira Service Management for MSPs.',
+    targetAudience: 'IT service providers, MSPs',
+    trialDays: 14,
+    setupTime: '1 hour',
+    category: 'Cloud & FinOps',
+    realService: true,
+    technology: ['Next.jsNode', 'PostgreSQL'],
+    integrations: ['EmailSlack', 'Okta'],
+    useCases: ['IT supportSLA routing', 'Self-service'],
+    roi: 'Reduce resolution time by 25–40% with routing and KB.',
+    competitors: ['FreshserviceJira Service Management'],
+    marketSize: '$10B+ ITSM',
+    growthRate: '12% CAGR',
+    variant: 'monitoring-futuristic',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
-    implementationDetails: 'Email ingestion, SLA engine, and KB modules.';
-    launchDate: '20o29-0o2-20';
-    customers: 44;
-    rating: 4.6;
-    reviews: 29;
-  };
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Email ingestion, SLA engine, and KB modules.',
+    launchDate: '20o29-0o2-20',
+    customers: 44,
+    rating: 4.6,
+    reviews: 29
+  },
   {
-    id: 'returns-manager';
-    name: 'E‑commerce Returns Manager';
-    tagline: 'Self-serve returns, labels, and status tracking';
-    price: '$79';
-    period: '/month';
+    id: 'returns-manager',
+    name: 'E‑commerce Returns Manager',
+    tagline: 'Self-serve returns, labels, and status tracking',
+    price: '$79',
+    period: '/month',
     description:,
-      'Automate return requests, print labels, and track statuses. Rules for conditions and refunds with store sync.';
+      'Automate return requests, print labels, and track statuses. Rules for conditions and refunds with store sync.',
     features: [
-      'Return portal and labels';
-      'Status emails and webhooks';
-      'Rules and approvals';
-      'Inventory sync';
-      'Analytics and exports';
-    ];
-    popular: false;
-    icon: '📦';
-    color: 'from-rose-50o0 to-red-60o0';
-    textColor: 'text-rose-30o0';
-    link: 'https://ziontechgroup.com/services/returns-manager';
-    marketPosition: 'Simpler SMB alternative to Loop/Returnly.';
-    targetAudience: 'DTC e-commerce brands';
-    trialDays: 14;
-    setupTime: '45 minutes';
-    category: 'Developer Tools';
-    realService: true;
-    technology: ['Next.js', 'Shopify/Woo APIs'];
-    integrations: ['Shopify', 'WooCommerce', 'Shippo'];
-    useCases: ['Reduce support cost', 'Improve CX'];
-    roi: 'Reduce return handling time 50%+ with automation.';
-    competitors: ['Loop', 'Returnly'];
-    marketSize: '$1B+ returns software';
-    growthRate: '14% CAGR';
-    variant: 'ai-futuristic';
+      'Return portal and labelsStatus emails and webhooks',
+      'Rules and approvalsInventory sync',
+      'Analytics and exports',
+    ],
+    popular: false,
+    icon: '📦',
+    color: 'from-rose-50o0 to-red-60o0',
+    textColor: 'text-rose-30o0',
+    link: 'https://ziontechgroup.com/services/returns-manager',
+    marketPosition: 'Simpler SMB alternative to Loop/Returnly.',
+    targetAudience: 'DTC e-commerce brands',
+    trialDays: 14,
+    setupTime: '45 minutes',
+    category: 'Developer Tools',
+    realService: true,
+    technology: ['Next.jsShopify/Woo APIs'],
+    integrations: ['ShopifyWooCommerce', 'Shippo'],
+    useCases: ['Reduce support costImprove CX'],
+    roi: 'Reduce return handling time 50%+ with automation.',
+    competitors: ['LoopReturnly'],
+    marketSize: '$1B+ returns software',
+    growthRate: '14% CAGR',
+    variant: 'ai-futuristic',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-    realImplementation: true;
-    implementationDetails: 'Return rules engine, label API, and store sync.';
-    launchDate: '20o29-0o3-0o3';
-    customers: 27;
-    rating: 4.5;
-    reviews: 21;
-  };
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+    realImplementation: true,
+    implementationDetails: 'Return rules engine, label API, and store sync.',
+    launchDate: '20o29-0o3-0o3',
+    customers: 27,
+    rating: 4.5,
+    reviews: 21
+  },
 ],

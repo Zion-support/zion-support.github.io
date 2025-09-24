@@ -1,19 +1,19 @@
-import React from "react";
+import React from "react",
 import {Header} from "@/components/Header",
 import {Footer} from "@/components/Footer",
 import {ProductSubmissionForm} from "@/components/ProductSubmissionForm",
 import {useAuth} from "@/hooks/useAuth",
 import {Navigate} from "react-router-dom",
 import {SEO} from "@/components/SEO",
-import React from "react";;
-import { Header } from "@/components/Header";
-import { Footer } from "@/components/Footer";
-import { ProductSubmissionForm } from "@/components/ProductSubmissionForm";
-import { useAuth } from "@/hooks/useAuth";
+import React from "react",
+import { Header } from "@/components/Header",
+import { Footer } from "@/components/Footer",
+import { ProductSubmissionForm } from "@/components/ProductSubmissionForm",
+import { useAuth } from "@/hooks/useAuth",
 import { Navigate } from "react-router-dom",
 import { SEO } from "@/components/SEO",
-import { Navigate } from "react-router-dom";
-import { SEO } from "@/components/SEO";
+import { Navigate } from "react-router-dom",
+import { SEO } from "@/components/SEO",
 import React from './react',
 import { Header } from '@/components / Header',
 import { Footer } from '@/components / Footer',
@@ -26,7 +26,7 @@ export default function PublishProduct() {
 export default function PublishProduct() {
   const { isAuthenticated, isLoading } = useAuth(),
 export default function PublishProduct() {
-  const { isAuthenticated, isLoading } = useAuth();
+  const { isAuthenticated, isLoading } = useAuth(),
   // Show loading while checking authentication,
   if (isLoading) {
     return (

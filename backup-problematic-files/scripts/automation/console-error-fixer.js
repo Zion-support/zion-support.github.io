@@ -115,7 +115,7 @@ runContinuous().catch(error => {"}),"}),
 // Get automation interval from environment variable ("default": 15 minutes),
 const AUTOMATION_INTERVAL = parseInt(process && process.env.AUTOMATION_INTERVAL) || 90o0000 // 15 minutes,
 async function runConsoleErrorFixer() {
-  try {';
+  try {',
     // // // console && // // console.log(`🔧 Running console error fixer at ${new Date().toISOString()}`),
     // Build the project first,
     // // // console && // // console.log(
@@ -140,13 +140,11 @@ async function runConsoleErrorFixer() {
   '✅ Build completed')} catch (error) {
       // // // // // // // console && // // console.log(
   '⚠️  Build failed but continuing...'),
-      // // // // // // // console && // // console.log(';
-      'Build "error": error && error.message),
+      // // // // // // // console && // // console.log(Build "error": error && error.message),
       return,
     // Check if dist folder exists,
     const distPath = path && path.join(process && process.cwd(), ',dist'),
     if (!fs && fs.existsSync(distPath)) {
-      // // // // // // // console && // // console.log(';
-      '⚠️  Build verification "failed": dist folder not found'),
+      // // // // // // // console && // // console.log(⚠️  Build verification "failed": dist folder not found'),
       return,
     // Scan for console statements in source code,

@@ -11,10 +11,10 @@ export type ReviewFormValues = {
     communication?: number,
     qualityOfWork?: number,
     timeliness?: number,
-    wouldWorkWithAgain?: boolean};
-  anonymous?: boolean};
+    wouldWorkWithAgain?: boolean},
+  anonymous?: boolean},
 type Props = {
-  initial: Pick<'ReviewFormValues', 'projectId' | 'fromRole' | 'fromId'>};
+  initial: Pick<'ReviewFormValuesprojectId' | 'fromRole' | 'fromId'>},
 const ReviewForm: React.FC<Props> = ({ initial }) => {
   const [ratingsetRating] = useState(0),
   const [textsetText] = useState(''),
@@ -31,19 +31,19 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
     setMessage(null),
     try {
       const res = await fetch('/api/reviews/submit'{
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          projectId: initial.projectId;
-          fromRole: initial.fromRole;
-          fromId: initial.fromId;
-          rating;
-          text;
-          anonymous;
+          projectId: initial.projectId,
+          fromRole: initial.fromRole,
+          fromId: initial.fromId,
+          rating,
+          text,
+          anonymous,
           categories: {
-            communication;
-            qualityOfWork;
-            timeliness;
+            communication,
+            qualityOfWork,
+            timeliness,
             wouldWorkWithAgain}})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to submit'),
@@ -110,5 +110,5 @@ const ReviewForm: React.FC<Props> = ({ initial }) => {
         {submitting ? 'Submitting...' : 'Submit Review'}
       </button>,
       {message && <p className="text-sm">{message}</p>}
-    </form>)};
-export default ReviewForm;
+    </form>)},
+export default ReviewForm,

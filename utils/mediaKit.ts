@@ -1,37 +1,37 @@
 
-};
+},
 }
 ,
 export function buildLegalDocs(kind: MediaBundle): MediaAsset[] {
   const base: MediaAsset[] = [
     {
-      path: '';
-      filename: 'legal / terms - of - use.md';
-      type: 'text';
-      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`;
-    };
+      path: '',
+      filename: 'legal / terms - of - use.md',
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\nUsage may be restricted in certain regions. Replace with localized guidance.`
+    },
 ],
   const web3Extras: MediaAsset[] = [
     {
-      path: '';
-      filename: 'legal / privacy - policy.md';
-      type: 'text';
-      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`;
-    };
+      path: '',
+      filename: 'legal / privacy - policy.md',
+      type: 'text',
+      content: `# Privacy Policy\n\n_we respect your privacy. Replace with counsel - approved language.`
+    },
     {
-      path: '';
-      filename: 'legal / jurisdictional - disclosures.md';
-      type: 'text';
-      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`;
-    };
+      path: '',
+      filename: 'legal / jurisdictional - disclosures.md',
+      type: 'text',
+      content: `# Jurisdictional Disclosures\n\n_usage may be restricted in certain regions. Replace with localized guidance.`
+    },
   ],
   const web3Extras: MediaAsset[] = [
     {
-      path: '';
+      path: ''
   ],
 export function buildPressRelease(
   type: PressReleaseType,
-  type: PressReleaseType;
+  type: PressReleaseType,
   params: {
     companyName: string>>>>>>> cursor/fix-website-loading-errors-and-merge-6662,
     date: string,
@@ -39,7 +39,7 @@ export function buildPressRelease(
     tokenName?: string,
     anchors?: string[]}
 ): string {
-  const header = `${params && params.companyName} ${titleCase(type && type.replace('-', ' '))}`,
+  const header = `${params && params.companyName} ${titleCase(type && type.replace('- '))}`,
   const boilerplate = `${params && params.companyName} builds AI agents for Web3 enterprises. Learn more at https: //zion && zion.app`,
   if (type === 'seed-round') {
     return `FOR IMMEDIATE RELEASE\nDate: ${params && params.date}\n\n${header}\n\n${params && params.companyName} announces a seed round of ${params && params.raiseAmount ?? '[Amount]'} led by [Lead]. Funds will accelerate product and ecosystem growth.\n\nQuotes: \n- CEO: \"We are thrilled...\"\n\nAbout ${params && params.companyName}:\n${boilerplate}`}
@@ -86,19 +86,19 @@ function build_timeline() {
     new Date (d.getFullYear (), d.get_month (), d.get_date () + days),
   const fmt = (d: Date) =>: any d.toISOString ().substring (0, 10),
   return [
-    { label: 'Week 1: Closed Beta Invite', date: fmt (add_days (start_date, 0)) };
-    { label: 'Week 2: ZionGPT Core Reveal', date: fmt (add_days (start_date, 7)) };
+    { label: 'Week 1: Closed Beta Invite', date: fmt (add_days (start_date, 0)) },
+    { label: 'Week 2: ZionGPT Core Reveal', date: fmt (add_days (start_date, 7)) },
     {
-      label: 'Week 3: Token Airdrop Snapshot';
-      date: fmt (add_days (start_date, 14));
-    };
-    { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) };
+      label: 'Week 3: Token Airdrop Snapshot',
+      date: fmt (add_days (start_date, 14)),
+    },
+    { label: 'Week 4: Zion Global Summit', date: fmt (add_days (start_date, 21)) },
   ],
 /**,
  * title_case - Function description,
  */,
 function title_case() {
   return s.replace (
-    /\w\S*/g;
+    /\w\S*/g,
     w => w.char_at (0).toUpperCase () + w.slice (1).toLowerCase ())}
 >>>>>>> origin/cursor/automate-test-improve-and-merge-code-20a4>>>>>>> d1459052ce02e16bd297172bbc6ba920af218e39>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-b9a5>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}})

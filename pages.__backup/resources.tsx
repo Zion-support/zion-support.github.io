@@ -3,166 +3,166 @@ import Link from 'next/link',
 export default function ResourcesPage() {
   const caseStudies = [
     {
-      id: 'ai-automation-manufacturing';
-      title: 'AI-Powered Manufacturing Automation';
-      company: 'Global Manufacturing Corp';
-      industry: 'Manufacturing';
-      results: '40% increase in production efficiency60% reduction in downtime';
+      id: 'ai-automation-manufacturing',
+      title: 'AI-Powered Manufacturing Automation',
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      results: '40% increase in production efficiency60% reduction in downtime',
       description:,
-        'How we implemented autonomous AI systems to revolutionize manufacturing processes.';
-    };
+        'How we implemented autonomous AI systems to revolutionize manufacturing processes.',
+    },
     {
-      id: 'content-generation-scale';
-      title: 'Scaling Content Generation 10x';
-      company: 'Digital Marketing Agency';
-      industry: 'Marketing';
-      results: '10x increase in content output85% improvement in engagement';
+      id: 'content-generation-scale',
+      title: 'Scaling Content Generation 10x',
+      company: 'Digital Marketing Agency',
+      industry: 'Marketing',
+      results: '10x increase in content output85% improvement in engagement',
       description:,
-        'Transforming content creation through autonomous AI systems.';
-    };
+        'Transforming content creation through autonomous AI systems.',
+    },
     {
-      id: 'cloud-infrastructure-optimization';
-      title: 'Cloud Infrastructure Optimization';
-      company: 'E-commerce Platform';
-      industry: 'Technology';
-      results: '50% reduction in cloud costs99.9% uptime achieved';
-      description: 'Building self-healingauto-scaling cloud infrastructure.';
-    };
+      id: 'cloud-infrastructure-optimization',
+      title: 'Cloud Infrastructure Optimization',
+      company: 'E-commerce Platform',
+      industry: 'Technology',
+      results: '50% reduction in cloud costs99.9% uptime achieved',
+      description: 'Building self-healingauto-scaling cloud infrastructure.'
+    },
   ],
   const whitepapers = [
     {
-      id: 'autonomous-systems-guide';
-      title: 'The Complete Guide to Autonomous Systems';
+      id: 'autonomous-systems-guide',
+      title: 'The Complete Guide to Autonomous Systems',
       description:,
-        'A comprehensive overview of autonomous technologyimplementation strategiesand best practices.';
-      downloadUrl: '#';
-      pages: '45';
-      category: 'Technology';
-    };
+        'A comprehensive overview of autonomous technologyimplementation strategiesand best practices.',
+      downloadUrl: '#',
+      pages: '45',
+      category: 'Technology'
+    },
     {
-      id: 'ai-ethics-framework';
-      title: 'AI Ethics Framework for Business';
+      id: 'ai-ethics-framework',
+      title: 'AI Ethics Framework for Business',
       description:,
-        'Establishing ethical guidelines for AI implementation in enterprise environments.';
-      downloadUrl: '#';
-      pages: '32';
-      category: 'Ethics';
-    };
+        'Establishing ethical guidelines for AI implementation in enterprise environments.',
+      downloadUrl: '#',
+      pages: '32',
+      category: 'Ethics'
+    },
     {
-      id: 'automation-roi-calculator';
-      title: 'Automation ROI Calculator Guide';
+      id: 'automation-roi-calculator',
+      title: 'Automation ROI Calculator Guide',
       description:,
-        'How to calculate and maximize return on investment for automation initiatives.';
-      downloadUrl: '#';
-      pages: '28';
-      category: 'Business';
-    };
+        'How to calculate and maximize return on investment for automation initiatives.',
+      downloadUrl: '#',
+      pages: '28',
+      category: 'Business'
+    },
     {
-      id: 'cloud-native-automation';
-      title: 'Cloud-Native Automation Strategies';
+      id: 'cloud-native-automation',
+      title: 'Cloud-Native Automation Strategies',
       description:,
-        'Best practices for building scalableresilient automation systems in the cloud.';
-      downloadUrl: '#';
-      pages: '38';
-      category: 'Technology';
-    };
+        'Best practices for building scalableresilient automation systems in the cloud.',
+      downloadUrl: '#',
+      pages: '38',
+      category: 'Technology'
+    },
     {
-      id: 'performance-optimization-guide';
-      title: 'Performance Optimization in AI Systems';
+      id: 'performance-optimization-guide',
+      title: 'Performance Optimization in AI Systems',
       description:,
-        'Comprehensive guide to optimizing AI model performance and system efficiency.';
-      downloadUrl: '#';
-      pages: '42';
-      category: 'Performance';
-    };
+        'Comprehensive guide to optimizing AI model performance and system efficiency.',
+      downloadUrl: '#',
+      pages: '42',
+      category: 'Performance'
+    },
     {
-      id: 'human-ai-collaboration';
-      title: 'Human-AI Collaboration Framework';
+      id: 'human-ai-collaboration',
+      title: 'Human-AI Collaboration Framework',
       description:,
-        'Designing effective collaboration between human workers and AI systems.';
-      downloadUrl: '#';
-      pages: '35';
-      category: 'Workplace';
-    };
+        'Designing effective collaboration between human workers and AI systems.',
+      downloadUrl: '#',
+      pages: '35',
+      category: 'Workplace'
+    },
   ],
   const tools = [
     {
-      id: 'automation-assessment';
-      title: 'Automation Readiness Assessment';
+      id: 'automation-assessment',
+      title: 'Automation Readiness Assessment',
       description:,
-        "Evaluate your organization's readiness for AI automation implementation.";
-      type: 'Interactive Tool';
-      estimatedTime: '15 minutes';
-    };
+        "Evaluate your organization's readiness for AI automation implementation.",
+      type: 'Interactive Tool',
+      estimatedTime: '15 minutes'
+    },
     {
-      id: 'ai-maturity-model';
-      title: 'AI Maturity Model';
+      id: 'ai-maturity-model',
+      title: 'AI Maturity Model',
       description:,
-        'Assess your current AI capabilities and plan your transformation journey.';
-      type: 'Framework';
-      estimatedTime: '30 minutes';
-    };
+        'Assess your current AI capabilities and plan your transformation journey.',
+      type: 'Framework',
+      estimatedTime: '30 minutes'
+    },
     {
-      id: 'performance-benchmark';
-      title: 'Performance Benchmarking Tool';
+      id: 'performance-benchmark',
+      title: 'Performance Benchmarking Tool',
       description:,
-        'Compare your automation performance against industry standards.';
-      type: 'Analytics Tool';
-      estimatedTime: '20 minutes';
-    };
+        'Compare your automation performance against industry standards.',
+      type: 'Analytics Tool',
+      estimatedTime: '20 minutes'
+    },
     {
-      id: 'cost-optimization-calculator';
-      title: 'Cost Optimization Calculator';
+      id: 'cost-optimization-calculator',
+      title: 'Cost Optimization Calculator',
       description:,
-        'Calculate potential cost savings from automation initiatives.';
-      type: 'Financial Tool';
-      estimatedTime: '25 minutes';
-    };
+        'Calculate potential cost savings from automation initiatives.',
+      type: 'Financial Tool',
+      estimatedTime: '25 minutes'
+    },
     {
-      id: 'security-assessment';
-      title: 'AI Security Assessment';
+      id: 'security-assessment',
+      title: 'AI Security Assessment',
       description:,
-        'Evaluate security risks and compliance requirements for AI systems.';
-      type: 'Security Tool';
-      estimatedTime: '35 minutes';
-    };
+        'Evaluate security risks and compliance requirements for AI systems.',
+      type: 'Security Tool',
+      estimatedTime: '35 minutes'
+    },
     {
-      id: 'scalability-planner';
-      title: 'Scalability Planning Tool';
-      description: 'Plan and design scalable automation architectures.';
-      type: 'Architecture Tool';
-      estimatedTime: '40 minutes';
-    };
+      id: 'scalability-planner',
+      title: 'Scalability Planning Tool',
+      description: 'Plan and design scalable automation architectures.',
+      type: 'Architecture Tool',
+      estimatedTime: '40 minutes'
+    },
   ],
   const additionalResources = [
     {
-      id: 'webinars';
-      title: 'Webinars & Events';
-      description: 'Live and recorded webinars on AI automation topics';
-      icon: '🎥';
-      color: 'from-blue-40o0 to-indigo-50o0';
-    };
+      id: 'webinars',
+      title: 'Webinars & Events',
+      description: 'Live and recorded webinars on AI automation topics',
+      icon: '🎥',
+      color: 'from-blue-40o0 to-indigo-50o0'
+    },
     {
-      id: 'templates';
-      title: 'Implementation Templates';
-      description: 'Ready-to-use templates for common automation scenarios';
-      icon: '📋';
-      color: 'from-green-40o0 to-teal-50o0';
-    };
+      id: 'templates',
+      title: 'Implementation Templates',
+      description: 'Ready-to-use templates for common automation scenarios',
+      icon: '📋',
+      color: 'from-green-40o0 to-teal-50o0'
+    },
     {
-      id: 'code-samples';
-      title: 'Code Samples & Libraries';
-      description: 'Open-source code examples and reusable components';
-      icon: '💻';
-      color: 'from-purple-40o0 to-pink-50o0';
-    };
+      id: 'code-samples',
+      title: 'Code Samples & Libraries',
+      description: 'Open-source code examples and reusable components',
+      icon: '💻',
+      color: 'from-purple-40o0 to-pink-50o0'
+    },
     {
-      id: 'training-materials';
-      title: 'Training Materials';
-      description: 'Educational content and learning resources';
-      icon: '🎓';
-      color: 'from-yellow-40o0 to-orange-50o0';
-    };
+      id: 'training-materials',
+      title: 'Training Materials',
+      description: 'Educational content and learning resources',
+      icon: '🎓',
+      color: 'from-yellow-40o0 to-orange-50o0'
+    },
   ],
   return (
     <>,

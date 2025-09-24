@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Social Media Scheduler | Zion Tech Group';
+  title: 'AI Social Media Scheduler | Zion Tech Group',
   description:,
-    'Intelligent social media scheduling with AI-powered content generation, optimal timing, and performance analytics. Grow your social presence 5x faster.';
-};
+    'Intelligent social media scheduling with AI-powered content generation, optimal timing, and performance analytics. Grow your social presence 5x faster.',
+},
 export default function AISocialSchedulerPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -40,10 +40,8 @@ export default function AISocialSchedulerPage() {
             title='AI Content Generation',
             description='Generate engaging posts, captions, and hashtags tailored to your brand voice and audience.',
             features={[
-              'Brand voice customization';
-              'Trending hashtag suggestions';
-              'Multi-platform optimization';
-              'Content calendar planning';
+              'Brand voice customizationTrending hashtag suggestions',
+              'Multi-platform optimizationContent calendar planning',
             ]}
           />,
           <FeatureCard
@@ -51,10 +49,8 @@ export default function AISocialSchedulerPage() {
             title='Optimal Timing',
             description='AI analyzes your audience behavior to find the perfect posting times for maximum engagement.',
             features={[
-              'Audience behavior analysis';
-              'Optimal posting time detection';
-              'Timezone optimization';
-              'Engagement prediction';
+              'Audience behavior analysisOptimal posting time detection',
+              'Timezone optimizationEngagement prediction',
             ]}
           />,
           <FeatureCard
@@ -62,10 +58,8 @@ export default function AISocialSchedulerPage() {
             title='Performance Analytics',
             description='Comprehensive analytics and insights to track performance and optimize your strategy.',
             features={[
-              'Real-time performance tracking';
-              'Engagement rate analysis';
-              'ROI measurement';
-              'Competitor benchmarking';
+              'Real-time performance trackingEngagement rate analysis',
+              'ROI measurementCompetitor benchmarking',
             ]}
           />,
           <FeatureCard
@@ -73,10 +67,8 @@ export default function AISocialSchedulerPage() {
             title='Visual Content Creation',
             description='AI-powered image and video generation for stunning social media visuals.',
             features={[
-              'AI image generation';
-              'Video content creation';
-              'Brand template library';
-              'Auto-resizing for platforms';
+              'AI image generationVideo content creation',
+              'Brand template libraryAuto-resizing for platforms',
             ]}
           />,
           <FeatureCard
@@ -84,10 +76,8 @@ export default function AISocialSchedulerPage() {
             title='Cross-Platform Management',
             description='Manage all your social media accounts from one unified dashboard.',
             features={[
-              'Facebook, Instagram, Twitter, LinkedIn';
-              'TikTok and YouTube support';
-              'Bulk posting capabilities';
-              'Platform-specific optimization';
+              'Facebook, Instagram, Twitter, LinkedInTikTok and YouTube support',
+              'Bulk posting capabilitiesPlatform-specific optimization',
             ]}
           />,
           <FeatureCard
@@ -95,10 +85,8 @@ export default function AISocialSchedulerPage() {
             title='Engagement Automation',
             description='Automatically respond to comments, mentions, and messages with AI-powered responses.',
             features={[
-              'Auto-reply to comments';
-              'Sentiment analysis';
-              'Crisis management alerts';
-              'Customer service integration';
+              'Auto-reply to commentsSentiment analysis',
+              'Crisis management alertsCustomer service integration',
             ]}
           />,
         </div>,
@@ -115,11 +103,9 @@ export default function AISocialSchedulerPage() {
             period='month',
             description='Perfect for small businesses and influencers',
             features={[
-              'Up to 5 social accounts';
-              '10o0 posts per month';
-              'Basic AI content generation';
-              'Standard analytics';
-              'Email support';
+              'Up to 5 social accounts10o0 posts per month',
+              'Basic AI content generationStandard analytics',
+              'Email support',
             ]}
             popular={false}
           />,
@@ -129,12 +115,9 @@ export default function AISocialSchedulerPage() {
             period='month',
             description='Ideal for growing businesses and agencies',
             features={[
-              'Up to 15 social accounts';
-              '50o0 posts per month';
-              'Advanced AI features';
-              'Detailed analytics & reporting';
-              'Priority support';
-              'Team collaboration';
+              'Up to 15 social accounts50o0 posts per month',
+              'Advanced AI featuresDetailed analytics & reporting',
+              'Priority supportTeam collaboration',
             ]}
             popular={true}
           />,
@@ -144,12 +127,9 @@ export default function AISocialSchedulerPage() {
             period='month',
             description='For large organizations and agencies',
             features={[
-              'Unlimited social accounts';
-              'Unlimited posts';
-              'Custom AI training';
-              'White-label solution';
-              '24/7 dedicated support';
-              'API access';
+              'Unlimited social accountsUnlimited posts',
+              'Custom AI trainingWhite-label solution',
+              '24/7 dedicated supportAPI access',
             ]}
             popular={false}
           />,
@@ -258,10 +238,10 @@ export default function AISocialSchedulerPage() {
     </div>)}
 ,
 function FeatureCard({
-  icon;
-  title;
-  description;
-  features;
+  icon,
+  title,
+  description,
+  features,
 }: {
   icon: string,
   title: string,
@@ -282,12 +262,12 @@ function FeatureCard({
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  name,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   name: string,
   price: string,
@@ -329,11 +309,11 @@ function PricingCard({
     </div>)}
 ,
 function TestimonialCard({
-  name;
-  role;
-  company;
-  content;
-  avatar;
+  name,
+  role,
+  company,
+  content,
+  avatar,
 }: {
   name: string,
   role: string,

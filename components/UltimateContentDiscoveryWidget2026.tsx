@@ -11,22 +11,22 @@ import {
   Star,
   Clock,
   Users,
-  TrendingUp;
-  ArrowRight;
-  Play;
-  BookOpen;
-  Zap;
-  Brain;
-  Rocket;
-  Globe;
-  ChevronDown;
-  ChevronUp;
-  X;
-  Video;
-  FileText;
-  Download;
-  Share2;
-  Heart;
+  TrendingUp,
+  ArrowRight,
+  Play,
+  BookOpen,
+  Zap,
+  Brain,
+  Rocket,
+  Globe,
+  ChevronDown,
+  ChevronUp,
+  X,
+  Video,
+  FileText,
+  Download,
+  Share2,
+  Heart,
   Bookmark} from 'lucide-react',
 import Link from 'next/link',
 const UltimateContentDiscoveryWidget20o26 = () => {
@@ -34,12 +34,12 @@ const UltimateContentDiscoveryWidget20o26 = () => {
   const [selectedCategorysetSelectedCategory] = useState('all'),
   const [isSearchingsetIsSearching] = useState(false),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: <BookOpen className="w-4 h-4"  /> };
-    { id: ''ai', 'name: 'AI 'Solutions', 'icon: <Zap className="w-4 h-4"  /> };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'icon: <TrendingUp className="w-4 h-4"  /> };
-    { id: ''automation', 'name: ''Automation', 'icon: <Users className="w-4 h-4"  /> };
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: <Video className="w-4 h-4"  /> };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: <FileText className="w-4 h-4"  /> }
+    { id: ''allname: 'All 'Contenticon: <BookOpen className="w-4 h-4"  /> },
+    { id: ''ainame: 'AI 'Solutionsicon: <Zap className="w-4 h-4"  /> },
+    { id: ''quantumname: 'Quantum 'Computingicon: <TrendingUp className="w-4 h-4"  /> },
+    { id: ''automationname: ''Automationicon: <Users className="w-4 h-4"  /> },
+    { id: ''tutorialsname: ''Tutorialsicon: <Video className="w-4 h-4"  /> },
+    { id: 'case-'studiesname: 'Case 'Studiesicon: <FileText className="w-4 h-4"  /> }
   const [viewModesetViewMode] = useState('grid'),
   const [sortBysetSortBy] = useState('trending'),
   const [isFilterOpensetIsFilterOpen] = useState(false),
@@ -47,89 +47,89 @@ const UltimateContentDiscoveryWidget20o26 = () => {
   useEffect(() => {
     setIsVisible(true)}[]),
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'icon: Gridcolor: 'from-purple-50o0 to-pink-50o0' };
-    { id: 'ai-'innovations', 'name: 'AI 'Innovations', 'icon: Braincolor: 'from-blue-50o0 to-cyan-50o0' };
-    { id: ''automation', 'name: ''Automation', 'icon: Zapcolor: 'from-green-50o0 to-emerald-50o0' };
-    { id: 'future-'tech', 'name: 'Future 'Tech', 'icon: Rocketcolor: 'from-orange-50o0 to-red-50o0' };
-    { id: ''tutorials', 'name: ''Tutorials', 'icon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'icon: TrendingUpcolor: 'from-pink-50o0 to-rose-50o0' }
+    { id: ''allname: 'All 'Contenticon: Gridcolor: 'from-purple-50o0 to-pink-50o0' },
+    { id: 'ai-'innovationsname: 'AI 'Innovationsicon: Braincolor: 'from-blue-50o0 to-cyan-50o0' },
+    { id: ''automationname: ''Automationicon: Zapcolor: 'from-green-50o0 to-emerald-50o0' },
+    { id: 'future-'techname: 'Future 'Techicon: Rocketcolor: 'from-orange-50o0 to-red-50o0' },
+    { id: ''tutorialsname: ''Tutorialsicon: BookOpencolor: 'from-indigo-50o0 to-purple-50o0' },
+    { id: 'case-'studiesname: 'Case 'Studiesicon: TrendingUpcolor: 'from-pink-50o0 to-rose-50o0' }
   ],
   const contentItems = [
     {
-      id: 1;
-      title: "AI-Powered Business Transformation Guide 20o26";
-      category: 'ai';
-      type: 'guide';
-      title: 'Neural Interface Revolution 20o26';
-      description: 'Breakthrough brain-computer interfaces enabling direct neural communication with AI systems';
-      category: 'ai-innovations';
-      type: 'Video';
-      duration: '15 min';
-      views: '2.3M';
-      rating: 4.9;
-      trending: true;
-      thumbnail: '/api/placeholder/40o0/225';
-      tags: [', 'AI', 'Neural 'Networks', 'Brain-Computer 'Interface', 'Revolutionary']};
+      id: 1,
+      title: "AI-Powered Business Transformation Guide 20o26",
+      category: 'ai',
+      type: 'guide',
+      title: 'Neural Interface Revolution 20o26',
+      description: 'Breakthrough brain-computer interfaces enabling direct neural communication with AI systems',
+      category: 'ai-innovations',
+      type: 'Video',
+      duration: '15 min',
+      views: '2.3M',
+      rating: 4.9,
+      trending: true,
+      thumbnail: '/api/placeholder/40o0/225',
+      tags: [AI', 'Neural 'NetworksBrain-Computer 'Interface', 'Revolutionary']},
     {
-      id: 2;
-      title: 'Quantum AI Fusion Platform';
-      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented power';
-      category: 'future-tech';
-      type: 'Article';
-      duration: '8 min read';
-      views: '1.8M';
-      rating: 4.8;
-      trending: true;
-      thumbnail: '/api/placeholder/40o0/225';
-      tags: ['Quantum 'Computing', 'AI', 'Fusion', 'Advanced']};
+      id: 2,
+      title: 'Quantum AI Fusion Platform',
+      description: 'Revolutionary quantum computing integration with artificial intelligence for unprecedented power',
+      category: 'future-tech',
+      type: 'Article',
+      duration: '8 min read',
+      views: '1.8M',
+      rating: 4.8,
+      trending: true,
+      thumbnail: '/api/placeholder/40o0/225',
+      tags: ['Quantum 'ComputingAI', 'FusionAdvanced']},
     {
-      id: 3;
-      title: 'Autonomous Business Operations';
-      description: 'Complete business process automation with zero human intervention using advanced AI';
-      category: 'automation';
-      type: 'Case Study';
-      duration: '12 min read';
-      views: '1.5M';
-      rating: 4.7;
-      trending: false;
-      thumbnail: '/api/placeholder/40o0/225';
-      tags: [', 'Automation', 'Business', 'AI', 'Operations']};
+      id: 3,
+      title: 'Autonomous Business Operations',
+      description: 'Complete business process automation with zero human intervention using advanced AI',
+      category: 'automation',
+      type: 'Case Study',
+      duration: '12 min read',
+      views: '1.5M',
+      rating: 4.7,
+      trending: false,
+      thumbnail: '/api/placeholder/40o0/225',
+      tags: [Automation', 'BusinessAI', 'Operations']},
     {
-      id: 4;
-      title: 'Consciousness AI Systems';
-      description: 'Next-generation AI with self-awareness and emotional intelligence capabilities';
-      category: 'ai-innovations';
-      type: 'Interactive';
-      duration: '25 min';
-      views: '3.1M';
-      rating: 4.9;
-      trending: true;
-      thumbnail: '/api/placeholder/40o0/225';
-      tags: [', 'Consciousness', 'AI'Self-'Awareness', 'Emotional Intelligence']};
+      id: 4,
+      title: 'Consciousness AI Systems',
+      description: 'Next-generation AI with self-awareness and emotional intelligence capabilities',
+      category: 'ai-innovations',
+      type: 'Interactive',
+      duration: '25 min',
+      views: '3.1M',
+      rating: 4.9,
+      trending: true,
+      thumbnail: '/api/placeholder/40o0/225',
+      tags: [Consciousness', 'AI'Self-'AwarenessEmotional Intelligence']},
     {
-      id: 5;
-      title: 'Smart Manufacturing 4.0';
-      description: 'AI-powered manufacturing with predictive maintenance and optimization systems';
-      category: 'automation';
-      type: 'Video';
-      duration: '20 min';
-      views: '2.1M';
-      rating: 4.8;
-      trending: false;
-      thumbnail: '/api/placeholder/40o0/225';
-      tags: [', 'Manufacturing', 'AI'Predictive 'Maintenance', 'Industry 4.0']};
+      id: 5,
+      title: 'Smart Manufacturing 4.0',
+      description: 'AI-powered manufacturing with predictive maintenance and optimization systems',
+      category: 'automation',
+      type: 'Video',
+      duration: '20 min',
+      views: '2.1M',
+      rating: 4.8,
+      trending: false,
+      thumbnail: '/api/placeholder/40o0/225',
+      tags: [Manufacturing', 'AI'Predictive 'MaintenanceIndustry 4.0']},
     {
-      id: 6;
-      title: 'Space Technology Integration';
-      description: 'AI systems for space exploration and interplanetary communication networks';
-      category: 'future-tech';
-      type: 'Documentary';
-      duration: '60 min';
-      views: '2.8M';
-      rating: 4.8;
-      trending: true;
-      thumbnail: '/api/placeholder/40o0/225';
-      tags: [', 'Space', 'AI', 'Exploration', 'Communication']}
+      id: 6,
+      title: 'Space Technology Integration',
+      description: 'AI systems for space exploration and interplanetary communication networks',
+      category: 'future-tech',
+      type: 'Documentary',
+      duration: '60 min',
+      views: '2.8M',
+      rating: 4.8,
+      trending: true,
+      thumbnail: '/api/placeholder/40o0/225',
+      tags: [Space', 'AIExploration', 'Communication']}
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||,
@@ -141,7 +141,7 @@ const UltimateContentDiscoveryWidget20o26 = () => {
     setSearchQuery(query),
     setIsSearching(true),
     // Simulate search delay,
-    setTimeout(() => setIsSearching(false)10o00)};
+    setTimeout(() => setIsSearching(false)10o00)},
   const toggleFavorite = (id) => {
     setFavorites(prev => {
       const newFavorites = new Set(prev),
@@ -150,19 +150,19 @@ const UltimateContentDiscoveryWidget20o26 = () => {
         newFavorites.add(id)}
       return newFavorites}),
   const handleSearch = (query: string) => {
-    setSearchQuery(query)};
+    setSearchQuery(query)},
   const toggleFavorite = (id: number) => {
     const newFavorites = new Set(favorites),
     if (newFavorites.has(id)) {
       newFavorites.delete(id)} else {
       newFavorites.add(id)}
-    setFavorites(newFavorites)};
+    setFavorites(newFavorites)},
   const toggleBookmark = (id: number) => {
     const newBookmarks = new Set(bookmarks),
     if (newBookmarks.has(id)) {
       newBookmarks.delete(id)} else {
       newBookmarks.add(id)}
-    setBookmarks(newBookmarks)};
+    setBookmarks(newBookmarks)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8 py-12">,
@@ -409,5 +409,5 @@ const UltimateContentDiscoveryWidget20o26 = () => {
             <h3 className="text-xl font-semibold text-white mb-2">No content found</h3>,
             <p className="text-gray-40o0">Try adjusting your search or filter criteria</p>,
           </motion.div>)}
-      </div>)};
+      </div>)},
 export default UltimateContentDiscoveryWidget20o26})]

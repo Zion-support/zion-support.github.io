@@ -2,115 +2,109 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  TrendingUp;
-  Brain;
-  Zap;
-  Clock;
-  Users;
-  ArrowRight;
-  Star;
+  TrendingUp,
+  Brain,
+  Zap,
+  Clock,
+  Users,
+  ArrowRight,
+  Star,
 } from 'lucide-react',
 const AutonomousBIShowcase20o25: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'autonomous-bi-revolution';
-      title: 'AI 20o25: The Autonomous Business Intelligence Revolution';
-      subtitle: '1,80o0% ROI Through Self-Managing Analytics';
+      id: 'autonomous-bi-revolution',
+      title: 'AI 20o25: The Autonomous Business Intelligence Revolution',
+      subtitle: '1,80o0% ROI Through Self-Managing Analytics',
       description:,
-        'Fortune 50o0 companies are achieving extraordinary results with autonomous BI systems that operate independently and deliver predictive insights in real-time.';
-      type: 'blog';
-      category: 'ai-revolution';
+        'Fortune 50o0 companies are achieving extraordinary results with autonomous BI systems that operate independently and deliver predictive insights in real-time.',
+      type: 'blog',
+      category: 'ai-revolution',
       metrics: {
-        roi: '1,80o0%';
-        savings: '$51M';
-        accuracy: '94.8%';
-        speed: '1,680% faster';
-      };
-      link: '/blog/ai-20o25-autonomous-business-intelligence-revolution';
-      readingTime: '28 min read';
-      featured: true;
-      publishedDate: '20o25-0o1-17';
+        roi: '1,80o0%',
+        savings: '$51M',
+        accuracy: '94.8%',
+        speed: '1,680% faster',
+      },
+      link: '/blog/ai-20o25-autonomous-business-intelligence-revolution',
+      readingTime: '28 min read',
+      featured: true,
+      publishedDate: '20o25-0o1-17',
       tags: [
-        'Autonomous BI';
-        'AI Analytics';
-        'Business Intelligence';
-        'ROI';
-        'Enterprise AI';
-      ];
-    };
+        'Autonomous BIAI Analytics',
+        'Business IntelligenceROI',
+        'Enterprise AI',
+      ]
+    },
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 Autonomous BI Success Story';
-      subtitle: '$51M Annual Savings with 1,80o0% ROI';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 Autonomous BI Success Story',
+      subtitle: '$51M Annual Savings with 1,80o0% ROI',
       description:,
-        'Complete case study of a Fortune 50o0 manufacturing giant that transformed operations through autonomous business intelligence implementation.';
-      type: 'case-study';
-      category: 'success-stories';
+        'Complete case study of a Fortune 50o0 manufacturing giant that transformed operations through autonomous business intelligence implementation.',
+      type: 'case-study',
+      category: 'success-stories',
       metrics: {
-        roi: '1,80o0%';
-        savings: '$51M';
-        timeline: '18 months';
-        reliability: '99.7%';
-      };
-      link: '/case-studies/fortune-50o0-autonomous-bi-180o0-roi-success';
-      readingTime: '22 min read';
-      featured: true;
-      publishedDate: '20o25-0o1-17';
+        roi: '1,80o0%',
+        savings: '$51M',
+        timeline: '18 months',
+        reliability: '99.7%'
+      },
+      link: '/case-studies/fortune-50o0-autonomous-bi-180o0-roi-success',
+      readingTime: '22 min read',
+      featured: true,
+      publishedDate: '20o25-0o1-17',
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Autonomous BI';
-        'ROI';
-        'Success Story';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'Autonomous BIROI',
+        'Success Story',
+      ]
+    },
     {
-      id: 'implementation-guide';
-      title: 'Autonomous BI Implementation Master Guide 20o25';
-      subtitle: 'Complete Roadmap to 1,80o0% ROI';
+      id: 'implementation-guide',
+      title: 'Autonomous BI Implementation Master Guide 20o25',
+      subtitle: 'Complete Roadmap to 1,80o0% ROI',
       description:,
-        'Comprehensive implementation guide with step-by-step roadmap, ROI framework, and best practices for autonomous BI success.';
-      type: 'resource';
-      category: 'guides';
+        'Comprehensive implementation guide with step-by-step roadmap, ROI framework, and best practices for autonomous BI success.',
+      type: 'resource',
+      category: 'guides',
       metrics: {
-        roi: '1,80o0%';
-        success: '98%';
-        timeline: '18 months';
-        savings: '$51M+';
-      };
-      link: '/resources/autonomous-bi-implementation-master-guide-20o25';
-      readingTime: '35 min read';
-      featured: true;
-      publishedDate: '20o25-0o1-17';
+        roi: '1,80o0%',
+        success: '98%',
+        timeline: '18 months',
+        savings: '$51M+'
+      },
+      link: '/resources/autonomous-bi-implementation-master-guide-20o25',
+      readingTime: '35 min read',
+      featured: true,
+      publishedDate: '20o25-0o1-17',
       tags: [
-        'Implementation Guide';
-        'Autonomous BI';
-        'ROI';
-        'Strategy';
-        'Best Practices';
-      ];
-    };
+        'Implementation GuideAutonomous BI',
+        'ROIStrategy',
+        'Best Practices',
+      ]
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'ai-revolution';
-      label: 'AI Revolution';
+      id: 'ai-revolution',
+      label: 'AI Revolution',
       count: contentItems.filter(item => item.category === 'ai-revolution'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'success-stories';
-      label: 'Success Stories';
+      id: 'success-stories',
+      label: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-stories'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'guides';
-      label: 'Implementation Guides';
-      count: contentItems.filter(item => item.category === 'guides').length;
-    };
+      id: 'guides',
+      label: 'Implementation Guides',
+      count: contentItems.filter(item => item.category === 'guides').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -126,7 +120,7 @@ const AutonomousBIShowcase20o25: React.FC = () => {
         return <ArrowRight className='w-5 h-5' />,
       default:,
         return <Brain className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -137,7 +131,7 @@ const AutonomousBIShowcase20o25: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -221,7 +215,7 @@ const AutonomousBIShowcase20o25: React.FC = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='ml-2 capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -316,5 +310,5 @@ const AutonomousBIShowcase20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AutonomousBIShowcase20o25;
+    </section>)},
+export default AutonomousBIShowcase20o25,

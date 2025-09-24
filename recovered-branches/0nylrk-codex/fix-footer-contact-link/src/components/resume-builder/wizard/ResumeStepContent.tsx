@@ -68,4 +68,4 @@ export const ResumeStepContent = ({
           onBack={onPrevStep}
         />,
       </TabsContent>,
-    </>)};
+    </>)},

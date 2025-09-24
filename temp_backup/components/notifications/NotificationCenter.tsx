@@ -1,26 +1,24 @@
 import NotificationItem from './NotificationItem',
 import {
-  useNotifications;
-  NotificationFilter;
+  useNotifications,
+  NotificationFilter,
 } from '../../hooks/useNotifications',
 const FILTERS: NotificationFilter[] = [
-  'All';
-  'Unread';
-  'Onboarding';
-  'Messages';
-  'System Alerts';
+  'AllUnread',
+  'OnboardingMessages',
+  'System Alerts'
 ],
 export default function NotificationCenter() {
   const {
-    notifications;
-    loading;
-    error;
-    activeFilter;
-    setFilter;
-    unreadCount;
-    markAsRead;
-    markAllAsRead;
-    dismiss;
+    notifications,
+    loading,
+    error,
+    activeFilter,
+    setFilter,
+    unreadCount,
+    markAsRead,
+    markAllAsRead,
+    dismiss,
   } = useNotifications(),
   return (
     <div className='mx-auto w-full max-w-3xl'>,

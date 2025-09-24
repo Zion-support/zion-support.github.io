@@ -17,9 +17,9 @@ const QuantumComputingRevolution20o25Banner = () => {
               key={i}
               className={`absolute w-1 h-1 bg-cyan-40o0 rounded-full animate-ping`}
               style={{
-                left: `${Math.random() * 10o0}%`;
-                top: `${Math.random() * 10o0}%`;
-                animationDelay: `${Math.random() * 3}s`;
+                left: `${Math.random() * 10o0}%`,
+                top: `${Math.random() * 10o0}%`,
+                animationDelay: `${Math.random() * 3}s`,
                 animationDuration: `${2 + Math.random() * 2}s`}}
             ></div>))}
         </div>,
@@ -88,5 +88,5 @@ const QuantumComputingRevolution20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumComputingRevolution20o25Banner;
+    </section>)},
+export default QuantumComputingRevolution20o25Banner,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const QuantumNeuralSuperintelligenceBanner20o25: React.FC = () => {
   return (
@@ -134,5 +134,5 @@ const QuantumNeuralSuperintelligenceBanner20o25: React.FC = () => {
       <div className='absolute bottom-40 right-10 w-7 h-7 bg-indigo-30o0 rounded-full animate-bounce'></div>,
       <div className='absolute top-1/2 left-5 w-5 h-5 bg-purple-30o0 rounded-full animate-pulse'></div>,
       <div className='absolute top-1/3 right-5 w-6 h-6 bg-pink-30o0 rounded-full animate-bounce'></div>,
-    </section>)};
-export default QuantumNeuralSuperintelligenceBanner20o25;
+    </section>)},
+export default QuantumNeuralSuperintelligenceBanner20o25,

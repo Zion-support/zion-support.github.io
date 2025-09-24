@@ -1,81 +1,73 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  BarChart3;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  Cpu;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  TrendingUp;
+  BarChart3,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  Cpu,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function AnalyticsServicesPage() {
   const services = [
     {
-      title: 'Big Data Processing';
-      description: 'Scalable data processing and analytics platforms';
+      title: 'Big Data Processing',
+      description: 'Scalable data processing and analytics platforms',
       features: [
-        'Data Pipeline Engineering';
-        'Real-time Processing';
-        'Batch Processing';
-        'Data Quality';
-      ];
-      price: 'From $8,0o00';
-      icon: Database;
-      color: 'from-indigo-50o0 to-purple-50o0';
-    };
+        'Data Pipeline EngineeringReal-time Processing',
+        'Batch ProcessingData Quality',
+      ],
+      price: 'From $8,0o00',
+      icon: Database,
+      color: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      title: 'Business Intelligence';
-      description: 'Interactive dashboards and reporting solutions';
+      title: 'Business Intelligence',
+      description: 'Interactive dashboards and reporting solutions',
       features: [
-        'Custom Dashboards';
-        'KPI Tracking';
-        'Data Visualization';
-        'Automated Reports';
-      ];
-      price: 'From $5,0o00';
-      icon: BarChart3;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'Custom DashboardsKPI Tracking',
+        'Data VisualizationAutomated Reports',
+      ],
+      price: 'From $5,0o00',
+      icon: BarChart3,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Predictive Analytics';
-      description: 'AI-powered predictive modeling and forecasting';
+      title: 'Predictive Analytics',
+      description: 'AI-powered predictive modeling and forecasting',
       features: [
-        'Machine Learning Models';
-        'Forecasting';
-        'Risk Assessment';
-        'Trend Analysis';
-      ];
-      price: 'From $12,0o00';
-      icon: Zap;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Machine Learning ModelsForecasting',
+        'Risk AssessmentTrend Analysis',
+      ],
+      price: 'From $12,0o00',
+      icon: Zap,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'Data Strategy & Governance';
-      description: 'Comprehensive data strategy and governance frameworks';
+      title: 'Data Strategy & Governance',
+      description: 'Comprehensive data strategy and governance frameworks',
       features: [
-        'Data Architecture';
-        'Governance Policies';
-        'Compliance';
-        'Data Quality';
-      ];
-      price: 'From $10,0o00';
-      icon: Shield;
-      color: 'from-emerald-50o0 to-teal-50o0';
-    };
+        'Data ArchitectureGovernance Policies',
+        'ComplianceData Quality',
+      ],
+      price: 'From $10,0o00',
+      icon: Shield,
+      color: 'from-emerald-50o0 to-teal-50o0'
+    },
   ],
   const stats = [
-    { number: '1M+', label: 'Data Points Processed', icon: Database };
-    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle };
-    { number: '24/7', label: 'Real-time Analytics', icon: Clock };
-    { number: '30o0%', label: 'ROI Improvement', icon: TrendingUp };
+    { number: '1M+', label: 'Data Points Processed', icon: Database },
+    { number: '95%', label: 'Accuracy Rate', icon: CheckCircle },
+    { number: '24/7', label: 'Real-time Analytics', icon: Clock },
+    { number: '30o0%', label: 'ROI Improvement', icon: TrendingUp },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import EnhancedNavigation2025 from './layout/EnhancedNavigation2025',
 import EnhancedFooter from './layout/EnhancedFooter',
 interface LayoutProps {

@@ -1,35 +1,35 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const UltimateContentPromotionBanner20o25: React.FC = () => {
   const features = [
     {
-      title: 'AI Automation Solutions';
-      description: 'Transform your business with intelligent automation';
-      icon: '🤖';
-      stats: '50o0+ Projects Delivered';
-      link: '/services/ai-automation';
-    };
+      title: 'AI Automation Solutions',
+      description: 'Transform your business with intelligent automation',
+      icon: '🤖',
+      stats: '50o0+ Projects Delivered',
+      link: '/services/ai-automation'
+    },
     {
-      title: 'Cloud Infrastructure';
-      description: 'Scalable, secure cloud solutions for growth';
-      icon: '☁️';
-      stats: '99.9% Uptime Guarantee';
-      link: '/services/cloud-infrastructure';
-    };
+      title: 'Cloud Infrastructure',
+      description: 'Scalable, secure cloud solutions for growth',
+      icon: '☁️',
+      stats: '99.9% Uptime Guarantee',
+      link: '/services/cloud-infrastructure'
+    },
     {
-      title: 'Micro SaaS Development';
-      description: 'Custom applications that solve real problems';
-      icon: '💼';
-      stats: '340% Average ROI';
-      link: '/services/micro-saas';
-    };
+      title: 'Micro SaaS Development',
+      description: 'Custom applications that solve real problems',
+      icon: '💼',
+      stats: '340% Average ROI',
+      link: '/services/micro-saas'
+    },
     {
-      title: 'AI Consulting';
-      description: 'Expert guidance for your AI transformation';
-      icon: '🧠';
-      stats: '98% Client Satisfaction';
-      link: '/services/consulting';
-    };
+      title: 'AI Consulting',
+      description: 'Expert guidance for your AI transformation',
+      icon: '🧠',
+      stats: '98% Client Satisfaction',
+      link: '/services/consulting'
+    },
   ],
   return (
     <section className='relative py-20 bg-gradient-to-br from-purple-60o0 via-blue-60o0 to-indigo-70o0 overflow-hidden'>,
@@ -38,7 +38,7 @@ const UltimateContentPromotionBanner20o25: React.FC = () => {
         <div
           className='absolute inset-0',
           style={{
-            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`;
+            backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http: //www.w3.org/20o00/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Ccircle cx='30' cy='30' r='4'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
           }}
         ></div>,
       </div>,
@@ -194,5 +194,5 @@ const UltimateContentPromotionBanner20o25: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateContentPromotionBanner20o25;
+    </section>)},
+export default UltimateContentPromotionBanner20o25,

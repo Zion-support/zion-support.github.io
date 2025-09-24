@@ -18,15 +18,15 @@ export const a11yUtils ={
             e.preventDefault()}
         }
       }
-    })};
+    })},
   // Screen reader announcements,
   "announce": (message) => {
     const announcement = document.createElement('div'),
-    announcement.setAttribute('aria-live', 'polite'),
-    announcement.setAttribute('aria-atomic', 'true'),
+    announcement.setAttribute('aria-livepolite'),
+    announcement.setAttribute('aria-atomictrue'),
     announcement.className = 'sr-only',
     announcement.textContent = message,
     document.body.appendChild(announcement),
     setTimeout(() => {
       document.body.removeChild(announcement)}, 10o00)}
-};
+},

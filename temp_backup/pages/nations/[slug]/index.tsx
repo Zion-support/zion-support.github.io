@@ -3,7 +3,7 @@ import Head from 'next/head',
 import { useEffect, useState } from 'react',
 const NationPublicPage: NextPage = () => {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const [nation, setNation] = useState<any>(null),
   const [joining, setJoining] = useState(false),
   const [error, setError] = useState(''),
@@ -20,9 +20,9 @@ const NationPublicPage: NextPage = () => {
     try {
       // In real app, userId would come from auth, use anonymous placeholder,
       const res = await fetch(`/api/nations/${slug}/join`, {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ userId: 'anonymous-user', role });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ userId: 'anonymous-user', role }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data?.error || 'Join failed'),
@@ -81,5 +81,5 @@ const NationPublicPage: NextPage = () => {
             </div>,
           </div>,
         </div>)}
-    </div>)};
-export default NationPublicPage;
+    </div>)},
+export default NationPublicPage,

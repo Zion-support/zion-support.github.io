@@ -22,9 +22,9 @@ export function useProjects() {
         .from('projects'),
         .select(
           `,
-          *;
-          job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url);
+          *,
+          job:jobs(title, description),
+          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url),
         `),
         .order('created_at', { ascending: false }),
@@ -36,13 +36,13 @@ export function useProjects() {
       if (fetchError) throw fetchError,
       // Transform the data to match our project types,
       const transformedData = data.map((project: any) => ({
-        ...project;
+        ...project,
         talent_profile: project.talent_profile,
           ? {
-              ...project.talent_profile;
-              full_name: project.talent_profile.display_name;
+              ...project.talent_profile,
+              full_name: project.talent_profile.display_name
             }
-          : undefined;
+          : undefined,
       })),
       setProjects(transformedData as Project[]),
       setError(null)} catch (err: any) {
@@ -50,16 +50,16 @@ export function useProjects() {
       setError('Failed to fetch projects: ' + err.message),
       toast.error('Failed to fetch projects')} finally {
       setIsLoading(false)}
-  };
+  },
   const getProjectById = async (projectId: string): Promise<Project | null> => {
     try {
       const { data, error } = await supabase,
         .from('projects'),
         .select(
           `,
-          *;
-          job:jobs(title, description);
-          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url:avatar_url);
+          *,
+          job:jobs(title, description),
+          talent_profile:profiles!talent_id(display_name:display_name, professional_title:bio, profile_picture_url: avatar_url),
           client_profile:profiles!client_id(display_name, avatar_url),
         `),
         .eq('id', projectId),
@@ -67,21 +67,21 @@ export function useProjects() {
       if (error) throw error,
       // Transform the data to match our project types,
       const transformedProject = {
-        ...data;
+        ...data,
         talent_profile: data.talent_profile,
           ? {
-              ...data.talent_profile;
-              full_name: data.talent_profile.display_name;
+              ...data.talent_profile,
+              full_name: data.talent_profile.display_name
             }
-          : undefined;
-      };
+          : undefined,
+      },
       return transformedProject as Project} catch (err: any) {
       console.error('Error fetching project:', err),
       toast.error('Failed to fetch project details'),
       return null}
-  };
+  },
   const updateProjectStatus = async (
-    projectId: string;
+    projectId: string,
     status: ProjectStatus): Promise<boolean> => {
     try {
       const { error } = await supabase,
@@ -98,19 +98,19 @@ export function useProjects() {
       console.error('Error updating project status:', err),
       toast.error('Failed to update project status'),
       return false}
-  };
+  },
   // Fetch projects when component mounts or user changes,
   useEffect(() => {
     if (user) {
       fetchProjects()}
   }, [user]),
   return {
-    projects;
-    isLoading;
-    error;
-    refetch: fetchProjects;
-    getProjectById;
-    updateProjectStatus;
-  };
+    projects,
+    isLoading,
+    error,
+    refetch: fetchProjects,
+    getProjectById,
+    updateProjectStatus
+  },
 }
 ,

@@ -22,14 +22,14 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
   const [isFormLoadingsetIsFormLoading] = useState(false),
   const [editorContentsetEditorContent] = useState(""),
   const {
-    form;
-    isLoading;
-    startDate;
-    setStartDate;
-    endDate;
-    setEndDate;
-    isRemote;
-    setIsRemote;
+    form,
+    isLoading,
+    startDate,
+    setStartDate,
+    endDate,
+    setEndDate,
+    isRemote,
+    setIsRemote,
     submitJob} = useJobForm({ jobIdonSuccess }),
   const { handleSubmitsetValueformState } = form,
   const { isSubmitting } = formState,
@@ -83,7 +83,7 @@ export function JobPostingForm({ jobIdonSuccess }: JobPostingFormProps) {
       console.error("Error creating/updating job:"error),
       toast.error(error.message || "Failed to post job")} finally {
       setIsFormLoading(false)}
-  };
+  },
   if (isLoading || isFormLoading) {
     return <div className="flex items-center justify-center p-8">Loading...</div>}
 ,

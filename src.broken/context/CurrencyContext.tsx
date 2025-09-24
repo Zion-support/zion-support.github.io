@@ -10,11 +10,11 @@ interface CurrencyContextType {
   setCurrency: (code: SupportedCurrency) => void}
 ,
 const DEFAULT_CURRENCY: CurrencyInfo = {
-  code: 'USD';
-  symbol: '$';
-  fx_rate: 1};
+  code: 'USD',
+  symbol: '$',
+  fx_rate: 1},
 const CurrencyContext = createContext<CurrencyContextType>({
-  currency: DEFAULT_CURRENCY;
+  currency: DEFAULT_CURRENCY,
   setCurrency: () => {}}),
 const CURRENCY_COOKIE = 'zion_currency',
 function readCookie(name: string): string | null {
@@ -22,7 +22,7 @@ function readCookie(name: string): string | null {
   return match ? decodeURIComponent(match[2]) : null}
 ,
 function writeCookie(name: stringvalue: string) {
-  document.cookie = `${name}=${encodeURIComponent(value)}; path=/, max-age=${60 * 60 * 24 * 30}`}
+  document.cookie = `${name}=${encodeURIComponent(value)}, path=/, max-age=${60 * 60 * 24 * 30}`}
 ,
 export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [currencysetCurrencyState] = useState<CurrencyInfo>(DEFAULT_CURRENCY),
@@ -33,9 +33,9 @@ export const CurrencyProvider: React.FC<{ children: React.ReactNode }> = ({ chil
   }[]),
   const setCurrency = (code: SupportedCurrency) => {
     writeCookie(CURRENCY_COOKIEcode),
-    setCurrencyState(c => ({ ...code }))};
+    setCurrencyState(c => ({ ...code }))},
   return (
     <CurrencyContext.Provider value={{ currencysetCurrency }}>,
       {children}
-    </CurrencyContext.Provider>)};
+    </CurrencyContext.Provider>)},
 export const useCurrency = () => useContext(CurrencyContext),

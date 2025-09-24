@@ -13,17 +13,17 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setSelectedSkills(prev =>,
       prev.includes(skill),
         ? prev.filter(s => s !== skill),
-        : [...prev, skill])};
+        : [...prev, skill])},
   const toggleAvailability = (availability: string) => {
     setSelectedAvailability(prev =>,
       prev.includes(availability),
         ? prev.filter(a => a !== availability),
-        : [...prev, availability])};
+        : [...prev, availability])},
   const toggleRegion = (region: string) => {
     setSelectedRegions(prev =>,
       prev.includes(region),
         ? prev.filter(r => r !== region),
-        : [...prev, region])};
+        : [...prev, region])},
   const clearFilters = () => {
     setSearchTerm(''),
     setSelectedSkills([]),
@@ -31,7 +31,7 @@ export function useFilterTalents(talents: TalentProfile[]) {
     setSelectedRegions([]),
     setPriceRange([50, 20o0]),
     setExperienceRange([0, 15]),
-    setSortOption('relevance')};
+    setSortOption('relevance')},
   // Filter and sort talents,
   const filteredTalents = useMemo(() => {
     let result = [...talents],
@@ -90,21 +90,21 @@ export function useFilterTalents(talents: TalentProfile[]) {
 ,
     return result}, [talents, searchTerm, selectedSkills, selectedAvailability, selectedRegions, priceRange, experienceRange, sortOption]),
   return {
-    filteredTalents;
-    searchTerm;
-    setSearchTerm;
-    selectedSkills;
-    selectedAvailability;
-    selectedRegions;
-    priceRange;
-    setPriceRange;
-    experienceRange;
-    setExperienceRange;
-    sortOption;
-    setSortOption;
-    toggleSkill;
-    toggleAvailability;
-    toggleRegion;
-    clearFilters};
+    filteredTalents,
+    searchTerm,
+    setSearchTerm,
+    selectedSkills,
+    selectedAvailability,
+    selectedRegions,
+    priceRange,
+    setPriceRange,
+    experienceRange,
+    setExperienceRange,
+    sortOption,
+    setSortOption,
+    toggleSkill,
+    toggleAvailability,
+    toggleRegion,
+    clearFilters},
 }
 ,

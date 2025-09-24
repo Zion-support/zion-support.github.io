@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function UltimatePromotionBanner2026() {
   return null}
 import Link from 'next/link',
@@ -16,7 +16,7 @@ const UltimatePromotionBanner20o26 = () => {
           </h2>,
           <p className='text-2xl md:text-3xl opacity-90 mb-12 max-w-5xl mx-auto leading-relaxed'>,
             Comprehensive guides covering the most advanced AI technologies that,
-            will transform your business in 20o25 and beyond. Expert insights;
+            will transform your business in 20o25 and beyond. Expert insights,
             practical implementation strategies, and real-world case studies.,
           </p>,
         </div>,
@@ -161,5 +161,5 @@ const UltimatePromotionBanner20o26 = () => {
           </p>,
         </div>,
       </div>,
-    </section>)};
-export default UltimatePromotionBanner20o26;
+    </section>)},
+export default UltimatePromotionBanner20o26,

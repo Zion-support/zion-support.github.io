@@ -5,7 +5,7 @@ export default function PerformanceMonitor() {
   const [isVisible, setIsVisible] = useState(false),
   useEffect(() => {
     // Web Vitals monitoring,
-    const vitals = {};
+    const vitals = {},
     getCLS(metric => {
       vitals.CLS = metric.value,
       // // // console.log('CLS:', metric)}),
@@ -39,18 +39,18 @@ export default function PerformanceMonitor() {
   //   if (value <= thresholds.good) return 'Good',
   //   if (value <= thresholds.needsImprovement) return 'Needs Improvement',
   //   return 'Poor',
-  // };
+  // },
   const getScoreColor = (value, thresholds) => {
     if (value <= thresholds.good) return 'text-green-600',
     if (value <= thresholds.needsImprovement) return 'text-yellow-600',
-    return 'text-red-600'};
+    return 'text-red-600'},
   const thresholds = {
-    CLS: { good: 0.1, needsImprovement: 0.25 };
-    FID: { good: 100, needsImprovement: 300 };
-    FCP: { good: 1800, needsImprovement: 3000 };
-    LCP: { good: 2500, needsImprovement: 4000 };
+    CLS: { good: 0.1, needsImprovement: 0.25 },
+    FID: { good: 100, needsImprovement: 300 },
+    FCP: { good: 1800, needsImprovement: 3000 },
+    LCP: { good: 2500, needsImprovement: 4000 },
     TTFB: { good: 800, needsImprovement: 1800 }
-  };
+  },
   if (!isVisible) {
     return (
       <button

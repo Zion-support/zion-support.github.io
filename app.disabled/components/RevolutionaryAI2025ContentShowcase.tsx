@@ -5,174 +5,162 @@ const RevolutionaryAI20o25ContentShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'revolutionary-breakthrough-guide';
+      id: 'revolutionary-breakthrough-guide',
       title:,
-        'AI 20o25: The Revolutionary Breakthrough - Ultimate Success Guide';
+        'AI 20o25: The Revolutionary Breakthrough - Ultimate Success Guide',
       description:,
-        'Transform your business with cutting-edge AI technologies achieving 2,0o00% ROI, $5.2B+ in annual savings, and 99.8% operational efficiency.';
-      url: '/blog/ai-20o25-revolutionary-breakthrough-ultimate-success-guide';
-      type: 'blog';
-      category: 'guide';
+        'Transform your business with cutting-edge AI technologies achieving 2,0o00% ROI, $5.2B+ in annual savings, and 99.8% operational efficiency.',
+      url: '/blog/ai-20o25-revolutionary-breakthrough-ultimate-success-guide',
+      type: 'blog',
+      category: 'guide',
       metrics: {
-        roi: '2,0o00%';
-        savings: '$5.2B+';
-        efficiency: '99.8%';
-        readingTime: '25 min read';
-      };
-      badge: 'NEW';
-      featured: true;
+        roi: '2,0o00%',
+        savings: '$5.2B+',
+        efficiency: '99.8%',
+        readingTime: '25 min read'
+      },
+      badge: 'NEW',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Business Transformation';
-        'ROI';
-        'Fortune 50o0';
-        'Implementation Guide';
-      ];
-    };
+        'AI RevolutionBusiness Transformation',
+        'ROIFortune 50o0',
+        'Implementation Guide',
+      ]
+    },
     {
-      id: 'fortune-50o0-success-story';
+      id: 'fortune-50o0-success-story',
       title:,
-        'Fortune 50o0 AI Transformation: $5.2B Annual Savings with 2,0o00% ROI';
+        'Fortune 50o0 AI Transformation: $5.2B Annual Savings with 2,0o00% ROI',
       description:,
-        'How a global manufacturing leader achieved unprecedented results through revolutionary AI implementation in just 18 months.';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o00-roi-ultimate-success-story';
-      type: 'case-study';
-      category: 'success-story';
+        'How a global manufacturing leader achieved unprecedented results through revolutionary AI implementation in just 18 months.',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o00-roi-ultimate-success-story',
+      type: 'case-study',
+      category: 'success-story',
       metrics: {
-        roi: '2,0o00%';
-        savings: '$5.2B';
-        timeline: '18 months';
-        readingTime: '22 min read';
-      };
-      badge: 'SUCCESS STORY';
-      featured: true;
+        roi: '2,0o00%',
+        savings: '$5.2B',
+        timeline: '18 months',
+        readingTime: '22 min read'
+      },
+      badge: 'SUCCESS STORY',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'AI Transformation';
-        'ROI Success';
-        'Manufacturing';
-        'Case Study';
-      ];
-    };
+        'Fortune 50o0AI Transformation',
+        'ROI SuccessManufacturing',
+        'Case Study',
+      ]
+    },
     {
-      id: 'implementation-framework';
+      id: 'implementation-framework',
       title:,
-        'AI 20o25 Implementation Ultimate Framework: Complete Roadmap to 2,0o00% ROI';
+        'AI 20o25 Implementation Ultimate Framework: Complete Roadmap to 2,0o00% ROI',
       description:,
-        'The definitive guide to achieving breakthrough results with AI implementation in 20o25. Based on analysis of 1,0o00+ successful implementations.';
-      url: '/resources/ai-20o25-implementation-ultimate-framework-20o00-roi';
-      type: 'resource';
-      category: 'framework';
+        'The definitive guide to achieving breakthrough results with AI implementation in 20o25. Based on analysis of 1,0o00+ successful implementations.',
+      url: '/resources/ai-20o25-implementation-ultimate-framework-20o00-roi',
+      type: 'resource',
+      category: 'framework',
       metrics: {
-        roi: '2,0o00%';
-        success: '94%';
-        timeline: '18 months';
-        readingTime: '35 min read';
-      };
-      badge: 'FRAMEWORK';
-      featured: true;
+        roi: '2,0o00%',
+        success: '94%',
+        timeline: '18 months',
+        readingTime: '35 min read'
+      },
+      badge: 'FRAMEWORK',
+      featured: true,
       tags: [
-        'Implementation Framework';
-        'AI Strategy';
-        'ROI';
-        'Strategic Planning';
-        'Fortune 50o0';
-      ];
-    };
+        'Implementation FrameworkAI Strategy',
+        'ROIStrategic Planning',
+        'Fortune 50o0',
+      ]
+    },
     {
-      id: 'generative-ai-revolution';
+      id: 'generative-ai-revolution',
       title:,
-        'AI 20o25: The Generative AI Enterprise Revolution - $2.3T Market Transformation';
+        'AI 20o25: The Generative AI Enterprise Revolution - $2.3T Market Transformation',
       description:,
-        'Discover how Fortune 50o0 companies are leveraging generative AI to achieve 340% ROI and transform their operations.';
-      url: '/blog/ai-20o25-generative-ai-enterprise-revolution';
-      type: 'blog';
-      category: 'guide';
+        'Discover how Fortune 50o0 companies are leveraging generative AI to achieve 340% ROI and transform their operations.',
+      url: '/blog/ai-20o25-generative-ai-enterprise-revolution',
+      type: 'blog',
+      category: 'guide',
       metrics: {
-        roi: '340%';
-        savings: '$180M';
-        accuracy: '99.7%';
-        readingTime: '20 min read';
-      };
-      badge: 'FEATURED';
-      featured: false;
+        roi: '340%',
+        savings: '$180M',
+        accuracy: '99.7%',
+        readingTime: '20 min read'
+      },
+      badge: 'FEATURED',
+      featured: false,
       tags: [
-        'Generative AI';
-        'Enterprise';
-        'ROI';
-        'Digital Transformation';
-        'AI Strategy';
-      ];
-    };
+        'Generative AIEnterprise',
+        'ROIDigital Transformation',
+        'AI Strategy',
+      ]
+    },
     {
-      id: 'mlops-breakthrough';
+      id: 'mlops-breakthrough',
       title:,
-        'AI 20o25: MLOps Breakthrough - 99.9% Model Reliability with 67% Faster Deployment';
+        'AI 20o25: MLOps Breakthrough - 99.9% Model Reliability with 67% Faster Deployment',
       description:,
-        'Learn how advanced MLOps practices are enabling enterprises to achieve 99.9% model reliability and 67% faster deployment.';
-      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough';
-      type: 'blog';
-      category: 'guide';
+        'Learn how advanced MLOps practices are enabling enterprises to achieve 99.9% model reliability and 67% faster deployment.',
+      url: '/blog/ai-20o25-machine-learning-operations-mlops-breakthrough',
+      type: 'blog',
+      category: 'guide',
       metrics: {
-        reliability: '99.9%';
-        deployment_speed: '67%';
-        savings: '$2.1B';
-        readingTime: '18 min read';
-      };
-      badge: 'BREAKTHROUGH';
-      featured: false;
+        reliability: '99.9%',
+        deployment_speed: '67%',
+        savings: '$2.1B',
+        readingTime: '18 min read'
+      },
+      badge: 'BREAKTHROUGH',
+      featured: false,
       tags: [
-        'MLOps';
-        'Machine Learning';
-        'DevOps';
-        'AI Operations';
-        'Model Deployment';
-      ];
-    };
+        'MLOpsMachine Learning',
+        'DevOpsAI Operations',
+        'Model Deployment',
+      ]
+    },
     {
-      id: 'retail-transformation';
+      id: 'retail-transformation',
       title:,
-        'Retail AI Transformation 20o25: $50o0M Company Achieves 280% ROI with AI-Powered Operations';
+        'Retail AI Transformation 20o25: $50o0M Company Achieves 280% ROI with AI-Powered Operations',
       description:,
-        'See how a $50o0M retail company achieved 280% ROI and transformed their operations with AI-powered solutions.';
-      url: '/case-studies/retail-ai-transformation-20o25-ultimate-success';
-      type: 'case-study';
-      category: 'success-story';
+        'See how a $50o0M retail company achieved 280% ROI and transformed their operations with AI-powered solutions.',
+      url: '/case-studies/retail-ai-transformation-20o25-ultimate-success',
+      type: 'case-study',
+      category: 'success-story',
       metrics: {
-        roi: '280%';
-        savings: '$45M';
-        satisfaction: '99.2%';
-        readingTime: '15 min read';
-      };
-      badge: 'CASE STUDY';
-      featured: false;
+        roi: '280%',
+        savings: '$45M',
+        satisfaction: '99.2%',
+        readingTime: '15 min read'
+      },
+      badge: 'CASE STUDY',
+      featured: false,
       tags: [
-        'Retail';
-        'AI Transformation';
-        'ROI';
-        'Case Study';
-        'Success Story';
-      ];
-    };
+        'RetailAI Transformation',
+        'ROICase Study',
+        'Success Story',
+      ]
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'guide';
-      label: 'Guides';
-      count: contentItems.filter(item => item.category === 'guide').length;
-    };
+      id: 'guide',
+      label: 'Guides',
+      count: contentItems.filter(item => item.category === 'guide').length
+    },
     {
-      id: 'success-story';
-      label: 'Success Stories';
+      id: 'success-story',
+      label: 'Success Stories',
       count: contentItems.filter(item => item.category === 'success-story'),
-        .length;
-    };
+        .length,
+    },
     {
-      id: 'framework';
-      label: 'Frameworks';
-      count: contentItems.filter(item => item.category === 'framework').length;
-    };
+      id: 'framework',
+      label: 'Frameworks',
+      count: contentItems.filter(item => item.category === 'framework').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -188,7 +176,7 @@ const RevolutionaryAI20o25ContentShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -199,7 +187,7 @@ const RevolutionaryAI20o25ContentShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className='bg-gray-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -378,5 +366,5 @@ const RevolutionaryAI20o25ContentShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default RevolutionaryAI20o25ContentShowcase;
+    </div>)},
+export default RevolutionaryAI20o25ContentShowcase,

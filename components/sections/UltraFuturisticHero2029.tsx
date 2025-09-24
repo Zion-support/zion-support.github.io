@@ -1,15 +1,15 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
 
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -34,18 +34,18 @@ class ErrorBoundary extends React.Component {
   Cpu,
   Globe,
   Sparkles,
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Target;
-  Shield;
-  Cpu;
-  Globe;
-  Sparkles;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+  Globe,
+  Sparkles,
 } from 'lucide-react',
 export default /**,
  * UltraFuturisticHero2029 - Function description,
@@ -81,75 +81,75 @@ function UltraFuturisticHero2029() {
     { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' }
     { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' }
 ,
-      icon: Cpu;
-      text: 'Autonomous IT Operations';
-      color: 'from-cyan-500 to-teal-600';
-    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' };
-    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' };
-    { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' };
-    { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' };
-    { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' };
+      icon: Cpu,
+      text: 'Autonomous IT Operations',
+      color: 'from-cyan-500 to-teal-600'
+    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
+    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' },
+    { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
+    { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
+    { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
   const stats = [
     { number: '500+', label: 'Innovative Services', icon: Sparkles }
     { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp }
     { number: '99.9%', label: 'Success Rate', icon: Star }
     { number: '24/7', label: 'AI Operations', icon: Zap }
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Brain;
-  Atom;
-  Rocket;
-  Target;
-  Shield;
-  Cpu;
-  Globe;
-  Sparkles;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+  Globe,
+  Sparkles,
 } from 'lucide-react',
 export default function UltraFuturisticHero2029() {
   const features = [
     {
-      icon: Brain;
-      text: 'AI Consciousness Evolution';
-      color: 'from-violet-500 to-purple-600';
-    };
+      icon: Brain,
+      text: 'AI Consciousness Evolution',
+      color: 'from-violet-500 to-purple-600'
+    },
     {
-      icon: Atom;
-      text: 'Quantum Computing Solutions';
-      color: 'from-blue-500 to-cyan-600';
-    };
+      icon: Atom,
+      text: 'Quantum Computing Solutions',
+      color: 'from-blue-500 to-cyan-600'
+    },
     {
-      icon: Rocket;
-      text: 'Space Technology Innovation';
-      color: 'from-emerald-500 to-teal-600';
-    };
+      icon: Rocket,
+      text: 'Space Technology Innovation',
+      color: 'from-emerald-500 to-teal-600'
+    },
     {
-      icon: Target;
-      text: 'Micro SAAS Excellence';
-      color: 'from-orange-500 to-red-600';
-    };
+      icon: Target,
+      text: 'Micro SAAS Excellence',
+      color: 'from-orange-500 to-red-600'
+    },
     {
-      icon: Shield;
-      text: 'Enterprise Security';
-      color: 'from-indigo-500 to-blue-600';
-    };
+      icon: Shield,
+      text: 'Enterprise Security',
+      color: 'from-indigo-500 to-blue-600'
+    },
     {
-      icon: Cpu;
-      text: 'Autonomous IT Operations';
-      color: 'from-cyan-500 to-teal-600';
-    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' };
-    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' };
-    { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' };
-    { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' };
-    { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' };
+      icon: Cpu,
+      text: 'Autonomous IT Operations',
+      color: 'from-cyan-500 to-teal-600'
+    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from-violet-500 to-purple-600' },
+    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from-blue-500 to-cyan-600' },
+    { icon: Rocket, text: 'Space Technology Innovation', color: 'from-emerald-500 to-teal-600' },
+    { icon: Target, text: 'Micro SAAS Excellence', color: 'from-orange-500 to-red-600' },
+    { icon: Shield, text: 'Enterprise Security', color: 'from-indigo-500 to-blue-600' },
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from-cyan-500 to-teal-600' }
   const stats = [
-    { number: '500+', label: 'Innovative Services', icon: Sparkles };
-    { number: '$2 && 2.5B+', label: 'Market Opportunity', icon: TrendingUp };
-    { number: '99 && 99.9%', label: 'Success Rate', icon: Star };
-    { number: '24/7', label: 'AI Operations', icon: Zap };
+    { number: '500+', label: 'Innovative Services', icon: Sparkles },
+    { number: '$2 && 2.5B+', label: 'Market Opportunity', icon: TrendingUp },
+    { number: '99 && 99.9%', label: 'Success Rate', icon: Star },
+    { number: '24/7', label: 'AI Operations', icon: Zap },
   ],
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,
@@ -162,9 +162,9 @@ export default function UltraFuturisticHero2029() {
               key={i}
               className='absolute w-1 h-1 bg-cyan-400 rounded-full opacity-20',
               animate={{
-                duration: Math.random() * 10 + 10;
-                repeat: Infinity;
-                ease: 'linear';
+                duration: Math.random() * 10 + 10,
+                repeat: Infinity,
+                ease: 'linear'
               }}
               style={{
                 left: Math.random() * 100 + '%',
@@ -177,45 +177,45 @@ export default function UltraFuturisticHero2029() {
         <div className="absolute inset-0 overflow-hidden">,
           {[...Array(50)].map((_, i) => (
             <motion&& motion.div,
-      icon: Brain;
-      text: 'AI Consciousness Evolution';
-      color: 'from - violet - 500 to - purple - 600';
-    };
+      icon: Brain,
+      text: 'AI Consciousness Evolution',
+      color: 'from - violet - 500 to - purple - 600'
+    },
     {
-      icon: Atom;
-      text: 'Quantum Computing Solutions';
-      color: 'from - blue - 500 to - cyan - 600';
-    };
+      icon: Atom,
+      text: 'Quantum Computing Solutions',
+      color: 'from - blue - 500 to - cyan - 600'
+    },
     {
-      icon: Rocket;
-      text: 'Space Technology Innovation';
-      color: 'from - emerald - 500 to - teal - 600';
-    };
+      icon: Rocket,
+      text: 'Space Technology Innovation',
+      color: 'from - emerald - 500 to - teal - 600'
+    },
     {
-      icon: Target;
-      text: 'Micro SAAS Excellence';
-      color: 'from - orange - 500 to - red - 600';
-    };
+      icon: Target,
+      text: 'Micro SAAS Excellence',
+      color: 'from - orange - 500 to - red - 600'
+    },
     {
-      icon: Shield;
-      text: 'Enterprise Security';
-      color: 'from - indigo - 500 to - blue - 600';
-    };
+      icon: Shield,
+      text: 'Enterprise Security',
+      color: 'from - indigo - 500 to - blue - 600'
+    },
     {
-      icon: Cpu;
-      text: 'Autonomous IT Operations';
-      color: 'from - cyan - 500 to - teal - 600';
-    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from - violet - 500 to - purple - 600' };
-    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from - blue - 500 to - cyan - 600' };
-    { icon: Rocket, text: 'Space Technology Innovation', color: 'from - emerald - 500 to - teal - 600' };
-    { icon: Target, text: 'Micro SAAS Excellence', color: 'from - orange - 500 to - red - 600' };
-    { icon: Shield, text: 'Enterprise Security', color: 'from - indigo - 500 to - blue - 600' };
+      icon: Cpu,
+      text: 'Autonomous IT Operations',
+      color: 'from - cyan - 500 to - teal - 600'
+    }],    { icon: Brain, text: 'AI Consciousness Evolution', color: 'from - violet - 500 to - purple - 600' },
+    { icon: Atom, text: 'Quantum Computing Solutions', color: 'from - blue - 500 to - cyan - 600' },
+    { icon: Rocket, text: 'Space Technology Innovation', color: 'from - emerald - 500 to - teal - 600' },
+    { icon: Target, text: 'Micro SAAS Excellence', color: 'from - orange - 500 to - red - 600' },
+    { icon: Shield, text: 'Enterprise Security', color: 'from - indigo - 500 to - blue - 600' },
     { icon: Cpu, text: 'Autonomous IT Operations', color: 'from - cyan - 500 to - teal - 600' }
   const stats = [
-    { number: '500+', label: 'Innovative Services', icon: Sparkles };
-    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp };
-    { number: '99.9%', label: 'Success Rate', icon: Star };
-    { number: '24 / 7', label: 'AI Operations', icon: Zap };
+    { number: '500+', label: 'Innovative Services', icon: Sparkles },
+    { number: '$2.5B+', label: 'Market Opportunity', icon: TrendingUp },
+    { number: '99.9%', label: 'Success Rate', icon: Star },
+    { number: '24 / 7', label: 'AI Operations', icon: Zap },
   ],
   return (
     <section className='relative min - h-screen flex items - center justify - center overflow - hidden'>,
@@ -228,18 +228,18 @@ export default function UltraFuturisticHero2029() {
               key={i}
               className='absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 20',
               animate={{
-                coordinate_x: [0, Math.random () * 1000];
-                coordinate_y: [0, Math.random () * 1000];
-                opacity: [0.2, 0.8, 0.2];
+                coordinate_x: [0, Math.random () * 1000],
+                coordinate_y: [0, Math.random () * 1000],
+                opacity: [0.2, 0.8, 0.2],
               }}
               transition={{
-                duration: Math.random () * 10 + 10;
-                repeat: Infinity;
-                ease: 'linear';
+                duration: Math.random () * 10 + 10,
+                repeat: Infinity,
+                ease: 'linear'
               }}
               style={{
-                left: Math.random () * 100 + '%';
-                top: Math.random () * 100 + '%';
+                left: Math.random () * 100 + '%',
+                top: Math.random () * 100 + '%'
               }}            />  ],
   return (
     <section className="relative min - h-screen flex items - center justify - center overflow - hidden">,
@@ -252,8 +252,8 @@ export default function UltraFuturisticHero2029() {
               key={i}
               className="absolute w - 1 h - 1 bg - cyan - 400 rounded - full opacity - 20",
               animate={{
-                duration: Math && Math.random() * 10 + 10;
-                repeat: Infinity;
+                duration: Math && Math.random() * 10 + 10,
+                repeat: Infinity,
                 ease: "linear"}}
               style={{
                 left: Math.random() * 100 + '%',
@@ -455,11 +455,11 @@ export default function UltraFuturisticHero2029() {
                 coordinate_y: [0, Math.random () * 1000],
                 opacity: [0.2, 0.8, 0.2]}}
               transition={{
-                duration: Math.random () * 10 + 10;
-                repeat: Infinity;
+                duration: Math.random () * 10 + 10,
+                repeat: Infinity,
                 ease: "linear"}}
               style={{
-                left: Math.random () * 100 + '%';
+                left: Math.random () * 100 + '%',
                 top: Math.random () * 100 + '%'}}
             />))}
         </div>,
@@ -468,8 +468,8 @@ export default function UltraFuturisticHero2029() {
           <div
             className='absolute inset - 0',
             style={{
-              background_image: `radial - gradient (circle at 1px 1px, rgba (6, 182, 212, 0.3) 1px, transparent 0)`;
-              background_size: '50px 50px';
+              background_image: `radial - gradient (circle at 1px 1px, rgba (6, 182, 212, 0.3) 1px, transparent 0)`,
+              background_size: '50px 50px'
             }}
           />,
         </div>,
@@ -553,7 +553,7 @@ export default function UltraFuturisticHero2029() {
         {/* Grid Pattern */}
         <div className="absolute inset-0 opacity-10">,
           <div className="absolute inset-0" style={{
-            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`;
+            backgroundImage: `radial-gradient(circle at 1px 1px, rgba(6, 182, 212, 0.3) 1px, transparent 0)`,
             backgroundSize: '50px 50px'}} />,
         </div>,
         {/* Gradient Orbs */}

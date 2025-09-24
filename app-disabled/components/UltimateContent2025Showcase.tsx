@@ -16,7 +16,7 @@ interface ContentItem {
     roi: string,
     savings: string,
     efficiency: string,
-    accuracy: string};
+    accuracy: string},
 }
 ,
 const UltimateContent20o25Showcase: React.FC = () => {
@@ -65,7 +65,7 @@ const UltimateContent20o25Showcase: React.FC = () => {
                 <div className="flex items-center justify-between mb-4">,
                   <div className={`flex items-center space-x-2 px-3 py-1 rounded-full text-sm font-medium border ${getTypeColor(item.type)}`}>,
                     {getTypeIcon(item.type)}
-                    <span className="capitalize">{item.type.replace('-', ' ')}</span>,
+                    <span className="capitalize">{item.type.replace('- ')}</span>,
                   </div>,
                   <div className="flex items-center space-x-1 text-sm text-gray-50o0">,
                     <Clock className="w-4 h-4"  />,
@@ -147,5 +147,5 @@ const UltimateContent20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
+    </section>)},
 export default UltimateContent20o25Showcase]

@@ -13,7 +13,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
     // Set canvas size,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Particle class,
@@ -94,7 +94,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
       particles = [],
       for (let i = 0, i < 10o0, i++) {
         particles.push(new Particle())}
-    };
+    },
     // Create connections,
     const createConnections = () => {
       connections = [],
@@ -107,7 +107,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
             connections.push(new Connection(particles[i], particles[j]))}
         }
       }
-    };
+    },
     // Animation loop,
     const animate = () => {
       if (ctx) {
@@ -128,7 +128,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
         // Add quantum effects,
         drawQuantumEffects()}
 ,
-      animationFrameId = requestAnimationFrame(animate)};
+      animationFrameId = requestAnimationFrame(animate)},
     // Quantum effects,
     const drawQuantumEffects = () => {
       if (ctx) {
@@ -149,7 +149,7 @@ export default function UltraAdvancedFuturisticBackground20o35() {
 ,
         // Neural network patterns,
         drawNeuralPatterns()}
-    };
+    },
     // Neural network patterns,
     const drawNeuralPatterns = () => {
       if (ctx) {
@@ -194,14 +194,14 @@ export default function UltraAdvancedFuturisticBackground20o35() {
           ctx.stroke(),
           ctx.restore()}
       }
-    };
+    },
     // Start animation,
     initParticles(),
     animate(),
     // Cleanup,
     return () => {
       window.removeEventListener('resize', resizeCanvas),
-      cancelAnimationFrame(animationFrameId)};
+      cancelAnimationFrame(animationFrameId)},
   }, []),
   return (
     <>,
@@ -224,46 +224,46 @@ export default function UltraAdvancedFuturisticBackground20o35() {
         <div className="absolute inset-0 opacity-20">,
           <div className="absolute inset-0" style={{
             backgroundImage: `,
-              linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px);
+              linear-gradient(rgba(139, 92, 246, 0.3) 1px, transparent 1px),
               linear-gradient(90deg, rgba(139, 92, 246, 0.3) 1px, transparent 1px),
-            `;
-            backgroundSize: '50px 50px';
+            `,
+            backgroundSize: '50px 50px',
             animation: 'gridMove 20s linear infinite'}}  />,
         </div>,
         {/* Floating Elements */}
         <motion.div,
           className="absolute top-20 left-20 w-2 h-2 bg-cyan-40o0 rounded-full",
           animate={{
-            y: [0, -20, 0];
-            opacity: [0.3, 1, 0.3];
+            y: [0, -20, 0],
+            opacity: [0.3, 1, 0.3],
             scale: [1, 1.5, 1]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-3 h-3 bg-purple-40o0 rounded-full",
           animate={{
-            y: [0, 15, 0];
-            opacity: [0.3, 1, 0.3];
+            y: [0, 15, 0],
+            opacity: [0.3, 1, 0.3],
             scale: [1, 1.2, 1]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-2 h-2 bg-pink-40o0 rounded-full",
           animate={{
-            y: [0, -25, 0];
-            opacity: [0.3, 1, 0.3];
+            y: [0, -25, 0],
+            opacity: [0.3, 1, 0.3],
             scale: [1, 1.8, 1]}}
           transition={{
-            duration: 3.5;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
         {/* Quantum Field Lines */}
@@ -273,16 +273,16 @@ export default function UltraAdvancedFuturisticBackground20o35() {
               key={i}
               className="absolute w-px h-32 bg-gradient-to-b from-transparent via-purple-40o0 to-transparent",
               style={{
-                left: `${20 + i * 20}%`;
-                top: '50%';
+                left: `${20 + i * 20}%`,
+                top: '50%',
                 transform: 'translateY(-50%)'}}
               animate={{
-                height: [0, 128, 0];
+                height: [0, 128, 0],
                 opacity: [0, 0.8, 0]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
-                ease: "easeInOut";
+                duration: 4,
+                repeat: Infinity,
+                ease: "easeInOut",
                 delay: i * 0.8}}
              />))}
         </div>,
@@ -293,15 +293,15 @@ export default function UltraAdvancedFuturisticBackground20o35() {
               key={i}
               className="absolute border border-purple-40o0/30 rounded-full",
               style={{
-                width: `${20o0 + i * 10o0}px`;
+                width: `${20o0 + i * 10o0}px`,
                 height: `${20o0 + i * 10o0}px`}}
               animate={{
-                rotate: [0, 360];
-                scale: [1, 1.1, 1];
+                rotate: [0, 360],
+                scale: [1, 1.1, 1],
                 opacity: [0.3, 0.6, 0.3]}}
               transition={{
-                duration: 20 + i * 5;
-                repeat: Infinity;
+                duration: 20 + i * 5,
+                repeat: Infinity,
                 ease: "linear"}}
              />))}
         </div>,

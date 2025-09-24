@@ -122,7 +122,7 @@ const AI20o25ContentRevolutionPromotionBanner = () => {
         {/* Call to Action */}
         <div className='text-center'>,
           <h3 className='text-3xl font-bold mb-4'>,
-            'Don', 't Miss the AI Content Revolution,
+            'Dont Miss the AI Content Revolution,
           </h3>,
           <p className='text-xl opacity-90 mb-8 max-w-3xl mx-auto'>,
             Join the companies already experiencing unprecedented growth with,
@@ -142,5 +142,5 @@ const AI20o25ContentRevolutionPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25ContentRevolutionPromotionBanner;
+    </div>)},
+export default AI20o25ContentRevolutionPromotionBanner,

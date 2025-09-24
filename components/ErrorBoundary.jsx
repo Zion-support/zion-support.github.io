@@ -4,20 +4,20 @@ class ErrorBoundary extends Component {
   constructor(props) {
     super(props),
     this.state = {
-      hasError: false;
-      error: null;
-      errorInfo: null;
-    };
+      hasError: false,
+      error: null,
+      errorInfo: null
+    },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
     this.setState({
-      error: error;
-      errorInfo: errorInfo;
+      error: error,
+      errorInfo: errorInfo
     }),
     // Log error to monitoring service,
     console.error('ErrorBoundary caught an error:', error, errorInfo),
@@ -29,10 +29,10 @@ class ErrorBoundary extends Component {
 ,
   handleRetry = () => {
     this.setState({
-      hasError: false;
-      error: null;
-      errorInfo: null;
-    })};
+      hasError: false,
+      error: null,
+      errorInfo: null
+    })},
   render() {
     if (this.state.hasError) {
       return (
@@ -96,4 +96,4 @@ class ErrorBoundary extends Component {
     return this.props.children}
 }
 ,
-export default ErrorBoundary;
+export default ErrorBoundary,

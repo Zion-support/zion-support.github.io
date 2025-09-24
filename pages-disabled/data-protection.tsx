@@ -5,120 +5,112 @@ const DataProtection: NextPage = () => {
   const lastUpdated = 'January 27, 20o25',
   const protectionMeasures = [
     {
-      icon: Lock;
-      title: 'Data Encryption';
+      icon: Lock,
+      title: 'Data Encryption',
       description:,
-        'All data is encrypted both in transit and at rest using industry-standard encryption protocols.';
+        'All data is encrypted both in transit and at rest using industry-standard encryption protocols.',
       details: [
-        'AES-256 encryption for data at rest';
-        'TLS 1.3 for data in transit';
-        'End-to-end encryption for sensitive communications';
-        'Regular encryption key rotation';
-      ];
-    };
+        'AES-256 encryption for data at restTLS 1.3 for data in transit',
+        'End-to-end encryption for sensitive communicationsRegular encryption key rotation',
+      ]
+    },
     {
-      icon: Shield;
-      title: 'Access Controls';
+      icon: Shield,
+      title: 'Access Controls',
       description:,
-        'Strict access controls ensure only authorized personnel can access your data.';
+        'Strict access controls ensure only authorized personnel can access your data.',
       details: [
-        'Multi-factor authentication (MFA)';
-        'Role-based access control (RBAC)';
-        'Principle of least privilege';
-        'Regular access reviews and audits';
-      ];
-    };
+        'Multi-factor authentication (MFA)Role-based access control (RBAC)',
+        'Principle of least privilegeRegular access reviews and audits',
+      ]
+    },
     {
-      icon: Eye;
-      title: 'Monitoring & Logging';
+      icon: Eye,
+      title: 'Monitoring & Logging',
       description:,
-        'Comprehensive monitoring and logging of all data access and modifications.';
+        'Comprehensive monitoring and logging of all data access and modifications.',
       details: [
-        'Real-time security monitoring';
-        'Comprehensive audit logs';
-        'Automated threat detection';
-        '24/7 security operations center';
-      ];
-    };
+        'Real-time security monitoringComprehensive audit logs',
+        'Automated threat detection24/7 security operations center',
+      ]
+    },
     {
-      icon: Database;
-      title: 'Data Backup & Recovery';
+      icon: Database,
+      title: 'Data Backup & Recovery',
       description:,
-        'Regular backups and disaster recovery procedures to protect against data loss.';
+        'Regular backups and disaster recovery procedures to protect against data loss.',
       details: [
-        'Automated daily backups';
-        'Geographically distributed storage';
-        'Point-in-time recovery capabilities';
-        'Regular disaster recovery testing';
-      ];
-    };
+        'Automated daily backupsGeographically distributed storage',
+        'Point-in-time recovery capabilitiesRegular disaster recovery testing',
+      ]
+    },
   ],
   const complianceStandards = [
     {
-      name: 'GDPR';
+      name: 'GDPR',
       description:,
-        'General Data Protection Regulation compliance for EU data subjects';
-      status: 'Compliant';
-      icon: '🇪🇺';
-    };
+        'General Data Protection Regulation compliance for EU data subjects',
+      status: 'Compliant',
+      icon: '🇪🇺'
+    },
     {
-      name: 'CCPA';
+      name: 'CCPA',
       description:,
-        'California Consumer Privacy Act compliance for California residents';
-      status: 'Compliant';
-      icon: '🇺🇸';
-    };
+        'California Consumer Privacy Act compliance for California residents',
+      status: 'Compliant',
+      icon: '🇺🇸'
+    },
     {
-      name: 'HIPAA';
+      name: 'HIPAA',
       description:,
-        'Health Insurance Portability and Accountability Act for healthcare data';
-      status: 'Compliant';
-      icon: '🏥';
-    };
+        'Health Insurance Portability and Accountability Act for healthcare data',
+      status: 'Compliant',
+      icon: '🏥'
+    },
     {
-      name: 'SOC 2';
-      description: 'Service Organization Control 2 Type II certification';
-      status: 'Certified';
-      icon: '🔒';
-    };
+      name: 'SOC 2',
+      description: 'Service Organization Control 2 Type II certification',
+      status: 'Certified',
+      icon: '🔒'
+    },
     {
-      name: 'ISO 270o01';
-      description: 'International standard for information security management';
-      status: 'Certified';
-      icon: '🌍';
-    };
+      name: 'ISO 270o01',
+      description: 'International standard for information security management',
+      status: 'Certified',
+      icon: '🌍'
+    },
   ],
   const dataRights = [
     {
-      title: 'Right to Access';
+      title: 'Right to Access',
       description:,
-        'You have the right to request access to your personal data and receive a copy of the data we hold about you.';
-    };
+        'You have the right to request access to your personal data and receive a copy of the data we hold about you.',
+    },
     {
-      title: 'Right to Rectification';
+      title: 'Right to Rectification',
       description:,
-        'You can request correction of inaccurate or incomplete personal data.';
-    };
+        'You can request correction of inaccurate or incomplete personal data.',
+    },
     {
-      title: 'Right to Erasure';
+      title: 'Right to Erasure',
       description:,
-        'You have the right to request deletion of your personal data under certain circumstances.';
-    };
+        'You have the right to request deletion of your personal data under certain circumstances.',
+    },
     {
-      title: 'Right to Portability';
+      title: 'Right to Portability',
       description:,
-        'You can request a copy of your data in a structured, machine-readable format.';
-    };
+        'You can request a copy of your data in a structured, machine-readable format.',
+    },
     {
-      title: 'Right to Object';
+      title: 'Right to Object',
       description:,
-        'You can object to the processing of your personal data for certain purposes.';
-    };
+        'You can object to the processing of your personal data for certain purposes.',
+    },
     {
-      title: 'Right to Restrict Processing';
+      title: 'Right to Restrict Processing',
       description:,
-        'You can request that we limit the processing of your personal data.';
-    };
+        'You can request that we limit the processing of your personal data.',
+    },
   ],
   return (
     <MainLayout
@@ -299,5 +291,5 @@ const DataProtection: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </MainLayout>)};
-export default DataProtection;
+    </MainLayout>)},
+export default DataProtection,

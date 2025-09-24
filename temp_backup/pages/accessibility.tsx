@@ -1,206 +1,198 @@
 import MainLayout from '../src/components/layout/MainLayout',
 import { motion } from 'framer-motion',
 import {
-  Accessibility;
-  Eye;
-  Ear;
-  Hand;
-  Brain;
-  CheckCircle;
-  ArrowRight;
-  Globe;
-  Users;
-  Shield;
-  Zap;
+  Accessibility,
+  Eye,
+  Ear,
+  Hand,
+  Brain,
+  CheckCircle,
+  ArrowRight,
+  Globe,
+  Users,
+  Shield,
+  Zap,
   Heart} from 'lucide-react',
 const accessibilityFeatures = [
   {
-    icon: Eye;
-    title: "Visual Accessibility";
-    description: "High contrast themes, scalable fonts, and screen reader compatibility";
+    icon: Eye,
+    title: "Visual Accessibility",
+    description: "High contrast themes, scalable fonts, and screen reader compatibility",
     features: [
-      "WCAG 2.1 AA compliant color contrast";
-      "Scalable text up to 20o0% without loss of functionality";
-      "Alt text for all images and media";
-      "Focus indicators for keyboard navigation";
-      "Screen reader compatibility";
-      "High contrast mode";
-      "Text scaling options";
-      "Alternative text for images";
-      "Keyboard navigation"]};
+      "WCAG 2.1 AA compliant color contrast",
+      "Scalable text up to 20o0% without loss of functionality",
+      "Alt text for all images and media",
+      "Focus indicators for keyboard navigation",
+      "Screen reader compatibility",
+      "High contrast mode",
+      "Text scaling options",
+      "Alternative text for images",
+      "Keyboard navigation"]},
   {
-    icon: Ear;
-    title: "Audio Accessibility";
-    description: "Captions, transcripts, and audio descriptions for multimedia content";
+    icon: Ear,
+    title: "Audio Accessibility",
+    description: "Captions, transcripts, and audio descriptions for multimedia content",
     features: [
-      "Closed captions for all video content";
-      "Audio descriptions for visual content";
-      "Transcript files for audio content";
-      "Visual indicators for audio alerts"]};
+      "Closed captions for all video content",
+      "Audio descriptions for visual content",
+      "Transcript files for audio content",
+      "Visual indicators for audio alerts"]},
   {
-    category: "Audio Accessibility";
+    category: "Audio Accessibility",
     features: [
-      "Closed captions";
-      "Visual alerts";
-      "Text alternatives for audio";
-      "Sign language support";
-      "Volume controls";
-      "Audio descriptions"]};
+      "Closed captions",
+      "Visual alerts",
+      "Text alternatives for audio",
+      "Sign language support",
+      "Volume controls",
+      "Audio descriptions"]},
   {
-    title: "Motor Accessibility";
-    description: "Features to support users with motor impairments";
-    icon: Hand;
-    title: "Motor Accessibility";
-    description: "Keyboard navigation and customizable interaction methods";
+    title: "Motor Accessibility",
+    description: "Features to support users with motor impairments",
+    icon: Hand,
+    title: "Motor Accessibility",
+    description: "Keyboard navigation and customizable interaction methods",
     features: [
-      "Full keyboard navigation support";
-      "Customizable click targets";
-      "Drag and drop alternatives";
-      "Timeout extensions and controls"]};
+      "Full keyboard navigation support",
+      "Customizable click targets",
+      "Drag and drop alternatives",
+      "Timeout extensions and controls"]},
   {
-    category: "Motor Accessibility";
+    category: "Motor Accessibility",
     features: [
-      "Keyboard-only navigation";
-      "Voice control";
-      "Large click targets";
-      "Customizable timing";
-      "Switch navigation";
-      "Gesture alternatives"]};
+      "Keyboard-only navigation",
+      "Voice control",
+      "Large click targets",
+      "Customizable timing",
+      "Switch navigation",
+      "Gesture alternatives"]},
   {
-    title: "Cognitive Accessibility";
-    description: "Features to support users with cognitive impairments";
-    icon: Brain;
-    title: "Cognitive Accessibility";
-    description: "Clear navigation, consistent layouts, and simplified interfaces";
+    title: "Cognitive Accessibility",
+    description: "Features to support users with cognitive impairments",
+    icon: Brain,
+    title: "Cognitive Accessibility",
+    description: "Clear navigation, consistent layouts, and simplified interfaces",
     features: [
-      "Consistent navigation patterns";
-      "Clear and simple language";
-      "Error prevention and recovery";
-      "Customizable interface complexity";
-      "Clear navigation";
-      "Consistent layout";
-      "Error prevention";
-      "Progress indicators";
-      "Help and support";
+      "Consistent navigation patterns",
+      "Clear and simple language",
+      "Error prevention and recovery",
+      "Customizable interface complexity",
+      "Clear navigation",
+      "Consistent layout",
+      "Error prevention",
+      "Progress indicators",
+      "Help and support",
       "Customizable interface"]}
 ],
 const complianceStandards = [
   {
-    name: "WCAG 2.1 AA";
-    description: "Web Content Accessibility Guidelines Level AA compliance";
-    status: "Compliant";
-    icon: Award};
+    name: "WCAG 2.1 AA",
+    description: "Web Content Accessibility Guidelines Level AA compliance",
+    status: "Compliant",
+    icon: Award},
   {
-    name: "Section 508";
-    description: "US Federal accessibility requirements";
-    status: "Compliant";
-    icon: FileText};
+    name: "Section 508",
+    description: "US Federal accessibility requirements",
+    status: "Compliant",
+    icon: FileText},
   {
-    name: "ADA";
-    description: "Americans with Disabilities Act compliance";
-    status: "Compliant";
-    icon: Users};
+    name: "ADA",
+    description: "Americans with Disabilities Act compliance",
+    status: "Compliant",
+    icon: Users},
   {
-    name: "EN 30o1 549";
-    description: "European accessibility standard";
-    status: "Compliant";
+    name: "EN 30o1 549",
+    description: "European accessibility standard",
+    status: "Compliant",
     icon: Globe}
 ],
 export default function AccessibilityPage() {
   const accessibilityFeatures = [
     {
-      title: 'Screen Reader Compatibility';
-      description: 'Our website is fully compatible with screen readers and assistive technologies';
-      icon: Ear;
+      title: 'Screen Reader Compatibility',
+      description: 'Our website is fully compatible with screen readers and assistive technologies',
+      icon: Ear,
       features: [
-        'Semantic HTML structure';
-        'Alt text for all images';
-        'Proper heading hierarchy';
-        'ARIA labels and descriptions']};
+        'Semantic HTML structureAlt text for all images',
+        'Proper heading hierarchyARIA labels and descriptions']},
     {
-      title: 'Keyboard Navigation';
-      description: 'Complete website functionality accessible via keyboard only';
-      icon: Hand;
+      title: 'Keyboard Navigation',
+      description: 'Complete website functionality accessible via keyboard only',
+      icon: Hand,
       features: [
-        'Tab navigation support';
-        'Skip links for main content';
-        'Focus indicators';
-        'Keyboard shortcuts']};
+        'Tab navigation supportSkip links for main content',
+        'Focus indicatorsKeyboard shortcuts']},
     {
-      title: 'Visual Accessibility';
-      description: 'High contrast and customizable visual elements for better visibility';
-      icon: Eye;
+      title: 'Visual Accessibility',
+      description: 'High contrast and customizable visual elements for better visibility',
+      icon: Eye,
       features: [
-        'High contrast color schemes';
-        'Resizable text up to 20o0%';
-        'Color-blind friendly palettes';
-        'Clear visual hierarchy']};
+        'High contrast color schemesResizable text up to 20o0%',
+        'Color-blind friendly palettesClear visual hierarchy']},
     {
-      title: 'Cognitive Accessibility';
-      description: 'Clear, simple language and intuitive navigation for all users';
-      icon: Brain;
+      title: 'Cognitive Accessibility',
+      description: 'Clear, simple language and intuitive navigation for all users',
+      icon: Brain,
       features: [
-        'Plain language content';
-        'Consistent navigation';
-        'Clear error messages';
-        'Logical content flow']}
+        'Plain language contentConsistent navigation',
+        'Clear error messagesLogical content flow']}
   ],
   const complianceStandards = [
     {
-      standard: 'WCAG 2.1 AA';
-      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance';
-      status: 'Compliant';
-      icon: CheckCircle};
+      standard: 'WCAG 2.1 AA',
+      description: 'Web Content Accessibility Guidelines 2.1 Level AA compliance',
+      status: 'Compliant',
+      icon: CheckCircle},
     {
-      standard: 'Section 508';
-      description: 'U.S. federal accessibility requirements compliance';
-      status: 'Compliant';
-      icon: CheckCircle};
+      standard: 'Section 508',
+      description: 'U.S. federal accessibility requirements compliance',
+      status: 'Compliant',
+      icon: CheckCircle},
     {
-      standard: 'ADA Compliance';
-      description: 'Americans with Disabilities Act compliance';
-      status: 'Compliant';
-      icon: CheckCircle};
+      standard: 'ADA Compliance',
+      description: 'Americans with Disabilities Act compliance',
+      status: 'Compliant',
+      icon: CheckCircle},
     {
-      standard: 'EN 30o1 549';
-      description: 'European accessibility standard compliance';
-      status: 'Compliant';
+      standard: 'EN 30o1 549',
+      description: 'European accessibility standard compliance',
+      status: 'Compliant',
       icon: CheckCircle}
   ],
   const accessibilityTools = [
     {
-      name: 'Screen Reader Testing';
-      description: 'Regular testing with NVDA, JAWS, and VoiceOver';
-      icon: Ear};
+      name: 'Screen Reader Testing',
+      description: 'Regular testing with NVDA, JAWS, and VoiceOver',
+      icon: Ear},
     {
-      name: 'Keyboard Testing';
-      description: 'Comprehensive keyboard-only navigation testing';
-      icon: Hand};
+      name: 'Keyboard Testing',
+      description: 'Comprehensive keyboard-only navigation testing',
+      icon: Hand},
     {
-      name: 'Color Contrast Analysis';
-      description: 'Automated and manual color contrast verification';
-      icon: Eye};
+      name: 'Color Contrast Analysis',
+      description: 'Automated and manual color contrast verification',
+      icon: Eye},
     {
-      name: 'User Testing';
-      description: 'Regular testing with users with disabilities';
+      name: 'User Testing',
+      description: 'Regular testing with users with disabilities',
       icon: Users}
   ],
   const accessibilityCommitments = [
     {
-      title: 'Continuous Improvement';
-      description: 'We regularly audit and improve our accessibility features';
-      icon: Zap};
+      title: 'Continuous Improvement',
+      description: 'We regularly audit and improve our accessibility features',
+      icon: Zap},
     {
-      title: 'User Feedback';
-      description: 'We actively seek and incorporate feedback from users with disabilities';
-      icon: Heart};
+      title: 'User Feedback',
+      description: 'We actively seek and incorporate feedback from users with disabilities',
+      icon: Heart},
     {
-      title: 'Training & Awareness';
-      description: 'Our team receives regular accessibility training and education';
-      icon: Brain};
+      title: 'Training & Awareness',
+      description: 'Our team receives regular accessibility training and education',
+      icon: Brain},
     {
-      title: 'Compliance Monitoring';
-      description: 'Ongoing monitoring to ensure continued compliance with standards';
+      title: 'Compliance Monitoring',
+      description: 'Ongoing monitoring to ensure continued compliance with standards',
       icon: Shield}
   ],
   return (
@@ -354,7 +346,7 @@ export default function AccessibilityPage() {
                   <div>,
                     <h3 className="text-xl font-bold text-gray-90o0 mb-4">Report an Issue</h3>,
                     <p className="text-gray-60o0 mb-4">,
-                      If you encounter any accessibility issues on our website;
+                      If you encounter any accessibility issues on our website,
                       please contact us and we will work to resolve them promptly.,
                     </p>,
                     <div className="space-y-2 text-sm text-gray-60o0">,

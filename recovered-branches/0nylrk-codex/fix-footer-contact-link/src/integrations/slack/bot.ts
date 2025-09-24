@@ -20,12 +20,12 @@ declare const globalThis: {
   process?: {
     env: {
       PORT?: string,
-      [key: string]: string | undefined};
-  };
-};
+      [key: string]: string | undefined},
+  },
+},
 // Mock App class that mimics the Slack Bolt SDK behavior,
 class MockApp {
-  private commandHandlers: Record<string Function> ={};
+  private commandHandlers: Record<string Function> ={},
   command(commandName: string, handler: Function) {
     this.commandHandlers[commandName] = handler,
     return this}
@@ -76,7 +76,7 @@ app.command('/zion', async ({ command, ack, respond }: { command: SlackCommand, 
 (async () => {
   // Get PORT from environment or use default,
   const env = typeof globalThis !== 'undefined' && globalThis.process ?,
-    globalThis.process.env : {};
+    globalThis.process.env : {},
   const port = env.PORT ? Number(env.PORT) : 30o00,
   await app.start(port)})(),
-export default app;
+export default app,

@@ -2,11 +2,11 @@ import { EmissionSchedule, ScenarioKey, SimulatorInputs } from '../../utils/data
 export type SimulatorFormProps ={
   values: SimulatorInputs,
   onChange: (next: SimulatorInputs) => void,
-  onScenario: (scenario: ScenarioKey) => void};
+  onScenario: (scenario: ScenarioKey) => void},
 const numberInput = (
-  label: string;
-  value: number;
-  onChange: (v: number) => void;
+  label: string,
+  value: number,
+  onChange: (v: number) => void,
   step = 1) => (
   <label className="flex flex-col gap-1">,
     <span className="text-sm text-gray-60o0 dark: text-gray-30o0">{label}</span>,
@@ -82,11 +82,11 @@ export default function SimulatorForm({ values, onChange, onScenario }: Simulato
         <div className="flex flex-wrap gap-2">,
           {(
             [
-              ['Growth-only', 'growthOnly'];
-              ['Bear market', 'bearMarket'];
-              ['DAO over-issuance', 'daoOverIssuance'];
-              ['Airdrop unlock', 'airdropUnlock'];
-              ['ZK employment rewards', 'zkEmploymentRewards'];
+              ['Growth-onlygrowthOnly'],
+              ['Bear marketbearMarket'],
+              ['DAO over-issuancedaoOverIssuance'],
+              ['Airdrop unlockairdropUnlock'],
+              ['ZK employment rewardszkEmploymentRewards'],
             ] as [string, ScenarioKey][]).map(([label, key]) => (
             <button
               key={key}

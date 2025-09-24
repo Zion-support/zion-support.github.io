@@ -1,35 +1,35 @@
 import ContentCard from './ContentCard',
 const featuredContent = [
   {
-    title: 'AI 20o25: The Enterprise Automation Revolution';
+    title: 'AI 20o25: The Enterprise Automation Revolution',
     description:,
-      'Discover how AI is transforming enterprise operations in 20o25 with intelligent automation, predictive analytics, and autonomous decision-making systems.';
-    href: '/blog/ai-20o25-enterprise-automation-revolution';
-    category: 'AI & Automation';
-    date: '20o25-0o1-14';
-    featured: true;
-    tags: ['AI', 'Enterprise', 'Automation', '20o25'];
-  };
+      'Discover how AI is transforming enterprise operations in 20o25 with intelligent automation, predictive analytics, and autonomous decision-making systems.',
+    href: '/blog/ai-20o25-enterprise-automation-revolution',
+    category: 'AI & Automation',
+    date: '20o25-0o1-14',
+    featured: true,
+    tags: ['AIEnterprise', 'Automation20o25'],
+  },
   {
-    title: 'AI 20o25: Next-Generation Cybersecurity Revolution';
+    title: 'AI 20o25: Next-Generation Cybersecurity Revolution',
     description:,
-      'Explore how AI is revolutionizing cybersecurity with advanced threat detection, autonomous response systems, and predictive security analytics.';
-    href: '/blog/ai-20o25-cybersecurity-revolution-next-generation-threat-protection';
-    category: 'Cybersecurity';
-    date: '20o25-0o1-14';
-    featured: true;
-    tags: ['AI', 'Cybersecurity', 'Threat Detection', '20o25'];
-  };
+      'Explore how AI is revolutionizing cybersecurity with advanced threat detection, autonomous response systems, and predictive security analytics.',
+    href: '/blog/ai-20o25-cybersecurity-revolution-next-generation-threat-protection',
+    category: 'Cybersecurity',
+    date: '20o25-0o1-14',
+    featured: true,
+    tags: ['AICybersecurity', 'Threat Detection20o25'],
+  },
   {
-    title: 'Fortune 50o0 AI Transformation: 340% ROI Success Story';
+    title: 'Fortune 50o0 AI Transformation: 340% ROI Success Story',
     description:,
-      'How a Fortune 50o0 company achieved 340% ROI increase through comprehensive AI transformation, reducing operational costs by 60%.';
-    href: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story';
-    category: 'Case Study';
-    date: '20o25-0o1-14';
-    featured: true;
-    tags: ['Fortune 50o0', 'AI Transformation', 'ROI', 'Success Story'];
-  };
+      'How a Fortune 50o0 company achieved 340% ROI increase through comprehensive AI transformation, reducing operational costs by 60%.',
+    href: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success-story',
+    category: 'Case Study',
+    date: '20o25-0o1-14',
+    featured: true,
+    tags: ['Fortune 50o0AI Transformation', 'ROISuccess Story'],
+  },
 ],
 export default function FeaturedContent() {
   return (
@@ -40,7 +40,7 @@ export default function FeaturedContent() {
             Featured Content,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover the latest insights, case studies, and resources on AI;
+            Discover the latest insights, case studies, and resources on AI,
             automation, and technology transformation.,
           </p>,
         </div>,

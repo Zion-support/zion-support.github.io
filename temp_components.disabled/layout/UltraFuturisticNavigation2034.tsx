@@ -2,38 +2,38 @@ import React, { useState, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search;
-  Menu;
-  X;
-  ChevronDown;
-  Sparkles;
-  Brain;
-  Atom;
-  Rocket;
-  Target;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Star;
-  TrendingUp;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Zap;
-  Handshake;
-  Linkedin;
-  Github;
-  Twitter;
-  Youtube;
-  Instagram;
-  Home;
+  Search,
+  Menu,
+  X,
+  ChevronDown,
+  Sparkles,
+  Brain,
+  Atom,
+  Rocket,
+  Target,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Star,
+  TrendingUp,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Zap,
+  Handshake,
+  Linkedin,
+  Github,
+  Twitter,
+  Youtube,
+  Instagram,
+  Home,
 } from 'lucide-react',
 const UltraFuturisticNavigation20o34: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false),
@@ -42,182 +42,182 @@ const UltraFuturisticNavigation20o34: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 50)};
+      setIsScrolled(window.scrollY > 50)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const mainNavigation = [
-    { name: 'Home', href: '/', icon: Home };
+    { name: 'Home', href: '/', icon: Home },
     {
-      name: 'Services';
-      href: '/services';
-      icon: Rocket;
-      description: 'Comprehensive IT & AI solutions';
-    };
+      name: 'Services',
+      href: '/services',
+      icon: Rocket,
+      description: 'Comprehensive IT & AI solutions'
+    },
     {
-      name: '20o24 Services';
-      href: '/services-20o24';
-      icon: Sparkles;
-      description: 'Latest revolutionary services for 20o24';
-    };
+      name: '20o24 Services',
+      href: '/services-20o24',
+      icon: Sparkles,
+      description: 'Latest revolutionary services for 20o24'
+    },
     {
-      name: 'Solutions';
-      href: '/solutions';
-      icon: Target;
-      description: 'Industry-specific solutions';
-    };
+      name: 'Solutions',
+      href: '/solutions',
+      icon: Target,
+      description: 'Industry-specific solutions'
+    },
     {
-      name: 'Pricing';
-      href: '/pricing-20o33';
-      icon: TrendingUp;
-      description: 'Transparent pricing plans';
-    };
+      name: 'Pricing',
+      href: '/pricing-20o33',
+      icon: TrendingUp,
+      description: 'Transparent pricing plans'
+    },
     {
-      name: 'About';
-      href: '/about';
-      icon: Users;
-      description: 'Our story and team';
-    };
+      name: 'About',
+      href: '/about',
+      icon: Users,
+      description: 'Our story and team'
+    },
     {
-      name: 'Contact';
-      href: '/contact';
-      icon: MessageCircle;
-      description: 'Get in touch with us';
-    };
+      name: 'Contact',
+      href: '/contact',
+      icon: MessageCircle,
+      description: 'Get in touch with us'
+    },
   ],
   const serviceCategories = [
     {
-      name: 'AI & Machine Learning';
-      icon: Brain;
-      description: 'Intelligent automation and AI solutions';
+      name: 'AI & Machine Learning',
+      icon: Brain,
+      description: 'Intelligent automation and AI solutions',
       services: [
         {
-          name: 'AI Business Intelligence Pro';
-          href: '/ai-business-intelligence-pro';
-          price: '$299/month';
-        };
+          name: 'AI Business Intelligence Pro',
+          href: '/ai-business-intelligence-pro',
+          price: '$299/month'
+        },
         {
-          name: 'AI Customer Success Automation';
-          href: '/ai-customer-success-automation';
-          price: '$199/month';
-        };
+          name: 'AI Customer Success Automation',
+          href: '/ai-customer-success-automation',
+          price: '$199/month'
+        },
         {
-          name: 'AI-Powered SEO Automation Pro';
-          href: '/ai-powered-seo-automation-pro';
-          price: '$179/month';
-        };
+          name: 'AI-Powered SEO Automation Pro',
+          href: '/ai-powered-seo-automation-pro',
+          price: '$179/month'
+        },
         {
-          name: 'AI-Powered Social Media Manager';
-          href: '/ai-powered-social-media-manager';
-          price: '$149/month';
-        };
+          name: 'AI-Powered Social Media Manager',
+          href: '/ai-powered-social-media-manager',
+          price: '$149/month'
+        },
         {
-          name: 'AI-Powered Email Marketing Automation';
-          href: '/ai-powered-email-marketing-automation';
-          price: '$129/month';
-        };
+          name: 'AI-Powered Email Marketing Automation',
+          href: '/ai-powered-email-marketing-automation',
+          price: '$129/month'
+        },
         {
-          name: 'AI-Powered Customer Support Automation';
-          href: '/ai-powered-customer-support-automation';
-          price: '$129/month';
-        };
+          name: 'AI-Powered Customer Support Automation',
+          href: '/ai-powered-customer-support-automation',
+          price: '$129/month'
+        },
         {
-          name: 'AI-Powered Project Management Pro';
-          href: '/ai-powered-project-management-pro';
-          price: '$199/month';
-        };
-      ];
-    };
+          name: 'AI-Powered Project Management Pro',
+          href: '/ai-powered-project-management-pro',
+          price: '$199/month'
+        },
+      ],
+    },
     {
-      name: 'Quantum & Security';
-      icon: Atom;
-      description: 'Next-generation security and quantum solutions';
+      name: 'Quantum & Security',
+      icon: Atom,
+      description: 'Next-generation security and quantum solutions',
       services: [
         {
-          name: 'Quantum-Secure Communication Platform';
-          href: '/quantum-secure-communication';
-          price: '$499/month';
-        };
+          name: 'Quantum-Secure Communication Platform',
+          href: '/quantum-secure-communication',
+          price: '$499/month'
+        },
         {
-          name: 'Blockchain Supply Chain Transparency';
-          href: '/blockchain-supply-chain-transparency';
-          price: '$399/month';
-        };
+          name: 'Blockchain Supply Chain Transparency',
+          href: '/blockchain-supply-chain-transparency',
+          price: '$399/month'
+        },
         {
-          name: 'Zero Trust Network Architecture';
-          href: '/zero-trust-network-architecture';
-          price: '$799/month';
-        };
+          name: 'Zero Trust Network Architecture',
+          href: '/zero-trust-network-architecture',
+          price: '$799/month'
+        },
         {
-          name: 'Quantum-Secure Database Platform';
-          href: '/quantum-secure-database-platform';
-          price: '$899/month';
-        };
+          name: 'Quantum-Secure Database Platform',
+          href: '/quantum-secure-database-platform',
+          price: '$899/month'
+        },
         {
-          name: 'AI-Powered Network Security';
-          href: '/ai-powered-network-security';
-          price: '$549/month';
-        };
-      ];
-    };
+          name: 'AI-Powered Network Security',
+          href: '/ai-powered-network-security',
+          price: '$549/month'
+        },
+      ],
+    },
     {
-      name: 'Enterprise IT';
-      icon: Cpu;
-      description: 'Enterprise-grade IT infrastructure and operations';
+      name: 'Enterprise IT',
+      icon: Cpu,
+      description: 'Enterprise-grade IT infrastructure and operations',
       services: [
         {
-          name: 'Autonomous DevOps Platform';
-          href: '/autonomous-devops-platform';
-          price: '$599/month';
-        };
+          name: 'Autonomous DevOps Platform',
+          href: '/autonomous-devops-platform',
+          price: '$599/month'
+        },
         {
-          name: 'Edge Computing Orchestration';
-          href: '/edge-computing-orchestration';
-          price: '$449/month';
-        };
+          name: 'Edge Computing Orchestration',
+          href: '/edge-computing-orchestration',
+          price: '$449/month'
+        },
         {
-          name: 'AI-Powered IT Operations Center';
-          href: '/ai-powered-it-operations-center';
-          price: '$699/month';
-        };
+          name: 'AI-Powered IT Operations Center',
+          href: '/ai-powered-it-operations-center',
+          price: '$699/month'
+        },
         {
-          name: 'AI-Powered API Management';
-          href: '/ai-powered-api-management';
-          price: '$349/month';
-        };
+          name: 'AI-Powered API Management',
+          href: '/ai-powered-api-management',
+          price: '$349/month'
+        },
         {
-          name: 'Intelligent Cloud Cost Optimization';
-          href: '/intelligent-cloud-cost-optimization';
-          price: '$299/month';
-        };
-      ];
-    };
+          name: 'Intelligent Cloud Cost Optimization',
+          href: '/intelligent-cloud-cost-optimization',
+          price: '$299/month'
+        },
+      ],
+    },
   ],
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709'
+  },
   const socialLinks = [
     {
-      name: 'LinkedIn';
-      href: '#';
-      icon: Linkedin;
-      color: 'hover:text-blue-40o0';
-    };
-    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-40o0' };
+      name: 'LinkedIn',
+      href: '#',
+      icon: Linkedin,
+      color: 'hover:text-blue-40o0'
+    },
+    { name: 'GitHub', href: '#', icon: Github, color: 'hover:text-gray-40o0' },
     {
-      name: 'Twitter';
-      href: '#';
-      icon: Twitter;
-      color: 'hover:text-cyan-40o0';
-    };
-    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-40o0' };
+      name: 'Twitter',
+      href: '#',
+      icon: Twitter,
+      color: 'hover:text-cyan-40o0'
+    },
+    { name: 'YouTube', href: '#', icon: Youtube, color: 'hover:text-red-40o0' },
     {
-      name: 'Instagram';
-      href: '#';
-      icon: Instagram;
-      color: 'hover:text-pink-40o0';
-    };
+      name: 'Instagram',
+      href: '#',
+      icon: Instagram,
+      color: 'hover:text-pink-40o0'
+    },
   ],
   return (
     <>,
@@ -458,5 +458,5 @@ const UltraFuturisticNavigation20o34: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </>)};
-export default UltraFuturisticNavigation20o34;
+    </>)},
+export default UltraFuturisticNavigation20o34,

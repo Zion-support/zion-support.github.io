@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react',
 import SEO from '../components/SEO',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain, Atom, Shield, Target, Rocket;
-  ArrowRight, Check, Palette, Heart, Truck, GraduationCap;
+  Brain, Atom, Shield, Target, Rocket,
+  ArrowRight, Check, Palette, Heart, Truck, GraduationCap,
   Building, Cpu, Zap, Star, Globe, Lock, Cloud, Database} from 'lucide-react',
 // Import all our revolutionary services,
 import { advancedAIAutonomousEcosystemServices20o25 } from '../data/20o25-advanced-ai-autonomous-ecosystem-services',
@@ -13,46 +13,46 @@ import { emergingTechnologyBreakthroughs20o25 } from '../data/20o25-emerging-tec
 import { specializedEnterpriseSolutions20o25 } from '../data/20o25-specialized-enterprise-solutions',
 // Combine all services,
 const allRevolutionaryServices = [
-  ...advancedAIAutonomousEcosystemServices20o25;
-  ...cuttingEdgeITInfrastructureInnovations20o25;
-  ...revolutionaryMicroSaasInnovations20o25;
-  ...emergingTechnologyBreakthroughs20o25;
+  ...advancedAIAutonomousEcosystemServices20o25,
+  ...cuttingEdgeITInfrastructureInnovations20o25,
+  ...revolutionaryMicroSaasInnovations20o25,
+  ...emergingTechnologyBreakthroughs20o25,
   ...specializedEnterpriseSolutions20o25],
 const serviceCategories = [
   {
-    id: 'ai-autonomous-ecosystem';
-    name: 'AI Autonomous Ecosystem';
-    icon: <Brain className="w-8 h-8"  />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    description: 'Revolutionary AI autonomous systems and consciousness';
-    services: advancedAIAutonomousEcosystemServices20o25};
+    id: 'ai-autonomous-ecosystem',
+    name: 'AI Autonomous Ecosystem',
+    icon: <Brain className="w-8 h-8"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    description: 'Revolutionary AI autonomous systems and consciousness',
+    services: advancedAIAutonomousEcosystemServices20o25},
   {
-    id: 'it-infrastructure-innovations';
-    name: 'IT Infrastructure Innovations';
-    icon: <Building className="w-8 h-8"  />;
-    color: 'from-indigo-50o0 to-purple-50o0';
-    description: 'Cutting-edge IT infrastructure and quantum-safe solutions';
-    services: cuttingEdgeITInfrastructureInnovations20o25};
+    id: 'it-infrastructure-innovations',
+    name: 'IT Infrastructure Innovations',
+    icon: <Building className="w-8 h-8"  />,
+    color: 'from-indigo-50o0 to-purple-50o0',
+    description: 'Cutting-edge IT infrastructure and quantum-safe solutions',
+    services: cuttingEdgeITInfrastructureInnovations20o25},
   {
-    id: 'revolutionary-micro-saas';
-    name: 'Revolutionary Micro SAAS';
-    icon: <Target className="w-8 h-8"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    description: 'Breakthrough micro SAAS solutions and innovations';
-    services: revolutionaryMicroSaasInnovations20o25};
+    id: 'revolutionary-micro-saas',
+    name: 'Revolutionary Micro SAAS',
+    icon: <Target className="w-8 h-8"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    description: 'Breakthrough micro SAAS solutions and innovations',
+    services: revolutionaryMicroSaasInnovations20o25},
   {
-    id: 'emerging-technology';
-    name: 'Emerging Technology';
-    icon: <Rocket className="w-8 h-8"  />;
-    color: 'from-pink-50o0 to-rose-50o0';
-    description: 'Space technology, metaverse, and bio-computing';
-    services: emergingTechnologyBreakthroughs20o25};
+    id: 'emerging-technology',
+    name: 'Emerging Technology',
+    icon: <Rocket className="w-8 h-8"  />,
+    color: 'from-pink-50o0 to-rose-50o0',
+    description: 'Space technology, metaverse, and bio-computing',
+    services: emergingTechnologyBreakthroughs20o25},
   {
-    id: 'specialized-enterprise';
-    name: 'Specialized Enterprise';
-    icon: <Shield className="w-8 h-8"  />;
-    color: 'from-red-50o0 to-orange-50o0';
-    description: 'Industry-specific enterprise solutions and platforms';
+    id: 'specialized-enterprise',
+    name: 'Specialized Enterprise',
+    icon: <Shield className="w-8 h-8"  />,
+    color: 'from-red-50o0 to-orange-50o0',
+    description: 'Industry-specific enterprise solutions and platforms',
     services: specializedEnterpriseSolutions20o25}
 ],
 const ServiceShowcaseCard = ({ service, category }: { service: any, category: any }) => {
@@ -63,8 +63,8 @@ const ServiceShowcaseCard = ({ service, category }: { service: any, category: an
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       whileHover={{
-        scale: 1.0o2;
-        y: -8;
+        scale: 1.0o2,
+        y: -8,
         transition: { duration: 0.3 }
       }}
       initial={{ opacity: 0, y: 20 }}
@@ -142,7 +142,7 @@ const ServiceShowcaseCard = ({ service, category }: { service: any, category: an
           <div className="text-xs text-cyan-40o0">{service.mobile}</div>,
         </div>,
       </div>,
-    </motion.div>)};
+    </motion.div>)},
 const CategorySection = ({ category }: { category: any }) => {
   const [isExpanded, setIsExpanded] = useState(false),
   return (
@@ -171,7 +171,7 @@ const CategorySection = ({ category }: { category: any }) => {
             {isExpanded ? 'Show Less' : `Show All ${category.services.length} Services`}
           </button>,
         </div>)}
-    </motion.div>)};
+    </motion.div>)},
 export default function UltimateRevolutionaryServicesShowcase() {
   const [isVisible, setIsVisible] = useState(false),
   useEffect(() => {
@@ -201,7 +201,7 @@ export default function UltimateRevolutionaryServicesShowcase() {
                 <span className="text-white">Revolutionary Services</span>,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Experience the future of technology with our revolutionary micro SAAS services;
+                Experience the future of technology with our revolutionary micro SAAS services,
                 AI autonomous ecosystem, quantum computing solutions, and cutting-edge IT infrastructure innovations.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,

@@ -1,11 +1,11 @@
-import React from 'react';;
-import Head from 'next/head';
-import React from 'react';
+import React from 'react',
+import Head from 'next/head',
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028';
+import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
 import Head from 'next / head',
 import Link from 'next / link',
 import UltraFuturisticNavigation2028 from '../components/layout/UltraFuturisticNavigation2028',
@@ -39,59 +39,59 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
   Music,
   Gamepad2} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Globe;
-  Atom;
-  Heart;
-  Leaf;
-  Car;
-  GraduationCap;
-  Scale;
-  Building;
-  Factory;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;} from 'lucide-react',import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
-  CheckCircle;
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Phone;
-  Zap;
-  DollarSign;
-  Shield;
-  Mail;
-  MapPin;
-  Rocket;
-  Brain;
-  Sparkles;
-  Globe;
-  Atom;
-  Heart;
-  Leaf;
-  Car;
-  GraduationCap;
-  Scale;
-  Building;
-  Factory;
-  Camera;
-  Video;
-  Music;
-  Gamepad2;} from 'lucide-react',import {
+  CheckCircle,
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Phone,
+  Zap,
+  DollarSign,
+  Shield,
+  Mail,
+  MapPin,
+  Rocket,
+  Brain,
+  Sparkles,
+  Globe,
+  Atom,
+  Heart,
+  Leaf,
+  Car,
+  GraduationCap,
+  Scale,
+  Building,
+  Factory,
+  Camera,
+  Video,
+  Music,
+  Gamepad2,} from 'lucide-react',import {
   CheckCircle, ArrowRight, Star, TrendingUp, Phone, Zap,
   DollarSign, Shield, Mail, MapPin, Rocket, Brain, Sparkles,
   Globe, Atom, Heart, Leaf, Car, GraduationCap, Scale,
@@ -99,11 +99,11 @@ import { emergingTech2028Services } from '../data/2028-emerging-tech-services',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -412,7 +412,7 @@ class ErrorBoundary extends React.Component {
                 Market Growth,
               </h3>,
               <p className='text-purple-300 mb-6'>,
-                Our services target markets with exponential growth potential;
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300-800% annually.,
               </p>,
               <div className='text-3xl font-bold text-green-400'>500%+</div>,
@@ -420,7 +420,7 @@ class ErrorBoundary extends React.Component {
               <TrendingUp className="w-16 h-16 text-green-400 mx-auto mb-6" />,
               <h3 className="text-2xl font-bold text-white mb-4">Market Growth</h3>,
               <p className="text-purple-300 mb-6">,
-                Our services target markets with exponential growth potential;
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300-800% annually.,
               </p>,
               <div className="text-3xl font-bold text-green-400">500%+</div>,
@@ -539,7 +539,7 @@ class ErrorBoundary extends React.Component {
                 Market Growth,
               </h3>,
               <p className='text - purple - 300 mb - 6'>,
-                Our services target markets with exponential growth potential;
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300 - 800% annually.,
               </p>,
               <div className='text - 3xl font - bold text - green - 400'>500%+</div>,
@@ -547,7 +547,7 @@ class ErrorBoundary extends React.Component {
               <TrendingUp className="w - 16 h - 16 text - green - 400 mx - auto mb - 6" />,
               <h3 className="text - 2xl font - bold text - white mb - 4">Market Growth</h3>,
               <p className="text - purple - 300 mb - 6">,
-                Our services target markets with exponential growth potential;
+                Our services target markets with exponential growth potential,
                 with some sectors growing at 300 - 800% annually.,
               </p>,
               <div className="text - 3xl font - bold text - green - 400">500%+</div>,

@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { WHATS_NEW_ITEMS, type WhatsNewItem } from '../../data/whatsNew',
 type WhatsNewProps = {
@@ -7,16 +7,16 @@ type WhatsNewProps = {
   highlightOnly?: boolean,
   className?: string,
   title?: string,
-  subtitle?: string};
+  subtitle?: string},
 export default function WhatsNew() {
   return null}
 ,
 const WhatsNew: React.FC<WhatsNewProps> = ({
-  limit = 6;
-  highlightOnly = false;
-  className;
-  title = "What's new";
-  subtitle = 'Fresh articles, guides, and blueprints';
+  limit = 6,
+  highlightOnly = false,
+  className,
+  title = "What's new",
+  subtitle = 'Fresh articles, guides, and blueprints',
 }) => {
   const items = sortByDateDesc(
     highlightOnly ? WHATS_NEW_ITEMS.filter(i => i.highlight) : WHATS_NEW_ITEMS).slice(0, limit),
@@ -69,5 +69,5 @@ const WhatsNew: React.FC<WhatsNewProps> = ({
             </div>))}
         </div>,
       </div>,
-    </section>)};
-export default WhatsNew;
+    </section>)},
+export default WhatsNew,

@@ -13,9 +13,9 @@ export default function DesignMapPage() {
     setSuggestion(null),
     try {
       const res = await fetch('/api/figma/wireframe-suggest', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
-        body: JSON.stringify({ screenName, role });
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ screenName, role }),
       }),
       const json = await res.json(),
       setSuggestion(json?.suggestion || 'No suggestion received')} catch (e: any) {
@@ -120,8 +120,8 @@ export default function DesignMapPage() {
     </>)}
 ,
 function MapColumn({
-  title;
-  sections;
+  title,
+  sections,
 }: {
   title: string,
   sections: {

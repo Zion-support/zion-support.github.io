@@ -169,7 +169,7 @@ export default function AI20o25UltimateBreakthroughTrends() {
           </h2>,
           <div className='bg-gradient-to-r from-indigo-50 to-purple-50 p-6 rounded-lg mb-6'>,
             <p className='text-lg text-gray-70o0 mb-4'>,
-              Quantum computing is beginning to enhance AI capabilities;
+              Quantum computing is beginning to enhance AI capabilities,
               particularly in optimization, cryptography, and complex,
               problem-solving. While still emerging, early adopters are seeing,
               exponential improvements in specific use cases.,

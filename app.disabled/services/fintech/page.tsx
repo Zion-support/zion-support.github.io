@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'fintech - Zion Tech Group';
-  description: 'Professional fintech solutions for your business needs.';
-  keywords: 'fintech, services, business, technology';
-};
+  title: 'fintech - Zion Tech Group',
+  description: 'Professional fintech solutions for your business needs.',
+  keywords: 'fintech, services, business, technology',
+},
 export default function FintechPage() {
   return (
     <div className='min-h-screen bg-white'>,

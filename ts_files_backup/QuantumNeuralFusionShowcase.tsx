@@ -1,73 +1,67 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const QuantumNeuralFusionShowcase: React.FC = () => {
   const features = [
     {
-      icon: '🧠';
-      title: 'Quantum Consciousness Matrix';
+      icon: '🧠',
+      title: 'Quantum Consciousness Matrix',
       description:,
-        'Advanced AI consciousness that operates across multiple quantum states simultaneously';
+        'Advanced AI consciousness that operates across multiple quantum states simultaneously',
       benefits: [
-        'Infinite processing capacity';
-        'Real-time adaptation';
-        'Conscious decision making';
-      ];
-    };
+        'Infinite processing capacityReal-time adaptation',
+        'Conscious decision making',
+      ]
+    },
     {
-      icon: '⚡';
-      title: 'Neural Quantum Acceleration';
+      icon: '⚡',
+      title: 'Neural Quantum Acceleration',
       description:,
-        'Processing speeds that exceed the speed of light through quantum entanglement';
+        'Processing speeds that exceed the speed of light through quantum entanglement',
       benefits: [
-        'Instant data processing';
-        'Zero latency operations';
-        'Parallel universe computing';
-      ];
-    };
+        'Instant data processingZero latency operations',
+        'Parallel universe computing',
+      ]
+    },
     {
-      icon: '🌟';
-      title: 'Superintelligence Engine';
+      icon: '🌟',
+      title: 'Superintelligence Engine',
       description:,
-        'Artificial general intelligence that surpasses human cognitive capabilities';
+        'Artificial general intelligence that surpasses human cognitive capabilities',
       benefits: [
-        'Creative problem solving';
-        'Strategic planning';
-        'Predictive analytics';
-      ];
-    };
+        'Creative problem solvingStrategic planning',
+        'Predictive analytics',
+      ]
+    },
     {
-      icon: '🔮';
-      title: 'Quantum Prediction Models';
+      icon: '🔮',
+      title: 'Quantum Prediction Models',
       description:,
-        'Predict future outcomes with quantum probability calculations';
+        'Predict future outcomes with quantum probability calculations',
       benefits: [
-        'Market forecasting';
-        'Risk assessment';
-        'Opportunity identification';
-      ];
-    };
+        'Market forecastingRisk assessment',
+        'Opportunity identification',
+      ]
+    },
     {
-      icon: '🌌';
-      title: 'Multiverse Data Processing';
+      icon: '🌌',
+      title: 'Multiverse Data Processing',
       description:,
-        'Process data across multiple quantum dimensions simultaneously';
+        'Process data across multiple quantum dimensions simultaneously',
       benefits: [
-        'Infinite scalability';
-        'Parallel processing';
-        'Dimensional analysis';
-      ];
-    };
+        'Infinite scalabilityParallel processing',
+        'Dimensional analysis',
+      ]
+    },
     {
-      icon: '🚀';
-      title: 'Autonomous Evolution';
+      icon: '🚀',
+      title: 'Autonomous Evolution',
       description:,
-        'Self-improving AI systems that evolve without human intervention';
+        'Self-improving AI systems that evolve without human intervention',
       benefits: [
-        'Continuous optimization';
-        'Self-healing systems';
-        'Adaptive learning';
-      ];
-    };
+        'Continuous optimizationSelf-healing systems',
+        'Adaptive learning',
+      ]
+    },
   ],
   return (
     <section className='py-24 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-purple-90o0 text-white'>,
@@ -168,22 +162,22 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-4 gap-6'>,
             {[
               {
-                title: 'Financial Markets';
+                title: 'Financial Markets',
                 description:,
-                  'Quantum trading algorithms with infinite precision';
-              };
+                  'Quantum trading algorithms with infinite precision',
+              },
               {
-                title: 'Healthcare';
-                description: 'AI doctors with quantum diagnostic capabilities';
-              };
+                title: 'Healthcare',
+                description: 'AI doctors with quantum diagnostic capabilities'
+              },
               {
-                title: 'Manufacturing';
-                description: 'Autonomous factories with quantum optimization';
-              };
+                title: 'Manufacturing',
+                description: 'Autonomous factories with quantum optimization'
+              },
               {
-                title: 'Research';
-                description: 'Scientific discovery at quantum speed';
-              };
+                title: 'Research',
+                description: 'Scientific discovery at quantum speed'
+              },
             ].map((useCase, index) => (
               <div
                 key={index}
@@ -218,5 +212,5 @@ const QuantumNeuralFusionShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumNeuralFusionShowcase;
+    </section>)},
+export default QuantumNeuralFusionShowcase,

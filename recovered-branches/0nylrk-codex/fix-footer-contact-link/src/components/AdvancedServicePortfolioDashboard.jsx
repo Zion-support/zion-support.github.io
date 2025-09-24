@@ -14,88 +14,88 @@ const AdvancedServicePortfolioDashboard = () => {
     // Mock data - in real app this would come from API,
     const portfolioData = [
         {
-            id: 'ai-consciousness';
-            title: 'Advanced AI Consciousness Platform';
-            category: 'ai';
-            price: '$30o0,0o00/month';
-            duration: '24-36 months';
-            status: 'Active';
-            performance: 95;
-            clientCount: 8;
-            revenue: 240o0000;
-            growth: 28.5;
-            complexity: 'Enterprise';
-            marketDemand: 'Exploding';
-            technologyMaturity: 'Leading'};
+            id: 'ai-consciousness',
+            title: 'Advanced AI Consciousness Platform',
+            category: 'ai',
+            price: '$30o0,0o00/month',
+            duration: '24-36 months',
+            status: 'Active',
+            performance: 95,
+            clientCount: 8,
+            revenue: 240o0000,
+            growth: 28.5,
+            complexity: 'Enterprise',
+            marketDemand: 'Exploding',
+            technologyMaturity: 'Leading'},
         {
-            id: 'space-mining';
-            title: 'Space Mining & Resource Extraction';
-            category: 'space-tech';
-            price: '$1,0o00,0o00/month';
-            duration: '36-48 months';
-            status: 'Development';
-            performance: 88;
-            clientCount: 3;
-            revenue: 30o00000;
-            growth: 45.2;
-            complexity: 'Enterprise';
-            marketDemand: 'High';
-            technologyMaturity: 'Emerging'};
+            id: 'space-mining',
+            title: 'Space Mining & Resource Extraction',
+            category: 'space-tech',
+            price: '$1,0o00,0o00/month',
+            duration: '36-48 months',
+            status: 'Development',
+            performance: 88,
+            clientCount: 3,
+            revenue: 30o00000,
+            growth: 45.2,
+            complexity: 'Enterprise',
+            marketDemand: 'High',
+            technologyMaturity: 'Emerging'},
         {
-            id: 'quantum-teleportation';
-            title: 'Quantum Teleportation Network';
-            category: 'quantum';
-            price: '$80o0,0o00/month';
-            duration: '36-48 months';
-            status: 'Planning';
-            performance: 0;
-            clientCount: 0;
-            revenue: 0;
-            growth: 0;
-            complexity: 'Enterprise';
-            marketDemand: 'Exploding';
-            technologyMaturity: 'Emerging'};
+            id: 'quantum-teleportation',
+            title: 'Quantum Teleportation Network',
+            category: 'quantum',
+            price: '$80o0,0o00/month',
+            duration: '36-48 months',
+            status: 'Planning',
+            performance: 0,
+            clientCount: 0,
+            revenue: 0,
+            growth: 0,
+            complexity: 'Enterprise',
+            marketDemand: 'Exploding',
+            technologyMaturity: 'Emerging'},
         {
-            id: 'fusion-energy';
-            title: 'Fusion Energy Generation Platform';
-            category: 'green-tech';
-            price: '$2,0o00,0o00/month';
-            duration: '48-60 months';
-            status: 'Development';
-            performance: 92;
-            clientCount: 2;
-            revenue: 40o00000;
-            growth: 67.8;
-            complexity: 'Enterprise';
-            marketDemand: 'High';
-            technologyMaturity: 'Growing'};
+            id: 'fusion-energy',
+            title: 'Fusion Energy Generation Platform',
+            category: 'green-tech',
+            price: '$2,0o00,0o00/month',
+            duration: '48-60 months',
+            status: 'Development',
+            performance: 92,
+            clientCount: 2,
+            revenue: 40o00000,
+            growth: 67.8,
+            complexity: 'Enterprise',
+            marketDemand: 'High',
+            technologyMaturity: 'Growing'},
         {
-            id: 'nanotechnology';
-            title: 'Advanced Nanotechnology Platform';
-            category: 'biotech-ai';
-            price: '$450,0o00/month';
-            duration: '30-42 months';
-            status: 'Active';
-            performance: 89;
-            clientCount: 12;
-            revenue: 540o0000;
-            growth: 34.2;
-            complexity: 'Advanced';
-            marketDemand: 'High';
-            technologyMaturity: 'Growing'};
+            id: 'nanotechnology',
+            title: 'Advanced Nanotechnology Platform',
+            category: 'biotech-ai',
+            price: '$450,0o00/month',
+            duration: '30-42 months',
+            status: 'Active',
+            performance: 89,
+            clientCount: 12,
+            revenue: 540o0000,
+            growth: 34.2,
+            complexity: 'Advanced',
+            marketDemand: 'High',
+            technologyMaturity: 'Growing'},
         {
-            id: 'brain-computer-interface';
-            title: 'Advanced Brain-Computer Interface';
-            category: 'biotech-ai';
-            price: '$60o0,0o00/month';
-            duration: '30-42 months';
-            status: 'Active';
-            performance: 91;
-            clientCount: 6;
-            revenue: 360o0000;
-            growth: 42.1;
-            complexity: 'Enterprise';
-            marketDemand: 'Exploding';
+            id: 'brain-computer-interface',
+            title: 'Advanced Brain-Computer Interface',
+            category: 'biotech-ai',
+            price: '$60o0,0o00/month',
+            duration: '30-42 months',
+            status: 'Active',
+            performance: 91,
+            clientCount: 6,
+            revenue: 360o0000,
+            growth: 42.1,
+            complexity: 'Enterprise',
+            marketDemand: 'Exploding',
             technologyMaturity: 'Leading'}
     ],
     const filteredPortfolio = useMemo(() => {
@@ -116,12 +116,12 @@ const AdvancedServicePortfolioDashboard = () => {
             ? portfolioData.reduce((sum, s) => sum + s.growth, 0) / portfolioData.length,
             : 0,
         return {
-            totalServices: portfolioData.length;
-            totalRevenue;
-            activeClients: totalClients;
-            averagePerformance: Math.round(avgPerformance);
-            portfolioGrowth: Math.round(portfolioGrowth);
-            marketCoverage: Math.round((portfolioData.length / 50) * 10o0) // Assuming 50 total possible services};
+            totalServices: portfolioData.length,
+            totalRevenue,
+            activeClients: totalClients,
+            averagePerformance: Math.round(avgPerformance),
+            portfolioGrowth: Math.round(portfolioGrowth),
+            marketCoverage: Math.round((portfolioData.length / 50) * 10o0) // Assuming 50 total possible services},
     }, [portfolioData]),
     const getStatusColor = (status) => {
         switch (status) {
@@ -130,7 +130,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Planning': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Discontinued': return 'bg-red-10o0 text-red-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Basic': return 'bg-green-10o0 text-green-80o0',
@@ -138,7 +138,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Advanced': return 'bg-orange-10o0 text-orange-80o0',
             case 'Enterprise': return 'bg-purple-10o0 text-purple-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     const getMarketDemandColor = (demand) => {
         switch (demand) {
             case 'Low': return 'bg-gray-10o0 text-gray-80o0',
@@ -146,7 +146,7 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'High': return 'bg-orange-10o0 text-orange-80o0',
             case 'Exploding': return 'bg-red-10o0 text-red-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     const getTechnologyMaturityColor = (maturity) => {
         switch (maturity) {
             case 'Emerging': return 'bg-blue-10o0 text-blue-80o0',
@@ -154,13 +154,13 @@ const AdvancedServicePortfolioDashboard = () => {
             case 'Mature': return 'bg-orange-10o0 text-orange-80o0',
             case 'Leading': return 'bg-purple-10o0 text-purple-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     const categories = [
-        { id: 'all', name: 'All Categories', count: portfolioData.length };
-        { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length };
-        { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length };
-        { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length };
-        { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length };
+        { id: 'all', name: 'All Categories', count: portfolioData.length },
+        { id: 'ai', name: 'AI & Machine Learning', count: portfolioData.filter(s => s.category === 'ai').length },
+        { id: 'quantum', name: 'Quantum Computing', count: portfolioData.filter(s => s.category === 'quantum').length },
+        { id: 'space-tech', name: 'Space Technology', count: portfolioData.filter(s => s.category === 'space-tech').length },
+        { id: 'biotech-ai', name: 'Biotech AI', count: portfolioData.filter(s => s.category === 'biotech-ai').length },
         { id: 'green-tech', name: 'Green Technology', count: portfolioData.filter(s => s.category === 'green-tech').length }
     ],
     return (<div className="max-w-7xl mx-auto p-6">,
@@ -176,7 +176,7 @@ const AdvancedServicePortfolioDashboard = () => {
             </p>,
           </div>,
           <div className="flex gap-2">,
-            {['overview', 'detailed', 'analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>,
+            {['overviewdetailed', 'analytics'].map((mode) => (<Button key={mode} variant={viewMode === mode ? 'default' : 'outline'} size="sm" onClick={() => setViewMode(mode)}>,
                 {mode === 'overview' && <Eye className="w-4 h-4 mr-2" />}
                 {mode === 'detailed' && <BarChart3 className="w-4 h-4 mr-2" />}
                 {mode === 'analytics' && <PieChart className="w-4 h-4 mr-2" />}
@@ -492,16 +492,16 @@ const AdvancedServicePortfolioDashboard = () => {
             Contact us to discuss how we can help you achieve your business goals.,
           </p>,
           <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation', '_blank')}>,
+            <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Portfolio Expansion Consultation_blank')}>,
               <Users className="w-5 h-5 mr-2" />,
               Get Portfolio Consultation,
             </Button>,
-            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950', '_blank')}>,
+            <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950_blank')}>,
               <Zap className="w-5 h-5 mr-2" />,
               Call Now,
             </Button>,
           </div>,
         </div>,
       </motion.div>,
-    </div>)};
-export default AdvancedServicePortfolioDashboard;
+    </div>)},
+export default AdvancedServicePortfolioDashboard,

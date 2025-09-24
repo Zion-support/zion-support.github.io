@@ -16,15 +16,15 @@ const { execSync, spawn } = require('child_process'),
 const os = require('os'),
 // Configure logging,
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-error-fixer' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-error-fixer' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error-fixes.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/automation-fixes.log' });
+    new winston.transports.File({ filename: 'logs/error-fixes.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/automation-fixes.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -36,10 +36,10 @@ class AutomationErrorFixer {
     this.errorsFixed = 0,
     this.startTime = Date.now(),
     this.config ={
-      maxRetries: 3;
-      retryDelay: 50o00;
-      backupDir: path.join(__dirname, '../backups');
-      logsDir: path.join(__dirname, '../logs')};
+      maxRetries: 3,
+      retryDelay: 50o00,
+      backupDir: path.join(__dirname, '../backups'),
+      logsDir: path.join(__dirname, '../logs')},
   }
 ,
   async run() {
@@ -77,10 +77,8 @@ class AutomationErrorFixer {
 ,
       // Backup critical automation files,
       const filesToBackup = [
-        'automation/netlify-monitor.js';
-        'automation/tasks/DependencyUpdater.js';
-        'automation/intelligent-automation-orchestrator.js';
-        'automation/performance-monitor.js';
+        'automation/netlify-monitor.jsautomation/tasks/DependencyUpdater.js',
+        'automation/intelligent-automation-orchestrator.jsautomation/performance-monitor.js',
         'automation/start-working-automations.js'],
       for (const file of filesToBackup) {
         if (fs.existsSync(file)) {
@@ -106,24 +104,24 @@ class AutomationErrorFixer {
   async checkOutdatedPackages() {
     try {
       const output = execSync('npm outdated --json', {
-        encoding: 'utf8';
+        encoding: 'utf8',
         stdio: 'pipe'}),
       const outdated = JSON.parse(output || '{}'),
       return Object.keys(outdated).map((packageName) => ({
-        name: packageName;
-        current: outdated[packageName].current;
-        wanted: outdated[packageName].wanted;
-        latest: outdated[packageName].latest;
+        name: packageName,
+        current: outdated[packageName].current,
+        wanted: outdated[packageName].wanted,
+        latest: outdated[packageName].latest,
         location: outdated[packageName].location}))} catch (error) {
       // npm outdated returns non-zero exit code when packages are outdated (expected behavior),
       if (error.status === 1 && error.stdout) {
         try {
           const outdated = JSON.parse(error.stdout),
           return Object.keys(outdated).map((packageName) => ({
-            name: packageName;
-            current: outdated[packageName].current;
-            wanted: outdated[packageName].wanted;
-            latest: outdated[packageName].latest;
+            name: packageName,
+            current: outdated[packageName].current,
+            wanted: outdated[packageName].wanted,
+            latest: outdated[packageName].latest,
             location: outdated[packageName].location}))} catch (parseError) {
           logger.error('Error parsing npm outdated output:', parseError),
           return []}
@@ -161,7 +159,7 @@ class AutomationErrorFixer {
       this.status.lastCheck = new Date().toISOString(),
       // Ensure builds is an array before using slice,
       if (!Array.isArray(builds)) {
-        this.log('Warning: builds is not an array, skipping build check', 'warn'),
+        this.log('Warning: builds is not an array, skipping build checkwarn'),
         this.saveStatus(),
         return}
 ,
@@ -187,7 +185,7 @@ class AutomationErrorFixer {
       const builds = await this.makeNetlifyRequest(\`/sites/\${this.config.netlifySiteId}/builds\`),
       // Ensure we always return an array,
       if (!Array.isArray(builds)) {
-        this.log('Warning: Netlify API returned non-array builds, returning empty array', 'warn'),
+        this.log('Warning: Netlify API returned non-array builds, returning empty arraywarn'),
         return []}
 ,
       return builds} catch (error) {
@@ -227,20 +225,20 @@ class AutomationErrorFixer {
   async healthCheck() {
     try {
       const health ={
-        timestamp: new Date().toISOString();
-        status: 'healthy';
-        systems: {};
-        errors: []};
+        timestamp: new Date().toISOString(),
+        status: 'healthy',
+        systems: {},
+        errors: []},
       // Check each system,
       for (const [name, system] of this.systems) {
         try {
           if (system && typeof system.healthCheck === 'function') {
             const systemHealth = await system.healthCheck(),
             health.systems[name] = systemHealth} else {
-            health.systems[name] ={ status: 'unknown' };
+            health.systems[name] ={ status: 'unknown' },
           }
         } catch (error) {
-          health.systems[name] ={ status: 'error', error: error.message };
+          health.systems[name] ={ status: 'error', error: error.message },
           health.errors.push({ system: name, error: error.message })}
       }
 ,
@@ -249,11 +247,11 @@ class AutomationErrorFixer {
       health.status = hasErrors ? 'degraded' : 'healthy',
       return health} catch (error) {
       return {
-        timestamp: new Date().toISOString();
-        status: 'error';
-        error: error.message;
-        systems: {};
-        errors: [{ system: 'orchestrator', error: error.message }]};
+        timestamp: new Date().toISOString(),
+        status: 'error',
+        error: error.message,
+        systems: {},
+        errors: [{ system: 'orchestrator', error: error.message }]},
     }
   }`,
         // Insert health check method before the last closing brace,
@@ -272,15 +270,15 @@ class AutomationErrorFixer {
   async createBasicOrchestrator() {
     const basicOrchestrator = `const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'intelligent-automation-orchestrator' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'intelligent-automation-orchestrator' },
   transports: [
-    new winston.transports.File({ filename: 'logs/orchestrator-error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/orchestrator.log' });
+    new winston.transports.File({ filename: 'logs/orchestrator-error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/orchestrator.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -290,24 +288,24 @@ class IntelligentAutomationOrchestrator {
   constructor(config ={}) {
     this.config ={
       autonomous: {
-        enabled: true;
-        selfHealing: true;
-        learning: true;
-        adaptiveScheduling: true};
+        enabled: true,
+        selfHealing: true,
+        learning: true,
+        adaptiveScheduling: true},
       monitoring: {
-        enabled: true;
-        interval: 60o000;
-        healthCheckInterval: 30o0000};
+        enabled: true,
+        interval: 60o000,
+        healthCheckInterval: 30o0000},
       reporting: {
-        enabled: true;
-        daily: true;
-        weekly: true;
-        realTime: true};
+        enabled: true,
+        daily: true,
+        weekly: true,
+        realTime: true},
       dashboard: {
-        enabled: true;
-        port: 30o01;
-        autoRefresh: true};
-      ...config};
+        enabled: true,
+        port: 30o01,
+        autoRefresh: true},
+      ...config},
     this.systems = new Map(),
     this.isRunning = false,
     this.startTime = Date.now(),
@@ -333,8 +331,8 @@ class IntelligentAutomationOrchestrator {
       return true} catch (error) {
       logger.error('❌ Failed to start orchestrator:', error),
       this.errors.push({
-        timestamp: new Date().toISOString();
-        type: 'startup';
+        timestamp: new Date().toISOString(),
+        type: 'startup',
         error: error.message}),
       return false}
   }
@@ -352,17 +350,17 @@ class IntelligentAutomationOrchestrator {
   async healthCheck() {
     try {
       const health ={
-        timestamp: new Date().toISOString();
-        status: 'healthy';
-        uptime: Date.now() - this.startTime;
-        systems: {};
+        timestamp: new Date().toISOString(),
+        status: 'healthy',
+        uptime: Date.now() - this.startTime,
+        systems: {},
         errors: this.errors.slice(-10), // Last 10 errors,
-        fixes: this.fixes.slice(-10)    // Last 10 fixes};
+        fixes: this.fixes.slice(-10)    // Last 10 fixes},
       return health} catch (error) {
       return {
-        timestamp: new Date().toISOString();
-        status: 'error';
-        error: error.message};
+        timestamp: new Date().toISOString(),
+        status: 'error',
+        error: error.message},
     }
   }
 ,
@@ -386,8 +384,8 @@ class IntelligentAutomationOrchestrator {
       logger.info('🔧 Performing system recovery...'),
       // Add recovery logic here,
       this.fixes.push({
-        timestamp: new Date().toISOString();
-        type: 'recovery';
+        timestamp: new Date().toISOString(),
+        type: 'recovery',
         action: 'System recovery performed'}),
       logger.info('✅ Recovery completed')} catch (error) {
       logger.error('❌ Recovery failed:', error)}
@@ -431,22 +429,22 @@ module.exports = IntelligentAutomationOrchestrator,`,
       // Add proper error handling for bundle analysis,
       const bundleStats = await this.analyzeBundle(),
       if (!bundleStats) {
-        this.log('Warning: Could not analyze bundle, returning default metrics', 'warn'),
+        this.log('Warning: Could not analyze bundle, returning default metricswarn'),
         return {
-          totalSize: 0;
-          chunkCount: 0;
-          largestChunk: 0;
-          timestamp: new Date().toISOString()};
+          totalSize: 0,
+          chunkCount: 0,
+          largestChunk: 0,
+          timestamp: new Date().toISOString()},
       }
 ,
       return bundleStats} catch (error) {
       this.log(\`Error getting bundle metrics: \${error.message}\`, 'error'),
       return {
-        totalSize: 0;
-        chunkCount: 0;
-        largestChunk: 0;
-        timestamp: new Date().toISOString();
-        error: error.message};
+        totalSize: 0,
+        chunkCount: 0,
+        largestChunk: 0,
+        timestamp: new Date().toISOString(),
+        error: error.message},
     }
   }`,
       // Replace or add the getBundleMetrics method,
@@ -471,15 +469,15 @@ module.exports = IntelligentAutomationOrchestrator,`,
 const fs = require('fs'),
 const path = require('path'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'performance-monitor' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'performance-monitor' },
   transports: [
-    new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/window.window.performance.log' });
+    new winston.transports.File({ filename: 'logs/performance-error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/window.window.performance.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -489,8 +487,8 @@ class PerformanceMonitor {
   constructor(config ={}) {
     this.config ={
       checkInterval: 30o0000, // 5 minutes,
-      metricsFile: path.join(__dirname, 'performance-metrics.json');
-      ...config};
+      metricsFile: path.join(__dirname, 'performance-metrics.json'),
+      ...config},
     this.isRunning = false,
     this.metrics = []}
 ,
@@ -519,11 +517,11 @@ class PerformanceMonitor {
   async collectMetrics() {
     try {
       const metrics ={
-        timestamp: new Date().toISOString();
-        memory: await this.getMemoryUsage();
-        cpu: await this.getCpuUsage();
-        bundle: await this.getBundleMetrics();
-        build: await this.getBuildMetrics()};
+        timestamp: new Date().toISOString(),
+        memory: await this.getMemoryUsage(),
+        cpu: await this.getCpuUsage(),
+        bundle: await this.getBundleMetrics(),
+        build: await this.getBuildMetrics()},
       this.metrics.push(metrics),
       // Keep only last 10o0 metrics,
       if (this.metrics.length > 10o0) {
@@ -539,13 +537,13 @@ class PerformanceMonitor {
     try {
       const usage = process.memoryUsage(),
       return {
-        rss: usage.rss;
-        heapTotal: usage.heapTotal;
-        heapUsed: usage.heapUsed;
-        external: usage.external};
+        rss: usage.rss,
+        heapTotal: usage.heapTotal,
+        heapUsed: usage.heapUsed,
+        external: usage.external},
     } catch (error) {
       logger.error('Error getting memory usage:', error),
-      return {};
+      return {},
     }
   }
 ,
@@ -553,11 +551,11 @@ class PerformanceMonitor {
     try {
       const usage = process.cpuUsage(),
       return {
-        user: usage.user;
-        system: usage.system};
+        user: usage.user,
+        system: usage.system},
     } catch (error) {
       logger.error('Error getting CPU usage:', error),
-      return {};
+      return {},
     }
   }
 ,
@@ -568,20 +566,20 @@ class PerformanceMonitor {
       if (!bundleStats) {
         logger.warn('Warning: Could not analyze bundle, returning default metrics'),
         return {
-          totalSize: 0;
-          chunkCount: 0;
-          largestChunk: 0;
-          timestamp: new Date().toISOString()};
+          totalSize: 0,
+          chunkCount: 0,
+          largestChunk: 0,
+          timestamp: new Date().toISOString()},
       }
 ,
       return bundleStats} catch (error) {
       logger.error(\`Error getting bundle metrics: \${error.message}\`),
       return {
-        totalSize: 0;
-        chunkCount: 0;
-        largestChunk: 0;
-        timestamp: new Date().toISOString();
-        error: error.message};
+        totalSize: 0,
+        chunkCount: 0,
+        largestChunk: 0,
+        timestamp: new Date().toISOString(),
+        error: error.message},
     }
   }
 ,
@@ -595,10 +593,10 @@ class PerformanceMonitor {
       // This is a simplified bundle analysis,
       // In a real implementation, you'd analyze the actual bundle files,
       return {
-        totalSize: 0;
-        chunkCount: 0;
-        largestChunk: 0;
-        timestamp: new Date().toISOString()};
+        totalSize: 0,
+        chunkCount: 0,
+        largestChunk: 0,
+        timestamp: new Date().toISOString()},
     } catch (error) {
       logger.error('Error analyzing bundle:', error),
       return null}
@@ -608,12 +606,12 @@ class PerformanceMonitor {
     try {
       // Basic build metrics,
       return {
-        buildTime: 0;
-        buildSize: 0;
-        timestamp: new Date().toISOString()};
+        buildTime: 0,
+        buildSize: 0,
+        timestamp: new Date().toISOString()},
     } catch (error) {
       logger.error('Error getting build metrics:', error),
-      return {};
+      return {},
     }
   }
 ,
@@ -625,9 +623,9 @@ class PerformanceMonitor {
 ,
   async healthCheck() {
     return {
-      status: this.isRunning ? 'healthy' : 'stopped';
-      timestamp: new Date().toISOString();
-      metricsCount: this.metrics.length};
+      status: this.isRunning ? 'healthy' : 'stopped',
+      timestamp: new Date().toISOString(),
+      metricsCount: this.metrics.length},
   }
 ,
   sleep(ms) {
@@ -662,8 +660,8 @@ module.exports = PerformanceMonitor,`,
   async stopRunningProcesses() {
     try {
       // Find and stop automation processes,
-      const processes = ['node', 'npm'],
-      const automationKeywords = ['automation', 'monitor', 'orchestrator'],
+      const processes = ['nodenpm'],
+      const automationKeywords = ['automationmonitor', 'orchestrator'],
       for (const processName of processes) {
         try {
           const output = execSync(`ps aux | grep "${processName}" | grep -v grep`, { encoding: 'utf8' }),
@@ -695,7 +693,7 @@ module.exports = PerformanceMonitor,`,
       if (fs.existsSync(automationScript)) {
         // Start in background,
         const child = spawn('node', [automationScript], {
-          detached: true;
+          detached: true,
           stdio: 'ignore'}),
         child.unref(),
         logger.info('✅ Automation systems started in background')} else {
@@ -706,11 +704,11 @@ module.exports = PerformanceMonitor,`,
 ,
   async generateFixReport() {
     const report ={
-      timestamp: new Date().toISOString();
-      duration: Date.now() - this.startTime;
-      errorsFixed: this.errorsFixed;
-      fixesApplied: this.fixesApplied;
-      status: 'completed'};
+      timestamp: new Date().toISOString(),
+      duration: Date.now() - this.startTime,
+      errorsFixed: this.errorsFixed,
+      fixesApplied: this.fixesApplied,
+      status: 'completed'},
     try {
       const reportPath = path.join(this.config.logsDir, 'automation-fix-report.json'),
       if (!fs.existsSync(this.config.logsDir)) {

@@ -22,20 +22,20 @@ export function useAISearch() {
     setLoading(true),
     try {
       const response = await fetch(
-        'https://ziontechgroup.functions.supabase.co/functions/v1/ai-search';
+        'https: //ziontechgroup.functions.supabase.co/functions/v1/ai-search',
         {
-          method: 'POST';
-          headers: { 'Content-Type': 'application/json' };
-          body: JSON.stringify({ query });
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ query }),
         }
       ),
       const data = await response.json(),
-      const filters: SearchFilters = data.filters || {};
+      const filters: SearchFilters = data.filters || {},
       const items: SearchResult[] = [],
       const matchSkill = (skills: string[] | undefined) => {
         if (!filters.skills || filters.skills.length === 0) return true,
         return skills?.some(s =>,
-          filters.skills!.some(f => s.toLowerCase().includes(f.toLowerCase())))};
+          filters.skills!.some(f => s.toLowerCase().includes(f.toLowerCase())))},
       if (
         !filters.type ||,
         filters.type === 'talent' ||,
@@ -47,20 +47,20 @@ export function useAISearch() {
             return,
           if (!matchSkill(t.skills)) return,
           items.push({
-            id: t.id;
-            type: 'talent';
-            title: t.full_name;
-            description: t.professional_title;
+            id: t.id,
+            type: 'talent',
+            title: t.full_name,
+            description: t.professional_title
           })})}
 ,
       if (!filters.type || filters.type === 'job' || filters.type === 'all') {
         JOB_POSTS.forEach(j => {
           if (!matchSkill(j.skills)) return,
           items.push({
-            id: j.id;
-            type: 'job';
-            title: j.title;
-            description: j.description;
+            id: j.id,
+            type: 'job',
+            title: j.title,
+            description: j.description
           })})}
 ,
       if (
@@ -69,17 +69,17 @@ export function useAISearch() {
         filters.type === 'all') {
         PROJECTS.forEach(p => {
           items.push({
-            id: p.id;
-            type: 'project';
-            title: p.job?.title || 'Project';
-            description: p.scope_summary;
+            id: p.id,
+            type: 'project',
+            title: p.job?.title || 'Project',
+            description: p.scope_summary
           })})}
 ,
       setResults(items)} catch (err) {
       console.error('search error', err),
       setResults([])} finally {
       setLoading(false)}
-  };
-  return { results, loading, search };
+  },
+  return { results, loading, search },
 }
 ,

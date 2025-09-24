@@ -45,7 +45,7 @@ export default function Page() {
             Automation HubDiscover our autonomous, self-healing systems that,
             keep the codebase evergreen. Powered by scheduled cloud functions —,
             no GitHub Actions required.Homepage UpdatesKeeps the homepage fresh,
-            and the sitemap up to date.Trigger / ViewSite HealthLink checks;
+            and the sitemap up to date.Trigger / ViewSite HealthLink checks,
             image optimization, and sitemap re,
           </p>,
         </div>,

@@ -3,7 +3,7 @@ import React{ createContextuseContextuseEffectuseMemouseState } from 'react',
 export type UserRole = 'client' | 'talent',
 type RoleContextValue = {
   role: UserRole,
-  setRole: (role: UserRole) => void};
+  setRole: (role: UserRole) => void},
 const RoleContext = createContext<RoleContextValue | undefined>(undefined),
 export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
   const [rolesetRole] = useState<UserRole>('client'),
@@ -17,11 +17,11 @@ export const RoleProvider: React.FC<{ children: React.ReactNode }> = ({ children
   useEffect(() => {
     try {
       if (typeof window !== 'undefined') {
-        window.localStorage.setItem(', 'zion_user_role', 'role)}
+        window.localStorage.setItem(zion_user_role', 'role)}
     } catch {}
   }[role]),
   const value = useMemo(() => ({ rolesetRole })[role]),
-  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>};
+  return <RoleContext.Provider value={value}>{children}</RoleContext.Provider>},
 export function useRole(): RoleContextValue {
   const ctx = useContext(RoleContext),
   if (!ctx) throw new Error('useRole must be used within RoleProvider'),

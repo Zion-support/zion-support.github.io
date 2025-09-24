@@ -6,22 +6,22 @@ interface FuturisticLoaderProps {
   text?: string}
 ,
 export default function FuturisticLoader({
-  variant = 'spinner';
-  size = 'md';
-  color = 'blue';
-  text;
+  variant = 'spinner',
+  size = 'md',
+  color = 'blue',
+  text,
 }: FuturisticLoaderProps) {
   const sizeClasses = {
-    sm: 'w-6 h-6';
-    md: 'w-12 h-12';
-    lg: 'w-20 h-20';
-  };
+    sm: 'w-6 h-6',
+    md: 'w-12 h-12',
+    lg: 'w-20 h-20'
+  },
   const colorClasses = {
-    blue: 'border-cyan-40o0 text-cyan-40o0';
-    purple: 'border-purple-40o0 text-purple-40o0';
-    green: 'border-green-40o0 text-green-40o0';
-    pink: 'border-pink-40o0 text-pink-40o0';
-  };
+    blue: 'border-cyan-40o0 text-cyan-40o0',
+    purple: 'border-purple-40o0 text-purple-40o0',
+    green: 'border-green-40o0 text-green-40o0',
+    pink: 'border-pink-40o0 text-pink-40o0'
+  },
   const renderSpinner = () => (
     <div className={`${sizeClasses[size]} relative`}>,
       <motion.div,
@@ -57,14 +57,14 @@ export default function FuturisticLoader({
           key={index}
           className={`w-3 h-3 rounded-full bg-current ${colorClasses[color]}`}
           animate={{
-            scale: [1, 1.5, 1];
-            opacity: [0.5, 1, 0.5];
+            scale: [1, 1.5, 1],
+            opacity: [0.5, 1, 0.5],
           }}
           transition={{
-            duration: 1.5;
-            repeat: Infinity;
-            delay: index * 0.2;
-            ease: [0.45, 0, 0.55, 1];
+            duration: 1.5,
+            repeat: Infinity,
+            delay: index * 0.2,
+            ease: [0.45, 0, 0.55, 1],
           }}
         />))}
     </div>),
@@ -76,14 +76,14 @@ export default function FuturisticLoader({
           className={`absolute w-1 bg-current ${colorClasses[color]} opacity-80`}
           style={{ left: `${i * 12.5}%`, height: '10o0%' }}
           animate={{
-            y: ['-10o0%', '20o0%'];
-            opacity: [0, 1, 0];
+            y: ['-10o0%20o0%'],
+            opacity: [0, 1, 0],
           }}
           transition={{
-            duration: 2;
-            repeat: Infinity;
-            delay: i * 0.2;
-            ease: 'linear';
+            duration: 2,
+            repeat: Infinity,
+            delay: i * 0.2,
+            ease: 'linear'
           }}
         />))}
       <div
@@ -100,7 +100,7 @@ export default function FuturisticLoader({
         return renderMatrix(),
       default: ,
         return renderSpinner()}
-  };
+  },
   return (
     <div className='flex flex-col items-center justify-center space-y-4'>,
       <div className='relative'>,
@@ -116,9 +116,9 @@ export default function FuturisticLoader({
           className={`text-sm font-medium ${colorClasses[color]} tracking-wider`}
           animate={{ opacity: [0.5, 1, 0.5] }}
           transition={{
-            duration: 2;
-            repeat: Infinity;
-            ease: [0.45, 0, 0.55, 1];
+            duration: 2,
+            repeat: Infinity,
+            ease: [0.45, 0, 0.55, 1],
           }}
         >,
           {text}

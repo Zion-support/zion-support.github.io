@@ -1,141 +1,141 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Palette;
-  Type;
-  User;
-  Search;
-  Eye;
-  Heart;
-  ShoppingCart;
-  Code;
-  Database;
-  Globe;
-  Shield;
-  Cpu;
-  Users2;
-  Award;
-  CheckCircle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Lock;
-  Server;
-  Network;
-  Monitor;
-  Settings;
-  RefreshCw;
-  Play;
-  Pause;
-  AlertTriangle;
-  CheckCircle2;
-  Building;
-  Wifi;
-  HardDrive;
-  Cloud;
-  Smartphone;
-  Link;
-  Blocks;
-  Wallet;
-  CreditCard;
-  PiggyBank;
-  Building2;
-  Activity;
-  Waves;
-  Zap;
-  BrainCircuit;
-  CpuIcon;
-  MonitorHeart;
-  Film;
-  Headphones;
-  Camera;
-  Gamepad2;
-  Tv;
-  Radio;
-  Factory;
-  Cog;
-  Gauge;
-  Wrench;
-  Settings2;
-  CpuIcon2;
-  Calendar;
-  Clock;
-  Target;
-  Users2;
-  FileText2;
-  PieChart;
-  TrendingUp;
-  DollarSign;
-  ChartBar;
-  LineChart;
-  PieChart2;
-  BarChart4;
-  Activity;
-  TrendingDown;
-  ArrowUpDown;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Code,
+  Database,
+  Globe,
+  Shield,
+  Cpu,
+  Users2,
+  Award,
+  CheckCircle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Lock,
+  Server,
+  Network,
+  Monitor,
+  Settings,
+  RefreshCw,
+  Play,
+  Pause,
+  AlertTriangle,
+  CheckCircle2,
+  Building,
+  Wifi,
+  HardDrive,
+  Cloud,
+  Smartphone,
+  Link,
+  Blocks,
+  Wallet,
+  CreditCard,
+  PiggyBank,
+  Building2,
+  Activity,
+  Waves,
+  Zap,
+  BrainCircuit,
+  CpuIcon,
+  MonitorHeart,
+  Film,
+  Headphones,
+  Camera,
+  Gamepad2,
+  Tv,
+  Radio,
+  Factory,
+  Cog,
+  Gauge,
+  Wrench,
+  Settings2,
+  CpuIcon2,
+  Calendar,
+  Clock,
+  Target,
+  Users2,
+  FileText2,
+  PieChart,
+  TrendingUp,
+  DollarSign,
+  ChartBar,
+  LineChart,
+  PieChart2,
+  BarChart4,
+  Activity,
+  TrendingDown,
+  ArrowUpDown,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'Neural Finance AI | Zion Tech Group';
+  title: 'Neural Finance AI | Zion Tech Group',
   description:,
-    'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.';
+    'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.',
   keywords:,
-    'neural finance AI, financial AI, trading algorithms, risk management, financial analysis, neural networks';
+    'neural finance AI, financial AI, trading algorithms, risk management, financial analysis, neural networks',
   openGraph: {
-    title: 'Neural Finance AI | Zion Tech Group';
+    title: 'Neural Finance AI | Zion Tech Group',
     description:,
-      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.';
-    url: 'https://ziontechgroup.com/neural-finance-ai';
-    siteName: 'Zion Tech Group';
+      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.',
+    url: 'https://ziontechgroup.com/neural-finance-ai',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-neural-finance.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'Neural Finance AI';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-neural-finance.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'Neural Finance AI'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'Neural Finance AI | Zion Tech Group';
+    card: 'summary_large_image',
+    title: 'Neural Finance AI | Zion Tech Group',
     description:,
-      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.';
-    images: ['https://ziontechgroup.com/og-image-neural-finance.jpg'];
-  };
+      'AI-powered neural network solutions for advanced financial analysis, trading, and risk management.',
+    images: ['https://ziontechgroup.com/og-image-neural-finance.jpg']
+  },
   alternates: {
-    canonical: 'https://ziontechgroup.com/neural-finance-ai';
-  };
-};
+    canonical: 'https://ziontechgroup.com/neural-finance-ai'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function NeuralFinanceAI() {
   return (
     <div className='min-h-screen bg-black text-white'>,

@@ -10,18 +10,18 @@ import { loginUser } from "@/services/authService",
 import { Button } from "@/components/ui/button",
 import { Input } from "@/components/ui/input",
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from "@/components/ui/form",
 import { AlertDescription } from "@/components/ui/alert",
 import { LinkuseNavigate } from "react-router-dom",
 import { LoadingOverlay } from "@/components/LoadingOverlay",
 // Form validation schema,
 const loginSchema = z.object({
-  email: z.string().email("Please enter a valid email").min(1"Email is required");
+  email: z.string().email("Please enter a valid email").min(1"Email is required"),
   password: z.string().min(6"Password must be at least 6 characters")}),
 type LoginFormValues = z.infer<typeof loginSchema>,
 export function LoginForm() {
@@ -31,9 +31,9 @@ export function LoginForm() {
   const [showPasswordsetShowPassword] = useState(false),
   const [isSubmittingsetIsSubmitting] = useState(false),
   const form = useForm<LoginFormValues>({
-    resolver: zodResolver(loginSchema);
+    resolver: zodResolver(loginSchema),
     defaultValues: {
-      email: "";
+      email: "",
       password: ""}}),
   const onSubmit = async (data: LoginFormValues) => {
     if (isSubmitting) return,
@@ -45,11 +45,11 @@ export function LoginForm() {
         return}
       toast.success("Logged in successfully"),
       if (resData?.token) {
-        document.cookie = `token=${resData.token}; path=/`}
+        document.cookie = `token=${resData.token}, path=/`}
       navigate("/")} catch (err) {
       toast.error("Unable to login. Please try again.")} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <Form {...form}>,
       {form.formState.errors.root && (

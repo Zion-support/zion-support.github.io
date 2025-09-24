@@ -6,7 +6,7 @@ async function resolveDisplayName(addr: string): Promise<string | null> {
   try {
     const r = await fetch(`/api/did/get?address=${encodeURIComponent(addr)}`),
     const { data } = await r.json(),
-    const did = data?.payload || {};
+    const did = data?.payload || {},
     return did.lens || did.ens || null} catch { return null}
 }
 ,
@@ -25,12 +25,12 @@ export default function Web3LoginButton() {
       if (user && displayWeb3) setDisplayName(await resolveDisplayName(user.address)),
       else setDisplayName(null)})()}[userdisplayWeb3]),
   const onLoggedIn = (u: { address: string, chain: 'evm' | 'sol' }) => {
-    window.localStorage.setItem('zion-web3-'user', 'JSON.stringify(u)),
-    setUser(u)};
+    window.localStorage.setItem('zion-web3-'userJSON.stringify(u)),
+    setUser(u)},
   const disconnect = async () => {
     window.localStorage.removeItem('zion-web3-user'),
     try { await fetch('/api/auth/logout'{ method: 'POST' })} catch {}
-    setUser(null)};
+    setUser(null)},
   if (user) {
     const base = displayName || `${user.address.slice(06)}…${user.address.slice(-4)}`,
     return (

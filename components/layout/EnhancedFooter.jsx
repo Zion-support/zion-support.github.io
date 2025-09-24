@@ -16,7 +16,7 @@ const EnhancedFooter = () => {
             </div>,
             <p className='text-gray-300 mb-6 max-w-md'>,
               Leading technology solutions provider helping businesses transform,
-              their digital presence with cutting-edge AI, cloud architecture;
+              their digital presence with cutting-edge AI, cloud architecture,
               and innovative development services.,
             </p>,
           </div>,
@@ -98,5 +98,5 @@ const EnhancedFooter = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default EnhancedFooter;
+    </footer>)},
+export default EnhancedFooter,

@@ -7,21 +7,21 @@ export default function EnhancedNavigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10)};
+      setIsScrolled(window.scrollY > 10)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const navigationItems = [
-    { name: 'Home', href: '/' };
-    { name: 'AI Solutions', href: '/ai-solutions' };
-    { name: 'Cloud Services', href: '/cloud-services' };
-    { name: 'SaaS Platform', href: '/saas-platform' };
-    { name: 'About', href: '/about' };
-    { name: 'Contact', href: '/contact' };
+    { name: 'Home', href: '/' },
+    { name: 'AI Solutions', href: '/ai-solutions' },
+    { name: 'Cloud Services', href: '/cloud-services' },
+    { name: 'SaaS Platform', href: '/saas-platform' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
   ],
   return (
     <nav
       className={cn(
-        'fixed top-0 left-0 right-0 z-50 transition-all duration-30o0';
+        'fixed top-0 left-0 right-0 z-50 transition-all duration-30o0',
         isScrolled,
           ? 'bg-white/95 backdrop-blur-md shadow-lg border-b border-gray-20o0',
           : 'bg-transparent')}

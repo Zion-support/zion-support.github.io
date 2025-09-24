@@ -1,23 +1,23 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 interface LoadingSpinnerProps {
   size?: 'sm' | 'md' | 'lg',
   text?: string}
 ,
 const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
-  size = 'md';
-  text = 'Loading Zion Tech Group...';
+  size = 'md',
+  text = 'Loading Zion Tech Group...'
 }) => {
   const sizeClasses = {
-    sm: 'w-8 h-8';
-    md: 'w-16 h-16';
-    lg: 'w-24 h-24';
-  };
+    sm: 'w-8 h-8',
+    md: 'w-16 h-16',
+    lg: 'w-24 h-24'
+  },
   const textSizes = {
-    sm: 'text-sm';
-    md: 'text-base';
-    lg: 'text-lg';
-  };
+    sm: 'text-sm',
+    md: 'text-base',
+    lg: 'text-lg'
+  },
   return (
     <div className='min-h-screen bg-black flex flex-col items-center justify-center'>,
       {/* Animated background particles */}
@@ -104,5 +104,5 @@ const LoadingSpinner: React.FC<LoadingSpinnerProps> = ({
           <div className='w-2 h-2 bg-purple-40o0 rounded-full animate-pulse' />,
         </div>,
       </motion.div>,
-    </div>)};
-export default LoadingSpinner;
+    </div>)},
+export default LoadingSpinner,

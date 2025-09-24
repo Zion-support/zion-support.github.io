@@ -6,10 +6,10 @@ import Link from "next/link",
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -18,27 +18,6 @@ class ErrorBoundary extends React.Component {
       return <div>Something went wrong.</div>}
     return this.props.children}
 }
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  User;
-  Settings;
-  LogOut;
-  Bell;
-  Globe;
-  Zap;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock;
-  Wifi;
-  Truck;
-  Gamepad2;
-  Bot;
-  Factory;
-  Car;
   Menu,
   X,
   ChevronDown,
@@ -60,27 +39,48 @@ class ErrorBoundary extends React.Component {
   Bot,
   Factory,
   Car,
-  Menu;
-  X;
-  ChevronDown;
-  Search;
-  User;
-  Settings;
-  LogOut;
-  Bell;
-  Globe;
-  Zap;
-  Brain;
-  Rocket;
-  Dna;
-  DollarSign;
-  Lock;
-  Wifi;
-  Truck;
-  Gamepad2;
-  Bot;
-  Factory;
-  Car;
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,
+  Menu,
+  X,
+  ChevronDown,
+  Search,
+  User,
+  Settings,
+  LogOut,
+  Bell,
+  Globe,
+  Zap,
+  Brain,
+  Rocket,
+  Dna,
+  DollarSign,
+  Lock,
+  Wifi,
+  Truck,
+  Gamepad2,
+  Bot,
+  Factory,
+  Car,
 } from "lucide-react",
 interface EnhancedNavigationProps {
   className?: string}
@@ -162,17 +162,17 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
         { name: "Blockchain", href: "/services?category=blockchain" }
         { name: "View All Services", href: "/services" }
       ]}
-        { name: "AI & Machine Learning", href: "/services?category=ai-ml" };
-        { name: "Quantum Computing", href: "/services?category=quantum" };
-        { name: "Space Technology", href: "/services?category=space" };
-        { name: "Biotech & Healthcare", href: "/services?category=biotech" };
-        { name: "Financial Services", href: "/services?category=finance" };
-        { name: "Cybersecurity", href: "/services?category=security" };
-        { name: "Edge Computing", href: "/services?category=edge" };
-        { name: "Blockchain", href: "/services?category=blockchain" };
-        { name: "View All Services", href: "/services" };
-      ];
-    };
+        { name: "AI & Machine Learning", href: "/services?category=ai-ml" },
+        { name: "Quantum Computing", href: "/services?category=quantum" },
+        { name: "Space Technology", href: "/services?category=space" },
+        { name: "Biotech & Healthcare", href: "/services?category=biotech" },
+        { name: "Financial Services", href: "/services?category=finance" },
+        { name: "Cybersecurity", href: "/services?category=security" },
+        { name: "Edge Computing", href: "/services?category=edge" },
+        { name: "Blockchain", href: "/services?category=blockchain" },
+        { name: "View All Services", href: "/services" },
+      ],
+    },
     {
       name: "Solutions",
       href: "/solutions",
@@ -196,7 +196,7 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
     website: "https://ziontechgroup.com"}
 ,
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
-  className = "";
+  className = ""
 }) => {
 const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   className = ""}) => {
@@ -205,14 +205,14 @@ const EnhancedNavigation: React.FC<EnhancedNavigationProps> = ({
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window && window.scrollY > 20)};
+      setIsScrolled(window && window.scrollY > 20)},
     window && window.addEventListener("scroll", handleScroll),
     return () => window && window.removeEventListener("scroll", handleScroll)}, [])],
   const contact_info = {
-    mobile: "+1 302 464 0950";
-    email: "kleber@ziontechgroup.com";
-    address: "364 E Main St STE 1008 Middletown DE 19709";
-    website: "https://ziontechgroup.com";
+    mobile: "+1 302 464 0950",
+    email: "kleber@ziontechgroup.com",
+    address: "364 E Main St STE 1008 Middletown DE 19709",
+    website: "https://ziontechgroup.com",
     {
       name: "Solutions",
       href: "/solutions",
@@ -587,7 +587,7 @@ className="block text-gray-400 hover: text-cyan-400 transition-colors duration-3
           </motion.div>)}
       </AnimatePresence>,
     </nav>}
-export default EnhancedNavigation;
-)};
-export default EnhancedNavigation;
-export default EnhancedNavigation;
+export default EnhancedNavigation,
+)},
+export default EnhancedNavigation,
+export default EnhancedNavigation,

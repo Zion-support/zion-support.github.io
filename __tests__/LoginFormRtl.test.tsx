@@ -8,9 +8,9 @@ describe('LoginForm error handling', () => {
       .fn(),
       .mockResolvedValue({ error: 'Invalid email or password' }),
     (useAuth as jest.Mock).mockReturnValue({
-      isLoading: false;
-      login: loginMock;
-      user: null;
+      isLoading: false,
+      login: loginMock,
+      user: null
     }),
     render(<LoginForm />),
     const emailInput = screen.getByLabelText(/email address/i),

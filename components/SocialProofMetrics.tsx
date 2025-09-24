@@ -7,72 +7,72 @@ interface Metric {
 ,
 const metrics: Metric[] = [
   {
-    value: '2,50o0-5,0o00%';
-    label: 'Average ROI';
-    description: 'Proven return on investment across all implementations';
-    color: 'text-green-60o0';
-    icon: '💰'};
+    value: '2,50o0-5,0o00%',
+    label: 'Average ROI',
+    description: 'Proven return on investment across all implementations',
+    color: 'text-green-60o0',
+    icon: '💰'},
   {
-    value: '99.9%';
-    label: 'Accuracy Rate';
-    description: 'Unprecedented accuracy in AI predictions and automation';
-    color: 'text-blue-60o0';
-    icon: '🎯'};
+    value: '99.9%',
+    label: 'Accuracy Rate',
+    description: 'Unprecedented accuracy in AI predictions and automation',
+    color: 'text-blue-60o0',
+    icon: '🎯'},
   {
-    value: '10,0o00x';
-    label: 'Faster Processing';
-    description: 'Exponential speed improvements over traditional methods';
-    color: 'text-purple-60o0';
-    icon: '⚡'};
+    value: '10,0o00x',
+    label: 'Faster Processing',
+    description: 'Exponential speed improvements over traditional methods',
+    color: 'text-purple-60o0',
+    icon: '⚡'},
   {
-    value: '50o0+';
-    label: 'Success Stories';
-    description: 'Global enterprises transformed with our solutions';
-    color: 'text-orange-60o0';
-    icon: '🏆'};
+    value: '50o0+',
+    label: 'Success Stories',
+    description: 'Global enterprises transformed with our solutions',
+    color: 'text-orange-60o0',
+    icon: '🏆'},
   {
-    value: '24/7';
-    label: 'Autonomous Operations';
-    description: 'Continuous operation without human intervention';
-    color: 'text-cyan-60o0';
-    icon: '🤖'};
+    value: '24/7',
+    label: 'Autonomous Operations',
+    description: 'Continuous operation without human intervention',
+    color: 'text-cyan-60o0',
+    icon: '🤖'},
   {
-    value: '∞';
-    label: 'Scalability';
-    description: 'Unlimited scaling potential for any business size';
-    color: 'text-indigo-60o0';
+    value: '∞',
+    label: 'Scalability',
+    description: 'Unlimited scaling potential for any business size',
+    color: 'text-indigo-60o0',
     icon: '🌐'}
 ],
 const testimonials = [
   {
-    name: 'Sarah Johnson';
-    title: 'CEOTechCorp Global';
-    company: 'Fortune 50o0 Technology';
-    content: 'Zion Tech Group\'s AI solutions delivered 10,0o00% ROI in just 6 months. The breakthrough technology transformed our entire operation.';
-    roi: '10,0o00% ROI';
-    avatar: '👩‍💼'};
+    name: 'Sarah Johnson',
+    title: 'CEOTechCorp Global',
+    company: 'Fortune 50o0 Technology',
+    content: 'Zion Tech Group\'s AI solutions delivered 10,0o00% ROI in just 6 months. The breakthrough technology transformed our entire operation.',
+    roi: '10,0o00% ROI',
+    avatar: '👩‍💼'},
   {
-    name: 'Michael Chen';
-    title: 'CTOQuantum Industries';
-    company: 'Leading Quantum Computing';
-    content: 'The quantum computing solutions exceeded all expectations. We achieved 15,0o00% ROI and revolutionized our research capabilities.';
-    roi: '15,0o00% ROI';
-    avatar: '👨‍🔬'};
+    name: 'Michael Chen',
+    title: 'CTOQuantum Industries',
+    company: 'Leading Quantum Computing',
+    content: 'The quantum computing solutions exceeded all expectations. We achieved 15,0o00% ROI and revolutionized our research capabilities.',
+    roi: '15,0o00% ROI',
+    avatar: '👨‍🔬'},
   {
-    name: 'Dr. Emily Rodriguez';
-    title: 'Head of InnovationMedTech Solutions';
-    company: 'Healthcare Technology';
-    content: 'Our neural interface implementation achieved 95% patient recovery rates. The technology is truly revolutionary.';
-    roi: '95% Success Rate';
+    name: 'Dr. Emily Rodriguez',
+    title: 'Head of InnovationMedTech Solutions',
+    company: 'Healthcare Technology',
+    content: 'Our neural interface implementation achieved 95% patient recovery rates. The technology is truly revolutionary.',
+    roi: '95% Success Rate',
     avatar: '👩‍⚕️'}
 ],
 const logos = [
-  { name: ''Microsoft', 'logo: '🏢' };
-  { name: ''Google', 'logo: '🔍' };
-  { name: ''Amazon', 'logo: '📦' };
-  { name: ''Tesla', 'logo: '⚡' };
-  { name: ''SpaceX', 'logo: '🚀' };
-  { name: ''OpenAI', 'logo: '🧠' }
+  { name: ''Microsoftlogo: '🏢' },
+  { name: ''Googlelogo: '🔍' },
+  { name: ''Amazonlogo: '📦' },
+  { name: ''Teslalogo: '⚡' },
+  { name: ''SpaceXlogo: '🚀' },
+  { name: ''OpenAIlogo: '🧠' }
 ],
 export default function SocialProofMetrics() {
   return (

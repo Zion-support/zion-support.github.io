@@ -9,14 +9,11 @@ export default function QuantumLogisticsOptimization() {
       implementationWeeks='Implementation: 4-8 weeks',
       roiNote='Typical ROI: 20o0-40o0% via route and capacity optimization',
       features={[
-        'VRP, TSP, and multi-depot optimization';
-        'Real-time replanning under constraints';
-        'Carbon-aware routing options';
-        'Carrier and lane optimization';
-        'Digital twin scenario testing';
-        'Integrations: Snowflake, Kafka, SAP, Oracle';
+        'VRP, TSP, and multi-depot optimizationReal-time replanning under constraints',
+        'Carbon-aware routing optionsCarrier and lane optimization',
+        'Digital twin scenario testingIntegrations: Snowflake, Kafka, SAP, Oracle',
       ]}
-      industries={['Logistics', 'Retail', 'Manufacturing', 'E-commerce']}
+      industries={['LogisticsRetail', 'ManufacturingE-commerce']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/quantum-logistics-optimization',
     />)}

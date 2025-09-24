@@ -1,53 +1,53 @@
-import React, { useState, useMemo } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
-import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react';
-import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground';
-import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation';
-import { revolutionary20o26Services } from '../data/revolutionary-20o26-services';
-import { emergingTech20o26Services } from '../data/emerging-tech-20o26-services';
-import { comprehensiveIT20o26Services } from '../data/comprehensive-it-20o26-services';
+import React, { useState, useMemo } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
+import { Search, Filter, Star, TrendingUp, Zap, Brain, Cpu, Shield, Rocket, Globe, Database, Lock, Cloud, Atom, Sparkles, Target } from 'lucide-react',
+import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
+import UltraAdvancedNavigation from '../components/layout/UltraAdvancedNavigation',
+import { revolutionary20o26Services } from '../data/revolutionary-20o26-services',
+import { emergingTech20o26Services } from '../data/emerging-tech-20o26-services',
+import { comprehensiveIT20o26Services } from '../data/comprehensive-it-20o26-services',
 export default function ServicesShowcase20o26() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedCategory, setSelectedCategory] = useState('all');
-  const [sortBy, setSortBy] = useState('name');
+  const [searchTerm, setSearchTerm] = useState(''),
+  const [selectedCategory, setSelectedCategory] = useState('all'),
+  const [sortBy, setSortBy] = useState('name'),
   // Combine all 20o26 services,
   const allServices = [
-    ...revolutionary20o26Services;
-    ...emergingTech20o26Services;
-    ...comprehensiveIT20o26Services];
+    ...revolutionary20o26Services,
+    ...emergingTech20o26Services,
+    ...comprehensiveIT20o26Services],
   // Filter and sort services,
   const filteredServices = allServices,
     .filter(service => {
       const matchesSearch = service.name.toLowerCase().includes(searchTerm.toLowerCase()) ||,
                            service.description.toLowerCase().includes(searchTerm.toLowerCase()) ||,
-                           service.category.toLowerCase().includes(searchTerm.toLowerCase());
-      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory);
+                           service.category.toLowerCase().includes(searchTerm.toLowerCase()),
+      const matchesCategory = selectedCategory === 'all' || service.category.includes(selectedCategory),
       return matchesSearch && matchesCategory}),
     .sort((a, b) => {
       switch (sortBy) {
         case 'price':,
-          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, ''));
+          return parseFloat(a.price.replace(/[^0-9.]/g, '')) - parseFloat(b.price.replace(/[^0-9.]/g, '')),
         case 'rating':,
-          return b.rating - a.rating;
+          return b.rating - a.rating,
         case 'customers':,
-          return b.customers - a.customers;
+          return b.customers - a.customers,
         default: return a.name.localeCompare(b.name)}
-    });
+    }),
   const categories = [
-    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length };
-    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length };
-    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length };
-    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length };
-    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length };
-    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length };
+    { id: 'all', name: 'All Services', icon: Globe, count: allServices.length },
+    { id: 'AI', name: 'AI & Machine Learning', icon: Brain, count: allServices.filter(s => s.category.includes('AI')).length },
+    { id: 'Quantum', name: 'Quantum Computing', icon: Atom, count: allServices.filter(s => s.category.includes('Quantum')).length },
+    { id: 'Emerging', name: 'Emerging Technology', icon: Sparkles, count: allServices.filter(s => s.category.includes('Emerging')).length },
+    { id: 'IT', name: 'IT & Infrastructure', icon: Shield, count: allServices.filter(s => s.category.includes('IT') || s.category.includes('Infrastructure')).length },
+    { id: 'Autonomous', name: 'Autonomous Systems', icon: Target, count: allServices.filter(s => s.category.includes('Autonomous')).length },
     { id: 'Cloud', name: 'Cloud & DevOps', icon: Cloud, count: allServices.filter(s => s.category.includes('Cloud') || s.category.includes('DevOps')).length }
-  ];
+  ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   return (
     <UltraAdvancedFuturisticBackground
       intensity="extreme",
@@ -86,7 +86,7 @@ export default function ServicesShowcase20o26() {
                 </span>,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                Discover the future of technology with our revolutionary AI, quantum computing;
+                Discover the future of technology with our revolutionary AI, quantum computing,
                 emerging technologies, and comprehensive IT solutions,
               </p>,
               {/* Service Statistics */}

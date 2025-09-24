@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import {
-  Database;
-  CheckCircle;
-  ArrowRight;
-  DollarSign;
-  Clock;
+  Database,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
 } from 'lucide-react',
 export default function DataEngineering() {
   return (
@@ -21,7 +21,7 @@ export default function DataEngineering() {
           </div>,
           <p className='text-gray-70o0 text-lg max-w-3xl'>,
             We build reliable data platforms: ingestion, transformation, and,
-            modeling with modern stacks (dbt, Airflow, Dagster;
+            modeling with modern stacks (dbt, Airflow, Dagster,
             Snowflake/BigQuery, ClickHouse). Deliver trusted dashboards and,
             ML-ready datasets.,
           </p>,
@@ -31,31 +31,29 @@ export default function DataEngineering() {
         <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 grid md:grid-cols-3 gap-6'>,
           {[
             {
-              name: 'Foundation';
-              price: 'From $8,0o00';
-              time: '3-4 weeks';
+              name: 'Foundation',
+              price: 'From $8,0o00',
+              time: '3-4 weeks',
               items: [
-                'Ingestion pipelines';
-                'Warehouse setup';
-                'dbt models & tests';
-              ];
-            };
+                'Ingestion pipelinesWarehouse setup',
+                'dbt models & tests',
+              ]
+            },
             {
-              name: 'Scale';
-              price: '$20,0o00–$45,0o00';
-              time: '5-8 weeks';
+              name: 'Scale',
+              price: '$20,0o00–$45,0o00',
+              time: '5-8 weeks',
               items: [
-                'Orchestration (Airflow/Dagster)';
-                'Cost optimization';
-                'Governance & lineage';
-              ];
-            };
+                'Orchestration (Airflow/Dagster)Cost optimization',
+                'Governance & lineage',
+              ]
+            },
             {
-              name: 'Enterprise';
-              price: 'Custom';
-              time: '8-12 weeks';
-              items: ['Multi-region HA', 'RBAC & SSO', 'Compliance reporting'];
-            };
+              name: 'Enterprise',
+              price: 'Custom',
+              time: '8-12 weeks',
+              items: ['Multi-region HARBAC & SSO', 'Compliance reporting'],
+            },
           ].map(tier => (
             <div key={tier.name} className='bg-white rounded-lg border p-6'>,
               <h3 className='font-semibold text-gray-90o0 mb-2'>{tier.name}</h3>,

@@ -1,29 +1,26 @@
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Star, TrendingUp, Award, Crown;
-  Brain, Atom, Cpu, Rocket, Zap, Sparkles;
+  ArrowRight, Star, TrendingUp, Award, Crown,
+  Brain, Atom, Cpu, Rocket, Zap, Sparkles,
   CheckCircle, Users, Globe, Shield, Infinity, Phone, Mail, MapPin} from 'lucide-react',
 import { cuttingEdgeInnovations20o34 } from '../../data/20o34-cutting-edge-innovations',
 import { enterpriseInnovations20o34 } from '../../data/20o34-enterprise-innovations',
 const stats = [
-  { icon: Users, value: '10,0o00+', label: 'Happy Customers', color: 'text-blue-40o0' };
-  { icon: TrendingUp, value: '50o0%+', label: 'ROI Guaranteed', color: 'text-green-40o0' };
-  { icon: Award, value: '50+', label: 'Industry Awards', color: 'text-yellow-40o0' };
+  { icon: Users, value: '10,0o00+', label: 'Happy Customers', color: 'text-blue-40o0' },
+  { icon: TrendingUp, value: '50o0%+', label: 'ROI Guaranteed', color: 'text-green-40o0' },
+  { icon: Award, value: '50+', label: 'Industry Awards', color: 'text-yellow-40o0' },
   { icon: Globe, value: '150+', label: 'Countries Served', color: 'text-purple-40o0' }
 ],
 const features = [
-  'AI Consciousness Evolution';
-  'Quantum Computing Integration';
-  'Space Technology Solutions';
-  'Autonomous Business Systems';
-  'Zero-Trust Security';
-  'Metaverse Development'],
+  'AI Consciousness EvolutionQuantum Computing Integration',
+  'Space Technology SolutionsAutonomous Business Systems',
+  'Zero-Trust SecurityMetaverse Development'],
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function UltraFuturisticHero20o34() {
   return (
     <section className="relative min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-purple-90o0 overflow-hidden">,

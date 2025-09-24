@@ -8,52 +8,49 @@ export default function CloudCostOptimizerPage() {
   if (!service) return null,
   const features = [
     {
-      title: 'Auto Rightsizing';
-      description: 'Automatically optimize instance sizes based on actual usage patterns';
-      icon: <TrendingDown className="w-8 h-8"  />;
-      color: 'from-green-50o0 to-emerald-50o0'};
+      title: 'Auto Rightsizing',
+      description: 'Automatically optimize instance sizes based on actual usage patterns',
+      icon: <TrendingDown className="w-8 h-8"  />,
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      title: 'Idle Resource Cleanup';
-      description: 'Identify and terminate unused resources to eliminate waste';
-      icon: <Zap className="w-8 h-8"  />;
-      color: 'from-yellow-50o0 to-orange-50o0'};
+      title: 'Idle Resource Cleanup',
+      description: 'Identify and terminate unused resources to eliminate waste',
+      icon: <Zap className="w-8 h-8"  />,
+      color: 'from-yellow-50o0 to-orange-50o0'},
     {
-      title: 'Spot Instance Orchestration';
-      description: 'Leverage spot instances for significant cost savings';
-      icon: <Cloud className="w-8 h-8"  />;
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      title: 'Spot Instance Orchestration',
+      description: 'Leverage spot instances for significant cost savings',
+      icon: <Cloud className="w-8 h-8"  />,
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      title: 'Anomaly Detection';
-      description: 'AI-powered detection of unusual spending patterns';
-      icon: <BarChart3 className="w-8 h-8"  />;
+      title: 'Anomaly Detection',
+      description: 'AI-powered detection of unusual spending patterns',
+      icon: <BarChart3 className="w-8 h-8"  />,
       color: 'from-purple-50o0 to-pink-50o0'}
   ],
   const benefits = [
-    'Reduce cloud costs by 30-50%';
-    'Automated optimization recommendations';
-    'Real-time cost monitoring and alerts';
-    'Multi-cloud support (AWS, Azure, GCP)';
-    'FinOps dashboard and reporting';
-    'Compliance and governance features'],
+    'Reduce cloud costs by 30-50%Automated optimization recommendations',
+    'Real-time cost monitoring and alertsMulti-cloud support (AWS, Azure, GCP)',
+    'FinOps dashboard and reportingCompliance and governance features'],
   const pricing = [
     {
-      name: 'Starter';
-      price: '$99';
-      period: '/month';
-      description: 'Perfect for small teams and startups';
-      features: ['Basic cost optimization', 'Resource monitoring', 'Email alerts', 'Basic reporting']};
+      name: 'Starter',
+      price: '$99',
+      period: '/month',
+      description: 'Perfect for small teams and startups',
+      features: ['Basic cost optimizationResource monitoring', 'Email alertsBasic reporting']},
     {
-      name: 'Professional';
-      price: '$299';
-      period: '/month';
-      description: 'Ideal for growing organizations';
-      features: ['Advanced optimization', 'AI-powered recommendations', 'Custom alerts', 'Detailed analytics', 'Multi-cloud support']};
+      name: 'Professional',
+      price: '$299',
+      period: '/month',
+      description: 'Ideal for growing organizations',
+      features: ['Advanced optimizationAI-powered recommendations', 'Custom alertsDetailed analytics', 'Multi-cloud support']},
     {
-      name: 'Enterprise';
-      price: 'Custom';
-      period: '';
-      description: 'For large enterprises with complex needs';
-      features: ['Custom optimization rules', 'Dedicated support', 'SLA guarantees', 'Advanced compliance', 'White-label options']}
+      name: 'Enterprise',
+      price: 'Custom',
+      period: '',
+      description: 'For large enterprises with complex needs',
+      features: ['Custom optimization rulesDedicated support', 'SLA guaranteesAdvanced compliance', 'White-label options']}
   ],
   return (
     <Layout>,

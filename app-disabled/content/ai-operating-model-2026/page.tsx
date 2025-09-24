@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Operating Model 20o26';
+  title: 'AI Operating Model 20o26',
   description:,
-    'Design an outcome-driven AI operating model: teams, processes, and platforms.';
-};
+    'Design an outcome-driven AI operating model: teams, processes, and platforms.',
+},
 export default function AIOperatingModel20o26() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

@@ -4,12 +4,12 @@ export type ProjectDetailsStepProps = {
   onChange: (
     updater: QuoteFormData | ((prev: QuoteFormData) => QuoteFormData)) => void,
   onBack: () => void,
-  onNext: () => void};
+  onNext: () => void},
 export default function ProjectDetailsStep({
-  value;
-  onChange;
-  onBack;
-  onNext;
+  value,
+  onChange,
+  onBack,
+  onNext,
 }: ProjectDetailsStepProps) {
   const canContinue =,
     value.projectName.trim().length > 0 &&,

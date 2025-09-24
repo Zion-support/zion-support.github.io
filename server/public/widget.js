@@ -31,13 +31,12 @@
   function makeWidget() {
     ensureStyles(),
     const btn = createEl('button', {
-      className: 'zion-chat-button';
+      className: 'zion-chat-button',
       attrs: {
-        'aria-label': 'Open chat assistant';
-        'title': 'Chat with Zion AI Assistant'}
+        'aria-label': 'Open chat assistanttitle': 'Chat with Zion AI Assistant'}
     }),
     btn.innerHTML = svgChatIcon(),
-    const panel = createEl('div', { className: 'zion-chat-panel', attrs: { role: 'dialog', 'aria-labelledby': 'zion-chat-title', 'aria-modal': 'true' } }),
+    const panel = createEl('div', { className: 'zion-chat-panel', attrs: { role: 'dialogaria-labelledby': 'zion-chat-titlearia-modal': 'true' } }),
     const header = createEl('div', { className: 'zion-chat-header' }),
     const titleWrap = createEl('div'),
     const title = createEl('div', { className: 'zion-chat-title', text: 'Zion AI Assistant', attrs: { id: 'zion-chat-title' } }),
@@ -49,7 +48,7 @@
     header.appendChild(close),
     const messages = createEl('div', { className: 'zion-chat-messages', attrs: { tabindex: '0' } }),
     const inputBar = createEl('div', { className: 'zion-chat-input' }),
-    const input = createEl('input', { className: 'zion-input', attrs: { type: 'text', placeholder: 'Type your question…', 'aria-label': 'Message input' } }),
+    const input = createEl('input', { className: 'zion-input', attrs: { type: 'text', placeholder: 'Type your question…aria-label': 'Message input' } }),
     const send = createEl('button', { className: 'zion-send', text: 'Send', attrs: { 'aria-label': 'Send message' } }),
     inputBar.appendChild(input),
     inputBar.appendChild(send),
@@ -68,10 +67,8 @@
       if (!greeted) {
         const greetText = (GREETING && GREETING.trim()) || `${timeOfDayGreeting()} — I’m here to help you explore the Zion AI Marketplace. How can I assist today?`,
         addAssistantMessage(greetText, [
-          'What can I do on Zion AI Marketplace?';
-          'How do I try a model before buying?';
-          'Where do I view pricing and billing?';
-          'How can I list my AI model?']),
+          'What can I do on Zion AI Marketplace?How do I try a model before buying?',
+          'Where do I view pricing and billing?How can I list my AI model?']),
         greeted = true}
     }
 ,
@@ -123,8 +120,8 @@
       setSending(true),
       try {
         const resp = await fetch(`${API_BASE}/chat`, {
-          method: 'POST';
-          headers: { 'Content-Type': 'application/json' };
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ messages: conversation })}),
         if (!resp.ok) throw new Error('Network error'),
         const data = await resp.json(),
@@ -144,10 +141,10 @@
     }),
     // Expose minimal API,
     window.ZionChat ={
-      open: openPanel;
-      close: closePanel;
-      toggle: () => (isOpen ? closePanel() : openPanel());
-      setGreeting: (t) => (greeted = false, (window.setTimeout(() => { addAssistantMessage(t), greeted = true}, 0)))};
+      open: openPanel,
+      close: closePanel,
+      toggle: () => (isOpen ? closePanel() : openPanel()),
+      setGreeting: (t) => (greeted = false, (window.setTimeout(() => { addAssistantMessage(t), greeted = true}, 0)))},
   }
 ,
   function svgChatIcon() {

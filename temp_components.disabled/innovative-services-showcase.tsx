@@ -2,7 +2,7 @@ import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
   BrainZapRocketShieldGlobeCpu,
-  ArrowRightExternalLinkCheckStar;
+  ArrowRightExternalLinkCheckStar,
   TrendingUpUsersClockDollarSignPhoneMailMapPin} from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import { innovativeAIServices } from '../data/innovative-ai-services',
@@ -10,29 +10,29 @@ import { innovativeITServices } from '../data/innovative-it-services',
 import { innovativeMicroSaas } from '../data/innovative-micro-saas',
 export default function InnovativeServicesShowcase() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0y: 30 };
+    hidden: { opacity: 0y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const ServiceCard = ({ serviceindex }: { service: any, index: number }) => (
     <motion.div,
       variants={itemVariants}

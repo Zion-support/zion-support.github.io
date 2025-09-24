@@ -41,36 +41,36 @@ export function usePortfolio() {
       const { data, error } = await supabase,
         .from('portfolio_projects'),
         .insert({
-          user_id: user.id;
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
-          demo_url: project.demo_url;
-          pdf_url: project.pdf_url;
+          user_id: user.id,
+          title: project.title,
+          description: project.description,
+          technologies: project.technologies,
+          image_url: project.image_url,
+          github_url: project.github_url,
+          demo_url: project.demo_url,
+          pdf_url: project.pdf_url
         }),
         .select('id'),
         .single(),
       if (error) throw error,
       toast({
-        title: 'Project added';
-        description: 'Your project has been added to your portfolio';
+        title: 'Project added',
+        description: 'Your project has been added to your portfolio'
       }),
       await fetchProjects(),
       return data.id} catch (e: any) {
       console.error('Error adding portfolio project:', e),
       setError(e.message),
       toast({
-        title: 'Error';
-        description: `Could not add project: ${e.message}`;
-        variant: 'destructive';
+        title: 'Error',
+        description: `Could not add project: ${e.message}`,
+        variant: 'destructive'
       }),
       return null} finally {
       setIsLoading(false)}
-  };
+  },
   const updateProject = async (
-    projectId: string;
+    projectId: string,
     project: PortfolioProject): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to update a portfolio project'),
@@ -82,33 +82,33 @@ export function usePortfolio() {
       const { error } = await supabase,
         .from('portfolio_projects'),
         .update({
-          title: project.title;
-          description: project.description;
-          technologies: project.technologies;
-          image_url: project.image_url;
-          github_url: project.github_url;
-          demo_url: project.demo_url;
-          pdf_url: project.pdf_url;
+          title: project.title,
+          description: project.description,
+          technologies: project.technologies,
+          image_url: project.image_url,
+          github_url: project.github_url,
+          demo_url: project.demo_url,
+          pdf_url: project.pdf_url
         }),
         .eq('id', projectId),
         .eq('user_id', user.id),
       if (error) throw error,
       toast({
-        title: 'Project updated';
-        description: 'Your portfolio project has been updated';
+        title: 'Project updated',
+        description: 'Your portfolio project has been updated'
       }),
       await fetchProjects(),
       return true} catch (e: any) {
       console.error('Error updating portfolio project:', e),
       setError(e.message),
       toast({
-        title: 'Error';
-        description: `Could not update project: ${e.message}`;
-        variant: 'destructive';
+        title: 'Error',
+        description: `Could not update project: ${e.message}`,
+        variant: 'destructive'
       }),
       return false} finally {
       setIsLoading(false)}
-  };
+  },
   const deleteProject = async (projectId: string): Promise<boolean> => {
     if (!user) {
       setError('You must be logged in to delete a portfolio project'),
@@ -124,29 +124,29 @@ export function usePortfolio() {
         .eq('user_id', user.id),
       if (error) throw error,
       toast({
-        title: 'Project deleted';
-        description: 'Your portfolio project has been deleted';
+        title: 'Project deleted',
+        description: 'Your portfolio project has been deleted'
       }),
       setProjects(projects.filter(p => p.id !== projectId)),
       return true} catch (e: any) {
       console.error('Error deleting portfolio project:', e),
       setError(e.message),
       toast({
-        title: 'Error';
-        description: `Could not delete project: ${e.message}`;
-        variant: 'destructive';
+        title: 'Error',
+        description: `Could not delete project: ${e.message}`,
+        variant: 'destructive'
       }),
       return false} finally {
       setIsLoading(false)}
-  };
+  },
   return {
-    isLoading;
-    error;
-    projects;
-    fetchProjects;
-    addProject;
-    updateProject;
-    deleteProject;
-  };
+    isLoading,
+    error,
+    projects,
+    fetchProjects,
+    addProject,
+    updateProject,
+    deleteProject,
+  },
 }
 ,

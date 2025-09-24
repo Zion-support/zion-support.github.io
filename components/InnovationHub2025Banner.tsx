@@ -1,5 +1,4 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const InnovationHub20o25Banner = () => {
@@ -7,53 +6,53 @@ const InnovationHub20o25Banner = () => {
     null),
   const innovations = [
     {
-      title: 'AI Consciousness';
-      description: 'Self-aware artificial intelligence systems';
-      icon: '🧠';
-      color: 'from-purple-50o0 to-indigo-50o0';
-      stats: '99.9% accuracy';
-      link: '/ai-consciousness';
-    };
+      title: 'AI Consciousness',
+      description: 'Self-aware artificial intelligence systems',
+      icon: '🧠',
+      color: 'from-purple-50o0 to-indigo-50o0',
+      stats: '99.9% accuracy',
+      link: '/ai-consciousness'
+    },
     {
-      title: 'Quantum Networks';
-      description: 'Ultra-secure quantum communication';
-      icon: '⚛️';
-      color: 'from-cyan-50o0 to-blue-50o0';
-      stats: 'Unbreakable encryption';
-      link: '/quantum-networks';
-    };
+      title: 'Quantum Networks',
+      description: 'Ultra-secure quantum communication',
+      icon: '⚛️',
+      color: 'from-cyan-50o0 to-blue-50o0',
+      stats: 'Unbreakable encryption',
+      link: '/quantum-networks'
+    },
     {
-      title: 'Neural Enhancement';
-      description: 'Cognitive augmentation technology';
-      icon: '🔗';
-      color: 'from-emerald-50o0 to-teal-50o0';
-      stats: '30o0% brain boost';
-      link: '/neural-enhancement';
-    };
+      title: 'Neural Enhancement',
+      description: 'Cognitive augmentation technology',
+      icon: '🔗',
+      color: 'from-emerald-50o0 to-teal-50o0',
+      stats: '30o0% brain boost',
+      link: '/neural-enhancement'
+    },
     {
-      title: 'Autonomous Cities';
-      description: 'Self-managing smart city systems';
-      icon: '🏙️';
-      color: 'from-orange-50o0 to-red-50o0';
-      stats: 'Zero human intervention';
-      link: '/autonomous-cities';
-    };
+      title: 'Autonomous Cities',
+      description: 'Self-managing smart city systems',
+      icon: '🏙️',
+      color: 'from-orange-50o0 to-red-50o0',
+      stats: 'Zero human intervention',
+      link: '/autonomous-cities'
+    },
     {
-      title: 'Synthetic Reality';
-      description: 'Blended physical and digital worlds';
-      icon: '🌐';
-      color: 'from-pink-50o0 to-purple-50o0';
-      stats: 'Seamless integration';
-      link: '/synthetic-reality';
-    };
+      title: 'Synthetic Reality',
+      description: 'Blended physical and digital worlds',
+      icon: '🌐',
+      color: 'from-pink-50o0 to-purple-50o0',
+      stats: 'Seamless integration',
+      link: '/synthetic-reality'
+    },
     {
-      title: 'Predictive Analytics';
-      description: 'Future forecasting with AI';
-      icon: '🔮';
-      color: 'from-yellow-50o0 to-orange-50o0';
-      stats: '95% prediction accuracy';
-      link: '/predictive-analytics';
-    };
+      title: 'Predictive Analytics',
+      description: 'Future forecasting with AI',
+      icon: '🔮',
+      color: 'from-yellow-50o0 to-orange-50o0',
+      stats: '95% prediction accuracy',
+      link: '/predictive-analytics'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white overflow-hidden'>,
@@ -165,5 +164,5 @@ const InnovationHub20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InnovationHub20o25Banner;
+    </section>)},
+export default InnovationHub20o25Banner,

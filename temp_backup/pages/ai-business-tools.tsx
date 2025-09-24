@@ -1,175 +1,167 @@
-import React from 'react';;
-import Head from 'next/head';
-import Card from '../components/ui/Card';
-import Button from '../components/ui/Button';
+import React from 'react',
+import Head from 'next/head',
+import Card from '../components/ui/Card',
+import Button from '../components/ui/Button',
 import {
-  Brain;
-  MessageSquare;
-  Image;
-  Video;
-  FileText;
-  BarChart3;
-  Users;
-  Zap;
-  ArrowRight;
-  Star;
-  Check;
-  ExternalLink;
-  TrendingUp;
-  Shield;
-  Globe} from 'lucide-react';
+  Brain,
+  MessageSquare,
+  Image,
+  Video,
+  FileText,
+  BarChart3,
+  Users,
+  Zap,
+  ArrowRight,
+  Star,
+  Check,
+  ExternalLink,
+  TrendingUp,
+  Shield,
+  Globe} from 'lucide-react',
 export default function AIBusinessToolsPage() {
   const aiTools = [
     {
-      name: 'ChatGPT';
-      description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.';
-      category: 'AI Assistant';
-      pricing: 'Free - $20/month';
-      rating: 4.8;
-      users: '10o0M+';
-      icon: <Brain className="w-8 h-8 text-green-40o0"  />;
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
+      name: 'ChatGPT',
+      description: 'Advanced AI language model that can help with writing, analysis, coding, and creative tasks. Perfect for content creation and problem-solving.',
+      category: 'AI Assistant',
+      pricing: 'Free - $20/month',
+      rating: 4.8,
+      users: '10o0M+',
+      icon: <Brain className="w-8 h-8 text-green-40o0"  />,
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
       features: [
-        'Natural language processingCode generation & debugging';
-        'Content creationData analysis';
-        'Creative writingMulti-language support'];
-      website: 'https://chat.openai.com';
-      useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.';
-      pros: ['Powerful capabilitiesEasy to use', 'Regular updatesGood free tier'];
-      cons: ['Sometimes inaccurateLimited context', 'Privacy concerns'];
-      bestFor: 'Content creators, developers, researchers'};
+        'Natural language processingCode generation & debuggingContent creationData analysis',
+        'Creative writingMulti-language support'],
+      website: 'https://chat.openai.com',
+      useCase: 'Ideal for writers, developers, researchers, and anyone who needs AI assistance with complex tasks.',
+      pros: ['Powerful capabilitiesEasy to useRegular updatesGood free tier'],
+      cons: ['Sometimes inaccurateLimited contextPrivacy concerns'],
+      bestFor: 'Content creators, developers, researchers'},
     {
-      name: 'Midjourney';
-      description: 'AI-powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.';
-      category: 'AI Art';
-      pricing: '$10 - $30/month';
-      rating: 4.7;
-      users: '1M+';
-      icon: <Image className="w-8 h-8 text-purple-40o0"  />;
-      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0';
+      name: 'Midjourney',
+      description: 'AI-powered image generation tool that creates stunning artwork, illustrations, and designs from text descriptions.',
+      category: 'AI Art',
+      pricing: '$10 - $30/month',
+      rating: 4.7,
+      users: '1M+',
+      icon: <Image className="w-8 h-8 text-purple-40o0"  />,
+      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
       features: [
-        'Text-to-image generationHigh-resolution output';
-        'Artistic stylesCommercial usage rights';
-        'Community featuresDiscord integration'];
-      website: 'https://midjourney.com';
-      useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.';
-      pros: ['High-quality outputCreative control', 'Commercial rightsActive community'];
-      cons: ['Discord-only interfaceLimited customization', 'Monthly subscription'];
-      bestFor: 'Designers, marketers, content creators'};
+        'Text-to-image generationHigh-resolution outputArtistic stylesCommercial usage rights',
+        'Community featuresDiscord integration'],
+      website: 'https://midjourney.com',
+      useCase: 'Perfect for designers, marketers, content creators, and businesses needing custom visual content.',
+      pros: ['High-quality outputCreative controlCommercial rightsActive community'],
+      cons: ['Discord-only interfaceLimited customizationMonthly subscription'],
+      bestFor: 'Designers, marketers, content creators'},
     {
-      name: 'Jasper';
-      description: 'AI writing assistant that helps create marketing copy, blog posts, social media content, and more.';
-      category: 'AI Writing';
-      pricing: '$39 - $125/month';
-      rating: 4.6;
-      users: '10o0K+';
-      icon: <FileText className="w-8 h-8 text-blue-40o0"  />;
-      color: 'bg-gradient-to-br from-blue-50o0 to-indigo-60o0';
+      name: 'Jasper',
+      description: 'AI writing assistant that helps create marketing copy, blog posts, social media content, and more.',
+      category: 'AI Writing',
+      pricing: '$39 - $125/month',
+      rating: 4.6,
+      users: '10o0K+',
+      icon: <FileText className="w-8 h-8 text-blue-40o0"  />,
+      color: 'bg-gradient-to-br from-blue-50o0 to-indigo-60o0',
       features: [
-        'Marketing copy generationBlog post writing';
-        'Social media contentSEO optimization';
-        'Brand voice trainingTeam collaboration'];
-      website: 'https://jasper.ai';
-      useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.';
-      pros: ['Specialized for marketingBrand voice training', 'SEO optimizationTeam features'];
-      cons: ['ExpensiveLimited free trial', 'Can be repetitive'];
-      bestFor: 'Marketing teams, content creators, businesses'};
+        'Marketing copy generationBlog post writingSocial media contentSEO optimization',
+        'Brand voice trainingTeam collaboration'],
+      website: 'https://jasper.ai',
+      useCase: 'Essential for marketing teams, content creators, and businesses that need high-quality written content at scale.',
+      pros: ['Specialized for marketingBrand voice trainingSEO optimizationTeam features'],
+      cons: ['ExpensiveLimited free trialCan be repetitive'],
+      bestFor: 'Marketing teams, content creators, businesses'},
     {
-      name: 'Synthesia';
-      description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.';
-      category: 'AI Video';
-      pricing: '$30 - $89/month';
-      rating: 4.5;
-      users: '50K+';
-      icon: <Video className="w-8 h-8 text-red-40o0"  />;
-      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0';
+      name: 'Synthesia',
+      description: 'AI video generation platform that creates professional videos with AI avatars and voice synthesis.',
+      category: 'AI Video',
+      pricing: '$30 - $89/month',
+      rating: 4.5,
+      users: '50K+',
+      icon: <Video className="w-8 h-8 text-red-40o0"  />,
+      color: 'bg-gradient-to-br from-red-50o0 to-pink-60o0',
       features: [
-        'AI avatar generationText-to-speech';
-        'Video templatesMulti-language support';
-        'Custom brandingAPI access'];
-      website: 'https://synthesia.io';
-      useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.';
-      pros: ['Professional qualityMultiple languages', 'Custom avatarsEasy to use'];
-      cons: ['Limited avatar optionsExpensive', 'Subscription required'];
-      bestFor: 'Training departments, marketers, educators'};
+        'AI avatar generationText-to-speechVideo templatesMulti-language support',
+        'Custom brandingAPI access'],
+      website: 'https://synthesia.io',
+      useCase: 'Perfect for creating training videos, marketing content, and presentations without hiring actors or video crews.',
+      pros: ['Professional qualityMultiple languagesCustom avatarsEasy to use'],
+      cons: ['Limited avatar optionsExpensiveSubscription required'],
+      bestFor: 'Training departments, marketers, educators'},
     {
-      name: 'Copy.ai';
-      description: 'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.';
-      category: 'AI Copywriting';
-      pricing: 'Free - $49/month';
-      rating: 4.4;
-      users: '20o0K+';
-      icon: <MessageSquare className="w-8 h-8 text-orange-40o0"  />;
-      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0';
+      name: 'Copy.ai',
+      description: 'AI copywriting tool that generates marketing copy, product descriptions, and creative content for businesses.',
+      category: 'AI Copywriting',
+      pricing: 'Free - $49/month',
+      rating: 4.4,
+      users: '20o0K+',
+      icon: <MessageSquare className="w-8 h-8 text-orange-40o0"  />,
+      color: 'bg-gradient-to-br from-orange-50o0 to-red-60o0',
       features: [
-        'Marketing copy generationProduct descriptions';
-        'Social media postsEmail campaigns';
-        'Blog contentFree tier available'];
-      website: 'https://copy.ai';
-      useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.';
-      pros: ['Free tierEasy to use', 'Good templatesAffordable'];
-      cons: ['Limited customizationQuality varies', 'Basic features'];
-      bestFor: 'Small businesses, entrepreneurs, marketers'};
+        'Marketing copy generationProduct descriptionsSocial media postsEmail campaigns',
+        'Blog contentFree tier available'],
+      website: 'https://copy.ai',
+      useCase: 'Great for small businesses, entrepreneurs, and marketers who need quality copy without hiring writers.',
+      pros: ['Free tierEasy to useGood templatesAffordable'],
+      cons: ['Limited customizationQuality variesBasic features'],
+      bestFor: 'Small businesses, entrepreneurs, marketers'},
     {
-      name: 'Grammarly';
-      description: 'AI-powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.';
-      category: 'AI Writing';
-      pricing: 'Free - $12/month';
-      rating: 4.7;
-      users: '30M+';
-      icon: <Check className="w-8 h-8 text-green-40o0"  />;
-      color: 'bg-gradient-to-br from-green-50o0 to-teal-60o0';
+      name: 'Grammarly',
+      description: 'AI-powered writing assistant that checks grammar, spelling, tone, and style to improve your writing.',
+      category: 'AI Writing',
+      pricing: 'Free - $12/month',
+      rating: 4.7,
+      users: '30M+',
+      icon: <Check className="w-8 h-8 text-green-40o0"  />,
+      color: 'bg-gradient-to-br from-green-50o0 to-teal-60o0',
       features: [
-        'Grammar & spelling checkTone analysis';
-        'Style suggestionsPlagiarism detection';
-        'Browser extensionMobile apps'];
-      website: 'https://grammarly.com';
-      useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.';
-      pros: ['Excellent accuracyMultiple platforms', 'Free tierUser-friendly'];
-      cons: ['Limited free featuresPrivacy concerns', 'Can be overzealous'];
-      bestFor: 'Students, professionals, content creators'};
+        'Grammar & spelling checkTone analysisStyle suggestionsPlagiarism detection',
+        'Browser extensionMobile apps'],
+      website: 'https://grammarly.com',
+      useCase: 'Essential for anyone who writes professionally, including students, professionals, and content creators.',
+      pros: ['Excellent accuracyMultiple platformsFree tierUser-friendly'],
+      cons: ['Limited free featuresPrivacy concernsCan be overzealous'],
+      bestFor: 'Students, professionals, content creators'},
     {
-      name: 'Lumen5';
-      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.';
-      category: 'AI Video';
-      pricing: 'Free - $79/month';
-      rating: 4.3;
-      users: '10o0K+';
-      icon: <Video className="w-8 h-8 text-blue-40o0"  />;
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
+      name: 'Lumen5',
+      description: 'AI video maker that transforms text content into engaging videos for social media and marketing.',
+      category: 'AI Video',
+      pricing: 'Free - $79/month',
+      rating: 4.3,
+      users: '10o0K+',
+      icon: <Video className="w-8 h-8 text-blue-40o0"  />,
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
       features: [
-        'Text-to-video conversionVideo templates';
-        'Music libraryBrand customization';
-        'Social media formatsFree tier available'];
-      website: 'https://lumen5.com';
-      useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.';
-      pros: ['Free tierEasy to use', 'Good templatesAffordable'];
-      cons: ['Limited customizationBasic features', 'Watermark on free'];
-      bestFor: 'Marketers, social media managers, small businesses'};
+        'Text-to-video conversionVideo templatesMusic libraryBrand customization',
+        'Social media formatsFree tier available'],
+      website: 'https://lumen5.com',
+      useCase: 'Perfect for marketers, social media managers, and businesses that want to create video content from existing text.',
+      pros: ['Free tierEasy to useGood templatesAffordable'],
+      cons: ['Limited customizationBasic featuresWatermark on free'],
+      bestFor: 'Marketers, social media managers, small businesses'},
     {
-      name: 'Surfer SEO';
-      description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.';
-      category: 'AI SEO';
-      pricing: '$59 - $199/month';
-      rating: 4.6;
-      users: '25K+';
-      icon: <TrendingUp className="w-8 h-8 text-green-40o0"  />;
-      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0';
+      name: 'Surfer SEO',
+      description: 'AI-powered SEO tool that helps optimize content for search engines using data-driven insights.',
+      category: 'AI SEO',
+      pricing: '$59 - $199/month',
+      rating: 4.6,
+      users: '25K+',
+      icon: <TrendingUp className="w-8 h-8 text-green-40o0"  />,
+      color: 'bg-gradient-to-br from-green-50o0 to-emerald-60o0',
       features: [
-        'Content optimizationKeyword research';
-        'Competitor analysisSERP analysis';
-        'Content editorRank tracking'];
-      website: 'https://surferseo.com';
-      useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.';
-      pros: ['Data-driven insightsContent optimization', 'Competitor analysisGood support'];
-      cons: ['ExpensiveComplex interface', 'Steep learning curve'];
+        'Content optimizationKeyword researchCompetitor analysisSERP analysis',
+        'Content editorRank tracking'],
+      website: 'https://surferseo.com',
+      useCase: 'Essential for content marketers, SEO specialists, and businesses that want to improve their search rankings.',
+      pros: ['Data-driven insightsContent optimizationCompetitor analysisGood support'],
+      cons: ['ExpensiveComplex interfaceSteep learning curve'],
       bestFor: 'SEO specialists, content marketers, businesses'}
-  ];
-  const categories = ['AllAI Assistant', 'AI ArtAI Writing', 'AI VideoAI Copywriting', 'AI SEO'];
-  const [selectedCategory, setSelectedCategory] = React.useState('All');
+  ],
+  const categories = ['AllAI AssistantAI ArtAI Writing', 'AI VideoAI CopywritingAI SEO'],
+  const [selectedCategory, setSelectedCategory] = React.useState('All'),
   const filteredTools = selectedCategory === 'All',
     ? aiTools,
-    : aiTools.filter(tool => tool.category === selectedCategory);
+    : aiTools.filter(tool => tool.category === selectedCategory),
   return (
     <>,
       <Head>,

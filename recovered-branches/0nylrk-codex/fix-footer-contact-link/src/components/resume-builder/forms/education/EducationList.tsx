@@ -6,7 +6,7 @@ interface EducationListProps {
   onDelete: (id: string) => void}
 ,
 export function EducationList({
-  educationEntriesonEditonDelete;
+  educationEntriesonEditonDelete,
 }: EducationListProps) {
   if (!educationEntries || educationEntries.length === 0) {
     return null}

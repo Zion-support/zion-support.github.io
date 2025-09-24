@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 const fs = require('fs'),
 const path = require('path'),
@@ -27,7 +27,7 @@ function replaceNextImports(content, filePath) {
     content = content.replace(/<Link href=/g, '<Link to='),
     modified = true}
 ,
-  return { content, modified };
+  return { content, modified },
 }
 ,
 // Function to process a single file,
@@ -46,7 +46,7 @@ function processFile(filePath) {
 }
 ,
 // Function to walk directory recursively,
-function walkDir(dir, extensions = ['.jsx', '.js', '.tsx', '.ts']) {
+function walkDir(dir, extensions = ['.jsx.js', '.tsx.ts']) {
   let filesFixed = 0,
   try {
     const items = fs.readdirSync(dir),

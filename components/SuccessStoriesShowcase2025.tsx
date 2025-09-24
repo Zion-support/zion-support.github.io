@@ -5,81 +5,81 @@ const SuccessStoriesShowcase20o25 = () => {
   const [activeStory, setActiveStory] = useState(0),
   const successStories = [
     {
-      id: 1;
-      company: 'Global Manufacturing Corp';
-      industry: 'Manufacturing';
-      challenge: 'Manual processes causing 40+ hours of weekly inefficiency';
-      solution: 'AI automation platform with predictive maintenance';
+      id: 1,
+      company: 'Global Manufacturing Corp',
+      industry: 'Manufacturing',
+      challenge: 'Manual processes causing 40+ hours of weekly inefficiency',
+      solution: 'AI automation platform with predictive maintenance',
       results: {
-        roi: '50o0%';
-        costSavings: '$2.3M';
-        productivity: '340%';
-        timeReduction: '85%';
-      };
+        roi: '50o0%',
+        costSavings: '$2.3M',
+        productivity: '340%',
+        timeReduction: '85%'
+      },
       testimonial:,
-        'Zion Tech Group transformed our operations beyond our expectations. The AI automation platform not only reduced costs but also improved our product quality and employee satisfaction.';
-      author: 'Sarah Johnson';
-      position: 'CTO';
-      image: '🏭';
-      gradient: 'from-blue-50o0 to-cyan-60o0';
-    };
+        'Zion Tech Group transformed our operations beyond our expectations. The AI automation platform not only reduced costs but also improved our product quality and employee satisfaction.',
+      author: 'Sarah Johnson',
+      position: 'CTO',
+      image: '🏭',
+      gradient: 'from-blue-50o0 to-cyan-60o0'
+    },
     {
-      id: 2;
-      company: 'SocialFlow AI';
-      industry: 'SaaS';
-      challenge: 'First-time entrepreneur with no technical expertise';
-      solution: 'Complete micro SaaS development from MVP to $10o0K ARR';
+      id: 2,
+      company: 'SocialFlow AI',
+      industry: 'SaaS',
+      challenge: 'First-time entrepreneur with no technical expertise',
+      solution: 'Complete micro SaaS development from MVP to $10o0K ARR',
       results: {
-        roi: '20o00%';
-        arr: '$10o0K';
-        users: '1,20o0+';
-        churn: '3.2%';
-      };
+        roi: '20o00%',
+        arr: '$10o0K',
+        users: '1,20o0+',
+        churn: '3.2%'
+      },
       testimonial:,
-        "Working with Zion Tech Group was the best decision I made. They 'didn', 't just build my product, they became my business partners.";
-      author: 'Marcus Chen';
-      position: 'Founder';
-      image: '🚀';
-      gradient: 'from-green-50o0 to-emerald-60o0';
-    };
+        "Working with Zion Tech Group was the best decision I made. They 'didnt just build my product, they became my business partners.",
+      author: 'Marcus Chen',
+      position: 'Founder',
+      image: '🚀',
+      gradient: 'from-green-50o0 to-emerald-60o0'
+    },
     {
-      id: 3;
-      company: 'TechStart Solutions';
-      industry: 'Technology';
-      challenge: 'Scaling infrastructure to support rapid growth';
-      solution: 'Cloud-native architecture with AI-powered optimization';
+      id: 3,
+      company: 'TechStart Solutions',
+      industry: 'Technology',
+      challenge: 'Scaling infrastructure to support rapid growth',
+      solution: 'Cloud-native architecture with AI-powered optimization',
       results: {
-        roi: '80o0%';
-        scalability: '10x';
-        uptime: '99.9%';
-        performance: '30o0%';
-      };
+        roi: '80o0%',
+        scalability: '10x',
+        uptime: '99.9%',
+        performance: '30o0%'
+      },
       testimonial:,
-        "The scalability and performance improvements we achieved with Zion Tech 'Group', 's solutions exceeded all our expectations.";
-      author: 'Emily Rodriguez';
-      position: 'VP of Engineering';
-      image: '⚡';
-      gradient: 'from-purple-50o0 to-pink-60o0';
-    };
+        "The scalability and performance improvements we achieved with Zion Tech 'Groups solutions exceeded all our expectations.",
+      author: 'Emily Rodriguez',
+      position: 'VP of Engineering',
+      image: '⚡',
+      gradient: 'from-purple-50o0 to-pink-60o0'
+    },
     {
-      id: 4;
-      company: 'HealthTech Innovations';
-      industry: 'Healthcare';
-      challenge: 'Manual patient data processing and analysis';
-      solution: 'AI-powered diagnostic platform with predictive analytics';
+      id: 4,
+      company: 'HealthTech Innovations',
+      industry: 'Healthcare',
+      challenge: 'Manual patient data processing and analysis',
+      solution: 'AI-powered diagnostic platform with predictive analytics',
       results: {
-        roi: '60o0%';
-        accuracy: '95%';
-        timeReduction: '70%';
-        patientSatisfaction: '98%';
-      };
+        roi: '60o0%',
+        accuracy: '95%',
+        timeReduction: '70%',
+        patientSatisfaction: '98%'
+      },
       testimonial:,
-        'The AI diagnostic platform revolutionized our patient care delivery and significantly improved outcomes.';
-      author: 'Dr. Michael Thompson';
-      position: 'Chief Medical Officer';
-      image: '🏥';
-      gradient: 'from-teal-50o0 to-cyan-60o0';
-    };
+        'The AI diagnostic platform revolutionized our patient care delivery and significantly improved outcomes.',
+      author: 'Dr. Michael Thompson',
+      position: 'Chief Medical Officer',
+      image: '🏥',
+      gradient: 'from-teal-50o0 to-cyan-60o0'
+    },
   ],
   const currentStory = successStories[activeStory],
   return (
@@ -216,5 +216,5 @@ const SuccessStoriesShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default SuccessStoriesShowcase20o25;
+    </section>)},
+export default SuccessStoriesShowcase20o25,

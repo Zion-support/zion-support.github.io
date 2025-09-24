@@ -2,107 +2,103 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Zap;
-  TrendingUp;
-  Clock;
-  CheckCircle;
-  Star;
-  BookOpen;
-  FileText;
-  Users;
-  ArrowRight;
+  ArrowRight,
+  Zap,
+  TrendingUp,
+  Clock,
+  CheckCircle,
+  Star,
+  BookOpen,
+  FileText,
+  Users,
+  ArrowRight,
 } from 'lucide-react',
 const QuantumContentShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const quantumContent = [
     {
-      id: 'quantum-breakthrough';
+      id: 'quantum-breakthrough',
       title:,
-        "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise";
+        "AI 20o25: The Quantum Computing Breakthrough That's Revolutionizing Enterprise",
       description:,
-        'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.';
-      url: '/blog/ai-20o25-quantum-computing-breakthrough-enterprise';
-      type: 'blog';
-      category: 'AI Innovation';
+        'Discover how quantum computing is transforming enterprise AI, delivering 60o0% ROI and $50o0M+ in savings across Fortune 50o0 companies.',
+      url: '/blog/ai-20o25-quantum-computing-breakthrough-enterprise',
+      type: 'blog',
+      category: 'AI Innovation',
       metrics: {
-        roi: '60o0%';
-        savings: '$50o0M+';
-        accuracy: '99.7%';
-        speed: '67% faster';
-      };
-      readingTime: '18 min read';
-      featured: true;
-      tags: ['Quantum Computing', 'AI', 'Enterprise', 'ROI', 'Breakthrough'];
-    };
+        roi: '60o0%',
+        savings: '$50o0M+',
+        accuracy: '99.7%',
+        speed: '67% faster'
+      },
+      readingTime: '18 min read',
+      featured: true,
+      tags: ['Quantum ComputingAI', 'EnterpriseROI', 'Breakthrough'],
+    },
     {
-      id: 'fortune-50o0-case-study';
+      id: 'fortune-50o0-case-study',
       title:,
-        'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI';
+        'Fortune 50o0 Quantum Transformation: How a $50B Company Achieved 80o0% ROI',
       description:,
-        'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.';
-      url: '/case-studies/fortune-50o0-quantum-transformation-20o25';
-      type: 'case-study';
-      category: 'Success Story';
+        'Discover how a Fortune 50o0 manufacturing company achieved 80o0% ROI and $2.8B in savings through strategic quantum computing implementation.',
+      url: '/case-studies/fortune-50o0-quantum-transformation-20o25',
+      type: 'case-study',
+      category: 'Success Story',
       metrics: {
-        roi: '80o0%';
-        savings: '$2.8B';
-        accuracy: '99.9%';
-        speed: '67% reduction';
-      };
-      readingTime: '22 min read';
-      featured: true;
+        roi: '80o0%',
+        savings: '$2.8B',
+        accuracy: '99.9%',
+        speed: '67% reduction'
+      },
+      readingTime: '22 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'Quantum Computing';
-        'Fortune 50o0';
-        'ROI';
-        'Manufacturing';
-      ];
-    };
+        'Case StudyQuantum Computing',
+        'Fortune 50o0ROI',
+        'Manufacturing',
+      ]
+    },
     {
-      id: 'quantum-implementation-guide';
+      id: 'quantum-implementation-guide',
       title:,
-        'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI';
+        'Quantum Computing Implementation Guide 20o25: From Strategy to 80o0% ROI',
       description:,
-        'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.';
-      url: '/resources/quantum-computing-implementation-guide-20o25';
-      type: 'resource';
-      category: 'Implementation Guide';
+        'Complete guide to implementing quantum computing in your enterprise, with proven strategies for achieving 80o0% ROI and $50o0M+ in savings.',
+      url: '/resources/quantum-computing-implementation-guide-20o25',
+      type: 'resource',
+      category: 'Implementation Guide',
       metrics: {
-        roi: '80o0%';
-        savings: '$50o0M+';
-        accuracy: '99.9%';
-        speed: '340% improvement';
-      };
-      readingTime: '35 min read';
-      featured: true;
+        roi: '80o0%',
+        savings: '$50o0M+',
+        accuracy: '99.9%',
+        speed: '340% improvement'
+      },
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Quantum Computing';
-        'ROI';
-        'Strategy';
-        'Enterprise';
-      ];
-    };
+        'Implementation GuideQuantum Computing',
+        'ROIStrategy',
+        'Enterprise',
+      ]
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: quantumContent.length };
+    { id: 'all', label: 'All Content', count: quantumContent.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: quantumContent.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: quantumContent.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: quantumContent.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: quantumContent.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: quantumContent.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: quantumContent.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -118,7 +114,7 @@ const QuantumContentShowcase20o25 = () => {
         return <FileText className='w-5 h-5' />,
       default:,
         return <BookOpen className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -129,7 +125,7 @@ const QuantumContentShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -201,7 +197,7 @@ const QuantumContentShowcase20o25 = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -304,5 +300,5 @@ const QuantumContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumContentShowcase20o25;
+    </section>)},
+export default QuantumContentShowcase20o25,

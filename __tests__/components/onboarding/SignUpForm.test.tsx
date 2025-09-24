@@ -1,11 +1,14 @@
-import @testing-library/jest-dom',import React from react',import { render, screen, fireEvent } from @testing-library/react',import { vi } from vitest',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import SignUpForm from @/components/onboarding/SignUpForm',import { useAuth as _useAuth } from @/hooks/useAuth',
+import @testing-library/jest-dom',
+import React from react',import { render, screen, fireEvent } from @testing-library/react',import { vi } from vitest',
+import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import SignUpForm from @/components/onboarding/SignUpForm',
+import { useAuth as _useAuth } from @/hooks/useAuth',
 // Create mock functions that can be accessed in tests,
 const mockLoginWithGoogle = jest.fn(),
 const mockSignup = jest.fn().mockResolvedValue({}),
 const mockLogin = jest.fn().mockResolvedValue({}),
 jest.mock('@/hooks/useAuth', () => ({'  useAuth: () => ({
-    signup: mockSignup;
-    login: mockLogin;
+    signup: mockSignup,
+    login: mockLogin,
     loginWithGoogle: mockLoginWithGoogle})})),
 vi.mock('next/router', () => import('next-router-mock')),
 describe('SignUpForm', () => {'  test('calls loginWithGoogle when Google button is clicked', () => {'    render(

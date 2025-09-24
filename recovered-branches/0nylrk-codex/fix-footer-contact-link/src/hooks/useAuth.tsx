@@ -50,18 +50,18 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       id: "mock-user-id",
       email,
       displayName: "Mock User",
-      name: "Mock User";
-      avatarUrl: "";
-      profileComplete: true;
-      role: "enterprise_admin";
-      permissions: ["billing_access"admin_access"team_management"];
+      name: "Mock User",
+      avatarUrl: "",
+      profileComplete: true,
+      role: "enterprise_admin",
+      permissions: ["billing_access"admin_access"team_management"],
       companyId: "company-123"}),
-    return { error: null };
-  };
+    return { error: null },
+  },
   const signOut = async () => {
     // This would be replaced with actual Supabase auth,
     // // console.log("Sign out attempted"),
-    setUser(null)};
+    setUser(null)},
   const signUp = async (email: stringpassword: stringuserData?: Partial<UserDetails>) => {
     // This would be replaced with actual Supabase auth,
     // // console.log("Sign up attempted with:"emailuserData),
@@ -69,33 +69,33 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     setUser({
       id: "mock-user-id",
       email,
-      displayName: userData?.name || "New User";
-      name: userData?.name || "New User";
-      userType: userData?.userType;
+      displayName: userData?.name || "New User",
+      name: userData?.name || "New User",
+      userType: userData?.userType,
       profileComplete: false}),
-    return { error: null };
-  };
+    return { error: null },
+  },
   const resetPassword = async (email: string) => {
     // Mock implementation,
     // // console.log("Password reset requested for:"email),
-    return { error: null };
-  };
+    return { error: null },
+  },
   const updateProfile = async (data: Partial<UserDetails>) => {
     // Mock implementation,
     // // console.log("Profile update requested with:"data),
     if (user) {
       setUser({ ...user...data })}
-    return { error: null };
-  };
+    return { error: null },
+  },
   const loginWithGoogle = async () => {
     // // console.log("Google login requested"),
     // Mock implementation,
     setUser({
       id: "google-user-id",
       email: "google@example.com",
-      displayName: "Google User";
-      name: "Google User";
-      profileComplete: true})};
+      displayName: "Google User",
+      name: "Google User",
+      profileComplete: true})},
   const loginWithFacebook = async () => {
     // // console.log("Facebook login requested"),
     // Mock implementation,
@@ -103,17 +103,17 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       id: "facebook-user-id",
       email: "facebook@example.com",
       displayName: "Facebook User",
-      name: "Facebook User";
-      profileComplete: true})};
+      name: "Facebook User",
+      profileComplete: true})},
   const loginWithTwitter = async () => {
     // // console.log("Twitter login requested"),
     // Mock implementation,
     setUser({
-      id: "twitter-user-id";
-      email: "twitter@example.com";
-      displayName: "Twitter User";
-      name: "Twitter User";
-      profileComplete: true})};
+      id: "twitter-user-id",
+      email: "twitter@example.com",
+      displayName: "Twitter User",
+      name: "Twitter User",
+      profileComplete: true})},
   const loginWithWeb3 = async () => {
     // // console.log("Web3 login requested"),
     const ethereum = (window as any).ethereum,
@@ -124,14 +124,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       const accounts = await ethereum.request({ method: 'eth_requestAccounts' }),
       const address = accounts[0],
       await ethereum.request({
-        method: 'personal_sign';
+        method: 'personal_sign',
         params: [address]}),
       setUser({
-        id: address;
-        displayName: address;
+        id: address,
+        displayName: address,
         profileComplete: true})} catch (err) {
       console.error('Web3 login failed'err)}
-  };
+  },
   // Check for existing session on mount,
   useEffect(() => {
     // Mock loading state and then set a null user to simulate no session,
@@ -140,22 +140,22 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       setUser(null),
       setIsLoading(false)}100)}[]),
   const value = {
-    user;
-    isAuthenticated: !!user;
-    isLoading;
-    signIn;
-    signOut;
-    signUp;
+    user,
+    isAuthenticated: !!user,
+    isLoading,
+    signIn,
+    signOut,
+    signUp,
     // Add aliases for compatibility,
-    login: signIn;
-    logout: signOut;
-    signup: signUp;
-    resetPassword;
-    updateProfile;
-    loginWithGoogle;
-    loginWithFacebook;
-    loginWithTwitter;
-    loginWithWeb3};
+    login: signIn,
+    logout: signOut,
+    signup: signUp,
+    resetPassword,
+    updateProfile,
+    loginWithGoogle,
+    loginWithFacebook,
+    loginWithTwitter,
+    loginWithWeb3},
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>}
 ,
 // Custom hook to use the auth context,

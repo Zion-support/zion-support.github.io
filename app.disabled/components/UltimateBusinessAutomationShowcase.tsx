@@ -5,67 +5,67 @@ const UltimateBusinessAutomationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const contentItems = [
     {
-      id: 'ultimate-business-automation-revolution';
-      title: 'AI 20o25: The Ultimate Business Automation Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 5,0o00% ROI';
+      id: 'ultimate-business-automation-revolution',
+      title: 'AI 20o25: The Ultimate Business Automation Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 5,0o00% ROI',
       description:,
-        'Complete business automation transformation with $2.8B annual savings. Learn how Fortune 50o0 companies achieve unprecedented ROI through intelligent automation.';
-      type: 'blog';
-      category: 'automation';
+        'Complete business automation transformation with $2.8B annual savings. Learn how Fortune 50o0 companies achieve unprecedented ROI through intelligent automation.',
+      type: 'blog',
+      category: 'automation',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$2.8B';
-        accuracy: '99.7%';
-        efficiency: '340%';
-      };
-      link: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough';
-      readingTime: '25 min read';
-      featured: true;
-    };
+        roi: '5,0o00%',
+        savings: '$2.8B',
+        accuracy: '99.7%',
+        efficiency: '340%'
+      },
+      link: '/blog/ai-20o25-ultimate-business-automation-revolution-ultimate-breakthrough',
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-automation-success';
-      title: 'Fortune 50o0 Ultimate Business Automation Success';
-      subtitle: '$2.8B Annual Savings - 5,0o00% ROI Success Story';
+      id: 'fortune-50o0-automation-success',
+      title: 'Fortune 50o0 Ultimate Business Automation Success',
+      subtitle: '$2.8B Annual Savings - 5,0o00% ROI Success Story',
       description:,
-        'Real-world case study of a Fortune 10o0 manufacturing company that achieved 5,0o00% ROI through complete business automation transformation.';
-      type: 'case-study';
-      category: 'automation';
+        'Real-world case study of a Fortune 10o0 manufacturing company that achieved 5,0o00% ROI through complete business automation transformation.',
+      type: 'case-study',
+      category: 'automation',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$2.8B';
-        timeline: '18 months';
-        satisfaction: '99.7%';
-      };
-      link: '/case-studies/fortune-50o0-ultimate-business-automation-50o00-roi-success-story';
-      readingTime: '18 min read';
-      featured: true;
-    };
+        roi: '5,0o00%',
+        savings: '$2.8B',
+        timeline: '18 months',
+        satisfaction: '99.7%'
+      },
+      link: '/case-studies/fortune-50o0-ultimate-business-automation-50o00-roi-success-story',
+      readingTime: '18 min read',
+      featured: true
+    },
     {
-      id: 'automation-implementation-guide';
-      title: 'Ultimate Business Automation Implementation Guide';
-      subtitle: 'Complete Roadmap to 5,0o00% ROI';
+      id: 'automation-implementation-guide',
+      title: 'Ultimate Business Automation Implementation Guide',
+      subtitle: 'Complete Roadmap to 5,0o00% ROI',
       description:,
-        'Step-by-step implementation guide for achieving 5,0o00% ROI through business automation. Includes detailed timelines, best practices, and success metrics.';
-      type: 'resource';
-      category: 'automation';
+        'Step-by-step implementation guide for achieving 5,0o00% ROI through business automation. Includes detailed timelines, best practices, and success metrics.',
+      type: 'resource',
+      category: 'automation',
       metrics: {
-        roi: '5,0o00%';
-        success: '98%';
-        timeline: '18 months';
-        processes: '20o0+';
-      };
-      link: '/resources/ultimate-business-automation-implementation-guide-20o25';
-      readingTime: '35 min read';
-      featured: true;
-    };
+        roi: '5,0o00%',
+        success: '98%',
+        timeline: '18 months',
+        processes: '20o0+'
+      },
+      link: '/resources/ultimate-business-automation-implementation-guide-20o25',
+      readingTime: '35 min read',
+      featured: true
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: contentItems.length };
+    { id: 'all', name: 'All Content', count: contentItems.length },
     {
-      id: 'automation';
-      name: 'Business Automation';
-      count: contentItems.filter(item => item.category === 'automation').length;
-    };
+      id: 'automation',
+      name: 'Business Automation',
+      count: contentItems.filter(item => item.category === 'automation').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -81,7 +81,7 @@ const UltimateBusinessAutomationShowcase = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   const getTypeIcon = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -92,7 +92,7 @@ const UltimateBusinessAutomationShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   return (
     <section className='py-20 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -265,5 +265,5 @@ const UltimateBusinessAutomationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateBusinessAutomationShowcase;
+    </section>)},
+export default UltimateBusinessAutomationShowcase,

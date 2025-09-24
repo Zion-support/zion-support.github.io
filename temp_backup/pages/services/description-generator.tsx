@@ -22,21 +22,21 @@ export default function ServiceDescriptionGeneratorPage() {
     setAccepted(false),
     try {
       const response = await fetch('/api/generate-service-description', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title;
-          keyFeatures;
-          targetAudience;
-          additionalNotes: additionalNotes || undefined;
-          tone;
-        });
+          title,
+          keyFeatures,
+          targetAudience,
+          additionalNotes: additionalNotes || undefined,
+          tone
+        }),
       }),
       if (!response.ok) {
         const data = await response.json().catch(() => ({})),
         throw new Error(data.error || 'Failed to generate')}
 ,
-      const data = (await response.json()) as { description: string };
+      const data = (await response.json()) as { description: string },
       setGenerated(data.description || '')} catch (err: any) {
       setError(err.message || 'Something went wrong')} finally {
       setLoading(false)}

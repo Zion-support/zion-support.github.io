@@ -1,56 +1,48 @@
-import React from 'react';
+import React from 'react',
 import { Helmet  } from 'react-helmet-async.ts',
 import { motion  } from 'framer-motion.ts',
 import { useState  } from 'react.ts',
-import { User;
-  Mail;
-  Lock;
-  Eye;
-  EyeOff;
-  CheckCircle;
-  AlertCircle;
-  Building;
-  Phone;
-  Globe;
-  Shield;
-  Zap;
-  Brain;
+import { User,
+  Mail,
+  Lock,
+  Eye,
+  EyeOff,
+  CheckCircle,
+  AlertCircle,
+  Building,
+  Phone,
+  Globe,
+  Shield,
+  Zap,
+  Brain,
   Cloud} from 'lucide-react.ts',
 export default function Signup(...args: any[]): any {
   const [formData, setFormData] = useState({
-    firstName: '';
-    lastName: '';
-    email: '';
-    password: '';
-    confirmPassword: '';
-    company: '';
-    phone: '';
-    website: '';
-    industry: '';
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    company: '',
+    phone: '',
+    website: '',
+    industry: '',
     useCase: ''}),
   const [showPassword, setShowPassword] = useState(false),
   const [showConfirmPassword, setShowConfirmPassword] = useState(false),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [errors, setErrors] = useState<Record<string any>>({}),
   const industries = [
-    'Technology';
-    'Healthcare';
-    'Finance';
-    'Manufacturing';
-    'Retail';
-    'Education';
-    'Government';
-    'Non-profit';
+    'TechnologyHealthcare',
+    'FinanceManufacturing',
+    'RetailEducation',
+    'GovernmentNon-profit',
     'Other'],
   const useCases = [
-    'AI & Machine Learning';
-    'Cloud Infrastructure';
-    'Cybersecurity';
-    'Digital Transformation';
-    'Data Analytics';
-    'IoT Solutions';
-    'Micro SaaS Development';
-    'Enterprise IT';
+    'AI & Machine LearningCloud Infrastructure',
+    'CybersecurityDigital Transformation',
+    'Data AnalyticsIoT Solutions',
+    'Micro SaaS DevelopmentEnterprise IT',
     'Other'],
   const handleInputChange = (e: anyReact.ChangeEvent<HTMLInputElement | HTMLSelectElement>)  => {
     const { name, value } = e.target,
@@ -125,7 +117,7 @@ export default function Signup(...args: any[]): any {
                 Join Zion Tech Group,
               </h1>,
               <p className="text-xl md:text-2xl text-zion-slate-light mb-8 max-w-3xl mx-auto">,
-                Unlock access to revolutionary AI autonomous systems, quantum computing solutions;
+                Unlock access to revolutionary AI autonomous systems, quantum computing solutions,
                 and enterprise-grade cybersecurity platforms.,
               </p>,
               <div className="flex flex-wrap justify-center gap-6 mb-12">,

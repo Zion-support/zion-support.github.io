@@ -4,65 +4,59 @@ import { ArrowRight, Star, Users, TrendingUp } from 'lucide-react',
 export default function FeaturedServices() {
   const featuredServices = [
     {
-      icon: '🚀';
-      title: 'Micro SaaS Solutions';
+      icon: '🚀',
+      title: 'Micro SaaS Solutions',
       description:,
-        'Discover curated micro SaaS services that solve real business problems with proven results.';
+        'Discover curated micro SaaS services that solve real business problems with proven results.',
       features: [
-        '8 specialized categories';
-        'Real user reviews & ratings';
-        'Free tier options available';
-        'Direct integration support';
-      ];
+        '8 specialized categoriesReal user reviews & ratings',
+        'Free tier options availableDirect integration support',
+      ],
       stats: {
-        services: '24+';
-        users: '50K+';
-        rating: '4.8';
-      };
-      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0';
-      href: '/micro-saas';
-      category: 'Business Solutions';
-    };
+        services: '24+',
+        users: '50K+',
+        rating: '4.8'
+      },
+      color: 'bg-gradient-to-br from-blue-50o0 to-cyan-60o0',
+      href: '/micro-saas',
+      category: 'Business Solutions'
+    },
     {
-      icon: '🔌';
-      title: 'Developer API Tools';
+      icon: '🔌',
+      title: 'Developer API Tools',
       description:,
-        'Powerful APIs and developer tools for building modern, scalable applications.';
+        'Powerful APIs and developer tools for building modern, scalable applications.',
       features: [
-        '8 production-ready APIs';
-        'Comprehensive documentation';
-        'Open source SDKs';
-        '99.9% uptime guarantee';
-      ];
+        '8 production-ready APIsComprehensive documentation',
+        'Open source SDKs99.9% uptime guarantee',
+      ],
       stats: {
-        services: '8';
-        users: '25K+';
-        rating: '4.9';
-      };
-      color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0';
-      href: '/api-tools';
-      category: 'Developer Tools';
-    };
+        services: '8',
+        users: '25K+',
+        rating: '4.9'
+      },
+      color: 'bg-gradient-to-br from-indigo-50o0 to-purple-60o0',
+      href: '/api-tools',
+      category: 'Developer Tools'
+    },
     {
-      icon: '🤖';
-      title: 'AI & Automation';
+      icon: '🤖',
+      title: 'AI & Automation',
       description:,
-        'Cutting-edge AI tools and automation solutions that transform business workflows.';
+        'Cutting-edge AI tools and automation solutions that transform business workflows.',
       features: [
-        '9 AI-powered tools';
-        'Custom model training';
-        'Enterprise-grade security';
-        'Real-time analytics';
-      ];
+        '9 AI-powered toolsCustom model training',
+        'Enterprise-grade securityReal-time analytics',
+      ],
       stats: {
-        services: '9';
-        users: '35K+';
-        rating: '4.7';
-      };
-      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0';
-      href: '/ai-tools';
-      category: 'Artificial Intelligence';
-    };
+        services: '9',
+        users: '35K+',
+        rating: '4.7'
+      },
+      color: 'bg-gradient-to-br from-purple-50o0 to-pink-60o0',
+      href: '/ai-tools',
+      category: 'Artificial Intelligence'
+    },
   ],
   return (
     <section className='py-24 bg-gradient-to-br from-gray-90o0 via-blue-90o0 to-gray-90o0 relative overflow-hidden'>,

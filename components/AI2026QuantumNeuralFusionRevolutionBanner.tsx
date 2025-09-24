@@ -74,5 +74,5 @@ const AI20o26QuantumNeuralFusionRevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o26QuantumNeuralFusionRevolutionBanner;
+    </div>)},
+export default AI20o26QuantumNeuralFusionRevolutionBanner,

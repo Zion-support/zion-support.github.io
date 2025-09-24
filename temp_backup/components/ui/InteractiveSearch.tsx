@@ -1,22 +1,22 @@
-export type CategoryOption = { label: string, value: string };
+export type CategoryOption = { label: string, value: string },
 export type FilterState = {
   keyword: string,
   category: string,
   minPrice?: number,
   maxPrice?: number,
-  minRating?: number};
+  minRating?: number},
 export type InteractiveSearchProps = {
   categories: CategoryOption[],
   value: FilterState,
   onChange: (next: FilterState) => void,
   priceEnabled?: boolean,
-  ratingEnabled?: boolean};
+  ratingEnabled?: boolean},
 export default function InteractiveSearch({
-  categories;
-  value;
-  onChange;
-  priceEnabled = true;
-  ratingEnabled = true;
+  categories,
+  value,
+  onChange,
+  priceEnabled = true,
+  ratingEnabled = true,
 }: InteractiveSearchProps) {
   return (
     <div className='w-full mb-4 p-3 rounded-lg border border-gray-20o0 dark: border-gray-80o0 bg-white dark:bg-zinc-90o0'>,
@@ -47,8 +47,8 @@ export default function InteractiveSearch({
               value={value.minPrice ?? ''}
               onChange={e =>,
                 onChange({
-                  ...value;
-                  minPrice: e.target.value ? Number(e.target.value) : undefined;
+                  ...value,
+                  minPrice: e.target.value ? Number(e.target.value) : undefined
                 })}
               placeholder='Min $',
               className='w-1/2 px-3 py-2 rounded-md bg-gray-50 dark: bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm',
@@ -60,8 +60,8 @@ export default function InteractiveSearch({
               value={value.maxPrice ?? ''}
               onChange={e =>,
                 onChange({
-                  ...value;
-                  maxPrice: e.target.value ? Number(e.target.value) : undefined;
+                  ...value,
+                  maxPrice: e.target.value ? Number(e.target.value) : undefined
                 })}
               placeholder='Max $',
               className='w-1/2 px-3 py-2 rounded-md bg-gray-50 dark: bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm',
@@ -73,8 +73,8 @@ export default function InteractiveSearch({
             value={String(value.minRating ?? '')}
             onChange={e =>,
               onChange({
-                ...value;
-                minRating: e.target.value ? Number(e.target.value) : undefined;
+                ...value,
+                minRating: e.target.value ? Number(e.target.value) : undefined
               })}
             className='px-3 py-2 rounded-md bg-gray-50 dark: bg-zinc-80o0 border border-gray-20o0 dark:border-zinc-70o0 text-sm'>,
             <option value=''>Any Rating</option>,

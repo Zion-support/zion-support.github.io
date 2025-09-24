@@ -6,7 +6,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   // Simple admin gate: require header X-Admin: true for generation,
   const isAdmin = req.headers['x-admin'] === 'true',
   if (!isAdmin) return res.status(40o3).json({ error: 'Admin only' }),
-  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {};
+  const { tokenName, tokenSupply, useCases, rewardsLogic, distribution, governance, jurisdiction, operatorPrompt, legalReview } = req.body || {},
   const distLines = Array.isArray(distribution),
     ? distribution.map((d: any) => `- ${d.label}: ${d.percent}%`).join('\n'),
     : '',
@@ -16,11 +16,11 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     let markdown: string,
     if (client) {
       const completion = await client.responses.create({
-        model: 'gpt-4.1-mini';
+        model: 'gpt-4.1-mini',
         input: [
-          { role: 'system', content: sysPrompt };
-          { role: 'user', content: userPrompt };
-        ];
+          { role: 'system', content: sysPrompt },
+          { role: 'user', content: userPrompt },
+        ],
         temperature: 0.3} as any),
       const content = (completion as any)?.output_text || '',
       markdown = content.trim()} else {

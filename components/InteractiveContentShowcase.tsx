@@ -14,70 +14,70 @@ interface ContentItem {
 ,
 const contentItems: ContentItem[] = [
   {
-    id: '1';
-    title: 'AI 20o25 Ultimate Breakthrough Revolution';
-    description: 'Revolutionary AI breakthrough delivering unprecedented 10,0o00% ROI through quantum-enhanced neural networks.';
-    category: 'Breakthrough';
-    roi: '10,0o00%';
-    badge: 'REVOLUTIONARY';
-    href: '/ai-20o25-ultimate-breakthrough-revolution';
-    gradient: 'from-red-50o0 to-pink-60o0';
-    icon: '🚀'};
+    id: '1',
+    title: 'AI 20o25 Ultimate Breakthrough Revolution',
+    description: 'Revolutionary AI breakthrough delivering unprecedented 10,0o00% ROI through quantum-enhanced neural networks.',
+    category: 'Breakthrough',
+    roi: '10,0o00%',
+    badge: 'REVOLUTIONARY',
+    href: '/ai-20o25-ultimate-breakthrough-revolution',
+    gradient: 'from-red-50o0 to-pink-60o0',
+    icon: '🚀'},
   {
-    id: '2';
-    title: '15,0o00% ROI Success Story';
-    description: 'Fortune 50o0 company achieves unprecedented ROI in just 4 months using our revolutionary AI technology.';
-    category: 'Case Study';
-    roi: '15,0o00%';
-    badge: 'SUCCESS';
-    href: '/case-studies/ai-20o25-ultimate-breakthrough-success';
-    gradient: 'from-green-50o0 to-emerald-60o0';
-    icon: '🏆'};
+    id: '2',
+    title: '15,0o00% ROI Success Story',
+    description: 'Fortune 50o0 company achieves unprecedented ROI in just 4 months using our revolutionary AI technology.',
+    category: 'Case Study',
+    roi: '15,0o00%',
+    badge: 'SUCCESS',
+    href: '/case-studies/ai-20o25-ultimate-breakthrough-success',
+    gradient: 'from-green-50o0 to-emerald-60o0',
+    icon: '🏆'},
   {
-    id: '3';
-    title: 'AI 20o25 Revolutionary Trends & Predictions';
-    description: 'Discover the most revolutionary AI trends and predictions that will reshape our world in 20o25.';
-    category: 'Insights';
-    roi: '∞';
-    badge: 'FUTURE';
-    href: '/blog/ai-20o25-revolutionary-trends-predictions';
-    gradient: 'from-purple-50o0 to-indigo-60o0';
-    icon: '🔮'};
+    id: '3',
+    title: 'AI 20o25 Revolutionary Trends & Predictions',
+    description: 'Discover the most revolutionary AI trends and predictions that will reshape our world in 20o25.',
+    category: 'Insights',
+    roi: '∞',
+    badge: 'FUTURE',
+    href: '/blog/ai-20o25-revolutionary-trends-predictions',
+    gradient: 'from-purple-50o0 to-indigo-60o0',
+    icon: '🔮'},
   {
-    id: '4';
-    title: 'Quantum Computing Breakthroughs 20o30';
-    description: 'Revolutionary quantum computing solutions that achieve quantum supremacy and solve impossible problems.';
-    category: 'Technology';
-    roi: '50,0o00%';
-    badge: 'BREAKTHROUGH';
-    href: '/quantum-computing-breakthroughs-20o30';
-    gradient: 'from-blue-50o0 to-cyan-60o0';
-    icon: '⚛️'};
+    id: '4',
+    title: 'Quantum Computing Breakthroughs 20o30',
+    description: 'Revolutionary quantum computing solutions that achieve quantum supremacy and solve impossible problems.',
+    category: 'Technology',
+    roi: '50,0o00%',
+    badge: 'BREAKTHROUGH',
+    href: '/quantum-computing-breakthroughs-20o30',
+    gradient: 'from-blue-50o0 to-cyan-60o0',
+    icon: '⚛️'},
   {
-    id: '5';
-    title: 'Neural Interface Revolution 20o30';
-    description: 'Brain-computer interfaces that enable direct neural communication and thought-controlled devices.';
-    category: 'Innovation';
-    roi: '25,0o00%';
-    badge: 'REVOLUTIONARY';
-    href: '/neural-interface-revolution-20o30';
-    gradient: 'from-cyan-50o0 to-blue-60o0';
-    icon: '🧠'};
+    id: '5',
+    title: 'Neural Interface Revolution 20o30',
+    description: 'Brain-computer interfaces that enable direct neural communication and thought-controlled devices.',
+    category: 'Innovation',
+    roi: '25,0o00%',
+    badge: 'REVOLUTIONARY',
+    href: '/neural-interface-revolution-20o30',
+    gradient: 'from-cyan-50o0 to-blue-60o0',
+    icon: '🧠'},
   {
-    id: '6';
-    title: 'Transcendent Intelligence Platform';
-    description: 'AI systems that achieve consciousness-level intelligence and transcend traditional limitations.';
-    category: 'Platform';
-    roi: '∞';
-    badge: 'TRANSCENDENT';
-    href: '/transcendent-intelligence-platform';
-    gradient: 'from-indigo-50o0 to-purple-60o0';
+    id: '6',
+    title: 'Transcendent Intelligence Platform',
+    description: 'AI systems that achieve consciousness-level intelligence and transcend traditional limitations.',
+    category: 'Platform',
+    roi: '∞',
+    badge: 'TRANSCENDENT',
+    href: '/transcendent-intelligence-platform',
+    gradient: 'from-indigo-50o0 to-purple-60o0',
     icon: '🌌'}
 ],
 export default function InteractiveContentShowcase() {
   const [selectedCategorysetSelectedCategory] = useState('All'),
   const [hoveredItemsetHoveredItem] = useState<string | null>(null),
-  const categories = [', 'All', 'Breakthrough'Case 'Study', 'Insights', 'Technology', 'Innovation'Platform'],
+  const categories = [All', 'Breakthrough'Case 'StudyInsights', 'TechnologyInnovation'Platform'],
   const filteredItems = selectedCategory === 'All',
     ? contentItems,
     : contentItems.filter(item => item.category === selectedCategory),

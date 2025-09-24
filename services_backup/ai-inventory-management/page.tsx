@@ -1,4 +1,4 @@
-export const metadata = { title: 'AI Inventory Management | Zion Tech Group' };
+export const metadata = { title: 'AI Inventory Management | Zion Tech Group' },
 export default function AIInventoryManagementPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -16,36 +16,27 @@ export default function AIInventoryManagementPage() {
         <FeatureCard
           title='Predictive Analytics',
           features={[
-            'AI-powered demand forecasting';
-            'Seasonal trend analysis';
-            'Price optimization recommendations';
-            'Stock-out prediction & alerts';
-            'Supplier performance analytics';
-            'Market trend analysis';
+            'AI-powered demand forecastingSeasonal trend analysis',
+            'Price optimization recommendationsStock-out prediction & alerts',
+            'Supplier performance analyticsMarket trend analysis',
           ]}
           icon='📊',
         />,
         <FeatureCard
           title='Automated Reordering',
           features={[
-            'Smart reorder point calculation';
-            'Automated purchase order generation';
-            'Supplier integration & communication';
-            'Multi-location inventory tracking';
-            'Barcode & RFID scanning';
-            'Real-time stock level monitoring';
+            'Smart reorder point calculationAutomated purchase order generation',
+            'Supplier integration & communicationMulti-location inventory tracking',
+            'Barcode & RFID scanningReal-time stock level monitoring',
           ]}
           icon='🔄',
         />,
         <FeatureCard
           title='Cost Optimization',
           features={[
-            'Inventory turnover optimization';
-            'Carrying cost analysis';
-            'Waste reduction strategies';
-            'ABC analysis & categorization';
-            'Dead stock identification';
-            'ROI tracking & reporting';
+            'Inventory turnover optimizationCarrying cost analysis',
+            'Waste reduction strategiesABC analysis & categorization',
+            'Dead stock identificationROI tracking & reporting',
           ]}
           icon='💰',
         />,
@@ -98,9 +89,9 @@ export default function AIInventoryManagementPage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -130,12 +121,9 @@ function PricingSection() {
           price='$99/mo',
           duration='Up to 1,0o00 SKUs',
           features={[
-            'Basic inventory tracking';
-            'Simple reorder alerts';
-            'Standard reporting';
-            'Email support';
-            'Mobile app access';
-            'Basic analytics';
+            'Basic inventory trackingSimple reorder alerts',
+            'Standard reportingEmail support',
+            'Mobile app accessBasic analytics',
           ]}
           popular={false}
         />,
@@ -144,13 +132,10 @@ function PricingSection() {
           price='$299/mo',
           duration='Up to 10,0o00 SKUs',
           features={[
-            'Everything in Basic Inventory';
-            'AI demand forecasting';
-            'Automated reordering';
-            'Multi-location support';
-            'Advanced analytics';
-            'API access & integrations';
-            'Priority support';
+            'Everything in Basic InventoryAI demand forecasting',
+            'Automated reorderingMulti-location support',
+            'Advanced analyticsAPI access & integrations',
+            'Priority support',
           ]}
           popular={true}
         />,
@@ -159,13 +144,10 @@ function PricingSection() {
           price='$799/mo',
           duration='Unlimited SKUs',
           features={[
-            'Everything in Professional Inventory';
-            'Custom AI model training';
-            'Advanced security & compliance';
-            'Dedicated account manager';
-            'Custom integrations';
-            'White-label options';
-            '24/7 phone support';
+            'Everything in Professional InventoryCustom AI model training',
+            'Advanced security & complianceDedicated account manager',
+            'Custom integrationsWhite-label options',
+            '24/7 phone support',
           ]}
           popular={false}
         />,
@@ -173,11 +155,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

@@ -2,19 +2,16 @@ import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story';
+    'AI Transformation 20o25: $15B Company Achieves 80o0% ROI - Ultimate Success Story',
   description:,
-    'Discover how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.';
+    'Discover how a Fortune 50o0 manufacturing giant achieved 80o0% ROI in 18 months through comprehensive AI transformation. Real results, real savings, real success.',
   keywords: [
-    'Case Study';
-    'AI Transformation';
-    'ROI';
-    'Fortune 50o0';
-    'Manufacturing';
-    'Success Story';
-    '80o0% ROI';
-  ];
-};
+    'Case StudyAI Transformation',
+    'ROIFortune 50o0',
+    'ManufacturingSuccess Story',
+    '80o0% ROI',
+  ]
+},
 export default function AITransformationSuccessPage() {
   return (
     <div>,
@@ -131,7 +128,7 @@ export default function AITransformationSuccessPage() {
                 <strong>Initial Investment:</strong> $2.5 million,
               </p>,
               <p>,
-                Our team conducted a comprehensive analysis of GMS's operations;
+                Our team conducted a comprehensive analysis of GMS's operations,
                 identifying 47 high-impact AI implementation opportunities,
                 across: ,
               </p>,

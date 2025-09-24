@@ -114,5 +114,5 @@ const EnhancedNavigation = () => {
             </div>,
           </div>)}
       </div>,
-    </nav>)};
-export default EnhancedNavigation;
+    </nav>)},
+export default EnhancedNavigation,

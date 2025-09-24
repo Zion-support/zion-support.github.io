@@ -17,7 +17,7 @@ export const PerformanceOptimizer = ({ children }) => {
             criticalFonts.as = 'font',
             criticalFonts.href = '/fonts/inter-var.woff2',
             criticalFonts.crossOrigin = 'anonymous',
-            document.head.appendChild(criticalFonts)};
+            document.head.appendChild(criticalFonts)},
         preloadCriticalResources()}, []),
     // Optimize images on route change,
     useEffect(() => {
@@ -31,8 +31,8 @@ export const PerformanceOptimizer = ({ children }) => {
                 img.decoding = 'async',
                 // Add error handling,
                 img.onerror = () => {
-                    img.style.display = 'none'};
-            })};
+                    img.style.display = 'none'},
+            })},
         // Use requestIdleCallback for non-critical optimization,
         if ('requestIdleCallback' in window) {
             requestIdleCallback(optimizeImages)}
@@ -75,14 +75,14 @@ export const PerformanceOptimizer = ({ children }) => {
                             observer.unobserve(target)}
                     }
                 })}, {
-                rootMargin: '50px';
+                rootMargin: '50px',
                 threshold: 0.1}),
             // Observe all images with data-src,
             const lazyImages = document.querySelectorAll('img[data-src]'),
             lazyImages.forEach((img) => observer.observe(img)),
             return () => observer.disconnect()}
     }, [location.pathname]),
-    return <>{optimizedChildren}</>};
+    return <>{optimizedChildren}</>},
 // Add global performance optimizations,
 if (typeof window !== 'undefined') {
     // Optimize long tasks,
@@ -99,4 +99,4 @@ if (typeof window !== 'undefined') {
         }
     }
 }
-export default PerformanceOptimizer;
+export default PerformanceOptimizer,

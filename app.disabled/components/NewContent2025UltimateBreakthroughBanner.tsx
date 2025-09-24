@@ -7,43 +7,43 @@ const NewContent20o25UltimateBreakthroughBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const content = [
     {
-      id: 'enterprise-ai-revolution';
-      title: 'AI 20o25: The Enterprise AI Revolution Ultimate Breakthrough';
-      description: '10o00% ROI in 6 months - Transform your business with revolutionary AI implementations';
+      id: 'enterprise-ai-revolution',
+      title: 'AI 20o25: The Enterprise AI Revolution Ultimate Breakthrough',
+      description: '10o00% ROI in 6 months - Transform your business with revolutionary AI implementations',
       metrics: {
-        roi: '10o00%';
-        savings: '$50o0M+';
-        efficiency: '95%';
-        success: '99.7%'};
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25';
-      type: 'Blog Post';
-      readingTime: '18 min read';
-      featured: true};
+        roi: '10o00%',
+        savings: '$50o0M+',
+        efficiency: '95%',
+        success: '99.7%'},
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough-20o25',
+      type: 'Blog Post',
+      readingTime: '18 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Transformation Success: $2.8B Annual Savings';
-      description: 'Real-world case study showing how a global manufacturing leader achieved 10o00% ROI';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Transformation Success: $2.8B Annual Savings',
+      description: 'Real-world case study showing how a global manufacturing leader achieved 10o00% ROI',
       metrics: {
-        roi: '10o00%';
-        savings: '$2.8B';
-        efficiency: '156%';
-        quality: '99.2%'};
-      url: '/case-studies/fortune-50o0-ai-transformation-10o00-roi-success';
-      type: 'Case Study';
-      readingTime: '15 min read';
-      featured: true};
+        roi: '10o00%',
+        savings: '$2.8B',
+        efficiency: '156%',
+        quality: '99.2%'},
+      url: '/case-studies/fortune-50o0-ai-transformation-10o00-roi-success',
+      type: 'Case Study',
+      readingTime: '15 min read',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'AI Transformation Ultimate Implementation Guide 20o25';
-      description: 'Complete roadmap from strategy to 10o00% ROI - Step-by-step implementation guide';
+      id: 'implementation-guide',
+      title: 'AI Transformation Ultimate Implementation Guide 20o25',
+      description: 'Complete roadmap from strategy to 10o00% ROI - Step-by-step implementation guide',
       metrics: {
-        roi: '10o00%';
-        timeline: '6 months';
-        success: '99.7%';
-        projects: '50o0+'};
-      url: '/resources/ai-transformation-ultimate-implementation-guide-20o25';
-      type: 'Resource';
-      readingTime: '25 min read';
+        roi: '10o00%',
+        timeline: '6 months',
+        success: '99.7%',
+        projects: '50o0+'},
+      url: '/resources/ai-transformation-ultimate-implementation-guide-20o25',
+      type: 'Resource',
+      readingTime: '25 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -52,7 +52,7 @@ const NewContent20o25UltimateBreakthroughBanner = () => {
     return () => clearInterval(timer)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateBreakthroughBannerDismissed', 'true')};
+    localStorage.setItem('ultimateBreakthroughBannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimateBreakthroughBannerDismissed'),
     if (dismissed === 'true') {
@@ -164,5 +164,5 @@ const NewContent20o25UltimateBreakthroughBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25UltimateBreakthroughBanner;
+    </div>)},
+export default NewContent20o25UltimateBreakthroughBanner,

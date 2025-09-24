@@ -21,19 +21,19 @@ export interface ServicePricing {
     currency: string,
     period: string,
     features: string[],
-    popular?: boolean};
+    popular?: boolean},
   professional: {
     price: number,
     currency: string,
     period: string,
     features: string[],
-    popular?: boolean};
+    popular?: boolean},
   enterprise: {
     price: number,
     currency: string,
     period: string,
     features: string[],
-    popular?: boolean};
+    popular?: boolean},
 }
 ,
 export interface ServiceSolution {

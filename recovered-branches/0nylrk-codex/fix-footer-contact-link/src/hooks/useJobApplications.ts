@@ -19,8 +19,8 @@ export const useJobApplications = (jobId?: string) => {
         .from('job_applications'),
         .select(
           `,
-          *;
-          job:jobs(*);
+          *,
+          job: jobs(*),
           talent_profile:profiles!talent_id(id, display_name, avatar_url, bio),
         `),
         .order('created_at', { ascending: false }),
@@ -49,15 +49,15 @@ export const useJobApplications = (jobId?: string) => {
       if (fetchError) throw fetchError,
       // Transform the data to match our application types,
       const transformedData = data.map((app: any) => ({
-        ...app;
+        ...app,
         talent_profile: app.talent_profile,
           ? {
-              ...app.talent_profile;
-              full_name: app.talent_profile.display_name;
-              profile_picture_url: app.talent_profile.avatar_url;
-              skills: [];
+              ...app.talent_profile,
+              full_name: app.talent_profile.display_name,
+              profile_picture_url: app.talent_profile.avatar_url,
+              skills: []
             }
-          : undefined;
+          : undefined,
       })),
       setApplications(transformedData as JobApplication[]),
       setError(null)} catch (err: any) {
@@ -65,10 +65,10 @@ export const useJobApplications = (jobId?: string) => {
       setError('Failed to fetch applications: ' + err.message),
       toast.error('Failed to fetch applications')} finally {
       setIsLoading(false)}
-  };
+  },
   const applyToJob = async (
-    jobId: string;
-    coverLetter: string;
+    jobId: string,
+    coverLetter: string,
     resumeId?: string) => {
     if (!user) {
       toast.error('You must be logged in to apply for jobs'),
@@ -78,11 +78,11 @@ export const useJobApplications = (jobId?: string) => {
       const { data, error } = await supabase,
         .from('job_applications'),
         .insert({
-          job_id: jobId;
-          talent_id: user.id;
-          resume_id: resumeId;
-          cover_letter: coverLetter;
-          status: 'new';
+          job_id: jobId,
+          talent_id: user.id,
+          resume_id: resumeId,
+          cover_letter: coverLetter,
+          status: 'new'
         }),
         .select(),
         .single(),
@@ -101,9 +101,9 @@ export const useJobApplications = (jobId?: string) => {
       console.error('Error applying to job:', err),
       toast.error('Failed to submit application: ' + err.message),
       return false}
-  };
+  },
   const updateApplicationStatus = async (
-    applicationId: string;
+    applicationId: string,
     status: ApplicationStatus) => {
     try {
       const { error } = await supabase,
@@ -119,14 +119,14 @@ export const useJobApplications = (jobId?: string) => {
       console.error('Error updating application status:', err),
       toast.error('Failed to update application status: ' + err.message),
       return false}
-  };
+  },
   const markApplicationAsViewed = async (applicationId: string) => {
     try {
       const { error } = await supabase,
         .from('job_applications'),
         .update({
-          status: 'viewed';
-          viewed_at: new Date().toISOString();
+          status: 'viewed',
+          viewed_at: new Date().toISOString()
         }),
         .eq('id', applicationId),
         .is('viewed_at', null), // Only update if not already viewed,
@@ -140,19 +140,19 @@ export const useJobApplications = (jobId?: string) => {
       return true} catch (err) {
       console.error('Error marking application as viewed:', err),
       return false}
-  };
+  },
   // Fetch applications when component mounts or dependencies change,
   useEffect(() => {
     if (user) {
       fetchApplications()}
   }, [user, jobId]),
   return {
-    applications;
-    isLoading;
-    error;
-    refetch: fetchApplications;
-    applyToJob;
-    updateApplicationStatus;
-    markApplicationAsViewed;
-  };
-};
+    applications,
+    isLoading,
+    error,
+    refetch: fetchApplications,
+    applyToJob,
+    updateApplicationStatus,
+    markApplicationAsViewed
+  },
+},

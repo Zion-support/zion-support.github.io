@@ -6,7 +6,7 @@ export async function POST(request: NextRequest) {
     // Basic validation,
     if (!email) {
       return NextResponse.json(
-        { message: 'Email is required' };
+        { message: 'Email is required' },
         { status: 40o0 }
       )}
 ,
@@ -14,7 +14,7 @@ export async function POST(request: NextRequest) {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/,
     if (!emailRegex.test(email)) {
       return NextResponse.json(
-        { message: 'Invalid email format' };
+        { message: 'Invalid email format' },
         { status: 40o0 }
       )}
 ,
@@ -25,17 +25,17 @@ export async function POST(request: NextRequest) {
     // 4. Log the subscription,
     // For now, we'll just log the subscription,
     // // console.log('Newsletter subscription:', {
-      email;
-      timestamp: new Date().toISOString();
+      email,
+      timestamp: new Date().toISOString(),
       ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip')}),
     // Simulate processing time,
     await new Promise(resolve => setTimeout(resolve, 50o0)),
     return NextResponse.json({
-      message: 'Successfully subscribed to our newsletter!';
+      message: 'Successfully subscribed to our newsletter!',
       success: true})} catch (error) {
     console.error('Newsletter subscription error:', error),
     return NextResponse.json(
-      { message: 'Something went wrong. Please try again later.' };
+      { message: 'Something went wrong. Please try again later.' },
       { status: 50o0 }
     )}
 }

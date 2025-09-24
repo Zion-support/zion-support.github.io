@@ -1,20 +1,20 @@
 import { Link } from 'react-router-dom',
 import { motion } from 'framer-motion',
 import {
-  MapPin;
-  Phone;
-  Mail;
-  Twitter;
-  Linkedin;
-  Facebook;
-  Instagram;
-  Github;
-  Heart;
+  MapPin,
+  Phone,
+  Mail,
+  Twitter,
+  Linkedin,
+  Facebook,
+  Instagram,
+  Github,
+  Heart,
   ArrowUp} from 'lucide-react',
 import { FooterNewsletter } from './FooterNewsletter',
 const Footer = () => {
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className="bg-zion-blue-dark text-white relative overflow-hidden">,
       {/* Background decorative elements */}
@@ -204,5 +204,5 @@ const Footer = () => {
       >,
         <ArrowUp className="w-5 h-5" />,
       </motion.button>,
-    </footer>)};
-export default Footer;
+    </footer>)},
+export default Footer,

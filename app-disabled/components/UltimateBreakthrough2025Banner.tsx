@@ -6,31 +6,31 @@ const UltimateBreakthrough20o25Banner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const breakthroughContent = [
     {
-      id: 'ai-20o25-20o26-ultimate-breakthrough';
-      title: 'AI 20o25-20o26: The Ultimate Breakthrough Revolution';
-      description: 'Achieve 2,50o0% ROI through next-generation intelligence systems';
-      metrics: '2,50o0% ROI • $8.2B+ Savings • 99.7% Efficiency';
-      url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution';
-      type: 'blog';
-      featured: true;
-      readingTime: '35 min read'};
+      id: 'ai-20o25-20o26-ultimate-breakthrough',
+      title: 'AI 20o25-20o26: The Ultimate Breakthrough Revolution',
+      description: 'Achieve 2,50o0% ROI through next-generation intelligence systems',
+      metrics: '2,50o0% ROI • $8.2B+ Savings • 99.7% Efficiency',
+      url: '/blog/ai-20o25-20o26-ultimate-breakthrough-revolution',
+      type: 'blog',
+      featured: true,
+      readingTime: '35 min read'},
     {
-      id: 'fortune-10o0-250o0-roi-success';
-      title: 'Fortune 10o0 Achieves 2,50o0% ROI in 18 Months';
-      description: 'Revolutionary AI transformation case study with $8.2B savings';
-      metrics: '2,50o0% ROI • 18 Months • $8.2B Savings';
-      url: '/case-studies/ai-20o25-20o26-revolutionary-transformation-250o0-roi-success';
-      type: 'case-study';
-      featured: true;
-      readingTime: '22 min read'};
+      id: 'fortune-10o0-250o0-roi-success',
+      title: 'Fortune 10o0 Achieves 2,50o0% ROI in 18 Months',
+      description: 'Revolutionary AI transformation case study with $8.2B savings',
+      metrics: '2,50o0% ROI • 18 Months • $8.2B Savings',
+      url: '/case-studies/ai-20o25-20o26-revolutionary-transformation-250o0-roi-success',
+      type: 'case-study',
+      featured: true,
+      readingTime: '22 min read'},
     {
-      id: 'ai-implementation-ultimate-framework';
-      title: 'AI 20o25-20o26 Implementation Ultimate Framework';
-      description: 'Complete roadmap to 2,50o0% ROI with proven methodologies';
-      metrics: '2,50o0% ROI • 18-24 Months • Proven Framework';
-      url: '/resources/ai-20o25-20o26-implementation-ultimate-framework';
-      type: 'resource';
-      featured: true;
+      id: 'ai-implementation-ultimate-framework',
+      title: 'AI 20o25-20o26 Implementation Ultimate Framework',
+      description: 'Complete roadmap to 2,50o0% ROI with proven methodologies',
+      metrics: '2,50o0% ROI • 18-24 Months • Proven Framework',
+      url: '/resources/ai-20o25-20o26-implementation-ultimate-framework',
+      type: 'resource',
+      featured: true,
       readingTime: '45 min read'}
   ],
   useEffect(() => {
@@ -39,7 +39,7 @@ const UltimateBreakthrough20o25Banner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ultimateBreakthrough20o25BannerDismissed', 'true')};
+    localStorage.setItem('ultimateBreakthrough20o25BannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ultimateBreakthrough20o25BannerDismissed'),
     if (dismissed === 'true') {
@@ -149,5 +149,5 @@ const UltimateBreakthrough20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateBreakthrough20o25Banner;
+    </div>)},
+export default UltimateBreakthrough20o25Banner,

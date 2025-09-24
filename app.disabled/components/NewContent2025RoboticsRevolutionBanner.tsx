@@ -8,44 +8,44 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const roboticsContent = [
     {
-      id: 'robotics-revolution-guide';
-      title: 'AI 20o25: The Advanced Robotics Revolution - Ultimate Enterprise Guide';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-advanced-robotics-revolution-ultimate-guide';
+      id: 'robotics-revolution-guide',
+      title: 'AI 20o25: The Advanced Robotics Revolution - Ultimate Enterprise Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-advanced-robotics-revolution-ultimate-guide',
       metrics: {
-        roi: '80o0%';
-        savings: '$5.2B';
-        efficiency: '95%';
-        quality: '99.7%'};
-      description: 'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI';
-      readingTime: '18 min read';
-      tags: ['AI Robotics', 'Manufacturing', 'ROI', 'Enterprise']};
+        roi: '80o0%',
+        savings: '$5.2B',
+        efficiency: '95%',
+        quality: '99.7%'},
+      description: 'Transform manufacturing, healthcare, and service industries with AI-powered robotics achieving 80o0% ROI',
+      readingTime: '18 min read',
+      tags: ['AI RoboticsManufacturing', 'ROIEnterprise']},
     {
-      id: 'fortune-50o0-robotics-success';
-      title: 'Fortune 50o0 Robotics Transformation: $5.2B Annual Savings with 80o0% ROI';
-      type: 'Case Study';
-      url: '/case-studies/fortune-50o0-robotics-transformation-80o0-roi-success';
+      id: 'fortune-50o0-robotics-success',
+      title: 'Fortune 50o0 Robotics Transformation: $5.2B Annual Savings with 80o0% ROI',
+      type: 'Case Study',
+      url: '/case-studies/fortune-50o0-robotics-transformation-80o0-roi-success',
       metrics: {
-        roi: '80o0%';
-        savings: '$5.2B';
-        efficiency: '95%';
-        quality: '99.7%'};
-      description: 'How a global manufacturing giant revolutionized operations with AI-powered robotics';
-      readingTime: '15 min read';
-      tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'Success Story']};
+        roi: '80o0%',
+        savings: '$5.2B',
+        efficiency: '95%',
+        quality: '99.7%'},
+      description: 'How a global manufacturing giant revolutionized operations with AI-powered robotics',
+      readingTime: '15 min read',
+      tags: ['Case StudyFortune 50o0', 'ManufacturingSuccess Story']},
     {
-      id: 'robotics-implementation-guide';
-      title: 'AI Robotics Implementation Master Guide 20o25: From Strategy to 80o0% ROI';
-      type: 'Resource';
-      url: '/resources/ai-robotics-implementation-master-guide-20o25';
+      id: 'robotics-implementation-guide',
+      title: 'AI Robotics Implementation Master Guide 20o25: From Strategy to 80o0% ROI',
+      type: 'Resource',
+      url: '/resources/ai-robotics-implementation-master-guide-20o25',
       metrics: {
-        roi: '80o0%';
-        success: '98%';
-        timeline: '18 months';
-        projects: '20o0+'};
-      description: 'Complete framework for transforming your business with AI-powered robotics';
-      readingTime: '35 min read';
-      tags: ['Implementation Guide', 'Strategy', 'ROI', 'Framework']}
+        roi: '80o0%',
+        success: '98%',
+        timeline: '18 months',
+        projects: '20o0+'},
+      description: 'Complete framework for transforming your business with AI-powered robotics',
+      readingTime: '35 min read',
+      tags: ['Implementation GuideStrategy', 'ROIFramework']}
   ],
   useEffect(() => {
     const timer = setInterval(() => {
@@ -53,7 +53,7 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('robotics-banner-dismissed', 'true')};
+    localStorage.setItem('robotics-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('robotics-banner-dismissed'),
     if (dismissed === 'true') {
@@ -250,5 +250,5 @@ const NewContent20o25RoboticsRevolutionBanner = () => {
           </div>,
         </div>,
       </motion.div>,
-    </AnimatePresence>)};
-export default NewContent20o25RoboticsRevolutionBanner;
+    </AnimatePresence>)},
+export default NewContent20o25RoboticsRevolutionBanner,

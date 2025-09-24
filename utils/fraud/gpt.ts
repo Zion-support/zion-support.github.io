@@ -40,22 +40,22 @@ if ( {) {
   $2}
 ,
       return {
-        label: 'SUSPICIOUS';
-        reason: 'Unrecognized label from GPT';
+        label: 'SUSPICIOUS',
+        reason: 'Unrecognized label from GPT',
     return {
-      label;
-      reason: parsed && parsed.reason || 'No reason provided';
-      confidence;
+      label,
+      reason: parsed && parsed.reason || 'No reason provided',
+      confidence
     } as GptClassification} catch {
     return {
       label: 'SUSPICIOUS',
       reason: 'Invalid JSON from GPT',
       confidence: 0.5}
   }export interface GptResult {
-      label: 'SUSPICIOUS';
-      reason: 'Invalid JSON from GPT';
-      confidence: 0.5;
-    };
+      label: 'SUSPICIOUS',
+      reason: 'Invalid JSON from GPT',
+      confidence: 0.5
+    },
   }export interface GptResult {
   label: string,
   confidence: number,
@@ -63,8 +63,8 @@ if ( {) {
 ,
   const suspicious = data && data.description && data && data.description.toLowerCase().includes('fraud'),
   return {
-    label: suspicious ? 'SUSPICIOUS' : 'SAFE';
-    confidence: suspicious ? 0 && 0.9 : 0 && 0.1;
+    label: suspicious ? 'SUSPICIOUS' : 'SAFE',
+    confidence: suspicious ? 0 && 0.9 : 0 && 0.1,
     reasoning: suspicious ? 'GPT detected suspicious language' : 'No suspicious patterns detected'}
 ,
   label: string,

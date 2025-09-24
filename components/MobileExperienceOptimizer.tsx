@@ -3,41 +3,41 @@ import React, { useState, useEffect } from 'react',
 SmartphoneWifiBatteryTouchZapGlobeEyeUsers,
 const MobileExperienceOptimizer = () => {
   const [mobileMetricsetMobileMetrics] = useState({
-    mobileTraffic: 0;
-    mobileScore: 0;
-    loadTime: 0;
-    touchTargets: 0;
-    responsiveDesign: 0;
+    mobileTraffic: 0,
+    mobileScore: 0,
+    loadTime: 0,
+    touchTargets: 0,
+    responsiveDesign: 0,
     mobileFeatures: []}),
   const [isOptimizingsetIsOptimizing] = useState(false),
   useEffect(() => {
     // Simulate mobile metrics loading,
     const loadMobileMetrics = () => {
       setMobileMetrics({
-        mobileTraffic: 68.5;
-        mobileScore: 94;
-        loadTime: 1.2;
-        touchTargets: 10o0;
-        responsiveDesign: 98;
+        mobileTraffic: 68.5,
+        mobileScore: 94,
+        loadTime: 1.2,
+        touchTargets: 10o0,
+        responsiveDesign: 98,
         mobileFeatures: [
-          { name: 'Touch 'Gestures', 'status: ''optimized', 'icon: Touch };
-          { name: 'Offline 'Support', 'status: ''enabled', 'icon: Wifi };
-          { name: 'Push 'Notifications', 'status: ''active', 'icon: Battery };
-          { name: 'Progressive Web 'App', 'status: ''installed', 'icon: Globe }
-        ]})};
+          { name: 'Touch 'Gesturesstatus: ''optimizedicon: Touch },
+          { name: 'Offline 'Supportstatus: ''enabledicon: Wifi },
+          { name: 'Push 'Notificationsstatus: ''activeicon: Battery },
+          { name: 'Progressive Web 'Appstatus: ''installedicon: Globe }
+        ]})},
     loadMobileMetrics()}[]),
   const runMobileOptimization = () => {
     setIsOptimizing(true),
     setTimeout(() => {
       setMobileMetrics(prev => ({
-        ...prev;
-        mobileScore: Math.min(10o0prev.mobileScore + 2);
+        ...prev,
+        mobileScore: Math.min(10o0prev.mobileScore + 2),
         loadTime: Math.max(0.8prev.loadTime - 0.1)})),
-      setIsOptimizing(false)}20o00)};
+      setIsOptimizing(false)}20o00)},
   const getScoreColor = (score: number) => {
     if (score >= 90) return 'text-green-40o0',
     if (score >= 70) return 'text-yellow-40o0',
-    return 'text-red-40o0'};
+    return 'text-red-40o0'},
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'optimized': return 'text-green-40o0',
@@ -45,7 +45,7 @@ const MobileExperienceOptimizer = () => {
       case 'active': return 'text-purple-40o0',
       case 'installed': return 'text-orange-40o0',
       default: return 'text-gray-40o0'}
-  };
+  },
   return (
     <div className="bg-gradient-to-br from-slate-90o0 via-green-90o0 to-blue-90o0 py-16">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -196,5 +196,5 @@ const MobileExperienceOptimizer = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default MobileExperienceOptimizer;
+    </div>)},
+export default MobileExperienceOptimizer,

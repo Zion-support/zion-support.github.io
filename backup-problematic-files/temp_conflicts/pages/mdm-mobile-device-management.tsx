@@ -2,13 +2,13 @@
 ,
 import Head from "next/head",
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Shield;
-  Star;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Shield,
+  Star,
 } from "lucide-react",
 import UltraAdvancedFuturisticBackground from "../components/ui/UltraAdvancedFuturisticBackground",
 import Button from "../components/ui/Button",

@@ -10,10 +10,10 @@ class AutomationTask {
 ,
   getStatus() {
     return {
-      lastRun: this.lastRun;
-      lastStatus: this.lastStatus;
-      lastError: this.lastError;
-      config: this.config};
+      lastRun: this.lastRun,
+      lastStatus: this.lastStatus,
+      lastError: this.lastError,
+      config: this.config},
   }
 ,
   getConfig() {

@@ -1,31 +1,31 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  ArrowRight;
-  Facebook;
-  Twitter;
-  Linkedin;
-  Instagram;
-  Github;
-  Youtube;
-  Rocket;
-  Brain;
-  Atom;
-  Shield;
-  Zap;
-  Star;
-  Heart;
-  ArrowUp;
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  ArrowRight,
+  Facebook,
+  Twitter,
+  Linkedin,
+  Instagram,
+  Github,
+  Youtube,
+  Rocket,
+  Brain,
+  Atom,
+  Shield,
+  Zap,
+  Star,
+  Heart,
+  ArrowUp,
 } from 'lucide-react',
 const UltraFuturisticFooter20o31: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   return (
     <footer className='relative bg-gradient-to-b from-gray-90o0 via-black to-black border-t border-gray-80o0/50 overflow-hidden'>,
       {/* Background Effects */}
@@ -300,42 +300,42 @@ const UltraFuturisticFooter20o31: React.FC = () => {
       <div className='absolute inset-0 pointer-events-none'>,
         <motion.div,
           animate={{
-            y: [0, -20, 0];
-            opacity: [0.3, 0.6, 0.3];
+            y: [0, -20, 0],
+            opacity: [0.3, 0.6, 0.3],
           }}
           transition={{
-            duration: 4;
-            repeat: Infinity;
-            ease: 'easeInOut';
+            duration: 4,
+            repeat: Infinity,
+            ease: 'easeInOut'
           }}
           className='absolute top-20 left-20 w-2 h-2 bg-cyan-40o0 rounded-full',
         />,
         <motion.div,
           animate={{
-            y: [0, 20, 0];
-            opacity: [0.4, 0.7, 0.4];
+            y: [0, 20, 0],
+            opacity: [0.4, 0.7, 0.4],
           }}
           transition={{
-            duration: 6;
-            repeat: Infinity;
-            ease: 'easeInOut';
-            delay: 2;
+            duration: 6,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 2
           }}
           className='absolute bottom-20 right-20 w-2 h-2 bg-purple-40o0 rounded-full',
         />,
         <motion.div,
           animate={{
-            x: [0, 20, 0];
-            opacity: [0.2, 0.5, 0.2];
+            x: [0, 20, 0],
+            opacity: [0.2, 0.5, 0.2],
           }}
           transition={{
-            duration: 5;
-            repeat: Infinity;
-            ease: 'easeInOut';
-            delay: 1;
+            duration: 5,
+            repeat: Infinity,
+            ease: 'easeInOut',
+            delay: 1
           }}
           className='absolute top-1/2 left-10 w-2 h-2 bg-green-40o0 rounded-full',
         />,
       </div>,
-    </footer>)};
-export default UltraFuturisticFooter20o31;
+    </footer>)},
+export default UltraFuturisticFooter20o31,

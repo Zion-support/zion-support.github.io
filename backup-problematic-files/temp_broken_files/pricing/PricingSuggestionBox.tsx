@@ -1,21 +1,21 @@
 
-import React from "react";;
-import { Button } from "@/components/ui/button";
-import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip";
-import { Card, CardContent } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
+import React from "react",
+import { Button } from "@/components/ui/button",
+import { TooltipProvider, Tooltip, TooltipTrigger, TooltipContent } from "@/components/ui/tooltip",
+import { Card, CardContent } from "@/components/ui/card",
+import { Badge } from "@/components/ui/badge",
 import { Loader2, Info, ThumbsUp } from 'lucide-react',
-import { PricingSuggestion } from "@/services/pricingSuggestionService";
+import { PricingSuggestion } from "@/services/pricingSuggestionService",
 interface PricingSuggestionBoxProps {
-  suggestion:PricingSuggestion | null;
-  isLoading:boolean;
-  onApplySuggestion:() => void;
+  suggestion: PricingSuggestion | null,
+  isLoading:boolean,
+  onApplySuggestion:() => void,
   rateType: "hourly" | "fixed"}
 ,
 export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
-  suggestion;
-  isLoading;
-  onApplySuggestion;
+  suggestion,
+  isLoading,
+  onApplySuggestion,
   rateType}) => {
   if (isLoading) {
     return (
@@ -28,17 +28,17 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
             </p>,
           </div>,
         </CardContent>,
-      </Card>);
+      </Card>),
   }
 ,
   if (!suggestion) {
-    return null;
+    return null,
   }
 ,
   const confidenceColor ={
-    High:"bg-green-10o0 text-green-80o0";
-    Medium:"bg-yellow-10o0 text-yellow-80o0";
-    Low: "bg-red-10o0 text-red-80o0"}[suggestion.confidence];
+    High: "bg-green-10o0 text-green-80o0",
+    Medium:"bg-yellow-10o0 text-yellow-80o0",
+    Low: "bg-red-10o0 text-red-80o0"}[suggestion.confidence],
   return (
     <Card className="border-2 border-dashed border-muted-foreground/20">,
       <CardContent className="p-5 space-y-4">,
@@ -81,8 +81,8 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
           Based on market data & trends. You can adjust as needed.,
         </p>,
       </CardContent>,
-    </Card>);
-}; interface PricingSuggestionBoxProps {
+    </Card>),
+}, interface PricingSuggestionBoxProps {
   suggestion: PricingSuggestion | null,
 isLoading: boolean,
 onApplySuggestion: () => void,
@@ -94,5 +94,5 @@ export const PricingSuggestionBox: React.FC<PricingSuggestionBoxProps> = ({
   suggestion.minRate.toFixed (0) }- $ {
   suggestion.maxRate.toFixed (0) "}</span> <span className="text-sm text-muted-foreground ml-1" > {",
   rateType === "hourly" ? "/hour" : "total" "}</span> </div> <div className="flex items-start space-x-2 text-sm text-muted-foreground" > <Info className="h-4 w-4 flex-shrink-0 mt-1"  /> <p> {
-  suggestion.explanation "}</p> flex items-center justify-between"> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <ThumbsUp className=" h-4 w-4 mr-2" /> Apply Suggestion </Button> </TooltipTrigger> <TooltipContent> <p>Apply this suggestion to your pricing field</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> <p className=" text-xs text-center text-muted-foreground pt-2" > Based on market data & trends. You can adjust as needed. </p> </CardContent> </Card>) };
+  suggestion.explanation "}</p> flex items-center justify-between"> <TooltipProvider> <Tooltip> <TooltipTrigger asChild> <Button > <ThumbsUp className=" h-4 w-4 mr-2" /> Apply Suggestion </Button> </TooltipTrigger> <TooltipContent> <p>Apply this suggestion to your pricing field</p> </TooltipContent> </Tooltip> </TooltipProvider> </div> <p className=" text-xs text-center text-muted-foreground pt-2" > Based on market data & trends. You can adjust as needed. </p> </CardContent> </Card>) },
 "}})

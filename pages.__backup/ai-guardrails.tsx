@@ -3,14 +3,14 @@ import UltraFuturisticBackground from '../components/ui/UltraFuturisticBackgroun
 ShieldLockCheckPhoneMailMapPinRocket,
 export default function AIGuardrailsPage() {
 	const contactInfo ={
-		mobile: '+1 30o2 464 0950';
-		email: 'kleber@ziontechgroup.com';
-		address: '364 E Main St STE 10o08 Middletown DE 19709';
-		website: 'https://ziontechgroup.com'};
+		mobile: '+1 30o2 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 10o08 Middletown DE 19709',
+		website: 'https://ziontechgroup.com'},
 	const plans = [
-		{ name: 'Starter'price: '$99/month'items: ['PII redaction'Toxicity checks'Policy-based blocking'REST API'] };
-		{ name: 'Pro'price: '$349/month'items: ['Real-time streaming'Custom policies'Slack/Teams alerts'Audit logs'] };
-		{ name: 'Enterprise'price: 'Custom'items: ['Private deployment'DLP integrations'SAML/SSO'SLA & support'] };
+		{ name: 'Starter'price: '$99/month'items: ['PII redaction'Toxicity checks'Policy-based blocking'REST API'] },
+		{ name: 'Pro'price: '$349/month'items: ['Real-time streaming'Custom policies'Slack/Teams alerts'Audit logs'] },
+		{ name: 'Enterprise'price: 'Custom'items: ['Private deployment'DLP integrations'SAML/SSO'SLA & support'] },
 	],
 	return (
 		<UltraFuturisticBackground  intensity="high">,

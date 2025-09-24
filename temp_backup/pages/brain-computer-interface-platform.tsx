@@ -9,14 +9,11 @@ export default function BrainComputerInterfacePlatform() {
       implementationWeeks='Implementation: 8-12 weeks',
       roiNote='Purpose-built for labs and advanced R&D teams',
       features={[
-        'Neural data acquisition and preprocessing';
-        'Decoding models and training pipelines';
-        'Low-latency stimulus and feedback loops';
-        'Safety, ethics, and data governance';
-        'Simulation tools and synthetic datasets';
-        'SDKs: Python, C++, Unity for interaction';
+        'Neural data acquisition and preprocessingDecoding models and training pipelines',
+        'Low-latency stimulus and feedback loopsSafety, ethics, and data governance',
+        'Simulation tools and synthetic datasetsSDKs: Python, C++, Unity for interaction',
       ]}
-      industries={['Healthcare R&D', 'Neurotech', 'Academia', 'Defense']}
+      industries={['Healthcare R&DNeurotech', 'AcademiaDefense']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/brain-computer-interface-platform',
     />)}

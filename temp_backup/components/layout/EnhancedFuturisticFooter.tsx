@@ -1,118 +1,118 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  ExternalLink;
-  ArrowRight;
-  Zap;
-  Brain;
-  Rocket;
-  Shield;
-  Cloud;
-  RefreshCw;
-  BarChart3;
-  Globe;
-  Lock;
-  Building;
-  BookOpen;
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  ExternalLink,
+  ArrowRight,
+  Zap,
+  Brain,
+  Rocket,
+  Shield,
+  Cloud,
+  RefreshCw,
+  BarChart3,
+  Globe,
+  Lock,
+  Building,
+  BookOpen,
 } from 'lucide-react',
 const EnhancedFuturisticFooter: React.FC = () => {
   const contactInfo = {
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com';
-  };
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'
+  },
   const services = [
     {
-      name: 'AI & Machine Learning';
-      href: '/ai-assistant';
-      icon: <Brain className='w-4 h-4' />;
-    };
+      name: 'AI & Machine Learning',
+      href: '/ai-assistant',
+      icon: <Brain className='w-4 h-4' />
+    },
     {
-      name: 'Cybersecurity';
-      href: '/security';
-      icon: <Shield className='w-4 h-4' />;
-    };
+      name: 'Cybersecurity',
+      href: '/security',
+      icon: <Shield className='w-4 h-4' />
+    },
     {
-      name: 'Cloud Platform';
-      href: '/cloud-platform';
-      icon: <Cloud className='w-4 h-4' />;
-    };
+      name: 'Cloud Platform',
+      href: '/cloud-platform',
+      icon: <Cloud className='w-4 h-4' />
+    },
     {
-      name: 'Automation';
-      href: '/automation';
-      icon: <RefreshCw className='w-4 h-4' />;
-    };
+      name: 'Automation',
+      href: '/automation',
+      icon: <RefreshCw className='w-4 h-4' />
+    },
     {
-      name: 'Analytics';
-      href: '/analytics';
-      icon: <BarChart3 className='w-4 h-4' />;
-    };
+      name: 'Analytics',
+      href: '/analytics',
+      icon: <BarChart3 className='w-4 h-4' />
+    },
     {
-      name: 'Micro SAAS';
-      href: '/micro-saas';
-      icon: <Star className='w-4 h-4' />;
-    };
+      name: 'Micro SAAS',
+      href: '/micro-saas',
+      icon: <Star className='w-4 h-4' />
+    },
   ],
   const solutions = [
     {
-      name: 'Quantum AI';
-      href: '/quantum-ai';
-      icon: <Brain className='w-4 h-4' />;
-    };
+      name: 'Quantum AI',
+      href: '/quantum-ai',
+      icon: <Brain className='w-4 h-4' />
+    },
     {
-      name: 'Autonomous Manufacturing';
-      href: '/autonomous-manufacturing';
-      icon: <RefreshCw className='w-4 h-4' />;
-    };
+      name: 'Autonomous Manufacturing',
+      href: '/autonomous-manufacturing',
+      icon: <RefreshCw className='w-4 h-4' />
+    },
     {
-      name: 'Biomedical Research';
-      href: '/biomedical-ai';
-      icon: <Brain className='w-4 h-4' />;
-    };
+      name: 'Biomedical Research',
+      href: '/biomedical-ai',
+      icon: <Brain className='w-4 h-4' />
+    },
     {
-      name: 'Space Technology';
-      href: '/space-technology';
-      icon: <Rocket className='w-4 h-4' />;
-    };
+      name: 'Space Technology',
+      href: '/space-technology',
+      icon: <Rocket className='w-4 h-4' />
+    },
     {
-      name: 'Smart Energy';
-      href: '/smart-energy';
-      icon: <Zap className='w-4 h-4' />;
-    };
+      name: 'Smart Energy',
+      href: '/smart-energy',
+      icon: <Zap className='w-4 h-4' />
+    },
     {
-      name: 'Autonomous Vehicles';
-      href: '/autonomous-vehicles';
-      icon: <Rocket className='w-4 h-4' />;
-    };
+      name: 'Autonomous Vehicles',
+      href: '/autonomous-vehicles',
+      icon: <Rocket className='w-4 h-4' />
+    },
   ],
   const company = [
-    { name: 'About Us', href: '/about' };
-    { name: 'Our Team', href: '/team' };
-    { name: 'Careers', href: '/careers' };
-    { name: 'Press', href: '/press' };
-    { name: 'Partners', href: '/partners' };
-    { name: 'Investors', href: '/investors' };
+    { name: 'About Us', href: '/about' },
+    { name: 'Our Team', href: '/team' },
+    { name: 'Careers', href: '/careers' },
+    { name: 'Press', href: '/press' },
+    { name: 'Partners', href: '/partners' },
+    { name: 'Investors', href: '/investors' },
   ],
   const resources = [
-    { name: 'Documentation', href: '/docs' };
-    { name: 'API Reference', href: '/api' };
-    { name: 'Case Studies', href: '/case-studies' };
-    { name: 'Blog', href: '/blog' };
-    { name: 'Webinars', href: '/webinars' };
-    { name: 'Support', href: '/support' };
+    { name: 'Documentation', href: '/docs' },
+    { name: 'API Reference', href: '/api' },
+    { name: 'Case Studies', href: '/case-studies' },
+    { name: 'Blog', href: '/blog' },
+    { name: 'Webinars', href: '/webinars' },
+    { name: 'Support', href: '/support' },
   ],
   const legal = [
-    { name: 'Privacy Policy', href: '/privacy' };
-    { name: 'Terms of Service', href: '/terms' };
-    { name: 'Cookie Policy', href: '/cookies' };
-    { name: 'Security', href: '/security' };
-    { name: 'Compliance', href: '/compliance' };
+    { name: 'Privacy Policy', href: '/privacy' },
+    { name: 'Terms of Service', href: '/terms' },
+    { name: 'Cookie Policy', href: '/cookies' },
+    { name: 'Security', href: '/security' },
+    { name: 'Compliance', href: '/compliance' },
   ],
   return (
     <footer className='relative bg-slate-90o0 overflow-hidden'>,
@@ -317,5 +317,5 @@ const EnhancedFuturisticFooter: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default EnhancedFuturisticFooter;
+    </footer>)},
+export default EnhancedFuturisticFooter,

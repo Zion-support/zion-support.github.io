@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react',
 import { Button } from '@/components/ui/button',
 import {
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card',
 import { Switch } from '@/components/ui/switch',
 import { Label } from '@/components/ui/label',
@@ -13,12 +13,12 @@ import { Separator } from '@/components/ui/separator',
 export function AccessibilityEnhancer() {
   const [isOpen, setIsOpen] = useState(false),
   const [settings, setSettings] = useState({
-    highContrast: false;
-    largeText: false;
-    reducedMotion: false;
-    screenReader: false;
-    keyboardNavigation: false;
-    focusIndicator: false;
+    highContrast: false,
+    largeText: false,
+    reducedMotion: false,
+    screenReader: false,
+    keyboardNavigation: false,
+    focusIndicator: false
   }),
   useEffect(() => {
     // Load saved settings,
@@ -45,24 +45,24 @@ export function AccessibilityEnhancer() {
     if (newSettings.focusIndicator) {
       root.classList.add('focus-visible')} else {
       root.classList.remove('focus-visible')}
-  };
+  },
   const handleSettingChange = (key, value) => {
-    const newSettings = { ...settings, [key]: value };
+    const newSettings = { ...settings, [key]: value },
     setSettings(newSettings),
     localStorage.setItem('accessibility-settings', JSON.stringify(newSettings)),
-    applySettings(newSettings)};
+    applySettings(newSettings)},
   const resetSettings = () => {
     const defaultSettings = {
-      highContrast: false;
-      largeText: false;
-      reducedMotion: false;
-      screenReader: false;
-      keyboardNavigation: false;
-      focusIndicator: false;
-    };
+      highContrast: false,
+      largeText: false,
+      reducedMotion: false,
+      screenReader: false,
+      keyboardNavigation: false,
+      focusIndicator: false
+    },
     setSettings(defaultSettings),
     localStorage.removeItem('accessibility-settings'),
-    applySettings(defaultSettings)};
+    applySettings(defaultSettings)},
   return (
     <>,
       {/* Skip Links */}

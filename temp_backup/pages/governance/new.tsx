@@ -21,17 +21,17 @@ export default function NewProposal() {
         .map(s => s.trim()),
         .filter(Boolean),
       const res = await fetch('/api/governance/proposals', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title;
-          summary;
-          type;
-          quorumPercent;
-          votingPeriodDays;
-          fundingAsk: fundingAsk === '' ? undefined : Number(fundingAsk);
-          referenceLinks;
-        });
+          title,
+          summary,
+          type,
+          quorumPercent,
+          votingPeriodDays,
+          fundingAsk: fundingAsk === '' ? undefined : Number(fundingAsk),
+          referenceLinks
+        }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed'),

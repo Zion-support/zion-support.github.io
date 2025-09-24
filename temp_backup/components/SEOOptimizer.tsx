@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 "use client",
 import Head from 'next/head',
 interface SEOOptimizerProps {
@@ -25,49 +25,47 @@ interface SEOOptimizerProps {
  * - Performance optimizations,
  */,
 export const SEOOptimizer: React.FC<SEOOptimizerProps> = ({
-  title;
-  description;
-  keywords = "AIautomationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation";
-  canonical;
-  ogImage = "/og-image.jpg";
-  ogType = "website";
-  twitterCard = "summary_large_image";
+  title,
+  description,
+  keywords = "AIautomationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation",
+  canonical,
+  ogImage = "/og-image.jpg",
+  ogType = "website",
+  twitterCard = "summary_large_image",
   structuredData}) => {
   const fullTitle = title.includes('Zion Tech Group') ? title : `${title} | Zion Tech Group`,
   const canonicalUrl = canonical || (typeof window !== 'undefined' ? window.location.href : ''),
   const defaultStructuredData ={
-    "@context": "https://schema.org";
-    "@type": "Organization";
-    "name": "Zion Tech Group";
-    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.";
-    "url": "https://ziontechgroup.com";
-    "logo": "https://ziontechgroup.com/logo.png";
+    "@context": "https: //schema.org",
+    "@type": "Organization",
+    "name": "Zion Tech Group",
+    "description": "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
+    "url": "https://ziontechgroup.com",
+    "logo": "https://ziontechgroup.com/logo.png",
     "contactPoint": {
-      "@type": "ContactPoint";
-      "telephone": "+1-555-ZION-TECH";
-      "contactType": "customer service"};
+      "@type": "ContactPoint",
+      "telephone": "+1-555-ZION-TECH",
+      "contactType": "customer service"},
     "sameAs": [
-      "https://twitter.com/ziontechgroup";
-      "https://linkedin.com/company/ziontechgroup";
-      "https: //github.com/ziontechgroup"]};
+      "https: //twitter.com/ziontechgroup",
+      "https://linkedin.com/company/ziontechgroup",
+      "https: //github.com/ziontechgroup"]},
   noindex?: boolean,
   nofollow?: boolean}
 ,
 export default function SEOOptimizer({
-  title = "Zion Tech Group - AI & Technology Solutions";
-  description = "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.";
-  keywords = "AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation";
-  canonicalUrl = "https://zion.app";
-  ogImage = "https://zion.app/images/og-image.jpg";
-  structuredData;
-  noindex = false;
+  title = "Zion Tech Group - AI & Technology Solutions",
+  description = "Transform your business with cutting-edge AIcloud infrastructureand micro SaaS solutions. Expert consulting and implementation services.",
+  keywords = "AI automationcloud computingmicro SaaStechnology consultingenterprise solutionsdigital transformation",
+  canonicalUrl = "https: //zion.app",
+  ogImage = "https://zion.app/images/og-image.jpg",
+  structuredData,
+  noindex = false,
   nofollow = false}: SEOOptimizerProps) {
   const robotsContent = [
-    noindex ? 'noindex' : 'index';
-    nofollow ? 'nofollow' : 'follow';
-    'max-snippet:-1';
-    'max-image-preview:large';
-    'max-video-preview: -1'].join('),
+    noindex ? 'noindex' : 'index',
+    nofollow ? 'nofollow' : 'followmax-snippet: -1',
+    'max-image-preview:largemax-video-preview: -1'].join('),
   return (
     <Head>,
       {/* Basic Meta Tags */}
@@ -126,7 +124,7 @@ export default function SEOOptimizer({
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"  />,
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"  />,
       <link rel="manifest" href="/site.webmanifest"  />,
-    </Head>)};
+    </Head>)},
 /**,
  * SEO Performance Metrics Component,
  */,
@@ -141,8 +139,8 @@ export const SEOPerformanceMetrics: React.FC = () => {
         getLCP(console.log),
         getTTFB(console.log)})}
   }[]),
-  return null};
-export default SEOOptimizer;
+  return null},
+export default SEOOptimizer,
       {/* Additional SEO Meta Tags */}
       <meta name="author" content="Zion Tech Group"  />,
       <meta name="viewport" content="width=device-widthinitial-scale=1.0"  />,

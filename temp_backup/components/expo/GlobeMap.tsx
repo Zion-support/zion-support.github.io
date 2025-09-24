@@ -5,7 +5,7 @@ type Location = {
   talent: number,
   daoActivity: number,
   tokenFlow: number,
-  url: string};
+  url: string},
 export default function GlobeMap({ locations }: { locations: Location[] }) {
   return (
     <div className='relative w-full max-w-3xl aspect-square mx-auto'>,

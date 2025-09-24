@@ -1,90 +1,90 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain;
-  Zap;
-  Target;
-  BarChart3;
-  Users;
-  TrendingUp;
-  MessageSquare;
-  Mail;
-  Phone;
-  MapPin;
-  ArrowRight;
-  Star;
-  CheckCircle;
-  Rocket;
-  Globe;
-  Shield;
-  Cpu;
-  FileText;
-  Image;
-  Video;
-  Music;
-  Palette;
-  Type;
-  User;
-  Search;
-  Eye;
-  Heart;
-  ShoppingCart;
-  Activity;
-  Stethoscope;
-  Brain;
-  Zap;
-  Users2;
-  Award;
-  CheckCircle;
-  AlertTriangle;
-  Target;
-  BarChart3;
-  TrendingUp;
-  Microscope;
+  Brain,
+  Zap,
+  Target,
+  BarChart3,
+  Users,
+  TrendingUp,
+  MessageSquare,
+  Mail,
+  Phone,
+  MapPin,
+  ArrowRight,
+  Star,
+  CheckCircle,
+  Rocket,
+  Globe,
+  Shield,
+  Cpu,
+  FileText,
+  Image,
+  Video,
+  Music,
+  Palette,
+  Type,
+  User,
+  Search,
+  Eye,
+  Heart,
+  ShoppingCart,
+  Activity,
+  Stethoscope,
+  Brain,
+  Zap,
+  Users2,
+  Award,
+  CheckCircle,
+  AlertTriangle,
+  Target,
+  BarChart3,
+  TrendingUp,
+  Microscope,
 } from 'lucide-react',
 export const metadata: Metadata = {
-  title: 'AI Healthcare Diagnostics Pro | Zion Tech Group';
+  title: 'AI Healthcare Diagnostics Pro | Zion Tech Group',
   description:,
-    'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.';
+    'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.',
   keywords:,
-    'AI healthcare, medical diagnostics, AI diagnosis, healthcare AI, medical AI, diagnostic platform';
+    'AI healthcare, medical diagnostics, AI diagnosis, healthcare AI, medical AI, diagnostic platform',
   openGraph: {
-    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group';
+    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group',
     description:,
-      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.';
-    url: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro';
-    siteName: 'Zion Tech Group';
+      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.',
+    url: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg';
-        width: 1200;
-        height: 630;
-        alt: 'AI Healthcare Diagnostics Pro';
-      };
-    ];
-    locale: 'en_US';
-    type: 'website';
-  };
+        url: 'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg',
+        width: 1200,
+        height: 630,
+        alt: 'AI Healthcare Diagnostics Pro'
+      },
+    ],
+    locale: 'en_US',
+    type: 'website'
+  },
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group';
+    card: 'summary_large_image',
+    title: 'AI Healthcare Diagnostics Pro | Zion Tech Group',
     description:,
-      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.';
+      'Advanced AI-powered healthcare diagnostics platform that provides accurate medical diagnosis and treatment recommendations.',
     images: [
-      'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg';
-    ];
-  };
+      'https://ziontechgroup.com/og-image-ai-healthcare-diagnostics-pro.jpg',
+    ]
+  },
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro';
-  };
-};
+    canonical: 'https://ziontechgroup.com/ai-healthcare-diagnostics-pro'
+  },
+},
 const contactInfo = {
-  mobile: '+1 302 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 1008 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 302 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 1008 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 export default function AIHealthcareDiagnosticsPro() {
   return (
     <div className='min-h-screen bg-black text-white'>,
@@ -102,7 +102,7 @@ export default function AIHealthcareDiagnosticsPro() {
             </h1>,
             <p className='text-xl lg:text-2xl text-gray-300 mb-8 max-w-4xl mx-auto'>,
               The world's most advanced AI healthcare diagnostics platform that,
-              provides accurate medical diagnosis, treatment recommendations;
+              provides accurate medical diagnosis, treatment recommendations,
               and patient care optimization.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -318,7 +318,7 @@ export default function AIHealthcareDiagnosticsPro() {
               How AI Healthcare Diagnostics Works,
             </h2>,
             <p className='text-xl text-gray-400 max-w-3xl mx-auto'>,
-              Our AI platform operates in a continuous cycle of learning;
+              Our AI platform operates in a continuous cycle of learning,
               analyzing, and improving diagnostic accuracy.,
             </p>,
           </div>,

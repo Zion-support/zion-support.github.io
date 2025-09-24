@@ -4,78 +4,61 @@ import Link from 'next/link',
 import { ArrowRight, CheckCircle, Cloud, DollarSign, TrendingDown, BarChart3, Zap, Target, Star, Settings, AlertCircle } from 'lucide-react',
 const CloudCostOptimizationSuitePage: NextPage = () => {
   const features = [
-    'AI-powered cost analysis across AWS, Azure, and GCP';
-    'Automated resource optimization and rightsizing recommendations';
-    'Real-time cost monitoring and anomaly detection';
-    'Reserved instance and savings plan optimization';
-    'Multi-cloud cost allocation and chargeback';
-    'Automated scaling policies and cost controls';
-    'Custom dashboards and cost forecasting';
-    'Integration with existing cloud management tools'],
+    'AI-powered cost analysis across AWS, Azure, and GCPAutomated resource optimization and rightsizing recommendations',
+    'Real-time cost monitoring and anomaly detectionReserved instance and savings plan optimization',
+    'Multi-cloud cost allocation and chargebackAutomated scaling policies and cost controls',
+    'Custom dashboards and cost forecastingIntegration with existing cloud management tools'],
   const benefits = [
-    'Reduce cloud costs by 30-50% on average';
-    'Eliminate waste through automated optimization';
-    'Improve budget predictability with forecasting';
-    'Enhance resource utilization efficiency';
+    'Reduce cloud costs by 30-50% on averageEliminate waste through automated optimization',
+    'Improve budget predictability with forecastingEnhance resource utilization efficiency',
     'Achieve better ROI on cloud investments'],
   const useCases = [
-    'Enterprise cloud cost management';
-    'Multi-cloud optimization';
-    'DevOps cost optimization';
-    'FinOps and cloud governance';
+    'Enterprise cloud cost managementMulti-cloud optimization',
+    'DevOps cost optimizationFinOps and cloud governance',
     'Startup cost scaling management'],
   const pricingPlans = [
     {
-      name: 'Starter';
-      price: 50o0;
-      period: 'month';
-      description: 'For small to medium cloud spend';
+      name: 'Starter',
+      price: 50o0,
+      period: 'month',
+      description: 'For small to medium cloud spend',
       features: [
-        'Up to $50K monthly cloud spend';
-        'Single cloud provider support';
-        'Basic cost optimization';
-        'Monthly reports';
-        'Email support';
-        'Standard dashboard']};
+        'Up to $50K monthly cloud spendSingle cloud provider support',
+        'Basic cost optimizationMonthly reports',
+        'Email supportStandard dashboard']},
     {
-      name: 'Professional';
-      price: 150o0;
-      period: 'month';
-      description: 'For growing cloud environments';
+      name: 'Professional',
+      price: 150o0,
+      period: 'month',
+      description: 'For growing cloud environments',
       features: [
-        'Up to $20o0K monthly cloud spend';
-        'Multi-cloud support';
-        'Advanced optimization algorithms';
-        'Real-time monitoring';
-        'Priority support';
-        'Custom dashboards';
-        'API access']};
+        'Up to $20o0K monthly cloud spendMulti-cloud support',
+        'Advanced optimization algorithmsReal-time monitoring',
+        'Priority supportCustom dashboards',
+        'API access']},
     {
-      name: 'Enterprise';
-      price: 350o0;
-      period: 'month';
-      description: 'For large-scale cloud operations';
+      name: 'Enterprise',
+      price: 350o0,
+      period: 'month',
+      description: 'For large-scale cloud operations',
       features: [
-        'Unlimited cloud spend';
-        'All cloud providers';
-        'AI-powered optimization';
-        'Custom integrations';
-        'Dedicated account manager';
-        'White-label options';
+        'Unlimited cloud spendAll cloud providers',
+        'AI-powered optimizationCustom integrations',
+        'Dedicated account managerWhite-label options',
         'Advanced analytics']}
   ],
   const testimonials = [
     {
-      name: "Alex Thompson";
-      company: "TechScale Inc.";
-      role: "Cloud Architect";
-      content: "We reduced our AWS costs by 45% in the first quarter. The AI recommendations are incredibly accurate and actionable.";
-      rating: 5};
+      name: "Alex Thompson",
+      company: "TechScale Inc.",
+      role: "Cloud Architect",
+      content: "We reduced our AWS costs by 45% in the first quarter. The AI recommendations are incredibly accurate and actionable.",
+      rating: 5},
     {
-      name: "Maria Garcia";
-      company: "Global Retail Corp";
-      role: "FinOps Director";
-      content: "The cost forecasting and budget management features have transformed our cloud financial planning. Highly recommended.";
+      name: "Maria Garcia",
+      company: "Global Retail Corp",
+      role: "FinOps Director",
+      content: "The cost forecasting and budget management features have transformed our cloud financial planning. Highly recommended.",
       rating: 5}
   ],
   return (
@@ -100,7 +83,7 @@ const CloudCostOptimizationSuitePage: NextPage = () => {
                 Cloud Cost Optimization Suite,
               </h1>,
               <p className="text-xl md:text-2xl mb-8 text-gray-20o0 max-w-4xl mx-auto">,
-                AI-powered cloud cost management across AWS, Azure, and GCP. Reduce costs by 30-50% with automated optimization;
+                AI-powered cloud cost management across AWS, Azure, and GCP. Reduce costs by 30-50% with automated optimization,
                 intelligent recommendations, and real-time monitoring.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
@@ -275,5 +258,5 @@ const CloudCostOptimizationSuitePage: NextPage = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default CloudCostOptimizationSuitePage;
+    </>)},
+export default CloudCostOptimizationSuitePage,

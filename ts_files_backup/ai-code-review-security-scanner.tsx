@@ -87,28 +87,28 @@ const AICodeReviewSecurityScanner = () => {
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">,
               {[
                 {
-                  icon: <Code className="w-8 h-8" />;
-                  title: "Multi-Language Support";
-                  description: "Support for PythonJavaScriptJavaGoRustand more with language-specific security rules and best practices."};
+                  icon: <Code className="w-8 h-8" />,
+                  title: "Multi-Language Support",
+                  description: "Support for PythonJavaScriptJavaGoRustand more with language-specific security rules and best practices."},
                 {
-                  icon: <Shield className="w-8 h-8" />;
-                  title: "AI-Powered Vulnerability Detection";
-                  description: "Advanced machine learning algorithms that detect security vulnerabilitiescode smellsand potential security risks."};
+                  icon: <Shield className="w-8 h-8" />,
+                  title: "AI-Powered Vulnerability Detection",
+                  description: "Advanced machine learning algorithms that detect security vulnerabilitiescode smellsand potential security risks."},
                 {
-                  icon: <Eye className="w-8 h-8" />;
-                  title: "Automated Code Review";
-                  description: "Intelligent code analysis with detailed feedbackimprovement suggestionsand automated quality checks."};
+                  icon: <Eye className="w-8 h-8" />,
+                  title: "Automated Code Review",
+                  description: "Intelligent code analysis with detailed feedbackimprovement suggestionsand automated quality checks."},
                 {
-                  icon: <Lock className="w-8 h-8" />;
-                  title: "Security Best Practices";
-                  description: "Enforce security standardscompliance requirementsand industry best practices automatically."};
+                  icon: <Lock className="w-8 h-8" />,
+                  title: "Security Best Practices",
+                  description: "Enforce security standardscompliance requirementsand industry best practices automatically."},
                 {
-                  icon: <BarChart3 className="w-8 h-8" />;
-                  title: "Performance Analytics";
-                  description: "Comprehensive metrics and insights to track code quality improvements and security posture over time."};
+                  icon: <BarChart3 className="w-8 h-8" />,
+                  title: "Performance Analytics",
+                  description: "Comprehensive metrics and insights to track code quality improvements and security posture over time."},
                 {
-                  icon: <Globe className="w-8 h-8" />;
-                  title: "Integration & APIs";
+                  icon: <Globe className="w-8 h-8" />,
+                  title: "Integration & APIs",
                   description: "Seamless integration with GitHubGitLabBitbucketand CI/CD pipelines with custom API access."}
               ].map((featureindex) => (
                 <motion.div,
@@ -145,48 +145,48 @@ const AICodeReviewSecurityScanner = () => {
             <div className="grid md:grid-cols-3 gap-8">,
               {[
                 {
-                  name: "Starter";
-                  price: "$299";
-                  period: "/month";
-                  description: "Perfect for small development teams and startups";
+                  name: "Starter",
+                  price: "$299",
+                  period: "/month",
+                  description: "Perfect for small development teams and startups",
                   features: [
-                    "Up to 10 developers";
-                    "Basic security scanning";
-                    "GitHub/GitLab integration";
-                    "Email support";
-                    "Standard security rules";
-                    "Basic reporting"];
-                  popular: false};
+                    "Up to 10 developers",
+                    "Basic security scanning",
+                    "GitHub/GitLab integration",
+                    "Email support",
+                    "Standard security rules",
+                    "Basic reporting"],
+                  popular: false},
                 {
-                  name: "Professional";
-                  price: "$799";
-                  period: "/month";
-                  description: "Ideal for growing development teams";
+                  name: "Professional",
+                  price: "$799",
+                  period: "/month",
+                  description: "Ideal for growing development teams",
                   features: [
-                    "Up to 50 developers";
-                    "Advanced security scanning";
-                    "Multi-repository support";
-                    "Priority support";
-                    "Custom security rules";
-                    "Advanced analytics";
-                    "CI/CD integration";
-                    "Team collaboration tools"];
-                  popular: true};
+                    "Up to 50 developers",
+                    "Advanced security scanning",
+                    "Multi-repository support",
+                    "Priority support",
+                    "Custom security rules",
+                    "Advanced analytics",
+                    "CI/CD integration",
+                    "Team collaboration tools"],
+                  popular: true},
                 {
-                  name: "Enterprise";
-                  price: "$1,999";
-                  period: "/month";
-                  description: "For large organizations with complex security needs";
+                  name: "Enterprise",
+                  price: "$1,999",
+                  period: "/month",
+                  description: "For large organizations with complex security needs",
                   features: [
-                    "Unlimited developers";
-                    "Enterprise security scanning";
-                    "On-premise deployment";
-                    "24/7 dedicated support";
-                    "Custom rule creation";
-                    "Advanced compliance";
-                    "API access";
-                    "Custom integrations";
-                    "SLA guarantees"];
+                    "Unlimited developers",
+                    "Enterprise security scanning",
+                    "On-premise deployment",
+                    "24/7 dedicated support",
+                    "Custom rule creation",
+                    "Advanced compliance",
+                    "API access",
+                    "Custom integrations",
+                    "SLA guarantees"],
                   popular: false}
               ].map((planindex) => (
                 <motion.div,
@@ -255,16 +255,16 @@ const AICodeReviewSecurityScanner = () => {
               <div className="space-y-8">,
                 {[
                   {
-                    icon: <Shield className="w-8 h-8" />;
-                    title: "Reduce Security Vulnerabilities by 85%";
-                    description: "Our AI algorithms detect security issues that traditional scanners missignificantly reducing your attack surface."};
+                    icon: <Shield className="w-8 h-8" />,
+                    title: "Reduce Security Vulnerabilities by 85%",
+                    description: "Our AI algorithms detect security issues that traditional scanners missignificantly reducing your attack surface."},
                   {
-                    icon: <Zap className="w-8 h-8" />;
-                    title: "Speed Up Code Review Process by 70%";
-                    description: "Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review."};
+                    icon: <Zap className="w-8 h-8" />,
+                    title: "Speed Up Code Review Process by 70%",
+                    description: "Automated analysis and intelligent suggestions help developers identify and fix issues faster than manual review."},
                   {
-                    icon: <TrendingUp className="w-8 h-8" />;
-                    title: "Improve Code Quality & Maintainability";
+                    icon: <TrendingUp className="w-8 h-8" />,
+                    title: "Improve Code Quality & Maintainability",
                     description: "AI-powered insights help maintain consistent code standards and improve overall codebase health."}
                 ].map((benefitindex) => (
                   <motion.div,
@@ -285,16 +285,16 @@ const AICodeReviewSecurityScanner = () => {
               <div className="space-y-8">,
                 {[
                   {
-                    icon: <CheckCircle className="w-8 h-8" />;
-                    title: "Ensure Compliance with Security Standards";
-                    description: "Meet SOC2ISO27001and other compliance requirements with automated security testing and reporting."};
+                    icon: <CheckCircle className="w-8 h-8" />,
+                    title: "Ensure Compliance with Security Standards",
+                    description: "Meet SOC2ISO27001and other compliance requirements with automated security testing and reporting."},
                   {
-                    icon: <Users className="w-8 h-8" />;
-                    title: "Reduce Technical Debt & Bugs";
-                    description: "Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs."};
+                    icon: <Users className="w-8 h-8" />,
+                    title: "Reduce Technical Debt & Bugs",
+                    description: "Proactive identification of code quality issues prevents technical debt accumulation and reduces production bugs."},
                   {
-                    icon: <Star className="w-8 h-8" />;
-                    title: "Enable Faster Development Cycles";
+                    icon: <Star className="w-8 h-8" />,
+                    title: "Enable Faster Development Cycles",
                     description: "Confident code deployment with automated security validation accelerates your development and release processes."}
                 ].map((benefitindex) => (
                   <motion.div,
@@ -333,13 +333,13 @@ const AICodeReviewSecurityScanner = () => {
             </motion.div>,
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
-                "Software Development Teams";
-                "DevOps & Security Teams";
-                "Financial Technology Companies";
-                "Healthcare Software Providers";
-                "E-commerce Platforms";
-                "Government Software Projects";
-                "Educational Institutions";
+                "Software Development Teams",
+                "DevOps & Security Teams",
+                "Financial Technology Companies",
+                "Healthcare Software Providers",
+                "E-commerce Platforms",
+                "Government Software Projects",
+                "Educational Institutions",
                 "Startups & Enterprises"].map((useCaseindex) => (
                 <motion.div,
                   key={index}
@@ -429,5 +429,5 @@ const AICodeReviewSecurityScanner = () => {
           </div>,
         </section>,
       </div>,
-    </>)};
-export default AICodeReviewSecurityScanner;
+    </>)},
+export default AICodeReviewSecurityScanner,

@@ -1,8 +1,8 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Content Hub | Zion Tech Group';
-  description: 'Explore our latest guides and articles on AI and automation.';
-};
+  title: 'Content Hub | Zion Tech Group',
+  description: 'Explore our latest guides and articles on AI and automation.'
+},
 export default function ContentIndexPage() {
   return (
     <main className='max-w-6xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,
@@ -24,7 +24,7 @@ export default function ContentIndexPage() {
             </Link>,
           </h2>,
           <p className='text-gray-60o0 mb-4'>,
-            Evaluation-first operating model with policy gates, observability;
+            Evaluation-first operating model with policy gates, observability,
             and SLOs for safe scale.,
           </p>,
           <Link
@@ -104,7 +104,7 @@ export default function ContentIndexPage() {
             </Link>,
           </h2>,
           <p className='text-gray-60o0 mb-4'>,
-            Operationalize responsible AI with policy-as-code, risk controls;
+            Operationalize responsible AI with policy-as-code, risk controls,
             and evaluation.,
           </p>,
           <Link
@@ -146,7 +146,7 @@ export default function ContentIndexPage() {
             </Link>,
           </h2>,
           <p className='text-gray-60o0 mb-4'>,
-            A practical blueprint to instrument agents with metrics, traces;
+            A practical blueprint to instrument agents with metrics, traces,
             evals, and safety guardrails.,
           </p>,
           <Link
@@ -209,7 +209,7 @@ export default function ContentIndexPage() {
             </Link>,
           </h2>,
           <p className='text-gray-60o0 mb-4'>,
-            Practical, risk-aware governance with evaluations, policy-as-code;
+            Practical, risk-aware governance with evaluations, policy-as-code,
             and monitoring.,
           </p>,
           <Link
@@ -356,7 +356,7 @@ export default function ContentIndexPage() {
             </Link>,
           </h2>,
           <p className='text-gray-60o0 mb-4'>,
-            Build an end-to-end observability stack for AI agents with metrics;
+            Build an end-to-end observability stack for AI agents with metrics,
             tracing, and evals.,
           </p>,
           <Link

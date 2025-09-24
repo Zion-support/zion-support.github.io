@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Safety Runbooks';
+  title: 'AI 20o26: Agent Safety Runbooks',
   description:,
-    'Standardized, eval‑gated runbooks for safe autonomous agent operations across scenarios.';
-};
+    'Standardized, eval‑gated runbooks for safe autonomous agent operations across scenarios.',
+},
 export default function AgentSafetyRunbooksPage() {
   return (
     <main className='max-w-4xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

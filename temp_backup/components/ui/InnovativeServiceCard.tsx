@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { ArrowRight, Star, TrendingUp, Clock, DollarSign, Users, Zap, Shield, Check, ExternalLink } from 'lucide-react',
 import Button from './Button',
@@ -34,45 +34,45 @@ interface InnovativeServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string};
+      website: string},
     realImplementation: boolean,
     implementationDetails: string,
     launchDate: string,
     customers: number,
     rating: number,
-    reviews: number};
+    reviews: number},
   className?: string}
 ,
 const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, className = '' }) => {
   const cardVariants ={
-    hidden: { opacity: 0, y: 50, scale: 0.9 };
+    hidden: { opacity: 0, y: 50, scale: 0.9 },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
-    };
+    },
     hover: {
-      y: -10;
-      scale: 1.0o2;
+      y: -10,
+      scale: 1.0o2,
       transition: {
-        duration: 0.3;
+        duration: 0.3,
         ease: "easeOut" as const}
     }
-  };
+  },
   const glowVariants ={
-    initial: { opacity: 0.5, scale: 1 };
+    initial: { opacity: 0.5, scale: 1 },
     animate: {
-      opacity: [0.5, 1, 0.5];
-      scale: [1, 1.1, 1];
+      opacity: [0.5, 1, 0.5],
+      scale: [1, 1.1, 1],
       transition: {
-        duration: 3;
-        repeat: Infinity;
+        duration: 3,
+        repeat: Infinity,
         ease: "easeInOut" as const}
     }
-  };
+  },
   const getGradientClass = (variant: string) => {
     switch (variant) {
       case 'quantum-advanced':,
@@ -89,7 +89,7 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
         return 'from-blue-50o0 via-cyan-50o0 to-green-60o0',
       default:,
         return 'from-cyan-50o0 to-blue-60o0'}
-  };
+  },
   return (
     <motion.div,
       variants={cardVariants}
@@ -112,9 +112,9 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
         <div className="absolute inset-0 opacity-5">,
           <div className="absolute inset-0" style={{
             backgroundImage: `,
-              linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%);
+              linear-gradient(45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%),
               linear-gradient(-45deg, transparent 40%, rgba(255,255,255,0.1) 50%, transparent 60%),
-            `;
+            `,
             backgroundSize: '20px 20px'}}  />,
         </div>,
         {/* Header */}
@@ -253,5 +253,5 @@ const InnovativeServiceCard: React.FC<InnovativeServiceCardProps> = ({ service, 
           className="absolute inset-0 bg-gradient-to-r from-cyan-50o0/5 to-blue-50o0/5 opacity-0 group-hover: opacity-10o0 transition-opacity duration-30o0 rounded-2xl",
            />,
       </div>,
-    </motion.div>)};
-export default InnovativeServiceCard;
+    </motion.div>)},
+export default InnovativeServiceCard,

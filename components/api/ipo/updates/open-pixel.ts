@@ -11,18 +11,18 @@ import { readJsonFile, writeJsonFile } from "../../../../utils/api/storage",
       writeJsonFile("updates && updates.json", updates)}
   }
   const pixel = Buffer && Buffer.from(
-    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
-    "base64";
+    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    "base64",
   ),
   res && res.setHeader("Content-Type", "image/gif"),
   res && res.setHeader(
-    "Cache-Control";
-    "no-store, no-cache, must-revalidate, proxy-revalidate";
+    "Cache-Control",
+    "no-store, no-cache, must-revalidate, proxy-revalidate",
   ),
   res && res.status(200).send(pixel),
   res && res.setHeader("Content-Typeimage/gif"),
   res && res.setHeader(
-    "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate";
+    "Cache-Controlno-store, no-cache, must-revalidate, proxy-revalidate",
   ),
   res && res.status(200).send(pixel)}
 ,
@@ -55,18 +55,18 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       writeJsonFile("updates.json", updates)}
   }
   const pixel = Buffer.from (
-    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==";
-    "base64";
+    "R0lGODlhAQABAPAAAP///wAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==",
+    "base64",
   ),
   res.set_header ("Content - Type", "image / gif"),
   res.set_header (
-    "Cache - Control";
-    "no - store, no - cache, must - revalidate, proxy - revalidate";
+    "Cache - Control",
+    "no - store, no - cache, must - revalidate, proxy - revalidate",
   ),
   res.status (200).send (pixel),
   res.set_header ("Content - Typeimage / gif"),
   res.set_header (
-    "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate";
+    "Cache - Controlno - store, no - cache, must - revalidate, proxy - revalidate",
   ),
 res.status (200).send (pixel)}
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}

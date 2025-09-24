@@ -15,12 +15,12 @@ interface AIEnhancementButtonProps {
   className?: string}
 ,
 export function AIEnhancementButton({
-  currentContent;
-  enhancementType;
-  context;
-  onEnhanced;
-  buttonText = 'Enhance with AI';
-  className;
+  currentContent,
+  enhancementType,
+  context,
+  onEnhanced,
+  buttonText = 'Enhance with AI',
+  className,
 }: AIEnhancementButtonProps) {
   const { enhanceContentisEnhancing } = useResumeEnhancer(),
   const [errorsetError] = useState<string | null>(null),
@@ -31,12 +31,12 @@ export function AIEnhancementButton({
 ,
     setError(null),
     const enhancedContent = await enhanceContent(
-      currentContent;
-      enhancementType;
+      currentContent,
+      enhancementType,
       context),
     if (enhancedContent) {
       onEnhanced(enhancedContent)}
-  };
+  },
   return (
     <Button
       type='button',

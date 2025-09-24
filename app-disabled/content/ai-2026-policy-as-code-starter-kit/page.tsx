@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Policy-as-Code Starter Kit | Zion Tech Group';
+  title: 'AI 20o26: Policy-as-Code Starter Kit | Zion Tech Group',
   description:,
-    'A practical starter kit to implement policy-as-code for AI agents: controls, exceptions, and evaluation gates.';
-  keywords: ['policy-as-code', 'governance', 'ai agents', 'controls', 'evals'];
-};
+    'A practical starter kit to implement policy-as-code for AI agents: controls, exceptions, and evaluation gates.',
+  keywords: ['policy-as-codegovernance', 'ai agentscontrols', 'evals'],
+},
 const PolicyAsCodeStarterKit20o26: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -76,5 +76,5 @@ const PolicyAsCodeStarterKit20o26: React.FC = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default PolicyAsCodeStarterKit20o26;
+    </div>)},
+export default PolicyAsCodeStarterKit20o26,

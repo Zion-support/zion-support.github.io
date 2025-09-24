@@ -2,10 +2,10 @@ import React, { useState } from 'react',
 import Head from 'next/head',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Star, TrendingUp, Zap, Brain, Rocket, Shield;
-  DollarSign, Users, Clock, CheckCircle, ArrowRight;
-  Phone, Mail, MapPin, ExternalLink, Search, Filter;
-  Grid, List, ChevronDown, ChevronUp, Sparkles;
+  Star, TrendingUp, Zap, Brain, Rocket, Shield,
+  DollarSign, Users, Clock, CheckCircle, ArrowRight,
+  Phone, Mail, MapPin, ExternalLink, Search, Filter,
+  Grid, List, ChevronDown, ChevronUp, Sparkles,
   Crown, Award, Target, Globe, Cpu, Database} from 'lucide-react',
 import UltraAdvancedFuturisticMatrixBackground from '../components/ui/UltraAdvancedFuturisticMatrixBackground',
 import UltraFuturisticCard from '../components/ui/UltraFuturisticCard',
@@ -24,35 +24,35 @@ export default function EnhancedServicesShowcase() {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const [sortBy, setSortBy] = useState<string>('name'),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Combine all services for comprehensive showcase,
   const allServices = [
-    ...nextGenerationAIServices;
-    ...cuttingEdgeITServices;
-    ...innovativeMicroSaasV2Services;
-    ...enhancedRealMicroSaasServices;
-    ...innovativeAIServices;
-    ...quantumSpaceServices;
-    ...enterpriseITServices;
-    ...realMarketServices;
+    ...nextGenerationAIServices,
+    ...cuttingEdgeITServices,
+    ...innovativeMicroSaasV2Services,
+    ...enhancedRealMicroSaasServices,
+    ...innovativeAIServices,
+    ...quantumSpaceServices,
+    ...enterpriseITServices,
+    ...realMarketServices,
     ...newVerifiedServicesQ220o25],
   const categories = [
-    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length };
-    { id: 'next-gen-ai', name: 'ArrowRight-Gen AI', icon: '🧠', count: nextGenerationAIServices.length };
-    { id: 'cutting-edge-it', name: 'Cutting-Edge IT', icon: '⚡', count: cuttingEdgeITServices.length };
-    { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length };
-    { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length };
+    { id: 'all', name: 'All Services', icon: '🚀', count: allServices.length },
+    { id: 'next-gen-ai', name: 'ArrowRight-Gen AI', icon: '🧠', count: nextGenerationAIServices.length },
+    { id: 'cutting-edge-it', name: 'Cutting-Edge IT', icon: '⚡', count: cuttingEdgeITServices.length },
+    { id: 'innovative-saas', name: 'Innovative SaaS', icon: '💻', count: innovativeMicroSaasV2Services.length },
+    { id: 'quantum-space', name: 'Quantum & Space', icon: '⚛️', count: quantumSpaceServices.length },
     { id: 'enterprise', name: 'Enterprise IT', icon: '🏢', count: enterpriseITServices.length }
   ],
   const sortOptions = [
-    { id: 'name', name: 'Name A-Z' };
-    { id: 'price-low', name: 'Price Low to High' };
-    { id: 'price-high', name: 'Price High to Low' };
-    { id: 'rating', name: 'Rating' };
-    { id: 'customers', name: 'Customer Count' };
+    { id: 'name', name: 'Name A-Z' },
+    { id: 'price-low', name: 'Price Low to High' },
+    { id: 'price-high', name: 'Price High to Low' },
+    { id: 'rating', name: 'Rating' },
+    { id: 'customers', name: 'Customer Count' },
     { id: 'popularity', name: 'Popularity' }
   ],
   // Filter and sort services,
@@ -94,39 +94,39 @@ export default function EnhancedServicesShowcase() {
 ,
     return filtered}, [allServices, selectedCategory, searchTerm, sortBy]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
+        staggerChildren: 0.1,
         delayChildren: 0.2}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { opacity: 0, y: 30 };
+    hidden: { opacity: 0, y: 30 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
+        duration: 0.6,
         ease: "easeOut" as const}
     }
-  };
+  },
   const featuredServices = [
     {
-      title: '🚀 ArrowRight-Generation AI Services';
-      description: 'Revolutionary AI platforms that push the boundaries of what\'s possible';
-      services: nextGenerationAIServices.slice(0, 3);
-      color: 'from-purple-50o0 to-pink-60o0'};
+      title: '🚀 ArrowRight-Generation AI Services',
+      description: 'Revolutionary AI platforms that push the boundaries of what\'s possible',
+      services: nextGenerationAIServices.slice(0, 3),
+      color: 'from-purple-50o0 to-pink-60o0'},
     {
-      title: '⚡ Cutting-Edge IT Infrastructure';
-      description: 'Advanced infrastructure solutions for the modern enterprise';
-      services: cuttingEdgeITServices.slice(0, 3);
-      color: 'from-blue-50o0 to-cyan-60o0'};
+      title: '⚡ Cutting-Edge IT Infrastructure',
+      description: 'Advanced infrastructure solutions for the modern enterprise',
+      services: cuttingEdgeITServices.slice(0, 3),
+      color: 'from-blue-50o0 to-cyan-60o0'},
     {
-      title: '💻 Innovative Micro SaaS Solutions';
-      description: 'Creative and practical SaaS tools for every business need';
-      services: innovativeMicroSaasV2Services.slice(0, 3);
+      title: '💻 Innovative Micro SaaS Solutions',
+      description: 'Creative and practical SaaS tools for every business need',
+      services: innovativeMicroSaasV2Services.slice(0, 3),
       color: 'from-green-50o0 to-emerald-60o0'}
   ],
   return (
@@ -496,11 +496,11 @@ export default function EnhancedServicesShowcase() {
 ,
 // Button component (if not imported),
 const Button = ({
-  href;
-  variant = 'primary';
-  size = 'md';
-  className = '';
-  children;
+  href,
+  variant = 'primary',
+  size = 'md',
+  className = '',
+  children,
   onClick}: {
   href?: string,
   variant?: 'primary' | 'secondary',
@@ -510,12 +510,12 @@ const Button = ({
   onClick?: () => void}) => {
   const baseClasses = 'inline-flex items-center justify-center font-semibold rounded-lg transition-all duration-20o0 focus: outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-90o0',
   const variantClasses ={
-    primary: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white shadow-lg hover:shadow-xl focus:ring-cyan-50o0';
-    secondary: 'bg-gray-70o0 hover:bg-gray-60o0 text-white border border-gray-60o0 hover:border-gray-50o0 focus:ring-gray-50o0'};
+    primary: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0 hover:from-cyan-60o0 hover:to-blue-70o0 text-white shadow-lg hover:shadow-xl focus:ring-cyan-50o0',
+    secondary: 'bg-gray-70o0 hover:bg-gray-60o0 text-white border border-gray-60o0 hover:border-gray-50o0 focus:ring-gray-50o0'},
   const sizeClasses ={
-    sm: 'px-4 py-2 text-sm';
-    md: 'px-6 py-3 text-base';
-    lg: 'px-8 py-4 text-lg'};
+    sm: 'px-4 py-2 text-sm',
+    md: 'px-6 py-3 text-base',
+    lg: 'px-8 py-4 text-lg'},
   const classes = `${baseClasses} ${variantClasses[variant" ${sizeClasses[size" ${className}`,
   if (href) {
     return (
@@ -526,5 +526,5 @@ const Button = ({
   return (
     <button onClick={onClick} className={classes}>,
       {children}
-    </button>)};
+    </button>)},
 }}}]]]

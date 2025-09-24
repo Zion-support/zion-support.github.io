@@ -4,27 +4,27 @@ import React, { useState, useEffect } from 'react',
 interface ROICalculatorProps {
   className?: string}
 ,
-const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ', ' }) => {
+const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className =  }) => {
   const [inputs, setInputs] = useState({
-    currentRevenue: 10o00000;
-    operationalCosts: 50o0000;
-    employees: 50;
-    industry: 'manufacturing';
-    aiInvestment: 10o0000;
+    currentRevenue: 10o00000,
+    operationalCosts: 50o0000,
+    employees: 50,
+    industry: 'manufacturing',
+    aiInvestment: 10o0000,
     timeframe: 12}),
   const [results, setResults] = useState({
-    costSavings: 0;
-    revenueIncrease: 0;
-    totalROI: 0;
-    paybackPeriod: 0;
+    costSavings: 0,
+    revenueIncrease: 0,
+    totalROI: 0,
+    paybackPeriod: 0,
     netBenefit: 0}),
   const industryMultipliers ={
-    manufacturing: { costSavings: 0.4, revenueIncrease: 0.25 };
-    healthcare: { costSavings: 0.35, revenueIncrease: 0.20 };
-    finance: { costSavings: 0.45, revenueIncrease: 0.30 };
-    retail: { costSavings: 0.30, revenueIncrease: 0.35 };
+    manufacturing: { costSavings: 0.4, revenueIncrease: 0.25 },
+    healthcare: { costSavings: 0.35, revenueIncrease: 0.20 },
+    finance: { costSavings: 0.45, revenueIncrease: 0.30 },
+    retail: { costSavings: 0.30, revenueIncrease: 0.35 },
     technology: { costSavings: 0.50, revenueIncrease: 0.40 }
-  };
+  },
   useEffect(() => {
     calculateROI()}, [inputs]),
   const calculateROI = () => {
@@ -37,15 +37,15 @@ const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ',
     const roi = (netBenefit / inputs.aiInvestment) * 10o0,
     const paybackPeriod = inputs.aiInvestment / totalAnnualBenefit,
     setResults({
-      costSavings: annualCostSavings;
-      revenueIncrease: annualRevenueIncrease;
-      totalROI: roi;
-      paybackPeriod: paybackPeriod;
-      netBenefit: netBenefit})};
+      costSavings: annualCostSavings,
+      revenueIncrease: annualRevenueIncrease,
+      totalROI: roi,
+      paybackPeriod: paybackPeriod,
+      netBenefit: netBenefit})},
   const handleInputChange = (field: string, value: number | string) => {
     setInputs(prev => ({
-      ...prev;
-      [field]: value}))};
+      ...prev,
+      [field]: value}))},
   return (
     <div className={`bg-gradient-to-br from-purple-50 to-blue-50 p-8 rounded-2xl shadow-xl ${className}`}>,
       <div className="max-w-4xl mx-auto">,
@@ -206,5 +206,5 @@ const InteractiveROICalculator: React.FC<ROICalculatorProps> = ({ className = ',
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveROICalculator;
+    </div>)},
+export default InteractiveROICalculator,

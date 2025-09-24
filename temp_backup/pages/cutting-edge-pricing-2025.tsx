@@ -1,124 +1,119 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { motion } from 'framer-motion';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { motion } from 'framer-motion',
 import {
-  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin} from 'lucide-react';
-import Layout from '../components/layout/Layout';
-import { cuttingEdgeAIServices20o25 } from '../data/20o25-cutting-edge-ai-services';
-import { cuttingEdgeQuantumServices20o25 } from '../data/20o25-cutting-edge-quantum-services';
-import { cuttingEdgeEnterpriseITServices20o25 } from '../data/20o25-cutting-edge-enterprise-it';
-import { cuttingEdgeMicroSaasServices20o25 } from '../data/20o25-cutting-edge-micro-saas';
+  Check, Zap, Shield, Brain, Atom, Target, Rocket, Star, TrendingUp, Award, Users, ArrowRight, ExternalLink, Phone, Mail, MapPin} from 'lucide-react',
+import Layout from '../components/layout/Layout',
+import { cuttingEdgeAIServices20o25 } from '../data/20o25-cutting-edge-ai-services',
+import { cuttingEdgeQuantumServices20o25 } from '../data/20o25-cutting-edge-quantum-services',
+import { cuttingEdgeEnterpriseITServices20o25 } from '../data/20o25-cutting-edge-enterprise-it',
+import { cuttingEdgeMicroSaasServices20o25 } from '../data/20o25-cutting-edge-micro-saas',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const pricingTiers = [
   {
-    name: 'Starter';
-    price: 99;
-    period: 'month';
-    description: 'Perfect for small businesses and startups';
+    name: 'Starter',
+    price: 99,
+    period: 'month',
+    description: 'Perfect for small businesses and startups',
     features: [
-      'Up to 5 team membersBasic AI content generation';
-      'Standard supportCore integrations';
-      'Basic analyticsEmail support'];
-    icon: <Target className="w-6 h-6"  />;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    cta: 'Start Free Trial';
-    ctaLink: '/contact';
-    popular: false};
+      'Up to 5 team membersBasic AI content generationStandard supportCore integrations',
+      'Basic analyticsEmail support'],
+    icon: <Target className="w-6 h-6"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    cta: 'Start Free Trial',
+    ctaLink: '/contact',
+    popular: false},
   {
-    name: 'Professional';
-    price: 299;
-    period: 'month';
-    description: 'Ideal for growing businesses and teams';
+    name: 'Professional',
+    price: 299,
+    period: 'month',
+    description: 'Ideal for growing businesses and teams',
     features: [
-      'Up to 25 team membersAdvanced AI features';
-      'Priority supportAdvanced integrations';
-      'Advanced analyticsPhone & email support';
-      'Custom brandingAPI access'];
-    icon: <Zap className="w-6 h-6"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    cta: 'Start Free Trial';
-    ctaLink: '/contact';
-    popular: true};
+      'Up to 25 team membersAdvanced AI featuresPriority supportAdvanced integrations',
+      'Advanced analyticsPhone & email supportCustom brandingAPI access'],
+    icon: <Zap className="w-6 h-6"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    cta: 'Start Free Trial',
+    ctaLink: '/contact',
+    popular: true},
   {
-    name: 'Enterprise';
-    price: 999;
-    period: 'month';
-    description: 'For large organizations with complex needs';
+    name: 'Enterprise',
+    price: 999,
+    period: 'month',
+    description: 'For large organizations with complex needs',
     features: [
-      'Unlimited team membersFull AI suite access';
-      '24/7 dedicated supportCustom integrations';
-      'Advanced analytics & reportingDedicated account manager';
-      'Custom developmentSLA guarantees';
-      'On-premise optionsCompliance certifications'];
-    icon: <Shield className="w-6 h-6"  />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    cta: 'Contact Sales';
-    ctaLink: '/contact';
+      'Unlimited team membersFull AI suite access24/7 dedicated supportCustom integrations',
+      'Advanced analytics & reportingDedicated account managerCustom developmentSLA guarantees',
+      'On-premise optionsCompliance certifications'],
+    icon: <Shield className="w-6 h-6"  />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    cta: 'Contact Sales',
+    ctaLink: '/contact',
     popular: false}
-];
+],
 const serviceCategories = [
   {
-    name: 'AI & Consciousness Services';
-    icon: <Brain className="w-8 h-8"  />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    services: cuttingEdgeAIServices20o25.slice(0, 6);
-    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'};
+    name: 'AI & Consciousness Services',
+    icon: <Brain className="w-8 h-8"  />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    services: cuttingEdgeAIServices20o25.slice(0, 6),
+    description: 'Revolutionary AI platforms with consciousness and emotional intelligence'},
   {
-    name: 'Quantum & Emerging Tech';
-    icon: <Atom className="w-8 h-8"  />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    services: cuttingEdgeQuantumServices20o25.slice(0, 6);
-    description: 'Breakthrough quantum computing and space technology solutions'};
+    name: 'Quantum & Emerging Tech',
+    icon: <Atom className="w-8 h-8"  />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    services: cuttingEdgeQuantumServices20o25.slice(0, 6),
+    description: 'Breakthrough quantum computing and space technology solutions'},
   {
-    name: 'Enterprise IT Solutions';
-    icon: <Shield className="w-8 h-8"  />;
-    color: 'from-blue-50o0 to-cyan-50o0';
-    services: cuttingEdgeEnterpriseITServices20o25.slice(0, 6);
-    description: 'Advanced enterprise infrastructure and security solutions'};
+    name: 'Enterprise IT Solutions',
+    icon: <Shield className="w-8 h-8"  />,
+    color: 'from-blue-50o0 to-cyan-50o0',
+    services: cuttingEdgeEnterpriseITServices20o25.slice(0, 6),
+    description: 'Advanced enterprise infrastructure and security solutions'},
   {
-    name: 'Micro SAAS Solutions';
-    icon: <Rocket className="w-8 h-8"  />;
-    color: 'from-teal-50o0 to-emerald-50o0';
-    services: cuttingEdgeMicroSaasServices20o25.slice(0, 6);
+    name: 'Micro SAAS Solutions',
+    icon: <Rocket className="w-8 h-8"  />,
+    color: 'from-teal-50o0 to-emerald-50o0',
+    services: cuttingEdgeMicroSaasServices20o25.slice(0, 6),
     description: 'Innovative business solutions for modern enterprises'}
-];
+],
 const stats = [
-  { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-40o0' };
-  { number: '$50o0B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-40o0' };
-  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-40o0' };
+  { number: '25+', label: 'Cutting-Edge Services', icon: Star, color: 'text-cyan-40o0' },
+  { number: '$50o0B+', label: 'Market Coverage', icon: TrendingUp, color: 'text-purple-40o0' },
+  { number: '99.9%', label: 'Success Rate', icon: Award, color: 'text-green-40o0' },
   { number: '24/7', label: 'Expert Support', icon: Users, color: 'text-pink-40o0' }
-];
+],
 export default function CuttingEdgePricing20o25() {
-  const [selectedCategory, setSelectedCategory] = useState('all');
+  const [selectedCategory, setSelectedCategory] = useState('all'),
   const allServices = [
-    ...cuttingEdgeAIServices20o25;
-    ...cuttingEdgeQuantumServices20o25;
-    ...cuttingEdgeEnterpriseITServices20o25;
-    ...cuttingEdgeMicroSaasServices20o25];
+    ...cuttingEdgeAIServices20o25,
+    ...cuttingEdgeQuantumServices20o25,
+    ...cuttingEdgeEnterpriseITServices20o25,
+    ...cuttingEdgeMicroSaasServices20o25],
   const filteredServices = selectedCategory === 'all',
     ? allServices,
-    : allServices.filter(service => service.category === selectedCategory);
+    : allServices.filter(service => service.category === selectedCategory),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <>,
       <Head>,

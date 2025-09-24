@@ -20,46 +20,46 @@ const UltimateContent20o25BreakthroughBanner = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('ultimate-content-20o25-breakthrough-dismissed', 'true')};
+    localStorage.setItem('ultimate-content-20o25-breakthrough-dismissedtrue')},
   const featuredContent = [
     {
-      id: 'enterprise-ai-revolution';
-      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
-      description: 'Discover how Fortune 50o0 companies are achieving 60o0% ROI with next-generation AI solutions.';
-      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough';
-      type: 'Blog Post';
+      id: 'enterprise-ai-revolution',
+      title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
+      description: 'Discover how Fortune 50o0 companies are achieving 60o0% ROI with next-generation AI solutions.',
+      url: '/blog/ai-20o25-enterprise-ai-revolution-ultimate-breakthrough',
+      type: 'Blog Post',
       metrics: {
-        roi: '60o0%';
-        savings: '$2.8B';
-        satisfaction: '98%';
-        projects: '50o0+'};
-      readingTime: '22 min read';
-      isNew: true};
+        roi: '60o0%',
+        savings: '$2.8B',
+        satisfaction: '98%',
+        projects: '50o0+'},
+      readingTime: '22 min read',
+      isNew: true},
     {
-      id: 'ai-transformation-success';
-      title: 'AI Transformation 20o25: $3.2B Company Achieves 750% ROI - Ultimate Success Story';
-      description: 'How a Fortune 10o0 manufacturing company transformed operations with AI, achieving 750% ROI.';
-      url: '/case-studies/ai-transformation-20o25-ultimate-success-story';
-      type: 'Case Study';
+      id: 'ai-transformation-success',
+      title: 'AI Transformation 20o25: $3.2B Company Achieves 750% ROI - Ultimate Success Story',
+      description: 'How a Fortune 10o0 manufacturing company transformed operations with AI, achieving 750% ROI.',
+      url: '/case-studies/ai-transformation-20o25-ultimate-success-story',
+      type: 'Case Study',
       metrics: {
-        roi: '750%';
-        savings: '$2.8B';
-        accuracy: '99.8%';
-        efficiency: '156%'};
-      readingTime: '18 min read';
-      isNew: true};
+        roi: '750%',
+        savings: '$2.8B',
+        accuracy: '99.8%',
+        efficiency: '156%'},
+      readingTime: '18 min read',
+      isNew: true},
     {
-      id: 'ai-implementation-roadmap';
-      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months';
-      description: 'Complete step-by-step guide to implementing AI in your enterprise. Achieve 80o0% ROI with our proven methodology.';
-      url: '/resources/ai-implementation-ultimate-roadmap-20o25';
-      type: 'Resource';
+      id: 'ai-implementation-roadmap',
+      title: 'AI Implementation Ultimate Roadmap 20o25: From Strategy to 80o0% ROI in 18 Months',
+      description: 'Complete step-by-step guide to implementing AI in your enterprise. Achieve 80o0% ROI with our proven methodology.',
+      url: '/resources/ai-implementation-ultimate-roadmap-20o25',
+      type: 'Resource',
       metrics: {
-        roi: '80o0%';
-        timeline: '18 months';
-        success: '94%';
-        value: '$2.8B'};
-      readingTime: '35 min read';
+        roi: '80o0%',
+        timeline: '18 months',
+        success: '94%',
+        value: '$2.8B'},
+      readingTime: '35 min read',
       isNew: true}
   ],
   if (!isVisible || isDismissed) return null,
@@ -233,5 +233,5 @@ const UltimateContent20o25BreakthroughBanner = () => {
             </Link>))}
         </div>,
       </div>,
-    </div>)};
-export default UltimateContent20o25BreakthroughBanner;
+    </div>)},
+export default UltimateContent20o25BreakthroughBanner,

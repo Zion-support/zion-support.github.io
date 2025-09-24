@@ -151,5 +151,5 @@ const AI20o25InnovationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25InnovationShowcase;
+    </section>)},
+export default AI20o25InnovationShowcase,

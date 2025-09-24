@@ -1,4 +1,5 @@
-import { render, screen, fireEvent, waitFor } from @testing-library/react',import { vi, expect, test, describe, beforeEach, afterEach } from vitest',import { EnhancedNewsletterForm } from @/components/EnhancedNewsletterForm',import * as toastHook from @/hooks/use-toast',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import { vi, expect, test, describe, beforeEach, afterEach } from vitest',import { EnhancedNewsletterForm } from @/components/EnhancedNewsletterForm',
+import * as toastHook from @/hooks/use-toast',
 vi.mock('@/hooks/use-toast'),
 describe('EnhancedNewsletterForm', () => {'  let _originalFetch: typeof global.fetch,
   beforeEach(() => {

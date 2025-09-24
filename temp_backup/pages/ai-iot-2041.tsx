@@ -1,17 +1,17 @@
 import Layout from '../components/layout/Layout',
 import {
-  Wifi;
-  Sparkles;
-  Zap;
-  Target;
-  Shield;
-  Clock;
-  CheckCircle;
-  Cpu;
-  Database;
-  Network;
-  Brain;
-  Activity;
+  Wifi,
+  Sparkles,
+  Zap,
+  Target,
+  Shield,
+  Clock,
+  CheckCircle,
+  Cpu,
+  Database,
+  Network,
+  Brain,
+  Activity,
 } from 'lucide-react',
 export default function AIIoT20o41() {
   return (
@@ -64,47 +64,47 @@ export default function AIIoT20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  icon: <Brain className='w-8 h-8' />;
-                  title: 'Cognitive IoT';
+                  icon: <Brain className='w-8 h-8' />,
+                  title: 'Cognitive IoT',
                   description:,
-                    'AI-powered IoT devices that learn, adapt, and make intelligent decisions autonomously.';
-                  color: 'from-teal-50o0 to-cyan-50o0';
-                };
+                    'AI-powered IoT devices that learn, adapt, and make intelligent decisions autonomously.',
+                  color: 'from-teal-50o0 to-cyan-50o0'
+                },
                 {
-                  icon: <Network className='w-8 h-8' />;
-                  title: 'Intelligent Networking';
+                  icon: <Network className='w-8 h-8' />,
+                  title: 'Intelligent Networking',
                   description:,
-                    'AI-optimized network routing and bandwidth management for maximum IoT efficiency.';
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'AI-optimized network routing and bandwidth management for maximum IoT efficiency.',
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  icon: <Activity className='w-8 h-8' />;
-                  title: 'Smart Sensors';
+                  icon: <Activity className='w-8 h-8' />,
+                  title: 'Smart Sensors',
                   description:,
-                    'Advanced sensors with AI processing that provide real-time insights and predictions.';
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Advanced sensors with AI processing that provide real-time insights and predictions.',
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  icon: <Shield className='w-8 h-8' />;
-                  title: 'IoT Security';
+                  icon: <Shield className='w-8 h-8' />,
+                  title: 'IoT Security',
                   description:,
-                    'AI-enhanced security protocols that protect IoT networks from sophisticated threats.';
-                  color: 'from-red-50o0 to-pink-50o0';
-                };
+                    'AI-enhanced security protocols that protect IoT networks from sophisticated threats.',
+                  color: 'from-red-50o0 to-pink-50o0'
+                },
                 {
-                  icon: <Zap className='w-8 h-8' />;
-                  title: 'Real-time Processing';
+                  icon: <Zap className='w-8 h-8' />,
+                  title: 'Real-time Processing',
                   description:,
-                    'Instant data processing and analysis at the edge for immediate IoT response.';
-                  color: 'from-yellow-50o0 to-orange-50o0';
-                };
+                    'Instant data processing and analysis at the edge for immediate IoT response.',
+                  color: 'from-yellow-50o0 to-orange-50o0'
+                },
                 {
-                  icon: <Target className='w-8 h-8' />;
-                  title: 'Predictive Maintenance';
+                  icon: <Target className='w-8 h-8' />,
+                  title: 'Predictive Maintenance',
                   description:,
-                    'AI systems that predict IoT device failures and optimize maintenance schedules.';
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'AI systems that predict IoT device failures and optimize maintenance schedules.',
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((feature, index) => (
                 <div
                   key={index}
@@ -139,45 +139,45 @@ export default function AIIoT20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6'>,
               {[
                 {
-                  name: 'Device Management';
+                  name: 'Device Management',
                   description:,
-                    'AI-powered IoT device provisioning and management';
-                };
+                    'AI-powered IoT device provisioning and management',
+                },
                 {
-                  name: 'Data Analytics';
+                  name: 'Data Analytics',
                   description:,
-                    'Real-time IoT data processing and intelligent insights';
-                };
+                    'Real-time IoT data processing and intelligent insights',
+                },
                 {
-                  name: 'Edge Computing';
+                  name: 'Edge Computing',
                   description:,
-                    'Local AI processing for faster IoT response times';
-                };
+                    'Local AI processing for faster IoT response times',
+                },
                 {
-                  name: 'Cloud Integration';
+                  name: 'Cloud Integration',
                   description:,
-                    'Seamless cloud connectivity and data synchronization';
-                };
+                    'Seamless cloud connectivity and data synchronization',
+                },
                 {
-                  name: 'Security Monitoring';
+                  name: 'Security Monitoring',
                   description:,
-                    'Continuous IoT security monitoring and threat detection';
-                };
+                    'Continuous IoT security monitoring and threat detection',
+                },
                 {
-                  name: 'Automation';
+                  name: 'Automation',
                   description:,
-                    'Intelligent IoT workflow automation and optimization';
-                };
+                    'Intelligent IoT workflow automation and optimization',
+                },
                 {
-                  name: 'Scalability';
+                  name: 'Scalability',
                   description:,
-                    'Enterprise-grade IoT solutions for massive deployments';
-                };
+                    'Enterprise-grade IoT solutions for massive deployments',
+                },
                 {
-                  name: 'Interoperability';
+                  name: 'Interoperability',
                   description:,
-                    'Multi-protocol support and device compatibility';
-                };
+                    'Multi-protocol support and device compatibility',
+                },
               ].map((capability, index) => (
                 <div
                   key={index}
@@ -207,55 +207,50 @@ export default function AIIoT20o41() {
             <div className='space-y-8'>,
               {[
                 {
-                  phase: 'Device Discovery';
+                  phase: 'Device Discovery',
                   description:,
-                    'AI automatically discovers and identifies IoT devices on the network';
+                    'AI automatically discovers and identifies IoT devices on the network',
                   features: [
-                    'Auto-discovery';
-                    'Device identification';
-                    'Network mapping';
-                  ];
-                };
+                    'Auto-discoveryDevice identification',
+                    'Network mapping',
+                  ]
+                },
                 {
-                  phase: 'Data Collection';
+                  phase: 'Data Collection',
                   description:,
-                    'Intelligent data gathering from IoT sensors and devices';
+                    'Intelligent data gathering from IoT sensors and devices',
                   features: [
-                    'Sensor data';
-                    'Device metrics';
-                    'Performance data';
-                  ];
-                };
+                    'Sensor dataDevice metrics',
+                    'Performance data',
+                  ]
+                },
                 {
-                  phase: 'AI Analysis';
+                  phase: 'AI Analysis',
                   description:,
-                    'Real-time AI processing of IoT data for insights and optimization';
+                    'Real-time AI processing of IoT data for insights and optimization',
                   features: [
-                    'Pattern recognition';
-                    'Anomaly detection';
-                    'Predictive analytics';
-                  ];
-                };
+                    'Pattern recognitionAnomaly detection',
+                    'Predictive analytics',
+                  ]
+                },
                 {
-                  phase: 'Intelligent Response';
+                  phase: 'Intelligent Response',
                   description:,
-                    'AI-powered automation and response to IoT events and conditions';
+                    'AI-powered automation and response to IoT events and conditions',
                   features: [
-                    'Automated actions';
-                    'Smart responses';
-                    'Optimization';
-                  ];
-                };
+                    'Automated actionsSmart responses',
+                    'Optimization',
+                  ]
+                },
                 {
-                  phase: 'Continuous Learning';
+                  phase: 'Continuous Learning',
                   description:,
-                    'AI systems that learn and improve IoT performance over time';
+                    'AI systems that learn and improve IoT performance over time',
                   features: [
-                    'Performance optimization';
-                    'Efficiency improvement';
-                    'Adaptive learning';
-                  ];
-                };
+                    'Performance optimizationEfficiency improvement',
+                    'Adaptive learning',
+                  ]
+                },
               ].map((phase, index) => (
                 <div
                   key={index}
@@ -301,77 +296,65 @@ export default function AIIoT20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  category: 'Smart Cities';
+                  category: 'Smart Cities',
                   description:,
-                    'Intelligent urban infrastructure with IoT sensors and AI optimization.';
+                    'Intelligent urban infrastructure with IoT sensors and AI optimization.',
                   applications: [
-                    'Traffic management';
-                    'Energy optimization';
-                    'Waste management';
-                    'Public safety';
-                    'Environmental monitoring';
-                  ];
-                };
+                    'Traffic managementEnergy optimization',
+                    'Waste managementPublic safety',
+                    'Environmental monitoring',
+                  ]
+                },
                 {
-                  category: 'Industrial IoT';
+                  category: 'Industrial IoT',
                   description:,
-                    'Manufacturing and industrial automation with AI-powered IoT systems.';
+                    'Manufacturing and industrial automation with AI-powered IoT systems.',
                   applications: [
-                    'Predictive maintenance';
-                    'Quality control';
-                    'Supply chain';
-                    'Energy management';
-                    'Safety monitoring';
-                  ];
-                };
+                    'Predictive maintenanceQuality control',
+                    'Supply chainEnergy management',
+                    'Safety monitoring',
+                  ]
+                },
                 {
-                  category: 'Smart Homes';
+                  category: 'Smart Homes',
                   description:,
-                    'Intelligent home automation and energy management with IoT.';
+                    'Intelligent home automation and energy management with IoT.',
                   applications: [
-                    'Climate control';
-                    'Security systems';
-                    'Energy management';
-                    'Entertainment';
-                    'Appliance control';
-                  ];
-                };
+                    'Climate controlSecurity systems',
+                    'Energy managementEntertainment',
+                    'Appliance control',
+                  ]
+                },
                 {
-                  category: 'Healthcare IoT';
+                  category: 'Healthcare IoT',
                   description:,
-                    'Medical device monitoring and patient care with intelligent IoT.';
+                    'Medical device monitoring and patient care with intelligent IoT.',
                   applications: [
-                    'Patient monitoring';
-                    'Medical devices';
-                    'Health tracking';
-                    'Medication management';
-                    'Emergency response';
-                  ];
-                };
+                    'Patient monitoringMedical devices',
+                    'Health trackingMedication management',
+                    'Emergency response',
+                  ]
+                },
                 {
-                  category: 'Transportation';
+                  category: 'Transportation',
                   description:,
-                    'Connected vehicles and intelligent transportation systems.';
+                    'Connected vehicles and intelligent transportation systems.',
                   applications: [
-                    'Vehicle tracking';
-                    'Traffic optimization';
-                    'Fleet management';
-                    'Predictive maintenance';
-                    'Safety systems';
-                  ];
-                };
+                    'Vehicle trackingTraffic optimization',
+                    'Fleet managementPredictive maintenance',
+                    'Safety systems',
+                  ]
+                },
                 {
-                  category: 'Agriculture';
+                  category: 'Agriculture',
                   description:,
-                    'Smart farming with IoT sensors and AI-powered insights.';
+                    'Smart farming with IoT sensors and AI-powered insights.',
                   applications: [
-                    'Soil monitoring';
-                    'Crop management';
-                    'Irrigation control';
-                    'Weather tracking';
-                    'Equipment monitoring';
-                  ];
-                };
+                    'Soil monitoringCrop management',
+                    'Irrigation controlWeather tracking',
+                    'Equipment monitoring',
+                  ]
+                },
               ].map((category, index) => (
                 <div
                   key={index}
@@ -408,65 +391,59 @@ export default function AIIoT20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>,
               {[
                 {
-                  industry: 'Manufacturing';
+                  industry: 'Manufacturing',
                   description:,
-                    'Smart factories with IoT sensors and AI-powered optimization for maximum efficiency.';
+                    'Smart factories with IoT sensors and AI-powered optimization for maximum efficiency.',
                   benefits: [
-                    'Increased productivity';
-                    'Reduced downtime';
-                    'Quality improvement';
-                  ];
-                };
+                    'Increased productivityReduced downtime',
+                    'Quality improvement',
+                  ]
+                },
                 {
-                  industry: 'Energy';
+                  industry: 'Energy',
                   description:,
-                    'Smart grids and renewable energy systems with intelligent IoT management.';
+                    'Smart grids and renewable energy systems with intelligent IoT management.',
                   benefits: [
-                    'Energy efficiency';
-                    'Cost reduction';
-                    'Sustainability';
-                  ];
-                };
+                    'Energy efficiencyCost reduction',
+                    'Sustainability',
+                  ]
+                },
                 {
-                  industry: 'Retail';
+                  industry: 'Retail',
                   description:,
-                    'Connected retail experiences with IoT sensors and AI-powered insights.';
+                    'Connected retail experiences with IoT sensors and AI-powered insights.',
                   benefits: [
-                    'Customer experience';
-                    'Inventory optimization';
-                    'Operational efficiency';
-                  ];
-                };
+                    'Customer experienceInventory optimization',
+                    'Operational efficiency',
+                  ]
+                },
                 {
-                  industry: 'Healthcare';
+                  industry: 'Healthcare',
                   description:,
-                    'Connected healthcare with IoT devices and AI-powered patient monitoring.';
+                    'Connected healthcare with IoT devices and AI-powered patient monitoring.',
                   benefits: [
-                    'Patient outcomes';
-                    'Operational efficiency';
-                    'Cost reduction';
-                  ];
-                };
+                    'Patient outcomesOperational efficiency',
+                    'Cost reduction',
+                  ]
+                },
                 {
-                  industry: 'Transportation';
+                  industry: 'Transportation',
                   description:,
-                    'Intelligent transportation systems with IoT sensors and AI optimization.';
+                    'Intelligent transportation systems with IoT sensors and AI optimization.',
                   benefits: [
-                    'Traffic optimization';
-                    'Safety improvement';
-                    'Efficiency gains';
-                  ];
-                };
+                    'Traffic optimizationSafety improvement',
+                    'Efficiency gains',
+                  ]
+                },
                 {
-                  industry: 'Agriculture';
+                  industry: 'Agriculture',
                   description:,
-                    'Precision agriculture with IoT sensors and AI-powered farming insights.';
+                    'Precision agriculture with IoT sensors and AI-powered farming insights.',
                   benefits: [
-                    'Crop yield';
-                    'Resource optimization';
-                    'Sustainability';
-                  ];
-                };
+                    'Crop yieldResource optimization',
+                    'Sustainability',
+                  ]
+                },
               ].map((industry, index) => (
                 <div
                   key={index}
@@ -507,33 +484,33 @@ export default function AIIoT20o41() {
             <div className='grid grid-cols-1 md:grid-cols-2 gap-8'>,
               {[
                 {
-                  title: 'Increased Efficiency';
+                  title: 'Increased Efficiency',
                   description:,
-                    'AI-powered IoT optimization that dramatically improves operational efficiency and productivity.';
-                  icon: <Zap className='w-8 h-8' />;
-                  color: 'from-teal-50o0 to-cyan-50o0';
-                };
+                    'AI-powered IoT optimization that dramatically improves operational efficiency and productivity.',
+                  icon: <Zap className='w-8 h-8' />,
+                  color: 'from-teal-50o0 to-cyan-50o0'
+                },
                 {
-                  title: 'Cost Reduction';
+                  title: 'Cost Reduction',
                   description:,
-                    'Intelligent IoT management that reduces operational costs and resource consumption.';
-                  icon: <Target className='w-8 h-8' />;
-                  color: 'from-green-50o0 to-emerald-50o0';
-                };
+                    'Intelligent IoT management that reduces operational costs and resource consumption.',
+                  icon: <Target className='w-8 h-8' />,
+                  color: 'from-green-50o0 to-emerald-50o0'
+                },
                 {
-                  title: 'Real-time Insights';
+                  title: 'Real-time Insights',
                   description:,
-                    'Instant IoT data analysis and insights for better decision-making and optimization.';
-                  icon: <Brain className='w-8 h-8' />;
-                  color: 'from-blue-50o0 to-indigo-50o0';
-                };
+                    'Instant IoT data analysis and insights for better decision-making and optimization.',
+                  icon: <Brain className='w-8 h-8' />,
+                  color: 'from-blue-50o0 to-indigo-50o0'
+                },
                 {
-                  title: 'Predictive Capabilities';
+                  title: 'Predictive Capabilities',
                   description:,
-                    'AI-powered predictions that prevent issues and optimize IoT performance proactively.';
-                  icon: <Activity className='w-8 h-8' />;
-                  color: 'from-purple-50o0 to-pink-50o0';
-                };
+                    'AI-powered predictions that prevent issues and optimize IoT performance proactively.',
+                  icon: <Activity className='w-8 h-8' />,
+                  color: 'from-purple-50o0 to-pink-50o0'
+                },
               ].map((benefit, index) => (
                 <div
                   key={index}

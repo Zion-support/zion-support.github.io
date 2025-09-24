@@ -4,17 +4,17 @@ import { motion } from 'framer-motion',
 import { Send, CheckCircle, AlertCircle, User, Mail, MessageSquare } from 'lucide-react',
 const ContactFormEnhanced: React.FC = () => {
   const [formData, setFormData] = useState({
-    name: '';
-    email: '';
-    subject: '';
+    name: '',
+    email: '',
+    subject: '',
     message: ''}),
   const [isSubmitting, setIsSubmitting] = useState(false),
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle'),
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target,
     setFormData(prev => ({
-      ...prev;
-      [name]: value}))};
+      ...prev,
+      [name]: value}))},
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault(),
     setIsSubmitting(true),
@@ -26,7 +26,7 @@ const ContactFormEnhanced: React.FC = () => {
       setFormData({ name: '', email: '', subject: '', message: '' })} catch (error) {
       setSubmitStatus('error')} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <motion.div,
       initial={{ opacity: 0, y: 20 }}
@@ -130,5 +130,5 @@ const ContactFormEnhanced: React.FC = () => {
             Failed to send message. Please try again.,
           </motion.div>)}
       </form>,
-    </motion.div>)};
-export default ContactFormEnhanced;
+    </motion.div>)},
+export default ContactFormEnhanced,

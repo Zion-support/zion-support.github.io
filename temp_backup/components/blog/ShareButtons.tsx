@@ -1,9 +1,9 @@
 import { useMemo } from 'react',
 export default function ShareButtons({
-  title;
-  url;
-  description;
-  onShare;
+  title,
+  url,
+  description,
+  onShare,
 }: {
   title: string,
   url: string,
@@ -14,15 +14,15 @@ export default function ShareButtons({
     const encodedTitle = encodeURIComponent(title),
     const encodedDesc = encodeURIComponent(description || title),
     return {
-      linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDesc}`;
-      x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`;
-      email: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`;
-    };
+      linkedin: `https://www.linkedin.com/shareArticle?mini=true&url=${encodedUrl}&title=${encodedTitle}&summary=${encodedDesc}`,
+      x: `https://twitter.com/intent/tweet?url=${encodedUrl}&text=${encodedTitle}`,
+      email: `mailto:?subject=${encodedTitle}&body=${encodedUrl}`,
+    },
   }, [title, url, description]),
   const handleClick = () => {
     try {
       onShare && onShare()} catch {}
-  };
+  },
   return (
     <div className='flex items-center gap-3'>,
       <a

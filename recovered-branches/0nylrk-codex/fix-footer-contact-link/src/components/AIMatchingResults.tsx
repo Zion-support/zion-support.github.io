@@ -15,24 +15,24 @@ interface AIMatchingResultsProps {
   serviceType?: string}
 ,
 export function AIMatchingResults({
-  matches;
-  onSelectMatch;
-  isLoading = false;
-  projectDescription = "";
+  matches,
+  onSelectMatch,
+  isLoading = false,
+  projectDescription = "",
   serviceType: _serviceType = ""}: AIMatchingResultsProps) {
   const [activeTabsetActiveTab] = useState("all"),
   // Group matches by category,
   const categories = {
-    all: matches;
-    talent: matches.filter(match => match.category.toLowerCase().includes("talent"));
-    services: matches.filter(match => match.category.toLowerCase().includes("service"));
-    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))};
+    all: matches,
+    talent: matches.filter(match => match.category.toLowerCase().includes("talent")),
+    services: matches.filter(match => match.category.toLowerCase().includes("service")),
+    equipment: matches.filter(match => match.category.toLowerCase().includes("equipment"))},
   // Get the icon for a category,
   const getCategoryIcon = (category: string) => {
     const lowerCategory = category.toLowerCase(),
     if (lowerCategory.includes("talent")) return User,
     if (lowerCategory.includes("equipment")) return Monitor,
-    return BriefcaseIcon};
+    return BriefcaseIcon},
   if (isLoading) {
     return (
       <div className="space-y-4">,

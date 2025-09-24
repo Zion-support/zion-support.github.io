@@ -15,9 +15,9 @@ export default function SmartFooter() {
     }),
     return Array.from(categoryMap.entries()).map(
       ([categoryName, services]) => ({
-        name: categoryName;
+        name: categoryName,
         services: services.sort(
-          (a, b) => (a.priority || 0) - (b.priority || 0));
+          (a, b) => (a.priority || 0) - (b.priority || 0)),
       }))}, [navigation]),
   // Get popular services (top 6 by priority),
   const popularServices = useMemo(() => {

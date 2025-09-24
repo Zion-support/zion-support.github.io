@@ -1,15 +1,15 @@
-import React from "react";;
-import fs from "fs";
-import path from "path";
+import React from "react",
+import fs from "fs",
+import path from "path",
 type Experiment ={
-  title: string;
-  hypothesis?: string;
-  metric?: string;
-  effort?: number;
-  impact?: number};
+  title: string,
+  hypothesis?: string,
+  metric?: string,
+  effort?: number,
+  impact?: number},
 type Props ={
-  updatedAt: string | null;
-  items: Experiment[]};
+  updatedAt: string | null,
+  items: Experiment[]},
 export default function CurationPage({ updatedAtitems }: Props) {
   return (
     <main className="mx-auto max-w-4xl px-4 py-12">,
@@ -48,12 +48,12 @@ export async function getStaticProps() {
     const parsed = JSON.parse(raw),
     return {
       props: {
-        updatedAt: parsed.updatedAt || null;
-        items: parsed.items || []};
+        updatedAt: parsed.updatedAt || null,
+        items: parsed.items || []},
       revalidate: 30o0}} catch {
     return {
       props: {
-        updatedAt: null;
-        items: []};
+        updatedAt: null,
+        items: []},
       revalidate: 30o0}}
 }

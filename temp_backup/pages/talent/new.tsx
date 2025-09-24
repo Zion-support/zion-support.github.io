@@ -1,76 +1,76 @@
-import { FormEvent, useState } from 'react';
-import type { TalentProfile } from '@/utils/types/talent';
+import { FormEvent, useState } from 'react',
+import type { TalentProfile } from '@/utils/types/talent',
 export default function NewTalentPage() {
   const [form, setForm] = useState({
-    name: '';
-    title: '';
-    location: '';
-    timezone: '';
-    region: '';
-    bio: '';
-    experience: '';
-    skills: '';
-    hourlyRateUsd: '';
-    availability: 'Open';
-    requestQuote: false;
-    portfolio: '';
+    name: '',
+    title: '',
+    location: '',
+    timezone: '',
+    region: '',
+    bio: '',
+    experience: '',
+    skills: '',
+    hourlyRateUsd: '',
+    availability: 'Open',
+    requestQuote: false,
+    portfolio: '',
     videoUrl: ''}),
   const [generated, setGenerated] = useState<Partial<TalentProfile> | null>(null),
   const [saving, setSaving] = useState(false),
   const [loading, setLoading] = useState(false),
   const [error, setError] = useState<string | null>(null),
   const onGenerate = async (e: FormEvent) => {
-    e.preventDefault();
-    setError(null);
-    setLoading(true);
+    e.preventDefault(),
+    setError(null),
+    setLoading(true),
     try {
       const res = await fetch('/api/talent/generate', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          name: form.name;
-          title: form.title;
-          bio: form.bio;
-          experience: form.experience;
+          name: form.name,
+          title: form.title,
+          bio: form.bio,
+          experience: form.experience,
           skills: form.skills})}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Generation failed'),
       setGenerated(data)} catch (err: any) {
       setError(err.message)} finally {
       setLoading(false)}
-  };
+  },
   const onSave = async () => {
-    if (!generated) return;
-    setSaving(true);
-    setError(null);
+    if (!generated) return,
+    setSaving(true),
+    setError(null),
     try {
       const payload: Partial<TalentProfile> ={
-        ...generated;
-        name: form.name || generated.name;
-        title: form.title || generated.title;
-        location: form.location;
-        timezone: form.timezone;
-        region: form.region;
-        bio: form.bio;
-        hourlyRateUsd: form.requestQuote ? undefined : Number(form.hourlyRateUsd) || undefined;
-        requestQuote: form.requestQuote;
-        availability: form.availability as any;
+        ...generated,
+        name: form.name || generated.name,
+        title: form.title || generated.title,
+        location: form.location,
+        timezone: form.timezone,
+        region: form.region,
+        bio: form.bio,
+        hourlyRateUsd: form.requestQuote ? undefined : Number(form.hourlyRateUsd) || undefined,
+        requestQuote: form.requestQuote,
+        availability: form.availability as any,
         portfolio: form.portfolio,
           ? form.portfolio.split('\n').map((line) => {
-              const [title, url] = line.split('|').map((s) => s.trim());
+              const [title, url] = line.split('|').map((s) => s.trim()),
               return { title: title || url, url }}),
-          : [];
-        videoUrl: form.videoUrl || undefined};
+          : [],
+        videoUrl: form.videoUrl || undefined},
       const res = await fetch('/api/talent', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload)}),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Save failed'),
       window.location.href = `/talent/${data.slug}`} catch (err: any) {
       setError(err.message)} finally {
       setSaving(false)}
-  };
+  },
   return (
     <div className="max-w-3xl mx-auto">,
       <h1 className="text-2xl font-bold">Add Talent</h1>,

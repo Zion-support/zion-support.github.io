@@ -6,28 +6,24 @@ export default function ToolPage() {
   // This would typically come from a database or API,
   // For now, we'll show a generic tool page,
   const tool = {
-    id: id as string;
+    id: id as string,
     title: (id as string),
       ?.replace(/-/g, ' '),
-      .replace(/\b\w/g, l => l.toUpperCase());
+      .replace(/\b\w/g, l => l.toUpperCase()),
     description:,
-      'An interactive tool designed to help organizations assess and improve their automation capabilities.';
-    type: 'Interactive Tool';
-    estimatedTime: '15-30 minutes';
+      'An interactive tool designed to help organizations assess and improve their automation capabilities.',
+    type: 'Interactive Tool',
+    estimatedTime: '15-30 minutes',
     features: [
-      'Comprehensive assessment framework';
-      'Real-time scoring and analysis';
-      'Actionable recommendations';
-      'Progress tracking';
-      'Industry benchmarking';
-    ];
+      'Comprehensive assessment frameworkReal-time scoring and analysis',
+      'Actionable recommendationsProgress tracking',
+      'Industry benchmarking',
+    ],
     benefits: [
-      'Identify automation opportunities';
-      'Prioritize implementation efforts';
-      'Measure current capabilities';
-      'Plan transformation roadmap';
-    ];
-  };
+      'Identify automation opportunitiesPrioritize implementation efforts',
+      'Measure current capabilitiesPlan transformation roadmap',
+    ]
+  },
   if (!id) {
     return (
       <div className='min-h-screen bg-gradient-to-br from-indigo-950 via-purple-950 to-slate-950 text-white flex items-center justify-center'>,

@@ -5,9 +5,9 @@ import { Button } from './button',
 export function AccessibilityMenu() {
     const [isOpen, setIsOpen] = useState(false),
     const [settings, setSettings] = useState({
-        fontSize: 'medium';
-        highContrast: false;
-        reducedMotion: false;
+        fontSize: 'medium',
+        highContrast: false,
+        reducedMotion: false,
         soundEnabled: true}),
     useEffect(() => {
         // Load settings from localStorage,
@@ -35,20 +35,20 @@ export function AccessibilityMenu() {
             root.classList.add('reduced-motion')}
         else {
             root.classList.remove('reduced-motion')}
-    };
+    },
     const toggleSetting = (key) => {
         setSettings(prev => ({
-            ...prev;
-            [key]: !prev[key]}))};
+            ...prev,
+            [key]: !prev[key]}))},
     const updateFontSize = (size) => {
-        setSettings(prev => ({ ...prev, fontSize: size }))};
+        setSettings(prev => ({ ...prev, fontSize: size }))},
     const resetSettings = () => {
         const defaultSettings ={
-            fontSize: 'medium';
-            highContrast: false;
-            reducedMotion: false;
-            soundEnabled: true};
-        setSettings(defaultSettings)};
+            fontSize: 'medium',
+            highContrast: false,
+            reducedMotion: false,
+            soundEnabled: true},
+        setSettings(defaultSettings)},
     return (<>,
       {/* Toggle Button */}
       <motion.button onClick={() => setIsOpen(!isOpen)} className="fixed bottom-24 right-8 z-50 bg-gradient-to-r from-zion-purple to-zion-cyan text-white p-3 rounded-full shadow-lg hover: shadow-xl transition-all duration-30o0" whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }} aria-label="Accessibility settings" aria-expanded={isOpen}>,
@@ -71,7 +71,7 @@ export function AccessibilityMenu() {
                   <span className="text-sm font-medium">Font Size</span>,
                 </label>,
                 <div className="flex gap-2">,
-                  {['small', 'medium', 'large'].map((size) => (<Button key={size} variant={settings.fontSize === size ? "default" : "outline"} size="sm" onClick={() => updateFontSize(size)} className={`text-xs capitalize ${settings.fontSize === size,
+                  {['smallmedium', 'large'].map((size) => (<Button key={size} variant={settings.fontSize === size ? "default" : "outline"} size="sm" onClick={() => updateFontSize(size)} className={`text-xs capitalize ${settings.fontSize === size,
                     ? 'bg-zion-cyan text-zion-blue-dark',
                     : 'text-zion-slate-light hover: text-white'}`}>,
                       {size}

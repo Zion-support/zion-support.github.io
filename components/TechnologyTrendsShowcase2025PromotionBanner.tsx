@@ -7,19 +7,19 @@ import {
   Brain,
   Zap,
   Globe,
-  ArrowRight;
-  X;
-  CheckCircle;
-  Star;
-  Lightbulb;
+  ArrowRight,
+  X,
+  CheckCircle,
+  Star,
+  Lightbulb,
   Rocket} from 'lucide-react',
 const TechnologyTrendsShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentTrendsetCurrentTrend] = useState(0),
   const trends = [
-    { name: "AI-Powered Automation"icon: Brainadoption: "85%" };
-    { name: "Edge Computing"icon: Zapadoption: "70%" };
-    { name: "Quantum Security"icon: Globeadoption: "60%" };
+    { name: "AI-Powered Automation"icon: Brainadoption: "85%" },
+    { name: "Edge Computing"icon: Zapadoption: "70%" },
+    { name: "Quantum Security"icon: Globeadoption: "60%" },
     { name: "Sustainable Tech"icon: TrendingUpadoption: "90%" }
   ],
   useEffect(() => {
@@ -99,7 +99,7 @@ const TechnologyTrendsShowcase20o25PromotionBanner = () => {
                   <motion.div,
                     key={index}
                     animate={{
-                      scale: currentTrend === index ? 1.1 : 1;
+                      scale: currentTrend === index ? 1.1 : 1,
                       opacity: currentTrend === index ? 1 : 0.7}}
                     transition={{ duration: 0.3 }}
                     className="text-center">,
@@ -146,5 +146,5 @@ const TechnologyTrendsShowcase20o25PromotionBanner = () => {
            />,
         </div>,
       </div>,
-    </motion.div>)};
-export default TechnologyTrendsShowcase20o25PromotionBanner;
+    </motion.div>)},
+export default TechnologyTrendsShowcase20o25PromotionBanner,

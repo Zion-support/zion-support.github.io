@@ -7,30 +7,30 @@ const InteractiveDemoWidget: React.FC = () => {
   const [progress, setProgress] = useState(0),
   const demos = [
     {
-      title: "AI Code Generation";
-      description: "Watch AI generate production-ready code in real-time";
-      icon: "💻";
+      title: "AI Code Generation",
+      description: "Watch AI generate production-ready code in real-time",
+      icon: "💻",
       metrics: {
-        linesGenerated: 0;
-        timeSaved: "0h";
+        linesGenerated: 0,
+        timeSaved: "0h",
         accuracy: "0%"}
-    };
+    },
     {
-      title: "Predictive Analytics";
-      description: "See how AI predicts business outcomes with 95% accuracy";
-      icon: "📊";
+      title: "Predictive Analytics",
+      description: "See how AI predicts business outcomes with 95% accuracy",
+      icon: "📊",
       metrics: {
-        predictions: 0;
-        accuracy: "0%";
+        predictions: 0,
+        accuracy: "0%",
         insights: 0}
-    };
+    },
     {
-      title: "Automated Workflows";
-      description: "Experience self-managing business processes";
-      icon: "⚙️";
+      title: "Automated Workflows",
+      description: "Experience self-managing business processes",
+      icon: "⚙️",
       metrics: {
-        tasksCompleted: 0;
-        efficiency: "0%";
+        tasksCompleted: 0,
+        efficiency: "0%",
         errors: 0}
     }
   ],
@@ -45,15 +45,15 @@ const InteractiveDemoWidget: React.FC = () => {
           return prev + 2})}, 10o0)}
 ,
     return () => {
-      if (interval) clearInterval(interval)};
+      if (interval) clearInterval(interval)},
   }, [isRunning]),
   const startDemo = () => {
     setIsRunning(true),
-    setProgress(0)};
+    setProgress(0)},
   const nextDemo = () => {
     setCurrentDemo((prev) => (prev + 1) % demos.length),
     setIsRunning(false),
-    setProgress(0)};
+    setProgress(0)},
   const getCurrentMetrics = () => {
     const baseMetrics = demos[currentDemo].metrics,
     if (!isRunning) return baseMetrics,
@@ -61,22 +61,22 @@ const InteractiveDemoWidget: React.FC = () => {
     switch (currentDemo) {
       case 0: // AI Code Generation,
         return {
-          linesGenerated: Math.floor(150 * multiplier);
-          timeSaved: `${Math.floor(8 * multiplier)}h`;
-          accuracy: `${Math.floor(85 + 10 * multiplier)}%`};
+          linesGenerated: Math.floor(150 * multiplier),
+          timeSaved: `${Math.floor(8 * multiplier)}h`,
+          accuracy: `${Math.floor(85 + 10 * multiplier)}%`},
       case 1: // Predictive Analytics,
         return {
-          predictions: Math.floor(50 * multiplier);
-          accuracy: `${Math.floor(90 + 5 * multiplier)}%`;
-          insights: Math.floor(25 * multiplier)};
+          predictions: Math.floor(50 * multiplier),
+          accuracy: `${Math.floor(90 + 5 * multiplier)}%`,
+          insights: Math.floor(25 * multiplier)},
       case 2: // Automated Workflows,
         return {
-          tasksCompleted: Math.floor(10o0 * multiplier);
-          efficiency: `${Math.floor(70 + 25 * multiplier)}%`;
-          errors: Math.max(0, Math.floor(5 - 5 * multiplier))};
+          tasksCompleted: Math.floor(10o0 * multiplier),
+          efficiency: `${Math.floor(70 + 25 * multiplier)}%`,
+          errors: Math.max(0, Math.floor(5 - 5 * multiplier))},
       default: ,
         return baseMetrics}
-  };
+  },
   const currentMetrics = getCurrentMetrics(),
   return (
     <section className="py-20 bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white">,
@@ -178,5 +178,5 @@ const InteractiveDemoWidget: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveDemoWidget;
+    </section>)},
+export default InteractiveDemoWidget,

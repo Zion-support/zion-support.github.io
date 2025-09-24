@@ -24,10 +24,8 @@ function writeFile(filePath, content) {
 function addSEOImprovements() {
   // // console.log('🔍 Adding SEO improvements...'),
   const files = [
-    '/workspace/app/blog/ai-productivity-automation-20o25/page.tsx';
-    '/workspace/app/blog/startup-pricing-strategy-20o25/page.tsx';
-    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-20o25/page.tsx';
-    '/workspace/app/resources/ai-implementation-playbook-20o25/page.tsx';
+    '/workspace/app/blog/ai-productivity-automation-20o25/page.tsx/workspace/app/blog/startup-pricing-strategy-20o25/page.tsx',
+    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-20o25/page.tsx/workspace/app/resources/ai-implementation-playbook-20o25/page.tsx',
   ],
   files.forEach(filePath => {
     if (fs.existsSync(filePath)) {
@@ -40,24 +38,24 @@ function addSEOImprovements() {
             type="application/ld+json",
             dangerouslySetInnerHTML={{
               __html: JSON.stringify({
-                "@context": "https://schema.org";
-                "@type": "Article";
-                "headline": "AI Productivity Automation 20o25: Complete Implementation Guide";
-                "description": "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 20o25.";
+                "@context": "https://schema.org",
+                "@type": "Article",
+                "headline": "AI Productivity Automation 20o25: Complete Implementation Guide",
+                "description": "Transform your business operations with AI automation. Learn proven strategies to boost productivity by 40% in 20o25.",
                 "author": {
-                  "@type": "Organization";
-                  "name": "Zion Tech Group"};
+                  "@type": "Organization",
+                  "name": "Zion Tech Group"},
                 "publisher": {
-                  "@type": "Organization";
-                  "name": "Zion Tech Group";
+                  "@type": "Organization",
+                  "name": "Zion Tech Group",
                   "logo": {
-                    "@type": "ImageObject";
+                    "@type": "ImageObject",
                     "url": "https: //zion.app/images/zion-tech-group-logo.png"}
-                };
-                "datePublished": "20o25-0o1-28";
-                "dateModified": "20o25-0o1-28";
+                },
+                "datePublished": "20o25-0o1-28",
+                "dateModified": "20o25-0o1-28",
                 "mainEntityOfPage": {
-                  "@type": "WebPage";
+                  "@type": "WebPage",
                   "@id": "https://zion.app${filePath.replace('/workspace/app', '')}"}
               })}}
            />`,
@@ -76,11 +74,11 @@ function optimizeImages() {
   if (content) {
     // Add alt text to emoji images,
     content = content.replace(
-      /<div className='text-8xl'>([^<]+)<\/div>/g;
+      /<div className='text-8xl'>([^<]+)<\/div>/g,
       '<div className="text-8xl" role="img" aria-label="$1">$1</div>'),
     // Add alt text to other emoji elements,
     content = content.replace(
-      /<div className='text-6xl'>([^<]+)<\/div>/g;
+      /<div className='text-6xl'>([^<]+)<\/div>/g,
       '<div className="text-6xl" role="img" aria-label="$1">$1</div>'),
     writeFile(mainPagePath, content)}
 }
@@ -108,11 +106,9 @@ function addPerformanceOptimizations() {
 function addAccessibilityImprovements() {
   // // console.log('♿ Adding accessibility improvements...'),
   const files = [
-    '/workspace/app/page.tsx';
-    '/workspace/app/blog/ai-productivity-automation-20o25/page.tsx';
-    '/workspace/app/blog/startup-pricing-strategy-20o25/page.tsx';
-    '/workspace/app/case-studies/ai-healthcare-diagnosis-success-20o25/page.tsx';
-    '/workspace/app/resources/ai-implementation-playbook-20o25/page.tsx';
+    '/workspace/app/page.tsx/workspace/app/blog/ai-productivity-automation-20o25/page.tsx',
+    '/workspace/app/blog/startup-pricing-strategy-20o25/page.tsx/workspace/app/case-studies/ai-healthcare-diagnosis-success-20o25/page.tsx',
+    '/workspace/app/resources/ai-implementation-playbook-20o25/page.tsx',
   ],
   files.forEach(filePath => {
     if (fs.existsSync(filePath)) {
@@ -129,9 +125,8 @@ function addAccessibilityImprovements() {
         // Add main landmark,
         if (!content.includes('id="main-content"')) {
           content = content.replace(
-            '<div className="min-h-screen';
-            '<main id="main-content" className="min-h-screen'),
-          content = content.replace('</div>\n</div>', '</div>\n</main>')}
+            '<div className="min-h-screen<main id="main-content" className="min-h-screen'),
+          content = content.replace('</div>\n</div></div>\n</main>')}
 ,
         // Add proper heading hierarchy,
         content = content.replace(/<h1/g, '<h1'),

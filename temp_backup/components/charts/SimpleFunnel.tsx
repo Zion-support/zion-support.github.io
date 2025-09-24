@@ -1,8 +1,8 @@
 import React, { useMemo } from 'react',
-export type FunnelStage ={ label: string, value: number };
+export type FunnelStage ={ label: string, value: number },
 export type SimpleFunnelProps ={
   stages: FunnelStage[],
-  onExportCsv?: (rows: Array<Record<string string | number>>) => void};
+  onExportCsv?: (rows: Array<Record<string string | number>>) => void},
 export default function SimpleFunnel({ stages, onExportCsv }: SimpleFunnelProps) {
   const max = Math.max(...stages.map(s => s.value), 1),
   const csvRows = useMemo(() => stages.map(s => ({ stage: s.label, value: s.value })), [stages]),

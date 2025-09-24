@@ -3,40 +3,40 @@ const NewContent20o25FutureTrendsShowcase = () => {
   const trendItems = [
     {
       title:,
-        'Quantum AI Integration: The Next Frontier in Business Intelligence';
+        'Quantum AI Integration: The Next Frontier in Business Intelligence',
       description:,
-        'Explore how quantum computing is revolutionizing AI capabilities and enabling unprecedented business insights.';
-      category: 'Technology';
-      impact: 'High';
-      timeline: '20o25-20o26';
-    };
+        'Explore how quantum computing is revolutionizing AI capabilities and enabling unprecedented business insights.',
+      category: 'Technology',
+      impact: 'High',
+      timeline: '20o25-20o26'
+    },
     {
       title:,
-        'Autonomous Business Operations: The Future of Enterprise Management';
+        'Autonomous Business Operations: The Future of Enterprise Management',
       description:,
-        'Discover how AI-powered autonomous systems are transforming business operations and reducing human intervention.';
-      category: 'Operations';
-      impact: 'Transformational';
-      timeline: '20o25';
-    };
+        'Discover how AI-powered autonomous systems are transforming business operations and reducing human intervention.',
+      category: 'Operations',
+      impact: 'Transformational',
+      timeline: '20o25'
+    },
     {
       title:,
-        'Advanced Neural Architectures: 10o00x Faster Processing Capabilities';
+        'Advanced Neural Architectures: 10o00x Faster Processing Capabilities',
       description:,
-        'Learn about next-generation neural networks that process information 10o00x faster with human-like reasoning.';
-      category: 'AI Architecture';
-      impact: 'Revolutionary';
-      timeline: '20o26';
-    };
+        'Learn about next-generation neural networks that process information 10o00x faster with human-like reasoning.',
+      category: 'AI Architecture',
+      impact: 'Revolutionary',
+      timeline: '20o26'
+    },
     {
       title:,
-        'Predictive Analytics 20o25: Anticipating Market Changes with 99.7% Accuracy';
+        'Predictive Analytics 20o25: Anticipating Market Changes with 99.7% Accuracy',
       description:,
-        'Master advanced predictive analytics that forecast market trends and business outcomes with unprecedented accuracy.';
-      category: 'Analytics';
-      impact: 'High';
-      timeline: '20o25';
-    };
+        'Master advanced predictive analytics that forecast market trends and business outcomes with unprecedented accuracy.',
+      category: 'Analytics',
+      impact: 'High',
+      timeline: '20o25'
+    },
   ],
   return (
     <div className='bg-white py-16 px-4'>,
@@ -105,5 +105,5 @@ const NewContent20o25FutureTrendsShowcase = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25FutureTrendsShowcase;
+    </div>)},
+export default NewContent20o25FutureTrendsShowcase,

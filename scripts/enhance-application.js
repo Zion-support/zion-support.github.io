@@ -5,12 +5,12 @@ const { execSync } = require('child_process'),
 // // console.log('🚀 Starting Application Enhancement Process...\n'),
 // Colors for console output,
 const colors ={
-  green: '\x1b[32m';
-  blue: '\x1b[34m';
-  yellow: '\x1b[33m';
-  red: '\x1b[31m';
-  reset: '\x1b[0m';
-  bold: '\x1b[1m'};
+  green: '\x1b[32m',
+  blue: '\x1b[34m',
+  yellow: '\x1b[33m',
+  red: '\x1b[31m',
+  reset: '\x1b[0m',
+  bold: '\x1b[1m'},
 function log(message, color = 'reset') {
   // // console.log(`${colors[color]}${message}${colors.reset}`)}
 ,
@@ -29,40 +29,30 @@ function logError(message) {
 // Enhancement steps,
 const enhancements = [
   {
-    name: 'Performance Optimization';
+    name: 'Performance Optimization',
     steps: [
-      'Adding lazy loading to components';
-      'Implementing code splitting';
-      'Optimizing bundle size';
-      'Adding performance monitoring']};
+      'Adding lazy loading to componentsImplementing code splitting',
+      'Optimizing bundle sizeAdding performance monitoring']},
   {
-    name: 'SEO Enhancement';
+    name: 'SEO Enhancement',
     steps: [
-      'Adding enhanced meta tags';
-      'Implementing structured data';
-      'Optimizing page titles and descriptions';
-      'Adding Open Graph tags']};
+      'Adding enhanced meta tagsImplementing structured data',
+      'Optimizing page titles and descriptionsAdding Open Graph tags']},
   {
-    name: 'User Experience Improvements';
+    name: 'User Experience Improvements',
     steps: [
-      'Adding loading states';
-      'Implementing error boundaries';
-      'Creating interactive components';
-      'Adding accessibility features']};
+      'Adding loading statesImplementing error boundaries',
+      'Creating interactive componentsAdding accessibility features']},
   {
-    name: 'Security Enhancements';
+    name: 'Security Enhancements',
     steps: [
-      'Adding CSP headers';
-      'Implementing security best practices';
-      'Adding input validation';
-      'Securing API endpoints']};
+      'Adding CSP headersImplementing security best practices',
+      'Adding input validationSecuring API endpoints']},
   {
-    name: 'Analytics and Monitoring';
+    name: 'Analytics and Monitoring',
     steps: [
-      'Adding performance metrics';
-      'Implementing error tracking';
-      'Adding user analytics';
-      'Creating monitoring dashboards']}
+      'Adding performance metricsImplementing error tracking',
+      'Adding user analyticsCreating monitoring dashboards']}
 ],
 // Function to update package.json with new scripts,
 function updatePackageJson() {
@@ -70,20 +60,8 @@ function updatePackageJson() {
   const packagePath = path.join(process.cwd(), 'package.json'),
   const packageJson = JSON.parse(fs.readFileSync(packagePath, 'utf8')),
   const newScripts ={
-    'enhance:all': 'node scripts/enhance-application.js';
-    'enhance:performance': 'node scripts/enhance-window.window.performance.js';
-    'enhance:seo': 'node scripts/enhance-seo.js';
-    'enhance:ux': 'node scripts/enhance-ux.js';
-    'enhance:security': 'node scripts/enhance-security.js';
-    'analyze:bundle': 'npm run build && npx @next/bundle-analyzer';
-    'test:accessibility': 'npx jest --testPathPatterns=accessibility';
-    'test:performance': 'npx jest --testPathPatterns=performance';
-    'audit:performance': 'lighthouse http://localhost:30o00 --output=html --output-path=./lighthouse-report.html';
-    'audit:security': 'npm audit && npm run security:scan';
-    'optimize:images': 'node scripts/optimize-images.js';
-    'generate:sitemap': 'node scripts/generate-sitemap.js';
-    'generate: manifest': 'node scripts/generate-manifest.js'};
-  packageJson.scripts ={ ...packageJson.scripts, ...newScripts };
+    'enhance: all': 'node scripts/enhance-application.jsenhance:performance': 'node scripts/enhance-window.window.performance.jsenhance:seo': 'node scripts/enhance-seo.jsenhance:ux': 'node scripts/enhance-ux.jsenhance:security': 'node scripts/enhance-security.jsanalyze:bundle': 'npm run build && npx @next/bundle-analyzertest:accessibility': 'npx jest --testPathPatterns=accessibilitytest:performance': 'npx jest --testPathPatterns=performanceaudit:performance': 'lighthouse http://localhost:30o00 --output=html --output-path=./lighthouse-report.htmlaudit:security': 'npm audit && npm run security:scanoptimize:images': 'node scripts/optimize-images.jsgenerate:sitemap': 'node scripts/generate-sitemap.jsgenerate: manifest': 'node scripts/generate-manifest.js'},
+  packageJson.scripts ={ ...packageJson.scripts, ...newScripts },
   fs.writeFileSync(packagePath, JSON.stringify(packageJson, null, 2)),
   logSuccess('Updated package.json with enhancement scripts')}
 ,
@@ -92,44 +70,44 @@ function createEnhancementConfig() {
   logStep(2, 'Creating enhancement configuration'),
   const config ={
     performance: {
-      lazyLoading: true;
-      codeSplitting: true;
-      bundleAnalysis: true;
-      imageOptimization: true;
+      lazyLoading: true,
+      codeSplitting: true,
+      bundleAnalysis: true,
+      imageOptimization: true,
       caching: {
-        static: true;
-        api: true;
+        static: true,
+        api: true,
         images: true}
-    };
+    },
     seo: {
-      metaTags: true;
-      structuredData: true;
-      sitemap: true;
-      robots: true;
-      openGraph: true;
-      twitter: true};
+      metaTags: true,
+      structuredData: true,
+      sitemap: true,
+      robots: true,
+      openGraph: true,
+      twitter: true},
     ux: {
-      loadingStates: true;
-      errorBoundaries: true;
-      accessibility: true;
-      darkMode: true;
-      animations: true;
-      responsive: true};
+      loadingStates: true,
+      errorBoundaries: true,
+      accessibility: true,
+      darkMode: true,
+      animations: true,
+      responsive: true},
     security: {
-      csp: true;
-      inputValidation: true;
-      sanitization: true;
-      headers: true;
-      authentication: true};
+      csp: true,
+      inputValidation: true,
+      sanitization: true,
+      headers: true,
+      authentication: true},
     analytics: {
-      performance: true;
-      errors: true;
-      userBehavior: true;
-      conversions: true;
+      performance: true,
+      errors: true,
+      userBehavior: true,
+      conversions: true,
       realTime: true}
-  };
+  },
   fs.writeFileSync(
-    path.join(process.cwd(), 'enhancement.config.json');
+    path.join(process.cwd(), 'enhancement.config.json'),
     JSON.stringify(config, null, 2)),
   logSuccess('Created enhancement configuration')}
 ,
@@ -162,9 +140,9 @@ addCaching(),
 // // console.log('✅ Performance enhancement complete!'),
 `,
   fs.writeFileSync(
-    path.join(process.cwd(), 'scripts', 'enhance-window.window.performance.js');
+    path.join(process.cwd(), 'scriptsenhance-window.window.performance.js'),
     script),
-  fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-window.window.performance.js'), '755'),
+  fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-window.window.performance.js'), '755'),
   logSuccess('Created performance enhancement script')}
 ,
 // Function to create SEO enhancement script,
@@ -196,9 +174,9 @@ optimizeMetaTags(),
 // // console.log('✅ SEO enhancement complete!'),
 `,
   fs.writeFileSync(
-    path.join(process.cwd(), 'scripts', 'enhance-seo.js');
+    path.join(process.cwd(), 'scriptsenhance-seo.js'),
     script),
-  fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-seo.js'), '755'),
+  fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-seo.js'), '755'),
   logSuccess('Created SEO enhancement script')}
 ,
 // Function to create UX enhancement script,
@@ -230,9 +208,9 @@ enhanceAccessibility(),
 // // console.log('✅ UX enhancement complete!'),
 `,
   fs.writeFileSync(
-    path.join(process.cwd(), 'scripts', 'enhance-ux.js');
+    path.join(process.cwd(), 'scriptsenhance-ux.js'),
     script),
-  fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-ux.js'), '755'),
+  fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-ux.js'), '755'),
   logSuccess('Created UX enhancement script')}
 ,
 // Function to create security enhancement script,
@@ -264,9 +242,9 @@ addSecurityHeaders(),
 // // console.log('✅ Security enhancement complete!'),
 `,
   fs.writeFileSync(
-    path.join(process.cwd(), 'scripts', 'enhance-security.js');
+    path.join(process.cwd(), 'scriptsenhance-security.js'),
     script),
-  fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-security.js'), '755'),
+  fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-security.js'), '755'),
   logSuccess('Created security enhancement script')}
 ,
 // Function to create Next.js configuration enhancements,
@@ -278,32 +256,32 @@ function enhanceNextConfig() {
     // Add performance optimizations,
     if (!config.includes('experimental.optimizeCss')) {
       config = config.replace(
-        'module.exports ={';
+        'module.exports ={',
         `module.exports = {
   experimental: {
-    optimizeCss: true;
-    optimizePackageImports: ['framer-motion', 'lucide-react']},`)}
+    optimizeCss: true,
+    optimizePackageImports: ['framer-motionlucide-react']},`)}
 ,
     // Add security headers,
     if (!config.includes('async headers()')) {
       config = config.replace(
-        'module.exports ={';
+        'module.exports ={',
         `module.exports = {
   async headers() {
     return [
       {
-        source: '/(.*)';
+        source: '/(.*)',
         headers: [
           {
-            key: 'X-Frame-Options';
-            value: 'DENY'};
+            key: 'X-Frame-Options',
+            value: 'DENY'},
           {
-            key: 'X-Content-Type-Options';
-            value: 'nosniff'};
+            key: 'X-Content-Type-Options',
+            value: 'nosniff'},
           {
-            key: 'Referrer-Policy';
-            value: 'origin-when-cross-origin'};
-        ]};
+            key: 'Referrer-Policy',
+            value: 'origin-when-cross-origin'},
+        ]},
     ]},`)}
 ,
     fs.writeFileSync(nextConfigPath, config),
@@ -323,9 +301,9 @@ import { getCLS, getFID, getFCP, getLCP, getTTFB } from 'web-vitals',
 function sendToAnalytics(metric) {
   if (typeof window !== 'undefined' && window.gtag) {
     window.gtag('event', metric.name, {
-      event_category: 'Web Vitals';
-      value: Math.round(metric.name === 'CLS' ? metric.value * 10o00 : metric.value);
-      event_label: metric.id;
+      event_category: 'Web Vitals',
+      value: Math.round(metric.name === 'CLS' ? metric.value * 10o00 : metric.value),
+      event_label: metric.id,
       non_interaction: true})}
 }
 ,
@@ -336,21 +314,21 @@ getLCP(sendToAnalytics),
 getTTFB(sendToAnalytics),
 \`,
   fs.writeFileSync(
-    path.join(process.cwd(), 'lib', 'analytics.js');
+    path.join(process.cwd(), 'libanalytics.js'),
     webVitalsScript),
   logSuccess('Performance monitoring setup complete')}
 ,
   fs.writeFileSync(
-    path.join(process.cwd(), 'scripts', 'setup-monitoring.js');
+    path.join(process.cwd(), 'scriptssetup-monitoring.js'),
     monitoringScript),
-  fs.chmodSync(path.join(process.cwd(), 'scripts', 'setup-monitoring.js'), '755'),
+  fs.chmodSync(path.join(process.cwd(), 'scriptssetup-monitoring.js'), '755'),
   logSuccess('Created performance monitoring setup')}
 ,
 // Main execution,
 async function main() {
   try {
-    log('🎯 Application Enhancement Process Started', 'bold'),
-    log('This will enhance your application with modern best practices\n', 'yellow'),
+    log('🎯 Application Enhancement Process Startedbold'),
+    log('This will enhance your application with modern best practices\nyellow'),
     // Ensure scripts directory exists,
     const scriptsDir = path.join(process.cwd(), 'scripts'),
     if (!fs.existsSync(scriptsDir)) {
@@ -370,13 +348,13 @@ async function main() {
     createSecurityScript(),
     enhanceNextConfig(),
     setupPerformanceMonitoring(),
-    log('\n🎉 Application Enhancement Complete!', 'bold'),
-    log('\nEnhanced features:', 'blue'),
+    log('\n🎉 Application Enhancement Complete!bold'),
+    log('\nEnhanced features:blue'),
     enhancements.forEach((enhancement, index) => {
       log(`\n${index + 1}. ${enhancement.name}:`, 'green'),
       enhancement.steps.forEach(step => {
         log(`   • ${step}`, 'reset')})}),
-    log('\n📋 Next Steps:', 'yellow'),
+    log('\n📋 Next Steps:yellow'),
     log('1. Run "npm run enhance: performance" for performance optimizations'),
     log('2. Run "npm run enhance:seo" for SEO improvements'),
     log('3. Run "npm run enhance:ux" for UX enhancements'),
@@ -384,7 +362,7 @@ async function main() {
     log('5. Run "npm run build" to test all enhancements'),
     log('6. Run "npm run audit:performance" for performance audit'),
     log('7. Run "npm run audit:security" for security audit'),
-    log('\n✨ Your application is now enhanced with modern best practices!', 'green')} catch (error) {
+    log('\n✨ Your application is now enhanced with modern best practices!green')} catch (error) {
     logError(\`Enhancement failed: \${error.message}\`),
     process.exit(1)}
 }
@@ -393,9 +371,9 @@ async function main() {
 main(),
 `,
 fs.writeFileSync(
-  path.join(process.cwd(), 'scripts', 'enhance-application.js');
+  path.join(process.cwd(), 'scriptsenhance-application.js'),
   script),
-fs.chmodSync(path.join(process.cwd(), 'scripts', 'enhance-application.js'), '755'),
+fs.chmodSync(path.join(process.cwd(), 'scriptsenhance-application.js'), '755'),
 logSuccess('Created comprehensive enhancement script'),
 // Update todos,
 <｜tool▁calls▁begin｜><｜tool▁call▁begin｜>,

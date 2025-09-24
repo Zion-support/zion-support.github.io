@@ -31,7 +31,7 @@ export default function BridgeForm() {
     let mounted = true,
     async function load() {
       if (!account) return,
-      const results: Record<string string> ={};
+      const results: Record<string string> ={},
       await Promise.all(
         SUPPORTED_CHAIN_KEYS.map(async (key) => {
           const chain = CHAINS[key],
@@ -48,7 +48,7 @@ export default function BridgeForm() {
       if (mounted) setBalances(results)}
     load(),
     return () => {
-      mounted = false};
+      mounted = false},
   }, [account]),
   const canBridge = useMemo(() => {
     if (!account) return false,

@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import fs from 'fs',
 import path from 'path',
 import { fileURLToPath } from 'url',
   importFn: () => Promise<{ default: T }>,
-        importFn(),
+importFn(),
 #!/usr/bin/env node,
 const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
@@ -36,51 +36,51 @@ async function optimizeNextConfig() {
 const nextConfig = {
   // Performance optimizations,
   experimental: {
-    optimizeCss: true;
-    optimizePackageImports: ['lucide-react', '@heroicons/react'];
-  };
+    optimizeCss: true,
+    optimizePackageImports: ['lucide-react@heroicons/react'],
+  },
   // Image optimization,
   images: {
-    formats: ['image/webp', 'image/avif'];
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840];
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384];
-  };
+    formats: ['image/webpimage/avif'],
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+  },
   // Compression,
-  compress: true;
+  compress: true,
   // Bundle analyzer (only in development),
   ...(process.env.ANALYZE === 'true' && {
     webpack: (config) => {
       config.plugins.push(
         new (require('@next/bundle-analyzer'))({
-          enabled: true;
+          enabled: true
         })),
-      return config};
-  });
+      return config},
+  }),
   // Headers for caching,
   async headers() {
     return [
       {
-        source: '/:path*';
+        source: '/:path*',
         headers: [
           {
-            key: 'X-DNS-Prefetch-Control';
-            value: 'on'};
+            key: 'X-DNS-Prefetch-Control',
+            value: 'on'},
           {
-            key: 'X-Frame-Options';
+            key: 'X-Frame-Options',
             value: 'DENY'}
-        ];
-      };
+        ],
+      },
       {
-        source: '/static/:path*';
+        source: '/static/:path*',
         headers: [
           {
-            key: 'Cache-Control';
-            value: 'public, max-age=31536000, immutable';
-          };
-        ];
-      };
-    ]};
-};
+            key: 'Cache-Control',
+            value: 'public, max-age=31536000, immutable',
+          },
+        ],
+      },
+    ]},
+},
 module.exports = nextConfig,
 `,
   fs.writeFileSync(path.join(__dirname, 'next.config.mjs'), nextConfigContent),
@@ -125,7 +125,7 @@ export class PerformanceMonitor {
           if (entry.entryType === 'layout-shift') {
             // // console.log('CLS:', entry.value)}
         }
-      }).observe({ entryTypes: ['largest-contentful-paint', 'first-input', 'layout-shift'] })}
+      }).observe({ entryTypes: ['largest-contentful-paintfirst-input', 'layout-shift'] })}
   }
 }
 ,
@@ -142,22 +142,22 @@ async function optimizeImages() {
 // Image optimization utilities,
 export const optimizeImageProps = (src: string, alt: string, width?: number, height?: number) => {
   return {
-    src;
-    alt;
-    width: width || 800;
-    height: height || 600;
-    loading: 'lazy' as const;
-    placeholder: 'blur' as const;
-    blurDataURL: 'data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=';
-  };
-};
+    src,
+    alt,
+    width: width || 800,
+    height: height || 600,
+    loading: 'lazy' as const,
+    placeholder: 'blur' as const,
+    blurDataURL: 'data:image/jpeg,base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAABAAEDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAv/xAAUEAEAAAAAAAAAAAAAAAAAAAAA/8QAFQEBAQAAAAAAAAAAAAAAAAAAAAX/xAAUEQEAAAAAAAAAAAAAAAAAAAAA/9oADAMBAAIRAxEAPwCdABmX/9k=',
+  },
+},
 export const getOptimizedImageUrl = (url: string, width: number, quality: number = 75) => {
   const params = new URLSearchParams({
-    url;
-    w: width.toString();
-    q: quality.toString();
+    url,
+    w: width.toString(),
+    q: quality.toString()
   }),
-  return \`/_next/image?\${params.toString()}\`};
+  return \`/_next/image?\${params.toString()}\`},
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'image-optimizer.ts'), imageOptimizer),
@@ -176,9 +176,9 @@ export class CacheManager {
 ,
   set(key: string, data: any, ttl: number = 300000): void { // 5 minutes default,
     this.cache.set(key, {
-      data;
-      timestamp: Date.now();
-      ttl;
+      data,
+      timestamp: Date.now(),
+      ttl
     })}
 ,
   get(key: string): any | null {
@@ -205,7 +205,7 @@ async function optimizeBundle() {
 // Bundle optimization utilities,
 export const lazyLoadComponent = <T extends React.ComponentType<any>>(
 ): React.LazyExoticComponent<T> => {
-  return React.lazy(importFn)};
+  return React.lazy(importFn)},
 export const preloadComponent = (importFn: () => Promise<any>) => {
   if (typeof window !== 'undefined') {
     // Preload on idle,
@@ -215,21 +215,21 @@ export const preloadComponent = (importFn: () => Promise<any>) => {
       setTimeout(() => {
       }, 0)}
   }
-};
+},
 export const chunkOptimizer = {
   // Split vendor chunks,
   splitVendorChunks: (chunks: any) => {
     return {
-      ...chunks;
+      ...chunks,
       vendor: {
-        chunks: 'all';
-        test: /[\\\\/]node_modules[\\\\/]/;
-        name: 'vendor';
-        priority: 10;
-      };
-    };
-  };
-};
+        chunks: 'all',
+        test: /[\\\\/]node_modules[\\\\/]/,
+        name: 'vendor',
+        priority: 10
+      },
+    },
+  },
+},
 `,
   const utilsDir = path.join(__dirname, 'utils'),
   fs.writeFileSync(path.join(utilsDir, 'bundle-optimizer.ts'), bundleOptimizer),

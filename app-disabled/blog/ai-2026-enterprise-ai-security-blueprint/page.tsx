@@ -33,7 +33,7 @@ const EnterpriseAISecurityBlueprint20o26 = () => {
           <h2>Core Principles</h2>,
           <ul>,
             <li>,
-              Zero-trust for agents: explicit identities, least privilege;
+              Zero-trust for agents: explicit identities, least privilege,
               short-lived credentials,
             </li>,
             <li>,
@@ -91,5 +91,5 @@ const EnterpriseAISecurityBlueprint20o26 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default EnterpriseAISecurityBlueprint20o26;
+    </div>)},
+export default EnterpriseAISecurityBlueprint20o26,

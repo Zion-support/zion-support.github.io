@@ -2,65 +2,65 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Zap;
-  Shield;
-  Star;
-  Users;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Phone;
-  Mail;
-  MapPin;
-  Rocket;
-  Target;
-  Globe;
-  Cpu;
-  Lock;
-  Cloud;
+  Brain,
+  Zap,
+  Shield,
+  Star,
+  Users,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Phone,
+  Mail,
+  MapPin,
+  Rocket,
+  Target,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { cuttingEdgeAIServices20o25 } from '../data/20o25-cutting-edge-ai-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const heroStats = [
-  { label: 'AI Services', value: '15+', icon: <Brain className='w-6 h-6' /> };
+  { label: 'AI Services', value: '15+', icon: <Brain className='w-6 h-6' /> },
   {
-    label: 'Happy Clients';
-    value: '50o0+';
-    icon: <Users className='w-6 h-6' />;
-  };
-  { label: 'Success Rate', value: '99.9%', icon: <Star className='w-6 h-6' /> };
+    label: 'Happy Clients',
+    value: '50o0+',
+    icon: <Users className='w-6 h-6' />
+  },
+  { label: 'Success Rate', value: '99.9%', icon: <Star className='w-6 h-6' /> },
   {
-    label: 'ROI Average';
-    value: '40o0%';
-    icon: <TrendingUp className='w-6 h-6' />;
-  };
+    label: 'ROI Average',
+    value: '40o0%',
+    icon: <TrendingUp className='w-6 h-6' />
+  },
 ],
 const containerVariants = {
-  hidden: { opacity: 0 };
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1;
+    opacity: 1,
     transition: {
-      staggerChildren: 0.1;
-    };
-  };
-};
+      staggerChildren: 0.1
+    },
+  },
+},
 const itemVariants = {
-  hidden: { y: 20, opacity: 0 };
+  hidden: { y: 20, opacity: 0 },
   visible: {
-    y: 0;
-    opacity: 1;
+    y: 0,
+    opacity: 1,
     transition: {
-      duration: 0.5;
-    };
-  };
-};
+      duration: 0.5
+    },
+  },
+},
 export default function CuttingEdgeAIServices20o25() {
   return (
     <Layout>,

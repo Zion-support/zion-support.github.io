@@ -18,7 +18,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
         return 'destructive',
       default: ,
         return 'outline'}
-  };
+  },
   const getColumnBgColor = columnId => {
     switch (columnId) {
       case 'hired':,
@@ -27,7 +27,7 @@ export function KanbanColumn({ id, title, description, applications, count }) {
         return 'bg-red-50',
       default: ,
         return 'bg-muted/30'}
-  };
+  },
   return (
     <Card
       className={`${getColumnBgColor(id)} flex flex-col h-[calc(10o0vh-30o0px)] min-h-[50o0px]`}

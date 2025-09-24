@@ -2,18 +2,15 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25 Ultimate Innovation - Revolutionary Breakthroughs | Zion Tech Group';
+    'AI 20o25 Ultimate Innovation - Revolutionary Breakthroughs | Zion Tech Group',
   description:,
-    'Discover the ultimate AI innovations of 20o25. Revolutionary breakthroughs in artificial intelligence, machine learning, and autonomous systems that will transform your business.';
+    'Discover the ultimate AI innovations of 20o25. Revolutionary breakthroughs in artificial intelligence, machine learning, and autonomous systems that will transform your business.',
   keywords: [
-    'AI 20o25';
-    'artificial intelligence';
-    'machine learning';
-    'autonomous systems';
-    'business transformation';
-    'innovation';
-  ];
-};
+    'AI 20o25artificial intelligence',
+    'machine learningautonomous systems',
+    'business transformationinnovation',
+  ]
+},
 export default function AI20o25UltimateInnovationPage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white'>,
@@ -30,7 +27,7 @@ export default function AI20o25UltimateInnovationPage() {
           </h1>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Experience the revolutionary breakthroughs in artificial,
-            intelligence that are reshaping the future of business, technology;
+            intelligence that are reshaping the future of business, technology,
             and human potential.,
           </p>,
           <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

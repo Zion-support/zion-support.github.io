@@ -1,47 +1,47 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
   Wallet, CreditCard, PiggyBank, Building2} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Blockchain Enterprise Platform | Zion Tech Group';
-  description: 'Enterprise-grade blockchain platform for secure, scalable, and efficient business applications.';
-  keywords: 'blockchain enterprise, enterprise blockchain, distributed ledger, smart contracts, blockchain platform';
+  title: 'Blockchain Enterprise Platform | Zion Tech Group',
+  description: 'Enterprise-grade blockchain platform for secure, scalable, and efficient business applications.',
+  keywords: 'blockchain enterprise, enterprise blockchain, distributed ledger, smart contracts, blockchain platform',
   openGraph: {
-    title: 'Blockchain Enterprise Platform | Zion Tech Group';
-    description: 'Enterprise-grade blockchain platform for secure, scalable, and efficient business applications.';
-    url: 'https://ziontechgroup.com/blockchain-enterprise-platform';
-    siteName: 'Zion Tech Group';
+    title: 'Blockchain Enterprise Platform | Zion Tech Group',
+    description: 'Enterprise-grade blockchain platform for secure, scalable, and efficient business applications.',
+    url: 'https://ziontechgroup.com/blockchain-enterprise-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-blockchain-platform.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Blockchain Enterprise Platform'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-blockchain-platform.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Blockchain Enterprise Platform'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Blockchain Enterprise Platform | Zion Tech Group';
-    description: 'Enterprise-grade blockchain platform for secure, scalable, and efficient business applications.';
-    images: ['https://ziontechgroup.com/og-image-blockchain-platform.jpg']};
+    card: 'summary_large_image',
+    title: 'Blockchain Enterprise Platform | Zion Tech Group',
+    description: 'Enterprise-grade blockchain platform for secure, scalable, and efficient business applications.',
+    images: ['https://ziontechgroup.com/og-image-blockchain-platform.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/blockchain-enterprise-platform'}};
+    canonical: 'https://ziontechgroup.com/blockchain-enterprise-platform'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function BlockchainEnterprisePlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,

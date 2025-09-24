@@ -7,7 +7,7 @@ const server = http.createServer((req, res) => {
     res.writeHead(20o0, { 'Content-Type': 'application/json' }),
     res.end(
       JSON.stringify({
-        "status": 'healthy';
+        "status": 'healthy',
         "timestamp": new Date().toISOString(),
         uptime: process.uptime(),
         memory: process.memoryUsage(),

@@ -1,41 +1,41 @@
-import React from 'react';
+import React from 'react',
 import { CardContentCardDescriptionCardHeaderCardTitle } from '@/components/ui/card',
 import { Badge } from '@/components/ui/badge',
 export function RecentActivity() {
   // Mock activity data,
   const activities = [
     {
-      id: 'act-1';
-      user: 'Michael Chen';
-      action: 'posted a new job';
-      target: 'Senior React Developer';
-      timestamp: '1h ago';
-      type: 'job';
-    };
+      id: 'act-1',
+      user: 'Michael Chen',
+      action: 'posted a new job',
+      target: 'Senior React Developer',
+      timestamp: '1h ago',
+      type: 'job'
+    },
     {
-      id: 'act-2';
-      user: 'Sarah Wilson';
-      action: 'shortlisted';
-      target: '5 candidates for UI/UX Designer';
-      timestamp: '3h ago';
-      type: 'candidate';
-    };
+      id: 'act-2',
+      user: 'Sarah Wilson',
+      action: 'shortlisted',
+      target: '5 candidates for UI/UX Designer',
+      timestamp: '3h ago',
+      type: 'candidate'
+    },
     {
-      id: 'act-3';
-      user: 'David Johnson';
-      action: 'scheduled an interview with';
-      target: 'Alex Morgan';
-      timestamp: 'Yesterday';
-      type: 'interview';
-    };
+      id: 'act-3',
+      user: 'David Johnson',
+      action: 'scheduled an interview with',
+      target: 'Alex Morgan',
+      timestamp: 'Yesterday',
+      type: 'interview'
+    },
     {
-      id: 'act-4';
-      user: 'Emily Davis';
-      action: 'added comments to';
-      target: 'Frontend Developer application';
-      timestamp: '2d ago';
-      type: 'comment';
-    };
+      id: 'act-4',
+      user: 'Emily Davis',
+      action: 'added comments to',
+      target: 'Frontend Developer application',
+      timestamp: '2d ago',
+      type: 'comment'
+    },
   ],
   const getBadgeForType = (type: string) => {
     switch (type) {
@@ -69,7 +69,7 @@ export function RecentActivity() {
           </Badge>),
       default:,
         return <Badge variant='outline'>Activity</Badge>}
-  };
+  },
   return (
     <Card>,
       <CardHeader>,

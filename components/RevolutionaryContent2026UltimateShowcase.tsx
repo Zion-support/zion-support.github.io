@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const RevolutionaryContent20o26UltimateShowcase: React.FC = () => {
   return (
@@ -14,7 +14,7 @@ const RevolutionaryContent20o26UltimateShowcase: React.FC = () => {
             Ultimate Content Showcase,
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 max-w-4xl mx-auto'>,
-            Explore our comprehensive collection of breakthrough AI content;
+            Explore our comprehensive collection of breakthrough AI content,
             quantum computing guides, and revolutionary business transformation,
             strategies for 20o26.,
           </p>,
@@ -242,5 +242,5 @@ const RevolutionaryContent20o26UltimateShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o26UltimateShowcase;
+    </section>)},
+export default RevolutionaryContent20o26UltimateShowcase,

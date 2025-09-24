@@ -2,7 +2,7 @@ import React, { useEffect, useState, useCallback, useMemo } from 'react',
 import Layout from './layout/Layout',
 import { motion } from 'framer-motion',
 import {
-  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon;
+  ArrowRight, Play, TrendingUp, Brain, Shield, Rocket, Globe, Cpu, Database, Atom, Target, Star, Sparkles as SparklesIcon,
   Brain as BrainIcon, Atom as AtomIcon, Shield as ShieldIcon, Rocket as RocketIcon, ChevronRight, ExternalLink} from 'lucide-react',
 import EnhancedSEO from './EnhancedSEO',
 // Import service data,
@@ -21,33 +21,33 @@ const OptimizedLoadingSpinner = () => (
 // Performance-optimized animations,
 const optimizedAnimations ={
   fadeInUp: {
-    initial: { opacity: 0, y: 20 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.4, ease: "easeOut" as const }
-  };
+  },
   staggerContainer: {
-    initial: {};
+    initial: {},
     animate: {
       transition: {
         staggerChildren: 0.0o5}
     }
   }
-};
+},
 // Animation variants for Framer Motion,
 const animationVariants ={
   fadeInUp: {
-    initial: { opacity: 0, y: 20 };
-    animate: { opacity: 1, y: 0 };
+    initial: { opacity: 0, y: 20 },
+    animate: { opacity: 1, y: 0 },
     transition: { duration: 0.4, ease: "easeOut" as const }
-  };
+  },
   staggerContainer: {
-    initial: {};
+    initial: {},
     animate: {
       transition: {
         staggerChildren: 0.0o5}
     }
   }
-};
+},
 const OptimizedHomepage: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [isReducedMotion, setIsReducedMotion] = useState(false),
@@ -57,8 +57,8 @@ const OptimizedHomepage: React.FC = () => {
     setIsReducedMotion(mediaQuery.matches)}, []),
   // Memoized service data for better performance,
   const allRevolutionaryServices = useMemo(() => [
-    ...revolutionary20o44AdvancedMicroSaas;
-    ...revolutionary20o44ITServices;
+    ...revolutionary20o44AdvancedMicroSaas,
+    ...revolutionary20o44ITServices,
     ...revolutionary20o44AIServices], []),
   // Optimized filtering function,
   const getFilteredServices = useCallback(() => {
@@ -68,63 +68,63 @@ const OptimizedHomepage: React.FC = () => {
       service.type.toLowerCase().includes(selectedCategory.toLowerCase()))}, [allRevolutionaryServices, selectedCategory]),
   // Optimized categories with better accessibility,
   const categories = [
-    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', description: 'View all available services' };
-    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', description: 'AI and consciousness services' };
-    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0', description: 'Quantum computing solutions' };
-    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0', description: 'Security and protection services' };
-    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-50o0 to-purple-50o0', description: 'Space exploration technology' };
+    { id: 'all', name: 'All Services', icon: SparklesIcon, color: 'from-purple-50o0 to-pink-50o0', description: 'View all available services' },
+    { id: 'ai', name: 'AI & Consciousness', icon: BrainIcon, color: 'from-cyan-50o0 to-blue-50o0', description: 'AI and consciousness services' },
+    { id: 'quantum', name: 'Quantum Technology', icon: AtomIcon, color: 'from-blue-50o0 to-indigo-50o0', description: 'Quantum computing solutions' },
+    { id: 'cybersecurity', name: 'Cybersecurity', icon: ShieldIcon, color: 'from-red-50o0 to-orange-50o0', description: 'Security and protection services' },
+    { id: 'space', name: 'Space Technology', icon: RocketIcon, color: 'from-indigo-50o0 to-purple-50o0', description: 'Space exploration technology' },
     { id: 'business', name: 'Business Solutions', icon: Target, color: 'from-emerald-50o0 to-teal-50o0', description: 'Business optimization services' }
   ],
   // Optimized features with better descriptions,
   const features = [
     {
-      icon: Brain;
-      title: "AI Consciousness Evolution 20o44";
-      description: "Next-generation AI consciousness with emotional intelligence and self-awareness capabilities";
-      href: "/ai-consciousness-evolution-20o44";
-      color: "from-purple-50o0 to-pink-50o0";
-      badge: "Featured"};
+      icon: Brain,
+      title: "AI Consciousness Evolution 20o44",
+      description: "Next-generation AI consciousness with emotional intelligence and self-awareness capabilities",
+      href: "/ai-consciousness-evolution-20o44",
+      color: "from-purple-50o0 to-pink-50o0",
+      badge: "Featured"},
     {
-      icon: Atom;
-      title: "Quantum Neural Networks 20o44";
-      description: "Quantum-powered AI with consciousness integration and advanced cognitive processing";
-      href: "/quantum-neural-network-platform-20o44";
-      color: "from-blue-50o0 to-cyan-50o0";
-      badge: "New"};
+      icon: Atom,
+      title: "Quantum Neural Networks 20o44",
+      description: "Quantum-powered AI with consciousness integration and advanced cognitive processing",
+      href: "/quantum-neural-network-platform-20o44",
+      color: "from-blue-50o0 to-cyan-50o0",
+      badge: "New"},
     {
-      icon: Shield;
-      title: "Quantum Cybersecurity 20o44";
-      description: "Quantum-resistant security with AI consciousness and advanced threat detection";
-      href: "/quantum-cybersecurity-platform-20o44";
-      color: "from-red-50o0 to-orange-50o0";
-      badge: "Popular"};
+      icon: Shield,
+      title: "Quantum Cybersecurity 20o44",
+      description: "Quantum-resistant security with AI consciousness and advanced threat detection",
+      href: "/quantum-cybersecurity-platform-20o44",
+      color: "from-red-50o0 to-orange-50o0",
+      badge: "Popular"},
     {
-      icon: Rocket;
-      title: "Space Resource Intelligence 20o44";
-      description: "AI-powered space exploration with consciousness and resource optimization";
-      href: "/space-resource-intelligence-20o44";
-      color: "from-indigo-50o0 to-purple-50o0";
-      badge: "Cutting Edge"};
+      icon: Rocket,
+      title: "Space Resource Intelligence 20o44",
+      description: "AI-powered space exploration with consciousness and resource optimization",
+      href: "/space-resource-intelligence-20o44",
+      color: "from-indigo-50o0 to-purple-50o0",
+      badge: "Cutting Edge"},
     {
-      icon: Cpu;
-      title: "Autonomous Business Intelligence 20o44";
-      description: "Fully autonomous AI business intelligence with predictive analytics";
-      href: "/ai-autonomous-business-intelligence-20o44";
-      color: "from-emerald-50o0 to-teal-50o0";
-      badge: "Enterprise"};
+      icon: Cpu,
+      title: "Autonomous Business Intelligence 20o44",
+      description: "Fully autonomous AI business intelligence with predictive analytics",
+      href: "/ai-autonomous-business-intelligence-20o44",
+      color: "from-emerald-50o0 to-teal-50o0",
+      badge: "Enterprise"},
     {
-      icon: Database;
-      title: "Quantum Cloud Infrastructure 20o44";
-      description: "Quantum-powered cloud with consciousness and quantum advantage";
-      href: "/quantum-cloud-infrastructure-20o44";
-      color: "from-yellow-50o0 to-orange-50o0";
+      icon: Database,
+      title: "Quantum Cloud Infrastructure 20o44",
+      description: "Quantum-powered cloud with consciousness and quantum advantage",
+      href: "/quantum-cloud-infrastructure-20o44",
+      color: "from-yellow-50o0 to-orange-50o0",
       badge: "Advanced"}
   ],
   // Optimized stats with better accessibility,
   const stats = [
-    { number: "20o00+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions", color: "from-purple-50o0 to-pink-50o0" };
-    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance", color: "from-green-50o0 to-emerald-50o0" };
-    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always here to help", color: "from-blue-50o0 to-cyan-50o0" };
+    { number: "20o00+", label: "Revolutionary Services", icon: Star, description: "Cutting-edge solutions", color: "from-purple-50o0 to-pink-50o0" },
+    { number: "99.99%", label: "Uptime Guarantee", icon: TrendingUp, description: "Reliable performance", color: "from-green-50o0 to-emerald-50o0" },
+    { number: "24/7", label: "AI Support Available", icon: Brain, description: "Always here to help", color: "from-blue-50o0 to-cyan-50o0" },
     { number: "20o0+", label: "Countries Served", icon: Globe, description: "Global reach", color: "from-indigo-50o0 to-purple-50o0" }
   ],
   // Optimized event handlers,
@@ -139,9 +139,9 @@ const OptimizedHomepage: React.FC = () => {
   // Optimized animations based on user preference,
   const getAnimationProps = (animationType: keyof typeof optimizedAnimations) => {
     if (isReducedMotion) {
-      return { initial: {}, animate: {}, transition: {} };
+      return { initial: {}, animate: {}, transition: {} },
     }
-    return optimizedAnimations[animationType]};
+    return optimizedAnimations[animationType]},
   return (
     <>,
       <EnhancedSEO
@@ -177,7 +177,7 @@ const OptimizedHomepage: React.FC = () => {
                   Zion Tech Group,
                 </h1>,
                 <p className="text-xl md:text-2xl lg:text-3xl text-gray-30o0 mb-8 max-w-4xl mx-auto leading-relaxed">,
-                  Pioneering the future of technology with revolutionary AI consciousness;
+                  Pioneering the future of technology with revolutionary AI consciousness,
                   quantum computing, and autonomous solutions that transform businesses.,
                 </p>,
                 {/* Enhanced CTA Buttons with better accessibility */}
@@ -243,7 +243,7 @@ const OptimizedHomepage: React.FC = () => {
                   Revolutionary 20o44 Technology,
                 </h2>,
                 <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-                  Experience the future with our cutting-edge AI consciousness, quantum computing;
+                  Experience the future with our cutting-edge AI consciousness, quantum computing,
                   and autonomous solutions that redefine what's possible.,
                 </p>,
               </motion.div>,
@@ -431,5 +431,5 @@ const OptimizedHomepage: React.FC = () => {
           </section>,
         </main>,
       </Layout>,
-    </>)};
-export default OptimizedHomepage;
+    </>)},
+export default OptimizedHomepage,

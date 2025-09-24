@@ -1,6 +1,6 @@
-import React from 'react';
-;
-export default function CybersecurityPage(): React.ReactElement {;
+import React from 'react',
+,
+export default function CybersecurityPage(): React.ReactElement {,
 	return (
 		<main>
 			<h1>Cybersecurity</h1>
@@ -8,4 +8,4 @@ export default function CybersecurityPage(): React.ReactElement {;
 		</main>
 	)
 }
-;
+,

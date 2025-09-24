@@ -26,7 +26,7 @@ import { registerServiceWorker } from './serviceWorkerRegistration',
 const queryClient = new QueryClient({
   defaultOptions: {
     queries: {
-      onError: (error) => showApiError(error)};
+      onError: (error) => showApiError(error)},
     mutations: {
       onError: (error) => showApiError(error)}}}),
 try {
@@ -60,7 +60,7 @@ try {
           </WhitelabelProvider>,
         </QueryClientProvider>,
       </HelmetProvider>,
-    </React.StrictMode>;
+    </React.StrictMode>,
   ),
   // // console.log("main.tsx: After ReactDOM.createRoot")} catch (error) {
   console.error("Global error caught in main.tsx: "error),

@@ -7,7 +7,7 @@ interface GeneratedContent {
   tags: string[],
   suggestedPrice: {
     min: number,
-    max: number};
+    max: number},
   keyPoints: string[]}
 ,
 interface GeneratedContentDisplayProps {
@@ -15,7 +15,7 @@ interface GeneratedContentDisplayProps {
   onApply: () => void}
 ,
 export function GeneratedContentDisplay({
-  contentonApply;
+  contentonApply,
 }: GeneratedContentDisplayProps) {
   return (
     <Card className='border border-zion-blue-light bg-zion-blue-dark'>,

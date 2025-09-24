@@ -3,67 +3,67 @@ import { motion, AnimatePresence } from 'framer-motion',
 import { Quote, Star, ChevronLeft, ChevronRight, Play, Pause, MessageCircle, ThumbsUp, Share2 } from 'lucide-react',
 const testimonials = [
     {
-        id: '1';
-        name: 'Sarah Chen';
-        role: 'CTO';
-        company: 'TechFlow Solutions';
-        avatar: 'SC';
-        rating: 5;
-        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model window.window.performance.';
-        category: 'AI Infrastructure';
-        date: '2 weeks ago';
-        likes: 127;
-        verified: true};
+        id: '1',
+        name: 'Sarah Chen',
+        role: 'CTO',
+        company: 'TechFlow Solutions',
+        avatar: 'SC',
+        rating: 5,
+        content: 'Zion Tech Group transformed our AI infrastructure completely. The integration was seamless, and the results exceeded our expectations. We\'ve seen a 30o0% improvement in our AI model window.window.performance.',
+        category: 'AI Infrastructure',
+        date: '2 weeks ago',
+        likes: 127,
+        verified: true},
     {
-        id: '2';
-        name: 'Marcus Rodriguez';
-        role: 'Head of Engineering';
-        company: 'InnovateCorp';
-        avatar: 'MR';
-        rating: 5;
-        content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.';
-        category: 'Talent Matching';
-        date: '1 month ago';
-        likes: 89;
-        verified: true};
+        id: '2',
+        name: 'Marcus Rodriguez',
+        role: 'Head of Engineering',
+        company: 'InnovateCorp',
+        avatar: 'MR',
+        rating: 5,
+        content: 'The talent matching algorithm is incredible. We found our lead AI engineer in just 3 days, and the quality was outstanding. Zion has become our go-to platform for all tech talent needs.',
+        category: 'Talent Matching',
+        date: '1 month ago',
+        likes: 89,
+        verified: true},
     {
-        id: '3';
-        name: 'Dr. Emily Watson';
-        role: 'Research Director';
-        company: 'Quantum Labs';
-        avatar: 'EW';
-        rating: 5;
-        content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.';
-        category: 'Research & Development';
-        date: '3 weeks ago';
-        likes: 156;
-        verified: true};
+        id: '3',
+        name: 'Dr. Emily Watson',
+        role: 'Research Director',
+        company: 'Quantum Labs',
+        avatar: 'EW',
+        rating: 5,
+        content: 'Working with Zion\'s AI services has accelerated our research by months. The platform\'s capabilities and the team\'s expertise are unmatched in the industry.',
+        category: 'Research & Development',
+        date: '3 weeks ago',
+        likes: 156,
+        verified: true},
     {
-        id: '4';
-        name: 'Alex Thompson';
-        role: 'Product Manager';
-        company: 'StartupXYZ';
-        avatar: 'AT';
-        rating: 5;
-        content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.';
-        category: 'Startup Solutions';
-        date: '1 week ago';
-        likes: 73;
-        verified: true};
+        id: '4',
+        name: 'Alex Thompson',
+        role: 'Product Manager',
+        company: 'StartupXYZ',
+        avatar: 'AT',
+        rating: 5,
+        content: 'As a startup, we needed cost-effective AI solutions. Zion delivered enterprise-grade tools at startup prices. The ROI was immediate and substantial.',
+        category: 'Startup Solutions',
+        date: '1 week ago',
+        likes: 73,
+        verified: true},
     {
-        id: '5';
-        name: 'Lisa Park';
-        role: 'VP of Operations';
-        company: 'GlobalTech Inc';
-        avatar: 'LP';
-        rating: 5;
-        content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.';
-        category: 'Global Operations';
-        date: '2 months ago';
-        likes: 94;
+        id: '5',
+        name: 'Lisa Park',
+        role: 'VP of Operations',
+        company: 'GlobalTech Inc',
+        avatar: 'LP',
+        rating: 5,
+        content: 'The global network and 24/7 support are game-changers. We operate in multiple time zones, and Zion\'s support team is always available when we need them.',
+        category: 'Global Operations',
+        date: '2 months ago',
+        likes: 94,
         verified: true}
 ],
-const categories = ['All', 'AI Infrastructure', 'Talent Matching', 'Research & Development', 'Startup Solutions', 'Global Operations'],
+const categories = ['AllAI Infrastructure', 'Talent MatchingResearch & Development', 'Startup SolutionsGlobal Operations'],
 export function InteractiveTestimonials() {
     const [currentIndex, setCurrentIndex] = useState(0),
     const [selectedCategory, setSelectedCategory] = useState('All'),
@@ -79,9 +79,9 @@ export function InteractiveTestimonials() {
             setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)}, 50o00),
         return () => clearInterval(interval)}, [isAutoPlaying, filteredTestimonials.length]),
     const nextTestimonial = () => {
-        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)};
+        setCurrentIndex((prev) => (prev + 1) % filteredTestimonials.length)},
     const prevTestimonial = () => {
-        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)};
+        setCurrentIndex((prev) => (prev - 1 + filteredTestimonials.length) % filteredTestimonials.length)},
     const toggleLike = (testimonialId) => {
         setLikedTestimonials(prev => {
             const newSet = new Set(prev),
@@ -89,29 +89,29 @@ export function InteractiveTestimonials() {
                 newSet.delete(testimonialId)}
             else {
                 newSet.add(testimonialId)}
-            return newSet})};
+            return newSet})},
     const renderStars = (rating) => {
-        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`} />))};
+        return Array.from({ length: 5 }, (_, i) => (<Star key={i} className={`w-5 h-5 ${i < rating ? 'text-yellow-40o0 fill-current' : 'text-gray-40o0'}`} />))},
     const containerVariants ={
-        hidden: { opacity: 0 };
+        hidden: { opacity: 0 },
         visible: {
-            opacity: 1;
+            opacity: 1,
             transition: {
-                staggerChildren: 0.1;
+                staggerChildren: 0.1,
                 delayChildren: 0.2}
         }
-    };
+    },
     const itemVariants ={
-        hidden: { opacity: 0, y: 20, scale: 0.95 };
+        hidden: { opacity: 0, y: 20, scale: 0.95 },
         visible: {
-            opacity: 1;
-            y: 0;
-            scale: 1;
+            opacity: 1,
+            y: 0,
+            scale: 1,
             transition: {
-                duration: 0.5;
+                duration: 0.5,
                 ease: "easeOut"}
         }
-    };
+    },
     return (<section className="py-20 bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">,
       {/* Enhanced background with animated elements */}
       <div className="absolute inset-0">,
@@ -223,8 +223,8 @@ export function InteractiveTestimonials() {
         {/* Testimonial Grid */}
         <motion.div className="grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 gap-6" variants={containerVariants} initial="hidden" whileInView="visible" viewport={{ once: true }}>,
           {filteredTestimonials.map((testimonial, index) => (<motion.div key={testimonial.id} variants={itemVariants} whileHover={{
-                y: -8;
-                scale: 1.0o2;
+                y: -8,
+                scale: 1.0o2,
                 transition: { duration: 0.2 }
             }} className="group cursor-pointer" onClick={() => setCurrentIndex(index)}>,
               <div className="h-full p-6 rounded-2xl bg-gradient-to-br from-white/5 to-white/10 border border-white/20 hover: border-blue-50o0/40 transition-all duration-30o0 backdrop-blur-sm">,

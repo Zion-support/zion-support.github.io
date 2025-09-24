@@ -1,55 +1,55 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  FileText, Image, Video, Music, Palette, Type;
-  User, Search, Eye, Heart, ShoppingCart, Code;
-  Database, Globe, Shield, Cpu, Users2, Award;
-  CheckCircle, Target, BarChart3, TrendingUp, Lock;
-  Server, Network, Monitor, Settings, RefreshCw;
-  Play, Pause, AlertTriangle, CheckCircle2, Building;
-  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks;
-  Wallet, CreditCard, PiggyBank, Building2, Activity;
-  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart;
-  Film, Headphones, Camera, Gamepad2, Tv, Radio;
-  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2;
-  Calendar, Clock, Target, Users2, FileText2, PieChart;
-  Atom, Cpu, Brain, Zap, Target, BarChart3, Users;
-  TrendingUp, Shield, Globe, Database, Network, BookOpen;
-  GraduationCap, Lightbulb, Target, Users, Brain, Zap;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  FileText, Image, Video, Music, Palette, Type,
+  User, Search, Eye, Heart, ShoppingCart, Code,
+  Database, Globe, Shield, Cpu, Users2, Award,
+  CheckCircle, Target, BarChart3, TrendingUp, Lock,
+  Server, Network, Monitor, Settings, RefreshCw,
+  Play, Pause, AlertTriangle, CheckCircle2, Building,
+  Wifi, HardDrive, Cloud, Smartphone, Link, Blocks,
+  Wallet, CreditCard, PiggyBank, Building2, Activity,
+  Waves, Zap, BrainCircuit, CpuIcon, MonitorHeart,
+  Film, Headphones, Camera, Gamepad2, Tv, Radio,
+  Factory, Cog, Gauge, Wrench, Settings2, CpuIcon2,
+  Calendar, Clock, Target, Users2, FileText2, PieChart,
+  Atom, Cpu, Brain, Zap, Target, BarChart3, Users,
+  TrendingUp, Shield, Globe, Database, Network, BookOpen,
+  GraduationCap, Lightbulb, Target, Users, Brain, Zap,
   BookOpen, GraduationCap, Lightbulb, Target, Users, Brain} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'Quantum Learning Accelerator | Zion Tech Group';
-  description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.';
-  keywords: 'quantum learning accelerator, AI education, personalized learning, cognitive enhancement, quantum education, adaptive learning, educational technology';
+  title: 'Quantum Learning Accelerator | Zion Tech Group',
+  description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.',
+  keywords: 'quantum learning accelerator, AI education, personalized learning, cognitive enhancement, quantum education, adaptive learning, educational technology',
   openGraph: {
-    title: 'Quantum Learning Accelerator | Zion Tech Group';
-    description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.';
-    url: 'https://ziontechgroup.com/quantum-learning-accelerator';
-    siteName: 'Zion Tech Group';
+    title: 'Quantum Learning Accelerator | Zion Tech Group',
+    description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.',
+    url: 'https://ziontechgroup.com/quantum-learning-accelerator',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-quantum-learning.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'Quantum Learning Accelerator'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-quantum-learning.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'Quantum Learning Accelerator'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'Quantum Learning Accelerator | Zion Tech Group';
-    description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.';
-    images: ['https://ziontechgroup.com/og-image-quantum-learning.jpg']};
+    card: 'summary_large_image',
+    title: 'Quantum Learning Accelerator | Zion Tech Group',
+    description: 'Revolutionary quantum-powered learning acceleration platform with AI-driven personalized education, adaptive learning, and cognitive enhancement.',
+    images: ['https://ziontechgroup.com/og-image-quantum-learning.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/quantum-learning-accelerator'}};
+    canonical: 'https://ziontechgroup.com/quantum-learning-accelerator'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function QuantumLearningAccelerator() {
   return (
     <div className="min-h-screen bg-black text-white">,

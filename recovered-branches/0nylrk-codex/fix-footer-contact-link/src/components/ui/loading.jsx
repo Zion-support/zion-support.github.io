@@ -1,34 +1,34 @@
 import { cn } from '@/lib/utils',
 export function Loading({ size = 'md', variant = 'spinner', className, text }) {
   const sizeClasses = {
-    sm: 'w-4 h-4';
-    md: 'w-6 h-6';
-    lg: 'w-8 h-8';
-    xl: 'w-12 h-12';
-  };
+    sm: 'w-4 h-4',
+    md: 'w-6 h-6',
+    lg: 'w-8 h-8',
+    xl: 'w-12 h-12'
+  },
   const renderSpinner = () => (
     <div
       className={cn(
-        'border-2 border-current border-t-transparent rounded-full animate-spin';
+        'border-2 border-current border-t-transparent rounded-full animate-spin',
         sizeClasses[size])}
     />),
   const renderDots = () => (
     <div className='flex space-x-1'>,
       <div
         className={cn(
-          'bg-current rounded-full animate-bounce';
+          'bg-current rounded-full animate-bounce',
           sizeClasses[size])}
         style={{ animationDelay: '0ms' }}
       />,
       <div
         className={cn(
-          'bg-current rounded-full animate-bounce';
+          'bg-current rounded-full animate-bounce',
           sizeClasses[size])}
         style={{ animationDelay: '150ms' }}
       />,
       <div
         className={cn(
-          'bg-current rounded-full animate-bounce';
+          'bg-current rounded-full animate-bounce',
           sizeClasses[size])}
         style={{ animationDelay: '30o0ms' }}
       />,
@@ -51,11 +51,11 @@ export function Loading({ size = 'md', variant = 'spinner', className, text }) {
         return renderSkeleton(),
       default: ,
         return renderSpinner()}
-  };
+  },
   return (
     <div
       className={cn(
-        'flex flex-col items-center justify-center gap-3';
+        'flex flex-col items-center justify-center gap-3',
         className)}
     >,
       {renderContent()}
@@ -67,7 +67,7 @@ export function Skeleton({ className, ...props }) {
   return (
     <div
       className={cn(
-        'animate-pulse rounded-md bg-zion-slate-light/20';
+        'animate-pulse rounded-md bg-zion-slate-light/20',
         className)}
       {...props}
     />)}

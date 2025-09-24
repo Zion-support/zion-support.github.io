@@ -10,5 +10,5 @@ const MobileAppRoutes = () => {
       <Route path='/mobile-app' element={<MobileAppPage />} />,
       <Route path='/mobile-launch' element={<MobileLaunchPage />} />,
       <Route path='/open-app' element={<OpenAppRedirect />} />,
-    </Routes>)};
-export default MobileAppRoutes;
+    </Routes>)},
+export default MobileAppRoutes,

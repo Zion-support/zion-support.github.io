@@ -1,7 +1,7 @@
-import React from "react";
+import React from "react",
 import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
-import React from "react";;
-import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm";
+import React from "react",
+import { TalentRegistrationForm } from "@/components/profile/TalentRegistrationForm",
 import {TalentRegistrationForm} from "@/components/profile/TalentRegistrationForm",
 import React from './react',
 import { TalentRegistrationForm } from '@/components / profile / TalentRegistrationForm',

@@ -1,135 +1,123 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Brain;
-  Zap;
-  Shield;
-  Globe;
-  Rocket;
-  Star;
-  ArrowRight;
-  CheckCircle;
+  Brain,
+  Zap,
+  Shield,
+  Globe,
+  Rocket,
+  Star,
+  ArrowRight,
+  CheckCircle,
 } from 'lucide-react',
 const services = [
   {
-    id: 'ai-automation';
-    name: 'AI & Automation';
+    id: 'ai-automation',
+    name: 'AI & Automation',
     description:,
-      'Revolutionary AI platforms with consciousness and emotional intelligence';
-    icon: <Brain className='w-8 h-8' />;
-    color: 'from-purple-50o0 to-pink-50o0';
-    price: '$199/month';
+      'Revolutionary AI platforms with consciousness and emotional intelligence',
+    icon: <Brain className='w-8 h-8' />,
+    color: 'from-purple-50o0 to-pink-50o0',
+    price: '$199/month',
     features: [
-      'AI Code Review';
-      'Testing Automation';
-      'DevOps Intelligence';
-      'Security Automation';
-    ];
-    popular: true;
-  };
+      'AI Code ReviewTesting Automation',
+      'DevOps IntelligenceSecurity Automation',
+    ],
+    popular: true
+  },
   {
-    id: 'micro-saas';
-    name: 'Micro SaaS Solutions';
+    id: 'micro-saas',
+    name: 'Micro SaaS Solutions',
     description:,
-      'Scalable, focused software solutions for specific business needs';
-    icon: <Zap className='w-8 h-8' />;
-    color: 'from-cyan-50o0 to-blue-50o0';
-    price: '$99/month';
+      'Scalable, focused software solutions for specific business needs',
+    icon: <Zap className='w-8 h-8' />,
+    color: 'from-cyan-50o0 to-blue-50o0',
+    price: '$99/month',
     features: [
-      'Custom Development';
-      'API Integration';
-      'Cloud Deployment';
-      '24/7 Support';
-    ];
-  };
+      'Custom DevelopmentAPI Integration',
+      'Cloud Deployment24/7 Support',
+    ]
+  },
   {
-    id: 'cloud-infrastructure';
-    name: 'Cloud & Infrastructure';
-    description: 'Robust cloud solutions for scalability and reliability';
-    icon: <Globe className='w-8 h-8' />;
-    color: 'from-green-50o0 to-emerald-50o0';
-    price: '$299/month';
+    id: 'cloud-infrastructure',
+    name: 'Cloud & Infrastructure',
+    description: 'Robust cloud solutions for scalability and reliability',
+    icon: <Globe className='w-8 h-8' />,
+    color: 'from-green-50o0 to-emerald-50o0',
+    price: '$299/month',
     features: [
-      'AWS/Azure/GCP';
-      'Container Orchestration';
-      'Serverless Architecture';
-      'Disaster Recovery';
-    ];
-  };
+      'AWS/Azure/GCPContainer Orchestration',
+      'Serverless ArchitectureDisaster Recovery',
+    ]
+  },
   {
-    id: 'cybersecurity';
-    name: 'Cybersecurity';
-    description: 'Advanced security solutions to protect your digital assets';
-    icon: <Shield className='w-8 h-8' />;
-    color: 'from-red-50o0 to-pink-50o0';
-    price: '$399/month';
+    id: 'cybersecurity',
+    name: 'Cybersecurity',
+    description: 'Advanced security solutions to protect your digital assets',
+    icon: <Shield className='w-8 h-8' />,
+    color: 'from-red-50o0 to-pink-50o0',
+    price: '$399/month',
     features: [
-      'Threat Detection';
-      'Penetration Testing';
-      'Compliance Auditing';
-      'Incident Response';
-    ];
-  };
+      'Threat DetectionPenetration Testing',
+      'Compliance AuditingIncident Response',
+    ]
+  },
   {
-    id: 'quantum-computing';
-    name: 'Quantum Computing';
-    description: 'Next-generation quantum solutions for complex problems';
-    icon: <Rocket className='w-8 h-8' />;
-    color: 'from-indigo-50o0 to-purple-50o0';
-    price: '$599/month';
+    id: 'quantum-computing',
+    name: 'Quantum Computing',
+    description: 'Next-generation quantum solutions for complex problems',
+    icon: <Rocket className='w-8 h-8' />,
+    color: 'from-indigo-50o0 to-purple-50o0',
+    price: '$599/month',
     features: [
-      'Quantum Algorithms';
-      'Optimization Problems';
-      'Cryptography';
-      'Research Support';
-    ];
-  };
+      'Quantum AlgorithmsOptimization Problems',
+      'CryptographyResearch Support',
+    ]
+  },
   {
-    id: 'blockchain-web3';
-    name: 'Blockchain & Web3';
-    description: 'Decentralized solutions for the future of the internet';
-    icon: <Star className='w-8 h-8' />;
-    color: 'from-yellow-50o0 to-orange-50o0';
-    price: '$249/month';
+    id: 'blockchain-web3',
+    name: 'Blockchain & Web3',
+    description: 'Decentralized solutions for the future of the internet',
+    icon: <Star className='w-8 h-8' />,
+    color: 'from-yellow-50o0 to-orange-50o0',
+    price: '$249/month',
     features: [
-      'Smart Contracts';
-      'DeFi Platforms';
-      'NFT Marketplaces';
-      'DAO Governance';
-    ];
-  };
+      'Smart ContractsDeFi Platforms',
+      'NFT MarketplacesDAO Governance',
+    ]
+  },
 ],
 export default function FuturisticServicesShowcase() {
   const [hoveredService, setHoveredService] = useState(null),
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const categories = [
-    { id: 'all', name: 'All Services', icon: <Star className='w-4 h-4' /> };
+    { id: 'all', name: 'All Services', icon: <Star className='w-4 h-4' /> },
     {
-      id: 'ai-automation';
-      name: 'AI & Automation';
-      icon: <Brain className='w-4 h-4' />;
-    };
-    { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className='w-4 h-4' /> };
+      id: 'ai-automation',
+      name: 'AI & Automation',
+      icon: <Brain className='w-4 h-4' />
+    },
+    { id: 'micro-saas', name: 'Micro SaaS', icon: <Zap className='w-4 h-4' /> },
     {
-      id: 'cloud-infrastructure';
-      name: 'Cloud & Infrastructure';
-      icon: <Globe className='w-4 h-4' />;
-    };
+      id: 'cloud-infrastructure',
+      name: 'Cloud & Infrastructure',
+      icon: <Globe className='w-4 h-4' />
+    },
     {
-      id: 'cybersecurity';
-      name: 'Cybersecurity';
-      icon: <Shield className='w-4 h-4' />;
-    };
+      id: 'cybersecurity',
+      name: 'Cybersecurity',
+      icon: <Shield className='w-4 h-4' />
+    },
     {
-      id: 'quantum-computing';
-      name: 'Quantum Computing';
-      icon: <Rocket className='w-4 h-4' />;
-    };
+      id: 'quantum-computing',
+      name: 'Quantum Computing',
+      icon: <Rocket className='w-4 h-4' />
+    },
     {
-      id: 'blockchain-web3';
-      name: 'Blockchain & Web3';
-      icon: <Star className='w-4 h-4' />;
-    };
+      id: 'blockchain-web3',
+      name: 'Blockchain & Web3',
+      icon: <Star className='w-4 h-4' />
+    },
   ],
   const filteredServices =,
     selectedCategory === 'all',

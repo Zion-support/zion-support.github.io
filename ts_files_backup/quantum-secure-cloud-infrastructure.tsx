@@ -11,11 +11,11 @@ export default function QuantumSecureCloudInfrastructure() {
 			implementationWeeks="6-10 weeks",
 			roiNote="Meet emerging PQC compliance and safeguard long-lived data",
 			features={[
-				"PQC algorithms for data at-rest and in-transit";
-				"Hybrid crypto transition plans";
-				"HSM/KMS integrations and key rotation";
-				"Zero Trust + PQC reference designs";
-				"Threat modeling and validation";
+				"PQC algorithms for data at-rest and in-transit",
+				"Hybrid crypto transition plans",
+				"HSM/KMS integrations and key rotation",
+				"Zero Trust + PQC reference designs",
+				"Threat modeling and validation",
 				"NIST PQC roadmap alignment]}
 			]}
 			industries={["Financial Services"Healthcare"Government"]}

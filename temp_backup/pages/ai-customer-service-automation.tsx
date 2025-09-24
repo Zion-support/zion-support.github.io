@@ -1,50 +1,45 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  MessageCircle, Bot, Clock, Users, Shield;
-  Zap, BarChart3, Headphones, CheckCircle;
+  MessageCircle, Bot, Clock, Users, Shield,
+  Zap, BarChart3, Headphones, CheckCircle,
   Star, Globe, Lock, Smartphone, Monitor} from 'lucide-react',
 export default function AICustomerServiceAutomation() {
   const features = [
     {
-      icon: <Bot className="w-6 h-6"  />;
-      title: '24/7 AI Support';
-      description: 'Intelligent chatbots that provide instant support around the clock, handling common inquiries and escalating complex issues.'};
+      icon: <Bot className="w-6 h-6"  />,
+      title: '24/7 AI Support',
+      description: 'Intelligent chatbots that provide instant support around the clock, handling common inquiries and escalating complex issues.'},
     {
-      icon: <MessageCircle className="w-6 h-6"  />;
-      title: 'Multi-Channel Support';
-      description: 'Seamlessly handle customer inquiries across email, chat, social media, and phone with unified AI responses.'};
+      icon: <MessageCircle className="w-6 h-6"  />,
+      title: 'Multi-Channel Support',
+      description: 'Seamlessly handle customer inquiries across email, chat, social media, and phone with unified AI responses.'},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: 'Instant Response';
-      description: 'Reduce response times from hours to seconds with AI-powered instant answers and automated workflows.'};
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Instant Response',
+      description: 'Reduce response times from hours to seconds with AI-powered instant answers and automated workflows.'},
     {
-      icon: <BarChart3 className="w-6 h-6"  />;
-      title: 'Smart Analytics';
-      description: 'Track customer satisfaction, response times, and common issues with detailed analytics and insights.'};
+      icon: <BarChart3 className="w-6 h-6"  />,
+      title: 'Smart Analytics',
+      description: 'Track customer satisfaction, response times, and common issues with detailed analytics and insights.'},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: 'Secure & Compliant';
-      description: 'Enterprise-grade security with GDPR compliance, data encryption, and secure customer data handling.'};
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Secure & Compliant',
+      description: 'Enterprise-grade security with GDPR compliance, data encryption, and secure customer data handling.'},
     {
-      icon: <Users className="w-6 h-6"  />;
-      title: 'Human Handoff';
+      icon: <Users className="w-6 h-6"  />,
+      title: 'Human Handoff',
       description: 'Seamlessly transfer complex cases to human agents with full context and conversation history.'}
   ],
   const benefits = [
-    'Reduce support costs by up to 70%';
-    'Improve customer satisfaction scores';
-    'Handle 10x more inquiries simultaneously';
-    'Provide 24/7 customer support';
-    'Reduce average response time to under 30 seconds';
-    'Increase first-contact resolution rates';
-    'Scale support operations effortlessly';
-    'Gain valuable customer insights'],
+    'Reduce support costs by up to 70%Improve customer satisfaction scores',
+    'Handle 10x more inquiries simultaneouslyProvide 24/7 customer support',
+    'Reduce average response time to under 30 secondsIncrease first-contact resolution rates',
+    'Scale support operations effortlesslyGain valuable customer insights'],
   const integrations = [
-    'Zendesk', 'Intercom', 'Freshdesk', 'Help Scout';
-    'Slack', 'Microsoft Teams', 'Discord', 'WhatsApp';
-    'Facebook Messenger', 'Twitter', 'Instagram';
-    'Shopify', 'WooCommerce', 'Magento', 'Salesforce'],
+    'ZendeskIntercom', 'FreshdeskHelp Scout',
+    'SlackMicrosoft Teams', 'DiscordWhatsApp',
+    'Facebook MessengerTwitter', 'InstagramShopify', 'WooCommerceMagento', 'Salesforce'],
   return (
     <>,
       <Head>,
@@ -76,7 +71,7 @@ export default function AICustomerServiceAutomation() {
                 AI Customer Service Automation,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Revolutionize your customer service with AI-powered automation. Provide 24/7 support;
+                Revolutionize your customer service with AI-powered automation. Provide 24/7 support,
                 instant responses, and intelligent issue resolution that delights your customers.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,

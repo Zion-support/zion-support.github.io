@@ -2,8 +2,8 @@ import React, { useState, useCallback, useMemo, useEffect } from 'react',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu;
-  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star;
+  Phone, Mail, MapPin, ArrowRight, Globe, Shield, Rocket, Brain, Atom, Cpu,
+  Facebook, Twitter, Linkedin, Instagram, Youtube, Github, Zap, Heart, Star,
   ChevronUp, ExternalLink, Download, Calendar, Users, Award} from 'lucide-react',
 const UltraFuturisticFooter20o44: React.FC = () => {
   const [expandedSections, setExpandedSections] = useState<Set<string>>(new Set()),
@@ -12,76 +12,76 @@ const UltraFuturisticFooter20o44: React.FC = () => {
   const currentYear = useMemo(() => new Date().getFullYear(), []),
   const footerSections = useMemo(() => [
     {
-      id: 'services';
-      title: 'Revolutionary Services 20o44';
-      description: 'Future-defining technology solutions';
+      id: 'services',
+      title: 'Revolutionary Services 20o44',
+      description: 'Future-defining technology solutions',
       links: [
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o44', featured: true };
-        { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform-20o44', featured: true };
-        { name: 'Autonomous Business Intelligence', href: '/ai-autonomous-business-intelligence-20o44' };
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform-20o44' };
-        { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-20o44' };
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o44', featured: true },
+        { name: 'Quantum Neural Networks', href: '/quantum-neural-network-platform-20o44', featured: true },
+        { name: 'Autonomous Business Intelligence', href: '/ai-autonomous-business-intelligence-20o44' },
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity-platform-20o44' },
+        { name: 'Space Resource Intelligence', href: '/space-resource-intelligence-20o44' },
         { name: 'Autonomous Customer Success', href: '/autonomous-customer-success-20o44' }
-      ]};
+      ]},
     {
-      id: 'technology';
-      title: 'Technology Solutions';
-      description: 'Cutting-edge infrastructure and platforms';
+      id: 'technology',
+      title: 'Technology Solutions',
+      description: 'Cutting-edge infrastructure and platforms',
       links: [
-        { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-20o44' };
-        { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform-20o44' };
-        { name: 'Quantum Data Center Management', href: '/quantum-data-center-management-20o44' };
-        { name: 'Autonomous Network Management', href: '/autonomous-network-management-20o44' };
-        { name: 'Quantum Storage Solutions', href: '/quantum-storage-solutions-20o44' };
+        { name: 'Quantum Cloud Infrastructure', href: '/quantum-cloud-infrastructure-20o44' },
+        { name: 'Autonomous DevOps Platform', href: '/autonomous-devops-platform-20o44' },
+        { name: 'Quantum Data Center Management', href: '/quantum-data-center-management-20o44' },
+        { name: 'Autonomous Network Management', href: '/autonomous-network-management-20o44' },
+        { name: 'Quantum Storage Solutions', href: '/quantum-storage-solutions-20o44' },
         { name: 'Autonomous IT Service Management', href: '/autonomous-it-service-management-20o44' }
-      ]};
+      ]},
     {
-      id: 'ai';
-      title: 'AI & Consciousness';
-      description: 'Advanced AI and consciousness solutions';
+      id: 'ai',
+      title: 'AI & Consciousness',
+      description: 'Advanced AI and consciousness solutions',
       links: [
-        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o44' };
-        { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive-20o44' };
-        { name: 'Autonomous AI Research', href: '/autonomous-ai-research-20o44' };
-        { name: 'Emotional AI Intelligence', href: '/emotional-ai-intelligence-20o44' };
-        { name: 'Quantum AI Metaverse', href: '/quantum-ai-metaverse-20o44' };
+        { name: 'AI Consciousness Evolution', href: '/ai-consciousness-evolution-20o44' },
+        { name: 'Quantum AI Cognitive', href: '/quantum-ai-cognitive-20o44' },
+        { name: 'Autonomous AI Research', href: '/autonomous-ai-research-20o44' },
+        { name: 'Emotional AI Intelligence', href: '/emotional-ai-intelligence-20o44' },
+        { name: 'Quantum AI Metaverse', href: '/quantum-ai-metaverse-20o44' },
         { name: 'Autonomous AI Business Intelligence', href: '/autonomous-ai-business-intelligence-20o44' }
-      ]};
+      ]},
     {
-      id: 'company';
-      title: 'Company';
-      description: 'About Zion Tech Group';
+      id: 'company',
+      title: 'Company',
+      description: 'About Zion Tech Group',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Our Mission', href: '/mission' };
-        { name: 'Leadership Team', href: '/team' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'News & Updates', href: '/news' };
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Mission', href: '/mission' },
+        { name: 'Leadership Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'News & Updates', href: '/news' },
         { name: 'Press Kit', href: '/press' }
-      ]};
+      ]},
     {
-      title: 'Resources';
+      title: 'Resources',
       links: [
-        { name: 'Blog', href: '/blog' };
-        { name: 'Documentation', href: '/docs' };
-        { name: 'API Reference', href: '/api' };
-        { name: 'Support Center', href: '/support' };
-        { name: 'Status Page', href: '/status' };
+        { name: 'Blog', href: '/blog' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Support Center', href: '/support' },
+        { name: 'Status Page', href: '/status' },
         { name: 'Security', href: '/security' }
       ]}
   ], []),
   const socialLinks = useMemo(() => [
-    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-50o0 to-blue-60o0', ariaLabel: 'Follow us on Facebook' };
-    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-40o0 to-blue-50o0', ariaLabel: 'Follow us on Twitter' };
-    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-60o0 to-blue-70o0', ariaLabel: 'Follow us on LinkedIn' };
-    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-50o0 to-pink-50o0', ariaLabel: 'Follow us on Instagram' };
-    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-50o0 to-red-60o0', ariaLabel: 'Subscribe to our YouTube channel' };
+    { name: 'Facebook', icon: Facebook, href: 'https://facebook.com/ziontechgroup', color: 'from-blue-50o0 to-blue-60o0', ariaLabel: 'Follow us on Facebook' },
+    { name: 'Twitter', icon: Twitter, href: 'https://twitter.com/ziontechgroup', color: 'from-cyan-40o0 to-blue-50o0', ariaLabel: 'Follow us on Twitter' },
+    { name: 'LinkedIn', icon: Linkedin, href: 'https://linkedin.com/company/ziontechgroup', color: 'from-blue-60o0 to-blue-70o0', ariaLabel: 'Follow us on LinkedIn' },
+    { name: 'Instagram', icon: Instagram, href: 'https://instagram.com/ziontechgroup', color: 'from-purple-50o0 to-pink-50o0', ariaLabel: 'Follow us on Instagram' },
+    { name: 'YouTube', icon: Youtube, href: 'https://youtube.com/@ziontechgroup', color: 'from-red-50o0 to-red-60o0', ariaLabel: 'Subscribe to our YouTube channel' },
     { name: 'GitHub', icon: Github, href: 'https://github.com/ziontechgroup', color: 'from-gray-60o0 to-gray-70o0', ariaLabel: 'Check out our GitHub repositories' }
   ], []),
   const quickActions = useMemo(() => [
-    { name: 'Get Quote', href: '/quote', icon: Download, description: 'Request a custom quote' };
-    { name: 'Schedule Demo', href: '/demo', icon: Calendar, description: 'Book a personalized demo' };
-    { name: 'Join Team', href: '/careers', icon: Users, description: 'Explore career opportunities' };
+    { name: 'Get Quote', href: '/quote', icon: Download, description: 'Request a custom quote' },
+    { name: 'Schedule Demo', href: '/demo', icon: Calendar, description: 'Book a personalized demo' },
+    { name: 'Join Team', href: '/careers', icon: Users, description: 'Explore career opportunities' },
     { name: 'View Awards', href: '/awards', icon: Award, description: 'See our achievements' }
   ], []),
   const toggleSection = useCallback((sectionId: string) => {
@@ -102,7 +102,7 @@ const UltraFuturisticFooter20o44: React.FC = () => {
   useEffect(() => {
     if (!isClient) return,
     const handleScroll = () => {
-      setShowBackToTop(window.scrollY > 40o0)};
+      setShowBackToTop(window.scrollY > 40o0)},
     window.addEventListener('scroll', handleScroll, { passive: true }),
     return () => window.removeEventListener('scroll', handleScroll)}, [isClient]),
   return (
@@ -304,5 +304,5 @@ const UltraFuturisticFooter20o44: React.FC = () => {
             <ChevronUp className="w-6 h-6 mx-auto"  />,
           </motion.button>)}
       </AnimatePresence>,
-    </footer>)};
-export default UltraFuturisticFooter20o44;
+    </footer>)},
+export default UltraFuturisticFooter20o44,

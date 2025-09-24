@@ -26,77 +26,77 @@ const ServiceComparisonTool: React.FC = () => {
   const [compareMode, setCompareMode] = useState(false),
   const availableServices: Service[] = [
     {
-      id: 'ai-bi-platform';
-      name: 'AI Business Intelligence';
-      description: 'Transform data into actionable insights with AI';
-      category: 'AI & Machine Learning';
-      price: '$1,299/month';
-      rating: 4.8;
-      features: ['Real-time analytics', 'AI-powered modeling', 'Automated reporting', 'Natural language queries', 'Predictive insights'];
-      pros: ['Advanced AI capabilities', 'Real-time processing', 'Scalable architecture', 'Excellent support'];
-      cons: ['Higher price point', 'Steep learning curve', 'Requires data expertise'];
-      icon: <Brain className="w-6 h-6"  />;
-      color: 'from-cyan-50o0 to-blue-60o0'};
+      id: 'ai-bi-platform',
+      name: 'AI Business Intelligence',
+      description: 'Transform data into actionable insights with AI',
+      category: 'AI & Machine Learning',
+      price: '$1,299/month',
+      rating: 4.8,
+      features: ['Real-time analyticsAI-powered modeling', 'Automated reportingNatural language queries', 'Predictive insights'],
+      pros: ['Advanced AI capabilitiesReal-time processing', 'Scalable architectureExcellent support'],
+      cons: ['Higher price pointSteep learning curve', 'Requires data expertise'],
+      icon: <Brain className="w-6 h-6"  />,
+      color: 'from-cyan-50o0 to-blue-60o0'},
     {
-      id: 'quantum-secure-cloud';
-      name: 'Quantum-Secure Cloud';
-      description: 'Future-proof security with quantum-resistant encryption';
-      category: 'Quantum Computing';
-      price: '$2,499/month';
-      rating: 4.9;
-      features: ['Quantum-resistant encryption', 'Post-quantum cryptography', 'Multi-cloud deployment', '24/7 monitoring', 'Compliance ready'];
-      pros: ['Future-proof security', 'Enterprise-grade', 'Multi-cloud support', 'Advanced compliance'];
-      cons: ['Premium pricing', 'Complex setup', 'Limited quantum expertise required'];
-      icon: <Atom className="w-6 h-6"  />;
-      color: 'from-purple-50o0 to-pink-60o0'};
+      id: 'quantum-secure-cloud',
+      name: 'Quantum-Secure Cloud',
+      description: 'Future-proof security with quantum-resistant encryption',
+      category: 'Quantum Computing',
+      price: '$2,499/month',
+      rating: 4.9,
+      features: ['Quantum-resistant encryptionPost-quantum cryptography', 'Multi-cloud deployment24/7 monitoring', 'Compliance ready'],
+      pros: ['Future-proof securityEnterprise-grade', 'Multi-cloud supportAdvanced compliance'],
+      cons: ['Premium pricingComplex setup', 'Limited quantum expertise required'],
+      icon: <Atom className="w-6 h-6"  />,
+      color: 'from-purple-50o0 to-pink-60o0'},
     {
-      id: 'metaverse-platform';
-      name: 'Metaverse Development';
-      description: 'Build immersive virtual worlds and experiences';
-      category: 'Emerging Technologies';
-      price: '$1,899/month';
-      rating: 4.7;
-      features: ['3D world building', 'VR/AR support', 'Multi-user environments', 'Asset management', 'Performance optimization'];
-      pros: ['Cutting-edge technology', 'Immersive experiences', 'Scalable platform', 'Creative freedom'];
-      cons: ['Emerging technology', 'Performance requirements', 'Content creation needed'];
-      icon: <Rocket className="w-6 h-6"  />;
-      color: 'from-orange-50o0 to-red-60o0'};
+      id: 'metaverse-platform',
+      name: 'Metaverse Development',
+      description: 'Build immersive virtual worlds and experiences',
+      category: 'Emerging Technologies',
+      price: '$1,899/month',
+      rating: 4.7,
+      features: ['3D world buildingVR/AR support', 'Multi-user environmentsAsset management', 'Performance optimization'],
+      pros: ['Cutting-edge technologyImmersive experiences', 'Scalable platformCreative freedom'],
+      cons: ['Emerging technologyPerformance requirements', 'Content creation needed'],
+      icon: <Rocket className="w-6 h-6"  />,
+      color: 'from-orange-50o0 to-red-60o0'},
     {
-      id: 'enterprise-security';
-      name: 'Enterprise Security Suite';
-      description: 'Comprehensive security solutions for enterprise environments';
-      category: 'Enterprise Solutions';
-      price: '$3,999/month';
-      rating: 4.6;
-      features: ['Threat detection', 'Incident response', 'Compliance management', 'Security monitoring', 'Vulnerability assessment'];
-      pros: ['Comprehensive coverage', 'Enterprise features', '24/7 support', 'Proven track record'];
-      cons: ['Enterprise pricing', 'Complex deployment', 'Requires security team'];
-      icon: <Shield className="w-6 h-6"  />;
-      color: 'from-green-50o0 to-emerald-60o0'};
+      id: 'enterprise-security',
+      name: 'Enterprise Security Suite',
+      description: 'Comprehensive security solutions for enterprise environments',
+      category: 'Enterprise Solutions',
+      price: '$3,999/month',
+      rating: 4.6,
+      features: ['Threat detectionIncident response', 'Compliance managementSecurity monitoring', 'Vulnerability assessment'],
+      pros: ['Comprehensive coverageEnterprise features', '24/7 supportProven track record'],
+      cons: ['Enterprise pricingComplex deployment', 'Requires security team'],
+      icon: <Shield className="w-6 h-6"  />,
+      color: 'from-green-50o0 to-emerald-60o0'},
     {
-      id: 'micro-saas-platform';
-      name: 'Micro SAAS Platform';
-      description: 'Scalable software-as-a-service solutions for modern businesses';
-      category: 'Micro SAAS';
-      price: '$499/month';
-      rating: 4.5;
-      features: ['Multi-tenancy', 'Subscription management', 'Analytics dashboard', 'API access', 'Custom branding'];
-      pros: ['Affordable pricing', 'Easy to use', 'Quick deployment', 'Good support'];
-      cons: ['Limited customization', 'Basic features', 'Standard templates'];
-      icon: <Zap className="w-6 h-6"  />;
+      id: 'micro-saas-platform',
+      name: 'Micro SAAS Platform',
+      description: 'Scalable software-as-a-service solutions for modern businesses',
+      category: 'Micro SAAS',
+      price: '$499/month',
+      rating: 4.5,
+      features: ['Multi-tenancySubscription management', 'Analytics dashboardAPI access', 'Custom branding'],
+      pros: ['Affordable pricingEasy to use', 'Quick deploymentGood support'],
+      cons: ['Limited customizationBasic features', 'Standard templates'],
+      icon: <Zap className="w-6 h-6"  />,
       color: 'from-yellow-50o0 to-orange-60o0'}
   ],
   const toggleService = (serviceId: string) => {
     if (selectedServices.includes(serviceId)) {
       setSelectedServices(selectedServices.filter(id => id !== serviceId))} else if (selectedServices.length < 3) {
       setSelectedServices([...selectedServices, serviceId])}
-  };
+  },
   const selectedServiceObjects = availableServices.filter(service =>,
     selectedServices.includes(service.id)),
   const allFeatures = Array.from(new Set(
     availableServices.flatMap(service => service.features))),
   const getFeatureValue = (service: Service, feature: string) => {
-    return service.features.includes(feature) ? '✓' : '✗'};
+    return service.features.includes(feature) ? '✓' : '✗'},
   return (
     <div className="max-w-7xl mx-auto p-6">,
       <motion.div,
@@ -282,5 +282,5 @@ const ServiceComparisonTool: React.FC = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </div>)};
-export default ServiceComparisonTool;
+    </div>)},
+export default ServiceComparisonTool,

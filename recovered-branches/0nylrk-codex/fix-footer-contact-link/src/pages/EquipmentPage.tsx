@@ -1,6 +1,6 @@
 
 ,
-import React from 'react';;
+import React from 'react',
 >>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4,
 const EquipmentPage = () => {
   return (
@@ -16,6 +16,6 @@ const EquipmentPage = () => {
         </div>,
       </div>,
     </div>)}
-export default EquipmentPage;
-};
+export default EquipmentPage,
+},
 >>>>>>> origin/cursor/expand-services-advertise-and-build-project-71ba>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/feature/merge-conflicts-and-improvements>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

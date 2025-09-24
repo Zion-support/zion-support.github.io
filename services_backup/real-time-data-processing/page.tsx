@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata = {
-  title: 'Real-time Data Processing | Zion Tech Group';
+  title: 'Real-time Data Processing | Zion Tech Group',
   description:,
-    'High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.';
-};
+    'High-performance real-time data processing with stream analytics, event processing, and instant insights for data-driven decision making.',
+},
 export default function RealTimeDataProcessingPage() {
   return (
     <div className='animate-fade-in'>,
@@ -13,7 +13,7 @@ export default function RealTimeDataProcessingPage() {
           Real-time Data Processing,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          High-performance real-time data processing with stream analytics;
+          High-performance real-time data processing with stream analytics,
           event processing, and instant insights for data-driven decision,
           making.,
         </p>,
@@ -60,11 +60,9 @@ export default function RealTimeDataProcessingPage() {
               price='$89/month',
               description='Perfect for small applications and proof of concepts',
               features={[
-                'Up to 1M events per day';
-                'Basic stream processing';
-                'Email support';
-                'Standard dashboards';
-                '5 data sources';
+                'Up to 1M events per dayBasic stream processing',
+                'Email supportStandard dashboards',
+                '5 data sources',
               ]}
             />,
             <PricingCard
@@ -72,12 +70,9 @@ export default function RealTimeDataProcessingPage() {
               price='$249/month',
               description='Ideal for growing businesses with real-time needs',
               features={[
-                'Up to 10M events per day';
-                'Advanced stream processing';
-                'Priority support';
-                'Custom dashboards';
-                'Unlimited data sources';
-                'ML integration';
+                'Up to 10M events per dayAdvanced stream processing',
+                'Priority supportCustom dashboards',
+                'Unlimited data sourcesML integration',
               ]}
             />,
             <PricingCard
@@ -85,13 +80,10 @@ export default function RealTimeDataProcessingPage() {
               price='$699/month',
               description='For large organizations with high-volume data processing',
               features={[
-                'Unlimited events';
-                'Custom stream processing';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Custom integrations';
-                'SLA guarantees';
-                'Advanced ML features';
+                'Unlimited eventsCustom stream processing',
+                '24/7 dedicated supportOn-premise deployment',
+                'Custom integrationsSLA guarantees',
+                'Advanced ML features',
               ]}
             />,
           </div>,
@@ -144,8 +136,8 @@ export default function RealTimeDataProcessingPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -170,10 +162,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -193,8 +185,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

@@ -1,14 +1,14 @@
 
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
     new winston.transports.File({ filename: 'logs/combined.log' })]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(new winston.transports.Console({
@@ -71,8 +71,8 @@ class AutomationTester {
         throw new Error('Event system not working')}
 ,
       this.addTestResult(
-        Monitor Initialization';
-        true;
+        Monitor Initialization',
+        true,
         Monitor initialized successfully')} catch (error) {
       this.addTestResult('Monitor Initialization', false, error.message)}
   }
@@ -86,13 +86,13 @@ class AutomationTester {
         throw new Error('Fix strategies not initialized')}
 ,
       const expectedStrategies = [
-        build-timeout';
-        memory-error';
-        dependency-error';
-        typescript-error';
-        eslint-error';
-        nextjs-error';
-        port-conflict';
+        build-timeout',
+        memory-error',
+        dependency-error',
+        typescript-error',
+        eslint-error',
+        nextjs-error',
+        port-conflict',
         environment-error],
       for (const strategy of expectedStrategies) {
         if (!fixer.fixStrategies[strategy]) {
@@ -100,8 +100,8 @@ class AutomationTester {
       }
 ,
       this.addTestResult(
-        Error Fixer Initialization';
-        true;
+        Error Fixer Initialization',
+        true,
         Error fixer initialized successfully')} catch (error) {
       this.addTestResult('Error Fixer Initialization', false, error.message)}
   }
@@ -121,8 +121,8 @@ class AutomationTester {
         throw new Error('Config not initialized')}
 ,
       this.addTestResult(
-        Automation Initialization';
-        true;
+        Automation Initialization',
+        true,
         Automation system initialized successfully')} catch (error) {
       this.addTestResult('Automation Initialization', false, error.message)}
   }
@@ -136,8 +136,8 @@ const missingVars = requiredEnvVars.filter(
         (varName) => !process.env[varName]),
       if (missingVars.length > 0) {
         this.addTestResult(
-          Configuration Validation';
-          false;
+          Configuration Validation',
+          false,
           `Missing environment variables: ${missingVars.join(')}`),
         return}
 ,
@@ -146,14 +146,14 @@ const missingVars = requiredEnvVars.filter(
 const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file)),
       if (missingFiles.length > 0) {
         this.addTestResult(
-          Configuration Validation';
-          false;
+          Configuration Validation',
+          false,
           `Missing configuration files: ${missingFiles.join(')}`),
         return}
 ,
       this.addTestResult(
-        Configuration Validation';
-        true;
+        Configuration Validation',
+        true,
         Configuration validation passed')} catch (error) {
       this.addTestResult('Configuration Validation', false, error.message)}
   }
@@ -164,8 +164,8 @@ const missingFiles = requiredFiles.filter((file) => !fs.existsSync(file)),
       const monitor = new NetlifyBuildMonitor(),
       // Test error analysis with mock data,
       const mockBuild ={
-        state: 'error';
-        error_message: Build failed due to memory constraints';
+        state: 'error',
+        error_message: Build failed due to memory constraints',
         logs: Error: JavaScript heap out of memory}
 const errors = monitor.analyzeBuildError(mockBuild),
       if (!Array.isArray(errors)) {
@@ -179,8 +179,8 @@ const errors = monitor.analyzeBuildError(mockBuild),
         throw new Error('Memory error not detected in mock data')}
 ,
       this.addTestResult(
-        Error Detection';
-        true;
+        Error Detection',
+        true,
         Error detection working correctly')} catch (error) {
       this.addTestResult('Error Detection', false, error.message)}
   }
@@ -202,8 +202,8 @@ const errors = monitor.analyzeBuildError(mockBuild),
         throw new Error('Invalid strategy should return false')}
 ,
       this.addTestResult(
-        Fix Strategies';
-        true;
+        Fix Strategies',
+        true,
         Fix strategies working correctly')} catch (error) {
       this.addTestResult('Fix Strategies', false, error.message)}
   }
@@ -212,7 +212,7 @@ const errors = monitor.analyzeBuildError(mockBuild),
     this.log('Testing file operations...'),
     try {
       const testFile = path.join(__dirname, 'test-file.json'),
-const testData ={ test: true, timestamp: new Date().toISOString() };
+const testData ={ test: true, timestamp: new Date().toISOString() },
       // Test file writing,
       fs.writeFileSync(testFile, JSON.stringify(testData, null, 2)),
       // Test file reading,
@@ -223,17 +223,17 @@ const testData ={ test: true, timestamp: new Date().toISOString() };
       // Clean up,
       fs.unlinkSync(testFile),
       this.addTestResult(
-        File Operations';
-        true;
+        File Operations',
+        true,
         File operations working correctly')} catch (error) {
       this.addTestResult('File Operations', false, error.message)}
   }
 ,
   addTestResult(testName, passed, message) {
     this.testResults.push({
-      test: testName;
-      passed;
-      message;
+      test: testName,
+      passed,
+      message,
       timestamp: new Date().toISOString()}),
 const status = passed ? PASS' : FAIL',
     this.log(`${status}: ${testName} - ${message}`, passed ? info' : error')}
@@ -241,20 +241,20 @@ const status = passed ? PASS' : FAIL',
   async generateTestReport() {
     this.log('Generating test report...'),
 const report ={
-      timestamp: new Date().toISOString();
+      timestamp: new Date().toISOString(),
       summary: {
-        total: this.testResults.length;
-        passed: this.testResults.filter((r) => r.passed).length;
-        failed: this.testResults.filter((r) => !r.passed).length;
+        total: this.testResults.length,
+        passed: this.testResults.filter((r) => r.passed).length,
+        failed: this.testResults.filter((r) => !r.passed).length,
         successRate: ,
           (
             (this.testResults.filter((r) => r.passed).length /,
               this.testResults.length) *,
-            10o0).toFixed(2) + %};
-      results: this.testResults};
+            10o0).toFixed(2) + %},
+      results: this.testResults},
     // Save report,
     fs.writeFileSync(
-      path.join(__dirname, 'test-report.json');
+      path.join(__dirname, 'test-report.json'),
       JSON.stringify(report, null, 2)),
     // Display summary,
     logger.info('\n' + ='.repeat(50)),

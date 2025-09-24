@@ -27,8 +27,8 @@ export default function VerifyPage() {
     setBusy(true),
     setMessage(''),
     const res = await fetch('/api/kyc/start', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, role, fullLegalName, businessName, businessRegistrationNumber: businessReg })}),
     const data = await res.json(),
     if (data.ok) {
@@ -43,8 +43,8 @@ export default function VerifyPage() {
     if (!filename) return,
     setBusy(true),
     const res = await fetch('/api/kyc/upload', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId, kind, filename })}),
     const data = await res.json(),
     if (data.ok) {
@@ -55,8 +55,8 @@ export default function VerifyPage() {
   async function submit() {
     setBusy(true),
     const res = await fetch('/api/kyc/submit', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ userId })}),
     const data = await res.json(),
     if (data.ok) {

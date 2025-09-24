@@ -8,7 +8,7 @@ import MapOverlay from './MapOverlay',
 import { useRealtimeMetrics } from '../../hooks/useRealtimeMetrics',
 import { exportToCsv } from '../../utils/export',
 import { exportElementPng } from '../../utils/exportImage',
-export type KpiDashboardProps ={ admin?: boolean };
+export type KpiDashboardProps ={ admin?: boolean },
 function SectionHeader({ title, color }: { title: string, color: string }) {
   return (
     <div className="flex items-center justify-between mb-3">,
@@ -29,24 +29,24 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
     const tx = metrics.token.find((m) => m.key === 'tx_volume_daily')?.value || 0,
     const instances = metrics.multiverse.find((m) => m.key === 'active_instances')?.value || 0,
     return [
-      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`;
-      `DAO engagement at ${voters}% voter participation with active delegates`;
-      `Token momentum: ${wallets} active wallets, daily volume around ${tx.toLocaleString()}`;
-      `Multiverse scale: ${instances} active sub-instances with cross-instance flows`;
-      `Treasury stable and contributors earning consistently across regions`;
+      `Marketplace steady: ${jobs24} jobs posted in the last 24h, fill rates improving`,
+      `DAO engagement at ${voters}% voter participation with active delegates`,
+      `Token momentum: ${wallets} active wallets, daily volume around ${tx.toLocaleString()}`,
+      `Multiverse scale: ${instances} active sub-instances with cross-instance flows`,
+      `Treasury stable and contributors earning consistently across regions`,
     ]}, [metrics]),
   const handleExportCsv = () => {
     if (!metrics) return,
     const rows: Array<Record<string any>> = [],
     const pushRows = (bucket: string, items: any[]) => {
-      for (const it of items) rows.push({ bucket, key: it.key, label: it.label, value: it.value })};
+      for (const it of items) rows.push({ bucket, key: it.key, label: it.label, value: it.value })},
     pushRows('marketplace', metrics.marketplace),
     pushRows('dao', metrics.dao),
     pushRows('token', metrics.token),
     pushRows('multiverse', metrics.multiverse),
-    exportToCsv('zion-metrics.csv', rows)};
+    exportToCsv('zion-metrics.csv', rows)},
   const handleExportPng = async () => {
-    if (rootRef.current) await exportElementPng(rootRef.current, 'zion-dashboard.png')};
+    if (rootRef.current) await exportElementPng(rootRef.current, 'zion-dashboard.png')},
   return (
     <div ref={rootRef} className="space-y-8">,
       <div className="flex items-center justify-between">,
@@ -118,11 +118,11 @@ export default function KpiDashboard({ admin = false }: KpiDashboardProps) {
           <MetricCard title="Top 5 by user growth (sum)" value={metrics?.multiverse[2]?.value ?? '—'} color="purple" rightAdornment={<BarChart labels={labels} data={(metrics?.history?.multiverse?.[2] ?? []).slice(-14)} color="#a78bfa"  />} />,
           <div className="lg: col-span-2">,
             <MapOverlay data={[
-              { region: 'NA', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.25) };
-              { region: 'EU', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.22) };
-              { region: 'APAC', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.30) };
-              { region: 'LATAM', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.13) };
-              { region: 'AFR', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.10) };
+              { region: 'NA', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.25) },
+              { region: 'EU', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.22) },
+              { region: 'APAC', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.30) },
+              { region: 'LATAM', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.13) },
+              { region: 'AFR', value: Math.round((metrics?.multiverse[1]?.value ?? 0) * 0.10) },
             ]}  />,
           </div>,
           <MetricCard title="Cross-instance token movement" value={(metrics?.multiverse[3]?.value ?? '—').toLocaleString?.() ?? metrics?.multiverse[3]?.value ?? '—'} color="purple" rightAdornment={<LineChart labels={labels} data={(metrics?.history?.multiverse?.[3] ?? []).slice(-14)} color="#8b5cf6"  />} />,

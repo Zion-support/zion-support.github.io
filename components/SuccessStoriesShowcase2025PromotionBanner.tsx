@@ -7,18 +7,18 @@ import {
   TrendingUp,
   DollarSign,
   Users,
-  ArrowRight;
-  X;
-  CheckCircle;
-  Star;
+  ArrowRight,
+  X,
+  CheckCircle,
+  Star,
   BarChart3} from 'lucide-react',
 const SuccessStoriesShowcase20o25PromotionBanner = () => {
   const [isVisiblesetIsVisible] = useState(true),
   const [currentStatsetCurrentStat] = useState(0),
   const stats = [
-    { value: "50o0+"label: "Companies Transformed"icon: Users };
-    { value: "$50M+"label: "Total Savings"icon: DollarSign };
-    { value: "95%"label: "Efficiency Gain"icon: TrendingUp };
+    { value: "50o0+"label: "Companies Transformed"icon: Users },
+    { value: "$50M+"label: "Total Savings"icon: DollarSign },
+    { value: "95%"label: "Efficiency Gain"icon: TrendingUp },
     { value: "99%"label: "Satisfaction Rate"icon: Star }
   ],
   useEffect(() => {
@@ -98,7 +98,7 @@ const SuccessStoriesShowcase20o25PromotionBanner = () => {
                   <motion.div,
                     key={index}
                     animate={{
-                      scale: currentStat === index ? 1.1 : 1;
+                      scale: currentStat === index ? 1.1 : 1,
                       opacity: currentStat === index ? 1 : 0.7}}
                     transition={{ duration: 0.3 }}
                     className="text-center">,
@@ -145,5 +145,5 @@ const SuccessStoriesShowcase20o25PromotionBanner = () => {
            />,
         </div>,
       </div>,
-    </motion.div>)};
-export default SuccessStoriesShowcase20o25PromotionBanner;
+    </motion.div>)},
+export default SuccessStoriesShowcase20o25PromotionBanner,

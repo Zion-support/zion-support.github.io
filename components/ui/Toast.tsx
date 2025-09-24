@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 export type ToastType = 'success' | 'error' | 'info' | 'warning',
 interface ToastProps {
   id: string,
@@ -8,11 +8,11 @@ interface ToastProps {
   onRemove: (id: string) => void}
 ,
 const Toast: React.FC<ToastProps> = ({
-  id;
-  type;
-  title;
-  message;
-  onRemove;
+  id,
+  type,
+  title,
+  message,
+  onRemove
 }) => {
   const getToastStyles = () => {
     switch (type) {
@@ -25,7 +25,7 @@ const Toast: React.FC<ToastProps> = ({
       case 'info':,
       default: ,
         return 'bg-blue-50o0 text-white'}
-  };
+  },
   return (
     <div className={`p-4 rounded-lg shadow-lg ${getToastStyles()}`}>,
       <div className='flex justify-between items-start'>,
@@ -39,5 +39,5 @@ const Toast: React.FC<ToastProps> = ({
           ×,
         </button>,
       </div>,
-    </div>)};
-export default Toast;
+    </div>)},
+export default Toast,

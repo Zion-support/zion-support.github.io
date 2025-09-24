@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import licenses from '../../data/automation/licenses.json',
-type Entry = { name: string, license: string };
+type Entry = { name: string, license: string },
 export default function LicenseComplianceAuditor() {
   const items = (licenses.items as Entry[]) || [],
   return (

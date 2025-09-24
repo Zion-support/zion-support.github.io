@@ -5,98 +5,92 @@ const QuantumAIContentShowcase20o25 = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const quantumContent = [
     {
-      id: 'quantum-computing-revolution';
+      id: 'quantum-computing-revolution',
       title:,
-        'AI 20o25: The Quantum Computing Revolution - Enterprise Breakthrough Guide';
+        'AI 20o25: The Quantum Computing Revolution - Enterprise Breakthrough Guide',
       description:,
-        'Discover how quantum computing is revolutionizing enterprise AI with 10o00% performance improvements and $50B+ market opportunities.';
-      url: '/blog/ai-20o25-quantum-computing-revolution-enterprise-breakthrough';
-      type: 'blog';
-      category: 'technology';
+        'Discover how quantum computing is revolutionizing enterprise AI with 10o00% performance improvements and $50B+ market opportunities.',
+      url: '/blog/ai-20o25-quantum-computing-revolution-enterprise-breakthrough',
+      type: 'blog',
+      category: 'technology',
       metrics: {
-        performance: '10o00%';
-        accuracy: '99.9%';
-        market: '$50B+';
-        roi: '1,20o0%';
-      };
-      readingTime: '18 min read';
-      featured: true;
+        performance: '10o00%',
+        accuracy: '99.9%',
+        market: '$50B+',
+        roi: '1,20o0%',
+      },
+      readingTime: '18 min read',
+      featured: true,
       tags: [
-        'Quantum Computing';
-        'AI';
-        'Enterprise';
-        'Breakthrough';
-        'Performance';
-      ];
-    };
+        'Quantum ComputingAI',
+        'EnterpriseBreakthrough',
+        'Performance',
+      ]
+    },
     {
-      id: 'fortune-50o0-quantum-success';
+      id: 'fortune-50o0-quantum-success',
       title:,
-        'Fortune 50o0 Quantum AI Transformation 20o25: $2.1B Company Achieves 1,20o0% ROI';
+        'Fortune 50o0 Quantum AI Transformation 20o25: $2.1B Company Achieves 1,20o0% ROI',
       description:,
-        'How a Fortune 50o0 manufacturing giant transformed their operations with quantum AI, achieving unprecedented efficiency and $180M in annual savings.';
-      url: '/case-studies/fortune-50o0-quantum-ai-transformation-20o25-ultimate-success';
-      type: 'case-study';
-      category: 'success-story';
+        'How a Fortune 50o0 manufacturing giant transformed their operations with quantum AI, achieving unprecedented efficiency and $180M in annual savings.',
+      url: '/case-studies/fortune-50o0-quantum-ai-transformation-20o25-ultimate-success',
+      type: 'case-study',
+      category: 'success-story',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$180M';
-        efficiency: '78%';
-        accuracy: '99.9%';
-      };
-      readingTime: '15 min read';
-      featured: true;
+        roi: '1,20o0%',
+        savings: '$180M',
+        efficiency: '78%',
+        accuracy: '99.9%'
+      },
+      readingTime: '15 min read',
+      featured: true,
       tags: [
-        'Case Study';
-        'Fortune 50o0';
-        'Quantum AI';
-        'Manufacturing';
-        'ROI';
-      ];
-    };
+        'Case StudyFortune 50o0',
+        'Quantum AIManufacturing',
+        'ROI',
+      ]
+    },
     {
-      id: 'quantum-implementation-guide';
+      id: 'quantum-implementation-guide',
       title:,
-        'Quantum AI Implementation Master Guide 20o25: From Strategy to 1,20o0% ROI';
+        'Quantum AI Implementation Master Guide 20o25: From Strategy to 1,20o0% ROI',
       description:,
-        'Complete guide to implementing quantum AI in your enterprise, with proven strategies, technology stack, and ROI optimization techniques.';
-      url: '/resources/quantum-ai-implementation-master-guide-20o25';
-      type: 'resource';
-      category: 'implementation';
+        'Complete guide to implementing quantum AI in your enterprise, with proven strategies, technology stack, and ROI optimization techniques.',
+      url: '/resources/quantum-ai-implementation-master-guide-20o25',
+      type: 'resource',
+      category: 'implementation',
       metrics: {
-        roi: '1,20o0%';
-        performance: '10o00%';
-        accuracy: '99.9%';
-        timeline: '18 months';
-      };
-      readingTime: '25 min read';
-      featured: true;
+        roi: '1,20o0%',
+        performance: '10o00%',
+        accuracy: '99.9%',
+        timeline: '18 months'
+      },
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Quantum AI';
-        'Strategy';
-        'ROI';
-        'Enterprise';
-      ];
-    };
+        'Implementation GuideQuantum AI',
+        'StrategyROI',
+        'Enterprise',
+      ]
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: quantumContent.length };
+    { id: 'all', label: 'All Content', count: quantumContent.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: quantumContent.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: quantumContent.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: quantumContent.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: quantumContent.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: quantumContent.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: quantumContent.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredContent =,
     activeFilter === 'all',
@@ -112,7 +106,7 @@ const QuantumAIContentShowcase20o25 = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -123,7 +117,7 @@ const QuantumAIContentShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -281,5 +275,5 @@ const QuantumAIContentShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default QuantumAIContentShowcase20o25;
+    </section>)},
+export default QuantumAIContentShowcase20o25,

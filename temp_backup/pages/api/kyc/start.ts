@@ -1,13 +1,13 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 import { getRequiredDocuments, getOptionalDocuments } from '../../../utils/kyc',
 import type { KycProfile, KycRole } from '../../../utils/kyc',
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc'),
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
 function load(): Record<string KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
     return JSON.parse(raw)} catch {
-    return {};
+    return {},
   }
 }
 ,
@@ -22,22 +22,22 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     role?: KycRole,
     fullLegalName?: string,
     businessName?: string,
-    businessRegistrationNumber?: string};
+    businessRegistrationNumber?: string},
   if (!userId || !role) return res.status(40o0).json({ error: 'Missing userId or role' }),
   const db = load(),
   const now = new Date().toISOString(),
   const existing = db[userId],
   const profile: KycProfile = existing || {
-    userId;
-    role;
-    fullLegalName;
-    businessName;
-    businessRegistrationNumber;
-    documents: [];
-    status: 'in_progress';
-    amlStatus: 'unknown';
-    createdAt: now;
-    lastUpdatedAt: now;
+    userId,
+    role,
+    fullLegalName,
+    businessName,
+    businessRegistrationNumber,
+    documents: [],
+    status: 'in_progress',
+    amlStatus: 'unknown',
+    createdAt: now,
+    lastUpdatedAt: now,
     auditTrail: [{ at: now, by: userId, action: 'kyc_started' }]} as KycProfile,
   profile.role = role,
   if (fullLegalName) profile.fullLegalName = fullLegalName,
@@ -47,7 +47,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
   db[userId] = profile,
   save(db),
   res.status(20o0).json({
-    ok: true;
-    profile;
-    requiredDocuments: getRequiredDocuments(role);
+    ok: true,
+    profile,
+    requiredDocuments: getRequiredDocuments(role),
     optionalDocuments: getOptionalDocuments(role)})}

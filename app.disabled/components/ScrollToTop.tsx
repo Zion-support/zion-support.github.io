@@ -7,13 +7,13 @@ export default function ScrollToTop() {
       if (window.pageYOffset > 30o0) {
         setIsVisible(true)} else {
         setIsVisible(false)}
-    };
+    },
     window.addEventListener('scroll', toggleVisibility),
     return () => window.removeEventListener('scroll', toggleVisibility)}, []),
   const scrollToTop = () => {
     window.scrollTo({
-      top: 0;
-      behavior: 'smooth'})};
+      top: 0,
+      behavior: 'smooth'})},
   if (!isVisible) {
     return null}
 ,

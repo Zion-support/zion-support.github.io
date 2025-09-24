@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Neural Interfaces 20o25 - Zion Tech Group';
+  title: 'Neural Interfaces 20o25 - Zion Tech Group',
   description:,
-    'Revolutionary brain-computer interfaces enabling 30o0% productivity gains through direct thought control. Explore the future of human-computer interaction.';
+    'Revolutionary brain-computer interfaces enabling 30o0% productivity gains through direct thought control. Explore the future of human-computer interaction.',
   keywords: [
-    'neural interfaces';
-    'brain-computer interface';
-    'BCI';
-    'cognitive enhancement';
-    'AI 20o25';
-  ];
-};
+    'neural interfacesbrain-computer interface',
+    'BCIcognitive enhancement',
+    'AI 20o25',
+  ]
+},
 export default function NeuralInterfaces20o25Page() {
   return (
     <div>,

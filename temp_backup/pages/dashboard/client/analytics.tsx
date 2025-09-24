@@ -1,17 +1,17 @@
-import React, { useEffect, useMemo, useState } from 'react';
-import SimpleFunnel from '../../../components/charts/SimpleFunnel';
-import SimpleLineChart from '../../../components/charts/SimpleLineChart';
-import { KpiBadge } from '../../../components/ui/InteractiveStats';
-import { exportCsv, exportSvgAsPng } from '../../../utils/exporters';
-import useRole from '../../../hooks/useRole';
+import React, { useEffect, useMemo, useState } from 'react',
+import SimpleFunnel from '../../../components/charts/SimpleFunnel',
+import SimpleLineChart from '../../../components/charts/SimpleLineChart',
+import { KpiBadge } from '../../../components/ui/InteractiveStats',
+import { exportCsv, exportSvgAsPng } from '../../../utils/exporters',
+import useRole from '../../../hooks/useRole',
 export default function ClientAnalyticsPage() {
-  const [data, setData] = useState<any>(null);
-  const { role, loading } = useRole();
+  const [data, setData] = useState<any>(null),
+  const { role, loading } = useRole(),
   useEffect(() => {
-    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null))}, []);
-  if (loading) return <div>Loading...</div>;
-  if (role !== 'client' && role !== 'admin') return <div>Unauthorized</div>;
-  const lineSeries = useMemo(() => [{ label: 'Quotes Received', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 8) })) }], []);
+    fetch('/api/analytics/client').then(r => r.json()).then(setData).catch(() => setData(null))}, []),
+  if (loading) return <div>Loading...</div>,
+  if (role !== 'client' && role !== 'admin') return <div>Unauthorized</div>,
+  const lineSeries = useMemo(() => [{ label: 'Quotes Received', points: Array.from({ length: 12 }, (_, i) => ({ x: i + 1, y: Math.round(Math.random() * 8) })) }], []),
   return (
     <div className="space-y-6">,
       <h1 className="text-2xl font-semibold">Client Analytics</h1>,

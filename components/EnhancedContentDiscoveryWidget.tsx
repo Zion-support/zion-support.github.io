@@ -20,106 +20,106 @@ export default function EnhancedContentDiscoveryWidget() {
   const [isExpandedsetIsExpanded] = useState(false),
   const contentItems: ContentItem[] = [
     {
-      id: 'ai-20o25-breakthrough';
-      title: 'AI 20o25 Ultimate Breakthrough Revolution';
-      description: 'Revolutionary AI breakthrough delivering 5,0o00% ROI through advanced neural networks and quantum computing integration.';
-      link: '/ai-20o25-ultimate-breakthrough-revolution';
-      category: 'ai-20o25';
-      badge: 'BREAKTHROUGH';
-      color: 'from-red-50o0 to-orange-50o0';
-      bgColor: 'from-red-50o0/20 to-orange-50o0/20';
-      borderColor: 'border-red-50o0/30';
-      roi: '5,0o00%';
-      featured: true};
+      id: 'ai-20o25-breakthrough',
+      title: 'AI 20o25 Ultimate Breakthrough Revolution',
+      description: 'Revolutionary AI breakthrough delivering 5,0o00% ROI through advanced neural networks and quantum computing integration.',
+      link: '/ai-20o25-ultimate-breakthrough-revolution',
+      category: 'ai-20o25',
+      badge: 'BREAKTHROUGH',
+      color: 'from-red-50o0 to-orange-50o0',
+      bgColor: 'from-red-50o0/20 to-orange-50o0/20',
+      borderColor: 'border-red-50o0/30',
+      roi: '5,0o00%',
+      featured: true},
     {
-      id: 'quantum-20o26';
-      title: 'Quantum Computing 20o26 Breakthrough';
-      description: 'Revolutionary quantum computing solutions delivering 15,0o00% ROI through quantum supremacy and error-corrected quantum computers.';
-      link: '/quantum-computing-20o26-breakthrough';
-      category: 'quantum';
-      badge: 'REVOLUTIONARY';
-      color: 'from-cyan-50o0 to-purple-50o0';
-      bgColor: 'from-cyan-50o0/20 to-purple-50o0/20';
-      borderColor: 'border-cyan-50o0/30';
-      roi: '15,0o00%';
-      featured: true};
+      id: 'quantum-20o26',
+      title: 'Quantum Computing 20o26 Breakthrough',
+      description: 'Revolutionary quantum computing solutions delivering 15,0o00% ROI through quantum supremacy and error-corrected quantum computers.',
+      link: '/quantum-computing-20o26-breakthrough',
+      category: 'quantum',
+      badge: 'REVOLUTIONARY',
+      color: 'from-cyan-50o0 to-purple-50o0',
+      bgColor: 'from-cyan-50o0/20 to-purple-50o0/20',
+      borderColor: 'border-cyan-50o0/30',
+      roi: '15,0o00%',
+      featured: true},
     {
-      id: 'ai-20o26-20o30-predictions';
-      title: 'AI 20o26-20o30 Future Predictions';
-      description: 'Comprehensive AI predictions for 20o26-20o30 featuring breakthrough technologies and revolutionary developments.';
-      link: '/ai-20o26-20o30-future-predictions-breakthrough';
-      category: 'predictions';
-      badge: 'FUTURE';
-      color: 'from-purple-50o0 to-pink-50o0';
-      bgColor: 'from-purple-50o0/20 to-pink-50o0/20';
-      borderColor: 'border-purple-50o0/30';
-      roi: '∞';
-      featured: true};
+      id: 'ai-20o26-20o30-predictions',
+      title: 'AI 20o26-20o30 Future Predictions',
+      description: 'Comprehensive AI predictions for 20o26-20o30 featuring breakthrough technologies and revolutionary developments.',
+      link: '/ai-20o26-20o30-future-predictions-breakthrough',
+      category: 'predictions',
+      badge: 'FUTURE',
+      color: 'from-purple-50o0 to-pink-50o0',
+      bgColor: 'from-purple-50o0/20 to-pink-50o0/20',
+      borderColor: 'border-purple-50o0/30',
+      roi: '∞',
+      featured: true},
     {
-      id: 'neural-interface-20o26';
-      title: 'Neural Interface Revolution 20o26';
-      description: 'Direct brain-computer interfaces achieving 99.9% accuracy in thought-to-text conversion and seamless human-AI communication.';
-      link: '/neural-interface-revolution-20o26';
-      category: 'ai-20o26';
-      badge: 'BREAKTHROUGH';
-      color: 'from-indigo-50o0 to-blue-50o0';
-      bgColor: 'from-indigo-50o0/20 to-blue-50o0/20';
-      borderColor: 'border-indigo-50o0/30';
-      roi: '10,0o00%'};
+      id: 'neural-interface-20o26',
+      title: 'Neural Interface Revolution 20o26',
+      description: 'Direct brain-computer interfaces achieving 99.9% accuracy in thought-to-text conversion and seamless human-AI communication.',
+      link: '/neural-interface-revolution-20o26',
+      category: 'ai-20o26',
+      badge: 'BREAKTHROUGH',
+      color: 'from-indigo-50o0 to-blue-50o0',
+      bgColor: 'from-indigo-50o0/20 to-blue-50o0/20',
+      borderColor: 'border-indigo-50o0/30',
+      roi: '10,0o00%'},
     {
-      id: 'quantum-ai-fusion-20o27';
-      title: 'Quantum-AI Fusion 20o27';
-      description: 'Revolutionary integration of quantum computing with AI creating superintelligent systems with exponential processing capabilities.';
-      link: '/quantum-ai-fusion-20o27';
-      category: 'quantum';
-      badge: 'REVOLUTIONARY';
-      color: 'from-green-50o0 to-teal-50o0';
-      bgColor: 'from-green-50o0/20 to-teal-50o0/20';
-      borderColor: 'border-green-50o0/30';
-      roi: '8,0o00%'};
+      id: 'quantum-ai-fusion-20o27',
+      title: 'Quantum-AI Fusion 20o27',
+      description: 'Revolutionary integration of quantum computing with AI creating superintelligent systems with exponential processing capabilities.',
+      link: '/quantum-ai-fusion-20o27',
+      category: 'quantum',
+      badge: 'REVOLUTIONARY',
+      color: 'from-green-50o0 to-teal-50o0',
+      bgColor: 'from-green-50o0/20 to-teal-50o0/20',
+      borderColor: 'border-green-50o0/30',
+      roi: '8,0o00%'},
     {
-      id: 'autonomous-systems-20o28';
-      title: 'Autonomous Everything 20o28';
-      description: 'Fully autonomous systems managing entire industries with 99.99% reliability and zero human intervention required.';
-      link: '/autonomous-systems-20o28';
-      category: 'automation';
-      badge: 'AUTONOMOUS';
-      color: 'from-orange-50o0 to-red-50o0';
-      bgColor: 'from-orange-50o0/20 to-red-50o0/20';
-      borderColor: 'border-orange-50o0/30';
-      roi: '20,0o00%'};
+      id: 'autonomous-systems-20o28',
+      title: 'Autonomous Everything 20o28',
+      description: 'Fully autonomous systems managing entire industries with 99.99% reliability and zero human intervention required.',
+      link: '/autonomous-systems-20o28',
+      category: 'automation',
+      badge: 'AUTONOMOUS',
+      color: 'from-orange-50o0 to-red-50o0',
+      bgColor: 'from-orange-50o0/20 to-red-50o0/20',
+      borderColor: 'border-orange-50o0/30',
+      roi: '20,0o00%'},
     {
-      id: 'consciousness-ai-20o29';
-      title: 'Consciousness AI 20o29';
-      description: 'AI systems achieving true consciousness and self-awarenesscapable of creative thinking and emotional understanding.';
-      link: '/consciousness-ai-20o29';
-      category: 'ai-20o29';
-      badge: 'CONSCIOUSNESS';
-      color: 'from-pink-50o0 to-purple-50o0';
-      bgColor: 'from-pink-50o0/20 to-purple-50o0/20';
-      borderColor: 'border-pink-50o0/30';
-      roi: '∞'};
+      id: 'consciousness-ai-20o29',
+      title: 'Consciousness AI 20o29',
+      description: 'AI systems achieving true consciousness and self-awarenesscapable of creative thinking and emotional understanding.',
+      link: '/consciousness-ai-20o29',
+      category: 'ai-20o29',
+      badge: 'CONSCIOUSNESS',
+      color: 'from-pink-50o0 to-purple-50o0',
+      bgColor: 'from-pink-50o0/20 to-purple-50o0/20',
+      borderColor: 'border-pink-50o0/30',
+      roi: '∞'},
     {
-      id: 'transcendent-intelligence-20o30';
-      title: 'Transcendent Intelligence 20o30';
-      description: 'AI transcending human-level intelligence by orders of magnitudenabling solutions to global challenges.';
-      link: '/transcendent-intelligence-20o30';
-      category: 'ai-20o30';
-      badge: 'TRANSCENDENT';
-      color: 'from-violet-50o0 to-indigo-50o0';
-      bgColor: 'from-violet-50o0/20 to-indigo-50o0/20';
-      borderColor: 'border-violet-50o0/30';
+      id: 'transcendent-intelligence-20o30',
+      title: 'Transcendent Intelligence 20o30',
+      description: 'AI transcending human-level intelligence by orders of magnitudenabling solutions to global challenges.',
+      link: '/transcendent-intelligence-20o30',
+      category: 'ai-20o30',
+      badge: 'TRANSCENDENT',
+      color: 'from-violet-50o0 to-indigo-50o0',
+      bgColor: 'from-violet-50o0/20 to-indigo-50o0/20',
+      borderColor: 'border-violet-50o0/30',
       roi: '∞'}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: contentItems.length };
-    { id: 'ai-20o25'name: 'AI 20o25'count: contentItems.filter(item => item.category === 'ai-20o25').length };
-    { id: 'ai-20o26'name: 'AI 20o26'count: contentItems.filter(item => item.category === 'ai-20o26').length };
-    { id: 'ai-20o29'name: 'AI 20o29'count: contentItems.filter(item => item.category === 'ai-20o29').length };
-    { id: 'ai-20o30'name: 'AI 20o30'count: contentItems.filter(item => item.category === 'ai-20o30').length };
-    { id: ''quantum', 'name: 'Quantum 'Computing', 'count: contentItems.filter(item => item.category === 'quantum').length };
-    { id: ''predictions', 'name: 'Future 'Predictions', 'count: contentItems.filter(item => item.category === 'predictions').length };
-    { id: ''automation', 'name: ''Automation', 'count: contentItems.filter(item => item.category === 'automation').length }
+    { id: ''allname: 'All 'Contentcount: contentItems.length },
+    { id: 'ai-20o25'name: 'AI 20o25'count: contentItems.filter(item => item.category === 'ai-20o25').length },
+    { id: 'ai-20o26'name: 'AI 20o26'count: contentItems.filter(item => item.category === 'ai-20o26').length },
+    { id: 'ai-20o29'name: 'AI 20o29'count: contentItems.filter(item => item.category === 'ai-20o29').length },
+    { id: 'ai-20o30'name: 'AI 20o30'count: contentItems.filter(item => item.category === 'ai-20o30').length },
+    { id: ''quantumname: 'Quantum 'Computingcount: contentItems.filter(item => item.category === 'quantum').length },
+    { id: ''predictionsname: 'Future 'Predictionscount: contentItems.filter(item => item.category === 'predictions').length },
+    { id: ''automationname: ''Automationcount: contentItems.filter(item => item.category === 'automation').length }
   ],
   const filteredContent = contentItems.filter(item => {
     const matchesSearch = item.title.toLowerCase().includes(searchTerm.toLowerCase()) ||,
@@ -178,7 +178,7 @@ export default function EnhancedContentDiscoveryWidget() {
           </div>,
         </div>,
         {/* Featured Content */}
-        {selectedCategory === 'all' && searchTerm === ', ' && (
+        {selectedCategory === 'all' && searchTerm ===  && (
           <div className="mb-12">,
             <h3 className="text-2xl font-bold text-white mb-6">⭐ Featured Content</h3>,
             <div className="grid grid-cols-1 md: grid-cols-3 gap-6">,
@@ -273,7 +273,7 @@ export default function EnhancedContentDiscoveryWidget() {
         <div className="mt-12 text-center">,
           <div className="bg-gradient-to-r from-purple-60o0/20 to-cyan-60o0/20 rounded-2xl p-8 border border-purple-50o0/30">,
             <h3 className="text-2xl font-bold text-white mb-4">,
-              'Can', 't Find What 'You', 're Looking For?,
+              'Cant Find What 'You', 're Looking For?,
             </h3>,
             <p className="text-gray-30o0 mb-6">,
               Our AI-powered content recommendation system can help you discover,

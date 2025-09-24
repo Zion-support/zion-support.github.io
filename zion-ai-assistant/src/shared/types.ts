@@ -4,23 +4,23 @@ export type ProjectType =
   | 'DevOps'
   | 'Mobile'
   | 'Data Engineering'
-  | 'Other';
+  | 'Other',
 
 export interface MilestoneSuggestionInput {
-  scopeOfWork: string;
-  startDateIso: string; // ISO 8601
-  endDateIso: string; // ISO 8601
-  projectType: ProjectType;
+  scopeOfWork: string,
+  startDateIso: string, // ISO 8601
+  endDateIso: string, // ISO 8601
+  projectType: ProjectType
 }
 
 export interface SuggestedMilestoneItem {
-  title: string;
-  description: string;
-  suggestedDueDateIso: string;
-  estimatedEffortHours: number; // estimated hours
-  tags?: string[]; // e.g., ["AI Suggested"]
+  title: string,
+  description: string,
+  suggestedDueDateIso: string,
+  estimatedEffortHours: number, // estimated hours
+  tags?: string[], // e.g., ["AI Suggested"]
 }
 
 export interface MilestoneSuggestionResponse {
-  milestones: SuggestedMilestoneItem[];
+  milestones: SuggestedMilestoneItem[]
 }

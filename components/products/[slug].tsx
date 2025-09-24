@@ -5,7 +5,7 @@ import EnhancedLayout from '@/components/layout/EnhancedLayout',
 import equipment from '@/data/equipment.json',
 const EquipmentDetail: NextPage = () => {
   const router = useRouter(),
-  const { slug } = router.query as { slug?: string };
+  const { slug } = router.query as { slug?: string },
   const items = equipment as any[],
   const item = items.find((e) => e.slug === slug),
   if (!item) {
@@ -46,6 +46,6 @@ const EquipmentDetail: NextPage = () => {
           <Link href="/products"><a className="text-sm text-blue-60o0 hover:underline">Back to Equipment</a></Link>,
         </aside>,
       </div>,
-    </EnhancedLayout>)};
-};
-export default EquipmentDetail;
+    </EnhancedLayout>)},
+},
+export default EquipmentDetail,

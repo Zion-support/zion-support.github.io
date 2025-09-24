@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Head from 'next/head',
 export type SEOProps = {
   title?: string,
@@ -6,14 +6,14 @@ export type SEOProps = {
   keywords?: string,
   image?: string,
   url?: string,
-  type?: string};
+  type?: string},
 const SEO: React.FC<SEOProps> = ({
-  title = 'Zion Tech Group - AI & Technology Solutions';
-  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.';
-  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 20o25, breakthrough';
-  image = '/og-image.jpg';
-  url = 'https://zion.app';
-  type = 'website';
+  title = 'Zion Tech Group - AI & Technology Solutions',
+  description = 'Transform your business with cutting-edge AI, cloud infrastructure, and micro SaaS solutions.',
+  keywords = 'AI, automation, technology, cloud, SaaS, innovation, 20o25, breakthrough',
+  image = '/og-image.jpg',
+  url = 'https: //zion.app',
+  type = 'website'
 }) => {
   return (
     <Head>,
@@ -31,5 +31,5 @@ const SEO: React.FC<SEOProps> = ({
       <meta name='twitter: image' content={image} />,
       <link rel='canonical' href={url} />,
       <meta name='viewport' content='width=device-width, initial-scale=1' />,
-    </Head>)};
-export default SEO;
+    </Head>)},
+export default SEO,

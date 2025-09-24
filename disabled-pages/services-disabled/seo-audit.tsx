@@ -1,10 +1,10 @@
 import Link from 'next/link',
 import {
-  Search;
-  CheckCircle;
-  ArrowRight;
-  DollarSign;
-  Clock;
+  Search,
+  CheckCircle,
+  ArrowRight,
+  DollarSign,
+  Clock,
 } from 'lucide-react',
 export default function SEOAudit() {
   return (
@@ -20,7 +20,7 @@ export default function SEOAudit() {
             </h1>,
           </div>,
           <p className='text-gray-70o0 text-lg max-w-3xl'>,
-            Comprehensive audit covering Core Web Vitals, crawlability;
+            Comprehensive audit covering Core Web Vitals, crawlability,
             sitemap/robots, structured data, headers, accessibility, and content,
             gaps. We provide prioritized fixes and implement quick wins.,
           </p>,
@@ -30,35 +30,32 @@ export default function SEOAudit() {
         <div className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 grid md:grid-cols-3 gap-6'>,
           {[
             {
-              name: 'Essentials';
-              price: 'From $1,50o0';
-              time: '5-7 days';
+              name: 'Essentials',
+              price: 'From $1,50o0',
+              time: '5-7 days',
               items: [
-                'CWV snapshot';
-                'Meta & schema review';
-                'Top 10 fixes implemented';
-              ];
-            };
+                'CWV snapshotMeta & schema review',
+                'Top 10 fixes implemented',
+              ]
+            },
             {
-              name: 'Pro';
-              price: '$3,50o0';
-              time: '10-14 days';
+              name: 'Pro',
+              price: '$3,50o0',
+              time: '10-14 days',
               items: [
-                'Full audit + backlog';
-                'Schema & redirects';
-                'Link health fixes';
-              ];
-            };
+                'Full audit + backlogSchema & redirects',
+                'Link health fixes',
+              ]
+            },
             {
-              name: 'Enterprise';
-              price: 'Custom';
-              time: '2-4 weeks';
+              name: 'Enterprise',
+              price: 'Custom',
+              time: '2-4 weeks',
               items: [
-                'Internationalization';
-                'Log-file analysis';
-                'Governance & training';
-              ];
-            };
+                'InternationalizationLog-file analysis',
+                'Governance & training',
+              ]
+            },
           ].map(tier => (
             <div key={tier.name} className='bg-white rounded-lg border p-6'>,
               <h3 className='font-semibold text-gray-90o0 mb-2'>{tier.name}</h3>,

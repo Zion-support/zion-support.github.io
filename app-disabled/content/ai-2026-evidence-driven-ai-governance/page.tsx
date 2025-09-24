@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Evidence-Driven AI Governance';
+  title: 'AI 20o26: Evidence-Driven AI Governance',
   description:,
-    'Operationalize governance with verifiable evidence: evaluation results, approvals, and runtime telemetry as first-class artifacts.';
-};
+    'Operationalize governance with verifiable evidence: evaluation results, approvals, and runtime telemetry as first-class artifacts.',
+},
 export default function EvidenceDrivenGovernancePage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-16'>,

@@ -1,44 +1,44 @@
-import React, { useState } from 'react';
-import Head from 'next/head';
-import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react';
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground';
-import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard';
-import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground';
-import QuantumHolographicCard from '../components/ui/QuantumHolographicCard';
-import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services';
+import React, { useState } from 'react',
+import Head from 'next/head',
+import { Check, Star, Zap, Shield, Users, Globe, ArrowRight, ExternalLink, TrendingUp, Clock, Target, Building, Rocket, Award, DollarSign, ChartBar, Lock, Cpu, Database, Cloud, Smartphone, Palette, Search, MessageSquare, FileText, Calendar, CreditCard, BarChart3, Settings, Zap as ZapIcon, Code, BookOpen, Activity, Database as DatabaseIcon, Play, Mail, Phone, MapPin, Filter, Grid, List, ChevronDown, ChevronUp, Sparkles, FlaskConical, Dna, Car, Leaf, Factory, Truck, Microscope, GraduationCap, ShieldCheck, Brain, Atom, Globe2, Bot, Eye, Target as TargetIcon, Zap as ZapIcon2, Shield as ShieldIcon, Globe as GlobeIcon, Cpu as CpuIcon, Cloud as CloudIcon, Bot as BotIcon, Lock as LockIcon, BarChart3 as BarChart3Icon, TrendingUp as TrendingUpIcon, Users as UsersIcon, Award as AwardIcon, Star as StarIcon, Check as CheckIcon, ArrowRight as ArrowRightIcon, ExternalLink as ExternalLinkIcon, Phone as PhoneIcon, Mail as MailIcon, MapPin as MapPinIcon, Trophy, FlaskConical as FlaskConicalIcon, Dna as DnaIcon, Car as CarIcon, Leaf as LeafIcon, Factory as FactoryIcon, Truck as TruckIcon, Microscope as MicroscopeIcon, GraduationCap as GraduationCapIcon, ShieldCheck as ShieldCheckIcon } from 'lucide-react',
+import Button from '../components/ui/Button',
+import Card from '../components/ui/Card',
+import EnhancedFuturisticBackground from '../components/ui/EnhancedFuturisticBackground',
+import EnhancedFuturisticCard from '../components/ui/EnhancedFuturisticCard',
+import QuantumHolographicBackground from '../components/ui/QuantumHolographicBackground',
+import QuantumHolographicCard from '../components/ui/QuantumHolographicCard',
+import { innovativeMicroSaasServices, getInnovativeServicesByCategory, getPopularInnovativeServices, getInnovativeServicesByPriceRange, getInnovativeServiceCategories } from '../data/innovative-micro-saas-services',
 export default function InnovativeServicesPage() {
-  const [selectedCategory, setSelectedCategory] = useState('All');
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
-  const [priceRange, setPriceRange] = useState('All');
-  const [searchQuery, setSearchQuery] = useState('');
-  const [sortBy, setSortBy] = useState('innovation');
-  const [showFilters, setShowFilters] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState('All'),
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
+  const [priceRange, setPriceRange] = useState('All'),
+  const [searchQuery, setSearchQuery] = useState(''),
+  const [sortBy, setSortBy] = useState('innovation'),
+  const [showFilters, setShowFilters] = useState(false),
   const priceRanges = [
-    { value: 'All', label: 'All Prices' };
-    { value: '0-10o00', label: '$0 - $1,0o00' };
-    { value: '10o01-20o00', label: '$1,0o01 - $2,0o00' };
-    { value: '20o01-30o00', label: '$2,0o01 - $3,0o00' };
-    { value: '30o01-50o00', label: '$3,0o01 - $5,0o00' };
+    { value: 'All', label: 'All Prices' },
+    { value: '0-10o00', label: '$0 - $1,0o00' },
+    { value: '10o01-20o00', label: '$1,0o01 - $2,0o00' },
+    { value: '20o01-30o00', label: '$2,0o01 - $3,0o00' },
+    { value: '30o01-50o00', label: '$3,0o01 - $5,0o00' },
     { value: '50o01+', label: '$5,0o01+' }
-  ];
+  ],
   const sortOptions = [
-    { value: 'innovation', label: 'Innovation Level' };
-    { value: 'price', label: 'Price Low-High' };
-    { value: 'popularity', label: 'Most Popular' };
-    { value: 'category', label: 'Category' };
+    { value: 'innovation', label: 'Innovation Level' },
+    { value: 'price', label: 'Price Low-High' },
+    { value: 'popularity', label: 'Most Popular' },
+    { value: 'category', label: 'Category' },
     { value: 'roi', label: 'Highest ROI' }
-  ];
+  ],
   // Filter and sort services,
-  let filteredServices = innovativeMicroSaasServices;
+  let filteredServices = innovativeMicroSaasServices,
   // Category filter,
   if (selectedCategory !== 'All') {
     filteredServices = getInnovativeServicesByCategory(selectedCategory)}
 ,
   // Price range filter,
   if (priceRange !== 'All') {
-    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p));
+    const [min, max] = priceRange.split('-').map(p => p === '+' ? Infinity : parseInt(p)),
     filteredServices = getInnovativeServicesByPriceRange(min, max)}
 ,
   // Search filter,
@@ -53,30 +53,30 @@ export default function InnovativeServicesPage() {
   filteredServices.sort((a, b) => {
     switch (sortBy) {
       case 'price':,
-        return a.price.monthly - b.price.monthly;
+        return a.price.monthly - b.price.monthly,
       case 'popularity':,
-        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0);
+        return (b.popular ? 1 : 0) - (a.popular ? 1 : 0),
       case 'category':,
-        return a.category.localeCompare(b.category);
+        return a.category.localeCompare(b.category),
       case 'roi': {
-        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0');
-        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0');
+        const aRoi = parseInt(a.roi.match(/\d+/)?.[0] || '0'),
+        const bRoi = parseInt(b.roi.match(/\d+/)?.[0] || '0'),
         return bRoi - aRoi}
               default: {
           // Innovation level sorting,
-          const innovationOrder ={ 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 };
-          const aLevel = a.innovationLevel.split(' - ')[0];
-          const bLevel = b.innovationLevel.split(' - ')[0];
+          const innovationOrder ={ 'Breakthrough': 3, 'Advanced': 2, 'Standard': 1 },
+          const aLevel = a.innovationLevel.split(' - ')[0],
+          const bLevel = b.innovationLevel.split(' - ')[0],
           return (innovationOrder[aLevel as keyof typeof innovationOrder] || 0) - (innovationOrder[bLevel as keyof typeof innovationOrder] || 0)}
     }
-  });
+  }),
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
-  const popularServices = getPopularInnovativeServices();
-  const categories = getInnovativeServiceCategories();
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
+  const popularServices = getPopularInnovativeServices(),
+  const categories = getInnovativeServiceCategories(),
   return (
     <>,
       <Head>,

@@ -2,113 +2,107 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  TrendingUp;
-  DollarSign;
-  Clock;
-  Users;
-  Award;
-  BookOpen;
-  FileText;
-  BarChart3;
+  ArrowRight,
+  TrendingUp,
+  DollarSign,
+  Clock,
+  Users,
+  Award,
+  BookOpen,
+  FileText,
+  BarChart3,
 } from 'lucide-react',
 const UltimateEnterpriseTransformationShowcase = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'ultimate-enterprise-transformation';
-      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution';
+      id: 'ultimate-enterprise-transformation',
+      title: 'AI 20o25: The Ultimate Enterprise Transformation Revolution',
       subtitle:,
-        '20,0o00% ROI - The Highest Documented ROI in Enterprise AI History';
+        '20,0o00% ROI - The Highest Documented ROI in Enterprise AI History',
       description:,
-        'Transform your Fortune 50o0 company with revolutionary AI systems that have generated $20o0B+ in annual savings across 1,0o00+ implementations.';
-      type: 'blog';
-      category: 'transformation';
+        'Transform your Fortune 50o0 company with revolutionary AI systems that have generated $20o0B+ in annual savings across 1,0o00+ implementations.',
+      type: 'blog',
+      category: 'transformation',
       metrics: {
-        roi: '20,0o00%';
-        savings: '$20o0B+';
-        accuracy: '99.99%';
-        efficiency: '5,0o00%';
-      };
-      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough';
-      readingTime: '35 min read';
-      featured: true;
+        roi: '20,0o00%',
+        savings: '$20o0B+',
+        accuracy: '99.99%',
+        efficiency: '5,0o00%',
+      },
+      url: '/blog/ai-20o25-ultimate-enterprise-transformation-revolution-ultimate-breakthrough',
+      readingTime: '35 min read',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Enterprise Transformation';
-        '20,0o00% ROI';
-        'Fortune 50o0';
-        'Revolutionary AI';
-      ];
-    };
+        'AI RevolutionEnterprise Transformation',
+        '20,0o00% ROIFortune 50o0',
+        'Revolutionary AI',
+      ],
+    },
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 Ultimate Success: $20o0B Annual Savings';
-      subtitle: '20,0o00% ROI Success Story - Complete Case Study';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 Ultimate Success: $20o0B Annual Savings',
+      subtitle: '20,0o00% ROI Success Story - Complete Case Study',
       description:,
-        'How a Fortune 50 manufacturing leader achieved the highest ROI in enterprise AI history through revolutionary transformation.';
-      type: 'case-study';
-      category: 'success-stories';
+        'How a Fortune 50 manufacturing leader achieved the highest ROI in enterprise AI history through revolutionary transformation.',
+      type: 'case-study',
+      category: 'success-stories',
       metrics: {
-        roi: '20,0o00%';
-        savings: '$20o0B';
-        timeline: '18 months';
-        satisfaction: '99.8%';
-      };
-      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-20o000-roi-success-story';
-      readingTime: '25 min read';
-      featured: true;
+        roi: '20,0o00%',
+        savings: '$20o0B',
+        timeline: '18 months',
+        satisfaction: '99.8%'
+      },
+      url: '/case-studies/fortune-50o0-ultimate-enterprise-transformation-20o000-roi-success-story',
+      readingTime: '25 min read',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'Success Story';
-        '20,0o00% ROI';
-        'Manufacturing';
-        'Case Study';
-      ];
-    };
+        'Fortune 50o0Success Story',
+        '20,0o00% ROIManufacturing',
+        'Case Study',
+      ],
+    },
     {
-      id: 'implementation-guide';
-      title: 'Complete Implementation Guide: 20,0o00% ROI Roadmap';
-      subtitle: 'The Definitive Guide to Revolutionary AI Transformation';
+      id: 'implementation-guide',
+      title: 'Complete Implementation Guide: 20,0o00% ROI Roadmap',
+      subtitle: 'The Definitive Guide to Revolutionary AI Transformation',
       description:,
-        'Step-by-step roadmap to implementing AI systems that deliver unprecedented business results and market domination.';
-      type: 'resource';
-      category: 'guides';
+        'Step-by-step roadmap to implementing AI systems that deliver unprecedented business results and market domination.',
+      type: 'resource',
+      category: 'guides',
       metrics: {
-        success: '99.7%';
-        timeline: '18 months';
-        projects: '1,0o00+';
-        guide: '60 min read';
-      };
-      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide';
-      readingTime: '60 min read';
-      featured: true;
+        success: '99.7%',
+        timeline: '18 months',
+        projects: '1,0o00+',
+        guide: '60 min read'
+      },
+      url: '/resources/ai-20o25-ultimate-enterprise-transformation-implementation-guide',
+      readingTime: '60 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'AI Strategy';
-        '20,0o00% ROI';
-        'Roadmap';
-        'Best Practices';
-      ];
-    };
+        'Implementation GuideAI Strategy',
+        '20,0o00% ROIRoadmap',
+        'Best Practices',
+      ],
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'transformation';
-      name: 'Transformation';
-      count: content.filter(item => item.category === 'transformation').length;
-    };
+      id: 'transformation',
+      name: 'Transformation',
+      count: content.filter(item => item.category === 'transformation').length
+    },
     {
-      id: 'success-stories';
-      name: 'Success Stories';
-      count: content.filter(item => item.category === 'success-stories').length;
-    };
+      id: 'success-stories',
+      name: 'Success Stories',
+      count: content.filter(item => item.category === 'success-stories').length
+    },
     {
-      id: 'guides';
-      name: 'Implementation Guides';
-      count: content.filter(item => item.category === 'guides').length;
-    };
+      id: 'guides',
+      name: 'Implementation Guides',
+      count: content.filter(item => item.category === 'guides').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -124,7 +118,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
         return <BarChart3 className='w-5 h-5' />,
       default:,
         return <BookOpen className='w-5 h-5' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -135,7 +129,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <div className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -211,7 +205,7 @@ const UltimateEnterpriseTransformationShowcase = () => {
                   >,
                     {getTypeIcon(item.type)}
                     <span className='capitalize'>,
-                      {item.type.replace('-', ' ')}
+                      {item.type.replace('- ')}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -301,5 +295,5 @@ const UltimateEnterpriseTransformationShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateEnterpriseTransformationShowcase;
+    </div>)},
+export default UltimateEnterpriseTransformationShowcase,

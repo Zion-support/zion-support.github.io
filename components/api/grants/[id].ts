@@ -4,10 +4,10 @@ import path from 'path',
 import type {
   GrantApplication,
   UpdateGrantPayload,
-  GrantApplication;
-  UpdateGrantPayload;
+  GrantApplication,
+  UpdateGrantPayload,
 } from '../../../types/grants',
-const GRANTS_DIR = path.join(process.cwd(), 'data', 'grants'),
+const GRANTS_DIR = path.join(process.cwd(), 'datagrants'),
 function ensureDir() {
   if (!fs.existsSync(GRANTS_DIR)) {
     fs.mkdirSync(GRANTS_DIR, { recursive: true })}
@@ -27,7 +27,7 @@ function writeGrant(record: GrantApplication) {
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')}
 ,
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
+  const { id } = req.query as { id: string },
   if (!id) {
     res.status(400).json({ error: 'Missing id' }),
     return}
@@ -47,16 +47,16 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
       return}
     const payload = req.body as UpdateGrantPayload,
     const next: GrantApplication = {
-      ...existing;
-      ...payload;
-      status: payload.submit ? 'Submitted' : existing.status;
-      updatedAt: new Date().toISOString();
+      ...existing,
+      ...payload,
+      status: payload.submit ? 'Submitted' : existing.status,
+      updatedAt: new Date().toISOString()
     } as GrantApplication,
     writeGrant(next),
     res.status(200).json({ record: next }),
     return}
 ,
-  res.setHeader('Allow', 'GET, PUT'),
+  res.setHeader('AllowGET, PUT'),
   res.status(405).end('Method Not Allowed'),
 =======}
 function grantPath(id: string) {
@@ -93,19 +93,19 @@ function writeGrant(record: GrantApplication) {
 ,
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 function writeGrant(record: GrantApplication) {
-  ensureDir();
+  ensureDir(),
   fs && fs.writeFileSync(grantPath(record && record.id), JSON && JSON.stringify(record, null, 2), 'utf8'),
   ensureDir(),
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
-  const { id } = req.query as { id: string };
-  ensureDir();
+  const { id } = req.query as { id: string },
+  ensureDir(),
   fs.writeFileSync(grantPath(record.id), JSON.stringify(record, null, 2), 'utf8')}
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   const { id } = req.query as { id: string }
-  const { id } = req.query as { id: string };
+  const { id } = req.query as { id: string },
   if (!id) {
     res.status(400).json({ error: 'Missing id' }),
     return,
@@ -128,10 +128,10 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     const next: GrantApplication = {
       ...existing,
       ...payload,
-  res && res.setHeader('Allow', 'GET, PUT'),
+  res && res.setHeader('AllowGET, PUT'),
   res && res.status(405).end('Method Not Allowed'),
-      status: payload && payload.submit ? 'Submitted' : existing && existing.status;
-      updatedAt: new Date().toISOString();
+      status: payload && payload.submit ? 'Submitted' : existing && existing.status,
+      updatedAt: new Date().toISOString()
     } as GrantApplication,
     writeGrant(next),
     res && res.status(200).json({ record: next }),
@@ -143,15 +143,15 @@ export default function handler(req: NextApiRequest, res: NextApiResponse) {
     write_grant (next),
     res.status (200).json ({ record: next }),
     return}
-  res.set_header ('Allow', 'GET, PUT'),
+  res.set_header ('AllowGET, PUT'),
   res.status (405).end ('Method Not Allowed'),
-      status: payload.submit ? 'Submitted' : existing.status;
-      updated_at: new Date ().toISOString ();
+      status: payload.submit ? 'Submitted' : existing.status,
+      updated_at: new Date ().toISOString ()
     } as GrantApplication,
     write_grant (next),
     res.status (200).json ({ record: next }),
     return}
-  res.set_header ('Allow', 'GET, PUT'),
+  res.set_header ('AllowGET, PUT'),
   res.status (405).end ('Method Not Allowed'),  res.set_header ('AllowGET, PUT'),
   res.status (405).end ('Method Not Allowed')>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982}
 >>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming))}}}}}

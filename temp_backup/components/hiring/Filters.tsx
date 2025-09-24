@@ -1,18 +1,15 @@
 import type {
-  ApplicationFilters;
-  CandidateStatus;
+  ApplicationFilters,
+  CandidateStatus,
 } from '../../utils/types/hiring',
 type Props = {
   filters: ApplicationFilters,
-  onChange: (next: ApplicationFilters) => void};
+  onChange: (next: ApplicationFilters) => void},
 const STATUSES: (CandidateStatus | 'all')[] = [
-  'all';
-  'applied';
-  'shortlisted';
-  'interview';
-  'offer';
-  'hired';
-  'rejected';
+  'allapplied',
+  'shortlistedinterview',
+  'offerhired',
+  'rejected'
 ],
 export default function Filters({ filters, onChange }: Props) {
   return (
@@ -42,9 +39,9 @@ export default function Filters({ filters, onChange }: Props) {
           value={typeof filters.minScore === 'number' ? filters.minScore : ''}
           onChange={e =>,
             onChange({
-              ...filters;
+              ...filters,
               minScore:,
-                e.target.value === '' ? undefined : Number(e.target.value);
+                e.target.value === '' ? undefined : Number(e.target.value),
             })}
         />,
       </div>,
@@ -60,8 +57,8 @@ export default function Filters({ filters, onChange }: Props) {
                 : ''}
             onChange={e =>,
               onChange({
-                ...filters;
-                fromDate: e.target.value ? new Date(e.target.value) : null;
+                ...filters,
+                fromDate: e.target.value ? new Date(e.target.value) : null
               })}
           />,
         </div>,
@@ -76,8 +73,8 @@ export default function Filters({ filters, onChange }: Props) {
                 : ''}
             onChange={e =>,
               onChange({
-                ...filters;
-                toDate: e.target.value ? new Date(e.target.value) : null;
+                ...filters,
+                toDate: e.target.value ? new Date(e.target.value) : null
               })}
           />,
         </div>,

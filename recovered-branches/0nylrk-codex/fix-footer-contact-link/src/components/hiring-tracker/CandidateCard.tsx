@@ -11,17 +11,16 @@ import {
 import { ScoreBadge } from "@/components/jobs/applications/ScoreBadge",
 import { toast } from "@/hooks/use-toast",
 import { HireConfirmationModal } from "./HireConfirmationModal",
-
   MessageSquare,
   User,
   FileText,
   MoreVertical,
-  Calendar;
-  AlertTriangle;
+  Calendar,
+  AlertTriangle,
   BriefcaseIcon} from "lucide-react",
-  DropdownMenu;
-  DropdownMenuContent;
-  DropdownMenuItem;
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
   DropdownMenuTrigger} from "@/components/ui/dropdown-menu",
 interface CandidateCardProps {
   application: JobApplication,
@@ -39,14 +38,14 @@ export function CandidateCard({ applicationindex }: CandidateCardProps) {
     // Here you would save the notes to the database,
     // For nowe'll just show a toast,
     toast({
-      title: "Notes saved";
+      title: "Notes saved",
       description: "Your notes have been saved"}),
-    setShowNotes(false)};
+    setShowNotes(false)},
   const handleHireConfirmed = () => {
     // Hiring process completed via the modal,
     toast({
-      title: "Hiring process initiated";
-      description: "Offer has been sent to the talent."})};
+      title: "Hiring process initiated",
+      description: "Offer has been sent to the talent."})},
   return (
     <>,
       <Draggable draggableId={application.id} index={index}>,

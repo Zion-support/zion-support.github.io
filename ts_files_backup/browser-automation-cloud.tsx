@@ -2,10 +2,8 @@ import SEO from '../components/SEO',
 CheckExternalLink,
 export default function BrowserAutomationCloudPage() {
 	const features = [
-		'Parallel Playwright/Puppeteer execution';
-		'Queued jobs with retries and rate limits';
-		'Artifacts: HARtracescreenshotsvideos';
-		'Rotating proxies and geo targeting';
+		'Parallel Playwright/Puppeteer executionQueued jobs with retries and rate limits',
+		'Artifacts: HARtracescreenshotsvideosRotating proxies and geo targeting',
 		'Webhook callbacks and REST API'],
 	return (
 		<>,

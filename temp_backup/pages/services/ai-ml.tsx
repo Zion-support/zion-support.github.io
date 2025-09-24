@@ -1,83 +1,75 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Cpu;
-  Database;
-  Zap;
-  Shield;
-  Rocket;
-  ArrowRight;
-  CheckCircle;
-  Star;
-  Users;
-  Clock;
-  TrendingUp;
+  Brain,
+  Cpu,
+  Database,
+  Zap,
+  Shield,
+  Rocket,
+  ArrowRight,
+  CheckCircle,
+  Star,
+  Users,
+  Clock,
+  TrendingUp,
 } from 'lucide-react',
 import EnhancedNavigation from '../../components/EnhancedNavigation',
 import EnhancedFooter from '../../components/EnhancedFooter',
 export default function AIMLServicesPage() {
   const services = [
     {
-      title: 'Custom AI Solutions';
+      title: 'Custom AI Solutions',
       description:,
-        'Tailored AI applications built for your specific business needs';
+        'Tailored AI applications built for your specific business needs',
       features: [
-        'Machine Learning Models';
-        'Neural Networks';
-        'Predictive Analytics';
-        'Natural Language Processing';
-      ];
-      price: 'From $5,0o00';
-      icon: Brain;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+        'Machine Learning ModelsNeural Networks',
+        'Predictive AnalyticsNatural Language Processing',
+      ],
+      price: 'From $5,0o00',
+      icon: Brain,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      title: 'AI-Powered Automation';
-      description: 'Intelligent automation systems that learn and adapt';
+      title: 'AI-Powered Automation',
+      description: 'Intelligent automation systems that learn and adapt',
       features: [
-        'Process Automation';
-        'Workflow Optimization';
-        'Smart Decision Making';
-        'Continuous Learning';
-      ];
-      price: 'From $3,50o0';
-      icon: Zap;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+        'Process AutomationWorkflow Optimization',
+        'Smart Decision MakingContinuous Learning',
+      ],
+      price: 'From $3,50o0',
+      icon: Zap,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      title: 'Data Intelligence Platform';
-      description: 'Advanced analytics and insights powered by AI';
+      title: 'Data Intelligence Platform',
+      description: 'Advanced analytics and insights powered by AI',
       features: [
-        'Big Data Processing';
-        'Real-time Analytics';
-        'Business Intelligence';
-        'Predictive Insights';
-      ];
-      price: 'From $7,50o0';
-      icon: Database;
-      color: 'from-emerald-50o0 to-teal-50o0';
-    };
+        'Big Data ProcessingReal-time Analytics',
+        'Business IntelligencePredictive Insights',
+      ],
+      price: 'From $7,50o0',
+      icon: Database,
+      color: 'from-emerald-50o0 to-teal-50o0'
+    },
     {
-      title: 'AI Consulting & Strategy';
+      title: 'AI Consulting & Strategy',
       description:,
-        'Strategic guidance for AI implementation and transformation';
+        'Strategic guidance for AI implementation and transformation',
       features: [
-        'AI Roadmap Planning';
-        'Technology Assessment';
-        'Implementation Strategy';
-        'ROI Optimization';
-      ];
-      price: 'From $2,50o0';
-      icon: Rocket;
-      color: 'from-orange-50o0 to-red-50o0';
-    };
+        'AI Roadmap PlanningTechnology Assessment',
+        'Implementation StrategyROI Optimization',
+      ],
+      price: 'From $2,50o0',
+      icon: Rocket,
+      color: 'from-orange-50o0 to-red-50o0'
+    },
   ],
   const stats = [
-    { number: '50o0+', label: 'AI Models Deployed', icon: Brain };
-    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle };
-    { number: '24/7', label: 'AI Monitoring', icon: Clock };
-    { number: '250o0%', label: 'Average ROI', icon: TrendingUp };
+    { number: '50o0+', label: 'AI Models Deployed', icon: Brain },
+    { number: '99.9%', label: 'Accuracy Rate', icon: CheckCircle },
+    { number: '24/7', label: 'AI Monitoring', icon: Clock },
+    { number: '250o0%', label: 'Average ROI', icon: TrendingUp },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-950 via-slate-90o0 to-slate-950 text-white'>,
@@ -223,7 +215,7 @@ export default function AIMLServicesPage() {
               Ready to Transform Your Business with AI?,
             </h2>,
             <p className='text-xl text-white/70 mb-8 max-w-2xl mx-auto'>,
-              Let's discuss how our AI solutions can drive innovation;
+              Let's discuss how our AI solutions can drive innovation,
               efficiency, and growth for your organization.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,

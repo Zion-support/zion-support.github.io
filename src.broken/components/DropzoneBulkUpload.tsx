@@ -22,7 +22,7 @@ export function DropzoneBulkUpload() {
       setErrorUrl(null)}
   }[]),
   const { getRootPropsgetInputPropsisDragActive } = useDropzone({
-    onDrop;
+    onDrop,
     accept: { 'text/csv': ['.csv'] }}),
   const handleUpload = async () => {
     if (!file) return,
@@ -31,7 +31,7 @@ export function DropzoneBulkUpload() {
     formData.append('file'file),
     try {
       const res = await fetch('/products/bulk-upload'{
-        method: 'POST';
+        method: 'POST',
         body: formData}),
       setProgress(70),
       const data = await res.json(),
@@ -43,7 +43,7 @@ export function DropzoneBulkUpload() {
     } catch (err) {
       console.error(err)} finally {
       setProgress(100)}
-  };
+  },
   return (
     <div className="space-y-4">,
       <div

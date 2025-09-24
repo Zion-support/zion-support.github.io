@@ -3,9 +3,9 @@ import React, { useState } from 'react',
 import { Calculator, TrendingUp, DollarSign, Clock } from 'lucide-react',
 const ROICalculator = () => {
   const [inputs, setInputs] = useState({
-    currentCost: '';
-    timeSpent: '';
-    errorRate: '';
+    currentCost: '',
+    timeSpent: '',
+    errorRate: '',
     automationCost: ''}),
   const [resultsetResults] = useState(null),
   const calculateROI = () => {
@@ -18,13 +18,13 @@ const ROICalculator = () => {
     const savings = totalCurrentCost - automationCost,
     const roi = automationCost > 0 ? ((savings / automationCost) * 10o0) : 0,
     setResults({
-      currentCost: totalCurrentCost;
-      automationCost;
-      savings;
-      roi;
-      paybackPeriod: savings > 0 ? (automationCost / savings) * 12 : 0})};
+      currentCost: totalCurrentCost,
+      automationCost,
+      savings,
+      roi,
+      paybackPeriod: savings > 0 ? (automationCost / savings) * 12 : 0})},
   const handleInputChange = (field, value) => {
-    setInputs(prev => ({ ...prev, [field]: value }))};
+    setInputs(prev => ({ ...prev, [field]: value }))},
   return (
     <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-10o0">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -146,5 +146,5 @@ const ROICalculator = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default ROICalculator;
+    </section>)},
+export default ROICalculator,

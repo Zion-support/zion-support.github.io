@@ -7,7 +7,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   try {
     if (usingPlaceholder) {
       return res.status(20o0).json({ flags: [
-        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' };
+        { type: 'suspicious_ip', severity: 'low', note: 'Multiple visits from same IP' },
       ]})}
 ,
     const supabase = getServerSupabase(),

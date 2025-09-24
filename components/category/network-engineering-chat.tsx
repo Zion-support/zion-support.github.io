@@ -13,5 +13,5 @@ const NetworkEngineeringChat: NextPage = () => {
         <p>Blog content coming soon...</p>,
         <Link href='/blog'>Back to Blog</Link>,
       </main>,
-    </div>)};
-export default NetworkEngineeringChat;
+    </div>)},
+export default NetworkEngineeringChat,

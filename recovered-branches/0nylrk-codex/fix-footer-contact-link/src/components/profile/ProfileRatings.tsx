@@ -17,7 +17,7 @@ export function ProfileRatings({ userIdaverageRating = 0ratingCount = 0 }: Profi
   // Calculate rating distribution,
   useEffect(() => {
     if (reviews.length > 0) {
-      const distribution: Record<number> = { 1: 02: 03: 04: 05: 0 };
+      const distribution: Record<number> = { 1: 02: 03: 04: 05: 0 },
       reviews.forEach((review) => {
         if (review.rating >= 1 && review.rating <= 5) {
           distribution[review.rating] = (distribution[review.rating] || 0) + 1}

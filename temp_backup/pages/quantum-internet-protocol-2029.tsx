@@ -2,120 +2,99 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Atom;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Zap;
-  Sparkles;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  TrendingUp;
-  Target;
-  Layers;
-  Globe;
-  Brain;
-  Rocket;
-  Building;
-  Network;
+  Atom,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  TrendingUp,
+  Target,
+  Layers,
+  Globe,
+  Brain,
+  Rocket,
+  Building,
+  Network,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
-  'Quantum entanglement distribution';
-  'Quantum key distribution';
-  'Quantum teleportation';
-  'Quantum routing protocols';
-  'Quantum network security';
-  'Global quantum connectivity';
-  'Quantum internet backbone';
-  'Quantum network management';
+  'Quantum entanglement distributionQuantum key distribution',
+  'Quantum teleportationQuantum routing protocols',
+  'Quantum network securityGlobal quantum connectivity',
+  'Quantum internet backboneQuantum network management',
 ],
 const benefits = [
-  'Unbreakable quantum encryption';
-  'Faster-than-light communication';
-  'Global quantum network access';
-  'Quantum internet infrastructure';
-  'Future-proof networking';
-  'Quantum advantage in communication';
+  'Unbreakable quantum encryptionFaster-than-light communication',
+  'Global quantum network accessQuantum internet infrastructure',
+  'Future-proof networkingQuantum advantage in communication',
 ],
 const useCases = [
-  'Government communications';
-  'Financial institutions';
-  'Healthcare networks';
-  'Research institutions';
-  'Military communications';
-  'Global enterprises';
+  'Government communicationsFinancial institutions',
+  'Healthcare networksResearch institutions',
+  'Military communicationsGlobal enterprises',
 ],
 const technology = [
-  'Quantum Entanglement';
-  'Quantum Key Distribution';
-  'Quantum Networks';
-  'Quantum Routing';
-  'Quantum Cryptography';
-  'Quantum Error Correction';
+  'Quantum EntanglementQuantum Key Distribution',
+  'Quantum NetworksQuantum Routing',
+  'Quantum CryptographyQuantum Error Correction',
 ],
 const pricingPlans = [
   {
-    name: 'Government Standard';
-    price: '$29,999';
-    period: '/month';
-    description: 'Perfect for government agencies and research institutions';
+    name: 'Government Standard',
+    price: '$29,999',
+    period: '/month',
+    description: 'Perfect for government agencies and research institutions',
     features: [
-      'Basic quantum network access';
-      'Quantum encryption protocols';
-      'Network security features';
-      'Basic support';
-      'Compliance certification';
-    ];
-    popular: false;
-  };
+      'Basic quantum network accessQuantum encryption protocols',
+      'Network security featuresBasic support',
+      'Compliance certification',
+    ],
+    popular: false
+  },
   {
-    name: 'Enterprise Pro';
-    price: '$59,999';
-    period: '/month';
-    description: 'For large enterprises and financial institutions';
+    name: 'Enterprise Pro',
+    price: '$59,999',
+    period: '/month',
+    description: 'For large enterprises and financial institutions',
     features: [
-      'Full quantum network access';
-      'Advanced quantum protocols';
-      'Custom network configurations';
-      'Priority support';
-      'Custom training';
-      'Integration services';
-    ];
-    popular: true;
-  };
+      'Full quantum network accessAdvanced quantum protocols',
+      'Custom network configurationsPriority support',
+      'Custom trainingIntegration services',
+    ],
+    popular: true
+  },
   {
-    name: 'Military Elite';
-    price: '$99,999';
-    period: '/month';
-    description: 'For military and defense organizations';
+    name: 'Military Elite',
+    price: '$99,999',
+    period: '/month',
+    description: 'For military and defense organizations',
     features: [
-      'Military-grade quantum security';
-      'Custom quantum protocols';
-      'On-site deployment';
-      '24/7 dedicated support';
-      'Compliance certification';
-      'Training and certification';
-    ];
-    popular: false;
-  };
+      'Military-grade quantum securityCustom quantum protocols',
+      'On-site deployment24/7 dedicated support',
+      'Compliance certificationTraining and certification',
+    ],
+    popular: false
+  },
 ],
 export default function QuantumInternetProtocol20o29() {
   return (
@@ -192,7 +171,7 @@ export default function QuantumInternetProtocol20o29() {
               <span className='text-white'>Protocol 20o29</span>,
             </h1>,
             <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed mb-8'>,
-              Revolutionary quantum internet protocol that enables ultra-secure;
+              Revolutionary quantum internet protocol that enables ultra-secure,
               faster-than-light quantum communication networks across the globe.,
             </p>,
             {/* Key Stats */}

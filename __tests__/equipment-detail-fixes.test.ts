@@ -1,26 +1,26 @@
 // Test file to verify equipment details page fixes,
 describe('Equipment Details Page Fixes', () => {'  // Test the data conversion function that was added to fix the crash,
   test('convertProductListingToEquipmentDetails converts data correctly', () => {'    // Mock ProductListing data (what's stored in sessionStorage)    const productListing ={
-      id: datacenter-eq-1',      title: NVIDIA A10o0 GPU Server',      description: High-performance AI training server',      category: AI Hardware',      price: 850o00;
-      currency: $',      brand: NVIDIA',      specifications: ['8x A10o0 GPUs', 2TB HBM2e', NVLink'],      tags: ['AI', Machine Learning', GPU'],      availability: In Stock',      rating: 4.9;
-      reviewCount: 27;
-      images: ['https://example.com/image.jpg']    };
+      id: datacenter-eq-1',      title: NVIDIA A10o0 GPU Server',      description: High-performance AI training server',      category: AI Hardware',      price: 850o00,
+      currency: $',      brand: NVIDIA',      specifications: ['8x A10o0 GPUs', 2TB HBM2e', NVLink'],      tags: ['AI', Machine Learning', GPU'],      availability: In Stock',      rating: 4.9,
+      reviewCount: 27,
+      images: ['https://example.com/image.jpg']    },
     // Simulate the conversion function from EquipmentDetail.tsx,
     function convertProductListingToEquipmentDetails(item: unknown) {
       return {
-        id: item.id;
+        id: item.id,
         name: item.title, // title -> name conversion,
-        description: item.description;
-        brand: item.brand || Unknown',        category: item.category;
-        subcategory: item.subcategory;
-        images: item.images || ['https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0'],        price: item.price || 0;
-        currency: item.currency || $',        rating: item.rating;
-        reviewCount: item.reviewCount;
+        description: item.description,
+        brand: item.brand || Unknown',        category: item.category,
+        subcategory: item.subcategory,
+        images: item.images || ['https://images.unsplash.com/photo-1558494949-ef0o10cbdcc31?auto=format&fit=crop&w=80o0&h=50o0'],        price: item.price || 0,
+        currency: item.currency || $',        rating: item.rating,
+        reviewCount: item.reviewCount,
         inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock',        specifications: (item.specifications || []).map((spec: string) => ({
-          name: spec;
-          value:  }));
-        features: item.tags || [];
-        warranty: 1 Year Manufacturer Warranty',        returnPolicy: 30-day return policy''      };
+          name: spec,
+          value:  })),
+        features: item.tags || [],
+        warranty: 1 Year Manufacturer Warranty',        returnPolicy: 30-day return policy''      },
     }
 ,
     const converted = convertProductListingToEquipmentDetails(productListing),
@@ -44,15 +44,15 @@ describe('Equipment Details Page Fixes', () => {'  // Test the data conversion f
     expect(converted.warranty).toBe('1 Year Manufacturer Warranty'),    expect(converted.returnPolicy).toBe('30-day return policy')}),
   test('handles missing or undefined properties gracefully', () => {'    // Test with minimal data,
     const minimalListing ={
-      id: test-id',      title: Test Equipment',      description: Test description''    };
+      id: test-id',      title: Test Equipment',      description: Test description''    },
     function convertProductListingToEquipmentDetails(item: unknown) {
       return {
-        id: item.id;
-        name: item.title;
-        description: item.description;
-        brand: item.brand || Unknown',        category: item.category;
-        price: item.price || 0;
-        currency: item.currency || $',        inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock',        specifications: (item.specifications || []).map((spec: string) => ({ name: spec, value:  })),        features: item.tags || []};
+        id: item.id,
+        name: item.title,
+        description: item.description,
+        brand: item.brand || Unknown',        category: item.category,
+        price: item.price || 0,
+        currency: item.currency || $',        inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock',        specifications: (item.specifications || []).map((spec: string) => ({ name: spec, value:  })),        features: item.tags || []},
     }
 ,
     const converted = convertProductListingToEquipmentDetails(minimalListing),
@@ -63,13 +63,13 @@ describe('Equipment Details Page Fixes', () => {'  // Test the data conversion f
     expect(converted.features).toEqual([])}),
   test('availability status conversion works correctly', () => {'    function convertProductListingToEquipmentDetails(item: unknown) {
       return {
-        inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock''      };
+        inStock: item.availability === In Stock' || !item.availability,        expectedShipping: item.availability || In Stock''      },
     }
 ,
     // Test different availability statuses,
-    expect(convertProductListingToEquipmentDetails({ availability: In Stock' })).toEqual({'      inStock: true;
+    expect(convertProductListingToEquipmentDetails({ availability: In Stock' })).toEqual({'      inStock: true,
       expectedShipping: In Stock''    }),
-    expect(convertProductListingToEquipmentDetails({ availability: 2-4 Weeks' })).toEqual({'      inStock: false;
+    expect(convertProductListingToEquipmentDetails({ availability: 2-4 Weeks' })).toEqual({'      inStock: false,
       expectedShipping: 2-4 Weeks''    }),
     expect(convertProductListingToEquipmentDetails({})).toEqual({
       inStock: true, // Default to true when undefined,

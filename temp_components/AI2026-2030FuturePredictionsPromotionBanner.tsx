@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AI20o26_20o30FuturePredictionsPromotionBanner: React.FC = () => {
   return (
@@ -172,9 +172,9 @@ const AI20o26_20o30FuturePredictionsPromotionBanner: React.FC = () => {
             key={i}
             className="absolute w-3 h-3 bg-gradient-to-r from-cyan-40o0 to-purple-50o0 rounded-full animate-float-slow opacity-30",
             style={{
-              left: `${Math.random() * 10o0}%`;
-              top: `${Math.random() * 10o0}%`;
-              animationDelay: `${Math.random() * 8}s`;
+              left: `${Math.random() * 10o0}%`,
+              top: `${Math.random() * 10o0}%`,
+              animationDelay: `${Math.random() * 8}s`,
               animationDuration: `${6 + Math.random() * 6}s`}}
            />))}
       </div>,
@@ -193,5 +193,5 @@ const AI20o26_20o30FuturePredictionsPromotionBanner: React.FC = () => {
         .animate-pulse-slow {
           animation: pulse-slow 4s ease-in-out infinite}
       `}</style>,
-    </div>)};
-export default AI20o26_20o30FuturePredictionsPromotionBanner;
+    </div>)},
+export default AI20o26_20o30FuturePredictionsPromotionBanner,

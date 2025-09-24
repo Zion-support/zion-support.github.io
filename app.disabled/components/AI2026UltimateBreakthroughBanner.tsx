@@ -7,28 +7,28 @@ const AI20o26UltimateBreakthroughBanner: React.FC = () => {
   const [isVisible, setIsVisible] = useState(true),
   const breakthroughs = [
     {
-      title: "Quantum AI Fusion";
-      description: "Revolutionary quantum computing integration with AI systems";
-      impact: "50o00% Performance Boost";
-      color: "from-purple-60o0 to-blue-60o0";
-      icon: "⚛️"};
+      title: "Quantum AI Fusion",
+      description: "Revolutionary quantum computing integration with AI systems",
+      impact: "50o00% Performance Boost",
+      color: "from-purple-60o0 to-blue-60o0",
+      icon: "⚛️"},
     {
-      title: "Neural Consensus Networks";
-      description: "Breakthrough in distributed AI decision-making";
-      impact: "30o00% Accuracy Improvement";
-      color: "from-green-60o0 to-teal-60o0";
-      icon: "🧠"};
+      title: "Neural Consensus Networks",
+      description: "Breakthrough in distributed AI decision-making",
+      impact: "30o00% Accuracy Improvement",
+      color: "from-green-60o0 to-teal-60o0",
+      icon: "🧠"},
     {
-      title: "Autonomous Enterprise";
-      description: "Complete business process automation with AI";
-      impact: "250o0% ROI Guarantee";
-      color: "from-orange-60o0 to-red-60o0";
-      icon: "🚀"};
+      title: "Autonomous Enterprise",
+      description: "Complete business process automation with AI",
+      impact: "250o0% ROI Guarantee",
+      color: "from-orange-60o0 to-red-60o0",
+      icon: "🚀"},
     {
-      title: "Real-time Learning";
-      description: "AI systems that learn and adapt in real-time";
-      impact: "40o00% Speed Enhancement";
-      color: "from-indigo-60o0 to-purple-60o0";
+      title: "Real-time Learning",
+      description: "AI systems that learn and adapt in real-time",
+      impact: "40o00% Speed Enhancement",
+      color: "from-indigo-60o0 to-purple-60o0",
       icon: "⚡"}
   ],
   useEffect(() => {
@@ -51,21 +51,21 @@ const AI20o26UltimateBreakthroughBanner: React.FC = () => {
             <div className="absolute inset-0 overflow-hidden">,
               <motion.div,
                 animate={{
-                  rotate: 360;
+                  rotate: 360,
                   scale: [1, 1.2, 1]}}
                 transition={{
-                  duration: 20;
-                  repeat: Infinity;
+                  duration: 20,
+                  repeat: Infinity,
                   ease: "linear"}}
                 className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full",
                />,
               <motion.div,
                 animate={{
-                  rotate: -360;
+                  rotate: -360,
                   scale: [1, 1.3, 1]}}
                 transition={{
-                  duration: 25;
-                  repeat: Infinity;
+                  duration: 25,
+                  repeat: Infinity,
                   ease: "linear"}}
                 className="absolute -bottom-10 -left-10 w-32 h-32 bg-white/10 rounded-full",
                />,
@@ -181,5 +181,5 @@ const AI20o26UltimateBreakthroughBanner: React.FC = () => {
             </svg>,
           </div>,
         </motion.div>)}
-    </AnimatePresence>)};
-export default AI20o26UltimateBreakthroughBanner;
+    </AnimatePresence>)},
+export default AI20o26UltimateBreakthroughBanner,

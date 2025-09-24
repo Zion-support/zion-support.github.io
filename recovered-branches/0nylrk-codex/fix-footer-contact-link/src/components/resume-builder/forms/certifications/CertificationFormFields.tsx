@@ -6,7 +6,7 @@ interface CertificationFormFieldsProps {
   form: UseFormReturn<CertificationFormValues>}
 ,
 export function CertificationFormFields({
-  form;
+  form,
 }: CertificationFormFieldsProps) {
   return (
     <>,

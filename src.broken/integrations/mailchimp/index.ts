@@ -1,6 +1,6 @@
 import { MailchimpService } from './MailchimpService',
 const apiKey =,
-  import.meta.env.VITE_MAILCHIMP_API_KEY ||,
+import.meta.env.VITE_MAILCHIMP_API_KEY ||,
   (import.meta.env as any).NEXT_PUBLIC_MAILCHIMP_API_KEY ||,
   process.env.MAILCHIMP_API_KEY,
 const listId =,

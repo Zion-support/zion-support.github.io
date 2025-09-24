@@ -117,5 +117,5 @@ const EnhancedContentPromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default EnhancedContentPromotionBanner;
+    </section>)},
+export default EnhancedContentPromotionBanner,

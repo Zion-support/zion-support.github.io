@@ -1,8 +1,8 @@
 import React, { Component, ErrorInfo, ReactNode } from 'react',
 import { motion } from 'framer-motion',
 import {
-  AlertTriangle, RefreshCw, Bug;
-  Home, ArrowLeft, Info;
+  AlertTriangle, RefreshCw, Bug,
+  Home, ArrowLeft, Info,
   FileText, Terminal, Shield} from 'lucide-react',
 import { AnimatePresence } from 'framer-motion',
 interface Props {
@@ -22,23 +22,23 @@ class ErrorBoundary extends Component<Props State> {
   constructor(props: Props) {
     super(props),
     this.state ={
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: ''};
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''},
   }
 ,
   static getDerivedStateFromError(error: Error): State {
     return {
-      hasError: true;
-      error;
-      errorInfo: null;
-      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`};
+      hasError: true,
+      error,
+      errorInfo: null,
+      errorId: `error-${Date.now()}-${Math.random().toString(36).substr(2, 9)}`},
   }
 ,
   componentDidCatch(error: Error, errorInfo: ErrorInfo) {
     this.setState({
-      error;
+      error,
       errorInfo}),
     // Log error to console in development,
     if (process.env.NODE_ENV === 'development') {
@@ -51,42 +51,42 @@ class ErrorBoundary extends Component<Props State> {
     // Example: Send to error reporting service,
     try {
       const errorData ={
-        errorId: this.state.errorId;
-        message: error.message;
-        stack: error.stack;
-        componentStack: errorInfo.componentStack;
-        timestamp: new Date().toISOString();
-        userAgent: navigator.userAgent;
-        url: window.location.href};
+        errorId: this.state.errorId,
+        message: error.message,
+        stack: error.stack,
+        componentStack: errorInfo.componentStack,
+        timestamp: new Date().toISOString(),
+        userAgent: navigator.userAgent,
+        url: window.location.href},
       // Send to your error reporting service,
       // fetch('/api/error-reporting', {
-      //   method: 'POST';
-      //   headers: { 'Content-Type': 'application/json' };
+      //   method: 'POST',
+      //   headers: { 'Content-Type': 'application/json' },
       //   body: JSON.stringify(errorData),
       // })} catch (reportingError) {
       console.error('Failed to report error:', reportingError)}
 ,
     // Send to analytics or error reporting service,
     if (typeof window !== 'undefined' && (window as any).gtag) {
-      (window as any).gtag('event', 'exception', {
-        description: error.message;
+      (window as any).gtag('eventexception', {
+        description: error.message,
         fatal: true})}
   }
 ,
   private handleRetry = () => {
     this.setState({
-      hasError: false;
-      error: null;
-      errorInfo: null;
-      errorId: ''})};
+      hasError: false,
+      error: null,
+      errorInfo: null,
+      errorId: ''})},
   private handleGoHome = () => {
     if (typeof window !== 'undefined') {
       window.location.href = '/'}
-  };
+  },
   private handleContactSupport = () => {
-    window.location.href = '/contact'};
+    window.location.href = '/contact'},
   private handleCallSupport = () => {
-    window.location.href = 'tel: +1-555-123-4567'};
+    window.location.href = 'tel: +1-555-123-4567'},
   private getErrorType(): string {
     if (!this.state.error) return 'Unknown Error',
     const error = this.state.error,
@@ -132,7 +132,7 @@ class ErrorBoundary extends Component<Props State> {
     return suggestions}
 ,
   private toggleDetails = () => {
-    this.setState(prev => ({ showDetails: !prev.showDetails }))};
+    this.setState(prev => ({ showDetails: !prev.showDetails }))},
   render() {
     if (this.state.hasError) {
       if (this.props.fallback) {

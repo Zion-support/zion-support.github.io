@@ -1,141 +1,141 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Brain;
-  Shield;
-  Rocket;
-  Cpu;
-  Database;
-  Atom;
-  Globe;
-  Mail;
-  Phone;
-  MapPin;
-  Twitter;
-  Linkedin;
-  Github;
-  Youtube;
-  Facebook;
-  Instagram;
-  ArrowUp;
-  Heart;
-  Star;
-  Zap;
-  Users;
-  Award;
-  BookOpen;
+  Brain,
+  Shield,
+  Rocket,
+  Cpu,
+  Database,
+  Atom,
+  Globe,
+  Mail,
+  Phone,
+  MapPin,
+  Twitter,
+  Linkedin,
+  Github,
+  Youtube,
+  Facebook,
+  Instagram,
+  ArrowUp,
+  Heart,
+  Star,
+  Zap,
+  Users,
+  Award,
+  BookOpen,
 } from 'lucide-react',
 const EnhancedFooter: React.FC = () => {
   const currentYear = new Date().getFullYear(),
   const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' })};
+    window.scrollTo({ top: 0, behavior: 'smooth' })},
   const footerSections = [
     {
-      title: 'Services';
+      title: 'Services',
       links: [
-        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' };
-        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' };
-        { name: 'Edge Computing', href: '/edge-computing-orchestration' };
-        { name: 'Space Technology', href: '/space-technology' };
-        { name: 'Neural Interfaces', href: '/neural-interface' };
+        { name: 'AI Business Intelligence', href: '/ai-business-intelligence' },
+        { name: 'Quantum Cybersecurity', href: '/quantum-cybersecurity' },
+        { name: 'Edge Computing', href: '/edge-computing-orchestration' },
+        { name: 'Space Technology', href: '/space-technology' },
+        { name: 'Neural Interfaces', href: '/neural-interface' },
         {
-          name: 'View All Services';
-          href: '/comprehensive-2025-services-showcase';
-        };
-      ];
-    };
+          name: 'View All Services',
+          href: '/comprehensive-2025-services-showcase'
+        },
+      ],
+    },
     {
-      title: 'Company';
+      title: 'Company',
       links: [
-        { name: 'About Us', href: '/about' };
-        { name: 'Our Team', href: '/team' };
-        { name: 'Careers', href: '/careers' };
-        { name: 'Press & Media', href: '/press' };
-        { name: 'Partnerships', href: '/partners' };
-        { name: 'Contact', href: '/contact' };
-      ];
-    };
+        { name: 'About Us', href: '/about' },
+        { name: 'Our Team', href: '/team' },
+        { name: 'Careers', href: '/careers' },
+        { name: 'Press & Media', href: '/press' },
+        { name: 'Partnerships', href: '/partners' },
+        { name: 'Contact', href: '/contact' },
+      ],
+    },
     {
-      title: 'Resources';
+      title: 'Resources',
       links: [
-        { name: 'Blog & Insights', href: '/blog' };
-        { name: 'Case Studies', href: '/case-studies' };
-        { name: 'Documentation', href: '/docs' };
-        { name: 'API Reference', href: '/api' };
-        { name: 'Support Center', href: '/support' };
-        { name: 'Community', href: '/community' };
-      ];
-    };
+        { name: 'Blog & Insights', href: '/blog' },
+        { name: 'Case Studies', href: '/case-studies' },
+        { name: 'Documentation', href: '/docs' },
+        { name: 'API Reference', href: '/api' },
+        { name: 'Support Center', href: '/support' },
+        { name: 'Community', href: '/community' },
+      ],
+    },
     {
-      title: 'Legal';
+      title: 'Legal',
       links: [
-        { name: 'Privacy Policy', href: '/privacy' };
-        { name: 'Terms of Service', href: '/terms' };
-        { name: 'Cookie Policy', href: '/cookies' };
-        { name: 'GDPR Compliance', href: '/gdpr' };
-        { name: 'Security', href: '/security' };
-        { name: 'Accessibility', href: '/accessibility' };
-      ];
-    };
+        { name: 'Privacy Policy', href: '/privacy' },
+        { name: 'Terms of Service', href: '/terms' },
+        { name: 'Cookie Policy', href: '/cookies' },
+        { name: 'GDPR Compliance', href: '/gdpr' },
+        { name: 'Security', href: '/security' },
+        { name: 'Accessibility', href: '/accessibility' },
+      ],
+    },
   ],
   const socialLinks = [
     {
-      name: 'Twitter';
-      href: 'https://twitter.com/ziontechgroup';
-      icon: Twitter;
-      color: 'hover:text-blue-400';
-    };
+      name: 'Twitter',
+      href: 'https://twitter.com/ziontechgroup',
+      icon: Twitter,
+      color: 'hover:text-blue-400'
+    },
     {
-      name: 'LinkedIn';
-      href: 'https://linkedin.com/company/ziontechgroup';
-      icon: Linkedin;
-      color: 'hover:text-blue-600';
-    };
+      name: 'LinkedIn',
+      href: 'https://linkedin.com/company/ziontechgroup',
+      icon: Linkedin,
+      color: 'hover:text-blue-600'
+    },
     {
-      name: 'GitHub';
-      href: 'https://github.com/ziontechgroup';
-      icon: Github;
-      color: 'hover:text-gray-400';
-    };
+      name: 'GitHub',
+      href: 'https://github.com/ziontechgroup',
+      icon: Github,
+      color: 'hover:text-gray-400'
+    },
     {
-      name: 'YouTube';
-      href: 'https://youtube.com/@ziontechgroup';
-      icon: Youtube;
-      color: 'hover:text-red-500';
-    };
+      name: 'YouTube',
+      href: 'https://youtube.com/@ziontechgroup',
+      icon: Youtube,
+      color: 'hover:text-red-500'
+    },
     {
-      name: 'Facebook';
-      href: 'https://facebook.com/ziontechgroup';
-      icon: Facebook;
-      color: 'hover:text-blue-500';
-    };
+      name: 'Facebook',
+      href: 'https://facebook.com/ziontechgroup',
+      icon: Facebook,
+      color: 'hover:text-blue-500'
+    },
     {
-      name: 'Instagram';
-      href: 'https://instagram.com/ziontechgroup';
-      icon: Instagram;
-      color: 'hover:text-pink-500';
-    };
+      name: 'Instagram',
+      href: 'https://instagram.com/ziontechgroup',
+      icon: Instagram,
+      color: 'hover:text-pink-500'
+    },
   ],
   const contactInfo = [
     {
-      icon: Mail;
-      text: 'kleber@ziontechgroup.com';
-      href: 'mailto:kleber@ziontechgroup.com';
-      label: 'Email us';
-    };
+      icon: Mail,
+      text: 'kleber@ziontechgroup.com',
+      href: 'mailto:kleber@ziontechgroup.com',
+      label: 'Email us'
+    },
     {
-      icon: Phone;
-      text: '+1 (555) 123-4567';
-      href: 'tel:+15551234567';
-      label: 'Call us';
-    };
+      icon: Phone,
+      text: '+1 (555) 123-4567',
+      href: 'tel:+15551234567',
+      label: 'Call us'
+    },
     {
-      icon: MapPin;
-      text: 'San Francisco, CA';
-      href: '#';
-      label: 'Our location';
-    };
+      icon: MapPin,
+      text: 'San Francisco, CA',
+      href: '#',
+      label: 'Our location'
+    },
   ],
   return (
     <footer
@@ -160,7 +160,7 @@ const EnhancedFooter: React.FC = () => {
               </div>,
             </div>,
             <p className='text-white/70 mb-6 leading-relaxed'>,
-              Empowering businesses with cutting-edge AI, quantum computing;
+              Empowering businesses with cutting-edge AI, quantum computing,
               cybersecurity, and digital transformation solutions that drive,
               innovation and growth.,
             </p>,
@@ -342,5 +342,5 @@ const EnhancedFooter: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </footer>)};
-export default EnhancedFooter;
+    </footer>)},
+export default EnhancedFooter,

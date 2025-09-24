@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI Chatbot Development | Zion Tech Group';
+  title: 'AI Chatbot Development | Zion Tech Group',
   description:,
-    'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.';
-};
+    'Build intelligent AI chatbots with natural language processing, multi-channel support, and custom integrations. Professional chatbot solutions starting at $8k.',
+},
 export default function AIChatbotPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-8'>,
@@ -11,44 +11,35 @@ export default function AIChatbotPage() {
           AI Chatbot Development,
         </h1>,
         <p className='text-xl text-gray-60o0 mb-8'>,
-          Build intelligent AI chatbots with natural language processing;
+          Build intelligent AI chatbots with natural language processing,
           multi-channel support, and seamless human handoff capabilities.,
         </p>,
         <div className='grid grid-cols-1 md: grid-cols-3 gap-6 mb-12'>,
           <Item
             title='Natural Language Processing',
             details={[
-              'Intent recognition';
-              'Entity extraction';
-              'Context understanding';
-              'Multi-language support';
-              'Sentiment analysis';
-              'Conversation flow';
-              'Fallback handling';
+              'Intent recognitionEntity extraction',
+              'Context understandingMulti-language support',
+              'Sentiment analysisConversation flow',
+              'Fallback handling',
             ]}
           />,
           <Item
             title='Multi-Channel Integration',
             details={[
-              'Website chat widget';
-              'Facebook Messenger';
-              'WhatsApp Business';
-              'Slack integration';
-              'Telegram support';
-              'Voice interfaces';
-              'Mobile apps';
+              'Website chat widgetFacebook Messenger',
+              'WhatsApp BusinessSlack integration',
+              'Telegram supportVoice interfaces',
+              'Mobile apps',
             ]}
           />,
           <Item
             title='Advanced Features',
             details={[
-              'Human handoff';
-              'Knowledge base integration';
-              'API connections';
-              'Analytics dashboard';
-              'A/B testing';
-              'Custom training';
-              'White-label options';
+              'Human handoffKnowledge base integration',
+              'API connectionsAnalytics dashboard',
+              'A/B testingCustom training',
+              'White-label options',
             ]}
           />,
         </div>,
@@ -124,13 +115,10 @@ function Pricing() {
           price='$8k–$15k',
           duration='4–6 weeks',
           features={[
-            'Basic NLP capabilities';
-            'Single channel integration';
-            'Pre-built responses';
-            'Simple analytics';
-            'Basic customization';
-            'Email support';
-            'Standard hosting';
+            'Basic NLP capabilitiesSingle channel integration',
+            'Pre-built responsesSimple analytics',
+            'Basic customizationEmail support',
+            'Standard hosting',
           ]}
         />,
         <Plan
@@ -138,13 +126,10 @@ function Pricing() {
           price='$15k–$35k',
           duration='6–10 weeks',
           features={[
-            'Everything in Basic';
-            'Multi-channel support';
-            'Custom training';
-            'Advanced analytics';
-            'API integrations';
-            'Human handoff';
-            'Priority support';
+            'Everything in BasicMulti-channel support',
+            'Custom trainingAdvanced analytics',
+            'API integrationsHuman handoff',
+            'Priority support',
           ]}
         />,
         <Plan
@@ -152,13 +137,10 @@ function Pricing() {
           price='$35k+',
           duration='8–16 weeks',
           features={[
-            'Everything in Professional';
-            'Custom development';
-            'Advanced AI models';
-            'White-label options';
-            'Dedicated support';
-            'SLA guarantees';
-            'On-premise deployment';
+            'Everything in ProfessionalCustom development',
+            'Advanced AI modelsWhite-label options',
+            'Dedicated supportSLA guarantees',
+            'On-premise deployment',
           ]}
         />,
       </div>,
@@ -186,10 +168,10 @@ function Pricing() {
     </section>)}
 ,
 function Plan({
-  name;
-  price;
-  duration;
-  features;
+  name,
+  price,
+  duration,
+  features,
 }: {
   name: string,
   price: string,

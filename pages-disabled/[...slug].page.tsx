@@ -1,6 +1,6 @@
 import Head from 'next/head',
 import type { GetServerSideProps } from 'next',
-type Props ={ path: string };
+type Props ={ path: string },
 export default function GenericPage({ path }: Props): JSX.Element {
   const titleBase = path === '/' ? 'Home' : path.replace(/^\/+|\/+$/g, '').split('/').map(s => s.replace(/-/g, ' ')).join(' • '),
   const title = `${titleBase} — Zion Tech Group`,
@@ -18,5 +18,5 @@ export default function GenericPage({ path }: Props): JSX.Element {
 export const getServerSideProps: GetServerSideProps<Props> = async (ctx) => {
   const slug = ctx.params?.slug as string[] | undefined,
   const path = '/' + (slug ? slug.join('/') : ''),
-  return { props: { path } };
-};
+  return { props: { path } },
+},

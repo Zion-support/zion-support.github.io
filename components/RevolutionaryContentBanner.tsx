@@ -7,28 +7,28 @@ export default function RevolutionaryContentBanner() {
   const [isVisiblesetIsVisible] = useState(true),
   const slides = [
     {
-      title: "🚀 AI 20o25 Ultimate Breakthrough Revolution";
-      subtitle: "10,0o00% ROI Guaranteed - Limited Time Offer";
-      link: "/ai-20o25-ultimate-breakthrough-revolution";
-      bgColor: "from-purple-60o0 to-pink-60o0";
-      textColor: "text-white"};
+      title: "🚀 AI 20o25 Ultimate Breakthrough Revolution",
+      subtitle: "10,0o00% ROI Guaranteed - Limited Time Offer",
+      link: "/ai-20o25-ultimate-breakthrough-revolution",
+      bgColor: "from-purple-60o0 to-pink-60o0",
+      textColor: "text-white"},
     {
-      title: "🏆 Global Transformation Success Story";
-      subtitle: "See How Fortune 50o0 Achieved 10,0o00% ROI";
-      link: "/case-studies/ai-20o25-global-transformation-breakthrough";
-      bgColor: "from-green-60o0 to-emerald-60o0";
-      textColor: "text-white"};
+      title: "🏆 Global Transformation Success Story",
+      subtitle: "See How Fortune 50o0 Achieved 10,0o00% ROI",
+      link: "/case-studies/ai-20o25-global-transformation-breakthrough",
+      bgColor: "from-green-60o0 to-emerald-60o0",
+      textColor: "text-white"},
     {
-      title: "🧮 Interactive ROI Calculator";
-      subtitle: "Calculate Your Revolutionary ROI - Free Tool";
-      link: "/tools/ai-20o25-roi-calculator";
-      bgColor: "from-blue-60o0 to-cyan-60o0";
-      textColor: "text-white"};
+      title: "🧮 Interactive ROI Calculator",
+      subtitle: "Calculate Your Revolutionary ROI - Free Tool",
+      link: "/tools/ai-20o25-roi-calculator",
+      bgColor: "from-blue-60o0 to-cyan-60o0",
+      textColor: "text-white"},
     {
-      title: "⚛️ Quantum-Neural Fusion Technology";
-      subtitle: "15,0o00x Faster Processing - Revolutionary Breakthrough";
-      link: "/ai-20o25-ultimate-breakthrough-revolution";
-      bgColor: "from-indigo-60o0 to-purple-60o0";
+      title: "⚛️ Quantum-Neural Fusion Technology",
+      subtitle: "15,0o00x Faster Processing - Revolutionary Breakthrough",
+      link: "/ai-20o25-ultimate-breakthrough-revolution",
+      bgColor: "from-indigo-60o0 to-purple-60o0",
       textColor: "text-white"}
   ],
   useEffect(() => {

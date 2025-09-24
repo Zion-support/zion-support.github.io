@@ -1,12 +1,12 @@
-import React from 'react';
+import React from 'react',
 import Layout from './layout/Layout',
 import UltraFuturisticServiceCard2026 from './ui/UltraFuturisticServiceCard2026',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
   ArrowRightStarUsersAwardClock,
-  BrainAtomShieldRocketZap;
-  TrendingUpGlobeCpuDatabaseCloud;
+  BrainAtomShieldRocketZap,
+  TrendingUpGlobeCpuDatabaseCloud,
   LockPaletteTargetCheckCircleSparkles} from 'lucide-react',
 // Import new service data,
 import { realMicroSaasServices2025 } from '../data/real-micro-saas-services-2025',
@@ -163,15 +163,15 @@ const Homepage2037: React.FC = () => {
                 >,
                   <UltraFuturisticServiceCard2026
                     service={{
-                      id: service.id;
-                      name: service.name;
-                      tagline: service.tagline;
-                      description: service.description;
-                      price: service.price;
-                      period: service.period;
-                      features: service.features.slice(0, 5);
-                      popular: service.popular;
-                      category: service.category;
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice(0, 5),
+                      popular: service.popular,
+                      category: service.category,
                       icon: service.icon}}
                     variant="ai",
                   />,
@@ -222,15 +222,15 @@ const Homepage2037: React.FC = () => {
                 >,
                   <UltraFuturisticServiceCard2026
                     service={{
-                      id: service.id;
-                      name: service.name;
-                      tagline: service.tagline;
-                      description: service.description;
-                      price: service.price;
-                      period: service.period;
-                      features: service.features.slice(0, 5);
-                      popular: service.popular;
-                      category: service.category;
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice(0, 5),
+                      popular: service.popular,
+                      category: service.category,
                       icon: service.icon}}
                     variant="enterprise",
                   />,
@@ -281,15 +281,15 @@ const Homepage2037: React.FC = () => {
                 >,
                   <UltraFuturisticServiceCard2026
                     service={{
-                      id: service.id;
-                      name: service.name;
-                      tagline: service.tagline;
-                      description: service.description;
-                      price: service.price;
-                      period: service.period;
-                      features: service.features.slice(0, 5);
-                      popular: service.popular;
-                      category: service.category;
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features.slice(0, 5),
+                      popular: service.popular,
+                      category: service.category,
                       icon: service.icon}}
                     variant="automation",
                   />,
@@ -423,5 +423,5 @@ const Homepage2037: React.FC = () => {
           </div>,
         </section>,
       </main>,
-    </Layout>)};
-export default Homepage2037;
+    </Layout>)},
+export default Homepage2037,

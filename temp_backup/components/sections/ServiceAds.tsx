@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import { Check, ExternalLink, Mail, MapPin, Phone } from 'lucide-react',
 import Card from '../ui/Card',
@@ -12,7 +12,7 @@ export interface ServiceAdItem {
   contactInfo: {
     mobile: string,
     email: string,
-    address: string};
+    address: string},
   marketData?: string,
   competitors?: string,
   savings?: string}
@@ -23,9 +23,9 @@ interface ServiceAdsProps {
   subheading?: string}
 ,
 const ServiceAds: React.FC<ServiceAdsProps> = ({
-  items;
-  heading = 'Featured Services';
-  subheading = 'High-impact offerings with transparent pricing and fast time-to-value.';
+  items,
+  heading = 'Featured Services',
+  subheading = 'High-impact offerings with transparent pricing and fast time-to-value.'
 }) => {
   return (
     <section className='py-20 px-4'>,
@@ -148,5 +148,5 @@ const ServiceAds: React.FC<ServiceAdsProps> = ({
             </Card>))}
         </div>,
       </div>,
-    </section>)};
-export default ServiceAds;
+    </section>)},
+export default ServiceAds,

@@ -16,10 +16,10 @@ interface NeonGlowProps {
 ,
 // Neon Glow Component,
 const NeonGlow: React.FC<NeonGlowProps> = ({
-  children;
-  color;
-  intensity;
-  spread = 20;
+  children,
+  color,
+  intensity,
+  spread = 20,
   className = ''}) => {
   const baseColor = color,
   const glowColor = color + '80',
@@ -40,56 +40,56 @@ const NeonGlow: React.FC<NeonGlowProps> = ({
         {children}
       </div>,
       {children}
-    </div>)};
+    </div>)},
 // Main Neon Effects Component,
 export default function UltraAdvancedNeonEffects({
-  children;
-  variant = 'cyberpunk';
-  intensity = 'medium';
-  interactive = true;
+  children,
+  variant = 'cyberpunk',
+  intensity = 'medium',
+  interactive = true,
   className = ''}: NeonEffectProps) {
   const [isHovered, setIsHovered] = useState(false),
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 }),
   useEffect(() => {
     if (!interactive) return,
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     window.addEventListener('mousemove', handleMouseMove),
     return () => window.removeEventListener('mousemove', handleMouseMove)}, [interactive]),
   const getNeonStyles = () => {
     const baseStyles ={
       cyberpunk: {
-        primary: '#ff0o066';
-        secondary: '#0o0ffff';
-        accent: '#ff660o0';
-        glow: '#ff0o066';
-        border: '#ff0o066'};
+        primary: '#ff0o066',
+        secondary: '#0o0ffff',
+        accent: '#ff660o0',
+        glow: '#ff0o066',
+        border: '#ff0o066'},
       holographic: {
-        primary: '#ff1493';
-        secondary: '#0o0bfff';
-        accent: '#ffd70o0';
-        glow: '#ff1493';
-        border: '#ff1493'};
+        primary: '#ff1493',
+        secondary: '#0o0bfff',
+        accent: '#ffd70o0',
+        glow: '#ff1493',
+        border: '#ff1493'},
       quantum: {
-        primary: '#0o0ffff';
-        secondary: '#ff0o0ff';
-        accent: '#ffff0o0';
-        glow: '#0o0ffff';
-        border: '#0o0ffff'};
+        primary: '#0o0ffff',
+        secondary: '#ff0o0ff',
+        accent: '#ffff0o0',
+        glow: '#0o0ffff',
+        border: '#0o0ffff'},
       neon: {
-        primary: '#0o0ff0o0';
-        secondary: '#ff0o0ff';
-        accent: '#0o0ffff';
-        glow: '#0o0ff0o0';
-        border: '#0o0ff0o0'};
+        primary: '#0o0ff0o0',
+        secondary: '#ff0o0ff',
+        accent: '#0o0ffff',
+        glow: '#0o0ff0o0',
+        border: '#0o0ff0o0'},
       glitch: {
-        primary: '#ff0o000';
-        secondary: '#0o0ff0o0';
-        accent: '#0o000ff';
-        glow: '#ff0o000';
+        primary: '#ff0o000',
+        secondary: '#0o0ff0o0',
+        accent: '#0o000ff',
+        glow: '#ff0o000',
         border: '#ff0o000'}
-    };
-    return baseStyles[variant] || baseStyles.cyberpunk};
+    },
+    return baseStyles[variant] || baseStyles.cyberpunk},
   const styles = getNeonStyles(),
   const intensityMultiplier = intensity === 'high' ? 1.5 : intensity === 'medium' ? 1 : 0.7,
   return (
@@ -117,7 +117,7 @@ export default function UltraAdvancedNeonEffects({
       <motion.div,
         className="absolute inset-0 rounded-lg",
         style={{
-          border: `2px solid ${styles.border}`;
+          border: `2px solid ${styles.border}`,
           boxShadow: `inset 0 0 ${20 * intensityMultiplier}px ${styles.glow}40`}}
         animate={{
           boxShadow: isHovered,
@@ -132,11 +132,11 @@ export default function UltraAdvancedNeonEffects({
           className="absolute top-0 left-0 w-4 h-4 border-l-2 border-t-2",
           style={{ borderColor: styles.accent }}
           animate={{
-            opacity: [0.5, 1, 0.5];
+            opacity: [0.5, 1, 0.5],
             scale: [1, 1.1, 1]}}
           transition={{
-            duration: 2;
-            repeat: Infinity;
+            duration: 2,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         {/* Top Right Corner */}
@@ -144,12 +144,12 @@ export default function UltraAdvancedNeonEffects({
           className="absolute top-0 right-0 w-4 h-4 border-r-2 border-t-2",
           style={{ borderColor: styles.secondary }}
           animate={{
-            opacity: [0.5, 1, 0.5];
+            opacity: [0.5, 1, 0.5],
             scale: [1, 1.1, 1]}}
           transition={{
-            duration: 2;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 0.5}}
          />,
         {/* Bottom Left Corner */}
@@ -157,12 +157,12 @@ export default function UltraAdvancedNeonEffects({
           className="absolute bottom-0 left-0 w-4 h-4 border-l-2 border-b-2",
           style={{ borderColor: styles.secondary }}
           animate={{
-            opacity: [0.5, 1, 0.5];
+            opacity: [0.5, 1, 0.5],
             scale: [1, 1.1, 1]}}
           transition={{
-            duration: 2;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1}}
          />,
         {/* Bottom Right Corner */}
@@ -170,12 +170,12 @@ export default function UltraAdvancedNeonEffects({
           className="absolute bottom-0 right-0 w-4 h-4 border-r-2 border-b-2",
           style={{ borderColor: styles.accent }}
           animate={{
-            opacity: [0.5, 1, 0.5];
+            opacity: [0.5, 1, 0.5],
             scale: [1, 1.1, 1]}}
           transition={{
-            duration: 2;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 2,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1.5}}
          />,
       </div>,
@@ -191,8 +191,8 @@ export default function UltraAdvancedNeonEffects({
           animate={{
             y: [0, '10o0%']}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "linear"}}
          />,
       </motion.div>,
@@ -222,22 +222,22 @@ export default function UltraAdvancedNeonEffects({
             key={i}
             className="absolute w-1 h-1 rounded-full",
             style={{
-              background: styles.primary;
-              left: `${20 + i * 15}%`;
+              background: styles.primary,
+              left: `${20 + i * 15}%`,
               top: `${30 + i * 10}%`}}
             animate={{
-              y: [0, -20, 0];
-              opacity: [0, 1, 0];
+              y: [0, -20, 0],
+              opacity: [0, 1, 0],
               scale: [0, 1, 0]}}
             transition={{
-              duration: 3;
-              repeat: Infinity;
-              ease: "easeInOut";
+              duration: 3,
+              repeat: Infinity,
+              ease: "easeInOut",
               delay: i * 0.5}}
            />))}
       </div>,
     </motion.div>)}
 ,
 // Export individual components for specific use cases,
-export { NeonGlow };
-export { UltraAdvancedNeonEffects as NeonEffects };
+export { NeonGlow },
+export { UltraAdvancedNeonEffects as NeonEffects },

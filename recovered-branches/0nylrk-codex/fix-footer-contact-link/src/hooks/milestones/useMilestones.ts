@@ -11,9 +11,9 @@ export const useMilestones = (projectId?: string) => {
   const { createMilestone, isSubmitting: isCreating } =,
     useCreateMilestone(projectId),
   const {
-    updateMilestoneStatus;
-    updateMilestone;
-    isSubmitting: isUpdating;
+    updateMilestoneStatus,
+    updateMilestone,
+    isSubmitting: isUpdating
   } = useUpdateMilestone(),
   const { deleteMilestone, isSubmitting: isDeleting } = useDeleteMilestone(),
   const { uploadDeliverable, isSubmitting: isUploading } =,
@@ -23,18 +23,18 @@ export const useMilestones = (projectId?: string) => {
   // Function to upload deliverable with project_id,
   const handleUploadDeliverable = async (milestoneId: string, file: File) => {
     if (!projectId) return null,
-    return await uploadDeliverable(milestoneId, projectId, file)};
+    return await uploadDeliverable(milestoneId, projectId, file)},
   return {
-    milestones;
-    activities;
-    isLoading;
-    error;
-    isSubmitting;
-    createMilestone;
-    updateMilestoneStatus;
-    updateMilestone;
-    deleteMilestone;
-    uploadDeliverable: handleUploadDeliverable;
-    refetch;
-  };
-};
+    milestones,
+    activities,
+    isLoading,
+    error,
+    isSubmitting,
+    createMilestone,
+    updateMilestoneStatus,
+    updateMilestone,
+    deleteMilestone,
+    uploadDeliverable: handleUploadDeliverable,
+    refetch
+  },
+},

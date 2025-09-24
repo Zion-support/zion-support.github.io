@@ -36,11 +36,11 @@ export interface HireRequest {
   budget: {
     min: number,
     max: number,
-    currency: string};
+    currency: string},
   timeline: {
     startDate: string,
     endDate?: string,
-    estimatedDuration?: string};
+    estimatedDuration?: string},
   status: 'pending' | 'accepted' | 'rejected' | 'completed',
   createdAt: string}
 ,

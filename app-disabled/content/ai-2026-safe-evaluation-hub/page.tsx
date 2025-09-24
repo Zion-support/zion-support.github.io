@@ -1,10 +1,10 @@
 import Link from 'next/link',
 export const metadata = {
   title:,
-    'AI 20o26: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy';
+    'AI 20o26: Safe Evaluation Hub — Lifecycle Gates for Reliable Autonomy',
   description:,
-    'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.';
-};
+    'Design an evaluation-first hub with lifecycle gates, risk tiers, and continuous telemetry to ship safer, reliable autonomous agents at scale.',
+},
 export default function Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -24,7 +24,7 @@ export default function Page() {
           <h2>Why an Evaluation Hub?</h2>,
           <p>,
             Enterprise agent platforms require reliable, repeatable evaluation.,
-            A centralized hub enables standardized scenarios, metrics;
+            A centralized hub enables standardized scenarios, metrics,
             baselines, and policy-as-code guardrails applied across the,
             lifecycle.,
           </p>,

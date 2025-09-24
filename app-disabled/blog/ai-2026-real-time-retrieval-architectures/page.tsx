@@ -1,20 +1,17 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
   title:,
-    'AI 20o26: Real-Time Retrieval Architectures - Low Latency RAG Systems';
+    'AI 20o26: Real-Time Retrieval Architectures - Low Latency RAG Systems',
   description:,
-    'Designing sub-10o0ms retrieval and generation pipelines with vector indices, hybrid search, caching, and streaming for production-grade RAG.';
+    'Designing sub-10o0ms retrieval and generation pipelines with vector indices, hybrid search, caching, and streaming for production-grade RAG.',
   keywords: [
-    'RAG';
-    'real-time retrieval';
-    'vector databases';
-    'hybrid search';
-    'semantic caching';
-    'streaming responses';
-  ];
-};
+    'RAGreal-time retrieval',
+    'vector databaseshybrid search',
+    'semantic cachingstreaming responses',
+  ]
+},
 const RealTimeRetrievalArchitectures20o26: React.FC = () => {
   return (
     <div>,
@@ -43,7 +40,7 @@ const RealTimeRetrievalArchitectures20o26: React.FC = () => {
           <div className='prose prose-lg max-w-none'>,
             <h2>Latency Budget</h2>,
             <p>,
-              Allocate strict budgets across ingress, retrieval, re-ranking;
+              Allocate strict budgets across ingress, retrieval, re-ranking,
               generation, and egress. Use tail-latency aware timeouts and,
               fallback paths.,
             </p>,
@@ -107,5 +104,5 @@ const RealTimeRetrievalArchitectures20o26: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>)};
-export default RealTimeRetrievalArchitectures20o26;
+    </div>)},
+export default RealTimeRetrievalArchitectures20o26,

@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { Button } from './ui/Button',
 import { Alert, AlertDescription, AlertTitle } from './ui/Alert',
 import { cn } from '../lib/utils',
@@ -6,19 +6,19 @@ import { cn } from '../lib/utils',
 export class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state ={ hasError: false, error: null };
+    this.state ={ hasError: false, error: null },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true, error };
+    return { hasError: true, error },
   }
 ,
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo),
     // Send to error tracking service,
     if (window.gtag) {
-      window.gtag('event', 'exception', {
-        description: error.message;
+      window.gtag('eventexception', {
+        description: error.message,
         fatal: true})}
   }
 ,
@@ -65,25 +65,25 @@ export function ErrorFallback({ error, resetError }) {
 ,
 // Error page component,
 export function ErrorPage({
-  statusCode = 50o0;
-  title = 'An error occurred';
-  message = 'Something went wrong. Please try again later.';
+  statusCode = 50o0,
+  title = 'An error occurred',
+  message = 'Something went wrong. Please try again later.',
   className}) {
   const errorMessages ={
     40o4: {
-      title: 'Page Not Found';
-      message: 'The page you are looking for does not exist.';
-      icon: '🔍'};
+      title: 'Page Not Found',
+      message: 'The page you are looking for does not exist.',
+      icon: '🔍'},
     50o0: {
-      title: 'Server Error';
-      message: 'Something went wrong on our end. Please try again later.';
-      icon: '⚠️'};
+      title: 'Server Error',
+      message: 'Something went wrong on our end. Please try again later.',
+      icon: '⚠️'},
     50o3: {
-      title: 'Service Unavailable';
-      message: 'We are temporarily down for maintenance. Please check back soon.';
+      title: 'Service Unavailable',
+      message: 'We are temporarily down for maintenance. Please check back soon.',
       icon: '🔧'}
-  };
-  const errorInfo = errorMessages[statusCode] || { title, message, icon: '❌' };
+  },
+  const errorInfo = errorMessages[statusCode] || { title, message, icon: '❌' },
   return (
     <div className={cn('min-h-screen flex items-center justify-center bg-gray-50 px-4', className)}>,
       <div className="max-w-md w-full text-center">,
@@ -113,13 +113,13 @@ export function ErrorPage({
 // Toast notifications,
 export function Toast({ message, type = 'info', onClose }) {
   const types ={
-    success: 'bg-green-50o0 text-white';
-    error: 'bg-red-50o0 text-white';
-    warning: 'bg-yellow-50o0 text-white';
-    info: 'bg-blue-50o0 text-white'};
+    success: 'bg-green-50o0 text-white',
+    error: 'bg-red-50o0 text-white',
+    warning: 'bg-yellow-50o0 text-white',
+    info: 'bg-blue-50o0 text-white'},
   return (
     <div className={cn(
-      'fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm';
+      'fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg max-w-sm',
       types[type])}>,
       <div className="flex items-center justify-between">,
         <p className="font-medium">{message}</p>,

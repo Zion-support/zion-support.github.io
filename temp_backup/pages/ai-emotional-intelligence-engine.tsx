@@ -1,53 +1,49 @@
 import Head from 'next/head',
 import {
-  Phone;
-  Mail;
-  MapPin;
-  Check;
-  ArrowRight;
-  Shield;
-  Star;
-  Heart;
-  Brain;
-  Eye;
-  Zap;
-  Lock;
-  Globe;
-  BarChart3;
-  Users;
-  TrendingUp;
+  Phone,
+  Mail,
+  MapPin,
+  Check,
+  ArrowRight,
+  Shield,
+  Star,
+  Heart,
+  Brain,
+  Eye,
+  Zap,
+  Lock,
+  Globe,
+  BarChart3,
+  Users,
+  TrendingUp,
 } from 'lucide-react',
 import UltraAdvancedFuturisticBackground from '../components/ui/UltraAdvancedFuturisticBackground',
 import Button from '../components/ui/Button',
 export default function AIEmotionalIntelligenceEnginePage() {
   const service = {
-    name: 'AI Emotional Intelligence Engine';
-    tagline: 'Understand and respond to human emotions with AI-powered EQ';
-    price: '$2,499';
-    period: '/month';
+    name: 'AI Emotional Intelligence Engine',
+    tagline: 'Understand and respond to human emotions with AI-powered EQ',
+    price: '$2,499',
+    period: '/month',
     description:,
-      'Advanced AI system that analyzes voice, text, and facial expressions to understand emotional context and provide emotionally intelligent responses for customer service, healthcare, and human resources.';
+      'Advanced AI system that analyzes voice, text, and facial expressions to understand emotional context and provide emotionally intelligent responses for customer service, healthcare, and human resources.',
     features: [
-      'Multi-modal emotion recognition (voice, text, video)';
-      'Real-time emotional state analysis';
-      'Emotion-aware response generation';
-      'Sentiment trend analysis and reporting';
-      'Custom emotion detection models';
-      'API for integration with existing systems';
-      'Compliance with privacy regulations';
-      'Multi-language emotional intelligence';
-      'Emotional health monitoring dashboards';
-    ];
-    rating: 4.9;
-    trialDays: 21;
-    setupTime: '2-3 weeks';
+      'Multi-modal emotion recognition (voice, text, video)Real-time emotional state analysis',
+      'Emotion-aware response generationSentiment trend analysis and reporting',
+      'Custom emotion detection modelsAPI for integration with existing systems',
+      'Compliance with privacy regulationsMulti-language emotional intelligence',
+      'Emotional health monitoring dashboards',
+    ],
+    rating: 4.9,
+    trialDays: 21,
+    setupTime: '2-3 weeks',
     contactInfo: {
-      mobile: '+1 30o2 464 0950';
-      email: 'kleber@ziontechgroup.com';
-      address: '364 E Main St STE 10o08 Middletown DE 19709';
-      website: 'https://ziontechgroup.com';
-    };
-  };
+      mobile: '+1 30o2 464 0950',
+      email: 'kleber@ziontechgroup.com',
+      address: '364 E Main St STE 10o08 Middletown DE 19709',
+      website: 'https://ziontechgroup.com'
+    },
+  },
   return (
     <UltraAdvancedFuturisticBackground>,
       <Head>,
@@ -162,11 +158,9 @@ export default function AIEmotionalIntelligenceEnginePage() {
                     </h3>,
                     <div className='space-y-2'>,
                       {[
-                        'Python & TensorFlow';
-                        'PyTorch & OpenCV';
-                        'NLP & Computer Vision';
-                        'Real-time Processing';
-                        'Cloud-native Architecture';
+                        'Python & TensorFlowPyTorch & OpenCV',
+                        'NLP & Computer VisionReal-time Processing',
+                        'Cloud-native Architecture',
                       ].map((tech, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-pink-40o0 rounded-full'></div>,
@@ -182,11 +176,9 @@ export default function AIEmotionalIntelligenceEnginePage() {
                     </h3>,
                     <div className='space-y-2'>,
                       {[
-                        'Salesforce & Zendesk';
-                        'Microsoft Teams & Slack';
-                        'Zoom & WebRTC';
-                        'CRM Platforms';
-                        'Custom APIs';
+                        'Salesforce & ZendeskMicrosoft Teams & Slack',
+                        'Zoom & WebRTCCRM Platforms',
+                        'Custom APIs',
                       ].map((integration, i) => (
                         <div key={i} className='flex items-center space-x-2'>,
                           <div className='w-2 h-2 bg-pink-40o0 rounded-full'></div>,

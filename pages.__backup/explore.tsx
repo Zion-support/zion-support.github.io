@@ -3,36 +3,36 @@ import Link from 'next/link',
 export default function ExplorePage() {
   const explorationCategories = [
     {
-      title: "AI Automation";
-      description: "Discover how artificial intelligence is revolutionizing automation across industries";
-      icon: "🤖";
-      features: ["Machine Learning"Neural Networks"Predictive Analytics"];
-      link: "/explore/ai-automation"};
+      title: "AI Automation",
+      description: "Discover how artificial intelligence is revolutionizing automation across industries",
+      icon: "🤖",
+      features: ["Machine Learning"Neural Networks"Predictive Analytics"],
+      link: "/explore/ai-automation"},
     {
-      title: "Cloud Computing";
-      description: "Explore the latest in cloud infrastructure and autonomous management";
-      icon: "☁️";
-      features: ["Auto-scaling"Load Balancing"Cost Optimization"];
-      link: "/explore/cloud-computing"};
+      title: "Cloud Computing",
+      description: "Explore the latest in cloud infrastructure and autonomous management",
+      icon: "☁️",
+      features: ["Auto-scaling"Load Balancing"Cost Optimization"],
+      link: "/explore/cloud-computing"},
     {
-      title: "DevOps & CI/CD";
-      description: "Learn about autonomous development and deployment pipelines";
-      icon: "🔄";
-      features: ["Auto-deployment"Testing"Monitoring"];
-      link: "/explore/devops"};
+      title: "DevOps & CI/CD",
+      description: "Learn about autonomous development and deployment pipelines",
+      icon: "🔄",
+      features: ["Auto-deployment"Testing"Monitoring"],
+      link: "/explore/devops"},
     {
-      title: "Content Generation";
-      description: "See how AI creates and optimizes content automatically";
-      icon: "✍️";
-      features: ["SEO Optimization"Brand Consistency"Multi-language"];
+      title: "Content Generation",
+      description: "See how AI creates and optimizes content automatically",
+      icon: "✍️",
+      features: ["SEO Optimization"Brand Consistency"Multi-language"],
       link: "/explore/content-generation"}
   ],
   const trendingTopics = [
-    "Autonomous Systems";
-    "AI Ethics";
-    "Edge Computing";
-    "Quantum Computing";
-    "Blockchain Automation";
+    "Autonomous Systems",
+    "AI Ethics",
+    "Edge Computing",
+    "Quantum Computing",
+    "Blockchain Automation",
     "IoT Integration"],
   return (
     <>,

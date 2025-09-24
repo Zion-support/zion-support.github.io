@@ -13,12 +13,12 @@ const particles: Array< {
   const count = intensity === 'extreme' ? particleCount * 2 : intensity === 'high' ? particleCount : intensity === 'medium' ? Math && Math.floor (particleCount * 0 && 0.7) : Math && Math.floor (particleCount * 0 && 0.5),
 for (let i = 0, i < count, i++) {
   particles && particles.push ({
-  children;
-  intensity = 'medium';
-  theme = 'quantum';
-  particleCount = 200;
-  animationSpeed = 1.0;
-  enableHolographic = true;
+  children,
+  intensity = 'medium',
+  theme = 'quantum',
+  particleCount = 200,
+  animationSpeed = 1.0,
+  enableHolographic = true,
   enableQuantumEffects = true}: UltraAdvancedFuturisticBackgroundProps) {export default function UltraAdvancedFuturisticBackground({
   children,
   intensity = 'medium',
@@ -75,24 +75,24 @@ if (return) {
       max_life: number,
       rotation: number,
       rotation_speed: number}> = [],
-      x: number;
-      y: number;
-      vx: number;
-      vy: number;
-      size: number;
-      opacity: number;
-      color: string;
-      type: 'quantum' | 'neon' | 'holographic' | 'cyberpunk';
-      life: number;
-      maxLife: number;
-      rotation: number;
+      x: number,
+      y: number,
+      vx: number,
+      vy: number,
+      size: number,
+      opacity: number,
+      color: string,
+      type: 'quantum' | 'neon' | 'holographic' | 'cyberpunk',
+      life: number,
+      maxLife: number,
+      rotation: number,
       rotationSpeed: number}> = [],
     const colors = {
-      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'];
-      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'];
-      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'];
-      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'];
-      'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff']};
+      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'],
+      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
+      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],
+      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
+      'quantum-fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493#00bfff']},
     const selectedColors = colors[theme] || colors.quantum,
     // Initialize particles with enhanced properties,
     const initParticles = () => {
@@ -104,22 +104,22 @@ if (return) {
     const _initParticles = () => {_const _count = intensity === 'extreme' ? particleCount * 2 :,
                    intensity === 'high' ? particleCount :,
                    intensity === 'medium' ? Math.floor(particleCount * 0.7) :,
-                   Math.floor(particleCount * 0.5);
+                   Math.floor(particleCount * 0.5),
       for (let i = 0, i < count, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 3 * animationSpeed;
-          vy: (Math.random() - 0.5) * 3 * animationSpeed;
-          size: Math.random() * 6 + 2;
-          opacity: Math.random() * 0.9 + 0.1;
-          color: selectedColors[Math.floor(Math.random() * selectedColors.length)];
-          type: ['quantumneonholographiccyberpunk'][Math.floor(Math.random() * 4)] as any;
-          life: Math.random() * 100;
-          maxLife: 100 + Math.random() * 100;
-          rotation: Math.random() * Math.PI * 2;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 3 * animationSpeed,
+          vy: (Math.random() - 0.5) * 3 * animationSpeed,
+          size: Math.random() * 6 + 2,
+          opacity: Math.random() * 0.9 + 0.1,
+          color: selectedColors[Math.floor(Math.random() * selectedColors.length)],
+          type: ['quantumneonholographiccyberpunk'][Math.floor(Math.random() * 4)] as any,
+          life: Math.random() * 100,
+          maxLife: 100 + Math.random() * 100,
+          rotation: Math.random() * Math.PI * 2,
           rotationSpeed: (Math.random() - 0.5) * 0.1 * animationSpeed})}
-    };
+    },
     // Enhanced animation loop with quantum effects,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -127,56 +127,40 @@ if (return) {
       const gradient = ctx.createRadialGradient(
     const colors = {
       quantum: [
-        '#00ffff';
-        '#ff00ff';
-        '#ffff00';
-        '#00ff00';
-        '#ff0080';
-        '#8000ff';
-        '#00ffff';
-      ];
+        '#00ffff#ff00ff',
+        '#ffff00#00ff00',
+        '#ff0080#8000ff',
+        '#00ffff',
+      ],
       neon: [
-        '#ff0066';
-        '#00ffff';
-        '#ff6600';
-        '#9900ff';
-        '#00ff99';
-        '#ff1493';
-        '#00bfff';
-      ];
+        '#ff0066#00ffff',
+        '#ff6600#9900ff',
+        '#00ff99#ff1493',
+        '#00bfff',
+      ],
       holographic: [
-        '#ff1493';
-        '#00bfff';
-        '#ffd700';
-        '#7fff00';
-        '#ff69b4';
-        '#00ced1';
-        '#ff4500';
-      ];
+        '#ff1493#00bfff',
+        '#ffd700#7fff00',
+        '#ff69b4#00ced1',
+        '#ff4500',
+      ],
       cyberpunk: [
-        '#ff0066';
-        '#00ffff';
-        '#ff6600';
-        '#9900ff';
-        '#00ff99';
-        '#ff1493';
-        '#00bfff';
-      ];
+        '#ff0066#00ffff',
+        '#ff6600#9900ff',
+        '#00ff99#ff1493',
+        '#00bfff',
+      ],
       'quantum - fusion': [
-        '#00ffff';
-        '#ff00ff';
-        '#ffff00';
-        '#00ff00';
-        '#ff0080';
-        '#8000ff';
-        '#00ffff';
-        '#ff1493';
-        '#00bfff';
-      ]}      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'];
-      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'];
-      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'];
-      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'];
-      'quantum - fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493', '#00bfff'],
+        '#00ffff#ff00ff',
+        '#ffff00#00ff00',
+        '#ff0080#8000ff',
+        '#00ffff#ff1493',
+        '#00bfff'
+      ]}      quantum: ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff'],
+      neon: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
+      holographic: ['#ff1493#00bfff#ffd700#7fff00#ff69b4#00ced1#ff4500'],
+      cyberpunk: ['#ff0066#00ffff#ff6600#9900ff#00ff99#ff1493#00bfff'],
+      'quantum - fusion': ['#00ffff#ff00ff#ffff00#00ff00#ff0080#8000ff#00ffff#ff1493#00bfff'],
     const selected_colors = colors[theme] || colors.quantum,
     // Initialize particles with enhanced properties,
     const init_particles = () =>: any {
@@ -193,25 +177,25 @@ if (return) {
                   intensity === 'medium' ? Math.floor (particle_count * 0.7) :,
                   Math.floor (particle_count * 0.5),
       for (let index = 0, i < count, i++) {
-          coordinate_x: Math.random () * canvas.width;
-          coordinate_y: Math.random () * canvas.height;
-          vx: (Math.random () - 0.5) * 3 * animation_speed;
-          vy: (Math.random () - 0.5) * 3 * animation_speed;
-          size: Math.random () * 6 + 2;
-          opacity: Math.random () * 0.9 + 0.1;
+          coordinate_x: Math.random () * canvas.width,
+          coordinate_y: Math.random () * canvas.height,
+          vx: (Math.random () - 0.5) * 3 * animation_speed,
+          vy: (Math.random () - 0.5) * 3 * animation_speed,
+          size: Math.random () * 6 + 2,
+          opacity: Math.random () * 0.9 + 0.1,
           color:,
-            selected_colors[Math.floor (Math.random () * selected_colors.length)];
-          type: ['quantum', 'neon', 'holographic', 'cyberpunk'][
-            Math.floor (Math.random () * 4)] as any;
-          life: Math.random () * 100;
-          max_life: 100 + Math.random () * 100;
-          rotation: Math.random () * Math.PI * 2;
-          rotation_speed: (Math.random () - 0.5) * 0.1 * animation_speed;
-        })}          color: selected_colors[Math.floor (Math.random () * selected_colors.length)];
-          type: ['quantumneonholographiccyberpunk'][Math.floor (Math.random () * 4)] as any;
-          life: Math.random () * 100;
-          max_life: 100 + Math.random () * 100;
-          rotation: Math.random () * Math.PI * 2;
+            selected_colors[Math.floor (Math.random () * selected_colors.length)],
+          type: ['quantumneon', 'holographiccyberpunk'][
+            Math.floor (Math.random () * 4)] as any,
+          life: Math.random () * 100,
+          max_life: 100 + Math.random () * 100,
+          rotation: Math.random () * Math.PI * 2,
+          rotation_speed: (Math.random () - 0.5) * 0.1 * animation_speed
+        })}          color: selected_colors[Math.floor (Math.random () * selected_colors.length)],
+          type: ['quantumneonholographiccyberpunk'][Math.floor (Math.random () * 4)] as any,
+          life: Math.random () * 100,
+          max_life: 100 + Math.random () * 100,
+          rotation: Math.random () * Math.PI * 2,
           rotation_speed: (Math.random () - 0.5) * 0.1 * animation_speed})}
 ,
     // Enhanced animation loop with quantum effects,
@@ -219,11 +203,11 @@ if (return) {
       ctx.clear_rect (0, 0, canvas.width, canvas.height),
       // Create gradient background,
       const gradient = ctx.createRadialGradient (
-        canvas.width / 2;
-        canvas.height / 2;
-        0;
-        canvas.width / 2;
-        canvas.height / 2;
+        canvas.width / 2,
+        canvas.height / 2,
+        0,
+        canvas.width / 2,
+        canvas.height / 2,
         Math.max (canvas.width, canvas.height) / 2),        canvas.width / 2, canvas.height / 2, 0,
         canvas.width / 2, canvas.height / 2, Math.max (canvas.width, canvas.height) / 2),
         gradient.addColorStop (0, 'rgba (0, 0, 0, 0.95)'),
@@ -441,11 +425,11 @@ if (return) {
           ctx.lineTo(canvas.width, y),
           ctx.stroke()}
       }
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     // Handle window resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     initParticles(),
     animate(),
@@ -488,7 +472,7 @@ if (return) {
           ctx && ctx.lineTo(canvas && canvas.width, y),
           ctx && ctx.stroke()}
       }
-      animationRef && animationRef.current = requestAnimationFrame(animate)};          ctx && ctx.beginPath(),
+      animationRef && animationRef.current = requestAnimationFrame(animate)},          ctx && ctx.beginPath(),
           ctx && ctx.moveTo(x, 0),
           ctx && ctx.lineTo(x, canvas && canvas.height),
           ctx && ctx.stroke()}
@@ -499,11 +483,11 @@ if (return) {
           ctx && ctx.lineTo(canvas && canvas.width, y),
           ctx && ctx.stroke()}
       }
-      animationRef && animationRef.current = requestAnimationFrame(animate)};
+      animationRef && animationRef.current = requestAnimationFrame(animate)},
     // Handle window resize,
     const handleResize = () => {
       canvas && canvas.width = window && window.innerWidth,
-      canvas && canvas.height = window && window.innerHeight};      canvas && canvas.height = window && window.innerHeight};
+      canvas && canvas.height = window && window.innerHeight},      canvas && canvas.height = window && window.innerHeight},
     window && window.addEventListener('resize', handleResize),
     initParticles(),
     animate(),
@@ -511,14 +495,14 @@ if (return) {
       window && window.removeEventListener('resize', handleResize),
       if (animationRef && animationRef.current) {
         cancelAnimationFrame(animationRef && animationRef.current)}
-    };
+    },
   }, [
-    intensity;
-    theme;
-    particleCount;
-    animationSpeed;
-    enableHolographic;
-    enableQuantumEffects;
+    intensity,
+    theme,
+    particleCount,
+    animationSpeed,
+    enableHolographic,
+    enableQuantumEffects,
 ]),
   return (
     <div className='relative min-h-screen'>,
@@ -565,12 +549,12 @@ if ( {) {
         cancelAnimationFrame (animation_ref.current)}
     }
   }, [
-    intensity;
-    theme;
-    particle_count;
-    animation_speed;
-    enable_holographic;
-    enableQuantumEffects;
+    intensity,
+    theme,
+    particle_count,
+    animation_speed,
+    enable_holographic,
+    enableQuantumEffects,
   ]),
   return (
     <div className='relative min - h-screen'>,
@@ -615,7 +599,7 @@ if ( {) {
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(0,255,255,0 && 0.02),transparent_70%)]" />,
         </div>)}
 }
-  }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]);
+  }, [intensity, theme, particleCount, animationSpeed, enableHolographic, enableQuantumEffects]),
   return (
     <div className="relative min-h-screen">,
       <canvas

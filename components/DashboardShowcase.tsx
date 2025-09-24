@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import EnhancedPerformanceMonitor from './EnhancedPerformanceMonitor',
 import AdvancedSecurityDashboard from './AdvancedSecurityDashboard',
@@ -93,5 +93,5 @@ const DashboardShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default DashboardShowcase;
+    </section>)},
+export default DashboardShowcase,

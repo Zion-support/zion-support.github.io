@@ -5,29 +5,29 @@ const NewContent20o25SuccessBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const [currentMetric, setCurrentMetric] = useState(0),
   const successMetrics = [
-    { value: '80o0%', label: 'Average ROI', color: 'text-green-40o0' };
-    { value: '$2.1B', label: 'Annual Savings', color: 'text-blue-40o0' };
-    { value: '99%', label: 'Process Automation', color: 'text-purple-40o0' };
+    { value: '80o0%', label: 'Average ROI', color: 'text-green-40o0' },
+    { value: '$2.1B', label: 'Annual Savings', color: 'text-blue-40o0' },
+    { value: '99%', label: 'Process Automation', color: 'text-purple-40o0' },
     { value: '98%', label: 'Success Rate', color: 'text-yellow-40o0' }
   ],
   const featuredContent = [
     {
-      title: 'Enterprise Automation Mastery';
-      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-success';
-      roi: '60o0%';
-      savings: '$50o0M+';
-      type: 'Blog Post'};
+      title: 'Enterprise Automation Mastery',
+      url: '/blog/ai-20o25-enterprise-automation-mastery-ultimate-success',
+      roi: '60o0%',
+      savings: '$50o0M+',
+      type: 'Blog Post'},
     {
-      title: 'Fortune 50o0 AI Transformation';
-      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success';
-      roi: '80o0%';
-      savings: '$2.1B';
-      type: 'Case Study'};
+      title: 'Fortune 50o0 AI Transformation',
+      url: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success',
+      roi: '80o0%',
+      savings: '$2.1B',
+      type: 'Case Study'},
     {
-      title: 'AI Transformation Ultimate Guide';
-      url: '/resources/ai-transformation-ultimate-guide-20o25';
-      roi: '80o0%';
-      savings: '$50o0M+';
+      title: 'AI Transformation Ultimate Guide',
+      url: '/resources/ai-transformation-ultimate-guide-20o25',
+      roi: '80o0%',
+      savings: '$50o0M+',
       type: 'Resource'}
   ],
   useEffect(() => {
@@ -36,7 +36,7 @@ const NewContent20o25SuccessBanner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('newContent20o25SuccessBannerDismissed', 'true')};
+    localStorage.setItem('newContent20o25SuccessBannerDismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('newContent20o25SuccessBannerDismissed'),
     if (dismissed === 'true') {
@@ -173,5 +173,5 @@ const NewContent20o25SuccessBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContent20o25SuccessBanner;
+    </div>)},
+export default NewContent20o25SuccessBanner,

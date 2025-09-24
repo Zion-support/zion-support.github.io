@@ -96,7 +96,7 @@ export default function AIHealthcareMedicalAutomation() {
                 </h2>,
                 <p className='text-white/90 mb-4'>,
                   One of the most promising applications of AI in healthcare is,
-                  diagnostic assistance. AI systems can analyze medical images;
+                  diagnostic assistance. AI systems can analyze medical images,
                   lab results, and patient data to help physicians make more,
                   accurate diagnoses: ,
                 </p>,
@@ -150,7 +150,7 @@ export default function AIHealthcareMedicalAutomation() {
                   </li>,
                   <li>,
                     • <strong>Treatment Optimization: </strong> Machine learning,
-                    models consider patient characteristics, medical history;
+                    models consider patient characteristics, medical history,
                     and treatment responses to recommend optimal therapy,
                     regimens,
                   </li>,
@@ -162,12 +162,12 @@ export default function AIHealthcareMedicalAutomation() {
                   </li>,
                   <li>,
                     • <strong>Dosage Optimization: </strong> Intelligent systems,
-                    adjust medication dosages based on real-time patient data;
+                    adjust medication dosages based on real-time patient data,
                     ensuring optimal therapeutic levels,
                   </li>,
                 </ul>,
                 <p className='text-white/90 mb-4'>,
-                  This personalized approach leads to better patient outcomes;
+                  This personalized approach leads to better patient outcomes,
                   reduced side effects, and more efficient use of healthcare,
                   resources.,
                 </p>,
@@ -188,7 +188,7 @@ export default function AIHealthcareMedicalAutomation() {
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Population Health Management: </strong> AI systems can,
-                  identify trends and patterns across patient populations;
+                  identify trends and patterns across patient populations,
                   helping healthcare organizations allocate resources more,
                   effectively and develop targeted prevention programs.,
                 </p>,
@@ -213,7 +213,7 @@ export default function AIHealthcareMedicalAutomation() {
                       Epidemiological Modeling,
                     </h4>,
                     <p className='text-white/80 text-sm'>,
-                      AI models predict disease outbreaks and spread patterns;
+                      AI models predict disease outbreaks and spread patterns,
                       helping public health officials prepare and respond,
                       effectively.,
                     </p>,
@@ -236,7 +236,7 @@ export default function AIHealthcareMedicalAutomation() {
                 </p>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Appointment Scheduling and Management: </strong>{' '}
-                  Intelligent scheduling systems can optimize appointment times;
+                  Intelligent scheduling systems can optimize appointment times,
                   reduce no-shows, and automatically reschedule appointments,
                   when necessary.,
                 </p>,
@@ -328,7 +328,7 @@ export default function AIHealthcareMedicalAutomation() {
                   Implementation Challenges and Ethical Considerations,
                 </h2>,
                 <p className='text-white/90 mb-4'>,
-                  While AI offers tremendous potential in healthcare;
+                  While AI offers tremendous potential in healthcare,
                   implementation comes with unique challenges: ,
                 </p>,
                 <div className='grid grid-cols-1 md:grid-cols-2 gap-6 mb-6'>,
@@ -385,7 +385,7 @@ export default function AIHealthcareMedicalAutomation() {
                   </li>,
                   <li>,
                     • <strong>Brain-Computer Interfaces: </strong> AI will enable,
-                    direct communication between the brain and computers;
+                    direct communication between the brain and computers,
                     potentially restoring function for patients with paralysis,
                     or neurological disorders,
                   </li>,
@@ -402,7 +402,7 @@ export default function AIHealthcareMedicalAutomation() {
                 </ul>,
                 <p className='text-white/90 mb-4'>,
                   <strong>Quantum Computing: </strong> Quantum AI will enable,
-                  more sophisticated molecular modeling and drug discovery;
+                  more sophisticated molecular modeling and drug discovery,
                   potentially revolutionizing pharmaceutical development.,
                 </p>,
               </section>,

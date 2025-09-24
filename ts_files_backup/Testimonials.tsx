@@ -1,45 +1,45 @@
 'use client',
 const testimonials = [
   {
-    id: 1;
-    name: 'Sarah Johnson';
-    company: 'TechCorp Solutions';
-    role: 'CTO';
+    id: 1,
+    name: 'Sarah Johnson',
+    company: 'TechCorp Solutions',
+    role: 'CTO',
     content:,
-      'Zion Tech Group transformed our entire infrastructure with their AI solutions. The results exceeded our expectations.';
-    rating: 5;
-    avatar: '👩‍💼';
-  };
+      'Zion Tech Group transformed our entire infrastructure with their AI solutions. The results exceeded our expectations.',
+    rating: 5,
+    avatar: '👩‍💼'
+  },
   {
-    id: 2;
-    name: 'Michael Chen';
-    company: 'InnovateLabs';
-    role: 'CEO';
+    id: 2,
+    name: 'Michael Chen',
+    company: 'InnovateLabs',
+    role: 'CEO',
     content:,
-      'Their automation platforms saved us 40% in operational costs while improving efficiency dramatically.';
-    rating: 5;
-    avatar: '👨‍💻';
-  };
+      'Their automation platforms saved us 40% in operational costs while improving efficiency dramatically.',
+    rating: 5,
+    avatar: '👨‍💻'
+  },
   {
-    id: 3;
-    name: 'Emily Rodriguez';
-    company: 'DataFlow Inc';
-    role: 'Head of Operations';
+    id: 3,
+    name: 'Emily Rodriguez',
+    company: 'DataFlow Inc',
+    role: 'Head of Operations',
     content:,
-      'The AI analytics dashboard provided insights we never knew existed. Game-changing technology.';
-    rating: 5;
-    avatar: '👩‍🔬';
-  };
+      'The AI analytics dashboard provided insights we never knew existed. Game-changing technology.',
+    rating: 5,
+    avatar: '👩‍🔬'
+  },
   {
-    id: 4;
-    name: 'David Thompson';
-    company: 'CloudFirst';
-    role: 'VP Engineering';
+    id: 4,
+    name: 'David Thompson',
+    company: 'CloudFirst',
+    role: 'VP Engineering',
     content:,
-      'Outstanding support and cutting-edge solutions. Zion Tech Group is our go-to technology partner.';
-    rating: 5;
-    avatar: '👨‍🔧';
-  };
+      'Outstanding support and cutting-edge solutions. Zion Tech Group is our go-to technology partner.',
+    rating: 5,
+    avatar: '👨‍🔧'
+  },
 ],
 export default function Testimonials() {
   return (

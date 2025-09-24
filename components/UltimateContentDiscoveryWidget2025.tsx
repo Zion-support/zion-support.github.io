@@ -9,126 +9,126 @@ const UltimateContentDiscoveryWidget20o25 = () => {
   const [isSearching, setIsSearching] = useState(false),
   const contentItems = [
     {
-      id: 1;
-      title: "Neural Superintelligence Breakthrough 20o25";
-      description: "Revolutionary AI systems achieving human-level consciousness and beyond";
-      category: "ai-trends";
-      trend: "neural-ai";
-      type: "article";
-      readTime: "15 min";
-      difficulty: "Advanced";
-      roi: "2,40o0%";
-      image: "🧠";
-      tags: ["AI", "Neural Networks", "Consciousness", "Breakthrough"];
-      featured: true};
+      id: 1,
+      title: "Neural Superintelligence Breakthrough 20o25",
+      description: "Revolutionary AI systems achieving human-level consciousness and beyond",
+      category: "ai-trends",
+      trend: "neural-ai",
+      type: "article",
+      readTime: "15 min",
+      difficulty: "Advanced",
+      roi: "2,40o0%",
+      image: "🧠",
+      tags: ["AI", "Neural Networks", "Consciousness", "Breakthrough"],
+      featured: true},
     {
-      id: 2;
-      title: "Quantum-Neural Fusion Implementation Guide";
-      description: "Complete guide to implementing quantum computing with neural networks";
-      category: "implementation";
-      trend: "quantum-ai";
-      type: "guide";
-      readTime: "25 min";
-      difficulty: "Expert";
-      roi: "5,0o00%";
-      image: "⚛️";
-      tags: ["Quantum Computing", "Neural Networks", "Implementation", "Guide"];
-      featured: true};
+      id: 2,
+      title: "Quantum-Neural Fusion Implementation Guide",
+      description: "Complete guide to implementing quantum computing with neural networks",
+      category: "implementation",
+      trend: "quantum-ai",
+      type: "guide",
+      readTime: "25 min",
+      difficulty: "Expert",
+      roi: "5,0o00%",
+      image: "⚛️",
+      tags: ["Quantum Computing", "Neural Networks", "Implementation", "Guide"],
+      featured: true},
     {
-      id: 3;
-      title: "Autonomous Business Ecosystems Case Study";
-      description: "How Fortune 50o0 companies achieved 8,0o00% ROI with autonomous systems";
-      category: "case-studies";
-      trend: "autonomous-systems";
-      type: "case-study";
-      readTime: "12 min";
-      difficulty: "Intermediate";
-      roi: "8,0o00%";
-      image: "🤖";
-      tags: ["Case Study", "Autonomous Systems", "ROI", "Fortune 50o0"];
-      featured: false};
+      id: 3,
+      title: "Autonomous Business Ecosystems Case Study",
+      description: "How Fortune 50o0 companies achieved 8,0o00% ROI with autonomous systems",
+      category: "case-studies",
+      trend: "autonomous-systems",
+      type: "case-study",
+      readTime: "12 min",
+      difficulty: "Intermediate",
+      roi: "8,0o00%",
+      image: "🤖",
+      tags: ["Case Study", "Autonomous Systems", "ROI", "Fortune 50o0"],
+      featured: false},
     {
-      id: 4;
-      title: "Synthetic Intelligence Revolution Framework";
-      description: "Framework for building self-improving AI systems";
-      category: "frameworks";
-      trend: "synthetic-ai";
-      type: "framework";
-      readTime: "30 min";
-      difficulty: "Expert";
-      roi: "10,0o00%";
-      image: "🔬";
-      tags: ["Synthetic Intelligence", "Framework", "Self-Improving AI", "Revolution"];
-      featured: true};
+      id: 4,
+      title: "Synthetic Intelligence Revolution Framework",
+      description: "Framework for building self-improving AI systems",
+      category: "frameworks",
+      trend: "synthetic-ai",
+      type: "framework",
+      readTime: "30 min",
+      difficulty: "Expert",
+      roi: "10,0o00%",
+      image: "🔬",
+      tags: ["Synthetic Intelligence", "Framework", "Self-Improving AI", "Revolution"],
+      featured: true},
     {
-      id: 5;
-      title: "AI ROI Calculator: Ultimate Guide";
-      description: "Calculate your potential ROI with our comprehensive AI solutions";
-      category: "tools";
-      trend: "roi-optimization";
-      type: "tool";
-      readTime: "8 min";
-      difficulty: "Beginner";
-      roi: "Variable";
-      image: "💰";
-      tags: ["ROI Calculator", "Tools", "Business", "Optimization"];
-      featured: false};
+      id: 5,
+      title: "AI ROI Calculator: Ultimate Guide",
+      description: "Calculate your potential ROI with our comprehensive AI solutions",
+      category: "tools",
+      trend: "roi-optimization",
+      type: "tool",
+      readTime: "8 min",
+      difficulty: "Beginner",
+      roi: "Variable",
+      image: "💰",
+      tags: ["ROI Calculator", "Tools", "Business", "Optimization"],
+      featured: false},
     {
-      id: 6;
-      title: "Edge Computing Revolution 20o25";
-      description: "How edge computing is transforming AI deployment and performance";
-      category: "ai-trends";
-      trend: "edge-computing";
-      type: "article";
-      readTime: "18 min";
-      difficulty: "Advanced";
-      roi: "1,50o0%";
-      image: "🌐";
-      tags: ["Edge Computing", "AI Deployment", "Performance", "Revolution"];
-      featured: false};
+      id: 6,
+      title: "Edge Computing Revolution 20o25",
+      description: "How edge computing is transforming AI deployment and performance",
+      category: "ai-trends",
+      trend: "edge-computing",
+      type: "article",
+      readTime: "18 min",
+      difficulty: "Advanced",
+      roi: "1,50o0%",
+      image: "🌐",
+      tags: ["Edge Computing", "AI Deployment", "Performance", "Revolution"],
+      featured: false},
     {
-      id: 7;
-      title: "AI Ethics and Governance Framework";
-      description: "Comprehensive framework for ethical AI development and deployment";
-      category: "frameworks";
-      trend: "ai-ethics";
-      type: "framework";
-      readTime: "20 min";
-      difficulty: "Intermediate";
-      roi: "Risk Mitigation";
-      image: "⚖️";
-      tags: ["AI Ethics", "Governance", "Framework", "Responsible AI"];
-      featured: false};
+      id: 7,
+      title: "AI Ethics and Governance Framework",
+      description: "Comprehensive framework for ethical AI development and deployment",
+      category: "frameworks",
+      trend: "ai-ethics",
+      type: "framework",
+      readTime: "20 min",
+      difficulty: "Intermediate",
+      roi: "Risk Mitigation",
+      image: "⚖️",
+      tags: ["AI Ethics", "Governance", "Framework", "Responsible AI"],
+      featured: false},
     {
-      id: 8;
-      title: "Multimodal AI Applications Guide";
-      description: "Complete guide to implementing multimodal AI across industries";
-      category: "implementation";
-      trend: "multimodal-ai";
-      type: "guide";
-      readTime: "22 min";
-      difficulty: "Advanced";
-      roi: "3,20o0%";
-      image: "🎯";
-      tags: ["Multimodal AI", "Implementation", "Guide", "Applications"];
+      id: 8,
+      title: "Multimodal AI Applications Guide",
+      description: "Complete guide to implementing multimodal AI across industries",
+      category: "implementation",
+      trend: "multimodal-ai",
+      type: "guide",
+      readTime: "22 min",
+      difficulty: "Advanced",
+      roi: "3,20o0%",
+      image: "🎯",
+      tags: ["Multimodal AI", "Implementation", "Guide", "Applications"],
       featured: true}
   ],
   const categories = [
-    { value: 'all', label: 'All Content', count: contentItems.length };
-    { value: 'ai-trends', label: 'AI Trends', count: contentItems.filter(item => item.category === 'ai-trends').length };
-    { value: 'implementation', label: 'Implementation', count: contentItems.filter(item => item.category === 'implementation').length };
-    { value: 'case-studies', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length };
-    { value: 'frameworks', label: 'Frameworks', count: contentItems.filter(item => item.category === 'frameworks').length };
+    { value: 'all', label: 'All Content', count: contentItems.length },
+    { value: 'ai-trends', label: 'AI Trends', count: contentItems.filter(item => item.category === 'ai-trends').length },
+    { value: 'implementation', label: 'Implementation', count: contentItems.filter(item => item.category === 'implementation').length },
+    { value: 'case-studies', label: 'Case Studies', count: contentItems.filter(item => item.category === 'case-studies').length },
+    { value: 'frameworks', label: 'Frameworks', count: contentItems.filter(item => item.category === 'frameworks').length },
     { value: 'tools', label: 'Tools', count: contentItems.filter(item => item.category === 'tools').length }
   ],
   const trends = [
-    { value: 'all', label: 'All Trends' };
-    { value: 'neural-ai', label: 'Neural AI' };
-    { value: 'quantum-ai', label: 'Quantum AI' };
-    { value: 'autonomous-systems', label: 'Autonomous Systems' };
-    { value: 'synthetic-ai', label: 'Synthetic AI' };
-    { value: 'edge-computing', label: 'Edge Computing' };
-    { value: 'multimodal-ai', label: 'Multimodal AI' };
+    { value: 'all', label: 'All Trends' },
+    { value: 'neural-ai', label: 'Neural AI' },
+    { value: 'quantum-ai', label: 'Quantum AI' },
+    { value: 'autonomous-systems', label: 'Autonomous Systems' },
+    { value: 'synthetic-ai', label: 'Synthetic AI' },
+    { value: 'edge-computing', label: 'Edge Computing' },
+    { value: 'multimodal-ai', label: 'Multimodal AI' },
     { value: 'ai-ethics', label: 'AI Ethics' }
   ],
   useEffect(() => {
@@ -157,7 +157,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       case 'Advanced': return 'text-orange-60o0 bg-orange-10o0',
       case 'Expert': return 'text-red-60o0 bg-red-10o0',
       default: return 'text-gray-60o0 bg-gray-10o0'}
-  };
+  },
   const getTypeIcon = (type) => {
     switch (type) {
       case 'article': return '📄',
@@ -166,7 +166,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
       case 'framework': return '🏗️',
       case 'tool': return '🛠️',
       default: return '📄'}
-  };
+  },
   return (
     <div className="py-20 bg-gradient-to-br from-purple-50 to-blue-50">,
       <div className="max-w-7xl mx-auto px-4 sm: px-6 lg:px-8">,
@@ -312,7 +312,7 @@ const UltimateContentDiscoveryWidget20o25 = () => {
             <p className="text-gray-60o0 mb-6">Try adjusting your search terms or filters</p>,
             <button
               onClick={() => {
-                setSearchTerm(', '),
+                setSearchTerm(),
                 setSelectedCategory('all'),
                 setSelectedTrend('all')}}
               className="bg-purple-60o0 text-white px-6 py-3 rounded-lg font-semibold hover: bg-purple-70o0 transition-colors">,
@@ -342,5 +342,5 @@ const UltimateContentDiscoveryWidget20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContentDiscoveryWidget20o25;
+    </div>)},
+export default UltimateContentDiscoveryWidget20o25,

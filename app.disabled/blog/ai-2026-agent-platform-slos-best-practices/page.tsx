@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Platform SLOs — Best Practices';
+  title: 'AI 20o26: Agent Platform SLOs — Best Practices',
   description:,
-    'Practical guidance to define, monitor, and enforce agent platform SLOs.';
-};
+    'Practical guidance to define, monitor, and enforce agent platform SLOs.',
+},
 export default function AgentPlatformSLOsBestPracticesPage() {
   return (
     <main className='max-w-3xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -23,7 +23,7 @@ export default function AgentPlatformSLOsBestPracticesPage() {
             Defining SLOs,
           </h2>,
           <p className='text-gray-70o0 mt-2'>,
-            Start with the critical user journeys. For each, define safety;
+            Start with the critical user journeys. For each, define safety,
             quality, reliability, and cost SLOs with unambiguous measurement and,
             data sources.,
           </p>,

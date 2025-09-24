@@ -1,23 +1,23 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight;
-  Brain;
-  Zap;
-  Shield;
-  Rocket;
-  Sparkles;
-  Star;
-  TrendingUp;
-  Globe;
-  Cpu;
-  Lock;
-  Cloud;
-  Search;
-  Filter;
-  Grid;
-  List;
-  Phone;
+  ArrowRight,
+  Brain,
+  Zap,
+  Shield,
+  Rocket,
+  Sparkles,
+  Star,
+  TrendingUp,
+  Globe,
+  Cpu,
+  Lock,
+  Cloud,
+  Search,
+  Filter,
+  Grid,
+  List,
+  Phone,
 } from 'lucide-react',
 import Link from 'next/link',
 // Import all the new service data,
@@ -31,10 +31,10 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
   const [searchTerm, setSearchTerm] = useState(''),
   // Combine all services,
   const allServices = [
-    ...revolutionary20o26AIAutomationServices;
-    ...revolutionary20o26EmergingTechServices;
-    ...revolutionary20o26HealthcareBiotechServices;
-    ...revolutionary20o26FintechBlockchainServices;
+    ...revolutionary20o26AIAutomationServices,
+    ...revolutionary20o26EmergingTechServices,
+    ...revolutionary20o26HealthcareBiotechServices,
+    ...revolutionary20o26FintechBlockchainServices,
   ],
   // Filter services based on category and search,
   const filteredServices = allServices.filter(service => {
@@ -47,61 +47,61 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
     return matchesCategory && matchesSearch}),
   const categories = [
     {
-      id: 'all';
-      name: 'All Services';
-      count: allServices.length;
-      icon: Sparkles;
-      color: 'from-purple-50o0 to-pink-50o0';
-    };
+      id: 'all',
+      name: 'All Services',
+      count: allServices.length,
+      icon: Sparkles,
+      color: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      id: 'AI';
-      name: 'AI & Automation';
-      count: revolutionary20o26AIAutomationServices.length;
-      icon: Brain;
-      color: 'from-blue-50o0 to-cyan-50o0';
-    };
+      id: 'AI',
+      name: 'AI & Automation',
+      count: revolutionary20o26AIAutomationServices.length,
+      icon: Brain,
+      color: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      id: 'Emerging';
-      name: 'Emerging Tech';
-      count: revolutionary20o26EmergingTechServices.length;
-      icon: Rocket;
-      color: 'from-green-50o0 to-emerald-50o0';
-    };
+      id: 'Emerging',
+      name: 'Emerging Tech',
+      count: revolutionary20o26EmergingTechServices.length,
+      icon: Rocket,
+      color: 'from-green-50o0 to-emerald-50o0'
+    },
     {
-      id: 'Healthcare';
-      name: 'Healthcare & Biotech';
-      count: revolutionary20o26HealthcareBiotechServices.length;
-      icon: Shield;
-      color: 'from-teal-50o0 to-cyan-50o0';
-    };
+      id: 'Healthcare',
+      name: 'Healthcare & Biotech',
+      count: revolutionary20o26HealthcareBiotechServices.length,
+      icon: Shield,
+      color: 'from-teal-50o0 to-cyan-50o0'
+    },
     {
-      id: 'Fintech';
-      name: 'Fintech & Blockchain';
-      count: revolutionary20o26FintechBlockchainServices.length;
-      icon: Zap;
-      color: 'from-yellow-50o0 to-orange-50o0';
-    };
+      id: 'Fintech',
+      name: 'Fintech & Blockchain',
+      count: revolutionary20o26FintechBlockchainServices.length,
+      icon: Zap,
+      color: 'from-yellow-50o0 to-orange-50o0'
+    },
   ],
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { opacity: 0, y: 20 };
+    hidden: { opacity: 0, y: 20 },
     visible: {
-      opacity: 1;
-      y: 0;
+      opacity: 1,
+      y: 0,
       transition: {
-        duration: 0.6;
-        ease: 'easeOut' as const;
-      };
-    };
-  };
+        duration: 0.6,
+        ease: 'easeOut' as const
+      },
+    },
+  },
   return (
     <section className='py-20 px-4 sm: px-6 lg:px-8 relative overflow-hidden'>,
       {/* Enhanced Background Effects */}
@@ -121,7 +121,7 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl text-gray-30o0 max-w-4xl mx-auto leading-relaxed'>,
-            Experience the future with our cutting-edge AI, quantum computing;
+            Experience the future with our cutting-edge AI, quantum computing,
             and emerging technology services. Transform your business with,
             autonomous intelligence and quantum-powered solutions.,
           </p>,
@@ -129,29 +129,29 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
           <div className='grid grid-cols-2 md: grid-cols-4 gap-6 mt-12'>,
             {[
               {
-                label: 'Total Services';
-                value: allServices.length;
-                icon: Sparkles;
-                color: 'from-purple-50o0 to-pink-50o0';
-              };
+                label: 'Total Services',
+                value: allServices.length,
+                icon: Sparkles,
+                color: 'from-purple-50o0 to-pink-50o0'
+              },
               {
-                label: 'AI Services';
-                value: revolutionary20o26AIAutomationServices.length;
-                icon: Brain;
-                color: 'from-blue-50o0 to-cyan-50o0';
-              };
+                label: 'AI Services',
+                value: revolutionary20o26AIAutomationServices.length,
+                icon: Brain,
+                color: 'from-blue-50o0 to-cyan-50o0'
+              },
               {
-                label: 'Emerging Tech';
-                value: revolutionary20o26EmergingTechServices.length;
-                icon: Rocket;
-                color: 'from-green-50o0 to-emerald-50o0';
-              };
+                label: 'Emerging Tech',
+                value: revolutionary20o26EmergingTechServices.length,
+                icon: Rocket,
+                color: 'from-green-50o0 to-emerald-50o0'
+              },
               {
-                label: 'Healthcare';
-                value: revolutionary20o26HealthcareBiotechServices.length;
-                icon: Shield;
-                color: 'from-teal-50o0 to-cyan-50o0';
-              };
+                label: 'Healthcare',
+                value: revolutionary20o26HealthcareBiotechServices.length,
+                icon: Shield,
+                color: 'from-teal-50o0 to-cyan-50o0'
+              },
             ].map((stat, index) => (
               <motion.div,
                 key={stat.label}
@@ -398,5 +398,5 @@ const Revolutionary20o26UltimateServicesShowcase = () => {
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default Revolutionary20o26UltimateServicesShowcase;
+    </section>)},
+export default Revolutionary20o26UltimateServicesShowcase,

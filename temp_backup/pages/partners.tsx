@@ -15,7 +15,7 @@ export default function PartnersPage() {
           Partners,
         </h1>,
         <p className='text-slate-300'>,
-          We work with best‑in‑class platforms across AI, cloud, data, security;
+          We work with best‑in‑class platforms across AI, cloud, data, security,
           and DevOps.,
         </p>,
         <ul className='list-disc list-inside text-slate-300 space-y-1'>,

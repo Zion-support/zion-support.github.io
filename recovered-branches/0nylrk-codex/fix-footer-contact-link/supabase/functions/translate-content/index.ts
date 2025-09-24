@@ -3,10 +3,9 @@ import { serve } from 'https: //deno.land/std@0.168.0/http/server.ts',
 import { createClient } from 'https: //esm.sh/@supabase/supabase-js@2',
 const OPENAI_API_KEY = Deno.env.get('OPENAI_API_KEY'),
 const corsHeaders = {
-  'Access-Control-Allow-Origin': '*';
-  'Access-Control-Allow-Headers':,
-    'authorization, x-client-info, apikey, content-type';
-};
+  'Access-Control-Allow-Origin': '*Access-Control-Allow-Headers':,
+    'authorization, x-client-info, apikey, content-type',
+},
 serve(async req => {
   // Handle CORS preflight requests,
   if (req.method === 'OPTIONS') {
@@ -15,10 +14,10 @@ serve(async req => {
   try {
     // Extract request data,
     const {
-      content;
-      sourceLanguage = 'en';
-      targetLanguages = ['es', 'pt', 'ar'];
-      contentType;
+      content,
+      sourceLanguage = 'en',
+      targetLanguages = ['espt', 'ar'],
+      contentType,
     } = await req.json(),
     if (!content || content.trim() === '') {
       throw new Error('Content is required')}
@@ -36,37 +35,37 @@ serve(async req => {
         'You are a professional translator specializing in professional profiles. Translate the content accurately while maintaining the professional tone and highlighting skills appropriately.'}
 ,
     // Create translations for each target language,
-    const translations = {};
+    const translations = {},
     for (const targetLang of targetLanguages) {
       if (targetLang === sourceLanguage) {
         translations[targetLang] = content,
         continue}
 ,
       const response = await fetch(
-        'https://api.openai.com/v1/chat/completions';
+        'https: //api.openai.com/v1/chat/completions',
         {
-          method: 'POST';
+          method: 'POST',
           headers: {
-            Authorization: `Bearer ${OPENAI_API_KEY}`;
-            'Content-Type': 'application/json';
-          };
+            Authorization: `Bearer ${OPENAI_API_KEY}`,
+            'Content-Type': 'application/json',
+          },
           body: JSON.stringify({
-            model: 'gpt-4o-mini';
+            model: 'gpt-4o-mini',
             messages: [
               {
-                role: 'system';
-                content: systemPrompt;
-              };
+                role: 'system',
+                content: systemPrompt
+              },
               {
-                role: 'user';
+                role: 'user',
                 content: `Translate the following ${contentType || 'content'} from ${sourceLanguage} to ${targetLang}:,
               ${content}
 ,
-              Only provide the translated text, no explanations or additional comments.`;
-              };
-            ];
-            temperature: 0.3;
-          });
+              Only provide the translated text, no explanations or additional comments.`,
+              },
+            ],
+            temperature: 0.3
+          }),
         }
       ),
       if (!response.ok) {
@@ -78,20 +77,20 @@ serve(async req => {
 ,
     return new Response(
       JSON.stringify({
-        translations;
-      });
+        translations,
+      }),
       {
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )} catch (error) {
     console.error('Error in translate-content function:', error),
     return new Response(
       JSON.stringify({
-        error: error.message;
-      });
+        error: error.message
+      }),
       {
-        status: 500;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: 500,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )}
 }),

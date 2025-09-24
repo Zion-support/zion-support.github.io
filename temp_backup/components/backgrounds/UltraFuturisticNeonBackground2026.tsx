@@ -6,8 +6,8 @@ interface UltraFuturisticNeonBackground20o26Props {
   children?: React.ReactNode}
 ,
 export default function UltraFuturisticNeonBackground20o26({
-  intensity = 'medium';
-  theme = 'neon';
+  intensity = 'medium',
+  theme = 'neon',
   children}: UltraFuturisticNeonBackground20o26Props) {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const containerRef = useRef<HTMLDivElement>(null),
@@ -25,7 +25,7 @@ export default function UltraFuturisticNeonBackground20o26({
         canvas.width = rect.width * (window.devicePixelRatio || 1),
         canvas.height = rect.height * (window.devicePixelRatio || 1),
         ctx.scale(window.devicePixelRatio || 1, window.devicePixelRatio || 1)}
-    };
+    },
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     // Enhanced neon color schemes,
@@ -33,30 +33,30 @@ export default function UltraFuturisticNeonBackground20o26({
       switch (theme) {
         case 'cyberpunk':,
           return {
-            primary: ['#ff0o055', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'];
-            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
-            accent: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
-            neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']};
+            primary: ['#ff0o055#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80#ff80o00', '#0o080ff#ff4080', '#40ffff'],
+            accent: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57'],
+            neon: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff']},
         case 'holographic':,
           return {
-            primary: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57'];
-            secondary: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff9ff3', '#54a0ff'];
-            accent: ['#ff9ff3', '#54a0ff', '#5f27cd', '#ff6b6b', '#4ecdc4'];
-            neon: ['#ff6b6b', '#4ecdc4', '#45b7d1', '#96ceb4', '#feca57']};
+            primary: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57'],
+            secondary: ['#ff9ff3#54a0ff', '#5f27cd#ff9ff3', '#54a0ff'],
+            accent: ['#ff9ff3#54a0ff', '#5f27cd#ff6b6b', '#4ecdc4'],
+            neon: ['#ff6b6b#4ecdc4', '#45b7d1#96ceb4', '#feca57']},
         case 'quantum-neon':,
           return {
-            primary: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b'];
-            secondary: ['#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981'];
-            accent: ['#f59e0b', '#ef4444', '#8b5cf6', '#0o6b6d4', '#ec4899'];
-            neon: ['#8b5cf6', '#0o6b6d4', '#ec4899', '#10b981', '#f59e0b']};
+            primary: ['#8b5cf6#0o6b6d4', '#ec4899#10b981', '#f59e0b'],
+            secondary: ['#ef4444#8b5cf6', '#0o6b6d4#ec4899', '#10b981'],
+            accent: ['#f59e0b#ef4444', '#8b5cf6#0o6b6d4', '#ec4899'],
+            neon: ['#8b5cf6#0o6b6d4', '#ec4899#10b981', '#f59e0b']},
         default: // neon,
           return {
-            primary: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff'];
-            secondary: ['#0o0ff80', '#ff80o00', '#0o080ff', '#ff4080', '#40ffff'];
-            accent: ['#ff4080', '#40ffff', '#ffff40', '#ff40ff', '#80o40ff'];
-            neon: ['#ff0o080', '#0o0ffff', '#ffff0o0', '#ff0o0ff', '#80o00ff']};
+            primary: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff'],
+            secondary: ['#0o0ff80#ff80o00', '#0o080ff#ff4080', '#40ffff'],
+            accent: ['#ff4080#40ffff', '#ffff40#ff40ff', '#80o40ff'],
+            neon: ['#ff0o080#0o0ffff', '#ffff0o0#ff0o0ff', '#80o00ff']},
       }
-    };
+    },
     const colors = getNeonColors(),
     // Enhanced particle system with neon effects,
     let particles: Array<{
@@ -86,28 +86,28 @@ export default function UltraFuturisticNeonBackground20o26({
                            Math.random() < 0.6 ? 'hologram' :,
                            Math.random() < 0.8 ? 'quantum' : 'particle',
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2 * intensityMultiplier;
-          vy: (Math.random() - 0.5) * 2 * intensityMultiplier;
-          size: Math.random() * 4 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
-          color: colors.neon[Math.floor(Math.random() * colors.neon.length)];
-          type: particleType;
-          life: Math.random() * 10o0 + 50;
-          maxLife: Math.random() * 10o0 + 50;
-          rotation: Math.random() * Math.PI * 2;
-          rotationSpeed: (Math.random() - 0.5) * 0.1;
-          glow: Math.random() * 20 + 10;
-          pulse: Math.random() * 0.1 + 0.0o5;
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
+          size: Math.random() * 4 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: colors.neon[Math.floor(Math.random() * colors.neon.length)],
+          type: particleType,
+          life: Math.random() * 10o0 + 50,
+          maxLife: Math.random() * 10o0 + 50,
+          rotation: Math.random() * Math.PI * 2,
+          rotationSpeed: (Math.random() - 0.5) * 0.1,
+          glow: Math.random() * 20 + 10,
+          pulse: Math.random() * 0.1 + 0.0o5,
           trail: []})}
-    };
+    },
     // Mouse interaction,
     const handleMouseMove = (e: MouseEvent) => {
       const rect = canvas.getBoundingClientRect(),
       setMousePosition({
-        x: e.clientX - rect.left;
-        y: e.clientY - rect.top})};
+        x: e.clientX - rect.left,
+        y: e.clientY - rect.top})},
     canvas.addEventListener('mousemove', handleMouseMove),
     // Animation loop,
     let animationId: number,
@@ -226,7 +226,7 @@ export default function UltraFuturisticNeonBackground20o26({
           ctx.stroke()}
         ctx.restore()}
 ,
-      animationId = requestAnimationFrame(animate)};
+      animationId = requestAnimationFrame(animate)},
     // Initialize baseCount and particles,
     const isSmallScreen = window.innerWidth < 768,
     baseCount = prefersReducedMotion ? 15 : (isSmallScreen ? 60 : 150),
@@ -235,7 +235,7 @@ export default function UltraFuturisticNeonBackground20o26({
     return () => {
       cancelAnimationFrame(animationId),
       window.removeEventListener('resize', resizeCanvas),
-      canvas.removeEventListener('mousemove', handleMouseMove)};
+      canvas.removeEventListener('mousemove', handleMouseMove)},
   }, [intensity, theme]),
   return (
     <div
@@ -258,8 +258,7 @@ export default function UltraFuturisticNeonBackground20o26({
           className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-cyan-40o0 to-transparent opacity-30",
           animate={{
             boxShadow: [
-              '0 0 20px rgba(34, 211, 238, 0.5)';
-              '0 0 40px rgba(34, 211, 238, 0.8)';
+              '0 0 20px rgba(34, 211, 238, 0.5)0 0 40px rgba(34, 211, 238, 0.8)',
               '0 0 20px rgba(34, 211, 238, 0.5)']}}
           transition={{ duration: 3, repeat: Infinity }}
          />,
@@ -267,8 +266,7 @@ export default function UltraFuturisticNeonBackground20o26({
           className="absolute bottom-0 right-0 w-1 h-full bg-gradient-to-b from-transparent via-pink-40o0 to-transparent opacity-30",
           animate={{
             boxShadow: [
-              '0 0 20px rgba(236, 72, 153, 0.5)';
-              '0 0 40px rgba(236, 72, 153, 0.8)';
+              '0 0 20px rgba(236, 72, 153, 0.5)0 0 40px rgba(236, 72, 153, 0.8)',
               '0 0 20px rgba(236, 72, 153, 0.5)']}}
           transition={{ duration: 4, repeat: Infinity, delay: 1 }}
          />,

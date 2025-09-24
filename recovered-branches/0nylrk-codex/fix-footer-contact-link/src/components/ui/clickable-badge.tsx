@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { X } from 'lucide-react',
 import { cn } from '@/lib/utils',
 import { badgeVariants } from '@/components/ui/badge-variants',
@@ -8,17 +8,17 @@ export interface ClickableBadgeProps,
   variant?: 'default' | 'secondary' | 'destructive' | 'outline'}
 ,
 export function ClickableBadge({
-  children;
-  className;
-  variant = 'default';
-  onRemove;
+  children,
+  className,
+  variant = 'default',
+  onRemove,
   ...props}: ClickableBadgeProps) {
   return (
     <div
       className={cn(
-        badgeVariants({ variant });
-        'group flex items-center gap-1';
-        onRemove && 'pl-2.5 pr-1.5 py-1';
+        badgeVariants({ variant }),
+        'group flex items-center gap-1',
+        onRemove && 'pl-2.5 pr-1.5 py-1',
         className)}
       {...props}
     >,

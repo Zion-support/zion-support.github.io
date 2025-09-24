@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useState } from 'react',
 export default function PostJobPage() {
   const router = useRouter(),
@@ -22,21 +22,21 @@ export default function PostJobPage() {
     try {
       setIsSubmitting(true),
       const res = await fetch('/api/jobs', {
-        method: 'POST';
-        headers: { 'Content-Type': 'application/json' };
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
-          title;
-          description;
-          category;
+          title,
+          description,
+          category,
           requiredSkills: skills,
-            .split(','),
+            .split(),
             .map(s => s.trim()),
-            .filter(Boolean);
-          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined;
-          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined;
-          deliveryDeadlineIso: deliveryDeadlineIso || undefined;
-          clientEmail;
-        });
+            .filter(Boolean),
+          budgetMinUsd: budgetMinUsd ? Number(budgetMinUsd) : undefined,
+          budgetMaxUsd: budgetMaxUsd ? Number(budgetMaxUsd) : undefined,
+          deliveryDeadlineIso: deliveryDeadlineIso || undefined,
+          clientEmail
+        }),
       }),
       const data = await res.json(),
       if (!res.ok) throw new Error(data.error || 'Failed to post job'),

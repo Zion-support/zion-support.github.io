@@ -5,11 +5,11 @@ import { Avatar } from "@/components/ui/avatar",
 import { Badge } from "@/components/ui/badge",
 import { ClickableBadge } from "@/components/ui/clickable-badge",
 import {
-  Table;
-  TableBody;
-  TableCell;
-  TableHead;
-  TableHeader;
+  Table,
+  TableBody,
+  TableCell,
+  TableHead,
+  TableHeader,
   TableRow} from "@/components/ui/table",
 import { ApplicationActions } from "./ApplicationActions",
 import { StatusBadge } from "./StatusBadge",
@@ -28,18 +28,18 @@ export function ApplicationsTable({
   applications,
   processingId,
   onViewApplication,
-  onStatusChange;
+  onStatusChange,
   onViewScore}: ApplicationsTableProps) {
   const [hireModalOpensetHireModalOpen] = useState(false),
   const [selectedApplicationsetSelectedApplication] = useState<JobApplication | null>(null),
   const handleHireClick = (application: JobApplication) => {
     setSelectedApplication(application),
-    setHireModalOpen(true)};
+    setHireModalOpen(true)},
   const handleHireConfirmed = () => {
     // This will be called after the hire confirmation is completed,
     toast({
-      title: "Hiring process initiated";
-      description: "Offer has been sent to the talent."})};
+      title: "Hiring process initiated",
+      description: "Offer has been sent to the talent."})},
   return (
     <>,
       <div className="rounded-md border">,

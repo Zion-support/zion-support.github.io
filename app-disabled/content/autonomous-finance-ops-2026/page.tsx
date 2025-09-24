@@ -1,8 +1,8 @@
 export const metadata = {
-  title: 'AI 20o26: Autonomous Finance Operations Blueprint';
+  title: 'AI 20o26: Autonomous Finance Operations Blueprint',
   description:,
-    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.';
-};
+    'A practical guide to building an autonomous finance operating system: real-time cash, policy-as-code, and continuous close.',
+},
 export default function AutonomousFinanceOps20o26Page() {
   return (
     <main className='min-h-screen bg-white'>,
@@ -30,7 +30,7 @@ export default function AutonomousFinanceOps20o26Page() {
           </ul>,
           <h2>Reference Architecture</h2>,
           <p>,
-            The blueprint composes streaming ingestion, event-sourced ledgers;
+            The blueprint composes streaming ingestion, event-sourced ledgers,
             LLM agents for anomaly detection, and policy engines to drive safe,
             autonomous decisions.,
           </p>,

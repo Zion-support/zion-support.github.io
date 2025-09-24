@@ -21,7 +21,7 @@ export default function AI20o26NeuralConsciousnessBreakthroughPromotionBanner() 
             </span>,
           </h2>,
           <p className='text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto'>,
-            The 'world', 's first AI system achieving{' '}
+            The 'worlds first AI system achieving{' '}
             <span className='text-yellow-40o0 font-bold'>,
               99.9% neural consciousness integration,
             </span>,

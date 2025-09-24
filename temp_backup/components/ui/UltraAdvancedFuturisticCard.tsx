@@ -20,24 +20,24 @@ interface UltraAdvancedFuturisticCardProps {
     mobile: string,
     email: string,
     address: string,
-    website: string};
+    website: string},
 }
 ,
 const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = ({
-  title;
-  description;
-  icon;
-  variant = 'default';
-  color = 'from-blue-50o0 to-purple-60o0';
-  textColor = 'text-blue-40o0';
-  features = [];
-  price;
-  period;
-  popular = false;
-  onClick;
-  link;
-  className = '';
-  children;
+  title,
+  description,
+  icon,
+  variant = 'default',
+  color = 'from-blue-50o0 to-purple-60o0',
+  textColor = 'text-blue-40o0',
+  features = [],
+  price,
+  period,
+  popular = false,
+  onClick,
+  link,
+  className = '',
+  children,
   contactInfo}) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isClicked, setIsClicked] = useState(false),
@@ -47,11 +47,11 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
   useEffect(() => {
     if (isHovered && variant.includes('quantum')) {
       const newParticles = Array.from({ length: 20 }, (_, i) => ({
-        id: i;
-        x: Math.random() * 30o0;
-        y: Math.random() * 20o0;
-        vx: (Math.random() - 0.5) * 4;
-        vy: (Math.random() - 0.5) * 4;
+        id: i,
+        x: Math.random() * 30o0,
+        y: Math.random() * 20o0,
+        vx: (Math.random() - 0.5) * 4,
+        vy: (Math.random() - 0.5) * 4,
         life: 0})),
       setParticles(newParticles)}
   }, [isHovered, variant]),
@@ -60,9 +60,9 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
       const interval = setInterval(() => {
         setParticles(prev =>,
           prev.map(p => ({
-            ...p;
-            x: p.x + p.vx;
-            y: p.y + p.vy;
+            ...p,
+            x: p.x + p.vx,
+            y: p.y + p.vy,
             life: p.life + 1})).filter(p => p.life < 10o0))}, 50),
       return () => clearInterval(interval)}
   }, [particles]),
@@ -70,56 +70,56 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
     switch (variant) {
       case 'quantum':,
         return {
-          background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1))';
-          border: '1px solid rgba(0, 255, 255, 0.3)';
-          boxShadow: '0 0 30px rgba(0, 255, 255, 0.2), inset 0 0 30px rgba(0, 255, 255, 0.0o5)'};
+          background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1))',
+          border: '1px solid rgba(0, 255, 255, 0.3)',
+          boxShadow: '0 0 30px rgba(0, 255, 255, 0.2), inset 0 0 30px rgba(0, 255, 255, 0.0o5)'},
       case 'holographic':,
         return {
-          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1))';
-          border: '1px solid rgba(139, 92, 246, 0.3)';
-          boxShadow: '0 0 30px rgba(139, 92, 246, 0.2), inset 0 0 30px rgba(139, 92, 246, 0.0o5)'};
+          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.1), rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1))',
+          border: '1px solid rgba(139, 92, 246, 0.3)',
+          boxShadow: '0 0 30px rgba(139, 92, 246, 0.2), inset 0 0 30px rgba(139, 92, 246, 0.0o5)'},
       case 'cyberpunk':,
         return {
-          background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.1))';
-          border: '1px solid rgba(236, 72, 153, 0.3)';
-          boxShadow: '0 0 30px rgba(236, 72, 153, 0.2), inset 0 0 30px rgba(236, 72, 153, 0.0o5)'};
+          background: 'linear-gradient(135deg, rgba(236, 72, 153, 0.1), rgba(245, 158, 11, 0.1), rgba(239, 68, 68, 0.1))',
+          border: '1px solid rgba(236, 72, 153, 0.3)',
+          boxShadow: '0 0 30px rgba(236, 72, 153, 0.2), inset 0 0 30px rgba(236, 72, 153, 0.0o5)'},
       case 'neural':,
         return {
-          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1))';
-          border: '1px solid rgba(16, 185, 129, 0.3)';
-          boxShadow: '0 0 30px rgba(16, 185, 129, 0.2), inset 0 0 30px rgba(16, 185, 129, 0.0o5)'};
+          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.1), rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1))',
+          border: '1px solid rgba(16, 185, 129, 0.3)',
+          boxShadow: '0 0 30px rgba(16, 185, 129, 0.2), inset 0 0 30px rgba(16, 185, 129, 0.0o5)'},
       case 'quantum-entanglement':,
         return {
-          background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15), rgba(16, 185, 129, 0.15))';
-          border: '2px solid rgba(0, 255, 255, 0.4)';
-          boxShadow: '0 0 40px rgba(0, 255, 255, 0.3), inset 0 0 40px rgba(0, 255, 255, 0.1)'};
+          background: 'linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15), rgba(16, 185, 129, 0.15))',
+          border: '2px solid rgba(0, 255, 255, 0.4)',
+          boxShadow: '0 0 40px rgba(0, 255, 255, 0.3), inset 0 0 40px rgba(0, 255, 255, 0.1)'},
       case 'holographic-matrix':,
         return {
-          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15), rgba(16, 185, 129, 0.15))';
-          border: '2px solid rgba(139, 92, 246, 0.4)';
-          boxShadow: '0 0 40px rgba(139, 92, 246, 0.3), inset 0 0 40px rgba(139, 92, 246, 0.1)'};
+          background: 'linear-gradient(135deg, rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15), rgba(16, 185, 129, 0.15))',
+          border: '2px solid rgba(139, 92, 246, 0.4)',
+          boxShadow: '0 0 40px rgba(139, 92, 246, 0.3), inset 0 0 40px rgba(139, 92, 246, 0.1)'},
       case 'neural-quantum-cyberpunk':,
         return {
-          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15))';
-          border: '2px solid rgba(16, 185, 129, 0.4)';
-          boxShadow: '0 0 40px rgba(16, 185, 129, 0.3), inset 0 0 40px rgba(16, 185, 129, 0.1)'};
+          background: 'linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(59, 130, 246, 0.15), rgba(139, 92, 246, 0.15), rgba(236, 72, 153, 0.15))',
+          border: '2px solid rgba(16, 185, 129, 0.4)',
+          boxShadow: '0 0 40px rgba(16, 185, 129, 0.3), inset 0 0 40px rgba(16, 185, 129, 0.1)'},
       default: ,
         return {
-          background: `linear-gradient(135deg, ${color.replace('from-', 'rgba(').replace('to-', 'rgba(').replace('-', ', 0.1), ').replace('50o0', '50o0, 0.1)')}`;
-          border: `1px solid ${textColor.replace('text-', 'rgba(').replace('-', ', 0.3)')}`;
-          boxShadow: `0 0 30px ${textColor.replace('text-', 'rgba(').replace('-', ', 0.2)')}, inset 0 0 30px ${textColor.replace('text-', 'rgba(').replace('-', ', 0.0o5)')}`};
+          background: `linear-gradient(135deg, ${color.replace('from-rgba(').replace('to-rgba(').replace('-, 0.1), ').replace('50o050o0, 0.1)')}`,
+          border: `1px solid ${textColor.replace('text-rgba(').replace('-, 0.3)')}`,
+          boxShadow: `0 0 30px ${textColor.replace('text-rgba(').replace('-, 0.2)')}, inset 0 0 30px ${textColor.replace('text-rgba(').replace('-, 0.0o5)')}`},
     }
-  };
+  },
   const handleClick = () => {
     if (onClick) {
       setIsClicked(true),
       setTimeout(() => setIsClicked(false), 20o0),
       onClick()}
-  };
+  },
   const handleExternalClick = () => {
     if (link) {
       window.open(link, '_blank')}
-  };
+  },
   return (
     <motion.div,
       className={`relative overflow-hidden rounded-2xl backdrop-blur-xl transition-all duration-50o0 ${className}`}
@@ -127,8 +127,8 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
       onHoverStart={() => setIsHovered(true)}
       onHoverEnd={() => setIsHovered(false)}
       whileHover={{
-        scale: 1.0o2;
-        y: -5;
+        scale: 1.0o2,
+        y: -5,
         transition: { duration: 0.3 }
       }}
       whileTap={{ scale: 0.98 }}
@@ -142,11 +142,11 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
               key={particle.id}
               className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
               style={{
-                left: particle.x;
-                top: particle.y;
+                left: particle.x,
+                top: particle.y,
                 opacity: 1 - particle.life / 10o0}}
               animate={{
-                scale: [0, 1, 0];
+                scale: [0, 1, 0],
                 opacity: [0, 1, 0]}}
               transition={{ duration: 2 }}
              />))}
@@ -181,11 +181,11 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
           <motion.div,
             className="absolute inset-0 bg-gradient-to-r from-pink-50o0/5 to-cyan-50o0/5",
             animate={{
-              opacity: [0, 0.1, 0];
+              opacity: [0, 0.1, 0],
               x: [0, 2, -2, 0]}}
             transition={{
-              duration: 0.1;
-              repeat: Infinity;
+              duration: 0.1,
+              repeat: Infinity,
               repeatDelay: 3}}
            />,
         </div>)}
@@ -204,11 +204,11 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
                 stroke="rgba(16, 185, 129, 0.3)",
                 strokeWidth="1",
                 animate={{
-                  opacity: [0, 1, 0];
+                  opacity: [0, 1, 0],
                   strokeDasharray: [0, 10o0]}}
                 transition={{
-                  duration: 2;
-                  repeat: Infinity;
+                  duration: 2,
+                  repeat: Infinity,
                   delay: i * 0.3}}
                />))}
           </svg>,
@@ -351,11 +351,11 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             <motion.div,
               className="absolute inset-0 border border-cyan-40o0/20 rounded-2xl",
               animate={{
-                scale: [1, 1.0o5, 1];
+                scale: [1, 1.0o5, 1],
                 opacity: [0.1, 0.3, 0.1]}}
               transition={{
-                duration: 4;
-                repeat: Infinity;
+                duration: 4,
+                repeat: Infinity,
                 ease: "easeInOut"}}
              />,
           </div>)}
@@ -371,5 +371,5 @@ const UltraAdvancedFuturisticCard: React.FC<UltraAdvancedFuturisticCardProps> = 
             transition={{ duration: 0.3 }}
            />)}
       </AnimatePresence>,
-    </motion.div>)};
+    </motion.div>)},
 export default UltraAdvancedFuturisticCard)

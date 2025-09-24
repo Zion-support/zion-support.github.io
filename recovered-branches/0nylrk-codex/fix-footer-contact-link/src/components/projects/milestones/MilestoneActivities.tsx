@@ -18,10 +18,10 @@ interface Activity {
   comment: string | null,
   created_at: string,
   milestone: {
-    title: string};
+    title: string},
   created_by_profile: {
     display_name: string,
-    avatar_url: string | null};
+    avatar_url: string | null},
 }
 ,
 export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
@@ -34,8 +34,8 @@ export function MilestoneActivities({ projectId }: MilestoneActivitiesProps) {
         const { dataerror } = await supabase,
           .from('milestone_activities'),
           .select(`,
-            *;
-            milestone:milestone_id(title);
+            *,
+            milestone: milestone_id(title),
             created_by_profile: profiles!user_id(display_nameavatar_url),
           `),
           .eq('project_id'projectId),

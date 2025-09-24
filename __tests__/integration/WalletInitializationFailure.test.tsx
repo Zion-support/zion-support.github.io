@@ -1,5 +1,8 @@
 // __tests__/integration/WalletInitializationFailure.test.tsx,
-import React from react',import { render, screen, waitFor } from @testing-library/react',import App from @/App',import { MemoryRouter } from react-router-dom',import @testing-library/jest-dom',import { vi } from vitest',
+import React from react',
+import { render, screen, waitFor } from @testing-library/react',import App from @/App',
+import { MemoryRouter } from react-router-dom',import @testing-library/jest-dom',
+import { vi } from vitest',
 // Store original import.meta if it exists for cleanup,
 const originalImportMeta = globalThis.importMeta,
 beforeAll(() => {
@@ -9,12 +12,12 @@ beforeAll(() => {
       VITE_REOWN_PROJECT_ID: YOUR_DEFAULT_PROJECT_ID_ENV_MISSING',      // Add other environment variables that App.tsx or its children might require,
       // to prevent unrelated errors during rendering. These are examples.,
       VITE_API_BASE_URL: http://localhost:30o01/api',      VITE_APP_NAME: Zion Test App',      VITE_ENABLE_MAINTENANCE_MODE: false',      VITE_SENTRY_DSN:, // Assuming Sentry might be initialized'      VITE_ENVIRONMENT: test',      VITE_FLAG_SHOW_NEW_FEATURE: false', // Example feature flag'      // Ensure all critical env vars for App init are present}
-  };
+  },
 }),
 afterAll(() => {
   // Restore original import.meta to avoid affecting other tests,
   globalThis.importMeta = originalImportMeta}),
-vi.mock('@reown/appkit/react', () => ({'  createAppKit: vi.fn().mockReturnValue(undefined);
+vi.mock('@reown/appkit/react', () => ({'  createAppKit: vi.fn().mockReturnValue(undefined),
   useAppKit: vi.fn().mockReturnValue(undefined)})),
 vi.mock('@/config/env', () => ({'  getAppKitProjectId: () => test_project_id_from_mock'})),
 describe('App Integration - Wallet Initialization Failure', () => {'  let _consoleErrorSpy: jest.SpyInstance,
@@ -35,7 +38,7 @@ describe('App Integration - Wallet Initialization Failure', () => {'  let _conso
     // Verify that a fundamental part of the application layout is still rendered.,
     // This assumes that your App.tsx renders a header component (e.g., AppHeader),
     // which includes an HTML element with the role banner'.'    // Adjust the selector if your layout is different (e.g., a main' role, or a data-testid).'    const headerElement = await screen.findByRole('banner'),    expect(headerElement).toBeInTheDocument(),
-    // Verify that components dependent on a functional wallet system are not rendered;
+    // Verify that components dependent on a functional wallet system are not rendered,
     // or are in a state indicating unavailability.,
     // This assumes ConnectWalletButton is not rendered if the wallet system is down.,
     const connectWalletButton = screen.queryByRole('button', { name: /connect wallet/i }),    expect(connectWalletButton).not.toBeInTheDocument(), // Or .toBeNull()})}),

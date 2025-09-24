@@ -1,5 +1,4 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 interface PerformanceOptimizerProps {
   children: React.ReactNode,
   enableMetrics?: boolean,
@@ -7,7 +6,7 @@ interface PerformanceOptimizerProps {
   enablePreloading?: boolean}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children;
+  children
 }) => {
-  return <>{children}</>};
-export default PerformanceOptimizer;
+  return <>{children}</>},
+export default PerformanceOptimizer,

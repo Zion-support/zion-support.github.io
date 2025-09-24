@@ -11,17 +11,17 @@ import {
   Bookmark,
   Share2,
   Play,
-  Download;
-  ArrowRight;
-  Sparkles;
-  Zap;
-  Brain;
-  Rocket;
-  Target;
-  Award;
-  Globe;
-  Lightbulb;
-  ChevronLeft;
+  Download,
+  ArrowRight,
+  Sparkles,
+  Zap,
+  Brain,
+  Rocket,
+  Target,
+  Award,
+  Globe,
+  Lightbulb,
+  ChevronLeft,
   ChevronRight} from 'lucide-react',
 const RevolutionaryContentShowcase20o26 = () => {
   const [activeSlidesetActiveSlide] = useState(0),
@@ -29,99 +29,99 @@ const RevolutionaryContentShowcase20o26 = () => {
   const [bookmarksetBookmarks] = useState(new Set()),
   const featuredContent = [
     {
-      id: 1;
-      title: 'AI 20o26-20o30 Ultimate Predictions';
-      description: 'Comprehensive analysis of revolutionary AI breakthroughs that will reshape our world over the next five years. From neural interfaces to consciousness integration.';
-      category: 'AI Predictions';
-      type: 'Interactive Showcase';
-      duration: '15 min';
-      views: 1250o0;
-      likes: 892;
-      rating: 4.9;
-      thumbnail: '/api/placeholder/80o0/40o0';
-      featured: true;
-      tags: [', 'AI', 'Predictions', 'Future', 'Technology'Revolutionary'];
-      author: 'AI Research Team';
-      publishedAt: '20o25-0o1-15';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      id: 1,
+      title: 'AI 20o26-20o30 Ultimate Predictions',
+      description: 'Comprehensive analysis of revolutionary AI breakthroughs that will reshape our world over the next five years. From neural interfaces to consciousness integration.',
+      category: 'AI Predictions',
+      type: 'Interactive Showcase',
+      duration: '15 min',
+      views: 1250o0,
+      likes: 892,
+      rating: 4.9,
+      thumbnail: '/api/placeholder/80o0/40o0',
+      featured: true,
+      tags: [AI', 'PredictionsFuture', 'Technology'Revolutionary'],
+      author: 'AI Research Team',
+      publishedAt: '20o25-0o1-15',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      id: 2;
-      title: 'Quantum Neural Fusion: The Next Breakthrough';
-      description: 'Deep dive into how quantum computing and neural networks will merge to create unprecedented AI capabilities that solve previously impossible problems.';
-      category: 'Quantum Computing';
-      type: 'Video Series';
-      duration: '22 min';
-      views: 890o0;
-      likes: 654;
-      rating: 4.8;
-      thumbnail: '/api/placeholder/80o0/40o0';
-      featured: true;
-      tags: [', 'Quantum', 'Neural 'Networks', 'AI', 'Computing', 'Breakthrough'];
-      author: 'Quantum AI Lab';
-      publishedAt: '20o25-0o1-14';
-      color: 'from-blue-50o0 to-cyan-50o0'};
+      id: 2,
+      title: 'Quantum Neural Fusion: The Next Breakthrough',
+      description: 'Deep dive into how quantum computing and neural networks will merge to create unprecedented AI capabilities that solve previously impossible problems.',
+      category: 'Quantum Computing',
+      type: 'Video Series',
+      duration: '22 min',
+      views: 890o0,
+      likes: 654,
+      rating: 4.8,
+      thumbnail: '/api/placeholder/80o0/40o0',
+      featured: true,
+      tags: [Quantum', 'Neural 'NetworksAI', 'ComputingBreakthrough'],
+      author: 'Quantum AI Lab',
+      publishedAt: '20o25-0o1-14',
+      color: 'from-blue-50o0 to-cyan-50o0'},
     {
-      id: 3;
-      title: 'Autonomous Business Operations 20o26';
-      description: 'Complete guide to implementing fully autonomous business systems and processes that eliminate human intervention in routine operations.';
-      category: 'Automation';
-      type: 'Comprehensive Guide';
-      duration: '30 min';
-      views: 1560o0;
-      likes: 120o3;
-      rating: 4.9;
-      thumbnail: '/api/placeholder/80o0/40o0';
-      featured: true;
-      tags: [', 'Automation', 'Business', 'Operations', 'AI'Autonomous'];
-      author: 'Business AI Institute';
-      publishedAt: '20o25-0o1-13';
-      color: 'from-green-50o0 to-emerald-50o0'};
+      id: 3,
+      title: 'Autonomous Business Operations 20o26',
+      description: 'Complete guide to implementing fully autonomous business systems and processes that eliminate human intervention in routine operations.',
+      category: 'Automation',
+      type: 'Comprehensive Guide',
+      duration: '30 min',
+      views: 1560o0,
+      likes: 120o3,
+      rating: 4.9,
+      thumbnail: '/api/placeholder/80o0/40o0',
+      featured: true,
+      tags: [Automation', 'BusinessOperations', 'AI'Autonomous'],
+      author: 'Business AI Institute',
+      publishedAt: '20o25-0o1-13',
+      color: 'from-green-50o0 to-emerald-50o0'},
     {
-      id: 4;
-      title: 'Neural Interface Implementation Tutorial';
-      description: 'Step-by-step tutorial for building and implementing neural interface technologies that enable direct brain-computer communication.';
-      category: 'Tutorials';
-      type: 'Interactive Tutorial';
-      duration: '45 min';
-      views: 670o0;
-      likes: 445;
-      rating: 4.7;
-      thumbnail: '/api/placeholder/80o0/40o0';
-      featured: false;
-      tags: [', 'Tutorial', 'Neural 'Interface', 'Implementation'Technology'];
-      author: 'NeuroTech Academy';
-      publishedAt: '20o25-0o1-12';
-      color: 'from-orange-50o0 to-red-50o0'};
+      id: 4,
+      title: 'Neural Interface Implementation Tutorial',
+      description: 'Step-by-step tutorial for building and implementing neural interface technologies that enable direct brain-computer communication.',
+      category: 'Tutorials',
+      type: 'Interactive Tutorial',
+      duration: '45 min',
+      views: 670o0,
+      likes: 445,
+      rating: 4.7,
+      thumbnail: '/api/placeholder/80o0/40o0',
+      featured: false,
+      tags: [Tutorial', 'Neural 'InterfaceImplementation'Technology'],
+      author: 'NeuroTech Academy',
+      publishedAt: '20o25-0o1-12',
+      color: 'from-orange-50o0 to-red-50o0'},
     {
-      id: 5;
-      title: 'Consciousness Integration: The Future of AI';
-      description: 'Exploring how AI systems will develop forms of consciousness and what it means for humanityethicsand the future of intelligence.';
-      category: 'AI Philosophy';
-      type: 'Deep Dive Article';
-      duration: '25 min';
-      views: 1120o0;
-      likes: 891;
-      rating: 4.8;
-      thumbnail: '/api/placeholder/80o0/40o0';
-      featured: true;
-      tags: [', 'Consciousness', 'AI', 'Future', 'Philosophy'Ethics'];
-      author: 'Consciousness Research Group';
-      publishedAt: '20o25-0o1-10';
+      id: 5,
+      title: 'Consciousness Integration: The Future of AI',
+      description: 'Exploring how AI systems will develop forms of consciousness and what it means for humanityethicsand the future of intelligence.',
+      category: 'AI Philosophy',
+      type: 'Deep Dive Article',
+      duration: '25 min',
+      views: 1120o0,
+      likes: 891,
+      rating: 4.8,
+      thumbnail: '/api/placeholder/80o0/40o0',
+      featured: true,
+      tags: [Consciousness', 'AIFuture', 'Philosophy'Ethics'],
+      author: 'Consciousness Research Group',
+      publishedAt: '20o25-0o1-10',
       color: 'from-yellow-50o0 to-orange-50o0'}
   ],
   const categories = [
-    { id: ''all', 'name: 'All 'Content', 'count: 156icon: Globe };
-    { id: 'ai-'predictions', 'name: 'AI 'Predictions', 'count: 42icon: Brain };
-    { id: 'quantum-'computing', 'name: 'Quantum 'Computing', 'count: 28icon: Zap };
-    { id: ''automation', 'name: ''Automation', 'count: 35icon: Rocket };
-    { id: ''tutorials', 'name: ''Tutorials', 'count: 31icon: Play };
-    { id: 'case-'studies', 'name: 'Case 'Studies', 'count: 20icon: Target }
+    { id: ''allname: 'All 'Contentcount: 156icon: Globe },
+    { id: 'ai-'predictionsname: 'AI 'Predictionscount: 42icon: Brain },
+    { id: 'quantum-'computingname: 'Quantum 'Computingcount: 28icon: Zap },
+    { id: ''automationname: ''Automationcount: 35icon: Rocket },
+    { id: ''tutorialsname: ''Tutorialscount: 31icon: Play },
+    { id: 'case-'studiesname: 'Case 'Studiescount: 20icon: Target }
   ],
   const stats = [
-    { label: 'Total 'Content', 'value: '50o0+'icon: Globe };
-    { label: 'Active 'Users', 'value: '50K+'icon: Users };
-    { label: 'Content 'Views', 'value: '2M+'icon: TrendingUp };
-    { label: 'Average 'Rating', 'value: '4.8'icon: Star }
+    { label: 'Total 'Contentvalue: '50o0+'icon: Globe },
+    { label: 'Active 'Usersvalue: '50K+'icon: Users },
+    { label: 'Content 'Viewsvalue: '2M+'icon: TrendingUp },
+    { label: 'Average 'Ratingvalue: '4.8'icon: Star }
   ],
   useEffect(() => {
     const interval = setInterval(() => {
@@ -133,18 +133,18 @@ const RevolutionaryContentShowcase20o26 = () => {
       if (newFavorites.has(id)) {
         newFavorites.delete(id)} else {
         newFavorites.add(id)}
-      return newFavorites})};
+      return newFavorites})},
   const toggleBookmark = (id) => {
     setBookmarks(prev => {
       const newBookmarks = new Set(prev),
       if (newBookmarks.has(id)) {
         newBookmarks.delete(id)} else {
         newBookmarks.add(id)}
-      return newBookmarks})};
+      return newBookmarks})},
   const nextSlide = () => {
-    setActiveSlide((prev) => (prev + 1) % featuredContent.length)};
+    setActiveSlide((prev) => (prev + 1) % featuredContent.length)},
   const prevSlide = () => {
-    setActiveSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)};
+    setActiveSlide((prev) => (prev - 1 + featuredContent.length) % featuredContent.length)},
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0 text-white">,
       {/* Hero Section */}
@@ -196,7 +196,7 @@ const RevolutionaryContentShowcase20o26 = () => {
             Featured Content,
           </h3>,
           <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-            The most revolutionary and impactful content 'that', 's changing how we think about AI and technology,
+            The most revolutionary and impactful content 'thats changing how we think about AI and technology,
           </p>,
         </motion.div>,
         <div className="relative">,
@@ -392,5 +392,5 @@ const RevolutionaryContentShowcase20o26 = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default RevolutionaryContentShowcase20o26;
+    </div>)},
+export default RevolutionaryContentShowcase20o26,

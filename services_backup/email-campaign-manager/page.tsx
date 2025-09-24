@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI Email Campaign Manager | Zion Tech Group';
+  title: 'AI Email Campaign Manager | Zion Tech Group',
   description:,
-    'Intelligent email marketing platform with AI-powered personalization, automation, and analytics. Boost engagement and drive conversions.';
-};
+    'Intelligent email marketing platform with AI-powered personalization, automation, and analytics. Boost engagement and drive conversions.',
+},
 export default function EmailCampaignManagerPage() {
   return (
     <div className='animate-fade-in'>,
@@ -12,7 +12,7 @@ export default function EmailCampaignManagerPage() {
           AI Email Campaign Manager,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent email marketing platform with AI-powered personalization;
+          Intelligent email marketing platform with AI-powered personalization,
           automation, and analytics. Boost engagement and drive conversions with,
           smart email campaigns.,
         </p>,
@@ -64,11 +64,9 @@ export default function EmailCampaignManagerPage() {
               period='per month',
               description='Perfect for small businesses and entrepreneurs',
               features={[
-                'Up to 1,0o00 contacts';
-                'Basic automation';
-                'Email templates';
-                'Basic analytics';
-                'Email support';
+                'Up to 1,0o00 contactsBasic automation',
+                'Email templatesBasic analytics',
+                'Email support',
               ]}
               popular={false}
             />,
@@ -78,12 +76,9 @@ export default function EmailCampaignManagerPage() {
               period='per month',
               description='Ideal for growing businesses and marketing teams',
               features={[
-                'Up to 10,0o00 contacts';
-                'Advanced automation';
-                'AI personalization';
-                'Advanced analytics';
-                'Priority support';
-                'A/B testing';
+                'Up to 10,0o00 contactsAdvanced automation',
+                'AI personalizationAdvanced analytics',
+                'Priority supportA/B testing',
               ]}
               popular={true}
             />,
@@ -93,12 +88,9 @@ export default function EmailCampaignManagerPage() {
               period='per month',
               description='For large organizations with complex needs',
               features={[
-                'Unlimited contacts';
-                'Custom automation';
-                'Advanced AI features';
-                '24/7 support';
-                'Custom integrations';
-                'Dedicated account manager';
+                'Unlimited contactsCustom automation',
+                'Advanced AI features24/7 support',
+                'Custom integrationsDedicated account manager',
               ]}
               popular={false}
             />,
@@ -248,9 +240,9 @@ export default function EmailCampaignManagerPage() {
     </div>)}
 ,
 function FeatureItem({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -265,12 +257,12 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  title;
-  price;
-  period;
-  description;
-  features;
-  popular;
+  title,
+  price,
+  period,
+  description,
+  features,
+  popular,
 }: {
   title: string,
   price: string,
@@ -310,9 +302,9 @@ function PricingCard({
     </div>)}
 ,
 function CampaignType({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -325,9 +317,9 @@ function CampaignType({
     </div>)}
 ,
 function BenefitCard({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -347,9 +339,9 @@ function IntegrationCard({ name, icon }: { name: string, icon: string }) {
     </div>)}
 ,
 function UseCaseCard({
-  icon;
-  title;
-  description;
+  icon,
+  title,
+  description,
 }: {
   icon: string,
   title: string,
@@ -362,8 +354,8 @@ function UseCaseCard({
     </div>)}
 ,
 function MetricCard({
-  metric;
-  description;
+  metric,
+  description,
 }: {
   metric: string,
   description: string}) {

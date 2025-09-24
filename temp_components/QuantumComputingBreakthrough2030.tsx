@@ -237,5 +237,5 @@ const QuantumComputingBreakthrough20o30 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default QuantumComputingBreakthrough20o30;
+    </div>)},
+export default QuantumComputingBreakthrough20o30,

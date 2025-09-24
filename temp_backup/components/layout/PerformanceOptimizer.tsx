@@ -8,11 +8,11 @@ interface PerformanceOptimizerProps {
   className?: string}
 ,
 const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
-  children;
-  threshold = 0.1;
-  delay = 0;
-  duration = 0.6;
-  className = '';
+  children,
+  threshold = 0.1,
+  delay = 0,
+  duration = 0.6,
+  className = ''
 }) => {
   const ref = useRef<HTMLDivElement>(null),
   const isInView = useInView(ref, { threshold }),
@@ -23,21 +23,21 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
   }, [isInView, isLoaded]),
   const variants = {
     hidden: {
-      opacity: 0;
-      y: 50;
-      scale: 0.95;
-    };
+      opacity: 0,
+      y: 50,
+      scale: 0.95
+    },
     visible: {
-      opacity: 1;
-      y: 0;
-      scale: 1;
+      opacity: 1,
+      y: 0,
+      scale: 1,
       transition: {
-        duration;
-        delay;
-        ease: [0.25, 0.46, 0.45, 0.94];
-      };
-    };
-  };
+        duration,
+        delay,
+        ease: [0.25, 0.46, 0.45, 0.94],
+      },
+    },
+  },
   if (!isLoaded) {
     return (
       <div
@@ -54,5 +54,5 @@ const PerformanceOptimizer: React.FC<PerformanceOptimizerProps> = ({
       className={className}
     >,
       {children}
-    </motion.div>)};
-export default PerformanceOptimizer;
+    </motion.div>)},
+export default PerformanceOptimizer,

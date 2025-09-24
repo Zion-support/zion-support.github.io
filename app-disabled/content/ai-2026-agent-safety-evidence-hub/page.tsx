@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'AI 20o26: Agent Safety Evidence Hub';
+  title: 'AI 20o26: Agent Safety Evidence Hub',
   description:,
-    'Centralize evaluations, scenarios, metrics, and evidence for production agent safety.';
-};
+    'Centralize evaluations, scenarios, metrics, and evidence for production agent safety.',
+},
 export default function Page() {
   return (
     <main className='max-w-5xl mx-auto px-4 sm: px-6 lg:px-8 py-12'>,
@@ -35,7 +35,7 @@ export default function Page() {
         <h2>Why an Evidence Hub?</h2>,
         <p>,
           Enterprises deploying autonomous agents need a durable, queryable,
-          record of safety posture: which scenarios exist, what metrics apply;
+          record of safety posture: which scenarios exist, what metrics apply,
           latest scores, trend lines, and links to raw artifacts. The Evidence,
           Hub centralizes this, making audits and change approvals faster and,
           safer.,

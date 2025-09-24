@@ -1,15 +1,15 @@
-import React from "react";
+import React from "react",
 import {Avatar, AvatarFallback, AvatarImage} from "@/components/ui/avatar",
 import {cn} from "@/lib/utils",
 import {format} from "date-fns",
 import {useTheme} from "@/hooks/useTheme",
-import React from "react";;
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { cn } from "@/lib/utils";
+import React from "react",
+import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar",
+import { cn } from "@/lib/utils",
 import { format } from "date-fns",
 import { useTheme } from "@/hooks/useTheme",
-import { format } from "date-fns";
-import { useTheme } from "@/hooks/useTheme";
+import { format } from "date-fns",
+import { useTheme } from "@/hooks/useTheme",
 import React from './react',
 import { Avatar, AvatarFallback, AvatarImage } from '@/components / ui / avatar',
 import { cn } from '@/lib / utils',
@@ -24,7 +24,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme(),
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
   const { theme } = useTheme(),
-  const { theme } = useTheme();
+  const { theme } = useTheme(),
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>,
       <Avatar className="h-8 w-8">,
@@ -45,7 +45,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
         "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser,
           ? "bg-zion-purple text-white",
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser,
           ? "bg-zion-purple text-white",
           : theme === "dark",
@@ -56,7 +56,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           "text-xs mt-1",
           isUser,
             ? "text-white/70",
-          "text-xs mt-1";
+          "text-xs mt-1",
           isUser,
             ? "text-white/70",
             : theme === "dark",
@@ -72,7 +72,7 @@ function formatMessageWithLinks(message: string): string {
   const urlRegex = /(https?:\/\/[^\s]+)/g,
   let formattedMessage = message.replace(
     urlRegex,
-    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'));
+    '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>')),
   // Replace help center references like [Getting Started],
   const helpCenterRegex = /[([^]]+)]/g,
   formattedMessage = formattedMessage.replace(
@@ -80,12 +80,12 @@ function formatMessageWithLinks(message: string): string {
     '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
   return formattedMessage,
 interface ChatMessageProps {
-  message: string;
-  isUser: boolean;
+  message: string,
+  isUser: boolean,
   timestamp: Date}
 ,
 export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
-  const { theme } = useTheme();
+  const { theme } = useTheme(),
   return (
     <div className={cn("flex items-start gap-3", isUser && "flex-row-reverse")}>,
       <Avatar className="h-8 w-8">,
@@ -103,7 +103,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
           </>)}
       </Avatar>,
       <div className={cn(
-        "max-w-[80%] rounded-lg px-4 py-2 text-sm";
+        "max-w-[80%] rounded-lg px-4 py-2 text-sm",
         isUser,
           ? "bg-zion-purple text-white",
           : theme === "dark",
@@ -111,7 +111,7 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
             : "bg-gray-100 text-gray-800")}>,
         <div dangerouslySetInnerHTML={{ __html: formatMessageWithLinks(message) }} />,
         <div className={cn(
-          "text-xs mt-1";
+          "text-xs mt-1",
           isUser,
             ? "text-white/70",
             : theme === "dark",
@@ -125,19 +125,19 @@ export function ChatMessage({ message, isUser, timestamp }: ChatMessageProps) {
 // Function to convert URLs and help links to actual clickable links,
 function formatMessageWithLinks(): any (message: string): string {
   // Replace URLs,
-  const urlRegex = /(https?:\/\/[^\s]+)/g;
+  const urlRegex = /(https?:\/\/[^\s]+)/g,
   let formattedMessage = message && message.replace(
     urlRegex,
     '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
   // Replace help center references like [Getting Started],
-  const helpCenterRegex = /[([^]]+)]/g;
+  const helpCenterRegex = /[([^]]+)]/g,
   formattedMessage = formattedMessage && formattedMessage.replace(
     helpCenterRegex,
-    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>');
+    '<a href="/help/$1" class="text-zion-cyan underline hover: text-zion-cyan/80">$1</a>'),
   return formattedMessage>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
 interface ChatMessageProps {
-  message: string;
-  is_user: boolean;
+  message: string,
+  is_user: boolean,
   timestamp: Date}
 export /**,
  * ChatMessage - Function description,

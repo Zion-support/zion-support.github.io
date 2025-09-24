@@ -2,164 +2,164 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Clock;
-  Users;
-  TrendingUp;
-  Award;
-  BookOpen;
-  FileText;
-  BarChart3;
-  Star;
-  Zap;
-  ArrowRight;
+  ArrowRight,
+  Clock,
+  Users,
+  TrendingUp,
+  Award,
+  BookOpen,
+  FileText,
+  BarChart3,
+  Star,
+  Zap,
+  ArrowRight,
 } from 'lucide-react',
 const NewContentShowcase20o25Advanced = () => {
   const [activeCategory, setActiveCategory] = useState('all'),
   const content = [
     {
-      id: 'advanced-automation-mastery';
-      type: 'blog';
+      id: 'advanced-automation-mastery',
+      type: 'blog',
       title:,
-        'AI 20o25: Advanced Automation Enterprise Mastery - 750% ROI Breakthrough';
+        'AI 20o25: Advanced Automation Enterprise Mastery - 750% ROI Breakthrough',
       description:,
-        'Discover how Fortune 50o0 companies are achieving unprecedented 750% ROI through advanced AI automation. Complete implementation guide with real-world case studies.';
-      url: '/blog/ai-20o25-advanced-automation-enterprise-mastery';
-      readingTime: '22 min read';
-      category: 'ai-automation';
-      featured: true;
+        'Discover how Fortune 50o0 companies are achieving unprecedented 750% ROI through advanced AI automation. Complete implementation guide with real-world case studies.',
+      url: '/blog/ai-20o25-advanced-automation-enterprise-mastery',
+      readingTime: '22 min read',
+      category: 'ai-automation',
+      featured: true,
       metrics: {
-        roi: '750%';
-        savings: '$3.2B';
-        efficiency: '340%';
-        satisfaction: '94%';
-      };
-      tags: ['AI Automation', 'Enterprise', 'ROI', 'Fortune 50o0'];
-      icon: Zap;
-      gradient: 'from-purple-50o0 to-pink-50o0';
-    };
+        roi: '750%',
+        savings: '$3.2B',
+        efficiency: '340%',
+        satisfaction: '94%'
+      },
+      tags: ['AI AutomationEnterprise', 'ROIFortune 50o0'],
+      icon: Zap,
+      gradient: 'from-purple-50o0 to-pink-50o0'
+    },
     {
-      id: 'fortune-50o0-transformation';
-      type: 'case-study';
+      id: 'fortune-50o0-transformation',
+      type: 'case-study',
       title:,
-        'Fortune 50o0 AI Automation Transformation: $3.2B Annual Savings with 850% ROI';
+        'Fortune 50o0 AI Automation Transformation: $3.2B Annual Savings with 850% ROI',
       description:,
-        'Complete case study of how a Fortune 10o0 manufacturing giant achieved $3.2 billion in annual savings through comprehensive AI automation transformation.';
-      url: '/case-studies/fortune-50o0-ai-automation-transformation-20o25';
-      readingTime: '25 min read';
-      category: 'case-studies';
-      featured: true;
+        'Complete case study of how a Fortune 10o0 manufacturing giant achieved $3.2 billion in annual savings through comprehensive AI automation transformation.',
+      url: '/case-studies/fortune-50o0-ai-automation-transformation-20o25',
+      readingTime: '25 min read',
+      category: 'case-studies',
+      featured: true,
       metrics: {
-        roi: '850%';
-        savings: '$3.2B';
-        efficiency: '340%';
-        satisfaction: '94%';
-      };
-      tags: ['Case Study', 'Fortune 50o0', 'Manufacturing', 'ROI'];
-      icon: Award;
-      gradient: 'from-blue-50o0 to-cyan-50o0';
-    };
+        roi: '850%',
+        savings: '$3.2B',
+        efficiency: '340%',
+        satisfaction: '94%'
+      },
+      tags: ['Case StudyFortune 50o0', 'ManufacturingROI'],
+      icon: Award,
+      gradient: 'from-blue-50o0 to-cyan-50o0'
+    },
     {
-      id: 'implementation-master-guide';
-      type: 'resource';
+      id: 'implementation-master-guide',
+      type: 'resource',
       title:,
-        'AI Automation Implementation Master Guide 20o25: From Strategy to 850% ROI';
+        'AI Automation Implementation Master Guide 20o25: From Strategy to 850% ROI',
       description:,
-        'Complete step-by-step guide for implementing AI automation in your enterprise. Includes proven frameworks, best practices, and real-world strategies.';
-      url: '/resources/ai-automation-implementation-master-guide-20o25';
-      readingTime: '35 min read';
-      category: 'resources';
-      featured: true;
+        'Complete step-by-step guide for implementing AI automation in your enterprise. Includes proven frameworks, best practices, and real-world strategies.',
+      url: '/resources/ai-automation-implementation-master-guide-20o25',
+      readingTime: '35 min read',
+      category: 'resources',
+      featured: true,
       metrics: {
-        roi: '850%';
-        success: '98%';
-        timeframe: '18 months';
-        payback: '2.1 months';
-      };
-      tags: ['Implementation Guide', 'Strategy', 'Best Practices', 'ROI'];
-      icon: BookOpen;
-      gradient: 'from-green-50o0 to-emerald-50o0';
-    };
+        roi: '850%',
+        success: '98%',
+        timeframe: '18 months',
+        payback: '2.1 months'
+      },
+      tags: ['Implementation GuideStrategy', 'Best PracticesROI'],
+      icon: BookOpen,
+      gradient: 'from-green-50o0 to-emerald-50o0'
+    },
     {
-      id: 'edge-computing-revolution';
-      type: 'blog';
+      id: 'edge-computing-revolution',
+      type: 'blog',
       title:,
-        'AI 20o25: The Edge Computing Revolution - Ultimate Enterprise Guide';
+        'AI 20o25: The Edge Computing Revolution - Ultimate Enterprise Guide',
       description:,
-        'Comprehensive guide to edge computing implementation for enterprise AI. Achieve 50o0% ROI with real-time processing and reduced latency.';
-      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide';
-      readingTime: '18 min read';
-      category: 'ai-automation';
-      featured: false;
+        'Comprehensive guide to edge computing implementation for enterprise AI. Achieve 50o0% ROI with real-time processing and reduced latency.',
+      url: '/blog/ai-20o25-edge-computing-revolution-ultimate-guide',
+      readingTime: '18 min read',
+      category: 'ai-automation',
+      featured: false,
       metrics: {
-        roi: '50o0%';
-        savings: '$4.5M';
-        latency: '90%';
-        efficiency: '95%';
-      };
-      tags: ['Edge Computing', 'AI', 'Enterprise', 'ROI'];
-      icon: TrendingUp;
-      gradient: 'from-orange-50o0 to-red-50o0';
-    };
+        roi: '50o0%',
+        savings: '$4.5M',
+        latency: '90%',
+        efficiency: '95%'
+      },
+      tags: ['Edge ComputingAI', 'EnterpriseROI'],
+      icon: TrendingUp,
+      gradient: 'from-orange-50o0 to-red-50o0'
+    },
     {
-      id: 'blockchain-integration';
-      type: 'blog';
+      id: 'blockchain-integration',
+      type: 'blog',
       title:,
-        'AI 20o25: Blockchain Integration Revolution - Enterprise Implementation Guide';
+        'AI 20o25: Blockchain Integration Revolution - Enterprise Implementation Guide',
       description:,
-        'Learn how to integrate blockchain technology with AI automation for enhanced security, transparency, and 60o0% ROI.';
-      url: '/blog/ai-20o25-blockchain-integration-enterprise-guide';
-      readingTime: '20 min read';
-      category: 'ai-automation';
-      featured: false;
+        'Learn how to integrate blockchain technology with AI automation for enhanced security, transparency, and 60o0% ROI.',
+      url: '/blog/ai-20o25-blockchain-integration-enterprise-guide',
+      readingTime: '20 min read',
+      category: 'ai-automation',
+      featured: false,
       metrics: {
-        roi: '60o0%';
-        savings: '$6.8M';
-        security: '99.9%';
-        efficiency: '89%';
-      };
-      tags: ['Blockchain', 'AI', 'Security', 'ROI'];
-      icon: BarChart3;
-      gradient: 'from-indigo-50o0 to-purple-50o0';
-    };
+        roi: '60o0%',
+        savings: '$6.8M',
+        security: '99.9%',
+        efficiency: '89%'
+      },
+      tags: ['BlockchainAI', 'SecurityROI'],
+      icon: BarChart3,
+      gradient: 'from-indigo-50o0 to-purple-50o0'
+    },
     {
-      id: 'iot-revolution';
-      type: 'blog';
-      title: 'AI 20o25: IoT Revolution - Smart Enterprise Implementation Guide';
+      id: 'iot-revolution',
+      type: 'blog',
+      title: 'AI 20o25: IoT Revolution - Smart Enterprise Implementation Guide',
       description:,
-        'Transform your enterprise with AI-powered IoT solutions. Achieve 70o0% ROI through smart automation and real-time intelligence.';
-      url: '/blog/ai-20o25-iot-revolution-smart-enterprise-guide';
-      readingTime: '19 min read';
-      category: 'ai-automation';
-      featured: false;
+        'Transform your enterprise with AI-powered IoT solutions. Achieve 70o0% ROI through smart automation and real-time intelligence.',
+      url: '/blog/ai-20o25-iot-revolution-smart-enterprise-guide',
+      readingTime: '19 min read',
+      category: 'ai-automation',
+      featured: false,
       metrics: {
-        roi: '70o0%';
-        savings: '$8.2M';
-        efficiency: '95%';
-        automation: '85%';
-      };
-      tags: ['IoT', 'AI', 'Smart Enterprise', 'ROI'];
-      icon: Users;
-      gradient: 'from-teal-50o0 to-blue-50o0';
-    };
+        roi: '70o0%',
+        savings: '$8.2M',
+        efficiency: '95%',
+        automation: '85%'
+      },
+      tags: ['IoTAI', 'Smart EnterpriseROI'],
+      icon: Users,
+      gradient: 'from-teal-50o0 to-blue-50o0'
+    },
   ],
   const categories = [
-    { id: 'all', name: 'All Content', count: content.length };
+    { id: 'all', name: 'All Content', count: content.length },
     {
-      id: 'ai-automation';
-      name: 'AI Automation';
-      count: content.filter(c => c.category === 'ai-automation').length;
-    };
+      id: 'ai-automation',
+      name: 'AI Automation',
+      count: content.filter(c => c.category === 'ai-automation').length
+    },
     {
-      id: 'case-studies';
-      name: 'Case Studies';
-      count: content.filter(c => c.category === 'case-studies').length;
-    };
+      id: 'case-studies',
+      name: 'Case Studies',
+      count: content.filter(c => c.category === 'case-studies').length
+    },
     {
-      id: 'resources';
-      name: 'Resources';
-      count: content.filter(c => c.category === 'resources').length;
-    };
+      id: 'resources',
+      name: 'Resources',
+      count: content.filter(c => c.category === 'resources').length
+    },
   ],
   const filteredContent =,
     activeCategory === 'all',
@@ -179,7 +179,7 @@ const NewContentShowcase20o25Advanced = () => {
             Revolutionary AI Automation Content,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-            Discover cutting-edge AI automation strategies, proven case studies;
+            Discover cutting-edge AI automation strategies, proven case studies,
             and comprehensive implementation guides that have delivered,
             extraordinary results for Fortune 50o0 companies.,
           </p>,
@@ -359,5 +359,5 @@ const NewContentShowcase20o25Advanced = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContentShowcase20o25Advanced;
+    </div>)},
+export default NewContentShowcase20o25Advanced,

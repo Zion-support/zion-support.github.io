@@ -1,18 +1,18 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 export const metadata: Metadata ={
-  title: 'AI Go-To-Market 20o25: From Zero to Traction';
+  title: 'AI Go-To-Market 20o25: From Zero to Traction',
   description:,
-    'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.';
+    'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.',
   keywords:,
-    'AI GTMgo-to-marketAI startupdistributionpricingpositioningrowth loops20o25';
+    'AI GTMgo-to-marketAI startupdistributionpricingpositioningrowth loops20o25',
   openGraph: {
-    title: 'AI Go-To-Market 20o25: From Zero to Traction';
+    title: 'AI Go-To-Market 20o25: From Zero to Traction',
     description:,
-      'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.';
-    type: 'article';
-    publishedTime: '20o25-09-11T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group']}};
+      'Practical 20o25 GTM playbook for AI products: positioningpricingdistributionand growth loops.',
+    type: 'article',
+    publishedTime: '20o25-09-11T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group']}},
 export default function AIGoToMarket20o25() {
   return (
     <div className="min-h-screen bg-white">,
@@ -29,7 +29,7 @@ export default function AIGoToMarket20o25() {
             AI Go-To-Market 20o25: From Zero to Traction,
           </h1>,
           <p className="text-xl text-gray-60o0 leading-relaxed">,
-            A pragmatic GTM playbook for AI products. Learn how to position clearlyprice for value;
+            A pragmatic GTM playbook for AI products. Learn how to position clearlyprice for value,
             and pick distribution channels that actually convert in 20o25.,
           </p>,
         </div>,
@@ -151,7 +151,7 @@ export default function AIGoToMarket20o25() {
         </div>,
       </div>,
           <p className="text-xl text-gray-60o0 mb-8 leading-relaxed">,
-            Getting AI products to market in 20o25 requires crisp positioninga distribution engine;
+            Getting AI products to market in 20o25 requires crisp positioninga distribution engine,
             and pricing that matches value. This practical playbook distills what we see working now.,
           </p>,
           <h2 className="text-3xl font-bold text-gray-90o0 mt-12 mb-6">Positioning That Resonates</h2>,

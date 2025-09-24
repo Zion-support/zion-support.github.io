@@ -1,25 +1,25 @@
 "use client",
-import React from 'react';
+import React from 'react',
 import TestimonialCard from './TestimonialCard',
 const Testimonials = () => {
   const testimonials = [
     {
-      name: "Sarah Johnson";
-      company: "TechCorp Inc.";
-      role: "CTO";
-      content: "Zion Tech transformed our AI infrastructure. The results exceeded our expectations with a 340% ROI increase.";
-      rating: 5};
+      name: "Sarah Johnson",
+      company: "TechCorp Inc.",
+      role: "CTO",
+      content: "Zion Tech transformed our AI infrastructure. The results exceeded our expectations with a 340% ROI increase.",
+      rating: 5},
     {
-      name: "Michael Chen";
-      company: "DataFlow Systems";
-      role: "CEO";
-      content: "Outstanding cloud solutions and cybersecurity implementation. Highly recommend their expertise.";
-      rating: 5};
+      name: "Michael Chen",
+      company: "DataFlow Systems",
+      role: "CEO",
+      content: "Outstanding cloud solutions and cybersecurity implementation. Highly recommend their expertise.",
+      rating: 5},
     {
-      name: "Emily Rodriguez";
-      company: "InnovateLab";
-      role: "Founder";
-      content: "Professional, reliable, and innovative. Zion Tech helped us scale our business with cutting-edge technology.";
+      name: "Emily Rodriguez",
+      company: "InnovateLab",
+      role: "Founder",
+      content: "Professional, reliable, and innovative. Zion Tech helped us scale our business with cutting-edge technology.",
       rating: 5}
   ],
   return (
@@ -67,5 +67,5 @@ const Testimonials = () => {
              />))}
         </div>,
       </div>,
-    </section>)};
-export default Testimonials;
+    </section>)},
+export default Testimonials,

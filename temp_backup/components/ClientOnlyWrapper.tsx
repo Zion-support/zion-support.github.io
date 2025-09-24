@@ -1,13 +1,12 @@
-import React from 'react';
-'use client',
+import React from 'reactuse client',
 import { useEffect, useState } from 'react',
 interface ClientOnlyWrapperProps {
   children: React.ReactNode,
   fallback?: React.ReactNode}
 ,
 export default function ClientOnlyWrapper({
-  children;
-  fallback = null;
+  children,
+  fallback = null,
 }: ClientOnlyWrapperProps) {
   const [isClient, setIsClient] = useState(false),
   useEffect(() => {

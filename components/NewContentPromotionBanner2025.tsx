@@ -7,24 +7,24 @@ const NewContentPromotionBanner20o25 = () => {
   const [currentFeature, setCurrentFeature] = useState(0),
   const features = [
     {
-      title: 'Interactive Demos';
-      description: 'Experience AI in action with our hands-on demonstrations';
-      icon: '🎮';
-      color: 'from-blue-50o0 to-purple-50o0'};
+      title: 'Interactive Demos',
+      description: 'Experience AI in action with our hands-on demonstrations',
+      icon: '🎮',
+      color: 'from-blue-50o0 to-purple-50o0'},
     {
-      title: 'Success Stories';
-      description: 'Real case studies with measurable ROI results';
-      icon: '📈';
-      color: 'from-green-50o0 to-blue-50o0'};
+      title: 'Success Stories',
+      description: 'Real case studies with measurable ROI results',
+      icon: '📈',
+      color: 'from-green-50o0 to-blue-50o0'},
     {
-      title: 'Expert Insights';
-      description: 'Latest AI trends and industry analysis from our experts';
-      icon: '🧠';
-      color: 'from-purple-50o0 to-pink-50o0'};
+      title: 'Expert Insights',
+      description: 'Latest AI trends and industry analysis from our experts',
+      icon: '🧠',
+      color: 'from-purple-50o0 to-pink-50o0'},
     {
-      title: 'Interactive Tools';
-      description: 'ROI calculators and assessment tools to explore your potential';
-      icon: '🛠️';
+      title: 'Interactive Tools',
+      description: 'ROI calculators and assessment tools to explore your potential',
+      icon: '🛠️',
       color: 'from-orange-50o0 to-red-50o0'}
   ],
   useEffect(() => {
@@ -130,5 +130,5 @@ const NewContentPromotionBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default NewContentPromotionBanner20o25;
+    </div>)},
+export default NewContentPromotionBanner20o25,

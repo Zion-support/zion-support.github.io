@@ -21,43 +21,43 @@ const UltimateContentRevolutionBanner20o25 = () => {
   const handleDismiss = () => {
     setIsDismissed(true),
     setIsVisible(false),
-    localStorage.setItem('ultimate-content-revolution-banner-20o25-dismissed', 'true')};
+    localStorage.setItem('ultimate-content-revolution-banner-20o25-dismissedtrue')},
   const featuredContent = [
     {
-      id: 'advanced-automation-mastery';
-      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide';
+      id: 'advanced-automation-mastery',
+      title: 'AI 20o25: Advanced Automation Mastery - Ultimate Success Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-advanced-automation-mastery-ultimate-success-guide',
       metrics: {
-        roi: '340-1,20o0%';
-        savings: '$2.8B';
-        efficiency: '78-95%';
-        satisfaction: '98%'};
-      readingTime: '18 min read';
-      isNew: true};
+        roi: '340-1,20o0%',
+        savings: '$2.8B',
+        efficiency: '78-95%',
+        satisfaction: '98%'},
+      readingTime: '18 min read',
+      isNew: true},
     {
-      id: 'fortune-50o0-success';
-      title: 'Fortune 50o0 AI Transformation: $5.2B Company Achieves 1,20o0% ROI';
-      type: 'Case Study';
-      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-story-20o25';
+      id: 'fortune-50o0-success',
+      title: 'Fortune 50o0 AI Transformation: $5.2B Company Achieves 1,20o0% ROI',
+      type: 'Case Study',
+      url: '/case-studies/ai-transformation-fortune-50o0-ultimate-success-story-20o25',
       metrics: {
-        roi: '1,20o0%';
-        savings: '$2.8B';
-        timeline: '24 months';
-        satisfaction: '98%'};
-      readingTime: '12 min read';
-      isNew: true};
+        roi: '1,20o0%',
+        savings: '$2.8B',
+        timeline: '24 months',
+        satisfaction: '98%'},
+      readingTime: '12 min read',
+      isNew: true},
     {
-      id: 'implementation-framework';
-      title: 'AI Implementation Ultimate Success Framework 20o25: Complete Roadmap to 1,0o00%+ ROI';
-      type: 'Resource';
-      url: '/resources/ai-implementation-ultimate-success-framework-20o25';
+      id: 'implementation-framework',
+      title: 'AI Implementation Ultimate Success Framework 20o25: Complete Roadmap to 1,0o00%+ ROI',
+      type: 'Resource',
+      url: '/resources/ai-implementation-ultimate-success-framework-20o25',
       metrics: {
-        roi: '1,0o00%+';
-        success: '94%';
-        timeline: '18 months';
-        projects: '1,0o00+'};
-      readingTime: '25 min read';
+        roi: '1,0o00%+',
+        success: '94%',
+        timeline: '18 months',
+        projects: '1,0o00+'},
+      readingTime: '25 min read',
       isNew: true}
   ],
   if (!isVisible || isDismissed) return null,
@@ -172,5 +172,5 @@ const UltimateContentRevolutionBanner20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default UltimateContentRevolutionBanner20o25;
+    </div>)},
+export default UltimateContentRevolutionBanner20o25,

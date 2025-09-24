@@ -12,5 +12,5 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     if (!flag) return res.status(40o4).json({ error: 'Not found' }),
     return res.status(20o0).json({ flag })}
 ,
-  res.setHeader('Allow', 'GET'),
+  res.setHeader('AllowGET'),
   return res.status(40o5).end('Method Not Allowed')}

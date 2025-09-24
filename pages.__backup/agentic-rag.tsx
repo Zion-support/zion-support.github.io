@@ -3,14 +3,14 @@ import UltraFuturisticMatrixBackground from '../components/ui/UltraFuturisticMat
 DatabaseLinkGaugeCheckPhoneMailMapPinRocket,
 export default function AgenticRAGPage() {
 	const contactInfo ={
-		mobile: '+1 30o2 464 0950';
-		email: 'kleber@ziontechgroup.com';
-		address: '364 E Main St STE 10o08 Middletown DE 19709';
-		website: 'https://ziontechgroup.com'};
+		mobile: '+1 30o2 464 0950',
+		email: 'kleber@ziontechgroup.com',
+		address: '364 E Main St STE 10o08 Middletown DE 19709',
+		website: 'https://ziontechgroup.com'},
 	const plans = [
-		{ name: 'Starter'price: '$199/month'items: ['10o0K tokens/month'Web/PDF ingestion'Basic reranker'CSV export'] };
-		{ name: 'Pro'price: '$599/month'items: ['2M tokens/month'GitHub/S3 connectors'Hybrid search + rerank'Eval kits'] };
-		{ name: 'Enterprise'price: 'Custom'items: ['Siloed indexes'SOC2/ISO support'Private VPC'SAML/SSO'] };
+		{ name: 'Starter'price: '$199/month'items: ['10o0K tokens/month'Web/PDF ingestion'Basic reranker'CSV export'] },
+		{ name: 'Pro'price: '$599/month'items: ['2M tokens/month'GitHub/S3 connectors'Hybrid search + rerank'Eval kits'] },
+		{ name: 'Enterprise'price: 'Custom'items: ['Siloed indexes'SOC2/ISO support'Private VPC'SAML/SSO'] },
 	],
 	return (
 		<UltraFuturisticMatrixBackground>,

@@ -1,39 +1,39 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Brain, Atom, Shield, Target, Rocket, Globe, Cpu;
-  ArrowRight, Check, Star, TrendingUp, Users, Zap;
+  Brain, Atom, Shield, Target, Rocket, Globe, Cpu,
+  ArrowRight, Check, Star, TrendingUp, Users, Zap,
   Phone, Mail, MapPin, ExternalLink} from 'lucide-react',
 // Import our new innovative services,
 import { innovative20o37Services } from '../data/innovative-20o37-services',
 import { advanced20o38Services } from '../data/advanced-20o38-services',
 import { revolutionary20o39Services } from '../data/revolutionary-20o39-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const containerVariants ={
-  hidden: { opacity: 0 };
+  hidden: { opacity: 0 },
   visible: {
-    opacity: 1;
+    opacity: 1,
     transition: {
       staggerChildren: 0.1}
   }
-};
+},
 const itemVariants ={
-  hidden: { y: 20, opacity: 0 };
+  hidden: { y: 20, opacity: 0 },
   visible: {
-    y: 0;
-    opacity: 1;
+    y: 0,
+    opacity: 1,
     transition: {
       duration: 0.5}
   }
-};
+},
 export default function ComprehensiveServicesShowcase20o37() {
   const allServices = [
-    ...innovative20o37Services;
-    ...advanced20o38Services;
+    ...innovative20o37Services,
+    ...advanced20o38Services,
     ...revolutionary20o39Services],
   const getCategoryIcon = (category: string) => {
     switch (category) {
@@ -64,7 +64,7 @@ export default function ComprehensiveServicesShowcase20o37() {
         return <Rocket className="w-6 h-6"  />,
       default:,
         return <Target className="w-6 h-6"  />}
-  };
+  },
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0">,
       <Head>,
@@ -88,7 +88,7 @@ export default function ComprehensiveServicesShowcase20o37() {
               <span className="text-white">Services Portfolio</span>,
             </h1>,
             <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-              Experience the future of technology with our comprehensive suite of AI consciousness;
+              Experience the future of technology with our comprehensive suite of AI consciousness,
               quantum computing, autonomous systems, and cutting-edge innovations,
             </p>,
             <div className="flex flex-col sm: flex-row gap-4 justify-center items-center">,
@@ -262,7 +262,7 @@ export default function ComprehensiveServicesShowcase20o37() {
             <div>,
               <h3 className="text-white font-bold text-lg mb-4">Zion Tech Group</h3>,
               <p className="text-gray-40o0 text-sm">,
-                Leading the future of technology with innovative AI, quantum computing;
+                Leading the future of technology with innovative AI, quantum computing,
                 and autonomous systems solutions.,
               </p>,
             </div>,

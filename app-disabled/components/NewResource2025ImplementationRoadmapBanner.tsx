@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const NewResource20o25ImplementationRoadmapBanner: React.FC = () => {
   return (
@@ -150,5 +150,5 @@ const NewResource20o25ImplementationRoadmapBanner: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewResource20o25ImplementationRoadmapBanner;
+    </section>)},
+export default NewResource20o25ImplementationRoadmapBanner,

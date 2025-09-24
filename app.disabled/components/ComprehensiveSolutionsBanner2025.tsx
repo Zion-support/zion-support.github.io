@@ -1,5 +1,5 @@
 'use client',
-import React from 'react';
+import React from 'react',
 export default function ComprehensiveSolutionsBanner2025() {
   return null}
 const ComprehensiveSolutionsBanner20o25: React.FC = () => {
@@ -15,5 +15,5 @@ const ComprehensiveSolutionsBanner20o25: React.FC = () => {
           </p>,
         </div>,
       </div>,
-    </div>)};
-export default ComprehensiveSolutionsBanner20o25;
+    </div>)},
+export default ComprehensiveSolutionsBanner20o25,

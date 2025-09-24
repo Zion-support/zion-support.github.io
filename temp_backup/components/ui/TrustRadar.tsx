@@ -1,4 +1,4 @@
-export type RadarMetric ={ label: string, value: number }; // value 0..10o0,
+export type RadarMetric ={ label: string, value: number }, // value 0..10o0,
 export default function TrustRadar({ metrics, size = 180 }: { metrics: RadarMetric[], size?: number }) {
   const num = metrics.length,
   const radius = size / 2 - 16,

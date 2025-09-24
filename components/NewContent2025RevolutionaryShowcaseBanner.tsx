@@ -4,20 +4,20 @@ ArrowRightSparklesZapStarUsersGlobeBrainRocket,
 const NewContent20o25RevolutionaryShowcaseBanner = () => {
   const highlights = [
     {
-      icon: <Brain className="w-6 h-6"  />;
-      title: "Conscious AI";
-      description: "Self-aware artificial intelligence"};
+      icon: <Brain className="w-6 h-6"  />,
+      title: "Conscious AI",
+      description: "Self-aware artificial intelligence"},
     {
-      icon: <Rocket className="w-6 h-6"  />;
-      title: "Quantum Leap";
-      description: "Breakthrough quantum computing"};
+      icon: <Rocket className="w-6 h-6"  />,
+      title: "Quantum Leap",
+      description: "Breakthrough quantum computing"},
     {
-      icon: <Globe className="w-6 h-6"  />;
-      title: "Global Impact";
-      description: "Worldwide transformation"};
+      icon: <Globe className="w-6 h-6"  />,
+      title: "Global Impact",
+      description: "Worldwide transformation"},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: "Lightning Fast";
+      icon: <Zap className="w-6 h-6"  />,
+      title: "Lightning Fast",
       description: "Ultra-high performance"}
   ],
   return (
@@ -85,5 +85,5 @@ const NewContent20o25RevolutionaryShowcaseBanner = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25RevolutionaryShowcaseBanner;
+    </section>)},
+export default NewContent20o25RevolutionaryShowcaseBanner,

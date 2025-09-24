@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-hr-management - Zion Tech Group';
+  title: 'ai-hr-management - Zion Tech Group',
   description:,
-    'Professional ai-hr-management solutions for your business needs.';
-  keywords: 'ai-hr-management, services, business, technology';
-};
+    'Professional ai-hr-management solutions for your business needs.',
+  keywords: 'ai-hr-management, services, business, technology',
+},
 export default function AiHrManagementPage() {
   return (
     <div className='min-h-screen bg-white'>,

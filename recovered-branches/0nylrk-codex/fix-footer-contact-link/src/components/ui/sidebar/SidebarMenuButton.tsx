@@ -13,9 +13,9 @@ export const SidebarMenuButton = forwardRef<HTMLButtonElementSidebarMenuButtonPr
     return (
       <Comp
         className={cn(
-          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors";
-          "text-muted-foreground hover:text-foreground hover:bg-accent";
-          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring";
+          "flex items-center w-full px-3 py-2 text-sm rounded-md font-medium transition-colors",
+          "text-muted-foreground hover: text-foreground hover:bg-accent",
+          "focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring",
           className)}
         ref={ref as any}
         {...props}

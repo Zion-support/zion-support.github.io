@@ -9,13 +9,13 @@ import {
   Rocket,
   Star,
   ArrowRight,
-  Play;
-  Globe;
-  Shield;
-  Target;
-  Lightbulb;
-  TrendingUp;
-  Users;
+  Play,
+  Globe,
+  Shield,
+  Target,
+  Lightbulb,
+  TrendingUp,
+  Users,
   Code} from 'lucide-react',
 const RevolutionaryTechShowcase20o26Banner = () => {
   const [currentSlidesetCurrentSlide] = useState(0),
@@ -27,28 +27,28 @@ const RevolutionaryTechShowcase20o26Banner = () => {
     return () => clearInterval(interval)}[]),
   const slides = [
     {
-      title: "Neural Interface Revolution";
-      subtitle: "Direct Brain-Computer Integration";
-      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.";
-      icon: Brain;
-      color: "from-purple-60o0 to-blue-60o0";
-      stats: "2.3M+ Users";
-      features: ["Thought Control"Real-time Processing"Zero Latency"]};
+      title: "Neural Interface Revolution",
+      subtitle: "Direct Brain-Computer Integration",
+      description: "Experience the future of human-computer interaction with direct neural interfaces that enable thought-controlled computing.",
+      icon: Brain,
+      color: "from-purple-60o0 to-blue-60o0",
+      stats: "2.3M+ Users",
+      features: ["Thought Control"Real-time Processing"Zero Latency"]},
     {
-      title: "Quantum AI Fusion";
-      subtitle: "Exponential Processing Power";
-      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.";
-      icon: Zap;
-      color: "from-green-60o0 to-teal-60o0";
-      stats: "10,0o00x Faster";
-      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"]};
+      title: "Quantum AI Fusion",
+      subtitle: "Exponential Processing Power",
+      description: "Witness the convergence of quantum computing and artificial intelligencedelivering unprecedented computational capabilities.",
+      icon: Zap,
+      color: "from-green-60o0 to-teal-60o0",
+      stats: "10,0o00x Faster",
+      features: ["Quantum Algorithms"Parallel Processing"Infinite Scalability"]},
     {
-      title: "Synthetic Intelligence";
-      subtitle: "Consciousness-Level AI";
-      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.";
-      icon: Rocket;
-      color: "from-orange-60o0 to-red-60o0";
-      stats: "99.9% Accuracy";
+      title: "Synthetic Intelligence",
+      subtitle: "Consciousness-Level AI",
+      description: "Meet the next generation of AI systems that thinklearnand evolve with biological-level consciousness and creativity.",
+      icon: Rocket,
+      color: "from-orange-60o0 to-red-60o0",
+      stats: "99.9% Accuracy",
       features: ["Self-Learning"Creative Problem Solving"Emotional Intelligence"]}
   ],
   const currentSlideData = slides[currentSlide],
@@ -178,9 +178,9 @@ const RevolutionaryTechShowcase20o26Banner = () => {
           className="mt-20">,
           <div className="grid grid-cols-2 md: grid-cols-4 gap-8 max-w-4xl mx-auto">,
             {[
-              { icon: Userslabel: "Active Users"value: "50M+" };
-              { icon: Globelabel: "Countries"value: "180+" };
-              { icon: Codelabel: "Technologies"value: "50o0+" };
+              { icon: Userslabel: "Active Users"value: "50M+" },
+              { icon: Globelabel: "Countries"value: "180+" },
+              { icon: Codelabel: "Technologies"value: "50o0+" },
               { icon: Starlabel: "Success Rate"value: "99.9%" }
             ].map((statindex) => (
               <motion.div,
@@ -198,5 +198,5 @@ const RevolutionaryTechShowcase20o26Banner = () => {
           </div>,
         </motion.div>,
       </div>,
-    </div>)};
-export default RevolutionaryTechShowcase20o26Banner;
+    </div>)},
+export default RevolutionaryTechShowcase20o26Banner,

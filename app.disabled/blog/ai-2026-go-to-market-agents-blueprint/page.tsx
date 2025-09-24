@@ -1,19 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Go-To-Market Agents Blueprint — Blog Overview';
+  title: 'AI 20o26: Go-To-Market Agents Blueprint — Blog Overview',
   description:,
-    'How to design GTM agents for pipeline generation, deal acceleration, and expansion with eval-gated safety and policy-as-code.';
+    'How to design GTM agents for pipeline generation, deal acceleration, and expansion with eval-gated safety and policy-as-code.',
   keywords: [
-    'GTM agents';
-    'go to market';
-    'sales automation';
-    'marketing automation';
-    'evals';
-    'policy as code';
-  ];
-};
+    'GTM agentsgo to market',
+    'sales automationmarketing automation',
+    'evalspolicy as code',
+  ]
+},
 const GTMAgentsBlueprintBlog: React.FC = () => {
   return (
     <div>,
@@ -83,5 +80,5 @@ const GTMAgentsBlueprintBlog: React.FC = () => {
           </div>,
         </div>,
       </article>,
-    </div>)};
-export default GTMAgentsBlueprintBlog;
+    </div>)},
+export default GTMAgentsBlueprintBlog,

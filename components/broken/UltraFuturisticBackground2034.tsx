@@ -7,8 +7,8 @@ interface UltraFuturisticBackground2034Props {
   theme?: 'quantum' | 'neural' | 'holographic' | 'cyberpunk'}
 ,
 const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props> = ({
-  children;
-  intensity = 'medium';
+  children,
+  intensity = 'medium',
   theme = 'quantum'}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -22,9 +22,9 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
     canvas.height = window.innerHeight,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
-    window.addEventListener(', 'resize', 'resizeCanvas),
+    window.addEventListener(resize', 'resizeCanvas),
     // Quantum particle system,
     const particles: Array<{
       x: number,
@@ -39,69 +39,69 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       switch (theme) {
         case 'quantum':,
           return {
-            primary: '#00ffff';
-            secondary: '#8b5cf6';
-            accent: '#10b981';
-            background: 'rgba(0, 0, 0, 0.8)'};
+            primary: '#00ffff',
+            secondary: '#8b5cf6',
+            accent: '#10b981',
+            background: 'rgba(0, 0, 0, 0.8)'},
         case 'neural':,
           return {
-            primary: '#10b981';
-            secondary: '#3b82f6';
-            accent: '#f59e0b';
-            background: 'rgba(0, 0, 0, 0.85)'};
+            primary: '#10b981',
+            secondary: '#3b82f6',
+            accent: '#f59e0b',
+            background: 'rgba(0, 0, 0, 0.85)'},
         case 'holographic':,
           return {
-            primary: '#ec4899';
-            secondary: '#8b5cf6';
-            accent: '#00ffff';
-            background: 'rgba(0, 0, 0, 0.9)'};
+            primary: '#ec4899',
+            secondary: '#8b5cf6',
+            accent: '#00ffff',
+            background: 'rgba(0, 0, 0, 0.9)'},
         case 'cyberpunk':,
           return {
-            primary: '#f59e0b';
-            secondary: '#ef4444';
-            accent: '#00ffff';
-            background: 'rgba(0, 0, 0, 0.95)'};
+            primary: '#f59e0b',
+            secondary: '#ef4444',
+            accent: '#00ffff',
+            background: 'rgba(0, 0, 0, 0.95)'},
         default: ,
           return {
-            primary: '#00ffff';
-            secondary: '#8b5cf6';
-            accent: '#10b981';
-            background: 'rgba(0, 0, 0, 0.8)'};
+            primary: '#00ffff',
+            secondary: '#8b5cf6',
+            accent: '#10b981',
+            background: 'rgba(0, 0, 0, 0.8)'},
       }
-    };
+    },
     const colors = getThemeColors(),
     const createParticle = () => {
       const intensityMultiplier = intensity === 'high' ? 2 : intensity === 'medium' ? 1.5 : 1,
       return {
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
-        vx: (Math.random() - 0.5) * 2 * intensityMultiplier;
-        vy: (Math.random() - 0.5) * 2 * intensityMultiplier;
-        size: Math.random() * 3 * intensityMultiplier + 1;
-        color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)];
-        life: Math.random() * 100 + 50;
-        maxLife: Math.random() * 100 + 50};
-    };
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
+        vx: (Math.random() - 0.5) * 2 * intensityMultiplier,
+        vy: (Math.random() - 0.5) * 2 * intensityMultiplier,
+        size: Math.random() * 3 * intensityMultiplier + 1,
+        color: [colors.primary, colors.secondary, colors.accent][Math.floor(Math.random() * 3)],
+        life: Math.random() * 100 + 50,
+        maxLife: Math.random() * 100 + 50},
+    },
     // Initialize particles,
     const initParticles = () => {
       for (let i = 0, i < 100 * intensity, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          life: Math.random() * 100;
-          maxLife: 100;
-          type: [', 'quantum', 'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType})}
-    };
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          life: Math.random() * 100,
+          maxLife: 100,
+          type: [quantum', 'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType})}
+    },
     // Initialize neural network,
     const initNeuralNetwork = () => {
       for (let i = 0, i < 20 * intensity, i++) {
         neuralNodes.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          connections: [];
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          connections: [],
           activation: Math.random()})}
 ,
       // Create connections,
@@ -112,7 +112,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           if (targetIndex !== i && !node.connections.includes(targetIndex)) {
             node.connections.push(targetIndex)}
         }
-      })};
+      })},
     // Initialize entanglement lines,
     const initEntanglementLines = () => {
       for (let i = 0, i < 15 * intensity, i++) {
@@ -121,13 +121,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         const x2 = x1 + (Math.random() - 0.5) * 200,
         const y2 = y1 + (Math.random() - 0.5) * 200,
         entanglementLines.push({
-          x1;
-          y1;
-          x2;
-          y2;
-          strength: Math.random();
+          x1,
+          y1,
+          x2,
+          y2,
+          strength: Math.random(),
           life: Math.random() * 100})}
-    };
+    },
     initParticles(),
     initNeuralNetwork(),
     initEntanglementLines(),
@@ -159,7 +159,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         // Draw particle with glow effect,
         const alpha = particle.life / particle.maxLife,
         const gradient = ctx.createRadialGradient(
-          particle.x, particle.y, 0;
+          particle.x, particle.y, 0,
           particle.x, particle.y, particle.size * 3),
         gradient.addColorStop(0, `${particle.color}${Math.floor(alpha * 255).toString(16).padStart(2, '0')}`),
         gradient.addColorStop(0.5, `${particle.color}${Math.floor(alpha * 128).toString(16).padStart(2, '0')}`),
@@ -228,14 +228,14 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       // Add new particles,
       if (particles.length < 100 * intensity) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 2;
-          vy: (Math.random() - 0.5) * 2;
-          size: Math.random() * 3 + 1;
-          life: 100;
-          maxLife: 100;
-          type: [', 'quantum', 'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType})}
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 2,
+          vy: (Math.random() - 0.5) * 2,
+          size: Math.random() * 3 + 1,
+          life: 100,
+          maxLife: 100,
+          type: [quantum', 'neural'holographic'][Math.floor(Math.random() * 3)] as ParticleType})}
 ,
       // Draw holographic matrix effect,
       if (theme === 'holographic') {
@@ -266,20 +266,20 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           ctx.stroke()}
       }
 ,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-      window.removeEventListener(', 'resize', 'resizeCanvas)};
+      window.removeEventListener(resize', 'resizeCanvas)},
   }[intensity]),
   // Mouse move handler for interactive effects,
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientXy: e.clientY })};
-    window.addEventListener(', 'mousemove', 'handleMouseMove),
-    return () => window.removeEventListener(', 'mousemove', 'handleMouseMove)}[]),
+      setMousePosition({ x: e.clientXy: e.clientY })},
+    window.addEventListener(mousemove', 'handleMouseMove),
+    return () => window.removeEventListener(mousemove', 'handleMouseMove)}[]),
   return (
     <div className="relative min-h-screen w-full overflow-hidden">,
       {/* Animated background canvas */}
@@ -292,7 +292,7 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       <div
         className="fixed inset-0 pointer-events-none z-10",
         style={{
-          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.3) 100%)`;
+          background: `radial-gradient(circle at 50% 50%, transparent 0%, rgba(0, 0, 0, 0.3) 100%)`,
           zIndex: 10}}
       />,
       {/* Floating geometric shapes */}
@@ -300,34 +300,34 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
         <motion.div,
           className="absolute top-20 left-20 w-32 h-32 border border-cyan-400/30",
           animate={{
-            rotate: 360;
-            scale: [1.21];
+            rotate: 360,
+            scale: [1.21],
             opacity: [0.30.60.3]}}
           transition={{
-            duration: 8;
-            repeat: Infinity;
+            duration: 8,
+            repeat: Infinity,
             ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute top-40 right-32 w-24 h-24 border border-purple-400/30 rounded-full",
           animate={{
-            y: [0-20];
-            opacity: [0.40.80.4];
+            y: [0-20],
+            opacity: [0.40.80.4],
             scale: [1.1]}}
           transition={{
-            duration: 6;
-            repeat: Infinity;
+            duration: 6,
+            repeat: Infinity,
             ease: "easeInOut"}}
         />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-40 h-20 border border-green-400/30",
           style={{ clipPath: 'polygon(0% 0%100% 0%80% 100%20% 100%)' }}
           animate={{
-            rotate: [0180360];
+            rotate: [0180360],
             opacity: [0.20.50.2]}}
           transition={{
-            duration: 12;
-            repeat: -1;
+            duration: 12,
+            repeat: -1,
             ease: "linear"}}
         />,
       </div>,
@@ -338,8 +338,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           animate={{
             x: ['-100%'100%']}}
           transition={{
-            duration: 15;
-            repeat: -1;
+            duration: 15,
+            repeat: -1,
             ease: "linear"}}
         />,
         <motion.div,
@@ -347,8 +347,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           animate={{
             y: ['-100%'100%']}}
           transition={{
-            duration: 20;
-            repeat: -1;
+            duration: 20,
+            repeat: -1,
             ease: "linear"}}
         />,
       </div>,
@@ -360,12 +360,12 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
             className="absolute w-px h-full bg-gradient-to-b from-transparent via-cyan-400/20 to-transparent",
             style={{ left: `${(i * 5) % 100}%` }}
             animate={{
-              opacity: [010];
+              opacity: [010],
               scaleY: [010]}}
             transition={{
-              duration: 3;
-              delay: i * 0.1;
-              repeat: -1;
+              duration: 3,
+              delay: i * 0.1,
+              repeat: -1,
               ease: "easeInOut"}}
           />))}
       </div>,
@@ -378,8 +378,8 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           animate={{
             opacity: [0.30.60.3]}}
           transition={{
-            duration: 10;
-            repeat: Infinity;
+            duration: 10,
+            repeat: Infinity,
             ease: "easeInOut"}}
         />,
       </div>,
@@ -389,13 +389,13 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
           className="absolute inset-0",
           animate={{
             background: [
-              "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)";
-              "radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)";
-              "radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)";
+              "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 80% 20%, rgba(139, 92, 246, 0.1) 0%, transparent 50%)",
+              "radial-gradient(circle at 40% 40%, rgba(16, 185, 129, 0.1) 0%, transparent 50%)",
               "radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%)"]}}
           transition={{
-            duration: 20;
-            repeat: Infinity;
+            duration: 20,
+            repeat: Infinity,
             ease: "easeInOut"}}
         />,
       </div>,
@@ -403,5 +403,5 @@ const UltraFuturisticBackground2034: React.FC<UltraFuturisticBackground2034Props
       <div className="relative z-40" style={{ zIndex: 40 }}>,
         {children}
       </div>,
-    </div>)};
-export default UltraFuturisticBackground2034;
+    </div>)},
+export default UltraFuturisticBackground2034,

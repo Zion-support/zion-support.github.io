@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 import { useState } from 'react',
 import { useForm } from 'react-hook-form',
@@ -8,11 +8,11 @@ import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
 import { Textarea } from '@/components/ui/textarea',
 import {
-  Form;
-  FormControl;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from '@/components/ui/form',
 Loader2LinkFileImageGithubEdit,
 import { PortfolioProject } from '@/types/resume',
@@ -20,16 +20,16 @@ import { usePortfolio } from '@/hooks/usePortfolio',
 import { useAuth } from '@/hooks/useAuth',
 // Define schema for form validation,
 const projectSchema = z.object({
-  title: z.string().min(1'Project title is required');
-  description: z.string().optional();
-  technologies: z.string().optional();
-  image_url: z.string().optional();
+  title: z.string().min(1'Project title is required'),
+  description: z.string().optional(),
+  technologies: z.string().optional(),
+  image_url: z.string().optional(),
   github_url: z,
     .union([z.string().url('Please enter a valid URL')z.literal('')]),
-    .optional();
+    .optional(),
   demo_url: z,
     .union([z.string().url('Please enter a valid URL')z.literal('')]),
-    .optional();
+    .optional(),
   pdf_url: z.string().optional()}),
 type ProjectFormValues = z.infer<typeof projectSchema>,
 interface ProjectFormProps {
@@ -43,14 +43,14 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
   const [isLoadingsetIsLoading] = useState(false),
   const isEditing = !!project,
   const form = useForm<ProjectFormValues>({
-    resolver: zodResolver(projectSchema);
+    resolver: zodResolver(projectSchema),
     defaultValues: {
-      title: project?.title || '';
-      description: project?.description || '';
-      technologies: project?.technologies ? project.technologies.join(') : '';
-      image_url: project?.image_url || '';
-      github_url: project?.github_url || '';
-      demo_url: project?.demo_url || '';
+      title: project?.title || '',
+      description: project?.description || '',
+      technologies: project?.technologies ? project.technologies.join(') : '',
+      image_url: project?.image_url || '',
+      github_url: project?.github_url || '',
+      demo_url: project?.demo_url || '',
       pdf_url: project?.pdf_url || ''}
   }),
   const onSubmit = async (data: ProjectFormValues) => {
@@ -58,14 +58,14 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
     setIsLoading(true),
     try {
       const projectData: PortfolioProject = {
-        title: data.title;
-        description: data.description;
+        title: data.title,
+        description: data.description,
         technologies: data.technologies ?,
-          data.technologies.split(',').map(tech => tech.trim()) : [];
-        image_url: data.image_url;
-        github_url: data.github_url || undefined;
-        demo_url: data.demo_url || undefined;
-        pdf_url: data.pdf_url};
+          data.technologies.split().map(tech => tech.trim()) : [],
+        image_url: data.image_url,
+        github_url: data.github_url || undefined,
+        demo_url: data.demo_url || undefined,
+        pdf_url: data.pdf_url},
       let success = false,
       if (isEditing && project?.id) {
         success = await updateProject(project.idprojectData)} else {
@@ -78,7 +78,7 @@ export function ProjectForm({ projectonSuccessonCancel }: ProjectFormProps) {
     } catch (error) {
       console.error('Error saving project: 'error)} finally {
       setIsLoading(false)}
-  };
+  },
   return (
     <Form {...form}>,
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-4">,

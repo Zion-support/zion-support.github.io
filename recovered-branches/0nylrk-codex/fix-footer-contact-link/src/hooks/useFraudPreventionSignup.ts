@@ -12,7 +12,7 @@ export function useFraudPreventionSignup() {
       return data.ip} catch (error) {
       console.error('Error getting IP:', error),
       return undefined}
-  };
+  },
   // Check if the signup attempt might be fraudulent,
   const checkFraudBeforeSignup = useCallback(
     async (email: string): Promise<boolean> => {
@@ -25,15 +25,15 @@ export function useFraudPreventionSignup() {
           // // console.log('Suspicious signup detected:', fraudCheck.reasons),
           // Create a fraud flag for admin review,
           const { error } = await supabase.from('fraud_flags').insert({
-            user_email: email;
-            content_type: 'signup';
+            user_email: email,
+            content_type: 'signup',
             content_id: email, // Using email as content ID for signup attempts,
-            content_excerpt: `Signup attempt for ${email}`;
-            severity: 'suspicious';
-            reason: fraudCheck.reasons.join(', ');
-            ip_address: ipAddress;
-            timestamp: new Date().toISOString();
-            status: 'pending';
+            content_excerpt: `Signup attempt for ${email}`,
+            severity: 'suspicious',
+            reason: fraudCheck.reasons.join(),
+            ip_address: ipAddress,
+            timestamp: new Date().toISOString(),
+            status: 'pending'
           }),
           if (error) {
             console.error('Error creating fraud flag:', error)}
@@ -46,10 +46,10 @@ export function useFraudPreventionSignup() {
                 r.includes('Multiple accounts') ||,
                 r.includes('suspicious email domain'))) {
             toast({
-              title: 'Signup blocked';
+              title: 'Signup blocked',
               description:,
-                'This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.';
-              variant: 'destructive';
+                'This signup attempt has been flagged for security reasons. Please contact support if you believe this is an error.',
+              variant: 'destructive'
             }),
             return false}
 ,
@@ -62,11 +62,11 @@ export function useFraudPreventionSignup() {
         // On error, allow the signup but log the error,
         return true} finally {
         setIsCheckingFraud(false)}
-    };
+    },
     []),
   return {
-    isCheckingFraud;
-    checkFraudBeforeSignup;
-  };
+    isCheckingFraud,
+    checkFraudBeforeSignup,
+  },
 }
 ,

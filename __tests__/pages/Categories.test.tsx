@@ -1,20 +1,22 @@
-import React from react',import { render, screen, waitFor } from @testing-library/react',import Categories from @/src/pages/Categories', // Corrected import path'import { CATEGORIES } from @/data/categories',import useSWR from swr',import { Category } from @/data/categories', // Import Category type,
+import React from react',
+import { render, screen, waitFor } from @testing-library/react',import Categories from @/src/pages/Categories', // Corrected import path'import { CATEGORIES } from @/data/categories',
+import useSWR from swr',import { Category } from @/data/categories', // Import Category type,
 // Mock next/router,
 jest.mock('next/router', () => ({'  useRouter: () => ({
-    query: {};
-    pathname: /categories',    asPath: /categories',    push: jest.fn();
-    replace: jest.fn();
-    reload: jest.fn();
-    back: jest.fn();
-    prefetch: jest.fn().mockResolvedValue(undefined);
-    beforePopState: jest.fn();
+    query: {},
+    pathname: /categories',    asPath: /categories',    push: jest.fn(),
+    replace: jest.fn(),
+    reload: jest.fn(),
+    back: jest.fn(),
+    prefetch: jest.fn().mockResolvedValue(undefined),
+    beforePopState: jest.fn(),
     events: {
-      on: jest.fn();
-      off: jest.fn();
-      emit: jest.fn()};
-    isFallback: false;
-    isLocaleDomain: false;
-    isReady: true;
+      on: jest.fn(),
+      off: jest.fn(),
+      emit: jest.fn()},
+    isFallback: false,
+    isLocaleDomain: false,
+    isReady: true,
     basePath:, isPreview: false})})),
 // Mock SWR,
 jest.mock('swr'),
@@ -47,9 +49,9 @@ describe('Categories Page Component', () => {'  const mockUseSWR = useSWR as jes
   test('uses default icons if categories from SWR match CATEGORIES constant', async () => {'    // Simulate SWR fetcher falling back to local CATEGORIES,
     // The key here is that the SWR data will be the CATEGORIES constant,
     mockUseSWR.mockImplementation((key) => {
-      if (key === /api/categories') {'        return { data: CATEGORIES, error: null, isLoading: false };
+      if (key === /api/categories') {'        return { data: CATEGORIES, error: null, isLoading: false },
       }
-      return { data: [], error: null, isLoading: false };
+      return { data: [], error: null, isLoading: false },
     }),
     render(<Categories categories={[]}  />), // Start with empty initial, SWR provides CATEGORIES,
     await waitFor(() => {

@@ -8,7 +8,7 @@ export interface PartnerProfile {
     instagram?: string,
     youtube?: string,
     linkedin?: string,
-    [key: string]: string | undefined};
+    [key: string]: string | undefined},
   niche: string,
   audience_size: string,
   payout_method: string,

@@ -1,6 +1,6 @@
-import React from 'react';
-;
-export default function DashboardPage(): React.ReactElement {;
+import React from 'react',
+,
+export default function DashboardPage(): React.ReactElement {,
 	return (
 		<main>
 			<h1>Dashboard</h1>
@@ -8,4 +8,4 @@ export default function DashboardPage(): React.ReactElement {;
 		</main>
 	)
 }
-;
+,

@@ -9,19 +9,14 @@ export default function AIPredictiveMaintenancePlatform() {
       implementationWeeks='Implementation: 3-6 weeks',
       roiNote='Typical ROI: 300-500% from reduced downtime and maintenance costs',
       features={[
-        'Real-time sensor anomaly detection';
-        'Remaining useful life (RUL) forecasting';
-        'Automated maintenance scheduling';
-        'Root-cause and failure mode analysis';
-        'Edge and cloud deployment options';
-        'Integrations: SCADA, OPC-UA, Kafka, Snowflake';
+        'Real-time sensor anomaly detectionRemaining useful life (RUL) forecasting',
+        'Automated maintenance schedulingRoot-cause and failure mode analysis',
+        'Edge and cloud deployment optionsIntegrations: SCADA, OPC-UA, Kafka, Snowflake',
       ]}
       industries={[
-        'Manufacturing';
-        'Logistics';
-        'Energy';
-        'Utilities';
-        'Aviation';
+        'ManufacturingLogistics',
+        'EnergyUtilities',
+        'Aviation',
       ]}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-predictive-maintenance-platform',

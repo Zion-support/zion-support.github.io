@@ -1,37 +1,37 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const AI20o25ContentShowcase: React.FC = () => {
   const contentItems = [
     {
-      title: 'AI 20o25: Enterprise Automation Revolution';
+      title: 'AI 20o25: Enterprise Automation Revolution',
       description:,
-        'Discover how AI automation is transforming enterprise operations with real-world case studies and implementation strategies.';
-      category: 'Blog Post';
-      readTime: '12 min read';
-      image: '🤖';
-      href: '/blog/ai-20o25-enterprise-automation-revolution';
-      featured: true;
-    };
+        'Discover how AI automation is transforming enterprise operations with real-world case studies and implementation strategies.',
+      category: 'Blog Post',
+      readTime: '12 min read',
+      image: '🤖',
+      href: '/blog/ai-20o25-enterprise-automation-revolution',
+      featured: true
+    },
     {
-      title: 'Fortune 50o0 AI Transformation Success';
+      title: 'Fortune 50o0 AI Transformation Success',
       description:,
-        'How a Fortune 50o0 company achieved 340% ROI and $50M+ in annual savings through comprehensive AI transformation.';
-      category: 'Case Study';
-      readTime: '15 min read';
-      image: '🏆';
-      href: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success';
-      featured: true;
-    };
+        'How a Fortune 50o0 company achieved 340% ROI and $50M+ in annual savings through comprehensive AI transformation.',
+      category: 'Case Study',
+      readTime: '15 min read',
+      image: '🏆',
+      href: '/case-studies/fortune-50o0-ai-transformation-20o25-ultimate-success',
+      featured: true
+    },
     {
-      title: 'AI Implementation Master Guide 20o25';
+      title: 'AI Implementation Master Guide 20o25',
       description:,
-        'The complete guide to implementing AI in your enterprise, with step-by-step strategies and real-world examples.';
-      category: 'Resource';
-      readTime: '45 min read';
-      image: '📚';
-      href: '/resources/ai-implementation-master-guide-20o25-comprehensive';
-      featured: true;
-    };
+        'The complete guide to implementing AI in your enterprise, with step-by-step strategies and real-world examples.',
+      category: 'Resource',
+      readTime: '45 min read',
+      image: '📚',
+      href: '/resources/ai-implementation-master-guide-20o25-comprehensive',
+      featured: true
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-gray-50 to-blue-50'>,
@@ -45,7 +45,7 @@ const AI20o25ContentShowcase: React.FC = () => {
             Latest AI Content & Insights,
           </h2>,
           <p className='text-xl text-gray-60o0 max-w-3xl mx-auto leading-relaxed'>,
-            Stay ahead with our comprehensive collection of AI content;
+            Stay ahead with our comprehensive collection of AI content,
             featuring the latest trends, success stories, and implementation,
             guides.,
           </p>,
@@ -157,5 +157,5 @@ const AI20o25ContentShowcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AI20o25ContentShowcase;
+    </section>)},
+export default AI20o25ContentShowcase,

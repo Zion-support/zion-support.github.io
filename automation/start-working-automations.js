@@ -1,14 +1,14 @@
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -57,22 +57,22 @@ class WorkingAutomationStarter {
       const IntelligentAutomationOrchestrator = require('./intelligent-automation-orchestrator.js'),
       const orchestrator = new IntelligentAutomationOrchestrator({
         autonomous: {
-          enabled: true;
-          selfHealing: true;
-          learning: true;
-          adaptiveScheduling: true};
+          enabled: true,
+          selfHealing: true,
+          learning: true,
+          adaptiveScheduling: true},
         monitoring: {
-          enabled: true;
+          enabled: true,
           interval: 60o000, // 1 minute,
-          healthCheckInterval: 30o0000, // 5 minutes};
+          healthCheckInterval: 30o0000, // 5 minutes},
         reporting: {
-          enabled: true;
-          daily: true;
-          weekly: true;
-          realTime: true};
+          enabled: true,
+          daily: true,
+          weekly: true,
+          realTime: true},
         dashboard: {
-          enabled: true;
-          port: 30o01;
+          enabled: true,
+          port: 30o01,
           autoRefresh: true}}),
       await orchestrator.initialize(),
       await orchestrator.start(),

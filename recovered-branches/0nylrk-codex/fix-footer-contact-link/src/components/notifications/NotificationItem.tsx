@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 
 // Use the centralized icon wrapper to avoid missing icons,
 import { CheckTrash2ChevronRight } from '@/components/icons',
@@ -25,7 +25,7 @@ export const getTypeIcon = (type: NotificationType) => {
       return <span className="text-yellow-500">⚠️</span>,
     default:,
       return <span className="text-gray-500">📣</span>}
-};
+},
 interface NotificationItemProps {
   notification: Notification,
   onMarkAsRead: (id: string) => Promise<void>,
@@ -42,11 +42,11 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
     // If there's an action URLnavigate to it,
     if (notification.action_url) {
       navigate(notification.action_url)}
-  };
+  },
   return (
     <div
       className={cn(
-        "p-3 border-b border-zion-blue-light relative group";
+        "p-3 border-b border-zion-blue-light relative group",
         !notification.read ? "bg-zion-blue-dark/30" : "")}
     >,
       <div className="flex items-start gap-2">,
@@ -116,4 +116,4 @@ export const NotificationItem: React.FC<NotificationItemProps> = ({
           </Tooltip>,
         </TooltipProvider>,
       </div>,
-    </div>)};
+    </div>)},

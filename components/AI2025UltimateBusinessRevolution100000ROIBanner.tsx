@@ -7,43 +7,43 @@ const AI20o25UltimateBusinessRevolution10o0000ROIBanner = () => {
   const [currentContent, setCurrentContent] = useState(0),
   const contentItems = [
     {
-      id: 'ultimate-business-revolution';
-      title: 'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide';
-      type: 'Blog Post';
-      url: '/blog/ai-20o25-ultimate-business-revolution-10o0000-roi-breakthrough';
+      id: 'ultimate-business-revolution',
+      title: 'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide',
+      type: 'Blog Post',
+      url: '/blog/ai-20o25-ultimate-business-revolution-10o0000-roi-breakthrough',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T';
-        efficiency: '99.99%';
-        timeline: '18 months'};
-      description: 'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns';
-      readingTime: '45 min read';
-      featured: true};
+        roi: '10o0,0o00%',
+        savings: '$2.5T',
+        efficiency: '99.99%',
+        timeline: '18 months'},
+      description: 'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns',
+      readingTime: '45 min read',
+      featured: true},
     {
-      id: 'fortune-50o0-success-story';
-      title: 'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story';
-      type: 'Case Study';
-      url: '/case-studies/fortune-50o0-ultimate-business-revolution-10o0000-roi-success-story';
+      id: 'fortune-50o0-success-story',
+      title: 'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story',
+      type: 'Case Study',
+      url: '/case-studies/fortune-50o0-ultimate-business-revolution-10o0000-roi-success-story',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T';
-        efficiency: '99.99%';
-        timeline: '18 months'};
-      description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI';
-      readingTime: '30 min read';
-      featured: true};
+        roi: '10o0,0o00%',
+        savings: '$2.5T',
+        efficiency: '99.99%',
+        timeline: '18 months'},
+      description: 'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI',
+      readingTime: '30 min read',
+      featured: true},
     {
-      id: 'implementation-guide';
-      title: 'AI 20o25 Ultimate Business Revolution Implementation Guide: Complete Roadmap to 10o0,0o00% ROI';
-      type: 'Implementation Guide';
-      url: '/resources/ai-20o25-ultimate-business-revolution-implementation-guide-10o0000-roi';
+      id: 'implementation-guide',
+      title: 'AI 20o25 Ultimate Business Revolution Implementation Guide: Complete Roadmap to 10o0,0o00% ROI',
+      type: 'Implementation Guide',
+      url: '/resources/ai-20o25-ultimate-business-revolution-implementation-guide-10o0000-roi',
       metrics: {
-        roi: '10o0,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: 'Complete'};
-      description: 'Your comprehensive step-by-step guide to achieving unprecedented business transformation';
-      readingTime: '60 min read';
+        roi: '10o0,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: 'Complete'},
+      description: 'Your comprehensive step-by-step guide to achieving unprecedented business transformation',
+      readingTime: '60 min read',
       featured: true}
   ],
   useEffect(() => {
@@ -52,7 +52,7 @@ const AI20o25UltimateBusinessRevolution10o0000ROIBanner = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('ai20o25-ultimate-business-revolution-banner-dismissed', 'true')};
+    localStorage.setItem('ai20o25-ultimate-business-revolution-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('ai20o25-ultimate-business-revolution-banner-dismissed'),
     if (dismissed === 'true') {
@@ -190,5 +190,5 @@ const AI20o25UltimateBusinessRevolution10o0000ROIBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AI20o25UltimateBusinessRevolution10o0000ROIBanner;
+    </div>)},
+export default AI20o25UltimateBusinessRevolution10o0000ROIBanner,

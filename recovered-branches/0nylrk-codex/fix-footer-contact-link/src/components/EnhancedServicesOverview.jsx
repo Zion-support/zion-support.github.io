@@ -2,36 +2,36 @@ import {
 import { Button } from '@/components/ui/button',
 import { Badge } from '@/components/ui/badge',
 import { Link } from 'react-router-dom',
-  ENHANCED_SERVICES;
-  ENHANCED_SERVICE_CATEGORIES;
+  ENHANCED_SERVICES,
+  ENHANCED_SERVICE_CATEGORIES,
 } from '@/data/enhancedServices',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card',
-  Brain;
-  Shield;
-  Database;
-  Briefcase;
-  DollarSign;
-  Heart;
-  GraduationCap;
-  Truck;
-  Home;
-  Zap;
-  Users;
-  BarChart3;
-  Lock;
-  TrendingUp;
-  CheckCircle;
-  Star;
-  Globe;
-  Clock;
-  Mail;
-  Phone;
-  MapPin;
+  Brain,
+  Shield,
+  Database,
+  Briefcase,
+  DollarSign,
+  Heart,
+  GraduationCap,
+  Truck,
+  Home,
+  Zap,
+  Users,
+  BarChart3,
+  Lock,
+  TrendingUp,
+  CheckCircle,
+  Star,
+  Globe,
+  Clock,
+  Mail,
+  Phone,
+  MapPin,
 } from 'lucide-react',
 const ServiceCategory = ({ category, services }) => {
   const categoryServices = services.filter(service =>,
@@ -39,34 +39,24 @@ const ServiceCategory = ({ category, services }) => {
   if (categoryServices.length === 0) return null,
   const getCategoryIcon = categoryName => {
     const iconMap = {
-      'AI & Machine Learning': <Brain className='w-6 h-6' />;
-      'Cybersecurity & Compliance': <Shield className='w-6 h-6' />;
-      'Data & Analytics': <Database className='w-6 h-6' />;
-      'Business Process': <Briefcase className='w-6 h-6' />;
-      'Marketing & Sales': <TrendingUp className='w-6 h-6' />;
-      'Financial Services': <DollarSign className='w-6 h-6' />;
-      'Healthcare & Life Sciences': <Heart className='w-6 h-6' />;
-      'Education & Training': <GraduationCap className='w-6 h-6' />;
-      'Supply Chain & Logistics': <Truck className='w-6 h-6' />;
-      'Real Estate & Property': <Home className='w-6 h-6' />;
-      'Legal & Compliance': <Lock className='w-6 h-6' />;
-    };
-    return iconMap[categoryName] || <Briefcase className='w-6 h-6' />};
+      'AI & Machine Learning': <Brain className='w-6 h-6' />,
+      'Cybersecurity & Compliance': <Shield className='w-6 h-6' />,
+      'Data & Analytics': <Database className='w-6 h-6' />,
+      'Business Process': <Briefcase className='w-6 h-6' />,
+      'Marketing & Sales': <TrendingUp className='w-6 h-6' />,
+      'Financial Services': <DollarSign className='w-6 h-6' />,
+      'Healthcare & Life Sciences': <Heart className='w-6 h-6' />,
+      'Education & Training': <GraduationCap className='w-6 h-6' />,
+      'Supply Chain & Logistics': <Truck className='w-6 h-6' />,
+      'Real Estate & Property': <Home className='w-6 h-6' />,
+      'Legal & Compliance': <Lock className='w-6 h-6' />,
+    },
+    return iconMap[categoryName] || <Briefcase className='w-6 h-6' />},
   const getCategoryColor = categoryName => {
     const colorMap = {
-      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0';
-      'Cybersecurity & Compliance': 'from-red-50o0 to-pink-60o0';
-      'Data & Analytics': 'from-blue-50o0 to-cyan-60o0';
-      'Business Process': 'from-green-50o0 to-emerald-60o0';
-      'Marketing & Sales': 'from-orange-50o0 to-red-60o0';
-      'Financial Services': 'from-yellow-50o0 to-orange-60o0';
-      'Healthcare & Life Sciences': 'from-pink-50o0 to-rose-60o0';
-      'Education & Training': 'from-indigo-50o0 to-purple-60o0';
-      'Supply Chain & Logistics': 'from-teal-50o0 to-green-60o0';
-      'Real Estate & Property': 'from-amber-50o0 to-yellow-60o0';
-      'Legal & Compliance': 'from-slate-50o0 to-gray-60o0';
-    };
-    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'};
+      'AI & Machine Learning': 'from-purple-50o0 to-indigo-60o0Cybersecurity & Compliance': 'from-red-50o0 to-pink-60o0Data & Analytics': 'from-blue-50o0 to-cyan-60o0Business Process': 'from-green-50o0 to-emerald-60o0Marketing & Sales': 'from-orange-50o0 to-red-60o0Financial Services': 'from-yellow-50o0 to-orange-60o0Healthcare & Life Sciences': 'from-pink-50o0 to-rose-60o0Education & Training': 'from-indigo-50o0 to-purple-60o0Supply Chain & Logistics': 'from-teal-50o0 to-green-60o0Real Estate & Property': 'from-amber-50o0 to-yellow-60o0Legal & Compliance': 'from-slate-50o0 to-gray-60o0',
+    },
+    return colorMap[categoryName] || 'from-zion-purple to-zion-purple-dark'},
   return (
     <div className='space-y-6'>,
       <div className='flex items-center space-x-3 mb-6'>,
@@ -155,7 +145,7 @@ const ServiceCategory = ({ category, services }) => {
                     size='sm',
                     className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white',
                     onClick={() =>,
-                      window.open('https://ziontechgroup.com', '_blank')}
+                      window.open('https://ziontechgroup.com_blank')}
                   >,
                     Get Started,
                   </Button>,
@@ -169,7 +159,7 @@ const ServiceCategory = ({ category, services }) => {
             </CardContent>,
           </Card>))}
       </div>,
-    </div>)};
+    </div>)},
 const BenefitsSection = () => (
   <section className='py-16 bg-zion-blue-dark border border-zion-blue-light rounded-lg'>,
     <div className='container mx-auto px-4'>,
@@ -305,7 +295,7 @@ const ContactSection = () => (
           size='lg',
           className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover:from-zion-purple-light hover:to-zion-purple text-white',
           onClick={() =>,
-            window.open('mailto:kleber@ziontechgroup.com', '_blank')}
+            window.open('mailto:kleber@ziontechgroup.com_blank')}
         >,
           Contact Sales Team,
         </Button>,
@@ -313,7 +303,7 @@ const ContactSection = () => (
           size='lg',
           variant='outline',
           className='border-zion-purple text-zion-cyan hover: bg-zion-purple/10',
-          onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+          onClick={() => window.open('https://ziontechgroup.com_blank')}
         >,
           Visit Our Website,
         </Button>,
@@ -345,7 +335,7 @@ export default function EnhancedServicesOverview() {
           <Button
             size='lg',
             className='bg-gradient-to-r from-zion-purple to-zion-purple-dark hover: from-zion-purple-light hover:to-zion-purple text-white',
-            onClick={() => window.open('https://ziontechgroup.com', '_blank')}
+            onClick={() => window.open('https://ziontechgroup.com_blank')}
           >,
             Get Started Today,
           </Button>,

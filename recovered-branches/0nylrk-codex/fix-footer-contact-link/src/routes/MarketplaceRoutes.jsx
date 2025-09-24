@@ -90,5 +90,5 @@ const MarketplaceRoutes = () => {
             <VideoCall />,
           </ProtectedRoute>}
       />,
-    </Routes>)};
-export default MarketplaceRoutes;
+    </Routes>)},
+export default MarketplaceRoutes,

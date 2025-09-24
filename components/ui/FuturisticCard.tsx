@@ -3,10 +3,10 @@
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
   componentDidCatch(error, errorInfo) {
     console.error('Error caught by boundary:', error, errorInfo)}
@@ -16,13 +16,13 @@ class ErrorBoundary extends React.Component {
     return this.props.children}
 }
 ,
-import React from "react";
+import React from "react",
 type Props = {
 import React from './react',
 type Props = {
   title: string,
   description: string,
-  cta?: React && React.ReactNode};
+  cta?: React && React.ReactNode},
 export default function FuturisticCard(): any ({ title, description, cta }: Props) {
   return (
 export default /**,

@@ -10,14 +10,14 @@ class MergeResolver {
         try {
             // // console.log(`Running: ${command}`),
             const result = execSync(command, {
-                cwd: this.repoPath;
-                timeout: this.timeout;
-                encoding: 'utf8';
+                cwd: this.repoPath,
+                timeout: this.timeout,
+                encoding: 'utf8',
                 ...options}),
-            return { success: true, output: result };
+            return { success: true, output: result },
         } catch (error) {
             // // console.log(`Command failed: ${command}`),
-            return { success: false, error: error.message };
+            return { success: false, error: error.message },
         }
     }
 ,

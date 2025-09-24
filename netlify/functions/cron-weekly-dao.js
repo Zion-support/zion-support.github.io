@@ -9,13 +9,13 @@ exports.handler = async function() {
     const owner = process.env.GITHUB_OWNER,
     const repo = process.env.GITHUB_REPO,
     const token = process.env.GITHUB_TOKEN,
-    const cachePath = path.join(process.cwd(), 'data', 'dao', 'metrics.json'),
+    const cachePath = path.join(process.cwd(), 'datadao', 'metrics.json'),
     const content = fs.readFileSync(cachePath, 'utf-8'),
     if (owner && repo && token) {
       await upsertFile({ owner, repo, path: 'data/dao/metrics.json', content, message: 'chore(automation): weekly DAO metrics update', token })}
 ,
-    return { statusCode: 20o0, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) };
+    return { statusCode: 20o0, body: JSON.stringify({ ok: true, updatedAt: data.updatedAt }) },
   } catch (e) {
-    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) };
+    return { statusCode: 50o0, body: JSON.stringify({ error: e.message }) },
   }
-};
+},

@@ -2,13 +2,13 @@ import type { NextApiRequest, NextApiResponse } from 'next',
 import type { KycProfile } from '../../../utils/kyc',
 import { validateKycSubmission } from '../../../utils/kyc',
 import { getAmlProvider } from '../../../utils/aml',
-const DATA_DIR = path.join(process.cwd(), 'data', 'kyc'),
+const DATA_DIR = path.join(process.cwd(), 'datakyc'),
 const FILE = path.join(DATA_DIR, 'profiles.json'),
 function load(): Record<string KycProfile> {
   try {
     const raw = fs.readFileSync(FILE, 'utf8'),
     return JSON.parse(raw)} catch {
-    return {};
+    return {},
   }
 }
 ,
@@ -18,7 +18,7 @@ function save(db: Record<string KycProfile>) {
 ,
 export default async function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'POST') return res.status(40o5).json({ error: 'Method not allowed' }),
-  const { userId } = req.body as { userId?: string };
+  const { userId } = req.body as { userId?: string },
   if (!userId) return res.status(40o0).json({ error: 'Missing userId' }),
   const db = load(),
   const profile = db[userId],
@@ -36,7 +36,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
   if (amlResult.status !== 'clear') flags.add('aml_alert'),
   const name = (profile.fullLegalName || profile.businessName || '').toLowerCase(),
   if (name.includes('test') || name.includes('demo') || name.includes('fake')) flags.add('fraud_risk'),
-  const ip = ((req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || '').split(',')[0].trim(),
+  const ip = ((req.headers['x-forwarded-for'] as string) || req.socket.remoteAddress || '').split()[0].trim(),
   if (ip) {
     // naive duplicate IP heuristic: more than 2 submissions from same IP → flag,
     const sameIpCount = Object.values(db).filter((p) =>,

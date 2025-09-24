@@ -20,15 +20,13 @@ export default function CloudflareWorkersEdgeConfigPage() {
             Cloudflare Workers Edge Config,
           </h1>,
           <p className='text-slate-300'>,
-            Managed configuration for Workers/KV: environments, approvals;
+            Managed configuration for Workers/KV: environments, approvals,
             previews, rollbacks, and audit logs for edge apps.,
           </p>,
           <div className='grid grid-cols-1 md: grid-cols-2 gap-4'>,
             {[
-              'Versioned config with approvals';
-              'Preview links & automatic rollbacks';
-              'Audit logs & drift detection';
-              'Multi-env & secret management';
+              'Versioned config with approvalsPreview links & automatic rollbacks',
+              'Audit logs & drift detectionMulti-env & secret management',
             ].map(f => (
               <div
                 key={f}

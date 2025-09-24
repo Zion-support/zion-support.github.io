@@ -2,125 +2,104 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Zap;
-  Sparkles;
-  Shield;
-  Cpu;
-  Database;
-  Cloud;
-  Lock;
-  Users;
-  Briefcase;
-  BookOpen;
-  MessageCircle;
-  Brain;
-  Target;
-  Layers;
-  Globe;
-  Atom;
-  Building;
-  DollarSign;
-  PieChart;
-  BarChart3;
-  LineChart;
-  Calculator;
-  Wallet;
-  CreditCard;
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Zap,
+  Sparkles,
+  Shield,
+  Cpu,
+  Database,
+  Cloud,
+  Lock,
+  Users,
+  Briefcase,
+  BookOpen,
+  MessageCircle,
+  Brain,
+  Target,
+  Layers,
+  Globe,
+  Atom,
+  Building,
+  DollarSign,
+  PieChart,
+  BarChart3,
+  LineChart,
+  Calculator,
+  Wallet,
+  CreditCard,
 } from 'lucide-react',
 import UltraFuturisticNavigation20o29 from '../components/layout/UltraFuturisticNavigation20o29',
 import UltraFuturisticFooter20o29 from '../components/layout/UltraFuturisticFooter20o29',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const features = [
-  'AI-powered investment analysis';
-  'Portfolio optimization';
-  'Risk assessment algorithms';
-  'Market trend prediction';
-  'Automated rebalancing';
-  'Tax optimization strategies';
-  'Real-time market monitoring';
-  'Personalized financial planning';
+  'AI-powered investment analysisPortfolio optimization',
+  'Risk assessment algorithmsMarket trend prediction',
+  'Automated rebalancingTax optimization strategies',
+  'Real-time market monitoringPersonalized financial planning',
 ],
 const benefits = [
-  'Higher investment returns';
-  'Reduced financial risk';
-  'Automated portfolio management';
-  '24/7 market monitoring';
-  'Tax-efficient strategies';
-  'Professional-grade analysis';
+  'Higher investment returnsReduced financial risk',
+  'Automated portfolio management24/7 market monitoring',
+  'Tax-efficient strategiesProfessional-grade analysis',
 ],
 const useCases = [
-  'Individual investors';
-  'Financial advisors';
-  'Investment firms';
-  'Wealth management';
-  'Retirement planning';
-  'Estate planning';
+  'Individual investorsFinancial advisors',
+  'Investment firmsWealth management',
+  'Retirement planningEstate planning',
 ],
 const technology = [
-  'Machine Learning';
-  'Predictive Analytics';
-  'Risk Modeling';
-  'Portfolio Theory';
-  'Market Data Analysis';
-  'AI Algorithms';
+  'Machine LearningPredictive Analytics',
+  'Risk ModelingPortfolio Theory',
+  'Market Data AnalysisAI Algorithms',
 ],
 const pricingPlans = [
   {
-    name: 'Personal Investor';
-    price: '$19,999';
-    period: '/month';
-    description: 'Perfect for individual investors and small portfolios';
+    name: 'Personal Investor',
+    price: '$19,999',
+    period: '/month',
+    description: 'Perfect for individual investors and small portfolios',
     features: [
-      'Basic AI analysis';
-      'Portfolio tracking';
-      'Risk assessment';
-      'Basic support';
-      'Training modules';
-    ];
-    popular: false;
-  };
+      'Basic AI analysisPortfolio tracking',
+      'Risk assessmentBasic support',
+      'Training modules',
+    ],
+    popular: false
+  },
   {
-    name: 'Professional Advisor';
-    price: '$39,999';
-    period: '/month';
-    description: 'For financial advisors and wealth managers';
+    name: 'Professional Advisor',
+    price: '$39,999',
+    period: '/month',
+    description: 'For financial advisors and wealth managers',
     features: [
-      'Advanced AI algorithms';
-      'Portfolio optimization';
-      'Tax strategies';
-      'Priority support';
-      'Custom training';
-      'Integration services';
-    ];
-    popular: true;
-  };
+      'Advanced AI algorithmsPortfolio optimization',
+      'Tax strategiesPriority support',
+      'Custom trainingIntegration services',
+    ],
+    popular: true
+  },
   {
-    name: 'Enterprise Wealth';
-    price: '$79,999';
-    period: '/month';
-    description: 'For large investment firms and institutions';
+    name: 'Enterprise Wealth',
+    price: '$79,999',
+    period: '/month',
+    description: 'For large investment firms and institutions',
     features: [
-      'Enterprise-grade AI';
-      'Custom algorithms';
-      'Multi-portfolio management';
-      '24/7 dedicated support';
-      'Full compliance';
-      'Complete training program';
-    ];
-    popular: false;
-  };
+      'Enterprise-grade AICustom algorithms',
+      'Multi-portfolio management24/7 dedicated support',
+      'Full complianceComplete training program',
+    ],
+    popular: false
+  },
 ],
 export default function AIFinancialAdvisoryPlatform20o29() {
   return (

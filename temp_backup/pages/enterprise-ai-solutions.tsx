@@ -1,50 +1,44 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Building2, Zap, Target, Shield, TrendingUp, Globe;
-  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor;
+  Building2, Zap, Target, Shield, TrendingUp, Globe,
+  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor,
   Award, MessageCircle, Cpu} from 'lucide-react',
 export default function EnterpriseAISolutions() {
   const features = [
     {
-      icon: <Building2 className="w-6 h-6"  />;
-      title: 'Enterprise AI Integration';
-      description: 'Advanced AI integration with existing enterprise systems and workflows for seamless operations.'};
+      icon: <Building2 className="w-6 h-6"  />,
+      title: 'Enterprise AI Integration',
+      description: 'Advanced AI integration with existing enterprise systems and workflows for seamless operations.'},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: 'Scalable AI Infrastructure';
-      description: 'Revolutionary scalable AI infrastructure that grows with your business needs and requirements.'};
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Scalable AI Infrastructure',
+      description: 'Revolutionary scalable AI infrastructure that grows with your business needs and requirements.'},
     {
-      icon: <Target className="w-6 h-6"  />;
-      title: 'Custom AI Solutions';
-      description: 'Intelligent custom AI solutions tailored to your specific enterprise challenges and objectives.'};
+      icon: <Target className="w-6 h-6"  />,
+      title: 'Custom AI Solutions',
+      description: 'Intelligent custom AI solutions tailored to your specific enterprise challenges and objectives.'},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: 'Enterprise Security';
-      description: 'Advanced enterprise security with AI-powered threat detection and compliance monitoring.'};
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Enterprise Security',
+      description: 'Advanced enterprise security with AI-powered threat detection and compliance monitoring.'},
     {
-      icon: <TrendingUp className="w-6 h-6"  />;
-      title: 'Performance Analytics';
-      description: 'Comprehensive performance analytics with AI-powered insights and optimization recommendations.'};
+      icon: <TrendingUp className="w-6 h-6"  />,
+      title: 'Performance Analytics',
+      description: 'Comprehensive performance analytics with AI-powered insights and optimization recommendations.'},
     {
-      icon: <Globe className="w-6 h-6"  />;
-      title: 'Global Enterprise Support';
+      icon: <Globe className="w-6 h-6"  />,
+      title: 'Global Enterprise Support',
       description: '24/7 global enterprise support with AI-powered automation and dedicated account management.'}
   ],
   const benefits = [
-    'Improve operational efficiency by 30o0%';
-    'Reduce operational costs by 60%';
-    'Increase productivity by 20o0%';
-    'Enable data-driven decisions';
-    'Scale operations globally';
-    'Optimize business processes';
-    'Scale AI solutions enterprise-wide';
-    'Future-proof business operations'],
+    'Improve operational efficiency by 30o0%Reduce operational costs by 60%',
+    'Increase productivity by 20o0%Enable data-driven decisions',
+    'Scale operations globallyOptimize business processes',
+    'Scale AI solutions enterprise-wideFuture-proof business operations'],
   const useCases = [
-    'Process Automation', 'Data Analytics', 'Customer Intelligence';
-    'Supply Chain Optimization', 'Risk Management', 'Performance Monitoring';
-    'Business Intelligence', 'Predictive Analytics', 'Workflow Optimization';
-    'Enterprise Analytics', 'AI Strategy', 'Digital Transformation'],
+    'Process AutomationData Analytics', 'Customer IntelligenceSupply Chain Optimization', 'Risk ManagementPerformance Monitoring',
+    'Business IntelligencePredictive Analytics', 'Workflow OptimizationEnterprise Analytics', 'AI StrategyDigital Transformation'],
   return (
     <>,
       <Head>,
@@ -76,7 +70,7 @@ export default function EnterpriseAISolutions() {
                 Enterprise AI Solutions,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Transform enterprise operations with AI-powered integration;
+                Transform enterprise operations with AI-powered integration,
                 scalable infrastructure, and custom solutions for maximum business impact.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,

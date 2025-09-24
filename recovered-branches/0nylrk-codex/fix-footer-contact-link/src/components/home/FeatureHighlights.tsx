@@ -4,7 +4,7 @@ export function FeatureHighlights() {
   const highlightsData = [
     {
       title: "For Talent Seekers",
-      title: "For Talent Seekers";
+      title: "For Talent Seekers",
       features: [
         "AI-powered talent matching based on your specific project requirements",
         "Verified profiles with skills validation and credential checking",
@@ -12,8 +12,8 @@ export function FeatureHighlights() {
         "Direct communication with potential candidates",
       features: [
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982,
-        "Secure payment protection and dispute resolution";
-        "Post jobs and receive AI-matched applicants"]};
+        "Secure payment protection and dispute resolution",
+        "Post jobs and receive AI-matched applicants"]},
     {
       title: "For Talent & Service Providers",
       features: [
@@ -21,7 +21,7 @@ export function FeatureHighlights() {
       title: "For Enterprise Clients",
       features: [
         "Customizable workflow and approval processes"]}
-  ];
+  ],
   return (
     <section className="py-16 bg-zion-blue">,
       <div className="container mx-auto px-4">,

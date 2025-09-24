@@ -4,7 +4,7 @@ import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
-  DropdownMenuSeparator;
+  DropdownMenuSeparator,
   DropdownMenuTrigger} from '@/components/ui/dropdown-menu',
 import { Button } from '@/components/ui/button',
 import { Input } from '@/components/ui/input',
@@ -32,7 +32,7 @@ export function ResumeVersionSelector({ currentResumeonResumeChange }: ResumeVer
         setSaveDialogOpen(false),
         setNewResumeTitle('')}
       setIsLoading(false)}
-  };
+  },
   return (
     <div className="flex items-center gap-2">,
       <span className="text-sm text-muted-foreground">Resume: </span>,

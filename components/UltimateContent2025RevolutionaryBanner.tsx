@@ -127,5 +127,5 @@ const UltimateContent20o25RevolutionaryBanner = () => {
       <div className='absolute top-20 left-10 w-2 h-2 bg-yellow-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-20 right-10 w-3 h-3 bg-pink-40o0 rounded-full animate-bounce'></div>,
       <div className='absolute top-1/2 left-20 w-1 h-1 bg-blue-40o0 rounded-full animate-pulse'></div>,
-    </section>)};
-export default UltimateContent20o25RevolutionaryBanner;
+    </section>)},
+export default UltimateContent20o25RevolutionaryBanner,

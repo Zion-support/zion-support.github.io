@@ -1,19 +1,19 @@
 export interface RealMarketService {
-  id: string;
-  name: string;
-  tagline: string;
-  price: string;
-  description: string;
-  features: string[];
-  link: string;
-  category: string;
-  realImplementation: boolean;
+  id: string,
+  name: string,
+  tagline: string,
+  price: string,
+  description: string,
+  features: string[],
+  link: string,
+  category: string,
+  realImplementation: boolean,
   contactInfo: {
-    mobile: string;
-    email: string;
-    address: string;
-    website?: string;
-  };
+    mobile: string,
+    email: string,
+    address: string,
+    website?: string
+  },
 }
 
 export const realMarketServices: RealMarketService[] = [
@@ -25,10 +25,8 @@ export const realMarketServices: RealMarketService[] = [
     description:
       'Advanced market analysis platform providing insights and trends for business decision making.',
     features: [
-      'Market research tools',
-      'Trend analysis',
-      'Competitor tracking',
-      'Data visualization',
+      'Market research toolsTrend analysis',
+      'Competitor trackingData visualization',
       'Report generation'],
     link: '/services/market-analysis-platform',
     category: 'Market Services',
@@ -36,4 +34,4 @@ export const realMarketServices: RealMarketService[] = [
     contactInfo: {
       mobile: '+1 302 464 0950',
       email: 'kleber@ziontechgroup.com',
-      address: '364 E Main St STE 1008 Middletown DE 19709'}}];
+      address: '364 E Main St STE 1008 Middletown DE 19709'}}],

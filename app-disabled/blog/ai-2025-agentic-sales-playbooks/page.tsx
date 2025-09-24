@@ -45,13 +45,13 @@ const AgenticSalesPlaybooks20o25 = () => {
               sessions,
             </li>,
             <li>,
-              Renewals: risk signals, adoption insights, expansion triggers;
+              Renewals: risk signals, adoption insights, expansion triggers,
               executive briefs,
             </li>,
           </ul>,
           <h2>Architecture</h2>,
           <p>,
-            Event-driven design with a workflow engine, retrieval for context;
+            Event-driven design with a workflow engine, retrieval for context,
             tools for CRM/calendar/email, and a safety layer for approvals.,
             Start with one playbook, measure cycle time and response lift, then,
             scale.,
@@ -76,5 +76,5 @@ const AgenticSalesPlaybooks20o25 = () => {
           </Link>,
         </footer>,
       </article>,
-    </div>)};
-export default AgenticSalesPlaybooks20o25;
+    </div>)},
+export default AgenticSalesPlaybooks20o25,

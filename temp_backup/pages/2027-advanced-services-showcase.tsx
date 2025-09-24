@@ -3,12 +3,12 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle;
-  ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield;
-  Microscope, Crown, Infinity, Target, Layers, Cpu, Database;
-  Cloud, Lock, ShieldCheck, Filter, Grid, List, ChevronDown;
-  ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car;
-  Leaf, Factory, Truck, GraduationCap, Globe2, Bot, ChevronRight;
+  Search, Star, Users, TrendingUp, DollarSign, Clock, CheckCircle,
+  ArrowRight, Rocket, Brain, Atom, Globe, Zap, Sparkles, Shield,
+  Microscope, Crown, Infinity, Target, Layers, Cpu, Database,
+  Cloud, Lock, ShieldCheck, Filter, Grid, List, ChevronDown,
+  ChevronUp, Sparkles as SparklesIcon, FlaskConical, Dna, Car,
+  Leaf, Factory, Truck, GraduationCap, Globe2, Bot, ChevronRight,
   Phone, Mail, MapPin, MessageCircle} from 'lucide-react',
 import { advancedAIAutomationServices } from '../data/20o27-advanced-ai-automation-services',
 import { emergingTechInnovations } from '../data/20o27-emerging-tech-innovations',
@@ -22,130 +22,112 @@ export default function AdvancedServicesShowcase20o27() {
   const [sortBy, setSortBy] = useState<string>('name'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const allServices = [
-    ...advancedAIAutomationServices;
-    ...emergingTechInnovations;
-    ...enterpriseSolutionsAdvanced;
-    ...cuttingEdge20o27Innovations;
+    ...advancedAIAutomationServices,
+    ...emergingTechInnovations,
+    ...enterpriseSolutionsAdvanced,
+    ...cuttingEdge20o27Innovations,
     ...practicalMicroSaas20o27],
   // Enhanced service categories with comprehensive offerings,
   const serviceCategories = [
     {
-      name: '🚀 Advanced AI Automation 20o27';
-      description: 'Cutting-edge AI automation solutions for business transformation';
-      services: ['AI Customer Success Automation', 'Automated Content Marketing Suite', 'Smart Inventory Management System'];
-      avgPrice: '$299/month';
-      savings: 'Save 60-80% vs. competitors';
-      icon: Brain;
-      color: 'from-blue-60o0 to-cyan-60o0';
-      count: advancedAIAutomationServices.length};
+      name: '🚀 Advanced AI Automation 20o27',
+      description: 'Cutting-edge AI automation solutions for business transformation',
+      services: ['AI Customer Success AutomationAutomated Content Marketing Suite', 'Smart Inventory Management System'],
+      avgPrice: '$299/month',
+      savings: 'Save 60-80% vs. competitors',
+      icon: Brain,
+      color: 'from-blue-60o0 to-cyan-60o0',
+      count: advancedAIAutomationServices.length},
     {
-      name: '⚛️ Emerging Tech Innovations 20o27';
-      description: 'Revolutionary emerging technology solutions';
-      services: ['Quantum Internet Security Gateway', 'Space Debris Management AI', 'Holographic Metaverse Platform'];
-      avgPrice: '$5,999/month';
-      savings: 'Save 70-90% vs. competitors';
-      icon: Atom;
-      color: 'from-purple-60o0 to-violet-60o0';
-      count: emergingTechInnovations.length};
+      name: '⚛️ Emerging Tech Innovations 20o27',
+      description: 'Revolutionary emerging technology solutions',
+      services: ['Quantum Internet Security GatewaySpace Debris Management AI', 'Holographic Metaverse Platform'],
+      avgPrice: '$5,999/month',
+      savings: 'Save 70-90% vs. competitors',
+      icon: Atom,
+      color: 'from-purple-60o0 to-violet-60o0',
+      count: emergingTechInnovations.length},
     {
-      name: '🏢 Enterprise Solutions Advanced 20o27';
-      description: 'Enterprise-grade solutions for large organizations';
-      services: ['Zero Trust Architecture 20o27', 'Edge Computing Orchestration', '5G Private Networks'];
-      avgPrice: 'Custom pricing';
-      savings: 'Save 50-70% vs. competitors';
-      icon: Shield;
-      color: 'from-red-60o0 to-orange-60o0';
-      count: enterpriseSolutionsAdvanced.length};
+      name: '🏢 Enterprise Solutions Advanced 20o27',
+      description: 'Enterprise-grade solutions for large organizations',
+      services: ['Zero Trust Architecture 20o27Edge Computing Orchestration', '5G Private Networks'],
+      avgPrice: 'Custom pricing',
+      savings: 'Save 50-70% vs. competitors',
+      icon: Shield,
+      color: 'from-red-60o0 to-orange-60o0',
+      count: enterpriseSolutionsAdvanced.length},
     {
-      name: '🔮 Cutting-Edge Innovations 20o27';
-      description: 'Beyond the future of technology';
-      services: ['AI Consciousness Evolution', 'Quantum Consciousness Interface', 'Autonomous AI Civilization'];
-      avgPrice: '$15,999/month';
-      savings: 'Save 80-95% vs. competitors';
-      icon: Sparkles;
-      color: 'from-violet-60o0 to-purple-60o0';
-      count: cuttingEdge20o27Innovations.length};
+      name: '🔮 Cutting-Edge Innovations 20o27',
+      description: 'Beyond the future of technology',
+      services: ['AI Consciousness EvolutionQuantum Consciousness Interface', 'Autonomous AI Civilization'],
+      avgPrice: '$15,999/month',
+      savings: 'Save 80-95% vs. competitors',
+      icon: Sparkles,
+      color: 'from-violet-60o0 to-purple-60o0',
+      count: cuttingEdge20o27Innovations.length},
     {
-      name: '🎯 Practical Micro SAAS 20o27';
-      description: 'Real business solutions for today';
-      services: ['AI Customer Success Automation', 'Automated Content Marketing', 'Smart Inventory Management'];
-      avgPrice: '$299/month';
-      savings: 'Save 60-80% vs. competitors';
-      icon: Target;
-      color: 'from-green-60o0 to-emerald-60o0';
+      name: '🎯 Practical Micro SAAS 20o27',
+      description: 'Real business solutions for today',
+      services: ['AI Customer Success AutomationAutomated Content Marketing', 'Smart Inventory Management'],
+      avgPrice: '$299/month',
+      savings: 'Save 60-80% vs. competitors',
+      icon: Target,
+      color: 'from-green-60o0 to-emerald-60o0',
       count: practicalMicroSaas20o27.length}
   ],
   // Enhanced pricing tiers,
   const pricingTiers = [
     {
-      name: 'Starter';
-      description: 'Perfect for startups and small businesses';
-      price: 99;
-      period: '/month';
+      name: 'Starter',
+      description: 'Perfect for startups and small businesses',
+      price: 99,
+      period: '/month',
       features: [
-        'Access to 10o0+ Core Services';
-        'Basic AI Integration';
-        'Standard Support (24/7)';
-        '30-Day Free Trial';
-        'Basic Analytics Dashboard';
-        'Email Support';
-        '99.5% Uptime Guarantee';
-        'Standard Security Features';
-        'API Access (10o00 calls/month)';
-        'Community Forum Access'];
-      icon: <Sparkles className="w-8 h-8"  />;
-      color: 'from-blue-60o0 to-cyan-60o0';
-      popular: false};
+        'Access to 10o0+ Core ServicesBasic AI Integration',
+        'Standard Support (24/7)30-Day Free Trial',
+        'Basic Analytics DashboardEmail Support',
+        '99.5% Uptime GuaranteeStandard Security Features',
+        'API Access (10o00 calls/month)Community Forum Access'],
+      icon: <Sparkles className="w-8 h-8"  />,
+      color: 'from-blue-60o0 to-cyan-60o0',
+      popular: false},
     {
-      name: 'Professional';
-      description: 'Ideal for growing businesses';
-      price: 299;
-      period: '/month';
+      name: 'Professional',
+      description: 'Ideal for growing businesses',
+      price: 299,
+      period: '/month',
       features: [
-        'Access to 20o0+ Advanced Services';
-        'Advanced AI Integration';
-        'Priority Support (24/7)';
-        '60-Day Free Trial';
-        'Advanced Analytics Dashboard';
-        'Phone & Email Support';
-        '99.9% Uptime Guarantee';
-        'Advanced Security Features';
-        'API Access (10,0o00 calls/month)';
-        'Priority Community Access';
-        'Custom Integrations';
-        'Performance Optimization'];
-      icon: <Crown className="w-8 h-8"  />;
-      color: 'from-purple-60o0 to-pink-60o0';
-      popular: true};
+        'Access to 20o0+ Advanced ServicesAdvanced AI Integration',
+        'Priority Support (24/7)60-Day Free Trial',
+        'Advanced Analytics DashboardPhone & Email Support',
+        '99.9% Uptime GuaranteeAdvanced Security Features',
+        'API Access (10,0o00 calls/month)Priority Community Access',
+        'Custom IntegrationsPerformance Optimization'],
+      icon: <Crown className="w-8 h-8"  />,
+      color: 'from-purple-60o0 to-pink-60o0',
+      popular: true},
     {
-      name: 'Enterprise';
-      description: 'For large organizations and enterprises';
-      price: 999;
-      period: '/month';
+      name: 'Enterprise',
+      description: 'For large organizations and enterprises',
+      price: 999,
+      period: '/month',
       features: [
-        'Access to ALL 50o0+ Services';
-        'Full AI & Quantum Integration';
-        'Dedicated Support Team';
-        '90-Day Free Trial';
-        'Enterprise Analytics Suite';
-        '24/7 Dedicated Support';
-        '99.99% Uptime Guarantee';
-        'Enterprise Security & Compliance';
-        'Unlimited API Access';
-        'VIP Community Access';
-        'Custom Development';
-        'White-label Solutions';
-        'SLA Guarantees';
-        'On-site Implementation'];
-      icon: <Infinity className="w-8 h-8"  />;
-      color: 'from-red-60o0 to-orange-60o0';
+        'Access to ALL 50o0+ ServicesFull AI & Quantum Integration',
+        'Dedicated Support Team90-Day Free Trial',
+        'Enterprise Analytics Suite24/7 Dedicated Support',
+        '99.99% Uptime GuaranteeEnterprise Security & Compliance',
+        'Unlimited API AccessVIP Community Access',
+        'Custom DevelopmentWhite-label Solutions',
+        'SLA GuaranteesOn-site Implementation'],
+      icon: <Infinity className="w-8 h-8"  />,
+      color: 'from-red-60o0 to-orange-60o0',
       popular: false}
   ],
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   // Filter and sort services,
   const filteredServices = useMemo(() => {
     let filtered = allServices,
@@ -199,22 +181,22 @@ export default function AdvancedServicesShowcase20o27() {
 ,
     return filtered}, [allServices, searchTerm, selectedCategory, selectedPriceRange, sortBy]),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <>,
       <Head>,

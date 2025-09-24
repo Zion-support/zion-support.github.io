@@ -2,159 +2,159 @@ import { Link } from 'react-router-dom',
 const Sitemap = () => {
   const sitemapData = {
     main: [
-      { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' };
+      { path: '/', label: 'Home', description: 'Welcome to Zion Tech Group' },
       {
-        path: '/about';
-        label: 'About Us';
-        description: 'Learn about our company and mission';
-      };
+        path: '/about',
+        label: 'About Us',
+        description: 'Learn about our company and mission'
+      },
       {
-        path: '/contact';
-        label: 'Contact';
-        description: 'Get in touch with our team';
-      };
+        path: '/contact',
+        label: 'Contact',
+        description: 'Get in touch with our team'
+      },
       {
-        path: '/careers';
-        label: 'Careers';
-        description: 'Join our innovative team';
-      };
+        path: '/careers',
+        label: 'Careers',
+        description: 'Join our innovative team'
+      },
       {
-        path: '/blog';
-        label: 'Blog';
-        description: 'Latest insights and technology trends';
-      };
-    ];
+        path: '/blog',
+        label: 'Blog',
+        description: 'Latest insights and technology trends'
+      },
+    ],
     services: [
       {
-        path: '/services';
-        label: 'All Services';
-        description: 'Complete overview of our services';
-      };
+        path: '/services',
+        label: 'All Services',
+        description: 'Complete overview of our services'
+      },
       {
-        path: '/services/ai';
-        label: 'AI Solutions';
-        description: 'Artificial Intelligence & Machine Learning';
-      };
+        path: '/services/ai',
+        label: 'AI Solutions',
+        description: 'Artificial Intelligence & Machine Learning'
+      },
       {
-        path: '/services/cloud';
-        label: 'Cloud & DevOps';
-        description: 'Cloud Infrastructure & DevOps Automation';
-      };
+        path: '/services/cloud',
+        label: 'Cloud & DevOps',
+        description: 'Cloud Infrastructure & DevOps Automation'
+      },
       {
-        path: '/services/cybersecurity';
-        label: 'Cybersecurity';
-        description: 'Advanced Security Solutions';
-      };
+        path: '/services/cybersecurity',
+        label: 'Cybersecurity',
+        description: 'Advanced Security Solutions'
+      },
       {
-        path: '/services/infrastructure';
-        label: 'Infrastructure';
-        description: 'IT Infrastructure & Management';
-      };
+        path: '/services/infrastructure',
+        label: 'Infrastructure',
+        description: 'IT Infrastructure & Management'
+      },
       {
-        path: '/services/consulting';
-        label: 'Consulting';
-        description: 'Strategic Technology Consulting';
-      };
+        path: '/services/consulting',
+        label: 'Consulting',
+        description: 'Strategic Technology Consulting'
+      },
       {
-        path: '/services/transformation';
-        label: 'Digital Transformation';
-        description: 'Business Process Transformation';
-      };
-    ];
+        path: '/services/transformation',
+        label: 'Digital Transformation',
+        description: 'Business Process Transformation'
+      },
+    ],
     aiAutonomous: [
       {
-        path: '/ai-autonomous-analytics';
-        label: 'AI Analytics';
-        description: 'Advanced data analytics powered by AI';
-      };
+        path: '/ai-autonomous-analytics',
+        label: 'AI Analytics',
+        description: 'Advanced data analytics powered by AI'
+      },
       {
-        path: '/ai-autonomous-automation';
-        label: 'AI Automation';
-        description: 'Intelligent process automation';
-      };
+        path: '/ai-autonomous-automation',
+        label: 'AI Automation',
+        description: 'Intelligent process automation'
+      },
       {
-        path: '/ai-autonomous-security';
-        label: 'AI Security';
-        description: 'AI-powered security solutions';
-      };
+        path: '/ai-autonomous-security',
+        label: 'AI Security',
+        description: 'AI-powered security solutions'
+      },
       {
-        path: '/ai-autonomous-development';
-        label: 'AI Development';
-        description: 'AI application development';
-      };
+        path: '/ai-autonomous-development',
+        label: 'AI Development',
+        description: 'AI application development'
+      },
       {
-        path: '/ai-autonomous-research';
-        label: 'AI Research';
-        description: 'Cutting-edge AI research services';
-      };
+        path: '/ai-autonomous-research',
+        label: 'AI Research',
+        description: 'Cutting-edge AI research services'
+      },
       {
-        path: '/ai-autonomous-innovation';
-        label: 'AI Innovation';
-        description: 'AI innovation consulting';
-      };
+        path: '/ai-autonomous-innovation',
+        label: 'AI Innovation',
+        description: 'AI innovation consulting'
+      },
       {
-        path: '/ai-autonomous-architecture';
-        label: 'AI Architecture';
-        description: 'AI system architecture design';
-      };
+        path: '/ai-autonomous-architecture',
+        label: 'AI Architecture',
+        description: 'AI system architecture design'
+      },
       {
-        path: '/ai-autonomous-data';
-        label: 'AI Data';
-        description: 'AI data processing and management';
-      };
+        path: '/ai-autonomous-data',
+        label: 'AI Data',
+        description: 'AI data processing and management'
+      },
       {
-        path: '/ai-autonomous-engineering';
-        label: 'AI Engineering';
-        description: 'AI engineering solutions';
-      };
+        path: '/ai-autonomous-engineering',
+        label: 'AI Engineering',
+        description: 'AI engineering solutions'
+      },
       {
-        path: '/ai-autonomous-integration';
-        label: 'AI Integration';
-        description: 'AI system integration services';
-      };
-    ];
+        path: '/ai-autonomous-integration',
+        label: 'AI Integration',
+        description: 'AI system integration services'
+      },
+    ],
     pricing: [
       {
-        path: '/comprehensive-pricing-20o25';
-        label: 'Pricing 20o25';
-        description: 'Current year pricing plans';
-      };
+        path: '/comprehensive-pricing-20o25',
+        label: 'Pricing 20o25',
+        description: 'Current year pricing plans'
+      },
       {
-        path: '/comprehensive-pricing';
-        label: 'Comprehensive Pricing';
-        description: 'Detailed pricing information';
-      };
-    ];
+        path: '/comprehensive-pricing',
+        label: 'Comprehensive Pricing',
+        description: 'Detailed pricing information'
+      },
+    ],
     showcase: [
       {
-        path: '/services-showcase';
-        label: 'Services Showcase';
-        description: 'Showcase of our services';
-      };
+        path: '/services-showcase',
+        label: 'Services Showcase',
+        description: 'Showcase of our services'
+      },
       {
-        path: '/comprehensive-services-showcase';
-        label: 'Comprehensive Services Showcase';
-        description: 'Complete overview of all services';
-      };
+        path: '/comprehensive-services-showcase',
+        label: 'Comprehensive Services Showcase',
+        description: 'Complete overview of all services'
+      },
       {
-        path: '/innovative-services-20o25';
-        label: 'Innovative Services 20o25';
-        description: 'Latest innovative services';
-      };
-    ];
+        path: '/innovative-services-20o25',
+        label: 'Innovative Services 20o25',
+        description: 'Latest innovative services'
+      },
+    ],
     legal: [
       {
-        path: '/privacy';
-        label: 'Privacy Policy';
-        description: 'Our privacy policy and data handling';
-      };
+        path: '/privacy',
+        label: 'Privacy Policy',
+        description: 'Our privacy policy and data handling'
+      },
       {
-        path: '/terms';
-        label: 'Terms of Service';
-        description: 'Terms and conditions of service';
-      };
-    ];
-  };
+        path: '/terms',
+        label: 'Terms of Service',
+        description: 'Terms and conditions of service'
+      },
+    ],
+  },
   return (
     <div className='bg-slate-50 py-16'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -339,65 +339,36 @@ const Sitemap = () => {
           </h3>,
           <div className='grid grid-cols-1 md: grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4'>,
             {[
-              'AI Autonomous Audit';
-              'AI Autonomous Compliance';
-              'AI Autonomous Creativity';
-              'AI Autonomous Customer Service';
-              'AI Autonomous Database Security';
-              'AI Autonomous Decision Engine';
-              'AI Autonomous Design';
-              'AI Autonomous DevOps';
-              'AI Autonomous Edge Security';
-              'AI Autonomous Education';
-              'AI Autonomous Finance';
-              'AI Autonomous Forensics';
-              'AI Autonomous Governance';
-              'AI Autonomous Healthcare';
-              'AI Autonomous Hybrid Security';
-              'AI Autonomous Identity Security';
-              'AI Autonomous Incident Response';
-              'AI Autonomous Infrastructure Security';
-              'AI Autonomous Invention';
-              'AI Autonomous IoT Security';
-              'AI Autonomous Learning';
-              'AI Autonomous Legal Counsel';
-              'AI Autonomous Logistics';
-              'AI Autonomous Malware Analysis';
-              'AI Autonomous Management';
-              'AI Autonomous Manufacturing';
-              'AI Autonomous Marketing';
-              'AI Autonomous Microservice Security';
-              'AI Autonomous Mobile Security';
-              'AI Autonomous Monitoring';
-              'AI Autonomous Network Security';
-              'AI Autonomous Optimization';
-              'AI Autonomous Orchestration';
-              'AI Autonomous Penetration Testing';
-              'AI Autonomous Planning';
-              'AI Autonomous Prediction';
-              'AI Autonomous Quality Assurance';
-              'AI Autonomous Reasoning';
-              'AI Autonomous Recommendation';
-              'AI Autonomous Risk Management';
-              'AI Autonomous Robotics';
-              'AI Autonomous Scientific Research';
-              'AI Autonomous Serverless Security';
-              'AI Autonomous Software Engineering';
-              'AI Autonomous Speech';
-              'AI Autonomous Synthesis';
-              'AI Autonomous Systems Platform';
-              'AI Autonomous Testing';
-              'AI Autonomous Threat Detection';
-              'AI Autonomous Threat Intelligence';
-              'AI Autonomous Trading';
-              'AI Autonomous Translation';
-              'AI Autonomous Virtual Assistant';
-              'AI Autonomous Vision';
-              'AI Autonomous Vulnerability Assessment';
-              'AI Autonomous Web Security';
-              'AI Autonomous Workflow';
-              'AI Autonomous Writing';
-              'AI Autonomous Zero Trust Security';
+              'AI Autonomous AuditAI Autonomous Compliance',
+              'AI Autonomous CreativityAI Autonomous Customer Service',
+              'AI Autonomous Database SecurityAI Autonomous Decision Engine',
+              'AI Autonomous DesignAI Autonomous DevOps',
+              'AI Autonomous Edge SecurityAI Autonomous Education',
+              'AI Autonomous FinanceAI Autonomous Forensics',
+              'AI Autonomous GovernanceAI Autonomous Healthcare',
+              'AI Autonomous Hybrid SecurityAI Autonomous Identity Security',
+              'AI Autonomous Incident ResponseAI Autonomous Infrastructure Security',
+              'AI Autonomous InventionAI Autonomous IoT Security',
+              'AI Autonomous LearningAI Autonomous Legal Counsel',
+              'AI Autonomous LogisticsAI Autonomous Malware Analysis',
+              'AI Autonomous ManagementAI Autonomous Manufacturing',
+              'AI Autonomous MarketingAI Autonomous Microservice Security',
+              'AI Autonomous Mobile SecurityAI Autonomous Monitoring',
+              'AI Autonomous Network SecurityAI Autonomous Optimization',
+              'AI Autonomous OrchestrationAI Autonomous Penetration Testing',
+              'AI Autonomous PlanningAI Autonomous Prediction',
+              'AI Autonomous Quality AssuranceAI Autonomous Reasoning',
+              'AI Autonomous RecommendationAI Autonomous Risk Management',
+              'AI Autonomous RoboticsAI Autonomous Scientific Research',
+              'AI Autonomous Serverless SecurityAI Autonomous Software Engineering',
+              'AI Autonomous SpeechAI Autonomous Synthesis',
+              'AI Autonomous Systems PlatformAI Autonomous Testing',
+              'AI Autonomous Threat DetectionAI Autonomous Threat Intelligence',
+              'AI Autonomous TradingAI Autonomous Translation',
+              'AI Autonomous Virtual AssistantAI Autonomous Vision',
+              'AI Autonomous Vulnerability AssessmentAI Autonomous Web Security',
+              'AI Autonomous WorkflowAI Autonomous Writing',
+              'AI Autonomous Zero Trust Security',
             ].map(service => {
               const path =,
                 '/' +,
@@ -417,5 +388,5 @@ const Sitemap = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default Sitemap;
+    </div>)},
+export default Sitemap,

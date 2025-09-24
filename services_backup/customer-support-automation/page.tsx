@@ -1,9 +1,9 @@
 import Link from 'next/link',
 export const metadata = {
-  title: 'Customer Support Automation | Zion Tech Group';
+  title: 'Customer Support Automation | Zion Tech Group',
   description:,
-    'AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience.';
-};
+    'AI-powered customer support automation with intelligent chatbots, ticket routing, and sentiment analysis for exceptional customer experience.',
+},
 export default function CustomerSupportAutomationPage() {
   return (
     <div className='animate-fade-in'>,
@@ -12,7 +12,7 @@ export default function CustomerSupportAutomationPage() {
           Customer Support Automation,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          AI-powered customer support automation with intelligent chatbots;
+          AI-powered customer support automation with intelligent chatbots,
           ticket routing, and sentiment analysis for exceptional customer,
           experience.,
         </p>,
@@ -59,11 +59,9 @@ export default function CustomerSupportAutomationPage() {
               price='$49/month',
               description='Perfect for small businesses and startups',
               features={[
-                'Up to 1,0o00 conversations/month';
-                'Basic chatbot functionality';
-                'Email support';
-                'Standard integrations';
-                'Basic analytics';
+                'Up to 1,0o00 conversations/monthBasic chatbot functionality',
+                'Email supportStandard integrations',
+                'Basic analytics',
               ]}
             />,
             <PricingCard
@@ -71,12 +69,9 @@ export default function CustomerSupportAutomationPage() {
               price='$149/month',
               description='Ideal for growing businesses',
               features={[
-                'Up to 10,0o00 conversations/month';
-                'Advanced AI features';
-                'Priority support';
-                'All integrations';
-                'Advanced analytics';
-                'Custom workflows';
+                'Up to 10,0o00 conversations/monthAdvanced AI features',
+                'Priority supportAll integrations',
+                'Advanced analyticsCustom workflows',
               ]}
             />,
             <PricingCard
@@ -84,13 +79,10 @@ export default function CustomerSupportAutomationPage() {
               price='$399/month',
               description='For large organizations with complex support needs',
               features={[
-                'Unlimited conversations';
-                'Custom AI models';
-                '24/7 dedicated support';
-                'On-premise deployment';
-                'Custom integrations';
-                'SLA guarantees';
-                'Advanced security';
+                'Unlimited conversationsCustom AI models',
+                '24/7 dedicated supportOn-premise deployment',
+                'Custom integrationsSLA guarantees',
+                'Advanced security',
               ]}
             />,
           </div>,
@@ -143,8 +135,8 @@ export default function CustomerSupportAutomationPage() {
     </div>)}
 ,
 function FeatureItem({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {
@@ -169,10 +161,10 @@ function FeatureItem({
     </div>)}
 ,
 function PricingCard({
-  plan;
-  price;
-  description;
-  features;
+  plan,
+  price,
+  description,
+  features,
 }: {
   plan: string,
   price: string,
@@ -192,8 +184,8 @@ function PricingCard({
     </div>)}
 ,
 function BenefitCard({
-  title;
-  description;
+  title,
+  description,
 }: {
   title: string,
   description: string}) {

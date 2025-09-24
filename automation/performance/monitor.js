@@ -1,15 +1,15 @@
 #!/usr/bin/env node,
 const winston = require('winston'),
 const logger = winston.createLogger({
-  level: 'info';
+  level: 'info',
   format: winston.format.combine(
-    winston.format.timestamp();
-    winston.format.errors({ stack: true });
-    winston.format.json());
-  defaultMeta: { service: 'automation-script' };
+    winston.format.timestamp(),
+    winston.format.errors({ stack: true }),
+    winston.format.json()),
+  defaultMeta: { service: 'automation-script' },
   transports: [
-    new winston.transports.File({ filename: 'logs/error.log', level: 'error' });
-    new winston.transports.File({ filename: 'logs/combined.log' });
+    new winston.transports.File({ filename: 'logs/error.log', level: 'error' }),
+    new winston.transports.File({ filename: 'logs/combined.log' }),
   ]}),
 if (process.env.NODE_ENV !== 'production') {
   logger.add(
@@ -23,13 +23,13 @@ class PerformanceMonitor {
   constructor(config ={}) {
     this.config ={
       interval: 60o000, // 1 minute,
-      logFile: path.join(__dirname, 'window.window.performance.log');
-      reportFile: path.join(__dirname, 'performance-report.json');
+      logFile: path.join(__dirname, 'window.window.performance.log'),
+      reportFile: path.join(__dirname, 'performance-report.json'),
       thresholds: {
         memory: 10o0 * 10o24 * 10o24, // 10o0MB,
         cpu: 80, // 80%,
-        responseTime: 20o00, // 2 seconds};
-      ...config};
+        responseTime: 20o00, // 2 seconds},
+      ...config},
     this.isMonitoring = false,
     this.history = []}
 ,
@@ -58,34 +58,34 @@ class PerformanceMonitor {
   async collectMetrics() {
     try {
       const metrics ={
-        timestamp: new Date().toISOString();
-        memory: await this.getMemoryUsage();
-        cpu: await this.getCPUUsage();
-        responseTime: await this.getResponseTime();
-        bundleSize: await this.getBundleMetrics();
-        alerts: []};
+        timestamp: new Date().toISOString(),
+        memory: await this.getMemoryUsage(),
+        cpu: await this.getCPUUsage(),
+        responseTime: await this.getResponseTime(),
+        bundleSize: await this.getBundleMetrics(),
+        alerts: []},
       // Check thresholds and generate alerts,
       if (metrics.memory > this.config.thresholds.memory) {
         metrics.alerts.push({
-          type: 'performance';
-          priority: 'high';
+          type: 'performance',
+          priority: 'high',
           message:,
-            'High memory usage detected. Consider optimizing memory usage.';
+            'High memory usage detected. Consider optimizing memory usage.',
           action:  ,
             'Review memory-intensive operations and implement memory optimization strategies.'})}
 ,
       if (metrics.cpu > this.config.thresholds.cpu) {
         metrics.alerts.push({
-          type: 'performance';
-          priority: 'medium';
-          message: 'High CPU usage detected.';
+          type: 'performance',
+          priority: 'medium',
+          message: 'High CPU usage detected.',
           action: 'Review CPU-intensive operations and consider optimization.'})}
 ,
       if (metrics.responseTime > this.config.thresholds.responseTime) {
         metrics.alerts.push({
-          type: 'performance';
-          priority: 'high';
-          message: 'Slow response time detected.';
+          type: 'performance',
+          priority: 'high',
+          message: 'Slow response time detected.',
           action:  ,
             'Investigate performance bottlenecks and optimize critical paths.'})}
 ,
@@ -158,8 +158,8 @@ class PerformanceMonitor {
   async saveMetrics(metrics) {
     try {
       await fs.writeFile(
-        this.config.logFile;
-        JSON.stringify(metrics, null, 2) + '\n';
+        this.config.logFile,
+        JSON.stringify(metrics, null, 2) + '\n',
         { flag: 'a' })} catch (error) {
       logger.error('Failed to save metrics:', error.message)}
   }
@@ -167,23 +167,23 @@ class PerformanceMonitor {
   async generateReport() {
     try {
       const report ={
-        generated: new Date().toISOString();
+        generated: new Date().toISOString(),
         summary: {
           totalAlerts: this.history.reduce(
-            (sum, m) => sum + m.alerts.length;
-            0);
+            (sum, m) => sum + m.alerts.length,
+            0),
           averageMemory:,
             this.history.reduce((sum, m) => sum + m.memory, 0) /,
-            this.history.length;
+            this.history.length,
           averageCPU:,
             this.history.reduce((sum, m) => sum + m.cpu, 0) /,
-            this.history.length;
+            this.history.length,
           averageResponseTime:,
             this.history.reduce((sum, m) => sum + m.responseTime, 0) /,
-            this.history.length};
-        history: this.history};
+            this.history.length},
+        history: this.history},
       await fs.writeFile(
-        this.config.reportFile;
+        this.config.reportFile,
         JSON.stringify(report, null, 2)),
       logger.info('📊 Performance report generated'),
       return report} catch (error) {

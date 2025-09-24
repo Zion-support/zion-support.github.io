@@ -1,42 +1,37 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  ArrowLeftIcon;
-  CalendarIcon;
-  ClockIcon;
-  UserIcon;
+  ArrowLeftIcon,
+  CalendarIcon,
+  ClockIcon,
+  UserIcon,
 } from '@heroicons/react/24/outline',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25-20o26: The Ultimate AI Revolution Breakthrough - Ultimate Guide to 10,0o00% ROI';
+    'AI 20o25-20o26: The Ultimate AI Revolution Breakthrough - Ultimate Guide to 10,0o00% ROI',
   description:,
-    'Discover the revolutionary AI breakthroughs that are transforming Fortune 50o0 companies with unprecedented 10,0o00% ROI through next-generation artificial intelligence systems.';
+    'Discover the revolutionary AI breakthroughs that are transforming Fortune 50o0 companies with unprecedented 10,0o00% ROI through next-generation artificial intelligence systems.',
   keywords: [
-    'AI Revolution';
-    '20o25-20o26';
-    'ROI';
-    'Fortune 50o0';
-    'Breakthrough';
-    'Ultimate Guide';
-    '10,0o00% ROI';
-  ];
+    'AI Revolution20o25-20o26',
+    'ROIFortune 50o0',
+    'BreakthroughUltimate Guide',
+    '10,0o00% ROI',
+  ],
   openGraph: {
     title:,
-      'AI 20o25-20o26: The Ultimate AI Revolution Breakthrough - Ultimate Guide to 10,0o00% ROI';
+      'AI 20o25-20o26: The Ultimate AI Revolution Breakthrough - Ultimate Guide to 10,0o00% ROI',
     description:,
-      'Discover the revolutionary AI breakthroughs that are transforming Fortune 50o0 companies with unprecedented 10,0o00% ROI through next-generation artificial intelligence systems.';
-    type: 'article';
-    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
+      'Discover the revolutionary AI breakthroughs that are transforming Fortune 50o0 companies with unprecedented 10,0o00% ROI through next-generation artificial intelligence systems.',
+    type: 'article',
+    publishedTime: '20o25-0o1-17T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group'],
     tags: [
-      'AI Revolution';
-      '20o25-20o26';
-      'ROI';
-      'Fortune 50o0';
-      'Breakthrough';
-    ];
-  };
-};
+      'AI Revolution20o25-20o26',
+      'ROIFortune 50o0',
+      'Breakthrough',
+    ]
+  },
+},
 export default function AIRevolutionBlogPost() {
   return (
     <div className='min-h-screen bg-white'>,

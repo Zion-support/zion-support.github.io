@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react',
 import EnhancedLayout from '../../../components/layout/EnhancedLayout',
 export default function CommunityUserProfile() {
   const router = useRouter(),
-  const { id } = router.query as { id: string };
+  const { id } = router.query as { id: string },
   const [user, setUser] = useState<any>(null),
   useEffect(() => {
     if (!id) return,

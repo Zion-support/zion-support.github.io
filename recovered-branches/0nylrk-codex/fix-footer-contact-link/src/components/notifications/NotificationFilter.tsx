@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { TabsListTabsTrigger } from '@/components/ui/tabs',
 export type FilterType =,
   | 'all',
@@ -11,8 +11,8 @@ interface NotificationFilterProps {
   onFilterChange: (filter: FilterType) => void}
 ,
 export const NotificationFilter: React.FC<NotificationFilterProps> = ({
-  filter;
-  onFilterChange;
+  filter,
+  onFilterChange
 }) => {
   return (
     <div className='border-b border-zion-blue-light'>,
@@ -38,4 +38,4 @@ export const NotificationFilter: React.FC<NotificationFilterProps> = ({
           </TabsTrigger>,
         </TabsList>,
       </Tabs>,
-    </div>)};
+    </div>)},

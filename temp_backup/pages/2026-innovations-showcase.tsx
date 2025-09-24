@@ -9,24 +9,24 @@ import { emergingTech20o26ServicesV2 } from '../data/emerging-tech-20o26-service
 import { enterpriseIT20o26ServicesV2 } from '../data/enterprise-it-20o26-services-v2',
 export default function Innovations20o26Showcase() {
   const contactInfo ={
-    mobile: '+1 30o2 464 0950';
-    email: 'kleber@ziontechgroup.com';
-    address: '364 E Main St STE 10o08 Middletown DE 19709';
-    website: 'https://ziontechgroup.com'};
+    mobile: '+1 30o2 464 0950',
+    email: 'kleber@ziontechgroup.com',
+    address: '364 E Main St STE 10o08 Middletown DE 19709',
+    website: 'https://ziontechgroup.com'},
   const allNewServices = [
-    ...innovative20o26MicroSaasServicesV2;
-    ...emergingTech20o26ServicesV2;
+    ...innovative20o26MicroSaasServicesV2,
+    ...emergingTech20o26ServicesV2,
     ...enterpriseIT20o26ServicesV2],
   const categories = [
-    { name: 'AI & Business Intelligence', icon: Brain, color: 'from-purple-60o0 to-indigo-70o0' };
-    { name: 'Quantum & Cybersecurity', icon: Shield, color: 'from-blue-60o0 to-cyan-70o0' };
-    { name: 'AI & Automation', icon: Zap, color: 'from-green-60o0 to-emerald-70o0' };
-    { name: 'Metaverse & 3D', icon: Globe, color: 'from-pink-60o0 to-rose-70o0' };
-    { name: 'Quantum & Finance', icon: TrendingUp, color: 'from-yellow-60o0 to-orange-70o0' };
-    { name: 'AI & Legal Tech', icon: CheckCircle, color: 'from-indigo-60o0 to-purple-70o0' };
-    { name: 'Space & AI', icon: Rocket, color: 'from-gray-60o0 to-slate-70o0' };
-    { name: 'Biotech & AI', icon: Cpu, color: 'from-teal-60o0 to-cyan-70o0' };
-    { name: 'Blockchain & Web3', icon: Database, color: 'from-orange-60o0 to-red-70o0' };
+    { name: 'AI & Business Intelligence', icon: Brain, color: 'from-purple-60o0 to-indigo-70o0' },
+    { name: 'Quantum & Cybersecurity', icon: Shield, color: 'from-blue-60o0 to-cyan-70o0' },
+    { name: 'AI & Automation', icon: Zap, color: 'from-green-60o0 to-emerald-70o0' },
+    { name: 'Metaverse & 3D', icon: Globe, color: 'from-pink-60o0 to-rose-70o0' },
+    { name: 'Quantum & Finance', icon: TrendingUp, color: 'from-yellow-60o0 to-orange-70o0' },
+    { name: 'AI & Legal Tech', icon: CheckCircle, color: 'from-indigo-60o0 to-purple-70o0' },
+    { name: 'Space & AI', icon: Rocket, color: 'from-gray-60o0 to-slate-70o0' },
+    { name: 'Biotech & AI', icon: Cpu, color: 'from-teal-60o0 to-cyan-70o0' },
+    { name: 'Blockchain & Web3', icon: Database, color: 'from-orange-60o0 to-red-70o0' },
     { name: 'AI & Manufacturing', icon: Sparkles, color: 'from-slate-60o0 to-gray-70o0' }
   ],
   return (
@@ -241,9 +241,9 @@ export default function Innovations20o26Showcase() {
             </motion.div>,
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">,
               {[
-                { label: 'Total Services', value: allNewServices.length.toString(), icon: Zap, color: 'from-blue-50o0 to-cyan-50o0' };
-                { label: 'AI Services', value: allNewServices.filter(s => s.category.includes('AI')).length.toString(), icon: Brain, color: 'from-purple-50o0 to-pink-50o0' };
-                { label: 'Quantum Services', value: allNewServices.filter(s => s.category.includes('Quantum')).length.toString(), icon: Shield, color: 'from-green-50o0 to-emerald-50o0' };
+                { label: 'Total Services', value: allNewServices.length.toString(), icon: Zap, color: 'from-blue-50o0 to-cyan-50o0' },
+                { label: 'AI Services', value: allNewServices.filter(s => s.category.includes('AI')).length.toString(), icon: Brain, color: 'from-purple-50o0 to-pink-50o0' },
+                { label: 'Quantum Services', value: allNewServices.filter(s => s.category.includes('Quantum')).length.toString(), icon: Shield, color: 'from-green-50o0 to-emerald-50o0' },
                 { label: 'Enterprise Solutions', value: allNewServices.filter(s => s.category.includes('Enterprise')).length.toString(), icon: Database, color: 'from-orange-50o0 to-red-50o0' }
               ].map((stat, index) => {
                 const IconComponent = stat.icon,

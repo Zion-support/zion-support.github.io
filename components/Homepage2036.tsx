@@ -3,54 +3,54 @@ import Layout from './layout/Layout',
 import UltraFuturisticServiceCard20o36 from './ui/UltraFuturisticServiceCard20o36',
 import { motion } from 'framer-motion',
 import {
-  Brain, Rocket, Shield, Zap, Target, Atom, Globe;
-  Cpu, Lock, Cloud, Settings, Eye, Award, Clock;
-  Star, TrendingUp, Users, Building, Lightbulb;
-  ArrowRight, ChevronRight, Phone, Mail, MapPin;
+  Brain, Rocket, Shield, Zap, Target, Atom, Globe,
+  Cpu, Lock, Cloud, Settings, Eye, Award, Clock,
+  Star, TrendingUp, Users, Building, Lightbulb,
+  ArrowRight, ChevronRight, Phone, Mail, MapPin,
   Play, CheckCircle, Sparkles} from 'lucide-react',
 import { real20o36InnovativeServices } from '../data/real-20o36-innovative-services',
 import { real20o36SpecializedServices } from '../data/real-20o36-specialized-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const featuredServices = [
-  ...real20o36InnovativeServices.slice(0, 3);
+  ...real20o36InnovativeServices.slice(0, 3),
   ...real20o36SpecializedServices.slice(0, 3)],
 const stats = [
-  { label: 'Services Available', value: '50o0+', icon: <Rocket className="w-6 h-6"  /> };
-  { label: 'Market Coverage', value: '$20o0B+', icon: <TrendingUp className="w-6 h-6"  /> };
-  { label: 'Client Satisfaction', value: '98%', icon: <Star className="w-6 h-6"  /> };
+  { label: 'Services Available', value: '50o0+', icon: <Rocket className="w-6 h-6"  /> },
+  { label: 'Market Coverage', value: '$20o0B+', icon: <TrendingUp className="w-6 h-6"  /> },
+  { label: 'Client Satisfaction', value: '98%', icon: <Star className="w-6 h-6"  /> },
   { label: 'Global Reach', value: '50+', icon: <Globe className="w-6 h-6"  /> }
 ],
 const categories = [
-  { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6"  />, count: 150, color: 'from-green-50o0 to-emerald-60o0' };
-  { name: 'Quantum Technology', icon: <Atom className="w-6 h-6"  />, count: 80, color: 'from-cyan-50o0 to-blue-60o0' };
-  { name: 'Space Technology', icon: <Rocket className="w-6 h-6"  />, count: 60, color: 'from-purple-50o0 to-pink-60o0' };
-  { name: 'IT Infrastructure', icon: <Cpu className="w-6 h-6"  />, count: 120, color: 'from-orange-50o0 to-red-60o0' };
-  { name: 'Cybersecurity', icon: <Shield className="w-6 h-6"  />, count: 90, color: 'from-blue-50o0 to-indigo-60o0' };
+  { name: 'AI & Machine Learning', icon: <Brain className="w-6 h-6"  />, count: 150, color: 'from-green-50o0 to-emerald-60o0' },
+  { name: 'Quantum Technology', icon: <Atom className="w-6 h-6"  />, count: 80, color: 'from-cyan-50o0 to-blue-60o0' },
+  { name: 'Space Technology', icon: <Rocket className="w-6 h-6"  />, count: 60, color: 'from-purple-50o0 to-pink-60o0' },
+  { name: 'IT Infrastructure', icon: <Cpu className="w-6 h-6"  />, count: 120, color: 'from-orange-50o0 to-red-60o0' },
+  { name: 'Cybersecurity', icon: <Shield className="w-6 h-6"  />, count: 90, color: 'from-blue-50o0 to-indigo-60o0' },
   { name: 'Edge Computing', icon: <Zap className="w-6 h-6"  />, count: 70, color: 'from-yellow-50o0 to-orange-60o0' }
 ],
 export default function Homepage20o36() {
   const [activeCategory, setActiveCategory] = useState('all'),
   const containerVariants ={
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
         staggerChildren: 0.1}
     }
-  };
+  },
   const itemVariants ={
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
         duration: 0.5}
     }
-  };
+  },
   return (
     <Layout>,
       {/* Main Content */}
@@ -64,15 +64,15 @@ export default function Homepage20o36() {
                 key={i}
                 className="absolute w-1 h-1 bg-cyan-40o0/40 rounded-full",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 animate={{
-                  y: [0, -10o0, 0];
-                  opacity: [0.3, 1, 0.3];
+                  y: [0, -10o0, 0],
+                  opacity: [0.3, 1, 0.3],
                   scale: [1, 1.5, 1]}}
                 transition={{
-                  duration: 4 + Math.random() * 3;
-                  repeat: Infinity;
+                  duration: 4 + Math.random() * 3,
+                  repeat: Infinity,
                   delay: Math.random() * 2}}
                />))}
           </div>,
@@ -101,7 +101,7 @@ export default function Homepage20o36() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.4 }}
             >,
-              Experience the future of technology with our cutting-edge micro SAAS services;
+              Experience the future of technology with our cutting-edge micro SAAS services,
               AI platforms, and quantum solutions. Transform your business with next-generation innovation.,
             </motion.p>,
             <motion.div,
@@ -259,19 +259,19 @@ export default function Homepage20o36() {
                   className="h-full">,
                   <UltraFuturisticServiceCard20o36
                     service={{
-                      id: service.id;
-                      name: service.name;
-                      tagline: service.tagline;
-                      description: service.description;
-                      price: service.price;
-                      period: service.period;
-                      features: service.features;
-                      popular: index < 2;
-                      category: service.category;
-                      icon: '🚀';
-                      rating: service.rating;
-                      marketSize: service.marketSize;
-                      targetAudience: service.targetAudience;
+                      id: service.id,
+                      name: service.name,
+                      tagline: service.tagline,
+                      description: service.description,
+                      price: service.price,
+                      period: service.period,
+                      features: service.features,
+                      popular: index < 2,
+                      category: service.category,
+                      icon: '🚀',
+                      rating: service.rating,
+                      marketSize: service.marketSize,
+                      targetAudience: service.targetAudience,
                       competitiveAdvantage: service.competitiveAdvantage}}
                     variant={
                       service.category.includes('AI') ? 'ai' :,
@@ -325,34 +325,34 @@ export default function Homepage20o36() {
             >,
               {[
                 {
-                  icon: <Brain className="w-8 h-8"  />;
-                  title: 'AI-First Approach';
-                  description: 'Leverage the latest artificial intelligence and machine learning technologies to solve complex business challenges.';
-                  color: 'from-green-50o0 to-emerald-60o0'};
+                  icon: <Brain className="w-8 h-8"  />,
+                  title: 'AI-First Approach',
+                  description: 'Leverage the latest artificial intelligence and machine learning technologies to solve complex business challenges.',
+                  color: 'from-green-50o0 to-emerald-60o0'},
                 {
-                  icon: <Atom className="w-8 h-8"  />;
-                  title: 'Quantum Innovation';
-                  description: 'Stay ahead with quantum computing solutions that provide exponential performance improvements.';
-                  color: 'from-cyan-50o0 to-blue-60o0'};
+                  icon: <Atom className="w-8 h-8"  />,
+                  title: 'Quantum Innovation',
+                  description: 'Stay ahead with quantum computing solutions that provide exponential performance improvements.',
+                  color: 'from-cyan-50o0 to-blue-60o0'},
                 {
-                  icon: <Rocket className="w-8 h-8"  />;
-                  title: 'Space Technology';
-                  description: 'Access cutting-edge space technology solutions for advanced applications and research.';
-                  color: 'from-purple-50o0 to-pink-60o0'};
+                  icon: <Rocket className="w-8 h-8"  />,
+                  title: 'Space Technology',
+                  description: 'Access cutting-edge space technology solutions for advanced applications and research.',
+                  color: 'from-purple-50o0 to-pink-60o0'},
                 {
-                  icon: <Shield className="w-8 h-8"  />;
-                  title: 'Enterprise Security';
-                  description: 'Bank-grade security and compliance for mission-critical business applications.';
-                  color: 'from-blue-50o0 to-indigo-60o0'};
+                  icon: <Shield className="w-8 h-8"  />,
+                  title: 'Enterprise Security',
+                  description: 'Bank-grade security and compliance for mission-critical business applications.',
+                  color: 'from-blue-50o0 to-indigo-60o0'},
                 {
-                  icon: <Zap className="w-8 h-8"  />;
-                  title: 'Performance Optimized';
-                  description: 'Lightning-fast performance with edge computing and advanced optimization techniques.';
-                  color: 'from-yellow-50o0 to-orange-60o0'};
+                  icon: <Zap className="w-8 h-8"  />,
+                  title: 'Performance Optimized',
+                  description: 'Lightning-fast performance with edge computing and advanced optimization techniques.',
+                  color: 'from-yellow-50o0 to-orange-60o0'},
                 {
-                  icon: <Globe className="w-8 h-8"  />;
-                  title: 'Global Reach';
-                  description: 'Worldwide deployment and support with local expertise in key markets.';
+                  icon: <Globe className="w-8 h-8"  />,
+                  title: 'Global Reach',
+                  description: 'Worldwide deployment and support with local expertise in key markets.',
                   color: 'from-red-50o0 to-pink-60o0'}
               ].map((feature, index) => (
                 <motion.div,

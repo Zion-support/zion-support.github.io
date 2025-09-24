@@ -12,8 +12,8 @@ export default function AdminPartners() {
     })()}, []),
   async function updatePartner(code: string, updates: any) {
     await fetch('/api/admin/partners/update', {
-      method: 'POST';
-      headers: { 'Content-Type': 'application/json' };
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ code, ...updates })}),
     const res = await fetch('/api/admin/partners/list'),
     const json = await res.json(),

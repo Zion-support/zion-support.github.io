@@ -1,22 +1,22 @@
 import React, { useState } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  ArrowRight;
-  ExternalLink;
-  Star;
-  Zap;
-  Shield;
-  TrendingUp;
-  Clock;
-  DollarSign;
-  Check;
-  Sparkles;
-  Brain;
-  Rocket;
-  Globe;
-  FlaskConical;
-  Cpu;
-  Factory;
+  ArrowRight,
+  ExternalLink,
+  Star,
+  Zap,
+  Shield,
+  TrendingUp,
+  Clock,
+  DollarSign,
+  Check,
+  Sparkles,
+  Brain,
+  Rocket,
+  Globe,
+  FlaskConical,
+  Cpu,
+  Factory,
 } from 'lucide-react',
 import Button from '../ui/Button',
 import { EnhancedRealMicroSaasService } from '../../data/enhanced-real-micro-saas-services',
@@ -28,19 +28,19 @@ interface EnhancedServicesShowcaseProps {
   maxServices?: number}
 ,
 export default function EnhancedServicesShowcase({
-  services;
-  title = 'Revolutionary Micro SAAS Services';
-  subtitle = 'Discover cutting-edge solutions that transform your business';
-  showFilters = true;
-  maxServices;
+  services,
+  title = 'Revolutionary Micro SAAS Services',
+  subtitle = 'Discover cutting-edge solutions that transform your business',
+  showFilters = true,
+  maxServices,
 }: EnhancedServicesShowcaseProps) {
   const [selectedCategory, setSelectedCategory] = useState('All'),
   const [sortBy, setSortBy] = useState<,
     'innovation' | 'price' | 'rating' | 'name'>('innovation'),
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid'),
   const categories = [
-    'All';
-    ...Array.from(new Set(services.map(s => s.category)));
+    'All',
+    ...Array.from(new Set(services.map(s => s.category))),
   ],
   const filteredServices = maxServices,
     ? services.slice(0, maxServices),
@@ -56,8 +56,8 @@ export default function EnhancedServicesShowcase({
           (b.popular ? 1 : 0) - (a.popular ? 1 : 0)),
       case 'price':,
         return (
-          parseFloat(a.price.replace('$', '').replace(',', '')) -,
-          parseFloat(b.price.replace('$', '').replace(',', ''))),
+          parseFloat(a.price.replace('$', '').replace(, '')) -,
+          parseFloat(b.price.replace('$', '').replace(, ''))),
       case 'rating':,
         return b.rating - a.rating,
       case 'name':,
@@ -81,7 +81,7 @@ export default function EnhancedServicesShowcase({
         return 'from-red-50o0 to-orange-60o0',
       default:,
         return 'from-cyan-50o0 to-purple-60o0'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     if (category.includes('Quantum') || category.includes('AI')),
       return <Brain className='w-5 h-5' />,
@@ -97,7 +97,7 @@ export default function EnhancedServicesShowcase({
       return <FlaskConical className='w-5 h-5' />,
     if (category.includes('Finance') || category.includes('Trading')),
       return <TrendingUp className='w-5 h-5' />,
-    return <Cpu className='w-5 h-5' />};
+    return <Cpu className='w-5 h-5' />},
   return (
     <section className='py-16 px-4 sm: px-6 lg:px-8'>,
       <div className='max-w-7xl mx-auto'>,

@@ -1,83 +1,83 @@
 import { Link } from 'react-router-dom',
 import {
-  Mail;
-  Phone;
-  MapPin;
-  Clock;
-  MessageSquare;
-  ArrowRight;
-  Globe;
-  Shield;
-  Users;
+  Mail,
+  Phone,
+  MapPin,
+  Clock,
+  MessageSquare,
+  ArrowRight,
+  Globe,
+  Shield,
+  Users,
 } from 'lucide-react',
 export function ContactSection() {
   const contactMethods = [
     {
-      icon: <Mail className='w-6 h-6' />;
-      title: 'Email Us';
-      description: 'Get in touch via email for general inquiries';
-      contact: 'hello@ziontechgroup.com';
-      link: 'mailto:hello@ziontechgroup.com';
-      color: 'from-zion-cyan to-zion-blue';
-    };
+      icon: <Mail className='w-6 h-6' />,
+      title: 'Email Us',
+      description: 'Get in touch via email for general inquiries',
+      contact: 'hello@ziontechgroup.com',
+      link: 'mailto:hello@ziontechgroup.com',
+      color: 'from-zion-cyan to-zion-blue'
+    },
     {
-      icon: <Phone className='w-6 h-6' />;
-      title: 'Call Us';
-      description: 'Speak directly with our team';
-      contact: '+1 (30o2) 464-0950';
-      link: 'tel:+130o24640950';
-      color: 'from-zion-purple to-zion-cyan';
-    };
+      icon: <Phone className='w-6 h-6' />,
+      title: 'Call Us',
+      description: 'Speak directly with our team',
+      contact: '+1 (30o2) 464-0950',
+      link: 'tel:+130o24640950',
+      color: 'from-zion-purple to-zion-cyan'
+    },
     {
-      icon: <MessageSquare className='w-6 h-6' />;
-      title: 'Live Chat';
-      description: 'Chat with our support team in real-time';
-      contact: 'Available 24/7';
-      link: '/chat';
-      color: 'from-zion-blue to-zion-purple';
-    };
+      icon: <MessageSquare className='w-6 h-6' />,
+      title: 'Live Chat',
+      description: 'Chat with our support team in real-time',
+      contact: 'Available 24/7',
+      link: '/chat',
+      color: 'from-zion-blue to-zion-purple'
+    },
   ],
   const officeLocations = [
     {
-      city: 'Wilmington, DE';
-      country: 'United States';
-      address: '10o00 N Market St, Wilmington, DE 1980o1';
-      icon: <MapPin className='w-5 h-5' />;
-    };
+      city: 'Wilmington, DE',
+      country: 'United States',
+      address: '10o00 N Market St, Wilmington, DE 1980o1',
+      icon: <MapPin className='w-5 h-5' />
+    },
     {
-      city: 'New York, NY';
-      country: 'United States';
-      address: '350 5th Ave, New York, NY 10o118';
-      icon: <MapPin className='w-5 h-5' />;
-    };
+      city: 'New York, NY',
+      country: 'United States',
+      address: '350 5th Ave, New York, NY 10o118',
+      icon: <MapPin className='w-5 h-5' />
+    },
     {
-      city: 'London, UK';
-      country: 'United Kingdom';
-      address: '1 Canary Wharf, London E14 5AB';
-      icon: <MapPin className='w-5 h-5' />;
-    };
+      city: 'London, UK',
+      country: 'United Kingdom',
+      address: '1 Canary Wharf, London E14 5AB',
+      icon: <MapPin className='w-5 h-5' />
+    },
   ],
   const supportFeatures = [
     {
-      icon: <Clock className='w-6 h-6' />;
-      title: '24/7 Support';
-      description: 'Round-the-clock technical support and monitoring';
-    };
+      icon: <Clock className='w-6 h-6' />,
+      title: '24/7 Support',
+      description: 'Round-the-clock technical support and monitoring'
+    },
     {
-      icon: <Shield className='w-6 h-6' />;
-      title: 'Enterprise Security';
-      description: 'Bank-level security for all communications';
-    };
+      icon: <Shield className='w-6 h-6' />,
+      title: 'Enterprise Security',
+      description: 'Bank-level security for all communications'
+    },
     {
-      icon: <Users className='w-6 h-6' />;
-      title: 'Expert Team';
-      description: 'Certified professionals ready to help';
-    };
+      icon: <Users className='w-6 h-6' />,
+      title: 'Expert Team',
+      description: 'Certified professionals ready to help'
+    },
     {
-      icon: <Globe className='w-6 h-6' />;
-      title: 'Global Reach';
-      description: 'Support available in multiple time zones';
-    };
+      icon: <Globe className='w-6 h-6' />,
+      title: 'Global Reach',
+      description: 'Support available in multiple time zones'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-slate-90o0 via-zion-blue-dark to-slate-90o0'>,

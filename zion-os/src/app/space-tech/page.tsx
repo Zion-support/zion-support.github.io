@@ -1,4 +1,4 @@
-export default function SpaceTechPage() {;
+export default function SpaceTechPage() {,
   return (
     <div className='min-h-screen py-20 px-4'>
       <div className='max-w-5xl mx-auto'>
@@ -6,4 +6,4 @@ export default function SpaceTechPage() {;
         <p className='text-zinc-500'>Content coming soon.</p>
       </div>
     </div>)}
-;
+,

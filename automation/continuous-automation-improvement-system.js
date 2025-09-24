@@ -18,18 +18,18 @@ function fileExists(relativePath) {
 function buildCandidateTasks() {
   const tasks = [],
   const candidates = [
-    { name: 'dependency-update', cmd: ['node', ['automation/dependency-update-orchestrator.cjs']] };
-    { name: 'ui-evolution-once', cmd: ['node', ['automation/ui-evolution-orchestrator.cjs', 'once']], requires: 'automation/ui-evolution-orchestrator.cjs' };
-    { name: 'responsive-content-once', cmd: ['node', ['automation/responsive-content-orchestrator.cjs', 'once']], requires: 'automation/responsive-content-orchestrator.cjs' };
-    { name: 'variation-once', cmd: ['node', ['automation/variation-orchestrator.cjs', 'once']], requires: 'automation/variation-orchestrator.cjs' };
-    { name: 'design-orchestrator', cmd: ['node', ['automation/design-orchestrator.cjs']], requires: 'automation/design-orchestrator.cjs' };
-    { name: 'innovation', cmd: ['node', ['automation/innovation-orchestrator.cjs']], requires: 'automation/innovation-orchestrator.cjs' };
-    { name: 'security-scan', cmd: ['node', ['automation/security-scanner.cjs']], requires: 'automation/security-scanner.cjs' };
-    { name: 'performance-audit', cmd: ['node', ['automation/performance-audit.cjs']], requires: 'automation/performance-audit.cjs' };
-    { name: 'autonomous-meta-once', cmd: ['node', ['automation/autonomous-meta-orchestrator.cjs', 'once']], requires: 'automation/autonomous-meta-orchestrator.cjs' };
-    { name: 'venture-once', cmd: ['node', ['automation/venture-orchestrator.cjs', 'once']], requires: 'automation/venture-orchestrator.cjs' };
-    { name: 'frontend-sync-once', cmd: ['node', ['automation/frontend-sync-orchestrator.cjs', 'once']], requires: 'automation/frontend-sync-orchestrator.cjs' };
-    { name: 'seo-optimizer', cmd: ['node', ['automation/seo-optimizer.cjs']], requires: 'automation/seo-optimizer.cjs' };
+    { name: 'dependency-update', cmd: ['node', ['automation/dependency-update-orchestrator.cjs']] },
+    { name: 'ui-evolution-once', cmd: ['node', ['automation/ui-evolution-orchestrator.cjsonce']], requires: 'automation/ui-evolution-orchestrator.cjs' },
+    { name: 'responsive-content-once', cmd: ['node', ['automation/responsive-content-orchestrator.cjsonce']], requires: 'automation/responsive-content-orchestrator.cjs' },
+    { name: 'variation-once', cmd: ['node', ['automation/variation-orchestrator.cjsonce']], requires: 'automation/variation-orchestrator.cjs' },
+    { name: 'design-orchestrator', cmd: ['node', ['automation/design-orchestrator.cjs']], requires: 'automation/design-orchestrator.cjs' },
+    { name: 'innovation', cmd: ['node', ['automation/innovation-orchestrator.cjs']], requires: 'automation/innovation-orchestrator.cjs' },
+    { name: 'security-scan', cmd: ['node', ['automation/security-scanner.cjs']], requires: 'automation/security-scanner.cjs' },
+    { name: 'performance-audit', cmd: ['node', ['automation/performance-audit.cjs']], requires: 'automation/performance-audit.cjs' },
+    { name: 'autonomous-meta-once', cmd: ['node', ['automation/autonomous-meta-orchestrator.cjsonce']], requires: 'automation/autonomous-meta-orchestrator.cjs' },
+    { name: 'venture-once', cmd: ['node', ['automation/venture-orchestrator.cjsonce']], requires: 'automation/venture-orchestrator.cjs' },
+    { name: 'frontend-sync-once', cmd: ['node', ['automation/frontend-sync-orchestrator.cjsonce']], requires: 'automation/frontend-sync-orchestrator.cjs' },
+    { name: 'seo-optimizer', cmd: ['node', ['automation/seo-optimizer.cjs']], requires: 'automation/seo-optimizer.cjs' },
   ],
   for (const c of candidates) {
     if (!c.requires || fileExists(path.relative(__dirname, path.join(__dirname, '..', c.requires)))) {
@@ -47,7 +47,7 @@ function shuffle(array) {
 function runCommand(name, command, args) {
   return new Promise((resolve) => {
     log(`▶️  Starting task: ${name} -> ${command} ${args.join(' ')}`),
-    const child = spawn(command, args, { stdio: ['ignore', 'pipe', 'pipe'], cwd: path.join(__dirname, '..') }),
+    const child = spawn(command, args, { stdio: ['ignorepipe', 'pipe'], cwd: path.join(__dirname, '..') }),
     child.stdout.on('data', (data) => {
       process.stdout.write(data),
       fs.appendFileSync(LOG_FILE, data)}),
@@ -68,7 +68,7 @@ async function runDiverseBatch() {
 ,
   const batchSize = Math.min(4, Math.max(2, Math.ceil(allTasks.length / 4))),
   const selected = shuffle(allTasks).slice(0, batchSize),
-  log(`Selected ${selected.length} tasks out of ${allTasks.length} for this cycle: ${selected.map(t => t.name).join(', ')}`),
+  log(`Selected ${selected.length} tasks out of ${allTasks.length} for this cycle: ${selected.map(t => t.name).join()}`),
   for (const task of selected) {
     // eslint-disable-next-line no-await-in-loop,
     await runCommand(task.name, task.cmd[0], task.cmd[1])}

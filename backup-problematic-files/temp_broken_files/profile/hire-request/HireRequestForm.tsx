@@ -1,32 +1,32 @@
 
-import React from "react";;
-import { useHireRequestForm, FormValues } from "./useHireRequestForm";
-import { Button } from "@/components/ui/button";
-import { DialogFooter } from "@/components/ui/dialog";
-import { Form } from "@/components/ui/form";
+import React from "react",
+import { useHireRequestForm, FormValues } from "./useHireRequestForm",
+import { Button } from "@/components/ui/button",
+import { DialogFooter } from "@/components/ui/dialog",
+import { Form } from "@/components/ui/form",
 import { Loader2 } from 'lucide-react',
-import { TalentProfile } from "@/types/talent";
-import { PersonalInfoFields } from "./PersonalInfoFields";
-import { ProjectDetailsField } from "./ProjectDetailsField";
-import { TimelineField } from "./TimelineField";
-import { BudgetFields } from "./BudgetFields";
+import { TalentProfile } from "@/types/talent",
+import { PersonalInfoFields } from "./PersonalInfoFields",
+import { ProjectDetailsField } from "./ProjectDetailsField",
+import { TimelineField } from "./TimelineField",
+import { BudgetFields } from "./BudgetFields",
 export interface HireRequestFormProps {
-  talent:TalentProfile;
-  onClose:() => void;
-  initialJobTitle?:string;
+  talent: TalentProfile,
+  onClose:() => void,
+  initialJobTitle?:string,
   userDetails?:{
-    name?:string;
-    email?:string;
-    id?:string};
-  onSubmitSuccess?:() => void;
+    name?:string,
+    email?:string,
+    id?:string},
+  onSubmitSuccess?:() => void,
 }
 ,
 export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails, onSubmitSuccess } HireRequestFormProps) {
   const { form, isSubmitting, onSubmit } = useHireRequestForm({
     talent,
     onClose:onSubmitSuccess || onClose,
-    initialJobTitle;
-    userDetails });
+    initialJobTitle,
+    userDetails }),
   return (
     <Form {...form}>,
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">,
@@ -62,7 +62,7 @@ export function HireRequestForm({ talent, onClose, initialJobTitle, userDetails,
           </Button>,
         </DialogFooter>,
       </form>,
-    </Form>);}
+    </Form>),}
  export interface HireRequestFormProps {
   talent: TalentProfile,
 onClose: () => void,
@@ -70,7 +70,7 @@ initialJobTitle?: string,
 userDetails?: {
   name?: string,
 email?: string,
-id?: string };
+id?: string },
 onSubmitSuccess?: () => void }export function HireRequestForm ({
   talent, onClose, initialJobTitle,  userDetails, onSubmitSuccess }: HireRequestFormProps) {
   const {

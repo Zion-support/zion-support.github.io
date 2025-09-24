@@ -22,25 +22,25 @@ Style: ,
 - Be helpful but concise,
 - Provide actionable next steps when possible`,
 export default async function handler(
-  req: NextApiRequest;
+  req: NextApiRequest,
   res: NextApiResponse) {
   if (req.method !== 'POST') {
-    res.setHeader('Allow', 'POST'),
+    res.setHeader('AllowPOST'),
     return res.status(405).json({ error: 'Method Not Allowed' })}
 ,
   try {
     const { messages } = req.body as {
       messages?: Array<{
         role: 'user' | 'assistant' | 'system',
-        content: string}>};
+        content: string}>},
     if (!messages || !Array.isArray(messages)) {
       return res.status(400).json({ error: 'Messages array is required' })}
 ,
     const completion = await openai.chat.completions.create({
-      model: 'gpt-4o';
-      messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages];
-      max_tokens: 500;
-      temperature: 0.7;
+      model: 'gpt-4o',
+      messages: [{ role: 'system', content: SYSTEM_PROMPT }, ...messages],
+      max_tokens: 500,
+      temperature: 0.7
     }),
     const response =,
       completion.choices[0]?.message?.content ||,

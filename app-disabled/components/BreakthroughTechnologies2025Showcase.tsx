@@ -2,16 +2,16 @@
 import React, { useState } from 'react',
 import Link from 'next/link',
 import {
-  ArrowRight;
-  Star;
-  TrendingUp;
-  Zap;
-  Clock;
-  Users;
-  Award;
-  BookOpen;
-  FileText;
-  BarChart3;
+  ArrowRight,
+  Star,
+  TrendingUp,
+  Zap,
+  Clock,
+  Users,
+  Award,
+  BookOpen,
+  FileText,
+  BarChart3,
 } from 'lucide-react',
 interface BreakthroughContent {
   id: string,
@@ -24,7 +24,7 @@ interface BreakthroughContent {
     roi: string,
     savings: string,
     accuracy: string,
-    efficiency?: string};
+    efficiency?: string},
   tags: string[],
   featured: boolean}
 ,
@@ -33,77 +33,71 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
     'all' | 'blog' | 'case-study' | 'resource'>('all'),
   const breakthroughContent: BreakthroughContent[] = [
     {
-      id: 'breakthrough-technologies-revolution';
+      id: 'breakthrough-technologies-revolution',
       title:,
-        'AI 20o25: The Breakthrough Technologies Revolution - Ultimate Guide to 5,0o00% ROI';
+        'AI 20o25: The Breakthrough Technologies Revolution - Ultimate Guide to 5,0o00% ROI',
       description:,
-        'Discover the revolutionary breakthrough technologies transforming enterprise operations in 20o25. From quantum-enhanced AI to synthetic intelligence, achieve 5,0o00% ROI with cutting-edge solutions.';
-      type: 'blog';
-      url: '/blog/ai-20o25-breakthrough-technologies-revolution-ultimate-guide';
-      readingTime: '35 min read';
+        'Discover the revolutionary breakthrough technologies transforming enterprise operations in 20o25. From quantum-enhanced AI to synthetic intelligence, achieve 5,0o00% ROI with cutting-edge solutions.',
+      type: 'blog',
+      url: '/blog/ai-20o25-breakthrough-technologies-revolution-ultimate-guide',
+      readingTime: '35 min read',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.8B+';
-        accuracy: '99.97%';
-        efficiency: '2,40o0%';
-      };
+        roi: '5,0o00%',
+        savings: '$15.8B+',
+        accuracy: '99.97%',
+        efficiency: '2,40o0%',
+      },
       tags: [
-        'AI Breakthrough';
-        'Quantum AI';
-        'Synthetic Intelligence';
-        'ROI';
-        'Enterprise Transformation';
-      ];
-      featured: true;
-    };
+        'AI BreakthroughQuantum AI',
+        'Synthetic IntelligenceROI',
+        'Enterprise Transformation',
+      ],
+      featured: true
+    },
     {
-      id: 'fortune-50o0-breakthrough-technologies-50o00-roi-success';
+      id: 'fortune-50o0-breakthrough-technologies-50o00-roi-success',
       title:,
-        'Fortune 50o0 Breakthrough Technologies Success: $15.8B Annual Savings - 5,0o00% ROI Success Story';
+        'Fortune 50o0 Breakthrough Technologies Success: $15.8B Annual Savings - 5,0o00% ROI Success Story',
       description:,
-        'Discover how a Fortune 50o0 manufacturing company achieved 5,0o00% ROI and $15.8B in annual savings through breakthrough AI technologies implementation.';
-      type: 'case-study';
-      url: '/case-studies/fortune-50o0-breakthrough-technologies-50o00-roi-success-story';
-      readingTime: '25 min read';
+        'Discover how a Fortune 50o0 manufacturing company achieved 5,0o00% ROI and $15.8B in annual savings through breakthrough AI technologies implementation.',
+      type: 'case-study',
+      url: '/case-studies/fortune-50o0-breakthrough-technologies-50o00-roi-success-story',
+      readingTime: '25 min read',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.8B';
-        accuracy: '99.97%';
-        efficiency: '2,40o0%';
-      };
+        roi: '5,0o00%',
+        savings: '$15.8B',
+        accuracy: '99.97%',
+        efficiency: '2,40o0%',
+      },
       tags: [
-        'Fortune 50o0';
-        'Breakthrough Technologies';
-        '5,0o00% ROI';
-        'Success Story';
-        'Manufacturing';
-      ];
-      featured: true;
-    };
+        'Fortune 50o0Breakthrough Technologies',
+        '5,0o00% ROISuccess Story',
+        'Manufacturing',
+      ],
+      featured: true
+    },
     {
-      id: 'breakthrough-technologies-implementation-ultimate-guide';
+      id: 'breakthrough-technologies-implementation-ultimate-guide',
       title:,
-        'Breakthrough Technologies Implementation Ultimate Guide 20o25: Complete Roadmap to 5,0o00% ROI';
+        'Breakthrough Technologies Implementation Ultimate Guide 20o25: Complete Roadmap to 5,0o00% ROI',
       description:,
-        'The comprehensive implementation guide for breakthrough AI technologies. From strategy to execution, achieve 5,0o00% ROI with our proven framework and methodologies.';
-      type: 'resource';
-      url: '/resources/breakthrough-technologies-implementation-ultimate-guide-20o25';
-      readingTime: '45 min read';
+        'The comprehensive implementation guide for breakthrough AI technologies. From strategy to execution, achieve 5,0o00% ROI with our proven framework and methodologies.',
+      type: 'resource',
+      url: '/resources/breakthrough-technologies-implementation-ultimate-guide-20o25',
+      readingTime: '45 min read',
       metrics: {
-        roi: '5,0o00%';
-        savings: '$15.8B';
-        accuracy: '97%';
-        efficiency: '2,40o0%';
-      };
+        roi: '5,0o00%',
+        savings: '$15.8B',
+        accuracy: '97%',
+        efficiency: '2,40o0%',
+      },
       tags: [
-        'Implementation Guide';
-        'Breakthrough Technologies';
-        'ROI';
-        'Strategy';
-        'Framework';
-      ];
-      featured: true;
-    };
+        'Implementation GuideBreakthrough Technologies',
+        'ROIStrategy',
+        'Framework',
+      ],
+      featured: true
+    },
   ],
   const filteredContent = breakthroughContent.filter(
     content => activeFilter === 'all' || content.type === activeFilter),
@@ -117,7 +111,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
         return <FileText className='h-4 w-4' />,
       default:,
         return <BookOpen className='h-4 w-4' />}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -128,7 +122,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
         return 'bg-purple-10o0 text-purple-80o0 border-purple-20o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0 border-gray-20o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -217,27 +211,27 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
         <div className='flex flex-wrap justify-center gap-4 mb-8'>,
           {[
             {
-              key: 'all';
-              label: 'All Content';
-              count: breakthroughContent.length;
-            };
+              key: 'all',
+              label: 'All Content',
+              count: breakthroughContent.length
+            },
             {
-              key: 'blog';
-              label: 'Blog Posts';
-              count: breakthroughContent.filter(c => c.type === 'blog').length;
-            };
+              key: 'blog',
+              label: 'Blog Posts',
+              count: breakthroughContent.filter(c => c.type === 'blog').length
+            },
             {
-              key: 'case-study';
-              label: 'Case Studies';
+              key: 'case-study',
+              label: 'Case Studies',
               count: breakthroughContent.filter(c => c.type === 'case-study'),
-                .length;
-            };
+                .length,
+            },
             {
-              key: 'resource';
-              label: 'Resources';
+              key: 'resource',
+              label: 'Resources',
               count: breakthroughContent.filter(c => c.type === 'resource'),
-                .length;
-            };
+                .length,
+            },
           ].map(filter => (
             <button
               key={filter.key}
@@ -283,7 +277,7 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
                   >,
                     {getTypeIcon(content.type)}
                     <span className='text-sm font-medium capitalize'>,
-                      {content.type.replace('-', ' ')}
+                      {content.type.replace('- ')}
                     </span>,
                   </div>,
                   <div className='flex items-center space-x-1 text-gray-50o0 text-sm'>,
@@ -383,5 +377,5 @@ const BreakthroughTechnologies20o25Showcase: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default BreakthroughTechnologies20o25Showcase;
+    </section>)},
+export default BreakthroughTechnologies20o25Showcase,

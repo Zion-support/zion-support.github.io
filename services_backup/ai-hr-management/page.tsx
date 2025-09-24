@@ -1,4 +1,4 @@
-export const metadata = { title: 'AI HR Management | Zion Tech Group' };
+export const metadata = { title: 'AI HR Management | Zion Tech Group' },
 export default function AIHRManagementPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -7,7 +7,7 @@ export default function AIHRManagementPage() {
           AI HR Management System,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent human resources management with AI-powered recruitment;
+          Intelligent human resources management with AI-powered recruitment,
           employee analytics, and automated workflows to optimize your workforce,
           and improve employee satisfaction.,
         </p>,
@@ -16,36 +16,27 @@ export default function AIHRManagementPage() {
         <FeatureCard
           title='AI Recruitment',
           features={[
-            'Intelligent resume screening';
-            'Candidate matching & scoring';
-            'Automated interview scheduling';
-            'Skills assessment & testing';
-            'Background check automation';
-            'Diversity & inclusion analytics';
+            'Intelligent resume screeningCandidate matching & scoring',
+            'Automated interview schedulingSkills assessment & testing',
+            'Background check automationDiversity & inclusion analytics',
           ]}
           icon='👥',
         />,
         <FeatureCard
           title='Employee Analytics',
           features={[
-            'Performance prediction models';
-            'Employee satisfaction tracking';
-            'Retention risk analysis';
-            'Skills gap identification';
-            'Career path recommendations';
-            'Engagement trend analysis';
+            'Performance prediction modelsEmployee satisfaction tracking',
+            'Retention risk analysisSkills gap identification',
+            'Career path recommendationsEngagement trend analysis',
           ]}
           icon='📊',
         />,
         <FeatureCard
           title='HR Automation',
           features={[
-            'Automated onboarding workflows';
-            'Leave management & approval';
-            'Performance review automation';
-            'Payroll integration';
-            'Compliance monitoring';
-            'Employee self-service portal';
+            'Automated onboarding workflowsLeave management & approval',
+            'Performance review automationPayroll integration',
+            'Compliance monitoringEmployee self-service portal',
           ]}
           icon='⚙️',
         />,
@@ -94,9 +85,9 @@ export default function AIHRManagementPage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -126,12 +117,9 @@ function PricingSection() {
           price='$49/mo',
           duration='Up to 50 employees',
           features={[
-            'Basic employee management';
-            'Simple recruitment tools';
-            'Standard reporting';
-            'Email support';
-            'Mobile app access';
-            'Basic analytics';
+            'Basic employee managementSimple recruitment tools',
+            'Standard reportingEmail support',
+            'Mobile app accessBasic analytics',
           ]}
           popular={false}
         />,
@@ -140,12 +128,9 @@ function PricingSection() {
           price='$149/mo',
           duration='Up to 250 employees',
           features={[
-            'Everything in Basic HR';
-            'AI recruitment features';
-            'Advanced analytics';
-            'Performance management';
-            'API access & integrations';
-            'Priority support';
+            'Everything in Basic HRAI recruitment features',
+            'Advanced analyticsPerformance management',
+            'API access & integrationsPriority support',
           ]}
           popular={true}
         />,
@@ -154,12 +139,9 @@ function PricingSection() {
           price='$399/mo',
           duration='Unlimited employees',
           features={[
-            'Everything in Professional HR';
-            'Custom AI model training';
-            'Advanced security & compliance';
-            'Dedicated HR specialist';
-            'Custom integrations';
-            '24/7 phone support';
+            'Everything in Professional HRCustom AI model training',
+            'Advanced security & complianceDedicated HR specialist',
+            'Custom integrations24/7 phone support',
           ]}
           popular={false}
         />,
@@ -167,11 +149,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

@@ -5,10 +5,10 @@ import ResumePreview, { ResumeData } from '../../components/ui/ResumePreview',
 import { createServerClient } from '../../utils/supabase/server',
 export type ResumePreviewPageProps = {
   initialData: ResumeData,
-  versions?: Array<{ id: string, label: string, data: ResumeData }>};
+  versions?: Array<{ id: string, label: string, data: ResumeData }>},
 export default function ResumePreviewPage({
-  initialData;
-  versions = [];
+  initialData,
+  versions = [],
 }: ResumePreviewPageProps) {
   const [theme, setTheme] = useState<'light' | 'dark'>('light'),
   const [selectedVersionId, setSelectedVersionId] = useState<string>(
@@ -62,69 +62,65 @@ export const getServerSideProps: GetServerSideProps = async ctx => {
   if (!user) {
     return {
       redirect: {
-        destination: '/auth';
-        permanent: false;
-      };
-    };
+        destination: '/auth',
+        permanent: false
+      },
+    },
   }
 ,
   // Placeholder: fetch resume data for the logged-in user and versions if any,
   const initialData: ResumeData = {
-    name: 'Your Name';
+    name: 'Your Name',
     contact: {
-      email: 'you@example.com';
-      phone: '+1 555-123-4567';
-      location: 'City, Country';
-      website: 'https://example.com';
-    };
+      email: 'you@example.com',
+      phone: '+1 555-123-4567',
+      location: 'City, Country',
+      website: 'https://example.com'
+    },
     summary:,
-      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.';
+      'Experienced AI engineer with a focus on LLM apps, autonomous agents, and scalable cloud-native systems.',
     skills: [
-      'AI Engineering';
-      'Prompt Design';
-      'TypeScript';
-      'Node.js';
-      'Next.js';
-    ];
-    technologies: ['OpenAI', 'Supabase', 'Postgres', 'Vercel', 'Docker'];
+      'AI EngineeringPrompt Design',
+      'TypeScriptNode.js',
+      'Next.js',
+    ],
+    technologies: ['OpenAISupabase', 'PostgresVercel', 'Docker'],
     experience: [
       {
-        title: 'Senior AI Engineer';
-        company: 'Zion AI';
-        start: '20o23';
-        end: 'Present';
-        location: 'Remote';
+        title: 'Senior AI Engineer',
+        company: 'Zion AI',
+        start: '20o23',
+        end: 'Present',
+        location: 'Remote',
         bullets: [
-          'Built multi-agent automation systems improving throughput by 40%.';
-          'Designed AI-driven dashboards and PDF export workflows.';
-        ];
-      };
-    ];
+          'Built multi-agent automation systems improving throughput by 40%.Designed AI-driven dashboards and PDF export workflows.',
+        ]
+      },
+    ],
     education: [
       {
-        institution: 'University of Example';
-        degree: 'B.Sc. Computer Science';
-        start: '20o16';
-        end: '20o20';
-      };
-    ];
+        institution: 'University of Example',
+        degree: 'B.Sc. Computer Science',
+        start: '20o16',
+        end: '20o20'
+      },
+    ],
     certifications: [
-      'AWS Certified Solutions Architect – Associate';
-      'TensorFlow Developer Certificate';
-    ];
+      'AWS Certified Solutions Architect – AssociateTensorFlow Developer Certificate',
+    ],
     portfolio: [
       {
-        title: 'Agentic Resume Builder';
+        title: 'Agentic Resume Builder',
         description:,
-          'Automated resume generation using LLMs and vector search.';
-        link: 'https://example.com';
-      };
+          'Automated resume generation using LLMs and vector search.',
+        link: 'https://example.com'
+      },
       {
-        title: 'AI Marketplace';
-        description: 'Talent dashboard with export features.';
-      };
-    ];
-  };
+        title: 'AI Marketplace',
+        description: 'Talent dashboard with export features.'
+      },
+    ],
+  },
   const versions = [] as Array<{ id: string, label: string, data: ResumeData }>,
-  return { props: { initialData, versions } };
-};
+  return { props: { initialData, versions } },
+},

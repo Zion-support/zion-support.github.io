@@ -27,15 +27,15 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
       particles.length = 0,
       for (let i = 0, i < 150, i++) {
         particles.push({
-          x: Math.random() * canvas.width;
-          y: Math.random() * canvas.height;
-          vx: (Math.random() - 0.5) * 0.5;
-          vy: (Math.random() - 0.5) * 0.5;
-          size: Math.random() * 3 + 1;
-          opacity: Math.random() * 0.8 + 0.2;
-          color: ['#8B5CF6', '#EC4899', '#0o6B6D4', '#10B981', '#F59E0B'][Math.floor(Math.random() * 5)];
-          type: ['quantum', 'neural', 'data'][Math.floor(Math.random() * 3)] as 'quantum' | 'neural' | 'data'})}
-    };
+          x: Math.random() * canvas.width,
+          y: Math.random() * canvas.height,
+          vx: (Math.random() - 0.5) * 0.5,
+          vy: (Math.random() - 0.5) * 0.5,
+          size: Math.random() * 3 + 1,
+          opacity: Math.random() * 0.8 + 0.2,
+          color: ['#8B5CF6#EC4899', '#0o6B6D4#10B981', '#F59E0B'][Math.floor(Math.random() * 5)],
+          type: ['quantumneural', 'data'][Math.floor(Math.random() * 3)] as 'quantum' | 'neural' | 'data'})}
+    },
     // Animation loop,
     const animate = () => {
       ctx.clearRect(0, 0, canvas.width, canvas.height),
@@ -105,9 +105,9 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
 ,
       // Draw floating geometric shapes,
       const shapes = [
-        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 40, rotation: time * 0.5, type: 'triangle' };
-        { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 60, rotation: time * 0.3, type: 'square' };
-        { x: canvas.width * 0.5, y: canvas.height * 0.1, size: 50, rotation: time * 0.7, type: 'circle' };
+        { x: canvas.width * 0.2, y: canvas.height * 0.3, size: 40, rotation: time * 0.5, type: 'triangle' },
+        { x: canvas.width * 0.8, y: canvas.height * 0.7, size: 60, rotation: time * 0.3, type: 'square' },
+        { x: canvas.width * 0.5, y: canvas.height * 0.1, size: 50, rotation: time * 0.7, type: 'circle' },
         { x: canvas.width * 0.1, y: canvas.height * 0.8, size: 45, rotation: time * 0.4, type: 'hexagon' }
       ],
       shapes.forEach(shape => {
@@ -144,16 +144,16 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
 ,
         ctx.stroke(),
         ctx.restore()}),
-      requestAnimationFrame(animate)};
+      requestAnimationFrame(animate)},
     // Handle resize,
     const handleResize = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     window.addEventListener('resize', handleResize),
     initParticles(),
     animate(),
     return () => {
-      window.removeEventListener('resize', handleResize)};
+      window.removeEventListener('resize', handleResize)},
   }, []),
   return (
     <div className="relative min-h-screen bg-gradient-to-br from-black via-gray-90o0 to-black overflow-hidden">,
@@ -178,44 +178,44 @@ export default function UltraAdvancedFuturisticBackground20o26V2({ children }: U
         <motion.div,
           className="absolute top-20 left-20 w-2 h-2 bg-purple-40o0 rounded-full",
           animate={{
-            scale: [1, 1.5, 1];
+            scale: [1, 1.5, 1],
             opacity: [0.3, 1, 0.3]}}
           transition={{
-            duration: 3;
-            repeat: Infinity;
+            duration: 3,
+            repeat: Infinity,
             ease: "easeInOut"}}
          />,
         <motion.div,
           className="absolute top-40 right-32 w-3 h-3 bg-pink-40o0 rounded-full",
           animate={{
-            scale: [1, 2, 1];
+            scale: [1, 2, 1],
             opacity: [0.2, 0.8, 0.2]}}
           transition={{
-            duration: 4;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 4,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 1}}
          />,
         <motion.div,
           className="absolute bottom-32 left-1/3 w-2 h-2 bg-blue-40o0 rounded-full",
           animate={{
-            scale: [1, 1.8, 1];
+            scale: [1, 1.8, 1],
             opacity: [0.4, 1, 0.4]}}
           transition={{
-            duration: 3.5;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 3.5,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 2}}
          />,
         <motion.div,
           className="absolute top-1/2 right-20 w-1 h-1 bg-green-40o0 rounded-full",
           animate={{
-            scale: [1, 2.5, 1];
+            scale: [1, 2.5, 1],
             opacity: [0.2, 0.9, 0.2]}}
           transition={{
-            duration: 2.5;
-            repeat: Infinity;
-            ease: "easeInOut";
+            duration: 2.5,
+            repeat: Infinity,
+            ease: "easeInOut",
             delay: 0.5}}
          />,
       </div>,

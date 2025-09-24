@@ -5,53 +5,50 @@ import RelatedContent from '../components/RelatedContent',
 export default function ComponentLibrary() {
   const components = [
     {
-      name: 'Pagination';
+      name: 'Pagination',
       description:,
-        'Advanced pagination with customizable styling and accessibility features';
-      usage: 'Use for navigating through large datasets or content lists';
-      props: ['currentPage', 'totalPages', 'onPageChange', 'className'];
-      category: 'Navigation';
-    };
+        'Advanced pagination with customizable styling and accessibility features',
+      usage: 'Use for navigating through large datasets or content lists',
+      props: ['currentPagetotalPages', 'onPageChangeclassName'],
+      category: 'Navigation'
+    },
     {
-      name: 'Form';
+      name: 'Form',
       description:,
-        'Reusable form component with built-in validation and state management';
-      usage: 'Perfect for contact forms, search forms, and data input';
-      props: ['onSubmit', 'className'];
-      category: 'Input';
-    };
+        'Reusable form component with built-in validation and state management',
+      usage: 'Perfect for contact forms, search forms, and data input',
+      props: ['onSubmitclassName'],
+      category: 'Input'
+    },
     {
-      name: 'Modal';
+      name: 'Modal',
       description:,
-        'Accessible modal component with backdrop and keyboard navigation';
-      usage: 'Display important information, confirmations, or forms';
-      props: ['isOpen', 'onClose', 'title', 'children', 'className'];
-      category: 'Overlay';
-    };
+        'Accessible modal component with backdrop and keyboard navigation',
+      usage: 'Display important information, confirmations, or forms',
+      props: ['isOpenonClose', 'titlechildren', 'className'],
+      category: 'Overlay'
+    },
     {
-      name: 'Card';
+      name: 'Card',
       description:,
-        'Content card component for displaying structured information';
+        'Content card component for displaying structured information',
       usage:,
-        'Showcase content, products, or information in a consistent layout';
-      props: ['title', 'description', 'image', 'className'];
-      category: 'Layout';
-    };
+        'Showcase content, products, or information in a consistent layout',
+      props: ['titledescription', 'imageclassName'],
+      category: 'Layout'
+    },
     {
-      name: 'Button';
+      name: 'Button',
       description:,
-        'Versatile button component with multiple variants and states';
-      usage: 'Primary actions, form submissions, and interactive elements';
+        'Versatile button component with multiple variants and states',
+      usage: 'Primary actions, form submissions, and interactive elements',
       props: [
-        'children';
-        'variant';
-        'onClick';
-        'type';
-        'disabled';
-        'className';
-      ];
-      category: 'Interactive';
-    };
+        'childrenvariant',
+        'onClicktype',
+        'disabledclassName',
+      ],
+      category: 'Interactive'
+    },
   ],
   return (
     <div className='min-h-screen bg-slate-950 text-white'>,

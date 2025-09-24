@@ -729,7 +729,7 @@ const CookiePolicy: NextPage = () => {
               <div>,
                 <h3 className='text-lg font-semibold mb-2'>Your Rights</h3>,
                 <p className='opacity-90'>,
-                  You have the right to control your cookies, withdraw consent;
+                  You have the right to control your cookies, withdraw consent,
                   and request information about our data practices at any time.,
                 </p>,
               </div>,
@@ -744,7 +744,7 @@ const CookiePolicy: NextPage = () => {
             </h2>,
             <p className='text-xl text-gray-60o0 mb-8 max-w-2xl mx-auto'>,
               We&apos,re committed to transparency in our cookie practices. If,
-              you have questions or need help managing your preferences;
+              you have questions or need help managing your preferences,
               don&apos,t hesitate to reach out.,
             </p>,
             <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -763,5 +763,5 @@ const CookiePolicy: NextPage = () => {
         </section>,
       </main>,
       <Footer />,
-    </div>)};
-export default CookiePolicy;
+    </div>)},
+export default CookiePolicy,

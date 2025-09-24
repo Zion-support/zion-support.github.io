@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'ai-healthcare-assistant - Zion Tech Group';
+  title: 'ai-healthcare-assistant - Zion Tech Group',
   description:,
-    'Professional ai-healthcare-assistant solutions for your business needs.';
-  keywords: 'ai-healthcare-assistant, services, business, technology';
-};
+    'Professional ai-healthcare-assistant solutions for your business needs.',
+  keywords: 'ai-healthcare-assistant, services, business, technology',
+},
 export default function AiHealthcareAssistantPage() {
   return (
     <div className='min-h-screen bg-white'>,

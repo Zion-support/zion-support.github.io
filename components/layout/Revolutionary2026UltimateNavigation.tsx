@@ -2,46 +2,46 @@ import React, { useState, useEffect } from 'react',
 import { motion, AnimatePresence } from 'framer-motion',
 import Link from 'next/link',
 import {
-  Menu;
-  X;
-  ChevronDown;
-  Rocket;
-  Phone;
-  Mail;
-  MapPin;
-  Brain;
-  Cpu;
-  Shield;
-  Zap;
-  Star;
-  Users;
-  TrendingUp;
-  Globe;
-  Database;
-  Cloud;
-  Lock;
-  Palette;
-  Target;
-  Layers;
-  Sparkles;
-  Atom;
-  Microscope;
-  Satellite;
-  Search;
-  Bell;
-  User;
-  Settings;
-  LogOut;
-  SparklesIcon;
-  Home;
-  Briefcase;
-  BookOpen;
-  Users as Team;
-  MessageCircle;
-  DollarSign;
-  Grid;
-  List;
-  ArrowRight;
+  Menu,
+  X,
+  ChevronDown,
+  Rocket,
+  Phone,
+  Mail,
+  MapPin,
+  Brain,
+  Cpu,
+  Shield,
+  Zap,
+  Star,
+  Users,
+  TrendingUp,
+  Globe,
+  Database,
+  Cloud,
+  Lock,
+  Palette,
+  Target,
+  Layers,
+  Sparkles,
+  Atom,
+  Microscope,
+  Satellite,
+  Search,
+  Bell,
+  User,
+  Settings,
+  LogOut,
+  SparklesIcon,
+  Home,
+  Briefcase,
+  BookOpen,
+  Users as Team,
+  MessageCircle,
+  DollarSign,
+  Grid,
+  List,
+  ArrowRight,
 } from 'lucide-react',
 // Import all the new service data,
 import { revolutionary20o26AIAutomationServices } from '../../data/revolutionary-20o26-ai-automation-services',
@@ -49,88 +49,88 @@ import { revolutionary20o26EmergingTechServices } from '../../data/revolutionary
 import { revolutionary20o26HealthcareBiotechServices } from '../../data/revolutionary-20o26-healthcare-biotech-services',
 import { revolutionary20o26FintechBlockchainServices } from '../../data/revolutionary-20o26-fintech-blockchain-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: 'AI & Consciousness 20o26';
-    icon: Brain;
-    color: 'from-purple-60o0 to-pink-60o0';
-    description: 'Next-generation AI consciousness solutions';
+    title: 'AI & Consciousness 20o26',
+    icon: Brain,
+    color: 'from-purple-60o0 to-pink-60o0',
+    description: 'Next-generation AI consciousness solutions',
     services: revolutionary20o26AIAutomationServices,
       .slice(0, 4),
       .map(service => ({
-        name: service.name;
-        href: service.link;
-        description: service.tagline;
-        price: service.price + service.period;
-        icon: service.icon;
-        color: service.color;
-      }));
-  };
+        name: service.name,
+        href: service.link,
+        description: service.tagline,
+        price: service.price + service.period,
+        icon: service.icon,
+        color: service.color
+      })),
+  },
   {
-    title: 'Emerging Technologies 20o26';
-    icon: Rocket;
-    color: 'from-green-60o0 to-emerald-60o0';
-    description: 'Cutting-edge emerging tech solutions';
+    title: 'Emerging Technologies 20o26',
+    icon: Rocket,
+    color: 'from-green-60o0 to-emerald-60o0',
+    description: 'Cutting-edge emerging tech solutions',
     services: revolutionary20o26EmergingTechServices,
       .slice(0, 4),
       .map(service => ({
-        name: service.name;
-        href: service.link;
-        description: service.tagline;
-        price: service.price + service.period;
-        icon: service.icon;
-        color: service.color;
-      }));
-  };
+        name: service.name,
+        href: service.link,
+        description: service.tagline,
+        price: service.price + service.period,
+        icon: service.icon,
+        color: service.color
+      })),
+  },
   {
-    title: 'Healthcare & Biotech 20o26';
-    icon: Shield;
-    color: 'from-teal-60o0 to-cyan-60o0';
-    description: 'Revolutionary healthcare innovations';
+    title: 'Healthcare & Biotech 20o26',
+    icon: Shield,
+    color: 'from-teal-60o0 to-cyan-60o0',
+    description: 'Revolutionary healthcare innovations',
     services: revolutionary20o26HealthcareBiotechServices,
       .slice(0, 4),
       .map(service => ({
-        name: service.name;
-        href: service.link;
-        description: service.tagline;
-        price: service.price + service.period;
-        icon: service.icon;
-        color: service.color;
-      }));
-  };
+        name: service.name,
+        href: service.link,
+        description: service.tagline,
+        price: service.price + service.period,
+        icon: service.icon,
+        color: service.color
+      })),
+  },
   {
-    title: 'Fintech & Blockchain 20o26';
-    icon: DollarSign;
-    color: 'from-yellow-60o0 to-orange-60o0';
-    description: 'Next-generation financial technology';
+    title: 'Fintech & Blockchain 20o26',
+    icon: DollarSign,
+    color: 'from-yellow-60o0 to-orange-60o0',
+    description: 'Next-generation financial technology',
     services: revolutionary20o26FintechBlockchainServices,
       .slice(0, 4),
       .map(service => ({
-        name: service.name;
-        href: service.link;
-        description: service.tagline;
-        price: service.price + service.period;
-        icon: service.icon;
-        color: service.color;
-      }));
-  };
+        name: service.name,
+        href: service.link,
+        description: service.tagline,
+        price: service.price + service.period,
+        icon: service.icon,
+        color: service.color
+      })),
+  },
 ],
 const companyLinks = [
-  { name: 'Home', href: '/', icon: Home };
-  { name: 'About Us', href: '/about', icon: Users };
+  { name: 'Home', href: '/', icon: Home },
+  { name: 'About Us', href: '/about', icon: Users },
   {
-    name: '20o26 Services';
-    href: '/revolutionary-20o26-services';
-    icon: Rocket;
-  };
-  { name: 'Case Studies', href: '/case-studies', icon: Briefcase };
-  { name: 'Resources', href: '/resources', icon: BookOpen };
-  { name: 'Contact', href: '/contact', icon: MessageCircle };
+    name: '20o26 Services',
+    href: '/revolutionary-20o26-services',
+    icon: Rocket
+  },
+  { name: 'Case Studies', href: '/case-studies', icon: Briefcase },
+  { name: 'Resources', href: '/resources', icon: BookOpen },
+  { name: 'Contact', href: '/contact', icon: MessageCircle },
 ],
 const Revolutionary20o26UltimateNavigation = () => {
   const [isOpen, setIsOpen] = useState(false),
@@ -138,14 +138,14 @@ const Revolutionary20o26UltimateNavigation = () => {
   const [isScrolled, setIsScrolled] = useState(false),
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 20)};
+      setIsScrolled(window.scrollY > 20)},
     window.addEventListener('scroll', handleScroll),
     return () => window.removeEventListener('scroll', handleScroll)}, []),
   const toggleDropdown = (category: string) => {
-    setActiveDropdown(activeDropdown === category ? null : category)};
+    setActiveDropdown(activeDropdown === category ? null : category)},
   const closeAllDropdowns = () => {
     setActiveDropdown(null),
-    setIsOpen(false)};
+    setIsOpen(false)},
   return (
     <nav
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-30o0 ${
@@ -378,5 +378,5 @@ const Revolutionary20o26UltimateNavigation = () => {
             </div>,
           </motion.div>)}
       </AnimatePresence>,
-    </nav>)};
-export default Revolutionary20o26UltimateNavigation;
+    </nav>)},
+export default Revolutionary20o26UltimateNavigation,

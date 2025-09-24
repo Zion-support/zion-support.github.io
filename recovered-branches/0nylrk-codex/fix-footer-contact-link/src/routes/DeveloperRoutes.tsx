@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { NavigateRoutes } from 'react-router-dom',
 import DeveloperPortal from '../pages/DeveloperPortal',
 import ApiDocsHub from '../pages/ApiDocsHub',

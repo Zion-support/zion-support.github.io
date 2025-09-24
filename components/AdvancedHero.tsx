@@ -9,12 +9,12 @@ interface AdvancedHeroProps {
   backgroundImage?: string}
 ,
 export default function AdvancedHero({
-  title;
-  subtitle;
-  description;
-  ctaText = 'Get Started';
-  ctaLink = '/contact';
-  backgroundImage;
+  title,
+  subtitle,
+  description,
+  ctaText = 'Get Started',
+  ctaLink = '/contact',
+  backgroundImage,
 }: AdvancedHeroProps) {
   return (
     <section className='relative min-h-screen flex items-center justify-center overflow-hidden'>,

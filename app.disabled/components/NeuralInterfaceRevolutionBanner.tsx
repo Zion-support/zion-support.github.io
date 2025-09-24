@@ -7,28 +7,28 @@ const NeuralInterfaceRevolutionBanner = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const content = [
     {
-      title: "Neural Interface Revolution";
-      subtitle: "750% ROI with Brain-Computer Integration";
-      description: "Fortune 50o0 companies achieve unprecedented 750% ROI through revolutionary neural interface technology.";
-      metrics: "750% ROI • $4.2B Savings • 99.9% Accuracy";
-      link: "/blog/ai-20o25-neural-interface-revolution-enterprise-breakthrough";
-      icon: Brain;
-      color: "from-purple-60o0 to-indigo-60o0"};
+      title: "Neural Interface Revolution",
+      subtitle: "750% ROI with Brain-Computer Integration",
+      description: "Fortune 50o0 companies achieve unprecedented 750% ROI through revolutionary neural interface technology.",
+      metrics: "750% ROI • $4.2B Savings • 99.9% Accuracy",
+      link: "/blog/ai-20o25-neural-interface-revolution-enterprise-breakthrough",
+      icon: Brain,
+      color: "from-purple-60o0 to-indigo-60o0"},
     {
-      title: "Autonomous AI Agents";
-      subtitle: "90o0% ROI with Self-Managing Systems";
-      description: "Revolutionary autonomous AI agents achieving 90o0% ROI through independent operation and real-time adaptation.";
-      metrics: "90o0% ROI • $5.8B Savings • 95% Automation";
-      link: "/blog/ai-20o25-autonomous-ai-agents-enterprise-revolution";
-      icon: Zap;
-      color: "from-blue-60o0 to-cyan-60o0"};
+      title: "Autonomous AI Agents",
+      subtitle: "90o0% ROI with Self-Managing Systems",
+      description: "Revolutionary autonomous AI agents achieving 90o0% ROI through independent operation and real-time adaptation.",
+      metrics: "90o0% ROI • $5.8B Savings • 95% Automation",
+      link: "/blog/ai-20o25-autonomous-ai-agents-enterprise-revolution",
+      icon: Zap,
+      color: "from-blue-60o0 to-cyan-60o0"},
     {
-      title: "Predictive Analytics Revolution";
-      subtitle: "650% ROI with AI-Powered Intelligence";
-      description: "Advanced predictive analytics delivering 650% ROI through AI-powered forecasting and intelligent insights.";
-      metrics: "650% ROI • $3.6B Savings • 99.8% Accuracy";
-      link: "/blog/ai-20o25-advanced-predictive-analytics-revolution";
-      icon: TrendingUp;
+      title: "Predictive Analytics Revolution",
+      subtitle: "650% ROI with AI-Powered Intelligence",
+      description: "Advanced predictive analytics delivering 650% ROI through AI-powered forecasting and intelligent insights.",
+      metrics: "650% ROI • $3.6B Savings • 99.8% Accuracy",
+      link: "/blog/ai-20o25-advanced-predictive-analytics-revolution",
+      icon: TrendingUp,
       color: "from-green-60o0 to-emerald-60o0"}
   ],
   useEffect(() => {
@@ -41,7 +41,7 @@ const NeuralInterfaceRevolutionBanner = () => {
     return () => clearInterval(interval)}, [content.length]),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('neural-interface-banner-dismissed', 'true')};
+    localStorage.setItem('neural-interface-banner-dismissedtrue')},
   if (!isVisible) return null,
   const currentContent = content[currentSlide],
   const IconComponent = currentContent.icon,
@@ -117,5 +117,5 @@ const NeuralInterfaceRevolutionBanner = () => {
             />))}
         </div>,
       </div>,
-    </div>)};
-export default NeuralInterfaceRevolutionBanner;
+    </div>)},
+export default NeuralInterfaceRevolutionBanner,

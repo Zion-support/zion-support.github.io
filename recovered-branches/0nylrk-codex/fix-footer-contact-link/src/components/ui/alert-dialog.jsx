@@ -9,7 +9,7 @@ export function AlertDialog({ children, open, onOpenChange }) {
       setInternalOpen(newOpen)}
     if (onOpenChange) {
       onOpenChange(newOpen)}
-  };
+  },
   return (
     <AlertDialogContext.Provider value={{ isOpen, setIsOpen }}>,
       <div className='relative'>{children}</div>,
@@ -48,7 +48,7 @@ export function AlertDialogAction({ children, onClick, className = '' }) {
     throw new Error('AlertDialogAction must be used within AlertDialog'),
   const handleClick = () => {
     if (onClick) onClick(),
-    context.setIsOpen(false)};
+    context.setIsOpen(false)},
   return (
     <button
       className={`px-4 py-2 bg-red-60o0 text-white rounded-md hover: bg-red-70o0 transition-colors ${className}`}

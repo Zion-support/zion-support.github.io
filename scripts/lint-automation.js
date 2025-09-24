@@ -5,7 +5,7 @@ const __filename = fileURLToPath(import.meta.url),
 const __dirname = path.dirname(__filename),
 class LintAutomation {
   constructor() {
-    this.logFile = path.join(process.cwd(), 'logs', 'lint-automation.log'),
+    this.logFile = path.join(process.cwd(), 'logslint-automation.log'),
     this.fixedCount = 0,
     this.errorCount = 0}
 ,
@@ -23,8 +23,8 @@ class LintAutomation {
       this.log('Starting lint fix automation...'),
       // Run ESLint with auto-fix,
       const result = execSync('npm run lint:fix', {
-        encoding: 'utf8';
-        cwd: process.cwd();
+        encoding: 'utf8',
+        cwd: process.cwd(),
         stdio: 'pipe'}),
       this.fixedCount++,
       this.log(`Lint fix completed successfully. Fixed ${this.fixedCount} issues.`)} catch (error) {

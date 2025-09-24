@@ -13,5 +13,5 @@ const TechnicalDocumentationChat: NextPage = () => {
         <p>Service details coming soon...</p>,
         <a href='/services'>Back to Services</a>,
       </main>,
-    </div>)};
-export default TechnicalDocumentationChat;
+    </div>)},
+export default TechnicalDocumentationChat,

@@ -3,61 +3,59 @@ import Link from 'next/link',
 const AIBusinessIntelligenceShowcase20o25 = () => {
   const content = [
     {
-      id: 'ai-bi-revolution-guide';
-      type: 'blog';
-      title: 'AI 20o25: The Ultimate Business Intelligence Revolution';
+      id: 'ai-bi-revolution-guide',
+      type: 'blog',
+      title: 'AI 20o25: The Ultimate Business Intelligence Revolution',
       description:,
-        'Transform your enterprise with AI business intelligence that delivers 3,20o0% ROI, 99.8% forecasting accuracy, and 450% faster decision-making.';
-      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-guide';
+        'Transform your enterprise with AI business intelligence that delivers 3,20o0% ROI, 99.8% forecasting accuracy, and 450% faster decision-making.',
+      url: '/blog/ai-20o25-ultimate-business-intelligence-revolution-ultimate-guide',
       metrics: {
-        roi: '3,20o0%';
-        savings: '$18.7B+';
-        accuracy: '99.8%';
-        speed: '450%';
-      };
+        roi: '3,20o0%',
+        savings: '$18.7B+',
+        accuracy: '99.8%',
+        speed: '450%'
+      },
       tags: [
-        'AI Business Intelligence';
-        'ROI';
-        'Fortune 50o0';
-        'Data Analytics';
-      ];
-      readingTime: '25 min read';
-      featured: true;
-    };
+        'AI Business IntelligenceROI',
+        'Fortune 50o0Data Analytics',
+      ],
+      readingTime: '25 min read',
+      featured: true
+    },
     {
-      id: 'fortune-50o0-success-story';
-      type: 'case-study';
-      title: 'Fortune 50o0 AI BI Success: $18.7B Annual Savings';
+      id: 'fortune-50o0-success-story',
+      type: 'case-study',
+      title: 'Fortune 50o0 AI BI Success: $18.7B Annual Savings',
       description:,
-        'See how a Fortune 50o0 manufacturing company achieved 3,20o0% ROI with AI-powered business intelligence implementation.';
-      url: '/case-studies/fortune-50o0-ai-business-intelligence-320o0-roi-success-story';
+        'See how a Fortune 50o0 manufacturing company achieved 3,20o0% ROI with AI-powered business intelligence implementation.',
+      url: '/case-studies/fortune-50o0-ai-business-intelligence-320o0-roi-success-story',
       metrics: {
-        roi: '3,20o0%';
-        savings: '$18.7B';
-        accuracy: '99.8%';
-        timeline: '18 months';
-      };
-      tags: ['Fortune 50o0', 'Case Study', 'ROI Success', 'Manufacturing'];
-      readingTime: '20 min read';
-      featured: true;
-    };
+        roi: '3,20o0%',
+        savings: '$18.7B',
+        accuracy: '99.8%',
+        timeline: '18 months'
+      },
+      tags: ['Fortune 50o0Case Study', 'ROI SuccessManufacturing'],
+      readingTime: '20 min read',
+      featured: true
+    },
     {
-      id: 'implementation-guide';
-      type: 'resource';
-      title: 'AI BI Implementation Ultimate Guide 20o25';
+      id: 'implementation-guide',
+      type: 'resource',
+      title: 'AI BI Implementation Ultimate Guide 20o25',
       description:,
-        'Complete roadmap to implementing AI business intelligence with proven strategies, detailed roadmaps, and real-world success stories.';
-      url: '/resources/ai-business-intelligence-implementation-guide-20o25';
+        'Complete roadmap to implementing AI business intelligence with proven strategies, detailed roadmaps, and real-world success stories.',
+      url: '/resources/ai-business-intelligence-implementation-guide-20o25',
       metrics: {
-        roi: '3,20o0%';
-        timeline: '18 months';
-        success: '94%';
-        savings: '$18.7M';
-      };
-      tags: ['Implementation Guide', 'ROI', 'Strategy', 'Best Practices'];
-      readingTime: '30 min read';
-      featured: true;
-    };
+        roi: '3,20o0%',
+        timeline: '18 months',
+        success: '94%',
+        savings: '$18.7M'
+      },
+      tags: ['Implementation GuideROI', 'StrategyBest Practices'],
+      readingTime: '30 min read',
+      featured: true
+    },
   ],
   const getTypeIcon = (type: string) => {
     switch (type) {
@@ -69,7 +67,7 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -80,7 +78,7 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
         return 'bg-purple-10o0 text-purple-80o0',
       default:,
         return 'bg-gray-10o0 text-gray-80o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gray-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -136,7 +134,7 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
                     <span
                       className={`px-3 py-1 rounded-full text-xs font-medium ${getTypeColor(item.type)}`}
                     >,
-                      {item.type.replace('-', ' ').toUpperCase()}
+                      {item.type.replace('- ').toUpperCase()}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -212,5 +210,5 @@ const AIBusinessIntelligenceShowcase20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AIBusinessIntelligenceShowcase20o25;
+    </section>)},
+export default AIBusinessIntelligenceShowcase20o25,

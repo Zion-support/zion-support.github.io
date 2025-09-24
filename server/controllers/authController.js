@@ -19,12 +19,12 @@ exports.loginUser = async function (req, res) {
         .json({ code: 'WRONG_PASSWORD', message: 'Invalid credentials' })}
     const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' }),
     return res.json({
-      token;
-      user: { id: user._id, email: user.email, name: user.name };
+      token,
+      user: { id: user._id, email: user.email, name: user.name },
     })} catch (err) {
     console.error(err),
     return res.status(500).json({ message: 'Server error' })}
-};
+},
 // Maintain backwards compatibility if other modules still call `login`,
 exports.login = exports.loginUser,
 exports.registerUser = async function (req, res) {
@@ -39,8 +39,8 @@ exports.registerUser = async function (req, res) {
     await user.save(),
     const token = jwt.sign({ id: user._id }, jwtSecret, { expiresIn: '7d' }),
     return res.status(201).json({
-      token;
-      user: { id: user._id, email: user.email, name: user.name };
+      token,
+      user: { id: user._id, email: user.email, name: user.name },
     })} catch (err) {
     if (err && err.code === 11000) {
       return res,
@@ -48,6 +48,6 @@ exports.registerUser = async function (req, res) {
         .json({ code: 'EMAIL_EXISTS', message: 'Email already registered' })}
     console.error(err),
     return res.status(500).json({ message: 'Server error' })}
-};
+},
 // Maintain backwards compatibility if other modules still call `register`,
 exports.register = exports.registerUser,

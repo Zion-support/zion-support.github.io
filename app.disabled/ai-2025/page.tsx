@@ -1,17 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o25 - Revolutionary AI Solutions | Zion Tech Group';
+  title: 'AI 20o25 - Revolutionary AI Solutions | Zion Tech Group',
   description:,
-    'Discover the latest AI innovations and solutions for 20o25. Advanced neural networks, automation, and cutting-edge technology.';
+    'Discover the latest AI innovations and solutions for 20o25. Advanced neural networks, automation, and cutting-edge technology.',
   keywords: [
-    'AI 20o25';
-    'artificial intelligence';
-    'neural networks';
-    'automation';
-    'machine learning';
-  ];
-};
+    'AI 20o25artificial intelligence',
+    'neural networksautomation',
+    'machine learning',
+  ]
+},
 export default function AI20o25Page() {
   return (
     <div className='min-h-screen bg-white'>,

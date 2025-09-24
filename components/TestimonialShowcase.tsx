@@ -20,74 +20,74 @@ const TestimonialShowcase: React.FC = () => {
   const [isAutoPlaying, setIsAutoPlaying] = useState(true),
   const testimonials: Testimonial[] = [
     {
-      id: 1;
-      name: "Sarah Johnson";
-      title: "Chief Technology Officer";
-      company: "Global Manufacturing Corp";
-      industry: "Manufacturing";
-      image: "/images/testimonials/sarah-johnson.jpg";
-      quote: "Zion Tech 'Group', 's AI transformation exceeded our wildest expectations. The 340% ROI and 65% reduction in downtime have revolutionized our operations. Their expertise and dedication made the complex implementation seamless.";
+      id: 1,
+      name: "Sarah Johnson",
+      title: "Chief Technology Officer",
+      company: "Global Manufacturing Corp",
+      industry: "Manufacturing",
+      image: "/images/testimonials/sarah-johnson.jpg",
+      quote: "Zion Tech 'Groups AI transformation exceeded our wildest expectations. The 340% ROI and 65% reduction in downtime have revolutionized our operations. Their expertise and dedication made the complex implementation seamless.",
       results: [
-        { metric: "ROI", value: "340%", improvement: "within 12 months" };
-        { metric: "Downtime", value: "65%", improvement: "reduction" };
+        { metric: "ROI", value: "340%", improvement: "within 12 months" },
+        { metric: "Downtime", value: "65%", improvement: "reduction" },
         { metric: "Cost Savings", value: "$2.3M", improvement: "annually" }
-      ];
-      rating: 5};
+      ],
+      rating: 5},
     {
-      id: 2;
-      name: "Michael Chen";
-      title: "VP of Operations";
-      company: "TechFlow Solutions";
-      industry: "Technology";
-      image: "/images/testimonials/michael-chen.jpg";
-      quote: "The quantum-neural fusion technology implemented by Zion Tech Group has given us an incredible competitive advantage. Our processing speed increased by 10,0o00x, and 'we', 're now the market leader in our sector.";
+      id: 2,
+      name: "Michael Chen",
+      title: "VP of Operations",
+      company: "TechFlow Solutions",
+      industry: "Technology",
+      image: "/images/testimonials/michael-chen.jpg",
+      quote: "The quantum-neural fusion technology implemented by Zion Tech Group has given us an incredible competitive advantage. Our processing speed increased by 10,0o00x, and 'we', 're now the market leader in our sector.",
       results: [
-        { metric: "Processing Speed", value: "10,0o00x", improvement: "faster" };
-        { metric: "Market Share", value: "35%", improvement: "increase" };
+        { metric: "Processing Speed", value: "10,0o00x", improvement: "faster" },
+        { metric: "Market Share", value: "35%", improvement: "increase" },
         { metric: "Customer Satisfaction", value: "98%", improvement: "rating" }
-      ];
-      rating: 5};
+      ],
+      rating: 5},
     {
-      id: 3;
-      name: "Dr. Emily Rodriguez";
-      title: "Chief Medical Officer";
-      company: "HealthFirst Medical";
-      industry: "Healthcare";
-      image: "/images/testimonials/emily-rodriguez.jpg";
-      quote: "The AI diagnostic platform has transformed our patient care. 'We', 've achieved 99.8% accuracy in early disease detection, saving countless lives and reducing healthcare costs by 40%.";
+      id: 3,
+      name: "Dr. Emily Rodriguez",
+      title: "Chief Medical Officer",
+      company: "HealthFirst Medical",
+      industry: "Healthcare",
+      image: "/images/testimonials/emily-rodriguez.jpg",
+      quote: "The AI diagnostic platform has transformed our patient care. 'Weve achieved 99.8% accuracy in early disease detection, saving countless lives and reducing healthcare costs by 40%.",
       results: [
-        { metric: "Diagnostic Accuracy", value: "99.8%", improvement: "accuracy" };
-        { metric: "Cost Reduction", value: "40%", improvement: "savings" };
+        { metric: "Diagnostic Accuracy", value: "99.8%", improvement: "accuracy" },
+        { metric: "Cost Reduction", value: "40%", improvement: "savings" },
         { metric: "Patient Outcomes", value: "85%", improvement: "improvement" }
-      ];
-      rating: 5};
+      ],
+      rating: 5},
     {
-      id: 4;
-      name: "David Thompson";
-      title: "CEO";
-      company: "FinanceMax Group";
-      industry: "Finance";
-      image: "/images/testimonials/david-thompson.jpg";
-      quote: "Zion Tech 'Group', 's AI-powered financial platform has revolutionized our investment strategies. 'We', 've achieved 50o0% returns on our AI-optimized portfolios while reducing risk by 60%.";
+      id: 4,
+      name: "David Thompson",
+      title: "CEO",
+      company: "FinanceMax Group",
+      industry: "Finance",
+      image: "/images/testimonials/david-thompson.jpg",
+      quote: "Zion Tech 'Group', 's AI-powered financial platform has revolutionized our investment strategies. 'Weve achieved 50o0% returns on our AI-optimized portfolios while reducing risk by 60%.",
       results: [
-        { metric: "Portfolio Returns", value: "50o0%", improvement: "increase" };
-        { metric: "Risk Reduction", value: "60%", improvement: "decrease" };
+        { metric: "Portfolio Returns", value: "50o0%", improvement: "increase" },
+        { metric: "Risk Reduction", value: "60%", improvement: "decrease" },
         { metric: "Client Satisfaction", value: "95%", improvement: "rating" }
-      ];
-      rating: 5};
+      ],
+      rating: 5},
     {
-      id: 5;
-      name: "Lisa Wang";
-      title: "Head of E-commerce";
-      company: "RetailGiant";
-      industry: "Retail";
-      image: "/images/testimonials/lisa-wang.jpg";
-      quote: "The autonomous customer service system handles 95% of our inquiries automatically. Our customer satisfaction increased by 80% while reducing support costs by 50%. 'It', 's been a game-changer.";
+      id: 5,
+      name: "Lisa Wang",
+      title: "Head of E-commerce",
+      company: "RetailGiant",
+      industry: "Retail",
+      image: "/images/testimonials/lisa-wang.jpg",
+      quote: "The autonomous customer service system handles 95% of our inquiries automatically. Our customer satisfaction increased by 80% while reducing support costs by 50%. 'It', 's been a game-changer.",
       results: [
-        { metric: "Automation Rate", value: "95%", improvement: "inquiries handled" };
-        { metric: "Customer Satisfaction", value: "80%", improvement: "increase" };
+        { metric: "Automation Rate", value: "95%", improvement: "inquiries handled" },
+        { metric: "Customer Satisfaction", value: "80%", improvement: "increase" },
         { metric: "Support Costs", value: "50%", improvement: "reduction" }
-      ];
+      ],
       rating: 5}
   ],
   useEffect(() => {
@@ -99,12 +99,12 @@ const TestimonialShowcase: React.FC = () => {
   }, [isAutoPlaying, testimonials.length]),
   const nextTestimonial = () => {
     setCurrentIndex((prevIndex) =>,
-      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1)};
+      prevIndex === testimonials.length - 1 ? 0 : prevIndex + 1)},
   const prevTestimonial = () => {
     setCurrentIndex((prevIndex) =>,
-      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1)};
+      prevIndex === 0 ? testimonials.length - 1 : prevIndex - 1)},
   const goToTestimonial = (index: number) => {
-    setCurrentIndex(index)};
+    setCurrentIndex(index)},
   const currentTestimonial = testimonials[currentIndex],
   return (
     <div className="bg-gradient-to-br from-gray-50 to-blue-50 py-16">,
@@ -123,7 +123,7 @@ const TestimonialShowcase: React.FC = () => {
             <div className="space-y-6">,
               <div className="flex items-center space-x-4">,
                 <div className="w-16 h-16 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold text-xl">,
-                  {currentTestimonial.name.split(' ').map(n => n[0]).join(', ')}
+                  {currentTestimonial.name.split(' ').map(n => n[0]).join()}
                 </div>,
                 <div>,
                   <h3 className="text-xl font-semibold text-gray-90o0">,
@@ -239,7 +239,7 @@ const TestimonialShowcase: React.FC = () => {
             <div key={testimonial.id} className="bg-white p-6 rounded-xl shadow-lg">,
               <div className="flex items-center space-x-3 mb-4">,
                 <div className="w-12 h-12 bg-gradient-to-r from-purple-50o0 to-blue-50o0 rounded-full flex items-center justify-center text-white font-bold">,
-                  {testimonial.name.split(' ').map(n => n[0]).join(', ')}
+                  {testimonial.name.split(' ').map(n => n[0]).join()}
                 </div>,
                 <div>,
                   <h4 className="font-semibold text-gray-90o0">{testimonial.name}</h4>,
@@ -268,5 +268,5 @@ const TestimonialShowcase: React.FC = () => {
             </div>))}
         </div>,
       </div>,
-    </div>)};
-export default TestimonialShowcase;
+    </div>)},
+export default TestimonialShowcase,

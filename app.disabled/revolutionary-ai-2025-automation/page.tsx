@@ -1,18 +1,15 @@
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'Revolutionary AI 20o25 Automation - Zion Tech Group';
+  title: 'Revolutionary AI 20o25 Automation - Zion Tech Group',
   description:,
-    'Transform your business with revolutionary AI 20o25 automation. Achieve 20o00% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.';
+    'Transform your business with revolutionary AI 20o25 automation. Achieve 20o00% ROI with our breakthrough autonomous systems and quantum-enhanced AI solutions.',
   keywords: [
-    'AI 20o25';
-    'Revolutionary Automation';
-    'Autonomous Systems';
-    'Quantum AI';
-    'Business Transformation';
-    '20o00% ROI';
-  ];
-};
+    'AI 20o25Revolutionary Automation',
+    'Autonomous SystemsQuantum AI',
+    'Business Transformation20o00% ROI',
+  ]
+},
 export default function RevolutionaryAI20o25AutomationPage() {
   return (
     <div>,

@@ -15,14 +15,14 @@ interface AIEnhancementPanelProps {
   initialContent?: string}
 ,
 export function AIEnhancementPanel({
-  title;
-  defaultOptions;
-  onApply;
-  onClose;
-  showInstructions = true;
+  title,
+  defaultOptions,
+  onApply,
+  onClose,
+  showInstructions = true,
   initialContent = ''}: AIEnhancementPanelProps) {
   const [optionsetOptions] = useState<AIEnhancementOptions>({
-    ...defaultOptions;
+    ...defaultOptions,
     content: initialContent || defaultOptions.content}),
   const [generatedContentsetGeneratedContent] = useState<string>(''),
   const [copiedsetCopied] = useState(false),
@@ -31,20 +31,20 @@ export function AIEnhancementPanel({
     const result = await enhanceContent(options),
     if (result) {
       setGeneratedContent(result)}
-  };
+  },
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>;
+    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
     field: keyof AIEnhancementOptions) => {
     setOptions({
-      ...options;
-      [field]: e.target.value})};
+      ...options,
+      [field]: e.target.value})},
   const handleApply = () => {
     onApply(generatedContent),
-    if (onClose) onClose()};
+    if (onClose) onClose()},
   const handleCopy = () => {
     navigator.clipboard.writeText(generatedContent),
     setCopied(true),
-    setTimeout(() => setCopied(false)2000)};
+    setTimeout(() => setCopied(false)2000)},
   return (
     <Card className="w-full max-w-2xl mx-auto">,
       <CardHeader>,

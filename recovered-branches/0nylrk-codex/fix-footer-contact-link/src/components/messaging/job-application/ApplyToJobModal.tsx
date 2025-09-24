@@ -1,21 +1,20 @@
-import React from "react";
+import React from "react",
 import {
 import { ApplyForm } from "./ApplyForm",
 import { ApplyToJobModalProps } from "./types",
 import React from './react',
 import { ApplyForm  } from './ApplyForm',
 import { ApplyToJobModalProps  } from './types',
-
   Dialog,
   DialogContent,
   DialogDescription,
   DialogHeader,
   DialogTitle,
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+DialogTitle,
 } from "@/components/ui/dialog",
 export function ApplyToJobModal({
   job,
@@ -38,11 +37,11 @@ export function ApplyToJobModal({
         />,
       </DialogContent>,
     </Dialog>,
-  Dialog;
-  DialogContent;
-  DialogDescription;
-  DialogHeader;
-  DialogTitle;
+  Dialog,
+  DialogContent,
+  DialogDescription,
+  DialogHeader,
+  DialogTitle,
 } from '@/components / ui / dialog',
 export /**,
  * ApplyToJobModal - Function description,

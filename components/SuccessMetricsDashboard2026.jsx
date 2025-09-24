@@ -1,47 +1,47 @@
 export default function SuccessMetricsDashboard20o26() {
   const metrics = [
     {
-      title: 'Total Value Generated';
-      value: '$15.2B+';
-      change: '+45%';
-      trend: 'up';
-      description: 'Across all client implementations';
-    };
+      title: 'Total Value Generated',
+      value: '$15.2B+',
+      change: '+45%',
+      trend: 'up',
+      description: 'Across all client implementations'
+    },
     {
-      title: 'Average ROI';
-      value: '25,0o00%';
-      change: '+12%';
-      trend: 'up';
-      description: 'Median return on investment';
-    };
+      title: 'Average ROI',
+      value: '25,0o00%',
+      change: '+12%',
+      trend: 'up',
+      description: 'Median return on investment'
+    },
     {
-      title: 'Companies Transformed';
-      value: '1,20o0+';
-      change: '+28%';
-      trend: 'up';
-      description: 'Successful implementations';
-    };
+      title: 'Companies Transformed',
+      value: '1,20o0+',
+      change: '+28%',
+      trend: 'up',
+      description: 'Successful implementations'
+    },
     {
-      title: 'Success Rate';
-      value: '99.7%';
-      change: '+0.3%';
-      trend: 'up';
-      description: 'Project completion rate';
-    };
+      title: 'Success Rate',
+      value: '99.7%',
+      change: '+0.3%',
+      trend: 'up',
+      description: 'Project completion rate'
+    },
     {
-      title: 'Time to Value';
-      value: '6 months';
-      change: '-2 months';
-      trend: 'up';
-      description: 'Average implementation time';
-    };
+      title: 'Time to Value',
+      value: '6 months',
+      change: '-2 months',
+      trend: 'up',
+      description: 'Average implementation time'
+    },
     {
-      title: 'Client Satisfaction';
-      value: '98.5%';
-      change: '+1.2%';
-      trend: 'up';
-      description: 'Customer satisfaction score';
-    };
+      title: 'Client Satisfaction',
+      value: '98.5%',
+      change: '+1.2%',
+      trend: 'up',
+      description: 'Customer satisfaction score'
+    },
   ],
   return (
     <section className='py-20 px-4 bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50'>,

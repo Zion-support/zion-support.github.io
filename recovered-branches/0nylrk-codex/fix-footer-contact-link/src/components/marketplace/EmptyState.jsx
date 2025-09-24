@@ -1,67 +1,67 @@
-import React from 'react';
+import React from 'react',
 import * as React from 'react',
 import {
-  RefreshCw;
-  Wifi;
-  Server;
-  ShoppingCart;
-  Users;
-  Wrench;
-  Lightbulb;
+  RefreshCw,
+  Wifi,
+  Server,
+  ShoppingCart,
+  Users,
+  Wrench,
+  Lightbulb,
 } from 'lucide-react',
 import { Button } from '@/components/ui/button',
 import { Link } from 'react-router-dom',
 import { useTranslation } from 'react-i18next',
 const defaultContent = {
   products: {
-    icon: <ShoppingCart className='w-16 h-16 text-gray-50o0' />;
-    title: 'No Products Available';
+    icon: <ShoppingCart className='w-16 h-16 text-gray-50o0' />,
+    title: 'No Products Available',
     description:,
-      "We're loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!";
-  };
+      "We're loading our marketplace products. If this persists, there might be a connection issue. Try refreshing the page or check back soon for exciting new offerings!",
+  },
   categories: {
-    icon: <Lightbulb className='w-16 h-16 text-gray-50o0' />;
-    title: 'No Categories Found';
+    icon: <Lightbulb className='w-16 h-16 text-gray-50o0' />,
+    title: 'No Categories Found',
     description:,
-      'Categories are being organized. Please try refreshing the page or come back later.';
-  };
+      'Categories are being organized. Please try refreshing the page or come back later.',
+  },
   talent: {
-    icon: <Users className='w-16 h-16 text-gray-50o0' />;
-    title: 'No Talent Profiles';
+    icon: <Users className='w-16 h-16 text-gray-50o0' />,
+    title: 'No Talent Profiles',
     description:,
-      'No talent profiles match your criteria. Try adjusting your filters or search terms.';
-  };
+      'No talent profiles match your criteria. Try adjusting your filters or search terms.',
+  },
   equipment: {
-    icon: <Wrench className='w-16 h-16 text-gray-50o0' />;
-    title: 'No Equipment Available';
+    icon: <Wrench className='w-16 h-16 text-gray-50o0' />,
+    title: 'No Equipment Available',
     description:,
-      'Equipment listings are being updated. Please check back soon for the latest hardware offerings.';
-  };
+      'Equipment listings are being updated. Please check back soon for the latest hardware offerings.',
+  },
   search: {
-    icon: <ShoppingCart className='w-16 h-16 text-gray-50o0' />;
-    title: 'No Results Found';
+    icon: <ShoppingCart className='w-16 h-16 text-gray-50o0' />,
+    title: 'No Results Found',
     description:,
-      'Try adjusting your search terms or browse our categories to discover what we have available.';
-  };
+      'Try adjusting your search terms or browse our categories to discover what we have available.',
+  },
   error: {
-    icon: <Server className='w-16 h-16 text-red-40o0' />;
-    title: 'Unable to Load Data';
+    icon: <Server className='w-16 h-16 text-red-40o0' />,
+    title: 'Unable to Load Data',
     description:,
-      "We're experiencing technical difficulties. Our team has been notified and is working on a fix.";
-  };
+      "We're experiencing technical difficulties. Our team has been notified and is working on a fix.",
+  },
   network: {
-    icon: <Wifi className='w-16 h-16 text-orange-40o0' />;
-    title: 'Connection Issue';
+    icon: <Wifi className='w-16 h-16 text-orange-40o0' />,
+    title: 'Connection Issue',
     description:,
-      'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.';
-  };
+      'Please check your internet connection and try again. If the problem persists, our servers might be temporarily unavailable.',
+  },
   loading: {
-    icon: <RefreshCw className='w-16 h-16 text-blue-40o0 animate-spin' />;
-    title: 'Loading...';
+    icon: <RefreshCw className='w-16 h-16 text-blue-40o0 animate-spin' />,
+    title: 'Loading...',
     description:,
-      "We're fetching the latest data for you. This should only take a moment.";
-  };
-};
+      "We're fetching the latest data for you. This should only take a moment.",
+  },
+},
 export function EmptyState({ type, title, description, action, icon }) {
   const { t } = useTranslation(),
   const content = defaultContent[type],
@@ -104,14 +104,14 @@ export function EmptyState({ type, title, description, action, icon }) {
     </div>)}
 // Specific empty state variants for quick use,
 export function ProductsEmptyState({
-  onRetry;
-  onAddProduct;
-  isAuthenticated = false;
+  onRetry,
+  onAddProduct,
+  isAuthenticated = false,
 }) {
   const action = onAddProduct,
     ? {
-        label: isAuthenticated ? 'Add Product' : 'Login to Add Product';
-        onClick: onAddProduct;
+        label: isAuthenticated ? 'Add Product' : 'Login to Add Product',
+        onClick: onAddProduct
       }
     : onRetry,
       ? { label: 'Try Again', onClick: onRetry }

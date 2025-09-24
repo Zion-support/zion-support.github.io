@@ -20,10 +20,10 @@ const initializeServices = () => {
     throw new Error('Missing required environment variables')}
 ,
   return {
-    supabase: createClient(supabaseUrl, supabaseServiceKey);
-    openaiApiKey;
-  };
-};
+    supabase: createClient(supabaseUrl, supabaseServiceKey),
+    openaiApiKey,
+  },
+},
 // Validate request content,
 const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!data || typeof data !== 'object') {
@@ -36,7 +36,7 @@ const validateRequest = (data: unknown): AnalyzeRequest => {
   if (!request.contentType) {
     throw new Error('No content type provided')}
 ,
-  return request};
+  return request},
 // Create prompt for OpenAI,
 const createAnalysisPrompt = (contentType: string, content: string): string => {
   return `,
@@ -49,31 +49,31 @@ const createAnalysisPrompt = (contentType: string, content: string): string => {
     Respond with one of these classifications: SAFE / SUSPICIOUS / DANGEROUS,
     followed by a brief explanation (max 1-2 sentences) of your reasoning.,
     Format your response exactly like: "CLASSIFICATION: explanation",
-  `};
+  `},
 // Call OpenAI API for content analysis,
 const analyzeWithOpenAI = async (
-  prompt: string;
+  prompt: string,
   openaiApiKey: string): Promise<{ classification: string, explanation: string }> => {
   try {
     const response = await fetch('https://api.openai.com/v1/chat/completions', {
-      method: 'POST';
+      method: 'POST',
       headers: {
-        'Content-Type': 'application/json';
-        Authorization: `Bearer ${openaiApiKey}`;
-      };
+        'Content-Type': 'application/json',
+        Authorization: `Bearer ${openaiApiKey}`,
+      },
       body: JSON.stringify({
-        model: 'gpt-4o-mini';
+        model: 'gpt-4o-mini',
         messages: [
           {
-            role: 'system';
+            role: 'system',
             content:,
-              'You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse.';
-          };
-          { role: 'user', content: prompt };
-        ];
-        temperature: 0.3;
-        max_tokens: 150;
-      });
+              'You are a fraud detection assistant that analyzes content for signs of fraud, spam, or abuse.',
+          },
+          { role: 'user', content: prompt },
+        ],
+        temperature: 0.3,
+        max_tokens: 150
+      }),
     }),
     const data = await response.json(),
     if (!response.ok) {
@@ -94,24 +94,24 @@ const analyzeWithOpenAI = async (
     if (analysisText.includes(':')) {
       explanation = analysisText.split(':')[1].trim()}
 ,
-    return { classification, explanation };
+    return { classification, explanation },
   } catch (error) {
     console.error('Error calling OpenAI:', error),
     throw error}
-};
+},
 // Update flag in database if flagId was provided,
 const updateFraudFlag = async (
-  supabase: ReturnType<typeof createClient>;
-  flagId: string;
-  classification: string;
+  supabase: ReturnType<typeof createClient>,
+  flagId: string,
+  classification: string,
   explanation: string): Promise<void> => {
   if (!flagId) return,
   const { error } = await supabase,
     .from('fraud_flags'),
     .update({
-      gpt_classification: classification.toLowerCase();
-      gpt_explanation: explanation;
-      updated_at: new Date().toISOString();
+      gpt_classification: classification.toLowerCase(),
+      gpt_explanation: explanation,
+      updated_at: new Date().toISOString()
     }),
     .eq('id', flagId),
   if (error) {
@@ -119,7 +119,7 @@ const updateFraudFlag = async (
     throw new Error(`Error updating fraud flag: ${error.message}`)}
 ,
   // // console.log(
-    `Updated fraud flag ${flagId} with classification: ${classification}`)};
+    `Updated fraud flag ${flagId} with classification: ${classification}`)},
 // Main request handler,
 serve(async req => {
   // Handle CORS preflight requests,
@@ -140,7 +140,7 @@ serve(async req => {
     // Create prompt and analyze with OpenAI,
     const prompt = createAnalysisPrompt(contentType, content),
     const { classification, explanation } = await analyzeWithOpenAI(
-      prompt;
+      prompt,
       openaiApiKey),
     // Update flag if flagId was provided,
     if (flagId) {
@@ -148,25 +148,25 @@ serve(async req => {
 ,
     // Return the analysis result,
     const result: AnalysisResult = {
-      classification: classification.toLowerCase();
-      explanation;
-      success: true;
-    };
+      classification: classification.toLowerCase(),
+      explanation,
+      success: true
+    },
     // // console.log('Analysis completed successfully:', result),
     return new Response(JSON.stringify(result), {
-      headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+      headers: { ...corsHeaders, 'Content-Type': 'application/json' },
     })} catch (error) {
     console.error('Error analyzing content:', error),
     // Determine appropriate status code based on error,
     const statusCode = error.message?.includes('Invalid') ? 400 : 500,
     return new Response(
       JSON.stringify({
-        error: error.message || 'An unexpected error occurred';
-        success: false;
-      });
+        error: error.message || 'An unexpected error occurred',
+        success: false
+      }),
       {
-        status: statusCode;
-        headers: { ...corsHeaders, 'Content-Type': 'application/json' };
+        status: statusCode,
+        headers: { ...corsHeaders, 'Content-Type': 'application/json' },
       }
     )}
 }),

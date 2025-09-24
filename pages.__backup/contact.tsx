@@ -4,10 +4,10 @@ import { MailPhoneMapPinSendCheckCircleUserBuildingMessageSquareArrowRight } fro
 import PageTransition from '../src/components/PageTransition',
 export default function Contact() {
 	const [formDatasetFormData] = useState({
-		name: '';
-		email: '';
-		company: '';
-		service: '';
+		name: '',
+		email: '',
+		company: '',
+		service: '',
 		message: ''}),
 	const [isSubmittingsetIsSubmitting] = useState(false),
 	const [isSubmittedsetIsSubmitted] = useState(false),
@@ -45,12 +45,12 @@ export default function Contact() {
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
 		const { namevalue } = e.target,
 		setFormData({
-			...formData;
+			...formData,
 			[name]: value}),
 		// Clear error when user starts typing,
 		if (errors[name]) {
 			setErrors({
-				...errors;
+				...errors,
 				[name]: ''})}
 	}
 ,

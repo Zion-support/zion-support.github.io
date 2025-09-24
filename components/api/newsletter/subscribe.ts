@@ -39,7 +39,7 @@ export default /**,
 function handler() {
   if (return res.status (405).end ()) {
   $2}
-  ensure ();
+  ensure (),
   const { email } = req.body || {}
   if (
     return res.status (400).json ({ error: 'Invalid email' })) {

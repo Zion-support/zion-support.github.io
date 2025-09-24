@@ -26,7 +26,7 @@ export default function Page() {
           className='mt-4',
           dangerouslySetInnerHTML={{
             __html:,
-              '<p>Signal source: <a class="text-cyan-30o0 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>';
+              '<p>Signal source: <a class="text-cyan-30o0 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p><h2>Components</h2><ul><li>Ingestion & normalization</li><li>Knowledge index</li><li>Generation & evaluation</li><li>Publishing</li><li>Observability</li></ul><h2>Flows</h2><ol><li>Collect</li><li>Synthesize</li><li>Review</li><li>Publish</li><li>Measure</li></ol>'
           }}
         />,
         <p className='mt-6 text-white/60 text-sm'>,

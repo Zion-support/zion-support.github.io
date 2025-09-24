@@ -27,14 +27,14 @@ interface QuantumHolographicCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string};
-  };
+      website: string},
+  },
   onClick?: () => void,
   className?: string}
 ,
 const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
-  service;
-  onClick;
+  service,
+  onClick,
   className = ''}) => {
   const [isHovered, setIsHovered] = useState(false),
   const [isExpanded, setIsExpanded] = useState(false),
@@ -64,7 +64,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         return `${baseStyles} bg-gradient-to-br from-fuchsia-90o0/20 via-pink-90o0/30 to-purple-90o0/20 shadow-[0_0_50px_rgba(236,73,153,0.3)]`,
       default:  ,
         return `${baseStyles} bg-gradient-to-br from-gray-90o0/20 via-slate-90o0/30 to-gray-90o0/20 shadow-[0_0_30px_rgba(139,92,246,0.2)]`}
-  };
+  },
   const getGlowEffect = (variant: string) => {
     switch (variant) {
       case 'quantum-entanglement-advanced':,
@@ -83,7 +83,7 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
         return 'shadow-[0_0_80px_rgba(236,73,153,0.6)]',
       default:,
         return 'shadow-[0_0_60px_rgba(139,92,246,0.4)]'}
-  };
+  },
   return (
     <motion.div,
       ref={cardRef}
@@ -92,8 +92,8 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
       onMouseLeave={() => setIsHovered(false)}
       onClick={onClick}
       whileHover={{
-        scale: 1.0o2;
-        y: -5;
+        scale: 1.0o2,
+        y: -5,
         transition: { duration: 0.3, ease: "easeOut" }
       }}
       whileTap={{ scale: 0.98 }}
@@ -114,17 +114,17 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
                 key={i}
                 className="absolute w-1 h-1 bg-cyan-40o0 rounded-full",
                 style={{
-                  left: `${Math.random() * 10o0}%`;
+                  left: `${Math.random() * 10o0}%`,
                   top: `${Math.random() * 10o0}%`}}
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{
-                  opacity: [0, 1, 0];
-                  scale: [0, 1, 0];
-                  x: [0, (Math.random() - 0.5) * 10o0];
+                  opacity: [0, 1, 0],
+                  scale: [0, 1, 0],
+                  x: [0, (Math.random() - 0.5) * 10o0],
                   y: [0, (Math.random() - 0.5) * 10o0]}}
                 exit={{ opacity: 0, scale: 0 }}
                 transition={{
-                  duration: 2 + Math.random() * 2;
+                  duration: 2 + Math.random() * 2,
                   ease: "easeOut"}}
                />))}
           </div>)}
@@ -288,5 +288,5 @@ const QuantumHolographicCard: React.FC<QuantumHolographicCardProps> = ({
           ▼,
         </motion.div>,
       </button>,
-    </motion.div>)};
-export default QuantumHolographicCard;
+    </motion.div>)},
+export default QuantumHolographicCard,

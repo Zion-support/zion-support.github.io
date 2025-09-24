@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 #!/usr/bin/env node,
 import { fileURLToPath } from 'url',
 const __filename = fileURLToPath(import.meta.url),
@@ -10,16 +10,16 @@ function fixLintIssues(filePath) {
     let modified = false,
     // Remove unused imports (basic patterns),
     const unusedImportPatterns = [
-      /import\s*{\s*React\s*}\s*from\s*['"]react['"],\s*\n/g;
-      /import\s*React\s*from\s*['"]react['"],\s*\n/g;
-      /import\s*{\s*NextPage\s*}\s*from\s*['"]next['"],\s*\n/g;
-      /import\s*{\s*Head\s*}\s*from\s*['"]next\/head['"],\s*\n/g;
-      /import\s*{\s*Link\s*}\s*from\s*['"]next\/link['"],\s*\n/g;
-      /import\s*{\s*useRouter\s*}\s*from\s*['"]next\/router['"],\s*\n/g;
-      /import\s*{\s*dynamic\s*}\s*from\s*['"]next\/dynamic['"],\s*\n/g;
-      /import\s*{\s*GetStaticProps\s*}\s*from\s*['"]next['"],\s*\n/g;
-      /import\s*fs\s*from\s*['"]fs['"],\s*\n/g;
-      /import\s*path\s*from\s*['"]path['"],\s*\n/g;
+      /import\s*{\s*React\s*}\s*from\s*['"]react['"],\s*\n/g,
+      /import\s*React\s*from\s*['"]react['"],\s*\n/g,
+      /import\s*{\s*NextPage\s*}\s*from\s*['"]next['"],\s*\n/g,
+      /import\s*{\s*Head\s*}\s*from\s*['"]next\/head['"],\s*\n/g,
+      /import\s*{\s*Link\s*}\s*from\s*['"]next\/link['"],\s*\n/g,
+      /import\s*{\s*useRouter\s*}\s*from\s*['"]next\/router['"],\s*\n/g,
+      /import\s*{\s*dynamic\s*}\s*from\s*['"]next\/dynamic['"],\s*\n/g,
+      /import\s*{\s*GetStaticProps\s*}\s*from\s*['"]next['"],\s*\n/g,
+      /import\s*fs\s*from\s*['"]fs['"],\s*\n/g,
+      /import\s*path\s*from\s*['"]path['"],\s*\n/g,
     ],
     for (const pattern of unusedImportPatterns) {
       if (pattern.test(content)) {
@@ -29,9 +29,9 @@ function fixLintIssues(filePath) {
 ,
     // Fix unused variable declarations,
     const unusedVarPatterns = [
-      /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g;
-      /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g;
-      /var\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g;
+      /const\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g,
+      /let\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g,
+      /var\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*=\s*[^]+,\s*\/\/\s*unused/g,
     ],
     for (const pattern of unusedVarPatterns) {
       content = content.replace(pattern, '// Removed unused variable'),
@@ -41,7 +41,7 @@ function fixLintIssues(filePath) {
     content = content,
       .replace(/,\s*)/g, ')') // Remove trailing commas before closing parens,
       .replace(/,\s*}/g, '}') // Remove trailing commas before closing braces,
-      .replace(/,\s*,/g, ',') // Remove double commas,
+      .replace(/,\s*,/g, ) // Remove double commas,
       .replace(/\s+,\s+/g, ', ') // Normalize comma spacing,
       .replace(/=\s*{([^}]*)\s*}/g, '={$1}') // Fix object syntax,
       .replace(/<([^>]*)\s*>/g, '<$1>') // Fix JSX syntax,
@@ -68,7 +68,7 @@ function fixLintIssues(filePath) {
   return false}
 ,
 // Function to recursively process files,
-function processFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
+function processFiles(dir, extensions = ['.tsx.ts', '.js.jsx']) {
   const items = fs.readdirSync(dir),
   let processedCount = 0,
   for (const item of items) {
@@ -77,7 +77,7 @@ function processFiles(dir, extensions = ['.tsx', '.ts', '.js', '.jsx']) {
     if (stat.isDirectory()) {
       // Skip node_modules, .next, and other build directories,
       if (
-        !['node_modules', '.next', 'out', 'dist', 'build', '.git'].includes(
+        !['node_modules.next', 'outdist', 'build.git'].includes(
           item)) {
         processedCount += processFiles(fullPath, extensions)}
     } else if (stat.isFile() && extensions.some(ext => item.endsWith(ext))) {

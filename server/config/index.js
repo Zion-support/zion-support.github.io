@@ -9,6 +9,6 @@ if (!jwtSecret) {
   throw new Error('JWT_SECRET not defined in environment')}
 ,
 module.exports ={
-  mongoUri;
-  jwtSecret;
-  allowedOrigins};
+  mongoUri,
+  jwtSecret,
+  allowedOrigins},

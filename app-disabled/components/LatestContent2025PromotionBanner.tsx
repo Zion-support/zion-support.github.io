@@ -2,45 +2,45 @@ import Link from 'next/link',
 const LatestContent20o25PromotionBanner = () => {
   const featuredContent = [
     {
-      title: 'AI 20o25 Enterprise Integration Mastery';
+      title: 'AI 20o25 Enterprise Integration Mastery',
       description:,
-        'Complete implementation guide for enterprise AI integration with 340% average ROI increase';
-      category: 'AI Implementation';
-      readingTime: '12 min read';
-      href: '/blog/ai-20o25-enterprise-integration-mastery';
-      featured: true;
-      new: true;
-    };
+        'Complete implementation guide for enterprise AI integration with 340% average ROI increase',
+      category: 'AI Implementation',
+      readingTime: '12 min read',
+      href: '/blog/ai-20o25-enterprise-integration-mastery',
+      featured: true,
+      new: true
+    },
     {
-      title: 'Quantum AI Business Revolution 20o25';
+      title: 'Quantum AI Business Revolution 20o25',
       description:,
-        'Discover how quantum AI is revolutionizing business operations with exponential improvements';
-      category: 'Quantum Technology';
-      readingTime: '15 min read';
-      href: '/blog/quantum-ai-business-revolution-20o25';
-      featured: true;
-      new: true;
-    };
+        'Discover how quantum AI is revolutionizing business operations with exponential improvements',
+      category: 'Quantum Technology',
+      readingTime: '15 min read',
+      href: '/blog/quantum-ai-business-revolution-20o25',
+      featured: true,
+      new: true
+    },
     {
-      title: 'AI Autonomous Business Operations 20o25';
+      title: 'AI Autonomous Business Operations 20o25',
       description:,
-        'The future of self-managing enterprises with 50o0% productivity increases';
-      category: 'AI Automation';
-      readingTime: '18 min read';
-      href: '/blog/ai-autonomous-business-operations-20o25';
-      featured: true;
-      new: true;
-    };
+        'The future of self-managing enterprises with 50o0% productivity increases',
+      category: 'AI Automation',
+      readingTime: '18 min read',
+      href: '/blog/ai-autonomous-business-operations-20o25',
+      featured: true,
+      new: true
+    },
     {
-      title: 'AI Implementation Enterprise Guide 20o25';
+      title: 'AI Implementation Enterprise Guide 20o25',
       description:,
-        'Complete roadmap for enterprise AI implementation with real-world case studies';
-      category: 'Implementation Guide';
-      readingTime: '25 min read';
-      href: '/resources/ai-implementation-enterprise-guide-20o25';
-      featured: true;
-      new: true;
-    };
+        'Complete roadmap for enterprise AI implementation with real-world case studies',
+      category: 'Implementation Guide',
+      readingTime: '25 min read',
+      href: '/resources/ai-implementation-enterprise-guide-20o25',
+      featured: true,
+      new: true
+    },
   ],
   return (
     <section className='bg-gradient-to-r from-purple-90o0 via-blue-90o0 to-indigo-90o0 text-white py-16'>,
@@ -136,5 +136,5 @@ const LatestContent20o25PromotionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default LatestContent20o25PromotionBanner;
+    </section>)},
+export default LatestContent20o25PromotionBanner,

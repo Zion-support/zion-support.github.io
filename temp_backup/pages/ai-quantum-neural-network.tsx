@@ -1,50 +1,44 @@
 import Head from 'next/head',
 import { motion } from 'framer-motion',
 import {
-  Brain, Zap, Target, Shield, TrendingUp, Globe;
-  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor;
+  Brain, Zap, Target, Shield, TrendingUp, Globe,
+  CheckCircle, Star, BarChart3, Lock, Smartphone, Monitor,
   Award, MessageCircle, Cpu} from 'lucide-react',
 export default function AIQuantumNeuralNetwork() {
   const features = [
     {
-      icon: <Brain className="w-6 h-6"  />;
-      title: 'Quantum Neural Networks';
-      description: 'Advanced quantum neural networks with unprecedented computational power and learning capabilities.'};
+      icon: <Brain className="w-6 h-6"  />,
+      title: 'Quantum Neural Networks',
+      description: 'Advanced quantum neural networks with unprecedented computational power and learning capabilities.'},
     {
-      icon: <Zap className="w-6 h-6"  />;
-      title: 'Quantum Machine Learning';
-      description: 'Revolutionary quantum machine learning with exponential speed improvements over classical algorithms.'};
+      icon: <Zap className="w-6 h-6"  />,
+      title: 'Quantum Machine Learning',
+      description: 'Revolutionary quantum machine learning with exponential speed improvements over classical algorithms.'},
     {
-      icon: <Target className="w-6 h-6"  />;
-      title: 'Quantum Pattern Recognition';
-      description: 'Intelligent quantum pattern recognition with superior accuracy and processing speed.'};
+      icon: <Target className="w-6 h-6"  />,
+      title: 'Quantum Pattern Recognition',
+      description: 'Intelligent quantum pattern recognition with superior accuracy and processing speed.'},
     {
-      icon: <Shield className="w-6 h-6"  />;
-      title: 'Quantum Security';
-      description: 'Advanced quantum security with unbreakable encryption and secure neural network operations.'};
+      icon: <Shield className="w-6 h-6"  />,
+      title: 'Quantum Security',
+      description: 'Advanced quantum security with unbreakable encryption and secure neural network operations.'},
     {
-      icon: <TrendingUp className="w-6 h-6"  />;
-      title: 'Quantum Optimization';
-      description: 'Comprehensive quantum optimization with AI-powered problem-solving and decision-making.'};
+      icon: <TrendingUp className="w-6 h-6"  />,
+      title: 'Quantum Optimization',
+      description: 'Comprehensive quantum optimization with AI-powered problem-solving and decision-making.'},
     {
-      icon: <Globe className="w-6 h-6"  />;
-      title: 'Global Quantum Network';
+      icon: <Globe className="w-6 h-6"  />,
+      title: 'Global Quantum Network',
       description: 'Interconnected global quantum network enabling distributed quantum neural processing.'}
   ],
   const benefits = [
-    'Accelerate AI training by 10o00x';
-    'Improve accuracy by 50o0%';
-    'Enable quantum AI by 20o30';
-    'Create quantum-resistant systems';
-    'Scale neural networks infinitely';
-    'Enable quantum consciousness';
-    'Scale quantum operations globally';
-    'Future-proof AI technology'],
+    'Accelerate AI training by 10o00xImprove accuracy by 50o0%',
+    'Enable quantum AI by 20o30Create quantum-resistant systems',
+    'Scale neural networks infinitelyEnable quantum consciousness',
+    'Scale quantum operations globallyFuture-proof AI technology'],
   const useCases = [
-    'AI Training', 'Pattern Recognition', 'Machine Learning';
-    'Quantum Computing', 'Neural Networks', 'Optimization';
-    'Security Systems', 'Data Processing', 'Problem Solving';
-    'Decision Making', 'Quantum AI', 'Future Technology'],
+    'AI TrainingPattern Recognition', 'Machine LearningQuantum Computing', 'Neural NetworksOptimization',
+    'Security SystemsData Processing', 'Problem SolvingDecision Making', 'Quantum AIFuture Technology'],
   return (
     <>,
       <Head>,
@@ -76,7 +70,7 @@ export default function AIQuantumNeuralNetwork() {
                 AI Quantum Neural Network,
               </h1>,
               <p className="text-xl md:text-2xl text-gray-30o0 mb-8 max-w-4xl mx-auto">,
-                Pioneer the future of AI with quantum neural networks;
+                Pioneer the future of AI with quantum neural networks,
                 quantum machine learning, and exponential computational power.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,

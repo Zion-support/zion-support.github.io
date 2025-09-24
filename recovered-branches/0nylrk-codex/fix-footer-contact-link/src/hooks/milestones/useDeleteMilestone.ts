@@ -20,9 +20,9 @@ export const useDeleteMilestone = () => {
       toast.error('Failed to delete milestone: ' + err.message),
       return false} finally {
       setIsSubmitting(false)}
-  };
+  },
   return {
-    deleteMilestone;
-    isSubmitting;
-  };
-};
+    deleteMilestone,
+    isSubmitting,
+  },
+},

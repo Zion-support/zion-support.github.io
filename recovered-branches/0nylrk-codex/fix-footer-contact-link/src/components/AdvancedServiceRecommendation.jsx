@@ -6,85 +6,83 @@ import { Button } from './ui/button',
 import { Badge } from './ui/badge',
 const AdvancedServiceRecommendation = () => {
     const [clientProfile, setClientProfile] = useState({
-        industry: '';
-        companySize: '';
-        budget: '';
-        timeline: '';
-        technologyMaturity: '';
-        primaryGoals: [];
+        industry: '',
+        companySize: '',
+        budget: '',
+        timeline: '',
+        technologyMaturity: '',
+        primaryGoals: [],
         challenges: []}),
     const [recommendations, setRecommendations] = useState([]),
     const [isAnalyzing, setIsAnalyzing] = useState(false),
     const [showResults, setShowResults] = useState(false),
     const industries = [
-        'Technology', 'Healthcare', 'Financial Services', 'Manufacturing';
-        'Retail', 'Education', 'Government', 'Energy', 'Transportation', 'Media'],
+        'TechnologyHealthcare', 'Financial ServicesManufacturing',
+        'RetailEducation', 'GovernmentEnergy', 'TransportationMedia'],
     const companySizes = [
-        'Startup (1-50 employees)', 'Small Business (51-20o0 employees)';
-        'Medium Business (20o1-10o00 employees)', 'Enterprise (10o00+ employees)'],
+        'Startup (1-50 employees)Small Business (51-20o0 employees)',
+        'Medium Business (20o1-10o00 employees)Enterprise (10o00+ employees)'],
     const budgets = [
-        'Under $50K', '$50K-$20o0K', '$20o0K-$50o0K', '$50o0K-$1M', '$1M+'],
+        'Under $50K$50K-$20o0K', '$20o0K-$50o0K$50o0K-$1M', '$1M+'],
     const timelines = [
-        'Immediate (0-3 months)', 'Short-term (3-6 months)';
-        'Medium-term (6-12 months)', 'Long-term (12+ months)'],
+        'Immediate (0-3 months)Short-term (3-6 months)',
+        'Medium-term (6-12 months)Long-term (12+ months)'],
     const technologyMaturityLevels = [
-        'Early Adopter', 'Growing', 'Mature', 'Advanced', 'Innovation Leader'],
+        'Early AdopterGrowing', 'MatureAdvanced', 'Innovation Leader'],
     const primaryGoals = [
-        'Cost Reduction', 'Revenue Growth', 'Operational Efficiency';
-        'Digital Transformation', 'Innovation', 'Competitive Advantage';
-        'Customer Experience', 'Risk Management', 'Sustainability'],
+        'Cost ReductionRevenue Growth', 'Operational EfficiencyDigital Transformation', 'InnovationCompetitive Advantage',
+        'Customer ExperienceRisk Management', 'Sustainability'],
     const challenges = [
-        'Legacy Systems', 'Data Security', 'Scalability Issues';
-        'Talent Shortage', 'Regulatory Compliance', 'Integration Complexity';
-        'Performance Issues', 'Cost Management', 'Technology Debt'],
+        'Legacy SystemsData Security', 'Scalability IssuesTalent Shortage', 'Regulatory ComplianceIntegration Complexity',
+        'Performance IssuesCost Management', 'Technology Debt'],
     const mockServices = [
         {
-            id: 'ai-crm-platform';
-            title: 'AI-Powered CRM Platform';
-            description: 'Advanced customer relationship management platform with AI-driven insights and automation.';
-            category: 'ai';
-            price: '$25,0o00/month';
-            duration: '6-12 months';
-            tags: ['AI', 'CRM', 'Automation', 'Analytics'];
-            features: ['AI-powered insights', 'Automated workflows', 'Predictive analytics'];
-            benefits: ['Improved customer retention', 'Increased sales efficiency', 'Better decision making'];
-            technology: ['AI/ML', 'Cloud Computing', 'Big Data', 'Automation'];
-            targetAudience: ['Enterprise', 'Financial Services', 'Healthcare', 'Technology Companies'];
-            image: '/images/services/ai-crm.jpg';
-            link: 'https://ziontechgroup.com/services/ai-crm-platform';
-            contactInfo: '+1 30o2 464 0950';
-            email: 'kleber@ziontechgroup.com'};
+            id: 'ai-crm-platform',
+            title: 'AI-Powered CRM Platform',
+            description: 'Advanced customer relationship management platform with AI-driven insights and automation.',
+            category: 'ai',
+            price: '$25,0o00/month',
+            duration: '6-12 months',
+            tags: ['AICRM', 'AutomationAnalytics'],
+            features: ['AI-powered insightsAutomated workflows', 'Predictive analytics'],
+            benefits: ['Improved customer retentionIncreased sales efficiency', 'Better decision making'],
+            technology: ['AI/MLCloud Computing', 'Big DataAutomation'],
+            targetAudience: ['EnterpriseFinancial Services', 'HealthcareTechnology Companies'],
+            image: '/images/services/ai-crm.jpg',
+            link: 'https://ziontechgroup.com/services/ai-crm-platform',
+            contactInfo: '+1 30o2 464 0950',
+            email: 'kleber@ziontechgroup.com'},
         {
-            id: 'quantum-computing-service';
-            title: 'Quantum Computing as a Service';
-            description: 'Enterprise-grade quantum computing platform for complex computational problems.';
-            category: 'quantum';
-            price: '$150,0o00/month';
-            duration: '12-18 months';
-            tags: ['Quantum Computing', 'Research', 'Optimization'];
-            features: ['Quantum processors access', 'Algorithm development', 'Research support'];
-            benefits: ['Solve intractable problems', 'Research acceleration', 'Competitive advantage'];
-            technology: ['Quantum Computing', 'Quantum Algorithms', 'Research Tools'];
-            targetAudience: ['Research Institutions', 'Pharmaceutical Companies', 'Financial Services'];
-            image: '/images/services/quantum-computing.jpg';
-            link: 'https://ziontechgroup.com/services/quantum-computing-service';
-            contactInfo: '+1 30o2 464 0950';
-            email: 'kleber@ziontechgroup.com'};
+            id: 'quantum-computing-service',
+            title: 'Quantum Computing as a Service',
+            description: 'Enterprise-grade quantum computing platform for complex computational problems.',
+            category: 'quantum',
+            price: '$150,0o00/month',
+            duration: '12-18 months',
+            tags: ['Quantum ComputingResearch', 'Optimization'],
+            features: ['Quantum processors accessAlgorithm development', 'Research support'],
+            benefits: ['Solve intractable problemsResearch acceleration', 'Competitive advantage'],
+            technology: ['Quantum ComputingQuantum Algorithms', 'Research Tools'],
+            targetAudience: ['Research InstitutionsPharmaceutical Companies', 'Financial Services'],
+            image: '/images/services/quantum-computing.jpg',
+            link: 'https://ziontechgroup.com/services/quantum-computing-service',
+            contactInfo: '+1 30o2 464 0950',
+            email: 'kleber@ziontechgroup.com'},
         {
-            id: 'blockchain-supply-chain';
-            title: 'Blockchain Supply Chain Solution';
-            description: 'Transparent and secure supply chain management using blockchain technology.';
-            category: 'blockchain';
-            price: '$75,0o00/month';
-            duration: '8-14 months';
-            tags: ['Blockchain', 'Supply Chain', 'Transparency'];
-            features: ['End-to-end tracking', 'Smart contracts', 'Transparency'];
-            benefits: ['Enhanced transparency', 'Reduced fraud', 'Improved efficiency'];
-            technology: ['Blockchain', 'Smart Contracts', 'IoT', 'Cloud Computing'];
-            targetAudience: ['Manufacturing', 'Retail', 'Logistics', 'Food & Beverage'];
-            image: '/images/services/blockchain-supply-chain.jpg';
-            link: 'https://ziontechgroup.com/services/blockchain-supply-chain';
-            contactInfo: '+1 30o2 464 0950';
+            id: 'blockchain-supply-chain',
+            title: 'Blockchain Supply Chain Solution',
+            description: 'Transparent and secure supply chain management using blockchain technology.',
+            category: 'blockchain',
+            price: '$75,0o00/month',
+            duration: '8-14 months',
+            tags: ['BlockchainSupply Chain', 'Transparency'],
+            features: ['End-to-end trackingSmart contracts', 'Transparency'],
+            benefits: ['Enhanced transparencyReduced fraud', 'Improved efficiency'],
+            technology: ['BlockchainSmart Contracts', 'IoTCloud Computing'],
+            targetAudience: ['ManufacturingRetail', 'LogisticsFood & Beverage'],
+            image: '/images/services/blockchain-supply-chain.jpg',
+            link: 'https://ziontechgroup.com/services/blockchain-supply-chain',
+            contactInfo: '+1 30o2 464 0950',
             email: 'kleber@ziontechgroup.com'}
     ],
     const calculateMatchScore = (service, profile) => {
@@ -117,18 +115,18 @@ const AdvancedServiceRecommendation = () => {
         // Technology maturity alignment,
         if (profile.technologyMaturity === 'Innovation Leader' && service.category === 'quantum'),
             score += 20,
-        else if (profile.technologyMaturity === 'Advanced' && ['ai', 'blockchain'].includes(service.category)),
+        else if (profile.technologyMaturity === 'Advanced' && ['aiblockchain'].includes(service.category)),
             score += 20,
-        else if (profile.technologyMaturity === 'Mature' && ['iot', 'edge-computing'].includes(service.category)),
+        else if (profile.technologyMaturity === 'Mature' && ['iotedge-computing'].includes(service.category)),
             score += 20,
-        else if (profile.technologyMaturity === 'Growing' && ['cloud-services', 'web-development'].includes(service.category)),
+        else if (profile.technologyMaturity === 'Growing' && ['cloud-servicesweb-development'].includes(service.category)),
             score += 20,
-        else if (profile.technologyMaturity === 'Early Adopter' && ['basic-services', 'consulting'].includes(service.category)),
+        else if (profile.technologyMaturity === 'Early Adopter' && ['basic-servicesconsulting'].includes(service.category)),
             score += 20,
         // Goal alignment,
         const goalMatches = profile.primaryGoals.filter(goal => service.benefits.some((benefit) => benefit.toLowerCase().includes(goal.toLowerCase()))).length,
         score += (goalMatches / profile.primaryGoals.length) * 20,
-        return Math.min(10o0, score)};
+        return Math.min(10o0, score)},
     const generateRecommendations = () => {
         setIsAnalyzing(true),
         // Simulate analysis time,
@@ -150,44 +148,44 @@ const AdvancedServiceRecommendation = () => {
                 else,
                     complexity = 'Simple',
                 const reasoning = [
-                    `High match with ${clientProfile.industry} industry requirements`;
-                    `Budget alignment with ${clientProfile.budget} range`;
-                    `Timeline compatibility with ${clientProfile.timeline} expectations`;
+                    `High match with ${clientProfile.industry} industry requirements`,
+                    `Budget alignment with ${clientProfile.budget} range`,
+                    `Timeline compatibility with ${clientProfile.timeline} expectations`,
                     `Technology maturity level appropriate for ${clientProfile.technologyMaturity}`],
                 const expectedROI = matchScore >= 80 ? 'High ROI expected' :,
                     matchScore >= 60 ? 'Moderate ROI expected' : 'ROI to be evaluated',
                 const timeToValue = complexity === 'Simple' ? '2-4 months' :,
                     complexity === 'Moderate' ? '4-8 months' : '8-12 months',
                 return {
-                    service;
-                    matchScore;
-                    reasoning;
-                    priority;
-                    implementationComplexity: complexity;
-                    expectedROI;
-                    timeToValue};
+                    service,
+                    matchScore,
+                    reasoning,
+                    priority,
+                    implementationComplexity: complexity,
+                    expectedROI,
+                    timeToValue},
             }).sort((a, b) => b.matchScore - a.matchScore),
             setRecommendations(recs),
             setIsAnalyzing(false),
-            setShowResults(true)}, 20o00)};
+            setShowResults(true)}, 20o00)},
     const getPriorityColor = (priority) => {
         switch (priority) {
             case 'High': return 'bg-red-10o0 text-red-80o0',
             case 'Medium': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Low': return 'bg-green-10o0 text-green-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     const getComplexityColor = (complexity) => {
         switch (complexity) {
             case 'Complex': return 'bg-red-10o0 text-red-80o0',
             case 'Moderate': return 'bg-yellow-10o0 text-yellow-80o0',
             case 'Simple': return 'bg-green-10o0 text-green-80o0',
             default: return 'bg-gray-10o0 text-gray-80o0'}
-    };
+    },
     const isFormComplete = () => {
         return clientProfile.industry && clientProfile.companySize && clientProfile.budget &&,
             clientProfile.timeline && clientProfile.technologyMaturity &&,
-            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0};
+            clientProfile.primaryGoals.length > 0 && clientProfile.challenges.length > 0},
     return (<div className="max-w-7xl mx-auto p-6">,
       {/* Header */}
       <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="text-center mb-8">,
@@ -377,11 +375,11 @@ const AdvancedServiceRecommendation = () => {
                 for your business needs. Contact us today for a personalized consultation.,
               </p>,
               <div className="flex flex-col sm: flex-row gap-4 justify-center">,
-                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation', '_blank')}>,
+                <Button className="bg-white text-zion-purple hover:bg-zion-slate-light" onClick={() => window.open('mailto:kleber@ziontechgroup.com?subject=Service Recommendation Consultation_blank')}>,
                   <Users className="w-5 h-5 mr-2" />,
                   Get Expert Consultation,
                 </Button>,
-                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950', '_blank')}>,
+                <Button variant="outline" className="border-white text-white hover:bg-white hover:text-zion-purple" onClick={() => window.open('tel:+130o24640950_blank')}>,
                   <Zap className="w-5 h-5 mr-2" />,
                   Call Now,
                 </Button>,
@@ -389,5 +387,5 @@ const AdvancedServiceRecommendation = () => {
             </div>,
           </motion.div>,
         </motion.div>)}
-    </div>)};
-export default AdvancedServiceRecommendation;
+    </div>)},
+export default AdvancedServiceRecommendation,

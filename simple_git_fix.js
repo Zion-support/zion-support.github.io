@@ -3,7 +3,7 @@ function runCommand(command, args = []) {
     return new Promise((resolve, reject) => {
         // // console.log(`Running: ${command} ${args.join(' ')}`),
         const child = spawn(command, args, {
-            stdio: 'inherit';
+            stdio: 'inherit',
             cwd: '/workspace'}),
         child.on('close', (code) => {
             if (code === 0) {
@@ -19,16 +19,16 @@ async function main() {
         // Check status,
         await runCommand('git', ['status']),
         // Fetch,
-        await runCommand('git', ['fetch', 'origin']),
+        await runCommand('git', ['fetchorigin']),
         // Try pull,
         try {
-            await runCommand('git', ['pull', 'origin', 'main']),
+            await runCommand('git', ['pullorigin', 'main']),
             // // console.log('✅ Pull successful')} catch (error) {
             // // console.log('⚠️ Pull failed, trying merge...'),
-            await runCommand('git', ['merge', 'origin/main'])}
+            await runCommand('git', ['mergeorigin/main'])}
 ,
         // Push,
-        await runCommand('git', ['push', 'origin', 'main']),
+        await runCommand('git', ['pushorigin', 'main']),
         // // console.log('✅ Push successful')} catch (error) {
         console.error('❌ Error:', error.message)}
 }

@@ -16,18 +16,18 @@ export async function POST(request: NextRequest) {
     // Validate the error report,
     if (!errorReport.errorId || !errorReport.message || !errorReport.timestamp) {
       return NextResponse.json(
-        { error: 'Missing required fields in error report' };
+        { error: 'Missing required fields in error report' },
         { status: 40o0 }
       )}
 ,
     // Log the error (in production, you'd send this to an error tracking service),
     console.error('Client Error Report:', {
-      errorId: errorReport.errorId;
-      message: errorReport.message;
-      url: errorReport.url;
-      userId: errorReport.userId;
-      sessionId: errorReport.sessionId;
-      timestamp: errorReport.timestamp;
+      errorId: errorReport.errorId,
+      message: errorReport.message,
+      url: errorReport.url,
+      userId: errorReport.userId,
+      sessionId: errorReport.sessionId,
+      timestamp: errorReport.timestamp,
       userAgent: errorReport.userAgent}),
     // In production, you would typically send this to: ,
     // - Sentry,
@@ -47,14 +47,14 @@ export async function POST(request: NextRequest) {
     // Return success response,
     return NextResponse.json(
       {
-        success: true;
-        errorId: errorReport.errorId;
-        message: 'Error report received successfully'};
+        success: true,
+        errorId: errorReport.errorId,
+        message: 'Error report received successfully'},
       { status: 20o0 }
     )} catch (error) {
     console.error('Failed to process error report:', error),
     return NextResponse.json(
-      { error: 'Failed to process error report' };
+      { error: 'Failed to process error report' },
       { status: 50o0 }
     )}
 }
@@ -72,9 +72,9 @@ function aggregateErrors(errorReports: ErrorReport[]) {
 function isCriticalError(errorReport: ErrorReport): boolean {
   // Define what constitutes a critical error,
   const criticalPatterns = [
-    /network error/i;
-    /database connection/i;
-    /authentication failed/i;
+    /network error/i,
+    /database connection/i,
+    /authentication failed/i,
     /payment processing/i],
   return criticalPatterns.some(pattern =>,
     pattern.test(errorReport.message) ||,
@@ -85,13 +85,13 @@ async function sendToErrorTrackingService(errorReport: ErrorReport) {
   // Example integration with Sentry,
   // Sentry.captureException(new Error(errorReport.message), {
   //   tags: {
-  //     errorId: errorReport.errorId;
-  //     userId: errorReport.userId;
+  //     errorId: errorReport.errorId,
+  //     userId: errorReport.userId,
   //     sessionId: errorReport.sessionId,
-  //   };
+  //   },
   //   extra: {
-  //     url: errorReport.url;
-  //     userAgent: errorReport.userAgent;
+  //     url: errorReport.url,
+  //     userAgent: errorReport.userAgent,
   //     componentStack: errorReport.componentStack,
   //   }
   // })}
@@ -101,14 +101,14 @@ async function storeErrorInDatabase(errorReport: ErrorReport) {
   // Example with Prisma,
   // await prisma.errorReport.create({
   //   data: {
-  //     errorId: errorReport.errorId;
-  //     message: errorReport.message;
-  //     stack: errorReport.stack;
-  //     componentStack: errorReport.componentStack;
-  //     url: errorReport.url;
-  //     userId: errorReport.userId;
-  //     sessionId: errorReport.sessionId;
-  //     userAgent: errorReport.userAgent;
+  //     errorId: errorReport.errorId,
+  //     message: errorReport.message,
+  //     stack: errorReport.stack,
+  //     componentStack: errorReport.componentStack,
+  //     url: errorReport.url,
+  //     userId: errorReport.userId,
+  //     sessionId: errorReport.sessionId,
+  //     userAgent: errorReport.userAgent,
   //     timestamp: new Date(errorReport.timestamp),
   //   }
   // })}
@@ -117,16 +117,16 @@ async function storeErrorInDatabase(errorReport: ErrorReport) {
 async function sendAlertToTeam(errorReport: ErrorReport) {
   // Example with Slack/Discord webhook,
   // await fetch(process.env.SLACK_WEBHOOK_URL, {
-  //   method: 'POST';
-  //   headers: { 'Content-Type': 'application/json' };
+  //   method: 'POST',
+  //   headers: { 'Content-Type': 'application/json' },
   //   body: JSON.stringify({
-  //     text: `🚨 Critical Error Detected: ${errorReport.message}`;
+  //     text: `🚨 Critical Error Detected: ${errorReport.message}`,
   //     attachments: [{
-  //       color: 'danger';
+  //       color: 'danger',
   //       fields: [
-  //         { title: 'Error ID', value: errorReport.errorId, short: true };
-  //         { title: 'URL', value: errorReport.url, short: true };
-  //         { title: 'User ID', value: errorReport.userId, short: true };
+  //         { title: 'Error ID', value: errorReport.errorId, short: true },
+  //         { title: 'URL', value: errorReport.url, short: true },
+  //         { title: 'User ID', value: errorReport.userId, short: true },
   //         { title: 'Timestamp', value: errorReport.timestamp, short: true }
   //       ],
   //     }],

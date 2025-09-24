@@ -1,10 +1,12 @@
-import React from react',import { render, screen, fireEvent, waitFor } from @testing-library/react',import { MarketplaceErrorBoundary } from @/components/MarketplaceErrorBoundary',import * as Sentry from @sentry/nextjs',import { mutate } from swr',
+import React from react',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import { MarketplaceErrorBoundary } from @/components/MarketplaceErrorBoundary',
+import * as Sentry from @sentry/nextjs',import { mutate } from swr',
 // Mock dependencies,
-jest.mock('@sentry/nextjs'),jest.mock('swr');
+jest.mock('@sentry/nextjs'),jest.mock('swr'),
 const ThrowError = ({ shouldThrow }: { _shouldThrow: boolean }) => {
   if (shouldThrow) {
     throw new Error('Test error')}
-  return <div>Working component</div>};
+  return <div>Working component</div>},
 describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest.MockedFunction<typeof mutate>,
   beforeEach(() => {
     jest.clearAllMocks(),
@@ -24,9 +26,9 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
     expect(screen.getByText('Something went wrong in the marketplace')).toBeInTheDocument(),    expect(screen.getByText('Test error')).toBeInTheDocument(),    expect(screen.getByRole('button', { name: /retry/i })).toBeInTheDocument(),    expect(screen.getByRole('button', { name: /reload page/i })).toBeInTheDocument()}),
   it('logs error to Sentry when an error occurs', () => {'    const mockWithScope = jest.fn((callback) => {
       const scope ={
-        setTag: jest.fn();
-        setContext: jest.fn();
-        setLevel: jest.fn()};
+        setTag: jest.fn(),
+        setContext: jest.fn(),
+        setLevel: jest.fn()},
       callback(scope)}),
     (Sentry.withScope as jest.Mock).mockImplementation(mockWithScope),
     render(
@@ -43,12 +45,12 @@ describe('MarketplaceErrorBoundary', () => {'  const mockMutate = mutate as jest
     const retryButton = screen.getByRole('button', { name: /retry/i }),    fireEvent.click(retryButton),
     await waitFor(() => {
       expect(mockMutate).toHaveBeenCalledWith(
-        expect.any(Function);
-        undefined;
+        expect.any(Function),
+        undefined,
         { revalidate: true }
       )})}),
   it('reloads page when reload button is clicked', () => {'    const mockReload = jest.fn(),
-    Object.defineProperty(window, location', {'      value: { reload: mockReload };
+    Object.defineProperty(window, location', {'      value: { reload: mockReload },
       writable: true}),
     render(
       <MarketplaceErrorBoundary>,

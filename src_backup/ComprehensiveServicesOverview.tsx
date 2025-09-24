@@ -11,63 +11,38 @@ import { INNOVATIVE_MICRO_SAAS_SERVICES } from '@/data/innovativeMicroSaasServic
 import { motion } from 'framer-motion',
 // Combine all services,
 const ALL_SERVICES = [
-    ...ENHANCED_INNOVATIVE_SERVICES;
-    ...COMPREHENSIVE_SERVICES;
+    ...ENHANCED_INNOVATIVE_SERVICES,
+    ...COMPREHENSIVE_SERVICES,
     ...INNOVATIVE_MICRO_SAAS_SERVICES],
 const categoryIcons ={
-    'AI & Legal Tech': FileText;
-    'AI & FinTech': DollarSign;
-    'AI & Healthcare': Heart;
-    'Cybersecurity & Quantum': Shield;
-    'AI & Supply Chain': Building;
-    'AI & Energy': Zap;
-    'AI & Customer Experience': Users;
-    'Quantum & AI': Cpu;
-    'AI & Data Governance': Database;
-    'AI & HR Tech': Users;
-    'AI & Machine Learning': Brain;
-    'AI & Business Intelligence': BarChart3;
-    'AI & Marketing Automation': Target;
-    'AI & CRM': Users;
-    'AI & ERP': Building;
-    'AI & Project Management': Code;
-    'AI & Autonomous Systems': Bot;
-    'AI & Research': Brain;
-    'AI & Content Generation': FileText;
-    'AI & Voice Technology': Smartphone;
-    'AI & Video Generation': Eye;
-    'AI & Threat Intelligence': Shield;
-    'AI & Cloud Management': Cloud;
-    'AI & DevOps': Code};
+    'AI & Legal Tech': FileText,
+    'AI & FinTech': DollarSign,
+    'AI & Healthcare': Heart,
+    'Cybersecurity & Quantum': Shield,
+    'AI & Supply Chain': Building,
+    'AI & Energy': Zap,
+    'AI & Customer Experience': Users,
+    'Quantum & AI': Cpu,
+    'AI & Data Governance': Database,
+    'AI & HR Tech': Users,
+    'AI & Machine Learning': Brain,
+    'AI & Business Intelligence': BarChart3,
+    'AI & Marketing Automation': Target,
+    'AI & CRM': Users,
+    'AI & ERP': Building,
+    'AI & Project Management': Code,
+    'AI & Autonomous Systems': Bot,
+    'AI & Research': Brain,
+    'AI & Content Generation': FileText,
+    'AI & Voice Technology': Smartphone,
+    'AI & Video Generation': Eye,
+    'AI & Threat Intelligence': Shield,
+    'AI & Cloud Management': Cloud,
+    'AI & DevOps': Code},
 const categoryColors ={
-    'AI & Legal Tech': 'from-blue-50o0 to-indigo-50o0';
-    'AI & FinTech': 'from-green-50o0 to-emerald-50o0';
-    'AI & Healthcare': 'from-red-50o0 to-pink-50o0';
-    'Cybersecurity & Quantum': 'from-purple-50o0 to-violet-50o0';
-    'AI & Supply Chain': 'from-orange-50o0 to-red-50o0';
-    'AI & Energy': 'from-yellow-50o0 to-orange-50o0';
-    'AI & Customer Experience': 'from-pink-50o0 to-rose-50o0';
-    'Quantum & AI': 'from-cyan-50o0 to-blue-50o0';
-    'AI & Data Governance': 'from-indigo-50o0 to-purple-50o0';
-    'AI & HR Tech': 'from-teal-50o0 to-green-50o0';
-    'AI & Machine Learning': 'from-purple-50o0 to-pink-50o0';
-    'AI & Business Intelligence': 'from-indigo-50o0 to-purple-50o0';
-    'AI & Marketing Automation': 'from-pink-50o0 to-rose-50o0';
-    'AI & CRM': 'from-blue-50o0 to-cyan-50o0';
-    'AI & ERP': 'from-green-50o0 to-emerald-50o0';
-    'AI & Project Management': 'from-orange-50o0 to-red-50o0';
-    'AI & Autonomous Systems': 'from-purple-50o0 to-violet-50o0';
-    'AI & Research': 'from-cyan-50o0 to-blue-50o0';
-    'AI & Content Generation': 'from-indigo-50o0 to-purple-50o0';
-    'AI & Voice Technology': 'from-teal-50o0 to-green-50o0';
-    'AI & Video Generation': 'from-pink-50o0 to-rose-50o0';
-    'AI & Threat Intelligence': 'from-red-50o0 to-pink-50o0';
-    'AI & Cloud Management': 'from-blue-50o0 to-cyan-50o0';
-    'AI & DevOps': 'from-orange-50o0 to-red-50o0'};
+    'AI & Legal Tech': 'from-blue-50o0 to-indigo-50o0AI & FinTech': 'from-green-50o0 to-emerald-50o0AI & Healthcare': 'from-red-50o0 to-pink-50o0Cybersecurity & Quantum': 'from-purple-50o0 to-violet-50o0AI & Supply Chain': 'from-orange-50o0 to-red-50o0AI & Energy': 'from-yellow-50o0 to-orange-50o0AI & Customer Experience': 'from-pink-50o0 to-rose-50o0Quantum & AI': 'from-cyan-50o0 to-blue-50o0AI & Data Governance': 'from-indigo-50o0 to-purple-50o0AI & HR Tech': 'from-teal-50o0 to-green-50o0AI & Machine Learning': 'from-purple-50o0 to-pink-50o0AI & Business Intelligence': 'from-indigo-50o0 to-purple-50o0AI & Marketing Automation': 'from-pink-50o0 to-rose-50o0AI & CRM': 'from-blue-50o0 to-cyan-50o0AI & ERP': 'from-green-50o0 to-emerald-50o0AI & Project Management': 'from-orange-50o0 to-red-50o0AI & Autonomous Systems': 'from-purple-50o0 to-violet-50o0AI & Research': 'from-cyan-50o0 to-blue-50o0AI & Content Generation': 'from-indigo-50o0 to-purple-50o0AI & Voice Technology': 'from-teal-50o0 to-green-50o0AI & Video Generation': 'from-pink-50o0 to-rose-50o0AI & Threat Intelligence': 'from-red-50o0 to-pink-50o0AI & Cloud Management': 'from-blue-50o0 to-cyan-50o0AI & DevOps': 'from-orange-50o0 to-red-50o0'},
 const supportLevelColors ={
-    'premium': 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0';
-    'enterprise': 'bg-gradient-to-r from-purple-50o0 to-pink-50o0';
-    'basic': 'bg-gradient-to-r from-green-50o0 to-emerald-50o0'};
+    'premium': 'bg-gradient-to-r from-blue-50o0 to-cyan-50o0enterprise': 'bg-gradient-to-r from-purple-50o0 to-pink-50o0basic': 'bg-gradient-to-r from-green-50o0 to-emerald-50o0'},
 export default function ComprehensiveServicesOverview() {
     const [searchQuery, setSearchQuery] = useState(''),
     const [selectedCategory, setSelectedCategory] = useState('all'),
@@ -107,7 +82,7 @@ export default function ComprehensiveServicesOverview() {
     const getServicePrice = (service) => {
         if (typeof service.price === 'number') {
             return service.price}
-    };
+    },
     return (<>,
       <SEOHead title="Comprehensive Technology Services - Zion Tech Group" description="Explore our comprehensive portfolio of cutting-edge technology services including AI, Quantum Computing, Cybersecurity, IT Infrastructure, and more. Transform your business with innovative solutions." keywords="technology services, AI services, quantum computing, cybersecurity, IT infrastructure, micro SaaS, autonomous systems, space technology, neurotechnology" image="/images/services-overview-og.jpg" canonical="https: //ziontechgroup.com/comprehensive-services-overview" />,
       <div className="min-h-screen bg-gradient-to-br from-zion-slate-dark via-zion-slate to-zion-blue-dark relative overflow-hidden">,

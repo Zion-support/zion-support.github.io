@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import ServiceLanding from '../components/sections/ServiceLanding',
 export default function AIPoweredCybersecurity() {
   return (
@@ -10,14 +10,11 @@ export default function AIPoweredCybersecurity() {
       implementationWeeks='Implementation: 3-6 weeks',
       roiNote='Reduce mean time to detect/respond by 60-80%',
       features={[
-        'Behavioral analytics and anomaly detection';
-        'LLM-assisted investigation and SOAR';
-        'Attack path and blast-radius analysis';
-        'Cloud posture and config drift detection';
-        'Threat intel and automatic enrichment';
-        'Integrations: CrowdStrike, SentinelOne, Splunk, Wiz';
+        'Behavioral analytics and anomaly detectionLLM-assisted investigation and SOAR',
+        'Attack path and blast-radius analysisCloud posture and config drift detection',
+        'Threat intel and automatic enrichmentIntegrations: CrowdStrike, SentinelOne, Splunk, Wiz',
       ]}
-      industries={['Finance', 'Healthcare', 'SaaS', 'Public Sector']}
+      industries={['FinanceHealthcare', 'SaaSPublic Sector']}
       ctaHref='/contact',
       canonical='https: //ziontechgroup.com/ai-powered-cybersecurity',
     />)}

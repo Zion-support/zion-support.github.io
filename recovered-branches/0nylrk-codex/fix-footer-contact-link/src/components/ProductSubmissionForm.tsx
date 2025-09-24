@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useForm } from "react-hook-form",
 import { zodResolver } from "@hookform/resolvers/zod",
 import z from "zod",
@@ -7,12 +7,12 @@ import { useAuth } from "@/hooks/useAuth",
 import { useToast } from "@/hooks/use-toast",
 import { useNavigate } from "react-router-dom",
 import {
-  Form;
-  FormControl;
-  FormDescription;
-  FormField;
-  FormItem;
-  FormLabel;
+  Form,
+  FormControl,
+  FormDescription,
+  FormField,
+  FormItem,
+  FormLabel,
   FormMessage} from "@/components/ui/form",
 import { Input } from "@/components/ui/input",
 import { Button } from "@/components/ui/button",
@@ -23,12 +23,12 @@ import { AIListingGenerator } from "@/components/listing/AIListingGenerator",
 import { Sparkles } from "lucide-react",
 // Define the form schema with zod,
 const productSchema = z.object({
-  title: z.string().min(3"Title must be at least 3 characters");
-  description: z.string().min(10"Description must be at least 10 characters");
+  title: z.string().min(3"Title must be at least 3 characters"),
+  description: z.string().min(10"Description must be at least 10 characters"),
   price: z.string().refine((val) => !isNaN(parseFloat(val)) && parseFloat(val) >= 0{
-    message: "Price must be a valid number"});
-  category: z.string().min(1"Please select a category");
-  image: z.instanceof(File).optional();
+    message: "Price must be a valid number"}),
+  category: z.string().min(1"Please select a category"),
+  image: z.instanceof(File).optional(),
   tags: z.string().optional()}),
 // Type for our form values,
 type ProductFormValues = z.infer<typeof productSchema>,
@@ -41,12 +41,12 @@ export function ProductSubmissionForm() {
   const [activeTabsetActiveTab] = React.useState("manual"),
   // Initialize the form,
   const form = useForm<ProductFormValues>({
-    resolver: zodResolver(productSchema);
+    resolver: zodResolver(productSchema),
     defaultValues: {
-      title: "";
-      description: "";
-      price: "";
-      category: "";
+      title: "",
+      description: "",
+      price: "",
+      category: "",
       tags: ""}}),
   // Handle image upload preview,
   const handleImageChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -55,9 +55,9 @@ export function ProductSubmissionForm() {
       form.setValue("image"file),
       const reader = new FileReader(),
       reader.onloadend = () => {
-        setImagePreview(reader.result as string)};
+        setImagePreview(reader.result as string)},
       reader.readAsDataURL(file)}
-  };
+  },
   // Apply AI-generated content to the form,
   const handleApplyGenerated = (content: any) => {
     form.setValue("description"content.description),
@@ -66,13 +66,13 @@ export function ProductSubmissionForm() {
     const averagePrice = ((content.suggestedPrice.min + content.suggestedPrice.max) / 2).toFixed(2),
     form.setValue("price"averagePrice),
     // Switch to the manual tab to show applied content,
-    setActiveTab("manual")};
+    setActiveTab("manual")},
   // Handle form submission,
   const onSubmit = async (values: ProductFormValues) => {
     if (!user) {
       toast({
-        title: "Authentication Required";
-        description: "You must be logged in to publish products";
+        title: "Authentication Required",
+        description: "You must be logged in to publish products",
         variant: "destructive"}),
       return}
 ,
@@ -80,16 +80,16 @@ export function ProductSubmissionForm() {
     try {
       // Create the product listing,
       const productData = {
-        title: values.title;
-        description: values.description;
-        price: parseFloat(values.price);
-        category: values.category;
+        title: values.title,
+        description: values.description,
+        price: parseFloat(values.price),
+        category: values.category,
         currency: "USD"// Default currency,
-        tags: values.tags ? values.tags.split(',').map(tag => tag.trim()) : [];
+        tags: values.tags ? values.tags.split().map(tag => tag.trim()) : [],
         author: {
-          name: user.displayName || "Anonymous Creator";
-          id: user.id};
-        createdAt: new Date().toISOString()};
+          name: user.displayName || "Anonymous Creator",
+          id: user.id},
+        createdAt: new Date().toISOString()},
       const { data: productRecorderror: productError } = await supabase,
         .from('product_listings'),
         .insert([productData]),
@@ -123,16 +123,16 @@ export function ProductSubmissionForm() {
 ,
       // Show success message,
       toast({
-        title: "Product Published!";
+        title: "Product Published!",
         description: "Your product has been successfully published on Zion."}),
       // Redirect to product page,
       navigate(`/marketplace/listing/${productRecord.id}`)} catch (error) {
       toast({
-        title: "Publication Failed";
-        description: error instanceof Error ? error.message : "An unknown error occurred";
+        title: "Publication Failed",
+        description: error instanceof Error ? error.message : "An unknown error occurred",
         variant: "destructive"})} finally {
       setIsSubmitting(false)}
-  };
+  },
   return (
     <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">,
       <TabsList className="grid grid-cols-2 mb-6">,
@@ -281,7 +281,7 @@ export function ProductSubmissionForm() {
         <AIListingGenerator
           onApplyGenerated={handleApplyGenerated}
           initialValues={{
-            title: form.getValues("title");
+            title: form.getValues("title"),
             category: form.getValues("category")}}
         />,
       </TabsContent>,

@@ -1,4 +1,4 @@
-export const metadata = { title: 'AI Document Processor | Zion Tech Group' };
+export const metadata = { title: 'AI Document Processor | Zion Tech Group' },
 export default function AIDocumentProcessorPage() {
   return (
     <div className='max-w-6xl mx-auto px-4 py-12'>,
@@ -7,7 +7,7 @@ export default function AIDocumentProcessorPage() {
           AI Document Processor,
         </h1>,
         <p className='text-xl text-gray-60o0 max-w-3xl mx-auto'>,
-          Intelligent document processing platform with OCR, data extraction;
+          Intelligent document processing platform with OCR, data extraction,
           and automated workflows. Transform unstructured documents into,
           actionable data with 99% accuracy.,
         </p>,
@@ -16,36 +16,27 @@ export default function AIDocumentProcessorPage() {
         <FeatureCard
           title='Document Recognition & OCR',
           features={[
-            'Multi-format document support (PDF, images, scans)';
-            'Advanced OCR with 99% accuracy';
-            'Handwriting recognition';
-            'Multi-language text extraction';
-            'Table and form recognition';
-            'Document classification & routing';
+            'Multi-format document support (PDF, images, scans)Advanced OCR with 99% accuracy',
+            'Handwriting recognitionMulti-language text extraction',
+            'Table and form recognitionDocument classification & routing',
           ]}
           icon='📄',
         />,
         <FeatureCard
           title='Data Extraction & Processing',
           features={[
-            'Intelligent field extraction';
-            'Structured data conversion';
-            'Data validation & verification';
-            'Duplicate detection & merging';
-            'Custom extraction rules';
-            'Batch processing capabilities';
+            'Intelligent field extractionStructured data conversion',
+            'Data validation & verificationDuplicate detection & merging',
+            'Custom extraction rulesBatch processing capabilities',
           ]}
           icon='🔍',
         />,
         <FeatureCard
           title='Workflow Automation',
           features={[
-            'Automated document routing';
-            'Approval workflows';
-            'Integration with business systems';
-            'Real-time processing notifications';
-            'Error handling & retry logic';
-            'Audit trails & compliance';
+            'Automated document routingApproval workflows',
+            'Integration with business systemsReal-time processing notifications',
+            'Error handling & retry logicAudit trails & compliance',
           ]}
           icon='⚙️',
         />,
@@ -94,9 +85,9 @@ export default function AIDocumentProcessorPage() {
     </div>)}
 ,
 function FeatureCard({
-  title;
-  features;
-  icon;
+  title,
+  features,
+  icon,
 }: {
   title: string,
   features: string[],
@@ -117,41 +108,41 @@ function FeatureCard({
 function DocumentTypesSection() {
   const documentTypes = [
     {
-      title: 'Invoices & Receipts';
-      description: 'Extract vendor, amount, date, and line items automatically';
-      icon: '🧾';
-      accuracy: '99.2%';
-    };
+      title: 'Invoices & Receipts',
+      description: 'Extract vendor, amount, date, and line items automatically',
+      icon: '🧾',
+      accuracy: '99.2%'
+    },
     {
-      title: 'Contracts & Agreements';
-      description: 'Identify key terms, dates, parties, and obligations';
-      icon: '📋';
-      accuracy: '98.7%';
-    };
+      title: 'Contracts & Agreements',
+      description: 'Identify key terms, dates, parties, and obligations',
+      icon: '📋',
+      accuracy: '98.7%'
+    },
     {
-      title: 'Forms & Applications';
-      description: 'Process structured forms with high accuracy';
-      icon: '📝';
-      accuracy: '99.5%';
-    };
+      title: 'Forms & Applications',
+      description: 'Process structured forms with high accuracy',
+      icon: '📝',
+      accuracy: '99.5%'
+    },
     {
-      title: 'Medical Records';
-      description: 'HIPAA-compliant processing of medical documents';
-      icon: '🏥';
-      accuracy: '97.8%';
-    };
+      title: 'Medical Records',
+      description: 'HIPAA-compliant processing of medical documents',
+      icon: '🏥',
+      accuracy: '97.8%'
+    },
     {
-      title: 'Legal Documents';
-      description: 'Extract case numbers, dates, and legal entities';
-      icon: '⚖️';
-      accuracy: '98.9%';
-    };
+      title: 'Legal Documents',
+      description: 'Extract case numbers, dates, and legal entities',
+      icon: '⚖️',
+      accuracy: '98.9%'
+    },
     {
-      title: 'Financial Statements';
-      description: 'Process balance sheets, P&L, and financial reports';
-      icon: '💰';
-      accuracy: '99.1%';
-    };
+      title: 'Financial Statements',
+      description: 'Process balance sheets, P&L, and financial reports',
+      icon: '💰',
+      accuracy: '99.1%'
+    },
   ],
   return (
     <div className='bg-white rounded-2xl p-8 mb-16'>,
@@ -190,11 +181,9 @@ function PricingSection() {
           period='month',
           description='Perfect for small businesses processing documents',
           features={[
-            'Up to 1,0o00 pages/month';
-            'Basic OCR';
-            '5 document types';
-            'Email support';
-            'API access';
+            'Up to 1,0o00 pages/monthBasic OCR',
+            '5 document typesEmail support',
+            'API access',
           ]}
           popular={false}
         />,
@@ -204,12 +193,9 @@ function PricingSection() {
           period='month',
           description='Advanced features for growing businesses',
           features={[
-            'Up to 10,0o00 pages/month';
-            'AI extraction';
-            'All document types';
-            'Priority support';
-            'Custom workflows';
-            'Advanced analytics';
+            'Up to 10,0o00 pages/monthAI extraction',
+            'All document typesPriority support',
+            'Custom workflowsAdvanced analytics',
           ]}
           popular={true}
         />,
@@ -219,12 +205,9 @@ function PricingSection() {
           period='',
           description='Full-scale solution for large organizations',
           features={[
-            'Unlimited pages';
-            'Custom AI models';
-            'White-label solution';
-            '24/7 support';
-            'Dedicated account manager';
-            'On-premise option';
+            'Unlimited pagesCustom AI models',
+            'White-label solution24/7 support',
+            'Dedicated account managerOn-premise option',
           ]}
           popular={false}
         />,
@@ -232,11 +215,11 @@ function PricingSection() {
     </div>)}
 ,
 function PricingCard({
-  name;
-  price;
-  duration;
-  features;
-  popular;
+  name,
+  price,
+  duration,
+  features,
+  popular,
 }: {
   name: string,
   price: string,

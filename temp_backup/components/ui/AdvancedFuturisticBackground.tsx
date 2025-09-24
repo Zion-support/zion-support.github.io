@@ -7,10 +7,10 @@ interface AdvancedFuturisticBackgroundProps {
   interactive?: boolean}
 ,
 const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> = ({
-  children;
-  variant = 'quantum-holographic';
-  intensity = 'medium';
-  className = '';
+  children,
+  variant = 'quantum-holographic',
+  intensity = 'medium',
+  className = '',
   interactive = true}) => {
   const canvasRef = useRef<HTMLCanvasElement>(null),
   const animationRef = useRef<number | undefined>(undefined),
@@ -48,30 +48,30 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
   }, []),
   const createParticle = useCallback((canvas: HTMLCanvasElement, variant: string) => {
     return {
-      x: Math.random() * canvas.width;
-      y: Math.random() * canvas.height;
-      vx: (Math.random() - 0.5) * 8;
-      vy: (Math.random() - 0.5) * 8;
-      size: Math.random() * 12 + 4;
-      life: Math.random() * 150;
-      maxLife: 150;
-      color: '';
-      type: variant;
-      rotation: Math.random() * Math.PI * 2;
-      rotationSpeed: (Math.random() - 0.5) * 0.3;
-      pulse: Math.random() * Math.PI * 2;
-      pulseSpeed: Math.random() * 0.15 + 0.08;
-      quantumState: Math.random() * Math.PI * 2;
-      holographicLayer: Math.random() * 6;
-      neuralConnection: Math.random() * 8;
-      cyberpunkGlow: Math.random() * Math.PI * 2;
-      quantumEntanglement: Math.random() * Math.PI * 2;
-      holographicDepth: Math.random() * 7;
-      neuralSynapse: Math.random() * Math.PI * 2;
-      energy: Math.random() * 10o0 + 50;
-      resonance: Math.random() * Math.PI * 2;
-      field: Math.random() * 10;
-      wave: Math.random() * Math.PI * 2};
+      x: Math.random() * canvas.width,
+      y: Math.random() * canvas.height,
+      vx: (Math.random() - 0.5) * 8,
+      vy: (Math.random() - 0.5) * 8,
+      size: Math.random() * 12 + 4,
+      life: Math.random() * 150,
+      maxLife: 150,
+      color: '',
+      type: variant,
+      rotation: Math.random() * Math.PI * 2,
+      rotationSpeed: (Math.random() - 0.5) * 0.3,
+      pulse: Math.random() * Math.PI * 2,
+      pulseSpeed: Math.random() * 0.15 + 0.08,
+      quantumState: Math.random() * Math.PI * 2,
+      holographicLayer: Math.random() * 6,
+      neuralConnection: Math.random() * 8,
+      cyberpunkGlow: Math.random() * Math.PI * 2,
+      quantumEntanglement: Math.random() * Math.PI * 2,
+      holographicDepth: Math.random() * 7,
+      neuralSynapse: Math.random() * Math.PI * 2,
+      energy: Math.random() * 10o0 + 50,
+      resonance: Math.random() * Math.PI * 2,
+      field: Math.random() * 10,
+      wave: Math.random() * Math.PI * 2},
   }, []),
   const updateParticle = useCallback((particle: any, canvas: HTMLCanvasElement, time: number, variant: string) => {
     // Update position with quantum fluctuations,
@@ -112,7 +112,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     ctx.globalAlpha = (particle.life / particle.maxLife) * quantumEffect * holographicEffect * neuralEffect,
     // Create gradient for particle,
     const gradient = ctx.createRadialGradient(
-      particle.x, particle.y, 0;
+      particle.x, particle.y, 0,
       particle.x, particle.y, particle.size * 2),
     gradient.addColorStop(0, particle.color),
     gradient.addColorStop(0.5, particle.color + '80'),
@@ -137,7 +137,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       ctx.beginPath(),
       ctx.moveTo(particle.x, particle.y),
       ctx.lineTo(
-        particle.x + Math.cos(particle.neuralSynapse) * 20;
+        particle.x + Math.cos(particle.neuralSynapse) * 20,
         particle.y + Math.sin(particle.neuralSynapse) * 20),
       ctx.stroke()}
 ,
@@ -162,8 +162,8 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     // Create neural nodes,
     for (let i = 0, i < nodes, i++) {
       connections.push({
-        x: Math.random() * canvas.width;
-        y: Math.random() * canvas.height;
+        x: Math.random() * canvas.width,
+        y: Math.random() * canvas.height,
         connections: []})}
 ,
     // Create connections,
@@ -192,7 +192,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     if (!ctx) return,
     const resizeCanvas = () => {
       canvas.width = window.innerWidth,
-      canvas.height = window.innerHeight};
+      canvas.height = window.innerHeight},
     resizeCanvas(),
     window.addEventListener('resize', resizeCanvas),
     const particles: any[] = [],
@@ -205,12 +205,12 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
     // Mouse interaction,
     const handleMouseMove = (e: MouseEvent) => {
       mouseRef.current.x = e.clientX,
-      mouseRef.current.y = e.clientY};
+      mouseRef.current.y = e.clientY},
     const handleTouchMove = (e: TouchEvent) => {
       if (e.touches[0]) {
         touchRef.current.x = e.touches[0].clientX,
         touchRef.current.y = e.touches[0].clientY}
-    };
+    },
     if (interactive) {
       window.addEventListener('mousemove', handleMouseMove),
       window.addEventListener('touchmove', handleTouchMove)}
@@ -227,7 +227,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       // Render neural network,
       renderNeuralNetwork(ctx, canvas, time),
       time++,
-      animationRef.current = requestAnimationFrame(animate)};
+      animationRef.current = requestAnimationFrame(animate)},
     animate(),
     return () => {
       window.removeEventListener('resize', resizeCanvas),
@@ -236,7 +236,7 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
         window.removeEventListener('touchmove', handleTouchMove)}
       if (animationRef.current) {
         cancelAnimationFrame(animationRef.current)}
-    };
+    },
   }, [variant, intensity, interactive, getParticleCount, createParticle, updateParticle, renderParticle, renderQuantumField, renderNeuralNetwork]),
   return (
     <div className={`relative w-full h-full ${className}`}>,
@@ -248,5 +248,5 @@ const AdvancedFuturisticBackground: React.FC<AdvancedFuturisticBackgroundProps> 
       <div className="relative z-10">,
         {children}
       </div>,
-    </div>)};
-export default AdvancedFuturisticBackground;
+    </div>)},
+export default AdvancedFuturisticBackground,

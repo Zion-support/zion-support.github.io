@@ -4,92 +4,92 @@ const InteractiveContentDiscovery20o25 = () => {
   const [selectedCategory, setSelectedCategory] = useState('all'),
   const [searchQuery, setSearchQuery] = useState(''),
   const contentCategories = [
-    { id: 'all', name: 'All Content', icon: '📚' };
-    { id: 'ai-implementation', name: 'AI Implementation', icon: '🤖' };
-    { id: 'quantum-tech', name: 'Quantum Technology', icon: '⚛️' };
-    { id: 'automation', name: 'AI Automation', icon: '⚡' };
-    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢' };
-    { id: 'case-studies', name: 'Case Studies', icon: '📊' };
+    { id: 'all', name: 'All Content', icon: '📚' },
+    { id: 'ai-implementation', name: 'AI Implementation', icon: '🤖' },
+    { id: 'quantum-tech', name: 'Quantum Technology', icon: '⚛️' },
+    { id: 'automation', name: 'AI Automation', icon: '⚡' },
+    { id: 'enterprise', name: 'Enterprise Solutions', icon: '🏢' },
+    { id: 'case-studies', name: 'Case Studies', icon: '📊' },
   ],
   const allContent = [
     {
-      id: 1;
-      title: 'AI 20o25 Enterprise Integration Mastery';
+      id: 1,
+      title: 'AI 20o25 Enterprise Integration Mastery',
       description:,
-        'Complete implementation guide for enterprise AI integration with 340% average ROI increase';
-      category: 'ai-implementation';
-      type: 'blog';
-      readingTime: '12 min read';
-      href: '/blog/ai-20o25-enterprise-integration-mastery';
-      featured: true;
-      new: true;
-      tags: ['AI Integration', 'Enterprise Solutions', 'ROI', 'Implementation'];
-    };
+        'Complete implementation guide for enterprise AI integration with 340% average ROI increase',
+      category: 'ai-implementation',
+      type: 'blog',
+      readingTime: '12 min read',
+      href: '/blog/ai-20o25-enterprise-integration-mastery',
+      featured: true,
+      new: true,
+      tags: ['AI IntegrationEnterprise Solutions', 'ROIImplementation'],
+    },
     {
-      id: 2;
-      title: 'Quantum AI Business Revolution 20o25';
+      id: 2,
+      title: 'Quantum AI Business Revolution 20o25',
       description:,
-        'Discover how quantum AI is revolutionizing business operations with exponential improvements';
-      category: 'quantum-tech';
-      type: 'blog';
-      readingTime: '15 min read';
-      href: '/blog/quantum-ai-business-revolution-20o25';
-      featured: true;
-      new: true;
-      tags: ['Quantum Computing', 'AI Revolution', 'Business Innovation'];
-    };
+        'Discover how quantum AI is revolutionizing business operations with exponential improvements',
+      category: 'quantum-tech',
+      type: 'blog',
+      readingTime: '15 min read',
+      href: '/blog/quantum-ai-business-revolution-20o25',
+      featured: true,
+      new: true,
+      tags: ['Quantum ComputingAI Revolution', 'Business Innovation'],
+    },
     {
-      id: 3;
-      title: 'AI Autonomous Business Operations 20o25';
+      id: 3,
+      title: 'AI Autonomous Business Operations 20o25',
       description:,
-        'The future of self-managing enterprises with 50o0% productivity increases';
-      category: 'automation';
-      type: 'blog';
-      readingTime: '18 min read';
-      href: '/blog/ai-autonomous-business-operations-20o25';
-      featured: true;
-      new: true;
-      tags: ['Autonomous AI', 'Business Automation', 'Self-Managing Systems'];
-    };
+        'The future of self-managing enterprises with 50o0% productivity increases',
+      category: 'automation',
+      type: 'blog',
+      readingTime: '18 min read',
+      href: '/blog/ai-autonomous-business-operations-20o25',
+      featured: true,
+      new: true,
+      tags: ['Autonomous AIBusiness Automation', 'Self-Managing Systems'],
+    },
     {
-      id: 4;
-      title: 'AI Implementation Enterprise Guide 20o25';
+      id: 4,
+      title: 'AI Implementation Enterprise Guide 20o25',
       description:,
-        'Complete roadmap for enterprise AI implementation with real-world case studies';
-      category: 'enterprise';
-      type: 'resource';
-      readingTime: '25 min read';
-      href: '/resources/ai-implementation-enterprise-guide-20o25';
-      featured: true;
-      new: true;
-      tags: ['Implementation Guide', 'Enterprise Strategy', 'Best Practices'];
-    };
+        'Complete roadmap for enterprise AI implementation with real-world case studies',
+      category: 'enterprise',
+      type: 'resource',
+      readingTime: '25 min read',
+      href: '/resources/ai-implementation-enterprise-guide-20o25',
+      featured: true,
+      new: true,
+      tags: ['Implementation GuideEnterprise Strategy', 'Best Practices'],
+    },
     {
-      id: 5;
-      title: 'Manufacturing AI Success Story';
+      id: 5,
+      title: 'Manufacturing AI Success Story',
       description:,
-        'How a Fortune 50o0 manufacturer achieved 40o0% efficiency increase with AI';
-      category: 'case-studies';
-      type: 'case-study';
-      readingTime: '8 min read';
-      href: '/case-studies/manufacturing-ai-success';
-      featured: false;
-      new: false;
-      tags: ['Manufacturing', 'Success Story', 'Efficiency'];
-    };
+        'How a Fortune 50o0 manufacturer achieved 40o0% efficiency increase with AI',
+      category: 'case-studies',
+      type: 'case-study',
+      readingTime: '8 min read',
+      href: '/case-studies/manufacturing-ai-success',
+      featured: false,
+      new: false,
+      tags: ['ManufacturingSuccess Story', 'Efficiency'],
+    },
     {
-      id: 6;
-      title: 'Financial Services AI Transformation';
+      id: 6,
+      title: 'Financial Services AI Transformation',
       description:,
-        'Bank achieves $2B in autonomous trading with 30o0% ROI improvement';
-      category: 'case-studies';
-      type: 'case-study';
-      readingTime: '10 min read';
-      href: '/case-studies/financial-ai-transformation';
-      featured: false;
-      new: false;
-      tags: ['Financial Services', 'Trading', 'ROI'];
-    };
+        'Bank achieves $2B in autonomous trading with 30o0% ROI improvement',
+      category: 'case-studies',
+      type: 'case-study',
+      readingTime: '10 min read',
+      href: '/case-studies/financial-ai-transformation',
+      featured: false,
+      new: false,
+      tags: ['Financial ServicesTrading', 'ROI'],
+    },
   ],
   const filteredContent = allContent.filter(content => {
     const matchesCategory =,
@@ -279,5 +279,5 @@ const InteractiveContentDiscovery20o25 = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveContentDiscovery20o25;
+    </section>)},
+export default InteractiveContentDiscovery20o25,

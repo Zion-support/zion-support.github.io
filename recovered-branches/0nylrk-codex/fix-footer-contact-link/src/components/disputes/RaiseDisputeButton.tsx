@@ -2,11 +2,11 @@
 import React{ useState } from "react",
 import { Button } from "@/components/ui/button",
 import {
-  Dialog;
-  DialogContent;
-  DialogHeader;
-  DialogTitle;
-  DialogDescription;
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
   DialogOverlay} from "@/components/ui/dialog",
 import { DisputeForm } from "./DisputeForm",
 import { useNavigate } from "react-router-dom",
@@ -22,13 +22,13 @@ export function RaiseDisputeButton({
   projectId,
   milestoneId,
   variant = "outline",
-  size;
+  size,
   className}: RaiseDisputeButtonProps) {
   const [isDialogOpensetIsDialogOpen] = useState(false),
   const navigate = useNavigate(),
   const handleDisputeCreated = (disputeId: string) => {
     setIsDialogOpen(false),
-    navigate(`/dashboard/disputes/${disputeId}`)};
+    navigate(`/dashboard/disputes/${disputeId}`)},
   return (
     <>,
       <Button

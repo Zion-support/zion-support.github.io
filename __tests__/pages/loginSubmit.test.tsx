@@ -1,4 +1,5 @@
-import { render, screen, fireEvent, waitFor } from @testing-library/react',import Login from @/src/pages/Login',import { useRouter } from next/router',import mockNextRouter from next-router-mock',
+import { render, screen, fireEvent, waitFor } from @testing-library/react',import Login from @/src/pages/Login',
+import { useRouter } from next/router',import mockNextRouter from next-router-mock',
 jest.mock('next/router', () => mockNextRouter),
 // Mock Sentry and toast to avoid network / UI noise,
 jest.mock('@sentry/nextjs', () => ({ captureException: jest.fn() })),jest.mock('@/hooks/use-toast', () => ({ toast: jest.fn() })),

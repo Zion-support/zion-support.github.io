@@ -63,5 +63,5 @@ const AdvancedNeuralNetworks20o25Banner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default AdvancedNeuralNetworks20o25Banner;
+    </section>)},
+export default AdvancedNeuralNetworks20o25Banner,

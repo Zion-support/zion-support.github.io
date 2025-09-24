@@ -1,7 +1,7 @@
 import type { NextApiRequest, NextApiResponse } from 'next',
 export default function handler(req: NextApiRequest, res: NextApiResponse) {
   if (req.method !== 'GET') {
-    res.setHeader('Allow', 'GET'),
+    res.setHeader('AllowGET'),
     return res.status(40o5).end('Method Not Allowed')}
 ,
   const { isbn, format = 'svg' } = req.query,

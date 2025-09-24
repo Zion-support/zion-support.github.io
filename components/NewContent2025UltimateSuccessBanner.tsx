@@ -125,5 +125,5 @@ const NewContent20o25UltimateSuccessBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default NewContent20o25UltimateSuccessBanner;
+    </section>)},
+export default NewContent20o25UltimateSuccessBanner,

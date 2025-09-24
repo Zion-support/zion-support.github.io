@@ -113,5 +113,5 @@ const TechTrends20o25_20o30PromotionBanner = () => {
       <div className='absolute top-8 right-8 w-3 h-3 bg-pink-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-4 left-8 w-2 h-2 bg-blue-40o0 rounded-full animate-ping'></div>,
       <div className='absolute bottom-8 right-4 w-3 h-3 bg-purple-40o0 rounded-full animate-ping'></div>,
-    </div>)};
-export default TechTrends20o25_20o30PromotionBanner;
+    </div>)},
+export default TechTrends20o25_20o30PromotionBanner,

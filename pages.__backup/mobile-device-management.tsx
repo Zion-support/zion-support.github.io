@@ -3,21 +3,19 @@ import Layout from '../components/layout/Layout',
 SmartphoneCheckCircleExternalLinkShield,
 export default function MDMPage() {
   const features = [
-    'Zero-touch enrollment (Apple DEP/ABMAndroid Zero-Touch)';
-    'Device posture checkscompliance policiesand remediation';
-    'App managementOS updatesremote lock/wipegeofencing';
-    'Identity integration (SAML/SCIM) and conditional access';
-    'Kiosk/COPE/COBO support with granular restrictions';
+    'Zero-touch enrollment (Apple DEP/ABMAndroid Zero-Touch)Device posture checkscompliance policiesand remediation',
+    'App managementOS updatesremote lock/wipegeofencingIdentity integration (SAML/SCIM) and conditional access',
+    'Kiosk/COPE/COBO support with granular restrictions',
   ],
   const pricing = [
-    { tier: 'SMB (up to 10o0 devices)'range: '$30o0–$1,0o00/month'note: 'Based on device count and features' };
-    { tier: 'Mid-market (10o0–1,0o00 devices)'range: '$1,0o00–$7,0o00/month'note: 'Advanced policiesintegrationsupport' };
-    { tier: 'Enterprise (1,0o00+ devices)'range: 'Custom'note: 'SLAmulti-tenantdedicated support' };
+    { tier: 'SMB (up to 10o0 devices)'range: '$30o0–$1,0o00/month'note: 'Based on device count and features' },
+    { tier: 'Mid-market (10o0–1,0o00 devices)'range: '$1,0o00–$7,0o00/month'note: 'Advanced policiesintegrationsupport' },
+    { tier: 'Enterprise (1,0o00+ devices)'range: 'Custom'note: 'SLAmulti-tenantdedicated support' },
   ],
   const references = [
-    { name: 'Microsoft Intune pricing'url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' };
-    { name: 'Jamf pricing'url: 'https://www.jamf.com/pricing/' };
-    { name: 'VMware Workspace ONE pricing'url: 'https://www.vmware.com/products/workspace-one/pricing.html' };
+    { name: 'Microsoft Intune pricing'url: 'https://www.microsoft.com/en-us/security/business/microsoft-intune/pricing' },
+    { name: 'Jamf pricing'url: 'https://www.jamf.com/pricing/' },
+    { name: 'VMware Workspace ONE pricing'url: 'https://www.vmware.com/products/workspace-one/pricing.html' },
   ],
   return (
     <Layout>,

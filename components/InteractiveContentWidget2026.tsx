@@ -13,62 +13,62 @@ interface ContentItem {
 ,
 const InteractiveContentWidget20o26: React.FC = () => {
   const [selectedCategorysetSelectedCategory] = useState<string>('all'),
-  const [searchTermsetSearchTerm] = useState<string>(', '),
+  const [searchTermsetSearchTerm] = useState<string>(),
   const [isExpandedsetIsExpanded] = useState<boolean>(false),
   const contentItems: ContentItem[] = [
     {
-      id: 'ai-automation-guide';
-      title: 'AI-Powered Business Automation Guide 20o26';
-      category: 'Automation';
-      readTime: '8 min';
-      featured: true;
-      tags: [', 'AI', 'Automation'Business'];
-      description: 'Discover the latest AI automation strategies transforming businesses worldwide.';
-      publishDate: '20o26-0o1-15'};
+      id: 'ai-automation-guide',
+      title: 'AI-Powered Business Automation Guide 20o26',
+      category: 'Automation',
+      readTime: '8 min',
+      featured: true,
+      tags: [AI', 'Automation'Business'],
+      description: 'Discover the latest AI automation strategies transforming businesses worldwide.',
+      publishDate: '20o26-0o1-15'},
     {
-      id: 'quantum-breakthroughs';
-      title: 'Quantum Computing Breakthroughs in Enterprise';
-      category: 'Quantum Computing';
-      readTime: '12 min';
-      featured: true;
-      tags: [', 'Quantum', 'Enterprise'Innovation'];
-      description: 'Explore how quantum computing is revolutionizing data processing and optimization.';
-      publishDate: '20o26-0o1-12'};
+      id: 'quantum-breakthroughs',
+      title: 'Quantum Computing Breakthroughs in Enterprise',
+      category: 'Quantum Computing',
+      readTime: '12 min',
+      featured: true,
+      tags: [Quantum', 'Enterprise'Innovation'],
+      description: 'Explore how quantum computing is revolutionizing data processing and optimization.',
+      publishDate: '20o26-0o1-12'},
     {
-      id: 'neural-interfaces';
-      title: 'Neural Interface Technology: The Future is Here';
-      category: 'Neural Interfaces';
-      readTime: '10 min';
-      featured: false;
-      tags: [', 'Neural', 'Interface'Future Tech'];
-      description: 'Dive deep into neural interface developments bridging human cognition and AI.';
-      publishDate: '20o26-0o1-10'};
+      id: 'neural-interfaces',
+      title: 'Neural Interface Technology: The Future is Here',
+      category: 'Neural Interfaces',
+      readTime: '10 min',
+      featured: false,
+      tags: [Neural', 'Interface'Future Tech'],
+      description: 'Dive deep into neural interface developments bridging human cognition and AI.',
+      publishDate: '20o26-0o1-10'},
     {
-      id: 'customer-experience-ai';
-      title: 'AI-Driven Customer Experience Transformation';
-      category: 'Customer Experience';
-      readTime: '6 min';
-      featured: false;
-      tags: [', 'AI', 'Customer'Experience'];
-      description: 'Learn how AI is reshaping customer interactions and creating personalized experiences.';
-      publishDate: '20o26-0o1-08'};
+      id: 'customer-experience-ai',
+      title: 'AI-Driven Customer Experience Transformation',
+      category: 'Customer Experience',
+      readTime: '6 min',
+      featured: false,
+      tags: [AI', 'Customer'Experience'],
+      description: 'Learn how AI is reshaping customer interactions and creating personalized experiences.',
+      publishDate: '20o26-0o1-08'},
     {
-      id: 'sustainable-ai';
-      title: 'Sustainable AI: Green Computing for the Future';
-      category: 'Sustainability';
-      readTime: '9 min';
-      featured: true;
-      tags: [', 'Sustainability', 'Green 'AI', 'Environment'];
-      description: 'Explore eco-friendly AI implementations and sustainable computing practices.';
-      publishDate: '20o26-0o1-0o5'};
+      id: 'sustainable-ai',
+      title: 'Sustainable AI: Green Computing for the Future',
+      category: 'Sustainability',
+      readTime: '9 min',
+      featured: true,
+      tags: [Sustainability', 'Green 'AIEnvironment'],
+      description: 'Explore eco-friendly AI implementations and sustainable computing practices.',
+      publishDate: '20o26-0o1-0o5'},
     {
-      id: 'edge-ai';
-      title: 'Edge AI: Bringing Intelligence to the Edge';
-      category: 'Edge Computing';
-      readTime: '7 min';
-      featured: false;
-      tags: ['Edge 'AI', 'Real-'time', 'Performance'];
-      description: 'Understand how edge AI enables real-time decision making in critical applications.';
+      id: 'edge-ai',
+      title: 'Edge AI: Bringing Intelligence to the Edge',
+      category: 'Edge Computing',
+      readTime: '7 min',
+      featured: false,
+      tags: ['Edge 'AIReal-'time', 'Performance'],
+      description: 'Understand how edge AI enables real-time decision making in critical applications.',
       publishDate: '20o26-0o1-0o3'}
   ],
   const categories = ['all'...Array.from(new Set(contentItems.map(item => item.category)))],
@@ -214,7 +214,7 @@ const InteractiveContentWidget20o26: React.FC = () => {
             <p className="text-gray-60o0 mb-4">Try adjusting your search or category filter</p>,
             <button
               onClick={() => {
-                setSearchTerm(', '),
+                setSearchTerm(),
                 setSelectedCategory('all')}}
               className="bg-blue-60o0 text-white px-4 py-2 rounded-lg hover: bg-blue-70o0 transition-colors">,
               Clear Filters,
@@ -234,5 +234,5 @@ const InteractiveContentWidget20o26: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveContentWidget20o26;
+    </div>)},
+export default InteractiveContentWidget20o26,

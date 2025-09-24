@@ -1,41 +1,41 @@
 import { motion } from 'framer-motion',
 export function PerformanceOptimizedLoader({
-  size = 'md';
-  color = 'primary';
-  text;
-  fullScreen = false;
+  size = 'md',
+  color = 'primary',
+  text,
+  fullScreen = false,
 }) {
   const sizeClasses = {
-    sm: 'w-6 h-6';
-    md: 'w-12 h-12';
-    lg: 'w-16 h-16';
-  };
+    sm: 'w-6 h-6',
+    md: 'w-12 h-12',
+    lg: 'w-16 h-16'
+  },
   const colorClasses = {
-    primary: 'text-zion-purple';
-    secondary: 'text-zion-cyan';
-    white: 'text-white';
-  };
+    primary: 'text-zion-purple',
+    secondary: 'text-zion-cyan',
+    white: 'text-white'
+  },
   const spinnerVariants = {
     animate: {
-      rotate: 360;
+      rotate: 360,
       transition: {
-        duration: 1;
-        repeat: Infinity;
-        ease: 'linear';
-      };
-    };
-  };
+        duration: 1,
+        repeat: Infinity,
+        ease: 'linear'
+      },
+    },
+  },
   const pulseVariants = {
     animate: {
-      scale: [1, 1.2, 1];
-      opacity: [0.5, 1, 0.5];
+      scale: [1, 1.2, 1],
+      opacity: [0.5, 1, 0.5],
       transition: {
-        duration: 2;
-        repeat: Infinity;
-        ease: 'easeInOut';
-      };
-    };
-  };
+        duration: 2,
+        repeat: Infinity,
+        ease: 'easeInOut'
+      },
+    },
+  },
   const LoaderContent = () => (
     <div className='flex flex-col items-center justify-center space-y-4'>,
       <motion.div,
@@ -91,7 +91,7 @@ export function SkeletonLoader({ className = '', lines = 3, height = 'h-4' }) {
           transition={{ delay: index * 0.1 }}
           className={`${height} bg-zion-blue-light/20 rounded-lg animate-pulse`}
           style={{
-            width: `${Math.random() * 40 + 60}%`;
+            width: `${Math.random() * 40 + 60}%`,
           }}
         />))}
     </div>)}

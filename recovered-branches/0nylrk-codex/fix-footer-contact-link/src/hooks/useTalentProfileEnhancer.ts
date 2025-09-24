@@ -28,9 +28,9 @@ export function useTalentProfileEnhancer() {
     try {
       // Call the Supabase Edge Function,
       const { data, error } = await supabase.functions.invoke(
-        'talent-profile-enhancer';
+        'talent-profile-enhancer',
         {
-          body: { talentData: profileData };
+          body: { talentData: profileData },
         }
       ),
       if (error) {
@@ -40,11 +40,11 @@ export function useTalentProfileEnhancer() {
       setError(err.message || 'Failed to enhance profile'),
       return null} finally {
       setIsGenerating(false)}
-  };
+  },
   return {
-    enhanceProfile;
-    isGenerating;
-    error;
-  };
+    enhanceProfile,
+    isGenerating,
+    error,
+  },
 }
 ,

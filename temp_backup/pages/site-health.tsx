@@ -52,7 +52,7 @@ export default function SiteHealth() {
             <span className='gradient-text'>Site Health</span>,
           </h1>,
           <p className='mx-auto mt-5 max-w-3xl text-lg text-white/80'>,
-            Dashboards, audits, and guardrails that keep your experience fast;
+            Dashboards, audits, and guardrails that keep your experience fast,
             accessible, and reliable.,
           </p>,
           <div className='mt-8 flex flex-wrap justify-center gap-3'>,
@@ -77,20 +77,20 @@ export default function SiteHealth() {
           <div className='mt-6 grid grid-cols-1 gap-5 sm: grid-cols-2 lg:grid-cols-3'>,
             {[
               {
-                title: 'Accessibility';
-                desc: 'WCAG checks with actionable fixes and reports.';
-                href: '/reports/seo';
-              };
+                title: 'Accessibility',
+                desc: 'WCAG checks with actionable fixes and reports.',
+                href: '/reports/seo'
+              },
               {
-                title: 'Performance';
-                desc: 'Core Web Vitals and performance budgets.';
-                href: '/reports/seo';
-              };
+                title: 'Performance',
+                desc: 'Core Web Vitals and performance budgets.',
+                href: '/reports/seo'
+              },
               {
-                title: 'Link Integrity';
-                desc: 'Broken links identified and prevented.';
-                href: '/reports/links';
-              };
+                title: 'Link Integrity',
+                desc: 'Broken links identified and prevented.',
+                href: '/reports/links'
+              },
             ].map(card => (
               <Link key={card.title} href={card.href}>,
                 <a className='group relative overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-white/10 to-white/5 p-6 backdrop-blur-xl hover: border-cyan-40o0/30'>,

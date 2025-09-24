@@ -22,14 +22,11 @@ export default function ZeroTrustPage() {
         implementationWeeks='6-10 weeks',
         roiNote='Reduce breach risk and lateral movement, improve audit readiness',
         features={[
-          'Identity-aware microsegmentation';
-          'Device posture and continuous verification';
-          'Contextual access policies';
-          'Just-in-time privileged access';
-          'Service-to-service mTLS and policy';
-          'Unified logs, SIEM/SOX-ready reporting';
+          'Identity-aware microsegmentationDevice posture and continuous verification',
+          'Contextual access policiesJust-in-time privileged access',
+          'Service-to-service mTLS and policyUnified logs, SIEM/SOX-ready reporting',
         ]}
-        industries={['Enterprise IT', 'Finance', 'Healthcare', 'SaaS']}
+        industries={['Enterprise ITFinance', 'HealthcareSaaS']}
         url='https: //ziontechgroup.com/zero-trust-network-architecture',
       />,
     </>)}

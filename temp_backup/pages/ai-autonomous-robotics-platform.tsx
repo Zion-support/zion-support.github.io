@@ -1,41 +1,41 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
-  Settings, Workflow, Clock, Database, Cloud;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
+  Settings, Workflow, Clock, Database, Cloud,
   Bot, Cpu as CpuIcon, Eye, Hand} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Autonomous Robotics Platform | Zion Tech Group';
-  description: 'Revolutionary AI-powered autonomous robotics platform that manages and coordinates robotic systems.';
-  keywords: 'AI robotics, autonomous robotics, robotic automation, AI robot management, robotics platform';
+  title: 'AI Autonomous Robotics Platform | Zion Tech Group',
+  description: 'Revolutionary AI-powered autonomous robotics platform that manages and coordinates robotic systems.',
+  keywords: 'AI robotics, autonomous robotics, robotic automation, AI robot management, robotics platform',
   openGraph: {
-    title: 'AI Autonomous Robotics Platform | Zion Tech Group';
-    description: 'Revolutionary AI-powered autonomous robotics platform that manages and coordinates robotic systems.';
-    url: 'https://ziontechgroup.com/ai-autonomous-robotics-platform';
-    siteName: 'Zion Tech Group';
+    title: 'AI Autonomous Robotics Platform | Zion Tech Group',
+    description: 'Revolutionary AI-powered autonomous robotics platform that manages and coordinates robotic systems.',
+    url: 'https://ziontechgroup.com/ai-autonomous-robotics-platform',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-autonomous-robotics-platform.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Autonomous Robotics Platform'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-autonomous-robotics-platform.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Autonomous Robotics Platform'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Autonomous Robotics Platform | Zion Tech Group';
-    description: 'Revolutionary AI-powered autonomous robotics platform that manages and coordinates robotic systems.';
-    images: ['https://ziontechgroup.com/og-image-ai-autonomous-robotics-platform.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Autonomous Robotics Platform | Zion Tech Group',
+    description: 'Revolutionary AI-powered autonomous robotics platform that manages and coordinates robotic systems.',
+    images: ['https://ziontechgroup.com/og-image-ai-autonomous-robotics-platform.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-autonomous-robotics-platform'}};
+    canonical: 'https://ziontechgroup.com/ai-autonomous-robotics-platform'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIAutonomousRoboticsPlatform() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -79,7 +79,7 @@ export default function AIAutonomousRoboticsPlatform() {
               Revolutionary Autonomous Robotics,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI robotics platform handles every aspect of robotic operations from coordination to execution;
+              Our AI robotics platform handles every aspect of robotic operations from coordination to execution,
               continuously learning and optimizing for maximum efficiency and safety.,
             </p>,
           </div>,

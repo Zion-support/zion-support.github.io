@@ -1,11 +1,11 @@
-import React from 'react';
+import React from 'react',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'mobile-development - Zion Tech Group';
+  title: 'mobile-development - Zion Tech Group',
   description:,
-    'Professional mobile-development solutions for your business needs.';
-  keywords: 'mobile-development, services, business, technology';
-};
+    'Professional mobile-development solutions for your business needs.',
+  keywords: 'mobile-development, services, business, technology',
+},
 export default function MobileDevelopmentPage() {
   return (
     <div className='min-h-screen bg-white'>,

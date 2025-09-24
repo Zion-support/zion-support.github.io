@@ -7,39 +7,35 @@ import {
 export default function AIFinancialPlanningPlatform() {
   const features = [
     {
-      icon: <DollarSign className="w-6 h-6" />;
-      title: 'AI-Powered Financial Analysis';
-      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'};
+      icon: <DollarSign className="w-6 h-6" />,
+      title: 'AI-Powered Financial Analysis',
+      description: 'Advanced financial modeling and analysis using machine learning to identify opportunities and risks.'},
     {
-      icon: <TrendingUp className="w-6 h-6" />;
-      title: 'Predictive Financial Planning';
-      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'};
+      icon: <TrendingUp className="w-6 h-6" />,
+      title: 'Predictive Financial Planning',
+      description: 'Forecast financial outcomes and create data-driven financial plans with AI-powered insights.'},
     {
-      icon: <Target className="w-6 h-6" />;
-      title: 'Goal-Based Planning';
-      description: 'Personalized financial planning based on your specific goalstimelineand risk tolerance.'};
+      icon: <Target className="w-6 h-6" />,
+      title: 'Goal-Based Planning',
+      description: 'Personalized financial planning based on your specific goalstimelineand risk tolerance.'},
     {
-      icon: <Zap className="w-6 h-6" />;
-      title: 'Automated Portfolio Management';
-      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'};
+      icon: <Zap className="w-6 h-6" />,
+      title: 'Automated Portfolio Management',
+      description: 'Intelligent portfolio optimization and rebalancing based on market conditions and your objectives.'},
     {
-      icon: <Shield className="w-6 h-6" />;
-      title: 'Risk Assessment & Management';
-      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'};
+      icon: <Shield className="w-6 h-6" />,
+      title: 'Risk Assessment & Management',
+      description: 'Comprehensive risk analysis and automated risk management strategies for your financial portfolio.'},
     {
-      icon: <BarChart3 className="w-6 h-6" />;
-      title: 'Real-Time Financial Insights';
+      icon: <BarChart3 className="w-6 h-6" />,
+      title: 'Real-Time Financial Insights',
       description: 'Live financial datamarket analysisand personalized recommendations updated in real-time.'}
   ],
   const benefits = [
-    'Increase investment returns by 25%';
-    'Reduce financial planning time by 70%';
-    'Improve risk-adjusted returns by 40%';
-    'Optimize tax efficiency by 30%';
-    'Reduce portfolio volatility by 35%';
-    'Improve financial goal achievement by 50%';
-    'Reduce financial planning costs by 60%';
-    'Gain professional-grade financial insights'],
+    'Increase investment returns by 25%Reduce financial planning time by 70%',
+    'Improve risk-adjusted returns by 40%Optimize tax efficiency by 30%',
+    'Reduce portfolio volatility by 35%Improve financial goal achievement by 50%',
+    'Reduce financial planning costs by 60%Gain professional-grade financial insights'],
 					<div className="mt-12">,
 						<h2 className="text-2xl font-semibold">Pricing</h2>,
 						<div className="mt-6 grid grid-cols-1 md: grid-cols-3 gap-6">,

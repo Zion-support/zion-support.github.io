@@ -2,18 +2,15 @@ import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'Quantum Computing Revolution 20o25 - Breakthrough Technology | Zion Tech Group';
+    'Quantum Computing Revolution 20o25 - Breakthrough Technology | Zion Tech Group',
   description:,
-    'Experience the quantum computing revolution of 20o25. Revolutionary quantum algorithms, quantum AI, and quantum-powered business solutions that solve impossible problems.';
+    'Experience the quantum computing revolution of 20o25. Revolutionary quantum algorithms, quantum AI, and quantum-powered business solutions that solve impossible problems.',
   keywords: [
-    'quantum computing';
-    'quantum AI';
-    'quantum algorithms';
-    'quantum revolution';
-    'business solutions';
-    'breakthrough technology';
-  ];
-};
+    'quantum computingquantum AI',
+    'quantum algorithmsquantum revolution',
+    'business solutionsbreakthrough technology',
+  ]
+},
 export default function QuantumComputingRevolution20o25Page() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-indigo-90o0 via-purple-90o0 to-pink-90o0 text-white'>,
@@ -99,7 +96,7 @@ export default function QuantumComputingRevolution20o25Page() {
               <div className='text-4xl mb-4'>🌐</div>,
               <h3 className='text-2xl font-bold mb-4'>Quantum Networks</h3>,
               <p className='text-gray-30o0 mb-6'>,
-                Ultra-secure quantum communication networks that enable instant;
+                Ultra-secure quantum communication networks that enable instant,
                 unhackable data transmission across any distance.,
               </p>,
               <div className='text-cyan-40o0 font-semibold'>,
@@ -157,7 +154,7 @@ export default function QuantumComputingRevolution20o25Page() {
                   Financial Services,
                 </h3>,
                 <p className='text-gray-30o0'>,
-                  Quantum algorithms for portfolio optimization, risk analysis;
+                  Quantum algorithms for portfolio optimization, risk analysis,
                   and fraud detection with unprecedented speed and accuracy.,
                 </p>,
               </div>,

@@ -1,12 +1,13 @@
-import React from 'react';;
-import Head from 'next/head';
-import React from 'react';
+import React from 'react',
+import Head from 'next/head',
+import React from 'react',
 import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
 import UltraFuturisticNavigation2029 from '../components/layout/UltraFuturisticNavigation2029',
-import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',import {
+import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
+import {
 import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFooter2028',
   Brain,
   Heart,
@@ -32,54 +33,54 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
   Server,
   ShieldCheck} from 'lucide-react',
   Brain, Heart, Eye, MessageCircle, Users, Shield,
-  Brain;
-  Heart;
-  Eye;
-  MessageCircle;
-  Users;
-  Shield;
-  Zap;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Cpu;
-  Lock;
-  BarChart3;
-  Smartphone;
-  Database;
-  Cloud;
-  Server;
-  ShieldCheck;
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,
+  ShieldCheck,
 } from 'lucide-react',
   Brain, Heart, Eye, MessageCircle, Users, Shield,
-  Brain;
-  Heart;
-  Eye;
-  MessageCircle;
-  Users;
-  Shield;
-  Zap;
-  TrendingUp;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Phone;
-  Mail;
-  MapPin;
-  Globe;
-  Cpu;
-  Lock;
-  BarChart3;
-  Smartphone;
-  Database;
-  Cloud;
-  Server;
-  ShieldCheck;
+  Brain,
+  Heart,
+  Eye,
+  MessageCircle,
+  Users,
+  Shield,
+  Zap,
+  TrendingUp,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Phone,
+  Mail,
+  MapPin,
+  Globe,
+  Cpu,
+  Lock,
+  BarChart3,
+  Smartphone,
+  Database,
+  Cloud,
+  Server,
+  ShieldCheck,
 } from 'lucide-react',
   Brain, Heart, Eye, MessageCircle, Users, Shield,
   Zap, TrendingUp, CheckCircle, ArrowRight, Star,
@@ -89,7 +90,7 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
     mobile: '+1 302 464 0950',
     email: 'kleber@ziontechgroup.com',
     address: '364 E Main St STE 1008 Middletown DE 19709',
-    website: 'https://ziontechgroup.com'};    website: 'https://ziontechgroup.com'}
+    website: 'https://ziontechgroup.com'},    website: 'https://ziontechgroup.com'}
   const features = [
     {
       icon: Brain,
@@ -128,12 +129,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       color: 'from-indigo-500 to-purple-600'}
   ],
   const benefits = [
-    'Improve customer satisfaction by 85%',
-    'Reduce customer churn by 60%',
-    'Enhance team collaboration and communication',
-    'Optimize marketing campaigns with emotional insights',
-    'Improve mental health support and monitoring',
-    'Create empathetic AI interactions and experiences'],    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'],
+    'Improve customer satisfaction by 85%Reduce customer churn by 60%',
+    'Enhance team collaboration and communicationOptimize marketing campaigns with emotional insights',
+    'Improve mental health support and monitoringCreate empathetic AI interactions and experiences'],    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'],
   const useCases = [
     {
       title: 'Customer Service Automation',
@@ -196,10 +194,8 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       period: '/month',
       description: 'Perfect for small teams and startups',
       features: [
-        'Up to 1,000 emotional interactions/month',
-        'Basic emotion detection (5 emotions)',
-        'Email support',
-        'Standard API access',
+        'Up to 1,000 emotional interactions/monthBasic emotion detection (5 emotions)',
+        'Email supportStandard API access',
         'Basic analytics dashboard'],
       popular: false}
     professional: {
@@ -207,12 +203,9 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       price: '$3,999',
       description: 'Ideal for growing businesses',
       features: [
-        'Up to 10,000 emotional interactions/month',
-        'Advanced emotion detection (15+ emotions)',
-        'Priority support',
-        'Full API access with webhooks',
-        'Advanced analytics and reporting',
-        'Custom emotion models',
+        'Up to 10,000 emotional interactions/monthAdvanced emotion detection (15+ emotions)',
+        'Priority supportFull API access with webhooks',
+        'Advanced analytics and reportingCustom emotion models',
         'Multi-language support'],
       popular: true}
     enterprise: {
@@ -221,23 +214,19 @@ import UltraFuturisticFooter2028 from '../components/layout/UltraFuturisticFoote
       period: '/month',
       description: 'For large organizations with custom needs',
       features: [
-        'Unlimited emotional interactions',
-        'Custom emotion detection models',
-        '24/7 dedicated support',
-        'Custom integrations',
-        'Advanced security features',
-        'White-label options',
-        'On-premise deployment',
-        'Custom training and consulting'],
-      popular: false}};        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting',
+        'Unlimited emotional interactionsCustom emotion detection models',
+        '24/7 dedicated supportCustom integrations',
+        'Advanced security featuresWhite-label options',
+        'On-premise deploymentCustom training and consulting'],
+      popular: false}},        'Unlimited emotional interactionsCustom emotion detection models24/7 dedicated supportCustom integrationsAdvanced security featuresWhite-label optionsOn-premise deploymentCustom training and consulting',
 class ErrorBoundary extends React.Component {
   constructor(props) {
     super(props),
-    this.state = { hasError: false };
+    this.state = { hasError: false },
   }
 ,
   static getDerivedStateFromError(error) {
-    return { hasError: true };
+    return { hasError: true },
   }
 ,
   componentDidCatch(error, errorInfo) {
@@ -251,124 +240,121 @@ class ErrorBoundary extends React.Component {
   Phone, Mail, MapPin, Globe, Cpu, Lock, BarChart3,
   Smartphone, Database, Cloud, Server, ShieldCheck} from 'lucide-react',
   const contactInfo = {
-    mobile: '+1 302 464 0950';
-    email: 'kleber@ziontechgroup && ziontechgroup.com';
-    address: '364 E Main St STE 1008 Middletown DE 19709';
-    website: 'https://ziontechgroup && ziontechgroup.com'};    website: 'https://ziontechgroup && ziontechgroup.com'};
+    mobile: '+1 302 464 0950',
+    email: 'kleber@ziontechgroup && ziontechgroup.com',
+    address: '364 E Main St STE 1008 Middletown DE 19709',
+    website: 'https://ziontechgroup && ziontechgroup.com'},    website: 'https://ziontechgroup && ziontechgroup.com'},
   const features = [
     {
-      icon: Brain;
-      title: 'Real-time Emotion Detection';
+      icon: Brain,
+      title: 'Real-time Emotion Detection',
       description:,
-        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time';
-      color: 'from-violet-500 to-purple-600';
-    };
-      icon: Heart;
-      title: 'Emotional Response Generation';
+        'Advanced AI algorithms that detect emotions from facial expressions, voice tone, and text in real-time',
+      color: 'from-violet-500 to-purple-600'
+    },
+      icon: Heart,
+      title: 'Emotional Response Generation',
       description:,
-        'Intelligent system that generates contextually appropriate emotional responses';
-      color: 'from-pink-500 to-rose-600';
-    };
+        'Intelligent system that generates contextually appropriate emotional responses',
+      color: 'from-pink-500 to-rose-600'
+    },
     {
-      icon: Eye;
-      title: 'Multi-modal Emotion Analysis';
+      icon: Eye,
+      title: 'Multi-modal Emotion Analysis',
       description:,
-        'Combines visual, auditory, and textual data for comprehensive emotion understanding';
-      color: 'from-blue-500 to-cyan-600';
-    };
+        'Combines visual, auditory, and textual data for comprehensive emotion understanding',
+      color: 'from-blue-500 to-cyan-600'
+    },
     {
-      icon: MessageCircle;
-      title: 'Emotional Intelligence Training';
+      icon: MessageCircle,
+      title: 'Emotional Intelligence Training',
       description:,
-        'AI-powered training modules to improve emotional intelligence skills';
-      color: 'from-green-500 to-emerald-600';
-    };
+        'AI-powered training modules to improve emotional intelligence skills',
+      color: 'from-green-500 to-emerald-600'
+    },
     {
-      icon: TrendingUp;
-      title: 'Sentiment Optimization';
+      icon: TrendingUp,
+      title: 'Sentiment Optimization',
       description:,
-        'Optimizes communication and content based on emotional context';
-      color: 'from-orange-500 to-red-600';
-    };
+        'Optimizes communication and content based on emotional context',
+      color: 'from-orange-500 to-red-600'
+    },
     {
-      icon: Shield;
-      title: 'Emotional Health Monitoring';
+      icon: Shield,
+      title: 'Emotional Health Monitoring',
       description:,
-        'Tracks emotional patterns and provides insights for mental health support';
-      color: 'from-indigo-500 to-purple-600';
-    };
+        'Tracks emotional patterns and provides insights for mental health support',
+      color: 'from-indigo-500 to-purple-600'
+    },
   ],
   const benefits = [
-    'Improve customer satisfaction by 85%';
-    'Reduce customer churn by 60%';
-    'Enhance team collaboration and communication';
-    'Optimize marketing campaigns with emotional insights';
-    'Improve mental health support and monitoring';
-    'Create empathetic AI interactions and experiences'],    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'],
+    'Improve customer satisfaction by 85%Reduce customer churn by 60%',
+    'Enhance team collaboration and communicationOptimize marketing campaigns with emotional insights',
+    'Improve mental health support and monitoringCreate empathetic AI interactions and experiences'],    'Improve customer satisfaction by 85%Reduce customer churn by 60%Enhance team collaboration and communicationOptimize marketing campaigns with emotional insightsImprove mental health support and monitoringCreate empathetic AI interactions and experiences'],
   const useCases = [
     {
-      title: 'Customer Service Automation';
+      title: 'Customer Service Automation',
       description:,
-        'AI agents that understand customer emotions and respond appropriately';
-      icon: Users;
-      color: 'from-blue-500 to-cyan-600';
+        'AI agents that understand customer emotions and respond appropriately',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-600'
     },    {
-      title: 'Mental Health Applications';
-      description: 'Emotional support and monitoring for mental health care';
-      icon: Heart;
-      color: 'from-pink-500 to-rose-600';
+      title: 'Mental Health Applications',
+      description: 'Emotional support and monitoring for mental health care',
+      icon: Heart,
+      color: 'from-pink-500 to-rose-600'
     },    {
-      title: 'Educational Platforms';
-      description: 'Personalized learning experiences based on emotional state';
-      icon: Brain;
-      color: 'from-green-500 to-emerald-600';
+      title: 'Educational Platforms',
+      description: 'Personalized learning experiences based on emotional state',
+      icon: Brain,
+      color: 'from-green-500 to-emerald-600'
     },    {
-      title: 'Marketing Optimization';
-      description: 'Campaign optimization based on emotional response analysis';
-      icon: TrendingUp;
-      color: 'from-orange-500 to-red-600';
+      title: 'Marketing Optimization',
+      description: 'Campaign optimization based on emotional response analysis',
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-600'
     },    {
-      title: 'HR and Recruitment';
-      description: 'Emotional intelligence assessment and team building';
-      icon: Users;
-      color: 'from-purple-500 to-indigo-600';
+      title: 'HR and Recruitment',
+      description: 'Emotional intelligence assessment and team building',
+      icon: Users,
+      color: 'from-purple-500 to-indigo-600'
     },    {
-      title: 'Healthcare Diagnostics';
-      description: 'Emotional state monitoring for healthcare professionals';
-      icon: Shield;
-      color: 'from-teal-500 to-cyan-600';
-    }],      description: 'AI agents that understand customer emotions and respond appropriately';
-      icon: Users;
-      color: 'from-blue-500 to-cyan-600'};
+      title: 'Healthcare Diagnostics',
+      description: 'Emotional state monitoring for healthcare professionals',
+      icon: Shield,
+      color: 'from-teal-500 to-cyan-600'
+    }],      description: 'AI agents that understand customer emotions and respond appropriately',
+      icon: Users,
+      color: 'from-blue-500 to-cyan-600'},
     {
-      title: 'Mental Health Applications';
-      description: 'Emotional support and monitoring for mental health care';
-      icon: Heart;
-      color: 'from-pink-500 to-rose-600';
-    },      color: 'from-pink-500 to-rose-600'};
+      title: 'Mental Health Applications',
+      description: 'Emotional support and monitoring for mental health care',
+      icon: Heart,
+      color: 'from-pink-500 to-rose-600'
+    },      color: 'from-pink-500 to-rose-600'},
     {
-      title: 'Educational Platforms';
-      description: 'Personalized learning experiences based on emotional state';
-      icon: Brain;
-      color: 'from-green-500 to-emerald-600';
-    },      color: 'from-green-500 to-emerald-600'};
+      title: 'Educational Platforms',
+      description: 'Personalized learning experiences based on emotional state',
+      icon: Brain,
+      color: 'from-green-500 to-emerald-600'
+    },      color: 'from-green-500 to-emerald-600'},
     {
-      title: 'Marketing Optimization';
-      description: 'Campaign optimization based on emotional response analysis';
-      icon: TrendingUp;
-      color: 'from-orange-500 to-red-600';
-    },      color: 'from-orange-500 to-red-600'};
+      title: 'Marketing Optimization',
+      description: 'Campaign optimization based on emotional response analysis',
+      icon: TrendingUp,
+      color: 'from-orange-500 to-red-600'
+    },      color: 'from-orange-500 to-red-600'},
     {
-      title: 'HR and Recruitment';
-      description: 'Emotional intelligence assessment and team building';
-      icon: Users;
-      color: 'from-purple-500 to-indigo-600';
-    },      color: 'from-purple-500 to-indigo-600'};
+      title: 'HR and Recruitment',
+      description: 'Emotional intelligence assessment and team building',
+      icon: Users,
+      color: 'from-purple-500 to-indigo-600'
+    },      color: 'from-purple-500 to-indigo-600'},
     {
-      title: 'Healthcare Diagnostics';
-      description: 'Emotional state monitoring for healthcare professionals';
-      icon: Shield;
-      color: 'from-teal-500 to-cyan-600';
+      title: 'Healthcare Diagnostics',
+      description: 'Emotional state monitoring for healthcare professionals',
+      icon: Shield,
+      color: 'from-teal-500 to-cyan-600'
     },      color: 'from-teal-500 to-cyan-600'}
   ]],
       popular: false}
@@ -871,7 +857,7 @@ class ErrorBoundary extends React.Component {
               </span>,
             </h2>,
             <p className='text-xl text-gray-300 max-w-3xl mx-auto'>,
-              Experience unprecedented improvements in customer satisfaction;
+              Experience unprecedented improvements in customer satisfaction,
               team collaboration, and business outcomes.,
             </p>,
           </motion && motion.div>,
@@ -1250,9 +1236,9 @@ class ErrorBoundary extends React.Component {
         </div>,
       </section>,
       <UltraFuturisticFooter2028 />,
-    </>)};
-export default AIEmotionalIntelligencePlatform2029)};
-export default AIEmotionalIntelligencePlatform2029;
+    </>)},
+export default AIEmotionalIntelligencePlatform2029)},
+export default AIEmotionalIntelligencePlatform2029,
           </motion.div>,
           <div className='grid grid - cols - 1 md: grid - cols - 3 gap - 8 mb - 12'>            <motion.div          >,
             <h2 className="text - 4xl md:text - 5xl font - bold text - white mb - 6">,
@@ -1324,5 +1310,5 @@ export default AIEmotionalIntelligencePlatform2029;
         </div>,
       </section>,
       <UltraFuturisticFooter2028 />,
-    </>)};
+    </>)},
 >>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4>>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)))))))))))))

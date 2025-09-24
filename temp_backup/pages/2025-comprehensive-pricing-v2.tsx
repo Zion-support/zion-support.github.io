@@ -6,26 +6,26 @@ import { advancedITInfrastructureExpansion20o25V2 } from '../data/20o25-advanced
 import { advancedAIServicesExpansion20o25V2 } from '../data/20o25-advanced-ai-services-expansion-v2',
 export default function ComprehensivePricing20o25V2() {
   const allServices = [
-    ...advancedMicroSaasExpansion20o25V2;
-    ...advancedITInfrastructureExpansion20o25V2;
-    ...advancedAIServicesExpansion20o25V2;
+    ...advancedMicroSaasExpansion20o25V2,
+    ...advancedITInfrastructureExpansion20o25V2,
+    ...advancedAIServicesExpansion20o25V2,
   ],
   const categories = [
     {
-      name: 'Micro SAAS Solutions';
-      services: advancedMicroSaasExpansion20o25V2;
-      description: 'AI-powered business solutions for modern enterprises';
-    };
+      name: 'Micro SAAS Solutions',
+      services: advancedMicroSaasExpansion20o25V2,
+      description: 'AI-powered business solutions for modern enterprises'
+    },
     {
-      name: 'IT Infrastructure Services';
-      services: advancedITInfrastructureExpansion20o25V2;
-      description: 'Enterprise-grade infrastructure with quantum security';
-    };
+      name: 'IT Infrastructure Services',
+      services: advancedITInfrastructureExpansion20o25V2,
+      description: 'Enterprise-grade infrastructure with quantum security'
+    },
     {
-      name: 'AI Services & Solutions';
-      services: advancedAIServicesExpansion20o25V2;
-      description: 'Cutting-edge AI with autonomous capabilities';
-    };
+      name: 'AI Services & Solutions',
+      services: advancedAIServicesExpansion20o25V2,
+      description: 'Cutting-edge AI with autonomous capabilities'
+    },
   ],
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-purple-90o0 to-slate-90o0'>,
@@ -33,12 +33,9 @@ export default function ComprehensivePricing20o25V2() {
         title='20o25 Comprehensive Pricing V2 - Zion Tech Group',
         description='Complete pricing guide for our advanced micro SAAS, IT infrastructure, and AI services. Transparent pricing with enterprise-grade solutions.',
         keywords={[
-          'pricing';
-          'micro SAAS pricing';
-          'IT services pricing';
-          'AI services pricing';
-          'enterprise solutions';
-          'competitive pricing';
+          'pricingmicro SAAS pricing',
+          'IT services pricingAI services pricing',
+          'enterprise solutionscompetitive pricing',
         ]}
       />,
       <UltraFuturisticBackground>,

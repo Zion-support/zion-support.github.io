@@ -8,8 +8,8 @@ export const useUploadDeliverable = () => {
   const [isSubmitting, setIsSubmitting] = useState(false),
   const { recordMilestoneActivity } = useRecordActivity(),
   const uploadDeliverable = async (
-    milestoneId: string;
-    projectId: string;
+    milestoneId: string,
+    projectId: string,
     file: File) => {
     if (!user || !projectId) return null,
     try {
@@ -22,16 +22,16 @@ export const useUploadDeliverable = () => {
         .single(),
       if (fetchError) throw fetchError,
       if (!milestone) throw new Error('Milestone not found'),
-      // For this example, instead of actually uploading files (which would require storage setup);
+      // For this example, instead of actually uploading files (which would require storage setup),
       // we'll just store the file metadata in the deliverables JSONB field,
       const newDeliverable = {
-        id: crypto.randomUUID();
-        filename: file.name;
-        size: file.size;
-        type: file.type;
-        added_at: new Date().toISOString();
-        added_by: user.id;
-      };
+        id: crypto.randomUUID(),
+        filename: file.name,
+        size: file.size,
+        type: file.type,
+        added_at: new Date().toISOString(),
+        added_by: user.id
+      },
       const deliverables = [...(milestone.deliverables || []), newDeliverable],
       const { error } = await supabase,
         .from('project_milestones'),
@@ -40,10 +40,10 @@ export const useUploadDeliverable = () => {
       if (error) throw error,
       // Create activity record,
       await recordMilestoneActivity(
-        milestoneId;
-        'deliverable_added';
-        milestone.status;
-        milestone.status;
+        milestoneId,
+        'deliverable_added',
+        milestone.status,
+        milestone.status,
         `Deliverable added: ${file.name}`),
       toast.success('Deliverable added successfully'),
       return newDeliverable} catch (err: any) {
@@ -51,9 +51,9 @@ export const useUploadDeliverable = () => {
       toast.error('Failed to upload deliverable: ' + err.message),
       return null} finally {
       setIsSubmitting(false)}
-  };
+  },
   return {
-    uploadDeliverable;
-    isSubmitting;
-  };
-};
+    uploadDeliverable,
+    isSubmitting,
+  },
+},

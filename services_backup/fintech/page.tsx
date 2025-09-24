@@ -1,153 +1,133 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata = {
   title:,
-    'FinTech Solutions | Zion Tech Group - Digital Banking & Financial Technology';
+    'FinTech Solutions | Zion Tech Group - Digital Banking & Financial Technology',
   description:,
-    'Complete FinTech solutions including digital banking, payment processing, trading platforms, and financial analytics. Bank-grade security and compliance. Starting from $25,0o00/project.';
-};
+    'Complete FinTech solutions including digital banking, payment processing, trading platforms, and financial analytics. Bank-grade security and compliance. Starting from $25,0o00/project.',
+},
 export default function FinTechPage() {
   const fintechServices = [
     {
-      title: 'Digital Banking Platform';
+      title: 'Digital Banking Platform',
       description:,
-        'Complete digital banking solution with account management, transfers, and mobile banking';
+        'Complete digital banking solution with account management, transfers, and mobile banking',
       features: [
-        'Account management';
-        'Money transfers';
-        'Mobile banking';
-        'Bill payments';
-      ];
-      pricing: '$50,0o00/project';
-      icon: '🏦';
-      category: 'Banking';
-    };
+        'Account managementMoney transfers',
+        'Mobile bankingBill payments',
+      ],
+      pricing: '$50,0o00/project',
+      icon: '🏦',
+      category: 'Banking'
+    },
     {
-      title: 'Payment Processing System';
+      title: 'Payment Processing System',
       description:,
-        'Secure payment gateway with multiple payment methods and fraud detection';
+        'Secure payment gateway with multiple payment methods and fraud detection',
       features: [
-        'Multiple payment methods';
-        'Fraud detection';
-        'PCI compliance';
-        'Real-time processing';
-      ];
-      pricing: '$35,0o00/project';
-      icon: '💳';
-      category: 'Payments';
-    };
+        'Multiple payment methodsFraud detection',
+        'PCI complianceReal-time processing',
+      ],
+      pricing: '$35,0o00/project',
+      icon: '💳',
+      category: 'Payments'
+    },
     {
-      title: 'Trading Platform';
+      title: 'Trading Platform',
       description:,
-        'Advanced trading platform with real-time data, charts, and order management';
+        'Advanced trading platform with real-time data, charts, and order management',
       features: [
-        'Real-time data';
-        'Trading charts';
-        'Order management';
-        'Risk management';
-      ];
-      pricing: '$75,0o00/project';
-      icon: '📈';
-      category: 'Trading';
-    };
+        'Real-time dataTrading charts',
+        'Order managementRisk management',
+      ],
+      pricing: '$75,0o00/project',
+      icon: '📈',
+      category: 'Trading'
+    },
     {
-      title: 'Cryptocurrency Exchange';
+      title: 'Cryptocurrency Exchange',
       description:,
-        'Secure cryptocurrency exchange with wallet management and trading features';
+        'Secure cryptocurrency exchange with wallet management and trading features',
       features: [
-        'Multi-coin support';
-        'Wallet management';
-        'Trading pairs';
-        'Security protocols';
-      ];
-      pricing: '$10o0,0o00/project';
-      icon: '₿';
-      category: 'Crypto';
-    };
+        'Multi-coin supportWallet management',
+        'Trading pairsSecurity protocols',
+      ],
+      pricing: '$10o0,0o00/project',
+      icon: '₿',
+      category: 'Crypto'
+    },
     {
-      title: 'Lending Platform';
+      title: 'Lending Platform',
       description:,
-        'Peer-to-peer lending platform with risk assessment and automated underwriting';
+        'Peer-to-peer lending platform with risk assessment and automated underwriting',
       features: [
-        'Risk assessment';
-        'Automated underwriting';
-        'Loan management';
-        'Credit scoring';
-      ];
-      pricing: '$60,0o00/project';
-      icon: '💰';
-      category: 'Lending';
-    };
+        'Risk assessmentAutomated underwriting',
+        'Loan managementCredit scoring',
+      ],
+      pricing: '$60,0o00/project',
+      icon: '💰',
+      category: 'Lending'
+    },
     {
-      title: 'Insurance Technology';
+      title: 'Insurance Technology',
       description:,
-        'InsurTech platform with policy management, claims processing, and risk assessment';
+        'InsurTech platform with policy management, claims processing, and risk assessment',
       features: [
-        'Policy management';
-        'Claims processing';
-        'Risk assessment';
-        'Customer portal';
-      ];
-      pricing: '$45,0o00/project';
-      icon: '🛡️';
-      category: 'Insurance';
-    };
+        'Policy managementClaims processing',
+        'Risk assessmentCustomer portal',
+      ],
+      pricing: '$45,0o00/project',
+      icon: '🛡️',
+      category: 'Insurance'
+    },
     {
-      title: 'Wealth Management';
+      title: 'Wealth Management',
       description:,
-        'Digital wealth management platform with portfolio management and robo-advisory';
+        'Digital wealth management platform with portfolio management and robo-advisory',
       features: [
-        'Portfolio management';
-        'Robo-advisory';
-        'Goal tracking';
-        'Performance analytics';
-      ];
-      pricing: '$55,0o00/project';
-      icon: '📊';
-      category: 'Wealth';
-    };
+        'Portfolio managementRobo-advisory',
+        'Goal trackingPerformance analytics',
+      ],
+      pricing: '$55,0o00/project',
+      icon: '📊',
+      category: 'Wealth'
+    },
     {
-      title: 'RegTech Solutions';
+      title: 'RegTech Solutions',
       description:,
-        'Regulatory technology for compliance monitoring and reporting automation';
+        'Regulatory technology for compliance monitoring and reporting automation',
       features: [
-        'Compliance monitoring';
-        'Automated reporting';
-        'Risk management';
-        'Audit trails';
-      ];
-      pricing: '$40,0o00/project';
-      icon: '📜';
-      category: 'Compliance';
-    };
+        'Compliance monitoringAutomated reporting',
+        'Risk managementAudit trails',
+      ],
+      pricing: '$40,0o00/project',
+      icon: '📜',
+      category: 'Compliance'
+    },
     {
-      title: 'Blockchain Solutions';
+      title: 'Blockchain Solutions',
       description:,
-        'Blockchain-based financial solutions with smart contracts and DeFi protocols';
+        'Blockchain-based financial solutions with smart contracts and DeFi protocols',
       features: [
-        'Smart contracts';
-        'DeFi protocols';
-        'Tokenization';
-        'Cross-chain support';
-      ];
-      pricing: '$65,0o00/project';
-      icon: '⛓️';
-      category: 'Blockchain';
-    };
+        'Smart contractsDeFi protocols',
+        'TokenizationCross-chain support',
+      ],
+      pricing: '$65,0o00/project',
+      icon: '⛓️',
+      category: 'Blockchain'
+    },
     {
-      title: 'Financial Analytics';
+      title: 'Financial Analytics',
       description:,
-        'Advanced financial analytics with AI-powered insights and predictive modeling';
+        'Advanced financial analytics with AI-powered insights and predictive modeling',
       features: [
-        'AI insights';
-        'Predictive modeling';
-        'Risk analytics';
-        'Custom dashboards';
-      ];
-      pricing: '$30,0o00/project';
-      icon: '📈';
-      category: 'Analytics';
-    };
+        'AI insightsPredictive modeling',
+        'Risk analyticsCustom dashboards',
+      ],
+      pricing: '$30,0o00/project',
+      icon: '📈',
+      category: 'Analytics'
+    },
   ],
   return (
     <div className='animate-fade-in'>,
@@ -304,7 +284,7 @@ export default function FinTechPage() {
           Ready to Build Your FinTech Solution?,
         </h2>,
         <p className='text-xl mb-6 max-w-2xl mx-auto'>,
-          Let's discuss your financial technology needs and create a secure;
+          Let's discuss your financial technology needs and create a secure,
           scalable solution.,
         </p>,
         <div className='flex flex-col sm: flex-row gap-4 justify-center'>,
@@ -351,9 +331,9 @@ function FinTechServiceCard({ service }: { service: any }) {
       </div>,
     </div>)}
 function ComplianceCard({
-  title;
-  description;
-  icon;
+  title,
+  description,
+  icon,
 }: {
   title: string,
   description: string,
@@ -366,8 +346,8 @@ function ComplianceCard({
     </div>)}
 ,
 function TechStackItem({
-  name;
-  description;
+  name,
+  description,
 }: {
   name: string,
   description: string}) {

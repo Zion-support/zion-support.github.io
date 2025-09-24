@@ -3,18 +3,18 @@ import { Button } from '@/components/ui/button',
 import {
 import { Badge } from '@/components/ui/badge',
 import { ADVANCED_SERVICES } from '@/data/advancedServices',
-  Card;
-  CardContent;
-  CardDescription;
-  CardHeader;
-  CardTitle;
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
 } from '@/components/ui/card',
-  Brain;
-  Shield;
-  Users;
-  TrendingUp;
-  ArrowRight;
-  Star;
+  Brain,
+  Shield,
+  Users,
+  TrendingUp,
+  ArrowRight,
+  Star,
 } from 'lucide-react',
 // Featured services for the showcase,
 const FEATURED_SERVICES = ADVANCED_SERVICES.filter(
@@ -29,7 +29,7 @@ export function AdvancedServicesShowcase() {
             Advanced AI & IT Solutions,
           </h2>,
           <p className='text-xl text-zion-slate-light mb-8 max-w-3xl mx-auto'>,
-            Transform your business with cutting-edge artificial intelligence;
+            Transform your business with cutting-edge artificial intelligence,
             cybersecurity, and digital transformation services. Expert solutions,
             designed for the modern enterprise.,
           </p>,

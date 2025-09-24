@@ -11,11 +11,11 @@ interface KanbanColumnProps {
   count: number}
 ,
 export function KanbanColumn({
-  id;
-  title;
-  description;
-  applications;
-  count;
+  id,
+  title,
+  description,
+  applications,
+  count,
 }: KanbanColumnProps) {
   // Add color based on column type,
   const getBadgeVariant = (columnId: string) => {
@@ -32,7 +32,7 @@ export function KanbanColumn({
         return 'destructive',
       default:,
         return 'outline'}
-  };
+  },
   const getColumnBgColor = (columnId: string) => {
     switch (columnId) {
       case 'hired':,
@@ -41,7 +41,7 @@ export function KanbanColumn({
         return 'bg-red-50',
       default:,
         return 'bg-muted/30'}
-  };
+  },
   return (
     <Card
       className={`${getColumnBgColor(id)} flex flex-col h-[calc(100vh-300px)] min-h-[500px]`}

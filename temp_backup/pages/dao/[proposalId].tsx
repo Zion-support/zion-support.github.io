@@ -4,7 +4,7 @@ import { Wallet } from '../../components/dao/Wallet',
 import { getGovernor } from '../../utils/dao',
 export default function ProposalDetail() {
   const router = useRouter(),
-  const { proposalId } = router.query as { proposalId?: string };
+  const { proposalId } = router.query as { proposalId?: string },
   const [provider, setProvider] =,
     useState<ethers.providers.Web3Provider | null>(null),
   const [desc, setDesc] = useState<string>(''),
@@ -15,10 +15,10 @@ export default function ProposalDetail() {
     abstain: string}>({ for: '0', against: '0', abstain: '0' }),
   const [status, setStatus] = useState(''),
   const govRead = useMemo(
-    () => (provider ? getGovernor(provider) : null);
+    () => (provider ? getGovernor(provider) : null),
     [provider]),
   const govWrite = useMemo(
-    () => (provider ? getGovernor(provider.getSigner()) : null);
+    () => (provider ? getGovernor(provider.getSigner()) : null),
     [provider]),
   useEffect(() => {
     if (!proposalId || !govRead) return,
@@ -32,13 +32,13 @@ export default function ProposalDetail() {
       const [forW, againstW, abstainW] = await Promise.all([
         govRead,
           .proposalVotes(proposalId),
-          .then((v: any) => v.forVotes.toString());
+          .then((v: any) => v.forVotes.toString()),
         govRead,
           .proposalVotes(proposalId),
-          .then((v: any) => v.againstVotes.toString());
+          .then((v: any) => v.againstVotes.toString()),
         govRead,
           .proposalVotes(proposalId),
-          .then((v: any) => v.abstainVotes.toString());
+          .then((v: any) => v.abstainVotes.toString())
       ]),
       setVotes({ for: forW, against: againstW, abstain: abstainW })}
     load().catch(console.error)}, [proposalId, govRead]),

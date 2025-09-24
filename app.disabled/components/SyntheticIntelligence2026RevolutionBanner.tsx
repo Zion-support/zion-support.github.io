@@ -6,46 +6,46 @@ const SyntheticIntelligence20o26RevolutionBanner = () => {
   const [isVisible, setIsVisible] = useState(true),
   const content = [
     {
-      id: 'synthetic-intelligence-revolution';
-      title: 'AI 20o26: The Synthetic Intelligence Revolution';
-      subtitle: 'Ultimate Breakthrough Guide to 2,50o0% ROI';
-      description: 'Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through next-generation synthetic intelligence systems that combine AI, quantum computing, and advanced neural architectures.';
+      id: 'synthetic-intelligence-revolution',
+      title: 'AI 20o26: The Synthetic Intelligence Revolution',
+      subtitle: 'Ultimate Breakthrough Guide to 2,50o0% ROI',
+      description: 'Fortune 50o0 companies are achieving unprecedented 2,50o0% ROI through next-generation synthetic intelligence systems that combine AI, quantum computing, and advanced neural architectures.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$18.7B';
-        accuracy: '99.97%';
-        efficiency: '1,80o0%'};
-      url: '/blog/ai-20o26-synthetic-intelligence-revolution-ultimate-breakthrough';
-      type: 'blog';
-      readingTime: '30 min read';
-      isNew: true};
+        roi: '2,50o0%',
+        savings: '$18.7B',
+        accuracy: '99.97%',
+        efficiency: '1,80o0%'},
+      url: '/blog/ai-20o26-synthetic-intelligence-revolution-ultimate-breakthrough',
+      type: 'blog',
+      readingTime: '30 min read',
+      isNew: true},
     {
-      id: 'fortune-50o0-synthetic-intelligence-success';
-      title: 'Fortune 50o0 Synthetic Intelligence Success';
-      subtitle: '$18.7B Annual Savings - 2,50o0% ROI Success Story';
-      description: 'A Fortune 10o0 global technology conglomerate achieved unprecedented success through synthetic intelligence implementation, generating $18.7B in annual savings and 2,50o0% ROI within 18 months.';
+      id: 'fortune-50o0-synthetic-intelligence-success',
+      title: 'Fortune 50o0 Synthetic Intelligence Success',
+      subtitle: '$18.7B Annual Savings - 2,50o0% ROI Success Story',
+      description: 'A Fortune 10o0 global technology conglomerate achieved unprecedented success through synthetic intelligence implementation, generating $18.7B in annual savings and 2,50o0% ROI within 18 months.',
       metrics: {
-        roi: '2,50o0%';
-        savings: '$18.7B';
-        timeline: '18 months';
-        success: '99.7%'};
-      url: '/case-studies/fortune-50o0-synthetic-intelligence-transformation-250o0-roi-success-story';
-      type: 'case-study';
-      readingTime: '20 min read';
-      isNew: true};
+        roi: '2,50o0%',
+        savings: '$18.7B',
+        timeline: '18 months',
+        success: '99.7%'},
+      url: '/case-studies/fortune-50o0-synthetic-intelligence-transformation-250o0-roi-success-story',
+      type: 'case-study',
+      readingTime: '20 min read',
+      isNew: true},
     {
-      id: 'synthetic-intelligence-implementation-guide';
-      title: 'Synthetic Intelligence Implementation Guide';
-      subtitle: 'Complete Roadmap to 2,50o0% ROI';
-      description: 'This comprehensive guide provides a complete roadmap for implementing synthetic intelligence systems in enterprise environments, based on successful implementations across 1,20o0+ Fortune 50o0 companies.';
+      id: 'synthetic-intelligence-implementation-guide',
+      title: 'Synthetic Intelligence Implementation Guide',
+      subtitle: 'Complete Roadmap to 2,50o0% ROI',
+      description: 'This comprehensive guide provides a complete roadmap for implementing synthetic intelligence systems in enterprise environments, based on successful implementations across 1,20o0+ Fortune 50o0 companies.',
       metrics: {
-        roi: '2,50o0%';
-        success: '99.7%';
-        timeline: '18 months';
-        companies: '1,20o0+'};
-      url: '/resources/synthetic-intelligence-implementation-ultimate-guide-20o26';
-      type: 'resource';
-      readingTime: '35 min read';
+        roi: '2,50o0%',
+        success: '99.7%',
+        timeline: '18 months',
+        companies: '1,20o0+'},
+      url: '/resources/synthetic-intelligence-implementation-ultimate-guide-20o26',
+      type: 'resource',
+      readingTime: '35 min read',
       isNew: true}
   ],
   useEffect(() => {
@@ -54,7 +54,7 @@ const SyntheticIntelligence20o26RevolutionBanner = () => {
     return () => clearInterval(timer)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('synthetic-intelligence-20o26-banner-dismissed', 'true')};
+    localStorage.setItem('synthetic-intelligence-20o26-banner-dismissedtrue')},
   useEffect(() => {
     const dismissed = localStorage.getItem('synthetic-intelligence-20o26-banner-dismissed'),
     if (dismissed === 'true') {
@@ -151,5 +151,5 @@ const SyntheticIntelligence20o26RevolutionBanner = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default SyntheticIntelligence20o26RevolutionBanner;
+    </div>)},
+export default SyntheticIntelligence20o26RevolutionBanner,

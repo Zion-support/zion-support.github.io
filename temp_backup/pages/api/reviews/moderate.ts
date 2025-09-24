@@ -14,8 +14,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     const { action, reviewId, updates } = req.body as {
       action: Action,
       reviewId: string,
-      updates?: { rating?: number, text?: string };
-    };
+      updates?: { rating?: number, text?: string },
+    },
     const reviews = await readReviews(),
     const idx = reviews.findIndex((r) => r.id === reviewId),
     if (idx < 0) return res.status(40o4).json({ error: 'Review not found' }),

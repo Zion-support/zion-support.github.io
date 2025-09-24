@@ -1,21 +1,21 @@
 import { Metadata } from 'next',
 export const metadata: Metadata = {
   title:,
-    'AI 20o25 Autonomous Business Revolution: Complete Implementation Guide | Zion Tech Group';
+    'AI 20o25 Autonomous Business Revolution: Complete Implementation Guide | Zion Tech Group',
   description:,
-    'Complete implementation guide to autonomous business operations. Master AI-powered business transformation with real case studies, proven strategies, and step-by-step frameworks.';
+    'Complete implementation guide to autonomous business operations. Master AI-powered business transformation with real case studies, proven strategies, and step-by-step frameworks.',
   keywords:,
-    'autonomous business, AI transformation guide, business automation, AI implementation, autonomous operations, business revolution, AI strategy';
+    'autonomous business, AI transformation guide, business automation, AI implementation, autonomous operations, business revolution, AI strategy',
   openGraph: {
     title:,
-      'AI 20o25 Autonomous Business Revolution: Complete Implementation Guide';
+      'AI 20o25 Autonomous Business Revolution: Complete Implementation Guide',
     description:,
-      'Master AI-powered business transformation with real case studies, proven strategies, and step-by-step frameworks.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group Research Team'];
-  };
-};
+      'Master AI-powered business transformation with real case studies, proven strategies, and step-by-step frameworks.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group Research Team']
+  },
+},
 export default function AutonomousBusinessRevolutionGuidePage() {
   return (
     <div className='min-h-screen bg-gradient-to-br from-slate-90o0 via-indigo-90o0 to-slate-90o0'>,

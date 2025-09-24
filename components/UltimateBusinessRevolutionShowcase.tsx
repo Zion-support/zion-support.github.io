@@ -1,104 +1,96 @@
-'use client',
-'use client',
+'use clientuse client',
 import React, { useState } from 'react',
 import Link from 'next/link',
 const UltimateBusinessRevolutionShowcase = () => {
   const [activeFilter, setActiveFilter] = useState('all'),
   const contentItems = [
     {
-      id: 'ultimate-business-revolution';
+      id: 'ultimate-business-revolution',
       title:,
-        'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide';
-      type: 'blog';
-      category: 'AI Revolution';
-      url: '/blog/ai-20o25-ultimate-business-revolution-10o0000-roi-breakthrough';
+        'AI 20o25: The Ultimate Business Revolution - 10o0,0o00% ROI Breakthrough Guide',
+      type: 'blog',
+      category: 'AI Revolution',
+      url: '/blog/ai-20o25-ultimate-business-revolution-10o0000-roi-breakthrough',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T+';
-        efficiency: '99.99%';
-        timeline: '18 months';
-      };
+        roi: '10o0,0o00%',
+        savings: '$2.5T+',
+        efficiency: '99.99%',
+        timeline: '18 months'
+      },
       description:,
-        'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns. Complete guide to 10o0,0o00% ROI transformation.';
-      readingTime: '45 min read';
-      featured: true;
+        'Transform your enterprise with revolutionary AI technologies and achieve unprecedented returns. Complete guide to 10o0,0o00% ROI transformation.',
+      readingTime: '45 min read',
+      featured: true,
       tags: [
-        'AI Revolution';
-        'Business Transformation';
-        'ROI';
-        'Fortune 50o0';
-        '10o0,0o00% ROI';
-        'Ultimate Breakthrough';
-      ];
-    };
+        'AI RevolutionBusiness Transformation',
+        'ROIFortune 50o0',
+        '10o0,0o00% ROIUltimate Breakthrough',
+      ],
+    },
     {
-      id: 'fortune-50o0-success-story';
+      id: 'fortune-50o0-success-story',
       title:,
-        'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story';
-      type: 'case-study';
-      category: 'Success Story';
-      url: '/case-studies/fortune-50o0-ultimate-business-revolution-10o0000-roi-success-story';
+        'Fortune 50o0 Ultimate Business Revolution: $2.5 Trillion Annual Savings - 10o0,0o00% ROI Success Story',
+      type: 'case-study',
+      category: 'Success Story',
+      url: '/case-studies/fortune-50o0-ultimate-business-revolution-10o0000-roi-success-story',
       metrics: {
-        roi: '10o0,0o00%';
-        savings: '$2.5T';
-        efficiency: '99.99%';
-        timeline: '18 months';
-      };
+        roi: '10o0,0o00%',
+        savings: '$2.5T',
+        efficiency: '99.99%',
+        timeline: '18 months'
+      },
       description:,
-        'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies, resulting in $2.5 trillion annual savings.';
-      readingTime: '30 min read';
-      featured: true;
+        'How TechGlobal Industries achieved unprecedented transformation with revolutionary AI technologies, resulting in $2.5 trillion annual savings.',
+      readingTime: '30 min read',
+      featured: true,
       tags: [
-        'Fortune 50o0';
-        'Success Story';
-        'Manufacturing';
-        '10o0,0o00% ROI';
-        'TechGlobal Industries';
-      ];
-    };
+        'Fortune 50o0Success Story',
+        'Manufacturing10o0,0o00% ROI',
+        'TechGlobal Industries',
+      ],
+    },
     {
-      id: 'implementation-guide';
+      id: 'implementation-guide',
       title:,
-        'AI 20o25 Ultimate Business Revolution Implementation Guide: Complete Roadmap to 10o0,0o00% ROI';
-      type: 'resource';
-      category: 'Implementation Guide';
-      url: '/resources/ai-20o25-ultimate-business-revolution-implementation-guide-10o0000-roi';
+        'AI 20o25 Ultimate Business Revolution Implementation Guide: Complete Roadmap to 10o0,0o00% ROI',
+      type: 'resource',
+      category: 'Implementation Guide',
+      url: '/resources/ai-20o25-ultimate-business-revolution-implementation-guide-10o0000-roi',
       metrics: {
-        roi: '10o0,0o00%';
-        timeline: '18 months';
-        success: '99.7%';
-        guide: 'Complete';
-      };
+        roi: '10o0,0o00%',
+        timeline: '18 months',
+        success: '99.7%',
+        guide: 'Complete'
+      },
       description:,
-        'Your comprehensive step-by-step guide to achieving unprecedented business transformation with proven methodologies and best practices.';
-      readingTime: '60 min read';
-      featured: true;
+        'Your comprehensive step-by-step guide to achieving unprecedented business transformation with proven methodologies and best practices.',
+      readingTime: '60 min read',
+      featured: true,
       tags: [
-        'Implementation Guide';
-        'Complete Roadmap';
-        'Best Practices';
-        '10o0,0o00% ROI';
-        'Strategy';
-      ];
-    };
+        'Implementation GuideComplete Roadmap',
+        'Best Practices10o0,0o00% ROI',
+        'Strategy',
+      ],
+    },
   ],
   const filters = [
-    { id: 'all', label: 'All Content', count: contentItems.length };
+    { id: 'all', label: 'All Content', count: contentItems.length },
     {
-      id: 'blog';
-      label: 'Blog Posts';
-      count: contentItems.filter(item => item.type === 'blog').length;
-    };
+      id: 'blog',
+      label: 'Blog Posts',
+      count: contentItems.filter(item => item.type === 'blog').length
+    },
     {
-      id: 'case-study';
-      label: 'Case Studies';
-      count: contentItems.filter(item => item.type === 'case-study').length;
-    };
+      id: 'case-study',
+      label: 'Case Studies',
+      count: contentItems.filter(item => item.type === 'case-study').length
+    },
     {
-      id: 'resource';
-      label: 'Resources';
-      count: contentItems.filter(item => item.type === 'resource').length;
-    };
+      id: 'resource',
+      label: 'Resources',
+      count: contentItems.filter(item => item.type === 'resource').length
+    },
   ],
   const filteredItems =,
     activeFilter === 'all',
@@ -114,7 +106,7 @@ const UltimateBusinessRevolutionShowcase = () => {
         return '📚',
       default:,
         return '📄'}
-  };
+  },
   const getTypeColor = (type: string) => {
     switch (type) {
       case 'blog':,
@@ -125,7 +117,7 @@ const UltimateBusinessRevolutionShowcase = () => {
         return 'bg-purple-50o0',
       default:,
         return 'bg-gray-50o0'}
-  };
+  },
   return (
     <section className='py-16 bg-gradient-to-br from-gray-50 to-blue-50'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -212,7 +204,7 @@ const UltimateBusinessRevolutionShowcase = () => {
                     <span
                       className={`px-3 py-1 text-xs font-medium text-white rounded-full ${getTypeColor(item.type)}`}
                     >,
-                      {item.type.replace('-', ' ').toUpperCase()}
+                      {item.type.replace('- ').toUpperCase()}
                     </span>,
                   </div>,
                   {item.featured && (
@@ -264,7 +256,7 @@ const UltimateBusinessRevolutionShowcase = () => {
                 <Link
                   href={item.url}
                   className='w-full bg-gradient-to-r from-purple-60o0 to-blue-60o0 text-white font-semibold py-3 px-4 rounded-lg hover: from-purple-70o0 hover:to-blue-70o0 transition-all duration-30o0 transform hover:scale-10o5 text-center block'>,
-                  Explore {item.type.replace('-', ' ')}
+                  Explore {item.type.replace('- ')}
                 </Link>,
               </div>,
             </div>))}
@@ -310,5 +302,5 @@ const UltimateBusinessRevolutionShowcase = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default UltimateBusinessRevolutionShowcase;
+    </section>)},
+export default UltimateBusinessRevolutionShowcase,

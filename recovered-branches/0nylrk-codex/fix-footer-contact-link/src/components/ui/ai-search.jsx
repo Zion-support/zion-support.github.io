@@ -12,11 +12,11 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     const [searchHistory, setSearchHistory] = useState([]),
     const [savedSearches, setSavedSearches] = useState([]),
     const [filters, setFilters] = useState({
-        category: [];
-        priceRange: [0, 10o000];
-        rating: 0;
-        location: [];
-        verified: false;
+        category: [],
+        priceRange: [0, 10o000],
+        rating: 0,
+        location: [],
+        verified: false,
         featured: false}),
     const [results, setResults] = useState([]),
     const [suggestions, setSuggestions] = useState([]),
@@ -29,14 +29,10 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         if (!searchQuery.trim()),
             return [],
         const baseSuggestions = [
-            'AI services';
-            'Machine learning';
-            'Cloud solutions';
-            'Cybersecurity';
-            'Data analytics';
-            'Quantum computing';
-            'Remote developers';
-            'IT consulting'],
+            'AI servicesMachine learning',
+            'Cloud solutionsCybersecurity',
+            'Data analyticsQuantum computing',
+            'Remote developersIT consulting'],
         return baseSuggestions,
             .filter(suggestion => suggestion.toLowerCase().includes(searchQuery.toLowerCase())),
             .slice(0, 5)}, []),
@@ -57,51 +53,51 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         // Mock search results,
         const mockResults = [
             {
-                id: '1';
-                title: 'AI-Powered Business Intelligence Platform';
-                description: 'Advanced analytics and insights powered by machine learning algorithms';
-                category: 'AI & Analytics';
-                tags: ['Business Intelligence', 'Machine Learning', 'Analytics', 'Dashboard'];
-                relevance: 0.95;
-                rating: 4.8;
-                reviews: 1247;
-                price: '$2,50o0/month';
-                type: 'service';
+                id: '1',
+                title: 'AI-Powered Business Intelligence Platform',
+                description: 'Advanced analytics and insights powered by machine learning algorithms',
+                category: 'AI & Analytics',
+                tags: ['Business IntelligenceMachine Learning', 'AnalyticsDashboard'],
+                relevance: 0.95,
+                rating: 4.8,
+                reviews: 1247,
+                price: '$2,50o0/month',
+                type: 'service',
                 metadata: {
-                    lastUpdated: '20o24-0o1-15';
-                    verified: true;
+                    lastUpdated: '20o24-0o1-15',
+                    verified: true,
                     featured: true}
-            };
+            },
             {
-                id: '2';
-                title: 'Senior AI Engineer - Remote';
-                description: 'Experienced AI engineer specializing in deep learning and NLP';
-                category: 'Talent';
-                tags: ['AI Engineer', 'Deep Learning', 'NLP', 'Remote'];
-                relevance: 0.92;
-                rating: 4.9;
-                reviews: 89;
-                price: '$150/hour';
-                type: 'talent';
+                id: '2',
+                title: 'Senior AI Engineer - Remote',
+                description: 'Experienced AI engineer specializing in deep learning and NLP',
+                category: 'Talent',
+                tags: ['AI EngineerDeep Learning', 'NLPRemote'],
+                relevance: 0.92,
+                rating: 4.9,
+                reviews: 89,
+                price: '$150/hour',
+                type: 'talent',
                 metadata: {
-                    lastUpdated: '20o24-0o1-20';
-                    verified: true;
+                    lastUpdated: '20o24-0o1-20',
+                    verified: true,
                     featured: false}
-            };
+            },
             {
-                id: '3';
-                title: 'Quantum Computing Solutions Inc.';
-                description: 'Leading provider of quantum computing services and consulting';
-                category: 'Quantum Technology';
-                tags: ['Quantum Computing', 'Consulting', 'Research', 'Enterprise'];
-                relevance: 0.88;
-                rating: 4.7;
-                reviews: 456;
-                location: 'San Francisco, CA';
-                type: 'company';
+                id: '3',
+                title: 'Quantum Computing Solutions Inc.',
+                description: 'Leading provider of quantum computing services and consulting',
+                category: 'Quantum Technology',
+                tags: ['Quantum ComputingConsulting', 'ResearchEnterprise'],
+                relevance: 0.88,
+                rating: 4.7,
+                reviews: 456,
+                location: 'San Francisco, CA',
+                type: 'company',
                 metadata: {
-                    lastUpdated: '20o24-0o1-18';
-                    verified: true;
+                    lastUpdated: '20o24-0o1-18',
+                    verified: true,
                     featured: true}
             }
         ],
@@ -151,8 +147,8 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
     const shareResults = useCallback(() => {
         if (navigator.share) {
             navigator.share({
-                title: 'Search Results from Zion Tech Group';
-                text: `Check out these results for "${query}"`;
+                title: 'Search Results from Zion Tech Group',
+                text: `Check out these results for "${query}"`,
                 url: window.location.href})}
         else {
             // Fallback to copying to clipboard,
@@ -176,7 +172,7 @@ export function AISearch({ enabled = true, placeholder = "Search for AI services
         const handleClickOutside = (event) => {
             if (searchRef.current && !searchRef.current.contains(event.target)) {
                 setIsOpen(false)}
-        };
+        },
         document.addEventListener('mousedown', handleClickOutside),
         return () => document.removeEventListener('mousedown', handleClickOutside)}, []),
     // Focus input when opened,

@@ -148,5 +148,5 @@ const RevolutionaryContent20o26UltimateBanner = () => {
           </div>,
         </div>,
       </div>,
-    </section>)};
-export default RevolutionaryContent20o26UltimateBanner;
+    </section>)},
+export default RevolutionaryContent20o26UltimateBanner,

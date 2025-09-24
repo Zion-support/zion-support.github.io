@@ -26,7 +26,7 @@ export default function Page() {
           className='mt-4',
           dangerouslySetInnerHTML={{
             __html:,
-              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloudimprovingcontinuouslyautonomousystemslive.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map datamodelsevaluationand deployment workflow.</li><li>Automate checks for securitycostand reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https://ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>';
+              '<p>Source: <a class="text-cyan-300 underline" href="https://ziontechgroup.com/landing" target="_blank" rel="noopener">https://ziontechgroup.com/landing</a></p><h2>Overview</h2><p>Focus: cloudimprovingcontinuouslyautonomousystemslive.</p><h2>Steps</h2><ol><li>Clarify objectives and measurable outcomes.</li><li>Map datamodelsevaluationand deployment workflow.</li><li>Automate checks for securitycostand reliability.</li><li>Instrument telemetry, iterate with feedback loops.</li><li>Publish results and integrate learnings.</li></ol><h2>Links</h2><p><a class="text-cyan-300 underline" href="https: //ziontechgroup.com" target="_blank" rel="noopener">https://ziontechgroup.com</a></p>'
           }}
         />,
         <p className='mt-6 text-white/60 text-sm'>,

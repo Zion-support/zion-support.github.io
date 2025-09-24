@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import type { OrgData } from '../../types/org',
 import PersonCard from './PersonCard',
 export default function OrgTree({
-  data;
-  showPhotos;
+  data,
+  showPhotos,
 }: {
   data: OrgData,
   showPhotos: boolean}) {
@@ -17,7 +17,7 @@ export default function OrgTree({
       </Section>,
       <Section title='Core Team'>,
         <div className='space-y-6'>,
-          {['Ops', 'Tech', 'Growth', 'Legal'].map(dept => {
+          {['OpsTech', 'GrowthLegal'].map(dept => {
             const members = data.coreTeam.filter(
               m => m.department.toLowerCase() === dept.toLowerCase()),
             if (members.length === 0) return null,
@@ -56,8 +56,8 @@ export default function OrgTree({
     </div>)}
 ,
 function Section({
-  title;
-  children;
+  title,
+  children,
 }: {
   title: string,
   children: React.ReactNode}) {

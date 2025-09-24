@@ -1,40 +1,40 @@
 import { Metadata } from 'next',
 import Link from 'next/link',
 import {
-  Brain, Zap, Target, BarChart3, Users, TrendingUp;
-  MessageSquare, Mail, Phone, MapPin, ArrowRight;
-  Star, CheckCircle, Rocket, Globe, Shield, Cpu;
+  Brain, Zap, Target, BarChart3, Users, TrendingUp,
+  MessageSquare, Mail, Phone, MapPin, ArrowRight,
+  Star, CheckCircle, Rocket, Globe, Shield, Cpu,
   FileText, Image, Video, Music, Palette, Type} from 'lucide-react',
 export const metadata: Metadata ={
-  title: 'AI Content Factory Pro | Zion Tech Group';
-  description: 'Professional AI-powered content creation platform that generates high-quality content across all media types.';
-  keywords: 'AI content creation, content factory, AI writing, AI design, AI video, content automation';
+  title: 'AI Content Factory Pro | Zion Tech Group',
+  description: 'Professional AI-powered content creation platform that generates high-quality content across all media types.',
+  keywords: 'AI content creation, content factory, AI writing, AI design, AI video, content automation',
   openGraph: {
-    title: 'AI Content Factory Pro | Zion Tech Group';
-    description: 'Professional AI-powered content creation platform that generates high-quality content across all media types.';
-    url: 'https://ziontechgroup.com/ai-content-factory-pro';
-    siteName: 'Zion Tech Group';
+    title: 'AI Content Factory Pro | Zion Tech Group',
+    description: 'Professional AI-powered content creation platform that generates high-quality content across all media types.',
+    url: 'https://ziontechgroup.com/ai-content-factory-pro',
+    siteName: 'Zion Tech Group',
     images: [
       {
-        url: 'https://ziontechgroup.com/og-image-ai-content-factory-pro.jpg';
-        width: 120o0;
-        height: 630;
-        alt: 'AI Content Factory Pro'};
-    ];
-    locale: 'en_US';
-    type: 'website'};
+        url: 'https://ziontechgroup.com/og-image-ai-content-factory-pro.jpg',
+        width: 120o0,
+        height: 630,
+        alt: 'AI Content Factory Pro'},
+    ],
+    locale: 'en_US',
+    type: 'website'},
   twitter: {
-    card: 'summary_large_image';
-    title: 'AI Content Factory Pro | Zion Tech Group';
-    description: 'Professional AI-powered content creation platform that generates high-quality content across all media types.';
-    images: ['https://ziontechgroup.com/og-image-ai-content-factory-pro.jpg']};
+    card: 'summary_large_image',
+    title: 'AI Content Factory Pro | Zion Tech Group',
+    description: 'Professional AI-powered content creation platform that generates high-quality content across all media types.',
+    images: ['https://ziontechgroup.com/og-image-ai-content-factory-pro.jpg']},
   alternates: {
-    canonical: 'https://ziontechgroup.com/ai-content-factory-pro'}};
+    canonical: 'https://ziontechgroup.com/ai-content-factory-pro'}},
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 export default function AIContentFactoryPro() {
   return (
     <div className="min-h-screen bg-black text-white">,
@@ -78,7 +78,7 @@ export default function AIContentFactoryPro() {
               Revolutionary Content Creation,
             </h2>,
             <p className="text-xl text-gray-40o0 max-w-3xl mx-auto">,
-              Our AI content factory handles every aspect of content creation from ideation to production;
+              Our AI content factory handles every aspect of content creation from ideation to production,
               continuously learning and optimizing for maximum engagement and quality.,
             </p>,
           </div>,

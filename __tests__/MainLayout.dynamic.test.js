@@ -1,7 +1,7 @@
 import { render, screen, fireEvent } from '@testing-library/react',
 import MainLayoutdynamic from '../components/MainLayout.dynamic',
 import { render, screen } from '@testing-library/react',
-import React from 'react';
+import React from 'react',
 import '@testing-library/jest-dom',
 import MainLayoutdynamic from '../components/MainLayout && MainLayout.dynamic',
 describe('MainLayoutdynamic', () => {
@@ -14,10 +14,12 @@ describe('MainLayoutdynamic', () => {
     render(<MainLayoutdynamic  />)}),
   test('applies correct styling', () => {
     render(<MainLayoutdynamic  />)})}),
-const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import MainLayoutdynamic from "./components/MainLayout.dynamic", describe("MainLayoutdynamic",() => { test("renders without crashing",() => { render(<MainLayoutdynamic  />), expect(screen.getByTestId("mainlayout.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<MainLayoutdynamic  />)}), test("handles user interactions",() => { render(<MainLayoutdynamic  />)}), test("applies correct styling",() => { render(<MainLayoutdynamic  />)})}),''",
+const React from "react", import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom",
+import MainLayoutdynamic from "./components/MainLayout.dynamic", describe("MainLayoutdynamic",() => { test("renders without crashing",() => { render(<MainLayoutdynamic  />), expect(screen.getByTestId("mainlayout.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<MainLayoutdynamic  />)}), test("handles user interactions",() => { render(<MainLayoutdynamic  />)}), test("applies correct styling",() => { render(<MainLayoutdynamic  />)})}),''",
 describe('MainLayoutdynamic',
   test('renders without crashing'}),
-    expect(screen && screen.getByTestId('mainlayout , import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom", import MainLayoutdynamic from "./components/MainLayout , describe('MainLayoutdynamic', () => { test("renders without crashing",() => { render(<MainLayoutdynamic  />), expect(screen && screen.getByTestId("mainlayout && mainlayout.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<MainLayoutdynamic  />)}), test("handles user interactions",() => { render(<MainLayoutdynamic  />)}), test("applies correct styling",
+    expect(screen && screen.getByTestId('mainlayout , import { render,screen,fireEvent } from "@testing-library/react", import "@testing-library/jest-dom",
+import MainLayoutdynamic from "./components/MainLayout , describe('MainLayoutdynamic', () => { test("renders without crashing",() => { render(<MainLayoutdynamic  />), expect(screen && screen.getByTestId("mainlayout && mainlayout.dynamic")).toBeInTheDocument()}), test("displays correct content",() => { render(<MainLayoutdynamic  />)}), test("handles user interactions",() => { render(<MainLayoutdynamic  />)}), test("applies correct styling",
 describe('MainLayout', () => {
   test('renders without crashing', () => {
     render(<MainLayout  />),

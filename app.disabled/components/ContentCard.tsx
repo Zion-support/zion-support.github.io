@@ -10,14 +10,14 @@ interface ContentCardProps {
   tags?: string[]}
 ,
 export default function ContentCard({
-  title;
-  description;
-  href;
-  category;
-  date;
-  featured = false;
-  image;
-  tags = [];
+  title,
+  description,
+  href,
+  category,
+  date,
+  featured = false,
+  image,
+  tags = [],
 }: ContentCardProps) {
   return (
     <div

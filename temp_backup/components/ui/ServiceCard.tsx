@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Star, ArrowRight, Phone, Mail, MapPin } from 'lucide-react',
 import Button from './Button',
@@ -33,13 +33,13 @@ interface ServiceCardProps {
       mobile: string,
       email: string,
       address: string,
-      website: string};
-  };
+      website: string},
+  },
   showContactInfo?: boolean}
 ,
 const ServiceCard: React.FC<ServiceCardProps> = ({
-  service;
-  showContactInfo = false;
+  service,
+  showContactInfo = false
 }) => {
   return (
     <EnhancedFuturisticCard
@@ -147,5 +147,5 @@ const ServiceCard: React.FC<ServiceCardProps> = ({
             </span>,
           </div>)}
       </div>,
-    </EnhancedFuturisticCard>)};
-export default ServiceCard;
+    </EnhancedFuturisticCard>)},
+export default ServiceCard,

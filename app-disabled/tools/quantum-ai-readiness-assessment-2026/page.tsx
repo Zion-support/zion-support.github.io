@@ -1,4 +1,4 @@
-export const metadata = { title: 'Quantum AI Readiness Assessment 2026' };
+export const metadata = { title: 'Quantum AI Readiness Assessment 2026' },
 export default function Page() {
   return (
     <main className='max-w-4xl mx-auto p-8'>,

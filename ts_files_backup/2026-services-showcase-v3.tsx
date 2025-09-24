@@ -1,27 +1,27 @@
 'use client',
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 BrainShieldZapGlobePhoneMail,
 export default function ServicesShowcase2026V3() {
   const services = [
     {
-      id: 'ai-automation-2026';
-      name: 'AI Automation 2026';
-      description: 'Next-generation AI automation with quantum-enhanced processing and neural interfaces.';
-      icon: Brain;
-      features: ['Quantum AI 'Processing', 'Neural Interface 'Integration', 'Predictive Automation']};
+      id: 'ai-automation-2026',
+      name: 'AI Automation 2026',
+      description: 'Next-generation AI automation with quantum-enhanced processing and neural interfaces.',
+      icon: Brain,
+      features: ['Quantum AI 'ProcessingNeural Interface 'Integration', 'Predictive Automation']},
     {
-      id: 'quantum-security-2026';
-      name: 'Quantum Security 2026';
-      description: 'Revolutionary quantum encryption and AI-powered threat detection systems.';
-      icon: Shield;
-      features: ['Quantum 'Encryption', 'AI Threat 'Detection', 'Zero Trust Architecture']};
+      id: 'quantum-security-2026',
+      name: 'Quantum Security 2026',
+      description: 'Revolutionary quantum encryption and AI-powered threat detection systems.',
+      icon: Shield,
+      features: ['Quantum 'EncryptionAI Threat 'Detection', 'Zero Trust Architecture']},
     {
-      id: 'advanced-infrastructure-2026';
-      name: 'Advanced Infrastructure 2026';
-      description: 'Cutting-edge cloud infrastructure with AI optimization and autonomous management.';
-      icon: Zap;
-      features: ['AI 'Optimization', 'Autonomous 'Scaling', 'Real-time Monitoring']}
+      id: 'advanced-infrastructure-2026',
+      name: 'Advanced Infrastructure 2026',
+      description: 'Cutting-edge cloud infrastructure with AI optimization and autonomous management.',
+      icon: Zap,
+      features: ['AI 'OptimizationAutonomous 'Scaling', 'Real-time Monitoring']}
   ],
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-900 via-purple-900 to-slate-900 text-white">,

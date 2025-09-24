@@ -29,7 +29,7 @@ export function QuoteWizard({ category }) {
     useEffect(() => {
         if (delayedError) {
             toast({
-                title: 'Unable to load services';
+                title: 'Unable to load services',
                 variant: 'destructive'})}
     }, [delayedError, toast]),
     // Use isLoading from SWR for a more direct loading state,
@@ -40,7 +40,7 @@ export function QuoteWizard({ category }) {
         return data.find(item => item.id === selectedItemId)}, [data, selectedItemId]),
     const handleSelect = (id) => {
         setSelectedItemId(id),
-        setStep(2)};
+        setStep(2)},
     const handleContinue = () => {
         if (!selectedItemId) {
             setSelectionError(`Please choose a ${category === 'services',
@@ -50,12 +50,12 @@ export function QuoteWizard({ category }) {
                     : 'item'} to continue.`),
             return}
         setSelectionError(''),
-        setStep(2)};
+        setStep(2)},
     const handleSubmit = async () => {
         if (!selectedItemId),
             return,
         let endpoint = '/api/quotes',
-        const payload ={ user_message: message };
+        const payload ={ user_message: message },
         switch (category) {
             case 'services':,
                 endpoint = '/api/services/quotes',
@@ -73,10 +73,10 @@ export function QuoteWizard({ category }) {
                 payload.item_id = selectedItemId,
                 payload.category = category}
         await fetch(endpoint, {
-            method: 'POST';
-            headers: { 'Content-Type': 'application/json' };
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(payload)}),
-        setStep(3)};
+        setStep(3)},
     if (step === 1) {
         return (<div className="space-y-6">,
         <StepIndicator step={step} />,

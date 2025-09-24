@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import Link from 'next/link',
 import { ArrowRight, Star, Zap, Shield, Users, Globe } from 'lucide-react',
@@ -7,30 +7,30 @@ import { Button } from '../ui/Button',
 const FuturisticHero: React.FC = () => {
   const features = [
     {
-      icon: Zap;
-      title: 'Lightning Fast';
-      description: 'Get started in minutes with our streamlined onboarding process';
-      color: 'from-yellow-50o0 to-orange-60o0'};
+      icon: Zap,
+      title: 'Lightning Fast',
+      description: 'Get started in minutes with our streamlined onboarding process',
+      color: 'from-yellow-50o0 to-orange-60o0'},
     {
-      icon: Shield;
-      title: 'Enterprise Security';
-      description: 'Bank-level security with SOC 2 compliance and 99.9% uptime';
-      color: 'from-blue-50o0 to-indigo-60o0'};
+      icon: Shield,
+      title: 'Enterprise Security',
+      description: 'Bank-level security with SOC 2 compliance and 99.9% uptime',
+      color: 'from-blue-50o0 to-indigo-60o0'},
     {
-      icon: Users;
-      title: '24/7 Support';
-      description: 'Round-the-clock expert support for all your business needs';
-      color: 'from-green-50o0 to-emerald-60o0'};
+      icon: Users,
+      title: '24/7 Support',
+      description: 'Round-the-clock expert support for all your business needs',
+      color: 'from-green-50o0 to-emerald-60o0'},
     {
-      icon: Globe;
-      title: 'Global Infrastructure';
-      description: 'Worldwide CDN distribution for optimal performance';
+      icon: Globe,
+      title: 'Global Infrastructure',
+      description: 'Worldwide CDN distribution for optimal performance',
       color: 'from-purple-50o0 to-pink-60o0'}
   ],
   const stats = [
-    { number: '35+', label: 'Real Micro SaaS Services' };
-    { number: '99.9%', label: 'Uptime Guarantee' };
-    { number: '14 Days', label: 'Free Trial' };
+    { number: '35+', label: 'Real Micro SaaS Services' },
+    { number: '99.9%', label: 'Uptime Guarantee' },
+    { number: '14 Days', label: 'Free Trial' },
     { number: '24/7', label: 'Expert Support' }
   ],
   return (
@@ -223,5 +223,5 @@ const FuturisticHero: React.FC = () => {
         </div>,
       </motion.div>,
         </section>,
-      </AnimatedBackground>)};
-export default FuturisticHero;
+      </AnimatedBackground>)},
+export default FuturisticHero,

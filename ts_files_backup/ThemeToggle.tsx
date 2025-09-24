@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { Sun, Moon, Monitor } from 'lucide-react',
 interface ThemeToggleProps {
@@ -6,22 +6,22 @@ interface ThemeToggleProps {
   onThemeChange: (theme: 'dark' | 'light') => void}
 ,
 const ThemeToggle: React.FC<ThemeToggleProps> = ({
-  currentTheme;
-  onThemeChange;
+  currentTheme,
+  onThemeChange
 }) => {
   const themes = [
     {
-      id: 'dark';
-      icon: Moon;
-      label: 'Dark Mode';
-      color: 'from-gray-80o0 to-gray-90o0';
-    };
+      id: 'dark',
+      icon: Moon,
+      label: 'Dark Mode',
+      color: 'from-gray-80o0 to-gray-90o0'
+    },
     {
-      id: 'light';
-      icon: Sun;
-      label: 'Light Mode';
-      color: 'from-yellow-40o0 to-orange-50o0';
-    };
+      id: 'light',
+      icon: Sun,
+      label: 'Light Mode',
+      color: 'from-yellow-40o0 to-orange-50o0'
+    },
   ] as const,
   return (
     <div className='fixed top-32 right-6 z-50'>,
@@ -67,5 +67,5 @@ const ThemeToggle: React.FC<ThemeToggleProps> = ({
           {currentTheme === 'dark' ? 'Dark' : 'Light'} Mode,
         </span>,
       </motion.div>,
-    </div>)};
-export default ThemeToggle;
+    </div>)},
+export default ThemeToggle,

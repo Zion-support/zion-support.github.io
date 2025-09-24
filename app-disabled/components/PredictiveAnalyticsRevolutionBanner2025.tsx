@@ -7,37 +7,37 @@ const PredictiveAnalyticsRevolutionBanner20o25 = () => {
   const [currentSlide, setCurrentSlide] = useState(0),
   const content = [
     {
-      title: "AI 20o25: The Predictive Analytics Revolution";
-      subtitle: "Ultimate Guide to 750% ROI";
-      description: "Discover how Fortune 50o0 companies are achieving 750% ROI with AI-powered predictive analytics. Complete implementation guide with real-world case studies.";
+      title: "AI 20o25: The Predictive Analytics Revolution",
+      subtitle: "Ultimate Guide to 750% ROI",
+      description: "Discover how Fortune 50o0 companies are achieving 750% ROI with AI-powered predictive analytics. Complete implementation guide with real-world case studies.",
       metrics: {
-        roi: "750%";
-        savings: "$4.2M";
-        accuracy: "94%";
-        success: "89%"};
-      cta: "Read Ultimate Guide";
-      link: "/blog/ai-20o25-predictive-analytics-revolution-ultimate-guide"};
+        roi: "750%",
+        savings: "$4.2M",
+        accuracy: "94%",
+        success: "89%"},
+      cta: "Read Ultimate Guide",
+      link: "/blog/ai-20o25-predictive-analytics-revolution-ultimate-guide"},
     {
-      title: "Fortune 50o0 Predictive Analytics Success";
-      subtitle: "$4.2B Annual Savings with 750% ROI";
-      description: "How a Fortune 50o0 manufacturing company achieved 750% ROI and $4.2B annual savings through AI-powered predictive analytics implementation.";
+      title: "Fortune 50o0 Predictive Analytics Success",
+      subtitle: "$4.2B Annual Savings with 750% ROI",
+      description: "How a Fortune 50o0 manufacturing company achieved 750% ROI and $4.2B annual savings through AI-powered predictive analytics implementation.",
       metrics: {
-        roi: "750%";
-        savings: "$4.2B";
-        accuracy: "96%";
-        success: "10o0%"};
-      cta: "View Case Study";
-      link: "/case-studies/ai-20o25-predictive-analytics-fortune-50o0-success-750-roi"};
+        roi: "750%",
+        savings: "$4.2B",
+        accuracy: "96%",
+        success: "10o0%"},
+      cta: "View Case Study",
+      link: "/case-studies/ai-20o25-predictive-analytics-fortune-50o0-success-750-roi"},
     {
-      title: "Predictive Analytics Implementation Master Guide";
-      subtitle: "From Strategy to 750% ROI";
-      description: "Complete implementation guide for AI-powered predictive analytics. Achieve 750% ROI with proven strategies, frameworks, and best practices from Fortune 50o0 companies.";
+      title: "Predictive Analytics Implementation Master Guide",
+      subtitle: "From Strategy to 750% ROI",
+      description: "Complete implementation guide for AI-powered predictive analytics. Achieve 750% ROI with proven strategies, frameworks, and best practices from Fortune 50o0 companies.",
       metrics: {
-        roi: "750%";
-        savings: "$4.2M";
-        accuracy: "94%";
-        success: "89%"};
-      cta: "Get Master Guide";
+        roi: "750%",
+        savings: "$4.2M",
+        accuracy: "94%",
+        success: "89%"},
+      cta: "Get Master Guide",
       link: "/resources/ai-20o25-predictive-analytics-implementation-master-guide"}
   ],
   useEffect(() => {
@@ -50,7 +50,7 @@ const PredictiveAnalyticsRevolutionBanner20o25 = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('predictive-analytics-banner-dismissed', 'true')};
+    localStorage.setItem('predictive-analytics-banner-dismissedtrue')},
   if (!isVisible) return null,
   const currentContent = content[currentSlide],
   return (
@@ -160,5 +160,5 @@ const PredictiveAnalyticsRevolutionBanner20o25 = () => {
         className="absolute top-4 right-4 text-white/70 hover: text-white transition-colors">,
         <X className="w-6 h-6"  />,
       </button>,
-    </div>)};
-export default PredictiveAnalyticsRevolutionBanner20o25;
+    </div>)},
+export default PredictiveAnalyticsRevolutionBanner20o25,

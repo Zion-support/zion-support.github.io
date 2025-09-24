@@ -2,12 +2,12 @@ export const generateId = (prefix: string = 'id'): string => {
   return `${prefix}-${Math.random().toString(36).substr(2, 9)}`}
 export const announceToScreenReader = (message: string): void => {
 export const generateId = (prefix: string = 'id'): string => {
-  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`};
+  return `${prefix}-${Math.random().toString(36).substr(2, 9)}`},
 export const announceToScreenReader = (message: string): void => {
   if (typeof window === 'undefined') return,
   const announcement = document.createElement('div'),
-  announcement.setAttribute('aria-live', 'polite'),
-  announcement.setAttribute('aria-atomic', 'true'),
+  announcement.setAttribute('aria-livepolite'),
+  announcement.setAttribute('aria-atomictrue'),
   announcement.className = 'sr-only',
   announcement.textContent = message,
   document.body.appendChild(announcement),
@@ -33,8 +33,8 @@ export const announceToScreenReader = (message: string): void => {
 if (return) {
   $2}
   const announcement = document.create_element ('div'),
-  announcement.set_attribute ('aria - live', 'polite'),
-  announcement.set_attribute ('aria - atomic', 'true'),
+  announcement.set_attribute ('aria - livepolite'),
+  announcement.set_attribute ('aria - atomictrue'),
   announcement.class_name = 'sr - only',
   announcement.text_content = message,
   document.body.append_child (announcement),
@@ -89,7 +89,7 @@ export const getContrastRatio = (color1: string, color2: string): number => {
 export const isHighContrast = (color1: string, color2: string): boolean => {
   return getContrastRatio(color1, color2) >= 4.5}
 export const validateAriaLabel = (element: HTMLElement): boolean => {
-};
+},
   const hasAriaLabel = element.hasAttribute('aria-label'),
   const hasAriaLabelledBy = element.hasAttribute('aria-labelledby'),
   const hasVisibleText = element.textContent?.trim().length > 0,
@@ -131,23 +131,17 @@ export const validateAriaLabel = (element: HTMLElement): boolean => {
 ,
 export const getFocusableElements = (container: HTMLElement): HTMLElement[] => {
   const focusable_selectors = [
-    'button:not ([disabled])';
-    'input:not ([disabled])';
-    'select:not ([disabled])';
-    'textarea:not ([disabled])';
-    'a[href]';
-    '[tabindex]:not ([tabindex="-1"])'].join (', '),
+    'button:not ([disabled])input:not ([disabled])',
+    'select:not ([disabled])textarea:not ([disabled])',
+    'a[href][tabindex]:not ([tabindex="-1"])'].join (', '),
   return Array.from (container.querySelectorAll (focusable_selectors)) as HTMLElement[]}
 ,
 export const isElementInViewport = (element: HTMLElement): boolean => {
   const rect = element.getBoundingClientRect (),
-    'button:not([disabled])';
-    'input:not([disabled])';
-    'select:not([disabled])';
-    'textarea:not([disabled])';
-    'a[href]';
-    '[tabindex]:not([tabindex="-1"])'].join(', '),
-  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[]};
+    'button: not([disabled])input:not([disabled])',
+    'select:not([disabled])textarea:not([disabled])',
+    'a[href][tabindex]:not([tabindex="-1"])'].join(', '),
+  return Array.from(container.querySelectorAll(focusableSelectors)) as HTMLElement[]},
 export const isElementInViewport = (element: HTMLElement): boolean => {
   const rect = element.getBoundingClientRect(),
   return (
@@ -158,9 +152,9 @@ export const isElementInViewport = (element: HTMLElement): boolean => {
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
   element.scrollIntoView({ behavior, block: 'start' })}
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
-};
+},
 export const scrollToElement = (element: HTMLElement, behavior: ScrollBehavior = 'smooth'): void => {
-  element.scrollIntoView({ behavior, block: 'start' })};
+  element.scrollIntoView({ behavior, block: 'start' })},
 export const createSkipLink = (targetId: string, text: string = 'Skip to main content'): HTMLElement => {
   const skipLink = document.createElement('a'),
   skipLink.href = `#${targetId}`,

@@ -5,32 +5,32 @@ const InteractiveTechDemo20o27 = () => {
   const [activeDemosetActiveDemo] = useState(0),
   const demos = [
     {
-      id: 0;
-      title: "Neural Interface Demo";
-      description: "Experience direct brain-computer interaction";
-      features: ["Real-time thought processing"Emotion recognition"Memory enhancement"];
-      icon: "🧠";
-      color: "from-purple-50o0 to-pink-50o0"};
+      id: 0,
+      title: "Neural Interface Demo",
+      description: "Experience direct brain-computer interaction",
+      features: ["Real-time thought processing"Emotion recognition"Memory enhancement"],
+      icon: "🧠",
+      color: "from-purple-50o0 to-pink-50o0"},
     {
-      id: 1;
-      title: "Quantum AI Simulation";
-      description: "Witness quantum computing power in action";
-      features: ["Exponential speed increase"Parallel processing"Quantum entanglement"];
-      icon: "⚛️";
-      color: "from-blue-50o0 to-cyan-50o0"};
+      id: 1,
+      title: "Quantum AI Simulation",
+      description: "Witness quantum computing power in action",
+      features: ["Exponential speed increase"Parallel processing"Quantum entanglement"],
+      icon: "⚛️",
+      color: "from-blue-50o0 to-cyan-50o0"},
     {
-      id: 2;
-      title: "Autonomous Systems";
-      description: "See self-managing AI systems at work";
-      features: ["Self-healing networks"Adaptive learning"Predictive maintenance"];
-      icon: "🤖";
-      color: "from-green-50o0 to-emerald-50o0"};
+      id: 2,
+      title: "Autonomous Systems",
+      description: "See self-managing AI systems at work",
+      features: ["Self-healing networks"Adaptive learning"Predictive maintenance"],
+      icon: "🤖",
+      color: "from-green-50o0 to-emerald-50o0"},
     {
-      id: 3;
-      title: "Synthetic Reality";
-      description: "Step into AI-generated virtual worlds";
-      features: ["Photorealistic environments"Dynamic content generation"Immersive experiences"];
-      icon: "🌐";
+      id: 3,
+      title: "Synthetic Reality",
+      description: "Step into AI-generated virtual worlds",
+      features: ["Photorealistic environments"Dynamic content generation"Immersive experiences"],
+      icon: "🌐",
       color: "from-orange-50o0 to-red-50o0"}
   ],
   return (
@@ -107,5 +107,5 @@ const InteractiveTechDemo20o27 = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default InteractiveTechDemo20o27;
+    </section>)},
+export default InteractiveTechDemo20o27,

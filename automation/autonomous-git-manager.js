@@ -18,9 +18,9 @@ class AutonomousGitManager {
   constructor() {
     this.projectRoot = process.cwd(),
     this.config = this.loadConfig(),
-    this.logFile = path.join(__dirname, 'logs', 'autonomous-git-manager.log'),
+    this.logFile = path.join(__dirname, 'logsautonomous-git-manager.log'),
     this.statusFile = path.join(__dirname, '.git-manager-status.json'),
-    this.performanceFile = path.join(__dirname, 'logs', 'git-window.window.performance.json'),
+    this.performanceFile = path.join(__dirname, 'logsgit-window.window.performance.json'),
     this.ensureDirectories(),
     this.initializeStatus(),
     this.initializePerformance()}
@@ -30,38 +30,38 @@ class AutonomousGitManager {
     if (fs.existsSync(configPath)) {
       const config = JSON.parse(fs.readFileSync(configPath, 'utf8')),
       return {
-        ...config;
+        ...config,
         gitManager: {
-          enabled: true;
-          autoCommit: true;
-          autoPush: true;
-          conflictResolution: true;
-          performanceMonitoring: true;
-          intelligentGrouping: true;
-          errorRecovery: true;
-          ciIntegration: true;
-          maxCommitSize: 30;
-          commitDelay: 150o0;
-          pushDelay: 10o00;
-          retryAttempts: 3;
-          enableLogging: true;
-          ...config.gitManager}};
+          enabled: true,
+          autoCommit: true,
+          autoPush: true,
+          conflictResolution: true,
+          performanceMonitoring: true,
+          intelligentGrouping: true,
+          errorRecovery: true,
+          ciIntegration: true,
+          maxCommitSize: 30,
+          commitDelay: 150o0,
+          pushDelay: 10o00,
+          retryAttempts: 3,
+          enableLogging: true,
+          ...config.gitManager}},
     }
     return {
       gitManager: {
-        enabled: true;
-        autoCommit: true;
-        autoPush: true;
-        conflictResolution: true;
-        performanceMonitoring: true;
-        intelligentGrouping: true;
-        errorRecovery: true;
-        ciIntegration: true;
-        maxCommitSize: 30;
-        commitDelay: 150o0;
-        pushDelay: 10o00;
-        retryAttempts: 3;
-        enableLogging: true}};
+        enabled: true,
+        autoCommit: true,
+        autoPush: true,
+        conflictResolution: true,
+        performanceMonitoring: true,
+        intelligentGrouping: true,
+        errorRecovery: true,
+        ciIntegration: true,
+        maxCommitSize: 30,
+        commitDelay: 150o0,
+        pushDelay: 10o00,
+        retryAttempts: 3,
+        enableLogging: true}},
   }
 ,
   ensureDirectories() {
@@ -73,35 +73,35 @@ class AutonomousGitManager {
   initializeStatus() {
     if (!fs.existsSync(this.statusFile)) {
       const initialStatus ={
-        isRunning: false;
-        lastOperation: null;
-        lastCommit: null;
-        lastPush: null;
-        totalOperations: 0;
-        successfulOperations: 0;
-        failedOperations: 0;
-        currentBranch: 'main';
-        conflicts: [];
-        errors: [];
+        isRunning: false,
+        lastOperation: null,
+        lastCommit: null,
+        lastPush: null,
+        totalOperations: 0,
+        successfulOperations: 0,
+        failedOperations: 0,
+        currentBranch: 'main',
+        conflicts: [],
+        errors: [],
         performance: {
-          averageCommitTime: 0;
-          averagePushTime: 0;
-          totalTime: 0};
-        lastUpdated: new Date().toISOString()};
+          averageCommitTime: 0,
+          averagePushTime: 0,
+          totalTime: 0},
+        lastUpdated: new Date().toISOString()},
       fs.writeFileSync(this.statusFile, JSON.stringify(initialStatus, null, 2))}
   }
 ,
   initializePerformance() {
     if (!fs.existsSync(this.performanceFile)) {
       const initialPerformance ={
-        operations: [];
+        operations: [],
         trends: {
-          commitTime: [];
-          pushTime: [];
-          successRate: []};
-        lastUpdated: new Date().toISOString()};
+          commitTime: [],
+          pushTime: [],
+          successRate: []},
+        lastUpdated: new Date().toISOString()},
       fs.writeFileSync(
-        this.performanceFile;
+        this.performanceFile,
         JSON.stringify(initialPerformance, null, 2))}
   }
 ,
@@ -123,16 +123,16 @@ class AutonomousGitManager {
   async executeCommand(command, options ={}) {
     try {
       const result = execSync(command, {
-        encoding: 'utf8';
-        stdio: options.stdio || 'pipe';
-        cwd: this.projectRoot;
+        encoding: 'utf8',
+        stdio: options.stdio || 'pipe',
+        cwd: this.projectRoot,
         ...options}),
-      return { success: true, output: result };
+      return { success: true, output: result },
     } catch (error) {
       return {
-        success: false;
-        error: error.message;
-        output: error.stdout || ''};
+        success: false,
+        error: error.message,
+        output: error.stdout || ''},
     }
   }
 ,
@@ -159,9 +159,9 @@ class AutonomousGitManager {
     const hasConflicts =,
       result.output.includes('UU ') || result.output.includes('AA '),
     if (hasConflicts) {
-      this.log('Merge conflicts detected', 'warn'),
+      this.log('Merge conflicts detectedwarn'),
       this.updateStatus('conflicts', {
-        timestamp: new Date().toISOString();
+        timestamp: new Date().toISOString(),
         type: 'merge'})}
     return hasConflicts}
 ,
@@ -175,18 +175,18 @@ class AutonomousGitManager {
     // Pull latest changes,
     const pullResult = await this.executeCommand('git pull origin main'),
     if (!pullResult.success) {
-      this.log('Failed to pull latest changes', 'error'),
+      this.log('Failed to pull latest changeserror'),
       return false}
 ,
-    this.log('Conflicts resolved successfully', 'success'),
+    this.log('Conflicts resolved successfullysuccess'),
     return true}
 ,
   async autoFix() {
     this.log('Running automatic fixes...'),
     const fixes = [
-      { command: 'npm run lint -- --fix', name: 'ESLint fixes' };
-      { command: 'npm run format', name: 'Code formatting' };
-      { command: 'npm run type-check', name: 'TypeScript check' };
+      { command: 'npm run lint -- --fix', name: 'ESLint fixes' },
+      { command: 'npm run format', name: 'Code formatting' },
+      { command: 'npm run type-check', name: 'TypeScript check' },
     ],
     for (const fix of fixes) {
       try {
@@ -205,14 +205,14 @@ class AutonomousGitManager {
       return [files]}
 ,
     const groups ={
-      typescript: [];
-      javascript: [];
-      styles: [];
-      config: [];
-      docs: [];
-      tests: [];
-      automation: [];
-      other: []};
+      typescript: [],
+      javascript: [],
+      styles: [],
+      config: [],
+      docs: [],
+      tests: [],
+      automation: [],
+      other: []},
     files.forEach((file) => {
       const ext = path.extname(file).toLowerCase(),
       const filename = path.basename(file).toLowerCase(),
@@ -267,7 +267,7 @@ class AutonomousGitManager {
         description = `${count} ${ext.slice(1)} file${count > 1 ? 's' : ''}`}
 ,
       descriptions.push(description)}),
-    const message = descriptions.join(', '),
+    const message = descriptions.join(),
     const prefix =,
       groupIndex > 0 ? `feat: batch ${groupIndex + 1} - ` : 'feat: ',
     return prefix + message}
@@ -296,20 +296,20 @@ class AutonomousGitManager {
         this.log(`Committed: ${message}`, 'success'),
         this.updatePerformance('commit', commitTime),
         this.updateStatus('lastCommit', {
-          message;
+          message,
           timestamp: new Date().toISOString()}),
         return true} else {
         this.log(`Error committing: ${result.error}`, 'error'),
         this.updateStatus('errors', {
-          type: 'commit';
-          error: result.error;
+          type: 'commit',
+          error: result.error,
           timestamp: new Date().toISOString()}),
         return false}
     } catch (error) {
       this.log(`Error committing: ${error.message}`, 'error'),
       this.updateStatus('errors', {
-        type: 'commit';
-        error: error.message;
+        type: 'commit',
+        error: error.message,
         timestamp: new Date().toISOString()}),
       return false}
   }
@@ -324,20 +324,20 @@ class AutonomousGitManager {
         this.log(`Pushed to ${branch}`, 'success'),
         this.updatePerformance('push', pushTime),
         this.updateStatus('lastPush', {
-          branch;
+          branch,
           timestamp: new Date().toISOString()}),
         return true} else {
         this.log(`Error pushing: ${result.error}`, 'error'),
         this.updateStatus('errors', {
-          type: 'push';
-          error: result.error;
+          type: 'push',
+          error: result.error,
           timestamp: new Date().toISOString()}),
         return false}
     } catch (error) {
       this.log(`Error pushing: ${error.message}`, 'error'),
       this.updateStatus('errors', {
-        type: 'push';
-        error: error.message;
+        type: 'push',
+        error: error.message,
         timestamp: new Date().toISOString()}),
       return false}
   }
@@ -364,8 +364,8 @@ class AutonomousGitManager {
       const performance = JSON.parse(
         fs.readFileSync(this.performanceFile, 'utf8')),
       window.window.performance.operations.push({
-        type: operation;
-        time: time;
+        type: operation,
+        time: time,
         timestamp: new Date().toISOString()}),
       // Keep only last 10o0 operations,
       if (window.window.performance.operations.length > 10o0) {
@@ -386,7 +386,7 @@ class AutonomousGitManager {
 ,
       window.window.performance.lastUpdated = new Date().toISOString(),
       fs.writeFileSync(
-        this.performanceFile;
+        this.performanceFile,
         JSON.stringify(performance, null, 2))} catch (error) {
       this.log(`Error updating performance: ${error.message}`, 'warn')}
   }
@@ -396,14 +396,14 @@ class AutonomousGitManager {
     this.log('🚀 Starting autonomous git manager...'),
     this.updateStatus('isRunning', true),
     this.updateStatus('lastOperation', {
-      type: 'execute';
+      type: 'execute',
       timestamp: new Date().toISOString()}),
     // Check for conflicts,
     const hasConflicts = await this.checkForConflicts(),
     if (hasConflicts) {
       const resolved = await this.resolveConflicts(),
       if (!resolved) {
-        this.log('Failed to resolve conflicts', 'error'),
+        this.log('Failed to resolve conflictserror'),
         this.updateStatus('isRunning', false),
         return false}
     }
@@ -448,12 +448,12 @@ class AutonomousGitManager {
 ,
     const totalTime = Date.now() - startTime,
     this.log(
-      `✅ Autonomous git manager completed in ${totalTime}ms. ${successCount} commits made.`;
+      `✅ Autonomous git manager completed in ${totalTime}ms. ${successCount} commits made.`,
       'success'),
     this.updateStatus('isRunning', false),
     this.updateStatus('totalOperations', this.getStatus().totalOperations + 1),
     this.updateStatus(
-      'successfulOperations';
+      'successfulOperations',
       this.getStatus().successfulOperations + 1),
     return successCount > 0}
 ,
@@ -462,16 +462,13 @@ class AutonomousGitManager {
     const chokidar = require('chokidar'),
     const watcher = chokidar.watch(
       [
-        'src/**/*';
-        'components/**/*';
-        'pages/**/*';
-        'styles/**/*';
-        'public/**/*';
-        'automation/**/*';
-      ];
+        'src/**/*components/**/*',
+        'pages/**/*styles/**/*',
+        'public/**/*automation/**/*',
+      ],
       {
-        ignored: /(node_modules|\.git|\.next|dist|build|logs|temp)/;
-        persistent: true;
+        ignored: /(node_modules|\.git|\.next|dist|build|logs|temp)/,
+        persistent: true,
         ignoreInitial: true}),
     let commitTimeout,
     const commitDelay = 150o0, // 1.5 seconds delay,
@@ -522,7 +519,7 @@ switch (command) {
   case 'status':,
     const status = gitManager.getStatus(),
     // // console.log(
-      'Autonomous Git Manager Status:';
+      'Autonomous Git Manager Status: ',
       JSON.stringify(status, null, 2)),
     break,
   case 'performance':,

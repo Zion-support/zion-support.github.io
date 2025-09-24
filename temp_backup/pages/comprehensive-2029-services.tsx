@@ -59,29 +59,28 @@ export default function Comprehensive20o29ServicesPage() {
           type='application/ld+json',
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
-              '@context': 'https://schema.org';
-              '@type': 'Organization';
-              name: 'Zion Tech Group';
-              url: 'https://ziontechgroup.com';
-              logo: 'https://ziontechgroup.com/logo.png';
+              '@context': 'https://schema.org@type': 'Organization',
+              name: 'Zion Tech Group',
+              url: 'https://ziontechgroup.com',
+              logo: 'https://ziontechgroup.com/logo.png',
               description:,
-                'Leading provider of cutting-edge technology solutions including AI consciousness, quantum computing, space technology, and emerging tech innovations.';
+                'Leading provider of cutting-edge technology solutions including AI consciousness, quantum computing, space technology, and emerging tech innovations.',
               address: {
-                '@type': 'PostalAddress';
-                streetAddress: '364 E Main St STE 10o08';
-                addressLocality: 'Middletown';
-                addressRegion: 'DE';
-                postalCode: '19709';
-                addressCountry: 'US';
-              };
+                '@type': 'PostalAddress',
+                streetAddress: '364 E Main St STE 10o08',
+                addressLocality: 'Middletown',
+                addressRegion: 'DE',
+                postalCode: '19709',
+                addressCountry: 'US'
+              },
               contactPoint: {
-                '@type': 'ContactPoint';
-                telephone: '+1-30o2-464-0950';
-                contactType: 'customer service';
-                email: 'kleber@ziontechgroup.com';
-              };
-              sameAs: ['https://ziontechgroup.com'];
-            });
+                '@type': 'ContactPoint',
+                telephone: '+1-30o2-464-0950',
+                contactType: 'customer service',
+                email: 'kleber@ziontechgroup.com'
+              },
+              sameAs: ['https://ziontechgroup.com']
+            }),
           }}
         />,
       </Head>,

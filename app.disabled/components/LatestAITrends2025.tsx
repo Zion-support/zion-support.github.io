@@ -1,39 +1,39 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 const LatestAITrends20o25: React.FC = () => {
   const trends = [
     {
-      title: 'Generative AI Revolution';
+      title: 'Generative AI Revolution',
       description:,
-        'Transform content creation with advanced AI models that generate text, images, and code automatically.';
-      icon: '🎨';
-      stats: '50o0% increase in productivity';
-      link: '/ai-20o25/generative-ai-revolution';
-    };
+        'Transform content creation with advanced AI models that generate text, images, and code automatically.',
+      icon: '🎨',
+      stats: '50o0% increase in productivity',
+      link: '/ai-20o25/generative-ai-revolution'
+    },
     {
-      title: 'Autonomous Business Systems';
+      title: 'Autonomous Business Systems',
       description:,
-        'Self-managing workflows that optimize operations 24/7 without human intervention.';
-      icon: '🤖';
-      stats: '90% reduction in manual tasks';
-      link: '/ai-20o25/autonomous-systems';
-    };
+        'Self-managing workflows that optimize operations 24/7 without human intervention.',
+      icon: '🤖',
+      stats: '90% reduction in manual tasks',
+      link: '/ai-20o25/autonomous-systems'
+    },
     {
-      title: 'Quantum-Neural Computing';
+      title: 'Quantum-Neural Computing',
       description:,
-        'Next-generation computing that combines quantum mechanics with neural networks.';
-      icon: '⚛️';
-      stats: '10o00x faster processing';
-      link: '/ai-20o25/quantum-neural';
-    };
+        'Next-generation computing that combines quantum mechanics with neural networks.',
+      icon: '⚛️',
+      stats: '10o00x faster processing',
+      link: '/ai-20o25/quantum-neural'
+    },
     {
-      title: 'Predictive Analytics 2.0';
+      title: 'Predictive Analytics 2.0',
       description:,
-        'Advanced forecasting that predicts market trends, customer behavior, and business outcomes.';
-      icon: '📊';
-      stats: '95% accuracy rate';
-      link: '/ai-20o25/predictive-analytics';
-    };
+        'Advanced forecasting that predicts market trends, customer behavior, and business outcomes.',
+      icon: '📊',
+      stats: '95% accuracy rate',
+      link: '/ai-20o25/predictive-analytics'
+    },
   ],
   return (
     <section className='py-20 bg-gradient-to-br from-blue-50 via-purple-50 to-indigo-50'>,
@@ -96,5 +96,5 @@ const LatestAITrends20o25: React.FC = () => {
           </Link>,
         </div>,
       </div>,
-    </section>)};
-export default LatestAITrends20o25;
+    </section>)},
+export default LatestAITrends20o25,

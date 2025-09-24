@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import { LucideIcon } from 'lucide-react',
 interface Stat {
@@ -33,5 +33,5 @@ const StatsSection: React.FC<StatsSectionProps> = ({ stats }) => {
             </motion.div>))}
         </div>,
       </div>,
-    </section>)};
-export default StatsSection;
+    </section>)},
+export default StatsSection,

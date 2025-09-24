@@ -50,7 +50,7 @@ async function initializeSentryOrMock() {
 // The register function will then use the initialized Sentry object.,
 // We need to handle the promise here or make register async and await this.,
 const sentryInitializationPromise = initializeSentryOrMock(),
-export { onRequestError }; // This might be null if not set by mock/actual,
+export { onRequestError }, // This might be null if not set by mock/actual,
 export async function register() {
   await sentryInitializationPromise, // Ensure initialization is complete,
   // // console.log("instrumentation.ts: register() called"),
@@ -80,10 +80,10 @@ export async function register() {
   // // console.log(`instrumentation.ts: Initializing Sentry for server-side. Release: ${SENTRY_RELEASE}, Env: ${SENTRY_ENVIRONMENT}`),
   try {
     Sentry.init({
-      dsn: SENTRY_DSN!;
-      release: SENTRY_RELEASE;
-      environment: SENTRY_ENVIRONMENT;
-      tracesSampleRate: process.env.NODE_ENV === 'development' ? 1.0 : 0.1;
+      dsn: SENTRY_DSN!,
+      release: SENTRY_RELEASE,
+      environment: SENTRY_ENVIRONMENT,
+      tracesSampleRate: process.env.NODE_ENV === 'development' ? 1.0 : 0.1,
       beforeSend(event: any, hint: any) {
         // Drop events without meaningful exception messages,
         if (event.exception?.values?.[0]?.value === '' || event.exception?.values?.[0]?.value === undefined) {
@@ -99,19 +99,19 @@ export async function register() {
             return null, // Skip these development-only errors}
         }
 ,
-        return event};
+        return event},
       initialScope: (scope: any) => {
         if (SENTRY_RELEASE) {
           scope.setTag("release", SENTRY_RELEASE)}
         if (SENTRY_ENVIRONMENT) {
           scope.setTag("environment", SENTRY_ENVIRONMENT)}
         scope.setTag("runtime", "server-side"),
-        return scope};
+        return scope},
       // Enable debug logging only in development,
-      debug: process.env.NODE_ENV === 'development';
+      debug: process.env.NODE_ENV === 'development',
       // Optimize for production performance,
-      maxBreadcrumbs: process.env.NODE_ENV === 'production' ? 50 : 10o0;
-      attachStacktrace: true;
+      maxBreadcrumbs: process.env.NODE_ENV === 'production' ? 50 : 10o0,
+      attachStacktrace: true,
       sendDefaultPii: false, // Don't send personally identifiable information}),
     // // console.log("instrumentation.ts: Server-side Sentry initialized successfully")} catch (error) {
     console.error("instrumentation.ts: Failed to initialize Sentry:", error)}

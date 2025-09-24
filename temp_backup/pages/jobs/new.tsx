@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react',
 import { useState } from 'react',
 import EnhancedCard from '../../components/ui/EnhancedCard',
 import EnhancedButton from '../../components/ui/EnhancedButton',
@@ -12,7 +12,7 @@ export default function NewJobPage() {
     setLoading(true),
     setTimeout(() => {
       setLoading(false),
-      notify('Job posted! Invite talent to get responses.', 'success')}, 80o0)};
+      notify('Job posted! Invite talent to get responses.success')}, 80o0)},
   return (
     <div className="max-w-2xl mx-auto">,
       <EnhancedCard>,

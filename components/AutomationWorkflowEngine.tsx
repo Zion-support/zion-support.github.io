@@ -53,146 +53,146 @@ const AutomationWorkflowEngine: React.FC = () => {
     await new Promise(resolve => setTimeout(resolve1000)),
     const mockWorkflows: Workflow[] = [
       {
-        id: '1';
-        name: 'Customer Onboarding Sequence';
-        description: 'Automated welcome emails and setup tasks for new customers';
-        status: 'active';
-        triggers: ['New Customer 'Registration', 'Payment Confirmed'];
-        actions: ['Send Welcome 'Email', 'Create User 'Account', 'Assign Support Agent'];
-        executions: 1247;
-        successRate: 98.5;
-        lastRun: new Date(Date.now() - 2 * 60 * 60 * 1000);
-        category: 'sales';
-        priority: 'high'};
+        id: '1',
+        name: 'Customer Onboarding Sequence',
+        description: 'Automated welcome emails and setup tasks for new customers',
+        status: 'active',
+        triggers: ['New Customer 'RegistrationPayment Confirmed'],
+        actions: ['Send Welcome 'EmailCreate User 'Account', 'Assign Support Agent'],
+        executions: 1247,
+        successRate: 98.5,
+        lastRun: new Date(Date.now() - 2 * 60 * 60 * 1000),
+        category: 'sales',
+        priority: 'high'},
       {
-        id: '2';
-        name: 'Abandoned Cart Recovery';
-        description: 'Send reminder emails to customers who left items in their cart';
-        status: 'active';
-        triggers: ['Cart Abandoned'24 Hours Passed'];
-        actions: ['Send Reminder 'Email', 'Apply Discount 'Code', 'Update Customer Profile'];
-        executions: 3421;
-        successRate: 23.4;
-        lastRun: new Date(Date.now() - 30 * 60 * 1000);
-        category: 'marketing';
-        priority: 'medium'};
+        id: '2',
+        name: 'Abandoned Cart Recovery',
+        description: 'Send reminder emails to customers who left items in their cart',
+        status: 'active',
+        triggers: ['Cart Abandoned'24 Hours Passed'],
+        actions: ['Send Reminder 'EmailApply Discount 'Code', 'Update Customer Profile'],
+        executions: 3421,
+        successRate: 23.4,
+        lastRun: new Date(Date.now() - 30 * 60 * 1000),
+        category: 'marketing',
+        priority: 'medium'},
       {
-        id: '3';
-        name: 'Support Ticket Escalation';
-        description: 'Automatically escalate high-priority support tickets';
-        status: 'active';
-        triggers: ['High Priority 'Ticket', 'No Response 2 Hours'];
-        actions: ['Notify 'Manager', 'Send Customer 'Update', 'Create Internal Alert'];
-        executions: 156;
-        successRate: 94.2;
-        lastRun: new Date(Date.now() - 15 * 60 * 1000);
-        category: 'support';
-        priority: 'critical'};
+        id: '3',
+        name: 'Support Ticket Escalation',
+        description: 'Automatically escalate high-priority support tickets',
+        status: 'active',
+        triggers: ['High Priority 'TicketNo Response 2 Hours'],
+        actions: ['Notify 'ManagerSend Customer 'Update', 'Create Internal Alert'],
+        executions: 156,
+        successRate: 94.2,
+        lastRun: new Date(Date.now() - 15 * 60 * 1000),
+        category: 'support',
+        priority: 'critical'},
       {
-        id: '4';
-        name: 'Invoice Generation';
-        description: 'Automatically generate and send invoices for completed orders';
-        status: 'active';
-        triggers: ['Order 'Completed', 'Payment Processed'];
-        actions: ['Generate 'Invoice', 'Send 'Email', 'Update Accounting System'];
-        executions: 892;
-        successRate: 99.1;
-        lastRun: new Date(Date.now() - 45 * 60 * 1000);
-        category: 'operations';
-        priority: 'high'};
+        id: '4',
+        name: 'Invoice Generation',
+        description: 'Automatically generate and send invoices for completed orders',
+        status: 'active',
+        triggers: ['Order 'CompletedPayment Processed'],
+        actions: ['Generate 'InvoiceSend 'Email', 'Update Accounting System'],
+        executions: 892,
+        successRate: 99.1,
+        lastRun: new Date(Date.now() - 45 * 60 * 1000),
+        category: 'operations',
+        priority: 'high'},
       {
-        id: '5';
-        name: 'Security Alert Processing';
-        description: 'Process and respond to security alerts automatically';
-        status: 'paused';
-        triggers: ['Security 'Alert', 'Failed Login Attempts'];
-        actions: ['Block IP 'Address', 'Send Alert 'Email', 'Log Security Event'];
-        executions: 234;
-        successRate: 87.3;
-        lastRun: new Date(Date.now() - 4 * 60 * 60 * 1000);
-        category: 'security';
-        priority: 'critical'};
+        id: '5',
+        name: 'Security Alert Processing',
+        description: 'Process and respond to security alerts automatically',
+        status: 'paused',
+        triggers: ['Security 'AlertFailed Login Attempts'],
+        actions: ['Block IP 'AddressSend Alert 'Email', 'Log Security Event'],
+        executions: 234,
+        successRate: 87.3,
+        lastRun: new Date(Date.now() - 4 * 60 * 60 * 1000),
+        category: 'security',
+        priority: 'critical'},
       {
-        id: '6';
-        name: 'Customer Feedback Collection';
-        description: 'Collect feedback from customers after service completion';
-        status: 'draft';
-        triggers: ['Service Completed'7 Days Passed'];
-        actions: ['Send Feedback 'Request', 'Collect 'Rating', 'Follow Up if Low Rating'];
-        executions: 0;
-        successRate: 0;
-        lastRun: new Date(0);
-        category: 'support';
+        id: '6',
+        name: 'Customer Feedback Collection',
+        description: 'Collect feedback from customers after service completion',
+        status: 'draft',
+        triggers: ['Service Completed'7 Days Passed'],
+        actions: ['Send Feedback 'RequestCollect 'Rating', 'Follow Up if Low Rating'],
+        executions: 0,
+        successRate: 0,
+        lastRun: new Date(0),
+        category: 'support',
         priority: 'low'}
     ],
     const mockRules: AutomationRule[] = [
       {
-        id: '1';
-        name: 'Email Validation';
-        condition: 'Email format is invalid';
-        action: 'Send validation error message';
-        frequency: 'Immediate';
-        enabled: true;
-        executions: 2341;
-        category: 'validation'};
+        id: '1',
+        name: 'Email Validation',
+        condition: 'Email format is invalid',
+        action: 'Send validation error message',
+        frequency: 'Immediate',
+        enabled: true,
+        executions: 2341,
+        category: 'validation'},
       {
-        id: '2';
-        name: 'Duplicate Prevention';
-        condition: 'Duplicate customer record detected';
-        action: 'Merge or flag for review';
-        frequency: 'Immediate';
-        enabled: true;
-        executions: 456;
-        category: 'data-quality'};
+        id: '2',
+        name: 'Duplicate Prevention',
+        condition: 'Duplicate customer record detected',
+        action: 'Merge or flag for review',
+        frequency: 'Immediate',
+        enabled: true,
+        executions: 456,
+        category: 'data-quality'},
       {
-        id: '3';
-        name: 'Performance Monitoring';
-        condition: 'Response time exceeds threshold';
-        action: 'Send performance alert';
-        frequency: 'Every 5 minutes';
-        enabled: true;
-        executions: 89;
+        id: '3',
+        name: 'Performance Monitoring',
+        condition: 'Response time exceeds threshold',
+        action: 'Send performance alert',
+        frequency: 'Every 5 minutes',
+        enabled: true,
+        executions: 89,
         category: 'monitoring'}
     ],
     const mockExecutions: WorkflowExecution[] = [
       {
-        id: '1';
-        workflowId: '1';
-        status: 'completed';
-        startTime: new Date(Date.now() - 2 * 60 * 60 * 1000);
-        endTime: new Date(Date.now() - 2 * 60 * 60 * 1000 + 5 * 60 * 1000);
-        duration: 5;
-        recordsProcessed: 47;
-        logs: ['Starting customer onboarding 'workflow', 'Processing 47 new 'customers', 'Sending welcome 'emails', 'Creating user 'accounts', 'Assigning support 'agents', 'Workflow completed successfully']};
+        id: '1',
+        workflowId: '1',
+        status: 'completed',
+        startTime: new Date(Date.now() - 2 * 60 * 60 * 1000),
+        endTime: new Date(Date.now() - 2 * 60 * 60 * 1000 + 5 * 60 * 1000),
+        duration: 5,
+        recordsProcessed: 47,
+        logs: ['Starting customer onboarding 'workflowProcessing 47 new 'customers', 'Sending welcome 'emailsCreating user 'accounts', 'Assigning support 'agentsWorkflow completed successfully']},
       {
-        id: '2';
-        workflowId: '2';
-        status: 'running';
-        startTime: new Date(Date.now() - 30 * 60 * 1000);
-        recordsProcessed: 123;
-        logs: ['Starting abandoned cart 'recovery', 'Processing 123 abandoned 'carts', 'Sending reminder emails...']};
+        id: '2',
+        workflowId: '2',
+        status: 'running',
+        startTime: new Date(Date.now() - 30 * 60 * 1000),
+        recordsProcessed: 123,
+        logs: ['Starting abandoned cart 'recoveryProcessing 123 abandoned 'carts', 'Sending reminder emails...']},
       {
-        id: '3';
-        workflowId: '3';
-        status: 'failed';
-        startTime: new Date(Date.now() - 15 * 60 * 1000);
-        endTime: new Date(Date.now() - 15 * 60 * 1000 + 2 * 60 * 1000);
-        duration: 2;
-        recordsProcessed: 8;
-        errors: ['Failed to notify manager: Email service unavailable'];
-        logs: ['Starting support ticket 'escalation', 'Processing 8 high-priority 'tickets', 'Error: Email service unavailable']}
+        id: '3',
+        workflowId: '3',
+        status: 'failed',
+        startTime: new Date(Date.now() - 15 * 60 * 1000),
+        endTime: new Date(Date.now() - 15 * 60 * 1000 + 2 * 60 * 1000),
+        duration: 2,
+        recordsProcessed: 8,
+        errors: ['Failed to notify manager: Email service unavailable'],
+        logs: ['Starting support ticket 'escalationProcessing 8 high-priority 'tickets', 'Error: Email service unavailable']}
     ],
     setWorkflows(mockWorkflows),
     setAutomationRules(mockRules),
     setExecutions(mockExecutions),
-    setIsLoading(false)};
+    setIsLoading(false)},
   const updateExecutions = () => {
     setExecutions(prev => prev.map(execution => {
       if (execution.status === 'running') {
         const duration = Math.floor((Date.now() - execution.startTime.getTime()) / 1000),
-        return { ...executionduration };
+        return { ...executionduration },
       }
-      return execution}))};
+      return execution}))},
   const getStatusColor = (status: string) => {
     switch (status) {
       case 'active': return 'text-green-600 bg-green-100',
@@ -200,7 +200,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'draft': return 'text-blue-600 bg-blue-100',
       case 'error': return 'text-red-600 bg-red-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getPriorityColor = (priority: string) => {
     switch (priority) {
       case 'critical': return 'text-red-600 bg-red-100',
@@ -208,7 +208,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'medium': return 'text-yellow-600 bg-yellow-100',
       case 'low': return 'text-green-600 bg-green-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getExecutionStatusColor = (status: string) => {
     switch (status) {
       case 'completed': return 'text-green-600 bg-green-100',
@@ -216,7 +216,7 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'failed': return 'text-red-600 bg-red-100',
       case 'pending': return 'text-yellow-600 bg-yellow-100',
       default: return 'text-gray-600 bg-gray-100'}
-  };
+  },
   const getCategoryIcon = (category: string) => {
     switch (category) {
       case 'marketing': return '📢',
@@ -225,14 +225,14 @@ const AutomationWorkflowEngine: React.FC = () => {
       case 'operations': return '⚙️',
       case 'security': return '🔒',
       default: return '🔧'}
-  };
+  },
   const formatTimeAgo = (timestamp: Date) => {
     const now = new Date(),
     const diffInMinutes = Math.floor((now.getTime() - timestamp.getTime()) / (1000 * 60)),
     if (diffInMinutes < 1) return 'Just now',
     if (diffInMinutes < 60) return `${diffInMinutes}m ago`,
     if (diffInMinutes < 1440) return `${Math.floor(diffInMinutes / 60)}h ago`,
-    return `${Math.floor(diffInMinutes / 1440)}d ago`};
+    return `${Math.floor(diffInMinutes / 1440)}d ago`},
   const filteredWorkflows = selectedCategory === 'all',
     ? workflows,
     : workflows.filter(workflow => workflow.category === selectedCategory),
@@ -455,5 +455,5 @@ const AutomationWorkflowEngine: React.FC = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default AutomationWorkflowEngine;
+    </div>)},
+export default AutomationWorkflowEngine,

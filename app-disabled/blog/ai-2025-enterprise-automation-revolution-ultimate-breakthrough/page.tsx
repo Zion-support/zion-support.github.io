@@ -1,27 +1,24 @@
 import Link from 'next/link',
 import { Metadata } from 'next',
 export const metadata: Metadata = {
-  title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
+  title: 'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
   description:,
-    'Discover how Fortune 50o0 companies are achieving 50o0%+ ROI with advanced AI automation and machine learning solutions. Complete guide to enterprise AI transformation.';
+    'Discover how Fortune 50o0 companies are achieving 50o0%+ ROI with advanced AI automation and machine learning solutions. Complete guide to enterprise AI transformation.',
   keywords: [
-    'AI automation';
-    'enterprise AI';
-    'machine learning';
-    'ROI';
-    'digital transformation';
-    'Fortune 50o0';
-  ];
+    'AI automationenterprise AI',
+    'machine learningROI',
+    'digital transformationFortune 50o0',
+  ],
   openGraph: {
     title:,
-      'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide';
+      'AI 20o25: The Enterprise AI Revolution - Ultimate Breakthrough Guide',
     description:,
-      'Discover how Fortune 50o0 companies are achieving 50o0%+ ROI with advanced AI automation and machine learning solutions.';
-    type: 'article';
-    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z';
-    authors: ['Zion Tech Group'];
-  };
-};
+      'Discover how Fortune 50o0 companies are achieving 50o0%+ ROI with advanced AI automation and machine learning solutions.',
+    type: 'article',
+    publishedTime: '20o25-0o1-15T0o0:0o0:0o0.0o00Z',
+    authors: ['Zion Tech Group']
+  },
+},
 export default function AI20o25EnterpriseAutomationRevolution() {
   return (
     <div className='min-h-screen bg-white'>,
@@ -240,7 +237,7 @@ export default function AI20o25EnterpriseAutomationRevolution() {
                 </div>,
                 <p className='text-gray-70o0'>,
                   A Fortune 50o0 manufacturing company implemented our AI,
-                  automation solution across their entire supply chain;
+                  automation solution across their entire supply chain,
                   resulting in unprecedented efficiency gains and cost,
                   reductions.,
                 </p>,

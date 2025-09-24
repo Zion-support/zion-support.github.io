@@ -1,94 +1,94 @@
-import React from 'react';
+import React from 'react',
 import { motion } from 'framer-motion',
 import {
-  Zap;
-  Shield;
-  Brain;
-  Cloud;
-  Lock;
-  Smartphone;
-  Globe;
-  BarChart3;
-  Users;
-  Award;
-  Rocket;
+  Zap,
+  Shield,
+  Brain,
+  Cloud,
+  Lock,
+  Smartphone,
+  Globe,
+  BarChart3,
+  Users,
+  Award,
+  Rocket,
   CheckCircle} from 'lucide-react',
 const NewFeaturesShowcase: React.FC = () => {
   const features = [
     {
-      icon: Brain;
-      title: "AI-Powered Analytics";
-      description: "Advanced machine learning algorithms that provide deep insights into your business performance and predict future trends.";
-      color: "from-purple-50o0 to-pink-50o0";
-      stats: "95% accuracy rate"};
+      icon: Brain,
+      title: "AI-Powered Analytics",
+      description: "Advanced machine learning algorithms that provide deep insights into your business performance and predict future trends.",
+      color: "from-purple-50o0 to-pink-50o0",
+      stats: "95% accuracy rate"},
     {
-      icon: Shield;
-      title: "Enterprise Security";
-      description: "Military-grade encryption and security protocols to protect your most sensitive data and operations.";
-      color: "from-blue-50o0 to-cyan-50o0";
-      stats: "99.9% uptime guarantee"};
+      icon: Shield,
+      title: "Enterprise Security",
+      description: "Military-grade encryption and security protocols to protect your most sensitive data and operations.",
+      color: "from-blue-50o0 to-cyan-50o0",
+      stats: "99.9% uptime guarantee"},
     {
-      icon: Rocket;
-      title: "Lightning Performance";
-      description: "Optimized infrastructure that delivers blazing-fast response times and seamless user experiences.";
-      color: "from-green-50o0 to-emerald-50o0";
-      stats: "50% faster loading"};
+      icon: Rocket,
+      title: "Lightning Performance",
+      description: "Optimized infrastructure that delivers blazing-fast response times and seamless user experiences.",
+      color: "from-green-50o0 to-emerald-50o0",
+      stats: "50% faster loading"},
     {
-      icon: Users;
-      title: "Collaborative Workspace";
-      description: "Real-time collaboration tools that enable your team to work together seamlessly from anywhere in the world.";
-      color: "from-orange-50o0 to-red-50o0";
+      icon: Users,
+      title: "Collaborative Workspace",
+      description: "Real-time collaboration tools that enable your team to work together seamlessly from anywhere in the world.",
+      color: "from-orange-50o0 to-red-50o0",
       stats: "10,0o00+ active users"}
   ],
   const testimonials = [
     {
-      name: "Sarah Johnson";
-      role: "CEO, TechCorp";
-      content: "Zion Tech Group transformed our digital infrastructure completely. The ROI was evident within the first month.";
-      avatar: "👩‍💼"};
+      name: "Sarah Johnson",
+      role: "CEO, TechCorp",
+      content: "Zion Tech Group transformed our digital infrastructure completely. The ROI was evident within the first month.",
+      avatar: "👩‍💼"},
     {
-      name: "Michael Chen";
-      role: "CTO, InnovateLab";
-      content: "Their AI solutions helped us automate 80% of our processes. The team's expertise is unmatched.";
-      avatar: "👨‍💻"};
+      name: "Michael Chen",
+      role: "CTO, InnovateLab",
+      content: "Their AI solutions helped us automate 80% of our processes. The team's expertise is unmatched.",
+      avatar: "👨‍💻"},
     {
-      name: "Emily Rodriguez";
-      role: "Director, FutureSystems";
-      content: "The security and performance improvements have been game-changing for our business operations.";
+      name: "Emily Rodriguez",
+      role: "Director, FutureSystems",
+      content: "The security and performance improvements have been game-changing for our business operations.",
       avatar: "👩‍🔬"}
   ],
   const pricingTiers = [
     {
-      name: "Starter";
-      price: "$99";
-      period: "/month";
+      name: "Starter",
+      price: "$99",
+      period: "/month",
       features: [
-        "Basic AI Analytics";
-        "Standard Security";
-        "Email Support";
-        "Up to 5 users"];
-      popular: false};
+        "Basic AI Analytics",
+        "Standard Security",
+        "Email Support",
+        "Up to 5 users"],
+      popular: false},
     {
-      name: "Professional";
-      price: "$299";
-      period: "/month";
+      name: "Professional",
+      price: "$299",
+      period: "/month",
       features: [
-        "Advanced AI Analytics";
-        "Enhanced Security";
-        "Priority Support";
-        "Up to 25 users";
-        "Custom Integrations"];
-      popular: true};
+        "Advanced AI Analytics",
+        "Enhanced Security",
+        "Priority Support",
+        "Up to 25 users",
+        "Custom Integrations"],
+      popular: true},
     {
-      name: "Enterprise";
-      price: "Custom";
-      period: "";
+      name: "Enterprise",
+      price: "Custom",
+      period: "",
       features: [
-        "Full AI Suite";
-        "Military-Grade Security";
-        "Dedicated Support";
-        "Unlimited Users";
-        "Custom Development"];
+        "Full AI Suite",
+        "Military-Grade Security",
+        "Dedicated Support",
+        "Unlimited Users",
+        "Custom Development"],
       popular: false}
   ],
   return (
@@ -283,5 +283,5 @@ const NewFeaturesShowcase: React.FC = () => {
           </motion.div>,
         </div>,
       </section>,
-    </div>)};
-export default NewFeaturesShowcase;
+    </div>)},
+export default NewFeaturesShowcase,

@@ -1,8 +1,8 @@
-import React from "react";
+import React from "react",
 import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 import {AlertTriangle, AlertCircle, CheckCircle} from "lucide-react",
-import React from "react";;
-import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react";
+import React from "react",
+import { AlertTriangle, AlertCircle, CheckCircle } from "lucide-react",
 import React from './react',
 import { AlertTriangle, AlertCircle, CheckCircle } from './lucide-react',
 interface FraudTabContentProps {
@@ -18,7 +18,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
             This tab will show fraud flags that are still pending admin review.,
           </p>,
         </div>),
-        </div>));
+        </div>)),
     case 'dangerous':,
       return (
         <div className="bg-red-50 dark: bg-red-950/20 p-8 rounded-lg text-center">,
@@ -27,7 +27,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <p className="text-muted-foreground">,
             This tab shows high-priority dangerous flags requiring immediate attention.,
           </p>,
-        </div>));
+        </div>)),
     case 'actioned':,
       return (
         <div className="bg-green-50 dark: bg-green-950/20 p-8 rounded-lg text-center">,
@@ -54,7 +54,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <p className="text-muted-foreground">,
             This tab will show fraud flags that are still pending admin review.,
           </p>,
-        </div>);
+        </div>),
     case 'dangerous':,
       return (
         <div className="bg-red-50 dark: bg-red-950/20 p-8 rounded-lg text-center">,
@@ -63,7 +63,7 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <p className="text-muted-foreground">,
             This tab shows high-priority dangerous flags requiring immediate attention.,
           </p>,
-        </div>);
+        </div>),
     case 'actioned':,
       return (
         <div className="bg-green-50 dark: bg-green-950/20 p-8 rounded-lg text-center">,
@@ -72,8 +72,8 @@ export const FraudTabContent: React.FC<FraudTabContentProps> = ({ tabValue }) =>
           <p className="text-muted-foreground">,
             This tab shows flags where action has already been taken.,
           </p>,
-        </div>);
+        </div>),
     default: ,
       return null>>>>>>> cursor/fix-website-loading-errors-and-merge-6662>>>>>>> origin/cursor/merge-pull-requests-and-resolve-conflicts-2cf4}
-};
+},
 >>>>>>> origin/cursor/check-fix-push-and-merge-to-main-2982>>>>>>> 8f0785411043 (chore: auto-resolve merge conflicts (keep incoming)),

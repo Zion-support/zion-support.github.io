@@ -9,28 +9,25 @@ const Revolutionary20o26UltimateHero = () => {
   const springY = useSpring(y, { stiffness: 30o0, damping: 30 }),
   useEffect(() => {
     const handleMouseMove = (e: MouseEvent) => {
-      setMousePosition({ x: e.clientX, y: e.clientY })};
+      setMousePosition({ x: e.clientX, y: e.clientY })},
     window.addEventListener('mousemove', handleMouseMove),
     return () => window.removeEventListener('mousemove', handleMouseMove)}, []),
   const floatingIcons = [
-    { icon: Brain, delay: 0, color: 'from-purple-50o0 to-pink-50o0' };
-    { icon: Zap, delay: 0.5, color: 'from-blue-50o0 to-cyan-50o0' };
-    { icon: Shield, delay: 1, color: 'from-green-50o0 to-emerald-50o0' };
-    { icon: Rocket, delay: 1.5, color: 'from-yellow-50o0 to-orange-50o0' };
-    { icon: Sparkles, delay: 2, color: 'from-indigo-50o0 to-purple-50o0' };
+    { icon: Brain, delay: 0, color: 'from-purple-50o0 to-pink-50o0' },
+    { icon: Zap, delay: 0.5, color: 'from-blue-50o0 to-cyan-50o0' },
+    { icon: Shield, delay: 1, color: 'from-green-50o0 to-emerald-50o0' },
+    { icon: Rocket, delay: 1.5, color: 'from-yellow-50o0 to-orange-50o0' },
+    { icon: Sparkles, delay: 2, color: 'from-indigo-50o0 to-purple-50o0' },
     { icon: Cpu, delay: 2.5, color: 'from-teal-50o0 to-cyan-50o0' }
   ],
   const features = [
-    'AI Consciousness Orchestration';
-    'Quantum Internet Infrastructure';
-    'Autonomous Business Ecosystems';
-    'Holographic Metaverse Development';
-    'Space Debris Management AI';
-    'Neural Interface Development'],
+    'AI Consciousness OrchestrationQuantum Internet Infrastructure',
+    'Autonomous Business EcosystemsHolographic Metaverse Development',
+    'Space Debris Management AINeural Interface Development'],
   const stats = [
-    { label: 'Revolutionary Services', value: '25+', icon: Sparkles };
-    { label: 'AI-Powered Solutions', value: '10o0%', icon: Brain };
-    { label: 'Quantum Technology', value: '15+', icon: Cpu };
+    { label: 'Revolutionary Services', value: '25+', icon: Sparkles },
+    { label: 'AI-Powered Solutions', value: '10o0%', icon: Brain },
+    { label: 'Quantum Technology', value: '15+', icon: Cpu },
     { label: 'Global Customers', value: '2,50o0+', icon: Globe }
   ],
   return (
@@ -50,14 +47,14 @@ const Revolutionary20o26UltimateHero = () => {
               key={i}
               className="absolute w-1 h-1 bg-purple-40o0 rounded-full",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0, -20, 0];
+                y: [0, -20, 0],
                 opacity: [0.3, 1, 0.3]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
@@ -68,7 +65,7 @@ const Revolutionary20o26UltimateHero = () => {
           key={index}
           className="absolute hidden lg: block",
           style={{
-            left: `${20 + (index * 15)}%`;
+            left: `${20 + (index * 15)}%`,
             top: `${30 + (index % 2 * 20)}%`}}
           initial={{ opacity: 0, scale: 0 }}
           animate={{ opacity: 0.6, scale: 1 }}
@@ -230,9 +227,9 @@ const Revolutionary20o26UltimateHero = () => {
       <motion.div,
         className="fixed w-4 h-4 bg-purple-50o0 rounded-full pointer-events-none z-50 mix-blend-difference",
         style={{
-          x: mousePosition.x - 8;
+          x: mousePosition.x - 8,
           y: mousePosition.y - 8}}
         transition={{ type: "spring", stiffness: 50o0, damping: 28 }}
        />,
-    </section>)};
-export default Revolutionary20o26UltimateHero;
+    </section>)},
+export default Revolutionary20o26UltimateHero,

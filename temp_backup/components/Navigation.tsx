@@ -4,34 +4,34 @@ const Navigation: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false),
   const router = useRouter(),
   const navigation = [
-    { name: 'Home', href: '/', current: router.pathname === '/' };
+    { name: 'Home', href: '/', current: router.pathname === '/' },
     {
-      name: 'Dashboard';
-      href: '/dashboard';
-      current: router.pathname === '/dashboard';
-    };
+      name: 'Dashboard',
+      href: '/dashboard',
+      current: router.pathname === '/dashboard'
+    },
     {
-      name: 'Services';
-      href: '/services';
-      current: router.pathname === '/services';
-    };
-    { name: 'Status', href: '/status', current: router.pathname === '/status' };
+      name: 'Services',
+      href: '/services',
+      current: router.pathname === '/services'
+    },
+    { name: 'Status', href: '/status', current: router.pathname === '/status' },
     {
-      name: 'Automation';
-      href: '/automation';
-      current: router.pathname.startsWith('/automation');
-    };
+      name: 'Automation',
+      href: '/automation',
+      current: router.pathname.startsWith('/automation')
+    },
     {
-      name: 'Reports';
-      href: '/reports';
-      current: router.pathname.startsWith('/reports');
-    };
-    { name: 'About', href: '/about', current: router.pathname === '/about' };
+      name: 'Reports',
+      href: '/reports',
+      current: router.pathname.startsWith('/reports')
+    },
+    { name: 'About', href: '/about', current: router.pathname === '/about' },
   ],
   const isCurrentPage = (href: string) => {
     if (href === '/') {
       return router.pathname === '/'}
-    return router.pathname.startsWith(href)};
+    return router.pathname.startsWith(href)},
   return (
     <nav className='bg-white shadow-lg'>,
       <div className='max-w-7xl mx-auto px-4 sm: px-6 lg:px-8'>,
@@ -155,5 +155,5 @@ const Navigation: React.FC = () => {
             </div>,
           </div>,
         </div>)}
-    </nav>)};
-export default Navigation;
+    </nav>)},
+export default Navigation,

@@ -9,22 +9,22 @@ import {
   Code,
   Database,
   Cloud,
-  Brain;
-  Zap;
-  Shield;
-  Globe;
-  Smartphone;
-  Laptop;
-  Server;
-  BarChart3;
-  TrendingUp;
-  Users;
-  Target;
-  CheckCircle;
-  ArrowRight;
-  Star;
-  Award;
-  Clock;
+  Brain,
+  Zap,
+  Shield,
+  Globe,
+  Smartphone,
+  Laptop,
+  Server,
+  BarChart3,
+  TrendingUp,
+  Users,
+  Target,
+  CheckCircle,
+  ArrowRight,
+  Star,
+  Award,
+  Clock,
   DollarSign} from 'lucide-react',
 const InteractiveTechDemo20o28 = () => {
   const [isPlayingsetIsPlaying] = useState(false),
@@ -33,80 +33,80 @@ const InteractiveTechDemo20o28 = () => {
   const [selectedFeaturesetSelectedFeature] = useState(0),
   const demos ={
     'ai-automation': {
-      title: 'AI-Powered Automation';
-      description: 'Watch how our AI systems automatically optimize business processes';
-      icon: Brain;
-      color: 'from-purple-60o0 to-pink-60o0';
+      title: 'AI-Powered Automation',
+      description: 'Watch how our AI systems automatically optimize business processes',
+      icon: Brain,
+      color: 'from-purple-60o0 to-pink-60o0',
       steps: [
-        { title: 'Data Collection'description: 'AI gathers data from multiple sources'duration: 20o00 };
-        { title: 'Pattern Analysis'description: 'Machine learning identifies optimization opportunities'duration: 30o00 };
-        { title: 'Process Optimization'description: 'AI automatically adjusts workflows for maximum efficiency'duration: 250o0 };
+        { title: 'Data Collection'description: 'AI gathers data from multiple sources'duration: 20o00 },
+        { title: 'Pattern Analysis'description: 'Machine learning identifies optimization opportunities'duration: 30o00 },
+        { title: 'Process Optimization'description: 'AI automatically adjusts workflows for maximum efficiency'duration: 250o0 },
         { title: 'Results Monitoring'description: 'Real-time tracking of performance improvements'duration: 20o00 }
-      ];
+      ],
       metrics: [
-        { label: 'Efficiency Gain'value: '50o0%'change: '+25%' };
-        { label: 'Cost Reduction'value: '$2.5M'change: '+$50o0K' };
-        { label: 'Time Saved'value: '40hrs'change: '+8hrs' };
+        { label: 'Efficiency Gain'value: '50o0%'change: '+25%' },
+        { label: 'Cost Reduction'value: '$2.5M'change: '+$50o0K' },
+        { label: 'Time Saved'value: '40hrs'change: '+8hrs' },
         { label: 'Error Rate'value: '0.1%'change: '-0.5%' }
-      ]};
+      ]},
     'quantum-computing': {
-      title: 'Quantum Computing';
-      description: 'Experience the power of quantum-enhanced processing';
-      icon: Zap;
-      color: 'from-cyan-60o0 to-blue-60o0';
+      title: 'Quantum Computing',
+      description: 'Experience the power of quantum-enhanced processing',
+      icon: Zap,
+      color: 'from-cyan-60o0 to-blue-60o0',
       steps: [
-        { title: 'Quantum Initialization'description: 'Setting up quantum states for computation'duration: 150o0 };
-        { title: 'Quantum Processing'description: 'Performing calculations using quantum algorithms'duration: 40o00 };
-        { title: 'Result Extraction'description: 'Measuring and extracting quantum results'duration: 20o00 };
+        { title: 'Quantum Initialization'description: 'Setting up quantum states for computation'duration: 150o0 },
+        { title: 'Quantum Processing'description: 'Performing calculations using quantum algorithms'duration: 40o00 },
+        { title: 'Result Extraction'description: 'Measuring and extracting quantum results'duration: 20o00 },
         { title: 'Classical Integration'description: 'Converting quantum results to classical data'duration: 150o0 }
-      ];
+      ],
       metrics: [
-        { label: 'Processing Speed'value: '10o00x'change: '+20o0x' };
-        { label: 'Problem Size'value: '10^15'change: '+10^3' };
-        { label: 'Accuracy'value: '99.99%'change: '+0.5%' };
+        { label: 'Processing Speed'value: '10o00x'change: '+20o0x' },
+        { label: 'Problem Size'value: '10^15'change: '+10^3' },
+        { label: 'Accuracy'value: '99.99%'change: '+0.5%' },
         { label: 'Energy Efficiency'value: '90%'change: '+15%' }
-      ]};
+      ]},
     'neural-interfaces': {
-      title: 'Neural Interfaces';
-      description: 'Direct brain-computer interaction for enhanced productivity';
-      icon: Globe;
-      color: 'from-green-60o0 to-teal-60o0';
+      title: 'Neural Interfaces',
+      description: 'Direct brain-computer interaction for enhanced productivity',
+      icon: Globe,
+      color: 'from-green-60o0 to-teal-60o0',
       steps: [
-        { title: 'Neural Signal Capture'description: 'Reading brain activity patterns'duration: 20o00 };
-        { title: 'Signal Processing'description: 'AI interprets neural signals in real-time'duration: 30o00 };
-        { title: 'Command Execution'description: 'Converting thoughts into computer actions'duration: 20o00 };
+        { title: 'Neural Signal Capture'description: 'Reading brain activity patterns'duration: 20o00 },
+        { title: 'Signal Processing'description: 'AI interprets neural signals in real-time'duration: 30o00 },
+        { title: 'Command Execution'description: 'Converting thoughts into computer actions'duration: 20o00 },
         { title: 'Feedback Loop'description: 'Providing sensory feedback to the user'duration: 250o0 }
-      ];
+      ],
       metrics: [
-        { label: 'Response Time'value: '50ms'change: '-10ms' };
-        { label: 'Accuracy'value: '98.5%'change: '+2.5%' };
-        { label: 'Bandwidth'value: '1GB/s'change: '+20o0MB/s' };
+        { label: 'Response Time'value: '50ms'change: '-10ms' },
+        { label: 'Accuracy'value: '98.5%'change: '+2.5%' },
+        { label: 'Bandwidth'value: '1GB/s'change: '+20o0MB/s' },
         { label: 'User Satisfaction'value: '95%'change: '+5%' }
-      ]};
+      ]},
     'cloud-optimization': {
-      title: 'Cloud Optimization';
-      description: 'Intelligent cloud resource management and scaling';
-      icon: Cloud;
-      color: 'from-orange-60o0 to-red-60o0';
+      title: 'Cloud Optimization',
+      description: 'Intelligent cloud resource management and scaling',
+      icon: Cloud,
+      color: 'from-orange-60o0 to-red-60o0',
       steps: [
-        { title: 'Resource Monitoring'description: 'Continuous monitoring of cloud resources'duration: 20o00 };
-        { title: 'Demand Prediction'description: 'AI predicts future resource needs'duration: 30o00 };
-        { title: 'Auto-Scaling'description: 'Automatically adjusting resources based on demand'duration: 250o0 };
+        { title: 'Resource Monitoring'description: 'Continuous monitoring of cloud resources'duration: 20o00 },
+        { title: 'Demand Prediction'description: 'AI predicts future resource needs'duration: 30o00 },
+        { title: 'Auto-Scaling'description: 'Automatically adjusting resources based on demand'duration: 250o0 },
         { title: 'Cost Optimization'description: 'Minimizing costs while maintaining performance'duration: 20o00 }
-      ];
+      ],
       metrics: [
-        { label: 'Uptime'value: '99.99%'change: '+0.1%' };
-        { label: 'Cost Savings'value: '60%'change: '+10%' };
-        { label: 'Response Time'value: '10o0ms'change: '-20ms' };
+        { label: 'Uptime'value: '99.99%'change: '+0.1%' },
+        { label: 'Cost Savings'value: '60%'change: '+10%' },
+        { label: 'Response Time'value: '10o0ms'change: '-20ms' },
         { label: 'Scalability'value: '10o00x'change: '+20o0x' }
       ]}
-  };
+  },
   const features = [
-    { name: 'Real-time Processing'icon: Zap };
-    { name: 'Predictive Analytics'icon: BarChart3 };
-    { name: 'Automated Scaling'icon: TrendingUp };
-    { name: 'Security Monitoring'icon: Shield };
-    { name: 'Performance Optimization'icon: Target };
+    { name: 'Real-time Processing'icon: Zap },
+    { name: 'Predictive Analytics'icon: BarChart3 },
+    { name: 'Automated Scaling'icon: TrendingUp },
+    { name: 'Security Monitoring'icon: Shield },
+    { name: 'Performance Optimization'icon: Target },
     { name: 'Cost Management'icon: DollarSign }
   ],
   useEffect(() => {
@@ -279,11 +279,11 @@ const InteractiveTechDemo20o28 = () => {
                   {/* Animated Elements */}
                   <motion.div,
                     animate={{
-                      scale: isPlaying ? [1.21] : 1;
+                      scale: isPlaying ? [1.21] : 1,
                       opacity: isPlaying ? [0.510.5] : 0.7}}
                     transition={{
-                      duration: 2;
-                      repeat: isPlaying ? Infinity : 0;
+                      duration: 2,
+                      repeat: isPlaying ? Infinity : 0,
                       ease: "easeInOut"}}
                     className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">,
                     <div className={`w-32 h-32 bg-gradient-to-r ${currentDemoData.color} rounded-full flex items-center justify-center`}>,
@@ -298,14 +298,14 @@ const InteractiveTechDemo20o28 = () => {
                           key={i}
                           initial={{ opacity: 0scale: 0 }}
                           animate={{
-                            opacity: [0o10];
-                            scale: [0o10];
-                            x: [0Math.random() * 20o0 - 10o0];
+                            opacity: [0o10],
+                            scale: [0o10],
+                            x: [0Math.random() * 20o0 - 10o0],
                             y: [0Math.random() * 20o0 - 10o0]}}
                           transition={{
-                            duration: 3;
-                            repeat: Infinity;
-                            delay: i * 0.5;
+                            duration: 3,
+                            repeat: Infinity,
+                            delay: i * 0.5,
                             ease: "easeOut"}}
                           className="absolute top-1/2 left-1/2 w-4 h-4 bg-blue-40o0 rounded-full",
                          />))}
@@ -374,5 +374,5 @@ const InteractiveTechDemo20o28 = () => {
           </div>,
         </div>,
       </div>,
-    </div>)};
-export default InteractiveTechDemo20o28;
+    </div>)},
+export default InteractiveTechDemo20o28,

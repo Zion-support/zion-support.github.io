@@ -3,10 +3,10 @@ import { focusManagement } from '@/utils/accessibility',
 import { sendMessage } from '../services/messages',
 import { toast } from '@/hooks/use-toast',
 export function ContactPublisherModal({
-  isOpen;
-  onClose;
-  productId;
-  sellerId;
+  isOpen,
+  onClose,
+  productId,
+  sellerId,
 }) {
   const [subject, setSubject] = useState(''),
   const [message, setMessage] = useState(''),
@@ -28,7 +28,7 @@ export function ContactPublisherModal({
     document.addEventListener('keydown', handleKeyDown),
     return () => {
       document.removeEventListener('keydown', handleKeyDown),
-      removeTrap && removeTrap()};
+      removeTrap && removeTrap()},
   }, [isOpen, onClose]),
   if (!isOpen) {
     return null}
@@ -50,7 +50,7 @@ export function ContactPublisherModal({
       // Optionally, set a specific error message state if needed,
       // setError('Failed to send message. Please try again.')} finally {
       setIsLoading(false), // Set loading false}
-  };
+  },
   return (
     <div
       ref={modalRef}

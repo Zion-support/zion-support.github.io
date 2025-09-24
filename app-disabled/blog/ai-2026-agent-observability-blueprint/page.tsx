@@ -1,18 +1,16 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 import SEO from '../../components/SEO',
 export const metadata = {
-  title: 'AI 20o26: Agent Observability Blueprint | Zion Tech Group';
+  title: 'AI 20o26: Agent Observability Blueprint | Zion Tech Group',
   description:,
-    'Deep visibility into autonomous agents: traces, evaluations, and safety telemetry across the lifecycle.';
+    'Deep visibility into autonomous agents: traces, evaluations, and safety telemetry across the lifecycle.',
   keywords: [
-    'agent observability';
-    'tracing';
-    'telemetry';
-    'evals';
-    'governance';
-  ];
-};
+    'agent observabilitytracing',
+    'telemetryevals',
+    'governance',
+  ]
+},
 const AgentObservabilityBlueprint: React.FC = () => {
   return (
     <div className='min-h-screen bg-white'>,
@@ -67,5 +65,5 @@ const AgentObservabilityBlueprint: React.FC = () => {
           </Link>,
         </div>,
       </article>,
-    </div>)};
-export default AgentObservabilityBlueprint;
+    </div>)},
+export default AgentObservabilityBlueprint,

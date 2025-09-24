@@ -1,5 +1,8 @@
-import React from react',import { render, screen } from @testing-library/react',import { MemoryRouter, Routes, Route } from react-router-dom',import ProtectedRoute from @/components/ProtectedRoute',import { useAuth } from @/hooks/useAuth',import { useTenantAdminStatus } from @/hooks/useWhitelabelTenant',import { useWhitelabel } from @/context/WhitelabelContext',
-jest.mock('@/hooks/useAuth'),jest.mock('@/hooks/useWhitelabelTenant'),jest.mock('@/context/WhitelabelContext');
+import React from react',
+import { render, screen } from @testing-library/react',import { MemoryRouter, Routes, Route } from react-router-dom',import ProtectedRoute from @/components/ProtectedRoute',
+import { useAuth } from @/hooks/useAuth',import { useTenantAdminStatus } from @/hooks/useWhitelabelTenant',
+import { useWhitelabel } from @/context/WhitelabelContext',
+jest.mock('@/hooks/useAuth'),jest.mock('@/hooks/useWhitelabelTenant'),jest.mock('@/context/WhitelabelContext'),
 const mockUseAuth = useAuth as jest.Mock,
 const mockUseTenantAdminStatus = useTenantAdminStatus as jest.Mock,
 const mockUseWhitelabel = useWhitelabel as jest.Mock,

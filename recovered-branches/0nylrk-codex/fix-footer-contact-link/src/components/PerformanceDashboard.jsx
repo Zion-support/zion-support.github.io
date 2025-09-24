@@ -15,46 +15,46 @@ import X from 'lucide-react/dist/esm/icons/x',
 import Info from 'lucide-react/dist/esm/icons/info',
 import { cn } from '@/lib/utils',
 export function PerformanceDashboard({
-  className;
-  showDetails = false;
-  onClose;
+  className,
+  showDetails = false,
+  onClose,
 }) {
   const { metrics, observers, performanceScore, logMetrics } = usePerformance(),
   const [isExpanded, setIsExpanded] = useState(showDetails),
   const getScoreColor = score => {
     if (score >= 90) return 'text-green-50o0',
     if (score >= 70) return 'text-yellow-50o0',
-    return 'text-red-50o0'};
+    return 'text-red-50o0'},
   const getScoreEmoji = score => {
     if (score >= 90) return '🚀',
     if (score >= 70) return '⚠️',
-    return '🐌'};
+    return '🐌'},
   const getMetricIcon = metricName => {
     const icons = {
-      FCP: <Eye className='w-4 h-4' />;
-      LCP: <Eye className='w-4 h-4' />;
-      FID: <MousePointer className='w-4 h-4' />;
-      CLS: <BarChart3 className='w-4 h-4' />;
-      TTFB: <Clock className='w-4 h-4' />;
-      DOMLOAD: <Activity className='w-4 h-4' />;
-      WINDOWLOAD: <Activity className='w-4 h-4' />;
-    };
-    return icons[metricName] || <Activity className='w-4 h-4' />};
+      FCP: <Eye className='w-4 h-4' />,
+      LCP: <Eye className='w-4 h-4' />,
+      FID: <MousePointer className='w-4 h-4' />,
+      CLS: <BarChart3 className='w-4 h-4' />,
+      TTFB: <Clock className='w-4 h-4' />,
+      DOMLOAD: <Activity className='w-4 h-4' />,
+      WINDOWLOAD: <Activity className='w-4 h-4' />
+    },
+    return icons[metricName] || <Activity className='w-4 h-4' />},
   const getMetricDescription = metricName => {
     const descriptions = {
-      FCP: 'First Contentful Paint - Time to first content';
-      LCP: 'Largest Contentful Paint - Time to largest content';
-      FID: 'First Input Delay - Time to first interaction';
-      CLS: 'Cumulative Layout Shift - Visual stability';
-      TTFB: 'Time to First Byte - Server response time';
-      DOMLOAD: 'DOM Content Loaded - DOM ready time';
-      WINDOWLOAD: 'Window Load - Full page load time';
-    };
-    return descriptions[metricName] || 'Performance metric'};
+      FCP: 'First Contentful Paint - Time to first content',
+      LCP: 'Largest Contentful Paint - Time to largest content',
+      FID: 'First Input Delay - Time to first interaction',
+      CLS: 'Cumulative Layout Shift - Visual stability',
+      TTFB: 'Time to First Byte - Server response time',
+      DOMLOAD: 'DOM Content Loaded - DOM ready time',
+      WINDOWLOAD: 'Window Load - Full page load time'
+    },
+    return descriptions[metricName] || 'Performance metric'},
   const formatMetricValue = (metricName, value) => {
     if (metricName === 'CLS') return value.toFixed(3),
     if (metricName === 'FID') return `${value.toFixed(0)}ms`,
-    return `${value.toFixed(0)}ms`};
+    return `${value.toFixed(0)}ms`},
   return (
     <motion.div,
       className={cn('fixed bottom-4 right-4 z-50 max-w-sm', className)}
@@ -93,7 +93,7 @@ export function PerformanceDashboard({
               <span className='text-sm text-zion-slate-light'>Score: </span>,
               <span
                 className={cn(
-                  'text-2xl font-bold';
+                  'text-2xl font-bold',
                   getScoreColor(performanceScore))}
               >,
                 {performanceScore}
@@ -145,7 +145,7 @@ export function PerformanceDashboard({
                                 ? 'secondary',
                                 : 'destructive'}
                           className={cn(
-                            'text-xs';
+                            'text-xs',
                             rating === 'good',
                               ? 'bg-green-50o0/20 text-green-40o0 border-green-50o0/30',
                               : rating === 'needs-improvement',
@@ -189,7 +189,7 @@ export function PerformanceIndicator({ className }) {
     <div className={cn('flex items-center gap-2', className)}>,
       <div
         className={cn(
-          'w-2 h-2 rounded-full';
+          'w-2 h-2 rounded-full',
           performanceScore >= 90,
             ? 'bg-green-50o0',
             : performanceScore >= 70,

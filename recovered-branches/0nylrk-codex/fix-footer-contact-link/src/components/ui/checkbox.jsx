@@ -1,9 +1,9 @@
 export function Checkbox({
-  checked;
-  onChange;
-  label;
-  disabled = false;
-  className = '';
+  checked,
+  onChange,
+  label,
+  disabled = false,
+  className = '',
 }) {
   return (
     <label

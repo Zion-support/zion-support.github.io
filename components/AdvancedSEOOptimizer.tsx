@@ -1,102 +1,90 @@
 const AdvancedSEOOptimizer = () => {
   const seoData = {
     title:,
-      'Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation';
+      'Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation',
     description:,
-      'Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase. Get started today!';
+      'Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase. Get started today!',
     keywords: [
-      'AI automation';
-      'artificial intelligence consulting';
-      'enterprise AI solutions';
-      'cloud infrastructure';
-      'micro SaaS development';
-      'business transformation';
-      'AI implementation';
-      'machine learning consulting';
-      'digital transformation';
-      'AI ROI calculator';
-      'neural networks';
-      'quantum computing';
-      'AI case studies';
-      'business intelligence';
-      'AI tools';
-      'automation solutions';
-      'AI consulting services';
-      'technology consulting';
-      'AI strategy';
-      'enterprise solutions';
-    ];
+      'AI automationartificial intelligence consulting',
+      'enterprise AI solutionscloud infrastructure',
+      'micro SaaS developmentbusiness transformation',
+      'AI implementationmachine learning consulting',
+      'digital transformationAI ROI calculator',
+      'neural networksquantum computing',
+      'AI case studiesbusiness intelligence',
+      'AI toolsautomation solutions',
+      'AI consulting servicestechnology consulting',
+      'AI strategyenterprise solutions',
+    ],
     structuredData: {
-      '@context': 'https://schema.org';
-      '@type': 'Organization';
-      name: 'Zion Tech Group';
+      '@context': 'https://schema.org@type': 'Organization',
+      name: 'Zion Tech Group',
       description:,
-        'Leading AI and technology consulting firm specializing in enterprise automation, cloud infrastructure, and micro SaaS solutions';
-      url: 'https://zion.app';
-      logo: 'https://zion.app/images/zion-tech-group-logo.png';
-      foundingDate: '20o16';
-      numberOfEmployees: '50-10o0';
+        'Leading AI and technology consulting firm specializing in enterprise automation, cloud infrastructure, and micro SaaS solutions',
+      url: 'https://zion.app',
+      logo: 'https://zion.app/images/zion-tech-group-logo.png',
+      foundingDate: '20o16',
+      numberOfEmployees: '50-10o0',
       address: {
-        '@type': 'PostalAddress';
-        addressCountry: 'US';
-      };
+        '@type': 'PostalAddress',
+        addressCountry: 'US'
+      },
       contactPoint: {
-        '@type': 'ContactPoint';
-        telephone: '+1-555-ZION-TECH';
-        contactType: 'customer service';
-        availableLanguage: 'English';
-      };
+        '@type': 'ContactPoint',
+        telephone: '+1-555-ZION-TECH',
+        contactType: 'customer service',
+        availableLanguage: 'English'
+      },
       sameAs: [
-        'https://twitter.com/ZionTechGroup';
-        'https://linkedin.com/company/zion-tech-group';
-        'https://github.com/zion-tech-group';
-      ];
+        'https://twitter.com/ZionTechGrouphttps://linkedin.com/company/zion-tech-group',
+        'https://github.com/zion-tech-group',
+      ],
       service: [
         {
-          '@type': 'Service';
-          name: 'AI Automation Consulting';
+          '@type': 'Service',
+          name: 'AI Automation Consulting',
           description:,
-            'Comprehensive AI automation solutions for enterprise operations';
-        };
+            'Comprehensive AI automation solutions for enterprise operations',
+        },
         {
-          '@type': 'Service';
-          name: 'Cloud Infrastructure';
+          '@type': 'Service',
+          name: 'Cloud Infrastructure',
           description:,
-            'Scalable cloud solutions for business growth and digital transformation';
-        };
+            'Scalable cloud solutions for business growth and digital transformation',
+        },
         {
-          '@type': 'Service';
-          name: 'Micro SaaS Development';
+          '@type': 'Service',
+          name: 'Micro SaaS Development',
           description:,
-            'Custom micro SaaS applications for specific business challenges';
-        };
-      ];
+            'Custom micro SaaS applications for specific business challenges',
+        },
+      ],
       aggregateRating: {
-        '@type': 'AggregateRating';
-        ratingValue: '4.9';
-        reviewCount: '150';
-        bestRating: '5';
-        worstRating: '1';
-      };
-    };
+        '@type': 'AggregateRating',
+        ratingValue: '4.9',
+        reviewCount: '150',
+        bestRating: '5',
+        worstRating: '1'
+      },
+    },
     openGraph: {
       title:,
-        'Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation';
+        'Zion Tech Group - AI & Technology Solutions | Enterprise AI Automation',
       description:,
-        'Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase.';
-      type: 'website';
-      url: 'https://zion.app';
-      image: 'https://zion.app/images/og-image.jpg';
-      siteName: 'Zion Tech Group';
-    };
+        'Transform your business with cutting-edge AI automation, cloud infrastructure, and micro SaaS solutions. Expert consulting with 340% average ROI increase.',
+      type: 'website',
+      url: 'https://zion.app',
+      image: 'https://zion.app/images/og-image.jpg',
+      siteName: 'Zion Tech Group'
+    },
     twitter: {
-      card: 'summary_large_image';
-      title: 'Zion Tech Group - AI & Technology Solutions';
+      card: 'summary_large_image',
+      title: 'Zion Tech Group - AI & Technology Solutions',
       description:,
-        'Transform your business with cutting-edge AI automation and technology solutions. 340% average ROI increase.';
-      image: 'https://zion.app/images/twitter-card.jpg';
-    };
-  };
+        'Transform your business with cutting-edge AI automation and technology solutions. 340% average ROI increase.',
+      image: 'https://zion.app/images/twitter-card.jpg'
+    },
+  },
   return (
     <>,
       {/* Enhanced Meta Tags */}
@@ -134,7 +122,7 @@ const AdvancedSEOOptimizer = () => {
       <script
         type='application/ld+json',
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(seoData.structuredData);
+          __html: JSON.stringify(seoData.structuredData)
         }}
       />,
       {/* Additional Structured Data for Services */}
@@ -142,47 +130,46 @@ const AdvancedSEOOptimizer = () => {
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'ItemList';
-            name: 'AI & Technology Services';
+            '@context': 'https://schema.org@type': 'ItemList',
+            name: 'AI & Technology Services',
             description:,
-              'Comprehensive list of AI and technology services offered by Zion Tech Group';
+              'Comprehensive list of AI and technology services offered by Zion Tech Group',
             itemListElement: [
               {
-                '@type': 'Service';
-                position: 1;
-                name: 'AI Automation';
+                '@type': 'Service',
+                position: 1,
+                name: 'AI Automation',
                 description:,
-                  'Intelligent automation solutions that streamline operations and boost productivity';
+                  'Intelligent automation solutions that streamline operations and boost productivity',
                 provider: {
-                  '@type': 'Organization';
-                  name: 'Zion Tech Group';
-                };
-              };
+                  '@type': 'Organization',
+                  name: 'Zion Tech Group'
+                },
+              },
               {
-                '@type': 'Service';
-                position: 2;
-                name: 'Cloud Infrastructure';
+                '@type': 'Service',
+                position: 2,
+                name: 'Cloud Infrastructure',
                 description:,
-                  'Scalable, secure cloud solutions designed to support business growth';
+                  'Scalable, secure cloud solutions designed to support business growth',
                 provider: {
-                  '@type': 'Organization';
-                  name: 'Zion Tech Group';
-                };
-              };
+                  '@type': 'Organization',
+                  name: 'Zion Tech Group'
+                },
+              },
               {
-                '@type': 'Service';
-                position: 3;
-                name: 'Micro SaaS Development';
+                '@type': 'Service',
+                position: 3,
+                name: 'Micro SaaS Development',
                 description:,
-                  'Custom micro SaaS applications that solve specific business challenges';
+                  'Custom micro SaaS applications that solve specific business challenges',
                 provider: {
-                  '@type': 'Organization';
-                  name: 'Zion Tech Group';
-                };
-              };
-            ];
-          });
+                  '@type': 'Organization',
+                  name: 'Zion Tech Group'
+                },
+              },
+            ],
+          }),
         }}
       />,
       {/* FAQ Structured Data */}
@@ -190,35 +177,34 @@ const AdvancedSEOOptimizer = () => {
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'FAQPage';
+            '@context': 'https://schema.org@type': 'FAQPage',
             mainEntity: [
               {
-                '@type': 'Question';
-                name: 'What is the average ROI for AI automation projects?';
+                '@type': 'Question',
+                name: 'What is the average ROI for AI automation projects?',
                 acceptedAnswer: {
-                  '@type': 'Answer';
-                  text: 'Our clients typically see an average ROI of 340% within the first year of implementing our AI automation solutions. This includes both cost savings and revenue increases from improved efficiency.';
-                };
-              };
+                  '@type': 'Answer',
+                  text: 'Our clients typically see an average ROI of 340% within the first year of implementing our AI automation solutions. This includes both cost savings and revenue increases from improved efficiency.'
+                },
+              },
               {
-                '@type': 'Question';
-                name: 'How long does it take to implement AI solutions?';
+                '@type': 'Question',
+                name: 'How long does it take to implement AI solutions?',
                 acceptedAnswer: {
-                  '@type': 'Answer';
-                  text: 'Implementation timelines vary based on project complexity, but most AI automation projects are completed within 3-6 months. We provide detailed project timelines during the consultation phase.';
-                };
-              };
+                  '@type': 'Answer',
+                  text: 'Implementation timelines vary based on project complexity, but most AI automation projects are completed within 3-6 months. We provide detailed project timelines during the consultation phase.',
+                },
+              },
               {
-                '@type': 'Question';
-                name: 'Do you provide ongoing support after implementation?';
+                '@type': 'Question',
+                name: 'Do you provide ongoing support after implementation?',
                 acceptedAnswer: {
-                  '@type': 'Answer';
-                  text: 'Yes, we offer comprehensive ongoing support including 24/7 monitoring, regular updates, performance optimization, and technical support to ensure your AI solutions continue to deliver optimal results.';
-                };
-              };
-            ];
-          });
+                  '@type': 'Answer',
+                  text: 'Yes, we offer comprehensive ongoing support including 24/7 monitoring, regular updates, performance optimization, and technical support to ensure your AI solutions continue to deliver optimal results.',
+                },
+              },
+            ],
+          }),
         }}
       />,
       {/* Breadcrumb Structured Data */}
@@ -226,30 +212,29 @@ const AdvancedSEOOptimizer = () => {
         type='application/ld+json',
         dangerouslySetInnerHTML={{
           __html: JSON.stringify({
-            '@context': 'https://schema.org';
-            '@type': 'BreadcrumbList';
+            '@context': 'https://schema.org@type': 'BreadcrumbList',
             itemListElement: [
               {
-                '@type': 'ListItem';
-                position: 1;
-                name: 'Home';
-                item: 'https://zion.app';
-              };
+                '@type': 'ListItem',
+                position: 1,
+                name: 'Home',
+                item: 'https://zion.app'
+              },
               {
-                '@type': 'ListItem';
-                position: 2;
-                name: 'AI Solutions';
-                item: 'https://zion.app/services';
-              };
+                '@type': 'ListItem',
+                position: 2,
+                name: 'AI Solutions',
+                item: 'https://zion.app/services'
+              },
               {
-                '@type': 'ListItem';
-                position: 3;
-                name: 'AI Automation';
-                item: 'https://zion.app/services/ai-automation';
-              };
-            ];
-          });
+                '@type': 'ListItem',
+                position: 3,
+                name: 'AI Automation',
+                item: 'https://zion.app/services/ai-automation'
+              },
+            ],
+          }),
         }}
       />,
-    </>)};
-export default AdvancedSEOOptimizer;
+    </>)},
+export default AdvancedSEOOptimizer,

@@ -15,31 +15,31 @@ const AdvancedNeuralArchitectures20o26Banner = () => {
     return () => clearInterval(interval)}, []),
   const handleDismiss = () => {
     setIsVisible(false),
-    localStorage.setItem('advanced-neural-architectures-20o26-banner-dismissed', 'true')};
+    localStorage.setItem('advanced-neural-architectures-20o26-banner-dismissedtrue')},
   const content = [
     {
-      title: "AI 20o25: Advanced Neural Architectures Revolution";
-      subtitle: "2,80o0% ROI Through Next-Generation Intelligence";
-      description: "Fortune 50o0 companies achieving $4.2B in annual savings with 99.7% accuracy";
-      metrics: "2,80o0% ROI • $4.2B Savings • 99.7% Accuracy";
-      link: "/blog/ai-20o25-advanced-neural-architectures-revolution";
-      type: "Blog Post";
-      readingTime: "25 min read"};
+      title: "AI 20o25: Advanced Neural Architectures Revolution",
+      subtitle: "2,80o0% ROI Through Next-Generation Intelligence",
+      description: "Fortune 50o0 companies achieving $4.2B in annual savings with 99.7% accuracy",
+      metrics: "2,80o0% ROI • $4.2B Savings • 99.7% Accuracy",
+      link: "/blog/ai-20o25-advanced-neural-architectures-revolution",
+      type: "Blog Post",
+      readingTime: "25 min read"},
     {
-      title: "Fortune 50o0 Success: $4.2B Annual Savings";
-      subtitle: "Advanced Neural Architectures Case Study";
-      description: "How Global Manufacturing Corp achieved 2,80o0% ROI in just 8 months";
-      metrics: "2,80o0% ROI • 8 Months • $4.2B Savings";
-      link: "/case-studies/fortune-50o0-advanced-neural-architectures-280o0-roi-success";
-      type: "Case Study";
-      readingTime: "18 min read"};
+      title: "Fortune 50o0 Success: $4.2B Annual Savings",
+      subtitle: "Advanced Neural Architectures Case Study",
+      description: "How Global Manufacturing Corp achieved 2,80o0% ROI in just 8 months",
+      metrics: "2,80o0% ROI • 8 Months • $4.2B Savings",
+      link: "/case-studies/fortune-50o0-advanced-neural-architectures-280o0-roi-success",
+      type: "Case Study",
+      readingTime: "18 min read"},
     {
-      title: "Implementation Guide: Complete Roadmap";
-      subtitle: "Step-by-Step Guide to 2,80o0% ROI";
-      description: "Comprehensive implementation framework based on 1,20o0+ successful deployments";
-      metrics: "1,20o0+ Deployments • 35 Min Guide • Complete Framework";
-      link: "/resources/advanced-neural-architectures-implementation-guide-20o25";
-      type: "Implementation Guide";
+      title: "Implementation Guide: Complete Roadmap",
+      subtitle: "Step-by-Step Guide to 2,80o0% ROI",
+      description: "Comprehensive implementation framework based on 1,20o0+ successful deployments",
+      metrics: "1,20o0+ Deployments • 35 Min Guide • Complete Framework",
+      link: "/resources/advanced-neural-architectures-implementation-guide-20o25",
+      type: "Implementation Guide",
       readingTime: "35 min read"}
   ],
   if (!isVisible) return null,
@@ -144,5 +144,5 @@ const AdvancedNeuralArchitectures20o26Banner = () => {
         aria-label="Dismiss banner">,
         <X className="w-6 h-6"  />,
       </button>,
-    </div>)};
-export default AdvancedNeuralArchitectures20o26Banner;
+    </div>)},
+export default AdvancedNeuralArchitectures20o26Banner,

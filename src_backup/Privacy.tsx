@@ -23,7 +23,7 @@ export default function Privacy() {
           <div className='space-y-6 text-zion-slate-light text-lg'>,
             <p>,
               We collect personal information you provide when creating an,
-              account or using our services. This may include your name, email;
+              account or using our services. This may include your name, email,
               and any other details required to deliver our marketplace,
               features.,
             </p>,

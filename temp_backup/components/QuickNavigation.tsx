@@ -10,94 +10,94 @@ export default function QuickNavigation() {
   const quickNavItems: QuickNavItem[] = [
     // Primary navigation,
     {
-      title: 'Automation Hub';
-      href: '/automation';
-      description: 'Live autonomous systems';
-      icon: '🤖';
-      category: 'primary';
-    };
+      title: 'Automation Hub',
+      href: '/automation',
+      description: 'Live autonomous systems',
+      icon: '🤖',
+      category: 'primary'
+    },
     {
-      title: 'Reports & Content';
-      href: '/reports';
-      description: 'Browse our content library';
-      icon: '📊';
-      category: 'primary';
-    };
+      title: 'Reports & Content',
+      href: '/reports',
+      description: 'Browse our content library',
+      icon: '📊',
+      category: 'primary'
+    },
     {
-      title: 'Component Library';
-      href: '/components';
-      description: 'UI components & playground';
-      icon: '🧩';
-      category: 'primary';
-    };
+      title: 'Component Library',
+      href: '/components',
+      description: 'UI components & playground',
+      icon: '🧩',
+      category: 'primary'
+    },
     {
-      title: 'Explore Features';
-      href: '/explore';
-      description: 'Discover all capabilities';
-      icon: '🔍';
-      category: 'primary';
-    };
+      title: 'Explore Features',
+      href: '/explore',
+      description: 'Discover all capabilities',
+      icon: '🔍',
+      category: 'primary'
+    },
     // Secondary navigation,
     {
-      title: 'Newsroom';
-      href: '/newsroom';
-      description: 'Latest updates & news';
-      icon: '📰';
-      category: 'secondary';
-    };
+      title: 'Newsroom',
+      href: '/newsroom',
+      description: 'Latest updates & news',
+      icon: '📰',
+      category: 'secondary'
+    },
     {
-      title: 'Site Health';
-      href: '/site-health';
-      description: 'Performance & diagnostics';
-      icon: '🏥';
-      category: 'secondary';
-    };
+      title: 'Site Health',
+      href: '/site-health',
+      description: 'Performance & diagnostics',
+      icon: '🏥',
+      category: 'secondary'
+    },
     {
-      title: 'Search';
-      href: '/search';
-      description: 'Find content across site';
-      icon: '🔎';
-      category: 'secondary';
-    };
+      title: 'Search',
+      href: '/search',
+      description: 'Find content across site',
+      icon: '🔎',
+      category: 'secondary'
+    },
     {
-      title: 'Playground';
-      href: '/playground';
-      description: 'Test & experiment';
-      icon: '🎮';
-      category: 'secondary';
-    };
+      title: 'Playground',
+      href: '/playground',
+      description: 'Test & experiment',
+      icon: '🎮',
+      category: 'secondary'
+    },
     // Utility navigation,
     {
-      title: 'Sitemap';
-      href: '/sitemap.xml';
-      description: 'Complete site index';
-      icon: '🗺️';
-      category: 'utility';
-    };
+      title: 'Sitemap',
+      href: '/sitemap.xml',
+      description: 'Complete site index',
+      icon: '🗺️',
+      category: 'utility'
+    },
     {
-      title: 'Navigation';
-      href: '/navigation';
-      description: 'Enhanced navigation';
-      icon: '🧭';
-      category: 'utility';
-    };
+      title: 'Navigation',
+      href: '/navigation',
+      description: 'Enhanced navigation',
+      icon: '🧭',
+      category: 'utility'
+    },
     {
-      title: 'Contact';
-      href: '/contact';
-      description: 'Get in touch';
-      icon: '📞';
-      category: 'utility';
-    };
+      title: 'Contact',
+      href: '/contact',
+      description: 'Get in touch',
+      icon: '📞',
+      category: 'utility'
+    },
     {
-      title: 'Landing';
-      href: '/landing';
-      description: 'Landing page';
-      icon: '🚀';
-      category: 'utility';
-    };
+      title: 'Landing',
+      href: '/landing',
+      description: 'Landing page',
+      icon: '🚀',
+      category: 'utility'
+    },
   ],
   const getCategoryItems = (category: QuickNavItem['category']) => {
-    return quickNavItems.filter(item => item.category === category)};
+    return quickNavItems.filter(item => item.category === category)},
   return (
     <div className='bg-slate-90o0/50 border border-white/10 rounded-xl p-6 mb-8'>,
       <div className='mb-6'>,

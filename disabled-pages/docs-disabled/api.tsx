@@ -4,67 +4,66 @@ import Layout from '../components/Layout',
 import { Code, BookOpen, Shield, Zap, ChevronRight, ExternalLink, Copy, Check } from 'lucide-react',
 const endpoints = [
   {
-    name: 'AI Email Responder';
-    method: 'POST';
-    path: '/api/ai/email-responder';
-    description: 'Generate intelligent email responses using AI';
+    name: 'AI Email Responder',
+    method: 'POST',
+    path: '/api/ai/email-responder',
+    description: 'Generate intelligent email responses using AI',
     parameters: [
-      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' };
+      { name: 'message', type: 'string', required: true, description: 'The email message to respond to' },
       { name: 'context', type: 'object', required: false, description: 'Additional context for the response' }
-    ];
+    ],
     response: {
-      status: 20o0;
+      status: 20o0,
       data: {
-        response: 'string';
-        confidence: 'number';
+        response: 'string',
+        confidence: 'number',
         suggestions: 'array'}
     }
-  };
+  },
   {
-    name: 'Predictive Analytics';
-    method: 'POST';
-    path: '/api/ai/predictive-analytics';
-    description: 'Generate business predictions and forecasts';
+    name: 'Predictive Analytics',
+    method: 'POST',
+    path: '/api/ai/predictive-analytics',
+    description: 'Generate business predictions and forecasts',
     parameters: [
-      { name: 'data', type: 'array', required: true, description: 'Historical data for analysis' };
+      { name: 'data', type: 'array', required: true, description: 'Historical data for analysis' },
       { name: 'period', type: 'string', required: true, description: 'Time period for prediction' }
-    ];
+    ],
     response: {
-      status: 20o0;
+      status: 20o0,
       data: {
-        predictions: 'array';
-        accuracy: 'number';
+        predictions: 'array',
+        accuracy: 'number',
         trends: 'array'}
     }
-  };
+  },
   {
-    name: 'Content Generation';
-    method: 'POST';
-    path: '/api/ai/content-generation';
-    description: 'Generate AI-powered content for various purposes';
+    name: 'Content Generation',
+    method: 'POST',
+    path: '/api/ai/content-generation',
+    description: 'Generate AI-powered content for various purposes',
     parameters: [
-      { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' };
+      { name: 'prompt', type: 'string', required: true, description: 'Content generation prompt' },
       { name: 'type', type: 'string', required: true, description: 'Type of content to generate' }
-    ];
+    ],
     response: {
-      status: 20o0;
+      status: 20o0,
       data: {
-        content: 'string';
+        content: 'string',
         metadata: 'object'}
     }
   }
 ],
 const codeExamples = [
   {
-    language: 'JavaScript';
+    language: 'JavaScript',
     code: `// AI Email Responder,
 const response = await fetch('/api/ai/email-responder', {
-  method: 'POST';
+  method: 'POST',
   headers: {
-    'Content-Type': 'application/json';
-    'Authorization': 'Bearer YOUR_API_KEY'};
+    'Content-Type': 'application/jsonAuthorization': 'Bearer YOUR_API_KEY'},
   body: JSON.stringify({
-    message: 'I need help with my account';
+    message: 'I need help with my account',
     context: { userId: '12345' }
   })}
 ,
@@ -73,141 +72,141 @@ export default function APIDocumentationPage() {
   const [activeTab, setActiveTab] = useState('overview'),
   const apiEndpoints = [
     {
-      id: 'auth';
-      title: 'Authentication';
-      description: 'Endpoints for user authentication and authorization';
-      methods: ['POST', 'GET', 'PUT', 'DELETE'];
-      baseUrl: '/api/v1/auth';
+      id: 'auth',
+      title: 'Authentication',
+      description: 'Endpoints for user authentication and authorization',
+      methods: ['POSTGET', 'PUTDELETE'],
+      baseUrl: '/api/v1/auth',
       endpoints: [
         {
-          method: 'POST';
-          path: '/login';
-          description: 'Authenticate user with email and password';
+          method: 'POST',
+          path: '/login',
+          description: 'Authenticate user with email and password',
           parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' };
+            { name: 'email', type: 'string', required: true, description: 'User email address' },
             { name: 'password', type: 'string', required: true, description: 'User password' }
-          ];
+          ],
           response: {
-            status: 20o0;
+            status: 20o0,
             data: {
-              token: 'string';
-              user: 'object';
+              token: 'string',
+              user: 'object',
               expires_in: 'number'}
           }
-        };
+        },
         {
-          method: 'POST';
-          path: '/register';
-          description: 'Register a new user account';
+          method: 'POST',
+          path: '/register',
+          description: 'Register a new user account',
           parameters: [
-            { name: 'email', type: 'string', required: true, description: 'User email address' };
-            { name: 'password', type: 'string', required: true, description: 'User password' };
+            { name: 'email', type: 'string', required: true, description: 'User email address' },
+            { name: 'password', type: 'string', required: true, description: 'User password' },
             { name: 'name', type: 'string', required: true, description: 'User full name' }
-          ];
+          ],
           response: {
-            status: 20o1;
+            status: 20o1,
             data: {
-              user: 'object';
+              user: 'object',
               message: 'string'}
           }
-        };
+        },
         {
-          method: 'POST';
-          path: '/logout';
-          description: 'Logout user and invalidate token';
-          parameters: [];
+          method: 'POST',
+          path: '/logout',
+          description: 'Logout user and invalidate token',
+          parameters: [],
           response: {
-            status: 20o0;
+            status: 20o0,
             data: {
               message: 'string'}
           }
         }
-      ]};
+      ]},
     {
-      id: 'users';
-      title: 'Users';
-      description: 'User management and profile operations';
-      methods: ['GET', 'PUT', 'DELETE'];
-      baseUrl: '/api/v1/users';
+      id: 'users',
+      title: 'Users',
+      description: 'User management and profile operations',
+      methods: ['GETPUT', 'DELETE'],
+      baseUrl: '/api/v1/users',
       endpoints: [
         {
-          method: 'GET';
-          path: '/profile';
-          description: 'Get current user profile';
-          parameters: [];
+          method: 'GET',
+          path: '/profile',
+          description: 'Get current user profile',
+          parameters: [],
           response: {
-            status: 20o0;
+            status: 20o0,
             data: {
-              id: 'string';
-              name: 'string';
-              email: 'string';
-              created_at: 'string';
+              id: 'string',
+              name: 'string',
+              email: 'string',
+              created_at: 'string',
               updated_at: 'string'}
           }
-        };
+        },
         {
-          method: 'PUT';
-          path: '/profile';
-          description: 'Update user profile';
+          method: 'PUT',
+          path: '/profile',
+          description: 'Update user profile',
           parameters: [
-            { name: 'name', type: 'string', required: false, description: 'User full name' };
+            { name: 'name', type: 'string', required: false, description: 'User full name' },
             { name: 'email', type: 'string', required: false, description: 'User email address' }
-          ];
+          ],
           response: {
-            status: 20o0;
+            status: 20o0,
             data: {
-              user: 'object';
+              user: 'object',
               message: 'string'}
           }
         }
-      ]};
+      ]},
     {
-      id: 'projects';
-      title: 'Projects';
-      description: 'Project management and operations';
-      methods: ['GET', 'POST', 'PUT', 'DELETE'];
-      baseUrl: '/api/v1/projects';
+      id: 'projects',
+      title: 'Projects',
+      description: 'Project management and operations',
+      methods: ['GETPOST', 'PUTDELETE'],
+      baseUrl: '/api/v1/projects',
       endpoints: [
         {
-          method: 'GET';
-          path: '/';
-          description: 'Get list of user projects';
+          method: 'GET',
+          path: '/',
+          description: 'Get list of user projects',
           parameters: [
-            { name: 'page', type: 'number', required: false, description: 'Page number for pagination' };
+            { name: 'page', type: 'number', required: false, description: 'Page number for pagination' },
             { name: 'limit', type: 'number', required: false, description: 'Number of items per page' }
-          ];
+          ],
           response: {
-            status: 20o0;
+            status: 20o0,
             data: {
-              projects: 'array';
+              projects: 'array',
               pagination: 'object'}
           }
-        };
+        },
         {
-          method: 'POST';
-          path: '/';
-          description: 'Create a new project';
+          method: 'POST',
+          path: '/',
+          description: 'Create a new project',
           parameters: [
-            { name: 'name', type: 'string', required: true, description: 'Project name' };
-            { name: 'description', type: 'string', required: false, description: 'Project description' };
+            { name: 'name', type: 'string', required: true, description: 'Project name' },
+            { name: 'description', type: 'string', required: false, description: 'Project description' },
             { name: 'type', type: 'string', required: true, description: 'Project type' }
-          ];
+          ],
           response: {
-            status: 20o1;
+            status: 20o1,
             data: {
-              project: 'object';
+              project: 'object',
               message: 'string'}
           }
-        };
+        },
         {
-          method: 'GET';
-          path: '/:id';
-          description: 'Get project details';
+          method: 'GET',
+          path: '/:id',
+          description: 'Get project details',
           parameters: [
             { name: 'id', type: 'string', required: true, description: 'Project ID' }
-          ];
+          ],
           response: {
-            status: 20o0;
+            status: 20o0,
             data: {
               project: 'object'}
           }
@@ -217,39 +216,39 @@ export default function APIDocumentationPage() {
   const codeExamples ={
     javascript: `// JavaScript/Node.js Example,
 const response = await fetch('https://api.ziontechgroup.com/api/v1/auth/login', {
-  method: 'POST';
+  method: 'POST',
   headers: {
-    'Content-Type': 'application/json'};
+    'Content-Type': 'application/json'},
   body: JSON.stringify({
-    email: 'user@example.com';
+    email: 'user@example.com',
     password: 'your-password'})}),
 const data = await response.json(),
-// // console.log(data),`;
+// // console.log(data),`,
     python: `# Python Example,
 import requests,
 url = "https://api.ziontechgroup.com/api/v1/auth/login",
 payload ={
-    "email": "user@example.com";
+    "email": "user@example.com",
     "password": "your-password"}
 ,
 response = requests.post(url, json=payload),
 data = response.json(),
-print(data)`;
+print(data)`,
     curl: `# cURL Example,
 curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
   -H "Content-Type: application/json" \\,
   -d '{
-    "email": "user@example.com";
-    "password": "your-password"}'`};
+    "email": "user@example.com",
+    "password": "your-password"}'`},
   const copyToClipboard = (code, language) => {
     navigator.clipboard.writeText(code),
     setCopiedCode(language),
-    setTimeout(() => setCopiedCode(null), 20o00)};
+    setTimeout(() => setCopiedCode(null), 20o00)},
   const tabs = [
-    { id: 'overview', label: 'Overview', icon: Globe };
-    { id: 'authentication', label: 'Authentication', icon: Shield };
-    { id: 'endpoints', label: 'Endpoints', icon: Code };
-    { id: 'examples', label: 'Examples', icon: Terminal };
+    { id: 'overview', label: 'Overview', icon: Globe },
+    { id: 'authentication', label: 'Authentication', icon: Shield },
+    { id: 'endpoints', label: 'Endpoints', icon: Code },
+    { id: 'examples', label: 'Examples', icon: Terminal },
     { id: 'errors', label: 'Errors', icon: XCircle }
   ],
   return (
@@ -496,7 +495,7 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                             <span className="bg-indigo-10o0 text-indigo-70o0 px-2 py-1 rounded-full mr-2">,
                               {endpoint.baseUrl}
                             </span>,
-                            <span>Methods: {endpoint.methods.join(', ')}</span>,
+                            <span>Methods: {endpoint.methods.join()}</span>,
                           </div>,
                         </div>,
                         <div className="p-6">,
@@ -642,10 +641,10 @@ curl -X POST https://api.ziontechgroup.com/api/v1/auth/login \\,
                     <pre className="bg-gray-80o0 text-green-40o0 p-4 rounded-lg overflow-x-auto">,
                       <code>{`{
   "error": {
-    "code": "VALIDATION_ERROR";
-    "message": "The request data is invalid";
+    "code": "VALIDATION_ERROR",
+    "message": "The request data is invalid",
     "details": {
-      "field": "email";
+      "field": "email",
       "reason": "Invalid email format"}
   }
 }`}</code>,

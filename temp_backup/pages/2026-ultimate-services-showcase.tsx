@@ -2,9 +2,9 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion } from 'framer-motion',
 import {
-  Star, ArrowRight, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin;
-  Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope;
-  Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb;
+  Star, ArrowRight, TrendingUp, Phone, Zap, DollarSign, Shield, Mail, MapPin,
+  Rocket, Brain, Sparkles, Atom, Dna, Users, Globe, Cpu, Target, Microscope,
+  Lock, Cloud, BarChart3, Settings, Eye, Award, Clock, Heart, Lightbulb,
   CheckCircle, ChevronRight, ExternalLink, Play, Pause, Volume2, VolumeX} from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { advancedAIAutomationServices20o26 } from '../data/20o26-advanced-ai-automation-services',
@@ -12,137 +12,129 @@ import { advancedCybersecurityServices20o26 } from '../data/20o26-advanced-cyber
 import { advancedFintechServices20o26 } from '../data/20o26-advanced-fintech-services',
 import { advancedHealthcareBiotechServices20o26 } from '../data/20o26-advanced-healthcare-biotech-services',
 const contactInfo ={
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com'};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'},
 const heroStats = [
-  { label: 'Services Delivered', value: '10o00+', icon: <Star className="w-5 h-5"  /> };
-  { label: 'Happy Clients', value: '250o0+', icon: <Users className="w-5 h-5"  /> };
-  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5"  /> };
+  { label: 'Services Delivered', value: '10o00+', icon: <Star className="w-5 h-5"  /> },
+  { label: 'Happy Clients', value: '250o0+', icon: <Users className="w-5 h-5"  /> },
+  { label: 'Success Rate', value: '99.9%', icon: <Award className="w-5 h-5"  /> },
   { label: 'ROI Average', value: '50o0%', icon: <TrendingUp className="w-5 h-5"  /> }
 ],
 const serviceCategories = [
   {
-    title: 'AI & Automation';
-    description: 'Revolutionary AI platforms with autonomous business processing and intelligence';
-    services: advancedAIAutomationServices20o26;
-    icon: Brain;
-    color: 'from-violet-50o0 to-purple-60o0';
-    href: '/ai-automation-services';
-    features: ['Autonomous Business Processing', 'Predictive Analytics', 'Customer Success AI']};
+    title: 'AI & Automation',
+    description: 'Revolutionary AI platforms with autonomous business processing and intelligence',
+    services: advancedAIAutomationServices20o26,
+    icon: Brain,
+    color: 'from-violet-50o0 to-purple-60o0',
+    href: '/ai-automation-services',
+    features: ['Autonomous Business ProcessingPredictive Analytics', 'Customer Success AI']},
   {
-    title: 'Cybersecurity & Quantum';
-    description: 'Quantum-powered security solutions with unbreakable encryption';
-    services: advancedCybersecurityServices20o26;
-    icon: Shield;
-    color: 'from-red-50o0 to-pink-60o0';
-    href: '/cybersecurity-quantum-services';
-    features: ['Quantum Encryption', 'Zero Trust Security', 'Autonomous Threat Hunting']};
+    title: 'Cybersecurity & Quantum',
+    description: 'Quantum-powered security solutions with unbreakable encryption',
+    services: advancedCybersecurityServices20o26,
+    icon: Shield,
+    color: 'from-red-50o0 to-pink-60o0',
+    href: '/cybersecurity-quantum-services',
+    features: ['Quantum EncryptionZero Trust Security', 'Autonomous Threat Hunting']},
   {
-    title: 'Fintech & Blockchain';
-    description: 'Next-generation financial technology with quantum computing';
-    services: advancedFintechServices20o26;
-    icon: DollarSign;
-    color: 'from-green-50o0 to-emerald-60o0';
-    href: '/fintech-blockchain-services';
-    features: ['Quantum Trading', 'AI Wealth Management', 'Blockchain Finance']};
+    title: 'Fintech & Blockchain',
+    description: 'Next-generation financial technology with quantum computing',
+    services: advancedFintechServices20o26,
+    icon: DollarSign,
+    color: 'from-green-50o0 to-emerald-60o0',
+    href: '/fintech-blockchain-services',
+    features: ['Quantum TradingAI Wealth Management', 'Blockchain Finance']},
   {
-    title: 'Healthcare & Biotech';
-    description: 'Breakthrough medical technology with AI and quantum computing';
-    services: advancedHealthcareBiotechServices20o26;
-    icon: Dna;
-    color: 'from-blue-50o0 to-cyan-60o0';
-    href: '/healthcare-biotech-services';
-    features: ['AI Medical Diagnostics', 'Quantum Drug Discovery', 'Genomic Analysis']}
+    title: 'Healthcare & Biotech',
+    description: 'Breakthrough medical technology with AI and quantum computing',
+    services: advancedHealthcareBiotechServices20o26,
+    icon: Dna,
+    color: 'from-blue-50o0 to-cyan-60o0',
+    href: '/healthcare-biotech-services',
+    features: ['AI Medical DiagnosticsQuantum Drug Discovery', 'Genomic Analysis']}
 ],
 const heroFeatures = [
   {
-    title: 'Cutting-Edge Technology';
-    description: 'Access to the latest AI, quantum computing, and emerging technologies that give you a competitive edge.';
-    icon: Zap;
-    gradient: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0'};
+    title: 'Cutting-Edge Technology',
+    description: 'Access to the latest AI, quantum computing, and emerging technologies that give you a competitive edge.',
+    icon: Zap,
+    gradient: 'bg-gradient-to-r from-cyan-50o0 to-blue-60o0'},
   {
-    title: 'Rapid Implementation';
-    description: 'Get up and running in under 24 hours with our streamlined setup process and expert guidance.';
-    icon: Rocket;
-    gradient: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0'};
+    title: 'Rapid Implementation',
+    description: 'Get up and running in under 24 hours with our streamlined setup process and expert guidance.',
+    icon: Rocket,
+    gradient: 'bg-gradient-to-r from-purple-50o0 to-pink-60o0'},
   {
-    title: 'Global Infrastructure';
-    description: 'Enterprise-grade infrastructure available in 150+ countries worldwide with 99.9% uptime guarantee.';
-    icon: Globe;
-    gradient: 'bg-gradient-to-r from-green-50o0 to-emerald-60o0'};
+    title: 'Global Infrastructure',
+    description: 'Enterprise-grade infrastructure available in 150+ countries worldwide with 99.9% uptime guarantee.',
+    icon: Globe,
+    gradient: 'bg-gradient-to-r from-green-50o0 to-emerald-60o0'},
   {
-    title: '24/7 Expert Support';
-    description: 'Round-the-clock technical support and monitoring for all services with dedicated account managers.';
-    icon: Shield;
+    title: '24/7 Expert Support',
+    description: 'Round-the-clock technical support and monitoring for all services with dedicated account managers.',
+    icon: Shield,
     gradient: 'bg-gradient-to-r from-orange-50o0 to-red-60o0'}
 ],
 const testimonials = [
   {
-    name: 'Dr. Sarah Chen';
-    role: 'CTO, Quantum Dynamics Inc.';
-    company: 'Quantum Dynamics Inc.';
-    content: 'Zion Tech Group\'s quantum computing solutions have revolutionized our research capabilities. We\'ve achieved breakthroughs that would have taken years with traditional computing.';
-    rating: 5;
-    avatar: '👩‍🔬'};
+    name: 'Dr. Sarah Chen',
+    role: 'CTO, Quantum Dynamics Inc.',
+    company: 'Quantum Dynamics Inc.',
+    content: 'Zion Tech Group\'s quantum computing solutions have revolutionized our research capabilities. We\'ve achieved breakthroughs that would have taken years with traditional computing.',
+    rating: 5,
+    avatar: '👩‍🔬'},
   {
-    name: 'Marcus Rodriguez';
-    role: 'VP of Innovation, FutureTech Corp.';
-    company: 'FutureTech Corp.';
-    content: 'The AI consciousness platform has transformed how we approach human-AI collaboration. Our productivity has increased by 30o0% while maintaining ethical standards.';
-    rating: 5;
-    avatar: '👨‍💼'};
+    name: 'Marcus Rodriguez',
+    role: 'VP of Innovation, FutureTech Corp.',
+    company: 'FutureTech Corp.',
+    content: 'The AI consciousness platform has transformed how we approach human-AI collaboration. Our productivity has increased by 30o0% while maintaining ethical standards.',
+    rating: 5,
+    avatar: '👨‍💼'},
   {
-    name: 'Dr. Emily Watson';
-    role: 'Research Director, SpaceX Labs';
-    company: 'SpaceX Labs';
-    content: 'Their space mining platform is truly revolutionary. We\'re now able to analyze and extract resources from asteroids with unprecedented precision and safety.';
-    rating: 5;
+    name: 'Dr. Emily Watson',
+    role: 'Research Director, SpaceX Labs',
+    company: 'SpaceX Labs',
+    content: 'Their space mining platform is truly revolutionary. We\'re now able to analyze and extract resources from asteroids with unprecedented precision and safety.',
+    rating: 5,
     avatar: '👩‍🚀'}
 ],
 const pricingTiers = [
   {
-    name: 'Starter';
-    price: '$499';
-    period: '/month';
-    description: 'Perfect for small businesses and startups';
+    name: 'Starter',
+    price: '$499',
+    period: '/month',
+    description: 'Perfect for small businesses and startups',
     features: [
-      'Basic AI automation';
-      'Standard security features';
-      'Email support';
-      'Basic integrations';
-      '5GB storage'];
-    popular: false;
-    color: 'from-blue-50o0 to-cyan-60o0'};
+      'Basic AI automationStandard security features',
+      'Email supportBasic integrations',
+      '5GB storage'],
+    popular: false,
+    color: 'from-blue-50o0 to-cyan-60o0'},
   {
-    name: 'Professional';
-    price: '$1,999';
-    period: '/month';
-    description: 'Ideal for growing enterprises';
+    name: 'Professional',
+    price: '$1,999',
+    period: '/month',
+    description: 'Ideal for growing enterprises',
     features: [
-      'Advanced AI automation';
-      'Quantum security features';
-      'Priority support';
-      'Advanced integrations';
-      '10o0GB storage';
-      'Custom training'];
-    popular: true;
-    color: 'from-purple-50o0 to-pink-60o0'};
+      'Advanced AI automationQuantum security features',
+      'Priority supportAdvanced integrations',
+      '10o0GB storageCustom training'],
+    popular: true,
+    color: 'from-purple-50o0 to-pink-60o0'},
   {
-    name: 'Enterprise';
-    price: '$4,999';
-    period: '/month';
-    description: 'For large organizations and corporations';
+    name: 'Enterprise',
+    price: '$4,999',
+    period: '/month',
+    description: 'For large organizations and corporations',
     features: [
-      'Full AI autonomy';
-      'Military-grade security';
-      '24/7 dedicated support';
-      'Custom integrations';
-      'Unlimited storage';
-      'White-label options';
-      'SLA guarantees'];
-    popular: false;
+      'Full AI autonomyMilitary-grade security',
+      '24/7 dedicated supportCustom integrations',
+      'Unlimited storageWhite-label options',
+      'SLA guarantees'],
+    popular: false,
     color: 'from-green-50o0 to-emerald-60o0'}
 ],
 export default function UltimateServicesShowcase20o26() {
@@ -187,14 +179,14 @@ export default function UltimateServicesShowcase20o26() {
               key={i}
               className="absolute w-2 h-2 bg-cyan-40o0 rounded-full opacity-30",
               style={{
-                left: `${Math.random() * 10o0}%`;
+                left: `${Math.random() * 10o0}%`,
                 top: `${Math.random() * 10o0}%`}}
               animate={{
-                y: [0, -20, 0];
+                y: [0, -20, 0],
                 opacity: [0.3, 0.8, 0.3]}}
               transition={{
-                duration: 3 + Math.random() * 2;
-                repeat: Infinity;
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
                 delay: Math.random() * 2}}
              />))}
         </div>,
@@ -259,7 +251,7 @@ export default function UltimateServicesShowcase20o26() {
               Revolutionary Service Categories,
             </h2>,
             <p className="text-xl text-gray-30o0 max-w-3xl mx-auto">,
-              Our comprehensive portfolio spans the most advanced technologies in AI, quantum computing;
+              Our comprehensive portfolio spans the most advanced technologies in AI, quantum computing,
               cybersecurity, fintech, and healthcare biotech.,
             </p>,
           </motion.div>,

@@ -5,10 +5,8 @@ const STATIC_CACHE_NAME = 'zion-static-v3.0.0',
 const DYNAMIC_CACHE_NAME = 'zion-dynamic-v3.0.0',
 // Files to cache immediately,
 const STATIC_FILES = [
-  '/';
-  '/index.html';
-  '/manifest.json';
-  '/favicon.ico'],
+  '//index.html',
+  '/manifest.json/favicon.ico'],
 // Install event - cache static files,
 self.addEventListener('install', (event) => {
   // // console.log('Service Worker installing...'),

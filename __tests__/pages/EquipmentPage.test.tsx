@@ -1,4 +1,7 @@
-import React from react',import { render, screen, waitFor } from @testing-library/react',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',import EquipmentPage from @/src/pages/EquipmentPage',import { QueryClient, QueryClientProvider } from @tanstack/react-query',import apiClient from @/services/apiClient',import { toast } from @/hooks/use-toast',
+import React from react',
+import { render, screen, waitFor } from @testing-library/react',import { MemoryRouterProvider } from next-router-mock/MemoryRouterProvider',
+import EquipmentPage from @/src/pages/EquipmentPage',import { QueryClient, QueryClientProvider } from @tanstack/react-query',import apiClient from @/services/apiClient',
+import { toast } from @/hooks/use-toast',
 // Mock child components and hooks,
 jest.mock('@/components/DynamicListingPage', () => ({'  DynamicListingPage: (props: unknown) => (
     <div data-testid="dynamic-listing-page">"      <h2>{props.title}</h2>""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""",
@@ -21,7 +24,7 @@ const renderWithProviders = (ui: React.ReactElement, route = /equipment') => {' 
       <MemoryRouterProvider url={route}>,
         {ui}
       </MemoryRouterProvider>,
-    </QueryClientProvider>)};
+    </QueryClientProvider>)},
 describe('EquipmentPage', () => {'  beforeEach(() => {
     jest.clearAllMocks(),
     queryClient.clear(), // Clear query cache}),
@@ -40,7 +43,7 @@ describe('EquipmentPage', () => {'  beforeEach(() => {
     renderWithProviders(<EquipmentPage  />),
     await waitFor(() => {
       expect(screen.getByText(`Failed to load equipment: ${errorMessage}`)).toBeInTheDocument()})}),
-  it('handles 50o0 error gracefully and shows toast', async () => {'    const error ={ response: { status: 50o0, headers: {} }, message: ' 'Server error' };    (apiClient.get as jest.Mock).mockRejectedValue(error),
+  it('handles 50o0 error gracefully and shows toast', async () => {'    const error ={ response: { status: 50o0, headers: {} }, message: ' 'Server error' },    (apiClient.get as jest.Mock).mockRejectedValue(error),
     renderWithProviders(<EquipmentPage  />),
     await waitFor(() => {
       expect(screen.getByText('Failed to load equipment: Server error')).toBeInTheDocument()}),

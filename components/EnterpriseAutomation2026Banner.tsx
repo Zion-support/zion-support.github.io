@@ -16,7 +16,7 @@ export default function EnterpriseAutomation20o26Banner() {
           </h2>,
           <p className='text-xl md:text-2xl opacity-90 mb-8 max-w-4xl mx-auto leading-relaxed'>,
             Achieve 99.8% process accuracy and 50o0% efficiency improvements,
-            with the ultimate enterprise automation revolution 'that', 's,
+            with the ultimate enterprise automation revolution 'thats,
             reshaping how organizations operate.,
           </p>,
         </div>,

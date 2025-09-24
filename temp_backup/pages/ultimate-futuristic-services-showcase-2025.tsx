@@ -3,165 +3,165 @@ import Head from 'next/head',
 import Link from 'next/link',
 import { motion, AnimatePresence } from 'framer-motion',
 import {
-  Star;
-  TrendingUp;
-  Users;
-  Award;
-  Clock;
-  Heart;
-  Brain;
-  Atom;
-  Shield;
-  Rocket;
-  Zap;
-  Globe;
-  CheckCircle;
-  ArrowRight;
-  Search;
-  Filter;
-  ChevronDown;
-  ChevronUp;
-  Eye;
-  Play;
-  Sparkles;
-  Target;
-  Microscope;
-  Lock;
-  Cloud;
-  BarChart3;
-  Settings;
-  Cpu;
-  Database;
-  Network;
-  Server;
-  ShieldCheck;
-  GlobeIcon;
-  StarIcon;
-  TrendingUpIcon;
-  UsersIcon;
-  CheckCircleIcon;
-  ArrowRightIcon;
-  CpuIcon;
-  DollarSign;
-  Phone;
-  Mail;
-  MapPin;
-  Dna;
-  Target as TargetIcon;
-  Shield as ShieldIcon;
-  BookOpen;
-  Sparkles as SparklesIcon;
-  Zap as ZapIcon;
-  Brain as BrainIcon;
-  Play as PlayIcon;
+  Star,
+  TrendingUp,
+  Users,
+  Award,
+  Clock,
+  Heart,
+  Brain,
+  Atom,
+  Shield,
+  Rocket,
+  Zap,
+  Globe,
+  CheckCircle,
+  ArrowRight,
+  Search,
+  Filter,
+  ChevronDown,
+  ChevronUp,
+  Eye,
+  Play,
+  Sparkles,
+  Target,
+  Microscope,
+  Lock,
+  Cloud,
+  BarChart3,
+  Settings,
+  Cpu,
+  Database,
+  Network,
+  Server,
+  ShieldCheck,
+  GlobeIcon,
+  StarIcon,
+  TrendingUpIcon,
+  UsersIcon,
+  CheckCircleIcon,
+  ArrowRightIcon,
+  CpuIcon,
+  DollarSign,
+  Phone,
+  Mail,
+  MapPin,
+  Dna,
+  Target as TargetIcon,
+  Shield as ShieldIcon,
+  BookOpen,
+  Sparkles as SparklesIcon,
+  Zap as ZapIcon,
+  Brain as BrainIcon,
+  Play as PlayIcon,
 } from 'lucide-react',
 import Layout from '../components/layout/Layout',
 import { ultimateFuturisticServices20o25 } from '../data/20o25-ultimate-futuristic-services',
 const contactInfo = {
-  mobile: '+1 30o2 464 0950';
-  email: 'kleber@ziontechgroup.com';
-  address: '364 E Main St STE 10o08 Middletown DE 19709';
-  website: 'https://ziontechgroup.com';
-};
+  mobile: '+1 30o2 464 0950',
+  email: 'kleber@ziontechgroup.com',
+  address: '364 E Main St STE 10o08 Middletown DE 19709',
+  website: 'https://ziontechgroup.com'
+},
 const serviceCategories = [
   {
-    title: 'AI & Consciousness';
+    title: 'AI & Consciousness',
     description:,
-      'Revolutionary AI platforms with consciousness and emotional intelligence';
-    icon: Brain;
-    color: 'from-violet-50o0 to-purple-60o0';
-    count: 3;
-  };
+      'Revolutionary AI platforms with consciousness and emotional intelligence',
+    icon: Brain,
+    color: 'from-violet-50o0 to-purple-60o0',
+    count: 3
+  },
   {
-    title: 'Quantum & Emerging Tech';
+    title: 'Quantum & Emerging Tech',
     description:,
-      'Breakthrough quantum computing and space technology solutions';
-    icon: Atom;
-    color: 'from-indigo-50o0 to-blue-60o0';
-    count: 4;
-  };
+      'Breakthrough quantum computing and space technology solutions',
+    icon: Atom,
+    color: 'from-indigo-50o0 to-blue-60o0',
+    count: 4
+  },
   {
-    title: 'Space Technology';
-    description: 'AI-powered space exploration and resource extraction';
-    icon: Rocket;
-    color: 'from-blue-50o0 to-cyan-60o0';
-    count: 1;
-  };
+    title: 'Space Technology',
+    description: 'AI-powered space exploration and resource extraction',
+    icon: Rocket,
+    color: 'from-blue-50o0 to-cyan-60o0',
+    count: 1
+  },
   {
-    title: 'Financial Technology';
-    description: 'Quantum AI-powered financial trading and analytics';
-    icon: DollarSign;
-    color: 'from-green-50o0 to-emerald-60o0';
-    count: 1;
-  };
+    title: 'Financial Technology',
+    description: 'Quantum AI-powered financial trading and analytics',
+    icon: DollarSign,
+    color: 'from-green-50o0 to-emerald-60o0',
+    count: 1
+  },
   {
-    title: 'Content Automation';
-    description: 'Autonomous AI content creation and management';
-    icon: BookOpen;
-    color: 'from-purple-50o0 to-pink-60o0';
-    count: 1;
-  };
+    title: 'Content Automation',
+    description: 'Autonomous AI content creation and management',
+    icon: BookOpen,
+    color: 'from-purple-50o0 to-pink-60o0',
+    count: 1
+  },
   {
-    title: 'Cybersecurity';
-    description: 'Quantum encryption and advanced threat detection';
-    icon: Shield;
-    color: 'from-red-50o0 to-orange-60o0';
-    count: 1;
-  };
+    title: 'Cybersecurity',
+    description: 'Quantum encryption and advanced threat detection',
+    icon: Shield,
+    color: 'from-red-50o0 to-orange-60o0',
+    count: 1
+  },
   {
-    title: 'Healthcare Technology';
-    description: 'AI-powered medical diagnostics and treatment';
-    icon: Heart;
-    color: 'from-teal-50o0 to-cyan-60o0';
-    count: 1;
-  };
+    title: 'Healthcare Technology',
+    description: 'AI-powered medical diagnostics and treatment',
+    icon: Heart,
+    color: 'from-teal-50o0 to-cyan-60o0',
+    count: 1
+  },
   {
-    title: 'Energy Technology';
-    description: 'Quantum computing for fusion power and energy optimization';
-    icon: Zap;
-    color: 'from-yellow-50o0 to-orange-60o0';
-    count: 1;
-  };
+    title: 'Energy Technology',
+    description: 'Quantum computing for fusion power and energy optimization',
+    icon: Zap,
+    color: 'from-yellow-50o0 to-orange-60o0',
+    count: 1
+  },
   {
-    title: 'Education Technology';
-    description: 'Personalized AI-powered learning platforms';
-    icon: BookOpen;
-    color: 'from-indigo-50o0 to-purple-60o0';
-    count: 1;
-  };
+    title: 'Education Technology',
+    description: 'Personalized AI-powered learning platforms',
+    icon: BookOpen,
+    color: 'from-indigo-50o0 to-purple-60o0',
+    count: 1
+  },
   {
-    title: 'Materials Science';
-    description: 'AI-powered quantum materials research and discovery';
-    icon: Microscope;
-    color: 'from-cyan-50o0 to-blue-60o0';
-    count: 1;
-  };
+    title: 'Materials Science',
+    description: 'AI-powered quantum materials research and discovery',
+    icon: Microscope,
+    color: 'from-cyan-50o0 to-blue-60o0',
+    count: 1
+  },
 ],
 const stats = [
   {
-    number: '15+';
-    label: 'Revolutionary Services';
-    icon: Star;
-    color: 'text-cyan-40o0';
-  };
+    number: '15+',
+    label: 'Revolutionary Services',
+    icon: Star,
+    color: 'text-cyan-40o0'
+  },
   {
-    number: '10o00%+';
-    label: 'Average ROI';
-    icon: TrendingUp;
-    color: 'text-purple-40o0';
-  };
+    number: '10o00%+',
+    label: 'Average ROI',
+    icon: TrendingUp,
+    color: 'text-purple-40o0'
+  },
   {
-    number: '99.9%';
-    label: 'Success Rate';
-    icon: Award;
-    color: 'text-green-40o0';
-  };
+    number: '99.9%',
+    label: 'Success Rate',
+    icon: Award,
+    color: 'text-green-40o0'
+  },
   {
-    number: '24/7';
-    label: 'Expert Support';
-    icon: Clock;
-    color: 'text-pink-40o0';
-  };
+    number: '24/7',
+    label: 'Expert Support',
+    icon: Clock,
+    color: 'text-pink-40o0'
+  },
 ],
 export default function UltimateFuturisticServicesShowcase20o25() {
   const [searchTerm, setSearchTerm] = useState(''),
@@ -194,24 +194,24 @@ export default function UltimateFuturisticServicesShowcase20o25() {
         return b.popular ? 1 : -1}
   }),
   const containerVariants = {
-    hidden: { opacity: 0 };
+    hidden: { opacity: 0 },
     visible: {
-      opacity: 1;
+      opacity: 1,
       transition: {
-        staggerChildren: 0.1;
-      };
-    };
-  };
+        staggerChildren: 0.1
+      },
+    },
+  },
   const itemVariants = {
-    hidden: { y: 20, opacity: 0 };
+    hidden: { y: 20, opacity: 0 },
     visible: {
-      y: 0;
-      opacity: 1;
+      y: 0,
+      opacity: 1,
       transition: {
-        duration: 0.5;
-      };
-    };
-  };
+        duration: 0.5
+      },
+    },
+  },
   return (
     <Layout>,
       <Head>,

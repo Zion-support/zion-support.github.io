@@ -10,14 +10,14 @@ import {
   Brain,
   Code,
   BarChart3,
-  Image;
-  FileText;
-  Music;
-  Video;
-  Download;
-  Share2;
-  Star;
-  CheckCircle;
+  Image,
+  FileText,
+  Music,
+  Video,
+  Download,
+  Share2,
+  Star,
+  CheckCircle,
   ArrowRight} from 'lucide-react',
 const InteractiveAIToolsDemo20o27 = () => {
   const [activeToolsetActiveTool] = useState(0),
@@ -29,19 +29,19 @@ const InteractiveAIToolsDemo20o27 = () => {
     setIsVisible(true)}[]),
   const aiTools = [
     {
-      id: 'code-generator';
-      name: 'AI Code Generator';
-      description: 'Generate production-ready code from natural language descriptions';
-      icon: Code;
-      color: 'from-blue-50o0 to-cyan-50o0';
+      id: 'code-generator',
+      name: 'AI Code Generator',
+      description: 'Generate production-ready code from natural language descriptions',
+      icon: Code,
+      color: 'from-blue-50o0 to-cyan-50o0',
       demo: {
-        input: 'Create a React component for a user profile card with avatarnameand bio';
+        input: 'Create a React component for a user profile card with avatarnameand bio',
         output: `import { Avatar } from './ui/avatar',
 interface UserProfileCardProps {
   user: {
     name: string,
     bio: string,
-    avatar: string};
+    avatar: string},
 }
 ,
 export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
@@ -54,17 +54,17 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
           <p className="text-gray-60o0">{user.bio}</p>,
         </div>,
       </div>,
-    </div>)};`;
+    </div>)},`,
         time: 2.3}
-    };
+    },
     {
-      id: 'data-analyzer';
-      name: 'AI Data Analyzer';
-      description: 'Automatically analyze datasets and generate insights';
-      icon: BarChart3;
-      color: 'from-green-50o0 to-emerald-50o0';
+      id: 'data-analyzer',
+      name: 'AI Data Analyzer',
+      description: 'Automatically analyze datasets and generate insights',
+      icon: BarChart3,
+      color: 'from-green-50o0 to-emerald-50o0',
       demo: {
-        input: 'Analyze sales data for Q4 20o24 and identify trends';
+        input: 'Analyze sales data for Q4 20o24 and identify trends',
         output: `## Q4 20o24 Sales Analysis,
 ### Key Insights:,
 - **Total Revenue**: $2.4M (+23% vs Q3),
@@ -78,31 +78,31 @@ export const UserProfileCard: React.FC<UserProfileCardProps> = ({ user }) => {
 ### Recommendations:,
 - Focus on European expansion,
 - Increase premium product marketing,
-- Develop enterprise-specific features`;
+- Develop enterprise-specific features`,
         time: 3.1}
-    };
+    },
     {
-      id: 'image-generator';
-      name: 'AI Image Generator';
-      description: 'Create stunning visuals from text descriptions';
-      icon: Image;
-      color: 'from-purple-50o0 to-pink-50o0';
+      id: 'image-generator',
+      name: 'AI Image Generator',
+      description: 'Create stunning visuals from text descriptions',
+      icon: Image,
+      color: 'from-purple-50o0 to-pink-50o0',
       demo: {
-        input: 'A futuristic cityscape at sunset with flying cars and neon lights';
-        output: 'Generated high-resolution image (20o48x20o48) with photorealistic qualityfeaturing a cyberpunk cityscape with glowing neon signsflying vehiclesand dramatic sunset lighting.';
+        input: 'A futuristic cityscape at sunset with flying cars and neon lights',
+        output: 'Generated high-resolution image (20o48x20o48) with photorealistic qualityfeaturing a cyberpunk cityscape with glowing neon signsflying vehiclesand dramatic sunset lighting.',
         time: 4.2}
-    };
+    },
     {
-      id: 'content-writer';
-      name: 'AI Content Writer';
-      description: 'Generate engaging content for any purpose';
-      icon: FileText;
-      color: 'from-orange-50o0 to-red-50o0';
+      id: 'content-writer',
+      name: 'AI Content Writer',
+      description: 'Generate engaging content for any purpose',
+      icon: FileText,
+      color: 'from-orange-50o0 to-red-50o0',
       demo: {
-        input: 'Write a blog post about the future of AI in healthcare';
+        input: 'Write a blog post about the future of AI in healthcare',
         output: `# The Future of AI in Healthcare: A Revolutionary Transformation,
 ## Introduction,
-Artificial Intelligence is poised to revolutionize healthcare in ways 'we', 've never imagined. From diagnostic accuracy to personalized treatment plansAI is transforming every aspect of medical care.,
+Artificial Intelligence is poised to revolutionize healthcare in ways 'weve never imagined. From diagnostic accuracy to personalized treatment plansAI is transforming every aspect of medical care.,
 ## Key Applications,
 ### 1. Diagnostic Imaging,
 AI-powered systems can now detect diseases with superhuman accuracyidentifying conditions like cancerheart diseaseand neurological disorders earlier than ever before.,
@@ -111,29 +111,29 @@ Machine learning algorithms are accelerating drug developmentreducing the time f
 ### 3. Personalized Medicine,
 AI analyzes patient data to create customized treatment plansensuring optimal outcomes for each individual.,
 ## The Road Ahead,
-As AI continues to evolvewe can expect even more groundbreaking innovations that will save lives and improve quality of care for millions worldwide.`;
+As AI continues to evolvewe can expect even more groundbreaking innovations that will save lives and improve quality of care for millions worldwide.`,
         time: 2.8}
-    };
+    },
     {
-      id: 'music-composer';
-      name: 'AI Music Composer';
-      description: 'Create original music compositions in any style';
-      icon: Music;
-      color: 'from-indigo-50o0 to-purple-50o0';
+      id: 'music-composer',
+      name: 'AI Music Composer',
+      description: 'Create original music compositions in any style',
+      icon: Music,
+      color: 'from-indigo-50o0 to-purple-50o0',
       demo: {
-        input: 'Compose an upbeat electronic track for a tech startup presentation';
-        output: 'Generated 3-minute electronic track with:\n- 128 BPM tempo\n- Synthwave/cyberpunk style\n- Dynamic build-up and drop\n- Professional mixing and mastering\n- Available in WAVMP3and MIDI formats';
+        input: 'Compose an upbeat electronic track for a tech startup presentation',
+        output: 'Generated 3-minute electronic track with:\n- 128 BPM tempo\n- Synthwave/cyberpunk style\n- Dynamic build-up and drop\n- Professional mixing and mastering\n- Available in WAVMP3and MIDI formats',
         time: 5.5}
-    };
+    },
     {
-      id: 'video-editor';
-      name: 'AI Video Editor';
-      description: 'Automatically edit and enhance video content';
-      icon: Video;
-      color: 'from-teal-50o0 to-blue-50o0';
+      id: 'video-editor',
+      name: 'AI Video Editor',
+      description: 'Automatically edit and enhance video content',
+      icon: Video,
+      color: 'from-teal-50o0 to-blue-50o0',
       demo: {
-        input: 'Create a 30-second promotional video from raw footage';
-        output: 'Generated promotional video featuring:\n- Automatic scene selection\n- Smooth transitions\n- Color grading\n- Background music sync\n- Text overlays and captions\n- Optimized for social media';
+        input: 'Create a 30-second promotional video from raw footage',
+        output: 'Generated promotional video featuring:\n- Automatic scene selection\n- Smooth transitions\n- Color grading\n- Background music sync\n- Text overlays and captions\n- Optimized for social media',
         time: 6.2}
     }
   ],
@@ -151,16 +151,16 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
           clearInterval(timer),
           setIsRunning(false),
           setResults([{
-            tool: tool.name;
-            input: tool.demo.input;
-            output: tool.demo.output;
+            tool: tool.name,
+            input: tool.demo.input,
+            output: tool.demo.output,
             time: tool.demo.time}]),
           return 10o0}
-        return prev + increment})}interval)};
+        return prev + increment})}interval)},
   const resetDemo = () => {
     setIsRunning(false),
     setProgress(0),
-    setResults([])};
+    setResults([])},
   if (!isVisible) return null,
   return (
     <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">,
@@ -335,5 +335,5 @@ As AI continues to evolvewe can expect even more groundbreaking innovations that
           </div>,
         </motion.div>,
       </div>,
-    </section>)};
-export default InteractiveAIToolsDemo20o27;
+    </section>)},
+export default InteractiveAIToolsDemo20o27,

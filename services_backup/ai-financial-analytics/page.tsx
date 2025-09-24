@@ -1,9 +1,9 @@
-import React from 'react';
+import React from 'react',
 import Link from 'next/link',
 export const metadata ={
-  title: 'AI-Powered Financial Analytics Platform | Zion Tech Group';
-  description: 'Advanced financial analytics with AI-driven insights, predictive modeling, risk assessment, and automated reporting. Make data-driven financial decisions with 95% accuracy predictions.';
-  keywords: 'AI financial analytics, predictive modeling, risk assessment, financial forecasting, investment analysis, automated reporting'};
+  title: 'AI-Powered Financial Analytics Platform | Zion Tech Group',
+  description: 'Advanced financial analytics with AI-driven insights, predictive modeling, risk assessment, and automated reporting. Make data-driven financial decisions with 95% accuracy predictions.',
+  keywords: 'AI financial analytics, predictive modeling, risk assessment, financial forecasting, investment analysis, automated reporting'},
 export default function AIFinancialAnalyticsPage() {
   return (
     <div className="space-y-16">,
@@ -43,9 +43,9 @@ export default function AIFinancialAnalyticsPage() {
             title="Predictive Financial Modeling",
             description="Advanced machine learning models predict market trends, cash flow, and financial performance with 95% accuracy.",
             benefits={[
-              "95% prediction accuracy";
-              "Real-time market analysis";
-              "Cash flow forecasting";
+              "95% prediction accuracy",
+              "Real-time market analysis",
+              "Cash flow forecasting",
               "Revenue optimization"]}
            />,
           <FeatureCard
@@ -53,9 +53,9 @@ export default function AIFinancialAnalyticsPage() {
             title="AI Risk Assessment",
             description="Comprehensive risk analysis using multiple data sources to identify potential financial threats and opportunities.",
             benefits={[
-              "Multi-factor risk analysis";
-              "Early warning system";
-              "Portfolio optimization";
+              "Multi-factor risk analysis",
+              "Early warning system",
+              "Portfolio optimization",
               "Compliance monitoring"]}
            />,
           <FeatureCard
@@ -63,9 +63,9 @@ export default function AIFinancialAnalyticsPage() {
             title="Investment Intelligence",
             description="AI-powered investment recommendations based on market analysis, risk tolerance, and financial goals.",
             benefits={[
-              "Personalized recommendations";
-              "Portfolio rebalancing";
-              "Tax optimization";
+              "Personalized recommendations",
+              "Portfolio rebalancing",
+              "Tax optimization",
               "Performance tracking"]}
            />,
           <FeatureCard
@@ -73,9 +73,9 @@ export default function AIFinancialAnalyticsPage() {
             title="Automated Financial Reporting",
             description="Generate comprehensive financial reports, compliance documents, and stakeholder presentations automatically.",
             benefits={[
-              "Real-time dashboards";
-              "Regulatory compliance";
-              "Custom report templates";
+              "Real-time dashboards",
+              "Regulatory compliance",
+              "Custom report templates",
               "Automated distribution"]}
            />,
           <FeatureCard
@@ -83,9 +83,9 @@ export default function AIFinancialAnalyticsPage() {
             title="Fraud Detection & Prevention",
             description="Advanced anomaly detection algorithms identify suspicious transactions and potential fraud in real-time.",
             benefits={[
-              "Real-time monitoring";
-              "Pattern recognition";
-              "False positive reduction";
+              "Real-time monitoring",
+              "Pattern recognition",
+              "False positive reduction",
               "Compliance reporting"]}
            />,
           <FeatureCard
@@ -93,9 +93,9 @@ export default function AIFinancialAnalyticsPage() {
             title="Mobile Financial Insights",
             description="Access critical financial data and insights on-the-go with our mobile-optimized dashboard.",
             benefits={[
-              "Real-time notifications";
-              "Mobile dashboards";
-              "Offline access";
+              "Real-time notifications",
+              "Mobile dashboards",
+              "Offline access",
               "Secure authentication"]}
            />,
         </div>,
@@ -115,11 +115,11 @@ export default function AIFinancialAnalyticsPage() {
             period="per month",
             description="Perfect for small businesses and individuals",
             features={[
-              "Up to $1M portfolio analysis";
-              "Basic AI predictions";
-              "Monthly reports";
-              "Email support";
-              "Mobile app access";
+              "Up to $1M portfolio analysis",
+              "Basic AI predictions",
+              "Monthly reports",
+              "Email support",
+              "Mobile app access",
               "Standard data sources"]}
             popular={false}
            />,
@@ -129,12 +129,12 @@ export default function AIFinancialAnalyticsPage() {
             period="per month",
             description="Most popular for growing businesses",
             features={[
-              "Up to $10M portfolio analysis";
-              "Advanced AI features";
-              "Real-time monitoring";
-              "Priority support";
-              "API access";
-              "Custom integrations";
+              "Up to $10M portfolio analysis",
+              "Advanced AI features",
+              "Real-time monitoring",
+              "Priority support",
+              "API access",
+              "Custom integrations",
               "Advanced reporting"]}
             popular={true}
            />,
@@ -144,12 +144,12 @@ export default function AIFinancialAnalyticsPage() {
             period="per month",
             description="For large organizations and institutions",
             features={[
-              "Unlimited portfolio analysis";
-              "All AI features";
-              "Custom AI models";
-              "White-label options";
-              "Dedicated support";
-              "Custom data sources";
+              "Unlimited portfolio analysis",
+              "All AI features",
+              "Custom AI models",
+              "White-label options",
+              "Dedicated support",
+              "Custom data sources",
               "SLA guarantee"]}
             popular={false}
            />,
@@ -197,17 +197,17 @@ export default function AIFinancialAnalyticsPage() {
         </div>,
         <div className="grid grid-cols-2 md: grid-cols-4 lg:grid-cols-6 gap-6">,
           {[
-            { name: "React", icon: "⚛️", description: "Frontend framework" };
-            { name: "Python", icon: "🐍", description: "AI/ML backend" };
-            { name: "PostgreSQL", icon: "🐘", description: "Primary database" };
-            { name: "Redis", icon: "🔴", description: "Caching layer" };
-            { name: "TensorFlow", icon: "🧠", description: "ML framework" };
-            { name: "AWS", icon: "☁️", description: "Cloud platform" };
-            { name: "Docker", icon: "🐳", description: "Containerization" };
-            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" };
-            { name: "Stripe", icon: "💳", description: "Payment processing" };
-            { name: "Plaid", icon: "🏦", description: "Banking integration" };
-            { name: "MongoDB", icon: "🍃", description: "Document store" };
+            { name: "React", icon: "⚛️", description: "Frontend framework" },
+            { name: "Python", icon: "🐍", description: "AI/ML backend" },
+            { name: "PostgreSQL", icon: "🐘", description: "Primary database" },
+            { name: "Redis", icon: "🔴", description: "Caching layer" },
+            { name: "TensorFlow", icon: "🧠", description: "ML framework" },
+            { name: "AWS", icon: "☁️", description: "Cloud platform" },
+            { name: "Docker", icon: "🐳", description: "Containerization" },
+            { name: "Kubernetes", icon: "⚙️", description: "Orchestration" },
+            { name: "Stripe", icon: "💳", description: "Payment processing" },
+            { name: "Plaid", icon: "🏦", description: "Banking integration" },
+            { name: "MongoDB", icon: "🍃", description: "Document store" },
             { name: "Grafana", icon: "📊", description: "Monitoring" }
           ].map((tech, index) => (
             <div key={index} className="text-center p-4 bg-white rounded-lg shadow-sm border border-gray-20o0">,
@@ -274,9 +274,9 @@ export default function AIFinancialAnalyticsPage() {
     </div>)}
 ,
 function FeatureCard({ icon, title, description, benefits }: {
-  title: 'AI Financial Analytics Platform | Zion Tech Group';
-  description: 'Advanced financial analytics with AI-powered forecasting, risk assessment, and investment insights. Make data-driven financial decisions with 95% accuracy predictions.';
-  keywords: 'AI financial analytics, financial forecasting, investment analysis, risk assessment, financial planning, portfolio optimization'};
+  title: 'AI Financial Analytics Platform | Zion Tech Group',
+  description: 'Advanced financial analytics with AI-powered forecasting, risk assessment, and investment insights. Make data-driven financial decisions with 95% accuracy predictions.',
+  keywords: 'AI financial analytics, financial forecasting, investment analysis, risk assessment, financial planning, portfolio optimization'},
 interface FeatureCardProps {
   icon: string,
   title: string,
@@ -311,11 +311,11 @@ function PricingCard({ name, price, period, description, features, popular }: {
   return (
     <div className={`relative p-8 rounded-lg border-2 ${popular ? 'border-blue-50o0 bg-blue-50' : 'border-gray-20o0 bg-white'} shadow-lg`}>,
 function PricingTier({
-  name;
-  price;
-  period;
-  description;
-  features;
+  name,
+  price,
+  period,
+  description,
+  features,
   popular = false}: {
   name: string,
   price: string,
@@ -435,10 +435,10 @@ export default function AIFinancialAnalyticsPage() {
             title="Predictive Financial Modeling",
             description="Advanced machine learning models that forecast revenue, expenses, and cash flow with 95% accuracy.",
             benefits={[
-              "Revenue forecasting";
-              "Expense prediction";
-              "Cash flow analysis";
-              "Scenario modeling";
+              "Revenue forecasting",
+              "Expense prediction",
+              "Cash flow analysis",
+              "Scenario modeling",
               "Risk-adjusted projections"]}
            />,
           <FeatureCard
@@ -446,10 +446,10 @@ export default function AIFinancialAnalyticsPage() {
             title="Investment Optimization",
             description="AI-driven portfolio optimization and investment recommendations based on risk tolerance and market conditions.",
             benefits={[
-              "Portfolio optimization";
-              "Risk assessment";
-              "Asset allocation";
-              "Rebalancing alerts";
+              "Portfolio optimization",
+              "Risk assessment",
+              "Asset allocation",
+              "Rebalancing alerts",
               "Performance tracking"]}
            />,
           <FeatureCard
@@ -457,10 +457,10 @@ export default function AIFinancialAnalyticsPage() {
             title="Risk Assessment & Management",
             description="Comprehensive risk analysis including market risk, credit risk, and operational risk with mitigation strategies.",
             benefits={[
-              "Market risk analysis";
-              "Credit risk assessment";
-              "Operational risk monitoring";
-              "Stress testing";
+              "Market risk analysis",
+              "Credit risk assessment",
+              "Operational risk monitoring",
+              "Stress testing",
               "Risk mitigation strategies"]}
            />,
           <FeatureCard
@@ -468,10 +468,10 @@ export default function AIFinancialAnalyticsPage() {
             title="Real-time Market Analysis",
             description="Continuous monitoring of market conditions, news sentiment, and economic indicators for informed decisions.",
             benefits={[
-              "Market sentiment analysis";
-              "News impact assessment";
-              "Economic indicator tracking";
-              "Real-time alerts";
+              "Market sentiment analysis",
+              "News impact assessment",
+              "Economic indicator tracking",
+              "Real-time alerts",
               "Trend identification"]}
            />,
           <FeatureCard
@@ -479,10 +479,10 @@ export default function AIFinancialAnalyticsPage() {
             title="Automated Reporting",
             description="AI-generated financial reports, insights, and recommendations tailored to your specific needs and goals.",
             benefits={[
-              "Custom report generation";
-              "Automated insights";
-              "Executive summaries";
-              "Compliance reporting";
+              "Custom report generation",
+              "Automated insights",
+              "Executive summaries",
+              "Compliance reporting",
               "Performance dashboards"]}
            />,
           <FeatureCard
@@ -490,10 +490,10 @@ export default function AIFinancialAnalyticsPage() {
             title="Smart Recommendations",
             description="Personalized financial advice and recommendations based on your financial goals, risk profile, and market conditions.",
             benefits={[
-              "Personalized advice";
-              "Goal-based planning";
-              "Action recommendations";
-              "Opportunity identification";
+              "Personalized advice",
+              "Goal-based planning",
+              "Action recommendations",
+              "Opportunity identification",
               "Strategy optimization"]}
            />,
         </div>,
@@ -643,11 +643,11 @@ export default function AIFinancialAnalyticsPage() {
             period="month",
             description="Perfect for individual financial advisors and small firms",
             features={[
-              "Up to 5 users";
-              "Basic AI analytics";
-              "Portfolio optimization";
-              "Risk assessment";
-              "Standard reporting";
+              "Up to 5 users",
+              "Basic AI analytics",
+              "Portfolio optimization",
+              "Risk assessment",
+              "Standard reporting",
               "Email support"]}
            />,
           <PricingTier
@@ -656,12 +656,12 @@ export default function AIFinancialAnalyticsPage() {
             period="month",
             description="Most popular for mid-size financial institutions",
             features={[
-              "Up to 25 users";
-              "Advanced AI models";
-              "Custom analytics";
-              "Real-time data feeds";
-              "API access";
-              "Priority support";
+              "Up to 25 users",
+              "Advanced AI models",
+              "Custom analytics",
+              "Real-time data feeds",
+              "API access",
+              "Priority support",
               "Custom integrations"]}
             popular={true}
            />,
@@ -671,12 +671,12 @@ export default function AIFinancialAnalyticsPage() {
             period="month",
             description="For large financial institutions and corporations",
             features={[
-              "Unlimited users";
-              "Custom AI development";
-              "White-label options";
-              "Dedicated support";
-              "On-premise deployment";
-              "Advanced security";
+              "Unlimited users",
+              "Custom AI development",
+              "White-label options",
+              "Dedicated support",
+              "On-premise deployment",
+              "Advanced security",
               "Custom compliance"]}
            />,
         </div>,
